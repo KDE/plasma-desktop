@@ -18,7 +18,7 @@
 
 #include "kimpanel.h"
 #include "panelagent.h"
-#include "paneladaptor.h"
+#include "impaneladaptor.h"
 #include "kdebug.h"
 #include "plasma/version.h"
 KIMPanel::KIMPanel(QObject* parent, const QVariantList& args)
@@ -44,7 +44,7 @@ void KIMPanel::init()
 {
     // setFailedToLaunch(true, "kim dataengine not found");
     m_panel_agent = new PanelAgent(this);
-    new PanelAdaptor(m_panel_agent);
+    new ImpanelAdaptor(m_panel_agent);
     kDebug(1204)<<"suceeds.";
 }
 void KIMPanel::paintInterface(QPainter *p, 

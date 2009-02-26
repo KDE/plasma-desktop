@@ -37,21 +37,30 @@ public:
 public: // PROPERTIES
 public Q_SLOTS: // METHODS
     void Enable(bool to_enable);
-    void ShowHelp();
+    void ShowHelp(const QString &help);
     void ShowPreedit(bool to_show);
     void ShowAux(bool to_show);
     void ShowLookupTable(bool to_show);
     void UpdateLookupTable(const QStringList &labels,
         const QStringList &candis,
         const QStringList &attrlists,
-        int,int,int,bool);
+        int,int,int,bool to_show);
     void UpdatePreeditText(const QString &text);
+    void UpdatePreeditCaret(int position);
     void UpdateAux(const QString &text);
     void UpdateSpotLocation(int x,int y);
     void UpdateScreen(int screen_id);
+    void UpdateProperty(const QString &prop);
+    void UpdateHelperProperty(int id,const QString &prop);
+    void UpdateFactoryInfo(const QString &info); 
+    void ShowFactoryMenu(const QStringList &infos);
+    void RegisterHelper(int id,const QString &uuid,const QString &name,
+            const QString &icon,const QString &description, unsigned int option);
+    void RegisterHelperProperties(int id,const QStringList &props);
+    void RemoveHelper(int id);
 Q_SIGNALS: // SIGNALS
     void MovePreeditCaret(int position);
-    void ShowFactoryMenu();
+    void RequestShowFactoryMenu();
     void ChangeFactory(int index);
     void SelectCandidate(int index);
     void LookupTablePageUp();

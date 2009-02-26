@@ -89,7 +89,7 @@ static void       slot_unlock                          (void);
 /////////////////////////////////////////////////////////////////////////////
 // Declaration of internal variables.
 /////////////////////////////////////////////////////////////////////////////
-static bool               _ui_initialized              = false;
+//static bool               _ui_initialized              = false;
 
 static ConfigModule      *_config_module               = 0;
 static ConfigPointer      _config;
@@ -98,7 +98,7 @@ static std::vector<HelperInfo>       _helper_list;
 
 static bool               _should_exit                 = false;
 
-static bool               _panel_is_on                 = false;
+//static bool               _panel_is_on                 = false;
 
 static PanelAgent        *_panel_agent                 = 0;
 
@@ -175,6 +175,16 @@ Property2String(const Property &prop)
     return result;
 }
 
+static QString 
+PanelFactoryInfo2String(const PanelFactoryInfo &info)
+{
+    return QString("%1:%2:%3:%4")
+            .arg(QString::fromStdString(info.uuid))
+            .arg(QString::fromStdString(info.name))
+            .arg(QString::fromStdString(info.lang))
+            .arg(QString::fromStdString(info.icon));
+}
+
 static int dbus_event_type = QEvent::registerEventType(1988);
 class DBusEvent : public QEvent
 {
@@ -220,10 +230,10 @@ class DBusHandler : public QObject
 {
 Q_OBJECT
 public:
-    DBusHandler(QObject *parent = 0)
+    DBusHandler(QObject *parent = 0):QObject(parent)
     {
         QDBusConnection("scim_panel").connect("","","org.kde.impanel","MovePreeditCaret",this,SLOT(MovePreeditCaret(int)));
-        QDBusConnection("scim_panel").connect("","","org.kde.impanel","ShowFactoryMenu",this,SLOT(ShowFactoryMenu()));
+        QDBusConnection("scim_panel").connect("","","org.kde.impanel","RequestShowFactoryMenu",this,SLOT(RequestShowFactoryMenu()));
         QDBusConnection("scim_panel").connect("","","org.kde.impanel","ChangeFactory",this,SLOT(ChangeFactory(int)));
         QDBusConnection("scim_panel").connect("","","org.kde.impanel","SelectCandidate",this,SLOT(SelectCandiate(uint)));
         QDBusConnection("scim_panel").connect("","","org.kde.impanel","LookupTablePageUp",this,SLOT(LookupTablePageUp()));
@@ -236,7 +246,7 @@ public Q_SLOTS:
     void MovePreeditCaret(int pos) {
         _panel_agent->move_preedit_caret(pos);
     }
-    void ShowFactoryMenu() {
+    void RequestShowFactoryMenu() {
         _panel_agent->request_factory_menu();
     }
     void ChangeFactory(int) {
@@ -282,11 +292,13 @@ protected:
                 message = QDBusMessage::createSignal("/org/scim/panel",
                     "org.scim.panel",
                     "ShowHelp");
+                message << ev->data().at(0).toString();
                 break;
             case DBusEvent::SHOW_FACTORY_MENU:
                 message = QDBusMessage::createSignal("/org/scim/panel",
                     "org.scim.panel",
                     "ShowFactoryMenu");
+                message << ev->data().at(0).toStringList();
                 break;
             case DBusEvent::SHOW_PREEDIT:
                 message = QDBusMessage::createSignal("/org/scim/panel",
@@ -341,6 +353,7 @@ protected:
                 message = QDBusMessage::createSignal("/org/scim/panel",
                     "org.scim.panel",
                     "UpdateFactoryInfo");
+                message << ev->data().at(0).toString();
                 break;
             case DBusEvent::UP_LOOKUPTABLE:
                 message = QDBusMessage::createSignal("/org/scim/panel",
@@ -435,7 +448,7 @@ class PanelAgentThread : public QThread
 {
 Q_OBJECT
 public:
-    PanelAgentThread(QObject *parent = 0) {}
+    PanelAgentThread(QObject *parent = 0):QThread(parent) {}
     ~PanelAgentThread() {}
     void run() 
     {
@@ -565,21 +578,28 @@ static void
 slot_update_factory_info (const PanelFactoryInfo &info)
 {
     SCIM_DEBUG_MAIN(1) << "slot_update_factory_info ()\n";
-    qApp->postEvent(_dbus_handler,new DBusEvent(DBusEvent::UP_FACTORY_INFO));
+    qApp->postEvent(_dbus_handler,new DBusEvent(DBusEvent::UP_FACTORY_INFO,
+        QVariantList()<<PanelFactoryInfo2String(info)));
 }
 
 static void
 slot_show_help (const String &help)
 {
     SCIM_DEBUG_MAIN(1) << "slot_show_help ()\n";
-    qApp->postEvent(_dbus_handler,new DBusEvent(DBusEvent::SHOW_HELP));
+    qApp->postEvent(_dbus_handler,new DBusEvent(DBusEvent::SHOW_HELP,
+        QVariantList()<<QString::fromStdString(help)));
 }
 
 static void
 slot_show_factory_menu (const std::vector <PanelFactoryInfo> &factories)
 {
     SCIM_DEBUG_MAIN(1) << "slot_show_factory_menu ()\n";
-    qApp->postEvent(_dbus_handler,new DBusEvent(DBusEvent::SHOW_FACTORY_MENU));
+    QStringList list;
+    Q_FOREACH (const PanelFactoryInfo &info, factories) {
+        list << PanelFactoryInfo2String(info);
+    }
+    qApp->postEvent(_dbus_handler,new DBusEvent(DBusEvent::SHOW_FACTORY_MENU,
+        QVariantList() << list ));
 }
 
 static void
@@ -745,6 +765,7 @@ slot_unlock (void)
 static void
 signalhandler(int sig)
 {
+    Q_UNUSED(sig)
     SCIM_DEBUG_MAIN (1) << "In signal handler...\n";
 
     if (_panel_agent)
@@ -888,7 +909,7 @@ int main (int argc, char *argv [])
 
     // Make up DISPLAY env.
     if (display_name.length ()) {
-        new_argv [new_argc ++] = "--display";
+        new_argv [new_argc ++] = strdup("--display");
         new_argv [new_argc ++] = const_cast <char*> (display_name.c_str ());
 
         setenv ("DISPLAY", display_name.c_str (), 1);
