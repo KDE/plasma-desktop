@@ -1,0 +1,969 @@
+/***************************************************************************
+ *   Copyright (C) 2009 by Wang Hoi <zealot.hoi@gmail.com>                 *
+ *                                                                         *
+ *   This program is free software; you can redistribute it and/or modify  *
+ *   it under the terms of the GNU General Public License as published by  *
+ *   the Free Software Foundation; either version 2 of the License, or     *
+ *   (at your option) any later version.                                   *
+ *                                                                         *
+ *   This program is distributed in the hope that it will be useful,       *
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of        *
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
+ *   GNU General Public License for more details.                          *
+ *                                                                         *
+ *   You should have received a copy of the GNU General Public License     *
+ *   along with this program; if not, write to the                         *
+ *   Free Software Foundation, Inc.,                                       *
+ *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
+ ***************************************************************************/
+
+/** @file scim_panel_dbus.cpp
+ */
+
+#include <sys/wait.h>
+#include <sys/types.h>
+#include <sys/time.h>
+#include <signal.h>
+#include <unistd.h>
+#include <errno.h>
+#include <stdlib.h>
+#include <list>
+#include <QtCore>
+#include <QtDBus>
+
+#define Uses_C_STDIO
+#define Uses_C_STDLIB
+#define Uses_SCIM_LOOKUP_TABLE
+#define Uses_SCIM_SOCKET
+#define Uses_SCIM_TRANSACTION
+#define Uses_SCIM_TRANS_COMMANDS
+#define Uses_SCIM_CONFIG
+#define Uses_SCIM_CONFIG_MODULE
+#define Uses_SCIM_DEBUG
+#define Uses_SCIM_HELPER
+#define Uses_SCIM_HELPER_MODULE
+#define Uses_SCIM_PANEL_AGENT
+#define Uses_STL_MAP
+
+#define ENABLE_DEBUG 9
+#include <scim.h>
+
+using namespace scim;
+
+// PanelAgent related functions
+static bool       initialize_panel_agent               (const String &config, const String &display, bool resident);
+static bool       run_panel_agent                      (void);
+static void       start_auto_start_helpers             (void);
+
+static void       slot_transaction_start               (void);
+static void       slot_transaction_end                 (void);
+static void       slot_reload_config                   (void);
+static void       slot_turn_on                         (void);
+static void       slot_turn_off                        (void);
+static void       slot_update_screen                   (int screen);
+static void       slot_update_spot_location            (int x, int y);
+static void       slot_update_factory_info             (const PanelFactoryInfo &info);
+static void       slot_show_help                       (const String &help);
+static void       slot_show_factory_menu               (const std::vector <PanelFactoryInfo> &menu);
+
+static void       slot_show_preedit_string             (void);
+static void       slot_show_aux_string                 (void);
+static void       slot_show_lookup_table               (void);
+static void       slot_hide_preedit_string             (void);
+static void       slot_hide_aux_string                 (void);
+static void       slot_hide_lookup_table               (void);
+static void       slot_update_preedit_string           (const String &str, const AttributeList &attrs);
+static void       slot_update_preedit_caret            (int caret);
+static void       slot_update_aux_string               (const String &str, const AttributeList &attrs);
+static void       slot_update_lookup_table             (const LookupTable &table);
+static void       slot_register_properties             (const PropertyList &props);
+static void       slot_update_property                 (const Property &prop);
+
+static void       slot_register_helper_properties      (int id, const PropertyList &props);
+static void       slot_update_helper_property          (int id, const Property &prop);
+static void       slot_register_helper                 (int id, const HelperInfo &helper);
+static void       slot_remove_helper                   (int id);
+static void       slot_lock                            (void);
+static void       slot_unlock                          (void);
+
+/////////////////////////////////////////////////////////////////////////////
+// Declaration of internal variables.
+/////////////////////////////////////////////////////////////////////////////
+static bool               _ui_initialized              = false;
+
+static ConfigModule      *_config_module               = 0;
+static ConfigPointer      _config;
+
+static std::vector<HelperInfo>       _helper_list;
+
+static bool               _should_exit                 = false;
+
+static bool               _panel_is_on                 = false;
+
+static PanelAgent        *_panel_agent                 = 0;
+
+class PanelAgentThread;
+PanelAgentThread *_panel_agent_thread;
+
+class DBusHandler;
+DBusHandler *_dbus_handler;
+
+QMutex _panel_agent_lock;
+QMutex _global_resource_lock;
+QMutex _transaction_lock;
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Implementation of internal functions.
+/////////////////////////////////////////////////////////////////////////////
+
+static QString
+AttrList2String(const AttributeList &attr_list)
+{
+    QString result;
+    Q_FOREACH (const Attribute &attr, attr_list) {
+        int type = (int)attr.get_type();
+        unsigned int start = attr.get_start();
+        unsigned int length = attr.get_length();
+        unsigned int value = attr.get_value();
+        result += QString("%1,%2,%3,%4;").arg(type)
+                  .arg(start).arg(length).arg(value);
+    }
+    return result;
+}
+
+static QVariantList
+LookupTable2VariantList(const LookupTable &lookup_table)
+{
+    QVariantList result;
+    QStringList labels;
+    QStringList candidates;
+    QStringList attrlist_list;
+    int current_page_size = lookup_table.get_current_page_size();
+
+    for (int i = 0; i<current_page_size; i++) {
+        labels << QString::fromStdWString(lookup_table.get_candidate_label(i));
+    }
+    for (int i = 0; i<current_page_size; i++) {
+        candidates << QString::fromStdWString(lookup_table.get_candidate_in_current_page(i));
+        attrlist_list << AttrList2String(lookup_table.get_attributes_in_current_page(i));
+    }
+
+    result << labels << candidates << attrlist_list
+           << lookup_table.number_of_candidates() << lookup_table.get_current_page_start() << lookup_table.get_cursor_pos_in_current_page()
+           << lookup_table.is_cursor_visible();
+           
+    //result << labels << candidates << attrlist_list;
+    return result;
+}
+
+static QString
+Property2String(const Property &prop)
+{
+    QString result;
+    int state = 0;
+    if (prop.active())
+        state |= SCIM_PROPERTY_ACTIVE;
+    if (prop.visible())
+        state |= SCIM_PROPERTY_VISIBLE;
+    result = QString("%1:%2:%3:%4:%5")
+                .arg(QString::fromStdString(prop.get_key()))
+                .arg(QString::fromStdString(prop.get_label()))
+                .arg(QString::fromStdString(prop.get_icon()))
+                .arg(QString::fromStdString(prop.get_tip()))
+                .arg(state);
+    return result;
+}
+
+static int dbus_event_type = QEvent::registerEventType(1988);
+class DBusEvent : public QEvent
+{
+public:
+    enum SCIM_EVENT_TYPE {
+        TURN_ON,
+        TURN_OFF,
+        UP_SCREEN,
+        UP_SPOT_LOC,
+        UP_AUX,
+        UP_PREEDIT_STR,
+        UP_PREEDIT_CARET,
+        UP_LOOKUPTABLE,
+        UP_FACTORY_INFO,
+        UP_PROPERTY,
+        UP_HELPER_PROPERTY,
+        REG_PROPERTIES,
+        REG_HELPER_PROPERTIES,
+        REG_HELPER,
+        RM_HELPER,
+        SHOW_LOOKUPTABLE,
+        HIDE_LOOKUPTABLE,
+        SHOW_PREEDIT,
+        HIDE_PREEDIT,
+        SHOW_AUX,
+        HIDE_AUX,
+        SHOW_HELP,
+        SHOW_FACTORY_MENU,
+
+
+    };
+    DBusEvent( SCIM_EVENT_TYPE t, const QVariantList &arglist=QVariantList())
+        : QEvent((QEvent::Type)dbus_event_type), 
+          m_evtype(t),
+          m_data(arglist) {}
+    SCIM_EVENT_TYPE scim_event_type() const { return m_evtype; }
+    QVariantList data() const { return m_data; }
+private:
+    SCIM_EVENT_TYPE m_evtype;
+    QVariantList m_data;
+};
+class DBusHandler : public QObject 
+{
+Q_OBJECT
+public:
+    DBusHandler(QObject *parent = 0)
+    {
+        QDBusConnection("scim_panel").connect("","","org.kde.impanel","MovePreeditCaret",this,SLOT(MovePreeditCaret(int)));
+        QDBusConnection("scim_panel").connect("","","org.kde.impanel","ShowFactoryMenu",this,SLOT(ShowFactoryMenu()));
+        QDBusConnection("scim_panel").connect("","","org.kde.impanel","ChangeFactory",this,SLOT(ChangeFactory(int)));
+        QDBusConnection("scim_panel").connect("","","org.kde.impanel","SelectCandidate",this,SLOT(SelectCandiate(uint)));
+        QDBusConnection("scim_panel").connect("","","org.kde.impanel","LookupTablePageUp",this,SLOT(LookupTablePageUp()));
+        QDBusConnection("scim_panel").connect("","","org.kde.impanel","LookupTablePageDown",this,SLOT(LookupTablePageDown()));
+        QDBusConnection("scim_panel").connect("","","org.kde.impanel","Exit",this,SLOT(Exit()));
+        QDBusConnection("scim_panel").connect("","","org.kde.impanel","ReloadConfig",this,SLOT(ReloadConfig()));
+    }
+    ~DBusHandler() {}
+public Q_SLOTS:
+    void MovePreeditCaret(int pos) {
+        _panel_agent->move_preedit_caret(pos);
+    }
+    void ShowFactoryMenu() {
+        _panel_agent->request_factory_menu();
+    }
+    void ChangeFactory(int) {
+        _panel_agent->change_factory("");
+    }
+    void SelectCandiate(unsigned int idx) {
+        _panel_agent->select_candidate(idx);
+    }
+    void LookupTablePageUp() {
+        _panel_agent->lookup_table_page_up();
+    }
+    void LookupTablePageDown() {
+        _panel_agent->lookup_table_page_down();
+    }
+    void Exit() {
+        _panel_agent->exit();
+    }
+    void ReloadConfig() {
+        _panel_agent->reload_config();
+    }
+
+protected:
+    bool event(QEvent *e)
+    {
+        if (e->type() == dbus_event_type) {
+            DBusEvent *ev = (DBusEvent *)e;
+            QDBusMessage message;
+
+            switch (ev->scim_event_type()) {
+            case DBusEvent::TURN_ON:
+                message = QDBusMessage::createSignal("/org/scim/panel",
+                    "org.scim.panel",
+                    "Enable");
+                message << true;
+                break;
+            case DBusEvent::TURN_OFF:
+                message = QDBusMessage::createSignal("/org/scim/panel",
+                    "org.scim.panel",
+                    "Enable");
+                message << false;
+                break;
+            case DBusEvent::SHOW_HELP:
+                message = QDBusMessage::createSignal("/org/scim/panel",
+                    "org.scim.panel",
+                    "ShowHelp");
+                break;
+            case DBusEvent::SHOW_FACTORY_MENU:
+                message = QDBusMessage::createSignal("/org/scim/panel",
+                    "org.scim.panel",
+                    "ShowFactoryMenu");
+                break;
+            case DBusEvent::SHOW_PREEDIT:
+                message = QDBusMessage::createSignal("/org/scim/panel",
+                    "org.scim.panel",
+                    "ShowPreedit");
+                message << true;
+                break;
+            case DBusEvent::SHOW_AUX:
+                message = QDBusMessage::createSignal("/org/scim/panel",
+                    "org.scim.panel",
+                    "ShowAux");
+                message << true;
+                break;
+            case DBusEvent::SHOW_LOOKUPTABLE:
+                message = QDBusMessage::createSignal("/org/scim/panel",
+                    "org.scim.panel",
+                    "ShowLookupTable");
+                message << true;
+                break;
+            case DBusEvent::HIDE_PREEDIT:
+                message = QDBusMessage::createSignal("/org/scim/panel",
+                    "org.scim.panel",
+                    "ShowPreedit");
+                message << false;
+                break;
+            case DBusEvent::HIDE_AUX:
+                message = QDBusMessage::createSignal("/org/scim/panel",
+                    "org.scim.panel",
+                    "ShowAux");
+                message << false;
+                break;
+            case DBusEvent::HIDE_LOOKUPTABLE:
+                message = QDBusMessage::createSignal("/org/scim/panel",
+                    "org.scim.panel",
+                    "ShowLookupTable");
+                message << false;
+                break;
+            case DBusEvent::UP_HELPER_PROPERTY:
+                message = QDBusMessage::createSignal("/org/scim/panel",
+                    "org.scim.panel",
+                    "UpdateHelperProperty");
+                message << ev->data().at(0).toInt();
+                message << ev->data().at(1).toString();
+                break;
+            case DBusEvent::UP_PROPERTY:
+                message = QDBusMessage::createSignal("/org/scim/panel",
+                    "org.scim.panel",
+                    "UpdateProperty");
+                message << ev->data().at(0).toString();
+                break;
+            case DBusEvent::UP_FACTORY_INFO:
+                message = QDBusMessage::createSignal("/org/scim/panel",
+                    "org.scim.panel",
+                    "UpdateFactoryInfo");
+                break;
+            case DBusEvent::UP_LOOKUPTABLE:
+                message = QDBusMessage::createSignal("/org/scim/panel",
+                    "org.scim.panel",
+                    "UpdateLookupTable");
+                message << ev->data().at(0).toStringList();
+                message << ev->data().at(1).toStringList();
+                message << ev->data().at(2).toStringList();
+                message << ev->data().at(3).toInt();
+                message << ev->data().at(4).toInt();
+                message << ev->data().at(5).toInt();
+                message << ev->data().at(6).toBool();
+                break;
+            case DBusEvent::UP_PREEDIT_CARET:
+                message = QDBusMessage::createSignal("/org/scim/panel",
+                    "org.scim.panel",
+                    "UpdatePreeditCaret");
+                message << ev->data().at(0).toInt();
+                break;
+            case DBusEvent::UP_PREEDIT_STR:
+                message = QDBusMessage::createSignal("/org/scim/panel",
+                    "org.scim.panel",
+                    "UpdatePreeditText");
+                message << ev->data().at(0).toString() << ev->data().at(1).toString();
+                break;
+            case DBusEvent::UP_AUX:
+                message = QDBusMessage::createSignal("/org/scim/panel",
+                    "org.scim.panel",
+                    "UpdateAux");
+                message << ev->data().at(0).toString() << ev->data().at(0).toString();
+                break;
+            case DBusEvent::UP_SPOT_LOC:
+                message = QDBusMessage::createSignal("/org/scim/panel",
+                    "org.scim.panel",
+                    "UpdateSpotLocation");
+                message << ev->data().at(0).toInt();
+                message << ev->data().at(1).toInt();
+                break;
+            case DBusEvent::UP_SCREEN:
+                message = QDBusMessage::createSignal("/org/scim/panel",
+                    "org.scim.panel",
+                    "UpdateScreen");
+                message << ev->data().at(0).toInt();
+                break;
+            case DBusEvent::REG_HELPER:
+                message = QDBusMessage::createSignal("/org/scim/panel",
+                    "org.scim.panel",
+                    "RegisterHelper");
+                message << ev->data().at(0).toInt();        // id
+                message << ev->data().at(1).toString();     // uuid
+                message << ev->data().at(2).toString();     // name
+                message << ev->data().at(3).toString();     // icon
+                message << ev->data().at(4).toString();     // description
+                message << ev->data().at(5).toUInt();       // option
+                break;
+            case DBusEvent::REG_HELPER_PROPERTIES:
+                message = QDBusMessage::createSignal("/org/scim/panel",
+                    "org.scim.panel",
+                    "RegisterHelperProperties");
+                message << ev->data().at(0).toInt();
+                message << ev->data().at(1).toStringList();
+                break;
+            case DBusEvent::REG_PROPERTIES:
+                message = QDBusMessage::createSignal("/org/scim/panel",
+                    "org.scim.panel",
+                    "RegisterProperties");
+                message << ev->data().at(0).toStringList();
+                break;
+            case DBusEvent::RM_HELPER:
+                message = QDBusMessage::createSignal("/org/scim/panel",
+                    "org.scim.panel",
+                    "RemoveHelper");
+                message << ev->data().at(0).toInt();
+                break;
+            default:
+                message = QDBusMessage::createSignal("/org/scim/panel",
+                    "org.scim.panel",
+                    "ImplementMe");
+                //message << ev->data().at(0).toInt();
+                break;
+            }
+            
+            QDBusConnection("scim_panel").send(message);
+
+            return true;
+        }
+        return QObject::event(e);
+    }
+};
+
+class PanelAgentThread : public QThread
+{
+Q_OBJECT
+public:
+    PanelAgentThread(QObject *parent = 0) {}
+    ~PanelAgentThread() {}
+    void run() 
+    {
+        if (!_panel_agent->run())
+            std::cerr << "Failed to run Panel.\n";
+        _global_resource_lock.lock();
+        _should_exit = true;
+        _global_resource_lock.unlock();
+    }
+};
+
+//////////////////////////////////////////////////////////////////////
+// Start of PanelAgent Functions
+//////////////////////////////////////////////////////////////////////
+static bool
+initialize_panel_agent (const String &config, const String &display, bool resident)
+{
+    _panel_agent = new PanelAgent ();
+
+    if (!_panel_agent->initialize (config, display, resident))
+        return false;
+
+    _panel_agent->signal_connect_transaction_start          (slot (slot_transaction_start));
+    _panel_agent->signal_connect_transaction_end            (slot (slot_transaction_end));
+    _panel_agent->signal_connect_reload_config              (slot (slot_reload_config));
+    _panel_agent->signal_connect_turn_on                    (slot (slot_turn_on));
+    _panel_agent->signal_connect_turn_off                   (slot (slot_turn_off));
+    _panel_agent->signal_connect_update_screen              (slot (slot_update_screen));
+    _panel_agent->signal_connect_update_spot_location       (slot (slot_update_spot_location));
+    _panel_agent->signal_connect_update_factory_info        (slot (slot_update_factory_info));
+    _panel_agent->signal_connect_show_help                  (slot (slot_show_help));
+    _panel_agent->signal_connect_show_factory_menu          (slot (slot_show_factory_menu));
+    _panel_agent->signal_connect_show_preedit_string        (slot (slot_show_preedit_string));
+    _panel_agent->signal_connect_show_aux_string            (slot (slot_show_aux_string));
+    _panel_agent->signal_connect_show_lookup_table          (slot (slot_show_lookup_table));
+    _panel_agent->signal_connect_hide_preedit_string        (slot (slot_hide_preedit_string));
+    _panel_agent->signal_connect_hide_aux_string            (slot (slot_hide_aux_string));
+    _panel_agent->signal_connect_hide_lookup_table          (slot (slot_hide_lookup_table));
+    _panel_agent->signal_connect_update_preedit_string      (slot (slot_update_preedit_string));
+    _panel_agent->signal_connect_update_preedit_caret       (slot (slot_update_preedit_caret));
+    _panel_agent->signal_connect_update_aux_string          (slot (slot_update_aux_string));
+    _panel_agent->signal_connect_update_lookup_table        (slot (slot_update_lookup_table));
+    _panel_agent->signal_connect_register_properties        (slot (slot_register_properties));
+    _panel_agent->signal_connect_update_property            (slot (slot_update_property));
+    _panel_agent->signal_connect_register_helper_properties (slot (slot_register_helper_properties));
+    _panel_agent->signal_connect_update_helper_property     (slot (slot_update_helper_property));
+    _panel_agent->signal_connect_register_helper            (slot (slot_register_helper));
+    _panel_agent->signal_connect_remove_helper              (slot (slot_remove_helper));
+    _panel_agent->signal_connect_lock                       (slot (slot_lock));
+    _panel_agent->signal_connect_unlock                     (slot (slot_unlock));
+
+    _panel_agent->get_helper_list (_helper_list);
+
+    return true;
+}
+
+static bool
+run_panel_agent (void)
+{
+    SCIM_DEBUG_MAIN(1) << "run_panel_agent ()\n";
+
+    _panel_agent_thread = NULL;
+
+    if (_panel_agent && _panel_agent->valid ()) {
+        _panel_agent_thread = new PanelAgentThread();
+        _panel_agent_thread->start();
+    }
+
+    SCIM_DEBUG_MAIN(1)<<"ff\n";
+    return (_panel_agent_thread != NULL);
+}
+
+static void
+start_auto_start_helpers (void)
+{
+    SCIM_DEBUG_MAIN(1) << "start_auto_start_helpers ()\n";
+
+}
+
+static void
+slot_transaction_start (void)
+{
+    SCIM_DEBUG_MAIN(1) << "slot_transaction_start ()\n";
+    _transaction_lock.lock();
+}
+
+static void
+slot_transaction_end (void)
+{
+    SCIM_DEBUG_MAIN(1) << "slot_transaction_end ()\n";
+    _transaction_lock.unlock();
+}
+
+static void
+slot_reload_config (void)
+{
+    SCIM_DEBUG_MAIN(1) << "slot_reload_config ()\n";
+    if (!_config.null ()) _config->reload ();
+}
+
+static void
+slot_turn_on (void)
+{
+    SCIM_DEBUG_MAIN(1) << "slot_turn_on ()"<<_dbus_handler<<"\n";
+    qApp->postEvent(_dbus_handler,new DBusEvent(DBusEvent::TURN_ON));
+}
+
+static void
+slot_turn_off (void)
+{
+    SCIM_DEBUG_MAIN(1) << "slot_turn_off ()\n"; 
+    qApp->postEvent(_dbus_handler,new DBusEvent(DBusEvent::TURN_OFF));
+
+    /*
+     */
+}
+
+static void
+slot_update_screen (int num)
+{
+    SCIM_DEBUG_MAIN(1) << "slot_update_screen ()\n";
+    qApp->postEvent(_dbus_handler,new DBusEvent(DBusEvent::UP_SCREEN,
+        QVariantList()<<num));
+}
+
+static void
+slot_update_factory_info (const PanelFactoryInfo &info)
+{
+    SCIM_DEBUG_MAIN(1) << "slot_update_factory_info ()\n";
+    qApp->postEvent(_dbus_handler,new DBusEvent(DBusEvent::UP_FACTORY_INFO));
+}
+
+static void
+slot_show_help (const String &help)
+{
+    SCIM_DEBUG_MAIN(1) << "slot_show_help ()\n";
+    qApp->postEvent(_dbus_handler,new DBusEvent(DBusEvent::SHOW_HELP));
+}
+
+static void
+slot_show_factory_menu (const std::vector <PanelFactoryInfo> &factories)
+{
+    SCIM_DEBUG_MAIN(1) << "slot_show_factory_menu ()\n";
+    qApp->postEvent(_dbus_handler,new DBusEvent(DBusEvent::SHOW_FACTORY_MENU));
+}
+
+static void
+slot_update_spot_location (int x, int y)
+{
+    SCIM_DEBUG_MAIN(1) << "slot_update_spot_location ()\n";
+    qApp->postEvent(_dbus_handler,new DBusEvent(DBusEvent::UP_SPOT_LOC,
+        QVariantList()<<x<<y));
+}
+
+static void
+slot_show_preedit_string (void)
+{
+    SCIM_DEBUG_MAIN(1) << "slot_show_preedit_string ()\n";
+    qApp->postEvent(_dbus_handler,new DBusEvent(DBusEvent::SHOW_PREEDIT));
+}
+
+static void
+slot_show_aux_string (void)
+{
+    SCIM_DEBUG_MAIN(1) << "slot_show_aux_string ()\n";
+    qApp->postEvent(_dbus_handler,new DBusEvent(DBusEvent::SHOW_AUX));
+}
+
+static void
+slot_show_lookup_table (void)
+{
+    SCIM_DEBUG_MAIN(1) << "slot_show_lookup_table ()\n";
+    qApp->postEvent(_dbus_handler,new DBusEvent(DBusEvent::SHOW_LOOKUPTABLE));
+}
+
+static void
+slot_hide_preedit_string (void)
+{
+    SCIM_DEBUG_MAIN(1) << "slot_hide_preedit_string ()\n";
+    qApp->postEvent(_dbus_handler,new DBusEvent(DBusEvent::HIDE_PREEDIT));
+}
+
+static void
+slot_hide_aux_string (void)
+{
+    SCIM_DEBUG_MAIN(1) << "slot_hide_aux_string ()\n";
+    qApp->postEvent(_dbus_handler,new DBusEvent(DBusEvent::HIDE_AUX));
+}
+
+static void
+slot_hide_lookup_table (void)
+{
+    SCIM_DEBUG_MAIN(1) << "slot_hide_lookup_table ()\n";
+    qApp->postEvent(_dbus_handler,new DBusEvent(DBusEvent::HIDE_LOOKUPTABLE));
+}
+
+static void
+slot_update_preedit_string (const String &str, const AttributeList &attrs)
+{
+    SCIM_DEBUG_MAIN(1) << "slot_update_preedit_string ()"<<str<<"\n";
+    qApp->postEvent(_dbus_handler,new DBusEvent(DBusEvent::UP_PREEDIT_STR,
+        QVariantList()<<QString::fromStdString(str)<<AttrList2String(attrs)));
+}
+
+static void
+slot_update_preedit_caret (int caret)
+{
+    SCIM_DEBUG_MAIN(1) << "slot_update_preedit_caret ()"<<caret<<"\n";
+    qApp->postEvent(_dbus_handler,new DBusEvent(DBusEvent::UP_PREEDIT_CARET,
+        QVariantList()<<caret));
+}
+
+static void
+slot_update_aux_string (const String &str, const AttributeList &attrs)
+{
+    SCIM_DEBUG_MAIN(1) << "slot_update_aux_string ()" << str<< "\n";
+    qApp->postEvent(_dbus_handler,new DBusEvent(DBusEvent::UP_AUX,
+        QVariantList()<<QString::fromStdString(str) << AttrList2String(attrs)));
+}
+
+static void
+slot_update_lookup_table (const LookupTable &table)
+{
+    SCIM_DEBUG_MAIN(1) << "slot_update_lookup_table ()\n";
+    qApp->postEvent(_dbus_handler,new DBusEvent(DBusEvent::UP_LOOKUPTABLE,
+                                                LookupTable2VariantList(table)));
+}
+
+static void
+slot_register_properties (const PropertyList &props)
+{
+    SCIM_DEBUG_MAIN(1) << "slot_register_properties ()\n";
+    QStringList list;
+    Q_FOREACH (const Property &prop, props) {
+        list << Property2String(prop);
+    }
+    qApp->postEvent(_dbus_handler,new DBusEvent(DBusEvent::REG_PROPERTIES,
+                                                QVariantList() << list));
+}
+
+static void
+slot_update_property (const Property &prop)
+{
+    SCIM_DEBUG_MAIN(1) << "slot_update_property ()\n";
+    qApp->postEvent(_dbus_handler,new DBusEvent(DBusEvent::UP_PROPERTY,
+                                                QVariantList() << Property2String(prop)));
+}
+
+static void
+slot_register_helper_properties (int id, const PropertyList &props)
+{
+    SCIM_DEBUG_MAIN(1) << "slot_register_helper_properties ()\n";
+    QStringList list;
+    Q_FOREACH (const Property &prop, props) {
+        list << Property2String(prop);
+    }
+    qApp->postEvent(_dbus_handler,new DBusEvent(DBusEvent::REG_HELPER_PROPERTIES,
+                                                QVariantList()<<id<<list));
+}
+
+static void
+slot_update_helper_property (int id, const Property &prop)
+{
+    SCIM_DEBUG_MAIN(1) << "slot_update_helper_property ()\n";
+    qApp->postEvent(_dbus_handler,new DBusEvent(DBusEvent::UP_HELPER_PROPERTY,
+                                                QVariantList()<<id<<Property2String(prop)));
+}
+
+static void
+slot_register_helper (int id, const HelperInfo &helper)
+{
+    SCIM_DEBUG_MAIN(1) << "slot_register_helper ()\n";
+    qApp->postEvent(_dbus_handler,new DBusEvent(DBusEvent::REG_HELPER,
+                                                QVariantList()<< id 
+                                                              << QString::fromStdString(helper.uuid)
+                                                              << QString::fromStdString(helper.name)
+                                                              << QString::fromStdString(helper.icon)
+                                                              << QString::fromStdString(helper.description)
+                                                              <<helper.option));
+}
+
+static void
+slot_remove_helper (int id)
+{
+    SCIM_DEBUG_MAIN(1) << "slot_remove_helper ()\n";
+    qApp->postEvent(_dbus_handler,new DBusEvent(DBusEvent::RM_HELPER,
+                                                QVariantList()<<id));
+}
+
+static void
+slot_lock (void)
+{
+    SCIM_DEBUG_MAIN(1) << "slot_lock ()\n";
+    _panel_agent_lock.lock();
+}
+
+static void
+slot_unlock (void)
+{
+    SCIM_DEBUG_MAIN(1) << "slot_unlock ()\n";
+    _panel_agent_lock.unlock();
+}
+//////////////////////////////////////////////////////////////////////
+// End of PanelAgent-Functions
+//////////////////////////////////////////////////////////////////////
+
+static void
+signalhandler(int sig)
+{
+    SCIM_DEBUG_MAIN (1) << "In signal handler...\n";
+
+    if (_panel_agent)
+        _panel_agent->stop ();
+}
+
+int main (int argc, char *argv [])
+{
+    std::vector<String>  config_list;
+
+    int i;
+
+    bool daemon = false;
+
+    int    new_argc = 0;
+    char **new_argv = new char * [40];
+
+    String config_name ("simple");
+    String display_name;
+    bool should_resident = true;
+
+    //Display version info
+//    std::cerr << "GTK Panel of SCIM " << SCIM_VERSION << "\n\n";
+
+    //get modules list
+    scim_get_config_module_list (config_list);
+
+    //Add a dummy config module, it's not really a module!
+    config_list.push_back ("dummy");
+
+    //Use socket Config module as default if available.
+    if (config_list.size ()) {
+        if (std::find (config_list.begin (),
+                       config_list.end (),
+                       config_name) == config_list.end ())
+            config_name = config_list [0];
+    }
+
+    //DebugOutput::disable_debug (SCIM_DEBUG_AllMask);
+    DebugOutput::set_output("/home/ora/a.log");
+    DebugOutput::enable_debug (SCIM_DEBUG_AllMask);
+
+    //parse command options
+    i = 0;
+    while (i<argc) {
+        if (++i >= argc) break;
+
+        if (String ("-l") == argv [i] ||
+            String ("--list") == argv [i]) {
+            std::vector<String>::iterator it;
+
+            std::cout << "\n";
+            std::cout << "Available Config module:\n";
+            for (it = config_list.begin (); it != config_list.end (); it++)
+                std::cout << "    " << *it << "\n";
+
+            return 0;
+        }
+
+        if (String ("-c") == argv [i] ||
+            String ("--config") == argv [i]) {
+            if (++i >= argc) {
+                std::cerr << "no argument for option " << argv [i-1] << "\n";
+                return -1;
+            }
+            config_name = argv [i];
+            continue;
+        }
+
+        if (String ("-h") == argv [i] ||
+            String ("--help") == argv [i]) {
+            std::cout << "Usage: " << argv [0] << " [option]...\n\n"
+                 << "The options are: \n"
+                 << "  --display DISPLAY    Run on display DISPLAY.\n"
+                 << "  -l, --list           List all of available config modules.\n"
+                 << "  -c, --config NAME    Uses specified Config module.\n"
+                 << "  -d, --daemon         Run " << argv [0] << " as a daemon.\n"
+                 << "  -ns, --no-stay       Quit if no connected client.\n"
+#if ENABLE_DEBUG
+                 << "  -v, --verbose LEVEL  Enable debug info, to specific LEVEL.\n"
+                 << "  -o, --output FILE    Output debug information into FILE.\n"
+#endif
+                 << "  -h, --help           Show this help message.\n";
+            return 0;
+        }
+
+        if (String ("-d") == argv [i] ||
+            String ("--daemon") == argv [i]) {
+            daemon = true;
+            continue;
+        }
+
+        if (String ("-ns") == argv [i] ||
+            String ("--no-stay") == argv [i]) {
+            should_resident = false;
+            continue;
+        }
+
+        if (String ("-v") == argv [i] ||
+            String ("--verbose") == argv [i]) {
+            if (++i >= argc) {
+                std::cerr << "no argument for option " << argv [i-1] << "\n";
+                return -1;
+            }
+            DebugOutput::set_verbose_level (atoi (argv [i]));
+            continue;
+        }
+
+        if (String ("-o") == argv [i] ||
+            String ("--output") == argv [i]) {
+            if (++i >= argc) {
+                std::cerr << "No argument for option " << argv [i-1] << "\n";
+                return -1;
+            }
+            DebugOutput::set_output (argv [i]);
+            continue;
+        }
+
+        if (String ("--display") == argv [i]) {
+            if (++i >= argc) {
+                std::cerr << "No argument for option " << argv [i-1] << "\n";
+                return -1;
+            }
+            display_name = argv [i];
+            continue;
+        }
+
+        if (String ("--") == argv [i])
+            break;
+
+        std::cerr << "Invalid command line option: " << argv [i] << "\n";
+        return -1;
+    } //End of command line parsing.
+
+    new_argv [new_argc ++] = argv [0];
+
+    // Store the rest argvs into new_argv.
+    for (++i; i < argc && new_argc < 40; ++i) {
+        new_argv [new_argc ++] = argv [i];
+    }
+
+    // Make up DISPLAY env.
+    if (display_name.length ()) {
+        new_argv [new_argc ++] = "--display";
+        new_argv [new_argc ++] = const_cast <char*> (display_name.c_str ());
+
+        setenv ("DISPLAY", display_name.c_str (), 1);
+    }
+
+    new_argv [new_argc] = 0;
+
+    if (!config_name.length ()) {
+        std::cerr << "No Config module is available!\n";
+        return -1;
+    }
+
+    if (config_name != "dummy") {
+        //load config module
+        _config_module = new ConfigModule (config_name);
+
+        if (!_config_module || !_config_module->valid ()) {
+            std::cerr << "Can not load " << config_name << " Config module.\n";
+            return -1;
+        }
+
+        //create config instance
+        _config = _config_module->create_config ();
+    } else {
+        _config = new DummyConfig ();
+    }
+
+    if (_config.null ()) {
+        std::cerr << "Failed to create Config instance from "
+             << config_name << " Config module.\n";
+        return -1;
+    }
+
+    signal(SIGQUIT, signalhandler);
+    signal(SIGTERM, signalhandler);
+    signal(SIGINT,  signalhandler);
+    signal(SIGHUP,  signalhandler);
+
+    const char *p = getenv ("DISPLAY");
+    if (p) display_name = String (p);
+
+    if (!initialize_panel_agent (config_name, display_name, should_resident)) {
+        std::cerr << "Failed to initialize Panel Agent!\n";
+        return -1;
+    }
+
+    if (daemon)
+        scim_daemon ();
+
+    // connect the configuration reload signal.
+//    _config->signal_connect_reload (slot (ui_config_reload_callback));
+
+    QDBusConnection::connectToBus(QDBusConnection::SessionBus,"scim_panel");
+    _dbus_handler = new DBusHandler();
+
+    if (!run_panel_agent()) {
+        std::cerr << "Failed to run Socket Server!\n";
+        return -1;
+    }
+
+    start_auto_start_helpers ();
+
+    QCoreApplication app(argc,argv);
+    app.exec();
+
+    _panel_agent_thread->wait();
+    _config.reset ();
+
+    std::cerr << "Successfully exited.\n";
+    
+    return 0;
+}
+
+#include "main.moc"
+
+/*
+vim:ts=4:nowrap:expandtab
+*/
