@@ -27,46 +27,74 @@ class QString;
 class QStringList;
 class QVariant;
 
+#include "kimpaneltype.h"
+
 class PanelAgent: public QObject
 {
     Q_OBJECT
+
 public:
     PanelAgent(QObject *parent);
     virtual ~PanelAgent();
 
+    void created();
+    void exit();
+    void reloadConfig();
+    void selectCandidate(int idx);
+    void lookupTablePageUp();
+    void lookupTablePageDown();
+    void movePreeditCaret(int pos);
+
 public: // PROPERTIES
 public Q_SLOTS: // METHODS
-    void Enable(bool to_enable);
-    void ShowHelp(const QString &help);
-    void ShowPreedit(bool to_show);
-    void ShowAux(bool to_show);
-    void ShowLookupTable(bool to_show);
     void UpdateLookupTable(const QStringList &labels,
         const QStringList &candis,
         const QStringList &attrlists,
         int,int,int,bool to_show);
-    void UpdatePreeditText(const QString &text);
+    void UpdatePreeditText(const QString &text,const QString &attr);
     void UpdatePreeditCaret(int position);
-    void UpdateAux(const QString &text);
-    void UpdateSpotLocation(int x,int y);
+    void UpdateAux(const QString &text,const QString &attr);
     void UpdateScreen(int screen_id);
     void UpdateProperty(const QString &prop);
-    void UpdateHelperProperty(int id,const QString &prop);
-    void UpdateFactoryInfo(const QString &info); 
-    void ShowFactoryMenu(const QStringList &infos);
-    void RegisterHelper(int id,const QString &uuid,const QString &name,
-            const QString &icon,const QString &description, unsigned int option);
-    void RegisterHelperProperties(int id,const QStringList &props);
-    void RemoveHelper(int id);
+    void RegisterProperties(const QStringList &props);
+    void ExecDialog(const QString &prop);
+    void ExecMenu(const QStringList &entries);
+
 Q_SIGNALS: // SIGNALS
     void MovePreeditCaret(int position);
-    void RequestShowFactoryMenu();
-    void ChangeFactory(int index);
     void SelectCandidate(int index);
     void LookupTablePageUp();
     void LookupTablePageDown();
+    void TriggerProperty(const QString &key);
+    void PanelCreated();
     void Exit();
     void ReloadConfig();
+
+
+    // signals to inform kimpanel
+    void enable(bool to_enable);
+
+    void updateAux(const QString &text,const QList<TextAttribute> &attr);
+    void updateProperty(const Property &prop);
+    void updateLookupTable(const LookupTable &lookup_table);
+    void updateSpotLocation(int x,int y);
+    
+    void registerProperties(const QList<Property> &props);
+    
+    void execDialog(const Property &prop);
+    void execMenu(const QList<Property> &prop_list);
+
+    void showPreedit(bool to_show);
+    void showAux(bool to_show);
+    void showLookupTable(bool to_show);
+
+private:
+    bool m_show_aux;
+    bool m_show_preedit;
+    bool m_show_lookup_table;
+    int m_spot_x;
+    int m_spot_y;
+    QStringList cached_props;
 };
 
 #endif // PANEL_H

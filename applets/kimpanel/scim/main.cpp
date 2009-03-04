@@ -48,6 +48,10 @@
 #define ENABLE_DEBUG 9
 #include <scim.h>
 
+Q_DECLARE_METATYPE(scim::Property);
+Q_DECLARE_METATYPE(scim::PanelFactoryInfo);
+Q_DECLARE_METATYPE(scim::HelperInfo);
+
 using namespace scim;
 
 // PanelAgent related functions
@@ -102,15 +106,17 @@ static bool               _should_exit                 = false;
 
 static PanelAgent        *_panel_agent                 = 0;
 
+static QList<PanelFactoryInfo> _factory_list;
+
 class PanelAgentThread;
 PanelAgentThread *_panel_agent_thread;
 
 class DBusHandler;
 DBusHandler *_dbus_handler;
 
-QMutex _panel_agent_lock;
-QMutex _global_resource_lock;
-QMutex _transaction_lock;
+static QMutex _panel_agent_lock;
+static QMutex _global_resource_lock;
+static QMutex _transaction_lock;
 
 
 /////////////////////////////////////////////////////////////////////////////
@@ -126,7 +132,7 @@ AttrList2String(const AttributeList &attr_list)
         unsigned int start = attr.get_start();
         unsigned int length = attr.get_length();
         unsigned int value = attr.get_value();
-        result += QString("%1,%2,%3,%4;").arg(type)
+        result += QString("%1:%2:%3:%4;").arg(type)
                   .arg(start).arg(length).arg(value);
     }
     return result;
@@ -167,10 +173,10 @@ Property2String(const Property &prop)
     if (prop.visible())
         state |= SCIM_PROPERTY_VISIBLE;
     result = QString("%1:%2:%3:%4:%5")
-                .arg(QString::fromStdString(prop.get_key()))
-                .arg(QString::fromStdString(prop.get_label()))
-                .arg(QString::fromStdString(prop.get_icon()))
-                .arg(QString::fromStdString(prop.get_tip()))
+                .arg(QString::fromUtf8(prop.get_key().c_str()))
+                .arg(QString::fromUtf8(prop.get_label().c_str()))
+                .arg(QString::fromUtf8(prop.get_icon().c_str()))
+                .arg(QString::fromUtf8(prop.get_tip().c_str()))
                 .arg(state);
     return result;
 }
@@ -178,11 +184,32 @@ Property2String(const Property &prop)
 static QString 
 PanelFactoryInfo2String(const PanelFactoryInfo &info)
 {
-    return QString("%1:%2:%3:%4")
-            .arg(QString::fromStdString(info.uuid))
-            .arg(QString::fromStdString(info.name))
-            .arg(QString::fromStdString(info.lang))
-            .arg(QString::fromStdString(info.icon));
+    QString result = QString("%1:%2:%3:%4")
+            .arg(QString::fromUtf8(info.uuid.c_str()))
+            .arg(QString::fromUtf8(info.name.c_str()))
+            .arg(QString::fromUtf8(info.icon.c_str()))
+            .arg(QString::fromUtf8(info.lang.c_str()));
+    return result;
+}
+
+static QStringList
+PropertyList2LeafOnlyStringList(const QList<Property> &props)
+{
+    QStringList list;
+    list.clear();
+    for (int i=0; i<props.size(); i++) {
+        bool ok = true;
+        for (int j=0; j<props.size(); j++) {
+            if (props.at(i).is_a_leaf_of(props.at(j))) {
+                SCIM_DEBUG_MAIN(1)<<"Leaf"<<props.at(i).get_key()<<" "
+                    << props.at(j).get_key() << "\n";
+                ok = false;
+            }
+        }
+        if (ok)
+            list << Property2String(props.at(i));
+    }
+    return list;
 }
 
 static int dbus_event_type = QEvent::registerEventType(1988);
@@ -205,6 +232,7 @@ public:
         REG_HELPER_PROPERTIES,
         REG_HELPER,
         RM_HELPER,
+        RM_PROPERTY,
         SHOW_LOOKUPTABLE,
         HIDE_LOOKUPTABLE,
         SHOW_PREEDIT,
@@ -233,127 +261,244 @@ public:
     DBusHandler(QObject *parent = 0):QObject(parent)
     {
         QDBusConnection("scim_panel").connect("","","org.kde.impanel","MovePreeditCaret",this,SLOT(MovePreeditCaret(int)));
-        QDBusConnection("scim_panel").connect("","","org.kde.impanel","RequestShowFactoryMenu",this,SLOT(RequestShowFactoryMenu()));
-        QDBusConnection("scim_panel").connect("","","org.kde.impanel","ChangeFactory",this,SLOT(ChangeFactory(int)));
         QDBusConnection("scim_panel").connect("","","org.kde.impanel","SelectCandidate",this,SLOT(SelectCandiate(uint)));
         QDBusConnection("scim_panel").connect("","","org.kde.impanel","LookupTablePageUp",this,SLOT(LookupTablePageUp()));
         QDBusConnection("scim_panel").connect("","","org.kde.impanel","LookupTablePageDown",this,SLOT(LookupTablePageDown()));
+        QDBusConnection("scim_panel").connect("","","org.kde.impanel","TriggerProperty",this,SLOT(TriggerProperty(const QString &)));
+        QDBusConnection("scim_panel").connect("","","org.kde.impanel","PanelCreated",this,SLOT(PanelCreated()));
         QDBusConnection("scim_panel").connect("","","org.kde.impanel","Exit",this,SLOT(Exit()));
         QDBusConnection("scim_panel").connect("","","org.kde.impanel","ReloadConfig",this,SLOT(ReloadConfig()));
+        
+        QString icon_path;
+        logo_prop = Property("/Logo","S","","SCIM Input Method");
+        show_help_prop = Property("/StartHelp","H","help-about","Show Help");
+        factory_prop_prefix = QString::fromUtf8("/Factory/");
     }
     ~DBusHandler() {}
 public Q_SLOTS:
     void MovePreeditCaret(int pos) {
+        SCIM_DEBUG_MAIN(1) << Q_FUNC_INFO << pos<<"\n";
         _panel_agent->move_preedit_caret(pos);
     }
-    void RequestShowFactoryMenu() {
-        _panel_agent->request_factory_menu();
-    }
-    void ChangeFactory(int) {
-        _panel_agent->change_factory("");
-    }
     void SelectCandiate(unsigned int idx) {
+        SCIM_DEBUG_MAIN(1) << Q_FUNC_INFO << idx<<"\n";
         _panel_agent->select_candidate(idx);
     }
     void LookupTablePageUp() {
+        SCIM_DEBUG_MAIN(1) << Q_FUNC_INFO<<"\n";
         _panel_agent->lookup_table_page_up();
     }
     void LookupTablePageDown() {
+        SCIM_DEBUG_MAIN(1) << Q_FUNC_INFO<<"\n";
         _panel_agent->lookup_table_page_down();
     }
+    void TriggerProperty(const QString &key) {
+        SCIM_DEBUG_MAIN(1) << qPrintable(key)<<"\n";
+        if (key == show_help_prop.get_key().c_str()) {
+            SCIM_DEBUG_MAIN(1) << "about_to_show_help"<<"\n";
+            _panel_agent->request_help();
+            return;
+        }
+        if (key == logo_prop.get_key().c_str()) {
+            SCIM_DEBUG_MAIN(1) << "about_to_show_factory_menu"<<"\n";
+            _panel_agent->request_factory_menu();
+            return;
+        }
+        if (key.startsWith(factory_prop_prefix)) {
+            QString factory_uuid = key;
+            factory_uuid.remove(0,factory_prop_prefix.size());
+            SCIM_DEBUG_MAIN(1) << "about_to_change_factory"<<qPrintable(factory_uuid)<<"\n";
+            _panel_agent->change_factory(factory_uuid.toUtf8().constData());
+            return;
+        }
+        int i = 0;
+        for (i=0; i<panel_props.size(); i++) {
+            if (panel_props.at(i).get_key() == String(key.toUtf8().constData())) {
+                break;
+            }
+        }
+        // found one
+        QStringList list_result;
+        list_result.clear();
+        if (i < panel_props.size()) {
+            for (int j=0; j<panel_props.size(); j++) {
+                if (panel_props.at(j).is_a_leaf_of(panel_props.at(i))) {
+                    list_result << Property2String(panel_props.at(j));
+                }
+            }
+            if (list_result.isEmpty()) {
+                _panel_agent->trigger_property(key.toUtf8().constData());
+            } else {
+                SCIM_DEBUG_MAIN(1) << "ExecMenu"<<qPrintable(key)<<"\n";
+                QDBusMessage message = QDBusMessage::createSignal("/org/scim/panel",
+                            "org.scim.panel",
+                            "ExecMenu");
+                message << list_result;
+                QDBusConnection("scim_panel").send(message);
+            }
+        }
+    }
+    void PanelCreated() {
+
+        QDBusMessage message;
+        QStringList list_result;
+
+        list_result.clear();
+        list_result << Property2String(logo_prop);
+        list_result << PropertyList2LeafOnlyStringList(panel_props);
+
+        Q_FOREACH(const QList<Property> &props, helper_props_map.values()) {
+            list_result << PropertyList2LeafOnlyStringList(props);
+        }
+
+        list_result << Property2String(show_help_prop);
+        
+        message = QDBusMessage::createSignal("/org/scim/panel",
+            "org.scim.panel",
+            "RegisterProperties");
+
+        message << list_result;
+        QDBusConnection("scim_panel").send(message);
+
+    }
     void Exit() {
+        SCIM_DEBUG_MAIN(1) << Q_FUNC_INFO<<"\n";
         _panel_agent->exit();
     }
     void ReloadConfig() {
+        SCIM_DEBUG_MAIN(1) << Q_FUNC_INFO<<"\n";
         _panel_agent->reload_config();
     }
 
 protected:
     bool event(QEvent *e)
     {
+        QStringList list_result;
+        QList<Property> prop_list;
         if (e->type() == dbus_event_type) {
             DBusEvent *ev = (DBusEvent *)e;
+
             QDBusMessage message;
 
             switch (ev->scim_event_type()) {
             case DBusEvent::TURN_ON:
+                list_result.clear();
+                list_result << Property2String(logo_prop);
+                list_result << PropertyList2LeafOnlyStringList(panel_props);
+                Q_FOREACH(const QList<Property> &props, helper_props_map.values()) {
+                    list_result << PropertyList2LeafOnlyStringList(props);
+                }
+                list_result << Property2String(show_help_prop);
+
+                message = QDBusMessage::createSignal("/org/scim/panel",
+                    "org.scim.panel",
+                    "RegisterProperties");
+
+                message << list_result;
+                QDBusConnection("scim_panel").send(message);
+
                 message = QDBusMessage::createSignal("/org/scim/panel",
                     "org.scim.panel",
                     "Enable");
                 message << true;
+                QDBusConnection("scim_panel").send(message);
                 break;
             case DBusEvent::TURN_OFF:
+                list_result.clear();
+                list_result << Property2String(logo_prop);
+                list_result << Property2String(show_help_prop);
+
+                message = QDBusMessage::createSignal("/org/scim/panel",
+                    "org.scim.panel",
+                    "RegisterProperties");
+
+                message << list_result;
+
+                QDBusConnection("scim_panel").send(message);
+
                 message = QDBusMessage::createSignal("/org/scim/panel",
                     "org.scim.panel",
                     "Enable");
                 message << false;
+                QDBusConnection("scim_panel").send(message);
                 break;
             case DBusEvent::SHOW_HELP:
                 message = QDBusMessage::createSignal("/org/scim/panel",
                     "org.scim.panel",
-                    "ShowHelp");
-                message << ev->data().at(0).toString();
+                    "ExecDialog");
+                message << Property2String(Property("/Help",
+                    "Help",
+                    "",
+                    ev->data().at(0).toString().toUtf8().constData()));
+                QDBusConnection("scim_panel").send(message);
                 break;
             case DBusEvent::SHOW_FACTORY_MENU:
                 message = QDBusMessage::createSignal("/org/scim/panel",
                     "org.scim.panel",
-                    "ShowFactoryMenu");
-                message << ev->data().at(0).toStringList();
+                    "ExecMenu");
+//X                 _factory_list.clear();
+                list_result.clear();
+                Q_FOREACH (const QVariant &v, ev->data()) {
+                    PanelFactoryInfo factory_info = v.value<PanelFactoryInfo>();
+//X                     _factory_list << factory_info;
+                    list_result << Property2String(Property(
+                        String(factory_prop_prefix.toUtf8().constData()) + factory_info.uuid,
+                        factory_info.name,
+                        factory_info.icon,
+                        factory_info.lang));
+                }
+                message << list_result;
+                SCIM_DEBUG_MAIN(1)<<qPrintable(list_result.join(";"))<<"\n";
+                QDBusConnection("scim_panel").send(message);
                 break;
             case DBusEvent::SHOW_PREEDIT:
                 message = QDBusMessage::createSignal("/org/scim/panel",
                     "org.scim.panel",
                     "ShowPreedit");
                 message << true;
+                QDBusConnection("scim_panel").send(message);
                 break;
             case DBusEvent::SHOW_AUX:
                 message = QDBusMessage::createSignal("/org/scim/panel",
                     "org.scim.panel",
                     "ShowAux");
                 message << true;
+                QDBusConnection("scim_panel").send(message);
                 break;
             case DBusEvent::SHOW_LOOKUPTABLE:
                 message = QDBusMessage::createSignal("/org/scim/panel",
                     "org.scim.panel",
                     "ShowLookupTable");
                 message << true;
+                QDBusConnection("scim_panel").send(message);
                 break;
             case DBusEvent::HIDE_PREEDIT:
                 message = QDBusMessage::createSignal("/org/scim/panel",
                     "org.scim.panel",
                     "ShowPreedit");
                 message << false;
+                QDBusConnection("scim_panel").send(message);
                 break;
             case DBusEvent::HIDE_AUX:
                 message = QDBusMessage::createSignal("/org/scim/panel",
                     "org.scim.panel",
                     "ShowAux");
                 message << false;
+                QDBusConnection("scim_panel").send(message);
                 break;
             case DBusEvent::HIDE_LOOKUPTABLE:
                 message = QDBusMessage::createSignal("/org/scim/panel",
                     "org.scim.panel",
                     "ShowLookupTable");
                 message << false;
-                break;
-            case DBusEvent::UP_HELPER_PROPERTY:
-                message = QDBusMessage::createSignal("/org/scim/panel",
-                    "org.scim.panel",
-                    "UpdateHelperProperty");
-                message << ev->data().at(0).toInt();
-                message << ev->data().at(1).toString();
+                QDBusConnection("scim_panel").send(message);
                 break;
             case DBusEvent::UP_PROPERTY:
                 message = QDBusMessage::createSignal("/org/scim/panel",
                     "org.scim.panel",
                     "UpdateProperty");
-                message << ev->data().at(0).toString();
-                break;
-            case DBusEvent::UP_FACTORY_INFO:
-                message = QDBusMessage::createSignal("/org/scim/panel",
-                    "org.scim.panel",
-                    "UpdateFactoryInfo");
-                message << ev->data().at(0).toString();
+                message << Property2String(ev->data().at(0).value<Property>());
+                QDBusConnection("scim_panel").send(message);
                 break;
             case DBusEvent::UP_LOOKUPTABLE:
                 message = QDBusMessage::createSignal("/org/scim/panel",
@@ -366,24 +511,30 @@ protected:
                 message << ev->data().at(4).toInt();
                 message << ev->data().at(5).toInt();
                 message << ev->data().at(6).toBool();
+                QDBusConnection("scim_panel").send(message);
                 break;
             case DBusEvent::UP_PREEDIT_CARET:
                 message = QDBusMessage::createSignal("/org/scim/panel",
                     "org.scim.panel",
                     "UpdatePreeditCaret");
                 message << ev->data().at(0).toInt();
+                QDBusConnection("scim_panel").send(message);
                 break;
             case DBusEvent::UP_PREEDIT_STR:
                 message = QDBusMessage::createSignal("/org/scim/panel",
                     "org.scim.panel",
                     "UpdatePreeditText");
-                message << ev->data().at(0).toString() << ev->data().at(1).toString();
+                message << ev->data().at(0).toString();
+                message << ev->data().at(1).toString();
+                QDBusConnection("scim_panel").send(message);
                 break;
             case DBusEvent::UP_AUX:
                 message = QDBusMessage::createSignal("/org/scim/panel",
                     "org.scim.panel",
                     "UpdateAux");
-                message << ev->data().at(0).toString() << ev->data().at(0).toString();
+                message << ev->data().at(0).toString();
+                message << ev->data().at(1).toString();
+                QDBusConnection("scim_panel").send(message);
                 break;
             case DBusEvent::UP_SPOT_LOC:
                 message = QDBusMessage::createSignal("/org/scim/panel",
@@ -391,57 +542,125 @@ protected:
                     "UpdateSpotLocation");
                 message << ev->data().at(0).toInt();
                 message << ev->data().at(1).toInt();
+                QDBusConnection("scim_panel").send(message);
                 break;
             case DBusEvent::UP_SCREEN:
                 message = QDBusMessage::createSignal("/org/scim/panel",
                     "org.scim.panel",
                     "UpdateScreen");
                 message << ev->data().at(0).toInt();
+                QDBusConnection("scim_panel").send(message);
+                break;
+            case DBusEvent::UP_FACTORY_INFO:
+                SCIM_DEBUG_MAIN(1) << "update factory info\n";
+
+                logo_prop.set_icon(ev->data().at(0).value<PanelFactoryInfo>()
+                    .icon);
+                message = QDBusMessage::createSignal("/org/scim/panel",
+                    "org.scim.panel",
+                    "UpdateProperty");
+                message << Property2String(logo_prop);
+                QDBusConnection("scim_panel").send(message);
                 break;
             case DBusEvent::REG_HELPER:
-                message = QDBusMessage::createSignal("/org/scim/panel",
-                    "org.scim.panel",
-                    "RegisterHelper");
-                message << ev->data().at(0).toInt();        // id
-                message << ev->data().at(1).toString();     // uuid
-                message << ev->data().at(2).toString();     // name
-                message << ev->data().at(3).toString();     // icon
-                message << ev->data().at(4).toString();     // description
-                message << ev->data().at(5).toUInt();       // option
                 break;
             case DBusEvent::REG_HELPER_PROPERTIES:
-                message = QDBusMessage::createSignal("/org/scim/panel",
-                    "org.scim.panel",
-                    "RegisterHelperProperties");
-                message << ev->data().at(0).toInt();
-                message << ev->data().at(1).toStringList();
-                break;
-            case DBusEvent::REG_PROPERTIES:
+                helper_props_map.clear();
+                prop_list.clear();
+                Q_FOREACH(const QVariant &v, ev->data().at(1).toList()) {
+                    Property prop = v.value<Property>();
+                    prop_list << prop;
+                }
+                helper_props_map.insert(ev->data().at(0).toInt(),prop_list);
+
+                list_result.clear();
+                list_result << Property2String(logo_prop);
+                list_result << PropertyList2LeafOnlyStringList(panel_props);
+                Q_FOREACH(const QList<Property> &props, helper_props_map.values()) {
+                    list_result << PropertyList2LeafOnlyStringList(props);
+                }
+                list_result << Property2String(show_help_prop);
+
                 message = QDBusMessage::createSignal("/org/scim/panel",
                     "org.scim.panel",
                     "RegisterProperties");
-                message << ev->data().at(0).toStringList();
+
+                message << list_result;
+                QDBusConnection("scim_panel").send(message);
+
                 break;
-            case DBusEvent::RM_HELPER:
+            case DBusEvent::REG_PROPERTIES:
+                panel_props.clear();
+                Q_FOREACH (const QVariant &v, ev->data()) {
+                    Property prop = v.value<Property>();
+                    panel_props << prop;
+                    SCIM_DEBUG_MAIN(1)<<"REG_PROPERTIES"<<qPrintable(Property2String(v.value<Property>()))<<"\n";
+                }
+
+                list_result.clear();
+                list_result << Property2String(logo_prop);
+                list_result << PropertyList2LeafOnlyStringList(panel_props);
+                SCIM_DEBUG_MAIN(1)<<"SIMPLIFY_PROPS "<<panel_props.size()<<" "<<list_result.size()-1<<"\n";
+                Q_FOREACH(const QList<Property> &props, helper_props_map.values()) {
+                    list_result << PropertyList2LeafOnlyStringList(props);
+                }
+                list_result << Property2String(show_help_prop);
+
+
                 message = QDBusMessage::createSignal("/org/scim/panel",
                     "org.scim.panel",
-                    "RemoveHelper");
-                message << ev->data().at(0).toInt();
+                    "RegisterProperties");
+
+                message << list_result;
+                QDBusConnection("scim_panel").send(message);
+
+                break;
+            case DBusEvent::RM_HELPER:
+                helper_props_map.remove(ev->data().at(0).toInt());
+                list_result.clear();
+                list_result << Property2String(logo_prop);
+                list_result << PropertyList2LeafOnlyStringList(panel_props);
+                Q_FOREACH(const QList<Property> &props, helper_props_map.values()) {
+                    list_result << PropertyList2LeafOnlyStringList(props);
+                }
+                list_result << Property2String(show_help_prop);
+
+                message = QDBusMessage::createSignal("/org/scim/panel",
+                    "org.scim.panel",
+                    "RegisterProperties");
+
+                message << list_result;
+                QDBusConnection("scim_panel").send(message);
+
+                break;
+            case DBusEvent::RM_PROPERTY:
+                message = QDBusMessage::createSignal("/org/scim/panel",
+                    "org.scim.panel",
+                    "RemoveProperty");
+                //message << ev->data().at(0).V();
+                QDBusConnection("scim_panel").send(message);
                 break;
             default:
                 message = QDBusMessage::createSignal("/org/scim/panel",
                     "org.scim.panel",
                     "ImplementMe");
                 //message << ev->data().at(0).toInt();
+                SCIM_DEBUG_MAIN(1) << "Implement me:"<<ev->scim_event_type()<<"\n";
+                QDBusConnection("scim_panel").send(message);
                 break;
             }
             
-            QDBusConnection("scim_panel").send(message);
-
             return true;
         }
         return QObject::event(e);
     }
+private:
+    QList<Property> panel_props;
+    QMap<int,QList<Property> > helper_props_map;
+    Property logo_prop; 
+    Property show_help_prop;
+    QString factory_prop_prefix;
+    QStringList cached_panel_props;
 };
 
 class PanelAgentThread : public QThread
@@ -517,15 +736,23 @@ run_panel_agent (void)
         _panel_agent_thread->start();
     }
 
-    SCIM_DEBUG_MAIN(1)<<"ff\n";
     return (_panel_agent_thread != NULL);
 }
 
 static void
 start_auto_start_helpers (void)
 {
-    SCIM_DEBUG_MAIN(1) << "start_auto_start_helpers ()\n";
+    SCIM_DEBUG_MAIN(1) << "start_auto_start_helpers () begin\n";
 
+    // Add Helper object items.
+    for (size_t i = 0; i < _helper_list.size(); i++) {
+        SCIM_DEBUG_MAIN(1) << "--"<<_helper_list[i].name
+        <<"="<<_helper_list[i].icon<<"==--\n";
+        if ((_helper_list[i].option & SCIM_HELPER_AUTO_START)) {
+            _panel_agent->start_helper(_helper_list[i].uuid);
+        }
+    }
+    SCIM_DEBUG_MAIN(1) << "start_auto_start_helpers () end\n";
 }
 
 static void
@@ -579,7 +806,7 @@ slot_update_factory_info (const PanelFactoryInfo &info)
 {
     SCIM_DEBUG_MAIN(1) << "slot_update_factory_info ()\n";
     qApp->postEvent(_dbus_handler,new DBusEvent(DBusEvent::UP_FACTORY_INFO,
-        QVariantList()<<PanelFactoryInfo2String(info)));
+        QVariantList()<<QVariant::fromValue(info)));
 }
 
 static void
@@ -587,19 +814,19 @@ slot_show_help (const String &help)
 {
     SCIM_DEBUG_MAIN(1) << "slot_show_help ()\n";
     qApp->postEvent(_dbus_handler,new DBusEvent(DBusEvent::SHOW_HELP,
-        QVariantList()<<QString::fromStdString(help)));
+        QVariantList()<<QString::fromUtf8(help.c_str())));
 }
 
 static void
 slot_show_factory_menu (const std::vector <PanelFactoryInfo> &factories)
 {
     SCIM_DEBUG_MAIN(1) << "slot_show_factory_menu ()\n";
-    QStringList list;
+    QVariantList list;
     Q_FOREACH (const PanelFactoryInfo &info, factories) {
-        list << PanelFactoryInfo2String(info);
+        list << QVariant::fromValue(info);
     }
     qApp->postEvent(_dbus_handler,new DBusEvent(DBusEvent::SHOW_FACTORY_MENU,
-        QVariantList() << list ));
+        list));
 }
 
 static void
@@ -657,7 +884,7 @@ slot_update_preedit_string (const String &str, const AttributeList &attrs)
 {
     SCIM_DEBUG_MAIN(1) << "slot_update_preedit_string ()"<<str<<"\n";
     qApp->postEvent(_dbus_handler,new DBusEvent(DBusEvent::UP_PREEDIT_STR,
-        QVariantList()<<QString::fromStdString(str)<<AttrList2String(attrs)));
+        QVariantList()<<QString::fromUtf8(str.c_str())<<AttrList2String(attrs)));
 }
 
 static void
@@ -673,7 +900,7 @@ slot_update_aux_string (const String &str, const AttributeList &attrs)
 {
     SCIM_DEBUG_MAIN(1) << "slot_update_aux_string ()" << str<< "\n";
     qApp->postEvent(_dbus_handler,new DBusEvent(DBusEvent::UP_AUX,
-        QVariantList()<<QString::fromStdString(str) << AttrList2String(attrs)));
+        QVariantList()<<QString::fromUtf8(str.c_str()) << AttrList2String(attrs)));
 }
 
 static void
@@ -688,12 +915,12 @@ static void
 slot_register_properties (const PropertyList &props)
 {
     SCIM_DEBUG_MAIN(1) << "slot_register_properties ()\n";
-    QStringList list;
+    QVariantList list;
     Q_FOREACH (const Property &prop, props) {
-        list << Property2String(prop);
+        list << QVariant::fromValue(prop);
     }
     qApp->postEvent(_dbus_handler,new DBusEvent(DBusEvent::REG_PROPERTIES,
-                                                QVariantList() << list));
+                                                list));
 }
 
 static void
@@ -701,16 +928,16 @@ slot_update_property (const Property &prop)
 {
     SCIM_DEBUG_MAIN(1) << "slot_update_property ()\n";
     qApp->postEvent(_dbus_handler,new DBusEvent(DBusEvent::UP_PROPERTY,
-                                                QVariantList() << Property2String(prop)));
+                                                QVariantList() << QVariant::fromValue(prop)));
 }
 
 static void
 slot_register_helper_properties (int id, const PropertyList &props)
 {
     SCIM_DEBUG_MAIN(1) << "slot_register_helper_properties ()\n";
-    QStringList list;
+    QVariantList list;
     Q_FOREACH (const Property &prop, props) {
-        list << Property2String(prop);
+        list << QVariant::fromValue(prop);
     }
     qApp->postEvent(_dbus_handler,new DBusEvent(DBusEvent::REG_HELPER_PROPERTIES,
                                                 QVariantList()<<id<<list));
@@ -721,7 +948,7 @@ slot_update_helper_property (int id, const Property &prop)
 {
     SCIM_DEBUG_MAIN(1) << "slot_update_helper_property ()\n";
     qApp->postEvent(_dbus_handler,new DBusEvent(DBusEvent::UP_HELPER_PROPERTY,
-                                                QVariantList()<<id<<Property2String(prop)));
+                                                QVariantList()<<id<<QVariant::fromValue(prop)));
 }
 
 static void
@@ -730,11 +957,7 @@ slot_register_helper (int id, const HelperInfo &helper)
     SCIM_DEBUG_MAIN(1) << "slot_register_helper ()\n";
     qApp->postEvent(_dbus_handler,new DBusEvent(DBusEvent::REG_HELPER,
                                                 QVariantList()<< id 
-                                                              << QString::fromStdString(helper.uuid)
-                                                              << QString::fromStdString(helper.name)
-                                                              << QString::fromStdString(helper.icon)
-                                                              << QString::fromStdString(helper.description)
-                                                              <<helper.option));
+                                                              << QVariant::fromValue(helper)));
 }
 
 static void
@@ -787,6 +1010,7 @@ int main (int argc, char *argv [])
     String display_name;
     bool should_resident = true;
 
+//    QTextCodec::setCodecForCStrings(QTextCodec::codecForLocale());
     //Display version info
 //    std::cerr << "GTK Panel of SCIM " << SCIM_VERSION << "\n\n";
 
@@ -961,6 +1185,10 @@ int main (int argc, char *argv [])
 
     // connect the configuration reload signal.
 //    _config->signal_connect_reload (slot (ui_config_reload_callback));
+
+    qRegisterMetaType<scim::Property>("scim::Property");
+    qRegisterMetaType<PanelFactoryInfo>("PanelFactoryInfo");
+    qRegisterMetaType<HelperInfo>("HelperInfo");
 
     QDBusConnection::connectToBus(QDBusConnection::SessionBus,"scim_panel");
     _dbus_handler = new DBusHandler();

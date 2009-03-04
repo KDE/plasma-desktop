@@ -18,6 +18,7 @@ TARGET = scim-panel-dbus
 
 CONFIG   += console
 CONFIG   += no_keywords
+#CONFIG   += release
 CONFIG   -= app_bundle
 
 TEMPLATE = app

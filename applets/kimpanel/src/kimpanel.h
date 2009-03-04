@@ -1,5 +1,5 @@
 /*
- *   Copyright (C) 2007 Wang Hoi <zealot.hoi@gmail.com>
+ *   Copyright (C) 2009 Wang Hoi <zealot.hoi@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU General Public License version 2 (or, at
@@ -19,29 +19,45 @@
 #ifndef KIMPANEL_H
 #define KIMPANEL_H
 
-#include "plasma/applet.h"
-#include "plasma/svg.h"
-#include "plasma/dataengine.h"
-#include "kicon.h"
+#include <plasma/svg.h>
+#include <plasma/framesvg.h>
+#include <kicon.h>
 #include <QString>
+#include <QWidget>
 #include <QPainter>
 
+#include "kimpaneltype.h"
+
 class PanelAgent;
-class KIMPanel : public Plasma::Applet {
+class StatusBarWidget;
+class LookupTableWidget;
+
+class KIMPanel : public QObject {
 Q_OBJECT
+
 public:
-    KIMPanel( QObject* parent, const QVariantList& args );
+    KIMPanel(QObject* parent=0);
     ~KIMPanel();
-protected:
-    void init();
-    void paintInterface(QPainter *painter, 
-            const QStyleOptionGraphicsItem *option, 
-            const QRect& contentsRect);
-private slots:
+
+//    void KIMChangeFactory(const QString &uuid);
+
+public slots:
+//X     void enable(bool to_enable);
+    void execDialog(const Property &prop);
+    void execMenu(const QList<Property> &props);
+
+    void showPreedit(bool to_show);
+    void showAux(bool to_show);
+    void showLookupTable(bool to_show);
+
+    //void exit();
+    //void reloadConfig();
+
+    void showConfig();
+
 private:
-    Plasma::Svg m_svg;
-    KIcon m_icon;
     PanelAgent *m_panel_agent;
+    StatusBarWidget *m_statusbar;
+    LookupTableWidget *m_lookup_table;
 };
-K_EXPORT_PLASMA_APPLET(kimpanel, KIMPanel)
 #endif
