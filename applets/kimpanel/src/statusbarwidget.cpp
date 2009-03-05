@@ -2,6 +2,8 @@
 #include "paintutils.h"
 
 #include <kglobal.h>
+#include <kapplication.h>
+#include <kconfiggroup.h>
 #include <kiconloader.h>
 #include <kicon.h>
 #include <QtCore>
@@ -13,6 +15,7 @@
 #include <KWindowSystem>
 #include <X11/Xlib.h>
 #endif
+
 
 StatusBarWidget::StatusBarWidget(QWidget *parent):QWidget(parent)
 {
@@ -58,6 +61,12 @@ StatusBarWidget::StatusBarWidget(QWidget *parent):QWidget(parent)
     KIconLoader::global()->newIconLoader();
 
     m_dragging = false;
+
+    m_desktop = new QDesktopWidget();
+    m_config = new KConfigGroup(KGlobal::config(),"StatusBar");
+    move(m_config->readEntry("Pos",m_desktop->availableGeometry().bottomRight()-QPoint(200,40)));
+
+    m_timer_id = -1;
 }
 
 StatusBarWidget::~StatusBarWidget()
@@ -105,36 +114,9 @@ void StatusBarWidget::updateAux(const QString &text,const QList<TextAttribute> &
 
 void StatusBarWidget::registerProperties(const QList<Property> &props)
 {
-    QLayoutItem *item;
-    while ( (item = layout()->takeAt(1)) != 0 ) {
-//X         kDebug() << "remove layout item";
-        layout()->removeItem(item);
-        delete item->widget();
-    }
-
-    prop_map.clear();
-    foreach (const Property &prop, props) {
-        QToolButton *prop_button = new QToolButton(this);
-        prop_button->setStyleSheet(m_button_stylesheet);
-
-        QPixmap icon_pixmap;
-
-        KIcon icon;
-
-        if (!prop.icon.isEmpty()) {
-    //        icon_pixmap = KIcon(prop.icon).pixmap(KIconLoader::SizeSmall,KIconLoader::SizeSmall,Qt::KeepAspectRatio);
-            icon = KIcon(prop.icon);
-        } else {
-            icon = KIcon(renderText(prop.label).scaled(KIconLoader::SizeSmall,KIconLoader::SizeSmall));
-        }
-
-        prop_button->setIcon(icon);
-        prop_button->setToolTip(prop.tip);
-
-        layout()->addWidget(prop_button);
-        prop_map.insert(prop.key,prop_button);
-        prop_mapper.setMapping(prop_button,prop.key);
-        connect(prop_button,SIGNAL(clicked()),&prop_mapper,SLOT(map()));
+    m_pending_reg_properties = props;
+    if (m_timer_id == -1) {
+        m_timer_id = startTimer(0);
     }
 }
 
@@ -215,6 +197,13 @@ void StatusBarWidget::resizeEvent(QResizeEvent *e)
     setMask(m_background_svg->mask());
 #endif
     QWidget::resizeEvent(e);
+    if ((width() + x() > m_desktop->availableGeometry().width()) ||
+        (height() + y() > m_desktop->availableGeometry().height())) {
+
+        move(qMin(m_desktop->availableGeometry().width()-width(),x()),
+            qMin(m_desktop->availableGeometry().height()-height(),y()));
+    }
+
 }
 
 void StatusBarWidget::mouseMoveEvent(QMouseEvent *e)
@@ -225,15 +214,63 @@ void StatusBarWidget::mouseMoveEvent(QMouseEvent *e)
 
 void StatusBarWidget::mousePressEvent(QMouseEvent *e)
 {
-    m_dragging = true;
-    m_init_pos = e->pos();
-    setCursor(Qt::SizeAllCursor);
+    if (e->button() == Qt::LeftButton) {
+        m_dragging = true;
+        m_init_pos = e->pos();
+        setCursor(Qt::SizeAllCursor);
+    }
 }
 
 void StatusBarWidget::mouseReleaseEvent(QMouseEvent *e)
 {
-    m_dragging = false;
-    setCursor(Qt::ArrowCursor);
+    if (m_dragging) {
+        m_dragging = false;
+        setCursor(Qt::ArrowCursor);
+        m_config->writeEntry("Pos",e->globalPos());
+        m_config->sync();   
+    }
+}
+
+void StatusBarWidget::timerEvent(QTimerEvent *e)
+{
+    if (e->timerId() == m_timer_id) {
+        killTimer(m_timer_id);
+        m_timer_id = -1;
+
+        QLayoutItem *item;
+        while ( (item = layout()->takeAt(1)) != 0 ) {
+    //X         kDebug() << "remove layout item";
+            layout()->removeItem(item);
+            delete item->widget();
+        }
+
+        prop_map.clear();
+        foreach (const Property &prop, m_pending_reg_properties) {
+            QToolButton *prop_button = new QToolButton(this);
+            prop_button->setStyleSheet(m_button_stylesheet);
+
+            QPixmap icon_pixmap;
+
+            KIcon icon;
+
+            if (!prop.icon.isEmpty()) {
+        //        icon_pixmap = KIcon(prop.icon).pixmap(KIconLoader::SizeSmall,KIconLoader::SizeSmall,Qt::KeepAspectRatio);
+                icon = KIcon(prop.icon);
+            } else {
+                icon = KIcon(renderText(prop.label).scaled(KIconLoader::SizeSmall,KIconLoader::SizeSmall));
+            }
+
+            prop_button->setIcon(icon);
+            prop_button->setToolTip(prop.tip);
+
+            layout()->addWidget(prop_button);
+            prop_map.insert(prop.key,prop_button);
+            prop_mapper.setMapping(prop_button,prop.key);
+            connect(prop_button,SIGNAL(clicked()),&prop_mapper,SLOT(map()));
+        }
+    } else {
+        QWidget::timerEvent(e);
+    }
 }
 
 bool StatusBarWidget::event(QEvent *e)

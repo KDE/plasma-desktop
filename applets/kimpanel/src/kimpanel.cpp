@@ -21,6 +21,12 @@
 #include "statusbarwidget.h"
 #include "lookuptablewidget.h"
 #include <kdebug.h>
+#include <kcmdlineargs.h>
+#include <kaboutapplicationdialog.h>
+#include <kapplication.h>
+#include <kaction.h>
+#include <kstandardaction.h>
+#include <kmenu.h>
 #include <kicon.h>
 #include <kmessagebox.h>
 #include <plasma/theme.h>
@@ -84,6 +90,16 @@ KIMPanel::KIMPanel(QObject* parent)
         m_lookup_table,
         SLOT(updateAux(const QString &,const QList<TextAttribute> &)));
 
+    // create actions
+    KAction *action = new KAction(KIcon("view-refresh"),i18n("Reload Config"),this);
+    connect(action,SIGNAL(triggered()),m_panel_agent,SIGNAL(ReloadConfig()));
+    m_actions << action;
+    m_actions << KStandardAction::aboutApp(this,SLOT(about()),this);
+    m_actions << KStandardAction::quit(this,SLOT(exit()),this);
+
+    m_statusbar->addActions(m_actions);
+    m_statusbar->setContextMenuPolicy(Qt::ActionsContextMenu);
+
     m_panel_agent->created();
 }
 
@@ -127,6 +143,17 @@ void KIMPanel::showLookupTable(bool to_show)
     m_lookup_table->setVisible(to_show);
 }
 
+void KIMPanel::about()
+{
+    KAboutApplicationDialog dlg(KCmdLineArgs::aboutData());
+    dlg.exec();
+}
+
+void KIMPanel::exit()
+{
+//X     m_panel_agent->exit();
+    KApplication::kApplication()->quit();
+}
 
 // ------------------ handle panel agent signal end -----------------
 

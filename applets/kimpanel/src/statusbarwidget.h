@@ -27,6 +27,9 @@
 
 #include "kimpaneltype.h"
 
+class KConfigGroup;
+class QDesktopWidget;
+
 class StatusBarWidget : public QWidget
 {
 Q_OBJECT
@@ -51,6 +54,7 @@ protected:
     void mouseMoveEvent(QMouseEvent *e);
     void mousePressEvent(QMouseEvent *e);
     void mouseReleaseEvent(QMouseEvent *e);
+    void timerEvent(QTimerEvent *e);
     bool event(QEvent *e);
 
 private:
@@ -68,6 +72,12 @@ private:
 
     QMap<QString,QToolButton *> prop_map;
     QSignalMapper prop_mapper;
+
+    KConfigGroup *m_config;
+    QDesktopWidget *m_desktop;
+
+    int m_timer_id;
+    QList<Property> m_pending_reg_properties;
 };
 
 #endif // STATUSBARWIDGET_H

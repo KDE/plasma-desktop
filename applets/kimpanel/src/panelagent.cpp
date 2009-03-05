@@ -161,6 +161,16 @@ void PanelAgent::created()
     emit PanelCreated();
 }
 
+void PanelAgent::exit()
+{
+    emit Exit();
+}
+
+void PanelAgent::reloadConfig()
+{
+    emit ReloadConfig();
+}
+
 //---------------------handle kimpanel call end-----------------------------------------
 
 //---------------------handle dbus signal start-----------------------------------------
@@ -202,7 +212,6 @@ void PanelAgent::RegisterProperties(const QStringList &props)
 {
     if (cached_props != props) {
         cached_props = props;
-        kDebug()<<props;
         QList<Property> list;
         foreach (const QString &prop, props) {
             list << String2Property(prop);
@@ -210,7 +219,7 @@ void PanelAgent::RegisterProperties(const QStringList &props)
 
         emit registerProperties(list);
     } else {
-        kDebug()<<"cache hit :)";
+//X         kDebug()<<"cache hit :)";
     }
 }
 

@@ -50,7 +50,8 @@ public slots:
     void showAux(bool to_show);
     void showLookupTable(bool to_show);
 
-    //void exit();
+    void about();
+    void exit();
     //void reloadConfig();
 
     void showConfig();
@@ -59,5 +60,7 @@ private:
     PanelAgent *m_panel_agent;
     StatusBarWidget *m_statusbar;
     LookupTableWidget *m_lookup_table;
+
+    QList<QAction *> m_actions;
 };
 #endif
