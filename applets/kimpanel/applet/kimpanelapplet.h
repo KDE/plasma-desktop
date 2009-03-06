@@ -28,11 +28,10 @@
 #include <KIcon>
 #include <KDialog>
 
-#include "ui_kimpanelConfig.h"
-#include "ui_kimpanelAdd.h"
-
 #include "kimpaneltype.h"
 #include "kimpanelagent.h"
+#include "kimpanellayout.h"
+#include "kimpanelwidget.h"
 
 class KIMPanelApplet : public Plasma::Applet
 {
@@ -45,7 +44,7 @@ public:
      * Returns hints about the geometry of the figure
      * @return Hints about proportionality of the applet
      */
-    QSizeF sizeHint(Qt::SizeHint which, const QSizeF & constraint = QSizeF()) const;
+//X     QSizeF sizeHint(Qt::SizeHint which, const QSizeF & constraint = QSizeF()) const;
 
     /**
      * Returns info about if we want to expand or not
@@ -61,13 +60,10 @@ public:
 
 Q_SIGNALS:
     void triggerProperty(const QString &key);
+    void sizeHintChanged(Qt::SizeHint);
 
 public Q_SLOTS:
     void createConfigurationInterface(KConfigDialog *parent);
-    /**
-     * Slot for showing the Add Icon interface
-     */
-    void showAddInterface();
 
 protected:
     /**
@@ -89,11 +85,7 @@ protected Q_SLOTS:
     void configAccepted();
 
 private Q_SLOTS:
-    void refactorUi();
-    void showDialog();
-
-    void updateProperty(const Property &prop);
-    void registerProperties(const QList<Property> &props);
+    void resizeSelf(Qt::SizeHint);
 
 private:
     void init();
@@ -109,18 +101,17 @@ private:
      */
     void saveConfig() {}
 
-    QGraphicsGridLayout *m_layout;
-    QList<Plasma::IconWidget *> m_icons;
-    Plasma::FrameSvg *m_background;
-    Plasma::IconWidget *m_arrow;
-    int m_rowCount;
+    QGraphicsLinearLayout *m_layout;
 
-    QPointF m_mousePressPos;
+    KIMPanelWidget *m_widget;
+
+//    QList<Plasma::IconWidget *> m_icons;
+    Plasma::FrameSvg *m_background;
+  //  Plasma::IconWidget *m_arrow;
+  //  int m_rowCount;
 
     QAction* m_addAction;
     QAction* m_removeAction;
-
-    PanelAgent *m_panel_agent;
 };
 
 #endif

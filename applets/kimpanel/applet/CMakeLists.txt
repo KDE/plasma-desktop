@@ -11,6 +11,8 @@ if(NOT KDE4_FOUND)
 endif(NOT KDE4_FOUND)
 
 set(plasma_applet_kimpanel_SRCS
+#  kimpanellayout.cpp
+  kimpanelwidget.cpp
   kimpanelapplet.cpp
 )
 
