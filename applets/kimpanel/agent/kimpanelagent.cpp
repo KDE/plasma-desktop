@@ -1,4 +1,4 @@
-#include "panelagent.h"
+#include "kimpanelagent.h"
 #include "impaneladaptor.h"
 #include <KDebug>
 #include <QtCore/QByteArray>
@@ -240,4 +240,4 @@ void PanelAgent::ExecMenu(const QStringList &entries)
 }
 
 //---------------------handle dbus signal end--------------------------------------
-#include "panelagent.moc"
+#include "kimpanelagent.moc"

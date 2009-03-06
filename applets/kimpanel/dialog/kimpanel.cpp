@@ -17,7 +17,7 @@
  */
 
 #include "kimpanel.h"
-#include "panelagent.h"
+#include "kimpanelagent.h"
 #include "statusbarwidget.h"
 #include "lookuptablewidget.h"
 #include <kdebug.h>

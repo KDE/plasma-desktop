@@ -85,6 +85,8 @@ private:
 
     QLabel *m_aux_label;
     QLabel *m_candis_label;
+
+    QDesktopWidget m_desktop;
 };
 
 #endif // LOOKUPTABLEWIDGET_H

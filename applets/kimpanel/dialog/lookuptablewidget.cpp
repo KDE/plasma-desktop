@@ -25,13 +25,13 @@ LookupTableWidget::LookupTableWidget(QWidget *parent):QWidget(parent)
 //X     m_help_svg = new Plasma::Svg(this);
 
 //X     m_background_svg->setImagePath("widgets/panel-background");
-    m_background_svg->setImagePath("dialogs/krunner");
+    m_background_svg->setImagePath("dialogs/background");
 //X     m_factory_svg->setImagePath("widgets/button");
 //X     m_config_svg->setImagePath("widgets/configuration-icons");
 //X     m_help_svg->setImagePath("widgets/button");
     
-    m_background_svg->setEnabledBorders(Plasma::FrameSvg::LeftBorder | Plasma::FrameSvg::RightBorder);
-//X     m_background_svg->setEnabledBorders(Plasma::FrameSvg::AllBorders);
+    //m_background_svg->setEnabledBorders(Plasma::FrameSvg::LeftBorder | Plasma::FrameSvg::RightBorder);
+    m_background_svg->setEnabledBorders(Plasma::FrameSvg::AllBorders);
     connect(m_background_svg, SIGNAL(repaintNeeded()), SLOT(update()));
 
 //X     m_factory_svg->setContainsMultipleImages(true);
@@ -86,7 +86,7 @@ LookupTableWidget::LookupTableWidget(QWidget *parent):QWidget(parent)
 
     //setWindowFlags(Qt::FramelessWindowHint|Qt::X11BypassWindowManagerHint);
     //setWindowFlags(Qt::X11BypassWindowManagerHint);
-    KWindowSystem::setState( winId(), NET::SkipTaskbar | NET::SkipPager | NET::StaysOnTop );
+    KWindowSystem::setState( winId(), NET::SkipTaskbar | NET::SkipPager | NET::StaysOnTop | NET::KeepAbove);
     KWindowSystem::setType( winId(), NET::Dock);
 
     setMouseTracking(true);
@@ -246,7 +246,8 @@ void LookupTableWidget::themeUpdated()
 
 void LookupTableWidget::updateSpotLocation(int x,int y)
 {
-    move(x,y);
+    move(qMin(x,m_desktop.availableGeometry().width()-width()),
+        qMin(y,m_desktop.availableGeometry().height()-height()));
 }
 
 void LookupTableWidget::paintEvent(QPaintEvent *e)
@@ -287,6 +288,11 @@ void LookupTableWidget::resizeEvent(QResizeEvent *e)
     setMask(m_background_svg->mask());
 #endif
     QWidget::resizeEvent(e);
+    if ((x()+width()>m_desktop.availableGeometry().width()) ||
+        y()+height()>m_desktop.availableGeometry().height()) {
+        move(qMin(x(),m_desktop.availableGeometry().width()-width()),
+            qMin(y(),m_desktop.availableGeometry().height()-height()));
+    }
 }
 
 void LookupTableWidget::mouseMoveEvent(QMouseEvent *e)

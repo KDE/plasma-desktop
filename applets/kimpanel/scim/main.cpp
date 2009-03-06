@@ -123,6 +123,12 @@ static QMutex _transaction_lock;
 // Implementation of internal functions.
 /////////////////////////////////////////////////////////////////////////////
 
+static void
+ui_config_reload_callback (const ConfigPointer &config)
+{
+    _config = config;
+}
+
 static QString
 AttrList2String(const AttributeList &attr_list)
 {
@@ -273,8 +279,26 @@ public:
         logo_prop = Property("/Logo","S","","SCIM Input Method");
         show_help_prop = Property("/StartHelp","H","help-about","Show Help");
         factory_prop_prefix = QString::fromUtf8("/Factory/");
+        helper_prop_prefix = QString::fromUtf8("/Helper/");
     }
     ~DBusHandler() {}
+
+    void setInitialHelpers(const std::vector<HelperInfo> &_helper_list) {
+        QList<Property> props;
+        Q_FOREACH (const HelperInfo &info, _helper_list) {
+            if (((info.option & SCIM_HELPER_STAND_ALONE) != 0) && 
+                ((info.option & SCIM_HELPER_AUTO_START) == 0)) {
+                
+                props << Property(String(helper_prop_prefix.toUtf8().constData()) + info.uuid,
+                    info.name,
+                    info.icon,
+                    info.description);
+            }
+        }
+        if (!props.isEmpty()) {
+            helper_props_map.insert(0,props);
+        }
+    }
 public Q_SLOTS:
     void MovePreeditCaret(int pos) {
         SCIM_DEBUG_MAIN(1) << Q_FUNC_INFO << pos<<"\n";
@@ -309,6 +333,13 @@ public Q_SLOTS:
             factory_uuid.remove(0,factory_prop_prefix.size());
             SCIM_DEBUG_MAIN(1) << "about_to_change_factory"<<qPrintable(factory_uuid)<<"\n";
             _panel_agent->change_factory(factory_uuid.toUtf8().constData());
+            return;
+        }
+        if (key.startsWith(helper_prop_prefix)) {
+            QString helper_uuid = key;
+            helper_uuid.remove(0,helper_prop_prefix.size());
+            SCIM_DEBUG_MAIN(1) << "about_to_start_helper"<<qPrintable(helper_uuid)<<"\n";
+            _panel_agent->start_helper(helper_uuid.toUtf8().constData());
             return;
         }
         int i = 0;
@@ -367,7 +398,9 @@ public Q_SLOTS:
     }
     void ReloadConfig() {
         SCIM_DEBUG_MAIN(1) << Q_FUNC_INFO<<"\n";
-        _panel_agent->reload_config();
+        //_panel_agent->reload_config();
+        if (!_config.null())
+            _config->reload();
     }
 
 protected:
@@ -382,6 +415,7 @@ protected:
 
             switch (ev->scim_event_type()) {
             case DBusEvent::TURN_ON:
+/*
                 list_result.clear();
                 list_result << Property2String(logo_prop);
                 list_result << PropertyList2LeafOnlyStringList(panel_props);
@@ -396,7 +430,7 @@ protected:
 
                 message << list_result;
                 QDBusConnection("scim_panel").send(message);
-
+*/
                 message = QDBusMessage::createSignal("/org/scim/panel",
                     "org.scim.panel",
                     "Enable");
@@ -404,8 +438,19 @@ protected:
                 QDBusConnection("scim_panel").send(message);
                 break;
             case DBusEvent::TURN_OFF:
+                logo_prop.set_icon("");
+                
+                message = QDBusMessage::createSignal("/org/scim/panel",
+                    "org.scim.panel",
+                    "UpdateProperty");
+                message << Property2String(logo_prop);
+                QDBusConnection("scim_panel").send(message);
+/*
                 list_result.clear();
                 list_result << Property2String(logo_prop);
+                Q_FOREACH (const QList<Property> &prop_list, helper_props_map.values()) {
+                    list_result << PropertyList2LeafOnlyStringList(prop_list);
+                }
                 list_result << Property2String(show_help_prop);
 
                 message = QDBusMessage::createSignal("/org/scim/panel",
@@ -415,7 +460,7 @@ protected:
                 message << list_result;
 
                 QDBusConnection("scim_panel").send(message);
-
+*/
                 message = QDBusMessage::createSignal("/org/scim/panel",
                     "org.scim.panel",
                     "Enable");
@@ -660,6 +705,7 @@ private:
     Property logo_prop; 
     Property show_help_prop;
     QString factory_prop_prefix;
+    QString helper_prop_prefix;
     QStringList cached_panel_props;
 };
 
@@ -746,8 +792,8 @@ start_auto_start_helpers (void)
 
     // Add Helper object items.
     for (size_t i = 0; i < _helper_list.size(); i++) {
-        SCIM_DEBUG_MAIN(1) << "--"<<_helper_list[i].name
-        <<"="<<_helper_list[i].icon<<"==--\n";
+        SCIM_DEBUG_MAIN(1) << "--"<<_helper_list[i].uuid
+        <<"--"<<_helper_list[i].name<<"--\n";
         if ((_helper_list[i].option & SCIM_HELPER_AUTO_START)) {
             _panel_agent->start_helper(_helper_list[i].uuid);
         }
@@ -773,7 +819,10 @@ static void
 slot_reload_config (void)
 {
     SCIM_DEBUG_MAIN(1) << "slot_reload_config ()\n";
-    if (!_config.null ()) _config->reload ();
+    if (!_config.null ()) 
+        _config->reload ();
+    else 
+        SCIM_DEBUG_MAIN(1)<<"config is null\n";
 }
 
 static void
@@ -972,14 +1021,14 @@ static void
 slot_lock (void)
 {
     SCIM_DEBUG_MAIN(1) << "slot_lock ()\n";
-    _panel_agent_lock.lock();
+    //_panel_agent_lock.lock();
 }
 
 static void
 slot_unlock (void)
 {
     SCIM_DEBUG_MAIN(1) << "slot_unlock ()\n";
-    _panel_agent_lock.unlock();
+    //_panel_agent_lock.unlock();
 }
 //////////////////////////////////////////////////////////////////////
 // End of PanelAgent-Functions
@@ -1183,8 +1232,8 @@ int main (int argc, char *argv [])
     if (daemon)
         scim_daemon ();
 
-    // connect the configuration reload signal.
-//    _config->signal_connect_reload (slot (ui_config_reload_callback));
+    //connect the configuration reload signal.
+    _config->signal_connect_reload (slot (ui_config_reload_callback));
 
     qRegisterMetaType<scim::Property>("scim::Property");
     qRegisterMetaType<PanelFactoryInfo>("PanelFactoryInfo");
@@ -1192,6 +1241,7 @@ int main (int argc, char *argv [])
 
     QDBusConnection::connectToBus(QDBusConnection::SessionBus,"scim_panel");
     _dbus_handler = new DBusHandler();
+    _dbus_handler->setInitialHelpers(_helper_list);
 
     if (!run_panel_agent()) {
         std::cerr << "Failed to run Socket Server!\n";

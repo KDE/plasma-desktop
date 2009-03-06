@@ -29,7 +29,7 @@ StatusBarWidget::StatusBarWidget(QWidget *parent):QWidget(parent)
     //m_background_svg->setImagePath("dialogs/background");
     
     m_background_svg->setElementPrefix("south");
-    m_background_svg->setEnabledBorders(Plasma::FrameSvg::AllBorders);
+    m_background_svg->setEnabledBorders(Plasma::FrameSvg::NoBorder);
     connect(m_background_svg, SIGNAL(repaintNeeded()), SLOT(update()));
 
     connect(Plasma::Theme::defaultTheme(), SIGNAL(themeChanged()),
@@ -37,9 +37,10 @@ StatusBarWidget::StatusBarWidget(QWidget *parent):QWidget(parent)
 
     m_layout = new QHBoxLayout;
     setLayout(m_layout);
-    layout()->setMargin(0);
 
-    layout()->addWidget(new QLabel("",this));
+    QLabel *label = new QLabel("",this);
+    label->setPixmap(KIcon("start-here-kde").pixmap(KIconLoader::SizeSmall,KIconLoader::SizeSmall));
+    layout()->addWidget(label);
 
     // handle property/helper trigger signal
     connect(&prop_mapper,SIGNAL(mapped(const QString &)),SIGNAL(triggerProperty(const QString &)));
@@ -67,6 +68,10 @@ StatusBarWidget::StatusBarWidget(QWidget *parent):QWidget(parent)
     move(m_config->readEntry("Pos",m_desktop->availableGeometry().bottomRight()-QPoint(200,40)));
 
     m_timer_id = -1;
+
+    setAttribute(Qt::WA_AlwaysShowToolTips, true);
+
+    layout()->setMargin(0);
 }
 
 StatusBarWidget::~StatusBarWidget()
@@ -108,9 +113,11 @@ void StatusBarWidget::updateProperty(const Property &prop)
     prop_button->setToolTip(prop.tip);
 }
 
+#if 0
 void StatusBarWidget::updateAux(const QString &text,const QList<TextAttribute> &attrs)
 {
 }
+#endif
 
 void StatusBarWidget::registerProperties(const QList<Property> &props)
 {
@@ -122,21 +129,23 @@ void StatusBarWidget::registerProperties(const QList<Property> &props)
 
 void StatusBarWidget::themeUpdated()
 {
-    int left;
-    int right;
-    int top;
-    int bottom;
-
-    getContentsMargins(&left,&right,&top,&bottom);
-    const int topHeight = qMax(0, int(m_background_svg->marginSize(Plasma::TopMargin)));
-    const int leftWidth = qMax(0, int(m_background_svg->marginSize(Plasma::LeftMargin)));
-    const int rightWidth = qMax(0, int(m_background_svg->marginSize(Plasma::RightMargin)));
-    const int bottomHeight = qMax(0, int(m_background_svg->marginSize(Plasma::BottomMargin)));
+//X     const int topHeight = qMax(0, int(m_background_svg->marginSize(Plasma::TopMargin)));
+//X     const int leftWidth = qMax(0, int(m_background_svg->marginSize(Plasma::LeftMargin)));
+//X     const int rightWidth = qMax(0, int(m_background_svg->marginSize(Plasma::RightMargin)));
+//X     const int bottomHeight = qMax(0, int(m_background_svg->marginSize(Plasma::BottomMargin)));
 //X     const int topHeight = qMax(0, int(m_background_svg->marginSize(Plasma::TopMargin)) - top);
 //X     const int leftWidth = qMax(0, int(m_background_svg->marginSize(Plasma::LeftMargin)) - left);
 //X     const int rightWidth = qMax(0, int(m_background_svg->marginSize(Plasma::RightMargin)) - right);
 //X     const int bottomHeight = qMax(0, int(m_background_svg->marginSize(Plasma::BottomMargin)) - bottom);
     //setContentsMargins(leftWidth, topHeight, rightWidth, bottomHeight);
+    qreal left;
+    qreal right;
+    qreal top;
+    qreal bottom;
+
+    m_background_svg->getMargins(left,top,right,bottom);
+    kDebug() << left;
+    setContentsMargins((left>=4)?left:4, top, right, bottom);
 
     Plasma::Theme *theme = Plasma::Theme::defaultTheme();
     QColor buttonBgColor = theme->color(Plasma::Theme::BackgroundColor);

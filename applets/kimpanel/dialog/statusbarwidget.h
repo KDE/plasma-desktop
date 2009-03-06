@@ -43,7 +43,7 @@ Q_SIGNALS:
     void triggerProperty(const QString &key);
 
 public Q_SLOTS:
-    void updateAux(const QString &text,const QList<TextAttribute> &attrs);
+//X     void updateAux(const QString &text,const QList<TextAttribute> &attrs);
     void updateProperty(const Property &prop);
     void registerProperties(const QList<Property> &props);
     void themeUpdated();
