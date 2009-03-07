@@ -23,13 +23,11 @@
 #include <math.h>
 #include "paintutils.h"
 
-static const int s_defaultIconSize = 16;
-static const int s_defaultSpacing = 0;
-
 KIMPanelWidget::KIMPanelWidget(QGraphicsItem *parent)
   : QGraphicsWidget(parent),
     m_layout(0),
-    m_rowCount(2),
+    m_collapsed(false),
+    m_enableCollapse(true),
     m_panel_agent(0)
 {
 
@@ -43,20 +41,15 @@ KIMPanelWidget::KIMPanelWidget(QGraphicsItem *parent)
     m_layout = new KIMPanelLayout(this);
     m_layout->setContentsMargins(0, 0, 0, 0);
 
-    // Initial "more icons" arrow
-//X     m_arrow = new Plasma::IconWidget(this);
-//X     m_arrow->setIcon(KIcon("arrow-right"));
-    //connect(m_arrow, SIGNAL(clicked()), SLOT(showDialog()));
-    
+    // Initial collapse action
+    m_collapseAction = new QAction(KIcon("arrow-up-double"),"",this);
+    connect(m_collapseAction, SIGNAL(triggered()), SLOT(changeCollapseStatus()));
+    m_collapseIcon = new Plasma::IconWidget(this);
+    m_collapseIcon->setAction(m_collapseAction);
+    m_collapseIcon->show();
 
     m_panel_agent = new PanelAgent(this);
 
-    connect(m_panel_agent,
-        SIGNAL(registerProperties(const QList<Property> &)),
-        SLOT(registerProperties(const QList<Property> &)));
-    connect(m_panel_agent,
-        SIGNAL(updateProperty(const Property &)),
-        SLOT(updateProperty(const Property &)));
     connect(m_panel_agent,
         SIGNAL(execDialog(const Property &)),
         SLOT(execDialog(const Property &)));
@@ -64,6 +57,8 @@ KIMPanelWidget::KIMPanelWidget(QGraphicsItem *parent)
         SIGNAL(execMenu(const QList<Property> &)),
         SLOT(execMenu(const QList<Property> &)));
 //X     connect(this,SIGNAL(triggerProperty(const QString &)),m_panel_agent,SIGNAL(TriggerProperty(const QString &)));
+
+    m_statusbar = new StatusBarWidget();
 
     m_lookup_table = new LookupTableWidget();
     connect(m_panel_agent,
@@ -83,8 +78,9 @@ KIMPanelWidget::KIMPanelWidget(QGraphicsItem *parent)
         m_lookup_table,
         SLOT(setVisible(bool)));
 
-    connect(&m_icon_mapper, SIGNAL(mapped(const QString &)), m_panel_agent,
-        SIGNAL(TriggerProperty(const QString &)));
+    // change from true -> false
+    m_collapsed = true;
+    changeCollapseStatus();
 
     m_panel_agent->created();
 
@@ -95,10 +91,19 @@ KIMPanelWidget::~KIMPanelWidget()
 {
 }
 
-//X QSizeF KIMPanelWidget::sizeHint(Qt::SizeHint which, const QSizeF & constraint) const
-//X {
-//X     return m_layout->sizeHint(which, constraint);
-//X }
+void KIMPanelWidget::setCollapsible(bool b)
+{
+    if (m_enableCollapse != b) {
+        m_enableCollapse = b;
+        if (m_icons.size() > 0) {
+            if (b) {
+                m_icons.at(0)->addIconAction(m_collapseAction);
+            } else {
+                m_icons.at(0)->removeIconAction(m_collapseAction);
+            }
+        }
+    }
+}
 
 void KIMPanelWidget::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
 {
@@ -149,6 +154,7 @@ void KIMPanelWidget::registerProperties(const QList<Property> &props)
     
     m_icons.clear();
     m_prop_map.clear();
+    m_props = props;
     Q_FOREACH (const Property &prop, props) {
         kDebug() << prop.key << prop.label;
 
@@ -163,13 +169,24 @@ void KIMPanelWidget::registerProperties(const QList<Property> &props)
         Plasma::IconWidget *icon = new Plasma::IconWidget(kicon,"",this);
         m_icons << icon;
         m_prop_map.insert(prop.key, icon);
-        m_layout->addItem(icon);
+//X         m_layout->addItem(icon);
 
         m_icon_mapper.setMapping(icon,prop.key);
         connect(icon,SIGNAL(clicked()),&m_icon_mapper,SLOT(map()));
-        icon->show();
     }
     
+    if (m_enableCollapse) {
+        if (m_icons.size() > 0) {
+            m_icons.at(0)->addIconAction(m_collapseAction);
+        }
+        m_icons << m_collapseIcon;
+//X         m_layout->addItem(m_collapseIcon);
+    }
+
+    m_layout->setItems(m_icons);
+    Q_FOREACH (Plasma::IconWidget *icon, m_icons) {
+        icon->show();
+    }
     emit iconCountChanged(m_icons.size());
 //X     kDebug() << m_layout->effectiveSizeHint(Qt::PreferredSize);
     
@@ -193,6 +210,82 @@ void KIMPanelWidget::execMenu(const QList<Property> &prop_list)
     }
     menu->exec(QCursor::pos());
     delete menu;
+}
+
+void KIMPanelWidget::changeCollapseStatus()
+{
+    m_collapsed = !m_collapsed;
+    if (m_collapsed) {
+        m_collapseAction->setIcon(KIcon("arrow-down-double"));
+
+        connect(m_panel_agent,
+            SIGNAL(registerProperties(const QList<Property> &)),
+            m_statusbar,
+            SLOT(registerProperties(const QList<Property> &)));
+        connect(m_panel_agent,
+            SIGNAL(updateProperty(const Property &)),
+            m_statusbar,
+            SLOT(updateProperty(const Property &)));
+        connect(m_statusbar,SIGNAL(triggerProperty(const QString &)),m_panel_agent,SIGNAL(TriggerProperty(const QString &)));
+
+        while (m_layout->count()) {
+            QGraphicsLayoutItem *item = m_layout->itemAt(0);
+            m_layout->removeAt(0);
+            item->graphicsItem()->hide();
+        }
+        disconnect(&m_icon_mapper, SIGNAL(mapped(const QString &)), 
+            m_panel_agent,
+            SIGNAL(TriggerProperty(const QString &)));
+        disconnect(m_panel_agent,
+            SIGNAL(registerProperties(const QList<Property> &)),
+            this,
+            SLOT(registerProperties(const QList<Property> &)));
+        disconnect(m_panel_agent,
+            SIGNAL(updateProperty(const Property &)),
+            this,
+            SLOT(updateProperty(const Property &)));
+
+        m_statusbar->registerProperties(m_props);
+        m_statusbar->show();
+
+        m_icons.clear();
+        m_icons << m_collapseIcon;
+        m_layout->setItems(m_icons);
+        m_collapseIcon->show();
+        emit iconCountChanged(m_icons.size());
+
+
+    } else {
+        m_collapseAction->setIcon(KIcon("arrow-up-double"));
+
+        m_statusbar->hide();
+
+        connect(m_panel_agent,
+            SIGNAL(registerProperties(const QList<Property> &)),
+            this,
+            SLOT(registerProperties(const QList<Property> &)));
+        connect(m_panel_agent,
+            SIGNAL(updateProperty(const Property &)),
+            this,
+            SLOT(updateProperty(const Property &)));
+        connect(&m_icon_mapper, SIGNAL(mapped(const QString &)), 
+            m_panel_agent,
+            SIGNAL(TriggerProperty(const QString &)));
+
+        registerProperties(m_statusbar->registeredProperties());
+
+        disconnect(m_panel_agent,
+            SIGNAL(registerProperties(const QList<Property> &)),
+            m_statusbar,
+            SLOT(registerProperties(const QList<Property> &)));
+        disconnect(m_panel_agent,
+            SIGNAL(updateProperty(const Property &)),
+            m_statusbar,
+            SLOT(updateProperty(const Property &)));
+        disconnect(m_statusbar,SIGNAL(triggerProperty(const QString &)),m_panel_agent,SIGNAL(TriggerProperty(const QString &)));
+
+    }
+    emit collapsed(m_collapsed);
 }
 
 #include "kimpanelwidget.moc"

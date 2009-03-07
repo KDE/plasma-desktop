@@ -20,6 +20,7 @@
 #define KIMPANELAPPLET_H
 
 #include <plasma/applet.h>
+#include <plasma/dialog.h>
 #include <plasma/widgets/iconwidget.h>
 #include <QGraphicsLinearLayout>
 #include <QGraphicsGridLayout>
@@ -32,6 +33,8 @@
 #include "kimpanelagent.h"
 #include "kimpanellayout.h"
 #include "kimpanelwidget.h"
+
+#include "ui_kimpanelconfig.h"
 
 class KIMPanelApplet : public Plasma::Applet
 {
@@ -64,7 +67,6 @@ Q_SIGNALS:
 
 public Q_SLOTS:
     void createConfigurationInterface(KConfigDialog *parent);
-    void timeout();
 
 protected:
     /**
@@ -105,14 +107,17 @@ private:
     QGraphicsLinearLayout *m_layout;
 
     KIMPanelWidget *m_widget;
+    KIMPanelWidget *m_dialogWidget;
 
-//    QList<Plasma::IconWidget *> m_icons;
     Plasma::FrameSvg *m_background;
-  //  Plasma::IconWidget *m_arrow;
-  //  int m_rowCount;
+    Ui::kimpanelConfig m_uiConfig;
+
+    Plasma::IconWidget *m_collapsedIcon;
 
     QAction* m_addAction;
     QAction* m_removeAction;
+
+    int m_largestIconWidth;
 };
 
 #endif

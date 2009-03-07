@@ -121,7 +121,8 @@ void StatusBarWidget::updateAux(const QString &text,const QList<TextAttribute> &
 
 void StatusBarWidget::registerProperties(const QList<Property> &props)
 {
-    m_pending_reg_properties = props;
+    m_props = props;
+    m_pending_reg_properties = m_props;
     if (m_timer_id == -1) {
         m_timer_id = startTimer(0);
     }

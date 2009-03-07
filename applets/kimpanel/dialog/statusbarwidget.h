@@ -38,6 +38,10 @@ public:
     ~StatusBarWidget();
     
     void setEnabled(bool to_enable);
+    QList<Property> registeredProperties() const
+    {
+        return m_props;
+    }
 
 Q_SIGNALS:
     void triggerProperty(const QString &key);
@@ -61,7 +65,7 @@ private:
     Plasma::FrameSvg *m_background_svg;
 
     QList<Plasma::Svg *> m_properties_svg;
-    QList<Property> m_properties;
+    QList<Property> m_props;
 
     QString m_button_stylesheet;
 

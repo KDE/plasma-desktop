@@ -38,8 +38,7 @@
 
 #include "math.h"
 
-static const int s_defaultIconSize = 16;
-static const int s_defaultSpacing = 0;
+static const int s_magic_margin = 4;
 
 KIMPanelApplet::KIMPanelApplet(QObject *parent, const QVariantList &args)
   : Plasma::Applet(parent,args),
@@ -66,35 +65,42 @@ void KIMPanelApplet::saveState(KConfigGroup &config) const
 
 void KIMPanelApplet::init()
 {
-//X     setSizePolicy(QSizePolicy::Fixed,QSizePolicy::Fixed,QSizePolicy::DefaultType);
-
+    setBackgroundHints(Plasma::Applet::DefaultBackground);
 
     KConfigGroup cg = config();
-    cg.writeEntry("visibleIcons", 100);
-//    m_rowCount = qMax(1, cg.readEntry("rowCount", m_rowCount));
+
+    m_largestIconWidth = qMax((int)KIconLoader::SizeSmall,
+        cg.readEntry("LargestIconWidth", (int)KIconLoader::SizeSmallMedium));
 
     // Initalize background
     m_background = new Plasma::FrameSvg();
-    m_background->setImagePath("widgets/panel-background");
+    m_background->setImagePath("widgets/systemtray");
 
     // Initialize layout
     m_layout = new QGraphicsLinearLayout(this);
     m_layout->setSpacing(0);
     m_layout->setContentsMargins(0,0,0,0);
 
-    m_widget = new KIMPanelWidget(this);
+    // Initailize Plasma::Dialog
+//X     m_dialog = new Plasma::Dialog(0,Qt::X11BypassWindowManagerHint);
+//X     m_dialog->setContextMenuPolicy(Qt::ActionsContextMenu);
 
+    // Initialize widget which holds all im properties.
+    m_widget = new KIMPanelWidget(this);
+    
+    m_widget->setContentsMargins(s_magic_margin,s_magic_margin,
+        s_magic_margin,s_magic_margin);
+
+
+    m_collapsedIcon = new Plasma::IconWidget(KIcon("arrow-up-double"),"",this);
+    m_collapsedIcon->hide();
+    
+    // By default not collapsed
     m_layout->addItem(m_widget);
 
 //X     m_layout->setSizePolicy(QSizePolicy::Fixed,QSizePolicy::Fixed,QSizePolicy::DefaultType);
    connect(m_widget,SIGNAL(iconCountChanged(int)),SLOT(adjustSelf(int)));
     
-}
-
-void KIMPanelApplet::timeout() 
-{
-    //kDebug() << sizeConstraint();
-//X     resize(effectiveSizeHint(Qt::PreferredSize));
 }
 
 /*
@@ -124,51 +130,30 @@ void KIMPanelApplet::constraintsEvent(Plasma::Constraints constraints)
 
 void KIMPanelApplet::createConfigurationInterface(KConfigDialog *parent)
 {
-#if 0
     QWidget *widget = new QWidget(parent);
-    uiConfig.setupUi(widget);
+    m_uiConfig.setupUi(widget);
     connect(parent, SIGNAL(accepted()), SLOT(configAccepted()));
-    uiConfig.rowCount->setValue(m_rowCount);
-    uiConfig.dialogRowCount->setValue(m_dialogRowCount);
-    uiConfig.dialogRowCount->hide();
-    uiConfig.dialogrowLabel->hide();
-    uiConfig.icons->setValue(m_visibleIcons);
+    m_uiConfig.icons->setValue(m_largestIconWidth);
     parent->addPage(widget, i18n("General"), icon());
-#endif
 }
 
 void KIMPanelApplet::configAccepted()
 {
-#if 0
     bool changed = false;
-    int temp = uiConfig.rowCount->value();
+    int temp = m_uiConfig.icons->value();
 
     KConfigGroup cg = config();
-    if (temp != m_rowCount) {
-        m_rowCount = temp;
-        cg.writeEntry("rowCount", m_rowCount);
-        changed = true;
-    }
 
-    temp = uiConfig.icons->value();
-    if (temp != m_visibleIcons) {
-        m_visibleIcons = temp;
-        cg.writeEntry("visibleIcons", m_visibleIcons);
-        changed = true;
-    }
-
-    temp = uiConfig.dialogRowCount->value();
-    if (temp != m_dialogRowCount) {
-        m_dialogRowCount = temp;
-        cg.writeEntry("dialogRowCount", m_dialogRowCount);
+    if (temp != m_largestIconWidth) {
+        m_largestIconWidth = temp;
+        cg.writeEntry("LargestIconWidth", m_largestIconWidth);
         changed = true;
     }
 
     if (changed) {
         emit configNeedsSaving();
-        refactorUi();
+        adjustSelf(m_widget->iconCount());
     }
-#endif
 }
 
 QList<QAction*> KIMPanelApplet::contextActions(Plasma::IconWidget *icon)
@@ -203,11 +188,12 @@ void KIMPanelApplet::paintInterface(QPainter *painter, const QStyleOptionGraphic
 //    QRect r = rect().toRect();
 //    m_background->setElementPrefix("lastelements");
 
+    kDebug() << contentsRect;
     painter->save();
 
     //m_background->setElementPrefix(QString());
-    //m_background->resizeFrame(contentsRect.size());
-    //m_background->paintFrame(painter, contentsRect, contentsRect);
+    m_background->resizeFrame(contentsRect.size());
+    m_background->paintFrame(painter, contentsRect, contentsRect);
 
     painter->restore();
 }
@@ -215,29 +201,69 @@ void KIMPanelApplet::paintInterface(QPainter *painter, const QStyleOptionGraphic
 void KIMPanelApplet::adjustSelf(int iconCount)
 {
     int iconWidth; 
+    int i,j;
     QSizeF sizeHint = geometry().size();
     switch (formFactor()) {
     case Plasma::Horizontal:
-        iconWidth = qMax(geometry().height(), (qreal)KIconLoader::SizeSmallMedium);
-        sizeHint = QSizeF(iconCount*iconWidth, geometry().height());
+        i = 1;
+        while (m_widget->contentsRect().height()/i > m_largestIconWidth)
+            i++;
+        j = (iconCount + (i - 1)) / i;
+        sizeHint = QSizeF(j*m_widget->contentsRect().height()/i, m_widget->contentsRect().height());
         break;
     case Plasma::Vertical:
-        iconWidth = qMax(geometry().width(), (qreal)KIconLoader::SizeSmallMedium);
-        sizeHint = QSizeF(geometry().width(),iconCount*iconWidth);
+        i = 1;
+        while (m_widget->contentsRect().width()/i > m_largestIconWidth)
+            i++;
+        j = (iconCount + (i - 1)) / i;
+        sizeHint = QSizeF(m_widget->contentsRect().width(),j*m_widget->contentsRect().width()/i);
         break;
     case Plasma::Planar:
     case Plasma::MediaCenter:
-        iconWidth = KIconLoader::SizeSmallMedium;
-        sizeHint = QSizeF(iconCount*iconWidth,iconWidth);
+        sizeHint = QSizeF(iconCount*(qreal)KIconLoader::SizeMedium,(qreal)KIconLoader::SizeMedium);
         break;
     }
     
     qreal left, top, right, bottom;
     getContentsMargins(&left,&top,&right,&bottom);
     sizeHint = QSizeF(sizeHint.width() + left + right, sizeHint.height() + top + bottom);
+    m_widget->getContentsMargins(&left,&top,&right,&bottom);
+    sizeHint = QSizeF(sizeHint.width() + left + right, sizeHint.height() + top + bottom);
     kDebug() << sizeHint;
     setPreferredSize(sizeHint);
 }
+
+#if 0
+void KIMPanelApplet::collapsed(bool b)
+{
+    kDebug() << b;
+    if (b) {
+        m_layout->removeAt(0);
+        delete  m_widget;
+        
+        m_widget = new KIMPanelWidget(this);
+        
+        connect(m_widget,SIGNAL(collapsed(bool)),SLOT(collapsed(bool)));
+
+        m_widget->setContentsMargins(s_magic_margin,s_magic_margin,
+            s_magic_margin,s_magic_margin);
+
+        m_dialog->setGraphicsWidget(m_widget);
+        m_dialog->show();
+
+        //m_layout->addItem(m_collapsedIcon);
+        //m_collapsedIcon->show();
+    } else {
+/*
+        m_collapsedIcon->hide();
+        m_layout->removeAt(0);
+        m_layout->addItem(m_widget);
+        m_collapsedIcon->show();
+        m_widget->show();
+*/
+    }
+}
+#endif 
 
 K_EXPORT_PLASMA_APPLET(kimpanel, KIMPanelApplet)
 

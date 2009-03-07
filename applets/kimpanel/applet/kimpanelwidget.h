@@ -31,6 +31,7 @@
 #include "kimpaneltype.h"
 #include "kimpanelagent.h"
 #include "lookuptablewidget.h"
+#include "statusbarwidget.h"
 #include "kimpanellayout.h"
 
 class KIMPanelWidget : public QGraphicsWidget
@@ -51,7 +52,14 @@ public:
         return m_icons.size();
     }
 
+    bool collapsible() const 
+    {
+        return m_enableCollapse;
+    }
+    void setCollapsible(bool b); 
+
 Q_SIGNALS:
+    void collapsed(bool b);
     void iconCountChanged(int iconCount);
 
     void triggerProperty(const QString &key);
@@ -69,19 +77,26 @@ private Q_SLOTS:
     void execDialog(const Property &prop);
     void execMenu(const QList<Property> &prop_list);
 
+    void changeCollapseStatus();
+
 private:
     KIMPanelLayout *m_layout;
     QList<Plasma::IconWidget *> m_icons;
     Plasma::FrameSvg *m_background;
     Plasma::IconWidget *m_arrow;
 
-    int m_rowCount;
+    bool m_collapsed;
+    bool m_enableCollapse;
+    QAction *m_collapseAction;
+    Plasma::IconWidget *m_collapseIcon;
 
     PanelAgent *m_panel_agent;
 
+    QList<Property> m_props;
     QMap<QString,Plasma::IconWidget *> m_prop_map;
     QSignalMapper m_icon_mapper;
 
     LookupTableWidget *m_lookup_table;
+    StatusBarWidget *m_statusbar;
 };
 #endif // KIMPANELWIDGET_H
