@@ -16,8 +16,8 @@
  *   Free Software Foundation, Inc.,                                       *
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
-#ifndef KIMPANELLAYOUT_H
-#define KIMPANELLAYOUT_H
+#ifndef KIMPANELWIDGET_H
+#define KIMPANELWIDGET_H
 
 #include <plasma/applet.h>
 #include <plasma/widgets/iconwidget.h>
@@ -28,35 +28,60 @@
 #include <KIcon>
 #include <KDialog>
 
-class KIMPanelLayout : public QGraphicsLayout
+#include "kimpaneltype.h"
+#include "kimpanelagent.h"
+#include "lookuptablewidget.h"
+#include "kimpanellayout.h"
+
+class KIMPanelWidget : public QGraphicsWidget
 {
+Q_OBJECT
 public:
-    KIMPanelLayout(QGraphicsLayoutItem *parent);
-    void addItem(Plasma::IconWidget *icon);
-    void addItems(const QList<Plasma::IconWidget *> &icons);
-    void setItems(const QList<Plasma::IconWidget *> &icons);
+    KIMPanelWidget(QGraphicsItem *parent);
+    ~KIMPanelWidget();
 
-    Plasma::IconWidget* itemAt(int i) const;
-    void removeAt(int i);
+    /**
+     * Returns hints about the geometry of the figure
+     * @return Hints about proportionality of the applet
+     */
+//X      QSizeF sizeHint(Qt::SizeHint which, const QSizeF & constraint = QSizeF()) const;
 
-    QSizeF sizeHint(Qt::SizeHint which, const QSizeF & constraint = QSizeF()) const;
-
-    int count() const 
+    inline int iconCount() const
     {
         return m_icons.size();
     }
 
-    void setGeometry(const QRectF &rect);
-//X     void updateGeometry();
+Q_SIGNALS:
+    void iconCountChanged(int iconCount);
+
+    void triggerProperty(const QString &key);
+
+public Q_SLOTS:
+
+protected:
+    void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
+
+protected Q_SLOTS:
+
+private Q_SLOTS:
+    void updateProperty(const Property &prop);
+    void registerProperties(const QList<Property> &props);
+    void execDialog(const Property &prop);
+    void execMenu(const QList<Property> &prop_list);
 
 private:
-    void smartLayout(const QRectF &rect);
-
-private:
+    KIMPanelLayout *m_layout;
     QList<Plasma::IconWidget *> m_icons;
+    Plasma::FrameSvg *m_background;
+    Plasma::IconWidget *m_arrow;
 
-    QRectF m_cachedGeometry;
+    int m_rowCount;
 
+    PanelAgent *m_panel_agent;
+
+    QMap<QString,Plasma::IconWidget *> m_prop_map;
+    QSignalMapper m_icon_mapper;
+
+    LookupTableWidget *m_lookup_table;
 };
-
-#endif // KIMPANELLAYOUT_H
+#endif // KIMPANELWIDGET_H

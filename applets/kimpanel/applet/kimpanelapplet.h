@@ -64,6 +64,7 @@ Q_SIGNALS:
 
 public Q_SLOTS:
     void createConfigurationInterface(KConfigDialog *parent);
+    void timeout();
 
 protected:
     /**
@@ -85,7 +86,7 @@ protected Q_SLOTS:
     void configAccepted();
 
 private Q_SLOTS:
-    void resizeSelf(Qt::SizeHint);
+    void adjustSelf(int iconCount);
 
 private:
     void init();

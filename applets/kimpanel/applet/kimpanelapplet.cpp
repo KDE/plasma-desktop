@@ -66,6 +66,9 @@ void KIMPanelApplet::saveState(KConfigGroup &config) const
 
 void KIMPanelApplet::init()
 {
+//X     setSizePolicy(QSizePolicy::Fixed,QSizePolicy::Fixed,QSizePolicy::DefaultType);
+
+
     KConfigGroup cg = config();
     cg.writeEntry("visibleIcons", 100);
 //    m_rowCount = qMax(1, cg.readEntry("rowCount", m_rowCount));
@@ -77,23 +80,21 @@ void KIMPanelApplet::init()
     // Initialize layout
     m_layout = new QGraphicsLinearLayout(this);
     m_layout->setSpacing(0);
-    qreal left;
-    qreal top;
-    qreal right;
-    qreal bottom;
-    //m_layout->getContentsMargins(&left,&top,&right,&bottom);
-    resize(size()+QSize(200,100));
-    kDebug() << size() << m_layout->geometry();
-    //m_layout->setContentsMargins(0, 0, 0, 0);
+    m_layout->setContentsMargins(0,0,0,0);
 
     m_widget = new KIMPanelWidget(this);
-    connect(m_widget,SIGNAL(sizeHintChanged(Qt::SizeHint)),
-        SIGNAL(sizeHintChanged(Qt::SizeHint)));
-    connect(m_widget,SIGNAL(sizeHintChanged(Qt::SizeHint)),
-        SLOT(resizeSelf(Qt::SizeHint)));
 
     m_layout->addItem(m_widget);
+
+//X     m_layout->setSizePolicy(QSizePolicy::Fixed,QSizePolicy::Fixed,QSizePolicy::DefaultType);
+   connect(m_widget,SIGNAL(iconCountChanged(int)),SLOT(adjustSelf(int)));
     
+}
+
+void KIMPanelApplet::timeout() 
+{
+    //kDebug() << sizeConstraint();
+//X     resize(effectiveSizeHint(Qt::PreferredSize));
 }
 
 /*
@@ -113,16 +114,12 @@ QSizeF KIMPanelApplet::sizeHint(Qt::SizeHint which, const QSizeF & constraint) c
 
 void KIMPanelApplet::constraintsEvent(Plasma::Constraints constraints)
 {
-    if (constraints & Plasma::SizeConstraint) {
+    if ((constraints & Plasma::FormFactorConstraint) ||
+        (constraints & Plasma::SizeConstraint)) {
         //TODO: don't call so often
-        resize(224,32);
+        adjustSelf(m_widget->iconCount());
+        //resize(preferredSize());
     }
-//X     kDebug() << geometry() << contentsRect() 
-//X         << "SizeHint(Min/Max/Prefer):"
-//X         << sizeHint(Qt::MinimumSize) << sizeHint(Qt::MaximumSize) << sizeHint(Qt::PreferredSize)
-//X         << "Eff.SizeHint:"
-//X         << effectiveSizeHint(Qt::MinimumSize) << effectiveSizeHint(Qt::MaximumSize)
-//X         << effectiveSizeHint(Qt::PreferredSize);
 }
 
 void KIMPanelApplet::createConfigurationInterface(KConfigDialog *parent)
@@ -215,13 +212,31 @@ void KIMPanelApplet::paintInterface(QPainter *painter, const QStyleOptionGraphic
     painter->restore();
 }
 
-void KIMPanelApplet::resizeSelf(Qt::SizeHint hint)
+void KIMPanelApplet::adjustSelf(int iconCount)
 {
-    kDebug() << effectiveSizeHint(Qt::PreferredSize);
-    //setMinimumSize(effectiveSizeHint(Qt::PreferredSize));
-    //setPreferredSize(effectiveSizeHint(Qt::PreferredSize));
-    //m_layout->invalidate();
-    //resize(250,200);
+    int iconWidth; 
+    QSizeF sizeHint = geometry().size();
+    switch (formFactor()) {
+    case Plasma::Horizontal:
+        iconWidth = qMax(geometry().height(), (qreal)KIconLoader::SizeSmallMedium);
+        sizeHint = QSizeF(iconCount*iconWidth, geometry().height());
+        break;
+    case Plasma::Vertical:
+        iconWidth = qMax(geometry().width(), (qreal)KIconLoader::SizeSmallMedium);
+        sizeHint = QSizeF(geometry().width(),iconCount*iconWidth);
+        break;
+    case Plasma::Planar:
+    case Plasma::MediaCenter:
+        iconWidth = KIconLoader::SizeSmallMedium;
+        sizeHint = QSizeF(iconCount*iconWidth,iconWidth);
+        break;
+    }
+    
+    qreal left, top, right, bottom;
+    getContentsMargins(&left,&top,&right,&bottom);
+    sizeHint = QSizeF(sizeHint.width() + left + right, sizeHint.height() + top + bottom);
+    kDebug() << sizeHint;
+    setPreferredSize(sizeHint);
 }
 
 K_EXPORT_PLASMA_APPLET(kimpanel, KIMPanelApplet)

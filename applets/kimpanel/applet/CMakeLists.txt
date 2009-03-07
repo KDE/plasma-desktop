@@ -1,4 +1,3 @@
-project(kimpanel-applet)
 
 # building separately or as part of kdebase ?
 if(NOT KDE4_FOUND)
@@ -11,7 +10,7 @@ if(NOT KDE4_FOUND)
 endif(NOT KDE4_FOUND)
 
 set(plasma_applet_kimpanel_SRCS
-#  kimpanellayout.cpp
+  kimpanellayout.cpp
   kimpanelwidget.cpp
   kimpanelapplet.cpp
 )
@@ -21,7 +20,9 @@ kde4_add_ui_files(plasma_applet_kimpanel_SRCS kimpanelAdd.ui)
 kde4_add_plugin(plasma_applet_kimpanel ${plasma_applet_kimpanel_SRCS})
 target_link_libraries(plasma_applet_kimpanel 
    ${KDE4_PLASMA_LIBS} ${KDE4_KIO_LIBRARY} ${KDE4_KDEUI_LIBS}
-   kimpanelagent)
+   kimpaneldialog
+   kimpanelutils
+   )
 
 install(TARGETS plasma_applet_kimpanel DESTINATION ${PLUGIN_INSTALL_DIR})
 install(FILES plasma-applet-kimpanel.desktop DESTINATION ${SERVICES_INSTALL_DIR})

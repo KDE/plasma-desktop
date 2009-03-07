@@ -1,4 +1,3 @@
-project(kimpanel)
 #set(CMAKE_BUILD_TYPE Release)
 find_package(KDE4 REQUIRED)
 include(KDE4Defaults)

@@ -3,10 +3,8 @@ Build & Install:
 ===========================================================
 
 cmakekde 
-cd scim
-qmake
-make
-cp scim-panel-dbus <your dir where scim-panel-gtk lives in>
+
+<copy scim-panel-dbus to your dir where scim-panel-gtk lives in>
 
 ===========================================================
 Configure:
@@ -26,7 +24,9 @@ reboot your system (or manually kill all scim related process)
 ===========================================================
 Run:
 ===========================================================
-kimpanel
+kimpanel (standalone app)
+or 
+add im panel Applet to your panel 
 
 ===========================================================
 Uninstall:

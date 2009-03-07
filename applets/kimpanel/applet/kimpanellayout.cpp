@@ -41,21 +41,15 @@ void KIMPanelLayout::removeAt(int i)
 
 QSizeF KIMPanelLayout::sizeHint(Qt::SizeHint which, const QSizeF & constraint) const
 {
-    qreal left;
-    qreal top;
-    qreal right;
-    qreal bottom;
-    getContentsMargins(&left,&top,&right,&bottom);
-
-    kDebug() << which << constraint << m_icons.size() << left << top << right << bottom << contentsRect();
+    QSizeF sizeHint;
     switch (which) {
     case Qt::MinimumSize:
 //X         return QSizeF(left + right + KIconLoader::SizeSmall,
 //X             top + bottom + KIconLoader::SizeSmall);
-        return QSizeF(32,32);
+        sizeHint = QSizeF(KIconLoader::SizeSmall,KIconLoader::SizeSmall);
         break;
     case Qt::PreferredSize:
-        return m_cachedGeometry.size();
+        sizeHint = m_cachedGeometry.size();
         break;
     case Qt::MaximumSize:
         return QSizeF(-1.0,-1.0);
@@ -63,6 +57,8 @@ QSizeF KIMPanelLayout::sizeHint(Qt::SizeHint which, const QSizeF & constraint) c
     default:
         ;
     }
+    kDebug() << which << sizeHint << constraint;
+    return sizeHint;
 }
 
 void KIMPanelLayout::setGeometry(const QRectF &rect)
