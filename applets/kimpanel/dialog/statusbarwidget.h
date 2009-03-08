@@ -34,7 +34,7 @@ class StatusBarWidget : public QWidget
 {
 Q_OBJECT
 public:
-    StatusBarWidget(QWidget *parent=0);
+    StatusBarWidget(QWidget *parent=0, const QList<QAction *> extra_actions = QList<QAction *>());
     ~StatusBarWidget();
     
     void setEnabled(bool to_enable);
@@ -82,6 +82,8 @@ private:
 
     int m_timer_id;
     QList<Property> m_pending_reg_properties;
+
+    QList<QAction *> m_extraActions;
 };
 
 #endif // STATUSBARWIDGET_H

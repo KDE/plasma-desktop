@@ -9,4 +9,6 @@ add_subdirectory(agent)
 add_subdirectory(dialog)
 add_subdirectory(utils)
 add_subdirectory(applet)
-add_subdirectory(scim)
+# something very strange, it can only be built by qmake , pthread and c++ ABI related, 
+# cmake seems use some dangerous compiler flags.
+#add_subdirectory(scim)

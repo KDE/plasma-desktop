@@ -17,8 +17,10 @@
 #endif
 
 
-StatusBarWidget::StatusBarWidget(QWidget *parent):QWidget(parent)
+StatusBarWidget::StatusBarWidget(QWidget *parent, const QList<QAction *> extra_actions):QWidget(parent)
 {
+    m_extraActions = extra_actions;
+
     QPalette pal = palette();
     pal.setColor(backgroundRole(), Qt::transparent);
     setPalette(pal);
@@ -35,12 +37,22 @@ StatusBarWidget::StatusBarWidget(QWidget *parent):QWidget(parent)
     connect(Plasma::Theme::defaultTheme(), SIGNAL(themeChanged()),
         SLOT(themeUpdated()));
 
-    m_layout = new QHBoxLayout;
-    setLayout(m_layout);
+    m_layout = new QHBoxLayout(this);
 
     QLabel *label = new QLabel("",this);
-    label->setPixmap(KIcon("start-here-kde").pixmap(KIconLoader::SizeSmall,KIconLoader::SizeSmall));
+    label->setPixmap(KIcon("draw-freehand").pixmap(KIconLoader::SizeSmall,KIconLoader::SizeSmall));
     layout()->addWidget(label);
+
+    QString trans_button_stylesheet("QToolButton { background-color: transparent; }");
+    trans_button_stylesheet.append("QToolButton { border: 0px ; }");
+
+    foreach (QAction *action, m_extraActions) {
+        QToolButton *action_button = new QToolButton(this);
+        action_button->setStyleSheet(trans_button_stylesheet);
+        action_button->setIcon(action->icon());
+        connect(action_button,SIGNAL(clicked()),action,SIGNAL(triggered()));
+        layout()->addWidget(action_button);
+    }
 
     // handle property/helper trigger signal
     connect(&prop_mapper,SIGNAL(mapped(const QString &)),SIGNAL(triggerProperty(const QString &)));
@@ -248,8 +260,8 @@ void StatusBarWidget::timerEvent(QTimerEvent *e)
         m_timer_id = -1;
 
         QLayoutItem *item;
-        while ( (item = layout()->takeAt(1)) != 0 ) {
-    //X         kDebug() << "remove layout item";
+        while ( layout()->count() > 1 + m_extraActions.size() ) {
+            item = layout()->takeAt(1);
             layout()->removeItem(item);
             delete item->widget();
         }
@@ -273,7 +285,8 @@ void StatusBarWidget::timerEvent(QTimerEvent *e)
             prop_button->setIcon(icon);
             prop_button->setToolTip(prop.tip);
 
-            layout()->addWidget(prop_button);
+            kDebug() << "miao";
+            m_layout->insertWidget(m_layout->count()-m_extraActions.size(),prop_button);
             prop_map.insert(prop.key,prop_button);
             prop_mapper.setMapping(prop_button,prop.key);
             connect(prop_button,SIGNAL(clicked()),&prop_mapper,SLOT(map()));

@@ -70,7 +70,7 @@ void KIMPanelApplet::init()
     KConfigGroup cg = config();
 
     m_largestIconWidth = qMax((int)KIconLoader::SizeSmall,
-        cg.readEntry("LargestIconWidth", (int)KIconLoader::SizeSmallMedium));
+        cg.readEntry("LargestIconWidth", (int)KIconLoader::SizeMedium));
 
     // Initalize background
     m_background = new Plasma::FrameSvg();
@@ -133,6 +133,8 @@ void KIMPanelApplet::createConfigurationInterface(KConfigDialog *parent)
     QWidget *widget = new QWidget(parent);
     m_uiConfig.setupUi(widget);
     connect(parent, SIGNAL(accepted()), SLOT(configAccepted()));
+    m_uiConfig.icons->setRange((int)KIconLoader::SizeSmall,(int)KIconLoader::SizeEnormous);
+    m_uiConfig.icons->setSpecialValueText("");
     m_uiConfig.icons->setValue(m_largestIconWidth);
     parent->addPage(widget, i18n("General"), icon());
 }

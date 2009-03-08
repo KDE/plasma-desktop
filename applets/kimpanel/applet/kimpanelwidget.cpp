@@ -11,6 +11,7 @@
 #include <QMimeData>
 #include <QToolButton>
 
+#include <KAction>
 #include <KDialog>
 #include <KMimeType>
 #include <KStandardDirs>
@@ -42,10 +43,11 @@ KIMPanelWidget::KIMPanelWidget(QGraphicsItem *parent)
     m_layout->setContentsMargins(0, 0, 0, 0);
 
     // Initial collapse action
-    m_collapseAction = new QAction(KIcon("arrow-up-double"),"",this);
+    m_collapseAction = new QAction(KIcon("arrow-up-double"),i18n("Collapse/Expand"),this);
     connect(m_collapseAction, SIGNAL(triggered()), SLOT(changeCollapseStatus()));
     m_collapseIcon = new Plasma::IconWidget(this);
-    m_collapseIcon->setAction(m_collapseAction);
+    m_collapseIcon->setIcon(m_collapseAction->icon());
+    connect(m_collapseIcon,SIGNAL(clicked()),m_collapseAction,SIGNAL(triggered()));
     m_collapseIcon->show();
 
     m_panel_agent = new PanelAgent(this);
@@ -58,7 +60,17 @@ KIMPanelWidget::KIMPanelWidget(QGraphicsItem *parent)
         SLOT(execMenu(const QList<Property> &)));
 //X     connect(this,SIGNAL(triggerProperty(const QString &)),m_panel_agent,SIGNAL(TriggerProperty(const QString &)));
 
-    m_statusbar = new StatusBarWidget();
+    m_statusbar = new StatusBarWidget(0,QList<QAction *>() << m_collapseAction);
+
+    KAction *action = new KAction(KIcon("view-refresh"),i18n("Reload Config"),this);
+    connect(action,SIGNAL(triggered()),m_panel_agent,SIGNAL(ReloadConfig()));
+    m_statusbarActions << action;
+    m_statusbarActions << m_collapseAction;
+    //m_statusbarActions << KStandardAction::aboutApp(this,SLOT(about()),this);
+    //m_statusbarActions << KStandardAction::quit(this,SLOT(exit()),this);
+
+    m_statusbar->addActions(m_statusbarActions);
+    m_statusbar->setContextMenuPolicy(Qt::ActionsContextMenu);
 
     m_lookup_table = new LookupTableWidget();
     connect(m_panel_agent,
@@ -137,7 +149,8 @@ void KIMPanelWidget::updateProperty(const Property &prop)
 //        icon_pixmap = KIcon(prop.icon).pixmap(KIconLoader::SizeSmall,KIconLoader::SizeSmall,Qt::KeepAspectRatio);
         icon = KIcon(prop.icon);
     } else {
-        icon = KIcon(renderText(prop.label).scaled(KIconLoader::SizeEnormous,KIconLoader::SizeEnormous));
+        icon = KIcon(renderText(prop.label).scaled(256,256,Qt::KeepAspectRatio));
+//        icon = KIcon(renderText(prop.label));
     }
 
     prop_icon->setIcon(icon);
@@ -163,7 +176,8 @@ void KIMPanelWidget::registerProperties(const QList<Property> &props)
         if (!prop.icon.isEmpty()) {
             kicon = KIcon(prop.icon);
         } else {
-            kicon = KIcon(renderText(prop.label).scaled(KIconLoader::SizeEnormous,KIconLoader::SizeEnormous));
+            kicon = KIcon(renderText(prop.label).scaled(256,256,Qt::KeepAspectRatio));
+           // kicon = KIcon(renderText(prop.label));
         }
 
         Plasma::IconWidget *icon = new Plasma::IconWidget(kicon,"",this);

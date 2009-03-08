@@ -98,5 +98,6 @@ private:
 
     LookupTableWidget *m_lookup_table;
     StatusBarWidget *m_statusbar;
+    QList<QAction *> m_statusbarActions;
 };
 #endif // KIMPANELWIDGET_H

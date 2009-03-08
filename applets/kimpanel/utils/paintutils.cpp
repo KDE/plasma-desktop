@@ -8,7 +8,6 @@ QPixmap renderText(QString text, const QFont &ft, QColor textColor)
     }
 
     QFont font = ft;
-    font.setPixelSize(256);
     // Draw text
     QFontMetrics fm(font);
     QRect textRect = fm.boundingRect(text);
