@@ -29,7 +29,8 @@ KIMPanelWidget::KIMPanelWidget(QGraphicsItem *parent)
     m_layout(0),
     m_collapsed(false),
     m_enableCollapse(true),
-    m_panel_agent(0)
+    m_panel_agent(0),
+    m_empty(true)
 {
 
 //X     setSizePolicy(QSizePolicy::Fixed,QSizePolicy::Fixed,QSizePolicy::DefaultType);
@@ -46,7 +47,7 @@ KIMPanelWidget::KIMPanelWidget(QGraphicsItem *parent)
     m_collapseAction = new QAction(KIcon("arrow-up-double"),i18n("Collapse/Expand"),this);
     connect(m_collapseAction, SIGNAL(triggered()), SLOT(changeCollapseStatus()));
     m_collapseIcon = new Plasma::IconWidget(this);
-    m_collapseIcon->setIcon(m_collapseAction->icon());
+    m_collapseIcon->setIcon(KIcon("draw-freehand"));
     connect(m_collapseIcon,SIGNAL(clicked()),m_collapseAction,SIGNAL(triggered()));
     m_collapseIcon->show();
 
@@ -117,6 +118,15 @@ void KIMPanelWidget::setCollapsible(bool b)
     }
 }
 
+QList<QAction *> KIMPanelWidget::contextualActions() const
+{
+    if (!m_empty) {
+        return QList<QAction *>() << m_collapseAction;
+    } else {
+        return QList<QAction *>();
+    }
+}
+
 void KIMPanelWidget::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
 {
     Q_UNUSED(option)
@@ -159,6 +169,7 @@ void KIMPanelWidget::updateProperty(const Property &prop)
 
 void KIMPanelWidget::registerProperties(const QList<Property> &props)
 {
+    m_empty = false;
     while (m_layout->count()) {
         QGraphicsLayoutItem *item = m_layout->itemAt(0);
         m_layout->removeAt(0);

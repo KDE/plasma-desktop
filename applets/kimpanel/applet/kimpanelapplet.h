@@ -59,7 +59,7 @@ public:
      * List of actions to add in context menu
      * @return List of QAction pointers
      */
-    virtual QList<QAction*> contextActions(Plasma::IconWidget *icon = 0);
+    virtual QList<QAction*> contextualActions();
 
 Q_SIGNALS:
     void triggerProperty(const QString &key);

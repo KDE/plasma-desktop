@@ -58,6 +58,9 @@ public:
     }
     void setCollapsible(bool b); 
 
+    QList<QAction *> contextualActions() const;
+
+
 Q_SIGNALS:
     void collapsed(bool b);
     void iconCountChanged(int iconCount);
@@ -99,5 +102,7 @@ private:
     LookupTableWidget *m_lookup_table;
     StatusBarWidget *m_statusbar;
     QList<QAction *> m_statusbarActions;
+
+    bool m_empty;
 };
 #endif // KIMPANELWIDGET_H

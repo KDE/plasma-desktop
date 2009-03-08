@@ -158,28 +158,9 @@ void KIMPanelApplet::configAccepted()
     }
 }
 
-QList<QAction*> KIMPanelApplet::contextActions(Plasma::IconWidget *icon)
+QList<QAction*> KIMPanelApplet::contextualActions()
 {
-#if 0
-    QList<QAction*> tempActions;
-    if (!m_addAction) {
-        m_addAction = new QAction(KIcon("list-add"), i18n("Add Icon..."), this);
-        connect(m_addAction, SIGNAL(triggered(bool)), this, SLOT(showAddInterface()));
-    }
-
-    tempActions << m_addAction;
-
-    if (icon) {
-        m_rightClickedIcon = icon;
-        if (!m_removeAction) {
-            m_removeAction = new QAction(KIcon("list-remove"), i18n("Remove Icon"), this);
-            connect(m_removeAction, SIGNAL(triggered(bool)), this, SLOT(removeCurrentIcon()));
-        }
-        tempActions << m_removeAction;
-    }
-    return tempActions;
-#endif
-    return QList<QAction *>();
+    return m_widget->contextualActions();
 }
 
 void KIMPanelApplet::paintInterface(QPainter *painter, const QStyleOptionGraphicsItem *option, const QRect &contentsRect)

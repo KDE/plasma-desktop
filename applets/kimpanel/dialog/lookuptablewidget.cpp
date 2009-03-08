@@ -246,8 +246,8 @@ void LookupTableWidget::themeUpdated()
 
 void LookupTableWidget::updateSpotLocation(int x,int y)
 {
-    move(qMin(x,m_desktop.availableGeometry().width()-width()),
-        qMin(y,m_desktop.availableGeometry().height()-height()));
+    move(qMin(x,m_desktop.screenGeometry().width()-width()),
+        qMin(y,m_desktop.screenGeometry().height()-height()));
 }
 
 void LookupTableWidget::paintEvent(QPaintEvent *e)
@@ -261,9 +261,22 @@ void LookupTableWidget::paintEvent(QPaintEvent *e)
 
     m_aux_label->setText(m_aux_text);
 
+    Plasma::Theme *theme = Plasma::Theme::defaultTheme();
+
+//X     p.setColor(QPalette::WindowText, theme->color(Plasma::Theme::TextColor));
+//X     p.setColor(QPalette::Link, theme->color(Plasma::Theme::TextColor));
+
     QString result;
-    foreach (const LookupTable::Entry entry, m_lookup_table.entries) {
-        result.append(QString("%1.%2 ").arg(entry.label).arg(entry.text));
+    QString result_format = "<td bgcolor='%2'><font color='%1'><b>%3</b></font></td><td>%4%5</td>";
+    for (int i = 0; i < m_lookup_table.entries.size(); i++) {
+        LookupTable::Entry entry = m_lookup_table.entries.at(i);
+        QString str = result_format
+            .arg(theme->color(Plasma::Theme::BackgroundColor).name())
+            .arg(theme->color(Plasma::Theme::TextColor).name())
+            .arg(entry.label)
+            .arg(entry.text)
+            .arg((i + 1 < m_lookup_table.entries.size())?"&nbsp;&nbsp;&nbsp;&nbsp;":"");
+        result.append(str);
     }
     m_candis_label->setText(result);
 /*
