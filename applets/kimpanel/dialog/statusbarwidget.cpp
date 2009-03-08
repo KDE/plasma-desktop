@@ -49,8 +49,8 @@ StatusBarWidget::StatusBarWidget(QWidget *parent, const QList<QAction *> extra_a
     foreach (QAction *action, m_extraActions) {
         QToolButton *action_button = new QToolButton(this);
         action_button->setStyleSheet(trans_button_stylesheet);
-        action_button->setIcon(action->icon());
-        connect(action_button,SIGNAL(clicked()),action,SIGNAL(triggered()));
+        action_button->setDefaultAction(action);
+//X         connect(action_button,SIGNAL(clicked()),action,SIGNAL(triggered()));
         layout()->addWidget(action_button);
     }
 
@@ -285,7 +285,6 @@ void StatusBarWidget::timerEvent(QTimerEvent *e)
             prop_button->setIcon(icon);
             prop_button->setToolTip(prop.tip);
 
-            kDebug() << "miao";
             m_layout->insertWidget(m_layout->count()-m_extraActions.size(),prop_button);
             prop_map.insert(prop.key,prop_button);
             prop_mapper.setMapping(prop_button,prop.key);

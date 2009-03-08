@@ -275,8 +275,7 @@ public:
         QDBusConnection("scim_panel").connect("","","org.kde.impanel","Exit",this,SLOT(Exit()));
         QDBusConnection("scim_panel").connect("","","org.kde.impanel","ReloadConfig",this,SLOT(ReloadConfig()));
         
-        QString icon_path;
-        logo_prop = Property("/Logo","S","","SCIM Input Method");
+        logo_prop = Property("/Logo","S",String(SCIM_ICON_DIR) + "/trademark.png","SCIM Input Method");
         show_help_prop = Property("/StartHelp","H","help-about","Show Help");
         factory_prop_prefix = QString::fromUtf8("/Factory/");
         helper_prop_prefix = QString::fromUtf8("/Helper/");
@@ -398,7 +397,7 @@ public Q_SLOTS:
     }
     void ReloadConfig() {
         SCIM_DEBUG_MAIN(1) << Q_FUNC_INFO<<"\n";
-        //_panel_agent->reload_config();
+        _panel_agent->reload_config();
         if (!_config.null())
             _config->reload();
     }
@@ -438,7 +437,7 @@ protected:
                 QDBusConnection("scim_panel").send(message);
                 break;
             case DBusEvent::TURN_OFF:
-                logo_prop.set_icon("");
+                logo_prop.set_icon(String(SCIM_ICON_DIR)+"/trademark.png");
                 
                 message = QDBusMessage::createSignal("/org/scim/panel",
                     "org.scim.panel",

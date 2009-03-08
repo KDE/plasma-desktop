@@ -169,7 +169,6 @@ void KIMPanelWidget::registerProperties(const QList<Property> &props)
     m_prop_map.clear();
     m_props = props;
     Q_FOREACH (const Property &prop, props) {
-        kDebug() << prop.key << prop.label;
 
         KIcon kicon;
 
@@ -231,6 +230,7 @@ void KIMPanelWidget::changeCollapseStatus()
     m_collapsed = !m_collapsed;
     if (m_collapsed) {
         m_collapseAction->setIcon(KIcon("arrow-down-double"));
+        m_collapseIcon->setIcon(KIcon("draw-freehand"));
 
         connect(m_panel_agent,
             SIGNAL(registerProperties(const QList<Property> &)),
@@ -266,11 +266,13 @@ void KIMPanelWidget::changeCollapseStatus()
         m_icons << m_collapseIcon;
         m_layout->setItems(m_icons);
         m_collapseIcon->show();
+//X         m_collapseIcon->hide();
         emit iconCountChanged(m_icons.size());
 
 
     } else {
         m_collapseAction->setIcon(KIcon("arrow-up-double"));
+        m_collapseIcon->setIcon(KIcon("arrow-up-double"));
 
         m_statusbar->hide();
 
