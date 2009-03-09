@@ -192,14 +192,15 @@ void StatusBarWidget::themeUpdated()
 void StatusBarWidget::paintEvent(QPaintEvent *e)
 {
     QPainter p(this);
-    p.setRenderHint(QPainter::Antialiasing);
-    
-    p.fillRect(e->rect(),Qt::transparent);
-
     p.setClipRect(e->rect());
-    //kDebug() << "clip rect set to: " << e->rect();
+    p.setCompositionMode(QPainter::CompositionMode_Source);
 
+    p.fillRect(e->rect(),Qt::transparent);
+    p.setBackgroundMode(Qt::TransparentMode);
+    //kDebug() << "clip rect set to: " << e->rect();
+    p.save();
     m_background_svg->paintFrame(&p);
+    p.restore();
 //X     m_background_svg->paint(&p,0,0);
 }
 
