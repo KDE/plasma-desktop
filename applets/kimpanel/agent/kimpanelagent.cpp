@@ -33,7 +33,7 @@ PanelAgent::PanelAgent(QObject *parent)
         "UpdateLookupTable",this,SLOT(UpdateLookupTable(const QStringList &,
         const QStringList &,const QStringList &,int,int,int,bool)));
     QDBusConnection("kimpanel_bus").connect("","","",
-        "UpdatePreeditCaret",this,SLOT(UpdatePreeditCaret(int)));
+        "UpdatePreeditCaret",this,SIGNAL(updatePreeditCaret(int)));
     QDBusConnection("kimpanel_bus").connect("","","",
         "UpdatePreeditText",this,SLOT(UpdatePreeditText(const QString &,const QString &)));
     QDBusConnection("kimpanel_bus").connect("","","",
@@ -187,14 +187,9 @@ void PanelAgent::UpdateLookupTable(const QStringList &labels,
     emit updateLookupTable(Args2LookupTable(labels,candis,attrlists,i1,i2,i3,to_show));
 }
 
-void PanelAgent::UpdatePreeditCaret(int position)
-{
-    //kDebug(0)<<position;
-}
-
 void PanelAgent::UpdatePreeditText(const QString &text,const QString &attr)
 {
-    //kDebug(0)<<text<<attr;
+    emit updatePreeditText(text,String2AttrList(attr));
 }
 
 void PanelAgent::UpdateAux(const QString &text,const QString &attr)

@@ -44,16 +44,6 @@ KIMPanel::KIMPanel(QObject* parent)
 //X         SIGNAL(enable(bool)),
 //X         SLOT(enable(bool)));
     connect(m_panel_agent,
-        SIGNAL(showPreedit(bool)),
-        SLOT(showPreedit(bool)));
-    connect(m_panel_agent,
-        SIGNAL(showAux(bool)),
-        SLOT(showAux(bool)));
-    connect(m_panel_agent,
-        SIGNAL(showLookupTable(bool)),
-        SLOT(showLookupTable(bool)));
-
-    connect(m_panel_agent,
         SIGNAL(execDialog(const Property &)),
         SLOT(execDialog(const Property &)));
     connect(m_panel_agent,
@@ -86,9 +76,30 @@ KIMPanel::KIMPanel(QObject* parent)
         m_lookup_table,
         SLOT(updateLookupTable(const LookupTable &)));
     connect(m_panel_agent,
+        SIGNAL(updatePreeditCaret(int)),
+        m_lookup_table,
+        SLOT(updatePreeditCaret(int)));
+    connect(m_panel_agent,
+        SIGNAL(updatePreeditText(const QString &,const QList<TextAttribute> &)),
+        m_lookup_table,
+        SLOT(updatePreeditText(const QString &,const QList<TextAttribute> &)));
+    connect(m_panel_agent,
         SIGNAL(updateAux(const QString &,const QList<TextAttribute> &)),
         m_lookup_table,
         SLOT(updateAux(const QString &,const QList<TextAttribute> &)));
+    connect(m_panel_agent,
+        SIGNAL(showPreedit(bool)),
+        m_lookup_table,
+        SLOT(showPreedit(bool)));
+    connect(m_panel_agent,
+        SIGNAL(showAux(bool)),
+        m_lookup_table,
+        SLOT(showAux(bool)));
+    connect(m_panel_agent,
+        SIGNAL(showLookupTable(bool)),
+        m_lookup_table,
+        SLOT(showLookupTable(bool)));
+
 
     // create actions
     KAction *action = new KAction(KIcon("view-refresh"),i18n("Reload Config"),this);
@@ -130,8 +141,10 @@ void KIMPanel::execMenu(const QList<Property> &prop_list)
     delete menu;
 }
 
+#if 0
 void KIMPanel::showPreedit(bool to_show)
 {
+    m_lookup_table->showPreedit(to_show);
 }
 
 void KIMPanel::showAux(bool to_show)
@@ -144,6 +157,7 @@ void KIMPanel::showLookupTable(bool to_show)
     m_lookup_table->showLookupTable(to_show);
     //m_lookup_table->setVisible(to_show);
 }
+#endif
 
 void KIMPanel::about()
 {

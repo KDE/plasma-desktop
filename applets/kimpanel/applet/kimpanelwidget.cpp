@@ -44,7 +44,7 @@ KIMPanelWidget::KIMPanelWidget(QGraphicsItem *parent)
     m_layout->setContentsMargins(0, 0, 0, 0);
 
     // Initial collapse action
-    m_collapseAction = new QAction(KIcon("arrow-up-double"),i18n("Collapse/Expand"),this);
+    m_collapseAction = new QAction(KIcon("arrow-up-double"),i18n("Expand out"),this);
     connect(m_collapseAction, SIGNAL(triggered()), SLOT(changeCollapseStatus()));
     m_collapseIcon = new Plasma::IconWidget(this);
     m_collapseIcon->setIcon(KIcon("draw-freehand"));
@@ -52,6 +52,9 @@ KIMPanelWidget::KIMPanelWidget(QGraphicsItem *parent)
     m_collapseIcon->show();
 
     m_panel_agent = new PanelAgent(this);
+
+    m_reloadConfigAction = new QAction(KIcon("view-refresh"),i18n("Reload Config"),this);
+    connect(m_reloadConfigAction,SIGNAL(triggered()),m_panel_agent,SIGNAL(ReloadConfig()));
 
     connect(m_panel_agent,
         SIGNAL(execDialog(const Property &)),
@@ -83,6 +86,14 @@ KIMPanelWidget::KIMPanelWidget(QGraphicsItem *parent)
         m_lookup_table,
         SLOT(updateLookupTable(const LookupTable &)));
     connect(m_panel_agent,
+        SIGNAL(updatePreeditCaret(int)),
+        m_lookup_table,
+        SLOT(updatePreeditCaret(int)));
+    connect(m_panel_agent,
+        SIGNAL(updatePreeditText(const QString &,const QList<TextAttribute> &)),
+        m_lookup_table,
+        SLOT(updatePreeditText(const QString &,const QList<TextAttribute> &)));
+    connect(m_panel_agent,
         SIGNAL(updateAux(const QString &,const QList<TextAttribute> &)),
         m_lookup_table,
         SLOT(updateAux(const QString &,const QList<TextAttribute> &)));
@@ -94,6 +105,10 @@ KIMPanelWidget::KIMPanelWidget(QGraphicsItem *parent)
         SIGNAL(showAux(bool)),
         m_lookup_table,
         SLOT(showAux(bool)));
+    connect(m_panel_agent,
+        SIGNAL(showPreedit(bool)),
+        m_lookup_table,
+        SLOT(showPreedit(bool)));
 
     // change from true -> false
     m_collapsed = true;
@@ -125,7 +140,7 @@ void KIMPanelWidget::setCollapsible(bool b)
 QList<QAction *> KIMPanelWidget::contextualActions() const
 {
     if (!m_empty) {
-        return QList<QAction *>() << m_collapseAction;
+        return QList<QAction *>() << m_collapseAction << m_reloadConfigAction;
     } else {
         return QList<QAction *>();
     }
@@ -245,6 +260,7 @@ void KIMPanelWidget::changeCollapseStatus()
     m_collapsed = !m_collapsed;
     if (m_collapsed) {
         m_collapseAction->setIcon(KIcon("arrow-down-double"));
+        m_collapseAction->setText(i18n("Collapse to panel"));
         m_collapseIcon->setIcon(KIcon("draw-freehand"));
 
         connect(m_panel_agent,
@@ -287,6 +303,7 @@ void KIMPanelWidget::changeCollapseStatus()
 
     } else {
         m_collapseAction->setIcon(KIcon("arrow-up-double"));
+        m_collapseAction->setText(i18n("Expand out"));
         m_collapseIcon->setIcon(KIcon("arrow-up-double"));
 
         m_statusbar->hide();

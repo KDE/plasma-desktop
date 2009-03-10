@@ -46,9 +46,9 @@ public slots:
     void execDialog(const Property &prop);
     void execMenu(const QList<Property> &props);
 
-    void showPreedit(bool to_show);
-    void showAux(bool to_show);
-    void showLookupTable(bool to_show);
+//X     void showPreedit(bool to_show);
+//X     void showAux(bool to_show);
+//X     void showLookupTable(bool to_show);
 
     void about();
     void exit();

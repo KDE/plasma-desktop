@@ -91,6 +91,7 @@ private:
     bool m_collapsed;
     bool m_enableCollapse;
     QAction *m_collapseAction;
+    QAction *m_reloadConfigAction;
     Plasma::IconWidget *m_collapseIcon;
 
     PanelAgent *m_panel_agent;

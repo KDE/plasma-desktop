@@ -45,7 +45,10 @@ public Q_SLOTS:
     void updateSpotLocation(int x,int y);
     void updateLookupTable(const LookupTable &lookup_table);
     void updateAux(const QString &text,const QList<TextAttribute> &attrs);
+    void updatePreeditCaret(int pos);
+    void updatePreeditText(const QString &text,const QList<TextAttribute> &attrs);
     void showAux(bool to_show);
+    void showPreedit(bool to_show);
     void showLookupTable(bool to_show);
 
 protected:
@@ -68,7 +71,7 @@ private:
 //X 
 //X     QString m_button_stylesheet;
 
-    QLayout *m_layout;
+    QVBoxLayout *m_layout;
 
 //X     QWidget *m_button_container;
 //X 
@@ -83,9 +86,12 @@ private:
     QSignalMapper mapper;
     
     QString m_aux_text;
+    QString m_preedit_text;
+    int m_preedit_caret;
     LookupTable m_lookup_table;
 
     QLabel *m_aux_label;
+    QLabel *m_preedit_label;
     QLabel *m_candis_label;
 
     QDesktopWidget m_desktop;

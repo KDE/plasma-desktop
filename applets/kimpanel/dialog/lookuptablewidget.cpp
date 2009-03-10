@@ -19,27 +19,13 @@ LookupTableWidget::LookupTableWidget(QWidget *parent):QWidget(parent)
     setPalette(pal);
 
     m_background_svg = new Plasma::FrameSvg(this);
-//X     m_background_svg = new Plasma::Svg(this);
-//X     m_factory_svg = new Plasma::Svg(this);
-//X     m_config_svg = new Plasma::Svg(this);
-//X     m_help_svg = new Plasma::Svg(this);
 
 //X     m_background_svg->setImagePath("widgets/panel-background");
     m_background_svg->setImagePath("dialogs/background");
-//X     m_factory_svg->setImagePath("widgets/button");
-//X     m_config_svg->setImagePath("widgets/configuration-icons");
-//X     m_help_svg->setImagePath("widgets/button");
     
     //m_background_svg->setEnabledBorders(Plasma::FrameSvg::LeftBorder | Plasma::FrameSvg::RightBorder);
     m_background_svg->setEnabledBorders(Plasma::FrameSvg::AllBorders);
     connect(m_background_svg, SIGNAL(repaintNeeded()), SLOT(update()));
-
-//X     m_factory_svg->setContainsMultipleImages(true);
-//X     m_factory_svg->resize(KIconLoader::SizeSmall, KIconLoader::SizeSmall);
-//X     m_config_svg->setContainsMultipleImages(true);
-//X     m_config_svg->resize(KIconLoader::SizeSmall, KIconLoader::SizeSmall);
-//X     m_help_svg->setContainsMultipleImages(true);
-//X     m_help_svg->resize(KIconLoader::SizeSmall, KIconLoader::SizeSmall);
 
     connect(Plasma::Theme::defaultTheme(), SIGNAL(themeChanged()),
         SLOT(themeUpdated()));
@@ -49,37 +35,26 @@ LookupTableWidget::LookupTableWidget(QWidget *parent):QWidget(parent)
     m_layout->setMargin(0);
     m_layout->setSizeConstraint(QLayout::SetFixedSize);
 
+    QHBoxLayout *child_layout = new QHBoxLayout(this);
+    child_layout->setMargin(0);
+
+    m_layout->addLayout(child_layout);
+
     m_aux_label = new QLabel(this);
-    m_layout->addWidget(m_aux_label);
+    m_aux_label->setMinimumWidth(fontMetrics().width(QString(32,' ')));
+    m_aux_label->setSizePolicy(QSizePolicy::Minimum,
+            QSizePolicy::Minimum);
+    child_layout->addWidget(m_aux_label);
+
+    child_layout->addSpacing(fontMetrics().width("  "));
+
+    m_preedit_label = new QLabel(this);
+    m_preedit_label->setSizePolicy(QSizePolicy::Expanding,
+            QSizePolicy::Expanding);
+    child_layout->addWidget(m_preedit_label);
+
     m_candis_label = new QLabel(this);
     m_layout->addWidget(m_candis_label);
-//X     m_button_container = new QWidget(this);
-//X     QHBoxLayout *m_iconbox_layout = new QHBoxLayout(m_button_container);
-//X     m_iconbox_layout->setMargin(0);
-//X 
-//X     m_factory_button = new QToolButton(this);
-//X     m_factory_button->setText(i18n("Menu"));
-//X     m_factory_button->setToolTip(i18n("Choose Input Method"));
-//X     m_factory_button->setIcon(m_factory_svg->pixmap());
-//X     connect(m_factory_button,SIGNAL(clicked()),SIGNAL(RequestShowFactoryMenu()));
-//X 
-//X     m_config_button = new QToolButton(this);
-//X     m_config_button->setText(i18n("Config"));
-//X     m_config_button->setToolTip(i18n("Config IM"));
-//X     m_config_button->setIcon(m_config_svg->pixmap("configure"));
-//X     connect(m_config_button,SIGNAL(clicked()),SIGNAL(RequestShowConfig()));
-//X 
-//X     m_help_button = new QToolButton(this);
-//X     m_help_button->setText(i18n("Help"));
-//X     m_help_button->setToolTip(i18n("Help on sth."));
-//X     m_help_button->setIcon(m_help_svg->pixmap());
-//X     connect(m_help_button,SIGNAL(clicked()),SIGNAL(RequestShowHelp()));
-//X 
-//X     //connect(m_configButton, SIGNAL(clicked()), SLOT(showConfigDialog()));
-//X     m_layout->addWidget( m_factory_button );
-//X     m_layout->addWidget( m_button_container);
-//X     m_layout->addWidget( m_config_button );
-//X     m_layout->addWidget( m_help_button );
 
     // handle property trigger signal
 //X     connect(&mapper,SIGNAL(mapped(const QString &)),SIGNAL(TriggerProperty(const QString &)));
@@ -91,14 +66,11 @@ LookupTableWidget::LookupTableWidget(QWidget *parent):QWidget(parent)
 
     setMouseTracking(true);
 
-/*
-    QSize size = m_background_svg->size();
-    size.setHeight(size.height() - (m_background_svg->elementSize("center").height()-m_button_container->height()));
-    size.setWidth(size.width() - (m_background_svg->elementSize("center").width()-m_button_container->width()));
-*/
     themeUpdated();
 
     m_dragging = false;
+
+    m_preedit_caret = 0;
 }
 
 LookupTableWidget::~LookupTableWidget()
@@ -109,6 +81,21 @@ void LookupTableWidget::updateLookupTable(const LookupTable &lookup_table)
 {
     m_lookup_table = lookup_table;
     if (lookup_table.entries.size() > 0) {
+        show();
+        update();
+    }
+}
+
+void LookupTableWidget::updatePreeditCaret(int pos)
+{
+    kDebug() << pos;
+    m_preedit_caret = pos;
+}
+
+void LookupTableWidget::updatePreeditText(const QString &text,const QList<TextAttribute> &attrs)
+{
+    m_preedit_text = text;
+    if (!text.isEmpty()) {
         show();
         update();
     }
@@ -126,13 +113,25 @@ void LookupTableWidget::updateAux(const QString &text,const QList<TextAttribute>
 void LookupTableWidget::showAux(bool to_show)
 {
     m_aux_label->setVisible(to_show);
-    setVisible(m_aux_label->isVisible() || m_candis_label->isVisible());
+    setVisible(m_aux_label->isVisible() ||
+            m_candis_label->isVisible() ||
+            m_preedit_label->isVisible());
+}
+
+void LookupTableWidget::showPreedit(bool to_show)
+{
+    m_preedit_label->setVisible(to_show);
+    setVisible(m_aux_label->isVisible() ||
+            m_candis_label->isVisible() ||
+            m_preedit_label->isVisible());
 }
 
 void LookupTableWidget::showLookupTable(bool to_show)
 {
     m_candis_label->setVisible(to_show);
-    setVisible(m_aux_label->isVisible() || m_candis_label->isVisible());
+    setVisible(m_aux_label->isVisible() ||
+            m_candis_label->isVisible() ||
+            m_preedit_label->isVisible());
 }
 
 //X void LookupTableWidget::setEnabled(bool to_enable)
@@ -251,6 +250,7 @@ void LookupTableWidget::themeUpdated()
     p.setColor(QPalette::LinkVisited, theme->color(Plasma::Theme::TextColor));
     m_candis_label->setPalette(p);
     m_aux_label->setPalette(p);
+    m_preedit_label->setPalette(p);
 //X     m_previousPage->setPalette(p);
 //X     m_nextPage->setPalette(p);
 
@@ -280,9 +280,17 @@ void LookupTableWidget::paintEvent(QPaintEvent *e)
     m_background_svg->paintFrame(&p);
     p.restore();
 
+    Plasma::Theme *theme = Plasma::Theme::defaultTheme();
+
     m_aux_label->setText(m_aux_text);
 
-    Plasma::Theme *theme = Plasma::Theme::defaultTheme();
+    QString cursor_text = QString("<td bgcolor='%2'><font color='%1'>%3</font></td>")
+                .arg(theme->color(Plasma::Theme::BackgroundColor).name())
+                .arg(theme->color(Plasma::Theme::TextColor).name())
+                .arg(' ');
+    m_preedit_label->setText("<td>"+m_preedit_text.left(m_preedit_caret)+"</td>" +
+            cursor_text +
+            "<td>"+m_preedit_text.mid(m_preedit_caret)+"</td>");
 
 //X     p.setColor(QPalette::WindowText, theme->color(Plasma::Theme::TextColor));
 //X     p.setColor(QPalette::Link, theme->color(Plasma::Theme::TextColor));

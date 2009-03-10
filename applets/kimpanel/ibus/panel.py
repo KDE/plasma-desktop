@@ -217,12 +217,20 @@ class KIMPanel(PanelBase):
 
     def update_preedit_text(self, text, cursor_pos, visible):
         print 'update_preedit_text',cursor_pos,visible
+        self.__kimclient.UpdatePreeditText(text.get_text(),'')
+        self.__kimclient.UpdatePreeditCaret(cursor_pos)
+        if visible:
+            self.show_preedit_text()
+        else:
+            self.hide_preedit_text()
 
     def show_preedit_text(self):
         print 'show_preedit_text'
+        self.__kimclient.ShowPreedit(1)
 
     def hide_preedit_text(self):
         print 'hide_preedit_text'
+        self.__kimclient.ShowPreedit(0)
 
     def update_auxiliary_text(self, text, visible):
         #print 'update_auxiliary_text',visible

@@ -52,7 +52,6 @@ public Q_SLOTS: // METHODS
         const QStringList &attrlists,
         int,int,int,bool to_show);
     void UpdatePreeditText(const QString &text,const QString &attr);
-    void UpdatePreeditCaret(int position);
     void UpdateAux(const QString &text,const QString &attr);
     void UpdateScreen(int screen_id);
     void UpdateProperty(const QString &prop);
@@ -74,6 +73,8 @@ Q_SIGNALS: // SIGNALS
     // signals to inform kimpanel
     void enable(bool to_enable);
 
+    void updatePreeditCaret(int pos);
+    void updatePreeditText(const QString &text,const QList<TextAttribute> &attr);
     void updateAux(const QString &text,const QList<TextAttribute> &attr);
     void updateProperty(const Property &prop);
     void updateLookupTable(const LookupTable &lookup_table);
