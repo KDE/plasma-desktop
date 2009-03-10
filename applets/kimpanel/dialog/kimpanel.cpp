@@ -41,8 +41,8 @@ KIMPanel::KIMPanel(QObject* parent)
 
 
 //X     connect(m_panel_agent,
-//X         SIGNAL(KIMEnable(bool)),
-//X         SLOT(KIMEnable(bool)));
+//X         SIGNAL(enable(bool)),
+//X         SLOT(enable(bool)));
     connect(m_panel_agent,
         SIGNAL(showPreedit(bool)),
         SLOT(showPreedit(bool)));
@@ -136,11 +136,13 @@ void KIMPanel::showPreedit(bool to_show)
 
 void KIMPanel::showAux(bool to_show)
 {
+    m_lookup_table->showAux(to_show);
 }
 
 void KIMPanel::showLookupTable(bool to_show)
 {
-    m_lookup_table->setVisible(to_show);
+    m_lookup_table->showLookupTable(to_show);
+    //m_lookup_table->setVisible(to_show);
 }
 
 void KIMPanel::about()

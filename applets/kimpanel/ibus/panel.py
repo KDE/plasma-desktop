@@ -189,13 +189,14 @@ class KIMPanel(PanelBase):
         self.__kimclient.UpdateProperty(prop2string(self.__logo_prop))
 
     def state_changed(self):
+        print 'state_changed'
         if not self.__focus_ic:
             return
 
         enabled = self.__focus_ic.is_enabled()
 
         if enabled == False:
-            #self.reset()
+            self.__reset()
             self.__logo_prop.set_icon(IBUS_ICON_DIR + 'ibus.svg')
         else:
             engine = self.__focus_ic.get_engine()
@@ -211,7 +212,7 @@ class KIMPanel(PanelBase):
         self.__kimclient.UpdateProperty(prop2string(self.__logo_prop))
 
     def set_cursor_location(self, x, y, w, h):
-        print 'set_cursor_location',x,y,w,h
+        #print 'set_cursor_location',x,y,w,h
         self.__kimclient.UpdateSpotLocation(x+w,y+h)
 
     def update_preedit_text(self, text, cursor_pos, visible):
@@ -224,8 +225,12 @@ class KIMPanel(PanelBase):
         print 'hide_preedit_text'
 
     def update_auxiliary_text(self, text, visible):
-        print 'update_auxiliary_text',visible
+        #print 'update_auxiliary_text',visible
         self.__kimclient.UpdateAux(text.get_text(),'')
+        if visible:
+            self.show_auxiliary_text()
+        else:
+            self.hide_auxiliary_text()
 
     def show_auxiliary_text(self):
         print 'show_auxiliary_text'
@@ -236,7 +241,9 @@ class KIMPanel(PanelBase):
         self.__kimclient.ShowAux(0)
 
     def update_lookup_table(self, lookup_table, visible):
-        print 'update_lookup_table',lookup_table.get_number_of_candidates()
+        if lookup_table == None:
+            lookup_table = LookupTable()
+
         self.__labels = []
         self.__candis = []
         self.__attrs = []
@@ -247,7 +254,12 @@ class KIMPanel(PanelBase):
         
         self.__kimclient.UpdateLookupTable(self.__labels,
                 self.__candis,self.__attrs,0,0,0,dbus.Boolean())
-        print 'ok'
+
+        if visible:
+            self.show_lookup_table()
+        else:
+            self.hide_lookup_table()
+
 
     def show_lookup_table(self):
         print 'show_lookup_table'
@@ -318,8 +330,8 @@ class KIMPanel(PanelBase):
             elif __prop_key == 'About':
                 self.__kimclient.ExecDialog(prop2string(self.__about_prop))
             elif __prop_key.startswith('Engine/'):
+                self.__reset()
                 __prop_key = __prop_key[7:]
-                print __prop_key
                 if __prop_key == 'None':
                     self.__focus_ic.disable()
                 else:
@@ -331,6 +343,11 @@ class KIMPanel(PanelBase):
                             self.__focus_ic.set_engine(engine)
             else:
                 self.property_activate(__prop_key,PROP_STATE_CHECKED)
+
+    def __reset(self):
+        self.hide_auxiliary_text()
+        self.hide_preedit_text()
+        self.hide_lookup_table()
 
     def __create_im_menu(self):
         engines = self.__bus.list_active_engines()

@@ -1,49 +1,11 @@
-===========================================================
 Build & Install:
-===========================================================
-
 cmakekde 
 
-<copy scim-panel-dbus to your dir where scim-panel-gtk lives in>
+RUN:
+You may need build scim or ibus backend to get it running functionally, see scim/README or ibus/README for install instructions.
 
-===========================================================
-Configure:
-===========================================================
-edit your scim's global config file,
- ( it's /etc/scim/global in my box(Archlinux distro). )
-change this line:
+type:
+kimpanel
+to launch the standalone version
 
-/DefaultPanelProgram = scim-panel-gtk
-
-into:
-
-/DefaultPanelProgram = scim-panel-dbus
-
-reboot your system (or manually kill all scim related process)
-
-===========================================================
-Run:
-===========================================================
-kimpanel (standalone app)
-or 
-add im panel Applet to your panel 
-
-===========================================================
-Uninstall:
-===========================================================
-goto source directory, 
-
-make uninstall
-rm <your dir where scim-panel-gtk lives in>/scim-panel-dbus
-
-edit your scim's global config file,
- ( it's /etc/scim/global in my box(Archlinux distro). )
-change this line:
-
-/DefaultPanelProgram = scim-panel-dbus
-
-back to:
-
-/DefaultPanelProgram = scim-panel-gtk
-
-then reboot your system (or manually kill all scim related process)
+or add the plasma applet to your panel

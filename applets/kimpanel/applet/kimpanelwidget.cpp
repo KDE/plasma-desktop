@@ -89,7 +89,11 @@ KIMPanelWidget::KIMPanelWidget(QGraphicsItem *parent)
     connect(m_panel_agent,
         SIGNAL(showLookupTable(bool)),
         m_lookup_table,
-        SLOT(setVisible(bool)));
+        SLOT(showLookupTable(bool)));
+    connect(m_panel_agent,
+        SIGNAL(showAux(bool)),
+        m_lookup_table,
+        SLOT(showAux(bool)));
 
     // change from true -> false
     m_collapsed = true;

@@ -45,6 +45,8 @@ public Q_SLOTS:
     void updateSpotLocation(int x,int y);
     void updateLookupTable(const LookupTable &lookup_table);
     void updateAux(const QString &text,const QList<TextAttribute> &attrs);
+    void showAux(bool to_show);
+    void showLookupTable(bool to_show);
 
 protected:
     void paintEvent(QPaintEvent *e);

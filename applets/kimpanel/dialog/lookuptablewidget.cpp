@@ -123,6 +123,18 @@ void LookupTableWidget::updateAux(const QString &text,const QList<TextAttribute>
     }
 }
 
+void LookupTableWidget::showAux(bool to_show)
+{
+    m_aux_label->setVisible(to_show);
+    setVisible(m_aux_label->isVisible() || m_candis_label->isVisible());
+}
+
+void LookupTableWidget::showLookupTable(bool to_show)
+{
+    m_candis_label->setVisible(to_show);
+    setVisible(m_aux_label->isVisible() || m_candis_label->isVisible());
+}
+
 //X void LookupTableWidget::setEnabled(bool to_enable)
 //X {
 //X     foreach (QWidget *w, prop_map.values()) {
