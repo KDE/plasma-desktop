@@ -104,7 +104,6 @@ void StatusBarWidget::setEnabled(bool to_enable)
 void StatusBarWidget::updateProperty(const Property &prop)
 {
     if (!prop_map.contains(prop.key)) {
-        kWarning() << prop.key <<"not contained";
         return;
     }
 

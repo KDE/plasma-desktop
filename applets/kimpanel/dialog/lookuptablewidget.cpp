@@ -107,16 +107,20 @@ LookupTableWidget::~LookupTableWidget()
 
 void LookupTableWidget::updateLookupTable(const LookupTable &lookup_table)
 {
-    show();
     m_lookup_table = lookup_table;
-    update();
+    if (lookup_table.entries.size() > 0) {
+        show();
+        update();
+    }
 }
 
 void LookupTableWidget::updateAux(const QString &text,const QList<TextAttribute> &attrs)
 {
-    show();
     m_aux_text = text;
-    update();
+    if (!text.isEmpty()) {
+        show();
+        update();
+    }
 }
 
 //X void LookupTableWidget::setEnabled(bool to_enable)
@@ -253,11 +257,16 @@ void LookupTableWidget::updateSpotLocation(int x,int y)
 void LookupTableWidget::paintEvent(QPaintEvent *e)
 {
     QPainter p(this);
-    p.setRenderHint(QPainter::Antialiasing);
-    p.setClipRect(e->rect());
-    //kDebug() << "clip rect set to: " << e->rect();
 
+    p.setClipRect(e->rect());
+    p.setCompositionMode(QPainter::CompositionMode_Source);
+
+    p.fillRect(e->rect(),Qt::transparent);
+    p.setBackgroundMode(Qt::TransparentMode);
+    //kDebug() << "clip rect set to: " << e->rect();
+    p.save();
     m_background_svg->paintFrame(&p);
+    p.restore();
 
     m_aux_label->setText(m_aux_text);
 
