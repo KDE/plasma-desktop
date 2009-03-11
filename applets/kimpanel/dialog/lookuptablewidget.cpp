@@ -14,6 +14,7 @@
 
 LookupTableWidget::LookupTableWidget(QWidget *parent):QWidget(parent)
 {
+    setAttribute(Qt::WA_TranslucentBackground);
     QPalette pal = palette();
     pal.setColor(backgroundRole(), Qt::transparent);
     setPalette(pal);
@@ -23,7 +24,6 @@ LookupTableWidget::LookupTableWidget(QWidget *parent):QWidget(parent)
 //X     m_background_svg->setImagePath("widgets/panel-background");
     m_background_svg->setImagePath("dialogs/background");
     
-    //m_background_svg->setEnabledBorders(Plasma::FrameSvg::LeftBorder | Plasma::FrameSvg::RightBorder);
     m_background_svg->setEnabledBorders(Plasma::FrameSvg::AllBorders);
     connect(m_background_svg, SIGNAL(repaintNeeded()), SLOT(update()));
 

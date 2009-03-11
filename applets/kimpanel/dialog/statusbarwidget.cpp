@@ -57,6 +57,7 @@ StatusBarWidget::StatusBarWidget(QWidget *parent, const QList<QAction *> extra_a
     // handle property/helper trigger signal
     connect(&prop_mapper,SIGNAL(mapped(const QString &)),SIGNAL(triggerProperty(const QString &)));
 
+    setAttribute(Qt::WA_TranslucentBackground);
     // can i use setState only ?
     setWindowFlags(Qt::FramelessWindowHint|Qt::X11BypassWindowManagerHint);
     KWindowSystem::setState( winId(), NET::SkipTaskbar | NET::SkipPager | NET::StaysOnTop );

@@ -226,6 +226,12 @@ void KIMPanelWidget::registerProperties(const QList<Property> &props)
 //X         m_layout->addItem(m_collapseIcon);
     }
 
+    if (m_props.size() > 0) {
+        m_collapseIcon->setIcon(KIcon("arrow-up-double"));
+    } else {
+        m_collapseIcon->setIcon(KIcon("draw-freehand"));
+    }
+
     m_layout->setItems(m_icons);
     Q_FOREACH (Plasma::IconWidget *icon, m_icons) {
         icon->show();
@@ -304,7 +310,11 @@ void KIMPanelWidget::changeCollapseStatus()
     } else {
         m_collapseAction->setIcon(KIcon("arrow-up-double"));
         m_collapseAction->setText(i18n("Expand out"));
-        m_collapseIcon->setIcon(KIcon("arrow-up-double"));
+        if (m_props.size() > 0) {
+            m_collapseIcon->setIcon(KIcon("arrow-up-double"));
+        } else {
+            m_collapseIcon->setIcon(KIcon("draw-freehand"));
+        }
 
         m_statusbar->hide();
 
