@@ -16,22 +16,28 @@
  *   Free Software Foundation, Inc.,                                       *
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
-#ifndef LOOKUPTABLEWIDGET_H
-#define LOOKUPTABLEWIDGET_H
+#ifndef KIM_LOOKUPTABLE_GRAPHICS_H
+#define KIM_LOOKUPTABLE_GRAPHICS_H
 
 #include <plasma/theme.h>
 #include <plasma/svg.h>
 #include <plasma/framesvg.h>
+#include <plasma/widgets/label.h>
+#include <plasma/widgets/flashinglabel.h>
+#include <plasma/widgets/iconwidget.h>
 #include <QtGui>
 
 #include "kimpaneltype.h"
 
-class LookupTableWidget : public QWidget
+class PanelAgent;
+class KIMLabelGraphics;
+
+class KIMLookupTableGraphics: public QGraphicsWidget
 {
 Q_OBJECT
 public:
-    LookupTableWidget(QWidget *parent=0);
-    ~LookupTableWidget();
+    KIMLookupTableGraphics(PanelAgent * = 0,QGraphicsItem *parent=0);
+    ~KIMLookupTableGraphics();
     
 //X     void setEnabled(bool to_enable);
 
@@ -39,10 +45,11 @@ Q_SIGNALS:
     void SelectCandidate(int idx);
     void LookupTablePageUp();
     void LookupTablePageDown();
+
+    void sizeChanged();
+    void visibleChanged(bool);
     
 public Q_SLOTS:
-    void themeUpdated();
-    void updateSpotLocation(int x,int y);
     void updateLookupTable(const LookupTable &lookup_table);
     void updateAux(const QString &text,const QList<TextAttribute> &attrs);
     void updatePreeditCaret(int pos);
@@ -52,49 +59,37 @@ public Q_SLOTS:
     void showLookupTable(bool to_show);
 
 protected:
-    void paintEvent(QPaintEvent *e);
-    void resizeEvent(QResizeEvent *e);
-    void mouseMoveEvent(QMouseEvent *e);
-    void mousePressEvent(QMouseEvent *e);
-    void mouseReleaseEvent(QMouseEvent *e);
-    bool event(QEvent *e);
+    void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
+
+private Q_SLOTS:
+    void iconClicked(int);
 
 private:
-    Plasma::FrameSvg *m_background_svg;
-//X     Plasma::Svg *m_background_svg;
-//X     Plasma::Svg *m_factory_svg;
-//X     Plasma::Svg *m_config_svg;
-//X     Plasma::Svg *m_help_svg;
-
-//X     QList<Plasma::Svg *> m_properties_svg;
-//X     QList<Property> m_properties;
-//X 
-//X     QString m_button_stylesheet;
-
-    QVBoxLayout *m_layout;
-
-//X     QWidget *m_button_container;
-//X 
-//X     QToolButton *m_factory_button;
-//X     QToolButton *m_config_button;
-//X     QToolButton *m_help_button;
-
-    bool m_dragging;
-    QPoint m_init_pos;
-
-//X     QMap<QString,QToolButton *> prop_map;
     QSignalMapper mapper;
     
     QString m_aux_text;
     QString m_preedit_text;
     int m_preedit_caret;
+
     LookupTable m_lookup_table;
 
-    QLabel *m_aux_label;
-    QLabel *m_preedit_label;
-    QLabel *m_candis_label;
+    PanelAgent *m_panel_agent;
 
-    QDesktopWidget m_desktop;
+    bool m_auxVisible;
+    bool m_preeditVisible;
+    bool m_lookupTableVisible;
+
+    QGraphicsLinearLayout *m_layout;
+    QGraphicsLinearLayout *m_upperLayout;
+    QGraphicsGridLayout *m_lowerLayout;
+
+    KIMLabelGraphics *m_auxLabel;
+    KIMLabelGraphics *m_preeditLabel;
+    Plasma::IconWidget *m_pageUpIcon;
+    Plasma::IconWidget *m_pageDownIcon;
+    QList<KIMLabelGraphics *> m_tableEntryLabels;
+
+    QSignalMapper *m_tableEntryMapper;
 };
 
-#endif // LOOKUPTABLEWIDGET_H
+#endif // KIM_LOOKUPTABLE_GRAPHICS_H

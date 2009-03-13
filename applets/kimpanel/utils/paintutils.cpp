@@ -1,6 +1,7 @@
 #include "paintutils.h"
+#include <kdebug.h>
 
-QPixmap renderText(QString text, const QFont &ft, QColor textColor)
+QPixmap renderText(QString text, QColor textColor, QColor bgColor, const QFont &ft)
 {
     //don't try to paint stuff on a future null pixmap because the text is empty
     if (text.isEmpty()) {
@@ -10,9 +11,9 @@ QPixmap renderText(QString text, const QFont &ft, QColor textColor)
     QFont font = ft;
     // Draw text
     QFontMetrics fm(font);
-    QRect textRect = fm.boundingRect(text);
-    QPixmap textPixmap(textRect.width(), fm.height());
-    textPixmap.fill(Qt::transparent);
+    QSize textSize = fm.size(0,text);
+    QPixmap textPixmap(textSize);
+    textPixmap.fill(bgColor);
     QPainter p(&textPixmap);
     p.setPen(textColor);
     p.setFont(font);

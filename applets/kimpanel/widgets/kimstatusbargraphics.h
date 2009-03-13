@@ -16,8 +16,8 @@
  *   Free Software Foundation, Inc.,                                       *
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
-#ifndef KIMPANELWIDGET_H
-#define KIMPANELWIDGET_H
+#ifndef KIM_STATUSBAR_GRAPHICS_H
+#define KIM_STATUSBAR_GRAPHICS_H
 
 #include <plasma/applet.h>
 #include <plasma/widgets/iconwidget.h>
@@ -30,16 +30,17 @@
 
 #include "kimpaneltype.h"
 #include "kimpanelagent.h"
-#include "lookuptablewidget.h"
-#include "statusbarwidget.h"
 #include "kimpanellayout.h"
 
-class KIMPanelWidget : public QGraphicsWidget
+class PanelAgent;
+class KIMStatusBar;
+
+class KIMStatusBarGraphics : public QGraphicsWidget
 {
 Q_OBJECT
 public:
-    KIMPanelWidget(QGraphicsItem *parent);
-    ~KIMPanelWidget();
+    KIMStatusBarGraphics(PanelAgent *agent=0, QGraphicsItem *parent=0);
+    ~KIMStatusBarGraphics();
 
     /**
      * Returns hints about the geometry of the figure
@@ -56,18 +57,28 @@ public:
     {
         return m_enableCollapse;
     }
+    bool logoVisible() const
+    {
+        return m_logoVisible;
+    }
     void setCollapsible(bool b); 
+    void showLogo(bool b);
 
-    QList<QAction *> contextualActions() const;
+    QList<QAction *> actions() const;
 
 
 Q_SIGNALS:
     void collapsed(bool b);
-    void iconCountChanged(int iconCount);
+    void iconCountChanged();
+    void adjustLocation(int x,int y);
 
     void triggerProperty(const QString &key);
 
 public Q_SLOTS:
+    void updateProperty(const Property &prop);
+    void registerProperties(const QList<Property> &props);
+    void execDialog(const Property &prop);
+    void execMenu(const QList<Property> &props);
 
 protected:
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
@@ -75,35 +86,30 @@ protected:
 protected Q_SLOTS:
 
 private Q_SLOTS:
-    void updateProperty(const Property &prop);
-    void registerProperties(const QList<Property> &props);
-    void execDialog(const Property &prop);
-    void execMenu(const QList<Property> &prop_list);
-
     void changeCollapseStatus();
 
 private:
     KIMPanelLayout *m_layout;
     QList<Plasma::IconWidget *> m_icons;
     Plasma::FrameSvg *m_background;
-    Plasma::IconWidget *m_arrow;
 
     bool m_collapsed;
     bool m_enableCollapse;
+    bool m_logoVisible;
+
     QAction *m_collapseAction;
     QAction *m_reloadConfigAction;
+    Plasma::IconWidget *m_logoIcon;
     Plasma::IconWidget *m_collapseIcon;
-
-    PanelAgent *m_panel_agent;
 
     QList<Property> m_props;
     QMap<QString,Plasma::IconWidget *> m_prop_map;
-    QSignalMapper m_icon_mapper;
+    QSignalMapper *m_icon_mapper;
 
-    LookupTableWidget *m_lookup_table;
-    StatusBarWidget *m_statusbar;
     QList<QAction *> m_statusbarActions;
 
     bool m_empty;
+
+    PanelAgent *m_panel_agent;
 };
-#endif // KIMPANELWIDGET_H
+#endif // KIM_STATUSBAR_GRAPHICS_H

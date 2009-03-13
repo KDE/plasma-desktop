@@ -31,8 +31,9 @@
 
 #include "kimpaneltype.h"
 #include "kimpanelagent.h"
-#include "kimpanellayout.h"
-#include "kimpanelwidget.h"
+#include "kimstatusbar.h"
+#include "kimstatusbargraphics.h"
+#include "kimlookuptable.h"
 
 #include "ui_kimpanelconfig.h"
 
@@ -88,7 +89,8 @@ protected Q_SLOTS:
     void configAccepted();
 
 private Q_SLOTS:
-    void adjustSelf(int iconCount);
+    void adjustSelf();
+    void toggleCollapse(bool b);
 
 private:
     void init();
@@ -106,18 +108,19 @@ private:
 
     QGraphicsLinearLayout *m_layout;
 
-    KIMPanelWidget *m_widget;
-    KIMPanelWidget *m_dialogWidget;
+    KIMStatusBar *m_statusbar;
+    KIMStatusBarGraphics *m_statusbarGraphics;
+
+    KIMLookupTable *m_lookup_table;
 
     Plasma::FrameSvg *m_background;
     Ui::kimpanelConfig m_uiConfig;
 
-    Plasma::IconWidget *m_collapsedIcon;
-
-    QAction* m_addAction;
-    QAction* m_removeAction;
+    Plasma::IconWidget *m_logoIcon;
 
     int m_largestIconWidth;
+
+    PanelAgent *m_panel_agent;
 };
 
 #endif

@@ -36,14 +36,16 @@
 #include <plasma/dialog.h>
 #include <plasma/corona.h>
 
-#include "math.h"
+#include <math.h>
 
 static const int s_magic_margin = 4;
 
 KIMPanelApplet::KIMPanelApplet(QObject *parent, const QVariantList &args)
   : Plasma::Applet(parent,args),
     m_layout(0),
-    m_widget(0)
+    m_statusbar(0),
+    m_statusbarGraphics(0),
+    m_panel_agent(0)
 {
     setHasConfigurationInterface(true);
 //X     setAcceptDrops(true);
@@ -81,26 +83,24 @@ void KIMPanelApplet::init()
     m_layout->setSpacing(0);
     m_layout->setContentsMargins(0,0,0,0);
 
-    // Initailize Plasma::Dialog
-//X     m_dialog = new Plasma::Dialog(0,Qt::X11BypassWindowManagerHint);
-//X     m_dialog->setContextMenuPolicy(Qt::ActionsContextMenu);
+    m_panel_agent = new PanelAgent(this);
 
     // Initialize widget which holds all im properties.
-    m_widget = new KIMPanelWidget(this);
+    m_statusbarGraphics = new KIMStatusBarGraphics(m_panel_agent);
+    m_statusbarGraphics->setCollapsible(true);
+    m_statusbar = new KIMStatusBar();
     
-    m_widget->setContentsMargins(s_magic_margin,s_magic_margin,
-        s_magic_margin,s_magic_margin);
+   connect(m_statusbarGraphics,SIGNAL(iconCountChanged()),SLOT(adjustSelf()));
+   connect(m_statusbarGraphics,SIGNAL(collapsed(bool)),SLOT(toggleCollapse(bool)));
 
+    m_lookup_table = new KIMLookupTable(m_panel_agent);
 
-    m_collapsedIcon = new Plasma::IconWidget(KIcon("arrow-up-double"),"",this);
-    m_collapsedIcon->hide();
+    m_logoIcon = new Plasma::IconWidget(KIcon("draw-freehand"),"",this);
+    m_logoIcon->hide();
     
-    // By default not collapsed
-    m_layout->addItem(m_widget);
+    //m_layout->addItem(m_logoIcon);
+    m_layout->addItem(m_statusbarGraphics);
 
-//X     m_layout->setSizePolicy(QSizePolicy::Fixed,QSizePolicy::Fixed,QSizePolicy::DefaultType);
-   connect(m_widget,SIGNAL(iconCountChanged(int)),SLOT(adjustSelf(int)));
-    
 }
 
 /*
@@ -122,8 +122,8 @@ void KIMPanelApplet::constraintsEvent(Plasma::Constraints constraints)
 {
     if ((constraints & Plasma::FormFactorConstraint) ||
         (constraints & Plasma::SizeConstraint)) {
-        //TODO: don't call so often
-        adjustSelf(m_widget->iconCount());
+
+        adjustSelf();
         //resize(preferredSize());
     }
 }
@@ -154,13 +154,13 @@ void KIMPanelApplet::configAccepted()
 
     if (changed) {
         emit configNeedsSaving();
-        adjustSelf(m_widget->iconCount());
+        adjustSelf();
     }
 }
 
 QList<QAction*> KIMPanelApplet::contextualActions()
 {
-    return m_widget->contextualActions();
+    return m_statusbarGraphics->actions();
 }
 
 void KIMPanelApplet::paintInterface(QPainter *painter, const QStyleOptionGraphicsItem *option, const QRect &contentsRect)
@@ -171,7 +171,6 @@ void KIMPanelApplet::paintInterface(QPainter *painter, const QStyleOptionGraphic
 //    QRect r = rect().toRect();
 //    m_background->setElementPrefix("lastelements");
 
-    kDebug() << contentsRect;
     painter->save();
 
     //m_background->setElementPrefix(QString());
@@ -181,25 +180,36 @@ void KIMPanelApplet::paintInterface(QPainter *painter, const QStyleOptionGraphic
     painter->restore();
 }
 
-void KIMPanelApplet::adjustSelf(int iconCount)
+void KIMPanelApplet::adjustSelf()
 {
+    int iconCount; 
     int iconWidth; 
     int i,j;
     QSizeF sizeHint = geometry().size();
+    QRectF r;
+
+    if (m_statusbar->graphicsWidget() == 0) {
+        r = m_statusbarGraphics->contentsRect();
+        iconCount = m_statusbarGraphics->iconCount();
+    } else {
+        r = contentsRect();
+        iconCount = 1;
+    }
+
     switch (formFactor()) {
     case Plasma::Horizontal:
         i = 1;
-        while (m_widget->contentsRect().height()/i > m_largestIconWidth)
+        while (r.height()/i > m_largestIconWidth)
             i++;
         j = (iconCount + (i - 1)) / i;
-        sizeHint = QSizeF(j*m_widget->contentsRect().height()/i, m_widget->contentsRect().height());
+        sizeHint = QSizeF(j*r.height()/i, r.height());
         break;
     case Plasma::Vertical:
         i = 1;
-        while (m_widget->contentsRect().width()/i > m_largestIconWidth)
+        while (r.width()/i > m_largestIconWidth)
             i++;
         j = (iconCount + (i - 1)) / i;
-        sizeHint = QSizeF(m_widget->contentsRect().width(),j*m_widget->contentsRect().width()/i);
+        sizeHint = QSizeF(r.width(),j*r.width()/i);
         break;
     case Plasma::Planar:
     case Plasma::MediaCenter:
@@ -210,43 +220,34 @@ void KIMPanelApplet::adjustSelf(int iconCount)
     qreal left, top, right, bottom;
     getContentsMargins(&left,&top,&right,&bottom);
     sizeHint = QSizeF(sizeHint.width() + left + right, sizeHint.height() + top + bottom);
-    m_widget->getContentsMargins(&left,&top,&right,&bottom);
-    sizeHint = QSizeF(sizeHint.width() + left + right, sizeHint.height() + top + bottom);
-    kDebug() << sizeHint;
+
+    if (m_statusbar->graphicsWidget() == 0) {
+        m_statusbarGraphics->getContentsMargins(&left,&top,&right,&bottom);
+        sizeHint = QSizeF(sizeHint.width() + left + right, sizeHint.height() + top + bottom);
+    }
+
     setPreferredSize(sizeHint);
 }
 
-#if 0
-void KIMPanelApplet::collapsed(bool b)
+void KIMPanelApplet::toggleCollapse(bool b)
 {
-    kDebug() << b;
     if (b) {
-        m_layout->removeAt(0);
-        delete  m_widget;
-        
-        m_widget = new KIMPanelWidget(this);
-        
-        connect(m_widget,SIGNAL(collapsed(bool)),SLOT(collapsed(bool)));
-
-        m_widget->setContentsMargins(s_magic_margin,s_magic_margin,
-            s_magic_margin,s_magic_margin);
-
-        m_dialog->setGraphicsWidget(m_widget);
-        m_dialog->show();
-
-        //m_layout->addItem(m_collapsedIcon);
-        //m_collapsedIcon->show();
+        m_layout->removeItem(m_statusbarGraphics);
+        m_layout->addItem(m_logoIcon);
+        //m_statusbarGraphics->showLogo(true);
+        m_statusbar->setGraphicsWidget(m_statusbarGraphics);
+        //disconnect(m_statusbarGraphics,SIGNAL(iconCountChanged()),this,SLOT(adjustSelf()));
     } else {
-/*
-        m_collapsedIcon->hide();
-        m_layout->removeAt(0);
-        m_layout->addItem(m_widget);
-        m_collapsedIcon->show();
-        m_widget->show();
-*/
+        m_statusbar->setGraphicsWidget(0);
+        //m_statusbarGraphics->showLogo(false);
+        m_layout->addItem(m_statusbarGraphics);
+        m_layout->removeItem(m_logoIcon);
+        //connect(m_statusbarGraphics,SIGNAL(iconCountChanged()),SLOT(adjustSelf()));
     }
+    m_statusbar->setVisible(b);
+    m_logoIcon->setVisible(b);
+    adjustSelf();
 }
-#endif 
 
 K_EXPORT_PLASMA_APPLET(kimpanel, KIMPanelApplet)
 

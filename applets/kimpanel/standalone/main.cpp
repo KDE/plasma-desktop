@@ -2,7 +2,7 @@
 #include <kaboutdata.h>
 #include <kcmdlineargs.h>
 #include <kdebug.h>
-#include "kimpanel.h"
+#include "paneldialog.h"
 
 #ifdef Q_WS_X11
 #include <X11/extensions/Xrender.h>

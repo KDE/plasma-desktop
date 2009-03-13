@@ -21,16 +21,19 @@
 
 #include <plasma/svg.h>
 #include <plasma/framesvg.h>
+#include <plasma/dialog.h>
 #include <kicon.h>
 #include <QString>
 #include <QWidget>
 #include <QPainter>
+#include <QGraphicsProxyWidget>
 
 #include "kimpaneltype.h"
 
 class PanelAgent;
-class StatusBarWidget;
-class LookupTableWidget;
+class KIMStatusBar;
+class KIMStatusBarGraphics;
+class KIMLookupTable;
 
 class KIMPanel : public QObject {
 Q_OBJECT
@@ -43,9 +46,6 @@ public:
 
 public slots:
 //X     void enable(bool to_enable);
-    void execDialog(const Property &prop);
-    void execMenu(const QList<Property> &props);
-
 //X     void showPreedit(bool to_show);
 //X     void showAux(bool to_show);
 //X     void showLookupTable(bool to_show);
@@ -58,8 +58,11 @@ public slots:
 
 private:
     PanelAgent *m_panel_agent;
-    StatusBarWidget *m_statusbar;
-    LookupTableWidget *m_lookup_table;
+
+    KIMStatusBar *m_statusbar;
+    KIMStatusBarGraphics *m_statusbarGraphics;
+
+    KIMLookupTable *m_lookup_table;
 
     QList<QAction *> m_actions;
 };

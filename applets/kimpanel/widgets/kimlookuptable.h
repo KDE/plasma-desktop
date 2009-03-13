@@ -16,41 +16,31 @@
  *   Free Software Foundation, Inc.,                                       *
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
-#ifndef STATUSBARWIDGET_H
-#define STATUSBARWIDGET_H
+#ifndef LOOKUPTABLEWIDGET_H
+#define LOOKUPTABLEWIDGET_H
 
 #include <plasma/theme.h>
 #include <plasma/svg.h>
 #include <plasma/framesvg.h>
-#include <kiconloader.h>
 #include <QtGui>
 
 #include "kimpaneltype.h"
 
-class KConfigGroup;
-class QDesktopWidget;
+class PanelAgent;
+class KIMLookupTableGraphics;
 
-class StatusBarWidget : public QWidget
+class KIMLookupTable: public QWidget
 {
 Q_OBJECT
 public:
-    StatusBarWidget(QWidget *parent=0, const QList<QAction *> extra_actions = QList<QAction *>());
-    ~StatusBarWidget();
+    KIMLookupTable(PanelAgent *agent = 0,QWidget *parent=0);
+    ~KIMLookupTable();
     
-    void setEnabled(bool to_enable);
-    QList<Property> registeredProperties() const
-    {
-        return m_props;
-    }
-
 Q_SIGNALS:
-    void triggerProperty(const QString &key);
-
+    
 public Q_SLOTS:
-//X     void updateAux(const QString &text,const QList<TextAttribute> &attrs);
-    void updateProperty(const Property &prop);
-    void registerProperties(const QList<Property> &props);
     void themeUpdated();
+    void updateSpotLocation(int x,int y);
 
 protected:
     void paintEvent(QPaintEvent *e);
@@ -58,32 +48,29 @@ protected:
     void mouseMoveEvent(QMouseEvent *e);
     void mousePressEvent(QMouseEvent *e);
     void mouseReleaseEvent(QMouseEvent *e);
-    void timerEvent(QTimerEvent *e);
     bool event(QEvent *e);
 
+private Q_SLOTS:
+    void propagateSizeChange();
+    void propagateVisibleChange(bool);
+
 private:
-    Plasma::FrameSvg *m_background_svg;
+    Plasma::FrameSvg *m_background;
 
-    QList<Plasma::Svg *> m_properties_svg;
-    QList<Property> m_props;
-
-    QString m_button_stylesheet;
-
-    QBoxLayout *m_layout;
+    QHBoxLayout *m_layout;
 
     bool m_dragging;
     QPoint m_init_pos;
 
-    QMap<QString,QToolButton *> prop_map;
-    QSignalMapper prop_mapper;
+    QGraphicsScene *m_scene;
+    QGraphicsView *m_view;
+    KIMLookupTableGraphics *m_widget;
 
-    KConfigGroup *m_config;
-    QDesktopWidget *m_desktop;
+    QDesktopWidget m_desktop;
 
-    int m_timer_id;
-    QList<Property> m_pending_reg_properties;
+    PanelAgent *m_panel_agent;
 
-    QList<QAction *> m_extraActions;
+    bool m_visible;
 };
 
-#endif // STATUSBARWIDGET_H
+#endif // LOOKUPTABLEWIDGET_H

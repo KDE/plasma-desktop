@@ -29,7 +29,7 @@
 #include <QPixmap>
 
 QPixmap renderText(QString text, 
-    const QFont &ft = qApp->font(), 
-    QColor textColor = Plasma::Theme::defaultTheme()->color(Plasma::Theme::TextColor));
+    QColor textColor = Plasma::Theme::defaultTheme()->color(Plasma::Theme::TextColor), QColor bgColor = Qt::transparent,
+    const QFont &ft = qApp->font());
 
 #endif // PAINTUTILS_H

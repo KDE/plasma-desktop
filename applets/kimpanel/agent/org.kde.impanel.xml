@@ -4,6 +4,9 @@
                 <signal name="MovePreeditCaret"> 
                         <arg type="i" name="position" />
                 </signal> 
+                <signal name="SelectCandidate"> 
+                        <arg type="i" name="index" />
+                </signal> 
                 <signal name="LookupTablePageUp"> </signal> 
                 <signal name="LookupTablePageDown"> </signal> 
                 <signal name="TriggerProperty"> 

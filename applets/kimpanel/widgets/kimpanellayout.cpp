@@ -57,7 +57,6 @@ QSizeF KIMPanelLayout::sizeHint(Qt::SizeHint which, const QSizeF & constraint) c
     default:
         ;
     }
-    kDebug() << which << sizeHint << constraint;
     return sizeHint;
 }
 
@@ -65,7 +64,6 @@ void KIMPanelLayout::setGeometry(const QRectF &rect)
 {
     smartLayout(rect);
     m_cachedGeometry = rect;
-    kDebug() << rect;
 }
 
 #if 0
@@ -96,13 +94,12 @@ void KIMPanelLayout::smartLayout(const QRectF &rect)
                 best_row = row;
             }
         }
-//X         kDebug() << rect << "Best:" <<  best_row << best_col << max_w;
         // do the layout
         int r = 0;
         int c = 0;
         qreal spacing_w = (rect.width()- best_col * max_w)/best_col;
         qreal spacing_h = (rect.height()- best_row * max_w)/best_row;
-        kDebug() << spacing_h << spacing_w;
+//X         kDebug() << "Spacing:" << spacing_h << spacing_w;
         foreach (Plasma::IconWidget *icon, m_icons) {
             QRectF new_geometry;
             new_geometry.setWidth(max_w);

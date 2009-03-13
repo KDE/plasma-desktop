@@ -16,10 +16,11 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#include "kimpanel.h"
+#include "paneldialog.h"
 #include "kimpanelagent.h"
-#include "statusbarwidget.h"
-#include "lookuptablewidget.h"
+#include "kimstatusbargraphics.h"
+#include "kimstatusbar.h"
+#include "kimlookuptable.h"
 #include <kdebug.h>
 #include <kcmdlineargs.h>
 #include <kaboutapplicationdialog.h>
@@ -29,7 +30,10 @@
 #include <kmenu.h>
 #include <kicon.h>
 #include <kmessagebox.h>
+#include <kwindowsystem.h>
+#include <plasma/corona.h>
 #include <plasma/theme.h>
+#include <plasma/widgets/iconwidget.h>
 #include <QtCore>
 #include <QtGui>
 
@@ -39,68 +43,23 @@ KIMPanel::KIMPanel(QObject* parent)
 {
     m_panel_agent = new PanelAgent(this);
 
+    m_statusbarGraphics = new KIMStatusBarGraphics(m_panel_agent);
+//X     m_statusbarGraphics->showLogo(true);
+
+    m_statusbar = new KIMStatusBar();
+    m_statusbar->addAction(KStandardAction::quit(qApp,SLOT(quit()),this));
+
+    m_statusbar->setGraphicsWidget(m_statusbarGraphics);
+
+    m_lookup_table = new KIMLookupTable(m_panel_agent);
 
 //X     connect(m_panel_agent,
 //X         SIGNAL(enable(bool)),
 //X         SLOT(enable(bool)));
-    connect(m_panel_agent,
-        SIGNAL(execDialog(const Property &)),
-        SLOT(execDialog(const Property &)));
-    connect(m_panel_agent,
-        SIGNAL(execMenu(const QList<Property> &)),
-        SLOT(execMenu(const QList<Property> &)));
-
-
-    m_statusbar = new StatusBarWidget();
-
-    connect(m_panel_agent,
-        SIGNAL(registerProperties(const QList<Property> &)),
-        m_statusbar,
-        SLOT(registerProperties(const QList<Property> &)));
-    connect(m_panel_agent,
-        SIGNAL(updateProperty(const Property &)),
-        m_statusbar,
-        SLOT(updateProperty(const Property &)));
-    connect(m_statusbar,SIGNAL(triggerProperty(const QString &)),m_panel_agent,SIGNAL(TriggerProperty(const QString &)));
-
     m_statusbar->show();
 
 
-    m_lookup_table = new LookupTableWidget();
-    connect(m_panel_agent,
-        SIGNAL(updateSpotLocation(int,int)),
-        m_lookup_table,
-        SLOT(updateSpotLocation(int,int)));
-    connect(m_panel_agent,
-        SIGNAL(updateLookupTable(const LookupTable &)),
-        m_lookup_table,
-        SLOT(updateLookupTable(const LookupTable &)));
-    connect(m_panel_agent,
-        SIGNAL(updatePreeditCaret(int)),
-        m_lookup_table,
-        SLOT(updatePreeditCaret(int)));
-    connect(m_panel_agent,
-        SIGNAL(updatePreeditText(const QString &,const QList<TextAttribute> &)),
-        m_lookup_table,
-        SLOT(updatePreeditText(const QString &,const QList<TextAttribute> &)));
-    connect(m_panel_agent,
-        SIGNAL(updateAux(const QString &,const QList<TextAttribute> &)),
-        m_lookup_table,
-        SLOT(updateAux(const QString &,const QList<TextAttribute> &)));
-    connect(m_panel_agent,
-        SIGNAL(showPreedit(bool)),
-        m_lookup_table,
-        SLOT(showPreedit(bool)));
-    connect(m_panel_agent,
-        SIGNAL(showAux(bool)),
-        m_lookup_table,
-        SLOT(showAux(bool)));
-    connect(m_panel_agent,
-        SIGNAL(showLookupTable(bool)),
-        m_lookup_table,
-        SLOT(showLookupTable(bool)));
-
-
+#if 0
     // create actions
     KAction *action = new KAction(KIcon("view-refresh"),i18n("Reload Config"),this);
     connect(action,SIGNAL(triggered()),m_panel_agent,SIGNAL(ReloadConfig()));
@@ -110,36 +69,17 @@ KIMPanel::KIMPanel(QObject* parent)
 
     m_statusbar->addActions(m_actions);
     m_statusbar->setContextMenuPolicy(Qt::ActionsContextMenu);
+#endif
 
-    m_panel_agent->created();
 }
 
 KIMPanel::~KIMPanel()
 {
-    delete m_statusbar;
-    delete m_lookup_table;
+    //delete m_statusbar;
+    //delete m_lookup_table;
 }
 
 // ------------------ handle panel agent signal start-----------------
-
-void KIMPanel::execDialog(const Property &prop) {
-    KMessageBox::information(NULL,prop.tip,prop.label);
-}
-
-void KIMPanel::execMenu(const QList<Property> &prop_list)
-{
-    QMenu *menu = new QMenu();
-    QSignalMapper *mapper = new QSignalMapper(this);
-    connect(mapper,SIGNAL(mapped(const QString&)),m_panel_agent,SIGNAL(TriggerProperty(const QString &)));
-    foreach (const Property &prop, prop_list) {
-        QAction *action = new QAction(QIcon(prop.icon),prop.label,this);
-        mapper->setMapping(action,prop.key);
-        connect(action,SIGNAL(triggered()),mapper,SLOT(map()));
-        menu->addAction(action);
-    }
-    menu->exec(QCursor::pos());
-    delete menu;
-}
 
 #if 0
 void KIMPanel::showPreedit(bool to_show)
@@ -185,4 +125,3 @@ void KIMPanel::showConfig()
 }
 
 // ------------------ internal function start -------------------
-#include "kimpanel.moc"
