@@ -31,7 +31,7 @@ KIMLookupTableGraphics::KIMLookupTableGraphics(PanelAgent *agent, QGraphicsItem 
 {
     KSharedConfigPtr config = KSharedConfig::openConfig("kimpanel");
     m_cg = new KConfigGroup(config,"LookupTable");
-    m_tableOrientation = (KIM::LookupTableOrientation)m_cg->readEntry("Orientation",(int)KIM::Horizontal);
+    m_tableOrientation = (KIM::LookupTableOrientation)m_cg->readEntry("Orientation",(int)KIM::Vertical);
     if ((m_tableOrientation == KIM::FixedRows) || (m_tableOrientation == KIM::FixedColumns)) {
         m_orientVar = m_cg->readEntry("OrientationFixedValue",1);
         if (m_orientVar <= 0) {
@@ -55,7 +55,7 @@ KIMLookupTableGraphics::KIMLookupTableGraphics(PanelAgent *agent, QGraphicsItem 
     m_upperLayout->setSpacing(0);
     m_upperLayout->setContentsMargins(0,0,0,0);
 
-    m_lowerLayout->setHorizontalSpacing(QFontMetrics(qApp->font()).size(0,"XX").width());
+    m_spacing = QFontMetrics(qApp->font()).size(0,"XX").width();
     m_lowerLayout->setContentsMargins(0,0,0,0);
 
     m_auxLabel = new KIMLabelGraphics(this);
@@ -66,11 +66,13 @@ KIMLookupTableGraphics::KIMLookupTableGraphics(PanelAgent *agent, QGraphicsItem 
     m_pageUpIcon = new Plasma::IconWidget(this);
     connect(m_pageUpIcon,SIGNAL(clicked()),this,SIGNAL(LookupTablePageUp()));
     m_pageUpIcon->setIcon(KIcon("arrow-left"));
+    m_pageUpIcon->setMinimumSize(KIconLoader::SizeSmallMedium,KIconLoader::SizeSmall);
     m_pageUpIcon->setMaximumSize(KIconLoader::SizeSmallMedium,KIconLoader::SizeSmall);
     m_pageUpIcon->hide();
     m_pageDownIcon = new Plasma::IconWidget(this);
     connect(m_pageDownIcon,SIGNAL(clicked()),this,SIGNAL(LookupTablePageDown()));
     m_pageDownIcon->setIcon(KIcon("arrow-right"));
+    m_pageDownIcon->setMinimumSize(KIconLoader::SizeSmallMedium,KIconLoader::SizeSmall);
     m_pageDownIcon->setMaximumSize(KIconLoader::SizeSmallMedium,KIconLoader::SizeSmall);
     m_pageDownIcon->hide();
 
@@ -143,6 +145,11 @@ KIMLookupTableGraphics::~KIMLookupTableGraphics()
 void KIMLookupTableGraphics::updateLookupTable(const LookupTable &lookup_table)
 {
     m_lookup_table = lookup_table;
+    // workaround for layout bug
+    for (int i =0; i<m_lowerLayout->columnCount(); i++) {
+        m_lowerLayout->setColumnSpacing(i,0);
+    }
+    m_lowerLayout->updateGeometry();
     while (m_lowerLayout->count() > 0) {
         m_lowerLayout->removeAt(0);
     }
@@ -156,6 +163,7 @@ void KIMLookupTableGraphics::updateLookupTable(const LookupTable &lookup_table)
     int max_col = (lookup_table.entries.size() + m_orientVar - 1)/m_orientVar;
     foreach (const LookupTable::Entry &entry, lookup_table.entries) {
         KIMLabelGraphics *item = new KIMLabelGraphics(this);
+        item->setSizePolicy(QSizePolicy::Fixed,QSizePolicy::Fixed);
         item->setLabel(entry.label);
         item->setText(entry.text);
         item->enableHoverEffect(true);
@@ -186,7 +194,11 @@ void KIMLookupTableGraphics::updateLookupTable(const LookupTable &lookup_table)
         connect(item,SIGNAL(clicked()),m_tableEntryMapper,SLOT(map()));
         m_tableEntryLabels << item;
     }
+    for (int i =0; i<m_lowerLayout->columnCount()-1; i++) {
+        m_lowerLayout->setColumnSpacing(i,m_spacing);
+    }
     m_lowerLayout->updateGeometry();
+    kDebug() << m_lowerLayout->columnCount();
     resize(preferredSize());
     emit sizeChanged();
     if (lookup_table.entries.size() > 0) {

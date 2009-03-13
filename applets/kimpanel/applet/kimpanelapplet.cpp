@@ -84,14 +84,13 @@ void KIMPanelApplet::init()
     // Initialize layout
     m_layout = new QGraphicsLinearLayout(this);
     m_layout->setSpacing(0);
-    m_layout->setContentsMargins(0,0,0,0);
+    m_layout->setContentsMargins(4,4,4,4);
 
     m_panel_agent = new PanelAgent(this);
 
     // Initialize widget which holds all im properties.
     m_statusbarGraphics = new KIMStatusBarGraphics(m_panel_agent);
-    m_statusbarGraphics->setContentsMargins(s_magic_margin,s_magic_margin,
-        s_magic_margin,s_magic_margin);
+    m_statusbarGraphics->setContentsMargins(0,0,0,0);
 
     m_statusbarGraphics->setCollapsible(true);
     m_statusbar = new KIMStatusBar();
@@ -193,10 +192,10 @@ void KIMPanelApplet::adjustSelf()
     int iconCount; 
     int iconWidth; 
     int i,j;
-    QSizeF sizeHint = contentsRect().size();
+    QSizeF sizeHint = m_layout->contentsRect().size();
     QSizeF r = sizeHint;
-    r.setHeight(r.height()-s_magic_margin*2);
-    r.setWidth(r.width()-s_magic_margin*2);
+    //r.setHeight(r.height()-s_magic_margin*2);
+    //r.setWidth(r.width()-s_magic_margin*2);
 
     if (m_statusbar->graphicsWidget() == 0) {
         //r = contentsRect();
@@ -213,23 +212,24 @@ void KIMPanelApplet::adjustSelf()
         while (r.height()/i > m_largestIconWidth)
             i++;
         j = (iconCount + (i - 1)) / i;
-        sizeHint = QSizeF(j*r.height()/i+s_magic_margin*2, r.height());
+        sizeHint = QSizeF(j*r.height()/i, r.height());
         break;
     case Plasma::Vertical:
         i = 1;
         while (r.width()/i > m_largestIconWidth)
             i++;
         j = (iconCount + (i - 1)) / i;
-        sizeHint = QSizeF(r.width(),j*r.width()/i+s_magic_margin*2);
+        sizeHint = QSizeF(r.width(),j*r.width()/i);
         break;
     case Plasma::Planar:
     case Plasma::MediaCenter:
-        sizeHint = QSizeF(s_magic_margin*2+iconCount*(qreal)KIconLoader::SizeMedium,(qreal)KIconLoader::SizeMedium+s_magic_margin*2);
+        sizeHint = QSizeF(iconCount*(qreal)KIconLoader::SizeMedium,(qreal)KIconLoader::SizeMedium);
         break;
     }
     
     qreal left, top, right, bottom;
-    getContentsMargins(&left,&top,&right,&bottom);
+    m_layout->getContentsMargins(&left,&top,&right,&bottom);
+    kDebug() << left << top << sizeHint;
     sizeHint = QSizeF(sizeHint.width() + left + right, sizeHint.height() + top + bottom);
 
     if (m_statusbar->graphicsWidget() == 0) {
@@ -237,7 +237,6 @@ void KIMPanelApplet::adjustSelf()
         sizeHint = QSizeF(sizeHint.width() + left + right, sizeHint.height() + top + bottom);
     }
 
-    kDebug() << contentsRect() << geometry() << sizeHint;
     setPreferredSize(sizeHint);
 }
 

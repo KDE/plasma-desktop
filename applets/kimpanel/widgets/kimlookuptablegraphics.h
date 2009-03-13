@@ -92,6 +92,8 @@ private:
 
     QSignalMapper *m_tableEntryMapper;
 
+    int m_spacing;
+
     KIM::LookupTableOrientation m_tableOrientation;
     int m_orientVar;
 
