@@ -100,7 +100,6 @@ void KIMPanelLayout::smartLayout(const QRectF &rect)
         qreal spacing_w = (rect.width()- best_col * max_w)/best_col;
         qreal spacing_h = (rect.height()- best_row * max_w)/best_row;
 //X         kDebug() << "Spacing:" << spacing_h << spacing_w;
-        kDebug() << "MaxW:" << rect <<max_w << max_w *m_icons.size();
         foreach (Plasma::IconWidget *icon, m_icons) {
             QRectF new_geometry;
             new_geometry.setWidth(max_w);

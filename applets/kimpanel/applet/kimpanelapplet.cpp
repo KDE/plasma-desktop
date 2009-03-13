@@ -208,7 +208,6 @@ void KIMPanelApplet::adjustSelf()
     switch (formFactor()) {
     case Plasma::Horizontal:
         i = 1;
-        kDebug() << r.height() << r.height()/i;
         while (r.height()/i > m_largestIconWidth)
             i++;
         j = (iconCount + (i - 1)) / i;
