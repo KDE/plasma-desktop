@@ -17,7 +17,6 @@
  */
 
 #include "paneldialog.h"
-#include "kimpanelagent.h"
 #include "kimstatusbargraphics.h"
 #include "kimstatusbar.h"
 #include "kimlookuptable.h"

@@ -28,9 +28,8 @@
 #include <QPainter>
 #include <QGraphicsProxyWidget>
 
-#include "kimpaneltype.h"
+#include "kimpanelagent.h"
 
-class PanelAgent;
 class KIMStatusBar;
 class KIMStatusBarGraphics;
 class KIMLookupTable;

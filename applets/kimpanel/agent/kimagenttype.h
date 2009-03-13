@@ -19,8 +19,7 @@
 #ifndef KIMPANELTYPE_H
 #define KIMPANELTYPE_H
 
-#include <QFlags>
-#include <QObject>
+#include <QtCore>
 
 typedef struct TextAttribute_ {
     enum Type {
@@ -34,7 +33,7 @@ typedef struct TextAttribute_ {
     int length;
     int value;
 } TextAttribute;
-Q_DECLARE_METATYPE(TextAttribute);
+//Q_DECLARE_METATYPE(TextAttribute);
 
 typedef struct Property_ {
     enum State {
@@ -51,7 +50,7 @@ typedef struct Property_ {
     States state;
 } Property;
 Q_DECLARE_OPERATORS_FOR_FLAGS(Property::States)
-Q_DECLARE_METATYPE(Property);
+//Q_DECLARE_METATYPE(Property);
 
 typedef struct LookupTable_ {
     typedef struct Entry_{
@@ -62,7 +61,7 @@ typedef struct LookupTable_ {
     QList<Entry> entries;
     bool to_show;
 } LookupTable;
-Q_DECLARE_METATYPE(LookupTable);
-Q_DECLARE_METATYPE(LookupTable::Entry);
-
+//Q_DECLARE_METATYPE(LookupTable);
+//Q_DECLARE_METATYPE(LookupTable::Entry);
+//typedef struct KI_ {
 #endif // KIMPANELTYPE_H

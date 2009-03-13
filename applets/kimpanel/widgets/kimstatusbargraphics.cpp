@@ -25,7 +25,7 @@
 
 #include <math.h>
 #include "paintutils.h"
-#include "kimpanelagent.h"
+//#include "kimpanelagent.h"
 
 KIMStatusBarGraphics::KIMStatusBarGraphics(PanelAgent *agent, QGraphicsItem *parent)
   : QGraphicsWidget(parent),

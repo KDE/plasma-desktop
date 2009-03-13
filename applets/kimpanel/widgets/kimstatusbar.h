@@ -26,7 +26,7 @@
 #include <kiconloader.h>
 #include <QtGui>
 
-#include "kimpaneltype.h"
+#include "kimagenttype.h"
 #include "kimstatusbargraphics.h"
 
 class KConfigGroup;

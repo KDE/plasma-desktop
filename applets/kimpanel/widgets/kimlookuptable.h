@@ -24,7 +24,7 @@
 #include <plasma/framesvg.h>
 #include <QtGui>
 
-#include "kimpaneltype.h"
+#include "kimagenttype.h"
 
 class PanelAgent;
 class KIMLookupTableGraphics;

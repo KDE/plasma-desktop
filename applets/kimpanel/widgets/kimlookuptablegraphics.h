@@ -27,8 +27,10 @@
 #include <plasma/widgets/iconwidget.h>
 #include <QtGui>
 
-#include "kimpaneltype.h"
+#include "kimglobals.h"
+#include "kimagenttype.h"
 
+class KConfigGroup;
 class PanelAgent;
 class KIMLabelGraphics;
 
@@ -62,7 +64,6 @@ protected:
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
 
 private Q_SLOTS:
-    void iconClicked(int);
 
 private:
     QSignalMapper mapper;
@@ -90,6 +91,11 @@ private:
     QList<KIMLabelGraphics *> m_tableEntryLabels;
 
     QSignalMapper *m_tableEntryMapper;
+
+    KIM::LookupTableOrientation m_tableOrientation;
+    int m_orientVar;
+
+    KConfigGroup *m_cg;
 };
 
 #endif // KIM_LOOKUPTABLE_GRAPHICS_H

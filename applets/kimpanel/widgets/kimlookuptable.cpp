@@ -102,7 +102,7 @@ void KIMLookupTable::themeUpdated()
     qreal top;
     qreal bottom;
 
-    m_background->getMargins(left,right,top,bottom);
+    m_background->getMargins(left,top,right,bottom);
 
     setContentsMargins(left, top, right, bottom);
 

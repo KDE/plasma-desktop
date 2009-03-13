@@ -28,7 +28,7 @@
 #include <KIcon>
 #include <KDialog>
 
-#include "kimpaneltype.h"
+//#include "kimagenttype.h"
 #include "kimpanelagent.h"
 #include "kimpanellayout.h"
 

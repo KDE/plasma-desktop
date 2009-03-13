@@ -3,8 +3,11 @@
 #include "kimpanelagent.h"
 
 #include <plasma/paintutils.h>
-#include <kiconloader.h>
-#include <kicon.h>
+#include <KIconLoader>
+#include <KIcon>
+#include <KConfig>
+#include <KConfigGroup>
+#include <KSharedConfig>
 #include <QtCore>
 #include <QtGui>
 
@@ -21,9 +24,22 @@ KIMLookupTableGraphics::KIMLookupTableGraphics(PanelAgent *agent, QGraphicsItem 
      m_preedit_caret(0),
      m_auxVisible(false),
      m_preeditVisible(false),
-     m_lookupTableVisible(false)
+     m_lookupTableVisible(false),
+     m_tableOrientation(KIM::Horizontal),
+     m_orientVar(1),
+     m_cg(0)
 {
-    setSizePolicy(QSizePolicy::Preferred,QSizePolicy::Preferred);
+    KSharedConfigPtr config = KSharedConfig::openConfig("kimpanel");
+    m_cg = new KConfigGroup(config,"LookupTable");
+    m_tableOrientation = (KIM::LookupTableOrientation)m_cg->readEntry("Orientation",(int)KIM::Horizontal);
+    if ((m_tableOrientation == KIM::FixedRows) || (m_tableOrientation == KIM::FixedColumns)) {
+        m_orientVar = m_cg->readEntry("OrientationFixedValue",1);
+        if (m_orientVar <= 0) {
+            m_orientVar = 1;
+        }
+    }
+
+    //setSizePolicy(QSizePolicy::Preferred,QSizePolicy::Preferred);
     setContentsMargins(0,0,0,0);
 
     m_layout = new QGraphicsLinearLayout(Qt::Vertical);
@@ -75,8 +91,6 @@ KIMLookupTableGraphics::KIMLookupTableGraphics(PanelAgent *agent, QGraphicsItem 
     m_tableEntryMapper = new QSignalMapper(this);
     connect(m_tableEntryMapper,SIGNAL(mapped(int)),
             this,SIGNAL(SelectCandidate(int)));
-    connect(m_tableEntryMapper,SIGNAL(mapped(int)),
-            this,SLOT(iconClicked(int)));
 
     if (m_panel_agent) {
         connect(m_panel_agent,
@@ -137,12 +151,37 @@ void KIMLookupTableGraphics::updateLookupTable(const LookupTable &lookup_table)
     }
     qDeleteAll(m_tableEntryLabels);
     m_tableEntryLabels.clear();
+    int row = 0;
+    int col = 0;
+    int max_col = (lookup_table.entries.size() + m_orientVar - 1)/m_orientVar;
     foreach (const LookupTable::Entry &entry, lookup_table.entries) {
         KIMLabelGraphics *item = new KIMLabelGraphics(this);
         item->setLabel(entry.label);
         item->setText(entry.text);
         item->enableHoverEffect(true);
-        m_lowerLayout->addItem(item,0,m_tableEntryLabels.size());
+        m_lowerLayout->addItem(item,row,col);
+        switch (m_tableOrientation) {
+        case KIM::Horizontal:
+            col++;
+            break;
+        case KIM::Vertical:
+            row++;
+            break;
+        case KIM::FixedRows:
+            col++;
+            if (col >= max_col) {
+                col = 0;
+                row++;
+            }
+            break;
+        case KIM::FixedColumns:
+            col++;
+            if (col >= m_orientVar) {
+                col = 0;
+                row++;
+            }
+            break;
+        }
         m_tableEntryMapper->setMapping(item,m_tableEntryLabels.size());
         connect(item,SIGNAL(clicked()),m_tableEntryMapper,SLOT(map()));
         m_tableEntryLabels << item;
@@ -219,11 +258,6 @@ void KIMLookupTableGraphics::paint(QPainter *painter, const QStyleOptionGraphics
     Q_UNUSED(painter)
     Q_UNUSED(option)
     Q_UNUSED(widget)
-}
-
-void KIMLookupTableGraphics::iconClicked(int i)
-{
-    kDebug()<<i;
 }
 
 // vim: sw=4 sts=4 et tw=100

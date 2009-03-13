@@ -29,7 +29,6 @@
 #include <KIcon>
 #include <KDialog>
 
-#include "kimpaneltype.h"
 #include "kimpanelagent.h"
 #include "kimstatusbar.h"
 #include "kimstatusbargraphics.h"
@@ -87,6 +86,7 @@ protected Q_SLOTS:
      * Called when the user has clicked OK or apply in the Config interface
      */
     void configAccepted();
+    void themeUpdated();
 
 private Q_SLOTS:
     void adjustSelf();

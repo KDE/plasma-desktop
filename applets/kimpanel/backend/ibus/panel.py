@@ -27,6 +27,7 @@ from ibus import *
 from ibus.panel import * 
 from ibus.bus import Bus
 from ibus.inputcontext import InputContext
+from ibus import keysyms
 #import ibus.interface
 import gtk
 import dbus
@@ -131,7 +132,6 @@ class KIMIbusClient(dbus.service.Object):
     def UpdateScreen(self, id):
         pass
 
-
 class KIMPanel(PanelBase):
     def __init__(self):
         self.__bus = Bus()
@@ -155,11 +155,14 @@ class KIMPanel(PanelBase):
         self.__session_bus.add_signal_receiver(gtk.main_quit,
                 signal_name='Exit',
                 dbus_interface='org.kde.impanel')
-        self.__session_bus.add_signal_receiver(self.page_up_lookup_table,
+        self.__session_bus.add_signal_receiver(self.page_up,
                 signal_name='LookupTablePageUp',
                 dbus_interface='org.kde.impanel')
-        self.__session_bus.add_signal_receiver(self.page_down_lookup_table,
+        self.__session_bus.add_signal_receiver(self.page_down,
                 signal_name='LookupTablePageDown',
+                dbus_interface='org.kde.impanel')
+        self.__session_bus.add_signal_receiver(self.kim_select_candidate,
+                signal_name='SelectCandidate',
                 dbus_interface='org.kde.impanel')
 
         self.__kimclient = KIMIbusClient('/org/ibus/panel')
@@ -252,12 +255,18 @@ class KIMPanel(PanelBase):
         if lookup_table == None:
             lookup_table = LookupTable()
 
+        self.__lookup_table = lookup_table
+
         self.__labels = []
         self.__candis = []
         self.__attrs = []
-        for i in range(lookup_table.get_number_of_candidates()):
-            self.__labels.append(str(i+1))
-            self.__candis.append(lookup_table.get_candidate(i).get_text())
+        i = 0
+        for text_obj in lookup_table.get_candidates_in_current_page():
+            i=i+1
+            if i==10:
+                i=0
+            self.__labels.append(str(i))
+            self.__candis.append(text_obj.get_text())
             self.__attrs.append('')
         
         self.__kimclient.UpdateLookupTable(self.__labels,
@@ -276,12 +285,6 @@ class KIMPanel(PanelBase):
     def hide_lookup_table(self):
         print 'hide_lookup_table'
         self.__kimclient.ShowLookupTable(0)
-
-    def page_up_lookup_table(self):
-        print 'page_up_lookup_table'
-
-    def page_down_lookup_table(self):
-        print 'page_down_lookup_table'
 
     def cursor_up_lookup_table(self):
         print 'cursor_up_lookup_table'
@@ -351,6 +354,16 @@ class KIMPanel(PanelBase):
                             self.__focus_ic.set_engine(engine)
             else:
                 self.property_activate(__prop_key,PROP_STATE_CHECKED)
+
+    def kim_select_candidate(self,index):
+        print 'select_candidate:Implement me!'
+        # dirty hack
+        #if self.__focus_ic:
+        #    #engine = self.__focus_ic.get_engine()
+        #    #if engine:
+        #    #    print 'select_candidate',index
+        #    self.__focus_ic.process_key_event(keysyms._1,0)
+        pass
 
     def __reset(self):
         self.hide_auxiliary_text()

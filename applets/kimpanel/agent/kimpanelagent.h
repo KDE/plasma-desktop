@@ -27,7 +27,7 @@ class QString;
 class QStringList;
 class QVariant;
 
-#include "kimpaneltype.h"
+#include "kimagenttype.h"
 
 class PanelAgent: public QObject
 {

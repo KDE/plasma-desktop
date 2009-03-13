@@ -78,6 +78,9 @@ void KIMPanelApplet::init()
     m_background = new Plasma::FrameSvg();
     m_background->setImagePath("widgets/systemtray");
 
+    connect(Plasma::Theme::defaultTheme(), SIGNAL(themeChanged()),
+        SLOT(themeUpdated()));
+
     // Initialize layout
     m_layout = new QGraphicsLinearLayout(this);
     m_layout->setSpacing(0);
@@ -87,6 +90,9 @@ void KIMPanelApplet::init()
 
     // Initialize widget which holds all im properties.
     m_statusbarGraphics = new KIMStatusBarGraphics(m_panel_agent);
+    m_statusbarGraphics->setContentsMargins(s_magic_margin,s_magic_margin,
+        s_magic_margin,s_magic_margin);
+
     m_statusbarGraphics->setCollapsible(true);
     m_statusbar = new KIMStatusBar();
     
@@ -100,6 +106,8 @@ void KIMPanelApplet::init()
     
     //m_layout->addItem(m_logoIcon);
     m_layout->addItem(m_statusbarGraphics);
+
+    themeUpdated();
 
 }
 
@@ -185,35 +193,38 @@ void KIMPanelApplet::adjustSelf()
     int iconCount; 
     int iconWidth; 
     int i,j;
-    QSizeF sizeHint = geometry().size();
-    QRectF r;
+    QSizeF sizeHint = contentsRect().size();
+    QSizeF r = sizeHint;
+    r.setHeight(r.height()-s_magic_margin*2);
+    r.setWidth(r.width()-s_magic_margin*2);
 
     if (m_statusbar->graphicsWidget() == 0) {
-        r = m_statusbarGraphics->contentsRect();
+        //r = contentsRect();
         iconCount = m_statusbarGraphics->iconCount();
     } else {
-        r = contentsRect();
+        //r = contentsRect();
         iconCount = 1;
     }
 
     switch (formFactor()) {
     case Plasma::Horizontal:
         i = 1;
+        kDebug() << r.height() << r.height()/i;
         while (r.height()/i > m_largestIconWidth)
             i++;
         j = (iconCount + (i - 1)) / i;
-        sizeHint = QSizeF(j*r.height()/i, r.height());
+        sizeHint = QSizeF(j*r.height()/i+s_magic_margin*2, r.height());
         break;
     case Plasma::Vertical:
         i = 1;
         while (r.width()/i > m_largestIconWidth)
             i++;
         j = (iconCount + (i - 1)) / i;
-        sizeHint = QSizeF(r.width(),j*r.width()/i);
+        sizeHint = QSizeF(r.width(),j*r.width()/i+s_magic_margin*2);
         break;
     case Plasma::Planar:
     case Plasma::MediaCenter:
-        sizeHint = QSizeF(iconCount*(qreal)KIconLoader::SizeMedium,(qreal)KIconLoader::SizeMedium);
+        sizeHint = QSizeF(s_magic_margin*2+iconCount*(qreal)KIconLoader::SizeMedium,(qreal)KIconLoader::SizeMedium+s_magic_margin*2);
         break;
     }
     
@@ -226,6 +237,7 @@ void KIMPanelApplet::adjustSelf()
         sizeHint = QSizeF(sizeHint.width() + left + right, sizeHint.height() + top + bottom);
     }
 
+    kDebug() << contentsRect() << geometry() << sizeHint;
     setPreferredSize(sizeHint);
 }
 
@@ -247,6 +259,27 @@ void KIMPanelApplet::toggleCollapse(bool b)
     m_statusbar->setVisible(b);
     m_logoIcon->setVisible(b);
     adjustSelf();
+}
+
+void KIMPanelApplet::themeUpdated()
+{
+    kDebug()<<"Update Theme"<<Plasma::Theme::defaultTheme()->themeName();
+    qreal left;
+    qreal right;
+    qreal top;
+    qreal bottom;
+
+#if 0
+    getContentsMargins(&left,&top,&right,&bottom);
+    left = qMax(left,4.);
+    right = qMax(right,2.);
+    top = qMax(top,4.);
+    bottom = qMax(bottom,4.);
+
+    kDebug() << contentsRect();
+    setContentsMargins(left, top, right, bottom);
+    kDebug() << contentsRect();
+#endif
 }
 
 K_EXPORT_PLASMA_APPLET(kimpanel, KIMPanelApplet)
