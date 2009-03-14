@@ -31,7 +31,7 @@ KIMLookupTableGraphics::KIMLookupTableGraphics(PanelAgent *agent, QGraphicsItem 
 {
     KSharedConfigPtr config = KSharedConfig::openConfig("kimpanel");
     m_cg = new KConfigGroup(config,"LookupTable");
-    m_tableOrientation = (KIM::LookupTableOrientation)m_cg->readEntry("Orientation",(int)KIM::Vertical);
+    m_tableOrientation = (KIM::LookupTableOrientation)m_cg->readEntry("Orientation",(int)KIM::Horizontal);
     if ((m_tableOrientation == KIM::FixedRows) || (m_tableOrientation == KIM::FixedColumns)) {
         m_orientVar = m_cg->readEntry("OrientationFixedValue",1);
         if (m_orientVar <= 0) {
