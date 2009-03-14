@@ -20,6 +20,7 @@
 #define KIM_STATUSBAR_GRAPHICS_H
 
 #include <plasma/applet.h>
+#include <plasma/framesvg.h>
 #include <plasma/widgets/iconwidget.h>
 #include <QGraphicsLinearLayout>
 #include <QGraphicsGridLayout>
