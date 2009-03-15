@@ -198,7 +198,6 @@ void KIMLookupTableGraphics::updateLookupTable(const LookupTable &lookup_table)
         m_lowerLayout->setColumnSpacing(i,m_spacing);
     }
     m_lowerLayout->updateGeometry();
-    kDebug() << m_lowerLayout->columnCount();
     resize(preferredSize());
     emit sizeChanged();
     if (lookup_table.entries.size() > 0) {
