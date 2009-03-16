@@ -13,7 +13,7 @@ public:
         PressedState = 2,
         ManualPressedState = 4
     };
-    Q_DECLARE_FLAGS(LabelStates, LabelState);
+    Q_DECLARE_FLAGS(LabelStates, LabelState)
 
     KIMLabelGraphics(QGraphicsItem *parent = 0);
     ~KIMLabelGraphics();

@@ -7,8 +7,8 @@ namespace KIM
         Horizontal = 1,
         Vertical,
         FixedRows,
-        FixedColumns,
+        FixedColumns
     };
-};
+}
 
 #endif // AGENT_KIMGLOBALS_H

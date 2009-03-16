@@ -26,7 +26,7 @@ typedef struct TextAttribute_ {
         None,
         Decorate,
         Foreground,
-        Background,
+        Background
     };
     Type type;
     int start;
@@ -39,7 +39,7 @@ typedef struct Property_ {
     enum State {
         None = 0,
         Active = 1,
-        Visible = (1<<1),
+        Visible = (1<<1)
     };
     Q_DECLARE_FLAGS(States,State)
 
