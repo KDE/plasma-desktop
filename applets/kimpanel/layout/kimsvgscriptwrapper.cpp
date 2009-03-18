@@ -23,12 +23,23 @@ namespace KIM
             QScriptValue val = m_engine->newQObject(m_items[elem]);
             return val;
         } else {
-            QSizeF size = m_render->boundsOnElement(elem).size();
+            QSizeF size;
+            if (m_render->elementExists(elem)) {
+                size = m_render->boundsOnElement(elem).size();
+            } else {
+                size = QSizeF(0,0);
+            }
             SvgScriptItem *item = new SvgScriptItem(elem,size);
             m_items[elem] = item;
             QScriptValue val = m_engine->newQObject(item);
             return val;
         }
+    }
+
+    void SvgScriptWrapper::reset()
+    {
+        qDeleteAll(m_items);
+        m_items.clear();
     }
 } // namespace KIM
 

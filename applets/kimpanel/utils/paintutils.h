@@ -19,6 +19,8 @@
 #ifndef PAINTUTILS_H
 #define PAINTUTILS_H
 
+#include "kimtheme.h"
+
 #include <plasma/theme.h>
 
 #include <QApplication>
@@ -29,7 +31,7 @@
 #include <QPixmap>
 
 QPixmap renderText(QString text, 
-    QColor textColor = Plasma::Theme::defaultTheme()->color(Plasma::Theme::TextColor), QColor bgColor = Qt::transparent,
+    QColor textColor = KIM::Theme::defaultTheme()->color(KIM::Theme::StatusbarTextColor), QColor bgColor = Qt::transparent,
     const QFont &ft = qApp->font());
 
 #endif // PAINTUTILS_H

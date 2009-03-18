@@ -28,6 +28,9 @@ namespace KIM
 
         virtual void paint(QPainter *painter,const QRectF &bounds=QRectF(),const QString &elementID=QString()) = 0;
 
+    public Q_SLOTS:
+        void themeUpdated();
+
     private:
         KSvgRenderer *m_renderer;
         bool m_themed;

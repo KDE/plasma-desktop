@@ -139,7 +139,6 @@ void KIMStatusBarGraphics::paint(QPainter *painter, const QStyleOptionGraphicsIt
 void KIMStatusBarGraphics::updateProperty(const Property &prop)
 {
     if (!m_prop_map.contains(prop.key)) {
-        kWarning() << prop.key <<"ignored.";
         return;
     }
 

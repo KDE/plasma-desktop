@@ -19,35 +19,9 @@ namespace KIM
 
     void SvgLayout::setImagePath(const QString &path)
     {
-        bool isThemed = !QDir::isAbsolutePath(path);
-
-        // lets check to see if we're already set to this file
-        if (isThemed == m_themed &&
-            ((m_themed && m_themePath == path) ||
-             (!m_themed && m_path == path))) {
-            return;
-        }
-
-        // if we don't have any path right now and are going to set one,
-        // then lets not schedule a repaint because we are just initializing!
-        if (m_themed) {
-            QObject::disconnect(Plasma::Theme::defaultTheme(), SIGNAL(themeChanged()),
-                                this, SLOT(themeChanged()));
-//X             QObject::disconnect(KGlobalSettings::self(), SIGNAL(kdisplayPaletteChanged()),
-//X                                 this, SLOT(colorsChanged()));
-        }
-
-        m_themed = isThemed;
         m_path.clear();
-        m_themePath.clear();
 
-        if (m_themed) {
-            m_themePath = path;
-            m_path = Plasma::Theme::defaultTheme()->imagePath(m_themePath);
-            m_renderer->load(m_path);
-            QObject::connect(Plasma::Theme::defaultTheme(), SIGNAL(themeChanged()),
-                             this, SLOT(themeChanged()));
-        } else if (QFile::exists(path)) {
+        if (QFile::exists(path)) {
             m_path = path;
             m_renderer->load(m_path);
         } else {
@@ -58,6 +32,10 @@ namespace KIM
     QRectF SvgLayout::elementRect(const QString &elem) const
     {
         return QRectF();
+    }
+
+    void SvgLayout::themeUpdated()
+    {
     }
 } // namespace KIM
 

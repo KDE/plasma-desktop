@@ -26,6 +26,7 @@ namespace KIM
 
     public Q_SLOTS:
         QScriptValue Element(const QString &elem);
+        void reset();
 
     private:
         KSvgRenderer *m_render;

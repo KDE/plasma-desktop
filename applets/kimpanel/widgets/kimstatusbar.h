@@ -28,6 +28,8 @@
 
 #include "kimagenttype.h"
 #include "kimstatusbargraphics.h"
+#include "kimsvgscriptlayout.h"
+#include "kimtheme.h"
 
 class KConfigGroup;
 class QDesktopWidget;
@@ -57,6 +59,8 @@ public Q_SLOTS:
 //X     void updateAux(const QString &text,const QList<TextAttribute> &attrs);
     void updateProperty(const Property &prop);
     void registerProperties(const QList<Property> &props);
+
+private Q_SLOTS:
     void themeUpdated();
 
 protected:
@@ -70,9 +74,13 @@ protected:
 
 private:
     void updateResizeCorners();
+    Plasma::Dialog::ResizeCorner resizeCorner(const QPoint &p);
+    void generateBackground();
 
 private:
-    Plasma::FrameSvg *m_background;
+    KIM::SvgScriptLayout *m_layout;
+    QPixmap m_background;
+    QBitmap m_mask;
 
     QGraphicsScene *m_scene;
     QGraphicsView *m_view;
@@ -82,8 +90,6 @@ private:
     QList<Property> m_props;
 
     QString m_button_stylesheet;
-
-    QVBoxLayout *m_layout;
 
     bool m_dragging;
     bool m_moved;

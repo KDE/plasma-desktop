@@ -33,8 +33,7 @@ int main(int argc, char *argv[])
     KIM::SvgScriptLayout *layout = new KIM::SvgScriptLayout();
     layout->setImagePath(path);
     layout->setScript(args->arg(1));
-    layout->doLayout(QSizeF(200,50));
-    kDebug() << layout->elementRect("cat");
+    layout->doLayout(QSizeF(200,50),"center");
     QPixmap pix(layout->elementRect().size().toSize());
     pix.fill(Qt::transparent);
     QPainter p(&pix);

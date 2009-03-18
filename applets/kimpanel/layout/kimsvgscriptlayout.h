@@ -28,8 +28,16 @@ namespace KIM
         virtual void doLayout(const QSizeF &sizeHint,const QString &elem = QString());
 
         virtual QRectF elementRect(const QString &elem=QString()) const;
+        virtual QSizeF elementSize(const QString &elem=QString()) const
+        {
+            return elementRect(elem).size();
+        }
 
         virtual void paint(QPainter *painter,const QRectF &bounds = QRectF(),const QString &elementID=QString());
+
+    public Q_SLOTS:
+        void themeUpdated();
+
     private Q_SLOTS:
         void updateLayers();
 

@@ -72,16 +72,23 @@ namespace KIM
         }
     }
 
+    void SvgScriptLayout::themeUpdated()
+    {
+        m_wrapper->reset();
+        m_scriptItems.clear();
+        m_layers.clear();
+    }
+
     void SvgScriptLayout::updateLayers()
     {
         m_layers.clear();
         foreach (const QString &elem, m_scriptItems.keys()) {
             SvgScriptItem *item = m_scriptItems[elem];
             if (!item || 
-                    (qFuzzyCompare(item->width()+1,1.0) && 
-                     qFuzzyCompare(item->height()+1,1.0)) || 
+                    qFuzzyCompare(item->width()+1,1.0) || 
+                    qFuzzyCompare(item->height()+1,1.0) || 
                     !render()->elementExists(elem)) {
-                kDebug() << "ignore" << elem << item->defaultWidth() << item->defaultHeight() << render()->elementExists(elem);
+
                 continue;
             }
             m_layers[item->layer()] << elem;
@@ -102,9 +109,6 @@ namespace KIM
                 SvgScriptItem *item = m_scriptItems[elem];
                 QRectF r(item->x(),item->y(),item->width(),item->height());
                 r.translate(bounds.topLeft());
-                kDebug() << QString("Render %1 on layer %2")
-                    .arg(elem)
-                    .arg(layer) << r;
                 render()->render(painter,elem,r);
             }
         }

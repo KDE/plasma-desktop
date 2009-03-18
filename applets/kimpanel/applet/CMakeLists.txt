@@ -23,7 +23,10 @@ kde4_add_ui_files(plasma_applet_kimpanel_SRCS kimpanelconfig.ui)
 #kde4_add_ui_files(plasma_applet_kimpanel_SRCS kimpanelAdd.ui)
 kde4_add_plugin(plasma_applet_kimpanel ${plasma_applet_kimpanel_SRCS})
 target_link_libraries(plasma_applet_kimpanel 
-   ${KDE4_PLASMA_LIBS} ${KDE4_KIO_LIBRARY} ${KDE4_KDEUI_LIBS}
+   ${KDE4_PLASMA_LIBS} 
+   ${KDE4_KIO_LIBRARY} 
+   ${KDE4_KDEUI_LIBS}
+   ${QT_QTSCRIPT_LIBRARY}
    )
 
 install(TARGETS plasma_applet_kimpanel DESTINATION ${PLUGIN_INSTALL_DIR})

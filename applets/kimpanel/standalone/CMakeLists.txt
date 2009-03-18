@@ -1,11 +1,10 @@
 #set(CMAKE_BUILD_TYPE Release)
-find_package(KDE4 REQUIRED)
-include(KDE4Defaults)
-include_directories(${KDE4_INCLUDES} ${PLASMA_INCLUDE_DIR})
-
 set(kimpaneldialog_SRCS
    main.cpp
-   paneldialog.cpp  ${kimpanelutils_SRCS} ${kimpanelwidgets_SRCS} ${kimpanelagent_SRCS}
+   paneldialog.cpp   
+   ${kimpanelutils_SRCS} 
+   ${kimpanelwidgets_SRCS} 
+   ${kimpanelagent_SRCS}
    )
 
 qt4_add_dbus_adaptor(kimpaneldialog_SRCS
@@ -15,7 +14,9 @@ qt4_add_dbus_adaptor(kimpaneldialog_SRCS
 
 
 kde4_add_executable(kimpanel ${kimpaneldialog_SRCS})
-target_link_libraries(kimpanel ${KDE4_PLASMA_LIBS} 
+target_link_libraries(kimpanel 
+   ${KDE4_PLASMA_LIBS} 
+   ${QT_QTSCRIPT_LIBRARY}
    )
 
 install(TARGETS kimpanel ${INSTALL_TARGETS_DEFAULT_ARGS})
