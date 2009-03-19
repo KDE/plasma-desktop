@@ -17,8 +17,8 @@ int main(int argc, char *argv[])
                           );
     KCmdLineArgs::init(argc,argv,&about_data);
     KApplication app;
-    QString path = "dialogs/background";
-    KIM::FrameSvgLayout *layout = new KIM::FrameSvgLayout();
+    QString path = Plasma::Theme::defaultTheme()->imagePath("dialogs/background");
+    KIM::FrameSvgLayout *layout = new KIM::FrameSvgLayout(0);
     layout->setImagePath(path);
     layout->doLayout(QSizeF(200,200));
     kDebug() << layout->elementRect();

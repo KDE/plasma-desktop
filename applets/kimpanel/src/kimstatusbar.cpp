@@ -116,13 +116,12 @@ void KIMStatusBar::resizeEvent(QResizeEvent *e)
 {
     QWidget::resizeEvent(e);
     //m_layout->doLayout(e->size());
-#if 0
-    if (m_layout->elementSize().toSize() != e->size()) {
-        resize(m_layout
-    }
-#endif
     generateBackground();
-    setMask(m_mask);
+    if (!KWindowSystem::compositingActive()) {
+        setMask(m_mask);
+    } else {
+        setMask(rect());
+    }
     m_view->setGeometry(m_layout->elementRect("statusbar").toRect());
     if (m_widget) {
         m_widget->resize(m_view->size());

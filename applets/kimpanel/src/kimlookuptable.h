@@ -16,35 +16,60 @@
  *   Free Software Foundation, Inc.,                                       *
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
+#ifndef LOOKUPTABLEWIDGET_H
+#define LOOKUPTABLEWIDGET_H
 
-#ifndef KIM_FRAME_SVG_LAYOUT_H
-#define KIM_FRAME_SVG_LAYOUT_H
-
-#include "kimsvglayout.h"
-
+#include <plasma/theme.h>
 #include <plasma/svg.h>
-#include <KSvgRenderer>
+#include <plasma/framesvg.h>
+#include <QtGui>
 
-namespace KIM
+#include "kimagenttype.h"
+
+class PanelAgent;
+class KIMLookupTableGraphics;
+
+class KDE_EXPORT KIMLookupTable: public QWidget
 {
-    class FrameSvgLayout:public SvgLayout
-    {
-    Q_OBJECT
-    public:
-        FrameSvgLayout(QObject *parent = 0);
-        virtual ~FrameSvgLayout();
+Q_OBJECT
+public:
+    explicit KIMLookupTable(PanelAgent *agent = 0,QWidget *parent=0);
+    ~KIMLookupTable();
+    
+Q_SIGNALS:
+    
+public Q_SLOTS:
+    void updateSpotLocation(int x,int y);
 
-        virtual void doLayout(const QSizeF &sizeHint,const QString &elem = QString());
+protected:
+    void paintEvent(QPaintEvent *e);
+    void resizeEvent(QResizeEvent *e);
+    void mouseMoveEvent(QMouseEvent *e);
+    void mousePressEvent(QMouseEvent *e);
+    void mouseReleaseEvent(QMouseEvent *e);
+    bool event(QEvent *e);
 
-        virtual QRectF elementRect(const QString &elem=QString()) const;
+private Q_SLOTS:
+    void propagateSizeChange();
+    void propagateVisibleChange(bool);
 
-        virtual void paint(QPainter *painter,const QRectF &bounds = QRectF(),const QString &elementID=QString());
+private:
+    Plasma::FrameSvg *m_background;
 
-    private:
-        KSvgRenderer m_renderer;
-        QString m_path;
-        QMap<QString,QRectF> m_rects;
-        QMap<QString,QSizeF> m_sizes;
-    };
-} // namespace KIM
-#endif // KIM_FRAME_SVG_LAYOUT_H
+    QHBoxLayout *m_layout;
+
+    bool m_dragging;
+    QPoint m_init_pos;
+
+    QGraphicsScene *m_scene;
+    QGraphicsView *m_view;
+    KIMLookupTableGraphics *m_widget;
+
+    QDesktopWidget m_desktop;
+
+    PanelAgent *m_panel_agent;
+
+    bool m_visible;
+};
+
+#endif // LOOKUPTABLEWIDGET_H

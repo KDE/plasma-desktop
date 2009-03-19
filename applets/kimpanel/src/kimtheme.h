@@ -9,7 +9,7 @@ namespace KIM
 {
     class ThemePrivate;
 
-    class Theme:public QObject
+    class KDE_EXPORT Theme:public QObject
     {
         Q_OBJECT
     public:

@@ -194,7 +194,11 @@ void KIMLookupTable::propagateSizeChange()
     setMinimumSize(sizeHint);
     setMaximumSize(sizeHint);
     m_view->centerOn(m_widget);
-    setMask(m_widget->mask());
+    if (!KWindowSystem::compositingActive()) {
+        setMask(m_widget->mask());
+    } else {
+        setMask(rect());
+    }
 }
 
 void KIMLookupTable::propagateVisibleChange(bool b)

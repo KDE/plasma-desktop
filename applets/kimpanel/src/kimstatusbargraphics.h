@@ -36,7 +36,7 @@
 class PanelAgent;
 class KIMStatusBar;
 
-class KIMStatusBarGraphics : public QGraphicsWidget
+class KDE_EXPORT KIMStatusBarGraphics : public QGraphicsWidget
 {
 Q_OBJECT
 public:

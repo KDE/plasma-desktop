@@ -17,44 +17,34 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#ifndef KIM_SVG_LAYOUT_H
-#define KIM_SVG_LAYOUT_H
+#ifndef PAINTUTILS_H
+#define PAINTUTILS_H
 
-#include <plasma/svg.h>
+#include "kimtheme.h"
+
 #include <plasma/theme.h>
-#include <KSvgRenderer>
-#include <QtSvg>
+
+#include <QApplication>
+#include <QImage>
+#include <QPainter>
+#include <QPainterPath>
+#include <QPaintEngine>
+#include <QPixmap>
 
 namespace KIM
 {
-    class SvgLayout:public QObject
-    {
-    Q_OBJECT
-    public:
-        explicit SvgLayout(QObject *parent = 0);
-        virtual ~SvgLayout();
-
-        virtual void setImagePath(const QString &path);
-
-        virtual KSvgRenderer *render()
-        {
-            return m_renderer;
-        }
-
-        virtual void doLayout(const QSizeF &sizeHint,const QString &elem = QString()) = 0;
-
-        virtual QRectF elementRect(const QString &elem=QString()) const;
-
-        virtual void paint(QPainter *painter,const QRectF &bounds=QRectF(),const QString &elementID=QString()) = 0;
-
-    public Q_SLOTS:
-        void themeUpdated();
-
-    private:
-        KSvgRenderer *m_renderer;
-        bool m_themed;
-        QString m_path;
-        QString m_themePath;
+    enum RenderType {
+        Statusbar,
+        Auxilary,
+        Preedit,
+        TableLabel,
+        TableEntry,
     };
+
+    KDE_EXPORT QPixmap renderText(QString text, RenderType type = Statusbar);
+    KDE_EXPORT QPixmap renderText(QString text, 
+            QColor textColor, QColor bgColor,
+            const QFont &ft = qApp->font());
 } // namespace KIM
-#endif // KIM_SVG_LAYOUT_H
+
+#endif // PAINTUTILS_H

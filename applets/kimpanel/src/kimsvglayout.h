@@ -16,60 +16,45 @@
  *   Free Software Foundation, Inc.,                                       *
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
-#ifndef LOOKUPTABLEWIDGET_H
-#define LOOKUPTABLEWIDGET_H
 
-#include <plasma/theme.h>
+#ifndef KIM_SVG_LAYOUT_H
+#define KIM_SVG_LAYOUT_H
+
 #include <plasma/svg.h>
-#include <plasma/framesvg.h>
-#include <QtGui>
+#include <plasma/theme.h>
+#include <KSvgRenderer>
+#include <QtSvg>
 
-#include "kimagenttype.h"
-
-class PanelAgent;
-class KIMLookupTableGraphics;
-
-class KIMLookupTable: public QWidget
+namespace KIM
 {
-Q_OBJECT
-public:
-    explicit KIMLookupTable(PanelAgent *agent = 0,QWidget *parent=0);
-    ~KIMLookupTable();
-    
-Q_SIGNALS:
-    
-public Q_SLOTS:
-    void updateSpotLocation(int x,int y);
+    class KDE_EXPORT SvgLayout:public QObject
+    {
+    Q_OBJECT
+    public:
+        explicit SvgLayout(QObject *parent = 0);
+        virtual ~SvgLayout();
 
-protected:
-    void paintEvent(QPaintEvent *e);
-    void resizeEvent(QResizeEvent *e);
-    void mouseMoveEvent(QMouseEvent *e);
-    void mousePressEvent(QMouseEvent *e);
-    void mouseReleaseEvent(QMouseEvent *e);
-    bool event(QEvent *e);
+        virtual void setImagePath(const QString &path);
 
-private Q_SLOTS:
-    void propagateSizeChange();
-    void propagateVisibleChange(bool);
+        virtual KSvgRenderer *render()
+        {
+            return m_renderer;
+        }
 
-private:
-    Plasma::FrameSvg *m_background;
+        virtual void doLayout(const QSizeF &sizeHint,const QString &elem = QString()) = 0;
 
-    QHBoxLayout *m_layout;
+        virtual QRectF elementRect(const QString &elem=QString()) const;
 
-    bool m_dragging;
-    QPoint m_init_pos;
+        virtual void paint(QPainter *painter,const QRectF &bounds=QRectF(),const QString &elementID=QString()) = 0;
 
-    QGraphicsScene *m_scene;
-    QGraphicsView *m_view;
-    KIMLookupTableGraphics *m_widget;
+    public Q_SLOTS:
+        void themeUpdated();
 
-    QDesktopWidget m_desktop;
-
-    PanelAgent *m_panel_agent;
-
-    bool m_visible;
-};
-
-#endif // LOOKUPTABLEWIDGET_H
+    private:
+        KSvgRenderer *m_renderer;
+        bool m_themed;
+        QString m_path;
+        QString m_themePath;
+    };
+} // namespace KIM
+#endif // KIM_SVG_LAYOUT_H

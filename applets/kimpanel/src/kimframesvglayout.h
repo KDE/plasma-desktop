@@ -17,58 +17,34 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-
-#ifndef KIM_SVGSCRIPTLAYOUT_H
-#define KIM_SVGSCRIPTLAYOUT_H
+#ifndef KIM_FRAME_SVG_LAYOUT_H
+#define KIM_FRAME_SVG_LAYOUT_H
 
 #include "kimsvglayout.h"
-#include "kimsvgscriptitem.h"
-#include "kimsvgscriptwrapper.h"
 
 #include <plasma/svg.h>
 #include <KSvgRenderer>
-#include <QtScript/QScriptEngine>
-#include <QtScript/QScriptValue>
 
 namespace KIM
 {
-    //class SvgScriptItem;
-    class SvgScriptLayout:public SvgLayout
+    class KDE_EXPORT FrameSvgLayout:public SvgLayout
     {
     Q_OBJECT
     public:
-        SvgScriptLayout(QObject *parent = 0);
-        virtual ~SvgScriptLayout();
-
-        void setScript(const QString &file);
-        void setScript(const QByteArray &data);
+        explicit FrameSvgLayout(QObject *parent = 0);
+        virtual ~FrameSvgLayout();
 
         virtual void doLayout(const QSizeF &sizeHint,const QString &elem = QString());
 
         virtual QRectF elementRect(const QString &elem=QString()) const;
-        virtual QSizeF elementSize(const QString &elem=QString()) const
-        {
-            return elementRect(elem).size();
-        }
 
         virtual void paint(QPainter *painter,const QRectF &bounds = QRectF(),const QString &elementID=QString());
 
-    public Q_SLOTS:
-        void themeUpdated();
-
-    private Q_SLOTS:
-        void updateLayers();
-
     private:
+        KSvgRenderer m_renderer;
         QString m_path;
-        QMap<int,QStringList> m_layers;
-        QMap<QString,SvgScriptItem *> m_scriptItems;
-
-        SvgScriptWrapper *m_wrapper;
-
-        QByteArray m_layoutScript;
-        QScriptEngine *m_engine;
-        QScriptValue m_scriptDoLayout;
+        QMap<QString,QRectF> m_rects;
+        QMap<QString,QSizeF> m_sizes;
     };
 } // namespace KIM
-#endif // KIM_SVGSCRIPTLAYOUT_H
+#endif // KIM_FRAME_SVG_LAYOUT_H

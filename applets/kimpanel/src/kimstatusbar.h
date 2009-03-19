@@ -35,7 +35,7 @@ class KConfigGroup;
 class QDesktopWidget;
 class KIMStatusBarGraphics;
 
-class KIMStatusBar : public QWidget
+class KDE_EXPORT KIMStatusBar : public QWidget
 {
 Q_OBJECT
 public:
