@@ -38,7 +38,7 @@ namespace KIM
         Auxilary,
         Preedit,
         TableLabel,
-        TableEntry,
+        TableEntry
     };
 
     KDE_EXPORT QPixmap renderText(QString text, RenderType type = Statusbar);

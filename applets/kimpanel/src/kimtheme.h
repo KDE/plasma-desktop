@@ -23,7 +23,7 @@ namespace KIM
             LookupTableLabelTextColor = 64, /** text color for buttons */
             LookupTableLabelBackgroundColor = 128, /** background color for buttons*/
             LookupTableEntryTextColor = 256, /** text color for buttons */
-            LookupTableEntryBackgroundColor = 512, /** background color for buttons*/
+            LookupTableEntryBackgroundColor = 512 /** background color for buttons*/
         };
 
         enum FontRole {
@@ -32,7 +32,7 @@ namespace KIM
             AuxilaryTextFont,
             PreeditTextFont,
             TableLabelTextFont,
-            TableEntryTextFont,
+            TableEntryTextFont
         };
 
         /**
@@ -125,7 +125,7 @@ namespace KIM
     private:
         friend class ThemePrivate;
         ThemePrivate *const d;
-        Q_PRIVATE_SLOT(d,void themeUpdated());
+        Q_PRIVATE_SLOT(d,void themeUpdated())
     };
 } // namespace KIM
 
