@@ -1,3 +1,4 @@
+QT -= gui
 QT += dbus
 TEMPLATE = app
 CONFIG += no_keywords

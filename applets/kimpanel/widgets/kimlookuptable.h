@@ -33,7 +33,7 @@ class KIMLookupTable: public QWidget
 {
 Q_OBJECT
 public:
-    KIMLookupTable(PanelAgent *agent = 0,QWidget *parent=0);
+    explicit KIMLookupTable(PanelAgent *agent = 0,QWidget *parent=0);
     ~KIMLookupTable();
     
 Q_SIGNALS:

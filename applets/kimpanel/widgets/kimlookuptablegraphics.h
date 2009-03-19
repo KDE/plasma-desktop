@@ -25,7 +25,6 @@
 #include <plasma/widgets/label.h>
 #include <plasma/widgets/flashinglabel.h>
 #include <plasma/widgets/iconwidget.h>
-#include <QtGui>
 
 #include "kimglobals.h"
 #include "kimagenttype.h"
@@ -40,7 +39,7 @@ class KIMLookupTableGraphics: public QGraphicsWidget
 {
 Q_OBJECT
 public:
-    KIMLookupTableGraphics(PanelAgent * = 0,QGraphicsItem *parent=0);
+    explicit KIMLookupTableGraphics(PanelAgent * = 0,QGraphicsItem *parent=0);
     ~KIMLookupTableGraphics();
 
     QBitmap mask() const;

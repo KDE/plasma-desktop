@@ -28,8 +28,15 @@
 #include <errno.h>
 #include <stdlib.h>
 #include <list>
-#include <QtCore>
-#include <QtDBus>
+
+#include <QtCore/QObject>
+#include <QtCore/QString>
+#include <QtCore/QStringList>
+#include <QtCore/QThread>
+#include <QtCore/QMutex>
+#include <QtCore/QCoreApplication>
+#include <QtDBus/QDBusMessage>
+#include <QtDBus/QDBusConnection>
 
 #define Uses_C_STDIO
 #define Uses_C_STDLIB
@@ -153,10 +160,10 @@ LookupTable2VariantList(const LookupTable &lookup_table)
     QStringList attrlist_list;
     int current_page_size = lookup_table.get_current_page_size();
 
-    for (int i = 0; i<current_page_size; i++) {
+    for (int i = 0; i<current_page_size; ++i) {
         labels << QString::fromStdWString(lookup_table.get_candidate_label(i));
     }
-    for (int i = 0; i<current_page_size; i++) {
+    for (int i = 0; i<current_page_size; ++i) {
         candidates << QString::fromStdWString(lookup_table.get_candidate_in_current_page(i));
         attrlist_list << AttrList2String(lookup_table.get_attributes_in_current_page(i));
     }
@@ -203,9 +210,9 @@ PropertyList2LeafOnlyStringList(const QList<Property> &props)
 {
     QStringList list;
     list.clear();
-    for (int i=0; i<props.size(); i++) {
+    for (int i=0; i<props.size(); ++i) {
         bool ok = true;
-        for (int j=0; j<props.size(); j++) {
+        for (int j=0; j<props.size(); ++j) {
             if (props.at(i).is_a_leaf_of(props.at(j))) {
                 SCIM_DEBUG_MAIN(1)<<"Leaf"<<props.at(i).get_key()<<" "
                     << props.at(j).get_key() << "\n";
@@ -342,7 +349,7 @@ public Q_SLOTS:
             return;
         }
         int i = 0;
-        for (i=0; i<panel_props.size(); i++) {
+        for (i=0; i<panel_props.size(); ++i) {
             if (panel_props.at(i).get_key() == String(key.toUtf8().constData())) {
                 break;
             }
@@ -351,7 +358,7 @@ public Q_SLOTS:
         QStringList list_result;
         list_result.clear();
         if (i < panel_props.size()) {
-            for (int j=0; j<panel_props.size(); j++) {
+            for (int j=0; j<panel_props.size(); ++j) {
                 if (panel_props.at(j).is_a_leaf_of(panel_props.at(i))) {
                     list_result << Property2String(panel_props.at(j));
                 }
@@ -790,7 +797,7 @@ start_auto_start_helpers (void)
     SCIM_DEBUG_MAIN(1) << "start_auto_start_helpers () begin\n";
 
     // Add Helper object items.
-    for (size_t i = 0; i < _helper_list.size(); i++) {
+    for (size_t i = 0; i < _helper_list.size(); ++i) {
         SCIM_DEBUG_MAIN(1) << "--"<<_helper_list[i].uuid
         <<"--"<<_helper_list[i].name<<"--\n";
         if ((_helper_list[i].option & SCIM_HELPER_AUTO_START)) {
@@ -1091,7 +1098,7 @@ int main (int argc, char *argv [])
 
             std::cout << "\n";
             std::cout << "Available Config module:\n";
-            for (it = config_list.begin (); it != config_list.end (); it++)
+            for (it = config_list.begin (); it != config_list.end (); ++it)
                 std::cout << "    " << *it << "\n";
 
             return 0;

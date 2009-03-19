@@ -16,15 +16,15 @@
  *   Free Software Foundation, Inc.,                                       *
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
-#ifndef STATUSBARWIDGET_H
-#define STATUSBARWIDGET_H
+
+#ifndef KIM_STATUSBAR_H
+#define KIM_STATUSBAR_H
 
 #include <plasma/dialog.h>
 #include <plasma/theme.h>
 #include <plasma/svg.h>
 #include <plasma/framesvg.h>
 #include <kiconloader.h>
-#include <QtGui>
 
 #include "kimagenttype.h"
 #include "kimstatusbargraphics.h"
@@ -39,7 +39,7 @@ class KIMStatusBar : public QWidget
 {
 Q_OBJECT
 public:
-    KIMStatusBar(QWidget *parent=0, const QList<QAction *> extra_actions = QList<QAction *>());
+    explicit KIMStatusBar(QWidget *parent=0, const QList<QAction *> extra_actions = QList<QAction *>());
     ~KIMStatusBar();
     
 //X     void setEnabled(bool to_enable);
@@ -111,4 +111,4 @@ private:
     QMap<Plasma::Dialog::ResizeCorner, QRect> m_resizeAreas;
 };
 
-#endif // STATUSBARWIDGET_H
+#endif // KIM_STATUSBAR_H

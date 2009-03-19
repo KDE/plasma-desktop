@@ -16,8 +16,9 @@
  *   Free Software Foundation, Inc.,                                       *
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
-#ifndef KIMPANELTYPE_H
-#define KIMPANELTYPE_H
+
+#ifndef KIM_AGENTTYPE_H
+#define KIM_AGENTTYPE_H
 
 #include <QtCore>
 
@@ -63,5 +64,5 @@ typedef struct LookupTable_ {
 } LookupTable;
 //Q_DECLARE_METATYPE(LookupTable);
 //Q_DECLARE_METATYPE(LookupTable::Entry);
-//typedef struct KI_ {
-#endif // KIMPANELTYPE_H
+
+#endif // KIM_AGENTTYPE_H

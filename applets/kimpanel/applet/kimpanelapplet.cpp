@@ -63,6 +63,7 @@ KIMPanelApplet::~KIMPanelApplet()
 
 void KIMPanelApplet::saveState(KConfigGroup &config) const
 {
+    Q_UNUSED(config);
 }
 
 void KIMPanelApplet::init()
@@ -74,14 +75,12 @@ void KIMPanelApplet::init()
     m_largestIconWidth = qMax((int)KIconLoader::SizeSmall,
         cg.readEntry("LargestIconWidth", (int)KIconLoader::SizeMedium));
 
-    // Initalize background
     m_background = new Plasma::FrameSvg();
     m_background->setImagePath("widgets/systemtray");
 
     connect(Plasma::Theme::defaultTheme(), SIGNAL(themeChanged()),
         SLOT(themeUpdated()));
 
-    // Initialize layout
     m_layout = new QGraphicsLinearLayout(this);
     m_layout->setSpacing(0);
     m_layout->setContentsMargins(4,4,4,4);
@@ -190,7 +189,7 @@ void KIMPanelApplet::paintInterface(QPainter *painter, const QStyleOptionGraphic
 void KIMPanelApplet::adjustSelf()
 {
     int iconCount; 
-    int iconWidth; 
+    //int iconWidth; 
     int i,j;
     QSizeF sizeHint = m_layout->contentsRect().size();
     QSizeF r = sizeHint;
@@ -262,12 +261,12 @@ void KIMPanelApplet::toggleCollapse(bool b)
 void KIMPanelApplet::themeUpdated()
 {
     kDebug()<<"Update Theme"<<Plasma::Theme::defaultTheme()->themeName();
+#if 0
     qreal left;
     qreal right;
     qreal top;
     qreal bottom;
 
-#if 0
     getContentsMargins(&left,&top,&right,&bottom);
     left = qMax(left,4.);
     right = qMax(right,2.);

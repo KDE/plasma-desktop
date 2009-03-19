@@ -40,7 +40,7 @@ class KIMStatusBarGraphics : public QGraphicsWidget
 {
 Q_OBJECT
 public:
-    KIMStatusBarGraphics(PanelAgent *agent=0, QGraphicsItem *parent=0);
+    explicit KIMStatusBarGraphics(PanelAgent *agent=0, QGraphicsItem *parent=0);
     ~KIMStatusBarGraphics();
 
     /**
@@ -94,6 +94,7 @@ private:
     QList<Plasma::IconWidget *> m_icons;
     Plasma::FrameSvg *m_background;
 
+    bool m_empty;
     bool m_collapsed;
     bool m_enableCollapse;
     bool m_logoVisible;
@@ -108,8 +109,6 @@ private:
     QSignalMapper *m_icon_mapper;
 
     QList<QAction *> m_statusbarActions;
-
-    bool m_empty;
 
     PanelAgent *m_panel_agent;
 };

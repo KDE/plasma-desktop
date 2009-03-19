@@ -1,5 +1,24 @@
-#ifndef WIDGETS_KIM_SVG_LAYOUT_H
-#define WIDGETS_KIM_SVG_LAYOUT_H
+/***************************************************************************
+ *   Copyright (C) 2009 by Wang Hoi <zealot.hoi@gmail.com>                 *
+ *                                                                         *
+ *   This program is free software; you can redistribute it and/or modify  *
+ *   it under the terms of the GNU General Public License as published by  *
+ *   the Free Software Foundation; either version 2 of the License, or     *
+ *   (at your option) any later version.                                   *
+ *                                                                         *
+ *   This program is distributed in the hope that it will be useful,       *
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of        *
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
+ *   GNU General Public License for more details.                          *
+ *                                                                         *
+ *   You should have received a copy of the GNU General Public License     *
+ *   along with this program; if not, write to the                         *
+ *   Free Software Foundation, Inc.,                                       *
+ *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
+ ***************************************************************************/
+
+#ifndef KIM_SVG_LAYOUT_H
+#define KIM_SVG_LAYOUT_H
 
 #include <plasma/svg.h>
 #include <plasma/theme.h>
@@ -38,4 +57,4 @@ namespace KIM
         QString m_themePath;
     };
 } // namespace KIM
-#endif // WIDGETS_KIM_SVG_LAYOUT_H
+#endif // KIM_SVG_LAYOUT_H

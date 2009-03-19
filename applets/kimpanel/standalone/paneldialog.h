@@ -16,8 +16,8 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef KIMPANEL_H
-#define KIMPANEL_H
+#ifndef PANELDIALOG_H
+#define PANELDIALOG_H
 
 #include <plasma/svg.h>
 #include <plasma/framesvg.h>
@@ -65,4 +65,5 @@ private:
 
     QList<QAction *> m_actions;
 };
-#endif
+
+#endif // PANELDIALOG_H

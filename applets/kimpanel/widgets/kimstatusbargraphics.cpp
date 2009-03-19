@@ -1,8 +1,24 @@
+/***************************************************************************
+ *   Copyright (C) 2009 by Wang Hoi <zealot.hoi@gmail.com>                 *
+ *                                                                         *
+ *   This program is free software; you can redistribute it and/or modify  *
+ *   it under the terms of the GNU General Public License as published by  *
+ *   the Free Software Foundation; either version 2 of the License, or     *
+ *   (at your option) any later version.                                   *
+ *                                                                         *
+ *   This program is distributed in the hope that it will be useful,       *
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of        *
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
+ *   GNU General Public License for more details.                          *
+ *                                                                         *
+ *   You should have received a copy of the GNU General Public License     *
+ *   along with this program; if not, write to the                         *
+ *   Free Software Foundation, Inc.,                                       *
+ *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
+ ***************************************************************************/
+
 #include "kimstatusbargraphics.h"
 
-#include <KConfigDialog>
-#include <KMessageBox>
-#include <KDesktopFile>
 #include <QGraphicsSceneDragDropEvent>
 #include <QGraphicsWidget>
 #include <QDrag>
@@ -17,6 +33,8 @@
 #include <KStandardDirs>
 #include <KWindowSystem>
 #include <KMessageBox>
+#include <KConfigDialog>
+#include <KDesktopFile>
 #include <KMenu>
 
 #include <plasma/containment.h>
@@ -30,21 +48,19 @@
 KIMStatusBarGraphics::KIMStatusBarGraphics(PanelAgent *agent, QGraphicsItem *parent)
   : QGraphicsWidget(parent),
     m_layout(0),
+    m_empty(true),
     m_collapsed(false),
     m_enableCollapse(false),
-    m_icon_mapper(new QSignalMapper(this)),
-    m_empty(true),
     m_logoVisible(false),
+    m_icon_mapper(new QSignalMapper(this)),
     m_panel_agent(agent)
 {
 
     setContentsMargins(0,0,0,0);
 
-    // Initalize background
     m_background = new Plasma::FrameSvg();
     m_background->setImagePath("widgets/panel-background");
 
-    // Initialize layout
 //X     m_layout = new QGraphicsGridLayout(this);
     m_layout = new KIMPanelLayout(this);
     m_layout->setContentsMargins(0, 0, 0, 0);
