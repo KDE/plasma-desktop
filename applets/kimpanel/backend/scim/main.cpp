@@ -20,6 +20,8 @@
 /** @file scim_panel_dbus.cpp
  */
 
+#define KDE_signal signal
+
 #include <sys/wait.h>
 #include <sys/types.h>
 #include <sys/time.h>
@@ -1222,12 +1224,12 @@ int main (int argc, char *argv [])
         return -1;
     }
 
-    signal(SIGQUIT, signalhandler);
-    signal(SIGTERM, signalhandler);
-    signal(SIGINT,  signalhandler);
-    signal(SIGHUP,  signalhandler);
+    KDE_signal(SIGQUIT, signalhandler);
+    KDE_signal(SIGTERM, signalhandler);
+    KDE_signal(SIGINT,  signalhandler);
+    KDE_signal(SIGHUP,  signalhandler);
 
-    const char *p = getenv ("DISPLAY");
+    const char *p = qgetenv ("DISPLAY");
     if (p) display_name = String (p);
 
     if (!initialize_panel_agent (config_name, display_name, should_resident)) {
