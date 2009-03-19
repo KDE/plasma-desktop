@@ -46,7 +46,7 @@ install(TARGETS kimpanel ${INSTALL_TARGETS_DEFAULT_ARGS})
 set(kimpanel_applet_SRCS
    kimpanelapplet.cpp
    )
-kde4_add_plugin(plasma_applet_kimpanel ${kimpanel_SRCS})
+kde4_add_plugin(plasma_applet_kimpanel ${kimpanel_applet_SRCS})
 target_link_libraries(plasma_applet_kimpanel 
    kimpanelruntime
    ${KDE4_PLASMA_LIBS} 

@@ -136,17 +136,11 @@ void KIMPanelApplet::constraintsEvent(Plasma::Constraints constraints)
 
 void KIMPanelApplet::createConfigurationInterface(KConfigDialog *parent)
 {
-    QWidget *widget = new QWidget(parent);
-    m_uiConfig.setupUi(widget);
-    connect(parent, SIGNAL(accepted()), SLOT(configAccepted()));
-    m_uiConfig.icons->setRange((int)KIconLoader::SizeSmall,(int)KIconLoader::SizeEnormous);
-    m_uiConfig.icons->setSpecialValueText("");
-    m_uiConfig.icons->setValue(m_largestIconWidth);
-    parent->addPage(widget, i18n("General"), icon());
 }
 
 void KIMPanelApplet::configAccepted()
 {
+#if 0
     bool changed = false;
     int temp = m_uiConfig.icons->value();
 
@@ -162,6 +156,7 @@ void KIMPanelApplet::configAccepted()
         emit configNeedsSaving();
         adjustSelf();
     }
+#endif
 }
 
 QList<QAction*> KIMPanelApplet::contextualActions()

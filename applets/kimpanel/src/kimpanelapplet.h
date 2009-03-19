@@ -34,8 +34,6 @@
 #include "kimstatusbargraphics.h"
 #include "kimlookuptable.h"
 
-#include "ui_kimpanelconfig.h"
-
 class KIMPanelApplet : public Plasma::Applet
 {
 Q_OBJECT
@@ -114,7 +112,6 @@ private:
     KIMLookupTable *m_lookup_table;
 
     Plasma::FrameSvg *m_background;
-    Ui::kimpanelConfig m_uiConfig;
 
     Plasma::IconWidget *m_logoIcon;
 

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+    http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+    <kcfgfile name="kimpanelrc"/>
+    <include>KGlobalSettings</include>
+    <group name="Appearance">
+        <entry name="Theme" type="StringList">
+            <label>The theme for this input method panel.</label>
+        </entry>
+    </group>
+    <group name="Layout">
+        <entry name="Statusbar size adjustment" key="StatusbarLayout" type="Enum">
+            <label>How the statusbar adjust itself when new icons appear or disappear.</label>
+            <choices>
+                <choice name="Do nothing" key="Ignore">
+                    <label>Doesn't change the size, and user can resize the statusbar freely,and icon size are smartly computed considering both width and height.</label>
+                </choice>
+                <choice name="Fixed in one row" key="OneRowFixed">
+                    <label>Fixed in one row, user can resize to change its icon height.</label>
+                </choice>
+                <choice name="Fixed in one row" key="OneColFixed">
+                    <label>Fixed in one col, user can resize to change its icon width.</label>
+                </choice>
+                <choice name="Narrowing" key="Narrow">
+                    <label>The longer width/height become more longer.</label>
+                </choice>
+                <choice name="Widing" key="Wide">
+                    <label>The shorter width/height become more longer,the statusbar will try to adjust itself to become a s square.</label>
+                </choice>
+            </choices>
+        </entry>
+        <entry name="Candiate words layout." key="LookupTableLayout" >
+            <label>How candidate words layouted.</label>
+            <choices>
+                <choice name="Horizontal">
+                    <label>Horizontally layouted.</label>
+                </choice>
+                <choice name="Vertical">
+                    <label>Vertically layouted.</label>
+                </choice>
+            </choices>
+        </entry>
+    </group>
+</kcfg>
