@@ -136,20 +136,21 @@ void Theme::setThemeName(const QString &themeName)
         KConfigGroup statusbarColors(&colorConfig,"Statusbar:Color");
         QString defaultTextColorName = Plasma::Theme::defaultTheme()->color(Plasma::Theme::TextColor).name();
         QString defaultBackgroundColorName = Plasma::Theme::defaultTheme()->color(Plasma::Theme::BackgroundColor).name();
+        QString defaultTransparentBackgroundColorName = "transparent";
         d->colors[StatusbarTextColor].setNamedColor(statusbarColors.readEntry(
                     "Text",defaultTextColorName));
         d->colors[StatusbarBackgroundColor].setNamedColor(statusbarColors.readEntry(
-                    "TextBackground",defaultBackgroundColorName));
+                    "TextBackground",defaultTransparentBackgroundColorName));
 
         KConfigGroup lookuptableColors(&colorConfig,"LookupTable:Color");
         d->colors[AuxilaryTextColor].setNamedColor(lookuptableColors.readEntry(
                     "AuxilaryText",defaultTextColorName));
         d->colors[AuxilaryBackgroundColor].setNamedColor(lookuptableColors.readEntry(
-                    "AuxilaryTextBackground",defaultBackgroundColorName));
+                    "AuxilaryTextBackground",defaultTransparentBackgroundColorName));
         d->colors[PreeditTextColor].setNamedColor(lookuptableColors.readEntry(
                     "PreeditText",defaultTextColorName));
         d->colors[PreeditBackgroundColor].setNamedColor(lookuptableColors.readEntry(
-                    "PreeditTextBackground",defaultBackgroundColorName));
+                    "PreeditTextBackground",defaultTransparentBackgroundColorName));
         d->colors[LookupTableLabelTextColor].setNamedColor(lookuptableColors.readEntry(
                     "LookupTableLabelText",defaultBackgroundColorName));
         d->colors[LookupTableLabelBackgroundColor].setNamedColor(lookuptableColors.readEntry(
@@ -157,7 +158,7 @@ void Theme::setThemeName(const QString &themeName)
         d->colors[LookupTableEntryTextColor].setNamedColor(lookuptableColors.readEntry(
                     "LookupTableEntryText",defaultTextColorName));
         d->colors[LookupTableEntryBackgroundColor].setNamedColor(lookuptableColors.readEntry(
-                    "LookupTableEntryBackground",defaultBackgroundColorName));
+                    "LookupTableEntryBackground",defaultTransparentBackgroundColorName));
         d->findRealPath(d->statusbarImagePath);
         d->findRealPath(d->statusbarLayoutPath);
         d->findRealPath(d->lookuptableImagePath);

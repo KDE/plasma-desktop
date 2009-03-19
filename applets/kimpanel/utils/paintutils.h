@@ -30,8 +30,20 @@
 #include <QPaintEngine>
 #include <QPixmap>
 
-QPixmap renderText(QString text, 
-    QColor textColor = KIM::Theme::defaultTheme()->color(KIM::Theme::StatusbarTextColor), QColor bgColor = Qt::transparent,
-    const QFont &ft = qApp->font());
+namespace KIM
+{
+    enum RenderType {
+        Statusbar,
+        Auxilary,
+        Preedit,
+        TableLabel,
+        TableEntry,
+    };
+
+    QPixmap renderText(QString text, RenderType type = Statusbar);
+    QPixmap renderText(QString text, 
+            QColor textColor, QColor bgColor,
+            const QFont &ft = qApp->font());
+} // namespace KIM
 
 #endif // PAINTUTILS_H

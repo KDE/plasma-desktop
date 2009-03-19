@@ -42,7 +42,7 @@ public:
     KIMStatusBar(QWidget *parent=0, const QList<QAction *> extra_actions = QList<QAction *>());
     ~KIMStatusBar();
     
-    void setEnabled(bool to_enable);
+//X     void setEnabled(bool to_enable);
 
     void setGraphicsWidget(KIMStatusBarGraphics *widget);
     KIMStatusBarGraphics *graphicsWidget() 
@@ -57,8 +57,8 @@ Q_SIGNALS:
 
 public Q_SLOTS:
 //X     void updateAux(const QString &text,const QList<TextAttribute> &attrs);
-    void updateProperty(const Property &prop);
-    void registerProperties(const QList<Property> &props);
+//X     void updateProperty(const Property &prop);
+//X     void registerProperties(const QList<Property> &props);
 
 private Q_SLOTS:
     void themeUpdated();
@@ -69,7 +69,7 @@ protected:
     void mouseMoveEvent(QMouseEvent *e);
     void mousePressEvent(QMouseEvent *e);
     void mouseReleaseEvent(QMouseEvent *e);
-    void timerEvent(QTimerEvent *e);
+//    void timerEvent(QTimerEvent *e);
     bool event(QEvent *e);
 
 private:

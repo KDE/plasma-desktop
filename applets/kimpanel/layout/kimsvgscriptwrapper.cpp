@@ -27,7 +27,13 @@ namespace KIM
             if (m_render->elementExists(elem)) {
                 size = m_render->boundsOnElement(elem).size();
             } else {
-                size = QSizeF(0,0);
+                if (m_render->elementExists("south-"+elem)) {
+                    elem = "south-"+elem;
+                    size = m_render->boundsOnElement(elem).size();
+                } else {
+                    size = QSizeF(0,0);
+                }
+                //size = QSizeF(0,0);
             }
             SvgScriptItem *item = new SvgScriptItem(elem,size);
             m_items[elem] = item;

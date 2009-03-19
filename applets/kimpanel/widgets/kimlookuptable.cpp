@@ -32,17 +32,6 @@ KIMLookupTable::KIMLookupTable(PanelAgent *agent, QWidget *parent)
     pal.setColor(backgroundRole(), Qt::transparent);
     setPalette(pal);
 
-    m_background = new Plasma::FrameSvg(this);
-
-//X     m_background->setImagePath("widgets/panel-background");
-    m_background->setImagePath("dialogs/background");
-    
-    m_background->setEnabledBorders(Plasma::FrameSvg::AllBorders);
-    connect(m_background, SIGNAL(repaintNeeded()), SLOT(update()));
-
-    connect(Plasma::Theme::defaultTheme(), SIGNAL(themeChanged()),
-        SLOT(themeUpdated()));
-
     m_layout = new QHBoxLayout(this);
     m_layout->setContentsMargins(0,0,0,0);
     m_layout->setSpacing(0);
@@ -83,8 +72,7 @@ KIMLookupTable::KIMLookupTable(PanelAgent *agent, QWidget *parent)
 
     setMouseTracking(true);
 
-    themeUpdated();
-    kDebug() << m_view->geometry() << contentsRect() << geometry() << m_background->frameSize();
+    kDebug() << m_view->geometry() << contentsRect() << geometry();
 
     m_dragging = false;
 
@@ -92,30 +80,6 @@ KIMLookupTable::KIMLookupTable(PanelAgent *agent, QWidget *parent)
 
 KIMLookupTable::~KIMLookupTable()
 {
-}
-
-void KIMLookupTable::themeUpdated()
-{
-    kDebug()<<"Update Theme"<<Plasma::Theme::defaultTheme()->themeName();
-    qreal left;
-    qreal right;
-    qreal top;
-    qreal bottom;
-
-    m_background->getMargins(left,top,right,bottom);
-
-    setContentsMargins(left, top, right, bottom);
-
-    QSize widget_size;
-    if (m_widget) {
-        widget_size = m_widget->effectiveSizeHint(Qt::MinimumSize).toSize();
-    } else {
-        widget_size = QSize(0,0);
-    }
-    setMinimumSize(left + right + widget_size.width(),
-            top + bottom + widget_size.height());
-
-    kDebug() << m_view->geometry() << contentsRect() << m_background->size();
 }
 
 void KIMLookupTable::updateSpotLocation(int x,int y)
@@ -126,16 +90,18 @@ void KIMLookupTable::updateSpotLocation(int x,int y)
 
 void KIMLookupTable::paintEvent(QPaintEvent *e)
 {
+    Q_UNUSED(e);
+#if 0
     QPainter p(this);
     p.setClipRect(e->rect());
     p.setCompositionMode(QPainter::CompositionMode_Source);
     p.fillRect(e->rect(),Qt::transparent);
     m_background->paintFrame(&p);
+#endif
 }
 
 void KIMLookupTable::resizeEvent(QResizeEvent *e)
 {
-    m_background->resizeFrame(e->size());
 //X     m_background->resize(e->size());
 #ifdef Q_WS_X11
     /*FIXME for 4.3: now the clip mask always has to be on for disabling the KWin shadow,
@@ -144,9 +110,9 @@ void KIMLookupTable::resizeEvent(QResizeEvent *e)
         setMask(m_background->mask());
     }
     */
-    setMask(m_background->mask());
+    //setMask(m_background->mask());
 #else
-    setMask(m_background->mask());
+    //setMask(m_background->mask());
 #endif
     QWidget::resizeEvent(e);
     m_view->resize(contentsRect().size());
@@ -165,6 +131,7 @@ void KIMLookupTable::resizeEvent(QResizeEvent *e)
 
 void KIMLookupTable::mouseMoveEvent(QMouseEvent *e)
 {
+    Q_UNUSED(e);
 #if 0
     if (m_dragging)
         move(e->globalPos()-m_init_pos);
@@ -173,6 +140,7 @@ void KIMLookupTable::mouseMoveEvent(QMouseEvent *e)
 
 void KIMLookupTable::mousePressEvent(QMouseEvent *e)
 {
+    Q_UNUSED(e);
 #if 0
     m_dragging = true;
     m_init_pos = e->pos();
@@ -182,6 +150,7 @@ void KIMLookupTable::mousePressEvent(QMouseEvent *e)
 
 void KIMLookupTable::mouseReleaseEvent(QMouseEvent *e)
 {
+    Q_UNUSED(e);
 #if 0
     m_dragging = false;
     setCursor(Qt::ArrowCursor);
@@ -201,14 +170,12 @@ bool KIMLookupTable::event(QEvent *e)
 
 void KIMLookupTable::propagateSizeChange()
 {
-    int left,top,right,bottom;
-    getContentsMargins(&left,&top,&right,&bottom);
     QSize sizeHint = m_widget->preferredSize().toSize();
-    sizeHint += QSize(left+right,top+bottom);
+    //sizeHint += QSize(left+right,top+bottom);
     setMinimumSize(sizeHint);
     setMaximumSize(sizeHint);
     m_view->centerOn(m_widget);
-//X     kDebug() << m_widget->preferredSize() << m_widget->sceneBoundingRect();
+    setMask(m_widget->mask());
 }
 
 void KIMLookupTable::propagateVisibleChange(bool b)

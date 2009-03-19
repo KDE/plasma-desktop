@@ -29,6 +29,8 @@
 
 #include "kimglobals.h"
 #include "kimagenttype.h"
+#include "kimtheme.h"
+#include "kimsvgscriptlayout.h"
 
 class KConfigGroup;
 class PanelAgent;
@@ -40,6 +42,8 @@ Q_OBJECT
 public:
     KIMLookupTableGraphics(PanelAgent * = 0,QGraphicsItem *parent=0);
     ~KIMLookupTableGraphics();
+
+    QBitmap mask() const;
     
 //X     void setEnabled(bool to_enable);
 
@@ -62,12 +66,24 @@ public Q_SLOTS:
 
 protected:
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
+    void timerEvent(QTimerEvent *e);
 
 private Q_SLOTS:
+    void themeUpdated();
+    void reLayout();
+    void generateBackground();
 
 private:
+    KIM::SvgScriptLayout *m_layout;
+
+    QPixmap m_background;
+    QBitmap m_mask;
+
+    QGraphicsWidget *m_lookupTable;
+    QGraphicsGridLayout *m_tableLayout;
+
     QSignalMapper mapper;
-    
+
     QString m_aux_text;
     QString m_preedit_text;
     int m_preedit_caret;
@@ -79,10 +95,6 @@ private:
     bool m_auxVisible;
     bool m_preeditVisible;
     bool m_lookupTableVisible;
-
-    QGraphicsLinearLayout *m_layout;
-    QGraphicsLinearLayout *m_upperLayout;
-    QGraphicsGridLayout *m_lowerLayout;
 
     KIMLabelGraphics *m_auxLabel;
     KIMLabelGraphics *m_preeditLabel;
@@ -98,6 +110,8 @@ private:
     int m_orientVar;
 
     KConfigGroup *m_cg;
+
+    int m_timerId;
 };
 
 #endif // KIM_LOOKUPTABLE_GRAPHICS_H

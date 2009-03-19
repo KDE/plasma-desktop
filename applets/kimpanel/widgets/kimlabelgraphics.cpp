@@ -1,12 +1,12 @@
 #include "kimlabelgraphics.h"
-#include "paintutils.h"
 #include <plasma/theme.h>
 
-KIMLabelGraphics::KIMLabelGraphics(QGraphicsItem *parent)
+KIMLabelGraphics::KIMLabelGraphics(KIM::RenderType type,QGraphicsItem *parent)
     :QGraphicsWidget(parent),
      m_hoverEffect(false),
      m_drawCursor(false),
-     m_cursorPos(0)
+     m_cursorPos(0),
+     m_renderType(type)
 {
     setAcceptHoverEvents(true);
     connect(Plasma::Theme::defaultTheme(),SIGNAL(themeChanged()),
@@ -71,18 +71,14 @@ void KIMLabelGraphics::generatePixmap()
         m_reversedPixmap = QPixmap();
     } else {
         if (!text.isEmpty()) {
-            text_pixmap = renderText(text);
-            textReversed_pixmap = renderText(text,
-                    theme->color(Plasma::Theme::BackgroundColor),
-                    theme->color(Plasma::Theme::TextColor));
+            text_pixmap = KIM::renderText(text,m_renderType);
+            textReversed_pixmap = KIM::renderText(text,KIM::TableLabel);
             size.setWidth(size.width() + text_pixmap.width());
             size.setHeight(text_pixmap.height());
         }
         if (!m_label.isEmpty()) {
-            labelReversed_pixmap = renderText(m_label);
-            label_pixmap = renderText(m_label,
-                    theme->color(Plasma::Theme::BackgroundColor),
-                    theme->color(Plasma::Theme::TextColor));
+            labelReversed_pixmap = KIM::renderText(m_label,KIM::TableEntry);
+            label_pixmap = KIM::renderText(m_label,KIM::TableLabel);
             size.setWidth(size.width() + label_pixmap.width());
             size.setHeight(label_pixmap.height());
         }

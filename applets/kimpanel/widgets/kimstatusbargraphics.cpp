@@ -150,7 +150,7 @@ void KIMStatusBarGraphics::updateProperty(const Property &prop)
 //        icon_pixmap = KIcon(prop.icon).pixmap(KIconLoader::SizeSmall,KIconLoader::SizeSmall,Qt::KeepAspectRatio);
         icon = KIcon(prop.icon);
     } else {
-        icon = KIcon(renderText(prop.label).scaled(256,256,Qt::KeepAspectRatio));
+        icon = KIcon(KIM::renderText(prop.label,KIM::Statusbar).scaled(256,256,Qt::KeepAspectRatio));
 //        icon = KIcon(renderText(prop.label));
     }
 
@@ -179,7 +179,7 @@ void KIMStatusBarGraphics::registerProperties(const QList<Property> &props)
         if (!prop.icon.isEmpty()) {
             kicon = KIcon(prop.icon);
         } else {
-            kicon = KIcon(renderText(prop.label).scaled(256,256,Qt::KeepAspectRatio));
+            kicon = KIcon(KIM::renderText(prop.label,KIM::Statusbar).scaled(256,256,Qt::KeepAspectRatio));
            // kicon = KIcon(renderText(prop.label));
         }
 

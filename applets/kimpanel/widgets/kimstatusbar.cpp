@@ -71,6 +71,7 @@ KIMStatusBar::~KIMStatusBar()
 {
 }
 
+#if 0
 void KIMStatusBar::setEnabled(bool to_enable)
 {
 }
@@ -84,6 +85,7 @@ void KIMStatusBar::registerProperties(const QList<Property> &props)
 {
     //m_widget->registerProperties(props);
 }
+#endif 
 
 void KIMStatusBar::paintEvent(QPaintEvent *e)
 {
@@ -135,6 +137,9 @@ void KIMStatusBar::mouseMoveEvent(QMouseEvent *event)
             releaseMouse();
             m_resizeStartCorner = Plasma::Dialog::NoCorner;
             unsetCursor();
+        } else if (m_dragging) {
+            move(QCursor::pos() - m_init_pos);
+            m_moved = true;
         }
     }
 
@@ -193,6 +198,12 @@ void KIMStatusBar::mouseMoveEvent(QMouseEvent *event)
 void KIMStatusBar::mousePressEvent(QMouseEvent *event)
 {
     m_resizeStartCorner = resizeCorner(event->pos());
+    if (m_resizeStartCorner == Plasma::Dialog::NoCorner) {
+        m_dragging = true;
+        m_moved = false;
+        m_init_pos = mapFromGlobal(QCursor::pos());
+        setCursor(Qt::SizeAllCursor);
+    }
     QWidget::mousePressEvent(event);
 }
 
@@ -202,13 +213,16 @@ void KIMStatusBar::mouseReleaseEvent(QMouseEvent *event)
         releaseMouse();
 
         m_resizeStartCorner = Plasma::Dialog::NoCorner;
-        unsetCursor();
         //emit dialogResized();
     }
+
+    m_dragging = false;
+    unsetCursor();
 
     QWidget::mouseReleaseEvent(event);
 }
 
+#if 0
 void KIMStatusBar::timerEvent(QTimerEvent *e)
 {
     if (e->timerId() == m_timer_id) {
@@ -248,6 +262,8 @@ void KIMStatusBar::timerEvent(QTimerEvent *e)
         QWidget::timerEvent(e);
     }
 }
+
+#endif
 
 bool KIMStatusBar::event(QEvent *e)
 {

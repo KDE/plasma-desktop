@@ -93,21 +93,21 @@ function map_lookuptable_content()
     if (aux_area.width + preedit_area.width < 1) {
         lookuptable_area.x = left.width;
         lookuptable_area.y = top.height;
-        pagedown_area.x = lookuptable_area.x + lookuptable_area.width;
-        pagedown_area.y = lookuptable_area.y;
-        pageup_area.x = pagedown_area.x + pagedown_area.width;
-        pageup_area.y = pagedown_area.y;
+        pageup_area.x = lookuptable_area.x + lookuptable_area.width;
+        pageup_area.y = lookuptable_area.y;
+        pagedown_area.x = pageup_area.x + pageup_area.width;
+        pagedown_area.y = pageup_area.y;
     } else {
         aux_area.x = left.width;
         aux_area.y = top.height;
         preedit_area.x = aux_area.x + aux_area.width;
         preedit_area.y = aux_area.y;
-        pagedown_area.x = preedit_area.x + preedit_area.width;
-        pagedown_area.y = preedit_area.y;
-        pageup_area.x = pagedown_area.x + pagedown_area.width;
-        pageup_area.y = pagedown_area.y;
         lookuptable_area.x = left.width;
         lookuptable_area.y = aux_area.y + aux_area.height;
+        pagedown_area.x = right.x - pagedown_area.width;
+        pagedown_area.y = preedit_area.y;
+        pageup_area.x = pagedown_area.x - pageup_area.width;
+        pageup_area.y = preedit_area.y;
     }
 }
 

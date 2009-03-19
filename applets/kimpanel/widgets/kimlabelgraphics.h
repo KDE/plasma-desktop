@@ -1,6 +1,7 @@
 #ifndef WIDGETS_KIMLABELGRAPHICS_H
 #define WIDGETS_KIMLABELGRAPHICS_H
 
+#include "paintutils.h"
 #include <QtGui>
 
 class KIMLabelGraphics:public QGraphicsWidget
@@ -15,7 +16,7 @@ public:
     };
     Q_DECLARE_FLAGS(LabelStates, LabelState)
 
-    KIMLabelGraphics(QGraphicsItem *parent = 0);
+    KIMLabelGraphics(KIM::RenderType type = KIM::Auxilary, QGraphicsItem *parent = 0);
     ~KIMLabelGraphics();
 
     void enableHoverEffect(bool b)
@@ -39,6 +40,16 @@ public:
         return m_cursorPos;
     }
 
+    void setTextRenderType(KIM::RenderType type)
+    {
+        m_renderType = type;
+        generatePixmap();
+    }
+    KIM::RenderType textRenderType() const
+    {
+        return m_renderType;
+    }
+
     void setText(const QString &text);
     QString text() const
     {
@@ -55,7 +66,7 @@ public:
     {
         if ((which == Qt::MinimumSize) || (which == Qt::PreferredSize)) {
             if (m_pixmap.isNull()) {
-                return QSizeF(16,16);
+                return QSizeF(0,0);
             } else {
                 return m_pixmap.size();
             }
@@ -85,6 +96,7 @@ private:
     bool m_hoverEffect;
     bool m_drawCursor;
     int m_cursorPos;
+    KIM::RenderType m_renderType;
     QString m_text;
     QString m_label;
     QPixmap m_pixmap;
