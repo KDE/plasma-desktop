@@ -22,7 +22,6 @@
 #include "kimpanelruntime_export.h"
 #include <QtCore/QObject>
 #include <QStringList>
-class QByteArray;
 template<class T> class QList;
 template<class Key, class Value> class QMap;
 
