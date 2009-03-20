@@ -21,7 +21,7 @@
 #define PAINTUTILS_H
 
 #include "kimtheme.h"
-
+#include "kimpanelruntime_export.h"
 #include <plasma/theme.h>
 
 #include <QApplication>
@@ -41,8 +41,8 @@ namespace KIM
         TableEntry
     };
 
-    KDE_EXPORT QPixmap renderText(QString text, RenderType type = Statusbar);
-    KDE_EXPORT QPixmap renderText(QString text, 
+    KIMPANELRUNTIME_EXPORT QPixmap renderText(QString text, RenderType type = Statusbar);
+    KIMPANELRUNTIME_EXPORT QPixmap renderText(QString text, 
             QColor textColor, QColor bgColor,
             const QFont &ft = qApp->font());
 } // namespace KIM

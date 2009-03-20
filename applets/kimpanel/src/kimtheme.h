@@ -1,6 +1,7 @@
 #ifndef LAYOUT_KIMTHEME_H
 #define LAYOUT_KIMTHEME_H
 
+#include "kimpanelruntime_export.h"
 #include <plasma/theme.h>
 #include <QtGui>
 #include "kimsvgscriptlayout.h"
@@ -9,7 +10,7 @@ namespace KIM
 {
     class ThemePrivate;
 
-    class KDE_EXPORT Theme:public QObject
+    class KIMPANELRUNTIME_EXPORT Theme:public QObject
     {
         Q_OBJECT
     public:

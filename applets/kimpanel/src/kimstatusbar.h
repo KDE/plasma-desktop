@@ -30,12 +30,13 @@
 #include "kimstatusbargraphics.h"
 #include "kimsvgscriptlayout.h"
 #include "kimtheme.h"
+#include "kimpanelruntime_export.h"
 
 class KConfigGroup;
 class QDesktopWidget;
 class KIMStatusBarGraphics;
 
-class KDE_EXPORT KIMStatusBar : public QWidget
+class KIMPANELRUNTIME_EXPORT KIMStatusBar : public QWidget
 {
 Q_OBJECT
 public:

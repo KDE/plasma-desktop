@@ -35,7 +35,7 @@ target_link_libraries(kimpanelruntime
    ${QT_QTSCRIPT_LIBRARY}
    )
 set_target_properties(kimpanelruntime PROPERTIES
-   SOVERSION 0
+   VERSION 0 SOVERSION 0
    )
 install(TARGETS kimpanelruntime ${INSTALL_TARGETS_DEFAULT_ARGS})
 install(FILES kimpanelconfig.kcfg DESTINATION ${KCFG_INSTALL_DIR} )

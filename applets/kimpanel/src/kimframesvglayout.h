@@ -20,6 +20,7 @@
 #ifndef KIM_FRAME_SVG_LAYOUT_H
 #define KIM_FRAME_SVG_LAYOUT_H
 
+#include "kimpanelruntime_export.h"
 #include "kimsvglayout.h"
 
 #include <plasma/svg.h>
@@ -27,7 +28,7 @@
 
 namespace KIM
 {
-    class KDE_EXPORT FrameSvgLayout:public SvgLayout
+    class KIMPANELRUNTIME_EXPORT FrameSvgLayout:public SvgLayout
     {
     Q_OBJECT
     public:

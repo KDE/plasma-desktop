@@ -28,6 +28,7 @@
 #include <QList>
 #include <KIcon>
 #include <KDialog>
+#include "kimpanelruntime_export.h"
 
 //#include "kimagenttype.h"
 #include "kimpanelagent.h"
@@ -36,7 +37,7 @@
 class PanelAgent;
 class KIMStatusBar;
 
-class KDE_EXPORT KIMStatusBarGraphics : public QGraphicsWidget
+class KIMPANELRUNTIME_EXPORT KIMStatusBarGraphics : public QGraphicsWidget
 {
 Q_OBJECT
 public:

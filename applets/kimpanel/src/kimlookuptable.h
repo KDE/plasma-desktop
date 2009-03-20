@@ -19,6 +19,7 @@
 #ifndef LOOKUPTABLEWIDGET_H
 #define LOOKUPTABLEWIDGET_H
 
+#include "kimpanelruntime_export.h"
 #include <plasma/theme.h>
 #include <plasma/svg.h>
 #include <plasma/framesvg.h>
@@ -29,7 +30,7 @@
 class PanelAgent;
 class KIMLookupTableGraphics;
 
-class KDE_EXPORT KIMLookupTable: public QWidget
+class KIMPANELRUNTIME_EXPORT KIMLookupTable: public QWidget
 {
 Q_OBJECT
 public:

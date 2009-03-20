@@ -21,6 +21,7 @@
 #ifndef KIM_SVGSCRIPTLAYOUT_H
 #define KIM_SVGSCRIPTLAYOUT_H
 
+#include "kimpanelruntime_export.h"
 #include "kimsvglayout.h"
 #include "kimsvgscriptitem.h"
 #include "kimsvgscriptwrapper.h"
@@ -33,7 +34,7 @@
 namespace KIM
 {
     //class SvgScriptItem;
-    class KDE_EXPORT SvgScriptLayout:public SvgLayout
+    class KIMPANELRUNTIME_EXPORT SvgScriptLayout:public SvgLayout
     {
     Q_OBJECT
     public:

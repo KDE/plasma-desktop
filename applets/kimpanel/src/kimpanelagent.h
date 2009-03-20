@@ -19,7 +19,7 @@
 #ifndef PANELAGENT_H
 #define PANELAGENT_H
 
-#include <kdemacros.h>
+#include "kimpanelruntime_export.h"
 #include <QtCore/QObject>
 
 class QByteArray;
@@ -28,7 +28,7 @@ template<class Key, class Value> class QMap;
 
 #include "kimagenttype.h"
 
-class KDE_EXPORT PanelAgent: public QObject
+class KIMPANELRUNTIME_EXPORT PanelAgent: public QObject
 {
     Q_OBJECT
 
