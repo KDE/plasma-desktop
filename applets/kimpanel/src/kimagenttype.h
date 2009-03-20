@@ -20,7 +20,6 @@
 #ifndef KIM_AGENTTYPE_H
 #define KIM_AGENTTYPE_H
 
-#include <QtCore>
 
 typedef struct TextAttribute_ {
     enum Type {

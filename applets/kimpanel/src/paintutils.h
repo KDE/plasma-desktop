@@ -25,10 +25,8 @@
 #include <plasma/theme.h>
 
 #include <QApplication>
-#include <QImage>
 #include <QPainter>
 #include <QPainterPath>
-#include <QPaintEngine>
 #include <QPixmap>
 
 namespace KIM

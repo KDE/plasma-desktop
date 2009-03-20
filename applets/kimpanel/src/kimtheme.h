@@ -3,7 +3,6 @@
 
 #include "kimpanelruntime_export.h"
 #include <plasma/theme.h>
-#include <QtGui>
 #include "kimsvgscriptlayout.h"
 
 namespace KIM

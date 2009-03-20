@@ -25,8 +25,6 @@
 #include <QGraphicsGridLayout>
 #include <QGraphicsLayoutItem>
 #include <QList>
-#include <KIcon>
-#include <KDialog>
 
 class KIMPanelLayout : public QGraphicsLayout
 {

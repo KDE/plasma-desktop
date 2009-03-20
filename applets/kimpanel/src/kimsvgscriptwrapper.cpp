@@ -19,7 +19,6 @@
 
 #include "kimsvgscriptwrapper.h"
 #include <KDebug>
-#include <QtScript>
 
 namespace KIM
 {

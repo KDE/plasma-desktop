@@ -24,8 +24,6 @@
 #include <plasma/dialog.h>
 #include <kicon.h>
 #include <QString>
-#include <QWidget>
-#include <QPainter>
 #include <QGraphicsProxyWidget>
 
 #include "kimpanelagent.h"

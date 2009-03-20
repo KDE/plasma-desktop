@@ -19,18 +19,9 @@
 #include "kimpanelapplet.h"
 
 #include <KConfigDialog>
-#include <KDesktopFile>
 #include <QGraphicsSceneDragDropEvent>
 #include <QGraphicsWidget>
-#include <QDrag>
-#include <QMouseEvent>
-#include <QMimeData>
-#include <QToolButton>
 
-#include <KDialog>
-#include <KMimeType>
-#include <KStandardDirs>
-#include <KWindowSystem>
 
 #include <plasma/containment.h>
 #include <plasma/dialog.h>

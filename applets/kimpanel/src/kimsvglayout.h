@@ -24,7 +24,6 @@
 #include <plasma/svg.h>
 #include <plasma/theme.h>
 #include <KSvgRenderer>
-#include <QtSvg>
 
 namespace KIM
 {

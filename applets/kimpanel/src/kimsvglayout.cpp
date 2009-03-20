@@ -18,8 +18,7 @@
  ***************************************************************************/
 
 #include "kimsvglayout.h"
-#include <KGlobalSettings>
-
+#include <QFile>
 namespace KIM
 {
     SvgLayout::SvgLayout(QObject *parent)
@@ -31,7 +30,7 @@ namespace KIM
 
     SvgLayout::~SvgLayout()
     {
-
+        delete m_renderer;
     }
 
     void SvgLayout::setImagePath(const QString &path)

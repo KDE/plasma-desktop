@@ -21,21 +21,9 @@
 
 #include <QGraphicsSceneDragDropEvent>
 #include <QGraphicsWidget>
-#include <QDrag>
 #include <QMenu>
-#include <QMouseEvent>
-#include <QMimeData>
-#include <QToolButton>
 
-#include <KAction>
-#include <KDialog>
-#include <KMimeType>
-#include <KStandardDirs>
-#include <KWindowSystem>
 #include <KMessageBox>
-#include <KConfigDialog>
-#include <KDesktopFile>
-#include <KMenu>
 
 #include <plasma/containment.h>
 #include <plasma/dialog.h>

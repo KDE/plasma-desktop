@@ -35,6 +35,10 @@
 class KConfigGroup;
 class QDesktopWidget;
 class KIMStatusBarGraphics;
+class QToolButton;
+#include <QPixmap>
+#include <QBitmap>
+#include <QDesktopWidget>
 
 class KIMPANELRUNTIME_EXPORT KIMStatusBar : public QWidget
 {

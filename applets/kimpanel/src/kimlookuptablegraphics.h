@@ -30,7 +30,9 @@
 #include "kimagenttype.h"
 #include "kimtheme.h"
 #include "kimsvgscriptlayout.h"
-
+#include <QBitmap>
+#include <QGraphicsGridLayout>
+#include <QSignalMapper>
 class KConfigGroup;
 class PanelAgent;
 class KIMLabelGraphics;

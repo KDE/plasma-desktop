@@ -22,9 +22,9 @@
 #include "kimsvgscriptwrapper.h"
 
 #include <plasma/theme.h>
-#include <KSvgRenderer>
 #include <KDebug>
-
+#include <QFile>
+#include <QPainter>
 namespace KIM
 {
     SvgScriptLayout::SvgScriptLayout(QObject *parent)

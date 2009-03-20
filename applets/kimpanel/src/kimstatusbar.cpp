@@ -27,7 +27,6 @@
 #include <kicon.h>
 
 #ifdef Q_WS_X11
-#include <QX11Info>
 #include <NETRootInfo>
 #include <KWindowSystem>
 #include <X11/Xlib.h>

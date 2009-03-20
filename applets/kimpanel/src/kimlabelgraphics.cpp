@@ -19,6 +19,7 @@
 
 #include "kimlabelgraphics.h"
 #include <plasma/theme.h>
+#include <QGraphicsSceneMouseEvent>
 
 KIMLabelGraphics::KIMLabelGraphics(KIM::RenderType type,QGraphicsItem *parent)
     :QGraphicsWidget(parent),

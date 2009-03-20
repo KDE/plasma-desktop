@@ -2,6 +2,7 @@
 #define WIDGETS_KIMLABELGRAPHICS_H
 
 #include "paintutils.h"
+#include <QGraphicsWidget>
 
 class KIMLabelGraphics:public QGraphicsWidget
 {

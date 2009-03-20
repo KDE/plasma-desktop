@@ -26,8 +26,6 @@
 #include <QGraphicsGridLayout>
 #include <QGraphicsLayoutItem>
 #include <QList>
-#include <KIcon>
-#include <KDialog>
 
 #include "kimpanelagent.h"
 #include "kimstatusbar.h"

@@ -27,9 +27,6 @@
 #include "kimsvgscriptwrapper.h"
 
 #include <plasma/svg.h>
-#include <KSvgRenderer>
-#include <QtScript/QScriptEngine>
-#include <QtScript/QScriptValue>
 
 namespace KIM
 {

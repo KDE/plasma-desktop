@@ -2,7 +2,6 @@
 #include "kimsvglayout.h"
 
 #include <plasma/theme.h>
-#include <KSvgRenderer>
 #include <KDebug>
 
 namespace KIM
