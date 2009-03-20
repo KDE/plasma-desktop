@@ -65,8 +65,6 @@ void KIMLabelGraphics::setLabel(const QString &label)
 
 void KIMLabelGraphics::generatePixmap()
 {
-    Plasma::Theme *theme = Plasma::Theme::defaultTheme();
-
     QSize old_size = m_pixmap.size();
 
     QPixmap text_pixmap;
@@ -235,4 +233,5 @@ void KIMLabelGraphics::hoverEffect(bool show)
 #endif
 }
 
+#include "kimlabelgraphics.moc"
 // vim: sw=4 sts=4 et tw=100

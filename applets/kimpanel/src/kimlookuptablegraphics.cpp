@@ -348,4 +348,5 @@ void KIMLookupTableGraphics::generateBackground()
     p.drawRect(m_layout->elementRect("lookuptable_area"));
 }
 
+#include "kimlookuptablegraphics.moc"
 // vim: sw=4 sts=4 et tw=100

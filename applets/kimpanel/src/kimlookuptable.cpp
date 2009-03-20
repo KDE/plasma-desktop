@@ -211,4 +211,6 @@ void KIMLookupTable::propagateVisibleChange(bool b)
     }
 }
 
+#include "kimlookuptable.moc"
+
 // vim: sw=4 sts=4 et tw=100

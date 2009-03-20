@@ -1,5 +1,7 @@
 project(kimpanel)
 
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
+
 find_package(X11 REQUIRED)
 if (NOT X11_Xrender_FOUND)
    message(FATAL "Xrender library not found")
@@ -26,4 +28,6 @@ link_directories(${KDE4_INCLUDES}
 add_subdirectory(src)
 add_subdirectory(themes)
 add_subdirectory(tests)
+
+add_subdirectory(backend)
 

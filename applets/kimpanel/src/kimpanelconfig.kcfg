@@ -11,27 +11,27 @@
         </entry>
     </group>
     <group name="Layout">
-        <entry name="Statusbar size adjustment" key="StatusbarLayout" type="Enum">
+        <entry name="StatusbarLayout" type="Enum">
             <label>How the statusbar adjust itself when new icons appear or disappear.</label>
             <choices>
-                <choice name="Do nothing" key="Ignore">
+                <choice name="Fixed">
                     <label>Doesn't change the size, and user can resize the statusbar freely,and icon size are smartly computed considering both width and height.</label>
                 </choice>
-                <choice name="Fixed in one row" key="OneRowFixed">
+                <choice name="OneRow">
                     <label>Fixed in one row, user can resize to change its icon height.</label>
                 </choice>
-                <choice name="Fixed in one row" key="OneColFixed">
+                <choice name="OneColumn">
                     <label>Fixed in one col, user can resize to change its icon width.</label>
                 </choice>
-                <choice name="Narrowing" key="Narrow">
+                <choice name="Narrow">
                     <label>The longer width/height become more longer.</label>
                 </choice>
-                <choice name="Widing" key="Wide">
+                <choice name="Square">
                     <label>The shorter width/height become more longer,the statusbar will try to adjust itself to become a s square.</label>
                 </choice>
             </choices>
         </entry>
-        <entry name="Candiate words layout." key="LookupTableLayout" >
+        <entry name="LookupTableLayout" >
             <label>How candidate words layouted.</label>
             <choices>
                 <choice name="Horizontal">

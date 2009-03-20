@@ -77,26 +77,6 @@ KIMPanel::~KIMPanel()
     //delete m_lookup_table;
 }
 
-// ------------------ handle panel agent signal start-----------------
-
-#if 0
-void KIMPanel::showPreedit(bool to_show)
-{
-    m_lookup_table->showPreedit(to_show);
-}
-
-void KIMPanel::showAux(bool to_show)
-{
-    m_lookup_table->showAux(to_show);
-}
-
-void KIMPanel::showLookupTable(bool to_show)
-{
-    m_lookup_table->showLookupTable(to_show);
-    //m_lookup_table->setVisible(to_show);
-}
-#endif
-
 void KIMPanel::about()
 {
     KAboutApplicationDialog dlg(KCmdLineArgs::aboutData());
@@ -109,17 +89,9 @@ void KIMPanel::exit()
     KApplication::kApplication()->quit();
 }
 
-// ------------------ handle panel agent signal end -----------------
-
-// ------------------ handle ui signal start-----------------
-
-// ------------------ handle ui signal end -------------------
-
-// ------------------ internal function start -------------------
-
 void KIMPanel::showConfig()
 {
     KMessageBox::information(NULL,"Implement me!","Config");
 }
 
-// ------------------ internal function start -------------------
+#include "paneldialog.moc"

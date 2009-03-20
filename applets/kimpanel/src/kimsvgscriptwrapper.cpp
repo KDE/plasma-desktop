@@ -68,4 +68,5 @@ namespace KIM
     }
 } // namespace KIM
 
+#include "kimsvgscriptwrapper.moc"
 // vim: sw=4 sts=4 et tw=100

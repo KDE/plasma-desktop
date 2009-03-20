@@ -257,4 +257,5 @@ void KIMStatusBarGraphics::execMenu(const QList<Property> &prop_list)
     delete menu;
 }
 
+#include "kimstatusbargraphics.moc"
 // vim: sw=4 sts=4 et tw=100

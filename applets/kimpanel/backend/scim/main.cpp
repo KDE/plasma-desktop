@@ -22,6 +22,7 @@
 
 #define KDE_signal signal
 
+#include "config-scim.h"
 #include <sys/wait.h>
 #include <sys/types.h>
 #include <sys/time.h>
@@ -55,7 +56,10 @@
 #define Uses_STL_MAP
 
 #define ENABLE_DEBUG 9
+// scim use exceptions and template, so it doesn't work in hidden visibility
+#pragma GCC visibility push(default)
 #include <scim.h>
+#pragma GCC visibility pop
 
 Q_DECLARE_METATYPE(scim::Property);
 Q_DECLARE_METATYPE(scim::PanelFactoryInfo);

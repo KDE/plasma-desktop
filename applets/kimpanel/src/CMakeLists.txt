@@ -25,6 +25,7 @@ qt4_add_dbus_adaptor(kimpanelruntime_SRCS
    ${CMAKE_CURRENT_SOURCE_DIR}/kimpanelagent.h
    PanelAgent)
 
+kde4_add_kcfg_files(kimpanelruntime_SRCS kimpanelconfig.kcfgc)
 kde4_add_library(kimpanelruntime SHARED ${kimpanelruntime_SRCS})
 target_link_libraries(kimpanelruntime
    ${KDE4_PLASMA_LIBS} 
@@ -33,7 +34,13 @@ target_link_libraries(kimpanelruntime
    ${QT_QTDBUS_LIBRARY}
    ${QT_QTSCRIPT_LIBRARY}
    )
+set_target_properties(kimpanelruntime PROPERTIES
+   SOVERSION 0
+   )
 install(TARGETS kimpanelruntime ${INSTALL_TARGETS_DEFAULT_ARGS})
+install(FILES kimpanelconfig.kcfg DESTINATION ${KCFG_INSTALL_DIR} )
+install(FILES org.kde.impanel.xml 
+   DESTINATION ${DBUS_INTERFACES_INSTALL_DIR})
 
 set(kimpanel_SRCS
    main.cpp

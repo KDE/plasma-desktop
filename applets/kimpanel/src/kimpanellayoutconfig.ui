@@ -44,10 +44,13 @@
         <string>Unlimited</string>
        </property>
        <property name="minimum">
-        <number>-1</number>
+        <number>16</number>
+       </property>
+       <property name="maximum">
+        <number>128</number>
        </property>
        <property name="value">
-        <number>4</number>
+        <number>16</number>
        </property>
       </widget>
      </item>
