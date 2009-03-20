@@ -85,6 +85,7 @@ KIMStatusBar::KIMStatusBar(QWidget *parent, const QList<QAction *> extra_actions
 
 KIMStatusBar::~KIMStatusBar()
 {
+    delete m_config;
 }
 
 #if 0
