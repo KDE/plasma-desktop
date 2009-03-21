@@ -24,13 +24,19 @@
 #include <plasma/svg.h>
 #include <plasma/framesvg.h>
 
+#include <QWidget>
+#include <QHBoxLayout>
+#include <QPoint>
+#include <QDesktopWidget>
+#include <QGraphicsScene>
+#include <QGraphicsView>
+#include <QEvent>
+#include <QMouseEvent>
+
 #include "kimagenttype.h"
-#include <QtGui>
+
 class PanelAgent;
 class KIMLookupTableGraphics;
-class QHBoxLayout;
-class QGraphicsScene;
-class QGraphicsView;
 
 class KIMPANELRUNTIME_EXPORT KIMLookupTable: public QWidget
 {

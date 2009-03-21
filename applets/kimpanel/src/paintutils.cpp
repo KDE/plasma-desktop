@@ -29,9 +29,9 @@ namespace KIM
         case Statusbar:
             return renderText(text,theme->color(Theme::StatusbarTextColor),
                     theme->color(Theme::StatusbarBackgroundColor));
-        case Auxilary:
-            return renderText(text,theme->color(Theme::AuxilaryTextColor),
-                    theme->color(Theme::AuxilaryBackgroundColor));
+        case Auxiliary:
+            return renderText(text,theme->color(Theme::AuxiliaryTextColor),
+                    theme->color(Theme::AuxiliaryBackgroundColor));
         case Preedit:
             return renderText(text,theme->color(Theme::PreeditTextColor),
                     theme->color(Theme::PreeditBackgroundColor));

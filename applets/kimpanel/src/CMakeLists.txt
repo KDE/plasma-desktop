@@ -1,3 +1,7 @@
+include_directories(
+   ${CMAKE_CURRENT_SOURCE_DIR}
+   ${CMAKE_CURRENT_BINARY_DIR}
+   )
 set(kimpanelruntime_SRCS
    kimsvglayout.cpp
    kimframesvglayout.cpp
@@ -12,13 +16,18 @@ set(kimpanelruntime_SRCS
    kimstatusbar.cpp
    kimstatusbargraphics.cpp
 
-   kimpanelagent.cpp
+   #   kimappearancedialog.cpp
+   #   kimlayoutdialog.cpp
 
-   kimsettings.cpp
+   kimpanelagent.cpp
 
    kimtheme.cpp
 
    paintutils.cpp
+   )
+set(kimpanelruntime_UIS
+   kimpanelappearanceconfig.ui
+   kimpanellayoutconfig.ui
    )
 qt4_add_dbus_adaptor(kimpanelruntime_SRCS
    ${CMAKE_CURRENT_SOURCE_DIR}/org.kde.impanel.xml
@@ -41,6 +50,15 @@ install(TARGETS kimpanelruntime ${INSTALL_TARGETS_DEFAULT_ARGS})
 install(FILES kimpanelconfig.kcfg DESTINATION ${KCFG_INSTALL_DIR} )
 install(FILES org.kde.impanel.xml 
    DESTINATION ${DBUS_INTERFACES_INSTALL_DIR})
+
+set(kcm_kimpanel_SRCS
+   kcm_kimpanel.cpp
+   )
+kde4_add_ui_files(kcm_kimpanel_SRCS kcm_kimpanel.ui)
+kde4_add_plugin(kcm_kimpanel ${kcm_kimpanel_SRCS})
+target_link_libraries(kcm_kimpanel ${KDE4_KIO_LIBS} ${KDE4_KNEWSTUFF2_LIBS} ${KDE4_KDEUI_LIBS})
+install(TARGETS kcm_kimpanel  DESTINATION ${PLUGIN_INSTALL_DIR})
+install( FILES kcm_kimpanel.desktop  DESTINATION  ${SERVICES_INSTALL_DIR} )
 
 set(kimpanel_SRCS
    main.cpp

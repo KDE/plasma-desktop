@@ -17,7 +17,26 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#ifndef KIMSETTINGS_H
-#define KIMSETTINGS_H
+#ifndef KCM_KIMPANEL_H
+#define KCM_KIMPANEL_H
 
-#endif // KIMSETTINGS_H
+//#include "kimpanelruntime_export.h"
+#include "ui_kcm_kimpanel.h"
+#include <KCModule>
+#include <QWidget>
+
+namespace KIM
+{
+    class PanelCm : public KCModule, protected Ui::kimpanelConfig
+    {
+        Q_OBJECT
+    public:
+        PanelCm(QWidget *parent,const QVariantList &);
+        ~PanelCm();
+        virtual void load();
+        virtual void save();
+        virtual void defaults();
+    };
+} // namespace KIM
+
+#endif //KCM_KIMPANEL_H

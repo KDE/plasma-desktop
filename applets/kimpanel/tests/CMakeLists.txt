@@ -18,3 +18,7 @@ target_link_libraries(lookuptablelayout kimpanelruntime)
 set(kimtesttheme_SRCS theme.cpp)
 kde4_add_executable(theme ${kimtesttheme_SRCS})
 target_link_libraries(theme kimpanelruntime)
+
+set(kimtestsettings_SRCS settings.cpp)
+kde4_add_executable(settings ${kimtestsettings_SRCS})
+target_link_libraries(settings kimpanelruntime)

@@ -1,8 +1,32 @@
-#ifndef LAYOUT_KIMTHEME_H
-#define LAYOUT_KIMTHEME_H
+/***************************************************************************
+ *   Copyright (C) 2009 by Wang Hoi <zealot.hoi@gmail.com>                 *
+ *                                                                         *
+ *   This program is free software; you can redistribute it and/or modify  *
+ *   it under the terms of the GNU General Public License as published by  *
+ *   the Free Software Foundation; either version 2 of the License, or     *
+ *   (at your option) any later version.                                   *
+ *                                                                         *
+ *   This program is distributed in the hope that it will be useful,       *
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of        *
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
+ *   GNU General Public License for more details.                          *
+ *                                                                         *
+ *   You should have received a copy of the GNU General Public License     *
+ *   along with this program; if not, write to the                         *
+ *   Free Software Foundation, Inc.,                                       *
+ *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
+ ***************************************************************************/
+
+#ifndef KIMTHEME_H
+#define KIMTHEME_H
+
+#include <plasma/theme.h>
+#include <QObject>
+#include <QString>
+#include <QFont>
+#include <QFontMetrics>
 
 #include "kimpanelruntime_export.h"
-#include <plasma/theme.h>
 #include "kimsvgscriptlayout.h"
 
 namespace KIM
@@ -16,8 +40,8 @@ namespace KIM
         enum ColorRole {
             StatusbarTextColor = 1, /**<  the text color to be used by items resting on the background */
             StatusbarBackgroundColor = 2, /**< the default background color */
-            AuxilaryTextColor = 4, /** text color for buttons */
-            AuxilaryBackgroundColor = 8, /** background color for buttons*/
+            AuxiliaryTextColor = 4, /** text color for buttons */
+            AuxiliaryBackgroundColor = 8, /** background color for buttons*/
             PreeditTextColor = 16, /** text color for buttons */
             PreeditBackgroundColor = 32, /** background color for buttons*/
             LookupTableLabelTextColor = 64, /** text color for buttons */
@@ -29,7 +53,7 @@ namespace KIM
         enum FontRole {
             DefaultFont = 0, /**< The standard text font */
             StatusbarTextFont,
-            AuxilaryTextFont,
+            AuxiliaryTextFont,
             PreeditTextFont,
             TableLabelTextFont,
             TableEntryTextFont
@@ -129,5 +153,5 @@ namespace KIM
     };
 } // namespace KIM
 
-#endif // LAYOUT_KIMTHEME_H
+#endif // KIMTHEME_H
 

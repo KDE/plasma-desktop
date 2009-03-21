@@ -22,8 +22,10 @@
 #include "kimlookuptablegraphics.h"
 
 #include <plasma/paintutils.h>
-#include <kiconloader.h>
+#include <KIconLoader>
+#include <KDebug>
 
+#include <QWidget>
 #ifdef Q_WS_X11
 #include <QX11Info>
 #include <NETRootInfo>

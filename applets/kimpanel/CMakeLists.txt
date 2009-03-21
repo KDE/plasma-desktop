@@ -16,14 +16,10 @@ include_directories(${KDE4_INCLUDES}
    ${PLASMA_INCLUDE_DIR} 
    ${X11_INCLUDE_DIR}
    ${X11_Xrender_INCLUDE_PATH}
-   ${CMAKE_CURRENT_SOURCE_DIR}
-   ${CMAKE_CURRENT_BINARAY_DIR}
-   src/ 
+   ${CMAKE_SOURCE_DIR}/src
+   ${CMAKE_BINARY_DIR}/src
    )
-link_directories(${KDE4_INCLUDES} 
-   ${PLASMA_INCLUDE_DIR} 
-   src/
-   )
+link_directories(${KDE4_LIB_DIR})
 
 add_subdirectory(src)
 add_subdirectory(themes)

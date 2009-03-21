@@ -4,43 +4,48 @@
     xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
     http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
     <kcfgfile name="kimpanelrc"/>
-    <include>KGlobalSettings</include>
     <group name="Appearance">
-        <entry name="Theme" type="StringList">
-            <label>The theme for this input method panel.</label>
+        <entry name="Theme" type="String">
+            <label>Defines the current theme.</label>
         </entry>
     </group>
     <group name="Layout">
-        <entry name="StatusbarLayout" type="Enum">
-            <label>How the statusbar adjust itself when new icons appear or disappear.</label>
+        <entry name="PreferIconSize" type="Int">
+            <label>Defines your prefer size of icon in statusbar.</label>
+            <default>48</default>
+            <min>16</min>
+            <max>128</max>
+        </entry>
+        <entry name="FloatingStatusBarLayout" type="Enum">
+            <label>Defines how the floating statusbar layout its icons.</label>
             <choices>
-                <choice name="Fixed">
-                    <label>Doesn't change the size, and user can resize the statusbar freely,and icon size are smartly computed considering both width and height.</label>
+                <choice name="Horizontal">
+                    <label>Horizontally expand.</label>
                 </choice>
-                <choice name="OneRow">
-                    <label>Fixed in one row, user can resize to change its icon height.</label>
+                <choice name="Vertical">
+                    <label>Vertically expand.</label>
                 </choice>
-                <choice name="OneColumn">
-                    <label>Fixed in one col, user can resize to change its icon width.</label>
-                </choice>
-                <choice name="Narrow">
-                    <label>The longer width/height become more longer.</label>
-                </choice>
-                <choice name="Square">
-                    <label>The shorter width/height become more longer,the statusbar will try to adjust itself to become a s square.</label>
+                <choice name="Matrix">
+                    <label>Can have multiple rows/cols.</label>
                 </choice>
             </choices>
         </entry>
-        <entry name="LookupTableLayout" >
-            <label>How candidate words layouted.</label>
+        <entry name="LookupTableLayout" type="Enum">
+            <label>Defines the layout of candidate words list.</label>
             <choices>
                 <choice name="Horizontal">
-                    <label>Horizontally layouted.</label>
+                    <label>Put all words in one row.</label>
                 </choice>
                 <choice name="Vertical">
-                    <label>Vertically layouted.</label>
+                    <label>Put all words in one col.</label>
+                </choice>
+                <choice name="Matrix">
+                    <label>Multiple rows/cols.</label>
                 </choice>
             </choices>
+        </entry>
+        <entry name="LookupTableConstraint" type="UInt">
+            <label>Defines how the layout of candidate words list.</label>
         </entry>
     </group>
 </kcfg>

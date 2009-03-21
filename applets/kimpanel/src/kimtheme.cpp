@@ -1,3 +1,22 @@
+/***************************************************************************
+ *   Copyright (C) 2009 by Wang Hoi <zealot.hoi@gmail.com>                 *
+ *                                                                         *
+ *   This program is free software; you can redistribute it and/or modify  *
+ *   it under the terms of the GNU General Public License as published by  *
+ *   the Free Software Foundation; either version 2 of the License, or     *
+ *   (at your option) any later version.                                   *
+ *                                                                         *
+ *   This program is distributed in the hope that it will be useful,       *
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of        *
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
+ *   GNU General Public License for more details.                          *
+ *                                                                         *
+ *   You should have received a copy of the GNU General Public License     *
+ *   along with this program; if not, write to the                         *
+ *   Free Software Foundation, Inc.,                                       *
+ *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
+ ***************************************************************************/
+
 #include "kimtheme.h"
 #include <plasma/theme.h>
 #include <KDesktopFile>
@@ -49,7 +68,7 @@ public:
         } else if (path.startsWith("plasma:/")) {
             path.remove(0,path.indexOf("/")+1);
             path = Plasma::Theme::defaultTheme()->imagePath(path);
-        } else if (!path.startsWith("/")) {
+        } else if (!path.startsWith('/')) {
             int idx = themeNameList.indexOf(themeName);
             QString theme = themeList[idx];
             QString prefix = theme.left(theme.lastIndexOf("/")+1);
@@ -143,10 +162,10 @@ void Theme::setThemeName(const QString &themeName)
                     "TextBackground",defaultTransparentBackgroundColorName));
 
         KConfigGroup lookuptableColors(&colorConfig,"LookupTable:Color");
-        d->colors[AuxilaryTextColor].setNamedColor(lookuptableColors.readEntry(
-                    "AuxilaryText",defaultTextColorName));
-        d->colors[AuxilaryBackgroundColor].setNamedColor(lookuptableColors.readEntry(
-                    "AuxilaryTextBackground",defaultTransparentBackgroundColorName));
+        d->colors[AuxiliaryTextColor].setNamedColor(lookuptableColors.readEntry(
+                    "AuxiliaryText",defaultTextColorName));
+        d->colors[AuxiliaryBackgroundColor].setNamedColor(lookuptableColors.readEntry(
+                    "AuxiliaryTextBackground",defaultTransparentBackgroundColorName));
         d->colors[PreeditTextColor].setNamedColor(lookuptableColors.readEntry(
                     "PreeditText",defaultTextColorName));
         d->colors[PreeditBackgroundColor].setNamedColor(lookuptableColors.readEntry(

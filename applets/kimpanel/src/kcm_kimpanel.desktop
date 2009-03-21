@@ -1,0 +1,23 @@
+[Desktop Entry]
+Exec=kcmshell4 kcm_kimpanel
+Icon=preferences-desktop-keyboard
+Type=Service
+X-KDE-ServiceTypes=KCModule
+X-DocPath=kcontrol/kimpanel/index.html
+
+X-KDE-Library=kcm_kimpanel
+X-KDE-ParentApp=kcontrol
+
+X-KDE-System-Settings-Parent-Category=regional-and-language
+X-KDE-Weight=60
+
+Name=Input method panel
+Name[zh_CN]=输入法面板
+
+Comment=Input method panel settings
+Comment[zh_CN]=输入法面板设置
+
+X-KDE-Keywords=kim,kimpanel,panel,im,impanel,inputmethod,input method
+X-KDE-Keywords[zh_CN]=kim,kimpanel,panel,im,impanel,inputmethod,input method,输入法,输入法面板,输入法界面
+
+Categories=Qt;KDE;X-KDE-settings-components;

@@ -49,7 +49,7 @@
 #define Uses_SCIM_TRANS_COMMANDS
 #define Uses_SCIM_CONFIG
 #define Uses_SCIM_CONFIG_MODULE
-#define Uses_SCIM_DEBUG
+//#define Uses_SCIM_DEBUG
 #define Uses_SCIM_HELPER
 #define Uses_SCIM_HELPER_MODULE
 #define Uses_SCIM_PANEL_AGENT
@@ -1089,9 +1089,8 @@ int main (int argc, char *argv [])
             config_name = config_list [0];
     }
 
-    //DebugOutput::disable_debug (SCIM_DEBUG_AllMask);
-    DebugOutput::set_output("/home/ora/a.log");
-    DebugOutput::enable_debug (SCIM_DEBUG_AllMask);
+    //DebugOutput::set_output("/home/ora/a.log");
+    //DebugOutput::enable_debug (SCIM_DEBUG_AllMask);
 
     //parse command options
     i = 0;

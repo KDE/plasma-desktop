@@ -33,7 +33,7 @@ namespace KIM
 {
     enum RenderType {
         Statusbar,
-        Auxilary,
+        Auxiliary,
         Preedit,
         TableLabel,
         TableEntry

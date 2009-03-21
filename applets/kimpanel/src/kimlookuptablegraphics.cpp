@@ -69,7 +69,7 @@ KIMLookupTableGraphics::KIMLookupTableGraphics(PanelAgent *agent, QGraphicsItem 
     m_spacing = QFontMetrics(qApp->font()).size(0,"XX").width();
     m_tableLayout->setContentsMargins(0,0,0,0);
 
-    m_auxLabel = new KIMLabelGraphics(KIM::Auxilary,this);
+    m_auxLabel = new KIMLabelGraphics(KIM::Auxiliary,this);
     m_auxLabel->hide();
     m_preeditLabel = new KIMLabelGraphics(KIM::Preedit,this);
     m_preeditLabel->setDrawCursor(true);

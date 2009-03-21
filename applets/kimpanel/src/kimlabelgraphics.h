@@ -1,5 +1,24 @@
-#ifndef WIDGETS_KIMLABELGRAPHICS_H
-#define WIDGETS_KIMLABELGRAPHICS_H
+/***************************************************************************
+ *   Copyright (C) 2009 by Wang Hoi <zealot.hoi@gmail.com>                 *
+ *                                                                         *
+ *   This program is free software; you can redistribute it and/or modify  *
+ *   it under the terms of the GNU General Public License as published by  *
+ *   the Free Software Foundation; either version 2 of the License, or     *
+ *   (at your option) any later version.                                   *
+ *                                                                         *
+ *   This program is distributed in the hope that it will be useful,       *
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of        *
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
+ *   GNU General Public License for more details.                          *
+ *                                                                         *
+ *   You should have received a copy of the GNU General Public License     *
+ *   along with this program; if not, write to the                         *
+ *   Free Software Foundation, Inc.,                                       *
+ *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
+ ***************************************************************************/
+
+#ifndef KIMLABELGRAPHICS_H
+#define KIMLABELGRAPHICS_H
 
 #include "paintutils.h"
 #include <QGraphicsWidget>
@@ -16,7 +35,7 @@ public:
     };
     Q_DECLARE_FLAGS(LabelStates, LabelState)
 
-    KIMLabelGraphics(KIM::RenderType type = KIM::Auxilary, QGraphicsItem *parent = 0);
+    explicit KIMLabelGraphics(KIM::RenderType type = KIM::Auxiliary, QGraphicsItem *parent = 0);
     ~KIMLabelGraphics();
 
     void enableHoverEffect(bool b)
@@ -105,4 +124,4 @@ private:
     LabelStates m_states;
     QPointF m_clickStartPos;
 };
-#endif // WIDGETS_KIMLABELGRAPHICS_H
+#endif // KIMLABELGRAPHICS_H
