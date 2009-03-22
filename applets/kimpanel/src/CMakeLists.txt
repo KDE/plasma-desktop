@@ -76,7 +76,10 @@ set(kimpanel_SRCS
    paneldialog.cpp
    )
 kde4_add_executable(kimpanel ${kimpanel_SRCS})
-target_link_libraries(kimpanel kimpanelruntime)
+target_link_libraries(kimpanel 
+   ${KDE4_KUTILS_LIBS} 
+   kimpanelruntime
+   )
 install(TARGETS kimpanel ${INSTALL_TARGETS_DEFAULT_ARGS})
 
 set(kimpanel_applet_SRCS

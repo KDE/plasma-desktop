@@ -26,7 +26,7 @@
 #include <KServiceTypeTrader>
 #include <QGraphicsSceneDragDropEvent>
 #include <QGraphicsWidget>
-
+#include <QAction>
 
 #include <plasma/containment.h>
 #include <plasma/dialog.h>
@@ -92,15 +92,18 @@ void KIMPanelApplet::init()
 
     m_statusbarGraphics->setCollapsible(true);
     m_statusbar = new KIMStatusBar();
-    
-   connect(m_statusbarGraphics,SIGNAL(iconCountChanged()),SLOT(adjustSelf()));
-   connect(m_statusbarGraphics,SIGNAL(collapsed(bool)),SLOT(toggleCollapse(bool)));
+    QAction *action = new QAction(KIcon("configure"),"IM Panel Settings",this);
+    connect(action,SIGNAL(triggered()),this,SLOT(showConfigurationInterface()));
+    m_statusbar->addAction(action);
+
+    connect(m_statusbarGraphics,SIGNAL(iconCountChanged()),SLOT(adjustSelf()));
+    connect(m_statusbarGraphics,SIGNAL(collapsed(bool)),SLOT(toggleCollapse(bool)));
 
     m_lookup_table = new KIMLookupTable(m_panel_agent);
 
     m_logoIcon = new Plasma::IconWidget(KIcon("draw-freehand"),"",this);
     m_logoIcon->hide();
-    
+
     //m_layout->addItem(m_logoIcon);
     m_layout->addItem(m_statusbarGraphics);
 
@@ -109,24 +112,24 @@ void KIMPanelApplet::init()
 }
 
 /*
-QSizeF KIMPanelApplet::sizeHint(Qt::SizeHint which, const QSizeF & constraint) const
-{
+   QSizeF KIMPanelApplet::sizeHint(Qt::SizeHint which, const QSizeF & constraint) const
+   {
 
-    QSizeF sizeHint = size();
-    if (!m_layout) {
-        return sizeHint;
-    }
-    sizeHint.setWidth(left + right + m_layout->effectiveSizeHint(which).width());
-    sizeHint.setHeight(top + bottom + m_layout->effectiveSizeHint(which).height());
-    kDebug() << sizeHint;
-    return sizeHint;
-}
-*/
+   QSizeF sizeHint = size();
+   if (!m_layout) {
+   return sizeHint;
+   }
+   sizeHint.setWidth(left + right + m_layout->effectiveSizeHint(which).width());
+   sizeHint.setHeight(top + bottom + m_layout->effectiveSizeHint(which).height());
+   kDebug() << sizeHint;
+   return sizeHint;
+   }
+   */
 
 void KIMPanelApplet::constraintsEvent(Plasma::Constraints constraints)
 {
     if ((constraints & Plasma::FormFactorConstraint) ||
-        (constraints & Plasma::SizeConstraint)) {
+            (constraints & Plasma::SizeConstraint)) {
 
         adjustSelf();
         //resize(preferredSize());
@@ -153,9 +156,7 @@ void KIMPanelApplet::showConfigurationInterface()
         dialog->addModule(srv->library());
     }
 
-    dialog->exec();
-
-    delete dialog;
+    dialog->show();
 }
 
 void KIMPanelApplet::configAccepted()

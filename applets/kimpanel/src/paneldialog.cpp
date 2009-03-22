@@ -31,6 +31,9 @@
 #include <kicon.h>
 #include <kmessagebox.h>
 #include <kwindowsystem.h>
+#include <kcmultidialog.h>
+#include <kcmodule.h>
+#include <kservicetypetrader.h>
 #include <plasma/corona.h>
 #include <plasma/theme.h>
 #include <plasma/widgets/iconwidget.h>
@@ -45,6 +48,10 @@ KIMPanel::KIMPanel(QObject* parent)
 //X     m_statusbarGraphics->showLogo(true);
 
     m_statusbar = new KIMStatusBar();
+
+    QAction *action = new QAction(KIcon("configure"),"IM Panel Settings",this);
+    connect(action,SIGNAL(triggered()),this,SLOT(showConfig()));
+    m_statusbar->addAction(action);
     m_statusbar->addAction(KStandardAction::quit(qApp,SLOT(quit()),this));
 
     m_statusbar->setGraphicsWidget(m_statusbarGraphics);
@@ -91,7 +98,19 @@ void KIMPanel::exit()
 
 void KIMPanel::showConfig()
 {
-    KMessageBox::information(NULL,"Implement me!","Config");
+    QString constraint = "[X-KDE-System-Settings-Parent-Category] == 'input-method'";
+    KService::List modules = KServiceTypeTrader::self()->query("KCModule",constraint);
+
+    KCMultiDialog *dialog = new KCMultiDialog();
+
+    foreach (const KService::Ptr &srv, modules) {
+        kDebug() << srv->library();
+        dialog->addModule(srv->library());
+    }
+
+    dialog->exec();
+
+    delete dialog;
 }
 
 #include "paneldialog.moc"
