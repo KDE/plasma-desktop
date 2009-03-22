@@ -17,8 +17,13 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 #include "kimpanelapplet.h"
+#include "kimpanelsettings.h"
 
 #include <KConfigDialog>
+#include <KCModule>
+#include <KCMultiDialog>
+#include <KService>
+#include <KServiceTypeTrader>
 #include <QGraphicsSceneDragDropEvent>
 #include <QGraphicsWidget>
 
@@ -61,16 +66,16 @@ void KIMPanelApplet::init()
 {
     setBackgroundHints(Plasma::Applet::DefaultBackground);
 
-    KConfigGroup cg = config();
-
-    m_largestIconWidth = qMax((int)KIconLoader::SizeSmall,
-        cg.readEntry("LargestIconWidth", (int)KIconLoader::SizeMedium));
+    m_preferIconWidth = qMax((int)KIconLoader::SizeSmall,
+        KIM::Settings::self()->preferIconSize());
 
     m_background = new Plasma::FrameSvg();
     m_background->setImagePath("widgets/systemtray");
 
     connect(Plasma::Theme::defaultTheme(), SIGNAL(themeChanged()),
         SLOT(themeUpdated()));
+    connect(KIM::Settings::self(), SIGNAL(configChanged()),
+        SLOT(adjustSelf()));
 
     m_layout = new QGraphicsLinearLayout(this);
     m_layout->setSpacing(0);
@@ -125,8 +130,29 @@ void KIMPanelApplet::constraintsEvent(Plasma::Constraints constraints)
     }
 }
 
+#if 0
 void KIMPanelApplet::createConfigurationInterface(KConfigDialog *parent)
 {
+}
+#endif
+
+void KIMPanelApplet::showConfigurationInterface()
+{
+    kDebug();
+
+    QString constraint = "[X-KDE-System-Settings-Parent-Category] == 'input-method'";
+    KService::List modules = KServiceTypeTrader::self()->query("KCModule",constraint);
+
+    KCMultiDialog *dialog = new KCMultiDialog();
+
+    foreach (const KService::Ptr &srv, modules) {
+        kDebug() << srv->library();
+        dialog->addModule(srv->library());
+    }
+
+    dialog->exec();
+
+    delete dialog;
 }
 
 void KIMPanelApplet::configAccepted()
@@ -137,9 +163,9 @@ void KIMPanelApplet::configAccepted()
 
     KConfigGroup cg = config();
 
-    if (temp != m_largestIconWidth) {
-        m_largestIconWidth = temp;
-        cg.writeEntry("LargestIconWidth", m_largestIconWidth);
+    if (temp != m_preferIconWidth) {
+        m_preferIconWidth = temp;
+        cg.writeEntry("LargestIconWidth", m_preferIconWidth);
         changed = true;
     }
 
@@ -158,12 +184,12 @@ QList<QAction*> KIMPanelApplet::contextualActions()
 void KIMPanelApplet::paintInterface(QPainter *painter, const QStyleOptionGraphicsItem *option, const QRect &contentsRect)
 {
     Q_UNUSED(option)
-    Q_UNUSED(contentsRect)
+        Q_UNUSED(contentsRect)
 
-//    QRect r = rect().toRect();
-//    m_background->setElementPrefix("lastelements");
+        //    QRect r = rect().toRect();
+        //    m_background->setElementPrefix("lastelements");
 
-    painter->save();
+        painter->save();
 
     //m_background->setElementPrefix(QString());
     m_background->resizeFrame(contentsRect.size());
@@ -190,30 +216,39 @@ void KIMPanelApplet::adjustSelf()
         iconCount = 1;
     }
 
+    int best_i = 1;
+    qreal min_delta = 99999;
     switch (formFactor()) {
     case Plasma::Horizontal:
         i = 1;
-        while (r.height()/i > m_largestIconWidth)
-            i++;
-        j = (iconCount + (i - 1)) / i;
-        sizeHint = QSizeF(j*r.height()/i, r.height());
+        for (i = 1; i <= iconCount; i++) {
+            if (qAbs(r.height()/i - m_preferIconWidth) < min_delta) {
+                best_i = i;
+                min_delta = qAbs(r.height()/i - m_preferIconWidth);
+            }
+        }
+        j = (iconCount + (best_i - 1)) / best_i;
+        sizeHint = QSizeF(j*r.height()/best_i, r.height());
         break;
     case Plasma::Vertical:
         i = 1;
-        while (r.width()/i > m_largestIconWidth)
-            i++;
-        j = (iconCount + (i - 1)) / i;
-        sizeHint = QSizeF(r.width(),j*r.width()/i);
+        for (i = 1; i <= iconCount; i++) {
+            if (qAbs(r.width()/i - m_preferIconWidth) < min_delta) {
+                best_i = i;
+                min_delta = qAbs(r.height()/i - m_preferIconWidth);
+            }
+        }
+        j = (iconCount + (best_i - 1)) / best_i;
+        sizeHint = QSizeF(r.width(),j*r.width()/best_i);
         break;
     case Plasma::Planar:
     case Plasma::MediaCenter:
-        sizeHint = QSizeF(iconCount*(qreal)KIconLoader::SizeMedium,(qreal)KIconLoader::SizeMedium);
+        sizeHint = QSizeF(iconCount*m_preferIconWidth,m_preferIconWidth);
         break;
     }
-    
+
     qreal left, top, right, bottom;
     m_layout->getContentsMargins(&left,&top,&right,&bottom);
-    kDebug() << left << top << sizeHint;
     sizeHint = QSizeF(sizeHint.width() + left + right, sizeHint.height() + top + bottom);
 
     if (m_statusbar->graphicsWidget() == 0) {

@@ -84,40 +84,12 @@ namespace KIM
 
         QStringList listThemeNames() const;
 
-        /**
-         * Retrieve the path for an SVG image in the current theme.
-         *
-         * @arg name the name of the file in the theme directory (without the
-         *           ".svg" part or a leading slash)
-         * @return the full path to the requested file for the current theme
-         */
         QString statusbarImagePath() const;
 
-        /**
-         * Retrieve the path for an SVG image in the current theme.
-         *
-         * @arg name the name of the file in the theme directory (without the
-         *           ".svg" part or a leading slash)
-         * @return the full path to the requested file for the current theme
-         */
         QString statusbarLayoutPath() const;
 
-        /**
-         * Retrieve the path for an SVG image in the current theme.
-         *
-         * @arg name the name of the file in the theme directory (without the
-         *           ".svg" part or a leading slash)
-         * @return the full path to the requested file for the current theme
-         */
         QString lookuptableImagePath() const;
 
-        /**
-         * Retrieve the path for an SVG image in the current theme.
-         *
-         * @arg name the name of the file in the theme directory (without the
-         *           ".svg" part or a leading slash)
-         * @return the full path to the requested file for the current theme
-         */
         QString lookuptableLayoutPath() const;
 
         /**
@@ -149,6 +121,8 @@ namespace KIM
     private:
         friend class ThemePrivate;
         ThemePrivate *const d;
+
+        Q_PRIVATE_SLOT(d,void configUpdated())
         Q_PRIVATE_SLOT(d,void themeUpdated())
     };
 } // namespace KIM

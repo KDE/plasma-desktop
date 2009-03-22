@@ -62,7 +62,8 @@ Q_SIGNALS:
     void sizeHintChanged(Qt::SizeHint);
 
 public Q_SLOTS:
-    void createConfigurationInterface(KConfigDialog *parent);
+//X     void createConfigurationInterface(KConfigDialog *parent);
+    void showConfigurationInterface();
 
 protected:
     /**
@@ -113,7 +114,7 @@ private:
 
     Plasma::IconWidget *m_logoIcon;
 
-    int m_largestIconWidth;
+    int m_preferIconWidth;
 
     PanelAgent *m_panel_agent;
 };

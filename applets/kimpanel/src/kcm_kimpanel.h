@@ -20,9 +20,12 @@
 #ifndef KCM_KIMPANEL_H
 #define KCM_KIMPANEL_H
 
-//#include "kimpanelruntime_export.h"
 #include "ui_kcm_kimpanel.h"
+#include "kimthemepackage.h"
+
 #include <KCModule>
+#include <KMenu>
+#include <KFileDialog>
 #include <QWidget>
 
 namespace KIM
@@ -36,6 +39,21 @@ namespace KIM
         virtual void load();
         virtual void save();
         virtual void defaults();
+
+    private Q_SLOTS:
+        void populateWidgetsMenu();
+
+        void downloadThemes();
+        void openThemeFile();
+
+        void reloadThemes();
+
+        void themeComboxIndexChanged(int index);
+        void checkChanged();
+
+    private:
+        KMenu *m_widgetsMenu;
+        ThemePackage *m_installer;
     };
 } // namespace KIM
 

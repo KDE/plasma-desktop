@@ -31,9 +31,9 @@ int main(int argc, char *argv[])
 
     KApplication app;
     QString path = args->arg(0);
-    QString aux_text = QString::fromUtf8("");
-    QString preedit_text = QString::fromUtf8("");
-    QString lookuptable_text = QString::fromUtf8("1abd");
+    QString aux_text = QString::fromUtf8("test it");
+    QString preedit_text = QString::fromUtf8("Preedit");
+    QString lookuptable_text = QString::fromUtf8("1.abd 2.ff");
     QFontMetrics fm = app.fontMetrics();
     KIM::SvgScriptLayout *layout = new KIM::SvgScriptLayout();
     layout->setImagePath(path);
@@ -42,7 +42,6 @@ int main(int argc, char *argv[])
     layout->doLayout(fm.size(0,preedit_text),"preedit_area");
     layout->doLayout(QSizeF(16,16),"pagedown_area");
     layout->doLayout(QSizeF(16,16),"pageup_area");
-    kDebug() << fm.size(0,lookuptable_text);
     layout->doLayout(fm.size(0,lookuptable_text),"lookuptable_area");
     kDebug() << "Root rect:" << layout->elementRect();
     kDebug() << "Aux rect:" << layout->elementRect("aux_area");
@@ -54,8 +53,8 @@ int main(int argc, char *argv[])
     pix.fill(Qt::transparent);
     QPainter p(&pix);
     layout->paint(&p,layout->elementRect());
-    p.setPen(Qt::white);
-    p.setBrush(Qt::white);
+    p.setPen(Qt::black);
+//    p.setBrush(Qt::white);
     if (!layout->elementRect("aux_area").isNull()) {
         p.drawText(layout->elementRect("aux_area")
                 .translated( -fm.boundingRect(aux_text).topLeft())

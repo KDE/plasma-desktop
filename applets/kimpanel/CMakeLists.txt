@@ -1,7 +1,7 @@
 project(kimpanel)
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
-
+#set(CMAKE_BUILD_TYPE Release)
 find_package(X11 REQUIRED)
 if (NOT X11_Xrender_FOUND)
    message(FATAL "Xrender library not found")

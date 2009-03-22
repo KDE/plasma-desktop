@@ -19,6 +19,7 @@
 
 #include "kimstatusbar.h"
 #include "paintutils.h"
+#include "kimpanelsettings.h"
 
 #include <kglobal.h>
 #include <kapplication.h>
@@ -58,7 +59,7 @@ KIMStatusBar::KIMStatusBar(QWidget *parent, const QList<QAction *> extra_actions
     m_view->setFrameShape(QFrame::NoFrame);
     m_view->viewport()->setAutoFillBackground(false);
     m_view->setContentsMargins(0,0,0,0);
-    m_view->resize(200,50);
+    //m_view->resize(200,50);
 
     m_widget = 0;
 
@@ -68,8 +69,11 @@ KIMStatusBar::KIMStatusBar(QWidget *parent, const QList<QAction *> extra_actions
     m_dragging = false;
 
     m_desktop = new QDesktopWidget();
-    m_config = new KConfigGroup(KGlobal::config(),"KIMStatusBar");
-    move(m_config->readEntry("Pos",m_desktop->availableGeometry().bottomRight()-QPoint(200,40)));
+
+    // read private settings, don't use Settings::self()
+    move(KIM::Settings::self()->floatingStatusbarPos());
+
+    connect(KIM::Settings::self(),SIGNAL(configChanged()),this,SLOT(adjustSelf()));
 
     m_timer_id = -1;
 
@@ -81,6 +85,8 @@ KIMStatusBar::KIMStatusBar(QWidget *parent, const QList<QAction *> extra_actions
 
     themeUpdated();
     connect(KIM::Theme::defaultTheme(),SIGNAL(themeChanged()),this,SLOT(themeUpdated()));
+
+//    adjustSelf();
 }
 
 KIMStatusBar::~KIMStatusBar()
@@ -115,7 +121,6 @@ void KIMStatusBar::paintEvent(QPaintEvent *e)
 void KIMStatusBar::resizeEvent(QResizeEvent *e)
 {
     QWidget::resizeEvent(e);
-    //m_layout->doLayout(e->size());
     generateBackground();
     if (!KWindowSystem::compositingActive()) {
         setMask(m_mask);
@@ -204,8 +209,7 @@ void KIMStatusBar::mouseMoveEvent(QMouseEvent *event)
                 break;
         }
         setGeometry(newGeometry.toRect());
-        //move(position);
-        //resize(m_layout->elementSize().toSize());
+        adjustSelf();
     }
 
     QWidget::mouseMoveEvent(event);
@@ -236,6 +240,13 @@ void KIMStatusBar::mouseReleaseEvent(QMouseEvent *event)
     unsetCursor();
 
     QWidget::mouseReleaseEvent(event);
+
+    if (m_moved) {
+        // store private settings, don't use KIM::Settings directly.
+        KIM::Settings::self()->setFloatingStatusbarPos(pos());
+        KIM::Settings::self()->writeConfig();
+    }
+
 }
 
 #if 0
@@ -288,7 +299,7 @@ bool KIMStatusBar::event(QEvent *e)
         p.setCompositionMode(QPainter::CompositionMode_Source);
         p.fillRect(rect(), Qt::transparent);
     }
-    
+
     return QWidget::event(e);
 }
 
@@ -300,7 +311,7 @@ void KIMStatusBar::updateResizeCorners()
     m_resizeAreas.clear();
     if (m_resizeCorners & Plasma::Dialog::NorthEast) {
         m_resizeAreas[Plasma::Dialog::NorthEast] = QRect(r.right() - resizeAreaMargin, r.top(),
-                                               resizeAreaMargin, resizeAreaMargin);
+                resizeAreaMargin, resizeAreaMargin);
     }
 
     if (m_resizeCorners & Plasma::Dialog::NorthWest) {
@@ -309,19 +320,20 @@ void KIMStatusBar::updateResizeCorners()
 
     if (m_resizeCorners & Plasma::Dialog::SouthEast) {
         m_resizeAreas[Plasma::Dialog::SouthEast] = QRect(r.right() - resizeAreaMargin,
-                                               r.bottom() - resizeAreaMargin,
-                                               resizeAreaMargin, resizeAreaMargin);
+                r.bottom() - resizeAreaMargin,
+                resizeAreaMargin, resizeAreaMargin);
     }
 
     if (m_resizeCorners & Plasma::Dialog::SouthWest) {
         m_resizeAreas[Plasma::Dialog::SouthWest] = QRect(r.left(), r.bottom() - resizeAreaMargin,
-                                               resizeAreaMargin, resizeAreaMargin);
+                resizeAreaMargin, resizeAreaMargin);
     }
 }
 
 void KIMStatusBar::setGraphicsWidget(KIMStatusBarGraphics *widget)
 {
     if (m_widget) {
+        disconnect(m_widget,SIGNAL(iconCountChanged()),this,SLOT(adjustSelf()));
         m_scene->removeItem(m_widget);
         foreach (QAction *action,m_widget->actions()) {
             removeAction(action);
@@ -335,7 +347,11 @@ void KIMStatusBar::setGraphicsWidget(KIMStatusBarGraphics *widget)
         }
         m_widget->setParent(0);
         m_scene->addItem(m_widget);
+        m_layout->doLayout(m_view->size(),"statusbar");
         m_widget->resize(m_view->size());
+        connect(m_widget,SIGNAL(iconCountChanged()),this,SLOT(adjustSelf()));
+
+        adjustSelf();
         //themeUpdated();
     }
 }
@@ -359,6 +375,13 @@ bool KIMStatusBar::eventFilter(QObject *watched, QEvent *event)
         case QEvent::GraphicsSceneMouseRelease:
             m_dragging = false;
             unsetCursor();
+
+            if (m_moved) {
+                // store private settings, don't use KIM::Settings directly.
+                KIM::Settings::self()->setFloatingStatusbarPos(pos());
+                KIM::Settings::self()->writeConfig();
+            }
+
             return m_moved;
             break;
         case QEvent::GraphicsSceneMouseMove:
@@ -431,12 +454,46 @@ void KIMStatusBar::themeUpdated()
     m_layout->setImagePath(theme->statusbarImagePath());
     m_layout->setScript(theme->statusbarLayoutPath());
     m_layout->themeUpdated();
-    kDebug() << m_view->size();
     m_layout->doLayout(m_view->size(),"statusbar");
-    generateBackground();
+    //generateBackground();
     resize(m_layout->elementSize().toSize());
     m_view->setGeometry(m_layout->elementRect("statusbar").toRect());
     update();
+}
+
+void KIMStatusBar::adjustSelf()
+{
+    if (!m_widget) {
+        return;
+    }
+    int nIcons = m_widget->iconCount();
+    //int preferSize = KIM::Settings::preferIconSize();
+    qreal width = m_layout->elementSize("statusbar").width();
+    qreal height = m_layout->elementSize("statusbar").height();
+    qreal minHeight;
+    qreal minWidth;
+    QSizeF newSize;
+
+    switch (KIM::Settings::self()->floatingStatusbarLayout()) {
+    case KIM::Settings::StatusbarHorizontal:
+        //newSize = QSizeF(preferSize * nIcons, preferSize);
+        minHeight = qMin(height,(width+0.0)/nIcons);
+        minHeight = qMax(minHeight,22.0);
+        newSize = QSizeF(minHeight*nIcons,minHeight);
+        m_layout->doLayout(newSize,"statusbar");
+        resize(m_layout->elementSize().toSize());
+        break;
+    case KIM::Settings::StatusbarVertical:
+        //newSize = QSizeF(preferSize, preferSize * nIcons);
+        minWidth = qMin(width,(height+0.0)/nIcons);
+        minWidth = qMax(minWidth,22.0);
+        newSize = QSizeF(minWidth,minWidth*nIcons);
+        m_layout->doLayout(newSize,"statusbar");
+        resize(m_layout->elementSize().toSize());
+        break;
+    case KIM::Settings::StatusbarMatrix:
+        break;
+    }
 }
 
 #include "kimstatusbar.moc"

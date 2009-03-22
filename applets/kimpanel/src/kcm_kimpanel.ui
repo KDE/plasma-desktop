@@ -64,7 +64,17 @@
               </widget>
              </item>
              <item>
-              <widget class="KComboBox" name="themeCombox"/>
+              <widget class="KComboBox" name="themeCombox">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="sizeAdjustPolicy">
+                <enum>QComboBox::AdjustToContents</enum>
+               </property>
+              </widget>
              </item>
              <item>
               <widget class="KPushButton" name="newThemeButton">
@@ -176,7 +186,7 @@
                    </widget>
                   </item>
                   <item row="0" column="1">
-                   <widget class="QSpinBox" name="ddd_2">
+                   <widget class="QSpinBox" name="preferIconSizeSpin">
                     <property name="sizePolicy">
                      <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
                       <horstretch>0</horstretch>
@@ -302,7 +312,17 @@
                    </widget>
                   </item>
                   <item row="0" column="1">
-                   <widget class="KComboBox" name="qqq"/>
+                   <widget class="KComboBox" name="statusbarLayoutCombox">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="sizeAdjustPolicy">
+                     <enum>QComboBox::AdjustToContents</enum>
+                    </property>
+                   </widget>
                   </item>
                  </layout>
                 </item>
@@ -425,17 +445,39 @@
                    </widget>
                   </item>
                   <item row="0" column="1">
-                   <widget class="KComboBox" name="LookupTab"/>
+                   <widget class="KComboBox" name="lookuptableLayoutCombox">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="sizeAdjustPolicy">
+                     <enum>QComboBox::AdjustToContents</enum>
+                    </property>
+                   </widget>
                   </item>
                   <item row="1" column="0">
-                   <widget class="QLabel" name="label_6">
+                   <widget class="QLabel" name="lookuptableLayoutConstraintLabel">
+                    <property name="enabled">
+                     <bool>false</bool>
+                    </property>
                     <property name="text">
                      <string>Constraint:</string>
                     </property>
                    </widget>
                   </item>
                   <item row="1" column="1">
-                   <widget class="QSpinBox" name="ddd">
+                   <widget class="QSpinBox" name="lookuptableLayoutConstraint">
+                    <property name="enabled">
+                     <bool>false</bool>
+                    </property>
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
                     <property name="minimum">
                      <number>1</number>
                     </property>
@@ -450,6 +492,9 @@
                  <spacer name="horizontalSpacer_3">
                   <property name="orientation">
                    <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Expanding</enum>
                   </property>
                   <property name="sizeHint" stdset="0">
                    <size>
@@ -531,7 +576,7 @@
  <resources/>
  <connections>
   <connection>
-   <sender>ddd_2</sender>
+   <sender>preferIconSizeSpin</sender>
    <signal>valueChanged(int)</signal>
    <receiver>horizontalSlider</receiver>
    <slot>setValue(int)</slot>
@@ -549,7 +594,7 @@
   <connection>
    <sender>horizontalSlider</sender>
    <signal>valueChanged(int)</signal>
-   <receiver>ddd_2</receiver>
+   <receiver>preferIconSizeSpin</receiver>
    <slot>setValue(int)</slot>
    <hints>
     <hint type="sourcelabel">

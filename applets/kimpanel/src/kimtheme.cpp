@@ -18,6 +18,7 @@
  ***************************************************************************/
 
 #include "kimtheme.h"
+#include "kimpanelsettings.h"
 #include <plasma/theme.h>
 #include <KDesktopFile>
 #include <KStandardDirs>
@@ -48,16 +49,9 @@ public:
             QString themeRoot = theme.left(themeSepIndex);
             int themeNameSepIndex = themeRoot.lastIndexOf('/', -1);
             QString packageName = themeRoot.right(themeRoot.length() - themeNameSepIndex - 1);
-
-            KDesktopFile df(theme);
-            QString name = df.readName();
-            if (name.isEmpty()) {
-                name = packageName;
-            }
-            themeNameList << name;
+            themeNameList << packageName;
         }
     }
-
     void findRealPath(QString &path)
     {
         if (path.startsWith("default:/")) {
@@ -82,9 +76,15 @@ public:
         q->setThemeName(themeName);
     }
 
+    void configUpdated()
+    {
+        q->setThemeName(Settings::self()->theme());
+    }
+
     Theme *q;
 
     QString themeName;
+    QString themePath;
 
     QString colorPath;
     QString statusbarImagePath;
@@ -99,13 +99,14 @@ public:
     QStringList themeNameList;
 };
 
-Theme::Theme(QObject *parent)
-    :QObject(parent),
-     d(new ThemePrivate(this))
+    Theme::Theme(QObject *parent)
+:QObject(parent),
+    d(new ThemePrivate(this))
 {
-    connect(Plasma::Theme::defaultTheme(),SIGNAL(themeChanged()),SLOT(themeUpdated()));
-    d->rescanThemes();
-    setThemeName("default");
+    //connect(Plasma::Theme::defaultTheme(),SIGNAL(themeChanged()),this,SLOT(themeUpdated()));
+    connect(KIM::Settings::self(),SIGNAL(configChanged()),this,SLOT(configUpdated()));
+
+    setThemeName(Settings::self()->theme());
 }
 
 Theme::~Theme()
@@ -121,7 +122,7 @@ public:
         //self.d->isDefault = true;
     }
 
-   Theme self;
+    Theme self;
 };
 
 K_GLOBAL_STATIC(ThemeSingleton, privateThemeSelf)
@@ -138,53 +139,58 @@ bool Theme::isValid() const
 
 void Theme::setThemeName(const QString &themeName)
 {
+    d->rescanThemes();
+    kDebug() << themeName << d->themeNameList;
     int idx = d->themeNameList.indexOf(themeName);
-    if (idx != -1) {
-        d->themeName = themeName;
-        KDesktopFile df(d->themeList[idx]);
-        KConfigGroup cg(&df,"Desktop Entry");
-        d->colorPath = cg.readEntry("X-KIMPanel-Theme-Color","default:/colors");
-        d->statusbarImagePath = cg.readEntry("X-KIMPanel-Theme-StatusbarImage","plasma:/dialogs/panel-background");
-        d->statusbarLayoutPath = cg.readEntry("X-KIMPanel-Theme-StatusbarLayout","default:/frame.js");
-        d->lookuptableImagePath = cg.readEntry("X-KIMPanel-Theme-LookupTableImage","plasma:/dialogs/background");
-        d->lookuptableLayoutPath = cg.readEntry("X-KIMPanel-Theme-StatusbarLayout","default:/frame.js");
-
-        d->findRealPath(d->colorPath);
-        KConfig colorConfig(d->colorPath);
-
-        KConfigGroup statusbarColors(&colorConfig,"Statusbar:Color");
-        QString defaultTextColorName = Plasma::Theme::defaultTheme()->color(Plasma::Theme::TextColor).name();
-        QString defaultBackgroundColorName = Plasma::Theme::defaultTheme()->color(Plasma::Theme::BackgroundColor).name();
-        QString defaultTransparentBackgroundColorName = "transparent";
-        d->colors[StatusbarTextColor].setNamedColor(statusbarColors.readEntry(
-                    "Text",defaultTextColorName));
-        d->colors[StatusbarBackgroundColor].setNamedColor(statusbarColors.readEntry(
-                    "TextBackground",defaultTransparentBackgroundColorName));
-
-        KConfigGroup lookuptableColors(&colorConfig,"LookupTable:Color");
-        d->colors[AuxiliaryTextColor].setNamedColor(lookuptableColors.readEntry(
-                    "AuxiliaryText",defaultTextColorName));
-        d->colors[AuxiliaryBackgroundColor].setNamedColor(lookuptableColors.readEntry(
-                    "AuxiliaryTextBackground",defaultTransparentBackgroundColorName));
-        d->colors[PreeditTextColor].setNamedColor(lookuptableColors.readEntry(
-                    "PreeditText",defaultTextColorName));
-        d->colors[PreeditBackgroundColor].setNamedColor(lookuptableColors.readEntry(
-                    "PreeditTextBackground",defaultTransparentBackgroundColorName));
-        d->colors[LookupTableLabelTextColor].setNamedColor(lookuptableColors.readEntry(
-                    "LookupTableLabelText",defaultBackgroundColorName));
-        d->colors[LookupTableLabelBackgroundColor].setNamedColor(lookuptableColors.readEntry(
-                    "LookupTableLabelBackground",defaultTextColorName));
-        d->colors[LookupTableEntryTextColor].setNamedColor(lookuptableColors.readEntry(
-                    "LookupTableEntryText",defaultTextColorName));
-        d->colors[LookupTableEntryBackgroundColor].setNamedColor(lookuptableColors.readEntry(
-                    "LookupTableEntryBackground",defaultTransparentBackgroundColorName));
-        d->findRealPath(d->statusbarImagePath);
-        d->findRealPath(d->statusbarLayoutPath);
-        d->findRealPath(d->lookuptableImagePath);
-        d->findRealPath(d->lookuptableLayoutPath);
-
-        emit themeChanged();
+    if (idx == -1) {
+        idx = 0;
     }
+    d->themeName = d->themeNameList[idx];
+    d->themePath = d->themeList[idx];
+
+    KDesktopFile df(d->themePath);
+    KConfigGroup cg(&df,"Desktop Entry");
+    d->colorPath = cg.readEntry("X-KIMPanel-Theme-Color","default:/colors");
+    d->statusbarImagePath = cg.readEntry("X-KIMPanel-Theme-StatusbarImage","plasma:/dialogs/panel-background");
+    d->statusbarLayoutPath = cg.readEntry("X-KIMPanel-Theme-StatusbarLayout","default:/frame.js");
+    d->lookuptableImagePath = cg.readEntry("X-KIMPanel-Theme-LookupTableImage","plasma:/dialogs/background");
+    d->lookuptableLayoutPath = cg.readEntry("X-KIMPanel-Theme-StatusbarLayout","default:/frame.js");
+
+    d->findRealPath(d->colorPath);
+    KConfig colorConfig(d->colorPath);
+
+    KConfigGroup statusbarColors(&colorConfig,"Statusbar:Color");
+    QString defaultTextColorName = Plasma::Theme::defaultTheme()->color(Plasma::Theme::TextColor).name();
+    QString defaultBackgroundColorName = Plasma::Theme::defaultTheme()->color(Plasma::Theme::BackgroundColor).name();
+    QString defaultTransparentBackgroundColorName = "transparent";
+    d->colors[StatusbarTextColor].setNamedColor(statusbarColors.readEntry(
+                "Text",defaultTextColorName));
+    d->colors[StatusbarBackgroundColor].setNamedColor(statusbarColors.readEntry(
+                "TextBackground",defaultTransparentBackgroundColorName));
+
+    KConfigGroup lookuptableColors(&colorConfig,"LookupTable:Color");
+    d->colors[AuxiliaryTextColor].setNamedColor(lookuptableColors.readEntry(
+                "AuxiliaryText",defaultTextColorName));
+    d->colors[AuxiliaryBackgroundColor].setNamedColor(lookuptableColors.readEntry(
+                "AuxiliaryTextBackground",defaultTransparentBackgroundColorName));
+    d->colors[PreeditTextColor].setNamedColor(lookuptableColors.readEntry(
+                "PreeditText",defaultTextColorName));
+    d->colors[PreeditBackgroundColor].setNamedColor(lookuptableColors.readEntry(
+                "PreeditTextBackground",defaultTransparentBackgroundColorName));
+    d->colors[LookupTableLabelTextColor].setNamedColor(lookuptableColors.readEntry(
+                "LookupTableLabelText",defaultBackgroundColorName));
+    d->colors[LookupTableLabelBackgroundColor].setNamedColor(lookuptableColors.readEntry(
+                "LookupTableLabelBackground",defaultTransparentBackgroundColorName));
+    d->colors[LookupTableEntryTextColor].setNamedColor(lookuptableColors.readEntry(
+                "LookupTableEntryText",defaultTextColorName));
+    d->colors[LookupTableEntryBackgroundColor].setNamedColor(lookuptableColors.readEntry(
+                "LookupTableEntryBackground",defaultTransparentBackgroundColorName));
+    d->findRealPath(d->statusbarImagePath);
+    d->findRealPath(d->statusbarLayoutPath);
+    d->findRealPath(d->lookuptableImagePath);
+    d->findRealPath(d->lookuptableLayoutPath);
+
+    emit themeChanged();
 }
 
 QString Theme::themeName() const

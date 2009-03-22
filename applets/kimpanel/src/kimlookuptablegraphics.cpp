@@ -42,22 +42,15 @@ KIMLookupTableGraphics::KIMLookupTableGraphics(PanelAgent *agent, QGraphicsItem 
      m_auxVisible(false),
      m_preeditVisible(false),
      m_lookupTableVisible(false),
-     m_tableOrientation(KIM::Horizontal),
      m_orientVar(1),
      m_cg(0),
      m_timerId(-1)
 {
     m_layout = new KIM::SvgScriptLayout();
 
-    KSharedConfigPtr config = KSharedConfig::openConfig("kimpanel");
-    m_cg = new KConfigGroup(config,"LookupTable");
-    m_tableOrientation = (KIM::LookupTableOrientation)m_cg->readEntry("Orientation",(int)KIM::Horizontal);
-    if ((m_tableOrientation == KIM::FixedRows) || (m_tableOrientation == KIM::FixedColumns)) {
-        m_orientVar = m_cg->readEntry("OrientationFixedValue",1);
-        if (m_orientVar <= 0) {
-            m_orientVar = 1;
-        }
-    }
+    connect(KIM::Settings::self(),SIGNAL(configChanged()),
+            this,SLOT(configUpdated()));
+    configUpdated();
 
     //setSizePolicy(QSizePolicy::Preferred,QSizePolicy::Preferred);
     setContentsMargins(0,0,0,0);
@@ -182,24 +175,24 @@ void KIMLookupTableGraphics::updateLookupTable(const LookupTable &lookup_table)
         item->enableHoverEffect(true);
         m_tableLayout->addItem(item,row,col);
         switch (m_tableOrientation) {
-        case KIM::Horizontal:
+        case KIM::Settings::LookupTableHorizontal:
             col++;
             break;
-        case KIM::Vertical:
+        case KIM::Settings::LookupTableVertical:
             row++;
             break;
-        case KIM::FixedRows:
+        case KIM::Settings::LookupTableFixedRows:
             col++;
             if (col >= max_col) {
                 col = 0;
                 row++;
             }
             break;
-        case KIM::FixedColumns:
-            col++;
-            if (col >= m_orientVar) {
-                col = 0;
-                row++;
+        case KIM::Settings::LookupTableFixedColumns:
+            row++;
+            if (row >= max_col) {
+                row = 0;
+                col++;
             }
             break;
         }
@@ -344,6 +337,19 @@ void KIMLookupTableGraphics::generateBackground()
     p.drawRect(m_layout->elementRect("pagedown_area"));
     p.drawRect(m_layout->elementRect("pageup_area"));
     p.drawRect(m_layout->elementRect("lookuptable_area"));
+}
+
+void KIMLookupTableGraphics::configUpdated()
+{
+    m_tableOrientation = KIM::Settings::self()->lookupTableLayout();
+    if ((m_tableOrientation == KIM::Settings::LookupTableFixedRows) || (m_tableOrientation == KIM::Settings::LookupTableFixedColumns)) {
+        m_orientVar = KIM::Settings::self()->lookupTableConstraint();
+        if (m_orientVar <= 0) {
+            m_orientVar = 1;
+        }
+    }
+
+
 }
 
 #include "kimlookuptablegraphics.moc"

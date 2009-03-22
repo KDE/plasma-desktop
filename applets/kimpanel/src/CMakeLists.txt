@@ -21,7 +21,10 @@ set(kimpanelruntime_SRCS
 
    kimpanelagent.cpp
 
+   kimpanelsettings.cpp
+
    kimtheme.cpp
+   kimthemepackage.cpp
 
    paintutils.cpp
    )
@@ -37,6 +40,7 @@ qt4_add_dbus_adaptor(kimpanelruntime_SRCS
 kde4_add_kcfg_files(kimpanelruntime_SRCS kimpanelconfig.kcfgc)
 kde4_add_library(kimpanelruntime SHARED ${kimpanelruntime_SRCS})
 target_link_libraries(kimpanelruntime
+   ${KDE4_KNEWSTUFF2_LIBS} 
    ${KDE4_PLASMA_LIBS} 
    ${KDE4_KIO_LIBS} 
    ${KDE4_KDEUI_LIBS}
@@ -50,15 +54,22 @@ install(TARGETS kimpanelruntime ${INSTALL_TARGETS_DEFAULT_ARGS})
 install(FILES kimpanelconfig.kcfg DESTINATION ${KCFG_INSTALL_DIR} )
 install(FILES org.kde.impanel.xml 
    DESTINATION ${DBUS_INTERFACES_INSTALL_DIR})
+install(FILES kimpanel-themes.knsrc DESTINATION ${CONFIG_INSTALL_DIR})
 
 set(kcm_kimpanel_SRCS
    kcm_kimpanel.cpp
    )
 kde4_add_ui_files(kcm_kimpanel_SRCS kcm_kimpanel.ui)
 kde4_add_plugin(kcm_kimpanel ${kcm_kimpanel_SRCS})
-target_link_libraries(kcm_kimpanel ${KDE4_KIO_LIBS} ${KDE4_KNEWSTUFF2_LIBS} ${KDE4_KDEUI_LIBS})
+target_link_libraries(kcm_kimpanel ${KDE4_KIO_LIBS} 
+   ${KDE4_KNEWSTUFF2_LIBS} 
+   ${KDE4_KDEUI_LIBS} 
+   ${KDE4_KIO_LIBS} 
+   ${KDE4_KFILE_LIBS} 
+   kimpanelruntime)
 install(TARGETS kcm_kimpanel  DESTINATION ${PLUGIN_INSTALL_DIR})
 install( FILES kcm_kimpanel.desktop  DESTINATION  ${SERVICES_INSTALL_DIR} )
+install( FILES settings-input-method.desktop DESTINATION  ${SERVICES_INSTALL_DIR} )
 
 set(kimpanel_SRCS
    main.cpp
@@ -75,6 +86,7 @@ kde4_add_plugin(plasma_applet_kimpanel ${kimpanel_applet_SRCS})
 target_link_libraries(plasma_applet_kimpanel 
    kimpanelruntime
    ${KDE4_PLASMA_LIBS} 
+   ${KDE4_KUTILS_LIBS} 
    ${X11_LIBRARIES}
    ${X11_Xrender_LIB}
    )

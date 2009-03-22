@@ -1,4 +1,4 @@
-#include "kimpanelconfig.h"
+#include "kimpanelsettings.h"
 #include "kimtheme.h"
 #include <plasma/svg.h>
 #include <KApplication>

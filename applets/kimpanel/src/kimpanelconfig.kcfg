@@ -4,6 +4,8 @@
     xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
     http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
     <kcfgfile name="kimpanelrc"/>
+    <include>QDesktopWidget</include>
+    <include>QPoint</include>
     <group name="Appearance">
         <entry name="Theme" type="String">
             <label>Defines the current theme.</label>
@@ -16,9 +18,12 @@
             <min>16</min>
             <max>128</max>
         </entry>
-        <entry name="FloatingStatusBarLayout" type="Enum">
+        <entry name="FloatingStatusbarPos" type="Point">
+            <default code="true">QDesktopWidget().availableGeometry().bottomRight() - QPoint(200,100)</default>
+        </entry>
+        <entry name="FloatingStatusbarLayout" type="Enum">
             <label>Defines how the floating statusbar layout its icons.</label>
-            <choices>
+            <choices prefix="Statusbar">
                 <choice name="Horizontal">
                     <label>Horizontally expand.</label>
                 </choice>
@@ -32,20 +37,25 @@
         </entry>
         <entry name="LookupTableLayout" type="Enum">
             <label>Defines the layout of candidate words list.</label>
-            <choices>
+            <choices prefix="LookupTable">
                 <choice name="Horizontal">
                     <label>Put all words in one row.</label>
                 </choice>
                 <choice name="Vertical">
                     <label>Put all words in one col.</label>
                 </choice>
-                <choice name="Matrix">
-                    <label>Multiple rows/cols.</label>
+                <choice name="FixedRows">
+                    <label>Multiple rows/cols, but fixed rows.</label>
+                </choice>
+                <choice name="FixedColumns">
+                    <label>Multiple rows/cols, but fixed columns.</label>
                 </choice>
             </choices>
         </entry>
-        <entry name="LookupTableConstraint" type="UInt">
+        <entry name="LookupTableConstraint" type="Int">
             <label>Defines how the layout of candidate words list.</label>
+            <min>1</min>
+            <max>9</max>
         </entry>
     </group>
 </kcfg>

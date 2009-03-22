@@ -67,6 +67,7 @@ public Q_SLOTS:
 
 private Q_SLOTS:
     void themeUpdated();
+    void adjustSelf();
 
 protected:
     void paintEvent(QPaintEvent *e);

@@ -26,7 +26,7 @@
 #include <plasma/widgets/flashinglabel.h>
 #include <plasma/widgets/iconwidget.h>
 
-#include "kimglobals.h"
+#include "kimpanelsettings.h"
 #include "kimagenttype.h"
 #include "kimtheme.h"
 #include "kimsvgscriptlayout.h"
@@ -73,6 +73,7 @@ private Q_SLOTS:
     void themeUpdated();
     void reLayout();
     void generateBackground();
+    void configUpdated();
 
 private:
     KIM::SvgScriptLayout *m_layout;
@@ -107,7 +108,7 @@ private:
 
     int m_spacing;
 
-    KIM::LookupTableOrientation m_tableOrientation;
+    int m_tableOrientation;
     int m_orientVar;
 
     KConfigGroup *m_cg;

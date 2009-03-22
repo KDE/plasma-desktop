@@ -17,17 +17,26 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#ifndef KIM_GLOBALS_H
-#define KIM_GLOBALS_H
+#ifndef KIMPANELSETTINGS_H
+#define KIMPANELSETTINGS_H
+
+#include "kimpanelruntime_export.h"
+#include "kimpanelconfig.h"
 
 namespace KIM
 {
-    enum LookupTableOrientation {
-        Horizontal = 1,
-        Vertical,
-        FixedRows,
-        FixedColumns
-    };
-}
+    class KIMPANELRUNTIME_EXPORT Settings: public BaseSettings
+    {
+        Q_OBJECT
+    public:
+        Settings();
+        ~Settings();
 
-#endif // KIM_GLOBALS_H
+        static Settings *self();
+
+    public Q_SLOTS:
+        void settingsFileChanged();
+    };
+} // namespace KIM
+
+#endif // KIMPANELSETTINGS_H
