@@ -65,11 +65,11 @@ int main(int argc, char *argv[])
                 .translated( -fm.boundingRect(preedit_text).topLeft())
                 .topLeft(),preedit_text);
     } 
-    if (!layout->elementRect("pagedown_area").isNull()) {
-        p.drawPixmap(layout->elementRect("pagedown_area").topLeft(),KIcon("arrow-left").pixmap(16,16));
-    } 
     if (!layout->elementRect("pageup_area").isNull()) {
-        p.drawPixmap(layout->elementRect("pageup_area").topLeft(),KIcon("arrow-right").pixmap(16,16));
+        p.drawPixmap(layout->elementRect("pageup_area").topLeft(),KIcon("arrow-left").pixmap(16,16));
+    } 
+    if (!layout->elementRect("pagedown_area").isNull()) {
+        p.drawPixmap(layout->elementRect("pagedown_area").topLeft(),KIcon("arrow-right").pixmap(16,16));
     } 
     if (!layout->elementRect("lookuptable_area").isNull()) {
         p.drawText(layout->elementRect("lookuptable_area")
