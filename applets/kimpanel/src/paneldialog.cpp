@@ -108,7 +108,7 @@ void KIMPanel::showConfig()
         dialog->addModule(srv->library());
     }
 
-    dialog->exec();
+    dialog->show();
 
     delete dialog;
 }
