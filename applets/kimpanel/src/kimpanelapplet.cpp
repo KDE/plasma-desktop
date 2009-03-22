@@ -55,6 +55,9 @@ KIMPanelApplet::KIMPanelApplet(QObject *parent, const QVariantList &args)
 
 KIMPanelApplet::~KIMPanelApplet()
 {
+    if (m_statusbar) {
+        m_statusbar->close();
+    }
 }
 
 void KIMPanelApplet::saveState(KConfigGroup &config) const

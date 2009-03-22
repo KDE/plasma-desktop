@@ -180,7 +180,7 @@ void Theme::setThemeName(const QString &themeName)
     d->colors[LookupTableLabelTextColor].setNamedColor(lookuptableColors.readEntry(
                 "LookupTableLabelText",defaultBackgroundColorName));
     d->colors[LookupTableLabelBackgroundColor].setNamedColor(lookuptableColors.readEntry(
-                "LookupTableLabelBackground",defaultTransparentBackgroundColorName));
+                "LookupTableLabelBackground",defaultTextColorName));
     d->colors[LookupTableEntryTextColor].setNamedColor(lookuptableColors.readEntry(
                 "LookupTableEntryText",defaultTextColorName));
     d->colors[LookupTableEntryBackgroundColor].setNamedColor(lookuptableColors.readEntry(
