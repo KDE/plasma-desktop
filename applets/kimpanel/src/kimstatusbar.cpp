@@ -337,11 +337,13 @@ void KIMStatusBar::adjustSelf()
     switch (KIM::Settings::self()->floatingStatusbarLayout()) {
     case KIM::Settings::StatusbarHorizontal:
         newSize = QSizeF(left+right+minHeight*nIcons,top+bottom+minHeight);
-        resize(newSize.toSize());
+        setMinimumSize(newSize.toSize());
+        setMaximumSize(newSize.toSize());
         break;
     case KIM::Settings::StatusbarVertical:
         newSize = QSizeF(left+right+minWidth,top+bottom+minWidth*nIcons);
-        resize(newSize.toSize());
+        setMinimumSize(newSize.toSize());
+        setMaximumSize(newSize.toSize());
         break;
     case KIM::Settings::StatusbarMatrix:
         break;
