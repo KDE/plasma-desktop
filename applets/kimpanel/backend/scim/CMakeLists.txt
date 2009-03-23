@@ -1,5 +1,4 @@
 project(scim_panel_dbus)
-set(CMAKE_BUILD_TYPE Debug)
 set(QT_USE_QTGUI FALSE)
 set(QT_USE_QTDBUS TRUE)
 find_package(Qt4 REQUIRED)
