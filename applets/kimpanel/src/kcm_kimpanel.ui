@@ -107,7 +107,7 @@
               </sizepolicy>
              </property>
              <property name="text">
-              <string>Choose a theme and you can see the preview here.</string>
+              <string>Choose a theme (preview can be seen here.)</string>
              </property>
              <property name="wordWrap">
               <bool>true</bool>
@@ -135,7 +135,7 @@
      </widget>
      <widget class="QWidget" name="tab">
       <attribute name="title">
-       <string>Statusbar</string>
+       <string>Status bar</string>
       </attribute>
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
@@ -278,7 +278,7 @@
                  </sizepolicy>
                 </property>
                 <property name="text">
-                 <string>When you resize the panel of the applet to larger size, several rows/columns are used to layout icons</string>
+                 <string>When the size of the applet's panel is increased, several rows/columns are used to layout icons.</string>
                 </property>
                 <property name="wordWrap">
                  <bool>true</bool>
@@ -297,7 +297,7 @@
               </sizepolicy>
              </property>
              <property name="title">
-              <string>Self size adjustment</string>
+              <string>Automatic size adjustment</string>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_8">
               <item>
@@ -350,7 +350,7 @@
                  </sizepolicy>
                 </property>
                 <property name="text">
-                 <string>Define how statusbar change its size when icons appear or disappear.</string>
+                 <string>Specify how the size of the status bar should change when icons appear or disappear.</string>
                 </property>
                 <property name="wordWrap">
                  <bool>true</bool>
@@ -397,7 +397,7 @@
      </widget>
      <widget class="QWidget" name="tab_2">
       <attribute name="title">
-       <string>CandidateWindow</string>
+       <string>Candidate Window</string>
       </attribute>
       <layout class="QVBoxLayout" name="verticalLayout_3">
        <item>
@@ -427,7 +427,7 @@
            <item>
             <widget class="QGroupBox" name="groupBox_3">
              <property name="title">
-              <string>Candidate words layout</string>
+              <string>Candidate word layout</string>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_7">
               <item>

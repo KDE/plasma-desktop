@@ -13,7 +13,7 @@
     </group>
     <group name="Layout">
         <entry name="PreferIconSize" type="Int">
-            <label>Defines your prefer size of icon in statusbar.</label>
+            <label>Defines your preferred status bar icon size.</label>
             <default>48</default>
             <min>16</min>
             <max>128</max>
@@ -22,21 +22,21 @@
             <default code="true">QDesktopWidget().availableGeometry().bottomRight() - QPoint(200,100)</default>
         </entry>
         <entry name="FloatingStatusbarLayout" type="Enum">
-            <label>Defines how the floating statusbar layout its icons.</label>
+            <label>Defines how icons are positioned in the floating status bar.</label>
             <choices prefix="Statusbar">
                 <choice name="Horizontal">
-                    <label>Horizontally expand.</label>
+                    <label>Expand horizontally.</label>
                 </choice>
                 <choice name="Vertical">
-                    <label>Vertically expand.</label>
+                    <label>Expand vertically.</label>
                 </choice>
                 <choice name="Matrix">
-                    <label>Can have multiple rows/cols.</label>
+                    <label>Use multiple rows/cols.</label>
                 </choice>
             </choices>
         </entry>
         <entry name="LookupTableLayout" type="Enum">
-            <label>Defines the layout of candidate words list.</label>
+            <label>Defines the layout of the list of candidate words.</label>
             <choices prefix="LookupTable">
                 <choice name="Horizontal">
                     <label>Put all words in one row.</label>
@@ -53,7 +53,7 @@
             </choices>
         </entry>
         <entry name="LookupTableConstraint" type="Int">
-            <label>Defines how the layout of candidate words list.</label>
+            <label>Restricts the layout of the list of candidate words.</label>
             <min>1</min>
             <max>9</max>
         </entry>

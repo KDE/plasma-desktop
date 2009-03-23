@@ -58,7 +58,7 @@ void KIMPanelLayout::removeAt(int i)
     updateGeometry();
 }
 
-QSizeF KIMPanelLayout::sizeHint(Qt::SizeHint which, const QSizeF & constraint) const
+QSizeF KIMPanelLayout::sizeHint(Qt::SizeHint which, const QSizeF & /*constraint*/) const
 {
     QSizeF sizeHint;
     switch (which) {
