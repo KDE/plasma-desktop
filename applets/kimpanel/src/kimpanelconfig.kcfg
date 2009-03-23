@@ -6,15 +6,10 @@
     <kcfgfile name="kimpanelrc"/>
     <include>QDesktopWidget</include>
     <include>QPoint</include>
-    <group name="Appearance">
-        <entry name="Theme" type="String">
-            <label>Defines the current theme.</label>
-        </entry>
-    </group>
     <group name="Layout">
         <entry name="PreferIconSize" type="Int">
             <label>Defines your preferred status bar icon size.</label>
-            <default>48</default>
+            <default>32</default>
             <min>16</min>
             <max>128</max>
         </entry>
@@ -34,6 +29,7 @@
                     <label>Use multiple rows/cols.</label>
                 </choice>
             </choices>
+            <default>Horizontal</default>
         </entry>
         <entry name="LookupTableLayout" type="Enum">
             <label>Defines the layout of the list of candidate words.</label>
@@ -51,6 +47,7 @@
                     <label>Multiple rows/cols, but fixed columns.</label>
                 </choice>
             </choices>
+            <default>Horizontal</default>
         </entry>
         <entry name="LookupTableConstraint" type="Int">
             <label>Restricts the layout of the list of candidate words.</label>

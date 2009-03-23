@@ -18,25 +18,40 @@
  ***************************************************************************/
 
 #include "kimstatusbar.h"
-#include "paintutils.h"
 #include "kimpanelsettings.h"
+#include "paintutils.h"
 
 #include <kglobal.h>
 #include <kapplication.h>
 #include <kconfiggroup.h>
 #include <kiconloader.h>
 #include <kicon.h>
+#include <QtCore>
+#include <QtGui>
 
 #ifdef Q_WS_X11
+#include <QX11Info>
 #include <NETRootInfo>
 #include <KWindowSystem>
 #include <X11/Xlib.h>
 #endif
 
 
-KIMStatusBar::KIMStatusBar(QWidget *parent, const QList<QAction *> extra_actions):QWidget(parent)
+KIMStatusBar::KIMStatusBar(QWidget *parent, const QList<QAction *> extra_actions)
+    : QWidget(parent),
+      m_desktop(new QDesktopWidget())
 {
-    m_layout = new KIM::SvgScriptLayout();
+    m_background = new Plasma::FrameSvg(this);
+
+    m_background->setImagePath("widgets/panel-background");
+    //m_background->setImagePath("dialogs/background");
+    
+    //m_background->setEnabledBorders(Plasma::FrameSvg::NoBorder);
+    m_background->setEnabledBorders(Plasma::FrameSvg::AllBorders);
+    connect(m_background, SIGNAL(repaintNeeded()), SLOT(update()));
+
+    connect(Plasma::Theme::defaultTheme(), SIGNAL(themeChanged()),
+        SLOT(themeUpdated()));
 
     setAttribute(Qt::WA_TranslucentBackground);
     QPalette pal = palette();
@@ -59,194 +74,139 @@ KIMStatusBar::KIMStatusBar(QWidget *parent, const QList<QAction *> extra_actions
     m_view->setFrameShape(QFrame::NoFrame);
     m_view->viewport()->setAutoFillBackground(false);
     m_view->setContentsMargins(0,0,0,0);
-    //m_view->resize(200,50);
 
-    m_widget = 0;
+    m_layout = new QVBoxLayout(this);
+    m_layout->setContentsMargins(0,0,0,0);
+    m_layout->setSpacing(0);
+    setLayout(m_layout);
+
+    m_layout->addWidget(m_view);
+
+    m_widget = 0;//new KIMStatusBarGraphics();
+    //m_widget->showLogo(true);
+    //m_widget->setCollapsible(true);
+
+//X     connect(m_widget,SIGNAL(triggerProperty(const QString &)),
+//X             this,SIGNAL(triggerProperty(const QString &)));
+
+    //m_scene->addItem(m_widget);
 
     setContextMenuPolicy(Qt::ActionsContextMenu);
 
     m_extraActions = extra_actions;
     m_dragging = false;
 
-    m_desktop = new QDesktopWidget();
-
-    // read private settings, don't use Settings::self()
-    move(KIM::Settings::self()->floatingStatusbarPos());
-
-    connect(KIM::Settings::self(),SIGNAL(configChanged()),this,SLOT(adjustSelf()));
-
     m_timer_id = -1;
 
     KIconLoader::global()->newIconLoader();
-
-    m_resizeStartCorner = Plasma::Dialog::NoCorner;
-    m_resizeCorners = Plasma::Dialog::All;
-    updateResizeCorners();
-
     themeUpdated();
-    connect(KIM::Theme::defaultTheme(),SIGNAL(themeChanged()),this,SLOT(themeUpdated()));
 
-//    adjustSelf();
+    move(KIM::Settings::self()->floatingStatusbarPos());
+
+    connect(KIM::Settings::self(),SIGNAL(configChanged()),this,SLOT(adjustSelf()));
+    adjustSelf();
+
 }
 
 KIMStatusBar::~KIMStatusBar()
 {
-    delete m_config;
 }
+
+void KIMStatusBar::themeUpdated()
+{
+    qreal left;
+    qreal right;
+    qreal top;
+    qreal bottom;
+
+    m_background->getMargins(left,top,right,bottom);
+    setContentsMargins(left, top, right, bottom);
+
+    Plasma::Theme *theme = Plasma::Theme::defaultTheme();
+    QColor buttonBgColor = theme->color(Plasma::Theme::BackgroundColor);
+#if 0
+    m_button_stylesheet = QString("QToolButton { border: 1px solid %4; border-radius: 4px; padding: 2px;"
+                                       " background-color: rgba(%1, %2, %3, %5); }")
+                                      .arg(buttonBgColor.red())
+                                      .arg(buttonBgColor.green())
+                                      .arg(buttonBgColor.blue())
+                                      .arg(theme->color(Plasma::Theme::HighlightColor).name(), "50%");
+#endif
+    m_button_stylesheet = QString("QToolButton { background-color: transparent; }");
+    m_button_stylesheet += QString("QToolButton:hover { border: 2px solid %1; }")
+                               .arg(theme->color(Plasma::Theme::HighlightColor).name());
 
 #if 0
-void KIMStatusBar::setEnabled(bool to_enable)
-{
-}
+    m_button_stylesheet += QString("QToolButton:focus { border: 2px solid %1; }")
+                               .arg(theme->color(Plasma::Theme::HighlightColor).name());
+#endif
+    foreach (QToolButton *btn, prop_map.values()) {
+        btn->setStyleSheet(m_button_stylesheet);
+    
+    }
 
-void KIMStatusBar::updateProperty(const Property &prop)
-{
-    //m_widget->updateProperty(prop);
-}
+    m_background->setImagePath("widgets/panel-background");
+    m_background->setElementPrefix("south");
+    //kDebug() << "stylesheet is" << m_button_stylesheet;
+    QSize widget_size;
+    if (m_widget) {
+        widget_size = m_widget->effectiveSizeHint(Qt::MinimumSize).toSize();
+    } else {
+        widget_size = QSize(0,0);
+    }
+    setMinimumSize(left + right + widget_size.width(),
+            top + bottom + widget_size.height());
 
-void KIMStatusBar::registerProperties(const QList<Property> &props)
-{
-    //m_widget->registerProperties(props);
 }
-#endif 
 
 void KIMStatusBar::paintEvent(QPaintEvent *e)
 {
     QPainter p(this);
     p.setClipRect(e->rect());
     p.setCompositionMode(QPainter::CompositionMode_Source);
-    p.drawPixmap(e->rect(),m_background,e->rect());
+    p.fillRect(e->rect(),Qt::transparent);
+    m_background->resizeFrame(size());
+    m_background->paintFrame(&p);
 }
 
 void KIMStatusBar::resizeEvent(QResizeEvent *e)
 {
+    m_background->resizeFrame(e->size());
+
+    setMask(m_background->mask());
     QWidget::resizeEvent(e);
-    generateBackground();
-    if (!KWindowSystem::compositingActive()) {
-        setMask(m_mask);
-    } else {
-        setMask(rect());
-    }
-    m_view->setGeometry(m_layout->elementRect("statusbar").toRect());
     if (m_widget) {
         m_widget->resize(m_view->size());
         m_view->setSceneRect(m_widget->mapToScene(m_widget->boundingRect()).boundingRect());
         m_view->centerOn(m_widget);
     }
-    updateResizeCorners();
-    update();
+    if ((width() + x() > m_desktop->availableGeometry().width()) ||
+        (height() + y() > m_desktop->availableGeometry().height())) {
+
+        move(qMin(m_desktop->availableGeometry().width()-width(),x()),
+            qMin(m_desktop->availableGeometry().height()-height(),y()));
+    }
 }
 
 
 void KIMStatusBar::mouseMoveEvent(QMouseEvent *event)
 {
-    switch (resizeCorner(event->pos())) {
-    case Plasma::Dialog::NorthEast:
-        setCursor(Qt::SizeBDiagCursor);
-        break;
-    case Plasma::Dialog::NorthWest:
-        setCursor(Qt::SizeFDiagCursor);
-        break;
-    case Plasma::Dialog::SouthEast:
-        setCursor(Qt::SizeFDiagCursor);
-        break;
-    case Plasma::Dialog::SouthWest:
-        setCursor(Qt::SizeBDiagCursor);
-        break;
-    default:
-        if (!(event->buttons() & Qt::LeftButton)) {
-            releaseMouse();
-            m_resizeStartCorner = Plasma::Dialog::NoCorner;
-            unsetCursor();
-        } else if (m_dragging) {
-            move(QCursor::pos() - m_init_pos);
-            m_moved = true;
-        }
-    }
-
-    // here we take care of resize..
-    if (m_resizeStartCorner != Plasma::Dialog::NoCorner) {
-        QRect r = m_view->geometry();
-        QSizeF newSize;
-        QRectF newGeometry = geometry();
-
-        switch(m_resizeStartCorner) {
-            case Plasma::Dialog::NorthEast:
-                newSize = QRect(QPoint(r.left(),event->y()),
-                        QPoint(event->x(),r.bottom())).size();
-                m_layout->doLayout(newSize,"statusbar");
-                newGeometry = m_layout->elementRect();
-                r = m_layout->elementRect("statusbar").toRect();
-                newGeometry.moveTopRight(event->globalPos()+
-                        (m_layout->elementRect().topRight() - r.topRight()));
-                break;
-            case Plasma::Dialog::NorthWest:
-                newSize = QRect(event->pos(),r.bottomRight()).size();
-                m_layout->doLayout(newSize,"statusbar");
-                newGeometry = m_layout->elementRect();
-                r = m_layout->elementRect("statusbar").toRect();
-                newGeometry.moveTopLeft(event->globalPos()-r.topLeft());
-                break;
-            case Plasma::Dialog::SouthWest:
-                newSize = QRect(QPoint(event->x(),r.top()),
-                        QPoint(r.right(),event->y())).size();
-                m_layout->doLayout(newSize,"statusbar");
-                newGeometry = m_layout->elementRect();
-                r = m_layout->elementRect("statusbar").toRect();
-                newGeometry.moveBottomLeft(event->globalPos()+
-                        (m_layout->elementRect().bottomLeft() - r.bottomLeft()));
-                break;
-            case Plasma::Dialog::SouthEast:
-                newSize = QRect(r.topLeft(),event->pos()).size();
-                m_layout->doLayout(newSize,"statusbar");
-                newGeometry = m_layout->elementRect();
-                r = m_layout->elementRect("statusbar").toRect();
-                newGeometry.moveBottomRight(event->globalPos()+
-                        (m_layout->elementRect().bottomRight() - r.bottomRight()));
-                break;
-             default:
-                // impossible to reach here
-                break;
-        }
-        setGeometry(newGeometry.toRect());
-        adjustSelf();
-    }
-
     QWidget::mouseMoveEvent(event);
 }
 
 void KIMStatusBar::mousePressEvent(QMouseEvent *event)
 {
-    m_resizeStartCorner = resizeCorner(event->pos());
-    if (m_resizeStartCorner == Plasma::Dialog::NoCorner) {
-        m_dragging = true;
-        m_moved = false;
-        m_init_pos = mapFromGlobal(QCursor::pos());
-        setCursor(Qt::SizeAllCursor);
-    }
     QWidget::mousePressEvent(event);
 }
 
 void KIMStatusBar::mouseReleaseEvent(QMouseEvent *event)
 {
-    if (m_resizeStartCorner != Plasma::Dialog::NoCorner) {
-        releaseMouse();
-
-        m_resizeStartCorner = Plasma::Dialog::NoCorner;
-        //emit dialogResized();
-    }
-
     m_dragging = false;
     unsetCursor();
 
+    KIM::Settings::setFloatingStatusbarPos(pos());
+
     QWidget::mouseReleaseEvent(event);
-
-    if (m_moved) {
-        // store private settings, don't use KIM::Settings directly.
-        KIM::Settings::self()->setFloatingStatusbarPos(pos());
-        KIM::Settings::self()->writeConfig();
-    }
-
 }
 
 #if 0
@@ -273,6 +233,7 @@ void KIMStatusBar::timerEvent(QTimerEvent *e)
             KIcon icon;
 
             if (!prop.icon.isEmpty()) {
+                //        icon_pixmap = KIcon(prop.icon).pixmap(KIconLoader::SizeSmall,KIconLoader::SizeSmall,Qt::KeepAspectRatio);
                 icon = KIcon(prop.icon);
             } else {
                 icon = KIcon(renderText(prop.label).scaled(KIconLoader::SizeSmall,KIconLoader::SizeSmall));
@@ -281,6 +242,7 @@ void KIMStatusBar::timerEvent(QTimerEvent *e)
             prop_button->setIcon(icon);
             prop_button->setToolTip(prop.tip);
 
+            m_layout->insertWidget(m_layout->count()-m_extraActions.size(),prop_button);
             prop_map.insert(prop.key,prop_button);
             prop_mapper.setMapping(prop_button,prop.key);
             connect(prop_button,SIGNAL(clicked()),&prop_mapper,SLOT(map()));
@@ -289,8 +251,7 @@ void KIMStatusBar::timerEvent(QTimerEvent *e)
         QWidget::timerEvent(e);
     }
 }
-
-#endif
+#endif 
 
 bool KIMStatusBar::event(QEvent *e)
 {
@@ -303,36 +264,8 @@ bool KIMStatusBar::event(QEvent *e)
     return QWidget::event(e);
 }
 
-void KIMStatusBar::updateResizeCorners()
-{
-    const int resizeAreaMargin = 10;
-    const QRect r = m_layout->elementRect("statusbar").toRect();
-
-    m_resizeAreas.clear();
-    if (m_resizeCorners & Plasma::Dialog::NorthEast) {
-        m_resizeAreas[Plasma::Dialog::NorthEast] = QRect(r.right() - resizeAreaMargin, r.top(),
-                resizeAreaMargin, resizeAreaMargin);
-    }
-
-    if (m_resizeCorners & Plasma::Dialog::NorthWest) {
-        m_resizeAreas[Plasma::Dialog::NorthWest] = QRect(r.left(), r.top(), resizeAreaMargin, resizeAreaMargin);
-    }
-
-    if (m_resizeCorners & Plasma::Dialog::SouthEast) {
-        m_resizeAreas[Plasma::Dialog::SouthEast] = QRect(r.right() - resizeAreaMargin,
-                r.bottom() - resizeAreaMargin,
-                resizeAreaMargin, resizeAreaMargin);
-    }
-
-    if (m_resizeCorners & Plasma::Dialog::SouthWest) {
-        m_resizeAreas[Plasma::Dialog::SouthWest] = QRect(r.left(), r.bottom() - resizeAreaMargin,
-                resizeAreaMargin, resizeAreaMargin);
-    }
-}
-
 void KIMStatusBar::setGraphicsWidget(KIMStatusBarGraphics *widget)
-{
-    if (m_widget) {
+{    if (m_widget) {
         disconnect(m_widget,SIGNAL(iconCountChanged()),this,SLOT(adjustSelf()));
         m_scene->removeItem(m_widget);
         foreach (QAction *action,m_widget->actions()) {
@@ -347,25 +280,21 @@ void KIMStatusBar::setGraphicsWidget(KIMStatusBarGraphics *widget)
         }
         m_widget->setParent(0);
         m_scene->addItem(m_widget);
-        m_layout->doLayout(m_view->size(),"statusbar");
-        m_widget->resize(m_view->size());
         connect(m_widget,SIGNAL(iconCountChanged()),this,SLOT(adjustSelf()));
-
         adjustSelf();
         //themeUpdated();
     }
+
 }
 
 bool KIMStatusBar::eventFilter(QObject *watched, QEvent *event)
 {
     if (watched == m_scene) {
+        QGraphicsSceneMouseEvent *e;
         switch (event->type()) {
         case QEvent::GraphicsSceneMousePress:
-            if (resizeCorner(mapFromGlobal(QCursor::pos())) != Plasma::Dialog::NoCorner) {
-                grabMouse();
-                return true;
-            } else {
-                releaseMouse();
+            e = dynamic_cast<QGraphicsSceneMouseEvent *>(event);
+            if (e->button() == Qt::LeftButton) {
                 m_dragging = true;
                 m_moved = false;
                 m_init_pos = mapFromGlobal(QCursor::pos());
@@ -375,13 +304,7 @@ bool KIMStatusBar::eventFilter(QObject *watched, QEvent *event)
         case QEvent::GraphicsSceneMouseRelease:
             m_dragging = false;
             unsetCursor();
-
-            if (m_moved) {
-                // store private settings, don't use KIM::Settings directly.
-                KIM::Settings::self()->setFloatingStatusbarPos(pos());
-                KIM::Settings::self()->writeConfig();
-            }
-
+            KIM::Settings::setFloatingStatusbarPos(pos());
             return m_moved;
             break;
         case QEvent::GraphicsSceneMouseMove:
@@ -389,27 +312,6 @@ bool KIMStatusBar::eventFilter(QObject *watched, QEvent *event)
                 setCursor(Qt::SizeAllCursor);
                 move(QCursor::pos() - m_init_pos);
                 m_moved = true;
-            } else {
-                switch (resizeCorner(mapFromGlobal(QCursor::pos()))) {
-                case Plasma::Dialog::NorthEast:
-                    setCursor(Qt::SizeBDiagCursor);
-                    break;
-                case Plasma::Dialog::NorthWest:
-                    setCursor(Qt::SizeFDiagCursor);
-                    break;
-                case Plasma::Dialog::SouthEast:
-                    setCursor(Qt::SizeFDiagCursor);
-                    break;
-                case Plasma::Dialog::SouthWest:
-                    setCursor(Qt::SizeBDiagCursor);
-                    break;
-                default:
-                    QGraphicsSceneMouseEvent *e = dynamic_cast<QGraphicsSceneMouseEvent *>(event);
-                    if (!(e->buttons() & Qt::LeftButton)) {
-                        m_resizeStartCorner = Plasma::Dialog::NoCorner;
-                        unsetCursor();
-                    }
-                }
             }
             break;
         default:
@@ -419,48 +321,6 @@ bool KIMStatusBar::eventFilter(QObject *watched, QEvent *event)
     return QWidget::eventFilter(watched, event);
 }
 
-void KIMStatusBar::generateBackground()
-{
-    m_background = QPixmap(m_layout->elementSize().toSize());
-    m_background.fill(Qt::transparent);
-    QPainter p(&m_background);
-    m_layout->paint(&p);
-    p.end();
-    m_mask = m_background.mask();
-    p.begin(&m_mask);
-    p.setBrush(Qt::black);
-    p.drawRect(m_layout->elementRect("statusbar"));
-}
-
-Plasma::Dialog::ResizeCorner KIMStatusBar::resizeCorner(const QPoint &p)
-{
-    if (m_resizeAreas[Plasma::Dialog::NorthEast].contains(p) && m_resizeCorners & Plasma::Dialog::NorthEast) {
-        return Plasma::Dialog::NorthEast;
-    } else if (m_resizeAreas[Plasma::Dialog::NorthWest].contains(p) && m_resizeCorners & Plasma::Dialog::NorthWest) {
-        return Plasma::Dialog::NorthWest;
-    } else if (m_resizeAreas[Plasma::Dialog::SouthEast].contains(p) && m_resizeCorners & Plasma::Dialog::SouthEast) {
-        return Plasma::Dialog::SouthEast;
-    } else if (m_resizeAreas[Plasma::Dialog::SouthWest].contains(p) && m_resizeCorners & Plasma::Dialog::SouthWest) {
-        return Plasma::Dialog::SouthWest;
-    } else {
-        return Plasma::Dialog::NoCorner;
-    }
-}
-
-void KIMStatusBar::themeUpdated()
-{
-    KIM::Theme *theme = KIM::Theme::defaultTheme();
-    kDebug() << theme->statusbarImagePath();
-    m_layout->setImagePath(theme->statusbarImagePath());
-    m_layout->setScript(theme->statusbarLayoutPath());
-    m_layout->themeUpdated();
-    m_layout->doLayout(m_view->size(),"statusbar");
-    //generateBackground();
-    resize(m_layout->elementSize().toSize());
-    m_view->setGeometry(m_layout->elementRect("statusbar").toRect());
-    update();
-}
-
 void KIMStatusBar::adjustSelf()
 {
     if (!m_widget) {
@@ -468,33 +328,26 @@ void KIMStatusBar::adjustSelf()
     }
     int nIcons = m_widget->iconCount();
     //int preferSize = KIM::Settings::preferIconSize();
-    qreal width = m_layout->elementSize("statusbar").width();
-    qreal height = m_layout->elementSize("statusbar").height();
-    qreal minHeight;
-    qreal minWidth;
+    qreal left, top, right, bottom;
+    m_background->getMargins(left,top,right,bottom);
+    qreal minHeight = KIM::Settings::preferIconSize();
+    qreal minWidth = minHeight;
     QSizeF newSize;
 
     switch (KIM::Settings::self()->floatingStatusbarLayout()) {
     case KIM::Settings::StatusbarHorizontal:
-        //newSize = QSizeF(preferSize * nIcons, preferSize);
-        minHeight = qMin(height,(width+0.0)/nIcons);
-        minHeight = qMax(minHeight,22.0);
-        newSize = QSizeF(minHeight*nIcons,minHeight);
-        m_layout->doLayout(newSize,"statusbar");
-        resize(m_layout->elementSize().toSize());
+        newSize = QSizeF(left+right+minHeight*nIcons,top+bottom+minHeight);
+        resize(newSize.toSize());
         break;
     case KIM::Settings::StatusbarVertical:
-        //newSize = QSizeF(preferSize, preferSize * nIcons);
-        minWidth = qMin(width,(height+0.0)/nIcons);
-        minWidth = qMax(minWidth,22.0);
-        newSize = QSizeF(minWidth,minWidth*nIcons);
-        m_layout->doLayout(newSize,"statusbar");
-        resize(m_layout->elementSize().toSize());
+        newSize = QSizeF(left+right+minWidth,top+bottom+minWidth*nIcons);
+        resize(newSize.toSize());
         break;
     case KIM::Settings::StatusbarMatrix:
         break;
     }
 }
 
-#include "kimstatusbar.moc"
+
 // vim: sw=4 sts=4 et tw=100
+

@@ -19,7 +19,6 @@ include_directories(${KDE4_INCLUDES}
 link_directories(${KDE4_LIB_DIR})
 
 add_subdirectory(src)
-add_subdirectory(themes)
 add_subdirectory(tests)
 
 add_subdirectory(backend)

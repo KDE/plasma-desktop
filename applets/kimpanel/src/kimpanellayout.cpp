@@ -60,11 +60,11 @@ void KIMPanelLayout::removeAt(int i)
 
 QSizeF KIMPanelLayout::sizeHint(Qt::SizeHint which, const QSizeF & /*constraint*/) const
 {
+    Q_UNUSED(constraint)
+
     QSizeF sizeHint;
     switch (which) {
     case Qt::MinimumSize:
-//X         return QSizeF(left + right + KIconLoader::SizeSmall,
-//X             top + bottom + KIconLoader::SizeSmall);
         sizeHint = QSizeF(KIconLoader::SizeSmall,KIconLoader::SizeSmall);
         break;
     case Qt::PreferredSize:

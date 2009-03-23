@@ -24,26 +24,26 @@ namespace KIM
 {
     QPixmap renderText(QString text, RenderType type)
     {
-        Theme *theme = Theme::defaultTheme();
+        Plasma::Theme *theme = Plasma::Theme::defaultTheme();
         switch (type) {
         case Statusbar:
-            return renderText(text,theme->color(Theme::StatusbarTextColor),
-                    theme->color(Theme::StatusbarBackgroundColor));
+            return renderText(text,theme->color(Plasma::Theme::TextColor),
+                    Qt::transparent);
         case Auxiliary:
-            return renderText(text,theme->color(Theme::AuxiliaryTextColor),
-                    theme->color(Theme::AuxiliaryBackgroundColor));
+            return renderText(text,theme->color(Plasma::Theme::TextColor),
+                    Qt::transparent);
         case Preedit:
-            return renderText(text,theme->color(Theme::PreeditTextColor),
-                    theme->color(Theme::PreeditBackgroundColor));
+            return renderText(text,theme->color(Plasma::Theme::TextColor),
+                    Qt::transparent);
         case TableLabel:
-            return renderText(text,theme->color(Theme::LookupTableLabelTextColor),
-                    theme->color(Theme::LookupTableLabelBackgroundColor));
+            return renderText(text,theme->color(Plasma::Theme::TextColor),
+                    theme->color(Plasma::Theme::BackgroundColor));
         case TableEntry:
-            return renderText(text,theme->color(Theme::LookupTableEntryTextColor),
-                    theme->color(Theme::LookupTableEntryBackgroundColor));
+            return renderText(text,theme->color(Plasma::Theme::TextColor),
+                    Qt::transparent);
         default:
-            return renderText(text,theme->color(Theme::StatusbarTextColor),
-                    theme->color(Theme::StatusbarBackgroundColor));
+            return renderText(text,theme->color(Plasma::Theme::TextColor),
+                    theme->color(Plasma::Theme::BackgroundColor));
         }
     }
 

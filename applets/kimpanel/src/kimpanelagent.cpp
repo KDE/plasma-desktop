@@ -92,7 +92,6 @@ PanelAgent::~PanelAgent()
     QDBusConnection::disconnectFromBus("kimpanel_bus");
 }
 
-//---------------------internal function start-----------------------
 static QList<TextAttribute> String2AttrList(const QString &str)
 {
     QList<TextAttribute> result;
@@ -174,10 +173,6 @@ static LookupTable Args2LookupTable(const QStringList &labels, const QStringList
     return result;
 }
 
-//---------------------internal function end----------------------
-
-//---------------------handle kimpanel call start-----------------
-
 void PanelAgent::created()
 {
     emit PanelCreated();
@@ -192,10 +187,6 @@ void PanelAgent::reloadConfig()
 {
     emit ReloadConfig();
 }
-
-//---------------------handle kimpanel call end-----------------------------------------
-
-//---------------------handle dbus signal start-----------------------------------------
 
 void PanelAgent::UpdateLookupTable(const QStringList &labels,
     const QStringList &candis,
@@ -259,5 +250,4 @@ void PanelAgent::ExecMenu(const QStringList &entries)
     emit execMenu(list);
 }
 
-//---------------------handle dbus signal end--------------------------------------
 #include "kimpanelagent.moc"

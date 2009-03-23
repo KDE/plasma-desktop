@@ -26,27 +26,26 @@
 #include <plasma/widgets/flashinglabel.h>
 #include <plasma/widgets/iconwidget.h>
 
-#include "kimpanelsettings.h"
-#include "kimagenttype.h"
-#include "kimtheme.h"
-#include "kimsvgscriptlayout.h"
+#include <KConfigGroup>
+
 #include <QBitmap>
 #include <QGraphicsGridLayout>
+#include <QGraphicsLinearLayout>
 #include <QSignalMapper>
-class KConfigGroup;
+
+#include "kimpanelruntime_export.h"
+#include "kimpanelsettings.h"
+#include "kimagenttype.h"
+
 class PanelAgent;
 class KIMLabelGraphics;
 
-class KIMLookupTableGraphics: public QGraphicsWidget
+class KIMPANELRUNTIME_EXPORT KIMLookupTableGraphics: public QGraphicsWidget
 {
 Q_OBJECT
 public:
     explicit KIMLookupTableGraphics(PanelAgent * = 0,QGraphicsItem *parent=0);
     ~KIMLookupTableGraphics();
-
-    QBitmap mask() const;
-    
-//X     void setEnabled(bool to_enable);
 
 Q_SIGNALS:
     void SelectCandidate(int idx);
@@ -67,22 +66,16 @@ public Q_SLOTS:
 
 protected:
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
-    void timerEvent(QTimerEvent *e);
-
-private Q_SLOTS:
-    void themeUpdated();
-    void reLayout();
-    void generateBackground();
-    void configUpdated();
 
 private:
-    KIM::SvgScriptLayout *m_layout;
-
-    QPixmap m_background;
+    //Plasma m_background;
     QBitmap m_mask;
 
+    QGraphicsLinearLayout *m_layout;
+    QGraphicsLinearLayout *m_upperLayout;
+    QGraphicsGridLayout *m_lowerLayout;
+
     QGraphicsWidget *m_lookupTable;
-    QGraphicsGridLayout *m_tableLayout;
 
     QSignalMapper mapper;
 
@@ -110,8 +103,6 @@ private:
 
     int m_tableOrientation;
     int m_orientVar;
-
-    KConfigGroup *m_cg;
 
     int m_timerId;
 };

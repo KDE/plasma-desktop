@@ -62,8 +62,7 @@ Q_SIGNALS:
     void sizeHintChanged(Qt::SizeHint);
 
 public Q_SLOTS:
-//X     void createConfigurationInterface(KConfigDialog *parent);
-    void showConfigurationInterface();
+    void createConfigurationInterface(KConfigDialog *parent);
 
 protected:
     /**

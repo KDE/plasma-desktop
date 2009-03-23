@@ -20,7 +20,6 @@
 #ifndef PAINTUTILS_H
 #define PAINTUTILS_H
 
-#include "kimtheme.h"
 #include "kimpanelruntime_export.h"
 #include <plasma/theme.h>
 

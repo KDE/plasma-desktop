@@ -49,9 +49,11 @@ KIMPanel::KIMPanel(QObject* parent)
 
     m_statusbar = new KIMStatusBar();
 
+#if 0
     QAction *action = new QAction(KIcon("configure"),"IM Panel Settings",this);
     connect(action,SIGNAL(triggered()),this,SLOT(showConfig()));
     m_statusbar->addAction(action);
+#endif
     m_statusbar->addAction(KStandardAction::quit(qApp,SLOT(quit()),this));
 
     m_statusbar->setGraphicsWidget(m_statusbarGraphics);
@@ -98,6 +100,7 @@ void KIMPanel::exit()
 
 void KIMPanel::showConfig()
 {
+#if 0
     QString constraint = "[X-KDE-System-Settings-Parent-Category] == 'input-method'";
     KService::List modules = KServiceTypeTrader::self()->query("KCModule",constraint);
 
@@ -111,6 +114,7 @@ void KIMPanel::showConfig()
     dialog->show();
 
     delete dialog;
+#endif
 }
 
 #include "paneldialog.moc"

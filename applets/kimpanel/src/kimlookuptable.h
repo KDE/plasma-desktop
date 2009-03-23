@@ -53,14 +53,12 @@ public Q_SLOTS:
 protected:
     void paintEvent(QPaintEvent *e);
     void resizeEvent(QResizeEvent *e);
-    void mouseMoveEvent(QMouseEvent *e);
-    void mousePressEvent(QMouseEvent *e);
-    void mouseReleaseEvent(QMouseEvent *e);
     bool event(QEvent *e);
 
 private Q_SLOTS:
     void propagateSizeChange();
     void propagateVisibleChange(bool);
+    void themeUpdated();
 
 private:
     Plasma::FrameSvg *m_background;

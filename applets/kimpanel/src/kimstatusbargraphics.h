@@ -43,12 +43,6 @@ public:
     explicit KIMStatusBarGraphics(PanelAgent *agent=0, QGraphicsItem *parent=0);
     ~KIMStatusBarGraphics();
 
-    /**
-     * Returns hints about the geometry of the figure
-     * @return Hints about proportionality of the applet
-     */
-//X      QSizeF sizeHint(Qt::SizeHint which, const QSizeF & constraint = QSizeF()) const;
-
     inline int iconCount() const
     {
         return m_icons.size();
