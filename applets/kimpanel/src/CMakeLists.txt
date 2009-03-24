@@ -60,4 +60,16 @@ target_link_libraries(plasma_applet_kimpanel
 install(TARGETS plasma_applet_kimpanel DESTINATION ${PLUGIN_INSTALL_DIR})
 install(FILES plasma-applet-kimpanel.desktop DESTINATION ${SERVICES_INSTALL_DIR})
 
-
+set(kimpanel_dialog_SRCS
+   paneldialog.cpp
+   main.cpp
+   )
+kde4_add_executable(kimpanel ${kimpanel_dialog_SRCS})
+target_link_libraries(kimpanel 
+   kimpanelruntime
+   ${KDE4_PLASMA_LIBS} 
+   ${KDE4_KUTILS_LIBS} 
+   ${X11_LIBRARIES}
+   ${X11_Xrender_LIB}
+   )
+install(TARGETS kimpanel ${INSTALL_TARGETS_DEFAULT_ARGS})

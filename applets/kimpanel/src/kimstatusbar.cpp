@@ -62,7 +62,7 @@ KIMStatusBar::KIMStatusBar(QWidget *parent, const QList<QAction *> extra_actions
     KWindowSystem::setState( winId(), NET::SkipTaskbar | NET::SkipPager | NET::StaysOnTop );
     KWindowSystem::setType( winId(), NET::Dock);
 
-    m_scene = new QGraphicsScene(this);
+    m_scene = new Plasma::Corona(this);
     m_view = new QGraphicsView(m_scene,this);
 
     setMouseTracking(true);
@@ -82,15 +82,7 @@ KIMStatusBar::KIMStatusBar(QWidget *parent, const QList<QAction *> extra_actions
 
     m_layout->addWidget(m_view);
 
-    m_widget = 0;//new KIMStatusBarGraphics();
-    //m_widget->showLogo(true);
-    //m_widget->setCollapsible(true);
-
-//X     connect(m_widget,SIGNAL(triggerProperty(const QString &)),
-//X             this,SIGNAL(triggerProperty(const QString &)));
-
-    //m_scene->addItem(m_widget);
-
+    m_widget = 0;
     setContextMenuPolicy(Qt::ActionsContextMenu);
 
     m_extraActions = extra_actions;
@@ -124,30 +116,9 @@ void KIMStatusBar::themeUpdated()
 
     Plasma::Theme *theme = Plasma::Theme::defaultTheme();
     QColor buttonBgColor = theme->color(Plasma::Theme::BackgroundColor);
-#if 0
-    m_button_stylesheet = QString("QToolButton { border: 1px solid %4; border-radius: 4px; padding: 2px;"
-                                       " background-color: rgba(%1, %2, %3, %5); }")
-                                      .arg(buttonBgColor.red())
-                                      .arg(buttonBgColor.green())
-                                      .arg(buttonBgColor.blue())
-                                      .arg(theme->color(Plasma::Theme::HighlightColor).name(), "50%");
-#endif
-    m_button_stylesheet = QString("QToolButton { background-color: transparent; }");
-    m_button_stylesheet += QString("QToolButton:hover { border: 2px solid %1; }")
-                               .arg(theme->color(Plasma::Theme::HighlightColor).name());
-
-#if 0
-    m_button_stylesheet += QString("QToolButton:focus { border: 2px solid %1; }")
-                               .arg(theme->color(Plasma::Theme::HighlightColor).name());
-#endif
-    foreach (QToolButton *btn, prop_map.values()) {
-        btn->setStyleSheet(m_button_stylesheet);
-    
-    }
-
-    m_background->setImagePath("widgets/panel-background");
+//    m_background->setImagePath("widgets/panel-background");
     m_background->setElementPrefix("south");
-    //kDebug() << "stylesheet is" << m_button_stylesheet;
+
     QSize widget_size;
     if (m_widget) {
         widget_size = m_widget->effectiveSizeHint(Qt::MinimumSize).toSize();
@@ -155,6 +126,8 @@ void KIMStatusBar::themeUpdated()
         widget_size = QSize(0,0);
     }
     setMinimumSize(left + right + widget_size.width(),
+            top + bottom + widget_size.height());
+    setMaximumSize(left + right + widget_size.width(),
             top + bottom + widget_size.height());
 
 }
@@ -209,50 +182,6 @@ void KIMStatusBar::mouseReleaseEvent(QMouseEvent *event)
     QWidget::mouseReleaseEvent(event);
 }
 
-#if 0
-void KIMStatusBar::timerEvent(QTimerEvent *e)
-{
-    if (e->timerId() == m_timer_id) {
-        killTimer(m_timer_id);
-        m_timer_id = -1;
-
-        QLayoutItem *item;
-        while ( layout()->count() > 1 + m_extraActions.size() ) {
-            item = layout()->takeAt(1);
-            layout()->removeItem(item);
-            delete item->widget();
-        }
-
-        prop_map.clear();
-        foreach (const Property &prop, m_pending_reg_properties) {
-            QToolButton *prop_button = new QToolButton(this);
-            prop_button->setStyleSheet(m_button_stylesheet);
-
-            QPixmap icon_pixmap;
-
-            KIcon icon;
-
-            if (!prop.icon.isEmpty()) {
-                //        icon_pixmap = KIcon(prop.icon).pixmap(KIconLoader::SizeSmall,KIconLoader::SizeSmall,Qt::KeepAspectRatio);
-                icon = KIcon(prop.icon);
-            } else {
-                icon = KIcon(renderText(prop.label).scaled(KIconLoader::SizeSmall,KIconLoader::SizeSmall));
-            }
-
-            prop_button->setIcon(icon);
-            prop_button->setToolTip(prop.tip);
-
-            m_layout->insertWidget(m_layout->count()-m_extraActions.size(),prop_button);
-            prop_map.insert(prop.key,prop_button);
-            prop_mapper.setMapping(prop_button,prop.key);
-            connect(prop_button,SIGNAL(clicked()),&prop_mapper,SLOT(map()));
-        }
-    } else {
-        QWidget::timerEvent(e);
-    }
-}
-#endif 
-
 bool KIMStatusBar::event(QEvent *e)
 {
     if (e->type() == QEvent::Paint) {
@@ -281,8 +210,8 @@ void KIMStatusBar::setGraphicsWidget(KIMStatusBarGraphics *widget)
         m_widget->setParent(0);
         m_scene->addItem(m_widget);
         connect(m_widget,SIGNAL(iconCountChanged()),this,SLOT(adjustSelf()));
-        adjustSelf();
         //themeUpdated();
+        adjustSelf();
     }
 
 }
@@ -327,7 +256,6 @@ void KIMStatusBar::adjustSelf()
         return;
     }
     int nIcons = m_widget->iconCount();
-    //int preferSize = KIM::Settings::preferIconSize();
     qreal left, top, right, bottom;
     m_background->getMargins(left,top,right,bottom);
     qreal minHeight = KIM::Settings::preferIconSize();
@@ -347,6 +275,11 @@ void KIMStatusBar::adjustSelf()
         break;
     case KIM::Settings::StatusbarMatrix:
         break;
+    }
+    if (m_widget) {
+        m_widget->resize(m_view->size());
+        m_view->setSceneRect(m_widget->mapToScene(m_widget->boundingRect()).boundingRect());
+        m_view->centerOn(m_widget);
     }
 }
 

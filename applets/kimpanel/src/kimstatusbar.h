@@ -24,6 +24,7 @@
 #include <plasma/theme.h>
 #include <plasma/svg.h>
 #include <plasma/framesvg.h>
+#include <plasma/corona.h>
 
 #include <KIconLoader>
 #include <KConfigGroup>
@@ -77,7 +78,7 @@ private:
     Plasma::FrameSvg *m_background;
     QBitmap m_mask;
 
-    QGraphicsScene *m_scene;
+    Plasma::Corona *m_scene;
     QGraphicsView *m_view;
     KIMStatusBarGraphics *m_widget;
 

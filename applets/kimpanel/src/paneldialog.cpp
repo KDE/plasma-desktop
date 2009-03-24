@@ -45,24 +45,15 @@ KIMPanel::KIMPanel(QObject* parent)
     m_panel_agent = new PanelAgent(this);
 
     m_statusbarGraphics = new KIMStatusBarGraphics(m_panel_agent);
-//X     m_statusbarGraphics->showLogo(true);
 
     m_statusbar = new KIMStatusBar();
 
-#if 0
-    QAction *action = new QAction(KIcon("configure"),"IM Panel Settings",this);
-    connect(action,SIGNAL(triggered()),this,SLOT(showConfig()));
-    m_statusbar->addAction(action);
-#endif
     m_statusbar->addAction(KStandardAction::quit(qApp,SLOT(quit()),this));
 
     m_statusbar->setGraphicsWidget(m_statusbarGraphics);
 
     m_lookup_table = new KIMLookupTable(m_panel_agent);
 
-//X     connect(m_panel_agent,
-//X         SIGNAL(enable(bool)),
-//X         SLOT(enable(bool)));
     m_statusbar->show();
 
 
@@ -78,6 +69,7 @@ KIMPanel::KIMPanel(QObject* parent)
     m_statusbar->setContextMenuPolicy(Qt::ActionsContextMenu);
 #endif
 
+    m_panel_agent->created();
 }
 
 KIMPanel::~KIMPanel()

@@ -193,7 +193,6 @@ void PanelAgent::UpdateLookupTable(const QStringList &labels,
     const QStringList &attrlists,
     int i1,int i2,int i3,bool to_show)
 {
-//X     kDebug() << labels << candis << attrlists;
     emit updateLookupTable(Args2LookupTable(labels,candis,attrlists,i1,i2,i3,to_show));
 }
 
@@ -209,18 +208,16 @@ void PanelAgent::UpdateAux(const QString &text,const QString &attr)
 
 void PanelAgent::UpdateScreen(int screen_id)
 {
-    kDebug(0)<<screen_id;
+
 }
 
 void PanelAgent::UpdateProperty(const QString &prop)
 {
-//X     kDebug() << prop;
     emit updateProperty(String2Property(prop));
 }
 
 void PanelAgent::RegisterProperties(const QStringList &props)
 {
-//X     kDebug() << props;
     if (cached_props != props) {
         cached_props = props;
         QList<Property> list;
@@ -230,7 +227,6 @@ void PanelAgent::RegisterProperties(const QStringList &props)
 
         emit registerProperties(list);
     } else {
-//X         kDebug()<<"cache hit :)";
     }
 }
 
@@ -241,7 +237,6 @@ void PanelAgent::ExecDialog(const QString &prop)
 
 void PanelAgent::ExecMenu(const QStringList &entries)
 {
-    kDebug()<<entries;
     QList<Property> list;
     foreach (const QString &entry, entries) {
         list << String2Property(entry);

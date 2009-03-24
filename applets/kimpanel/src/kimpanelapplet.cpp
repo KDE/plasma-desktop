@@ -92,7 +92,7 @@ void KIMPanelApplet::init()
 
     m_statusbarGraphics->setCollapsible(true);
     m_statusbar = new KIMStatusBar();
-    QAction *action = new QAction(KIcon("configure"),"IM Panel Settings",this);
+    QAction *action = new QAction(KIcon("configure"),i18n("IM Panel Settings"),this);
     connect(action,SIGNAL(triggered()),this,SLOT(showConfigurationInterface()));
     m_statusbar->addAction(action);
 
@@ -109,22 +109,8 @@ void KIMPanelApplet::init()
 
     themeUpdated();
 
+    m_panel_agent->created();
 }
-
-/*
-   QSizeF KIMPanelApplet::sizeHint(Qt::SizeHint which, const QSizeF & constraint) const
-   {
-
-   QSizeF sizeHint = size();
-   if (!m_layout) {
-   return sizeHint;
-   }
-   sizeHint.setWidth(left + right + m_layout->effectiveSizeHint(which).width());
-   sizeHint.setHeight(top + bottom + m_layout->effectiveSizeHint(which).height());
-   kDebug() << sizeHint;
-   return sizeHint;
-   }
-   */
 
 void KIMPanelApplet::constraintsEvent(Plasma::Constraints constraints)
 {

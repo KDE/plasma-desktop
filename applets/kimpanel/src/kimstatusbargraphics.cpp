@@ -28,6 +28,7 @@
 #include <plasma/containment.h>
 #include <plasma/dialog.h>
 #include <plasma/corona.h>
+#include <plasma/tooltipmanager.h>
 
 #include <math.h>
 #include "paintutils.h"
@@ -159,6 +160,9 @@ void KIMStatusBarGraphics::updateProperty(const Property &prop)
     }
 
     prop_icon->setIcon(icon);
+
+    Plasma::ToolTipContent data(prop.label,prop.tip,icon);
+    Plasma::ToolTipManager::self()->setContent(prop_icon,data);
     //prop_button->setToolTip(prop.tip);
 }
 
@@ -188,6 +192,9 @@ void KIMStatusBarGraphics::registerProperties(const QList<Property> &props)
         }
 
         Plasma::IconWidget *icon = new Plasma::IconWidget(kicon,"",this);
+        Plasma::ToolTipContent data(prop.label,prop.tip,kicon);
+        Plasma::ToolTipManager::self()->setContent(icon,data);
+
         m_icons << icon;
         m_prop_map.insert(prop.key, icon);
 //X         m_layout->addItem(icon);
