@@ -68,10 +68,8 @@ KIMLookupTableGraphics::KIMLookupTableGraphics(PanelAgent *agent, QGraphicsItem 
     m_lowerLayout->setContentsMargins(0,0,0,0);
 
     m_auxLabel = new KIMLabelGraphics(KIM::Auxiliary,this);
-    m_auxLabel->hide();
     m_preeditLabel = new KIMLabelGraphics(KIM::Preedit,this);
     m_preeditLabel->setDrawCursor(true);
-    m_preeditLabel->hide();
     m_pageUpIcon = new Plasma::IconWidget(this);
     connect(m_pageUpIcon,SIGNAL(clicked()),this,SIGNAL(LookupTablePageUp()));
     m_pageUpIcon->setIcon(KIcon("arrow-left"));
@@ -85,15 +83,14 @@ KIMLookupTableGraphics::KIMLookupTableGraphics(PanelAgent *agent, QGraphicsItem 
     m_pageDownIcon->setMaximumSize(KIconLoader::SizeSmallMedium,KIconLoader::SizeSmall);
     m_pageDownIcon->hide();
 
-    m_auxLabel->hide();
-    m_preeditLabel->hide();
-
     m_upperLayout->addItem(m_auxLabel);
     m_upperLayout->addItem(m_preeditLabel);
     m_upperLayout->addItem(m_pageUpIcon);
     m_upperLayout->addItem(m_pageDownIcon);
 
-    m_preeditLabel->show();
+    m_auxLabel->hide();
+    m_preeditLabel->hide();
+
     m_pageUpIcon->show();
     m_pageDownIcon->show();
 

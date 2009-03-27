@@ -75,8 +75,6 @@ private:
     QGraphicsLinearLayout *m_upperLayout;
     QGraphicsGridLayout *m_lowerLayout;
 
-    QGraphicsWidget *m_lookupTable;
-
     QSignalMapper mapper;
 
     QString m_aux_text;

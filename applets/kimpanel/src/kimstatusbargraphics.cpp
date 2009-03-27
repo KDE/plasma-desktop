@@ -175,9 +175,9 @@ void KIMStatusBarGraphics::registerProperties(const QList<Property> &props)
     }
     
     m_icons.clear();
-    if (m_logoVisible) {
-        m_icons << m_logoIcon;
-    }
+//X     if (m_logoVisible) {
+//X         m_icons << m_logoIcon;
+//X     }
     m_prop_map.clear();
     m_props = props;
     Q_FOREACH (const Property &prop, props) {
