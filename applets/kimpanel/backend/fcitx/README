@@ -1,2 +1,31 @@
+BUILD
+===============
+./autogen.sh
+./configure --prefix=<dir>
+make
+make install
+
+SETUP
+==============
+add:
+
+export GTK_IM_MODULE=xim
+export QT_IM_MODULE=xim
+export XMODIFIERS=@im=fcitx
+export XIM_PROGRAM=fcitx
+
+to your ~/.bashrc
+
+or you can use im-switch on some distos.
+
+im-switch -s fcitx
+
+RUN
+=================
+fcitx
+
+
+Fcitx developer doc
+=================
 Please read doc/fcitx3.pdf (in S. Chinese).
 Developer may want to read doc/Develop_Readme.GBK to get an overview of source code.

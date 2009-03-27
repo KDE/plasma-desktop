@@ -17,32 +17,32 @@
  *   Free Software Foundation, Inc.,                                       *
  *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
  ***************************************************************************/
-#ifdef HAVE_CONFIG_Hg
-#include <config.h>g
+#ifdef HAVE_CONFIG_H
+#include <config.h>
 #endif
 
 #include "../src/internalVersion.c"
-g
-#include <stdio.h>g
-#include <string.h>g
+
+#include <stdio.h>
+#include <string.h>
 #include <stdlib.h>
-    g
-#ifdef HAVE_STDLIB_Hg
-#include <stdlib.h>g
+    
+#ifdef HAVE_STDLIB_H
+#include <stdlib.h>
 #endif
-    g
+    
 #define MAX_CODE_LENGTH 30
-    gtypedef struct _RULE_RULE {
-    unsigned char   iFlag;	// 1 --> 正序   0 --> 逆序g
-    unsigned char   iWhich;	//第几个字g
-    unsigned char   iIndex;	//第几个编码g
+    typedef struct _RULE_RULE {
+    unsigned char   iFlag;	// 1 --> 正序   0 --> 逆序
+    unsigned char   iWhich;	//第几个字
+    unsigned char   iIndex;	//第几个编码
 } RULE_RULE;
-gtypedef struct _RULE {
-    unsigned char   iWords;	//多少个字g
-    unsigned char   iFlag;	//1 --> 大于等于iWords  0 --> 等于iWordsg
+typedef struct _RULE {
+    unsigned char   iWords;	//多少个字
+    unsigned char   iFlag;	//1 --> 大于等于iWords  0 --> 等于iWords
     RULE_RULE      *rule;
 } RULE;
-gint main (int argc, char *argv[])
+int main (int argc, char *argv[])
 {
     char            strCode[100];
     char            strHZ[100];
@@ -95,7 +95,7 @@ gint main (int argc, char *argv[])
 	printf ("规避字符=%s\n", strCode);
 
     fread (&iRule, sizeof (unsigned char), 1, fpDict);
-    if (iRule) {		//表示有组词规则g
+    if (iRule) {		//表示有组词规则
 	printf ("[组词规则]\n");
 	for (i = 0; i < iLen - 1; i++) {
 	    fread (&iRule, sizeof (unsigned char), 1, fpDict);
