@@ -852,7 +852,7 @@ void updateProperty(Property *prop)
         fixProperty(prop);
     }
     if (prop == &state_prop) {
-        prop->label = (iState == IS_ENG) ? "英" : "中";
+        prop->label = (ConnectIDGetState(connect_id) == IS_CHN) ? "中" : "英";
         //        prop->label = g2u(im[iIMIndex].strName);
     }
     if (prop == &punc_prop) {

@@ -224,9 +224,6 @@ Bool MySetFocusHandler (IMChangeFocusStruct * call_data)
 	    XUnmapWindow (dpy, inputWindow);
 //	    XUnmapWindow (dpy, VKWindow);
 	}	
-
-        logo_prop.label = g2u(im[iIMIndex].strName);
-        iState = IS_CHN;
     }
     else {
 	XUnmapWindow (dpy, inputWindow);
@@ -238,11 +235,28 @@ Bool MySetFocusHandler (IMChangeFocusStruct * call_data)
 	}
 //	else
 //	    XUnmapWindow (dpy, mainWindow);
-        logo_prop.label = "Fcitx";
-        iState = IS_ENG;
     }
 //    updateProperty(&logo_prop);
 //    updateProperty(&state_prop);
+
+    int iIndex = ConnectIDGetState (connect_id);
+    switch (iIndex) {
+    case IS_CLOSED:
+        logo_prop.label = "Fcitx";
+        updateProperty(&logo_prop);
+//        updateProperty(&state_prop);
+        break;
+    case IS_CHN:
+        logo_prop.label = g2u(im[iIMIndex].strName);
+        updateProperty(&logo_prop);
+        updateProperty(&state_prop);
+        break;
+    case IS_ENG:
+        logo_prop.label = g2u(im[iIMIndex].strName);
+        updateProperty(&logo_prop);
+        updateProperty(&state_prop);
+        break;
+    }
 
     lastConnectID = connect_id;
     //When application gets the focus, re-record the time.
@@ -297,8 +311,24 @@ Bool MyCreateICHandler (IMChangeICStruct * call_data)
 	icid = call_data->icid;
     }
 
-    logo_prop.label = "Fcitx";
-    updateProperty(&logo_prop);
+    int iIndex = ConnectIDGetState (connect_id);
+    switch (iIndex) {
+    case IS_CLOSED:
+        logo_prop.label = "Fcitx";
+        updateProperty(&logo_prop);
+//        updateProperty(&state_prop);
+        break;
+    case IS_CHN:
+        logo_prop.label = g2u(im[iIMIndex].strName);
+        updateProperty(&logo_prop);
+        updateProperty(&state_prop);
+        break;
+    case IS_ENG:
+        logo_prop.label = g2u(im[iIMIndex].strName);
+        updateProperty(&logo_prop);
+        updateProperty(&state_prop);
+        break;
+    }
 
     return True;
 }
