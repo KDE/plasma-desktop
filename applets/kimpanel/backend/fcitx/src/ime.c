@@ -896,6 +896,7 @@ void ProcessKey (IMForwardEventStruct * call_data)
         messageDown[0].type = MSG_TIPS;
 
         fprintf(stderr,"IRV_DISPLAY_LAST Up: %d Down: %d\n",uMessageUp,uMessageDown);
+        updateMessages();
         //	DrawInputWindow ();
         //	DisplayInputWindow ();
         break;
@@ -904,6 +905,7 @@ void ProcessKey (IMForwardEventStruct * call_data)
         bShowPrev = False;
 
         fprintf(stderr,"Up: %d Down: %d\n",uMessageUp,uMessageDown);
+        updateMessages();
         //	DrawInputWindow ();
         //	DisplayInputWindow ();
         break;
@@ -925,6 +927,7 @@ void ProcessKey (IMForwardEventStruct * call_data)
         }
         else {
             ResetInput ();
+            updateMessages();
 //            XUnmapWindow (dpy, inputWindow);
         }
 
@@ -969,6 +972,7 @@ void ProcessKey (IMForwardEventStruct * call_data)
         if (retVal == IRV_GET_CANDWORDS_NEXT || lastIsSingleHZ == -1) {
             iHZInputed += (int) (strlen (strStringGet) / 2);	//´ÖÂÔÍ³¼Æ×ÖÊý
             //	    DrawInputWindow ();
+            updateMessages();
             fprintf(stderr,"IRV_GET_CANDWORDS_NEXT Up: %d Down: %d\n",uMessageUp,uMessageDown);
         }
 
