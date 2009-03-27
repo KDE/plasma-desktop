@@ -1,0 +1,6 @@
+代码的文档用 doxygen 包含在源代码中，您需要用 doxygen 以生成全部的代码说明文件。
+推荐安装 doxygen 1.5.1 和 libiconv 1.9。
+
+fcitx_trunk.doxyfile 为 doxygen 的配置文件，默认情况下它会检索 ../src 下的源代码文件，
+并输出 html 的代码说明。在 doc/ 目录下运行 doxygen fcitx_trunk.doxyfile，
+如果您的 doxygen 和 libiconv 安装正确的话，应该会输出中文文档，文档保存在 doc/html 目录下。

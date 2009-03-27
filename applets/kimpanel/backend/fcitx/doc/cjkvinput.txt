@@ -1,0 +1,83 @@
+            关于 cjkvinput-table-wubi.txt 五笔码表的简略说明
+            ------------------------------------------------
+    cjkvinput-table-wubi.txt 是由梁昌泰(beos at turbolinux.com.cn)基于孙海峰
+博士的 GPL 授权的海峰五笔码表和黄宇、Rasir Dex的五笔码表整理而成的一份五笔码
+表，是属于自由输入法平台项目自由大词库的第一份正式公开的五笔码表。由于整理者
+对五笔编码体系并不熟悉，因此不能保证没有错误，只好有赖于各位用户的反馈了。当
+然了，整理者也在努力通过其他方式譬如机器校验等方法来整理码表。
+
+    自由输入法平台项目已经并入 FreeIM Project (http://freeim.gnuchina.org)，
+将继续为大中华自由软件社区提供更多的输入法资源而奋斗。
+
+cjkvinput-table-wubi.txt 的相关贡献者∶
+===========================================================================
+孙海峰博士
+        海峰五笔的作者
+        山东大学中文系2000级博士
+        URL: http://go3.163.com/okuc/
+             http://www.okuc.net/
+        email: okuc at china.com
+
+黄宇
+        email: Yu_Huang at engr.usask.ca
+
+Rasir Dex
+        email: rasir at rasir.com
+         
+梁昌泰
+        自由输入法平台项目组管理者，xcin-gb项目组成员
+        URL: http://www.sourceforge.net/projects/cjkvinput
+        email: beos at turbolinux.com.cn or linuxrat at gnuchina.org
+
+苏哲
+        自由输入法平台项目组成员
+        URL: http://btmgr.gnuchina.org
+        email: suzhe at gnuchina.org
+
+陈俊
+        自由输入法平台项目组成员，xcin-gb项目组管理员
+        email: jimc at gnuchina.org
+
+满诗文
+        自由输入法平台项目组和xcin-gb项目组测试员
+        email: bens at gnuchina.org
+
+===========================================================================
+cjkvinput-table-wubi.txt 的组成和来源∶
+
+hfwb4unix.txt: 
+        从海峰五笔的源码表当中整理出来的码表。这是为了给GNU/Linux
+        以及其他操作系统输入法平台提供的五笔输入法码表。已经在GNU
+        系统上使用一些工具进行了整理，去掉了一些重复的编码。原始
+        码表可以在此下载∶
+            http://go3.163.com/okuc/Software/SunWb.zip
+
+        该软件作者为山东大学中文系2000级博士孙海峰先生。
+
+        最新码表可以从http://go3.163.com/okuc/获得。
+
+extra4unix.txt:
+        这是从网络上下载回来的五笔码表，载自何处已经忘记了。经同
+        海峰五笔码表比较，将海峰五笔中没有的字词收入此文件当中，可
+        作为hfwb4unix.txt的补充。该码表原始作者为∶
+                黄宇(Yu_Huang at engr.usask.ca).
+                Rasir Dex(rasir at rasir.com)
+         
+final4unix.txt(cjkvinput-table-wubi.txt):
+        这是合并从海峰五笔整理得来的hfwb4unix.txt以及从黄宇等整理出来
+        的五笔码表之补充部分所成的完整无重复版本。这是目前自由大词库
+        项目正始对外公布的第一个版本，也将是自由软件项目 -- 自由输入
+        平台上的五笔输入法首选五笔码表。
+
+在整理过程当中所撰写的工具脚本和程序，将尽快提供出来。如果大家对这份
+码表有什么期望或者愿意提供协助，请致信∶
+
+        beos at turbolinux.com.cn 或者  linuxrat at gnuchina.org
+
+如果您有其他输入法的码表，也可以提交给我。但是希望不要侵犯他人的版权。
+本项目所有成果均采用美国自由软件基金会(FSF)颁布的GPL/FDL条款进行分别
+对应的保护。
+
+Mon Sep  2 17:00:52 CST 2002(2/e)
+Sat Sep 29 15:49:23 CST 2001(1/e)
+===========================================================================

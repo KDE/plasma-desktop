@@ -1,0 +1,172 @@
+#                                               -*- Autoconf -*-
+# Process this file with autoconf to produce a configure script.
+
+AC_INIT
+AC_CONFIG_SRCDIR([src/main.c])
+AM_INIT_AUTOMAKE(fcitx, "3.6.0rc")
+
+dnl Find out what type of system we are
+AC_CANONICAL_HOST
+AC_CONFIG_HEADERS(config.h)
+
+# Checks for programs.
+AC_PROG_CC
+AC_PROG_INSTALL
+AC_PROG_MAKE_SET
+AC_PROG_RANLIB
+
+# Checks for libraries.
+AM_ICONV
+
+# Checks for header files.
+AC_HEADER_STDC
+AC_HEADER_SYS_WAIT
+AC_CHECK_HEADERS([limits.h malloc.h malloc/malloc.h stdlib.h string.h sys/param.h unistd.h wait.h sys/wait.h machine/endian.h])
+
+# x11
+AC_PATH_X
+#if test "x$x_includes" = "xNONE" ; then
+#    AC_MSG_ERROR([You must install XFree86 or xorg first!])
+#fi
+#AC_PATH_XTRA
+test -n "$x_libraries" && X_LIBS="-L$x_libraries"
+test -n "$x_includes" && X_CFLAGS="-I$x_includes"
+#X_LIBS="$X_LIBS $X_PRE_LIBS -lX11 $X_EXTRA_LIBS"
+AC_SUBST(X_LIBS)
+AC_SUBST(X_CFLAGS)
+
+# Option to enable the DEBUG
+AC_ARG_ENABLE(debug,
+[  --enable-debug            Enable DEBUG],
+[case "${enableval}" in
+  yes)  enable_debug=yes ;;
+  no)   enable_debug=no ;;
+  *) AC_MSG_ERROR([bad value "${enableval}" for --enable-debug, use "yes" or "no" (default).]) ;;
+esac],[])
+
+if test "x$enable_debug" = "xyes"; then
+  CFLAGS="$CFLAGS $X_CFLAGS $XFT_CFLAGS -D_DEBUG"
+else
+  CFLAGS="$CFLAGS $X_CFLAGS"
+fi
+
+# Option to enable the Xft library for Freetype font support.
+AC_ARG_ENABLE(xft,
+[  --enable-xft            Enable Xft for Freetype font support],
+[case "${enableval}" in
+  yes)  enable_xft=yes ;;
+  no)   enable_xft=no ;;
+  auto) enable_xft=auto ;;
+  *) AC_MSG_ERROR([bad value "${enableval}" for --enable-xft, use "yes" or "no" or "auto"(default).]) ;;
+esac],[])
+
+if test "x$enable_xft" = "xno"; then
+  # --enable-xft=no
+  :
+else
+  # Checks for Xft/XRender
+  PKG_CHECK_MODULES(XFT, xft >= 0.0.0, have_xft=true, :)
+
+  if test "x$have_xft" = "xtrue"; then
+    AC_SUBST(XFT_LIBS)
+    AC_SUBST(XFT_CFLAGS)
+    :
+  else
+    if test "x$enable_xft" = "xyes"; then
+      # Must use xft, raise a error.
+      AC_MSG_ERROR([No xft found, configure for FreeType and Xft failed!])
+    else
+      AC_MSG_WARN([No xft found, skipping configure for FreeType and Xft])
+    fi
+  fi
+fi
+AM_CONDITIONAL(HAVE_XFT, $have_xft)
+
+if test "x$have_xft" = "xtrue"; then
+  LIBS="$LIBS $X_LIBS $XFT_LIBS -lX11 $LIBICONV"
+  CFLAGS="$CFLAGS $X_CFLAGS $XFT_CFLAGS -D_USE_XFT"
+else
+  LIBS="$LIBS $X_LIBS -lX11 $LIBICONV"
+  CFLAGS="$CFLAGS $X_CFLAGS"
+fi
+
+# Option to enable the DBus interface for kimpanel support.
+AC_ARG_ENABLE(dbus,
+[  --enable-dbus            Enable Dbus for kimpanel support],
+[case "${enableval}" in
+  yes)  enable_dbus=yes ;;
+  no)   enable_dbus=no ;;
+  auto) enable_dbus=auto ;;
+  *) AC_MSG_ERROR([bad value "${enableval}" for --enable-dbus, use "yes" or "no" or "auto"(default).]) ;;
+esac],[])
+
+if test "x$enable_dbus" = "xno"; then
+  # --enable-dbus=no
+  :
+else
+  # Checks for Dbus
+  PKG_CHECK_MODULES(DBUS, dbus-1 >= 0.2, have_dbus=true, :)
+
+  if test "x$have_dbus" = "xtrue"; then
+    AC_SUBST(DBUS_LIBS)
+    AC_SUBST(DBUS_CFLAGS)
+    :
+  else
+    if test "x$enable_dbus" = "xyes"; then
+      # Must use dbus, raise a error.
+      AC_MSG_ERROR([No dbus found, configure for Dbus failed!])
+    else
+      AC_MSG_WARN([No dbus found, skipping configure for Dbus])
+    fi
+  fi
+fi
+AM_CONDITIONAL(HAVE_DBUS, $have_dbus)
+
+if test "x$have_dbus" = "xtrue"; then
+  LIBS="$LIBS $DBUS_LIBS"
+  CFLAGS="$CFLAGS $DBUS_CFLAGS -D_HAVE_DBUS"
+fi
+#else
+#  LIBS="$LIBS $X_LIBS -lX11 $LIBICONV"
+#  CFLAGS="$CFLAGS $X_CFLAGS"
+#fi
+
+#AC_MSG_CHECKING(for OS-dependent information)
+#case "$host" in
+#  *-linux* )
+#    AC_MSG_RESULT([Linux ($host) found.])
+#    ;;
+#  *-darwin* )
+#    AC_MSG_RESULT([Darwin (Mac OS X) ($host) found.])
+#    AC_DEFINE(DARWIN)
+#    LIBS="$LIBS -liconv"
+#    ;;
+#  *)
+#    AC_MSG_RESULT([Unknown system type $host found.])
+#    ;;
+#esac
+
+CFLAGS="$CFLAGS -Wall"
+
+# Checks for typedefs, structures, and compiler characteristics.
+AC_TYPE_PID_T
+AC_TYPE_SIZE_T
+
+# Checks for library functions.
+AC_FUNC_FORK
+AC_FUNC_MALLOC
+AC_TYPE_SIGNAL
+AC_CHECK_FUNCS([memmove memset mkdir setlocale strcasecmp strstr strtol])
+
+AC_CONFIG_FILES([
+           Makefile
+           fcitx.spec
+           doc/Makefile
+           data/Makefile
+           xpm/Makefile
+           lib/Makefile
+           src/version.h
+           src/Makefile
+           tools/Makefile
+])
+AC_OUTPUT
