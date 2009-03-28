@@ -194,7 +194,7 @@ void KIMPanelApplet::adjustSelf()
         for (i = 1; i <= iconCount; i++) {
             if (qAbs(r.width()/i - m_preferIconWidth) < min_delta) {
                 best_i = i;
-                min_delta = qAbs(r.height()/i - m_preferIconWidth);
+                min_delta = qAbs(r.width()/i - m_preferIconWidth);
             }
         }
         j = (iconCount + (best_i - 1)) / best_i;
