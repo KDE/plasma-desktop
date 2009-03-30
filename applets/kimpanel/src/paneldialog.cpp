@@ -41,7 +41,8 @@
 
 KIMPanel::KIMPanel(QObject* parent)
     : QObject(parent),
-    m_panel_agent(0)
+    m_panel_agent(0),
+    m_statusbarGraphics(0)
 {
     m_panel_agent = new PanelAgent(this);
 
@@ -78,8 +79,9 @@ KIMPanel::KIMPanel(QObject* parent)
 
 KIMPanel::~KIMPanel()
 {
-    //delete m_statusbar;
-    //delete m_lookup_table;
+    delete m_statusbar;
+//    delete m_statusbarGraphics;
+    delete m_lookup_table;
 }
 
 void KIMPanel::about()

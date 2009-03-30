@@ -47,7 +47,7 @@ KIMStatusBarGraphics::KIMStatusBarGraphics(PanelAgent *agent, QGraphicsItem *par
 
     setContentsMargins(0,0,0,0);
 
-    m_background = new Plasma::FrameSvg();
+    m_background = new Plasma::FrameSvg(this);
     m_background->setImagePath("widgets/panel-background");
 
 //X     m_layout = new QGraphicsGridLayout(this);
@@ -180,6 +180,7 @@ void KIMStatusBarGraphics::registerProperties(const QList<Property> &props)
 //X     if (m_logoVisible) {
 //X         m_icons << m_logoIcon;
 //X     }
+    qDeleteAll(m_prop_map.values());
     m_prop_map.clear();
     m_props = props;
     Q_FOREACH (const Property &prop, props) {
@@ -245,10 +246,11 @@ void KIMStatusBarGraphics::execDialog(const Property &prop)
 void KIMStatusBarGraphics::execMenu(const QList<Property> &prop_list)
 {
     QMenu *menu = new QMenu();
+    QAction *action;
     QSignalMapper *mapper = new QSignalMapper(this);
     connect(mapper,SIGNAL(mapped(const QString&)),m_panel_agent,SIGNAL(TriggerProperty(const QString &)));
     foreach (const Property &prop, prop_list) {
-        QAction *action = new QAction(QIcon(prop.icon),prop.label,this);
+        action = new QAction(QIcon(prop.icon),prop.label,menu);
         mapper->setMapping(action,prop.key);
         connect(action,SIGNAL(triggered()),mapper,SLOT(map()));
         menu->addAction(action);

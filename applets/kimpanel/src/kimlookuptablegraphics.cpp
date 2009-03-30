@@ -51,9 +51,9 @@ KIMLookupTableGraphics::KIMLookupTableGraphics(PanelAgent *agent, QGraphicsItem 
     //setSizePolicy(QSizePolicy::Preferred,QSizePolicy::Preferred);
     setContentsMargins(0,0,0,0);
 
-    m_layout = new QGraphicsLinearLayout(Qt::Vertical);
-    m_upperLayout = new QGraphicsLinearLayout();
-    m_lowerLayout = new QGraphicsGridLayout();
+    m_layout = new QGraphicsLinearLayout(Qt::Vertical,this);
+    m_upperLayout = new QGraphicsLinearLayout(m_layout);
+    m_lowerLayout = new QGraphicsGridLayout(m_layout);
 
     m_layout->addItem(m_upperLayout);
     m_layout->addItem(m_lowerLayout);
@@ -167,8 +167,9 @@ void KIMLookupTableGraphics::updateLookupTable(const LookupTable &lookup_table)
     int row = 0;
     int col = 0;
     int max_col = (lookup_table.entries.size() + m_orientVar - 1)/m_orientVar;
+    KIMLabelGraphics *item;
     foreach (const LookupTable::Entry &entry, lookup_table.entries) {
-        KIMLabelGraphics *item = new KIMLabelGraphics(KIM::TableEntry,this);
+        item = new KIMLabelGraphics(KIM::TableEntry,this);
         item->setSizePolicy(QSizePolicy::Fixed,QSizePolicy::Fixed);
         item->setLabel(entry.label);
         item->setText(entry.text);

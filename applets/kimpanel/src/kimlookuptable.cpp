@@ -77,7 +77,7 @@ KIMLookupTable::KIMLookupTable(PanelAgent *agent, QWidget *parent)
 
     m_scene = new QGraphicsScene(this);
 
-    m_view = new QGraphicsView(m_scene);
+    m_view = new QGraphicsView(m_scene,this);
 
     m_view->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     m_view->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
@@ -107,6 +107,7 @@ KIMLookupTable::KIMLookupTable(PanelAgent *agent, QWidget *parent)
 
 KIMLookupTable::~KIMLookupTable()
 {
+    delete m_widget;
 }
 
 void KIMLookupTable::themeUpdated()

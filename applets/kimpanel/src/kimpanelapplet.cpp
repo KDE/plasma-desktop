@@ -65,6 +65,7 @@ KIMPanelApplet::~KIMPanelApplet()
         m_lookup_table->close();
         delete m_lookup_table;
     }
+    delete m_statusbarGraphics;
     KIM::Settings::self()->writeConfig();
 }
 
