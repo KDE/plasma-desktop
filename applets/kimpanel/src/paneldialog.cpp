@@ -21,6 +21,7 @@
 #include "kimstatusbargraphics.h"
 #include "kimstatusbar.h"
 #include "kimlookuptable.h"
+#include "kimpanelsettings.h"
 #include <kdebug.h>
 #include <kcmdlineargs.h>
 #include <kaboutapplicationdialog.h>
@@ -56,6 +57,9 @@ KIMPanel::KIMPanel(QObject* parent)
 
     m_statusbar->show();
 
+    m_statusbar->move(KIM::Settings::self()->floatingStatusbarPos());
+
+
 
 #if 0
     // create actions
@@ -87,6 +91,9 @@ void KIMPanel::about()
 void KIMPanel::exit()
 {
 //X     m_panel_agent->exit();
+    delete m_statusbar;
+    delete m_statusbarGraphics;
+    delete m_lookup_table;
     KApplication::kApplication()->quit();
 }
 

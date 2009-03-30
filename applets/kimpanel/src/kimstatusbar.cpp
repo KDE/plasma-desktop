@@ -93,8 +93,6 @@ KIMStatusBar::KIMStatusBar(QWidget *parent, const QList<QAction *> extra_actions
     KIconLoader::global()->newIconLoader();
     themeUpdated();
 
-    move(KIM::Settings::self()->floatingStatusbarPos());
-
     connect(KIM::Settings::self(),SIGNAL(configChanged()),this,SLOT(adjustSelf()));
     adjustSelf();
 
@@ -102,6 +100,7 @@ KIMStatusBar::KIMStatusBar(QWidget *parent, const QList<QAction *> extra_actions
 
 KIMStatusBar::~KIMStatusBar()
 {
+    KIM::Settings::self()->writeConfig();
 }
 
 void KIMStatusBar::themeUpdated()
@@ -211,6 +210,7 @@ void KIMStatusBar::setGraphicsWidget(KIMStatusBarGraphics *widget)
         m_scene->addItem(m_widget);
         connect(m_widget,SIGNAL(iconCountChanged()),this,SLOT(adjustSelf()));
         //themeUpdated();
+        move(KIM::Settings::self()->floatingStatusbarPos());
         adjustSelf();
     }
 

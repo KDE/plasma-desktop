@@ -31,6 +31,7 @@
 #include <plasma/containment.h>
 #include <plasma/dialog.h>
 #include <plasma/corona.h>
+#include <plasma/tooltipmanager.h>
 
 #include <math.h>
 
@@ -41,6 +42,7 @@ KIMPanelApplet::KIMPanelApplet(QObject *parent, const QVariantList &args)
     m_layout(0),
     m_statusbar(0),
     m_statusbarGraphics(0),
+    m_lookup_table(0),
     m_panel_agent(0)
 {
     setHasConfigurationInterface(true);
@@ -57,7 +59,13 @@ KIMPanelApplet::~KIMPanelApplet()
 {
     if (m_statusbar) {
         m_statusbar->close();
+        delete m_statusbar;
     }
+    if (m_lookup_table) {
+        m_lookup_table->close();
+        delete m_lookup_table;
+    }
+    KIM::Settings::self()->writeConfig();
 }
 
 void KIMPanelApplet::saveState(KConfigGroup &config) const
@@ -72,7 +80,7 @@ void KIMPanelApplet::init()
     m_preferIconWidth = qMax((int)KIconLoader::SizeSmall,
         KIM::Settings::self()->preferIconSize());
 
-    m_background = new Plasma::FrameSvg();
+    m_background = new Plasma::FrameSvg(this);
     m_background->setImagePath("widgets/systemtray");
 
     connect(Plasma::Theme::defaultTheme(), SIGNAL(themeChanged()),
@@ -103,6 +111,8 @@ void KIMPanelApplet::init()
 
     m_logoIcon = new Plasma::IconWidget(KIcon("draw-freehand"),"",this);
     m_logoIcon->hide();
+    Plasma::ToolTipContent data(i18n("kimpanel"),i18n("KDE Input Method Panel"),m_logoIcon->icon());
+    Plasma::ToolTipManager::self()->setContent(m_logoIcon,data);
 
     //m_layout->addItem(m_logoIcon);
     m_layout->addItem(m_statusbarGraphics);
@@ -234,6 +244,7 @@ void KIMPanelApplet::toggleCollapse(bool b)
         connect(m_statusbarGraphics,SIGNAL(iconCountChanged()),SLOT(adjustSelf()));
     }
     m_statusbar->setVisible(b);
+    m_statusbar->move(KIM::Settings::self()->floatingStatusbarPos());
     m_logoIcon->setVisible(b);
     adjustSelf();
 }

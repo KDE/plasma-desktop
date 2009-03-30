@@ -67,6 +67,8 @@ KIMStatusBarGraphics::KIMStatusBarGraphics(PanelAgent *agent, QGraphicsItem *par
     m_collapseIcon->setIcon(m_collapseAction->icon());
     connect(m_collapseIcon,SIGNAL(clicked()),m_collapseAction,SIGNAL(triggered()));
     m_collapseIcon->hide();
+    Plasma::ToolTipContent data(m_collapseAction->text(),i18n("Expand out from the panel to a floating widget"),m_collapseAction->icon());
+    Plasma::ToolTipManager::self()->setContent(m_collapseIcon,data);
 
     m_reloadConfigAction = new QAction(KIcon("view-refresh"),i18n("Reload Config"),this);
 //X     connect(m_reloadConfigAction,SIGNAL(triggered()),agent,SIGNAL(ReloadConfig()));
@@ -223,11 +225,14 @@ void KIMStatusBarGraphics::changeCollapseStatus()
         m_collapseAction->setIcon(KIcon("arrow-down-double"));
         m_collapseAction->setText(i18n("Collapse to panel"));
         m_collapseIcon->setIcon(m_collapseAction->icon());
+        Plasma::ToolTipContent data(m_collapseAction->text(),i18n("Embbed into the panel"),m_collapseAction->icon());
+        Plasma::ToolTipManager::self()->setContent(m_collapseIcon,data);
     } else {
         m_collapseAction->setIcon(KIcon("arrow-up-double"));
         m_collapseAction->setText(i18n("Expand out"));
         m_collapseIcon->setIcon(m_collapseAction->icon());
-
+        Plasma::ToolTipContent data(m_collapseAction->text(),i18n("Expand out from the panel to a floating widget"),m_collapseAction->icon());
+        Plasma::ToolTipManager::self()->setContent(m_collapseIcon,data);
     }
     emit collapsed(m_collapsed);
 }
