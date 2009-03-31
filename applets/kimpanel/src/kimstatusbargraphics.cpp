@@ -226,7 +226,7 @@ void KIMStatusBarGraphics::changeCollapseStatus()
         m_collapseAction->setIcon(KIcon("arrow-down-double"));
         m_collapseAction->setText(i18n("Collapse to panel"));
         m_collapseIcon->setIcon(m_collapseAction->icon());
-        Plasma::ToolTipContent data(m_collapseAction->text(),i18n("Embbed into the panel"),m_collapseAction->icon());
+        Plasma::ToolTipContent data(m_collapseAction->text(),i18n("Embed into the panel"),m_collapseAction->icon());
         Plasma::ToolTipManager::self()->setContent(m_collapseIcon,data);
     } else {
         m_collapseAction->setIcon(KIcon("arrow-up-double"));
