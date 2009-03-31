@@ -22,7 +22,7 @@
 
 #define KDE_signal signal
 
-#include "config-scim.h"
+#include <config-scim.h>
 #include <sys/wait.h>
 #include <sys/types.h>
 #include <sys/time.h>

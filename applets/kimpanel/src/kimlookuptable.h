@@ -16,8 +16,8 @@
  *   Free Software Foundation, Inc.,                                       *
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
-#ifndef LOOKUPTABLEWIDGET_H
-#define LOOKUPTABLEWIDGET_H
+#ifndef KIMLOOKUPTABLE_H
+#define KIMLOOKUPTABLE_H
 
 #include "kimpanelruntime_export.h"
 #include <plasma/theme.h>
@@ -79,4 +79,4 @@ private:
     bool m_visible;
 };
 
-#endif // LOOKUPTABLEWIDGET_H
+#endif // KIMLOOKUPTABLE_H

@@ -29,7 +29,6 @@
 #include <KIconLoader>
 #include <KConfigGroup>
 
-#include <QDesktopWidget>
 #include <QToolButton>
 #include <QPixmap>
 #include <QBitmap>

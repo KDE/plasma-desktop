@@ -26,8 +26,19 @@
 #include <kconfiggroup.h>
 #include <kiconloader.h>
 #include <kicon.h>
-#include <QtCore>
-#include <QtGui>
+
+#include <QAction>
+#include <QList>
+#include <QPalette>
+#include <QWidget>
+#include <QDesktopWidget>
+#include <QGraphicsScene>
+#include <QGraphicsWidget>
+#include <QGraphicsView>
+#include <QPainter>
+#include <QFrame>
+#include <QHBoxLayout>
+#include <QVBoxLayout>
 
 #ifdef Q_WS_X11
 #include <QX11Info>

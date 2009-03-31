@@ -3,9 +3,9 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
     http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
-    <kcfgfile name="kimpanelrc"/>
     <include>QDesktopWidget</include>
     <include>QPoint</include>
+    <kcfgfile name="kimpanelrc" />
     <group name="Layout">
         <entry name="PreferIconSize" type="Int">
             <label>Defines your preferred status bar icon size.</label>
@@ -14,6 +14,7 @@
             <max>128</max>
         </entry>
         <entry name="FloatingStatusbarPos" type="Point">
+            <label>Position of floating statusbar</label>
             <default code="true">QDesktopWidget().availableGeometry().bottomRight() - QPoint(200,100)</default>
         </entry>
         <entry name="FloatingStatusbarLayout" type="Enum">

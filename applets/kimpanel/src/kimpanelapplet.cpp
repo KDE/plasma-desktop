@@ -191,7 +191,7 @@ void KIMPanelApplet::adjustSelf()
     switch (formFactor()) {
     case Plasma::Horizontal:
         i = 1;
-        for (i = 1; i <= iconCount; i++) {
+        for (i = 1; i <= iconCount; ++i) {
             if (qAbs(r.height()/i - m_preferIconWidth) < min_delta) {
                 best_i = i;
                 min_delta = qAbs(r.height()/i - m_preferIconWidth);
@@ -202,7 +202,7 @@ void KIMPanelApplet::adjustSelf()
         break;
     case Plasma::Vertical:
         i = 1;
-        for (i = 1; i <= iconCount; i++) {
+        for (i = 1; i <= iconCount; ++i) {
             if (qAbs(r.width()/i - m_preferIconWidth) < min_delta) {
                 best_i = i;
                 min_delta = qAbs(r.width()/i - m_preferIconWidth);
