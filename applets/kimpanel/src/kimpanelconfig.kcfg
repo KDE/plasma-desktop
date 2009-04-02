@@ -14,7 +14,7 @@
             <max>128</max>
         </entry>
         <entry name="FloatingStatusbarPos" type="Point">
-            <label>Position of floating statusbar</label>
+            <label>Position of floating status bar</label>
             <default code="true">QDesktopWidget().availableGeometry().bottomRight() - QPoint(200,100)</default>
         </entry>
         <entry name="FloatingStatusbarLayout" type="Enum">
