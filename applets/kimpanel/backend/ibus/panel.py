@@ -103,8 +103,8 @@ class KIMIbusClient(dbus.service.Object):
         pass
 
     @dbus.service.signal(dbus_interface='org.ibus.panel',
-                         signature='asasasiiib')
-    def UpdateLookupTable(self, labels,items,xs,int1,int2,int3,bool1):
+                         signature='asasasbb')
+    def UpdateLookupTable(self, labels,items,xs,bool1,bool2):
         pass
 
     @dbus.service.signal(dbus_interface='org.ibus.panel',
@@ -270,7 +270,7 @@ class KIMPanel(PanelBase):
             self.__attrs.append('')
         
         self.__kimclient.UpdateLookupTable(self.__labels,
-                self.__candis,self.__attrs,0,0,0,dbus.Boolean())
+                self.__candis,self.__attrs,dbus.Boolean(1),dbus.Boolean(lookup_table.get_current_page_size() <= lookup_table.get_page_size()))
 
         if visible:
             self.show_lookup_table()

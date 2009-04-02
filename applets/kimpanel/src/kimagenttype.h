@@ -59,7 +59,8 @@ typedef struct LookupTable_ {
         QList<TextAttribute> attr;
     } Entry;
     QList<Entry> entries;
-    bool to_show;
+    bool has_prev;
+    bool has_next;
 } LookupTable;
 //Q_DECLARE_METATYPE(LookupTable);
 //Q_DECLARE_METATYPE(LookupTable::Entry);

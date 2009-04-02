@@ -175,9 +175,9 @@ LookupTable2VariantList(const LookupTable &lookup_table)
     }
 
     result << labels << candidates << attrlist_list
-           << lookup_table.number_of_candidates() << lookup_table.get_current_page_start() << lookup_table.get_cursor_pos_in_current_page()
-           << lookup_table.is_cursor_visible();
-           
+           << lookup_table.get_current_page_start() 
+           << (lookup_table.get_current_page_start() + lookup_table.get_current_page_size() < lookup_table.number_of_candidates());
+
     //result << labels << candidates << attrlist_list;
     return result;
 }
@@ -564,10 +564,8 @@ protected:
                 message << ev->data().at(0).toStringList();
                 message << ev->data().at(1).toStringList();
                 message << ev->data().at(2).toStringList();
-                message << ev->data().at(3).toInt();
-                message << ev->data().at(4).toInt();
-                message << ev->data().at(5).toInt();
-                message << ev->data().at(6).toBool();
+                message << ev->data().at(3).toBool();
+                message << ev->data().at(4).toBool();
                 QDBusConnection("scim_panel").send(message);
                 break;
             case DBusEvent::UP_PREEDIT_CARET:

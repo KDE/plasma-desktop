@@ -24,6 +24,7 @@
 
 #include <plasma/paintutils.h>
 #include <KIconLoader>
+#include <KIconEffect>
 #include <KIcon>
 #include <KConfig>
 #include <KConfigGroup>
@@ -217,6 +218,24 @@ void KIMLookupTableGraphics::updateLookupTable(const LookupTable &lookup_table)
     for (int i =0; i<m_lowerLayout->columnCount()-1; i++) {
         m_lowerLayout->setColumnSpacing(i,m_spacing);
     }
+    // update pageup/pagedown icons
+    KIconEffect effect;
+    QPixmap pixmap = KIcon("arrow-left").pixmap(KIconLoader::SizeSmall);
+    if (!lookup_table.has_prev) {
+        pixmap = effect.apply(pixmap,KIconLoader::Desktop,KIconLoader::DisabledState);
+    } else {
+        pixmap = effect.apply(pixmap,KIconLoader::Desktop,KIconLoader::DefaultState);
+    }
+    m_pageUpIcon->setIcon(pixmap);
+
+    pixmap = KIcon("arrow-right").pixmap(KIconLoader::SizeSmall);
+    if (!lookup_table.has_next) {
+        pixmap = effect.apply(pixmap,KIconLoader::Desktop,KIconLoader::DisabledState);
+    } else {
+        pixmap = effect.apply(pixmap,KIconLoader::Desktop,KIconLoader::DefaultState);
+    }
+    m_pageDownIcon->setIcon(pixmap);
+
     m_lowerLayout->updateGeometry();
     resize(preferredSize());
     emit sizeChanged();

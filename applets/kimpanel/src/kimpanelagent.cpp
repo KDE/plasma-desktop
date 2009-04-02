@@ -50,7 +50,7 @@ PanelAgent::PanelAgent(QObject *parent)
     // do some serialization 
     QDBusConnection("kimpanel_bus").connect("","","",
         "UpdateLookupTable",this,SLOT(UpdateLookupTable(const QStringList &,
-        const QStringList &,const QStringList &,int,int,int,bool)));
+        const QStringList &,const QStringList &,bool,bool)));
     QDBusConnection("kimpanel_bus").connect("","","",
         "UpdatePreeditCaret",this,SIGNAL(updatePreeditCaret(int)));
     QDBusConnection("kimpanel_bus").connect("","","",
@@ -152,7 +152,7 @@ static Property String2Property(const QString &str)
     return result;
 }
 
-static LookupTable Args2LookupTable(const QStringList &labels, const QStringList &candis, const QStringList &attrs, int, int, int, bool to_show)
+static LookupTable Args2LookupTable(const QStringList &labels, const QStringList &candis, const QStringList &attrs, bool has_prev, bool has_next)
 {
     Q_ASSERT(labels.size() == candis.size());
     Q_ASSERT(labels.size() == attrs.size());
@@ -169,7 +169,8 @@ static LookupTable Args2LookupTable(const QStringList &labels, const QStringList
         result.entries << entry;
     }
     
-    result.to_show = to_show;
+    result.has_prev = has_prev;
+    result.has_next = has_next;
     return result;
 }
 
@@ -191,9 +192,9 @@ void PanelAgent::reloadConfig()
 void PanelAgent::UpdateLookupTable(const QStringList &labels,
     const QStringList &candis,
     const QStringList &attrlists,
-    int i1,int i2,int i3,bool to_show)
+    bool has_prev,bool has_next)
 {
-    emit updateLookupTable(Args2LookupTable(labels,candis,attrlists,i1,i2,i3,to_show));
+    emit updateLookupTable(Args2LookupTable(labels,candis,attrlists,has_prev,has_next));
 }
 
 void PanelAgent::UpdatePreeditText(const QString &text,const QString &attr)

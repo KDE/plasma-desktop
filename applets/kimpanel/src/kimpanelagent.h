@@ -48,7 +48,7 @@ public Q_SLOTS: // METHODS
     void UpdateLookupTable(const QStringList &labels,
         const QStringList &candis,
         const QStringList &attrlists,
-        int,int,int,bool to_show);
+        bool has_prev,bool has_next);
     void UpdatePreeditText(const QString &text,const QString &attr);
     void UpdateAux(const QString &text,const QString &attr);
     void UpdateScreen(int screen_id);
