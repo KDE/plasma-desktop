@@ -110,7 +110,6 @@ KIMLookupTable::KIMLookupTable(PanelAgent *agent, QWidget *parent)
     setMouseTracking(true);
 
     themeUpdated();
-    kDebug() << m_view->geometry() << contentsRect() << geometry() << m_background->frameSize();
 
     m_dragging = false;
 
