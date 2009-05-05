@@ -61,9 +61,9 @@
 #include <scim.h>
 #pragma GCC visibility pop
 
-Q_DECLARE_METATYPE(scim::Property);
-Q_DECLARE_METATYPE(scim::PanelFactoryInfo);
-Q_DECLARE_METATYPE(scim::HelperInfo);
+Q_DECLARE_METATYPE(scim::Property)
+Q_DECLARE_METATYPE(scim::PanelFactoryInfo)
+Q_DECLARE_METATYPE(scim::HelperInfo)
 
 using namespace scim;
 
@@ -259,10 +259,9 @@ public:
         SHOW_AUX,
         HIDE_AUX,
         SHOW_HELP,
-        SHOW_FACTORY_MENU,
-
-
-    };
+        SHOW_FACTORY_MENU
+    }
+;
     DBusEvent( SCIM_EVENT_TYPE t, const QVariantList &arglist=QVariantList())
         : QEvent((QEvent::Type)dbus_event_type), 
           m_evtype(t),
