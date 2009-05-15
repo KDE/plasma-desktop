@@ -13,6 +13,9 @@
             <min>16</min>
             <max>128</max>
         </entry>
+        <entry name="StatusbarHiddenProperties" type="StringList">
+            <label>Properties hidden in status bar</label>
+        </entry>
         <entry name="FloatingStatusbarPos" type="Point">
             <label>Position of floating status bar</label>
             <default code="true">QDesktopWidget().availableGeometry().bottomRight() - QPoint(200,100)</default>

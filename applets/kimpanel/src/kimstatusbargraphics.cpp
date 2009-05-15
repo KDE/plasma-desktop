@@ -18,12 +18,15 @@
  ***************************************************************************/
 
 #include "kimstatusbargraphics.h"
+#include "kimpanelsettings.h"
 
 #include <QGraphicsSceneDragDropEvent>
 #include <QGraphicsWidget>
 #include <QMenu>
 
+#include <KDebug>
 #include <KMessageBox>
+#include <KToggleAction>
 
 #include <plasma/containment.h>
 #include <plasma/dialog.h>
@@ -44,6 +47,11 @@ KIMStatusBarGraphics::KIMStatusBarGraphics(PanelAgent *agent, QGraphicsItem *par
     m_icon_mapper(new QSignalMapper(this)),
     m_panel_agent(agent)
 {
+    m_hiddenProperties = QSet<QString>::fromList(KIM::Settings::self()->statusbarHiddenProperties());
+
+    m_filterAction = new QAction(KIcon("view-filter"),"Icon Filter",this);
+    m_filterMenu = new QMenu;
+    m_filterAction->setMenu(m_filterMenu);
 
     setContentsMargins(0,0,0,0);
 
@@ -107,6 +115,14 @@ KIMStatusBarGraphics::KIMStatusBarGraphics(PanelAgent *agent, QGraphicsItem *par
 
 KIMStatusBarGraphics::~KIMStatusBarGraphics()
 {
+    KIM::Settings::self()->setStatusbarHiddenProperties(m_hiddenProperties.toList());
+
+    KIM::Settings::self()->writeConfig();
+}
+
+int KIMStatusBarGraphics::iconCount() const
+{
+    return m_layout->count();
 }
 
 void KIMStatusBarGraphics::setCollapsible(bool b)
@@ -133,6 +149,8 @@ QList<QAction *> KIMStatusBarGraphics::actions() const
         result << m_collapseAction;
     }
 
+    result << m_filterAction;
+
     return result;
 }
 
@@ -146,6 +164,10 @@ void KIMStatusBarGraphics::paint(QPainter *painter, const QStyleOptionGraphicsIt
 void KIMStatusBarGraphics::updateProperty(const Property &prop)
 {
     if (!m_prop_map.contains(prop.key)) {
+        return;
+    }
+
+    if (m_hiddenProperties.contains(prop.key)) {
         return;
     }
 
@@ -182,7 +204,9 @@ void KIMStatusBarGraphics::registerProperties(const QList<Property> &props)
 //X     }
     qDeleteAll(m_prop_map.values());
     m_prop_map.clear();
+    m_filterMenu->clear();
     m_props = props;
+
     Q_FOREACH (const Property &prop, props) {
 
         KIcon kicon;
@@ -198,25 +222,58 @@ void KIMStatusBarGraphics::registerProperties(const QList<Property> &props)
         Plasma::ToolTipContent data(prop.label,prop.tip,kicon);
         Plasma::ToolTipManager::self()->setContent(icon,data);
 
-        m_icons << icon;
+#if 0
+        if (! m_hiddenProperties.contains(prop.key)) {
+            m_icons << icon;
+        }
+#endif
         m_prop_map.insert(prop.key, icon);
 //X         m_layout->addItem(icon);
+        //QAction *hiddenAction = new KToggleAction(kicon,prop.label,m_filterMenu);
+        QAction *hiddenAction = new KToggleAction(prop.label,m_filterMenu);
+        hiddenAction->setCheckable(true);
+        hiddenAction->setChecked(! m_hiddenProperties.contains(prop.key));
+        hiddenAction->setData(prop.key);
+        connect(hiddenAction,SIGNAL(toggled(bool)),this,SLOT(hiddenActionToggled()));
+        m_filterMenu->addAction(hiddenAction);
 
         connect(icon,SIGNAL(clicked()),m_icon_mapper,SLOT(map()));
         m_icon_mapper->setMapping(icon,prop.key);
     }
     
+    m_icons.clear();
+
+    Q_FOREACH (const Property &prop, m_props) {
+        if (! m_hiddenProperties.contains(prop.key)) {
+            m_icons << m_prop_map.value(prop.key);
+            m_prop_map.value(prop.key)->show();
+        } else {
+            m_prop_map.value(prop.key)->hide();
+        }
+    }
+
     if (m_enableCollapse) {
-        m_icons << m_collapseIcon;
+        QString key = "__collapse";
+        QAction *hiddenAction = new KToggleAction(m_collapseAction->text(),m_filterMenu);
+        hiddenAction->setCheckable(true);
+        hiddenAction->setChecked(! m_hiddenProperties.contains(key));
+        hiddenAction->setData(key);
+        connect(hiddenAction,SIGNAL(toggled(bool)),this,SLOT(hiddenActionToggled()));
+        m_filterMenu->addAction(hiddenAction);
+
+        if (m_hiddenProperties.contains(key)) {
+            m_collapseIcon->hide();
+        } else {
+            m_icons << m_collapseIcon;
+            m_collapseIcon->show();
+        }
+    } else {
+        m_collapseIcon->hide();
     }
 
     m_layout->setItems(m_icons);
-    Q_FOREACH (Plasma::IconWidget *icon, m_icons) {
-        icon->show();
-    }
+
     emit iconCountChanged();
-//X     kDebug() << m_layout->effectiveSizeHint(Qt::PreferredSize);
-    
 }
 
 void KIMStatusBarGraphics::changeCollapseStatus()
@@ -257,6 +314,72 @@ void KIMStatusBarGraphics::execMenu(const QList<Property> &prop_list)
     }
     menu->exec(QCursor::pos());
     delete menu;
+}
+
+void KIMStatusBarGraphics::hiddenActionToggled()
+{
+    QAction *action = qobject_cast<QAction *>(sender());
+
+    if (action) {
+        QString key = action->data().toString();
+
+        if (key == "__collapse") {
+            if (action->isChecked()) {
+                m_collapseIcon->show();
+
+                m_layout->addItem(m_collapseIcon);
+
+                m_hiddenProperties.remove(key);
+            } else {
+                m_collapseIcon->hide();
+
+                m_layout->removeAt(m_layout->count()-1);
+
+                m_hiddenProperties.insert(key);
+            }
+
+            emit iconCountChanged();
+            return;
+        }
+
+        if (action->isChecked()) {
+            m_hiddenProperties.remove(key);
+            m_prop_map.value(key)->show();
+        } else {
+            m_hiddenProperties.insert(key);
+            m_prop_map.value(key)->hide();
+        }
+
+        m_icons.clear();
+
+        Q_FOREACH (const Property &prop, m_props) {
+            if (! m_hiddenProperties.contains(prop.key)) {
+                m_icons << m_prop_map.value(prop.key);
+                m_prop_map.value(prop.key)->show();
+            } else {
+                m_prop_map.value(prop.key)->hide();
+            }
+        }
+
+        if (m_enableCollapse) {
+            if (m_hiddenProperties.contains("__collapse")) {
+                m_collapseIcon->hide();
+            } else {
+                m_icons << m_collapseIcon;
+                m_collapseIcon->show();
+            }
+        } else {
+            m_collapseIcon->hide();
+        }
+
+        m_layout->setItems(m_icons);
+
+        emit iconCountChanged();
+
+    } else {
+        kWarning() << "qobject_cast failed";
+    }
+
 }
 
 #include "kimstatusbargraphics.moc"

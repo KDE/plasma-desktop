@@ -27,6 +27,7 @@
 #include <QGraphicsLayoutItem>
 #include <QList>
 #include <QSignalMapper>
+#include <QSet>
 #include "kimpanelruntime_export.h"
 
 //#include "kimagenttype.h"
@@ -43,10 +44,7 @@ public:
     explicit KIMStatusBarGraphics(PanelAgent *agent=0, QGraphicsItem *parent=0);
     ~KIMStatusBarGraphics();
 
-    inline int iconCount() const
-    {
-        return m_icons.size();
-    }
+    int iconCount() const;
 
     bool collapsible() const 
     {
@@ -82,6 +80,7 @@ protected Q_SLOTS:
 
 private Q_SLOTS:
     void changeCollapseStatus();
+    void hiddenActionToggled();
 
 private:
     KIMPanelLayout *m_layout;
@@ -95,6 +94,11 @@ private:
 
     QAction *m_collapseAction;
     QAction *m_reloadConfigAction;
+
+    QAction *m_filterAction;
+    QMenu *m_filterMenu;
+    QSet<QString> m_hiddenProperties;
+
     Plasma::IconWidget *m_logoIcon;
     Plasma::IconWidget *m_collapseIcon;
 
