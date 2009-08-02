@@ -389,7 +389,7 @@ public Q_SLOTS:
         list_result << Property2String(logo_prop);
         list_result << PropertyList2LeafOnlyStringList(panel_props);
 
-        Q_FOREACH(const QList<Property> &props, helper_props_map.values()) {
+        Q_FOREACH(const QList<Property> &props, helper_props_map) {
             list_result << PropertyList2LeafOnlyStringList(props);
         }
 
@@ -630,7 +630,7 @@ protected:
                 list_result.clear();
                 list_result << Property2String(logo_prop);
                 list_result << PropertyList2LeafOnlyStringList(panel_props);
-                Q_FOREACH(const QList<Property> &props, helper_props_map.values()) {
+                Q_FOREACH(const QList<Property> &props, helper_props_map) {
                     list_result << PropertyList2LeafOnlyStringList(props);
                 }
                 list_result << Property2String(show_help_prop);
@@ -655,7 +655,7 @@ protected:
                 list_result << Property2String(logo_prop);
                 list_result << PropertyList2LeafOnlyStringList(panel_props);
                 SCIM_DEBUG_MAIN(1)<<"SIMPLIFY_PROPS "<<panel_props.size()<<" "<<list_result.size()-1<<"\n";
-                Q_FOREACH(const QList<Property> &props, helper_props_map.values()) {
+                Q_FOREACH(const QList<Property> &props, helper_props_map) {
                     list_result << PropertyList2LeafOnlyStringList(props);
                 }
                 list_result << Property2String(show_help_prop);
@@ -674,7 +674,7 @@ protected:
                 list_result.clear();
                 list_result << Property2String(logo_prop);
                 list_result << PropertyList2LeafOnlyStringList(panel_props);
-                Q_FOREACH(const QList<Property> &props, helper_props_map.values()) {
+                Q_FOREACH(const QList<Property> &props, helper_props_map) {
                     list_result << PropertyList2LeafOnlyStringList(props);
                 }
                 list_result << Property2String(show_help_prop);
