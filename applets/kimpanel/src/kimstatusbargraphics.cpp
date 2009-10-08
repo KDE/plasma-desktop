@@ -49,7 +49,7 @@ KIMStatusBarGraphics::KIMStatusBarGraphics(PanelAgent *agent, QGraphicsItem *par
 {
     m_hiddenProperties = QSet<QString>::fromList(KIM::Settings::self()->statusbarHiddenProperties());
 
-    m_filterAction = new QAction(KIcon("view-filter"),"Icon Filter",this);
+    m_filterAction = new QAction(KIcon("view-filter"),i18n("Icon Filter"),this);
     m_filterMenu = new QMenu;
     m_filterAction->setMenu(m_filterMenu);
 
