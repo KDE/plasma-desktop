@@ -7,8 +7,8 @@ find_package(SCIM REQUIRED)
 add_definitions(-DQT_NO_KEYWORDS ${QT_DEFINITIONS})
 remove_definitions(-DQT_NO_STL)
 include_directories(${QT_INCLUDES} ${SCIM_INCLUDE_DIR})
-set(SCIM_ICON_DIR "/usr/share/scim/icons")
-set(SCIM_PANEL_INSTALL_DIR "/usr/lib/scim-1.0/")
+set(SCIM_ICON_DIR "${PC_SCIM_PREFIX}/share/scim/icons")
+set(SCIM_PANEL_INSTALL_DIR "${PC_SCIM_LIBDIR}/scim-1.0/")
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/config-scim.h.cmake
    ${CMAKE_CURRENT_BINARY_DIR}/config-scim.h
    )
