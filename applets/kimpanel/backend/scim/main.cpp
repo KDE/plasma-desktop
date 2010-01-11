@@ -22,6 +22,9 @@
 
 #define KDE_signal signal
 
+#undef QT_NO_STL
+#define QT_STL
+
 #include <config-scim.h>
 #include <sys/wait.h>
 #include <sys/types.h>
