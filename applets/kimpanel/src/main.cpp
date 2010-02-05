@@ -25,7 +25,7 @@
 
 int main(int argc, char *argv[])
 {
-    KAboutData about_data("kimpanel","",
+    KAboutData about_data("kimpanel","plasma_applet_kimpanel",
                           ki18n("Input Method Panel"),
                           "0.1.0",
                           ki18n("Generic input method panel"),
