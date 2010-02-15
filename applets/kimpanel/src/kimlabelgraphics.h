@@ -22,6 +22,12 @@
 
 #include "paintutils.h"
 #include <QGraphicsWidget>
+#include <QWeakPointer>
+
+namespace Plasma
+{
+    class Animation;
+}
 
 class KIMLabelGraphics:public QGraphicsWidget
 {
@@ -123,5 +129,6 @@ private:
 
     LabelStates m_states;
     QPointF m_clickStartPos;
+    QWeakPointer<Plasma::Animation> m_animation;
 };
 #endif // KIMLABELGRAPHICS_H

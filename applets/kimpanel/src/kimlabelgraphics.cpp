@@ -18,7 +18,11 @@
  ***************************************************************************/
 
 #include "kimlabelgraphics.h"
-#include <plasma/theme.h>
+
+#include <Plasma/Theme>
+#include <Plasma/Animator>
+#include <Plasma/Animation>
+
 #include <QGraphicsSceneMouseEvent>
 
 KIMLabelGraphics::KIMLabelGraphics(KIM::RenderType type,QGraphicsItem *parent)
@@ -200,8 +204,6 @@ void KIMLabelGraphics::mouseReleaseEvent(QGraphicsSceneMouseEvent *event)
 void KIMLabelGraphics::hoverEnterEvent(QGraphicsSceneHoverEvent *event)
 {
     hoverEffect(true);
-    update();
-
     QGraphicsWidget::hoverEnterEvent(event);
 }
 
@@ -209,8 +211,6 @@ void KIMLabelGraphics::hoverLeaveEvent(QGraphicsSceneHoverEvent *event)
 {
     m_states &= ~HoverState; // Will be set once progress is zero again ...
     hoverEffect(false);
-    update();
-
     QGraphicsWidget::hoverLeaveEvent(event);
 }
 
@@ -220,18 +220,27 @@ void KIMLabelGraphics::hoverEffect(bool show)
         m_states |= HoverState;
     }
 
-#if 0
-    fadeIn = show;
-    const int FadeInDuration = 150;
-
-    if (hoverAnimId != -1) {
-        Animator::self()->stopCustomAnimation(hoverAnimId);
+    Plasma::Animation *animation = m_animation.data();
+    if (!animation) {
+        animation = Plasma::Animator::create(Plasma::Animator::FadeAnimation);
+        animation->setTargetWidget(this);
+        animation->setProperty("duration", 150);
+        animation->setProperty("startValue", 0.0);
+        animation->setProperty("endValue", 1.0);
+        m_animation = animation;
+    } else if (animation->state() == QAbstractAnimation::Running) {
+        animation->pause();
     }
 
-    hoverAnimId = Animator::self()->customAnimation(
-        40 / (1000 / FadeInDuration), FadeInDuration,
-        Animator::EaseOutCurve, q, "hoverAnimationUpdate");
-#endif
+    if (show) {
+        animation->setProperty("easingCurve", QEasingCurve::InQuad);
+        animation->setProperty("direction", QAbstractAnimation::Forward);
+        animation->start(QAbstractAnimation::KeepWhenStopped);
+    } else {
+        animation->setProperty("easingCurve", QEasingCurve::OutQuad);
+        animation->setProperty("direction", QAbstractAnimation::Backward);
+        animation->start(QAbstractAnimation::DeleteWhenStopped);
+    }
 }
 
 #include "kimlabelgraphics.moc"
