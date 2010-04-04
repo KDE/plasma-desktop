@@ -202,7 +202,7 @@ void KIMStatusBarGraphics::registerProperties(const QList<Property> &props)
 //X     if (m_logoVisible) {
 //X         m_icons << m_logoIcon;
 //X     }
-    qDeleteAll(m_prop_map.values());
+    qDeleteAll(m_prop_map);
     m_prop_map.clear();
     m_filterMenu->clear();
     m_props = props;
