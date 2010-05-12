@@ -53,7 +53,7 @@ kde4_add_plugin(plasma_applet_kimpanel ${kimpanel_applet_SRCS})
 target_link_libraries(plasma_applet_kimpanel 
    kimpanelruntime
    ${KDE4_PLASMA_LIBS} 
-   ${KDE4_KUTILS_LIBS} 
+   ${KDE4_KCMUTILS_LIBS} 
    ${X11_LIBRARIES}
    ${X11_Xrender_LIB}
    )
@@ -68,7 +68,7 @@ kde4_add_executable(kimpanel ${kimpanel_dialog_SRCS})
 target_link_libraries(kimpanel 
    kimpanelruntime
    ${KDE4_PLASMA_LIBS} 
-   ${KDE4_KUTILS_LIBS} 
+   ${KDE4_KCMUTILS_LIBS} 
    ${X11_LIBRARIES}
    ${X11_Xrender_LIB}
    )
