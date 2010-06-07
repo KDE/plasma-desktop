@@ -88,7 +88,6 @@ KIMLookupTable::KIMLookupTable(PanelAgent *agent, Plasma::Corona *corona, QWidge
     KWindowSystem::setType( winId(), NET::Dock);
 
     m_widget = new KIMLookupTableGraphics(m_panel_agent);
-    m_scene->addOffscreenWidget(m_widget);
 
     m_view = new QGraphicsView(m_scene,this);
 
@@ -106,7 +105,7 @@ KIMLookupTable::KIMLookupTable(PanelAgent *agent, Plasma::Corona *corona, QWidge
             this,SLOT(propagateVisibleChange(bool)));
 
     m_scene->addItem(m_widget);
-    m_scene->setSceneRect(QRectF(-10000,-10000,20000,20000));
+    m_scene->addOffscreenWidget(m_widget);
 
     setMouseTracking(true);
 
