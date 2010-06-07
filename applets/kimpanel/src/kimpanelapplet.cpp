@@ -108,7 +108,7 @@ void KIMPanelApplet::init()
     connect(m_statusbarGraphics,SIGNAL(iconCountChanged()),SLOT(adjustSelf()));
     connect(m_statusbarGraphics,SIGNAL(collapsed(bool)),SLOT(toggleCollapse(bool)));
 
-    m_lookup_table = new KIMLookupTable(m_panel_agent);
+    m_lookup_table = new KIMLookupTable(m_panel_agent, static_cast<Plasma::Corona *>(scene()));
 
     m_logoIcon = new Plasma::IconWidget(KIcon("draw-freehand"),"",this);
     m_logoIcon->hide();

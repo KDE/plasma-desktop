@@ -23,6 +23,7 @@
 #include <plasma/theme.h>
 #include <plasma/svg.h>
 #include <plasma/framesvg.h>
+#include <Plasma/Corona>
 
 #include <QWidget>
 #include <QHBoxLayout>
@@ -42,7 +43,7 @@ class KIMPANELRUNTIME_EXPORT KIMLookupTable: public QWidget
 {
 Q_OBJECT
 public:
-    explicit KIMLookupTable(PanelAgent *agent = 0,QWidget *parent=0);
+    explicit KIMLookupTable(PanelAgent *agent = 0, Plasma::Corona *corona=0, QWidget *parent=0);
     ~KIMLookupTable();
     
 Q_SIGNALS:
@@ -68,7 +69,7 @@ private:
     bool m_dragging;
     QPoint m_init_pos;
 
-    QGraphicsScene *m_scene;
+    Plasma::Corona *m_scene;
     QGraphicsView *m_view;
     KIMLookupTableGraphics *m_widget;
 

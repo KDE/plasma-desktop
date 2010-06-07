@@ -44,9 +44,10 @@
 #include <X11/Xlib.h>
 #endif
 
-KIMLookupTable::KIMLookupTable(PanelAgent *agent, QWidget *parent)
+KIMLookupTable::KIMLookupTable(PanelAgent *agent, Plasma::Corona *corona, QWidget *parent)
     :QWidget(parent),
-     m_visible(false)
+     m_visible(false),
+     m_scene(corona)
 {
     m_panel_agent = agent;
 
@@ -86,7 +87,8 @@ KIMLookupTable::KIMLookupTable(PanelAgent *agent, QWidget *parent)
     KWindowSystem::setState( winId(), NET::SkipTaskbar | NET::SkipPager | NET::StaysOnTop);
     KWindowSystem::setType( winId(), NET::Dock);
 
-    m_scene = new QGraphicsScene(this);
+    m_widget = new KIMLookupTableGraphics(m_panel_agent);
+    m_scene->addOffscreenWidget(m_widget);
 
     m_view = new QGraphicsView(m_scene,this);
 
@@ -98,7 +100,6 @@ KIMLookupTable::KIMLookupTable(PanelAgent *agent, QWidget *parent)
 
     m_layout->addWidget(m_view);
 
-    m_widget = new KIMLookupTableGraphics(m_panel_agent);
     connect(m_widget,SIGNAL(sizeChanged()),
             this,SLOT(propagateSizeChange()));
     connect(m_widget,SIGNAL(visibleChanged(bool)),
