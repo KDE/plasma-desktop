@@ -45,7 +45,7 @@ class KIMPANELRUNTIME_EXPORT KIMStatusBar : public QWidget
 {
 Q_OBJECT
 public:
-    explicit KIMStatusBar(QWidget *parent=0, const QList<QAction *> extra_actions = QList<QAction *>());
+    explicit KIMStatusBar(Plasma::Corona *corona=0, QWidget *parent=0, const QList<QAction *> extra_actions = QList<QAction *>());
     ~KIMStatusBar();
     
 //X     void setEnabled(bool to_enable);

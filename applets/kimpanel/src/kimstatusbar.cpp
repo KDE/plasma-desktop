@@ -48,10 +48,15 @@
 #endif
 
 
-KIMStatusBar::KIMStatusBar(QWidget *parent, const QList<QAction *> extra_actions)
+KIMStatusBar::KIMStatusBar(Plasma::Corona *corona, QWidget *parent, const QList<QAction *> extra_actions)
     : QWidget(parent),
-      m_desktop(new QDesktopWidget())
+      m_desktop(new QDesktopWidget()),
+      m_scene(corona)
 {
+    if (!m_scene) {
+        m_scene = new Plasma::Corona(this);
+    }
+
     m_background = new Plasma::FrameSvg(this);
 
     m_background->setImagePath("widgets/panel-background");
@@ -73,7 +78,6 @@ KIMStatusBar::KIMStatusBar(QWidget *parent, const QList<QAction *> extra_actions
     KWindowSystem::setState( winId(), NET::SkipTaskbar | NET::SkipPager | NET::StaysOnTop );
     KWindowSystem::setType( winId(), NET::Dock);
 
-    m_scene = new Plasma::Corona(this);
     m_view = new QGraphicsView(m_scene,this);
 
     setMouseTracking(true);
@@ -219,6 +223,7 @@ void KIMStatusBar::setGraphicsWidget(KIMStatusBarGraphics *widget)
         }
         m_widget->setParent(0);
         m_scene->addItem(m_widget);
+        m_scene->addOffscreenWidget(m_widget);
         connect(m_widget,SIGNAL(iconCountChanged()),this,SLOT(adjustSelf()));
         //themeUpdated();
         move(KIM::Settings::self()->floatingStatusbarPos());
