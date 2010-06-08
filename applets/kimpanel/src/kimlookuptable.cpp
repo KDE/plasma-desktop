@@ -46,8 +46,8 @@
 
 KIMLookupTable::KIMLookupTable(PanelAgent *agent, Plasma::Corona *corona, QWidget *parent)
     :QWidget(parent),
-     m_visible(false),
-     m_scene(corona)
+     m_scene(corona),
+     m_visible(false)
 {
     m_panel_agent = agent;
 
