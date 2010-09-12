@@ -97,7 +97,6 @@ KIMStatusBar::KIMStatusBar(Plasma::Corona *corona, QWidget *parent, const QList<
 
     m_layout->addWidget(m_view);
 
-    m_widget = 0;
     setContextMenuPolicy(Qt::ActionsContextMenu);
 
     m_extraActions = extra_actions;
@@ -135,7 +134,7 @@ void KIMStatusBar::themeUpdated()
 
     QSize widget_size;
     if (m_widget) {
-        widget_size = m_widget->effectiveSizeHint(Qt::MinimumSize).toSize();
+        widget_size = m_widget.data()->effectiveSizeHint(Qt::MinimumSize).toSize();
     } else {
         widget_size = QSize(0,0);
     }
@@ -163,9 +162,10 @@ void KIMStatusBar::resizeEvent(QResizeEvent *e)
     setMask(m_background->mask());
     QWidget::resizeEvent(e);
     if (m_widget) {
-        m_widget->resize(m_view->size());
-        m_view->setSceneRect(m_widget->mapToScene(m_widget->boundingRect()).boundingRect());
-        m_view->centerOn(m_widget);
+        KIMStatusBarGraphics *widget = m_widget.data();
+        widget->resize(m_view->size());
+        m_view->setSceneRect(widget->mapToScene(widget->boundingRect()).boundingRect());
+        m_view->centerOn(widget);
     }
     if ((width() + x() > m_desktop->availableGeometry().width()) ||
         (height() + y() > m_desktop->availableGeometry().height())) {
@@ -209,22 +209,23 @@ bool KIMStatusBar::event(QEvent *e)
 
 void KIMStatusBar::setGraphicsWidget(KIMStatusBarGraphics *widget)
 {    if (m_widget) {
-        disconnect(m_widget,SIGNAL(iconCountChanged()),this,SLOT(adjustSelf()));
-        m_scene->removeItem(m_widget);
-        foreach (QAction *action,m_widget->actions()) {
+        KIMStatusBarGraphics *oldWidget = m_widget.data();
+        disconnect(oldWidget);
+        m_scene->removeItem(oldWidget);
+        foreach (QAction *action, oldWidget->actions()) {
             removeAction(action);
         }
         m_widget = 0;
     }
     if (widget) {
         m_widget = widget;
-        foreach (QAction *action,m_widget->actions()) {
+        foreach (QAction *action, widget->actions()) {
             addAction(action);
         }
-        m_widget->setParent(0);
-        m_scene->addItem(m_widget);
-        m_scene->addOffscreenWidget(m_widget);
-        connect(m_widget,SIGNAL(iconCountChanged()),this,SLOT(adjustSelf()));
+        widget->setParent(0);
+        m_scene->addItem(widget);
+        m_scene->addOffscreenWidget(widget);
+        connect(widget,SIGNAL(iconCountChanged()),this,SLOT(adjustSelf()));
         //themeUpdated();
         move(KIM::Settings::self()->floatingStatusbarPos());
         adjustSelf();
@@ -271,7 +272,7 @@ void KIMStatusBar::adjustSelf()
     if (!m_widget) {
         return;
     }
-    int nIcons = m_widget->iconCount();
+    int nIcons = m_widget.data()->iconCount();
     qreal left, top, right, bottom;
     m_background->getMargins(left,top,right,bottom);
     qreal minHeight = KIM::Settings::preferIconSize();
@@ -293,9 +294,10 @@ void KIMStatusBar::adjustSelf()
         break;
     }
     if (m_widget) {
+        KIMStatusBarGraphics *widget = m_widget.data();
         m_widget->resize(m_view->size());
-        m_view->setSceneRect(m_widget->mapToScene(m_widget->boundingRect()).boundingRect());
-        m_view->centerOn(m_widget);
+        m_view->setSceneRect(widget->mapToScene(widget->boundingRect()).boundingRect());
+        m_view->centerOn(widget);
     }
 }
 

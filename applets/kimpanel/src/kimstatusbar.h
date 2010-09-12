@@ -53,7 +53,7 @@ public:
     void setGraphicsWidget(KIMStatusBarGraphics *widget);
     KIMStatusBarGraphics *graphicsWidget() 
     {
-        return m_widget;
+        return m_widget.data();
     }
 
     bool eventFilter(QObject *watched, QEvent *event);
@@ -79,7 +79,7 @@ private:
 
     Plasma::Corona *m_scene;
     QGraphicsView *m_view;
-    KIMStatusBarGraphics *m_widget;
+    QWeakPointer<KIMStatusBarGraphics> m_widget;
 
     QVBoxLayout *m_layout;
 
