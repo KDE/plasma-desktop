@@ -50,8 +50,8 @@
 
 KIMStatusBar::KIMStatusBar(Plasma::Corona *corona, QWidget *parent, const QList<QAction *> extra_actions)
     : QWidget(parent),
-      m_desktop(new QDesktopWidget()),
-      m_scene(corona)
+      m_scene(corona),
+      m_desktop(new QDesktopWidget())
 {
     if (!m_scene) {
         m_scene = new Plasma::Corona(this);
@@ -215,7 +215,7 @@ void KIMStatusBar::setGraphicsWidget(KIMStatusBarGraphics *widget)
         foreach (QAction *action, oldWidget->actions()) {
             removeAction(action);
         }
-        m_widget = 0;
+        m_widget = static_cast<KIMStatusBarGraphics *>(0);
     }
     if (widget) {
         m_widget = widget;
@@ -295,7 +295,7 @@ void KIMStatusBar::adjustSelf()
     }
     if (m_widget) {
         KIMStatusBarGraphics *widget = m_widget.data();
-        m_widget->resize(m_view->size());
+        widget->resize(m_view->size());
         m_view->setSceneRect(widget->mapToScene(widget->boundingRect()).boundingRect());
         m_view->centerOn(widget);
     }
