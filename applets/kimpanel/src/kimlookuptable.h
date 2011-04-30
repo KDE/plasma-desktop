@@ -75,8 +75,6 @@ private:
 
     QDesktopWidget m_desktop;
 
-    PanelAgent *m_panel_agent;
-
     bool m_visible;
 };
 

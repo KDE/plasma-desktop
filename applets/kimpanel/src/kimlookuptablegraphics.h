@@ -83,8 +83,6 @@ private:
 
     LookupTable m_lookup_table;
 
-    PanelAgent *m_panel_agent;
-
     bool m_auxVisible;
     bool m_preeditVisible;
     bool m_lookupTableVisible;

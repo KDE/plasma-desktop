@@ -45,17 +45,12 @@
 #endif
 
 KIMLookupTable::KIMLookupTable(PanelAgent *agent, Plasma::Corona *corona, QWidget *parent)
-    :QWidget(parent),
-     m_scene(corona),
-     m_visible(false)
+    : QWidget(parent),
+      m_scene(corona),
+      m_visible(false)
 {
-    m_panel_agent = agent;
-
-    if (m_panel_agent) {
-        connect(m_panel_agent,
-            SIGNAL(updateSpotLocation(int,int)),
-            this,
-            SLOT(updateSpotLocation(int,int)));
+    if (agent) {
+        connect(agent, SIGNAL(updateSpotLocation(int,int)), this, SLOT(updateSpotLocation(int,int)));
     }
 
     setAttribute(Qt::WA_TranslucentBackground);
@@ -67,7 +62,7 @@ KIMLookupTable::KIMLookupTable(PanelAgent *agent, Plasma::Corona *corona, QWidge
 
 //X     m_background->setImagePath("widgets/panel-background");
     m_background->setImagePath("dialogs/background");
-    
+
     m_background->setEnabledBorders(Plasma::FrameSvg::AllBorders);
     connect(m_background, SIGNAL(repaintNeeded()), SLOT(update()));
 
@@ -87,8 +82,7 @@ KIMLookupTable::KIMLookupTable(PanelAgent *agent, Plasma::Corona *corona, QWidge
     KWindowSystem::setState( winId(), NET::SkipTaskbar | NET::SkipPager | NET::StaysOnTop);
     KWindowSystem::setType( winId(), NET::Dock);
 
-    m_widget = new KIMLookupTableGraphics(m_panel_agent);
-
+    m_widget = new KIMLookupTableGraphics(agent);
     m_view = new QGraphicsView(m_scene,this);
 
     m_view->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
@@ -187,12 +181,16 @@ bool KIMLookupTable::event(QEvent *e)
         p.setCompositionMode(QPainter::CompositionMode_Source);
         p.fillRect(rect(), Qt::transparent);
     }
-    
+
     return QWidget::event(e);
 }
 
 void KIMLookupTable::propagateSizeChange()
 {
+    if (!m_widget) {
+        return;
+    }
+
     int left,top,right,bottom;
     getContentsMargins(&left,&top,&right,&bottom);
     QSize sizeHint = m_widget->preferredSize().toSize();
@@ -207,7 +205,9 @@ void KIMLookupTable::propagateVisibleChange(bool b)
     if (b != m_visible) {
         m_visible = b;
         setVisible(m_visible);
-        m_widget->setVisible(b);
+        if (m_widget) {
+            m_widget->setVisible(b);
+        }
     }
 }
 

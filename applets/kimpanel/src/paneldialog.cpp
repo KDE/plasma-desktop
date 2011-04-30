@@ -94,8 +94,11 @@ void KIMPanel::exit()
 {
 //X     m_panel_agent->exit();
     delete m_statusbar;
+    m_statusbar = 0;
     delete m_statusbarGraphics;
+    m_statusbarGraphics = 0;
     delete m_lookup_table;
+    m_lookup_table = 0;
     KApplication::kApplication()->quit();
 }
 

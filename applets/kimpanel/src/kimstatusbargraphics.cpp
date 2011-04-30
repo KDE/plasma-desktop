@@ -116,7 +116,6 @@ KIMStatusBarGraphics::KIMStatusBarGraphics(PanelAgent *agent, QGraphicsItem *par
 KIMStatusBarGraphics::~KIMStatusBarGraphics()
 {
     KIM::Settings::self()->setStatusbarHiddenProperties(m_hiddenProperties.toList());
-
     KIM::Settings::self()->writeConfig();
 }
 

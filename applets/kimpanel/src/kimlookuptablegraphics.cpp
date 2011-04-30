@@ -55,7 +55,6 @@
 KIMLookupTableGraphics::KIMLookupTableGraphics(PanelAgent *agent, QGraphicsItem *parent)
     :QGraphicsWidget(parent),
      m_preedit_caret(0),
-     m_panel_agent(agent),
      m_auxVisible(false),
      m_preeditVisible(false),
      m_lookupTableVisible(false),
@@ -114,46 +113,46 @@ KIMLookupTableGraphics::KIMLookupTableGraphics(PanelAgent *agent, QGraphicsItem 
     connect(m_tableEntryMapper,SIGNAL(mapped(int)),
             this,SIGNAL(SelectCandidate(int)));
 
-    if (m_panel_agent) {
-        connect(m_panel_agent,
+    if (agent) {
+        connect(agent,
             SIGNAL(updateLookupTable(const LookupTable &)),
             this,
             SLOT(updateLookupTable(const LookupTable &)));
-        connect(m_panel_agent,
+        connect(agent,
             SIGNAL(updatePreeditCaret(int)),
             this,
             SLOT(updatePreeditCaret(int)));
-        connect(m_panel_agent,
+        connect(agent,
             SIGNAL(updatePreeditText(const QString &,const QList<TextAttribute> &)),
             this,
             SLOT(updatePreeditText(const QString &,const QList<TextAttribute> &)));
-        connect(m_panel_agent,
+        connect(agent,
             SIGNAL(updateAux(const QString &,const QList<TextAttribute> &)),
             this,
             SLOT(updateAux(const QString &,const QList<TextAttribute> &)));
-        connect(m_panel_agent,
+        connect(agent,
             SIGNAL(showPreedit(bool)),
             this,
             SLOT(showPreedit(bool)));
-        connect(m_panel_agent,
+        connect(agent,
             SIGNAL(showAux(bool)),
             this,
             SLOT(showAux(bool)));
-        connect(m_panel_agent,
+        connect(agent,
             SIGNAL(showLookupTable(bool)),
             this,
             SLOT(showLookupTable(bool)));
         connect(this,
                 SIGNAL(LookupTablePageUp()),
-                m_panel_agent,
+                agent,
                 SIGNAL(LookupTablePageUp()));
         connect(this,
                 SIGNAL(LookupTablePageDown()),
-                m_panel_agent,
+                agent,
                 SIGNAL(LookupTablePageDown()));
         connect(this,
                 SIGNAL(SelectCandidate(int)),
-                m_panel_agent,
+                agent,
                 SIGNAL(SelectCandidate(int)));
     }
 }

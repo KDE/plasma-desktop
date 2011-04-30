@@ -61,11 +61,16 @@ KIMPanelApplet::~KIMPanelApplet()
         m_statusbar->close();
         m_statusbar->deleteLater();
     }
+
     if (m_lookup_table) {
         m_lookup_table->close();
         m_lookup_table->deleteLater();
     }
-    m_statusbarGraphics->deleteLater();
+
+    if (m_statusbarGraphics) {
+        m_statusbarGraphics->deleteLater();
+    }
+
     KIM::Settings::self()->writeConfig();
 }
 
