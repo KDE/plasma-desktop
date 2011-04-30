@@ -83,7 +83,7 @@ KIMLookupTable::KIMLookupTable(PanelAgent *agent, Plasma::Corona *corona, QWidge
     KWindowSystem::setType( winId(), NET::Dock);
 
     m_widget = new KIMLookupTableGraphics(agent);
-    m_view = new QGraphicsView(m_scene,this);
+    m_view = new QGraphicsView(m_scene, this);
 
     m_view->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     m_view->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
