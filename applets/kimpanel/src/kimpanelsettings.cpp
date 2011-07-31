@@ -47,8 +47,8 @@ namespace KIM
     {
         //FIXME: if/when kconfig gets change notification, this will be unnecessary
         KDirWatch::self()->addFile(KStandardDirs::locateLocal("config", "kimpanelrc"));
-        connect(KDirWatch::self(), SIGNAL(created(const QString &)), this, SLOT(settingsFileChanged()));
-        connect(KDirWatch::self(), SIGNAL(dirty(const QString &)), this, SLOT(settingsFileChanged()));
+        connect(KDirWatch::self(), SIGNAL(created(QString)), this, SLOT(settingsFileChanged()));
+        connect(KDirWatch::self(), SIGNAL(dirty(QString)), this, SLOT(settingsFileChanged()));
     }
 
     Settings::~Settings()

@@ -54,35 +54,35 @@ PanelAgent::PanelAgent(QObject *parent)
     QDBusConnection("kimpanel_bus").connect("","","",
         "UpdatePreeditCaret",this,SIGNAL(updatePreeditCaret(int)));
     QDBusConnection("kimpanel_bus").connect("","","",
-        "UpdatePreeditText",this,SLOT(UpdatePreeditText(const QString &,const QString &)));
+        "UpdatePreeditText",this,SLOT(UpdatePreeditText(QString,QString)));
     QDBusConnection("kimpanel_bus").connect("","","",
-        "UpdateAux",this,SLOT(UpdateAux(const QString &,const QString &)));
+        "UpdateAux",this,SLOT(UpdateAux(QString,QString)));
     QDBusConnection("kimpanel_bus").connect("","","",
         "UpdateSpotLocation",this,SIGNAL(updateSpotLocation(int,int)));
     QDBusConnection("kimpanel_bus").connect("","","",
         "UpdateScreen",this,SLOT(UpdateScreen(int)));
     QDBusConnection("kimpanel_bus").connect("","","",
-        "UpdateProperty",this,SLOT(UpdateProperty(const QString &)));
+        "UpdateProperty",this,SLOT(UpdateProperty(QString)));
     QDBusConnection("kimpanel_bus").connect("","","",
-        "UpdateHelperProperty",this,SLOT(UpdateHelperProperty(int,const QString &)));
+        "UpdateHelperProperty",this,SLOT(UpdateHelperProperty(int,QString)));
     QDBusConnection("kimpanel_bus").connect("","","",
-        "UpdateFactoryInfo",this,SLOT(UpdateFactoryInfo(const QString &)));
+        "UpdateFactoryInfo",this,SLOT(UpdateFactoryInfo(QString)));
     QDBusConnection("kimpanel_bus").connect("","","",
-        "ShowFactoryMenu",this,SLOT(ShowFactoryMenu(const QStringList &)));
+        "ShowFactoryMenu",this,SLOT(ShowFactoryMenu(QStringList)));
     QDBusConnection("kimpanel_bus").connect("","","",
-        "RegisterProperties",this,SLOT(RegisterProperties(const QStringList &)));
+        "RegisterProperties",this,SLOT(RegisterProperties(QStringList)));
     QDBusConnection("kimpanel_bus").connect("","","",
         "RegisterHelper",this,SLOT(RegisterHelper(int,
             const QString &,const QString &,
             const QString &,const QString &,unsigned int)));
     QDBusConnection("kimpanel_bus").connect("","","",
-        "RegisterHelperProperties",this,SLOT(RegisterHelperProperties(int,const QStringList &)));
+        "RegisterHelperProperties",this,SLOT(RegisterHelperProperties(int,QStringList)));
     QDBusConnection("kimpanel_bus").connect("","","",
         "RemoveHelper",this,SLOT(RemoveHelper(int)));
     QDBusConnection("kimpanel_bus").connect("","","",
-        "ExecDialog",this,SLOT(ExecDialog(const QString &)));
+        "ExecDialog",this,SLOT(ExecDialog(QString)));
     QDBusConnection("kimpanel_bus").connect("","","",
-        "ExecMenu",this,SLOT(ExecMenu(const QStringList &)));
+        "ExecMenu",this,SLOT(ExecMenu(QStringList)));
     //emit showFactoryMenu();
 }
 

@@ -62,8 +62,8 @@ KIMStatusBarGraphics::KIMStatusBarGraphics(PanelAgent *agent, QGraphicsItem *par
     m_layout = new KIMPanelLayout(this);
     m_layout->setContentsMargins(0, 0, 0, 0);
 
-    connect(m_icon_mapper,SIGNAL(mapped(const QString &)),
-            this,SIGNAL(triggerProperty(const QString &)));
+    connect(m_icon_mapper,SIGNAL(mapped(QString)),
+            this,SIGNAL(triggerProperty(QString)));
 
     m_logoIcon = new Plasma::IconWidget(this);
     m_logoIcon->setIcon(KIcon("draw-freehand"));
@@ -88,26 +88,26 @@ KIMStatusBarGraphics::KIMStatusBarGraphics(PanelAgent *agent, QGraphicsItem *par
     //setSizePolicy(QSizePolicy::Preferred,QSizePolicy::Preferred);
     if (m_panel_agent) {
         connect(m_panel_agent,
-            SIGNAL(registerProperties(const QList<Property> &)),
+            SIGNAL(registerProperties(QList<Property>)),
             this,
-            SLOT(registerProperties(const QList<Property> &)));
+            SLOT(registerProperties(QList<Property>)));
         connect(m_panel_agent,
-            SIGNAL(updateProperty(const Property &)),
+            SIGNAL(updateProperty(Property)),
             this,
-            SLOT(updateProperty(const Property &)));
+            SLOT(updateProperty(Property)));
         connect(this,
-            SIGNAL(triggerProperty(const QString &)),
+            SIGNAL(triggerProperty(QString)),
             m_panel_agent,
-            SIGNAL(TriggerProperty(const QString &)));
+            SIGNAL(TriggerProperty(QString)));
 
         connect(m_panel_agent,
-            SIGNAL(execDialog(const Property &)),
+            SIGNAL(execDialog(Property)),
             this,
-            SLOT(execDialog(const Property &)));
+            SLOT(execDialog(Property)));
         connect(m_panel_agent,
-            SIGNAL(execMenu(const QList<Property> &)),
+            SIGNAL(execMenu(QList<Property>)),
             this,
-            SLOT(execMenu(const QList<Property> &)));
+            SLOT(execMenu(QList<Property>)));
 
         m_panel_agent->created();
     }
@@ -304,7 +304,7 @@ void KIMStatusBarGraphics::execMenu(const QList<Property> &prop_list)
     QMenu *menu = new QMenu();
     QAction *action;
     QSignalMapper *mapper = new QSignalMapper(this);
-    connect(mapper,SIGNAL(mapped(const QString&)),m_panel_agent,SIGNAL(TriggerProperty(const QString &)));
+    connect(mapper,SIGNAL(mapped(QString)),m_panel_agent,SIGNAL(TriggerProperty(QString)));
     foreach (const Property &prop, prop_list) {
         action = new QAction(QIcon(prop.icon),prop.label,menu);
         mapper->setMapping(action,prop.key);

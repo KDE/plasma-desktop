@@ -115,21 +115,21 @@ KIMLookupTableGraphics::KIMLookupTableGraphics(PanelAgent *agent, QGraphicsItem 
 
     if (agent) {
         connect(agent,
-            SIGNAL(updateLookupTable(const LookupTable &)),
+            SIGNAL(updateLookupTable(LookupTable)),
             this,
-            SLOT(updateLookupTable(const LookupTable &)));
+            SLOT(updateLookupTable(LookupTable)));
         connect(agent,
             SIGNAL(updatePreeditCaret(int)),
             this,
             SLOT(updatePreeditCaret(int)));
         connect(agent,
-            SIGNAL(updatePreeditText(const QString &,const QList<TextAttribute> &)),
+            SIGNAL(updatePreeditText(QString,QList<TextAttribute>)),
             this,
-            SLOT(updatePreeditText(const QString &,const QList<TextAttribute> &)));
+            SLOT(updatePreeditText(QString,QList<TextAttribute>)));
         connect(agent,
-            SIGNAL(updateAux(const QString &,const QList<TextAttribute> &)),
+            SIGNAL(updateAux(QString,QList<TextAttribute>)),
             this,
-            SLOT(updateAux(const QString &,const QList<TextAttribute> &)));
+            SLOT(updateAux(QString,QList<TextAttribute>)));
         connect(agent,
             SIGNAL(showPreedit(bool)),
             this,
