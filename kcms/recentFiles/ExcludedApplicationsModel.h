@@ -34,6 +34,8 @@ public:
 
     QHash<int, QByteArray> roleNames() const override;
 
+    bool enabled() const;
+
 Q_SIGNALS:
     void changed(bool changed);
     void defaulted(bool isDefault);
@@ -43,7 +45,6 @@ public Q_SLOTS:
     void toggleApplicationBlocked(int index);
 
     void setEnabled(bool);
-    bool enabled() const;
 
     void load();
     void save();
