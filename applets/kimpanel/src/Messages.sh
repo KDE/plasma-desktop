@@ -1,3 +1,4 @@
 #! /usr/bin/env bash
-$EXTRACTRC *.kcfg >> rc.cpp
-$XGETTEXT *.cpp -o $podir/plasma_applet_kimpanel.pot
+$EXTRACTRC *.ui *.kcfg >> rc.cpp
+$XGETTEXT *.cpp *.h -o $podir/plasma_applet_kimpanel.pot
+rm -f rc.cpp

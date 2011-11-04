@@ -17,27 +17,54 @@
  *   Free Software Foundation, Inc.,                                       *
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
+#ifndef KIMPANEL_STATUSBAR_GRAPHICS_H
+#define KIMPANEL_STATUSBAR_GRAPHICS_H
 
-#ifndef PAINTUTILS_H
-#define PAINTUTILS_H
-
-#include "kimpanelsettings.h"
+#include "kimpanel/kimpanelagenttype.h"
 
 // Qt
-#include <QApplication>
-#include <QPainter>
-#include <QPainterPath>
-#include <QPixmap>
+#include <QGraphicsWidget>
 
-enum RenderType {
-    Statusbar,
-    Auxiliary,
-    Preedit,
-    TableLabel,
-    TableEntry
+// Plasma
+#include <Plasma/IconWidget>
+#include "icongridlayout.h"
+
+class QSignalMapper;
+class IconGridLayout;
+class KimpanelStatusBarGraphics : public QGraphicsWidget
+{
+    Q_OBJECT
+public:
+    explicit KimpanelStatusBarGraphics(QGraphicsItem *parent = 0);
+    ~KimpanelStatusBarGraphics();
+    void updateProperties(const QVariant& var);
+    void execMenu(const QVariant &var);
+    QList<QAction *> contextualActions() const;
+    void setLayoutMode(IconGridLayout::Mode mode);
+    void setPreferredIconSize(int size);
+Q_SIGNALS:
+    void triggerProperty(QString property);
+    void configure();
+    void reloadConfig();
+    void exitIM();
+    void startIM();
+protected Q_SLOTS:
+    void hiddenActionToggled();
+private:
+    void updateIcon();
+    IconGridLayout* m_layout;
+    QList< KimpanelProperty > m_props;
+    QMap<QString, Plasma::IconWidget*> m_iconMap;
+    Plasma::IconWidget* m_startIMIcon;
+
+    QSignalMapper *m_propertyMapper;
+
+    QMenu* m_filterMenu;
+    QAction *m_filterAction;
+    QAction* m_configureAction;
+    QAction *m_reloadConfigAction;
+    QAction *m_exitAction;
+    QSet<QString> m_hiddenProperties;
+    QSizeF m_preferredIconSize;
 };
-
-QPixmap renderText(QString text, RenderType type = Statusbar, bool drawCursor = false, int cursorPos = 0, const QFont& font = KimpanelSettings::self()->font());
-QPixmap renderText(QString text, QColor textColor, QColor bgColor, bool drawCursor, int cursorPos, const QFont &ft);
-
-#endif // PAINTUTILS_H
+#endif // KIMPANEL_STATUSBAR_GRAPHICS_H

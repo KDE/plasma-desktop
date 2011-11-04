@@ -18,26 +18,73 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#ifndef PAINTUTILS_H
-#define PAINTUTILS_H
-
-#include "kimpanelsettings.h"
+#ifndef KIMPANEL_AGENTTYPE_H
+#define KIMPANEL_AGENTTYPE_H
 
 // Qt
-#include <QApplication>
-#include <QPainter>
-#include <QPainterPath>
-#include <QPixmap>
+#include <QString>
+#include <QList>
+#include <QVariant>
 
-enum RenderType {
-    Statusbar,
-    Auxiliary,
-    Preedit,
-    TableLabel,
-    TableEntry
+struct TextAttribute {
+    enum Type {
+        None,
+        Decorate,
+        Foreground,
+        Background
+    };
+    Type type;
+    int start;
+    int length;
+    int value;
 };
 
-QPixmap renderText(QString text, RenderType type = Statusbar, bool drawCursor = false, int cursorPos = 0, const QFont& font = KimpanelSettings::self()->font());
-QPixmap renderText(QString text, QColor textColor, QColor bgColor, bool drawCursor, int cursorPos, const QFont &ft);
+struct KimpanelProperty {
+    enum State {
+        None = 0,
+        Active = 1,
+        Visible = (1 << 1)
+    };
+    Q_DECLARE_FLAGS(States, State)
 
-#endif // PAINTUTILS_H
+    KimpanelProperty() { }
+
+    KimpanelProperty(QString key, QString label, QString icon, QString tip, int state) {
+        this->key = key;
+        this->label = label;
+        this->tip = tip;
+        this->icon = icon;
+        this->state = (State) state;
+    }
+
+    QString key;
+    QString label;
+    QString icon;
+    QString tip;
+    States state;
+
+    QVariantMap toMap() const {
+        QVariantMap map;
+        map["key"] = key;
+        map["label"] = label;
+        map["icon"] = icon;
+        map["tip"] = tip;
+        map["state"] = (int) state;
+        return map;
+    }
+};
+Q_DECLARE_OPERATORS_FOR_FLAGS(KimpanelProperty::States)
+
+struct KimpanelLookupTable {
+    struct Entry {
+        QString label;
+        QString text;
+        QList<TextAttribute> attr;
+    };
+
+    QList<Entry> entries;
+    bool has_prev;
+    bool has_next;
+};
+
+#endif // KIMPANEL_AGENTTYPE_H

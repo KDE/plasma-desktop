@@ -1,8 +1,8 @@
 # - Try to find the SCIM
 # Once done this will define
 #
-#  SCIM_FOUND - system has Fontconfig
-#  SCIM_INCLUDE_DIR - The include directory to use for the fontconfig headers
+#  SCIM_FOUND - system has SCIM
+#  SCIM_INCLUDE_DIR - The include directory to use for the SCIM headers
 #  SCIM_LIBRARIES - Link these to use SCIM
 #  SCIM_DEFINITIONS - Compiler switches required for using SCIM
 

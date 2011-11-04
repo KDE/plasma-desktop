@@ -1,8 +1,7 @@
-File=kimpanelconfig.kcfg 
-NameSpace=KIM
+File=kimpanelconfig.kcfg
 ClassName=BaseSettings
-Visibility=KIMPANELRUNTIME_EXPORT
-Singleton=true 
+Visibility=
+Singleton=true
 Mutators=true
 GlobalEnums=true
-IncludeFiles=kimpanelruntime_export.h
+IncludeFiles=KGlobalSettings

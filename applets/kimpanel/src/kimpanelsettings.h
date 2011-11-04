@@ -1,5 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2009 by Wang Hoi <zealot.hoi@gmail.com>                 *
+ *   Copyright (C) 2011 by CSSlayer <wengxt@gmail.com>                     *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -17,26 +18,22 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#ifndef KIMPANELSETTINGS_H
-#define KIMPANELSETTINGS_H
+#ifndef KIMPANEL_SETTINGS_H
+#define KIMPANEL_SETTINGS_H
 
-#include "kimpanelruntime_export.h"
 #include "kimpanelconfig.h"
 
-namespace KIM
+class KimpanelSettings: public BaseSettings
 {
-    class KIMPANELRUNTIME_EXPORT Settings: public BaseSettings
-    {
-        Q_OBJECT
-    public:
-        Settings();
-        ~Settings();
+    Q_OBJECT
+public:
+    KimpanelSettings();
+    ~KimpanelSettings();
 
-        static Settings *self();
+    static KimpanelSettings *self();
 
-    public Q_SLOTS:
-        void settingsFileChanged();
-    };
-} // namespace KIM
+public Q_SLOTS:
+    void settingsFileChanged();
+};
 
-#endif // KIMPANELSETTINGS_H
+#endif // KIMPANEL_SETTINGS_H

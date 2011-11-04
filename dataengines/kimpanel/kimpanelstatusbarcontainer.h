@@ -1,5 +1,4 @@
 /***************************************************************************
- *   Copyright (C) 2009 by Wang Hoi <zealot.hoi@gmail.com>                 *
  *   Copyright (C) 2011 by CSSlayer <wengxt@gmail.com>                     *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -18,26 +17,31 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#ifndef PAINTUTILS_H
-#define PAINTUTILS_H
+#ifndef KIMPANEL_STATUSBAR_CONTAINER_H
+#define KIMPANEL_STATUSBAR_CONTAINER_H
 
-#include "kimpanelsettings.h"
+#include "kimpanel/kimpanelagenttype.h"
 
-// Qt
-#include <QApplication>
-#include <QPainter>
-#include <QPainterPath>
-#include <QPixmap>
+#include <Plasma/DataContainer>
 
-enum RenderType {
-    Statusbar,
-    Auxiliary,
-    Preedit,
-    TableLabel,
-    TableEntry
+class PanelAgent;
+class KimpanelService;
+class KimpanelStatusBarContainer : public Plasma::DataContainer
+{
+    Q_OBJECT
+public:
+    KimpanelStatusBarContainer(QObject* parent, PanelAgent* panelAgent);
+    Plasma::Service* service(QObject* parent = 0);
+
+protected Q_SLOTS:
+    void updateProperty(const KimpanelProperty& property);
+    void registerProperties(const QList<KimpanelProperty> &props);
+
+    void execDialog(const KimpanelProperty &prop);
+    void execMenu(const QList<KimpanelProperty> &prop_list);
+private:
+    PanelAgent* m_panelAgent;
+    QList< KimpanelProperty > m_props;
 };
 
-QPixmap renderText(QString text, RenderType type = Statusbar, bool drawCursor = false, int cursorPos = 0, const QFont& font = KimpanelSettings::self()->font());
-QPixmap renderText(QString text, QColor textColor, QColor bgColor, bool drawCursor, int cursorPos, const QFont &ft);
-
-#endif // PAINTUTILS_H
+#endif

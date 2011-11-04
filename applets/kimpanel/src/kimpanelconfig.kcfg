@@ -5,58 +5,21 @@
     http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
     <include>QDesktopWidget</include>
     <include>QPoint</include>
+    <include>QFont</include>
     <kcfgfile name="kimpanelrc" />
     <group name="Layout">
-        <entry name="PreferIconSize" type="Int">
-            <label>Defines your preferred status bar icon size.</label>
-            <default>22</default>
-            <min>16</min>
-            <max>128</max>
+        <entry name="VerticalPreeditBar" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="EnableBackgroundBlur" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="Font" type="Font">
+            <default>KGlobalSettings::generalFont()</default>
         </entry>
         <entry name="StatusbarHiddenProperties" type="StringList">
-            <label>Properties hidden in status bar</label>
         </entry>
-        <entry name="FloatingStatusbarPos" type="Point">
-            <label>Position of floating status bar</label>
-            <default code="true">QDesktopWidget().availableGeometry().bottomRight() - QPoint(200,100)</default>
-        </entry>
-        <entry name="FloatingStatusbarLayout" type="Enum">
-            <label>Defines how icons are positioned in the floating status bar.</label>
-            <choices prefix="Statusbar">
-                <choice name="Horizontal">
-                    <label>Expand horizontally.</label>
-                </choice>
-                <choice name="Vertical">
-                    <label>Expand vertically.</label>
-                </choice>
-                <choice name="Matrix">
-                    <label>Use multiple rows/cols.</label>
-                </choice>
-            </choices>
-            <default>Horizontal</default>
-        </entry>
-        <entry name="LookupTableLayout" type="Enum">
-            <label>Defines the layout of the list of candidate words.</label>
-            <choices prefix="LookupTable">
-                <choice name="Horizontal">
-                    <label>Put all words in one row.</label>
-                </choice>
-                <choice name="Vertical">
-                    <label>Put all words in one col.</label>
-                </choice>
-                <choice name="FixedRows">
-                    <label>Multiple rows/cols, but fixed rows.</label>
-                </choice>
-                <choice name="FixedColumns">
-                    <label>Multiple rows/cols, but fixed columns.</label>
-                </choice>
-            </choices>
-            <default>Horizontal</default>
-        </entry>
-        <entry name="LookupTableConstraint" type="Int">
-            <label>Restricts the layout of the list of candidate words.</label>
-            <min>1</min>
-            <max>9</max>
+        <entry name="inputMethodLauncher" type="Url">
         </entry>
     </group>
 </kcfg>

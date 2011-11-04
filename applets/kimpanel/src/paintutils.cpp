@@ -1,5 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2009 by Wang Hoi <zealot.hoi@gmail.com>                 *
+ *   Copyright (C) 2011 by CSSlayer <wengxt@gmail.com>                     *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -18,62 +19,72 @@
  ***************************************************************************/
 
 #include "paintutils.h"
-#include <kdebug.h>
 
-namespace KIM
+// Plasma
+#include <Plasma/PaintUtils>
+
+QPixmap renderText(QString text, RenderType type, bool drawCursor, int cursorPos, const QFont& font)
 {
-    QPixmap renderText(QString text, RenderType type)
-    {
-        Plasma::Theme *theme = Plasma::Theme::defaultTheme();
-        switch (type) {
-        case Statusbar:
-            return renderText(text,theme->color(Plasma::Theme::TextColor),
-                    Qt::transparent);
-        case Auxiliary:
-            return renderText(text,theme->color(Plasma::Theme::TextColor),
-                    Qt::transparent);
-        case Preedit:
-            return renderText(text,theme->color(Plasma::Theme::TextColor),
-                    Qt::transparent);
-        case TableLabel:
-            return renderText(text,theme->color(Plasma::Theme::TextColor),
-                    theme->color(Plasma::Theme::BackgroundColor));
-        case TableEntry:
-            return renderText(text,theme->color(Plasma::Theme::TextColor),
-                    Qt::transparent);
-        default:
-            return renderText(text,theme->color(Plasma::Theme::TextColor),
-                    theme->color(Plasma::Theme::BackgroundColor));
-        }
+    Plasma::Theme *theme = Plasma::Theme::defaultTheme();
+    switch (type) {
+    case Statusbar:
+        return renderText(text, theme->color(Plasma::Theme::TextColor),
+                          Qt::transparent, drawCursor, cursorPos, font);
+    case Auxiliary:
+        return renderText(text, theme->color(Plasma::Theme::TextColor),
+                          Qt::transparent, drawCursor, cursorPos, font);
+    case Preedit:
+        return renderText(text, theme->color(Plasma::Theme::TextColor),
+                          Qt::transparent, drawCursor, cursorPos, font);
+    case TableLabel:
+        return renderText(text, theme->color(Plasma::Theme::LinkColor),
+                          Qt::transparent, drawCursor, cursorPos, font);
+    case TableEntry:
+        return renderText(text, theme->color(Plasma::Theme::TextColor),
+                          Qt::transparent, drawCursor, cursorPos, font);
+    default:
+        return renderText(text, theme->color(Plasma::Theme::TextColor),
+                          Qt::transparent, drawCursor, cursorPos, font);
+    }
+}
+
+QPixmap renderText(QString text,
+                   QColor textColor,
+                   QColor bgColor,
+                   bool drawCursor,
+                   int cursorPos,
+                   const QFont &ft)
+{
+    //don't try to paint stuff on a future null pixmap because the text is empty
+    if (text.isEmpty()) {
+        return QPixmap();
     }
 
-    QPixmap renderText(QString text, QColor textColor, QColor bgColor, const QFont &ft)
-    {
-        //don't try to paint stuff on a future null pixmap because the text is empty
-        if (text.isEmpty()) {
-            return QPixmap();
-        }
+    const qreal margin = 3;
 
-        QFont font = ft;
-        // Draw text
-        QFontMetrics fm(font);
-        QSize textSize = fm.size(0,text);
-        QPixmap textPixmap(textSize);
-        textPixmap.fill(bgColor);
-        QPainter p(&textPixmap);
-        p.setPen(textColor);
-        p.setFont(font);
-        // FIXME: the center alignment here is odd: the rect should be the size needed by
-        //        the text, but for some fonts and configurations this is off by a pixel or so
-        //        and "centering" the text painting 'fixes' that. Need to research why
-        //        this is the case and determine if we should be painting it differently here,
-        //        doing soething different with the boundingRect call or if it's a problem
-        //        in Qt itself
-        p.drawText(textPixmap.rect(), Qt::AlignCenter, text);
-        p.end();
+    QFont font = ft;
+    // Draw text
+    QFontMetrics fm(font);
+    QSize textSize = fm.size(0, text) + QSize(1, 0) + QSize(margin, margin);
+    QPixmap textPixmap(textSize.width(), textSize.height());
+    textPixmap.fill(bgColor);
+    QPainter p(&textPixmap);
+    p.setPen(textColor);
+    p.setFont(font);
+    // FIXME: the center alignment here is odd: the rect should be the size needed by
+    //        the text, but for some fonts and configurations this is off by a pixel or so
+    //        and "centering" the text painting 'fixes' that. Need to research why
+    //        this is the case and determine if we should be painting it differently here,
+    //        doing soething different with the boundingRect call or if it's a problem
+    //        in Qt itself
+    p.drawText(textPixmap.rect().translated(margin / 2, margin / 2), Qt::AlignCenter, text);
 
-        return textPixmap;
+    if (drawCursor) {
+        int pixelsWide = fm.width(text.left(cursorPos));
+        p.translate(margin / 2 , margin / 2);
+        p.drawLine(pixelsWide, 0, pixelsWide, fm.height());
     }
 
-} // namespace KIM
-// vim: sw=4 sts=4 et tw=100
+    p.end();
+    return textPixmap;
+}

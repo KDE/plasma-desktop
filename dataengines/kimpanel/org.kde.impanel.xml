@@ -1,0 +1,20 @@
+<!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN" "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd"> 
+<node name="/org/kde/impanel"> 
+        <interface name="org.kde.impanel"> 
+                <signal name="MovePreeditCaret"> 
+                        <arg type="i" name="position" />
+                </signal> 
+                <signal name="SelectCandidate"> 
+                        <arg type="i" name="index" />
+                </signal> 
+                <signal name="LookupTablePageUp"> </signal> 
+                <signal name="LookupTablePageDown"> </signal> 
+                <signal name="TriggerProperty"> 
+                        <arg type="s" name="key" /> 
+                </signal> 
+                <signal name="PanelCreated"> </signal> 
+                <signal name="Exit"> </signal> 
+                <signal name="ReloadConfig"> </signal> 
+                <signal name="Configure"> </signal> 
+        </interface> 
+</node>

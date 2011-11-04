@@ -1,5 +1,4 @@
 /***************************************************************************
- *   Copyright (C) 2009 by Wang Hoi <zealot.hoi@gmail.com>                 *
  *   Copyright (C) 2011 by CSSlayer <wengxt@gmail.com>                     *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -18,26 +17,31 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#ifndef PAINTUTILS_H
-#define PAINTUTILS_H
+#ifndef KIMPANEL_DATAENGINE_H
+#define KIMPANEL_DATAENGINE_H
 
-#include "kimpanelsettings.h"
+#include <Plasma/DataEngine>
 
-// Qt
-#include <QApplication>
-#include <QPainter>
-#include <QPainterPath>
-#include <QPixmap>
+#define INPUTPANEL_SOURCE_NAME "inputpanel"
+#define STATUSBAR_SOURCE_NAME "statusbar"
 
-enum RenderType {
-    Statusbar,
-    Auxiliary,
-    Preedit,
-    TableLabel,
-    TableEntry
+class KimpanelService;
+class PanelAgent;
+/**
+ * This engine provides access to kimpanel
+ *
+ */
+class KimpanelEngine : public Plasma::DataEngine
+{
+    Q_OBJECT
+
+public:
+    KimpanelEngine(QObject* parent, const QVariantList& args);
+    virtual Plasma::Service* serviceForSource(const QString& source);
+    virtual void init();
+
+private:
+    PanelAgent* m_panelAgent;
 };
 
-QPixmap renderText(QString text, RenderType type = Statusbar, bool drawCursor = false, int cursorPos = 0, const QFont& font = KimpanelSettings::self()->font());
-QPixmap renderText(QString text, QColor textColor, QColor bgColor, bool drawCursor, int cursorPos, const QFont &ft);
-
-#endif // PAINTUTILS_H
+#endif // KIMPANEL_DATAENGINE_H

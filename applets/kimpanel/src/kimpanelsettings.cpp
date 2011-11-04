@@ -1,5 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2009 by Wang Hoi <zealot.hoi@gmail.com>                 *
+ *   Copyright (C) 2011 by CSSlayer <wengxt@gmail.com>                     *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -18,48 +19,47 @@
  ***************************************************************************/
 
 #include "kimpanelsettings.h"
-#include <kdirwatch.h>
-#include <kstandarddirs.h>
-#include <kdebug.h>
 
-namespace KIM
+// KDE
+#include <KDirWatch>
+#include <KStandardDirs>
+#include <KGlobal>
+
+class SettingsHelper
 {
-    class SettingsHelper
-    {
-      public:
-        SettingsHelper() : q(0) {}
-        // q is also static, no need to delete it here
-        ~SettingsHelper() {}
-        Settings *q;
-    };
-    K_GLOBAL_STATIC(SettingsHelper, s_globalSettings)
-    Settings *Settings::self()
-    {
-      if (!s_globalSettings->q) {
-        s_globalSettings->q = new Settings;
+public:
+    SettingsHelper() : q(0) {}
+    // q is also static, no need to delete it here
+    ~SettingsHelper() {}
+    KimpanelSettings *q;
+};
+
+K_GLOBAL_STATIC(SettingsHelper, s_globalSettings)
+
+KimpanelSettings *KimpanelSettings::self()
+{
+    if (!s_globalSettings->q) {
+        s_globalSettings->q = new KimpanelSettings;
         s_globalSettings->q->readConfig();
-      }
-
-      return s_globalSettings->q;
     }
 
-    Settings::Settings()
-    {
-        //FIXME: if/when kconfig gets change notification, this will be unnecessary
-        KDirWatch::self()->addFile(KStandardDirs::locateLocal("config", "kimpanelrc"));
-        connect(KDirWatch::self(), SIGNAL(created(QString)), this, SLOT(settingsFileChanged()));
-        connect(KDirWatch::self(), SIGNAL(dirty(QString)), this, SLOT(settingsFileChanged()));
-    }
+    return s_globalSettings->q;
+}
 
-    Settings::~Settings()
-    {
-    }
+KimpanelSettings::KimpanelSettings()
+{
+    //FIXME: if/when kconfig gets change notification, this will be unnecessary
+    KDirWatch::self()->addFile(KStandardDirs::locateLocal("config", "kimpanelrc"));
+    connect(KDirWatch::self(), SIGNAL(created(QString)), this, SLOT(settingsFileChanged()));
+    connect(KDirWatch::self(), SIGNAL(dirty(QString)), this, SLOT(settingsFileChanged()));
+}
 
-    void Settings::settingsFileChanged()
-    {
-        readConfig();
-        emit configChanged();
-    }
-} // namespace KIM
+KimpanelSettings::~KimpanelSettings()
+{
+}
 
-// vim: sw=4 sts=4 et tw=100
+void KimpanelSettings::settingsFileChanged()
+{
+    readConfig();
+    emit configChanged();
+}
