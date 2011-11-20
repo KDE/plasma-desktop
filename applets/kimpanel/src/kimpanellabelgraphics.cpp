@@ -218,9 +218,9 @@ void KimpanelLabelGraphics::paint(QPainter *painter, const QStyleOptionGraphicsI
     if (Plasma::Theme::defaultTheme()->color(Plasma::Theme::TextColor).value() < 128
             && KWindowSystem::compositingActive()
        ) {
-        QRectF haloRect = m_pixmap.rect().translated(3, 3).translated(0, h_spacing);
-        if (haloRect.width() > 6 && haloRect.height() > 6) {
-            haloRect.setWidth(haloRect.width() - 6);
+        QRectF haloRect = m_pixmap.rect().translated(9, 3).translated(0, h_spacing);
+        if (haloRect.width() > 18 && haloRect.height() > 6) {
+            haloRect.setWidth(haloRect.width() - 18);
             haloRect.setHeight(haloRect.height() - 6);
             Plasma::PaintUtils::drawHalo(painter, haloRect);
         }

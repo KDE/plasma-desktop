@@ -60,29 +60,25 @@ QPixmap renderText(QString text,
         return QPixmap();
     }
 
-    const qreal margin = 3;
+    const qreal leftmargin = 3;
+    const qreal rightmargin = 3;
+    const qreal topmargin = 3;
+    const qreal bottonmargin = 3;
 
     QFont font = ft;
     // Draw text
     QFontMetrics fm(font);
-    QSize textSize = fm.size(0, text) + QSize(1, 0) + QSize(margin, margin);
+    QSize textSize = fm.size(Qt::TextSingleLine, text) + QSize(1, 0) + QSize(leftmargin + rightmargin, topmargin + bottonmargin);
     QPixmap textPixmap(textSize.width(), textSize.height());
     textPixmap.fill(bgColor);
     QPainter p(&textPixmap);
     p.setPen(textColor);
     p.setFont(font);
-    // FIXME: the center alignment here is odd: the rect should be the size needed by
-    //        the text, but for some fonts and configurations this is off by a pixel or so
-    //        and "centering" the text painting 'fixes' that. Need to research why
-    //        this is the case and determine if we should be painting it differently here,
-    //        doing soething different with the boundingRect call or if it's a problem
-    //        in Qt itself
-    p.drawText(textPixmap.rect().translated(margin / 2, margin / 2), Qt::AlignCenter, text);
+    p.drawText(leftmargin, topmargin + fm.ascent(), text);
 
     if (drawCursor) {
-        int pixelsWide = fm.width(text.left(cursorPos));
-        p.translate(margin / 2 , margin / 2);
-        p.drawLine(pixelsWide, 0, pixelsWide, fm.height());
+        int pixelsWide = fm.size(Qt::TextSingleLine, text.left(cursorPos)).width();
+        p.drawLine(leftmargin + pixelsWide, topmargin, leftmargin + pixelsWide, topmargin + fm.height());
     }
 
     p.end();
