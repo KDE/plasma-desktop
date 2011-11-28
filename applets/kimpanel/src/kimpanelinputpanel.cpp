@@ -114,7 +114,7 @@ void KimpanelInputPanel::maskBackground(bool composite)
         m_backgroundSvg->setImagePath("opaque/dialogs/background");
         setMask(m_backgroundSvg->mask());
     } else {
-        m_backgroundSvg->setImagePath("widgets/background");
+        m_backgroundSvg->setImagePath("dialogs/background");
         clearMask();
     }
 
