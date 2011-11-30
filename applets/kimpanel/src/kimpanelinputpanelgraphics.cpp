@@ -34,13 +34,16 @@ KimpanelInputPanelGraphics::KimpanelInputPanelGraphics(QGraphicsItem* parent, Qt
     m_layout(new QGraphicsLinearLayout(Qt::Vertical)),
     m_upperLayout(new QGraphicsLinearLayout(Qt::Horizontal)),
     m_lowerLayout(new QGraphicsLinearLayout),
-    m_auxLabel(new KimpanelLabelGraphics(Auxiliary)),
-    m_preeditLabel(new KimpanelLabelGraphics(Preedit)),
-    m_pageUpIcon(new Plasma::IconWidget),
-    m_pageDownIcon(new Plasma::IconWidget),
+    m_auxLabel(new KimpanelLabelGraphics(Auxiliary, this)),
+    m_preeditLabel(new KimpanelLabelGraphics(Preedit, this)),
+    m_pageUpIcon(new Plasma::IconWidget(this)),
+    m_pageDownIcon(new Plasma::IconWidget(this)),
     m_tableEntryMapper(new QSignalMapper(this))
 {
     setContentsMargins(0, 0, 0, 0);
+    
+    // Content inside this panel will rapidly changed
+    setCacheMode(QGraphicsItem::NoCache);
 
     m_layout->setSpacing(0);
     m_layout->setContentsMargins(0, 0, 0, 0);

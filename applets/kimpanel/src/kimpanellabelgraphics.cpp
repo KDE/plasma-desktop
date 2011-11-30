@@ -38,6 +38,8 @@ KimpanelLabelGraphics::KimpanelLabelGraphics(RenderType type, QGraphicsItem *par
       m_cursorPos(0),
       m_renderType(type)
 {
+    // Text inside this label will rapidly changed
+    setCacheMode(QGraphicsItem::NoCache);
     setAcceptHoverEvents(true);
     connect(Plasma::Theme::defaultTheme(), SIGNAL(themeChanged()),
             this, SLOT(generatePixmap()));

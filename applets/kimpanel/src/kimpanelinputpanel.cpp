@@ -63,6 +63,8 @@ KimpanelInputPanel::KimpanelInputPanel(QWidget* parent)
     m_view->setFrameShape(QFrame::NoFrame);
     m_view->viewport()->setAutoFillBackground(false);
     m_view->setContentsMargins(0, 0, 0, 0);
+    m_view->setAttribute(Qt::WA_NoSystemBackground);
+    m_view->viewport()->setAttribute(Qt::WA_NoSystemBackground);
 
     m_layout->addWidget(m_view);
     m_layout->addStretch();
