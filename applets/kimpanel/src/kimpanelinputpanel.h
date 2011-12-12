@@ -79,3 +79,4 @@ private:
 };
 
 #endif // KIMPANEL_INPUTPANEL_H
+

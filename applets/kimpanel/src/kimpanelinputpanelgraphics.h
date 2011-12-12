@@ -18,8 +18,8 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#ifndef KIMPANEL_INPUTPANEL_GRAHICS_H
-#define KIMPANEL_INPUTPANEL_GRAHICS_H
+#ifndef KIMPANEL_INPUTPANEL_GRAPHICS_H
+#define KIMPANEL_INPUTPANEL_GRAPHICS_H
 
 // Qt
 #include <QGraphicsWidget>
@@ -37,7 +37,7 @@ class KimpanelInputPanelGraphics : public QGraphicsWidget
 {
     Q_OBJECT
 public:
-    KimpanelInputPanelGraphics(QGraphicsItem* parent = 0, Qt::WindowFlags wFlags = 0);
+    explicit KimpanelInputPanelGraphics(QGraphicsItem* parent = 0, Qt::WindowFlags wFlags = 0);
     virtual ~KimpanelInputPanelGraphics();
 
     virtual QSizeF sizeHint(Qt::SizeHint which, const QSizeF &constraint = QSizeF()) const;
@@ -106,3 +106,4 @@ private:
 };
 
 #endif // KIMPANEL_INPUTPANEL_GRAHICS_H
+

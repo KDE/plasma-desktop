@@ -67,4 +67,6 @@ private:
     QSet<QString> m_hiddenProperties;
     QSizeF m_preferredIconSize;
 };
+
 #endif // KIMPANEL_STATUSBAR_GRAPHICS_H
+

@@ -102,3 +102,4 @@ void KimpanelInputPanelContainer::showLookupTable(bool visible)
     setData("LookupTableVisible", visible);
     checkForUpdate();
 }
+

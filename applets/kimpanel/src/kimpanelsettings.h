@@ -37,3 +37,4 @@ public Q_SLOTS:
 };
 
 #endif // KIMPANEL_SETTINGS_H
+

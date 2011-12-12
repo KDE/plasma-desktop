@@ -245,4 +245,3 @@ QSizeF KimpanelLabelGraphics::sizeHint(Qt::SizeHint which, const QSizeF& constra
         return QGraphicsWidget::sizeHint(which, constraint);
 }
 
-// vim: sw=4 sts=4 et tw=100

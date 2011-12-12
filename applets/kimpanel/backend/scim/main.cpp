@@ -293,7 +293,7 @@ public:
         QDBusConnection("scim_panel").connect("", "", "org.kde.impanel", "SelectCandidate", this, SLOT(SelectCandidate(int)));
         QDBusConnection("scim_panel").connect("", "", "org.kde.impanel", "LookupTablePageUp", this, SLOT(LookupTablePageUp()));
         QDBusConnection("scim_panel").connect("", "", "org.kde.impanel", "LookupTablePageDown", this, SLOT(LookupTablePageDown()));
-        QDBusConnection("scim_panel").connect("", "", "org.kde.impanel", "TriggerProperty", this, SLOT(TriggerProperty(const QString &)));
+        QDBusConnection("scim_panel").connect("", "", "org.kde.impanel", "TriggerProperty", this, SLOT(TriggerProperty(QString)));
         QDBusConnection("scim_panel").connect("", "", "org.kde.impanel", "PanelCreated", this, SLOT(PanelCreated()));
         QDBusConnection("scim_panel").connect("", "", "org.kde.impanel", "Exit", this, SLOT(Exit()));
         QDBusConnection("scim_panel").connect("", "", "org.kde.impanel", "ReloadConfig", this, SLOT(ReloadConfig()));

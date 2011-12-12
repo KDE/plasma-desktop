@@ -41,3 +41,4 @@ QPixmap renderText(QString text, RenderType type = Statusbar, bool drawCursor = 
 QPixmap renderText(QString text, QColor textColor, QColor bgColor, bool drawCursor, int cursorPos, const QFont &ft);
 
 #endif // PAINTUTILS_H
+

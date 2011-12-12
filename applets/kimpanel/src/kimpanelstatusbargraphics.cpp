@@ -253,3 +253,4 @@ void KimpanelStatusBarGraphics::setPreferredIconSize(int size)
         icon->setPreferredIconSize(newSize);
     }
 }
+

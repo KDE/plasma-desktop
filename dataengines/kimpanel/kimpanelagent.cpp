@@ -50,26 +50,26 @@ PanelAgent::PanelAgent(QObject *parent)
 
     // do some serialization
     QDBusConnection("kimpanel_bus").connect("", "", "org.kde.kimpanel.inputmethod",
-                                            "UpdateLookupTable", this, SLOT(UpdateLookupTable(const QStringList &,
-                                                    const QStringList &, const QStringList &, bool, bool)));
+                                            "UpdateLookupTable", this, SLOT(UpdateLookupTable(QStringList,
+                                                    QStringList, QStringList, bool, bool)));
     QDBusConnection("kimpanel_bus").connect("", "", "org.kde.kimpanel.inputmethod",
                                             "UpdatePreeditCaret", this, SIGNAL(updatePreeditCaret(int)));
     QDBusConnection("kimpanel_bus").connect("", "", "org.kde.kimpanel.inputmethod",
-                                            "UpdatePreeditText", this, SLOT(UpdatePreeditText(const QString &, const QString &)));
+                                            "UpdatePreeditText", this, SLOT(UpdatePreeditText(QString, QString)));
     QDBusConnection("kimpanel_bus").connect("", "", "org.kde.kimpanel.inputmethod",
-                                            "UpdateAux", this, SLOT(UpdateAux(const QString &, const QString &)));
+                                            "UpdateAux", this, SLOT(UpdateAux(QString, QString)));
     QDBusConnection("kimpanel_bus").connect("", "", "org.kde.kimpanel.inputmethod",
                                             "UpdateSpotLocation", this, SIGNAL(updateSpotLocation(int, int)));
     QDBusConnection("kimpanel_bus").connect("", "", "org.kde.kimpanel.inputmethod",
                                             "UpdateScreen", this, SLOT(UpdateScreen(int)));
     QDBusConnection("kimpanel_bus").connect("", "", "org.kde.kimpanel.inputmethod",
-                                            "UpdateProperty", this, SLOT(UpdateProperty(const QString &)));
+                                            "UpdateProperty", this, SLOT(UpdateProperty(QString)));
     QDBusConnection("kimpanel_bus").connect("", "", "org.kde.kimpanel.inputmethod",
-                                            "RegisterProperties", this, SLOT(RegisterProperties(const QStringList &)));
+                                            "RegisterProperties", this, SLOT(RegisterProperties(QStringList)));
     QDBusConnection("kimpanel_bus").connect("", "", "org.kde.kimpanel.inputmethod",
-                                            "ExecDialog", this, SLOT(ExecDialog(const QString &)));
+                                            "ExecDialog", this, SLOT(ExecDialog(QString)));
     QDBusConnection("kimpanel_bus").connect("", "", "org.kde.kimpanel.inputmethod",
-                                            "ExecMenu", this, SLOT(ExecMenu(const QStringList &)));
+                                            "ExecMenu", this, SLOT(ExecMenu(QStringList)));
 }
 
 PanelAgent::~PanelAgent()
@@ -261,3 +261,4 @@ void PanelAgent::ExecMenu(const QStringList &entries)
 
     emit execMenu(list);
 }
+

@@ -63,3 +63,4 @@ void KimpanelSettings::settingsFileChanged()
     readConfig();
     emit configChanged();
 }
+

@@ -267,3 +267,4 @@ void KimpanelInputPanelGraphics::updateSize()
     emit sizeChanged();
     update();
 }
+

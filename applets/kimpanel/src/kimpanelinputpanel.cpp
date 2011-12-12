@@ -17,10 +17,6 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#include "kimpanelsettings.h"
-#include "kimpanelinputpanelgraphics.h"
-#include "kimpanelinputpanel.h"
-
 // Qt
 #include <QApplication>
 #include <QVBoxLayout>
@@ -33,6 +29,10 @@
 #include <Plasma/Corona>
 #include <Plasma/Theme>
 #include <Plasma/WindowEffects>
+
+#include "kimpanelsettings.h"
+#include "kimpanelinputpanelgraphics.h"
+#include "kimpanelinputpanel.h"
 
 KimpanelInputPanel::KimpanelInputPanel(QWidget* parent)
     : QWidget(parent),
@@ -224,3 +224,4 @@ void KimpanelInputPanel::updateSize()
         m_backgroundSvg->resizeFrame(sizeHint);
     }
 }
+
