@@ -95,9 +95,9 @@ void KimpanelStatusBarGraphics::updateProperties(const QVariant& var)
         QString tip = map["tip"].toString();
         int state = map["states"].toInt();
 
-        KimpanelProperty property(key, label, icon, tip, state);
+        KimpanelProperty newProperty(key, label, icon, tip, state);
 
-        m_props << property;
+        m_props << newProperty;
         keyset.insert(key);
     }
 
@@ -214,9 +214,9 @@ void KimpanelStatusBarGraphics::execMenu(const QVariant &var)
         QString tip = map["tip"].toString();
         int state = map["states"].toInt();
 
-        KimpanelProperty property(key, label, icon, tip, state);
+        KimpanelProperty newProperty(key, label, icon, tip, state);
 
-        propList << property;
+        propList << newProperty;
     }
 
     if (propList.length() == 0)
