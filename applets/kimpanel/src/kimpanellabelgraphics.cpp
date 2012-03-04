@@ -142,9 +142,10 @@ void KimpanelLabelGraphics::setCursorPos(int pos)
     generatePixmap();
 }
 
-void KimpanelLabelGraphics::setText(const QString &text)
+void KimpanelLabelGraphics::setText(const QString &label, const QString &text)
 {
-    if (m_text != text) {
+    if (label != m_label || m_text != text) {
+        m_label = label;
         m_text = text;
         generatePixmap();
     }
@@ -155,11 +156,6 @@ void KimpanelLabelGraphics::setTextRenderType(RenderType type)
     m_renderType = type;
 }
 
-
-void KimpanelLabelGraphics::setLabel(const QString &label)
-{
-    m_label = label;
-}
 
 void KimpanelLabelGraphics::generatePixmap()
 {

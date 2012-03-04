@@ -168,7 +168,7 @@ void KimpanelInputPanelGraphics::setPreeditText(const QString& text,
     if (m_text == text)
         return;
     m_text = text;
-    m_preeditLabel->setText(text);
+    m_preeditLabel->setText("", text);
 
     updateSize();
 }
@@ -180,7 +180,7 @@ void KimpanelInputPanelGraphics::setAuxText(const QString& text,
     if (m_auxText == text)
         return;
     m_auxText = text;
-    m_auxLabel->setText(text);
+    m_auxLabel->setText("", text);
 
     updateSize();
 }
@@ -200,7 +200,7 @@ void KimpanelInputPanelGraphics::setLookupTable(const QStringList& labels,
         bool hasPrev,
         bool hasNext,
         const QStringList& attrs
-                                               )
+)
 {
     Q_UNUSED(attrs);
     if (m_labels == labels && m_candidates == candidates
@@ -235,8 +235,7 @@ void KimpanelInputPanelGraphics::updateLookupTable()
         }
         item = m_tableEntryLabels[i];
         item->show();
-        item->setLabel(m_labels[i]);
-        item->setText(m_candidates[i]);
+        item->setText(m_labels[i], m_candidates[i]);
         m_lowerLayout->addItem(item);
         m_tableEntryMapper->setMapping(item, i);
     }

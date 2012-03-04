@@ -44,8 +44,7 @@ public:
     void setDrawCursor(bool to_draw);
     void setCursorPos(int pos);
     void setTextRenderType(RenderType type);
-    void setText(const QString &text);
-    void setLabel(const QString &label);
+    void setText(const QString &label, const QString &text);
 
     virtual QSizeF sizeHint(Qt::SizeHint which, const QSizeF& constraint = QSizeF()) const;
 
