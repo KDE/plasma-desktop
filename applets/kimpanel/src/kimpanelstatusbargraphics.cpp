@@ -126,6 +126,8 @@ void KimpanelStatusBarGraphics::updateIcon()
         else {
             iconWidget = new Plasma::IconWidget;
             m_iconMap[property.key] = iconWidget;
+            iconWidget->setMaximumIconSize(QSizeF(24, 24));
+            iconWidget->setMinimumIconSize(QSizeF(KIconLoader::SizeSmallMedium, KIconLoader::SizeSmallMedium));
             m_propertyMapper->setMapping(iconWidget, property.key);
             connect(iconWidget, SIGNAL(clicked()), m_propertyMapper, SLOT(map()));
         }
