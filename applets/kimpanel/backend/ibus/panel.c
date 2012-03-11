@@ -572,25 +572,25 @@ ibus_panel_impanel_focus_in (IBusPanelService *panel,
     g_object_get (IBUS_PANEL_IMPANEL (panel),
                   "connection", &ibusconn,
                   NULL);
+
+    IBusEngineDesc *engine_desc = ibus_bus_get_global_engine(IBUS_PANEL_IMPANEL (panel)->bus);
+
     IBusInputContext *ic = ibus_input_context_get_input_context(input_context_path, ibusconn);
     IBUS_PANEL_IMPANEL (panel)->input_context = ic;
-
-    IBusEngineDesc *engine_desc = ibus_input_context_get_engine(ic);
-    if (!engine_desc) {
+    
+    const gchar* icon_name = "ibus-keyboard";
+    if (engine_desc) {
 #if !IBUS_CHECK_VERSION(1,3,99)
-//             if (error) {
-//                 *error = ibus_error_new_from_text (DBUS_ERROR_FAILED, "engine description is null");
-//             }
-        return FALSE;
+        icon_name = engine_desc->icon;
 #else
-        return;
+        icon_name = ibus_engine_desc_get_icon (engine_desc);
 #endif
     }
 
 #if !IBUS_CHECK_VERSION(1,3,99)
-    ibus_property_set_icon (IBUS_PANEL_IMPANEL (panel)->logo_prop, engine_desc->icon);
+    ibus_property_set_icon (IBUS_PANEL_IMPANEL (panel)->logo_prop, icon_name);
 #else
-    ibus_property_set_icon (IBUS_PANEL_IMPANEL (panel)->logo_prop, ibus_engine_desc_get_icon (engine_desc));
+    ibus_property_set_icon (IBUS_PANEL_IMPANEL (panel)->logo_prop, icon_name);
 #endif
 
     char propstr[512];
@@ -1229,8 +1229,6 @@ ibus_panel_impanel_exec_menu (IBusPanelService *panel)
         ibus_engine_desc_to_propstr(engine_desc, propstr);
         g_variant_builder_add (&builder, "s", propstr);
     }
-
-    g_variant_builder_add (&builder, "s", propstr);
 
     g_dbus_connection_emit_signal (IBUS_PANEL_IMPANEL (panel)->conn,
                                    NULL, "/kimpanel", "org.kde.kimpanel.inputmethod", "ExecMenu",
