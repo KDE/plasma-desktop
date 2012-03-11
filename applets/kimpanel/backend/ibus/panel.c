@@ -337,10 +337,7 @@ impanel_trigger_property_callback (GDBusConnection *connection,
         ibus_panel_impanel_exec_dialog((IBusPanelService *)user_data);
     else if (g_ascii_strncasecmp (prop_key, "Engine/", 7) == 0) {
         prop_key += 7;// +7 to skip "Engine/"
-        if (g_ascii_strncasecmp (prop_key, "None", 4) == 0)
-            ibus_input_context_disable(((IBusPanelImpanel *)user_data)->input_context);
-        else
-            ibus_input_context_set_engine(((IBusPanelImpanel *)user_data)->input_context, prop_key);
+        ibus_input_context_set_engine(((IBusPanelImpanel *)user_data)->input_context, prop_key);
     }
     else
 #if !IBUS_CHECK_VERSION(1,3,99)
@@ -1232,13 +1229,6 @@ ibus_panel_impanel_exec_menu (IBusPanelService *panel)
         ibus_engine_desc_to_propstr(engine_desc, propstr);
         g_variant_builder_add (&builder, "s", propstr);
     }
-
-    ibus_engine_desc_args_to_propstr("None",
-                                     NULL,
-                                     "Disable",
-                                     "ibus",
-                                     "",
-                                     propstr);
 
     g_variant_builder_add (&builder, "s", propstr);
 
