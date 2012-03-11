@@ -578,32 +578,23 @@ ibus_panel_impanel_focus_in (IBusPanelService *panel,
     IBusInputContext *ic = ibus_input_context_get_input_context(input_context_path, ibusconn);
     IBUS_PANEL_IMPANEL (panel)->input_context = ic;
 
-    gboolean enable = ibus_input_context_is_enabled(ic);
-
-//     fprintf(stderr, "enable %d %s\n", enable, input_context_path);
-
-    if (enable == 0) {
-        ibus_property_set_icon (IBUS_PANEL_IMPANEL (panel)->logo_prop, "ibus");
-    }
-    else {
-        IBusEngineDesc *engine_desc = ibus_input_context_get_engine(ic);
-        if (!engine_desc) {
+    IBusEngineDesc *engine_desc = ibus_input_context_get_engine(ic);
+    if (!engine_desc) {
 #if !IBUS_CHECK_VERSION(1,3,99)
 //             if (error) {
 //                 *error = ibus_error_new_from_text (DBUS_ERROR_FAILED, "engine description is null");
 //             }
-            return FALSE;
+        return FALSE;
 #else
-            return;
-#endif
-        }
-
-#if !IBUS_CHECK_VERSION(1,3,99)
-        ibus_property_set_icon (IBUS_PANEL_IMPANEL (panel)->logo_prop, engine_desc->icon);
-#else
-        ibus_property_set_icon (IBUS_PANEL_IMPANEL (panel)->logo_prop, ibus_engine_desc_get_icon (engine_desc));
+        return;
 #endif
     }
+
+#if !IBUS_CHECK_VERSION(1,3,99)
+    ibus_property_set_icon (IBUS_PANEL_IMPANEL (panel)->logo_prop, engine_desc->icon);
+#else
+    ibus_property_set_icon (IBUS_PANEL_IMPANEL (panel)->logo_prop, ibus_engine_desc_get_icon (engine_desc));
+#endif
 
     char propstr[512];
     propstr[0] = '\0';
@@ -1174,27 +1165,20 @@ static void
 ibus_panel_impanel_state_changed (IBusPanelService *panel)
 #endif
 {
-    gboolean enable = ibus_input_context_is_enabled(IBUS_PANEL_IMPANEL (panel)->input_context);
-
-    if (enable == 0) {
-        ibus_property_set_icon (IBUS_PANEL_IMPANEL (panel)->logo_prop, "ibus");
-    }
-    else {
-        IBusEngineDesc *engine_desc = ibus_input_context_get_engine(IBUS_PANEL_IMPANEL (panel)->input_context);
-        if (!engine_desc) {
+    IBusEngineDesc *engine_desc = ibus_input_context_get_engine(IBUS_PANEL_IMPANEL (panel)->input_context);
+    if (!engine_desc) {
 #if !IBUS_CHECK_VERSION(1,3,99)
-            return FALSE;
+        return FALSE;
 #else
-            return;
-#endif
-        }
-
-#if !IBUS_CHECK_VERSION(1,3,99)
-        ibus_property_set_icon (IBUS_PANEL_IMPANEL (panel)->logo_prop, engine_desc->icon);
-#else
-        ibus_property_set_icon (IBUS_PANEL_IMPANEL (panel)->logo_prop, ibus_engine_desc_get_icon (engine_desc));
+        return;
 #endif
     }
+
+#if !IBUS_CHECK_VERSION(1,3,99)
+    ibus_property_set_icon (IBUS_PANEL_IMPANEL (panel)->logo_prop, engine_desc->icon);
+#else
+    ibus_property_set_icon (IBUS_PANEL_IMPANEL (panel)->logo_prop, ibus_engine_desc_get_icon (engine_desc));
+#endif
 
     char propstr[512];
     propstr[0] = '\0';
@@ -1208,7 +1192,7 @@ ibus_panel_impanel_state_changed (IBusPanelService *panel)
 
     g_dbus_connection_emit_signal (IBUS_PANEL_IMPANEL (panel)->conn,
                                    NULL, "/kimpanel", "org.kde.kimpanel.inputmethod", "Enable",
-                                   g_variant_new ("(b)", enable),
+                                   g_variant_new ("(b)", TRUE),
                                    NULL);
 #if !IBUS_CHECK_VERSION(1,3,99)
     _UNUSED(error);
