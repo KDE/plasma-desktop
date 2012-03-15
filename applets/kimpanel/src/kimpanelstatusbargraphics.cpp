@@ -33,13 +33,15 @@
 #include <KIcon>
 #include <Plasma/ToolTipContent>
 #include <Plasma/ToolTipManager>
+#include <Plasma/PaintUtils>
 #include <KToggleAction>
 
 KimpanelStatusBarGraphics::KimpanelStatusBarGraphics(QGraphicsItem *parent)
     : QGraphicsWidget(parent),
       m_layout(new IconGridLayout(this)),
       m_startIMIcon(new Plasma::IconWidget(this)),
-      m_propertyMapper(new QSignalMapper(this))
+      m_propertyMapper(new QSignalMapper(this)),
+      m_svg(0)
 {
     m_startIMIcon->setIcon(KIcon("draw-freehand"));
     m_startIMIcon->hide();
@@ -132,7 +134,25 @@ void KimpanelStatusBarGraphics::updateIcon()
             connect(iconWidget, SIGNAL(clicked()), m_propertyMapper, SLOT(map()));
         }
 
-        KIcon icon(property.icon);
+        KIcon icon;
+        if (property.icon.isEmpty()) {
+            if (!property.label.isEmpty()) {
+                if (!m_svg) {
+                    m_svg = new Plasma::Svg(this);
+                    m_svg->setImagePath("widgets/labeltexture");
+                    m_svg->setContainsMultipleImages(true);
+                }
+
+                QFont font = KimpanelSettings::self()->font();
+                font.setPixelSize(KIconLoader::SizeSmallMedium);
+                QString iconString = property.label.left(1);
+                QPixmap pixmap = Plasma::PaintUtils::texturedText(iconString, KimpanelSettings::self()->font(), m_svg);
+
+                icon = KIcon(pixmap);
+            }
+        }
+        else
+            icon = KIcon(property.icon);
         iconWidget->setIcon(icon);
         Plasma::ToolTipContent data(property.label, property.tip, icon);
         Plasma::ToolTipManager::self()->setContent(iconWidget, data);

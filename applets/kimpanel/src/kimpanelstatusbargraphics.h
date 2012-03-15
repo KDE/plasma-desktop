@@ -66,6 +66,7 @@ private:
     QAction *m_exitAction;
     QSet<QString> m_hiddenProperties;
     QSizeF m_preferredIconSize;
+    Plasma::Svg* m_svg;
 };
 
 #endif // KIMPANEL_STATUSBAR_GRAPHICS_H
