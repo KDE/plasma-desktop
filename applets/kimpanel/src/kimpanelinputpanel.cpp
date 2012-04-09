@@ -21,6 +21,7 @@
 #include <QApplication>
 #include <QVBoxLayout>
 #include <QGraphicsView>
+#include <QX11Info>
 
 // KDE
 #include <KWindowSystem>
@@ -29,6 +30,8 @@
 #include <Plasma/Corona>
 #include <Plasma/Theme>
 #include <Plasma/WindowEffects>
+
+#include <X11/Xlib.h>
 
 #include "kimpanelsettings.h"
 #include "kimpanelinputpanelgraphics.h"
@@ -43,12 +46,13 @@ KimpanelInputPanel::KimpanelInputPanel(QWidget* parent)
       m_backgroundSvg(new Plasma::FrameSvg(this))
 {
     setAttribute(Qt::WA_TranslucentBackground);
+    setWindowFlags(Qt::ToolTip);
+    setAttribute(Qt::WA_X11DoNotAcceptFocus, true);
+    KWindowSystem::setState(winId(), NET::KeepAbove);
+    KWindowSystem::setType(winId(), NET::Tooltip);
     QPalette pal = palette();
     pal.setColor(backgroundRole(), Qt::transparent);
     setPalette(pal);
-    setWindowFlags(Qt::FramelessWindowHint | Qt::X11BypassWindowManagerHint);
-    KWindowSystem::setState(winId(), NET::SkipTaskbar | NET::SkipPager | NET::StaysOnTop);
-    KWindowSystem::setType(winId(), NET::PopupMenu);
 
     m_layout->setContentsMargins(0, 0, 0, 0);
     m_layout->setSpacing(0);
@@ -88,13 +92,22 @@ KimpanelInputPanel::KimpanelInputPanel(QWidget* parent)
 
 void KimpanelInputPanel::loadTheme()
 {
-    maskBackground(KWindowSystem::compositingActive());
+    maskBackground(Plasma::Theme::defaultTheme()->windowTranslucencyEnabled());
 
     update();
 }
 
 KimpanelInputPanel::~KimpanelInputPanel()
 {
+}
+
+void KimpanelInputPanel::showEvent(QShowEvent *e)
+{
+    QWidget::showEvent(e);
+    Plasma::WindowEffects::overrideShadow(winId(), true);
+    Display *dpy = QX11Info::display();
+    Atom atom = XInternAtom( dpy, "_KDE_NET_WM_SHADOW", False );
+    XDeleteProperty(dpy, winId(), atom);
 }
 
 void KimpanelInputPanel::resizeEvent(QResizeEvent* event)
@@ -106,7 +119,7 @@ void KimpanelInputPanel::resizeEvent(QResizeEvent* event)
     m_backgroundSvg->resizeFrame(event->size());
     setSpotLocation(x(), y());
 
-    maskBackground(KWindowSystem::compositingActive());
+    maskBackground(Plasma::Theme::defaultTheme()->windowTranslucencyEnabled());
     update();
 }
 

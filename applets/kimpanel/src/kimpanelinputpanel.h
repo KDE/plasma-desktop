@@ -61,6 +61,7 @@ Q_SIGNALS:
     void lookupTablePageDown();
     void selectCandidate(int index);
 protected:
+    virtual void showEvent(QShowEvent* event);
     virtual void resizeEvent(QResizeEvent* event);
     virtual void paintEvent(QPaintEvent* event);
 private Q_SLOTS:
