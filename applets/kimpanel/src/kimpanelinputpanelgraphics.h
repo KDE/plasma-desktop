@@ -103,6 +103,7 @@ private:
     QList<KimpanelLabelGraphics *> m_tableEntryLabels;
 
     QSignalMapper *m_tableEntryMapper;
+    bool m_lastVisible;
 };
 
 #endif // KIMPANEL_INPUTPANEL_GRAHICS_H

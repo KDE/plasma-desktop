@@ -38,7 +38,8 @@ KimpanelInputPanelGraphics::KimpanelInputPanelGraphics(QGraphicsItem* parent, Qt
     m_preeditLabel(new KimpanelLabelGraphics(Preedit, this)),
     m_pageUpIcon(new Plasma::IconWidget(this)),
     m_pageDownIcon(new Plasma::IconWidget(this)),
-    m_tableEntryMapper(new QSignalMapper(this))
+    m_tableEntryMapper(new QSignalMapper(this)),
+    m_lastVisible(false)
 {
     setContentsMargins(0, 0, 0, 0);
 
@@ -251,10 +252,9 @@ void KimpanelInputPanelGraphics::updateLookupTable()
 
 void KimpanelInputPanelGraphics::updateVisible()
 {
-    if (preeditVisible || auxVisible || lookuptableVisible) {
-        emit visibleChanged(true);
-    } else {
-        emit visibleChanged(false);
+    if (m_lastVisible != (preeditVisible || auxVisible || lookuptableVisible)) {
+        m_lastVisible = (preeditVisible || auxVisible || lookuptableVisible);
+        emit visibleChanged(m_lastVisible);
     }
 }
 

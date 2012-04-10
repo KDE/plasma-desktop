@@ -217,8 +217,7 @@ void KimpanelInputPanel::setLookupTable(const QStringList& labels,
 
 void KimpanelInputPanel::updateVisible(bool visible)
 {
-    if (isVisible() != visible)
-        setVisible(visible);
+    setVisible(visible);
 }
 
 void KimpanelInputPanel::updateSize()
