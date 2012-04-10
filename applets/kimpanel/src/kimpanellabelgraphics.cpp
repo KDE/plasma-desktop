@@ -235,7 +235,7 @@ void KimpanelLabelGraphics::paint(QPainter *painter, const QStyleOptionGraphicsI
 
 QSizeF KimpanelLabelGraphics::sizeHint(Qt::SizeHint which, const QSizeF& constraint) const
 {
-    if (which == Qt::MinimumSize || which == Qt::PreferredSize)
+    if (which == Qt::MinimumSize || which == Qt::MaximumSize || which == Qt::PreferredSize)
         return m_pixmap.size();
     else
         return QGraphicsWidget::sizeHint(which, constraint);

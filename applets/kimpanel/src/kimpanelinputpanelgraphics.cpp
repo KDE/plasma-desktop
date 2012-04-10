@@ -41,7 +41,7 @@ KimpanelInputPanelGraphics::KimpanelInputPanelGraphics(QGraphicsItem* parent, Qt
     m_tableEntryMapper(new QSignalMapper(this))
 {
     setContentsMargins(0, 0, 0, 0);
-    
+
     // Content inside this panel will rapidly changed
     setCacheMode(QGraphicsItem::NoCache);
 
@@ -260,6 +260,8 @@ void KimpanelInputPanelGraphics::updateVisible()
 
 void KimpanelInputPanelGraphics::updateSize()
 {
+    m_upperLayout->invalidate();
+    m_lowerLayout->invalidate();
     m_layout->invalidate();
 
     resize(preferredSize());
