@@ -29,7 +29,6 @@ class KimpanelService;
 class KimpanelInputPanelContainer : public Plasma::DataContainer
 {
     Q_OBJECT
-
 public:
     KimpanelInputPanelContainer(QObject* parent, PanelAgent* panelAgent);
     Plasma::Service* service(QObject* parent = 0);
@@ -40,6 +39,7 @@ protected Q_SLOTS:
     void updatePreeditCaret(int pos);
     void updateLookupTable(const KimpanelLookupTable& lookupTable);
     void updateSpotLocation(int x, int y);
+    void updateSpotRect(int x, int y, int w, int h);
     void showAux(bool visible);
     void showPreedit(bool visible);
     void showLookupTable(bool visible);

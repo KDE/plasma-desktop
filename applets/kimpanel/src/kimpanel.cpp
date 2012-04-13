@@ -173,7 +173,7 @@ void Kimpanel::dataUpdated(const QString& source, const Plasma::DataEngine::Data
             text,
             data["HasPrev"].toBool(),
             data["HasNext"].toBool());
-        m_inputpanel->setSpotLocation(data["Position"].toPoint());
+        m_inputpanel->setSpotLocation(data["Position"].toRect());
     } else if (source == "statusbar") {
         m_statusbar->updateProperties(data["Properties"]);
         if (data["Menu"].isValid()) {

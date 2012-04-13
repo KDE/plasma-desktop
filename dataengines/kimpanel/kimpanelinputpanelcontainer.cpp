@@ -30,7 +30,8 @@ KimpanelInputPanelContainer::KimpanelInputPanelContainer(QObject* parent, PanelA
     connect(m_panelAgent, SIGNAL(updatePreeditText(QString, QList<TextAttribute>)), this, SLOT(updatePreeditText(QString, QList<TextAttribute>)));
     connect(m_panelAgent, SIGNAL(updatePreeditCaret(int)), this, SLOT(updatePreeditCaret(int)));
     connect(m_panelAgent, SIGNAL(updateLookupTable(KimpanelLookupTable)), this, SLOT(updateLookupTable(KimpanelLookupTable)));
-    connect(m_panelAgent, SIGNAL(updateSpotLocation(int, int)), this, SLOT(updateSpotLocation(int, int)));
+    connect(m_panelAgent, SIGNAL(updateSpotLocation(int,int)), this, SLOT(updateSpotLocation(int,int)));
+    connect(m_panelAgent, SIGNAL(updateSpotRect(int, int, int, int)), this, SLOT(updateSpotRect(int, int, int, int)));
     connect(m_panelAgent, SIGNAL(showAux(bool)), this, SLOT(showAux(bool)));
     connect(m_panelAgent, SIGNAL(showPreedit(bool)), this, SLOT(showPreedit(bool)));
     connect(m_panelAgent, SIGNAL(showLookupTable(bool)), this, SLOT(showLookupTable(bool)));
@@ -81,7 +82,12 @@ void KimpanelInputPanelContainer::updateLookupTable(const KimpanelLookupTable& l
 
 void KimpanelInputPanelContainer::updateSpotLocation(int x, int y)
 {
-    setData("Position", QPoint(x, y));
+    updateSpotRect(x, y, 0, 0);
+}
+
+void KimpanelInputPanelContainer::updateSpotRect(int x, int y, int w, int h)
+{
+    setData("Position", QRect(x, y, w, h));
     checkForUpdate();
 }
 

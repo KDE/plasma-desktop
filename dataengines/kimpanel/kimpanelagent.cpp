@@ -31,9 +31,9 @@
 
 PanelAgent::PanelAgent(QObject *parent)
     : QObject(parent)
+    ,adaptor(new ImpanelAdaptor(this))
+    ,adaptor2(new Impanel2Adaptor(this))
 {
-    // constructor
-    adaptor = new ImpanelAdaptor(this);
 
     QDBusConnection::connectToBus(QDBusConnection::SessionBus, "kimpanel_bus").registerObject("/org/kde/impanel", this);
     QDBusConnection::connectToBus(QDBusConnection::SessionBus, "kimpanel_bus").registerService("org.kde.impanel");
@@ -262,3 +262,7 @@ void PanelAgent::ExecMenu(const QStringList &entries)
     emit execMenu(list);
 }
 
+void PanelAgent::SetSpotRect(int x, int y, int w, int h)
+{
+    emit updateSpotRect(x, y, w, h);
+}

@@ -117,7 +117,7 @@ void KimpanelInputPanel::resizeEvent(QResizeEvent* event)
     QRectF rect(QPointF(0, 0), size());
     m_scene->setSceneRect(rect);
     m_backgroundSvg->resizeFrame(event->size());
-    setSpotLocation(x(), y());
+    updateLocation();
 
     maskBackground(Plasma::Theme::defaultTheme()->windowTranslucencyEnabled());
     update();
@@ -152,22 +152,24 @@ void KimpanelInputPanel::paintEvent(QPaintEvent *e)
     m_backgroundSvg->paintFrame(&p);
 }
 
-void KimpanelInputPanel::setSpotLocation(const QPoint& point)
+void KimpanelInputPanel::setSpotLocation(const QRect& rect)
 {
-    setSpotLocation(point.x(), point.y());
+    m_spotRect = rect;
+    updateLocation();
 }
 
-void KimpanelInputPanel::setSpotLocation(int x, int y)
+void KimpanelInputPanel::updateLocation()
 {
-    QRect screenRect = QApplication::desktop()->screenGeometry(QPoint(x, y));
-    x = qMin(x, screenRect.x() + screenRect.width() - width());
+    QRect screenRect = QApplication::desktop()->screenGeometry(QPoint(m_spotRect.x(), m_spotRect.y()));
+    int x = qMin(m_spotRect.x(), screenRect.x() + screenRect.width() - width());
+    int y = m_spotRect.y() + m_spotRect.height();
     if (y > screenRect.y() + screenRect.height()) {
         y = screenRect.height();
     }
 
     if (y + height() > screenRect.y() + screenRect.height()) {
         /// minus 20 to make preedit bar never overlap the input context
-        y -= height() + 20;
+        y -= height() + ((m_spotRect.height() == 0)?20:m_spotRect.height());
     }
     if (QPoint(x, y) != pos())
         move(x, y);
@@ -232,7 +234,7 @@ void KimpanelInputPanel::updateSize()
     if (m_view->size() != m_widget->preferredSize().toSize()) {
         m_view->resize(m_widget->preferredSize().toSize());
         m_scene->setSceneRect(QRectF(QPointF(0, 0), (m_widget->preferredSize())));
-        setSpotLocation(x(), y());
+        updateLocation();
         m_backgroundSvg->resizeFrame(sizeHint);
     }
 }

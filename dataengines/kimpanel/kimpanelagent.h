@@ -26,6 +26,7 @@
 #include <QObject>
 #include <QStringList>
 
+class Impanel2Adaptor;
 class ImpanelAdaptor;
 
 class PanelAgent: public QObject
@@ -59,6 +60,7 @@ public Q_SLOTS: // METHODS
     void RegisterProperties(const QStringList &props);
     void ExecDialog(const QString &prop);
     void ExecMenu(const QStringList &entries);
+    void SetSpotRect(int x, int y, int w, int h);
 
 Q_SIGNALS:
     // signals that from kimpanel
@@ -81,6 +83,7 @@ Q_SIGNALS:
     void updateProperty(const KimpanelProperty &prop);
     void updateLookupTable(const KimpanelLookupTable &lookup_table);
     void updateSpotLocation(int x, int y);
+    void updateSpotRect(int x, int y, int w ,int h);
 
     void registerProperties(const QList<KimpanelProperty> &props);
 
@@ -99,6 +102,7 @@ private:
     int m_spot_y;
     QStringList cached_props;
     ImpanelAdaptor* adaptor;
+    Impanel2Adaptor* adaptor2;
 };
 
 #endif // KIMPANEL_AGENT_H

@@ -1,20 +1,29 @@
-<!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN" "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd"> 
-<node name="/org/kde/impanel"> 
-        <interface name="org.kde.impanel"> 
-                <signal name="MovePreeditCaret"> 
+<!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN" "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+<node name="/org/kde/impanel">
+        <interface name="org.kde.impanel">
+                <signal name="MovePreeditCaret">
                         <arg type="i" name="position" />
-                </signal> 
-                <signal name="SelectCandidate"> 
+                </signal>
+                <signal name="SelectCandidate">
                         <arg type="i" name="index" />
-                </signal> 
-                <signal name="LookupTablePageUp"> </signal> 
-                <signal name="LookupTablePageDown"> </signal> 
-                <signal name="TriggerProperty"> 
-                        <arg type="s" name="key" /> 
-                </signal> 
-                <signal name="PanelCreated"> </signal> 
-                <signal name="Exit"> </signal> 
-                <signal name="ReloadConfig"> </signal> 
-                <signal name="Configure"> </signal> 
-        </interface> 
+                </signal>
+                <signal name="LookupTablePageUp"> </signal>
+                <signal name="LookupTablePageDown"> </signal>
+                <signal name="TriggerProperty">
+                        <arg type="s" name="key" />
+                </signal>
+                <signal name="PanelCreated"> </signal>
+                <signal name="Exit"> </signal>
+                <signal name="ReloadConfig"> </signal>
+                <signal name="Configure"> </signal>
+        </interface>
+        <interface name="org.kde.impanel2">
+            <signal name="PanelCreated"> </signal>
+            <method name="SetSpotRect">
+                <arg type="i" name="x" direction="in" />
+                <arg type="i" name="y" direction="in" />
+                <arg type="i" name="w" direction="in" />
+                <arg type="i" name="h" direction="in" />
+            </method>
+        </interface>
 </node>
