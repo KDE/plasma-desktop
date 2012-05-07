@@ -49,6 +49,8 @@ Kimpanel::Kimpanel(QObject* parent, const QVariantList& args):
     m_statusbarService(0),
     m_menuTimeStamp(QDateTime::currentMSecsSinceEpoch())
 {
+    m_layout->setSpacing(0);
+    m_layout->setContentsMargins(0, 0, 0, 0);
     m_layout->addItem(m_statusbar);
     m_statusbar->show();
     setLayout(m_layout);
