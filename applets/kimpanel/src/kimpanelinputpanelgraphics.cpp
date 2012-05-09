@@ -239,7 +239,7 @@ void KimpanelInputPanelGraphics::updateLookupTable()
         item->setText(m_labels[i], m_candidates[i]);
         m_tableEntryMapper->setMapping(item, i);
     }
-    if (m_reverse) {
+    if (m_reverse && KimpanelSettings::self()->verticalPreeditBar()) {
         for (int i = length - 1; i >= 0; i--)
             m_lowerLayout->addItem(m_tableEntryLabels[i]);
     }
@@ -278,7 +278,7 @@ void KimpanelInputPanelGraphics::updateSize()
 
 void KimpanelInputPanelGraphics::setReverse(bool reverse)
 {
-    reverse = reverse && KimpanelSettings::self()->useReverse() && KimpanelSettings::self()->verticalPreeditBar();
+    reverse = reverse && KimpanelSettings::self()->useReverse();
     if (m_reverse != reverse) {
         m_reverse = reverse;
         while(m_layout->count() > 0)

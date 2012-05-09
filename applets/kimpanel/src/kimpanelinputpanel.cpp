@@ -161,7 +161,9 @@ void KimpanelInputPanel::setSpotLocation(const QRect& rect)
 void KimpanelInputPanel::updateLocation()
 {
     QRect screenRect = QApplication::desktop()->screenGeometry(QPoint(m_spotRect.x(), m_spotRect.y()));
-    int x = qMin(m_spotRect.x(), screenRect.x() + screenRect.width() - width());
+    int x;
+    x = qMin(m_spotRect.x(), screenRect.x() + screenRect.width() - width());
+    x = qMax(x, screenRect.x());
     int y = m_spotRect.y() + m_spotRect.height();
     if (y > screenRect.y() + screenRect.height()) {
         y = screenRect.height();
