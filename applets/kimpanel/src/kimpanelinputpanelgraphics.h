@@ -57,6 +57,7 @@ public:
                         const QStringList& attrs = QStringList()
                        );
     void updateSize();
+    void setReverse(bool reverse);
 
 Q_SIGNALS:
     void selectCandidate(int idx);
@@ -104,6 +105,7 @@ private:
 
     QSignalMapper *m_tableEntryMapper;
     bool m_lastVisible;
+    bool m_reverse;
 };
 
 #endif // KIMPANEL_INPUTPANEL_GRAHICS_H

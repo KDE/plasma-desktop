@@ -39,7 +39,8 @@ KimpanelInputPanelGraphics::KimpanelInputPanelGraphics(QGraphicsItem* parent, Qt
     m_pageUpIcon(new Plasma::IconWidget(this)),
     m_pageDownIcon(new Plasma::IconWidget(this)),
     m_tableEntryMapper(new QSignalMapper(this)),
-    m_lastVisible(false)
+    m_lastVisible(false),
+    m_reverse(false)
 {
     setContentsMargins(0, 0, 0, 0);
 
@@ -225,8 +226,7 @@ void KimpanelInputPanelGraphics::updateLookupTable()
     clearLookupTable();
 
     int length = qMin(m_labels.size(), m_candidates.size());
-    int i = 0;
-    for (; i < length; i ++) {
+    for (int i = 0; i < length; i ++) {
         KimpanelLabelGraphics* item = NULL;
         if (m_tableEntryLabels.length() < i + 1) {
             item = new KimpanelLabelGraphics(TableEntry, this);
@@ -237,10 +237,17 @@ void KimpanelInputPanelGraphics::updateLookupTable()
         item = m_tableEntryLabels[i];
         item->show();
         item->setText(m_labels[i], m_candidates[i]);
-        m_lowerLayout->addItem(item);
         m_tableEntryMapper->setMapping(item, i);
     }
-    for (; i < m_tableEntryLabels.length(); i ++) {
+    if (m_reverse) {
+        for (int i = length - 1; i >= 0; i--)
+            m_lowerLayout->addItem(m_tableEntryLabels[i]);
+    }
+    else {
+        for (int i = 0; i < length; i ++)
+            m_lowerLayout->addItem(m_tableEntryLabels[i]);
+    }
+    for (int i = length; i < m_tableEntryLabels.length(); i ++) {
         KimpanelLabelGraphics* item = m_tableEntryLabels[i];
         item->hide();
     }
@@ -267,5 +274,25 @@ void KimpanelInputPanelGraphics::updateSize()
     resize(preferredSize());
     emit sizeChanged();
     update();
+}
+
+void KimpanelInputPanelGraphics::setReverse(bool reverse)
+{
+    reverse = reverse && KimpanelSettings::self()->useReverse() && KimpanelSettings::self()->verticalPreeditBar();
+    if (m_reverse != reverse) {
+        m_reverse = reverse;
+        while(m_layout->count() > 0)
+            m_layout->removeAt(0);
+
+        if (m_reverse && KimpanelSettings::self()->useReverse()) {
+            m_layout->addItem(m_lowerLayout);
+            m_layout->addItem(m_upperLayout);
+        }
+        else {
+            m_layout->addItem(m_upperLayout);
+            m_layout->addItem(m_lowerLayout);
+        }
+        updateSize();
+    }
 }
 

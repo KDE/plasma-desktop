@@ -119,6 +119,7 @@ void Kimpanel::createConfigurationInterface(KConfigDialog* parent)
     parent->addPage(widget, i18nc("General configuration page", "General"), icon());
     m_generalUi.blurBehindCheckBox->setChecked(KimpanelSettings::self()->enableBackgroundBlur());
     m_generalUi.verticalListCheckBox->setChecked(KimpanelSettings::self()->verticalPreeditBar());
+    m_generalUi.reverseCheckBox->setChecked(KimpanelSettings::self()->useReverse());
 
     m_font = KimpanelSettings::self()->font();
     m_generalUi.fontPreviewLabel->setText(QString("%1 %2").arg(m_font.family()).arg(m_font.pointSize()));
@@ -131,6 +132,7 @@ void Kimpanel::createConfigurationInterface(KConfigDialog* parent)
     connect(this, SIGNAL(configFontChanged()), parent, SLOT(settingsModified()));
     connect(m_generalUi.blurBehindCheckBox, SIGNAL(stateChanged(int)), parent, SLOT(settingsModified()));
     connect(m_generalUi.verticalListCheckBox, SIGNAL(stateChanged(int)), parent, SLOT(settingsModified()));
+    connect(m_generalUi.reverseCheckBox, SIGNAL(stateChanged(int)), parent, SLOT(settingsModified()));
     connect(m_generalUi.selectIMButton, SIGNAL(clicked(bool)), parent, SLOT(settingsModified()));
     connect(m_generalUi.selectIMButton, SIGNAL(clicked(bool)), this, SLOT(selectIM()));
 }
@@ -150,6 +152,7 @@ void Kimpanel::configAccepted()
 {
     KimpanelSettings::self()->setEnableBackgroundBlur(m_generalUi.blurBehindCheckBox->isChecked());
     KimpanelSettings::self()->setVerticalPreeditBar(m_generalUi.verticalListCheckBox->isChecked());
+    KimpanelSettings::self()->setUseReverse(m_generalUi.reverseCheckBox->isChecked());
     KimpanelSettings::self()->setFont(m_font);
     KimpanelSettings::self()->writeConfig();
 }
