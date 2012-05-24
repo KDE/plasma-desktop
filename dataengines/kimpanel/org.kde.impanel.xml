@@ -18,7 +18,7 @@
                 <signal name="Configure"> </signal>
         </interface>
         <interface name="org.kde.impanel2">
-            <signal name="PanelCreated"> </signal>
+            <signal name="PanelCreated2"> </signal>
             <method name="SetSpotRect">
                 <arg type="i" name="x" direction="in" />
                 <arg type="i" name="y" direction="in" />

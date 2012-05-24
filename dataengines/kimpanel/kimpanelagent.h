@@ -71,6 +71,7 @@ Q_SIGNALS:
     void LookupTablePageDown();
     void TriggerProperty(const QString &key);
     void PanelCreated();
+    void PanelCreated2();
     void Exit();
     void ReloadConfig();
 

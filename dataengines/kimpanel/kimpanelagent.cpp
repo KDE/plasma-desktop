@@ -194,6 +194,7 @@ static KimpanelLookupTable Args2LookupTable(const QStringList &labels, const QSt
 void PanelAgent::created()
 {
     emit PanelCreated();
+    emit PanelCreated2();
 }
 
 void PanelAgent::exit()
