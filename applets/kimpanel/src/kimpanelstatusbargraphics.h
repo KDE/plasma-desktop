@@ -24,6 +24,7 @@
 
 // Qt
 #include <QGraphicsWidget>
+#include <QTimer>
 
 // Plasma
 #include <Plasma/IconWidget>
@@ -31,6 +32,32 @@
 
 class QSignalMapper;
 class IconGridLayout;
+
+class DelayedSignalContainer : public QObject
+{
+    Q_OBJECT
+public:
+    DelayedSignalContainer(const QString& key, QObject* parent = 0) : QObject(parent) {
+        this->key = key;
+    }
+
+    void launch(int time) {
+        QTimer::singleShot(time, this, SLOT(delay()));
+    }
+
+signals:
+    void notify(QString key);
+
+private slots:
+    void delay() {
+        emit notify(key);
+        this->deleteLater();
+    }
+
+private:
+    QString key;
+};
+
 class KimpanelStatusBarGraphics : public QGraphicsWidget
 {
     Q_OBJECT
@@ -50,6 +77,7 @@ Q_SIGNALS:
     void startIM();
 protected Q_SLOTS:
     void hiddenActionToggled();
+    void delayedTriggerProperty(const QString& key);
 private:
     void updateIcon();
     IconGridLayout* m_layout;

@@ -28,6 +28,7 @@
 #include <QGraphicsWidget>
 #include <QMenu>
 #include <QSignalMapper>
+#include <QTimer>
 
 // KDE
 #include <KIcon>
@@ -247,7 +248,7 @@ void KimpanelStatusBarGraphics::execMenu(const QVariant &var)
     QMenu *menu = new QMenu();
     QAction *action;
     QSignalMapper *mapper = new QSignalMapper(menu);
-    connect(mapper, SIGNAL(mapped(QString)), this, SIGNAL(triggerProperty(QString)));
+    connect(mapper, SIGNAL(mapped(QString)), this, SLOT(delayedTriggerProperty(QString)));
     foreach(const KimpanelProperty & prop, propList) {
         action = new QAction(KIcon(prop.icon), prop.label, menu);
         mapper->setMapping(action, prop.key);
@@ -257,6 +258,16 @@ void KimpanelStatusBarGraphics::execMenu(const QVariant &var)
     menu->exec(QCursor::pos());
     delete menu;
 }
+
+
+
+void KimpanelStatusBarGraphics::delayedTriggerProperty(const QString& key)
+{
+    DelayedSignalContainer *delayObj = new DelayedSignalContainer(key, this);
+    connect(delayObj, SIGNAL(notify(QString)), this, SIGNAL(triggerProperty(QString)));
+    delayObj->launch(50);
+}
+
 
 void KimpanelStatusBarGraphics::setLayoutMode(IconGridLayout::Mode mode)
 {
