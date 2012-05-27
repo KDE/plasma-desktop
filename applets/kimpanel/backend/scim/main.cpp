@@ -252,6 +252,7 @@ public:
         UP_PREEDIT_STR,
         UP_PREEDIT_CARET,
         UP_LOOKUPTABLE,
+        UP_LOOKUPTABLE_CURSOR,
         UP_FACTORY_INFO,
         UP_PROPERTY,
         UP_HELPER_PROPERTY,
@@ -583,6 +584,13 @@ protected:
                     message << ev->data().at(2).toStringList();
                     message << ev->data().at(3).toBool();
                     message << ev->data().at(4).toBool();
+                    QDBusConnection("scim_panel").send(message);
+                    break;
+                case DBusEvent::UP_LOOKUPTABLE_CURSOR:
+                    message = QDBusMessage::createSignal("/kimpanel",
+                                                         "org.kde.kimpanel.inputmethod",
+                                                         "UpdateLookupTableCursor");
+                    message << ev->data().at(0).toInt();
                     QDBusConnection("scim_panel").send(message);
                     break;
                 case DBusEvent::UP_PREEDIT_CARET:
@@ -984,6 +992,9 @@ slot_update_lookup_table(const LookupTable &table)
     SCIM_DEBUG_MAIN(1) << "slot_update_lookup_table ()\n";
     qApp->postEvent(_dbus_handler, new DBusEvent(DBusEvent::UP_LOOKUPTABLE,
                     LookupTable2VariantList(table)));
+
+    qApp->postEvent(_dbus_handler, new DBusEvent(DBusEvent::UP_LOOKUPTABLE_CURSOR,
+                                                 QVariantList() << (table.is_cursor_visible() ? table.get_cursor_pos_in_current_page() : - 1)));
 }
 
 static void
