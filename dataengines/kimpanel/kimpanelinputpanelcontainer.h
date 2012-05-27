@@ -43,6 +43,7 @@ protected Q_SLOTS:
     void showAux(bool visible);
     void showPreedit(bool visible);
     void showLookupTable(bool visible);
+    void updateLookupTableCursor(int cursor);
 private:
     PanelAgent* m_panelAgent;
 };

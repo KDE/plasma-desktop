@@ -163,6 +163,7 @@ void Kimpanel::dataUpdated(const QString& source, const Plasma::DataEngine::Data
         m_inputpanel->setShowAux(data["AuxVisible"].toBool());
         m_inputpanel->setShowPreedit(data["PreeditVisible"].toBool());
         m_inputpanel->setShowLookupTable(data["LookupTableVisible"].toBool());
+        m_inputpanel->setLookupTableCursor(data["LookupTableCursor"].toInt());
         m_inputpanel->setAuxText(data["AuxText"].toString());
         m_inputpanel->setPreeditText(data["PreeditText"].toString());
         m_inputpanel->setPreeditCaret(data["CaretPos"].toInt());

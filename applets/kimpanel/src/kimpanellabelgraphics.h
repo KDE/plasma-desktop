@@ -45,6 +45,7 @@ public:
     void setCursorPos(int pos);
     void setTextRenderType(RenderType type);
     void setText(const QString &label, const QString &text);
+    void setHighLight(bool highlight);
 
     virtual QSizeF sizeHint(Qt::SizeHint which, const QSizeF& constraint = QSizeF()) const;
 
@@ -78,6 +79,7 @@ private:
     QPixmap m_reversedPixmap;
     QPointF m_clickStartPos;
     LabelStates m_states;
+    bool m_highlight;
 };
 
 #endif // KIMPANEL_LABELGRAPHICS_H

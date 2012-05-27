@@ -44,6 +44,7 @@ public:
     void setShowPreedit(bool show);
     void setShowAux(bool show);
     void setShowLookupTable(bool show);
+    void setLookupTableCursor(int cursor);
     void setPreeditCaret(int pos);
     void setPreeditText(const QString& text,
                         const QString& attrs = QString());

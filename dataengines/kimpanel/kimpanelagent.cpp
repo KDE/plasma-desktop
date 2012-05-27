@@ -47,6 +47,8 @@ PanelAgent::PanelAgent(QObject *parent)
                                             "ShowAux", this, SIGNAL(showAux(bool)));
     QDBusConnection("kimpanel_bus").connect("", "", "org.kde.kimpanel.inputmethod",
                                             "ShowLookupTable", this, SIGNAL(showLookupTable(bool)));
+    QDBusConnection("kimpanel_bus").connect("", "", "org.kde.kimpanel.inputmethod",
+                                            "UpdateLookupTableCursor", this, SIGNAL(updateLookupTableCursor(int)));
 
     // do some serialization
     QDBusConnection("kimpanel_bus").connect("", "", "org.kde.kimpanel.inputmethod",

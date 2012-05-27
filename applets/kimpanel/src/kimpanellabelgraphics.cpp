@@ -36,7 +36,8 @@ KimpanelLabelGraphics::KimpanelLabelGraphics(RenderType type, QGraphicsItem *par
     : QGraphicsWidget(parent),
       m_drawCursor(false),
       m_cursorPos(0),
-      m_renderType(type)
+      m_renderType(type),
+      m_highlight(false)
 {
     // Text inside this label will rapidly changed
     setCacheMode(QGraphicsItem::NoCache);
@@ -151,6 +152,14 @@ void KimpanelLabelGraphics::setText(const QString &label, const QString &text)
     }
 }
 
+void KimpanelLabelGraphics::setHighLight(bool highlight)
+{
+    if (highlight != m_highlight) {
+        m_highlight = highlight;
+        update();
+    }
+}
+
 void KimpanelLabelGraphics::setTextRenderType(RenderType type)
 {
     m_renderType = type;
@@ -223,7 +232,10 @@ void KimpanelLabelGraphics::paint(QPainter *painter, const QStyleOptionGraphicsI
             Plasma::PaintUtils::drawHalo(painter, haloRect);
         }
     }
-    if (m_renderType == TableEntry && !m_label.isEmpty() && (m_states & HoverState)) {
+    if (m_renderType == TableEntry
+        && !m_label.isEmpty()
+        && (m_highlight || (m_states & HoverState))
+    ) {
         painter->drawPixmap(0, h_spacing,
                             m_reversedPixmap);
     } else {

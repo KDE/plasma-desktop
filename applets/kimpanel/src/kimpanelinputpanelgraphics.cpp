@@ -40,7 +40,8 @@ KimpanelInputPanelGraphics::KimpanelInputPanelGraphics(QGraphicsItem* parent, Qt
     m_pageDownIcon(new Plasma::IconWidget(this)),
     m_tableEntryMapper(new QSignalMapper(this)),
     m_lastVisible(false),
-    m_reverse(false)
+    m_reverse(false),
+    m_lookupTableCursor(-1)
 {
     setContentsMargins(0, 0, 0, 0);
 
@@ -154,6 +155,11 @@ void KimpanelInputPanelGraphics::setShowLookupTable(bool show)
     updateVisible();
 }
 
+void KimpanelInputPanelGraphics::setLookupTableCursor(int cursor)
+{
+    m_lookupTableCursor = cursor;
+}
+
 void KimpanelInputPanelGraphics::setPreeditCaret(int pos)
 {
     if (m_cursorPos != pos) {
@@ -237,6 +243,10 @@ void KimpanelInputPanelGraphics::updateLookupTable()
         item = m_tableEntryLabels[i];
         item->show();
         item->setText(m_labels[i], m_candidates[i]);
+        if (i == m_lookupTableCursor)
+            item->setHighLight(true);
+        else
+            item->setHighLight(false);
         m_tableEntryMapper->setMapping(item, i);
     }
     if (m_reverse && KimpanelSettings::self()->verticalPreeditBar()) {

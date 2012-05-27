@@ -35,6 +35,7 @@ KimpanelInputPanelContainer::KimpanelInputPanelContainer(QObject* parent, PanelA
     connect(m_panelAgent, SIGNAL(showAux(bool)), this, SLOT(showAux(bool)));
     connect(m_panelAgent, SIGNAL(showPreedit(bool)), this, SLOT(showPreedit(bool)));
     connect(m_panelAgent, SIGNAL(showLookupTable(bool)), this, SLOT(showLookupTable(bool)));
+    connect(m_panelAgent, SIGNAL(updateLookupTableCursor(int)), this, SLOT(updateLookupTableCursor(int)));
 }
 
 Plasma::Service* KimpanelInputPanelContainer::service(QObject* parent)
@@ -109,3 +110,8 @@ void KimpanelInputPanelContainer::showLookupTable(bool visible)
     checkForUpdate();
 }
 
+void KimpanelInputPanelContainer::updateLookupTableCursor(int cursor)
+{
+    setData("LookupTableCursor", cursor);
+    checkForUpdate();
+}

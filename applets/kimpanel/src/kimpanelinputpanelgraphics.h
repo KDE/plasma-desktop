@@ -45,6 +45,7 @@ public:
     void setShowPreedit(bool show);
     void setShowAux(bool show);
     void setShowLookupTable(bool show);
+    void setLookupTableCursor(int cursor);
     void setPreeditCaret(int pos);
     void setPreeditText(const QString& text,
                         const QString& attrs = QString());
@@ -106,6 +107,7 @@ private:
     QSignalMapper *m_tableEntryMapper;
     bool m_lastVisible;
     bool m_reverse;
+    int m_lookupTableCursor;
 };
 
 #endif // KIMPANEL_INPUTPANEL_GRAHICS_H

@@ -87,6 +87,9 @@ static const gchar introspection_xml[] =
     "      <arg type='s' name='text'/>"
     "      <arg type='s' name='attr'/>"
     "    </signal>"
+    "    <signal name='UpdateLookupTableCursor'>"
+    "      <arg type='i' name='pos'/>"
+    "    </signal>"
     "    <signal name='UpdateLookupTable'>"
     "      <arg type='as' name='labels'/>"
     "      <arg type='as' name='candidates'/>"
@@ -577,7 +580,7 @@ ibus_panel_impanel_focus_in (IBusPanelService *panel,
 
     IBusInputContext *ic = ibus_input_context_get_input_context(input_context_path, ibusconn);
     IBUS_PANEL_IMPANEL (panel)->input_context = ic;
-    
+
     const gchar* icon_name = "ibus-keyboard";
     if (engine_desc) {
 #if !IBUS_CHECK_VERSION(1,3,99)
@@ -804,6 +807,17 @@ ibus_panel_impanel_update_lookup_table (IBusPanelService *panel,
                                                   &builder_candidates,
                                                   &builder_attrs,
                                                   has_prev, has_next),
+                                   NULL);
+
+    guint cursor_pos_in_page;
+    if (ibus_lookup_table_is_cursor_visible(lookup_table))
+        cursor_pos_in_page = cursor_pos % page_size;
+    else
+        cursor_pos_in_page = -1;
+
+    g_dbus_connection_emit_signal (IBUS_PANEL_IMPANEL (panel)->conn,
+                                   NULL, "/kimpanel", "org.kde.kimpanel.inputmethod", "UpdateLookupTableCursor",
+                                   g_variant_new ("(i)", cursor_pos_in_page),
                                    NULL);
 
     if (visible == 0)

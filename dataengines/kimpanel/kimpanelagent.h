@@ -94,6 +94,7 @@ Q_SIGNALS:
     void showPreedit(bool to_show);
     void showAux(bool to_show);
     void showLookupTable(bool to_show);
+    void updateLookupTableCursor(int pos);
 
 private:
     bool m_show_aux;
