@@ -687,13 +687,20 @@ ibus_panel_impanel_set_cursor_location (IBusPanelService *panel,
                                         gint              h)
 #endif
 {
-    gint sx = x + w;
-    gint sy = y + h;
 
-    g_dbus_connection_emit_signal (IBUS_PANEL_IMPANEL (panel)->conn,
-                                   NULL, "/kimpanel", "org.kde.kimpanel.inputmethod", "UpdateSpotLocation",
-                                   g_variant_new ("(ii)", sx, sy),
-                                   NULL);
+    g_dbus_connection_call(IBUS_PANEL_IMPANEL (panel)->conn,
+                            "org.kde.impanel",
+                            "/org/kde/impanel",
+                            "org.kde.impanel2",
+                            "SetSpotRect",
+                            g_variant_new("(iiii)", x, y, w, h),
+                            NULL,
+                            G_DBUS_CALL_FLAGS_NONE,
+                           -1,           /* timeout */
+                           NULL,
+                           NULL,
+                           NULL);
+
 #if !IBUS_CHECK_VERSION(1,3,99)
     _UNUSED(error);
     return TRUE;
