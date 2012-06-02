@@ -25,11 +25,13 @@
 // Qt
 #include <QObject>
 #include <QStringList>
+#include <QDBusContext>
 
+class QDBusServiceWatcher;
 class Impanel2Adaptor;
 class ImpanelAdaptor;
 
-class PanelAgent: public QObject
+class PanelAgent: public QObject, protected QDBusContext
 {
     Q_OBJECT
 
@@ -61,6 +63,7 @@ public Q_SLOTS: // METHODS
     void ExecDialog(const QString &prop);
     void ExecMenu(const QStringList &entries);
     void SetSpotRect(int x, int y, int w, int h);
+    void serviceUnregistered(const QString& service);
 
 Q_SIGNALS:
     // signals that from kimpanel
@@ -102,9 +105,11 @@ private:
     bool m_show_lookup_table;
     int m_spot_x;
     int m_spot_y;
+    QString m_currentService;
     QStringList cached_props;
     ImpanelAdaptor* adaptor;
     Impanel2Adaptor* adaptor2;
+    QDBusServiceWatcher* watcher;
 };
 
 #endif // KIMPANEL_AGENT_H

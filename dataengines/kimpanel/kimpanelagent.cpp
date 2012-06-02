@@ -28,13 +28,16 @@
 #include <QString>
 #include <QStringList>
 #include <QVariant>
+#include <QDBusServiceWatcher>
 
 PanelAgent::PanelAgent(QObject *parent)
     : QObject(parent)
     ,adaptor(new ImpanelAdaptor(this))
     ,adaptor2(new Impanel2Adaptor(this))
+    ,watcher(new QDBusServiceWatcher(this))
 {
-
+    watcher->setConnection(QDBusConnection::sessionBus());
+    watcher->setWatchMode(QDBusServiceWatcher::WatchForUnregistration);
     QDBusConnection::connectToBus(QDBusConnection::SessionBus, "kimpanel_bus").registerObject("/org/kde/impanel", this);
     QDBusConnection::connectToBus(QDBusConnection::SessionBus, "kimpanel_bus").registerService("org.kde.impanel");
 
@@ -72,12 +75,26 @@ PanelAgent::PanelAgent(QObject *parent)
                                             "ExecDialog", this, SLOT(ExecDialog(QString)));
     QDBusConnection("kimpanel_bus").connect("", "", "org.kde.kimpanel.inputmethod",
                                             "ExecMenu", this, SLOT(ExecMenu(QStringList)));
+
+    connect(watcher, SIGNAL(serviceUnregistered(QString)), this, SLOT(serviceUnregistered(QString)));
 }
 
 PanelAgent::~PanelAgent()
 {
     // destructor
     QDBusConnection::disconnectFromBus("kimpanel_bus");
+}
+
+void PanelAgent::serviceUnregistered(const QString& service)
+{
+    if (service == m_currentService) {
+        watcher->setWatchedServices(QStringList());
+        m_currentService = QString();
+        emit showAux(false);
+        emit showPreedit(false);
+        emit showLookupTable(false);
+        emit registerProperties(QList<KimpanelProperty>());
+    }
 }
 
 void PanelAgent::configure()
@@ -239,6 +256,13 @@ void PanelAgent::UpdateProperty(const QString &prop)
 
 void PanelAgent::RegisterProperties(const QStringList &props)
 {
+    const QDBusMessage& msg = message();
+    if (msg.service() != m_currentService) {
+        watcher->removeWatchedService(m_currentService);
+        m_currentService = msg.service();
+        qDebug() << msg.service();
+        watcher->addWatchedService(m_currentService);
+    }
     if (cached_props != props) {
         cached_props = props;
         QList<KimpanelProperty> list;
