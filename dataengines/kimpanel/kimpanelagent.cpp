@@ -260,7 +260,6 @@ void PanelAgent::RegisterProperties(const QStringList &props)
     if (msg.service() != m_currentService) {
         watcher->removeWatchedService(m_currentService);
         m_currentService = msg.service();
-        qDebug() << msg.service();
         watcher->addWatchedService(m_currentService);
     }
     if (cached_props != props) {
