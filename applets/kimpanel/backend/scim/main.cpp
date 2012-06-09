@@ -1107,10 +1107,10 @@ int main(int argc, char *argv [])
     config_list.push_back("dummy");
 
     //Use socket Config module as default if available.
-    if (config_list.size()) {
-        if (std::find(config_list.begin(),
-                      config_list.end(),
-                      config_name) == config_list.end())
+    if (!config_list.empty ()) {
+        if (std::find (config_list.begin (),
+                       config_list.end (),
+                       config_name) == config_list.end ())
             config_name = config_list [0];
     }
 
