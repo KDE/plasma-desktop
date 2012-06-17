@@ -71,7 +71,6 @@ KimpanelInputPanel::KimpanelInputPanel(QWidget* parent)
     m_view->viewport()->setAttribute(Qt::WA_NoSystemBackground);
 
     m_layout->addWidget(m_view);
-    m_layout->addStretch();
 
     m_scene->addItem(m_widget);
 
@@ -234,7 +233,6 @@ void KimpanelInputPanel::updateVisible(bool visible)
 
 void KimpanelInputPanel::updateSize()
 {
-    QFontMetrics fm(KimpanelSettings::self()->font());
     int left, top, right, bottom;
     getContentsMargins(&left, &top, &right, &bottom);
     QSize sizeHint = m_widget->size().toSize();
