@@ -44,6 +44,10 @@ KimpanelLabelGraphics::KimpanelLabelGraphics(RenderType type, QGraphicsItem *par
     setAcceptHoverEvents(true);
     connect(Plasma::Theme::defaultTheme(), SIGNAL(themeChanged()),
             this, SLOT(generatePixmap()));
+    connect(this, SIGNAL(visibleChanged()), this, SLOT(updateSize()));
+
+    setMinimumSize(0, 0);
+    setMaximumSize(0, 0);
 }
 
 KimpanelLabelGraphics::~KimpanelLabelGraphics()
@@ -143,12 +147,24 @@ void KimpanelLabelGraphics::setCursorPos(int pos)
     generatePixmap();
 }
 
-void KimpanelLabelGraphics::setText(const QString &label, const QString &text)
+void KimpanelLabelGraphics::setText(const QString& label, const QString& text)
 {
     if (label != m_label || m_text != text) {
         m_label = label;
         m_text = text;
         generatePixmap();
+    }
+}
+
+void KimpanelLabelGraphics::updateSize()
+{
+    if (isVisible()) {
+        setMinimumSize(m_pixmap.size());
+        setMaximumSize(m_pixmap.size());
+    }
+    else {
+        setMinimumSize(0, 0);
+        setMaximumSize(0, 0);
     }
 }
 
@@ -168,8 +184,6 @@ void KimpanelLabelGraphics::setTextRenderType(RenderType type)
 
 void KimpanelLabelGraphics::generatePixmap()
 {
-    QSize old_size = m_pixmap.size();
-
     QPixmap text_pixmap;
     QPixmap textReversed_pixmap;
     QPixmap label_pixmap;
@@ -211,9 +225,7 @@ void KimpanelLabelGraphics::generatePixmap()
         }
     }
 
-    if (m_pixmap.size() != old_size) {
-        updateGeometry();
-    }
+    updateSize();
 }
 
 void KimpanelLabelGraphics::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
@@ -242,14 +254,5 @@ void KimpanelLabelGraphics::paint(QPainter *painter, const QStyleOptionGraphicsI
         painter->drawPixmap(0, h_spacing,
                             m_pixmap);
     }
-}
-
-
-QSizeF KimpanelLabelGraphics::sizeHint(Qt::SizeHint which, const QSizeF& constraint) const
-{
-    if (which == Qt::MinimumSize || which == Qt::MaximumSize || which == Qt::PreferredSize)
-        return m_pixmap.size();
-    else
-        return QGraphicsWidget::sizeHint(which, constraint);
 }
 

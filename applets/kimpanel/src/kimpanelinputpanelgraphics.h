@@ -40,7 +40,7 @@ public:
     explicit KimpanelInputPanelGraphics(QGraphicsItem* parent = 0, Qt::WindowFlags wFlags = 0);
     virtual ~KimpanelInputPanelGraphics();
 
-    virtual QSizeF sizeHint(Qt::SizeHint which, const QSizeF &constraint = QSizeF()) const;
+    // virtual QSizeF sizeHint(Qt::SizeHint which, const QSizeF &constraint = QSizeF()) const;
 
     void setShowPreedit(bool show);
     void setShowAux(bool show);
@@ -58,6 +58,7 @@ public:
                         const QStringList& attrs = QStringList()
                        );
     void updateSize();
+    QSize roundSize();
     void setReverse(bool reverse);
 
 Q_SIGNALS:
@@ -76,6 +77,8 @@ private:
     void updateLookupTable();
     QGraphicsLinearLayout *m_layout;
     QGraphicsLinearLayout *m_upperLayout;
+    QGraphicsLinearLayout *m_lookupTableLayout;
+    QGraphicsLinearLayout *m_pageButtonLayout;
     QGraphicsLinearLayout *m_lowerLayout;
 
     QSignalMapper mapper;

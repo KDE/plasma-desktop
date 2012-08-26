@@ -47,8 +47,6 @@ public:
     void setText(const QString &label, const QString &text);
     void setHighLight(bool highlight);
 
-    virtual QSizeF sizeHint(Qt::SizeHint which, const QSizeF& constraint = QSizeF()) const;
-
 Q_SIGNALS:
     void pressed(bool);
     void clicked();
@@ -67,6 +65,7 @@ protected:
     virtual void hoverLeaveEvent(QGraphicsSceneHoverEvent *event);
 private Q_SLOTS:
     void generatePixmap();
+    void updateSize();
 
 private:
     void hoverEffect(bool show);

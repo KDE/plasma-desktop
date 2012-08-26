@@ -235,13 +235,13 @@ void KimpanelInputPanel::updateSize()
 {
     int left, top, right, bottom;
     getContentsMargins(&left, &top, &right, &bottom);
-    QSize sizeHint = m_widget->size().toSize();
-    sizeHint += QSize(left + right, top + bottom);
+    QSize size = m_widget->roundSize();
+    QSize sizeHint = size + QSize(left + right, top + bottom);
     setMinimumSize(sizeHint);
     setMaximumSize(sizeHint);
-    if (m_view->size() != m_widget->preferredSize().toSize()) {
-        m_view->resize(m_widget->preferredSize().toSize());
-        m_scene->setSceneRect(QRectF(QPointF(0, 0), (m_widget->preferredSize())));
+    if (m_view->size() != size) {
+        m_view->resize(size);
+        m_scene->setSceneRect(QRectF(QPointF(0, 0), size));
         updateLocation();
         m_backgroundSvg->resizeFrame(sizeHint);
     }
