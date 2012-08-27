@@ -42,11 +42,12 @@ IconGridLayout::IconGridLayout(QGraphicsLayoutItem *parent)
     setContentsMargins(0, 0, 0, 0);
 
     QSizePolicy sizePolicy(
-        QSizePolicy::MinimumExpanding, QSizePolicy::MinimumExpanding);
+        QSizePolicy::Expanding, QSizePolicy::Expanding);
     sizePolicy.setHeightForWidth(true);
     sizePolicy.setHorizontalStretch(1);
     sizePolicy.setVerticalStretch(1);
     setSizePolicy(sizePolicy);
+    setMaximumSize(INT_MAX, INT_MAX);
 }
 
 IconGridLayout::~IconGridLayout()

@@ -22,6 +22,7 @@
 
 // Qt
 #include <QWidget>
+#include <QGraphicsView>
 
 class QGraphicsScene;
 namespace Plasma
@@ -31,8 +32,7 @@ class FrameSvg;
 
 class QHBoxLayout;
 class KimpanelInputPanelGraphics;
-class QGraphicsView;
-class KimpanelInputPanel : public QWidget
+class KimpanelInputPanel : public QGraphicsView
 {
     Q_OBJECT
 public:
@@ -64,16 +64,13 @@ Q_SIGNALS:
 protected:
     virtual void showEvent(QShowEvent* event);
     virtual void resizeEvent(QResizeEvent* event);
-    virtual void paintEvent(QPaintEvent* event);
+    virtual void drawBackground(QPainter* painter, const QRectF& rect);
 private Q_SLOTS:
     void loadTheme();
     void maskBackground(bool);
     void updateVisible(bool);
     void updateSize();
 private:
-    QHBoxLayout* m_layout;
-    QGraphicsScene* m_scene;
-    QGraphicsView* m_view;
     KimpanelInputPanelGraphics* m_widget;
     Plasma::FrameSvg* m_backgroundSvg;
     QPoint m_pointPos;

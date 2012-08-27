@@ -158,6 +158,7 @@ void KimpanelLabelGraphics::setText(const QString& label, const QString& text)
 
 void KimpanelLabelGraphics::updateSize()
 {
+    QSizeF sz = minimumSize();
     if (isVisible()) {
         setMinimumSize(m_pixmap.size());
         setMaximumSize(m_pixmap.size());
@@ -166,6 +167,8 @@ void KimpanelLabelGraphics::updateSize()
         setMinimumSize(0, 0);
         setMaximumSize(0, 0);
     }
+    if (sz != minimumSize())
+        emit sizeChanged();
 }
 
 void KimpanelLabelGraphics::setHighLight(bool highlight)
