@@ -53,6 +53,7 @@ Q_SIGNALS:
     void lookupTablePageUp();
     void lookupTablePageDown();
     void selectCandidate();
+    void sizeChanged();
 
 protected:
     virtual void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);

@@ -43,7 +43,10 @@ KimpanelInputPanelGraphics::KimpanelInputPanelGraphics(QGraphicsItem* parent, Qt
     m_tableEntryMapper(new QSignalMapper(this)),
     m_lastVisible(false),
     m_reverse(false),
-    m_lookupTableCursor(-1)
+    m_lookupTableCursor(-1),
+    m_fontHeight(0),
+    m_useVertical(false),
+    m_useReverse(false)
 {
     setContentsMargins(0, 0, 0, 0);
 
@@ -52,16 +55,16 @@ KimpanelInputPanelGraphics::KimpanelInputPanelGraphics(QGraphicsItem* parent, Qt
 
     m_layout->setSpacing(0);
     m_layout->setContentsMargins(0, 0, 0, 0);
-    m_layout->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+    m_layout->setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Minimum);
 
     m_upperLayout->setSpacing(0);
     m_upperLayout->setContentsMargins(0, 0, 0, 0);
-    m_upperLayout->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+    m_upperLayout->setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Minimum);
     m_upperLayout->addItem(m_auxLabel);
     m_upperLayout->addItem(m_preeditLabel);
 
     m_lowerLayout->setContentsMargins(0, 0, 0, 0);
-    m_lowerLayout->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+    m_lowerLayout->setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Minimum);
 
     m_pageUpIcon->setIcon("arrow-left");
     m_pageUpIcon->setMinimumSize(0, 0);
@@ -93,21 +96,44 @@ KimpanelInputPanelGraphics::KimpanelInputPanelGraphics(QGraphicsItem* parent, Qt
 
     setLayout(m_layout);
 
+    loadSettings();
+
     connect(m_tableEntryMapper, SIGNAL(mapped(int)), this, SIGNAL(selectCandidate(int)));
     connect(m_pageUpIcon, SIGNAL(clicked()), this, SIGNAL(lookupTablePageUp()));
     connect(m_pageDownIcon, SIGNAL(clicked()), this, SIGNAL(lookupTablePageDown()));
+    connect(m_preeditLabel, SIGNAL(sizeChanged()), this, SLOT(updateSize()));
+    connect(m_auxLabel, SIGNAL(sizeChanged()), this, SLOT(updateSize()));
+    connect(KimpanelSettings::self(), SIGNAL(configChanged()), this, SLOT(loadSettings()));
 }
 
 KimpanelInputPanelGraphics::~KimpanelInputPanelGraphics()
 {
 }
 
+void KimpanelInputPanelGraphics::loadSettings()
+{
+    QFontMetrics fm(KimpanelSettings::self()->font());
+    m_fontHeight = fm.height();
+    m_useVertical = KimpanelSettings::self()->verticalPreeditBar();
+
+    if (m_useVertical) {
+        m_lookupTableLayout->setOrientation(Qt::Vertical);
+        m_lowerLayout->setOrientation(Qt::Vertical);
+    }
+    else {
+        m_lookupTableLayout->setOrientation(Qt::Horizontal);
+        m_lowerLayout->setOrientation(Qt::Horizontal);
+    }
+
+    m_useReverse = KimpanelSettings::self()->useReverse();
+}
+
+
 QSize KimpanelInputPanelGraphics::roundSize()
 {
     QSize size = minimumSize().toSize();
 
-    QFontMetrics fm(KimpanelSettings::self()->font());
-    int roundSize = fm.height() * 4;
+    int roundSize = m_fontHeight * 4;
     int width = ((size.width() / roundSize) * roundSize)
             + ((size.width() % roundSize) ? roundSize : 0);
     return QSize(width, size.height());
@@ -123,7 +149,6 @@ void KimpanelInputPanelGraphics::setShowPreedit(bool show)
 {
     preeditVisible = show;
     m_preeditLabel->setVisible(show);
-    updateSize();
     updateVisible();
 }
 
@@ -131,7 +156,6 @@ void KimpanelInputPanelGraphics::setShowAux(bool show)
 {
     auxVisible = show;
     m_auxLabel->setVisible(show);
-    updateSize();
     updateVisible();
 }
 
@@ -155,7 +179,6 @@ void KimpanelInputPanelGraphics::setPreeditCaret(int pos)
     if (m_cursorPos != pos) {
         m_cursorPos = pos;
         m_preeditLabel->setCursorPos(pos);
-        updateSize();
     }
 }
 
@@ -166,9 +189,7 @@ void KimpanelInputPanelGraphics::setPreeditText(const QString& text,
     if (m_text == text)
         return;
     m_text = text;
-    m_preeditLabel->setText("", text);
-
-    updateSize();
+    m_preeditLabel->setText(QString(), text);
 }
 
 void KimpanelInputPanelGraphics::setAuxText(const QString& text,
@@ -178,9 +199,7 @@ void KimpanelInputPanelGraphics::setAuxText(const QString& text,
     if (m_auxText == text)
         return;
     m_auxText = text;
-    m_auxLabel->setText("", text);
-
-    updateSize();
+    m_auxLabel->setText(QString(), text);
 }
 
 void KimpanelInputPanelGraphics::clearLookupTable()
@@ -214,15 +233,6 @@ void KimpanelInputPanelGraphics::setLookupTable(const QStringList& labels,
 
 void KimpanelInputPanelGraphics::updateLookupTable()
 {
-    if (KimpanelSettings::self()->verticalPreeditBar()) {
-        m_lookupTableLayout->setOrientation(Qt::Vertical);
-        m_lowerLayout->setOrientation(Qt::Vertical);
-    }
-    else {
-        m_lookupTableLayout->setOrientation(Qt::Horizontal);
-        m_lowerLayout->setOrientation(Qt::Horizontal);
-    }
-
     clearLookupTable();
 
     int length = qMin(m_labels.size(), m_candidates.size());
@@ -243,7 +253,7 @@ void KimpanelInputPanelGraphics::updateLookupTable()
             item->setHighLight(false);
         m_tableEntryMapper->setMapping(item, i);
     }
-    if (m_reverse && KimpanelSettings::self()->verticalPreeditBar()) {
+    if (m_reverse && m_useVertical) {
         for (int i = length - 1; i >= 0; i--)
             m_lookupTableLayout->addItem(m_tableEntryLabels[i]);
     }
@@ -266,14 +276,18 @@ void KimpanelInputPanelGraphics::updateLookupTable()
         m_pageUpIcon->setMaximumSize(KIconLoader::SizeSmall, KIconLoader::SizeSmall);
         m_pageDownIcon->setMinimumSize(KIconLoader::SizeSmall, KIconLoader::SizeSmall);
         m_pageDownIcon->setMaximumSize(KIconLoader::SizeSmall, KIconLoader::SizeSmall);
+        m_pageButtonLayout->invalidate();
     }
     else {
         m_pageUpIcon->setMinimumSize(0, 0);
         m_pageUpIcon->setMaximumSize(0, 0);
         m_pageDownIcon->setMinimumSize(0, 0);
         m_pageDownIcon->setMaximumSize(0, 0);
+        m_pageButtonLayout->invalidate();
     }
 
+    m_lookupTableLayout->invalidate();
+    m_lowerLayout->invalidate();
     updateSize();
 }
 
@@ -287,26 +301,23 @@ void KimpanelInputPanelGraphics::updateVisible()
 
 void KimpanelInputPanelGraphics::updateSize()
 {
-    m_pageButtonLayout->invalidate();
-    m_lookupTableLayout->invalidate();
-    m_lowerLayout->invalidate();
     m_upperLayout->invalidate();
     m_layout->invalidate();
     resize(roundSize());
-
     emit sizeChanged();
+
     update();
 }
 
 void KimpanelInputPanelGraphics::setReverse(bool reverse)
 {
-    reverse = reverse && KimpanelSettings::self()->useReverse();
+    reverse = reverse && m_useReverse;
     if (m_reverse != reverse) {
         m_reverse = reverse;
         while(m_layout->count() > 0)
             m_layout->removeAt(0);
 
-        if (m_reverse && KimpanelSettings::self()->useReverse()) {
+        if (m_reverse && m_useReverse) {
             m_layout->addItem(m_lowerLayout);
             m_layout->addItem(m_upperLayout);
         }
@@ -314,6 +325,23 @@ void KimpanelInputPanelGraphics::setReverse(bool reverse)
             m_layout->addItem(m_upperLayout);
             m_layout->addItem(m_lowerLayout);
         }
+
+        if (m_useVertical) {
+            while(m_lowerLayout->count() > 0)
+                m_lowerLayout->removeAt(0);
+
+            if (m_reverse && m_useReverse) {
+                m_lowerLayout->addItem(m_pageButtonLayout);
+                m_lowerLayout->addStretch();
+                m_lowerLayout->addItem(m_lookupTableLayout);
+            }
+            else {
+                m_lowerLayout->addItem(m_lookupTableLayout);
+                m_lowerLayout->addStretch();
+                m_lowerLayout->addItem(m_pageButtonLayout);
+            }
+        }
+
         updateSize();
     }
 }

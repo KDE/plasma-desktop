@@ -57,7 +57,6 @@ public:
                         bool hasNext,
                         const QStringList& attrs = QStringList()
                        );
-    void updateSize();
     QSize roundSize();
     void setReverse(bool reverse);
 
@@ -70,6 +69,10 @@ Q_SIGNALS:
     void visibleChanged(bool);
 protected:
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
+
+private slots:
+    void loadSettings();
+    void updateSize();
 
 private:
     void updateVisible();
@@ -111,6 +114,9 @@ private:
     bool m_lastVisible;
     bool m_reverse;
     int m_lookupTableCursor;
+    int m_fontHeight;
+    bool m_useVertical;
+    bool m_useReverse;
 };
 
 #endif // KIMPANEL_INPUTPANEL_GRAHICS_H

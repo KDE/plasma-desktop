@@ -38,10 +38,7 @@
 #include "kimpanelinputpanel.h"
 
 KimpanelInputPanel::KimpanelInputPanel(QWidget* parent)
-    : QWidget(parent),
-      m_layout(new QHBoxLayout(this)),
-      m_scene(new QGraphicsScene(this)),
-      m_view(new QGraphicsView(m_scene, this)),
+    : QGraphicsView(parent),
       m_widget(new KimpanelInputPanelGraphics),
       m_backgroundSvg(new Plasma::FrameSvg(this))
 {
@@ -50,29 +47,20 @@ KimpanelInputPanel::KimpanelInputPanel(QWidget* parent)
     setAttribute(Qt::WA_X11DoNotAcceptFocus, true);
     KWindowSystem::setState(winId(), NET::KeepAbove);
     KWindowSystem::setType(winId(), NET::Tooltip);
-    QPalette pal = palette();
-    pal.setColor(backgroundRole(), Qt::transparent);
-    setPalette(pal);
 
-    m_layout->setContentsMargins(0, 0, 0, 0);
-    m_layout->setSpacing(0);
+    setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    setFrameShape(QFrame::NoFrame);
+    setContentsMargins(0, 0, 0, 0);
+    viewport()->setContentsMargins(0, 0, 0, 0);
+    viewport()->setAutoFillBackground(false);
+    setAttribute(Qt::WA_NoSystemBackground);
+    viewport()->setAttribute(Qt::WA_NoSystemBackground);
 
-    //m_layout->setSizeConstraint(QLayout::SetFixedSize);
-    setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
+    setScene(new QGraphicsScene);
 
-    setLayout(m_layout);
-
-    m_view->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-    m_view->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-    m_view->setFrameShape(QFrame::NoFrame);
-    m_view->viewport()->setAutoFillBackground(false);
-    m_view->setContentsMargins(0, 0, 0, 0);
-    m_view->setAttribute(Qt::WA_NoSystemBackground);
-    m_view->viewport()->setAttribute(Qt::WA_NoSystemBackground);
-
-    m_layout->addWidget(m_view);
-
-    m_scene->addItem(m_widget);
+    scene()->addItem(m_widget);
+    centerOn(m_widget);
 
     loadTheme();
 
@@ -82,7 +70,7 @@ KimpanelInputPanel::KimpanelInputPanel(QWidget* parent)
     connect(theme, SIGNAL(themeChanged()), this, SLOT(loadTheme()));
     connect(KWindowSystem::self(), SIGNAL(compositingChanged(bool)), this, SLOT(maskBackground(bool)));
     connect(m_widget, SIGNAL(visibleChanged(bool)), this, SLOT(updateVisible(bool)));
-    connect(m_widget, SIGNAL(sizeChanged()), this, SLOT(updateSize()));
+    connect(m_widget, SIGNAL(sizeChanged()), this, SLOT(updateSize()), Qt::QueuedConnection);
 
     connect(m_widget, SIGNAL(selectCandidate(int)), this, SIGNAL(selectCandidate(int)));
     connect(m_widget, SIGNAL(lookupTablePageUp()), this, SIGNAL(lookupTablePageUp()));
@@ -112,10 +100,6 @@ void KimpanelInputPanel::showEvent(QShowEvent *e)
 void KimpanelInputPanel::resizeEvent(QResizeEvent* event)
 {
     QWidget::resizeEvent(event);
-
-    QRectF rect(QPointF(0, 0), size());
-    m_scene->setSceneRect(rect);
-    m_backgroundSvg->resizeFrame(event->size());
     updateLocation();
 
     maskBackground(Plasma::Theme::defaultTheme()->windowTranslucencyEnabled());
@@ -137,18 +121,18 @@ void KimpanelInputPanel::maskBackground(bool composite)
     } else {
         Plasma::WindowEffects::enableBlurBehind(winId(), false);
     }
+    m_backgroundSvg->resizeFrame(size());
     qreal left, right, top, bottom;
     m_backgroundSvg->getMargins(left, top, right, bottom);
-    setContentsMargins(left, top, right, bottom);
+    setSceneRect(QRectF(QPointF(left, top), size() - QSize(top + bottom, left + right)));
 }
 
-void KimpanelInputPanel::paintEvent(QPaintEvent *e)
+void KimpanelInputPanel::drawBackground(QPainter* painter, const QRectF& rect)
 {
-    QPainter p(this);
-    p.setClipRect(e->rect());
-    p.setCompositionMode(QPainter::CompositionMode_Source);
-    p.fillRect(e->rect(), Qt::transparent);
-    m_backgroundSvg->paintFrame(&p);
+    painter->setClipRect(rect);
+    painter->setCompositionMode(QPainter::CompositionMode_Source);
+    painter->fillRect(rect, Qt::transparent);
+    m_backgroundSvg->paintFrame(painter);
 }
 
 void KimpanelInputPanel::setSpotLocation(const QRect& rect)
@@ -233,17 +217,12 @@ void KimpanelInputPanel::updateVisible(bool visible)
 
 void KimpanelInputPanel::updateSize()
 {
-    int left, top, right, bottom;
-    getContentsMargins(&left, &top, &right, &bottom);
+    qreal left, top, right, bottom;
+    m_backgroundSvg->getMargins(left, top, right, bottom);
     QSize size = m_widget->roundSize();
+    m_widget->setPos(left, top);
     QSize sizeHint = size + QSize(left + right, top + bottom);
-    setMinimumSize(sizeHint);
-    setMaximumSize(sizeHint);
-    if (m_view->size() != size) {
-        m_view->resize(size);
-        m_scene->setSceneRect(QRectF(QPointF(0, 0), size));
-        updateLocation();
-        m_backgroundSvg->resizeFrame(sizeHint);
-    }
+    setSceneRect(left, right, size.width(), size.height());
+    resize(sizeHint);
 }
 
