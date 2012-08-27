@@ -115,13 +115,13 @@ void KimpanelInputPanel::maskBackground(bool composite)
         m_backgroundSvg->setImagePath("dialogs/background");
         clearMask();
     }
+    m_backgroundSvg->resizeFrame(size());
 
     if (Plasma::WindowEffects::isEffectAvailable(Plasma::WindowEffects::BlurBehind) && KimpanelSettings::self()->enableBackgroundBlur()) {
         Plasma::WindowEffects::enableBlurBehind(winId(), true, m_backgroundSvg->mask());
     } else {
         Plasma::WindowEffects::enableBlurBehind(winId(), false);
     }
-    m_backgroundSvg->resizeFrame(size());
     qreal left, right, top, bottom;
     m_backgroundSvg->getMargins(left, top, right, bottom);
     setSceneRect(QRectF(QPointF(left, top), size() - QSize(top + bottom, left + right)));
