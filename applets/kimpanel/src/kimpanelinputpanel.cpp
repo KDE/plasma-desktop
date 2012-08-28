@@ -70,7 +70,7 @@ KimpanelInputPanel::KimpanelInputPanel(QWidget* parent)
     connect(theme, SIGNAL(themeChanged()), this, SLOT(loadTheme()));
     connect(KWindowSystem::self(), SIGNAL(compositingChanged(bool)), this, SLOT(maskBackground(bool)));
     connect(m_widget, SIGNAL(visibleChanged(bool)), this, SLOT(updateVisible(bool)));
-    connect(m_widget, SIGNAL(sizeChanged()), this, SLOT(updateSize()), Qt::QueuedConnection);
+    connect(m_widget, SIGNAL(sizeChanged()), this, SLOT(updateSize()));
 
     connect(m_widget, SIGNAL(selectCandidate(int)), this, SIGNAL(selectCandidate(int)));
     connect(m_widget, SIGNAL(lookupTablePageUp()), this, SIGNAL(lookupTablePageUp()));
@@ -90,7 +90,7 @@ KimpanelInputPanel::~KimpanelInputPanel()
 
 void KimpanelInputPanel::showEvent(QShowEvent *e)
 {
-    QWidget::showEvent(e);
+    QGraphicsView::showEvent(e);
     Plasma::WindowEffects::overrideShadow(winId(), true);
     Display *dpy = QX11Info::display();
     Atom atom = XInternAtom( dpy, "_KDE_NET_WM_SHADOW", False );
@@ -99,11 +99,10 @@ void KimpanelInputPanel::showEvent(QShowEvent *e)
 
 void KimpanelInputPanel::resizeEvent(QResizeEvent* event)
 {
-    QWidget::resizeEvent(event);
+    QGraphicsView::resizeEvent(event);
     updateLocation();
 
     maskBackground(Plasma::Theme::defaultTheme()->windowTranslucencyEnabled());
-    update();
 }
 
 void KimpanelInputPanel::maskBackground(bool composite)
@@ -222,7 +221,7 @@ void KimpanelInputPanel::updateSize()
     QSize size = m_widget->roundSize();
     m_widget->setPos(left, top);
     QSize sizeHint = size + QSize(left + right, top + bottom);
-    setSceneRect(left, right, size.width(), size.height());
+    setSceneRect(0, 0, sizeHint.width(), sizeHint.height());
     resize(sizeHint);
 }
 

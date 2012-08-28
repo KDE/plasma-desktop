@@ -139,10 +139,10 @@ QSize KimpanelInputPanelGraphics::roundSize()
     return QSize(width, size.height());
 }
 
-
-void KimpanelInputPanelGraphics::paint(QPainter* painter, const QStyleOptionGraphicsItem* option, QWidget* widget)
+void KimpanelInputPanelGraphics::resizeEvent(QGraphicsSceneResizeEvent* event)
 {
-    QGraphicsWidget::paint(painter, option, widget);
+    QGraphicsWidget::resizeEvent(event);
+    emit sizeChanged();
 }
 
 void KimpanelInputPanelGraphics::setShowPreedit(bool show)
@@ -304,8 +304,6 @@ void KimpanelInputPanelGraphics::updateSize()
     m_upperLayout->invalidate();
     m_layout->invalidate();
     resize(roundSize());
-    emit sizeChanged();
-
     update();
 }
 

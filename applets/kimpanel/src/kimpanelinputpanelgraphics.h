@@ -68,7 +68,7 @@ Q_SIGNALS:
     void sizeChanged();
     void visibleChanged(bool);
 protected:
-    void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
+    virtual void resizeEvent(QGraphicsSceneResizeEvent* event);
 
 private slots:
     void loadSettings();
