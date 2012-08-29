@@ -25,6 +25,7 @@
 #include <QGraphicsView>
 #include <QTimer>
 
+class DummyWidget;
 class QGraphicsScene;
 namespace Plasma
 {
@@ -57,6 +58,7 @@ public:
                         bool hasNext,
                         const QStringList& attrs = QStringList()
                        );
+    void updateSizeVisibility();
 
 Q_SIGNALS:
     void lookupTablePageUp();
@@ -78,6 +80,7 @@ private:
     bool m_moving;
     QRect m_spotRect;
     bool m_composite;
+    bool m_useBlur;
 };
 
 #endif // KIMPANEL_INPUTPANEL_H

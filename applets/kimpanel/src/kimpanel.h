@@ -25,6 +25,7 @@
 // Plasma
 #include <Plasma/Applet>
 #include <Plasma/DataEngine>
+#include <QTimer>
 
 namespace Plasma
 {
@@ -64,6 +65,8 @@ protected slots:
     void startIM();
     void selectIM();
     void iconSizeChanged();
+    void updateInputPanel();
+    void updateStatusBar();
 protected:
     Plasma::DataEngine* m_engine;
     KimpanelInputPanel* m_inputpanel;
@@ -75,6 +78,8 @@ protected:
     Ui::GeneralConfig m_generalUi;
     QFont m_font;
     quint64 m_menuTimeStamp;
+    QTimer m_inputPanelTimer;
+    QTimer m_statusBarTimer;
 };
 
 K_EXPORT_PLASMA_APPLET(kimpanel, Kimpanel)
