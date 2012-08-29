@@ -40,7 +40,8 @@
 KimpanelInputPanel::KimpanelInputPanel(QWidget* parent)
     : QGraphicsView(parent),
       m_widget(new KimpanelInputPanelGraphics),
-      m_backgroundSvg(new Plasma::FrameSvg(this))
+      m_backgroundSvg(new Plasma::FrameSvg(this)),
+      m_composite(true)
 {
     setAttribute(Qt::WA_TranslucentBackground);
     setWindowFlags(Qt::ToolTip);
@@ -52,6 +53,7 @@ KimpanelInputPanel::KimpanelInputPanel(QWidget* parent)
     setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setFrameShape(QFrame::NoFrame);
     setContentsMargins(0, 0, 0, 0);
+    setCacheMode(QGraphicsView::CacheBackground);
     viewport()->setContentsMargins(0, 0, 0, 0);
     viewport()->setAutoFillBackground(false);
     setAttribute(Qt::WA_NoSystemBackground);
@@ -65,6 +67,7 @@ KimpanelInputPanel::KimpanelInputPanel(QWidget* parent)
     loadTheme();
 
     m_backgroundSvg->setCacheAllRenderedFrames(true);
+    m_backgroundSvg->setImagePath("dialogs/background");
 
     Plasma::Theme* theme = Plasma::Theme::defaultTheme();
     connect(theme, SIGNAL(themeChanged()), this, SLOT(loadTheme()));
@@ -103,18 +106,26 @@ void KimpanelInputPanel::resizeEvent(QResizeEvent* event)
     updateLocation();
 
     maskBackground(Plasma::Theme::defaultTheme()->windowTranslucencyEnabled());
+    resetCachedContent();
 }
 
 void KimpanelInputPanel::maskBackground(bool composite)
 {
-    if (!composite) {
-        m_backgroundSvg->setImagePath("opaque/dialogs/background");
-        setMask(m_backgroundSvg->mask());
-    } else {
-        m_backgroundSvg->setImagePath("dialogs/background");
-        clearMask();
+    if (m_composite != composite) {
+        m_composite = composite;
+        m_backgroundSvg->clearCache();
+        if (!m_composite) {
+            m_backgroundSvg->setImagePath("opaque/dialogs/background");
+        } else {
+            m_backgroundSvg->setImagePath("dialogs/background");
+        }
     }
     m_backgroundSvg->resizeFrame(size());
+    if (!m_composite) {
+        setMask(m_backgroundSvg->mask());
+    } else {
+        clearMask();
+    }
 
     if (Plasma::WindowEffects::isEffectAvailable(Plasma::WindowEffects::BlurBehind) && KimpanelSettings::self()->enableBackgroundBlur()) {
         Plasma::WindowEffects::enableBlurBehind(winId(), true, m_backgroundSvg->mask());
@@ -224,4 +235,5 @@ void KimpanelInputPanel::updateSize()
     setSceneRect(0, 0, sizeHint.width(), sizeHint.height());
     resize(sizeHint);
 }
+
 

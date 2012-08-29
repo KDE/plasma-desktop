@@ -23,6 +23,7 @@
 // Qt
 #include <QWidget>
 #include <QGraphicsView>
+#include <QTimer>
 
 class QGraphicsScene;
 namespace Plasma
@@ -76,6 +77,7 @@ private:
     QPoint m_pointPos;
     bool m_moving;
     QRect m_spotRect;
+    bool m_composite;
 };
 
 #endif // KIMPANEL_INPUTPANEL_H
