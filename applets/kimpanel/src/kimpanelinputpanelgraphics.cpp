@@ -64,7 +64,7 @@ KimpanelInputPanelGraphics::KimpanelInputPanelGraphics(QGraphicsItem* parent, Qt
     m_upperLayout->addItem(m_preeditLabel);
 
     m_lowerLayout->setContentsMargins(0, 0, 0, 0);
-    m_lowerLayout->setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Minimum);
+    m_lowerLayout->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
 
     m_pageUpIcon->setIcon("arrow-left");
     m_pageUpIcon->setMinimumSize(0, 0);
@@ -77,11 +77,10 @@ KimpanelInputPanelGraphics::KimpanelInputPanelGraphics(QGraphicsItem* parent, Qt
     m_pageDownIcon->hide();
 
     m_lowerLayout->addItem(m_lookupTableLayout);
-    m_lowerLayout->addStretch();
     m_lowerLayout->addItem(m_pageButtonLayout);
     m_lowerLayout->setAlignment(m_pageButtonLayout, Qt::AlignVCenter);
 
-    m_lookupTableLayout->setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Minimum);
+    m_lookupTableLayout->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
 
     m_pageButtonLayout->setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Minimum);
     m_pageButtonLayout->addItem(m_pageUpIcon);
@@ -101,8 +100,6 @@ KimpanelInputPanelGraphics::KimpanelInputPanelGraphics(QGraphicsItem* parent, Qt
     connect(m_tableEntryMapper, SIGNAL(mapped(int)), this, SIGNAL(selectCandidate(int)));
     connect(m_pageUpIcon, SIGNAL(clicked()), this, SIGNAL(lookupTablePageUp()));
     connect(m_pageDownIcon, SIGNAL(clicked()), this, SIGNAL(lookupTablePageDown()));
-    connect(m_preeditLabel, SIGNAL(sizeChanged()), this, SLOT(updateSize()));
-    connect(m_auxLabel, SIGNAL(sizeChanged()), this, SLOT(updateSize()));
     connect(KimpanelSettings::self(), SIGNAL(configChanged()), this, SLOT(loadSettings()));
 }
 
@@ -126,6 +123,7 @@ void KimpanelInputPanelGraphics::loadSettings()
     }
 
     m_useReverse = KimpanelSettings::self()->useReverse();
+    setReverse(m_reverse, true);
 }
 
 
@@ -149,14 +147,12 @@ void KimpanelInputPanelGraphics::setShowPreedit(bool show)
 {
     preeditVisible = show;
     m_preeditLabel->setVisible(show);
-    updateVisible();
 }
 
 void KimpanelInputPanelGraphics::setShowAux(bool show)
 {
     auxVisible = show;
     m_auxLabel->setVisible(show);
-    updateVisible();
 }
 
 void KimpanelInputPanelGraphics::setShowLookupTable(bool show)
@@ -166,7 +162,6 @@ void KimpanelInputPanelGraphics::setShowLookupTable(bool show)
         clearLookupTable();
     else
         updateLookupTable();
-    updateVisible();
 }
 
 void KimpanelInputPanelGraphics::setLookupTableCursor(int cursor)
@@ -276,41 +271,43 @@ void KimpanelInputPanelGraphics::updateLookupTable()
         m_pageUpIcon->setMaximumSize(KIconLoader::SizeSmall, KIconLoader::SizeSmall);
         m_pageDownIcon->setMinimumSize(KIconLoader::SizeSmall, KIconLoader::SizeSmall);
         m_pageDownIcon->setMaximumSize(KIconLoader::SizeSmall, KIconLoader::SizeSmall);
-        m_pageButtonLayout->invalidate();
     }
     else {
         m_pageUpIcon->setMinimumSize(0, 0);
         m_pageUpIcon->setMaximumSize(0, 0);
         m_pageDownIcon->setMinimumSize(0, 0);
         m_pageDownIcon->setMaximumSize(0, 0);
-        m_pageButtonLayout->invalidate();
     }
-
-    m_lookupTableLayout->invalidate();
-    m_lowerLayout->invalidate();
-    updateSize();
 }
 
 void KimpanelInputPanelGraphics::updateVisible()
 {
     if (m_lastVisible != (preeditVisible || auxVisible || lookuptableVisible)) {
         m_lastVisible = (preeditVisible || auxVisible || lookuptableVisible);
-        emit visibleChanged(m_lastVisible);
     }
+}
+
+bool KimpanelInputPanelGraphics::markedVisible()
+{
+    return m_lastVisible;
 }
 
 void KimpanelInputPanelGraphics::updateSize()
 {
+    m_pageButtonLayout->invalidate();
+    m_lookupTableLayout->invalidate();
+    m_lowerLayout->invalidate();
     m_upperLayout->invalidate();
     m_layout->invalidate();
     resize(roundSize());
     update();
+    // qDebug() << roundSize();
 }
 
-void KimpanelInputPanelGraphics::setReverse(bool reverse)
+void KimpanelInputPanelGraphics::setReverse(bool reverse, bool force)
 {
     reverse = reverse && m_useReverse;
-    if (m_reverse != reverse) {
+    if (m_reverse != reverse || force) {
         m_reverse = reverse;
         while(m_layout->count() > 0)
             m_layout->removeAt(0);
@@ -330,17 +327,25 @@ void KimpanelInputPanelGraphics::setReverse(bool reverse)
 
             if (m_reverse && m_useReverse) {
                 m_lowerLayout->addItem(m_pageButtonLayout);
-                m_lowerLayout->addStretch();
+                m_lowerLayout->setAlignment(m_pageButtonLayout, Qt::AlignVCenter | Qt::AlignLeft);
                 m_lowerLayout->addItem(m_lookupTableLayout);
+                m_lowerLayout->setAlignment(m_lookupTableLayout, Qt::AlignLeft);
             }
             else {
                 m_lowerLayout->addItem(m_lookupTableLayout);
-                m_lowerLayout->addStretch();
+                m_lowerLayout->setAlignment(m_lookupTableLayout, Qt::AlignLeft);
                 m_lowerLayout->addItem(m_pageButtonLayout);
+                m_lowerLayout->setAlignment(m_pageButtonLayout, Qt::AlignVCenter | Qt::AlignLeft);
             }
         }
-
-        updateSize();
+        else {
+            while(m_lowerLayout->count() > 0)
+                m_lowerLayout->removeAt(0);
+            m_lowerLayout->addItem(m_lookupTableLayout);
+            m_lowerLayout->setAlignment(m_lookupTableLayout, Qt::AlignLeft);
+            m_lowerLayout->addItem(m_pageButtonLayout);
+            m_lowerLayout->setAlignment(m_pageButtonLayout, Qt::AlignVCenter | Qt::AlignRight);
+        }
     }
 }
 

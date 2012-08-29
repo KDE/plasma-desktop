@@ -55,6 +55,12 @@ Kimpanel::Kimpanel(QObject* parent, const QVariantList& args):
     m_statusbar->show();
     setLayout(m_layout);
 
+    m_inputPanelTimer.setInterval(1);
+    m_inputPanelTimer.setSingleShot(true);
+
+    m_statusBarTimer.setInterval(16);
+    m_statusBarTimer.setSingleShot(true);
+
     connect(m_inputpanel, SIGNAL(selectCandidate(int)), this, SLOT(selectCandidate(int)));
     connect(m_inputpanel, SIGNAL(lookupTablePageUp()), this, SLOT(lookupTablePageUp()));
     connect(m_inputpanel, SIGNAL(lookupTablePageDown()), this, SLOT(lookupTablePageDown()));
@@ -63,6 +69,8 @@ Kimpanel::Kimpanel(QObject* parent, const QVariantList& args):
     connect(m_statusbar, SIGNAL(configure()), this, SLOT(configure()));
     connect(m_statusbar, SIGNAL(exitIM()), this, SLOT(exitIM()));
     connect(m_statusbar, SIGNAL(startIM()), this, SLOT(startIM()));
+
+    connect(&m_inputPanelTimer, SIGNAL(timeout()), this, SLOT(updateInputPanel()));
 }
 
 Kimpanel::~Kimpanel()
@@ -157,31 +165,50 @@ void Kimpanel::configAccepted()
     KimpanelSettings::self()->writeConfig();
 }
 
+void Kimpanel::updateStatusBar()
+{
+    const Plasma::DataEngine::Data& data = m_engine->query("statusbar");
+    m_statusbar->updateProperties(data["Properties"]);
+}
+
+void Kimpanel::updateInputPanel()
+{
+    const Plasma::DataEngine::Data& data = m_engine->query("inputpanel");
+    m_inputpanel->setShowAux(data["AuxVisible"].toBool());
+    m_inputpanel->setShowPreedit(data["PreeditVisible"].toBool());
+    m_inputpanel->setShowLookupTable(data["LookupTableVisible"].toBool());
+    m_inputpanel->setLookupTableCursor(data["LookupTableCursor"].toInt());
+    m_inputpanel->setAuxText(data["AuxText"].toString());
+    m_inputpanel->setPreeditText(data["PreeditText"].toString());
+    m_inputpanel->setPreeditCaret(data["CaretPos"].toInt());
+    QStringList label;
+    QStringList text;
+    QList<QVariant> lookupTable = data["LookupTable"].toList();
+    Q_FOREACH(const QVariant & item, lookupTable) {
+        label << item.toMap()["label"].toString();
+        text << item.toMap()["text"].toString();
+    }
+    m_inputpanel->setLookupTable(
+        label,
+        text,
+        data["HasPrev"].toBool(),
+        data["HasNext"].toBool());
+    m_inputpanel->setSpotLocation(data["Position"].toRect());
+    m_inputpanel->updateSizeVisibility();
+}
+
 void Kimpanel::dataUpdated(const QString& source, const Plasma::DataEngine::Data& data)
 {
     if (source == "inputpanel") {
-        m_inputpanel->setShowAux(data["AuxVisible"].toBool());
-        m_inputpanel->setShowPreedit(data["PreeditVisible"].toBool());
-        m_inputpanel->setShowLookupTable(data["LookupTableVisible"].toBool());
-        m_inputpanel->setLookupTableCursor(data["LookupTableCursor"].toInt());
-        m_inputpanel->setAuxText(data["AuxText"].toString());
-        m_inputpanel->setPreeditText(data["PreeditText"].toString());
-        m_inputpanel->setPreeditCaret(data["CaretPos"].toInt());
-        QStringList label;
-        QStringList text;
-        QList<QVariant> lookupTable = data["LookupTable"].toList();
-        Q_FOREACH(const QVariant & item, lookupTable) {
-            label << item.toMap()["label"].toString();
-            text << item.toMap()["text"].toString();
-        }
-        m_inputpanel->setLookupTable(
-            label,
-            text,
-            data["HasPrev"].toBool(),
-            data["HasNext"].toBool());
-        m_inputpanel->setSpotLocation(data["Position"].toRect());
+        if (!m_inputPanelTimer.isActive())
+            m_inputPanelTimer.start();
     } else if (source == "statusbar") {
-        m_statusbar->updateProperties(data["Properties"]);
+        if (m_statusBarTimer.isActive()) {
+            m_statusBarTimer.disconnect(SIGNAL(timeout()));
+            m_statusBarTimer.stop();
+            connect(&m_statusBarTimer, SIGNAL(timeout()), this, SLOT(updateStatusBar()));
+        }
+        m_statusBarTimer.start();
         if (data["Menu"].isValid()) {
             QMap< QString, QVariant > map = data["Menu"].toMap();
             quint64 timestamp = map["timestamp"].toULongLong();

@@ -58,7 +58,12 @@ public:
                         const QStringList& attrs = QStringList()
                        );
     QSize roundSize();
-    void setReverse(bool reverse);
+    void setReverse(bool reverse, bool force = false);
+
+public:
+    void updateSize();
+    void updateVisible();
+    bool markedVisible();
 
 Q_SIGNALS:
     void selectCandidate(int idx);
@@ -66,16 +71,13 @@ Q_SIGNALS:
     void lookupTablePageDown();
 
     void sizeChanged();
-    void visibleChanged(bool);
 protected:
     virtual void resizeEvent(QGraphicsSceneResizeEvent* event);
 
 private slots:
     void loadSettings();
-    void updateSize();
 
 private:
-    void updateVisible();
     void clearLookupTable();
     void updateLookupTable();
     QGraphicsLinearLayout *m_layout;

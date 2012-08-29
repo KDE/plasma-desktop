@@ -41,11 +41,11 @@ KimpanelInputPanel::KimpanelInputPanel(QWidget* parent)
     : QGraphicsView(parent),
       m_widget(new KimpanelInputPanelGraphics),
       m_backgroundSvg(new Plasma::FrameSvg(this)),
-      m_composite(true)
+      m_composite(true),
+      m_useBlur(false)
 {
     setAttribute(Qt::WA_TranslucentBackground);
     setWindowFlags(Qt::ToolTip);
-    setAttribute(Qt::WA_X11DoNotAcceptFocus, true);
     KWindowSystem::setState(winId(), NET::KeepAbove);
     KWindowSystem::setType(winId(), NET::Tooltip);
 
@@ -55,24 +55,20 @@ KimpanelInputPanel::KimpanelInputPanel(QWidget* parent)
     setContentsMargins(0, 0, 0, 0);
     setCacheMode(QGraphicsView::CacheBackground);
     viewport()->setContentsMargins(0, 0, 0, 0);
-    viewport()->setAutoFillBackground(false);
-    setAttribute(Qt::WA_NoSystemBackground);
-    viewport()->setAttribute(Qt::WA_NoSystemBackground);
 
     setScene(new QGraphicsScene);
 
     scene()->addItem(m_widget);
     centerOn(m_widget);
 
-    loadTheme();
-
     m_backgroundSvg->setCacheAllRenderedFrames(true);
     m_backgroundSvg->setImagePath("dialogs/background");
+
+    loadTheme();
 
     Plasma::Theme* theme = Plasma::Theme::defaultTheme();
     connect(theme, SIGNAL(themeChanged()), this, SLOT(loadTheme()));
     connect(KWindowSystem::self(), SIGNAL(compositingChanged(bool)), this, SLOT(maskBackground(bool)));
-    connect(m_widget, SIGNAL(visibleChanged(bool)), this, SLOT(updateVisible(bool)));
     connect(m_widget, SIGNAL(sizeChanged()), this, SLOT(updateSize()));
 
     connect(m_widget, SIGNAL(selectCandidate(int)), this, SIGNAL(selectCandidate(int)));
@@ -83,6 +79,11 @@ KimpanelInputPanel::KimpanelInputPanel(QWidget* parent)
 void KimpanelInputPanel::loadTheme()
 {
     maskBackground(Plasma::Theme::defaultTheme()->windowTranslucencyEnabled());
+    QPalette plasmaPalette = QPalette();
+    plasmaPalette.setColor(QPalette::Window,
+                           Plasma::Theme::defaultTheme()->color(Plasma::Theme::BackgroundColor));
+    setAutoFillBackground(true);
+    setPalette(plasmaPalette);
 
     update();
 }
@@ -98,6 +99,7 @@ void KimpanelInputPanel::showEvent(QShowEvent *e)
     Display *dpy = QX11Info::display();
     Atom atom = XInternAtom( dpy, "_KDE_NET_WM_SHADOW", False );
     XDeleteProperty(dpy, winId(), atom);
+    updateLocation();
 }
 
 void KimpanelInputPanel::resizeEvent(QResizeEvent* event)
@@ -118,23 +120,24 @@ void KimpanelInputPanel::maskBackground(bool composite)
             m_backgroundSvg->setImagePath("opaque/dialogs/background");
         } else {
             m_backgroundSvg->setImagePath("dialogs/background");
+            clearMask();
         }
     }
     m_backgroundSvg->resizeFrame(size());
     if (!m_composite) {
         setMask(m_backgroundSvg->mask());
-    } else {
-        clearMask();
     }
 
-    if (Plasma::WindowEffects::isEffectAvailable(Plasma::WindowEffects::BlurBehind) && KimpanelSettings::self()->enableBackgroundBlur()) {
-        Plasma::WindowEffects::enableBlurBehind(winId(), true, m_backgroundSvg->mask());
-    } else {
-        Plasma::WindowEffects::enableBlurBehind(winId(), false);
+    bool useBlur = Plasma::WindowEffects::isEffectAvailable(Plasma::WindowEffects::BlurBehind) && KimpanelSettings::self()->enableBackgroundBlur();
+    if (m_useBlur != useBlur) {
+        m_useBlur = useBlur;
+        if (!m_useBlur) {
+            Plasma::WindowEffects::enableBlurBehind(winId(), false);
+        }
     }
-    qreal left, right, top, bottom;
-    m_backgroundSvg->getMargins(left, top, right, bottom);
-    setSceneRect(QRectF(QPointF(left, top), size() - QSize(top + bottom, left + right)));
+    if (m_useBlur) {
+        Plasma::WindowEffects::enableBlurBehind(winId(), true, m_backgroundSvg->mask());
+    }
 }
 
 void KimpanelInputPanel::drawBackground(QPainter* painter, const QRectF& rect)
@@ -223,6 +226,16 @@ void KimpanelInputPanel::setLookupTable(const QStringList& labels,
 void KimpanelInputPanel::updateVisible(bool visible)
 {
     setVisible(visible);
+}
+
+void KimpanelInputPanel::updateSizeVisibility()
+{
+    m_widget->updateVisible();
+    bool newVisible = m_widget->markedVisible();
+    if (newVisible) {
+        m_widget->updateSize();
+    }
+    updateVisible(newVisible);
 }
 
 void KimpanelInputPanel::updateSize()
