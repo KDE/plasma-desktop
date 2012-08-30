@@ -63,8 +63,9 @@ KimpanelInputPanelGraphics::KimpanelInputPanelGraphics(QGraphicsItem* parent, Qt
     m_upperLayout->addItem(m_auxLabel);
     m_upperLayout->addItem(m_preeditLabel);
 
+    m_lowerLayout->setSpacing(0);
     m_lowerLayout->setContentsMargins(0, 0, 0, 0);
-    m_lowerLayout->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+    m_lowerLayout->setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Minimum);
 
     m_pageUpIcon->setIcon("arrow-left");
     m_pageUpIcon->setMinimumSize(0, 0);
@@ -80,8 +81,12 @@ KimpanelInputPanelGraphics::KimpanelInputPanelGraphics(QGraphicsItem* parent, Qt
     m_lowerLayout->addItem(m_pageButtonLayout);
     m_lowerLayout->setAlignment(m_pageButtonLayout, Qt::AlignVCenter);
 
-    m_lookupTableLayout->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+    m_lookupTableLayout->setSpacing(0);
+    m_lookupTableLayout->setContentsMargins(0, 0, 0, 0);
+    m_lookupTableLayout->setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Minimum);
 
+    m_pageButtonLayout->setSpacing(0);
+    m_pageButtonLayout->setContentsMargins(0, 0, 0, 0);
     m_pageButtonLayout->setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Minimum);
     m_pageButtonLayout->addItem(m_pageUpIcon);
     m_pageButtonLayout->addItem(m_pageDownIcon);
