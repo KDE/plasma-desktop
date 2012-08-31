@@ -26,6 +26,7 @@
 #include <QGraphicsLinearLayout>
 #include <QSignalMapper>
 
+class DummyWidget;
 class KimpanelLabelGraphics;
 namespace Plasma
 {
@@ -76,6 +77,7 @@ protected:
 
 private slots:
     void loadSettings();
+    void updateDummyWidget();
 
 private:
     void clearLookupTable();
@@ -110,6 +112,7 @@ private:
     KimpanelLabelGraphics *m_preeditLabel;
     Plasma::IconWidget *m_pageUpIcon;
     Plasma::IconWidget *m_pageDownIcon;
+    DummyWidget* m_dummyWidget;
     QList<KimpanelLabelGraphics *> m_tableEntryLabels;
 
     QSignalMapper *m_tableEntryMapper;
