@@ -11,6 +11,7 @@ set(plasma_applet_kimpanel_SRCS
     kimpanelstatusbargraphics.cpp
     icongridlayout.cpp
     paintutils.cpp
+    dummywidget.cpp
 )
 
 kde4_add_ui_files(plasma_applet_kimpanel_SRCS config.ui)

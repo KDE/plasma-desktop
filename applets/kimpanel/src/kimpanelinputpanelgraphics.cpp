@@ -21,6 +21,7 @@
 #include "kimpanelinputpanelgraphics.h"
 #include "kimpanellabelgraphics.h"
 #include "kimpanelsettings.h"
+#include "dummywidget.h"
 
 // KDE
 #include <KIconLoader>
@@ -40,6 +41,7 @@ KimpanelInputPanelGraphics::KimpanelInputPanelGraphics(QGraphicsItem* parent, Qt
     m_preeditLabel(new KimpanelLabelGraphics(Preedit, this)),
     m_pageUpIcon(new Plasma::IconWidget(this)),
     m_pageDownIcon(new Plasma::IconWidget(this)),
+    m_dummyWidget(new DummyWidget(this)),
     m_tableEntryMapper(new QSignalMapper(this)),
     m_lastVisible(false),
     m_reverse(false),
@@ -59,9 +61,10 @@ KimpanelInputPanelGraphics::KimpanelInputPanelGraphics(QGraphicsItem* parent, Qt
 
     m_upperLayout->setSpacing(0);
     m_upperLayout->setContentsMargins(0, 0, 0, 0);
-    m_upperLayout->setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Minimum);
+    m_upperLayout->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Minimum);
     m_upperLayout->addItem(m_auxLabel);
     m_upperLayout->addItem(m_preeditLabel);
+    m_upperLayout->addItem(m_dummyWidget);
 
     m_lowerLayout->setSpacing(0);
     m_lowerLayout->setContentsMargins(0, 0, 0, 0);
@@ -106,6 +109,8 @@ KimpanelInputPanelGraphics::KimpanelInputPanelGraphics(QGraphicsItem* parent, Qt
     connect(m_pageUpIcon, SIGNAL(clicked()), this, SIGNAL(lookupTablePageUp()));
     connect(m_pageDownIcon, SIGNAL(clicked()), this, SIGNAL(lookupTablePageDown()));
     connect(KimpanelSettings::self(), SIGNAL(configChanged()), this, SLOT(loadSettings()));
+    connect(m_preeditLabel, SIGNAL(sizeChanged()), this, SLOT(updateDummyWidget()));
+    connect(m_auxLabel, SIGNAL(sizeChanged()), this, SLOT(updateDummyWidget()));
 }
 
 KimpanelInputPanelGraphics::~KimpanelInputPanelGraphics()
@@ -290,6 +295,12 @@ void KimpanelInputPanelGraphics::updateVisible()
     if (m_lastVisible != (preeditVisible || auxVisible || lookuptableVisible)) {
         m_lastVisible = (preeditVisible || auxVisible || lookuptableVisible);
     }
+}
+
+void KimpanelInputPanelGraphics::updateDummyWidget()
+{
+    m_dummyWidget->setMinimumHeight(qMax(m_preeditLabel->minimumHeight(), m_auxLabel->minimumHeight()));
+    m_dummyWidget->setMaximumHeight(qMax(m_preeditLabel->minimumHeight(), m_auxLabel->minimumHeight()));
 }
 
 bool KimpanelInputPanelGraphics::markedVisible()
