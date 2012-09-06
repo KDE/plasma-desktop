@@ -362,6 +362,9 @@ void KimpanelInputPanelGraphics::setReverse(bool reverse, bool force)
             m_lowerLayout->addItem(m_pageButtonLayout);
             m_lowerLayout->setAlignment(m_pageButtonLayout, Qt::AlignVCenter | Qt::AlignRight);
         }
+
+        if (lookuptableVisible)
+            updateLookupTable();
     }
 }
 
