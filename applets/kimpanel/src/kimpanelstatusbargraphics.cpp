@@ -146,7 +146,12 @@ void KimpanelStatusBarGraphics::updateIcon()
 
                 QFont font = KimpanelSettings::self()->font();
                 font.setPixelSize(KIconLoader::SizeSmallMedium);
-                QString iconString = property.label.left(1);
+                QString iconString;
+                // FIXME: since qt doesn't provide wcswidth equivalent yet, we only check ascii for now
+                if (property.label.length() >= 2 && property.label[0].unicode() < 128 && property.label[1].unicode() < 128)
+                    iconString = property.label.left(2);
+                else
+                    iconString = property.label.left(1);
                 QPixmap pixmap = Plasma::PaintUtils::texturedText(iconString, KimpanelSettings::self()->font(), m_svg);
 
                 icon = KIcon(pixmap);
