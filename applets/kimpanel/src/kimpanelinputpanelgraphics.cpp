@@ -30,11 +30,17 @@
 // Plasma
 #include <Plasma/IconWidget>
 
+enum KimpanelOrientation {
+    KimpanelNotSet = 0,
+    KimpanelVertical = 1,
+    KimpanelHorizontal = 2
+};
+
 KimpanelInputPanelGraphics::KimpanelInputPanelGraphics(QGraphicsItem* parent, Qt::WindowFlags wFlags):
     QGraphicsWidget(parent, wFlags),
     m_layout(new QGraphicsLinearLayout(Qt::Vertical)),
     m_upperLayout(new QGraphicsLinearLayout(Qt::Horizontal)),
-    m_lookupTableLayout(new QGraphicsLinearLayout),
+    m_lookupTableLayout(new QGraphicsLinearLayout(Qt::Horizontal)),
     m_pageButtonLayout(new QGraphicsLinearLayout(Qt::Horizontal)),
     m_lowerLayout(new QGraphicsLinearLayout(Qt::Horizontal)),
     m_auxLabel(new KimpanelLabelGraphics(Auxiliary, this)),
@@ -48,7 +54,8 @@ KimpanelInputPanelGraphics::KimpanelInputPanelGraphics(QGraphicsItem* parent, Qt
     m_lookupTableCursor(-1),
     m_fontHeight(0),
     m_useVertical(false),
-    m_useReverse(false)
+    m_useReverse(false),
+    m_orientaion(Qt::Horizontal)
 {
     setContentsMargins(0, 0, 0, 0);
 
@@ -117,20 +124,30 @@ KimpanelInputPanelGraphics::~KimpanelInputPanelGraphics()
 {
 }
 
+void KimpanelInputPanelGraphics::updateOrientation()
+{
+    Qt::Orientation newOrientation = m_useVertical ? Qt::Vertical : Qt::Horizontal;
+
+    if (m_lookupTableOrientation == KimpanelVertical)
+        newOrientation = Qt::Vertical;
+    else if (m_lookupTableOrientation == KimpanelHorizontal)
+        newOrientation = Qt::Horizontal;
+
+    if (m_orientaion != newOrientation) {
+        m_orientaion = newOrientation;
+
+        m_lookupTableLayout->setOrientation(m_orientaion);
+        m_lowerLayout->setOrientation(m_orientaion);
+    }
+}
+
 void KimpanelInputPanelGraphics::loadSettings()
 {
     QFontMetrics fm(KimpanelSettings::self()->font());
     m_fontHeight = fm.height();
     m_useVertical = KimpanelSettings::self()->verticalPreeditBar();
 
-    if (m_useVertical) {
-        m_lookupTableLayout->setOrientation(Qt::Vertical);
-        m_lowerLayout->setOrientation(Qt::Vertical);
-    }
-    else {
-        m_lookupTableLayout->setOrientation(Qt::Horizontal);
-        m_lowerLayout->setOrientation(Qt::Horizontal);
-    }
+    updateOrientation();
 
     m_useReverse = KimpanelSettings::self()->useReverse();
     setReverse(m_reverse, true);
@@ -177,6 +194,13 @@ void KimpanelInputPanelGraphics::setShowLookupTable(bool show)
 void KimpanelInputPanelGraphics::setLookupTableCursor(int cursor)
 {
     m_lookupTableCursor = cursor;
+}
+
+void KimpanelInputPanelGraphics::setLookupTableLayout(int layout)
+{
+    m_lookupTableOrientation = layout;
+
+    updateOrientation();
 }
 
 void KimpanelInputPanelGraphics::setPreeditCaret(int pos)

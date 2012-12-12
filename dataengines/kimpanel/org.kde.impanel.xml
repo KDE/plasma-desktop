@@ -25,5 +25,14 @@
                 <arg type="i" name="w" direction="in" />
                 <arg type="i" name="h" direction="in" />
             </method>
+            <method name="SetLookupTable">
+                <arg type="as" name="label" direction="in" />
+                <arg type="as" name="text" direction="in" />
+                <arg type="as" name="attr" direction="in" />
+                <arg type="b" name="hasPrev" direction="in" />
+                <arg type="b" name="hasNext" direction="in" />
+                <arg type="i" name="cursor" direction="in" />
+                <arg type="i" name="layout" direction="in" />
+            </method>
         </interface>
 </node>

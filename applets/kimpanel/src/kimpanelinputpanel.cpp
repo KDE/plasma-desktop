@@ -196,6 +196,11 @@ void KimpanelInputPanel::setLookupTableCursor(int cursor)
     m_widget->setLookupTableCursor(cursor);
 }
 
+void KimpanelInputPanel::setLookupTableLayout(int layout)
+{
+    m_widget->setLookupTableLayout(layout);
+}
+
 void KimpanelInputPanel::setPreeditCaret(int pos)
 {
     m_widget->setPreeditCaret(pos);

@@ -63,6 +63,10 @@ public Q_SLOTS: // METHODS
     void ExecDialog(const QString &prop);
     void ExecMenu(const QStringList &entries);
     void SetSpotRect(int x, int y, int w, int h);
+    void SetLookupTable(const QStringList &labels,
+                        const QStringList &candis,
+                        const QStringList &attrlists,
+                        bool hasPrev, bool hasNext, int cursor, int layout);
     void serviceUnregistered(const QString& service);
 
 Q_SIGNALS:
@@ -86,6 +90,7 @@ Q_SIGNALS:
     void updateAux(const QString &text, const QList<TextAttribute> &attr);
     void updateProperty(const KimpanelProperty &prop);
     void updateLookupTable(const KimpanelLookupTable &lookup_table);
+    void updateLookupTableFull(const KimpanelLookupTable& lookup_table, int cursor, int layout);
     void updateSpotLocation(int x, int y);
     void updateSpotRect(int x, int y, int w ,int h);
 

@@ -38,6 +38,7 @@ protected Q_SLOTS:
     void updateAux(const QString& text, const QList<TextAttribute>& attrList);
     void updatePreeditCaret(int pos);
     void updateLookupTable(const KimpanelLookupTable& lookupTable);
+    void updateLookupTableFull(const KimpanelLookupTable& lookupTable,int cursor, int layout);
     void updateSpotLocation(int x, int y);
     void updateSpotRect(int x, int y, int w, int h);
     void showAux(bool visible);

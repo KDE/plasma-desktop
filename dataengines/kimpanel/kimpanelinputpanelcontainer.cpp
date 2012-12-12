@@ -36,6 +36,7 @@ KimpanelInputPanelContainer::KimpanelInputPanelContainer(QObject* parent, PanelA
     connect(m_panelAgent, SIGNAL(showPreedit(bool)), this, SLOT(showPreedit(bool)));
     connect(m_panelAgent, SIGNAL(showLookupTable(bool)), this, SLOT(showLookupTable(bool)));
     connect(m_panelAgent, SIGNAL(updateLookupTableCursor(int)), this, SLOT(updateLookupTableCursor(int)));
+    connect(m_panelAgent, SIGNAL(updateLookupTableFull(KimpanelLookupTable,int,int)), this, SLOT(updateLookupTableFull(KimpanelLookupTable,int,int)));
 }
 
 Plasma::Service* KimpanelInputPanelContainer::service(QObject* parent)
@@ -114,4 +115,22 @@ void KimpanelInputPanelContainer::updateLookupTableCursor(int cursor)
 {
     setData("LookupTableCursor", cursor);
     checkForUpdate();
+}
+
+void KimpanelInputPanelContainer::updateLookupTableFull(const KimpanelLookupTable& lookupTable, int cursor, int layout)
+{
+    QVariantList candidateList;
+    Q_FOREACH(const KimpanelLookupTable::Entry & entry, lookupTable.entries) {
+        QVariantMap map;
+        map["label"] = entry.label;
+        map["text"] = entry.text;
+        candidateList += map;
+    }
+    setData("LookupTable", candidateList);
+    setData("HasPrev", lookupTable.has_prev);
+    setData("HasNext", lookupTable.has_next);
+    setData("LookupTableCursor", cursor);
+    setData("LookupTableLayout", layout);
+    checkForUpdate();
+
 }

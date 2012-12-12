@@ -47,6 +47,7 @@ public:
     void setShowAux(bool show);
     void setShowLookupTable(bool show);
     void setLookupTableCursor(int cursor);
+    void setLookupTableLayout(int layout);
     void setPreeditCaret(int pos);
     void setPreeditText(const QString& text,
                         const QString& attrs = QString());
@@ -82,6 +83,7 @@ private slots:
 private:
     void clearLookupTable();
     void updateLookupTable();
+    void updateOrientation();
     QGraphicsLinearLayout *m_layout;
     QGraphicsLinearLayout *m_upperLayout;
     QGraphicsLinearLayout *m_lookupTableLayout;
@@ -122,6 +124,8 @@ private:
     int m_fontHeight;
     bool m_useVertical;
     bool m_useReverse;
+    Qt::Orientation m_orientaion;
+    int m_lookupTableOrientation;
 };
 
 #endif // KIMPANEL_INPUTPANEL_GRAHICS_H

@@ -292,3 +292,8 @@ void PanelAgent::SetSpotRect(int x, int y, int w, int h)
 {
     emit updateSpotRect(x, y, w, h);
 }
+
+void PanelAgent::SetLookupTable(const QStringList& labels, const QStringList& candis, const QStringList& attrlists, bool hasPrev, bool hasNext, int cursor, int layout)
+{
+    emit updateLookupTableFull(Args2LookupTable(labels, candis, attrlists, hasPrev, hasNext), cursor, layout);
+}
