@@ -158,6 +158,10 @@ void KimpanelInputPanel::setSpotLocation(const QRect& rect)
 void KimpanelInputPanel::updateLocation()
 {
     QRect screenRect = QApplication::desktop()->screenGeometry(QPoint(m_spotRect.x(), m_spotRect.y()));
+    int top = 0, right = 0, left = 0, bottom = 0;
+    if (m_composite && m_dialogShadows->enabled()) { 
+        m_dialogShadows->getMargins(top, left, right, bottom);
+    }
     int x;
     x = qMin(m_spotRect.x(), screenRect.x() + screenRect.width() - width());
     x = qMax(x, screenRect.x());
@@ -166,9 +170,9 @@ void KimpanelInputPanel::updateLocation()
         y = screenRect.height();
     }
 
-    if (y + height() > screenRect.y() + screenRect.height()) {
+    if (y + height() + (top + bottom) / 2 > screenRect.y() + screenRect.height()) {
         /// minus 20 to make preedit bar never overlap the input context
-        y -= height() + ((m_spotRect.height() == 0)?20:m_spotRect.height());
+        y -= height() + (top + bottom) / 2 + ((m_spotRect.height() == 0)?20:m_spotRect.height());
         m_widget->setReverse(true);
     }
     else
@@ -176,8 +180,6 @@ void KimpanelInputPanel::updateLocation()
     
     QPoint p(x, y);
     if (m_dialogShadows->enabled()) {
-        int top = 0, right = 0, left = 0, bottom = 0;
-        m_dialogShadows->getMargins(top, left, right, bottom);
         p += QPoint(0, top) / 2;
     }
     if (p != pos())
