@@ -36,10 +36,12 @@
 #include "kimpanelsettings.h"
 #include "kimpanelinputpanelgraphics.h"
 #include "kimpanelinputpanel.h"
+#include "dialogshadows_p.h"
 
 KimpanelInputPanel::KimpanelInputPanel(QWidget* parent)
     : QGraphicsView(parent),
       m_widget(new KimpanelInputPanelGraphics),
+      m_dialogShadows(new DialogShadows(this)),
       m_backgroundSvg(new Plasma::FrameSvg(this)),
       m_composite(true),
       m_useBlur(false)
@@ -63,6 +65,7 @@ KimpanelInputPanel::KimpanelInputPanel(QWidget* parent)
 
     m_backgroundSvg->setCacheAllRenderedFrames(true);
     m_backgroundSvg->setImagePath("dialogs/background");
+    m_dialogShadows->addWindow(this);
 
     loadTheme();
 
@@ -95,10 +98,6 @@ KimpanelInputPanel::~KimpanelInputPanel()
 void KimpanelInputPanel::showEvent(QShowEvent *e)
 {
     QGraphicsView::showEvent(e);
-    Plasma::WindowEffects::overrideShadow(winId(), true);
-    Display *dpy = QX11Info::display();
-    Atom atom = XInternAtom( dpy, "_KDE_NET_WM_SHADOW", False );
-    XDeleteProperty(dpy, winId(), atom);
     updateLocation();
 }
 
@@ -118,8 +117,10 @@ void KimpanelInputPanel::maskBackground(bool composite)
         m_backgroundSvg->clearCache();
         if (!m_composite) {
             m_backgroundSvg->setImagePath("opaque/dialogs/background");
+            m_dialogShadows->removeWindow(this);
         } else {
             m_backgroundSvg->setImagePath("dialogs/background");
+            m_dialogShadows->addWindow(this);
             clearMask();
         }
     }
@@ -172,8 +173,15 @@ void KimpanelInputPanel::updateLocation()
     }
     else
         m_widget->setReverse(false);
-    if (QPoint(x, y) != pos())
-        move(x, y);
+    
+    QPoint p(x, y);
+    if (m_dialogShadows->enabled()) {
+        int top = 0, right = 0, left = 0, bottom = 0;
+        m_dialogShadows->getMargins(top, left, right, bottom);
+        p += QPoint(0, top) / 2;
+    }
+    if (p != pos())
+        move(p);
 }
 
 void KimpanelInputPanel::setShowPreedit(bool show)

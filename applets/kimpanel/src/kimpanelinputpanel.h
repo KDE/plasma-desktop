@@ -25,6 +25,7 @@
 #include <QGraphicsView>
 #include <QTimer>
 
+class DialogShadows;
 class DummyWidget;
 class QGraphicsScene;
 namespace Plasma
@@ -76,6 +77,7 @@ private Q_SLOTS:
     void updateSize();
 private:
     KimpanelInputPanelGraphics* m_widget;
+    DialogShadows* m_dialogShadows;
     Plasma::FrameSvg* m_backgroundSvg;
     QPoint m_pointPos;
     bool m_moving;
