@@ -12,7 +12,6 @@ set(plasma_applet_kimpanel_SRCS
     icongridlayout.cpp
     paintutils.cpp
     dummywidget.cpp
-    dialogshadows.cpp
 )
 
 kde4_add_ui_files(plasma_applet_kimpanel_SRCS config.ui)

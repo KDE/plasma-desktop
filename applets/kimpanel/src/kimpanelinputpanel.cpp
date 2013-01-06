@@ -17,78 +17,33 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
+#include "kimpanelinputpanel.h"
+#include "kimpanelsettings.h"
+#include "kimpanelinputpanelgraphics.h"
+
 // Qt
 #include <QApplication>
-#include <QVBoxLayout>
-#include <QGraphicsView>
-#include <QX11Info>
 
 // KDE
 #include <KWindowSystem>
 
-// Plasma
-#include <Plasma/Corona>
-#include <Plasma/Theme>
-#include <Plasma/WindowEffects>
-
-#include <X11/Xlib.h>
-
-#include "kimpanelsettings.h"
-#include "kimpanelinputpanelgraphics.h"
-#include "kimpanelinputpanel.h"
-#include "dialogshadows_p.h"
-
 KimpanelInputPanel::KimpanelInputPanel(QWidget* parent)
-    : QGraphicsView(parent),
-      m_widget(new KimpanelInputPanelGraphics),
-      m_dialogShadows(new DialogShadows(this)),
-      m_backgroundSvg(new Plasma::FrameSvg(this)),
-      m_composite(true),
-      m_useBlur(false)
+    : Plasma::Dialog(parent, Qt::ToolTip),
+      m_widget(new KimpanelInputPanelGraphics)
 {
-    setAttribute(Qt::WA_TranslucentBackground);
-    setWindowFlags(Qt::ToolTip);
     KWindowSystem::setState(winId(), NET::KeepAbove);
     KWindowSystem::setType(winId(), NET::Tooltip);
+    setAttribute(Qt::WA_X11NetWmWindowTypeToolTip, true);
+    QGraphicsScene* scene = new QGraphicsScene(this);
+    scene->addItem(m_widget);
 
-    setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-    setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-    setFrameShape(QFrame::NoFrame);
-    setContentsMargins(0, 0, 0, 0);
-    setCacheMode(QGraphicsView::CacheBackground);
-    viewport()->setContentsMargins(0, 0, 0, 0);
-
-    setScene(new QGraphicsScene);
-
-    scene()->addItem(m_widget);
-    centerOn(m_widget);
-
-    m_backgroundSvg->setCacheAllRenderedFrames(true);
-    m_backgroundSvg->setImagePath("dialogs/background");
-    m_dialogShadows->addWindow(this);
-
-    loadTheme();
-
-    Plasma::Theme* theme = Plasma::Theme::defaultTheme();
-    connect(theme, SIGNAL(themeChanged()), this, SLOT(loadTheme()));
-    connect(KWindowSystem::self(), SIGNAL(compositingChanged(bool)), this, SLOT(maskBackground(bool)));
-    connect(m_widget, SIGNAL(sizeChanged()), this, SLOT(updateSize()));
+    setGraphicsWidget(m_widget);
+    m_widget->show();
+    connect(m_widget, SIGNAL(sizeChanged()), this, SLOT(syncToGraphicsWidget()));
 
     connect(m_widget, SIGNAL(selectCandidate(int)), this, SIGNAL(selectCandidate(int)));
     connect(m_widget, SIGNAL(lookupTablePageUp()), this, SIGNAL(lookupTablePageUp()));
     connect(m_widget, SIGNAL(lookupTablePageDown()), this, SIGNAL(lookupTablePageDown()));
-}
-
-void KimpanelInputPanel::loadTheme()
-{
-    maskBackground(Plasma::Theme::defaultTheme()->windowTranslucencyEnabled());
-    QPalette plasmaPalette = QPalette();
-    plasmaPalette.setColor(QPalette::Window,
-                           Plasma::Theme::defaultTheme()->color(Plasma::Theme::BackgroundColor));
-    setAutoFillBackground(true);
-    setPalette(plasmaPalette);
-
-    update();
 }
 
 KimpanelInputPanel::~KimpanelInputPanel()
@@ -97,56 +52,14 @@ KimpanelInputPanel::~KimpanelInputPanel()
 
 void KimpanelInputPanel::showEvent(QShowEvent *e)
 {
-    QGraphicsView::showEvent(e);
+    Plasma::Dialog::showEvent(e);
     updateLocation();
 }
 
 void KimpanelInputPanel::resizeEvent(QResizeEvent* event)
 {
-    QGraphicsView::resizeEvent(event);
+    Plasma::Dialog::resizeEvent(event);
     updateLocation();
-
-    maskBackground(Plasma::Theme::defaultTheme()->windowTranslucencyEnabled());
-    resetCachedContent();
-}
-
-void KimpanelInputPanel::maskBackground(bool composite)
-{
-    if (m_composite != composite) {
-        m_composite = composite;
-        m_backgroundSvg->clearCache();
-        if (!m_composite) {
-            m_backgroundSvg->setImagePath("opaque/dialogs/background");
-            m_dialogShadows->removeWindow(this);
-        } else {
-            m_backgroundSvg->setImagePath("dialogs/background");
-            m_dialogShadows->addWindow(this);
-            clearMask();
-        }
-    }
-    m_backgroundSvg->resizeFrame(size());
-    if (!m_composite) {
-        setMask(m_backgroundSvg->mask());
-    }
-
-    bool useBlur = Plasma::WindowEffects::isEffectAvailable(Plasma::WindowEffects::BlurBehind) && KimpanelSettings::self()->enableBackgroundBlur();
-    if (m_useBlur != useBlur) {
-        m_useBlur = useBlur;
-        if (!m_useBlur) {
-            Plasma::WindowEffects::enableBlurBehind(winId(), false);
-        }
-    }
-    if (m_useBlur) {
-        Plasma::WindowEffects::enableBlurBehind(winId(), true, m_backgroundSvg->mask());
-    }
-}
-
-void KimpanelInputPanel::drawBackground(QPainter* painter, const QRectF& rect)
-{
-    painter->setClipRect(rect);
-    painter->setCompositionMode(QPainter::CompositionMode_Source);
-    painter->fillRect(rect, Qt::transparent);
-    m_backgroundSvg->paintFrame(painter);
 }
 
 void KimpanelInputPanel::setSpotLocation(const QRect& rect)
@@ -158,10 +71,6 @@ void KimpanelInputPanel::setSpotLocation(const QRect& rect)
 void KimpanelInputPanel::updateLocation()
 {
     QRect screenRect = QApplication::desktop()->screenGeometry(QPoint(m_spotRect.x(), m_spotRect.y()));
-    int top = 0, right = 0, left = 0, bottom = 0;
-    if (m_composite && m_dialogShadows->enabled()) { 
-        m_dialogShadows->getMargins(top, left, right, bottom);
-    }
     int x;
     x = qMin(m_spotRect.x(), screenRect.x() + screenRect.width() - width());
     x = qMax(x, screenRect.x());
@@ -170,18 +79,15 @@ void KimpanelInputPanel::updateLocation()
         y = screenRect.height();
     }
 
-    if (y + height() + (top + bottom) / 2 > screenRect.y() + screenRect.height()) {
+    if (y + height() > screenRect.y() + screenRect.height()) {
         /// minus 20 to make preedit bar never overlap the input context
-        y -= height() + (top + bottom) / 2 + ((m_spotRect.height() == 0)?20:m_spotRect.height());
+        y -= height() + ((m_spotRect.height() == 0)?20:m_spotRect.height());
         m_widget->setReverse(true);
     }
     else
         m_widget->setReverse(false);
-    
+
     QPoint p(x, y);
-    if (m_dialogShadows->enabled()) {
-        p += QPoint(0, top) / 2;
-    }
     if (p != pos())
         move(p);
 }
@@ -251,17 +157,6 @@ void KimpanelInputPanel::updateSizeVisibility()
         m_widget->updateSize();
     }
     updateVisible(newVisible);
-}
-
-void KimpanelInputPanel::updateSize()
-{
-    qreal left, top, right, bottom;
-    m_backgroundSvg->getMargins(left, top, right, bottom);
-    QSize size = m_widget->roundSize();
-    m_widget->setPos(left, top);
-    QSize sizeHint = size + QSize(left + right, top + bottom);
-    setSceneRect(0, 0, sizeHint.width(), sizeHint.height());
-    resize(sizeHint);
 }
 
 

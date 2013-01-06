@@ -20,22 +20,10 @@
 #ifndef KIMPANEL_INPUTPANEL_H
 #define KIMPANEL_INPUTPANEL_H
 
-// Qt
-#include <QWidget>
-#include <QGraphicsView>
-#include <QTimer>
+#include <Plasma/Dialog>
 
-class DialogShadows;
-class DummyWidget;
-class QGraphicsScene;
-namespace Plasma
-{
-class FrameSvg;
-}
-
-class QHBoxLayout;
 class KimpanelInputPanelGraphics;
-class KimpanelInputPanel : public QGraphicsView
+class KimpanelInputPanel : public Plasma::Dialog
 {
     Q_OBJECT
 public:
@@ -69,21 +57,13 @@ Q_SIGNALS:
 protected:
     virtual void showEvent(QShowEvent* event);
     virtual void resizeEvent(QResizeEvent* event);
-    virtual void drawBackground(QPainter* painter, const QRectF& rect);
 private Q_SLOTS:
-    void loadTheme();
-    void maskBackground(bool);
     void updateVisible(bool);
-    void updateSize();
 private:
     KimpanelInputPanelGraphics* m_widget;
-    DialogShadows* m_dialogShadows;
-    Plasma::FrameSvg* m_backgroundSvg;
     QPoint m_pointPos;
     bool m_moving;
     QRect m_spotRect;
-    bool m_composite;
-    bool m_useBlur;
 };
 
 #endif // KIMPANEL_INPUTPANEL_H
