@@ -74,14 +74,15 @@ void KimpanelInputPanel::updateLocation()
     int x;
     x = qMin(m_spotRect.x(), screenRect.x() + screenRect.width() - width());
     x = qMax(x, screenRect.x());
-    int y = m_spotRect.y() + m_spotRect.height() + 10;
+    int oy = m_spotRect.y() + m_spotRect.height();
+    int y = oy + 10;
     if (y > screenRect.y() + screenRect.height()) {
         y = screenRect.height();
     }
 
     if (y + height() > screenRect.y() + screenRect.height()) {
         /// minus 20 to make preedit bar never overlap the input context
-        y -= height() + ((m_spotRect.height() == 0)?20:m_spotRect.height());
+        y = oy - (height() + ((m_spotRect.height() == 0)?20:(m_spotRect.height() + 10)));
         m_widget->setReverse(true);
     }
     else
