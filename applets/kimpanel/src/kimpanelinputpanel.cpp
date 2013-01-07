@@ -74,7 +74,7 @@ void KimpanelInputPanel::updateLocation()
     int x;
     x = qMin(m_spotRect.x(), screenRect.x() + screenRect.width() - width());
     x = qMax(x, screenRect.x());
-    int y = m_spotRect.y() + m_spotRect.height();
+    int y = m_spotRect.y() + m_spotRect.height() + 10;
     if (y > screenRect.y() + screenRect.height()) {
         y = screenRect.height();
     }
