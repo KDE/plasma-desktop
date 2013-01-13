@@ -89,6 +89,7 @@ void PanelAgent::serviceUnregistered(const QString& service)
 {
     if (service == m_currentService) {
         watcher->setWatchedServices(QStringList());
+        cached_props.clear();
         m_currentService = QString();
         emit showAux(false);
         emit showPreedit(false);

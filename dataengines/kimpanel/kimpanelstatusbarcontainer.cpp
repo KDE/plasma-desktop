@@ -30,8 +30,6 @@ KimpanelStatusBarContainer::KimpanelStatusBarContainer(QObject* parent, PanelAge
     connect(m_panelAgent, SIGNAL(registerProperties(QList<KimpanelProperty>)), this, SLOT(registerProperties(QList<KimpanelProperty>)));
     connect(m_panelAgent, SIGNAL(execMenu(QList<KimpanelProperty>)), this, SLOT(execMenu(QList<KimpanelProperty>)));
     connect(m_panelAgent, SIGNAL(execDialog(KimpanelProperty)), this, SLOT(execDialog(KimpanelProperty)));
-
-    m_panelAgent->created();
 }
 
 Plasma::Service* KimpanelStatusBarContainer::service(QObject* parent)

@@ -71,6 +71,7 @@ Kimpanel::Kimpanel(QObject* parent, const QVariantList& args):
     connect(m_statusbar, SIGNAL(startIM()), this, SLOT(startIM()));
 
     connect(&m_inputPanelTimer, SIGNAL(timeout()), this, SLOT(updateInputPanel()));
+    connect(&m_statusBarTimer, SIGNAL(timeout()), this, SLOT(updateStatusBar()));
 }
 
 Kimpanel::~Kimpanel()
@@ -201,12 +202,10 @@ void Kimpanel::dataUpdated(const QString& source, const Plasma::DataEngine::Data
         if (!m_inputPanelTimer.isActive())
             m_inputPanelTimer.start();
     } else if (source == "statusbar") {
-        if (m_statusBarTimer.isActive()) {
-            m_statusBarTimer.disconnect(SIGNAL(timeout()));
-            m_statusBarTimer.stop();
-            connect(&m_statusBarTimer, SIGNAL(timeout()), this, SLOT(updateStatusBar()));
+        if (!m_statusBarTimer.isActive()) {
+            m_statusBarTimer.start();
         }
-        m_statusBarTimer.start();
+        updateStatusBar();
         if (data["Menu"].isValid()) {
             QMap< QString, QVariant > map = data["Menu"].toMap();
             quint64 timestamp = map["timestamp"].toULongLong();
