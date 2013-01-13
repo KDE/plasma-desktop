@@ -22,11 +22,15 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ibus.h>
+#include <string>
+#include <QByteArray>
 #if !IBUS_CHECK_VERSION(1,3,99)
 #include <gio/gio.h>
 #include <ibuspanelservice.h>
 #endif
 #include "panel.h"
+#include "propertymanager.h"
+#include "enginemanager.h"
 
 #ifndef DBUS_ERROR_FAILED
 #define DBUS_ERROR_FAILED "org.freedesktop.DBus.Error.Failed"
@@ -41,7 +45,8 @@ struct _IBusPanelImpanel {
     GDBusConnection    *conn;
     IBusInputContext   *input_context;
     IBusProperty       *logo_prop;
-    IBusProperty       *about_prop;
+    PropertyManager* propManager;
+    EngineManager* engineManager;
 };
 
 struct _IBusPanelImpanelClass {
@@ -108,9 +113,6 @@ static const gchar introspection_xml[] =
     "      <arg type='i' name='x'/>"
     "      <arg type='i' name='y'/>"
     "    </signal>"
-    "    <signal name='ExecDialog'>"
-    "      <arg type='s' name='prop'/>"
-    "    </signal>"
     "    <signal name='ExecMenu'>"
     "      <arg type='as' name='actions'/>"
     "    </signal>"
@@ -118,78 +120,17 @@ static const gchar introspection_xml[] =
     "</node>";
 
 /* functions prototype */
-static void         ibus_panel_impanel_class_init               (IBusPanelImpanelClass  *class);
+static void         ibus_panel_impanel_class_init               (IBusPanelImpanelClass  *klass);
 static void         ibus_panel_impanel_init                     (IBusPanelImpanel       *impanel);
 static void         ibus_panel_impanel_destroy                  (IBusPanelImpanel       *impanel);
-#if !IBUS_CHECK_VERSION(1,3,99)
-static gboolean     ibus_panel_impanel_focus_in                 (IBusPanelService       *panel,
-                                                                 const gchar            *input_context_path,
-                                                                 IBusError             **error);
-static gboolean     ibus_panel_impanel_focus_out                (IBusPanelService       *panel,
-                                                                 const gchar            *input_context_path,
-                                                                 IBusError             **error);
-static gboolean     ibus_panel_impanel_register_properties      (IBusPanelService       *panel,
-                                                                 IBusPropList           *prop_list,
-                                                                 IBusError             **error);
-static gboolean     ibus_panel_impanel_set_cursor_location      (IBusPanelService       *panel,
-                                                                 gint                    x,
-                                                                 gint                    y,
-                                                                 gint                    w,
-                                                                 gint                    h,
-                                                                 IBusError             **error);
-static gboolean     ibus_panel_impanel_update_auxiliary_text    (IBusPanelService       *panel,
-                                                                 IBusText               *text,
-                                                                 gboolean                visible,
-                                                                 IBusError             **error);
-static gboolean     ibus_panel_impanel_update_lookup_table      (IBusPanelService       *panel,
-                                                                 IBusLookupTable        *lookup_table,
-                                                                 gboolean                visible,
-                                                                 IBusError             **error);
-static gboolean     ibus_panel_impanel_update_preedit_text      (IBusPanelService       *panel,
-                                                                 IBusText               *text,
-                                                                 guint                   cursor_pos,
-                                                                 gboolean                visible,
-                                                                 IBusError             **error);
-static gboolean     ibus_panel_impanel_update_property          (IBusPanelService       *panel,
-                                                                 IBusProperty           *prop,
-                                                                 IBusError             **error);
-static gboolean     ibus_panel_impanel_cursor_down_lookup_table (IBusPanelService       *panel,
-                                                                 IBusError             **error);
-static gboolean     ibus_panel_impanel_cursor_up_lookup_table   (IBusPanelService       *panel,
-                                                                 IBusError             **error);
-static gboolean     ibus_panel_impanel_hide_auxiliary_text      (IBusPanelService       *panel,
-                                                                 IBusError             **error);
-static gboolean     ibus_panel_impanel_hide_language_bar        (IBusPanelService       *panel,
-                                                                 IBusError             **error);
-static gboolean     ibus_panel_impanel_hide_lookup_table        (IBusPanelService       *panel,
-                                                                 IBusError             **error);
-static gboolean     ibus_panel_impanel_hide_preedit_text        (IBusPanelService       *panel,
-                                                                 IBusError             **error);
-static gboolean     ibus_panel_impanel_page_down_lookup_table   (IBusPanelService       *panel,
-                                                                 IBusError             **error);
-static gboolean     ibus_panel_impanel_page_up_lookup_table     (IBusPanelService       *panel,
-                                                                 IBusError             **error);
-static gboolean     ibus_panel_impanel_reset                    (IBusPanelService       *panel,
-                                                                 IBusError             **error);
-static gboolean     ibus_panel_impanel_show_auxiliary_text      (IBusPanelService       *panel,
-                                                                 IBusError             **error);
-static gboolean     ibus_panel_impanel_show_language_bar        (IBusPanelService       *panel,
-                                                                 IBusError             **error);
-static gboolean     ibus_panel_impanel_show_lookup_table        (IBusPanelService       *panel,
-                                                                 IBusError             **error);
-static gboolean     ibus_panel_impanel_show_preedit_text        (IBusPanelService       *panel,
-                                                                 IBusError             **error);
-static gboolean     ibus_panel_impanel_start_setup              (IBusPanelService       *panel,
-                                                                 IBusError             **error);
-static gboolean     ibus_panel_impanel_state_changed            (IBusPanelService       *panel,
-                                                                 IBusError             **error);
-#else
+
 static void         ibus_panel_impanel_focus_in                 (IBusPanelService       *panel,
                                                                  const gchar            *input_context_path);
 static void         ibus_panel_impanel_focus_out                (IBusPanelService       *panel,
                                                                  const gchar            *input_context_path);
 static void         ibus_panel_impanel_register_properties      (IBusPanelService       *panel,
                                                                  IBusPropList           *prop_list);
+static void         ibus_panel_impanel_real_register_properties (IBusPanelImpanel       *impanel);
 static void         ibus_panel_impanel_set_cursor_location      (IBusPanelService       *panel,
                                                                  gint                    x,
                                                                  gint                    y,
@@ -222,15 +163,10 @@ static void         ibus_panel_impanel_show_lookup_table        (IBusPanelServic
 static void         ibus_panel_impanel_show_preedit_text        (IBusPanelService       *panel);
 static void         ibus_panel_impanel_start_setup              (IBusPanelService       *panel);
 static void         ibus_panel_impanel_state_changed            (IBusPanelService       *panel);
-#endif
 
 /* impanel signal handler function */
-static void         ibus_panel_impanel_exec_dialog              (IBusPanelService       *panel);
-static void         ibus_panel_impanel_exec_menu                (IBusPanelService       *panel);
-
-#if !IBUS_CHECK_VERSION(1,3,99)
-static IBusPanelServiceClass *parent_class = NULL;
-#endif
+static void         ibus_panel_impanel_exec_im_menu             (IBusPanelImpanel* impanel);
+static void         ibus_panel_impanel_exec_menu                (IBusPanelImpanel* impanel, IBusPropList* prop_list);
 
 static const char prop_sep[] = ":";
 
@@ -244,7 +180,9 @@ ibus_property_args_to_propstr (const char *key,
     static const char pre[] = "/IBus/";
     propstr[0] = '\0';
     strcat(propstr, pre);
-    strcat(propstr, key);
+    QByteArray str(key);
+    str.replace(':', '!');
+    strcat(propstr, str.constData());
     strcat(propstr, prop_sep);
     strcat(propstr, label);
     strcat(propstr, prop_sep);
@@ -255,17 +193,18 @@ ibus_property_args_to_propstr (const char *key,
 
 static void
 ibus_property_to_propstr (IBusProperty *property,
-                          char *propstr)
+                          char *propstr,
+                          gboolean useSymbol = FALSE)
 {
-#if !IBUS_CHECK_VERSION(1,3,99)
-    ibus_property_args_to_propstr(property->key,
-                                  property->label->text,
-                                  property->icon,
-                                  property->tooltip->text,
+#if IBUS_CHECK_VERSION(1, 5, 0)
+    ibus_property_args_to_propstr(ibus_property_get_key (property),
+                                  ibus_text_get_text (useSymbol ? ibus_property_get_symbol (property) : ibus_property_get_label(property)),
+                                  ibus_property_get_icon (property),
+                                  ibus_text_get_text (ibus_property_get_tooltip (property)),
                                   propstr);
 #else
     ibus_property_args_to_propstr(ibus_property_get_key (property),
-                                  ibus_text_get_text (ibus_property_get_label (property)),
+                                  ibus_text_get_text (ibus_property_get_label(property)),
                                   ibus_property_get_icon (property),
                                   ibus_text_get_text (ibus_property_get_tooltip (property)),
                                   propstr);
@@ -283,7 +222,9 @@ ibus_engine_desc_args_to_propstr (const char *name,
     static const char pre[] = "/IBus/Engine/";
     propstr[0] = '\0';
     strcat(propstr, pre);
-    strcat(propstr, name);
+    QByteArray data(name);
+    data.replace(':', '!');
+    strcat(propstr, data.constData());
     strcat(propstr, prop_sep);
     if (language) {
         strcat(propstr, language);
@@ -300,21 +241,94 @@ static void
 ibus_engine_desc_to_propstr (IBusEngineDesc *engine_desc,
                              char *propstr)
 {
-#if !IBUS_CHECK_VERSION(1,3,99)
-    ibus_engine_desc_args_to_propstr(engine_desc->name,
-                                     engine_desc->language,
-                                     engine_desc->longname,
-                                     engine_desc->icon,
-                                     engine_desc->description,
-                                     propstr);
-#else
     ibus_engine_desc_args_to_propstr(ibus_engine_desc_get_name(engine_desc),
                                      ibus_engine_desc_get_language(engine_desc),
                                      ibus_engine_desc_get_longname(engine_desc),
                                      ibus_engine_desc_get_icon(engine_desc),
                                      ibus_engine_desc_get_description(engine_desc),
                                      propstr);
+}
+
+#if IBUS_CHECK_VERSION(1,5,0)
+
+static void
+impanel_update_engines(IBusPanelImpanel* impanel, GVariant* var_engines) {
+    gchar** engine_names = NULL;
+    size_t len = 0;
+    if (var_engines) {
+        engine_names = g_variant_dup_strv(var_engines, &len);
+    }
+    if (len == 0) {
+        g_strfreev(engine_names);
+        engine_names = NULL;
+    }
+    if (!engine_names) {
+        engine_names = g_new0 (gchar*, 2);
+        len = 1;
+        engine_names[0] = g_strdup ("xkb:us::eng");
+    }
+
+    IBusEngineDesc** engines = ibus_bus_get_engines_by_names(impanel->bus, engine_names);
+    g_strfreev(engine_names);
+
+    impanel->engineManager->setEngines(engines);
+
+    if (engines && engines[0]) {
+        ibus_bus_set_global_engine_async(impanel->bus, ibus_engine_desc_get_name(engines[0]), 1000, NULL, NULL, NULL);
+    }
+}
+
+static void
+impanel_config_value_changed_callback (IBusConfig* config, const gchar* section, const gchar* name, GVariant* value, gpointer user_data)
+{
+    _UNUSED(config);
+    IBusPanelImpanel* impanel = ((IBusPanelImpanel *)user_data);
+
+    if (g_strcmp0(section, "general") == 0 && g_strcmp0(name, "preload_engines") == 0) {
+        impanel_update_engines(impanel, value);
+    }
+}
 #endif
+
+static void
+impanel_exit_callback (GDBusConnection *connection,
+                                   const gchar     *sender_name,
+                                   const gchar     *object_path,
+                                   const gchar     *interface_name,
+                                   const gchar     *signal_name,
+                                   GVariant        *parameters,
+                                   gpointer         user_data)
+{
+    _UNUSED(connection);
+    _UNUSED(sender_name);
+    _UNUSED(object_path);
+    _UNUSED(interface_name);
+    _UNUSED(signal_name);
+    _UNUSED(parameters);
+    IBusPanelImpanel* impanel = ((IBusPanelImpanel *)user_data);
+    if (impanel->bus) {
+        ibus_bus_exit(impanel->bus, FALSE);
+    }
+}
+
+static void
+impanel_panel_created_callback (GDBusConnection *connection,
+                                const gchar     *sender_name,
+                                const gchar     *object_path,
+                                const gchar     *interface_name,
+                                const gchar     *signal_name,
+                                GVariant        *parameters,
+                                gpointer         user_data)
+{
+    _UNUSED(connection);
+    _UNUSED(sender_name);
+    _UNUSED(object_path);
+    _UNUSED(interface_name);
+    _UNUSED(signal_name);
+    _UNUSED(parameters);
+    IBusPanelImpanel* impanel = ((IBusPanelImpanel *)user_data);
+    ibus_panel_impanel_real_register_properties(impanel);
+
 }
 
 static void
@@ -331,23 +345,55 @@ impanel_trigger_property_callback (GDBusConnection *connection,
     _UNUSED(object_path);
     _UNUSED(interface_name);
     _UNUSED(signal_name);
-    gchar *s0;
+    IBusPanelImpanel* impanel = IBUS_PANEL_IMPANEL(user_data);
+    gchar *s0 = NULL;
     g_variant_get (parameters, "(s)", &s0);
-    gchar* prop_key = s0 + 6;// +6 to skip "/IBus/"
-    if (g_ascii_strncasecmp (prop_key, "Logo", 4) == 0)
-        ibus_panel_impanel_exec_menu((IBusPanelService *)user_data);
-    else if (g_ascii_strncasecmp (prop_key, "About", 5) == 0)
-        ibus_panel_impanel_exec_dialog((IBusPanelService *)user_data);
-    else if (g_ascii_strncasecmp (prop_key, "Engine/", 7) == 0) {
-        prop_key += 7;// +7 to skip "Engine/"
-        ibus_input_context_set_engine(((IBusPanelImpanel *)user_data)->input_context, prop_key);
-    }
-    else
-#if !IBUS_CHECK_VERSION(1,3,99)
-        ibus_panel_service_property_active((IBusPanelService *)user_data, prop_key, PROP_STATE_CHECKED);
+    if (!s0 || strlen(s0) <= 6)
+        return;
+    QByteArray prop_key(s0 + 6);// +6 to skip "/IBus/"
+    prop_key.replace('!', ':');
+    if (g_ascii_strncasecmp (prop_key.constData(), "Logo", 4) == 0)
+        ibus_panel_impanel_exec_im_menu(impanel);
+    else if (g_ascii_strncasecmp (prop_key.constData(), "Engine/", 7) == 0) {
+#if IBUS_CHECK_VERSION(1,5,0)
+        ibus_bus_set_global_engine(impanel->bus, prop_key.constData() + 7);
 #else
-        ibus_panel_service_property_activate((IBusPanelService *)user_data, prop_key, PROP_STATE_CHECKED);
+        ibus_input_context_set_engine(impanel->input_context, prop_key.constData() + 7);
 #endif
+    }
+    else {
+        IBusProperty* property = impanel->propManager->property(prop_key.constData());
+        if (property) {
+            IBusPropState newstate = ibus_property_get_state(property);
+            switch (ibus_property_get_prop_type(property)) {
+                case PROP_TYPE_RADIO:
+                case PROP_TYPE_TOGGLE:
+                    if (ibus_property_get_prop_type(property) == PROP_TYPE_TOGGLE) {
+                        if (newstate == PROP_STATE_CHECKED)
+                            newstate = PROP_STATE_UNCHECKED;
+                        else if (newstate == PROP_STATE_UNCHECKED)
+                            newstate = PROP_STATE_CHECKED;
+                    }
+                    else if (ibus_property_get_prop_type(property) == PROP_TYPE_RADIO) {
+                        newstate = PROP_STATE_CHECKED;
+                    }
+                case PROP_TYPE_NORMAL:
+                    ibus_property_set_state(property, newstate);
+                    ibus_panel_service_property_activate((IBusPanelService *)impanel, prop_key.constData(), newstate);
+                    break;
+                case PROP_TYPE_MENU:
+                    ibus_panel_impanel_exec_menu(impanel, ibus_property_get_sub_props(property));
+                case PROP_TYPE_SEPARATOR:
+                    break;
+                default:
+                    break;
+            }
+        }
+        else {
+            ibus_panel_service_property_activate((IBusPanelService *)impanel, prop_key.constData(), PROP_STATE_CHECKED);
+        }
+    }
+    g_free(s0);
 }
 
 static void
@@ -379,7 +425,8 @@ on_bus_acquired (GDBusConnection *connection,
                  gpointer         user_data)
 {
     _UNUSED(name);
-    ((IBusPanelImpanel *)user_data)->conn = connection;
+    IBusPanelImpanel* impanel = ((IBusPanelImpanel *)user_data);
+    impanel->conn = connection;
 
     g_dbus_connection_register_object (connection,
                                        "/kimpanel",
@@ -402,6 +449,26 @@ on_bus_acquired (GDBusConnection *connection,
     g_dbus_connection_signal_subscribe (connection,
                                         "org.kde.impanel",
                                         "org.kde.impanel",
+                                        "PanelCreated",
+                                        "/org/kde/impanel",
+                                        NULL,
+                                        G_DBUS_SIGNAL_FLAGS_NONE,
+                                        impanel_panel_created_callback,
+                                        user_data,
+                                        NULL);
+    g_dbus_connection_signal_subscribe (connection,
+                                        "org.kde.impanel",
+                                        "org.kde.impanel",
+                                        "Exit",
+                                        "/org/kde/impanel",
+                                        NULL,
+                                        G_DBUS_SIGNAL_FLAGS_NONE,
+                                        impanel_exit_callback,
+                                        user_data,
+                                        NULL);
+    g_dbus_connection_signal_subscribe (connection,
+                                        "org.kde.impanel",
+                                        "org.kde.impanel",
                                         "Configure",
                                         "/org/kde/impanel",
                                         NULL,
@@ -409,6 +476,21 @@ on_bus_acquired (GDBusConnection *connection,
                                         impanel_configure_callback,
                                         user_data,
                                         NULL);
+
+#if IBUS_CHECK_VERSION(1,5,0)
+    IBusConfig* config = ibus_bus_get_config(impanel->bus);
+    if (config) {
+        g_signal_connect_object(config, "value-changed", (GCallback) impanel_config_value_changed_callback, impanel, (GConnectFlags) 0);
+        ibus_config_watch(config, "general", "preload_engines");
+
+        GVariant* var_engines = ibus_config_get_value(config, "general", "preload_engines");
+        impanel_update_engines(impanel, var_engines);
+        if (var_engines)
+            g_variant_unref(var_engines);
+    }
+#endif
+
+    ibus_panel_impanel_real_register_properties(impanel);
 }
 
 static void
@@ -432,46 +514,12 @@ on_name_lost (GDBusConnection *connection,
     exit (1);
 }
 
-#if !IBUS_CHECK_VERSION(1,3,99)
-GType
-ibus_panel_impanel_get_type (void)
-{
-    static GType type = 0;
-
-    static const GTypeInfo type_info = {
-        sizeof (IBusPanelImpanelClass),
-        (GBaseInitFunc)     NULL,
-        (GBaseFinalizeFunc) NULL,
-        (GClassInitFunc)    ibus_panel_impanel_class_init,
-        (GClassFinalizeFunc)NULL,
-        NULL,
-        sizeof (IBusPanelImpanel),
-        0,
-        (GInstanceInitFunc) ibus_panel_impanel_init,
-        NULL
-    };
-
-    if (type == 0) {
-        type = g_type_register_static (IBUS_TYPE_PANEL_SERVICE,
-                                       "IBusPanelImpanel",
-                                       &type_info,
-                                       (GTypeFlags) 0);
-    }
-
-    return type;
-}
-#else
 G_DEFINE_TYPE (IBusPanelImpanel, ibus_panel_impanel, IBUS_TYPE_PANEL_SERVICE)
-#endif
 
 static void
-ibus_panel_impanel_class_init (IBusPanelImpanelClass *class)
+ibus_panel_impanel_class_init (IBusPanelImpanelClass *klass)
 {
-    GObjectClass *object_class = G_OBJECT_CLASS (class);
-
-#if !IBUS_CHECK_VERSION(1,3,99)
-    parent_class = (IBusPanelServiceClass *) g_type_class_peek_parent (class);
-#endif
+    GObjectClass *object_class = G_OBJECT_CLASS (klass);
 
     IBUS_OBJECT_CLASS (object_class)->destroy = (IBusObjectDestroyFunc) ibus_panel_impanel_destroy;
     IBUS_PANEL_SERVICE_CLASS (object_class)->focus_in                   = ibus_panel_impanel_focus_in;
@@ -525,16 +573,9 @@ ibus_panel_impanel_init (IBusPanelImpanel *impanel)
                                             PROP_STATE_UNCHECKED,
                                             NULL);
 
-    impanel->about_prop = ibus_property_new ("About",
-                                             PROP_TYPE_NORMAL,
-                                             ibus_text_new_from_string ("IBus intelligent input bus"),
-                                             "ibus-help",
-                                             ibus_text_new_from_string ("IBus is an intelligent input bus for Linux/Unix.\n\n"
-                                                                        "Huang Peng <shawn.p.huang@gmail.com>"),
-                                             FALSE,
-                                             FALSE,
-                                             PROP_STATE_UNCHECKED,
-                                             NULL);
+    impanel->propManager = new PropertyManager;
+
+    impanel->engineManager = new EngineManager;
 }
 
 static void
@@ -542,103 +583,82 @@ ibus_panel_impanel_destroy (IBusPanelImpanel *impanel)
 {
     g_object_unref (impanel->logo_prop);
     impanel->logo_prop = NULL;
-    g_object_unref (impanel->about_prop);
-    impanel->about_prop = NULL;
+    delete impanel->propManager;
+    impanel->propManager = NULL;
+    delete impanel->engineManager;
+    impanel->engineManager = NULL;
 
     g_bus_unown_name (owner_id);
     g_dbus_node_info_unref (introspection_data);
 
-#if !IBUS_CHECK_VERSION(1,3,99)
-    IBUS_OBJECT_CLASS (parent_class)->destroy ((IBusObject *)impanel);
-#else
     IBUS_OBJECT_CLASS (ibus_panel_impanel_parent_class)->destroy ((IBusObject *)impanel);
-#endif
 }
 
-#if !IBUS_CHECK_VERSION(1,3,99)
-static gboolean
-ibus_panel_impanel_focus_in (IBusPanelService *panel,
-                             const gchar      *input_context_path,
-                             IBusError       **error)
-#else
 static void
 ibus_panel_impanel_focus_in (IBusPanelService *panel,
                              const gchar      *input_context_path)
-#endif
 {
-#if !IBUS_CHECK_VERSION(1,3,99)
-    IBusConnection *ibusconn;
-    _UNUSED(error);
-#else
     GDBusConnection *ibusconn;
-#endif
-    g_object_get (IBUS_PANEL_IMPANEL (panel),
+    IBusPanelImpanel* impanel = IBUS_PANEL_IMPANEL (panel);
+    g_object_get (impanel,
                   "connection", &ibusconn,
                   NULL);
 
-    IBusEngineDesc *engine_desc = ibus_bus_get_global_engine(IBUS_PANEL_IMPANEL (panel)->bus);
-
     IBusInputContext *ic = ibus_input_context_get_input_context(input_context_path, ibusconn);
-    IBUS_PANEL_IMPANEL (panel)->input_context = ic;
+    if (impanel->input_context)
+        g_object_unref(impanel->input_context);
+    impanel->input_context = ic;
+    IBusEngineDesc *engine_desc = NULL;
+#if IBUS_CHECK_VERSION(1, 5, 0)
+    engine_desc = ibus_bus_get_global_engine(impanel->bus);
+#else
+    if (impanel->input_context) {
+        engine_desc = ibus_input_context_get_engine(impanel->input_context);
+    } else {
+        engine_desc = ibus_bus_get_global_engine(impanel->bus);
+    }
+#endif
 
     const gchar* icon_name = "ibus-keyboard";
     if (engine_desc) {
-#if !IBUS_CHECK_VERSION(1,3,99)
-        icon_name = engine_desc->icon;
-#else
         icon_name = ibus_engine_desc_get_icon (engine_desc);
-#endif
     }
 
-#if !IBUS_CHECK_VERSION(1,3,99)
-    ibus_property_set_icon (IBUS_PANEL_IMPANEL (panel)->logo_prop, icon_name);
-#else
-    ibus_property_set_icon (IBUS_PANEL_IMPANEL (panel)->logo_prop, icon_name);
-#endif
+    ibus_property_set_icon (impanel->logo_prop, icon_name);
 
     char propstr[512];
     propstr[0] = '\0';
 
-    ibus_property_to_propstr(IBUS_PANEL_IMPANEL (panel)->logo_prop, propstr);
+    ibus_property_to_propstr(impanel->logo_prop, propstr);
 
-    g_dbus_connection_emit_signal (IBUS_PANEL_IMPANEL (panel)->conn,
+    if (!impanel->conn)
+        return;
+
+    g_dbus_connection_emit_signal (impanel->conn,
                                    NULL, "/kimpanel", "org.kde.kimpanel.inputmethod", "UpdateProperty",
-                                   g_variant_new ("(s)", propstr),
+                                   (g_variant_new ("(s)", propstr)),
                                    NULL);
-#if !IBUS_CHECK_VERSION(1,3,99)
-    return TRUE;
-#endif
 }
 
-#if !IBUS_CHECK_VERSION(1,3,99)
-static gboolean
-ibus_panel_impanel_focus_out (IBusPanelService *panel,
-                              const gchar      *input_context_path,
-                              IBusError       **error)
-#else
 static void
 ibus_panel_impanel_focus_out (IBusPanelService *panel,
                               const gchar      *input_context_path)
-#endif
 {
     _UNUSED(panel);
     _UNUSED(input_context_path);
-#if !IBUS_CHECK_VERSION(1,3,99)
-    _UNUSED(error);
-    return TRUE;
-#endif
 }
 
-#if !IBUS_CHECK_VERSION(1,3,99)
-static gboolean
-ibus_panel_impanel_register_properties (IBusPanelService *panel,
-                                        IBusPropList     *prop_list,
-                                        IBusError       **error)
-#else
 static void
 ibus_panel_impanel_register_properties (IBusPanelService *panel,
                                         IBusPropList     *prop_list)
-#endif
+{
+    IBusPanelImpanel* impanel = IBUS_PANEL_IMPANEL (panel);
+    impanel->propManager->setProperties(prop_list);
+    ibus_panel_impanel_real_register_properties(impanel);
+}
+
+static void
+ibus_panel_impanel_real_register_properties(IBusPanelImpanel* impanel)
 {
     IBusProperty* property = NULL;
     guint i = 0;
@@ -647,45 +667,34 @@ ibus_panel_impanel_register_properties (IBusPanelService *panel,
     GVariantBuilder builder;
     g_variant_builder_init (&builder, G_VARIANT_TYPE ("as"));
 
-    ibus_property_to_propstr(IBUS_PANEL_IMPANEL (panel)->logo_prop, propstr);
+    ibus_property_to_propstr(impanel->logo_prop, propstr, TRUE);
     g_variant_builder_add (&builder, "s", propstr);
 
-    while ( ( property = ibus_prop_list_get( prop_list, i ) ) != NULL ) {
-        ibus_property_to_propstr(property, propstr);
-        g_variant_builder_add (&builder, "s", propstr);
-        ++i;
+    IBusPropList* prop_list = impanel->propManager->properties();
+    if (prop_list) {
+        while ( ( property = ibus_prop_list_get( prop_list, i ) ) != NULL ) {
+            ibus_property_to_propstr(property, propstr, TRUE);
+            g_variant_builder_add (&builder, "s", propstr);
+            ++i;
+        }
     }
 
-    ibus_property_to_propstr(IBUS_PANEL_IMPANEL (panel)->about_prop, propstr);
-    g_variant_builder_add (&builder, "s", propstr);
+    if (!impanel->conn)
+        return;
 
-    g_dbus_connection_emit_signal (IBUS_PANEL_IMPANEL (panel)->conn,
+    g_dbus_connection_emit_signal (impanel->conn,
                                    NULL, "/kimpanel", "org.kde.kimpanel.inputmethod", "RegisterProperties",
-                                   g_variant_new ("(as)", &builder),
+                                   (g_variant_new ("(as)", &builder)),
                                    NULL);
-
-#if !IBUS_CHECK_VERSION(1,3,99)
-    _UNUSED(error);
-    return TRUE;
-#endif
 }
 
-#if !IBUS_CHECK_VERSION(1,3,99)
-static gboolean
-ibus_panel_impanel_set_cursor_location (IBusPanelService *panel,
-                                        gint              x,
-                                        gint              y,
-                                        gint              w,
-                                        gint              h,
-                                        IBusError       **error)
-#else
+
 static void
 ibus_panel_impanel_set_cursor_location (IBusPanelService *panel,
                                         gint              x,
                                         gint              y,
                                         gint              w,
                                         gint              h)
-#endif
 {
 
     g_dbus_connection_call(IBUS_PANEL_IMPANEL (panel)->conn,
@@ -693,76 +702,47 @@ ibus_panel_impanel_set_cursor_location (IBusPanelService *panel,
                             "/org/kde/impanel",
                             "org.kde.impanel2",
                             "SetSpotRect",
-                            g_variant_new("(iiii)", x, y, w, h),
+                            (g_variant_new("(iiii)", x, y, w, h)),
                             NULL,
                             G_DBUS_CALL_FLAGS_NONE,
                            -1,           /* timeout */
                            NULL,
                            NULL,
                            NULL);
-
-#if !IBUS_CHECK_VERSION(1,3,99)
-    _UNUSED(error);
-    return TRUE;
-#endif
 }
 
-#if !IBUS_CHECK_VERSION(1,3,99)
-static gboolean
-ibus_panel_impanel_update_auxiliary_text (IBusPanelService *panel,
-                                          IBusText         *text,
-                                          gboolean          visible,
-                                          IBusError       **error)
-#else
 static void
 ibus_panel_impanel_update_auxiliary_text (IBusPanelService *panel,
                                           IBusText         *text,
                                           gboolean          visible)
-#endif
 {
-#if !IBUS_CHECK_VERSION(1,3,99)
-    const gchar* t = text->text;
-#else
     const gchar* t = ibus_text_get_text (text);
-#endif
     const gchar *attr = "";
+    IBusPanelImpanel* impanel = (IBusPanelImpanel*) panel;
 
-    g_dbus_connection_emit_signal (IBUS_PANEL_IMPANEL (panel)->conn,
+    if (!impanel->conn)
+        return;
+
+    g_dbus_connection_emit_signal (impanel->conn,
                                    NULL, "/kimpanel", "org.kde.kimpanel.inputmethod", "UpdateAux",
-                                   g_variant_new ("(ss)", t, attr),
+                                   (g_variant_new ("(ss)", t, attr)),
                                    NULL);
 
     if (visible == 0)
-#if !IBUS_CHECK_VERSION(1,3,99)
-        ibus_panel_impanel_hide_auxiliary_text(panel, error);
-#else
         ibus_panel_impanel_hide_auxiliary_text(panel);
-#endif
     else
-#if !IBUS_CHECK_VERSION(1,3,99)
-        ibus_panel_impanel_show_auxiliary_text(panel, error);
-#else
         ibus_panel_impanel_show_auxiliary_text(panel);
-#endif
-#if !IBUS_CHECK_VERSION(1,3,99)
-    _UNUSED(error);
-    return TRUE;
-#endif
 }
 
-#if !IBUS_CHECK_VERSION(1,3,99)
-static gboolean
-ibus_panel_impanel_update_lookup_table (IBusPanelService *panel,
-                                        IBusLookupTable  *lookup_table,
-                                        gboolean          visible,
-                                        IBusError       **error)
-#else
 static void
 ibus_panel_impanel_update_lookup_table (IBusPanelService *panel,
                                         IBusLookupTable  *lookup_table,
                                         gboolean          visible)
-#endif
 {
+    IBusPanelImpanel* impanel = IBUS_PANEL_IMPANEL(panel);
+    if (!impanel->conn)
+        return;
+
     guint page_size = ibus_lookup_table_get_page_size(lookup_table);
     guint cursor_pos = ibus_lookup_table_get_cursor_pos(lookup_table);
     guint page = cursor_pos / page_size;
@@ -794,11 +774,7 @@ ibus_panel_impanel_update_lookup_table (IBusPanelService *panel,
 //         label = ibus_lookup_table_get_label(lookup_table, i)->text;
         g_variant_builder_add (&builder_labels, "s", label[i-start]);
 
-#if !IBUS_CHECK_VERSION(1,3,99)
-        candidate = ibus_lookup_table_get_candidate (lookup_table, i)->text;
-#else
         candidate = ibus_text_get_text (ibus_lookup_table_get_candidate (lookup_table, i));
-#endif
         g_variant_builder_add (&builder_candidates, "s", candidate);
 
         g_variant_builder_add (&builder_attrs, "s", attr);
@@ -807,13 +783,13 @@ ibus_panel_impanel_update_lookup_table (IBusPanelService *panel,
     gboolean has_prev = 1;
     gboolean has_next = 1;
 
-    g_dbus_connection_emit_signal (IBUS_PANEL_IMPANEL (panel)->conn,
+    g_dbus_connection_emit_signal (impanel->conn,
                                    NULL, "/kimpanel", "org.kde.kimpanel.inputmethod", "UpdateLookupTable",
-                                   g_variant_new ("(asasasbb)",
-                                                  &builder_labels,
-                                                  &builder_candidates,
-                                                  &builder_attrs,
-                                                  has_prev, has_next),
+                                   (g_variant_new ("(asasasbb)",
+                                                   &builder_labels,
+                                                   &builder_candidates,
+                                                   &builder_attrs,
+                                                   has_prev, has_next)),
                                    NULL);
 
     guint cursor_pos_in_page;
@@ -822,425 +798,283 @@ ibus_panel_impanel_update_lookup_table (IBusPanelService *panel,
     else
         cursor_pos_in_page = -1;
 
-    g_dbus_connection_emit_signal (IBUS_PANEL_IMPANEL (panel)->conn,
+    g_dbus_connection_emit_signal (impanel->conn,
                                    NULL, "/kimpanel", "org.kde.kimpanel.inputmethod", "UpdateLookupTableCursor",
-                                   g_variant_new ("(i)", cursor_pos_in_page),
+                                   (g_variant_new ("(i)", cursor_pos_in_page)),
                                    NULL);
 
     if (visible == 0)
-#if !IBUS_CHECK_VERSION(1,3,99)
-        ibus_panel_impanel_hide_lookup_table(panel, error);
-#else
         ibus_panel_impanel_hide_lookup_table(panel);
-#endif
     else
-#if !IBUS_CHECK_VERSION(1,3,99)
-        ibus_panel_impanel_show_lookup_table(panel, error);
-#else
         ibus_panel_impanel_show_lookup_table(panel);
-#endif
-#if !IBUS_CHECK_VERSION(1,3,99)
-    return TRUE;
-#endif
 }
 
-#if !IBUS_CHECK_VERSION(1,3,99)
-static gboolean
-ibus_panel_impanel_update_preedit_text (IBusPanelService *panel,
-                                        IBusText         *text,
-                                        guint             cursor_pos,
-                                        gboolean          visible,
-                                        IBusError       **error)
-#else
 static void
 ibus_panel_impanel_update_preedit_text (IBusPanelService *panel,
                                         IBusText         *text,
                                         guint             cursor_pos,
                                         gboolean          visible)
-#endif
 {
-#if !IBUS_CHECK_VERSION(1,3,99)
-    const gchar* t = text->text;
-#else
+    IBusPanelImpanel* impanel = IBUS_PANEL_IMPANEL(panel);
+    if (!impanel->conn)
+        return;
+
     const gchar* t = ibus_text_get_text (text);
-#endif
     const gchar *attr = "";
 
-    g_dbus_connection_emit_signal (IBUS_PANEL_IMPANEL (panel)->conn,
+    g_dbus_connection_emit_signal (impanel->conn,
                                    NULL, "/kimpanel", "org.kde.kimpanel.inputmethod", "UpdatePreeditText",
-                                   g_variant_new ("(ss)", t, attr),
+                                   (g_variant_new ("(ss)", t, attr)),
                                    NULL);
 
-    g_dbus_connection_emit_signal (IBUS_PANEL_IMPANEL (panel)->conn,
+    g_dbus_connection_emit_signal (impanel->conn,
                                    NULL, "/kimpanel", "org.kde.kimpanel.inputmethod", "UpdatePreeditCaret",
-                                   g_variant_new ("(i)", cursor_pos),
+                                   (g_variant_new ("(i)", cursor_pos)),
                                    NULL);
 
     if (visible == 0)
-#if !IBUS_CHECK_VERSION(1,3,99)
-        ibus_panel_impanel_hide_preedit_text(panel, error);
-#else
         ibus_panel_impanel_hide_preedit_text(panel);
-#endif
     else
-#if !IBUS_CHECK_VERSION(1,3,99)
-        ibus_panel_impanel_show_preedit_text(panel, error);
-#else
         ibus_panel_impanel_show_preedit_text(panel);
-#endif
-#if !IBUS_CHECK_VERSION(1,3,99)
-    _UNUSED(error);
-    return TRUE;
-#endif
 }
 
-#if !IBUS_CHECK_VERSION(1,3,99)
-static gboolean
-ibus_panel_impanel_update_property (IBusPanelService *panel,
-                                    IBusProperty     *prop,
-                                    IBusError       **error)
-#else
 static void
 ibus_panel_impanel_update_property (IBusPanelService *panel,
                                     IBusProperty     *prop)
-#endif
 {
+    IBusPanelImpanel* impanel = IBUS_PANEL_IMPANEL(panel);
+    if (!impanel->conn)
+        return;
+
+    impanel->propManager->updateProperty(prop);
+
     char propstr[512];
     propstr[0] = '\0';
 
-    ibus_property_to_propstr(prop, propstr);
+    ibus_property_to_propstr(prop, propstr, TRUE);
 
-    g_dbus_connection_emit_signal (IBUS_PANEL_IMPANEL (panel)->conn,
+    g_dbus_connection_emit_signal (impanel->conn,
                                    NULL, "/kimpanel", "org.kde.kimpanel.inputmethod", "UpdateProperty",
-                                   g_variant_new ("(s)", propstr),
+                                   (g_variant_new ("(s)", propstr)),
                                    NULL);
-#if !IBUS_CHECK_VERSION(1,3,99)
-    _UNUSED(error);
-    return TRUE;
-#endif
 }
 
-#if !IBUS_CHECK_VERSION(1,3,99)
-static gboolean
-ibus_panel_impanel_cursor_down_lookup_table (IBusPanelService *panel,
-                                             IBusError       **error)
-#else
 static void
 ibus_panel_impanel_cursor_down_lookup_table (IBusPanelService *panel)
-#endif
 {
     _UNUSED(panel);
-#if !IBUS_CHECK_VERSION(1,3,99)
-    _UNUSED(error);
-    return TRUE;
-#endif
 }
 
-#if !IBUS_CHECK_VERSION(1,3,99)
-static gboolean
-ibus_panel_impanel_cursor_up_lookup_table (IBusPanelService *panel,
-                                           IBusError       **error)
-#else
 static void
 ibus_panel_impanel_cursor_up_lookup_table (IBusPanelService *panel)
-#endif
 {
     _UNUSED(panel);
-#if !IBUS_CHECK_VERSION(1,3,99)
-    _UNUSED(error);
-    return TRUE;
-#endif
 }
 
-#if !IBUS_CHECK_VERSION(1,3,99)
-static gboolean
-ibus_panel_impanel_hide_auxiliary_text (IBusPanelService *panel,
-                                        IBusError       **error)
-#else
 static void
 ibus_panel_impanel_hide_auxiliary_text (IBusPanelService *panel)
-#endif
 {
+    IBusPanelImpanel* impanel = IBUS_PANEL_IMPANEL(panel);
+    if (!impanel->conn)
+        return;
     gboolean toShow = 0;
 
-    g_dbus_connection_emit_signal (IBUS_PANEL_IMPANEL (panel)->conn,
+    g_dbus_connection_emit_signal (impanel->conn,
                                    NULL, "/kimpanel", "org.kde.kimpanel.inputmethod", "ShowAux",
-                                   g_variant_new ("(b)", toShow),
+                                   (g_variant_new ("(b)", toShow)),
                                    NULL);
-#if !IBUS_CHECK_VERSION(1,3,99)
-    _UNUSED(error);
-    return TRUE;
-#endif
 }
 
-#if !IBUS_CHECK_VERSION(1,3,99)
-static gboolean
-ibus_panel_impanel_hide_language_bar (IBusPanelService *panel,
-                                      IBusError       **error)
-#else
 static void
 ibus_panel_impanel_hide_language_bar (IBusPanelService *panel)
-#endif
 {
     _UNUSED(panel);
-#if !IBUS_CHECK_VERSION(1,3,99)
-    _UNUSED(error);
-    return TRUE;
-#endif
 }
 
-#if !IBUS_CHECK_VERSION(1,3,99)
-static gboolean
-ibus_panel_impanel_hide_lookup_table (IBusPanelService *panel,
-                                      IBusError       **error)
-#else
 static void
 ibus_panel_impanel_hide_lookup_table (IBusPanelService *panel)
-#endif
 {
+    IBusPanelImpanel* impanel = IBUS_PANEL_IMPANEL(panel);
+    if (!impanel->conn)
+        return;
     gboolean toShow = 0;
 
-    g_dbus_connection_emit_signal (IBUS_PANEL_IMPANEL (panel)->conn,
+    g_dbus_connection_emit_signal (impanel->conn,
                                    NULL, "/kimpanel", "org.kde.kimpanel.inputmethod", "ShowLookupTable",
-                                   g_variant_new ("(b)", toShow),
+                                   (g_variant_new ("(b)", toShow)),
                                    NULL);
-#if !IBUS_CHECK_VERSION(1,3,99)
-    _UNUSED(error);
-    return TRUE;
-#endif
 }
 
-#if !IBUS_CHECK_VERSION(1,3,99)
-static gboolean
-ibus_panel_impanel_hide_preedit_text (IBusPanelService *panel,
-                                      IBusError       **error)
-#else
 static void
 ibus_panel_impanel_hide_preedit_text (IBusPanelService *panel)
-#endif
 {
+    IBusPanelImpanel* impanel = IBUS_PANEL_IMPANEL(panel);
+    if (!impanel->conn)
+        return;
     gboolean toShow = 0;
 
-    g_dbus_connection_emit_signal (IBUS_PANEL_IMPANEL (panel)->conn,
+    g_dbus_connection_emit_signal (impanel->conn,
                                    NULL, "/kimpanel", "org.kde.kimpanel.inputmethod", "ShowPreedit",
-                                   g_variant_new ("(b)", toShow),
+                                   (g_variant_new ("(b)", toShow)),
                                    NULL);
-#if !IBUS_CHECK_VERSION(1,3,99)
-    _UNUSED(error);
-    return TRUE;
-#endif
 }
 
-#if !IBUS_CHECK_VERSION(1,3,99)
-static gboolean
-ibus_panel_impanel_page_down_lookup_table (IBusPanelService *panel,
-                                           IBusError       **error)
-#else
 static void
 ibus_panel_impanel_page_down_lookup_table (IBusPanelService *panel)
-#endif
 {
     _UNUSED(panel);
-#if !IBUS_CHECK_VERSION(1,3,99)
-    _UNUSED(error);
-    return TRUE;
-#endif
 }
 
-#if !IBUS_CHECK_VERSION(1,3,99)
-static gboolean
-ibus_panel_impanel_page_up_lookup_table (IBusPanelService *panel,
-                                         IBusError       **error)
-#else
 static void
 ibus_panel_impanel_page_up_lookup_table (IBusPanelService *panel)
-#endif
 {
     _UNUSED(panel);
-#if !IBUS_CHECK_VERSION(1,3,99)
-    _UNUSED(error);
-    return TRUE;
-#endif
 }
 
-#if !IBUS_CHECK_VERSION(1,3,99)
-static gboolean
-ibus_panel_impanel_reset (IBusPanelService *panel,
-                          IBusError       **error)
-#else
 static void
 ibus_panel_impanel_reset (IBusPanelService *panel)
-#endif
 {
     _UNUSED(panel);
-#if !IBUS_CHECK_VERSION(1,3,99)
-    _UNUSED(error);
-    return TRUE;
-#endif
 }
 
-#if !IBUS_CHECK_VERSION(1,3,99)
-static gboolean
-ibus_panel_impanel_show_auxiliary_text (IBusPanelService *panel,
-                                        IBusError       **error)
-#else
 static void
 ibus_panel_impanel_show_auxiliary_text (IBusPanelService *panel)
-#endif
 {
+    IBusPanelImpanel* impanel = IBUS_PANEL_IMPANEL(panel);
+    if (!impanel->conn)
+        return;
     gboolean toShow = 1;
 
-    g_dbus_connection_emit_signal (IBUS_PANEL_IMPANEL (panel)->conn,
+    g_dbus_connection_emit_signal (impanel->conn,
                                    NULL, "/kimpanel", "org.kde.kimpanel.inputmethod", "ShowAux",
-                                   g_variant_new ("(b)", toShow),
+                                   (g_variant_new ("(b)", toShow)),
                                    NULL);
-#if !IBUS_CHECK_VERSION(1,3,99)
-    _UNUSED(error);
-    return TRUE;
-#endif
 }
 
-#if !IBUS_CHECK_VERSION(1,3,99)
-static gboolean
-ibus_panel_impanel_show_language_bar (IBusPanelService *panel,
-                                      IBusError       **error)
-#else
 static void
 ibus_panel_impanel_show_language_bar (IBusPanelService *panel)
-#endif
 {
     _UNUSED(panel);
-#if !IBUS_CHECK_VERSION(1,3,99)
-    _UNUSED(error);
-    return TRUE;
-#endif
 }
 
-#if !IBUS_CHECK_VERSION(1,3,99)
-static gboolean
-ibus_panel_impanel_show_lookup_table (IBusPanelService *panel,
-                                      IBusError       **error)
-#else
 static void
 ibus_panel_impanel_show_lookup_table (IBusPanelService *panel)
-#endif
 {
+    IBusPanelImpanel* impanel = IBUS_PANEL_IMPANEL(panel);
+    if (!impanel->conn)
+        return;
     gboolean toShow = 1;
 
-    g_dbus_connection_emit_signal (IBUS_PANEL_IMPANEL (panel)->conn,
+    g_dbus_connection_emit_signal (impanel->conn,
                                    NULL, "/kimpanel", "org.kde.kimpanel.inputmethod", "ShowLookupTable",
-                                   g_variant_new ("(b)", toShow),
+                                   (g_variant_new ("(b)", toShow)),
                                    NULL);
-#if !IBUS_CHECK_VERSION(1,3,99)
-    _UNUSED(error);
-    return TRUE;
-#endif
 }
 
-#if !IBUS_CHECK_VERSION(1,3,99)
-static gboolean
-ibus_panel_impanel_show_preedit_text (IBusPanelService *panel,
-                                      IBusError       **error)
-#else
 static void
 ibus_panel_impanel_show_preedit_text (IBusPanelService *panel)
-#endif
 {
+    IBusPanelImpanel* impanel = IBUS_PANEL_IMPANEL(panel);
+    if (!impanel->conn)
+        return;
     gboolean toShow = 1;
 
-    g_dbus_connection_emit_signal (IBUS_PANEL_IMPANEL (panel)->conn,
+    g_dbus_connection_emit_signal (impanel->conn,
                                    NULL, "/kimpanel", "org.kde.kimpanel.inputmethod", "ShowPreedit",
-                                   g_variant_new ("(b)", toShow),
+                                   (g_variant_new ("(b)", toShow)),
                                    NULL);
-#if !IBUS_CHECK_VERSION(1,3,99)
-    _UNUSED(error);
-    return TRUE;
-#endif
 }
 
-#if !IBUS_CHECK_VERSION(1,3,99)
-static gboolean
-ibus_panel_impanel_start_setup (IBusPanelService *panel,
-                                IBusError       **error)
-#else
 static void
 ibus_panel_impanel_start_setup (IBusPanelService *panel)
-#endif
 {
     _UNUSED(panel);
-#if !IBUS_CHECK_VERSION(1,3,99)
-    _UNUSED(error);
-    return TRUE;
-#endif
 }
 
-#if !IBUS_CHECK_VERSION(1,3,99)
-static gboolean
-ibus_panel_impanel_state_changed (IBusPanelService *panel,
-                                  IBusError       **error)
-#else
 static void
 ibus_panel_impanel_state_changed (IBusPanelService *panel)
-#endif
 {
-    IBusEngineDesc *engine_desc = ibus_input_context_get_engine(IBUS_PANEL_IMPANEL (panel)->input_context);
-    if (!engine_desc) {
-#if !IBUS_CHECK_VERSION(1,3,99)
-        return FALSE;
-#else
+    IBusPanelImpanel* impanel = IBUS_PANEL_IMPANEL(panel);
+    if (!impanel->conn)
         return;
+#if IBUS_CHECK_VERSION(1, 5, 0)
+    IBusEngineDesc *engine_desc = ibus_bus_get_global_engine(impanel->bus);
+#else
+    IBusEngineDesc *engine_desc = ibus_input_context_get_engine(impanel->input_context);
 #endif
+    if (!engine_desc) {
+        return;
     }
 
-#if !IBUS_CHECK_VERSION(1,3,99)
-    ibus_property_set_icon (IBUS_PANEL_IMPANEL (panel)->logo_prop, engine_desc->icon);
-#else
-    ibus_property_set_icon (IBUS_PANEL_IMPANEL (panel)->logo_prop, ibus_engine_desc_get_icon (engine_desc));
-#endif
+    ibus_property_set_icon (impanel->logo_prop, ibus_engine_desc_get_icon (engine_desc));
 
     char propstr[512];
     propstr[0] = '\0';
 
-    ibus_property_to_propstr(IBUS_PANEL_IMPANEL (panel)->logo_prop, propstr);
+    ibus_property_to_propstr(impanel->logo_prop, propstr);
 
-    g_dbus_connection_emit_signal (IBUS_PANEL_IMPANEL (panel)->conn,
+    g_dbus_connection_emit_signal (impanel->conn,
                                    NULL, "/kimpanel", "org.kde.kimpanel.inputmethod", "UpdateProperty",
-                                   g_variant_new ("(s)", propstr),
+                                   (g_variant_new ("(s)", propstr)),
                                    NULL);
 
-    g_dbus_connection_emit_signal (IBUS_PANEL_IMPANEL (panel)->conn,
+    g_dbus_connection_emit_signal (impanel->conn,
                                    NULL, "/kimpanel", "org.kde.kimpanel.inputmethod", "Enable",
-                                   g_variant_new ("(b)", TRUE),
-                                   NULL);
-#if !IBUS_CHECK_VERSION(1,3,99)
-    _UNUSED(error);
-    return TRUE;
-#endif
-}
-
-static void
-ibus_panel_impanel_exec_dialog (IBusPanelService *panel)
-{
-    char propstr[512];
-    propstr[0] = '\0';
-
-    ibus_property_to_propstr(IBUS_PANEL_IMPANEL (panel)->about_prop, propstr);
-
-    g_dbus_connection_emit_signal (IBUS_PANEL_IMPANEL (panel)->conn,
-                                   NULL, "/kimpanel", "org.kde.kimpanel.inputmethod", "ExecDialog",
-                                   g_variant_new ("(s)", propstr),
+                                   (g_variant_new ("(b)", TRUE)),
                                    NULL);
 }
 
 static void
-ibus_panel_impanel_exec_menu (IBusPanelService *panel)
+ibus_panel_impanel_exec_menu(IBusPanelImpanel* impanel,
+                             IBusPropList* prop_list)
 {
     char propstr[512];
+    if (!impanel->conn)
+        return;
 
     GVariantBuilder builder;
     g_variant_builder_init (&builder, G_VARIANT_TYPE ("as"));
 
-    GList *engines = ibus_bus_list_active_engines (IBUS_PANEL_IMPANEL (panel)->bus);
+    int i = 0;
+    while (true) {
+        IBusProperty* prop = ibus_prop_list_get(prop_list, i);
+        if (!prop)
+            break;
+        ibus_property_to_propstr(prop, propstr);
+        g_variant_builder_add (&builder, "s", propstr);
+        i ++;
+    }
+
+    g_dbus_connection_emit_signal (impanel->conn,
+                                   NULL, "/kimpanel", "org.kde.kimpanel.inputmethod", "ExecMenu",
+                                   (g_variant_new ("(as)", &builder)),
+                                   NULL);
+}
+
+
+static void
+ibus_panel_impanel_exec_im_menu (IBusPanelImpanel* impanel)
+{
+    char propstr[512];
+    if (!impanel->conn)
+        return;
+
+    GVariantBuilder builder;
+    g_variant_builder_init (&builder, G_VARIANT_TYPE ("as"));
+
+#if IBUS_CHECK_VERSION(1,5,0)
+    IBusEngineDesc** engines = impanel->engineManager->engines();
+    if (engines) {
+        int i = 0;
+        while (engines[i]) {
+            ibus_engine_desc_to_propstr(engines[i], propstr);
+            g_variant_builder_add (&builder, "s", propstr);
+            i ++;
+        }
+    }
+
+#else
+    GList *engines = ibus_bus_list_active_engines (impanel->bus);
     IBusEngineDesc *engine_desc = NULL;
     GList *node = g_list_first (engines);
     while (node) {
@@ -1250,27 +1084,20 @@ ibus_panel_impanel_exec_menu (IBusPanelService *panel)
         ibus_engine_desc_to_propstr(engine_desc, propstr);
         g_variant_builder_add (&builder, "s", propstr);
     }
+#endif
 
-    g_dbus_connection_emit_signal (IBUS_PANEL_IMPANEL (panel)->conn,
+    g_dbus_connection_emit_signal (impanel->conn,
                                    NULL, "/kimpanel", "org.kde.kimpanel.inputmethod", "ExecMenu",
-                                   g_variant_new ("(as)", &builder),
+                                   (g_variant_new ("(as)", &builder)),
                                    NULL);
 }
 
 IBusPanelImpanel *
-#if !IBUS_CHECK_VERSION(1,3,99)
-ibus_panel_impanel_new (IBusConnection     *connection)
-#else
 ibus_panel_impanel_new (GDBusConnection    *connection)
-#endif
 {
     IBusPanelImpanel *panel;
     panel = (IBusPanelImpanel *) g_object_new (IBUS_TYPE_PANEL_IMPANEL,
-#if !IBUS_CHECK_VERSION(1,3,99)
-                                               "path", IBUS_PATH_PANEL,
-#else
                                                "object-path", IBUS_PATH_PANEL,
-#endif
                                                "connection", connection,
                                                NULL);
     return panel;
