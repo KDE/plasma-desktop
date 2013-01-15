@@ -24,7 +24,7 @@ else (IBUS_LIBRARIES AND IBUS_INCLUDE_DIR)
       # use pkg-config to get the directories and then use these values
       # in the FIND_PATH() and FIND_LIBRARY() calls
       find_package(PkgConfig)
-      pkg_check_modules(PC_IBUS ibus-1.0>=1.4.0)
+      pkg_check_modules(PC_IBUS "ibus-1.0>=1.4.2")
 
       set(IBUS_DEFINITIONS ${PC_IBUS_CFLAGS_OTHER})
    endif (NOT WIN32)
