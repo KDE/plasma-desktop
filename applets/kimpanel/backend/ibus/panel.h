@@ -37,8 +37,6 @@
 #define IBUS_PANEL_IMPANEL_GET_CLASS(obj)   \
     (G_TYPE_INSTANCE_GET_CLASS ((obj), IBUS_TYPE_PANEL_IMPANEL, IBusPanelImpanelClass))
 
-G_BEGIN_DECLS
-
 typedef struct _IBusPanelImpanel IBusPanelImpanel;
 
 GType               ibus_panel_impanel_get_type     (void);
@@ -49,7 +47,5 @@ IBusPanelImpanel   *ibus_panel_impanel_new          (GDBusConnection    *connect
 #endif
 void                ibus_panel_impanel_set_bus      (IBusPanelImpanel   *impanel,
                                                      IBusBus            *bus);
-
-G_END_DECLS
 
 #endif
