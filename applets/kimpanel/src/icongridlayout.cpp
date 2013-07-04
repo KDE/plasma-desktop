@@ -235,9 +235,9 @@ QSizeF IconGridLayout::sizeHint(
     case Qt::PreferredSize: return m_preferredSizeHint;
     case Qt::MinimumSize:
         if (m_mode == PreferRows) {
-            return QSizeF(m_preferredSizeHint.width(), KIconLoader::SizeSmall);
+            return QSizeF(m_preferredSizeHint.width(), IconSize(KIconLoader::Small));
         } else {
-            return QSizeF(KIconLoader::SizeSmall, m_preferredSizeHint.height());
+            return QSizeF(IconSize(KIconLoader::Small), m_preferredSizeHint.height());
         }
 
     default:

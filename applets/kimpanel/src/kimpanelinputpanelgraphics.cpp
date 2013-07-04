@@ -301,10 +301,10 @@ void KimpanelInputPanelGraphics::updateLookupTable()
     m_pageUpIcon->setVisible(iconVisible);
     m_pageDownIcon->setVisible(iconVisible);
     if (iconVisible) {
-        m_pageUpIcon->setMinimumSize(KIconLoader::SizeSmall, KIconLoader::SizeSmall);
-        m_pageUpIcon->setMaximumSize(KIconLoader::SizeSmall, KIconLoader::SizeSmall);
-        m_pageDownIcon->setMinimumSize(KIconLoader::SizeSmall, KIconLoader::SizeSmall);
-        m_pageDownIcon->setMaximumSize(KIconLoader::SizeSmall, KIconLoader::SizeSmall);
+        m_pageUpIcon->setMinimumSize(IconSize(KIconLoader::Small), IconSize(KIconLoader::Small));
+        m_pageUpIcon->setMaximumSize(IconSize(KIconLoader::Small), IconSize(KIconLoader::Small));
+        m_pageDownIcon->setMinimumSize(IconSize(KIconLoader::Small), IconSize(KIconLoader::Small));
+        m_pageDownIcon->setMaximumSize(IconSize(KIconLoader::Small), IconSize(KIconLoader::Small));
     }
     else {
         m_pageUpIcon->setMinimumSize(0, 0);

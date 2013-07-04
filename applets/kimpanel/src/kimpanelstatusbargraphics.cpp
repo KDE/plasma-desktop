@@ -129,8 +129,8 @@ void KimpanelStatusBarGraphics::updateIcon()
         else {
             iconWidget = new Plasma::IconWidget;
             m_iconMap[property.key] = iconWidget;
-            iconWidget->setMaximumIconSize(QSizeF(KIconLoader::SizeSmallMedium, KIconLoader::SizeSmallMedium));
-            iconWidget->setMinimumIconSize(QSizeF(KIconLoader::SizeSmallMedium, KIconLoader::SizeSmallMedium));
+            iconWidget->setMaximumIconSize(QSizeF(IconSize(KIconLoader::Toolbar), IconSize(KIconLoader::Toolbar)));
+            iconWidget->setMinimumIconSize(QSizeF(IconSize(KIconLoader::Toolbar), IconSize(KIconLoader::Toolbar)));
             m_propertyMapper->setMapping(iconWidget, property.key);
             connect(iconWidget, SIGNAL(clicked()), m_propertyMapper, SLOT(map()));
         }
@@ -145,7 +145,7 @@ void KimpanelStatusBarGraphics::updateIcon()
                 }
 
                 QFont font = KimpanelSettings::self()->font();
-                font.setPixelSize(KIconLoader::SizeSmallMedium);
+                font.setPixelSize(IconSize(KIconLoader::Toolbar));
                 QString iconString;
                 // FIXME: since qt doesn't provide wcswidth equivalent yet, we only check ascii for now
                 if (property.label.length() >= 2 && property.label[0].unicode() < 128 && property.label[1].unicode() < 128)
