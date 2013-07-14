@@ -54,10 +54,10 @@ bool TouchpadBackend::execSynclient(QProcess &process, const QString &arg)
 void TouchpadBackend::setParameter(const char *param, const QString &value)
 {
     QString option(param);
-    if (m_currentParameters.contains(option)) {
-        if (m_currentParameters[option].toString() == value) {
-            return;
-        }
+    if (!m_currentParameters.contains(option) ||
+            m_currentParameters[option].toString() == value)
+    {
+        return;
     }
 
     option.append('=');
