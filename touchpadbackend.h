@@ -2,37 +2,27 @@
 #define TOUCHPADBACKEND_H
 
 #include <QObject>
-#include <QVariantMap>
 #include <QStringList>
 
-class QProcess;
+#include <KGlobal>
+
 class TouchpadParameters;
 
-class TouchpadBackend : public QObject
+class KDE_EXPORT TouchpadBackend : public QObject
 {
     Q_OBJECT
-
 public:
+    explicit TouchpadBackend(QObject *parent);
+
     static TouchpadBackend *self();
 
-    void applyConfig(const TouchpadParameters *);
-    void getConfig(TouchpadParameters *, QStringList *supportedParameters = 0);
+    virtual void applyConfig(const TouchpadParameters *) = 0;
+    virtual void getConfig(TouchpadParameters *,
+                           QStringList *supportedParameters = 0) = 0;
+    virtual bool test() = 0;
 
 Q_SIGNALS:
     void error(const QString &);
-
-private:
-    bool execSynclient(QProcess &process, const QString &arg);
-
-    bool getParameters();
-
-    bool m_stop;
-    QVariantMap m_currentParameters;
-    void setParameter(const char *param, const QString &value);
-    void setParameter(const char *param, int value);
-
-    TouchpadBackend();
-    Q_DISABLE_COPY(TouchpadBackend)
 };
 
 #endif // TOUCHPADBACKEND_H
