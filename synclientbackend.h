@@ -19,14 +19,9 @@ public:
 
 private:
     bool execSynclient(QProcess &process, const QString &arg);
-
     bool getParameters();
 
-    bool m_stop;
     QVariantMap m_currentParameters;
-    void setParameter(const char *param, const QString &value);
-    void setParameter(const char *param, int value);
-    void setParameter(const char *param, double value);
 };
 
 #endif // SYNCLIENTBACKEND_H

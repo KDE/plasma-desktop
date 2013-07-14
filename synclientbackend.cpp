@@ -56,32 +56,6 @@ bool SynclientBackend::execSynclient(QProcess &process, const QString &arg)
     return true;
 }
 
-void SynclientBackend::setParameter(const char *param, const QString &value)
-{
-    QString option(param);
-    if (!m_currentParameters.contains(option) ||
-            m_currentParameters[option].toString() == value)
-    {
-        return;
-    }
-
-    option.append('=');
-    option.append(value);
-
-    QProcess process;
-    execSynclient(process, option);
-}
-
-void SynclientBackend::setParameter(const char *param, int value)
-{
-    setParameter(param, QString::number(value));
-}
-
-void SynclientBackend::setParameter(const char *param, double value)
-{
-    setParameter(param, QString::number(value, 'g', 10));
-}
-
 bool SynclientBackend::getParameters()
 {
     m_currentParameters.clear();
@@ -118,44 +92,33 @@ bool SynclientBackend::getParameters()
     }
 }
 
-template<typename T, typename T2>
-void setParameterValue(const QVariantMap &m, const char *name,
-                       TouchpadParameters *p,
-                       void (TouchpadParameters::* setter)(T2),
-                       const char *kConfigName, QStringList *supportedParams)
-{
-    QString param(name);
-    if (!m.contains(param)) {
-        return;
-    }
-    const QVariant &v = m[param];
-    if (v.canConvert<T>()) {
-        (p->*setter)(static_cast<T2>(qvariant_cast<T>(v)));
-        if (supportedParams) {
-            supportedParams->append(kConfigName);
-        }
-    }
-}
-
 void SynclientBackend::applyConfig(const TouchpadParameters *p)
 {
     if (!getParameters()) {
         return;
     }
 
-    setParameter("TapButton1", p->tapButton1());
-    setParameter("TapButton2", p->tapButton2());
-    setParameter("TapButton3", p->tapButton3());
+    Q_FOREACH(KConfigSkeletonItem *i, p->items()) {
+        QString option(i->name());
 
-    setParameter("VertEdgeScroll", p->vertEdgeScroll());
-    setParameter("VertTwoFingerScroll", p->vertTwoFingerScroll());
+        QVariant variantValue(i->property());
+        if (variantValue.type() == QVariant::Bool) {
+            variantValue.convert(QVariant::Int);
+        }
 
-    setParameter("HorizEdgeScroll", p->horizEdgeScroll());
-    setParameter("HorizTwoFingerScroll", p->horizTwoFingerScroll());
+        QString value(variantValue.toString());
+        if (!m_currentParameters.contains(option) ||
+                m_currentParameters[option].toString() == value)
+        {
+            continue;
+        }
 
-    setParameter("MinSpeed", p->minSpeed());
-    setParameter("MaxSpeed", p->maxSpeed());
-    setParameter("AccelFactor", p->accelFactor());
+        option.append('=');
+        option.append(value);
+
+        QProcess process;
+        execSynclient(process, option);
+    }
 }
 
 void SynclientBackend::getConfig(TouchpadParameters *p,
@@ -169,24 +132,23 @@ void SynclientBackend::getConfig(TouchpadParameters *p,
         return;
     }
 
-#define TOUCHPAD_PARAM(type, kconfigName, xName) \
-    setParameterValue<type>(m_currentParameters, xName, p, \
-    &TouchpadParameters::set##kconfigName, #kconfigName, supportedParameters)
-#define TOUCHPAD_PARAM_SAME(type, name) TOUCHPAD_PARAM(type, name, #name)
+    for (QVariantMap::ConstIterator i = m_currentParameters.begin();
+         i != m_currentParameters.end(); i++)
+    {
+        KConfigSkeletonItem *item = p->findItem(i.key());
+        if (!item) {
+            continue;
+        }
 
-    TOUCHPAD_PARAM_SAME(int, TapButton1);
-    TOUCHPAD_PARAM_SAME(int, TapButton2);
-    TOUCHPAD_PARAM_SAME(int, TapButton3);
+        QVariant value(i.value());
+        if (!value.convert(item->property().type())) {
+            continue;
+        }
 
-    TOUCHPAD_PARAM_SAME(int, VertEdgeScroll);
-    TOUCHPAD_PARAM_SAME(int, VertTwoFingerScroll);
-    TOUCHPAD_PARAM_SAME(int, HorizEdgeScroll);
-    TOUCHPAD_PARAM_SAME(int, HorizTwoFingerScroll);
+        item->setProperty(i.value());
 
-    TOUCHPAD_PARAM_SAME(double, MinSpeed);
-    TOUCHPAD_PARAM_SAME(double, MaxSpeed);
-    TOUCHPAD_PARAM_SAME(double, AccelFactor);
-
-#undef TOUCHPAD_PARAM_SAME
-#undef TOUCHPAD_PARAM
+        if (supportedParameters) {
+            supportedParameters->append(i.key());
+        }
+    }
 }
