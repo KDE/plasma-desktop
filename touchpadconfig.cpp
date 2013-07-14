@@ -1,0 +1,110 @@
+#include "touchpadconfig.h"
+
+#include <QBoxLayout>
+
+#include <KPluginFactory>
+#include <KLocalizedString>
+#include <KMessageWidget>
+
+#include "touchpadbackend.h"
+
+K_PLUGIN_FACTORY(TouchpadConfigFactory, registerPlugin<TouchpadConfig>();)
+K_EXPORT_PLUGIN(TouchpadConfigFactory("kcm_touchpad"))
+
+extern "C"
+{
+    KDE_EXPORT void kcminit_touchpad()
+    {
+        TouchpadBackend *backend = TouchpadBackend::self();
+
+        if (!backend) {
+            return;
+        }
+
+        TouchpadParameters config;
+        backend->getConfig(&config);
+        Q_FOREACH(KConfigSkeletonItem *i, config.items()) {
+            i->swapDefault();
+        }
+
+        config.readConfig();
+        backend->applyConfig(&config);
+    }
+}
+
+static void disableChildren(QWidget *widget)
+{
+    widget->setEnabled(false);
+    Q_FOREACH(QObject *child, widget->children()) {
+        QWidget *childWidget = qobject_cast<QWidget *>(child);
+        if (childWidget) {
+            disableChildren(childWidget);
+        }
+    }
+}
+
+TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
+    : KCModule(TouchpadConfigFactory::componentData(), parent, args)
+{
+    setupUi(this);
+
+    m_message = new KMessageWidget(this);
+    m_message->setVisible(false);
+    verticalLayout->insertWidget(0, m_message);
+
+    QStringList mouseButtons;
+    mouseButtons << "Disabled"
+                 << "Left button" << "Middle button" << "Right button";
+    kcfg_OneFingerTap->insertItems(0, mouseButtons);
+    kcfg_TwoFingerTap->insertItems(0, mouseButtons);
+    kcfg_ThreeFingerTap->insertItems(0, mouseButtons);
+
+    m_backend = TouchpadBackend::self();
+    if (!m_backend) {
+        disableChildren(this);
+        setButtons(NoAdditionalButton);
+        showError("No backend found");
+        return;
+    }
+    connect(m_backend, SIGNAL(error(QString)), SLOT(showError(QString)));
+
+    if (!m_backend->test()) {
+        disableChildren(this);
+        setButtons(NoAdditionalButton);
+        if (m_message->text().isEmpty()) {
+            showError("No touchpad found");
+        }
+        m_backend = 0;
+        return;
+    }
+
+    addConfig(&m_config, this);
+}
+
+void TouchpadConfig::showError(const QString &errorString)
+{
+    m_message->setText(errorString);
+    m_message->setMessageType(KMessageWidget::Error);
+    m_message->animatedShow();
+}
+
+void TouchpadConfig::save()
+{
+    if (!m_backend) {
+        return;
+    }
+
+    m_message->animatedHide();
+    KCModule::save();
+    m_backend->applyConfig(&m_config);
+
+    load();
+}
+
+void TouchpadConfig::load()
+{
+    if (m_backend) {
+        m_backend->getConfig(&m_config);
+    }
+    KCModule::load();
+}

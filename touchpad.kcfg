@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg>
+    <kcfgfile name="touchpadrc"/>
+    <group name="parameters">
+        <entry name="OneFingerTap" type="Enum">
+            <choices name="Button">
+                <choice name="NoButton"/>
+                <choice name="LeftButton"/>
+                <choice name="MiddleButton"/>
+                <choice name="RightButton"/>
+            </choices>
+            <default>NoButton</default>
+        </entry>
+        <entry name="TwoFingerTap" type="Enum">
+            <choices name="Button" />
+            <default>NoButton</default>
+        </entry>
+        <entry name="ThreeFingerTap" type="Enum">
+            <choices name="Button" />
+            <default>NoButton</default>
+        </entry>
+        <entry name="VertEdgeScroll" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="VertTwoFingerScroll" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="HorizEdgeScroll" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="HorizTwoFingerScroll" type="Bool">
+            <default>false</default>
+        </entry>
+    </group>
+</kcfg>
