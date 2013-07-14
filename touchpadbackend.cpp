@@ -172,8 +172,3 @@ void TouchpadBackend::getConfig(TouchpadParameters *p,
 #undef TOUCHPAD_PARAM_SAME
 #undef TOUCHPAD_PARAM
 }
-
-bool TouchpadBackend::test()
-{
-    return getParameters();
-}

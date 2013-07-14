@@ -76,16 +76,6 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
     }
     connect(m_backend, SIGNAL(error(QString)), SLOT(showError(QString)));
 
-    if (!m_backend->test()) {
-        disableChildren(this);
-        setButtons(NoAdditionalButton);
-        if (m_message->text().isEmpty()) {
-            showError("No touchpad found");
-        }
-        m_backend = 0;
-        return;
-    }
-
     addConfig(&m_config, this);
 }
 

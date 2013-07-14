@@ -18,8 +18,6 @@ public:
     void applyConfig(const TouchpadParameters *);
     void getConfig(TouchpadParameters *, QStringList *supportedParameters = 0);
 
-    bool test();
-
 Q_SIGNALS:
     void error(const QString &);
 
