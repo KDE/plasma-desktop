@@ -63,9 +63,9 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
     QStringList mouseButtons;
     mouseButtons << "Disabled"
                  << "Left button" << "Middle button" << "Right button";
-    kcfg_OneFingerTap->insertItems(0, mouseButtons);
-    kcfg_TwoFingerTap->insertItems(0, mouseButtons);
-    kcfg_ThreeFingerTap->insertItems(0, mouseButtons);
+    kcfg_TapButton1->insertItems(0, mouseButtons);
+    kcfg_TapButton2->insertItems(0, mouseButtons);
+    kcfg_TapButton3->insertItems(0, mouseButtons);
 
     m_backend = TouchpadBackend::self();
     if (!m_backend) {

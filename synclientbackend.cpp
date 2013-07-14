@@ -143,9 +143,9 @@ void SynclientBackend::applyConfig(const TouchpadParameters *p)
         return;
     }
 
-    setParameter("TapButton1", p->oneFingerTap());
-    setParameter("TapButton2", p->twoFingerTap());
-    setParameter("TapButton3", p->threeFingerTap());
+    setParameter("TapButton1", p->tapButton1());
+    setParameter("TapButton2", p->tapButton2());
+    setParameter("TapButton3", p->tapButton3());
 
     setParameter("VertEdgeScroll", p->vertEdgeScroll());
     setParameter("VertTwoFingerScroll", p->vertTwoFingerScroll());
@@ -172,12 +172,12 @@ void SynclientBackend::getConfig(TouchpadParameters *p,
 #define TOUCHPAD_PARAM(type, kconfigName, xName) \
     setParameterValue<type>(m_currentParameters, xName, p, \
     &TouchpadParameters::set##kconfigName, #kconfigName, supportedParameters)
-
-    TOUCHPAD_PARAM(int, OneFingerTap, "TapButton1");
-    TOUCHPAD_PARAM(int, TwoFingerTap, "TapButton2");
-    TOUCHPAD_PARAM(int, ThreeFingerTap, "TapButton3");
-
 #define TOUCHPAD_PARAM_SAME(type, name) TOUCHPAD_PARAM(type, name, #name)
+
+    TOUCHPAD_PARAM_SAME(int, TapButton1);
+    TOUCHPAD_PARAM_SAME(int, TapButton2);
+    TOUCHPAD_PARAM_SAME(int, TapButton3);
+
     TOUCHPAD_PARAM_SAME(int, VertEdgeScroll);
     TOUCHPAD_PARAM_SAME(int, VertTwoFingerScroll);
     TOUCHPAD_PARAM_SAME(int, HorizEdgeScroll);

@@ -2,7 +2,7 @@
 <kcfg>
     <kcfgfile name="touchpadrc"/>
     <group name="parameters">
-        <entry name="OneFingerTap" type="Enum">
+        <entry name="TapButton1" type="Enum">
             <choices name="Button">
                 <choice name="NoButton"/>
                 <choice name="LeftButton"/>
@@ -11,11 +11,11 @@
             </choices>
             <default>NoButton</default>
         </entry>
-        <entry name="TwoFingerTap" type="Enum">
+        <entry name="TapButton2" type="Enum">
             <choices name="Button" />
             <default>NoButton</default>
         </entry>
-        <entry name="ThreeFingerTap" type="Enum">
+        <entry name="TapButton3" type="Enum">
             <choices name="Button" />
             <default>NoButton</default>
         </entry>
