@@ -77,6 +77,11 @@ void SynclientBackend::setParameter(const char *param, int value)
     setParameter(param, QString::number(value));
 }
 
+void SynclientBackend::setParameter(const char *param, double value)
+{
+    setParameter(param, QString::number(value, 'g', 10));
+}
+
 bool SynclientBackend::getParameters()
 {
     m_currentParameters.clear();
@@ -147,6 +152,10 @@ void SynclientBackend::applyConfig(const TouchpadParameters *p)
 
     setParameter("HorizEdgeScroll", p->horizEdgeScroll());
     setParameter("HorizTwoFingerScroll", p->horizTwoFingerScroll());
+
+    setParameter("MinSpeed", p->minSpeed());
+    setParameter("MaxSpeed", p->maxSpeed());
+    setParameter("AccelFactor", p->accelFactor());
 }
 
 void SynclientBackend::getConfig(TouchpadParameters *p,
@@ -173,6 +182,10 @@ void SynclientBackend::getConfig(TouchpadParameters *p,
     TOUCHPAD_PARAM_SAME(int, VertTwoFingerScroll);
     TOUCHPAD_PARAM_SAME(int, HorizEdgeScroll);
     TOUCHPAD_PARAM_SAME(int, HorizTwoFingerScroll);
+
+    TOUCHPAD_PARAM_SAME(double, MinSpeed);
+    TOUCHPAD_PARAM_SAME(double, MaxSpeed);
+    TOUCHPAD_PARAM_SAME(double, AccelFactor);
 
 #undef TOUCHPAD_PARAM_SAME
 #undef TOUCHPAD_PARAM

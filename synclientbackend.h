@@ -26,6 +26,7 @@ private:
     QVariantMap m_currentParameters;
     void setParameter(const char *param, const QString &value);
     void setParameter(const char *param, int value);
+    void setParameter(const char *param, double value);
 };
 
 #endif // SYNCLIENTBACKEND_H
