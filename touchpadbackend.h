@@ -3,6 +3,7 @@
 
 #include <QObject>
 #include <QVariantMap>
+#include <QStringList>
 
 class QProcess;
 class TouchpadParameters;
@@ -15,7 +16,7 @@ public:
     static TouchpadBackend *self();
 
     void applyConfig(const TouchpadParameters *);
-    void getConfig(TouchpadParameters *);
+    void getConfig(TouchpadParameters *, QStringList *supportedParameters = 0);
 
     bool test();
 

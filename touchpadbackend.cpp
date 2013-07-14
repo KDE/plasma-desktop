@@ -111,7 +111,8 @@ bool TouchpadBackend::getParameters()
 template<typename T, typename T2>
 void setParameterValue(const QVariantMap &m, const char *name,
                        TouchpadParameters *p,
-                       void (TouchpadParameters::* setter)(T2))
+                       void (TouchpadParameters::* setter)(T2),
+                       const char *kConfigName, QStringList *supportedParams)
 {
     QString param(name);
     if (!m.contains(param)) {
@@ -120,6 +121,9 @@ void setParameterValue(const QVariantMap &m, const char *name,
     const QVariant &v = m[param];
     if (v.canConvert<T>()) {
         (p->*setter)(static_cast<T2>(qvariant_cast<T>(v)));
+        if (supportedParams) {
+            supportedParams->append(kConfigName);
+        }
     }
 }
 
@@ -140,28 +144,33 @@ void TouchpadBackend::applyConfig(const TouchpadParameters *p)
     setParameter("HorizTwoFingerScroll", p->horizTwoFingerScroll());
 }
 
-void TouchpadBackend::getConfig(TouchpadParameters *p)
+void TouchpadBackend::getConfig(TouchpadParameters *p,
+                                QStringList *supportedParameters)
 {
+    if (supportedParameters) {
+        supportedParameters->clear();
+    }
+
     if (!getParameters()) {
         return;
     }
 
-    setParameterValue<int>(m_currentParameters, "TapButton1", p,
-                           &TouchpadParameters::setOneFingerTap);
-    setParameterValue<int>(m_currentParameters, "TapButton2", p,
-                           &TouchpadParameters::setTwoFingerTap);
-    setParameterValue<int>(m_currentParameters, "TapButton3", p,
-                           &TouchpadParameters::setThreeFingerTap);
+#define TOUCHPAD_PARAM(type, kconfigName, xName) \
+    setParameterValue<type>(m_currentParameters, xName, p, \
+    &TouchpadParameters::set##kconfigName, #kconfigName, supportedParameters)
 
-    setParameterValue<int>(m_currentParameters, "VertEdgeScroll", p,
-                           &TouchpadParameters::setVertEdgeScroll);
-    setParameterValue<int>(m_currentParameters, "VertTwoFingerScroll", p,
-                           &TouchpadParameters::setVertTwoFingerScroll);
+    TOUCHPAD_PARAM(int, OneFingerTap, "TapButton1");
+    TOUCHPAD_PARAM(int, TwoFingerTap, "TapButton2");
+    TOUCHPAD_PARAM(int, ThreeFingerTap, "TapButton3");
 
-    setParameterValue<int>(m_currentParameters, "HorizEdgeScroll", p,
-                           &TouchpadParameters::setHorizEdgeScroll);
-    setParameterValue<int>(m_currentParameters, "HorizTwoFingerScroll", p,
-                           &TouchpadParameters::setHorizTwoFingerScroll);
+#define TOUCHPAD_PARAM_SAME(type, name) TOUCHPAD_PARAM(type, name, #name)
+    TOUCHPAD_PARAM_SAME(int, VertEdgeScroll);
+    TOUCHPAD_PARAM_SAME(int, VertTwoFingerScroll);
+    TOUCHPAD_PARAM_SAME(int, HorizEdgeScroll);
+    TOUCHPAD_PARAM_SAME(int, HorizTwoFingerScroll);
+
+#undef TOUCHPAD_PARAM_SAME
+#undef TOUCHPAD_PARAM
 }
 
 bool TouchpadBackend::test()

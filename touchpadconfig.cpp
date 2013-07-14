@@ -32,13 +32,21 @@ extern "C"
     }
 }
 
-static void disableChildren(QWidget *widget)
+static void disableChildren(QWidget *widget,
+                            const QStringList &enable = QStringList())
 {
-    widget->setEnabled(false);
+    static const QString kcfgPrefix("kcfg_");
+
+    QString name(widget->objectName());
+    if (name.startsWith(kcfgPrefix)) {
+        name.remove(0, kcfgPrefix.length());
+        widget->setEnabled(enable.contains(name));
+    }
+
     Q_FOREACH(QObject *child, widget->children()) {
         QWidget *childWidget = qobject_cast<QWidget *>(child);
         if (childWidget) {
-            disableChildren(childWidget);
+            disableChildren(childWidget, enable);
         }
     }
 }
@@ -104,7 +112,9 @@ void TouchpadConfig::save()
 void TouchpadConfig::load()
 {
     if (m_backend) {
-        m_backend->getConfig(&m_config);
+        QStringList supportedParams;
+        m_backend->getConfig(&m_config, &supportedParams);
+        disableChildren(this, supportedParams);
     }
     KCModule::load();
 }
