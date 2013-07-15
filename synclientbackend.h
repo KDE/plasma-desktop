@@ -22,8 +22,6 @@ private:
     bool getParameters();
 
     QVariantMap m_currentParameters;
-    QMap<QString, void (*)(QVariant &)> m_inputConv;
-    QMap<QString, void (*)(QVariant &)> m_outputConv;
 };
 
 #endif // SYNCLIENTBACKEND_H

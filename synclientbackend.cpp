@@ -12,54 +12,9 @@
 K_PLUGIN_FACTORY(TouchpadBackendFactory, registerPlugin<SynclientBackend>();)
 K_EXPORT_PLUGIN(TouchpadBackendFactory("synclient_touchpad"))
 
-static const double speedScale = 100.0;
-static const double speedBase = 10.0;
-static const double accelFactorScale = 1000000.0;
-static const double accelFactorBase = 10.0;
-
-static void speedInputConv(QVariant &v)
-{
-    if (!v.convert(QVariant::Double)) {
-        return;
-    }
-    v = QVariant(qLn(1.0 + v.toDouble() * speedBase) * speedScale);
-}
-
-static void speedOutputConv(QVariant &v)
-{
-    if (!v.convert(QVariant::Double)) {
-        return;
-    }
-    v = QVariant((qExp(v.toDouble() / speedScale) - 1.0) / speedBase);
-}
-
-static void accelFactorInputConv(QVariant &v)
-{
-    if (!v.convert(QVariant::Double)) {
-        return;
-    }
-    v = QVariant(qLn(1.0 + v.toDouble() * accelFactorBase) * accelFactorScale);
-}
-
-static void accelFactorOutputConv(QVariant &v)
-{
-    if (!v.convert(QVariant::Double)) {
-        return;
-    }
-    v = QVariant((qExp(v.toDouble() / accelFactorScale) - 1.0)
-                 / accelFactorBase);
-}
-
 SynclientBackend::SynclientBackend(QObject *parent, const QVariantList &)
     : TouchpadBackend(parent)
 {
-    m_inputConv["MinSpeed"] = speedInputConv;
-    m_outputConv["MinSpeed"] = speedOutputConv;
-    m_inputConv["MaxSpeed"] = speedInputConv;
-    m_outputConv["MaxSpeed"] = speedOutputConv;
-
-    m_inputConv["AccelFactor"] = accelFactorInputConv;
-    m_outputConv["AccelFactor"] = accelFactorOutputConv;
 }
 
 bool SynclientBackend::test()
@@ -151,9 +106,6 @@ void SynclientBackend::applyConfig(const TouchpadParameters *p)
         if (variantValue.type() == QVariant::Bool) {
             variantValue.convert(QVariant::Int);
         }
-        if (m_outputConv.contains(option)) {
-            m_outputConv[option](variantValue);
-        }
 
         QString value(variantValue.toString());
         if (!m_currentParameters.contains(option) ||
@@ -190,10 +142,6 @@ void SynclientBackend::getConfig(TouchpadParameters *p,
         }
 
         QVariant value(i.value());
-        if (m_inputConv.contains(i.key())) {
-            m_inputConv[i.key()](value);
-        }
-
         if (!value.convert(item->property().type())) {
             continue;
         }

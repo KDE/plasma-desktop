@@ -76,39 +76,21 @@
            </widget>
           </item>
           <item row="0" column="1">
-           <widget class="QSlider" name="kcfg_MinSpeed">
-            <property name="singleStep">
-             <number>10</number>
-            </property>
-            <property name="pageStep">
-             <number>100</number>
-            </property>
+           <widget class="CustomSlider" name="kcfg_MinSpeed">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
            </widget>
           </item>
           <item row="1" column="1">
-           <widget class="QSlider" name="kcfg_MaxSpeed">
-            <property name="singleStep">
-             <number>10</number>
-            </property>
-            <property name="pageStep">
-             <number>100</number>
-            </property>
+           <widget class="CustomSlider" name="kcfg_MaxSpeed">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
            </widget>
           </item>
           <item row="2" column="1">
-           <widget class="QSlider" name="kcfg_AccelFactor">
-            <property name="singleStep">
-             <number>10000</number>
-            </property>
-            <property name="pageStep">
-             <number>100000</number>
-            </property>
+           <widget class="CustomSlider" name="kcfg_AccelFactor">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
@@ -239,6 +221,13 @@
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CustomSlider</class>
+   <extends>QSlider</extends>
+   <header>customslider.h</header>
+  </customwidget>
+ </customwidgets>
  <tabstops>
   <tabstop>tabWidget</tabstop>
   <tabstop>kcfg_MinSpeed</tabstop>

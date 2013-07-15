@@ -1,10 +1,13 @@
 #include "touchpadconfig.h"
 
+#include <cmath>
+
 #include <QBoxLayout>
 
 #include <KPluginFactory>
 #include <KLocalizedString>
 #include <KMessageWidget>
+#include <KConfigDialogManager>
 
 #include "touchpadbackend.h"
 
@@ -31,6 +34,23 @@ extern "C"
         backend->applyConfig(&config);
     }
 }
+
+class NonlinearInterpolator : public CustomSlider::Interpolator
+{
+public:
+    double absolute(double relative, double minimum, double maximum) const
+    {
+        relative *= relative;
+        return CustomSlider::Interpolator::absolute(relative, minimum, maximum);
+    }
+
+    double relative(double absolute, double minimum, double maximum) const
+    {
+        double value = CustomSlider::Interpolator::relative(absolute,
+                                                            minimum, maximum);
+        return std::sqrt(value);
+    }
+};
 
 static void disableChildren(QWidget *widget,
                             const QStringList &enable = QStringList())
@@ -60,6 +80,11 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
     m_message->setVisible(false);
     verticalLayout->insertWidget(0, m_message);
 
+    static const NonlinearInterpolator interpolator;
+    kcfg_MinSpeed->setInterpolator(&interpolator);
+    kcfg_MaxSpeed->setInterpolator(&interpolator);
+    kcfg_AccelFactor->setInterpolator(&interpolator);
+
     QStringList mouseButtons;
     mouseButtons << "Disabled"
                  << "Left button" << "Middle button" << "Right button";
@@ -76,6 +101,8 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
     }
     connect(m_backend, SIGNAL(error(QString)), SLOT(showError(QString)));
 
+    KConfigDialogManager::changedMap()->insert("CustomSlider",
+                                               SIGNAL(valueChanged(double)));
     addConfig(&m_config, this);
 }
 

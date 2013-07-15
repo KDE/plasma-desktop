@@ -14,7 +14,7 @@ set(synclientbackend_SRCS synclientbackend.cpp)
 kde4_add_plugin(synclient_touchpad ${synclientbackend_SRCS})
 target_link_libraries(synclient_touchpad ${KDE4_KDECORE_LIBS} ktouchpad)
 
-set(kcm_SRCS touchpadconfig.cpp)
+set(kcm_SRCS touchpadconfig.cpp customslider.cpp)
 kde4_add_ui_files(kcm_SRCS touchpadconfig.ui)
 kde4_add_plugin(kcm_touchpad ${kcm_SRCS})
 target_link_libraries(kcm_touchpad ${KDE4_KDEUI_LIBS} ktouchpad)
