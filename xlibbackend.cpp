@@ -1,0 +1,354 @@
+#include <cstring>
+
+#include <QtAlgorithms>
+#include <QScopedPointer>
+
+#include <KPluginFactory>
+
+#include "touchpadparameters.h"
+#include "xlibbackend.h"
+
+#include <X11/Xlib-xcb.h>
+#include <X11/Xatom.h>
+#include <xcb/xcb_atom.h>
+#include <xcb/xinput.h>
+
+#include "synclientproperties.h"
+
+K_PLUGIN_FACTORY(TouchpadBackendFactory, registerPlugin<XlibBackend>();)
+K_EXPORT_PLUGIN(TouchpadBackendFactory("xlib_touchpad"))
+
+static void XDeleter(void *p)
+{
+    if (p) {
+        XFree(p);
+    }
+}
+
+static void XDisplayDeleter(Display *p)
+{
+    if (p) {
+        XCloseDisplay(p);
+    }
+}
+
+struct XDeviceDeleter
+{
+    XDeviceDeleter(Display *d) : m_display(d)
+    {
+        Q_ASSERT(d);
+    }
+
+    void operator() (XDevice *d) const
+    {
+        if (d) {
+            XCloseDevice(m_display, d);
+        }
+    }
+
+private:
+    Display *m_display;
+};
+
+struct PropertyInfo
+{
+    Atom type;
+    int format;
+    QSharedPointer<unsigned char> data;
+    unsigned long nitems;
+
+    union flong {
+        long l;
+        float f;
+    } *f;
+    long *i;
+    char *b;
+
+    PropertyInfo() :
+        type(0), format(0), nitems(0), f(0), i(0), b(0)
+    {
+    }
+
+    QVariant value(int offset) const
+    {
+        QVariant v;
+        if (b) {
+            v = QVariant(static_cast<int>(b[offset]));
+        }
+        if (i) {
+            v = QVariant(static_cast<int>(i[offset]));
+        }
+        if (f) {
+            v = QVariant(f[offset].f);
+        }
+
+        return v;
+    }
+};
+
+XlibBackend::XlibBackend(QObject *parent, const QVariantList &) :
+    TouchpadBackend(parent), m_display(XOpenDisplay(0), XDisplayDeleter)
+{
+    if (!m_display) {
+        return;
+    }
+
+    m_connection = XGetXCBConnection(m_display.data());
+
+    if (!m_connection) {
+        return;
+    }
+
+    xcb_input_list_input_devices_cookie_t devicesCookie =
+            xcb_input_list_input_devices(m_connection);
+
+    XcbAtom touchpadType(m_connection, XI_TOUCHPAD);
+
+    for (const Parameter *param = synapticsProperties; param->name; param++) {
+        QLatin1String name(param->prop_name);
+
+        if (!m_atoms.contains(name)) {
+            m_atoms.insert(name, QSharedPointer<XcbAtom>(
+                               new XcbAtom(m_connection, param->prop_name)));
+        }
+    }
+
+    m_floatType.intern(m_connection, "FLOAT");
+
+    QScopedPointer<xcb_input_list_input_devices_reply_t> devicesReply(
+                xcb_input_list_input_devices_reply(m_connection,
+                                                   devicesCookie, 0));
+
+    if (!touchpadType.atom() || !devicesReply) {
+        return;
+    }
+
+    xcb_input_device_info_t *deviceInfo =
+            xcb_input_list_input_devices_devices(devicesReply.data());
+    if (!deviceInfo) {
+        return;
+    }
+
+    int nDevices =
+            xcb_input_list_input_devices_devices_length(devicesReply.data());
+
+    for (int i = 0; i < nDevices; i++) {
+        if (deviceInfo[i].device_type == touchpadType.atom()) {
+            XDevice *devicePtr = XOpenDevice(m_display.data(),
+                                             deviceInfo[i].device_id);
+            if (!devicePtr) {
+                continue;
+            }
+            QSharedPointer<XDevice> device(devicePtr,
+                                           XDeviceDeleter(m_display.data()));
+
+            int nProperties = 0;
+            QSharedPointer<Atom> properties(
+                        XListDeviceProperties(m_display.data(), device.data(),
+                                              &nProperties), XDeleter);
+            if (!properties) {
+                continue;
+            }
+
+            Q_FOREACH(const QSharedPointer<XcbAtom> &atom, m_atoms) {
+                if (!atom || !atom->atom()) {
+                    continue;
+                }
+                for (int j = 0; j < nProperties; j++) {
+                    if (properties.data()[j] == atom->atom()) {
+                        m_device = device;
+                        return;
+                    }
+                }
+            }
+        }
+    }
+}
+
+XlibBackend::~XlibBackend()
+{
+}
+
+void XlibBackend::applyConfig(const TouchpadParameters *p)
+{
+    if (!test()) {
+        return;
+    }
+
+    m_props.clear();
+
+    Q_FOREACH(KConfigSkeletonItem *i, p->items()) {
+        setParameter(i->name(), i->property());
+    }
+
+    Q_FOREACH(const QLatin1String &name, m_changed) {
+        if (!m_props.contains(name) || !m_atoms.contains(name) ||
+                !m_atoms[name] || !m_atoms[name]->atom())
+        {
+            continue;
+        }
+        PropertyInfo &info = m_props[name];
+        if (!info.type || !info.data) {
+            continue;
+        }
+        XChangeDeviceProperty(m_display.data(), m_device.data(),
+                              m_atoms[name]->atom(), info.type, info.format,
+                              PropModeReplace, info.data.data(), info.nitems);
+    }
+    m_changed.clear();
+
+    xcb_flush(m_connection);
+}
+
+void XlibBackend::getConfig(TouchpadParameters *p,
+                            QStringList *supportedParameters)
+{
+    if (supportedParameters) {
+        supportedParameters->clear();
+    }
+
+    if (!test()) {
+        return;
+    }
+
+    m_props.clear();
+
+    Q_FOREACH(KConfigSkeletonItem *i, p->items()) {
+        QString name(i->name());
+        QVariant value;
+
+        if (!getParameter(name, value)) {
+            continue;
+        }
+
+        i->setProperty(value);
+        supportedParameters->append(name);
+    }
+}
+
+bool XlibBackend::test()
+{
+    return m_device != 0;
+}
+
+static const Parameter *findParameter(const QString &name)
+{
+    const Parameter *par = synapticsProperties;
+    while (par && name != par->name) {
+        par++;
+    }
+    return par;
+}
+
+PropertyInfo *XlibBackend::getDevProperty(const Parameter *par)
+{
+    QLatin1String propName(par->prop_name);
+    if (m_props.contains(propName)) {
+        return &m_props[propName];
+    }
+
+    if (!m_atoms.contains(propName) || !m_atoms[propName]) {
+        return 0;
+    }
+
+    xcb_atom_t prop = m_atoms[propName]->atom();
+    if (!prop) {
+        return 0;
+    }
+
+    PropertyInfo p;
+    unsigned char *data = 0;
+    unsigned long bytes_after;
+    XGetDeviceProperty(m_display.data(), m_device.data(), prop, 0, 1000, False,
+                       AnyPropertyType, &p.type, &p.format, &p.nitems,
+                       &bytes_after, &data);
+    p.data = QSharedPointer<unsigned char>(data, XDeleter);
+
+    switch (par->prop_format) {
+    case 8:
+        if (p.format == par->prop_format && p.type == XA_INTEGER) {
+            p.b = reinterpret_cast<char *>(data);
+        }
+        break;
+    case 32:
+        if (p.format == par->prop_format &&
+                (p.type == XA_INTEGER || p.type == XA_CARDINAL))
+        {
+            p.i = reinterpret_cast<long *>(data);
+        }
+        break;
+    case 0:
+        if (m_floatType.atom() &&
+                p.format == 32 && p.type == m_floatType.atom())
+        {
+            p.f = reinterpret_cast<PropertyInfo::flong *>(data);
+        }
+        break;
+    }
+
+    return &m_props.insert(propName, p).value();
+}
+
+bool XlibBackend::getParameter(const QString &name, QVariant &value)
+{
+    const Parameter *par = findParameter(name);
+    if (!par) {
+        return false;
+    }
+
+    PropertyInfo *p = getDevProperty(par);
+    if (!p) {
+        return false;
+    }
+
+    value = p->value(par->prop_offset);
+    return value.isValid();
+}
+
+bool XlibBackend::setParameter(const QString &name, const QVariant &value)
+{
+    const Parameter *par = findParameter(name);
+    if (!par) {
+        return false;
+    }
+
+    PropertyInfo *p = getDevProperty(par);
+    if (!p) {
+        return false;
+    }
+
+    QVariant old(p->value(par->prop_offset));
+    if (!old.isValid()) {
+        return false;
+    }
+
+    QVariant converted(value);
+    QVariant::Type convType;
+    if (p->b || p->i) {
+        convType = QVariant::Int;
+    } else if (p->f) {
+        convType = QVariant::Double;
+    } else {
+        return false;
+    }
+
+    if (!converted.convert(convType)) {
+        return false;
+    }
+
+    if (converted == old) {
+        return true;
+    }
+
+    if (p->b) {
+        p->b[par->prop_offset] = static_cast<char>(converted.toInt());
+    } else if (p->i) {
+        p->i[par->prop_offset] = converted.toInt();
+    } else if (p->f) {
+        p->f[par->prop_offset].f = converted.toDouble();
+    }
+
+    m_changed.insert(QLatin1String(par->prop_name));
+
+    return true;
+}
