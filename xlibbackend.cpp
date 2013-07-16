@@ -298,7 +298,7 @@ bool XlibBackend::test()
 static const Parameter *findParameter(const QString &name)
 {
     const Parameter *par = synapticsProperties;
-    while (par && name != par->name) {
+    while (par->name && name != par->name) {
         par++;
     }
     return par;
