@@ -13,6 +13,8 @@
 #include <xcb/xcb_atom.h>
 #include <xcb/xinput.h>
 
+#include <xorg/synaptics-properties.h>
+
 #include "synclientproperties.h"
 
 K_PLUGIN_FACTORY(TouchpadBackendFactory, registerPlugin<XlibBackend>();)
@@ -69,6 +71,27 @@ struct PropertyInfo
     {
     }
 
+    PropertyInfo(Display *display, XDevice *device, Atom prop, Atom floatType)
+        : type(0), format(0), nitems(0), f(0), i(0), b(0)
+    {
+        unsigned char *dataPtr = 0;
+        unsigned long bytes_after;
+        XGetDeviceProperty(display, device, prop, 0, 1000, False,
+                           AnyPropertyType, &type, &format, &nitems,
+                           &bytes_after, &dataPtr);
+        data = QSharedPointer<unsigned char>(dataPtr, XDeleter);
+
+        if (format == 8 && type == XA_INTEGER) {
+            b = reinterpret_cast<char *>(dataPtr);
+        }
+        if (format == 32 && (type == XA_INTEGER || type == XA_CARDINAL)) {
+            i = reinterpret_cast<long *>(dataPtr);
+        }
+        if (floatType && format == 32 && type == floatType) {
+            f = reinterpret_cast<flong *>(dataPtr);
+        }
+    }
+
     QVariant value(int offset) const
     {
         QVariant v;
@@ -114,6 +137,7 @@ XlibBackend::XlibBackend(QObject *parent, const QVariantList &) :
     }
 
     m_floatType.intern(m_connection, "FLOAT");
+    m_capsProperty.intern(m_connection, SYNAPTICS_PROP_CAPABILITIES);
 
     QScopedPointer<xcb_input_list_input_devices_reply_t> devicesReply(
                 xcb_input_list_input_devices_reply(m_connection,
@@ -200,6 +224,26 @@ void XlibBackend::applyConfig(const TouchpadParameters *p)
     xcb_flush(m_connection);
 }
 
+enum TouchpadCapabilitiy
+{
+    TouchpadHasLeftButton,
+    TouchpadHasMiddleButton,
+    TouchpadHasRightButton,
+    TouchpadTwoFingerDetect,
+    TouchpadThreeFingerDetect,
+    TouchpadPressureDetect,
+    TouchpadPalmDetect,
+    TouchpadCapsCount
+};
+
+static bool hasCap(const PropertyInfo &caps, TouchpadCapabilitiy cap)
+{
+    if (caps.nitems <= cap) {
+        return false;
+    }
+    return caps.b[cap] != 0;
+}
+
 void XlibBackend::getConfig(TouchpadParameters *p,
                             QStringList *supportedParameters)
 {
@@ -224,6 +268,26 @@ void XlibBackend::getConfig(TouchpadParameters *p,
         i->setProperty(value);
         supportedParameters->append(name);
     }
+
+    if (!supportedParameters || !m_capsProperty.atom()) {
+        return;
+    }
+
+    PropertyInfo caps(m_display.data(), m_device.data(), m_capsProperty.atom(),
+                      0);
+    if (!caps.b) {
+        return;
+    }
+
+    if (!hasCap(caps, TouchpadTwoFingerDetect)) {
+        supportedParameters->removeAll("HorizTwoFingerScroll");
+        supportedParameters->removeAll("VertTwoFingerScroll");
+        supportedParameters->removeAll("TapButton2");
+    }
+
+    if (!hasCap(caps, TouchpadThreeFingerDetect)) {
+        supportedParameters->removeAll("TapButton3");
+    }
 }
 
 bool XlibBackend::test()
@@ -240,9 +304,8 @@ static const Parameter *findParameter(const QString &name)
     return par;
 }
 
-PropertyInfo *XlibBackend::getDevProperty(const Parameter *par)
+PropertyInfo *XlibBackend::getDevProperty(const QLatin1String &propName)
 {
-    QLatin1String propName(par->prop_name);
     if (m_props.contains(propName)) {
         return &m_props[propName];
     }
@@ -256,36 +319,7 @@ PropertyInfo *XlibBackend::getDevProperty(const Parameter *par)
         return 0;
     }
 
-    PropertyInfo p;
-    unsigned char *data = 0;
-    unsigned long bytes_after;
-    XGetDeviceProperty(m_display.data(), m_device.data(), prop, 0, 1000, False,
-                       AnyPropertyType, &p.type, &p.format, &p.nitems,
-                       &bytes_after, &data);
-    p.data = QSharedPointer<unsigned char>(data, XDeleter);
-
-    switch (par->prop_format) {
-    case 8:
-        if (p.format == par->prop_format && p.type == XA_INTEGER) {
-            p.b = reinterpret_cast<char *>(data);
-        }
-        break;
-    case 32:
-        if (p.format == par->prop_format &&
-                (p.type == XA_INTEGER || p.type == XA_CARDINAL))
-        {
-            p.i = reinterpret_cast<long *>(data);
-        }
-        break;
-    case 0:
-        if (m_floatType.atom() &&
-                p.format == 32 && p.type == m_floatType.atom())
-        {
-            p.f = reinterpret_cast<PropertyInfo::flong *>(data);
-        }
-        break;
-    }
-
+    PropertyInfo p(m_display.data(), m_device.data(), prop, m_floatType.atom());
     return &m_props.insert(propName, p).value();
 }
 
@@ -296,7 +330,7 @@ bool XlibBackend::getParameter(const QString &name, QVariant &value)
         return false;
     }
 
-    PropertyInfo *p = getDevProperty(par);
+    PropertyInfo *p = getDevProperty(QLatin1String(par->prop_name));
     if (!p) {
         return false;
     }
@@ -312,7 +346,8 @@ bool XlibBackend::setParameter(const QString &name, const QVariant &value)
         return false;
     }
 
-    PropertyInfo *p = getDevProperty(par);
+    QLatin1String propName(par->prop_name);
+    PropertyInfo *p = getDevProperty(propName);
     if (!p) {
         return false;
     }
@@ -348,7 +383,7 @@ bool XlibBackend::setParameter(const QString &name, const QVariant &value)
         p->f[par->prop_offset].f = converted.toDouble();
     }
 
-    m_changed.insert(QLatin1String(par->prop_name));
+    m_changed.insert(propName);
 
     return true;
 }

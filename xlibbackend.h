@@ -15,7 +15,6 @@
 #include <X11/extensions/XInput.h>
 
 #include "xcbatom.h"
-#include "synclientproperties.h"
 
 class XlibBackend : public TouchpadBackend
 {
@@ -30,7 +29,7 @@ public:
     bool test();
 
 private:
-    struct PropertyInfo *getDevProperty(const Parameter *par);
+    struct PropertyInfo *getDevProperty(const QLatin1String &propName);
 
     bool setParameter(const QString &name, const QVariant &);
     bool getParameter(const QString &name, QVariant &);
@@ -38,7 +37,7 @@ private:
     QSharedPointer<Display> m_display;
     xcb_connection_t *m_connection;
 
-    XcbAtom m_floatType;
+    XcbAtom m_floatType, m_capsProperty;
 
     QSharedPointer<XDevice> m_device;
 
