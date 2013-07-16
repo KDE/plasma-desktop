@@ -22,10 +22,10 @@ bool SynclientBackend::test()
     return getParameters();
 }
 
-bool SynclientBackend::execSynclient(QProcess &process, const QString &arg)
+bool SynclientBackend::execSynclient(QProcess &process, const QStringList &args)
 {
     static const QString synclient("synclient");
-    process.start(synclient, QStringList(arg), QIODevice::ReadOnly);
+    process.start(synclient, args, QIODevice::ReadOnly);
 
     static const int timeout = 1000;
     if (!process.waitForFinished(timeout)) {
@@ -62,7 +62,7 @@ bool SynclientBackend::getParameters()
     m_currentParameters.clear();
 
     QProcess process;
-    static const QString listParams("-l");
+    static const QStringList listParams("-l");
     if (!execSynclient(process, listParams))
     {
         return false;
@@ -99,6 +99,7 @@ void SynclientBackend::applyConfig(const TouchpadParameters *p)
         return;
     }
 
+    QStringList args;
     Q_FOREACH(KConfigSkeletonItem *i, p->items()) {
         QString option(i->name());
 
@@ -116,10 +117,11 @@ void SynclientBackend::applyConfig(const TouchpadParameters *p)
 
         option.append('=');
         option.append(value);
-
-        QProcess process;
-        execSynclient(process, option);
+        args.append(option);
     }
+
+    QProcess process;
+    execSynclient(process, args);
 }
 
 void SynclientBackend::getConfig(TouchpadParameters *p,

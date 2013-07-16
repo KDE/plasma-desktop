@@ -18,7 +18,7 @@ public:
     bool test();
 
 private:
-    bool execSynclient(QProcess &process, const QString &arg);
+    bool execSynclient(QProcess &process, const QStringList &args);
     bool getParameters();
 
     QVariantMap m_currentParameters;
