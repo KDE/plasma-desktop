@@ -4,28 +4,52 @@
     <group name="parameters">
         <entry name="TapButton1" type="Enum">
             <choices name="Button">
-                <choice name="NoButton"/>
-                <choice name="LeftButton"/>
-                <choice name="MiddleButton"/>
-                <choice name="RightButton"/>
+                <choice name="NoButton">
+                    <label>Disabled</label>
+                </choice>
+                <choice name="LeftButton">
+                    <label>Left button</label>
+                </choice>
+                <choice name="MiddleButton">
+                    <label>Middle button</label>
+                </choice>
+                <choice name="RightButton">
+                    <label>Right button</label>
+                </choice>
             </choices>
             <default>NoButton</default>
         </entry>
         <entry name="TapButton2" type="Enum">
             <choices name="TouchpadParameters::Button">
-                <choice name="NoButton"/>
-                <choice name="LeftButton"/>
-                <choice name="MiddleButton"/>
-                <choice name="RightButton"/>
+                <choice name="NoButton">
+                    <label>Disabled</label>
+                </choice>
+                <choice name="LeftButton">
+                    <label>Left button</label>
+                </choice>
+                <choice name="MiddleButton">
+                    <label>Middle button</label>
+                </choice>
+                <choice name="RightButton">
+                    <label>Right button</label>
+                </choice>
             </choices>
             <default>NoButton</default>
         </entry>
         <entry name="TapButton3" type="Enum">
             <choices name="TouchpadParameters::Button">
-                <choice name="NoButton"/>
-                <choice name="LeftButton"/>
-                <choice name="MiddleButton"/>
-                <choice name="RightButton"/>
+                <choice name="NoButton">
+                    <label>Disabled</label>
+                </choice>
+                <choice name="LeftButton">
+                    <label>Left button</label>
+                </choice>
+                <choice name="MiddleButton">
+                    <label>Middle button</label>
+                </choice>
+                <choice name="RightButton">
+                    <label>Right button</label>
+                </choice>
             </choices>
             <default>NoButton</default>
         </entry>
