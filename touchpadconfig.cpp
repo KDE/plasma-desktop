@@ -52,14 +52,22 @@ public:
     }
 };
 
+static QString getParameterName(QObject *widget)
+{
+    static const QString kcfgPrefix("kcfg_");
+    QString name(widget->objectName());
+    if (!name.startsWith(kcfgPrefix)) {
+        return QString();
+    }
+    name.remove(0, kcfgPrefix.length());
+    return name;
+}
+
 static void disableChildren(QWidget *widget,
                             const QStringList &enable = QStringList())
 {
-    static const QString kcfgPrefix("kcfg_");
-
-    QString name(widget->objectName());
-    if (name.startsWith(kcfgPrefix)) {
-        name.remove(0, kcfgPrefix.length());
+    QString name(getParameterName(widget));
+    if (!name.isEmpty()) {
         widget->setEnabled(enable.contains(name));
     }
 
@@ -68,6 +76,50 @@ static void disableChildren(QWidget *widget,
         if (childWidget) {
             disableChildren(childWidget, enable);
         }
+    }
+}
+
+static void populateChoices(QObject *widget, TouchpadParameters *config)
+{
+    QString name(getParameterName(widget));
+    if (name.isEmpty()) {
+        return;
+    }
+    KConfigSkeletonItem *item = config->findItem(name);
+    if (!item) {
+        return;
+    }
+    KCoreConfigSkeleton::ItemEnum *e =
+            dynamic_cast<KCoreConfigSkeleton::ItemEnum *>(item);
+    if (!e) {
+        return;
+    }
+
+    QStringList choiceList;
+    Q_FOREACH(const KCoreConfigSkeleton::ItemEnum::Choice &c, e->choices()) {
+        if (c.label.isEmpty()) {
+            choiceList.append(c.name);
+        } else {
+            choiceList.append(c.label);
+        }
+    }
+
+    QComboBox *box = qobject_cast<QComboBox *>(widget);
+    if (box) {
+        box->addItems(choiceList);
+    }
+}
+
+static void populateChild(QObject *widget, TouchpadParameters *config)
+{
+    if (!widget) {
+        return;
+    }
+
+    populateChoices(widget, config);
+
+    Q_FOREACH(QObject *child, widget->children()) {
+        populateChild(child, config);
     }
 }
 
@@ -85,12 +137,7 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
     kcfg_MaxSpeed->setInterpolator(&interpolator);
     kcfg_AccelFactor->setInterpolator(&interpolator);
 
-    QStringList mouseButtons;
-    mouseButtons << "Disabled"
-                 << "Left button" << "Middle button" << "Right button";
-    kcfg_TapButton1->insertItems(0, mouseButtons);
-    kcfg_TapButton2->insertItems(0, mouseButtons);
-    kcfg_TapButton3->insertItems(0, mouseButtons);
+    populateChild(this, &m_config);
 
     m_backend = TouchpadBackend::self();
     if (!m_backend) {
