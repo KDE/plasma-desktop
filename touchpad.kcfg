@@ -12,11 +12,21 @@
             <default>NoButton</default>
         </entry>
         <entry name="TapButton2" type="Enum">
-            <choices name="Button" />
+            <choices name="TouchpadParameters::Button">
+                <choice name="NoButton"/>
+                <choice name="LeftButton"/>
+                <choice name="MiddleButton"/>
+                <choice name="RightButton"/>
+            </choices>
             <default>NoButton</default>
         </entry>
         <entry name="TapButton3" type="Enum">
-            <choices name="Button" />
+            <choices name="TouchpadParameters::Button">
+                <choice name="NoButton"/>
+                <choice name="LeftButton"/>
+                <choice name="MiddleButton"/>
+                <choice name="RightButton"/>
+            </choices>
             <default>NoButton</default>
         </entry>
         <entry name="VertEdgeScroll" type="Bool">
