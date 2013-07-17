@@ -264,7 +264,9 @@ void XlibBackend::getConfig(TouchpadParameters *p,
         }
 
         i->setProperty(value);
-        supportedParameters->append(name);
+        if (supportedParameters) {
+            supportedParameters->append(name);
+        }
     }
 
     if (!supportedParameters) {
