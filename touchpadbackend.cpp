@@ -12,5 +12,5 @@ TouchpadBackend::TouchpadBackend(QObject *parent) : QObject(parent)
 
 TouchpadBackend *TouchpadBackend::self()
 {
-    return backend()->test() ? backend() : 0;
+    return backend();
 }

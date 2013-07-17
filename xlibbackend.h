@@ -36,9 +36,10 @@ public:
 
     void applyConfig(const TouchpadParameters *);
     void getConfig(TouchpadParameters *, QStringList *supportedParameters = 0);
-    bool test();
 
 private:
+    bool test();
+
     struct PropertyInfo *getDevProperty(const QLatin1String &propName);
 
     bool setParameter(const QString &name, const QVariant &);
