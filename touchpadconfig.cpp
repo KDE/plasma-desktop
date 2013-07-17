@@ -25,10 +25,10 @@ extern "C"
         }
 
         TouchpadParameters config;
+
+        config.useDefaults(true);
         backend->getConfig(&config);
-        Q_FOREACH(KConfigSkeletonItem *i, config.items()) {
-            i->swapDefault();
-        }
+        config.useDefaults(false);
 
         config.readConfig();
         backend->applyConfig(&config);
