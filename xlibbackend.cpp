@@ -250,6 +250,7 @@ void XlibBackend::getConfig(TouchpadParameters *p,
 
     m_props.clear();
 
+    int nRead = 0;
     Q_FOREACH(KConfigSkeletonItem *i, p->items()) {
         QString name(i->name());
         QVariant value;
@@ -259,9 +260,16 @@ void XlibBackend::getConfig(TouchpadParameters *p,
         }
 
         i->setProperty(value);
+        nRead++;
+
         if (supportedParameters) {
             supportedParameters->append(name);
         }
+    }
+
+    if (!nRead) {
+        Q_EMIT error("Can't read X device properties");
+        return;
     }
 
     if (!supportedParameters) {
@@ -281,7 +289,22 @@ void XlibBackend::getConfig(TouchpadParameters *p,
 
 bool XlibBackend::test()
 {
-    return m_device != 0;
+    if (!m_display) {
+        Q_EMIT error("Can't connect to X");
+        return false;
+    }
+
+    if (!m_connection) {
+        Q_EMIT error("Can't get XCB connection");
+        return false;
+    }
+
+    if (!m_device) {
+        Q_EMIT error("No touchpad found");
+        return false;
+    }
+
+    return true;
 }
 
 static const Parameter *findParameter(const QString &name)
@@ -309,6 +332,9 @@ PropertyInfo *XlibBackend::getDevProperty(const QLatin1String &propName)
     }
 
     PropertyInfo p(m_display.data(), m_device.data(), prop, m_floatType.atom());
+    if (p.data && !p.b && !p.f && !p.i) {
+        Q_EMIT error(QString("Property \"%1\" has unknown type").arg(propName));
+    }
     return &m_props.insert(propName, p).value();
 }
 
@@ -357,6 +383,8 @@ bool XlibBackend::setParameter(const QString &name, const QVariant &value)
     }
 
     if (!converted.convert(convType)) {
+        Q_EMIT error(QString("Can't convert value \"%2\" to %3 (parameter %1)")
+                     .arg(name, value.toString(), QVariant::typeToName(convType)));
         return false;
     }
 
