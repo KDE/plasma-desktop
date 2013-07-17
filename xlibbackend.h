@@ -16,6 +16,18 @@
 
 #include "xcbatom.h"
 
+enum TouchpadCapabilitiy
+{
+    TouchpadHasLeftButton,
+    TouchpadHasMiddleButton,
+    TouchpadHasRightButton,
+    TouchpadTwoFingerDetect,
+    TouchpadThreeFingerDetect,
+    TouchpadPressureDetect,
+    TouchpadPalmDetect,
+    TouchpadCapsCount
+};
+
 class XlibBackend : public TouchpadBackend
 {
     Q_OBJECT
@@ -37,13 +49,15 @@ private:
     QSharedPointer<Display> m_display;
     xcb_connection_t *m_connection;
 
-    XcbAtom m_floatType, m_capsProperty;
+    XcbAtom m_floatType;
 
     QSharedPointer<XDevice> m_device;
 
     QMap<QLatin1String, QSharedPointer<XcbAtom> > m_atoms;
     QMap<QLatin1String, struct PropertyInfo> m_props;
     QSet<QLatin1String> m_changed;
+
+    bool m_caps[TouchpadCapsCount];
 };
 
 #endif // XLIBBACKEND_H

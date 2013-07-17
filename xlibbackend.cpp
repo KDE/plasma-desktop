@@ -112,6 +112,8 @@ struct PropertyInfo
 XlibBackend::XlibBackend(QObject *parent, const QVariantList &) :
     TouchpadBackend(parent), m_display(XOpenDisplay(0), XDisplayDeleter)
 {
+    qFill(m_caps, m_caps + TouchpadCapsCount, false);
+
     if (!m_display) {
         return;
     }
@@ -137,7 +139,7 @@ XlibBackend::XlibBackend(QObject *parent, const QVariantList &) :
     }
 
     m_floatType.intern(m_connection, "FLOAT");
-    m_capsProperty.intern(m_connection, SYNAPTICS_PROP_CAPABILITIES);
+    XcbAtom capsAtom(m_connection, SYNAPTICS_PROP_CAPABILITIES);
 
     QScopedPointer<xcb_input_list_input_devices_reply_t> devicesReply(
                 xcb_input_list_input_devices_reply(m_connection,
@@ -156,7 +158,7 @@ XlibBackend::XlibBackend(QObject *parent, const QVariantList &) :
     int nDevices =
             xcb_input_list_input_devices_devices_length(devicesReply.data());
 
-    for (int i = 0; i < nDevices; i++) {
+    for (int i = 0; i < nDevices && !m_device; i++) {
         if (deviceInfo[i].device_type == touchpadType.atom()) {
             XDevice *devicePtr = XOpenDevice(m_display.data(),
                                              deviceInfo[i].device_id);
@@ -181,11 +183,27 @@ XlibBackend::XlibBackend(QObject *parent, const QVariantList &) :
                 for (int j = 0; j < nProperties; j++) {
                     if (properties.data()[j] == atom->atom()) {
                         m_device = device;
-                        return;
+                        break;
                     }
+                }
+                if (m_device) {
+                    break;
                 }
             }
         }
+    }
+
+    if (!capsAtom.atom()) {
+        return;
+    }
+
+    PropertyInfo caps(m_display.data(), m_device.data(), capsAtom.atom(), 0);
+    if (!caps.b) {
+        return;
+    }
+
+    for (unsigned i = 0; i < caps.nitems && i < TouchpadCapsCount; i++) {
+        m_caps[i] = static_cast<bool>(caps.b[i]);
     }
 }
 
@@ -224,26 +242,6 @@ void XlibBackend::applyConfig(const TouchpadParameters *p)
     xcb_flush(m_connection);
 }
 
-enum TouchpadCapabilitiy
-{
-    TouchpadHasLeftButton,
-    TouchpadHasMiddleButton,
-    TouchpadHasRightButton,
-    TouchpadTwoFingerDetect,
-    TouchpadThreeFingerDetect,
-    TouchpadPressureDetect,
-    TouchpadPalmDetect,
-    TouchpadCapsCount
-};
-
-static bool hasCap(const PropertyInfo &caps, TouchpadCapabilitiy cap)
-{
-    if (caps.nitems <= cap) {
-        return false;
-    }
-    return caps.b[cap] != 0;
-}
-
 void XlibBackend::getConfig(TouchpadParameters *p,
                             QStringList *supportedParameters)
 {
@@ -269,23 +267,17 @@ void XlibBackend::getConfig(TouchpadParameters *p,
         supportedParameters->append(name);
     }
 
-    if (!supportedParameters || !m_capsProperty.atom()) {
+    if (!supportedParameters) {
         return;
     }
 
-    PropertyInfo caps(m_display.data(), m_device.data(), m_capsProperty.atom(),
-                      0);
-    if (!caps.b) {
-        return;
-    }
-
-    if (!hasCap(caps, TouchpadTwoFingerDetect)) {
+    if (!m_caps[TouchpadTwoFingerDetect]) {
         supportedParameters->removeAll("HorizTwoFingerScroll");
         supportedParameters->removeAll("VertTwoFingerScroll");
         supportedParameters->removeAll("TapButton2");
     }
 
-    if (!hasCap(caps, TouchpadThreeFingerDetect)) {
+    if (!m_caps[TouchpadThreeFingerDetect]) {
         supportedParameters->removeAll("TapButton3");
     }
 }
