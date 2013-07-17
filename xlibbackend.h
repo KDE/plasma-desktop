@@ -1,8 +1,6 @@
 #ifndef XLIBBACKEND_H
 #define XLIBBACKEND_H
 
-#include <QVariantList>
-#include <QVector>
 #include <QMap>
 #include <QSet>
 #include <QSharedPointer>
@@ -33,7 +31,7 @@ class XlibBackend : public TouchpadBackend
     Q_OBJECT
 
 public:
-    XlibBackend(QObject *parent, const QVariantList &);
+    XlibBackend(QObject *parent = 0);
     ~XlibBackend();
 
     void applyConfig(const TouchpadParameters *);

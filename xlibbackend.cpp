@@ -3,8 +3,6 @@
 #include <QtAlgorithms>
 #include <QScopedPointer>
 
-#include <KPluginFactory>
-
 #include "touchpadparameters.h"
 #include "xlibbackend.h"
 
@@ -16,9 +14,6 @@
 #include <xorg/synaptics-properties.h>
 
 #include "synclientproperties.h"
-
-K_PLUGIN_FACTORY(TouchpadBackendFactory, registerPlugin<XlibBackend>();)
-K_EXPORT_PLUGIN(TouchpadBackendFactory("xlib_touchpad"))
 
 static void XDeleter(void *p)
 {
@@ -109,7 +104,7 @@ struct PropertyInfo
     }
 };
 
-XlibBackend::XlibBackend(QObject *parent, const QVariantList &) :
+XlibBackend::XlibBackend(QObject *parent) :
     TouchpadBackend(parent), m_display(XOpenDisplay(0), XDisplayDeleter)
 {
     qFill(m_caps, m_caps + TouchpadCapsCount, false);
