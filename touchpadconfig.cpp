@@ -27,7 +27,8 @@ extern "C"
         TouchpadParameters config;
 
         config.useDefaults(true);
-        backend->getConfig(&config);
+        QStringList supported;
+        backend->getConfig(&config, &supported);
         config.useDefaults(false);
 
         config.readConfig();

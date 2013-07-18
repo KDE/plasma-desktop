@@ -240,10 +240,6 @@ void XlibBackend::applyConfig(const TouchpadParameters *p)
 void XlibBackend::getConfig(TouchpadParameters *p,
                             QStringList *supportedParameters)
 {
-    if (supportedParameters) {
-        supportedParameters->clear();
-    }
-
     if (!test()) {
         return;
     }
@@ -262,17 +258,11 @@ void XlibBackend::getConfig(TouchpadParameters *p,
         i->setProperty(value);
         nRead++;
 
-        if (supportedParameters) {
-            supportedParameters->append(name);
-        }
+        supportedParameters->append(name);
     }
 
     if (!nRead) {
         Q_EMIT error("Can't read X device properties");
-        return;
-    }
-
-    if (!supportedParameters) {
         return;
     }
 

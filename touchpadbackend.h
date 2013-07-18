@@ -18,7 +18,7 @@ public:
 
     virtual void applyConfig(const TouchpadParameters *) = 0;
     virtual void getConfig(TouchpadParameters *,
-                           QStringList *supportedParameters = 0) = 0;
+                           QStringList *supportedParameters) = 0;
 
 Q_SIGNALS:
     void error(const QString &);

@@ -35,7 +35,7 @@ public:
     ~XlibBackend();
 
     void applyConfig(const TouchpadParameters *);
-    void getConfig(TouchpadParameters *, QStringList *supportedParameters = 0);
+    void getConfig(TouchpadParameters *, QStringList *supportedParameters);
 
 private:
     bool test();
