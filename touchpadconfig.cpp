@@ -124,6 +124,7 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
       m_firstLoad(true)
 {
     setupUi(this);
+    m_message->setVisible(false);
 
     static const NonlinearInterpolator interpolator;
     kcfg_MinSpeed->setInterpolator(&interpolator);
