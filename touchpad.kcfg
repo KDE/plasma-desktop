@@ -22,7 +22,7 @@
                     <label>Right button</label>
                 </choice>
             </choices>
-            <default>NoButton</default>
+            <default>LeftButton</default>
         </entry>
         <entry name="TapButton2" type="Enum">
             <choices name="TouchpadParameters::Button">
@@ -39,7 +39,7 @@
                     <label>Right button</label>
                 </choice>
             </choices>
-            <default>NoButton</default>
+            <default>RightButton</default>
         </entry>
         <entry name="TapButton3" type="Enum">
             <choices name="TouchpadParameters::Button">
@@ -56,19 +56,19 @@
                     <label>Right button</label>
                 </choice>
             </choices>
-            <default>NoButton</default>
+            <default>MiddleButton</default>
         </entry>
         <entry name="VertEdgeScroll" type="Bool">
-            <default>false</default>
+            <default>true</default>
         </entry>
         <entry name="VertTwoFingerScroll" type="Bool">
-            <default>false</default>
+            <default>true</default>
         </entry>
         <entry name="HorizEdgeScroll" type="Bool">
-            <default>false</default>
+            <default>true</default>
         </entry>
         <entry name="HorizTwoFingerScroll" type="Bool">
-            <default>false</default>
+            <default>true</default>
         </entry>
         <entry name="MinSpeed" type="Double">
             <min>0</min>
