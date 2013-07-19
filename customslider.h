@@ -47,12 +47,11 @@ protected:
     virtual void resizeEvent(QResizeEvent *);
 
 private Q_SLOTS:
-    void sliderMoved(int);
+    void updateValue();
 
 private:
     void updateRange(const QSize &);
     void moveSlider();
-    void updateValue(int);
 
     static const Interpolator lerp;
 

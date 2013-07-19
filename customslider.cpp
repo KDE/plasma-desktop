@@ -30,10 +30,10 @@ CustomSlider::CustomSlider(QWidget *parent) :
     setSingleStep(10);
     setPageStep(100);
 
-    updateValue(value());
+    updateValue();
     updateRange(size());
 
-    connect(this, SIGNAL(sliderMoved(int)), SLOT(sliderMoved(int)));
+    connect(this, SIGNAL(actionTriggered(int)), SLOT(updateValue()));
 }
 
 void CustomSlider::resizeEvent(QResizeEvent *e)
@@ -84,14 +84,9 @@ void CustomSlider::setDoubleValue(double v)
     Q_EMIT valueChanged(doubleValue());
 }
 
-void CustomSlider::sliderMoved(int value)
+void CustomSlider::updateValue()
 {
-    updateValue(value);
-}
-
-void CustomSlider::updateValue(int value)
-{
-    double relative = lerp.relative(value, minimum(), maximum());
+    double relative = lerp.relative(sliderPosition(), minimum(), maximum());
     m_value = m_interpolator->absolute(relative, m_min, m_max);
     Q_EMIT valueChanged(doubleValue());
 }
