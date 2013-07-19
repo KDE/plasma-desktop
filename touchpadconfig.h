@@ -24,9 +24,13 @@ private Q_SLOTS:
     void showError(const QString &);
 
 private:
+    void loadActive(TouchpadParameters *);
+    void differentConfigs();
+
     TouchpadBackend *m_backend;
     TouchpadParameters m_config;
     KMessageWidget *m_message;
+    bool m_firstLoad;
 };
 
 #endif // TOUCHPADCONFIG_H

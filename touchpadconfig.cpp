@@ -120,7 +120,8 @@ static void populateChild(QObject *widget, TouchpadParameters *config)
 }
 
 TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
-    : KCModule(TouchpadConfigFactory::componentData(), parent, args)
+    : KCModule(TouchpadConfigFactory::componentData(), parent, args),
+      m_firstLoad(true)
 {
     setupUi(this);
 
@@ -167,16 +168,77 @@ void TouchpadConfig::save()
     m_message->animatedHide();
     KCModule::save();
     m_backend->applyConfig(&m_config);
+}
 
-    load();
+static bool variantFuzzyCompare(const QVariant &a, const QVariant &b)
+{
+    if (a.type() == QVariant::Double && b.type() == QVariant::Double) {
+        return qFuzzyCompare(a.toDouble(), b.toDouble());
+    }
+    return a == b;
+}
+
+static bool compareConfigs(const TouchpadParameters &a,
+                           const TouchpadParameters &b)
+{
+    static const QString parametersGroup("parameters");
+
+    Q_FOREACH(KConfigSkeletonItem *i, a.items()) {
+        if (i->group() != parametersGroup) {
+            continue;
+        }
+
+        KConfigSkeletonItem *j = b.findItem(i->name());
+        if (!j || !variantFuzzyCompare(i->property(), j->property())) {
+            return false;
+        }
+    }
+    return true;
+}
+
+void TouchpadConfig::loadActive(TouchpadParameters *to)
+{
+    if (m_backend) {
+        QStringList supportedParams;
+        m_backend->getConfig(to, &supportedParams);
+        disableChildren(this, supportedParams);
+    }
 }
 
 void TouchpadConfig::load()
 {
-    if (m_backend) {
-        QStringList supportedParams;
-        m_backend->getConfig(&m_config, &supportedParams);
-        disableChildren(this, supportedParams);
+    m_message->animatedHide();
+
+    if (m_firstLoad) {
+        loadActive(&m_config);
     }
+
     KCModule::load();
+
+    if (m_firstLoad) {
+        if (!compareConfigs(m_config, TouchpadParameters())) {
+            m_config.readConfig();
+            differentConfigs();
+        }
+
+        m_firstLoad = false;
+    } else {
+        TouchpadParameters active;
+        loadActive(&active);
+        if (!compareConfigs(m_config, active)) {
+            differentConfigs();
+        }
+    }
+}
+
+void TouchpadConfig::differentConfigs()
+{
+    QMetaObject::invokeMethod(this, "changed", Qt::QueuedConnection);
+
+    if (!m_message->isVisible()) {
+        m_message->setMessageType(KMessageWidget::Warning);
+        m_message->setText("Active touchpad configuration differs from "
+                           "saved configuration");
+        m_message->animatedShow();
+    }
 }
