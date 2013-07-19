@@ -11,7 +11,7 @@
    </rect>
   </property>
   <layout class="QGridLayout" name="gridLayout_2">
-   <item row="0" column="0">
+   <item row="1" column="0">
     <widget class="QTabWidget" name="tabWidget">
      <property name="currentIndex">
       <number>0</number>
@@ -219,6 +219,9 @@
      </widget>
     </widget>
    </item>
+   <item row="0" column="0">
+    <widget class="KMessageWidget" name="m_message" native="true"/>
+   </item>
   </layout>
  </widget>
  <customwidgets>
@@ -226,6 +229,12 @@
    <class>CustomSlider</class>
    <extends>QSlider</extends>
    <header>customslider.h</header>
+  </customwidget>
+  <customwidget>
+   <class>KMessageWidget</class>
+   <extends>QWidget</extends>
+   <header location="global">KMessageWidget</header>
+   <container>1</container>
   </customwidget>
  </customwidgets>
  <tabstops>

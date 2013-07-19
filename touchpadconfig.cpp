@@ -125,10 +125,6 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
 {
     setupUi(this);
 
-    m_message = new KMessageWidget(this);
-    m_message->setVisible(false);
-    verticalLayout->insertWidget(0, m_message);
-
     static const NonlinearInterpolator interpolator;
     kcfg_MinSpeed->setInterpolator(&interpolator);
     kcfg_MaxSpeed->setInterpolator(&interpolator);

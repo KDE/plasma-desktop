@@ -7,7 +7,6 @@
 #include "ui_touchpadconfig.h"
 
 class TouchpadBackend;
-class KMessageWidget;
 
 class TouchpadConfig : public KCModule, private Ui_TouchpadConfig
 {
@@ -29,7 +28,6 @@ private:
 
     TouchpadBackend *m_backend;
     TouchpadParameters m_config;
-    KMessageWidget *m_message;
     bool m_firstLoad;
 };
 
