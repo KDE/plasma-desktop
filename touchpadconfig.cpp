@@ -170,7 +170,8 @@ void TouchpadConfig::save()
 static bool variantFuzzyCompare(const QVariant &a, const QVariant &b)
 {
     if (a.type() == QVariant::Double && b.type() == QVariant::Double) {
-        return qFuzzyCompare(a.toDouble(), b.toDouble());
+        return qFuzzyCompare(static_cast<float>(a.toDouble()),
+                             static_cast<float>(b.toDouble()));
     }
     return a == b;
 }
