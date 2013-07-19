@@ -25,7 +25,9 @@ extern "C"
         }
 
         TouchpadParameters config;
-        backend->applyConfig(&config);
+        if (config.applyConfigOnInit()) {
+            backend->applyConfig(&config);
+        }
     }
 }
 
@@ -159,6 +161,8 @@ void TouchpadConfig::save()
     if (!m_backend) {
         return;
     }
+
+    m_config.setApplyConfigOnInit(true);
 
     m_message->animatedHide();
     KCModule::save();
