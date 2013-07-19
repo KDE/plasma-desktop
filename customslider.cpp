@@ -79,6 +79,10 @@ double CustomSlider::doubleValue() const
 
 void CustomSlider::setDoubleValue(double v)
 {
+    if (m_value == v) {
+        return;
+    }
+
     m_value = v;
     moveSlider();
     Q_EMIT valueChanged(doubleValue());
