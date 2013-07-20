@@ -39,8 +39,6 @@ public:
     QStringList supportedParameters() { return m_supported; }
 
 private:
-    bool test();
-
     struct PropertyInfo *getDevProperty(const QLatin1String &propName);
 
     bool setParameter(const QString &name, const QVariant &);

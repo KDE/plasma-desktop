@@ -226,10 +226,6 @@ XlibBackend::~XlibBackend()
 
 void XlibBackend::applyConfig(const TouchpadParameters *p)
 {
-    if (!test()) {
-        return;
-    }
-
     m_props.clear();
 
     Q_FOREACH(const QString &name, m_supported) {
@@ -240,11 +236,6 @@ void XlibBackend::applyConfig(const TouchpadParameters *p)
     }
 
     Q_FOREACH(const QLatin1String &name, m_changed) {
-        if (!m_props.contains(name) || !m_atoms.contains(name) ||
-                !m_atoms[name] || !m_atoms[name]->atom())
-        {
-            continue;
-        }
         PropertyInfo &info = m_props[name];
         if (!info.type || !info.data) {
             continue;
@@ -260,10 +251,6 @@ void XlibBackend::applyConfig(const TouchpadParameters *p)
 
 void XlibBackend::getConfig(TouchpadParameters *p)
 {
-    if (!test()) {
-        return;
-    }
-
     m_props.clear();
 
     Q_FOREACH(const QString &name, m_supported) {
@@ -277,26 +264,6 @@ void XlibBackend::getConfig(TouchpadParameters *p)
             i->setProperty(value);
         }
     }
-}
-
-bool XlibBackend::test()
-{
-    if (!m_display) {
-        Q_EMIT error("Can't connect to X");
-        return false;
-    }
-
-    if (!m_connection) {
-        Q_EMIT error("Can't get XCB connection");
-        return false;
-    }
-
-    if (!m_device) {
-        Q_EMIT error("No touchpad found");
-        return false;
-    }
-
-    return true;
 }
 
 static const Parameter *findParameter(const QString &name)
