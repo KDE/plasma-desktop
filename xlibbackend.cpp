@@ -255,7 +255,7 @@ void XlibBackend::applyConfig(const TouchpadParameters *p)
     }
     m_changed.clear();
 
-    xcb_flush(m_connection);
+    XFlush(m_display.data());
 }
 
 void XlibBackend::getConfig(TouchpadParameters *p)
