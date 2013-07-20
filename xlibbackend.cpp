@@ -9,7 +9,6 @@
 #include <X11/Xlib-xcb.h>
 #include <X11/Xatom.h>
 #include <xcb/xcb_atom.h>
-#include <xcb/xinput.h>
 
 #include <xorg/synaptics-properties.h>
 
@@ -105,10 +104,9 @@ struct PropertyInfo
 };
 
 XlibBackend::XlibBackend(QObject *parent) :
-    TouchpadBackend(parent), m_display(XOpenDisplay(0), XDisplayDeleter)
+    TouchpadBackend(parent), m_triedInit(false),
+    m_display(XOpenDisplay(0), XDisplayDeleter), m_connection(0)
 {
-    qFill(m_caps, m_caps + TouchpadCapsCount, false);
-
     if (!m_display) {
         return;
     }
@@ -119,10 +117,10 @@ XlibBackend::XlibBackend(QObject *parent) :
         return;
     }
 
-    xcb_input_list_input_devices_cookie_t devicesCookie =
-            xcb_input_list_input_devices(m_connection);
-
-    XcbAtom touchpadType(m_connection, XI_TOUCHPAD);
+    m_devicesCookie = xcb_input_list_input_devices(m_connection);
+    m_touchpadType.intern(m_connection, XI_TOUCHPAD);
+    m_floatType.intern(m_connection, "FLOAT");
+    m_capsAtom.intern(m_connection, SYNAPTICS_PROP_CAPABILITIES);
 
     for (const Parameter *param = synapticsProperties; param->name; param++) {
         QLatin1String name(param->prop_name);
@@ -132,29 +130,35 @@ XlibBackend::XlibBackend(QObject *parent) :
                                new XcbAtom(m_connection, param->prop_name)));
         }
     }
+}
 
-    m_floatType.intern(m_connection, "FLOAT");
-    XcbAtom capsAtom(m_connection, SYNAPTICS_PROP_CAPABILITIES);
-
+QSharedPointer<XDevice> XlibBackend::findTouchpad()
+{
     QScopedPointer<xcb_input_list_input_devices_reply_t> devicesReply(
                 xcb_input_list_input_devices_reply(m_connection,
-                                                   devicesCookie, 0));
+                                                   m_devicesCookie, 0));
+    if (!devicesReply) {
+        Q_EMIT error("Can't get input device list");
+        return QSharedPointer<XDevice>();
+    }
 
-    if (!touchpadType.atom() || !devicesReply) {
-        return;
+    if (!m_touchpadType.atom()) {
+        Q_EMIT error("XI_TOUCHPAD doesn't exist");
+        return QSharedPointer<XDevice>();
+    }
+
+    if (!m_capsAtom.atom()) {
+        Q_EMIT error("SYNAPTICS_PROP_CAPABILITIES doesn't exist");
+        return QSharedPointer<XDevice>();
     }
 
     xcb_input_device_info_t *deviceInfo =
             xcb_input_list_input_devices_devices(devicesReply.data());
-    if (!deviceInfo) {
-        return;
-    }
-
     int nDevices =
             xcb_input_list_input_devices_devices_length(devicesReply.data());
 
     for (int i = 0; i < nDevices && !m_device; i++) {
-        if (deviceInfo[i].device_type == touchpadType.atom()) {
+        if (deviceInfo[i].device_type == m_touchpadType.atom()) {
             XDevice *devicePtr = XOpenDevice(m_display.data(),
                                              deviceInfo[i].device_id);
             if (!devicePtr) {
@@ -171,34 +175,38 @@ XlibBackend::XlibBackend(QObject *parent) :
                 continue;
             }
 
-            Q_FOREACH(const QSharedPointer<XcbAtom> &atom, m_atoms) {
-                if (!atom || !atom->atom()) {
-                    continue;
-                }
-                for (int j = 0; j < nProperties; j++) {
-                    if (properties.data()[j] == atom->atom()) {
-                        m_device = device;
-                        break;
-                    }
-                }
-                if (m_device) {
-                    break;
+            for (int j = 0; j < nProperties; j++) {
+                if (properties.data()[j] == m_capsAtom.atom()) {
+                    return device;
                 }
             }
         }
     }
 
-    if (!capsAtom.atom()) {
-        return;
+    Q_EMIT error("Can't find touchpad");
+    return QSharedPointer<XDevice>();
+}
+
+bool XlibBackend::init()
+{
+    if (m_triedInit) {
+        return !m_supported.isEmpty();
+    }
+    m_triedInit = true;
+
+    if (!m_display) {
+        Q_EMIT error("No connection to X server");
+        return false;
     }
 
-    PropertyInfo caps(m_display.data(), m_device.data(), capsAtom.atom(), 0);
-    if (!caps.b) {
-        return;
+    if (!m_connection) {
+        Q_EMIT error("Can't get XCB connection");
+        return false;
     }
 
-    for (unsigned i = 0; i < caps.nitems && i < TouchpadCapsCount; i++) {
-        m_caps[i] = static_cast<bool>(caps.b[i]);
+    m_device = findTouchpad();
+    if (!m_device) {
+        return false;
     }
 
     for (const Parameter *p = synapticsProperties; p->name; p++) {
@@ -209,15 +217,39 @@ XlibBackend::XlibBackend(QObject *parent) :
         }
     }
 
-    if (!m_caps[TouchpadTwoFingerDetect]) {
+    PropertyInfo caps(m_display.data(), m_device.data(), m_capsAtom.atom(), 0);
+    if (!caps.b) {
+        Q_EMIT error("Can't read touchpad's capabilities");
+        return false;
+    }
+
+    enum TouchpadCapabilitiy
+    {
+        TouchpadHasLeftButton,
+        TouchpadHasMiddleButton,
+        TouchpadHasRightButton,
+        TouchpadTwoFingerDetect,
+        TouchpadThreeFingerDetect,
+        TouchpadPressureDetect,
+        TouchpadPalmDetect,
+        TouchpadCapsCount
+    };
+
+    QVector<bool> cap(TouchpadCapsCount, false);
+    qCopy(caps.b, caps.b + qMin(cap.size(), static_cast<int>(caps.nitems)),
+          cap.begin());
+
+    if (!cap[TouchpadTwoFingerDetect]) {
         m_supported.removeAll("HorizTwoFingerScroll");
         m_supported.removeAll("VertTwoFingerScroll");
         m_supported.removeAll("TapButton2");
     }
 
-    if (!m_caps[TouchpadThreeFingerDetect]) {
+    if (!cap[TouchpadThreeFingerDetect]) {
         m_supported.removeAll("TapButton3");
     }
+
+    return true;
 }
 
 XlibBackend::~XlibBackend()
@@ -226,6 +258,10 @@ XlibBackend::~XlibBackend()
 
 void XlibBackend::applyConfig(const TouchpadParameters *p)
 {
+    if (!init()) {
+        return;
+    }
+
     m_props.clear();
 
     Q_FOREACH(const QString &name, m_supported) {
@@ -251,6 +287,10 @@ void XlibBackend::applyConfig(const TouchpadParameters *p)
 
 void XlibBackend::getConfig(TouchpadParameters *p)
 {
+    if (!init()) {
+        return;
+    }
+
     m_props.clear();
 
     Q_FOREACH(const QString &name, m_supported) {

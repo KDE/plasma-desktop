@@ -11,20 +11,9 @@
 #include <X11/Xlib.h>
 #include <xcb/xcb.h>
 #include <X11/extensions/XInput.h>
+#include <xcb/xinput.h>
 
 #include "xcbatom.h"
-
-enum TouchpadCapabilitiy
-{
-    TouchpadHasLeftButton,
-    TouchpadHasMiddleButton,
-    TouchpadHasRightButton,
-    TouchpadTwoFingerDetect,
-    TouchpadThreeFingerDetect,
-    TouchpadPressureDetect,
-    TouchpadPalmDetect,
-    TouchpadCapsCount
-};
 
 class XlibBackend : public TouchpadBackend
 {
@@ -36,9 +25,12 @@ public:
 
     void applyConfig(const TouchpadParameters *);
     void getConfig(TouchpadParameters *);
-    QStringList supportedParameters() { return m_supported; }
+    QStringList supportedParameters() { init(); return m_supported; }
 
 private:
+    bool init();
+    bool m_triedInit;
+
     struct PropertyInfo *getDevProperty(const QLatin1String &propName);
 
     bool setParameter(const QString &name, const QVariant &);
@@ -47,15 +39,15 @@ private:
     QSharedPointer<Display> m_display;
     xcb_connection_t *m_connection;
 
-    XcbAtom m_floatType;
+    XcbAtom m_floatType, m_touchpadType, m_capsAtom;
+    xcb_input_list_input_devices_cookie_t m_devicesCookie;
 
+    QSharedPointer<XDevice> findTouchpad();
     QSharedPointer<XDevice> m_device;
 
     QMap<QLatin1String, QSharedPointer<XcbAtom> > m_atoms;
     QMap<QLatin1String, struct PropertyInfo> m_props;
     QSet<QLatin1String> m_changed;
-
-    bool m_caps[TouchpadCapsCount];
     QStringList m_supported;
 };
 
