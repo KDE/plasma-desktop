@@ -232,8 +232,11 @@ void XlibBackend::applyConfig(const TouchpadParameters *p)
 
     m_props.clear();
 
-    Q_FOREACH(KConfigSkeletonItem *i, p->items()) {
-        setParameter(i->name(), i->property());
+    Q_FOREACH(const QString &name, m_supported) {
+        KConfigSkeletonItem *i = p->findItem(name);
+        if (i) {
+            setParameter(name, i->property());
+        }
     }
 
     Q_FOREACH(const QLatin1String &name, m_changed) {
@@ -263,22 +266,16 @@ void XlibBackend::getConfig(TouchpadParameters *p)
 
     m_props.clear();
 
-    int nRead = 0;
-    Q_FOREACH(KConfigSkeletonItem *i, p->items()) {
-        QString name(i->name());
+    Q_FOREACH(const QString &name, m_supported) {
         QVariant value;
-
         if (!getParameter(name, value)) {
             continue;
         }
 
-        i->setProperty(value);
-        nRead++;
-    }
-
-    if (!nRead) {
-        Q_EMIT error("Can't read X device properties");
-        return;
+        KConfigSkeletonItem *i = p->findItem(name);
+        if (i) {
+            i->setProperty(value);
+        }
     }
 }
 
