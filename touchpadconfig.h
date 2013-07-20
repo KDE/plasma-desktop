@@ -23,7 +23,6 @@ private Q_SLOTS:
     void showError(const QString &);
 
 private:
-    void loadActive(TouchpadParameters *);
     void differentConfigs();
 
     TouchpadBackend *m_backend;

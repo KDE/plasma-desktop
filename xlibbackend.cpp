@@ -200,6 +200,24 @@ XlibBackend::XlibBackend(QObject *parent) :
     for (unsigned i = 0; i < caps.nitems && i < TouchpadCapsCount; i++) {
         m_caps[i] = static_cast<bool>(caps.b[i]);
     }
+
+    for (const Parameter *p = synapticsProperties; p->name; p++) {
+        QString name(p->name);
+        QVariant value;
+        if (getParameter(name, value)) {
+            m_supported.append(name);
+        }
+    }
+
+    if (!m_caps[TouchpadTwoFingerDetect]) {
+        m_supported.removeAll("HorizTwoFingerScroll");
+        m_supported.removeAll("VertTwoFingerScroll");
+        m_supported.removeAll("TapButton2");
+    }
+
+    if (!m_caps[TouchpadThreeFingerDetect]) {
+        m_supported.removeAll("TapButton3");
+    }
 }
 
 XlibBackend::~XlibBackend()
@@ -237,8 +255,7 @@ void XlibBackend::applyConfig(const TouchpadParameters *p)
     xcb_flush(m_connection);
 }
 
-void XlibBackend::getConfig(TouchpadParameters *p,
-                            QStringList *supportedParameters)
+void XlibBackend::getConfig(TouchpadParameters *p)
 {
     if (!test()) {
         return;
@@ -257,23 +274,11 @@ void XlibBackend::getConfig(TouchpadParameters *p,
 
         i->setProperty(value);
         nRead++;
-
-        supportedParameters->append(name);
     }
 
     if (!nRead) {
         Q_EMIT error("Can't read X device properties");
         return;
-    }
-
-    if (!m_caps[TouchpadTwoFingerDetect]) {
-        supportedParameters->removeAll("HorizTwoFingerScroll");
-        supportedParameters->removeAll("VertTwoFingerScroll");
-        supportedParameters->removeAll("TapButton2");
-    }
-
-    if (!m_caps[TouchpadThreeFingerDetect]) {
-        supportedParameters->removeAll("TapButton3");
     }
 }
 

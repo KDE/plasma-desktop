@@ -35,7 +35,8 @@ public:
     ~XlibBackend();
 
     void applyConfig(const TouchpadParameters *);
-    void getConfig(TouchpadParameters *, QStringList *supportedParameters);
+    void getConfig(TouchpadParameters *);
+    QStringList supportedParameters() { return m_supported; }
 
 private:
     bool test();
@@ -57,6 +58,7 @@ private:
     QSet<QLatin1String> m_changed;
 
     bool m_caps[TouchpadCapsCount];
+    QStringList m_supported;
 };
 
 #endif // XLIBBACKEND_H

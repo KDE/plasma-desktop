@@ -141,6 +141,7 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
         return;
     }
     connect(m_backend, SIGNAL(error(QString)), SLOT(showError(QString)));
+    disableChildren(this, m_backend->supportedParameters());
 
     KConfigDialogManager::changedMap()->insert("CustomSlider",
                                                SIGNAL(valueChanged(double)));
@@ -194,21 +195,12 @@ static bool compareConfigs(const TouchpadParameters &a,
     return true;
 }
 
-void TouchpadConfig::loadActive(TouchpadParameters *to)
-{
-    if (m_backend) {
-        QStringList supportedParams;
-        m_backend->getConfig(to, &supportedParams);
-        disableChildren(this, supportedParams);
-    }
-}
-
 void TouchpadConfig::load()
 {
     m_message->animatedHide();
 
-    if (m_firstLoad) {
-        loadActive(&m_config);
+    if (m_firstLoad && m_backend) {
+        m_backend->getConfig(&m_config);
     }
 
     KCModule::load();
@@ -220,9 +212,9 @@ void TouchpadConfig::load()
         }
 
         m_firstLoad = false;
-    } else {
+    } else if (m_backend) {
         TouchpadParameters active;
-        loadActive(&active);
+        m_backend->getConfig(&active);
         if (!compareConfigs(m_config, active)) {
             differentConfigs();
         }
