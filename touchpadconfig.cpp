@@ -60,17 +60,17 @@ static QString getParameterName(QObject *widget)
 }
 
 static void disableChildren(QWidget *widget,
-                            const QStringList &enable = QStringList())
+                            const QStringList &except = QStringList())
 {
     QString name(getParameterName(widget));
-    if (!name.isEmpty()) {
-        widget->setEnabled(enable.contains(name));
+    if (!name.isEmpty() && !except.contains(name)) {
+        widget->setEnabled(false);
     }
 
     Q_FOREACH(QObject *child, widget->children()) {
         QWidget *childWidget = qobject_cast<QWidget *>(child);
         if (childWidget) {
-            disableChildren(childWidget, enable);
+            disableChildren(childWidget, except);
         }
     }
 }
