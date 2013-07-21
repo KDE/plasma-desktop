@@ -88,6 +88,8 @@ struct PropertyInfo
 
     QVariant value(int offset) const
     {
+        Q_ASSERT(offset < nitems);
+
         QVariant v;
         if (b) {
             v = QVariant(static_cast<int>(b[offset]));
@@ -210,10 +212,9 @@ bool XlibBackend::init()
     }
 
     for (const Parameter *p = synapticsProperties; p->name; p++) {
-        QString name(p->name);
         QVariant value;
-        if (getParameter(name, value)) {
-            m_supported.append(name);
+        if (getParameter(p, value)) {
+            m_supported.append(p->name);
         }
     }
 
@@ -256,6 +257,16 @@ XlibBackend::~XlibBackend()
 {
 }
 
+static const Parameter *findParameter(const QString &name)
+{
+    for (const Parameter *par = synapticsProperties; par->name; par++) {
+        if (name == par->name) {
+            return par;
+        }
+    }
+    return 0;
+}
+
 void XlibBackend::applyConfig(const TouchpadParameters *p)
 {
     if (!init()) {
@@ -266,16 +277,14 @@ void XlibBackend::applyConfig(const TouchpadParameters *p)
 
     Q_FOREACH(const QString &name, m_supported) {
         KConfigSkeletonItem *i = p->findItem(name);
-        if (i) {
-            setParameter(name, i->property());
+        const Parameter *par = findParameter(name);
+        if (i && par) {
+            setParameter(par, i->property());
         }
     }
 
     Q_FOREACH(const QLatin1String &name, m_changed) {
         PropertyInfo &info = m_props[name];
-        if (!info.type || !info.data) {
-            continue;
-        }
         XChangeDeviceProperty(m_display.data(), m_device.data(),
                               m_atoms[name]->atom(), info.type, info.format,
                               PropModeReplace, info.data.data(), info.nitems);
@@ -294,8 +303,14 @@ void XlibBackend::getConfig(TouchpadParameters *p)
     m_props.clear();
 
     Q_FOREACH(const QString &name, m_supported) {
+        const Parameter *par = findParameter(name);
+        if (!par) {
+            continue;
+        }
+
         QVariant value;
-        if (!getParameter(name, value)) {
+        if (!getParameter(par, value)) {
+            Q_EMIT error(QString("Can't read parameter %1").arg(name));
             continue;
         }
 
@@ -304,15 +319,6 @@ void XlibBackend::getConfig(TouchpadParameters *p)
             i->setProperty(value);
         }
     }
-}
-
-static const Parameter *findParameter(const QString &name)
-{
-    const Parameter *par = synapticsProperties;
-    while (par->name && name != par->name) {
-        par++;
-    }
-    return par;
 }
 
 PropertyInfo *XlibBackend::getDevProperty(const QLatin1String &propName)
@@ -331,21 +337,16 @@ PropertyInfo *XlibBackend::getDevProperty(const QLatin1String &propName)
     }
 
     PropertyInfo p(m_display.data(), m_device.data(), prop, m_floatType.atom());
-    if (p.data && !p.b && !p.f && !p.i) {
-        Q_EMIT error(QString("Property \"%1\" has unknown type").arg(propName));
+    if (!p.b && !p.f && !p.i) {
+        return 0;
     }
     return &m_props.insert(propName, p).value();
 }
 
-bool XlibBackend::getParameter(const QString &name, QVariant &value)
+bool XlibBackend::getParameter(const Parameter *par, QVariant &value)
 {
-    const Parameter *par = findParameter(name);
-    if (!par) {
-        return false;
-    }
-
     PropertyInfo *p = getDevProperty(QLatin1String(par->prop_name));
-    if (!p) {
+    if (!p || par->prop_offset >= p->nitems) {
         return false;
     }
 
@@ -353,41 +354,28 @@ bool XlibBackend::getParameter(const QString &name, QVariant &value)
     return value.isValid();
 }
 
-bool XlibBackend::setParameter(const QString &name, const QVariant &value)
+bool XlibBackend::setParameter(const Parameter *par, const QVariant &value)
 {
-    const Parameter *par = findParameter(name);
-    if (!par) {
-        return false;
-    }
-
     QLatin1String propName(par->prop_name);
     PropertyInfo *p = getDevProperty(propName);
-    if (!p) {
-        return false;
-    }
-
-    QVariant old(p->value(par->prop_offset));
-    if (!old.isValid()) {
+    if (!p || par->prop_offset >= p->nitems) {
+        Q_EMIT error(QString("Can't read property %1").arg(propName));
         return false;
     }
 
     QVariant converted(value);
-    QVariant::Type convType;
-    if (p->b || p->i) {
-        convType = QVariant::Int;
-    } else if (p->f) {
+    QVariant::Type convType = QVariant::Int;
+    if (p->f) {
         convType = QVariant::Double;
-    } else {
-        return false;
     }
 
     if (!converted.convert(convType)) {
         Q_EMIT error(QString("Can't convert value \"%2\" to %3 (parameter %1)")
-                     .arg(name, value.toString(), QVariant::typeToName(convType)));
+                     .arg(par->name, value.toString(), QVariant::typeToName(convType)));
         return false;
     }
 
-    if (converted == old) {
+    if (converted == p->value(par->prop_offset)) {
         return true;
     }
 

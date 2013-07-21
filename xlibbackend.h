@@ -32,9 +32,8 @@ private:
     bool m_triedInit;
 
     struct PropertyInfo *getDevProperty(const QLatin1String &propName);
-
-    bool setParameter(const QString &name, const QVariant &);
-    bool getParameter(const QString &name, QVariant &);
+    bool setParameter(const struct Parameter *, const QVariant &);
+    bool getParameter(const struct Parameter *, QVariant &);
 
     QSharedPointer<Display> m_display;
     xcb_connection_t *m_connection;
