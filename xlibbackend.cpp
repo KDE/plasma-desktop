@@ -177,10 +177,10 @@ QSharedPointer<XDevice> XlibBackend::findTouchpad()
                 continue;
             }
 
-            for (int j = 0; j < nProperties; j++) {
-                if (properties.data()[j] == m_capsAtom.atom()) {
-                    return device;
-                }
+            if (std::count(properties.data(), properties.data() + nProperties,
+                           m_capsAtom.atom()))
+            {
+                return device;
             }
         }
     }
