@@ -9,6 +9,7 @@
 #include <KMessageWidget>
 #include <KConfigDialogManager>
 
+#include "sliderpair.h"
 #include "touchpadbackend.h"
 
 K_PLUGIN_FACTORY(TouchpadConfigFactory, registerPlugin<TouchpadConfig>();)
@@ -173,6 +174,8 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
     kcfg_MinSpeed->setInterpolator(&interpolator);
     kcfg_MaxSpeed->setInterpolator(&interpolator);
     kcfg_AccelFactor->setInterpolator(&interpolator);
+
+    new SliderPair(kcfg_MinSpeed, kcfg_MaxSpeed);
 
     populateChild(this, &m_config);
 

@@ -51,7 +51,7 @@ ${X11_Xinput_LIB}
 ${KDE4_KDECORE_LIBS}
 )
 
-set(kcm_SRCS touchpadconfig.cpp customslider.cpp)
+set(kcm_SRCS touchpadconfig.cpp customslider.cpp sliderpair.cpp)
 kde4_add_ui_files(kcm_SRCS touchpadconfig.ui)
 kde4_add_plugin(kcm_touchpad ${kcm_SRCS})
 target_link_libraries(kcm_touchpad ${KDE4_KDEUI_LIBS} ktouchpad)
