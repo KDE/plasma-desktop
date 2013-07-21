@@ -221,7 +221,7 @@ void TouchpadConfig::load()
 
 void TouchpadConfig::differentConfigs()
 {
-    Q_EMIT changed();
+    QMetaObject::invokeMethod(this, "changed", Qt::QueuedConnection);
 
     if (!m_message->isVisible()) {
         m_message->setMessageType(KMessageWidget::Warning);
