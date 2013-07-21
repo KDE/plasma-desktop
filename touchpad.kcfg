@@ -7,7 +7,14 @@
         </entry>
     </group>
     <group name="parameters">
-        <entry name="TapButton1" type="Enum">
+        <entry name="$(TapAction)Button" type="Enum">
+            <parameter name="TapAction" type="Enum">
+                <values>
+                    <value>OneFingerTap</value>
+                    <value>TwoFingerTap</value>
+                    <value>ThreeFingerTap</value>
+                </values>
+            </parameter>
             <choices name="Button">
                 <choice name="NoButton">
                     <label>Disabled</label>
@@ -22,41 +29,9 @@
                     <label>Right button</label>
                 </choice>
             </choices>
-            <default>LeftButton</default>
-        </entry>
-        <entry name="TapButton2" type="Enum">
-            <choices name="TouchpadParameters::Button">
-                <choice name="NoButton">
-                    <label>Disabled</label>
-                </choice>
-                <choice name="LeftButton">
-                    <label>Left button</label>
-                </choice>
-                <choice name="MiddleButton">
-                    <label>Middle button</label>
-                </choice>
-                <choice name="RightButton">
-                    <label>Right button</label>
-                </choice>
-            </choices>
-            <default>RightButton</default>
-        </entry>
-        <entry name="TapButton3" type="Enum">
-            <choices name="TouchpadParameters::Button">
-                <choice name="NoButton">
-                    <label>Disabled</label>
-                </choice>
-                <choice name="LeftButton">
-                    <label>Left button</label>
-                </choice>
-                <choice name="MiddleButton">
-                    <label>Middle button</label>
-                </choice>
-                <choice name="RightButton">
-                    <label>Right button</label>
-                </choice>
-            </choices>
-            <default>MiddleButton</default>
+            <default param="OneFingerTap">LeftButton</default>
+            <default param="TwoFingerTap">RightButton</default>
+            <default param="ThreeFingerTap">MiddleButton</default>
         </entry>
         <entry name="VertEdgeScroll" type="Bool">
             <default>true</default>

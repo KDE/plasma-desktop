@@ -117,12 +117,12 @@
              <string>One-finger:</string>
             </property>
             <property name="buddy">
-             <cstring>kcfg_TapButton1</cstring>
+             <cstring>kcfg_OneFingerTapButton</cstring>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QComboBox" name="kcfg_TapButton1"/>
+           <widget class="QComboBox" name="kcfg_OneFingerTapButton"/>
           </item>
           <item>
            <widget class="QLabel" name="label_2">
@@ -136,12 +136,12 @@
              <string>Two fingers:</string>
             </property>
             <property name="buddy">
-             <cstring>kcfg_TapButton2</cstring>
+             <cstring>kcfg_TwoFingerTapButton</cstring>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QComboBox" name="kcfg_TapButton2"/>
+           <widget class="QComboBox" name="kcfg_TwoFingerTapButton"/>
           </item>
           <item>
            <widget class="QLabel" name="label_3">
@@ -155,12 +155,12 @@
              <string>Three fingers:</string>
             </property>
             <property name="buddy">
-             <cstring>kcfg_TapButton3</cstring>
+             <cstring>kcfg_ThreeFingerTapButton</cstring>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QComboBox" name="kcfg_TapButton3"/>
+           <widget class="QComboBox" name="kcfg_ThreeFingerTapButton"/>
           </item>
          </layout>
         </widget>
@@ -242,9 +242,9 @@
   <tabstop>kcfg_MinSpeed</tabstop>
   <tabstop>kcfg_MaxSpeed</tabstop>
   <tabstop>kcfg_AccelFactor</tabstop>
-  <tabstop>kcfg_TapButton1</tabstop>
-  <tabstop>kcfg_TapButton2</tabstop>
-  <tabstop>kcfg_TapButton3</tabstop>
+  <tabstop>kcfg_OneFingerTapButton</tabstop>
+  <tabstop>kcfg_TwoFingerTapButton</tabstop>
+  <tabstop>kcfg_ThreeFingerTapButton</tabstop>
   <tabstop>kcfg_VertEdgeScroll</tabstop>
   <tabstop>kcfg_HorizEdgeScroll</tabstop>
   <tabstop>kcfg_VertTwoFingerScroll</tabstop>

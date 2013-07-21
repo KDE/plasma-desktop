@@ -243,11 +243,11 @@ bool XlibBackend::init()
     if (!cap[TouchpadTwoFingerDetect]) {
         m_supported.removeAll("HorizTwoFingerScroll");
         m_supported.removeAll("VertTwoFingerScroll");
-        m_supported.removeAll("TapButton2");
+        m_supported.removeAll("TwoFingerTapButton");
     }
 
     if (!cap[TouchpadThreeFingerDetect]) {
-        m_supported.removeAll("TapButton3");
+        m_supported.removeAll("ThreeFingerTapButton");
     }
 
     return true;
