@@ -86,7 +86,7 @@ struct PropertyInfo
         }
     }
 
-    QVariant value(int offset) const
+    QVariant value(unsigned offset) const
     {
         Q_ASSERT(offset < nitems);
 

@@ -16,7 +16,7 @@ struct Parameter {
     double max_val;             /* Maximum allowed value */
     const char *prop_name;      /* Property name */
     int prop_format;            /* Property format (0 for floats) */
-    int prop_offset;            /* Offset inside property */
+    unsigned prop_offset;       /* Offset inside property */
 };
 
 extern const struct Parameter synapticsProperties[];
