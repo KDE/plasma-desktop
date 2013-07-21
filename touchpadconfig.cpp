@@ -197,33 +197,31 @@ static bool compareConfigs(const TouchpadParameters &a,
 
 void TouchpadConfig::load()
 {
+    if (!m_backend) {
+        return;
+    }
+
     m_message->animatedHide();
 
-    if (m_firstLoad && m_backend) {
+    if (m_firstLoad) {
+        m_firstLoad = false;
         m_backend->getConfig(&m_config);
+    } else {
+        m_config.readConfig();
     }
 
     KCModule::load();
 
-    if (m_firstLoad) {
-        if (!compareConfigs(m_config, TouchpadParameters())) {
-            m_config.readConfig();
-            differentConfigs();
-        }
-
-        m_firstLoad = false;
-    } else if (m_backend) {
-        TouchpadParameters active;
-        m_backend->getConfig(&active);
-        if (!compareConfigs(m_config, active)) {
-            differentConfigs();
-        }
+    TouchpadParameters active;
+    m_backend->getConfig(&active);
+    if (!compareConfigs(active, TouchpadParameters())) {
+        differentConfigs();
     }
 }
 
 void TouchpadConfig::differentConfigs()
 {
-    QMetaObject::invokeMethod(this, "changed", Qt::QueuedConnection);
+    Q_EMIT changed();
 
     if (!m_message->isVisible()) {
         m_message->setMessageType(KMessageWidget::Warning);
