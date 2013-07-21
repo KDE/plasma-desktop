@@ -19,6 +19,9 @@ public:
     virtual void save();
     virtual void load();
 
+protected:
+    virtual void showEvent(QShowEvent *ev);
+
 private Q_SLOTS:
     void showError(const QString &);
 
@@ -28,6 +31,7 @@ private:
     TouchpadBackend *m_backend;
     TouchpadParameters m_config;
     bool m_firstLoad;
+    bool m_tabOrderSet;
 };
 
 #endif // TOUCHPADCONFIG_H

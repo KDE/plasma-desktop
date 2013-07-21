@@ -119,9 +119,52 @@ static void populateChild(QObject *widget, TouchpadParameters *config)
     }
 }
 
+static bool tabBefore(QWidget *first, QWidget *second)
+{
+    return qMakePair(first->geometry().top(), first->geometry().left()) <
+            qMakePair(second->geometry().top(), second->geometry().left());
+}
+
+static void tabOrder(QWidget *widget, QWidget* &prev)
+{
+    if (widget->focusPolicy() & Qt::TabFocus && !widget->focusProxy()) {
+        if (prev) {
+            QWidget::setTabOrder(prev, widget);
+        }
+        prev = widget;
+    }
+
+    QList<QWidget *> children;
+    Q_FOREACH(QObject *child, widget->children()) {
+        QWidget *w = qobject_cast<QWidget *>(child);
+        if (w) {
+            children.append(w);
+        }
+    }
+
+    qSort(children.begin(), children.end(), tabBefore);
+    Q_FOREACH(QWidget *child, children) {
+        tabOrder(child, prev);
+    }
+}
+
+void TouchpadConfig::showEvent(QShowEvent *ev)
+{
+    KCModule::showEvent(ev);
+
+    if (m_tabOrderSet) {
+        return;
+    }
+
+    QWidget *prev = 0;
+    tabOrder(this, prev);
+
+    m_tabOrderSet = true;
+}
+
 TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
     : KCModule(TouchpadConfigFactory::componentData(), parent, args),
-      m_firstLoad(true)
+      m_firstLoad(true), m_tabOrderSet(false)
 {
     setupUi(this);
     m_message->setVisible(false);
