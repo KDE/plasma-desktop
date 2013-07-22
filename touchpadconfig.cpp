@@ -144,8 +144,14 @@ static void tabOrder(QWidget *widget, QWidget* &prev)
     }
 
     qSort(children.begin(), children.end(), tabBefore);
+    QWidget *prevChild = 0;
     Q_FOREACH(QWidget *child, children) {
+        QLabel *label = qobject_cast<QLabel *>(prevChild);
+        if (label && !label->buddy() && (child->focusPolicy() & Qt::TabFocus)) {
+            label->setBuddy(child);
+        }
         tabOrder(child, prev);
+        prevChild = child;
     }
 }
 

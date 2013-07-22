@@ -38,9 +38,6 @@
             <property name="text">
              <string>Maximum speed</string>
             </property>
-            <property name="buddy">
-             <cstring>kcfg_MaxSpeed</cstring>
-            </property>
            </widget>
           </item>
           <item row="0" column="0">
@@ -54,9 +51,6 @@
             <property name="text">
              <string>Minimum speed</string>
             </property>
-            <property name="buddy">
-             <cstring>kcfg_MinSpeed</cstring>
-            </property>
            </widget>
           </item>
           <item row="2" column="0">
@@ -69,9 +63,6 @@
             </property>
             <property name="text">
              <string>Acceleration</string>
-            </property>
-            <property name="buddy">
-             <cstring>kcfg_AccelFactor</cstring>
             </property>
            </widget>
           </item>
@@ -116,9 +107,6 @@
             <property name="text">
              <string>One-finger:</string>
             </property>
-            <property name="buddy">
-             <cstring>kcfg_OneFingerTapButton</cstring>
-            </property>
            </widget>
           </item>
           <item>
@@ -135,9 +123,6 @@
             <property name="text">
              <string>Two fingers:</string>
             </property>
-            <property name="buddy">
-             <cstring>kcfg_TwoFingerTapButton</cstring>
-            </property>
            </widget>
           </item>
           <item>
@@ -153,9 +138,6 @@
             </property>
             <property name="text">
              <string>Three fingers:</string>
-            </property>
-            <property name="buddy">
-             <cstring>kcfg_ThreeFingerTapButton</cstring>
             </property>
            </widget>
           </item>
