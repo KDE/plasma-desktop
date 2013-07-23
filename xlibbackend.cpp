@@ -106,7 +106,7 @@ struct PropertyInfo
 };
 
 XlibBackend::XlibBackend(QObject *parent) :
-    TouchpadBackend(parent),
+    TouchpadBackend(parent), m_triedInit(false),
     m_display(XOpenDisplay(0), XDisplayDeleter), m_connection(0)
 {
     if (!m_display) {
@@ -191,6 +191,11 @@ QSharedPointer<XDevice> XlibBackend::findTouchpad()
 
 bool XlibBackend::init()
 {
+    if (m_triedInit) {
+        return !m_supported.isEmpty();
+    }
+    m_triedInit = true;
+
     if (!m_display) {
         Q_EMIT error("No connection to X server");
         return false;
@@ -262,8 +267,12 @@ static const Parameter *findParameter(const QString &name)
     return 0;
 }
 
-void XlibBackend::internalApplyConfig(const TouchpadParameters *p)
+void XlibBackend::applyConfig(const TouchpadParameters *p)
 {
+    if (!init()) {
+        return;
+    }
+
     m_props.clear();
 
     Q_FOREACH(const QString &name, m_supported) {
@@ -285,8 +294,12 @@ void XlibBackend::internalApplyConfig(const TouchpadParameters *p)
     XFlush(m_display.data());
 }
 
-void XlibBackend::internalGetConfig(TouchpadParameters *p)
+void XlibBackend::getConfig(TouchpadParameters *p)
 {
+    if (!init()) {
+        return;
+    }
+
     m_props.clear();
 
     Q_FOREACH(const QString &name, m_supported) {

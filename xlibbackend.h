@@ -23,13 +23,14 @@ public:
     XlibBackend(QObject *parent = 0);
     ~XlibBackend();
 
-protected:
-    bool init();
-    void internalApplyConfig(const TouchpadParameters *);
-    void internalGetConfig(TouchpadParameters *);
-    QStringList internalSupportedParameters() { return m_supported; }
+    void applyConfig(const TouchpadParameters *);
+    void getConfig(TouchpadParameters *);
+    QStringList supportedParameters() { init(); return m_supported; }
 
 private:
+    bool init();
+    bool m_triedInit;
+
     struct PropertyInfo *getDevProperty(const QLatin1String &propName);
     bool setParameter(const struct Parameter *, const QVariant &);
     bool getParameter(const struct Parameter *, QVariant &);
