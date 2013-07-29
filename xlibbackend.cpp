@@ -32,7 +32,6 @@ struct XDeviceDeleter
 {
     XDeviceDeleter(Display *d) : m_display(d)
     {
-        Q_ASSERT(d);
     }
 
     void operator() (XDevice *d) const
@@ -88,9 +87,11 @@ struct PropertyInfo
 
     QVariant value(unsigned offset) const
     {
-        Q_ASSERT(offset < nitems);
-
         QVariant v;
+        if (offset >= nitems) {
+            return v;
+        }
+
         if (b) {
             v = QVariant(static_cast<int>(b[offset]));
         }
@@ -105,17 +106,20 @@ struct PropertyInfo
     }
 };
 
+XlibBackend::~XlibBackend()
+{
+}
+
 XlibBackend::XlibBackend(QObject *parent) :
-    TouchpadBackend(parent), m_triedInit(false),
+    TouchpadBackend(parent),
     m_display(XOpenDisplay(0), XDisplayDeleter), m_connection(0)
 {
-    if (!m_display) {
-        return;
+    if (m_display) {
+        m_connection = XGetXCBConnection(m_display.data());
     }
 
-    m_connection = XGetXCBConnection(m_display.data());
-
     if (!m_connection) {
+        m_errorString = "Can not connect to X server";
         return;
     }
 
@@ -132,6 +136,60 @@ XlibBackend::XlibBackend(QObject *parent) :
                                new XcbAtom(m_connection, param->prop_name)));
         }
     }
+
+    if (!m_touchpadType.atom() || !m_capsAtom.atom()) {
+        m_errorString = "Synaptics driver is not installed (or is not used)";
+        return;
+    }
+
+    m_device = findTouchpad();
+    if (!m_device) {
+        m_errorString = "No touchpads found";
+        return;
+    }
+
+    for (const Parameter *p = synapticsProperties; p->name; p++) {
+        if (getParameter(p).isValid()) {
+            m_supported.append(p->name);
+        }
+    }
+
+    if (m_supported.isEmpty()) {
+        m_errorString = "Can not read any of touchpad's properties";
+        return;
+    }
+
+    PropertyInfo caps(m_display.data(), m_device.data(), m_capsAtom.atom(), 0);
+    if (!caps.b) {
+        m_errorString = "Can not read touchpad's capabilities";
+        return;
+    }
+
+    enum TouchpadCapabilitiy
+    {
+        TouchpadHasLeftButton,
+        TouchpadHasMiddleButton,
+        TouchpadHasRightButton,
+        TouchpadTwoFingerDetect,
+        TouchpadThreeFingerDetect,
+        TouchpadPressureDetect,
+        TouchpadPalmDetect,
+        TouchpadCapsCount
+    };
+
+    QVector<bool> cap(TouchpadCapsCount, false);
+    qCopy(caps.b, caps.b + qMin(cap.size(), static_cast<int>(caps.nitems)),
+          cap.begin());
+
+    if (!cap[TouchpadTwoFingerDetect]) {
+        m_supported.removeAll("HorizTwoFingerScroll");
+        m_supported.removeAll("VertTwoFingerScroll");
+        m_supported.removeAll("TwoFingerTapButton");
+    }
+
+    if (!cap[TouchpadThreeFingerDetect]) {
+        m_supported.removeAll("ThreeFingerTapButton");
+    }
 }
 
 QSharedPointer<XDevice> XlibBackend::findTouchpad()
@@ -140,17 +198,6 @@ QSharedPointer<XDevice> XlibBackend::findTouchpad()
                 xcb_input_list_input_devices_reply(m_connection,
                                                    m_devicesCookie, 0));
     if (!devicesReply) {
-        Q_EMIT error("Can't get input device list");
-        return QSharedPointer<XDevice>();
-    }
-
-    if (!m_touchpadType.atom()) {
-        Q_EMIT error("XI_TOUCHPAD doesn't exist");
-        return QSharedPointer<XDevice>();
-    }
-
-    if (!m_capsAtom.atom()) {
-        Q_EMIT error("SYNAPTICS_PROP_CAPABILITIES doesn't exist");
         return QSharedPointer<XDevice>();
     }
 
@@ -185,76 +232,7 @@ QSharedPointer<XDevice> XlibBackend::findTouchpad()
         }
     }
 
-    Q_EMIT error("Can't find touchpad");
     return QSharedPointer<XDevice>();
-}
-
-bool XlibBackend::init()
-{
-    if (m_triedInit) {
-        return !m_supported.isEmpty();
-    }
-    m_triedInit = true;
-
-    if (!m_display) {
-        Q_EMIT error("No connection to X server");
-        return false;
-    }
-
-    if (!m_connection) {
-        Q_EMIT error("Can't get XCB connection");
-        return false;
-    }
-
-    m_device = findTouchpad();
-    if (!m_device) {
-        return false;
-    }
-
-    for (const Parameter *p = synapticsProperties; p->name; p++) {
-        QVariant value;
-        if (getParameter(p, value)) {
-            m_supported.append(p->name);
-        }
-    }
-
-    PropertyInfo caps(m_display.data(), m_device.data(), m_capsAtom.atom(), 0);
-    if (!caps.b) {
-        Q_EMIT error("Can't read touchpad's capabilities");
-        return false;
-    }
-
-    enum TouchpadCapabilitiy
-    {
-        TouchpadHasLeftButton,
-        TouchpadHasMiddleButton,
-        TouchpadHasRightButton,
-        TouchpadTwoFingerDetect,
-        TouchpadThreeFingerDetect,
-        TouchpadPressureDetect,
-        TouchpadPalmDetect,
-        TouchpadCapsCount
-    };
-
-    QVector<bool> cap(TouchpadCapsCount, false);
-    qCopy(caps.b, caps.b + qMin(cap.size(), static_cast<int>(caps.nitems)),
-          cap.begin());
-
-    if (!cap[TouchpadTwoFingerDetect]) {
-        m_supported.removeAll("HorizTwoFingerScroll");
-        m_supported.removeAll("VertTwoFingerScroll");
-        m_supported.removeAll("TwoFingerTapButton");
-    }
-
-    if (!cap[TouchpadThreeFingerDetect]) {
-        m_supported.removeAll("ThreeFingerTapButton");
-    }
-
-    return true;
-}
-
-XlibBackend::~XlibBackend()
-{
 }
 
 static const Parameter *findParameter(const QString &name)
@@ -267,19 +245,22 @@ static const Parameter *findParameter(const QString &name)
     return 0;
 }
 
-void XlibBackend::applyConfig(const TouchpadParameters *p)
+bool XlibBackend::applyConfig(const TouchpadParameters *p)
 {
-    if (!init()) {
-        return;
+    if (m_supported.isEmpty()) {
+        return false;
     }
 
     m_props.clear();
 
+    bool error = false;
     Q_FOREACH(const QString &name, m_supported) {
         KConfigSkeletonItem *i = p->findItem(name);
         const Parameter *par = findParameter(name);
         if (i && par) {
-            setParameter(par, i->property());
+            if (!setParameter(par, i->property())) {
+                error = true;
+            }
         }
     }
 
@@ -292,25 +273,31 @@ void XlibBackend::applyConfig(const TouchpadParameters *p)
     m_changed.clear();
 
     XFlush(m_display.data());
+
+    if (error) {
+        m_errorString = "Can not set touchpad configuration";
+    }
+    return !error;
 }
 
-void XlibBackend::getConfig(TouchpadParameters *p)
+bool XlibBackend::getConfig(TouchpadParameters *p)
 {
-    if (!init()) {
-        return;
+    if (m_supported.isEmpty()) {
+        return false;
     }
 
     m_props.clear();
 
+    bool error = false;
     Q_FOREACH(const QString &name, m_supported) {
         const Parameter *par = findParameter(name);
         if (!par) {
             continue;
         }
 
-        QVariant value;
-        if (!getParameter(par, value)) {
-            Q_EMIT error(QString("Can't read parameter %1").arg(name));
+        QVariant value(getParameter(par));
+        if (!value.isValid()) {
+            error = true;
             continue;
         }
 
@@ -319,6 +306,21 @@ void XlibBackend::getConfig(TouchpadParameters *p)
             i->setProperty(value);
         }
     }
+
+    if (error) {
+        m_errorString = "Can not read touchpad configuration";
+    }
+    return !error;
+}
+
+QVariant XlibBackend::getParameter(const Parameter *par)
+{
+    PropertyInfo *p = getDevProperty(QLatin1String(par->prop_name));
+    if (!p || par->prop_offset >= p->nitems) {
+        return QVariant();
+    }
+
+    return p->value(par->prop_offset);
 }
 
 PropertyInfo *XlibBackend::getDevProperty(const QLatin1String &propName)
@@ -343,23 +345,11 @@ PropertyInfo *XlibBackend::getDevProperty(const QLatin1String &propName)
     return &m_props.insert(propName, p).value();
 }
 
-bool XlibBackend::getParameter(const Parameter *par, QVariant &value)
-{
-    PropertyInfo *p = getDevProperty(QLatin1String(par->prop_name));
-    if (!p || par->prop_offset >= p->nitems) {
-        return false;
-    }
-
-    value = p->value(par->prop_offset);
-    return value.isValid();
-}
-
 bool XlibBackend::setParameter(const Parameter *par, const QVariant &value)
 {
     QLatin1String propName(par->prop_name);
     PropertyInfo *p = getDevProperty(propName);
     if (!p || par->prop_offset >= p->nitems) {
-        Q_EMIT error(QString("Can't read property %1").arg(propName));
         return false;
     }
 
@@ -370,8 +360,6 @@ bool XlibBackend::setParameter(const Parameter *par, const QVariant &value)
     }
 
     if (!converted.convert(convType)) {
-        Q_EMIT error(QString("Can't convert value \"%2\" to %3 (parameter %1)")
-                     .arg(par->name, value.toString(), QVariant::typeToName(convType)));
         return false;
     }
 
@@ -388,6 +376,5 @@ bool XlibBackend::setParameter(const Parameter *par, const QVariant &value)
     }
 
     m_changed.insert(propName);
-
     return true;
 }

@@ -3,12 +3,17 @@
 #include <cmath>
 
 #include <QBoxLayout>
+#include <QComboBox>
+#include <QLabel>
+#include <QScrollArea>
 
 #include <KPluginFactory>
 #include <KLocalizedString>
 #include <KMessageWidget>
 #include <KConfigDialogManager>
+#include <KTabWidget>
 
+#include "customslider.h"
 #include "sliderpair.h"
 #include "touchpadbackend.h"
 
@@ -29,94 +34,6 @@ extern "C"
         if (config.applyConfigOnInit()) {
             backend->applyConfig(&config);
         }
-    }
-}
-
-class NonlinearInterpolator : public CustomSlider::Interpolator
-{
-public:
-    double absolute(double relative, double minimum, double maximum) const
-    {
-        relative *= relative;
-        return CustomSlider::Interpolator::absolute(relative, minimum, maximum);
-    }
-
-    double relative(double absolute, double minimum, double maximum) const
-    {
-        double value = CustomSlider::Interpolator::relative(absolute,
-                                                            minimum, maximum);
-        return std::sqrt(value);
-    }
-};
-
-static QString getParameterName(QObject *widget)
-{
-    static const QString kcfgPrefix("kcfg_");
-    QString name(widget->objectName());
-    if (!name.startsWith(kcfgPrefix)) {
-        return QString();
-    }
-    name.remove(0, kcfgPrefix.length());
-    return name;
-}
-
-static void disableChildren(QWidget *widget,
-                            const QStringList &except = QStringList())
-{
-    QString name(getParameterName(widget));
-    if (!name.isEmpty() && !except.contains(name)) {
-        widget->setEnabled(false);
-    }
-
-    Q_FOREACH(QObject *child, widget->children()) {
-        QWidget *childWidget = qobject_cast<QWidget *>(child);
-        if (childWidget) {
-            disableChildren(childWidget, except);
-        }
-    }
-}
-
-static void populateChoices(QObject *widget, TouchpadParameters *config)
-{
-    QString name(getParameterName(widget));
-    if (name.isEmpty()) {
-        return;
-    }
-    KConfigSkeletonItem *item = config->findItem(name);
-    if (!item) {
-        return;
-    }
-    KCoreConfigSkeleton::ItemEnum *e =
-            dynamic_cast<KCoreConfigSkeleton::ItemEnum *>(item);
-    if (!e) {
-        return;
-    }
-
-    QStringList choiceList;
-    Q_FOREACH(const KCoreConfigSkeleton::ItemEnum::Choice &c, e->choices()) {
-        if (c.label.isEmpty()) {
-            choiceList.append(c.name);
-        } else {
-            choiceList.append(c.label);
-        }
-    }
-
-    QComboBox *box = qobject_cast<QComboBox *>(widget);
-    if (box) {
-        box->addItems(choiceList);
-    }
-}
-
-static void populateChild(QObject *widget, TouchpadParameters *config)
-{
-    if (!widget) {
-        return;
-    }
-
-    populateChoices(widget, config);
-
-    Q_FOREACH(QObject *child, widget->children()) {
-        populateChild(child, config);
     }
 }
 
@@ -169,55 +86,75 @@ void TouchpadConfig::showEvent(QShowEvent *ev)
     m_tabOrderSet = true;
 }
 
-TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
-    : KCModule(TouchpadConfigFactory::componentData(), parent, args),
-      m_firstLoad(true), m_tabOrderSet(false)
+static QString getParameterName(QObject *widget)
 {
-    setupUi(this);
-    m_message->setVisible(false);
-
-    static const NonlinearInterpolator interpolator;
-    kcfg_MinSpeed->setInterpolator(&interpolator);
-    kcfg_MaxSpeed->setInterpolator(&interpolator);
-    kcfg_AccelFactor->setInterpolator(&interpolator);
-
-    new SliderPair(kcfg_MinSpeed, kcfg_MaxSpeed);
-
-    populateChild(this, &m_config);
-
-    m_backend = TouchpadBackend::self();
-    if (!m_backend) {
-        disableChildren(this);
-        setButtons(NoAdditionalButton);
-        showError("No backend found");
-        return;
+    static const QString kcfgPrefix("kcfg_");
+    QString name(widget->objectName());
+    if (!name.startsWith(kcfgPrefix)) {
+        return QString();
     }
-    connect(m_backend, SIGNAL(error(QString)), SLOT(showError(QString)));
-    disableChildren(this, m_backend->supportedParameters());
-
-    KConfigDialogManager::changedMap()->insert("CustomSlider",
-                                               SIGNAL(valueChanged(double)));
-    addConfig(&m_config, this);
+    name.remove(0, kcfgPrefix.length());
+    return name;
 }
 
-void TouchpadConfig::showError(const QString &errorString)
+static void disableChildren(QWidget *widget,
+                            const QStringList &except = QStringList())
 {
-    m_message->setText(errorString);
-    m_message->setMessageType(KMessageWidget::Error);
-    m_message->animatedShow();
+    QString name(getParameterName(widget));
+    if (!name.isEmpty() && !except.contains(name)) {
+        widget->setEnabled(false);
+    }
+
+    Q_FOREACH(QObject *child, widget->children()) {
+        QWidget *childWidget = qobject_cast<QWidget *>(child);
+        if (childWidget) {
+            disableChildren(childWidget, except);
+        }
+    }
 }
 
-void TouchpadConfig::save()
+static void fillWithChoicesWidget(QObject *widget, TouchpadParameters *config)
 {
-    if (!m_backend) {
+    QString name(getParameterName(widget));
+    if (name.isEmpty()) {
+        return;
+    }
+    KConfigSkeletonItem *item = config->findItem(name);
+    if (!item) {
+        return;
+    }
+    KCoreConfigSkeleton::ItemEnum *e =
+            dynamic_cast<KCoreConfigSkeleton::ItemEnum *>(item);
+    if (!e) {
         return;
     }
 
-    m_config.setApplyConfigOnInit(true);
+    QStringList choiceList;
+    Q_FOREACH(const KCoreConfigSkeleton::ItemEnum::Choice &c, e->choices()) {
+        if (c.label.isEmpty()) {
+            choiceList.append(c.name);
+        } else {
+            choiceList.append(c.label);
+        }
+    }
 
-    m_message->animatedHide();
-    KCModule::save();
-    m_backend->applyConfig(&m_config);
+    QComboBox *box = qobject_cast<QComboBox *>(widget);
+    if (box) {
+        box->addItems(choiceList);
+    }
+}
+
+static void fillWithChoices(QObject *widget, TouchpadParameters *config)
+{
+    if (!widget) {
+        return;
+    }
+
+    fillWithChoicesWidget(widget, config);
+
+    Q_FOREACH(QObject *child, widget->children()) {
+        fillWithChoices(child, config);
+    }
 }
 
 static bool variantFuzzyCompare(const QVariant &a, const QVariant &b)
@@ -247,38 +184,122 @@ static bool compareConfigs(const TouchpadParameters &a,
     return true;
 }
 
-void TouchpadConfig::load()
+class NonlinearInterpolator : public CustomSlider::Interpolator
 {
-    if (!m_backend) {
-        return;
+public:
+    double absolute(double relative, double minimum, double maximum) const
+    {
+        relative *= relative;
+        return CustomSlider::Interpolator::absolute(relative, minimum, maximum);
     }
 
-    m_message->animatedHide();
-
-    if (m_firstLoad) {
-        m_firstLoad = false;
-        m_backend->getConfig(&m_config);
-    } else {
-        m_config.readConfig();
+    double relative(double absolute, double minimum, double maximum) const
+    {
+        double value = CustomSlider::Interpolator::relative(absolute,
+                                                            minimum, maximum);
+        return std::sqrt(value);
     }
+};
 
-    KCModule::load();
+template<typename T>
+void addTab(QTabWidget *tabs, T &form)
+{
+    QScrollArea *container = new QScrollArea(tabs);
+    container->setWidgetResizable(true);
+    container->setFrameStyle(QFrame::NoFrame);
+    container->setAlignment(Qt::AlignHCenter | Qt::AlignTop);
 
-    TouchpadParameters active;
-    m_backend->getConfig(&active);
-    if (!compareConfigs(active, TouchpadParameters())) {
-        differentConfigs();
+    QWidget *widget = new QWidget(container);
+    form.setupUi(widget);
+
+    container->setWidget(widget);
+    tabs->addTab(container, widget->windowTitle());
+}
+
+static void checkUi(QObject *w, TouchpadParameters &config)
+{
+    Q_FOREACH(QObject *child, w->children()) {
+        QString param(getParameterName(child));
+        if (!param.isEmpty()) {
+            Q_ASSERT(config.findItem(param));
+        }
+        checkUi(child, config);
     }
 }
 
-void TouchpadConfig::differentConfigs()
+TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
+    : KCModule(TouchpadConfigFactory::componentData(), parent, args),
+      m_tabOrderSet(false), m_configOutOfSync(false)
 {
-    QMetaObject::invokeMethod(this, "changed", Qt::QueuedConnection);
+    QVBoxLayout *layout = new QVBoxLayout(this);
 
-    if (!m_message->isVisible()) {
-        m_message->setMessageType(KMessageWidget::Warning);
-        m_message->setText("Active touchpad configuration differs from "
-                           "saved configuration");
-        m_message->animatedShow();
+    m_errorMessage = new KMessageWidget(this);
+    m_errorMessage->setMessageType(KMessageWidget::Error);
+    m_errorMessage->setVisible(false);
+    layout->addWidget(m_errorMessage);
+
+    m_differentConfigsMessage = new KMessageWidget(
+                "Saved configuration differs from active configuration", this);
+    m_differentConfigsMessage->setMessageType(KMessageWidget::Warning);
+    m_differentConfigsMessage->setVisible(false);
+    layout->addWidget(m_differentConfigsMessage);
+
+    KTabWidget *tabs = new KTabWidget(this);
+
+    addTab(tabs, m_pointerMotion);
+    addTab(tabs, m_tapping);
+    addTab(tabs, m_scrolling);
+
+    checkUi(tabs, m_config);
+
+    layout->addWidget(tabs);
+
+    static const NonlinearInterpolator interpolator;
+    m_pointerMotion.kcfg_MinSpeed->setInterpolator(&interpolator);
+    m_pointerMotion.kcfg_MaxSpeed->setInterpolator(&interpolator);
+    m_pointerMotion.kcfg_AccelFactor->setInterpolator(&interpolator);
+
+    new SliderPair(m_pointerMotion.kcfg_MinSpeed,
+                   m_pointerMotion.kcfg_MaxSpeed);
+
+    fillWithChoices(this, &m_config);
+
+    m_backend = TouchpadBackend::self();
+    disableChildren(this, m_backend->supportedParameters());
+
+    if (!m_backend->getConfig(&m_config)) {
+        m_errorMessage->setText(m_backend->errorString());
+        m_errorMessage->animatedShow();
+    } else if (!compareConfigs(m_config, TouchpadParameters())) {
+        m_differentConfigsMessage->animatedShow();
+        m_configOutOfSync = true;
+    }
+
+    KConfigDialogManager::changedMap()->insert("CustomSlider",
+                                               SIGNAL(valueChanged(double)));
+    addConfig(&m_config, this);
+}
+
+void TouchpadConfig::save()
+{
+    KCModule::save();
+
+    if (m_backend->applyConfig(&m_config)) {
+        m_errorMessage->animatedHide();
+        m_differentConfigsMessage->animatedHide();
+        m_configOutOfSync = false;
+    } else {
+        m_errorMessage->setText(m_backend->errorString());
+        m_errorMessage->animatedShow();
+    }
+}
+
+void TouchpadConfig::load()
+{
+    KCModule::load();
+
+    if (m_configOutOfSync) {
+        m_config.readConfig();
+        QMetaObject::invokeMethod(this, "changed", Qt::QueuedConnection);
     }
 }

@@ -16,12 +16,10 @@ public:
 
     static TouchpadBackend *self();
 
-    virtual void applyConfig(const TouchpadParameters *) = 0;
-    virtual void getConfig(TouchpadParameters *) = 0;
-    virtual QStringList supportedParameters() = 0;
-
-Q_SIGNALS:
-    void error(const QString &);
+    virtual bool applyConfig(const TouchpadParameters *) = 0;
+    virtual bool getConfig(TouchpadParameters *) = 0;
+    virtual const QStringList &supportedParameters() const = 0;
+    virtual const QString &errorString() const = 0;
 };
 
 #endif // TOUCHPADBACKEND_H

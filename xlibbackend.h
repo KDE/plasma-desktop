@@ -23,17 +23,15 @@ public:
     XlibBackend(QObject *parent = 0);
     ~XlibBackend();
 
-    void applyConfig(const TouchpadParameters *);
-    void getConfig(TouchpadParameters *);
-    QStringList supportedParameters() { init(); return m_supported; }
+    bool applyConfig(const TouchpadParameters *);
+    bool getConfig(TouchpadParameters *);
+    const QStringList &supportedParameters() const { return m_supported; }
+    const QString &errorString() const { return m_errorString; }
 
 private:
-    bool init();
-    bool m_triedInit;
-
     struct PropertyInfo *getDevProperty(const QLatin1String &propName);
     bool setParameter(const struct Parameter *, const QVariant &);
-    bool getParameter(const struct Parameter *, QVariant &);
+    QVariant getParameter(const struct Parameter *);
 
     QSharedPointer<Display> m_display;
     xcb_connection_t *m_connection;
@@ -48,6 +46,7 @@ private:
     QMap<QLatin1String, struct PropertyInfo> m_props;
     QSet<QLatin1String> m_changed;
     QStringList m_supported;
+    QString m_errorString;
 };
 
 #endif // XLIBBACKEND_H
