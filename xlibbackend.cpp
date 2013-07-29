@@ -1,4 +1,5 @@
 #include <cstring>
+#include <cmath>
 
 #include <QtAlgorithms>
 #include <QScopedPointer>
@@ -112,7 +113,8 @@ XlibBackend::~XlibBackend()
 
 XlibBackend::XlibBackend(QObject *parent) :
     TouchpadBackend(parent),
-    m_display(XOpenDisplay(0), XDisplayDeleter), m_connection(0)
+    m_display(XOpenDisplay(0), XDisplayDeleter), m_connection(0),
+    m_resX(1), m_resY(1)
 {
     if (m_display) {
         m_connection = XGetXCBConnection(m_display.data());
@@ -127,6 +129,7 @@ XlibBackend::XlibBackend(QObject *parent) :
     m_touchpadType.intern(m_connection, XI_TOUCHPAD);
     m_floatType.intern(m_connection, "FLOAT");
     m_capsAtom.intern(m_connection, SYNAPTICS_PROP_CAPABILITIES);
+    XcbAtom resolutionAtom(m_connection, SYNAPTICS_PROP_RESOLUTION);
 
     for (const Parameter *param = synapticsProperties; param->name; param++) {
         QLatin1String name(param->prop_name);
@@ -158,6 +161,26 @@ XlibBackend::XlibBackend(QObject *parent) :
         m_errorString = "Can not read any of touchpad's properties";
         return;
     }
+
+    PropertyInfo resolution(m_display.data(), m_device.data(),
+                            resolutionAtom, 0);
+    if (!resolution.i || !resolution.nitems ||
+            (resolution.nitems == 2 &&
+             resolution.i[0] == 1 && resolution.i[1] == 1))
+    {
+        m_errorString = "Can not read touchpad's resolution";
+        //Non-fatal
+    } else {
+        m_resY = qMin(static_cast<unsigned long>(resolution.i[0]),
+                static_cast<unsigned long>(INT_MAX));
+        m_resX = qMin(static_cast<unsigned long>(resolution.i[1]),
+                static_cast<unsigned long>(INT_MAX));
+
+        m_scaleByResX.append("HorizHysteresis");
+        m_scaleByResY.append("VertHysteresis");
+    }
+    m_resX = qMax(10, m_resX);
+    m_resY = qMax(10, m_resY);
 
     PropertyInfo caps(m_display.data(), m_device.data(), m_capsAtom.atom(), 0);
     if (!caps.b) {
@@ -245,6 +268,19 @@ static const Parameter *findParameter(const QString &name)
     return 0;
 }
 
+int XlibBackend::getPropertyScale(const QString &name) const
+{
+    if (m_scaleByResX.contains(name) && m_scaleByResY.contains(name)) {
+        return qRound(std::sqrt(static_cast<qreal>(m_resX) * m_resX
+                                + static_cast<qreal>(m_resY) * m_resY));
+    } else if (m_scaleByResX.contains(name)) {
+        return m_resX;
+    } else if (m_scaleByResY.contains(name)) {
+        return m_resY;
+    }
+    return 1;
+}
+
 bool XlibBackend::applyConfig(const TouchpadParameters *p)
 {
     if (m_supported.isEmpty()) {
@@ -258,7 +294,19 @@ bool XlibBackend::applyConfig(const TouchpadParameters *p)
         KConfigSkeletonItem *i = p->findItem(name);
         const Parameter *par = findParameter(name);
         if (i && par) {
-            if (!setParameter(par, i->property())) {
+            QVariant value(i->property());
+
+            int k = getPropertyScale(name);
+            if (k != 1) {
+                bool ok = false;
+                value = QVariant(qRound(value.toDouble(&ok) * k));
+                if (!ok) {
+                    error = true;
+                    continue;
+                }
+            }
+
+            if (!setParameter(par, value)) {
                 error = true;
             }
         }
@@ -299,6 +347,16 @@ bool XlibBackend::getConfig(TouchpadParameters *p)
         if (!value.isValid()) {
             error = true;
             continue;
+        }
+
+        int k = getPropertyScale(name);
+        if (k != 1) {
+            bool ok = false;
+            value = QVariant(value.toDouble(&ok) / k);
+            if (!ok) {
+                error = true;
+                continue;
+            }
         }
 
         KConfigSkeletonItem *i = p->findItem(name);

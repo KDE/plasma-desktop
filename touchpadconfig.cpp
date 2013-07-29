@@ -86,15 +86,21 @@ void TouchpadConfig::showEvent(QShowEvent *ev)
     m_tabOrderSet = true;
 }
 
+static const QString kcfgPrefix("kcfg_");
+
 static QString getParameterName(QObject *widget)
 {
-    static const QString kcfgPrefix("kcfg_");
     QString name(widget->objectName());
     if (!name.startsWith(kcfgPrefix)) {
         return QString();
     }
     name.remove(0, kcfgPrefix.length());
     return name;
+}
+
+static QString getWidgetName(KConfigSkeletonItem *i)
+{
+    return kcfgPrefix + i->name();
 }
 
 static void disableChildren(QWidget *widget,
@@ -267,17 +273,40 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
     m_backend = TouchpadBackend::self();
     disableChildren(this, m_backend->supportedParameters());
 
-    if (!m_backend->getConfig(&m_config)) {
-        m_errorMessage->setText(m_backend->errorString());
-        m_errorMessage->animatedShow();
-    } else if (!compareConfigs(m_config, TouchpadParameters())) {
-        m_differentConfigsMessage->animatedShow();
-        m_configOutOfSync = true;
-    }
-
     KConfigDialogManager::changedMap()->insert("CustomSlider",
                                                SIGNAL(valueChanged(double)));
     addConfig(&m_config, this);
+
+    if (!m_backend->getConfig(&m_config)) {
+        m_errorMessage->setText(m_backend->errorString());
+        m_errorMessage->animatedShow();
+        return;
+    }
+
+    Q_FOREACH (KConfigSkeletonItem *i, m_config.items()) {
+        if (i->property().type() != QVariant::Double) {
+            continue;
+        }
+
+        QObject *widget = findChild<QObject*>(getWidgetName(i));
+        if (!widget) {
+            continue;
+        }
+
+        QVariant decimals = widget->property("decimals");
+        bool ok = false;
+        double k = std::pow(10.0, decimals.toInt(&ok));
+        if (!decimals.isValid() || !ok) {
+            continue;
+        }
+
+        i->setProperty(qRound(i->property().toDouble() * k) / k);
+    }
+
+    if (!compareConfigs(m_config, TouchpadParameters())) {
+        m_differentConfigsMessage->animatedShow();
+        m_configOutOfSync = true;
+    }
 }
 
 void TouchpadConfig::save()
