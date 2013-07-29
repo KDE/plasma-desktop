@@ -13,6 +13,10 @@
                     <value>OneFingerTap</value>
                     <value>TwoFingerTap</value>
                     <value>ThreeFingerTap</value>
+                    <value>LTCorner</value>
+                    <value>LBCorner</value>
+                    <value>RTCorner</value>
+                    <value>RBCorner</value>
                 </values>
             </parameter>
             <choices name="Button">
@@ -32,6 +36,10 @@
             <default param="OneFingerTap">LeftButton</default>
             <default param="TwoFingerTap">RightButton</default>
             <default param="ThreeFingerTap">MiddleButton</default>
+            <default param="LTCorner">NoButton</default>
+            <default param="LBCorner">NoButton</default>
+            <default param="RTCorner">NoButton</default>
+            <default param="RBCorner">NoButton</default>
         </entry>
         <entry name="VertEdgeScroll" type="Bool">
             <default>true</default>
