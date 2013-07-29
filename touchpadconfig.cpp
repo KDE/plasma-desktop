@@ -234,6 +234,18 @@ static void checkUi(QObject *w, TouchpadParameters &config)
     }
 }
 
+//Qt Designer freezes when slider is enabled for KIntNumInput
+static void enableSliders(QObject *w)
+{
+    if (w->property("sliderEnabled").isValid()) {
+        w->setProperty("sliderEnabled", true);
+    }
+
+    Q_FOREACH(QObject *child, w->children()) {
+        enableSliders(child);
+    }
+}
+
 TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
     : KCModule(TouchpadConfigFactory::componentData(), parent, args),
       m_tabOrderSet(false), m_configOutOfSync(false)
@@ -258,6 +270,8 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
     addTab(tabs, m_scrolling);
 
     checkUi(tabs, m_config);
+
+    enableSliders(tabs);
 
     layout->addWidget(tabs);
 

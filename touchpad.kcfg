@@ -78,5 +78,16 @@
             <max>20</max>
             <default>0</default>
         </entry>
+        <entry name="TapAndDragGesture" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="LockedDrags" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="LockedDragTimeout" type="Int">
+            <min>0</min>
+            <max>30000</max>
+            <default>5000</default>
+        </entry>
     </group>
 </kcfg>
