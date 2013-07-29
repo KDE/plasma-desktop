@@ -217,6 +217,7 @@ void addTab(QTabWidget *tabs, T &form)
 
     QWidget *widget = new QWidget(container);
     form.setupUi(widget);
+    widget->layout()->setContentsMargins(20, 20, 20, 20);
 
     container->setWidget(widget);
     tabs->addTab(container, widget->windowTitle());

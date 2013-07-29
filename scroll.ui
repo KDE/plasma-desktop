@@ -19,44 +19,23 @@
   <property name="windowTitle">
    <string>Scrolling</string>
   </property>
-  <layout class="QFormLayout" name="formLayout">
-   <item row="0" column="0" colspan="2">
-    <widget class="KTitleWidget" name="ktitlewidget">
-     <property name="text">
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
       <string>Gestures</string>
      </property>
-    </widget>
-   </item>
-   <item row="1" column="0">
-    <spacer name="horizontalSpacer">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
+     <property name="flat">
+      <bool>true</bool>
      </property>
-     <property name="sizeType">
-      <enum>QSizePolicy::Minimum</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>20</width>
-       <height>20</height>
-      </size>
-     </property>
-    </spacer>
-   </item>
-   <item row="1" column="1">
-    <widget class="QWidget" name="widget" native="true">
-     <layout class="QFormLayout" name="formLayout_2">
+     <layout class="QFormLayout" name="formLayout_3">
+      <property name="fieldGrowthPolicy">
+       <enum>QFormLayout::ExpandingFieldsGrow</enum>
+      </property>
       <item row="0" column="0">
        <widget class="QLabel" name="label">
         <property name="text">
          <string>Edge scrolling:</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="1">
-       <widget class="QCheckBox" name="kcfg_HorizEdgeScroll">
-        <property name="text">
-         <string>Horizontal</string>
         </property>
        </widget>
       </item>
@@ -67,45 +46,58 @@
         </property>
        </widget>
       </item>
-      <item row="2" column="0">
+      <item row="1" column="1">
+       <widget class="QCheckBox" name="kcfg_HorizEdgeScroll">
+        <property name="text">
+         <string>Horizontal</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
        <widget class="QLabel" name="label_2">
         <property name="text">
          <string>Two-finger scrolling:</string>
         </property>
        </widget>
       </item>
-      <item row="2" column="1">
+      <item row="3" column="1">
        <widget class="QCheckBox" name="kcfg_VertTwoFingerScroll">
         <property name="text">
          <string>Vertical</string>
         </property>
        </widget>
       </item>
-      <item row="3" column="1">
+      <item row="4" column="1">
        <widget class="QCheckBox" name="kcfg_HorizTwoFingerScroll">
         <property name="text">
          <string>Horizontal</string>
         </property>
        </widget>
       </item>
+      <item row="4" column="0">
+       <widget class="QWidget" name="widget" native="true"/>
+      </item>
       <item row="1" column="0">
        <widget class="QWidget" name="widget_2" native="true"/>
-      </item>
-      <item row="3" column="0">
-       <widget class="QWidget" name="widget_3" native="true"/>
       </item>
      </layout>
     </widget>
    </item>
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
   </layout>
  </widget>
- <customwidgets>
-  <customwidget>
-   <class>KTitleWidget</class>
-   <extends>QWidget</extends>
-   <header>ktitlewidget.h</header>
-  </customwidget>
- </customwidgets>
  <resources/>
  <connections/>
 </ui>
