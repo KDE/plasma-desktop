@@ -105,5 +105,18 @@
         <entry name="InvertHorizScroll" type="Bool">
             <default>false</default>
         </entry>
+        <entry name="CornerCoasting" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="CoastingSpeed" type="Double">
+            <min>0</min>
+            <max>255</max>
+            <default>20</default>
+        </entry>
+        <entry name="CoastingFriction" type="Double">
+            <min>0</min>
+            <max>255</max>
+            <default>50</default>
+        </entry>
     </group>
 </kcfg>
