@@ -50,6 +50,7 @@ private:
     QString m_errorString;
     int m_resX, m_resY;
     QStringList m_scaleByResX, m_scaleByResY;
+    QMap<QString, QString> m_negate;
 };
 
 #endif // XLIBBACKEND_H

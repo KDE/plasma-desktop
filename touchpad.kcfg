@@ -89,5 +89,21 @@
             <max>30000</max>
             <default>5000</default>
         </entry>
+        <entry name="VertScrollDelta" type="Double">
+            <min>0</min>
+            <max>10</max>
+            <default>1</default>
+        </entry>
+        <entry name="InvertVertScroll" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="HorizScrollDelta" type="Double">
+            <min>0</min>
+            <max>10</max>
+            <default>1</default>
+        </entry>
+        <entry name="InvertHorizScroll" type="Bool">
+            <default>false</default>
+        </entry>
     </group>
 </kcfg>

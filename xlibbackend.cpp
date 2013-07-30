@@ -175,9 +175,15 @@ XlibBackend::XlibBackend(QObject *parent) :
                 static_cast<unsigned long>(INT_MAX));
         m_resX = qMin(static_cast<unsigned long>(resolution.i[1]),
                 static_cast<unsigned long>(INT_MAX));
+
+        m_scaleByResX.append("HorizScrollDelta");
+        m_scaleByResY.append("VertScrollDelta");
     }
     m_resX = qMax(10, m_resX);
     m_resY = qMax(10, m_resY);
+    m_negate["HorizScrollDelta"] = "InvertHorizScroll";
+    m_negate["VertScrollDelta"] = "InvertVertScroll";
+    m_supported.append(m_negate.values());
 
     PropertyInfo caps(m_display.data(), m_device.data(), m_capsAtom.atom(), 0);
     if (!caps.b) {
@@ -209,6 +215,14 @@ XlibBackend::XlibBackend(QObject *parent) :
 
     if (!cap[TouchpadThreeFingerDetect]) {
         m_supported.removeAll("ThreeFingerTapButton");
+    }
+
+    for (QMap<QString, QString>::Iterator i = m_negate.begin();
+         i != m_negate.end(); i++)
+    {
+        if (!m_supported.contains(i.key())) {
+            m_supported.removeAll(i.value());
+        }
     }
 }
 
@@ -303,6 +317,18 @@ bool XlibBackend::applyConfig(const TouchpadParameters *p)
                 }
             }
 
+            //TODO: refactor
+            if (m_negate.contains(name)) {
+                KConfigSkeletonItem *i = p->findItem(m_negate[name]);
+                if (i && i->property().toBool()) {
+                    if (value.type() == QVariant::Double) {
+                        value = QVariant(-value.toDouble());
+                    } else if (value.type() == QVariant::Int) {
+                        value = QVariant(-value.toInt());
+                    }
+                }
+            }
+
             if (!setParameter(par, value)) {
                 error = true;
             }
@@ -353,6 +379,13 @@ bool XlibBackend::getConfig(TouchpadParameters *p)
             if (!ok) {
                 error = true;
                 continue;
+            }
+        }
+
+        if (m_negate.contains(name)) {
+            KConfigSkeletonItem *i = p->findItem(m_negate[name]);
+            if (i) {
+                i->setProperty(value.toDouble() < 0.0);
             }
         }
 
