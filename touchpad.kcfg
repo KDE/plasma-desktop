@@ -141,5 +141,25 @@
             <max>15</max>
             <default>10</default>
         </entry>
+        <entry name="MaxTapTime" type="Int">
+            <min>0</min>
+            <max>1000</max>
+            <default>180</default>
+        </entry>
+        <entry name="MaxDoubleTapTime" type="Int">
+            <min>0</min>
+            <max>1000</max>
+            <default>180</default>
+        </entry>
+        <entry name="SingleTapTimeout" type="Int">
+            <min>0</min>
+            <max>1000</max>
+            <default>180</default>
+        </entry>
+        <entry name="MaxTapMove" type="Double">
+            <min>0</min>
+            <max>20</max>
+            <default>2</default>
+        </entry>
     </group>
 </kcfg>

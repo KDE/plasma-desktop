@@ -178,6 +178,9 @@ XlibBackend::XlibBackend(QObject *parent) :
 
         m_scaleByResX.append("HorizScrollDelta");
         m_scaleByResY.append("VertScrollDelta");
+
+        m_scaleByResX.append("MaxTapMove");
+        m_scaleByResY.append("MaxTapMove");
     }
     m_resX = qMax(10, m_resX);
     m_resY = qMax(10, m_resY);
