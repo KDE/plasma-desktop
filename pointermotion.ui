@@ -76,33 +76,14 @@
      <property name="flat">
       <bool>true</bool>
      </property>
-     <layout class="QFormLayout" name="formLayout_2">
+     <layout class="QFormLayout" name="formLayout">
+      <property name="fieldGrowthPolicy">
+       <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+      </property>
       <item row="0" column="0">
        <widget class="QLabel" name="label_4">
         <property name="text">
          <string>Vertical hysteresis:</string>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="1">
-       <widget class="KDoubleNumInput" name="kcfg_VertHysteresis">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="singleStep">
-         <double>0.100000000000000</double>
-        </property>
-        <property name="suffix">
-         <string>mm</string>
-        </property>
-        <property name="decimals">
-         <number>1</number>
-        </property>
-        <property name="sliderEnabled">
-         <bool>true</bool>
         </property>
        </widget>
       </item>
@@ -113,25 +94,17 @@
         </property>
        </widget>
       </item>
-      <item row="1" column="1">
-       <widget class="KDoubleNumInput" name="kcfg_HorizHysteresis">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="singleStep">
-         <double>0.100000000000000</double>
-        </property>
+      <item row="0" column="1">
+       <widget class="KIntNumInput" name="kcfg_VertHysteresis">
         <property name="suffix">
-         <string>mm</string>
+         <string> units</string>
         </property>
-        <property name="decimals">
-         <number>1</number>
-        </property>
-        <property name="sliderEnabled">
-         <bool>true</bool>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="KIntNumInput" name="kcfg_HorizHysteresis">
+        <property name="suffix">
+         <string> units</string>
         </property>
        </widget>
       </item>
@@ -155,7 +128,7 @@
  </widget>
  <customwidgets>
   <customwidget>
-   <class>KDoubleNumInput</class>
+   <class>KIntNumInput</class>
    <extends>QWidget</extends>
    <header>knuminput.h</header>
   </customwidget>

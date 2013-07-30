@@ -175,9 +175,6 @@ XlibBackend::XlibBackend(QObject *parent) :
                 static_cast<unsigned long>(INT_MAX));
         m_resX = qMin(static_cast<unsigned long>(resolution.i[1]),
                 static_cast<unsigned long>(INT_MAX));
-
-        m_scaleByResX.append("HorizHysteresis");
-        m_scaleByResY.append("VertHysteresis");
     }
     m_resX = qMax(10, m_resX);
     m_resY = qMax(10, m_resY);
