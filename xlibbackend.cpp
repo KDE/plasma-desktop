@@ -226,7 +226,9 @@ XlibBackend::XlibBackend(QObject *parent) :
 
         m_supported.removeAll("PalmMinZ");
         m_supported.removeAll("PressureMotionMinZ");
+        m_supported.removeAll("PressureMotionMinFactor");
         m_supported.removeAll("PressureMotionMaxZ");
+        m_supported.removeAll("PressureMotionMaxFactor");
         m_supported.removeAll("EmulateTwoFingerMinZ");
     }
 
