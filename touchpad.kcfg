@@ -161,5 +161,25 @@
             <max>20</max>
             <default>2</default>
         </entry>
+        <entry name="PressureMotionMinZ" type="Int">
+            <min>1</min>
+            <max>255</max>
+            <default>30</default>
+        </entry>
+        <entry name="PressureMotionMaxZ" type="Int">
+            <min>1</min>
+            <max>255</max>
+            <default>160</default>
+        </entry>
+        <entry name="PressureMotionMinFactor" type="Double">
+            <min>0</min>
+            <max>10</max>
+            <default>1</default>
+        </entry>
+        <entry name="PressureMotionMaxFactor" type="Double">
+            <min>0</min>
+            <max>10</max>
+            <default>1</default>
+        </entry>
     </group>
 </kcfg>
