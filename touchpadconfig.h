@@ -9,6 +9,7 @@
 #include "ui_pointermotion.h"
 #include "ui_tap.h"
 #include "ui_scroll.h"
+#include "ui_sensitivity.h"
 
 class TouchpadBackend;
 
@@ -37,6 +38,7 @@ private:
     Ui::PointerMotionForm m_pointerMotion;
     Ui::TapForm m_tapping;
     Ui::ScrollForm m_scrolling;
+    Ui::SensitivityForm m_sensitivity;
 };
 
 #endif // TOUCHPADCONFIG_H

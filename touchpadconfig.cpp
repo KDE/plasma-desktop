@@ -266,6 +266,7 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
     KTabWidget *tabs = new KTabWidget(this);
 
     addTab(tabs, m_pointerMotion);
+    addTab(tabs, m_sensitivity);
     addTab(tabs, m_tapping);
     addTab(tabs, m_scrolling);
 
@@ -282,6 +283,8 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
 
     new SliderPair(m_pointerMotion.kcfg_MinSpeed,
                    m_pointerMotion.kcfg_MaxSpeed);
+    new SliderPair(m_sensitivity.kcfg_FingerLow,
+                   m_sensitivity.kcfg_FingerHigh, this);
 
     fillWithChoices(this, &m_config);
 

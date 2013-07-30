@@ -118,5 +118,28 @@
             <max>255</max>
             <default>50</default>
         </entry>
+        <entry name="FingerHigh" type="Int">
+            <min>0</min>
+            <max>255</max>
+            <default>30</default>
+        </entry>
+        <entry name="FingerLow" type="Int">
+            <min>0</min>
+            <max>255</max>
+            <default>25</default>
+        </entry>
+        <entry name="PalmDetect" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="PalmMinZ" type="Int">
+            <min>0</min>
+            <max>255</max>
+            <default>200</default>
+        </entry>
+        <entry name="PalmMinWidth" type="Int">
+            <min>0</min>
+            <max>15</max>
+            <default>10</default>
+        </entry>
     </group>
 </kcfg>

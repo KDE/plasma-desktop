@@ -217,6 +217,23 @@ XlibBackend::XlibBackend(QObject *parent) :
         m_supported.removeAll("ThreeFingerTapButton");
     }
 
+    if (!cap[TouchpadPressureDetect]) {
+        m_supported.removeAll("FingerHigh");
+        m_supported.removeAll("FingerLow");
+
+        m_supported.removeAll("PalmMinZ");
+        m_supported.removeAll("PressureMotionMinZ");
+        m_supported.removeAll("PressureMotionMaxZ");
+        m_supported.removeAll("EmulateTwoFingerMinZ");
+    }
+
+    if (!cap[TouchpadPalmDetect]) {
+        m_supported.removeAll("PalmDetect");
+        m_supported.removeAll("PalmMinWidth");
+        m_supported.removeAll("PalmMinZ");
+        m_supported.removeAll("EmulateTwoFingerMinW");
+    }
+
     for (QMap<QString, QString>::Iterator i = m_negate.begin();
          i != m_negate.end(); i++)
     {

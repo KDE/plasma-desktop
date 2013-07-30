@@ -52,7 +52,7 @@ ${KDE4_KDECORE_LIBS}
 )
 
 set(kcm_SRCS touchpadconfig.cpp customslider.cpp sliderpair.cpp)
-kde4_add_ui_files(kcm_SRCS pointermotion.ui tap.ui scroll.ui)
+kde4_add_ui_files(kcm_SRCS pointermotion.ui tap.ui scroll.ui sensitivity.ui)
 kde4_add_plugin(kcm_touchpad ${kcm_SRCS})
 target_link_libraries(kcm_touchpad ${KDE4_KDEUI_LIBS} ktouchpad)
 
