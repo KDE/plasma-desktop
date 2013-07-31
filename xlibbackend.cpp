@@ -5,7 +5,9 @@
 #include <QScopedPointer>
 
 #include "touchpadparameters.h"
-#include "xlibbackend.h"
+
+//Includes are ordered this way because of #defines in Xorg's headers
+#include "xlibbackend.h" // krazy:exclude=includes
 
 #include <X11/Xlib-xcb.h>
 #include <X11/Xatom.h>
@@ -240,7 +242,7 @@ XlibBackend::XlibBackend(QObject *parent) :
     }
 
     for (QMap<QString, QString>::Iterator i = m_negate.begin();
-         i != m_negate.end(); i++)
+         i != m_negate.end(); ++i)
     {
         if (!m_supported.contains(i.key())) {
             m_supported.removeAll(i.value());

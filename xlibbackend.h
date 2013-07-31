@@ -20,7 +20,7 @@ class XlibBackend : public TouchpadBackend
     Q_OBJECT
 
 public:
-    XlibBackend(QObject *parent = 0);
+    explicit XlibBackend(QObject *parent = 0);
     ~XlibBackend();
 
     bool applyConfig(const TouchpadParameters *);
