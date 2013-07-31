@@ -37,7 +37,7 @@
        </widget>
       </item>
       <item row="0" column="1">
-       <widget class="QComboBox" name="kcfg_OneFingerTapButton"/>
+       <widget class="KComboBox" name="kcfg_OneFingerTapButton"/>
       </item>
       <item row="2" column="0">
        <widget class="QLabel" name="label_3">
@@ -47,7 +47,7 @@
        </widget>
       </item>
       <item row="2" column="1">
-       <widget class="QComboBox" name="kcfg_TwoFingerTapButton"/>
+       <widget class="KComboBox" name="kcfg_TwoFingerTapButton"/>
       </item>
       <item row="3" column="0">
        <widget class="QLabel" name="label_4">
@@ -57,7 +57,7 @@
        </widget>
       </item>
       <item row="3" column="1">
-       <widget class="QComboBox" name="kcfg_ThreeFingerTapButton"/>
+       <widget class="KComboBox" name="kcfg_ThreeFingerTapButton"/>
       </item>
       <item row="1" column="0" colspan="2">
        <widget class="QLabel" name="label_2">
@@ -101,7 +101,7 @@
           </widget>
          </item>
          <item row="0" column="1">
-          <widget class="QComboBox" name="kcfg_LTCornerButton"/>
+          <widget class="KComboBox" name="kcfg_LTCornerButton"/>
          </item>
          <item row="2" column="0">
           <widget class="QLabel" name="label_7">
@@ -124,13 +124,13 @@
           </widget>
          </item>
          <item row="2" column="1">
-          <widget class="QComboBox" name="kcfg_LBCornerButton"/>
+          <widget class="KComboBox" name="kcfg_LBCornerButton"/>
          </item>
          <item row="0" column="4">
-          <widget class="QComboBox" name="kcfg_RTCornerButton"/>
+          <widget class="KComboBox" name="kcfg_RTCornerButton"/>
          </item>
          <item row="2" column="4">
-          <widget class="QComboBox" name="kcfg_RBCornerButton"/>
+          <widget class="KComboBox" name="kcfg_RBCornerButton"/>
          </item>
          <item row="0" column="2">
           <spacer name="horizontalSpacer_3">
@@ -338,6 +338,11 @@
   </layout>
  </widget>
  <customwidgets>
+  <customwidget>
+   <class>KComboBox</class>
+   <extends>QWidget</extends>
+   <header>kcombobox.h</header>
+  </customwidget>
   <customwidget>
    <class>KDoubleNumInput</class>
    <extends>QWidget</extends>

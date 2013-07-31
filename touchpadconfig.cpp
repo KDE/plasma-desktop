@@ -144,7 +144,7 @@ static void fillWithChoicesWidget(QObject *widget, TouchpadParameters *config)
         }
     }
 
-    QComboBox *box = qobject_cast<QComboBox *>(widget);
+    KComboBox *box = qobject_cast<KComboBox *>(widget);
     if (box) {
         box->addItems(choiceList);
     }
@@ -208,7 +208,7 @@ public:
 };
 
 template<typename T>
-void addTab(QTabWidget *tabs, T &form)
+void addTab(KTabWidget *tabs, T &form)
 {
     QScrollArea *container = new QScrollArea(tabs);
     container->setWidgetResizable(true);
