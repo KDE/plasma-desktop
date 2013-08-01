@@ -6,6 +6,11 @@ find_package(KDE4 REQUIRED)
 include(KDE4Defaults)
 include_directories(${KDE4_INCLUDES} ${CMAKE_CURRENT_BINARY_DIR})
 
+set(TOUCHPAD_KCM_VERSION "0.1")
+configure_file(
+"${PROJECT_SOURCE_DIR}/version.h.cmake"
+"${PROJECT_BINARY_DIR}/version.h")
+
 set(touchpadlib_SRCS
 touchpadbackend.cpp
 #Xlib backend
