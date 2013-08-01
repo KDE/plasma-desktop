@@ -30,5 +30,5 @@ TouchpadBackend::TouchpadBackend(QObject *parent) : QObject(parent)
 
 TouchpadBackend *TouchpadBackend::self()
 {
-    return backend();
+    return backend;
 }
