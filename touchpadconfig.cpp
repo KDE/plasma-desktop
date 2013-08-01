@@ -303,6 +303,8 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
                    m_pointerMotion.kcfg_MaxSpeed, this);
     new SliderPair(m_sensitivity.kcfg_FingerLow,
                    m_sensitivity.kcfg_FingerHigh, this);
+    new SliderPair(m_pointerMotion.kcfg_PressureMotionMinZ,
+                   m_pointerMotion.kcfg_PressureMotionMaxZ, this);
 
     fillWithChoices(this, &m_config);
 
