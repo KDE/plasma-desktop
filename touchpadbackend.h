@@ -20,9 +20,8 @@
 #define TOUCHPADBACKEND_H
 
 #include <QObject>
-#include <QStringList>
 
-#include <KGlobal>
+#include <kdemacros.h>
 
 class TouchpadParameters;
 

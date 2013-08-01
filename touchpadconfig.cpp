@@ -20,9 +20,6 @@
 
 #include <cmath>
 
-#include <QBoxLayout>
-#include <QComboBox>
-#include <QLabel>
 #include <QScrollArea>
 
 #include <KPluginFactory>

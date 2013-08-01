@@ -18,6 +18,8 @@
 
 #include "sliderpair.h"
 
+#include <QSlider>
+
 SliderPair::SliderPair(QSlider *minSlider, QSlider *maxSlider, QObject *parent)
     : QObject(parent), m_minSlider(minSlider), m_maxSlider(maxSlider)
 {

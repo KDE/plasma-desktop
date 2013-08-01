@@ -19,7 +19,9 @@
 #ifndef SLIDERPAIR_H
 #define SLIDERPAIR_H
 
-#include <QSlider>
+#include <QObject>
+
+class QSlider;
 
 class SliderPair : public QObject
 {

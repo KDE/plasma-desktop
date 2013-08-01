@@ -23,6 +23,7 @@
 #include <QSet>
 #include <QSharedPointer>
 #include <QLatin1String>
+#include <QStringList>
 
 #include "touchpadbackend.h"
 

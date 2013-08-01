@@ -20,7 +20,6 @@
 #define TOUCHPADCONFIG_H
 
 #include <KCModule>
-#include <KMessageWidget>
 
 #include "touchpadparameters.h"
 
@@ -30,6 +29,7 @@
 #include "ui_sensitivity.h"
 
 class TouchpadBackend;
+class KMessageWidget;
 
 class TouchpadConfig : public KCModule
 {
