@@ -18,11 +18,11 @@
 
 #include "touchpadbackend.h"
 
-#include <QtGlobal>
+#include <KGlobal>
 
 #include "xlibbackend.h"
 
-Q_GLOBAL_STATIC(XlibBackend, backend)
+K_GLOBAL_STATIC(XlibBackend, backend)
 
 TouchpadBackend::TouchpadBackend(QObject *parent) : QObject(parent)
 {
