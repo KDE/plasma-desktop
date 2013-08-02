@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kcfg>
     <kcfgfile name="touchpadrc"/>
-    <group name="init">
-        <entry name="ApplyConfigOnInit" type="Bool">
-            <default>false</default>
-        </entry>
-    </group>
     <group name="parameters">
         <entry name="$(TapAction)Button" type="Enum">
             <parameter name="TapAction" type="Enum">

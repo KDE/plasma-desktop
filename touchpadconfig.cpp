@@ -62,6 +62,31 @@ static KAboutData buildAboutData()
 
 K_EXPORT_PLUGIN(TouchpadConfigFactory(buildAboutData()))
 
+static KSharedConfig::Ptr savedDefaults()
+{
+    static KSharedConfig::Ptr p(KSharedConfig::openConfig("touchpaddefaults",
+                                                          KConfig::SimpleConfig,
+                                                          "tmp"));
+    return p;
+}
+
+static void reloadConfig(TouchpadParameters &p, KConfig *config)
+{
+    Q_FOREACH(KConfigSkeletonItem *i, p.items()) {
+        if (config->hasGroup(i->group())) {
+            i->readConfig(config);
+        }
+    }
+}
+
+static void setupDefaults(TouchpadParameters &p)
+{
+    p.useDefaults(true);
+    reloadConfig(p, savedDefaults().data());
+    p.useDefaults(false);
+    reloadConfig(p, p.config());
+}
+
 extern "C"
 {
     KDE_EXPORT void kcminit_touchpad()
@@ -72,10 +97,16 @@ extern "C"
             return;
         }
 
-        TouchpadParameters config;
-        if (config.applyConfigOnInit()) {
-            backend->applyConfig(&config);
+        {
+            TouchpadParameters active;
+            active.setSharedConfig(savedDefaults());
+            backend->getConfig(&active);
+            active.writeConfig();
         }
+
+        TouchpadParameters config;
+        setupDefaults(config);
+        backend->applyConfig(&config);
     }
 }
 
@@ -340,6 +371,7 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
 
     KConfigDialogManager::changedMap()->insert("CustomSlider",
                                                SIGNAL(valueChanged(double)));
+    setupDefaults(m_config);
     addConfig(&m_config, this);
 
     if (!m_backend->getConfig(&m_config)) {
@@ -368,7 +400,9 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
         i->setProperty(qRound(i->property().toDouble() * k) / k);
     }
 
-    if (!compareConfigs(m_config, TouchpadParameters())) {
+    TouchpadParameters saved;
+    setupDefaults(saved);
+    if (!compareConfigs(m_config, saved)) {
         m_differentConfigsMessage->animatedShow();
         m_configOutOfSync = true;
     }
@@ -393,7 +427,7 @@ void TouchpadConfig::load()
     KCModule::load();
 
     if (m_configOutOfSync) {
-        m_config.readConfig();
+        reloadConfig(m_config, m_config.config());
         QMetaObject::invokeMethod(this, "changed", Qt::QueuedConnection);
     }
 }
