@@ -64,7 +64,7 @@ K_EXPORT_PLUGIN(TouchpadConfigFactory(buildAboutData()))
 
 static KSharedConfig::Ptr savedDefaults()
 {
-    static KSharedConfig::Ptr p(KSharedConfig::openConfig("touchpaddefaults",
+    static KSharedConfig::Ptr p(KSharedConfig::openConfig(".touchpaddefaults",
                                                           KConfig::SimpleConfig,
                                                           "tmp"));
     return p;
