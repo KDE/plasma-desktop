@@ -341,10 +341,10 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
 
     KTabWidget *tabs = new KTabWidget(this);
 
-    addTab(tabs, m_pointerMotion);
-    addTab(tabs, m_sensitivity);
     addTab(tabs, m_tapping);
     addTab(tabs, m_scrolling);
+    addTab(tabs, m_pointerMotion);
+    addTab(tabs, m_sensitivity);
 
     checkUi(tabs, m_config);
 
