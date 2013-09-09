@@ -49,6 +49,13 @@ static void XDisplayDeleter(Display *p)
     }
 }
 
+static void XDeviceListDeleter(XDeviceInfo *p)
+{
+    if (p) {
+        XFreeDeviceList(p);
+    }
+}
+
 struct XDeviceDeleter
 {
     XDeviceDeleter(Display *d) : m_display(d)
@@ -145,7 +152,6 @@ XlibBackend::XlibBackend(QObject *parent) :
         return;
     }
 
-    m_devicesCookie = xcb_input_list_input_devices(m_connection);
     m_touchpadType.intern(m_connection, XI_TOUCHPAD);
     m_floatType.intern(m_connection, "FLOAT");
     m_capsAtom.intern(m_connection, SYNAPTICS_PROP_CAPABILITIES);
@@ -270,22 +276,16 @@ XlibBackend::XlibBackend(QObject *parent) :
 
 QSharedPointer<XDevice> XlibBackend::findTouchpad()
 {
-    QScopedPointer<xcb_input_list_input_devices_reply_t> devicesReply(
-                xcb_input_list_input_devices_reply(m_connection,
-                                                   m_devicesCookie, 0));
-    if (!devicesReply) {
-        return QSharedPointer<XDevice>();
-    }
+    int nDevices = 0;
+    QSharedPointer<XDeviceInfo> deviceInfo(
+                XListInputDevices(m_display.data(), &nDevices),
+                XDeviceListDeleter);
 
-    xcb_input_device_info_t *deviceInfo =
-            xcb_input_list_input_devices_devices(devicesReply.data());
-    int nDevices =
-            xcb_input_list_input_devices_devices_length(devicesReply.data());
-
-    for (int i = 0; i < nDevices && !m_device; i++) {
-        if (deviceInfo[i].device_type == m_touchpadType.atom()) {
-            XDevice *devicePtr = XOpenDevice(m_display.data(),
-                                             deviceInfo[i].device_id);
+    for (XDeviceInfo *info = deviceInfo.data();
+         info < deviceInfo.data() + nDevices && !m_device; info++)
+    {
+        if (info->type == m_touchpadType.atom()) {
+            XDevice *devicePtr = XOpenDevice(m_display.data(), info->id);
             if (!devicePtr) {
                 continue;
             }

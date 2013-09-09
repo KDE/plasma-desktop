@@ -19,13 +19,8 @@ if(NOT X11_Xinput_FOUND)
     message(FATAL_ERROR "Xinput not found")
 endif()
 
-if(NOT XCB_XINPUT_FOUND)
-    message(FATAL_ERROR "xcb-xinput not found")
-endif()
-
 include_directories(
 ${XCB_XCB_INCLUDE_DIR}
-${XCB_XINPUT_INCLUDE_DIR}
 ${X11_XCB_INCLUDE_DIR}
 ${X11_Xinput_INCLUDE_PATH}
 ${X11_X11_INCLUDE_PATH}
@@ -57,7 +52,6 @@ target_link_libraries(kcm_touchpad
 ${XCB_XCB_LIBRARIES}
 ${X11_X11_LIB}
 ${X11_XCB_LIBRARIES}
-${XCB_XINPUT_LIBRARIES}
 ${X11_Xinput_LIB}
 ${KDE4_KDEUI_LIBS}
 )

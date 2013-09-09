@@ -30,7 +30,6 @@
 #include <X11/Xlib.h>
 #include <xcb/xcb.h>
 #include <X11/extensions/XInput.h>
-#include <xcb/xinput.h>
 
 #include "xcbatom.h"
 
@@ -57,7 +56,6 @@ private:
     xcb_connection_t *m_connection;
 
     XcbAtom m_floatType, m_touchpadType, m_capsAtom;
-    xcb_input_list_input_devices_cookie_t m_devicesCookie;
 
     QSharedPointer<XDevice> findTouchpad();
     QSharedPointer<XDevice> m_device;
