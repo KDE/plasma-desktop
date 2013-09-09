@@ -508,3 +508,5 @@ bool XlibBackend::setParameter(const Parameter *par, const QVariant &value)
     m_changed.insert(propName);
     return true;
 }
+
+#include "moc_xlibbackend.cpp"

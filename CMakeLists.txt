@@ -11,16 +11,6 @@ configure_file(
 "${PROJECT_SOURCE_DIR}/version.h.cmake"
 "${PROJECT_BINARY_DIR}/version.h")
 
-set(touchpadlib_SRCS
-touchpadbackend.cpp
-#Xlib backend
-xlibbackend.cpp
-xcbatom.cpp
-synclientproperties.c
-)
-
-kde4_add_kcfg_files(touchpadlib_SRCS touchpadparameters.kcfgc)
-
 find_package(X11 REQUIRED)
 find_package(X11_XCB REQUIRED)
 find_package(XCB REQUIRED)
@@ -46,23 +36,32 @@ ${X11_XCB_DEFINITIONS}
 ${XCB_DEFINITIONS}
 )
 
-kde4_add_library(ktouchpad SHARED ${touchpadlib_SRCS})
-target_link_libraries(ktouchpad
+set(SRCS
+touchpadconfig.cpp
+customslider.cpp
+sliderpair.cpp
+plugins.cpp
+
+touchpadbackend.cpp
+#Xlib backend
+xlibbackend.cpp
+xcbatom.cpp
+synclientproperties.c
+)
+
+kde4_add_kcfg_files(SRCS touchpadparameters.kcfgc)
+kde4_add_ui_files(SRCS pointermotion.ui tap.ui scroll.ui sensitivity.ui)
+kde4_add_plugin(kcm_touchpad ${SRCS})
+
+target_link_libraries(kcm_touchpad
 ${XCB_XCB_LIBRARIES}
 ${X11_X11_LIB}
 ${X11_XCB_LIBRARIES}
 ${XCB_XINPUT_LIBRARIES}
 ${X11_Xinput_LIB}
-${KDE4_KDECORE_LIBS}
+${KDE4_KDEUI_LIBS}
 )
 
-set(kcm_SRCS touchpadconfig.cpp customslider.cpp sliderpair.cpp plugins.cpp)
-kde4_add_ui_files(kcm_SRCS pointermotion.ui tap.ui scroll.ui sensitivity.ui)
-kde4_add_plugin(kcm_touchpad ${kcm_SRCS})
-target_link_libraries(kcm_touchpad ${KDE4_KDEUI_LIBS} ktouchpad)
-
-install(TARGETS ktouchpad DESTINATION ${LIB_INSTALL_DIR})
 install(FILES touchpad.kcfg DESTINATION ${KCFG_INSTALL_DIR})
-
 install(TARGETS kcm_touchpad DESTINATION ${PLUGIN_INSTALL_DIR})
 install(FILES kcm_touchpad.desktop DESTINATION ${SERVICES_INSTALL_DIR})
