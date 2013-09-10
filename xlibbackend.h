@@ -29,7 +29,6 @@
 
 #include <X11/Xlib.h>
 #include <xcb/xcb.h>
-#include <X11/extensions/XInput.h>
 
 #include "xcbatom.h"
 
@@ -55,10 +54,10 @@ private:
     QSharedPointer<Display> m_display;
     xcb_connection_t *m_connection;
 
-    XcbAtom m_floatType, m_touchpadType, m_capsAtom;
+    XcbAtom m_floatType, m_capsAtom;
 
-    QSharedPointer<XDevice> findTouchpad();
-    QSharedPointer<XDevice> m_device;
+    int findTouchpad();
+    int m_device;
 
     QMap<QLatin1String, QSharedPointer<XcbAtom> > m_atoms;
     QMap<QLatin1String, struct PropertyInfo> m_props;

@@ -31,6 +31,7 @@
 
 #include <X11/Xlib-xcb.h>
 #include <X11/Xatom.h>
+#include <X11/extensions/XInput2.h>
 #include <xcb/xcb_atom.h>
 
 #include <xorg/synaptics-properties.h>
@@ -51,29 +52,12 @@ static void XDisplayDeleter(Display *p)
     }
 }
 
-static void XDeviceListDeleter(XDeviceInfo *p)
+static void XIDeviceInfoDeleter(XIDeviceInfo *p)
 {
     if (p) {
-        XFreeDeviceList(p);
+        XIFreeDeviceInfo(p);
     }
 }
-
-struct XDeviceDeleter
-{
-    XDeviceDeleter(Display *d) : m_display(d)
-    {
-    }
-
-    void operator() (XDevice *d) const
-    {
-        if (d) {
-            XCloseDevice(m_display, d);
-        }
-    }
-
-private:
-    Display *m_display;
-};
 
 struct PropertyInfo
 {
@@ -82,11 +66,8 @@ struct PropertyInfo
     QSharedPointer<unsigned char> data;
     unsigned long nitems;
 
-    union flong {
-        long l;
-        float f;
-    } *f;
-    long *i;
+    float *f;
+    int *i;
     char *b;
 
     PropertyInfo() :
@@ -94,24 +75,28 @@ struct PropertyInfo
     {
     }
 
-    PropertyInfo(Display *display, XDevice *device, Atom prop, Atom floatType)
+    PropertyInfo(Display *display, int device, Atom prop, Atom floatType)
         : type(0), format(0), nitems(0), f(0), i(0), b(0)
     {
         unsigned char *dataPtr = 0;
         unsigned long bytes_after;
-        XGetDeviceProperty(display, device, prop, 0, 1000, False,
-                           AnyPropertyType, &type, &format, &nitems,
-                           &bytes_after, &dataPtr);
+        XIGetProperty(display, device, prop, 0, 1000, False,
+                      AnyPropertyType, &type, &format, &nitems,
+                      &bytes_after, &dataPtr);
         data = QSharedPointer<unsigned char>(dataPtr, XDeleter);
 
-        if (format == 8 && type == XA_INTEGER) {
+        if (format == CHAR_BIT && type == XA_INTEGER) {
             b = reinterpret_cast<char *>(dataPtr);
         }
-        if (format == 32 && (type == XA_INTEGER || type == XA_CARDINAL)) {
-            i = reinterpret_cast<long *>(dataPtr);
+        if (format == sizeof(int) * CHAR_BIT &&
+                (type == XA_INTEGER || type == XA_CARDINAL))
+        {
+            i = reinterpret_cast<int *>(dataPtr);
         }
-        if (floatType && format == 32 && type == floatType) {
-            f = reinterpret_cast<flong *>(dataPtr);
+        if (format == sizeof(float) * CHAR_BIT &&
+                floatType && type == floatType)
+        {
+            f = reinterpret_cast<float *>(dataPtr);
         }
     }
 
@@ -126,10 +111,10 @@ struct PropertyInfo
             v = QVariant(static_cast<int>(b[offset]));
         }
         if (i) {
-            v = QVariant(static_cast<int>(i[offset]));
+            v = QVariant(i[offset]);
         }
         if (f) {
-            v = QVariant(f[offset].f);
+            v = QVariant(f[offset]);
         }
 
         return v;
@@ -154,7 +139,6 @@ XlibBackend::XlibBackend(QObject *parent) :
         return;
     }
 
-    m_touchpadType.intern(m_connection, XI_TOUCHPAD);
     m_floatType.intern(m_connection, "FLOAT");
     m_capsAtom.intern(m_connection, SYNAPTICS_PROP_CAPABILITIES);
     XcbAtom resolutionAtom(m_connection, SYNAPTICS_PROP_RESOLUTION);
@@ -168,14 +152,14 @@ XlibBackend::XlibBackend(QObject *parent) :
         }
     }
 
-    if (!m_touchpadType.atom() || !m_capsAtom.atom()) {
+    if (!m_capsAtom.atom()) {
         m_errorString =
                 i18n("Synaptics driver is not installed (or is not used)");
         return;
     }
 
     m_device = findTouchpad();
-    if (!m_device) {
+    if (m_device == XIAllDevices) {
         m_errorString = i18n("No touchpads found");
         return;
     }
@@ -191,8 +175,7 @@ XlibBackend::XlibBackend(QObject *parent) :
         return;
     }
 
-    PropertyInfo resolution(m_display.data(), m_device.data(),
-                            resolutionAtom, 0);
+    PropertyInfo resolution(m_display.data(), m_device, resolutionAtom, 0);
     if (!resolution.i || !resolution.nitems ||
             (resolution.nitems == 2 &&
              resolution.i[0] == 1 && resolution.i[1] == 1))
@@ -217,7 +200,7 @@ XlibBackend::XlibBackend(QObject *parent) :
     m_negate["VertScrollDelta"] = "InvertVertScroll";
     m_supported.append(m_negate.values());
 
-    PropertyInfo caps(m_display.data(), m_device.data(), m_capsAtom.atom(), 0);
+    PropertyInfo caps(m_display.data(), m_device, m_capsAtom.atom(), 0);
     if (!caps.b) {
         m_errorString = i18n("Can not read touchpad's capabilities");
         return;
@@ -277,41 +260,29 @@ XlibBackend::XlibBackend(QObject *parent) :
     }
 }
 
-QSharedPointer<XDevice> XlibBackend::findTouchpad()
+int XlibBackend::findTouchpad()
 {
     int nDevices = 0;
-    QSharedPointer<XDeviceInfo> deviceInfo(
-                XListInputDevices(m_display.data(), &nDevices),
-                XDeviceListDeleter);
+    QSharedPointer<XIDeviceInfo> deviceInfo(
+                XIQueryDevice(m_display.data(), XIAllDevices, &nDevices),
+                XIDeviceInfoDeleter);
 
-    for (XDeviceInfo *info = deviceInfo.data();
-         info < deviceInfo.data() + nDevices && !m_device; info++)
+    for (XIDeviceInfo *info = deviceInfo.data();
+         info < deviceInfo.data() + nDevices; info++)
     {
-        if (info->type == m_touchpadType.atom()) {
-            XDevice *devicePtr = XOpenDevice(m_display.data(), info->id);
-            if (!devicePtr) {
-                continue;
-            }
-            QSharedPointer<XDevice> device(devicePtr,
-                                           XDeviceDeleter(m_display.data()));
+        int nProperties = 0;
+        QSharedPointer<Atom> properties(
+                    XIListProperties(m_display.data(), info->deviceid,
+                                     &nProperties), XDeleter);
 
-            int nProperties = 0;
-            QSharedPointer<Atom> properties(
-                        XListDeviceProperties(m_display.data(), device.data(),
-                                              &nProperties), XDeleter);
-            if (!properties) {
-                continue;
-            }
-
-            if (std::count(properties.data(), properties.data() + nProperties,
-                           m_capsAtom.atom()))
-            {
-                return device;
-            }
+        if (std::count(properties.data(), properties.data() + nProperties,
+                       m_capsAtom.atom()))
+        {
+            return info->deviceid;
         }
     }
 
-    return QSharedPointer<XDevice>();
+    return XIAllDevices;
 }
 
 static const Parameter *findParameter(const QString &name)
@@ -382,9 +353,9 @@ bool XlibBackend::applyConfig(const TouchpadParameters *p)
 
     Q_FOREACH(const QLatin1String &name, m_changed) {
         PropertyInfo &info = m_props[name];
-        XChangeDeviceProperty(m_display.data(), m_device.data(),
-                              m_atoms[name]->atom(), info.type, info.format,
-                              PropModeReplace, info.data.data(), info.nitems);
+        XIChangeProperty(m_display.data(), m_device,
+                         m_atoms[name]->atom(), info.type, info.format,
+                         PropModeReplace, info.data.data(), info.nitems);
     }
     m_changed.clear();
 
@@ -471,7 +442,7 @@ PropertyInfo *XlibBackend::getDevProperty(const QLatin1String &propName)
         return 0;
     }
 
-    PropertyInfo p(m_display.data(), m_device.data(), prop, m_floatType.atom());
+    PropertyInfo p(m_display.data(), m_device, prop, m_floatType.atom());
     if (!p.b && !p.f && !p.i) {
         return 0;
     }
@@ -505,7 +476,7 @@ bool XlibBackend::setParameter(const Parameter *par, const QVariant &value)
     } else if (p->i) {
         p->i[par->prop_offset] = converted.toInt();
     } else if (p->f) {
-        p->f[par->prop_offset].f = converted.toDouble();
+        p->f[par->prop_offset] = converted.toDouble();
     }
 
     m_changed.insert(propName);
