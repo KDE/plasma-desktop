@@ -308,6 +308,16 @@ int XlibBackend::getPropertyScale(const QString &name) const
     return 1;
 }
 
+static QVariant negateVariant(const QVariant &value)
+{
+    if (value.type() == QVariant::Double) {
+        return QVariant(-value.toDouble());
+    } else if (value.type() == QVariant::Int) {
+        return QVariant(-value.toInt());
+    }
+    return value;
+}
+
 bool XlibBackend::applyConfig(const TouchpadParameters *p)
 {
     if (m_supported.isEmpty()) {
@@ -333,15 +343,10 @@ bool XlibBackend::applyConfig(const TouchpadParameters *p)
                 }
             }
 
-            //TODO: refactor
             if (m_negate.contains(name)) {
                 KConfigSkeletonItem *i = p->findItem(m_negate[name]);
                 if (i && i->property().toBool()) {
-                    if (value.type() == QVariant::Double) {
-                        value = QVariant(-value.toDouble());
-                    } else if (value.type() == QVariant::Int) {
-                        value = QVariant(-value.toInt());
-                    }
+                    value = negateVariant(value);
                 }
             }
 
@@ -401,7 +406,11 @@ bool XlibBackend::getConfig(TouchpadParameters *p)
         if (m_negate.contains(name)) {
             KConfigSkeletonItem *i = p->findItem(m_negate[name]);
             if (i) {
-                i->setProperty(value.toDouble() < 0.0);
+                bool negative = value.toDouble() < 0.0;
+                i->setProperty(negative);
+                if (negative) {
+                    value = negateVariant(value);
+                }
             }
         }
 
