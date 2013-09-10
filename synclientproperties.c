@@ -16,6 +16,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
+//krazy:excludeall=copyright
 /* This file incorporates work covered by the following copyright and
  * permission notice:
  *
