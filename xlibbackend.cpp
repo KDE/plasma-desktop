@@ -22,6 +22,8 @@
 #include <QtAlgorithms>
 #include <QScopedPointer>
 
+#include <KLocalizedString>
+
 #include "touchpadparameters.h"
 
 //Includes are ordered this way because of #defines in Xorg's headers
@@ -148,7 +150,7 @@ XlibBackend::XlibBackend(QObject *parent) :
     }
 
     if (!m_connection) {
-        m_errorString = "Can not connect to X server";
+        m_errorString = i18n("Can not connect to X server");
         return;
     }
 
@@ -167,13 +169,14 @@ XlibBackend::XlibBackend(QObject *parent) :
     }
 
     if (!m_touchpadType.atom() || !m_capsAtom.atom()) {
-        m_errorString = "Synaptics driver is not installed (or is not used)";
+        m_errorString =
+                i18n("Synaptics driver is not installed (or is not used)");
         return;
     }
 
     m_device = findTouchpad();
     if (!m_device) {
-        m_errorString = "No touchpads found";
+        m_errorString = i18n("No touchpads found");
         return;
     }
 
@@ -184,7 +187,7 @@ XlibBackend::XlibBackend(QObject *parent) :
     }
 
     if (m_supported.isEmpty()) {
-        m_errorString = "Can not read any of touchpad's properties";
+        m_errorString = i18n("Can not read any of touchpad's properties");
         return;
     }
 
@@ -194,7 +197,7 @@ XlibBackend::XlibBackend(QObject *parent) :
             (resolution.nitems == 2 &&
              resolution.i[0] == 1 && resolution.i[1] == 1))
     {
-        m_errorString = "Can not read touchpad's resolution";
+        m_errorString = i18n("Can not read touchpad's resolution");
         //Non-fatal
     } else {
         m_resY = qMin(static_cast<unsigned long>(resolution.i[0]),
@@ -216,7 +219,7 @@ XlibBackend::XlibBackend(QObject *parent) :
 
     PropertyInfo caps(m_display.data(), m_device.data(), m_capsAtom.atom(), 0);
     if (!caps.b) {
-        m_errorString = "Can not read touchpad's capabilities";
+        m_errorString = i18n("Can not read touchpad's capabilities");
         return;
     }
 
@@ -388,7 +391,7 @@ bool XlibBackend::applyConfig(const TouchpadParameters *p)
     XFlush(m_display.data());
 
     if (error) {
-        m_errorString = "Can not set touchpad configuration";
+        m_errorString = i18n("Can not set touchpad configuration");
     }
     return !error;
 }
@@ -438,7 +441,7 @@ bool XlibBackend::getConfig(TouchpadParameters *p)
     }
 
     if (error) {
-        m_errorString = "Can not read touchpad configuration";
+        m_errorString = i18n("Can not read touchpad configuration");
     }
     return !error;
 }

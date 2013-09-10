@@ -304,7 +304,8 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
     layout->addWidget(m_errorMessage);
 
     m_differentConfigsMessage = new KMessageWidget(
-                "Saved configuration differs from active configuration", this);
+                i18n("Saved configuration differs from active configuration"),
+                this);
     m_differentConfigsMessage->setMessageType(KMessageWidget::Warning);
     m_differentConfigsMessage->setVisible(false);
     layout->addWidget(m_differentConfigsMessage);
