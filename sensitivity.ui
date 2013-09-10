@@ -42,12 +42,18 @@
         <property name="orientation">
          <enum>Qt::Horizontal</enum>
         </property>
+        <property name="tickPosition">
+         <enum>QSlider::TicksBelow</enum>
+        </property>
        </widget>
       </item>
       <item row="2" column="1">
        <widget class="QSlider" name="kcfg_FingerLow">
         <property name="orientation">
          <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="tickPosition">
+         <enum>QSlider::TicksBelow</enum>
         </property>
        </widget>
       </item>
@@ -88,12 +94,18 @@
         <property name="orientation">
          <enum>Qt::Horizontal</enum>
         </property>
+        <property name="tickPosition">
+         <enum>QSlider::TicksBelow</enum>
+        </property>
        </widget>
       </item>
       <item row="1" column="1">
        <widget class="QSlider" name="kcfg_PalmMinZ">
         <property name="orientation">
          <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="tickPosition">
+         <enum>QSlider::TicksBelow</enum>
         </property>
        </widget>
       </item>
