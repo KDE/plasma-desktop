@@ -175,6 +175,8 @@ XlibBackend::XlibBackend(QObject *parent) :
         return;
     }
 
+    m_toRadians.append("CircScrollDelta");
+
     PropertyInfo resolution(m_display.data(), m_device, resolutionAtom, 0);
     if (!resolution.i || !resolution.nitems ||
             (resolution.nitems == 2 &&
@@ -295,17 +297,19 @@ static const Parameter *findParameter(const QString &name)
     return 0;
 }
 
-int XlibBackend::getPropertyScale(const QString &name) const
+double XlibBackend::getPropertyScale(const QString &name) const
 {
     if (m_scaleByResX.contains(name) && m_scaleByResY.contains(name)) {
-        return qRound(std::sqrt(static_cast<qreal>(m_resX) * m_resX
-                                + static_cast<qreal>(m_resY) * m_resY));
+        return std::sqrt(static_cast<double>(m_resX) * m_resX
+                         + static_cast<double>(m_resY) * m_resY);
     } else if (m_scaleByResX.contains(name)) {
         return m_resX;
     } else if (m_scaleByResY.contains(name)) {
         return m_resY;
+    } else if (m_toRadians.contains(name)) {
+        return M_PI_4 / 45.0;
     }
-    return 1;
+    return 1.0;
 }
 
 static QVariant negateVariant(const QVariant &value)
@@ -333,10 +337,10 @@ bool XlibBackend::applyConfig(const TouchpadParameters *p)
         if (i && par) {
             QVariant value(i->property());
 
-            int k = getPropertyScale(name);
-            if (k != 1) {
+            double k = getPropertyScale(name);
+            if (k != 1.0) {
                 bool ok = false;
-                value = QVariant(qRound(value.toDouble(&ok) * k));
+                value = QVariant(value.toDouble(&ok) * k);
                 if (!ok) {
                     error = true;
                     continue;
@@ -393,8 +397,8 @@ bool XlibBackend::getConfig(TouchpadParameters *p)
             continue;
         }
 
-        int k = getPropertyScale(name);
-        if (k != 1) {
+        double k = getPropertyScale(name);
+        if (k != 1.0) {
             bool ok = false;
             value = QVariant(value.toDouble(&ok) / k);
             if (!ok) {
@@ -470,6 +474,8 @@ bool XlibBackend::setParameter(const Parameter *par, const QVariant &value)
     QVariant::Type convType = QVariant::Int;
     if (p->f) {
         convType = QVariant::Double;
+    } else if (value.type() == QVariant::Double) {
+        converted = QVariant(qRound(static_cast<qreal>(value.toDouble())));
     }
 
     if (!converted.convert(convType)) {

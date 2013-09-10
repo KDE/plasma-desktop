@@ -49,7 +49,7 @@ private:
     struct PropertyInfo *getDevProperty(const QLatin1String &propName);
     bool setParameter(const struct Parameter *, const QVariant &);
     QVariant getParameter(const struct Parameter *);
-    int getPropertyScale(const QString &name) const;
+    double getPropertyScale(const QString &name) const;
 
     QSharedPointer<Display> m_display;
     xcb_connection_t *m_connection;
@@ -65,7 +65,7 @@ private:
     QStringList m_supported;
     QString m_errorString;
     int m_resX, m_resY;
-    QStringList m_scaleByResX, m_scaleByResY;
+    QStringList m_scaleByResX, m_scaleByResY, m_toRadians;
     QMap<QString, QString> m_negate;
 };
 

@@ -179,5 +179,44 @@
             <max>10</max>
             <default>1</default>
         </entry>
+        <entry name="CircularScrolling" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="CircScrollDelta" type="Double">
+            <default>10</default>
+            <min>0</min>
+            <max>45</max>
+        </entry>
+        <entry name="CircScrollTrigger" type="Enum">
+            <choices name="Edge">
+                <choice name="AllEdges">
+                    <label context="Touchpad">All edges</label>
+                </choice>
+                <choice name="TopEdge">
+                    <label context="Touchpad">Top edge</label>
+                </choice>
+                <choice name="TopRightCorner">
+                    <label context="Touchpad">Top right corner</label>
+                </choice>
+                <choice name="RightEdge">
+                    <label context="Touchpad">Right edge</label>
+                </choice>
+                <choice name="BottomRightCorner">
+                    <label context="Touchpad">Bottom right corner</label>
+                </choice>
+                <choice name="BottomEdge">
+                    <label context="Touchpad">Bottom edge</label>
+                </choice>
+                <choice name="BottomLeftCorner">
+                    <label context="Touchpad">Bottom left corner</label>
+                </choice>
+                <choice name="LeftEdge">
+                    <label context="Touchpad">Left edge</label>
+                </choice>
+                <choice name="TopLeftCorner">
+                    <label context="Touchpad">Top left corner</label>
+                </choice>
+            </choices>
+        </entry>
     </group>
 </kcfg>
