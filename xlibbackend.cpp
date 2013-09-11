@@ -356,7 +356,7 @@ bool XlibBackend::applyConfig(const TouchpadParameters *p)
         PropertyInfo &info = m_props[name];
         XIChangeProperty(m_display, m_device,
                          m_atoms[name]->atom(), info.type, info.format,
-                         PropModeReplace, info.data.data(), info.nitems);
+                         XIPropModeReplace, info.data.data(), info.nitems);
     }
     m_changed.clear();
 
