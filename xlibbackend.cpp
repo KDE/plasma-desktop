@@ -34,7 +34,7 @@
 #include <X11/extensions/XInput2.h>
 #include <xcb/xcb_atom.h>
 
-#include <xorg/synaptics-properties.h>
+#include <synaptics-properties.h>
 
 #include "synclientproperties.h"
 

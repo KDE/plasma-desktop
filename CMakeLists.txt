@@ -14,16 +14,20 @@ configure_file(
 find_package(X11 REQUIRED)
 find_package(X11_XCB REQUIRED)
 find_package(XCB REQUIRED)
+find_package(PkgConfig REQUIRED)
 
 if(NOT X11_Xinput_FOUND)
     message(FATAL_ERROR "Xinput not found")
 endif()
+
+pkg_search_module(XORG REQUIRED xorg-server)
 
 include_directories(
 ${XCB_XCB_INCLUDE_DIR}
 ${X11_XCB_INCLUDE_DIR}
 ${X11_Xinput_INCLUDE_PATH}
 ${X11_X11_INCLUDE_PATH}
+${XORG_INCLUDE_DIRS}
 )
 
 add_definitions(
