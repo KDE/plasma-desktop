@@ -21,6 +21,7 @@
 
 #include <QtAlgorithms>
 #include <QScopedPointer>
+#include <QX11Info>
 
 #include <KLocalizedString>
 
@@ -41,13 +42,6 @@ static void XDeleter(void *p)
 {
     if (p) {
         XFree(p);
-    }
-}
-
-static void XDisplayDeleter(Display *p)
-{
-    if (p) {
-        XCloseDisplay(p);
     }
 }
 
@@ -126,11 +120,10 @@ XlibBackend::~XlibBackend()
 
 XlibBackend::XlibBackend(QObject *parent) :
     TouchpadBackend(parent),
-    m_display(XOpenDisplay(0), XDisplayDeleter), m_connection(0),
-    m_resX(1), m_resY(1)
+    m_display(QX11Info::display()), m_connection(0), m_resX(1), m_resY(1)
 {
     if (m_display) {
-        m_connection = XGetXCBConnection(m_display.data());
+        m_connection = XGetXCBConnection(m_display);
     }
 
     if (!m_connection) {
@@ -176,7 +169,7 @@ XlibBackend::XlibBackend(QObject *parent) :
 
     m_toRadians.append("CircScrollDelta");
 
-    PropertyInfo resolution(m_display.data(), m_device, resolutionAtom, 0);
+    PropertyInfo resolution(m_display, m_device, resolutionAtom, 0);
     if (!resolution.i || !resolution.nitems ||
             (resolution.nitems == 2 &&
              resolution.i[0] == 1 && resolution.i[1] == 1))
@@ -201,7 +194,7 @@ XlibBackend::XlibBackend(QObject *parent) :
     m_negate["VertScrollDelta"] = "InvertVertScroll";
     m_supported.append(m_negate.values());
 
-    PropertyInfo caps(m_display.data(), m_device, m_capsAtom.atom(), 0);
+    PropertyInfo caps(m_display, m_device, m_capsAtom.atom(), 0);
     if (!caps.b) {
         m_errorString = i18n("Can not read touchpad's capabilities");
         return;
@@ -265,7 +258,7 @@ int XlibBackend::findTouchpad()
 {
     int nDevices = 0;
     QSharedPointer<XIDeviceInfo> deviceInfo(
-                XIQueryDevice(m_display.data(), XIAllDevices, &nDevices),
+                XIQueryDevice(m_display, XIAllDevices, &nDevices),
                 XIDeviceInfoDeleter);
 
     for (XIDeviceInfo *info = deviceInfo.data();
@@ -273,8 +266,8 @@ int XlibBackend::findTouchpad()
     {
         int nProperties = 0;
         QSharedPointer<Atom> properties(
-                    XIListProperties(m_display.data(), info->deviceid,
-                                     &nProperties), XDeleter);
+                    XIListProperties(m_display, info->deviceid, &nProperties),
+                    XDeleter);
 
         if (std::count(properties.data(), properties.data() + nProperties,
                        m_capsAtom.atom()))
@@ -361,13 +354,13 @@ bool XlibBackend::applyConfig(const TouchpadParameters *p)
 
     Q_FOREACH(const QLatin1String &name, m_changed) {
         PropertyInfo &info = m_props[name];
-        XIChangeProperty(m_display.data(), m_device,
+        XIChangeProperty(m_display, m_device,
                          m_atoms[name]->atom(), info.type, info.format,
                          PropModeReplace, info.data.data(), info.nitems);
     }
     m_changed.clear();
 
-    XFlush(m_display.data());
+    XFlush(m_display);
 
     if (error) {
         m_errorString = i18n("Can not set touchpad configuration");
@@ -454,7 +447,7 @@ PropertyInfo *XlibBackend::getDevProperty(const QLatin1String &propName)
         return 0;
     }
 
-    PropertyInfo p(m_display.data(), m_device, prop, m_floatType.atom());
+    PropertyInfo p(m_display, m_device, prop, m_floatType.atom());
     if (!p.b && !p.f && !p.i) {
         return 0;
     }

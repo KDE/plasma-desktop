@@ -51,7 +51,7 @@ private:
     QVariant getParameter(const struct Parameter *);
     double getPropertyScale(const QString &name) const;
 
-    QSharedPointer<Display> m_display;
+    Display *m_display;
     xcb_connection_t *m_connection;
 
     XcbAtom m_floatType, m_capsAtom;
