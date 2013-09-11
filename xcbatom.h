@@ -19,7 +19,7 @@
 #ifndef XCBATOM_H
 #define XCBATOM_H
 
-#include <xcb/xcb_atom.h>
+#include <xcb/xcb.h>
 
 class XcbAtom
 {

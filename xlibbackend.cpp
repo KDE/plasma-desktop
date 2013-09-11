@@ -32,7 +32,6 @@
 #include <X11/Xlib-xcb.h>
 #include <X11/Xatom.h>
 #include <X11/extensions/XInput2.h>
-#include <xcb/xcb_atom.h>
 
 #include <synaptics-properties.h>
 
