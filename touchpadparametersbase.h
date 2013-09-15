@@ -27,8 +27,11 @@ public:
     explicit TouchpadParametersBase(const QLatin1String &);
 
     void setTemporary(bool);
+    void loadFrom(KConfig *);
+    void loadFrom(KCoreConfigSkeleton *);
 
     void writeConfig();
+    void saveAsDefaults();
 
 private:
     bool m_temporary;

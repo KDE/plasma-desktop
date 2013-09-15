@@ -18,9 +18,27 @@
 
 #include "touchpadparametersbase.h"
 
+static KSharedConfig::Ptr savedDefaults()
+{
+    static KSharedConfig::Ptr p(KSharedConfig::openConfig(".touchpaddefaults",
+                                                          KConfig::SimpleConfig,
+                                                          "tmp"));
+    return p;
+}
+
 TouchpadParametersBase::TouchpadParametersBase(const QLatin1String &name)
     : KCoreConfigSkeleton(name), m_temporary(false)
 {
+    useDefaults(true);
+    loadFrom(savedDefaults().data());
+    useDefaults(false);
+    loadFrom(config());
+}
+
+void TouchpadParametersBase::saveAsDefaults()
+{
+    setSharedConfig(savedDefaults());
+    KCoreConfigSkeleton::writeConfig();
 }
 
 void TouchpadParametersBase::setTemporary(bool v)
@@ -32,5 +50,24 @@ void TouchpadParametersBase::writeConfig()
 {
     if (!m_temporary) {
         KCoreConfigSkeleton::writeConfig();
+    }
+}
+
+void TouchpadParametersBase::loadFrom(KConfig *config)
+{
+    Q_FOREACH(KConfigSkeletonItem *i, items()) {
+        if (config->hasGroup(i->group())) {
+            i->readConfig(config);
+        }
+    }
+}
+
+void TouchpadParametersBase::loadFrom(KCoreConfigSkeleton *config)
+{
+    Q_FOREACH(KConfigSkeletonItem *i, items()) {
+        KConfigSkeletonItem *j = config->findItem(i->name());
+        if (j) {
+            i->setProperty(j->property());
+        }
     }
 }

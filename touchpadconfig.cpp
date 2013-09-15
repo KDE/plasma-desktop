@@ -35,31 +35,6 @@
 #include "plugins.h"
 #include "testarea.h"
 
-static KSharedConfig::Ptr savedDefaults()
-{
-    static KSharedConfig::Ptr p(KSharedConfig::openConfig(".touchpaddefaults",
-                                                          KConfig::SimpleConfig,
-                                                          "tmp"));
-    return p;
-}
-
-static void reloadConfig(TouchpadParameters &p, KConfig *config)
-{
-    Q_FOREACH(KConfigSkeletonItem *i, p.items()) {
-        if (config->hasGroup(i->group())) {
-            i->readConfig(config);
-        }
-    }
-}
-
-static void setupDefaults(TouchpadParameters &p)
-{
-    p.useDefaults(true);
-    reloadConfig(p, savedDefaults().data());
-    p.useDefaults(false);
-    reloadConfig(p, p.config());
-}
-
 extern "C"
 {
     KDE_EXPORT void kcminit_touchpad()
@@ -72,13 +47,11 @@ extern "C"
 
         {
             TouchpadParameters active;
-            active.setSharedConfig(savedDefaults());
             backend->getConfig(&active);
-            active.writeConfig();
+            active.saveAsDefaults();
         }
 
         TouchpadParameters config;
-        setupDefaults(config);
         backend->applyConfig(&config);
     }
 }
@@ -349,7 +322,6 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
 
     KConfigDialogManager::changedMap()->insert("CustomSlider",
                                                SIGNAL(valueChanged(double)));
-    setupDefaults(m_config);
     m_manager = addConfig(&m_config, this);
 
     if (!m_backend->getConfig(&m_config)) {
@@ -379,7 +351,6 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
     }
 
     TouchpadParameters saved;
-    setupDefaults(saved);
     if (!compareConfigs(m_config, saved)) {
         QTimer::singleShot(0, m_differentConfigsMessage, SLOT(animatedShow()));
         m_configOutOfSync = true;
@@ -405,7 +376,7 @@ void TouchpadConfig::load()
     KCModule::load();
 
     if (m_configOutOfSync) {
-        reloadConfig(m_config, m_config.config());
+        m_config.loadFrom(m_config.config());
         QTimer::singleShot(0, this, SLOT(changed()));
     }
 }
@@ -422,14 +393,14 @@ void TouchpadConfig::beginTesting()
     m_backend->getConfig(m_prevConfig.data());
 
     TouchpadParameters oldConfig;
-    reloadConfig(oldConfig, m_config.config());
+    oldConfig.loadFrom(&m_config);
     m_config.setTemporary(true);
 
     m_manager->updateSettings();
     m_backend->applyConfig(&m_config);
 
     m_config.setTemporary(false);
-    reloadConfig(m_config, oldConfig.config());
+    m_config.loadFrom(&oldConfig);
 }
 
 void TouchpadConfig::endTesting()
