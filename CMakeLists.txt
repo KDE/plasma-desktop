@@ -37,6 +37,7 @@ ${XCB_DEFINITIONS}
 
 set(SRCS
 touchpadconfig.cpp
+testarea.cpp
 customslider.cpp
 sliderpair.cpp
 plugins.cpp
@@ -49,7 +50,12 @@ synclientproperties.c
 )
 
 kde4_add_kcfg_files(SRCS touchpadparameters.kcfgc)
-kde4_add_ui_files(SRCS pointermotion.ui tap.ui scroll.ui sensitivity.ui)
+kde4_add_ui_files(SRCS
+pointermotion.ui
+tap.ui
+scroll.ui
+sensitivity.ui
+testarea.ui)
 kde4_add_plugin(kcm_touchpad ${SRCS})
 
 target_link_libraries(kcm_touchpad

@@ -33,6 +33,7 @@
 #include "sliderpair.h"
 #include "touchpadbackend.h"
 #include "plugins.h"
+#include "testarea.h"
 
 static KSharedConfig::Ptr savedDefaults()
 {
@@ -297,19 +298,19 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
 {
     setAboutData(new KAboutData(*componentData().aboutData()));
 
-    QVBoxLayout *layout = new QVBoxLayout(this);
+    QGridLayout *layout = new QGridLayout(this);
 
     m_errorMessage = new KMessageWidget(this);
     m_errorMessage->setMessageType(KMessageWidget::Error);
     m_errorMessage->setVisible(false);
-    layout->addWidget(m_errorMessage);
+    layout->addWidget(m_errorMessage, 0, 0, 1, 2);
 
     m_differentConfigsMessage = new KMessageWidget(
                 i18n("Saved configuration differs from active configuration"),
                 this);
     m_differentConfigsMessage->setMessageType(KMessageWidget::Warning);
     m_differentConfigsMessage->setVisible(false);
-    layout->addWidget(m_differentConfigsMessage);
+    layout->addWidget(m_differentConfigsMessage, 1, 0, 1, 2);
 
     KTabWidget *tabs = new KTabWidget(this);
 
@@ -322,7 +323,12 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
 
     enableSliders(tabs);
 
-    layout->addWidget(tabs);
+    layout->addWidget(tabs, 2, 0, 1, 1);
+
+    TestArea *testArea = new TestArea(this);
+    layout->addWidget(testArea, 2, 1);
+    connect(testArea, SIGNAL(enter()), SLOT(beginTesting()));
+    connect(testArea, SIGNAL(leave()), SLOT(endTesting()));
 
     static const NonlinearInterpolator interpolator;
     m_pointerMotion.kcfg_MinSpeed->setInterpolator(&interpolator);
@@ -344,7 +350,7 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
     KConfigDialogManager::changedMap()->insert("CustomSlider",
                                                SIGNAL(valueChanged(double)));
     setupDefaults(m_config);
-    addConfig(&m_config, this);
+    m_manager = addConfig(&m_config, this);
 
     if (!m_backend->getConfig(&m_config)) {
         m_errorMessage->setText(m_backend->errorString());
@@ -402,4 +408,35 @@ void TouchpadConfig::load()
         reloadConfig(m_config, m_config.config());
         QTimer::singleShot(0, this, SLOT(changed()));
     }
+}
+
+void TouchpadConfig::hideEvent(QHideEvent *e)
+{
+    endTesting();
+    KCModule::hideEvent(e);
+}
+
+void TouchpadConfig::beginTesting()
+{
+    m_prevConfig.reset(new TouchpadParameters());
+    m_backend->getConfig(m_prevConfig.data());
+
+    TouchpadParameters oldConfig;
+    reloadConfig(oldConfig, m_config.config());
+    m_config.setTemporary(true);
+
+    m_manager->updateSettings();
+    m_backend->applyConfig(&m_config);
+
+    m_config.setTemporary(false);
+    reloadConfig(m_config, oldConfig.config());
+}
+
+void TouchpadConfig::endTesting()
+{
+    if (!m_prevConfig) {
+        return;
+    }
+    m_backend->applyConfig(m_prevConfig.data());
+    m_prevConfig.reset();
 }

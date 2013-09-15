@@ -20,6 +20,8 @@
 #define TOUCHPADCONFIG_H
 
 #include <KCModule>
+#include <KConfigDialogManager>
+#include <QScopedPointer>
 
 #include "touchpadparameters.h"
 
@@ -44,10 +46,18 @@ public:
 
 protected:
     virtual void showEvent(QShowEvent *ev);
+    virtual void hideEvent(QHideEvent *);
+
+private Q_SLOTS:
+    void beginTesting();
+    void endTesting();
 
 private:
     TouchpadBackend *m_backend;
     TouchpadParameters m_config;
+    QScopedPointer<TouchpadParameters> m_prevConfig;
+    KConfigDialogManager *m_manager;
+
     bool m_tabOrderSet;
     bool m_configOutOfSync;
 
