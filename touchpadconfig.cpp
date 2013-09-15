@@ -256,7 +256,7 @@ static void checkUi(QObject *w, TouchpadParameters &config)
 //Qt Designer freezes when slider is enabled for KIntNumInput
 static void enableSliders(QObject *w)
 {
-    if (w->property("sliderEnabled").isValid()) {
+    if (qobject_cast<KIntNumInput*>(w)) {
         w->setProperty("sliderEnabled", true);
     }
 

@@ -317,6 +317,9 @@
         <property name="decimals">
          <number>1</number>
         </property>
+        <property name="sliderEnabled">
+         <bool>true</bool>
+        </property>
        </widget>
       </item>
      </layout>
@@ -339,14 +342,14 @@
  </widget>
  <customwidgets>
   <customwidget>
-   <class>KComboBox</class>
-   <extends>QWidget</extends>
-   <header>kcombobox.h</header>
-  </customwidget>
-  <customwidget>
    <class>KDoubleNumInput</class>
    <extends>QWidget</extends>
    <header>knuminput.h</header>
+  </customwidget>
+  <customwidget>
+   <class>KComboBox</class>
+   <extends>QComboBox</extends>
+   <header>kcombobox.h</header>
   </customwidget>
   <customwidget>
    <class>KIntNumInput</class>
