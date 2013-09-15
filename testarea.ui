@@ -44,6 +44,9 @@
       </item>
       <item>
        <widget class="QScrollArea" name="scrollArea">
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
+        </property>
         <widget class="QWidget" name="scrollAreaWidgetContents">
          <property name="geometry">
           <rect>
@@ -80,6 +83,9 @@
       </item>
       <item>
        <widget class="QListView" name="listView">
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
+        </property>
         <property name="viewMode">
          <enum>QListView::IconMode</enum>
         </property>
