@@ -21,6 +21,7 @@
 #include <cmath>
 
 #include <QScrollArea>
+#include <QTimer>
 
 #include <KAboutData>
 #include <KLocalizedString>
@@ -347,7 +348,7 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
 
     if (!m_backend->getConfig(&m_config)) {
         m_errorMessage->setText(m_backend->errorString());
-        m_errorMessage->animatedShow();
+        QTimer::singleShot(0, m_errorMessage, SLOT(animatedShow()));
         return;
     }
 
@@ -374,7 +375,7 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
     TouchpadParameters saved;
     setupDefaults(saved);
     if (!compareConfigs(m_config, saved)) {
-        m_differentConfigsMessage->animatedShow();
+        QTimer::singleShot(0, m_differentConfigsMessage, SLOT(animatedShow()));
         m_configOutOfSync = true;
     }
 }
