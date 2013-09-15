@@ -53,6 +53,9 @@ private Q_SLOTS:
     void endTesting();
 
 private:
+    bool compareConfigs(const TouchpadParameters &a,
+                        const TouchpadParameters &b) const;
+
     TouchpadBackend *m_backend;
     TouchpadParameters m_config;
     QScopedPointer<TouchpadParameters> m_prevConfig;

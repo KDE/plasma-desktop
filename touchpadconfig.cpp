@@ -191,13 +191,11 @@ static bool variantFuzzyCompare(const QVariant &a, const QVariant &b)
     return a == b;
 }
 
-static bool compareConfigs(const TouchpadParameters &a,
-                           const TouchpadParameters &b)
+bool TouchpadConfig::compareConfigs(const TouchpadParameters &a,
+                                    const TouchpadParameters &b) const
 {
-    static const QString parametersGroup("parameters");
-
     Q_FOREACH(KConfigSkeletonItem *i, a.items()) {
-        if (i->group() != parametersGroup) {
+        if (!findChild<QWidget*>(getWidgetName(i))) {
             continue;
         }
 
