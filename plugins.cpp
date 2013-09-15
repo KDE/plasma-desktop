@@ -22,6 +22,7 @@
 #include <KPluginFactory>
 
 #include "touchpadconfig.h"
+#include "touchpadbackend.h"
 #include "version.h"
 
 static KAboutData buildAboutData()
@@ -51,3 +52,24 @@ static KAboutData buildAboutData()
 K_PLUGIN_FACTORY_DEFINITION(TouchpadPluginFactory,
                             registerPlugin<TouchpadConfig>();)
 K_EXPORT_PLUGIN(TouchpadPluginFactory(buildAboutData()))
+
+extern "C"
+{
+    KDE_EXPORT void kcminit_touchpad()
+    {
+        TouchpadBackend *backend = TouchpadBackend::self();
+
+        if (!backend) {
+            return;
+        }
+
+        {
+            TouchpadParameters active;
+            backend->getConfig(&active);
+            active.saveAsDefaults();
+        }
+
+        TouchpadParameters config;
+        backend->applyConfig(&config);
+    }
+}

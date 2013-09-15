@@ -35,27 +35,6 @@
 #include "plugins.h"
 #include "testarea.h"
 
-extern "C"
-{
-    KDE_EXPORT void kcminit_touchpad()
-    {
-        TouchpadBackend *backend = TouchpadBackend::self();
-
-        if (!backend) {
-            return;
-        }
-
-        {
-            TouchpadParameters active;
-            backend->getConfig(&active);
-            active.saveAsDefaults();
-        }
-
-        TouchpadParameters config;
-        backend->applyConfig(&config);
-    }
-}
-
 static bool tabBefore(QWidget *first, QWidget *second)
 {
     return qMakePair(first->geometry().top(), first->geometry().left()) <
