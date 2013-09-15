@@ -186,23 +186,6 @@ bool TouchpadConfig::compareConfigs(const TouchpadParameters &a,
     return true;
 }
 
-class NonlinearInterpolator : public CustomSlider::Interpolator
-{
-public:
-    double absolute(double relative, double minimum, double maximum) const
-    {
-        relative *= relative;
-        return CustomSlider::Interpolator::absolute(relative, minimum, maximum);
-    }
-
-    double relative(double absolute, double minimum, double maximum) const
-    {
-        double value = CustomSlider::Interpolator::relative(absolute,
-                                                            minimum, maximum);
-        return std::sqrt(value);
-    }
-};
-
 template<typename T>
 void addTab(KTabWidget *tabs, T &form)
 {
@@ -280,7 +263,7 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
     connect(testArea, SIGNAL(enter()), SLOT(beginTesting()));
     connect(testArea, SIGNAL(leave()), SLOT(endTesting()));
 
-    static const NonlinearInterpolator interpolator;
+    static const CustomSlider::SqrtInterpolator interpolator;
     m_pointerMotion.kcfg_MinSpeed->setInterpolator(&interpolator);
     m_pointerMotion.kcfg_MaxSpeed->setInterpolator(&interpolator);
     m_pointerMotion.kcfg_AccelFactor->setInterpolator(&interpolator);

@@ -40,6 +40,20 @@ double CustomSlider::Interpolator::relative(double absolute,
     return (absolute - minimum) / (maximum - minimum);
 }
 
+double CustomSlider::SqrtInterpolator::absolute(
+        double relative, double minimum, double maximum) const
+{
+    relative *= relative;
+    return Interpolator::absolute(relative, minimum, maximum);
+}
+
+double CustomSlider::SqrtInterpolator::relative(
+        double absolute, double minimum, double maximum) const
+{
+    double value = Interpolator::relative(absolute, minimum, maximum);
+    return std::sqrt(value);
+}
+
 const CustomSlider::Interpolator CustomSlider::lerp;
 
 CustomSlider::CustomSlider(QWidget *parent) :

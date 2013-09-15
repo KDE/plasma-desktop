@@ -50,6 +50,13 @@ public:
         virtual ~Interpolator();
     };
 
+    class SqrtInterpolator : public Interpolator
+    {
+    public:
+        double absolute(double relative, double minimum, double maximum) const;
+        double relative(double absolute, double minimum, double maximum) const;
+    };
+
     const Interpolator *interpolator() const;
     void setInterpolator(const Interpolator *);
 
