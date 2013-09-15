@@ -41,6 +41,7 @@ testarea.cpp
 customslider.cpp
 sliderpair.cpp
 plugins.cpp
+touchpadparametersbase.cpp
 
 touchpadbackend.cpp
 #Xlib backend
