@@ -400,6 +400,6 @@ void TouchpadConfig::load()
 
     if (m_configOutOfSync) {
         reloadConfig(m_config, m_config.config());
-        QMetaObject::invokeMethod(this, "changed", Qt::QueuedConnection);
+        QTimer::singleShot(0, this, SLOT(changed()));
     }
 }
