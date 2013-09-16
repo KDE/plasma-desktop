@@ -70,20 +70,6 @@ static void tabOrder(QWidget *widget, QWidget* &prev)
     }
 }
 
-void TouchpadConfig::showEvent(QShowEvent *ev)
-{
-    KCModule::showEvent(ev);
-
-    if (m_tabOrderSet) {
-        return;
-    }
-
-    QWidget *prev = 0;
-    tabOrder(this, prev);
-
-    m_tabOrderSet = true;
-}
-
 static const QString kcfgPrefix("kcfg_");
 
 static QString getParameterName(QObject *widget)
@@ -115,6 +101,34 @@ static void disableChildren(QWidget *widget,
             disableChildren(childWidget, except);
         }
     }
+}
+
+void TouchpadConfig::showEvent(QShowEvent *ev)
+{
+    m_backend = TouchpadBackend::self();
+    disableChildren(this, m_backend->supportedParameters());
+
+    if (!m_backend->getConfig(&m_config)) {
+        m_errorMessage->setText(m_backend->errorString());
+        m_errorMessage->animatedShow();
+    } else {
+        TouchpadParameters saved;
+        if (!compareConfigs(m_config, saved)) {
+            m_differentConfigsMessage->animatedShow();
+            m_configOutOfSync = true;
+        }
+    }
+
+    KCModule::showEvent(ev);
+
+    if (m_tabOrderSet) {
+        return;
+    }
+
+    QWidget *prev = 0;
+    tabOrder(this, prev);
+
+    m_tabOrderSet = true;
 }
 
 static void fillWithChoicesWidget(QObject *widget, TouchpadParameters *config)
@@ -277,18 +291,9 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
 
     fillWithChoices(this, &m_config);
 
-    m_backend = TouchpadBackend::self();
-    disableChildren(this, m_backend->supportedParameters());
-
     KConfigDialogManager::changedMap()->insert("CustomSlider",
                                                SIGNAL(valueChanged(double)));
     m_manager = addConfig(&m_config, this);
-
-    if (!m_backend->getConfig(&m_config)) {
-        m_errorMessage->setText(m_backend->errorString());
-        QTimer::singleShot(0, m_errorMessage, SLOT(animatedShow()));
-        return;
-    }
 
     Q_FOREACH (KConfigSkeletonItem *i, m_config.items()) {
         if (i->property().type() != QVariant::Double) {
@@ -308,12 +313,6 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
         }
 
         i->setProperty(qRound(i->property().toDouble() * k) / k);
-    }
-
-    TouchpadParameters saved;
-    if (!compareConfigs(m_config, saved)) {
-        QTimer::singleShot(0, m_differentConfigsMessage, SLOT(animatedShow()));
-        m_configOutOfSync = true;
     }
 }
 
