@@ -70,3 +70,6 @@ ${KDE4_KDEUI_LIBS}
 install(FILES touchpad.kcfg DESTINATION ${KCFG_INSTALL_DIR})
 install(TARGETS kcm_touchpad DESTINATION ${PLUGIN_INSTALL_DIR})
 install(FILES kcm_touchpad.desktop DESTINATION ${SERVICES_INSTALL_DIR})
+
+kde4_install_icons(${ICON_INSTALL_DIR})
+kde4_update_iconcache()
