@@ -200,6 +200,18 @@ bool TouchpadConfig::compareConfigs(const TouchpadParameters &a,
     return true;
 }
 
+//Qt Designer freezes when slider is enabled for KIntNumInput
+static void enableSliders(QObject *w)
+{
+    if (qobject_cast<KIntNumInput*>(w)) {
+        w->setProperty("sliderEnabled", true);
+    }
+
+    Q_FOREACH(QObject *child, w->children()) {
+        enableSliders(child);
+    }
+}
+
 template<typename T>
 void addTab(KTabWidget *tabs, T &form)
 {
@@ -210,6 +222,7 @@ void addTab(KTabWidget *tabs, T &form)
 
     QWidget *widget = new QWidget(container);
     form.setupUi(widget);
+    enableSliders(widget);
     widget->layout()->setContentsMargins(20, 20, 20, 20);
 
     container->setWidget(widget);
@@ -224,18 +237,6 @@ static void checkUi(QObject *w, TouchpadParameters &config)
             Q_ASSERT(config.findItem(param));
         }
         checkUi(child, config);
-    }
-}
-
-//Qt Designer freezes when slider is enabled for KIntNumInput
-static void enableSliders(QObject *w)
-{
-    if (qobject_cast<KIntNumInput*>(w)) {
-        w->setProperty("sliderEnabled", true);
-    }
-
-    Q_FOREACH(QObject *child, w->children()) {
-        enableSliders(child);
     }
 }
 
@@ -267,8 +268,6 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
     addTab(tabs, m_sensitivity);
 
     checkUi(tabs, m_config);
-
-    enableSliders(tabs);
 
     layout->addWidget(tabs, 2, 0, 1, 1);
 
