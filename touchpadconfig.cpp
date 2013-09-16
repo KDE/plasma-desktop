@@ -77,6 +77,26 @@ void TouchpadConfig::showEvent(QShowEvent *ev)
         m_errorMessage->setText(m_backend->errorString());
         m_errorMessage->animatedShow();
     } else {
+        Q_FOREACH (KConfigSkeletonItem *i, m_config.items()) {
+            if (i->property().type() != QVariant::Double) {
+                continue;
+            }
+
+            QObject *widget = findChild<QObject*>(getWidgetName(i));
+            if (!widget) {
+                continue;
+            }
+
+            QVariant decimals = widget->property("decimals");
+            bool ok = false;
+            double k = std::pow(10.0, decimals.toInt(&ok));
+            if (!decimals.isValid() || !ok) {
+                continue;
+            }
+
+            i->setProperty(qRound(i->property().toDouble() * k) / k);
+        }
+
         TouchpadParameters saved;
         if (!compareConfigs(m_config, saved)) {
             m_differentConfigsMessage->animatedShow();
@@ -236,26 +256,6 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
     KConfigDialogManager::changedMap()->insert("CustomSlider",
                                                SIGNAL(valueChanged(double)));
     m_manager = addConfig(&m_config, this);
-
-    Q_FOREACH (KConfigSkeletonItem *i, m_config.items()) {
-        if (i->property().type() != QVariant::Double) {
-            continue;
-        }
-
-        QObject *widget = findChild<QObject*>(getWidgetName(i));
-        if (!widget) {
-            continue;
-        }
-
-        QVariant decimals = widget->property("decimals");
-        bool ok = false;
-        double k = std::pow(10.0, decimals.toInt(&ok));
-        if (!decimals.isValid() || !ok) {
-            continue;
-        }
-
-        i->setProperty(qRound(i->property().toDouble() * k) / k);
-    }
 }
 
 void TouchpadConfig::save()
