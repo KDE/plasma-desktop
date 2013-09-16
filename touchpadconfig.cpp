@@ -35,41 +35,6 @@
 #include "plugins.h"
 #include "testarea.h"
 
-static bool tabBefore(QWidget *first, QWidget *second)
-{
-    return qMakePair(first->geometry().top(), first->geometry().left()) <
-            qMakePair(second->geometry().top(), second->geometry().left());
-}
-
-static void tabOrder(QWidget *widget, QWidget* &prev)
-{
-    if (widget->focusPolicy() & Qt::TabFocus && !widget->focusProxy()) {
-        if (prev) {
-            QWidget::setTabOrder(prev, widget);
-        }
-        prev = widget;
-    }
-
-    QList<QWidget *> children;
-    Q_FOREACH(QObject *child, widget->children()) {
-        QWidget *w = qobject_cast<QWidget *>(child);
-        if (w) {
-            children.append(w);
-        }
-    }
-
-    qSort(children.begin(), children.end(), tabBefore);
-    QWidget *prevChild = 0;
-    Q_FOREACH(QWidget *child, children) {
-        QLabel *label = qobject_cast<QLabel *>(prevChild);
-        if (label && !label->buddy() && (child->focusPolicy() & Qt::TabFocus)) {
-            label->setBuddy(child);
-        }
-        tabOrder(child, prev);
-        prevChild = child;
-    }
-}
-
 static const QString kcfgPrefix("kcfg_");
 
 static QString getParameterName(QObject *widget)
@@ -120,15 +85,6 @@ void TouchpadConfig::showEvent(QShowEvent *ev)
     }
 
     KCModule::showEvent(ev);
-
-    if (m_tabOrderSet) {
-        return;
-    }
-
-    QWidget *prev = 0;
-    tabOrder(this, prev);
-
-    m_tabOrderSet = true;
 }
 
 static void fillWithChoicesWidget(QObject *widget, TouchpadParameters *config)
@@ -200,18 +156,6 @@ bool TouchpadConfig::compareConfigs(const TouchpadParameters &a,
     return true;
 }
 
-//Qt Designer freezes when slider is enabled for KIntNumInput
-static void enableSliders(QObject *w)
-{
-    if (qobject_cast<KIntNumInput*>(w)) {
-        w->setProperty("sliderEnabled", true);
-    }
-
-    Q_FOREACH(QObject *child, w->children()) {
-        enableSliders(child);
-    }
-}
-
 template<typename T>
 void addTab(KTabWidget *tabs, T &form)
 {
@@ -222,7 +166,6 @@ void addTab(KTabWidget *tabs, T &form)
 
     QWidget *widget = new QWidget(container);
     form.setupUi(widget);
-    enableSliders(widget);
     widget->layout()->setContentsMargins(20, 20, 20, 20);
 
     container->setWidget(widget);
@@ -242,7 +185,7 @@ static void checkUi(QObject *w, TouchpadParameters &config)
 
 TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
     : KCModule(TouchpadPluginFactory::componentData(), parent, args),
-      m_tabOrderSet(false), m_configOutOfSync(false)
+      m_configOutOfSync(false)
 {
     setAboutData(new KAboutData(*componentData().aboutData()));
 

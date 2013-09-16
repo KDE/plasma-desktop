@@ -28,6 +28,9 @@
         <property name="text">
          <string comment="Minimum pointer movement speed">Minimum:</string>
         </property>
+        <property name="buddy">
+         <cstring>kcfg_MinSpeed</cstring>
+        </property>
        </widget>
       </item>
       <item row="0" column="1">
@@ -45,6 +48,9 @@
         <property name="text">
          <string comment="Maximum pointer movement speed">Maximum:</string>
         </property>
+        <property name="buddy">
+         <cstring>kcfg_MaxSpeed</cstring>
+        </property>
        </widget>
       </item>
       <item row="1" column="1">
@@ -61,6 +67,9 @@
        <widget class="QLabel" name="label_3">
         <property name="text">
          <string>Acceleration:</string>
+        </property>
+        <property name="buddy">
+         <cstring>kcfg_AccelFactor</cstring>
         </property>
        </widget>
       </item>
@@ -94,12 +103,18 @@
         <property name="text">
          <string>Minimum pressure:</string>
         </property>
+        <property name="buddy">
+         <cstring>kcfg_PressureMotionMinZ</cstring>
+        </property>
        </widget>
       </item>
       <item row="1" column="0">
        <widget class="QLabel" name="label_7">
         <property name="text">
          <string>Speed multiplier:</string>
+        </property>
+        <property name="buddy">
+         <cstring>kcfg_PressureMotionMinFactor</cstring>
         </property>
        </widget>
       </item>
@@ -108,12 +123,18 @@
         <property name="text">
          <string>Maximum pressure:</string>
         </property>
+        <property name="buddy">
+         <cstring>kcfg_PressureMotionMaxZ</cstring>
+        </property>
        </widget>
       </item>
       <item row="3" column="0">
        <widget class="QLabel" name="label_9">
         <property name="text">
          <string>Speed multiplier:</string>
+        </property>
+        <property name="buddy">
+         <cstring>kcfg_PressureMotionMaxFactor</cstring>
         </property>
        </widget>
       </item>
@@ -177,12 +198,18 @@
         <property name="text">
          <string>Vertical hysteresis:</string>
         </property>
+        <property name="buddy">
+         <cstring>kcfg_VertHysteresis</cstring>
+        </property>
        </widget>
       </item>
       <item row="1" column="0">
        <widget class="QLabel" name="label_5">
         <property name="text">
          <string>Horizontal hysteresis:</string>
+        </property>
+        <property name="buddy">
+         <cstring>kcfg_HorizHysteresis</cstring>
         </property>
        </widget>
       </item>
@@ -191,12 +218,18 @@
         <property name="suffix">
          <string> units</string>
         </property>
+        <property name="sliderEnabled">
+         <bool>true</bool>
+        </property>
        </widget>
       </item>
       <item row="1" column="1">
        <widget class="KIntNumInput" name="kcfg_HorizHysteresis">
         <property name="suffix">
          <string> units</string>
+        </property>
+        <property name="sliderEnabled">
+         <bool>true</bool>
         </property>
        </widget>
       </item>
@@ -235,6 +268,17 @@
    <header>customslider.h</header>
   </customwidget>
  </customwidgets>
+ <tabstops>
+  <tabstop>kcfg_MinSpeed</tabstop>
+  <tabstop>kcfg_MaxSpeed</tabstop>
+  <tabstop>kcfg_AccelFactor</tabstop>
+  <tabstop>kcfg_PressureMotionMinZ</tabstop>
+  <tabstop>kcfg_PressureMotionMinFactor</tabstop>
+  <tabstop>kcfg_PressureMotionMaxZ</tabstop>
+  <tabstop>kcfg_PressureMotionMaxFactor</tabstop>
+  <tabstop>kcfg_VertHysteresis</tabstop>
+  <tabstop>kcfg_HorizHysteresis</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

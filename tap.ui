@@ -34,6 +34,9 @@
         <property name="text">
          <string>One finger:</string>
         </property>
+        <property name="buddy">
+         <cstring>kcfg_OneFingerTapButton</cstring>
+        </property>
        </widget>
       </item>
       <item row="0" column="1">
@@ -44,6 +47,9 @@
         <property name="text">
          <string>Two fingers:</string>
         </property>
+        <property name="buddy">
+         <cstring>kcfg_TwoFingerTapButton</cstring>
+        </property>
        </widget>
       </item>
       <item row="2" column="1">
@@ -53,6 +59,9 @@
        <widget class="QLabel" name="label_4">
         <property name="text">
          <string>Three fingers:</string>
+        </property>
+        <property name="buddy">
+         <cstring>kcfg_ThreeFingerTapButton</cstring>
         </property>
        </widget>
       </item>
@@ -98,6 +107,9 @@
            <property name="alignment">
             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
            </property>
+           <property name="buddy">
+            <cstring>kcfg_LTCornerButton</cstring>
+           </property>
           </widget>
          </item>
          <item row="0" column="1">
@@ -111,6 +123,9 @@
            <property name="alignment">
             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
            </property>
+           <property name="buddy">
+            <cstring>kcfg_LBCornerButton</cstring>
+           </property>
           </widget>
          </item>
          <item row="0" column="3">
@@ -120,6 +135,9 @@
            </property>
            <property name="alignment">
             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+           </property>
+           <property name="buddy">
+            <cstring>kcfg_RTCornerButton</cstring>
            </property>
           </widget>
          </item>
@@ -155,6 +173,9 @@
            </property>
            <property name="alignment">
             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+           </property>
+           <property name="buddy">
+            <cstring>kcfg_RBCornerButton</cstring>
            </property>
           </widget>
          </item>
@@ -212,6 +233,9 @@
            <property name="text">
             <string>Timeout:</string>
            </property>
+           <property name="buddy">
+            <cstring>kcfg_LockedDragTimeout</cstring>
+           </property>
           </widget>
          </item>
          <item row="0" column="1">
@@ -221,6 +245,9 @@
            </property>
            <property name="suffix">
             <string> ms</string>
+           </property>
+           <property name="sliderEnabled">
+            <bool>true</bool>
            </property>
           </widget>
          </item>
@@ -253,12 +280,18 @@
         <property name="text">
          <string>Maximum time:</string>
         </property>
+        <property name="buddy">
+         <cstring>kcfg_MaxTapTime</cstring>
+        </property>
        </widget>
       </item>
       <item row="1" column="0">
        <widget class="QLabel" name="label_11">
         <property name="text">
          <string>Maximum finger movement:</string>
+        </property>
+        <property name="buddy">
+         <cstring>kcfg_MaxTapMove</cstring>
         </property>
        </widget>
       </item>
@@ -267,12 +300,18 @@
         <property name="text">
          <string>Maximum time for double tap:</string>
         </property>
+        <property name="buddy">
+         <cstring>kcfg_MaxDoubleTapTime</cstring>
+        </property>
        </widget>
       </item>
       <item row="3" column="0">
        <widget class="QLabel" name="label_13">
         <property name="text">
          <string>Single tap timeout:</string>
+        </property>
+        <property name="buddy">
+         <cstring>kcfg_SingleTapTimeout</cstring>
         </property>
        </widget>
       </item>
@@ -284,25 +323,8 @@
         <property name="suffix">
          <string> ms</string>
         </property>
-       </widget>
-      </item>
-      <item row="2" column="1">
-       <widget class="KIntNumInput" name="kcfg_MaxDoubleTapTime">
-        <property name="singleStep">
-         <number>10</number>
-        </property>
-        <property name="suffix">
-         <string> ms</string>
-        </property>
-       </widget>
-      </item>
-      <item row="3" column="1">
-       <widget class="KIntNumInput" name="kcfg_SingleTapTimeout">
-        <property name="singleStep">
-         <number>10</number>
-        </property>
-        <property name="suffix">
-         <string> ms</string>
+        <property name="sliderEnabled">
+         <bool>true</bool>
         </property>
        </widget>
       </item>
@@ -316,6 +338,32 @@
         </property>
         <property name="decimals">
          <number>1</number>
+        </property>
+        <property name="sliderEnabled">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="KIntNumInput" name="kcfg_MaxDoubleTapTime">
+        <property name="singleStep">
+         <number>10</number>
+        </property>
+        <property name="suffix">
+         <string> ms</string>
+        </property>
+        <property name="sliderEnabled">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="KIntNumInput" name="kcfg_SingleTapTimeout">
+        <property name="singleStep">
+         <number>10</number>
+        </property>
+        <property name="suffix">
+         <string> ms</string>
         </property>
         <property name="sliderEnabled">
          <bool>true</bool>
@@ -357,6 +405,22 @@
    <header>knuminput.h</header>
   </customwidget>
  </customwidgets>
+ <tabstops>
+  <tabstop>kcfg_OneFingerTapButton</tabstop>
+  <tabstop>kcfg_TwoFingerTapButton</tabstop>
+  <tabstop>kcfg_ThreeFingerTapButton</tabstop>
+  <tabstop>kcfg_LTCornerButton</tabstop>
+  <tabstop>kcfg_RTCornerButton</tabstop>
+  <tabstop>kcfg_LBCornerButton</tabstop>
+  <tabstop>kcfg_RBCornerButton</tabstop>
+  <tabstop>kcfg_TapAndDragGesture</tabstop>
+  <tabstop>kcfg_LockedDrags</tabstop>
+  <tabstop>kcfg_LockedDragTimeout</tabstop>
+  <tabstop>kcfg_MaxTapTime</tabstop>
+  <tabstop>kcfg_MaxTapMove</tabstop>
+  <tabstop>kcfg_MaxDoubleTapTime</tabstop>
+  <tabstop>kcfg_SingleTapTimeout</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

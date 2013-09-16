@@ -66,12 +66,18 @@
            <property name="text">
             <string>Minimum speed:</string>
            </property>
+           <property name="buddy">
+            <cstring>kcfg_CoastingSpeed</cstring>
+           </property>
           </widget>
          </item>
          <item row="1" column="0">
           <widget class="QLabel" name="label_2">
            <property name="text">
             <string>Deceleration:</string>
+           </property>
+           <property name="buddy">
+            <cstring>kcfg_CoastingFriction</cstring>
            </property>
           </widget>
          </item>
@@ -159,6 +165,9 @@
         <property name="text">
          <string comment="Vertical scrolling distance">Vertical:</string>
         </property>
+        <property name="buddy">
+         <cstring>kcfg_VertScrollDelta</cstring>
+        </property>
        </widget>
       </item>
       <item row="0" column="1">
@@ -184,6 +193,9 @@
        <widget class="QLabel" name="label_4">
         <property name="text">
          <string comment="Horizontal scrolling distance">Horizontal:</string>
+        </property>
+        <property name="buddy">
+         <cstring>kcfg_HorizScrollDelta</cstring>
         </property>
        </widget>
       </item>
@@ -258,6 +270,9 @@
         <property name="text">
          <string>Trigger region:</string>
         </property>
+        <property name="buddy">
+         <cstring>kcfg_CircScrollTrigger</cstring>
+        </property>
        </widget>
       </item>
       <item row="0" column="1">
@@ -267,6 +282,9 @@
        <widget class="QLabel" name="label_6">
         <property name="text">
          <string>Angle:</string>
+        </property>
+        <property name="buddy">
+         <cstring>kcfg_CircScrollDelta</cstring>
         </property>
        </widget>
       </item>
@@ -316,6 +334,22 @@
    <header>kcombobox.h</header>
   </customwidget>
  </customwidgets>
+ <tabstops>
+  <tabstop>kcfg_VertEdgeScroll</tabstop>
+  <tabstop>kcfg_HorizEdgeScroll</tabstop>
+  <tabstop>kcfg_CornerCoasting</tabstop>
+  <tabstop>kcfg_CoastingSpeed</tabstop>
+  <tabstop>kcfg_CoastingFriction</tabstop>
+  <tabstop>kcfg_VertTwoFingerScroll</tabstop>
+  <tabstop>kcfg_HorizTwoFingerScroll</tabstop>
+  <tabstop>kcfg_VertScrollDelta</tabstop>
+  <tabstop>kcfg_HorizScrollDelta</tabstop>
+  <tabstop>kcfg_InvertVertScroll</tabstop>
+  <tabstop>kcfg_InvertHorizScroll</tabstop>
+  <tabstop>kcfg_CircularScrolling</tabstop>
+  <tabstop>kcfg_CircScrollTrigger</tabstop>
+  <tabstop>kcfg_CircScrollDelta</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

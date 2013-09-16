@@ -60,8 +60,6 @@ private:
     TouchpadParameters m_config;
     QScopedPointer<TouchpadParameters> m_prevConfig;
     KConfigDialogManager *m_manager;
-
-    bool m_tabOrderSet;
     bool m_configOutOfSync;
 
     KMessageWidget *m_errorMessage, *m_differentConfigsMessage;
