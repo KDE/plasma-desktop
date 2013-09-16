@@ -43,7 +43,11 @@
        </widget>
       </item>
       <item row="0" column="1">
-       <widget class="KComboBox" name="kcfg_OneFingerTapButton"/>
+       <widget class="KComboBox" name="kcfg_OneFingerTapButton">
+        <property name="toolTip">
+         <string>Which mouse button is reported on a non-corner one-finger tap</string>
+        </property>
+       </widget>
       </item>
       <item row="1" column="0">
        <widget class="QLabel" name="label_3">
@@ -56,7 +60,11 @@
        </widget>
       </item>
       <item row="1" column="1">
-       <widget class="KComboBox" name="kcfg_TwoFingerTapButton"/>
+       <widget class="KComboBox" name="kcfg_TwoFingerTapButton">
+        <property name="toolTip">
+         <string>Which mouse button is reported on a non-corner two-finger tap</string>
+        </property>
+       </widget>
       </item>
       <item row="2" column="0">
        <widget class="QLabel" name="label_4">
@@ -69,7 +77,11 @@
        </widget>
       </item>
       <item row="2" column="1">
-       <widget class="KComboBox" name="kcfg_ThreeFingerTapButton"/>
+       <widget class="KComboBox" name="kcfg_ThreeFingerTapButton">
+        <property name="toolTip">
+         <string>Which mouse button is reported on a non-corner three-finger tap</string>
+        </property>
+       </widget>
       </item>
      </layout>
     </widget>
@@ -106,7 +118,11 @@
           </widget>
          </item>
          <item row="0" column="1">
-          <widget class="KComboBox" name="kcfg_LTCornerButton"/>
+          <widget class="KComboBox" name="kcfg_LTCornerButton">
+           <property name="toolTip">
+            <string>Which mouse button is reported on a left top corner tap</string>
+           </property>
+          </widget>
          </item>
          <item row="2" column="0">
           <widget class="QLabel" name="label_7">
@@ -135,13 +151,25 @@
           </widget>
          </item>
          <item row="2" column="1">
-          <widget class="KComboBox" name="kcfg_LBCornerButton"/>
+          <widget class="KComboBox" name="kcfg_LBCornerButton">
+           <property name="toolTip">
+            <string>Which mouse button is reported on a left bottom corner tap</string>
+           </property>
+          </widget>
          </item>
          <item row="0" column="4">
-          <widget class="KComboBox" name="kcfg_RTCornerButton"/>
+          <widget class="KComboBox" name="kcfg_RTCornerButton">
+           <property name="toolTip">
+            <string>Which mouse button is reported on a right top corner tap</string>
+           </property>
+          </widget>
          </item>
          <item row="2" column="4">
-          <widget class="KComboBox" name="kcfg_RBCornerButton"/>
+          <widget class="KComboBox" name="kcfg_RBCornerButton">
+           <property name="toolTip">
+            <string>Which mouse button is reported on a right bottom corner tap</string>
+           </property>
+          </widget>
          </item>
          <item row="0" column="2">
           <spacer name="horizontalSpacer_3">
@@ -196,6 +224,9 @@
    </item>
    <item>
     <widget class="QGroupBox" name="kcfg_TapAndDragGesture">
+     <property name="toolTip">
+      <string>This gesture is an alternative way of dragging. It is performed by tapping (touching and releasing the finger), then touching again and moving the finger on the touchpad</string>
+     </property>
      <property name="title">
       <string>Tap-and-Drag Gesture</string>
      </property>
@@ -208,6 +239,9 @@
      <layout class="QVBoxLayout" name="verticalLayout_3">
       <item>
        <widget class="QGroupBox" name="kcfg_LockedDrags">
+        <property name="toolTip">
+         <string>If off, a tap-and-drag gesture ends when you release the finger. If on, the gesture is active until you tap a second time, or until timeout expires</string>
+        </property>
         <property name="title">
          <string>Locked Drags</string>
         </property>
@@ -233,6 +267,9 @@
          </item>
          <item row="0" column="1">
           <widget class="KIntNumInput" name="kcfg_LockedDragTimeout">
+           <property name="toolTip">
+            <string>How long it takes (in milliseconds) for the &quot;Locked Drags&quot; mode to be automatically turned off after the finger is released from the touchpad</string>
+           </property>
            <property name="minimum">
             <number>0</number>
            </property>
@@ -316,6 +353,9 @@
       </item>
       <item row="0" column="1">
        <widget class="KIntNumInput" name="kcfg_MaxTapTime">
+        <property name="toolTip">
+         <string>Maximum time (in milliseconds) for detecting a tap</string>
+        </property>
         <property name="minimum">
          <number>0</number>
         </property>
@@ -335,6 +375,9 @@
       </item>
       <item row="1" column="1">
        <widget class="KDoubleNumInput" name="kcfg_MaxTapMove">
+        <property name="toolTip">
+         <string>Maximum movement of the finger for detecting a tap</string>
+        </property>
         <property name="singleStep">
          <double>0.100000000000000</double>
         </property>
@@ -351,6 +394,9 @@
       </item>
       <item row="2" column="1">
        <widget class="KIntNumInput" name="kcfg_MaxDoubleTapTime">
+        <property name="toolTip">
+         <string>Maximum time (in milliseconds) for detecting a double tap</string>
+        </property>
         <property name="minimum">
          <number>0</number>
         </property>
@@ -370,6 +416,9 @@
       </item>
       <item row="3" column="1">
        <widget class="KIntNumInput" name="kcfg_SingleTapTimeout">
+        <property name="toolTip">
+         <string>Timeout after a tap to recognize it as a single tap</string>
+        </property>
         <property name="minimum">
          <number>0</number>
         </property>

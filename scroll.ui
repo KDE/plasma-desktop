@@ -34,6 +34,9 @@
       </property>
       <item row="1" column="0" colspan="2">
        <widget class="QCheckBox" name="kcfg_HorizEdgeScroll">
+        <property name="toolTip">
+         <string>Enable horizontal scrolling when dragging along the bottom edge</string>
+        </property>
         <property name="text">
          <string>Horizontal scrolling through moving the finger on the lower side of the touchpad</string>
         </property>
@@ -41,6 +44,9 @@
       </item>
       <item row="0" column="0" colspan="2">
        <widget class="QCheckBox" name="kcfg_VertEdgeScroll">
+        <property name="toolTip">
+         <string>Enable vertical scrolling when dragging along the right edge</string>
+        </property>
         <property name="text">
          <string>Vertical scrolling through moving the finger on the right side of the touchpad</string>
         </property>
@@ -48,6 +54,9 @@
       </item>
       <item row="2" column="0" colspan="2">
        <widget class="QGroupBox" name="kcfg_CornerCoasting">
+        <property name="toolTip">
+         <string>Enable edge scrolling to continue while the finger stays in an edge corner</string>
+        </property>
         <property name="title">
          <string>Corner Coasting</string>
         </property>
@@ -83,6 +92,9 @@
          </item>
          <item row="0" column="1">
           <widget class="KDoubleNumInput" name="kcfg_CoastingSpeed">
+           <property name="toolTip">
+            <string>Your finger needs to produce this many scrolls per second in order to start coasting</string>
+           </property>
            <property name="singleStep">
             <double>1.000000000000000</double>
            </property>
@@ -99,6 +111,9 @@
          </item>
          <item row="1" column="1">
           <widget class="KDoubleNumInput" name="kcfg_CoastingFriction">
+           <property name="toolTip">
+            <string>Number of scrolls/second² to decrease the coasting speed</string>
+           </property>
            <property name="singleStep">
             <double>1.000000000000000</double>
            </property>
@@ -127,6 +142,9 @@
      <layout class="QFormLayout" name="formLayout_4">
       <item row="0" column="0" colspan="2">
        <widget class="QCheckBox" name="kcfg_VertTwoFingerScroll">
+        <property name="toolTip">
+         <string>Enable vertical scrolling when dragging with two fingers anywhere on the touchpad</string>
+        </property>
         <property name="text">
          <string comment="Enable vertical two-finger scrolling">Vertical</string>
         </property>
@@ -134,6 +152,9 @@
       </item>
       <item row="1" column="0" colspan="2">
        <widget class="QCheckBox" name="kcfg_HorizTwoFingerScroll">
+        <property name="toolTip">
+         <string>Enable horizontal scrolling when dragging with two fingers anywhere on the touchpad</string>
+        </property>
         <property name="text">
          <string comment="Enable horizontal two-finger scrolling">Horizontal</string>
         </property>
@@ -172,6 +193,9 @@
       </item>
       <item row="0" column="1">
        <widget class="KDoubleNumInput" name="kcfg_VertScrollDelta">
+        <property name="toolTip">
+         <string>Move distance of the finger for a scroll event</string>
+        </property>
         <property name="singleStep">
          <double>0.100000000000000</double>
         </property>
@@ -201,6 +225,9 @@
       </item>
       <item row="1" column="1">
        <widget class="KDoubleNumInput" name="kcfg_HorizScrollDelta">
+        <property name="toolTip">
+         <string>Move distance of the finger for a scroll event</string>
+        </property>
         <property name="singleStep">
          <double>0.100000000000000</double>
         </property>
@@ -235,6 +262,9 @@
       </item>
       <item row="0" column="0" colspan="2">
        <widget class="QCheckBox" name="kcfg_InvertVertScroll">
+        <property name="toolTip">
+         <string>Reverse vertical scrolling</string>
+        </property>
         <property name="text">
          <string comment="Enable vertical natural scrolling">Vertical</string>
         </property>
@@ -242,6 +272,9 @@
       </item>
       <item row="1" column="0" colspan="2">
        <widget class="QCheckBox" name="kcfg_InvertHorizScroll">
+        <property name="toolTip">
+         <string>Reverse horizontal scrolling</string>
+        </property>
         <property name="text">
          <string comment="Enable horizontal natural scrolling">Horizontal</string>
         </property>
@@ -252,6 +285,9 @@
    </item>
    <item>
     <widget class="QGroupBox" name="kcfg_CircularScrolling">
+     <property name="toolTip">
+      <string>If on, circular scrolling is used</string>
+     </property>
      <property name="title">
       <string>Circular Scrolling</string>
      </property>
@@ -276,7 +312,11 @@
        </widget>
       </item>
       <item row="0" column="1">
-       <widget class="KComboBox" name="kcfg_CircScrollTrigger"/>
+       <widget class="KComboBox" name="kcfg_CircScrollTrigger">
+        <property name="toolTip">
+         <string>Trigger region on the touchpad to start circular scrolling</string>
+        </property>
+       </widget>
       </item>
       <item row="1" column="0">
        <widget class="QLabel" name="label_6">
@@ -295,6 +335,9 @@
           <horstretch>0</horstretch>
           <verstretch>0</verstretch>
          </sizepolicy>
+        </property>
+        <property name="toolTip">
+         <string>Move angle (radians) of finger to generate a scroll event</string>
         </property>
         <property name="suffix">
          <string>°</string>

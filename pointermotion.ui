@@ -35,6 +35,9 @@
       </item>
       <item row="0" column="1">
        <widget class="CustomSlider" name="kcfg_MinSpeed">
+        <property name="toolTip">
+         <string>Minimum speed factor</string>
+        </property>
         <property name="orientation">
          <enum>Qt::Horizontal</enum>
         </property>
@@ -55,6 +58,9 @@
       </item>
       <item row="1" column="1">
        <widget class="CustomSlider" name="kcfg_MaxSpeed">
+        <property name="toolTip">
+         <string>Maximum speed factor</string>
+        </property>
         <property name="orientation">
          <enum>Qt::Horizontal</enum>
         </property>
@@ -75,6 +81,9 @@
       </item>
       <item row="2" column="1">
        <widget class="CustomSlider" name="kcfg_AccelFactor">
+        <property name="toolTip">
+         <string>Acceleration factor for normal pointer movements</string>
+        </property>
         <property name="orientation">
          <enum>Qt::Horizontal</enum>
         </property>
@@ -140,6 +149,9 @@
       </item>
       <item row="0" column="1">
        <widget class="QSlider" name="kcfg_PressureMotionMinZ">
+        <property name="toolTip">
+         <string>Finger pressure at which minimum pressure motion factor is applied</string>
+        </property>
         <property name="orientation">
          <enum>Qt::Horizontal</enum>
         </property>
@@ -150,6 +162,9 @@
       </item>
       <item row="2" column="1">
        <widget class="QSlider" name="kcfg_PressureMotionMaxZ">
+        <property name="toolTip">
+         <string>Finger pressure at which maximum pressure motion factor is applied</string>
+        </property>
         <property name="orientation">
          <enum>Qt::Horizontal</enum>
         </property>
@@ -160,6 +175,9 @@
       </item>
       <item row="1" column="1">
        <widget class="KDoubleNumInput" name="kcfg_PressureMotionMinFactor">
+        <property name="toolTip">
+         <string>Lowest setting for pressure motion factor</string>
+        </property>
         <property name="suffix">
          <string notr="true" comment="Speed multiplier suffix"> x</string>
         </property>
@@ -170,6 +188,9 @@
       </item>
       <item row="3" column="1">
        <widget class="KDoubleNumInput" name="kcfg_PressureMotionMaxFactor">
+        <property name="toolTip">
+         <string>Greatest setting for pressure motion factor</string>
+        </property>
         <property name="suffix">
          <string notr="true" comment="Speed multiplier suffix"> x</string>
         </property>
@@ -215,6 +236,9 @@
       </item>
       <item row="0" column="1">
        <widget class="KIntNumInput" name="kcfg_VertHysteresis">
+        <property name="toolTip">
+         <string>The minimum vertical HW distance required to generate motion events</string>
+        </property>
         <property name="minimum">
          <number>0</number>
         </property>
@@ -231,6 +255,9 @@
       </item>
       <item row="1" column="1">
        <widget class="KIntNumInput" name="kcfg_HorizHysteresis">
+        <property name="toolTip">
+         <string>The minimum horizontal HW distance required to generate motion events</string>
+        </property>
         <property name="minimum">
          <number>0</number>
         </property>
