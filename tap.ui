@@ -240,6 +240,12 @@
          </item>
          <item row="0" column="1">
           <widget class="KIntNumInput" name="kcfg_LockedDragTimeout">
+           <property name="minimum">
+            <number>0</number>
+           </property>
+           <property name="maximum">
+            <number>1000</number>
+           </property>
            <property name="singleStep">
             <number>1000</number>
            </property>
@@ -317,6 +323,12 @@
       </item>
       <item row="0" column="1">
        <widget class="KIntNumInput" name="kcfg_MaxTapTime">
+        <property name="minimum">
+         <number>0</number>
+        </property>
+        <property name="maximum">
+         <number>1000</number>
+        </property>
         <property name="singleStep">
          <number>10</number>
         </property>
@@ -346,6 +358,12 @@
       </item>
       <item row="2" column="1">
        <widget class="KIntNumInput" name="kcfg_MaxDoubleTapTime">
+        <property name="minimum">
+         <number>0</number>
+        </property>
+        <property name="maximum">
+         <number>1000</number>
+        </property>
         <property name="singleStep">
          <number>10</number>
         </property>
@@ -359,6 +377,12 @@
       </item>
       <item row="3" column="1">
        <widget class="KIntNumInput" name="kcfg_SingleTapTimeout">
+        <property name="minimum">
+         <number>0</number>
+        </property>
+        <property name="maximum">
+         <number>1000</number>
+        </property>
         <property name="singleStep">
          <number>10</number>
         </property>
