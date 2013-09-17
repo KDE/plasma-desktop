@@ -24,6 +24,7 @@
 #include <QScopedPointer>
 
 #include "touchpadparameters.h"
+#include "testarea.h"
 
 #include "ui_pointermotion.h"
 #include "ui_tap.h"
@@ -40,6 +41,7 @@ class TouchpadConfig : public KCModule
 public:
     explicit TouchpadConfig(QWidget *parent,
                             const QVariantList &args = QVariantList());
+    virtual ~TouchpadConfig();
 
     virtual void save();
     virtual void load();
@@ -51,6 +53,7 @@ protected:
 private Q_SLOTS:
     void beginTesting();
     void endTesting();
+    void onChanged();
 
 private:
     bool compareConfigs(const TouchpadParameters &a,
@@ -63,6 +66,7 @@ private:
     bool m_configOutOfSync;
 
     KMessageWidget *m_errorMessage, *m_differentConfigsMessage;
+    TestArea *m_testArea;
 
     Ui::PointerMotionForm m_pointerMotion;
     Ui::TapForm m_tapping;

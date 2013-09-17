@@ -234,10 +234,11 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
 
     layout->addWidget(tabs, 2, 0, 1, 1);
 
-    TestArea *testArea = new TestArea(this);
-    layout->addWidget(testArea, 2, 1);
-    connect(testArea, SIGNAL(enter()), SLOT(beginTesting()));
-    connect(testArea, SIGNAL(leave()), SLOT(endTesting()));
+    m_testArea = new TestArea(this);
+    layout->addWidget(m_testArea, 2, 1);
+    connect(m_testArea, SIGNAL(enter()), SLOT(beginTesting()));
+    connect(m_testArea, SIGNAL(leave()), SLOT(endTesting()));
+    connect(this, SIGNAL(changed(bool)), SLOT(onChanged()));
 
     static const CustomSlider::SqrtInterpolator interpolator;
     m_pointerMotion.kcfg_MinSpeed->setInterpolator(&interpolator);
@@ -288,10 +289,24 @@ void TouchpadConfig::hideEvent(QHideEvent *e)
     KCModule::hideEvent(e);
 }
 
+TouchpadConfig::~TouchpadConfig()
+{
+    endTesting();
+}
+
+void TouchpadConfig::onChanged()
+{
+    if (m_testArea->underMouse()) {
+        beginTesting();
+    }
+}
+
 void TouchpadConfig::beginTesting()
 {
-    m_prevConfig.reset(new TouchpadParameters());
-    m_backend->getConfig(m_prevConfig.data());
+    if (!m_prevConfig) {
+        m_prevConfig.reset(new TouchpadParameters());
+        m_backend->getConfig(m_prevConfig.data());
+    }
 
     TouchpadParameters oldConfig;
     oldConfig.loadFrom(&m_config);
