@@ -10,158 +10,109 @@
     <height>633</height>
    </rect>
   </property>
-  <property name="sizePolicy">
-   <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-    <horstretch>0</horstretch>
-    <verstretch>0</verstretch>
-   </sizepolicy>
-  </property>
   <property name="windowTitle">
    <string>Scrolling</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <widget class="QGroupBox" name="groupBox">
-     <property name="title">
-      <string>Edge Scrolling</string>
+    <layout class="QFormLayout" name="formLayout_2">
+     <property name="fieldGrowthPolicy">
+      <enum>QFormLayout::FieldsStayAtSizeHint</enum>
      </property>
-     <property name="flat">
-      <bool>true</bool>
+     <property name="formAlignment">
+      <set>Qt::AlignHCenter|Qt::AlignTop</set>
      </property>
-     <layout class="QFormLayout" name="formLayout_3">
-      <property name="fieldGrowthPolicy">
-       <enum>QFormLayout::ExpandingFieldsGrow</enum>
-      </property>
-      <item row="1" column="0" colspan="2">
-       <widget class="QCheckBox" name="kcfg_HorizEdgeScroll">
-        <property name="toolTip">
-         <string>Enable horizontal scrolling when dragging along the bottom edge</string>
-        </property>
-        <property name="text">
-         <string>Horizontal scrolling through moving the finger on the lower side of the touchpad</string>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="0" colspan="2">
-       <widget class="QCheckBox" name="kcfg_VertEdgeScroll">
-        <property name="toolTip">
-         <string>Enable vertical scrolling when dragging along the right edge</string>
-        </property>
-        <property name="text">
-         <string>Vertical scrolling through moving the finger on the right side of the touchpad</string>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="0" colspan="2">
-       <widget class="QGroupBox" name="kcfg_CornerCoasting">
-        <property name="toolTip">
-         <string>Enable edge scrolling to continue while the finger stays in an edge corner</string>
-        </property>
-        <property name="title">
-         <string>Corner Coasting</string>
-        </property>
-        <property name="flat">
-         <bool>true</bool>
-        </property>
-        <property name="checkable">
-         <bool>true</bool>
-        </property>
-        <layout class="QFormLayout" name="formLayout_5">
-         <property name="fieldGrowthPolicy">
-          <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
-         </property>
-         <item row="0" column="0">
-          <widget class="QLabel" name="label">
-           <property name="text">
-            <string>Minimum speed:</string>
-           </property>
-           <property name="buddy">
-            <cstring>kcfg_CoastingSpeed</cstring>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="0">
-          <widget class="QLabel" name="label_2">
-           <property name="text">
-            <string>Deceleration:</string>
-           </property>
-           <property name="buddy">
-            <cstring>kcfg_CoastingFriction</cstring>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="1">
-          <widget class="KDoubleNumInput" name="kcfg_CoastingSpeed">
-           <property name="toolTip">
-            <string>Your finger needs to produce this many scrolls per second in order to start coasting</string>
-           </property>
-           <property name="singleStep">
-            <double>1.000000000000000</double>
-           </property>
-           <property name="suffix">
-            <string> scrolls/sec</string>
-           </property>
-           <property name="specialValueText">
-            <string/>
-           </property>
-           <property name="sliderEnabled">
-            <bool>true</bool>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="1">
-          <widget class="KDoubleNumInput" name="kcfg_CoastingFriction">
-           <property name="toolTip">
-            <string>Number of scrolls/second² to decrease the coasting speed</string>
-           </property>
-           <property name="singleStep">
-            <double>1.000000000000000</double>
-           </property>
-           <property name="suffix">
-            <string> scrolls/sec²</string>
-           </property>
-           <property name="sliderEnabled">
-            <bool>true</bool>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-   </item>
-   <item>
-    <widget class="QGroupBox" name="groupBox_4">
-     <property name="title">
-      <string>Two-Finger Scrolling</string>
-     </property>
-     <property name="flat">
-      <bool>true</bool>
-     </property>
-     <layout class="QFormLayout" name="formLayout_4">
-      <item row="0" column="0" colspan="2">
-       <widget class="QCheckBox" name="kcfg_VertTwoFingerScroll">
-        <property name="toolTip">
-         <string>Enable vertical scrolling when dragging with two fingers anywhere on the touchpad</string>
-        </property>
-        <property name="text">
-         <string comment="Enable vertical two-finger scrolling">Vertical</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="0" colspan="2">
-       <widget class="QCheckBox" name="kcfg_HorizTwoFingerScroll">
-        <property name="toolTip">
-         <string>Enable horizontal scrolling when dragging with two fingers anywhere on the touchpad</string>
-        </property>
-        <property name="text">
-         <string comment="Enable horizontal two-finger scrolling">Horizontal</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_8">
+       <property name="text">
+        <string>Edge scrolling:</string>
+       </property>
+       <property name="buddy">
+        <cstring>kcfg_VertEdgeScroll</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QCheckBox" name="kcfg_VertEdgeScroll">
+       <property name="toolTip">
+        <string>Enable vertical scrolling when dragging along the right edge</string>
+       </property>
+       <property name="text">
+        <string comment="Vertical edge scrolling">Vertical</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QCheckBox" name="kcfg_HorizEdgeScroll">
+       <property name="toolTip">
+        <string>Enable horizontal scrolling when dragging along the bottom edge</string>
+       </property>
+       <property name="text">
+        <string comment="Horizontal edge scrolling">Horizontal</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QCheckBox" name="kcfg_VertTwoFingerScroll">
+       <property name="toolTip">
+        <string>Enable vertical scrolling when dragging with two fingers anywhere on the touchpad</string>
+       </property>
+       <property name="text">
+        <string comment="Enable vertical two-finger scrolling">Vertical</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QCheckBox" name="kcfg_HorizTwoFingerScroll">
+       <property name="toolTip">
+        <string>Enable horizontal scrolling when dragging with two fingers anywhere on the touchpad</string>
+       </property>
+       <property name="text">
+        <string comment="Enable horizontal two-finger scrolling">Horizontal</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <widget class="QCheckBox" name="kcfg_InvertVertScroll">
+       <property name="toolTip">
+        <string>Reverse vertical scrolling</string>
+       </property>
+       <property name="text">
+        <string comment="Reverse vertical scrolling">Vertical</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="1">
+      <widget class="QCheckBox" name="kcfg_InvertHorizScroll">
+       <property name="toolTip">
+        <string>Reverse horizontal scrolling</string>
+       </property>
+       <property name="text">
+        <string comment="Reverse horizontal scrolling">Horizontal</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_9">
+       <property name="text">
+        <string>Two-finger scrolling:</string>
+       </property>
+       <property name="buddy">
+        <cstring>kcfg_VertTwoFingerScroll</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLabel" name="label_10">
+       <property name="text">
+        <string>Reverse scrolling:</string>
+       </property>
+       <property name="buddy">
+        <cstring>kcfg_InvertVertScroll</cstring>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </item>
    <item>
     <widget class="QGroupBox" name="groupBox_2">
@@ -202,9 +153,6 @@
         <property name="suffix">
          <string> mm</string>
         </property>
-        <property name="specialValueText">
-         <string/>
-        </property>
         <property name="decimals">
          <number>1</number>
         </property>
@@ -234,9 +182,6 @@
         <property name="suffix">
          <string> mm</string>
         </property>
-        <property name="specialValueText">
-         <string/>
-        </property>
         <property name="decimals">
          <number>1</number>
         </property>
@@ -249,34 +194,86 @@
     </widget>
    </item>
    <item>
-    <widget class="QGroupBox" name="groupBox_3">
+    <widget class="QGroupBox" name="groupBox_5">
      <property name="title">
-      <string>Reverse Scrolling</string>
+      <string>Coasting</string>
      </property>
      <property name="flat">
       <bool>true</bool>
      </property>
-     <layout class="QFormLayout" name="formLayout_2">
-      <item row="2" column="0">
-       <widget class="QWidget" name="widget_3" native="true"/>
-      </item>
-      <item row="0" column="0" colspan="2">
-       <widget class="QCheckBox" name="kcfg_InvertVertScroll">
-        <property name="toolTip">
-         <string>Reverse vertical scrolling</string>
-        </property>
+     <layout class="QFormLayout" name="formLayout_5">
+      <property name="fieldGrowthPolicy">
+       <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+      </property>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label">
         <property name="text">
-         <string comment="Enable vertical natural scrolling">Vertical</string>
+         <string>Minimum speed:</string>
+        </property>
+        <property name="buddy">
+         <cstring>kcfg_CoastingSpeed</cstring>
         </property>
        </widget>
       </item>
-      <item row="1" column="0" colspan="2">
-       <widget class="QCheckBox" name="kcfg_InvertHorizScroll">
+      <item row="0" column="1">
+       <widget class="KDoubleNumInput" name="kcfg_CoastingSpeed">
         <property name="toolTip">
-         <string>Reverse horizontal scrolling</string>
+         <string>Your finger needs to produce this many scrolls per second in order to start coasting</string>
+        </property>
+        <property name="singleStep">
+         <double>1.000000000000000</double>
+        </property>
+        <property name="suffix">
+         <string> scrolls/sec</string>
+        </property>
+        <property name="sliderEnabled">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>Deceleration:</string>
+        </property>
+        <property name="buddy">
+         <cstring>kcfg_CoastingFriction</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="KDoubleNumInput" name="kcfg_CoastingFriction">
+        <property name="toolTip">
+         <string>Number of scrolls/second² to decrease the coasting speed</string>
+        </property>
+        <property name="singleStep">
+         <double>1.000000000000000</double>
+        </property>
+        <property name="suffix">
+         <string> scrolls/sec²</string>
+        </property>
+        <property name="sliderEnabled">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_11">
+        <property name="text">
+         <string>Corner coasting:</string>
+        </property>
+        <property name="buddy">
+         <cstring>kcfg_CornerCoasting</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QCheckBox" name="kcfg_CornerCoasting">
+        <property name="toolTip">
+         <string>Enable edge scrolling to continue while the finger stays in an edge corner</string>
         </property>
         <property name="text">
-         <string comment="Enable horizontal natural scrolling">Horizontal</string>
+         <string>Enable</string>
         </property>
        </widget>
       </item>
@@ -392,15 +389,15 @@ will scroll down and counter clockwise motion will scroll up</string>
  <tabstops>
   <tabstop>kcfg_VertEdgeScroll</tabstop>
   <tabstop>kcfg_HorizEdgeScroll</tabstop>
-  <tabstop>kcfg_CornerCoasting</tabstop>
-  <tabstop>kcfg_CoastingSpeed</tabstop>
-  <tabstop>kcfg_CoastingFriction</tabstop>
   <tabstop>kcfg_VertTwoFingerScroll</tabstop>
   <tabstop>kcfg_HorizTwoFingerScroll</tabstop>
-  <tabstop>kcfg_VertScrollDelta</tabstop>
-  <tabstop>kcfg_HorizScrollDelta</tabstop>
   <tabstop>kcfg_InvertVertScroll</tabstop>
   <tabstop>kcfg_InvertHorizScroll</tabstop>
+  <tabstop>kcfg_VertScrollDelta</tabstop>
+  <tabstop>kcfg_HorizScrollDelta</tabstop>
+  <tabstop>kcfg_CoastingSpeed</tabstop>
+  <tabstop>kcfg_CoastingFriction</tabstop>
+  <tabstop>kcfg_CornerCoasting</tabstop>
   <tabstop>kcfg_CircularScrolling</tabstop>
   <tabstop>kcfg_CircScrollTrigger</tabstop>
   <tabstop>kcfg_CircScrollDelta</tabstop>
