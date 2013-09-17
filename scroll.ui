@@ -251,7 +251,7 @@
    <item>
     <widget class="QGroupBox" name="groupBox_3">
      <property name="title">
-      <string>Natural Scrolling</string>
+      <string>Reverse Scrolling</string>
      </property>
      <property name="flat">
       <bool>true</bool>
@@ -286,7 +286,9 @@
    <item>
     <widget class="QGroupBox" name="kcfg_CircularScrolling">
      <property name="toolTip">
-      <string>If on, circular scrolling is used</string>
+      <string>Scrolling is engaged when a drag starts in the given trigger region.
+Moving your finger in clockwise circles around the center of the touchpad
+will scroll down and counter clockwise motion will scroll up</string>
      </property>
      <property name="title">
       <string>Circular Scrolling</string>
@@ -301,7 +303,7 @@
       <property name="fieldGrowthPolicy">
        <enum>QFormLayout::ExpandingFieldsGrow</enum>
       </property>
-      <item row="0" column="0">
+      <item row="1" column="0">
        <widget class="QLabel" name="label_5">
         <property name="text">
          <string>Trigger region:</string>
@@ -311,14 +313,14 @@
         </property>
        </widget>
       </item>
-      <item row="0" column="1">
+      <item row="1" column="1">
        <widget class="KComboBox" name="kcfg_CircScrollTrigger">
         <property name="toolTip">
          <string>Trigger region on the touchpad to start circular scrolling</string>
         </property>
        </widget>
       </item>
-      <item row="1" column="0">
+      <item row="2" column="0">
        <widget class="QLabel" name="label_6">
         <property name="text">
          <string>Angle:</string>
@@ -328,7 +330,7 @@
         </property>
        </widget>
       </item>
-      <item row="1" column="1">
+      <item row="2" column="1">
        <widget class="KDoubleNumInput" name="kcfg_CircScrollDelta">
         <property name="sizePolicy">
          <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
@@ -343,6 +345,16 @@
          <string>°</string>
         </property>
         <property name="sliderEnabled">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0" colspan="2">
+       <widget class="QLabel" name="label_7">
+        <property name="text">
+         <string>When used together with vertical scrolling, hitting the upper or lower right corner will seamlessly switch over from vertical to circular scrolling</string>
+        </property>
+        <property name="wordWrap">
          <bool>true</bool>
         </property>
        </widget>
