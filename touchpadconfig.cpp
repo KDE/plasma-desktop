@@ -70,9 +70,6 @@ static void disableChildren(QWidget *widget,
 
 void TouchpadConfig::showEvent(QShowEvent *ev)
 {
-    m_backend = TouchpadBackend::self();
-    disableChildren(this, m_backend->supportedParameters());
-
     if (!m_backend->getConfig(&m_config)) {
         m_errorMessage->setText(m_backend->errorString());
         m_errorMessage->animatedShow();
@@ -277,6 +274,9 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
     KConfigDialogManager::changedMap()->insert("CustomSlider",
                                                SIGNAL(valueChanged(double)));
     m_manager = addConfig(&m_config, this);
+
+    m_backend = TouchpadBackend::self();
+    disableChildren(this, m_backend->supportedParameters());
 }
 
 void TouchpadConfig::save()
