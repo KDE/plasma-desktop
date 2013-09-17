@@ -37,12 +37,13 @@ static KAboutData buildAboutData()
                     ki18n("This program incorporates work covered by this "
                           "copyright notice:\n"
                           "Copyright © 2002-2005,2007 Peter Osterlund"),
-                    QByteArray(),
+                    "https://github.com/sanya-m/kde-touchpad-config",
                     "mezin.alexander@gmail.com");
 
     data.addAuthor(ki18n("Alexander Mezin"),
                    ki18n("Developer"),
                    "mezin.alexander@gmail.com");
+    data.addCredit(ki18n("Thomas Pfeiffer"), ki18n("Testing"));
     data.addCredit(ki18n("Alex Fiestas"), ki18n("Helped a bit"));
     data.addCredit(ki18n("Peter Osterlund"), ki18n("Developer of synclient"));
 
