@@ -176,6 +176,25 @@ bool TouchpadConfig::compareConfigs(const TouchpadParameters &a,
     return true;
 }
 
+static void copyHelpFromBuddy(QObject *root)
+{
+    QLabel *asLabel = qobject_cast<QLabel*>(root);
+    if (asLabel && asLabel->buddy()) {
+        if (asLabel->toolTip().isEmpty()) {
+            asLabel->setToolTip(asLabel->buddy()->toolTip());
+        }
+        if (asLabel->statusTip().isEmpty()) {
+            asLabel->setStatusTip(asLabel->buddy()->statusTip());
+        }
+        if (asLabel->whatsThis().isEmpty()) {
+            asLabel->setWhatsThis(asLabel->buddy()->whatsThis());
+        }
+    }
+    Q_FOREACH(QObject *child, root->children()) {
+        copyHelpFromBuddy(child);
+    }
+}
+
 template<typename T>
 void addTab(KTabWidget *tabs, T &form)
 {
@@ -186,6 +205,7 @@ void addTab(KTabWidget *tabs, T &form)
 
     QWidget *widget = new QWidget(container);
     form.setupUi(widget);
+    copyHelpFromBuddy(widget);
     widget->layout()->setContentsMargins(20, 20, 20, 20);
 
     container->setWidget(widget);
