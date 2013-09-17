@@ -56,9 +56,7 @@ static void disableChildren(QWidget *widget,
                             const QStringList &except = QStringList())
 {
     QString name(getParameterName(widget));
-    if (!name.isEmpty() && !except.contains(name)) {
-        widget->setEnabled(false);
-    }
+    widget->setEnabled(name.isEmpty() || except.contains(name));
 
     Q_FOREACH(QObject *child, widget->children()) {
         QWidget *childWidget = qobject_cast<QWidget *>(child);
