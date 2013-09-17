@@ -193,6 +193,7 @@ XlibBackend::XlibBackend(QObject *parent) :
     m_negate["HorizScrollDelta"] = "InvertHorizScroll";
     m_negate["VertScrollDelta"] = "InvertVertScroll";
     m_supported.append(m_negate.values());
+    m_supported.append("Coasting");
 
     PropertyInfo caps(m_display, m_device, m_capsAtom.atom(), 0);
     if (!caps.b) {
@@ -325,8 +326,11 @@ bool XlibBackend::applyConfig(const TouchpadParameters *p)
     bool error = false;
     Q_FOREACH(const QString &name, m_supported) {
         KConfigSkeletonItem *i = p->findItem(name);
+        if (!i) {
+            continue;
+        }
         const Parameter *par = findParameter(name);
-        if (i && par) {
+        if (par) {
             QVariant value(i->property());
 
             double k = getPropertyScale(name);
@@ -343,6 +347,13 @@ bool XlibBackend::applyConfig(const TouchpadParameters *p)
                 KConfigSkeletonItem *i = p->findItem(m_negate[name]);
                 if (i && i->property().toBool()) {
                     value = negateVariant(value);
+                }
+            }
+
+            if (name == "CoastingSpeed") {
+                KConfigSkeletonItem *coastingEnabled = p->findItem("Coasting");
+                if (coastingEnabled && !coastingEnabled->property().toBool()) {
+                    value = QVariant(0);
                 }
             }
 
@@ -406,6 +417,16 @@ bool XlibBackend::getConfig(TouchpadParameters *p)
                 i->setProperty(negative);
                 if (negative) {
                     value = negateVariant(value);
+                }
+            }
+        }
+
+        if (name == "CoastingSpeed") {
+            KConfigSkeletonItem *coastingEnabled = p->findItem("Coasting");
+            if (coastingEnabled) {
+                coastingEnabled->setProperty(QVariant(value.toDouble() != 0.0));
+                if (!coastingEnabled->property().toBool()) {
+                    continue;
                 }
             }
         }

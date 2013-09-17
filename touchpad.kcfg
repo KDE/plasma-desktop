@@ -107,7 +107,7 @@
             <default>false</default>
         </entry>
         <entry name="CoastingSpeed" type="Double">
-            <min>0</min>
+            <min>0.1</min>
             <max>255</max>
             <default>20</default>
         </entry>
@@ -115,6 +115,9 @@
             <min>0</min>
             <max>255</max>
             <default>50</default>
+        </entry>
+        <entry name="Coasting" type="Bool">
+            <default>true</default>
         </entry>
         <entry name="FingerHigh" type="Int">
             <min>0</min>

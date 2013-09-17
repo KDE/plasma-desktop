@@ -194,11 +194,17 @@
     </widget>
    </item>
    <item>
-    <widget class="QGroupBox" name="groupBox_5">
+    <widget class="QGroupBox" name="kcfg_Coasting">
+     <property name="toolTip">
+      <string>Continue scrolling after the finger is released from the edge of the touchpad</string>
+     </property>
      <property name="title">
       <string>Coasting</string>
      </property>
      <property name="flat">
+      <bool>true</bool>
+     </property>
+     <property name="checkable">
       <bool>true</bool>
      </property>
      <layout class="QFormLayout" name="formLayout_5">
@@ -395,6 +401,7 @@ will scroll down and counter clockwise motion will scroll up</string>
   <tabstop>kcfg_InvertHorizScroll</tabstop>
   <tabstop>kcfg_VertScrollDelta</tabstop>
   <tabstop>kcfg_HorizScrollDelta</tabstop>
+  <tabstop>kcfg_Coasting</tabstop>
   <tabstop>kcfg_CoastingSpeed</tabstop>
   <tabstop>kcfg_CoastingFriction</tabstop>
   <tabstop>kcfg_CornerCoasting</tabstop>
