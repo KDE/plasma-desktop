@@ -38,6 +38,7 @@ ${XCB_DEFINITIONS}
 set(SRCS
 touchpadconfig.cpp
 testarea.cpp
+testbutton.cpp
 customslider.cpp
 sliderpair.cpp
 plugins.cpp

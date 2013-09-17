@@ -33,7 +33,7 @@
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_2">
       <item>
-       <widget class="QPushButton" name="pushButton">
+       <widget class="TestButton" name="pushButton">
         <property name="focusPolicy">
          <enum>Qt::NoFocus</enum>
         </property>
@@ -96,6 +96,13 @@
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>TestButton</class>
+   <extends>QPushButton</extends>
+   <header>testbutton.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>
