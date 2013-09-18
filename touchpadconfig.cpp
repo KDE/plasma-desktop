@@ -22,6 +22,7 @@
 
 #include <QScrollArea>
 #include <QTimer>
+#include <QDBusInterface>
 
 #include <KAboutData>
 #include <KLocalizedString>
@@ -53,17 +54,18 @@ static QString getWidgetName(KConfigSkeletonItem *i)
 }
 
 static void disableChildren(QWidget *widget,
-                            const QStringList &except = QStringList())
+                            const TouchpadParameters &p,
+                            const QStringList &except)
 {
     QString name(getParameterName(widget));
-    if (!name.isEmpty() && !except.contains(name)) {
+    if (!name.isEmpty() && p.findItem(name) && !except.contains(name)) {
         widget->setEnabled(false);
     }
 
     Q_FOREACH(QObject *child, widget->children()) {
         QWidget *childWidget = qobject_cast<QWidget *>(child);
         if (childWidget) {
-            disableChildren(childWidget, except);
+            disableChildren(childWidget, p, except);
         }
     }
 }
@@ -209,17 +211,6 @@ void addTab(KTabWidget *tabs, T &form)
     tabs->addTab(container, widget->windowTitle());
 }
 
-static void checkUi(QObject *w, TouchpadParameters &config)
-{
-    Q_FOREACH(QObject *child, w->children()) {
-        QString param(getParameterName(child));
-        if (!param.isEmpty()) {
-            Q_ASSERT(config.findItem(param));
-        }
-        checkUi(child, config);
-    }
-}
-
 TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
     : KCModule(TouchpadPluginFactory::componentData(), parent, args),
       m_configOutOfSync(false)
@@ -247,8 +238,6 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
     addTab(tabs, m_pointerMotion);
     addTab(tabs, m_sensitivity);
 
-    checkUi(tabs, m_config);
-
     layout->addWidget(tabs, 2, 0, 1, 1);
 
     m_testArea = new TestArea(this);
@@ -274,9 +263,10 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
     KConfigDialogManager::changedMap()->insert("CustomSlider",
                                                SIGNAL(valueChanged(double)));
     m_manager = addConfig(&m_config, this);
+    addConfig(&m_daemonSettings, this);
 
     m_backend = TouchpadBackend::self();
-    disableChildren(this, m_backend->supportedParameters());
+    disableChildren(this, m_config, m_backend->supportedParameters());
 }
 
 void TouchpadConfig::save()
@@ -291,6 +281,11 @@ void TouchpadConfig::save()
         m_errorMessage->setText(m_backend->errorString());
         m_errorMessage->animatedShow();
     }
+
+    static const QString kded("org.kde.kded");
+    static const QString modulePath("/modules/touchpad");
+    QDBusInterface daemonInterface(kded, modulePath);
+    daemonInterface.call(QDBus::NoBlock, "reloadSettings");
 }
 
 void TouchpadConfig::load()

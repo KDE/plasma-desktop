@@ -22,10 +22,12 @@
 #include <QMap>
 #include <QSet>
 #include <QSharedPointer>
+#include <QScopedPointer>
 #include <QLatin1String>
 #include <QStringList>
 
 #include "touchpadbackend.h"
+#include "xlibnotifications.h"
 
 #include <X11/Xlib.h>
 #include <xcb/xcb.h>
@@ -45,16 +47,29 @@ public:
     const QStringList &supportedParameters() const { return m_supported; }
     const QString &errorString() const { return m_errorString; }
 
+    void setTouchpadState(TouchpadState);
+    TouchpadState getTouchpadState();
+
+    void watchForEvents();
+
+    bool isMousePluggedIn();
+
+private slots:
+    void propertyChanged(Atom);
+    void deviceChanged(int);
+
 private:
     struct PropertyInfo *getDevProperty(const QLatin1String &propName);
     bool setParameter(const struct Parameter *, const QVariant &);
     QVariant getParameter(const struct Parameter *);
+    void flush();
     double getPropertyScale(const QString &name) const;
 
     Display *m_display;
     xcb_connection_t *m_connection;
 
-    XcbAtom m_floatType, m_capsAtom;
+    XcbAtom m_floatType, m_capsAtom, m_enabledAtom, m_touchpadOffAtom,
+    m_mouseAtom;
 
     int findTouchpad();
     int m_device;
@@ -67,6 +82,7 @@ private:
     int m_resX, m_resY;
     QStringList m_scaleByResX, m_scaleByResY, m_toRadians;
     QMap<QString, QString> m_negate;
+    QScopedPointer<XlibNotifications> m_notifications;
 };
 
 #endif // XLIBBACKEND_H

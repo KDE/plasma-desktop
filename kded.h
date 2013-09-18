@@ -16,45 +16,45 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-#ifndef TOUCHPADBACKEND_H
-#define TOUCHPADBACKEND_H
+#ifndef KDED_H
+#define KDED_H
 
-#include <QObject>
+#include <QVariantList>
+#include <QTimer>
+#include <QtDBus>
 
-#include <kdemacros.h>
+#include <KDEDModule>
 
-class TouchpadParameters;
+#include "touchpadbackend.h"
+#include "kdedsettings.h"
 
-class KDE_EXPORT TouchpadBackend : public QObject
+class TouchpadDisabler : public KDEDModule
 {
     Q_OBJECT
+    Q_CLASSINFO("D-Bus Interface", "org.kde.touchpad")
+
 public:
-    explicit TouchpadBackend(QObject *parent);
+    TouchpadDisabler(QObject *, const QVariantList &);
 
-    static TouchpadBackend *self();
+public Q_SLOTS:
+    Q_SCRIPTABLE Q_NOREPLY void reloadSettings();
 
-    virtual bool applyConfig(const TouchpadParameters *) = 0;
-    virtual bool getConfig(TouchpadParameters *) = 0;
-    virtual const QStringList &supportedParameters() const = 0;
-    virtual const QString &errorString() const = 0;
-
-    enum TouchpadState {
-        TouchpadEnabled, TouchpadFullyDisabled, TouchpadTapAndScrollDisabled
-    };
-    virtual void setTouchpadState(TouchpadState) = 0;
-    virtual TouchpadState getTouchpadState() = 0;
-
-    virtual bool isMousePluggedIn() = 0;
-
-    virtual void watchForEvents() = 0;
-
-Q_SIGNALS:
-    void touchpadStateChanged();
-
-    void mousesChanged();
-
+private Q_SLOTS:
     void keyboardActivityStarted();
     void keyboardActivityFinished();
+    void timerElapsed();
+    void mousePlugged();
+
+private:
+    void updateState();
+
+    TouchpadBackend *m_backend;
+    TouchpadDisablerSettings m_settings;
+    QTimer m_enableTimer;
+
+    TouchpadBackend::TouchpadState m_oldState,
+    m_keyboardDisableState, m_mouseDisableState;
+    bool m_keyboardActivity, m_mouse, m_disabledByMe;
 };
 
-#endif // TOUCHPADBACKEND_H
+#endif // KDED_H

@@ -25,6 +25,7 @@
 
 #include "touchpadparameters.h"
 #include "testarea.h"
+#include "kdedsettings.h"
 
 #include "ui_pointermotion.h"
 #include "ui_tap.h"
@@ -61,10 +62,11 @@ private:
 
     TouchpadBackend *m_backend;
     TouchpadParameters m_config;
+
     QScopedPointer<TouchpadParameters> m_prevConfig;
     KConfigDialogManager *m_manager;
     bool m_configOutOfSync;
-
+    TouchpadDisablerSettings m_daemonSettings;
     KMessageWidget *m_errorMessage, *m_differentConfigsMessage;
     TestArea *m_testArea;
 

@@ -32,9 +32,11 @@
 
 #include <X11/Xlib-xcb.h>
 #include <X11/Xatom.h>
+#include <X11/extensions/XInput.h>
 #include <X11/extensions/XInput2.h>
 
 #include <synaptics-properties.h>
+#include <xserver-properties.h>
 
 #include "synclientproperties.h"
 
@@ -63,13 +65,18 @@ struct PropertyInfo
     int *i;
     char *b;
 
+    Display *display;
+    int device;
+    Atom prop;
+
     PropertyInfo() :
         type(0), format(0), nitems(0), f(0), i(0), b(0)
     {
     }
 
     PropertyInfo(Display *display, int device, Atom prop, Atom floatType)
-        : type(0), format(0), nitems(0), f(0), i(0), b(0)
+        : type(0), format(0), nitems(0), f(0), i(0), b(0),
+          display(display), device(device), prop(prop)
     {
         unsigned char *dataPtr = 0;
         unsigned long bytes_after;
@@ -112,6 +119,12 @@ struct PropertyInfo
 
         return v;
     }
+
+    void set()
+    {
+        XIChangeProperty(display, device, prop, type, format,
+                         XIPropModeReplace, data.data(), nitems);
+    }
 };
 
 XlibBackend::~XlibBackend()
@@ -133,6 +146,9 @@ XlibBackend::XlibBackend(QObject *parent) :
 
     m_floatType.intern(m_connection, "FLOAT");
     m_capsAtom.intern(m_connection, SYNAPTICS_PROP_CAPABILITIES);
+    m_enabledAtom.intern(m_connection, XI_PROP_ENABLED);
+    m_touchpadOffAtom.intern(m_connection, SYNAPTICS_PROP_OFF);
+    m_mouseAtom.intern(m_connection, XI_MOUSE);
     XcbAtom resolutionAtom(m_connection, SYNAPTICS_PROP_RESOLUTION);
 
     for (const Parameter *param = synapticsProperties; param->name; param++) {
@@ -363,20 +379,22 @@ bool XlibBackend::applyConfig(const TouchpadParameters *p)
         }
     }
 
-    Q_FOREACH(const QLatin1String &name, m_changed) {
-        PropertyInfo &info = m_props[name];
-        XIChangeProperty(m_display, m_device,
-                         m_atoms[name]->atom(), info.type, info.format,
-                         XIPropModeReplace, info.data.data(), info.nitems);
-    }
-    m_changed.clear();
-
-    XFlush(m_display);
+    flush();
 
     if (error) {
         m_errorString = i18n("Can not set touchpad configuration");
     }
     return !error;
+}
+
+void XlibBackend::flush()
+{
+    Q_FOREACH(const QLatin1String &name, m_changed) {
+        m_props[name].set();
+    }
+    m_changed.clear();
+
+    XFlush(m_display);
 }
 
 bool XlibBackend::getConfig(TouchpadParameters *p)
@@ -509,6 +527,92 @@ bool XlibBackend::setParameter(const Parameter *par, const QVariant &value)
 
     m_changed.insert(propName);
     return true;
+}
+
+void XlibBackend::setTouchpadState(TouchpadBackend::TouchpadState state)
+{
+    PropertyInfo enabled(m_display, m_device, m_enabledAtom.atom(), 0);
+    if (enabled.b && *(enabled.b) != (state != TouchpadFullyDisabled)) {
+        *(enabled.b) = (state != TouchpadFullyDisabled);
+        enabled.set();
+    }
+
+    PropertyInfo off(m_display, m_device, m_touchpadOffAtom.atom(), 0);
+    if (off.i && *(off.i) != state) {
+        *(off.i) = static_cast<int>(state);
+        off.set();
+    }
+
+    flush();
+}
+
+TouchpadBackend::TouchpadState XlibBackend::getTouchpadState()
+{
+    PropertyInfo enabled(m_display, m_device, m_enabledAtom.atom(), 0);
+    if (enabled.value(0) == false) {
+        return TouchpadFullyDisabled;
+    }
+
+    PropertyInfo off(m_display, m_device, m_touchpadOffAtom.atom(), 0);
+    return static_cast<TouchpadBackend::TouchpadState>(off.value(0).toInt());
+}
+
+void XlibBackend::deviceChanged(int device)
+{
+    if (device != m_device) {
+        Q_EMIT mousesChanged();
+    }
+}
+
+void XlibBackend::propertyChanged(Atom prop)
+{
+    if (prop == m_touchpadOffAtom.atom()) {
+        Q_EMIT touchpadStateChanged();
+    }
+}
+
+struct DeviceListDeleter
+{
+    static void cleanup(XDeviceInfo *p)
+    {
+        if (p) {
+            XFreeDeviceList(p);
+        }
+    }
+};
+
+bool XlibBackend::isMousePluggedIn()
+{
+    int nDevices = 0;
+    QScopedPointer<XDeviceInfo, DeviceListDeleter>
+            info(XListInputDevices(m_display, &nDevices));
+    for (XDeviceInfo *i = info.data(); i != info.data() + nDevices; i++) {
+        if (i->id != static_cast<XID>(m_device) &&
+                i->type == m_mouseAtom.atom())
+        {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+void XlibBackend::watchForEvents()
+{
+    if (m_notifications) {
+        return;
+    }
+
+    m_notifications.reset(
+                new XlibNotifications(m_display, m_connection, m_device));
+    connect(m_notifications.data(), SIGNAL(deviceChanged(int)),
+            SLOT(deviceChanged(int)));
+    connect(m_notifications.data(), SIGNAL(propertyChanged(Atom)),
+            SLOT(propertyChanged(Atom)));
+    connect(m_notifications.data(), SIGNAL(keyboardActivityStarted()),
+            SIGNAL(keyboardActivityStarted()));
+    connect(m_notifications.data(), SIGNAL(keyboardActivityFinished()),
+            SIGNAL(keyboardActivityFinished()));
 }
 
 #include "moc_xlibbackend.cpp"

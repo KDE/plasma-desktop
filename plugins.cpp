@@ -23,6 +23,7 @@
 
 #include "touchpadconfig.h"
 #include "touchpadbackend.h"
+#include "kded.h"
 #include "version.h"
 
 static KAboutData buildAboutData()
@@ -51,7 +52,8 @@ static KAboutData buildAboutData()
 }
 
 K_PLUGIN_FACTORY_DEFINITION(TouchpadPluginFactory,
-                            registerPlugin<TouchpadConfig>();)
+                            registerPlugin<TouchpadDisabler>();
+                            registerPlugin<TouchpadConfig>("kcm");)
 K_EXPORT_PLUGIN(TouchpadPluginFactory(buildAboutData()))
 
 extern "C"
