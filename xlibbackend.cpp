@@ -71,7 +71,7 @@ struct PropertyInfo
 
     PropertyInfo() :
         type(0), format(0), nitems(0), f(0), i(0), b(0),
-        display(0), device(0), atom(0)
+        display(0), device(0), prop(0)
     {
     }
 
