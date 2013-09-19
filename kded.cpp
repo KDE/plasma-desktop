@@ -48,18 +48,25 @@ TouchpadDisabler::TouchpadDisabler(QObject *parent, const QVariantList &)
 
     m_mouse = m_backend->isMousePluggedIn();
 
-    connect(m_backend, SIGNAL(keyboardActivityStarted()),
-            SLOT(keyboardActivityStarted()));
-    connect(m_backend, SIGNAL(keyboardActivityFinished()),
-            SLOT(keyboardActivityFinished()));
     connect(m_backend, SIGNAL(mousesChanged()), SLOT(mousePlugged()));
+    connect(m_backend, SIGNAL(keyboardActivity()),
+            SLOT(keyboardActivity()));
+    connect(m_backend, SIGNAL(touchpadStateChanged()),
+            SLOT(updateCurrentState()));
 
     m_enableTimer.setSingleShot(true);
     connect(&m_enableTimer, SIGNAL(timeout()), SLOT(timerElapsed()));
 
+    updateCurrentState();
     reloadSettings();
 
     m_backend->watchForEvents();
+    updateCurrentState();
+}
+
+void TouchpadDisabler::updateCurrentState()
+{
+    m_currentState = m_backend->getTouchpadState();
 }
 
 void TouchpadDisabler::reloadSettings()
@@ -75,19 +82,12 @@ void TouchpadDisabler::reloadSettings()
     updateState();
 }
 
-void TouchpadDisabler::keyboardActivityStarted()
+void TouchpadDisabler::keyboardActivity()
 {
     m_enableTimer.stop();
+    m_enableTimer.start();
     m_keyboardActivity = true;
     updateState();
-}
-
-void TouchpadDisabler::keyboardActivityFinished()
-{
-    if (!m_keyboardActivity) {
-        keyboardActivityStarted();
-    }
-    m_enableTimer.start();
 }
 
 void TouchpadDisabler::timerElapsed()
@@ -110,24 +110,24 @@ void TouchpadDisabler::updateState()
                 m_keyboardActivity ? m_keyboardDisableState :
                                      TouchpadBackend::TouchpadEnabled);
 
-    TouchpadBackend::TouchpadState current = m_backend->getTouchpadState();
-    if (newState == current) {
+    if (newState == m_currentState) {
         if (newState == TouchpadBackend::TouchpadEnabled) {
             m_disabledByMe = false;
         }
         return;
     }
     if (!m_disabledByMe) {
-        if (!deeper(newState, current)) {
+        if (!deeper(newState, m_currentState)) {
             return;
         }
     }
 
     m_disabledByMe = (newState != TouchpadBackend::TouchpadEnabled);
     if (m_disabledByMe) {
-        m_oldState = current;
+        m_oldState = m_currentState;
     } else {
         newState = m_oldState;
     }
     m_backend->setTouchpadState(newState);
+    m_currentState = newState;
 }

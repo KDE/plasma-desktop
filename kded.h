@@ -40,10 +40,10 @@ public Q_SLOTS:
     Q_SCRIPTABLE Q_NOREPLY void reloadSettings();
 
 private Q_SLOTS:
-    void keyboardActivityStarted();
-    void keyboardActivityFinished();
+    void keyboardActivity();
     void timerElapsed();
     void mousePlugged();
+    void updateCurrentState();
 
 private:
     void updateState();
@@ -52,7 +52,7 @@ private:
     TouchpadDisablerSettings m_settings;
     QTimer m_enableTimer;
 
-    TouchpadBackend::TouchpadState m_oldState,
+    TouchpadBackend::TouchpadState m_oldState, m_currentState,
     m_keyboardDisableState, m_mouseDisableState;
     bool m_keyboardActivity, m_mouse, m_disabledByMe;
 };

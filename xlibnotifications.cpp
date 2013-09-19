@@ -18,6 +18,8 @@
 
 #include <cstdlib>
 #include <cstring>
+#include <limits>
+#include <cstdio>
 
 #include <QScopedPointer>
 
@@ -33,7 +35,8 @@
 XlibNotifications::XlibNotifications(Display *display,
                                      xcb_connection_t *connection,
                                      int device)
-    : m_connection(connection), m_device(device), m_recordConnection(0)
+    : m_connection(connection), m_device(device), m_recordConnection(0),
+      m_modifiersPressed(0)
 {
     xcb_query_extension_cookie_t inputExtCookie =
             xcb_query_extension(m_connection, std::strlen(INAME), INAME);
@@ -91,14 +94,6 @@ XlibNotifications::XlibNotifications(Display *display,
                               &range);
     xcb_flush(m_recordConnection);
 
-    m_recordCookie =
-            xcb_record_enable_context(m_recordConnection, m_recordContext);
-
-    int fd = xcb_get_file_descriptor(m_recordConnection);
-    m_recordNotifier = new QSocketNotifier(fd, QSocketNotifier::Read, this);
-    connect(m_recordNotifier, SIGNAL(activated(int)), SLOT(recordEvent()));
-
-    xcb_flush(m_recordConnection);
 
     QScopedPointer<xcb_get_modifier_mapping_reply_t> modmap
             (xcb_get_modifier_mapping_reply(m_recordConnection, modCookie, 0));
@@ -108,9 +103,20 @@ XlibNotifications::XlibNotifications(Display *display,
 
     int nModifiers = xcb_get_modifier_mapping_keycodes_length(modmap.data());
     xcb_keycode_t *modifiers = xcb_get_modifier_mapping_keycodes(modmap.data());
+    m_modifier.fill(false, std::numeric_limits<xcb_keycode_t>::max() + 1);
     for (xcb_keycode_t *i = modifiers; i < modifiers + nModifiers; i++) {
-        m_modifiers.insert(*i);
+        m_modifier[*i] = true;
     }
+    m_pressed.fill(false, std::numeric_limits<xcb_keycode_t>::max() + 1);
+
+    m_recordCookie =
+            xcb_record_enable_context(m_recordConnection, m_recordContext);
+
+    int fd = xcb_get_file_descriptor(m_recordConnection);
+    m_recordNotifier = new QSocketNotifier(fd, QSocketNotifier::Read, this);
+    connect(m_recordNotifier, SIGNAL(activated(int)), SLOT(recordEvent()));
+
+    xcb_flush(m_recordConnection);
 }
 
 bool XlibNotifications::x11Event(XEvent *event)
@@ -156,12 +162,11 @@ void XlibNotifications::recordEvent()
         return;
     }
 
-    bool keyboardActivityPrev = keyboardActivity();
-
     xcb_key_press_event_t *events = reinterpret_cast<xcb_key_press_event_t*>
             (xcb_record_enable_context_data(reply));
     int nEvents = xcb_record_enable_context_data_length(reply) /
             sizeof(xcb_key_press_event_t);
+    int nKeys = 0;
     for (xcb_key_press_event_t *e = events; e < events + nEvents; e++) {
         if (e->response_type != XCB_KEY_PRESS &&
                 e->response_type != XCB_KEY_RELEASE)
@@ -169,32 +174,31 @@ void XlibNotifications::recordEvent()
             continue;
         }
 
-        QSet<xcb_keycode_t> &targetSet(m_modifiers.contains(e->detail) ?
-                                           m_modifiersPressed : m_keysPressed);
-        if (e->response_type == XCB_KEY_PRESS) {
-            targetSet.insert(e->detail);
-        } else {
-            targetSet.remove(e->detail);
+        bool pressed = (e->response_type == XCB_KEY_PRESS);
+        if (m_pressed[e->detail] == pressed) {
+            continue;
         }
-    }
+        m_pressed[e->detail] = pressed;
 
-    bool keyboardActivityCur = keyboardActivity();
-
-    if (!keyboardActivityPrev || !keyboardActivityCur) {
-        if (keyboardActivityCur) {
-            Q_EMIT keyboardActivityStarted();
-        } else {
-            Q_EMIT keyboardActivityFinished();
+        if (m_modifier[e->detail]) {
+            if (pressed) {
+                m_modifiersPressed++;
+            } else {
+                m_modifiersPressed--;
+            }
+        } else if (pressed) {
+            nKeys++;
         }
     }
 
     std::free(reply);
-    m_recordNotifier->setEnabled(true);
-}
 
-bool XlibNotifications::keyboardActivity() const
-{
-    return !m_keysPressed.isEmpty() && m_modifiers.isEmpty();
+    std::fprintf(stderr, "Keys %d Modifiers %d\n", nKeys, m_modifiersPressed);
+    if (nKeys && !m_modifiersPressed) {
+        Q_EMIT keyboardActivity();
+    }
+
+    m_recordNotifier->setEnabled(true);
 }
 
 XlibNotifications::~XlibNotifications()

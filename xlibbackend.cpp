@@ -609,10 +609,8 @@ void XlibBackend::watchForEvents()
             SLOT(deviceChanged(int)));
     connect(m_notifications.data(), SIGNAL(propertyChanged(Atom)),
             SLOT(propertyChanged(Atom)));
-    connect(m_notifications.data(), SIGNAL(keyboardActivityStarted()),
-            SIGNAL(keyboardActivityStarted()));
-    connect(m_notifications.data(), SIGNAL(keyboardActivityFinished()),
-            SIGNAL(keyboardActivityFinished()));
+    connect(m_notifications.data(), SIGNAL(keyboardActivity()),
+            SIGNAL(keyboardActivity()));
 }
 
 #include "moc_xlibbackend.cpp"

@@ -50,11 +50,8 @@ public:
 
 Q_SIGNALS:
     void touchpadStateChanged();
-
     void mousesChanged();
-
-    void keyboardActivityStarted();
-    void keyboardActivityFinished();
+    void keyboardActivity();
 };
 
 #endif // TOUCHPADBACKEND_H

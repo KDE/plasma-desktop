@@ -21,7 +21,7 @@
 
 #include <QWidget>
 #include <QSocketNotifier>
-#include <QSet>
+#include <QVector>
 
 #include <xcb/xcb.h>
 #include <xcb/record.h>
@@ -40,16 +40,12 @@ public:
 Q_SIGNALS:
     void propertyChanged(Atom);
     void deviceChanged(int);
-
-    void keyboardActivityStarted();
-    void keyboardActivityFinished();
+    void keyboardActivity();
 
 private Q_SLOTS:
     void recordEvent();
 
 private:
-    bool keyboardActivity() const;
-
     xcb_connection_t *m_connection;
     xcb_window_t m_inputWindow;
     int m_device;
@@ -60,7 +56,8 @@ private:
     xcb_record_context_t m_recordContext;
     xcb_record_enable_context_cookie_t m_recordCookie;
 
-    QSet<xcb_keycode_t> m_modifiers, m_keysPressed, m_modifiersPressed;
+    QVector<bool> m_modifier, m_pressed;
+    int m_modifiersPressed;
 };
 
 #endif // XLIBNOTIFICATIONS_H
