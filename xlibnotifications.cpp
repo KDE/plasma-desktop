@@ -19,7 +19,6 @@
 #include <cstdlib>
 #include <cstring>
 #include <limits>
-#include <cstdio>
 
 #include <QScopedPointer>
 
@@ -175,12 +174,13 @@ void XlibNotifications::recordEvent()
         }
 
         bool pressed = (e->response_type == XCB_KEY_PRESS);
-        if (m_pressed[e->detail] == pressed) {
-            continue;
-        }
-        m_pressed[e->detail] = pressed;
 
         if (m_modifier[e->detail]) {
+            if (m_pressed[e->detail] == pressed) {
+                continue;
+            }
+            m_pressed[e->detail] = pressed;
+
             if (pressed) {
                 m_modifiersPressed++;
             } else {
@@ -193,7 +193,6 @@ void XlibNotifications::recordEvent()
 
     std::free(reply);
 
-    std::fprintf(stderr, "Keys %d Modifiers %d\n", nKeys, m_modifiersPressed);
     if (nKeys && !m_modifiersPressed) {
         Q_EMIT keyboardActivity();
     }
