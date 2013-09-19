@@ -538,8 +538,8 @@ void XlibBackend::setTouchpadState(TouchpadBackend::TouchpadState state)
     }
 
     PropertyInfo off(m_display, m_device, m_touchpadOffAtom.atom(), 0);
-    if (off.i && *(off.i) != state) {
-        *(off.i) = static_cast<int>(state);
+    if (off.b && *(off.b) != state) {
+        *(off.b) = static_cast<int>(state);
         off.set();
     }
 
