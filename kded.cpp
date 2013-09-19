@@ -49,8 +49,10 @@ TouchpadDisabler::TouchpadDisabler(QObject *parent, const QVariantList &)
     m_mouse = m_backend->isMousePluggedIn();
 
     connect(m_backend, SIGNAL(mousesChanged()), SLOT(mousePlugged()));
-    connect(m_backend, SIGNAL(keyboardActivity()),
-            SLOT(keyboardActivity()));
+    connect(m_backend, SIGNAL(keyboardActivityStarted()),
+            SLOT(keyboardActivityStarted()));
+    connect(m_backend, SIGNAL(keyboardActivityFinished()),
+            SLOT(keyboardActivityFinished()));
     connect(m_backend, SIGNAL(touchpadStateChanged()),
             SLOT(updateCurrentState()));
 
@@ -59,9 +61,6 @@ TouchpadDisabler::TouchpadDisabler(QObject *parent, const QVariantList &)
 
     updateCurrentState();
     reloadSettings();
-
-    m_backend->watchForEvents();
-    updateCurrentState();
 }
 
 void TouchpadDisabler::updateCurrentState()
@@ -80,18 +79,40 @@ void TouchpadDisabler::reloadSettings()
                                       m_settings.onlyDisableTapAndScrollOnKeyboardActivity());
 
     updateState();
+
+    m_backend->watchForEvents(m_settings.disableOnKeyboardActivity());
+    updateCurrentState();
+
+    if (!m_settings.disableOnKeyboardActivity()) {
+        keyboardActivityFinished();
+    }
 }
 
-void TouchpadDisabler::keyboardActivity()
+void TouchpadDisabler::keyboardActivityStarted()
 {
+    if (m_keyboardActivity) {
+        return;
+    }
+
     m_enableTimer.stop();
-    m_enableTimer.start();
     m_keyboardActivity = true;
     updateState();
 }
 
+void TouchpadDisabler::keyboardActivityFinished()
+{
+    if (!m_keyboardActivity) {
+        keyboardActivityStarted();
+    }
+    m_enableTimer.start();
+}
+
 void TouchpadDisabler::timerElapsed()
 {
+    if (!m_keyboardActivity) {
+        return;
+    }
+
     m_keyboardActivity = false;
     updateState();
 }

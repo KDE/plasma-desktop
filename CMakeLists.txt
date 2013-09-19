@@ -54,6 +54,7 @@ touchpadbackend.cpp
 xlibbackend.cpp
 xcbatom.cpp
 xlibnotifications.cpp
+xrecordkeyboardmonitor.cpp
 synclientproperties.c
 
 ${CMAKE_CURRENT_BINARY_DIR}/org.kde.touchpad.xml

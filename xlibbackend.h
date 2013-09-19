@@ -27,6 +27,7 @@
 #include <QStringList>
 
 #include "touchpadbackend.h"
+#include "xrecordkeyboardmonitor.h"
 #include "xlibnotifications.h"
 
 #include <X11/Xlib.h>
@@ -50,7 +51,7 @@ public:
     void setTouchpadState(TouchpadState);
     TouchpadState getTouchpadState();
 
-    void watchForEvents();
+    void watchForEvents(bool keyboard);
 
     bool isMousePluggedIn();
 
@@ -83,6 +84,7 @@ private:
     QStringList m_scaleByResX, m_scaleByResY, m_toRadians;
     QMap<QString, QString> m_negate;
     QScopedPointer<XlibNotifications> m_notifications;
+    QScopedPointer<XRecordKeyboardMonitor> m_keyboard;
 };
 
 #endif // XLIBBACKEND_H

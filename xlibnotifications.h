@@ -20,11 +20,8 @@
 #define XLIBNOTIFICATIONS_H
 
 #include <QWidget>
-#include <QSocketNotifier>
-#include <QVector>
 
 #include <xcb/xcb.h>
-#include <xcb/record.h>
 #include <X11/X.h>
 
 class XlibNotifications : public QWidget
@@ -40,24 +37,12 @@ public:
 Q_SIGNALS:
     void propertyChanged(Atom);
     void deviceChanged(int);
-    void keyboardActivity();
-
-private Q_SLOTS:
-    void recordEvent();
 
 private:
     xcb_connection_t *m_connection;
     xcb_window_t m_inputWindow;
     int m_device;
     uint8_t m_inputOpcode;
-
-    xcb_connection_t *m_recordConnection;
-    QSocketNotifier *m_recordNotifier;
-    xcb_record_context_t m_recordContext;
-    xcb_record_enable_context_cookie_t m_recordCookie;
-
-    QVector<bool> m_modifier, m_pressed;
-    int m_modifiersPressed;
 };
 
 #endif // XLIBNOTIFICATIONS_H

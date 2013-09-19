@@ -16,46 +16,41 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-#ifndef KDED_H
-#define KDED_H
+#ifndef XRECORDKEYBOARDMONITOR_H
+#define XRECORDKEYBOARDMONITOR_H
 
-#include <QVariantList>
-#include <QTimer>
-#include <QtDBus>
+#include <QVector>
+#include <QSocketNotifier>
 
-#include <KDEDModule>
+#include <xcb/xcb.h>
+#include <xcb/record.h>
 
-#include "touchpadbackend.h"
-#include "kdedsettings.h"
-
-class TouchpadDisabler : public KDEDModule
+class XRecordKeyboardMonitor : public QObject
 {
     Q_OBJECT
-    Q_CLASSINFO("D-Bus Interface", "org.kde.touchpad")
 
 public:
-    TouchpadDisabler(QObject *, const QVariantList &);
+    XRecordKeyboardMonitor();
+    ~XRecordKeyboardMonitor();
 
-public Q_SLOTS:
-    Q_SCRIPTABLE Q_NOREPLY void reloadSettings();
-
-private Q_SLOTS:
+Q_SIGNALS:
     void keyboardActivityStarted();
     void keyboardActivityFinished();
-    void timerElapsed();
-    void mousePlugged();
-    void updateCurrentState();
+
+private Q_SLOTS:
+    void processNextReply();
 
 private:
-    void updateState();
+    void process(xcb_record_enable_context_reply_t *reply);
+    bool activity() const { return m_keysPressed && !m_modifiersPressed; }
 
-    TouchpadBackend *m_backend;
-    TouchpadDisablerSettings m_settings;
-    QTimer m_enableTimer;
+    QSocketNotifier *m_notifier;
+    xcb_connection_t *m_connection;
+    xcb_record_context_t m_context;
+    xcb_record_enable_context_cookie_t m_cookie;
 
-    TouchpadBackend::TouchpadState m_oldState, m_currentState,
-    m_keyboardDisableState, m_mouseDisableState;
-    bool m_keyboardActivity, m_mouse, m_disabledByMe;
+    QVector<bool> m_modifier, m_pressed;
+    int m_modifiersPressed, m_keysPressed;
 };
 
-#endif // KDED_H
+#endif // XRECORDKEYBOARDMONITOR_H

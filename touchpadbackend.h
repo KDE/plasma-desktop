@@ -46,12 +46,13 @@ public:
 
     virtual bool isMousePluggedIn() = 0;
 
-    virtual void watchForEvents() = 0;
+    virtual void watchForEvents(bool keyboard) = 0;
 
 Q_SIGNALS:
     void touchpadStateChanged();
     void mousesChanged();
-    void keyboardActivity();
+    void keyboardActivityStarted();
+    void keyboardActivityFinished();
 };
 
 #endif // TOUCHPADBACKEND_H

@@ -16,11 +16,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-#include <cstdlib>
 #include <cstring>
-#include <limits>
-
-#include <QScopedPointer>
 
 #include <KApplication>
 
@@ -29,13 +25,11 @@
 
 #include <X11/extensions/XI.h>
 #include <X11/extensions/XInput2.h>
-#include <xcb/xcbext.h>
 
 XlibNotifications::XlibNotifications(Display *display,
                                      xcb_connection_t *connection,
                                      int device)
-    : m_connection(connection), m_device(device), m_recordConnection(0),
-      m_modifiersPressed(0)
+    : m_connection(connection), m_device(device)
 {
     xcb_query_extension_cookie_t inputExtCookie =
             xcb_query_extension(m_connection, std::strlen(INAME), INAME);
@@ -74,48 +68,6 @@ XlibNotifications::XlibNotifications(Display *display,
 
     XFlush(display);
     kapp->installX11EventFilter(this);
-
-    m_recordConnection = xcb_connect(0, 0);
-    if (!m_recordConnection) {
-        return;
-    }
-
-    xcb_get_modifier_mapping_cookie_t modCookie =
-            xcb_get_modifier_mapping(m_recordConnection);
-
-    m_recordContext = xcb_generate_id(m_recordConnection);
-    xcb_record_range_t range;
-    memset(&range, 0, sizeof(range));
-    range.device_events.first = XCB_KEY_PRESS;
-    range.device_events.last = XCB_KEY_RELEASE;
-    xcb_record_client_spec_t cs = XCB_RECORD_CS_ALL_CLIENTS;
-    xcb_record_create_context(m_recordConnection, m_recordContext, 0, 1, 1, &cs,
-                              &range);
-    xcb_flush(m_recordConnection);
-
-
-    QScopedPointer<xcb_get_modifier_mapping_reply_t> modmap
-            (xcb_get_modifier_mapping_reply(m_recordConnection, modCookie, 0));
-    if (!modmap) {
-        return;
-    }
-
-    int nModifiers = xcb_get_modifier_mapping_keycodes_length(modmap.data());
-    xcb_keycode_t *modifiers = xcb_get_modifier_mapping_keycodes(modmap.data());
-    m_modifier.fill(false, std::numeric_limits<xcb_keycode_t>::max() + 1);
-    for (xcb_keycode_t *i = modifiers; i < modifiers + nModifiers; i++) {
-        m_modifier[*i] = true;
-    }
-    m_pressed.fill(false, std::numeric_limits<xcb_keycode_t>::max() + 1);
-
-    m_recordCookie =
-            xcb_record_enable_context(m_recordConnection, m_recordContext);
-
-    int fd = xcb_get_file_descriptor(m_recordConnection);
-    m_recordNotifier = new QSocketNotifier(fd, QSocketNotifier::Read, this);
-    connect(m_recordNotifier, SIGNAL(activated(int)), SLOT(recordEvent()));
-
-    xcb_flush(m_recordConnection);
 }
 
 bool XlibNotifications::x11Event(XEvent *event)
@@ -148,69 +100,9 @@ bool XlibNotifications::x11Event(XEvent *event)
     return false;
 }
 
-void XlibNotifications::recordEvent()
-{
-    m_recordNotifier->setEnabled(false);
-
-    xcb_record_enable_context_reply_t *reply = 0;
-    xcb_poll_for_reply(m_recordConnection, m_recordCookie.sequence,
-                       reinterpret_cast<void**>(&reply), 0);
-    if (!reply) {
-        std::free(xcb_poll_for_event(m_recordConnection));
-        m_recordNotifier->setEnabled(true);
-        return;
-    }
-
-    xcb_key_press_event_t *events = reinterpret_cast<xcb_key_press_event_t*>
-            (xcb_record_enable_context_data(reply));
-    int nEvents = xcb_record_enable_context_data_length(reply) /
-            sizeof(xcb_key_press_event_t);
-    int nKeys = 0;
-    for (xcb_key_press_event_t *e = events; e < events + nEvents; e++) {
-        if (e->response_type != XCB_KEY_PRESS &&
-                e->response_type != XCB_KEY_RELEASE)
-        {
-            continue;
-        }
-
-        bool pressed = (e->response_type == XCB_KEY_PRESS);
-
-        if (m_modifier[e->detail]) {
-            if (m_pressed[e->detail] == pressed) {
-                continue;
-            }
-            m_pressed[e->detail] = pressed;
-
-            if (pressed) {
-                m_modifiersPressed++;
-            } else {
-                m_modifiersPressed--;
-            }
-        } else if (pressed) {
-            nKeys++;
-        }
-    }
-
-    std::free(reply);
-
-    if (nKeys && !m_modifiersPressed) {
-        Q_EMIT keyboardActivity();
-    }
-
-    m_recordNotifier->setEnabled(true);
-}
-
 XlibNotifications::~XlibNotifications()
 {
     xcb_destroy_window(m_connection, m_inputWindow);
-
-    if (!m_recordConnection) {
-        return;
-    }
-
-    xcb_record_disable_context(m_recordConnection, m_recordContext);
-    xcb_record_free_context(m_recordConnection, m_recordContext);
-    xcb_disconnect(m_recordConnection);
 }
 
 #include "moc_xlibnotifications.cpp"

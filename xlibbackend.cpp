@@ -597,20 +597,31 @@ bool XlibBackend::isMousePluggedIn()
     return false;
 }
 
-void XlibBackend::watchForEvents()
+void XlibBackend::watchForEvents(bool keyboard)
 {
-    if (m_notifications) {
+    if (!m_notifications) {
+        m_notifications.reset(
+                    new XlibNotifications(m_display, m_connection, m_device));
+        connect(m_notifications.data(), SIGNAL(deviceChanged(int)),
+                SLOT(deviceChanged(int)));
+        connect(m_notifications.data(), SIGNAL(propertyChanged(Atom)),
+                SLOT(propertyChanged(Atom)));
+    }
+
+    if (keyboard == !m_keyboard.isNull()) {
         return;
     }
 
-    m_notifications.reset(
-                new XlibNotifications(m_display, m_connection, m_device));
-    connect(m_notifications.data(), SIGNAL(deviceChanged(int)),
-            SLOT(deviceChanged(int)));
-    connect(m_notifications.data(), SIGNAL(propertyChanged(Atom)),
-            SLOT(propertyChanged(Atom)));
-    connect(m_notifications.data(), SIGNAL(keyboardActivity()),
-            SIGNAL(keyboardActivity()));
+    if (!keyboard) {
+        m_keyboard.reset();
+        return;
+    }
+
+    m_keyboard.reset(new XRecordKeyboardMonitor());
+    connect(m_keyboard.data(), SIGNAL(keyboardActivityStarted()),
+            SIGNAL(keyboardActivityStarted()));
+    connect(m_keyboard.data(), SIGNAL(keyboardActivityFinished()),
+            SIGNAL(keyboardActivityFinished()));
 }
 
 #include "moc_xlibbackend.cpp"
