@@ -1,0 +1,10 @@
+[Global]
+Name=Touchpad
+IconName=input-touchpad
+Comment=Touchpad
+
+[Event/TouchpadDisabled]
+Name=Touchpad is disabled
+Comment=Touchpad is disabled because external mouse is detected
+Sound=KDE-Sys-App-Positive.ogg
+Action=Popup

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>400</width>
-    <height>388</height>
+    <height>471</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -171,6 +171,13 @@
        <widget class="QCheckBox" name="kcfg_OnlyDisableTapAndScrollWhenMousePluggedIn">
         <property name="text">
          <string>Disable tapping ang scrolling only</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="kcfg_ShowNotificationWhenDisabled">
+        <property name="text">
+         <string>Show notification</string>
         </property>
        </widget>
       </item>

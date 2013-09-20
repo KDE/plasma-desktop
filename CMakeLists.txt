@@ -86,6 +86,7 @@ install(FILES kded_touchpad.desktop DESTINATION ${SERVICES_INSTALL_DIR}/kded
 RENAME touchpad.desktop)
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/org.kde.touchpad.xml
 DESTINATION ${DBUS_INTERFACES_INSTALL_DIR})
+install(FILES kcm_touchpad.notifyrc DESTINATION ${DATA_INSTALL_DIR}/kcm_touchpad)
 
 kde4_install_icons(${ICON_INSTALL_DIR})
 kde4_update_iconcache()

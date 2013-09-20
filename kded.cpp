@@ -18,6 +18,11 @@
 
 #include "kded.h"
 
+#include <KNotification>
+#include <KLocale>
+
+#include "plugins.h"
+
 inline bool isDeeper(TouchpadBackend::TouchpadState a,
                      TouchpadBackend::TouchpadState b)
 {
@@ -120,6 +125,7 @@ void TouchpadDisabler::timerElapsed()
 void TouchpadDisabler::mousePlugged()
 {
     m_mouse = m_backend->isMousePluggedIn();
+
     updateState();
 }
 
@@ -151,4 +157,17 @@ void TouchpadDisabler::updateState()
     }
     m_backend->setTouchpadState(newState);
     m_currentState = newState;
+
+    if (m_disabledByMe && m_mouse && m_currentState == m_mouseDisableState &&
+            m_settings.showNotificationWhenDisabled())
+    {
+        KNotification::event("TouchpadDisabled",
+                             i18n("Touchpad is disabled because mouse is "
+                                  "detected"),
+                             QPixmap(),
+                             0,
+                             KNotification::CloseOnTimeout,
+                             TouchpadPluginFactory::componentData())
+                ->sendEvent();
+    }
 }
