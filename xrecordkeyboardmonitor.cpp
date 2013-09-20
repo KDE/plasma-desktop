@@ -80,21 +80,21 @@ XRecordKeyboardMonitor::~XRecordKeyboardMonitor()
 
 void XRecordKeyboardMonitor::processNextReply()
 {
-    std::free(xcb_poll_for_event(m_connection));
-
-    void *reply = 0;
-    xcb_poll_for_reply(m_connection, m_cookie.sequence, &reply, 0);
-
-    QScopedPointer<xcb_record_enable_context_reply_t> data(
-                reinterpret_cast<xcb_record_enable_context_reply_t*>(reply));
-
-    if (reply) {
-        process(data.data());
+    xcb_generic_event_t *event;
+    while ((event = xcb_poll_for_event(m_connection))) {
+        std::free(event);
     }
 
-    xcb_generic_event_t *event;
-    while ((event = xcb_poll_for_queued_event(m_connection))) {
-        std::free(event);
+    Q_FOREVER {
+        void *reply = 0;
+        xcb_poll_for_reply(m_connection, m_cookie.sequence, &reply, 0);
+        if (!reply) {
+            break;
+        }
+
+        QScopedPointer<xcb_record_enable_context_reply_t> data(
+                    reinterpret_cast<xcb_record_enable_context_reply_t*>(reply));
+        process(data.data());
     }
 }
 
