@@ -85,11 +85,10 @@ void XRecordKeyboardMonitor::processNextReply()
         std::free(event);
     }
 
-    Q_FOREVER {
-        void *reply = 0;
-        xcb_poll_for_reply(m_connection, m_cookie.sequence, &reply, 0);
+    void *reply = 0;
+    while (xcb_poll_for_reply(m_connection, m_cookie.sequence, &reply, 0)) {
         if (!reply) {
-            break;
+            continue;
         }
 
         QScopedPointer<xcb_record_enable_context_reply_t> data(
