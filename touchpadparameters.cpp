@@ -16,7 +16,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-#include "touchpadparametersbase.h"
+#include "touchpadparameters.h"
 
 static KSharedConfig::Ptr savedDefaults()
 {
@@ -26,8 +26,8 @@ static KSharedConfig::Ptr savedDefaults()
     return p;
 }
 
-TouchpadParametersBase::TouchpadParametersBase(const QLatin1String &name)
-    : KCoreConfigSkeleton(name), m_temporary(false)
+TouchpadParameters::TouchpadParameters()
+    : m_temporary(false)
 {
     useDefaults(true);
     loadFrom(savedDefaults().data());
@@ -35,34 +35,34 @@ TouchpadParametersBase::TouchpadParametersBase(const QLatin1String &name)
     loadFrom(config());
 }
 
-void TouchpadParametersBase::saveAsDefaults()
+void TouchpadParameters::saveAsDefaults()
 {
-    setSharedConfig(savedDefaults());
-    KCoreConfigSkeleton::writeConfig();
+    Q_FOREACH(KConfigSkeletonItem *i, items()) {
+        i->writeConfig(savedDefaults().data());
+    }
+    savedDefaults()->sync();
 }
 
-void TouchpadParametersBase::setTemporary(bool v)
+void TouchpadParameters::setTemporary(bool v)
 {
     m_temporary = v;
 }
 
-void TouchpadParametersBase::writeConfig()
+void TouchpadParameters::writeConfig()
 {
     if (!m_temporary) {
         KCoreConfigSkeleton::writeConfig();
     }
 }
 
-void TouchpadParametersBase::loadFrom(KConfig *config)
+void TouchpadParameters::loadFrom(KConfig *config)
 {
     Q_FOREACH(KConfigSkeletonItem *i, items()) {
-        if (config->hasGroup(i->group())) {
-            i->readConfig(config);
-        }
+        i->readConfig(config);
     }
 }
 
-void TouchpadParametersBase::loadFrom(KCoreConfigSkeleton *config)
+void TouchpadParameters::loadFrom(KCoreConfigSkeleton *config)
 {
     Q_FOREACH(KConfigSkeletonItem *i, items()) {
         KConfigSkeletonItem *j = config->findItem(i->name());

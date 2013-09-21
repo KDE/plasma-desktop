@@ -46,7 +46,7 @@ testbutton.cpp
 customslider.cpp
 sliderpair.cpp
 plugins.cpp
-touchpadparametersbase.cpp
+touchpadparameters.cpp
 kded.cpp
 
 touchpadbackend.cpp
@@ -60,7 +60,7 @@ synclientproperties.c
 ${CMAKE_CURRENT_BINARY_DIR}/org.kde.touchpad.xml
 )
 
-kde4_add_kcfg_files(SRCS touchpadparameters.kcfgc)
+kde4_add_kcfg_files(SRCS touchpadparametersbase.kcfgc)
 kde4_add_kcfg_files(SRCS kdedsettings.kcfgc)
 kde4_add_ui_files(SRCS
 pointermotion.ui

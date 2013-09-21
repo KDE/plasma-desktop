@@ -16,15 +16,15 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-#ifndef TOUCHPADPARAMETERSBASE_H
-#define TOUCHPADPARAMETERSBASE_H
+#ifndef TOUCHPADPARAMETERS_H
+#define TOUCHPADPARAMETERS_H
 
-#include <KConfigSkeleton>
+#include "touchpadparametersbase.h"
 
-class TouchpadParametersBase : public KCoreConfigSkeleton
+class TouchpadParameters : public TouchpadParametersBase
 {
 public:
-    explicit TouchpadParametersBase(const QLatin1String &);
+    TouchpadParameters();
 
     void setTemporary(bool);
     void loadFrom(KConfig *);
@@ -37,4 +37,4 @@ private:
     bool m_temporary;
 };
 
-#endif // TOUCHPADPARAMETERSBASE_H
+#endif // TOUCHPADPARAMETERS_H
