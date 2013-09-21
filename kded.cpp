@@ -79,7 +79,7 @@ void TouchpadDisabler::reloadSettings()
     m_enableTimer.setInterval(m_settings.keyboardActivityTimeoutMs());
 
     m_mouseDisableState = getState(m_settings.disableWhenMousePluggedIn(),
-                                   m_settings.onlyDisableTapAndScrollWhenMousePluggedIn());
+                                   false);
     m_keyboardDisableState = getState(m_settings.disableOnKeyboardActivity(),
                                       m_settings.onlyDisableTapAndScrollOnKeyboardActivity());
 

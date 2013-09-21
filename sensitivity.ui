@@ -168,13 +168,6 @@
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_2">
       <item>
-       <widget class="QCheckBox" name="kcfg_OnlyDisableTapAndScrollWhenMousePluggedIn">
-        <property name="text">
-         <string>Disable tapping ang scrolling only</string>
-        </property>
-       </widget>
-      </item>
-      <item>
        <widget class="QCheckBox" name="kcfg_ShowNotificationWhenDisabled">
         <property name="text">
          <string>Show notification</string>
@@ -271,7 +264,6 @@ number of milliseconds, touchpad will be enabled again</string>
   <tabstop>kcfg_PalmMinWidth</tabstop>
   <tabstop>kcfg_PalmMinZ</tabstop>
   <tabstop>kcfg_DisableWhenMousePluggedIn</tabstop>
-  <tabstop>kcfg_OnlyDisableTapAndScrollWhenMousePluggedIn</tabstop>
   <tabstop>kcfg_DisableOnKeyboardActivity</tabstop>
   <tabstop>kcfg_OnlyDisableTapAndScrollOnKeyboardActivity</tabstop>
   <tabstop>kcfg_KeyboardActivityTimeoutMs</tabstop>
