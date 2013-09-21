@@ -567,7 +567,9 @@ void XlibBackend::deviceChanged(int device)
 
 void XlibBackend::propertyChanged(Atom prop)
 {
-    if (prop == m_touchpadOffAtom.atom()) {
+    if (prop == m_touchpadOffAtom.atom() ||
+            prop == m_enabledAtom.atom())
+    {
         Q_EMIT touchpadStateChanged();
     }
 }
