@@ -24,7 +24,7 @@ prepare() {
 
 build() {
   cd "${_pkgname}/build"
-  cmake .. -DCMAKE_INSTALL_PREFIX="$(kde4-config --prefix)"
+  cmake .. -DCMAKE_BUILD_TYPE=DebugFull -DCMAKE_INSTALL_PREFIX="$(kde4-config --prefix)"
   make
 }
 
