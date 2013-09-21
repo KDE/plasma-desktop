@@ -77,25 +77,28 @@ bool XlibNotifications::x11Event(XEvent *event)
         return false;
     }
 
-    XGetEventData(cookie->display, cookie);
+    int gotData = XGetEventData(cookie->display, cookie);
     if (cookie->evtype == XI_PropertyEvent) {
         XIPropertyEvent *propEvent =
                 reinterpret_cast<XIPropertyEvent *>(cookie->data);
-        Q_EMIT propertyChanged(propEvent->property);
+        Q_EMIT propertyChanged(propEvent ? propEvent->property : 0);
     } else if (cookie->evtype == XI_HierarchyChanged) {
+        static const int acceptEvents =
+                XIMasterAdded | XIMasterRemoved |
+                XISlaveAttached | XISlaveDetached |
+                XIDeviceEnabled | XIDeviceDisabled;
+
         XIHierarchyEvent *hierarchyEvent =
                 reinterpret_cast<XIHierarchyEvent *>(cookie->data);
-        if (hierarchyEvent->flags & (XIMasterAdded |
-                                     XIMasterRemoved |
-                                     XISlaveAttached |
-                                     XISlaveDetached |
-                                     XIDeviceEnabled |
-                                     XIDeviceDisabled))
-        {
-            Q_EMIT deviceChanged(hierarchyEvent->info->deviceid);
+        if (!hierarchyEvent || (hierarchyEvent->flags & acceptEvents)) {
+            Q_EMIT deviceChanged((hierarchyEvent && hierarchyEvent->info) ?
+                                     hierarchyEvent->info->deviceid :
+                                     XIAllDevices);
         }
     }
-    XFreeEventData(cookie->display, cookie);
+    if (cookie->data && gotData) {
+        XFreeEventData(cookie->display, cookie);
+    }
 
     return false;
 }
