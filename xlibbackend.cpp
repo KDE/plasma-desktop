@@ -21,7 +21,6 @@
 
 #include <QtAlgorithms>
 #include <QScopedPointer>
-#include <QX11Info>
 
 #include <KLocalizedString>
 
@@ -51,6 +50,13 @@ static void XIDeviceInfoDeleter(XIDeviceInfo *p)
 {
     if (p) {
         XIFreeDeviceInfo(p);
+    }
+}
+
+static void XDisplayDeleter(Display *p)
+{
+    if (p) {
+        XCloseDisplay(p);
     }
 }
 
@@ -134,10 +140,11 @@ XlibBackend::~XlibBackend()
 
 XlibBackend::XlibBackend(QObject *parent) :
     TouchpadBackend(parent),
-    m_display(QX11Info::display()), m_connection(0), m_resX(1), m_resY(1)
+    m_display(XOpenDisplay(0), XDisplayDeleter), m_connection(0),
+    m_resX(1), m_resY(1)
 {
     if (m_display) {
-        m_connection = XGetXCBConnection(m_display);
+        m_connection = XGetXCBConnection(m_display.data());
     }
 
     if (!m_connection) {
@@ -186,7 +193,7 @@ XlibBackend::XlibBackend(QObject *parent) :
 
     m_toRadians.append("CircScrollDelta");
 
-    PropertyInfo resolution(m_display, m_device, resolutionAtom, 0);
+    PropertyInfo resolution(m_display.data(), m_device, resolutionAtom, 0);
     if (!resolution.i || !resolution.nitems ||
             (resolution.nitems == 2 &&
              resolution.i[0] == 1 && resolution.i[1] == 1))
@@ -212,7 +219,7 @@ XlibBackend::XlibBackend(QObject *parent) :
     m_supported.append(m_negate.values());
     m_supported.append("Coasting");
 
-    PropertyInfo caps(m_display, m_device, m_capsAtom.atom(), 0);
+    PropertyInfo caps(m_display.data(), m_device, m_capsAtom.atom(), 0);
     if (!caps.b) {
         m_errorString = i18n("Can not read touchpad's capabilities");
         return;
@@ -276,7 +283,7 @@ int XlibBackend::findTouchpad()
 {
     int nDevices = 0;
     QSharedPointer<XIDeviceInfo> deviceInfo(
-                XIQueryDevice(m_display, XIAllDevices, &nDevices),
+                XIQueryDevice(m_display.data(), XIAllDevices, &nDevices),
                 XIDeviceInfoDeleter);
 
     for (XIDeviceInfo *info = deviceInfo.data();
@@ -284,8 +291,8 @@ int XlibBackend::findTouchpad()
     {
         int nProperties = 0;
         QSharedPointer<Atom> properties(
-                    XIListProperties(m_display, info->deviceid, &nProperties),
-                    XDeleter);
+                    XIListProperties(m_display.data(), info->deviceid,
+                                     &nProperties), XDeleter);
 
         if (std::count(properties.data(), properties.data() + nProperties,
                        m_capsAtom.atom()))
@@ -395,7 +402,7 @@ void XlibBackend::flush()
     }
     m_changed.clear();
 
-    XFlush(m_display);
+    XFlush(m_display.data());
 }
 
 bool XlibBackend::getConfig(TouchpadParameters *p)
@@ -487,7 +494,7 @@ PropertyInfo *XlibBackend::getDevProperty(const QLatin1String &propName)
         return 0;
     }
 
-    PropertyInfo p(m_display, m_device, prop, m_floatType.atom());
+    PropertyInfo p(m_display.data(), m_device, prop, m_floatType.atom());
     if (!p.b && !p.f && !p.i) {
         return 0;
     }
@@ -532,13 +539,13 @@ bool XlibBackend::setParameter(const Parameter *par, const QVariant &value)
 
 void XlibBackend::setTouchpadState(TouchpadBackend::TouchpadState state)
 {
-    PropertyInfo enabled(m_display, m_device, m_enabledAtom.atom(), 0);
+    PropertyInfo enabled(m_display.data(), m_device, m_enabledAtom.atom(), 0);
     if (enabled.b && *(enabled.b) != (state != TouchpadFullyDisabled)) {
         *(enabled.b) = (state != TouchpadFullyDisabled);
         enabled.set();
     }
 
-    PropertyInfo off(m_display, m_device, m_touchpadOffAtom.atom(), 0);
+    PropertyInfo off(m_display.data(), m_device, m_touchpadOffAtom.atom(), 0);
     if (off.b && *(off.b) != state) {
         *(off.b) = static_cast<int>(state);
         off.set();
@@ -549,12 +556,12 @@ void XlibBackend::setTouchpadState(TouchpadBackend::TouchpadState state)
 
 TouchpadBackend::TouchpadState XlibBackend::getTouchpadState()
 {
-    PropertyInfo enabled(m_display, m_device, m_enabledAtom.atom(), 0);
+    PropertyInfo enabled(m_display.data(), m_device, m_enabledAtom.atom(), 0);
     if (enabled.value(0) == false) {
         return TouchpadFullyDisabled;
     }
 
-    PropertyInfo off(m_display, m_device, m_touchpadOffAtom.atom(), 0);
+    PropertyInfo off(m_display.data(), m_device, m_touchpadOffAtom.atom(), 0);
     return static_cast<TouchpadBackend::TouchpadState>(off.value(0).toInt());
 }
 
@@ -565,7 +572,7 @@ void XlibBackend::deviceChanged(int device)
     }
 }
 
-void XlibBackend::propertyChanged(Atom prop)
+void XlibBackend::propertyChanged(xcb_atom_t prop)
 {
     if (prop == m_touchpadOffAtom.atom() ||
             prop == m_enabledAtom.atom())
@@ -588,7 +595,7 @@ bool XlibBackend::isMousePluggedIn()
 {
     int nDevices = 0;
     QScopedPointer<XDeviceInfo, DeviceListDeleter>
-            info(XListInputDevices(m_display, &nDevices));
+            info(XListInputDevices(m_display.data(), &nDevices));
     for (XDeviceInfo *i = info.data(); i != info.data() + nDevices; i++) {
         if (i->id != static_cast<XID>(m_device) &&
                 i->type == m_mouseAtom.atom())
@@ -604,11 +611,12 @@ void XlibBackend::watchForEvents(bool keyboard)
 {
     if (!m_notifications) {
         m_notifications.reset(
-                    new XlibNotifications(m_display, m_connection, m_device));
+                    new XlibNotifications(m_display.data(), m_connection,
+                                          m_device));
         connect(m_notifications.data(), SIGNAL(deviceChanged(int)),
                 SLOT(deviceChanged(int)));
-        connect(m_notifications.data(), SIGNAL(propertyChanged(Atom)),
-                SLOT(propertyChanged(Atom)));
+        connect(m_notifications.data(), SIGNAL(propertyChanged(xcb_atom_t)),
+                SLOT(propertyChanged(xcb_atom_t)));
     }
 
     if (keyboard == !m_keyboard.isNull()) {

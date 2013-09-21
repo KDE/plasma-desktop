@@ -16,14 +16,12 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
+#include "xlibnotifications.h"
+
 #include <cstring>
 
-#include <KApplication>
-
-//Includes are ordered this way because of #defines in Xorg's headers
-#include "xlibnotifications.h" // krazy:exclude=includes
-
 #include <X11/extensions/XI.h>
+#include <X11/extensions/XI2proto.h>
 #include <X11/extensions/XInput2.h>
 
 XlibNotifications::XlibNotifications(Display *display,
@@ -31,6 +29,9 @@ XlibNotifications::XlibNotifications(Display *display,
                                      int device)
     : m_connection(connection), m_device(device)
 {
+    m_notifier = new QSocketNotifier(xcb_get_file_descriptor(m_connection),
+                                     QSocketNotifier::Read, this);
+
     xcb_query_extension_cookie_t inputExtCookie =
             xcb_query_extension(m_connection, std::strlen(INAME), INAME);
     xcb_query_extension_reply_t *inputExt =
@@ -65,42 +66,47 @@ XlibNotifications::XlibNotifications(Display *display,
 
     XISelectEvents(display, m_inputWindow, masks,
                    sizeof(masks) / sizeof(XIEventMask));
-
     XFlush(display);
-    kapp->installX11EventFilter(this);
+
+    connect(m_notifier, SIGNAL(activated(int)), SLOT(processEvents()));
+    m_notifier->setEnabled(true);
 }
 
-bool XlibNotifications::x11Event(XEvent *event)
+void XlibNotifications::processEvents()
 {
-    XGenericEventCookie *cookie = &event->xcookie;
-    if (cookie->extension != m_inputOpcode) {
-        return false;
+    xcb_generic_event_t *event;
+    while ((event = xcb_poll_for_event(m_connection))) {
+        QScopedPointer<xcb_generic_event_t> eventData(event);
+        processEvent(eventData.data());
+    }
+}
+
+void XlibNotifications::processEvent(xcb_generic_event_t *event)
+{
+    if (event->response_type != GenericEvent) {
+        return;
     }
 
-    int gotData = XGetEventData(cookie->display, cookie);
-    if (cookie->evtype == XI_PropertyEvent) {
-        XIPropertyEvent *propEvent =
-                reinterpret_cast<XIPropertyEvent *>(cookie->data);
-        Q_EMIT propertyChanged(propEvent ? propEvent->property : 0);
-    } else if (cookie->evtype == XI_HierarchyChanged) {
+    xGenericEvent *ge = reinterpret_cast<xGenericEvent*>(event);
+    if (ge->extension != m_inputOpcode) {
+        return;
+    }
+
+    if (ge->evtype == XI_PropertyEvent) {
+        xXIPropertyEvent *propEvent = reinterpret_cast<xXIPropertyEvent *>(ge);
+        Q_EMIT propertyChanged(propEvent->property);
+    } else if (ge->evtype == XI_HierarchyChanged) {
         static const int acceptEvents =
                 XIMasterAdded | XIMasterRemoved |
                 XISlaveAttached | XISlaveDetached |
                 XIDeviceEnabled | XIDeviceDisabled;
 
-        XIHierarchyEvent *hierarchyEvent =
-                reinterpret_cast<XIHierarchyEvent *>(cookie->data);
-        if (!hierarchyEvent || (hierarchyEvent->flags & acceptEvents)) {
-            Q_EMIT deviceChanged((hierarchyEvent && hierarchyEvent->info) ?
-                                     hierarchyEvent->info->deviceid :
-                                     XIAllDevices);
+        xXIHierarchyEvent *hierarchyEvent =
+                reinterpret_cast<xXIHierarchyEvent *>(ge);
+        if (hierarchyEvent->flags & acceptEvents) {
+            Q_EMIT deviceChanged(hierarchyEvent->deviceid);
         }
     }
-    if (cookie->data && gotData) {
-        XFreeEventData(cookie->display, cookie);
-    }
-
-    return false;
 }
 
 XlibNotifications::~XlibNotifications()

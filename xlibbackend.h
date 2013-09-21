@@ -56,7 +56,7 @@ public:
     bool isMousePluggedIn();
 
 private slots:
-    void propertyChanged(Atom);
+    void propertyChanged(xcb_atom_t);
     void deviceChanged(int);
 
 private:
@@ -66,7 +66,7 @@ private:
     void flush();
     double getPropertyScale(const QString &name) const;
 
-    Display *m_display;
+    QSharedPointer<Display> m_display;
     xcb_connection_t *m_connection;
 
     XcbAtom m_floatType, m_capsAtom, m_enabledAtom, m_touchpadOffAtom,

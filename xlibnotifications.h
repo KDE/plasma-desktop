@@ -20,9 +20,9 @@
 #define XLIBNOTIFICATIONS_H
 
 #include <QWidget>
+#include <QSocketNotifier>
 
 #include <xcb/xcb.h>
-#include <X11/X.h>
 
 class XlibNotifications : public QWidget
 {
@@ -32,14 +32,18 @@ public:
                       int device);
     ~XlibNotifications();
 
-    bool x11Event(XEvent *event);
-
 Q_SIGNALS:
-    void propertyChanged(Atom);
+    void propertyChanged(xcb_atom_t);
     void deviceChanged(int);
 
+private Q_SLOTS:
+    void processEvents();
+
 private:
+    void processEvent(xcb_generic_event_t *);
+
     xcb_connection_t *m_connection;
+    QSocketNotifier *m_notifier;
     xcb_window_t m_inputWindow;
     int m_device;
     uint8_t m_inputOpcode;
