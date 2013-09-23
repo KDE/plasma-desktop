@@ -1,0 +1,19 @@
+[Desktop Entry]
+Name=Touchpad
+Comment=Enable or disable touchpad
+Icon=input-touchpad
+Type=Service
+ServiceTypes=Plasma/Applet
+
+X-KDE-Library=touchpad_applet
+X-KDE-PluginInfo-Name=touchpad
+X-KDE-PluginInfo-Category=System Information
+X-KDE-PluginInfo-Author=Alexander Mezin
+X-KDE-PluginInfo-Email=mezin.alexander@gmail.com
+X-KDE-PluginInfo-Version=0.1
+X-KDE-PluginInfo-Website=https://github.com/sanya-m/kde-touchpad-config/
+X-KDE-PluginInfo-Depends=
+X-KDE-PluginInfo-License=GPL
+X-KDE-PluginInfo-EnabledByDefault=true
+
+X-Plasma-NotificationArea=true

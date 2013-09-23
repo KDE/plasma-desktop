@@ -45,7 +45,8 @@ static TouchpadBackend::TouchpadState getState(bool disable, bool onlyTaps)
 
 TouchpadDisabler::TouchpadDisabler(QObject *parent, const QVariantList &)
     : KDEDModule(parent), m_backend(TouchpadBackend::self()),
-            m_keyboardActivity(false), m_disabledByMe(false)
+      m_currentState(TouchpadBackend::TouchpadEnabled),
+      m_keyboardActivity(false), m_disabledByMe(false)
 {
     if (!m_backend) {
         return;
@@ -68,9 +69,26 @@ TouchpadDisabler::TouchpadDisabler(QObject *parent, const QVariantList &)
     reloadSettings();
 }
 
+bool TouchpadDisabler::isEnabled() const
+{
+    return m_currentState == TouchpadBackend::TouchpadEnabled;
+}
+
 void TouchpadDisabler::updateCurrentState()
 {
+    bool prevEnabled = isEnabled();
     m_currentState = m_backend->getTouchpadState();
+    if (prevEnabled != isEnabled()) {
+        Q_EMIT enabledChanged(isEnabled());
+    }
+}
+
+void TouchpadDisabler::toggle()
+{
+    m_backend->setTouchpadState(isEnabled() ? TouchpadBackend::TouchpadFullyDisabled :
+                                              TouchpadBackend::TouchpadEnabled
+                                              );
+    updateCurrentState();
 }
 
 void TouchpadDisabler::reloadSettings()
@@ -156,7 +174,7 @@ void TouchpadDisabler::updateState()
         newState = m_oldState;
     }
     m_backend->setTouchpadState(newState);
-    m_currentState = newState;
+    updateCurrentState();
 
     if (m_disabledByMe && m_mouse && m_currentState == m_mouseDisableState &&
             m_settings.showNotificationWhenDisabled())

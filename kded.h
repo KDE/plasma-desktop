@@ -36,8 +36,13 @@ class TouchpadDisabler : public KDEDModule
 public:
     TouchpadDisabler(QObject *, const QVariantList &);
 
+Q_SIGNALS:
+    Q_SCRIPTABLE void enabledChanged(bool);
+
 public Q_SLOTS:
     Q_SCRIPTABLE Q_NOREPLY void reloadSettings();
+    Q_SCRIPTABLE Q_NOREPLY void toggle();
+    Q_SCRIPTABLE bool isEnabled() const;
 
 private Q_SLOTS:
     void keyboardActivityStarted();

@@ -60,6 +60,10 @@ synclientproperties.c
 ${CMAKE_CURRENT_BINARY_DIR}/org.kde.touchpad.xml
 )
 
+set(Applet_SRCS
+trayicon.cpp
+)
+
 kde4_add_kcfg_files(SRCS touchpadparametersbase.kcfgc)
 kde4_add_kcfg_files(SRCS kdedsettings.kcfgc)
 kde4_add_ui_files(SRCS
@@ -78,6 +82,14 @@ ${X11_Xinput_LIB}
 ${KDE4_KDEUI_LIBS}
 )
 
+qt4_add_dbus_interfaces(Applet_SRCS ${CMAKE_CURRENT_BINARY_DIR}/org.kde.touchpad.xml)
+kde4_add_plugin(touchpad_applet ${Applet_SRCS})
+target_link_libraries(touchpad_applet
+${KDE4_PLASMA_LIBS}
+${KDE4_KDEUI_LIBS}
+${KDE4_KUTILS_LIBS}
+)
+
 install(FILES touchpad.kcfg DESTINATION ${KCFG_INSTALL_DIR})
 install(FILES touchpaddaemon.kcfg DESTINATION ${KCFG_INSTALL_DIR})
 install(TARGETS kded_touchpad DESTINATION ${PLUGIN_INSTALL_DIR})
@@ -87,6 +99,9 @@ RENAME touchpad.desktop)
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/org.kde.touchpad.xml
 DESTINATION ${DBUS_INTERFACES_INSTALL_DIR})
 install(FILES kcm_touchpad.notifyrc DESTINATION ${DATA_INSTALL_DIR}/kcm_touchpad)
+
+install(TARGETS touchpad_applet DESTINATION ${PLUGIN_INSTALL_DIR})
+install(FILES touchpad-applet.desktop DESTINATION ${SERVICES_INSTALL_DIR})
 
 kde4_install_icons(${ICON_INSTALL_DIR})
 kde4_update_iconcache()
