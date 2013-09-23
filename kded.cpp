@@ -45,7 +45,7 @@ static TouchpadBackend::TouchpadState getState(bool disable, bool onlyTaps)
 
 bool TouchpadDisabler::workingTouchpadFound() const
 {
-    return m_backend && m_backend->supportedParameters().isEmpty();
+    return m_backend && !(m_backend->supportedParameters().isEmpty());
 }
 
 TouchpadDisabler::TouchpadDisabler(QObject *parent, const QVariantList &)
