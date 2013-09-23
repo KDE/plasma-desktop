@@ -87,11 +87,16 @@ void TrayIcon::paintInterface(QPainter *painter,
 void TrayIcon::setState(bool enabled)
 {
     m_enabled = enabled;
-    setStatus(m_enabled ? Plasma::PassiveStatus : Plasma::ActiveStatus);
     setToolTip(m_enabled ? i18n("Touchpad is enabled") :
                            i18n("Touchpad is disabled"));
     m_toggleAction->setChecked(m_enabled);
     update();
+    QTimer::singleShot(m_enabled ? 1000 : 0, this, SLOT(updateStatus()));
+}
+
+void TrayIcon::updateStatus()
+{
+    setStatus(m_enabled ? Plasma::PassiveStatus : Plasma::ActiveStatus);
 }
 
 void TrayIcon::createConfigurationInterface(KConfigDialog *parent)

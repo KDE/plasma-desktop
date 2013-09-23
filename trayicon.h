@@ -44,6 +44,7 @@ protected:
 
 private Q_SLOTS:
     void setState(bool);
+    void updateStatus();
 
 private:
     OrgKdeTouchpadInterface *m_interface;
