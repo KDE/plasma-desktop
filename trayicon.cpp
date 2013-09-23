@@ -37,9 +37,12 @@ TrayIcon::TrayIcon(QObject *parent, const QVariantList &args)
                                               QDBusConnection::sessionBus(),
                                               this);
 
-    m_touchpadIcon = new KIcon("input-touchpad");
     m_toggleAction = new KAction(i18n("Enable touchpad"), this);
     m_toggleAction->setCheckable(true);
+
+    m_touchpadIcon = new Plasma::Svg(this);
+    m_touchpadIcon->setImagePath("icons/touchpad");
+    m_touchpadIcon->setContainsMultipleImages(true);
 
     resize(48, 48);
 }
@@ -78,11 +81,9 @@ void TrayIcon::paintInterface(QPainter *painter,
 {
     painter->save();
     painter->setRenderHint(QPainter::SmoothPixmapTransform);
-    painter->setRenderHint(QPainter::Antialiasing);
-    QPixmap pixmap(m_touchpadIcon->pixmap(contentsRect.size(),
-                                          m_enabled ? QIcon::Normal :
-                                                      QIcon::Disabled));
-    painter->drawPixmap(contentsRect, pixmap);
+    m_touchpadIcon->resize(QSizeF(contentsRect.size()));
+    m_touchpadIcon->paint(painter, QRectF(contentsRect),
+                          m_enabled ? "touchpad_enabled" : "touchpad_disabled");
     painter->restore();
 }
 
@@ -94,7 +95,9 @@ void TrayIcon::setState(bool enabled)
     tip.setMainText(i18n("Touchpad"));
     tip.setSubText(m_enabled ? i18n("Touchpad is enabled") :
                                i18n("Touchpad is disabled"));
-    tip.setImage(*m_touchpadIcon);
+    m_touchpadIcon->resize(48, 48);
+    tip.setImage(m_touchpadIcon->pixmap(
+                     m_enabled ? "touchpad_enabled" : "touchpad_disabled"));
     setToolTip(tip.subText());
     Plasma::ToolTipManager::self()->setContent(this, tip);
 

@@ -19,10 +19,10 @@
 #ifndef TRAYICON_H
 #define TRAYICON_H
 
-#include <KIcon>
 #include <KAction>
 
 #include <Plasma/Applet>
+#include <Plasma/Svg>
 
 #include "touchpadinterface.h"
 
@@ -48,7 +48,7 @@ private Q_SLOTS:
 
 private:
     OrgKdeTouchpadInterface *m_interface;
-    KIcon *m_touchpadIcon;
+    Plasma::Svg *m_touchpadIcon;
     KAction *m_toggleAction;
     bool m_enabled;
 };

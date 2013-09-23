@@ -102,6 +102,7 @@ install(FILES kcm_touchpad.notifyrc DESTINATION ${DATA_INSTALL_DIR}/kcm_touchpad
 
 install(TARGETS touchpad_applet DESTINATION ${PLUGIN_INSTALL_DIR})
 install(FILES touchpad-applet.desktop DESTINATION ${SERVICES_INSTALL_DIR})
+install(FILES touchpad.svg DESTINATION ${DATA_INSTALL_DIR}/desktoptheme/default/icons)
 
 kde4_install_icons(${ICON_INSTALL_DIR})
 kde4_update_iconcache()
