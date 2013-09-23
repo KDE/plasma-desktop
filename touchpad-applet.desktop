@@ -3,8 +3,8 @@ Name=Touchpad
 Comment=Enable or disable touchpad
 Icon=input-touchpad
 Type=Service
-ServiceTypes=Plasma/Applet
 
+X-KDE-ServiceTypes=Plasma/Applet
 X-KDE-Library=touchpad_applet
 X-KDE-PluginInfo-Name=touchpad
 X-KDE-PluginInfo-Category=System Information
