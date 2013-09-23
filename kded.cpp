@@ -43,12 +43,17 @@ static TouchpadBackend::TouchpadState getState(bool disable, bool onlyTaps)
                                  TouchpadBackend::TouchpadFullyDisabled;
 }
 
+bool TouchpadDisabler::workingTouchpadFound() const
+{
+    return m_backend && m_backend->supportedParameters().isEmpty();
+}
+
 TouchpadDisabler::TouchpadDisabler(QObject *parent, const QVariantList &)
     : KDEDModule(parent), m_backend(TouchpadBackend::self()),
       m_currentState(TouchpadBackend::TouchpadEnabled),
       m_keyboardActivity(false), m_disabledByMe(false)
 {
-    if (!m_backend) {
+    if (!workingTouchpadFound()) {
         return;
     }
 

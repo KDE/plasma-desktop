@@ -43,6 +43,7 @@ public Q_SLOTS:
     Q_SCRIPTABLE Q_NOREPLY void reloadSettings();
     Q_SCRIPTABLE Q_NOREPLY void toggle();
     Q_SCRIPTABLE bool isEnabled() const;
+    Q_SCRIPTABLE bool workingTouchpadFound() const;
 
 private Q_SLOTS:
     void keyboardActivityStarted();

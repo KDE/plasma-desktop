@@ -69,6 +69,11 @@ void TrayIcon::init()
         return;
     }
 
+    if (!m_interface->workingTouchpadFound()) {
+        setFailedToLaunch(true, i18n("Touchpad not found"));
+        return;
+    }
+
     setState(m_interface->isEnabled());
     connect(m_interface, SIGNAL(enabledChanged(bool)), SLOT(setState(bool)));
     connect(this, SIGNAL(activate()), m_interface, SLOT(toggle()));
