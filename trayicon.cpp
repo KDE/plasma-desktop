@@ -25,6 +25,8 @@
 #include <KCModuleInfo>
 #include <KLocale>
 
+#include <Plasma/ToolTipManager>
+
 K_EXPORT_PLASMA_APPLET(touchpad, TrayIcon)
 
 TrayIcon::TrayIcon(QObject *parent, const QVariantList &args)
@@ -87,10 +89,19 @@ void TrayIcon::paintInterface(QPainter *painter,
 void TrayIcon::setState(bool enabled)
 {
     m_enabled = enabled;
-    setToolTip(m_enabled ? i18n("Touchpad is enabled") :
-                           i18n("Touchpad is disabled"));
+
+    Plasma::ToolTipContent tip;
+    tip.setMainText(i18n("Touchpad"));
+    tip.setSubText(m_enabled ? i18n("Touchpad is enabled") :
+                               i18n("Touchpad is disabled"));
+    tip.setImage(*m_touchpadIcon);
+    setToolTip(tip.subText());
+    Plasma::ToolTipManager::self()->setContent(this, tip);
+
     m_toggleAction->setChecked(m_enabled);
+
     update();
+
     QTimer::singleShot(m_enabled ? 1000 : 0, this, SLOT(updateStatus()));
 }
 
