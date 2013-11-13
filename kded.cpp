@@ -51,7 +51,7 @@ bool TouchpadDisabler::workingTouchpadFound() const
 TouchpadDisabler::TouchpadDisabler(QObject *parent, const QVariantList &)
     : KDEDModule(parent), m_backend(TouchpadBackend::self()),
       m_currentState(TouchpadBackend::TouchpadEnabled),
-      m_keyboardActivity(false), m_disabledByMe(false)
+      m_keyboardActivity(false), m_disabledByMe(false), m_startup(true)
 {
     if (!workingTouchpadFound()) {
         return;
@@ -72,6 +72,8 @@ TouchpadDisabler::TouchpadDisabler(QObject *parent, const QVariantList &)
 
     updateCurrentState();
     reloadSettings();
+
+    m_startup = false;
 }
 
 bool TouchpadDisabler::isEnabled() const
@@ -181,16 +183,36 @@ void TouchpadDisabler::updateState()
     m_backend->setTouchpadState(newState);
     updateCurrentState();
 
-    if (m_disabledByMe && m_mouse && m_currentState == m_mouseDisableState &&
-            m_settings.showNotificationWhenDisabled())
-    {
-        KNotification::event("TouchpadDisabled",
-                             i18n("Touchpad is disabled because mouse is "
-                                  "detected"),
-                             QPixmap(),
-                             0,
-                             KNotification::CloseOnTimeout,
-                             TouchpadPluginFactory::componentData())
-                ->sendEvent();
+    if (m_disabledByMe && m_mouse && m_currentState == m_mouseDisableState) {
+        showNotification();
     }
+}
+
+void TouchpadDisabler::showNotification()
+{
+    if (!m_settings.showNotificationWhenDisabled()) {
+        return;
+    }
+
+    if (m_startup) {
+        QDBusInterface *klauncher = new QDBusInterface("org.kde.klauncher",
+                                                       "/KLauncher",
+                                                       QString(),
+                                                       QDBusConnection::sessionBus(),
+                                                       this);
+        if (klauncher->isValid()) {
+            if (connect(klauncher, SIGNAL(autoStart2Done()), SLOT(showNotification()))) {
+                return;
+            }
+        }
+    }
+
+    KNotification::event("TouchpadDisabled",
+                         i18n("Touchpad is disabled because mouse is "
+                              "detected"),
+                         QPixmap(),
+                         0,
+                         KNotification::CloseOnTimeout,
+                         TouchpadPluginFactory::componentData())
+            ->sendEvent();
 }

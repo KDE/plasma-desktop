@@ -51,6 +51,7 @@ private Q_SLOTS:
     void timerElapsed();
     void mousePlugged();
     void updateCurrentState();
+    void showNotification();
 
 private:
     void updateState();
@@ -62,6 +63,8 @@ private:
     TouchpadBackend::TouchpadState m_oldState, m_currentState,
     m_keyboardDisableState, m_mouseDisableState;
     bool m_keyboardActivity, m_mouse, m_disabledByMe;
+
+    bool m_startup;
 };
 
 #endif // KDED_H
