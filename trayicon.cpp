@@ -30,13 +30,8 @@
 K_EXPORT_PLASMA_APPLET(touchpad, TrayIcon)
 
 TrayIcon::TrayIcon(QObject *parent, const QVariantList &args)
-    : Plasma::Applet(parent, args), m_enabled(false)
+    : Plasma::Applet(parent, args), m_interface(0), m_enabled(false)
 {
-    m_interface = new OrgKdeTouchpadInterface("org.kde.kded",
-                                              "/modules/touchpad",
-                                              QDBusConnection::sessionBus(),
-                                              this);
-
     m_toggleAction = new KAction(i18n("Enable touchpad"), this);
     m_toggleAction->setCheckable(true);
 
@@ -63,6 +58,14 @@ void TrayIcon::mousePressEvent(QGraphicsSceneMouseEvent *event)
 void TrayIcon::init()
 {
     Applet::init();
+
+    QDBusInterface kded(QLatin1String("org.kde.kded"), QLatin1String("/kded"));
+    kded.call("loadModule", "touchpad");
+
+    m_interface = new OrgKdeTouchpadInterface("org.kde.kded",
+                                              "/modules/touchpad",
+                                              QDBusConnection::sessionBus(),
+                                              this);
 
     if (!m_interface->isValid()) {
         setFailedToLaunch(true, i18n("Can't connect to daemon"));
