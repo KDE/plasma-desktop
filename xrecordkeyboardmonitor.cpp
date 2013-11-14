@@ -56,6 +56,12 @@ XRecordKeyboardMonitor::XRecordKeyboardMonitor()
     for (xcb_keycode_t *i = modifiers; i < modifiers + nModifiers; i++) {
         m_modifier[*i] = true;
     }
+    m_ignore.fill(false, std::numeric_limits<xcb_keycode_t>::max() + 1);
+    for (xcb_keycode_t *i = modifiers;
+         i < modifiers + modmap->keycodes_per_modifier; i++)
+    {
+        m_ignore[*i] = true;
+    }
     m_pressed.fill(false, std::numeric_limits<xcb_keycode_t>::max() + 1);
 
     m_cookie = xcb_record_enable_context(m_connection, m_context);
@@ -110,6 +116,10 @@ void XRecordKeyboardMonitor::process(xcb_record_enable_context_reply_t *reply)
         if (e->response_type != XCB_KEY_PRESS &&
                 e->response_type != XCB_KEY_RELEASE)
         {
+            continue;
+        }
+
+        if (m_ignore[e->detail]) {
             continue;
         }
 
