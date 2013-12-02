@@ -18,6 +18,8 @@
 
 #include "kded.h"
 
+#include <QIcon>
+
 #include <KNotification>
 #include <KLocale>
 
@@ -74,6 +76,18 @@ TouchpadDisabler::TouchpadDisabler(QObject *parent, const QVariantList &)
     reloadSettings();
 
     m_startup = false;
+
+    m_confirmation.setWindowTitle(i18n("Touchpad"));
+    m_confirmation.setWindowIcon(QIcon::fromTheme("input-touchpad"));
+    m_confirmation.setText(i18n("No mouses are plugged in"));
+    m_confirmation.setInformativeText(i18n("Are you sure you want to disable touchpad?"));
+
+    m_confirmation.setStandardButtons(QMessageBox::Yes | QMessageBox::No);
+    m_confirmation.setDefaultButton(QMessageBox::No);
+    m_confirmation.setEscapeButton(QMessageBox::No);
+    m_confirmation.setIcon(QMessageBox::Warning);
+    connect(&m_confirmation, SIGNAL(finished(int)),
+            SLOT(confirmationFinished(int)));
 }
 
 bool TouchpadDisabler::isEnabled() const
@@ -96,6 +110,22 @@ void TouchpadDisabler::toggle()
                                               TouchpadBackend::TouchpadEnabled
                                               );
     updateCurrentState();
+}
+
+void TouchpadDisabler::safeToggle()
+{
+    if (isEnabled() && !m_backend->isMousePluggedIn()) {
+        m_confirmation.show();
+    } else {
+        toggle();
+    }
+}
+
+void TouchpadDisabler::confirmationFinished(int result)
+{
+    if (result == QMessageBox::Yes && isEnabled()) {
+        toggle();
+    }
 }
 
 void TouchpadDisabler::reloadSettings()

@@ -49,8 +49,8 @@ QList<QAction*> TrayIcon::contextualActions()
 
 void TrayIcon::mousePressEvent(QGraphicsSceneMouseEvent *event)
 {
-    if (event->button() == Qt::LeftButton) {
-        Q_EMIT activate();
+    if (event->button() == Qt::LeftButton && m_interface) {
+        m_interface->safeToggle();
     }
     Applet::mousePressEvent(event);
 }
@@ -80,7 +80,8 @@ void TrayIcon::init()
     setState(m_interface->isEnabled());
     connect(m_interface, SIGNAL(enabledChanged(bool)), SLOT(setState(bool)));
     connect(this, SIGNAL(activate()), m_interface, SLOT(toggle()));
-    connect(m_toggleAction, SIGNAL(triggered()), m_interface, SLOT(toggle()));
+    connect(m_toggleAction, SIGNAL(triggered()),
+            m_interface, SLOT(safeToggle()));
 }
 
 void TrayIcon::paintInterface(QPainter *painter,
