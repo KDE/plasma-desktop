@@ -47,6 +47,7 @@ static KAboutData buildAboutData()
     data.addCredit(ki18n("Thomas Pfeiffer"), ki18n("Testing"));
     data.addCredit(ki18n("Alex Fiestas"), ki18n("Helped a bit"));
     data.addCredit(ki18n("Peter Osterlund"), ki18n("Developer of synclient"));
+    data.addCredit(ki18n("Vadim Zaytsev"), ki18n("Testing"));
 
     return data;
 }
