@@ -57,16 +57,14 @@ private Q_SLOTS:
     void confirmationFinished(int);
 
 private:
-    void updateState();
-
     TouchpadBackend *m_backend;
     TouchpadDisablerSettings m_settings;
     QTimer m_enableTimer;
     QMessageBox m_confirmation;
 
-    TouchpadBackend::TouchpadState m_oldState, m_currentState,
-    m_keyboardDisableState, m_mouseDisableState;
-    bool m_keyboardActivity, m_mouse, m_disabledByMe;
+    TouchpadBackend::TouchpadState m_currentState, m_oldState, m_oldKbState,
+    m_keyboardDisableState;
+    bool m_keyboardActivity, m_mouse;
 
     bool m_startup;
 };
