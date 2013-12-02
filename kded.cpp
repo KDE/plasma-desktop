@@ -243,6 +243,5 @@ void TouchpadDisabler::showNotification()
                          QPixmap(),
                          0,
                          KNotification::CloseOnTimeout,
-                         TouchpadPluginFactory::componentData())
-            ->sendEvent();
+                         TouchpadPluginFactory::componentData());
 }
