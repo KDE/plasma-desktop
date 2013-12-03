@@ -93,6 +93,14 @@ ${KDE4_KDEUI_LIBS}
 ${KDE4_KUTILS_LIBS}
 )
 
+add_executable(kde-touchpad-list-input-devices listdevices.cpp)
+target_link_libraries(kde-touchpad-list-input-devices
+${X11_X11_LIB}
+${X11_Xinput_LIB}
+)
+install(TARGETS kde-touchpad-list-input-devices
+DESTINATION ${INSTALL_TARGETS_DEFAULT_ARGS})
+
 install(FILES touchpad.kcfg DESTINATION ${KCFG_INSTALL_DIR})
 install(FILES touchpaddaemon.kcfg DESTINATION ${KCFG_INSTALL_DIR})
 install(TARGETS kded_touchpad DESTINATION ${PLUGIN_INSTALL_DIR})
