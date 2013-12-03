@@ -70,7 +70,7 @@ private:
     xcb_connection_t *m_connection;
 
     XcbAtom m_floatType, m_capsAtom, m_enabledAtom, m_touchpadOffAtom,
-    m_mouseAtom;
+    m_mouseAtom, m_keyboardAtom;
 
     int findTouchpad();
     int m_device;

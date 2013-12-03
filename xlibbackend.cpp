@@ -157,6 +157,7 @@ XlibBackend::XlibBackend(QObject *parent) :
     m_enabledAtom.intern(m_connection, XI_PROP_ENABLED);
     m_touchpadOffAtom.intern(m_connection, SYNAPTICS_PROP_OFF);
     m_mouseAtom.intern(m_connection, XI_MOUSE);
+    m_keyboardAtom.intern(m_connection, XI_KEYBOARD);
     XcbAtom resolutionAtom(m_connection, SYNAPTICS_PROP_RESOLUTION);
 
     for (const Parameter *param = synapticsProperties; param->name; param++) {
@@ -597,11 +598,18 @@ bool XlibBackend::isMousePluggedIn()
     QScopedPointer<XDeviceInfo, DeviceListDeleter>
             info(XListInputDevices(m_display.data(), &nDevices));
     for (XDeviceInfo *i = info.data(); i != info.data() + nDevices; i++) {
-        if (i->id != static_cast<XID>(m_device) &&
-                i->type == m_mouseAtom.atom())
-        {
-            return true;
+        if (i->id == static_cast<XID>(m_device)) {
+            continue;
         }
+        if (i->use != IsXExtensionPointer && i->use != IsXPointer) {
+            continue;
+        }
+        //type = KEYBOARD && use = Pointer means usb receiver for both keyboard
+        //and mouse
+        if (i->type != m_mouseAtom.atom() && i->type != m_keyboardAtom.atom()) {
+            continue;
+        }
+        return true;
     }
 
     return false;
