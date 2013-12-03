@@ -10,6 +10,9 @@ set(TOUCHPAD_KCM_VERSION "0.1")
 configure_file(
 "${PROJECT_SOURCE_DIR}/version.h.cmake"
 "${PROJECT_BINARY_DIR}/version.h")
+configure_file(
+"${PROJECT_SOURCE_DIR}/touchpad-applet.desktop.cmake"
+"${PROJECT_BINARY_DIR}/touchpad-applet.desktop")
 
 find_package(X11 REQUIRED)
 find_package(X11_XCB REQUIRED)
@@ -101,7 +104,8 @@ DESTINATION ${DBUS_INTERFACES_INSTALL_DIR})
 install(FILES kcm_touchpad.notifyrc DESTINATION ${DATA_INSTALL_DIR}/kcm_touchpad)
 
 install(TARGETS touchpad_applet DESTINATION ${PLUGIN_INSTALL_DIR})
-install(FILES touchpad-applet.desktop DESTINATION ${SERVICES_INSTALL_DIR})
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/touchpad-applet.desktop
+DESTINATION ${SERVICES_INSTALL_DIR})
 install(FILES touchpad.svg DESTINATION ${DATA_INSTALL_DIR}/desktoptheme/default/icons)
 
 kde4_install_icons(${ICON_INSTALL_DIR})
