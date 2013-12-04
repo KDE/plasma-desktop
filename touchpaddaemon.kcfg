@@ -6,7 +6,7 @@
     <kcfgfile name="touchpaddaemonrc"/>
     <group name="autodisable">
         <entry name="DisableWhenMousePluggedIn" type="Bool">
-            <default>true</default>
+            <default>false</default>
         </entry>
         <entry name="ShowNotificationWhenDisabled" type="Bool">
             <default>true</default>
