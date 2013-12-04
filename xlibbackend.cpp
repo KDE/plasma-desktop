@@ -609,6 +609,10 @@ bool XlibBackend::isMousePluggedIn()
         if (i->type != m_mouseAtom.atom() && i->type != m_keyboardAtom.atom()) {
             continue;
         }
+        PropertyInfo enabled(m_display.data(), i->id, m_enabledAtom.atom(), 0);
+        if (enabled.value(0) == false) {
+            continue;
+        }
         return true;
     }
 
