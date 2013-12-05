@@ -57,6 +57,8 @@ private Q_SLOTS:
     void confirmationFinished(int);
 
 private:
+    bool isMousePluggedIn();
+
     TouchpadBackend *m_backend;
     TouchpadDisablerSettings m_settings;
     QTimer m_enableTimer;

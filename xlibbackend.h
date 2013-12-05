@@ -53,7 +53,7 @@ public:
 
     void watchForEvents(bool keyboard);
 
-    bool isMousePluggedIn();
+    QStringList listMouses(const QStringList &blacklist);
 
 private slots:
     void propertyChanged(xcb_atom_t);

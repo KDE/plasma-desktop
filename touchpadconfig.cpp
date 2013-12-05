@@ -267,6 +267,11 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
 
     m_backend = TouchpadBackend::self();
     disableChildren(this, m_config, m_backend->supportedParameters());
+
+    KComboBox *mouseCombo = new KComboBox(true, this);
+    mouseCombo->addItems(
+                m_backend->listMouses(m_daemonSettings.mouseBlacklist()));
+    m_sensitivity.kcfg_MouseBlacklist->setCustomEditor(mouseCombo);
 }
 
 void TouchpadConfig::save()

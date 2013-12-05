@@ -44,7 +44,7 @@ public:
     virtual void setTouchpadState(TouchpadState) = 0;
     virtual TouchpadState getTouchpadState() = 0;
 
-    virtual bool isMousePluggedIn() = 0;
+    virtual QStringList listMouses(const QStringList &blacklist) = 0;
 
     virtual void watchForEvents(bool keyboard) = 0;
 

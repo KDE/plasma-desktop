@@ -105,7 +105,7 @@ void TouchpadDisabler::toggle()
 
 void TouchpadDisabler::safeToggle()
 {
-    if (isEnabled() && !m_backend->isMousePluggedIn()) {
+    if (isEnabled() && !isMousePluggedIn()) {
         m_confirmation.show();
     } else {
         toggle();
@@ -171,8 +171,7 @@ void TouchpadDisabler::timerElapsed()
 void TouchpadDisabler::mousePlugged()
 {
     bool prev = m_mouse;
-    m_mouse = m_backend->isMousePluggedIn() &&
-            m_settings.disableWhenMousePluggedIn();
+    m_mouse = isMousePluggedIn() && m_settings.disableWhenMousePluggedIn();
 
     if (m_mouse == prev) {
         return;
@@ -229,4 +228,9 @@ void TouchpadDisabler::showNotification()
                          0,
                          KNotification::CloseOnTimeout,
                          TouchpadPluginFactory::componentData());
+}
+
+bool TouchpadDisabler::isMousePluggedIn()
+{
+    return !m_backend->listMouses(m_settings.mouseBlacklist()).isEmpty();
 }

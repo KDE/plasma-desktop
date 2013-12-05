@@ -592,11 +592,12 @@ struct DeviceListDeleter
     }
 };
 
-bool XlibBackend::isMousePluggedIn()
+QStringList XlibBackend::listMouses(const QStringList &blacklist)
 {
     int nDevices = 0;
     QScopedPointer<XDeviceInfo, DeviceListDeleter>
             info(XListInputDevices(m_display.data(), &nDevices));
+    QStringList list;
     for (XDeviceInfo *i = info.data(); i != info.data() + nDevices; i++) {
         if (i->id == static_cast<XID>(m_device)) {
             continue;
@@ -609,14 +610,18 @@ bool XlibBackend::isMousePluggedIn()
         if (i->type != m_mouseAtom.atom() && i->type != m_keyboardAtom.atom()) {
             continue;
         }
+        QString name(i->name);
+        if (blacklist.contains(name, Qt::CaseInsensitive)) {
+            continue;
+        }
         PropertyInfo enabled(m_display.data(), i->id, m_enabledAtom.atom(), 0);
         if (enabled.value(0) == false) {
             continue;
         }
-        return true;
+        list.append(name);
     }
 
-    return false;
+    return list;
 }
 
 void XlibBackend::watchForEvents(bool keyboard)

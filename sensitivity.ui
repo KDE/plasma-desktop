@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>471</height>
+    <width>430</width>
+    <height>567</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -156,28 +156,6 @@
     </widget>
    </item>
    <item>
-    <widget class="QGroupBox" name="kcfg_DisableWhenMousePluggedIn">
-     <property name="title">
-      <string>Disable touchpad when mouse is plugged in</string>
-     </property>
-     <property name="flat">
-      <bool>true</bool>
-     </property>
-     <property name="checkable">
-      <bool>true</bool>
-     </property>
-     <layout class="QVBoxLayout" name="verticalLayout_2">
-      <item>
-       <widget class="QCheckBox" name="kcfg_ShowNotificationWhenDisabled">
-        <property name="text">
-         <string>Show notification</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-   </item>
-   <item>
     <widget class="QGroupBox" name="kcfg_DisableOnKeyboardActivity">
      <property name="title">
       <string>Disable touchpad on keyboard activity</string>
@@ -236,6 +214,57 @@ number of milliseconds, touchpad will be enabled again</string>
     </widget>
    </item>
    <item>
+    <widget class="QGroupBox" name="kcfg_DisableWhenMousePluggedIn">
+     <property name="title">
+      <string>Disable touchpad when mouse is plugged in</string>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QCheckBox" name="kcfg_ShowNotificationWhenDisabled">
+        <property name="text">
+         <string>Show notification</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="verticalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>0</width>
+          <height>10</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="KEditListBox" name="kcfg_MouseBlacklist">
+        <property name="title">
+         <string>Ignore specific devices</string>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+        <property name="buttons">
+         <set>KEditListBox::Add|KEditListBox::Remove</set>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
     <spacer name="verticalSpacer">
      <property name="orientation">
       <enum>Qt::Vertical</enum>
@@ -252,6 +281,11 @@ number of milliseconds, touchpad will be enabled again</string>
  </widget>
  <customwidgets>
   <customwidget>
+   <class>KEditListBox</class>
+   <extends>QGroupBox</extends>
+   <header>keditlistbox.h</header>
+  </customwidget>
+  <customwidget>
    <class>KIntNumInput</class>
    <extends>QWidget</extends>
    <header>knuminput.h</header>
@@ -263,7 +297,6 @@ number of milliseconds, touchpad will be enabled again</string>
   <tabstop>kcfg_PalmDetect</tabstop>
   <tabstop>kcfg_PalmMinWidth</tabstop>
   <tabstop>kcfg_PalmMinZ</tabstop>
-  <tabstop>kcfg_DisableWhenMousePluggedIn</tabstop>
   <tabstop>kcfg_DisableOnKeyboardActivity</tabstop>
   <tabstop>kcfg_OnlyDisableTapAndScrollOnKeyboardActivity</tabstop>
   <tabstop>kcfg_KeyboardActivityTimeoutMs</tabstop>

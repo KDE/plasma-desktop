@@ -22,5 +22,8 @@
             <max>10000</max>
             <default>250</default>
         </entry>
+        <entry name="MouseBlacklist" type="StringList">
+            <default>TPPS/2 IBM TrackPoint,USB Trackpoint pointing device,DualPoint Stick,ThinkPad USB Keyboard with TrackPoint</default>
+        </entry>
     </group>
 </kcfg>
