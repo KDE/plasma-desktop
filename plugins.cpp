@@ -30,16 +30,15 @@ static KAboutData buildAboutData()
 {
     KAboutData data("kcm_touchpad",
                     QByteArray(),
-                    ki18n("Touchpad Settings"),
+                    ki18n("Touchpad KCM"),
                     TOUCHPAD_KCM_VERSION,
-                    ki18n("Touchpad configuration module for KDE"),
+                    ki18n("Control module, daemon and Plasma applet for managing your touchpad"),
                     KAboutData::License_GPL_V2,
                     ki18n("Copyright © 2013 Alexander Mezin"),
                     ki18n("This program incorporates work covered by this "
                           "copyright notice:\n"
                           "Copyright © 2002-2005,2007 Peter Osterlund"),
-                    "https://github.com/sanya-m/kde-touchpad-config",
-                    "mezin.alexander@gmail.com");
+                    "https://projects.kde.org/projects/playground/utils/kcm-touchpad/");
 
     data.addAuthor(ki18n("Alexander Mezin"),
                    ki18n("Developer"),
