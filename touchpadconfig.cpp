@@ -230,6 +230,8 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
     m_differentConfigsMessage->setMessageType(KMessageWidget::Warning);
     m_differentConfigsMessage->setVisible(false);
     layout->addWidget(m_differentConfigsMessage, 1, 0, 1, 2);
+    layout->setColumnStretch(0, 3);
+    layout->setColumnStretch(1, 1);
 
     KTabWidget *tabs = new KTabWidget(this);
 
