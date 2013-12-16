@@ -20,7 +20,7 @@
 
 #include <KGlobal>
 
-#include "xlibbackend.h"
+#include "backends/x11/xlibbackend.h"
 
 K_GLOBAL_STATIC(XlibBackend, backend)
 

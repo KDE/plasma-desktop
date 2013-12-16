@@ -21,9 +21,9 @@
 #include <KAboutData>
 #include <KPluginFactory>
 
-#include "touchpadconfig.h"
+#include "kcm/touchpadconfig.h"
 #include "touchpadbackend.h"
-#include "kded.h"
+#include "kded/kded.h"
 #include "version.h"
 
 static KAboutData buildAboutData()
