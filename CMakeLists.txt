@@ -96,12 +96,12 @@ target_link_libraries(touchpad_applet
                       ${KDE4_KUTILS_LIBS}
 )
 
-add_executable(kde-touchpad-list-input-devices listdevices.cpp)
-target_link_libraries(kde-touchpad-list-input-devices
+add_executable(kcm-touchpad-list-devices listdevices.cpp)
+target_link_libraries(kcm-touchpad-list-devices
                       ${X11_X11_LIB}
                       ${X11_Xinput_LIB}
 )
-install(TARGETS kde-touchpad-list-input-devices
+install(TARGETS kcm-touchpad-list-devices
         DESTINATION ${INSTALL_TARGETS_DEFAULT_ARGS}
 )
 
