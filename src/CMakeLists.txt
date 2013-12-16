@@ -22,7 +22,7 @@ set(SRCS
 )
 
 qt4_add_dbus_interfaces(SRCS
-                        ${PROJECT_BINARY_DIR}/org.kde.touchpad.xml
+                        ${CMAKE_CURRENT_BINARY_DIR}/org.kde.touchpad.xml
 )
 
 kde4_add_ui_files(SRCS
