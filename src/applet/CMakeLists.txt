@@ -6,8 +6,9 @@ set(Applet_SRCS
     trayicon.cpp
 )
 
+qt4_generate_dbus_interface(../kded/kded.h org.kde.touchpad.xml)
 qt4_add_dbus_interfaces(Applet_SRCS
-                        ${CMAKE_CURRENT_BINARY_DIR}/../org.kde.touchpad.xml
+                        ${CMAKE_CURRENT_BINARY_DIR}/org.kde.touchpad.xml
 )
 
 kde4_add_plugin(touchpad_applet ${Applet_SRCS})
