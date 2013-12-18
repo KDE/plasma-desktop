@@ -23,6 +23,7 @@
 #include <QScopedPointer>
 
 #include <KLocalizedString>
+#include <KDebug>
 
 //Includes are ordered this way because of #defines in Xorg's headers
 #include "xrecordkeyboardmonitor.h" // krazy:exclude=includes
@@ -545,9 +546,24 @@ void XlibBackend::setTouchpadState(TouchpadBackend::TouchpadState state)
         enabled.set();
     }
 
+    int touchpadOff = 0;
+    switch (state) {
+    case TouchpadEnabled:
+        touchpadOff = 0;
+        break;
+    case TouchpadFullyDisabled:
+        touchpadOff = 1;
+        break;
+    case TouchpadTapAndScrollDisabled:
+        touchpadOff = 2;
+        break;
+    default:
+        kError() << "Unknown TouchpadState" << state;
+    }
+
     PropertyInfo off(m_display.data(), m_device, m_touchpadOffAtom.atom(), 0);
-    if (off.b && *(off.b) != state) {
-        *(off.b) = static_cast<int>(state);
+    if (off.b && *(off.b) != touchpadOff) {
+        *(off.b) = touchpadOff;
         off.set();
     }
 
@@ -562,7 +578,17 @@ TouchpadBackend::TouchpadState XlibBackend::getTouchpadState()
     }
 
     PropertyInfo off(m_display.data(), m_device, m_touchpadOffAtom.atom(), 0);
-    return static_cast<TouchpadBackend::TouchpadState>(off.value(0).toInt());
+    switch (off.value(0).toInt()) {
+    case 0:
+        return TouchpadEnabled;
+    case 1:
+        return TouchpadFullyDisabled;
+    case 2:
+        return TouchpadTapAndScrollDisabled;
+    default:
+        kError() << "Unknown TouchpadOff value" << off.value(0).toInt();
+        return TouchpadFullyDisabled;
+    }
 }
 
 void XlibBackend::deviceChanged(int device)

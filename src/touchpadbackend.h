@@ -38,7 +38,7 @@ public:
     virtual const QString &errorString() const = 0;
 
     enum TouchpadState {
-        TouchpadEnabled, TouchpadFullyDisabled, TouchpadTapAndScrollDisabled
+        TouchpadEnabled, TouchpadTapAndScrollDisabled, TouchpadFullyDisabled
     };
     virtual void setTouchpadState(TouchpadState) = 0;
     virtual TouchpadState getTouchpadState() = 0;

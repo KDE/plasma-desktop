@@ -25,19 +25,6 @@
 
 #include "plugins.h"
 
-inline bool isDeeper(TouchpadBackend::TouchpadState a,
-                     TouchpadBackend::TouchpadState b)
-{
-    static const int deep[] = { 0, 2, 1 };
-    return deep[a] > deep[b];
-}
-
-inline TouchpadBackend::TouchpadState deeper(TouchpadBackend::TouchpadState a,
-                                             TouchpadBackend::TouchpadState b)
-{
-    return isDeeper(a, b) ? a : b;
-}
-
 bool TouchpadDisabler::workingTouchpadFound() const
 {
     return m_backend && !(m_backend->supportedParameters().isEmpty());
@@ -143,7 +130,7 @@ void TouchpadDisabler::keyboardActivityStarted()
     m_enableTimer.stop();
     m_keyboardActivity = true;
     m_oldKbState = m_currentState;
-    if (isDeeper(m_keyboardDisableState, m_currentState)) {
+    if (m_keyboardDisableState > m_currentState) {
         m_backend->setTouchpadState(m_keyboardDisableState);
         updateCurrentState();
     }
@@ -181,15 +168,15 @@ void TouchpadDisabler::mousePlugged()
                 TouchpadBackend::TouchpadFullyDisabled : m_oldState;
     if (m_mouse) {
         m_oldState = m_keyboardActivity ? m_currentState : m_oldKbState;
-        targetState = deeper(m_currentState, targetState);
-    } else if (isDeeper(targetState, m_currentState)) {
+        targetState = qMax(m_currentState, targetState);
+    } else if (targetState > m_currentState) {
         targetState = m_currentState;
     }
 
     m_oldKbState = targetState;
 
     if (!m_mouse && m_keyboardActivity) {
-        targetState = deeper(m_keyboardDisableState, targetState);
+        targetState = qMax(m_keyboardDisableState, targetState);
     }
 
     if (m_currentState != targetState) {
