@@ -4,11 +4,8 @@ configure_file("${CMAKE_CURRENT_SOURCE_DIR}/version.h.cmake"
 
 SET(SRCS
     plugins.cpp
-    touchpadparameters.cpp
     touchpadbackend.cpp
 )
-
-kde4_add_kcfg_files(SRCS touchpadparametersbase.kcfgc)
 
 include(backends/x11.cmake)
 
@@ -19,11 +16,14 @@ set(SRCS
     kcm/testarea.cpp
     kcm/testbutton.cpp
     kcm/touchpadconfig.cpp
+    kcm/touchpadparametersbase.cpp
 )
 
 qt4_add_dbus_interfaces(SRCS
                         ${CMAKE_CURRENT_BINARY_DIR}/org.kde.touchpad.xml
 )
+
+kde4_add_kcfg_files(SRCS kcm/touchpadparameters.kcfgc)
 
 kde4_add_ui_files(SRCS
                   kcm/ui/pointermotion.ui
@@ -38,7 +38,6 @@ qt4_generate_dbus_interface(kded/kded.h org.kde.touchpad.xml)
 SET(SRCS
     ${SRCS}
     kded/kded.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/org.kde.touchpad.xml
 )
 
 kde4_add_kcfg_files(SRCS kded/kdedsettings.kcfgc)
@@ -76,6 +75,6 @@ install(TARGETS kded_touchpad
         DESTINATION ${PLUGIN_INSTALL_DIR}
 )
 
-install(FILES touchpad.kcfg
+install(FILES kcm/touchpad.kcfg
         DESTINATION ${KCFG_INSTALL_DIR}
 )

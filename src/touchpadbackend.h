@@ -20,10 +20,9 @@
 #define TOUCHPADBACKEND_H
 
 #include <QObject>
+#include <QVariantHash>
 
 #include <kdemacros.h>
-
-class TouchpadParameters;
 
 class KDE_EXPORT TouchpadBackend : public QObject
 {
@@ -33,8 +32,8 @@ public:
 
     static TouchpadBackend *self();
 
-    virtual bool applyConfig(const TouchpadParameters *) = 0;
-    virtual bool getConfig(TouchpadParameters *) = 0;
+    virtual bool applyConfig(const QVariantHash &) = 0;
+    virtual bool getConfig(QVariantHash &) = 0;
     virtual const QStringList &supportedParameters() const = 0;
     virtual const QString &errorString() const = 0;
 

@@ -24,10 +24,10 @@
 
 #include <KLocalizedString>
 
-#include "touchpadparameters.h"
-
 //Includes are ordered this way because of #defines in Xorg's headers
+#include "xrecordkeyboardmonitor.h" // krazy:exclude=includes
 #include "xlibbackend.h" // krazy:exclude=includes
+#include "xlibnotifications.h" // krazy:exclude=includes
 
 #include <X11/Xlib-xcb.h>
 #include <X11/Xatom.h>
@@ -53,7 +53,7 @@ static void XIDeviceInfoDeleter(XIDeviceInfo *p)
     }
 }
 
-static void XDisplayDeleter(Display *p)
+void XlibBackend::XDisplayCleanup::cleanup(Display *p)
 {
     if (p) {
         XCloseDisplay(p);
@@ -140,7 +140,7 @@ XlibBackend::~XlibBackend()
 
 XlibBackend::XlibBackend(QObject *parent) :
     TouchpadBackend(parent),
-    m_display(XOpenDisplay(0), XDisplayDeleter), m_connection(0),
+    m_display(XOpenDisplay(0)), m_connection(0),
     m_resX(1), m_resY(1)
 {
     if (m_display) {
@@ -340,7 +340,7 @@ static QVariant negateVariant(const QVariant &value)
     return value;
 }
 
-bool XlibBackend::applyConfig(const TouchpadParameters *p)
+bool XlibBackend::applyConfig(const QVariantHash &p)
 {
     if (m_supported.isEmpty()) {
         return false;
@@ -350,13 +350,13 @@ bool XlibBackend::applyConfig(const TouchpadParameters *p)
 
     bool error = false;
     Q_FOREACH(const QString &name, m_supported) {
-        KConfigSkeletonItem *i = p->findItem(name);
-        if (!i) {
+        QVariantHash::ConstIterator i = p.find(name);
+        if (i == p.end()) {
             continue;
         }
         const Parameter *par = findParameter(name);
         if (par) {
-            QVariant value(i->property());
+            QVariant value(i.value());
 
             double k = getPropertyScale(name);
             if (k != 1.0) {
@@ -369,15 +369,17 @@ bool XlibBackend::applyConfig(const TouchpadParameters *p)
             }
 
             if (m_negate.contains(name)) {
-                KConfigSkeletonItem *i = p->findItem(m_negate[name]);
-                if (i && i->property().toBool()) {
+                QVariantHash::ConstIterator i = p.find(m_negate[name]);
+                if (i != p.end() && i.value().toBool()) {
                     value = negateVariant(value);
                 }
             }
 
             if (name == "CoastingSpeed") {
-                KConfigSkeletonItem *coastingEnabled = p->findItem("Coasting");
-                if (coastingEnabled && !coastingEnabled->property().toBool()) {
+                QVariantHash::ConstIterator coastingEnabled = p.find("Coasting");
+                if (coastingEnabled != p.end() &&
+                        !coastingEnabled.value().toBool())
+                {
                     value = QVariant(0);
                 }
             }
@@ -406,7 +408,7 @@ void XlibBackend::flush()
     XFlush(m_display.data());
 }
 
-bool XlibBackend::getConfig(TouchpadParameters *p)
+bool XlibBackend::getConfig(QVariantHash &p)
 {
     if (m_supported.isEmpty()) {
         return false;
@@ -438,10 +440,10 @@ bool XlibBackend::getConfig(TouchpadParameters *p)
         }
 
         if (m_negate.contains(name)) {
-            KConfigSkeletonItem *i = p->findItem(m_negate[name]);
-            if (i) {
+            QVariantHash::Iterator i = p.find(m_negate[name]);
+            if (i != p.end()) {
                 bool negative = value.toDouble() < 0.0;
-                i->setProperty(negative);
+                i.value() = negative;
                 if (negative) {
                     value = negateVariant(value);
                 }
@@ -449,19 +451,16 @@ bool XlibBackend::getConfig(TouchpadParameters *p)
         }
 
         if (name == "CoastingSpeed") {
-            KConfigSkeletonItem *coastingEnabled = p->findItem("Coasting");
-            if (coastingEnabled) {
-                coastingEnabled->setProperty(QVariant(value.toDouble() != 0.0));
-                if (!coastingEnabled->property().toBool()) {
+            QVariantHash::Iterator coastingEnabled = p.find("Coasting");
+            if (coastingEnabled != p.end()) {
+                coastingEnabled.value() = QVariant(value.toDouble() != 0.0);
+                if (!coastingEnabled.value().toBool()) {
                     continue;
                 }
             }
         }
 
-        KConfigSkeletonItem *i = p->findItem(name);
-        if (i) {
-            i->setProperty(value);
-        }
+        p[name] = value;
     }
 
     if (error) {
@@ -651,5 +650,3 @@ void XlibBackend::watchForEvents(bool keyboard)
     connect(m_keyboard.data(), SIGNAL(keyboardActivityFinished()),
             SIGNAL(keyboardActivityFinished()));
 }
-
-#include "moc_xlibbackend.cpp"

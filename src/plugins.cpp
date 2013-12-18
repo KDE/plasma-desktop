@@ -22,7 +22,6 @@
 #include <KPluginFactory>
 
 #include "kcm/touchpadconfig.h"
-#include "touchpadbackend.h"
 #include "kded/kded.h"
 #include "version.h"
 
@@ -56,24 +55,3 @@ K_PLUGIN_FACTORY_DEFINITION(TouchpadPluginFactory,
                             registerPlugin<TouchpadDisabler>();
                             registerPlugin<TouchpadConfig>("kcm");)
 K_EXPORT_PLUGIN(TouchpadPluginFactory(buildAboutData()))
-
-extern "C"
-{
-    KDE_EXPORT void kcminit_touchpad()
-    {
-        TouchpadBackend *backend = TouchpadBackend::self();
-
-        if (!backend) {
-            return;
-        }
-
-        {
-            TouchpadParameters active;
-            backend->getConfig(&active);
-            active.saveAsDefaults();
-        }
-
-        TouchpadParameters config;
-        backend->applyConfig(&config);
-    }
-}

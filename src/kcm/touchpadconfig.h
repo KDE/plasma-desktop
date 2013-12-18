@@ -45,7 +45,6 @@ public:
     virtual ~TouchpadConfig();
 
     virtual void save();
-    virtual void load();
 
 protected:
     virtual void showEvent(QShowEvent *ev);
@@ -57,17 +56,13 @@ private Q_SLOTS:
     void onChanged();
 
 private:
-    bool compareConfigs(const TouchpadParameters &a,
-                        const TouchpadParameters &b) const;
-
     TouchpadBackend *m_backend;
     TouchpadParameters m_config;
 
-    QScopedPointer<TouchpadParameters> m_prevConfig;
+    QScopedPointer<QVariantHash> m_prevConfig;
     KConfigDialogManager *m_manager;
-    bool m_configOutOfSync;
     TouchpadDisablerSettings m_daemonSettings;
-    KMessageWidget *m_errorMessage, *m_differentConfigsMessage;
+    KMessageWidget *m_errorMessage;
     TestArea *m_testArea;
 
     Ui::PointerMotionForm m_pointerMotion;

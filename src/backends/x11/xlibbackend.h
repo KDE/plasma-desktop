@@ -21,19 +21,20 @@
 
 #include <QMap>
 #include <QSet>
-#include <QSharedPointer>
 #include <QScopedPointer>
 #include <QLatin1String>
 #include <QStringList>
+#include <QSharedPointer>
+#include <QX11Info>
 
 #include "touchpadbackend.h"
-#include "xrecordkeyboardmonitor.h"
-#include "xlibnotifications.h"
 
-#include <X11/Xlib.h>
 #include <xcb/xcb.h>
 
 #include "xcbatom.h"
+
+class XlibNotifications;
+class XRecordKeyboardMonitor;
 
 class XlibBackend : public TouchpadBackend
 {
@@ -43,8 +44,8 @@ public:
     explicit XlibBackend(QObject *parent = 0);
     ~XlibBackend();
 
-    bool applyConfig(const TouchpadParameters *);
-    bool getConfig(TouchpadParameters *);
+    bool applyConfig(const QVariantHash &);
+    bool getConfig(QVariantHash &);
     const QStringList &supportedParameters() const { return m_supported; }
     const QString &errorString() const { return m_errorString; }
 
@@ -66,7 +67,11 @@ private:
     void flush();
     double getPropertyScale(const QString &name) const;
 
-    QSharedPointer<Display> m_display;
+    struct XDisplayCleanup {
+        static void cleanup(Display *);
+    };
+
+    QScopedPointer<Display, XDisplayCleanup> m_display;
     xcb_connection_t *m_connection;
 
     XcbAtom m_floatType, m_capsAtom, m_enabledAtom, m_touchpadOffAtom,

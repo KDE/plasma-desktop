@@ -36,6 +36,25 @@
 #include "plugins.h"
 #include "testarea.h"
 
+extern "C"
+{
+    KDE_EXPORT void kcminit_touchpad()
+    {
+        TouchpadBackend *backend = TouchpadBackend::self();
+
+        if (!backend) {
+            return;
+        }
+
+        QVariantHash current;
+        backend->getConfig(current);
+        TouchpadParameters::setSystemDefaults(current);
+
+        TouchpadParameters config;
+        backend->applyConfig(config.values());
+    }
+}
+
 static const QString kcfgPrefix("kcfg_");
 
 static QString getParameterName(QObject *widget)
@@ -48,9 +67,9 @@ static QString getParameterName(QObject *widget)
     return name;
 }
 
-static QString getWidgetName(KConfigSkeletonItem *i)
+static QString getWidgetName(const QString &i)
 {
-    return kcfgPrefix + i->name();
+    return kcfgPrefix + i;
 }
 
 static void disableChildren(QWidget *widget,
@@ -72,16 +91,19 @@ static void disableChildren(QWidget *widget,
 
 void TouchpadConfig::showEvent(QShowEvent *ev)
 {
-    if (!m_backend->getConfig(&m_config)) {
+    QVariantHash currentValues;
+    if (!m_backend->getConfig(currentValues)) {
         m_errorMessage->setText(m_backend->errorString());
         m_errorMessage->animatedShow();
     } else {
-        Q_FOREACH (KConfigSkeletonItem *i, m_config.items()) {
-            if (i->property().type() != QVariant::Double) {
+        for (QVariantHash::Iterator i = currentValues.begin();
+             i != currentValues.end(); i++)
+        {
+            if (i.value().type() != QVariant::Double) {
                 continue;
             }
 
-            QObject *widget = findChild<QObject*>(getWidgetName(i));
+            QObject *widget = findChild<QObject*>(getWidgetName(i.key()));
             if (!widget) {
                 continue;
             }
@@ -93,15 +115,10 @@ void TouchpadConfig::showEvent(QShowEvent *ev)
                 continue;
             }
 
-            i->setProperty(qRound(i->property().toDouble() * k) / k);
-        }
-
-        TouchpadParameters saved;
-        if (!compareConfigs(m_config, saved)) {
-            m_differentConfigsMessage->animatedShow();
-            m_configOutOfSync = true;
+            i.value() = qRound(i.value().toDouble() * k) / k;
         }
     }
+    m_config.setValues(currentValues);
 
     KCModule::showEvent(ev);
 }
@@ -150,31 +167,6 @@ static void fillWithChoices(QObject *widget, TouchpadParameters *config)
     }
 }
 
-static bool variantFuzzyCompare(const QVariant &a, const QVariant &b)
-{
-    if (a.type() == QVariant::Double && b.type() == QVariant::Double) {
-        return qFuzzyCompare(static_cast<float>(a.toDouble()),
-                             static_cast<float>(b.toDouble()));
-    }
-    return a == b;
-}
-
-bool TouchpadConfig::compareConfigs(const TouchpadParameters &a,
-                                    const TouchpadParameters &b) const
-{
-    Q_FOREACH(KConfigSkeletonItem *i, a.items()) {
-        if (!findChild<QWidget*>(getWidgetName(i))) {
-            continue;
-        }
-
-        KConfigSkeletonItem *j = b.findItem(i->name());
-        if (!j || !variantFuzzyCompare(i->property(), j->property())) {
-            return false;
-        }
-    }
-    return true;
-}
-
 static void copyHelpFromBuddy(QObject *root)
 {
     QLabel *asLabel = qobject_cast<QLabel*>(root);
@@ -212,8 +204,7 @@ void addTab(KTabWidget *tabs, T &form)
 }
 
 TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
-    : KCModule(TouchpadPluginFactory::componentData(), parent, args),
-      m_configOutOfSync(false)
+    : KCModule(TouchpadPluginFactory::componentData(), parent, args)
 {
     setAboutData(new KAboutData(*componentData().aboutData()));
 
@@ -224,12 +215,6 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
     m_errorMessage->setVisible(false);
     layout->addWidget(m_errorMessage, 0, 0, 1, 2);
 
-    m_differentConfigsMessage = new KMessageWidget(
-                i18n("Saved configuration differs from active configuration"),
-                this);
-    m_differentConfigsMessage->setMessageType(KMessageWidget::Warning);
-    m_differentConfigsMessage->setVisible(false);
-    layout->addWidget(m_differentConfigsMessage, 1, 0, 1, 2);
     layout->setColumnStretch(0, 3);
     layout->setColumnStretch(1, 1);
 
@@ -240,10 +225,10 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
     addTab(tabs, m_pointerMotion);
     addTab(tabs, m_sensitivity);
 
-    layout->addWidget(tabs, 2, 0, 1, 1);
+    layout->addWidget(tabs, 1, 0, 1, 1);
 
     m_testArea = new TestArea(this);
-    layout->addWidget(m_testArea, 2, 1);
+    layout->addWidget(m_testArea, 1, 1);
     connect(m_testArea, SIGNAL(enter()), SLOT(beginTesting()));
     connect(m_testArea, SIGNAL(leave()), SLOT(endTesting()));
     connect(this, SIGNAL(changed(bool)), SLOT(onChanged()));
@@ -280,10 +265,8 @@ void TouchpadConfig::save()
 {
     KCModule::save();
 
-    if (m_backend->applyConfig(&m_config)) {
+    if (m_backend->applyConfig(m_config.values())) {
         m_errorMessage->animatedHide();
-        m_differentConfigsMessage->animatedHide();
-        m_configOutOfSync = false;
     } else {
         m_errorMessage->setText(m_backend->errorString());
         m_errorMessage->animatedShow();
@@ -293,16 +276,6 @@ void TouchpadConfig::save()
     static const QString modulePath("/modules/touchpad");
     QDBusInterface daemonInterface(kded, modulePath);
     daemonInterface.call(QDBus::NoBlock, "reloadSettings");
-}
-
-void TouchpadConfig::load()
-{
-    KCModule::load();
-
-    if (m_configOutOfSync) {
-        m_config.loadFrom(m_config.config());
-        QTimer::singleShot(0, this, SLOT(changed()));
-    }
 }
 
 void TouchpadConfig::hideEvent(QHideEvent *e)
@@ -326,19 +299,18 @@ void TouchpadConfig::onChanged()
 void TouchpadConfig::beginTesting()
 {
     if (!m_prevConfig) {
-        m_prevConfig.reset(new TouchpadParameters());
-        m_backend->getConfig(m_prevConfig.data());
+        m_prevConfig.reset(new QVariantHash());
+        m_backend->getConfig(*m_prevConfig.data());
     }
 
-    TouchpadParameters oldConfig;
-    oldConfig.loadFrom(&m_config);
+    QVariantHash oldConfig(m_config.values());
     m_config.setTemporary(true);
 
     m_manager->updateSettings();
-    m_backend->applyConfig(&m_config);
+    m_backend->applyConfig(m_config.values());
 
     m_config.setTemporary(false);
-    m_config.loadFrom(&oldConfig);
+    m_config.setValues(oldConfig);
 }
 
 void TouchpadConfig::endTesting()
@@ -346,6 +318,6 @@ void TouchpadConfig::endTesting()
     if (!m_prevConfig) {
         return;
     }
-    m_backend->applyConfig(m_prevConfig.data());
+    m_backend->applyConfig(*m_prevConfig.data());
     m_prevConfig.reset();
 }
