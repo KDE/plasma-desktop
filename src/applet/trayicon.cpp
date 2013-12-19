@@ -114,6 +114,8 @@ void TrayIcon::setState(bool enabled)
 
     update();
 
+    //Short delay before marking applet as inactive.
+    //Isn't required, but looks nice
     QTimer::singleShot(m_enabled ? 1000 : 0, this, SLOT(updateStatus()));
 }
 
