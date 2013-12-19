@@ -21,6 +21,8 @@
 #include <QMouseEvent>
 #include <QTimer>
 
+#include <KLocalizedString>
+
 TestButton::TestButton(QWidget *parent)
     : QPushButton(parent), m_firstClick(true)
 {
@@ -35,13 +37,13 @@ void TestButton::mousePressEvent(QMouseEvent *e)
 
     switch (e->button()) {
     case Qt::LeftButton:
-        setText("Left button");
+        setText(i18n("Left button"));
         break;
     case Qt::RightButton:
-        setText("Right button");
+        setText(i18n("Right button"));
         break;
     case Qt::MiddleButton:
-        setText("Middle button");
+        setText(i18n("Middle button"));
         break;
     default:
         break;
