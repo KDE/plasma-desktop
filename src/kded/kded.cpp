@@ -21,6 +21,7 @@
 #include <KNotification>
 #include <KLocale>
 #include <KIcon>
+#include <klauncher_iface.h>
 
 #include "plugins.h"
 
@@ -195,11 +196,11 @@ void TouchpadDisabler::showNotification()
     }
 
     if (m_startup) {
-        QDBusInterface *klauncher = new QDBusInterface("org.kde.klauncher",
-                                                       "/KLauncher",
-                                                       QString(),
-                                                       QDBusConnection::sessionBus(),
-                                                       this);
+        //Don't show ugly notification on top of splash screen
+        //Delay it until startup is finished
+        org::kde::KLauncher *klauncher =
+                new org::kde::KLauncher("org.kde.klauncher", "/KLauncher",
+                                        QDBusConnection::sessionBus(), this);
         if (klauncher->isValid()) {
             if (connect(klauncher, SIGNAL(autoStart2Done()), SLOT(showNotification()))) {
                 return;
