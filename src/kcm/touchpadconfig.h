@@ -34,6 +34,7 @@
 
 class TouchpadBackend;
 class KMessageWidget;
+class OrgKdeTouchpadInterface;
 
 class TouchpadConfig : public KCModule
 {
@@ -64,6 +65,7 @@ private:
     TouchpadDisablerSettings m_daemonSettings;
     KMessageWidget *m_errorMessage;
     TestArea *m_testArea;
+    OrgKdeTouchpadInterface *m_daemon;
 
     Ui::PointerMotionForm m_pointerMotion;
     Ui::TapForm m_tapping;

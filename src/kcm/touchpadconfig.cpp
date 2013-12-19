@@ -35,6 +35,7 @@
 #include "touchpadbackend.h"
 #include "plugins.h"
 #include "testarea.h"
+#include "touchpadinterface.h"
 
 extern "C"
 {
@@ -259,6 +260,9 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
     mouseCombo->addItems(
                 m_backend->listMouses(m_daemonSettings.mouseBlacklist()));
     m_sensitivity.kcfg_MouseBlacklist->setCustomEditor(mouseCombo);
+
+    m_daemon = new OrgKdeTouchpadInterface("org.kde.kded", "/modules/touchpad",
+                                           QDBusConnection::sessionBus(), this);
 }
 
 void TouchpadConfig::save()
@@ -272,10 +276,7 @@ void TouchpadConfig::save()
         m_errorMessage->animatedShow();
     }
 
-    static const QString kded("org.kde.kded");
-    static const QString modulePath("/modules/touchpad");
-    QDBusInterface daemonInterface(kded, modulePath);
-    daemonInterface.call(QDBus::NoBlock, "reloadSettings");
+    m_daemon->reloadSettings();
 }
 
 void TouchpadConfig::hideEvent(QHideEvent *e)
