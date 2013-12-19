@@ -18,10 +18,9 @@
 
 #include "kded.h"
 
-#include <QIcon>
-
 #include <KNotification>
 #include <KLocale>
+#include <KIcon>
 
 #include "plugins.h"
 
@@ -57,7 +56,7 @@ TouchpadDisabler::TouchpadDisabler(QObject *parent, const QVariantList &)
     m_startup = false;
 
     m_confirmation.setWindowTitle(i18n("Touchpad"));
-    m_confirmation.setWindowIcon(QIcon::fromTheme("input-touchpad"));
+    m_confirmation.setWindowIcon(KIcon("input-touchpad"));
     m_confirmation.setText(i18n("No mouses are plugged in"));
     m_confirmation.setInformativeText(i18n("Are you sure you want to disable touchpad?"));
 
