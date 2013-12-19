@@ -61,7 +61,7 @@ private:
 
     TouchpadBackend *m_backend;
     TouchpadDisablerSettings m_settings;
-    QTimer m_enableTimer;
+    QTimer m_keyboardActivityTimeout;
     QMessageBox m_confirmation;
 
     TouchpadBackend::TouchpadState m_currentState, m_oldState, m_oldKbState,

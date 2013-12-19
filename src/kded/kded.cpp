@@ -48,8 +48,9 @@ TouchpadDisabler::TouchpadDisabler(QObject *parent, const QVariantList &)
     connect(m_backend, SIGNAL(touchpadStateChanged()),
             SLOT(updateCurrentState()));
 
-    m_enableTimer.setSingleShot(true);
-    connect(&m_enableTimer, SIGNAL(timeout()), SLOT(timerElapsed()));
+    m_keyboardActivityTimeout.setSingleShot(true);
+    connect(&m_keyboardActivityTimeout, SIGNAL(timeout()),
+            SLOT(timerElapsed()));
 
     updateCurrentState();
     reloadSettings();
@@ -109,7 +110,8 @@ void TouchpadDisabler::confirmationFinished(int result)
 void TouchpadDisabler::reloadSettings()
 {
     m_settings.readConfig();
-    m_enableTimer.setInterval(m_settings.keyboardActivityTimeoutMs());
+    m_keyboardActivityTimeout.setInterval(
+                m_settings.keyboardActivityTimeoutMs());
 
     m_keyboardDisableState =
             m_settings.onlyDisableTapAndScrollOnKeyboardActivity() ?
@@ -127,7 +129,7 @@ void TouchpadDisabler::keyboardActivityStarted()
         return;
     }
 
-    m_enableTimer.stop();
+    m_keyboardActivityTimeout.stop();
     m_keyboardActivity = true;
     m_oldKbState = m_currentState;
     if (m_keyboardDisableState > m_currentState) {
@@ -141,7 +143,7 @@ void TouchpadDisabler::keyboardActivityFinished()
     if (!m_keyboardActivity) {
         keyboardActivityStarted();
     }
-    m_enableTimer.start();
+    m_keyboardActivityTimeout.start();
 }
 
 void TouchpadDisabler::timerElapsed()
