@@ -15,42 +15,33 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
+#ifndef TOUCHPADENGINE_H
+#define TOUCHPADENGINE_H
 
-#ifndef TRAYICON_H
-#define TRAYICON_H
+#include <Plasma/DataEngine>
 
-#include <KAction>
+class OrgKdeTouchpadInterface;
 
-#include <Plasma/Applet>
-#include <Plasma/Svg>
-
-#include "touchpadinterface.h"
-
-class TrayIcon : public Plasma::Applet
+class TouchpadEngine : public Plasma::DataEngine
 {
     Q_OBJECT
-public:
-    TrayIcon(QObject *, const QVariantList &);
 
-    void init();
-    void paintInterface(QPainter *painter,
-                        const QStyleOptionGraphicsItem *option,
-                        const QRect &contentsRect);
-    QList<QAction*> contextualActions();
+public:
+    TouchpadEngine(QObject *parent, const QVariantList &args);
+    ~TouchpadEngine();
+
+    Plasma::Service *serviceForSource(const QString &source);
 
 protected:
-    void createConfigurationInterface(KConfigDialog *parent);
-    void mousePressEvent(QGraphicsSceneMouseEvent *event);
+    void init();
 
 private Q_SLOTS:
-    void setState(bool);
-    void updateStatus();
+    void mousePluggedInChanged(bool);
+    void enabledChanged(bool);
 
 private:
-    OrgKdeTouchpadInterface *m_interface;
-    Plasma::Svg *m_touchpadIcon;
-    KAction *m_toggleAction;
-    bool m_enabled;
+    QString m_source;
+    OrgKdeTouchpadInterface *m_daemon;
 };
 
-#endif // TRAYICON_H
+#endif // TOUCHPADENGINE_H

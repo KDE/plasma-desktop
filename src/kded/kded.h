@@ -21,7 +21,6 @@
 
 #include <QVariantList>
 #include <QTimer>
-#include <QMessageBox>
 #include <QtDBus>
 
 #include <KDEDModule>
@@ -39,13 +38,14 @@ public:
 
 Q_SIGNALS:
     Q_SCRIPTABLE void enabledChanged(bool);
+    Q_SCRIPTABLE void mousePluggedInChanged(bool);
 
 public Q_SLOTS:
     Q_SCRIPTABLE Q_NOREPLY void reloadSettings();
     Q_SCRIPTABLE Q_NOREPLY void toggle();
-    Q_SCRIPTABLE Q_NOREPLY void safeToggle();
     Q_SCRIPTABLE bool isEnabled() const;
     Q_SCRIPTABLE bool workingTouchpadFound() const;
+    Q_SCRIPTABLE bool isMousePluggedIn() const;
 
 private Q_SLOTS:
     void keyboardActivityStarted();
@@ -54,15 +54,11 @@ private Q_SLOTS:
     void mousePlugged();
     void updateCurrentState();
     void showNotification();
-    void confirmationFinished(int);
 
 private:
-    bool isMousePluggedIn();
-
     TouchpadBackend *m_backend;
     TouchpadDisablerSettings m_settings;
     QTimer m_keyboardActivityTimeout;
-    QMessageBox m_confirmation;
 
     TouchpadBackend::TouchpadState m_currentState, m_oldState, m_oldKbState,
     m_keyboardDisableState;

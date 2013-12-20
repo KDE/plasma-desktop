@@ -1,0 +1,23 @@
+[Desktop Entry]
+Comment=Shows current touchpad state
+Encoding=UTF-8
+Icon=input-touchpad
+Keywords=Touchpad
+Name=Touchpad
+Type=Service
+X-KDE-ParentApp=
+X-KDE-PluginInfo-Author=Alexander Mezin
+X-KDE-PluginInfo-Category=System Information
+X-KDE-PluginInfo-Email=mezin.alexander@gmail.com
+X-KDE-PluginInfo-EnabledByDefault=true
+X-KDE-PluginInfo-License=GPL
+X-KDE-PluginInfo-Name=touchpad
+X-KDE-PluginInfo-Version=@TOUCHPAD_KCM_VERSION@
+X-KDE-PluginInfo-Website=https://projects.kde.org/projects/playground/utils/kcm-touchpad/
+X-KDE-ServiceTypes=Plasma/Applet
+X-Plasma-API=declarativeappletscript
+X-Plasma-ConfigPlugins=kcm_touchpad
+X-Plasma-DefaultSize=32,32
+X-Plasma-MainScript=ui/touchpad.qml
+X-Plasma-NotificationArea=true
+X-Plasma-RemoteLocation=

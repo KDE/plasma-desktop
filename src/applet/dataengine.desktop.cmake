@@ -1,19 +1,18 @@
 [Desktop Entry]
-Name=Touchpad
-Comment=Enable or disable touchpad
+Name=Touchpad DataEngine
 Icon=input-touchpad
 Type=Service
 
-X-KDE-ServiceTypes=Plasma/Applet
-X-KDE-Library=touchpad_applet
+X-KDE-ServiceTypes=Plasma/DataEngine
+X-KDE-Library=plasma_engine_touchpad
 X-KDE-PluginInfo-Name=touchpad
 X-KDE-PluginInfo-Category=System Information
 X-KDE-PluginInfo-Author=Alexander Mezin
 X-KDE-PluginInfo-Email=mezin.alexander@gmail.com
 X-KDE-PluginInfo-Version=@TOUCHPAD_KCM_VERSION@
-X-KDE-PluginInfo-Website=https://github.com/sanya-m/kde-touchpad-config/
+X-KDE-PluginInfo-Website=https://projects.kde.org/projects/playground/utils/kcm-touchpad/
 X-KDE-PluginInfo-Depends=
 X-KDE-PluginInfo-License=GPL
 X-KDE-PluginInfo-EnabledByDefault=true
 
-X-Plasma-NotificationArea=true
+X-Plasma-EngineName=touchpad

@@ -20,7 +20,6 @@
 
 #include <KNotification>
 #include <KLocale>
-#include <KIcon>
 #include <klauncher_iface.h>
 
 #include "plugins.h"
@@ -56,18 +55,6 @@ TouchpadDisabler::TouchpadDisabler(QObject *parent, const QVariantList &)
     reloadSettings();
 
     m_startup = false;
-
-    m_confirmation.setWindowTitle(i18n("Touchpad"));
-    m_confirmation.setWindowIcon(KIcon("input-touchpad"));
-    m_confirmation.setText(i18n("No mouses are plugged in"));
-    m_confirmation.setInformativeText(i18n("Are you sure you want to disable touchpad?"));
-
-    m_confirmation.setStandardButtons(QMessageBox::Yes | QMessageBox::No);
-    m_confirmation.setDefaultButton(QMessageBox::No);
-    m_confirmation.setEscapeButton(QMessageBox::No);
-    m_confirmation.setIcon(QMessageBox::Warning);
-    connect(&m_confirmation, SIGNAL(finished(int)),
-            SLOT(confirmationFinished(int)));
 }
 
 bool TouchpadDisabler::isEnabled() const
@@ -89,22 +76,6 @@ void TouchpadDisabler::toggle()
     m_backend->setTouchpadState(isEnabled() ? TouchpadBackend::TouchpadFullyDisabled :
                                               TouchpadBackend::TouchpadEnabled
                                               );
-}
-
-void TouchpadDisabler::safeToggle()
-{
-    if (isEnabled() && !isMousePluggedIn()) {
-        m_confirmation.show();
-    } else {
-        toggle();
-    }
-}
-
-void TouchpadDisabler::confirmationFinished(int result)
-{
-    if (result == QMessageBox::Yes && isEnabled()) {
-        toggle();
-    }
 }
 
 void TouchpadDisabler::reloadSettings()
@@ -159,8 +130,11 @@ void TouchpadDisabler::timerElapsed()
 
 void TouchpadDisabler::mousePlugged()
 {
+    bool pluggedIn = isMousePluggedIn();
+    Q_EMIT mousePluggedInChanged(pluggedIn);
+
     bool prev = m_mouse;
-    m_mouse = isMousePluggedIn() && m_settings.disableWhenMousePluggedIn();
+    m_mouse = pluggedIn && m_settings.disableWhenMousePluggedIn();
 
     if (m_mouse == prev) {
         return;
@@ -219,7 +193,7 @@ void TouchpadDisabler::showNotification()
                          TouchpadPluginFactory::componentData());
 }
 
-bool TouchpadDisabler::isMousePluggedIn()
+bool TouchpadDisabler::isMousePluggedIn() const
 {
     return !m_backend->listMouses(m_settings.mouseBlacklist()).isEmpty();
 }
