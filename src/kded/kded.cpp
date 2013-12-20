@@ -59,7 +59,7 @@ TouchpadDisabler::TouchpadDisabler(QObject *parent, const QVariantList &)
 
 bool TouchpadDisabler::isEnabled() const
 {
-    return m_currentState == TouchpadBackend::TouchpadEnabled;
+    return m_currentState != TouchpadBackend::TouchpadFullyDisabled;
 }
 
 void TouchpadDisabler::updateCurrentState()
