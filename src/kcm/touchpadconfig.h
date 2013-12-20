@@ -48,7 +48,6 @@ public:
     virtual void save();
 
 protected:
-    virtual void showEvent(QShowEvent *ev);
     virtual void hideEvent(QHideEvent *);
 
 private Q_SLOTS:

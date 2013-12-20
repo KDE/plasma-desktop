@@ -68,11 +68,6 @@ static QString getParameterName(QObject *widget)
     return name;
 }
 
-static QString getWidgetName(const QString &i)
-{
-    return kcfgPrefix + i;
-}
-
 static void disableChildren(QWidget *widget,
                             const TouchpadParameters &p,
                             const QStringList &except)
@@ -88,40 +83,6 @@ static void disableChildren(QWidget *widget,
             disableChildren(childWidget, p, except);
         }
     }
-}
-
-void TouchpadConfig::showEvent(QShowEvent *ev)
-{
-    QVariantHash currentValues;
-    if (!m_backend->getConfig(currentValues)) {
-        m_errorMessage->setText(m_backend->errorString());
-        m_errorMessage->animatedShow();
-    } else {
-        for (QVariantHash::Iterator i = currentValues.begin();
-             i != currentValues.end(); i++)
-        {
-            if (i.value().type() != QVariant::Double) {
-                continue;
-            }
-
-            QObject *widget = findChild<QObject*>(getWidgetName(i.key()));
-            if (!widget) {
-                continue;
-            }
-
-            QVariant decimals = widget->property("decimals");
-            bool ok = false;
-            double k = std::pow(10.0, decimals.toInt(&ok));
-            if (!decimals.isValid() || !ok) {
-                continue;
-            }
-
-            i.value() = qRound(i.value().toDouble() * k) / k;
-        }
-    }
-    m_config.setValues(currentValues);
-
-    KCModule::showEvent(ev);
 }
 
 static void fillWithChoicesWidget(QObject *widget, TouchpadParameters *config)
