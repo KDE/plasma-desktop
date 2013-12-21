@@ -29,10 +29,6 @@ public:
     TouchpadParametersBase(const QString &configname = QString(),
                            QObject *parent = 0);
 
-    void setTemporary(bool);
-
-    void writeConfig();
-
     QVariantHash values() const;
     void setValues(const QVariantHash &);
 

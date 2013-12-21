@@ -17,6 +17,7 @@ set(SRCS
     kcm/testbutton.cpp
     kcm/touchpadconfig.cpp
     kcm/touchpadparametersbase.cpp
+    kcm/customconfigdialogmanager.cpp
 )
 
 qt4_add_dbus_interfaces(SRCS

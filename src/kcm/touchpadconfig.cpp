@@ -18,16 +18,12 @@
 
 #include "touchpadconfig.h"
 
-#include <cmath>
-
 #include <QScrollArea>
-#include <QTimer>
 #include <QDBusInterface>
 
 #include <KAboutData>
 #include <KLocalizedString>
 #include <KMessageWidget>
-#include <KConfigDialogManager>
 #include <KTabWidget>
 
 #include "customslider.h"
@@ -36,6 +32,7 @@
 #include "plugins.h"
 #include "testarea.h"
 #include "touchpadinterface.h"
+#include "customconfigdialogmanager.h"
 
 extern "C"
 {
@@ -53,79 +50,6 @@ extern "C"
 
         TouchpadParameters config;
         backend->applyConfig(config.values());
-    }
-}
-
-static const QString kcfgPrefix("kcfg_");
-
-static QString getParameterName(QObject *widget)
-{
-    QString name(widget->objectName());
-    if (!name.startsWith(kcfgPrefix)) {
-        return QString();
-    }
-    name.remove(0, kcfgPrefix.length());
-    return name;
-}
-
-static void disableChildren(QWidget *widget,
-                            const TouchpadParameters &p,
-                            const QStringList &except)
-{
-    QString name(getParameterName(widget));
-    if (!name.isEmpty() && p.findItem(name) && !except.contains(name)) {
-        widget->setEnabled(false);
-    }
-
-    Q_FOREACH(QObject *child, widget->children()) {
-        QWidget *childWidget = qobject_cast<QWidget *>(child);
-        if (childWidget) {
-            disableChildren(childWidget, p, except);
-        }
-    }
-}
-
-static void fillWithChoicesWidget(QObject *widget, TouchpadParameters *config)
-{
-    QString name(getParameterName(widget));
-    if (name.isEmpty()) {
-        return;
-    }
-    KConfigSkeletonItem *item = config->findItem(name);
-    if (!item) {
-        return;
-    }
-    KCoreConfigSkeleton::ItemEnum *e =
-            dynamic_cast<KCoreConfigSkeleton::ItemEnum *>(item);
-    if (!e) {
-        return;
-    }
-
-    QStringList choiceList;
-    Q_FOREACH(const KCoreConfigSkeleton::ItemEnum::Choice &c, e->choices()) {
-        if (c.label.isEmpty()) {
-            choiceList.append(c.name);
-        } else {
-            choiceList.append(c.label);
-        }
-    }
-
-    KComboBox *box = qobject_cast<KComboBox *>(widget);
-    if (box) {
-        box->addItems(choiceList);
-    }
-}
-
-static void fillWithChoices(QObject *widget, TouchpadParameters *config)
-{
-    if (!widget) {
-        return;
-    }
-
-    fillWithChoicesWidget(widget, config);
-
-    Q_FOREACH(QObject *child, widget->children()) {
-        fillWithChoices(child, config);
     }
 }
 
@@ -207,15 +131,14 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
     new SliderPair(m_pointerMotion.kcfg_PressureMotionMinZ,
                    m_pointerMotion.kcfg_PressureMotionMaxZ, this);
 
-    fillWithChoices(this, &m_config);
+    m_backend = TouchpadBackend::self();
 
     KConfigDialogManager::changedMap()->insert("CustomSlider",
                                                SIGNAL(valueChanged(double)));
-    m_manager = addConfig(&m_config, this);
+    m_manager = new CustomConfigDialogManager(this, &m_config,
+                                              m_backend->supportedParameters());
+    connect(m_manager, SIGNAL(widgetModified()), SLOT(checkChanges()));
     addConfig(&m_daemonSettings, this);
-
-    m_backend = TouchpadBackend::self();
-    disableChildren(this, m_config, m_backend->supportedParameters());
 
     KComboBox *mouseCombo = new KComboBox(true, this);
     mouseCombo->addItems(
@@ -226,8 +149,17 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
                                            QDBusConnection::sessionBus(), this);
 }
 
+void TouchpadConfig::load()
+{
+    m_manager->updateWidgets();
+
+    KCModule::load();
+}
+
 void TouchpadConfig::save()
 {
+    m_manager->updateSettings();
+
     KCModule::save();
 
     if (m_backend->applyConfig(m_config.values())) {
@@ -238,6 +170,18 @@ void TouchpadConfig::save()
     }
 
     m_daemon->reloadSettings();
+}
+
+void TouchpadConfig::defaults()
+{
+    m_manager->updateWidgetsDefault();
+
+    KCModule::defaults();
+}
+
+void TouchpadConfig::checkChanges()
+{
+    unmanagedWidgetChangeState(m_manager->hasChanged());
 }
 
 void TouchpadConfig::hideEvent(QHideEvent *e)
@@ -264,15 +208,7 @@ void TouchpadConfig::beginTesting()
         m_prevConfig.reset(new QVariantHash());
         m_backend->getConfig(*m_prevConfig.data());
     }
-
-    QVariantHash oldConfig(m_config.values());
-    m_config.setTemporary(true);
-
-    m_manager->updateSettings();
-    m_backend->applyConfig(m_config.values());
-
-    m_config.setTemporary(false);
-    m_config.setValues(oldConfig);
+    m_backend->applyConfig(m_manager->currentWidgetProperties());
 }
 
 void TouchpadConfig::endTesting()

@@ -34,20 +34,8 @@ KConfigGroup &systemDefaults()
 
 TouchpadParametersBase::TouchpadParametersBase(const QString &configname,
                                                QObject *parent)
-    : KCoreConfigSkeleton(configname, parent), m_temporary(false)
+    : KCoreConfigSkeleton(configname, parent)
 {
-}
-
-void TouchpadParametersBase::setTemporary(bool v)
-{
-    m_temporary = v;
-}
-
-void TouchpadParametersBase::writeConfig()
-{
-    if (!m_temporary) {
-        KCoreConfigSkeleton::writeConfig();
-    }
 }
 
 QVariantHash TouchpadParametersBase::values() const

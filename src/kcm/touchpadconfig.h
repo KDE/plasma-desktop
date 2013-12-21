@@ -35,6 +35,7 @@
 class TouchpadBackend;
 class KMessageWidget;
 class OrgKdeTouchpadInterface;
+class CustomConfigDialogManager;
 
 class TouchpadConfig : public KCModule
 {
@@ -45,7 +46,9 @@ public:
                             const QVariantList &args = QVariantList());
     virtual ~TouchpadConfig();
 
+    virtual void load();
     virtual void save();
+    virtual void defaults();
 
 protected:
     virtual void hideEvent(QHideEvent *);
@@ -54,13 +57,14 @@ private Q_SLOTS:
     void beginTesting();
     void endTesting();
     void onChanged();
+    void checkChanges();
 
 private:
     TouchpadBackend *m_backend;
     TouchpadParameters m_config;
 
     QScopedPointer<QVariantHash> m_prevConfig;
-    KConfigDialogManager *m_manager;
+    CustomConfigDialogManager *m_manager;
     TouchpadDisablerSettings m_daemonSettings;
     KMessageWidget *m_errorMessage;
     TestArea *m_testArea;
