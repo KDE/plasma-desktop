@@ -124,7 +124,7 @@ void TouchpadDisabler::timerElapsed()
     }
 
     m_keyboardActivity = false;
-    m_backend->setTouchpadState(m_oldKbState);
+    m_backend->setTouchpadState(qMin(m_currentState, m_oldKbState));
     updateCurrentState();
 }
 
