@@ -47,6 +47,9 @@ Item {
 
             icon.elementId = data.enabled ? "touchpad_enabled"
                                           : "touchpad_disabled"
+
+            plasmoid.setAction("toggle", data.enabled ? i18n("Disable touchpad")
+                                                      : i18n("Enable touchpad"))
         }
     }
 
@@ -100,7 +103,7 @@ Item {
         enabled: hasTouchpad
     }
 
-    function safeToggle() {
+    function action_toggle() {
         if (!mouse && enabled) {
             confirmDialog.open()
             return
