@@ -99,7 +99,7 @@ Item {
 
     MouseArea {
         anchors.fill: parent
-        onClicked: safeToggle()
+        onClicked: action_toggle()
         enabled: hasTouchpad
     }
 
