@@ -26,8 +26,8 @@
 class TouchpadParametersBase : public KCoreConfigSkeleton
 {
 public:
-    TouchpadParametersBase(const QString &configname = QString(),
-                           QObject *parent = 0);
+    explicit TouchpadParametersBase(const QString &configname = QString(),
+                                    QObject *parent = 0);
 
     QVariantHash values() const;
     void setValues(const QVariantHash &);

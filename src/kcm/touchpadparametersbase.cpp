@@ -49,7 +49,7 @@ QVariantHash TouchpadParametersBase::values() const
 
 void TouchpadParametersBase::setValues(const QVariantHash &v)
 {
-    for (QVariantHash::ConstIterator i = v.begin(); i != v.end(); i++) {
+    for (QVariantHash::ConstIterator i = v.begin(); i != v.end(); ++i) {
         KConfigSkeletonItem *j = findItem(i.key());
         if (j) {
             j->setProperty(i.value());
@@ -59,7 +59,7 @@ void TouchpadParametersBase::setValues(const QVariantHash &v)
 
 void TouchpadParametersBase::setSystemDefaults(const QVariantHash &v)
 {
-    for (QVariantHash::ConstIterator i = v.begin(); i != v.end(); i++) {
+    for (QVariantHash::ConstIterator i = v.begin(); i != v.end(); ++i) {
         systemDefaults().writeEntry(i.key(), i.value());
     }
     systemDefaults().sync();

@@ -77,7 +77,7 @@ QVariantHash CustomConfigDialogManager::currentWidgetProperties() const
 {
     QVariantHash r;
     for (QMap<QString, QWidget *>::ConstIterator i = m_widgets.begin();
-         i != m_widgets.end(); i++)
+         i != m_widgets.end(); ++i)
     {
         r[i.key()] = property(i.value());
     }
@@ -86,7 +86,7 @@ QVariantHash CustomConfigDialogManager::currentWidgetProperties() const
 
 void CustomConfigDialogManager::setWidgetProperties(const QVariantHash &p)
 {
-    for (QVariantHash::ConstIterator i = p.begin(); i != p.end(); i++) {
+    for (QVariantHash::ConstIterator i = p.begin(); i != p.end(); ++i) {
         QMap<QString, QWidget *>::ConstIterator j = m_widgets.find(i.key());
         if (j != m_widgets.end()) {
             setProperty(j.value(), i.value());
@@ -102,7 +102,7 @@ static bool variantFuzzyCompare(const QVariant &a, const QVariant &b)
 
 bool CustomConfigDialogManager::compareWidgetProperties(const QVariantHash &p) const
 {
-    for (QVariantHash::ConstIterator i = p.begin(); i != p.end(); i++) {
+    for (QVariantHash::ConstIterator i = p.begin(); i != p.end(); ++i) {
         QMap<QString, QWidget *>::ConstIterator j = m_widgets.find(i.key());
         if (j == m_widgets.end()) {
             continue;
