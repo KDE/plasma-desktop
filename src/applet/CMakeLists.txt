@@ -1,6 +1,6 @@
 add_subdirectory(qml)
 
-configure_file("${CMAKE_CURRENT_SOURCE_DIR}/dataengine.desktop.cmake"
+configure_file("${CMAKE_CURRENT_SOURCE_DIR}/dataengine.desktop"
                "${CMAKE_CURRENT_BINARY_DIR}/plasma-dataengine-touchpad.desktop"
 )
 

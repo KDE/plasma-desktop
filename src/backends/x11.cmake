@@ -1,3 +1,4 @@
+# // krazy:excludeall=copyright,license
 find_package(X11 REQUIRED)
 find_package(X11_XCB REQUIRED)
 find_package(XCB REQUIRED)
