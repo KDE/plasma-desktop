@@ -36,6 +36,7 @@ class TouchpadBackend;
 class KMessageWidget;
 class OrgKdeTouchpadInterface;
 class CustomConfigDialogManager;
+class KAction;
 
 class TouchpadConfig : public KCModule
 {
@@ -58,17 +59,23 @@ private Q_SLOTS:
     void endTesting();
     void onChanged();
     void checkChanges();
+    void loadActiveConfig();
 
 private:
+    QVariantHash getActiveConfig();
+    void setConfigOutOfSync(bool);
+
     TouchpadBackend *m_backend;
     TouchpadParameters m_config;
 
     QScopedPointer<QVariantHash> m_prevConfig;
     CustomConfigDialogManager *m_manager;
     TouchpadDisablerSettings m_daemonSettings;
-    KMessageWidget *m_errorMessage;
+    KMessageWidget *m_errorMessage, *m_configOutOfSyncMessage;
     TestArea *m_testArea;
     OrgKdeTouchpadInterface *m_daemon;
+    KAction *m_loadActiveConfiguration;
+    bool m_configOutOfSync;
 
     Ui::PointerMotionForm m_pointerMotion;
     Ui::TapForm m_tapping;

@@ -18,6 +18,8 @@
 
 #include "customconfigdialogmanager.h"
 
+#include <cmath>
+
 #include <QWidget>
 
 #include <KConfigSkeleton>
@@ -90,4 +92,48 @@ void CustomConfigDialogManager::setWidgetProperties(const QVariantHash &p)
             setProperty(j.value(), i.value());
         }
     }
+}
+
+static bool variantFuzzyCompare(const QVariant &a, const QVariant &b)
+{
+    return qFuzzyCompare(static_cast<float>(a.toDouble()),
+                         static_cast<float>(b.toDouble()));
+}
+
+bool CustomConfigDialogManager::compareWidgetProperties(const QVariantHash &p) const
+{
+    for (QVariantHash::ConstIterator i = p.begin(); i != p.end(); i++) {
+        QMap<QString, QWidget *>::ConstIterator j = m_widgets.find(i.key());
+        if (j == m_widgets.end()) {
+            continue;
+        }
+
+        QWidget *widget = j.value();
+        QVariant widgetValue(property(widget));
+        QVariant value(i.value());
+
+        if (value.type() != QVariant::Double) {
+            if (widgetValue != value) {
+                return false;
+            } else {
+                continue;
+            }
+        }
+
+        QVariant decimals(widget->property("decimals"));
+        if (decimals.type() != QVariant::Int) {
+            if (!variantFuzzyCompare(value, widgetValue)) {
+                return false;
+            } else {
+                continue;
+            }
+        }
+
+        double k = std::pow(10.0, decimals.toInt());
+        value = std::floor(value.toDouble() * k + 0.5) / k; //round
+        if (!variantFuzzyCompare(value, widgetValue)) {
+            return false;
+        }
+    }
+    return true;
 }

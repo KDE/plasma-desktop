@@ -22,6 +22,7 @@
 #include <QDBusInterface>
 
 #include <KAboutData>
+#include <KAction>
 #include <KLocalizedString>
 #include <KMessageWidget>
 #include <KTabWidget>
@@ -90,16 +91,33 @@ void addTab(KTabWidget *tabs, T &form)
 }
 
 TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
-    : KCModule(TouchpadPluginFactory::componentData(), parent, args)
+    : KCModule(TouchpadPluginFactory::componentData(), parent, args),
+      m_configOutOfSync(false)
 {
     setAboutData(new KAboutData(*componentData().aboutData()));
 
     QGridLayout *layout = new QGridLayout(this);
+    QVBoxLayout *messageLayout = new QVBoxLayout();
+    layout->addLayout(messageLayout, 0, 0, 1, 2);
 
     m_errorMessage = new KMessageWidget(this);
     m_errorMessage->setMessageType(KMessageWidget::Error);
     m_errorMessage->setVisible(false);
-    layout->addWidget(m_errorMessage, 0, 0, 1, 2);
+    messageLayout->addWidget(m_errorMessage);
+
+    m_configOutOfSyncMessage = new KMessageWidget(this);
+    m_configOutOfSyncMessage->setMessageType(KMessageWidget::Warning);
+    m_configOutOfSyncMessage->setText(
+                i18n("Active settings don't match saved settings.\n"
+                     "You currently see saved settings."));
+    m_configOutOfSyncMessage->setVisible(false);
+    messageLayout->addWidget(m_configOutOfSyncMessage);
+
+    m_loadActiveConfiguration = new KAction(m_configOutOfSyncMessage);
+    m_loadActiveConfiguration->setText(i18n("Show active settings"));
+    connect(m_loadActiveConfiguration, SIGNAL(triggered()),
+            SLOT(loadActiveConfig()));
+    m_configOutOfSyncMessage->addAction(m_loadActiveConfiguration);
 
     layout->setColumnStretch(0, 3);
     layout->setColumnStretch(1, 1);
@@ -138,6 +156,7 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
     m_manager = new CustomConfigDialogManager(this, &m_config,
                                               m_backend->supportedParameters());
     connect(m_manager, SIGNAL(widgetModified()), SLOT(checkChanges()));
+
     addConfig(&m_daemonSettings, this);
 
     KComboBox *mouseCombo = new KComboBox(true, this);
@@ -149,16 +168,50 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
                                            QDBusConnection::sessionBus(), this);
 }
 
+QVariantHash TouchpadConfig::getActiveConfig()
+{
+    if (m_prevConfig) {
+        return *m_prevConfig;
+    }
+
+    QVariantHash activeConfig;
+    if (!m_backend->getConfig(activeConfig)) {
+        m_errorMessage->setText(m_backend->errorString());
+        m_errorMessage->animatedShow();
+    }
+    return activeConfig;
+}
+
+void TouchpadConfig::loadActiveConfig()
+{
+    m_manager->setWidgetProperties(getActiveConfig());
+    setConfigOutOfSync(false);
+}
+
+void TouchpadConfig::setConfigOutOfSync(bool value)
+{
+    m_configOutOfSync = value;
+    if (value) {
+        m_configOutOfSyncMessage->animatedShow();
+    } else {
+        m_configOutOfSyncMessage->animatedHide();
+    }
+}
+
 void TouchpadConfig::load()
 {
     m_manager->updateWidgets();
 
     KCModule::load();
+
+    setConfigOutOfSync(!m_manager->compareWidgetProperties(getActiveConfig()));
 }
 
 void TouchpadConfig::save()
 {
     m_manager->updateSettings();
+
+    setConfigOutOfSync(false);
 
     KCModule::save();
 
@@ -181,7 +234,7 @@ void TouchpadConfig::defaults()
 
 void TouchpadConfig::checkChanges()
 {
-    unmanagedWidgetChangeState(m_manager->hasChanged());
+    unmanagedWidgetChangeState(m_manager->hasChanged() || m_configOutOfSync);
 }
 
 void TouchpadConfig::hideEvent(QHideEvent *e)

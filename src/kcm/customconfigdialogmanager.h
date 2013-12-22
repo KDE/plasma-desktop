@@ -35,6 +35,7 @@ public:
 
     QVariantHash currentWidgetProperties() const;
     void setWidgetProperties(const QVariantHash &);
+    bool compareWidgetProperties(const QVariantHash &) const;
 
 private:
     QMap<QString, QWidget *> m_widgets;
