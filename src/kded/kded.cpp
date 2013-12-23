@@ -23,6 +23,7 @@
 #include <klauncher_iface.h>
 
 #include "plugins.h"
+#include "kdedactions.h"
 
 bool TouchpadDisabler::workingTouchpadFound() const
 {
@@ -55,6 +56,11 @@ TouchpadDisabler::TouchpadDisabler(QObject *parent, const QVariantList &)
     reloadSettings();
 
     m_startup = false;
+
+    //Startup order problem
+    //Not sure that it's good solution, but the same problem was solved in
+    //PowerDevil in the same way
+    QMetaObject::invokeMethod(this, "initHotkeys", Qt::QueuedConnection);
 }
 
 bool TouchpadDisabler::isEnabled() const
@@ -73,9 +79,21 @@ void TouchpadDisabler::updateCurrentState()
 
 void TouchpadDisabler::toggle()
 {
-    m_backend->setTouchpadState(isEnabled() ? TouchpadBackend::TouchpadFullyDisabled :
-                                              TouchpadBackend::TouchpadEnabled
-                                              );
+    if (isEnabled()) {
+        disable();
+    } else {
+        enable();
+    }
+}
+
+void TouchpadDisabler::disable()
+{
+    m_backend->setTouchpadState(TouchpadBackend::TouchpadFullyDisabled);
+}
+
+void TouchpadDisabler::enable()
+{
+    m_backend->setTouchpadState(TouchpadBackend::TouchpadEnabled);
 }
 
 void TouchpadDisabler::reloadSettings()
@@ -196,4 +214,12 @@ void TouchpadDisabler::showNotification()
 bool TouchpadDisabler::isMousePluggedIn() const
 {
     return !m_backend->listMouses(m_settings.mouseBlacklist()).isEmpty();
+}
+
+void TouchpadDisabler::initHotkeys()
+{
+    TouchpadGlobalActions *actions = new TouchpadGlobalActions(this);
+    connect(actions, SIGNAL(enableTriggered()), SLOT(enable()));
+    connect(actions, SIGNAL(disableTriggered()), SLOT(disable()));
+    connect(actions, SIGNAL(toggleTriggered()), SLOT(toggle()));
 }

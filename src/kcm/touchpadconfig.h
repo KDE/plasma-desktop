@@ -37,6 +37,7 @@ class KMessageWidget;
 class OrgKdeTouchpadInterface;
 class CustomConfigDialogManager;
 class KAction;
+class KShortcutsEditor;
 
 class TouchpadConfig : public KCModule
 {
@@ -75,6 +76,7 @@ private:
     TestArea *m_testArea;
     OrgKdeTouchpadInterface *m_daemon;
     KAction *m_loadActiveConfiguration;
+    KShortcutsEditor *m_shortcutEditor;
     bool m_configOutOfSync;
 
     Ui::PointerMotionForm m_pointerMotion;

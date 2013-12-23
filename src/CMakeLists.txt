@@ -39,6 +39,7 @@ qt4_generate_dbus_interface(kded/kded.h org.kde.touchpad.xml)
 SET(SRCS
     ${SRCS}
     kded/kded.cpp
+    kded/kdedactions.cpp
 )
 
 kde4_add_kcfg_files(SRCS kded/kdedsettings.kcfgc)

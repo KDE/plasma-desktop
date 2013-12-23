@@ -25,6 +25,7 @@
 #include <KAction>
 #include <KLocalizedString>
 #include <KMessageWidget>
+#include <KShortcutsEditor>
 #include <KTabWidget>
 
 #include "customslider.h"
@@ -34,6 +35,7 @@
 #include "testarea.h"
 #include "touchpadinterface.h"
 #include "customconfigdialogmanager.h"
+#include "kded/kdedactions.h"
 
 extern "C"
 {
@@ -129,6 +131,14 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
     addTab(tabs, m_pointerMotion);
     addTab(tabs, m_sensitivity);
 
+    m_shortcutEditor = new KShortcutsEditor(new TouchpadGlobalActions(this),
+                                            this,
+                                            KShortcutsEditor::GlobalAction,
+                                            KShortcutsEditor::LetterShortcutsDisallowed);
+    tabs->addTab(m_shortcutEditor, i18n("Keyboard Shortcuts"));
+    m_shortcutEditor->setContentsMargins(10, 10, 10, 10);
+    connect(m_shortcutEditor, SIGNAL(keyChange()), SLOT(checkChanges()));
+
     layout->addWidget(tabs, 1, 0, 1, 1);
 
     m_testArea = new TestArea(this);
@@ -201,6 +211,7 @@ void TouchpadConfig::setConfigOutOfSync(bool value)
 void TouchpadConfig::load()
 {
     m_manager->updateWidgets();
+    m_shortcutEditor->undoChanges();
 
     KCModule::load();
 
@@ -210,6 +221,7 @@ void TouchpadConfig::load()
 void TouchpadConfig::save()
 {
     m_manager->updateSettings();
+    m_shortcutEditor->save();
 
     setConfigOutOfSync(false);
 
@@ -228,13 +240,16 @@ void TouchpadConfig::save()
 void TouchpadConfig::defaults()
 {
     m_manager->updateWidgetsDefault();
+    m_shortcutEditor->allDefault();
 
     KCModule::defaults();
 }
 
 void TouchpadConfig::checkChanges()
 {
-    unmanagedWidgetChangeState(m_manager->hasChanged() || m_configOutOfSync);
+    unmanagedWidgetChangeState(m_manager->hasChanged()
+                               || m_configOutOfSync
+                               || m_shortcutEditor->isModified());
 }
 
 void TouchpadConfig::hideEvent(QHideEvent *e)

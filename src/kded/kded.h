@@ -43,6 +43,8 @@ Q_SIGNALS:
 public Q_SLOTS:
     Q_SCRIPTABLE Q_NOREPLY void reloadSettings();
     Q_SCRIPTABLE Q_NOREPLY void toggle();
+    Q_SCRIPTABLE Q_NOREPLY void disable();
+    Q_SCRIPTABLE Q_NOREPLY void enable();
     Q_SCRIPTABLE bool isEnabled() const;
     Q_SCRIPTABLE bool workingTouchpadFound() const;
     Q_SCRIPTABLE bool isMousePluggedIn() const;
@@ -54,6 +56,7 @@ private Q_SLOTS:
     void mousePlugged();
     void updateCurrentState();
     void showNotification();
+    void initHotkeys();
 
 private:
     TouchpadBackend *m_backend;
