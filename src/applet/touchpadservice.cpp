@@ -33,12 +33,12 @@ TouchpadService::~TouchpadService()
 {
 }
 
-class ToggleJob : public Plasma::ServiceJob
+class TouchpadJob : public Plasma::ServiceJob
 {
 public:
-    ToggleJob(OrgKdeTouchpadInterface *daemon,
-              const QString &destination, const QString &operation,
-              const QMap<QString, QVariant> &parameters, QObject *parent = 0)
+    TouchpadJob(OrgKdeTouchpadInterface *daemon,
+                const QString &destination, const QString &operation,
+                const QMap<QString, QVariant> &parameters, QObject *parent = 0)
         : Plasma::ServiceJob(destination, operation, parameters, parent),
           m_daemon(daemon)
     {
@@ -47,7 +47,7 @@ public:
     void start()
     {
         if (m_daemon) {
-            m_daemon->toggle();
+            QMetaObject::invokeMethod(m_daemon, operationName().toAscii());
         }
         emitResult();
     }
@@ -59,8 +59,5 @@ private:
 Plasma::ServiceJob *TouchpadService::createJob(const QString &operation,
                                                QMap<QString, QVariant> &params)
 {
-    if (operation == "toggle") {
-        return new ToggleJob(m_daemon, m_destination, "toggle", params, this);
-    }
-    return new Plasma::ServiceJob(m_destination, operation, params, this);
+    return new TouchpadJob(m_daemon, m_destination, operation, params, this);
 }

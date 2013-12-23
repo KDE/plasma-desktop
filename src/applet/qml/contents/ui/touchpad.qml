@@ -108,12 +108,12 @@ Item {
             confirmDialog.open()
             return
         }
-        toggle()
+        execOp("toggle")
     }
 
-    function toggle() {
+    function execOp(op) {
         var service = dataSource.serviceForSource("touchpad")
-        service.startOperationCall(service.operationDescription("toggle"))
+        service.startOperationCall(service.operationDescription(op))
     }
 
     PlasmaComponents.QueryDialog {
@@ -123,10 +123,6 @@ Item {
         titleIcon: "dialog-warning"
         message: i18n("No mouses were detected.\nAre you sure you want to disable touchpad?")
         acceptButtonText: i18n("Disable")
-        onAccepted: {
-            if (enabled) {
-                toggle()
-            }
-        }
+        onAccepted: execOp("disable")
     }
 }
