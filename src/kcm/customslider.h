@@ -61,6 +61,7 @@ public:
     void setInterpolator(const Interpolator *);
 
     double doubleValue() const;
+    double fixup(double) const;
 
 public Q_SLOTS:
     void setDoubleValue(double);
@@ -77,6 +78,8 @@ private Q_SLOTS:
 private:
     void updateRange(const QSize &);
     void moveSlider();
+    int doubleToInt(double) const;
+    double intToDouble(int) const;
 
     static const Interpolator lerp;
 

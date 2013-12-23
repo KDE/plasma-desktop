@@ -25,10 +25,12 @@
 #include <KConfigSkeleton>
 #include <KComboBox>
 
+#include "customslider.h"
+
 CustomConfigDialogManager::CustomConfigDialogManager(QWidget *parent,
                                                      KCoreConfigSkeleton *conf,
                                                      const QStringList &supported)
-    : KConfigDialogManager(parent, conf)
+    : KConfigDialogManager(parent, conf), m_config(conf)
 {
     static const QString kcfgPrefix("kcfg_");
 
@@ -96,8 +98,39 @@ void CustomConfigDialogManager::setWidgetProperties(const QVariantHash &p)
 
 static bool variantFuzzyCompare(const QVariant &a, const QVariant &b)
 {
-    return qFuzzyCompare(static_cast<float>(a.toDouble()),
-                         static_cast<float>(b.toDouble()));
+    if (a == b) {
+        return true;
+    }
+
+    bool isDouble_a = false, isDouble_b = false;
+    float d_a = static_cast<float>(a.toDouble(&isDouble_a)),
+            d_b = static_cast<float>(b.toDouble(&isDouble_b));
+    if (!isDouble_a || !isDouble_b) {
+        return false;
+    }
+
+    return (qFuzzyIsNull(d_a) && qFuzzyIsNull(d_b)) || qFuzzyCompare(d_a, d_b);
+}
+
+QVariant CustomConfigDialogManager::fixup(QWidget *widget, QVariant v) const
+{
+    bool isDouble = false;
+    double value = v.toDouble(&isDouble);
+    if (!isDouble) {
+        return v;
+    }
+
+    QVariant decimals(widget->property("decimals"));
+    if (decimals.type() != QVariant::Int) {
+        CustomSlider *asSlider = qobject_cast<CustomSlider *>(widget);
+        if (asSlider) {
+            return asSlider->fixup(value);
+        }
+        return value;
+    }
+
+    double k = std::pow(10.0, decimals.toInt());
+    return std::floor(value * k + 0.5) / k; //round
 }
 
 bool CustomConfigDialogManager::compareWidgetProperties(const QVariantHash &p) const
@@ -109,31 +142,26 @@ bool CustomConfigDialogManager::compareWidgetProperties(const QVariantHash &p) c
         }
 
         QWidget *widget = j.value();
-        QVariant widgetValue(property(widget));
-        QVariant value(i.value());
-
-        if (value.type() != QVariant::Double) {
-            if (widgetValue != value) {
-                return false;
-            } else {
-                continue;
-            }
-        }
-
-        QVariant decimals(widget->property("decimals"));
-        if (decimals.type() != QVariant::Int) {
-            if (!variantFuzzyCompare(value, widgetValue)) {
-                return false;
-            } else {
-                continue;
-            }
-        }
-
-        double k = std::pow(10.0, decimals.toInt());
-        value = std::floor(value.toDouble() * k + 0.5) / k; //round
-        if (!variantFuzzyCompare(value, widgetValue)) {
+        QVariant widgetValue(fixup(widget, property(widget)));
+        if (!variantFuzzyCompare(widgetValue, fixup(widget, i.value()))) {
             return false;
         }
     }
     return true;
+}
+
+bool CustomConfigDialogManager::hasChangedFuzzy() const
+{
+    for (QMap<QString, QWidget *>::ConstIterator i = m_widgets.begin();
+         i != m_widgets.end(); ++i)
+    {
+        KConfigSkeletonItem *config = m_config->findItem(i.key());
+        QWidget *widget = i.value();
+        QVariant widgetValue(fixup(widget, property(widget)));
+        QVariant configValue(fixup(widget, config->property()));
+        if (!variantFuzzyCompare(widgetValue, configValue)) {
+            return true;
+        }
+    }
+    return false;
 }

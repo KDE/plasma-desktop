@@ -116,22 +116,40 @@ void CustomSlider::setDoubleValue(double v)
     }
 
     m_value = v;
+    int oldIntValue = value();
     moveSlider();
-    Q_EMIT valueChanged(doubleValue());
+    if (value() != oldIntValue) {
+        Q_EMIT valueChanged(doubleValue());
+    }
+}
+
+double CustomSlider::intToDouble(int v) const
+{
+    double relative = lerp.relative(v, minimum(), maximum());
+    return m_interpolator->absolute(relative, m_min, m_max);
 }
 
 void CustomSlider::updateValue()
 {
-    double relative = lerp.relative(sliderPosition(), minimum(), maximum());
-    m_value = m_interpolator->absolute(relative, m_min, m_max);
+    m_value = intToDouble(sliderPosition());
     Q_EMIT valueChanged(doubleValue());
+}
+
+double CustomSlider::fixup(double v) const
+{
+    return intToDouble(doubleToInt(v));
+}
+
+int CustomSlider::doubleToInt(double v) const
+{
+    double relative = m_interpolator->relative(v, m_min, m_max);
+    double absolute = lerp.absolute(relative, minimum(), maximum());
+    return static_cast<int>(std::floor(absolute + 0.5));
 }
 
 void CustomSlider::moveSlider()
 {
-    double relative = m_interpolator->relative(doubleValue(), m_min, m_max);
-    double absolute = lerp.absolute(relative, minimum(), maximum());
-    setValue(static_cast<int>(std::floor(absolute + 0.5)));
+    setValue(doubleToInt(doubleValue()));
 }
 
 void CustomSlider::updateRange(const QSize &s)

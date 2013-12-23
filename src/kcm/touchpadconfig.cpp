@@ -211,7 +211,9 @@ void TouchpadConfig::setConfigOutOfSync(bool value)
 void TouchpadConfig::load()
 {
     m_manager->updateWidgets();
-    m_shortcutEditor->undoChanges();
+    if (m_shortcutEditor->isModified()) {
+        m_shortcutEditor->undoChanges();
+    }
 
     KCModule::load();
 
@@ -247,7 +249,7 @@ void TouchpadConfig::defaults()
 
 void TouchpadConfig::checkChanges()
 {
-    unmanagedWidgetChangeState(m_manager->hasChanged()
+    unmanagedWidgetChangeState(m_manager->hasChangedFuzzy()
                                || m_configOutOfSync
                                || m_shortcutEditor->isModified());
 }

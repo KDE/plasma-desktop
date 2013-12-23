@@ -36,9 +36,13 @@ public:
     QVariantHash currentWidgetProperties() const;
     void setWidgetProperties(const QVariantHash &);
     bool compareWidgetProperties(const QVariantHash &) const;
+    bool hasChangedFuzzy() const;
 
 private:
+    QVariant fixup(QWidget *widget, QVariant value) const;
+
     QMap<QString, QWidget *> m_widgets;
+    KCoreConfigSkeleton *m_config;
 };
 
 #endif // CUSTOMCONFIGDIALOGMANAGER_H
