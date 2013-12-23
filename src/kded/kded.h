@@ -66,8 +66,6 @@ private:
     TouchpadBackend::TouchpadState m_currentState, m_oldState, m_oldKbState,
     m_keyboardDisableState;
     bool m_keyboardActivity, m_mouse;
-
-    bool m_startup;
 };
 
 #endif // KDED_H

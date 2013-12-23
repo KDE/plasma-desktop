@@ -20,7 +20,6 @@
 
 #include <KNotification>
 #include <KLocale>
-#include <klauncher_iface.h>
 
 #include "plugins.h"
 #include "kdedactions.h"
@@ -34,7 +33,7 @@ TouchpadDisabler::TouchpadDisabler(QObject *parent, const QVariantList &)
     : KDEDModule(parent), m_backend(TouchpadBackend::self()),
       m_currentState(TouchpadBackend::TouchpadEnabled),
       m_oldState(m_currentState), m_oldKbState(m_currentState),
-      m_keyboardActivity(false), m_mouse(false), m_startup(true)
+      m_keyboardActivity(false), m_mouse(false)
 {
     if (!workingTouchpadFound()) {
         return;
@@ -54,8 +53,6 @@ TouchpadDisabler::TouchpadDisabler(QObject *parent, const QVariantList &)
 
     updateCurrentState();
     reloadSettings();
-
-    m_startup = false;
 
     //Startup order problem
     //Not sure that it's good solution, but the same problem was solved in
@@ -178,7 +175,10 @@ void TouchpadDisabler::mousePlugged()
         updateCurrentState();
 
         if (m_mouse) {
-            showNotification();
+            //On startup, don't show notification on top of splash screen
+            //Delay it until startup is finished
+            QMetaObject::invokeMethod(this, "showNotification",
+                                      Qt::QueuedConnection);
         }
     }
 }
@@ -187,19 +187,6 @@ void TouchpadDisabler::showNotification()
 {
     if (!m_settings.showNotificationWhenDisabled()) {
         return;
-    }
-
-    if (m_startup) {
-        //Don't show ugly notification on top of splash screen
-        //Delay it until startup is finished
-        org::kde::KLauncher *klauncher =
-                new org::kde::KLauncher("org.kde.klauncher", "/KLauncher",
-                                        QDBusConnection::sessionBus(), this);
-        if (klauncher->isValid()) {
-            if (connect(klauncher, SIGNAL(autoStart2Done()), SLOT(showNotification()))) {
-                return;
-            }
-        }
     }
 
     KNotification::event("TouchpadDisabled",
