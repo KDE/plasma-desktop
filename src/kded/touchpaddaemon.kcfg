@@ -3,7 +3,7 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
                           http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
-    <kcfgfile name="touchpaddaemonrc"/>
+    <kcfgfile name="touchpadrc"/>
     <group name="autodisable">
         <entry name="DisableWhenMousePluggedIn" type="Bool">
             <default>false</default>
