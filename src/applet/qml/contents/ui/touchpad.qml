@@ -21,6 +21,7 @@
 import QtQuick 1.1
 import org.kde.plasma.core 0.1 as PlasmaCore
 import org.kde.plasma.components 0.1 as PlasmaComponents
+import org.kde.qtextracomponents 0.1
 
 Item {
     id: root
@@ -81,7 +82,12 @@ Item {
             multipleImages: true
             imagePath: "icons/touchpad"
         }
-        visible: hasTouchpad
+    }
+
+    QIconItem {
+        anchors.fill: parent
+        visible: !hasTouchpad
+        icon: "dialog-cancel"
     }
 
     PlasmaCore.ToolTip {
