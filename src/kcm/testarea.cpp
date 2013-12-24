@@ -32,7 +32,7 @@ TestArea::TestArea(QWidget *parent) : QWidget(parent)
     QStandardItemModel *model = new QStandardItemModel(m_ui.listView);
     m_ui.listView->setModel(model);
     QScopedPointer<QStandardItem> item(
-                new QStandardItem(QIcon::fromTheme("folder"), i18n("Drag me")));
+                new QStandardItem(KIcon("folder"), i18n("Drag me")));
     model->appendRow(item.data());
     item.take();
 }
