@@ -25,7 +25,7 @@
 #include <KAction>
 #include <KLocalizedString>
 #include <KMessageWidget>
-#include <KShortcutsEditor>
+#include <KShortcutsDialog>
 #include <KTabWidget>
 
 #include "customslider.h"
@@ -76,7 +76,7 @@ static void copyHelpFromBuddy(QObject *root)
 }
 
 template<typename T>
-void addTab(KTabWidget *tabs, T &form)
+QWidget *addTab(KTabWidget *tabs, T &form)
 {
     QScrollArea *container = new QScrollArea(tabs);
     container->setWidgetResizable(true);
@@ -91,6 +91,8 @@ void addTab(KTabWidget *tabs, T &form)
 
     container->setWidget(widget);
     tabs->addTab(container, widget->windowTitle());
+
+    return widget;
 }
 
 TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
@@ -125,29 +127,40 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
     layout->setColumnStretch(0, 3);
     layout->setColumnStretch(1, 1);
 
-    KTabWidget *tabs = new KTabWidget(this);
+    m_tabs = new KTabWidget(this);
 
-    addTab(tabs, m_tapping);
-    addTab(tabs, m_scrolling);
-    addTab(tabs, m_pointerMotion);
-    addTab(tabs, m_sensitivity);
+    addTab(m_tabs, m_tapping);
+    addTab(m_tabs, m_scrolling);
+    addTab(m_tabs, m_pointerMotion);
+    addTab(m_tabs, m_sensitivity);
 
-    m_shortcutEditor = new KShortcutsEditor(this,
-                                            KShortcutsEditor::GlobalAction,
-                                            KShortcutsEditor::LetterShortcutsDisallowed);
-    m_shortcutEditor->addCollection(new TouchpadGlobalActions(this),
-                                    i18n("Enable/Disable Touchpad"));
-    tabs->addTab(m_shortcutEditor, i18n("Keyboard Shortcuts"));
-    m_shortcutEditor->setContentsMargins(10, 10, 10, 10);
-    connect(m_shortcutEditor, SIGNAL(keyChange()), SLOT(checkChanges()));
+    m_kdedTab = addTab(m_tabs, m_kded);
+    addConfig(&m_daemonSettings, m_kdedTab);
 
-    layout->addWidget(tabs, 1, 0, 1, 1);
+    KMessageWidget *kdedMessage = new KMessageWidget(m_kdedTab);
+    kdedMessage->setMessageType(KMessageWidget::Information);
+    kdedMessage->setCloseButtonVisible(false);
+    kdedMessage->setText(
+                i18n("These settings won't take effect in testing area"));
+    qobject_cast<QVBoxLayout *>(m_kdedTab->layout())->
+            insertWidget(0, kdedMessage);
+
+    m_shortcutsDialog.reset(new KShortcutsDialog(KShortcutsEditor::GlobalAction,
+                                                 KShortcutsEditor::LetterShortcutsDisallowed));
+    m_shortcutsDialog->addCollection(new TouchpadGlobalActions(this),
+                                     i18n("Enable/Disable Touchpad"));
+    connect(m_kded.configureShortcutsButton, SIGNAL(clicked()),
+            m_shortcutsDialog.data(), SLOT(show()));
+
+    layout->addWidget(m_tabs, 1, 0, 1, 1);
 
     m_testArea = new TestArea(this);
     layout->addWidget(m_testArea, 1, 1);
     connect(m_testArea, SIGNAL(enter()), SLOT(beginTesting()));
     connect(m_testArea, SIGNAL(leave()), SLOT(endTesting()));
     connect(this, SIGNAL(changed(bool)), SLOT(onChanged()));
+    connect(m_tabs, SIGNAL(currentChanged(int)), SLOT(updateTestAreaEnabled()));
+    updateTestAreaEnabled();
 
     static const CustomSlider::SqrtInterpolator interpolator;
     m_pointerMotion.kcfg_MinSpeed->setInterpolator(&interpolator);
@@ -169,12 +182,10 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
                                               m_backend->supportedParameters());
     connect(m_manager, SIGNAL(widgetModified()), SLOT(checkChanges()));
 
-    addConfig(&m_daemonSettings, this);
-
-    KComboBox *mouseCombo = new KComboBox(true, this);
+    KComboBox *mouseCombo = new KComboBox(true, m_kded.kcfg_MouseBlacklist);
     mouseCombo->addItems(
                 m_backend->listMouses(m_daemonSettings.mouseBlacklist()));
-    m_sensitivity.kcfg_MouseBlacklist->setCustomEditor(mouseCombo);
+    m_kded.kcfg_MouseBlacklist->setCustomEditor(mouseCombo);
 
     m_daemon = new OrgKdeTouchpadInterface("org.kde.kded", "/modules/touchpad",
                                            QDBusConnection::sessionBus(), this);
@@ -213,9 +224,6 @@ void TouchpadConfig::setConfigOutOfSync(bool value)
 void TouchpadConfig::load()
 {
     m_manager->updateWidgets();
-    if (m_shortcutEditor->isModified()) {
-        m_shortcutEditor->undoChanges();
-    }
 
     KCModule::load();
 
@@ -225,7 +233,6 @@ void TouchpadConfig::load()
 void TouchpadConfig::save()
 {
     m_manager->updateSettings();
-    m_shortcutEditor->save();
 
     setConfigOutOfSync(false);
 
@@ -244,7 +251,6 @@ void TouchpadConfig::save()
 void TouchpadConfig::defaults()
 {
     m_manager->updateWidgetsDefault();
-    m_shortcutEditor->allDefault();
 
     KCModule::defaults();
 }
@@ -252,8 +258,7 @@ void TouchpadConfig::defaults()
 void TouchpadConfig::checkChanges()
 {
     unmanagedWidgetChangeState(m_manager->hasChangedFuzzy()
-                               || m_configOutOfSync
-                               || m_shortcutEditor->isModified());
+                               || m_configOutOfSync);
 }
 
 void TouchpadConfig::hideEvent(QHideEvent *e)
@@ -290,4 +295,21 @@ void TouchpadConfig::endTesting()
     }
     m_backend->applyConfig(*m_prevConfig.data());
     m_prevConfig.reset();
+}
+
+void TouchpadConfig::updateTestAreaEnabled()
+{
+    bool enable = true;
+    for (QWidget *i = m_kdedTab; i; i = i->parentWidget()) {
+        if (i == m_tabs->currentWidget()) {
+            enable = false;
+            break;
+        }
+    }
+
+    m_testArea->setEnabled(enable);
+    m_testArea->setMouseTracking(enable);
+    if (!enable) {
+        endTesting();
+    }
 }

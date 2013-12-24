@@ -31,13 +31,15 @@
 #include "ui_tap.h"
 #include "ui_scroll.h"
 #include "ui_sensitivity.h"
+#include "ui_kded.h"
 
 class TouchpadBackend;
 class KMessageWidget;
 class OrgKdeTouchpadInterface;
 class CustomConfigDialogManager;
 class KAction;
-class KShortcutsEditor;
+class KShortcutsDialog;
+class KTabWidget;
 
 class TouchpadConfig : public KCModule
 {
@@ -61,6 +63,7 @@ private Q_SLOTS:
     void onChanged();
     void checkChanges();
     void loadActiveConfig();
+    void updateTestAreaEnabled();
 
 private:
     QVariantHash getActiveConfig();
@@ -76,13 +79,16 @@ private:
     TestArea *m_testArea;
     OrgKdeTouchpadInterface *m_daemon;
     KAction *m_loadActiveConfiguration;
-    KShortcutsEditor *m_shortcutEditor;
     bool m_configOutOfSync;
+    QScopedPointer<KShortcutsDialog> m_shortcutsDialog;
+    QWidget *m_kdedTab;
+    KTabWidget *m_tabs;
 
     Ui::PointerMotionForm m_pointerMotion;
     Ui::TapForm m_tapping;
     Ui::ScrollForm m_scrolling;
     Ui::SensitivityForm m_sensitivity;
+    Ui::KdedForm m_kded;
 };
 
 #endif // TOUCHPADCONFIG_H

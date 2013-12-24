@@ -31,6 +31,7 @@ kde4_add_ui_files(SRCS
                   kcm/ui/tap.ui
                   kcm/ui/scroll.ui
                   kcm/ui/sensitivity.ui
+                  kcm/ui/kded.ui
                   kcm/ui/testarea.ui
 )
 
