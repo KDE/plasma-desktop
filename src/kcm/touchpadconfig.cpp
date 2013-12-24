@@ -86,7 +86,8 @@ void addTab(KTabWidget *tabs, T &form)
     QWidget *widget = new QWidget(container);
     form.setupUi(widget);
     copyHelpFromBuddy(widget);
-    widget->layout()->setContentsMargins(20, 20, 20, 20);
+    widget->setContentsMargins(20, 20, 20, 20);
+    widget->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Fixed);
 
     container->setWidget(widget);
     tabs->addTab(container, widget->windowTitle());
