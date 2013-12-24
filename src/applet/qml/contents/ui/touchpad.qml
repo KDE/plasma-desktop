@@ -87,7 +87,7 @@ Item {
     QIconItem {
         anchors.fill: parent
         visible: !hasTouchpad
-        icon: "dialog-cancel"
+        icon: "dialog-warning"
     }
 
     PlasmaCore.ToolTip {
@@ -100,7 +100,13 @@ Item {
             return enabled ? i18n("Touchpad is enabled")
                            : i18n("Touchpad is disabled")
         }
-        image: enabled ? "input-touchpad" : "dialog-cancel"
+        image: {
+            if (!hasTouchpad) {
+                return "dialog-error"
+            }
+
+            return enabled ? "input-touchpad" : "process-stop"
+        }
     }
 
     MouseArea {
