@@ -131,10 +131,11 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
     addTab(tabs, m_pointerMotion);
     addTab(tabs, m_sensitivity);
 
-    m_shortcutEditor = new KShortcutsEditor(new TouchpadGlobalActions(this),
-                                            this,
+    m_shortcutEditor = new KShortcutsEditor(this,
                                             KShortcutsEditor::GlobalAction,
                                             KShortcutsEditor::LetterShortcutsDisallowed);
+    m_shortcutEditor->addCollection(new TouchpadGlobalActions(this),
+                                    i18n("Enable/Disable Touchpad"));
     tabs->addTab(m_shortcutEditor, i18n("Keyboard Shortcuts"));
     m_shortcutEditor->setContentsMargins(10, 10, 10, 10);
     connect(m_shortcutEditor, SIGNAL(keyChange()), SLOT(checkChanges()));
