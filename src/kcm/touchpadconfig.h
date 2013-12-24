@@ -75,6 +75,7 @@ private:
     QScopedPointer<QVariantHash> m_prevConfig;
     CustomConfigDialogManager *m_manager;
     TouchpadDisablerSettings m_daemonSettings;
+    KConfigDialogManager *m_daemonConfigManager;
     KMessageWidget *m_errorMessage, *m_configOutOfSyncMessage;
     TestArea *m_testArea;
     OrgKdeTouchpadInterface *m_daemon;

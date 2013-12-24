@@ -135,7 +135,7 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
     addTab(m_tabs, m_sensitivity);
 
     m_kdedTab = addTab(m_tabs, m_kded);
-    addConfig(&m_daemonSettings, m_kdedTab);
+    m_daemonConfigManager = addConfig(&m_daemonSettings, m_kdedTab);
 
     KMessageWidget *kdedMessage = new KMessageWidget(m_kdedTab);
     kdedMessage->setMessageType(KMessageWidget::Information);
@@ -236,6 +236,8 @@ void TouchpadConfig::save()
 
     setConfigOutOfSync(false);
 
+    bool daemonSettingsChanged = m_daemonConfigManager->hasChanged();
+
     KCModule::save();
 
     if (m_backend->applyConfig(m_config.values())) {
@@ -245,7 +247,9 @@ void TouchpadConfig::save()
         m_errorMessage->animatedShow();
     }
 
-    m_daemon->reloadSettings();
+    if (daemonSettingsChanged) {
+        m_daemon->reloadSettings();
+    }
 }
 
 void TouchpadConfig::defaults()
