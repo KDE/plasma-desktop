@@ -182,13 +182,34 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
                                               m_backend->supportedParameters());
     connect(m_manager, SIGNAL(widgetModified()), SLOT(checkChanges()));
 
-    KComboBox *mouseCombo = new KComboBox(true, m_kded.kcfg_MouseBlacklist);
-    mouseCombo->addItems(
-                m_backend->listMouses(m_daemonSettings.mouseBlacklist()));
-    m_kded.kcfg_MouseBlacklist->setCustomEditor(mouseCombo);
+    m_mouseCombo = new KComboBox(true, m_kded.kcfg_MouseBlacklist);
+    m_kded.kcfg_MouseBlacklist->setCustomEditor(m_mouseCombo);
+    connect(m_backend, SIGNAL(mousesChanged()), SLOT(updateMouseList()));
+    m_backend->watchForEvents(false);
+    updateMouseList();
 
     m_daemon = new OrgKdeTouchpadInterface("org.kde.kded", "/modules/touchpad",
                                            QDBusConnection::sessionBus(), this);
+}
+
+void TouchpadConfig::updateMouseList()
+{
+    QStringList mouses(
+                m_backend->listMouses(m_daemonSettings.mouseBlacklist()));
+
+    for (int i = 0; i < m_mouseCombo->count(); ) {
+        if (!mouses.contains(m_mouseCombo->itemText(i))) {
+            m_mouseCombo->removeItem(i);
+        } else {
+            i++;
+        }
+    }
+
+    Q_FOREACH (const QString &i, mouses) {
+        if (!m_mouseCombo->contains(i)) {
+            m_mouseCombo->addItem(i);
+        }
+    }
 }
 
 QVariantHash TouchpadConfig::getActiveConfig()
@@ -249,6 +270,7 @@ void TouchpadConfig::save()
 
     if (daemonSettingsChanged) {
         m_daemon->reloadSettings();
+        updateMouseList();
     }
 }
 

@@ -40,6 +40,7 @@ class CustomConfigDialogManager;
 class KAction;
 class KShortcutsDialog;
 class KTabWidget;
+class KComboBox;
 
 class TouchpadConfig : public KCModule
 {
@@ -64,6 +65,7 @@ private Q_SLOTS:
     void checkChanges();
     void loadActiveConfig();
     void updateTestAreaEnabled();
+    void updateMouseList();
 
 private:
     QVariantHash getActiveConfig();
@@ -84,6 +86,7 @@ private:
     QScopedPointer<KShortcutsDialog> m_shortcutsDialog;
     QWidget *m_kdedTab;
     KTabWidget *m_tabs;
+    KComboBox *m_mouseCombo;
 
     Ui::PointerMotionForm m_pointerMotion;
     Ui::TapForm m_tapping;
