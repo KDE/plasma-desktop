@@ -82,7 +82,7 @@
       <item row="1" column="1">
        <widget class="KIntNumInput" name="kcfg_KeyboardActivityTimeoutMs">
         <property name="toolTip">
-         <string>If there were no keyboard activity for more than specified
+         <string>If there was no keyboard activity for more than specified
 number of milliseconds, touchpad will be enabled again</string>
         </property>
         <property name="minimum">
@@ -104,8 +104,12 @@ number of milliseconds, touchpad will be enabled again</string>
       </item>
       <item row="2" column="0" colspan="2">
        <widget class="QCheckBox" name="kcfg_OnlyDisableTapAndScrollOnKeyboardActivity">
+        <property name="toolTip">
+         <string>Disable only click emulation and scrolling.
+You will be still able to move pointer using touchpad and perform clicks with hardware buttons.</string>
+        </property>
         <property name="text">
-         <string>Disable tapping and scrolling only</string>
+         <string>Disable taps and scrolling only</string>
         </property>
        </widget>
       </item>
@@ -126,6 +130,9 @@ number of milliseconds, touchpad will be enabled again</string>
      <layout class="QVBoxLayout" name="verticalLayout_2">
       <item>
        <widget class="QCheckBox" name="kcfg_ShowNotificationWhenDisabled">
+        <property name="toolTip">
+         <string>Show notification when disabling touchpad</string>
+        </property>
         <property name="text">
          <string>Show notification</string>
         </property>
@@ -149,8 +156,12 @@ number of milliseconds, touchpad will be enabled again</string>
       </item>
       <item>
        <widget class="KEditListBox" name="kcfg_MouseBlacklist">
+        <property name="toolTip">
+         <string>Sometimes some devices are wrongly treated as mouse.
+You could add them to this list, so they won't be considered as mouse anymore.</string>
+        </property>
         <property name="title">
-         <string>Ignore specific devices:</string>
+         <string>Ignored devices:</string>
         </property>
         <property name="flat">
          <bool>true</bool>

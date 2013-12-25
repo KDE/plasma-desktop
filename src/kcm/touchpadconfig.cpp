@@ -141,7 +141,7 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
     kdedMessage->setMessageType(KMessageWidget::Information);
     kdedMessage->setCloseButtonVisible(false);
     kdedMessage->setText(
-                i18n("These settings won't take effect in testing area"));
+                i18n("These settings won't take effect in the testing area"));
     qobject_cast<QVBoxLayout *>(m_kdedTab->layout())->
             insertWidget(0, kdedMessage);
 

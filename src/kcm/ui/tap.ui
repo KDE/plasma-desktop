@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Tapping</string>
+   <string comment="Touchpad gesture">Taps</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
@@ -37,7 +37,7 @@
         <item row="0" column="0">
          <widget class="QLabel" name="label">
           <property name="text">
-           <string>One finger:</string>
+           <string comment="Tapping">One finger:</string>
           </property>
           <property name="buddy">
            <cstring>kcfg_OneFingerTapButton</cstring>
@@ -54,7 +54,7 @@
         <item row="1" column="0">
          <widget class="QLabel" name="label_3">
           <property name="text">
-           <string>Two fingers:</string>
+           <string comment="Tapping">Two fingers:</string>
           </property>
           <property name="buddy">
            <cstring>kcfg_TwoFingerTapButton</cstring>
@@ -71,7 +71,7 @@
         <item row="2" column="0">
          <widget class="QLabel" name="label_4">
           <property name="text">
-           <string>Three fingers:</string>
+           <string comment="Tapping">Three fingers:</string>
           </property>
           <property name="buddy">
            <cstring>kcfg_ThreeFingerTapButton</cstring>
@@ -101,7 +101,7 @@
         </sizepolicy>
        </property>
        <property name="title">
-        <string>Corners</string>
+        <string comment="Touchpad">Corners</string>
        </property>
        <property name="flat">
         <bool>true</bool>
@@ -125,7 +125,7 @@
            <item row="0" column="0">
             <widget class="QLabel" name="label_5">
              <property name="text">
-              <string>Top left:</string>
+              <string comment="Touchpad corner">Top left:</string>
              </property>
              <property name="alignment">
               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -145,7 +145,7 @@
            <item row="2" column="0">
             <widget class="QLabel" name="label_7">
              <property name="text">
-              <string>Bottom left:</string>
+              <string comment="Touchpad corner">Bottom left:</string>
              </property>
              <property name="alignment">
               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -158,7 +158,7 @@
            <item row="0" column="3">
             <widget class="QLabel" name="label_6">
              <property name="text">
-              <string>Top right:</string>
+              <string comment="Touchpad corner">Top right:</string>
              </property>
              <property name="alignment">
               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -208,7 +208,7 @@
            <item row="2" column="3">
             <widget class="QLabel" name="label_8">
              <property name="text">
-              <string>Bottom right:</string>
+              <string comment="Touchpad corner">Bottom right:</string>
              </property>
              <property name="alignment">
               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -263,7 +263,7 @@
          <string>If off, a tap-and-drag gesture ends when you release the finger. If on, the gesture is active until you tap a second time, or until timeout expires</string>
         </property>
         <property name="title">
-         <string>Locked Drags</string>
+         <string comment="Touchpad gesture">Locked Drags</string>
         </property>
         <property name="flat">
          <bool>true</bool>
@@ -278,7 +278,7 @@
          <item row="0" column="0">
           <widget class="QLabel" name="label_9">
            <property name="text">
-            <string>Timeout:</string>
+            <string comment="Locked drags">Timeout:</string>
            </property>
            <property name="buddy">
             <cstring>kcfg_LockedDragTimeout</cstring>
@@ -333,6 +333,9 @@
       </property>
       <item row="0" column="0">
        <widget class="QLabel" name="label_10">
+        <property name="toolTip">
+         <string comment="Tap detection"/>
+        </property>
         <property name="text">
          <string>Maximum time:</string>
         </property>
@@ -343,6 +346,9 @@
       </item>
       <item row="1" column="0">
        <widget class="QLabel" name="label_11">
+        <property name="toolTip">
+         <string comment="Tap detection"/>
+        </property>
         <property name="text">
          <string>Maximum finger movement:</string>
         </property>
@@ -353,6 +359,9 @@
       </item>
       <item row="2" column="0">
        <widget class="QLabel" name="label_12">
+        <property name="toolTip">
+         <string comment="Tap detection"/>
+        </property>
         <property name="text">
          <string>Maximum time for double tap:</string>
         </property>
@@ -363,6 +372,9 @@
       </item>
       <item row="3" column="0">
        <widget class="QLabel" name="label_13">
+        <property name="toolTip">
+         <string comment="Tap detection"/>
+        </property>
         <property name="text">
          <string>Single tap timeout:</string>
         </property>

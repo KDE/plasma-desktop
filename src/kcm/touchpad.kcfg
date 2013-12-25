@@ -19,16 +19,16 @@
             </parameter>
             <choices name="Button">
                 <choice name="NoButton">
-                    <label>No action</label>
+                    <label context="Emulated mouse button">No action</label>
                 </choice>
                 <choice name="LeftButton">
-                    <label>Left button</label>
+                    <label context="Emulated mouse button">Left button</label>
                 </choice>
                 <choice name="MiddleButton">
-                    <label>Middle button</label>
+                    <label context="Emulated mouse button">Middle button</label>
                 </choice>
                 <choice name="RightButton">
-                    <label>Right button</label>
+                    <label context="Emulated mouse button">Right button</label>
                 </choice>
             </choices>
             <default param="OneFingerTap" code="true">
@@ -277,31 +277,31 @@
         <entry name="CircScrollTrigger" type="Enum">
             <choices name="Edge">
                 <choice name="AllEdges">
-                    <label context="Touchpad">All edges</label>
+                    <label context="Touchpad Edge">All edges</label>
                 </choice>
                 <choice name="TopEdge">
-                    <label context="Touchpad">Top edge</label>
+                    <label context="Touchpad Edge">Top edge</label>
                 </choice>
                 <choice name="TopRightCorner">
-                    <label context="Touchpad">Top right corner</label>
+                    <label context="Touchpad Edge">Top right corner</label>
                 </choice>
                 <choice name="RightEdge">
-                    <label context="Touchpad">Right edge</label>
+                    <label context="Touchpad Edge">Right edge</label>
                 </choice>
                 <choice name="BottomRightCorner">
-                    <label context="Touchpad">Bottom right corner</label>
+                    <label context="Touchpad Edge">Bottom right corner</label>
                 </choice>
                 <choice name="BottomEdge">
-                    <label context="Touchpad">Bottom edge</label>
+                    <label context="Touchpad Edge">Bottom edge</label>
                 </choice>
                 <choice name="BottomLeftCorner">
-                    <label context="Touchpad">Bottom left corner</label>
+                    <label context="Touchpad Edge">Bottom left corner</label>
                 </choice>
                 <choice name="LeftEdge">
-                    <label context="Touchpad">Left edge</label>
+                    <label context="Touchpad Edge">Left edge</label>
                 </choice>
                 <choice name="TopLeftCorner">
-                    <label context="Touchpad">Top left corner</label>
+                    <label context="Touchpad Edge">Top left corner</label>
                 </choice>
             </choices>
             <default code="true">

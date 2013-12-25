@@ -17,7 +17,7 @@
    <item>
     <widget class="QGroupBox" name="groupBox">
      <property name="title">
-      <string>Sensitivity</string>
+      <string comment="Touchpad">Sensitivity</string>
      </property>
      <property name="flat">
       <bool>true</bool>
@@ -78,7 +78,7 @@
       <string>If palm detection should be enabled. Note that this also requires hardware/firmware support from the touchpad</string>
      </property>
      <property name="title">
-      <string>Palm Detection</string>
+      <string comment="Touchpad">Palm Detection</string>
      </property>
      <property name="flat">
       <bool>true</bool>
@@ -90,7 +90,7 @@
       <item row="0" column="0">
        <widget class="QLabel" name="label_3">
         <property name="text">
-         <string>Minimum width:</string>
+         <string comment="Palm detection">Minimum width:</string>
         </property>
         <property name="buddy">
          <cstring>kcfg_PalmMinWidth</cstring>
@@ -100,7 +100,7 @@
       <item row="1" column="0">
        <widget class="QLabel" name="label_4">
         <property name="text">
-         <string>Minimum pressure:</string>
+         <string comment="Palm detection">Minimum pressure:</string>
         </property>
         <property name="buddy">
          <cstring>kcfg_PalmMinZ</cstring>

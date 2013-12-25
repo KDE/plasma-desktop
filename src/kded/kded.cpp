@@ -190,8 +190,7 @@ void TouchpadDisabler::showNotification()
     }
 
     KNotification::event("TouchpadDisabled",
-                         i18n("Touchpad is disabled because mouse is "
-                              "detected"),
+                         i18n("Touchpad was disabled because mouse is detected"),
                          QPixmap(),
                          0,
                          KNotification::CloseOnTimeout,

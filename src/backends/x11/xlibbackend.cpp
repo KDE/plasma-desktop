@@ -178,7 +178,7 @@ XlibBackend::XlibBackend(QObject *parent) :
 
     m_device = findTouchpad();
     if (m_device == XIAllDevices) {
-        m_errorString = i18n("No touchpads found");
+        m_errorString = i18n("No touchpad found");
         return;
     }
 
@@ -394,7 +394,7 @@ bool XlibBackend::applyConfig(const QVariantHash &p)
     flush();
 
     if (error) {
-        m_errorString = i18n("Can not set touchpad configuration");
+        m_errorString = i18n("Can not apply touchpad configuration");
     }
     return !error;
 }

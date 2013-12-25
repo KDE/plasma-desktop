@@ -37,13 +37,13 @@ void TestButton::mousePressEvent(QMouseEvent *e)
 
     switch (e->button()) {
     case Qt::LeftButton:
-        setText(i18n("Left button"));
+        setText(i18nc("Mouse button", "Left button"));
         break;
     case Qt::RightButton:
-        setText(i18n("Right button"));
+        setText(i18nc("Mouse button", "Right button"));
         break;
     case Qt::MiddleButton:
-        setText(i18n("Middle button"));
+        setText(i18nc("Mouse button", "Middle button"));
         break;
     default:
         break;

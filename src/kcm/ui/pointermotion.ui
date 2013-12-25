@@ -17,7 +17,7 @@
    <item>
     <widget class="QGroupBox" name="groupBox">
      <property name="title">
-      <string>Speed</string>
+      <string comment="Mouse pointer motion parameters">Speed</string>
      </property>
      <property name="flat">
       <bool>true</bool>
@@ -36,7 +36,7 @@
       <item row="0" column="1">
        <widget class="CustomSlider" name="kcfg_MinSpeed">
         <property name="toolTip">
-         <string>Minimum speed factor</string>
+         <string>Minimum pointer speed</string>
         </property>
         <property name="orientation">
          <enum>Qt::Horizontal</enum>
@@ -59,7 +59,7 @@
       <item row="1" column="1">
        <widget class="CustomSlider" name="kcfg_MaxSpeed">
         <property name="toolTip">
-         <string>Maximum speed factor</string>
+         <string>Maximum pointer speed</string>
         </property>
         <property name="orientation">
          <enum>Qt::Horizontal</enum>
@@ -72,7 +72,7 @@
       <item row="2" column="0">
        <widget class="QLabel" name="label_3">
         <property name="text">
-         <string>Acceleration:</string>
+         <string comment="Pointer acceleration">Acceleration:</string>
         </property>
         <property name="buddy">
          <cstring>kcfg_AccelFactor</cstring>
@@ -98,7 +98,7 @@
    <item>
     <widget class="QGroupBox" name="groupBox_3">
      <property name="title">
-      <string>Pressure-Dependent Motion</string>
+      <string comment="Pointer motion">Pressure-Dependent Motion</string>
      </property>
      <property name="flat">
       <bool>true</bool>
@@ -110,7 +110,7 @@
       <item row="0" column="0">
        <widget class="QLabel" name="label_6">
         <property name="text">
-         <string>Minimum pressure:</string>
+         <string comment="Pressure-dependent pointer motion">Minimum pressure:</string>
         </property>
         <property name="buddy">
          <cstring>kcfg_PressureMotionMinZ</cstring>
@@ -120,7 +120,7 @@
       <item row="1" column="0">
        <widget class="QLabel" name="label_7">
         <property name="text">
-         <string>Minimum factor:</string>
+         <string comment="Pressure-dependent pointer motion">Minimum factor:</string>
         </property>
         <property name="buddy">
          <cstring>kcfg_PressureMotionMinFactor</cstring>
@@ -130,7 +130,7 @@
       <item row="2" column="0">
        <widget class="QLabel" name="label_8">
         <property name="text">
-         <string>Maximum pressure:</string>
+         <string comment="Pressure-dependent pointer motion">Maximum pressure:</string>
         </property>
         <property name="buddy">
          <cstring>kcfg_PressureMotionMaxZ</cstring>
@@ -140,7 +140,7 @@
       <item row="3" column="0">
        <widget class="QLabel" name="label_9">
         <property name="text">
-         <string>Maximum factor:</string>
+         <string comment="Pressure-dependent pointer motion">Maximum factor:</string>
         </property>
         <property name="buddy">
          <cstring>kcfg_PressureMotionMaxFactor</cstring>
@@ -205,7 +205,7 @@
    <item>
     <widget class="QGroupBox" name="groupBox_2">
      <property name="title">
-      <string>Noise Cancellation</string>
+      <string comment="Pointer motion">Noise Cancellation</string>
      </property>
      <property name="flat">
       <bool>true</bool>
@@ -217,7 +217,7 @@
       <item row="0" column="0">
        <widget class="QLabel" name="label_4">
         <property name="text">
-         <string>Vertical hysteresis:</string>
+         <string comment="Noise cancellation">Vertical:</string>
         </property>
         <property name="buddy">
          <cstring>kcfg_VertHysteresis</cstring>
@@ -227,7 +227,7 @@
       <item row="1" column="0">
        <widget class="QLabel" name="label_5">
         <property name="text">
-         <string>Horizontal hysteresis:</string>
+         <string comment="Noise cancellation">Horizontal:</string>
         </property>
         <property name="buddy">
          <cstring>kcfg_HorizHysteresis</cstring>
@@ -237,7 +237,7 @@
       <item row="0" column="1">
        <widget class="KIntNumInput" name="kcfg_VertHysteresis">
         <property name="toolTip">
-         <string>The minimum vertical HW distance required to generate motion events</string>
+         <string>The minimum vertical hardware distance required to generate motion events</string>
         </property>
         <property name="minimum">
          <number>0</number>
@@ -256,7 +256,7 @@
       <item row="1" column="1">
        <widget class="KIntNumInput" name="kcfg_HorizHysteresis">
         <property name="toolTip">
-         <string>The minimum horizontal HW distance required to generate motion events</string>
+         <string>The minimum horizontal hardware distance required to generate motion events</string>
         </property>
         <property name="minimum">
          <number>0</number>

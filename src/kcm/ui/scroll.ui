@@ -38,7 +38,7 @@
         <string>Enable vertical scrolling when dragging along the right edge</string>
        </property>
        <property name="text">
-        <string comment="Vertical edge scrolling">Vertical</string>
+        <string comment="Scrolling direction">Vertical</string>
        </property>
       </widget>
      </item>
@@ -48,7 +48,7 @@
         <string>Enable horizontal scrolling when dragging along the bottom edge</string>
        </property>
        <property name="text">
-        <string comment="Horizontal edge scrolling">Horizontal</string>
+        <string comment="Scrolling direction">Horizontal</string>
        </property>
       </widget>
      </item>
@@ -58,7 +58,7 @@
         <string>Enable vertical scrolling when dragging with two fingers anywhere on the touchpad</string>
        </property>
        <property name="text">
-        <string comment="Enable vertical two-finger scrolling">Vertical</string>
+        <string comment="Scrolling direction">Vertical</string>
        </property>
       </widget>
      </item>
@@ -68,7 +68,7 @@
         <string>Enable horizontal scrolling when dragging with two fingers anywhere on the touchpad</string>
        </property>
        <property name="text">
-        <string comment="Enable horizontal two-finger scrolling">Horizontal</string>
+        <string comment="Scrolling direction">Horizontal</string>
        </property>
       </widget>
      </item>
@@ -78,7 +78,7 @@
         <string>Reverse vertical scrolling</string>
        </property>
        <property name="text">
-        <string comment="Reverse vertical scrolling">Vertical</string>
+        <string comment="Scrolling direction">Vertical</string>
        </property>
       </widget>
      </item>
@@ -88,7 +88,7 @@
         <string>Reverse horizontal scrolling</string>
        </property>
        <property name="text">
-        <string comment="Reverse horizontal scrolling">Horizontal</string>
+        <string comment="Scrolling direction">Horizontal</string>
        </property>
       </widget>
      </item>
@@ -123,7 +123,7 @@
       </size>
      </property>
      <property name="title">
-      <string>Scrolling Distance</string>
+      <string comment="Touchpad - Scrolling">Scrolling Distance</string>
      </property>
      <property name="flat">
       <bool>true</bool>
@@ -135,7 +135,7 @@
       <item row="0" column="0">
        <widget class="QLabel" name="label_3">
         <property name="text">
-         <string comment="Vertical scrolling distance">Vertical:</string>
+         <string comment="Scrolling distance">Vertical:</string>
         </property>
         <property name="buddy">
          <cstring>kcfg_VertScrollDelta</cstring>
@@ -164,7 +164,7 @@
       <item row="1" column="0">
        <widget class="QLabel" name="label_4">
         <property name="text">
-         <string comment="Horizontal scrolling distance">Horizontal:</string>
+         <string comment="Scrolling distance">Horizontal:</string>
         </property>
         <property name="buddy">
          <cstring>kcfg_HorizScrollDelta</cstring>
@@ -199,7 +199,7 @@
       <string>Continue scrolling after the finger is released from the edge of the touchpad</string>
      </property>
      <property name="title">
-      <string>Coasting</string>
+      <string comment="Touchpad - Scrolling">Coasting</string>
      </property>
      <property name="flat">
       <bool>true</bool>
@@ -214,7 +214,7 @@
       <item row="0" column="0">
        <widget class="QLabel" name="label">
         <property name="text">
-         <string>Minimum speed:</string>
+         <string comment="Coasting">Minimum speed:</string>
         </property>
         <property name="buddy">
          <cstring>kcfg_CoastingSpeed</cstring>
@@ -240,7 +240,7 @@
       <item row="1" column="0">
        <widget class="QLabel" name="label_2">
         <property name="text">
-         <string>Deceleration:</string>
+         <string comment="Coasting">Deceleration:</string>
         </property>
         <property name="buddy">
          <cstring>kcfg_CoastingFriction</cstring>
@@ -279,7 +279,7 @@
          <string>Enable edge scrolling to continue while the finger stays in an edge corner</string>
         </property>
         <property name="text">
-         <string>Enable</string>
+         <string comment="Coasting">Enable</string>
         </property>
        </widget>
       </item>
@@ -294,7 +294,7 @@ Moving your finger in clockwise circles around the center of the touchpad
 will scroll down and counter clockwise motion will scroll up</string>
      </property>
      <property name="title">
-      <string>Circular Scrolling</string>
+      <string comment="Touchpad - Scrolling">Circular Scrolling</string>
      </property>
      <property name="flat">
       <bool>true</bool>
@@ -309,7 +309,7 @@ will scroll down and counter clockwise motion will scroll up</string>
       <item row="1" column="0">
        <widget class="QLabel" name="label_5">
         <property name="text">
-         <string>Trigger region:</string>
+         <string comment="Circular scrolling">Trigger region:</string>
         </property>
         <property name="buddy">
          <cstring>kcfg_CircScrollTrigger</cstring>
@@ -326,7 +326,7 @@ will scroll down and counter clockwise motion will scroll up</string>
       <item row="2" column="0">
        <widget class="QLabel" name="label_6">
         <property name="text">
-         <string>Angle:</string>
+         <string comment="Circular scrolling">Angle:</string>
         </property>
         <property name="buddy">
          <cstring>kcfg_CircScrollDelta</cstring>
@@ -345,7 +345,7 @@ will scroll down and counter clockwise motion will scroll up</string>
          <string>Move angle (radians) of finger to generate a scroll event</string>
         </property>
         <property name="suffix">
-         <string>°</string>
+         <string comment="suffix - degrees (angle)">°</string>
         </property>
         <property name="sliderEnabled">
          <bool>true</bool>

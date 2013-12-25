@@ -133,7 +133,7 @@ Item {
         visualParent: root
         titleText: i18n("Touchpad")
         titleIcon: "dialog-warning"
-        message: i18n("No mouses were detected.\nAre you sure you want to disable touchpad?")
+        message: i18n("No mouse were detected.\nAre you sure you want to disable touchpad?")
         acceptButtonText: i18n("Disable")
         onAccepted: execOp("disable")
     }
