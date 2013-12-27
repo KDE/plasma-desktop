@@ -231,7 +231,7 @@
             <min>0</min>
             <max>20</max>
             <default code="true">
-                systemDefault("MaxTapMove", 2)
+                systemDefault("MaxTapMove", 2.0)
             </default>
         </entry>
         <entry name="PressureMotionMinZ" type="Int">
