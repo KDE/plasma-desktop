@@ -103,6 +103,8 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
     QVBoxLayout *messageLayout = new QVBoxLayout();
     layout->addLayout(messageLayout, 0, 0, 1, 2);
 
+    // Messages
+
     m_errorMessage = new KMessageWidget(this);
     m_errorMessage->setMessageType(KMessageWidget::Error);
     m_errorMessage->setVisible(false);
@@ -125,40 +127,15 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
     layout->setColumnStretch(0, 3);
     layout->setColumnStretch(1, 1);
 
+    // Main UI
+
     m_tabs = new KTabWidget(this);
+    layout->addWidget(m_tabs, 1, 0, 1, 1);
 
     addTab(m_tabs, m_tapping);
     addTab(m_tabs, m_scrolling);
     addTab(m_tabs, m_pointerMotion);
     addTab(m_tabs, m_sensitivity);
-
-    m_kdedTab = addTab(m_tabs, m_kded);
-    m_daemonConfigManager = addConfig(&m_daemonSettings, m_kdedTab);
-
-    KMessageWidget *kdedMessage = new KMessageWidget(m_kdedTab);
-    kdedMessage->setMessageType(KMessageWidget::Information);
-    kdedMessage->setCloseButtonVisible(false);
-    kdedMessage->setText(
-                i18n("These settings won't take effect in the testing area"));
-    qobject_cast<QVBoxLayout *>(m_kdedTab->layout())->
-            insertWidget(0, kdedMessage);
-
-    m_shortcutsDialog.reset(new KShortcutsDialog(KShortcutsEditor::GlobalAction,
-                                                 KShortcutsEditor::LetterShortcutsDisallowed));
-    m_shortcutsDialog->addCollection(new TouchpadGlobalActions(this),
-                                     i18n("Enable/Disable Touchpad"));
-    connect(m_kded.configureShortcutsButton, SIGNAL(clicked()),
-            m_shortcutsDialog.data(), SLOT(show()));
-
-    layout->addWidget(m_tabs, 1, 0, 1, 1);
-
-    m_testArea = new TestArea(this);
-    layout->addWidget(m_testArea, 1, 1);
-    connect(m_testArea, SIGNAL(enter()), SLOT(beginTesting()));
-    connect(m_testArea, SIGNAL(leave()), SLOT(endTesting()));
-    connect(this, SIGNAL(changed(bool)), SLOT(onChanged()));
-    connect(m_tabs, SIGNAL(currentChanged(int)), SLOT(updateTestAreaEnabled()));
-    updateTestAreaEnabled();
 
     static const CustomSlider::SqrtInterpolator interpolator;
     m_pointerMotion.kcfg_MinSpeed->setInterpolator(&interpolator);
@@ -180,6 +157,26 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
                                               m_backend->supportedParameters());
     connect(m_manager, SIGNAL(widgetModified()), SLOT(checkChanges()));
 
+    // KDED settings
+
+    m_kdedTab = addTab(m_tabs, m_kded);
+    m_daemonConfigManager = addConfig(&m_daemonSettings, m_kdedTab);
+
+    KMessageWidget *kdedMessage = new KMessageWidget(m_kdedTab);
+    kdedMessage->setMessageType(KMessageWidget::Information);
+    kdedMessage->setCloseButtonVisible(false);
+    kdedMessage->setText(
+                i18n("These settings won't take effect in the testing area"));
+    qobject_cast<QVBoxLayout *>(m_kdedTab->layout())->
+            insertWidget(0, kdedMessage);
+
+    m_shortcutsDialog.reset(new KShortcutsDialog(KShortcutsEditor::GlobalAction,
+                                                 KShortcutsEditor::LetterShortcutsDisallowed));
+    m_shortcutsDialog->addCollection(new TouchpadGlobalActions(this),
+                                     i18n("Enable/Disable Touchpad"));
+    connect(m_kded.configureShortcutsButton, SIGNAL(clicked()),
+            m_shortcutsDialog.data(), SLOT(show()));
+
     m_mouseCombo = new KComboBox(true, m_kded.kcfg_MouseBlacklist);
     m_kded.kcfg_MouseBlacklist->setCustomEditor(m_mouseCombo);
     connect(m_backend, SIGNAL(mousesChanged()), SLOT(updateMouseList()));
@@ -188,6 +185,16 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
 
     m_daemon = new OrgKdeTouchpadInterface("org.kde.kded", "/modules/touchpad",
                                            QDBusConnection::sessionBus(), this);
+
+    // Testing area
+
+    m_testArea = new TestArea(this);
+    layout->addWidget(m_testArea, 1, 1);
+    connect(m_testArea, SIGNAL(enter()), SLOT(beginTesting()));
+    connect(m_testArea, SIGNAL(leave()), SLOT(endTesting()));
+    connect(this, SIGNAL(changed(bool)), SLOT(onChanged()));
+    connect(m_tabs, SIGNAL(currentChanged(int)), SLOT(updateTestAreaEnabled()));
+    updateTestAreaEnabled();
 }
 
 void TouchpadConfig::updateMouseList()
