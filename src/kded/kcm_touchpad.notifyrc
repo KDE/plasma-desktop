@@ -1,10 +1,26 @@
 [Global]
 Name=Touchpad
+Name[pt]=Rato por Toque
+Name[pt_BR]=Touchpad
+Name[uk]=Сенсорна панель
+Name[x-test]=xxTouchpadxx
 IconName=input-touchpad
 Comment=Touchpad
+Comment[pt]=Rato por Toque
+Comment[pt_BR]=Touchpad
+Comment[uk]=Сенсорна панель
+Comment[x-test]=xxTouchpadxx
 
 [Event/TouchpadDisabled]
 Name=Touchpad was disabled
+Name[pt]=O rato por toque foi desactivado
+Name[pt_BR]=O touchpad foi desativado
+Name[uk]=Сенсорну панель вимкнено
+Name[x-test]=xxTouchpad was disabledxx
 Comment=Touchpad was disabled because mouse is detected
+Comment[pt]=O rato por toque foi desactivado porque foi detectado um rato
+Comment[pt_BR]=O touchpad foi desativado porque o mouse foi detectado
+Comment[uk]=Сенсорну панель вимкнено, оскільки виявлено мишу
+Comment[x-test]=xxTouchpad was disabled because mouse is detectedxx
 Sound=KDE-Sys-App-Positive.ogg
 Action=Popup
