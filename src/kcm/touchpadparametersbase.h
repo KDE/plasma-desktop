@@ -32,7 +32,7 @@ public:
     QVariantHash values() const;
     void setValues(const QVariantHash &);
 
-    static void setSystemDefaults(const QVariantHash &);
+    static void setSystemDefaults();
     static QVariant systemDefault(const QString &name,
                                   const QVariant &hardcoded = QVariant());
     template<typename T>

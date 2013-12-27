@@ -41,15 +41,13 @@ extern "C"
 {
     KDE_EXPORT void kcminit_touchpad()
     {
+        TouchpadParameters::setSystemDefaults();
+
         TouchpadBackend *backend = TouchpadBackend::self();
 
         if (!backend) {
             return;
         }
-
-        QVariantHash current;
-        backend->getConfig(current);
-        TouchpadParameters::setSystemDefaults(current);
 
         TouchpadParameters config;
         backend->applyConfig(config.values());

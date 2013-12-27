@@ -17,6 +17,7 @@
  */
 
 #include "touchpadparametersbase.h"
+#include "touchpadbackend.h"
 
 namespace
 {
@@ -36,6 +37,9 @@ TouchpadParametersBase::TouchpadParametersBase(const QString &configname,
                                                QObject *parent)
     : KCoreConfigSkeleton(configname, parent)
 {
+    if (!systemDefaults().exists()) {
+        setSystemDefaults();
+    }
 }
 
 QVariantHash TouchpadParametersBase::values() const
@@ -57,8 +61,15 @@ void TouchpadParametersBase::setValues(const QVariantHash &v)
     }
 }
 
-void TouchpadParametersBase::setSystemDefaults(const QVariantHash &v)
+void TouchpadParametersBase::setSystemDefaults()
 {
+    TouchpadBackend *backend = TouchpadBackend::self();
+    if (!backend) {
+        return;
+    }
+    QVariantHash v;
+    backend->getConfig(v);
+
     for (QVariantHash::ConstIterator i = v.begin(); i != v.end(); ++i) {
         systemDefaults().writeEntry(i.key(), i.value());
     }
