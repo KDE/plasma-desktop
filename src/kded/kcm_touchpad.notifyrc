@@ -1,6 +1,7 @@
 [Global]
 Name=Touchpad
 Name[de]=Touchpad
+Name[fi]=Kosketuslevy
 Name[nl]=Touchpad
 Name[pt]=Rato por Toque
 Name[pt_BR]=Touchpad
@@ -10,6 +11,7 @@ Name[x-test]=xxTouchpadxx
 IconName=input-touchpad
 Comment=Touchpad
 Comment[de]=Touchpad
+Comment[fi]=Kosketuslevy
 Comment[nl]=Touchpad
 Comment[pt]=Rato por Toque
 Comment[pt_BR]=Touchpad
@@ -20,6 +22,7 @@ Comment[x-test]=xxTouchpadxx
 [Event/TouchpadDisabled]
 Name=Touchpad was disabled
 Name[de]=Das Touchpad wurde deaktiviert
+Name[fi]=Kosketuslevy poistettiin käytöstä
 Name[nl]=Touchpad was uitgeschakeld
 Name[pt]=O rato por toque foi desactivado
 Name[pt_BR]=O touchpad foi desativado
@@ -28,6 +31,7 @@ Name[uk]=Сенсорну панель вимкнено
 Name[x-test]=xxTouchpad was disabledxx
 Comment=Touchpad was disabled because mouse is detected
 Comment[de]=Das Touchpad wurde deaktiviert, weil eine Maus erkannt wurde
+Comment[fi]=Kosketuslevy poistettiin käytöstä, koska havaittiin hiiri
 Comment[nl]=Touchpad was uitgeschakeld omdat er een muis is gedetecteerd
 Comment[pt]=O rato por toque foi desactivado porque foi detectado um rato
 Comment[pt_BR]=O touchpad foi desativado porque o mouse foi detectado
