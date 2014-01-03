@@ -52,6 +52,7 @@ kde4_add_plugin(kded_touchpad
 target_link_libraries(kded_touchpad
                       ${backend_LIBS}
                       ${KDE4_KDEUI_LIBS}
+                      ${KDE4_PLASMA_LIBS}
 )
 
 add_subdirectory(applet)

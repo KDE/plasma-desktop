@@ -22,8 +22,11 @@
 #include <QMouseEvent>
 #include <QScopedPointer>
 #include <QStandardItemModel>
+#include <QPalette>
+#include <QBrush>
 
 #include <KLocale>
+#include <Plasma/Theme>
 
 TestArea::TestArea(QWidget *parent) : QWidget(parent)
 {
@@ -35,6 +38,12 @@ TestArea::TestArea(QWidget *parent) : QWidget(parent)
                 new QStandardItem(KIcon("folder"), i18n("Drag me")));
     model->appendRow(item.data());
     item.take();
+
+    QPalette palette(m_ui.scrollAreaWidgetContents->palette());
+    QImage image(Plasma::Theme::defaultTheme()->wallpaperPath());
+    palette.setBrush(QPalette::Background, QBrush(image));
+    m_ui.scrollAreaWidgetContents->setPalette(palette);
+    m_ui.scrollAreaWidgetContents->setFixedSize(image.size());
 }
 
 void TestArea::enterEvent(QEvent *e)
