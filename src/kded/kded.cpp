@@ -31,11 +31,11 @@ bool TouchpadDisabler::workingTouchpadFound() const
 
 void TouchpadDisabler::serviceRegistered(const QString &service)
 {
-    if (!m_dbusWatcher.removeWatchedService(service)) {
+    if (!m_dependecies.removeWatchedService(service)) {
         return;
     }
 
-    if (m_dbusWatcher.watchedServices().isEmpty()) {
+    if (m_dependecies.watchedServices().isEmpty()) {
         lateInit();
     }
 }
@@ -50,9 +50,9 @@ TouchpadDisabler::TouchpadDisabler(QObject *parent, const QVariantList &)
         return;
     }
 
-    m_dbusWatcher.addWatchedService("org.kde.plasma-desktop");
-    m_dbusWatcher.addWatchedService("org.kde.kglobalaccel");
-    connect(&m_dbusWatcher, SIGNAL(serviceRegistered(QString)),
+    m_dependecies.addWatchedService("org.kde.plasma-desktop");
+    m_dependecies.addWatchedService("org.kde.kglobalaccel");
+    connect(&m_dependecies, SIGNAL(serviceRegistered(QString)),
             SLOT(serviceRegistered(QString)));
 
     connect(m_backend, SIGNAL(mousesChanged()), SLOT(mousePlugged()));
@@ -70,9 +70,9 @@ TouchpadDisabler::TouchpadDisabler(QObject *parent, const QVariantList &)
     updateCurrentState();
     reloadSettings();
 
-    m_dbusWatcher.setWatchMode(QDBusServiceWatcher::WatchForRegistration);
-    m_dbusWatcher.setConnection(QDBusConnection::sessionBus());
-    Q_FOREACH (const QString &service, m_dbusWatcher.watchedServices()) {
+    m_dependecies.setWatchMode(QDBusServiceWatcher::WatchForRegistration);
+    m_dependecies.setConnection(QDBusConnection::sessionBus());
+    Q_FOREACH (const QString &service, m_dependecies.watchedServices()) {
         QDBusReply<bool> registered = QDBusConnection::sessionBus().interface()
                 ->isServiceRegistered(service);
         if (!registered.isValid() || registered.value()) {
@@ -166,7 +166,7 @@ void TouchpadDisabler::timerElapsed()
 
 void TouchpadDisabler::mousePlugged()
 {
-    if (!m_dbusWatcher.watchedServices().isEmpty()) {
+    if (!m_dependecies.watchedServices().isEmpty()) {
         return;
     }
 
