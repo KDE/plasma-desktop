@@ -29,15 +29,31 @@ bool TouchpadDisabler::workingTouchpadFound() const
     return m_backend && !(m_backend->supportedParameters().isEmpty());
 }
 
+void TouchpadDisabler::serviceRegistered(const QString &service)
+{
+    if (!m_dbusWatcher.removeWatchedService(service)) {
+        return;
+    }
+
+    if (m_dbusWatcher.watchedServices().isEmpty()) {
+        lateInit();
+    }
+}
+
 TouchpadDisabler::TouchpadDisabler(QObject *parent, const QVariantList &)
     : KDEDModule(parent), m_backend(TouchpadBackend::implementation()),
       m_currentState(TouchpadBackend::TouchpadEnabled),
       m_oldState(m_currentState), m_oldKbState(m_currentState),
-      m_keyboardActivity(false), m_mouse(false), m_startupInProgress(true)
+      m_keyboardActivity(false), m_mouse(false)
 {
     if (!workingTouchpadFound()) {
         return;
     }
+
+    m_dbusWatcher.addWatchedService("org.kde.plasma-desktop");
+    m_dbusWatcher.addWatchedService("org.kde.kglobalaccel");
+    connect(&m_dbusWatcher, SIGNAL(serviceRegistered(QString)),
+            SLOT(serviceRegistered(QString)));
 
     connect(m_backend, SIGNAL(mousesChanged()), SLOT(mousePlugged()));
     connect(m_backend, SIGNAL(keyboardActivityStarted()),
@@ -54,20 +70,14 @@ TouchpadDisabler::TouchpadDisabler(QObject *parent, const QVariantList &)
     updateCurrentState();
     reloadSettings();
 
-    static const QString plasmaService("org.kde.plasma-desktop");
-    QDBusServiceWatcher *watcher =
-            new QDBusServiceWatcher(plasmaService,
-                                    QDBusConnection::sessionBus(),
-                                    QDBusServiceWatcher::WatchForOwnerChange,
-                                    this);
-
-    connect(watcher, SIGNAL(serviceRegistered(QString)), SLOT(lateInit()));
-
-    QDBusReply<bool> alreadyRegistered(
-                QDBusConnection::sessionBus().interface()->
-                isServiceRegistered(plasmaService));
-    if (!alreadyRegistered.isValid() || alreadyRegistered.value()) {
-        lateInit();
+    m_dbusWatcher.setWatchMode(QDBusServiceWatcher::WatchForRegistration);
+    m_dbusWatcher.setConnection(QDBusConnection::sessionBus());
+    Q_FOREACH (const QString &service, m_dbusWatcher.watchedServices()) {
+        QDBusReply<bool> registered = QDBusConnection::sessionBus().interface()
+                ->isServiceRegistered(service);
+        if (!registered.isValid() || registered.value()) {
+            serviceRegistered(service);
+        }
     }
 }
 
@@ -156,7 +166,7 @@ void TouchpadDisabler::timerElapsed()
 
 void TouchpadDisabler::mousePlugged()
 {
-    if (m_startupInProgress) {
+    if (!m_dbusWatcher.watchedServices().isEmpty()) {
         return;
     }
 
@@ -216,15 +226,10 @@ bool TouchpadDisabler::isMousePluggedIn() const
 
 void TouchpadDisabler::lateInit()
 {
-    if (!m_startupInProgress) {
-        return;
-    }
-
     TouchpadGlobalActions *actions = new TouchpadGlobalActions(this);
     connect(actions, SIGNAL(enableTriggered()), SLOT(enable()));
     connect(actions, SIGNAL(disableTriggered()), SLOT(disable()));
     connect(actions, SIGNAL(toggleTriggered()), SLOT(toggle()));
 
-    m_startupInProgress = false;
     mousePlugged();
 }

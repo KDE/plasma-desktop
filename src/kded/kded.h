@@ -57,15 +57,17 @@ private Q_SLOTS:
     void updateCurrentState();
     void showNotification();
     void lateInit();
+    void serviceRegistered(const QString &);
 
 private:
     TouchpadBackend *m_backend;
     TouchpadDisablerSettings m_settings;
     QTimer m_keyboardActivityTimeout;
+    QDBusServiceWatcher m_dbusWatcher;
 
     TouchpadBackend::TouchpadState m_currentState, m_oldState, m_oldKbState,
     m_keyboardDisableState;
-    bool m_keyboardActivity, m_mouse, m_startupInProgress;
+    bool m_keyboardActivity, m_mouse;
 };
 
 #endif // KDED_H
