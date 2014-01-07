@@ -30,7 +30,7 @@ bool TouchpadDisabler::workingTouchpadFound() const
 }
 
 TouchpadDisabler::TouchpadDisabler(QObject *parent, const QVariantList &)
-    : KDEDModule(parent), m_backend(TouchpadBackend::self()),
+    : KDEDModule(parent), m_backend(TouchpadBackend::implementation()),
       m_currentState(TouchpadBackend::TouchpadEnabled),
       m_oldState(m_currentState), m_oldKbState(m_currentState),
       m_keyboardActivity(false), m_mouse(false)

@@ -63,7 +63,7 @@ void TouchpadParametersBase::setValues(const QVariantHash &v)
 
 void TouchpadParametersBase::setSystemDefaults()
 {
-    TouchpadBackend *backend = TouchpadBackend::self();
+    TouchpadBackend *backend = TouchpadBackend::implementation();
     if (!backend) {
         return;
     }

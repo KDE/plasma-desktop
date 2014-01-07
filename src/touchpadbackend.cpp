@@ -18,17 +18,15 @@
 
 #include "touchpadbackend.h"
 
-#include <KGlobal>
-
 #include "backends/x11/xlibbackend.h"
-
-K_GLOBAL_STATIC(XlibBackend, backend)
 
 TouchpadBackend::TouchpadBackend(QObject *parent) : QObject(parent)
 {
 }
 
-TouchpadBackend *TouchpadBackend::self()
+TouchpadBackend *TouchpadBackend::implementation()
 {
-    return backend;
+    //There will be multiple backends later
+    static XlibBackend backend;
+    return &backend;
 }

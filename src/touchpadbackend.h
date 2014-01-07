@@ -30,7 +30,7 @@ class KDE_EXPORT TouchpadBackend : public QObject
 public:
     explicit TouchpadBackend(QObject *parent);
 
-    static TouchpadBackend *self();
+    static TouchpadBackend *implementation();
 
     virtual bool applyConfig(const QVariantHash &) = 0;
     virtual bool getConfig(QVariantHash &) = 0;

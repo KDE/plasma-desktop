@@ -43,7 +43,7 @@ extern "C"
     {
         TouchpadParameters::setSystemDefaults();
 
-        TouchpadBackend *backend = TouchpadBackend::self();
+        TouchpadBackend *backend = TouchpadBackend::implementation();
 
         if (!backend) {
             return;
@@ -149,7 +149,7 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
     new SliderPair(m_pointerMotion.kcfg_PressureMotionMinZ,
                    m_pointerMotion.kcfg_PressureMotionMaxZ, this);
 
-    m_backend = TouchpadBackend::self();
+    m_backend = TouchpadBackend::implementation();
 
     KConfigDialogManager::changedMap()->insert("CustomSlider",
                                                SIGNAL(valueChanged(double)));
