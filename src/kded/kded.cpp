@@ -33,7 +33,7 @@ TouchpadDisabler::TouchpadDisabler(QObject *parent, const QVariantList &)
     : KDEDModule(parent), m_backend(TouchpadBackend::implementation()),
       m_currentState(TouchpadBackend::TouchpadEnabled),
       m_oldState(m_currentState), m_oldKbState(m_currentState),
-      m_keyboardActivity(false), m_mouse(false)
+      m_keyboardActivity(false), m_mouse(false), m_startupInProgress(true)
 {
     if (!workingTouchpadFound()) {
         return;
@@ -54,10 +54,21 @@ TouchpadDisabler::TouchpadDisabler(QObject *parent, const QVariantList &)
     updateCurrentState();
     reloadSettings();
 
-    //Startup order problem
-    //Not sure that it's good solution, but the same problem was solved in
-    //PowerDevil in the same way
-    QMetaObject::invokeMethod(this, "initHotkeys", Qt::QueuedConnection);
+    static const QString plasmaService("org.kde.plasma-desktop");
+    QDBusServiceWatcher *watcher =
+            new QDBusServiceWatcher(plasmaService,
+                                    QDBusConnection::sessionBus(),
+                                    QDBusServiceWatcher::WatchForOwnerChange,
+                                    this);
+
+    connect(watcher, SIGNAL(serviceRegistered(QString)), SLOT(lateInit()));
+
+    QDBusReply<bool> alreadyRegistered(
+                QDBusConnection::sessionBus().interface()->
+                isServiceRegistered(plasmaService));
+    if (!alreadyRegistered.isValid() || alreadyRegistered.value()) {
+        lateInit();
+    }
 }
 
 bool TouchpadDisabler::isEnabled() const
@@ -145,6 +156,10 @@ void TouchpadDisabler::timerElapsed()
 
 void TouchpadDisabler::mousePlugged()
 {
+    if (m_startupInProgress) {
+        return;
+    }
+
     bool pluggedIn = isMousePluggedIn();
     Q_EMIT mousePluggedInChanged(pluggedIn);
 
@@ -175,10 +190,7 @@ void TouchpadDisabler::mousePlugged()
         updateCurrentState();
 
         if (m_mouse) {
-            //On startup, don't show notification on top of splash screen
-            //Delay it until startup is finished
-            QMetaObject::invokeMethod(this, "showNotification",
-                                      Qt::QueuedConnection);
+            showNotification();
         }
     }
 }
@@ -202,10 +214,17 @@ bool TouchpadDisabler::isMousePluggedIn() const
     return !m_backend->listMouses(m_settings.mouseBlacklist()).isEmpty();
 }
 
-void TouchpadDisabler::initHotkeys()
+void TouchpadDisabler::lateInit()
 {
+    if (!m_startupInProgress) {
+        return;
+    }
+
     TouchpadGlobalActions *actions = new TouchpadGlobalActions(this);
     connect(actions, SIGNAL(enableTriggered()), SLOT(enable()));
     connect(actions, SIGNAL(disableTriggered()), SLOT(disable()));
     connect(actions, SIGNAL(toggleTriggered()), SLOT(toggle()));
+
+    m_startupInProgress = false;
+    mousePlugged();
 }
