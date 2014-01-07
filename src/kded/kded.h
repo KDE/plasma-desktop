@@ -55,11 +55,12 @@ private Q_SLOTS:
     void timerElapsed();
     void mousePlugged();
     void updateCurrentState();
-    void showNotification();
-    void lateInit();
     void serviceRegistered(const QString &);
 
 private:
+    void showNotification();
+    void lateInit();
+
     TouchpadBackend *m_backend;
     TouchpadDisablerSettings m_settings;
     QTimer m_keyboardActivityTimeout;
