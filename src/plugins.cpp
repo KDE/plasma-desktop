@@ -25,7 +25,9 @@
 #include "kded/kded.h"
 #include "version.h"
 
-static KAboutData buildAboutData()
+namespace {
+
+KAboutData buildAboutData()
 {
     KAboutData data("kcm_touchpad",
                     QByteArray(),
@@ -48,6 +50,8 @@ static KAboutData buildAboutData()
     data.addCredit(ki18n("Violetta Raspryagayeva"), ki18nc("Credits", "Testing"));
 
     return data;
+}
+
 }
 
 K_PLUGIN_FACTORY_DEFINITION(TouchpadPluginFactory,
