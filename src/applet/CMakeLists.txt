@@ -13,6 +13,9 @@ qt4_generate_dbus_interface(../kded/kded.h org.kde.touchpad.xml)
 qt4_add_dbus_interfaces(Applet_SRCS
                         ${CMAKE_CURRENT_BINARY_DIR}/org.kde.touchpad.xml
 )
+qt4_add_dbus_interfaces(Applet_SRCS
+                        ${DBUS_INTERFACES_INSTALL_DIR}/org.kde.kded.xml
+)
 
 kde4_add_plugin(plasma_engine_touchpad ${Applet_SRCS})
 target_link_libraries(plasma_engine_touchpad
