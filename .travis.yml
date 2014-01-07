@@ -9,6 +9,6 @@ before_install:
 before_script:
   - mkdir build
   - cd build
-  - cmake ..
+  - cmake -DCMAKE_INSTALL_PREFIX="$(kde4-config --prefix)" ..
 
 script: make
