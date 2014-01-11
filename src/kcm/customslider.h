@@ -42,6 +42,7 @@ public:
     class Interpolator
     {
     public:
+        Interpolator() { }
         virtual double absolute(double relative,
                                 double minimum, double maximum) const;
         virtual double relative(double absolute,
@@ -53,6 +54,7 @@ public:
     class SqrtInterpolator : public Interpolator
     {
     public:
+        SqrtInterpolator() { }
         double absolute(double relative, double minimum, double maximum) const;
         double relative(double absolute, double minimum, double maximum) const;
     };
