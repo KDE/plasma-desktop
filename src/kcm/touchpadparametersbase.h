@@ -46,9 +46,6 @@ public:
     {
         return static_cast<T>(systemDefault(name, static_cast<int>(hardcoded)));
     }
-
-private:
-    bool m_temporary;
 };
 
 #endif // TOUCHPADPARAMETERSBASE_H
