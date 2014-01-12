@@ -28,7 +28,7 @@
 XlibNotifications::XlibNotifications(Display *display,
                                      xcb_connection_t *connection,
                                      int device)
-    : m_connection(connection), m_device(device)
+    : m_connection(connection)
 {
     m_notifier = new QSocketNotifier(xcb_get_file_descriptor(m_connection),
                                      QSocketNotifier::Read, this);

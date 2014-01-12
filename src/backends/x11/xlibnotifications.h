@@ -45,7 +45,6 @@ private:
     xcb_connection_t *m_connection;
     QSocketNotifier *m_notifier;
     xcb_window_t m_inputWindow;
-    int m_device;
     uint8_t m_inputOpcode;
 };
 
