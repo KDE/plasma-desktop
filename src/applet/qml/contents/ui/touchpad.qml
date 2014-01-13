@@ -94,7 +94,7 @@ Item {
         target: root
         mainText: {
             if (!hasTouchpad) {
-                return i18n("Touchpad is not found");
+                return i18n("No touchpad was found");
             }
 
             return enabled ? i18n("Touchpad is enabled")
@@ -133,7 +133,7 @@ Item {
         visualParent: root
         titleText: i18n("Touchpad")
         titleIcon: "dialog-warning"
-        message: i18n("No mouse were detected.\nAre you sure you want to disable touchpad?")
+        message: i18n("No mouse was detected.\nAre you sure you want to disable the touchpad?")
         acceptButtonText: i18n("Disable")
         onAccepted: execOp("disable")
     }

@@ -212,7 +212,7 @@ void TouchpadDisabler::showNotification()
     }
 
     KNotification::event("TouchpadDisabled",
-                         i18n("Touchpad was disabled because mouse is detected"),
+                         i18n("Touchpad was disabled because a mouse was plugged in"),
                          QPixmap(), //Icon is specified in .notifyrc
                          0,
                          KNotification::CloseOnTimeout,

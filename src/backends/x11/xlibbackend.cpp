@@ -149,7 +149,7 @@ XlibBackend::XlibBackend(QObject *parent) :
     }
 
     if (!m_connection) {
-        m_errorString = i18n("Can not connect to X server");
+        m_errorString = i18n("Cannot connect to X server");
         return;
     }
 
@@ -189,7 +189,7 @@ XlibBackend::XlibBackend(QObject *parent) :
     }
 
     if (m_supported.isEmpty()) {
-        m_errorString = i18n("Can not read any of touchpad's properties");
+        m_errorString = i18n("Cannot read any of touchpad's properties");
         return;
     }
 
@@ -200,7 +200,7 @@ XlibBackend::XlibBackend(QObject *parent) :
             (resolution.nitems == 2 &&
              resolution.i[0] == 1 && resolution.i[1] == 1))
     {
-        m_errorString = i18n("Can not read touchpad's resolution");
+        m_errorString = i18n("Cannot read touchpad's resolution");
         //Non-fatal
     } else {
         m_resY = qMin(static_cast<unsigned long>(resolution.i[0]),
@@ -223,7 +223,7 @@ XlibBackend::XlibBackend(QObject *parent) :
 
     PropertyInfo caps(m_display.data(), m_device, m_capsAtom.atom(), 0);
     if (!caps.b) {
-        m_errorString = i18n("Can not read touchpad's capabilities");
+        m_errorString = i18n("Cannot read touchpad's capabilities");
         return;
     }
 
@@ -394,7 +394,7 @@ bool XlibBackend::applyConfig(const QVariantHash &p)
     flush();
 
     if (error) {
-        m_errorString = i18n("Can not apply touchpad configuration");
+        m_errorString = i18n("Cannot apply touchpad configuration");
     }
     return !error;
 }
@@ -465,7 +465,7 @@ bool XlibBackend::getConfig(QVariantHash &p)
     }
 
     if (error) {
-        m_errorString = i18n("Can not read touchpad configuration");
+        m_errorString = i18n("Cannot read touchpad configuration");
     }
     return !error;
 }
