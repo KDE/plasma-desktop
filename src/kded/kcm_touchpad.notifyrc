@@ -1,5 +1,6 @@
 [Global]
 Name=Touchpad
+Name[cs]=Touchpad
 Name[de]=Touchpad
 Name[fi]=Kosketuslevy
 Name[nl]=Touchpad
@@ -11,6 +12,7 @@ Name[uk]=Сенсорна панель
 Name[x-test]=xxTouchpadxx
 IconName=input-touchpad
 Comment=Touchpad
+Comment[cs]=Touchpad
 Comment[de]=Touchpad
 Comment[fi]=Kosketuslevy
 Comment[nl]=Touchpad
@@ -23,6 +25,7 @@ Comment[x-test]=xxTouchpadxx
 
 [Event/TouchpadDisabled]
 Name=Touchpad was disabled
+Name[cs]=Touchpad byl zakázán
 Name[de]=Das Touchpad wurde deaktiviert
 Name[fi]=Kosketuslevy poistettiin käytöstä
 Name[nl]=Touchpad was uitgeschakeld
