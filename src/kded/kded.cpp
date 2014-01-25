@@ -200,18 +200,19 @@ void TouchpadDisabler::mousePlugged()
         updateCurrentState();
 
         if (m_mouse) {
-            showNotification();
+            showNotification("TouchpadDisabled",
+                             i18n("Touchpad was disabled because a mouse was plugged in"));
+        } else {
+            showNotification("TouchpadEnabled",
+                             i18n("Touchpad was enabled because the mouse was unplugged"));
         }
     }
 }
 
-void TouchpadDisabler::showNotification()
+void TouchpadDisabler::showNotification(const QString &name, const QString &text)
 {
-    KNotification::event("TouchpadDisabled",
-                         i18n("Touchpad was disabled because a mouse was plugged in"),
-                         QPixmap(), //Icon is specified in .notifyrc
-                         0,
-                         KNotification::CloseOnTimeout,
+    KNotification::event(name, text, QPixmap(), //Icon is specified in .notifyrc
+                         0, KNotification::CloseOnTimeout,
                          TouchpadPluginFactory::componentData());
 }
 

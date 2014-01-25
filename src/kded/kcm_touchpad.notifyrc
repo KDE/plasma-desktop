@@ -51,3 +51,9 @@ Comment[uk]=Сенсорну панель вимкнено, оскільки в�
 Comment[x-test]=xxTouchpad was disabled because mouse is detectedxx
 Sound=KDE-Sys-App-Positive.ogg
 Action=Popup
+
+[Event/TouchpadEnabled]
+Name=Touchpad was enabled
+Comment=Touchpad was enabled because the mouse was unplugged
+Sound=KDE-Sys-App-Negative.ogg
+Action=Sound

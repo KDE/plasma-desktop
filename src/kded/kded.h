@@ -58,7 +58,7 @@ private Q_SLOTS:
     void serviceRegistered(const QString &);
 
 private:
-    void showNotification();
+    void showNotification(const QString &name, const QString &text);
     void lateInit();
 
     TouchpadBackend *m_backend;
