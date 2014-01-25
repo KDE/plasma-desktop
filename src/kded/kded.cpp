@@ -207,10 +207,6 @@ void TouchpadDisabler::mousePlugged()
 
 void TouchpadDisabler::showNotification()
 {
-    if (!m_settings.showNotificationWhenDisabled()) {
-        return;
-    }
-
     KNotification::event("TouchpadDisabled",
                          i18n("Touchpad was disabled because a mouse was plugged in"),
                          QPixmap(), //Icon is specified in .notifyrc
