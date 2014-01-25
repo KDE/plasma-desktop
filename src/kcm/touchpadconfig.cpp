@@ -25,6 +25,7 @@
 #include <KAction>
 #include <KLocalizedString>
 #include <KMessageWidget>
+#include <KNotifyConfigWidget>
 #include <KShortcutsDialog>
 #include <KTabWidget>
 
@@ -170,6 +171,8 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
     qobject_cast<QVBoxLayout *>(m_kdedTab->layout())->
             insertWidget(0, kdedMessage);
 
+    connect(m_kded.configureNotificationsButton, SIGNAL(clicked()),
+            SLOT(showConfigureNotificationsDialog()));
     m_shortcutsDialog.reset(new KShortcutsDialog(KShortcutsEditor::GlobalAction,
                                                  KShortcutsEditor::LetterShortcutsDisallowed));
     m_shortcutsDialog->addCollection(new TouchpadGlobalActions(this),
@@ -343,4 +346,12 @@ void TouchpadConfig::updateTestAreaEnabled()
     if (!enable) {
         endTesting();
     }
+}
+
+void TouchpadConfig::showConfigureNotificationsDialog()
+{
+    KNotifyConfigWidget *widget =
+            KNotifyConfigWidget::configure(0, componentData().componentName());
+    KDialog *dialog = qobject_cast<KDialog*>(widget->topLevelWidget());
+    connect(dialog, SIGNAL(finished()), dialog, SLOT(deleteLater()));
 }

@@ -66,6 +66,7 @@ private Q_SLOTS:
     void loadActiveConfig();
     void updateTestAreaEnabled();
     void updateMouseList();
+    void showConfigureNotificationsDialog();
 
 private:
     QVariantHash getActiveConfig();
