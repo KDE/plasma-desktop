@@ -105,7 +105,7 @@ number of milliseconds, touchpad will be enabled again</string>
       <item row="2" column="0" colspan="2">
        <widget class="QCheckBox" name="kcfg_OnlyDisableTapAndScrollOnKeyboardActivity">
         <property name="toolTip">
-         <string>Disable only click emulation and scrolling.
+         <string>Disable click emulation and scrolling.
 You will be still able to move pointer using touchpad and perform clicks with hardware buttons.</string>
         </property>
         <property name="text">
@@ -157,8 +157,8 @@ You will be still able to move pointer using touchpad and perform clicks with ha
       <item>
        <widget class="KEditListBox" name="kcfg_MouseBlacklist">
         <property name="toolTip">
-         <string>Sometimes some devices are wrongly treated as mouse.
-You could add them to this list, so they won't be considered as mouse anymore.</string>
+         <string>Some devices might be incorrectly treated as a mouse.
+You can add them to this list so that they will be ignored when they're plugged in.</string>
         </property>
         <property name="title">
          <string>Ignored devices:</string>
