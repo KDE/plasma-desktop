@@ -164,9 +164,6 @@ You can add them to this list so that they will be ignored when they're plugged 
         <property name="title">
          <string>Ignored devices:</string>
         </property>
-        <property name="flat">
-         <bool>true</bool>
-        </property>
         <property name="buttons">
          <set>KEditListBox::Add|KEditListBox::Remove</set>
         </property>
