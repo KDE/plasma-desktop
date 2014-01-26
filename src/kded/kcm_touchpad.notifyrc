@@ -54,6 +54,16 @@ Action=Popup
 
 [Event/TouchpadEnabled]
 Name=Touchpad was enabled
+Name[de]=Das Touchpad wurde aktiviert
+Name[pt]=O rato por toque foi activado
+Name[pt_BR]=O touchpad foi ativado
+Name[uk]=Сенсорну панель увімкнено
+Name[x-test]=xxTouchpad was enabledxx
 Comment=Touchpad was enabled because the mouse was unplugged
+Comment[de]=Das Touchpad wurde aktiviert, weil eine Maus abgezogen wurde
+Comment[pt]=O rato por toque foi activado porque o rato foi desligado
+Comment[pt_BR]=O touchpad foi ativado porque o mouse foi desconectado
+Comment[uk]=Сенсорну панель увімкнено, оскільки мишу було від’єднано
+Comment[x-test]=xxTouchpad was enabled because the mouse was unpluggedxx
 Sound=KDE-Sys-App-Negative.ogg
 Action=Sound
