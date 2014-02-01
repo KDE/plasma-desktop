@@ -1,5 +1,6 @@
 [Global]
 Name=Touchpad
+Name[bs]=Dodirna površina
 Name[cs]=Touchpad
 Name[de]=Touchpad
 Name[fi]=Kosketuslevy
@@ -13,6 +14,7 @@ Name[uk]=Сенсорна панель
 Name[x-test]=xxTouchpadxx
 IconName=input-touchpad
 Comment=Touchpad
+Comment[bs]=Dodirna površina
 Comment[cs]=Touchpad
 Comment[de]=Touchpad
 Comment[fi]=Kosketuslevy
@@ -27,6 +29,7 @@ Comment[x-test]=xxTouchpadxx
 
 [Event/TouchpadDisabled]
 Name=Touchpad was disabled
+Name[bs]=Dodirna površina je isključena
 Name[cs]=Touchpad byl zakázán
 Name[de]=Das Touchpad wurde deaktiviert
 Name[fi]=Kosketuslevy poistettiin käytöstä
@@ -39,6 +42,7 @@ Name[sv]=Tryckplattan stängdes av
 Name[uk]=Сенсорну панель вимкнено
 Name[x-test]=xxTouchpad was disabledxx
 Comment=Touchpad was disabled because mouse is detected
+Comment[bs]=Dodirna površina je isključena jer je miš prepoznat
 Comment[de]=Das Touchpad wurde deaktiviert, weil eine Maus erkannt wurde
 Comment[fi]=Kosketuslevy poistettiin käytöstä, koska havaittiin hiiri
 Comment[hu]=Az érintőtábla le lett tiltva, mert érzékelhető egy egér
@@ -54,6 +58,7 @@ Action=Popup
 
 [Event/TouchpadEnabled]
 Name=Touchpad was enabled
+Name[bs]=Dodirna površina je uključena
 Name[de]=Das Touchpad wurde aktiviert
 Name[fi]=Kosketuslevy otettiin käyttöön
 Name[nl]=Touchpad was ingeschakeld
@@ -64,6 +69,7 @@ Name[sv]=Tryckplattan aktiverades
 Name[uk]=Сенсорну панель увімкнено
 Name[x-test]=xxTouchpad was enabledxx
 Comment=Touchpad was enabled because the mouse was unplugged
+Comment[bs]=Dodirna površina je uključena jer je miš isključen
 Comment[de]=Das Touchpad wurde aktiviert, weil eine Maus abgezogen wurde
 Comment[fi]=Kosketuslevy otettiin käyttöön, koska hiiri irrotettiin
 Comment[nl]=Touchpad was ingeschakeld omdat er een muis is uitgetrokken
