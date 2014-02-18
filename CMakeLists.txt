@@ -26,3 +26,5 @@ include_directories(${KDE4_INCLUDES})
 
 add_subdirectory(src)
 add_subdirectory(icon)
+
+include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/l10n.cmake)
