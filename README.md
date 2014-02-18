@@ -29,6 +29,14 @@ How to install
 
 Also, there is a package for Ubuntu in [Kubuntu Experimental PPA](https://launchpad.net/~kubuntu-ppa/+archive/experimental)
 
+Translations
+------------
+Translations live in KDE's svn repository.
+If they aren't shipped as part of KDE l10n packages, translations could be built and installed by adding -DTRANSLATIONS="lang1 lang2 ..." to cmake command line.
+Language names are the same as in .desktop files.
+.po files are fetched from svn repository automatically.
+If downloading isn't possible, .po files could be placed in source directory under names "kcm_touchpad_lang1.po" and "plasma_applet_touchpad_lang1.po", where "lang1" is replaced with proper language name.
+
 Bugs
 ----
 
