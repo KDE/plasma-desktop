@@ -11,4 +11,6 @@ before_script:
   - cd build
   - cmake ..
 
-script: make
+script:
+  - make -j9
+  - sudo make install
