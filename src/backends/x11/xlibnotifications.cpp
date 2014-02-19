@@ -35,8 +35,8 @@ XlibNotifications::XlibNotifications(Display *display,
 
     xcb_query_extension_cookie_t inputExtCookie =
             xcb_query_extension(m_connection, std::strlen(INAME), INAME);
-    xcb_query_extension_reply_t *inputExt =
-            xcb_query_extension_reply(m_connection, inputExtCookie, 0);
+    QScopedPointer<xcb_query_extension_reply_t, QScopedPointerPodDeleter>
+            inputExt(xcb_query_extension_reply(m_connection, inputExtCookie, 0));
     if (!inputExt) {
         return;
     }
