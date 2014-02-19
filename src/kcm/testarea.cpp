@@ -22,8 +22,6 @@
 #include <QMouseEvent>
 #include <QScopedPointer>
 #include <QStandardItemModel>
-#include <QPalette>
-#include <QBrush>
 
 #include <KLocale>
 #include <Plasma/Theme>
@@ -39,11 +37,9 @@ TestArea::TestArea(QWidget *parent) : QWidget(parent)
     model->appendRow(item.data());
     item.take();
 
-    QPalette palette(m_ui.scrollAreaWidgetContents->palette());
-    QImage image(Plasma::Theme::defaultTheme()->wallpaperPath());
-    palette.setBrush(QPalette::Background, QBrush(image));
-    m_ui.scrollAreaWidgetContents->setPalette(palette);
-    m_ui.scrollAreaWidgetContents->setFixedSize(image.size());
+    QString wallpaper = Plasma::Theme::defaultTheme()->wallpaperPath();
+    static const QString stylesheet("background-image: url(%1)");
+    m_ui.scrollAreaWidgetContents->setStyleSheet(stylesheet.arg(wallpaper));
 }
 
 void TestArea::enterEvent(QEvent *e)

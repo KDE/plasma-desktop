@@ -36,21 +36,12 @@
          <enum>Qt::NoFocus</enum>
         </property>
         <widget class="QWidget" name="scrollAreaWidgetContents">
-         <property name="geometry">
-          <rect>
-           <x>0</x>
-           <y>0</y>
-           <width>2000</width>
-           <height>2000</height>
-          </rect>
-         </property>
          <property name="minimumSize">
           <size>
            <width>2000</width>
            <height>2000</height>
           </size>
          </property>
-         <widget class="QWidget" name="widget" native="true"/>
         </widget>
        </widget>
       </item>
