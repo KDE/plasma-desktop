@@ -44,8 +44,8 @@ XRecordKeyboardMonitor::XRecordKeyboardMonitor()
     xcb_record_create_context(m_connection, m_context, 0, 1, 1, &cs, &range);
     xcb_flush(m_connection);
 
-    QScopedPointer<xcb_get_modifier_mapping_reply_t> modmap
-            (xcb_get_modifier_mapping_reply(m_connection, modmapCookie, 0));
+    QScopedPointer<xcb_get_modifier_mapping_reply_t, QScopedPointerPodDeleter>
+            modmap(xcb_get_modifier_mapping_reply(m_connection, modmapCookie, 0));
     if (!modmap) {
         return;
     }
@@ -97,8 +97,8 @@ void XRecordKeyboardMonitor::processNextReply()
             continue;
         }
 
-        QScopedPointer<xcb_record_enable_context_reply_t> data(
-                    reinterpret_cast<xcb_record_enable_context_reply_t*>(reply));
+        QScopedPointer<xcb_record_enable_context_reply_t, QScopedPointerPodDeleter>
+                data(reinterpret_cast<xcb_record_enable_context_reply_t*>(reply));
         process(data.data());
     }
 }

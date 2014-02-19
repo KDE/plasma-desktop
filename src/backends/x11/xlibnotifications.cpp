@@ -77,7 +77,8 @@ void XlibNotifications::processEvents()
 {
     xcb_generic_event_t *event;
     while ((event = xcb_poll_for_event(m_connection))) {
-        QScopedPointer<xcb_generic_event_t> eventData(event);
+        QScopedPointer<xcb_generic_event_t, QScopedPointerPodDeleter>
+                eventData(event);
         processEvent(eventData.data());
     }
 }
