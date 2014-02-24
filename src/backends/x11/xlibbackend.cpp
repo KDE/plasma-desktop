@@ -549,10 +549,12 @@ void XlibBackend::setTouchpadState(TouchpadBackend::TouchpadState state)
     int touchpadOff = 0;
     switch (state) {
     case TouchpadEnabled:
-        touchpadOff = 0;
-        break;
     case TouchpadFullyDisabled:
-        touchpadOff = 1;
+        /*
+         * Don't set TouchpadOff to 1 when touchpad is disabled already
+         * for compatibility with ktouchpadenabler
+         */
+        touchpadOff = 0;
         break;
     case TouchpadTapAndScrollDisabled:
         touchpadOff = 2;
