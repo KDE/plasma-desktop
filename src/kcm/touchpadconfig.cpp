@@ -156,7 +156,8 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
                                                SIGNAL(valueChanged(double)));
     m_manager = new CustomConfigDialogManager(this, &m_config,
                                               m_backend->supportedParameters());
-    connect(m_manager, SIGNAL(widgetModified()), SLOT(checkChanges()));
+    connect(m_manager, SIGNAL(widgetModified()), SLOT(checkChanges()),
+            Qt::QueuedConnection);
 
     // KDED settings
 
@@ -229,7 +230,8 @@ QVariantHash TouchpadConfig::getActiveConfig()
     QVariantHash activeConfig;
     if (!m_backend->getConfig(activeConfig)) {
         m_errorMessage->setText(m_backend->errorString());
-        m_errorMessage->animatedShow();
+        QMetaObject::invokeMethod(m_errorMessage, "animatedShow",
+                                  Qt::QueuedConnection);
     }
     return activeConfig;
 }
@@ -237,17 +239,7 @@ QVariantHash TouchpadConfig::getActiveConfig()
 void TouchpadConfig::loadActiveConfig()
 {
     m_manager->setWidgetProperties(getActiveConfig());
-    setConfigOutOfSync(false);
-}
-
-void TouchpadConfig::setConfigOutOfSync(bool value)
-{
-    m_configOutOfSync = value;
-    if (value) {
-        m_configOutOfSyncMessage->animatedShow();
-    } else {
-        m_configOutOfSyncMessage->animatedHide();
-    }
+    m_configOutOfSync = false;
 }
 
 void TouchpadConfig::load()
@@ -256,14 +248,15 @@ void TouchpadConfig::load()
 
     KCModule::load();
 
-    setConfigOutOfSync(!m_manager->compareWidgetProperties(getActiveConfig()));
+    m_configOutOfSync = !m_manager->compareWidgetProperties(getActiveConfig());
 }
 
 void TouchpadConfig::save()
 {
     m_manager->updateSettings();
 
-    setConfigOutOfSync(false);
+    m_configOutOfSync = false;
+    m_configOutOfSyncMessage->animatedHide();
 
     bool daemonSettingsChanged = m_daemonConfigManager->hasChanged();
 
@@ -293,6 +286,11 @@ void TouchpadConfig::checkChanges()
 {
     unmanagedWidgetChangeState(m_manager->hasChangedFuzzy()
                                || m_configOutOfSync);
+    if (m_configOutOfSync) {
+        m_configOutOfSyncMessage->animatedShow();
+    } else {
+        m_configOutOfSyncMessage->animatedHide();
+    }
 }
 
 void TouchpadConfig::hideEvent(QHideEvent *e)

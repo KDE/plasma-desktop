@@ -70,7 +70,6 @@ private Q_SLOTS:
 
 private:
     QVariantHash getActiveConfig();
-    void setConfigOutOfSync(bool);
 
     TouchpadBackend *m_backend;
     TouchpadParameters m_config;
