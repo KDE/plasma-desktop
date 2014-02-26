@@ -24,6 +24,7 @@
 
 #include <KConfigSkeleton>
 #include <KComboBox>
+#include <KDebug>
 
 #include "customslider.h"
 
@@ -135,6 +136,7 @@ QVariant CustomConfigDialogManager::fixup(QWidget *widget, QVariant v) const
 
 bool CustomConfigDialogManager::compareWidgetProperties(const QVariantHash &p) const
 {
+    bool result = true;
     for (QVariantHash::ConstIterator i = p.begin(); i != p.end(); ++i) {
         QMap<QString, QWidget *>::ConstIterator j = m_widgets.find(i.key());
         if (j == m_widgets.end()) {
@@ -143,11 +145,14 @@ bool CustomConfigDialogManager::compareWidgetProperties(const QVariantHash &p) c
 
         QWidget *widget = j.value();
         QVariant widgetValue(fixup(widget, property(widget)));
-        if (!variantFuzzyCompare(widgetValue, fixup(widget, i.value()))) {
-            return false;
+        QVariant fixed(fixup(widget, i.value()));
+        if (!variantFuzzyCompare(widgetValue, fixed)) {
+            result = false;
+            kDebug() << "Config mismatch:"
+                     << widget->objectName() << widgetValue << fixed;
         }
     }
-    return true;
+    return result;
 }
 
 bool CustomConfigDialogManager::hasChangedFuzzy() const
