@@ -240,6 +240,7 @@ void TouchpadConfig::loadActiveConfig()
 {
     m_manager->setWidgetProperties(getActiveConfig());
     m_configOutOfSync = false;
+    m_configOutOfSyncMessage->animatedHide();
 }
 
 void TouchpadConfig::load()
