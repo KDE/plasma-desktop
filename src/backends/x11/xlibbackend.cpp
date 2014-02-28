@@ -441,23 +441,18 @@ bool XlibBackend::getConfig(QVariantHash &p)
         }
 
         if (m_negate.contains(name)) {
-            QVariantHash::Iterator i = p.find(m_negate[name]);
-            if (i != p.end()) {
-                bool negative = value.toDouble() < 0.0;
-                i.value() = negative;
-                if (negative) {
-                    value = negateVariant(value);
-                }
+            bool negative = value.toDouble() < 0.0;
+            p[m_negate[name]] = QVariant(negative);
+            if (negative) {
+                value = negateVariant(value);
             }
         }
 
         if (name == "CoastingSpeed") {
-            QVariantHash::Iterator coastingEnabled = p.find("Coasting");
-            if (coastingEnabled != p.end()) {
-                coastingEnabled.value() = QVariant(value.toDouble() != 0.0);
-                if (!coastingEnabled.value().toBool()) {
-                    continue;
-                }
+            bool coasting = value.toDouble() != 0.0;
+            p["Coasting"] = QVariant(coasting);
+            if (!coasting) {
+                continue;
             }
         }
 
