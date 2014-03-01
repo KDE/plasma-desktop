@@ -42,7 +42,7 @@ void TouchpadDisabler::serviceRegistered(const QString &service)
 
 TouchpadDisabler::TouchpadDisabler(QObject *parent, const QVariantList &)
     : KDEDModule(parent), m_backend(TouchpadBackend::implementation()),
-      m_enabled(true), m_keyboardActivity(false)
+      m_enabled(true), m_keyboardActivity(false), m_mouse(false)
 {
     if (!workingTouchpadFound()) {
         return;
@@ -163,6 +163,11 @@ void TouchpadDisabler::mousePlugged()
     Q_EMIT mousePluggedInChanged(pluggedIn);
 
     bool disable = pluggedIn && m_settings.disableWhenMousePluggedIn();
+    if (m_mouse == disable) {
+        return;
+    }
+    m_mouse = disable;
+
     if (m_enabled == !disable) {
         return;
     }

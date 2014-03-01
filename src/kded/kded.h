@@ -67,7 +67,7 @@ private:
     QDBusServiceWatcher m_dependecies;
 
     TouchpadBackend::TouchpadOffState m_keyboardDisableState;
-    bool m_enabled, m_keyboardActivity;
+    bool m_enabled, m_keyboardActivity, m_mouse;
 };
 
 #endif // KDED_H
