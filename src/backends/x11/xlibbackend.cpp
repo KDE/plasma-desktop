@@ -533,14 +533,19 @@ bool XlibBackend::setParameter(const Parameter *par, const QVariant &value)
     return true;
 }
 
-void XlibBackend::setTouchpadState(TouchpadBackend::TouchpadState state)
+void XlibBackend::setTouchpadEnabled(bool enable)
 {
     PropertyInfo enabled(m_display.data(), m_device, m_enabledAtom.atom(), 0);
-    if (enabled.b && *(enabled.b) != (state != TouchpadFullyDisabled)) {
-        *(enabled.b) = (state != TouchpadFullyDisabled);
+    if (enabled.b && *(enabled.b) != enable) {
+        *(enabled.b) = enable;
         enabled.set();
     }
 
+    flush();
+}
+
+void XlibBackend::setTouchpadOff(TouchpadBackend::TouchpadOffState state)
+{
     int touchpadOff = 0;
     switch (state) {
     case TouchpadEnabled:
@@ -553,7 +558,8 @@ void XlibBackend::setTouchpadState(TouchpadBackend::TouchpadState state)
         touchpadOff = 2;
         break;
     default:
-        kError() << "Unknown TouchpadState" << state;
+        kError() << "Unknown TouchpadOffState" << state;
+        return;
     }
 
     PropertyInfo off(m_display.data(), m_device, m_touchpadOffAtom.atom(), 0);
@@ -565,13 +571,14 @@ void XlibBackend::setTouchpadState(TouchpadBackend::TouchpadState state)
     flush();
 }
 
-TouchpadBackend::TouchpadState XlibBackend::getTouchpadState()
+bool XlibBackend::isTouchpadEnabled()
 {
     PropertyInfo enabled(m_display.data(), m_device, m_enabledAtom.atom(), 0);
-    if (enabled.value(0) == false) {
-        return TouchpadFullyDisabled;
-    }
+    return enabled.value(0).toBool();
+}
 
+TouchpadBackend::TouchpadOffState XlibBackend::getTouchpadOff()
+{
     PropertyInfo off(m_display.data(), m_device, m_touchpadOffAtom.atom(), 0);
     switch (off.value(0).toInt()) {
     case 0:

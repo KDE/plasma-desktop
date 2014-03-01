@@ -66,9 +66,8 @@ private:
     QTimer m_keyboardActivityTimeout;
     QDBusServiceWatcher m_dependecies;
 
-    TouchpadBackend::TouchpadState m_currentState, m_oldState, m_oldKbState,
-    m_keyboardDisableState;
-    bool m_keyboardActivity, m_mouse;
+    TouchpadBackend::TouchpadOffState m_keyboardDisableState;
+    bool m_enabled, m_keyboardActivity;
 };
 
 #endif // KDED_H

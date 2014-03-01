@@ -49,8 +49,11 @@ public:
     const QStringList &supportedParameters() const { return m_supported; }
     const QString &errorString() const { return m_errorString; }
 
-    void setTouchpadState(TouchpadState);
-    TouchpadState getTouchpadState();
+    void setTouchpadOff(TouchpadOffState);
+    TouchpadOffState getTouchpadOff();
+
+    void setTouchpadEnabled(bool);
+    bool isTouchpadEnabled();
 
     void watchForEvents(bool keyboard);
 

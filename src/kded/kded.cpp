@@ -42,9 +42,7 @@ void TouchpadDisabler::serviceRegistered(const QString &service)
 
 TouchpadDisabler::TouchpadDisabler(QObject *parent, const QVariantList &)
     : KDEDModule(parent), m_backend(TouchpadBackend::implementation()),
-      m_currentState(TouchpadBackend::TouchpadEnabled),
-      m_oldState(m_currentState), m_oldKbState(m_currentState),
-      m_keyboardActivity(false), m_mouse(false)
+      m_enabled(true), m_keyboardActivity(false)
 {
     if (!workingTouchpadFound()) {
         return;
@@ -83,35 +81,31 @@ TouchpadDisabler::TouchpadDisabler(QObject *parent, const QVariantList &)
 
 bool TouchpadDisabler::isEnabled() const
 {
-    return m_currentState != TouchpadBackend::TouchpadFullyDisabled;
+    return m_enabled;
 }
 
 void TouchpadDisabler::updateCurrentState()
 {
-    bool prevEnabled = isEnabled();
-    m_currentState = m_backend->getTouchpadState();
-    if (prevEnabled != isEnabled()) {
-        Q_EMIT enabledChanged(isEnabled());
+    bool newEnabled = m_backend->isTouchpadEnabled();
+    if (newEnabled != m_enabled) {
+        m_enabled = newEnabled;
+        Q_EMIT enabledChanged(m_enabled);
     }
 }
 
 void TouchpadDisabler::toggle()
 {
-    if (isEnabled()) {
-        disable();
-    } else {
-        enable();
-    }
+    m_backend->setTouchpadEnabled(!isEnabled());
 }
 
 void TouchpadDisabler::disable()
 {
-    m_backend->setTouchpadState(TouchpadBackend::TouchpadFullyDisabled);
+    m_backend->setTouchpadEnabled(false);
 }
 
 void TouchpadDisabler::enable()
 {
-    m_backend->setTouchpadState(TouchpadBackend::TouchpadEnabled);
+    m_backend->setTouchpadEnabled(true);
 }
 
 void TouchpadDisabler::reloadSettings()
@@ -138,11 +132,7 @@ void TouchpadDisabler::keyboardActivityStarted()
 
     m_keyboardActivityTimeout.stop();
     m_keyboardActivity = true;
-    m_oldKbState = m_currentState;
-    if (m_keyboardDisableState > m_currentState) {
-        m_backend->setTouchpadState(m_keyboardDisableState);
-        updateCurrentState();
-    }
+    m_backend->setTouchpadOff(m_keyboardDisableState);
 }
 
 void TouchpadDisabler::keyboardActivityFinished()
@@ -160,8 +150,7 @@ void TouchpadDisabler::timerElapsed()
     }
 
     m_keyboardActivity = false;
-    m_backend->setTouchpadState(qMin(m_currentState, m_oldKbState));
-    updateCurrentState();
+    m_backend->setTouchpadOff(TouchpadBackend::TouchpadEnabled);
 }
 
 void TouchpadDisabler::mousePlugged()
@@ -173,40 +162,20 @@ void TouchpadDisabler::mousePlugged()
     bool pluggedIn = isMousePluggedIn();
     Q_EMIT mousePluggedInChanged(pluggedIn);
 
-    bool prev = m_mouse;
-    m_mouse = pluggedIn && m_settings.disableWhenMousePluggedIn();
-
-    if (m_mouse == prev) {
+    bool disable = pluggedIn && m_settings.disableWhenMousePluggedIn();
+    if (m_enabled == !disable) {
         return;
     }
 
-    TouchpadBackend::TouchpadState targetState = m_mouse ?
-                TouchpadBackend::TouchpadFullyDisabled : m_oldState;
-    if (m_mouse) {
-        m_oldState = m_keyboardActivity ? m_currentState : m_oldKbState;
-        targetState = qMax(m_currentState, targetState);
-    } else if (targetState > m_currentState) {
-        targetState = m_currentState;
+    if (disable) {
+        showNotification("TouchpadDisabled",
+                         i18n("Touchpad was disabled because a mouse was plugged in"));
+    } else {
+        showNotification("TouchpadEnabled",
+                         i18n("Touchpad was enabled because the mouse was unplugged"));
     }
 
-    m_oldKbState = targetState;
-
-    if (!m_mouse && m_keyboardActivity) {
-        targetState = qMax(m_keyboardDisableState, targetState);
-    }
-
-    if (m_currentState != targetState) {
-        m_backend->setTouchpadState(targetState);
-        updateCurrentState();
-
-        if (m_mouse) {
-            showNotification("TouchpadDisabled",
-                             i18n("Touchpad was disabled because a mouse was plugged in"));
-        } else {
-            showNotification("TouchpadEnabled",
-                             i18n("Touchpad was enabled because the mouse was unplugged"));
-        }
-    }
+    m_backend->setTouchpadEnabled(!disable);
 }
 
 void TouchpadDisabler::showNotification(const QString &name, const QString &text)
