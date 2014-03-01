@@ -189,6 +189,11 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
 
     m_daemon = new OrgKdeTouchpadInterface("org.kde.kded", "/modules/touchpad",
                                            QDBusConnection::sessionBus(), this);
+    m_kdedTab->setEnabled(false);
+    QDBusPendingCallWatcher *watch;
+    watch = new QDBusPendingCallWatcher(m_daemon->workingTouchpadFound(), this);
+    connect(watch, SIGNAL(finished(QDBusPendingCallWatcher*)),
+            SLOT(gotReplyFromDaemon(QDBusPendingCallWatcher*)));
 
     // Testing area
 
@@ -199,6 +204,15 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
     connect(this, SIGNAL(changed(bool)), SLOT(onChanged()));
     connect(m_tabs, SIGNAL(currentChanged(int)), SLOT(updateTestAreaEnabled()));
     updateTestAreaEnabled();
+}
+
+void TouchpadConfig::gotReplyFromDaemon(QDBusPendingCallWatcher *watch)
+{
+    QDBusPendingReply<bool> reply = *watch;
+    if (reply.isValid() && reply.value()) {
+        m_kdedTab->setEnabled(true);
+    }
+    watch->deleteLater();
 }
 
 void TouchpadConfig::updateMouseList()

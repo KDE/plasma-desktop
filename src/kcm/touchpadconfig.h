@@ -41,6 +41,7 @@ class KAction;
 class KShortcutsDialog;
 class KTabWidget;
 class KComboBox;
+class QDBusPendingCallWatcher;
 
 class TouchpadConfig : public KCModule
 {
@@ -67,6 +68,7 @@ private Q_SLOTS:
     void updateTestAreaEnabled();
     void updateMouseList();
     void showConfigureNotificationsDialog();
+    void gotReplyFromDaemon(QDBusPendingCallWatcher *);
 
 private:
     QVariantHash getActiveConfig();
