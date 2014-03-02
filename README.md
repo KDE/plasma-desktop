@@ -27,7 +27,7 @@ How to install
     $ make
     # make install
 
-Also, there is a package for Ubuntu in [Kubuntu Experimental PPA](https://launchpad.net/~kubuntu-ppa/+archive/experimental)
+Also, there is a package for Ubuntu in [Kubuntu Experimental PPA][1]
 
 Translations
 ------------
@@ -40,4 +40,7 @@ If downloading isn't possible, .po files could be placed in source directory und
 Bugs
 ----
 
-Bugs should be reported to [KDE Bugzilla, product: Touchpad KCM](https://bugs.kde.org/enter_bug.cgi?product=Touchpad%20KCM)
+Bugs should be reported to [KDE Bugzilla, product: Touchpad KCM][2]
+
+[1]: https://launchpad.net/~kubuntu-ppa/+archive/experimental
+[2]: https://bugs.kde.org/enter_bug.cgi?product=Touchpad%20KCM
