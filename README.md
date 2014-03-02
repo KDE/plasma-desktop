@@ -27,7 +27,12 @@ How to install
     $ make
     # make install
 
-Also, there is a package for Ubuntu in [Kubuntu Experimental PPA][1]
+### Packages
+
+* [Ubuntu][1]
+  - [Kubuntu Experimental PPA][2]
+* [Arch Linux][3]
+  - [AUR (from git master)][4]
 
 Translations
 ------------
@@ -40,7 +45,10 @@ If downloading isn't possible, .po files could be placed in source directory und
 Bugs
 ----
 
-Bugs should be reported to [KDE Bugzilla, product: Touchpad KCM][2]
+Bugs should be reported to [KDE Bugzilla, product: Touchpad KCM][5]
 
-[1]: https://launchpad.net/~kubuntu-ppa/+archive/experimental
-[2]: https://bugs.kde.org/enter_bug.cgi?product=Touchpad%20KCM
+[1]: http://packages.ubuntu.com/trusty/kde/kde-touchpad
+[2]: https://code.launchpad.net/~rohangarg/+recipe/touchpad-daily
+[3]: https://www.archlinux.org/packages/community/x86_64/kcm-touchpad/
+[4]: https://aur.archlinux.org/packages/kcm-touchpad-git/
+[5]: https://bugs.kde.org/enter_bug.cgi?product=Touchpad%20KCM
