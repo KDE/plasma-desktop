@@ -47,8 +47,17 @@ Bugs
 
 Bugs should be reported to [KDE Bugzilla, product: Touchpad KCM][5]
 
+Patches
+-------
+I'm always happy to accept patches at:
+
+* [KDE reviewboard][6], repository "kcm-touchpad". The repository contains a .reviewboardrc file.
+* [GitHub with pull request][7].
+
 [1]: http://packages.ubuntu.com/trusty/kde/kde-touchpad
 [2]: https://code.launchpad.net/~rohangarg/+recipe/touchpad-daily
 [3]: https://www.archlinux.org/packages/community/x86_64/kcm-touchpad/
 [4]: https://aur.archlinux.org/packages/kcm-touchpad-git/
 [5]: https://bugs.kde.org/enter_bug.cgi?product=Touchpad%20KCM
+[6]: https://git.reviewboard.kde.org/
+[7]: https://github.com/sanya-m/kde-touchpad-config
