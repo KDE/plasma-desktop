@@ -127,7 +127,7 @@
         </entry>
         <entry name="VertScrollDelta" type="Double">
             <min>0</min>
-            <max>10</max>
+            <max>20</max>
             <default code="true">
                 systemDefault("VertScrollDelta", 1.0)
             </default>
@@ -139,7 +139,7 @@
         </entry>
         <entry name="HorizScrollDelta" type="Double">
             <min>0</min>
-            <max>10</max>
+            <max>20</max>
             <default code="true">
                 systemDefault("HorizScrollDelta", 1.0)
             </default>
