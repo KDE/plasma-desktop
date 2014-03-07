@@ -160,6 +160,7 @@ XlibBackend::XlibBackend(QObject *parent) :
     m_mouseAtom.intern(m_connection, XI_MOUSE);
     m_keyboardAtom.intern(m_connection, XI_KEYBOARD);
     XcbAtom resolutionAtom(m_connection, SYNAPTICS_PROP_RESOLUTION);
+    XcbAtom edgesAtom(m_connection, SYNAPTICS_PROP_EDGES);
 
     for (const Parameter *param = synapticsProperties; param->name; param++) {
         QLatin1String name(param->prop_name);
@@ -200,8 +201,16 @@ XlibBackend::XlibBackend(QObject *parent) :
             (resolution.nitems == 2 &&
              resolution.i[0] == 1 && resolution.i[1] == 1))
     {
-        m_errorString = i18n("Cannot read touchpad's resolution");
-        //Non-fatal
+        PropertyInfo edges(m_display.data(), m_device, edgesAtom, 0);
+        if (edges.i && edges.nitems == 4) {
+            int w = qAbs(edges.i[1] - edges.i[0]);
+            int h = qAbs(edges.i[3] - edges.i[2]);
+            m_resX = w / 90;
+            m_resY = h / 50;
+            kDebug() << "Can't read touchpad resolution";
+            kDebug() << "Trying to find resolution using Synaptics Edges prop";
+            kDebug() << "Width: " << w << " height: " << h;
+        }
     } else {
         m_resY = qMin(static_cast<unsigned long>(resolution.i[0]),
                 static_cast<unsigned long>(INT_MAX));
@@ -216,6 +225,7 @@ XlibBackend::XlibBackend(QObject *parent) :
     }
     m_resX = qMax(10, m_resX);
     m_resY = qMax(10, m_resY);
+    kDebug() << "Touchpad resolution: x: " << m_resX << " y: " << m_resY;
     m_negate["HorizScrollDelta"] = "InvertHorizScroll";
     m_negate["VertScrollDelta"] = "InvertVertScroll";
     m_supported.append(m_negate.values());
