@@ -53,7 +53,7 @@ target_link_libraries(kded_touchpad
                       ${backend_LIBS}
                       ${KDE4_KDEUI_LIBS}
                       ${KDE4_PLASMA_LIBS}
-                      ${KDE4_KNOTIFYCONFIG_LIBRARY}
+                      ${KDE4_KNOTIFYCONFIG_LIBS}
 )
 
 add_subdirectory(applet)
