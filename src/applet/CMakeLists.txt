@@ -20,8 +20,6 @@ qt4_add_dbus_interfaces(Applet_SRCS
 kde4_add_plugin(plasma_engine_touchpad ${Applet_SRCS})
 target_link_libraries(plasma_engine_touchpad
                       ${KDE4_PLASMA_LIBS}
-                      ${KDE4_KDEUI_LIBS}
-                      ${KDE4_KUTILS_LIBS}
 )
 
 install(TARGETS plasma_engine_touchpad
