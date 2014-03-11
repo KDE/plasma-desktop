@@ -196,36 +196,35 @@ XlibBackend::XlibBackend(QObject *parent) :
 
     m_toRadians.append("CircScrollDelta");
 
+    PropertyInfo edges(m_display.data(), m_device, edgesAtom, 0);
+    if (edges.i && edges.nitems == 4) {
+        int w = qAbs(edges.i[1] - edges.i[0]);
+        int h = qAbs(edges.i[3] - edges.i[2]);
+        m_resX = w / 90;
+        m_resY = h / 50;
+        kDebug() << "Width: " << w << " height: " << h;
+        kDebug() << "Approx. resX: " << m_resX << " resY: " << m_resY;
+    }
+
     PropertyInfo resolution(m_display.data(), m_device, resolutionAtom, 0);
-    if (!resolution.i || !resolution.nitems ||
-            (resolution.nitems == 2 &&
-             resolution.i[0] == 1 && resolution.i[1] == 1))
+    if (resolution.i && resolution.nitems == 2 &&
+        resolution.i[0] > 1 && resolution.i[1] > 1)
     {
-        PropertyInfo edges(m_display.data(), m_device, edgesAtom, 0);
-        if (edges.i && edges.nitems == 4) {
-            int w = qAbs(edges.i[1] - edges.i[0]);
-            int h = qAbs(edges.i[3] - edges.i[2]);
-            m_resX = w / 90;
-            m_resY = h / 50;
-            kDebug() << "Can't read touchpad resolution";
-            kDebug() << "Trying to find resolution using Synaptics Edges prop";
-            kDebug() << "Width: " << w << " height: " << h;
-        }
-    } else {
         m_resY = qMin(static_cast<unsigned long>(resolution.i[0]),
                 static_cast<unsigned long>(INT_MAX));
         m_resX = qMin(static_cast<unsigned long>(resolution.i[1]),
                 static_cast<unsigned long>(INT_MAX));
-
-        m_scaleByResX.append("HorizScrollDelta");
-        m_scaleByResY.append("VertScrollDelta");
-
-        m_scaleByResX.append("MaxTapMove");
-        m_scaleByResY.append("MaxTapMove");
+        kDebug() << "Touchpad resolution: x: " << m_resX << " y: " << m_resY;
     }
+
+    m_scaleByResX.append("HorizScrollDelta");
+    m_scaleByResY.append("VertScrollDelta");
+    m_scaleByResX.append("MaxTapMove");
+    m_scaleByResY.append("MaxTapMove");
+
     m_resX = qMax(10, m_resX);
     m_resY = qMax(10, m_resY);
-    kDebug() << "Touchpad resolution: x: " << m_resX << " y: " << m_resY;
+    kDebug() << "Final resolution x:" << m_resX << " y:" << m_resY;
     m_negate["HorizScrollDelta"] = "InvertHorizScroll";
     m_negate["VertScrollDelta"] = "InvertVertScroll";
     m_supported.append(m_negate.values());
