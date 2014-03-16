@@ -202,5 +202,6 @@ void TouchpadDisabler::lateInit()
     connect(actions, SIGNAL(disableTriggered()), SLOT(disable()));
     connect(actions, SIGNAL(toggleTriggered()), SLOT(toggle()));
 
+    updateCurrentState();
     mousePlugged();
 }
