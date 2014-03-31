@@ -1,0 +1,36 @@
+*beNiceToColormap: false
+*borderColor: black
+
+*MenuButton.background: BACKGROUND
+*Command.background: BACKGROUND
+*Toggle.background: BACKGROUND
+*Label.background: BACKGROUND
+*Scrollbar*background: BACKGROUND
+*SimpleMenu*background: BACKGROUND
+*Box.background: BACKGROUND
+*Form.background: BACKGROUND
+*Dialog.background: BACKGROUND
+*Text.background: WINDOW_BACKGROUND
+*List.background: WINDOW_BACKGROUND
+
+*MenuButton.foreground: FOREGROUND
+*Command.foreground: FOREGROUND
+*Toggle.foreground: FOREGROUND
+*Label.foreground: FOREGROUND
+*Scrollbar.foreground: FOREGROUND
+*SimpleMenu*foreground: FOREGROUND
+*Box.foreground: FOREGROUND
+*Form.foreground: FOREGROUND
+*Dialog.foreground: FOREGROUND
+*Text.foreground: WINDOW_FOREGROUND
+*List.foreground: WINDOW_FOREGROUND
+
+*ScrollbarBackground: BACKGROUND
+*Scrollbar*width: 15
+*Scrollbar*height: 15
+*Scrollbar*shadowWidth: 2
+*Scrollbar*cursorName: left_ptr
+*Scrollbar*pushThumb: false
+*ShapeStyle: Rectangle
+*SmeBSB*shadowWidth: 3
+*Scrollbar*Cursor: left_ptr

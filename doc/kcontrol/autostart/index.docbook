@@ -1,0 +1,183 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % English "INCLUDE">
+]>
+<article id="autostart" lang="&language;">
+<articleinfo>
+<title>Autostart</title>
+<authorgroup>
+<author>&Anne-Marie.Mahfouf;</author>
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
+</authorgroup>
+
+<date>2013-12-05</date>
+<releaseinfo>&kde; 4.12</releaseinfo>
+
+<keywordset>
+<keyword>KDE</keyword>
+<keyword>System Settings</keyword>
+<keyword>autostart</keyword>
+<keyword>desktop file</keyword>
+<keyword>script file</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_autostart">
+<title>Autostart Manager</title>
+
+<para>This module is a configuration tool for managing what programs start up with your personal &kde;. It allows you to add programs or scripts so they automatically start during the startup of your &kde; session and to manage them. </para>
+
+<note><para>Please note that in this module all changes are immediately applied.</para></note>
+
+<para>The program scans <filename>~/.config/autostart/</filename>, your <filename class="directory">KDE  Autostart</filename> folder (<filename class="directory">$KDEHOME/Autostart</filename> as default), <filename class="directory">$KDEHOME/env</filename> and <filename class="directory">$KDEHOME/shutdown</filename> folders to check what programs and scripts are already there and displays them. It allows you to manage them easily. 
+</para>
+<!--Found this on forum.kde.org:
+The following folders are all checked for .desktop files:
+~/[.kde4|.kde]/Autostart 
+~/[.kde4|.kde]/share/autostart
+~/.config/autostart
+~/.local/share/autostart
+~/Desktop/autostart
+/etc/xdg/autostart
+/usr/share/autostart
+see also http://www.sharpley.org.uk/node/8
+-->
+<note><para>Note that you can change the location of your <filename class="directory">Autostart</filename> 
+folder in <menuchoice><guimenu>Account Details</guimenu> <guimenuitem>Paths</guimenuitem></menuchoice> 
+in the <guilabel>Common Appearance and Behaviour</guilabel> category of the &systemsettings; and set a different folder 
+than <filename class="directory">$KDEHOME/Autostart</filename>.</para></note>
+<!-- add info about system autostart desktop files, which are not handled here?
+eg /usr/share/autostart/kalarm.autostart.desktop installed with kalarm on my 11.04 system
+kalarm has a settings option "Start at login" which handles the autostart
+how to prevent eg kopete from autostart at login?
+-->
+<sect2 id="current">
+<title>Files display</title>
+<para>The main part of the module displays the programs that are loaded when &kde; starts and scripts that are run when &kde; starts, shutdowns or before &kde; starts.</para>
+
+<variablelist>
+<varlistentry><term><guilabel>Name</guilabel></term>
+<listitem>
+<para>
+You cannot amend this column. It states the name of the program or script you want to start with &kde;. The name is extracted from the Desktop file from the Name key for a program and is the filename for a script.
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry><term><guilabel>Command</guilabel></term>
+<listitem>
+<para>
+This column lists the commands that are run to start the program. Commands can be modified through the <guibutton>Properties</guibutton> button or by double clicking the program/script row. The command is extracted from the Desktop file from the Exec key.
+</para>
+<para>
+For a script the command is the path to the script.
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry><term><guilabel>Status</guilabel></term>
+<listitem>
+<para>
+This setting is only available for programs through Desktop files. You can keep a program in the <filename class="directory">Autostart</filename> folder but disable it from being run at &kde; start. Setting the program to <guilabel>Disabled</guilabel> will not run it on start.
+</para>
+<para>
+Setting a program to <guilabel>Disabled</guilabel> sets the Desktop file Hidden property to true in the <filename class="directory">Autostart</filename> folder.
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry><term><guilabel>Run On</guilabel></term>
+<listitem>
+<para>
+Programs (Desktop files) can only be run on startup. Scripts can be run on <guilabel>Startup</guilabel>, <guilabel>Shutdown</guilabel> or <guilabel>Pre-KDE Startup</guilabel>. This column allows you to change when your script is run. Startup is when &kde; starts, shutdown is when you log out of &kde; and pre-KDE startup is before &kde; starts. 
+</para>
+<para>
+Scripts and desktop files set to run on <guilabel>Startup</guilabel> are copied or symlinked in <filename class="directory">$KDEHOME/Autostart</filename> and will be run during &kde; startup.
+</para>
+<para>
+Scripts set on to be ran on <guilabel>Shutdown</guilabel> are copied or symlinked in the <filename class="directory">$KDEHOME/shutdown</filename> directory and will be automatically run during &kde; shutdown after the user has logged out. 
+</para>
+<para>
+Scripts set to run at <guilabel>Pre-&kde; Startup</guilabel> are copied or symlinked in <filename class="directory">$KDEHOME/env</filename> and are sourced during &kde; startup (the <filename>startkde</filename> script will look for scripts here).
+</para>
+<note><para>
+Only scripts with the <filename>sh</filename> extension can be read by &kde; for <guilabel>Pre-&kde; startup</guilabel> and <guilabel>Shutdown</guilabel> modes.
+</para></note>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect2>
+
+<sect2 id="actions">
+<title>Actions</title>
+<para>
+On the right you have some buttons to change the way Autostart is configure. You can add programs or scripts, remove them or change their properties.
+</para>
+
+<variablelist>
+<varlistentry><term><guibutton>Add Program</guibutton></term>
+<listitem>
+<para>
+Clicking this button displays the standard &kde; <guilabel>Choose Application</guilabel> dialog and allows you to choose which program you want to start. After choosing the program, clicking <guibutton>OK</guibutton> brings you the properties for this program. 
+</para>
+<para>
+This will copy the program Desktop file in your <filename class="directory">Autostart</filename> folder. 
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry><term><guibutton>Add Script</guibutton></term>
+<listitem>
+<para>
+This button opens a dialog which asks you for the location of the script you want to add. If you keep <guilabel>Create as symlink</guilabel> checked (default) then the script will be added as a symlink. If you uncheck this option then the script will be copied in the corresponding local folder.
+</para>
+</listitem>
+</varlistentry>
+<varlistentry><term><guibutton>Remove</guibutton></term>
+<listitem>
+<para>
+Remove will immediately remove the Desktop file for the program or the script or symbolic link in the <filename class="directory">Autostart</filename> folder.
+</para>
+</listitem>
+</varlistentry>
+<varlistentry><term><guibutton>Properties</guibutton></term>
+<listitem>
+<para>
+This button (only enabled for programs &ie; Desktop files) allows you to change the properties of the program or script. You have general properties, permissions properties, a preview when applicable and properties related to the application for programs.
+</para>
+</listitem>
+</varlistentry>
+<varlistentry><term><guibutton>Advanced</guibutton></term>
+<listitem>
+<para>
+This button only applies to programs (&ie; Desktop files). A dialog asks you if you only want the program to autostart only in &kde; (and not in other desktop environments you might run). By default, the program will autostart in all desktop environments you might run. Checking <guilabel>Autostart only in KDE</guilabel> will autostart the program only if you start the &kde; desktop environment.
+</para>
+<para>
+This sets the value KDE to the OnlyShowIn key of the program Desktop file.
+</para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect2>
+</sect1>
+</article>
+<!-- see also Service Manager - Startup Services:
+This shows all KDE services that can be loaded on KDE startup. Checked services will be invoked on next startup.
+
+and Session Management - Restore sessions?
+-->
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

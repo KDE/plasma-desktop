@@ -1,0 +1,62 @@
+DataEngine
+==========
+
+Overview
+--------
+A Plasma::DataEngine provides read access to data via a standardized API. DataEngine is design specifically with visualizations in mind: the data structure is simple, the data is implicitly shared amongst all visualizations and many requirements are provided by the infrastructure "for free" to a DataEngine to support this mission.
+
+The data is exposed as a simple two level tree; the first level is made up of "sources", each of which contains a dictionary of key/value pairs. The model is purposefully simplified in this manner to prevent complicated arbitrary data structures from being exported in ways that would make it more difficult than necessary for writers of visualizations (e.g. Plasmoids).
+
+Users of DataEngines are usually refered to as "visualizations" as they most often provide a user visible (or audible) representation of the data.
+
+
+Timeline
+--------
+DataEngine was a part of the original libplasma release.
+
+
+Component Type
+--------------
+DataEngines are plugins of ServiceType Plasma/DataEngine.
+
+
+Component Management
+--------------------
+The Plasma::DataEngineManager class provides a loader for DataEngine plugins as well as handles reference counting of them. DataEngineManager follows the singleton pattern.
+
+When a DataEngine's reference count becomes zero, the DataEngine is deleted by the DataEngineManager. Plasma::Applet uses the DataEngineManager internally to provide access to DataEngines for Plasmoids. DataEngines may also be loaded directly without using DataEngineManager, but then are not otherwise managed.
+
+If an engine is requested of DataEngineManager that either does not exist or can not be loaded (e.g. due to a flaw in the plugin library), then a NullEngine is returned. In all cases, however, DataEngineManager will return a valid object.
+
+
+Sources
+-------
+Each source is represented internally by a Plasma::DataContainer. The DataContainer does two things: it holds the key/value dictionary and it manages multiple connections drawing data at different points in time (See: Polling). Each source in a DataEngine must have a unique name.
+
+Often a DataEngine implementation will not handle DataContainers directly, but let the DataEngine class manage them implicitly with calls to setData. However, a DataEngine can create it's own DataContainers; this is usually done when each DataContainer represents an asynchronous job, allowing for the job to be encapsulated.
+
+A DataEngine may create as many (or as few) sources on its own as is reasonable. This is useful for DataEngines which represent sets of data such as hotplugged devices which do not make sense as queryable items.
+
+Engines may also place an upper limit on the number of sources that may be active at any time. When this limit is reached, the least recently used source is dropped in favour of newer sources.
+
+
+Visualizations
+--------------
+Visualizations are notified via signals of new sources being added, existing sources being removed and the data in existing sources being changed. Visualizations may also query for the current state of a source without connecting to it.
+
+When connecting to a source, the object passed to the conntectSource method as the visualization will have its dataUpdated(const QString &sourceName, const Plasma::DataEngine::Data &data) slot called whenever the source changes or when the polling interval expires (whichever is later).
+
+When a source that doesn't exist is requested, the DataEngine is prompted to create a matching source via a sourceRequestEvent. The DataEngine is not required to create a source, however. Sources created in response to a sourceRequestEvent are automatically discarded when the last visualization connected to it disconnects.
+
+
+Polling
+-------
+DataEngine allows both engine-wide polling as well as per-source/visualization polling. This is handled completely internally and results in updateSourceEvent calls. A visualization may request to be updated every N milliseconds; this will be rounded to the nearest 50ms and matched with other similar calls. Additionally, a DataEngine may request an all-sources-update every N millseconds. Multiple polling intervals on the same source are handled internally, and a minimum polling frequency may be set by the DataEngine to prevent too many calls to updateSourceEvent for the same source.
+
+
+Services
+--------
+A Plasma::Service may be associated with any source. Visualizations can retrieve the Service by calling serviceForSource. The returned service should already be associated by the DataEngine with the source in question. Therefore a Service to post to an online blogging service that is requested using the source that represents the account would post to that account. This prevents visualizations from having to load Services themselves from plugins or pre-configure them. It also allows DataEngines a way to provide mutators for sources.
+
+Unlike sources, Services are not shared. They are unique to the caller of serviceForSource and therefore do not need to be made multi-user safe.
+

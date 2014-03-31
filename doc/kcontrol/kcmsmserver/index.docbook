@@ -1,0 +1,122 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % English "INCLUDE" > <!-- change language only here -->
+]>
+
+<article id="kcmsmserver" lang="&language;">
+<articleinfo>
+<title>Session Management</title>
+<authorgroup>
+<author>&Jost.Schenck; &Jost.Schenck.mail;</author>
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
+</authorgroup>
+
+<date>2013-12-05</date>
+<releaseinfo>&kde; 4.12</releaseinfo>
+
+<keywordset>
+<keyword>KDE</keyword>
+<keyword>KControl</keyword>
+<keyword>session</keyword>
+<keyword>System Settings</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="sessions">
+<title>Session Management</title>
+
+<sect2 id="sessions-use">
+<title>Use</title>
+
+<para>In this &systemsettings; module you can configure &kde;'s session
+manager and logout settings.</para>
+
+<para>Session management refers to &kde;'s ability to save the state
+of applications and windows when you log out of &kde; and restore them
+when you log back in.</para>
+
+<sect3 id="sessions-general">
+<title>General</title>
+<variablelist>
+<varlistentry>
+<term><guilabel>Confirm logout</guilabel></term>
+<listitem>
+<para>If this option is checked, when logging out, &kde; will display a
+dialog asking for confirmation. In this dialog you can also choose
+whether you want to restore your current session when you login the next
+time.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Offer shutdown options</guilabel></term>
+<listitem>
+<para>If this option is checked, &kde; will offer a choice of actions during
+logout.  These include simply ending the current session (the
+action performed if shutdown options are not enabled) turning off the
+computer, or restarting the computer.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect3>
+
+<sect3 id="sessions-default-leave-options">
+<title>Default Leave Option</title>
+<para>You can configure what should happen by default when you log out of
+&kde;.  These options are not possible on all operating systems, and some of
+them may not appear unless you are using &kdm; as your login manager.</para>
+
+<para>The options available are self explanatory, if you are in doubt,
+leave the default settings.  They are:</para>
+
+<itemizedlist>
+<listitem><para><guilabel>End current session</guilabel> (this is the default)</para></listitem>
+<listitem><para><guilabel>Turn off computer</guilabel></para></listitem>
+<listitem><para><guilabel>Restart computer</guilabel></para></listitem>
+</itemizedlist>
+</sect3>
+
+<sect3 id="sessions-on-login">
+<title>On Login</title>
+<para>You may choose one of three options on what should happen when
+you log into &kde;:</para>
+
+<variablelist>
+<varlistentry>
+<term><guilabel>Restore previous session</guilabel></term>
+<listitem><para>If this option is checked, &kde; will save your current
+session's state when you logout.  &kde; will restore your session on the
+next login, so you can continue to work with a desktop just like you
+left it.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Restore manually saved session</guilabel></term>
+<listitem><para>Instead of restoring &kde; to the state it was when
+you logged out last, it will be restored to a specific state that you
+have saved manually.</para>
+<para>If this option is checked, the start menu offers an additional item 
+<menuchoice><guimenu>Leave</guimenu><guimenuitem>Save Session</guimenuitem></menuchoice>.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Start with an empty session</guilabel></term>
+<listitem>
+<para>If you choose this option, &kde; will never restore sessions that it has saved.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+<para>Finally, you can enter a colon (<literal>:</literal>) or comma (<literal>,</literal>)
+separated list of applications that should not be saved in sessions,
+and therefore will not be started when restoring a session.  For example
+<userinput>xterm:konsole</userinput> or <userinput>xterm,konsole</userinput>.</para>
+<!-- does this need the full path here? -->
+</sect3>
+
+</sect2>
+
+</sect1>
+
+</article>
+

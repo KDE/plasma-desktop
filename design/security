@@ -1,0 +1,57 @@
+Security
+========
+
+overview
+--------
+
+plasma will have three types of security:
+-co-operative
+-trust-based
+-enforced
+
+co-operative security
+---------------------
+
+this is fairly basic security for plasmoids.
+the idea is, shells (like plasma-overlay) can specify a list of constraints in their desktop file, and then all plasmoids that require the disabled feature don't show up in the appletbrowser. also, plasmoids that would like a certain feature but don't *need* it can check hasAuthorization() and turn it off when it's not allowed.
+This type of security relies heavily on plasmoid developers. Each plasmoid's .desktop file must list what features the plasmoid requires, and be kept up to date with the code. X-Plasma-Requires-<feature> can be set to Required, Unused, or Optional. Example: X-Plasma-Requires-FileDialog=Required
+Features the plasmoid would like but does not require should be guarded by hasAuthorization, and set to Optional in the .desktop. [example](http://websvn.kde.org/?view=rev&revision=967792).
+All the plasmoids in workspace and kdeplasma-addons should probably be reviewed before release. some of them don't have an active maintainer to take responsibility.
+
+Currenly, plasmoids that don't mention a constraint are assumed to not use it. however, by release time the opposite should be true. this is just so that they don't *all* disappear from the screensaver before anyone has a chance to review their plasmoids.
+Note that this will not remove existing instances of plasmoids. It only hides them from the appletbrowser. Users who really really want to can edit the config file to add unsafe applets.
+
+Existing constraints/features:
+-FileDialog. When this is restricted, use of open or save dialogs is forbidden. Reason: users can delete files from there and cause all kinds of havoc.
+-LaunchApp. When this is restricted, running other applications or opening urls (generally done through KRun) is forbidden. Reason: although they're not accessible from the screensaver, they can still pile up and need to be closed after the screen's unlocked.
+
+^^ this is obviously not a final list. more will be added soon.
+
+possible problems:
+-the API isn't designed for constraints changing at runtime. does anyone think that's likely to matter someday?
+-I have no idea how this will affect alien widgets. personally I'd be fine with banning those from the screensaver until proper, full security can be implemented.
+
+
+trust-based security
+--------------------
+
+gpg signing of plasmoids
+
+
+enforced security
+----------------
+
+This is security that doesn't rely on plasmoid developers. Mostly it's about disabling access to features via the scripting API, so that plasmoids using that API absolutely cannot use the disabled features.
+
+it'd be nice if we could use KAuthorized to enforce some stuff on the c++ applets... I tried, but didn't get anywhere.
+
+
+misc
+----
+
+I'm not sure what categories these fall under.
+
+category exclusion: entire categories of plasmoids can be excluded from hte appletbrowser. for example, application launchers are excluded from the screensaver because they'd never ever be wanted there.
+
+configuration locking: on the screensaver, config dialogs can't be accessed while the screen is locked. however, it's possible for a c++ plasmoid to override showConfigurationInterface and circumvent this.
+

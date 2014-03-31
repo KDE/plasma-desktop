@@ -1,0 +1,14 @@
+How Screens Get Managed
+-----------------------
+* PlasmaApp handles the views
+* DesktopCorona handles the containments with the help of Activity classes
+
+So:
+* When a screen is added: DesktopCorona tells the current Activity, which adds a new containment if needed. PlasmaApp responds to their creation
+* When a screen is removed: PlasmaApp removes the associated view(s); we don't want the Containment to go away, however, since the screen may return
+* When a screen changes geometry: the Views (DesktopView, PanelView) change their geometry and that of their containments if needed
+
+Future work:
+* Migration of panels from non-existent screens to existing screens (perhaps asking if the user would like them to migrate?)
+* 'hibernation' of containments from non-existent screens (Activity will handle this)
+

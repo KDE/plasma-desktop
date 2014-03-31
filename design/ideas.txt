@@ -1,0 +1,53 @@
+Random ideas for animations usage
+
+== Animation code ==
+
+ - improve the design (in progress)
+ - rewind the animation ............................................ done!
+ - cache the animations ............................................ done!
+ - cache the animation parameters
+ - pulser using pixmap ............................................. done!
+ - fix opacity in pulser
+ - ZoomAnimation
+ - GeoAnimation
+
+
+== Pimp my plasmoid ==
+
+1) ublog
+ - edit box moved to inside of scrollwidget scrollwidget::ensureitemvisible()
+ - rotation when changing Timeline --> Replies --> Messages
+ - pulse on link selection
+ - fade in when selecting edit box
+ - drop shadow on photo
+
+
+2) dictionary
+ - new busy widget
+ - kinetic scrolling
+
+
+3) rss reader
+ - slide for post paging
+ - pulse for selection
+
+
+4) weather plasmoid
+ - slide left <----> right for details X "3 days views"
+ - animated objects (sun, clouds, etc)
+
+
+== plasma-netbook ==
+
+ - pulse the whole applet when click the maximize button in the
+titlebar of the applets in the newspaper (maybe reuse it in plasma-desktop)
+ - grow/shrink on selection
+ - pulse on click
+ - animated layouts .................................................. done!
+ - kinetic scrolling: for scrollwheel events in panel ................ done!
+
+
+== plasma widgets ==
+
+ - port then to new plasma::Animator
+ - tune up busy widget (small circles expand and fade out)

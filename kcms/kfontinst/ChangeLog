@@ -1,0 +1,562 @@
+KDE4.4
+======
+1. Create a dbus daemon for handling font installtion, and have the kcm and ioslave
+   use this.
+2. Use policykit to control installation of system-wide fonts.
+3. Merged progress, skip, cancel, and error dialogs used when installing, etc., into
+   1 dialog.
+4. Simplify layout.
+5. Remove simple mode - always use font management mode.
+6. When multiple fonts are selected, use a list style preview of all selected fonts.
+7. Because of the above, remove the in-line previews from the font list.
+
+KDE4.3
+======
+1. Dont cache previews to disk.
+
+KDE4.2
+======
+1. Added zoom controls to font preview.
+2. Made viewer application a KUniqueApplication
+
+KDE3.5 -> KDE4.0
+================
+ 1. Enabling/disabling of fonts.
+ 2. Creation of "Font Groups"
+ 3. Fonts are now grouped via family name, i.e. shown as:
+       + Courier [4]
+       - Times [2]
+           Regular
+           Italic
+    ...where the number in brackets indicates the number of styles. Clicking
+    on the expand icon (+) will then show the list of styles.
+ 4. Add ability in font view part to show unicode tables.
+ 5. Remove all references to Speedo fonts - haven't been supported since
+    KDE3.3!
+ 6. Only one view - list view. However, each item now has a small preview.
+ 7. Xft is now required.
+ 8. Remove Fontmap creation.
+ 9. Creation of fonts.dir & fonts.scale will be done via mkfontscale and
+    mkfontdir.
+10. Legacy X is only configured for a folder if it already contains a fonts.dir
+    file.
+11. Font installtion is *much* faster - as config files are now updated after
+    all fonts are installed, as opposed to every 50 fonts.
+12. Folders are no longer added to X's config files - because of 10 above.
+    The only system config file that will be altered is either
+    /etc/fonts/local.conf or /etc/fonts/conf.d/00kde.conf (dependant upon
+    your fontconfig version)
+13. When installing font files, install into a sub folder named after the 1st
+    character. e.g.
+         wibble.ttf ->   ~/.fonts/w/wibble.ttf
+14. Better unique names when creating font packages.
+15. Use zip and not tar.gz for font packages.
+16. Allow import of fonts/package.
+17. Allow fonts/package to be installed via konqueror service menu.
+18. Better TTC handling.
+19. When installing to fonts:/, as non-root, automatically install to fonts:/Personal.
+    To install to fonts:/System need to explicity copy to fonts:/System.
+20. Hide kfontview from KMenu - its only required by kcm, and when cliking on a font.
+21. Renamed kcmfontinst to just fontinst.
+22. When printing, use external kfontprint app - that way newly installed fonts can
+    also be printed.
+23. When run as non-root, the kcontrol module will have a combo box allowing the user
+    to select Personal or System fonts.
+24. Better bitmap font previews - list of sizes obtained via fontconfig.
+25. Regular fonts listed as fonts:/<family>, Regular - e.g. fonts:/Times, Regular
+26. Use a kio_font_helper app when accesing fonts:/System - much faster, as kdesu is
+    not required to be called for each action.
+27. Add a "Find Duplicates" tool, that looks for multiple installtions of the same font.
+    i.e. different locations, or the same location but different filename case
+    (e.g. times.ttf / times.TTF)
+
+KDE3.4 -> KDE3.5
+================
+1. When copying a file out of fonts sub-system, copy as filename, or <fontname>.fonts.tar.gz
+   in the case of multiple font files mapped to the same font name.
+
+    e.g. Times New Roman -> times.ttf
+         Helvetica, Bold Oblique-> Hevetica, Bold Oblique.fonts.tar.gz
+                  Which contains:
+                           75dpi_helvBO10.pcf.gz
+                           75dpi_helvBO12.pcf.gz
+                           100dpi_helvBO10.pcf.gz
+                           100dpi_helvBO12.pcf.gz
+                           ...etc
+
+2. New mimetype: fonts/package - to cater for the above.
+3. Add settings to enable/disable configuring fonts for legacy X, and Ghostscript
+   (X defaults to true, and Ghostscript defaults to false)
+4. Show mime-type in detailed view.
+5. Simple font sample printing - but only of installed fonts!
+6. Add toggle button to control display of bitmap fonts.
+
+KDE3.3 -> KDE3.4
+================
+1. Font listing comes from fontconfig. This means that fonts will be grouped, i.e.
+   previously each size of a bitmap font was shown seperately, now only 1 font
+   will be displayed which represents all sizes.
+2. Only fonts, and not folders (except System and Personal), are now shown.
+3. Creation of afms from pfa/pfb and a pfm file.
+4. Previews are drawn via Xft - previously FreeType was called directly.
+5. New font preview look.
+6. No longer dependant upon file extension.
+7. Check for FPE of "fontconfig" -> if set, then no need to configure X core fonts.
+
+KDE3.2 -> KDE3.3
+================
+1.  List fonts as "Full Name" -> i.e. "Times New Roman".
+2.  Preview of bitmap fonts.
+3.  No fontname-title in thumbnails - as fonts:/ lists the fontnames!
+4.  When copying to fonts:/ (as non-root) only ask for destination if more than 5 seconds
+    since previously asked.
+5.  Add a konqueror service menu "Install"
+6.  Use FreeType2 for reading Type1 - instead of parsing the pfa/pfb header.
+7.  FamilyName is now the fonts *real* family name - no adding of style information.
+8.  Add extra style information (which was previously added to FamilyName) into the XLFD.
+9.  Consider regular weight to be medium (same as mkfontscale).
+10. Default to width=normal, weight=medium if not set.
+11. Allow change of preview string.
+12. Allow zooming in/out of preview.
+13. Waterfall font preview.
+14. Use font preview part in the KControl module - less code duplication.
+15. Include simple fontviwer app - basically just an application wrapper for the viewpart.
+
+KDE3.1 -> KDE3.2
+================
+1.  Re-designed (yet again...) to be a kio slave. As a user, starting fonts:/ will display
+
+        Personal   Lists contents of $HOME/.fonts and $KDEHOME/share/fonts (where previous installer installed to)
+                   Fonts are installed to $HOME/.fonts
+
+        System     Lists contents of /usr/local/share/fonts, /usr/share/fonts, and /usr/X11R6/lib/X11/fonts
+                   Fonts are installed to /usr/local/share/fonts (as per FHS)
+
+    To install fonts system wide, just drop onto "System" and root's password will be asked
+    for.
+
+    As root, fonts:/ will show the same as fonts:/System (but without the System part...)
+
+2.  New kcontrol module that uses fonts:/
+3.  Removed:
+        AFM creation  -- only really required (TTF wise) for SO <6.0
+        StarOffice configuration (S0 6.0 / OO.o is *much* better anyway)
+4.  X font server (xfs) - if used - is refreshed by sending a SIGUSR1 instead of
+    relying on a /etc/init.d/xfs script. This is much more portable.
+5.  Simple FontView part for konqueror - this is basically a big re-sizable preview of the font.
+6.  Speed up creation of fonts.dir and fonts.scale - by reading in any existing files, and using the
+    entries from these instead of loading and testing the font (if listed).
+7.  Better font preview and thumbnails.
+8.  Only add a dir to fontpath if fonts.dir has greater than 0 entries!
+9.  Use /etc/fonts/local.conf as root fontconfig file.
+10. Only add dirs to fontconfig if *not* a sub-dir of an existing dir.
+11. Ensure that top-level fonts dir is always in fontpath.
+12. A Fontmap file is created in each sub dir, which is then combined into 1 top level Fontmap file.
+    ~/.fonts/Fontmap for normal users, and /etc/fonts/Fontmap for root. 
+13. Modify <ghostscript dir><sub-dir>/Fontmap to contain:
+       (/etc/fonts/Fontmap) .runlibfile
+    ...as this is the system-wide Fontmap file created. As for the per-user, one, hmmm...
+14. When a folder is configured, ensure fonts.dir/fonts.scale/Fontmap/.fonts-config-timestamp (SuSE
+    specific) all have the same timestamp (if they exist). Helps to discover if a folder has been
+    modified - in which case it needs to be reconfigured (and should happen automatically).
+15. Add support for TrueType Collections (.ttc), and OpenType (.otf) fonts. Currently TTC's are only
+    configured for X - need to also configure GS to see other faces.
+16. CID fonts are *not* handled - therefore don't list the X11 CID directory, and don't let users
+    try to create this.
+17. Don't list "encodings" in fonts:/System - and don't allow users to create this.
+18. Use XFree86's libfontenc (if found) to read font-encodings.
+19. Handle 1bpp glyphs in thumbnail code.
+20. Ensure X fontpaths *never* end in "/" - i.e. when write XF86Config, xfs/config,
+    or fontpaths remove any trailing "/"
+21. When adding/removing an unscaled dir from X font path, ensure ":unscaled" is
+    part of the path!
+22. Call fc-cache on top-level dir, not on each dir.
+23. Use "~" in Xft config and user X config files -> e.g. /home/user/.fonts -> ~/.fonts
+24. Remove top-level dir spec from top-level fontmap, e.g.
+
+    TimesNewRomanPSMT (/home/user/.fonts/wibble/times.ttf);
+
+    ...becomes...
+
+    TimesNewRomanPSMT (wibble/times.ttf);
+
+25. Add meta-data for AFM files to KFile plugin.
+
+0.11-> KDE3.1
+=============
+1.  Re-design of UI - removed "Install From" view.
+2.  Created a KIO/thumbnail font preview class.
+3.  Fonts are installed/uninstalled on "Apply".
+4.  Settings are saved on "Apply".
+5.  Settings tab simplified - some uneccesary settings removed.
+6.  Removal of Anti-Alias tab - relevant settings moved to kcmfonts.
+7.  Add kfile-plugin to display Meta data for fonts.
+8.  Remove settings wizard.
+9.  Drop use of internal version numbering - not tagging CVS anyway, so whats the point?
+10. DCOP interface.
+11. Remember size of main window when run via kcmshell.
+
+0.10->0.11 (KDE3.0)
+===================
+1.  Port to KDE3/Qt3.
+2.  Add support for CUPS's Fontmap.
+3.  Create backups of system files.
+4.  When install symbol encoding fonts, set encoding to "glyphs-fontspecific" in XftConfig.
+5.  When install monospaced fonts, set spacing to mono in XftConfig.
+6.  When first run (as root) - checks XFree86 config file to see if a font server is being used, if 
+    so then fs/config is used as the config file, and "/etc/rc.d/init.d/xfs restart" is selected as
+    as the X refresh command.
+7.  Only install fonts that are useable.
+8.  Add checkbox to enable overwriting of existing AFMs.
+9.  Remember open directories in advanced mode.
+10. Add support for .Z compressed Bitmap fonts.
+11. Read Type1 encodings from .afm files if listed as "array" in pfa/pfb.
+
+0.10b11->0.10
+=============
+1. Version added to KDE CVS.
+2. Modified some keyboard shortcuts to remove conflicts.
+3. Disable "Touch" and "Delete" folder if top-level X fonts dir is selected.
+
+0.10b10->0.10b11 (Test version...)
+================
+1. Removed "root"/"Modify" and "Help" buttons - this gives more space to font lists, plus when using "root"/"Modify" root's
+   config files are not being saved.
+2. "IsFixedPitch" flag in AFMs produced incorrectly - was outputing "false" for monospaced fonts!
+3. Added rounding to AFM metric scaling.
+4. When creating AFMs, check that each characters' BBox is within the main BBox - this is a quick fix for wingdings.afm,
+   which seems to be giving incorrect results.
+5. StarOffice 6 / OpenOffice only need AFM files for Type1 fonts - plus no config files need to be altered. Therefore, added the ability to
+   select which font types AFMs should be created for.
+6. Output *all* characters from a font into the AFM file.
+7. Fixed a bug with Full/Family name in Speedo fonts.
+8. For TrueType, Type1, and Speedo fonts - family name is obtained by using the fonts' FullName, remove FamilyName (read from file), remove
+   any weight, width, or italic designation, and re-add FamilyName. (This is because some fonts are named 
+   <family><weight><italic><something else>, and <something else> was previously being lost).
+9. When adding encodings to lists, check that they aren't alredy inserted.
+
+0.10b9->0.10b10 (Test version...)
+===============
+1. Fixed a problem with non-enabled install button in basic mode - again, thanks to Hardy Griech for spotting this.
+
+0.10b8->0.10b9 (Test version...)
+==============
+ 
+*** NOTE
+*** Please remove any Kfontinst generated StarOffice psstd.fonts and Ghostscript Fontmap output before using this version
+
+1. StarOffice psstd.fonts generated output is no longer marked line-by line, instead it is marked as a section, e.g.
+
+   # kfontinst <user, if not root> /usr/X11R6/lib/X11/fonts/TrueType
+   <fonts...>
+   # kfontinst <user, if not root> /usr/X11R6/lib/X11/fonts/TrueType
+
+   ...Likewise for Ghostscript's Fontmap
+
+2. Limited generated StarOffice psstd.fonts lines to 126 characters, and lines longher than this will not be output. It appears
+   as if this is the max line len StarOffice will accept - thanks to Hardy Griech for discovering this.
+3. Fixed a bug where a static pointer was not reset to NULL when module was unloaded.
+4. When chekcing ps-fonts, I was looking for the string "%!PS-Adbobe", however the hershey fonts just has "%!FontType" - therefore
+   I've change the code to just look for "%!"
+5. For pcf fonts, look for FAMILY as well as FAMILY_NAME
+6. Construct name from xlfd for bitmap fonts where can't get seperate components
+
+0.10b7->0.10b8 (Test version...)
+==============
+
+*** NOTE
+*** Please remove any Kfontinst generated Ghostscript and/or StarOffice output before using this version
+
+1. Forgot to extract foundry from bitmap fonts - however, changed bitmap Xlfd creation, see below.
+2. Extract Xlfd from Bitmap fonts directly - not all fonts have each seperate component available. Thanks to Claudio Bandaloukas
+   for helping me discover the various bugs with Bitmap output.
+3. When displaying bitmap details, if individual entries (family, point size, etc) can't be read, then the
+   Xlfd will be displayed.
+4. Ghostscript & StarOffice include guards changed from "kfontinst" to "kfi"  -- this will *require" removing of any previous output!
+5. Shortened generated TrueType foundry fields - to help with StarOffice
+
+0.10b6->0.10b7 (Test version...)
+==============
+1. Fixed a bug with string-to-width conversion for Type1 and bitmap fonts
+2. Fixed some compile bugs if no Xft.h found
+3. Remove any fonts.alias when deleting a dir
+4. When try to open Type1 or Speedo fonts, check magic numbers - for Speedo check char[0]=='D' or 'd', char[1]==num, char[2]=='.', and char[3]==num
+
+0.10b5->0.10b6 (Test version...)
+==============
+1. Fonts with "Normal" weight now installed as "Medium"
+2. Added support for "Oblique" in xlfd
+3. Check is performed to see if destination is writeable before enabling "Install" button, likewise for the "Remove" button.
+
+0.10b4->0.10b5 (Test version...)
+==============
+1. Forgot to reset the made-changes state of XftConfig when saved!
+2. Add a validator to math & edit line-edits to disallow usage of double-quotes & tabs
+3. Select correct default entries for field-name combos when adding an XftRule.
+4. Removed check for number of items in match list, as these are not always required (such as for the sub-pixel hinting
+   rule.)
+5. When setting rgba - use symbolic name - previously always setting to 0!
+6. Modified help a little
+7. Reduced Advanced mode list-view treeStepSize to 10 pixels (from default of 20), this makes it easier for browsing
+   /usr/X11R6/lib/X11/fonts/etc...
+8. Fixed bug where could not remove Xft exclude range!
+9. Fixed a bug where uninstalled items could cause duplicates in "Install from" list.
+10. Renamed the "Configure System" button to "Apply" - this should make the neccessity of the option more obvious.
+11. Fixed display of uninstall folder.
+12. Added "include" and "includeif" directives from XftConfig to editor.
+
+0.10b3->0.10b4 (Test version...)
+==============
+
+*** NOTE
+*** Please delete your existing ~/.kde/share/config/kfontinstrc -or- ~/.kde2/share/config/kfontinstrc file
+*** before using this version
+
+1. Added support for X font server config files.
+2. Show "unscaled" directories in italic.
+3. Abilty to set directories as scaled/unscaled.
+4. Modified GUI slightly so that it works beter with Liquid style.
+5. Added chack to make sure XftConfig file exists before trying to parse.
+6. Advanced editing of XftConfig.
+7. Added help on XftConfig - from Danny Tholen (obiwan@mailmij.org) 
+8. Removed some memory leaks
+10. Default folders changed for non-root users. KFontinst will now (upon initial start-up) select the following:
+
+     X fonts dir:    $KDEHOME/share/fonts
+     XConfig file:   $KDEHOME/share/fonts/fontpaths
+     XftConfig file: $HOME/.xftconfig
+     Fontmap file:   $KDEHOME/share/fonts/Fontmap
+
+   ...This should make it possible for users to install fonts without being root. However, problems may arrise when
+   configuring StarOffice - as this requires some other files to be modified, which won't be possible if SO has been installed
+   by root.
+
+   ...Also to accomplish this, some changes are needed to 'startkde' - see file README.startkde
+
+11. Because of the above, when started as non-root, KFontinst will create Type1 and TrueType sub-folders in
+    $KDEHOME/share/fonts - if they do not already exist.
+12. Moved XftConfig stuff from a sub-page of settings tab into its own tab.
+13. Added question dialog if module is unloaded before system has been configured.
+14. Added ability to "touch" a X font folder - marking it as being modified, so that a re-configure of the that folder
+    can be done in order to create AFMs, modify encoding, etc.
+
+0.10b2->0.10b3 (Test version...)
+==============
+1. When locating Ghostscript's Fontmap file, sub-directories (up to a level of 4) are searched - this allows
+   for the possiblity of users using a different version of Ghostscript.
+2. Create a fonts.scale as well as fonts.dir - just incase another program runs mkfontdir.
+3. Fixed an error when creating AFMs for some symbol-encoded fonts.
+4. Re-worded SettingsWizard "Folders/Files" tab.
+5. Added a checkbox to Ghostscript configuration.
+6. Added support for XftConfig.
+7. Added/fixed support of Type1 fonts with no FullName or FamilyName fields - such as the hershey fonts.
+8. Fixed some bugs when configuring with --enable-final.
+9. Basic html help added.
+
+0.10b1->0.10b2 (Test version...)
+==============
+1. Minor compile error (struct declared as private, but used elsewhere!)
+
+0.9.2->0.10b1 (Test version...)
+=============
+1. Almost a complete re-write,
+2. Handles Speedo, and Bitmap fonts
+3. fonts.dir & encodings.dir are now created internally - no need for ttmkfdir
+4. Re-design of GUI.
+5. Advanced mode where X11 folder structure is displayed and all font types may be installed - and a Basic
+   mode where the X11 folder structure is hidden, and only TrueType and Type1 fonts may be installed.
+6. Settings wizard.
+7. Application is now a kcontrol module.
+8. Complete X11 fonts directory structure is now managed - no need for seperate 'Managed' directory.
+9. X11.PS is no longer created, instead the StarOffice printer file (*.PS) is now modified.
+10. Ported to FreeType2.
+11. Support more encodings - encodings combos now list standard encodings as well as those read from
+    .enc(.gz) files.
+12. Internal AMF creator for Type1 and TrueType fonts - ttf2pt1 and pf2afm.ps are no longer used/supplied.
+13. Removed the 'Process AFMs' & 'Delete AFMs' options - all AFMs are created be KFontinst, therefore they
+    should be OK for StarOffice and AbiWord.
+14. If a writable XF86Config file is found - then complete folders may be installed, and folders in the X11
+    directory may be uninstalled or disabled (i.e. the folder is not deleted, but it's entry is removed from
+    the XF86Config file).
+15. No longer supply .enc files with KFontinst - they should be provided by the distro.
+
+0.9.1->0.9.2
+============
+1. Removed a bug where the "Configure System" menu entry was always disabled!
+2. Spelling error in Settings dialog.
+3. t1lib has problems with some of the fonts supplied with Adobe acrobat - therefore, if t1lib fails to load the
+   font, then KFontinst itself will try to read the header information (although no preview will be available,
+   everything else should still work).
+4. Fixed multiple installing of programs in other/ directory. For instance KFontinst's version of ttmkfdir
+   was being installed into $(PREFIX) (usually /usr/bin) as well as $(KDE_DATADIR)/kfontinst - this was incorrect
+   as KFontinst will only use the version in $(KDE_DATADIR)/kfontinst, and it was possible that a previous version
+   of ttmkfdir (such as that supplied with XFree86) would have been overwritten.
+5. Fixed bug where the user was allowed to select (and subsequently install) fonts which could not be loaded correctly.
+6. Added the ability to enter a custom preview string.
+
+0.9->0.9.1
+==========
+1. Fixed a few compile errors.
+2. Fix to html formatting error.
+3. Fixed a ./configure error if t1lib was not found (the string NO was being used as the
+   librarary name, instead of an empty string!)
+4. Modified the reading of Type1 header information.
+
+0.8.3->0.9
+==========
+1. Converted to KDE2.
+2. Rearranged this file!
+3. Removed command line interface - KDE2's command line stuff is way different!
+4. Re-created dialogs with Qt designer.
+5. Removed ProgressDialog, and replaced with a progress bar on a new statusbar.
+6. Modified configure script to check for FreeType & t1lib.
+7. If an encoding (not unicode) is selected, then the .enc file is copied to the X11 fonts directory.
+8. As with the .enc files, the StarOffice .xpp files are also copied, and no longer just sym linked.
+9. Removed enabling/disabing of Configure System button.
+10. Fontmap.X11 is no longer created, instead the real Fontmap file itself is modified.
+
+0.8.2->0.8.3
+============
+1. Modified 'kfontinst.kdelnk' so that kdesu is now used - so that a user will automatically be prompted
+   for the root password.
+2. Modified dialogs to use the KDE caption ("Font Installer") instead of the app name ("kfontinst")
+3. Corrected size of Configure dialog.
+4. Fixed a minor bug where if all fonts were uninstalled, the 'Configure System' button was disabled - therefore not
+   allowing you to activate the changes!
+5. Added a command line interface. (type 'kfontinst --help' for details)
+6. Added option to automatically fix TTF postscript names upon install.
+
+0.8.1->0.8.2
+============
+1. Fixed a bug which always had SO configuration disabled!
+2. Fixed a bug when selecting Unicode encoding.
+3. Changed "Fonts/Uninstalled" menu entry to "Fonts/Disk"
+4. Added keyboard short-cuts to dialogs
+
+0.8->0.8.1
+==========
+1. Fixed a bug where X configuration would fail if no TT fonts present.
+2. If no fonts are installed, then the system configuration button/menu-entry is now disabled.
+3. Changed menu structure to add 'Fonts' menu.
+
+0.7.4->0.8
+==========
+1. Changed location of StarOffice stuf from <dir on settings dialog>/xp3 to just
+   <dir on settings dialog> -- As StarOffice 5.2 has 'xp3' within a 'share' sub-dir.
+2. Changed structure of config file to be more modular.
+3. Modified internal code structure to allow easier additon of extra apps to be configured. (NOTE: If any
+   apps need to be configured, then I'll also [later on] modify the Settings & Configure dialogs to
+   accomodate these.)
+4. Because of 3, added a 'StarOffice' check to the settings dialog. If this is not seleted, then no check
+   is performed to make sure the SO dir is OK - and the option to config SO is diabled on the config dialog.
+5. Added check when installing font to make sure that it's not already installed.
+
+0.7.3->0.7.4
+============
+1. Changed location of Fontmap.X11 -- from <directory on settings dialog>/lib/Fontmap.X11 to
+   <directory on settings dialog>/Fontmap.X11. As it seems some ghostscript installations don't
+   have the 'lib' sub directory.
+2. Improved the documentation a little - added a FAQ section
+
+0.7.2->0.7.3
+============
+1. Very minor bug fix.
+
+0.7.1->0.7.2
+============
+1. Added more detailed error messages when system configuration fails.
+
+0.7->0.7.1
+==========
+1. Removed lots of debug info from ttf2pt1, and afm.pl -- this should drastically speed up afm creation.
+2. Modified ttf2pt1 to accept a parameter to just create .afm files
+3. Added option to modify a .afm file when installing.
+4. Added "Unicode" to list of encodings that can be used.
+5. Removed kfontinst-cp1252.enc, kfontinst-cp1252.xpp -- these were hacks anyway, and seing as Qt2 is going to 
+   support cp1252 by a hard-coded codec, there's no real point...
+6. Rearranged the Configure System dialog - so that Force AFM regeneration is grouped next to the Generate AFMs option.
+7. Encoding files now stored in <KDEDIR>/share/apps/kfontinst/Encodings
+
+0.6.1->0.7
+==========
+1. Modified ttmkfdir & ttf2pt1 to allow usage of X11 style font re-encoding files.
+2. Because .enc files are now used by kfontinst, removed the possibility of using gzipped encodings.
+3. Added the ability to delete an installed font's .afm file.
+4. Fixed a bug in the TtfPsNameFixer class - this would cause ttf2pt1 to creash when accessing a modified font!
+5. Font encodings are now stored in <KDEDir>/share/x11encodings
+6. Removed the reencode shell script, as the encodng is all done by ttmkfdir.
+7. Removed xfinst shell script - handled internally.
+8. Supplied a kfontinst-cp1252 encoding - with the ugly single-quotes normaly found in .ttf files remapped to
+   the nice looking ones.
+9. Added functionality, when configuring StarOffice, to select an appropriate xprinter.prolog for the selected
+   encoding (if one exists)...
+
+0.6->0.6.1
+==========
+1. Fixed a display bug in the 'Un/Exclude from StarOffice" options.
+
+0.5->0.6
+========
+1. Added the ability to 'fix' the postscript names in a ttf file.
+2. Fixed some missing changes to help files.
+
+0.4->0.5
+========
+1. Discovered a patch that modifies StarOffice's xprinter.prolog so that font's don't need to be modified
+   to use the microsoft cp1252 enocding scheme. (Previosuly the PS output from StarOffice would not print
+   OK with ghostscript - when using extra characters - unless the .ttf file was modified.)
+2. Because of 1, removed the abilty to modify a TrueType font's internal charactermap - this was a hack anyway.
+3. xfinst now uses mkfontdir to create encodings.dir - instead of kfontinst's install procedure copying a standard
+   one in (this didn't actually work...)
+4. As kfontinst no longer reads the .enc files themselves, added the ability to use .enc.gz files as well
+   when selecting an encoding for X. 
+5. Re-wrote xfinst & reencode to be plain 'sh' scripts, as opposed to 'tcsh' scripts. 
+
+0.3->0.4
+========
+1. All X fonts will now be placed with in a directory - "Managed" - this makes things easier for
+   AbiWord, and maybe others.
+2. encodings.dir & Encodings/ will now be placed within this new "Managed" dir.
+3. Only 1 StarOffice .PS file will be created - X11.PS
+4. Only 1 Fontmap will be created - Fontmap.X11 - and this will be placed within
+   <Ghostscript>/lib
+5. Because of 4, an option has been added to the Settings dialog to specify the location of
+   Ghostscript.
+6. Because of 1, removed the font option from the Configure dialog.
+7. Fixed an error with getting PS name from TT font - PS names are not allowed to have spaces, but in
+   fences.ttf it does. FontEngine.cpp will now check for, and fix, this - using the same 'algorithm' as that
+   of ttf2pt1 (which means the names will tie up with those in the .afm files).
+8. Added some improvements to control of dialogs.
+
+0.2.1->0.3
+==========
+1. Reverted back to naming .afm files <fontname>.afm - and renaming any conflicting fonts.
+2. Speeded up copying of files - by copying preview bitmap as opposed to regenerating it!
+3. Removed need for FontMetrics directory - .afm files now placed within TrueType or Type1 dir,
+   and sym links are produced for StarOffice.
+
+   1. & 3. should now make things easier for AbiWord.
+
+4. Fixed output of Fontmap so that "URW Gothic" will be aliased as "UrwGothic-Roman" (etc.) as
+   this is what Qt will output.
+5. Added more processing of .afm files - this makes them OK for AbiWord.
+
+0.2->0.2.1
+==========
+1. Modified start-up progress dailog, and added progress dialogs to main window when scanning
+   fonts. These will only appear if numTTfonts>X || numT1fonts>Y
+
+0.1->0.2
+========
+1. Combined views of installed TrueType and Type1 fonts into 1 list.
+2. When uninstalling a font, can now move the font to another directory - or delete.
+3. Used t1lib so that Type1 fonts can also be previewed.
+4. Changed Fontmap creator to dynamically allocate memory for each font-category.
+5. .afm files are now named as <fontname>.<fontextension>.afm - this removes the need
+   for renaming the .afm file if there exists Type1 and TrueType fonts with the same
+   fontname.
+6. Removed the re-scanning of the install directories whenever a font is added.
+7. Added support for extra Type1 font weights.
+8. Added a start-up screen to inform the user that the installed/disk fonts are being scanned.
+9. When exiting, confirmation is now only asked if the system has been changed and not
+   reconfigured.

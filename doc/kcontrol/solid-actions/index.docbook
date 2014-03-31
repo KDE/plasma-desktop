@@ -1,0 +1,222 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % English "INCLUDE">
+]>
+<article id="solid-actions" lang="&language;">
+<articleinfo>
+<title>Device Actions</title>
+<authorgroup>
+<author><firstname>Ben</firstname><surname>Cooksley</surname></author>
+<author>&Anne-Marie.Mahfouf;</author>
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
+</authorgroup>
+
+<date>2013-12-05</date>
+<releaseinfo>&kde; 4.12</releaseinfo>
+
+<keywordset>
+<keyword>KDE</keyword>
+<keyword>System Settings</keyword>
+<keyword>Solid</keyword>
+<keyword>actions</keyword>
+<keyword>devices</keyword>
+<keyword>hardware</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_solid_actions">
+<title>Actions for new devices</title>
+<sect2 id="icons-intro">
+<title>Introduction</title>
+
+<para>This module allows you to set up the actions you want to associate when
+you plug new devices.</para>
+<para>
+<screenshot>
+<screeninfo>Screenshot of the Device Actions Manager</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="main.png" format="PNG"/>
+    </imageobject>
+     <textobject>
+      <phrase>Screenshot of the Device Actions Manager</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para>You will see listed all of the possible actions that are available when
+devices are plugged in.
+Please note that they will only be available under certain conditions.</para>
+
+<itemizedlist>
+<listitem><para><guibutton>Add</guibutton>
+   This will ask you to supply a name for your new action, then will open that
+action for editing.
+   If you do not supply all the required details in that dialog, then your
+action will be deleted.
+</para></listitem>
+<listitem><para>
+<guibutton>Edit</guibutton>
+   This will allow you to change the Name, Icon, command to execute 
+   and the conditions the action must match to be shown. 
+</para></listitem>
+<listitem><para>
+<guibutton>Discard / Cannot be deleted / Remove</guibutton>
+   This will do different actions, depending on if it was supplied with your
+system or created by you.
+   You can only discard changes to system wide actions, if there are no changes
+then these actions cannot be deleted.
+   User created actions are completely removed, including all changes.
+</para></listitem>
+</itemizedlist>
+
+</sect2>
+
+<sect2 id="add-action">
+<title>Add Action</title>
+
+<para>
+The <guibutton>Add</guibutton> button brings you a dialog to enter the
+new action name.
+</para>
+<para>
+<screenshot>
+<screeninfo>Screenshot of the Add Action dialog</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="add-action.png" format="PNG"/>
+    </imageobject>
+     <textobject>
+      <phrase>Screenshot of the Add Action dialog</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para>
+The action name should correctly describe the action. After entering a name and
+clicking <guibutton>OK</guibutton>, the Edit Action dialog will show to allow
+you to set up the action properties.
+</para>
+</sect2>
+
+<sect2 id="edit-action">
+<title>Edit Action</title>
+
+<para>This dialog allows you to change the settings of the action you
+selected.</para>
+<para>
+<screenshot>
+<screeninfo>Screenshot of the Edit Action dialog</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="edit-action.png" format="PNG"/>
+    </imageobject>
+     <textobject>
+      <phrase>Screenshot of the Edit Action dialog</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para>
+This includes the icon, the action name, the action command and the various
+parameters.
+You can change the icon by clicking on it.</para>
+<para>The parameters are displayed in a
+tree, the top item having to be true in order for the action to be shown.</para>
+
+<sect3 id="edit-parameter">
+<title>Edit parameter</title>
+
+<variablelist>
+<varlistentry><term><guilabel>Parameter type</guilabel></term>
+<listitem>
+<para>This controls what can be contained inside it, or
+what matching is performed to check if it is true.
+
+<variablelist>
+<varlistentry><term><guilabel>Property Match</guilabel></term>
+<listitem>
+<para>Compares the specified property of the Device (using 
+<guilabel>Device type</guilabel> and <guilabel>Value name</guilabel>) and using the evaluator, compares it against the
+text provided.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry><term><guilabel>Content Conjunction</guilabel></term>
+<listitem>
+<para>All sub-properties of this must be true for
+it to be true itself.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry><term><guilabel>Content Disjunction</guilabel></term>
+<listitem>
+<para>Any sub-property of this may be true for it
+to be true itself.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry><term><guilabel>Device interface match</guilabel></term>
+<listitem>
+<para>Checks to see if the Device can be
+classed as the selected Device type.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry><term><guilabel>Device type</guilabel></term>
+<listitem>
+<para>These are the possible device types supported by &kde; on
+your system.
+They are used in both Property and Device interface matches.
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry><term><guilabel>Value name</guilabel></term>
+<listitem>
+<para>This is a list of all possible property names for the
+selected device type.
+It also provides the selection of the value evaluator (which is either 
+<guilabel>Equals</guilabel> or <guilabel>Contains</guilabel>), and allows
+entry of the text to be compared with.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry><term><guibutton>Reset Parameter</guibutton></term>
+<listitem>
+<para>Reverts any unsaved changes you have made to this parameter.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry><term><guibutton>Save Parameter changes</guibutton></term>
+<listitem>
+<para>Saves the changes you have made to the parameter.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+</sect3>
+</sect2>
+</sect1>
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

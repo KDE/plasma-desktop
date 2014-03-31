@@ -1,0 +1,80 @@
+Significant changes in libplasma 3.<version> / KDE SC 4.<version>
+=================================================
+libplasma
+---------
+* Features
+
+* Bugfixes
+
+Other Libraries
+---------------
+* NEW: liblancelot-dataengines library added to kdeplasma-addons/libs
+    * data models: krunner, files, applications, devices, kopete, kmail
+                   currently open documents, office apps, recent documents
+                   kmail, kopete, basic xbel
+* MOVED: liblancelot moved to kdeplasma-addons/libs
+    * new widget: TabBar
+    * animations support
+
+* plasmagenericshell:
+    * widget explorer's list and icons factored out into abstract classes for use in the activity manager
+
+Developer Documentation
+-----------------------
+
+Desktop Theme
+-------------
+
+Plasma Desktop Shell
+--------------------
+* Features
+    * Desktop scripting
+        * Panel and Activity objects gain config read/write capabilities, same API that Widget has
+    * NEW: activity manager
+    * activities and containments are no longer 1:1
+* Bugfixes
+
+
+Other Shells
+------------
+
+Tools
+-----
+
+Plugins/Addons
+--------------
+* Features
+    * Plasmoids and Containments
+        * Lancelot
+            * UI Animations
+            * Search history
+            * Section buttons can be made smaller (vertical tab-like)
+            * Runners configuration
+            * New icon
+            * Disk usage pie-charts
+            * Akonadi integration for unread messages
+            * Option to use Lancelot as an old-school menu with cascading popups
+            * Tab key completion
+
+KRunner
+-------
+* Features
+    * Drag and drop support
+    * Added optional libqalculate support to the calculator runner, enabling advanced operations such as unit/currency conversion, equation solving and more
+
+* Bugfixes
+
+Scripting
+---------
+JavaScript
+    * Runners support QScript extensions and file and network I/O
+    * DataEngine support QScript extensions and file and network I/O
+    * Plasmoids
+        * Extender and ExtenderItem bindings
+
+Platforms
+---------
+* Features
+
+* Bugfixes
+

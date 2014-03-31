@@ -1,0 +1,22 @@
+Standard Graphical Effects
+==========================
+
+This document lists the standard effects provided by (or yet to be implemented) in libplasma.
+
+CrossFade
+---------
+Fades between two images.
+
+Parameters:
+    * Source image
+    * Destination image
+    * Timelapse (0 -> use standard time setting)
+
+Spin
+----
+Creates the illusion of spinning an item to show its back.
+
+Parameters:
+    * Source QGraphicsItem
+    * Destination QGraphicsItem
+

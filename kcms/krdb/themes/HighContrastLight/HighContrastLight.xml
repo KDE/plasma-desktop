@@ -1,0 +1,158 @@
+<!DOCTYPE ktheme>
+<ktheme version="1" >
+  <general>
+    <author value="Gunnar Schmi Dt" />
+    <email value="gunnar@schmi-dt.de" />
+    <homepage value="http://www.schmi-dt.de/" />
+    <comment value="This high contrast desktop theme with dark text on light background is intended for low-vision users." />
+    <version value="1.0" />
+  </general>
+  <desktop number="0" common="1" >
+    <mode id="Flat" />
+    <color1 rgb="#ffffcc" />
+    <color2 rgb="#ffffcc" />
+    <blending mode="FlatBlending" balance="-50" reverse="0" />
+    <pattern name="" />
+    <wallpaper mode="NoWallpaper" url="" />
+  </desktop>
+  <screensaver name="" />
+  <icons name="mono" >
+    <Animated value="1" object="desktop" />
+    <DoublePixels value="0" object="desktop" />
+    <Size value="32" object="desktop" />
+    <ActiveColor rgb="#000066" object="desktop" />
+    <ActiveColor2 rgb="#ffff66" object="desktop" />
+    <ActiveEffect name="tomonochrome" object="desktop" />
+    <ActiveSemiTransparent value="0" object="desktop" />
+    <ActiveValue value="1" object="desktop" />
+    <DefaultColor rgb="#000000" object="desktop" />
+    <DefaultColor2 rgb="#ffffff" object="desktop" />
+    <DefaultEffect name="tomonochrome" object="desktop" />
+    <DefaultSemiTransparent value="0" object="desktop" />
+    <DefaultValue value="1" object="desktop" />
+    <DisabledColor rgb="#808080" object="desktop" />
+    <DisabledColor2 rgb="#cccccc" object="desktop" />
+    <DisabledEffect name="tomonochrome" object="desktop" />
+    <DisabledSemiTransparent value="0" object="desktop" />
+    <DisabledValue value="1" object="desktop" />
+    <Animated value="0" object="mainToolbar" />
+    <DoublePixels value="0" object="mainToolbar" />
+    <Size value="22" object="mainToolbar" />
+    <ActiveColor rgb="#000066" object="mainToolbar" />
+    <ActiveColor2 rgb="#ffff66" object="mainToolbar" />
+    <ActiveEffect name="tomonochrome" object="mainToolbar" />
+    <ActiveSemiTransparent value="0" object="mainToolbar" />
+    <ActiveValue value="1" object="mainToolbar" />
+    <DefaultColor rgb="#000000" object="mainToolbar" />
+    <DefaultColor2 rgb="#ffffff" object="mainToolbar" />
+    <DefaultEffect name="tomonochrome" object="mainToolbar" />
+    <DefaultSemiTransparent value="0" object="mainToolbar" />
+    <DefaultValue value="1" object="mainToolbar" />
+    <DisabledColor rgb="#808080" object="mainToolbar" />
+    <DisabledColor2 rgb="#cccccc" object="mainToolbar" />
+    <DisabledEffect name="tomonochrome" object="mainToolbar" />
+    <DisabledSemiTransparent value="0" object="mainToolbar" />
+    <DisabledValue value="1" object="mainToolbar" />
+    <Animated value="0" object="panel" />
+    <DoublePixels value="0" object="panel" />
+    <Size value="32" object="panel" />
+    <ActiveColor rgb="#000066" object="panel" />
+    <ActiveColor2 rgb="#ffff66" object="panel" />
+    <ActiveEffect name="tomonochrome" object="panel" />
+    <ActiveSemiTransparent value="0" object="panel" />
+    <ActiveValue value="1" object="panel" />
+    <DefaultColor rgb="#000000" object="panel" />
+    <DefaultColor2 rgb="#ffffff" object="panel" />
+    <DefaultEffect name="tomonochrome" object="panel" />
+    <DefaultSemiTransparent value="0" object="panel" />
+    <DefaultValue value="1" object="panel" />
+    <DisabledColor rgb="#808080" object="panel" />
+    <DisabledColor2 rgb="#cccccc" object="panel" />
+    <DisabledEffect name="tomonochrome" object="panel" />
+    <DisabledSemiTransparent value="0" object="panel" />
+    <DisabledValue value="1" object="panel" />
+    <Animated value="0" object="small" />
+    <DoublePixels value="0" object="small" />
+    <Size value="16" object="small" />
+    <ActiveColor rgb="#000066" object="small" />
+    <ActiveColor2 rgb="#ffff66" object="small" />
+    <ActiveEffect name="tomonochrome" object="small" />
+    <ActiveSemiTransparent value="0" object="small" />
+    <ActiveValue value="1" object="small" />
+    <DefaultColor rgb="#000000" object="small" />
+    <DefaultColor2 rgb="#ffffff" object="small" />
+    <DefaultEffect name="tomonochrome" object="small" />
+    <DefaultSemiTransparent value="0" object="small" />
+    <DefaultValue value="1" object="small" />
+    <DisabledColor rgb="#808080" object="small" />
+    <DisabledColor2 rgb="#cccccc" object="small" />
+    <DisabledEffect name="tomonochrome" object="small" />
+    <DisabledSemiTransparent value="0" object="small" />
+    <DisabledValue value="1" object="small" />
+    <Animated value="0" object="toolbar" />
+    <DoublePixels value="0" object="toolbar" />
+    <Size value="22" object="toolbar" />
+    <ActiveColor rgb="#000066" object="toolbar" />
+    <ActiveColor2 rgb="#ffff66" object="toolbar" />
+    <ActiveEffect name="tomonochrome" object="toolbar" />
+    <ActiveSemiTransparent value="0" object="toolbar" />
+    <ActiveValue value="1" object="toolbar" />
+    <DefaultColor rgb="#000000" object="toolbar" />
+    <DefaultColor2 rgb="#ffffff" object="toolbar" />
+    <DefaultEffect name="tomonochrome" object="toolbar" />
+    <DefaultSemiTransparent value="0" object="toolbar" />
+    <DefaultValue value="1" object="toolbar" />
+    <DisabledColor rgb="#808080" object="toolbar" />
+    <DisabledColor2 rgb="#cccccc" object="toolbar" />
+    <DisabledEffect name="tomonochrome" object="toolbar" />
+    <DisabledSemiTransparent value="0" object="toolbar" />
+    <DisabledValue value="1" object="toolbar" />
+  </icons>
+  <sounds/>
+  <colors contrast="7" >
+    <background rgb="#ffffff" object="global" />
+    <selectBackground rgb="#a5a5ff" object="global" />
+    <foreground rgb="#000000" object="global" />
+    <windowForeground rgb="#000000" object="global" />
+    <windowBackground rgb="#ffffff" object="global" />
+    <selectForeground rgb="#000000" object="global" />
+    <buttonBackground rgb="#ffffff" object="global" />
+    <buttonForeground rgb="#000000" object="global" />
+    <linkColor rgb="#000000" object="global" />
+    <visitedLinkColor rgb="#000000" object="global" />
+    <alternateBackground rgb="#d7d7ff" object="global" />
+    <activeForeground rgb="#000000" object="kwin" />
+    <inactiveBackground rgb="#e1e1e1" object="kwin" />
+    <inactiveBlend rgb="#e1e1e1" object="kwin" />
+    <activeBackground rgb="#a5a5ff" object="kwin" />
+    <activeBlend rgb="#a5a5ff" object="kwin" />
+    <inactiveForeground rgb="#808080" object="kwin" />
+    <activeTitleBtnBg rgb="#000000" object="kwin" />
+    <inactiveTitleBtnBg rgb="#555555" object="kwin" />
+    <frame rgb="#7a7aff" object="kwin" />
+    <inactiveFrame rgb="#e1e1e1" object="kwin" />
+    <handle rgb="#7a7aff" object="kwin" />
+    <inactiveHandle rgb="#e1e1e1" object="kwin" />
+  </colors>
+  <cursors name="" />
+  <wm type="builtin" name="kwin3_plastik" >
+    <border size="1" />
+  </wm>
+  <konqueror>
+    <wallpaper url="" />
+    <bgcolor rgb="#ffffff" />
+  </konqueror>
+  <panel>
+    <transparent value="0" />
+  </panel>
+  <widgets name="highcontrast" />
+  <fonts>
+    <font value="Arial,12,-1,5,50,0,0,0,0,0" object="General" />
+    <fixed value="Courier New,10,-1,5,50,0,0,0,0,0" object="General" />
+    <toolBarFont value="Arial,12,-1,5,50,0,0,0,0,0" object="General" />
+    <menuFont value="Arial,12,-1,5,50,0,0,0,0,0" object="General" />
+    <activeFont value="Arial,12,-1,5,75,0,0,0,0,0" object="WM" />
+    <taskbarFont value="Arial,11,-1,5,50,0,0,0,0,0" object="General" />
+    <StandardFont value="" object="FMSettings" />
+  </fonts>
+</ktheme>

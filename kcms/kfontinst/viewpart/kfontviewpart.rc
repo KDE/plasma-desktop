@@ -1,0 +1,11 @@
+<!DOCTYPE kpartgui SYSTEM "kpartgui.dtd">
+<kpartgui name="kfontviewpart" version="1">
+<ToolBar name="mainToolBar">
+  <text>&amp;Main Toolbar</text>
+  <Action name="changeText"/>
+  <Action name="displayType"/>
+  <Action name="view_zoom_in"/>
+  <Action name="view_zoom_out"/>
+</ToolBar>
+</kpartgui>
+

@@ -1,0 +1,86 @@
+ContainmentActions
+==========
+
+Overview
+--------
+"ContainmentActions" are components that respond to mouse events, usually by either performing an
+action or showing a menu with multiple actions.
+
+Timeline
+--------
+Introduced in: libplasma x.x (KDE 4.4.0)
+
+Component Type
+--------------
+ContainmentActions are plugins of ServiceType Plasma/ContainmentActions.
+
+Component Description
+---------------------
+ContainmentAction plugins are registered using .desktop files. These files should be
+named using the following naming scheme:
+
+    plasma-containmentactions-<pluginname>.desktop
+
+If a containmentactions plugin provides a configuration UI,
+it should include the line X-Plasma-HasConfigurationInterface=true.
+
+All other entries should follow the standard .desktop specification,
+supplemented by the standard KPluginInfo keys.
+
+Component API
+-------------
+Subclasses: QObject
+
+*** Key Methods ***
+
+        void contextEvent(QEvent *event);
+Implement this method to get events. you'll probably want to check the event type and send different
+events to your own methods; see the plugins in workspace for examples.
+Currently you can expect to get mouse press, release, and wheel events.
+If you're showing a menu you should use MousePress and ignore MouseRelease.
+If you're performing an immediate action you should ignore MousePress and use MouseRelease.
+
+The incoming event will always have the buttons and modifiers that the user configured as the trigger, so
+there's no sense in checking those values.
+
+        void init(const KConfigGroup &config);
+Do whatever initialization is needed here (not in the constructor).
+
+A configuration UI can optionally be provided by overloading the configuration methods:
+        QWidget* createConfigurationInterface(QWidget* parent);
+        void configurationAccepted();
+        void save(KConfigGroup &config);
+
+when configurationAccepted is called, you should read from your config UI and extract all your data
+from it; the UI may be deleted after the function returns.
+when save is called, save that data to the provided config group.
+
+if your plugin needs to be configured before it is useful, call setConfigurationRequired() from
+init().
+
+Containment Interface
+---------------------
+The Containment class supports loading and using containmentactions plugins.
+Subclasses need do nothing to get this support. If a subclass has extra actions it wants in the
+contextmenu, it can provide them in contextualActions() the same as before - but there's no longer
+any need to return standard actions like "add widgets" and "run command".
+
+ContextActions plugins to use are set using the setContainmentActions(const QString &trigger, const QString &pluginName)
+method. an empty string removes any plugin set for the given trigger.
+Trigg format is determined by the static function ContextActions::eventToString().
+
+User Configuration
+------------------
+It is up to the host application to provide a configuration interface, such
+as a dialog, to the user.
+
+*** Plasma Desktop Implementation ***
+
+A settings dialog is provided for the DesktopView (a second page in the same dialog as the wallpaper)
+
+This dialog allows selecting one trigger for each installed plugin.
+
+Future Work
+-----------
+* Current UI in shells/desktop/ needs work.
+

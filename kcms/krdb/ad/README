@@ -1,0 +1,63 @@
+KRDB V0.2
+
+CHANGES V0.2
+- use QFontInfo
+- general purpose files e.g. AAAMotif.ad thanks to Gerd
+  Knorr <kraxel@goldbach.isdn.cs.tu-berlin.de>
+
+The krdb utility provides a convenient way to manage the
+resources of legacy applications on your KDE desktop.
+Simply run krdb every time you want to update the resources
+of your supported apps.
+
+You can easily write application default files for your own
+applications. To see how, follow the example of the
+supplied application default file for XV which specifies
+
+xv*foreground: FOREGROUND
+xv*background: BACKGROUND
+xv*highlight: HIGHLIGHT
+xv*lowlight: LOWLIGHT
+xv*monofont: FIXED_FONT
+
+The applications resources assign variables which will be
+defined by krdb. The complete list of possible variables to
+choose from is
+
+FOREGROUND, BACKGROUND, HIGHLIGHT, LOWLIGHT,
+WINDOW_FOREGROUND, WINDOW_BACKGROUND, SELECT_FOREGROUND,
+SELECT_BACKGROUND, INACTIVE_FOREGROUND,
+INACTIVE_BACKGROUND, INACTIVE_BLEND, ACTIVE_FOREGROUND,
+ACTIVE_BACKGROUND, ACTIVE_BLEND, FONT, BOLD_FONT, ITALIC_FONT, 
+FIXED_FONT, TITLE_FONT and FONTLIST.
+
+Their meaning should be obvious to anyone familiar with
+KDE's desktop wide resources. Install your application
+default file either in
+
+$(KDEDIR)/share/apps/kdisplay/app-defaults
+
+or
+
+$(HOME)/.kde/share/apps/kdisplay/app-defaults
+
+so that it is available to krdb for reading. If you want to
+override a system file simply copy it to your user
+directory and make amendments.
+
+The krdb utility works by putting your current KDE color
+and font scheme into preprocessor statements, concatenating
+the specially written application default files and using
+xrdb -merge to write to RESOURCE_MANAGER. Thus it gives a
+simple way to make non-KDE applications fit in with the
+desktop.
+
+krdb now comes with a set of general purpose configuration
+files for the Motif, Xaw and TK toolkits. How well these
+general purpose resources apply to specific applications
+will depend on what other application defaults are
+installed. If you want krdb general resource files to apply
+most generally you should not have application specific
+entries for similar resources in ~/.Xdefaults or in the
+system app-defaults directory e.g.
+/usr/lib/X11R6/app-defaults.

@@ -1,0 +1,124 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+
+  <!ENTITY kfontview "<application>KFontview</application>">
+  <!ENTITY kappname "&kfontview;">
+  <!ENTITY package "kdebase">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % English "INCLUDE">
+]>
+
+<article id="kfontview" lang="&language;">
+
+<articleinfo>
+<title>Font Viewer</title>
+<authorgroup>
+<author>&Burkhard.Lueck; &Burkhard.Lueck.mail;</author>
+
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
+</authorgroup>
+
+<date>2013-06-19</date>
+<releaseinfo>1.1 (&kde; 4.11)</releaseinfo>
+
+<keywordset>
+<keyword>KDE</keyword>
+<keyword>fontview</keyword>
+<keyword>fonts</keyword>
+</keywordset>
+</articleinfo>
+
+<para>
+&kfontview; is an application to view and install different types of fonts:
+<itemizedlist>
+<listitem><para>TrueType (<filename class="extension">.ttf</filename>)</para></listitem>
+<listitem><para>OpenType (<filename class="extension">otf</filename>, <filename class="extension">.ttf</filename>)</para></listitem>
+<listitem><para>Postscript type 1 (file extension on &Windows; &amp; OS/2 <filename class="extension">.pfb</filename>/<filename class="extension">.pfm</filename>; on &UNIX;/&Linux; <filename class="extension">.pfa</filename>/<filename class="extension">.afm</filename>)</para></listitem> 
+<listitem><para>BDF (Bitmap Distribution Format, file extension <filename class="extension">.bdf</filename>)</para></listitem> 
+<listitem><para>PCF (Portable Compiled Format, file extension <filename class="extension">.pcf</filename>)</para></listitem>
+</itemizedlist>
+</para>
+<para>You can use it as standalone program to preview and install a font 
+downloaded from the Internet. In the preview you can check that the font 
+has all characters you need.
+</para>
+<para>
+Additionally &kfontview; can be launched from 
+the &systemsettings; module <ulink url="help:/kcontrol/fontinst/index.html">
+<guilabel>Font Installer</guilabel></ulink> to use the extended preview capabilities
+of &kfontview;.</para>
+<para>To use &kfontview; in &konqueror; select <guilabel>Services</guilabel> in
+the sidebar and go to the folders <filename class="directory">Fonts/Personal
+</filename> or <filename class="directory">Fonts/System</filename>.
+Then open the context menu with a &RMB; click on a font and start &kfontview; 
+by selecting it from the context menu.</para>
+<!-- used by others as well? -->
+
+<para>
+<screenshot>
+<screeninfo>&kfontview; application</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="kfontview.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase>&kfontview; application</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para>
+&kfontview;'s <guilabel>Standard Preview</guilabel> displays your font in several 
+different sizes using a pangram (a sentence using every letter of the alphabet at least once).
+So you can get a good idea of what it will look like. 
+From the drop down box in the toolbar you can choose additional preview types:
+<itemizedlist>
+<listitem><para><guilabel>All Characters</guilabel> displays all characters
+provided by the font in one size. </para></listitem>
+<listitem><para>Unicode Block: The Unicode standard arranges groups of characters 
+together in blocks</para></listitem>
+<listitem><para>Unicode Script: In Unicode, a script is a collection of letters 
+and other written signs used to represent textual information in one or more 
+writing systems</para></listitem>
+<listitem><para><guibutton>Change Text</guibutton>: Using this button opens the <guilabel>Preview 
+String</guilabel> dialog where you can insert a user defined text. 
+This feature enables you to check that a font supports the characters you need.
+</para></listitem>
+</itemizedlist></para>
+<para>You can use the zoom buttons or the mousewheel to change the font size in all preview types.</para>
+<para>In <guilabel>Unicode Block</guilabel> and <guilabel>Unicode Script</guilabel> 
+preview mode additional tooltip info's are displayed hovering a character with the 
+mouse pointer: 
+The character's Unicode <guilabel>Category</guilabel> and the value in <guilabel>
+UCS-4</guilabel>, <guilabel>UTF-16</guilabel>, <guilabel>UTF-8</guilabel> and 
+as <guilabel>XML Decimal Entity</guilabel>.</para>
+
+<para>
+To install a font you downloaded from the Internet, click the 
+<guibutton>Install</guibutton> button in the lower-right corner.
+</para>
+
+<para>You can install the font for personal us only available to you or system-wide available
+for all users, the latter will require administrator privileges.</para>
+
+<para>Fonts are often provided in an archive format like <literal role="extension">zip</literal>.
+Open these archives with &ark; which provides a simple previewer for fonts. 
+To make use of the extended capabilities of &kfontview; extract the fonts and open them in 
+&kfontview;.
+
+</para><para>Applications need to be restarted to use of the newly installed fonts.</para>
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

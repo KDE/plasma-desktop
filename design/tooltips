@@ -1,0 +1,39 @@
+Tooltips
+==========
+
+Overview
+--------
+libplasma provides facilities to manage tooltips that display extended information in a visually pleasing and consistent manner for QGraphicsWidgets. These tooltip windows are themed using Plasma::Theme.
+
+Timeline
+--------
+Introduced in: libplasma 2.1 (KDE 4.2.0)
+
+Component Type
+--------------
+ToolTipManager is a QObject subclass in libplasma.
+ToolTip is an internal QWidget subclass in libplasma.
+
+Registering Tooltips
+--------------------
+ToolTipManger is quite simple to use: simply call setWidgetToolTipContent using the struct ToolTipContent. This causes the widget to be registered if it isn't already. Alternatively, for widgets that fill the data on demand, call registerWidget directly.
+
+Widgets are unregistered automatically upon destruction, but can also be manually unregsitered by calling ToolTipMnager::unregisterWidget.
+
+An event filter is registered on each registered widget and hover events that occur trigger calls to showToolTip and hideToolTip. The hover events are not, however, filtered out. 
+
+Note: If another event filter is placed on registered widget that filters out these events, it may be necessary to manually call showToolTip and hideToolTip.
+
+ToolTip Updates
+---------------
+Updating tooltip data is supported by means of invoking slots on the associated widget if they exist. In particular, just prior to being shown the toolTipAboutToShow method is invoked and when hiding the toolTipHidden method is invoked.
+
+ToolTip Visualization
+---------------------
+The internal (non-exported) ToolTip class is used to actually display the tooltips. These are associated with widgets and created as necessary.
+
+ToolTip displays are only created when data is set, and are deleted if an empty ToolTipData struct is passed in. This keeps memory usage due to ToolTip objects down.
+
+Future Work
+-----------
+N/A

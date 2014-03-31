@@ -1,0 +1,111 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+
+
+foreach my $file( @ARGV )
+    {
+    print STDERR "Working on $file\n";
+
+    open(my $FILEHD, $file) or do
+        {
+        print STDERR "Failed to open $file : $!";
+        next;
+        };
+
+    open(my $NEWHD, ">new_$file") or do
+        {
+        print STDERR "Failed to open new_$file : $!";
+        next;
+        };
+
+    open(my $OLDHD, ">old_$file") or do
+        {
+        print STDERR "Failed to open old_$file : $!";
+        next;
+        };
+
+    my $process = 0;
+    my @kwin;
+    my @krunner;
+    my @klipper;
+    my @kxkb;
+    for( <$FILEHD> )
+        {
+        /\[Settings\]/ and do { print $NEWHD $_; next; };
+        /Name(\[[a-zA-Z_@]*\])?/ and do { print $NEWHD $_; next; };
+        /Name\[x-test\]/ and do { print $NEWHD $_; next; };
+        /Uses Win Modifier/ and do { print $NEWHD $_; next; };
+
+        /\[Global Shortcuts\]/ and do { print $OLDHD $_; $process = 1; next; };
+        /\[Shortcuts\]/ and do { print $OLDHD $_; $process = 0; next; };
+
+        s/Alt\+Ctrl/Ctrl+Alt/;
+        s/Delete/Del/;
+        s/Escape/Esc/;
+        s/Win/Meta/;
+
+        if ($process)
+            {
+            /Desktop Screenshot=/ and do { s/Desktop Screenshot=/Desktop Screenshot to Clipboard=/; push @kwin, $_; next; };
+            /Kill Window=/ and do { push @kwin, $_; next; };
+            /Mouse Emulation/ and do { push @kwin, $_; next; };
+            /Switch to Desktop [0-9]+/ and do { push @kwin, $_; next; };
+            /Switch to (Next|Previous) Desktop=/ and do { push @kwin, $_; next; };
+            /Switch One Desktop / and do { push @kwin, $_; next; };
+            /Toggle Window Raise\/Lower=/ and do { push @kwin, $_; next; };
+            /Walk Through Desktop/ and do { push @kwin, $_; next; };
+            /Walk Through Windows/ and do { push @kwin, $_; next; };
+            /Window to (Next |Previous )?Desktop/ and do { push @kwin, $_; next; };
+            /Window (Close|Minimize|Lower|Move|Raise|Resize|Shade)/ and do { push @kwin, $_; next; };
+            /Window Maximize/ and do { push @kwin, $_; next; };
+            /Window Operations Menu=/ and do { s/Window Screenshot=/Window Screenshot to Clipboard=/; push @kwin, $_; next; };
+            /Window Screenshot=/ and do { s/Window Screenshot=/Window Screenshot to Clipboard=/; push @kwin, $_; next; };
+
+            /Switch to Next Keyboard Layout/ and do { push @kxkb, $_; next; };
+
+            /clipboard_action/ and do { push @klipper, $_; next; };
+            /repeat_action/ and do { push @klipper, $_; next; };
+            /show_klipper_popup/ and do { push @klipper, $_; next; };
+
+            /Halt without Confirmation/ and do { s/Halt without Confirmation/Halt Without Confirmation/; push @krunner, $_; next; };
+            /Lock Session/ and do { push @krunner, $_; next; };
+            /Log Out/ and do { push @krunner, $_; next; };
+            /Log Out Without Confirmation/ and do { push @krunner, $_; next; };
+            /Lock Session/ and do { push @krunner, $_; next; };
+            /Reboot without Confirmation/ and do { s/Reboot without Confirmation/Reboot Without Confirmation/; push @krunner, $_; next; };
+            /Run Command/ and do { push @krunner, $_; next; };
+            /Show Taskmanager/ and do { s/Show Taskmanager/Show System Activity/; push @krunner, $_; next; };
+            }
+
+        print $OLDHD $_;
+        }
+
+    print $NEWHD "\n[klipper][Global Shortcuts]\n";
+    print $NEWHD sort @klipper;
+    print $NEWHD "\n[krunner][Global Shortcuts]\n";
+    print $NEWHD sort @krunner;
+    print $NEWHD "\n[kwin][Global Shortcuts]\n";
+    print $NEWHD sort @kwin;
+    print $NEWHD "\n[kxkb][Global Shortcuts]\n";
+    print $NEWHD sort @kxkb;
+
+    close($FILEHD) or do
+        {
+        print STDERR "Failed to close $file : $!";
+        next;
+        };
+
+    close($NEWHD) or do
+        {
+        print STDERR "Failed to close new_$file : $!";
+        next;
+        };
+
+    close($OLDHD) or do
+        {
+        print STDERR "Failed to close old_$file : $!";
+        next;
+        };
+    }

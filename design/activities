@@ -1,0 +1,85 @@
+
+Overview
+--------
+
+Activities are the "what I'm doing" of context.
+They provide a way to organize stuff by project - semantically, not spatially. They have many things
+in common with virtual desktops, but are separate; see http://chani.wordpress.com/2010/02/20/the-limits-of-virtual-desktops/ for why.
+
+An activity has a name and icon, and is always tied to one or more containments; this gives an "anchor" to start with. From there, the user can customize the containment(s), associate windows in kwin, and associate other things (eg. files) in nepomuk. Applications could offer their own activity-specific settings (eg. a "show in this activity" option for dolphin Places) and/or use nepomuk's associations (eg. when a document associated with some activity is opened, notify the activities API so that kwin can automatically associate the window it's in with the activtiy it belongs to).
+
+While desktop containments are tied to one and only one activity, windows and nepomuk objects can be associated with as many as the user likes.
+
+an activity can be stopped; this saves out and quits all the activity's containments (and will later save the windows too).
+each activity has a containment for each screen; if widgets-per-desktop is enabled, it has a containment for each desktop too. This way, the activity is fully global; after all, humans really aren't good at multitasking. activities are supposed to help you focus on the task at hand.
+
+
+UI
+---
+
+in 4.5
+------
+
+KWin's titlebar contextmenu has a submenu for setting which activities a window is on, much like its desktops submenu.
+Plasma has an Activity Manager which allows you to create, stop, destroy, and activate activities.
+
+Future
+------
+
+* More convenient ways of associating windows with containments would be nice; drag&drop?
+* Can the activity manager use compositing to get thumbnails instead of icons?
+
+Implementation
+--------------
+
+this is a general overview; more detailed and short-term plans are at http://techbase.kde.org/Projects/Plasma/ZUI
+
+In 4.5
+------
+all important code so far has been in kdebase.
+
+runtime/activitymanager/ is a kded service that manages activities; it controls the list of activities and which one is currrent. It uses a config file to store the IDs and names, so that this information is available even when nepomuk is down; other data, like the icon, is fetched through nepomuk.
+
+workspace/libs/kworkspace contains KActivityController, KActivityConsumer, and KActivityInfo - classes that talk to the activity manager over dbus and provide an easy API. Controller inherits Consumer, and is meant only for workspace (kwin and plasma); the other two are meant for use by any application, and will move to kdelibs when they've had a chance to mature.
+
+workspace/plasma/desktop/shell/ contains Activity, which manages both a KActivityInfo and all the associated containments. some management of activities is done in deskopcorona too. It also contains activitymanager/ - the activity management UI.
+
+
+Future
+-------
+
+* Chani needs to write some examples of activity-aware applications, and put them in kdeexamples/
+* we need to decide how plasma-netbook can best use activities (there's not as much multitasking on those devices..)
+
+* kwin needs to automatically associate a window with the activities for its resources.
+* applications need to start advertising what resources they've got in what windows
+* it needs to be easy to associate documents with activites (in dolphin?)
+
+* the taskbar & pager shouldn't show windows from other activities (but perhaps there should be a way to reach them in case you forget where one is)
+* I'd like to see a plasmoid that can go in the panel for quick activity switching
+* plasma needs a tool for managing which containments belong to which screens/desktops (the most common use case is someone unplugging a monitor and then remembering they need a widget from it)
+* stopping an activity should stop all of it, not just plasma; we need to close down the applications in it, like a mini-session, so that they can be restored again when the activity is restored.
+* when we have location available, it should be possible to associate activities with locations
+* it'd be nice to set other settings based on activity, like IM availability or whether to show (non-critical) notifications
+
+and I'm sure applications can come up with all sorts of other useful features :)
+
+
+On Sessions
+-----------
+
+closing and restoring windows may be the hardest part of activities. It depends, at least in part, on the application being able to restore itself.
+there is already a session protocol for restoring apps when you log in. it's per-process, not per-window. I've heard tell that a lot of applications do not implement it particularly well; iirc, saving and quitting are often done together. I forget whether this means that telling the application to save will make it quit or just do nothing. Each process gets a session key, and on login the application is passed this key and expectted to restore itself from whatever data it has saved for that key.
+
+There are plenty of warts to that old protocol, and there was an effort to replace it once (by some gnome people iirc?) but it's there and lots of applications use it (at least to *some* extent).
+
+I think it's worth trying to re-use it. If it works, it gives us some basic support for free, and it's much easier to get applications to be better at using an existing protocol than to try and talk them into supporting a brand new protocol. Remember, we want to save/restore not just kde apps or gtk apps but any other random apps the user needs, even proprietary ones.
+
+So, how do we re-use it? well, for an application that's on exactly one activity, that's easy: tell it to quit, store its sssion key somewhere along with the activity id, and when it's time to restore that activity you start it again with that key.
+If an application is on >1 running activity, merely tell it that one of its activities has quit. if it's activity-aware it should close down stuff that belongs to that activity; if not, oh well, at least nothing is lost. When its last aactivity is closed, we tell it to quit, and save the key with every activity it was associated with, so that as soon as one of them is opened it gets restored.
+We will have to be careful that logging out doesn't duplicate any session stuff that activites handle, of course; and once this is in place we may also be able to offer the option of only opening a single activity on login.
+
+Oh, and we'll have to watch that the windows created as an application is restored get associated with the correct activities. I'm not sure how much work that is; depends how hard it is to go from a WID to a PID to a session key.
+
+Bonus points if we can get these mini-sessions saving regularly too ;)
+

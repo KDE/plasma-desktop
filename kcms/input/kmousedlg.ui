@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>KMouseDlg</class>
+ <widget class="QWidget" name="KMouseDlg">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>416</width>
+    <height>329</height>
+   </rect>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QGroupBox" name="handedBox">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="title">
+          <string>Button Order</string>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+         <layout class="QGridLayout">
+          <item row="0" column="0">
+           <widget class="QRadioButton" name="rightHanded">
+            <property name="text">
+             <string>Righ&amp;t handed</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QRadioButton" name="leftHanded">
+            <property name="text">
+             <string>Le&amp;ft handed</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <spacer>
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Expanding</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>1</width>
+              <height>1</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="cbScrollPolarity">
+         <property name="whatsThis">
+          <string>Change the direction of scrolling for the mouse wheel or the 4th and 5th mouse buttons.</string>
+         </property>
+         <property name="text">
+          <string>Re&amp;verse scroll direction</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QLabel" name="mousePix">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>96</width>
+         <height>80</height>
+        </size>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="GroupBox1">
+     <property name="title">
+      <string>Icons</string>
+     </property>
+     <layout class="QVBoxLayout">
+      <item>
+       <widget class="QRadioButton" name="doubleClick">
+        <property name="text">
+         <string>Dou&amp;ble-click to open files and folders (select icons on first click)</string>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="singleClick">
+        <property name="text">
+         <string>&amp;Single-click to open files and folders</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout">
+        <item>
+         <spacer>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <layout class="QVBoxLayout">
+          <item>
+           <widget class="QCheckBox" name="cb_pointershape">
+            <property name="text">
+             <string>Cha&amp;nge pointer shape over icons</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="cbAutoSelect">
+            <property name="text">
+             <string>A&amp;utomatically select icons</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <item>
+             <spacer name="horizontalSpacer">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Fixed</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="KIntNumInput" name="slAutoSelect">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="label">
+               <string comment="label. delay (on milliseconds) to automatically select icons">Delay</string>
+              </property>
+              <property name="minimum">
+               <number>0</number>
+              </property>
+              <property name="maximum">
+               <number>2000</number>
+              </property>
+              <property name="singleStep">
+               <number>125</number>
+              </property>
+              <property name="suffix">
+               <string comment="milliseconds. time to automatically select the items"> ms</string>
+              </property>
+              <property name="sliderEnabled">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <spacer>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeType">
+      <enum>QSizePolicy::Expanding</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>1</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>KIntNumInput</class>
+   <extends>QWidget</extends>
+   <header>knuminput.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>rightHanded</tabstop>
+  <tabstop>leftHanded</tabstop>
+  <tabstop>cbScrollPolarity</tabstop>
+  <tabstop>doubleClick</tabstop>
+  <tabstop>singleClick</tabstop>
+  <tabstop>cb_pointershape</tabstop>
+  <tabstop>cbAutoSelect</tabstop>
+ </tabstops>
+ <includes>
+  <include location="global">kdialog.h</include>
+ </includes>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>singleClick</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>cb_pointershape</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>40</x>
+     <y>209</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>69</x>
+     <y>240</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>singleClick</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>cbAutoSelect</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>40</x>
+     <y>209</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>69</x>
+     <y>264</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

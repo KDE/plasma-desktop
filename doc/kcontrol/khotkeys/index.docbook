@@ -1,0 +1,751 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % English "INCLUDE">
+]>
+<article id="khotkeys" lang="&language;">
+<title>Custom Shortcuts</title>
+
+<articleinfo>
+<authorgroup>
+<author><firstname>Subhashish</firstname> <surname>Pradhan</surname></author>
+<author>&TC.Hollingsworth; &TC.Hollingsworth.mail;</author>
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
+</authorgroup>
+
+<copyright>
+<year>2011</year>
+<holder>Subhashish Pradhan</holder>
+</copyright>
+<copyright>
+<year>2012</year>
+<holder>&TC.Hollingsworth;</holder>
+</copyright>
+<legalnotice>&FDLNotice;</legalnotice>
+
+<date>2013-12-05</date>
+<releaseinfo>&kde; 4.12</releaseinfo>
+
+<keywordset>
+<keyword>KDE</keyword>
+<keyword>Systemsettings</keyword>
+<keyword>shortcuts</keyword>
+<keyword>hotkeys</keyword>
+<keyword>Custom Shortcuts</keyword>
+<keyword>khotkeys</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="intro">
+<title>Introduction</title>
+
+<para>The <application>Custom Shortcuts</application> &systemsettings; module
+allows you to configure custom keyboard shortcuts and mouse gestures.  You can
+use them to control applications, run specific commands, and more.</para>
+
+</sect1>
+
+
+<sect1 id="manage">
+<title>Managing Shortcuts and Groups</title>
+
+<sect2 id="manage-add-group">
+<title>Adding Groups</title>
+
+<para>The module allows to you to sort related shortcuts into Groups.  For
+instance, if you have some shortcuts that relate to your music player, you
+could create a group for them called <replaceable>Music Player</replaceable>.
+</para>
+
+<para>To add a new group, click on the <guibutton>Edit</guibutton> button below
+the left pane and select the <guimenuitem>New Group</guimenuitem> option.</para>
+
+</sect2>
+
+<sect2 id="manage-add-shortcut">
+<title>Adding Shortcuts</title>
+
+<para>To add a new shortcut, click on the <guibutton>Edit</guibutton> button
+below the left pane and select the <guisubmenu>New</guisubmenu> option.</para>
+
+<para>The first menu that appears allows you to select the type of trigger.  The
+following options are available:</para>
+
+<variablelist>
+
+<varlistentry id="manage-add-shortcut-global">
+<term><guisubmenu>Global Shortcut</guisubmenu></term>
+<listitem><para>These are standard keyboard shortcuts that will be recognized
+anywhere, as long as a &kde; &plasma; Workspace is running.</para></listitem>
+</varlistentry>
+
+<varlistentry id="manage-add-shortcut-window-action">
+<term><guisubmenu>Window Action</guisubmenu></term>
+<listitem><para>Window Actions are triggers that occur when something happens
+to a particular window, like when it appears, gains focus, or is closed.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry id="manage-add-shortcut-mouse-gesture">
+<term><guisubmenu>Mouse Gesture Action</guisubmenu></term>
+<listitem><para>A mouse gesture action is triggered when a particular movement
+of the mouse (or touchpad or touchscreen) is performed.</para></listitem>
+</varlistentry>
+
+</variablelist>
+
+<para>Once you've selected the type of trigger, another submenu appears that allows
+you to select an action type.  The following types are available:</para>
+
+<variablelist>
+
+<varlistentry id="manage-add-shortcut-command">
+<term><guimenuitem>Command/&URL;</guimenuitem></term>
+<listitem><para>This action will launch a command or open a &URL; when the
+shortcut is triggered.</para></listitem>
+</varlistentry>
+
+<varlistentry id="manage-add-shortcut-dbus">
+<term><guimenuitem>&DBus; Command</guimenuitem></term>
+<listitem><para>This action will call a &DBus; method in a running application or
+system daemon.  For more information on &DBus;, see the
+<ulink url="http://techbase.kde.org/Development/Tutorials/D-Bus/Introduction">&DBus;
+Introduction on &kde; TechBase</ulink>.</para></listitem>
+</varlistentry>
+
+<varlistentry id="manage-add-shortcut-keyboard-input">
+<term><guimenuitem>Send Keyboard Input</guimenuitem></term>
+<listitem><para>This action will send keyboard input to the currently
+running application, just as if you had typed it in yourself.</para></listitem>
+</varlistentry>
+
+</variablelist>
+
+<para>Once you've selected the action type, you can then edit the shortcut to
+your liking.  See <xref linkend="shortcuts"/> for more information.</para>
+
+</sect2>
+
+<sect2 id="manage-delete">
+<title>Deleting Shortcuts and Groups</title>
+
+<para>To delete a shortcut or group, select it, then click on the
+<guibutton>Edit</guibutton> button below the left pane, and select the
+<guimenuitem>Delete</guimenuitem> option.</para>
+
+</sect2>
+
+<sect2 id="manage-export">
+<title>Exporting Groups</title>
+
+<para>You can export a group, so you can save the shortcuts contained within and
+use them on another computer or maintain a backup.</para>
+
+<para>To export a group, select the group to be exported, then click on the
+<guibutton>Edit</guibutton> button below the left pane and select the
+<guimenuitem>Export Group...</guimenuitem> option, which opens a new window that
+lets you define some options about the exported group.  The following options
+are available:</para>
+
+<variablelist>
+
+<varlistentry id="manage-export-actions">
+<term><guilabel>Export Actions</guilabel></term>
+<listitem><para>This allows you to select the state the shortcuts will be in
+when they are imported later.  Select <guilabel>Actual State</guilabel> to
+maintain their current state, <guilabel>Enabled</guilabel> to ensure they are
+all enabled, or <guilabel>Disabled</guilabel> to ensure they are all disabled.
+</para></listitem>
+</varlistentry>
+
+<varlistentry id="manage-id">
+<term><guilabel>Id</guilabel></term>
+<listitem><para>Here you may enter text to identify the group. If the group is
+included by default, this text may be filled in by default.</para></listitem>
+</varlistentry>
+
+<varlistentry id="manage-merge">
+<term><guilabel>Allow Merging</guilabel></term>
+<listitem><para>This defines what happens if the group already exists on the
+system the exported group is imported to.  When enabled, any new actions will
+be added to the group on the target system, while actions that have the same
+name but a different configuration will updated with the configuration from the
+imported file.  When disabled, the module will refuse to import the file.
+</para></listitem>
+</varlistentry>
+
+<varlistentry id="manage-filename">
+<term><guilabel>Filename</guilabel></term>
+<listitem><para>Here you may enter the filename you wish to export the
+shortcut to.  You may also select the <guibutton>Browse</guibutton> button to
+the right of the text box to open the File dialog and select a file from there.
+</para>
+
+<tip><para>Exported files use the extension <literal>.khotkeys</literal> by
+default.</para></tip>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+<screenshot id="screenshot-manage-export">
+<screeninfo>Exporting a Group</screeninfo>
+<mediaobject>
+<imageobject><imagedata fileref="manage-export.png" format="PNG"/></imageobject>
+<textobject><phrase>The Export Group dialog.</phrase></textobject>
+<caption><para>Exporting a group of shortcuts.</para></caption>
+</mediaobject>
+</screenshot>
+
+</sect2>
+
+<sect2 id="manage-import">
+<title>Importing Groups</title>
+
+<para>To import a group, click the <guibutton>Edit</guibutton> button below the
+left pane and select <guilabel>Import...</guilabel>.  A file selection dialog
+opens that permits you to locate a file previously created using the Export
+function.</para>
+
+</sect2>
+
+</sect1>
+
+
+<sect1 id="groups">
+<title>Modifying Groups</title>
+
+<para>In the left section of the window, the default shortcuts are categorized
+into groups. These groups can be expanded by clicking the arrow beside them to
+reveal the shortcuts.</para>
+
+<para>When you click on a group, you are presented with two tabs to configure
+the group itself.  The <guilabel>Comment</guilabel> allows you to store notes
+about the group, and are not actually used by the system for anything.  The
+<guilabel>Conditions</guilabel> tab allows you to restrict which windows a group
+of shortcuts works with.</para>
+
+<screenshot id="screenshot-groups-comment">
+<screeninfo>The Comment Tab</screeninfo>
+<mediaobject>
+<imageobject><imagedata fileref="groups-comment.png" format="PNG"/></imageobject>
+<textobject><phrase>The Comment tab in a group.</phrase></textobject>
+<caption><para>Modifying a group's comment.</para></caption>
+</mediaobject>
+</screenshot>
+
+<para>Conditions are displayed in a tree, the top level of which is
+<guilabel>And</guilabel>.  All conditions beneath <guilabel>And</guilabel> must
+be satisfied for shortcuts in the group to be triggered.</para>
+
+<para>You may add additional groups of conditions by clicking the
+<guibutton>New</guibutton> drop down box to the right of the tree of conditions.  Types
+of groups include the aforementioned <guimenuitem>And</guimenuitem>,
+<guimenuitem>Or</guimenuitem>, in which only one member of the group must be
+satisfied, or <guimenuitem>Not</guimenuitem>, in which the inverse of all
+members will trigger the shortcuts in the group.</para>
+
+<para>To add a window definition to the list, press the <guibutton>New</guibutton>
+button.  You may select <guimenuitem>Active Window...</guimenuitem> if you want
+the shortcut to be triggered only if the specified window currently has focus,
+or you may select <guimenuitem>Existing Window...</guimenuitem> if you want the
+shortcut to be triggered as long as that window is open <!-- means not minimized to panel/tray and not on other virtual desktop, not in other activity-->, regardless of
+whether or not you are using it.  Selecting either of these options opens a
+window where you can edit the window definitions.</para>
+
+<para>Click the <guibutton>Edit...</guibutton> button to edit an existing set
+of window definitions.  A window opens with the window definition editor.  For
+more information, see <xref linkend="windows"/>.</para>
+
+<para>To remove a window definition from the conditions list, click the
+<guibutton>Delete</guibutton> button.</para>
+
+</sect1>
+
+
+<sect1 id="shortcuts">
+<title>Modifying Shortcuts</title>
+
+<para>In the left section of the window, the default shortcuts are categorized
+into groups. These groups can be expanded by clicking the arrow beside them to
+reveal the shortcuts.</para>
+
+<para>The <guilabel>Preset Actions</guilabel> group, when expanded, reveals a
+shortcut configuration named <guilabel>PrintScreen</guilabel> which, when
+selected, reveals section on the right side, with three tabs:</para>
+
+<sect2 id="shortcuts-comment">
+<title>The Comment Tab</title>
+
+<para>The <guilabel>Comment</guilabel> tab allows you to describe how to use the
+shortcut, what it does, or anything else you might want to include.</para>
+
+</sect2>
+
+<sect2 id="shortcuts-trigger">
+<title>The Trigger Tab</title>
+<para>The <guilabel>Trigger</guilabel> tab contains the trigger configuration,
+which depends on the type of trigger specified:</para>
+
+<variablelist>
+
+<varlistentry id="shortcuts-trigger-keyboard">
+<term>Global (Keyboard) Shortcut</term>
+<listitem>
+
+<para>To modify a keyboard shortcut, click on the button that contains a wrench,
+and then enter the desired keyboard shortcut. To erase the shortcut, click on
+the button with the <inlinemediaobject><imageobject><imagedata fileref="oxygen-22x22-edit-clear-locationbar-rtl.png" format="PNG"/></imageobject></inlinemediaobject> icon to the right of the
+change shortcut button.</para>
+
+<screenshot id="screenshot-shortcuts-trigger-keyboard">
+<screeninfo>Modifying a Keyboard Trigger</screeninfo>
+<mediaobject>
+<imageobject><imagedata fileref="shortcuts-trigger-keyboard.png" format="PNG"/></imageobject>
+<textobject><phrase>The Trigger tab for a keyboard shortcut.</phrase></textobject>
+<caption><para>Modifying a trigger for a keyboard shortcut.</para></caption>
+</mediaobject>
+</screenshot>
+
+</listitem>
+</varlistentry>
+
+<varlistentry id="shortcuts-trigger-window">
+<term>Window Action</term>
+<listitem>
+
+<para>Window actions contain several options:</para>
+
+<variablelist>
+
+<varlistentry id="shortcuts-trigger-window-trigger">
+<term><guilabel>Trigger When</guilabel></term>
+<listitem>
+
+<para>This configures the particular window action that must occur for the
+shortcut to be triggered.  The following options are available:</para>
+
+<itemizedlist>
+
+<listitem><para><guilabel>Window appears</guilabel> -
+Triggered when a window is opened.</para></listitem>
+
+<listitem><para><guilabel>Window disappears</guilabel> -
+Triggered when a window is closed.</para></listitem>
+
+<listitem><para><guilabel>Window gets focus</guilabel> -
+Triggered when you switch to a window.</para></listitem>
+
+<listitem><para><guilabel>Window loses focus</guilabel> -
+Triggered when you switch away from a window.</para></listitem>
+
+</itemizedlist>
+
+</listitem>
+</varlistentry>
+
+<varlistentry id="shortcuts-trigger-window-window">
+<term><guilabel>Window</guilabel></term>
+<listitem><para>This is where you define the actual window or windows the trigger applies
+to.  For more information, see <xref linkend="windows"/></para></listitem>
+</varlistentry>
+
+</variablelist>
+
+</listitem>
+</varlistentry>
+
+<varlistentry id="shortcuts-trigger-mouse">
+<term>Mouse Gesture</term>
+<listitem>
+
+<para>A mouse gesture can be changed by clicking the <guibutton>Edit</guibutton>
+button below the area that displays the mouse gesture, which will open a window.
+Hold down the &LMB; and draw the desired mouse gesture in the area provided.
+The gesture will be saved when you release the &LMB;.</para>
+
+<screenshot id="screenshot-shortcuts-trigger-mouse">
+<screeninfo>Modifying a Mouse Gesture Trigger</screeninfo>
+<mediaobject>
+<imageobject><imagedata fileref="shortcuts-trigger-mouse.png" format="PNG"/></imageobject>
+<textobject><phrase>The Trigger tab for a mouse gesture shortcut.</phrase></textobject>
+<caption><para>Modifying a trigger for a mouse gesture.</para></caption>
+</mediaobject>
+</screenshot>
+
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect2>
+
+<sect2 id="shortcuts-action">
+<title>The Action Tab</title>
+
+<para>The <guilabel>Action</guilabel> tab is where you configure the action that
+will be performed when the shortcut is triggered.  There are several types of
+actions that have different configuration options:</para>
+
+<variablelist>
+
+<varlistentry id="shortcuts-action-command">
+<term>Command/&URL;</term>
+<listitem>
+
+<para>When using a Command or &URL; is a trigger, a text box is provided where
+you may enter the command to run or &URL; to open when the shortcut is triggered.
+You may also click the <guibutton>Browse</guibutton> button to the right of the
+text box to open a file selection dialog in which you can select a file on your
+local or a remote system.</para>
+
+<screenshot id="screenshot-shortcuts-action-command">
+<screeninfo>Modifying a Command Action</screeninfo>
+<mediaobject>
+<imageobject><imagedata fileref="shortcuts-action-command.png" format="PNG"/></imageobject>
+<textobject><phrase>The Action tab for a command.</phrase></textobject>
+<caption><para>Modifying a command action.</para></caption>
+</mediaobject>
+</screenshot>
+
+</listitem>
+</varlistentry>
+
+<varlistentry id="shortcuts-action-dbus">
+<term>&DBus; Command</term>
+<listitem>
+
+<para>The following options are provided that allow you to specify a &DBus;
+method to be performed:</para>
+
+<variablelist>
+
+<varlistentry id="shortcuts-action-dbus-application">
+<term><guilabel>Remote application</guilabel></term>
+<listitem><para>The service name of the remote application the method is to
+be performed on, for instance <userinput>org.kde.kate</userinput> if you wanted
+to perform it on the &kate; Advanced Text Editor.</para></listitem>
+</varlistentry>
+
+<varlistentry id="shortcuts-action-dbus-object">
+<term><guilabel>Remote object</guilabel></term>
+<listitem><para>The path to the remote object the method is to be performed on,
+for instance <userinput>/Document/1</userinput>, if you wanted to perform it on
+the first document opened in &kate;.</para></listitem>
+</varlistentry>
+
+<varlistentry id="shortcuts-action-dbus-function">
+<term><guilabel>Function</guilabel></term>
+<listitem><para>The name of the &DBus; method to be called, for instance
+<userinput>print</userinput> if you wanted to print the document.</para></listitem>
+</varlistentry>
+
+</variablelist>
+
+<para>For more information on &DBus;, see the
+<ulink url="http://techbase.kde.org/Development/Tutorials/D-Bus/Introduction">&DBus;
+Introduction on &kde; TechBase</ulink>.</para>
+
+</listitem>
+</varlistentry>
+
+<varlistentry id="shortcuts-action-keyboard">
+<term>Send Keyboard Input</term>
+<listitem>
+
+<para>At the top of the <guilabel>Action</guilabel> tab, there is a large text
+entry where you may enter the keystrokes you wish to be sent when the shortcut
+is triggered.</para>
+
+<para>Most keys contain a single character, and to enter them here you just
+enter that character.  For instance, to type an <quote>A</quote>, just enter
+<userinput>A</userinput>.  Some keys have longer names, and you can also use
+those names.  For instance, to press the &Alt; key, simply enter
+<userinput>Alt</userinput>.
+</para>
+
+<para>Individual keystrokes should be separated by a colon
+(<userinput>:</userinput>).  For instance, to type <quote>foo</quote>, enter
+<userinput>F:O:O</userinput>.</para>
+
+<para>Keys that need to pressed at the same time should be separated by a plus
+sign.  For instance, to press
+<keycombo action="simul">&Ctrl;<keycap>C</keycap></keycombo>, enter
+<userinput>Ctrl+C</userinput>.</para>
+
+<tip>
+<para>Remember, you must enter keystrokes here exactly as you would on a keyboard.
+To capitalize letters, you must enter the &Shift; key.  For instance, to type
+<quote>Hello</quote>, enter <userinput>Shift+H:E:L:L:O</userinput>.</para>
+
+<para>This also applies to special characters.  For instance, to type the
+at-sign on the U.S. English keyboard layout, enter <userinput>Shift+2</userinput>.
+</para>
+</tip>
+
+<warning>
+<para>The action that is performed is dependent on the currently selected
+keyboard layout.  If you change keyboard layouts and trigger a shortcut, it
+may have undesired consequences.</para>
+</warning>
+
+<para>Beneath the keystroke entry text box, you may select which window the
+keystrokes will be directed to.  You may choose from the following options:</para>
+
+<itemizedlist>
+
+<listitem><para><guilabel>Active window</guilabel> -
+The window that is currently open.</para></listitem>
+
+<listitem><para><guilabel>Specific window</guilabel> -
+The window that you describe using the form below.  For more information on
+describing windows, see <xref linkend="windows"/>.</para></listitem>
+
+<listitem><para><guilabel>Action window</guilabel> -
+When using the Window Actions trigger type, enter the keystrokes in the window
+that triggered the shortcut.</para></listitem>
+
+</itemizedlist>
+
+<screenshot id="screenshot-shortcuts-action-keyboard">
+<screeninfo>Modifying a Keyboard Input Action</screeninfo>
+<mediaobject>
+<imageobject><imagedata fileref="shortcuts-action-keyboard.png" format="PNG"/></imageobject>
+<textobject><phrase>The Action tab for keyboard input.</phrase></textobject>
+<caption><para>Modifying the keyboard input action for a shortcut.</para></caption>
+</mediaobject>
+</screenshot>
+
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect2>
+
+</sect1>
+
+
+<sect1 id="windows">
+<title>Defining Windows</title>
+
+<para>Several areas of the module allow you to define a list of windows.  They
+all use the same interface, which contains the following options:</para>
+
+<variablelist>
+
+<varlistentry id="windows-comment">
+<term><guilabel>Comment</guilabel></term>
+<listitem><para>This is merely an informational text box you can use to explain
+what the trigger applies to or save other useful information.  It is not
+actually used by the system for anything.</para></listitem>
+</varlistentry>
+
+<varlistentry id="windows-list">
+<term>Window List</term>
+<listitem><para>Beneath the <guilabel>Comment</guilabel> box on the left is the
+list of all window definitions currently present in the trigger.  Simply click
+on one to perform an operation on it.</para></listitem>
+</varlistentry>
+
+<varlistentry id="windows-edit">
+<term><guibutton>Edit...</guibutton></term>
+<listitem>
+
+<para>Press this button to modify the currently selected window definition.  A
+new window is opened that allows you to edit it.  This window contains the
+following options:</para>
+
+<variablelist>
+
+<varlistentry id="windows-edit-data">
+<term><guilabel>Window Data</guilabel></term>
+<listitem>
+
+<para>This is where you describe the window the trigger should apply to.</para>
+
+<para>At the top, there is a <guilabel>Comment</guilabel> field, which is
+informational just like the one in the main <guilabel>Trigger</guilabel> tab.</para>
+
+<para>Three window characteristics are available:</para>
+
+<itemizedlist>
+
+<listitem><para><guilabel>Window title</guilabel> -
+The title that appears at the top of the window.</para></listitem>
+
+<listitem><para><guilabel>Window class</guilabel> -
+Usually the name of the application.</para></listitem>
+
+<listitem><para><guilabel>Window role</guilabel> -
+Usually the name of the &Qt; class that makes up the window.</para></listitem>
+
+</itemizedlist>
+
+<para>Each window characteristic provides a drop-down box, and a text box below
+it.  Enter the value you wish to test windows for in the text box.  From the
+drop-down box, select which kind of test you wish to apply.  You can use
+<guilabel>Is</guilabel> to require an exact match, <guilabel>Contains</guilabel>
+to require that the text entered be somewhere inside the full value, or
+<guilabel>Matches Regular Expression</guilabel> to use a regular expression to
+define the match.  You may also perform the inverse of all these operations.
+Select <guilabel>Is Not Important</guilabel> if you do not wish for that
+particular characteristic to be examined.</para>
+
+<para>The easiest way to fill in this information is to open the desired window,
+then click the <guibutton>Autodetect</guibutton> button at the bottom of this
+section, and finally click on the desired trigger window.  All three window
+characteristics will be populated with the information from that window, and
+you can then adjust the settings as necessary.</para>
+
+</listitem>
+</varlistentry>
+
+<varlistentry id="windows-edit-types">
+<term><guilabel>Window Types</guilabel></term>
+<listitem>
+
+<para>This lets you restrict the match to a particular type of window.  The
+following options are available:</para>
+
+<itemizedlist>
+
+<listitem><para><guilabel>Normal</guilabel> -
+A regular application window.</para></listitem>
+
+<listitem><para><guilabel>Desktop</guilabel> -
+The main desktop is actually a special window all its own.</para></listitem>
+
+<listitem><para><guilabel>Dialog</guilabel> -
+A small window that is part of a normal application, such as a message box or
+a configuration screen.</para></listitem>
+
+<listitem><para><guilabel>Dock</guilabel> -
+A small window that can be attached or detached from a main application window.
+</para></listitem>
+
+</itemizedlist>
+
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</listitem>
+</varlistentry>
+
+<varlistentry id="windows-new">
+<term><guibutton>New...</guibutton></term>
+<listitem><para>Create a new window definition.  This opens the edit dialog
+described above.</para></listitem>
+</varlistentry>
+
+<varlistentry id="windows-duplicate">
+<term><guibutton>Duplicate...</guibutton></term>
+<listitem><para>This creates a new window definition with the exact same
+specifications as the currently selected window definition.  It will open the
+edit dialog described above so you may make further changes.</para></listitem>
+</varlistentry>
+
+<varlistentry id="windows-delete">
+<term><guibutton>Delete</guibutton></term>
+<listitem><para>Removes the currently selected window definition.</para></listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect1>
+
+
+<sect1 id="settings">
+<title>Settings</title>
+
+<para>When you first enter the module, or when you click the
+<guibutton>Settings</guibutton> button below the left pane, there will be
+several configuration options in the right pane:</para>
+
+<variablelist>
+
+<varlistentry id="settings-start-daemon">
+<term><guilabel>Start the Input Actions daemon on login</guilabel></term>
+<listitem><para>This configures whether or not to activate the background
+application that monitors for keyboard shortcuts and triggers configured
+actions.  It is enabled by default.</para></listitem>
+</varlistentry>
+
+<varlistentry id="settings-gestures">
+<term><guilabel>Gestures</guilabel></term>
+<listitem>
+<para>Select this check box to enable mouse gestures.</para>
+
+<para>There are two options specific to mouse gestures:</para>
+
+<variablelist>
+
+<varlistentry id="settings-gestures-timeout">
+<term><guilabel>Timeout</guilabel></term>
+<listitem><para>This specifies the maximum time interval during which the mouse
+gesture will be monitored and recognized by the system, in milliseconds.
+</para></listitem>
+</varlistentry>
+
+<varlistentry id="settings-gestures-mouse-button">
+<term><guilabel>Mouse Button</guilabel></term>
+<listitem><para>This specifies the mouse button to be used for mouse gestures.
+Usually, <userinput>1</userinput> is the &LMB;, <userinput>2</userinput> is the
+&RMB;, and <userinput>3</userinput> is the middle or wheel button.  If your
+mouse has more buttons, you can also use those instead.</para>
+
+<note>
+<para>Button 1 is unavailable, so mouse gestures do not interfere with the
+normal operation of your system.</para>
+</note>
+</listitem>
+</varlistentry>
+
+</variablelist>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+<screenshot id="screenshot-settings">
+<screeninfo>Settings</screeninfo>
+<mediaobject>
+<imageobject><imagedata fileref="settings.png" format="PNG"/></imageobject>
+<textobject><phrase>The Settings screen.</phrase></textobject>
+<caption><para>Editing Custom Shortcuts settings.</para></caption>
+</mediaobject>
+</screenshot>
+
+</sect1>
+
+
+<sect1 id="credits">
+<title>Credits and License</title>
+
+<para>Special thanks to Google Code-In 2011 participant Subhashish Pradhan for
+writing much of this article.</para>
+
+<!-- TRANS:CREDIT_FOR_TRANSLATORS -->
+
+&underFDL;               <!-- FDL: do not remove -->
+&underGPL;               <!-- GPL License -->
+
+</sect1>
+
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

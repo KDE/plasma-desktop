@@ -1,0 +1,16 @@
+[Desktop]
+Containment=org.kde.desktopcontainment
+ToolBox=org.kde.desktoptoolbox
+RuntimePlatform=
+
+[Desktop][ContainmentActions]
+RightButton;NoModifier=org.kde.contextmenu
+MidButton;NoModifier=org.kde.paste
+wheel:Vertical;NoModifier=org.kde.switchdesktop
+ 
+[Panel]
+Containment=org.kde.panel
+ToolBox=org.kde.paneltoolbox
+[Panel][ContainmentActions]
+RightButton;NoModifier=org.kde.contextmenu
+MidButton;NoModifier=org.kde.paste

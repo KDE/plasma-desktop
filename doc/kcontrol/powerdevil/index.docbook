@@ -1,0 +1,317 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % English "INCLUDE">
+]>
+<article id="powerdevil" lang="&language;">
+<articleinfo>
+<title>Power Management</title>
+<authorgroup>
+<author>&Dario.Freddi;&Dario.Freddi.mail;</author>
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
+</authorgroup>
+
+<date>2013-08-18</date>
+<releaseinfo>&kde; 4.11</releaseinfo>
+
+<keywordset>
+<keyword>KDE</keyword>
+<keyword>System Settings</keyword>
+<keyword>powerdevil</keyword>
+<keyword>power management</keyword>
+<keyword>laptop power</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_powerdevilconfig">
+<title>PowerDevil, a Power Management Daemon</title>
+
+<para>This module is a configuration tool for managing Power Management in &kde;. It is a configurator for the PowerDevil daemon, that you can start or stop from the <guilabel>Service Manager</guilabel> module. </para>
+
+<para>Through this module, you can define your computer's behavior in various situations, allowing you to save as much energy as possible.
+</para>
+
+<para>Powerdevil works with Solid only and it's integrated in your desktop. You won't even notice it is running, apart from notifications. Moreover, Powerdevil checks your system capabilities first, so you'll see only options available for your system in this module.
+</para>
+
+<note><para>Note that PowerDevil does not poll your system. This means that it will not waste energy while trying to save it, as some other power managers do.</para></note>
+<sect2 id="energy-saving-setting">
+<title>Energy Saving Settings</title>
+<para>
+This page shows the actual energy saving settings. If a battery is detected you have three tabs with different settings for <guilabel>On AC Power</guilabel>, <guilabel>On Battery</guilabel> and <guilabel>On Low Battery</guilabel> profiles.
+</para>
+<para>
+<screenshot>
+<screeninfo>Energy Saving Settings</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="energy.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase>Energy Saving Settings</phrase>
+    </textobject>
+    <caption>
+      <para>Energy Saving Settings</para>
+    </caption>
+  </mediaobject>
+</screenshot>
+</para>
+<para>
+There are a lot of options you can configure for each profile:
+</para>
+<!--FIXME in 4.11/master additional Keyboard Backlight ??-->
+<variablelist>
+<varlistentry><term><guilabel>Screen Brightness</guilabel></term>
+<listitem>
+<para>Sets the screen's brightness using a slider.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry><term><guilabel>Dim Screen</guilabel></term>
+<listitem>
+<para>If checked, the display will be progressively dimmed, until reaching 
+brightness 0, in the amount of time you specify in the spin box.
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry><term><guilabel>Screen Energy Saving</guilabel></term>
+<listitem>
+<para>Here you can define power saving for your monitor.
+The check box defines if DPMS support should be enabled or disabled. 
+If you choose to activate it, set the timeouts in the spin boxes below.
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry><term><guilabel>Suspend Session</guilabel></term>
+<listitem>
+<para>Suspends the session after the selected time to the status 
+<guilabel>Sleep</guilabel>, <guilabel>Hibernate</guilabel>, 
+<guilabel>Shutdown</guilabel> or <guilabel>Lock screen</guilabel>.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry><term><guilabel>Button events handling</guilabel></term>
+<listitem>
+<para>Select actions to perform whenever the laptop lid is closed or a button is pressed.</para>
+</listitem>
+</varlistentry>
+<varlistentry><term><guilabel>Run Script</guilabel></term>
+<listitem>
+<para>Activate this option to run a custom script when a profile is loaded, unloaded
+or after a given amount of time.
+</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+</sect2>
+
+<sect2 id="activity-setting">
+<title>Activity Settings</title>
+<para>Here you can configure the Power Management settings per activity. The settings for each activity can be configured on its own tab.</para>
+<para>
+<screenshot>
+<screeninfo>Activity Settings</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="activity.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase>Activity Settings</phrase>
+    </textobject>
+    <caption>
+      <para>Activity Settings</para>
+    </caption>
+  </mediaobject>
+</screenshot>
+</para>
+<variablelist>
+<varlistentry>
+<term>Don't use special settings</term>
+<listitem>
+<para>
+Use the settings defined on <guilabel>Energy Saving</guilabel> page.
+</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>Act like</term>
+<listitem>
+<para>
+Here you can choose a predefined profile from the drop-down box: <guimenuitem>PC running on AC power</guimenuitem>, <guimenuitem>PC running on battery power</guimenuitem> or <guimenuitem>PC running on low battery</guimenuitem>.
+</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>Define a special behavior</term>
+<listitem>
+<para>
+If this option is chosen, a special behavior for activity can be chosen. If this is a presentation activity, you can check the <guilabel>Never shutdown the screen</guilabel> and <guilabel>Never suspend or shutdown the computer</guilabel> boxes. It is also possible to define the time interval for the computer to switch to a suspension mode for the power saving activities.
+</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>Use separate settings (advanced users only)</term>
+<listitem>
+<para>
+This option allows users to choose the detail power saving settings for a separate activity. The settings are similar to the settings from the <link linkend="energy-saving-setting">Energy Saving page</link>.
+</para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect2>
+
+<sect2 id="advanced-settings">
+<title>Advanced Settings</title>
+<para>
+<screenshot>
+<screeninfo>Advanced Settings</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="advanced.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase>Advanced Settings</phrase>
+    </textobject>
+    <caption>
+      <para>Advanced Settings</para>
+    </caption>
+  </mediaobject>
+</screenshot>
+</para>
+<variablelist>
+<varlistentry><term><guilabel>Battery levels</guilabel></term>
+<listitem>
+<para>These items are only displayed if a battery is detected.
+</para>
+<variablelist>
+<varlistentry><term><guilabel>Battery is at low level at</guilabel></term>
+<listitem>
+<para>
+Here you can set the percentage after which the battery will be considered low.
+</para>
+</listitem>
+</varlistentry>
+<varlistentry><term><guilabel>Battery is at critical level at</guilabel></term>
+<listitem>
+<para>
+Here you can set the percentage after which the battery will be considered at critical level.
+</para>
+</listitem>
+</varlistentry>
+<varlistentry><term><guilabel>When battery is at critical level</guilabel></term>
+<listitem>
+<para>
+Defines the action that will be done when battery reaches the critical level.
+</para>
+</listitem>
+</varlistentry>
+</variablelist>
+</listitem>
+</varlistentry>
+<varlistentry><term><guilabel>Events</guilabel></term>
+<listitem>
+<variablelist>
+<varlistentry><term><guilabel>Lock screen on resume</guilabel></term>
+<listitem>
+<para>
+When this box is checked, every time the PC gets suspended, the screen will be locked when resuming. You will be asked for a password when resuming from sleep state.</para>
+</listitem>
+</varlistentry>
+<varlistentry><term><guilabel>Never prevent an action on lid close</guilabel></term>
+<listitem>
+<para>
+When this option is selected, applications will not be allowed to inhibit sleep when the lid is closed.
+</para>
+</listitem>
+</varlistentry>
+<varlistentry><term><guibutton>Configure Notifications</guibutton></term>
+<listitem>
+<para>
+If you want a deeper control over your notifications, you can refine them by clicking this button.
+</para>
+</listitem>
+</varlistentry>
+</variablelist>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect2>
+
+</sect1>
+
+<sect1 id="powerdevilrunner">
+<title>PowerDevil Runner</title>
+
+<para>PowerDevil can be manually controlled through &krunner; (<keycombo action="simul">&Alt;<keycap>F2</keycap></keycombo>). This makes changing profile, brightness, governor and more much easier and faster. The runner has various keywords you can enter to access its functions
+</para>
+<sect2 id="runnerwords">
+<title>Runner Keywords</title>
+<para>
+Here comes a list of keywords you can enter in &krunner; to perform PowerDevil related actions.
+</para>
+<variablelist>
+<varlistentry><term><guibutton>Power Profile</guibutton></term>
+<listitem>
+<para>
+You can manually choose a profile using this keyword. All available profiles will be shown in form of &krunner; matches.
+</para>
+</listitem>
+</varlistentry>
+<!--no runner keyword  in 4.11 
+<varlistentry><term><guibutton>Power Scheme</guibutton></term>
+<listitem>
+<para>
+Lets you manually set the system powersaving scheme. Available schemes will be shown as &krunner; matches.
+</para>
+</listitem>
+</varlistentry>
+-->
+<varlistentry><term><guibutton>Screen Brightness</guibutton></term>
+<listitem>
+<para>
+You can control screen brightness through this keyword. In this form, some &krunner; matches that let you do some common actions will be shown. If you enter a value after the keyword (&eg;: <userinput>Screen Brightness 50</userinput>), the brightness will be set to that value.
+</para>
+</listitem>
+</varlistentry>
+<varlistentry><term><guibutton>Suspend</guibutton></term>
+<listitem>
+<para>
+You can suspend your pc through this keyword. Available suspend methods will be shown as &krunner; matches.
+</para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect2>
+</sect1>
+</article>
+<!--FIXME in 4.11
+"Note this is a KRunner keyword"
+"power profile"
+"suspend"
+"sleep"
+"hibernate"
+"to disk"
+"to ram"
+"screen brightness"
+"dim screen"
+"power profile %1"
+"screen brightness %1"
+"dim screen %1"
+-->
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

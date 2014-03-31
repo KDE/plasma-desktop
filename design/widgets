@@ -1,0 +1,43 @@
+Widgets
+=======
+
+Overview
+--------
+
+Within libplasma there are a collection of widgets (Plasma::PushButton, Plasma::Slider, Plasma::TabWidget, Plasma::WebContent, etc.)  which all follow a common API theme. The intention of this API is to provide a very simple way for users to create plasma applets. Plasma is not primarily a widget library, and so a simple wrapping of native Qt widgets is provided.
+
+By providing a consistent, simple API that hides details like QGraphicsProxyWidget, the bar is lowered to entry and the time to create Applets is reduced.
+
+The API can be used both for scripting and from C++. For the simple ECMAScript API for instance, this API will be all that is provided allowing untrusted applets to be run with a great measure of safety as they will not have access to any dangerous facilities.
+
+From C++ or more advanced scripting APIs (such as the 'full' ECMAScript bindings) you can gain access to a pointer to the underlying Qt widget contained within the QGraphicsProxy via the nativeWidget() method, allowing access all of its methods. For most simple uses however, this should be unnecessary as you can do most of the customisation using the Qt stylesheet facilities.
+
+All widgets have a stylesheet, which is a string property containing a Qt stylesheet. This allows for simple but powerful configuration of the widgets - for example you can configure the alignment of the text in the label using the text-align property, or the font using the font property. Using this you can do some extremely advanced interfaces without having to learn how Qt works.
+
+A nice side effect of the way this API is defined is that it is possible to implement the simple widget API inside a web browser using HTML, javascript and HTML stylesheets to provide the implementation.
+
+Standardized API
+----------------
+
+Properties, setters and getters are defined for:
+
+    * parent widget
+    * text
+    * image (supports SVG as well as pixmap)
+    * stylesheet
+    * native widget
+
+Widgets may add to this standardized API the most commonly used or important signals, slots and properties from the widget in question. Plasma::Checkbox, for instance, adds the toggled(bool) signal and properties for the checked state. These additions should be kept the essentials only to keep within the spirit of the simplicity and safety of the API; remember that the full widget is available via nativeWidget().
+
+Look and Feel
+-------------
+
+For most widgets, we let the QStyle do the painting.
+
+For certain widgets (e.g. Plasma::PushButton), the painting is overridden to blend in better with a Plasma based interface. This can be done without reimplemeting the entire native Qt widget by reimplementing the paint methods in either the QGraphicsWidget or a subclass of the native Qt Widget. Another approach is to use a custom QStyle, which is how Plasma::Slider gets its look with minimal code.
+
+Creating a New Widget
+---------------------
+
+Included with the libplasma sources is a make_widget.sh script and a set of templates in the widgets/ directory. Running it with the name of the widget to create (e.g. make_widget.sh CoolWidget) will create a base implementation of a widget using the standard API. From there, only the widget specific signals, slots and properties need be added.
+

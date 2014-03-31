@@ -1,0 +1,90 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % English "INCLUDE" > <!-- change language only here -->
+]>
+
+<article id="clock" lang="&language;">
+<articleinfo>
+<title>Date &amp; Time</title>
+<authorgroup>
+<author>&Mike.McBride; &Mike.McBride.mail;</author>
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
+</authorgroup>
+
+<date>2013-12-05</date>
+<releaseinfo>4.12</releaseinfo>
+
+<keywordset>
+<keyword>KDE</keyword>
+<keyword>Systemsettings</keyword>
+<keyword>clock</keyword>
+<keyword>date</keyword>
+<keyword>time</keyword>
+<keyword>set</keyword>
+<keyword>configure</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="datetime">
+
+<title>Date &amp; Time</title>
+
+<para>You can use this module to alter the system date and time, using a
+convenient graphical interface.</para>
+
+<note><para>As these settings do not only affect you as a user, 
+but rather the whole system, you must have system administrator (<systemitem
+class="username">root</systemitem>) access to change the system date and
+time.  If you do not have this access level, this module will only show
+you the current settings, but your changes will not be saved.</para></note>
+
+<sect2 id="date-change">
+<title>Date and Time</title>
+
+<para>If you check <guilabel>Set date and time automatically</guilabel> you are able
+to select a <guilabel>Time server</guilabel> from the drop down box and all other 
+settings in this dialog are disabled.</para>
+
+<note>
+<para>The applications <command>rdate</command> or <command>ntpdate</command> are used in  
+this module to fetch date and time from a time server. This happens when you log in to &kde;
+while being online or when you later connect to the Internet and access to time 
+servers is possible.</para> 
+<para>Both applications are simple <acronym>NTP</acronym> clients that set a system's clock 
+to match the time obtained by communicating with one or more <acronym>NTP</acronym> servers. 
+This is not sufficient, however, for maintaining an accurate clock in the long run. 
+This is useful for occasionally setting the time on machines that do not have full-time 
+network access, such as laptops.</para>
+</note>
+
+<para>If you do not use a time server, you are able to set the date manually 
+using the lower half of the tab.  Simply
+choose your month and year using the controls at the top of the calendar
+and the day of the month by clicking on the day in the
+calendar.</para>
+<para>Use the controls at the bottom of the calendar
+to select the current date, enter the date in the edit box or select the 
+week of the year from the drop down box.</para>
+
+<para>You set the time using the spin boxes at the bottom of the analog clock.
+You can also directly enter your value.</para>
+<!--Outdated
+<note><para>The time is represented in 24 hour format.  If you want
+the system time to be set to 8:00 PM, you need to set the hour spinbox
+to <guilabel>20</guilabel> (8 + 12).  If you want the system time set
+to 8:00 AM, you should set the hour spinbox to
+<guilabel>8</guilabel>.</para></note>
+-->
+</sect2>
+
+<sect2 id="date-time-tone">
+<title>Time Zone</title>
+<para>To set a new time zone, simply select your area from the list below.
+Use the filter box to find the desired <guilabel>Area</guilabel> or <guilabel>Region</guilabel>.</para>
+</sect2>
+
+</sect1>
+
+</article>

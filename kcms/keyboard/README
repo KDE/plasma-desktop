@@ -1,0 +1,44 @@
+This is new project to replace keyboard (kcmmisc) and kxkb 
+to manage keyboard harware configuration and layouts.
+
+Components:
+
+kcm_init:
+* no kcm_init - all initialization (including after keyboard hot-plug) is done by kded daemon
+
+Keyboard daemon:
+* configures keyboard layouts on start
+* provides DBUS API "org.kde.KXKB/kxkb"
+* listens to window/desktop switching if layout switch mode is not global
+* listens to new keyboard devices and reinitializes keyboard layouts and hardware settings
+* listens to Global KDE Shortcut to switch layouts
+* listens to Global Shortcut settings change
+* listens to keyboard configuration changes
+* provides systray icon for layout
+
+Keyboard applet:
+* displays current layout with text and (optionally flag)
+* allows to toggle layouts by click or set them with context menu
+
+Layout widget:
+* displays current layout with text embedded in another widget (e.g. lock dialog)
+* currently only short text (no flag or long text)
+* dynamically loaded as a plugin
+
+KCM Module:
+* allows to configure keyboard hardware, layouts and xkb options (advanced)
+
+Advantages (over old code):
+* One UI module to configure keyboard layouts and hardware
+* Allows to configure keyboard model/xkb options without configuring layouts
+* Less cluttered layout configuration control (add layout is separate)
+* Layout control/DBus interface is separate from the indicator
+* Does not require libxklvier
+* Takes language names from iso-codes project
+* Takes country names/translations from xkeyboard-config project
+* Information about current layouts is always taken from X server, so should be more robust
+* Cleaner code (rewritten from scratch)
+* Due to many points above should start faster (though no benchmarks performed)
+
+New features:
+* Allow selection of keyboard layout by language

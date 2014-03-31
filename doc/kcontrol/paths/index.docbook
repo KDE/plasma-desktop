@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % English "INCLUDE" > <!-- change language only here -->
+]>
+
+<article id="paths" lang="&language;">
+<title>Paths</title>
+<articleinfo>
+
+<authorgroup>
+<author>
+<firstname>Michael</firstname>
+<surname>Anderson</surname>
+<affiliation>
+<address><email>nosrednaekim@gmail.com</email></address>
+</affiliation>
+</author>
+<author><firstname>Anne-Marie</firstname>
+<surname>Mahfouf</surname>
+<affiliation>
+<address><email>annma@kde.org</email></address>
+</affiliation></author>
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
+</authorgroup>
+
+<date>2009-11-17</date>
+<releaseinfo>&kde; 4.4</releaseinfo>
+
+<keywordset>
+<keyword>KDE</keyword>
+<keyword>KControl</keyword>
+<keyword>desktop</keyword>
+<keyword>paths</keyword>
+</keywordset>
+</articleinfo>
+
+<para>This is a module to configure essential paths for the &kde; desktop.</para>
+
+<para>
+<screenshot>
+<screeninfo>Configure some &kde; paths</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="paths.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase>Configure some &kde; paths</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<variablelist>
+<varlistentry>
+<term><guilabel>Desktop path:</guilabel></term>
+<listitem><para>The Desktop folder contains all the files which you see on your desktop. The default path is usually <filename class="directory">~/Desktop</filename> but you can change here the location of this folder.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Autostart path:</guilabel></term>
+<listitem><para>
+The Autostart folder contains applications or links to applications or scripts you want to start whenever &kde; starts. You can change the location of this folder if you want to.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Documents path:</guilabel></term>
+<listitem><para>This folder will be used by default to load or save documents from or to.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Download path:</guilabel></term>
+<listitem><para>This folder will be used by default to save your downloaded items.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Movies path:</guilabel></term>
+<listitem><para>This folder will be used by default to load or save movies from or to.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Pictures path:</guilabel></term>
+<listitem><para>This folder will be used by default to load or save pictures from or to.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Music path:</guilabel></term>
+<listitem><para>This folder will be used by default to load or save music from or to.</para></listitem>
+</varlistentry>
+</variablelist>
+<para>If you change a path and click <guibutton>Apply</guibutton> a dialog appears where you can choose to move the content to the 
+new folder or use the new folder without moving the files.</para>
+
+</article>

@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+ <!ENTITY % addindex "IGNORE">
+ <!ENTITY % English "INCLUDE" > <!-- change language only here -->
+]>
+
+<article lang="&language;" id="system-bell">
+<title>System Bell</title>
+<articleinfo>
+<authorgroup>
+<author><firstname>Pat</firstname><surname>Dowler</surname></author>
+<author><firstname>Matthias</firstname><surname>Hoelzer</surname></author>
+<author><firstname>Mike</firstname><surname>McBride</surname></author>
+
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
+</authorgroup>
+<date>2011-11-28</date>
+<releaseinfo>&kde; 4.8</releaseinfo>
+</articleinfo>
+
+<para>The system bell or beep is a feature of the X server, which
+attempts to make good use of the available hardware. </para>
+
+<para>&kde; normally does not use the system bell; instead using its
+own system notifications, which could include log entries, message
+popups, or its own beep.  You can configure these in the
+<guilabel>Manage Notifications</guilabel> &systemsettings; module.</para>
+
+<note><para>It is not always possible for the X server to actually make
+a beep sound with exactly the parameters selected due to hardware
+limitations. For example, on most PCs, volume control is not very good
+so the X server seems to fake low volume with a reduced duration of
+the sound. Thus, if the settings do not seem to do anything, this is
+because the X server and/or the hardware do not support anything
+better.</para></note>
+
+<para> Select <guilabel>Use system bell instead of system notification</guilabel>
+then you are able to set the following parameters for the bell:</para>
+
+<variablelist>
+
+<varlistentry>
+<term><guilabel>Volume</guilabel> (percentage of <quote>maximum</quote> volume)</term>
+<listitem><para>Here you can customize the volume of the system bell.</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Pitch</guilabel> (in Hz)</term>
+<listitem><para>Here you can customize the pitch of the system bell.</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Duration</guilabel> (in milliseconds)</term>
+<listitem><para>Here you can customize the duration of the system bell.</para></listitem>
+</varlistentry>
+
+</variablelist>
+
+<para>For further customization of the bell, see the <guilabel>Accessibility</guilabel> &systemsettings; module.</para>
+
+<para>You can use the <guibutton>Test</guibutton> button to hear how
+the current settings will sound.</para>
+
+</article>

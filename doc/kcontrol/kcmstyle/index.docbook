@@ -1,0 +1,238 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % English "INCLUDE" > <!-- change language only here -->
+]>
+
+<article id="kcmstyle" lang="&language;">
+<articleinfo>
+
+<title>Style</title>
+<authorgroup>
+<author>&Mike.McBride; &Mike.McBride.mail;</author>
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
+</authorgroup>
+
+<date>2013-06-02</date>
+<releaseinfo>&kde; 4.11</releaseinfo>
+
+<keywordset>
+<keyword>KDE</keyword>
+<keyword>System Settings</keyword>
+<keyword>style</keyword>
+</keywordset>
+</articleinfo>
+<sect1 id="style">
+<title>Style</title>
+
+<sect2 id="style-intro">
+<title>Introduction</title>
+
+<para>This module is used to configure how the individual widgets are
+drawn by &kde;.</para>
+
+<note><para>A <emphasis>Widget</emphasis> is a commonly-used
+programmer's term for referring to User Interface elements such as
+buttons, menus, and scroll bars.  You can think of them as the
+fundamental pieces that are assembled to make your
+application.</para></note>
+
+<para>You can configure how the widgets are drawn with this module,
+but to change the color of the widgets, you should refer to the
+section entitled <ulink
+url="help:/kcontrol/colors/index.html">Colors</ulink>.</para>
+
+<para>This panel is divided into two tabs:  <guilabel>Applications</guilabel> 
+and <guilabel>Fine Tuning</guilabel>.</para>
+
+<sect3 id="style-applications">
+<title><guilabel>Applications</guilabel> tab</title>
+
+<para>The top drop down box, labeled <guilabel>Widget Style</guilabel> 
+contains a list of the pre-defined styles.
+Each style has a name, and a brief description.</para>
+
+<para>To change styles, simply click on the style name, and a preview 
+of the style will be displayed in the preview box below the style list.</para>
+
+<para> If a style is configurable, the <guibutton>Configure...</guibutton> button 
+at the right side of the drop down box is enabled and can be used to open
+a dialog to select further settings.</para>
+<!--
+<para>The other options available here are:</para>
+
+<variablelist>
+
+<varlistentry> 
+<term><guilabel>Enable tooltips</guilabel></term>
+<listitem>
+<para>This will toggle tooltips off and on.</para>
+</listitem> 
+</varlistentry> 
+</variablelist>
+-->
+<!-- 
+<varlistentry> 
+<term><guilabel>Menubar on the top of
+the screen in the style of MacOS</guilabel></term>
+<listitem>
+<para>This will turn on a menubar at the top of the screen.
+This menubar will reflect the menu options of the active
+application.</para>
+</listitem> 
+</varlistentry> 
+</variablelist>
+-->
+</sect3>
+<!-- kwincompositing
+<sect3 id="style-effects">
+<title><guilabel>Effects</guilabel> tab</title>
+
+<para>If you click on the <guilabel>Effects</guilabel> tab, you will see the panel is divided 
+into two sections.</para>
+<para>At the top of the first section, is a checkbox labeled <guilabel>Enable 
+GUI effects</guilabel>.  If there is no mark in front of this checkbox, then all 
+visual effects of this panel are disabled.  To edit any of these effects, simply 
+place a mark in this checkbox.</para>
+
+<para>Below that checkbox, are the following choices: </para>
+<variablelist>
+<varlistentry>
+<term><guilabel>Combobox effect:</guilabel></term>
+<listitem><para>This combobox has two options.  If this option is set to <guilabel>Animate</guilabel> 
+then when a combo box is selected, it will appear to scroll down.  If <guilabel>Disable</guilabel> 
+is selected, then the combobox list appears instantly.</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Tool tip effect:</guilabel></term>
+<listitem><para>This combobox has three options.  If this option is set to <guilabel>Animate</guilabel> 
+then when a tool tip appears, it will have a short animation.  If <guilabel>Fade</guilabel> is 
+selected, the tool tip appears to fade from the background.  If <guilabel>Disable</guilabel> 
+is selected, then the tool tip appears instantly.</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Menu effect:</guilabel></term>
+<listitem><para>This combobox has four options.  If this option is set to <guilabel>Animate</guilabel> 
+then when a menu list appears, it will appear to scroll downward.  If <guilabel>Fade</guilabel> is 
+selected, the menu list appears to fade from the background.  If <guilabel>Make Transparent</guilabel> 
+is selected, the menu list will have a transparent look to it.  The details of that transparency is 
+configured in the next part of the dialog.  If <guilabel>Disable</guilabel> 
+is selected, then the menu list appears instantly.</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Menu tear-off handles:</guilabel></term>
+<listitem><para>If this option is set to <guilabel>Disable</guilabel>, then no menus can be separated 
+from the application. If <guilabel>Application Level</guilabel> is selected, then it is left up 
+to each individual application to determine which menus can be torn separated from the application.</para>
+<note><para>Many applications do not have tear off menus.  You cannot tell &kde; to force an 
+application to allow tear off menus.  This is determined by the authors of the application.</para></note></listitem>
+</varlistentry>
+</variablelist>
+
+<para>The next checkbox, labeled <guilabel>Menu drop shadow</guilabel> is used to toggle the drop shadow behind all 
+&kde; menus.  A drop shadow is a dark, soft line on the bottom and right sides of the menu, which give the menus the 
+appearance that the menu is lifted off the application, and the menu is creating a shadow on the application.</para>
+
+<para>The next section only applies if the combobox labeled <guilabel>Menu Effect</guilabel> is set to 
+<guilabel>Make Transparent</guilabel>.  You can use the combo box labeled <guilabel>Menu transparency type:</guilabel> 
+to select the method &kde; uses to generate the transparency.  You can use the slider to determine the level of 
+transparency in menus.  A preview is visible on the right side of this section.</para>
+
+</sect3>
+-->
+
+<sect3 id="style-misc">
+<title><guilabel>Fine Tuning</guilabel> tab</title>
+
+<variablelist> 
+<!-- removed in 4.2
+<varlistentry> 
+<term><guilabel>Highlight buttons under mouse.</guilabel></term>
+<listitem>
+<para>If there is a mark in this checkbox, when the mouse pointer is above a toolbar 
+button, that button will be highlighted with a square around the button.  This is a good visual 
+indicator of which button will be selected with a mouse click.</para>
+</listitem> 
+</varlistentry> 
+
+<varlistentry> 
+<term><guilabel>Transparent toolbars when moving</guilabel></term>
+<listitem>
+<para>As the title suggests, if this option is selected, the toolbars will be transparent when 
+you are moving them around on the screen.</para>
+</listitem> 
+</varlistentry> 
+-->
+<varlistentry> 
+<term><guilabel>Graphical effects</guilabel></term>
+<listitem>
+<para>&kde; applications will run internal animations with the selected display resolution and CPU usage.</para>
+</listitem> 
+</varlistentry> 
+
+<varlistentry> 
+<term><guilabel>Show icons on buttons</guilabel></term>
+<listitem>
+<para>If this option is selected, action buttons (like <guibutton>OK</guibutton> and 
+<guibutton>Apply</guibutton>) will have a small icon located within them to act
+as a visual reference.  If this option is not selected, then only text
+will appear on the button.</para>
+</listitem> 
+</varlistentry> 
+
+<varlistentry> 
+<term><guilabel>Show icons in menus</guilabel></term>
+<listitem>
+<para>If this option is selected, &kde; applications will show small icons alongside 
+most menu items.  If this option is not selected, then only text
+will appear in the menus. Changes to the visibility of menu icons will only affect newly started 
+applications.</para>
+</listitem> 
+</varlistentry> 
+
+<varlistentry> 
+<term><guilabel>Main toolbar text</guilabel>, <guilabel>Secondary toolbar text</guilabel></term>
+<listitem>
+<para>These drop down boxes lets you determine where on the button in both toolbars the 
+text name of the button will appear as the default.  
+If <guilabel>No Text</guilabel> is selected, then there is no text on the toolbar buttons.  
+If  <guilabel>Text Only</guilabel> is selected, then the button's icon is replaced with a text name of 
+the button. If <guilabel>Text Beside Icons</guilabel> is selected, then the name of the button 
+will be placed to the <emphasis>right</emphasis> of the icon. 
+If <guilabel>Text Below Icons</guilabel> is selected, the default will be to have the text 
+of the button <emphasis>below</emphasis> the icon.</para>
+
+<tip><para>This option only specifies the <emphasis>default</emphasis> location.  
+Each application can override the setting used in this panel.</para></tip>
+</listitem> 
+</varlistentry> 
+
+<varlistentry> 
+<term><guilabel>Menubar style</guilabel></term>
+<listitem>
+<para><guilabel>In application</guilabel>: The classic menubar at the top of the application window.</para>
+<para><guilabel>Title bar button</guilabel>: The window has an additional menu button top left. 
+All changes will take effect only for newly started applications.</para>
+<para><guilabel>Top screen menubar</guilabel>: This will turn on a menubar at the top of the screen that 
+is hidden by default and revealed on mouse over or a menu button on the window decoration.
+This menubar will reflect the menu options of the active application.</para>
+<para><guilabel>Only export</guilabel>: for use by plasma runners + applets. 
+To use this feature you need a KRunner plugin like <guilabel>Appmenu action launcher</guilabel>.
+Select an application, press <keycombo action="simul">&Alt;<keycap>F2</keycap></keycombo> 
+and type the menu action you want to perform.</para>
+</listitem> 
+</varlistentry> 
+
+</variablelist>
+
+</sect3>
+
+</sect2>
+
+</sect1>
+
+</article>

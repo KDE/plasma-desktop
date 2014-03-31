@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>preview</class>
+ <widget class="QFrame" name="preview">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>467</width>
+    <height>100</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="frameShape">
+   <enum>QFrame::StyledPanel</enum>
+  </property>
+  <property name="frameShadow">
+   <enum>QFrame::Sunken</enum>
+  </property>
+  <layout class="QGridLayout">
+   <item row="0" column="0">
+    <widget class="QLabel" name="label">
+     <property name="toolTip">
+      <string>Window text on Window Background</string>
+     </property>
+     <property name="text">
+      <string comment="color-kcm-preview" extracomment="see kdebase/workspace/kcontrol/colors/README.i18n">Window text</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="2" rowspan="3">
+    <widget class="QFrame" name="frame">
+     <property name="autoFillBackground">
+      <bool>true</bool>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <layout class="QGridLayout">
+      <property name="margin">
+       <number>0</number>
+      </property>
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <item row="0" column="0">
+       <widget class="QWidget" name="viewWidget" native="true">
+        <layout class="QHBoxLayout">
+         <property name="margin">
+          <number>2</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="labelView0">
+           <property name="toolTip">
+            <string>View Normal Text against View Normal Background</string>
+           </property>
+           <property name="text">
+            <string comment="color-kcm-preview" extracomment="see kdebase/workspace/kcontrol/colors/README.i18n">Normal text</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="labelView3">
+           <property name="font">
+            <font>
+             <underline>true</underline>
+            </font>
+           </property>
+           <property name="toolTip">
+            <string>View Link Text against View Normal Background</string>
+           </property>
+           <property name="text">
+            <string comment="color-kcm-preview" extracomment="see kdebase/workspace/kcontrol/colors/README.i18n">link</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="labelView4">
+           <property name="font">
+            <font>
+             <underline>true</underline>
+            </font>
+           </property>
+           <property name="toolTip">
+            <string>View Visited Text against View Normal Background</string>
+           </property>
+           <property name="text">
+            <string comment="color-kcm-preview" extracomment="see kdebase/workspace/kcontrol/colors/README.i18n">visited</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="labelView2">
+           <property name="toolTip">
+            <string>View Active Text against View Normal Background</string>
+           </property>
+           <property name="text">
+            <string comment="color-kcm-preview" extracomment="see kdebase/workspace/kcontrol/colors/README.i18n">a</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="labelView1">
+           <property name="toolTip">
+            <string>View Inactive Text against View Normal Background</string>
+           </property>
+           <property name="text">
+            <string comment="color-kcm-preview" extracomment="see kdebase/workspace/kcontrol/colors/README.i18n">i</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="labelView5">
+           <property name="toolTip">
+            <string>View Negative Text against View Normal Background</string>
+           </property>
+           <property name="text">
+            <string comment="color-kcm-preview" extracomment="see kdebase/workspace/kcontrol/colors/README.i18n">!</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="labelView6">
+           <property name="toolTip">
+            <string>View Neutral Text against View Normal Background</string>
+           </property>
+           <property name="text">
+            <string comment="color-kcm-preview" extracomment="see kdebase/workspace/kcontrol/colors/README.i18n">=</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="labelView7">
+           <property name="toolTip">
+            <string>View Positive Text against View Normal Background</string>
+           </property>
+           <property name="text">
+            <string comment="color-kcm-preview" extracomment="see kdebase/workspace/kcontrol/colors/README.i18n">+</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="0" column="1" rowspan="2">
+       <spacer>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::MinimumExpanding</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>4</width>
+          <height>51</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="1" column="0">
+       <widget class="QWidget" name="selectionWidget" native="true">
+        <property name="autoFillBackground">
+         <bool>true</bool>
+        </property>
+        <layout class="QHBoxLayout">
+         <property name="margin">
+          <number>2</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="labelSelection0">
+           <property name="toolTip">
+            <string>Selection Normal Text against Selection Normal Background</string>
+           </property>
+           <property name="text">
+            <string comment="color-kcm-preview" extracomment="see kdebase/workspace/kcontrol/colors/README.i18n">Selected text</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="labelSelection3">
+           <property name="font">
+            <font>
+             <underline>true</underline>
+            </font>
+           </property>
+           <property name="toolTip">
+            <string>Selection Link Text against Selection Normal Background</string>
+           </property>
+           <property name="text">
+            <string comment="color-kcm-preview" extracomment="see kdebase/workspace/kcontrol/colors/README.i18n">link</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="labelSelection4">
+           <property name="font">
+            <font>
+             <underline>true</underline>
+            </font>
+           </property>
+           <property name="toolTip">
+            <string>Selection Visited Text against Selection Normal Background</string>
+           </property>
+           <property name="text">
+            <string comment="color-kcm-preview" extracomment="see kdebase/workspace/kcontrol/colors/README.i18n">visited</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="labelSelection2">
+           <property name="toolTip">
+            <string>Selection Active Text against Selection Normal Background</string>
+           </property>
+           <property name="text">
+            <string comment="color-kcm-preview" extracomment="see kdebase/workspace/kcontrol/colors/README.i18n">a</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="labelSelection1">
+           <property name="toolTip">
+            <string>Selection Inactive Text against Selection Normal Background</string>
+           </property>
+           <property name="text">
+            <string comment="color-kcm-preview" extracomment="see kdebase/workspace/kcontrol/colors/README.i18n">i</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="labelSelection5">
+           <property name="toolTip">
+            <string>Selection Negative Text against Selection Normal Background</string>
+           </property>
+           <property name="text">
+            <string comment="color-kcm-preview" extracomment="see kdebase/workspace/kcontrol/colors/README.i18n">!</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="labelSelection6">
+           <property name="toolTip">
+            <string>Selection Neutral Text against Selection Normal Background</string>
+           </property>
+           <property name="text">
+            <string comment="color-kcm-preview" extracomment="see kdebase/workspace/kcontrol/colors/README.i18n">=</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="labelSelection7">
+           <property name="toolTip">
+            <string>Selection Positive Text against Selection Normal Background</string>
+           </property>
+           <property name="text">
+            <string comment="color-kcm-preview" extracomment="see kdebase/workspace/kcontrol/colors/README.i18n">+</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="2" column="0" colspan="2">
+       <spacer>
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::MinimumExpanding</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>141</width>
+          <height>0</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QPushButton" name="pushButton">
+     <property name="toolTip">
+      <string>Button text on Button Background</string>
+     </property>
+     <property name="text">
+      <string comment="color-kcm-preview" extracomment="see kdebase/workspace/kcontrol/colors/README.i18n">Push Button</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <spacer>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeType">
+      <enum>QSizePolicy::Preferred</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>40</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="2" column="0">
+    <spacer>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeType">
+      <enum>QSizePolicy::MinimumExpanding</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>0</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

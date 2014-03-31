@@ -1,0 +1,11 @@
+2002-07-01  Fabian Wolf  <fabianw@gmx.net>
+	* added option to select a white cursor
+
+2000-03-14  David Faure  <faure@kde.org>
+
+	* mouse.cpp: Added global settings for SC/DC/AutoSelect/ChangeCursor
+	* mousedefaults.h: New file, to store default values
+
+1998-11-30  Alex Zepeda  <garbanzo@hooked.net>
+
+	* Makefile.am: Move all the icons into pics/ && pics/mini/

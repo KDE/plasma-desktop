@@ -1,0 +1,117 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % English "INCLUDE">
+]>
+<article id="splashscreen" lang="&language;">
+<title>Splash Screen</title>
+<articleinfo>
+<authorgroup>
+<author>
+<firstname>Anne-Marie</firstname>
+<surname>Mahfouf</surname>
+<affiliation>
+<address>&Anne-Marie.Mahfouf.mail;</address>
+</affiliation>
+</author>
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
+</authorgroup>
+
+<date>2010-09-25</date>
+<releaseinfo>&kde; 4.5</releaseinfo>
+
+<keywordset>
+<keyword>KDE</keyword>
+<keyword>System Settings</keyword>
+<keyword>splash screen</keyword>
+<keyword>theme</keyword>
+</keywordset>
+</articleinfo>
+
+<!--sect1 id="kcm_splashscreen">
+<title>Splash Screen Theme Manager</title>
+-->
+<para>This module provides an interface to install and view splash screen themes.</para>
+
+<para>
+<screenshot>
+<screeninfo>Here's a screenshot of the splash screen manager</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="splash-main.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase>The splash screen manager module</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para>On the left you can see the list of already installed splash screens. The current splash screen name is highlighted.</para>
+<para>On the right is displayed a preview of the current splash screen with some information about it below the preview.</para>
+
+<variablelist>
+<varlistentry><term><guilabel>Get New Themes...</guilabel></term>
+<listitem>
+<para>
+You need to be connected to the Internet to use this action. A dialog will display a list of themes from the <ulink url="http://www.kde-look.org">http://www.kde-look.org</ulink> website. Clicking the <guibutton>Install</guibutton> button associated with a theme will install this theme locally.
+</para>
+<para>
+<screenshot>
+<screeninfo>Installing a new theme</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="get-new-theme.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase>Installing a new theme</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para>
+This new theme is immediately available after you close the System Settings Add-On Installer dialog and is highlighted. The preview displays the picture. You need to click the <guibutton>Apply</guibutton> biutton to make this theme your current splash-screen theme.
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry><term><guilabel>Install Theme File...</guilabel></term>
+<listitem>
+<para>
+Instead of installing a theme directly as above you might have a tarball of a theme locally that you want to install. Clicking on this button will open a file dialog and you choose the tarball of the theme you want to install. The installer then unpacks the theme locally and makes it immediately available in the themes list.
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry><term><guilabel>Remove Theme</guilabel></term>
+<listitem>
+<para>
+Removing a theme means removing the theme files from your disk. A message box warns you before doing anything and indicates to you what it will remove. Clicking on <guibutton>Delete</guibutton> in this message box will remove the splash screen theme from your disk. Clicking <guibutton>Cancel</guibutton> will abort the remove action. If you choose <guibutton>Delete</guibutton>, the theme is then no longer available in the list.
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry><term><guilabel>Test Theme</guilabel></term>
+<listitem>
+<para>
+This shows you the theme and the associated icons as they will be displayed as splash screen when &kde; starts. Clicking on the splash screen hides it.
+</para>
+</listitem>
+</varlistentry>
+</variablelist>
+<!--/sect1-->
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

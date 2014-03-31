@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>KeyboardConfigWidget</class>
+ <widget class="QWidget" name="KeyboardConfigWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>577</width>
+    <height>361</height>
+   </rect>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="KButtonGroup" name="numlockGroupBox">
+     <property name="whatsThis">
+      <string>If supported, this option allows you to setup the state of NumLock after KDE startup.&lt;p&gt;You can configure NumLock to be turned on or off, or configure KDE not to set NumLock state.</string>
+     </property>
+     <property name="title">
+      <string>NumLock on KDE Startup</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_7">
+      <item row="0" column="0">
+       <widget class="KButtonGroup" name="numlockButtonGroup">
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_6">
+         <item row="0" column="0">
+          <widget class="QRadioButton" name="RadioButton1">
+           <property name="text">
+            <string>T&amp;urn on</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QRadioButton" name="RadioButton1_2">
+           <property name="text">
+            <string>Turn o&amp;ff</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QRadioButton" name="RadioButton1_3">
+           <property name="text">
+            <string>Leave unchan&amp;ged</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QGroupBox" name="keyboardRepeatGroupBox">
+     <property name="title">
+      <string>Keyboard Repeat</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_4">
+      <item row="0" column="0">
+       <widget class="KButtonGroup" name="keyboardRepeatButtonGroup">
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_3">
+         <item row="0" column="0">
+          <widget class="QRadioButton" name="keyboardRepeatOnRadioButton">
+           <property name="text">
+            <string>T&amp;urn on</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QRadioButton" name="keyboardRepeatOffRadioButton">
+           <property name="text">
+            <string>Turn o&amp;ff</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QRadioButton" name="keyboardRepeatUnchangedRadioButton">
+           <property name="text">
+            <string>Leave unchan&amp;ged</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>159</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="0" column="2">
+       <widget class="QGroupBox" name="keyboardRepeatParamsGroupBox">
+        <property name="title">
+         <string/>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_2">
+         <item row="0" column="0">
+          <widget class="QLabel" name="lblDelay">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>&amp;Delay:</string>
+           </property>
+           <property name="buddy">
+            <cstring>delay</cstring>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QSlider" name="delaySlider">
+           <property name="whatsThis">
+            <string>If supported, this option allows you to set the delay after which a pressed key will start generating keycodes. The 'Repeat rate' option controls the frequency of these keycodes.</string>
+           </property>
+           <property name="minimum">
+            <number>0</number>
+           </property>
+           <property name="maximum">
+            <number>10000</number>
+           </property>
+           <property name="singleStep">
+            <number>1000</number>
+           </property>
+           <property name="pageStep">
+            <number>1000</number>
+           </property>
+           <property name="value">
+            <number>5000</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="tickInterval">
+            <number>1000</number>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="KIntNumInput" name="delay">
+           <property name="whatsThis">
+            <string>If supported, this option allows you to set the delay after which a pressed key will start generating keycodes. The 'Repeat rate' option controls the frequency of these keycodes.</string>
+           </property>
+           <property name="suffix">
+            <string> ms</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="lblRate">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>&amp;Rate:</string>
+           </property>
+           <property name="buddy">
+            <cstring>rate</cstring>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QSlider" name="rateSlider">
+           <property name="whatsThis">
+            <string>If supported, this option allows you to set the rate at which keycodes are generated while a key is pressed.</string>
+           </property>
+           <property name="minimum">
+            <number>0</number>
+           </property>
+           <property name="maximum">
+            <number>10000</number>
+           </property>
+           <property name="singleStep">
+            <number>1000</number>
+           </property>
+           <property name="pageStep">
+            <number>1000</number>
+           </property>
+           <property name="value">
+            <number>5000</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="tickInterval">
+            <number>1000</number>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="KDoubleNumInput" name="rate">
+           <property name="whatsThis">
+            <string>If supported, this option allows you to set the rate at which keycodes are generated while a key is pressed.</string>
+           </property>
+           <property name="suffix">
+            <string> repeats/s</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="text">
+        <string>Test area:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit">
+       <property name="toolTip">
+        <string>Allows to test keyboard repeat and click volume (just don't forget to apply the changes).</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="2" column="0">
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string>Key Click</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_5">
+      <item row="0" column="0">
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QLabel" name="TextLabel1">
+          <property name="whatsThis">
+           <string>If supported, this option allows you to hear audible clicks from your computer's speakers when you press the keys on your keyboard. This might be useful if your keyboard does not have mechanical keys, or if the sound that the keys make is very soft.&lt;p&gt;You can change the loudness of the key click feedback by dragging the slider button or by clicking the up/down arrows on the spin box. Setting the volume to 0% turns off the key click.</string>
+          </property>
+          <property name="text">
+           <string>Key click &amp;volume:</string>
+          </property>
+          <property name="buddy">
+           <cstring>click</cstring>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSlider" name="click">
+          <property name="maximum">
+           <number>100</number>
+          </property>
+          <property name="singleStep">
+           <number>10</number>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="tickPosition">
+           <enum>QSlider::NoTicks</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="Line" name="line">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>KDoubleNumInput</class>
+   <extends>QWidget</extends>
+   <header>knuminput.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>KButtonGroup</class>
+   <extends>QGroupBox</extends>
+   <header>kbuttongroup.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>KIntNumInput</class>
+   <extends>QWidget</extends>
+   <header>knuminput.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,54 @@
+There are two sets of preview strings in the color kcm, with special translation needs. In general, length of the translations, and "gist"-level clarity is more important than precise translation. It should be easy to identify what color role a string represents, but there are size considerations that should be taken into account. The tooltips should be translated normally.
+
+
+
+When translating the color kcm, it is helpful to understand the intended meaning of the various color roles in order to chose the best possible translation if more than one would be possible. Hopefully the sets (view, window, button, selection, tooltip) are obvious, as well as normal background/foreground. The others are as follows:
+
+Alternate [Background]: used in lists when every other row uses a different color; "different".
+Inactive: comments, something which is old, unimportant/uninteresting/secondary text
+Active: e.g. something new, something active (currently engaged in activity), something requesting attention, a hovered hyperlink
+Link: hyperlink, somewhere the user can go, new history
+Visited: visited hyperlinks, somewhere the user has been, old history
+Negative: "bad", untrusted, unreliable, a mistake, an error the user made, an error that occurred
+Neutral: warning, encrypted, anything "between" negative and positive
+Positive: success, completion messages, trusted content
+
+For Link, although other uses are possible, translate as referring to hyperlinks to minimize user confusion.
+
+
+
+The "generic" preview uses these strings (all with disambiguation "color-kcm-preview"):
+- Window Text
+- Push Button
+- Normal Text
+- Selected Text
+- link
+- visited
+- a
+- i
+- !
+- =
+- +
+
+The two-word strings may be translated normally, though it is suggested to omit the translation of "Text" if the strings would be excessively (around 20+ characters) long and doing so does not cause confusion (i.e. substantially change the conveyed meaning). The "link" and "visited" strings should be translated according to the notes above, ideally keeping the length to four to eight characters; abbreviation (to not less than four characters if possible) is acceptable as the tooltips will provide more complete descriptions.
+
+The remaining one-character strings represent (respectively) the text roles active (a), inactive (i), negative (!), neutral (=) and positive (+). These should be translated as one- or two-character strings which uniquely correspond to the aforementioned text roles, ideally taking the first letter of the corresponding translation, or maintaining the symbols (!, =, +) as-is if culturally appropriate.
+
+Ideographic languages (e.g. Japanese, Mandarin, etc.) where the single-character strings can be replaced with one or two characters representing the full word should do so. These should also, if needed, consider a phonetic representation or relevant phrase for the longer elements, to keep the translations close to the same number of characters as the English.
+
+
+
+The "set" preview uses these strings (all with disambiguation "color-kcm-set-preview"):
+- normal
+- link
+- visited
+- active
+- inactive
+- alternate
+- negative
+- neutral
+- positive
+- hover
+- focus
+
+These live in a preview widget that is two rows tall by nine items wide, and is often the determining factor in the minimum width of the dialog. For this reason, it is important to keep the strings SHORT. To ensure each text block is of sufficient size to provide an adequate preview, each should be at least a few characters long, but please try to limit them to no more than eight or ten characters on average. Abbreviation is fine and encouraged if necessary to achieve this average. In particular, PLEASE avoid adding the translated equivalent of " text" to these strings if at all possible; the tooltips will disambiguate if required. If these objectives cannot be achieved via direct translation, semantic translation (e.g. "negative" -> i18n("oops!"), "neutral" -> i18n("meh")) would be better. (Ideographic languages, which may need to ADD text to achieve a minimum length, should ignore the previous two sentences.) Note also that "hover" and "focus" are actually "decoration" roles, so e.g. "hover text" is incorrect (should be "hover decoration").

@@ -1,0 +1,71 @@
+
+Project Proposal:  Kickoff KDE 4 Rewrite
+
+This is a re-implementation of the Kickoff menu for KDE 3 originally created
+by the OpenSuSE team.
+
+Overall goals:
+
+1. Implement the Kickoff user interface using Qt/KDE 4 technology
+
+2. Make it easy for distributions to modify the menu contents
+
+3. Make it easy for distributions to add their own branding
+
+Detailed goals:
+
+1.  Implement the Kickoff user interface using Qt/KDE 4 technology
+
+    -> Clean separation of core and user interface
+        -> eg. Make good use of Qt 4's model/view classes 
+    -> Use Strigi for search and analysis (or possibly just Xesam interface?)
+    -> Use Solid for getting data for removable device list
+    -> Attractive, original, but not overbearing graphical effects
+       using Qt 4's new painting and animation features.
+
+    To decide on:
+
+    -> Consult the Kickoff/KDE 3 developers and OpenSuSE users about 
+       any desired changes to the user interface.
+    -> Whether to use Plasma applets and widgets or Qt's widgets and
+       QAbstractItemView as the base for the view classes.
+    -> Provision of Plasma data engines for applets to use to query
+       applications, recent documents, favorites etc.
+    -> Should facilities be provided for distributions to replace
+       Strigi with their choice of search engine? 
+
+    Ideas to explore in future:
+
+    -> Use Sonnet for spell-checking the user's search query 
+    -> Use Phonon for previews of audio and video content
+       in the favorites and recently used sections
+    -> Light KWin integration for interesting effects for revealing,
+       hiding or rendering the Kickoff launcher on composited '3D'
+       desktops. 
+
+Goals 2 and 3 are derived from looking at the KDE 3 implementation 
+of Kickoff and also the way in which distributions customise KDE.
+Consulting distribution representatives is important to clarify 
+these particular goals.
+
+2.  Make it easy for distributions to modify the menu contents
+
+    -> Different distributions may have different tools for system
+       configuration ( eg. System Settings , YaST , Mandriva's tools )
+    -> The available options on the leave page and the way in which 
+       those tools work varies depending on the distribution
+
+3.  Make it easy for distributions to add their own branding
+
+    -> The launcher menu is a highly visible part of the desktop,
+       distributions are therefore likely to want to brand it with
+       their own logos, colors, icons etc.  
+       This does not mean infinite theme-ability, but rather a good
+       out-of-the-box look which distros can easily tweak so that 
+       it is obvious which distribution is being used from looking
+       at a screenshot, and also to allow distros to make some
+       obvious cosmetic changes between versions.
+
+       (See the Ubuntu art specs for example which state that each
+        new version is supposed to have a visual look which is 
+        distinct from the previous version)

@@ -1,0 +1,67 @@
+Notifications visualization
+===========================
+
+Overview
+--------
+Plasma-desktop offers facilities to display the visual notifications confirming to the Freedesktop's notification specification, this document describes the component used to achieve the visualization in the most informative, while less distracting way.
+
+Components
+----------
+* Notification dataengine: this exposes the org.freedesktop.Notifications interface, collecting notifications arriving from all applications, in a cross-desktop fashion.
+   As all dataengines, it organizes the notification datafields in a Plasma::Dataengine::Data structure
+* Systemtray widget: (TODO: move out of systray) the widget connects to the Notifications dataengine and provides a proper visualization for the arriving notifications. An important distinction is done between the "alert" aspect of them and a pure informative one, providing two different user interfaces for them.
+
+Visualization components
+------------------------
+
+Alert
+
+As soon as notifications arrive, they are placed in the NotificationStack widget: it is an automatic popup, so in order to disturb the user workflow as less as possible, the size is kept fairly small, limiting the maximum nuber of notification displayed. For the same reason ony one notification at a time is displayed: the oldest (newest?) one, with the others partially covered, but permitting to still see the title.
+Moving the mouse over the title of the semi-hidden notifications will show them completely.
+The NotificationStack window is always on top of every other window.
+When a new notification arrives it is added in the NotificationStack with the following strategy:
+* Let MAX be the maximum number of allowed notifications, usually 4
+* If the current displayed notifications is less than MAX place the new notification partially covered in the last position
+* If MAX notifications are already there
+  * If there i at least one notification of the same application remove it (or the oldest if more than one)
+  * Elese remove the oldest notification from the stack
+* Place the new notification partially covered in the last position
+
+To view partially hidden notifications is enough to move the mouse over its title. the notification will show, hiding the previously showing one.
+Clicking on an action button, removes a notification from the stack.
+Clicking anywhere in the stack area hides the whole stack, but in order to prevent accidental closing, only after a second of timeout after
+* A new notification appeared
+* A notification was open, closing the old one
+
+
+Information
+
+If the user missed some notification, it's possible to view the old ones by manually invoking a different ui by hitting the "i" button.
+The notifications are contained in a widget called NotificationScroller, that appears as a popup window. A tabbar lets the user filter the notifications by the sender application (useful for instance if the user is looking for informations about completition of an old running file tranfer or battery warning notices).
+Notifications are in a scrolling view that permits a fairly large amount of those to be displayed without using too much screen space.
+It features also the the following behaviour:
+* If a new notification arrives the current status of the widget is not changed, to not interrupt the user workflow. (current selected tab and scrollbar value)
+* If the user manually dismisses a notification, bot there and in the NotificationStack it goes away both in the NotificationStack and in the NotificationScroller
+
+
+Notifications and jobs
+----------------------
+
+Alert
+
+* Completed jobs are treated as any other notification. They appear in the NotificationStack at first and are left available for a while in the NotificationScroller
+* When there is at least one running job a tiny popup containing only a progressbar and a brief summary is always shown, unless the main popup with controls for each individual job is open. It shows the average of progress of all jobs, we will now refer to it as JobsOverview
+* JobsOverview is shown on top of every other window at first, but other windows that gain focus after it can cover the JobsOverview window
+* If the main popup is opened, JobsOverview is hidden, shown automatically again as soon as the main popup is closed.
+* When the NotificationStack appears, the JobOverview is automatically moved to make room for the notifications, and moved back again when NotificationStack is hidden.
+
+
+Information
+
+When the user opens the main widget popup that contains the NotificationScroller, if there are running jobs, they are shown individually as ExtenderItems in the same popup. The extenderItem contains:
+* A title with the application icon, the job type (such as copying, moving or deleting) and controls to pause/stop or resume the job
+* The body contains
+  * The source and destination URLs
+  * A progressbar to show the job status 
+  * Optional extra informations such as file size, transfer speed and size already transfered
+

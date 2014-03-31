@@ -1,0 +1,66 @@
+
+Current status of Kickoff/KDE 4:
+Bugs and missing features (indicated with a '-')
+are listed in priority order for each category.
+================================================
+
+Favorites View
+	+ Works
+    - Favorites are not remembered correctly between sessions
+      when Kickoff is run from a Plasma applet
+	- Missing drag and drop of items from other views into favorites
+	- Missing drag and drop re-arranging of items
+
+Applications View
+	+ Works.
+	+ When KDE 3 and KDE 4 versions of an application are available only 
+          the KDE 4 one is shown.
+	- Oxygen application category icons are not shown next to categories
+
+My Computer View
+	+ Works.
+	+ Uses Solid to query devices and respond to addition or removal of 
+	  devices
+    - Folders are currently opened in Konqueror.  They should open in
+      Dolphin
+
+Recently Used (History?) View
+	+ Works
+	- Missing a suitable icon for the tab
+
+Leave View
+	+ Log-off, Shutdown and Restart work
+	- Sleep, Hibernate do not work
+    - Log-off, Shutdown and Restart show an unnecessary confirmation
+      dialog which gives users the Log-off/Shutdown/Restart choice again
+	- Missing icons for the Sleep, Shutdown, Restart actions
+
+Search View
+    + Application search by name, generic name or keywords works
+	- Strigi search doesn't work due to a Strigi problem which Jos' is
+      presently fixing
+    * The other search handlers that query Bookmarks,
+	  Contacts etc. should probably be shared with KRunner.  This needs
+	  mailing list discussion.
+
+Presentation
+    + When used as a Plasma applet the Kickoff window does not
+      appear and disappear smoothly.  (Works okay when standalone
+      Kickoff application is run) [Also Performance?]
+	- Missing the custom QTabBar styling to draw the view names
+	  under their icons and draw a pretty gradient
+	- Missing the "username on computer" text
+	- Missing the branding logo
+	+ Experimented with multiple columns in the Favorites/My Computer/Recently Used/Leave
+	  views.
+
+Performance:
+    - Scrolling up and down in the application view is not as smooth
+      as it should be in some categories.  Perhaps an issue with icons
+      from certain sources?
+    - When opening a previously unopened application category there 
+      may be a slight delay and HDD activity causing the scrolling animation
+      to have few frames (the animation duration is not affected)
+    - Currently no delayed initialization is performed.  The data required
+    for all tabs is loaded on startup, except the application view where
+    only the root branch is loaded initially.

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>StylePreview</class>
+ <widget class="QWidget" name="StylePreview">
+  <layout class="QVBoxLayout">
+   <item>
+    <widget class="QTabWidget" name="TabWidget2">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+       <horstretch>1</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="tab">
+      <attribute name="title">
+       <string>Tab 1</string>
+      </attribute>
+      <layout class="QVBoxLayout">
+       <item>
+        <layout class="QHBoxLayout">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout">
+           <item>
+            <widget class="QGroupBox" name="GroupBox1">
+             <property name="title">
+              <string>Group Box</string>
+             </property>
+             <layout class="QVBoxLayout" name="_2">
+              <item>
+               <widget class="QRadioButton" name="RadioButton1">
+                <property name="text">
+                 <string>Radio button</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="RadioButton2">
+                <property name="text">
+                 <string>Radio button</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="Line" name="Line1">
+                <property name="frameShape">
+                 <enum>QFrame::HLine</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Sunken</enum>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="CheckBox1">
+                <property name="text">
+                 <string>Checkbox</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+                <property name="tristate">
+                 <bool>false</bool>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <spacer name="verticalSpacer">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout">
+           <item>
+            <widget class="QProgressBar" name="ProgressBar1">
+             <property name="value">
+              <number>70</number>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QSlider" name="Slider1">
+             <property name="value">
+              <number>30</number>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout">
+             <item>
+              <widget class="KIntSpinBox" name="SpinBox1">
+               <property name="maximum">
+                <number>999999</number>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="PushButton1">
+               <property name="text">
+                <string>Button</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QComboBox" name="ComboBox1">
+             <item>
+              <property name="text">
+               <string>Combobox</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item>
+            <spacer>
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QScrollBar" name="ScrollBar1">
+           <property name="maximum">
+            <number>19</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab">
+      <attribute name="title">
+       <string>Tab 2</string>
+      </attribute>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>KIntSpinBox</class>
+   <extends>QSpinBox</extends>
+   <header>knuminput.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

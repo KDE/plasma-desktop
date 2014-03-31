@@ -1,0 +1,40 @@
+Overview
+--------
+
+Since KDE 4.4, libplasma supports publishing and accessing plasma applets across the network. This allows users to use plasma applets as visualization on remote data. What happens when accessing a remote applet is the following:
+
+* A connection is established, and the server can check the clients credentials and decide whether or not to allow access. The plasma shell running on the server can decide which policies to use to determine whether or not access is granted. See the section 'security' in this document for more information.
+* In the case of a scripted plasmoid, the entire plasmoid package is sent to the client. The client puts the package in a temporary directory, and  loads the scripted plasmoid from there. In the case of a binary applet, just the plugin name is sent over so the client can just load the appropriate plugin. This unfortunately requires the client to have the same plugin installed as the server, so scripted plasmoids are obviously preferred.
+* Whenever this remoted plasmoid calls dataEngine() or serviceForSource() these calls return a special subclass of DataEngine/Service that actually invokes the dataengine or service on the remote machine. This is all completely transparent to the applet. These subclasses are located in the "private/" directory in libplasma and are called RemoteDataEngine and RemoteService. On the first call to dataEngine/serviceForSource, the server is notified and publishes the requested dataEngine or Service, if that hasn't already happened. Publishing happens through RemoteDataEngine and RemoteService's counterparts: ServiceProvider and DataEngineProvider, also both private classes.
+
+Public API
+----------
+
+The remote widgets feature adds some new public API to libplasma, mostly aimed at plasma shells. They allow a shell to:
+* Access remote widgets. (AccessManager/AccessAppletJob)
+* Obtain a list of remote widgets that are announced on the network, and receive notifications when widgets appear/disappear. (AccessManager)
+* Publish widgets on the network. (Applet::publish(), Applet::unpublish(), Applet::isPublished())
+* Set one of the sensible default security policy on incoming connections... (AuthorizationManager)
+* ... or provide an own implementation of a security policy by implementing an AuthorizationInterface and setting it as customAuthorizationInterface in AuthorizationManager. 
+
+Security
+--------
+
+The plasma shell can control the security aspects of remote widgets, combined with a system wide config file (/etc/plasma-remotewidgets.conf) containing rules that can allow/disallow certain machines access to certain published widgets/services/engines. As a plasma shell you've got the following options:
+
+* Use one of the sensible presets in which case you don't have to case about security. The only thing you'll need to do is set the desired behavior using AuthorizationManager::self()->setAuthorizationPolicy(). This will set the AuthorizationInterface implementation to one of the ones built in into libplasma. Do note that even when you whish to use the default policy (DenyAll), you should still call this function, since that automatically locks this value so a potential malicious plasma plugin can't change this to serve it's own evil desires.
+* Supply your own behavior by implementing AuthorizationInterface, set authorizationPolicy to custom, and use AuthorizationManager::self()->setAuthorizationInterface() to your own implementation.
+
+Security wise, every incoming message will get processed as follows:
+
+Every message that gets sent to the server get's a signature appended. Signing happens with an RSA key that is generated for you if it doesn't exist already, and then stored in the kde wallet, so your private key for signing doesn't change from that moment on. When starting a connection, the full credentials of the client are sent along, later messages just contain a hash of the key to identify the sender without having to put all the information in every message.
+Whenever a message is received and the Credential's trustLevel is at least ValidCredentials (meaning, the signature of the message is at least valid for the public key), the combination service name and public key signature is used to see if there are any AuthorizationRules that already match this request. These are both rules defined in /etc/plasma-remotewidgets.conf and rules that are created for the current plasma session only. If a matching rule is found, it is applied (that is, the message is either accepted or denied). Else a new rule is created, that is at that moment still Undefined. This rule, containing an instance of Credential that can be used to obtain a trustLevel, will be passed to the active AuthorizationInterface's authorizationRequest. The interface can then decide to either accept or deny the request, or request PIN pairing, in which case the user will have to enter the same password on both client and server to establish a connection.
+NOT YET IMPLEMENTED: additionally, a message can also be signed with a GPG key, in which case the trustLevel can go beyond ValidCredentials. Either by having that key in your trusted keyring, or, for UltimateCredentials, having it signed by the plasma overlords themselves.
+
+JOLIE
+-----
+
+For the actual communication, the sodep protocol is used (JOLIE's native protocol), through the QtJolie library. At the moment, as the library has not yet been released, a branch private to libplasma is used. JOLIE itself is not yet a runtime dependency, QtJolie just claims a socket, listens to incoming sodep messages, and routes them to the appropriate destination. At some point in the near future, when QtJolie gets some more functionality, we'll want to use JOLIE's metaservice to route the messages, which adds the added benefit that we can communicate with metaservice through jolie, and have metaservice convert it into other protocols. A nice addition is that we can then use secure sodep so all the data will get encrypted. And with the addition of a new Service subclass it will also become very easy to access SOAP webservices.
+
+
+

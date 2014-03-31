@@ -1,0 +1,182 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % English "INCLUDE">
+]>
+<article id="desktopthemedetails" lang="&language;">
+<articleinfo>
+<title>Desktop Theme</title>
+<authorgroup>
+<author>
+<firstname>Andrew</firstname>
+<surname>Lake</surname></author>
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
+</authorgroup>
+
+<date>2013-06-02</date>
+<releaseinfo>&kde; 4.11</releaseinfo>
+
+<keywordset>
+<keyword>KDE</keyword>
+<keyword>System Settings</keyword>
+<keyword>desktop</keyword>
+<keyword>theme</keyword>
+<keyword>plasma</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_desktoptheme">
+<title>Theme tab</title>
+ 
+<para>A list of available themes is displayed on this tab. Select a theme by clicking on an item in the list.</para>
+
+<para>Use the <guibutton>Get New Themes</guibutton> button to launch the <guilabel>Get Hot New Stuff</guilabel> dialog and 
+download additional themes from the Internet.</para>
+
+</sect1>
+
+<sect1 id="kcm_desktopthemedetails">
+<title>Details tab</title>
+
+<para>A &kde; plasma desktop theme is made up of several components or items,
+consisting mostly in svg backgrounds and colors schemes. This module allows you
+to customize your desktop Plasma theme and to replace theme items 
+with items from other themes or from files.
+</para>
+
+<para>Desktop theme items consist in panel theme item, kickoff theme item,
+analog clock, ...</para>
+
+<note><para>
+If you want to change your current theme for a full new theme (for example from
+Air to Glassified) then you can do so in the <guilabel>Theme</guilabel> tab.
+</para></note>
+
+<sect2 id="start">
+<title>Quick start</title>
+<para>First download one or several themes you want to use to customize your 
+desktop items by clicking the <guibutton>Get New Themes...</guibutton>
+button in the <guilabel>Theme</guilabel> tab.</para>
+
+<para>All the available themes will be displayed on top, the current one being highlighted.</para>
+
+<para>In the theme list, select a base theme that will be used for most widgets and start
+customizing each item you want to change with a new theme, for example you can
+have the panel in Glassified theme, the widget
+backgrounds in Air and so on.</para>
+
+<para>Here Air is the theme for most widgets and we changed the panel background
+to Glassified, the Analog clock to Glassified and the Notes to Oxygen.</para>
+
+<para>
+<screenshot>
+<screeninfo>Customizing your plasma theme</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="customizing.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase>Customizing your plasma theme</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para>
+Clicking the <guibutton>Apply</guibutton> will create a new theme named
+<guilabel>(Customized)</guilabel> and will apply it to your desktop.
+</para>
+</sect2>
+
+<sect2 id="custom">
+<title>Creating a custom theme</title>
+<para>When the module is opened, it will show items from the current desktop
+theme. If you would like to start customizing with a different theme, select it
+from the box above the list of theme items. This theme from the box is the
+starting theme, the base for your new customized desktop theme.</para>
+
+<para>
+In the list of items, for each item you would like to replace, select 
+replacement item from the drop list for that item.  You may select the 
+corresponding item from another theme, or you may select a file. &plasma; 
+desktop theme items are svg files, except for the color scheme which is a &kde; 
+color scheme file.
+</para>
+
+<para>
+Click <guibutton>Apply</guibutton> when all the changes have been made.  This
+will create a new theme named <guilabel>(Customized)</guilabel> which you can
+select from the Appearance Settings dialog on the desktop.
+</para>
+
+<para>
+<screenshot>
+<screeninfo>Your custom theme</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="clicking-apply.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase>Customized</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<note><para>
+The theme items listed are the most visible components of the plasma 
+desktop theme.  Other theme components are not listed.  Your newly created 
+theme will use these unlisted components from the theme that you  selected at 
+the start of creating the customized theme.
+</para></note>
+</sect2>
+
+<sect2 id="naming">
+<title>Naming a custom theme</title>
+<para>
+To provide a name for your customized theme, click on the
+<guilabel>More</guilabel> checkbox and 
+enter the name of the theme.  You may also provide your name (author), a theme 
+version and a description of your theme.  Click <guibutton>Apply</guibutton>
+when done.
+</para>
+</sect2>
+
+<sect2 id="removing">
+<title>Removing a theme</title>
+<para>
+Select the theme you would like to remove from the box above the list of 
+theme items. Click on the <guilabel>More</guilabel> check box. Click the
+<guibutton>Remove Theme</guibutton> button to 
+remove the selected theme.
+</para>
+</sect2>
+
+<sect2 id="exporting">
+<title>Exporting a theme to a file</title>
+<para>
+You can share your newly customized theme with the community by exporting the 
+theme to a file. Select your customized theme from the box above the list 
+of theme items.  Click on the <guilabel>More</guilabel> check box.  Click the
+<guibutton>Export Theme to 
+File...</guibutton>.  Enter the name of the zip file to which the theme will be
+saved.
+</para>
+</sect2>
+
+</sect1>
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

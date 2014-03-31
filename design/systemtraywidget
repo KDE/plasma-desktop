@@ -1,0 +1,55 @@
+The system tray widget is divided into three parts: core, ui and protocols.
+
+Core
+----
+Core provides the three basic concepts that drive the widget:
+    * Task: an icon in the tray
+    * Notification: a visual notification from an application
+    * Job: a long running job such as a file transfer
+
+Protocol implements a source for Tasks, Notifications and/or Jobs and has a set
+of signals used to announce the coming and going of its items. At its discretion,
+a Protocol can create (or destroy) Tasks, Notifications and Jobs at any time.
+
+A Manager class is provided in Core that looks after and tracks the three kinds of items
+along with all the Protocols. The Manager instantiates the Protocols and relays the
+critical signals, allowing the widget to simply pay attention to the Manager and
+treat all Tasks, Notifications and Jobs as if they came from the same place. The Manager
+is able to treat all Protocols generically using the Protocol API.
+
+All Task implementations provide a way to return a QGraphicsWidet for given host.
+The mapping between hosts and widgets is handled automatically by the Task class, and
+this, along with the central Manager, allows any Task to be shared simultaneously across
+multiple widgets.
+
+Notifications and Jobs don't have this problem as they simply provide access to
+data which the ui is reponsible for showing in some way.
+
+Also provided in the core is a Task specifically for managing the Extenders of a host
+Plasma::Applet for Jobs and Notifications call, rather creatively, ExtenderTask.
+
+
+Protocols
+---------
+The following protocols currently exist:
+
+DBusSystemTrayProtocol: support for the dbus driven NotificationItem; it provides Tasks;
+                        for information on the design of this protocol, consult the
+                        KStatusNotifierItem documentation
+
+FdoProtocol: support for the XEmbed based freedesktop.org system tray specification;
+             it provides Tasks, though these tasks do not work properly in more than one
+             widget at a time due to limitations in the XEmbed system
+
+JobsProtocol: access to the applicationjobs DataEngine; it provides Jobs
+
+NotificationsProtocol: access to the notificadtions DataEngine; it provides Notifications
+
+PlasmoidProtocol: features Plasmoids-wrapped-in-Tasks; is not currently fully functional
+
+
+The UI
+------
+The user interface consists of a Plasma::Applet class, a layout class and a TasksArea which
+contains the Tasks published. The UI features the ability to order as well as hide items,
+register new Tasks, etc.

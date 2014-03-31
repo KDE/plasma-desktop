@@ -1,0 +1,202 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % English "INCLUDE" > <!-- change language only here -->
+]>
+
+<article id="keys" lang="&language;">
+<title>Shortcuts</title>
+<articleinfo>
+<authorgroup>
+<author>&Mike.McBride; &Mike.McBride.mail;</author>
+<author>&Jost.Schenck; &Jost.Schenck.mail;</author>
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
+</authorgroup>
+
+<date>2013-12-05</date>
+<releaseinfo>&kde; 4.12</releaseinfo>
+
+<keywordset>
+<keyword>KDE</keyword>
+<keyword>KControl</keyword>
+<keyword>key bindings</keyword>
+<keyword>bindings</keyword>
+<keyword>shortcuts</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="key-bindings">
+<title>Shortcuts</title>
+
+<sect2 id="key-bindings-intro"> 
+<title>Introduction</title> 
+
+<para>While most of the functionality offered by &kde; can be accessed
+using a simple <quote>point and click</quote> interface, many people
+prefer using the keyboard for some tasks.  Pressing something like
+<keycombo action="simul"> &Ctrl;<keycap>F</keycap></keycombo> is often
+just faster than moving your hands off the keyboard to the mouse,
+opening the <guimenu>Edit</guimenu> menu and selecting
+<guimenuitem>Find</guimenuitem>.</para>
+
+<para> As different people have different preferences about keyboard
+shortcuts, &kde; offers full customization of <quote>key
+bindings.</quote> A key binding or shortcut is a combination of an
+action with a key or a combination of keys.</para>
+
+</sect2>
+
+<sect2 id="key-bindings-use-globapp">
+<title>Standard Shortcuts and Global Shortcuts</title>
+
+<para>Standard shortcuts and Global shortcuts work just the same. 
+Actually, in a certain way standard or application shortcuts are 
+<quote>global</quote> as well. The only
+difference is:</para>
+
+<itemizedlist>
+<listitem><para><quote>Standard keyboard shortcuts</quote> refer to actions
+that are often available in applications, such as Save, Print, Copy
+&etc;</para></listitem> 
+<listitem><para><quote>Global keyboard shortcuts</quote> are shortcuts for
+actions that make sense even when no application is opened. These
+shortcuts usually refer to actions like switching desktops, manipulating
+windows &etc;</para></listitem> 
+</itemizedlist>
+
+<para>Please note, that the application shortcuts configured here are
+<emphasis>only</emphasis> the standard actions often found in
+applications. Most applications will define their own actions as well,
+for which you have to customize key bindings using the application's
+key bindings dialog.</para>
+
+<sect3 id="key-bindings-standard">
+<title>Standard Keyboard Shortcuts page</title>
+<para>At the top of this dialog you see an input box, where you can
+search interactively for shortcut names (&eg; Copy) or combination of keys 
+(&eg; <quote><userinput>Ctrl+C</userinput></quote>) by typing them literally here.</para>
+<para>Below the search box you can see a list of key bindings, &ie; associations between actions 
+(&eg; Copy) shown in the <guilabel>Actions</guilabel> column and keys or combination of keys 
+(&eg; <keycombo action="simul">&Ctrl;<keycap>C</keycap> </keycombo>) shown in the 
+<guilabel>Shortcut</guilabel> or <guilabel>Alternate</guilabel> column.
+</para>
+<!-- Global column is empty what's that???-->
+</sect3>
+
+<sect3 id="key-bindings-global">
+<title>Global Keyboard Shortcuts page</title>
+<para>At the top of this page is a drop down box which allows you
+to select a <guilabel>KDE component</guilabel> like KWin, Plasma Desktop &etc;
+The defined shortcuts for the selected component are displayed in the 
+<guilabel>Action</guilabel> and <guilabel>Global</guilabel> column in the list view. 
+Click the <guilabel>File</guilabel> drop down box at the right to import/export a 
+Scheme, set all shortcuts to none and remove a component.</para>
+<para>This page has the same search box as the <guilabel>Standard Keyboard 
+Shortcuts</guilabel> tab.</para>
+
+</sect3>
+
+<sect3 id="key-bindings-use-confkeys">
+<title>Configuring Key Bindings</title>
+
+<para>Configuring key bindings is pretty easy. In the middle of
+these &systemsettings; modules you will find a list of available
+actions. If there's a key binding configured for that action you will
+find it in the columns right to it. Just select the action you want to
+configure.</para>
+
+<para>After you have selected an action in the list you will notice that 
+this item is highlighted and you see two additional check boxes below 
+this item in the list view. There you can configure a
+combination of keys or maybe no key binding at all for the selected
+action. </para>
+
+<itemizedlist>
+
+<listitem><para><guilabel>Default</guilabel>: the selected action
+will be associated with &kde;'s default value. This is a good choice
+for most actions, as &kde; comes with reasonable key bindings we have
+thought about. </para></listitem>
+
+<listitem><para><guilabel>Custom</guilabel>: if this option is
+enabled, you can create a key combination for the selected
+action. Click on the button labeled either <guibutton>None</guibutton> 
+or labeled with the previously selected custom shortcut. Now the button label
+changes to <guibutton>Input</guibutton>. Then press any modifier key 
+(&ie; &Shift;, &Ctrl;, or &Alt;) and then normal key or a function key (&eg; <keycap>F11</keycap>) 
+you want to assign to this key combination.</para>
+<para>Clicking on the <guilabel>Alternate</guilabel> column of a row in the list
+allows to edit the second shortcut for the action.</para></listitem>
+</itemizedlist>
+
+</sect3>
+<!-- changed in kde4
+<sect3 id="key-bindings-use-confschemes">
+<title>Configuring Schemes</title>
+
+<para>A key binding scheme is a set of key bindings that you can
+select by name. &kde; comes with several pre-defined key binding
+schemes. In addition to these bundled schemes, you will always see a scheme named
+<guilabel>Current scheme</guilabel> that represents the set of key
+bindings you are using right now (&ie; not the current settings you
+are playing with, but what you've been using up to now). </para>
+
+<para>When you are playing with the key bindings for the first time
+you don't have to be afraid of changing the default bindings: &kde;
+won't let you overwrite the defaults, so you can always switch back to
+the factory presets. By choosing <guilabel>Current scheme</guilabel>
+you can return to the set of key bindings you've been using up to
+now. However, be careful not to select a scheme when you've made
+changes to the key bindings you don't want to lose.</para>
+
+<para>When you are satisfied with a set of key bindings you've
+created, you may want to save them to a scheme of your own, so that
+you can still experiment with the bindings and always return to a
+certain scheme. You can always do this by clicking on the
+<guibutton>Add</guibutton> button.  You will be prompted for a name
+and then the new scheme will appear in the key schemes listbox. You
+can remove your own schemes again by selecting a scheme and clicking
+the <guibutton>Remove</guibutton> button. Click the <guibutton>Save
+changes</guibutton> button to save any changes you have made to the
+currently selected scheme. Note that you can not remove or save
+changes to <guilabel>KDE default</guilabel> or to <guilabel>Current
+scheme</guilabel>.</para>
+
+<important><para>If you want to save your changes while a read-only
+scheme is selected, you always have to add a new scheme first! If you
+select one of your own schemes because you want to save the changes to
+that one, the control module will switch to the key bindings of that
+scheme, discarding your changes.</para></important> 
+</sect3>
+-->
+<!--not in kde 4
+</sect2>
+<sect2>
+<title>Modifier Keys</title>
+
+<para>Different keyboards offer different sets of modifier keys.  A
+&Mac; keyboard, for example, does not have a &Ctrl; key, and instead
+has an <keycap>Option</keycap> key.  Here you can see what the
+available modifier keys for the current keyboard are.</para>
+
+<para>If you enable <guilabel>Macintosh keyboard</guilabel> the list
+of modifiers will change.</para>
+
+<para>If you have enabled the &Mac; keyboard, you can further enable
+<guilabel>MacOS-style modifier usage</guilabel>, to make &kde; behave
+more like &MacOS;.</para>
+
+<para>Finally, you can change what a keypress sends to the &X-Server;
+in the <guilabel>X Modifier Mapping</guilabel> section.  A common
+example is to reconfigure the <keycap>Caps Lock</keycap> key, which is
+rarely used, to be another &Ctrl; key.  This is especially nice if you
+are a touch typist, as <keycap>Caps Lock</keycap> is much easier to
+reach than either of the &Ctrl; keys on a standard keyboard.</para>
+
+</sect2>
+-->
+</sect2>
+</sect1>
+
+</article>

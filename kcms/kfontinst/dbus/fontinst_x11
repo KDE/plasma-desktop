@@ -1,0 +1,62 @@
+#!/bin/sh
+
+#
+# KFontInst - KDE Font Installer
+#
+# This script is used to configure a font folder for X11. The script calls
+# the standard mkfontscale and mkfontdir applications, and then removes
+# any disabled (ie. hidden) fonts from the resultant fonts.dir and fonts.scale
+# files.
+#
+# Copyright 2009 Craig Drummond <craig@kde.org>
+#
+# ----
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; see the file COPYING.  If not, write to
+# the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+# Boston, MA 02110-1301, USA.
+#
+
+if [ $# -eq 0 ] || [ "$1" = "-h" ] || [ "$1" = "--help" ] ; then
+    echo "KDE Font Installer helper application - used to configure X11 font folders."
+    echo ""
+    echo "Usage: $1 <folder> [<folder> ... <folder>]"
+fi
+
+IFS="
+"
+
+suffix=".fontinst-$$"
+
+for d in $* ; do
+    for f in fonts.scale fonts.dir ; do
+        # Call standard xorg app...
+        if [ "$f" = "fonts.scale" ] ; then
+            mkfontscale "$d"
+        else
+            mkfontdir "$d"
+        fi
+
+        if [ -f "$d/$f" ] ; then
+            # Remove any disabled (ie. hidden) fonts
+            egrep "\-" "$d/$f" | egrep "^[^\.]" > "$d/$f$suffix"
+            wc -l "$d/$f$suffix" | awk '{print $1}' > "$d/$f"
+            cat "$d/$f$suffix" >> "$d/$f"
+            rm "$d/$f$suffix"
+        fi
+    done
+done
+
+# Tell X to refresh its font list
+xset fp rehash

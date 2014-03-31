@@ -1,0 +1,112 @@
+<!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN" "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+<node>
+  <interface name="org.kde.fontinst">
+    <signal name="fontList">
+      <arg name="pid" type="i" direction="out"/>
+      <arg name="families" type="a(ba(sa(utba(ssi))))" direction="out"/>
+      <annotation name="com.trolltech.QtDBus.QtTypeName.Out1" value="const QList&lt;KFI::Families&gt; &amp;"/>
+      <annotation name="com.trolltech.QtDBus.QtTypeName.In1" value="const QList&lt;KFI::Families&gt; &amp;"/>
+    </signal>
+    <signal name="status">
+      <arg name="pid" type="i" direction="out"/>
+      <arg name="value" type="i" direction="out"/>
+    </signal>
+    <signal name="fontStat">
+      <arg name="pid" type="i" direction="out"/>
+      <arg name="family" type="(sa(utba(ssi)))" direction="out"/>
+      <annotation name="com.trolltech.QtDBus.QtTypeName.Out1" value="const KFI::Family &amp;"/>
+      <annotation name="com.trolltech.QtDBus.QtTypeName.In1" value="const KFI::Family &amp;"/>
+    </signal>
+    <signal name="fontsAdded">
+      <arg name="families" type="(ba(sa(utba(ssi))))" direction="out"/>
+      <annotation name="com.trolltech.QtDBus.QtTypeName.Out0" value="const KFI::Families &amp;"/>
+      <annotation name="com.trolltech.QtDBus.QtTypeName.In0" value="const KFI::Families &amp;"/>
+    </signal>
+    <signal name="fontsRemoved">
+      <arg name="families" type="(ba(sa(utba(ssi))))" direction="out"/>
+      <annotation name="com.trolltech.QtDBus.QtTypeName.Out0" value="const KFI::Families &amp;"/>
+      <annotation name="com.trolltech.QtDBus.QtTypeName.In0" value="const KFI::Families &amp;"/>
+    </signal>
+    <method name="list">
+      <annotation name="com.trolltech.QtDBus.QtTypeName.Out0" value="QList&lt;KFI::Families&gt;"/>
+      <annotation name="com.trolltech.QtDBus.QtTypeName.In0" value="QList&lt;KFI::Families&gt;"/>
+      <arg name="folders" type="i" direction="in"/>
+      <arg name="pid" type="i" direction="in"/>
+      <annotation name="org.freedesktop.DBus.Method.NoReply" value="true"/>
+    </method>
+    <method name="stat">
+      <annotation name="com.trolltech.QtDBus.QtTypeName.Out0" value="KFI::Family"/>
+      <annotation name="com.trolltech.QtDBus.QtTypeName.In0" value="KFI::Family"/>
+      <arg name="name" type="s" direction="in"/>
+      <arg name="folders" type="i" direction="in"/>
+      <arg name="pid" type="i" direction="in"/>
+      <annotation name="org.freedesktop.DBus.Method.NoReply" value="true"/>
+    </method>
+    <method name="install">
+      <arg name="file" type="s" direction="in"/>
+      <arg name="createAfm" type="b" direction="in"/>
+      <arg name="toSystem" type="b" direction="in"/>
+      <arg name="pid" type="i" direction="in"/>
+      <arg name="checkConfig" type="b" direction="in"/>
+      <annotation name="org.freedesktop.DBus.Method.NoReply" value="true"/>
+    </method>
+    <method name="uninstall">
+      <arg name="family" type="s" direction="in"/>
+      <arg name="style" type="u" direction="in"/>
+      <arg name="fromSystem" type="b" direction="in"/>
+      <arg name="pid" type="i" direction="in"/>
+      <arg name="checkConfig" type="b" direction="in"/>
+      <annotation name="org.freedesktop.DBus.Method.NoReply" value="true"/>
+    </method>
+    <method name="uninstall">
+      <arg name="name" type="s" direction="in"/>
+      <arg name="fromSystem" type="b" direction="in"/>
+      <arg name="pid" type="i" direction="in"/>
+      <arg name="checkConfig" type="b" direction="in"/>
+      <annotation name="org.freedesktop.DBus.Method.NoReply" value="true"/>
+    </method>
+    <method name="move">
+      <arg name="family" type="s" direction="in"/>
+      <arg name="style" type="u" direction="in"/>
+      <arg name="toSystem" type="b" direction="in"/>
+      <arg name="pid" type="i" direction="in"/>
+      <arg name="checkConfig" type="b" direction="in"/>
+      <annotation name="org.freedesktop.DBus.Method.NoReply" value="true"/>
+    </method>
+    <method name="enable">
+      <arg name="family" type="s" direction="in"/>
+      <arg name="style" type="u" direction="in"/>
+      <arg name="inSystem" type="b" direction="in"/>
+      <arg name="pid" type="i" direction="in"/>
+      <arg name="checkConfig" type="b" direction="in"/>
+      <annotation name="org.freedesktop.DBus.Method.NoReply" value="true"/>
+    </method>
+    <method name="disable">
+      <arg name="family" type="s" direction="in"/>
+      <arg name="style" type="u" direction="in"/>
+      <arg name="inSystem" type="b" direction="in"/>
+      <arg name="pid" type="i" direction="in"/>
+      <arg name="checkConfig" type="b" direction="in"/>
+      <annotation name="org.freedesktop.DBus.Method.NoReply" value="true"/>
+    </method>
+    <method name="removeFile">
+      <arg name="family" type="s" direction="in"/>
+      <arg name="style" type="u" direction="in"/>
+      <arg name="file" type="s" direction="in"/>
+      <arg name="fromSystem" type="b" direction="in"/>
+      <arg name="pid" type="i" direction="in"/>
+      <arg name="checkConfig" type="b" direction="in"/>
+      <annotation name="org.freedesktop.DBus.Method.NoReply" value="true"/>
+    </method>
+    <method name="reconfigure">
+      <arg name="pid" type="i" direction="in"/>
+      <arg name="force" type="b" direction="in"/>
+      <annotation name="org.freedesktop.DBus.Method.NoReply" value="true"/>
+    </method>
+    <method name="saveDisabled" />
+    <method name="folderName">
+      <arg name="sys" type="b" direction="in"/>
+      <arg type="s" direction="out"/>
+    </method>
+  </interface>
+</node>

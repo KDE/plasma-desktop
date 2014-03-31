@@ -1,0 +1,82 @@
+Plasmoids
+=========
+
+What is a widget?
+================
+In the context of Plasma, a "widget" is a single, self-contained graphical object on the canvas. They can be added and removed individually, configured separately from other widgets, etc. These "mini appliations" are sometimes referred to in other widget platforms as "applets", "apps", "gadgets", "karambas", "desklets". We chose the word "widget" for Plasma as it is used by other some other existing systems.
+
+The API of a widget is defined by the host "ScriptEngine", with the exception of native Plasma widgets written in C++ which allows plugins in loadable librareis which use the API of the Plasma library directly. Currently Plasma supports both such "native" widgets written in C++, ones written in various dynamic languages (Plasmoids) as well as:
+
+* SuperKaramba's karambas
+* Enlightenment 17 edje content
+* MacOS dashboard widgets (though not all)
+
+These are loaded via host AppletScriptEngine plugins that bridge between the widget itself and Plasma's canvas.
+
+What is a Plasmoid?
+==================
+A Plasmoid is a widget that can be loaded into Plasma that uses the native Plasma API and comes packaged in a single archive file that includes the code, metadata, images, configuration defintions, etc. Plasmoids may be currently written in the following languages / APIs:
+
+* HTML/JavaScript widgets (essentially "web pages for Plasma"): they are limited to a small subset of the Plasma library API and DataEngines
+* Simplified JavaScript: these are written in JavaScript but use a managed set of API from the Plasma library and elsewhere; these are the most likely to be widely portable between Plasma instances and are the most securable.
+* Full JavaScript: a work in progress, this provides full access to the Plasma, KDE and Qt APIs
+* Ruby: full access to the Plasma, KDE, Qt and other Ruby APIs are provided
+* Python: full access to the Plasma, KDE, Qt and other Python APIs are provided
+
+There are tutorials for the various APIs avaiable here: http://techbase.kde.org/Development/Tutorials/Plasma
+
+The Plasmoid Package
+====================
+A Plasmoid package is a single archive file compressed using the zip compression algorithm. By convention they have a .plasmoid suffix. 
+
+The layout of a Plasmoid package is as follows, starting with the root (/) being the top of the zip archive:
+
+metadata.desktop: a .desktop file (INI format) following the standard KPluginInfo layout. See more about this file below.
+contents/
+    code/ -> where all the scripts are kept
+        main -> by default, the name of the script to start the Plasmoid from
+    config/ -> KConfigXT and INI files describing configuration variables
+        main.xml -> main config file, KConfigXT xml
+        default-configrc -> default configuration, INI file
+    configui/ -> Qt Designer files describing configuration dialog pages
+        config.ui -> main configuration UI
+    images/ -> image files of various formats
+    translations/ -> po files for individual translations; each translation should appear in subdirectories named after the language code
+    ui/ -> user interface description files, usually Qt Designer
+
+The Metadata File
+=================
+The metadata.desktop file contains information about the widget that is critical to proper function. This file is a standard "INI format" file with one group in it called [Desktop Entry]. A typical such file appears below:
+
+[Desktop Entry]
+Name=JavaScript Animations
+Comment=An example showing how animations can be used from JavaScript
+Encoding=UTF-8
+Icon=plasma
+ServiceTypes=Plasma/Applet
+Type=Service
+X-KDE-PluginInfo-Author=Aaron Seigo
+X-KDE-PluginInfo-Category=Examples
+X-KDE-PluginInfo-Depends=
+X-KDE-PluginInfo-Email=plasma-devel@kde.org
+X-KDE-PluginInfo-EnabledByDefault=true
+X-KDE-PluginInfo-License=BSD
+X-KDE-PluginInfo-Name=javascript-animations-example
+X-KDE-PluginInfo-Version=0.1
+X-KDE-PluginInfo-Website=http://plasma.kde.org/
+X-Plasma-API=javascript
+
+The icon can either refer to a file in the root of the package by the same name, or a standard icon theme icon name. 
+
+Important fields include:
+
+ * X-KDE-PluginInfo-Name= what the widget will be referred to internally and MUST be unique; as such a "reverse domain name" approach is a good idea, e.g. "org.foo.somewidget". 
+ * X-Plasma-API entry defines which language and API the widget is written for and dictates which ScriptEngine will be loaded for it.
+
+Useful optional fields include:
+ * X-Plasma-MainScript= path relative to the contents/ dir of the package; used to override the default of "contents/code/main" 
+
+Installing and Replacing
+========================
+Plasmoid packages can be installed and removed from the Add Widgets interfaces of various Plasma applications, such as plasma desktop, or directly using the plasmapkg binary. See the output of `plasmapkg --help` for more information on using that utility.
+

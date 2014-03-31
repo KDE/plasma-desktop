@@ -1,0 +1,642 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY kappname "&plasma;">
+  <!ENTITY package "kde-module">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % English "INCLUDE">
+]>
+<book id="plasma-desktop" lang="&language;">
+
+<bookinfo>
+<title>The &plasma; Handbook</title>
+
+<authorgroup>
+<author>
+<personname>
+<firstname>Sebastian</firstname>
+<surname>Kügler</surname>
+</personname>
+<email>sebas@kde.org</email>
+</author>
+<author><firstname>Claus</firstname> <surname>Christensen</surname></author>
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
+</authorgroup>
+
+<copyright>
+<year>2008&ndash;2010</year>
+<holder>Sebastian Kügler</holder>
+</copyright>
+
+<legalnotice>&FDLNotice;</legalnotice>
+
+<date>2013-06-19</date>
+<releaseinfo>&kde; 4.11</releaseinfo>
+
+<abstract>
+<para>
+&plasma;, the most visible pillar of &kde;, is the core interface to the desktop.
+</para>
+</abstract>
+
+<keywordset>
+<keyword>KDE</keyword>
+<keyword>Plasma</keyword>
+<keyword>Plasmoid</keyword>
+<keyword>Widget</keyword>
+<keyword>Containments</keyword>
+<keyword>Desktop</keyword>
+<keyword>Runner</keyword>
+<keyword>Kicker</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title>Introduction</title>
+
+<para>
+&plasma; is one of the key technologies of &kde; Software Compilation 4 (also known as the
+“Pillars of &kde;”), and one of the most visible to users. As &plasma;
+treats the user interface differently than a traditional desktop, there may be
+confusion on what &plasma; is, what it does, and how to perform common tasks.
+</para>
+
+<para>
+This document attempts to address these problems by providing answers to the
+most common questions.
+</para>
+</chapter>
+
+<chapter id="using-kapp">
+<title>Using &plasma;</title>
+
+<sect1 id="plasma-components">
+<title>&plasma; Components</title>
+
+<sect2 id="plasmoids-and-containments">
+<title>&plasma; Widgets and Containments</title>
+
+<para>
+The essence of &plasma; revolves around two basic concepts:
+</para>
+
+<variablelist>
+<varlistentry>
+<term>&plasma; Widgets</term>
+<listitem>
+<para>
+Applets, or small applications that live on the desktop.
+</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>Containments</term>
+<listitem>
+<para>
+Applets that act as the container for the &plasma; widgets
+</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<para>
+On a default desktop, there are two main elements: the Panel and the Desktop
+itself. Both are containments in the &plasma; sense.
+</para>
+
+</sect2>
+
+<sect2 id="default-plasma-desktop">
+<title>Default &plasma; Desktop</title>
+
+<para><note><para>The &plasma; Desktop can be configured in countless ways. The screenshot seen below shows a fairly standard desktop. Some distributions apply extensive customizations, so your desktop may look different.
+</para>
+<para>Similarly, the graphical appearance of the interface elements can be styled. These screenshots uses the &kde; default style, Oxygen.</para></note>
+</para>
+<para>
+<screenshot>
+<screeninfo>A fairly standard &plasma; Desktop</screeninfo>
+  <mediaobjectco>
+    <imageobjectco>
+      <areaspec units="other" otherunits="imagemap">
+        <area id="im1" linkends="panel-kickoff" coords="0,519,31,551"/> <!-- #1 kickoff launcher #-->
+        <area id="im2" linkends="panel-kickoff" coords="0,735,30,598"/><!-- #1 kickoff launcher icon -->
+        <!--area linkends="FIXME" coords="37,483,69,516"/--><!-- #2 panel icons # -->
+        <!--area linkends="FIXME" coords="23,558,83,597"/--><!-- #2 panel icons red box -->
+        <!--area linkends="FIXME" coords="97,666,137,707"/--><!-- #3 pager # -->
+        <!--area linkends="FIXME" coords="76,519,107,551"/--><!-- #3 pager plasmoid -->
+        <area id="im3" linkends="panel-taskbar" coords="288,519,320,551"/><!-- #4 task manager # -->
+        <area id="im4" linkends="panel-taskbar" coords="102,558,615,598"/><!-- #4 task manager red box -->
+        <area id="im5" linkends="panel-system-tray" coords="652,519,683,551"/><!-- #5 system tray # -->
+        <area id="im6" linkends="panel-system-tray" coords="618,557,728,598"/><!-- #5 system tray red box -->
+        <area id="im7" linkends="panel-digital-clock" coords="739,534,772,566"/><!-- #6 clock # -->
+        <area id="im8" linkends="panel-digital-clock" coords="729,573,781,598"/><!-- #6 clock plasmoid -->
+        <area id="im9" linkends="toolboxes" coords="750,477,782,508"/><!-- #7 panel cashew # -->
+        <area id="im10" linkends="toolboxes" coords="783,573,800,598"/><!-- #7 panel cashew icon --> 
+        <!--area linkends="FIXME" coords="733,11,765,44"/--><!-- #8 desktop cashew # -->
+        <!--area linkends="FIXME" coords="772,0,800,25"/--><!-- #8 desktop cashew icon -->
+        <!--area linkends="FIXME" coords="374,88,406,119"/--><!-- #9 folder view # -->
+        <!--area linkends="FIXME" coords="10,18,361,204"/--><!-- #9 folder view plasmoid -->
+       <area id = "im11" linkends="panel-kickoff" coords="0,665,40,707"/> <!-- #1 kickoff launcher #-->
+      </areaspec>
+    <imageobject>
+      <imagedata fileref="plasma-desktop-annotated.png" format="PNG"/>
+    </imageobject>
+    </imageobjectco>
+  </mediaobjectco>
+</screenshot>
+</para>
+<orderedlist>
+<listitem><para>The program starter. Usually this will be <link linkend="panel-kickoff">&kickoff;</link>.</para></listitem>
+<listitem><para>A couple of icons giving easy access to often used applications</para></listitem>
+<listitem><para>The Pager widget</para></listitem>
+<listitem><para>The <link linkend="panel-taskbar">Task Manager</link>, which shows the titles of windows belonging to the applications currently running. No application had opened a window, when the screenshot was taken</para></listitem>
+<listitem><para>The <link linkend="panel-system-tray">System Tray</link></para></listitem>
+<listitem><para>The <link linkend="panel-digital-clock">Digital Clock</link> widget</para></listitem>
+<listitem><para>The <link linkend="toolboxes">Panel Toolbox</link></para></listitem>
+<listitem><para>The Desktop Toolbox (previously known as a Cashew)</para></listitem>
+<listitem><para>A Folder View widget, showing the content of the Desktop folder</para></listitem>
+</orderedlist>
+
+</sect2>
+</sect1>
+
+<sect1 id="panel">
+<title>The Panel</title>
+
+<para id="panel-kickoff">
+The default panel holds a few &plasma; widgets: starting from the left, there is the
+&kickoff; application launcher. You can use it to start applications, open recently
+opened files and the usual logout/shutdown options. There is also a structure
+that allows you to browse through your applications. The layout has been
+optimized for the use case that is most common: starting an application. The
+default tab is the <guilabel>Favorites</guilabel> tab that holds the most-used
+entries. In the beginning, you'll probably find yourself using the
+<guilabel>Applications</guilabel> tab more often.
+Once you have found out what your most frequently started applications are,
+<mousebutton>right</mousebutton> click on the items and select the
+<guimenuitem>Add to Favorites</guimenuitem> to add them to your
+<guilabel>Favorites</guilabel> (or directly into the panel or on the desktop.
+Note that you need to <quote>unlock</quote> &plasma; by means of <mousebutton>right</mousebutton>
+clicking on the desktop for any kind of modification). If you prefer the
+traditional menu-style application launcher, change it by
+<mousebutton>right</mousebutton> clicking on the menu button and selecting
+<guimenuitem>Switch to Classic Menu Style</guimenuitem>.
+</para>
+
+<para id="panel-taskbar">
+The taskbar is another widget on the panel. It shows an area for all open windows on
+all desktops by default. You can make it show all open windows on the current
+desktop only by checking <guimenuitem>Only show tasks from the
+current desktop</guimenuitem> when you right click on the task manager, between
+two windows. The size of the text on the taskbar items can be set
+in &systemsettings; under the
+<menuchoice><guimenu>Application Appearance</guimenu><guisubmenu>Fonts</guisubmenu>
+<guimenuitem>Taskbar</guimenuitem></menuchoice>. Right-clicking on the taskbar
+brings the Settings dialog where you can choose several options to customize
+your taskbar.
+<screenshot>
+<screeninfo>Here is a screenshot of the taskbar settings dialog</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="taskbar-settings.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase>Taskbar settings dialog</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para id="panel-system-tray">
+Another default panel item is the <application>System Tray</application>, which
+is used by traditional applications and widgets as a dock. Right clicking on the
+<application>System Tray</application> allows you to open the settings dialog,
+where you can set entries to display and their visibility.
+</para>
+<screenshot>
+<screeninfo>System Tray settings dialog</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="system-tray-settings.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase>System Tray settings dialog</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+<para id="device-notifier">
+An icon located usually in the system tray is the <application>Device Notifier</application>.
+Plug in a <acronym>USB</acronym> disk and a dialog will open that allows you to
+open the device in &dolphin; or another associated application.
+</para>
+<para>
+<screenshot>
+<screeninfo></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="device_notifier_widget.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para>The <application>Device Notifier</application> is used for handling pluggable devices such as <acronym>USB</acronym> pendrives (also called flash drives or thumb drives), digital cameras, external <acronym>USB</acronym> hard drives, &etc; It also comes into play when a medium such as a &CD; or DVD is loaded into an optical drive.
+</para>
+<para>When you plug in an external device, or load a new medium into a drive, the <guilabel>Notifier</guilabel> window pops up (you can also open it explicitly by clicking on its Panel icon.) It stays open while the cursor is over it, otherwise it hides itself after a few seconds.
+</para>
+<para>The <guilabel>Notifier</guilabel> window shows a list of all the devices it currently knows about. Moving the mouse cursor over a device will highlight how many possible actions are associated with that device.
+</para>
+<para>
+<screenshot>
+<screeninfo></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="device_notifier_widget_actions.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para>Clicking anywhere in the shaded box around the device name (but not on the eject/unmount icon if present) expands the entry to show the list of possible actions for that device.  The set of actions depends on the device; it is configurable from the <application>Device Notifier</application>'s context menu or from the &systemsettings; modules <ulink url="help:/kcontrol/solid-actions/index.html">Device Actions</ulink> and <ulink url="help:/kcontrol/solid-device-automounter/index.html">Removable Devices</ulink>. Simply select one with the mouse or keyboard to launch that action.
+</para>
+<para>There is also a small icon to the right of each entry showing whether that device is currently accessible (or <emphasis>mounted</emphasis>) or not. Only when a device is not mounted is it safe to physically disconnect it from the computer. Clicking on the icon causes the device to be unmounted and/or the medium to be ejected if it is currently mounted, and will mount it if it is not. Note that unmounting/ejecting might fail if the device still has open files on it, &eg; if a large file copy hasn't finished. In most cases you can just wait a while and try again. When an unmounting has succeeded, a success icon will be shown on the <application>Device Notifier</application>'s icon.
+</para>
+
+<para>The <application>System Tray</application> normally holds some more entries like
+&klipper;, &kmix; &etc;</para>
+
+<para>Some of the default entries in the <application>System Tray</application> are hidden
+to save space in the bar. To display these entries click on the small white triangle
+<inlinemediaobject><imageobject><imagedata fileref="system-tray-up-arrow.png" format="PNG"/>
+</imageobject></inlinemediaobject>, then use
+the &LMB; to launch a widget or the &RMB; to open its settings dialog.</para>
+
+<para id="panel-digital-clock">
+The right-most &plasma; widget in the default panel holds the <application>Digital
+Clock</application>.
+This clock can display the time in different timezones as well as have its size
+changed. The clock will adjust its font size to the area it is given by the
+surrounding containment (that is the panel in this case). If you choose to
+display the date, this date will be rendered using the <guimenuitem>Small
+font</guimenuitem> option from the &systemsettings; <guilabel>Font</guilabel>
+dialog. The time will take the rest of the space. So in the end, you'll choose
+yourself the amount of information displayed, and if that fits. If you want to
+display more information, make the panel larger or put the clock on the desktop
+where it can grow freely.
+</para>
+
+<para>
+An optional item on your panel is the <application>Pager</application>.
+It allows you to switch between your virtual desktops.
+If you change the layout of the <application>Pager</application>
+through the <guimenuitem>Number of rows</guimenuitem> option,
+which will also affect the layout and animations that are shown in &kwin;’s
+<guimenuitem>Desktop Grid</guimenuitem> effect.<!-- &ndash; (Switch on desktop effect,
+press <keycombo action="simul">&Ctrl;<keycap>F8</keycap></keycombo> to see it.)
+don't see that in 4.7-->
+For larger pagers, selecting <guimenuitem>Display windows icons</guimenuitem>
+typically makes sense.
+</para>
+
+<!-- other items in a kde compiled from sources -->
+<!-- Activity Manager -->
+<!-- Notifications -->
+<!-- Show the Desktop -->
+
+</sect1>
+
+<sect1 id="toolboxes">
+<title>The Panel Toolboxes</title>
+
+<para>If your desktop is unlocked (you can do that by
+<mousebutton>right</mousebutton> clicking on the desktop, or when no
+application has the focus, with <keycombo
+action="simul">&Alt;<keycap>D</keycap></keycombo>, <keycap>L</keycap>), a small &plasma;
+logo will appear in the bottom right corner in the panel (it is commonly named the
+“cashew”). Click on this cashew, and the panel controller opens.</para>
+
+<screenshot>
+<screeninfo>Panel Settings</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="panel-settings.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase>Panel Settings</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+
+<para>The panel controller allows you to reposition, resize and realign the panel. The
+&plasma; widgets living in this panel will adjust their size automatically.
+&plasma; widgets have basic knowledge about sizing, provided by the containment. They
+are programmed to take advantage of that size, and inform the applet about how
+much space they possibly need. In the end, the containment gives a possible size
+to the applets, the applets obey.</para>
+
+</sect1>
+
+<sect1 id="add-applets">
+<title>Adding Applets</title>
+
+<para>
+Unlock the desktop and you'll be able to add and remove &plasma; widgets from panel
+or desktop. You add &plasma; widgets by simply dragging them where you want them.
+<mousebutton>Right</mousebutton> click on an widget to remove it.
+
+<screenshot>
+<screeninfo>Add Widgets</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="add-widgets.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase>Add Widgets</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+
+The <guibutton>Get New Widgets</guibutton> button allows you to add widgets
+you've previously downloaded and download new &plasma; widgets.
+Currently it supports native &plasmagik; packages
+and some &Mac; OS&nbsp;X dashboard widgets. Widgets you install this way can then be
+accessed just like regular, preinstalled widgets.
+</para>
+</sect1>
+
+<sect1 id="desktop">
+<title>The Desktop</title>
+
+<para>
+The desktop is in fact another containment. One that does not put size
+constraints on the applets. Applets can be moved and sized freely. On the
+unlocked desktop, &plasma; widgets will show a frame when you move the mouse over
+them. This applet handle allows you to move, resize, relocate and realign the
+panel. It also allows you to drag &plasma; widgets on the desktop. The buttons in the
+corner are used to resize, rotate configure and remove the applet. When
+rotated, a &plasma; widget will act magnetic towards 12 o'clock, so it is easy to get
+them back into sensible position. By default, most applets keep their aspect
+ratio when they are being resized. If you want to freely resize an applet,
+hold the &Ctrl; key pressed while resizing.
+</para>
+
+<para>
+Right clicking on the desktop also offers you to configure aspects such as the
+wallpaper and the layout used, and the mouse actions. It offers to download new
+wallpapers through &knewstuff;.
+</para>
+
+<screenshot>
+<screeninfo>Desktop Settings</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="desktop-settings.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase>Desktop Settings</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+
+<para>To change the &plasma; theme or download a new one through &knewstuff;
+open the <menuchoice><guimenu>Workspace Appearance</guimenu> <guimenuitem>Desktop
+Theme</guimenuitem></menuchoice> page in the &systemsettings;.</para>
+
+<para>
+With open applications, it quickly gets hard to see the &plasma; widgets on your
+desktop. The <emphasis role="bold">Dashboard</emphasis> gets those &plasma; widgets
+in front of you, much like the <guilabel>Show desktop</guilabel> functionality
+you are used to from traditional desktops.
+</para>
+
+</sect1>
+
+<sect1 id="krunner">
+<title>&krunner;</title>
+
+<para>
+&krunner; is a versatile mini command-line. You can use it to start applications,
+open web pages, access bookmarks, search through your desktop data, calculate
+short equations, and many more.Pressing <keycombo
+action="simul">&Alt;<keycap>F2</keycap></keycombo> opens the &krunner; dialog.
+You just start typing and &krunner; will start searching matches as soon as
+you've entered more than two characters. You can open the settings dialog to
+learn about &krunner;’s functionality, provided by plugins. You can
+navigate through the matches using the tab and arrow keys.
+</para>
+<!-- whitout tab no arrow keys-->
+<para>
+If you want to know what is going on on your system, there is the <guibutton>Show
+System Activity</guibutton> button, giving you quick access to a list of windows
+and processes, with options to monitor their output and kill processes.
+</para>
+
+</sect1>
+
+<sect1 id="zooming-user-interface">
+<title>Activities</title>
+
+<para>
+The desktop toolbox, accessed via the upper right corner has a button for
+displaying your activities, of which &plasma; allows you to have more than one.
+Basically, that is multiple desktop containments hosting multiple sets of &plasma; widgets.
+Display the <quote>Activities</quote> bar, select one of the predefined activities
+or choose <guilabel>Create Activity</guilabel>
+to create a new containment, select your new containment and customize suiting your taste.
+&plasma;’s activities and &kwin;’s desktop grid are similar in that respect, but there
+is a fundamental difference. While virtual desktop are used to group and organize windows,
+&plasma;’s activities are used to group and organize &plasma; widgets. This way, you can
+switch between activities and have relevant &plasma; widgets supporting the task you are
+currently trying to accomplish. You can create a <quote>Free time</quote> activity, with
+comic strips, a puzzle and other &plasma; widgets, and a <quote>Work</quote> activity,
+with relevant <acronym>RSS</acronym> feeds, calculator and calendar, for example.
+</para>
+
+<para>
+To delete an activity, press the <guibutton>Stop Activity</guibutton> button on
+<quote>Activities</quote> bar (press <keycombo
+action="simul">&Alt;<keycap>D</keycap></keycombo> then <keycombo
+action="simul">&Alt;<keycap>A</keycap></keycombo> to open this bar) then click
+the red 'X' (or press <keycombo action="simul">&Alt;<keycap>D</keycap></keycombo>
+then <keycombo action="simul">&Alt;<keycap>R</keycap></keycombo>) and confirm the
+deletion.
+</para>
+
+</sect1>
+
+<!-- print shortcuts settings dialog in branch 4.7)
+Shortcuts for Plasma Desktop Shell
+Action          Shortcut      Global
+Activities ...  Alt+D, Alt+A  Meta+Q
+Activities ...  Alt+D, Alt+A  Meta+Q
+Activity Settings Alt+D, Alt+S
+Add Widgets ...   Alt+D, A
+Lock Widgets      Alt+D, L
+Lock Widgets      Alt+D, L
+Next Widget       Alt+D, N
+Previous Widget   Alt+D, P
+Remove this Activity  Alt+D, Alt+R
+Remove this Widget    Alt+D, R
+Run the Associated Application  Alt+D, T
+Run the Associated Application  Alt+D, T
+Widget Settings   Alt+D, S
+Why these duplicated entries?
+-->
+<sect1 id="shortcuts">
+<title>Shortcuts</title>
+
+<para>
+Most of &plasma;’s functionality is also accessible through keyboard
+shortcuts. The various combinations should be pressed in sequence, that
+is for example <keycombo action="simul">&Alt;<keycap>D</keycap></keycombo>, <keycap>A</keycap>
+means: Press &Alt; and <keycap>D</keycap>, release and press <keycap>A</keycap>.
+</para>
+<para>Currently, the following default shortcuts can be used:
+</para>
+
+<variablelist>
+<varlistentry>
+<term><keycombo action="simul">&Alt;<keycap>D</keycap></keycombo>, <keycap>A</keycap></term>
+<listitem><para>Add Widgets</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><keycombo action="simul">&Alt;<keycap>D</keycap></keycombo>, <keycap>R</keycap></term>
+<listitem><para>Remove Widget</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><keycombo action="simul">&Alt;<keycap>D</keycap></keycombo>, <keycap>L</keycap></term>
+<listitem><para>Lock/Unlock Widgets</para></listitem>
+</varlistentry>
+
+<!-- zoom still valid in 4.7?
+<varlistentry>
+<term><keycombo action="simul">&Alt;<keycap>D</keycap></keycombo>, <keycap>-</keycap></term>
+<listitem><para>Zoom out</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><keycombo action="simul">&Alt;<keycap>D</keycap></keycombo>, <keycap>+</keycap></term>
+<listitem><para>Zoom in</para></listitem>
+</varlistentry>
+-->
+<varlistentry>
+<term><keycombo action="simul">&Alt;<keycap>D</keycap></keycombo>, <keycap>N</keycap></term>
+<listitem><para>Next Widget</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><keycombo action="simul">&Alt;<keycap>D</keycap></keycombo>, <keycap>P</keycap></term>
+<listitem><para>Previous Widget</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><keycombo action="simul">&Alt;<keycap>D</keycap></keycombo>, <keycap>S</keycap></term>
+<listitem><para>Widget settings</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><keycombo action="simul">&Alt;<keycap>D</keycap></keycombo>, <keycombo action="simul">&Alt;<keycap>A</keycap></keycombo></term>
+<listitem><para>Activities</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><keycombo action="simul">&Alt;<keycap>D</keycap></keycombo>, <keycombo action="simul">&Alt;<keycap>R</keycap></keycombo></term>
+<listitem><para>Remove this Activity</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><keycombo action="simul">&Alt;<keycap>D</keycap></keycombo>, <keycombo action="simul">&Alt;<keycap>S</keycap></keycombo></term>
+<listitem><para>Activities Settings</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><keycombo action="simul"><keycap>Meta</keycap>&Tab;</keycombo></term>
+<listitem><para>Next Activity</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><keycombo action="simul"><keycap>Meta</keycap>&Shift;&Tab;</keycombo></term>
+<listitem><para>Previous Activity</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><keycombo action="simul">&Ctrl;<keycap>F12</keycap></keycombo></term>
+<listitem><para>Show Dashboard</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><keycombo action="simul">&Alt;<keycap>D</keycap></keycombo>, <keycap>T</keycap></term>
+<listitem><para>Run the Associated Application</para></listitem>
+</varlistentry>
+
+<!-- still valid in 4.7?
+<varlistentry>
+<term><keycombo action="simul">&Ctrl;<keycap>]</keycap></keycombo></term>
+<listitem><para>Next containment</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><keycombo action="simul">&Ctrl;<keycap>[</keycap></keycombo></term>
+<listitem><para>Previous containment</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term>
+<keycombo action="simul">
+&Shift;&Ctrl;<keycap>S</keycap>
+</keycombo>
+</term>
+<listitem><para>Containment settings</para></listitem>
+</varlistentry>
+-->
+</variablelist>
+
+<para>To change shortcuts, click with the &LMB; on the desktop <guilabel>Toolbox</guilabel>
+(the cashew usually at the top right of the desktop) and select <guilabel>Shortcut Settings</guilabel>.</para>
+
+</sect1>
+
+</chapter>
+
+<chapter id="credits">
+<title>Credits and License</title>
+
+<para>
+&plasma;
+</para>
+<para>
+Program copyright 2008 &Aaron.J.Seigo; &Aaron.J.Seigo.mail;
+</para>
+
+<para>
+Documentation Copyright &copy; 2008&ndash;2010 Sebastian Kügler <email>sebas@kde.org</email>
+</para>
+
+<!-- TRANS:CREDIT_FOR_TRANSLATORS -->
+
+&underFDL;
+
+</chapter>
+
+&documentation.index;
+</book>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

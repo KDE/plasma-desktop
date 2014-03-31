@@ -1,0 +1,61 @@
+Plasma and the Screensaver
+==========================
+
+There are three main pieces to the screensaver picture, two of which involve plasma.
+first is lockprocess, which manages the other two. second is the [k|x]screensaver binaries which just draw
+pretty pictures. third is plasma-overlay, which does the plasma stuff.
+
+lockprocess
+-----------
+This process manages plasma and the screensaver binaries, and ensures that once the screen is locked
+it *stays* locked until proper authentication is provided. It provides the unlock dialog too.
+If a screensaver or plasma-overlay
+crashes or becomes unresponsive, lockprocess will keep going, ensuring that a locked screen stays locked and can
+still be unlocked by the user. It's as small as possible to keep the chances of it itself crashing very small.
+The screensaver binaries are brought in via XEmbed, while communication with plasma-overlay happens
+over dbus.
+lockprocess also filters all keyboard and mouse events, passing them on to plasma-overlay as
+necessary. if it suspects that plasma-overlay is dead (ie. dbus failure), it won't pass on events,
+ensuring that the user never ends up with an unresponsive screensaver.
+
+plasma-overlay
+--------------
+This process is a plasma shell; it has a corona and a simple view, and loads its own containment.
+The containment used by plasma-overlay is very basic; just a customcontainment with a cashew
+and applet handles.
+
+the user can add applets, but not containments. there's configuration for transparency if you have
+compositing, or wallpaper if not (random wallpaper slideshow is my poor-man's-screensaver). all
+configuration and applet add/remove are disabled when the screen is locked.
+
+it communicates with lockprocess over dbus. lockprocess will send it into an idle mode after a while
+(where any events trigger the unlock dialog, and plasma-overlay uses a different transparency
+setting), and tell it to go into active mode when there's activity again. when an unlock action in
+plasma is activated, plasma-overlay asks lockprocess for permission, and lockprocess will ask the
+user for their password (or whatever other authentication method).
+
+when the screen is locked, plasma-overlay offers two actions to the user: leave screensaver and
+configure widgets. the first is what you'd expect; you enter your password and all of lockprocess goes
+away, letting you back into your desktop. the second is more like unlocking widgets in
+plasma-desktop: it brings you into configuration mode where you can add, remove and configure
+widgets. this config mode can also be reached from the screensaver kcm module. from config mode you
+can exit at any time without entering a password; you can also re-lock the screen, of course.
+
+if lockprocess vanishes from dbus, plasma-overlay will assume that it missed a signal to quit and
+will commit suicide. :) this is intentional; I got sick of dbus race conditions leaving me with a
+plasma-overlay hanging around if I moved the mouse just after the screensaver began to run.
+
+security
+---------
+
+Plasmoids on the screensaver obviously present a security risk. this is being minimized as described
+in the security document.
+what makes it interesting is that we're less concerned with malicious
+plasmoids and more with malicious (or mischevious) users; a locked screen left unattended should not
+end up with goatse on it, or files deleted.
+
+Future Work
+-----------
+* Multi-screen support would be awesome
+* Plasmify the unlock dialog (either by using plasma theming or by having plasma-overlay run it)
+

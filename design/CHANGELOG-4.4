@@ -1,0 +1,169 @@
+Significant changes in libplasma 3.2.0 / KDE SC 4.4
+===================================================
+libplasma
+---------
+* Features
+    * ToolTipManager and ToolTipContent: Tips can now be set as clickable, allowing the mouse to enter them and select an item
+    * Corona
+        * Supports defining default ContainmentAction sets
+    * DataEngine:
+        * DataEngine::forceImmediateUpdateOfAllVisualizations() allows an engine to push the current data in sources out to all
+          visualizations without waiting for their timeout period. Useful for changes that can not wait, such as time updates
+          or data that becomes available with network availability.
+        * DataContainer::forceImmediateUpdate() allows engines to do a forced update on just one source.
+    * ContainmentActions plugins: allows context menus and mouse interaction to be defined separately from the containment
+    * Added Separator widget.
+    * Wallpapers can now accept drops by defining X-Plasma-DropMimeTypes in their .desktop file and connecting to the
+      urlDropped(KUrl) signal
+    * Widgets can be published on the network and be accessed remotely. In the case of scripted plasmoids the entire plasmoid package will be sent over, and in any case, dataengines and services will be routed to the remote machine. This is all completely transparent to applets.
+    * The applet handle supports resize, rotate and move with multitouch gestures on platforms that supports them
+    * WindowEffects: a class that permits to control KWin effects in an eas way, hiding the Xatom management
+    * Adding new Plasma::Animator based on Qt 4.6 Animation API (a.k.a. kinetic). The following animations are implemented: fade, grow, slide, rotation, pulser.
+    * Package: contentsHash() provides access to a SHA1 hash of the contents of the package
+    * Applet::SetAssociatedApplication(): It's possible to associate an application and/or a list of urls to an applet, a new icon will appear in the applet handle.
+      It will open that application or urls.
+    * KRunner: X-Plasma-Args= can be used by runners to specify plugin-specific setup (used in mediawiki runner to point to a mediawiki instance)
+    * Wallpapers can now specify a list of wallpaper-plugin specific contextual actions to be added to the context menu.
+* Bugfixes
+    * Context menu handling on PopupApplets now matches what Applet gets
+
+Developer Documentation
+-----------------------
+
+Desktop Theme
+-------------
+    * NEW widgets/action-overlays used for overlays for icon actions, for instance select/deselect files in folderview
+    * NEW widgets/line-edit used to theme lineedits slider and editable comboboxes
+    * slider: new focus and hover indicators elements
+    * widgets/background: hint-overlay-pos-right and hint-overlay-pos-bottom to control where the overlay will be anchored
+
+Generic shell
+-------------
+    * NEW library in workspace called plasmagenericshell that contains elements shared by the desktop shell, the netbook shell and the screensaver one, such as:
+        * Wallpaper setup UI
+        * Mouse plugins configuratin UI
+        * NEW Widgets Explorer that replaces the old applet browser.
+           It shows all the available widgets in an horizontal or vertical list
+           with a tabbar to chose the available categories and an input field to search among all installed widgets.
+
+Plasma Desktop Shell
+--------------------
+* Features
+    * D-Bus
+        * NEW showDashboard bool
+        * NEW perVirtualDesktopViews bool and setPerVirtualDesktopViews bool
+    * Desktop Settings
+        * Desktop theme configuration has been moved to System Settings -> Style
+        * Workspace actions moved to System Settings -> Desktop
+        * Ability to select between plasma-desktop and plasma-netbook added in system settings
+    * ECMA Script; see kdebase/workspace/plasma/design/plasma-desktop-scripting for more info
+        * the plasma-desktop configuration can be interacted with via the interactive scripting console
+        * the initial layout can be set with scripts in share/apps/plasma-desktop/defaults/
+        * updates to plasma-desktop can be pushed by placing scripts in share/apps/plasma-desktop/updates
+    * Uses the new Widgets Explorer
+* Bugfixes
+
+
+Plasma Netbook Shell
+-------------------
+New components:
+ * plasma-netbook shell: can be enabled instead of the Plasma Desktop Shell from a Systemsettings module
+ * Containments:
+   * Newspaper: desktop widgets ordered in two or more vertical columns
+   * Search and Launch: full screen krunner interface with bookmarks support for the search results
+   * Netpanel: a simple panel
+ * Applets:
+   * Searchbox: lauches searches on the Search and launch containment
+   * Current app control: provides a titlebar in the panel with a button to quickly switch windows
+ * Dataengines:
+   * Searchandlaunch: communication between searchbox and search and launch containment
+ * Shares the Widgets Explorer, wallpaper and mouse plugis settings with the other shells
+
+ * Desktopthemes:
+   * A simpler version of air to be used there
+
+
+Other Shells
+------------
+
+Tools
+-----
+
+Plugins/Addons
+--------------
+* Features
+    * Plasmoids and Containments
+        * NEW Blackboard: a simple paint canvas, it's possible to paint with the mouse or with multitouch events on platforms that supports them
+        * NEW KDE Observatory: keep track of the development of your favorite KDE projects
+        * NEW KIMPanel: KDE Input Method Panel for multibyte input
+        * NEW Knowledge Base: query the knowledgebase of opendesktop.org
+        * NEW On-screen keyboard
+        * NEW OpenDesktop.org Activities: activity information from opendesktop.org
+        * NEW Qalculate math expression evaluator, based on libqalculate
+        * NEW Spellcheck: a quick spell checking area
+        * NEW Webslice: a plasmoid displaying a part of a web page
+        * NEW Window list
+        * Battery: Improved layout, better support for bigger fonts
+        * Device notifier
+            * Visual revamp to make it look and feel more Plasma
+            * Supports non-removable volumes
+            * Can show/hide devices from the interface
+            * Popup autohides after 10s of innactivity
+        * Picture Frame: now supports loading and displaying of remote images
+        * Microblog: can view replies and direct messages
+        * Quicklaunch: ascending and descending sort for applications in quicklaunch applet.
+        * SystemTray
+             * now can embed other plasmoids
+             * supports the finalized version of the StatusNotifier specification
+             * old notifications remains accessible for a while, separed by application name, browseable with a tabbar widget
+        * Tasks
+             * clicking on a window preview now activates that window
+             * mouse over on a window preview highlights the window if the highlight windows KWin effect is activated
+             * control+click on a window group launches the KWin present windows effect if activated
+             * new taskbar animations
+
+    * DataEngines
+        * NEW Pastebin
+        * Weather
+            * NEW wetter.com plugin allowing weather to be fetched from wetter.com
+
+    * Runners
+        * NEW audioplayercontrol: control any MPRIS enabled audio application (amarok is the default)
+        * NEW plasma-desktop: "desktop console [script file]" triggers the interactive scripting window
+        * NEW solid: devices and hotplug support using Solid
+        * NEW mediawiki: generic mediawiki searching with .desktop files for wikipedia, techbase, wikitravel and userbase by default
+        * NEW windows: switch between and control windows and desktops
+        * Service runner: a query on a freedesktop application category, like "network" will show all applications of that category
+        * Bookmarks runner: the query "bookmarks" (or its translation) lists all the bookmarks
+        * Contacts runner: the query "contacts" shows all contacts
+
+    * Wallpapers
+        * Image wallpaper combobox has been replaced with a nicer view.
+        * Image wallpaper offers 'Next Wallpaper Image' contextual action in slide-show mode.
+
+    * ScriptEngines
+        * NEW JavaScript DataEngines
+
+    * NEW ContainmentActions(es)
+        * NEW Switch Activity
+        * NEW Switch Desktop
+        * NEW Switch Window
+        * NEW Context Menu
+        * NEW Paste
+        * NEW App Launcher
+
+* Bugfixes
+
+KRunner
+-------
+* Features
+
+* Bugfixes
+
+
+Platforms
+---------
+* Features
+
+* Bugfixes
+

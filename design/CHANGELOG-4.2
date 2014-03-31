@@ -1,0 +1,263 @@
+libplasma 3.0 / KDE 4.2
+=======================
+
+libplasma
+---------
+* Build
+    * libplasma has moved to kdelibs from kdebase-workspace and as such there is no longer a need to use FindPlasma.cmake. FindKDE4 now provides all the necessary plasma CMake bits needed, and using libplasma does not create a kdebase-workspace dependency for your application anymore.
+
+* Features
+    * Symbol Versioning: limit loading of plugins to those that match the libplasma version
+    * NEW: ToolTipManager for Plasma style tooltips
+    * NEW: Wallpaper plugins for Containments
+    * NEW: Context for coordinating and publishing Context information, such as the current Activity or phsyical location
+    * Applet
+        * sizeHintChanged() signal. A containment (such as a panel) can adjust its size based on changed sizehints of an applet
+        * ContextConstraint events and access to the current Context object
+        * Shortcut editor in Applet configuration dialog allows setting of global shortcuts per-widget
+        * NEW: Plasma::Extender and Plasma::ExtenderItem, allowing visual, relocatable extensions to Applet
+        * NEW: PopupApplet, which switches between an icon with a popup in a Horizontal/Vertical containment (such as a panel) and the widget directly on the canvas in a Planer containment (such as a desktop), the icon can be replaced with custom graphics or widgets by the implementation
+    * Containment
+        * Support dropping of arbitrary data if the mimetypes are supported by an applet
+        * Activity naming and Context support
+        * Toolbox can be positioned in any corner or edge
+        * Toolbox actions are displayed as an always open toolbar when zoomed out for improved usability
+    * Corona
+        * addOffscreenWidget/removeOffscreenWidget: manage canvas items that should not appear in a primary view (e.g. Extenders)
+        * "screen" information querying added to Corona to allow different approaches for viewports; e.g. using KWindowSystem and QDesktopWidget for the Plasma shell, but window coordinates for plasmodviewer or other non-desktop apps.
+    * Package system
+        * PackageStructure supports arbitrary URIs (in addition to auto-discovery for package) structure description files.
+        * Package removal
+        * Package browsing interface can be provided by the PackageStructure plugin, allowing for 3rd party widget collectionsto offer online browsing and fetching customizations
+    * FrameSvg
+        * setting the margins via in-SVG hints
+        * paintPanel API additions to make it more like QPainter and Plasma::Svg
+    * Runners
+        * TryExec key in .desktop file now supported, allowing runners that rely on an external application to be conditional loaded at runtime
+    * Service
+        * Allow enabling/disabling of operations at runtime
+        * Associate widgets with operations
+    * Theme
+        * Support compressed SVGs (*.svgz)
+        * Supports a pixmap cache and a SVG element rects cache for faster startup
+    * Widgets
+        * NEW: Plasma::Slider based on QSlider
+        * NEW: Plasma::TabBar based on QTabBar, usable as both a standalone tabbar or as a tabwidget
+        * NEW: Plasma::Frame used to visually group widgets
+        * NEW: Plasma::TreeView used to put tree views or simple list in the canvas
+        * NEW: Plasma::BusyWidget used to indicate the loading of something
+        * NEW: Plasma::ToolButton based on QToolButton
+        * Plasma::PushButton is svg-themed
+
+* Significant Fixes
+    * WebContent painting update synchronization (fixes, among other things, scrolling)
+    * Prevent crash when Containment that AppletBrowser is associated with is deleted
+    * Applet handles work with all icon sizes (user system settings)
+    * Fix View so that when a new activity is added, don't move more than necessary;
+      fixes dragging lock
+    * Dramatically fewer full paints by properly watching the exposed rect area, which for full screen Containments or large/complex Applets is quite significant in terms of performance
+    * Fix on-exit crashes related to focus handling issues in QGraphicsView
+    * Prevention of premature calls to Applet::constraintsEvent
+    * Applets now resize in "real time" without the pixelation
+    * Numerous crash fixes pushed upstream to QGraphicsView as well (focus resetting, scene queries on deletion..)
+
+Developer Documentation
+-----------------------
+* Design documentation
+    * NEW: dataengine
+    * NEW: tooltips
+    * NEW: wallpaper
+    * NEW: widgets
+    * NEW: javascript
+
+* Tutorials
+    * NEW: Extenders http://techbase.kde.org/Development/Tutorials/Plasma/UsingExtenders
+
+Desktop Theme
+-------------
+* NEW: widgets/button for theming pushbuttons
+* NEW: widgets/frame for theming Plasma::Frame used also in other widgets
+* NEW: widgets/scrollbars to theme Plasma::ScrollBar and views scrollbars in libplasma
+* NEW: widgets/configuration-icons: little icons used for configuration purposes across Plasma
+* NEW: widgets/extender-background, widgets/extender-dragger: SVGs for new Extender widget
+* NEW: widgets/tooltip: tooltip SVGa
+* NEW: widgets/calendar
+* NEW: widgets/containment-controls: icons and buttons for sizing panels and other containment tasks
+* NEW: widgets/monitor: monitor for use in displaying mockups of on-screen content
+* NEW: widget/glowbar: a glow for use by offscreen panels to indicate their location
+* NEW: dialogs/kickoff: theming for the kickoff launcher menu
+* color roles for buttons text and background added
+* Plasma::Slider follows theme
+* Applet handle all svg-themed
+* The default Oxygen desktop theme radically improved across the board
+
+Plasma Desktop Shell
+--------------------
+* Features
+    * Desktop
+        * New Containment configuration for all desktop containments: wallpapers, activity type, theme
+    * Panel
+        * Resizes itself when an applet changes its sizehint according to its maximum and minimum sizes
+        * Autohide and windows-cover-panel options
+        * Easier drag and drop to panel by showing an empty area between the two applets nearest to the mouse cursor
+
+* Significant Fixes
+    * Reposition toolbox when zooming out/in to avoid panel overlap
+    * Draw the missing part of the toolbox when repositioned because of a panel
+    * MS Windows compile fixes
+
+Other Shells
+------------
+* plasmoidviewer new command line options:
+    * --list lists known applets
+    * --formfactor (-f)
+    * --containment (-c)
+    * --wallpaper (-w)
+    * --pixmapcache (-p)
+
+Tools
+-----
+* Plasma Engine Explorer
+    * Remove/update sources via context menu
+    * NEW: Plasma::Service interaction UI, using DataEngine::serviceForSource
+* plasmapkg
+    * now supports listing, updating and removing packages
+* NEW: Destkop Theme Details
+    * Customize and create new desktop themes with kcmshell4 destkopthemedetails
+
+Plugins/Addons
+--------------
+* Features
+    * Plasmoids and Containments
+        * NEW: Incoming messages: listens to various F/OSS email and IM apps for messages arriving
+        * NEW: Leave A Note: let people leave you notes on your computer, particularly handy for Plasma widets on the screensaver
+        * NEW: Previewer: drop files to preview them right on your desktop or panels
+        * NEW: System monitor
+        * NEW: Web browser: a WebKit browser in a desktop widget!
+        * NEW: Activity bar: quick switcher for Plasma activities
+        * NEW: Conway's game of life
+        * NEW: RSSNow! fancy online news ticker
+        * NEW: News, simple online news ticker
+        * NEW: Pastebin, drop text/data to upload it to a pastebin server
+        * NEW: Text snippets generator
+        * NEW: Timer
+        * NEW: Bouncing ball, throw it and watch it bounce around!
+        * NEW: Calendar
+        * NEW: Character selector
+        * NEW: Eyes
+        * NEW: LCD Weather Station plasmoid
+        * NEW: Quicklaunch plasmoid
+        * Task bar
+            * Grouping: manually or by application
+            * Sorting: manually or by program name
+            * Limit windows shown by desktop, screen or minimized status
+            * Multiple rows of windows
+            * Theming improved to look more consistent with other buttons and generally be more sexy
+        * System tray
+            * Supports hiding of icons
+            * Supports non-Freedesktop.org icons (e.g. full plasmoids or future creations) through a protocol abstraction
+            * Listens for and displays popup notifications and application jobs (e.g. file transfers)
+        * Now Playing media player controls: play, pause, stop, switch tracks and more from Plasma
+        * Notes
+            * Custom colors
+            * Export notes to file
+            * Text formatting, such as alignment, bold, italic, etc
+        * Clocks
+            * Custom colors for digital clock
+            * Standardized multi-timezone support in libplasmaclock
+        * Folder view
+            * Filtering improvements: mimetype and exclusion based.
+            * Sorting options, options for locking the icons in place and/or forcing grid alignment.
+            * Uses a top-to-bottom icon arrangement when used as a containment.
+            * Remembers icon positions.
+            * No longer blocks the GUI when loading large folders.
+            * Shows a busy animation while loading folders / laying out icons.
+            * Works in panels looking like a popup menu
+        * Default desktop containment
+            * Wheel mouse == switch desktop
+            * Creation of widgets on desktop containments puts them in empty areas, avoiding overlap
+        * Comics
+            * Respects web proxy and other relevant KDE settings
+            * Improved mouse interaction (middle mouse zooms, context menu, etc)
+            * Comicproviders can be written in any language supported by Kross
+            * Comicproviders can be downloaded via "Get Hot New Stuff"
+            * New comicproviders can be added on kde-files.org
+        * Lancelot
+            * Full keyboard support
+            * New lists with scrollbars
+            * Themes that match Plasma themes from kdeplasma-addons module
+        * Twitter
+            * When it is in the panel it is a popup, showing the avatar of the last person who sent a message and the numer of unread tweets as icon
+        * Trashcan
+            * Lets you configure system wide trash behaviour like size limits
+
+    * DataEngines
+        * NEW: Web site icons (favicons) engine
+        * NEW: Desktop notifications engines
+        * NEW: System monitor engine based on ksysguard (cpu, memory, heat, sensors, etc)
+        * NEW: Network engine
+        * NEW: Application jobs (aka kuiserver) engine; shows any published KJobs such as file operations
+        * NEW: Executables: run commands and get their output from stdout and stderr
+        * NEW: RSS
+        * NowPlaying
+            * Plasma::Service for controlling media players
+            * supports MPRIS
+        * Powermanagement
+            * Added a new source for managing PowerDevil profiles
+
+    * Runners
+        * NEW: Kate sessions runner
+        * NEW: Recent documents runner
+        * NEW: Spellcheck runner
+        * NEW: Konqueror history runner
+        * NEW: Konqueror sessions runner
+        * NEW: Konsole sessions runner
+        * NEW: Nepomuk search runner
+        * NEW: Power management controller (via PowerDevil)
+        * NEW: Places (as seen in dolphin, file dialog, kickoff, etc) runner
+        * Converter runner now does speed, masses and nautical distances; conversion code moved to a shared lib
+
+    * ScriptEngines
+        * NEW: Google Gadgets
+        * NEW: Python Plasmoids
+        * NEW: Ruby Plasmoids
+        * MacOS Dashboard widgets: improved JS API compliance
+        * JavaScript:
+            * DataEngines
+            * Services
+            * layouts
+            * configuration data
+            * much more featureful plasmoid object replaces applet object
+
+    * Wallpapers
+        * NEW: Image, Slideshow and Color plugins, based on previous code
+        * Directories recursed for images in Image and Slideshow plugin
+        * Slideshow images are randomized
+
+* Significant Fixes
+    * Various clocks ported to AppletClock for calendar and timezone consistency
+    * Pager crash fixes
+    * MS Windows compile fixes
+    * Taskbar shows thumbnails of windows on hover (4.1 regression)
+    * TwitterEngine respects web proxies and provides a proper Plasma::Service
+    * Kickoff
+        * proper menu size restoration
+        * Hide Shutdown and Restart options when those actions are not possible.
+        * Make Sleep and Hibernate entries appear and work
+        * use Plasma::Theme to improve visual harmony with the rest of Plasma
+
+KRunner
+-------
+* Features
+    * Plasma Screensaver: Plasma widget overlay for screensavers
+    * D-Bus autoactivation, so even if it has perma-crashed, selecting Run Command from Plasma will resurect it
+    * Alternate user interface: QuickSand
+
+* Significant Fixes
+    * Screensaver activation fixed to compensate for system clock changes
+    * Several crashes related to access of non thread safe code
+
+Platforms
+---------
+Compile and runtime fixes for Microsoft Windows and Maemo
+

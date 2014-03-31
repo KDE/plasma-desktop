@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+  <kcfgfile name=""/>
+
+  <group name="General">
+    <entry name="ItemsGeometries" type="String">
+      <label>encoded geometries of items (resource categories)</label>
+    </entry>
+    <entry name="ToolBoxButtonState" type="String">
+      <label>Position state of the toolbox button</label>
+      <default>topleft</default>
+    </entry>
+    <entry name="ToolBoxButtonX" type="int">
+      <label>X coordinate of the toolbox</label>
+    </entry>
+    <entry name="ToolBoxButtonY" type="int">
+      <label>Y coordinate of the toolbox</label>
+    </entry>
+    <entry name="ItemsGeometries" type="String">
+      <label>encoded geometries of items (resource categories)</label>
+    </entry>
+    <entry name="FirstStartup" type="Bool">
+      <label>first time the containment starts?</label>
+      <default>true</default>
+    </entry>
+  </group>
+
+</kcfg>

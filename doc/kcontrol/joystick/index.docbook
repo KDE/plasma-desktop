@@ -1,0 +1,137 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % English "INCLUDE">
+]>
+<article id="joystick" lang="&language;">
+<articleinfo>
+<title>Joystick</title>
+<authorgroup>
+<author>
+<firstname>Michael</firstname>
+<surname>Anderson</surname>
+<affiliation>
+<address><email>nosrednaekim@gmail.com</email></address>
+</affiliation>
+</author>
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
+</authorgroup>
+
+<date>2013-12-05</date>
+<releaseinfo>4.12</releaseinfo>
+
+<keywordset>
+<keyword>KDE</keyword>
+<keyword>System Settings</keyword>
+<keyword>joystick</keyword>
+<keyword>calibrate</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_joystick">
+<title>Joystick configuration module</title>
+
+<para>This module provides an interface to calibrate your joystick device as well as
+see which functions on your joystick are mapped to which logical button or
+axis.</para>
+
+<para>
+<screenshot>
+<screeninfo>Here's a screenshot of the joystick module</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="joystick-main.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase>The joystick module</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<variablelist>
+<varlistentry><term><guilabel>Device</guilabel></term>
+<listitem>
+<para>
+Here you can see the logical location of the device. If you have more
+than one joystick device, you can also select which one to configure.
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry><term><guilabel>Position</guilabel></term>
+<listitem>
+<para>
+The plotted location of the X and Y axes of the joystick. Enable <guibutton>Show trace</guibutton>
+to plot the path of the joystick from one point to another.
+</para>
+<tip><para>
+If the joystick cannot reach every point on this graph, or if it does not center correctly, you need to calibrate your device.
+</para></tip> 
+</listitem>
+</varlistentry>
+
+<varlistentry><term><guilabel>Buttons</guilabel></term>
+<listitem>
+<para>
+A place to see the pressed state of buttons on your joystick and if the buttons
+are mapped correctly. When a joystick button is pressed, <guilabel>PRESSED</guilabel> will appear
+next to the logical number (as the computer sees it) of the button which was
+pressed.
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry><term><guilabel>Axes</guilabel></term>
+<listitem>
+<para>
+This displays the numerical values of the axis positions. 0 is centered and the
+maximum and minimum values depend on the joystick and the particular axis.
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry><term><guilabel>Calibrate</guilabel></term>
+<listitem>
+<para>
+Clicking on <guibutton>Calibrate</guibutton> will open a dialog to calibrate every axis on your joystick. 
+</para>
+
+<para>
+<screenshot>
+<screeninfo>Calibrating your joystick</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="joystick-calibration.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase>Calibrating your joystick</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para>
+Each axis will have to be moved to the minimum position, then the center, and finally the
+maximum position. A meter in the bottom left corner of the dialog will help
+determine which way increases and which way decreases the values.
+</para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect1>
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

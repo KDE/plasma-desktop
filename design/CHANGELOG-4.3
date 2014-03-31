@@ -1,0 +1,246 @@
+Significant changes in libplasma 3.1 / KDE 4.3
+==============================================
+libplasma
+---------
+* Features
+    * NEW: RunnerSyntax, class for describing query syntax
+    * AbstractRunners can now register their syntax for online documentation purposes
+    * Animator: no longer crashes when an animation is started/stopped on a widget already being animated during animation
+    * RunnerContext
+        * Introduced the isValid() method so runners can abort matches early
+    * Plasma::Dialogs now animate show/hide if composited window management is available
+    * Security
+        * Categories of applets can be excluded from the appletbrowser
+        * co-operative security
+    * Shortcuts
+        * Defaults changed
+        * NEW: Config dialog
+    * Theme
+        * Themes can now define options in the [Settings] group of the metadata.desktop file:
+            * UseNativeWidgetStyle=true and Plasma will default to native (QStyle) painting for all widgets
+            * FallbackTheme=<name> to define which fallback theme to define which theme to use as the first fallback for missing elements
+        * Backgrounds can now have variable backgrounds
+        * Ability to list all known themes
+    * Extenders
+        * NEW: ExtenderGroup, class for grouping ExtenderItems.
+        * hasItem function in Extender to provide an easy way for applets to avoid duplication of ExtenderItems.
+        * Improved drag-and-drop
+    * Svg
+        * Ability to set Theme object to use
+        * Ability to turn off disk caching is not needed/desired
+    * Wallpaper:
+        * Cache for completed wallpaper renderings
+        * Threaded rendering of image files to specified size, scaling method and coloring
+        * Improved settings save/restore/management, including a configNeedsSaving signal
+        * DataEngine access modelled after the same facility in Applet
+    * Widgets
+        * NEW: SpinBox
+        * NEW: VideoWidget
+        * NEW: ScrollWidget. A widget that puts scrollbars when it contains a widget bigger than him.
+        * NEW: TextBrowser
+        * TabBar styling and interaction improvements (animations, click-n-flick, ..)
+        * WebView can scroll its contents by simply dragging a point in the page with the mouse
+
+
+Other Libraries
+---------------
+* NEW: KNotificationItem library added to kdelibs/experimental/ which provides access to the new system tray protocol (complete with legacy fallback support)
+* NEW: ScreenPreviewWidget to libkworkspace that works with Plasma::Wallpaper or pixmaps that provides a nicely themed and appropriately sized "monitor" to show screen previews in
+* NEW: RememberTheMilk library added to kdeplasma-addons/libs
+* NEW: Conversion librarya dd to kdeplasma-addons/libs
+    * Add fuel efficiency
+    * Add time
+    * Add power
+    * Add currency
+    * Add energy
+    * Add pressure
+    * More SI Units
+    * Add beaufort scale to velocity
+    * Add delisle, newton, rankine, reaumur & romer to temperature
+* libplasmaclock
+    * Text to speech service (KTTSD) to read aloud the time
+    * Holidays shown in pop-up calendar
+* libtaskmanager: signficant stability fixes, particularly crashes in closeGroup or add(Task) caused by changes in the grouping strategy
+
+Developer Documentation
+-----------------------
+* Simple JavaScript API documentation
+* System tray design
+
+Desktop Theme
+-------------
+* Features
+    * FrameSvg
+       * NEW: overlays for a filigrane effect, can be either random positioned, fixed, scaled or tiled
+    * configuration-icons
+       * NEW: collapse/restore icons for use in ExtenderGroup
+    * Desktop and panel toolboxes are now svg themed
+
+* Themes must now set the X-KDE-PluginInfo-Name entry in the metadata.desktop correctly, namely to the name of the directory containing the theme (e.g. default or Clean-Blend). While this was always the case, it was never relied on by libplasma. As of 4.3 there is now code that does rely on this being properly set.
+
+Plasma Desktop Shell
+--------------------
+* Features
+    * Renamed binary from plasma to plasma-desktop; config files also changed as a result
+    * Desktop Toolbox: it's smaller and shows the activity name if any is set
+    * ZUI: the global actions such as add activity and lock desktop are on a global toolbox when the desktop is zoomed out.
+    * Configuration gui to activate a different activity for each desktop and to decouple the dashboard contents with desktop contents
+    * Panels
+        * access to spacers to control how widgets arrange themselves
+        * 'Windows go below' mode
+
+
+Other Shells
+------------
+* plasmoidviewer
+    * supports loading uninstalled packages by passing the path to the package
+    * can define the wallpaper to load
+    * can use a theme different from the one used in the workspace
+    * improved containment usage, so loaded plasmoids behave more like they do in plasma-desktop
+    * --theme switch to allow viewing plasmoids with different stylings
+
+Tools
+-----
+* NEW: plasmawallpaperviewer: view and configure wallpapers in a window, perfect for testing new wallpaper plugin features
+* plasmaengineexplorer provides a --list command line switch
+
+Plugins/Addons
+--------------
+* Features
+    * Plasmoids and Containments
+        * NEW: Bubble Monitor: track system status via a lava lamp style visualization
+        * NEW: Magnifique: View and magnify sections of the Plasma canvas
+        * NEW: Media player: Play video and audio files by dragging them on the desktop
+        * NEW: openDesktop Plasmoid: Basic interaction with openDesktop contacts
+        * NEW: RememberTheMilk: interface for the online time management service of the same name
+        * NEW: System Load Viewer: simple yet effective retro-style system load and memory usage display
+        * NEW: Unit converter
+        * NEW: Weather: 5 day forecasts and more in a visually stunning outfit
+        * Bouncing Ball:
+            * Theme support, including a new soccer ball
+        * Comics
+            * Added optional Nepomuk support when manually saving a comic strip.
+            * Added per comic setting to store the current position.
+        * File Watcher
+            * Added support for filtering (both regular expressions and exact matches are supported).
+        * Microblogging (was KDE Twitter)
+            * Added support for other Twitter API based services like identi.ca (that is based on laconi.ca)
+        * Pager
+            * User can choose to do nothing, toogle the desktop or the dashboard when he click on the current desktop.
+        * Notes
+            * Highlight current line
+            * Change font size with Control + Scrollwheel
+        * Folder View
+           * Added keyboard navigation to iconview. User can navigate using direction keys and launch using Enter/Return.
+        * Pastebin
+            * New look and feel
+            * Pasting through context menu
+            * Using knotification to tell the user that the data has been saved online
+            * History of pastebin URLs
+        * System tray
+            * New D-Bus based system tray protocol
+            * Ability to show/hide icons based on category
+            * Jobs show file/dir progress and ETA
+            * Jobs are grouped together: one group for running jobs and one for completed jobs.
+            * Completed jobs have a different appearence and allow the user to open the destination file/directory.
+            * Notifications now show custom images like kopete's contact images.
+            * Multiple trays in the same Plasma application supported.
+            * Can configure whether or not notifications/jobs should autohide shortly after appearing.
+        * Taskbar
+            * New popup menu for grouped tasks with animation and tooltips for each item
+            * Tooltips of grouped tasks can show tooltips of multiple windows
+            * Hovering of tasks (grouped or not) will request the window manager (at its discretion) to highlight those windows
+        * Web browser
+            * Real page zoom instead of just font scaling
+            * Can scroll the page by dragging the contents themselves
+        * LCD Weather Station
+            * New config dialog
+            * Use geolocation dataengine for initial city if available.
+            * Use Condition Icon for current weather and fallback to pressure if not available.
+            * Show pressure tendency arrows. BUG:184457
+        * System monitor
+            * Handle new/removed network interfaces in network monitor
+            * NEW: Memory monitor. BUG:182704
+            * temperature plotter uses now same range as analog meter
+            * Temperature widget now defaults to plotter in panel
+            * Show tooltips when in panel. BUG:180102
+            * Advanced config page added
+            * Plotter labels added
+        * Timer
+            * A timer can have a title
+            * Count down is restored after a plasma shutdown/restart
+            * User can hide seconds.
+        * Lancelot
+            * theming: Scrollbars follow Plasma style
+            * actions for system buttons are configurable
+            * highlighted path in application browser
+            * clear documents history
+            * places are loaded from Dolphin
+            * applications in menu are sorted
+        * Quicklaunch
+            * Icons can be re-ordered with drag-and-drop, show tooltips and icon size is configurable,
+              retained even with resizing
+
+    * DataEngines
+        * NEW: Akonadi engine: emails, contacts and microblogs from Akonadi
+        * NEW: Calendar: holiday and event information
+        * NEW: Geolocation: publishes location information based on GPS input or IP address; sports plugins
+        * NEW: Keystate: keyboard modifier and mouse button state information
+        * NEW: Metadata: access to Nepomuk data on files
+        * NEW: OCS engine: interface for scripted applets to Open Collaboration Services
+        * NEW: PotD: Grabs the "picture of the day" from various online sources
+        * NEW: RememberTheMilk: support for the online time management service
+        * Time engine can also report sun positioning, sunrise, sunset and moon phase information
+
+    * Wallpapers
+        * NEW: Virus: artificial life simulation, watch it colonize and eat your wallpaper!
+        * NEW: Weather: selects wallpapers based on weather station information
+        * NEW: Mandelbrot: draws fractals on the desktop; click and drag or zoom in/out to explore the Mandelbrot set
+        * NEW: Marble: interactive desktop globe as your desktop background; powered by KDE's Marble
+
+    * Runners
+         * Converter
+             * If not exact unit found offer possible mathes.
+
+    * ScriptEngines
+        * Simple JavaScript API
+            * Support for Url objects
+            * Added new Plasma::Widget entries
+            * Completed LinearLayout API
+            * file() method to get paths from the Plasmoid's package
+
+* Bugfixes
+     * Plasmoids and Containments
+        * Show Desktop
+            * Fix keyboard shorcuts BUG:180661
+        * News
+            * Better alternate background color for generated css. BUG: 185527
+            * correctly use feed urls with parameters BUG:178936
+        * LCD Weather Station
+            * Replace "N/A" with "-" (Looks better in lcd letters). BUG:186610
+            * Make credit clickable. BUG:183984
+            * Fix wind speed and unit on some data sources.
+        * System monitor
+            * Allow smaller minimum size. BUG:186501
+            * Limit initial temperature count to 5. BUG:178314
+            * Lock buttons when desktop is locked. BUG:178469
+            * Fix config. BUG:181378
+            * don't crash when removing an applet by it's own context menu BUG:178860
+            * Display an IconWidget when there are no available sources. BUG: 178192
+            * activate layout to calculate fixed size ratio correctly on applet start. BUG: 176268
+    * Walpapers
+        * Slideshow mode of Image plugin takes ~97% less time to build the wallpaper list and allocates a fraction of the memory in the process. BUG: 190632
+
+KRunner
+-------
+* Features
+    * Display all known syntax in the results area when Help button pressed
+    * Vertical display of results with new selection style and animation
+    * Configure parameters on matches by clicking on the configuration wrench, for matches that support options
+
+* Bugfixes
+    * Race conditions affecting proper selection of default item fixed (often known as the "I pressed <Enter> and nothing happened!" bug)
+
+
+Platforms
+---------

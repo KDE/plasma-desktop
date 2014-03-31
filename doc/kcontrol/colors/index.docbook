@@ -1,0 +1,399 @@
+<?xml version="1.0" ?>
+
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % English "INCLUDE" > <!-- change language only here -->
+]>
+
+<article id="colors" lang="&language;">
+<articleinfo>
+<title>Colors</title>
+<authorgroup>
+<author>&Matthew.Woehlke; &Matthew.Woehlke.mail;</author>
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
+</authorgroup>
+
+<date>2013-11-05</date>
+<releaseinfo>4.12</releaseinfo>
+
+<keywordset>
+<keyword>KDE</keyword>
+<keyword>KControl</keyword>
+<keyword>color</keyword>
+<keyword>kcm</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="color">
+<title>Colors</title>
+
+<sect2 id="color-intro">
+  <title>Introduction</title>
+
+  <para>The Color Selection module is comprised of several sections:</para>
+
+  <itemizedlist>
+  <listitem><para>
+    <link linkend="color-scheme">The <guilabel>Scheme</guilabel> tab</link>,
+    used to manage schemes.
+  </para></listitem>
+  <listitem><para>
+    <link linkend="color-options">The <guilabel>Options</guilabel> tab</link>,
+    used to change the options of the current scheme.
+  </para></listitem>
+  <listitem><para>
+    <link linkend="color-colors">The <guilabel>Colors</guilabel> tab</link>,
+    used to change the colors of the current scheme.
+  </para></listitem>
+  <listitem><para>
+    <link linkend="color-effects">The state effects tabs</link>
+    (<guilabel>Inactive</guilabel>, <guilabel>Disabled</guilabel>), used to 
+    change the state effects of the current scheme.
+  </para></listitem>
+  </itemizedlist>
+
+  <para>Note: This documentation will sometimes refer to the
+  &quot;current&quot; scheme, or the &quot;active&quot; scheme.
+  The &quot;current&quot; scheme is the set of colors and color scheme options
+  that was most recently applied, &ie; what you would get if you choose
+  <guibutton>Cancel</guibutton>. The &quot;active&quot; scheme is the set of
+  colors as has been most recently edited by you, &ie; what you would get if
+  you choose <guibutton>Apply</guibutton>.</para>
+</sect2>
+
+<sect2 id="color-scheme">
+  <title>Scheme Management</title>
+
+  <para>The <guilabel>Scheme</guilabel> tab lets you manage the color schemes
+  on your machine. Only one scheme is active at once, but you may save schemes,
+  allowing you to quickly change the scheme later. When you have created a
+  scheme you like, you can save it with <guibutton>Save Scheme...</guibutton>.
+  You can remove schemes using <guibutton>Remove Scheme</guibutton>.
+  Note that system schemes cannot be removed; trying to do so will display an
+  error.</para>
+
+  <para>&kde; ships with several schemes. If you have an Internet connection,
+  you can also browse and retrieve user-created schemes using <guibutton>Get
+  New Schemes...</guibutton>.</para>
+
+  <sect3>
+    <title>Importing Schemes</title>
+
+    <para>You can also import schemes that you have downloaded or otherwise
+    obtained, as well as import &kde; 3 schemes. &kde; 4 color schemes are
+    named like &quot;*.colors&quot;, while &kde; 3 schemes are named like
+    &quot;*.kcsrc&quot;.</para>
+
+    <para>Because &kde; 4 has many more color roles than &kde;, importing a
+    &kde; 3 scheme is different from importing a &kde; 4 scheme. When a
+    &kde; 4 scheme is imported, it becomes part of your saved scheme
+    collection. When a &kde; 3 scheme is imported, the colors that exist in
+    &kde; 3 are overlaid onto the active scheme, and the result is not
+    automatically saved into your collection. After importing a &kde; 3 scheme,
+    you will likely need to adjust the colors that are new in &kde; 4, as well
+    as the state effects. For best results, before importing a &kde; 3 scheme,
+    select a similar &kde; 4 scheme (you do not need to apply the scheme before
+    importing).</para>
+  </sect3>
+</sect2>
+
+<sect2 id="color-options">
+  <title>Color Scheme Options</title>
+
+  <para>The <guilabel>Options</guilabel> tab allows you to change some
+  properties that deal with how the color scheme is used, as well as some
+  options that change the color scheme that are different from actually
+  assigning colors.</para>
+
+  <itemizedlist>
+    <listitem><para><guilabel>Apply inactive window color effects</guilabel>
+      &mdash; If checked, state effects (see below) will be applied to inactive
+      windows. This can help visually identify active versus inactive windows,
+      and may have aesthetic value, depending on your taste. However, some
+      users feel that it causes distracting &quot;flickering&quot; since
+      windows must be repainted when they become inactive. Unlike desktop
+      effects, color state effects do not require compositing support and will
+      work on all systems, however they will only work on &kde; 4 applications.
+    </para></listitem>
+    <listitem><para><guilabel>Inactive selection changes color</guilabel>
+      &mdash; If checked, the current selection in elements which do not have
+      input focus will be drawn using a different color. This can assist visual
+      identification of the element with input focus in some applications,
+      especially those which simultaneously display several lists.
+    </para></listitem>
+    <listitem><para><guilabel>Shade sorted column in lists</guilabel>
+      &mdash; If checked, multi-column lists will use a slightly different
+      color to paint the column whose information is being used to sort the
+      items in the list.
+    </para></listitem>
+    <listitem><para><guilabel>Apply colors to non-KDE4 applications</guilabel>
+      &mdash; If checked, &kde; will attempt to export its color scheme so that
+      non-&kde; 4 applications will use the same colors. Most applications will
+      honor the exported scheme to varying degrees, though some may have bugs
+      or otherwise not honor the exported scheme.
+    </para></listitem>
+    <listitem><para><guilabel>Contrast</guilabel>
+      &mdash; This slider controls the contrast of shaded elements, such as
+      frame borders and the &quot;3D&quot; effects used by most styles. A lower
+      value gives less contrast and therefore softer edges, while a higher
+      value makes such edges &quot;stand out&quot; more.
+    </para></listitem>
+  </itemizedlist>
+
+</sect2>
+
+<sect2 id="color-colors">
+  <title>Colors</title>
+
+  <para>The <guilabel>Colors</guilabel> tab allows you to change the colors in
+  the active color scheme.</para>
+
+  <para>Creating or changing a scheme is a simple matter of clicking on the
+  swatch in the color list and selecting a new color. You can check your
+  changes at any time by pressing <guibutton>Apply</guibutton>. It is suggested
+  that you save your scheme (via the <guilabel>Scheme</guilabel> tab) when you
+  are done.</para>
+
+  <para>The <guilabel>Common Colors</guilabel> set, which is displayed
+  initially, is not actually a &quot;set&quot; in the sense used by &kde; (see
+  next section), but presents a number of color roles in a way that makes it
+  easier to edit the scheme as a whole. When creating a new color scheme, you
+  will usually change these colors first, and use the other sets to tweak
+  specific colors if needed.</para>
+
+  <para>Note that <guilabel>Common Colors</guilabel> makes available roles from
+  all sets. For example, &quot;View Background&quot; here is shorthand for the
+  Normal Background role from the View set. Also, setting colors that do not
+  refer to a specific set will change that color in <emphasis>all</emphasis>
+  sets. (As an exception, &quot;Inactive Text&quot; will change the color for
+  all sets <emphasis>except</emphasis> for Selection; there is a separate
+  &quot;Selection Inactive Text&quot; for Inactive Text in the Selection set.)
+  Some roles may not be visible under <guilabel>Common Colors</guilabel> at
+  all, and can only be changed (if needed) by selecting the appropriate
+  set.</para>
+
+  <sect3>
+    <title>Color Sets</title>
+
+    <para>&kde; 4 breaks the color scheme into several sets based on the type
+    of user interface element, as follows:</para>
+    <itemizedlist>
+      <listitem><para><guilabel>View</guilabel> &mdash;
+        information presentation elements, such as lists, trees, text input boxes, etc.
+      </para></listitem>
+      <listitem><para><guilabel>Window</guilabel> &mdash;
+        window elements that are not buttons or views.
+      </para></listitem>
+      <listitem><para><guilabel>Button</guilabel> &mdash;
+        buttons and similar elements.
+      </para></listitem>
+      <listitem><para><guilabel>Selection</guilabel> &mdash;
+        selected text and items.
+      </para></listitem>
+      <listitem><para><guilabel>Tooltip</guilabel> &mdash;
+        tool tips, &quot;What's This&quot; tips, and similar elements.
+      </para></listitem>
+      <listitem><para>Window Manager &mdash;
+        window title bars and related elements.
+      </para></listitem>
+    </itemizedlist>
+
+    <para>Each set contains a number of color roles. Except for the Window
+    Manager colors, each set has the same roles. All colors are associated with
+    one of the above sets.</para>
+  </sect3>
+
+  <sect3>
+    <title>Color Roles</title>
+
+    <para>Each color set is made up of a number of roles which are available in
+    all other sets. (The Window Manager set is an exception; it has its own
+    unique roles that do not exist in any other set, and does not use the same
+    roles as the other sets.) In addition to the obvious Normal Text and Normal
+    Background, these roles are as follows:</para>
+
+    <itemizedlist>
+      <listitem><para>Alternate Background &mdash;
+        used when there is a need to subtly change the background to aid in
+        item association. This might be used &eg; as the background of a
+        heading, but is mostly used for alternating rows in lists, especially
+        multi-column lists, to aid in visually tracking rows.
+      </para></listitem>
+      <listitem><para>Link Text &mdash;
+        used for hyperlinks or to otherwise indicate &quot;something which may
+        be visited&quot;, or to show relationships.
+      </para></listitem>
+      <listitem><para>Visited Text &mdash;
+        used for &quot;something (&eg; a hyperlink) that has been
+        visited&quot;, or to indicate something that is "old".
+      </para></listitem>
+      <listitem><para>Active Text &mdash;
+        used to indicate an active element or attract attention, &eg; alerts,
+        notifications; also for hovered hyperlinks.
+      </para></listitem>
+      <listitem><para>Inactive Text &mdash;
+        used for text which should be unobtrusive, &eg; comments,
+        &quot;subtitles&quot;, unimportant information, etc.
+      </para></listitem>
+      <listitem><para>Negative Text &mdash;
+        used for errors, failure notices, notifications that an action may be
+        dangerous (&eg; unsafe web page or security context), etc.
+      </para></listitem>
+      <listitem><para>Neutral Text &mdash;
+        used to draw attention when another role is not appropriate; &eg;
+        warnings, to indicate secure/encrypted content, etc.
+      </para></listitem>
+      <listitem><para>Positive Text &mdash;
+        used for success notices, to indicate trusted content, etc.
+      </para></listitem>
+    </itemizedlist>
+
+    <para>As well as the text roles, there are a few additional
+    &quot;decoration&quot; roles that are used for drawing lines or shading
+    UI elements (while the above may, in appropriate circumstances, also be
+    used for this purpose, the following are specifically
+    <emphasis>not</emphasis> meant for drawing text). These are:</para>
+
+    <itemizedlist>
+      <listitem><para>Focus Decoration &mdash;
+        used to indicate the item which has active input focus.
+      </para></listitem>
+      <listitem><para>Hover Decoration &mdash;
+        used for mouse-over effects, &eg; the "illumination" effects for
+        buttons.
+      </para></listitem>
+    </itemizedlist>
+
+    <para>In addition, except for Inactive Text, there is a corresponding
+    background role for each of the text roles. Currently (except for Normal
+    and Alternate Background), these colors are not chosen by the user, but are
+    automatically determined based on Normal Background and the corresponding
+    Text color. These colors may be previewed by selecting one of the sets
+    other than &quot;Common Colors&quot;.</para>
+
+    <para>The choice of color role is left to the developer; the above are
+    guidelines intended to represent typical usage.</para>
+  </sect3>
+
+  <sect3>
+    <title>Window Manager Colors</title>
+
+    <para>As previously stated, the Window Manager set has its own roles,
+    independent of those in other sets. These are (currently) only accessible
+    via <guilabel>Common Colors</guilabel>, and are as follows:</para>
+
+    <itemizedlist>
+      <listitem><para>Active Titlebar &mdash;
+        used to draw the title bar background, borders, and/or decorations for
+        the active window (that is, the one with input focus). Not all window
+        decorations will use this in the same way, and some may even use the
+        Normal Background from the Window set to draw the title bar.
+      </para></listitem>
+      <listitem><para>Active Titlebar Text &mdash;
+        used to draw the title bar text when Active Titlebar is used to draw
+        the title bar background. May also be used for other foreground
+        elements which use Active Titlebar as the background.
+      </para></listitem>
+    </itemizedlist>
+
+    <para>The Inactive Titlebar [Text] roles are the same as the above, but for
+    inactive windows, rather than active windows.</para>
+  </sect3>
+
+</sect2>
+
+<sect2 id="color-effects">
+  <title>Color State Effects</title>
+
+  <para>Color state effects are applied to interface elements in the inactive
+  (windows that do not have focus; only if <guilabel>Apply inactive window
+  color effects</guilabel> is enabled) or disabled states. By changing the
+  effects, the appearance of elements in these states can be changed. Usually,
+  inactive elements will have reduced contrast (text fades slightly into the
+  background) and may have slightly reduced intensity, while disabled elements
+  will have strongly reduced contrast and are often notably darker or lighter.
+  </para>
+
+  <para>Three types of effect may be applied to each state (with the effects
+  of the two states being independent). These are Intensity, Color and
+  Contrast. The first two (Intensity, Color) control the overall color, while
+  the last (Contrast) deals with the foreground colors relative to the
+  background.</para>
+
+  <sect3>
+    <title>Intensity</title>
+
+    <para>Intensity allows the overall color to be lightened or darkened.
+    Setting the slider to the middle produces no change. The available effects
+    are:</para>
+
+    <itemizedlist>
+      <listitem><para>Shade &mdash;
+        makes everything lighter or darker in a controlled manner. Each
+        &quot;tick&quot; on the slider increases or decreases the overall
+        intensity (&ie; perceived brightness) by an absolute amount.
+      </para></listitem>
+      <listitem><para>Darken &mdash;
+        changes the intensity to a percentage of the initial value. A slider
+        setting halfway between middle and maximum results in a color half as
+        intense as the original. The minimum gives a color twice as intense as
+        the original.
+      </para></listitem>
+      <listitem><para>Lighten &mdash;
+        conceptually the opposite of darken; lighten can be thought of as
+        working with &quot;distance from white&quot;, where darken works with
+        &quot;distance from black&quot;. The minimum is a color twice as
+        &quot;far&quot; from white as the original, while halfway between
+        middle and maximum gives an intensity halfway between the original
+        color and white.
+      </para></listitem>
+    </itemizedlist>
+  </sect3>
+
+  <sect3>
+    <title>Color</title>
+
+    <para>Color also changes the overall color, but is not limited to
+    intensity. The available effects are:</para>
+
+    <itemizedlist>
+      <listitem><para>Desaturate &mdash;
+        changes the relative chroma. The middle setting produces no change;
+        maximum gives a gray whose perceptual intensity equals that of the
+        original color. Lower settings increase the chroma, giving a color that
+        is less gray / more &quot;vibrant&quot; than the original.
+      </para></listitem>
+      <listitem><para>Fade &mdash;
+        smoothly blends the original color into a reference color. The minimum
+        setting on the slider produces no change; maximum gives the reference
+        color.
+      </para></listitem>
+      <listitem><para>Tint &mdash;
+        similar to Fade, except that the color (hue and chroma) changes more
+        quickly while the intensity changes more slowly as the slider value is
+        increased.
+      </para></listitem>
+    </itemizedlist>
+  </sect3>
+
+  <sect3>
+    <title>Contrast</title>
+
+    <para>The contrast effects are similar to the color effects, except they
+    apply to the text, using the background color as the reference color, and
+    desaturate is not available. Fade produces text that &quot;fades out&quot;
+    more quickly, but keeps its color longer, while Tint produces text that
+    changes color to match the background more quickly while keeping a greater
+    intensity contrast for longer (where &quot;longer&quot; means higher
+    settings on the slider). For Contrast effects, the minimum setting on the
+    slider produces no change, while maximum causes the text to completely
+    disappear into the background.</para>
+  </sect3>
+
+</sect2>
+
+</sect1>
+
+</article>
+<!-- kate: indent-width 2; replace-tabs on; -->

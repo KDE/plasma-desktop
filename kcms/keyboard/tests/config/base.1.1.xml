@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xkbConfigRegistry SYSTEM "xkb.dtd">
+<xkbConfigRegistry version="1.1">
+  <modelList>
+    <model>
+      <configItem>
+        <name>pc101</name>
+        <description>Generic 101-key PC</description>
+        <vendor>Generic</vendor>
+      </configItem>
+    </model>
+  </modelList>
+  <layoutList>
+    <layout>
+      <configItem>
+        <name>us</name>
+        <shortDescription>USA</shortDescription>
+        <description>USA</description>
+        <languageList><iso639Id>eng</iso639Id></languageList>
+      </configItem>
+      <variantList>
+        <variant>
+          <configItem>
+            <name>chr</name>
+            <description>Cherokee</description>
+            <languageList><iso639Id>chr</iso639Id></languageList>
+          </configItem>
+          <configItem>
+            <name>chr</name>
+            <description>Cherokee2</description>
+          </configItem>
+        </variant>
+        <variant>
+            <name>bad</name>
+            <description>Bad Variant Missing configItem tag</description>
+            <languageList><iso639Id>chr</iso639Id></languageList>
+        </variant>
+      </variantList>
+    </layout>
+    <layout>
+      <configItem>
+        <name>tw</name>
+
+        <shortDescription>zh</shortDescription>
+        <description>Taiwanese</description>
+        <languageList>
+          <iso639Id>fox</iso639Id>
+        </languageList>
+      </configItem>
+    </layout>
+  </layoutList>
+  <optionList>
+    <group allowMultipleSelection="true">
+      
+      <configItem>
+        <name>grp</name>
+        <description>Key(s) to change layout</description>
+      </configItem>
+      <option>
+        <configItem>
+          <name>grp:switch</name>
+          <description>Right Alt (while pressed)</description>
+        </configItem>
+      </option>
+      
+    </group>
+  </optionList>
+</xkbConfigRegistry>

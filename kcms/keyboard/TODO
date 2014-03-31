@@ -1,0 +1,37 @@
+Tests:
+* tests
+
+Core:
+* better handling when layouts set manually and not present in config
+
+KCM UI:
+* use listboxes instead of combos in add layout dialog
+* allow multiple layouts to be added in same dialog?
+
+KCM UI cleanup:
+* layouts, sizes, alignment etc in kcm
+
+plasma applet:
+
+kxkb part:
+* tooltip (currently does not work in lockdlg for some reason)
+
+tray icon:
+
+Code cleanup:
+* rules, iso_codes:
+  better error handling
+
+Improvement:
+* remove XInput libs from plasma applet and layout widget (find a nicer way)
+* optimize fetching groups and layouts (cache them) / fetch current group directly
+* refactor/optimize/clean the code
+* refactor client code for D-BUS API to use library instead?
+
+External improvements:
+* Add KSharedConfig::configChanged() signal
+* make iso-codes external package 
+* make flags external package
+
+Documentation:
+* update documentation for keyboard module

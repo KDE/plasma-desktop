@@ -1,0 +1,33 @@
+
+Context is about who i am, where i am, and what i'm doing. It's my identiity, my environment and my activities.
+
+Identity
+---------
+
+[note: I don't think I really grok this. someone please find a better way to explain it]
+My identity is... me. And my various hats. My logins for IM, facebook, email, etc. My status. The ability to have a separate identity for work? social desktop stuff?
+It's also your login - files, config, etc.
+
+
+Environment
+-----------
+
+My environment affects a lot of little things.  The room lighting affects the ideal brightness of my screen. Battery state affects how aggressive the laptop's powersaving should be. Time of day and location can be good predictors of what i'm working on (or whether silent mode is a good idea). Location can also indicate what timezone and weather is most useful. Network availabiity and my device formfactor affect what i can do. Who's with me is important too- i don't want my private stuff out when there are people looking over my shoulder. The computer can't detect all of those, but it should take advantage of whatever information it *does* have.
+
+
+Activities
+----------
+
+My activities affect how i work. Each project tends to have its own files, resources and tools - with some degree of overlap, of course. When i'm working on one, i want everything for that task at my fingertips, and all unrelated things out of my way. I may even want a separate identity for some of them...
+
+The current activity is what i'm doing *now*, and the others are things i have been doing (and probably will return to).
+
+
+Implementation
+--------------
+
+Activities have been implemented; identity and environment have not.
+
+in libplasma, there is a Context class; this has become a class to hold context information that is *local* to a containment (like which activity it belongs to); each containment has its own Context*. global context, such as location, will probably be held elsewhere when it is implemented.
+
+

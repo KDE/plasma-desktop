@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>setpreview</class>
+ <widget class="QFrame" name="setpreview">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>550</width>
+    <height>96</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="frameShape">
+   <enum>QFrame::StyledPanel</enum>
+  </property>
+  <property name="frameShadow">
+   <enum>QFrame::Sunken</enum>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="horizontalSpacing">
+    <number>0</number>
+   </property>
+   <item row="0" column="0">
+    <widget class="QWidget" name="widgetFore0" native="true">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLabel" name="labelFore0">
+        <property name="toolTip">
+         <string>Normal Text on Normal Background</string>
+        </property>
+        <property name="text">
+         <string comment="color-kcm-set-preview" extracomment="see kdebase/workspace/kcontrol/colors/README.i18n">normal</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QWidget" name="widgetFore3" native="true">
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QLabel" name="labelFore3">
+        <property name="font">
+         <font>
+          <underline>true</underline>
+         </font>
+        </property>
+        <property name="toolTip">
+         <string>Link Text on Normal Background</string>
+        </property>
+        <property name="text">
+         <string comment="color-kcm-set-preview" extracomment="see kdebase/workspace/kcontrol/colors/README.i18n">link</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="0" column="2">
+    <widget class="QWidget" name="widgetFore4" native="true">
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <widget class="QLabel" name="labelFore4">
+        <property name="font">
+         <font>
+          <underline>true</underline>
+         </font>
+        </property>
+        <property name="toolTip">
+         <string>Visited Text on Normal Background</string>
+        </property>
+        <property name="text">
+         <string comment="color-kcm-set-preview" extracomment="see kdebase/workspace/kcontrol/colors/README.i18n">visited</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="0" column="3">
+    <widget class="QWidget" name="widgetFore2" native="true">
+     <property name="toolTip">
+      <string>Active Text on Normal Background</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_4">
+      <item>
+       <widget class="QLabel" name="labelFore2">
+        <property name="text">
+         <string comment="color-kcm-set-preview" extracomment="see kdebase/workspace/kcontrol/colors/README.i18n">active</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="0" column="4">
+    <widget class="QWidget" name="widgetFore1" native="true">
+     <layout class="QHBoxLayout" name="horizontalLayout_5">
+      <item>
+       <widget class="QLabel" name="labelFore1">
+        <property name="toolTip">
+         <string>Inactive Text on Normal Background</string>
+        </property>
+        <property name="text">
+         <string comment="color-kcm-set-preview" extracomment="see kdebase/workspace/kcontrol/colors/README.i18n">inactive</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="0" column="5">
+    <widget class="QWidget" name="widgetFore5" native="true">
+     <layout class="QHBoxLayout" name="horizontalLayout_6">
+      <item>
+       <widget class="QLabel" name="labelFore5">
+        <property name="toolTip">
+         <string>Negative Text on Normal Background</string>
+        </property>
+        <property name="text">
+         <string comment="color-kcm-set-preview" extracomment="see kdebase/workspace/kcontrol/colors/README.i18n">negative</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="0" column="6">
+    <widget class="QWidget" name="widgetFore6" native="true">
+     <layout class="QHBoxLayout" name="horizontalLayout_7">
+      <item>
+       <widget class="QLabel" name="labelFore6">
+        <property name="toolTip">
+         <string>Neutral Text on Normal Background</string>
+        </property>
+        <property name="text">
+         <string comment="color-kcm-set-preview" extracomment="see kdebase/workspace/kcontrol/colors/README.i18n">neutral</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="0" column="7">
+    <widget class="QWidget" name="widgetFore7" native="true">
+     <layout class="QHBoxLayout" name="horizontalLayout_8">
+      <item>
+       <widget class="QLabel" name="labelFore7">
+        <property name="toolTip">
+         <string>Positive Text on Normal Background</string>
+        </property>
+        <property name="text">
+         <string comment="color-kcm-set-preview" extracomment="see kdebase/workspace/kcontrol/colors/README.i18n">positive</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="0" column="8">
+    <widget class="QWidget" name="widgetFore8" native="true">
+     <property name="toolTip">
+      <string>Hover on Normal Background</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_9">
+      <item>
+       <widget class="QLabel" name="labelFore8">
+        <property name="text">
+         <string comment="color-kcm-set-preview" extracomment="see kdebase/workspace/kcontrol/colors/README.i18n">hover</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QWidget" name="widgetBack0" native="true">
+     <layout class="QHBoxLayout" name="horizontalLayout_11">
+      <item>
+       <widget class="QLabel" name="labelBack0">
+        <property name="toolTip">
+         <string>Normal Text on Normal Background</string>
+        </property>
+        <property name="text">
+         <string comment="color-kcm-set-preview" extracomment="see kdebase/workspace/kcontrol/colors/README.i18n">normal</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QWidget" name="widgetBack3" native="true">
+     <layout class="QHBoxLayout" name="horizontalLayout_12">
+      <item>
+       <widget class="QLabel" name="labelBack3">
+        <property name="font">
+         <font>
+          <underline>true</underline>
+         </font>
+        </property>
+        <property name="toolTip">
+         <string>Link Text on Link Background
+(Note: Link Background is derived from Link Text and cannot be separately configured at this time)</string>
+        </property>
+        <property name="text">
+         <string comment="color-kcm-set-preview" extracomment="see kdebase/workspace/kcontrol/colors/README.i18n">link</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="2">
+    <widget class="QWidget" name="widgetBack4" native="true">
+     <layout class="QHBoxLayout" name="horizontalLayout_13">
+      <item>
+       <widget class="QLabel" name="labelBack4">
+        <property name="font">
+         <font>
+          <underline>true</underline>
+         </font>
+        </property>
+        <property name="toolTip">
+         <string>Visited Text on Visited Background
+(Note: Visited Background is derived from Visited Text and cannot be separately configured at this time)</string>
+        </property>
+        <property name="text">
+         <string comment="color-kcm-set-preview" extracomment="see kdebase/workspace/kcontrol/colors/README.i18n">visited</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="3">
+    <widget class="QWidget" name="widgetBack2" native="true">
+     <layout class="QHBoxLayout" name="horizontalLayout_14">
+      <item>
+       <widget class="QLabel" name="labelBack2">
+        <property name="toolTip">
+         <string>Active Text on Active Background
+(Note: Active Background is derived from Active Text and cannot be separately configured at this time)</string>
+        </property>
+        <property name="text">
+         <string comment="color-kcm-set-preview" extracomment="see kdebase/workspace/kcontrol/colors/README.i18n">active</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="4">
+    <widget class="QWidget" name="widgetBack1" native="true">
+     <layout class="QHBoxLayout" name="horizontalLayout_15">
+      <item>
+       <widget class="QLabel" name="labelBack1">
+        <property name="toolTip">
+         <string>Inactive Text on Alternate Background</string>
+        </property>
+        <property name="text">
+         <string comment="color-kcm-set-preview" extracomment="see kdebase/workspace/kcontrol/colors/README.i18n">alternate</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="5">
+    <widget class="QWidget" name="widgetBack5" native="true">
+     <layout class="QHBoxLayout" name="horizontalLayout_16">
+      <item>
+       <widget class="QLabel" name="labelBack5">
+        <property name="toolTip">
+         <string>Negative Text on Negative Background
+(Note: Negative Background is derived from Negative Text and cannot be separately configured at this time)</string>
+        </property>
+        <property name="text">
+         <string comment="color-kcm-set-preview" extracomment="see kdebase/workspace/kcontrol/colors/README.i18n">negative</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="6">
+    <widget class="QWidget" name="widgetBack6" native="true">
+     <layout class="QHBoxLayout" name="horizontalLayout_17">
+      <item>
+       <widget class="QLabel" name="labelBack6">
+        <property name="toolTip">
+         <string>Neutral Text on Neutral Background
+(Note: Neutral Background is derived from Neutral Text and cannot be separately configured at this time)</string>
+        </property>
+        <property name="text">
+         <string comment="color-kcm-set-preview" extracomment="see kdebase/workspace/kcontrol/colors/README.i18n">neutral</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="7">
+    <widget class="QWidget" name="widgetBack7" native="true">
+     <layout class="QHBoxLayout" name="horizontalLayout_18">
+      <item>
+       <widget class="QLabel" name="labelBack7">
+        <property name="toolTip">
+         <string>Positive Text on Positive Background
+(Note: Positive Background is derived from Positive Text and cannot be separately configured at this time)</string>
+        </property>
+        <property name="text">
+         <string comment="color-kcm-set-preview" extracomment="see kdebase/workspace/kcontrol/colors/README.i18n">positive</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="8">
+    <widget class="QWidget" name="widgetFore9" native="true">
+     <layout class="QHBoxLayout" name="horizontalLayout_10">
+      <item>
+       <widget class="QLabel" name="labelFore9">
+        <property name="toolTip">
+         <string>Focus on Normal Background</string>
+        </property>
+        <property name="text">
+         <string comment="color-kcm-set-preview" extracomment="see kdebase/workspace/kcontrol/colors/README.i18n">focus</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

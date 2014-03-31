@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ThemePage</class>
+ <widget class="QWidget" name="ThemePage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>541</width>
+    <height>360</height>
+   </rect>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0" colspan="2">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Select the cursor theme you want to use (hover preview to test cursor):</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0" rowspan="3" colspan="2">
+    <widget class="PreviewWidget" name="preview" native="true">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>48</height>
+      </size>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0" rowspan="5" colspan="2">
+    <widget class="QListView" name="view">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>1</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="alternatingRowColors">
+      <bool>true</bool>
+     </property>
+     <property name="verticalScrollMode">
+      <enum>QAbstractItemView::ScrollPerPixel</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="2">
+    <widget class="KPushButton" name="installKnsButton">
+     <property name="toolTip">
+      <string>Get new color schemes from the Internet</string>
+     </property>
+     <property name="text">
+      <string>Get New Theme...</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="2">
+    <widget class="KPushButton" name="installButton">
+     <property name="text">
+      <string>Install From File...</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="2">
+    <widget class="KPushButton" name="removeButton">
+     <property name="text">
+      <string>Remove Theme</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="2">
+    <widget class="QComboBox" name="sizeComboBox">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="sizeAdjustPolicy">
+      <enum>QComboBox::AdjustToMinimumContentsLengthWithIcon</enum>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="2">
+    <widget class="QLabel" name="sizeLabel">
+     <property name="text">
+      <string comment="@label:listbox cursor size">Size:</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>KPushButton</class>
+   <extends>QPushButton</extends>
+   <header>kpushbutton.h</header>
+  </customwidget>
+  <customwidget>
+   <class>PreviewWidget</class>
+   <extends>QWidget</extends>
+   <header>previewwidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

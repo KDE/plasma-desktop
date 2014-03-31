@@ -1,0 +1,99 @@
+Wallpapers
+==========
+
+Overview
+--------
+"Wallpapers" are components that paint the background for Containments that
+do not provide their own background rendering.
+
+Timeline
+--------
+Introduced in: libplasma 2.1 (KDE 4.2.0)
+
+Component Type
+--------------
+Wallpapers are plugins of ServiceType Plasma/Wallpaper.
+
+Component Description
+---------------------
+Wallpaper plugins are registered using .desktop files. These files should be
+named using the following naming scheme:
+
+    plasma-wallpaper-<pluginname>.desktop
+
+If a wallpaper plugin provides more than on mode (e.g. Single Image, Wallpaper)
+it should include a Actions= entry in the .desktop file, listing the possible
+actions. An actions group should be included to provide for translatable names.
+
+Example:
+
+> Actions=SingleImage,Slideshow
+>
+> [Desktop Action SingleImage]
+> Name=Image
+> Icon=image-jpg
+
+All other entries should follow the standard .desktop specification,
+supplemented by the standard KPluginInfo keys.
+
+If a wallpaper plugin should be constrained to a specific set of FormFactors,
+include a list of those FormFactors using the X-Plasma-FormFactors key.
+
+Defined categories for wallpapers include:
+ * Single Image
+ * Slideshow
+ * Animated
+ * OpenGL
+ * Interactive
+
+Component API
+-------------
+Subclasses: QObject
+
+*** Key Properties ***
+
+boundingRect: the geometry to paint the wallpaper into
+formFactors: the Plasma::FormFactors this wallpaper supports (e.g. Planar)
+
+*** Key Methods ***
+
+The update(QRectF) signal must be emitted whenever the wallpaper needs a repaint.
+This might happen in response to the wallpaper changing (such as in a slidshow)
+or due to an animation update. Keeping the exposed area to a minimum is important.
+
+Painting is done in the paint(QPainter *painter, const QRectF &exposed area)
+method, and will be called when a paint operation should be done, either due to
+an external event or in response to an update request from the wallpaper.
+
+A configuration UI can optionally be provided by overloading the configuration
+method.
+
+Containment Interface
+---------------------
+The Containment class supports loading and using a wallpaper plugin.
+Subclasses need do nothing to get this support, and can opt out of
+wallpaper support by calling setDrawWallpaper(false).
+
+When a wallpaper plugin is used, Wallpaper::paint is called from
+Applet::paint.
+
+The Wallpaper plugin to use is set using the setWallpaper(const QString &pluginName)
+method.
+
+User Configuration
+------------------
+It is up to the host application to provide a configuration interface, such
+as a dialog, to the user to embed the wallpaper config in.
+
+*** Plasma Desktop Implementation ***
+
+A setting dialog is provided by the View (DesktopView, PanelView, etc).
+
+This dialog allows selecting both the Containment type for
+the current Activity associated with the view as well as selecting the
+Wallpaper plugin for the Containment.
+
+Future Work
+-----------
+* Wallpapers should be ScriptEngine-able
+* Ability to define which wallpapers a Containment is compatible with?

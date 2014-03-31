@@ -1,0 +1,1298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>colorSettings</class>
+ <widget class="QWidget" name="colorSettings">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>477</width>
+    <height>422</height>
+   </rect>
+  </property>
+  <layout class="QVBoxLayout">
+   <property name="margin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="pageScheme">
+      <attribute name="title">
+       <string>&amp;Scheme</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="0">
+        <widget class="KListWidget" name="schemeList">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>23</width>
+           <height>16</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <widget class="KPushButton" name="schemeKnsButton">
+           <property name="toolTip">
+            <string>Get new color schemes from the Internet</string>
+           </property>
+           <property name="text">
+            <string>Get &amp;New Schemes...</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="KPushButton" name="schemeKnsUploadButton">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="toolTip">
+            <string>Share the selected scheme on the Internet</string>
+           </property>
+           <property name="text">
+            <string>&amp;Upload Scheme...</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="KPushButton" name="schemeImportButton">
+           <property name="toolTip">
+            <string>Import a color scheme from a file</string>
+           </property>
+           <property name="text">
+            <string>Import Scheme...</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="KPushButton" name="schemeSaveButton">
+           <property name="toolTip">
+            <string>Save the current color scheme</string>
+           </property>
+           <property name="text">
+            <string>Save Scheme...</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="KPushButton" name="schemeRemoveButton">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="toolTip">
+            <string>Remove the selected scheme</string>
+           </property>
+           <property name="text">
+            <string>Remove Scheme</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer>
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item row="1" column="0" colspan="2">
+        <widget class="QGroupBox" name="groupBox_3">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="title">
+          <string>Preview</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <widget class="PreviewWidget" name="schemePreview" native="true">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>10</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="pageOptions">
+      <attribute name="title">
+       <string>Options</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_7">
+       <item>
+        <widget class="QCheckBox" name="useInactiveEffects">
+         <property name="text">
+          <string>Apply inactive window color &amp;effects</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="inactiveSelectionEffect">
+         <property name="text">
+          <string>In&amp;active selection changes color</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="shadeSortedColumn">
+         <property name="text">
+          <string>Shade sorted column &amp;in lists</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="applyToAlien">
+         <property name="mouseTracking">
+          <bool>true</bool>
+         </property>
+         <property name="text">
+          <string>Apply colors to &amp;non-KDE4 applications</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBox_5">
+         <property name="toolTip">
+          <string>Shading of frames and lighting (&quot;3D&quot;) effects</string>
+         </property>
+         <property name="title">
+          <string>Shading</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_3">
+          <property name="horizontalSpacing">
+           <number>12</number>
+          </property>
+          <property name="verticalSpacing">
+           <number>0</number>
+          </property>
+          <item row="0" column="1">
+           <widget class="QLabel" name="label_9">
+            <property name="text">
+             <string>Minimum</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>198</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="0" column="3">
+           <widget class="QLabel" name="label_10">
+            <property name="text">
+             <string>Maximum</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_8">
+            <property name="text">
+             <string>Contrast</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1" colspan="3">
+           <widget class="QSlider" name="contrastSlider">
+            <property name="maximum">
+             <number>10</number>
+            </property>
+            <property name="pageStep">
+             <number>5</number>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>141</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="pageColors">
+      <attribute name="title">
+       <string>Colors</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_7">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>Color set:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QComboBox" name="colorSet">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="toolTip">
+          <string>Colorset to view/modify</string>
+         </property>
+         <item>
+          <property name="text">
+           <string comment="color-sets" extracomment="'Common' here means &quot;frequent/not rare&quot;, not &quot;shared&quot;">Common Colors</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string comment="color-sets" extracomment="see kdebase/workspace/kcontrol/colors/README.i18n">View</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string comment="color-sets" extracomment="see kdebase/workspace/kcontrol/colors/README.i18n">Window</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string comment="color-sets" extracomment="see kdebase/workspace/kcontrol/colors/README.i18n">Button</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string comment="color-sets" extracomment="see kdebase/workspace/kcontrol/colors/README.i18n">Selection</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string comment="color-sets" extracomment="see kdebase/workspace/kcontrol/colors/README.i18n">Tooltip</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="1" column="0" colspan="2">
+        <widget class="QStackedWidget" name="stackColors">
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <widget class="QWidget" name="pageCommonColors">
+          <layout class="QGridLayout">
+           <property name="margin">
+            <number>0</number>
+           </property>
+           <item row="0" column="0">
+            <widget class="QTableWidget" name="commonColorTable">
+             <property name="editTriggers">
+              <set>QAbstractItemView::NoEditTriggers</set>
+             </property>
+             <property name="selectionMode">
+              <enum>QAbstractItemView::SingleSelection</enum>
+             </property>
+             <property name="selectionBehavior">
+              <enum>QAbstractItemView::SelectRows</enum>
+             </property>
+             <property name="wordWrap">
+              <bool>true</bool>
+             </property>
+             <property name="columnCount">
+              <number>2</number>
+             </property>
+             <row>
+              <property name="text">
+               <string>New Row</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>New Row</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>New Row</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>New Row</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>New Row</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>New Row</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>New Row</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>New Row</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>New Row</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>New Row</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>New Row</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>New Row</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>New Row</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>New Row</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>New Row</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>New Row</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>New Row</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>New Row</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>New Row</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>New Row</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>New Row</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>New Row</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>New Row</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>New Row</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>New Row</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>New Row</string>
+              </property>
+             </row>
+             <column>
+              <property name="text">
+               <string>0</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>1</string>
+              </property>
+             </column>
+             <item row="0" column="0">
+              <property name="text">
+               <string>View Background</string>
+              </property>
+             </item>
+             <item row="1" column="0">
+              <property name="text">
+               <string>View Text</string>
+              </property>
+             </item>
+             <item row="2" column="0">
+              <property name="text">
+               <string>Window Background</string>
+              </property>
+             </item>
+             <item row="3" column="0">
+              <property name="text">
+               <string>Window Text</string>
+              </property>
+             </item>
+             <item row="4" column="0">
+              <property name="text">
+               <string>Button Background</string>
+              </property>
+             </item>
+             <item row="5" column="0">
+              <property name="text">
+               <string>Button Text</string>
+              </property>
+             </item>
+             <item row="6" column="0">
+              <property name="text">
+               <string>Selection Background</string>
+              </property>
+             </item>
+             <item row="7" column="0">
+              <property name="text">
+               <string>Selection Text</string>
+              </property>
+             </item>
+             <item row="8" column="0">
+              <property name="text">
+               <string>Selection Inactive Text</string>
+              </property>
+             </item>
+             <item row="9" column="0">
+              <property name="text">
+               <string>Inactive Text</string>
+              </property>
+             </item>
+             <item row="10" column="0">
+              <property name="text">
+               <string>Active Text</string>
+              </property>
+             </item>
+             <item row="11" column="0">
+              <property name="text">
+               <string>Link Text</string>
+              </property>
+             </item>
+             <item row="12" column="0">
+              <property name="text">
+               <string>Visited Text</string>
+              </property>
+             </item>
+             <item row="13" column="0">
+              <property name="text">
+               <string>Negative Text</string>
+              </property>
+             </item>
+             <item row="14" column="0">
+              <property name="text">
+               <string>Neutral Text</string>
+              </property>
+             </item>
+             <item row="15" column="0">
+              <property name="text">
+               <string>Positive Text</string>
+              </property>
+             </item>
+             <item row="16" column="0">
+              <property name="text">
+               <string>Focus Decoration</string>
+              </property>
+             </item>
+             <item row="17" column="0">
+              <property name="text">
+               <string>Hover Decoration</string>
+              </property>
+             </item>
+             <item row="18" column="0">
+              <property name="text">
+               <string>Tooltip Background</string>
+              </property>
+             </item>
+             <item row="19" column="0">
+              <property name="text">
+               <string>Tooltip Text</string>
+              </property>
+             </item>
+             <item row="20" column="0">
+              <property name="text">
+               <string>Active Titlebar</string>
+              </property>
+             </item>
+             <item row="21" column="0">
+              <property name="text">
+               <string>Active Titlebar Text</string>
+              </property>
+             </item>
+             <item row="22" column="0">
+              <property name="text">
+               <string>Active Titlebar Secondary</string>
+              </property>
+             </item>
+             <item row="23" column="0">
+              <property name="text">
+               <string>Inactive Titlebar</string>
+              </property>
+             </item>
+             <item row="24" column="0">
+              <property name="text">
+               <string>Inactive Titlebar Text</string>
+              </property>
+             </item>
+             <item row="25" column="0">
+              <property name="text">
+               <string>Inactive Titlebar Secondary</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="pageSetColors">
+          <layout class="QGridLayout">
+           <property name="margin">
+            <number>0</number>
+           </property>
+           <item row="0" column="0">
+            <widget class="QTableWidget" name="colorTable">
+             <property name="editTriggers">
+              <set>QAbstractItemView::NoEditTriggers</set>
+             </property>
+             <property name="selectionMode">
+              <enum>QAbstractItemView::SingleSelection</enum>
+             </property>
+             <property name="selectionBehavior">
+              <enum>QAbstractItemView::SelectRows</enum>
+             </property>
+             <property name="wordWrap">
+              <bool>true</bool>
+             </property>
+             <property name="columnCount">
+              <number>2</number>
+             </property>
+             <column/>
+             <column/>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+       <item row="2" column="0" colspan="2">
+        <widget class="QGroupBox" name="groupBox_4">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="title">
+          <string>Preview</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <item>
+           <widget class="QStackedWidget" name="stackPreview">
+            <property name="currentIndex">
+             <number>0</number>
+            </property>
+            <widget class="QWidget" name="pageCommonPreview">
+             <layout class="QVBoxLayout" name="verticalLayout">
+              <property name="margin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="PreviewWidget" name="colorPreview" native="true">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>10</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="pageSetPreview">
+             <layout class="QVBoxLayout" name="verticalLayout_5">
+              <property name="margin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="SetPreviewWidget" name="setPreview" native="true">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>10</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="pageInactice">
+      <attribute name="title">
+       <string comment="@title:tab color transformations on inactive elements">Inactive</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_4">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>Intensity:</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QComboBox" name="inactiveIntensityBox">
+         <property name="toolTip">
+          <string>Inactive intensity effect type</string>
+         </property>
+         <item>
+          <property name="text">
+           <string comment="no inactive intensity effect">None</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string comment="inactive intensity effect">Shade</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string comment="inactive intensity effect">Darken</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string comment="inactive intensity effect">Lighten</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QSlider" name="inactiveIntensitySlider">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="toolTip">
+          <string>Inactive intensity effect amount</string>
+         </property>
+         <property name="maximum">
+          <number>40</number>
+         </property>
+         <property name="pageStep">
+          <number>10</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="3">
+        <spacer name="spacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Minimum</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>69</width>
+           <height>22</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>Color:</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QComboBox" name="inactiveColorBox">
+         <property name="toolTip">
+          <string>Inactive color effect type</string>
+         </property>
+         <item>
+          <property name="text">
+           <string comment="no inactive color effect">None</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string comment="inactive color effect">Desaturate</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string comment="inactive color effect">Fade</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string comment="inactive color effect">Tint</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="QSlider" name="inactiveColorSlider">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="toolTip">
+          <string>Inactive color amount</string>
+         </property>
+         <property name="maximum">
+          <number>40</number>
+         </property>
+         <property name="pageStep">
+          <number>10</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="3">
+        <widget class="KColorButton" name="inactiveColorButton">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="toolTip">
+          <string>Inactive color</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string>Contrast:</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QComboBox" name="inactiveContrastBox">
+         <property name="toolTip">
+          <string>Inactive contrast effect type</string>
+         </property>
+         <item>
+          <property name="text">
+           <string comment="no inactive contrast effect">None</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string comment="inactive contrast effect">Fade</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string comment="inactive contrast effect">Tint</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="2" column="2">
+        <widget class="QSlider" name="inactiveContrastSlider">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="toolTip">
+          <string>Inactive contrast effect amount</string>
+         </property>
+         <property name="maximum">
+          <number>20</number>
+         </property>
+         <property name="pageStep">
+          <number>5</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="3">
+        <spacer name="spacer_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Minimum</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>69</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="4" column="0" colspan="4">
+        <spacer name="verticalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>0</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="3" column="0" colspan="4">
+        <widget class="QGroupBox" name="groupBox">
+         <property name="title">
+          <string>Preview</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_6">
+          <item>
+           <widget class="PreviewWidget" name="inactivePreview" native="true">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>10</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="pageDisabled">
+      <attribute name="title">
+       <string comment="@title:tab color transformations on disabled elements">Disabled</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_5">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_5">
+         <property name="text">
+          <string>Intensity:</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QComboBox" name="disabledIntensityBox">
+         <property name="toolTip">
+          <string>Disabled intensity effect type</string>
+         </property>
+         <item>
+          <property name="text">
+           <string comment="no disabled intensity effect">None</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string comment="disabled intensity effect">Shade</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string comment="disabled intensity effect">Darken</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string comment="disabled intensity effect">Lighten</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QSlider" name="disabledIntensitySlider">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="toolTip">
+          <string>Disabled intensity effect amount</string>
+         </property>
+         <property name="maximum">
+          <number>40</number>
+         </property>
+         <property name="pageStep">
+          <number>10</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="3">
+        <spacer name="spacer_3">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Minimum</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>69</width>
+           <height>22</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_4">
+         <property name="text">
+          <string>Color:</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QComboBox" name="disabledColorBox">
+         <property name="toolTip">
+          <string>Disabled color effect type</string>
+         </property>
+         <item>
+          <property name="text">
+           <string comment="no disabled color effect">None</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string comment="disabled color effect">Desaturate</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string comment="disabled color effect">Fade</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string comment="disabled color effect">Tint</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="QSlider" name="disabledColorSlider">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="toolTip">
+          <string>Disabled color effect amount</string>
+         </property>
+         <property name="maximum">
+          <number>40</number>
+         </property>
+         <property name="pageStep">
+          <number>10</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="3">
+        <widget class="KColorButton" name="disabledColorButton">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="toolTip">
+          <string>Disabled color</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_6">
+         <property name="text">
+          <string>Contrast:</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QComboBox" name="disabledContrastBox">
+         <property name="toolTip">
+          <string>Disabled contrast type</string>
+         </property>
+         <item>
+          <property name="text">
+           <string comment="no disabled contrast">None</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string comment="disabled contrast">Fade</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string comment="disabled contrast">Tint</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="2" column="2">
+        <widget class="QSlider" name="disabledContrastSlider">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="toolTip">
+          <string>Disabled contrast amount</string>
+         </property>
+         <property name="maximum">
+          <number>20</number>
+         </property>
+         <property name="pageStep">
+          <number>10</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="3">
+        <spacer name="spacer_4">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Minimum</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>69</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="4" column="0" colspan="4">
+        <spacer name="verticalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>0</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="3" column="0" colspan="4">
+        <widget class="QGroupBox" name="groupBox_2">
+         <property name="title">
+          <string>Preview</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_8">
+          <item>
+           <widget class="PreviewWidget" name="disabledPreview" native="true">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>10</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>KListWidget</class>
+   <extends>QListWidget</extends>
+   <header>klistwidget.h</header>
+  </customwidget>
+  <customwidget>
+   <class>KPushButton</class>
+   <extends>QPushButton</extends>
+   <header>kpushbutton.h</header>
+  </customwidget>
+  <customwidget>
+   <class>KColorButton</class>
+   <extends>QPushButton</extends>
+   <header>kcolorbutton.h</header>
+  </customwidget>
+  <customwidget>
+   <class>PreviewWidget</class>
+   <extends>QWidget</extends>
+   <header>previewwidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>SetPreviewWidget</class>
+   <extends>QWidget</extends>
+   <header>setpreviewwidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>schemeList</tabstop>
+  <tabstop>schemeKnsButton</tabstop>
+  <tabstop>schemeImportButton</tabstop>
+  <tabstop>schemeSaveButton</tabstop>
+  <tabstop>schemeRemoveButton</tabstop>
+  <tabstop>useInactiveEffects</tabstop>
+  <tabstop>inactiveSelectionEffect</tabstop>
+  <tabstop>shadeSortedColumn</tabstop>
+  <tabstop>applyToAlien</tabstop>
+  <tabstop>contrastSlider</tabstop>
+  <tabstop>colorSet</tabstop>
+  <tabstop>commonColorTable</tabstop>
+  <tabstop>inactiveIntensityBox</tabstop>
+  <tabstop>inactiveIntensitySlider</tabstop>
+  <tabstop>inactiveColorBox</tabstop>
+  <tabstop>inactiveColorSlider</tabstop>
+  <tabstop>inactiveContrastBox</tabstop>
+  <tabstop>inactiveContrastSlider</tabstop>
+  <tabstop>inactiveColorButton</tabstop>
+  <tabstop>disabledIntensityBox</tabstop>
+  <tabstop>disabledIntensitySlider</tabstop>
+  <tabstop>disabledColorBox</tabstop>
+  <tabstop>disabledColorSlider</tabstop>
+  <tabstop>disabledContrastBox</tabstop>
+  <tabstop>disabledContrastSlider</tabstop>
+  <tabstop>disabledColorButton</tabstop>
+  <tabstop>colorTable</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
