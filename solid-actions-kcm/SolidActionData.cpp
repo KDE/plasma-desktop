@@ -47,7 +47,6 @@
 #include <Solid/OpticalDisc>
 #include <solid/video.h>
 #include <solid/serialinterface.h>
-#include <solid/smartcardreader.h>
 
 static SolidActionData * actData = 0;
 
@@ -185,7 +184,6 @@ QList<QMetaObject> SolidActionData::fillInterfaceList()
     interfaces.append( Solid::StorageVolume::staticMetaObject );
     interfaces.append( Solid::OpticalDisc::staticMetaObject );
     interfaces.append( Solid::Video::staticMetaObject );
-    interfaces.append( Solid::SmartCardReader::staticMetaObject );
     return interfaces;
 }
 
