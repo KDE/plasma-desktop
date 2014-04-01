@@ -33,15 +33,13 @@ find_package(KF5 CONFIG REQUIRED COMPONENTS
     Runner
 )
 
-if(${CMAKE_SOURCE_DIR} STREQUAL ${CMAKE_CURRENT_SOURCE_DIR})
-    find_package(KDecorations REQUIRED CONFIG)
-    find_package(LibKWorkspace CONFIG REQUIRED)
-    find_package(LibTaskManager CONFIG REQUIRED)
-    find_package(KWinDBusInterface CONFIG REQUIRED)
-    find_package(ScreenSaverDBusInterface CONFIG REQUIRED)
-    find_package(KRunnerAppDBusInterface CONFIG REQUIRED)
-    find_package(KSMServerDBusInterface CONFIG REQUIRED)
-endif()
+find_package(KDecorations REQUIRED CONFIG)
+find_package(LibKWorkspace CONFIG REQUIRED)
+find_package(LibTaskManager CONFIG REQUIRED)
+find_package(KWinDBusInterface CONFIG REQUIRED)
+find_package(ScreenSaverDBusInterface CONFIG REQUIRED)
+find_package(KRunnerAppDBusInterface CONFIG REQUIRED)
+find_package(KSMServerDBusInterface CONFIG REQUIRED)
 
 find_package(KF5Activities ${KF5_VERSION})
 set_package_properties(KF5Activities PROPERTIES DESCRIPTION "management of Plasma activities"
@@ -104,6 +102,4 @@ add_subdirectory(toolboxes)
 add_subdirectory(applets)
 add_subdirectory(kcms)
 
-if(${CMAKE_SOURCE_DIR} STREQUAL ${CMAKE_CURRENT_SOURCE_DIR})
-    feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
-endif()
+feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
