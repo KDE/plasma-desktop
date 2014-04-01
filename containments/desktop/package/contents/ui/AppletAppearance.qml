@@ -32,7 +32,7 @@ Item {
 
     anchors.rightMargin: -handleWidth*controlsOpacity
 
-    property int handleWidth: iconSize + 8 // 4 pixels margins inside handle
+    property int handleWidth: iconSize
     property int minimumHandleHeight: 6 * (root.iconSize + 6) + margins.top + margins.bottom
     property int handleHeight: (height < minimumHandleHeight) ? minimumHandleHeight : height
     property string category
@@ -100,11 +100,8 @@ Item {
         id: mouseListener
 
         anchors {
-            left: parent.left
-            verticalCenter: parent.verticalCenter
+            fill: parent
         }
-        height: handleHeight
-        width: parent.width+handleWidth;
         z: 10
 
         hoverEnabled: true
@@ -120,14 +117,11 @@ Item {
 
             animationsEnabled = true;
             //print("Mouse is " + containsMouse);
-            if (!plasmoid.immutable && containsMouse) {
+            if (!plasmoid.immutable) {
                 if (!root.pressAndHoldHandle) {
                     hoverTracker.interval = root.handleDelay;
                     hoverTracker.restart();
                 }
-            } else {
-                hoverTracker.stop();
-                showAppletHandle = false;
             }
         }
 
@@ -135,7 +129,13 @@ Item {
             id: hoverTracker
             repeat: false
             interval: handleDelay
-            onTriggered: showAppletHandle = true;
+            onTriggered: {
+                if (mouseListener.containsMouse || (appletHandle.item && appletHandle.item.containsMouse)) {
+                    showAppletHandle = true;
+                } else {
+                    showAppletHandle = false;
+                }
+            }
         }
         Rectangle { color: Qt.rgba(0,0,0,0); border.width: 3; border.color: "red"; opacity: 0.5; visible: debug; anchors.fill: parent; }
     
@@ -309,8 +309,7 @@ Item {
                 id: appletHandle
                 z: appletContainer.z + 1
                 anchors {
-                    top: parent.top
-                    bottom: parent.bottom
+                    verticalCenter: parent.verticalCenter
                     right: plasmoidBackground.right
                     rightMargin: appletItem.margins.right
                 }

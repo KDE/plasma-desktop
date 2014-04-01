@@ -22,20 +22,27 @@
 import QtQuick 2.0
 import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
 
 import "plasmapackage:/code/LayoutManager.js" as LayoutManager
 
-Item {
+KQuickControlsAddons.MouseEventListener {
     id: appletHandle
 
     opacity: appletItem.controlsOpacity
     visible: opacity > 0
     width: appletItem.handleWidth
+    height: Math.max(appletItem.height - appletItem.margins.top - appletItem.margins.bottom, buttonColumn.implicitHeight)
+    hoverEnabled: true
+    onContainsMouseChanged: {
+        if (!containsMouse) {
+            hoverTracker.restart()
+        }
+    }
     //z: dragMouseArea.z + 1
 
     property int buttonMargin: 6
     property int minimumHeight:  6 * (root.iconSize + buttonMargin)
-    property Item buttonsParent: appletItem.handleMerged ? appletHandle : noBackgroundHandle
 
     signal removeApplet
 
@@ -48,9 +55,9 @@ Item {
         visible: controlsOpacity > 0
         z: plasmoidBackground.z - 10
 
-        height: (backgroundHints != "NoBackground") ? appletItem.handleHeight : appletItem.handleHeight + noBackgroundHandle.margins.top + noBackgroundHandle.margins.bottom
-
         anchors {
+            top: parent.top
+            bottom: parent.bottom
             left: parent.left
             right: parent.right
             verticalCenter: parent.verticalCenter
@@ -68,14 +75,11 @@ Item {
     ColumnLayout {
         id: buttonColumn
         width: handleWidth
-        parent: buttonsParent
+
         anchors {
             top: parent.top
-            topMargin: (!appletItem.hasBackground || !handleMerged) ? noBackgroundHandle.margins.top : appletItem.margins.top
             bottom: parent.bottom
-            bottomMargin: (!appletItem.hasBackground && !handleMerged) ? noBackgroundHandle.margins.bottom : appletItem.margins.bottom
             right: parent.right
-            rightMargin: appletItem.handleMerged ? -buttonMargin : noBackgroundHandle.margins.right - buttonMargin
         }
         spacing: buttonMargin*2
         ActionButton {
@@ -108,9 +112,11 @@ Item {
                     LayoutManager.setSpaceAvailable(appletItem.x, appletItem.y, appletItem.width, appletItem.height, true)
                 }
                 onPositionChanged: {
-                    appletItem.width = Math.max(appletItem.minimumWidth, appletItem.width + mouse.x-startX)
-                    appletItem.y = appletItem.y + (mouse.y-startY);
+                    appletItem.width = Math.max(appletItem.minimumWidth, appletItem.width + mouse.x-startX);
+
+                    var oldBottom = appletItem.y + appletItem.height;
                     appletItem.height = Math.max(appletItem.minimumHeight, appletItem.height + startY-mouse.y)
+                    appletItem.y = oldBottom - appletItem.height;
                 }
                 onReleased: {
                     animationsEnabled = true
@@ -228,9 +234,52 @@ Item {
         }
 
         //spacer
-        Item {
+        MouseArea {
+            id: dragMouseArea
+
+            implicitHeight: root.iconSize * 2
+            Layout.fillWidth: true
             Layout.fillHeight: true
-            height: 0
+            property int lastX
+            property int lastY
+            property int zoffset: 1000
+
+            onPressed: {
+                appletItem.z = appletItem.z + zoffset;
+                animationsEnabled = false
+                mouse.accepted = true
+                var x = Math.round(appletItem.x/LayoutManager.cellSize.width)*LayoutManager.cellSize.width
+                var y = Math.round(appletItem.y/LayoutManager.cellSize.height)*LayoutManager.cellSize.height
+                LayoutManager.setSpaceAvailable(x, y, appletItem.width, appletItem.height, true)
+
+                var globalMousePos = mapToItem(root, mouse.x, mouse.y)
+                lastX = globalMousePos.x
+                lastY = globalMousePos.y
+
+
+                placeHolder.syncWithItem(appletItem)
+                placeHolderPaint.opacity = root.haloOpacity;
+            }
+            onPositionChanged: {
+                placeHolder.syncWithItem(appletItem)
+
+                var globalPos = mapToItem(root, x, y)
+
+                var globalMousePos = mapToItem(root, mouse.x, mouse.y)
+                appletItem.x += (globalMousePos.x - lastX)
+                appletItem.y += (globalMousePos.y - lastY)
+
+                lastX = globalMousePos.x
+                lastY = globalMousePos.y
+            }
+            onReleased: {
+                appletItem.z = appletItem.z - zoffset;
+                repositionTimer.running = false
+                placeHolderPaint.opacity = 0
+                animationsEnabled = true
+                LayoutManager.positionItem(appletItem)
+                LayoutManager.save()
+            }
         }
 
         ActionButton {
