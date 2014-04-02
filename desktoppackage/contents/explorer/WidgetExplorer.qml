@@ -38,6 +38,12 @@ Item {
 
     property alias containment: widgetExplorer.containment
 
+    //external drop events can cause a raise event causing us to lose focus and
+    //therefore get deleted whilst we are still in a drag exec()
+    //this is a clue to the owning dialog that hideOnWindowDeactivate should be deleted
+    //See https://bugs.kde.org/show_bug.cgi?id=332733
+    property bool preventWindowHide: false
+
     property Item getWidgetsButton
     property Item categoryButton
 

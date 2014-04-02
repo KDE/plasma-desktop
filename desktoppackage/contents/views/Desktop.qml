@@ -83,6 +83,8 @@ Rectangle {
 
                     if (sidePanelStack.state == "activityManager") {
                         sidePanel.hideOnWindowDeactivate = Qt.binding(function() { return !sidePanelStack.item.showingDialog; })
+                    } else if (sidePanelStack.state == "widgetExplorer"){
+                        sidePanel.hideOnWindowDeactivate = Qt.binding(function() { return !sidePanelStack.item.preventWindowHide; })
                     } else {
                         sidePanel.hideOnWindowDeactivate = true;
                     }

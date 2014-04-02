@@ -53,6 +53,13 @@ PlasmaCore.FrameSvgItem {
         }
         Component.onCompleted: mimeData.setData("text/x-plasmoidservicename", pluginName)
 
+        onDragStarted: {
+            main.preventWindowHide = true;
+        }
+        onDrop: {
+            main.preventWindowHide = false;
+        }
+
         QIconItem {
             id: iconWidget
             anchors.verticalCenter: parent.verticalCenter
