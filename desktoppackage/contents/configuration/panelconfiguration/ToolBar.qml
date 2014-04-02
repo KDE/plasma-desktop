@@ -45,7 +45,7 @@ Item {
     PlasmaComponents.Label {
         id: placeHolder
         visible: false
-        text: i18n("Add Widgets...") + i18n("Add spacer") + i18n("More Settings...") 
+        text: i18n("Add Widgets...") + i18n("Add Spacer") + i18n("More Settings...")
     }
 
     GridLayout {
@@ -72,7 +72,7 @@ Item {
 
         PlasmaComponents.Button {
             iconSource: "distribute-horizontal-x"
-            text: buttonsLayout.showText ? i18n("Add spacer") : ""
+            text: buttonsLayout.showText ? i18n("Add Spacer") : ""
             Layout.preferredWidth: panel.formFactor == PlasmaCore.Types.Vertical ? Math.max(implicitWidth, parent.width) : implicitWidth
             onClicked: {
                 configDialog.addPanelSpacer();
@@ -169,7 +169,7 @@ Item {
                             left: parent.left
                             right: parent.right
                         }
-                        text: i18n("Always visible")
+                        text: i18n("Always Visible")
                         checkable: true
                         checked: configDialog.visibilityMode == 0
                         onClicked: configDialog.visibilityMode = 0
@@ -191,7 +191,7 @@ Item {
                             left: parent.left
                             right: parent.right
                         }
-                        text: i18n("Windows can cover")
+                        text: i18n("Windows Can Cover")
                         checkable: true
                         checked: configDialog.visibilityMode == 2
                         onClicked: configDialog.visibilityMode = 2
@@ -202,7 +202,7 @@ Item {
                             left: parent.left
                             right: parent.right
                         }
-                        text: i18n("Windows go below")
+                        text: i18n("Windows Go Below")
                         checkable: true
                         checked: configDialog.visibilityMode == 3
                         onClicked: configDialog.visibilityMode = 3
