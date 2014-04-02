@@ -21,13 +21,7 @@ import QtQuick 2.0
 import QtQuick.Controls 1.0 as QtControls
 import QtQuick.Layouts 1.0 as QtLayouts
 
-QtControls.GroupBox {
-    width: childrenRect.width
-    height: childrenRect.height
-
-    flat: true
-    title: i18n("General")
-
+QtLayouts.ColumnLayout {
     property alias cfg_forceStripes: forceStripes.checked
     property alias cfg_showToolTips: showToolTips.checked
     property alias cfg_highlightWindows: highlightWindows.checked
@@ -40,98 +34,97 @@ QtControls.GroupBox {
     property alias cfg_showOnlyCurrentActivity: showOnlyCurrentActivity.checked
     property alias cfg_showOnlyMinimized: showOnlyMinimized.checked
 
-    QtLayouts.ColumnLayout {
-        QtControls.GroupBox {
-            title: i18n("Appearance")
-            flat: true
+    QtControls.GroupBox {
+        title: i18n("Appearance")
+        flat: true
 
-            QtLayouts.ColumnLayout {
-                QtControls.CheckBox {
-                    id: forceStripes
-                    text: i18n("Force row settings")
-                }
-
-                QtControls.CheckBox {
-                    id: showToolTips
-                    text: i18n("Show tooltips")
-                }
-
-                QtControls.CheckBox {
-                    id: highlightWindows
-                    text: i18n("Highlight windows")
-                }
-
-                QtLayouts.RowLayout {
-                    QtControls.Label {
-                        text: i18n("Maximum rows:")
-                    }
-
-                    QtControls.SpinBox {
-                        id: maxStripes
-                    }
-                }
+        QtLayouts.ColumnLayout {
+            QtControls.CheckBox {
+                id: forceStripes
+                text: i18n("Force row settings")
             }
-        }
 
-        QtControls.GroupBox {
-            title: i18n("Grouping and Sorting")
-            flat: true
-
-            QtLayouts.ColumnLayout {
-                QtLayouts.RowLayout {
-                    QtControls.Label {
-                        text: i18n("Grouping:")
-                    }
-
-                    QtControls.ComboBox {
-                        id: groupingStrategy
-                        model: [i18n("Do Not Group"), i18n("Manually"), i18n("By Program Name")]
-                    }
-                }
-
-                QtControls.CheckBox {
-                    id: onlyGroupWhenFull
-                    text: i18n("Only when the task manager is full")
-                }
-
-                QtLayouts.RowLayout {
-                    QtControls.Label {
-                        text: i18n("Sorting:")
-                    }
-
-                    QtControls.ComboBox {
-                        id: sortingStrategy
-                        model: [i18n("Do Not Sort"), i18n("Manually"), i18n("Alphabetically"), i18n("By Desktop"), i18n("By Activity")]
-                    }
-                }
+            QtControls.CheckBox {
+                id: showToolTips
+                text: i18n("Show tooltips")
             }
-        }
 
-        QtControls.GroupBox {
-            title: i18n("Filters")
-            flat: true
+            QtControls.CheckBox {
+                id: highlightWindows
+                text: i18n("Highlight windows")
+            }
 
-            QtLayouts.ColumnLayout {
-                QtControls.CheckBox {
-                    id: showOnlyCurrentScreen
-                    text: i18n("Show only tasks from the current screen")
+            QtLayouts.RowLayout {
+                QtControls.Label {
+                    text: i18n("Maximum rows:")
                 }
 
-                QtControls.CheckBox {
-                    id: showOnlyCurrentDesktop
-                    text: i18n("Show only tasks from the current desktop")
-                }
-
-                QtControls.CheckBox {
-                    id: showOnlyCurrentActivity
-                    text: i18n("Show only tasks from the current activity")
-                }
-
-                QtControls.CheckBox {
-                    id: showOnlyMinimized
-                    text: i18n("Show only tasks that are minimized")
+                QtControls.SpinBox {
+                    id: maxStripes
                 }
             }
         }
     }
+
+    QtControls.GroupBox {
+        title: i18n("Grouping and Sorting")
+        flat: true
+
+        QtLayouts.ColumnLayout {
+            QtLayouts.RowLayout {
+                QtControls.Label {
+                    text: i18n("Grouping:")
+                }
+
+                QtControls.ComboBox {
+                    id: groupingStrategy
+                    model: [i18n("Do Not Group"), i18n("Manually"), i18n("By Program Name")]
+                }
+            }
+
+            QtControls.CheckBox {
+                id: onlyGroupWhenFull
+                text: i18n("Only when the task manager is full")
+            }
+
+            QtLayouts.RowLayout {
+                QtControls.Label {
+                    text: i18n("Sorting:")
+                }
+
+                QtControls.ComboBox {
+                    id: sortingStrategy
+                    model: [i18n("Do Not Sort"), i18n("Manually"), i18n("Alphabetically"), i18n("By Desktop"), i18n("By Activity")]
+                }
+            }
+        }
+    }
+
+    QtControls.GroupBox {
+        title: i18n("Filters")
+        flat: true
+
+        QtLayouts.ColumnLayout {
+            QtControls.CheckBox {
+                id: showOnlyCurrentScreen
+                text: i18n("Show only tasks from the current screen")
+            }
+
+            QtControls.CheckBox {
+                id: showOnlyCurrentDesktop
+                text: i18n("Show only tasks from the current desktop")
+            }
+
+            QtControls.CheckBox {
+                id: showOnlyCurrentActivity
+                text: i18n("Show only tasks from the current activity")
+            }
+
+            QtControls.CheckBox {
+                id: showOnlyMinimized
+                text: i18n("Show only tasks that are minimized")
+            }
+        }
+    }
 }
+
