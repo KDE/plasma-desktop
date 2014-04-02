@@ -29,15 +29,11 @@
 #include <KDesktopFile>
 #include <KConfigGroup>
 
-#include <Solid/AcAdapter>
-#include <Solid/AudioInterface>
 #include <Solid/Battery>
 #include <Solid/Block>
 #include <Solid/Button>
 #include <Solid/Camera>
-#include <Solid/DvbInterface>
 #include <Solid/GenericInterface>
-#include <Solid/NetworkInterface>
 #include <Solid/PortableMediaPlayer>
 #include <Solid/Processor>
 #include <Solid/StorageAccess>
@@ -45,8 +41,6 @@
 #include <Solid/OpticalDrive>
 #include <Solid/StorageVolume>
 #include <Solid/OpticalDisc>
-#include <solid/video.h>
-#include <solid/serialinterface.h>
 
 static SolidActionData * actData = 0;
 
@@ -167,23 +161,17 @@ SolidActionData * SolidActionData::instance()
 QList<QMetaObject> SolidActionData::fillInterfaceList()
 {
     QList<QMetaObject> interfaces;
-    interfaces.append( Solid::AcAdapter::staticMetaObject );
-    interfaces.append( Solid::AudioInterface::staticMetaObject );
     interfaces.append( Solid::Battery::staticMetaObject );
     interfaces.append( Solid::Block::staticMetaObject );
     interfaces.append( Solid::Button::staticMetaObject );
     interfaces.append( Solid::Camera::staticMetaObject );
-    interfaces.append( Solid::DvbInterface::staticMetaObject );
-    interfaces.append( Solid::NetworkInterface::staticMetaObject );
     interfaces.append( Solid::PortableMediaPlayer::staticMetaObject );
     interfaces.append( Solid::Processor::staticMetaObject );
-    interfaces.append( Solid::SerialInterface::staticMetaObject );
     interfaces.append( Solid::StorageAccess::staticMetaObject );
     interfaces.append( Solid::StorageDrive::staticMetaObject );
     interfaces.append( Solid::OpticalDrive::staticMetaObject );
     interfaces.append( Solid::StorageVolume::staticMetaObject );
     interfaces.append( Solid::OpticalDisc::staticMetaObject );
-    interfaces.append( Solid::Video::staticMetaObject );
     return interfaces;
 }
 
