@@ -66,9 +66,12 @@ Rectangle {
             if (!visible) {
                 sidePanelStack.state = "closed";
             } else {
+                var rect = containment.availableScreenRect(containment.screen);
                 sidePanel.requestActivate();
                 // get the current available screen geometry and subtract the dialog's frame margins
-                sidePanelStack.height = containment ? containment.availableScreenRect(containment.screen).height - sidePanel.margins.top - sidePanel.margins.bottom : 1000;
+                sidePanelStack.height = containment ? rect.height - sidePanel.margins.top - sidePanel.margins.bottom : 1000;
+                sidePanel.x = rect.x;
+                sidePanel.y = rect.y;
             }
         }
 
