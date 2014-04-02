@@ -25,10 +25,85 @@
 #include <QStringList>
 #include <QWidget>
 #include <QX11Info>
+#include <QAbstractNativeEventFilter>
 
-#warning XEventNotifier needs porting to QAbstractNativeEventFilter
-#if 0
-class XEventNotifier : public QWidget {
+#include <xcb/xcb.h>
+//#include <xcb/xkb.h>
+
+//union _xkb_event;
+//class xcb_generic_event_t;
+
+// TODO: remove this when we can include xcb/xkb.h
+namespace
+{
+typedef struct _xcb_xkb_map_notify_event_t {
+    uint8_t         response_type;
+    uint8_t         xkbType;
+    uint16_t        sequence;
+    xcb_timestamp_t time;
+    uint8_t         deviceID;
+    uint8_t         ptrBtnActions;
+    uint16_t        changed;
+    xcb_keycode_t   minKeyCode;
+    xcb_keycode_t   maxKeyCode;
+    uint8_t         firstType;
+    uint8_t         nTypes;
+    xcb_keycode_t   firstKeySym;
+    uint8_t         nKeySyms;
+    xcb_keycode_t   firstKeyAct;
+    uint8_t         nKeyActs;
+    xcb_keycode_t   firstKeyBehavior;
+    uint8_t         nKeyBehavior;
+    xcb_keycode_t   firstKeyExplicit;
+    uint8_t         nKeyExplicit;
+    xcb_keycode_t   firstModMapKey;
+    uint8_t         nModMapKeys;
+    xcb_keycode_t   firstVModMapKey;
+    uint8_t         nVModMapKeys;
+    uint16_t        virtualMods;
+    uint8_t         pad0[2];
+} _xcb_xkb_map_notify_event_t;
+typedef struct _xcb_xkb_state_notify_event_t {
+    uint8_t         response_type;
+    uint8_t         xkbType;
+    uint16_t        sequence;
+    xcb_timestamp_t time;
+    uint8_t         deviceID;
+    uint8_t         mods;
+    uint8_t         baseMods;
+    uint8_t         latchedMods;
+    uint8_t         lockedMods;
+    uint8_t         group;
+    int16_t         baseGroup;
+    int16_t         latchedGroup;
+    uint8_t         lockedGroup;
+    uint8_t         compatState;
+    uint8_t         grabMods;
+    uint8_t         compatGrabMods;
+    uint8_t         lookupMods;
+    uint8_t         compatLoockupMods;
+    uint16_t        ptrBtnState;
+    uint16_t        changed;
+    xcb_keycode_t   keycode;
+    uint8_t         eventType;
+    uint8_t         requestMajor;
+    uint8_t         requestMinor;
+} _xcb_xkb_state_notify_event_t;
+typedef union {
+    /* All XKB events share these fields. */
+    struct {
+        uint8_t response_type;
+        uint8_t xkbType;
+        uint16_t sequence;
+        xcb_timestamp_t time;
+        uint8_t deviceID;
+    } any;
+    _xcb_xkb_map_notify_event_t map_notify;
+    _xcb_xkb_state_notify_event_t state_notify;
+} _xkb_event;
+}
+
+class XEventNotifier : public QObject, public QAbstractNativeEventFilter {
 	Q_OBJECT
 
 Q_SIGNALS:
@@ -36,26 +111,26 @@ Q_SIGNALS:
 	void layoutMapChanged();
 
 public:
-	XEventNotifier(QWidget* parent=NULL);
+	XEventNotifier();
 	virtual ~XEventNotifier() {}
 
 	virtual void start();
 	virtual void stop();
 
 protected:
-    bool x11Event(XEvent * e);
-    virtual bool processOtherEvents(XEvent* e);
-    virtual bool processXkbEvents(XEvent* e);
+//    bool x11Event(XEvent * e);
+    virtual bool processOtherEvents(xcb_generic_event_t* e);
+    virtual bool processXkbEvents(xcb_generic_event_t* e);
+    virtual bool nativeEventFilter(const QByteArray &eventType, void *message, long *) Q_DECL_OVERRIDE;
 
 private:
 	int registerForXkbEvents(Display* display);
-	bool isXkbEvent(XEvent* event);
-	bool isGroupSwitchEvent(XEvent* event);
-	bool isLayoutSwitchEvent(XEvent* event);
+	bool isXkbEvent(xcb_generic_event_t* event);
+	bool isGroupSwitchEvent(_xkb_event* event);
+	bool isLayoutSwitchEvent(_xkb_event* event);
 
 	int xkbOpcode;
 };
-#endif
 
 struct XkbConfig {
 	QString keyboardModel;

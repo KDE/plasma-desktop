@@ -22,6 +22,8 @@
 
 #include "x11_helper.h"
 
+#include <X11/Xlib.h>
+#include <fixx11h.h>
 
 class XInputEventNotifier: public XEventNotifier {
 	Q_OBJECT
@@ -39,10 +41,10 @@ Q_SIGNALS:
 	void newPointerDevice();
 
 protected:
-	bool processOtherEvents(XEvent* event);
+	bool processOtherEvents(xcb_generic_event_t* event);
 
 private:
-	int getNewDeviceEventType(XEvent* event);
+	int getNewDeviceEventType(xcb_generic_event_t* event);
 
 	int xinputEventType;
 };

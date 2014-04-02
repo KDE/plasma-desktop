@@ -18,16 +18,18 @@
 
 #include "x11_helper.h"
 
-#include <kapplication.h>
 #include <kdebug.h>
 
 #include <QX11Info>
+#include <QCoreApplication>
 
 #include <X11/X.h>
 #include <X11/Xlib.h>
 #include <X11/Xatom.h>
 #include <X11/XKBlib.h>
 #include <X11/extensions/XKBrules.h>
+#include <xcb/xcb.h>
+//#include <xcb/xkb.h>
 #include <fixx11h.h>
 
 
@@ -280,86 +282,105 @@ bool X11Helper::getGroupNames(Display* display, XkbConfig* xkbConfig, FetchType 
 	return true;
 }
 
-#if 0
-XEventNotifier::XEventNotifier(QWidget* parent):
-		QWidget(parent),
+XEventNotifier::XEventNotifier():
 		xkbOpcode(-1)
 {
-	if( KApplication::kApplication() == NULL ) {
+	if( QCoreApplication::instance() == NULL ) {
 		kWarning() << "Layout Widget won't work properly without KApplication instance";
 	}
 }
 
 void XEventNotifier::start()
 {
-	if( KApplication::kApplication() != NULL && X11Helper::xkbSupported(&xkbOpcode) ) {
+	kDebug() << "qCoreApp" << QCoreApplication::instance();
+	if( QCoreApplication::instance() != NULL && X11Helper::xkbSupported(&xkbOpcode) ) {
 		registerForXkbEvents(QX11Info::display());
 
 		// start the event loop
-		KApplication::kApplication()->installX11EventFilter(this);
+		QCoreApplication::instance()->installNativeEventFilter(this);
 	}
 }
 
 void XEventNotifier::stop()
 {
-	if( KApplication::kApplication() != NULL ) {
+	if( QCoreApplication::instance() != NULL ) {
 		//TODO: unregister
 	//    XEventNotifier::unregisterForXkbEvents(QX11Info::display());
 
 		// stop the event loop
-		KApplication::kApplication()->removeX11EventFilter(this);
+		QCoreApplication::instance()->removeNativeEventFilter(this);
 	}
 }
 
-bool XEventNotifier::isXkbEvent(XEvent* event)
+
+bool XEventNotifier::isXkbEvent(xcb_generic_event_t* event)
 {
-	return event->type == xkbOpcode;
+//	kDebug() << "event response type:" << (event->response_type & ~0x80) << xkbOpcode << ((event->response_type & ~0x80) == xkbOpcode + XkbEventCode);
+    return (event->response_type & ~0x80) == xkbOpcode + XkbEventCode;
 }
 
-bool XEventNotifier::processOtherEvents(XEvent* /*event*/)
+bool XEventNotifier::processOtherEvents(xcb_generic_event_t* /*event*/)
 {
 	return true;
 }
 
-bool XEventNotifier::processXkbEvents(XEvent* event)
+bool XEventNotifier::processXkbEvents(xcb_generic_event_t* event)
 {
-	if( XEventNotifier::isGroupSwitchEvent(event) ) {
+	_xkb_event *xkbevt = reinterpret_cast<_xkb_event *>(event);
+	if( XEventNotifier::isGroupSwitchEvent(xkbevt) ) {
+//		kDebug() << "group switch event";
 		emit(layoutChanged());
 	}
-	else if( XEventNotifier::isLayoutSwitchEvent(event) ) {
+	else if( XEventNotifier::isLayoutSwitchEvent(xkbevt) ) {
+//		kDebug() << "layout switch event";
 		emit(layoutMapChanged());
 	}
 	return true;
 }
 
-bool XEventNotifier::x11Event(XEvent * event)
+bool XEventNotifier::nativeEventFilter(const QByteArray &eventType, void *message, long *)
 {
-	//    qApp->x11ProcessEvent ( event );
-	if( isXkbEvent(event) ) {
-		processXkbEvents(event);
-	}
-	else {
-		processOtherEvents(event);
-	}
-	return QWidget::x11Event(event);
+//	kDebug() << "event type:" << eventType;
+    if (eventType == "xcb_generic_event_t") {
+        xcb_generic_event_t* ev = static_cast<xcb_generic_event_t *>(message);
+        if( isXkbEvent(ev) ) {
+    		processXkbEvents(ev);
+    	}
+    	else {
+    		processOtherEvents(ev);
+    	}
+    }
+    return false;
 }
 
-bool XEventNotifier::isGroupSwitchEvent(XEvent* event)
+//bool XEventNotifier::x11Event(XEvent * event)
+//{
+//	//    qApp->x11ProcessEvent ( event );
+//	if( isXkbEvent(event) ) {
+//		processXkbEvents(event);
+//	}
+//	else {
+//		processOtherEvents(event);
+//	}
+//	return QWidget::x11Event(event);
+//}
+
+bool XEventNotifier::isGroupSwitchEvent(_xkb_event* xkbEvent)
 {
-    XkbEvent *xkbEvent = (XkbEvent*) event;
+//    XkbEvent *xkbEvent = (XkbEvent*) event;
 #define GROUP_CHANGE_MASK \
     ( XkbGroupStateMask | XkbGroupBaseMask | XkbGroupLatchMask | XkbGroupLockMask )
 
-    return xkbEvent->any.xkb_type == XkbStateNotify && (xkbEvent->state.changed & GROUP_CHANGE_MASK);
+    return xkbEvent->any.xkbType == XkbStateNotify && (xkbEvent->state_notify.changed & GROUP_CHANGE_MASK);
 }
 
-bool XEventNotifier::isLayoutSwitchEvent(XEvent* event)
+bool XEventNotifier::isLayoutSwitchEvent(_xkb_event* xkbEvent)
 {
-    XkbEvent *xkbEvent = (XkbEvent*) event;
+//    XkbEvent *xkbEvent = (XkbEvent*) event;
 
     return //( (xkbEvent->any.xkb_type == XkbMapNotify) && (xkbEvent->map.changed & XkbKeySymsMask) ) ||
 /*    	  || ( (xkbEvent->any.xkb_type == XkbNamesNotify) && (xkbEvent->names.changed & XkbGroupNamesMask) || )*/
-    	   (xkbEvent->any.xkb_type == XkbNewKeyboardNotify);
+    	   (xkbEvent->any.xkbType == XkbNewKeyboardNotify);
 }
 
 int XEventNotifier::registerForXkbEvents(Display* display)
@@ -371,7 +392,6 @@ int XEventNotifier::registerForXkbEvents(Display* display)
     }
     return true;
 }
-#endif
 
 
 static const char* LAYOUT_VARIANT_SEPARATOR_PREFIX = "(";

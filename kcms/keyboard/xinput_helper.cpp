@@ -42,7 +42,7 @@ static int DEVICE_KEYBOARD = 1;
 static int DEVICE_POINTER = 2;
 
 XInputEventNotifier::XInputEventNotifier(QWidget* parent):
-	XEventNotifier(parent),
+	XEventNotifier(), //TODO: destruct properly?
 	xinputEventType(-1)
 {
 }
@@ -65,7 +65,7 @@ void XInputEventNotifier::stop()
 	}
 }
 
-bool XInputEventNotifier::processOtherEvents(XEvent* event)
+bool XInputEventNotifier::processOtherEvents(xcb_generic_event_t* event)
 {
 	int newDeviceType = getNewDeviceEventType(event);
 	if( newDeviceType == DEVICE_KEYBOARD ) {
@@ -95,10 +95,11 @@ static bool isRealKeyboard(const char* deviceName)
 		&& strstr(deviceName, "WMI hotkeys") == NULL;
 }
 
-int XInputEventNotifier::getNewDeviceEventType(XEvent* event)
+int XInputEventNotifier::getNewDeviceEventType(xcb_generic_event_t* event)
 {
 	int newDeviceType = DEVICE_NONE;
 
+#if 0
 	if( xinputEventType != -1 && event->type == xinputEventType ) {
 		XDevicePresenceNotifyEvent *xdpne = (XDevicePresenceNotifyEvent*) event;
 		if( xdpne->devchange == DeviceEnabled ) {
@@ -127,6 +128,7 @@ int XInputEventNotifier::getNewDeviceEventType(XEvent* event)
 			}
 		}
 	}
+#endif
 	return newDeviceType;
 }
 
@@ -154,7 +156,7 @@ int XInputEventNotifier::registerForNewDeviceEvent(Display* /*display*/)
 	return -1;
 }
 
-int XInputEventNotifier::getNewDeviceEventType(XEvent* /*event*/)
+int XInputEventNotifier::getNewDeviceEventType(xcb_generic_event_t* /*event*/)
 {
 	return DEVICE_NONE;
 }

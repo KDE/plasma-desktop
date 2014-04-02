@@ -31,9 +31,7 @@
 #include <klocalizedstring.h>
 
 #include "x11_helper.h"
-#if 0
 #include "xinput_helper.h"
-#endif
 #include "xkb_helper.h"
 #include "keyboard_dbus.h"
 #include "xkb_rules.h"
@@ -159,8 +157,6 @@ void KeyboardDaemon::unregisterShortcut()
 
 void KeyboardDaemon::registerListeners()
 {
-#warning XInputEventNotifier needs porting to QAbstractNativeEventFilter
-#if 0
 	if( xEventNotifier == NULL ) {
 		xEventNotifier = new XInputEventNotifier();
 	}
@@ -169,13 +165,10 @@ void KeyboardDaemon::registerListeners()
 	connect(xEventNotifier, SIGNAL(layoutMapChanged()), this, SLOT(layoutMapChanged()));
 	connect(xEventNotifier, SIGNAL(layoutChanged()), this, SLOT(layoutChanged()));
 	xEventNotifier->start();
-#endif
 }
 
 void KeyboardDaemon::unregisterListeners()
 {
-#warning XInputEventNotifier needs porting to QAbstractNativeEventFilter
-#if 0
 	if( xEventNotifier != NULL ) {
 		xEventNotifier->stop();
 		disconnect(xEventNotifier, SIGNAL(newPointerDevice()), this, SLOT(configureMouse()));
@@ -183,7 +176,6 @@ void KeyboardDaemon::unregisterListeners()
 		disconnect(xEventNotifier, SIGNAL(layoutChanged()), this, SLOT(layoutChanged()));
 		disconnect(xEventNotifier, SIGNAL(layoutMapChanged()), this, SLOT(layoutMapChanged()));
 	}
-#endif
 }
 
 void KeyboardDaemon::globalSettingsChanged(int category)

@@ -17,7 +17,7 @@ set( kded_keyboard_SRCS
     layout_memory.cpp
     layout_memory_persister.cpp
     x11_helper.cpp
-#     xinput_helper.cpp
+    xinput_helper.cpp
     xkb_helper.cpp
     keyboard_config.cpp
     keyboard_hardware.cpp

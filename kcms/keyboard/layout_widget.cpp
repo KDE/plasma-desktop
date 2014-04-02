@@ -68,23 +68,17 @@ LayoutWidget::~LayoutWidget()
 
 void LayoutWidget::init()
 {
-#warning XEventNotifier needs porting to QAbstractNativeEventFilter
-#if 0
 	connect(widget, SIGNAL(clicked(bool)), this, SLOT(toggleLayout()));
 	connect(xEventNotifier, SIGNAL(layoutChanged()), this, SLOT(layoutChanged()));
 	connect(xEventNotifier, SIGNAL(layoutMapChanged()), this, SLOT(layoutChanged()));
 	xEventNotifier->start();
-#endif
 }
 
 void LayoutWidget::destroy()
 {
-#warning XEventNotifier needs porting to QAbstractNativeEventFilter
-#if 0
 	xEventNotifier->stop();
 	disconnect(xEventNotifier, SIGNAL(layoutMapChanged()), this, SLOT(layoutChanged()));
 	disconnect(xEventNotifier, SIGNAL(layoutChanged()), this, SLOT(layoutChanged()));
-#endif
 }
 
 void LayoutWidget::toggleLayout()
