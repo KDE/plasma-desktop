@@ -203,9 +203,8 @@ Item {
                 anchors.fill: parent
                 z: appletContainer.z - 2
 
-                property int lastX
-                property int lastY
                 property int zoffset: 1000
+                drag.target: appletItem
 
                 onPressed: {
                     appletItem.z = appletItem.z + zoffset;
@@ -215,25 +214,11 @@ Item {
                     var y = Math.round(appletItem.y/LayoutManager.cellSize.height)*LayoutManager.cellSize.height
                     LayoutManager.setSpaceAvailable(x, y, appletItem.width, appletItem.height, true)
 
-                    var globalMousePos = mapToItem(root, mouse.x, mouse.y)
-                    lastX = globalMousePos.x
-                    lastY = globalMousePos.y
-
-
                     placeHolder.syncWithItem(appletItem)
                     placeHolderPaint.opacity = root.haloOpacity;
                 }
                 onPositionChanged: {
                     placeHolder.syncWithItem(appletItem)
-
-                    var globalPos = mapToItem(root, x, y)
-
-                    var globalMousePos = mapToItem(root, mouse.x, mouse.y)
-                    appletItem.x += (globalMousePos.x - lastX)
-                    appletItem.y += (globalMousePos.y - lastY)
-
-                    lastX = globalMousePos.x
-                    lastY = globalMousePos.y
                 }
                 onReleased: {
                     appletItem.z = appletItem.z - zoffset;
