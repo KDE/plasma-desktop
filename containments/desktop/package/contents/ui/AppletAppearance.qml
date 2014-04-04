@@ -130,7 +130,7 @@ Item {
             repeat: false
             interval: handleDelay
             onTriggered: {
-                if (mouseListener.containsMouse || (appletHandle.item && appletHandle.item.containsMouse)) {
+                if (mouseListener.containsMouse || (appletHandle.item && (appletHandle.item.containsMouse || appletHandle.item.pressed))) {
                     showAppletHandle = true;
                 } else {
                     showAppletHandle = false;

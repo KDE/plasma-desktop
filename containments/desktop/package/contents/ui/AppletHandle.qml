@@ -35,6 +35,11 @@ KQuickControlsAddons.MouseEventListener {
     height: Math.max(appletItem.height - appletItem.margins.top - appletItem.margins.bottom, buttonColumn.implicitHeight)
     hoverEnabled: true
     onContainsMouseChanged: {
+        if (!containsMouse && !pressed) {
+            hoverTracker.restart()
+        }
+    }
+    onReleased: {
         if (!containsMouse) {
             hoverTracker.restart()
         }
