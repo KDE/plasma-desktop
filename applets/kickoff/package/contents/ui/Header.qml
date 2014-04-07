@@ -26,7 +26,7 @@ import org.kde.plasma.private.kickoff 0.1 as Kickoff
 Item {
     id: header
 
-    height: units.gridUnit * 5
+    implicitHeight: units.gridUnit * 5
 
     property alias query: queryField.text
     property Item input: queryField

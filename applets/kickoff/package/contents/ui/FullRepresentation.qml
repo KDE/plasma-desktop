@@ -73,60 +73,12 @@ Item {
 
     Header {
         id: header
-
-        anchors {
-            top: {
-                switch (plasmoid.location) {
-                    case PlasmaCore.Types.TopEdge:
-                    case PlasmaCore.Types.LeftEdge:
-                    case PlasmaCore.Types.RightEdge:
-                        return undefined;
-                    default:
-                        return parent.top;
-                }
-            }
-            bottom: {
-                switch (plasmoid.location) {
-                    case PlasmaCore.Types.TopEdge:
-                    case PlasmaCore.Types.LeftEdge:
-                    case PlasmaCore.Types.RightEdge:
-                        return parent.bottom;
-                    default:
-                        return undefined;
-                }
-            }
-            left: parent.left
-            right: parent.right
-        }
     }
 
     PlasmaComponents.TabGroup {
         id: mainStack
 
         anchors {
-            top: {
-                switch (plasmoid.location) {
-                case PlasmaCore.Types.TopEdge:
-                    return tabBar.bottom;
-                case PlasmaCore.Types.LeftEdge:
-                case PlasmaCore.Types.RightEdge:
-                    return parent.top;
-                default:
-                    return header.bottom;
-                }
-            }
-            bottom: {
-                switch (plasmoid.location) {
-                    case PlasmaCore.Types.TopEdge:
-                    case PlasmaCore.Types.LeftEdge:
-                    case PlasmaCore.Types.RightEdge:
-                        return header.top;
-                    default:
-                        return tabBar.top;
-                }
-            }
-            left: plasmoid.location == PlasmaCore.Types.LeftEdge ? tabBar.right : parent.left
-            right: plasmoid.location == PlasmaCore.Types.RightEdge ? tabBar.left : parent.right
             leftMargin: units.largeSpacing
             rightMargin: units.largeSpacing
         }
@@ -161,6 +113,167 @@ Item {
             //when: mainStack.currentTab == searchPage || root.state == "Search"
             source: Qt.resolvedUrl("SearchView.qml")
         }
+
+
+        state: {
+            switch (plasmoid.location) {
+            case PlasmaCore.Types.LeftEdge:
+                return "left";
+            case PlasmaCore.Types.TopEdge:
+                return "top";
+            case PlasmaCore.Types.RightEdge:
+                return "right";
+            case PlasmaCore.Types.BottomEdge:
+            default:
+                return "bottom";
+            }
+        }
+        states: [
+            State {
+                name: "left"
+                AnchorChanges {
+                    target: header
+                    anchors {
+                        left: root.left
+                        top: undefined
+                        right: root.right
+                        bottom: root.bottom
+                    }
+                }
+                PropertyChanges {
+                    target: header
+                    width: header.implicitWidth
+                }
+
+                AnchorChanges {
+                    target: mainStack
+                    anchors {
+                        left: tabBar.right
+                        top: root.top
+                        right: root.right
+                        bottom: header.top
+                    }
+                }
+
+                AnchorChanges {
+                    target: tabBar
+                    anchors {
+                        left: root.left
+                        top: root.top
+                        right: undefined
+                        bottom: header.top
+                    }
+                }
+            },
+            State {
+                name: "top"
+                AnchorChanges {
+                    target: header
+                    anchors {
+                        left: root.left
+                        top: undefined
+                        right: root.right
+                        bottom: root.bottom
+                    }
+                }
+                PropertyChanges {
+                    target: header
+                    height: header.implicitHeight
+                }
+
+                AnchorChanges {
+                    target: mainStack
+                    anchors {
+                        left: root.left
+                        top: tabBar.bottom
+                        right: root.right
+                        bottom: header.top
+                    }
+                }
+
+                AnchorChanges {
+                    target: tabBar
+                    anchors {
+                        left: root.left
+                        top: root.top
+                        right: root.right
+                        bottom: undefined
+                    }
+                }
+            },
+            State {
+                name: "right"
+                AnchorChanges {
+                    target: header
+                    anchors {
+                        left: root.left
+                        top: undefined
+                        right: root.right
+                        bottom: root.bottom
+                    }
+                }
+                PropertyChanges {
+                    target: header
+                    width: header.implicitWidth
+                }
+
+                AnchorChanges {
+                    target: mainStack
+                    anchors {
+                        left: root.left
+                        top: root.top
+                        right: tabBar.left
+                        bottom: header.top
+                    }
+                }
+
+                AnchorChanges {
+                    target: tabBar
+                    anchors {
+                        left: undefined
+                        top: root.top
+                        right: root.right
+                        bottom: header.top
+                    }
+                }
+            },
+            State {
+                name: "bottom"
+                AnchorChanges {
+                    target: header
+                    anchors {
+                        left: root.left
+                        top: root.top
+                        right: root.right
+                        bottom: undefined
+                    }
+                }
+                PropertyChanges {
+                    target: header
+                    height: header.implicitHeight
+                }
+
+                AnchorChanges {
+                    target: mainStack
+                    anchors {
+                        left: root.left
+                        top: header.bottom
+                        right: root.right
+                        bottom: tabBar.top
+                    }
+                }
+
+                AnchorChanges {
+                    target: tabBar
+                    anchors {
+                        left: root.left
+                        top: undefined
+                        right: root.right
+                        bottom: root.bottom
+                    }
+                }
+            }
+        ]
     } // mainStack
 
     Kickoff.FavoritesModel {
@@ -201,44 +314,7 @@ Item {
         Behavior on width { NumberAnimation { duration: units.longDuration; easing.type: Easing.InQuad; } }
         Behavior on height { NumberAnimation { duration: units.longDuration; easing.type: Easing.InQuad; } }
 
-        anchors {
-            top: {
-                switch (plasmoid.location) {
-                case PlasmaCore.Types.LeftEdge:
-                case PlasmaCore.Types.RightEdge:
-                    return parent.top;
-                default:
-                    return undefined;
-                }
-            }
-            bottom: {
-                switch (plasmoid.location) {
-                    case PlasmaCore.Types.TopEdge:
-                        return undefined;
-                    case PlasmaCore.Types.LeftEdge:
-                    case PlasmaCore.Types.RightEdge:
-                        return header.top;
-                    default:
-                        return parent.bottom;
-                }
-            }
-            left: {
-                switch (plasmoid.location) {
-                case PlasmaCore.Types.RightEdge:
-                    return undefined;
-                default:
-                    return parent.left;
-                }
-            }
-            right: {
-                switch (plasmoid.location) {
-                case PlasmaCore.Types.LeftEdge:
-                    return undefined;
-                default:
-                    return parent.right;
-                }
-            }
-        }
+        
 
         tabPosition: {
             switch (plasmoid.location) {
