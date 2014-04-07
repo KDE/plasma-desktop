@@ -27,6 +27,34 @@ PlasmaCore.FrameSvgItem {
     width: 640
     height: 32
     imagePath: "widgets/panel-background"
+    prefix: {
+        if (!containment) {
+            return "";
+        }
+        var pre;
+        switch (containment.location) {
+        case PlasmaCore.Types.LeftEdge:
+            pre = "west";
+            break;
+        case PlasmaCore.Types.TopEdge:
+            pre = "north";
+            break;
+        case PlasmaCore.Types.RightEdge:
+            pre = "east";
+            break;
+        case PlasmaCore.Types.BottomEdge:
+            pre = "south";
+            break;
+        default:
+            return "";
+        }
+        if (hasElementPrefix(pre)) {
+            return pre;
+        } else {
+            return "";
+        }
+
+    }
     visible: false //adjust borders is run during setup. We want to avoid painting till completed
 
     property Item containment
