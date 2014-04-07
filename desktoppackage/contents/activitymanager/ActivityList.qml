@@ -89,6 +89,8 @@ Flickable {
         // Running activities
 
         Repeater {
+            id: activitiesList
+
             model: activitiesModel
 
             ActivityItem {
@@ -103,6 +105,7 @@ Flickable {
                 background   : model.background
                 current      : model.current
                 innerPadding : 2 * units.smallSpacing
+                stoppable    : activitiesList.count > 1
 
                 onClicked          : {
                     activitiesModel.setCurrentActivity(model.id, function () {})

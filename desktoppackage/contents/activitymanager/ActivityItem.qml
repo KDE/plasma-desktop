@@ -10,6 +10,7 @@ Item {
 
     property bool current      : false
     property bool inFocus      : false
+    property bool stoppable    : true
 
     property alias title       : title.text
     property alias icon        : icon.source
@@ -137,6 +138,7 @@ Item {
             onClicked: root.stopClicked()
 
             icon: "close"
+            visible: root.stoppable
 
             anchors {
                 right   : parent.right
