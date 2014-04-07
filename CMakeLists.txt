@@ -10,6 +10,8 @@ include(KDEInstallDirs)
 include(KDECMakeSettings)
 include(KDECompilerSettings)
 include(ECMInstallIcons)
+include(ECMMarkAsTest)
+include(ECMMarkNonGuiExecutable)
 include(FeatureSummary)
 include(CheckIncludeFiles)
 
@@ -18,6 +20,7 @@ find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
     DBus
     Widgets
     X11Extras
+    Svg
     Concurrent
 )
 
@@ -81,6 +84,7 @@ include(ConfigureChecks.cmake)
 configure_file(config-workspace.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-workspace.h)
 configure_file(config-unix.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-unix.h )
 configure_file(config-X11.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-X11.h)
+configure_file(config-runtime.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-runtime.h)
 
 set(PLASMADESKTOP_VERSION_MAJOR 4)
 set(PLASMADESKTOP_VERSION_MINOR 95)
@@ -101,5 +105,6 @@ add_subdirectory(containments)
 add_subdirectory(toolboxes)
 add_subdirectory(applets)
 add_subdirectory(kcms)
+add_subdirectory(knetattach)
 
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
