@@ -142,6 +142,7 @@ Item {
             currentIndex: -1
             keyNavigationWraps: true
             interactive: contentHeight > height
+
             /*
             delegate: KQuickControlsAddons.MouseEventListener {
                 hoverEnabled: true
@@ -155,6 +156,7 @@ Item {
             */
             delegate: KickoffItem {}
             highlight: PlasmaComponents.Highlight {}
+            highlightMoveDuration : 0
 
             model: favoritesModel
 

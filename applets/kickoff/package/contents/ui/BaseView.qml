@@ -52,6 +52,7 @@ Item {
             currentIndex: -1
             keyNavigationWraps: true
             highlight: PlasmaComponents.Highlight {}
+            highlightMoveDuration : 0
 
             delegate: KickoffItem {}
 

@@ -51,6 +51,7 @@ Item {
             boundsBehavior: Flickable.StopAtBounds
             delegate: KickoffItem {}
             highlight: PlasmaComponents.Highlight {}
+            highlightMoveDuration : 0
             model: Kickoff.KRunnerModel{}
 
             Connections {

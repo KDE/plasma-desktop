@@ -139,6 +139,7 @@ Item {
             keyNavigationWraps: true
             boundsBehavior: Flickable.StopAtBounds
             highlight: PlasmaComponents.Highlight {}
+            highlightMoveDuration : 0
 
             model: VisualDataModel {
                 id: vmodel
