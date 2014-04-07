@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <author>Matthias Kretz &lt;kretz@kde.org&gt;</author>
+ <class>DevicePreference</class>
+ <widget class="QWidget" name="DevicePreference">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <layout class="QGridLayout">
+   <item row="0" column="0" rowspan="2">
+    <layout class="QVBoxLayout">
+     <item>
+      <widget class="QTreeView" name="categoryTree">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="contextMenuPolicy">
+        <enum>Qt::CustomContextMenu</enum>
+       </property>
+       <property name="toolTip">
+        <string>Various categories of media use cases.  For each category, you may choose what device you prefer to be used by the Phonon applications.</string>
+       </property>
+       <property name="whatsThis">
+        <string>Various categories of media use cases.  For each category, you may choose what device you prefer to be used by the Phonon applications.</string>
+       </property>
+       <property name="itemsExpandable">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="showAdvancedDevicesContainer">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QCheckBox" name="showAdvancedDevicesCheckBox">
+         <property name="text">
+          <string>Show advanced devices</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="showAdvancedDevicesSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Preferred</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>0</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QPushButton" name="applyPreferencesButton">
+         <property name="toolTip">
+          <string>Use the currently shown device list for more categories.</string>
+         </property>
+         <property name="whatsThis">
+          <string>Use the currently shown device list for more categories.</string>
+         </property>
+         <property name="text">
+          <string>Apply Device List To...</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Minimum</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>0</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item row="0" column="1">
+    <widget class="QTreeView" name="deviceList">
+     <property name="acceptDrops">
+      <bool>true</bool>
+     </property>
+     <property name="toolTip">
+      <string>Devices found on your system, suitable for the selected category.  Choose the device that you wish to be used by the applications.</string>
+     </property>
+     <property name="whatsThis">
+      <string>The order determines the preference of the devices. If for some reason the first device cannot be used Phonon will try to use the second, and so on.</string>
+     </property>
+     <property name="horizontalScrollBarPolicy">
+      <enum>Qt::ScrollBarAsNeeded</enum>
+     </property>
+     <property name="dragEnabled">
+      <bool>true</bool>
+     </property>
+     <property name="dragDropMode">
+      <enum>QAbstractItemView::InternalMove</enum>
+     </property>
+     <property name="selectionBehavior">
+      <enum>QAbstractItemView::SelectRows</enum>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>32</width>
+       <height>32</height>
+      </size>
+     </property>
+     <property name="textElideMode">
+      <enum>Qt::ElideNone</enum>
+     </property>
+     <property name="verticalScrollMode">
+      <enum>QAbstractItemView::ScrollPerPixel</enum>
+     </property>
+     <property name="horizontalScrollMode">
+      <enum>QAbstractItemView::ScrollPerPixel</enum>
+     </property>
+     <property name="rootIsDecorated">
+      <bool>false</bool>
+     </property>
+     <property name="itemsExpandable">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <layout class="QHBoxLayout">
+     <item>
+      <spacer>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>16</width>
+         <height>29</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QToolButton" name="testPlaybackButton">
+       <property name="text">
+        <string>Test</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="toolButtonStyle">
+        <enum>Qt::ToolButtonTextBesideIcon</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="preferButton">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="toolTip">
+        <string>prefer the selected device</string>
+       </property>
+       <property name="text">
+        <string>Prefer</string>
+       </property>
+       <property name="toolButtonStyle">
+        <enum>Qt::ToolButtonTextBesideIcon</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="deferButton">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="toolTip">
+        <string>no preference for the selected device</string>
+       </property>
+       <property name="text">
+        <string>Defer</string>
+       </property>
+       <property name="toolButtonStyle">
+        <enum>Qt::ToolButtonTextBesideIcon</enum>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <includes>
+  <include location="global">kdialog.h</include>
+ </includes>
+ <resources/>
+ <connections/>
+</ui>

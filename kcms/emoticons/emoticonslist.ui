@@ -1,0 +1,169 @@
+<ui version="4.0" >
+ <class>EmoticonsManager</class>
+ <widget class="QWidget" name="EmoticonsManager" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>630</width>
+    <height>419</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Emoticons Manager</string>
+  </property>
+  <layout class="QGridLayout" >
+   <item row="0" column="0" >
+    <widget class="QListWidget" name="themeList" >
+     <property name="iconSize" >
+      <size>
+       <width>22</width>
+       <height>22</height>
+      </size>
+     </property>
+    </widget>
+   </item>
+   <item rowspan="2" row="0" column="1" >
+    <widget class="QListWidget" name="emoList" >
+     <property name="iconSize" >
+      <size>
+       <width>22</width>
+       <height>22</height>
+      </size>
+     </property>
+    </widget>
+   </item>
+   <item rowspan="2" row="0" column="2" >
+    <layout class="QVBoxLayout" >
+     <property name="margin" >
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="KPushButton" name="btAdd" >
+       <property name="toolTip" >
+        <string>Create a new emoticon</string>
+       </property>
+       <property name="whatsThis" >
+        <string>Create a new emoticon by assigning it an icon and some text</string>
+       </property>
+       <property name="text" >
+        <string>Add...</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="KPushButton" name="btEdit" >
+       <property name="toolTip" >
+        <string>Modify the selected emoticon icon or text </string>
+       </property>
+       <property name="whatsThis" >
+        <string>Edit the selected emoticon to change its icon or its text</string>
+       </property>
+       <property name="text" >
+        <string>Edit...</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="KPushButton" name="btRemoveEmoticon" >
+       <property name="toolTip" >
+        <string>Remove the selected emoticon</string>
+       </property>
+       <property name="whatsThis" >
+        <string>Remove the selected emoticon from your disk</string>
+       </property>
+       <property name="text" >
+        <string>Remove</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer>
+       <property name="orientation" >
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0" >
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item row="1" column="0" >
+    <layout class="QVBoxLayout" >
+     <item>
+      <widget class="QCheckBox" name="cbStrict" >
+       <property name="text" >
+        <string>Require spaces around emoticons</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="KPushButton" name="btNew" >
+       <property name="toolTip" >
+        <string>Design a new emoticon theme</string>
+       </property>
+       <property name="whatsThis" >
+        <string>Start a new theme by assigning it a name. Then use the Add button on the right to add emoticons to this theme.</string>
+       </property>
+       <property name="text" >
+        <string>New Theme...</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="KPushButton" name="btGetNew" >
+       <property name="toolTip" >
+        <string>Get new icon themes from the Internet</string>
+       </property>
+       <property name="whatsThis" >
+        <string>You need to be connected to the Internet to use this action. A dialog will display a list of emoticon themes from the http://www.kde-look.org website. Clicking the Install button associated with a theme will install this theme locally.</string>
+       </property>
+       <property name="text" >
+        <string>Get New Icon Themes...</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="KPushButton" name="btInstall" >
+       <property name="toolTip" >
+        <string>Install a theme archive file you already have locally</string>
+       </property>
+       <property name="whatsThis" >
+        <string>If you already have an emoticon theme archive locally, this button will unpack it and make it available for KDE applications</string>
+       </property>
+       <property name="text" >
+        <string>Install Theme File...</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="KPushButton" name="btRemoveTheme" >
+       <property name="toolTip" >
+        <string>Remove the selected theme from your disk</string>
+       </property>
+       <property name="whatsThis" >
+        <string>This will remove the selected theme from your disk.</string>
+       </property>
+       <property name="text" >
+        <string>Remove Theme</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>KPushButton</class>
+   <extends>QPushButton</extends>
+   <header>kpushbutton.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

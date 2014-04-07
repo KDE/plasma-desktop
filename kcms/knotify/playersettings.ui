@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PlayerSettingsUI</class>
+ <widget class="QWidget" name="PlayerSettingsUI">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>407</width>
+    <height>178</height>
+   </rect>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QRadioButton" name="cbArts">
+     <property name="text">
+      <string>Use the &amp;KDE sound system</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QGridLayout">
+     <property name="margin">
+      <number>0</number>
+     </property>
+     <item row="1" column="4">
+      <widget class="QLabel" name="textLabel3">
+       <property name="text">
+        <string>100%</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="3">
+      <spacer>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Expanding</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>261</width>
+         <height>16</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="1" column="2">
+      <widget class="QLabel" name="textLabel2">
+       <property name="text">
+        <string>0%</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="textLabel4">
+       <property name="text">
+        <string>&amp;Volume:</string>
+       </property>
+       <property name="buddy">
+        <cstring>volumeSlider</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2" colspan="3">
+      <widget class="QSlider" name="volumeSlider">
+       <property name="maximum">
+        <number>100</number>
+       </property>
+       <property name="singleStep">
+        <number>10</number>
+       </property>
+       <property name="value">
+        <number>100</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0" rowspan="2">
+      <spacer>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Fixed</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>41</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QRadioButton" name="cbExternal">
+     <property name="text">
+      <string>&amp;Use an external player</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout">
+     <property name="margin">
+      <number>0</number>
+     </property>
+     <item>
+      <spacer>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Fixed</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QLabel" name="textLabel5">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="text">
+        <string>&amp;Player:</string>
+       </property>
+       <property name="buddy">
+        <cstring>reqExternal</cstring>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="KUrlRequester" name="reqExternal" native="true">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+         <horstretch>10</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QRadioButton" name="cbNone">
+     <property name="text">
+      <string>&amp;No audio output</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <spacer>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>KUrlRequester</class>
+   <extends>QWidget</extends>
+   <header>kurlrequester.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>cbArts</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>volumeSlider</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>84</x>
+     <y>31</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>126</x>
+     <y>60</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cbArts</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>textLabel3</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>234</x>
+     <y>34</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>308</x>
+     <y>83</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cbArts</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>textLabel4</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>49</x>
+     <y>32</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>62</x>
+     <y>61</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cbArts</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>textLabel2</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>161</x>
+     <y>27</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>108</x>
+     <y>85</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cbExternal</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>textLabel5</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>87</x>
+     <y>114</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>86</x>
+     <y>143</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cbExternal</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>reqExternal</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>236</x>
+     <y>112</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>240</x>
+     <y>137</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>EmailClientConfig_UI</class>
+ <widget class="QWidget" name="EmailClientConfig_UI">
+  <layout class="QVBoxLayout">
+   <property name="margin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QRadioButton" name="kmailCB">
+     <property name="whatsThis">
+      <string>Kmail is the standard Mail program for the KDE desktop.</string>
+     </property>
+     <property name="text">
+      <string>&amp;Use KMail as preferred email client</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QRadioButton" name="otherCB">
+     <property name="whatsThis">
+      <string>Select this option if you want to use any other mail program.</string>
+     </property>
+     <property name="text">
+      <string>Use a different &amp;email client:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout">
+     <item>
+      <spacer>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Fixed</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>0</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="KLineEdit" name="txtEMailClient">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="toolTip">
+        <string>&lt;ul&gt; &lt;li&gt;%t: Recipient's address&lt;/li&gt; &lt;li&gt;%s: Subject&lt;/li&gt; &lt;li&gt;%c: Carbon Copy (CC)&lt;/li&gt; &lt;li&gt;%b: Blind Carbon Copy (BCC)&lt;/li&gt; &lt;li&gt;%B: Template body text&lt;/li&gt; &lt;li&gt;%A: Attachment &lt;/li&gt; &lt;li&gt;%u: Full mailto: URL &lt;/li&gt;&lt;/ul&gt;</string>
+       </property>
+       <property name="whatsThis">
+        <string>Press this button to select your favorite email client. Please note that the file you select has to have the executable attribute set in order to be accepted.&lt;br/&gt; You can also use several placeholders which will be replaced with the actual values when the email client is called:&lt;ul&gt; &lt;li&gt;%t: Recipient's address&lt;/li&gt; &lt;li&gt;%s: Subject&lt;/li&gt; &lt;li&gt;%c: Carbon Copy (CC)&lt;/li&gt; &lt;li&gt;%b: Blind Carbon Copy (BCC)&lt;/li&gt; &lt;li&gt;%B: Template body text&lt;/li&gt; &lt;li&gt;%A: Attachment &lt;/li&gt; &lt;/ul&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="btnSelectEmail">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="whatsThis">
+        <string>Click here to browse for the mail program file.</string>
+       </property>
+       <property name="text">
+        <string>...</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout">
+     <item>
+      <spacer>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Fixed</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>0</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="chkRunTerminal">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="whatsThis">
+        <string>Activate this option if you want the selected email client to be executed in a terminal (e.g. &lt;em&gt;Konsole&lt;/em&gt;).</string>
+       </property>
+       <property name="text">
+        <string>&amp;Run in terminal</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <spacer>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeType">
+      <enum>QSizePolicy::Expanding</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>0</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>KLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header location="global">KDE/KLineEdit</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>otherCB</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>chkRunTerminal</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>otherCB</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>txtEMailClient</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>otherCB</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>btnSelectEmail</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

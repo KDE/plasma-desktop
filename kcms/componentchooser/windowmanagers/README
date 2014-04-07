@@ -1,0 +1,33 @@
+The list of window managers that the config module offers for using.
+The format is normal .desktop files:
+
+Name - required, name to display in the configuration dialog.
+
+Exec - required, the command to execute to launch the window manager.
+    If launching fails for any reason, it must quit with non-zero exit
+    value and not do anything else (show an error dialog, try to run
+    a fallback, etc.).
+    
+TryExec - optional.
+
+X-KDE-WindowManagerTestExec - optional, a command that will be run and if
+    the exit code is not 0, the window manager won't be used (can be used
+    e.g. to detect that a window manager which requires compositing support
+    cannot be run on systems without such support).
+
+X-KDE-WindowManagerId - optional, the name under which the window manager
+    registers with the session manager (if different from the name
+    of the .desktop file)
+
+X-KDE-WindowManagerConfigure - optional, the command to run to configure
+    the window manager
+
+X-KDE-WindowManagerRestartArgument - optional, the argument to pass
+    to the window manager to restart it directly in the running KDE
+    session; if not present, KDE restart is required (which is generally
+    a good idea anyway, but this can be useful for e.g. checking)
+
+X-KDE-WindowManagerConfigureParentArgument - option, if present, this
+    argument and the X window id of the configuration dialog will be passed
+    to the configuration command (e.g. '--parent 13254543'). The configuration
+    tool may specify this window as the parent of its window.
