@@ -112,9 +112,6 @@ public:
               showRecentlyInstalled(true)
     {
         systemApplications = Kickoff::systemApplicationList();
-        reloadTimer = new QTimer(qq);
-        reloadTimer->setSingleShot(true);
-        QObject::connect(reloadTimer, SIGNAL(timeout()), qq, SLOT(delayedReloadMenu()));
     }
 
     ~ApplicationModelPrivate()
@@ -134,7 +131,6 @@ public:
     DisplayOrder displayOrder;
     bool allowSeparators;
     bool showRecentlyInstalled;
-    QTimer *reloadTimer;
 
     QStringList newInstalledPrograms;
     QHash<QString, QDate> seenPrograms;
@@ -525,13 +521,6 @@ void ApplicationModel::setSystemApplicationPolicy(SystemApplicationPolicy policy
     if (d->systemApplicationPolicy != policy) {
         d->systemApplicationPolicy = policy;
         reloadMenu();
-    }
-}
-
-void ApplicationModel::delayedReloadMenu()
-{
-    if (!d->reloadTimer->isActive()) {
-        d->reloadTimer->start(200);
     }
 }
 

@@ -113,7 +113,6 @@ public:
 
 public Q_SLOTS:
     void reloadMenu();
-    void delayedReloadMenu();
     void checkSycocaChange(const QStringList &changes);
 
 private:
