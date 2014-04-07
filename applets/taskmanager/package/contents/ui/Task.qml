@@ -151,7 +151,7 @@ MouseEventListener {
 
             property variant windows: model.WindowList
 
-            active: !inPopup && plasmoid.configuration.showToolTips
+            active: !inPopup && !groupDialog.visible && plasmoid.configuration.showToolTips
             interactive: true
             location: plasmoid.location
 
