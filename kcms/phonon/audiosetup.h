@@ -24,7 +24,6 @@
 #include <pulse/pulseaudio.h>
 
 #include "ui_audiosetup.h"
-#include <kconfig.h>
 
 class QTimer;
 
@@ -52,46 +51,46 @@ class AudioSetup : public QWidget, private Ui::AudioSetup
 {
     Q_OBJECT
 
-    public:
-        explicit AudioSetup(QWidget *parent = 0);
-        ~AudioSetup();
+public:
+    explicit AudioSetup(QWidget *parent = 0);
+    ~AudioSetup();
 
-        void load();
-        void save();
-        void defaults();
-        uint32_t getCurrentSinkIndex();
-        void updateCard(const pa_card_info*);
-        void removeCard(uint32_t idx);
-        void updateSink(const pa_sink_info*);
-        void removeSink(uint32_t idx);
-        void updateSource(const pa_source_info*);
-        void removeSource(uint32_t idx);
-        void updateFromPulse();
-        void updateIndependantDevices();
-        void updateVUMeter(int vol);
+    void load();
+    void save();
+    void defaults();
+    uint32_t getCurrentSinkIndex();
+    void updateCard(const pa_card_info*);
+    void removeCard(uint32_t idx);
+    void updateSink(const pa_sink_info*);
+    void removeSink(uint32_t idx);
+    void updateSource(const pa_source_info*);
+    void removeSource(uint32_t idx);
+    void updateFromPulse();
+    void updateIndependantDevices();
+    void updateVUMeter(int vol);
 
-    public Q_SLOTS:
-        void cardChanged();
-        void profileChanged();
-        void deviceChanged();
-        void portChanged();
-        void reallyUpdateVUMeter();
-        bool connectToDaemon();
+public Q_SLOTS:
+    void cardChanged();
+    void profileChanged();
+    void deviceChanged();
+    void portChanged();
+    void reallyUpdateVUMeter();
+    bool connectToDaemon();
 
-    Q_SIGNALS:
-        void changed();
-        void ready();
+Q_SIGNALS:
+    void changed();
+    void ready();
 
-    private:
-        void _updatePlacementTester();
-        void _createMonitorStreamForSource(uint32_t);
+private:
+    void _updatePlacementTester();
+    void _createMonitorStreamForSource(uint32_t);
 
-        QLabel *m_icon;
-        int m_OutstandingRequests;
-        ca_context* m_Canberra;
-        pa_stream* m_VUStream;
-        int m_VURealValue;
-        QTimer* m_VUTimer;
+    QLabel *m_icon;
+    int m_OutstandingRequests;
+    ca_context* m_Canberra;
+    pa_stream* m_VUStream;
+    int m_VURealValue;
+    QTimer* m_VUTimer;
 };
 
 QDebug operator<<(QDebug dbg, const pa_context_state_t &state);

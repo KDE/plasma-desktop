@@ -14,41 +14,39 @@
     along with this program; if not, write to the Free Software
     Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
     02110-1301, USA.
-
 */
 
 #ifndef PHONON_TESTSPEAKERWIDGET_H
 #define PHONON_TESTSPEAKERWIDGET_H
 
-#include <kpushbutton.h>
+#include <QPushButton>
 
 #include <canberra.h>
 #include <pulse/pulseaudio.h>
 
-
 class AudioSetup;
 
-class TestSpeakerWidget: public KPushButton
+class TestSpeakerWidget: public QPushButton
 {
     Q_OBJECT
-    public:
-        TestSpeakerWidget(const pa_channel_position_t pos, ca_context *canberra, AudioSetup* ss);
-        ~TestSpeakerWidget();
+public:
+    TestSpeakerWidget(const pa_channel_position_t pos, ca_context *canberra, AudioSetup* ss);
+    ~TestSpeakerWidget();
 
-    public slots:
-        void onFinish();
+public slots:
+    void onFinish();
 
-    private slots:
-        void toggled(bool);
+private slots:
+    void toggled(bool);
 
-    private:
-        QString _positionName();
-        const char* _positionAsString();
-        const char* _positionSoundName();
+private:
+    QString _positionName();
+    const char* _positionAsString();
+    const char* _positionSoundName();
 
-        AudioSetup* m_Ss;
-        pa_channel_position_t m_Pos;
-        ca_context* m_Canberra;
+    AudioSetup* m_Ss;
+    pa_channel_position_t m_Pos;
+    ca_context* m_Canberra;
 };
 
 #endif // PHONON_TESTSPEAKERWIDGET_H

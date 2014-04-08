@@ -1,6 +1,7 @@
 /*  This file is part of the KDE project
     Copyright (C) 2006-2008 Matthias Kretz <kretz@kde.org>
     Copyright (C) 2011 Casian Andrei <skeletk13@gmail.com>
+    Copyright (C) 2014 Harald Sitter <sitter@kde.org>
 
     This program is free software; you can redistribute it and/or
     modify it under the terms of the GNU Library General Public
@@ -16,43 +17,25 @@
     along with this library; see the file COPYING.LIB.  If not, write to
     the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
     Boston, MA 02110-1301, USA.
-
 */
 
 #include "devicepreference.h"
 
-#include <QtCore/QList>
-#include <QtCore/QPointer>
-#include <QtDBus/QDBusConnection>
-#include <QtDBus/QDBusReply>
-#include <QtDBus/QDBusInterface>
-#include <QtDBus/QDBusMessage>
-#include <QApplication>
-#include <QPainter>
-#include <QItemDelegate>
+#include <QDialogButtonBox>
+#include <QListWidget>
 #include <QLabel>
-#include <QVBoxLayout>
-#include <QHeaderView>
-
-#include <Phonon/AudioOutput>
-#include <Phonon/MediaObject>
-#include <Phonon/VideoWidget>
-#include <phonon/backendinterface.h>
-#include <phonon/backendcapabilities.h>
-#include <phonon/globalconfig.h>
-#include <phonon/objectdescription.h>
-#include <phonon/phononnamespace.h>
-#include "factory_p.h"
-#include <kfadewidgeteffect.h>
-
-#include <kdialog.h>
-#include <klistwidget.h>
-#include <klocale.h>
-#include <kmenu.h>
-#include <kmessagebox.h>
-#include <kstandarddirs.h>
-#include <kdebug.h>
+#include <QPointer>
 #include <QStandardPaths>
+
+#include <phonon/AudioOutput>
+#include <phonon/BackendCapabilities>
+#include <phonon/MediaObject>
+#include <phonon/VideoWidget>
+#include <phonon/globalconfig.h>
+#include <phonon/phononnamespace.h>
+
+#include <KLocalizedString>
+#include <KMessageBox>
 
 #ifndef METATYPE_QLIST_INT_DEFINED
 #define METATYPE_QLIST_INT_DEFINED
@@ -60,8 +43,7 @@
 Q_DECLARE_METATYPE(QList<int>)
 #endif
 
-namespace Phonon
-{
+namespace Phonon {
 
 /*
  * Lists of categories for every device type
@@ -100,49 +82,49 @@ void operator++(Category &c)
 }
 
 class CategoryItem : public QStandardItem {
-    public:
-        CategoryItem(Category cat)
-                : QStandardItem(),
-                m_cat(cat),
-                m_odtype(AudioOutputDeviceType)
-        {
-            if (cat == NoCategory) {
-                setText(i18n("Audio Playback"));
-            } else {
-                setText(categoryToString(cat));
-            }
+public:
+    CategoryItem(Category cat)
+        : QStandardItem(),
+          m_cat(cat),
+          m_odtype(AudioOutputDeviceType)
+    {
+        if (cat == NoCategory) {
+            setText(i18n("Audio Playback"));
+        } else {
+            setText(categoryToString(cat));
         }
+    }
 
-        CategoryItem(CaptureCategory cat, ObjectDescriptionType t = AudioCaptureDeviceType)
-                : QStandardItem(),
-                m_capcat(cat),
-                m_odtype(t)
-        {
-            if (cat == NoCaptureCategory) {
-                switch(t) {
-                case AudioCaptureDeviceType:
-                    setText(i18n("Audio Recording"));
-                    break;
-                case VideoCaptureDeviceType:
-                    setText(i18n("Video Recording"));
-                    break;
-                default:
-                    setText(i18n("Invalid"));
-                }
-            } else {
-                setText(categoryToString(cat));
+    CategoryItem(CaptureCategory cat, ObjectDescriptionType t = AudioCaptureDeviceType)
+        : QStandardItem(),
+          m_capcat(cat),
+          m_odtype(t)
+    {
+        if (cat == NoCaptureCategory) {
+            switch(t) {
+            case AudioCaptureDeviceType:
+                setText(i18n("Audio Recording"));
+                break;
+            case VideoCaptureDeviceType:
+                setText(i18n("Video Recording"));
+                break;
+            default:
+                setText(i18n("Invalid"));
             }
+        } else {
+            setText(categoryToString(cat));
         }
+    }
 
-        int type() const { return 1001; }
-        Category category() const { return m_cat; }
-        CaptureCategory captureCategory() const { return m_capcat; }
-        ObjectDescriptionType odtype() const { return m_odtype; }
+    int type() const { return 1001; }
+    Category category() const { return m_cat; }
+    CaptureCategory captureCategory() const { return m_capcat; }
+    ObjectDescriptionType odtype() const { return m_odtype; }
 
-    private:
-        Category m_cat;
-        CaptureCategory m_capcat;
-        ObjectDescriptionType m_odtype;
+private:
+    Category m_cat;
+    CaptureCategory m_capcat;
+    ObjectDescriptionType m_odtype;
 };
 
 /**
@@ -159,8 +141,8 @@ void DevicePreference::changeEvent(QEvent *e)
 
 DevicePreference::DevicePreference(QWidget *parent)
     : QWidget(parent),
-    m_headerModel(0, 1, 0),
-    m_media(NULL), m_audioOutput(NULL), m_videoWidget(NULL)
+      m_headerModel(0, 1, 0),
+      m_media(NULL), m_audioOutput(NULL), m_videoWidget(NULL)
 {
     setupUi(this);
 
@@ -174,14 +156,14 @@ DevicePreference::DevicePreference(QWidget *parent)
     // Configure the device list
     deviceList->setDragDropMode(QAbstractItemView::InternalMove);
     deviceList->setStyleSheet(QString("QTreeView {"
-                "background-color: palette(base);"
-                "background-image: url(%1);"
-                "background-position: bottom left;"
-                "background-attachment: fixed;"
-                "background-repeat: no-repeat;"
-                "background-clip: padding;"
-                "}")
-            .arg(QStandardPaths::locate(QStandardPaths::GenericDataLocation, "kcm_phonon/listview-background.png")));
+                                      "background-color: palette(base);"
+                                      "background-image: url(%1);"
+                                      "background-position: bottom left;"
+                                      "background-attachment: fixed;"
+                                      "background-repeat: no-repeat;"
+                                      "background-clip: padding;"
+                                      "}")
+                              .arg(QStandardPaths::locate(QStandardPaths::GenericDataLocation, "kcm_phonon/listview-background.png")));
     deviceList->setAlternatingRowColors(false);
 
     // The root item for the categories
@@ -289,13 +271,11 @@ DevicePreference::~DevicePreference()
 
 void DevicePreference::updateDeviceList()
 {
-    KFadeWidgetEffect *animation = new KFadeWidgetEffect(deviceList);
-
     // Temporarily disconnect the device list selection model
     if (deviceList->selectionModel()) {
         disconnect(deviceList->selectionModel(),
-                SIGNAL(currentRowChanged(const QModelIndex &,const QModelIndex &)),
-                this, SLOT(updateButtonsEnabled()));
+                   SIGNAL(currentRowChanged(const QModelIndex &,const QModelIndex &)),
+                   this, SLOT(updateButtonsEnabled()));
     }
 
     // Get the current selected category item
@@ -338,15 +318,15 @@ void DevicePreference::updateDeviceList()
             switch (catItem->odtype()) {
             case AudioOutputDeviceType:
                 m_headerModel.setHeaderData(0, Qt::Horizontal, i18n("Audio Playback Device Preference for the '%1' Category",
-                        categoryToString(cat)), Qt::DisplayRole);
+                                                                    categoryToString(cat)), Qt::DisplayRole);
                 break;
             case AudioCaptureDeviceType:
                 m_headerModel.setHeaderData(0, Qt::Horizontal, i18n("Audio Recording Device Preference for the '%1' Category",
-                        categoryToString(capcat)), Qt::DisplayRole);
+                                                                    categoryToString(capcat)), Qt::DisplayRole);
                 break;
             case VideoCaptureDeviceType:
                 m_headerModel.setHeaderData(0, Qt::Horizontal, i18n("Video Recording Device Preference for the '%1' Category ",
-                        categoryToString(capcat)), Qt::DisplayRole);
+                                                                    categoryToString(capcat)), Qt::DisplayRole);
                 break;
             default: ;
             }
@@ -369,7 +349,6 @@ void DevicePreference::updateDeviceList()
     }
 
     deviceList->resizeColumnToContents(0);
-    animation->start();
 }
 
 void DevicePreference::updateAudioCaptureDevices()
@@ -769,19 +748,14 @@ void DevicePreference::on_applyPreferencesButton_clicked()
         return;
     }
 
-    QPointer<KDialog> dialog = new KDialog(this);
-    dialog->setButtons(KDialog::Ok | KDialog::Cancel);
-    dialog->setDefaultButton(KDialog::Ok);
+    QPointer<QDialog> dialog = new QDialog(this);
 
-    QWidget *mainWidget = new QWidget(dialog);
-    dialog->setMainWidget(mainWidget);
-
-    QLabel *label = new QLabel(mainWidget);
+    QLabel *label = new QLabel(dialog);
     label->setText(i18n("Apply the currently shown device preference list to the following other "
-                "audio playback categories:"));
+                        "audio playback categories:"));
     label->setWordWrap(true);
 
-    KListWidget *list = new KListWidget(mainWidget);
+    QListWidget *list = new QListWidget(dialog);
 
     for (catIndex = 0; catIndex < categoryListCount; catIndex ++) {
         Category cat = cap ? NoCategory : categoryList[catIndex];
@@ -808,10 +782,15 @@ void DevicePreference::on_applyPreferencesButton_clicked()
         }
     }
 
-    QVBoxLayout *layout = new QVBoxLayout(mainWidget);
-    layout->setMargin(0);
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok
+                                                       | QDialogButtonBox::Cancel);
+    connect(buttonBox, SIGNAL(accepted()), dialog, SLOT(accept()));
+    connect(buttonBox, SIGNAL(rejected()), dialog, SLOT(reject()));
+
+    QVBoxLayout *layout = new QVBoxLayout(dialog);
     layout->addWidget(label);
     layout->addWidget(list);
+    layout->addWidget(buttonBox);
 
     switch (dialog->exec()) {
     case QDialog::Accepted:
@@ -898,8 +877,10 @@ void DevicePreference::on_testPlaybackButton_toggled(bool down)
             m_audioOutput->setMuted(false);
 
             createPath(m_media, m_audioOutput);
-
-            m_media->setCurrentSource(KStandardDirs::locate("sound", "KDE-Sys-Log-In.ogg"));
+            static QUrl testUrl = QUrl::fromLocalFile(QStandardPaths::locate(
+                                                          QStandardPaths::GenericDataLocation,
+                                                          QStringLiteral("sounds/KDE-Sys-Log-In.ogg")));
+            m_media->setCurrentSource(testUrl);
             connect(m_media, SIGNAL(finished()), testPlaybackButton, SLOT(toggle()));
 
             break;
@@ -1012,4 +993,3 @@ void DevicePreference::updateButtonsEnabled()
 } // Phonon namespace
 
 #include "moc_devicepreference.cpp"
-// vim: sw=4 ts=4

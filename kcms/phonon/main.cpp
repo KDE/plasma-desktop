@@ -16,29 +16,24 @@
     along with this library; see the file COPYING.LIB.  If not, write to
     the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
     Boston, MA 02110-1301, USA.
-
 */
 
 #include "main.h"
 
-#include <QBoxLayout>
+#include <QTabWidget>
 
-#include <kaboutdata.h>
-#include <KDE/KDialog>
-#include <KDE/KPluginFactory>
-#include <KDE/KTabWidget>
+#include <KAboutData>
+#include <KPluginFactory>
 #include <KLocalizedString>
 #include <kdeversion.h>
-
-#include "devicepreference.h"
-#include "backendselection.h"
 
 #ifdef HAVE_PULSEAUDIO
 #  include "audiosetup.h"
 #endif
+#include "backendselection.h"
+#include "devicepreference.h"
 
 K_PLUGIN_FACTORY(PhononKcmFactory, registerPlugin<PhononKcm>();)
-K_EXPORT_PLUGIN(PhononKcmFactory("kcm_phonon"))
 
 PhononKcm::PhononKcm(QWidget *parent, const QVariantList &args)
     : KCModule(parent, args)
@@ -55,7 +50,7 @@ PhononKcm::PhononKcm(QWidget *parent, const QVariantList &args)
     layout()->setMargin(0);
     layout()->setSpacing(0);
 
-    m_tabs = new KTabWidget(this);
+    m_tabs = new QTabWidget(this);
     layout()->addWidget(m_tabs);
 
     m_devicePreferenceWidget = new Phonon::DevicePreference(this);
@@ -97,11 +92,10 @@ void PhononKcm::defaults()
 #ifdef HAVE_PULSEAUDIO
 void PhononKcm::speakerSetupReady()
 {
-  m_tabs->insertTab(1, m_speakerSetup, i18n("Audio Hardware Setup"));
-  m_devicePreferenceWidget->pulseAudioEnabled();
-  connect(m_speakerSetup, SIGNAL(changed()), SLOT(changed()));
+    m_tabs->insertTab(1, m_speakerSetup, i18n("Audio Hardware Setup"));
+    m_devicePreferenceWidget->pulseAudioEnabled();
+    connect(m_speakerSetup, SIGNAL(changed()), SLOT(changed()));
 }
 #endif
 
 #include "main.moc"
-// vim: ts=4

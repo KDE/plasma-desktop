@@ -15,13 +15,13 @@
     along with this library; see the file COPYING.LIB.  If not, write to
     the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
     Boston, MA 02110-1301, USA.
-
 */
 
 #ifndef MAIN_H
 #define MAIN_H
 
-#include <kcmodule.h>
+#include <KCModule>
+
 namespace Phonon {
 class DevicePreference;
 }
@@ -30,29 +30,29 @@ class BackendSelection;
 #ifdef HAVE_PULSEAUDIO
 class AudioSetup;
 #endif
-class KTabWidget;
+class QTabWidget;
 
 class PhononKcm : public KCModule
 {
     Q_OBJECT
-    public:
-        PhononKcm(QWidget *parent, const QVariantList &);
+public:
+    PhononKcm(QWidget *parent, const QVariantList &);
 
-        void load();
-        void save();
-        void defaults();
+    void load();
+    void save();
+    void defaults();
 
 #ifdef HAVE_PULSEAUDIO
-    private Q_SLOTS:
-        void speakerSetupReady();
+private Q_SLOTS:
+    void speakerSetupReady();
 #endif
 
-    private:
-        KTabWidget* m_tabs;
-        Phonon::DevicePreference *m_devicePreferenceWidget;
-        BackendSelection *m_backendSelection;
+private:
+    QTabWidget* m_tabs;
+    Phonon::DevicePreference *m_devicePreferenceWidget;
+    BackendSelection *m_backendSelection;
 #ifdef HAVE_PULSEAUDIO
-        AudioSetup* m_speakerSetup;
+    AudioSetup *m_speakerSetup;
 #endif
 };
 

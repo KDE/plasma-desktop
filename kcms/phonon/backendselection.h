@@ -1,5 +1,6 @@
 /*  This file is part of the KDE project
     Copyright (C) 2004-2007 Matthias Kretz <kretz@kde.org>
+    Copyright (C) 2011-2014 Harald Sitter <sitter@kde.org>
 
     This program is free software; you can redistribute it and/or
     modify it under the terms of the GNU Library General Public
@@ -15,46 +16,59 @@
     along with this library; see the file COPYING.LIB.  If not, write to
     the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
     Boston, MA 02110-1301, USA.
-
 */
 
 #ifndef BACKENDSELECTION_H
 #define BACKENDSELECTION_H
 
 #include "ui_backendselection.h"
+
+#include <QHash>
 #include <QWidget>
-#include <QtCore/QHash>
 
-
-#include <kservice.h>
 class KCModuleProxy;
+
+struct BackendDescriptor {
+    explicit BackendDescriptor(const QString &path = QString());
+
+    bool isValid;
+
+    QString iid;
+
+    QString name;
+    QString icon;
+    QString version;
+    QString website;
+    int preference;
+
+    QString pluginPath;
+
+    /** Implemented for qSort(QList) */
+    bool operator <(const BackendDescriptor &rhs) const;
+};
 
 class BackendSelection : public QWidget, private Ui::BackendSelection
 {
     Q_OBJECT
-    public:
-        explicit BackendSelection(QWidget *parent = 0);
+public:
+    explicit BackendSelection(QWidget *parent = 0);
 
-        void load();
-        void save();
-        void defaults();
+    void load();
+    void save();
+    void defaults();
 
-    private Q_SLOTS:
-        void selectionChanged();
-        void up();
-        void down();
-        void openWebsite(const QString &url);
+private Q_SLOTS:
+    void selectionChanged();
+    void up();
+    void down();
+    void openWebsite(const QString &url);
 
-    Q_SIGNALS:
-        void changed();
+Q_SIGNALS:
+    void changed();
 
-    private:
-        void showBackendKcm(const KService::Ptr &backendService);
-        void loadServices(const KService::List &offers);
-        QHash<QString, KService::Ptr> m_services;
-        QHash<QString, KCModuleProxy *> m_kcms;
-        int m_emptyPage;
+private:
+    QHash<QString, struct BackendDescriptor> m_backends;
+    int m_emptyPage;
 };
 
-// vim: sw=4 ts=4 tw=80
 #endif // BACKENDSELECTION_H

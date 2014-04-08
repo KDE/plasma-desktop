@@ -19,24 +19,15 @@
 
 #include "audiosetup.h"
 
-#include <QtCore/QAbstractEventDispatcher>
-#include <QtCore/QDebug>
-#include <QtCore/QDir>
-#include <QtCore/QTimer>
-#include <QtDBus/QDBusConnection>
-#include <QtDBus/QDBusInterface>
+#include <QAbstractEventDispatcher>
+#include <QDebug>
+#include <QTimer>
 #include <QLabel>
 
-#include <kaboutdata.h>
-#include <kconfiggroup.h>
-#include <kdebug.h>
-#include <kicon.h>
-#include <kuser.h>
-#include <klocalizedstring.h>
-#include <kiconloader.h>
+#include <KLocalizedString>
+#include <KIconLoader>
+#include <KUser>
 
-#include <glib.h>
-#include <pulse/xmalloc.h>
 #include <pulse/glib-mainloop.h>
 
 #include "testspeakerwidget.h"
@@ -60,7 +51,7 @@ static void card_cb(pa_context *c, const pa_card_info *i, int eol, void *userdat
         if (pa_context_errno(c) == PA_ERR_NOENTITY)
             return;
 
-        kDebug() << "Card callback failure";
+        qDebug() << "Card callback failure";
         return;
     }
 
@@ -80,7 +71,7 @@ static void sink_cb(pa_context *c, const pa_sink_info *i, int eol, void *userdat
     if (eol < 0) {
         if (pa_context_errno(c) == PA_ERR_NOENTITY)
             return;
-        kDebug() << "Sink callback failure";
+        qDebug() << "Sink callback failure";
         return;
     }
 
@@ -102,7 +93,7 @@ static void source_cb(pa_context *c, const pa_source_info *i, int eol, void *use
         if (pa_context_errno(c) == PA_ERR_NOENTITY)
             return;
 
-        kDebug() << "Source callback failure";
+        qDebug() << "Source callback failure";
         return;
     }
 
@@ -121,46 +112,46 @@ static void subscribe_cb(pa_context *c, pa_subscription_event_type_t t, uint32_t
     THAT(userdata);
 
     switch (t & PA_SUBSCRIPTION_EVENT_FACILITY_MASK) {
-        case PA_SUBSCRIPTION_EVENT_CARD:
-            if ((t & PA_SUBSCRIPTION_EVENT_TYPE_MASK) == PA_SUBSCRIPTION_EVENT_REMOVE) {
-                ss->removeCard(index);
-            } else {
-                pa_operation *operation =
-                        pa_context_get_card_info_by_index(c, index, card_cb, ss);
-                if (!operation) {
-                    kDebug() << "pa_context_get_card_info_by_index() failed";
-                    return;
-                }
-                pa_operation_unref(operation);
+    case PA_SUBSCRIPTION_EVENT_CARD:
+        if ((t & PA_SUBSCRIPTION_EVENT_TYPE_MASK) == PA_SUBSCRIPTION_EVENT_REMOVE) {
+            ss->removeCard(index);
+        } else {
+            pa_operation *operation =
+                    pa_context_get_card_info_by_index(c, index, card_cb, ss);
+            if (!operation) {
+                qDebug() << "pa_context_get_card_info_by_index() failed";
+                return;
             }
-            break;
+            pa_operation_unref(operation);
+        }
+        break;
 
-        case PA_SUBSCRIPTION_EVENT_SINK:
-            if ((t & PA_SUBSCRIPTION_EVENT_TYPE_MASK) == PA_SUBSCRIPTION_EVENT_REMOVE) {
-                ss->removeSink(index);
-            } else {
-                pa_operation *operation =
-                        pa_context_get_sink_info_by_index(c, index, sink_cb, ss);
-                if (!operation) {
-                    kDebug() << "pa_context_get_sink_info_by_index() failed";
-                    return;
-                }
-                pa_operation_unref(operation);
+    case PA_SUBSCRIPTION_EVENT_SINK:
+        if ((t & PA_SUBSCRIPTION_EVENT_TYPE_MASK) == PA_SUBSCRIPTION_EVENT_REMOVE) {
+            ss->removeSink(index);
+        } else {
+            pa_operation *operation =
+                    pa_context_get_sink_info_by_index(c, index, sink_cb, ss);
+            if (!operation) {
+                qDebug() << "pa_context_get_sink_info_by_index() failed";
+                return;
             }
-            break;
+            pa_operation_unref(operation);
+        }
+        break;
 
-        case PA_SUBSCRIPTION_EVENT_SOURCE:
-            if ((t & PA_SUBSCRIPTION_EVENT_TYPE_MASK) == PA_SUBSCRIPTION_EVENT_REMOVE) {
-                ss->removeSource(index);
-            } else {
-                pa_operation *o;
-                if (!(o = pa_context_get_source_info_by_index(c, index, source_cb, ss))) {
-                    kDebug() << "pa_context_get_source_info_by_index() failed";
-                    return;
-                }
-                pa_operation_unref(o);
+    case PA_SUBSCRIPTION_EVENT_SOURCE:
+        if ((t & PA_SUBSCRIPTION_EVENT_TYPE_MASK) == PA_SUBSCRIPTION_EVENT_REMOVE) {
+            ss->removeSource(index);
+        } else {
+            pa_operation *o;
+            if (!(o = pa_context_get_source_info_by_index(c, index, source_cb, ss))) {
+                qDebug() << "pa_context_get_source_info_by_index() failed";
+                return;
             }
-            break;
+            pa_operation_unref(o);
+        }
+        break;
     }
 }
 
@@ -169,7 +160,7 @@ static void context_state_callback(pa_context *c, void *userdata)
     Q_ASSERT(c);
     THAT(userdata);
 
-    kDebug() << "context_state_callback" << pa_context_get_state(c);
+    qDebug() << "context_state_callback" << pa_context_get_state(c);
     pa_context_state_t state = pa_context_get_state(c);
     if (state == PA_CONTEXT_READY) {
         // Attempt to load things up
@@ -178,29 +169,29 @@ static void context_state_callback(pa_context *c, void *userdata)
         pa_context_set_subscribe_callback(c, subscribe_cb, ss);
 
         if (!(o = pa_context_subscribe(c, (pa_subscription_mask_t)
-                                          (PA_SUBSCRIPTION_MASK_CARD|
-                                           PA_SUBSCRIPTION_MASK_SINK|
-                                           PA_SUBSCRIPTION_MASK_SOURCE), NULL, NULL))) {
-            kDebug() << "pa_context_subscribe() failed";
+                                       (PA_SUBSCRIPTION_MASK_CARD|
+                                        PA_SUBSCRIPTION_MASK_SINK|
+                                        PA_SUBSCRIPTION_MASK_SOURCE), NULL, NULL))) {
+            qDebug() << "pa_context_subscribe() failed";
             return;
         }
         pa_operation_unref(o);
 
         if (!(o = pa_context_get_card_info_list(c, card_cb, ss))) {
-          kDebug() << "pa_context_get_card_info_list() failed";
-          return;
+            qDebug() << "pa_context_get_card_info_list() failed";
+            return;
         }
         pa_operation_unref(o);
 
         if (!(o = pa_context_get_sink_info_list(c, sink_cb, ss))) {
-          kDebug() << "pa_context_get_sink_info_list() failed";
-          return;
+            qDebug() << "pa_context_get_sink_info_list() failed";
+            return;
         }
         pa_operation_unref(o);
 
         if (!(o = pa_context_get_source_info_list(c, source_cb, ss))) {
-          kDebug() << "pa_context_get_source_info_list() failed";
-          return;
+            qDebug() << "pa_context_get_source_info_list() failed";
+            return;
         }
         pa_operation_unref(o);
 
@@ -211,7 +202,7 @@ static void context_state_callback(pa_context *c, void *userdata)
         if (s_context != c)
             pa_context_disconnect(c);
         else {
-            kWarning() << "PulseAudio context lost. Scheduling reconnect in eventloop.";
+            qWarning() << "PulseAudio context lost. Scheduling reconnect in eventloop.";
             pa_context_unref(s_context);
             s_context = 0;
             QMetaObject::invokeMethod(ss, "connectToDaemon", Qt::QueuedConnection);
@@ -232,7 +223,7 @@ static void read_callback(pa_stream *s, size_t length, void *userdata) {
     const void *data;
     int v;
     if (pa_stream_peek(s, &data, &length) < 0) {
-        kDebug() << "Failed to read data from stream";
+        qDebug() << "Failed to read data from stream";
         return;
     }
 
@@ -279,7 +270,7 @@ AudioSetup::AudioSetup(QWidget *parent)
     m_icon = new QLabel(this);
     m_icon->setPixmap(QPixmap(KUser().faceIconPath()));
     if (m_icon->pixmap()->isNull())
-        m_icon->setPixmap(KIcon("system-users").pixmap(KIconLoader::SizeHuge, KIconLoader::SizeHuge));
+        m_icon->setPixmap(QIcon::fromTheme("system-users").pixmap(KIconLoader::SizeHuge, KIconLoader::SizeHuge));
     placementGrid->addWidget(m_icon, 1, 2, Qt::AlignCenter);
 
     update();
@@ -296,19 +287,19 @@ AudioSetup::AudioSetup(QWidget *parent)
     const QByteArray eventDispatcher(
                 QAbstractEventDispatcher::instance()->metaObject()->className());
     if (!eventDispatcher.contains("EventDispatcherGlib")) {
-        kDebug() << "Disabling PulseAudio integration for lack of GLib event loop.";
+        qDebug() << "Disabling PulseAudio integration for lack of GLib event loop.";
         return;
     }
 
     int ret = ca_context_create(&m_Canberra);
     if (ret < 0) {
-        kDebug() << "Disabling PulseAudio integration. Canberra context failed.";
+        qDebug() << "Disabling PulseAudio integration. Canberra context failed.";
         return;
     }
 
     s_mainloop = pa_glib_mainloop_new(NULL);
     if (!s_mainloop) {
-        kDebug() << "Disabling PulseAudio integration for lack of working GLib event loop.";
+        qDebug() << "Disabling PulseAudio integration for lack of working GLib event loop.";
         ca_context_destroy(m_Canberra);
         m_Canberra = 0;
         return;
@@ -378,18 +369,18 @@ void AudioSetup::updateCard(const pa_card_info *pInfo)
     if (s_Cards.contains(pInfo->index)) {
         int idx = cardBox->findData(pInfo->index);
         if (idx >= 0) {
-            cardBox->setItemIcon(idx, KIcon(info.icon));
+            cardBox->setItemIcon(idx, QIcon::fromTheme(info.icon));
             cardBox->setItemText(idx, info.name);
         }
     } else {
-        cardBox->addItem(KIcon(info.icon), info.name, pInfo->index);
+        cardBox->addItem(QIcon::fromTheme(info.icon), info.name, pInfo->index);
     }
     cardBox->blockSignals(false);
 
     s_Cards[pInfo->index] = info;
 
     cardChanged();
-    kDebug() << "Got info about card" << info.name;
+    qDebug() << "Got info about card" << info.name;
 }
 
 void AudioSetup::removeCard(uint32_t index)
@@ -414,9 +405,9 @@ void AudioSetup::updateSink(const pa_sink_info* i)
     info.channelMap = i->channel_map;
 
     for (uint32_t j = 0; j < i->n_ports; ++j)
-      info.ports[i->ports[j]->priority] = QPair<QString,QString>(i->ports[j]->name, QString::fromUtf8(i->ports[j]->description));
+        info.ports[i->ports[j]->priority] = QPair<QString,QString>(i->ports[j]->name, QString::fromUtf8(i->ports[j]->description));
     if (i->active_port)
-      info.activePort = i->active_port->name;
+        info.activePort = i->active_port->name;
 
     s_Sinks[i->index] = info;
 
@@ -433,7 +424,7 @@ void AudioSetup::updateSink(const pa_sink_info* i)
         }
     }
 
-    kDebug() << "Got info about sink" << info.name;
+    qDebug() << "Got info about sink" << info.name;
 }
 
 void AudioSetup::removeSink(uint32_t index)
@@ -462,9 +453,9 @@ void AudioSetup::updateSource(const pa_source_info* i)
     info.channelMap = i->channel_map;
 
     for (uint32_t j = 0; j < i->n_ports; ++j)
-      info.ports[i->ports[j]->priority] = QPair<QString,QString>(i->ports[j]->name, QString::fromUtf8(i->ports[j]->description));
+        info.ports[i->ports[j]->priority] = QPair<QString,QString>(i->ports[j]->name, QString::fromUtf8(i->ports[j]->description));
     if (i->active_port)
-      info.activePort = i->active_port->name;
+        info.activePort = i->active_port->name;
 
     s_Sources[i->index] = info;
 
@@ -481,7 +472,7 @@ void AudioSetup::updateSource(const pa_source_info* i)
         }
     }
 
-    kDebug() << "Got info about source" << info.name;
+    qDebug() << "Got info about source" << info.name;
 }
 
 void AudioSetup::removeSource(uint32_t index)
@@ -565,11 +556,11 @@ void AudioSetup::cardChanged()
     QMap<quint32, deviceInfo>::const_iterator it;
     for (it = s_Sinks.constBegin(); it != s_Sinks.constEnd(); ++it) {
         if (it->cardIndex == card_index)
-            deviceBox->addItem(KIcon(it->icon), i18n("Playback (%1)", it->name), it->index);
+            deviceBox->addItem(QIcon::fromTheme(it->icon), i18n("Playback (%1)", it->name), it->index);
     }
     for (it = s_Sources.constBegin(); it != s_Sources.constEnd(); ++it) {
         if (it->cardIndex == card_index)
-            deviceBox->addItem(KIcon(it->icon), i18n("Recording (%1)", it->name), ((-1*it->index) - 1));
+            deviceBox->addItem(QIcon::fromTheme(it->icon), i18n("Recording (%1)", it->name), ((-1*it->index) - 1));
     }
     deviceBox->blockSignals(false);
 
@@ -577,7 +568,7 @@ void AudioSetup::cardChanged()
 
     deviceChanged();
 
-    kDebug() << "Doing update" << cardBox->currentIndex();
+    qDebug() << "Doing update" << cardBox->currentIndex();
 
     emit changed();
 }
@@ -588,7 +579,7 @@ void AudioSetup::profileChanged()
     Q_ASSERT(PA_INVALID_INDEX != card_index);
 
     QString profile = profileBox->itemData(profileBox->currentIndex()).toString();
-    kDebug() << "Changing profile to" << profile;
+    qDebug() << "Changing profile to" << profile;
 
     Q_ASSERT(s_Cards[card_index].profiles.size());
 
@@ -599,7 +590,7 @@ void AudioSetup::profileChanged()
                                                  NULL,
                                                  NULL);
     if (!operation)
-        kDebug() << "pa_context_set_card_profile_by_name() failed";
+        qDebug() << "pa_context_set_card_profile_by_name() failed";
     else
         pa_operation_unref(operation);
 
@@ -621,13 +612,13 @@ void AudioSetup::updateIndependantDevices()
 
     bool haveID = (PA_INVALID_INDEX == cardBox->itemData(0).toUInt());
 
-    kDebug() << QString("Want ID: %1; Have ID: %2").arg(showID?"Yes":"No").arg(haveID?"Yes":"No");
+    qDebug() << QString("Want ID: %1; Have ID: %2").arg(showID?"Yes":"No").arg(haveID?"Yes":"No");
 
     cardBox->blockSignals(true);
     if (haveID && !showID)
         cardBox->removeItem(0);
     else if (!haveID && showID)
-        cardBox->insertItem(0, KIcon(SS_DEFAULT_ICON), i18n("Independent Devices"), PA_INVALID_INDEX);
+        cardBox->insertItem(0, QIcon::fromTheme(SS_DEFAULT_ICON), i18n("Independent Devices"), PA_INVALID_INDEX);
     cardBox->blockSignals(false);
 }
 
@@ -658,7 +649,7 @@ bool AudioSetup::connectToDaemon()
 
     s_context = pa_context_new(api, i18n("KDE Audio Hardware Setup").toUtf8().constData());
     if (pa_context_connect(s_context, NULL, PA_CONTEXT_NOFAIL, 0) < 0) {
-        kDebug() << "Disabling PulseAudio integration. Context connection failed: " << pa_strerror(pa_context_errno(s_context));
+        qDebug() << "Disabling PulseAudio integration. Context connection failed: " << pa_strerror(pa_context_errno(s_context));
         pa_context_unref(s_context);
         s_context = 0;
         pa_glib_mainloop_free(s_mainloop);
@@ -677,8 +668,8 @@ bool AudioSetup::connectToDaemon()
 static deviceInfo &getDeviceInfo(qint64 index)
 {
     if (index >= 0) {
-      Q_ASSERT(s_Sinks.contains(index));
-      return s_Sinks[index];
+        Q_ASSERT(s_Sinks.contains(index));
+        return s_Sinks[index];
     }
 
     index = (-1 * index) - 1;
@@ -698,7 +689,7 @@ void AudioSetup::deviceChanged()
     qint64 index = deviceBox->itemData(idx).toInt();
     deviceInfo &device_info = getDeviceInfo(index);
 
-    kDebug() << QString("Updating ports for device '%1' (%2 ports available)")
+    qDebug() << QString("Updating ports for device '%1' (%2 ports available)")
                 .arg(device_info.name)
                 .arg(device_info.ports.size());
 
@@ -734,7 +725,7 @@ void AudioSetup::portChanged()
     qint64 index = deviceBox->itemData(deviceBox->currentIndex()).toInt();
 
     QString port = portBox->itemData(portBox->currentIndex()).toString();
-    kDebug() << "Changing port to" << port;
+    qDebug() << "Changing port to" << port;
 
 #ifndef QT_NO_DEBUG
     deviceInfo &device_info = getDeviceInfo(index);
@@ -744,12 +735,12 @@ void AudioSetup::portChanged()
     pa_operation *o;
     if (index >= 0) {
         if (!(o = pa_context_set_sink_port_by_index(s_context, (uint32_t)index, port.toAscii().constData(), NULL, NULL)))
-            kDebug() << "pa_context_set_sink_port_by_index() failed";
+            qDebug() << "pa_context_set_sink_port_by_index() failed";
         else
             pa_operation_unref(o);
     } else {
         if (!(o = pa_context_set_source_port_by_index(s_context, (uint32_t)((-1*index) - 1), port.toAscii().constData(), NULL, NULL)))
-            kDebug() << "pa_context_set_source_port_by_index() failed";
+            qDebug() << "pa_context_set_source_port_by_index() failed";
         else
             pa_operation_unref(o);
     }
@@ -786,15 +777,15 @@ void AudioSetup::_updatePlacementTester()
     placementGrid->addWidget(m_icon, 1, 2, Qt::AlignCenter);
     int idx = deviceBox->currentIndex();
     if (idx < 0)
-      return;
+        return;
 
     qint64 index = deviceBox->itemData(idx).toInt();
     deviceInfo& sink_info = getDeviceInfo(index);
 
     if (index < 0) {
-      playbackOrCaptureStack->setCurrentIndex(1);
-      m_VUTimer->start();
-      return;
+        playbackOrCaptureStack->setCurrentIndex(1);
+        m_VUTimer->start();
+        return;
     }
 
     playbackOrCaptureStack->setCurrentIndex(0);
@@ -814,7 +805,7 @@ void AudioSetup::_updatePlacementTester()
             continue;
         }
 
-        KPushButton *btn = new TestSpeakerWidget(pos, m_Canberra, this);
+        QPushButton *btn = new TestSpeakerWidget(pos, m_Canberra, this);
         placementGrid->addWidget(btn, position_table[i+2], position_table[i+1], Qt::AlignCenter);
     }
 }
@@ -842,7 +833,7 @@ void AudioSetup::_createMonitorStreamForSource(uint32_t source_idx)
 
     m_VUStream = pa_stream_new(s_context, "Peak detect", &ss, NULL);
     if (!m_VUStream) {
-        kDebug() << "Failed to create monitoring stream";
+        qDebug() << "Failed to create monitoring stream";
         return;
     }
 
@@ -850,7 +841,7 @@ void AudioSetup::_createMonitorStreamForSource(uint32_t source_idx)
     pa_stream_set_suspended_callback(m_VUStream, suspended_callback, this);
 
     if (pa_stream_connect_record(m_VUStream, t, &attr, (pa_stream_flags_t) (PA_STREAM_DONT_MOVE|PA_STREAM_PEAK_DETECT|PA_STREAM_ADJUST_LATENCY)) < 0) {
-        kDebug() << "Failed to connect monitoring stream";
+        qDebug() << "Failed to connect monitoring stream";
         pa_stream_unref(m_VUStream);
         m_VUStream = NULL;
     }
@@ -873,13 +864,13 @@ QDebug operator<<(QDebug dbg, const pa_context_state_t &state)
 {
     QString name;
     switch (state) {
-    case PA_CONTEXT_UNCONNECTED:  name = QLatin1String("Unconnected");
-    case PA_CONTEXT_CONNECTING:   name = QLatin1String("Connecting");
-    case PA_CONTEXT_AUTHORIZING:  name = QLatin1String("Authorizing");
-    case PA_CONTEXT_SETTING_NAME: name = QLatin1String("Setting Name");
-    case PA_CONTEXT_READY:        name = QLatin1String("Ready");
-    case PA_CONTEXT_FAILED:       name = QLatin1String("Failed");
-    case PA_CONTEXT_TERMINATED:   name = QLatin1String("Terminated");
+    case PA_CONTEXT_UNCONNECTED:  name = QLatin1Literal("Unconnected");
+    case PA_CONTEXT_CONNECTING:   name = QLatin1Literal("Connecting");
+    case PA_CONTEXT_AUTHORIZING:  name = QLatin1Literal("Authorizing");
+    case PA_CONTEXT_SETTING_NAME: name = QLatin1Literal("Setting Name");
+    case PA_CONTEXT_READY:        name = QLatin1Literal("Ready");
+    case PA_CONTEXT_FAILED:       name = QLatin1Literal("Failed");
+    case PA_CONTEXT_TERMINATED:   name = QLatin1Literal("Terminated");
     }
 
     if (name.isEmpty())
