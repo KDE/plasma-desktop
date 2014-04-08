@@ -25,13 +25,14 @@
 #include <KAboutData>
 #include <KPluginFactory>
 #include <KLocalizedString>
-#include <kdeversion.h>
 
 #ifdef HAVE_PULSEAUDIO
 #  include "audiosetup.h"
 #endif
 #include "backendselection.h"
 #include "devicepreference.h"
+
+#include "config-workspace.h"
 
 K_PLUGIN_FACTORY(PhononKcmFactory, registerPlugin<PhononKcm>();)
 
@@ -40,7 +41,7 @@ PhononKcm::PhononKcm(QWidget *parent, const QVariantList &args)
 {
     KAboutData *about = new KAboutData(
             "kcm_phonon", 0, i18n("Phonon Configuration Module"),
-            KDE_VERSION_STRING, QString(), KAboutData::License_GPL,
+            WORKSPACE_VERSION_STRING, QString(), KAboutData::License_GPL,
             i18n("Copyright 2006 Matthias Kretz"));
     about->addAuthor(i18n("Matthias Kretz"), QString(), "kretz@kde.org");
     about->addAuthor(i18n("Colin Guthrie"), QString(), "colin@mageia.org");
