@@ -30,6 +30,7 @@
 #include <kcomponentdata.h>
 #include <KDebug>
 #include <KWallet/Wallet>
+#include <KGlobal>
 #include <kcmultidialog.h>
 #include <klocale.h>
 #include <KStringHandler>
@@ -45,10 +46,11 @@ KdePlatformDependent::KdePlatformDependent()
         KComponentData componentData("attica_kde");
     }
 
-    KLocale* locale = KGlobal::locale();
-    if (locale) {
-        locale->insertCatalog("attica_kde");
-    }
+//     TODO: re-enable, see http://community.kde.org/Frameworks/Porting_Notes
+//     KLocale* locale = KGlobal::locale();
+//     if (locale) {
+//         locale->insertCatalog("attica_kde");
+//     }
 
     m_accessManager = new KIO::Integration::AccessManager(this);
 }
@@ -135,7 +137,6 @@ bool KdePlatformDependent::saveCredentials(const QUrl& baseUrl, const QString& u
     
     return !m_wallet->writeMap(baseUrl.toString(), entries);
 }
-
 
 bool KdePlatformDependent::hasCredentials(const QUrl& baseUrl) const
 {
@@ -272,8 +273,7 @@ QNetworkAccessManager* Attica::KdePlatformDependent::nam()
     return m_accessManager;
 }
 
-
-Q_EXPORT_PLUGIN2(attica_kde, Attica::KdePlatformDependent)
-
+// TODO: re-enable, see http://community.kde.org/Frameworks/Porting_Notes
+// Q_EXPORT_PLUGIN2(attica_kde, Attica::KdePlatformDependent)
 
 #include "kdeplatformdependent.moc"

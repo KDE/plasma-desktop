@@ -26,7 +26,9 @@
 #include <KDebug>
 #include <KMessageBox>
 #include <KColorScheme>
+#include <KLocalizedString>
 #include <kicon.h>
+#include <QFontDatabase>
 
 #include <attica/person.h>
 
@@ -94,7 +96,7 @@ void ProviderConfigWidget::initRegisterPage()
     m_ui.titleWidgetRegister->setText(header);
     m_ui.tabWidget->setTabIcon(registerTabIdx, KIcon("list-add-user"));
 
-    m_ui.infoLabelRP->setFont(KGlobalSettings::smallestReadableFont());
+    m_ui.infoLabelRP->setFont(QFontDatabase::systemFont(QFontDatabase::SmallestReadableFont));
 
     connect(m_ui.userEditRP, SIGNAL(textChanged(QString)), SLOT(onRegisterDataChanged()));
     connect(m_ui.mailEdit, SIGNAL(textChanged(QString)), SLOT(onRegisterDataChanged()));

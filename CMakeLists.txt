@@ -33,6 +33,8 @@ find_package(KF5 CONFIG REQUIRED COMPONENTS
     KDE4Support
     NotifyConfig
     Su
+    Attica
+    Wallet
     Runner
 )
 
@@ -106,5 +108,6 @@ add_subdirectory(toolboxes)
 add_subdirectory(applets)
 add_subdirectory(kcms)
 add_subdirectory(knetattach)
+add_subdirectory(attica-kde)
 
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)

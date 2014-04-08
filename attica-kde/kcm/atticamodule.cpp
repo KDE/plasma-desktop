@@ -22,10 +22,11 @@
 
 #include "atticamodule.h"
 
-
+#include "plasma/version.h"
 #include <KPluginFactory>
 #include <KAboutData>
 #include <KDebug>
+#include <KLocalizedString>
 #include <kicon.h>
 #include <kurlrequesterdialog.h>
 
@@ -33,20 +34,19 @@
 
 #include "providerconfigwidget.h"
 
-
 K_PLUGIN_FACTORY(AtticaModuleFactory, registerPlugin<AtticaModule>();)
 K_EXPORT_PLUGIN(AtticaModuleFactory("kcm_attica"))
 
 AtticaModule::AtticaModule(QWidget* parent, const QVariantList&)
-    : KCModule(AtticaModuleFactory::componentData(), parent)
+    : KCModule(parent)
 {
     KAboutData *about = new KAboutData(
-            "kcm_attica", 0, ki18n("Social Desktop"),
-            KDE_VERSION_STRING, KLocalizedString(), KAboutData::License_GPL,
-            ki18n("Copyright 2009 Eckhart Wörner"));
-    about->addAuthor(ki18n("Eckhart Wörner"), KLocalizedString(), "ewoerner@kde.org");
-    about->addAuthor(ki18n("Dmitry Suzdalev"), KLocalizedString(), "dimsuz@gmail.com");
-    about->addAuthor(ki18n("Frederik Gladhorn"), KLocalizedString(), "gladhorn@kde.org");
+            "kcm_attica", 0, i18n("Social Desktop"),
+            PLASMA_VERSION_STRING, QString(), KAboutData::License_GPL,
+            i18n("Copyright 2009 Eckhart Wörner"));
+    about->addAuthor(i18n("Eckhart Wörner"), QString(), "ewoerner@kde.org");
+    about->addAuthor(i18n("Dmitry Suzdalev"), QString(), "dimsuz@gmail.com");
+    about->addAuthor(i18n("Frederik Gladhorn"), QString(), "gladhorn@kde.org");
     setAboutData(about);
 
     m_ui.setupUi(this);
@@ -142,8 +142,8 @@ void AtticaModule::onDefaultProvidersLoaded()
 
 void AtticaModule::addProvider()
 {
-    KUrlRequesterDialog dialog("http://", i18nc("addition of an attica/knewstuff provider by entering its url", "URL of the provider file (provider.xml)"), this);
-    if (dialog.exec() == KDialog::Accepted) {
+    KUrlRequesterDialog dialog(QUrl("http://"), i18nc("addition of an attica/knewstuff provider by entering its url", "URL of the provider file (provider.xml)"), this);
+    if (dialog.exec() == QDialog::Accepted) {
         kDebug() << "Add provider: " << dialog.selectedUrl();
         m_manager.addProviderFileToDefaultProviders(dialog.selectedUrl());
     }
