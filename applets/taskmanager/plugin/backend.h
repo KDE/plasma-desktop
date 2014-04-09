@@ -66,6 +66,7 @@ class Backend : public QObject
 
     public Q_SLOTS:
         void activateItem(int id, bool toggle);
+        void activateWindow(int winId);
         void itemContextMenu(QQuickItem *item, QObject *configAction);
         void itemHovered(int id, bool hovered);
         void itemMove(int id, int newIndex);

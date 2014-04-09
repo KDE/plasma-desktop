@@ -50,6 +50,7 @@ Item {
     property Item dragSource: null
 
     signal activateItem(int id, bool toggle)
+    signal activateWindow(int winId)
     signal itemContextMenu(Item item, QtObject configAction)
     signal itemHovered(int id, bool hovered)
     signal itemMove(int id, int newIndex)
@@ -227,6 +228,7 @@ Item {
 
     Component.onCompleted: {
         tasks.activateItem.connect(backend.activateItem);
+        tasks.activateWindow.connect(backend.activateWindow);
         tasks.itemContextMenu.connect(backend.itemContextMenu);
         tasks.itemHovered.connect(backend.itemHovered);
         tasks.itemMove.connect(backend.itemMove);

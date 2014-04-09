@@ -183,6 +183,10 @@ void Backend::activateItem(int id, bool toggle)
     }
 }
 
+void Backend::activateWindow(int winId)
+{
+    KWindowSystem::forceActiveWindow(winId);
+}
 
 void Backend::itemContextMenu(QQuickItem *item, QObject *configAction)
 {

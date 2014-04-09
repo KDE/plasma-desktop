@@ -48,11 +48,22 @@ Column {
         spacing: units.largeSpacing
         Repeater {
             model: toolTip.windows
+
             PlasmaCore.WindowThumbnail {
-                // hardcoded values from old implementation
-                width: 200
-                height: 150
+                width: units.gridUnit * 15
+                height: units.gridUnit * 10
+
                 winId: modelData
+
+                MouseArea {
+                    anchors.fill: parent
+
+                    acceptedButtons: Qt.LeftButton
+
+                    onClicked: {
+                        tasks.activateWindow(modelData);
+                    }
+                }
             }
         }
     }
