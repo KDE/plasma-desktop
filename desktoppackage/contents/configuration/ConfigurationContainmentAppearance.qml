@@ -24,8 +24,9 @@ import QtQuick.Layouts 1.0
 ColumnLayout {
     id: root
 
-    property int formAlignment: pluginComboBox.x + (units.largeSpacing/2)
+    property int formAlignment: wallpaperComboBox.x + (units.largeSpacing/2)
     property string currentWallpaper: ""
+    property string containmentPlugin: ""
 
 //BEGIN functions
     function saveConfig() {
@@ -36,6 +37,7 @@ ColumnLayout {
         }
         configDialog.currentWallpaper = root.currentWallpaper;
         configDialog.applyWallpaper()
+        configDialog.containmentPlugin = root.containmentPlugin
     }
 
     function restoreConfig() {
@@ -48,11 +50,20 @@ ColumnLayout {
 //END functions
 
     Component.onCompleted: {
+        for (var i = 0; i < configDialog.containmentPluginsConfigModel.count; ++i) {
+            var data = configDialog.containmentPluginsConfigModel.get(i);
+            for(var j in data) print(j)
+            if (configDialog.containmentPlugin == data.pluginName) {
+                pluginComboBox.currentIndex = i
+                break;
+            }
+        }
+
         for (var i = 0; i < configDialog.wallpaperConfigModel.count; ++i) {
             var data = configDialog.wallpaperConfigModel.get(i);
             for(var j in data) print(j)
             if (configDialog.currentWallpaper == data.pluginName) {
-                pluginComboBox.currentIndex = i
+                wallpaperComboBox.currentIndex = i
                 break;
             }
         }
@@ -60,16 +71,40 @@ ColumnLayout {
 
     Row {
         spacing: units.largeSpacing / 2
+        anchors.right: wallpaperRow.right
         Item {
             width: units.largeSpacing
             height: parent.height
         }
         QtControls.Label {
             anchors.verticalCenter: pluginComboBox.verticalCenter
-            text: i18n("Wallpaper Type:")
+            text: i18n("Layout:")
         }
         QtControls.ComboBox {
             id: pluginComboBox
+            model: configDialog.containmentPluginsConfigModel
+            width: theme.mSize(theme.defaultFont).width * 24
+            textRole: "name"
+            onCurrentIndexChanged: {
+                var model = configDialog.containmentPluginsConfigModel.get(currentIndex)
+                root.containmentPlugin = model.pluginName
+            }
+        }
+    }
+
+    Row {
+        id: wallpaperRow
+        spacing: units.largeSpacing / 2
+        Item {
+            width: units.largeSpacing
+            height: parent.height
+        }
+        QtControls.Label {
+            anchors.verticalCenter: wallpaperComboBox.verticalCenter
+            text: i18n("Wallpaper Type:")
+        }
+        QtControls.ComboBox {
+            id: wallpaperComboBox
             model: configDialog.wallpaperConfigModel
             width: theme.mSize(theme.defaultFont).width * 24
             textRole: "name"
