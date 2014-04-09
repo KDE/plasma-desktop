@@ -2,5 +2,19 @@ Icon=internet-mail
 
 # ctxt: standard desktop component
 Name=Email Client
+Name[fi]=Sähköpostiohjelma
+Name[ia]=Cliente de E-Posta
+Name[nl]=E-mailprogramma
+Name[pt]=Cliente de E-mail
+Name[sv]=E-postklient
+Name[uk]=Клієнт електронної пошти
+Name[x-test]=xxEmail Clientxx
 Comment=This service allows you to configure your default email client. All KDE applications which need access to an email client application should honor this setting.
+Comment[fi]=Tämän palvelun avulla voit muokata oletussähköpostiohjelmaasi. Kaikki sähköpostiohjelmaa käyttävät KDE-sovellukset huomioivat tämän asetuksen.
+Comment[ia]=Iste servicio permitte te de configurar tu cliente de e-posta predefinite. Omne applicationes KDE que necessita un accesso a un application de e-posta debera honorar iste preferentia.
+Comment[nl]=Met deze service kunt u uw standaard e-mailprogramma instellen. KDE-toepassingen die toegang tot een e-mailprogramma nodig hebben zullen deze instellingen gebruiken.
+Comment[pt]=Este serviço permite-lhe configurar o seu cliente de e-mail por omissão.  Todas as aplicações do KDE que necessitem do acesso a um cliente de e-mail devem respeitar esta configuração.
+Comment[sv]=Den här tjänsten låter dig anpassa förvald e-postklient. Alla KDE-program som behöver använda e-postklient ska använda den här inställningen
+Comment[uk]=За допомогою цієї служби ви можете налаштувати ваш типовий клієнт електронної пошти. Всі програми KDE, яким потрібен доступ до клієнта електронної пошти будуть користуватися цими параметрами.
+Comment[x-test]=xxThis service allows you to configure your default email client. All KDE applications which need access to an email client application should honor this setting.xx
 configurationType=internal_email

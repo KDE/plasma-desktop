@@ -2,5 +2,20 @@ Icon=system-file-manager
 
 # ctxt: standard desktop component
 Name=File Manager
+Name[cs]=Správce souborů
+Name[fi]=Tiedostonhallinta
+Name[ia]=Gerente de File
+Name[nl]=Bestandsbeheerder
+Name[pt]=Gestor de Ficheiros
+Name[sv]=Filhanterare
+Name[uk]=Керування файлами
+Name[x-test]=xxFile Managerxx
 Comment=Here you can configure your default file manager. The entries in the K menu and all KDE applications in which you can open folders will use this file manager.
+Comment[fi]=Tässä voit muokata käytettävää oletustiedostonhallintaohjelmaa. Kaikki KDE-sovellukset käyttävät tätä tiedostonhallintaohjelmaa.
+Comment[ia]=Ci tu pote configurar tu gerente de file predefinite. Le entratas in le K menu e omne applicationes KDE in qual tu aperi dossieres usara iste gerente de file.
+Comment[nl]=Hier kunt u uw standaard bestandsbeheerder instellen. Alle items in het K-menu en alle KDE-programma's waarin u mappen kunt openen maken gebruik van deze instelling.
+Comment[pt]=Aqui poderá configurar o seu navegador Web predefinido. Todas as aplicações do KDE onde possa seleccionar hiperligações deverão respeitar esta configuração.
+Comment[sv]=Här kan du anpassa förvald filhanterare. Alternativen i K-menyn och alla KDE-program där du kan öppna kataloger kommer att använda den här filhanteraren.
+Comment[uk]=Тут можна налаштувати ваш типовий інструмент для роботи з файлами. Всі пункти інструмента для запуску програм і всі програми KDE, у яких ви можете відкривати теки, використовуватимуть саме цей інструмент.
+Comment[x-test]=xxHere you can configure your default file manager. The entries in the K menu and all KDE applications in which you can open folders will use this file manager.xx
 configurationType=internal_filemanager

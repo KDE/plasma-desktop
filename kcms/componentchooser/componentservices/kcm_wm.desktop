@@ -2,5 +2,20 @@ Icon=preferences-system-windows
 
 # ctxt: standard desktop component
 Name=Window Manager
+Name[cs]=Správce oken
+Name[fi]=Ikkunointiohjelma
+Name[ia]=Gerente de Fenestra
+Name[nl]=Windowmanager
+Name[pt]=Gestor de Janelas
+Name[sv]=Fönsterhanterare
+Name[uk]=Керування вікнами
+Name[x-test]=xxWindow Managerxx
 Comment=Here you can select the window manager to be run in your KDE session.
+Comment[fi]=Tästä voit valita KDE-työpöydän käyttämän ikkunointiohjelman.
+Comment[ia]=Ci tu pote selectionar le gerente de fenestra que on debe usar se in tu session KDE.
+Comment[nl]=Hier kunt u de windowmanager die u in uw KDE-sessie wilt gebruiken selecteren.
+Comment[pt]=Aqui poderá seleccionar o gestor de janelas a executar na sua sessão do KDE.
+Comment[sv]=Här kan du välja fönsterhanterare som ska köras i KDE-sessionen.
+Comment[uk]=Тут ви можете обрати засіб керування вікнами, який буде запущено у вашому сеансі KDE.
+Comment[x-test]=xxHere you can select the window manager to be run in your KDE session.xx
 configurationType=internal_wm
