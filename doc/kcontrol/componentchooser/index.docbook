@@ -1,0 +1,68 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % English "INCLUDE" > <!-- change language only here -->
+]>
+
+<article lang="&language;" id="default-components">
+<articleinfo>
+
+<title>Default Applications</title>
+<authorgroup>
+<author><personname><firstname>Burkhard</firstname><surname>Lück</surname></personname>
+<email>lueck@hube-lueck.de</email>
+</author>
+
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
+</authorgroup>
+
+<date>2013-12-05</date>
+<releaseinfo>&kde; 4.12</releaseinfo>
+
+<keywordset>
+<keyword>KDE</keyword>
+<keyword>Systemsettings</keyword>
+<keyword>component</keyword>
+</keywordset>
+</articleinfo>
+
+<para>In this module you can change &kde; default components.</para>
+
+<para>Components are programs that handle basic tasks, like the terminal emulator, the text 
+editor and the email client. Different &kde; applications sometimes need to 
+invoke a console emulator, send a mail or display some text.</para> 
+
+<para>To do so consistently, these applications always call the same components. Here you 
+can select which programs these components are.</para>
+
+<para>The list on the left shows the configurable component types:</para>
+<itemizedlist>
+<listitem>
+<para>Email Client</para>
+</listitem>
+<listitem>
+<para>Embedded Text Editor</para>
+</listitem>
+<listitem>
+<para>File Manager</para>
+</listitem>
+<listitem>
+<para>Instant Messenger</para>
+</listitem>
+<listitem>
+<para>Terminal Emulator</para>
+</listitem>
+<listitem>
+<para>Web Browser</para>
+</listitem>
+<listitem>
+<para>Window Manager</para>
+</listitem>
+</itemizedlist>
+
+<para> Click the component you want to configure. In the right part of the dialog then all available
+applications for this service are displayed and you are able to select your favorite terminal emulator, text 
+editor and the email client &etc;</para>
+
+</article>

@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % English "INCLUDE" > <!-- change language only here -->
+]>
+
+<article lang="&language;" id="launch-feedback">
+<articleinfo>
+<title>Launch Feedback</title>
+<authorgroup>
+<author>&Lauri.Watts; &Lauri.Watts.mail;</author>
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
+</authorgroup>
+
+<date>2013-12-05</date>
+<releaseinfo>&kde; 4.12</releaseinfo>
+
+</articleinfo>
+
+<para>Sometimes it is reassuring to know that your computer didn't just
+ignore your command, and something is happening behind the scenes.  In
+this module you can configure visible feedback to help you know if you
+really hit that icon or not.</para>
+	
+<para>The traditional way to indicate that your computer is busy is to
+modify the cursor, and you can turn this on by choosing a
+<guilabel>Busy Cursor</guilabel>.</para>
+
+<para>With this option enabled, your cursor will have an icon attached
+to it for a short time, when a new application is being launched.  You
+can configure how long this icon is displayed beside your cursor with the
+<guilabel>Startup indication timeout:</guilabel> spinbox.  The
+default is 10 seconds.</para>
+
+<para>There are several variations of busy cursor available, including
+a <guilabel>Blinking Cursor</guilabel>, a <guilabel>Bouncing Cursor</guilabel> 
+or a <guilabel>Passive Busy Cursor</guilabel> icon with no animation.</para>
+
+<para>Traditional &kde; launch notification has taken another form,
+which you can also enable and disable here.  Normally when you start an
+application, it gets an immediate entry in the taskbar, with the icon
+replaced by a spinning hourglass to let you know something is
+happening.  You can toggle this behavior on and off with the
+<guilabel>Enable taskbar notification</guilabel> checkbox, and when it's
+enabled, you can set a time in the 
+<guilabel>Startup indication timeout</guilabel> spinbox.</para>
+
+<para>Not all applications that you start will eventually show a
+window, or an entry in the taskbar.  Some of them, for example, are
+docked into the &kde; system tray. Alternatively, it might be that you
+sent it off to a different virtual desktop, and in the <guilabel>Filters</guilabel> 
+section of the <ulink url="help:/plasma-desktop/panel.html">
+<guilabel>Task Manager Settings</guilabel></ulink> the option <guilabel>Only show
+tasks from the current desktop</guilabel> is checked.  Setting a timeout ensures that,
+even in these cases, you can still get launch feedback, but also that
+it will go away when the job is done.</para>
+
+</article>

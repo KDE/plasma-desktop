@@ -1,0 +1,173 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % English "INCLUDE" > <!-- change language only here -->
+]>
+
+<article id="ebrowsing" lang="&language;">
+<articleinfo>
+<title>Web Shortcuts</title>
+<authorgroup>
+<author>&Krishna.Tateneni; &Krishna.Tateneni.mail;</author>
+<author>&Yves.Arrouye; &Yves.Arrouye.mail;</author>
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
+</authorgroup>
+
+<date>2013-05-30</date>
+<releaseinfo>&kde; 4.11</releaseinfo>
+
+<keywordset>
+<keyword>KDE</keyword>
+<keyword>Systemsettings</keyword>
+<keyword>enhanced browsing</keyword>
+<keyword>web shortcuts</keyword>
+<keyword>browsing</keyword>
+</keywordset>
+
+</articleinfo>
+<sect1 id="ebrowse">
+
+<title>Web Shortcuts</title>
+
+<sect2 id="ebrowse-intro">
+
+<title>Introduction</title>
+
+<para>&konqueror; offers some features to enhance your browsing
+experience. One such feature is <emphasis>Web Shortcuts</emphasis>.</para>
+
+<para>You may already have noticed that &kde; is very Internet friendly.
+For example, you can click on the <guimenuitem>Run</guimenuitem> menu
+item or type the keyboard shortcut assigned to that command (<keycombo
+action="simul">&Alt;<keycap>F2</keycap></keycombo>,
+unless you have changed it) and type in a &URI;.
+<footnote><para>Uniform Resource Identifier. A standardized way of
+referring to a resource such as a file on your computer, a World Wide
+Web address, an email address,
+<abbrev>etc...</abbrev>.</para></footnote></para>
+
+<para>Web shortcuts, on the other hand, let you come up with new pseudo
+&URL; schemes, or shortcuts, that basically let you
+<emphasis>parameterize</emphasis> commonly used
+&URI;s. For example, if you like the Google search
+engine, you can configure &kde; so that a pseudo &URL;
+scheme like <emphasis>gg</emphasis> will trigger a search on
+Google. This way, typing <userinput>gg:<replaceable>my
+query</replaceable></userinput> will search for <replaceable>my
+query</replaceable> on Google.</para>
+
+<note><para>One can see why we call these pseudo &URL;
+schemes. They are used like a &URL; scheme, but the
+input is not properly &URL; encoded, so one will type
+<userinput>google:kde apps</userinput> and not
+<userinput>google:kde+apps</userinput>.</para></note>
+
+<para>You can use web
+shortcuts wherever you would normally use
+&URI;s. Shortcuts for several search engines should
+already be configured on your system, but you can add new keywords, and
+change or delete existing ones in this module. </para>
+
+</sect2>
+
+<sect2 id="ebrowse-use">
+
+<title>Web Shortcuts</title>
+
+<para>The descriptive names of defined web shortcuts are shown in a
+list box. As with other lists in &kde;, you can click on a column
+heading to toggle the sort order between ascending and
+descending, and you can resize the columns.</para>
+
+<para>At the bottom of the list the option <guilabel>Enable Web shortcuts</guilabel> 
+has to be checked to enable this feature. Use the buttons on the right to 
+create, modify or delete shortcuts.</para>
+
+<para>If <guilabel>Use preferred shortcuts only</guilabel> is checked, only
+web shortcuts marked as preferred in the third column of the list
+are used in places where only a few select 
+shortcuts can be shown at one time.
+</para>
+ 
+<para>Below the list you find two additional options:</para>
+<variablelist>
+<varlistentry><term><guilabel>Default Web shortcuts</guilabel></term>
+<listitem>
+<para>Select the search engine to use for input boxes that provide automatic 
+lookup services when you type in normal words and phrases instead of a &URL;. 
+To disable this feature select <guilabel>None</guilabel> from the list.
+</para></listitem>
+</varlistentry>
+<varlistentry><term><guilabel>Keyword delimiter</guilabel></term>
+<listitem>
+<para>Choose the delimiter that separates the keyword from the phrase or word to 
+be searched.</para></listitem>
+</varlistentry>
+</variablelist>
+
+<para>If you double-click on a specific entry in the list of defined
+search providers or click the <guibutton>Change</guibutton> button, 
+the details for that entry are shown in a popup
+dialog.  In addition to the descriptive name for the item, you can
+also see the &URI; which is used, as well as the
+associated shortcuts which you can type anywhere in &kde; where
+&URI;s are expected. A given search provider can have
+multiple shortcuts, each separated by a comma.</para>
+
+<para> The text boxes are used not only for displaying information
+about an item in the list of web shortcuts, but also for modifying or
+adding new items.</para>
+
+<para>You can change the contents of either the <guilabel>Shortcut 
+URL</guilabel> or the <guilabel>Shortcuts</guilabel> text box.
+Click <guibutton>OK</guibutton> to save your changes or
+<guibutton>Cancel</guibutton> to exit the dialog with no
+changes.</para>
+
+<para>If you examine the contents of the <guilabel>Shortcuts 
+URL</guilabel> text box, you will find that most, if not all of the
+entries have a <option>\{@}</option> in them. This sequence of four
+characters acts as a parameter, which is to say that they are replaced
+by whatever you happen to type after the colon character that is
+between a shortcut and its parameter. To add this query placeholder 
+to a shortcuts url, click on the button at the right of the text box.
+Let's consider some examples to clarify how to use web shortcuts.</para>
+
+<para>Suppose that the &URI; is
+<userinput>http://www.google.com/search?q=\{@}</userinput>, and
+<userinput>gg</userinput> is a shortcut to this
+&URI;. Then, typing
+<userinput>gg:<replaceable>alpha</replaceable></userinput> is
+equivalent to
+<userinput>http://www.google.com/search?q=<replaceable>alpha</replaceable></userinput>.
+You could type anything after the <userinput>:</userinput> character;
+whatever you have typed simply replaces the <option>\{@}</option>
+characters, after being converted to the appropriate character set for
+the search provider and then properly
+&URL;-encoded. Only the <option>\{@}</option> part of
+the search &URI; is touched, the rest of it is
+supposed to be properly &URL;-encoded already and is
+left as is.</para>
+
+<para>You can also have shortcuts without parameters. Suppose the
+&URI; was
+<emphasis>file:/home/me/mydocs/calligra/words</emphasis> and the
+shortcut was <emphasis>mywords</emphasis>. Then, typing
+<userinput>mywords:</userinput> is the same as typing the complete
+&URI;. Note that there is nothing after the colon
+when typing the shortcut, but the colon is still required in order for
+the shortcut to be recognized as such.</para>
+
+<para>By now, you will have understood that even though these shortcuts
+are called web shortcuts, they really are shortcuts to parameterized
+&URI;s, which can point not only to web sites like
+search engines but also to anything else that can be pointed to by a
+&URI;. Web shortcuts are a very powerful feature of
+navigation in &kde;.</para>
+
+</sect2>
+
+</sect1>
+
+</article>

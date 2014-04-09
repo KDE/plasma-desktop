@@ -1,0 +1,61 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % English "INCLUDE" > <!-- change language only here -->
+]>
+
+<article id="attica" lang="&language;">
+<articleinfo>
+
+<title>Social Desktop</title>
+<authorgroup>
+<author><personname><firstname>Frederik</firstname><surname>Gladhorn</surname></personname>
+<email>gladhorn@kde.org</email>
+</author>
+
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
+</authorgroup>
+
+<date>2013-11-05</date>
+<releaseinfo>&kde; 4.12</releaseinfo>
+
+<keywordset>
+<keyword>KDE</keyword>
+<keyword>Systemsettings</keyword>
+<keyword>Social Desktop</keyword>
+</keywordset>
+</articleinfo>
+
+<para>The Social Desktop (Open Collaboration Services) settings module lets you 
+configure your user accounts for Open Collaboration Service Providers.</para>
+
+<para>At the time of writing <ulink url="http://opendesktop.org/">openDesktop.org
+</ulink> is the first provider that you can use.
+You can use the web site or this settings dialog to register and manage your account.
+</para> 
+
+<para>The benefit is that you can do more things in <quote>Get Hot New Stuff</quote>: 
+vote for items, become a fan of them and upload new content. A configured 
+account also allows you to use the social Plasma widgets (<quote>Community</quote>, 
+<quote>Social News</quote> &etc;) to their full extent.
+</para>
+
+<para>Using the &systemsettings; module:</para>
+
+<para>You can select which provider to configure at the top.
+Either enter your existing user name and password to let &kde; use them. 
+You can verify that these work by using the <guibutton>Test Login</guibutton> button</para>
+
+<!--
+missing:
+Enable
+Add/Remove Providers-->
+
+<para>If you do not have an account yet, use the <guilabel>Register</guilabel> tab.
+Here you need to fill out all fields.
+After clicking <guibutton>Register...</guibutton> you will receive an email from the 
+server to activate your account.
+</para>
+
+</article>

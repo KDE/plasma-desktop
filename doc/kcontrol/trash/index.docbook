@@ -1,0 +1,65 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % English "INCLUDE">
+]>
+<article id="trash" lang="&language;">
+<title>Trash</title>
+<articleinfo>
+<authorgroup>
+<author>&Burkhard.Lueck;</author>
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
+</authorgroup>
+
+<date>2009-11-24</date>
+<releaseinfo>&kde; 4.4</releaseinfo>
+
+<keywordset>
+<keyword>KDE</keyword>
+<keyword>Systemsettings</keyword>
+<keyword>trash</keyword>
+</keywordset>
+</articleinfo>
+
+<para>
+This module allows you to configure the settings for the trash.
+</para>
+
+<variablelist>
+<varlistentry><term><guilabel>Delete files older than</guilabel></term>
+<listitem><para>
+Check this box to allow automatic deletion of files that are 
+older than the value specified. Leave this disabled to <emphasis>not</emphasis> 
+automatically delete any items after a certain timespan.
+Set the number of days that files can remain in the trash. Any files 
+older than this will be automatically deleted.
+</para></listitem>
+</varlistentry>
+
+<varlistentry><term><guilabel>Limit to maximum size</guilabel></term>
+<listitem><para>
+Check this box to limit the trash to the maximum amount of disk space 
+that you specify below. Otherwise, it will be unlimited.
+</para></listitem>
+</varlistentry>
+
+<varlistentry><term><guilabel>Maximum size</guilabel></term>
+<listitem><para>
+This is the maximum percent of disk space that will be used for the 
+trash. The calculated amount of disk space that will be allowed for 
+the trash is displayed right of the spinbox.
+</para></listitem>
+</varlistentry>
+
+<varlistentry><term><guilabel>When limit reached</guilabel></term>
+<listitem><para>
+When the size limit is reached, the selected action will be performed, 
+either the oldest or biggest files will be deleted automatically
+or you will be warned.
+</para></listitem>
+</varlistentry>
+
+</variablelist>
+
+</article>

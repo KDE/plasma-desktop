@@ -1,0 +1,135 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % English "INCLUDE" > <!-- change language only here -->
+]>
+
+<article lang="&language;" id="konq-general-behavior">
+<title>General &konqueror; Behavior</title>
+<articleinfo>
+
+<authorgroup>
+<author>&Burkhard.Lueck;</author>
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
+</authorgroup>
+
+<date>2011-11-22</date>
+<releaseinfo>&kde; 4.8</releaseinfo>
+
+</articleinfo>
+<para>On this page you find settings for home and start page and the behavior 
+of tabbed browsing both for &konqueror;'s file manager and browser mode.</para>
+
+<variablelist>
+<varlistentry>
+<term><guilabel>When Konqueror starts</guilabel></term>
+<listitem>
+<para>This option determines which page is displayed when &konqueror; starts, 
+the introduction page, your home page, a blank page or your bookmarks page.
+</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Home page</guilabel></term>
+<listitem><para>This is the &URL; (&eg; a
+folder or a web page) where &konqueror; in browser mode will jump to
+when the <guibutton>Home Page</guibutton> button in the toolbar is pressed. 
+You can set a path that is your <guilabel>Home page</guilabel> by
+typing into the text field, or using the <guiicon>browse</guiicon>
+icon to select a local folder. &konqueror; needs to be restarted for 
+changes to take effect.</para>
+<para>When &konqueror; is used in file manager mode, the <guilabel>Home Page</guilabel> 
+button in the toolbar is replaced by a <guilabel>Home Folder</guilabel> button 
+which makes it jump to your local home folder instead.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Default web browser engine</guilabel></term>
+<listitem><para>
+This option provides an easy way to select the preferred web engine in &konqueror;, either 
+<guilabel>KHTML</guilabel> or <guilabel>Webkit</guilabel>, if installed.
+Using the <menuchoice><guimenu>View</guimenu><guimenuitem>View Mode</guimenuitem></menuchoice> 
+menu allows you to change the web engine temporarily on the fly.
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Open links in
+new tab instead of in new window</guilabel></term>
+<listitem><para>&konqueror; defaults to a single window per page, but has the
+capability to open multiple <firstterm>tabs</firstterm> inside a
+single window. &konqueror; also, by default, has a &MMB; shortcut to
+open any link in a new window.  If you enable <guilabel>Open links in
+new tab instead of in new window</guilabel> you can &MMB; click on a
+link to have it open in a new tab.</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Open popups in new tab instead of in new window</guilabel></term>
+<listitem><para>Whether or not JavaScript popups if allowed shall open in a new tab or in a 
+new window.</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Open as tab in existing Konqueror when URL is called externally</guilabel></term>
+<listitem><para>When you click a &URL; in another &kde; program or call kfmclient to open a &URL;, 
+the current desktop will be searched for a non-minimized &konqueror; and, if 
+found, the &URL; opened as a new tab within it. Otherwise a new &konqueror; 
+window will be opened with the required &URL;.</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Open new tabs in the background</guilabel></term>
+<listitem><para>If you are using tabbed browsing, you can choose if a newly
+opened tab becomes the active (<quote>front</quote>) tab, or goes to
+the back.  On a slow Internet connection, or while browsing a page
+that has a list of headlines or other links in a list, you may like to
+have the new tabs load in the background while you continue reading.
+In this case, enable this setting.  If you prefer to go
+straight to the new page, leaving the old one in the background to
+return to later, disable it.</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Open new tab after current tab</guilabel></term>
+<listitem><para>This will open a new tab opened from a page after the current tab, instead 
+of after the last tab.</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Hide the tab bar when only one tab is open</guilabel></term>
+<listitem><para>This will display the tab bar only if there are two or more tabs. Otherwise 
+it will always be displayed.</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Show close button on tabs</guilabel></term>
+<listitem><para>This will display close buttons inside each tab instead of websites' icons.</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Middle-click on a tab to close it</guilabel></term>
+<listitem><para>When you click on a tab using the middle mouse button or mouse wheel, it 
+will close that tab. &konqueror; needs to be restarted for changes to take 
+effect.</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Confirm when closing windows with multiple tabs</guilabel></term>
+<listitem><para>If you close a window in &konqueror; that has multiple tabs
+open, &konqueror; will ask you if you're sure that you meant to close
+it.  You can toggle on and off this behavior with this
+check box.</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Activate previously used tab when closing the current tab</guilabel></term>
+<listitem><para>When checking this the previous used or opened tab will be activated when 
+you close the current active tab instead of the one right to the current tab.</para></listitem>
+</varlistentry>
+
+</variablelist>
+
+</article>

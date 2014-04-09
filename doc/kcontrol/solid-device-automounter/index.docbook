@@ -1,0 +1,102 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % English "INCLUDE">
+]>
+<article id="solid-device-automounter" lang="&language;">
+<title>Removable Devices</title>
+<articleinfo>
+<authorgroup>
+<author><firstname>Trever</firstname><surname>Fischer</surname></author>
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
+</authorgroup>
+
+<date>2012-12-05</date>
+<releaseinfo>&kde; 4.12</releaseinfo>
+
+<keywordset>
+<keyword>KDE</keyword>
+<keyword>Systemsettings</keyword>
+<keyword>automount</keyword>
+<keyword>device</keyword>
+</keywordset>
+</articleinfo>
+
+<para>
+This dialog allows you to configure automatic handling of removable storage media.
+</para>
+
+<para>If you enable the automatic mounting features in this module, you will not need to use
+the device notifier applet or the navigation panel in the file manager to get access to a 
+recently plugged in device.
+</para>
+
+<para>At the top of the dialog you find the global settings, which can be overridden
+for each single device in the <guilabel>Device Overrides</guilabel> list.
+For a single-user desktop it is recommended to have all the 
+check boxes above the overrides list enabled. 
+</para>
+<variablelist>
+<varlistentry><term><guilabel>Enable automatic mounting of removable media</guilabel></term>
+<listitem><para>
+When this is unchecked, no device automounting of any kind will happen, 
+regardless of anything selected in the <guilabel>Device Overrides</guilabel> section.
+</para></listitem>
+</varlistentry>
+
+<varlistentry><term><guilabel>Only automatically mount removable media that has been 
+manually mounted before</guilabel></term>
+<listitem><para>
+When this is checked, &kde; will only automatically mount devices it 
+remembers. A device is <quote>remembered</quote> if it has ever been mounted before; &eg; 
+plugging in a USB media player to charge is not sufficient to <quote>remember</quote> it. 
+If the files are not accessed, &kde; 
+will not automatically mount the player next time it is seen. Once they have 
+been accessed, however, &kde; will remember to automatically make the contents 
+accessible to your system.
+</para></listitem>
+</varlistentry>
+
+<varlistentry><term><guilabel>Mount all removable media at login</guilabel></term>
+<listitem><para>
+If any removable storage devices are connected to your system when you login 
+to your desktop, &kde; will automatically make the contents available to your 
+system for other programs to read.
+</para></listitem>
+</varlistentry>
+
+<varlistentry><term><guilabel>Automatically mount removable media when attached</guilabel></term>
+<listitem><para>
+When this is checked, &kde; will automatically make the contents of any 
+storage device available to the system when it is plugged in or attached.
+</para></listitem>
+</varlistentry>
+
+<varlistentry><term><guilabel>Device Overrides</guilabel></term>
+<listitem><para>
+This list contains the storage devices known to &kde;. If <guilabel>Automount on Login
+</guilabel>is checked, the device will be automatically mounted even though <guilabel>Mount 
+all removable media at login</guilabel> is unchecked. The same applies for 
+<guilabel>Automount on Attach</guilabel>.</para>
+<para>
+If <guilabel>Enable automatic mounting of removable media</guilabel> is unchecked, the 
+overrides do not apply and no devices will be automatically mounted.
+</para></listitem>
+</varlistentry>
+
+<varlistentry><term><guibutton>Forget Device</guibutton></term>
+<listitem><para>
+Clicking this button causes &kde; to <quote>forget</quote> that the selected devices ever 
+existed. This is only useful if <guilabel>Only automatically mount removable media 
+that has been manually mounted before</guilabel> is checked. Once a device is 
+forgotten and &kde; is set to only automatically mount familiar devices, the 
+device will not be automatically mounted.
+</para></listitem>
+</varlistentry>
+
+</variablelist>
+
+<para>
+</para>
+</article>

@@ -1,0 +1,119 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % English "INCLUDE" > <!-- change language only here -->
+<!ENTITY kappname "&sonnet;">
+]>
+
+<article id="spellchecking" lang="&language;">
+<articleinfo>
+<title>Spell Checker</title>
+
+<authorgroup>
+<author>&Lauri.Watts; &Lauri.Watts.mail;</author>
+
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
+</authorgroup>
+
+<date>2013-12-05</date>
+<releaseinfo>&kde; 4.12</releaseinfo>
+
+<keywordset>
+<keyword>KDE</keyword>
+<keyword>Spelling</keyword>
+<keyword>dictionary</keyword>
+</keywordset>
+
+</articleinfo>
+
+<!--
+kdeui/sonnet/configui.ui
+-->
+
+<sect1 id="spellchecker">
+<title>Spell Checker</title>
+<para>The configuration options available here are used as default by all &kde;
+applications that use &sonnet;, which is a frontend to various free spell checkers.</para>
+
+<para>To use &sonnet; you need to install spell checkers like &eg; 
+<ulink url="http://aspell.net/">GNU Aspell</ulink>, 
+<ulink url="http://www.abisource.com/projects/enchant/">Enchant</ulink>, 
+<ulink url="http://hspell.ivrix.org.il/">Hspell</ulink>, 
+<ulink url="http://fmg-www.cs.ucla.edu/geoff/ispell.html">ISpell</ulink> or 
+<ulink url="http://hunspell.sourceforge.net/">Hunspell</ulink>
+and additionally the corresponding dictionaries for your language.</para>
+
+<para>The configuration options selected here can be overridden by each application.</para>
+
+<para>In the drop down box <guilabel>Default language</guilabel> choose from the 
+available dictionaries, which one to use for &sonnet;. </para>
+
+<sect2 id="spell-options">
+<title>Spell Options</title>
+
+<variablelist>
+
+<varlistentry>
+<term><guilabel>Automatic spell checking enabled by default</guilabel></term>
+<listitem>
+<para>If a mark is placed in this checkbox, the spelling of words will be check in your document 
+as you type them. Misspelled will have a red line drawn under them.
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Skip all uppercase words</guilabel></term>
+<listitem>
+<para>If a mark is placed in this checkbox, the spelling of any word which consists of all capital 
+letters will not be checked.</para>
+<tip><para>This is useful for document using a large number of acronyms. If this box is left unchecked, 
+most of those acronyms will be incorrectly marked. By placing a mark in this checkbox, 
+the acronyms will not be marked as misspelled.</para></tip>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Skip run-together words</guilabel></term>
+<listitem><para>If this box is not checked, then words that appear in the
+dictionary separately, but have been run together, are considered to be
+spelling errors. Examples of such words are shutout, cannot, and blackout.
+</para>
+
+<tip><para>Checking this box will help prevent applications from flagging website and email addresses 
+for spelling errors. These addresses often contain words run together.</para></tip>
+</listitem>
+</varlistentry>
+
+</variablelist>
+</sect2>
+<!-- from koffice/kword/opt.docbook 1.6.2--> 
+<sect2><title>Ignoring words</title>
+<para>The bottom half of the dialog box allows you to designate specific words (they may be specialized terminology, proper names, &etc;) which
+should be ignored by the spelling program.</para>
+
+<sect3><title>Adding a word to the ignore list</title>
+<para>To add a word, type the word in the text box and click the <guibutton>Add</guibutton> button.</para>
+</sect3>
+
+<sect3><title>Deleting a word from the ignore list</title>
+<para>To remove a word, select the word in the listbox containing all the currently ignored words by clicking on it with
+the &LMB;.  Now click the <guibutton>Remove</guibutton> button.</para>
+</sect3>
+</sect2>
+<sect2><title>Changing the order a word appears in the list</title>
+<para>To move a word in the list, select the word in the listbox containing all the currently ignored words by clicking on it with
+the &LMB;.  Now click the <guibutton>Move Up</guibutton> button or the <guibutton>Move Down</guibutton> button to move the word
+within the list.</para>
+
+<para>When you are happy with the changes, simply click
+<guibutton>Apply</guibutton>.</para>
+
+<para>Clicking on the <guibutton>Defaults</guibutton> button restores all
+values to their default values.</para>
+
+</sect2>
+</sect1>
+
+</article>

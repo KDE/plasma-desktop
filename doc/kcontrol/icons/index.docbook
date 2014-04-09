@@ -1,0 +1,354 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % English "INCLUDE" > <!-- change language only here -->
+]>
+
+<article id="icons" lang="&language;">
+<articleinfo>
+<title>Icons</title>
+<authorgroup>
+<author>&Mike.McBride; &Mike.McBride.mail;</author>
+<author>&Jost.Schenck; &Jost.Schenck.mail;</author>
+<author>&Anne-Marie.Mahfouf; &Anne-Marie.Mahfouf.mail;</author>
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
+</authorgroup>
+
+<date>2013-12-05</date>
+<releaseinfo>&kde; 4.12</releaseinfo>
+
+<keywordset>
+<keyword>KDE</keyword>
+<keyword>KControl</keyword>
+<keyword>icon</keyword>
+</keywordset>
+</articleinfo>
+<sect1 id="kcm_icons">
+<title>Icons</title>
+
+<sect2 id="icons-intro">
+<title>Introduction</title>
+
+<para>&kde; comes with a full set of icons in several sizes. These icons
+are being used all over &kde;: the desktop, the panel, the &konqueror; file
+manager, in every toolbar of every &kde; application, etc. The icons
+control module offers you very flexible ways of customizing the way &kde;
+handles icons. </para>
+
+<para>
+<screenshot>
+<screeninfo>Here's a screenshot of the icon theme manager</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="main.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase>Customizing &kde; icons</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para>In this module you can:</para>
+<itemizedlist>
+<listitem><para>install and choose icon themes</para></listitem>
+<listitem><para>choose different icon sizes</para></listitem>
+<listitem><para>assign effects to icons (for example make them
+semi-transparent or colorize them) </para></listitem>
+<listitem><para>configure these settings for each of the different places
+icons will be used in: for example the desktop, toolbars &etc;
+</para></listitem>
+</itemizedlist>
+
+<important><para>Please note that some of these settings may depend on
+your selected icon theme. &kde; comes with three icon themes by default,
+Oxygen, Monochrome and Crystal SVG.  There are additional color themes
+in the kdeartwork package.</para></important>
+
+<para>There are two pages in this module: <guilabel>Theme</guilabel> and <guilabel>Advanced</guilabel>. <guilabel>Theme</guilabel> manages the icon themes while <guilabel>Advanced</guilabel> lets you configure how icons will be used in &kde;.</para>
+</sect2>
+
+<sect2 id="icon-theme">
+<title>Theme</title>
+
+<para>At the top is a preview of the current theme icons. Most default
+installations will have only one icon theme available, the &kde; default
+Oxygen theme.  There are other themes contained separately in the
+kdeartwork package, and you can also download more from the Internet from <ulink url="http://www.kde-look.org">http://www.kde-look.org</ulink>.</para>
+
+<variablelist>
+<varlistentry><term><guilabel>Get New Themes...</guilabel></term>
+<listitem>
+<para>
+You need to be connected to the Internet to use it. Clicking on this button will display a dialog where you can choose a new icon theme. Clicking on <guibutton>Install</guibutton> in the dialog will install the chosen icon theme and after you <guibutton>Close</guibutton>  the installer your new theme is immediately available.
+</para>
+<para>
+<screenshot>
+<screeninfo>Get New Icon Themes</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="get-new-theme.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase>Get New Icon Themes</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+</listitem>
+</varlistentry>
+<varlistentry><term><guilabel>Install Theme File...</guilabel></term>
+<listitem>
+<para>
+If you dowloaded new themes from the internet, you can use this to browse to the
+location of those newly downloaded themes. Clicking on this button will bring you a small dialog to point to the icon theme tarball you have on your disk.</para>
+<para>
+<screenshot>
+<screeninfo>Installing A New Icon Theme</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="install-theme.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase>Installing A New Icon Theme</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para>Clicking <guibutton>OK</guibutton> in this dialog will install the theme you pointed to and make it available in the theme list.
+</para>
+</listitem>
+</varlistentry>
+<varlistentry><term><guilabel>Remove Theme</guilabel></term>
+<listitem>
+<para>
+Clicking this button will remove all files for this theme from your system. A confirmation message is displayed and will ask you if you are really sure you want to remove all the files for this theme.
+</para>
+<para>
+<screenshot>
+<screeninfo>Removing A Theme</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="delete-theme.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase>Removing A Theme</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para>Clicking <guibutton>Delete</guibutton> will remove the theme files and clicking <guibutton>Cancel</guibutton> will not delete anything and will cancel the remove action.
+</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</sect2>
+
+<sect2 id="icons-use">
+<title>Advanced</title>
+
+<para>Looking at this second page of the icons control module, you
+will see two areas:</para>
+
+<itemizedlist> 
+<listitem> 
+<para>An area labelled <guilabel>Use of Icon</guilabel>. Here you can
+choose which particular usage of icons you want to configure, for
+example <guilabel>Toolbar</guilabel> or <guilabel>Panel</guilabel>.
+</para> 
+<para>
+<screenshot>
+<screeninfo>Choosing the icons to configure</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="use-of-icons.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase>Choosing the icons to configure</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+</listitem> 
+
+<listitem> <para>A preview area where you can see how
+icons of the selected kind will look using the current
+settings. Note that the state of this preview also depends on the icon
+state selected in the effects below (do not worry
+about that now, we will explain that below). </para> </listitem>
+</itemizedlist>
+
+<para>When you want to configure icons, first select the usage of icons
+you want to configure. Change the settings until you like the
+preview. You can then choose a different icon usage and configure
+that. At the end, if you are satisfied with your settings, click
+<guibutton>OK</guibutton> or <guibutton>Apply</guibutton> to take the
+changes in effect.</para>
+
+<para>There are two further options to consider,
+<guilabel>Size</guilabel> and <guilabel>Effects</guilabel>. </para>
+
+<sect3 id="icons-use-size">
+<title>Icon Size</title>
+
+<para>
+<screenshot>
+<screeninfo>Setting icons sizes</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="size.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase>Setting icons sizes</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para>You can choose
+from a list of icon sizes. The largest icon sizes are especially useful
+for visually impaired people.</para>
+
+<para>Which sizes will be offered by the icon size listbox depends on
+the icon theme you have selected in the icon themes control module. For
+example, the low color icon theme only offers the sizes 16 and 32 for
+desktop icons and 16, 22 and 32 for toolbar icons. The HiColor theme
+offers icon sizes 16, 32 and 48 as well as sizes from 64 to 128.
+However, as &kde; can not have all these icon sizes in store, icons
+using size 64 to 128 will be automatically generated which may result in
+a loss of quality.</para>
+<!-- not in 4.5
+<para>If the icon sizes offered by your chosen icon theme are not enough
+for you, there is still the option <guilabel>Double-sized
+pixels</guilabel>. If this option is selected, all icons will have
+double sized pixels, &ie; a 2x2 block instead of normal pixels. While
+this makes it possible to achieve very large icon sizes, the quality is
+poor: icons will look <quote>blocky</quote>, an effect you may remember
+if you've grown up using a Sinclair ZX Spectrum or similar. If this is
+an option for you, using the large sizes offered by &kde;'s HiColor
+icon theme will always result in a much better quality than using the
+low color icon theme with double sized pixels.</para> 
+-->
+<!-- 
+<para>You can also choose to have smoothed icons, an effect similar to
+anti-aliasing of fonts.  Enable the checkbox <guilabel>Blend alpha
+channel</guilabel> to see this in action, but note that it will slow
+down graphics on a slower computer.</para>
+-->
+
+<para>You can also choose animated icons. Many of the icons have
+animations associated with them.  Enable the checkbox labelled
+<guilabel>Animate Icons</guilabel>, to enable this effect, but note
+that it may appear slow or jerky if your graphics card is old or you
+are low on memory.</para>
+
+</sect3>
+
+<sect3 id="icons-use-effects">
+<title>Effects</title>
+<para>
+<screenshot>
+<screeninfo>Setting icons effects</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="effects.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase>Setting icons effects</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para>Finally you can configure certain <quote>filters</quote> to be
+applied on icons which are in one of three states:</para>
+
+<variablelist>
+<varlistentry>
+<term><guilabel>Default</guilabel></term>
+<listitem><para>This is how the icon will look normally.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Active</guilabel>:</term>
+<listitem><para>This is how the icon will look when the mouse cursor is over the icon.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Disabled</guilabel>:</term>
+<listitem><para>This is how the icon will look if its corresponding action is
+disabled, &ie; clicking on it will not lead to any
+result.</para></listitem>
+</varlistentry>
+</variablelist>
+
+<para>Select one of these states, and press the <guibutton>Set
+Effect...</guibutton> button to configure a corresponding icon effect.
+Please note that this configuration will only affect icons of the
+currently selected <guilabel>Use of Icon</guilabel> category (see
+above): configuring an effect for active icons, while
+<guilabel>Toolbar</guilabel> icon usage is selected, will
+<emphasis>not</emphasis> affect active icons used in other
+places.</para>
+
+<para>Below the list of icon states there are two options: you can
+configure an effect and you can select the
+<guilabel>Semi-transparent</guilabel> option, which will make the
+background <quote>shine through</quote> the icon. To the right of the
+effects list box there is a slider button to pass additional parameters to
+a filter for colours and <guilabel>Amount</guilabel>.</para>
+<!-- TODO: Figure out what 'amount' really means -->
+
+<para>The following effects can be applied to icons:</para>
+
+<variablelist>
+<varlistentry>
+<term><guilabel>No Effect</guilabel>:</term>
+<listitem><para>Icons will be used without applying any
+effect.</para></listitem> 
+</varlistentry>
+<varlistentry>
+<term><guilabel>To Gray</guilabel>:</term>
+<listitem><para>This filter will apply a grayish look to the icon. Use the 
+<guilabel>Amount</guilabel> slider to configure the intensity of this filter. Note
+that it is customary for most user interfaces to use this effect for disabled
+icons only.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Colorize</guilabel>:</term>
+<listitem><para>Icons will be colorized using a custom color. For example, you
+may configure active icons (&ie; the icon the mouse cursor is over) to
+shine golden. Use the color buttons and the <guilabel>Amount</guilabel> slider 
+to configure the used color and the intensity of the colorization.</para></listitem> 
+</varlistentry>
+<varlistentry>
+<term><guilabel>Gamma</guilabel>:</term>
+<listitem><para>A different gamma value will be applied to all icons. If you're
+no photographer and don't know what Gamma is: it's quite similar to what people
+call contrast. Just play around with the gamma settings by moving the 
+<guilabel>Amount</guilabel> slider to get a feeling for this
+effect.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Desaturate</guilabel>:</term>
+<listitem><para>Icons will be drawn desaturated. This is quite similar to the
+<quote>Color</quote> setting on your television. Use the slider to configure 
+the amount of desaturation.
+</para></listitem> 
+</varlistentry>
+<varlistentry>
+<term><guilabel>To Monochrome:</guilabel></term>
+<listitem>
+<para>Icons will be drawn using only the two colours selected.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect3>
+
+</sect2>
+
+</sect1>
+
+</article>

@@ -1,0 +1,90 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY nsplugins-kcontrol SYSTEM "nsplugin.docbook">
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % English "INCLUDE" > <!-- change language only here -->
+]>
+<!-- extragear has another adblock ? -->
+<article lang="&language;" id="khtml-adblock">
+<articleinfo>
+<title>AdBlocK Filters</title>
+<authorgroup>
+<author>&Krishna.Tateneni; &Krishna.Tateneni.mail;</author>
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
+</authorgroup>
+
+<date>2011-11-22</date>
+<releaseinfo>&kde; 4.8</releaseinfo>
+</articleinfo>
+
+<para>&konqueror; AdBlocK can be configured to replace or remove
+images or frames from web pages that match a series of filters.</para>
+
+<para>The setting <guilabel>Enable filters</guilabel> enables or
+disables the use of list of URL filters.</para>
+<para>If <guilabel>Hide filtered images</guilabel> is enabled then
+blocked images are completely removed from the page and the space they
+occupied is reclaimed. If the option is disabled then a placeholder
+image is used in place of filtered images.</para>
+
+<variablelist>
+<varlistentry id="khtml-adblock-manual">
+<term><guilabel>Manual Filter</guilabel></term>
+<listitem>
+<para>The main part of this tab is a list of
+URLs that will be compared against image and frame names to decide
+on fitlering actions. The wildcards can be given as filename style
+regular expressions.</para>
+
+<para>Use the <guilabel>Search</guilabel> edit box above the list box 
+to filter matching entries an the fly.</para>
+
+<para>Each filter can either be expressed as a file style wildcard
+string (e.g. http://www.site.com/ads/*) or as a full regular expression
+by enclosing the filter with forward slashes (e.g. //(ads|dclk)\./).</para>
+
+<para>Any filter string can be preceded by <literal>@@</literal> to whitelist 
+(allow) any matching &URL;, which takes priority over any blacklist (blocking) 
+filter.</para>
+
+<para><guilabel>Import</guilabel> and <guilabel>Export</guilabel> will 
+save or read the current filter list to a plain text file. The file begins with a 
+header line <userinput>[AdBlock]</userinput>, then all of the filters follow each 
+on a  separate line. Lines prefixed with an exclamation mark (<userinput>!</userinput>) 
+and the header line are treated as comments and can be used 
+to clarify or label a set of filters.</para>
+
+<para>Highlight an entry from the list to change it in the edit box or remove this item.
+Enter a new filter string here and add it to the list using the <guibutton>
+Insert</guibutton> button.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry id="khtml-adblock-automatic">
+<term><guilabel>Automatic Filter</guilabel></term>
+<listitem>
+<para>
+This tab shows a list of names and &URL;'s with predefined AdBlock filter entries. 
+To enable an entry tick the checkbox beside the filter name and adjust the
+<guilabel>Automatic update interval</guilabel> (default 7 days).
+<!-- how goes it work? After 7 days eachtime going online with konqui the selected 
+entries are updated in the background?
+User notification about that?
+-->
+</para>
+</listitem>
+</varlistentry>
+  
+</variablelist>
+
+<para>If AdBlock filters are enabled, an icon at the right side of status bar is shown.
+Use a &RMB; click on this icon to open the context menu with actions to show all blockable 
+elements on a web page, open this &systemsettings; module and disable blocking for a site 
+or page temporarily.</para>
+
+<para>A click with the &LMB; shows the dialog with all blockable elements on the opened web page
+as well. From this dialog you can add new filters directly without opening this &systemsettings; 
+module.</para>
+
+</article>

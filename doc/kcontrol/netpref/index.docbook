@@ -1,0 +1,109 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % English "INCLUDE" > <!-- change language only here -->
+]>
+
+<article id="netpref" lang="&language;">
+<articleinfo>
+<title>Connection Preferences</title>
+<authorgroup>
+<author>&Lauri.Watts; &Lauri.Watts.mail;</author>
+
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
+</authorgroup>
+
+<date>2013-12-05</date>
+<releaseinfo>&kde; 4.12</releaseinfo>
+
+<keywordset>
+<keyword>KDE</keyword>
+<keyword>kdebase</keyword>
+<keyword>kcontrol</keyword>
+<keyword>network</keyword>
+<keyword>timeouts</keyword>
+</keywordset>
+
+</articleinfo>
+
+<sect1 id="timeouts">
+
+<title>Connection Preferences</title>
+
+<para>Here you can set timeout values.  You might want to tweak them
+if your connection is very slow, but the default settings are
+appropriate for most users.</para>
+
+<para>Here <guilabel>Timeout Values</guilabel> are the length of time
+an application should wait for an answer from a network operation.</para>
+
+<para>You can configure the following timeouts:</para>
+
+<variablelist>
+<varlistentry>
+<term><guilabel>Socket read:</guilabel></term>
+<listitem>
+<para> Some applications use <firstterm>sockets</firstterm> to
+communicate.  You can think of a socket as a water tap; while it is
+open, water (or in our case, data) comes out, without any interaction.
+If something stops this flow of data, the application will wait for
+more to come.  This could be a very long time, but you can configure a
+maximum time for an application to wait with this option.</para>
+<para>This setting will only apply to &kde; applications, of course.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Proxy connect:</guilabel></term>
+<listitem>
+<para>
+Sets how long to wait for a connection to a proxy server, if one is configured.
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Server connect:</guilabel></term>
+<listitem>
+<para>
+Sets how long to wait for a connection to a remote server.  
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Server response:</guilabel></term>
+<listitem>
+<para>
+Sets how long to wait for a reply from a remote server.
+</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+<para>You can configure <guilabel>FTP Options</guilabel> here.  At
+present there is just two options:</para>
+<variablelist>
+<varlistentry>
+<term><guilabel>Enable passive mode (PASV)</guilabel></term>
+<listitem><para>Passive &FTP; is often required when you are behind a firewall.
+Many firewalls only permit connections that were initiated from
+<quote>the inside</quote>.  Passive &FTP; is controlled by the client,
+which makes it usable through firewalls.</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Mark partially uploaded files</guilabel></term>
+<listitem><para>When a mark is placed in this box, partially uploaded files will 
+have a <literal role="extension">.part</literal> extension added to the end 
+of the file. This extension is removed once the file download is complete. </para></listitem>
+</varlistentry>
+
+</variablelist>
+
+
+
+</sect1>
+</article>

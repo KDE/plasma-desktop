@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % English "INCLUDE" > <!-- change language only here -->
+]>
+
+<article id="performance" lang="&language;">
+<articleinfo>
+<title>Performance</title>
+<authorgroup>
+<author>&Mike.McBride; &Mike.McBride.mail;</author>
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
+</authorgroup>
+
+<date>2009-11-24</date>
+<releaseinfo>&kde; 4.4</releaseinfo>
+
+<keywordset>
+<keyword>KDE</keyword>
+<keyword>Systemsettings</keyword>
+<keyword>performance</keyword>
+<keyword>preload</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="sys-performance">
+<title>Performance Settings</title>
+
+<para>&kde;, is used on a wide variety of computers by a wide variety of users.  Under the category of 
+performance, this dialog allows each user to adjust options which may make the computer that &konqueror; is 
+installed on feel more responsive. </para>
+
+<sect2><title>&konqueror; instances</title>
+<para>The first section of this dialog is labeled <guilabel>Minimize Memory Usage</guilabel> and has three options which determine maximum number of instances of &konqueror; that can be open on one machine at any one time.</para>
+
+<note><para>Do not confuse &konqueror; instances, with &konqueror; windows or tabs.  The number of &konqueror; instances is determined by &kde; not by the user.  You can think of instances as the hidden data of your &konqueror; windows and tabs.  One &konqueror; instance can contain the data for multiple windows or tabs. Your choice on the following radio buttons does not limit the number of windows you can open at one time, but rather, how many instances of &konqueror; you can have open.  </para>
+<para>The reason the choices you make in this dialog box are important is evident when something goes wrong and &konqueror; is forced to close an instance.  <emphasis>All &konqueror; windows associated with a &konqueror; instance must be closed immediatly (without time to save data or bookmark locations).</emphasis> Therefore, the more instances you can have open at one time, the less likely a problem in one instance will affect all of your work.  Each instance requires more memory which can be a problem on systems with less system memory.  </para></note>
+
+<para>Your options are:</para>
+
+<variablelist>
+<varlistentry>
+<term><guilabel>Never</guilabel></term>
+<listitem><para>There are no restraints.  Any number of &konqueror; instances can be open at any one time.  The advantage of this option is if any &konqueror; instance crashes the remaining will be unaffected.  The disadvantage is that each &konqueror; instance uses more memory.</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>For file browsing only (recommended)</guilabel></term>
+<listitem><para>If this option is selected, you can have as many as you want &konqueror; instances open that are browsing the web, but only one instance of &konqueror; for file management.  </para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Always (use with care)</guilabel></term>
+<listitem><para>If this option is selected, you can only have one instance of &konqueror; running at any one time.  This saves system memory, but if your &konqueror; window crashes, all your browsing windows close immediatly without warning.  This should only be used for seriously memory limited systems.</para></listitem>
+</varlistentry>
+</variablelist>
+</sect2>
+
+<sect2><title>Preloading</title>
+<para>The subsection labeled <guilabel>Preloading</guilabel> also makes a tradeoff between memory and performance.</para>
+
+<para><emphasis>Preloading</emphasis> refers to loading an instance of &konqueror; into memory before a user asks to start &konqueror;.  The positive effect of this is that when a user asks &kde; to load &konqueror; the window appears instantly
+ because most of the application has been preloaded.  The negative effect is that this instance of &konqueror; uses memory that 
+could be used by other programs. By default, when a user closes &konqueror;, &kde; does not close the instance.
+This means that the next time a user wants &konqueror; loaded, it is nearly instantaneous again.</para>
+<para>The spinbox labeled <guilabel>Maximum number of instances kept preloaded:</guilabel> can be used to adjust the maximum number of preloaded instances.  This option does not affect instances when they are loaded.  It also does not limit the number of instances that can be used by active windows.  It only affects the number of preloaded instances.</para>
+<para>The check box labeled <guilabel>Preload an instance after &kde; startup</guilabel> does just what it says.  It tells 
+&kde; to preload one instance of &konqueror; at the startup of &kde;.</para>
+<note><para>This does extend the startup time for &kde;.</para></note>
+<para>The final check box labeled <guilabel>Always try to have at least one preloaded instance</guilabel> signals to &kde; that you always want &kde; to have one preloaded, but not used, instance of &konqueror; available.  This option will actually decrease performance on some machines (especially those with limited physical memory).</para>
+</sect2>
+<!-- not in kde4
+<sect2><title>&kde; system performance options</title>
+<para>Click on the tab labeled <guilabel>System</guilabel>.</para>
+<para>Currently there is only one option labeled <guilabel>Disable system configuration startup check</guilabel>.
+</para>
+<para>When &kde; starts, it checks several directories for changes to configuration.  Most of these changes relate to installation and uninstalling applications to the computer.  This scan extends the startup time for &kde;  and many times this scan is not needed as the configuration is current from the last time &kde; was started.  When the configuration has changed &kde; uses this scan to update various datafiles to ensure a smooth user experience.  </para>
+<warning><para>You are given the option to skip this initial scan during startup.  &kde; developers strongly suggest you do not disable this scan because of the potential to introduce instability into your system.</para>
+<para>If you do select this option:</para>
+<itemizedlist>
+<listitem><para>&kde; will wait to perform the scan until after &kde; has started.  This scan will be performed after the desktop is loaded.</para></listitem>
+<listitem><para>In the event of a crash, &kde; will not perform a backtrace because your problem may be related to the delayed scan.</para></listitem>
+<listitem><para>Switch this option off if any application is crashing as a delayed scan may be responsible for the crash.</para></listitem>
+</itemizedlist>
+</warning>
+</sect2>
+-->
+</sect1>
+
+</article>

@@ -1,0 +1,149 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY nsplugins-kcontrol SYSTEM "nsplugin.docbook">
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % English "INCLUDE" > <!-- change language only here -->
+]>
+
+<article id="khtml-plugins" lang="&language;">
+<articleinfo>
+<title>Browser Plugins</title>
+<authorgroup>
+<author>&Krishna.Tateneni;</author><author>&Jost.Schenck;
+</author>
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
+</authorgroup>
+
+<date>2009-11-24</date>
+<releaseinfo>&kde; 4.4</releaseinfo>
+
+<keywordset>
+<keyword>KDE</keyword>
+<keyword>Systemsettings</keyword>
+<keyword>Konqueror</keyword>
+<keyword>Browsing</keyword>
+<keyword>Plugins</keyword>
+</keywordset>
+
+</articleinfo>
+<!--from the old konqueror handbook - reuse it here? lueck 05-2010
+<para>The <guilabel>Global Settings</guilabel> page controls how &kde; scans for new
+&Netscape; plugins, either manually by pressing the <guibutton>Scan for 
+Plugins</guibutton> button or automatically each time &kde; starts up.</para>
+
+<para>The dialog box also contains a checkbox <guilabel>
+Enable plugins globally</guilabel> which you can use to enable or disable 
+plugins that can be contained in <acronym>HTML</acronym> pages (these can 
+be considered a security risk).</para>
+
+<para>The <guilabel>Plugins</guilabel> page shows you the &Netscape; plugins
+that &kde; has found, and for each plugin it lists the <acronym>MIME</acronym>
+types and the filename suffixes it uses to recognize them.</para>
+
+<para>The scan is done by looking through the folders listed in the
+<guilabel>Scan Folders</guilabel> list for <literal
+role="extension">.so</literal> files containing plugin code. It examines every
+such file to find out which <acronym>MIME</acronym> types the plugin
+supports. It then creates <acronym>MIME</acronym> type definitions for &kde; in
+the user's <filename class="directory"> ~/.kde/share/mimelnk</filename>
+folder to make other applications aware of them.</para>
+-->
+<sect1 id="konq-browsing">
+<title>Browser Plugins</title>
+
+<sect2 id="kbrowse-plugins">
+<title>Global Settings</title>
+
+<para>The first setting here is <guilabel>Enable Plugins
+globally</guilabel>.  If you disable this check box, then &konqueror;
+will not use any plugins.  If you enable it, then any installed and
+configured plugins that it can find will be used by &konqueror;</para>
+
+<para>You can also restrict &konqueror; to <guilabel>Only allow HTTP
+and HTTPS URLs for plugins</guilabel> by checking the box.</para>
+
+<para>The next option determines, if plugins are loaded on demand only.</para>
+<para>Use the slider labeled <guilabel>CPU priority for plugins</guilabel> 
+to adjust this setting.
+</para>
+
+<para>Click the <guibutton>Domain-Specific Settings</guibutton> button to open
+a dialog where you can set specific plugin policies for any particular 
+host or domain. These policies will be used instead of the default policy for 
+enabling or disabling plugins on pages sent by these domains or hosts.</para>
+<para>
+Add a new policy here or select a policy and use the controls on the right to modify it.
+</para>
+</sect2>
+
+<sect2 id="nsplugins">
+<title>Plugins</title>
+
+<sect3 id="nsplugins-intro">
+<title>Introduction</title>
+
+<para>As &Netscape;'s <application>Navigator</application> has been a
+web browsing standard for many years, so-called &Netscape; plugins have
+appeared that allow rich web content.  Using those plugins, web sites
+can contain <acronym>PDF</acronym> files, flash animations, video, &etc;
+With &konqueror;, you can still use these plugins to take advantage of
+rich web content.</para>
+
+<note><para>&Netscape; plugins should not be confused with &konqueror;
+plugins. The latter ones specifically extend &konqueror;'s
+functionality; they are normally not used to display rich web
+content.</para></note>
+
+</sect3>
+
+<sect3 id="nsplugins-scan">
+<title>Scan for Plugins</title>
+
+<para>&konqueror; has to know where your &Netscape; plugins are
+installed.  This can be in several places, &ie; you might have
+system-wide plugins in <filename
+class="directory">/opt/netscape/plugins</filename> and your personal
+plugins in <filename
+class="directory">$<envar>HOME</envar>/.netscape/plugins</filename>.
+However, &konqueror; will not automatically use the installed plugins:
+it first has to scan a list of folders.  You can initiate the scan
+by clicking <guibutton>Scan for Plugins</guibutton>.</para>
+
+<para>To find plugins, &konqueror; will look in the folders
+specified in the <guilabel>Folders</guilabel> frame.  When you
+use this control module for the first time, this list will already be
+filled with reasonable paths that should work on most operating systems.
+If you need to provide a new path, click the <guibutton>New</guibutton>
+button; then you can either enter the new path in the text edit box to
+the left, or choose a folder using the file dialog by clicking the
+<guibutton>Open file</guibutton> icon.  As scanning the folders can take
+a little time, you might want to remove folders from the list where
+you know that no plugins are installed: do this by selecting a folder
+and clicking <guibutton>Remove</guibutton>.  Using the
+<guibutton>Up</guibutton> and <guibutton>Down</guibutton> buttons you
+can change the order in which folders will be scanned by moving the
+selected folder up or down.</para>
+
+<para>As usual, click <guibutton>Apply</guibutton> to save your changes
+permanently.</para>
+
+</sect3>
+
+<sect3 id="nsplugins-plugins">
+<title>Plugins</title>
+
+<para>In this section, you can see a list of the &Netscape; plugins found by
+&konqueror;, displayed as a tree.  Double click on a plugin to fold it
+out and you will see that the different mime types this plugin can handle
+will be displayed as branches.  Fold out a mime type to see its
+info.</para>
+
+<para>This list is only for informational purposes.</para>
+
+</sect3>
+
+</sect2>
+</sect1>
+
+</article>

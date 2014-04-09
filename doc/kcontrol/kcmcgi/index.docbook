@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % English "INCLUDE" > <!-- change language only here -->
+]>
+
+<article id="kcmcgi" lang="&language;">
+<articleinfo>
+
+<title>CGI Scripts</title>
+<authorgroup>
+<author><personname><firstname>Burkhard</firstname><surname>Lück</surname></personname>
+<email>lueck@hube-lueck.de</email>
+</author>
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
+</authorgroup>
+
+<date>2009-11-20</date>
+<releaseinfo>&kde; 4.4</releaseinfo>
+
+<keywordset>
+<keyword>KDE</keyword>
+<keyword>Systemsettings</keyword>
+<keyword>cgi</keyword>
+</keywordset>
+</articleinfo>
+
+<para>
+The CGI KIO slave lets you execute local CGI programs 
+without the need to run a web server.</para> 
+
+<para>In this system settings module you can 
+configure the paths that are searched for CGI scripts.
+</para>
+
+<para>Paths to CGI scripts are displayed in the list box at the
+bottom of this dialog.
+</para>
+
+<para>Use the buttons below the list box to add or remove paths from the search.
+</para>
+
+</article>

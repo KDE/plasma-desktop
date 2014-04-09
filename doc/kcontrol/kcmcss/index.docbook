@@ -1,0 +1,367 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % English "INCLUDE" > <!-- change language only here -->
+]>
+
+<article id="kcmcss" lang="&language;">
+<articleinfo>
+<title>Appearance</title>
+<authorgroup>
+<author>&Lauri.Watts; &Lauri.Watts.mail;</author>
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
+</authorgroup>
+
+<date>2009-12-01</date>
+<releaseinfo>&kde; 4.4</releaseinfo>
+
+<keywordset>
+<keyword>KDE</keyword>
+<keyword>CSS</keyword>
+<keyword>Appearance</keyword>
+<keyword>Font</keyword>
+<keyword>CSS</keyword>
+<keyword>Stylesheets</keyword>
+<keyword>Accessibility</keyword>
+</keywordset>
+
+</articleinfo>
+
+<sect1 id="appearance">
+<title>Appearance</title>
+<para>This module consists of three tabs with configure options how to display web pages.</para>
+
+<sect2 id="general">
+<title>General</title> <!-- modified copy from khtml/index.docbook <sect2 id="kbrowse-html"-->
+
+<para>The check box labeled <guilabel>Automatically load
+images</guilabel> allows you to control whether images on web pages are
+loaded by default. Unless you have a very slow connection, you will
+probably want to leave this option selected, as there are many web pages
+that are difficult to use without images. If you don't select the option
+to automatically load images, you can still view the text on the page,
+and then load the images if you need them.</para>
+
+<para>If <guilabel>Draw frame around not completely loaded images</guilabel>
+is checked, &konqueror; will draw a frame as a placeholder 
+around images embedded in a web page that are not yet fully loaded. You 
+will probably want to check this box to enhance your browsing experience, 
+especially if have a slow network connection.</para>
+
+<para>Many web pages use animated gif images, and these can be very
+annoying, and in some cases, quite a drain on your system resources.
+The <guilabel>Animations</guilabel> option lets you choose when
+animations are enabled.  The default is enabled, but you can set this
+to disabled, or to run the animation only once, even if the file
+itself contains instructions that the animation should run more times,
+or continuously.</para>
+
+<para>The next setting is <guilabel>Underline links:</guilabel>. You can
+choose to underline links <guilabel>Enabled</guilabel>.  If this option
+is selected, any text on web pages that acts as a link will be shown in
+an underlined font. While many web pages do use color to distinguish
+text that acts as a link, underlining makes it very easy to spot
+links.</para>
+
+<para>If you don't like underlined links, you can choose
+<guilabel>Disabled</guilabel>, so that no links are underlined.  Or you
+can choose a middle ground, <guilabel>Only on Hover</guilabel>, so that links
+are underlined when the mouse cursor is resting over them, and not
+underlined the rest of the time.</para>
+
+<note><para>The site's CSS definitions can override this value.</para></note>
+
+<para><guilabel>Smooth scrolling</guilabel>
+determines whether &konqueror; should use smooth steps to scroll &HTML; 
+pages, or whole steps:
+<itemizedlist>
+<listitem><para><guilabel>Always</guilabel>: Always use smooth steps 
+when scrolling.</para></listitem>
+<listitem><para><guilabel>Never</guilabel>: Never use smooth scrolling, scroll 
+with whole steps instead.</para></listitem>
+<listitem><para><guilabel>When Efficient</guilabel>: Only use smooth 
+scrolling on pages where it can be achieved with moderate usage of system 
+resources.</para></listitem>
+</itemizedlist>
+</para>
+
+</sect2>
+
+<sect2 id="fonts"> <!-- modified copy from khtml/index.docbook <sect2 id="kbrowse-appearance"-->
+<title>Fonts</title>
+<para>Under this tab, you can select various options related to the use
+of fonts. Although the shapes and sizes of fonts are often part of the
+design of a web page, you can select some default settings for
+&konqueror; to use.</para>
+
+<para>The first thing you can set here is the font size.  There are two
+settings which work together to allow you a comfortable browsing
+experience.</para>
+
+<para>Firstly, you can set a <guilabel>Minimum font size</guilabel>.
+This means, even if the font size is set specifically in the page you
+are viewing, &konqueror; will ignore that instruction and never show
+smaller fonts than you set here.</para>
+
+<para>Next you can set a <guilabel>Medium font size</guilabel>.  This is
+not only the default size of text, used when the page does not specify
+sizes, but it is also used as the base size that relative font sizes are
+calculated against.  That is, the &HTML; instruction
+<quote>smaller</quote>, it means smaller than the size you set for this
+option.</para>
+
+<para>For either option, you can select the exact font size in points by
+using the up/down spin control (or just typing) next to the option
+label.</para>
+
+<para>These options are independent of each other.  Pages that do not
+set a font size, or ask for the default, will display with the size
+you set from <guilabel>Medium font size</guilabel>, while any pages
+that ask for a size smaller than your <guilabel>Minimum font
+size</guilabel> setting will instead show that size.  The one does not
+affect the other.</para>
+
+<para>The remaining options are for the fonts to be associated with
+different types of markup used in &HTML; pages. Note
+that many web pages may override these settings. For any type of font
+(Standard, Fixed, Serif, &etc;) you can select a different font if you like.</para>
+
+<para>Below this, you can set a <guilabel>Font size adjustment for this
+encoding</guilabel>.  Sometimes the fonts you want to use for a
+particular encoding or language are much larger or smaller than average,
+so you can use this setting to bring them into line.</para>
+
+<para>You can set a default encoding that &konqueror; should assume
+pages are when rendering them.  The default setting is <guilabel>Use
+Language Encoding</guilabel>, but you can change it to any encoding
+available in the list.</para>
+
+</sect2>
+
+<sect2 id="stylesheets">
+
+<title>Stylesheets</title>
+
+<sect3>
+<title>Introduction</title>
+
+<para><acronym>CSS</acronym> style sheets affect the way web pages
+appear.  <acronym>CSS</acronym> stands for
+<emphasis>C</emphasis>ascading <emphasis>S</emphasis>tyle
+<emphasis>S</emphasis>heets.</para>
+
+<para>&kde; can use its own stylesheet, based on simple defaults and
+the color scheme you are using for your desktop.  &kde; can also use a
+stylesheet that you have written yourself.  Finally, you can specify a
+stylesheet in this module.  The options presented in this module are
+tuned for accessibility purposes, especially for people with reduced
+vision.</para>
+
+<para>Your choices here affect every &kde; application that renders HTML
+with &kde;'s own renderer, which is called khtml.  These include
+&kmail;, &khelpcenter; and of course &konqueror;.  Choices here do not
+affect other browsers such as &Netscape;.</para>
+
+</sect3>
+
+<sect3 id="css-general">
+<title>Stylesheets</title>
+
+<para>This section contains the following options:</para>
+
+<variablelist>
+<varlistentry>
+<term><guilabel>Use default stylesheet</guilabel></term>
+<listitem>
+<para>&kde; will use the default stylesheet.  Some of the colors will
+default to those defined in your chosen color scheme.  Most settings are
+easily overridden by the page you are viewing.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Use user-defined stylesheet</guilabel></term>
+<listitem>
+<para>&kde; will use a stylesheet that you have written yourself. You
+can use the browse button to locate the stylesheet on your system.
+<acronym>CSS</acronym> files traditionally have a <literal
+role="extension">.css</literal> extension, but this is not
+required.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Use accessibility stylesheet</guilabel></term>
+<listitem>
+<para>Use the settings defined in the <guilabel>Customize</guilabel>
+dialog.  Enabling this option will enable the <guibutton>Customize</guibutton> 
+button lo launch a dialog to define stylesheet settings.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</sect3>
+
+<sect3 id="css-customize">
+<title>Customize</title>
+
+<para>In this dialog you can set up a user stylesheet.  The options available are
+only a subset of the instructions you can add in a stylesheet, and they
+are geared towards people with reduced vision, to allow users to create
+a stylesheet that makes web pages and the &kde; help files more
+readable.</para>
+
+<para>The options in this dialog are disabled unless you chose
+<guilabel>Use accessibility stylesheet</guilabel>.</para>
+
+<sect4>
+<title><guilabel>Font Family</guilabel></title>
+
+<variablelist>
+<varlistentry>
+<term><guilabel>Base family</guilabel></term>
+<listitem>
+<para>Choose a font family to use for body text.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Use same family for all text</guilabel></term>
+<listitem>
+<para>If you enable this, then the same font family will be used for all
+text, regardless of the settings on the page you are viewing.  This is
+useful for pages which have used a decorative or hard to read font for
+headlines.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect4>
+
+<sect4>
+<title>Font Size</title>
+
+<variablelist>
+<varlistentry>
+<term><guilabel>Base font size</guilabel></term>
+<listitem>
+<para>This is the default size for text on the page.  Many web sites set
+their font sizes relative to this default, using <quote>larger</quote>
+or <quote>+1</quote> to make the text bigger, and <quote>smaller</quote>
+or <quote>-1</quote> to make the text smaller.</para>
+<para>Many people design their web pages on platforms where the ordinary
+default text size is too large for the average user to read, so it is
+very common to come across web pages that have forced the font smaller
+in this way.</para>
+<para>This setting will allow you to set the default font to a
+comfortable size, so that the relative sizes are also enlarged enough to
+be comfortable.</para>
+<para>Do not forget you can also have &konqueror; enforce a minimum size,
+so that text is <emphasis>never</emphasis> too small to read.
+<!-- Set that under Behavior, in the Web Browser section in &kcontrol;.
+adapt to new documentation-->
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Use same size for all elements</guilabel></term>
+<listitem>
+<para>If you enable this option, then all text will be rendered at your
+specified font size, regardless of the instructions the page contains.
+Relative font sizes as discussed earlier, and even specific instructions
+that text should be rendered at a certain size will be overridden
+here.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect4>
+
+<sect4>
+<title>Images</title>
+
+<variablelist>
+<varlistentry>
+<term><guilabel>Suppress images</guilabel></term>
+<listitem>
+<para>If you do not want to view images, you can turn this off
+here.</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Suppress background images</guilabel></term>
+<listitem>
+<para>One major problem for reduced vision users is that background
+images do not give sufficient contrast to allow them to read the text.
+You can disable background images here, independently of your choice
+above to view all images.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect4>
+
+<sect4>
+<title>Colors</title>
+
+<variablelist>
+<varlistentry>
+<term><guilabel>Black on white</guilabel></term>
+<listitem>
+<para>Many people with reduced vision find black text on a white screen
+gives the most contrast, and is easiest to read.  If this applies to
+you, you can set this here.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>White on black</guilabel></term>
+<listitem>
+<para>Many other people with reduced vision find the opposite to be
+true, that white text on a black screen is easier to read.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Custom</guilabel></term>
+<listitem>
+<para>Still other people find that pure black and white, in either
+order, is difficult to read.  You can set custom colors here for both
+the <guilabel>Background</guilabel> and the
+<guilabel>Foreground</guilabel>.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Use same color for all text</guilabel></term>
+<listitem>
+<para>Many web sites use a different, often contrasting color for
+headings or other flourishes.  If this interferes with your ability to
+read the content, you can enable this check box to have &kde; use the
+colors you have set above for all text.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</sect4>
+
+<sect4>
+<title>Preview</title>
+
+<para>The <guilabel>Preview</guilabel> section allows you to see the effect of
+your changes.  Several types of headings are displayed with your stylesheet, 
+and a sentence in the default body text.</para>
+
+<para>This should allow you to fine-tune your stylesheet until you have
+something that you can comfortably read.</para>
+
+<para>Happy surfing!</para>
+
+</sect4>
+
+</sect3>
+
+</sect2>
+
+</sect1>
+
+</article>

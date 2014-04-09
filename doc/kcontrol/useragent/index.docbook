@@ -1,0 +1,110 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % English "INCLUDE" > <!-- change language only here -->
+]>
+
+<article id="useragent" lang="&language;">
+<title>Browser Identification</title>
+<articleinfo>
+<authorgroup>
+<author>&Krishna.Tateneni; &Krishna.Tateneni.mail;</author>
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
+</authorgroup>
+
+<date>2009-11-24</date>
+<releaseinfo>&kde; 4.4</releaseinfo>
+
+<keywordset>
+<keyword>KDE</keyword>
+<keyword>Systemsettings</keyword>
+<keyword>user agent</keyword>
+<keyword>browser</keyword>
+<keyword>identification</keyword>
+</keywordset>
+
+</articleinfo>
+
+<sect1 id="user-agent">
+<title>Browser Identification</title>
+
+
+<sect2 id="user-agent-intro">
+<title>Introduction</title>
+
+<para>When &konqueror; connects to a web site to retrieve information,
+some basic identifying information is sent to the web site in the form
+of a <quote>User Agent</quote> header.</para>
+
+<para>Because of minor differences in the way that different web
+browsers function, web sites that rely too much on a single browser may
+sometimes not display as intended when viewed using another
+browser. Some web sites are smart enough to examine the contents of the
+user agent header and incorporate this information in the
+&HTML; code so that the content is displayed correctly
+regardless of the browser used.</para>
+
+<para>However, you may find that some web sites refuse to function
+correctly unless you are using a browser recognized as
+<quote>proper</quote> by that site. In these cases, you may find it
+necessary to fool the web site by having &konqueror; report itself to be
+another browser by means of the user agent header.</para>
+
+</sect2>
+
+<sect2 id="user-agent-use">
+<title>Use</title>
+
+<para>In this module you can configure the
+type of browser that &konqueror; will report itself to be. You can
+control this information by web site. Usually, the list box that is
+labeled <guilabel>Site Specific Identification</guilabel> will be
+empty, so that &konqueror; will always use its default useragent
+string.</para>
+
+<para>You can disable the sending of a user agent entirely, by
+unchecking the <guilabel>Send identification</guilabel>
+check box.  This may cause strange behavior on some sites, and may even
+deny you access to some websites, so disable this with caution.</para>
+
+<para>To configure a new agent binding, press the
+<guibutton>New...</guibutton> button.  Type the name of the server or
+a domain in the text box at the top of the dialog that pops up, which
+is labeled <guilabel>When browsing the following
+site</guilabel>.</para>
+
+<para>Note that you can <emphasis>not</emphasis> use the wildcard
+character <token>*</token> in this text box. However, the string
+<userinput>kde.org</userinput> will match all hosts in the domain
+<systemitem>kde.org</systemitem></para>
+
+<para>After typing the name of the server, type in the identifying
+string in the next combo box, which is labeled <guilabel>Use the
+following identification:</guilabel>, or choose a string from the list. If
+you don't choose a string from the list, you will need to know what a
+valid string from the browser looks like. For example, you could type
+<userinput>Mozilla/4.0 (compatible; MSIE 4.0)</userinput>. </para>
+
+<para>You can click on an existing entry in the list, and then modify the contents of the
+text boxes, followed by clicking <guibutton>Change...</guibutton>.</para>
+
+<para>The <guibutton>Delete</guibutton> button can be used to delete
+the selected entry in the list of configured agent bindings.  The
+<guibutton>Delete All</guibutton> will remove all the configured user
+agent strings.  Click the <guibutton>Apply</guibutton> to take your
+changes in effect.</para>
+
+<para>You can use the check boxes at the top of the screen to build a
+user agent that is uniquely yours, by choosing your own combination of
+operating system name and version, platform, processor type, and
+language.</para>
+
+<para>In all cases, the user agent that is being sent by default is
+displayed in bold text at the top of the page.</para>
+
+</sect2>
+
+</sect1>
+
+</article>

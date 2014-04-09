@@ -1,0 +1,61 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % English "INCLUDE" > <!-- change language only here -->
+]>
+
+<article id="filemanager" lang="&language;">
+<articleinfo>
+<title>File Management</title>
+<authorgroup>
+<author>&Mike.McBride; &Mike.McBride.mail;</author>
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
+</authorgroup>
+
+<date>2009-12-18</date>
+<releaseinfo>&kde; 4.4</releaseinfo>
+
+<keywordset>
+<keyword>KDE</keyword>
+<keyword>Systemsettings</keyword>
+<keyword>file manager</keyword>
+</keywordset>
+</articleinfo>
+
+<para>In these modules, you can configure various aspects of
+&konqueror;'s file manager functionality. </para>
+
+<note><para>&konqueror;'s web browser functionality has its <ulink
+url="help:/kcontrol/khtml-behavior/index.html">own configuration
+modules</ulink>.</para></note>
+
+<variablelist>
+<title><guilabel>Misc Options</guilabel></title>
+<varlistentry>
+<term><guilabel>Open folders in separate windows</guilabel></term>
+<listitem> <para>If this option is checked, a new
+&konqueror; window will be created when you open a
+folder, rather than simply showing that folder's contents in the
+ current
+window.</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Show 'Delete' menu entries which 
+bypass the trashcan</guilabel></term>
+<listitem>
+<para>Check this if you want <quote>Delete</quote> menu commands to be 
+displayed on the desktop and in the file manager's context menus. 
+You can always delete files by holding the &Shift; key while calling 
+<guimenuitem>Move to Trash</guimenuitem>.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<para>The settings for &konqueror;'s file manager mode on the <guilabel>View Modes</guilabel>, 
+<guilabel>Navigation</guilabel>, <guilabel>Services</guilabel>, <guilabel>General</guilabel>
+and <guilabel>Trash</guilabel> pages are used by &dolphin; as well.
+</para>
+
+</article>

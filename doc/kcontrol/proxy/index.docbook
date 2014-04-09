@@ -1,0 +1,209 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % English "INCLUDE" > <!-- change language only here -->
+]>
+
+<article id="proxy" lang="&language;">
+<title>Proxy</title>
+<articleinfo>
+<authorgroup>
+<author>&Krishna.Tateneni; &Krishna.Tateneni.mail;</author>
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
+</authorgroup>
+
+<date>2013-12-05</date>
+<releaseinfo>&kde; 4.12</releaseinfo>
+
+<keywordset>
+<keyword>KDE</keyword>
+<keyword>Systemsettings</keyword>
+<keyword>proxy</keyword>
+<keyword>proxies</keyword>
+</keywordset>
+
+</articleinfo>
+<sect1 id="proxies">
+<title>Proxies</title>
+
+<sect2 id="proxies-intro">
+
+<title>Introduction</title>
+
+<para>Proxies are programs running on a computer that acts a server on
+the network you are connected to (whether by modem or other
+means). These programs receive &HTTP; and &FTP; requests, retrieve the
+relevant files from the internet, and pass them on to the client
+computer that made the requests.</para>
+
+<para>When you have configured a proxy, &HTTP; and/or &FTP; requests
+are re-routed through the computer that is acting as a proxy server.
+However, you can also select specific hosts which should be contacted
+directly, rather than through the proxy server. If you are on a local
+network, for example, access to local hosts probably doesn't need to
+go through a proxy server.</para>
+
+<para>You should only need to configure a proxy server if your network
+administrator requires it (if you are a dial-up user, that would be
+your internet service provider or <acronym>ISP</acronym>). Otherwise,
+especially if you are feeling a bit confused about this proxy
+business, but everything seems to be fine with your internet
+connection, you don't need to change anything.</para>
+
+<para>Please note that using proxy servers is optional, but has the
+benefit or advantage of giving you faster access to data on the
+internet.</para>
+
+<para>If you are uncertain whether or not you need to use a proxy
+server to connect to the internet, please consult with your internet
+service provider's setup guide or your system administrator.</para>
+
+</sect2>
+
+<sect2 id="proxies-use">
+
+<title>Use</title>
+
+<variablelist>
+<varlistentry>
+<term><guilabel>No Proxy</guilabel></term>
+<listitem>
+
+<para>Select this option if you do <emphasis>not</emphasis> want to use a proxy server
+and connect to the Internet directly.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<para>If you have decided to use a proxy, you have several methods to
+configure the settings for it.</para>
+
+<variablelist>
+<varlistentry>
+<term><guilabel>Detect proxy configuration automatically</guilabel></term>
+<listitem>
+
+<para>Select this option if you want the proxy setup configuration
+script file to be automatically detected and downloaded.</para>
+<para>This option only differs from the next choice in that it
+<emphasis>does not</emphasis> require you to supply the location of
+the configuration script file. Instead, it will be automatically
+downloaded using <quote>Web Proxy Auto-Discovery</quote> 
+(<acronym>WPAD</acronym>) protocol.</para>
+
+<note><para>If you have a problem using this setup, please consult the
+<acronym>FAQ</acronym> section at <ulink
+url="http://www.konqueror.org">http://www.konqueror.org</ulink> for
+more information.</para></note>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Use proxy auto configuration URL</guilabel></term>
+<listitem>
+<para>Select this option if your proxy support is provided through a
+script file located at a specific address.  You can then enter the
+address in the location text box, or use the <guiicon>folder</guiicon>
+icon to browse to it.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Use system proxy configuration</guilabel></term>
+<listitem>
+<para>Some systems are setup with $<envar>HTTP_PROXY</envar> to allow
+graphical as well as non-graphical applications to share the same
+proxy configuration information.</para>
+<para>If you know this applies to you, select this option and click on
+the <guibutton>Auto Detect</guibutton> button to provide the environment
+variable names used to set the address of the proxy server(s).</para>
+<!-- Exceptions fields are different for system proxy (envar) + manual proxy list of hosts/IPs? -->
+<para>In the <guilabel>Exceptions</guilabel> field enter the environment variable, 
+&eg; $<envar>NO_PROXY</envar>, used to store the 
+addresses of sites for which the proxy server should not be used.</para>
+<para>Use <guilabel>Show the value of the environment variables</guilabel> to 
+show the value of an environment variable instead of its name.
+However it is not possible to edit the values of environment variables in this module.</para>
+<!--
+How to enable Auto Detect button?
+-->
+
+</listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Use manually specified proxy configuration</guilabel></term>
+<listitem>
+
+<para>The complete addressing information for the proxy includes both
+the Internet address and a port number. You should enter these into
+the relevant text boxes. Check <guilabel>Use this proxy server for all 
+protocols</guilabel> to copy the addresses and port of the HTTP proxy server 
+into all other proxy fields, in order to help save some typing.</para>
+
+<variablelist>
+<varlistentry>
+<term><guilabel>Exceptions</guilabel></term>
+<listitem>
+<para>Enter a comma separated list of hostnames or ip addresses that should 
+be excluded from using the above proxy settings. If you want to exclude all 
+hosts for a given domain, then simply enter the domain name preceded by a dot. 
+For example, to exclude all hostnames for kde.org, enter <userinput>.kde.org</userinput>. 
+Wildcard characters such as <userinput>*</userinput> or <userinput>?</userinput> 
+are not supported and will have no effect. 
+Additionally, you can also enter IP addresses, e.g. 127.0.0.1 and 
+IP addresses with a subnet, e.g. 192.168.0.1/24.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<para>You can also choose <guilabel>Use proxy settings only for addresses 
+in the Exceptions list</guilabel>.</para>
+
+<para>Check this box to reverse the use of the exception list, &ie;
+the proxy servers will only be used when the requested &URL; matches
+one of the addresses listed here.</para>
+
+<para>This feature is useful if all you need is a proxy to access a
+few specific sites, for example, an internal intranet.  If you have
+more complex requirements you might want to use a configuration
+script.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</sect2>
+<!-- not in 4.8 anymore
+
+What if authorization is needed?
+
+<sect2 id="authorization">
+<title><guilabel>Authorization</guilabel></title>
+
+<para>Here you can choose between two types of authentication, if your
+proxy requires it.  You can have <guilabel>Prompt as
+needed</guilabel>, the default, in which case &konqueror; will only
+ask for a username or password if it needs to.</para>
+
+<para>The other option is to use automatic login.
+Select this option and enter <guilabel>Username</guilabel> and <guilabel>Password</guilabel>.
+</para>
+
+</sect2>
+
+<sect2 id="options">
+<title><guilabel>Options</guilabel></title>
+<variablelist>
+<varlistentry>
+<term><guilabel>Use persistent connections to proxy</guilabel></term>
+<listitem>
+<para>Use persistent connection to your proxy server. Keeps connection to proxy open, helps lower bandwidth/speed up connection. Enabling this option will require the proxy server's cooperation, if the proxy server does not support this, it will bring your internet to a stop. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</sect2>
+-->
+</sect1>
+
+</article>

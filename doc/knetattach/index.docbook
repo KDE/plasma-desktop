@@ -1,0 +1,378 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!-- Define an entity for your application if it is not part of KDE
+       CVS -->
+  <!ENTITY kappname "&knetattach;">
+  <!ENTITY package "kdebase"><!-- I think this came from kdebase... -->
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % English "INCLUDE"> 
+
+  <!-- Do not define any other entities; instead, use the entities
+       from entities/general.entities and $LANG/user.entities. -->
+]>
+
+<book id="knetattach" lang="&language;">
+
+<!-- This header contains all of the meta-information for the document such
+as Authors, publish date, the abstract, and Keywords -->
+
+<bookinfo>
+<title>The &knetattach; Handbook</title>
+
+<authorgroup>
+<author>
+&Orville.Bennett; &Orville.Bennett.mail;
+</author>
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
+</authorgroup>
+
+
+<copyright>
+<year>2005</year>
+<holder>&Orville.Bennett;</holder>
+</copyright>
+<legalnotice>&FDLNotice;</legalnotice>
+
+<date>2010-01-18</date>
+<releaseinfo>&kde; 4.4</releaseinfo>
+
+<abstract>
+<para>
+&knetattach; is a wizard which makes it easier to integrate your 
+network resources with your &kde; Desktop.
+</para>
+</abstract>
+
+<!-- This is a set of Keywords for indexing by search engines.
+Please at least include KDE, the KDE package it is in, the name
+ of your application, and a few relevant keywords. -->
+
+<keywordset>
+<keyword>KDE</keyword>
+<keyword>kdebase</keyword>
+<keyword>knetattach</keyword>
+<keyword>Network Folders</keyword>
+<keyword>Network Folder Wizard</keyword>
+<keyword>KDE Network Folder Wizard</keyword>
+</keywordset>
+
+</bookinfo>
+
+<!-- 
+in kde 4 no application any more.
+
+konqueror/dolphin/gwenview enter "remote:/" in location bar or click Network in Places
+"Add Network Folder" click opens the wizard
+-->
+
+<chapter id="introduction">
+<title>Introduction</title>
+
+<para>
+The &knetattach; wizard, affectionately and hereafter known as the 
+Network Folder Wizard, allows easy addition and integration of various 
+network folders with your &kde; desktop. Please report any problems or 
+feature requests for it to the &kde; bugs website.
+</para>
+</chapter>
+
+<chapter id="using-knetattach">
+<title>Using &knetattach;</title>
+
+<para>
+As you will see in the screenshot below, the Network Folder Wizard currently
+allows you to add four types of network folders: WebDav, &FTP;, 
+&Microsoft; &Windows; (Samba) network drives and SSH.
+Additionally you can select a recent connection for the list box.
+
+<screenshot>
+<screeninfo>Here's a screenshot of &knetattach;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase>Screenshot</phrase>
+</textobject>
+<caption>
+<para>Network Folder Wizard main window</para>
+</caption>
+</mediaobject>
+</screenshot>
+</para>
+
+
+<sect1 id="knetattach-features">
+<title>Adding network folders</title>
+
+<para>
+Network folders show up in a special location of &konqueror; and &dolphin; 
+called a <emphasis>virtual folder</emphasis>.
+This virtual folder is accessed by typing <userinput>remote:/</userinput> in
+the location bar or by selecting <guilabel>Network</guilabel> from the 
+<guilabel>Places</guilabel> panel. You will then be able to see
+any folders which have been previously added and you also will be able to use
+the wizard to add new ones.
+<screenshot>
+<screeninfo>Here's a screenshot of &knetattach;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot1.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase>Screenshot</phrase>
+</textobject>
+<caption>
+<para>The virtual folder with the Network Folder wizard</para>
+</caption>
+</mediaobject>
+</screenshot>
+</para>
+
+<para>
+Speaking of wizards, the Network Folder Wizard aims at being very easy to use.
+After opening the wizard you must choose the type of network folder you would
+like to access. When you move on to the next screen you will just need to 
+fill in the requested information. The final step is entering your username and
+login password for the network share you've chosen to access.
+</para>
+<para>
+Below is a list of the information needed by the wizard to create the network
+folders. If an option is not 
+available for a particular folder it does not have to be entered. The Samba
+folders &eg; do not require a <guilabel>Port</guilabel> entry.
+</para>
+
+<para>
+<variablelist>
+<varlistentry>
+<term><guilabel>Name:</guilabel></term>
+<listitem>
+<para>
+This is where you give a name to the network connection. It is limited only by 
+your imagination (or alphabet).
+</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>User:</guilabel></term>
+<listitem>
+<para>
+This is the username that will be used to establish the connection.
+</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Server:</guilabel></term>
+<listitem>
+<para>
+This is the address of the server you are attempting to add. It can be an 
+IP address or domain name.
+</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Port:</guilabel></term>
+<listitem>
+<para>
+Here you enter the port number you wish to connect to. The defaults are usually 
+sufficient.
+<note>
+<para>
+Not available for &Microsoft; &Windows; (Samba) folders.
+</para>
+</note>
+</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Folder:</guilabel></term>
+<listitem>
+<para>
+The path to the folder you wish to connect to should go here.
+</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Encoding:</guilabel></term>
+<listitem>
+<para>
+Use the items in this list box to select an encoding for &FTP; and ssh connections.
+</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Create an icon for this remote folder</guilabel></term>
+<listitem>
+<para>
+If this box is checked an icon will be created allowing access through the 
+remote:/ virtual folder. If it is not checked, a connection will be possible
+but it will not be accessible from remote:/.
+<note>
+<para>
+The <guilabel>Recent connection:</guilabel> option allows you to re-connect to
+the 
+last network mount point you connected to using the wizard whether an icon is
+created or not.
+</para>
+</note>
+</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Use encryption</guilabel></term>
+<listitem>
+<para>
+If checked the ability to make a secure connection will be enabled.
+<note>
+<para>Available only for WebDav folders.</para>
+</note>
+</para>
+</listitem>
+</varlistentry>
+</variablelist>
+</para>
+
+</sect1>
+</chapter>
+
+<chapter id="knetattach-walkthrough">
+<title>&knetattach; Walkthrough</title>
+
+
+<para>
+This will be a quick walkthrough of the Network Folder Wizard. Don't 
+blink or you might miss it.
+</para>
+
+<para>
+Below you see the main window of the Network Folder Wizard. It is here
+that we choose what type of folder we want to add or connect to. For 
+the purposes of this walkthrough we will be using &FTP;. It contains most
+of the options you will encounter while using the wizard.
+</para>
+
+<para>
+<screenshot>
+<screeninfo>Here's a screenshot of the &knetattach; main window</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase>Screenshot</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+</para>
+
+<para>
+OK, so we (as in me) have chosen to add an &FTP; folder. Below you see
+an example of the type of information you will need to add for your particular 
+&FTP; server. After filling it in we press <guibutton>Save &amp;
+Connect</guibutton> 
+and wait for the magic. Oh yes, if your server requires validation of some kind
+you will be prompted at this point before being allowed to connect.
+</para>
+
+<para>
+<screenshot>
+<screeninfo>Screenshot showing addition of &FTP; Folder
+using &knetattach;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot2.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase>Screenshot</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+</para>
+
+<para>
+So now we are all connected now and able to navigate our newly added share. Joy!
+</para>
+
+<para>
+<screenshot>
+<screeninfo>Screenshot of the connected &FTP; folder</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot3.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase>Screenshot</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+</para>
+
+<para>
+To get back to our network folders all that is necessary is typing
+<action>remote:/</action>
+in the location bar of &konqueror; or &dolphin; or
+select <guilabel>Network</guilabel> from the <guilabel>Places</guilabel> panel.
+</para>
+
+<para>
+<screenshot>
+<screeninfo>Screenshot of the remote:/ virtual folder with the
+added connection</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot4.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase>Screenshot</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+</para>
+
+<para>
+You can even add new folders from the same location by using the 
+<guilabel>Add a Network Folder</guilabel> link. Well that brings us to 
+the end of our walkthrough (told you it would be quick). I wish you the 
+best of luck in your own network folder adventures ;-)
+</para>
+</chapter>
+
+<chapter id="credits">
+
+<title>Credits and License</title>
+
+<para>
+&knetattach;
+</para>
+<para>
+Program copyright 2004 &George.Staikos; &George.Staikos.mail; 
+</para>
+
+<para>
+Documentation Copyright &copy; 2005 &Orville.Bennett; &Orville.Bennett.mail;
+</para>
+
+<!-- TRANS:CREDIT_FOR_TRANSLATORS -->
+
+&underFDL;               <!-- FDL: do not remove -->
+&underGPL;
+
+</chapter>
+
+&documentation.index;
+</book>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

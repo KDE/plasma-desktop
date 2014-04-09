@@ -1,0 +1,104 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % English "INCLUDE" > <!-- change language only here -->
+]>
+
+<article id="smb" lang="&language;">
+<articleinfo>
+<title>Windows Shares</title>
+<authorgroup>
+<author>&Mike.McBride; &Mike.McBride.mail;</author>
+<author>&Jost.Schenck; &Jost.Schenck.mail;</author>
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
+</authorgroup>
+
+<date>2013-12-05</date>
+<releaseinfo>&kde; 4.12</releaseinfo>
+
+<keywordset>
+<keyword>KDE</keyword>
+<keyword>Systemsettings</keyword>
+<keyword>Windows shares</keyword>
+</keywordset>
+</articleinfo>
+<sect1 id="windows-shares">
+<title>Windows Shares</title>
+
+<sect2 id="windows-shares-intro">
+<title>Introduction</title>
+
+<para>In many small local area networks, the <acronym>SMB</acronym>
+protocol is used to offer network services. Names like
+<quote>&Windows; Network</quote> or <quote>&Windows; for Workgroups
+Network</quote> or <quote>LanManager</quote> are often used as
+well. Using <acronym>SMB</acronym> you can access so-called
+<quote>shares</quote> (&ie; folders made available by the server)
+as well as printers.  </para>
+
+<para>&kde; comes with built-in support for the <acronym>SMB</acronym>
+protocol. As &kde; is network-transparent that means you can access
+<acronym>SMB</acronym> shares from everywhere you can access your
+local files, for example in the &konqueror; file manager and in the
+file dialog. To make use of this you should provide &kde; with some
+information on your <acronym>SMB</acronym> network. But don't worry,
+this is normally pretty simple as, for example, all the Windows
+clients in your network need and have the same information.</para>
+
+<!-- Don't know if the following info should go in the base
+documentation --> 
+
+<!-- this smb-ioslave doesn't support showing a list
+of hosts (like e.g. smb:/), for this you need the lan or rlan-ioslave,
+very cool thing (TM) btw. If you want to write some documentation for
+this one too, have a look at kdenetwork/lanbrowsing/lisa/README and
+contact me if you have questions. -->
+
+<note><para>For the <acronym>SMB</acronym> protocol to work, it is
+required to have <application>Samba</application> correctly
+installed.</para></note>
+
+<!-- TODO: link to some place which explains USING SMB, i.e. konqueror
+or file dialog manual -->
+
+</sect2>
+
+<sect2 id="windows-shares-use">
+<title>Use</title>
+
+<para>Although there are a lot of insecure <acronym>SMB</acronym>
+networks out there which allow access to anyone, in principle you have
+to authenticate yourself to access the services of an
+<acronym>SMB</acronym> server.  By default, &kde; will use the data
+entered in the <guilabel>Default user name</guilabel> and
+<guilabel>Default password</guilabel> fields to authenticate itself on
+<acronym>SMB</acronym> hosts. If you leave the field <guilabel>Default
+user name</guilabel> empty, &kde; will try to access
+<acronym>SMB</acronym> hosts without a username. If you leave the
+default password empty, it will try without a password. If &kde; is
+unsuccessful accessing the host using these settings, you will be
+asked for a username and a password.</para>
+
+<important><para>While it makes things more comfortable if &kde;
+stores your <acronym>SMB</acronym> password, this may be a security
+problem. If you are using <acronym>SMB</acronym> in a security
+conscious environment, you should not store your password here but
+rather enter it anew every time you need to access an
+<acronym>SMB</acronym> host.</para></important>
+
+<!-- not in kde 4
+<para>In the <guilabel>Workgroup</guilabel> field, you can enter your
+workgroup name.  If you don't know it, ask your system administrator
+or have a look at other already configured machines in your network.
+However, in most cases providing the workgroup name is not required,
+so you probably can also leave this empty.</para>
+
+<para>If the option <guilabel>Show hidden shares</guilabel> is
+checked, shares ending with a <quote>$</quote> will be shown.</para>
+-->
+</sect2>
+
+</sect1>
+
+</article>

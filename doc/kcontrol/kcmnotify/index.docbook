@@ -1,0 +1,159 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % English "INCLUDE" > <!-- change language only here -->
+]>
+
+<article id="kcmnotify" lang="&language;">
+<title>System Notification Settings</title>
+<articleinfo>
+
+<authorgroup>
+<author>&Mike.McBride; &Mike.McBride.mail;</author>
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
+</authorgroup>
+
+<date>2013-12-05</date>
+<releaseinfo>&kde; 4.12</releaseinfo>
+
+<keywordset>
+<keyword>KDE</keyword>
+<keyword>Systemsettings</keyword>
+<keyword>system notification</keyword>
+<keyword>notification</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="sys-notify">
+<title>System Notification Settings</title>
+
+<para>&kde;, like all applications, needs to inform the user when a
+problem occurs, a task is completed, or something has happened.  &kde;
+uses a set of <quote>System Notifications</quote> to keep the user
+informed on what is happening.</para>
+
+<para>Using this module, you can determine what &kde; does to communicate
+each event.</para>
+
+<para>This settings module consists of the two tabs <guilabel>Applications</guilabel> 
+and <guilabel>Player Settings</guilabel>.</para>
+
+<sect2 id="notify-applications">
+<title>Applications</title>
+<para>To configure a notification, simply select the application from the drop down box at the top
+of the dialog labeled <guilabel>Event source:</guilabel>.  This will lead to a list of 
+all configurable notifications for the application. The list of notifications includes 6 columns to 
+the left of the notification name.  These columns (from left to right) are:</para>
+
+<variablelist>
+<varlistentry>
+<term><guiicon>Play a sound</guiicon></term>
+<listitem><para>This does exactly what you think it does.  If an icon is present in this column, &kde; will play a specific sound over the speakers.  This is commonly used by games in &kde; for starting a new game, or other action within the game.</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guiicon>Show a message in a pop up</guiicon></term>
+<listitem><para>If an icon is present in this column, &kde; will open a message box and inform the user of the notification.  This is probably the most commonly selected option for alerting users to an error.</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guiicon>Log to a file</guiicon></term>
+<listitem><para>If an icon is present in this column, &kde; will write certain information to a file on disk for later retrieval.  This is useful for tracking problems or important system changes.</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guiicon>Mark taskbar entry</guiicon></term>
+<listitem><para>If an icon is present in this column, &kde; will cause the taskbar to flash until the user has clicked the taskbar entry.  This is most useful when you want the user to look at the program (such as a new email message was received, or the users name was said on an IRC channel).</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Speech</guilabel></term>
+<listitem><para>If a mark is in this checkbox, &kde; will cause the taskbar of the program sending the notification to flash until the user has clicked the taskbar entry.
+</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guiicon>Run command</guiicon></term>
+<listitem><para>If an icon is present in this column, a separate program will be executed when this notification is performed.  This can be used to execute a program to help restore data, shutdown a potentially compromised system or email another user to alert them to a problem.</para></listitem>
+</varlistentry>
+
+</variablelist>
+
+<sect3><title>Change a notification</title>
+<para>To make a change to a notification, click on the name of the notification once with the &LMB;.  The notification will be highlighted 
+and the checkboxes for all notification types are enabled.</para>
+
+<tip><para>You can have more than one event triggered by a single notification. As an example, it is easy to have a sound played and 
+a message box appear in response to a system notification.  One notification does not prevent other notifications from operating.</para></tip>
+
+<para>The following list details each of the notification types and how to use them. </para>
+
+<variablelist>
+<varlistentry>
+<term><guilabel>Play a sound</guilabel></term>
+<listitem><para>If a mark is in this checkbox, &kde; will play a sound everytime this notification is initiated. To specify the sound, use the text box to the right of the checkbox to enter the folder location of the sound file you want &kde; to play.  You can use the folder button (located to the far right of the dialog box) to browse your directory tree.  To hear a test of your sound, simply click on the play button (small button directly to the right of <guilabel>Play a sound</guilabel>.)</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Show a message in a pop up</guilabel></term>
+<listitem><para>If a mark is in this checkbox, &kde; will open a message box and inform the user of the notification.  The text of the box can not be changed from this dialog.</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Log to a file</guilabel></term>
+<listitem><para>If a mark is in this checkbox, &kde; will write certain information to a file on disk for later retrieval.  To specify the log file to use, enter the pathname in the text box to the right of the checkbox.  You can use the folder button (located to the far right of the dialog box) to browse your directory tree.  </para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Mark taskbar entry</guilabel></term>
+<listitem><para>If a mark is in this checkbox, &kde; will cause the taskbar of the program sending the notification to flash until the user has clicked the taskbar entry.</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Run command</guilabel></term>
+<listitem><para>If a mark is in this checkbox, a separate program will be executed when this notification is performed.  To specify the program to execute, enter the pathname in the text box to the right of the checkbox.  You can use the folder button (located to the far right of the dialog box) to browse your directory tree.</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Speech</guilabel></term>
+<listitem><para>If a mark is in this checkbox, &kde; will use Jovie to speak the event 
+message, event name or custom text.</para>
+<para>If you select <guilabel>Speak Custom Text</guilabel>, enter the text in the box.  
+You may use the following 
+substitution strings in the text:
+<simplelist>
+<member> <userinput>%e</userinput> Name of the event </member>
+<member> <userinput>%a</userinput> Application that sent the event </member>
+<member> <userinput>%m</userinput> Message sent by the application </member>
+</simplelist>
+</para></listitem>
+</varlistentry>
+</variablelist>
+
+<tip><para>You can use the icon columns (located to the left of the notifications) to quickly select or deselect the options. Clicking in the column with the &LMB; will toggle the notification on and off.</para></tip>
+</sect3>
+</sect2>
+
+<sect2>
+<title>Player Settings</title>
+
+<variablelist>
+<varlistentry>
+<term><guilabel>Use the &kde; sound system</guilabel></term>
+<listitem><para>If a mark is in this radio button, &kde; will play all sound notifications through the &kde; sound system.  You can adjust the volume of system notifications using the slider.</para>
+<note><para>The slider only affects &kde; system notifications.  Changes to this slider will not affect other sounds on your computer.</para></note></listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Use an external player</guilabel></term>
+<listitem><para>If a mark is in this radio button, &kde; will not use the &kde; sound system to play the sound.  This is a good choice if the sound format you want to use is not supported by the &kde; notification system. After checking the radio box, enter the full path and name of the program you want to use into the text field.  You can use the folder button (located along the right side) to browse the directory tree.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>No audio output</guilabel></term>
+<listitem><para>Disables all sound notifications.</para></listitem>
+</varlistentry>
+</variablelist>
+</sect2>
+</sect1>
+
+</article>

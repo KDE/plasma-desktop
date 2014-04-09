@@ -1,0 +1,145 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY nsplugins-kcontrol SYSTEM "nsplugin.docbook">
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % English "INCLUDE" > <!-- change language only here -->
+]>
+
+<article id="khtml-java-js" lang="&language;">
+<articleinfo>
+<title>Java and JavaScript</title>
+<authorgroup>
+<author>&Krishna.Tateneni; &Krishna.Tateneni.mail;</author>
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
+</authorgroup>
+
+<date>2009-11-24</date>
+<releaseinfo>&kde; 4.4</releaseinfo>
+
+<keywordset>
+<keyword>KDE</keyword>
+<keyword>Systemsettings</keyword>
+<keyword>konqueror</keyword>
+<keyword>browsing</keyword>
+<keyword>Java</keyword>
+<keyword>JavaScript</keyword>
+</keywordset>
+
+</articleinfo>
+<sect1 id="konq-browsing">
+<title>&Java; and JavaScript</title>
+
+<sect2 id="kbrowse-java">
+<title>&Java;</title>
+
+<para>&Java; allows applications to be downloaded and run by a web
+browser, provided you have the necessary software installed on your
+machine. Many web sites make use of &Java; (for example, online
+banking services or interactive gaming sites). You should be aware
+that running programs from unknown sources could pose a threat to the
+security of your computer, even if the potential extent of the damage
+is not great.</para>
+
+<para>The check box <guilabel>Enable Java globally</guilabel> allows
+you to turn &Java; support on for all web sites by default. You can
+also select to turn &Java; on or off for specific hosts. To add a
+policy for a specific host, click the <guibutton>New...</guibutton>
+button to bring up a dialog in which you can type the host name and
+then choose to accept or reject &Java; code from that particular host,
+which will add the domain to the list on the left of the page.</para>
+
+<para>You can select a host in the list, and click the
+<guibutton>Change...</guibutton> button to choose a different policy for
+that host. Clicking the <guibutton>Delete</guibutton> button removes the
+policy for the selected host; after deletion, the global settings will
+then apply to that host.</para>
+
+<para>Finally, the group of controls labeled <guilabel>Java Runtime
+Settings</guilabel> allows you to set some options for the way in
+which &Java; should run.</para>
+
+<para><guilabel>Use security
+manager</guilabel> is normally enabled by default.  This setting will
+cause the <acronym>JVM</acronym> to run with a Security Manager in place. This will keep
+applets from being able to read and write to your file system, creating
+arbitrary sockets, and other actions which could be used to compromise
+your system. Disable this option at your own risk. You can modify your 
+<filename>$<envar>HOME</envar>/.java.policy</filename> file with the
+&Java; policytool utility to give code downloaded from certain sites
+more permissions.</para>
+
+<para><guilabel>Use KIO</guilabel> will cause the
+<acronym>JVM</acronym>to use &kde;'s own <acronym>KIO</acronym>
+transports for network connections.</para>
+
+<para>The <guilabel>Shutdown applet server when inactive for more than</guilabel>
+check box allows you to save resources by closing the &Java; Applet
+Server when it is not in use, rather than leaving it running in the
+background.  Leaving this disabled may make &Java; applets start up
+faster, but it will use system resources when you are not using a
+&Java; applet.  If you enable this, you can set a timeout.</para>
+
+<para>You can either opt to have &konqueror; automatically detect the
+&Java; installation on your system, or specify the path to the
+installation yourself by selecting <guilabel>Path to Java
+executable or 'java'</guilabel>. You may want to choose the latter method, for
+instance, if you have multiple &Java; installations on your system,
+and want to specify which one to use. If the &Java; Virtual Machine
+you are using requires any special startup options, you can type them
+in the text box labeled <guilabel>Additional Java
+arguments</guilabel>.</para>
+
+</sect2>
+
+<sect2 id="kbrowse-javascript">
+<title>JavaScript</title>
+
+<para>Despite the name, JavaScript is not related at all to
+&Java;.</para>
+
+<para>The first part of this tab works the same as the &Java; settings.</para>
+
+<para>The checkbox <guilabel>Enable JavaScript globally</guilabel> allows
+you to turn JavaScript support on for all web sites by default. You
+can also select to turn JavaScript on or off for specific hosts. To
+add a policy for a specific host, click the
+<guibutton>New...</guibutton> button to bring up a dialog in which you
+can type the host name and then choose to accept or reject JavaScript
+code from that particular host, which will add the domain to the list
+on the left of the page.</para>
+
+<para>You can select a host in the list, and click the
+<guibutton>Change...</guibutton> button to choose a different policy for
+that host. Clicking the <guibutton>Delete</guibutton> button removes the
+policy for the selected host; after deletion, the global settings will
+then apply to that host.</para>
+<!-- missing section Debugging
+Enable debugger Enables builtin JavaScript debugger.
+Report errors Enables the reporting of errors that occur when JavaScript code is executed.
+How are errors reported? popup window? icon in status bar?
+-->
+<para>The final set of options in the section <guilabel>Global JavaScript 
+Policies</guilabel> determine what happens
+when a page uses JavaScript for specific actions.</para>
+
+<para>You can individually enable or disable the ability of JavaScript
+to manipulate your windows by moving, resizing or changing focus.  You
+can also disable JavaScript from changing the status bar text, so that
+for instance, you can always see where links will take you when
+clicked. The choices for these options are <guilabel>Allow</guilabel> and
+<guilabel>Ignore</guilabel>.</para>
+
+<para>For opening a new window, there is even more control.  You can
+set &konqueror; to <guilabel>Allow</guilabel> all such requests,
+<guilabel>Ask</guilabel> each time a request is made, or
+<guilabel>Deny</guilabel> all popup requests.</para>
+
+<para>The <guilabel>Smart</guilabel> setting will only allow
+JavaScript popup windows when you have explicitly chosen a link that
+creates one.</para>
+</sect2>
+
+</sect1>
+
+</article>

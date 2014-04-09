@@ -1,0 +1,101 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % English "INCLUDE" > <!-- change language only here -->
+]>
+
+<article id="bookmarks" lang="&language;">
+<articleinfo>
+
+<title>Bookmarks</title>
+<authorgroup>
+<author>
+<personname><firstname>Xavier</firstname><surname>Vello</surname></personname>
+<email>xavier.vello@gmail.com</email>
+</author>
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
+</authorgroup>
+
+<date>2010-09-24</date>
+<releaseinfo>0.2 (&kde; 4.5)</releaseinfo>
+
+<keywordset>
+<keyword>KDE</keyword>
+<keyword>KControl</keyword>
+<keyword>bookmarks</keyword>
+<keyword>KIO</keyword>
+</keywordset>
+</articleinfo>
+<sect1 id="conf">
+<title>Bookmarks home page</title>
+<para>This module lets you configure the bookmarks home page.</para>
+<para>To view the bookmarks home page enter <userinput>bookmarks:/</userinput> in 
+the location bar.</para>
+<para>The settings in this module are also accessible by entering 
+<userinput>bookmarks:/config</userinput> in the location bar.</para>
+<sect2 id="conf-general">
+<title>General settings</title>
+<variablelist>
+<varlistentry>
+<term><guilabel>Number of columns to show</guilabel></term>
+<listitem>
+<para>Folders are automatically distributed in several columns. The optimal number of columns depends on the width of the konqueror window and the number of bookmarks you have.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Show folder backgrounds</guilabel></term>
+<listitem>
+<para>Disable it on slow system to disable background images.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect2>
+
+<sect2 id="conf-bookmark">
+<title>Bookmarks</title>
+<variablelist>
+<varlistentry>
+<term><guilabel>Show bookmarks without folder</guilabel></term>
+<listitem>
+<para>If this option is unchecked, bookmarks at the root of the hierarchy (not in a folder) are not displayed. If checked, they are gathered in a "root" folder.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Flatten bookmarks tree</guilabel></term>
+<listitem>
+<para>Sub-folders are shown within their parent by default. If you activate this option, sub-folders are displayed on their own. It looks less nice but it may help if you have a very big folder you want to spread in two columns.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Show system places</guilabel></term>
+<listitem>
+<para>Show a box with KDE places (Home, Network, ...). Useful if you use konqueror as a file manager.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect2>
+
+<sect2 id="conf-cache">
+<title>Pixmap cache</title>
+<variablelist>
+<varlistentry>
+<term><guilabel>Disk cache size</guilabel></term>
+<listitem>
+<para>Specify how much disk space is used to cache the pixmaps.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Clear Cache</guilabel></term>
+<listitem>
+<para>Remove all cached images. This may be necessary if some favicons become corrupt and don't refresh automatically.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect2>
+</sect1>
+</article>

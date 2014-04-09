@@ -1,0 +1,208 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % English "INCLUDE" > <!-- change language only here -->
+]>
+
+<article id="cookies" lang="&language;">
+<articleinfo>
+<title>Cookies</title>
+<authorgroup>
+<author>&Krishna.Tateneni; &Krishna.Tateneni.mail;</author>
+<author>&Jost.Schenck; &Jost.Schenck.mail;</author>
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
+</authorgroup>
+
+<date>2012-11-11</date>
+<releaseinfo>&kde; 4.10</releaseinfo>
+
+<keywordset>
+<keyword>KDE</keyword>
+<keyword>Systemsettings</keyword>
+<keyword>cookie</keyword>
+</keywordset>
+
+</articleinfo>
+
+<sect1 id="cookie">
+<title>Cookies</title>
+
+<para>Cookies are a mechanism used by web sites to store and retrieve
+information using your browser.  For example, a web site may allow you
+to customize the content and layout of the pages you see, so that your
+choices are persistent across different visits to that web site.</para>
+
+<para>The web site is able to remember your preferences by storing a
+cookie on your computer. Then, on future visits, the web site retrieves
+the information stored in the cookie to format the content of the site
+according to your previously specified preferences.</para>
+
+<para>Thus, cookies play a very useful role in web browsing.
+Unfortunately, web sites often store and retrieve information in cookies
+without your explicit knowledge or consent. Some of this information may
+be quite useful to the web site owners, for example, by allowing them to
+collect summary statistics on the number of visits different areas of
+the web sites get, or to customize banner advertising.</para>
+
+<para>The cookies page allows you to set policies
+for the use of cookies when you are browsing the web with the
+&konqueror; web browser. </para>
+
+<warning><para>Note that the policies that you set using this control
+module will <emphasis>not</emphasis> apply to other web browsers such
+as &Netscape;.</para></warning>
+
+<sect2 id="cookie-policy">
+
+<title>Policy</title>
+
+<para>Using the <guilabel>Policy</guilabel> tab, you can configure the
+&kde; applications that will handle cookies. You can do this by specifying a
+general cookie policy as well as special cookie policies for certain
+domains or hosts.</para>
+
+<para>The top of the policy tab has a check box labeled <guilabel>Enable
+cookies</guilabel>. If you leave this unchecked, cookies will be
+completely disabled. However, this may make browsing rather
+inconvenient, especially as some web sites require the use of browsers
+with cookies enabled.</para>
+
+<para>You will probably want to enable cookies and then set
+specific policies on how you want them to be handled.</para>
+
+<para>The first group of options create settings that apply to all cookies.</para>
+
+<variablelist>
+<varlistentry>
+<term><guilabel>Only accept cookies from originating server</guilabel></term>
+<listitem>
+<para>Some pages try to set cookies from servers other than the one
+you are seeing the &HTML; page from.  For example,
+they show you advertisements, and the advertisements are from another
+computer, often one that belongs to a large advertising group.  These
+advertisements may try to set a cookie which would allow them to
+track the pages you view across multiple web sites.</para>
+<para>Enabling this option will mean only cookies that come from the
+same web server as you are explicitly connecting to will be
+accepted.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Automatically accept session cookies</guilabel></term>
+<listitem>
+
+<para>An increasingly common use for cookies is not to track your
+movements across many visits to a web site, but to just follow what you
+do during one single visit.  Session cookies are saved as long as you
+are looking at the site, and deleted when you leave it.</para>
+
+<para>Web sites can use this information for various things, most
+commonly it is a convenience so that you do not have to keep logging in
+to view pages.  For example, on a webmail site, without some kind of
+session <acronym>ID</acronym>, you would have to give your password
+again for each email you want to read.  There are other ways to
+achieve this, but cookies are simple and very common.</para>
+
+<para>Enabling this option means that session cookies are always
+accepted, even if you don't accept any other kind, and even if you
+choose to reject cookies from a particular site, session cookies from
+that site will be accepted.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<para>The section for <guilabel>Default Policy</guilabel> sets some
+further options that are mutually exclusive &mdash; you can choose only one
+of these options as the default, but you are free to set a different
+option for any specific web server.</para>
+<note><para>Site specific policies always take precedence over the default 
+policy.</para></note>
+
+<variablelist>
+<varlistentry>
+<term><guilabel>Accept all cookies</guilabel></term>
+<listitem>
+<para>If this option is selected, all cookies will be accepted without
+asking for confirmation.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Accept until end of session</guilabel></term>
+<listitem>
+<para>Cookies will be accepted, but they will expire at the end
+of the session.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Ask for confirmation</guilabel></term>
+<listitem>
+<para>If this option is selected, you will be asked for confirmation
+every time a cookie is stored or retrieved. You can selectively accept
+or reject each cookie. The confirmation dialog will also allow you to
+set a domain specific policy, if you do not want to confirm each
+cookie for that domain.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Reject all cookies</guilabel></term>
+<listitem>
+<para>If this option is selected, all cookies will be rejected without
+asking for confirmation.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<para>In addition to the default policy for handling of cookies, which you can
+set by selecting one of the three options described above, you can also set
+policies for specific host domains using the controls in the <guilabel>Site
+Policy</guilabel> group.</para>
+
+<para>The Ask, Accept, Accept until end of session, or Reject policy can be applied to a specific
+domain by clicking on the <guibutton>New...</guibutton> button, which
+brings up a dialog. In this dialog, you can type the name of the
+domain (with a leading dot), then select the policy you want to apply
+to this domain. Note that entries may also get added while you are
+browsing, if the default policy is to ask for confirmation, and you
+choose a general policy for a specific host (for example, by selecting
+<guilabel>Reject</guilabel> when asked to
+confirm a cookie).</para>
+
+<para>You can also select a specific host domain from the list and click the
+<guibutton>Change</guibutton> button to choose a different policy for that
+domain than the one shown in the list.</para>
+
+<para>To delete a domain specific policy, choose a domain from the list, and
+then click the <guibutton>Delete</guibutton> button. The default policy will
+apply to domains which have been deleted from the list.</para>
+
+</sect2>
+
+<sect2 id="cookie-management">
+<title>Management</title>
+
+<para>In the <guilabel>Management</guilabel> tab you can browse and selectively
+delete cookies that have been set in the past.</para>
+
+<para>In the upper part of this dialog, you can see a list of domains displayed
+  as a tree. Click on the little <guiicon>&gt;</guiicon> next to a domain to see all
+cookies that have been set for this particular target domain. If you select one
+of these cookies, you will notice that its contents will show up in the frame
+<guilabel>Details</guilabel> below.</para>
+
+<para>By clicking the <guibutton>Delete</guibutton> button you can now delete the selected
+cookie. Click <guibutton>Delete All</guibutton> to delete all cookies stored.</para>
+
+<para>If a domain is selected, you can use <guibutton>Configure Policy</guibutton> to set 
+a site policy.</para>
+
+<para>Choose <guibutton>Reload List</guibutton> to reload the list
+from your hard disk. You might want to do this if you have had the
+module open and are testing web sites, or have made many changes in the
+module itself.</para>
+
+</sect2>
+
+</sect1>
+
+</article>

@@ -1,0 +1,367 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY calligrawords "<application>Calligra Words</application>">
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % English "INCLUDE" > <!-- change language only here -->
+]>
+
+<article id="filetypes" lang="&language;">
+<articleinfo>
+
+<title>File Associations</title>
+<authorgroup>
+<author>&Mike.McBride; &Mike.McBride.mail;</author>
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
+</authorgroup>
+
+<date>2013-12-05</date>
+<releaseinfo>&kde; 4.12</releaseinfo>
+
+<keywordset>
+<keyword>KDE</keyword>
+<keyword>Systemsettings</keyword>
+<keyword>files association</keyword>
+<keyword>association</keyword>
+</keywordset>
+</articleinfo>
+<sect1 id="file-assoc">
+<title>File Associations</title>
+
+<sect2 id="file-assoc-intro">
+<title>Introduction</title>
+
+<para>One of the most convenient aspects of &kde;, is its ability to
+automatically match a data file with its application.  As an example,
+when you click on your favorite &calligrawords; document in the filemanager, &kde;
+automatically starts &calligrawords;, and automatically loads that file into
+&calligrawords; so you can begin working on it.</para>
+
+<para>In the example above, the &calligrawords; Data file is
+<emphasis>associated</emphasis> with &calligrawords; (the application).  These
+file associations are crucial to the functioning of &kde;.</para>
+
+<para>When &kde; is installed, it automatically creates hundreds of file
+associations to many of the most common data types. These initial
+associations are based on the most commonly included software, and the
+most common user preferences.</para>
+
+<para>Unfortunately, &kde; can not:</para>
+
+<itemizedlist>
+<listitem><para>predict every possible combination of software and data files</para></listitem>
+<listitem><para>prepare for file formats not yet invented</para></listitem>
+<listitem><para>or predict everyone's favorite application for certain file formats</para></listitem>
+</itemizedlist>
+
+<para>You can change your current file associations or add new file
+associations using this module.</para>
+
+<para>Each file association is recorded as a mime type.
+&MIME; stands for <quote>Multipurpose Internet Mail
+Extensions</quote>. It allows a computer to determine the type of file,
+without opening and analyzing the format of each and every file.</para>
+
+</sect2>
+
+<sect2 id="file-assoc-use">
+<title>How to use this module</title>
+
+<para>You can start this module  
+by opening &systemsettings; and selecting <guilabel>File Associations</guilabel> in the 
+<guilabel>Common Appearance and Behavior</guilabel> category. Alternatively, you can start it by
+typing <command>kcmshell5 filetypes</command> from the terminal or &krunner;.</para>
+
+<para>The file associations are organized into several categories, and
+at a minimum you will have:</para>
+
+<orderedlist>
+<listitem><para>Application</para></listitem>
+<listitem><para>Audio</para></listitem>
+<listitem><para>Image</para></listitem>
+<listitem><para>Inode</para></listitem>
+<listitem><para>Message</para></listitem>
+<listitem><para>Multipart</para></listitem>
+<listitem><para>Text</para></listitem>
+<listitem><para>Video</para></listitem>
+</orderedlist>
+
+<para>All of the file associations are sorted into one of these
+categories.</para>
+
+<note><para>There is no functional difference between any of the
+categories.  These categories are designed to help organize your file
+associations, but they do not alter the associations in any way.
+</para></note>
+
+<para>The categories are listed in the box labeled <guilabel>Known
+Types</guilabel>.</para>
+
+<para>You can explore each of these categories, and see the file
+associations contained within each one, by simply double-clicking on the
+category name.  You will be presented with a list of the associated
+mime-types under that category.</para>
+
+<tip><para>You can also search for a particular &MIME; type by using the
+search box. The search box is labeled <guilabel>Find file type or filename
+pattern</guilabel> and is located above the category list.</para>
+
+<para>Simply type the first letter of the &MIME; type you are interested
+in.  The categories are automatically expanded, and only the mime-types
+that include that letter are displayed.</para>
+
+<para>You can then enter a second character and the mime-types will be
+further limited to mime types containing those two
+characters.</para></tip>
+
+<sect3 id="file-assoc-use-add">
+<title>Adding a new mime type</title>
+
+<para>If you want to add a new &MIME; type to your file associations,
+you can click on the <guibutton>Add...</guibutton> button.  A small
+dialog box will appear.  You select the category from the drop down
+box labeled <guilabel>Group</guilabel>, and type the &MIME; name in the blank labeled <guilabel>Type
+name</guilabel>.  Click <guibutton>OK</guibutton> to add the new mime
+type, or click <guibutton>Cancel</guibutton> to not add any new
+mime-types.</para>
+
+</sect3>
+
+<sect3 id="file-assoc-use-del">
+<title>Removing a mime type</title>
+
+<para>If you want to remove a &MIME; type, simply select the &MIME;
+type you want to delete by clicking once with the mouse on the &MIME;
+type name.  Then click the button labeled
+<guibutton>Remove</guibutton>.  The &MIME; type will be deleted
+immediately.</para>
+
+</sect3>
+
+<sect3 id="file-assoc-use-edit">
+<title>Editing a mime types properties</title>
+
+<para>Before you can edit a &MIME; types property, you must first
+specify which &MIME; type.  Simply browse through the categories until
+you find the &MIME; type you want to edit, then click once on it with
+the mouse.</para>
+
+<para>As soon as you have selected the &MIME; type, the current values of
+the &MIME; type will appear in the module window.</para>
+
+<para>You will notice the current values are split into two tabs:
+<guilabel>General</guilabel> and <guilabel>Embedding</guilabel></para>
+
+<variablelist>
+<varlistentry>
+<term><guilabel>General</guilabel></term>
+<listitem>
+<para>There are 4 properties for each &MIME; type in this tab:</para>
+
+<orderedlist>
+<listitem><para><guilabel>Mime Type Icon</guilabel> is the icon that
+will be visible when using &dolphin; or &konqueror; as a file
+manager.</para></listitem>
+<listitem><para><guilabel>Filename Patterns</guilabel> is a search
+pattern which &kde; will use to determine the &MIME; type.</para></listitem>
+<listitem><para><guilabel>Description</guilabel> is a short description
+of the file type. This is for your benefit only.</para></listitem>
+<listitem><para><guilabel>Application Preference Order</guilabel>
+determines which applications will be associated with the specified
+&MIME; type.</para></listitem>
+</orderedlist>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Embedding Tab</guilabel></term>
+<listitem>
+<para>The Embedding tab allows you to determine if a file will be
+viewed within a filemanager window, or by starting the
+application.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</sect3>
+
+<sect3 id="file-assoc-use-icon">
+<title>Changing the Icon</title>
+
+<para>To change the icon, simply click on the Icon button.  A dialog box
+will appear, which will show you all available icons.  Simply click once
+with the mouse on the icon of your choice, and click
+<guibutton>OK</guibutton>.</para>
+
+</sect3>
+
+<sect3 id="file-assoc-use-pattern">
+<title>Editing the mime-type patterns</title>
+
+<para>The box labeled <guilabel>Filename Patterns</guilabel>, determines
+what files will be included within this mime-type.</para>
+
+<para>Usually, files are selected based on their suffix.  (Examples:
+Files that end with <literal role="extension">.wav</literal> are sound
+files, using the WAV format and files that end in <literal
+role="extension">.c</literal> are program files written in C).</para>
+
+<para>You should enter your filename mask in this combo box.</para>
+
+<para>The asterisk (<literal>*</literal>) is a wildcard character that
+will be used with nearly every mime type mask. A complete discussion
+of wildcards is beyond the scope of this manual, but it is important
+to understand that the asterisk (in this context),
+<quote>matches</quote> any number of characters.  As an example:
+<userinput>*.pdf</userinput> will match
+<filename>Datafile.pdf</filename>, <filename>Graphics.pdf</filename>
+and <filename>User.pdf</filename>, but not <filename>PDF</filename>,
+<filename>Datafile.PDF</filename>, or
+<filename>.pdf</filename>.</para>
+
+<tip><para>It is very beneficial to have multiple masks.  One for lower
+case, one for upper case, &etc;  This will help ensure that &kde; can
+determine the file type more accurately.</para></tip>
+
+</sect3>
+
+<sect3 id="file-assoc-use-desc">
+<title>Editing a mime types description.</title>
+
+<para>You can type a short description of the &MIME; type in the text
+box labeled <guilabel>Description</guilabel>.  This label is to help
+you, it does not affect the function of the &MIME; type.</para>
+
+</sect3>
+
+<sect3 id="file-assoc-use-app">
+<title>Editing the application associations</title>
+
+<para>There are five buttons (<guibutton>Move Up</guibutton>,
+<guibutton>Move Down</guibutton>, <guibutton>Add</guibutton>, <guibutton>Edit</guibutton> and
+<guibutton>Remove</guibutton>) and a list box (which lists the
+applications) which are used to configure the applications.</para>
+
+<para>The list box lists all of the applications associated with a
+specific &MIME; type.  The list is in a specific order.  The top
+application is the first application tried.  The next application down
+the list is the second, &etc;</para>
+
+<note><para>What do you mean there is more than one application per
+&MIME; type?  Why is this necessary?</para>
+
+<para>We started out by saying that &kde; comes preconfigured with
+hundreds of file associations.  The reality is, each system that &kde;
+is installed on has a different selection of applications.  By
+allowing multiple associations per &MIME; type, &kde; can continue to
+operate when a certain application is not installed on the
+system.</para>
+
+<para>As an example:</para>
+<para>For the &MIME; type <literal>pdf</literal>, there are two
+applications associated with this file type.  The first program is
+called &okular;.  If your system does not
+have &okular; installed, then &kde;
+automatically starts the second application &krita;.  
+As you can see, this will help keep &kde; running
+strong  as you add and subtract applications.</para></note>
+
+<para>We have established that the order is important.  You can change
+the order of the applications by clicking once with the mouse on the
+application you want to move, and then clicking either <guibutton>Move
+Up</guibutton> or <guibutton>Move Down</guibutton>.  This will shift
+the currently selected application up or down the list of
+applications. </para>
+
+<para>You can add new applications to the list by clicking the button
+labeled <guibutton>Add</guibutton>.  A dialog box will appear. Using the
+dialog box, you can select the application you want to use for this mime
+type.  Click <guibutton>OK</guibutton> when you are done, and the
+application will be added to the current list.</para>
+
+<para>To change the options of an application for a particular &MIME; type 
+select it in the list and then press the <guibutton>Edit...</guibutton> button. 
+This opens a new dialog with <guilabel>General</guilabel>, 
+<guilabel>Permissions</guilabel>, <guilabel>Applications</guilabel> and
+<guilabel>Preview</guilabel> tabs.
+On the <guilabel>Applications</guilabel> tab you can edit <guilabel>Name</guilabel>,
+<guilabel>Description</guilabel> and <guilabel>Comment</guilabel>.
+In the <guilabel>Command</guilabel> field you can have several place holders 
+following the command, which will be replaced with the actual values 
+when the actual program is run:</para>
+<itemizedlist>
+<listitem><para>%f - a single file name</para></listitem>
+<listitem><para>%F - a list of files; use for applications that can open several local files 
+at once</para></listitem>
+<listitem><para>%u - a single URL</para></listitem>
+<listitem><para>%U - a list of URLs</para></listitem>
+<listitem><para>%d - the folder of the file to open</para></listitem>
+<listitem><para>%D - a list of folders</para></listitem>
+<listitem><para>%i - the icon</para></listitem>
+<listitem><para>%m - the mini-icon</para></listitem>
+<listitem><para>%c - the caption</para></listitem>
+</itemizedlist>
+
+<para>You can remove an application (thereby ensuring that the
+application will never run with this &MIME; type by clicking once on the
+name of the application, and clicking the <guibutton>Remove</guibutton>
+button.</para>
+
+<tip><para>It is a good idea to use the <guibutton>Move Up</guibutton>
+and <guibutton>Move Down</guibutton> buttons to adjust the unwanted
+application to a lower position in the list, rather than deleting the
+application from the list entirely.  Once you have deleted an
+application, if your preferred application should become compromised,
+there will not be an application to view the data document.</para></tip>
+
+</sect3>
+
+<sect3 id="file-assoc-embedding">
+<title>Embedding</title>
+<para>These settings are valid only for &konqueror; used as file manager, &dolphin;
+is not able to use embedded views and opens a file always in the associated application.</para>
+<para>By clicking on the <guilabel>Embedding</guilabel> tab, you are
+presented with four radio buttons in the <guilabel>Left click
+action</guilabel> group.  These determine how the filemanager views the selected
+&MIME; type:</para>
+
+<variablelist>
+<varlistentry><term>Show file in embedded viewer</term>
+<listitem><para>If this is selected, the file will be shown <emphasis>within</emphasis> the filemanager window.</para></listitem></varlistentry>
+<varlistentry><term>Show file in separate viewer</term>
+<listitem><para>This will cause a separate window to be created when showing this mime-type.</para></listitem></varlistentry>
+<varlistentry><term>Use settings for 'application' group</term>
+<listitem><para>This will cause the mime-type to use the settings for the mime-type group.
+(if you are editing an audio mime type, then the settings for the audio group are used).</para></listitem></varlistentry>
+<varlistentry><term>Ask whether to save to disk instead</term>
+<listitem><para>This setting applies only to &konqueror; in browser mode and determines
+if the file is shown in an embedded viewer or if you are asked to save the file to disk instead.</para></listitem></varlistentry>
+</variablelist>
+
+<para>Below this is a listbox labeled <guilabel>Services Preference
+Order</guilabel>.</para>
+
+<para>When you use a filemanager like &dolphin; or &konqueror;, you can
+<mousebutton>right</mousebutton> mouse click, and a menu will with an
+entry labeled <guimenu>Open with...</guimenu> will appear.  This box
+lists the applications that will appear, in the order they will
+appear, under this menu.</para>
+
+<para>You can use the <guibutton>Move Up</guibutton> and
+<guibutton>Move Down</guibutton> buttons to change the order.</para>
+
+</sect3>
+
+<sect3 id="file-assoc-use-done">
+<title>Making changes permanent</title>
+
+<para>When you are done making any changes to mime types, you can click
+<guibutton>Apply</guibutton> to make your changes permanent, but keep
+you in this module.</para>
+
+</sect3>
+</sect2>
+
+</sect1>
+
+</article>

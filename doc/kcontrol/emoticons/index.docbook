@@ -1,0 +1,168 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % English "INCLUDE">
+]>
+<article id="emoticons" lang="&language;">
+<articleinfo>
+<title>Emoticons</title>
+<authorgroup>
+<author>&Anne-Marie.Mahfouf;</author>
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
+</authorgroup>
+
+<date>2013-12-05</date>
+<releaseinfo>&kde; 4.12</releaseinfo>
+
+<keywordset>
+<keyword>KDE</keyword>
+<keyword>System Settings</keyword>
+<keyword>emoticons</keyword>
+<keyword>KCMEmoticons</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_emoticons">
+<title><guilabel>Emoticons Themes Manager</guilabel></title>
+<sect2 id="icons-intro">
+<title>Introduction</title>
+
+<para>
+<screenshot>
+<screeninfo>Screenshot of the Emoticons Theme Manager</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="emoticons.png" format="PNG"/>
+    </imageobject>
+     <textobject>
+      <phrase>The Emoticons Theme Manager</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para>Emoticons can be used in several &kde; applications: &kopete;, &konversation;, &kmail;... This module offers you to easily manage your emoticons sets. You can:</para>
+
+<itemizedlist>
+<listitem><para>add emoticons themes</para></listitem>
+<listitem><para>remove emoticons themes</para></listitem>
+<listitem><para>install an existing theme</para></listitem>
+<listitem><para>add, remove or edit emoticons within a theme</para></listitem>
+</itemizedlist>
+
+<important><para>Please note that you will set emoticons themes per application.</para></important>
+
+<para>
+The module is separated in two parts: on the left you can manage your themes and on the right you can manage emoticons within themes.
+</para>
+
+<para>
+An emoticon consists in two parts: an icon (typically a <filename>.png</filename>, <filename>.mng</filename> or <filename>.gif</filename> picture) and a text describing the emoticon. The text can be some ASCII symbols like <userinput>]:-></userinput> or the emoticon short description enclosed within <userinput>*</userinput> like <userinput>*FRIEND*</userinput>. The user types the symbol or the text and the emoticon icon replaces it.
+</para>
+
+<para>
+The emoticons themes will be saved locally in your home in <filename class="directory">$KDEHOME/share/emoticons</filename>.
+</para>
+
+</sect2>
+
+<sect2 id="themes">
+<title>Emoticons Themes</title>
+
+<para>
+This section allows you to manage emoticons themes.
+</para>
+
+<variablelist>
+<varlistentry><term><guilabel>Require spaces around emoticons</guilabel></term>
+<listitem>
+<para>
+When this option is checked, you need to separate the emoticon with a white space before and after it so it is changed to an icon. If you type "Hello:-)" then this string will stay as it is while if you type "Hello :-)" you will get "Hello" followed by the :-) emoticon.
+</para>
+<para>
+When this option is not checked (default), each emoticon string will be replaced by its icon.
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry><term><guilabel>New Theme...</guilabel></term>
+<listitem>
+<para>
+You can create your own new theme from scratch. Clicking on this button brings a dialog asking for the name of the new theme. You can then use the <guibutton>Add...</guibutton> button on the right to create new emoticons and their associated text.
+</para>
+</listitem>
+</varlistentry>
+<varlistentry><term><guilabel>Get New Icon Themes...</guilabel></term>
+<listitem>
+<para>
+You need to be connected to the Internet to use this action. A dialog displays a list of emoticons themes from <ulink url="http://www.kde-look.org">http://www.kde-look.org</ulink> and you can install one by clicking the <guibutton>Install</guibutton> button on the right side of the theme description in the list.
+</para>
+</listitem>
+</varlistentry>
+<varlistentry><term><guilabel>Install Theme File...</guilabel></term>
+<listitem>
+<para>
+This action allows you to install a theme you downloaded yourself. A theme file is an archive file, usually a <filename>.tar.gz</filename> or a <filename>.zip</filename> file or any other archive files. A dialog asks you for the location of this local archive file and after you entered or dragged the URL and clicked <guibutton>OK</guibutton>, the theme is installed and will appear in the themes list.
+</para>
+</listitem>
+</varlistentry>
+<varlistentry><term><guilabel>Remove Theme</guilabel></term>
+<listitem>
+<para>
+This action will remove the selected theme from your disk. Select the theme you want to remove in the list. Click the <guibutton>Remove Theme</guibutton> button. This theme will be removed from the disk if you click <guibutton>Apply</guibutton>. 
+</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</sect2>
+
+<sect2 id="emoticons-management">
+<title>Emoticons Management</title>
+
+<para>
+This section allows you to manage emoticons within the selected theme. The list on the right displays all emoticons of the selected theme. You can add, edit or remove any emoticon. Select a theme in the list on the left and then select the action you want to perform.
+</para>
+
+<variablelist>
+<varlistentry><term><guilabel>Add...</guilabel></term>
+<listitem>
+<para>
+This button allows you to add an emoticon to the selected theme. The dialog asks you to choose an icon for your emoticon and to enter the corresponding ASCII symbol or text attached to it. After that, clicking <guibutton>OK</guibutton> will add your new emoticon in the emoticon list, you will see the icon and the corresponding text displayed. If you want to modify either the icon or the text, you can use the <guibutton>Edit...</guibutton> button described below.
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry><term><guilabel>Edit...</guilabel></term>
+<listitem>
+<para>
+The <guibutton>Edit...</guibutton> button allows you to change either the icon or the text of the selected emoticon. You need to click the <guibutton>OK</guibutton> button to validate this action.
+</para>
+</listitem>
+</varlistentry>
+<varlistentry><term><guilabel>Remove</guilabel></term>
+<listitem>
+<para>
+This will remove the selected emoticon from the selected theme. You need to click the <guibutton>Yes</guibutton> button to validate this action.
+</para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect2>
+
+</sect1>
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

@@ -1,0 +1,633 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % English "INCLUDE" > <!-- change language only here -->
+]>
+
+<article id="language" lang="&language;">
+<articleinfo>
+<title>Country/Region &amp; Language</title>
+<authorgroup>
+<author>&Mike.McBride; &Mike.McBride.mail;</author>
+<author>&Krishna.Tateneni; &Krishna.Tateneni.mail;</author>
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
+ </authorgroup>
+
+	  <date>2013-12-05</date>
+	  <releaseinfo>4.12</releaseinfo>
+
+	  <keywordset>
+		<keyword>KDE</keyword>
+		<keyword>Systemsettings</keyword>
+		<keyword>locale</keyword>
+		<keyword>country</keyword>
+		<keyword>language</keyword>
+	  </keywordset>
+</articleinfo>
+
+
+<sect1 id="locale">
+
+<title>Country/Region &amp; Language</title>
+
+<para>
+This module of the &kde; &systemsettings; allows you to select customization
+options that depend on the region of the world that you happen to live in.
+There are seven different tabs in this module, each of which is described in
+detail in the following sections.
+</para>
+
+<para>
+In most cases, you can simply select the country and the language, and the
+other options will be set in an appropriate manner.
+</para>
+
+<para>
+Below the tabs of this module you can see a preview of what the settings look
+like. In addition to positive and negative numbers, you can see how positive
+and negative currency values, long and short dates, and times are displayed.
+When you change any of the settings, the preview shows the effects of the
+changes before you apply them.
+</para>
+
+<para>
+Each setting option in the various tabs has an individual <inlinemediaobject>
+<imageobject><imagedata fileref="oxygen-22x22-document-revert.png" format="PNG"/>
+</imageobject></inlinemediaobject> default button which
+is activated whenever that setting is different to your country default value.
+Clicking on the button will restore only that setting to your Country default.
+</para>
+
+
+<sect2 id="locale-country">
+
+<title>Country</title>
+
+<para>
+In this tab you can select the country or region that you want to use.
+</para>
+
+<para>
+The <guilabel>Country</guilabel> drop down box contains the list of available
+countries and will initially show your currently selected country. If the
+selection shows <quote>System Country</quote> then you have not set a country
+and are defaulting to the Country set by the system, which will also be shown.
+Changing the country will automatically change the settings to the defaults for
+that country, except were you have set your own settings which will be left
+unchanged.  You can easily see where your personal settings differ from the
+country settings by looking at the Default button next to the individual
+setting. If the button is enabled then your personal setting is different and
+you can click on the button to restore the country setting for that option
+only.
+</para>
+
+</sect2>
+
+
+<sect2 id="locale-languages">
+
+<title>Languages</title>
+
+<para>
+In this tab you can set your preferred languages for the &kde; Workspace and
+Applications to be displayed in.
+</para>
+
+<para>
+The &kde; Workspace and Applications are written in American English and are
+translated into many different languages by teams of volunteers. These
+translations need to be installed first before you can choose to use them. The
+list of <guilabel>Available Languages</guilabel> shows what KDE translations
+are installed and available on your system. If the language you want to use is 
+not shown in this list then you will need to install it using the usual method 
+for your system. Your system may have enabled the
+<guilabel>Install more languages</guilabel> button to make this easy for you.
+</para>
+
+<para>
+The <guilabel>Preferred Languages</guilabel> list shows the languages that will
+be used when displaying the &kde; Workspace and Applications. Because not all
+of the KDE Workspace and Applications may be translated into every language
+&kde; will try to find suitable translations for you by working down the
+<guilabel>Preferred Languages</guilabel> list until it finds a translation. If
+none of your preferred languages have a required translation then the original
+American English will be used.
+</para>
+
+<para>
+You can add a language to the <guilabel>Preferred Languages</guilabel> list by
+selecting it in the <guilabel>Available Languages</guilabel> and then clicking
+on the Add arrow button. You can remove a language from the
+<guilabel>Preferred Languages</guilabel> list by selecting it and then clicking
+on the Remove arrow button. You can change the order of preference in the
+<guilabel>Preferred Languages</guilabel> list by selecting a language and
+clicking on the Up or Down arrow button.
+</para>
+
+<para>Only languages listed in <guilabel>Preferred Languages</guilabel> and 
+<guilabel>Available Languages</guilabel> will be offered as options  
+for <guilabel>Primary language</guilabel> and <guilabel>Fallback language</guilabel> 
+in the <guilabel>Switch Application Language</guilabel> dialog of the 
+<guimenu>Help</guimenu> menu.
+</para>
+
+<note>
+<para>
+Language and Country/Region are independent settings. Changing a language does
+<emphasis>not</emphasis> automatically change the settings for numbers,
+currency &etc; to the corresponding country or region. It will only change the
+language used in displaying dates, such as month names.
+</para>
+</note>
+
+</sect2>
+
+
+<sect2 id="locale-numbers">
+
+<title>Numbers</title>
+
+<para>
+On this tab, you can select options for how numbers are displayed. The defaults
+are selected automatically based on the country which is currently selected.
+</para>
+
+<para>In the first drop down box you can define the <guilabel>Digit grouping</guilabel> 
+used to display numbers.</para>
+
+<para>
+In the <guilabel>Group separator</guilabel> text box you can type the character
+that you want to use to separate groups of digits in numbers, usually a
+<userinput>.</userinput> or a <userinput>,</userinput>. You should ensure that
+this value is different to the <guilabel>Decimal separator</guilabel> setting.
+The drop-down box provides a list of common values to choose from.
+</para>
+
+<para>
+In the <guilabel>Decimal separator</guilabel> text box you can type the
+character that you want to use to separate the decimal portion of numbers,
+usually a <userinput>.</userinput> or a <userinput>,</userinput>. You should
+ensure that this value is different to the <guilabel>Group separator</guilabel>
+setting. The drop-down box provides a list of common values to choose from.
+</para>
+
+<para>
+In the <guilabel>Decimal places</guilabel> spin box you can set the number of
+decimal places displayed for numeric values, &ie; the number of digits
+<emphasis>after</emphasis> the decimal separator.
+</para>
+
+<para>
+In the <guilabel>Positive sign</guilabel> text box you can type the character
+that you want to use to indicate positive numbers.  You should ensure that this
+value is different to the <guilabel>Negative sign</guilabel> setting.  The
+drop-down box provides a list of common values to choose from. This value may
+also be used for monetary values depending on the
+<guilabel>Positive format</guilabel> selected in the <guilabel>Money</guilabel>
+tab.
+</para>
+
+<para>
+In the <guilabel>Negative sign</guilabel> text box you can type the character
+that you want to use to indicate negative numbers.  You should ensure that this
+value is different to the <guilabel>Positive sign</guilabel> setting.  The
+drop-down box provides a list of common values to choose from. This value may
+also be used for monetary values depending on the
+<guilabel>Negative format</guilabel> selected in the <guilabel>Money</guilabel>
+tab.
+</para>
+
+<para>
+The <guilabel>Digit set</guilabel> drop down box lists digit sets which may be
+used instead of Arabic digits when displaying numbers. If you select a digit
+set other than Arabic, it will be applied only to numbers which appear in a
+language context that uses that digit set while Arabic digits are still going
+to be used elsewhere, &eg; Arabic-Indic digits will be applied to Arabic but
+not to American English.
+</para>
+
+<para>
+Note that digit grouping, group separator, decimal separator, decimal places, positive format,
+negative format and the digit set used to display monetary values has to be set
+separately on the <guilabel>Money</guilabel> tab.
+</para>
+
+</sect2>
+
+
+<sect2 id="locale-money">
+
+<title>Money</title>
+
+<para>
+On this tab, you can select options for how monetary values are displayed. The
+defaults are selected automatically based on the country which is currently
+selected.
+</para>
+
+<para>
+In the <guilabel>Currency</guilabel> drop-down box you can choose the currency
+you want to use when displaying monetary values.  This will default to the main
+currency in use in your selected country. You can choose a different currency
+from the drop-down box, which displays the names of all available currencies
+their ISO 4217 standard Currency Code. The currencies used in your selected
+country are listed at the top, followed by all the other currencies. Changing
+the currency will also update the <guilabel>Currency symbol</guilabel> to use
+the default symbol for that currency, but no other format settings will be
+changed.
+</para>
+
+<para>
+In the <guilabel>Currency symbol</guilabel> drop-down box you can choose the
+currency symbol you want to use when displaying monetary values.  This will
+default to the usual symbol of the currency you have selected in the
+<guilabel>Currency</guilabel> drop-down box. This will only allow you to select
+a valid currency symbol for the currency code to prevent inconsistent choices,
+such as choosing US Dollars but showing the Pound Sterling symbol £ instead.
+This setting will automatically be changed when you change the
+<guilabel>Currency</guilabel> setting.
+</para>
+
+<para>In the next drop down box you can define the <guilabel>Digit grouping</guilabel> 
+used to display monetary values.</para>
+
+<para>
+In the <guilabel>Group separator</guilabel> text box you can type the character
+that you want to use to separate groups of digits in monetary values, usually a
+<userinput>.</userinput> or a <userinput>,</userinput>. You should ensure that
+this value is different to the <guilabel>Decimal separator</guilabel> setting.
+The drop-down box provides a list of common values to choose from.
+</para>
+
+<para>
+In the <guilabel>Decimal separator</guilabel> text box you can type the
+character that you want to use to separate the decimal portion of monetary
+values, usually a <userinput>.</userinput> or a <userinput>,</userinput>. You
+should ensure that this value is different to the
+<guilabel>Group separator</guilabel> setting. The drop-down box provides a list
+of common values to choose from.
+</para>
+
+<para>
+In the <guilabel>Decimal places</guilabel> spin box you can set the number of
+decimal places displayed for monetary values, &ie; the number of digits
+<emphasis>after</emphasis> the decimal separator.
+</para>
+
+<para>
+In the <guilabel>Positive format</guilabel> drop-down box you can select how
+you want positive monetary values to be displayed. The drop-down box displays a
+list of four sample formats that you can choose from, combining the options for
+where the <guilabel>Currency symbol</guilabel> and the numeric value
+<guilabel>Positive sign</guilabel> are displayed. You can also choose to
+replace the numeric value <guilabel>Positive sign</guilabel> with brackets.
+</para>
+
+<para>
+In the <guilabel>Negative format</guilabel> drop-down box you can select how
+you want negative monetary values to be displayed. The drop-down box displays a
+list of ten sample formats that you can choose from, combining the options for
+where the <guilabel>Currency symbol</guilabel> and the numeric value
+<guilabel>Negative sign</guilabel> are displayed. You can also choose to
+replace the numeric value <guilabel>Negative sign</guilabel> with brackets.
+</para>
+
+<para>
+The <guilabel>Digit set</guilabel> drop down box lists digit sets which may be
+used instead of Arabic digits when displaying money. If you select a digit
+set other than Arabic, it will be applied only to numbers which appear in a
+language context that uses that digit set while Arabic digits are still going
+to be used elsewhere, &eg; Arabic-Indic digits will be applied to Arabic but
+not to American English.
+</para>
+
+<para>
+Note that digit grouping, group separator, decimal separator, decimal places, positive sign,
+negative sign and the digit set used to display numeric values has to be set
+separately on the <guilabel>Numbers</guilabel> tab.
+</para>
+
+</sect2>
+
+
+<sect2 id="locale-calendar">
+
+<title>Calendar</title>
+
+<para>
+On this tab, you can select options for how calendar information is displayed.
+The defaults are selected automatically based on the country which is currently
+selected.
+</para>
+
+<para>
+In the <guilabel>Calendar system</guilabel> drop-down box you can choose the
+calendar system to be used when displaying or inputting dates. This will
+default to the main calendar system in use in your selected country, usually
+the Gregorian calendar. Changing the calendar system will also update the
+various weekday name drop-down combos with the names of days of the week in the
+new calendar system, will enable or disable the <guilabel>Use Common Era</guilabel>
+tick box and may change the value of the <guilabel>Short year window</guilabel>
+setting.
+</para>
+
+<para>
+Note that the Gregorian calendar used is a hybrid of the Julian calendar up to
+Thursday 4 October 1582 and the Gregorian calendar from Friday 15 October 1582,
+leaving a <quote>gap</quote> of ten <quote>missing</quote> days. We are aware
+this conversion date is not factually correct for all countries, however this
+is how Qt have chosen to implement the Gregorian calendar and we wish to remain
+consistent with them.
+</para>
+
+<para>
+If you have selected the Gregorian calendar system then the <guilabel>Use
+Common Era</guilabel> tick box will be enabled. This allows you to choose to
+use the Common Era (CE/BCE) instead of the Christian Era (AD/BC) when
+displaying and inputting dates. See the <guilabel>Date &amp; Time</guilabel>
+tab for how to set this up.
+</para>
+
+<para>
+The <guilabel>Short year window</guilabel> option is only used when you choose
+to use a short two digit year format (YY) in the <guilabel>Long date
+format</guilabel> or <guilabel>Short date format</guilabel> settings in the
+<guilabel>Date &amp; Time</guilabel> tab.  When inputting a short year value,
+&eg; 10, the system must guess what century that year falls in. By setting
+the <guilabel>Short year window</guilabel> you tell the system how you want the
+short year to be interpreted, &eg; whether 50 is interpreted as 1950 or 2050.
+This window can be set differently for each calendar system as they all use
+different epochs (start dates). For example, the Hebrew calendar is into its
+58th century (2010 Gregorian is roughly 5771 Hebrew), so may use a window of
+5750 to 5850.
+</para>
+
+<para>The <guilabel>Week number system</guilabel> option determines how the 
+week number will be calculated. There are four options available:</para>
+<variablelist>
+<varlistentry>
+<term><guilabel>ISO Week</guilabel></term>
+<listitem><para>Use the ISO standard Week Number. This will always use Monday 
+as the first day of the ISO week. This is the most commonly used system.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Full First Week</guilabel></term>
+<listitem><para>The first week of the year starts on the first occurrence 
+of the <emphasis>First day of the week</emphasis>, and lasts for seven days. 
+Any days before Week 1 are considered part of the last week of the previous year. 
+This system is most commonly used in the USA.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Partial First Week</guilabel></term>
+<listitem><para>The first week
+starts on the first day of the year. The second week of the year starts on
+the first occurrence of the <emphasis>First day of the week</emphasis>, and 
+lasts for seven days. The first week may not contain seven days.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Simple Week</guilabel></term>
+<listitem><para>The first week starts on the first day of the year and lasts 
+seven days, with all new weeks starting on the same weekday as the first day 
+of the year.</para></listitem>
+</varlistentry>
+</variablelist>
+
+<para>
+In the <guilabel>First day of week</guilabel> drop-down box you can choose
+which weekday is considered the first day of the week.  This value is often
+used when displaying calendar tables to determine which day is listed first.
+</para>
+
+<para>
+In the <guilabel>First working day of week</guilabel> drop-down box you can
+choose which weekday is considered the first working day of the week. This
+value is often used when displaying calendar tables to determine when the
+weekend is.
+</para>
+
+<para>
+In the <guilabel>Last working day of week</guilabel> drop-down box you can
+choose which weekday is considered the last working day of the week. This
+value is often used when displaying calendar tables to determine when the
+weekend is.
+</para>
+
+<para>
+In the <guilabel>Week day for special religious observance</guilabel> drop-down
+box you can choose which weekday is regularly used for special religious
+observances. This value is often used when displaying calendar tables to
+<quote>red letter</quote> a certain day. If you do not have any particular
+weekday for religious observance then you can choose the
+<parameter>None / None in particular</parameter> option.
+</para>
+
+</sect2>
+
+
+<sect2 id="locale-datetime">
+
+<title>Date &amp; Time</title>
+
+<para>
+On this tab, you can select options for how date and time values are input or
+displayed. The defaults are selected automatically based on the country which
+is currently selected.
+</para>
+
+<para>
+In the <guilabel>Time format</guilabel> text box you can enter the format that
+you want to use to input and display times. The format entered is a combination
+of special codes representing time components and literal text used to separate
+the time components. The special time component codes are listed below. You can
+set the format to any combination of time components you like, but you should
+always include at least an hour and minutes portion to allow you to input times
+that are not ambiguous. The drop-down box provides a list of common time
+formats in your currently selected language to choose from.
+</para>
+
+<itemizedlist>
+<listitem><para>
+<parameter>HH</parameter> - The hour as a decimal number using a 24-hour clock
+(00-23).
+</para></listitem>
+<listitem><para>
+<parameter>hH</parameter> - The hour as a decimal number using a 24-hour clock
+(0-23).
+</para></listitem>
+<listitem><para>
+<parameter>PH</parameter> - The hour as a decimal number using a 12-hour clock
+(01-12).
+</para></listitem>
+<listitem><para>
+<parameter>pH</parameter> - The hour as a decimal number using a 12-hour clock
+(1-12).
+</para></listitem>
+<listitem><para>
+<parameter>MM</parameter> - The minutes as a decimal number (00-59).
+</para></listitem>
+<listitem><para>
+<parameter>SS</parameter> - The seconds as a decimal number (00-59).
+</para></listitem>
+<listitem><para>
+<parameter>AMPM</parameter> - Either 'AM' or 'PM' according to the given time
+value. Noon is treated as 'PM' and midnight as 'AM'. You should always include
+this code if you are using the 12-hour clock codes <parameter>PH</parameter> or
+<parameter>pH</parameter> to prevent ambiguity when entering times.
+</para></listitem>
+</itemizedlist>
+
+<para>
+In the <guilabel>AM symbol</guilabel> text box you can enter the symbol that
+you want to use to input or display for AM when using a 12-hour clock. The
+drop-down box provides a list of common symbols for your currently selected
+language to choose from.
+</para>
+
+<para>
+In the <guilabel>PM symbol</guilabel> text box you can enter the symbol that
+you want to use to input or display for PM when using a 12-hour clock. The
+drop-down box provides a list of common symbols for your currently selected
+language to choose from.
+</para>
+
+<para>
+In the <guilabel>Long date format</guilabel> text box you can enter the format
+that you want to use to input and display long dates. The format entered is a
+combination of special codes representing date components and literal text used
+to separate the date components. The special date component codes are listed
+below. You can set the format to any combination of date components you like,
+but you should always include at least enough components to uniquely identify a
+day in the year, &eg; a month and day, to allow you to input dates that are not
+ambiguous. If you don't include a year component then the current year will be
+used. The drop-down box provides a list of common date formats in your
+currently selected language to choose from.
+</para>
+
+<itemizedlist>
+<listitem><para>
+<parameter>YYYY</parameter> - The year with century as a decimal number
+(0000-9999).
+</para></listitem>
+<listitem><para>
+<parameter>YY</parameter> - The year without century as a decimal number
+(00-99).
+</para></listitem>
+<listitem><para>
+<parameter>MM</parameter> - The month as a decimal number (01-12).
+</para></listitem>
+<listitem><para>
+<parameter>mM</parameter> - The month as a decimal number (1-12).
+</para></listitem>
+<listitem><para>
+<parameter>MONTH</parameter> - The full month name.
+</para></listitem>
+<listitem><para>
+<parameter>SHORTMONTH</parameter> - The first three characters of the month
+name.
+</para></listitem>
+<listitem><para>
+<parameter>DD</parameter> - The day of month as a decimal number (01-31).
+</para></listitem>
+<listitem><para>
+<parameter>dD</parameter> - The day of month as a decimal number (1-31).
+</para></listitem>
+<listitem><para>
+<parameter>WEEKDAY</parameter> - The full weekday name.
+</para></listitem>
+<listitem><para>
+<parameter>SHORTWEEKDAY</parameter> - The first three characters of the weekday
+name.
+</para></listitem>
+<listitem><para>
+<parameter>ERAYEAR</parameter> - The Era Year in local format (&eg; 2000 AD).
+</para></listitem>
+<listitem><para>
+<parameter>SHORTERANAME</parameter> - The short Era Name (&eg; AD).
+</para></listitem>
+<listitem><para>
+<parameter>YEARINERA</parameter> - The Year in Era as a decimal number
+(&eg; 2000).
+</para></listitem>
+<listitem><para>
+<parameter>DAYOFYEAR</parameter> - The Day of Year as a decimal number.
+</para></listitem>
+<listitem><para>
+<parameter>ISOWEEK</parameter> - The ISO Week as a decimal number.
+</para></listitem>
+<listitem><para>
+<parameter>DAYOFISOWEEK</parameter> - The Day of the ISO Week as a decimal
+number.
+</para></listitem>
+</itemizedlist>
+
+<para>
+In the <guilabel>Short date format</guilabel> text box you can enter the format
+that you want to use to input and display short dates. This is in the same
+format as the <guilabel>Long date format</guilabel>, please read that section
+for more details. The drop-down box provides a list of common date formats in
+your currently selected language to choose from.
+</para>
+
+<para>
+The <guilabel>Digit set</guilabel> drop down box lists digit sets which may be
+used instead of Arabic digits when displaying dates and times. If you select a
+digit set other than Arabic, it will be applied only to numbers which appear in
+a language context that uses that digit set while Arabic digits are still going
+to be used elsewhere, &eg; Arabic-Indic digits will be applied to Arabic but
+not to American English.
+</para>
+
+</sect2>
+
+
+<sect2 id="locale-other">
+
+<title>Other</title>
+
+<para>
+On this tab, you can select how other options are displayed. The defaults are
+selected automatically based on the country which is currently selected.
+</para>
+
+<para>
+In the <guilabel>Page size</guilabel> drop-down box you can choose the page
+size to use as the default for new documents, &eg; in KWord. Note that this
+setting does not affect your default paper size in the print dialog, to set
+that you need to use the Printers module of the &kde; &systemsettings;.
+</para>
+
+<para>
+In the <guilabel>Measurement system</guilabel> drop-down box you can choose the
+measurement system to use, either metric or imperial.
+</para>
+
+<para>
+In the <guilabel>Byte size units</guilabel> drop-down box you can choose the
+unit system to use when displaying numbers counted in bytes.  Traditionally
+<quote>kilobytes</quote> meant units of 1024 instead of the metric 1000 for
+most but not all byte sizes. To reduce confusion you can choose which system
+you prefer. The available unit systems are listed below.
+</para>
+
+<itemizedlist>
+<listitem><para>
+The <parameter>IEC Units</parameter> standard is always in multiples of 1024.
+</para></listitem>
+<listitem><para>
+The <parameter>Metric Units</parameter> standard is always in multiples of 1000.
+</para></listitem>
+<listitem><para>
+The <parameter>JEDEC Units</parameter> standard uses the traditional units used
+in &kde; 3.5 and some other operating systems.
+</para></listitem>
+</itemizedlist>
+
+</sect2>
+
+</sect1>
+
+</article>

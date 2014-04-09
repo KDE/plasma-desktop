@@ -1,0 +1,64 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % English "INCLUDE" > <!-- change language only here -->
+]>
+
+<article id="kded" lang="&language;">
+<articleinfo>
+
+<title>Service Manager</title>
+<authorgroup>
+<author><personname><firstname>Burkhard</firstname><surname>Lück</surname></personname>
+<email>lueck@hube-lueck.de</email>
+</author>
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
+</authorgroup>
+
+<date>2013-12-05</date>
+<releaseinfo>&kde; 4.12</releaseinfo>
+
+<keywordset>
+<keyword>KDE</keyword>
+<keyword>Systemsettings</keyword>
+<keyword>Service</keyword>
+</keywordset>
+</articleinfo>
+
+<para>
+The <guilabel>Service Manager</guilabel> module allows you to have an overview of all 
+plugins of the &kde; Daemon, also referred to as &kde; Services. Generally, 
+there are two types of service:</para>
+
+<variablelist>
+
+<varlistentry>
+<term><guilabel>Load-on-Demand Services</guilabel></term>
+<listitem><para>
+This is a list of available &kde; services which will be started on demand. 
+They are only listed for convenience, as you cannot manipulate these 
+services.
+</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Startup Services</guilabel></term>
+<listitem><para>
+This shows all &kde; services that can be loaded on &kde; startup.  
+Services checked in the <guilabel>Use</guilabel> column will be invoked on next startup.</para>
+<para>Be careful with deactivation of 
+unknown services: some services are vital for &kde;; do 
+not deactivate services if you do not know what you are doing.
+</para>
+<para>To change the <guilabel>Status</guilabel> of a service, select it in the list. 
+Then you can use the <guibutton>Start</guibutton> and <guibutton>Stop</guibutton>
+to change the status of a service from <guilabel>Not running</guilabel> to <guilabel>Running</guilabel>
+and vice versa.
+</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</article>
