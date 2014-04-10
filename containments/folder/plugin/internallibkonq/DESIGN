@@ -1,0 +1,44 @@
+libkonq is the construction kit for a file manager 
+(together with libkio, which is at a lower level)
+
+It is used by konqueror, of course, but also by kdesktop, which is 
+another file manager in fact, and by apps that want to use
+the properties dialog boxes (like kpanel and kfind) or the bookmark
+classes.
+
+libkonq contents :
+==================
+
+1) menus
+kbookmark.*     : general purpose bookmark class
+kbookmarkmenu.* : bookmark menu
+kbookmarkbar.*  : bookmark bar
+konq_popupmenu.*: popupmenu for URLs
+konq_xmlguiclient.* : general purpose xmlgui manipulating class
+knewmenu.*      : implements the 'new' menu (file templates)
+
+2) files
+konq_operations.*: common operations to all views, like deleting files, and
+                  dropping files.
+konq_fileundomanager.* : undo feature for file operations
+
+3) icons
+kfileivi.*      : icon representing a file (inherits QListViewItem and 
+                  uses KFileItem for holding file information)
+konq_iconviewwidget.* : the specialisation of QIconView that knows about files.
+                  Basic widget for icon views in konqueror and kdesktop.
+konq_drag.*      : the drag object for konqiconviewwidget (adds text/uri-list
+                  support to QIconView's drag object).
+
+4) configuration
+konq_propsview.* : view properties (global and per-directory)
+konq_settings.*  : settings
+
+5) directory views
+konq_bgnddlg.*   : background chosing dialog
+
+6) other
+konq_events.*    : events sent by konqueror, for use by the views [& metaviews]
+
+7) plugin interface
+konq_popupmenu.h : class KonqPopupMenuPlugin

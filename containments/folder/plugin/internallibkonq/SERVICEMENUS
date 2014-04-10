@@ -1,0 +1,52 @@
+This file explains how to add an item in the popupmenu (for both
+konqueror and kdesktop), without using the file associations.
+
+Why
+===
+One reason for doing this is being able to associate
+some action with all files without this action becoming a default handler
+(called on left click).
+Another is that for text-based programs and tools (e.g. gzip) it's faster
+than defining a desktop file for the application, making it hidden, and
+associate it with the relevant file types.
+
+How
+===
+Create a file ~/.kde/share/kde4/services/ServiceMenus/something.desktop
+and write into it something like (without the comments) :
+
+[Desktop Entry]
+ServiceTypes=KonqPopupMenu/Plugin,text/html,text/plain # use all/all for all entries
+                                  # all/allfiles for files only
+                                  # and use inode/directory for dirs only
+                                  # you can also do things like image/* for all
+                                  # image mimetypes
+Actions=gzip;mail                 # those are ';' separated, per the standard !
+X-KDE-Submenu=Menuname            # this optional entry allows grouping the 
+                                  # entries in this servicemenu file into a
+                                  # common submenu, in this case "Menuname"
+TryExec=gzip			  # Find if executable exist, if it doesn't exist
+				  # menu entry is not displaying
+ExcludeServiceTypes=application/x-zip # This entry is used to avoid to display menu
+				      # when it's a specific servicetype
+				      # for exemple when we use all/allfiles and zip
+				      # them, we don't want to zip a zip file
+
+
+[Desktop Action gzip]            # One "Desktop Action <name>" group per Action
+Name=GZip this file
+Name[fr]=...
+Icon=application-x-tarz
+Exec=gzip %f
+
+[Desktop Action mail]
+Name=Mail this file
+Name[fr]=...
+Icon=internet-mail
+Exec=kmail --there-is-no-such-option-yet %f
+
+
+See also the "desktop entry standard", which defines more formally the same
+concept of actions but for desktop files (e.g. eject on a device desktop file,
+etc.)
+

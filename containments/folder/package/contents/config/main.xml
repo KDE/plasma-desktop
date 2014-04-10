@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+  <kcfgfile name=""/>
+
+  <group name="General">
+    <entry name="ItemsGeometries" type="String">
+      <label>encoded geometries of items (resource categories)</label>
+    </entry>
+    <entry name="ToolBoxButtonState" type="String">
+      <label>Position state of the toolbox button</label>
+      <default>topleft</default>
+    </entry>
+    <entry name="ToolBoxButtonX" type="int">
+      <label>X coordinate of the toolbox</label>
+    </entry>
+    <entry name="ToolBoxButtonY" type="int">
+      <label>Y coordinate of the toolbox</label>
+    </entry>
+    <entry name="ItemsGeometries" type="String">
+      <label>encoded geometries of items (resource categories)</label>
+    </entry>
+    <entry name="FirstStartup" type="Bool">
+      <label>first time the containment starts?</label>
+      <default>true</default>
+    </entry>
+
+    <entry name="url" type="String">
+      <default>desktop:/</default>
+    </entry>
+    <entry name="labelMode" type="Int">
+      <default>0</default>
+    </entry>
+    <entry name="labelText" type="String">
+      <default></default>
+    </entry>
+
+    <entry name="arrangement" type="Int">
+      <default>0</default>
+    </entry>
+    <entry name="alignment" type="Int">
+      <default>0</default>
+    </entry>
+    <entry name="locked" type="Bool">
+      <default>false</default>
+    </entry>
+    <entry name="sortMode" type="Int">
+      <default>0</default>
+    </entry>
+    <entry name="sortDesc" type="Bool">
+      <default>false</default>
+    </entry>
+    <entry name="sortDirsFirst" type="Bool">
+      <default>true</default>
+    </entry>
+    <entry name="popups" type="Bool">
+      <default>true</default>
+    </entry>
+    <entry name="previews" type="Bool">
+      <default>true</default>
+    </entry>
+    <entry name="previewPlugins" type="StringList">
+      <default>imagethumbnail,jpegthumbnail</default>
+    </entry>
+    <entry name="iconSize" type="Int">
+      <default>4</default>
+    </entry>
+    <entry name="textLines" type="Int">
+      <default>2</default>
+    </entry>
+
+    <entry name="filterPattern" type="String">
+      <default>*</default>
+    </entry>
+    <entry name="filterMode" type="Int">
+      <default>0</default>
+    </entry>
+    <entry name="filterMimeTypes" type="StringList">
+      <default></default>
+    </entry>
+  </group>
+</kcfg>
+

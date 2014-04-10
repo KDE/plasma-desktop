@@ -1,0 +1,85 @@
+/***************************************************************************
+ *   Copyright (C) 2014 by Eike Hein <hein@kde.org>                        *
+ *                                                                         *
+ *   This program is free software; you can redistribute it and/or modify  *
+ *   it under the terms of the GNU General Public License as published by  *
+ *   the Free Software Foundation; either version 2 of the License, or     *
+ *   (at your option) any later version.                                   *
+ *                                                                         *
+ *   This program is distributed in the hope that it will be useful,       *
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of        *
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
+ *   GNU General Public License for more details.                          *
+ *                                                                         *
+ *   You should have received a copy of the GNU General Public License     *
+ *   along with this program; if not, write to the                         *
+ *   Free Software Foundation, Inc.,                                       *
+ *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
+ ***************************************************************************/
+
+import QtQuick 2.0
+import org.kde.plasma.plasmoid 2.0
+
+import org.kde.plasma.core 2.0 as PlasmaCore
+
+PlasmaCore.Dialog {
+    id: dialog
+
+    visible: false
+
+    property Item parentDelegate: null
+    property QtObject childDialog: (itemView.hoveredItem != null) ? itemView.hoveredItem.popupDialog : null
+    property bool containsMouse: itemView.containsMouse || (childDialog != null && childDialog.containsMouse)
+
+    property alias url: itemView.url
+
+    location: PlasmaCore.Types.Floating
+    hideOnWindowDeactivate: (childDialog == null)
+
+    onContainsMouseChanged: {
+        if (containsMouse) {
+            closeTimer.stop();
+        } else {
+            closeTimer.start();
+        }
+    }
+
+    mainItem: ItemView {
+        id: itemView
+
+        width: cellWidth * 3 + 10 // FIXME HACK: Use actual scrollbar width.
+        height: cellHeight * 2
+
+        isRootView: false
+
+        filterMode: 0
+
+        // TODO: Bidi.
+        flow:  GridView.FlowLeftToRight
+        layoutDirection: Qt.LeftToRight
+    }
+
+    data: [
+        Timer {
+            id: closeTimer
+
+            interval: units.longDuration * 2
+
+            onTriggered: {
+                if (childDialog != null) {
+                    childDialog.destroy();
+                }
+
+                dialog.destroy();
+            }
+        }
+    ]
+
+    Component.onDestruction: {
+        closeTimer.stop();
+
+        if (childDialog != null) {
+            childDialog.destroy();
+        }
+    }
+}
