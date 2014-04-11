@@ -47,6 +47,7 @@ add_subdirectory(knotify)
 add_subdirectory(locale)
 add_subdirectory(spellchecking)
 add_subdirectory(phonon)
+add_subdirectory(workspaceoptions)
 
 if( FREETYPE_FOUND )
    if( WIN32 OR FONTCONFIG_FOUND )
