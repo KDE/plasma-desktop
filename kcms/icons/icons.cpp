@@ -25,6 +25,7 @@
 #include <QBoxLayout>
 #include <QVBoxLayout>
 #include <QListWidget>
+#include <QDialogButtonBox>
 #include <QLoggingCategory>
 
 #include <KColorButton>
@@ -35,7 +36,7 @@
 #include <KLocalizedString>
 #include <KSeparator>
 #include <KSharedConfig>
-#include <KGlobalSettings> //FIXME kde4support
+#include <KConfigGroup>
 
 Q_DECLARE_LOGGING_CATEGORY(KCM_ICONS)
 
@@ -248,7 +249,7 @@ void KIconConfig::read()
     {
         mbChanged[i] = false;
 
-        KConfigGroup iconGroup(mpConfig, *it + "Icons");
+    KConfigGroup iconGroup(mpConfig, *it + "Icons");
 	mSizes[i] = iconGroup.readEntry("Size", mSizes[i]);
 	mbAnimated[i] = iconGroup.readEntry("Animated", mbAnimated[i]);
 
@@ -492,15 +493,14 @@ KIconEffectSetupDialog::KIconEffectSetupDialog(const Effect &effect,
     const Effect &defaultEffect,
     const QString &caption, const QImage &image,
     QWidget *parent, char *name)
-    : KDialog( parent ),
+    : QDialog( parent ),
       mEffect(effect),
       mDefaultEffect(defaultEffect),
       mExample(image)
 {
     setObjectName( name );
     setModal( true );
-    setCaption( caption );
-    setButtons( Default|Ok|Cancel );
+    setWindowTitle( caption );
 
     mpEffect = new KIconEffect;
 
@@ -508,14 +508,16 @@ KIconEffectSetupDialog::KIconEffectSetupDialog(const Effect &effect,
     QGroupBox *frame;
     QGridLayout *grid;
 
-    QWidget *page = new QWidget(this);
-    setMainWidget(page);
+    QWidget* page = this;
+    QVBoxLayout* topLayout = new QVBoxLayout(this);
+    page->setLayout(topLayout);
 
     QGridLayout *top = new QGridLayout(page);
     top->setMargin(0);
     top->setColumnStretch(0,1);
     top->setColumnStretch(1,2);
     top->setRowStretch(1,1);
+    topLayout->addItem(top);
 
     lbl = new QLabel(i18n("&Effect:"), page);
     top->addWidget(lbl, 0, 0, Qt::AlignLeft);
@@ -570,6 +572,13 @@ KIconEffectSetupDialog::KIconEffectSetupDialog(const Effect &effect,
                 SLOT(slotEffectColor2(const QColor &)));
     form->addRow(i18n("&Second color:"), mpECol2Button);
     mpEffectColor2 = static_cast<QLabel *>(form->labelForField(mpECol2Button));
+
+    QDialogButtonBox* buttonBox = new QDialogButtonBox(this);
+    buttonBox->setStandardButtons(QDialogButtonBox::Ok | QDialogButtonBox::RestoreDefaults | QDialogButtonBox::Cancel);
+    connect(buttonBox, SIGNAL(accepted()), SLOT(accept()));
+    connect(buttonBox, SIGNAL(rejected()), SLOT(reject()));
+    connect(buttonBox->button(QDialogButtonBox::RestoreDefaults), SIGNAL(clicked(bool)), SLOT(slotDefault()));
+    topLayout->addWidget(buttonBox);
 
     init();
     preview();

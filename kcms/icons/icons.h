@@ -15,9 +15,9 @@
 
 #include <QColor>
 #include <QImage>
+#include <QDialog>
 
 #include <KCModule>
-#include <KDialog>
 #include <KConfig>
 #include <KSharedConfig>
 
@@ -106,7 +106,7 @@ private:
     QWidget *m_pTab1;
 };
 
-class KIconEffectSetupDialog: public KDialog
+class KIconEffectSetupDialog: public QDialog
 {
     Q_OBJECT
 

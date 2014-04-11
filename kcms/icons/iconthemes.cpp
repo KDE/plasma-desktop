@@ -35,29 +35,30 @@
 #include <QSvgRenderer>
 #include <QLoggingCategory>
 #include <QPushButton>
+#include <QProgressDialog>
+#include <qprogressbar.h>
+#include <QStandardPaths>
 #include <QUrl>
+#include <qtemporaryfile.h>
 
-#include <KApplication>
 #include <KBuildSycocaProgressDialog>
 #include <KLocalizedString>
 #include <KSharedDataCache>
 #include <KIconTheme>
-#include <KStandardDirs> //FIXME KDE4Support
 #include <KService>
 #include <KConfig>
+#include <KConfigGroup>
+#include <KSharedConfig>
 #include <KNS3/DownloadDialog>
 #include <KTar>
 
-#include <KUrlRequesterDialog>
 #include <KMessageBox>
 #include <KIconLoader>
-#include <KProgressDialog> //FIXME use qprogressdialog?
 #include <KIO/Job>
 #include <KIO/DeleteJob>
-#include <KIO/NetAccess>
+#include <KUrlRequesterDialog>
+#include <KJobWidgets>
 #include <KTar>
-#include <KGlobalSettings> //FIXME KDE4Support
-#include <QStandardPaths>
 
 static const int ThemeNameRole = Qt::UserRole + 1;
 
@@ -189,15 +190,19 @@ void IconThemesConfig::loadThemes()
 
 void IconThemesConfig::installNewTheme()
 {
-  QUrl themeURL = KUrlRequesterDialog::getUrl(QUrl(), this,
-                                           i18n("Drag or Type Theme URL"));
+  QUrl themeURL = KUrlRequesterDialog::getUrl(QUrl(), this, i18n("Drag or Type Theme URL"));
   if (themeURL.url().isEmpty()) return;
 
   qCDebug(KCM_ICONS) << themeURL;
-  QString themeTmpFile;
+  QTemporaryFile file;
   // themeTmpFile contains the name of the downloaded file
 
-  if (!KIO::NetAccess::download(themeURL, themeTmpFile, this)) {
+  KJob* job = KIO::storedGet(themeURL);
+  KJobWidgets::setWindow(job, this);
+  if (!file.open()) {
+    KMessageBox::sorry(this, i18n("Unable to create a temporary file."));
+    return;
+  } else if (!job->exec()) {
     QString sorryText;
     if (themeURL.isLocalFile())
        sorryText = i18n("Unable to find the icon theme archive %1.",
@@ -210,16 +215,14 @@ void IconThemesConfig::installNewTheme()
     return;
   }
 
-  QStringList themesNames = findThemeDirs(themeTmpFile);
+  QStringList themesNames = findThemeDirs(file.fileName());
   if (themesNames.isEmpty()) {
     QString invalidArch(i18n("The file is not a valid icon theme archive."));
     KMessageBox::error(this, invalidArch);
-
-    KIO::NetAccess::removeTempFile(themeTmpFile);
     return;
   }
 
-  if (!installThemes(themesNames, themeTmpFile)) {
+  if (!installThemes(themesNames, file.fileName())) {
     //FIXME: make me able to know what is wrong....
     // QStringList instead of bool?
     QString somethingWrong =
@@ -227,8 +230,6 @@ void IconThemesConfig::installNewTheme()
              "however, most of the themes in the archive have been installed");
     KMessageBox::error(this, somethingWrong);
   }
-
-  KIO::NetAccess::removeTempFile(themeTmpFile);
 
   KIconLoader::global()->newIconLoader();
   loadThemes();
@@ -244,18 +245,16 @@ bool IconThemesConfig::installThemes(const QStringList &themes, const QString &a
   bool everythingOk = true;
   QString localThemesDir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1String("/icons/") + "./");
 
-  KProgressDialog progressDiag(this,
-                               i18n("Installing icon themes"),
-                               QString());
+  QProgressDialog progressDiag(this);
+  progressDiag.setLabelText(i18n("Installing icon themes..."));
   progressDiag.setModal(true);
   progressDiag.setAutoClose(true);
-  QProgressBar* progressBar = progressDiag.progressBar();
-  progressBar->setMaximum(themes.count());
+  progressDiag.setRange(0, themes.count());
   progressDiag.show();
 
   KTar archive(archiveName);
   archive.open(QIODevice::ReadOnly);
-  kapp->processEvents();
+  qApp->processEvents();
 
   const KArchiveDirectory* rootDir = archive.directory();
 
@@ -266,9 +265,9 @@ bool IconThemesConfig::installThemes(const QStringList &themes, const QString &a
     progressDiag.setLabelText(
         i18n("<qt>Installing <strong>%1</strong> theme</qt>",
          *it));
-    kapp->processEvents();
+    qApp->processEvents();
 
-    if (progressDiag.wasCancelled())
+    if (progressDiag.wasCanceled())
       break;
 
     currentTheme = dynamic_cast<KArchiveDirectory*>(
@@ -282,7 +281,7 @@ bool IconThemesConfig::installThemes(const QStringList &themes, const QString &a
     }
 
     currentTheme->copyTo(localThemesDir + *it);
-    progressBar->setValue(progressBar->value()+1);
+    progressDiag.setValue(progressDiag.value()+1);
   }
 
   archive.close();

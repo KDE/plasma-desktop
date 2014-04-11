@@ -105,6 +105,6 @@ QString IconModule::quickHelp() const
     "<p>You can also specify effects that should be applied to the icons.</p>");
 }
 
-
-
 #include "main.moc"
+#include "moc_main.cpp"
+

@@ -12,11 +12,11 @@ target_link_libraries(kcm_icons
     Qt5::Svg
     KF5::KCMUtils
     KF5::I18n
-    KF5::UnitConversion
+    KF5::IconThemes
     KF5::Archive
-    ${X11_LIBRARIES}
-    KF5::KDE4Support
     KF5::NewStuff
+    KF5::KIOWidgets
+    ${X11_LIBRARIES}
 )
 
 install(TARGETS kcm_icons  DESTINATION ${PLUGIN_INSTALL_DIR} )
