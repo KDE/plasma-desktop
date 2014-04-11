@@ -149,6 +149,7 @@ public:
     KShortcutsEditor::ActionTypes actionTypes;
     QHash<QString, ComponentData*> components;
     QDBusConnection bus;
+    QStandardItemModel *model;
 };
 
 
@@ -214,7 +215,8 @@ void KGlobalShortcutsEditor::KGlobalShortcutsEditorPrivate::initGUI()
     ui.menu_button->setMenu(menu);
 
     QSortFilterProxyModel *proxyModel = new QSortFilterProxyModel(q);
-    proxyModel->setSourceModel(new QStandardItemModel(0, 1, proxyModel));
+    model = new QStandardItemModel(0, 1, proxyModel);
+    proxyModel->setSourceModel(model);
     proxyModel->setSortCaseSensitivity(Qt::CaseInsensitive);
     ui.components->setModel(proxyModel);
 }
@@ -280,7 +282,8 @@ void KGlobalShortcutsEditor::addCollection(
         }
 
         // Add to the component combobox
-        d->ui.components->addItem(pixmap, friendlyName);
+        //FIXME: QCombobox.addItem apparently breaks with sort() in Qt5
+        d->model->appendRow(new QStandardItem(pixmap, friendlyName));
         d->ui.components->model()->sort(0);
 
         // Add to our component registry
