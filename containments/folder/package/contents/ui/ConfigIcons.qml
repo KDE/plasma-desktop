@@ -54,7 +54,7 @@ GroupBox {
             ColumnLayout {
                 RowLayout {
                     Label {
-                        text: i18n("Arange in:")
+                        text: i18n("Arrange in:")
                     }
 
                     ComboBox {
