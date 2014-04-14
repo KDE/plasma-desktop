@@ -30,6 +30,8 @@ Rectangle {
     color: syspal.window
     width: units.gridUnit * 40
     height: units.gridUnit * 30
+
+    property bool isContainment: false
 //END properties
 
 //BEGIN model
@@ -70,7 +72,7 @@ Rectangle {
 
 //BEGIN connections
     Component.onCompleted: {
-        if (configDialog.configModel && configDialog.configModel.count > 0) {
+        if (!isContainment && configDialog.configModel && configDialog.configModel.count > 0) {
             main.sourceFile = configDialog.configModel.get(0).source
             main.title = configDialog.configModel.get(0).name
         } else {
@@ -151,6 +153,10 @@ Rectangle {
                             id: categoriesColumn
                             width: parent.width
                             Repeater {
+                                model: root.isContainment ? globalConfigModel : undefined
+                                delegate: ConfigCategoryDelegate {}
+                            }
+                            Repeater {
                                 model: configDialog.configModel
                                 delegate: ConfigCategoryDelegate {
                                     onClicked: {
@@ -161,7 +167,7 @@ Rectangle {
                                 }
                             }
                             Repeater {
-                                model: globalConfigModel
+                                model: !root.isContainment ? globalConfigModel : undefined
                                 delegate: ConfigCategoryDelegate {}
                             }
                         }

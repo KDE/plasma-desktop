@@ -25,6 +25,7 @@ import org.kde.plasma.configuration 2.0
 
 AppletConfiguration {
     id: root
+    isContainment: true
 
 //BEGIN model
     globalConfigModel: globalContainmentConfigModel
