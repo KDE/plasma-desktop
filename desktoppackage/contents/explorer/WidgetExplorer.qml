@@ -76,9 +76,9 @@ Item {
         onClicked: model.trigger()
         onStatusChanged: {
             if (status == PlasmaComponents.DialogStatus.Opening) {
-                sidePanel.hideOnWindowDeactivate = false;
+                root.preventWindowHide = true;
             } else if (status == PlasmaComponents.DialogStatus.Closed) {
-                sidePanel.hideOnWindowDeactivate = true;
+                root.preventWindowHide = false;
             }
         }
     }
