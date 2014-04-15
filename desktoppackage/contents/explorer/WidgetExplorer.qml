@@ -76,9 +76,9 @@ Item {
         onClicked: model.trigger()
         onStatusChanged: {
             if (status == PlasmaComponents.DialogStatus.Opening) {
-                root.preventWindowHide = true;
+                main.preventWindowHide = true;
             } else if (status == PlasmaComponents.DialogStatus.Closed) {
-                root.preventWindowHide = false;
+                main.preventWindowHide = false;
             }
         }
     }
@@ -274,7 +274,7 @@ Item {
                 iconSource: "get-hot-new-stuff"
                 text: i18n("Get new widgets")
                 onClicked: {
-                    sidePanel.hideOnWindowDeactivate = false;
+                    main.preventWindowHide = true;
                     getWidgetsDialog.open()
                 }
             }
