@@ -199,6 +199,15 @@ void KeyboardDaemon::layoutChanged()
 
 	if( newLayout != currentLayout ) {
 		currentLayout = newLayout;
+        QDBusMessage msg = QDBusMessage::createMethodCall(
+        QLatin1Literal("org.kde.plasma_shell"),
+        QLatin1Literal("/org/kde/osdService"),
+        QLatin1Literal("org.kde.osdService"),
+        QLatin1Literal("kbdLayoutChanged"));
+
+        qDebug() << newLayout.getDisplayName();
+        msg.setArguments(QList<QVariant>() << newLayout.getDisplayName());
+        QDBusConnection::sessionBus().asyncCall(msg);
 		emit currentLayoutChanged(newLayout.toString());
 	}
 }
