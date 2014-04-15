@@ -73,7 +73,7 @@ Item {
 
             onTriggered: {
                 if (parent.hoveredItem.isGroupParent) {
-                    groupDialog.target = parent.hoveredItem;
+                    groupDialog.visualParent = parent.hoveredItem;
                     groupDialog.visible = true;
                 } else if (!parent.hoveredItem.isLauncher) {
                     tasks.activateItem(parent.hoveredItem.itemId, false);
