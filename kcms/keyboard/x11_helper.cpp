@@ -18,6 +18,10 @@
 
 #include "x11_helper.h"
 
+#define explicit explicit_is_keyword_in_cpp
+#include <xcb/xkb.h>
+#undef explicit
+
 #include <kdebug.h>
 
 #include <QX11Info>
@@ -29,7 +33,6 @@
 #include <X11/XKBlib.h>
 #include <X11/extensions/XKBrules.h>
 #include <xcb/xcb.h>
-//#include <xcb/xkb.h>
 #include <fixx11h.h>
 
 
@@ -191,7 +194,23 @@ QList<LayoutUnit> X11Helper::getLayoutsList()
 
 bool X11Helper::setGroup(unsigned int group)
 {
-	return XkbLockGroup(QX11Info::display(), XkbUseCoreKbd, group);
+    qDebug() << group;
+    xcb_void_cookie_t cookie;
+    cookie = xcb_xkb_latch_lock_state(QX11Info::connection(),
+        XCB_XKB_ID_USE_CORE_KBD,
+        0, 0,
+        1,
+        group,
+        0, 0, 0
+    );
+    xcb_generic_error_t *error = nullptr;
+    error = xcb_request_check(QX11Info::connection(), cookie);
+    if (error) {
+        qDebug() << "Couldn't change the group" << error->error_code;
+        return false;
+    }
+
+    return true;
 }
 
 unsigned int X11Helper::getGroup()
