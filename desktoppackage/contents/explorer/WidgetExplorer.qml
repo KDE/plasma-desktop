@@ -74,6 +74,13 @@ Item {
         visualParent: main.getWidgetsButton
         model: widgetExplorer.widgetsMenuActions
         onClicked: model.trigger()
+        onStatusChanged: {
+            if (status == PlasmaComponents.DialogStatus.Opening) {
+                sidePanel.hideOnWindowDeactivate = false;
+            } else if (status == PlasmaComponents.DialogStatus.Closed) {
+                sidePanel.hideOnWindowDeactivate = true;
+            }
+        }
     }
     /*
     PlasmaCore.Dialog {
@@ -266,7 +273,10 @@ Item {
                 id: getWidgetsButton
                 iconSource: "get-hot-new-stuff"
                 text: i18n("Get new widgets")
-                onClicked: getWidgetsDialog.open()
+                onClicked: {
+                    sidePanel.hideOnWindowDeactivate = false;
+                    getWidgetsDialog.open()
+                }
             }
 
             Repeater {
