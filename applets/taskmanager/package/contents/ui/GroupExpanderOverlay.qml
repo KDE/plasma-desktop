@@ -68,6 +68,61 @@ PlasmaCore.SvgItem {
         }
     }
 
+    states: [
+        State {
+            name: "top"
+            when: plasmoid.location == PlasmaCore.Types.TopEdge
+            AnchorChanges {
+                target: arrow
+                anchors.top: arrow.parent.top
+                anchors.left: undefined
+                anchors.right: undefined
+                anchors.bottom: undefined
+                anchors.horizontalCenter: iconBox.horizontalCenter
+                anchors.verticalCenter: undefined
+            }
+        },
+        State {
+            name: "left"
+            when: plasmoid.location == PlasmaCore.Types.LeftEdge
+            AnchorChanges {
+                target: arrow
+                anchors.top: undefined
+                anchors.left: arrow.parent.left
+                anchors.right: undefined
+                anchors.bottom: undefined
+                anchors.horizontalCenter: undefined
+                anchors.verticalCenter: iconBox.verticalCenter
+            }
+        },
+        State {
+            name: "right"
+            when: plasmoid.location == PlasmaCore.Types.RightEdge
+            AnchorChanges {
+                target: arrow
+                anchors.top: undefined
+                anchors.left: undefined
+                anchors.right: arrow.parent.right
+                anchors.bottom: undefined
+                anchors.horizontalCenter: undefined
+                anchors.verticalCenter: iconBox.verticalCenter
+            }
+        },
+        State {
+            name: "bottom"
+            when: plasmoid.location == PlasmaCore.Types.TopEdge || plasmoid.location == PlasmaCore.Types.LeftEdge || plasmoid.location == PlasmaCore.Types.RightEdge
+            AnchorChanges {
+                target: arrow
+                anchors.top: arrow.parent.top
+                anchors.left: undefined
+                anchors.right: undefined
+                anchors.bottom: arrow.parent.bottom
+                anchors.horizontalCenter: iconBox.horizontalCenter
+                anchors.verticalCenter: undefined
+            }
+        }
+    ]
+
     implicitWidth: Math.min(units.iconSizes.small, iconBox.width)
     implicitHeight: implicitWidth
 
