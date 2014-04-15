@@ -19,7 +19,6 @@ add_subdirectory(khtml-java-js)
 add_subdirectory(khtml-behavior)
 add_subdirectory(khtml-adblock)
 add_subdirectory(attica)
-add_subdirectory(kcm_ssl)
 add_subdirectory(emoticons)
 
 if ( Q_WS_X11 )
