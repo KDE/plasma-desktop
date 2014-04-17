@@ -67,6 +67,13 @@ Item {
             widgetExplorer.widgetsModel.filterQuery = model.filterData
             widgetExplorer.widgetsModel.filterType = model.filterType
         }
+        onStatusChanged: {
+            if (status == PlasmaComponents.DialogStatus.Opening) {
+                main.preventWindowHide = true;
+            } else if (status == PlasmaComponents.DialogStatus.Closed) {
+                main.preventWindowHide = false;
+            }
+        }
     }
 
     PlasmaComponents.ModelContextMenu {
@@ -174,7 +181,10 @@ Item {
                 }
                 id: categoryButton
                 text: i18n("Categories")
-                onClicked: categoriesDialog.open(0, categoryButton.height)
+                onClicked: {
+                    main.preventWindowHide = true;
+                    categoriesDialog.open(0, categoryButton.height)
+                }
             }
             Component.onCompleted: {
                 main.categoryButton = categoryButton
