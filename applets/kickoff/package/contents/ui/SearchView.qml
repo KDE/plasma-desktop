@@ -59,6 +59,13 @@ Item {
             onActivated: {
                 runnerWindow.visible = false
             }
+            delegate: KickoffItem {}
+
+            section {
+                property: "type"
+                criteria: ViewSection.FullString
+                delegate: SectionDelegate {}
+            }
         }
     } // ScrollArea
 
