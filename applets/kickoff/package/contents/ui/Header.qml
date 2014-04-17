@@ -35,7 +35,7 @@ Item {
         id: kuser
     }
 
-    state: (header.query != "") ? "query" : "hint"
+    state: (header.query != "") ? "query" : ""
 
     Timer {
         id: labelTimer
@@ -107,44 +107,18 @@ Item {
         property real normalOpacity: .6
         property int yOffset: height / 2
 
-        height: infoLabel.height
+        height: queryField.height
         anchors {
             left: nameLabel.left
             top: nameLabel.bottom
             right: nameLabel.right
         }
 
-        PlasmaComponents.Label {
-            id: infoLabel
-            anchors {
-                left: parent.left
-                right: parent.right
-            }
-            verticalAlignment: Text.AlignBottom
-            text: kuser.os != "" ? i18n("%2@%3 (%1)", kuser.os, kuser.loginName, kuser.host) : i18n("%1@%2", kuser.loginName, kuser.host)
-            elide: Text.ElideRight
-
-            Behavior on opacity { NumberAnimation { duration:  searchWidget.animationDuration; easing.type: Easing.InOutQuad; } }
-            Behavior on y { NumberAnimation { duration: searchWidget.animationDuration; easing.type: Easing.InOutQuad; } }
-        }
-
-        PlasmaComponents.Label {
-            id: hintLabel
-            anchors {
-                left: parent.left
-                right: parent.right
-            }
-            verticalAlignment: Text.AlignBottom
-            text: i18n("Type to search...")
-            Behavior on opacity { NumberAnimation { duration: searchWidget.animationDuration; easing.type: Easing.InOutQuad; } }
-            Behavior on y { NumberAnimation { duration: searchWidget.animationDuration; easing.type: Easing.InOutQuad; } }
-        }
-
         PlasmaComponents.TextField {
             id: queryField
             anchors.fill: parent
             clearButtonShown: true
-            Behavior on opacity { NumberAnimation { duration: searchWidget.animationDuration / 4 } }
+            placeholderText: i18n("Type to search...")
 
             onTextChanged: {
                 if (root.state != "Search") {
@@ -154,7 +128,7 @@ Item {
                 if (text == "") {
                     root.state = root.previousState;
                     root.forceActiveFocus();
-                    header.state = "info";
+                    header.state = "";
                 } else {
                     header.state = "query";
                 }
@@ -170,56 +144,4 @@ Item {
             }
         }
     }
-
-    states: [
-        State {
-            name: "info"
-            PropertyChanges {
-                target: infoLabel
-                opacity: searchWidget.normalOpacity
-                y: 0
-            }
-            PropertyChanges {
-                target: hintLabel
-                opacity: 0
-                y: searchWidget.yOffset
-            }
-            PropertyChanges {
-                target: queryField
-                opacity: 0
-            }
-        },
-        State {
-            name: "hint"
-            PropertyChanges {
-                target: infoLabel
-                y: -searchWidget.yOffset
-                opacity: 0
-            }
-            PropertyChanges {
-                target: hintLabel
-                y: 0
-                opacity: searchWidget.normalOpacity
-            }
-            PropertyChanges {
-                target: queryField
-                opacity: 0
-            }
-        },
-        State {
-            name: "query"
-            PropertyChanges {
-                target: infoLabel
-                opacity: 0
-            }
-            PropertyChanges {
-                target: hintLabel
-                opacity: 0
-            }
-            PropertyChanges {
-                target: queryField
-                opacity: 1
-            }
-        }
-    ] // states
 }
