@@ -138,11 +138,7 @@ function checkLastSpacer() {
     }
 
     onDrop: {
-        if (currentLayout.childAt(event.x, event.y) == dndSpacer) {
-            plasmoid.processMimeData(event.mimeData, event.x, event.y);
-        } else {
-            dndSpacer.parent = root;
-        }
+        plasmoid.processMimeData(event.mimeData, event.x, event.y);
     }
 
 

@@ -31,6 +31,7 @@ Item {
     DropArea {
         id: dropHandler
 
+        preventStealing: true;
         anchors.fill: parent
 
         property Item hoveredItem
