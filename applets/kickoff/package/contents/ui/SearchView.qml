@@ -48,6 +48,8 @@ Item {
         Milou.ResultsView {
             id: searchView
             queryString: header.query
+            interactive: true
+            spacing: 0
 
             Connections {
                 target: header
@@ -59,7 +61,15 @@ Item {
             onActivated: {
                 runnerWindow.visible = false
             }
-            delegate: KickoffItem {}
+            delegate: KickoffItem {
+                height: {
+                    if (searchView.count > 10) {
+                        return units.gridUnit * 2;
+                    } else {
+                        return units.gridUnit * 3;
+                    }
+                }
+            }
 
             section {
                 property: "type"

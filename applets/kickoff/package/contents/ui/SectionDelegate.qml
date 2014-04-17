@@ -26,7 +26,7 @@ Item {
     id: sectionDelegate
 
     width: parent.width
-    height: childrenRect.height
+    height: Math.floor(childrenRect.height)
 
 //     PlasmaCore.SvgItem {
 //         anchors {
