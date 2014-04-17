@@ -21,6 +21,8 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.private.kickoff 0.1 as Kickoff
+import org.kde.milou 0.1 as Milou
+
 Item {
     id: searchViewContainer
 
@@ -43,25 +45,21 @@ Item {
     PlasmaExtras.ScrollArea {
         anchors.fill: parent
 
-        ListView {
+        Milou.ResultsView {
             id: searchView
-
-            anchors.fill: parent
-            keyNavigationWraps: true
-            boundsBehavior: Flickable.StopAtBounds
-            delegate: KickoffItem {}
-            highlight: PlasmaComponents.Highlight {}
-            highlightMoveDuration : 0
-            model: Kickoff.KRunnerModel{}
+            queryString: header.query
 
             Connections {
                 target: header
 
                 onQueryChanged: {
-                    searchView.model.setQuery(header.query)
+                    searchView.queryString = header.query
                 }
             }
-        } // searchView
+            onActivated: {
+                runnerWindow.visible = false
+            }
+        }
     } // ScrollArea
 
     ContextMenu {
