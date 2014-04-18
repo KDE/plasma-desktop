@@ -211,8 +211,14 @@ layouts (although the 4 spare layouts limit can be raised in the future).
 <sect1 id="advanced">
 <title>The Advanced tab</title>
 <para>In this tab, if you check <guilabel>Configure keyboard options</guilabel>
-you will then be able to set a few options regarding some keys settings. You can
+you will then be able to set a few options regarding some special keys settings. You can
 expand these options by clicking on the &gt; symbol on the left of the option
 then you choose your setting in the expanded list.</para>
+<para>This is a &GUI; to help creating custom keyboard layouts for X11 using XKB.
+</para>
+<para>For more information please refer to the <emphasis>Links</emphasis> section on the
+<ulink url="http://www.freedesktop.org/wiki/Software/XKeyboardConfig">XKeyboardConfig 
+page on freedesktop.org</ulink>.
+</para>
 </sect1>
 </article>
