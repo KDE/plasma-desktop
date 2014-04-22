@@ -201,6 +201,7 @@ Item {
         onClicked: {
             print ("click state now: " + toolBoxItem.state);
             toolBoxItem.showing = !toolBoxItem.showing;
+            plasmoid.focus = true;
         }
         onReleased: {
             main.Plasmoid.configuration.ToolBoxButtonState = toolBoxButton.state;

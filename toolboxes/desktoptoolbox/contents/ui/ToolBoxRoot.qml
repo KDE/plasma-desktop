@@ -50,6 +50,14 @@ Item {
         placeToolBoxTimer.restart();
     }
 
+    Connections {
+        target: plasmoid
+        onFocusChanged: {
+            if (!plasmoid.focus) {
+                toolBoxItem.showing = false;
+            }
+        }
+    }
     MouseArea {
         id: toolBoxDismisser
         anchors.fill: parent
