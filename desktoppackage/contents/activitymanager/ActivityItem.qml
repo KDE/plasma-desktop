@@ -33,7 +33,9 @@ Item {
     signal stopClicked
 
     width  : 200
-    height : width * 1 / units.displayAspectRatio
+    // height : width * 1 / units.displayAspectRatio
+    // Marco removed displayAspectRatio
+    height : width * 9.0 / 16.0
 
     // Background until we get something real
     PlasmaCore.FrameSvgItem {
