@@ -24,11 +24,10 @@
 #include <QStringList>
 #include <QTime>
 #include <QX11Info>
+#include <QStandardPaths>
+#include <QDebug>
 
-#include <kglobal.h>
-#include <kstandarddirs.h>
 #include <kprocess.h>
-#include <kdebug.h>
 
 #include "keyboard_config.h"
 
@@ -51,10 +50,10 @@ QString getSetxkbmapExe()
 		return "";
 
 	if( setxkbmapExe.isEmpty() ) {
-		setxkbmapExe = KGlobal::dirs()->findExe(SETXKBMAP_EXEC);
+		setxkbmapExe = QStandardPaths::findExecutable(SETXKBMAP_EXEC);
 		if( setxkbmapExe.isEmpty() ) {
 			setxkbmapNotFound = true;
-			kError() << "Can't find" << SETXKBMAP_EXEC << "- keyboard layouts won't be configured";
+			qCritical() << "Can't find" << SETXKBMAP_EXEC << "- keyboard layouts won't be configured";
 			return "";
 		}
 	}
@@ -69,10 +68,10 @@ void executeXmodmap(const QString& configFileName)
 
     if( QFile(configFileName).exists() ) {
     	if( xmodmapExe.isEmpty() ) {
-    		xmodmapExe = KGlobal::dirs()->findExe(XMODMAP_EXEC);
+    		xmodmapExe = QStandardPaths::findExecutable(XMODMAP_EXEC);
         	if( xmodmapExe.isEmpty() ) {
     			xmodmapNotFound = true;
-    			kError() << "Can't find" << XMODMAP_EXEC << "- xmodmap files won't be run";
+    			qCritical() << "Can't find" << XMODMAP_EXEC << "- xmodmap files won't be run";
     			return;
         	}
     	}
@@ -80,9 +79,9 @@ void executeXmodmap(const QString& configFileName)
     	KProcess xmodmapProcess;
     	xmodmapProcess << xmodmapExe;
     	xmodmapProcess << configFileName;
-    	kDebug() << "Executing" << xmodmapProcess.program().join(" ");
+    	qDebug() << "Executing" << xmodmapProcess.program().join(" ");
     	if( xmodmapProcess.execute() != 0 ) {
-    		kError() << "Failed to execute " << xmodmapProcess.program();
+    		qCritical() << "Failed to execute " << xmodmapProcess.program();
     	}
     }
 }
@@ -108,13 +107,13 @@ bool XkbHelper::runConfigLayoutCommand(const QStringList& setxkbmapCommandArgume
 	int res = setxkbmapProcess.execute();
 
 	if( res == 0 ) {	// restore Xmodmap mapping reset by setxkbmap
-		kDebug() << "Executed successfully in " << timer.elapsed() << "ms" << setxkbmapProcess.program().join(" ");
+		qDebug() << "Executed successfully in " << timer.elapsed() << "ms" << setxkbmapProcess.program().join(" ");
 		restoreXmodmap();
-		kDebug() << "\t and with xmodmap" << timer.elapsed() << "ms";
+		qDebug() << "\t and with xmodmap" << timer.elapsed() << "ms";
 	    return true;
 	}
 	else {
-		kError() << "Failed to run" << setxkbmapProcess.program().join(" ") << "return code:" << res;
+		qCritical() << "Failed to run" << setxkbmapProcess.program().join(" ") << "return code:" << res;
 	}
 	return false;
 }

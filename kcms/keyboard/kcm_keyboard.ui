@@ -97,7 +97,7 @@
     <item row="0" column="0">
      <layout class="QHBoxLayout" name="horizontalLayout_3">
       <item>
-       <widget class="KButtonGroup" name="kbuttongroup">
+       <widget class="QGroupBox" name="kbuttongroup">
         <property name="title">
          <string>Layout Indicator</string>
         </property>
@@ -141,7 +141,7 @@
        </widget>
       </item>
       <item>
-       <widget class="KButtonGroup" name="switchingPolicyButtonGroup">
+       <widget class="QGroupBox" name="switchingPolicyButtonGroup">
         <property name="whatsThis">
          <string>If you select &quot;Application&quot; or &quot;Window&quot; switching policy, changing the keyboard layout will only affect the current application or window.</string>
         </property>
@@ -460,19 +460,6 @@
    </layout>
   </widget>
  </widget>
- <customwidgets>
-  <customwidget>
-   <class>KButtonGroup</class>
-   <extends>QGroupBox</extends>
-   <header>kbuttongroup.h</header>
-   <container>1</container>
-  </customwidget>
-  <customwidget>
-   <class>KKeySequenceWidget</class>
-   <extends>QWidget</extends>
-   <header>kkeysequencewidget.h</header>
-  </customwidget>
- </customwidgets>
  <resources/>
  <connections/>
  <slots>

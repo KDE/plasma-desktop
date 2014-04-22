@@ -21,7 +21,8 @@
 //#include <kdebug.h>
 #include <kstatusnotifieritem.h>
 #include <klocalizedstring.h>
-#include <kmenu.h>
+
+#include <qmenu.h>
 
 #include "xkb_rules.h"
 #include "x11_helper.h"
@@ -46,7 +47,7 @@ LayoutTrayIcon::LayoutTrayIcon(const Rules* rules_, const KeyboardConfig& keyboa
     m_notifierItem->setToolTipTitle(i18nc("tooltip title", "Keyboard Layout"));
     m_notifierItem->setTitle(i18nc("tooltip title", "Keyboard Layout"));
 
-	KMenu* menu = new KMenu("");
+	QMenu* menu = new QMenu("");
     m_notifierItem->setContextMenu(menu);
 	m_notifierItem->setStandardActionsEnabled(false);
 

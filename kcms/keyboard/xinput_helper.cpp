@@ -18,10 +18,9 @@
 
 #include "xinput_helper.h"
 
-#include <kapplication.h>
-#include <kdebug.h>
-
+#include <QCoreApplication>
 #include <QX11Info>
+#include <QDebug>
 
 #include <X11/X.h>
 #include <X11/Xlib.h>
@@ -30,8 +29,6 @@
 #ifdef HAVE_XINPUT_AND_DEVICE_NOTIFY
 #include <X11/extensions/XInput.h>
 #endif
-
-#include <fixx11h.h>
 
 #include "x11_helper.h"
 
@@ -49,7 +46,7 @@ XInputEventNotifier::XInputEventNotifier(QWidget* parent):
 
 void XInputEventNotifier::start()
 {
-	if( KApplication::kApplication() != NULL ) {
+	if( QCoreApplication::instance() != NULL ) {
 		registerForNewDeviceEvent(QX11Info::display());
 	}
 
@@ -60,7 +57,7 @@ void XInputEventNotifier::stop()
 {
 	XEventNotifier::stop();
 
-	if( KApplication::kApplication() != NULL ) {
+	if( QCoreApplication::instance() != NULL ) {
 	//    XEventNotifier::unregisterForNewDeviceEvent(QX11Info::display());
 	}
 }
@@ -113,13 +110,13 @@ int XInputEventNotifier::getNewDeviceEventType(xcb_generic_event_t* event)
 						if( devices[i].use == IsXKeyboard || devices[i].use == IsXExtensionKeyboard ) {
 							if( isRealKeyboard(devices[i].name) ) {
 								newDeviceType = DEVICE_KEYBOARD;
-								kDebug() << "new keyboard device, id:" << devices[i].id << "name:" << devices[i].name << "used as:" << devices[i].use;
+								qDebug() << "new keyboard device, id:" << devices[i].id << "name:" << devices[i].name << "used as:" << devices[i].use;
 								break;
 							}
 						}
 						if( devices[i].use == IsXPointer || devices[i].use == IsXExtensionPointer ) {
 							newDeviceType = DEVICE_POINTER;
-							kDebug() << "new pointer device, id:" << devices[i].id << "name:" << devices[i].name << "used as:" << devices[i].use;
+							qDebug() << "new pointer device, id:" << devices[i].id << "name:" << devices[i].name << "used as:" << devices[i].use;
 							break;
 						}
 					}
@@ -139,7 +136,7 @@ int XInputEventNotifier::registerForNewDeviceEvent(Display* display)
 
 	DevicePresence(display, xitype, xiclass);
 	XSelectExtensionEvent(display, DefaultRootWindow(display), &xiclass, 1);
-	kDebug() << "Registered for new device events from XInput, class" << xitype;
+	qDebug() << "Registered for new device events from XInput, class" << xitype;
 	xinputEventType = xitype;
 	return xitype;
 }
@@ -152,7 +149,7 @@ int XInputEventNotifier::registerForNewDeviceEvent(Display* display)
 
 int XInputEventNotifier::registerForNewDeviceEvent(Display* /*display*/)
 {
-	kWarning() << "Keyboard kded daemon is compiled without XInput, xkb configuration will be reset when new keyboard device is plugged in!";
+	qWarning() << "Keyboard kded daemon is compiled without XInput, xkb configuration will be reset when new keyboard device is plugged in!";
 	return -1;
 }
 

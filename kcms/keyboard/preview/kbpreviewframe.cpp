@@ -22,7 +22,6 @@
 #include <QFile>
 #include <QFont>
 
-#include <KApplication>
 #include <KLocalizedString>
 
 
