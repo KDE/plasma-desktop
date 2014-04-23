@@ -49,6 +49,7 @@ add_subdirectory(knotify)
 add_subdirectory(formats)
 add_subdirectory(spellchecking)
 add_subdirectory(phonon)
+add_subdirectory(search)
 add_subdirectory(workspaceoptions)
 
 if( FREETYPE_FOUND )
