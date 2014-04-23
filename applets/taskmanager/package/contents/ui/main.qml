@@ -147,10 +147,9 @@ Item {
     }
 
     PlasmaCore.Svg {
-        id: arrows
+        id: taskSvg
 
-        imagePath: "widgets/arrows"
-        size: "16x16"
+        imagePath: "widgets/tasks"
     }
 
     MouseHandler {

@@ -23,50 +23,6 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 
 PlasmaCore.SvgItem {
     id: arrow
-    anchors {
-        bottom: {
-            if (plasmoid.location != PlasmaCore.Types.TopEdge && plasmoid.location != PlasmaCore.Types.LeftEdge &&  plasmoid.location != PlasmaCore.Types.RightEdge) {
-                return parent.bottom;
-            } else {
-                return undefined;
-            }
-        }
-        horizontalCenter: {
-            if (plasmoid.location != PlasmaCore.Types.LeftEdge && plasmoid.location != PlasmaCore.Types.RightEdge) {
-                return iconBox.horizontalCenter;
-            } else {
-                return undefined;
-            }
-        }
-        verticalCenter: {
-            if (plasmoid.location == PlasmaCore.Types.LeftEdge || plasmoid.location == PlasmaCore.Types.RightEdge) {
-                return iconBox.verticalCenter;
-            } else {
-                return undefined;
-            }
-        }
-        top: {
-            if (plasmoid.location == PlasmaCore.Types.TopEdge) {
-                return parent.top;
-            } else {
-                return undefined;
-            }
-        }
-        left: {
-            if (plasmoid.location == PlasmaCore.Types.LeftEdge) {
-                return parent.left;
-            } else {
-                return undefined;
-            }
-        }
-        right: {
-            if (plasmoid.location == PlasmaCore.Types.RightEdge) {
-                return parent.right;
-            } else {
-                return undefined;
-            }
-        }
-    }
 
     states: [
         State {
@@ -110,10 +66,10 @@ PlasmaCore.SvgItem {
         },
         State {
             name: "bottom"
-            when: plasmoid.location == PlasmaCore.Types.TopEdge || plasmoid.location == PlasmaCore.Types.LeftEdge || plasmoid.location == PlasmaCore.Types.RightEdge
+            when: plasmoid.location != PlasmaCore.Types.TopEdge || plasmoid.location != PlasmaCore.Types.LeftEdge || plasmoid.location != PlasmaCore.Types.RightEdge
             AnchorChanges {
                 target: arrow
-                anchors.top: arrow.parent.top
+                anchors.top: undefined
                 anchors.left: undefined
                 anchors.right: undefined
                 anchors.bottom: arrow.parent.bottom
@@ -123,31 +79,23 @@ PlasmaCore.SvgItem {
         }
     ]
 
-    implicitWidth: Math.min(units.iconSizes.small, iconBox.width)
-    implicitHeight: implicitWidth
+    implicitWidth: Math.min(naturalSize.width, iconBox.width)
+    implicitHeight: Math.min(naturalSize.height, iconBox.width)
 
-    svg: arrows
+    svg: taskSvg
     elementId: elementForLocation()
 
     function elementForLocation() {
         switch (plasmoid.location) {
             case PlasmaCore.Types.LeftEdge:
-                return "right-arrow";
+                return "group-expander-left";
             case PlasmaCore.Types.TopEdge:
-                return "down-arrow";
+                return "group-expander-top";
             case PlasmaCore.Types.RightEdge:
-                return "left-arrow";
+                return "group-expander-right";
             case PlasmaCore.Types.BottomEdge:
             default:
-                return "up-arrow";
-        }
-    }
-
-    Connections {
-        target: plasmoid.configuration
-        onLocationChanged: {
-            arrow.width = arrow.implicitWidth
-            arrow.height = arrow.implicitHeight
+                return "group-expander-bottom";
         }
     }
 }
