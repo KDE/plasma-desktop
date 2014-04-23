@@ -36,3 +36,6 @@ Internal todo:
 
 * There's a rare crasher in runner support with a mile-long BT
   deep in V4 that needs wrangling.
+
+* Reacting to (panel) location changes _at runtime_ doesn't work
+  very well atm (needs a fix similar to 30cedd69 in taskmanager).
