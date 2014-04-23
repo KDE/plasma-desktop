@@ -63,7 +63,7 @@ PlasmaCore.ToolTipArea {
         } else if (fullRepresentation.implicitHeight > 0) {
             popupWindow.mainItem.height = fullRepresentation.implicitHeight
         } else {
-            popupWindow.mainItem.width = theme.mSize(theme.defaultFont).height * 25
+            popupWindow.mainItem.height = theme.mSize(theme.defaultFont).height * 25
         }
 
         fullRepresentation.parent = appletParent;
