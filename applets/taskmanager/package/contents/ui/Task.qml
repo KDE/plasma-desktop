@@ -257,11 +257,8 @@ MouseEventListener {
             right: parent.right
             leftMargin: taskFrame.margins.left + icon.width + 4
             rightMargin: taskFrame.margins.right
-            //FIXME: here seems to be a bug in the vertical center anchor
-            //verticalCenter: task.verticalCenter
+            verticalCenter: parent.verticalCenter
         }
-        //FIXME: this way when location changes the label gets correctly positioned
-        y: parent.y + parent.height/2 - height/2
 
         height: Math.max(theme.mSize(theme.defaultFont).height, parent.height - taskFrame.margins.top - taskFrame.margins.bottom)
 
