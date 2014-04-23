@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+  <kcfgfile name=""/>
+
+  <group name="General">
+    <entry name="icon" type="String">
+      <default>kde</default>
+    </entry>
+    <entry name="useCustomButtonImage" type="Bool">
+      <default>false</default>
+    </entry>
+    <entry name="customButtonImage" type="Url">
+      <default></default>
+    </entry>
+
+    <entry name="preferGenericNames" type="Bool">
+      <default>false</default>
+    </entry>
+    <entry name="limitDepth" type="Bool">
+      <default>false</default>
+    </entry>
+
+    <entry name="favoriteApps" type="StringList">
+      <default>systemsettings.desktop,konsole.desktop</default>
+    </entry>
+    <entry name="favoriteSystemActions" type="StringList">
+      <default>logout,reboot,shutdown</default>
+    </entry>
+    <entry name="recentApps" type="StringList">
+      <default>systemsettings.desktop</default>
+    </entry>
+
+    <entry name="useExtraRunners" type="Bool">
+      <default>true</default>
+    </entry>
+    <entry name="extraRunners" type="StringList">
+      <default>bookmarks,baloosearch</default>
+    </entry>
+    <entry name="alignResultsToBottom" type="Bool">
+      <default>true</default>
+    </entry>
+  </group>
+</kcfg>
+

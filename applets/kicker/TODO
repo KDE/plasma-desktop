@@ -1,0 +1,38 @@
+External bugs:
+
+* Initial size from panel when in a corner is slightly wrong due
+  to a bug in Plasma's Dialog class causing it not to budget for
+  the disabled border correctly.
+
+* Sidebar DND behaves strangely and doesn't work for the system
+  action favorites due to coordinate mapping bugs in Plasma's DND
+  event class.
+
+* Subdialog open performance is pretty poor right now, with in par-
+  ticular the delegate icons coming with a visible delay. Needs a
+  look for bottlenecks in the lib / research into workarounds.
+
+
+Internal todo:
+
+* Exactly when the menu should stay open or close still has some
+  loose ends vs. Plasma 1 version (needs more complex management
+  for hideOnWindowDeactivate). Behavior very close to QMenu is the
+  goal.
+
+* The "Limit depth" option is unimplemented right now - just needs
+  a conditional branch in the model + prop API for it. Ironically
+  this is a reversal vs. the Plasma 1 version which had some work
+  done for cascading but never saw it completed :).
+
+* Being able to type into the search field from any subdialog is
+  desired but currently broken (see FIXME in ItemListView).
+
+* Keyboard nav between runner matches columns is commented out
+  right now due to WIP-ness.
+
+* Alpha fadeout for favorites overflow is TBD because OpacityMask
+  doesn't easily work against IconItem.
+
+* There's a rare crasher in runner support with a mile-long BT
+  deep in V4 that needs wrangling.
