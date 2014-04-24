@@ -93,6 +93,7 @@ Item {
                     toolTip.icon = model.decoration;
                     toolTip.mainText = model.display;
                     toolTip.subText = model.type + "\n" + model.size + i18n(" bytes") // TODO: Format by locale.
+                    main.GridView.view.hoveredItem = main;
                 }
             }
 

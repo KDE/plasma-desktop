@@ -102,11 +102,6 @@ MouseEventListener {
         }
     }
 
-    onPositionChanged: {
-        var pos = mapToItem(gridView.contentItem, mouse.x, mouse.y);
-        gridView.hoveredItem = gridView.itemAt(pos.x, pos.y);
-    }
-
     onHoveredItemChanged: {
         doubleClickInProgress = false;
     }
