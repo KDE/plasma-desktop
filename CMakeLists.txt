@@ -31,7 +31,7 @@ find_package(KF5 CONFIG REQUIRED COMPONENTS
     I18n
     KCMUtils
     NewStuff
-    KDE4Support
+    KDELibs4Support
     NotifyConfig
     Su
     Attica

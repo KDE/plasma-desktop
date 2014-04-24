@@ -12,7 +12,7 @@ target_link_libraries(pagerplugin
                       KF5::WindowSystem
                       KF5::Plasma
                       KF5::Activities
-                      KF5::KDE4Support
+                      KF5::KDELibs4Support
                       Qt5::Core
                       Qt5::Qml
                       Qt5::Quick

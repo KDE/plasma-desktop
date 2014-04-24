@@ -30,6 +30,6 @@ target_link_libraries(folderplugin
                       KF5::KIOCore
                       KF5::KIOWidgets
                       KF5::KIOFileWidgets
-                      KF5::KDE4Support)
+                      KF5::KDELibs4Support)
 
 install(TARGETS folderplugin DESTINATION ${QML_INSTALL_DIR}/org/kde/plasma/private/folder)

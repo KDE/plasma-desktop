@@ -14,7 +14,7 @@ target_link_libraries(kcm_desktoptheme ${X11_LIBRARIES}
     KF5::KIOCore
     KF5::KIOWidgets
     KF5::NewStuff
-    KF5::KDE4Support
+    KF5::KDELibs4Support
 )
 
 kservice_desktop_to_json(kcm_desktoptheme desktoptheme.desktop)

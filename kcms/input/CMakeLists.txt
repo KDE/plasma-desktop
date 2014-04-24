@@ -60,7 +60,7 @@ target_link_libraries(kcm_input
     KF5::I18n
     KF5::KIOCore
     KF5::KIOWidgets
-    KF5::KDE4Support
+    KF5::KDELibs4Support
     ${X11_LIBRARIES}
     ${LIBUSB_LIBRARIES}
     )
@@ -90,7 +90,7 @@ target_link_libraries(kcm_cursortheme
     KF5::I18n
     KF5::KIOCore
     KF5::KIOWidgets
-    KF5::KDE4Support
+    KF5::KDELibs4Support
     KF5::NewStuff
     ${X11_LIBRARIES}
     ${XCB_XCB_LIBRARY}

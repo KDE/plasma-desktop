@@ -18,7 +18,7 @@ target_link_libraries(kcm_fontinst
     KF5::KIOWidgets
     KF5::XmlGui
     KF5::NewStuff
-    KF5::KDE4Support
+    KF5::KDELibs4Support
     kfontinstui
     kfontinst
     ${X11_LIBRARIES}

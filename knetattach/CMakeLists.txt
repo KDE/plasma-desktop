@@ -8,7 +8,7 @@ qt5_wrap_ui(knetattach_SRCS knetattach.ui )
 add_executable(knetattach ${knetattach_SRCS})
 ecm_mark_nongui_executable(knetattach)
 
-target_link_libraries(knetattach KF5::KIOWidgets KF5::KDE4Support)
+target_link_libraries(knetattach KF5::KIOWidgets KF5::KDELibs4Support)
 
 install(TARGETS knetattach DESTINATION ${LIBEXEC_INSTALL_DIR})
 

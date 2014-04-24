@@ -19,7 +19,7 @@ target_link_libraries(kcm_access
     KF5::KIOWidgets
     KF5::NotifyConfig
     KF5::WindowSystem
-    KF5::KDE4Support
+    KF5::KDELibs4Support
     ${X11_LIBRARIES}
 )
 
@@ -44,7 +44,7 @@ target_link_libraries(kdeinit_kaccess
     KF5::WidgetsAddons
     KF5::WindowSystem
     Phonon::phonon4qt5
-    KF5::KDE4Support
+    KF5::KDELibs4Support
     ${X11_LIBRARIES}
 )
 

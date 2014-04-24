@@ -31,7 +31,7 @@ target_link_libraries(kcm_keys
     KF5::IconThemes
     KF5::KIOWidgets
     KF5::XmlGui
-    KF5::KDE4Support
+    KF5::KDELibs4Support
 )
 
 install(TARGETS kcm_keys  DESTINATION ${PLUGIN_INSTALL_DIR} )

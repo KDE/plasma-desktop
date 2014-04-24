@@ -43,7 +43,7 @@ target_link_libraries(kickerplugin
                       KF5::ConfigCore
                       KF5::CoreAddons
                       KF5::I18n
-                      KF5::KDE4Support # FIXME: New Solid power management API doesn't exist yet, so we need to use deprecated stuff.
+                      KF5::KDELibs4Support # FIXME: New Solid power management API doesn't exist yet, so we need to use deprecated stuff.
                       KF5::KIOCore
                       KF5::KIOWidgets
                       KF5::PlasmaQuick

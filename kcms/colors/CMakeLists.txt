@@ -13,7 +13,7 @@ target_link_libraries(kcm_colors
     KF5::I18n
     Qt5::DBus
     KF5::NewStuff
-    KF5::KDE4Support
+    KF5::KDELibs4Support
     ${X11_LIBRARIES})
 
 if(X11_FOUND)

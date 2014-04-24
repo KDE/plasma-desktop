@@ -41,7 +41,7 @@ add_library(kcm_componentchooser MODULE ${kcm_componentchooser_SRCS})
 
 
 target_link_libraries(kcm_componentchooser
-                      KF5::KDE4Support
+                      KF5::KDELibs4Support
                       )
 
 install(TARGETS kcm_componentchooser  DESTINATION ${PLUGIN_INSTALL_DIR} )

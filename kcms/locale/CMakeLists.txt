@@ -15,7 +15,7 @@ target_link_libraries(kcm_locale
     KF5::I18n
     KF5::UnitConversion
     ${X11_LIBRARIES}
-    KF5::KDE4Support
+    KF5::KDELibs4Support
 )
 
 

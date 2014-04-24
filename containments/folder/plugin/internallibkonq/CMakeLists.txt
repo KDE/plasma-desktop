@@ -32,7 +32,7 @@ set(konq_LIB_SRCS
 
 add_library(konq SHARED ${konq_LIB_SRCS})
 
-target_link_libraries(konq KF5::Bookmarks KF5::KDE4Support KF5::Parts ${ZLIB_LIBRARY} ${X11_X11_LIB})
+target_link_libraries(konq KF5::Bookmarks KF5::KDELibs4Support KF5::Parts ${ZLIB_LIBRARY} ${X11_X11_LIB})
 
 set_target_properties(konq PROPERTIES
      VERSION ${KDE_NON_GENERIC_LIB_VERSION}

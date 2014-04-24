@@ -15,7 +15,7 @@ target_link_libraries(kcm_bell
     KF5::I18n
     KF5::Notifications
     KF5::WindowSystem
-    KF5::KDE4Support
+    KF5::KDELibs4Support
     ${X11_X11_LIB})
 
 install(TARGETS kcm_bell  DESTINATION ${PLUGIN_INSTALL_DIR} )

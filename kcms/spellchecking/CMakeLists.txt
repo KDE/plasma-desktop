@@ -6,7 +6,7 @@ add_library(kcmspellchecking MODULE ${kcm_spellchecking_SRCS})
 
 target_link_libraries(kcmspellchecking
                       KF5::SonnetUi
-                      KF5::KDE4Support
+                      KF5::KDELibs4Support
                      )
 
 install(TARGETS kcmspellchecking   DESTINATION ${PLUGIN_INSTALL_DIR} )
