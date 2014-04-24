@@ -40,6 +40,8 @@ Item {
         } else {
             launcher.openUrl(model["url"]);
             plasmoid.expanded = false;
+            listItem.ListView.view.model.rootIndex = 0;
+            listItem.ListView.view.clearBreadcrumbs();
         }
     }
 

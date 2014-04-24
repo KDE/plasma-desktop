@@ -172,6 +172,11 @@ Item {
                 crumbModel.indexes.push(categoryIndex);
             }
 
+            function clearBreadcrumbs() {
+                crumbModel.clear();
+                crumbModel.indexes = [];
+            }
+
             PlasmaCore.Svg {
                 id: arrowSvg
 
