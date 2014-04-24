@@ -112,7 +112,7 @@ PlasmaCore.ToolTipArea {
         location: plasmoid.location
         hideOnWindowDeactivate: plasmoid.hideOnWindowDeactivate
 
-        property int oldStatus: 0
+        property var oldStatus: PlasmaCore.Types.UnknownStatus
 
         mainItem: Item {
             id: appletParent
@@ -125,12 +125,10 @@ PlasmaCore.ToolTipArea {
         onVisibleChanged: {
             if (!visible) {
                 plasmoid.expanded = false;
-                if (oldStatus > 0) {
-                    plasmoid.status = oldStatus;
-                }
+                plasmoid.status = oldStatus;
             } else {
                 oldStatus = plasmoid.status;
-                plasmoid.status = PlasmaCore.Types.RequestingAttention;
+                plasmoid.status = PlasmaCore.Types.RequiresAttentionStatus;
                 // This call currently fails and complains at runtime:
                 // QWindow::setWindowState: QWindow::setWindowState does not accept Qt::WindowActive
                 popupWindow.requestActivate();
