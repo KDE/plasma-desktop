@@ -93,7 +93,7 @@ target_link_libraries(kcm_cursortheme
     KF5::KDELibs4Support
     KF5::NewStuff
     ${X11_LIBRARIES}
-    ${XCB_XCB_LIBRARY}
+    XCB::XCB
 )
 
 if (X11_Xcursor_FOUND)

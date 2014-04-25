@@ -9,8 +9,8 @@ target_link_libraries(kfontinst
     KF5::KDELibs4Support
     ${FREETYPE_LIBRARIES}
     ${FONTCONFIG_LIBRARIES}
-    ${XCB_XCB_LIBRARY}
-    ${XCB_IMAGE_LIBRARY}
+    XCB::XCB
+    XCB::IMAGE
 )
 set_target_properties(kfontinst PROPERTIES VERSION ${GENERIC_LIB_VERSION} SOVERSION ${GENERIC_LIB_SOVERSION} )
 
