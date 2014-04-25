@@ -27,6 +27,8 @@ import org.kde.draganddrop 2.0
 Item {
     property alias model: kickoffListView.model
 
+    property ListView listView: kickoffListView
+
     function decrementCurrentIndex() {
         kickoffListView.decrementCurrentIndex();
     }

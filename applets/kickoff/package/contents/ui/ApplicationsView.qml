@@ -29,6 +29,8 @@ Item {
 
     objectName: "ApplicationsView"
 
+    property ListView listView: applicationsView
+
     function decrementCurrentIndex() {
         applicationsView.decrementCurrentIndex();
     }

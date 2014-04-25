@@ -35,7 +35,7 @@ Item {
     property string previousState
     property bool switchTabsOnHover: plasmoid.configuration.switchTabsOnHover
     property bool showAppsByName: plasmoid.configuration.showAppsByName
-    property Item currentView: mainStack.currentTab.decrementCurrentIndex ? mainStack.currentTab : mainStack.currentTab.item
+    property Item currentView: mainTabGroup.currentTab.decrementCurrentIndex ? mainTabGroup.currentTab : mainTabGroup.currentTab.item
 
     property int pad: units.gridUnit
     property bool debug: false
@@ -75,206 +75,221 @@ Item {
         id: header
     }
 
-    PlasmaComponents.TabGroup {
-        id: mainStack
-
-        anchors {
-            leftMargin: units.largeSpacing
-            rightMargin: units.largeSpacing
-        }
-
-        //pages
-        FavoritesView {
-            id: favoritesPage
-        }
-        PlasmaExtras.ConditionalLoader {
-            id: applicationsPage
-            when: mainStack.currentTab == applicationsPage
-            source: Qt.resolvedUrl("ApplicationsView.qml")
-        }
-        PlasmaExtras.ConditionalLoader {
-            id: systemPage
-            when: mainStack.currentTab == systemPage
-            source: Qt.resolvedUrl("SystemView.qml")
-        }
-        PlasmaExtras.ConditionalLoader {
-            id: recentlyUsedPage
-            when: mainStack.currentTab == recentlyUsedPage
-            source: Qt.resolvedUrl("RecentlyUsedView.qml")
-        }
-        PlasmaExtras.ConditionalLoader {
-            id: leavePage
-            when: mainStack.currentTab == leavePage
-            source: Qt.resolvedUrl("LeaveView.qml")
-        }
-        PlasmaExtras.ConditionalLoader {
-            id: searchPage
-            when: root.state == "Search"
-            //when: mainStack.currentTab == searchPage || root.state == "Search"
-            source: Qt.resolvedUrl("SearchView.qml")
-        }
-
-
-        state: {
-            switch (plasmoid.location) {
-            case PlasmaCore.Types.LeftEdge:
-                return "left";
-            case PlasmaCore.Types.TopEdge:
-                return "top";
-            case PlasmaCore.Types.RightEdge:
-                return "right";
-            case PlasmaCore.Types.BottomEdge:
-            default:
-                return "bottom";
+    MouseArea {
+        id: mainArea
+        hoverEnabled: true
+        onPositionChanged: {
+            if (mainTabGroup.currentTab.listView) {
+                mainTabGroup.currentTab.listView.currentIndex = mainTabGroup.currentTab.listView.indexAt(units.largeSpacing * 2, mouse.y);
+            } else {
+                mainTabGroup.currentTab.item.listView.currentIndex = mainTabGroup.currentTab.item.listView.indexAt(units.largeSpacing * 2, mouse.y);
             }
         }
-        states: [
-            State {
-                name: "left"
-                AnchorChanges {
-                    target: header
-                    anchors {
-                        left: root.left
-                        top: undefined
-                        right: root.right
-                        bottom: root.bottom
-                    }
-                }
-                PropertyChanges {
-                    target: header
-                    width: header.implicitWidth
-                }
+        onClicked: {
+            currentView.activateCurrentIndex(1);
+        }
+        PlasmaComponents.TabGroup {
+            id: mainTabGroup
 
-                AnchorChanges {
-                    target: mainStack
-                    anchors {
-                        left: tabBar.right
-                        top: root.top
-                        right: root.right
-                        bottom: header.top
-                    }
-                }
+            anchors {
+                fill: parent
+                leftMargin: units.largeSpacing
+                rightMargin: units.largeSpacing
+            }
 
-                AnchorChanges {
-                    target: tabBar
-                    anchors {
-                        left: root.left
-                        top: root.top
-                        right: undefined
-                        bottom: header.top
-                    }
-                }
-            },
-            State {
-                name: "top"
-                AnchorChanges {
-                    target: header
-                    anchors {
-                        left: root.left
-                        top: undefined
-                        right: root.right
-                        bottom: root.bottom
-                    }
-                }
-                PropertyChanges {
-                    target: header
-                    height: header.implicitHeight
-                }
+            //pages
+            FavoritesView {
+                id: favoritesPage
+            }
+            PlasmaExtras.ConditionalLoader {
+                id: applicationsPage
+                when: mainTabGroup.currentTab == applicationsPage
+                source: Qt.resolvedUrl("ApplicationsView.qml")
+            }
+            PlasmaExtras.ConditionalLoader {
+                id: systemPage
+                when: mainTabGroup.currentTab == systemPage
+                source: Qt.resolvedUrl("SystemView.qml")
+            }
+            PlasmaExtras.ConditionalLoader {
+                id: recentlyUsedPage
+                when: mainTabGroup.currentTab == recentlyUsedPage
+                source: Qt.resolvedUrl("RecentlyUsedView.qml")
+            }
+            PlasmaExtras.ConditionalLoader {
+                id: leavePage
+                when: mainTabGroup.currentTab == leavePage
+                source: Qt.resolvedUrl("LeaveView.qml")
+            }
+            PlasmaExtras.ConditionalLoader {
+                id: searchPage
+                when: root.state == "Search"
+                //when: mainTabGroup.currentTab == searchPage || root.state == "Search"
+                source: Qt.resolvedUrl("SearchView.qml")
+            }
 
-                AnchorChanges {
-                    target: mainStack
-                    anchors {
-                        left: root.left
-                        top: tabBar.bottom
-                        right: root.right
-                        bottom: header.top
-                    }
-                }
 
-                AnchorChanges {
-                    target: tabBar
-                    anchors {
-                        left: root.left
-                        top: root.top
-                        right: root.right
-                        bottom: undefined
-                    }
-                }
-            },
-            State {
-                name: "right"
-                AnchorChanges {
-                    target: header
-                    anchors {
-                        left: root.left
-                        top: undefined
-                        right: root.right
-                        bottom: root.bottom
-                    }
-                }
-                PropertyChanges {
-                    target: header
-                    width: header.implicitWidth
-                }
-
-                AnchorChanges {
-                    target: mainStack
-                    anchors {
-                        left: root.left
-                        top: root.top
-                        right: tabBar.left
-                        bottom: header.top
-                    }
-                }
-
-                AnchorChanges {
-                    target: tabBar
-                    anchors {
-                        left: undefined
-                        top: root.top
-                        right: root.right
-                        bottom: header.top
-                    }
-                }
-            },
-            State {
-                name: "bottom"
-                AnchorChanges {
-                    target: header
-                    anchors {
-                        left: root.left
-                        top: root.top
-                        right: root.right
-                        bottom: undefined
-                    }
-                }
-                PropertyChanges {
-                    target: header
-                    height: header.implicitHeight
-                }
-
-                AnchorChanges {
-                    target: mainStack
-                    anchors {
-                        left: root.left
-                        top: header.bottom
-                        right: root.right
-                        bottom: tabBar.top
-                    }
-                }
-
-                AnchorChanges {
-                    target: tabBar
-                    anchors {
-                        left: root.left
-                        top: undefined
-                        right: root.right
-                        bottom: root.bottom
-                    }
+            state: {
+                switch (plasmoid.location) {
+                case PlasmaCore.Types.LeftEdge:
+                    return "left";
+                case PlasmaCore.Types.TopEdge:
+                    return "top";
+                case PlasmaCore.Types.RightEdge:
+                    return "right";
+                case PlasmaCore.Types.BottomEdge:
+                default:
+                    return "bottom";
                 }
             }
-        ]
-    } // mainStack
+            states: [
+                State {
+                    name: "left"
+                    AnchorChanges {
+                        target: header
+                        anchors {
+                            left: root.left
+                            top: undefined
+                            right: root.right
+                            bottom: root.bottom
+                        }
+                    }
+                    PropertyChanges {
+                        target: header
+                        width: header.implicitWidth
+                    }
+
+                    AnchorChanges {
+                        target: mainArea
+                        anchors {
+                            left: tabBar.right
+                            top: root.top
+                            right: root.right
+                            bottom: header.top
+                        }
+                    }
+
+                    AnchorChanges {
+                        target: tabBar
+                        anchors {
+                            left: root.left
+                            top: root.top
+                            right: undefined
+                            bottom: header.top
+                        }
+                    }
+                },
+                State {
+                    name: "top"
+                    AnchorChanges {
+                        target: header
+                        anchors {
+                            left: root.left
+                            top: undefined
+                            right: root.right
+                            bottom: root.bottom
+                        }
+                    }
+                    PropertyChanges {
+                        target: header
+                        height: header.implicitHeight
+                    }
+
+                    AnchorChanges {
+                        target: mainArea
+                        anchors {
+                            left: root.left
+                            top: tabBar.bottom
+                            right: root.right
+                            bottom: header.top
+                        }
+                    }
+
+                    AnchorChanges {
+                        target: tabBar
+                        anchors {
+                            left: root.left
+                            top: root.top
+                            right: root.right
+                            bottom: undefined
+                        }
+                    }
+                },
+                State {
+                    name: "right"
+                    AnchorChanges {
+                        target: header
+                        anchors {
+                            left: root.left
+                            top: undefined
+                            right: root.right
+                            bottom: root.bottom
+                        }
+                    }
+                    PropertyChanges {
+                        target: header
+                        width: header.implicitWidth
+                    }
+
+                    AnchorChanges {
+                        target: mainArea
+                        anchors {
+                            left: root.left
+                            top: root.top
+                            right: tabBar.left
+                            bottom: header.top
+                        }
+                    }
+
+                    AnchorChanges {
+                        target: tabBar
+                        anchors {
+                            left: undefined
+                            top: root.top
+                            right: root.right
+                            bottom: header.top
+                        }
+                    }
+                },
+                State {
+                    name: "bottom"
+                    AnchorChanges {
+                        target: header
+                        anchors {
+                            left: root.left
+                            top: root.top
+                            right: root.right
+                            bottom: undefined
+                        }
+                    }
+                    PropertyChanges {
+                        target: header
+                        height: header.implicitHeight
+                    }
+
+                    AnchorChanges {
+                        target: mainArea
+                        anchors {
+                            left: root.left
+                            top: header.bottom
+                            right: root.right
+                            bottom: tabBar.top
+                        }
+                    }
+
+                    AnchorChanges {
+                        target: tabBar
+                        anchors {
+                            left: root.left
+                            top: undefined
+                            right: root.right
+                            bottom: root.bottom
+                        }
+                    }
+                }
+            ]
+        } // mainTabGroup
+    }
 
     Kickoff.FavoritesModel {
         id: favoritesModel
@@ -368,7 +383,7 @@ Item {
 
     Keys.onPressed: {
 
-        if (mainStack.currentTab == applicationsPage) {
+        if (mainTabGroup.currentTab == applicationsPage) {
             if (event.key != Qt.Key_Tab) {
                 root.state = "Applications";
             }
@@ -461,7 +476,7 @@ Item {
                 visible: false
             }
             PropertyChanges {
-                target: mainStack
+                target: mainTabGroup
                 currentTab: searchPage
             }
         }

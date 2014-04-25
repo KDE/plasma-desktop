@@ -32,6 +32,8 @@ Item {
 
     objectName: "FavoritesView"
 
+    property ListView listView: kickoffListView
+
     function decrementCurrentIndex() {
         kickoffListView.decrementCurrentIndex();
     }
