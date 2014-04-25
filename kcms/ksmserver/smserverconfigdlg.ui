@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SMServerConfigDlg</class>
+ <widget class="QWidget" name="SMServerConfigDlg">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>477</width>
+    <height>398</height>
+   </rect>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_3">
+   <item>
+    <widget class="QGroupBox" name="topBox">
+     <property name="title">
+      <string>General</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QCheckBox" name="confirmLogoutCheck">
+        <property name="whatsThis">
+         <string>Check this option if you want the session manager to display a logout confirmation dialog box.</string>
+        </property>
+        <property name="text">
+         <string>Conf&amp;irm logout</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="offerShutdownCheck">
+        <property name="text">
+         <string>O&amp;ffer shutdown options</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="sdGroup">
+     <property name="whatsThis">
+      <string>Here you can choose what should happen by default when you log out. This only has meaning, if you logged in through KDM.</string>
+     </property>
+     <property name="title">
+      <string>Default Leave Option</string>
+     </property>
+     <layout class="QVBoxLayout">
+      <item>
+       <widget class="QRadioButton" name="logoutRadio">
+        <property name="text">
+         <string>&amp;End current session</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="haltRadio">
+        <property name="text">
+         <string>&amp;Turn off computer</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="rebootRadio">
+        <property name="text">
+         <string>&amp;Restart computer</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="loginGroup">
+     <property name="whatsThis">
+      <string>&lt;ul&gt;
+&lt;li&gt;&lt;b&gt;Restore previous session:&lt;/b&gt; Will save all applications running on exit and restore them when they next start up&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Restore manually saved session: &lt;/b&gt; Allows the session to be saved at any time via &quot;Save Session&quot; in the K-Menu. This means the currently started applications will reappear when they next start up.&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Start with an empty session:&lt;/b&gt; Do not save anything. Will come up with an empty desktop on next start.&lt;/li&gt;
+&lt;/ul&gt;</string>
+     </property>
+     <property name="title">
+      <string>On Login</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QRadioButton" name="previousSessionRadio">
+        <property name="text">
+         <string>Restore &amp;previous session</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="savedSessionRadio">
+        <property name="text">
+         <string>Restore &amp;manually saved session</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="emptySessionRadio">
+        <property name="text">
+         <string>Start with an empty &amp;session</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="textLabel1">
+        <property name="text">
+         <string>Applications to be e&amp;xcluded from sessions:</string>
+        </property>
+        <property name="wordWrap">
+         <bool>false</bool>
+        </property>
+        <property name="buddy">
+         <cstring>excludeLineedit</cstring>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="KLineEdit" name="excludeLineedit">
+        <property name="whatsThis">
+         <string>Here you can enter a colon or comma separated list of applications that should not be saved in sessions, and therefore will not be started when restoring a session. For example 'xterm:konsole' or 'xterm,konsole'.</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <spacer>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>1</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>KLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>klineedit.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>offerShutdownCheck</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>sdGroup</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
