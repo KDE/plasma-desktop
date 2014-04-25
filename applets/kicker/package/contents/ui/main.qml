@@ -51,7 +51,7 @@ Item {
     Kicker.RootModel {
         id: rootModel
 
-        preferGenericNames: plasmoid.configuration.preferGenericNames
+        appNameFormat: plasmoid.configuration.appNameFormat
 
         onRecentAppsModelChanged: {
             recentAppsModel.recentApps = plasmoid.configuration.recentApps;

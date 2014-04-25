@@ -51,16 +51,23 @@ class AppGroupEntry : public AbstractGroupEntry
 {
     public:
         AppGroupEntry(KServiceGroup::Ptr group, QAbstractListModel *parentModel,
-            bool preferGenericNames);
+            int appNameFormat);
 };
 
 class AppsModel : public AbstractModel
 {
     Q_OBJECT
 
-    Q_PROPERTY(bool preferGenericNames READ preferGenericNames WRITE setPreferGenericNames NOTIFY preferGenericNamesChanged)
+    Q_PROPERTY(int appNameFormat READ appNameFormat WRITE setAppNameFormat NOTIFY appNameFormatChanged)
 
     public:
+        enum NameFormat {
+            NameOnly = 0,
+            GenericNameOnly,
+            NameAndGenericName,
+            GenericNameAndName
+        };
+
         explicit AppsModel(const QString &entryPath = QString(), QObject *parent = 0);
         ~AppsModel();
 
@@ -72,12 +79,12 @@ class AppsModel : public AbstractModel
 
         Q_INVOKABLE QObject *modelForRow(int row);
 
-        bool preferGenericNames() const;
-        void setPreferGenericNames(bool preferGenericNames);
+        int appNameFormat() const;
+        void setAppNameFormat(int format);
 
     Q_SIGNALS:
         void refreshing() const;
-        void preferGenericNamesChanged() const;
+        void appNameFormatChanged() const;
 
     protected Q_SLOTS:
         virtual void refresh();
@@ -93,7 +100,7 @@ class AppsModel : public AbstractModel
 
         QString m_entryPath;
         QTimer *m_changeTimer;
-        bool m_preferGenericNames;
+        NameFormat m_appNameFormat;
 };
 
 #endif

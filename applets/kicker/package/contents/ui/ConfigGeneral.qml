@@ -32,7 +32,7 @@ GroupBox {
     property alias cfg_useCustomButtonImage: useCustomButtonImage.checked
     property alias cfg_customButtonImage: customButtonImage.text
 
-    property alias cfg_preferGenericNames: preferGenericNames.checked
+    property alias cfg_appNameFormat: appNameFormat.currentIndex
     property alias cfg_limitDepth: limitDepth.checked
 
     property alias cfg_useExtraRunners: useExtraRunners.checked
@@ -65,11 +65,20 @@ GroupBox {
             flat: true
 
             ColumnLayout {
-                CheckBox {
-                    id: preferGenericNames
+                RowLayout {
+                    Label {
+                        text: i18n("Show applications as:")
+                    }
 
-                    text: i18n("Prefer generic application names")
+                    ComboBox {
+                        id: appNameFormat
+
+                        Layout.fillWidth: true
+
+                        model: [i18n("Name only"), i18n("Description only"), i18n("Name (Description)"), i18n("Description (Name)")]
+                    }
                 }
+
 
                 RowLayout {
                     CheckBox {
@@ -96,7 +105,7 @@ GroupBox {
                 CheckBox {
                     id: useExtraRunners
 
-                    text: i18n("Expand search to bookmarks, files and emails")
+                    text: i18n("Search to bookmarks, files and emails")
                 }
 
                 CheckBox {
