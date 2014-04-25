@@ -38,6 +38,8 @@ class AbstractEntry
         QString icon() const { return m_icon; }
         QString name() const { return m_name; }
 
+        static bool lessThan(AbstractEntry *e1, AbstractEntry *e2);
+
     protected:
         QString m_icon;
         QString m_name;

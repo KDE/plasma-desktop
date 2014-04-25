@@ -27,30 +27,48 @@
 #include <KRun>
 #include <KSycoca>
 
-AppGroupEntry::AppGroupEntry(KServiceGroup::Ptr group, QAbstractListModel *parentModel, int appNameFormat)
+AppGroupEntry::AppGroupEntry(KServiceGroup::Ptr group, QAbstractListModel *parentModel,
+    bool flat, int appNameFormat)
 {
     m_name = group->caption();
     m_icon = group->icon();
-    m_model = new AppsModel(group->entryPath(), parentModel);
+    m_model = new AppsModel(group->entryPath(), flat, parentModel);
     static_cast<AppsModel *>(m_model.data())->setAppNameFormat(appNameFormat);
     QObject::connect(parentModel, SIGNAL(refreshing()), m_model, SLOT(deleteLater()));
     QObject::connect(m_model, SIGNAL(appLaunched(QString)), parentModel, SIGNAL(appLaunched(QString)));
 }
 
-AppEntry::AppEntry(KService::Ptr service)
+AppEntry::AppEntry(KService::Ptr service, NameFormat nameFormat)
 : m_service(service)
 {
-    m_name = service->name();
-    m_genericName = service->genericName();
+    const QString &name = service->name();
+    QString genericName = service->genericName();
+
+    if (genericName.isEmpty()) {
+        genericName = service->comment();
+    }
+
+    if (nameFormat == NameOnly || genericName.isEmpty() || name == genericName) {
+        m_name = name;
+    } else if (nameFormat == GenericNameOnly) {
+        m_name = genericName;
+    } else if (nameFormat == NameAndGenericName) {
+        m_name = i18nc("App name (Generic name)", "%1 (%2)", name, genericName);
+    } else {
+        m_name = i18nc("Generic name (App name)", "%1 (%2)", genericName, name);
+    }
+
     m_icon = service->icon();
     m_service = service;
 }
 
-AppsModel::AppsModel(const QString &entryPath, QObject *parent)
+AppsModel::AppsModel(const QString &entryPath, bool flat, QObject *parent)
 : AbstractModel(parent)
 , m_entryPath(entryPath)
 , m_changeTimer(0)
-, m_appNameFormat(NameOnly)
+, m_flat(flat)
+, m_appNameFormat(AppEntry::NameOnly)
+, m_sortNeeded(false)
 {
     refresh();
 
@@ -72,29 +90,7 @@ QVariant AppsModel::data(const QModelIndex &index, int role) const
     }
 
     if (role == Qt::DisplayRole) {
-        if (m_appNameFormat == NameOnly) {
-            return m_entryList.at(index.row())->name();
-        } else {
-            AbstractEntry *entry = m_entryList.at(index.row());
-
-            if (entry->type() == AbstractEntry::RunnableType) {
-                AppEntry *appEntry = static_cast<AppEntry *>(entry);
-
-                if (!appEntry->genericName().isEmpty() && appEntry->name() != appEntry->genericName()) {
-                    if (m_appNameFormat == GenericNameOnly) {
-                        return appEntry->genericName();
-                    } else if (m_appNameFormat == NameAndGenericName) {
-                        return i18nc("App name (Generic name)", "%1 (%2)", appEntry->name(), appEntry->genericName());
-                    } else {
-                        return i18nc("Generic name (App name)", "%1 (%2)", appEntry->genericName(), appEntry->name());
-                    }
-                } else {
-                    return appEntry->name();
-                }
-            } else {
-                return m_entryList.at(index.row())->name();
-            }
-        }
+        return m_entryList.at(index.row())->name();
     } else if (role == Qt::DecorationRole) {
         return m_entryList.at(index.row())->icon();
     } else if (role == Kicker::HasChildrenRole) {
@@ -150,6 +146,22 @@ QObject *AppsModel::modelForRow(int row)
     return static_cast<AbstractGroupEntry *>(m_entryList.at(row))->model();
 }
 
+bool AppsModel::flat() const
+{
+    return m_flat;
+}
+
+void AppsModel::setFlat(bool flat)
+{
+    if (m_flat != flat) {
+        m_flat = flat;
+
+        refresh();
+
+        emit flatChanged();
+    }
+}
+
 int AppsModel::appNameFormat() const
 {
     return m_appNameFormat;
@@ -157,8 +169,8 @@ int AppsModel::appNameFormat() const
 
 void AppsModel::setAppNameFormat(int format)
 {
-    if (m_appNameFormat != (NameFormat)format) {
-        m_appNameFormat = (NameFormat)format;
+    if (m_appNameFormat != (AppEntry::NameFormat)format) {
+        m_appNameFormat = (AppEntry::NameFormat)format;
 
         refresh();
 
@@ -186,7 +198,7 @@ void AppsModel::refresh()
                 KServiceGroup::Ptr subGroup = static_cast<KServiceGroup::Ptr >(p);
 
                 if (!subGroup->noDisplay() && subGroup->childCount() > 0) {
-                    m_entryList << new AppGroupEntry(subGroup, this, m_appNameFormat);
+                    m_entryList << new AppGroupEntry(subGroup, this, m_flat, m_appNameFormat);
                 }
             }
         }
@@ -200,6 +212,12 @@ void AppsModel::refresh()
     } else {
         KServiceGroup::Ptr group = KServiceGroup::group(m_entryPath);
         processServiceGroup(group);
+
+        if (m_sortNeeded) {
+            qSort(m_entryList.begin(), m_entryList.end(), AbstractEntry::lessThan);
+
+            m_sortNeeded = false;
+        }
     }
 
     endResetModel();
@@ -223,11 +241,6 @@ void AppsModel::processServiceGroup(KServiceGroup::Ptr group)
             const KService::Ptr service = static_cast<KService::Ptr>(p);
 
             if (!service->noDisplay()) {
-                QString genericName = service->genericName();
-                if (genericName.isNull()) {
-                    genericName = service->comment();
-                }
-
                 bool found = false;
 
                 foreach (const AbstractEntry *entry, m_entryList) {
@@ -238,15 +251,21 @@ void AppsModel::processServiceGroup(KServiceGroup::Ptr group)
                 }
 
                 if (!found) {
-                    m_entryList << new AppEntry(service);
+                    m_entryList << new AppEntry(service, m_appNameFormat);
                 }
             }
 
         } else if (p->isType(KST_KServiceGroup)) {
-            const KServiceGroup::Ptr subGroup = static_cast<KServiceGroup::Ptr>(p);
+            if (m_flat) {
+                processServiceGroup(static_cast<KServiceGroup::Ptr>(p));
 
-            if (!subGroup->noDisplay() && subGroup->childCount() > 0) {
-                m_entryList << new AppGroupEntry(subGroup, this, m_appNameFormat);
+                m_sortNeeded = true;
+            } else {
+                const KServiceGroup::Ptr subGroup = static_cast<KServiceGroup::Ptr>(p);
+
+                if (!subGroup->noDisplay() && subGroup->childCount() > 0) {
+                    m_entryList << new AppGroupEntry(subGroup, this, m_flat, m_appNameFormat);
+                }
             }
         }
     }

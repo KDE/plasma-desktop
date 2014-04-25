@@ -20,11 +20,6 @@ Internal todo:
   for hideOnWindowDeactivate). Behavior very close to QMenu is the
   goal.
 
-* The "Limit depth" option is unimplemented right now - just needs
-  a conditional branch in the model + prop API for it. Ironically
-  this is a reversal vs. the Plasma 1 version which had some work
-  done for cascading but never saw it completed :).
-
 * Being able to type into the search field from any subdialog is
   desired but currently broken (see FIXME in ItemListView).
 

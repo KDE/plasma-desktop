@@ -79,19 +79,10 @@ GroupBox {
                     }
                 }
 
+                CheckBox {
+                    id: limitDepth
 
-                RowLayout {
-                    CheckBox {
-                        id: limitDepth
-
-                        text: i18n("Flatten menu to a single level")
-                    }
-
-                    Label {
-                        color: "red"
-
-                        text: "← WIP/TODO"
-                    }
+                    text: i18n("Flatten menu to a single level")
                 }
             }
         }

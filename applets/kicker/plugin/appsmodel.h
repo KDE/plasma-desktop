@@ -31,35 +31,15 @@ class AppsModel;
 
 class QTimer;
 
-class AppEntry : public AbstractEntry
-{
-    public:
-        AppEntry(KService::Ptr service);
-
-        EntryType type() const { return RunnableType; }
-
-        QString genericName() const { return m_genericName; }
-
-        KService::Ptr service() const { return m_service; }
-
-    private:
-        QString m_genericName;
-        KService::Ptr m_service;
-};
-
 class AppGroupEntry : public AbstractGroupEntry
 {
     public:
         AppGroupEntry(KServiceGroup::Ptr group, QAbstractListModel *parentModel,
-            int appNameFormat);
+            bool flat, int appNameFormat);
 };
 
-class AppsModel : public AbstractModel
+class AppEntry : public AbstractEntry
 {
-    Q_OBJECT
-
-    Q_PROPERTY(int appNameFormat READ appNameFormat WRITE setAppNameFormat NOTIFY appNameFormatChanged)
-
     public:
         enum NameFormat {
             NameOnly = 0,
@@ -68,7 +48,25 @@ class AppsModel : public AbstractModel
             GenericNameAndName
         };
 
-        explicit AppsModel(const QString &entryPath = QString(), QObject *parent = 0);
+        AppEntry(KService::Ptr service, NameFormat nameFormat);
+
+        EntryType type() const { return RunnableType; }
+
+        KService::Ptr service() const { return m_service; }
+
+    private:
+        KService::Ptr m_service;
+};
+
+class AppsModel : public AbstractModel
+{
+    Q_OBJECT
+
+    Q_PROPERTY(bool flat READ flat WRITE setFlat NOTIFY flatChanged)
+    Q_PROPERTY(int appNameFormat READ appNameFormat WRITE setAppNameFormat NOTIFY appNameFormatChanged)
+
+    public:
+        explicit AppsModel(const QString &entryPath = QString(), bool flat = false, QObject *parent = 0);
         ~AppsModel();
 
         QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
@@ -79,11 +77,15 @@ class AppsModel : public AbstractModel
 
         Q_INVOKABLE QObject *modelForRow(int row);
 
+        bool flat() const;
+        void setFlat(bool flat);
+
         int appNameFormat() const;
         void setAppNameFormat(int format);
 
     Q_SIGNALS:
         void refreshing() const;
+        void flatChanged() const;
         void appNameFormatChanged() const;
 
     protected Q_SLOTS:
@@ -100,7 +102,9 @@ class AppsModel : public AbstractModel
 
         QString m_entryPath;
         QTimer *m_changeTimer;
-        NameFormat m_appNameFormat;
+        bool m_flat;
+        AppEntry::NameFormat m_appNameFormat;
+        bool m_sortNeeded;
 };
 
 #endif
