@@ -24,31 +24,28 @@
 #include <QVBoxLayout>
 
 
-#include <kapplication.h>
 #include <kconfig.h>
 #include <kconfiggroup.h>
-#include <klineedit.h>
+#include <ksharedconfig.h>
 #include <kworkspace.h>
-#include <kstandarddirs.h>
 #include <qregexp.h>
 #include <kdesktopfile.h>
-#include <kdebug.h>
 #include <kprocess.h>
 #include <kmessagebox.h>
-#include <QtDBus/QtDBus>
+#include <QApplication>
+#include <QtDBus>
+#include <QLineEdit>
 
 #include "kcmsmserver.h"
 #include "smserverconfigimpl.h"
 #include <KPluginFactory>
 #include <KPluginLoader>
+#include <KLocalizedString>
 
-K_PLUGIN_FACTORY(SMSFactory,
-        registerPlugin<SMServerConfig>();
-        )
-K_EXPORT_PLUGIN(SMSFactory("kcmsmserver"))
+K_PLUGIN_FACTORY(SMSFactory, registerPlugin<SMServerConfig>();)
 
-SMServerConfig::SMServerConfig( QWidget *parent, const QVariantList & )
-  : KCModule (SMSFactory::componentData(), parent)
+SMServerConfig::SMServerConfig(QWidget *parent, const QVariantList &args)
+  : KCModule(parent, args)
 {
     setQuickHelp( i18n("<h1>Session Manager</h1>"
     " You can configure the session manager here."

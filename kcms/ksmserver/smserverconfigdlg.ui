@@ -118,7 +118,7 @@
        </widget>
       </item>
       <item>
-       <widget class="KLineEdit" name="excludeLineedit">
+       <widget class="QLineEdit" name="excludeLineedit">
         <property name="whatsThis">
          <string>Here you can enter a colon or comma separated list of applications that should not be saved in sessions, and therefore will not be started when restoring a session. For example 'xterm:konsole' or 'xterm,konsole'.</string>
         </property>
@@ -144,9 +144,8 @@
  </widget>
  <customwidgets>
   <customwidget>
-   <class>KLineEdit</class>
-   <extends>QLineEdit</extends>
-   <header>klineedit.h</header>
+   <class>QLineEdit</class>
+   <header>qlineedit.h</header>
   </customwidget>
  </customwidgets>
  <resources/>
