@@ -188,7 +188,7 @@ void KDEDConfig::load()
 		QString servicePath = (*it)->entryPath();
 		kDebug() << servicePath;
 
-        const KDesktopFile file(QStandardPaths::GenericDataLocation, "kde5/services/" + servicePath );
+        const KDesktopFile file(QStandardPaths::GenericDataLocation, "kservices5/" + servicePath );
 		const KConfigGroup grp = file.desktopGroup();
 		// The logic has to be identical to Kded::initModules.
 		// They interpret X-KDE-Kded-autoload as false if not specified
@@ -248,7 +248,7 @@ void KDEDConfig::save()
 		QString servicePath = (*it)->entryPath();
 		kDebug() << servicePath;
 
-        const KDesktopFile file(QStandardPaths::GenericDataLocation, "kde5/services/" + servicePath );
+        const KDesktopFile file(QStandardPaths::GenericDataLocation, "kservices5/" + servicePath );
 		const KConfigGroup grp = file.desktopGroup();
 		if (grp.readEntry("X-KDE-Kded-autoload", false)){
 
