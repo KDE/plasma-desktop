@@ -55,4 +55,4 @@ install(TARGETS kaccess         ${INSTALL_TARGETS_DEFAULT_ARGS} )
 
 install( FILES kcmaccess.desktop  DESTINATION  ${SERVICES_INSTALL_DIR} )
 install( FILES kaccess.desktop  DESTINATION  ${SERVICES_INSTALL_DIR} )
-install( FILES kaccess.notifyrc  DESTINATION  ${DATA_INSTALL_DIR}/kaccess/ )
+install( FILES kaccess.notifyrc  DESTINATION  ${KNOTIFYRC_INSTALL_DIR} )

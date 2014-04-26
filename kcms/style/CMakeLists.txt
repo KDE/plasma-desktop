@@ -36,5 +36,5 @@ install(TARGETS kcm_style  DESTINATION ${PLUGIN_INSTALL_DIR})
 
 ########### install files ###############
 
-install( FILES kcmstyle.notifyrc  DESTINATION  ${DATA_INSTALL_DIR}/kcmstyle )
+install( FILES kcmstyle.notifyrc  DESTINATION  ${KNOTIFYRC_INSTALL_DIR} )
 install( FILES style.desktop  DESTINATION  ${SERVICES_INSTALL_DIR} )
