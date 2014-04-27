@@ -24,4 +24,4 @@ install(TARGETS plasma_engine_kimpanel
 install(FILES plasma-dataengine-kimpanel.desktop
         DESTINATION ${SERVICES_INSTALL_DIR})
 
-install(FILES kimpanel.operations DESTINATION ${DATA_INSTALL_DIR}/plasma/services)
+install(FILES kimpanel.operations DESTINATION ${PLASMA_DATA_INSTALL_DIR}/services)
