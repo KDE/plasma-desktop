@@ -101,7 +101,7 @@ set(PLASMADESKTOP_VERSION ${PLASMADESKTOP_VERSION_MAJOR}.${PLASMADESKTOP_VERSION
 set(GENERIC_LIB_SOVERSION ${PLASMADESKTOP_VERSION_MAJOR})
 set(GENERIC_LIB_VERSION "${PLASMADESKTOP_VERSION_MAJOR}.${PLASMADESKTOP_VERSION_MINOR}.${PLASMADESKTOP_VERSION_PATCH}")
 
-plasma_install_package(desktoppackage org.kde.desktop plasma/shells shell)
+plasma_install_package(desktoppackage org.kde.desktop shells shell)
 
 add_subdirectory(doc)
 # add_subdirectory(ktouchpadenabler)

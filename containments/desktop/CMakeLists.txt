@@ -1,2 +1,2 @@
-plasma_install_package(package org.kde.desktopcontainment plasma/plasmoids containment)
+plasma_install_package(package org.kde.desktopcontainment plasmoids containment)
 add_subdirectory(tests)
