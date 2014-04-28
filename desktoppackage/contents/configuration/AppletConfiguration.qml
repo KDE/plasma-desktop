@@ -231,36 +231,50 @@ Rectangle {
                 }
             }
         }
+
+        QtControls.Action {
+            id: acceptAction
+            onTriggered: {
+                applyAction.trigger();
+                configDialog.close();
+            }
+            shortcut: "Return"
+        }
+
+        QtControls.Action {
+            id: applyAction
+            onTriggered: {
+                if (main.currentItem.saveConfig !== undefined) {
+                    main.currentItem.saveConfig();
+                } else {
+                    root.saveConfig();
+                }
+            }
+        }
+
+        QtControls.Action {
+            id: cancelAction
+            onTriggered: configDialog.close();
+            shortcut: "Escape"
+        }
+
         RowLayout {
             id: buttonsRow
             Layout.alignment: Qt.AlignVCenter | Qt.AlignRight
             QtControls.Button {
                 iconName: "dialog-ok"
                 text: i18n("Ok")
-                onClicked: {
-                    if (main.currentItem.saveConfig !== undefined) {
-                        main.currentItem.saveConfig();
-                    } else {
-                        root.saveConfig();
-                    }
-                    configDialog.close();
-                }
+                onClicked: acceptAction.trigger()
             }
             QtControls.Button {
                 iconName: "dialog-ok-apply"
                 text: i18n("Apply")
-                onClicked: {
-                    if (main.currentItem.saveConfig !== undefined) {
-                        main.currentItem.saveConfig();
-                    } else {
-                        root.saveConfig();
-                    }
-                }
+                onClicked: applyAction.trigger()
             }
             QtControls.Button {
                 iconName: "dialog-cancel"
                 text: i18n("Cancel")
-                onClicked: configDialog.close()
+                onClicked: cancelAction.trigger()
             }
         }
     }
