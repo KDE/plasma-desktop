@@ -110,6 +110,7 @@ public:
     void setApplet(Plasma::Applet *applet);
     void setShowRecentlyInstalled(bool showRecentlyInstalled);
     bool showRecentlyInstalled() const;
+    Q_INVOKABLE int rowForModelIndex(const QModelIndex &index) const;
 
 public Q_SLOTS:
     void reloadMenu();

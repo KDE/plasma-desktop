@@ -124,12 +124,15 @@ Item {
         function moveRight() {
             state = "";
             applicationsView.currentItem.activate();
+            applicationsView.positionViewAtBeginning()
         }
 
         function moveLeft() {
             state = "";
             // newModelIndex set by clicked breadcrumb
+            var oldIndex = applicationsView.model.rootIndex;
             applicationsView.model.rootIndex = applicationsView.newModelIndex;
+            applicationsView.positionViewAtIndex(applicationsView.model.model.rowForModelIndex(oldIndex), ListView.Center)
         }
 
         ListView {

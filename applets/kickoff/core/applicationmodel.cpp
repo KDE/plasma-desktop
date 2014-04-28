@@ -649,6 +649,12 @@ bool ApplicationModel::createNewProgramListForPath(const QString &relPath)
     return seenProgramsChanged;
 }
 
+int ApplicationModel::rowForModelIndex(const QModelIndex &index) const
+{
+    return index.row();
+}
+
+
 /**
  * FIXME This is a temporary workaround to map the icon names found
  * in the desktop directory files (from /usr/share/desktop-directories)
