@@ -1,17 +1,8 @@
 External bugs:
 
-* Initial size from panel when in a corner is slightly wrong due
-  to a bug in Plasma's Dialog class causing it not to budget for
-  the disabled border correctly.
-
 * Sidebar DND behaves strangely and doesn't work for the system
   action favorites due to coordinate mapping bugs in Plasma's DND
   event class.
-
-* Subdialog open performance is pretty poor right now, with in par-
-  ticular the delegate icons coming with a visible delay. Needs a
-  look for bottlenecks in the lib / research into workarounds.
-
 
 Internal todo:
 
@@ -25,9 +16,6 @@ Internal todo:
 
 * Alpha fadeout for favorites overflow is TBD because OpacityMask
   doesn't easily work against IconItem.
-
-* There's a rare crasher in runner support with a mile-long BT
-  deep in V4 that needs wrangling.
 
 * Reacting to (panel) location changes _at runtime_ doesn't work
   very well atm (needs a fix similar to 30cedd69 in taskmanager).

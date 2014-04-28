@@ -26,8 +26,8 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 Item {
     id: root
 
-    Layout.minimumWidth: Math.max(mainRow.implicitWidth, sideBar.width + rootList.width + mainRow.spacing)
-    Layout.maximumWidth: Math.max(mainRow.implicitWidth, sideBar.width + rootList.width + mainRow.spacing)
+    Layout.minimumWidth: sideBar.width + mainRow.spacing + Math.max(rootList.width, runnerColumns.width)
+    Layout.maximumWidth: sideBar.width + mainRow.spacing + Math.max(rootList.width, runnerColumns.width)
 
     Layout.minimumHeight: (rootModel.count * rootList.itemHeight) + searchField.height + (2 * units.smallSpacing)
     Layout.maximumHeight: (rootModel.count * rootList.itemHeight) + searchField.height + (2 * units.smallSpacing)

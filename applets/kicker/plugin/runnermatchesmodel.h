@@ -50,9 +50,6 @@ class RunnerMatchesModel : public AbstractModel
 
         void setMatches(const QList<Plasma::QueryMatch> &matches);
 
-    Q_SIGNALS:
-        void appLaunched(const QString& storageId) const;
-
     private:
         QString m_runnerId;
         QString m_name;
