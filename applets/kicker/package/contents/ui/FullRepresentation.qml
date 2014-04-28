@@ -142,7 +142,8 @@ Item {
                 model: runnerModel
 
                 delegate: RunnerResultsList {
-                    /* FIXME
+                    id: runnerMatches
+
                     onFocusChanged: {
                         if (focus) {
                             runnerColumns.focusChanged();
@@ -160,7 +161,7 @@ Item {
 
                         if (event.key == Qt.Key_Right) {
                             if (index < (runnerColumnsRepeater.count - 1)) {
-                                target = runnerColumnsRepeater.itemAt(index + 1).listView;
+                                target = runnerColumnsRepeater.itemAt(index + 1);
                             } else {
                                 target = runnerColumnsRepeater.itemAt(0);
                             }
@@ -168,13 +169,14 @@ Item {
                             if (index == 0) {
                                 target = runnerColumnsRepeater.itemAt(0);
                             } else {
-                                target = runnerColumnsRepeater.itemAt(index - 1).listView;
+                                target = runnerColumnsRepeater.itemAt(index - 1);
                             }
                         }
 
                         if (target) {
                             currentIndex = -1;
                             target.currentIndex = 0;
+                            target.focus = true;
                         }
                     }
 
@@ -185,10 +187,10 @@ Item {
                     Component.onDestruction: {
                         runnerColumns.focusChanged.disconnect(focusChanged);
                     }
-                    */
 
-                    KeyNavigation.up: (index == 0) ? searchField : undefined
-                    KeyNavigation.down: (index == 0) ? searchField : undefined
+
+                    KeyNavigation.up: (index == 0) ? searchField : null
+                    KeyNavigation.down: (index == 0) ? searchField : null
                 }
             }
         }
