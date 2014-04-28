@@ -70,24 +70,38 @@ Item {
             SideBarSection {
                 id: favoriteApps
 
-                anchors.top: (plasmoid.location == PlasmaCore.Types.TopEdge) ? undefined : parent.top
-                anchors.topMargin: (anchors.top != undefined) ? sideBar.margins.top : undefined
-                anchors.bottom: (plasmoid.location == PlasmaCore.Types.TopEdge) ? parent.bottom : undefined
-                anchors.bottomMargin: (anchors.bottom != undefined) ? sideBar.margins.bottom : undefined
+                anchors.top: parent.top
+                anchors.topMargin: sideBar.margins.top
 
                 height: (sideBar.height - sideBar.margins.top - sideBar.margins.bottom
                     - favoriteSystemActions.height - sidebarSeparator.height - (4 * units.smallSpacing))
 
                 model: rootModel.favoritesModelForPrefix("app")
+
+
+                states: [ State {
+                    name: "top"
+                    when: (plasmoid.location == PlasmaCore.Types.TopEdge)
+
+                    AnchorChanges {
+                        target: favoriteApps
+                        anchors.top: undefined
+                        anchors.bottom: parent.bottom
+                    }
+
+                    PropertyChanges {
+                        target: favoriteApps
+                        anchors.topMargin: undefined
+                        anchors.bottomMargin: sideBar.margins.bottom
+                    }
+                }]
             }
 
             PlasmaCore.SvgItem {
                 id: sidebarSeparator
 
-                anchors.top: (plasmoid.location == PlasmaCore.Types.TopEdge) ? favoriteSystemActions.bottom : undefined
-                anchors.topMargin: (anchors.top != undefined) ? (2 * units.smallSpacing) : undefined
-                anchors.bottom: (plasmoid.location == PlasmaCore.Types.TopEdge) ? undefined : favoriteSystemActions.top
-                anchors.bottomMargin: (anchors.bottom != undefined) ? (2 * units.smallSpacing) : undefined
+                anchors.bottom: favoriteSystemActions.top
+                anchors.bottomMargin: (2 * units.smallSpacing)
                 anchors.horizontalCenter: parent.horizontalCenter
 
                 width: units.iconSizes.medium
@@ -95,25 +109,57 @@ Item {
 
                 svg: lineSvg
                 elementId: "horizontal-line"
+
+                states: [ State {
+                    name: "top"
+                    when: (plasmoid.location == PlasmaCore.Types.TopEdge)
+
+                    AnchorChanges {
+                        target: sidebarSeparator
+                        anchors.top: favoriteSystemActions.bottom
+                        anchors.bottom: undefined
+
+                    }
+
+                    PropertyChanges {
+                        target: sidebarSeparator
+                        anchors.topMargin: (2 * units.smallSpacing)
+                        anchors.bottomMargin: undefined
+                    }
+                }]
             }
 
             SideBarSection {
                 id: favoriteSystemActions
 
-                anchors.top: (plasmoid.location == PlasmaCore.Types.TopEdge) ? parent.top : undefined
-                anchors.topMargin: (anchors.top != undefined) ? sideBar.margins.top : undefined
-                anchors.bottom: (plasmoid.location == PlasmaCore.Types.TopEdge) ? undefined : parent.bottom
-                anchors.bottomMargin: (anchors.bottom != undefined) ? sideBar.margins.bottom : undefined
+                anchors.bottom: parent.bottom
+                anchors.bottomMargin: sideBar.margins.bottom
 
                 model: rootModel.favoritesModelForPrefix("sys")
+
+                states: [ State {
+                    name: "top"
+                    when: (plasmoid.location == PlasmaCore.Types.TopEdge)
+
+                    AnchorChanges {
+                        target: favoriteSystemActions
+                        anchors.top: parent.top
+                        anchors.bottom: undefined
+                    }
+
+                    PropertyChanges {
+                        target: favoriteSystemActions
+                        anchors.topMargin: sideBar.margins.top
+                        anchors.bottomMargin: undefined
+                    }
+                }]
             }
         }
 
         ItemListView {
             id: rootList
 
-            anchors.top: (plasmoid.location == PlasmaCore.Types.TopEdge) ? undefined : parent.top
-            anchors.bottom: (plasmoid.location == PlasmaCore.Types.TopEdge) ? parent.bottom : undefined
+            anchors.top: parent.top
 
             height: (rootModel.count * rootList.itemHeight)
 
@@ -122,6 +168,17 @@ Item {
             iconsEnabled: false
 
             model: rootModel
+
+            states: [ State {
+                name: "top"
+                when: (plasmoid.location == PlasmaCore.Types.TopEdge)
+
+                AnchorChanges {
+                    target: rootList
+                    anchors.top: undefined
+                    anchors.bottom: parent.bottom
+                }
+            }]
 
             KeyNavigation.up: searchField
             KeyNavigation.down: searchField
@@ -199,8 +256,7 @@ Item {
     PlasmaComponents.TextField {
         id: searchField
 
-        anchors.top: (plasmoid.location == PlasmaCore.Types.TopEdge) ? mainRow.top : undefined
-        anchors.bottom: (plasmoid.location == PlasmaCore.Types.TopEdge) ? undefined : mainRow.bottom
+        anchors.bottom: mainRow.bottom
         anchors.left: parent.left
         anchors.leftMargin: sideBar.width + mainRow.spacing + units.smallSpacing
 
@@ -226,6 +282,43 @@ Item {
                 }
             }
         }
+
+        states: [ State {
+            name: "top"
+            when: plasmoid.location == PlasmaCore.Types.TopEdge
+
+            AnchorChanges {
+                target: searchField
+                anchors.top: mainRow.top
+                anchors.bottom: undefined
+                anchors.left: parent.left
+                anchors.right: undefined
+            }
+
+            PropertyChanges {
+                target: searchField
+                anchors.leftMargin: sideBar.width + mainRow.spacing + units.smallSpacing
+                anchors.rightMargin: undefined
+            }
+        },
+        State {
+            name: "right"
+            when: plasmoid.location == PlasmaCore.Types.RightEdge
+
+            AnchorChanges {
+                target: searchField
+                anchors.top: undefined
+                anchors.bottom: mainRow.bottom
+                anchors.left: undefined
+                anchors.right: parent.right
+            }
+
+            PropertyChanges {
+                target: searchField
+                anchors.leftMargin: undefined
+                anchors.rightMargin: sideBar.width + mainRow.spacing + units.smallSpacing
+            }
+        }]
 
         Keys.onPressed: {
             if (event.key == Qt.Key_Up) {

@@ -16,6 +16,3 @@ Internal todo:
 
 * Alpha fadeout for favorites overflow is TBD because OpacityMask
   doesn't easily work against IconItem.
-
-* Reacting to (panel) location changes _at runtime_ doesn't work
-  very well atm (needs a fix similar to 30cedd69 in taskmanager).
