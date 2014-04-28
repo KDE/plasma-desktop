@@ -71,6 +71,7 @@ class Backend : public QObject
         void itemHovered(int id, bool hovered);
         void itemMove(int id, int newIndex);
         void itemGeometryChanged(QQuickItem *item, int id);
+        void presentWindows(int groupParentId);
 
     private Q_SLOTS:
         void updateLaunchersCache();

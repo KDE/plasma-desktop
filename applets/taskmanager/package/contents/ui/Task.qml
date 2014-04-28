@@ -106,7 +106,9 @@ MouseEventListener {
             }
 
             if (isGroupParent) {
-                if (groupDialog.visible) {
+                if (mouse.modifiers == Qt.ControlModifier) {
+                    tasks.presentWindows(model.Id);
+                } else if (groupDialog.visible) {
                     groupDialog.visible = false;
                 } else {
                     groupDialog.visualParent = task;

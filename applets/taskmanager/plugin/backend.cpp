@@ -274,3 +274,12 @@ void Backend::itemGeometryChanged(QQuickItem *item, int id)
 
     taskItem->task()->publishIconGeometry(iconRect);
 }
+
+void Backend::presentWindows(int groupParentId)
+{
+    TaskManager:: AbstractGroupableItem *item = m_groupManager->rootGroup()->getMemberById(groupParentId);
+
+    if (item && m_taskManagerItem->window()) {
+        KWindowEffects::presentWindows(m_taskManagerItem->window()->winId(), QList<WId>::fromSet(item->winIds()));
+    }
+}

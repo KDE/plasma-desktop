@@ -55,6 +55,7 @@ Item {
     signal itemHovered(int id, bool hovered)
     signal itemMove(int id, int newIndex)
     signal itemGeometryChanged(Item item, int id)
+    signal presentWindows(int groupParentId)
 
     onWidthChanged: {
         taskList.width = LayoutManager.layoutWidth();
@@ -232,6 +233,7 @@ Item {
         tasks.itemHovered.connect(backend.itemHovered);
         tasks.itemMove.connect(backend.itemMove);
         tasks.itemGeometryChanged.connect(backend.itemGeometryChanged);
+        tasks.presentWindows.connect(backend.presentWindows);
         dragHelper.dropped.connect(resetDragSource);
     }
 }
