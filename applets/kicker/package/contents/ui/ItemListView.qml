@@ -60,7 +60,7 @@ FocusScope {
         repeat: false
 
         onTriggered: {
-            if (!plasmoid.expanded || model == undefined || listView.currentIndex == -1) {
+            if (!plasmoid.expanded || model == undefined || currentIndex == -1) {
                 return;
             }
 
