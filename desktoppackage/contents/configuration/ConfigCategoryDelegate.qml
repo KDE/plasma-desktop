@@ -29,7 +29,7 @@ MouseArea {
     }
 //BEGIN properties
     width: childrenRect.width
-    height: childrenRect.height + 4
+    height: delegateContents.height + 4
     property bool current: model.source == main.sourceFile
     property string name: model.name
 //END properties
@@ -57,12 +57,12 @@ MouseArea {
 
 //BEGIN UI components
     Column {
+        id: delegateContents
         spacing: 4
         anchors {
             verticalCenter: parent.verticalCenter
             left: parent.left
             right: parent.right
-            topMargin: _m
         }
         PlasmaCore.IconItem {
             anchors.horizontalCenter: parent.horizontalCenter

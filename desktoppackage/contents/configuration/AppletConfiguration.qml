@@ -119,8 +119,8 @@ Rectangle {
                 implicitWidth: width
                 Flickable {
                     id: categoriesView
-                    contentWidth: width
-                    contentHeight: childrenRect.height
+                    contentWidth: parent.width
+                    contentHeight: categories.height
                     anchors.fill: parent
 
                     property Item currentItem: categoriesColumn.children[1]
