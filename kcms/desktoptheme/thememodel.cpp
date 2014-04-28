@@ -68,7 +68,7 @@ void ThemeModel::reload()
 
     // get all desktop themes
     QStringList themes;
-    const QStringList &packs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, "desktoptheme", QStandardPaths::LocateDirectory);
+    const QStringList &packs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, "plasma/desktoptheme", QStandardPaths::LocateDirectory);
     foreach (const QString &ppath, packs) {
         const QDir cd(ppath);
         const QStringList &entries = cd.entryList(QDir::Dirs | QDir::Hidden);
