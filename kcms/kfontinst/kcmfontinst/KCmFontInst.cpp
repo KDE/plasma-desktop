@@ -86,7 +86,7 @@ namespace KFI
 
 static QString partialIcon(bool load=true)
 {
-    QString name(KGlobal::dirs()->saveLocation("cache", "kfi")+"/partial.png");
+    QString name = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "/kfi/partial.png";
 
     if(Misc::fExists(name))
     {
