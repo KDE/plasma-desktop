@@ -37,7 +37,7 @@ if (X11_Xft_FOUND)
                                    ${CMAKE_CURRENT_SOURCE_DIR}/kcmfontinst/FontsPackage.cpp)
 
     add_subdirectory( lib ) 
-#     add_subdirectory( dbus )
+    add_subdirectory( dbus )
     add_subdirectory( kcmfontinst ) 
     add_subdirectory( apps )
     add_subdirectory( kio ) 

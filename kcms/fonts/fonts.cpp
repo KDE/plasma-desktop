@@ -674,8 +674,9 @@ KFonts::~KFonts()
   QList<FontUseItem *>::Iterator it(fontUseList.begin()),
                                  end(fontUseList.end());
 
-  for(; it!=end; ++it)
-    delete (*it);
+  //for(; it!=end; ++it)
+    //delete (*it);
+  //qDeleteAll<>();
   fontUseList.clear();
 }
 

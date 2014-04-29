@@ -132,10 +132,10 @@ ActionReply Helper::manage(const QVariantMap &args)
         KFI_DBUG << "Uknown action";
 
     if(FontInst::STATUS_OK==result)
-        return ActionReply::SuccessReply;
+        return ActionReply::SuccessReply();
 
-    ActionReply reply(ActionReply::HelperError);
-    reply.setErrorCode(result);
+    ActionReply reply(ActionReply::HelperErrorType);
+    reply.setErrorCode(static_cast<KAuth::ActionReply::Error>(result));
     return reply;
 }
 
