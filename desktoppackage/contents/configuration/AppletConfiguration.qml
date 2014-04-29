@@ -17,6 +17,7 @@
  */
 
 import QtQuick 2.0
+import QtQuick.Dialogs 1.1
 import QtQuick.Controls 1.0 as QtControls
 import QtQuick.Layouts 1.0
 import org.kde.plasma.configuration 2.0
@@ -67,6 +68,17 @@ Rectangle {
             }
         }
     }
+
+    function configurationHasChanged() {
+        for (var key in plasmoid.configuration) {
+            if (main.currentItem["cfg_"+key] !== undefined) {
+                if (main.currentItem["cfg_"+key] != plasmoid.configuration[key]) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
 //END functions
 
 
@@ -87,6 +99,22 @@ Rectangle {
 
 //BEGIN UI components
     SystemPalette {id: syspal}
+
+    MessageDialog {
+        id: messageDialog
+        icon: StandardIcon.Warning
+        property Item delegate
+        title: i18n("Apply Settings")
+        text: i18n("The settings of the current module have changed. Do you want to apply the changes or discard them?")
+        standardButtons: StandardButton.Apply | StandardButton.Discard | StandardButton.Cancel
+        onApply: {
+            applyAction.trigger()
+            delegate.openCategory()
+        }
+        onDiscard: {
+            delegate.openCategory()
+        }
+    }
 
     ColumnLayout {
         id: mainColumn

@@ -34,18 +34,29 @@ MouseArea {
     property string name: model.name
 //END properties
 
+//BEGIN functions
+    function openCategory() {
+        if (typeof(categoriesView.currentItem) !== "undefined") {
+            categoriesView.currentItem = delegate;
+        }
+        main.sourceFile = model.source
+        main.title = model.name
+        root.restoreConfig()
+    }
+//END functions
+
 //BEGIN connections
     onClicked: {
         print("model source: " + model.source + " " + main.sourceFile);
+        if (root.configurationHasChanged()) {
+            messageDialog.delegate = delegate
+            messageDialog.open();
+            return;
+        }
         if (delegate.current) {
-            return
+            return;
         } else {
-            if (typeof(categoriesView.currentItem) !== "undefined") {
-                categoriesView.currentItem = delegate;
-            }
-            main.sourceFile = model.source
-            main.title = model.name
-            root.restoreConfig()
+            openCategory();
         }
     }
     onCurrentChanged: {
