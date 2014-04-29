@@ -270,7 +270,7 @@ bool CountrySelectorDialog::editCountry(KControlLocale *locale)
 
     // add all languages to the list
     QStringList countrylist = KGlobal::dirs()->findAllResources("locale",
-                                 sub + QString::fromLatin1("*/entry.desktop"),
+                                 sub + QString::fromLatin1("*/kf5_entry.desktop"),
                                  KStandardDirs::NoDuplicates);
     foreach(const QString &countryFile, countrylist)
     {

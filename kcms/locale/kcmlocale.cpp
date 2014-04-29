@@ -353,7 +353,7 @@ void KCMLocale::initSettings()
     // This will be used as the lowest level in the merge to obtain the KCM Defaults
     // These settings should never be saved anywhere
     m_cConfig = KSharedConfig::openConfig( KStandardDirs::locate( "locale",
-                                           QString::fromLatin1("l10n/C/entry.desktop") ) );
+                                           QString::fromLatin1("l10n/C/kf5_entry.desktop") ) );
     m_cSettings= KConfigGroup( m_cConfig, "KCM Locale" );
 
     initCountrySettings( KGlobal::locale()->country() );
@@ -378,7 +378,7 @@ void KCMLocale::initCountrySettings( const QString &countryCode )
     // This will be used in the merge to obtain the KCM Defaults
     // These settings should never be saved anywhere
     m_countryConfig = KSharedConfig::openConfig( KStandardDirs::locate( "locale",
-                                                 QString::fromLatin1("l10n/%1/entry.desktop")
+                                                 QString::fromLatin1("l10n/%1/kf5_entry.desktop")
                                                  .arg( countryCode ) ) );
     m_countrySettings = KConfigGroup( m_countryConfig, "KCM Locale" );
     QString calendarType = m_countrySettings.readEntry( "CalendarSystem", "gregorian" );

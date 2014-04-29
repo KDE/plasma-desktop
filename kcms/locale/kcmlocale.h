@@ -446,11 +446,11 @@ private:
     KSharedConfigPtr m_groupConfig;
     KConfigGroup m_groupSettings;
     KConfigGroup m_groupCalendarSettings;
-    // The Country Locale config from l10n/<country>/entry.desktop
+    // The Country Locale config from l10n/<country>/kf5_entry.desktop
     KSharedConfigPtr m_countryConfig;
     KConfigGroup m_countrySettings;
     KConfigGroup m_countryCalendarSettings;
-    // The default C Locale config/settings from l10n/C/entry.desktop
+    // The default C Locale config/settings from l10n/C/kf5_entry.desktop
     KSharedConfigPtr m_cConfig;
     KConfigGroup m_cSettings;
     KConfigGroup m_cCalendarSettings;
