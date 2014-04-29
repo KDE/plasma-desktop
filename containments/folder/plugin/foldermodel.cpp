@@ -27,6 +27,7 @@
 #include <QCollator>
 #include <QItemSelectionModel>
 #include <qplatformdefs.h>
+#include <QDebug>
 
 #include "internallibkonq/konq_popupmenu.h"
 #include "internallibkonq/konq_operations.h"
@@ -364,7 +365,12 @@ void FolderModel::run(int row)
 {
     KFileItem item = itemForIndex(index(row, 0));
 
-    new KRun(item.targetUrl(), 0);
+    QUrl url(item.targetUrl());
+    if (url.scheme().isEmpty()) {
+        url.setScheme("file");
+    }
+
+    new KRun(url, 0);
 }
 
 void FolderModel::rename(int row, const QString& name)
