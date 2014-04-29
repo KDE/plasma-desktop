@@ -956,7 +956,7 @@ int FontInst::performAction(const QVariantMap &args)
     KAuth::ExecuteJob* j = action.execute();
     j->exec();
 #warning Error checking for KAuth disabled
-    qWarning() << "Error checking for KAuth disabled";
+    qWarning() << "Error checking for KAuth calls disabled";
 //     KAuth::ActionReply reply = j->reply();
 //
 //     switch(reply.type())

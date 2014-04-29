@@ -75,18 +75,16 @@ QString CJobRunner::folderName(bool sys)
     reply.waitForFinished();
     return reply.isError() ? QString() : reply.argumentAt<0>();
 }
-            
+
 void CJobRunner::startDbusService()
 {
     if (!QDBusConnection::sessionBus().interface()->isServiceRegistered(OrgKdeFontinstInterface::staticInterfaceName())) {
-        //const QString fontinst = QStringLiteral("/home/sebas/kf5/install/bin/kfontinst");
-        const QString fontinst = QStringLiteral("/home/sebas/kf5/install/lib/x86_64-linux-gnu/libexec/fontinst");
-        qDebug() << "Service not registered, starting" << fontinst << OrgKdeFontinstInterface::staticInterfaceName() << QLatin1String(KFONTINST_LIB_EXEC_DIR"/fontinst");
+        const QString fontinst = QStringLiteral(KFONTINST_LIB_EXEC_DIR"/fontinst");
+        qDebug() << "Service " << OrgKdeFontinstInterface::staticInterfaceName() << " not registered, starting" << fontinst;
         QProcess::startDetached(fontinst);
-        //QProcess::startDetached(QLatin1String(KFONTINST_LIB_EXEC_DIR"/fontinst"));
     }
 }
-    
+
 static const int constDownloadFailed=-1;
 static const int constInterfaceCheck=5*1000;
 
