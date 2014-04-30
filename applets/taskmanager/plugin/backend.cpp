@@ -225,7 +225,7 @@ void Backend::itemContextMenu(QQuickItem *item, QObject *configAction)
 
     menu->adjustSize();
 
-    if (!taskManagerItem()->property("vertical").toBool()) {
+    if (m_taskManagerItem && !m_taskManagerItem->property("vertical").toBool()) {
         menu->setMinimumWidth(item->width());
     }
 
@@ -241,7 +241,7 @@ void Backend::itemHovered(int id, bool hovered)
         return;
     }
 
-    if (hovered && m_highlightWindows && m_taskManagerItem->window()) {
+    if (hovered && m_highlightWindows && m_taskManagerItem && m_taskManagerItem->window()) {
         m_lastWindowId = m_taskManagerItem->window()->winId();
         KWindowEffects::highlightWindows(m_lastWindowId, QList<WId>::fromSet(item->winIds()));
     } else if (m_highlightWindows && m_lastWindowId) {
@@ -280,7 +280,7 @@ void Backend::presentWindows(int groupParentId)
 {
     TaskManager:: AbstractGroupableItem *item = m_groupManager->rootGroup()->getMemberById(groupParentId);
 
-    if (item && m_taskManagerItem->window()) {
+    if (item && m_taskManagerItem && m_taskManagerItem->window()) {
         KWindowEffects::presentWindows(m_taskManagerItem->window()->winId(), QList<WId>::fromSet(item->winIds()));
     }
 }
