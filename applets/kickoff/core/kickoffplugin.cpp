@@ -26,6 +26,7 @@
 #include "systemmodel.h"
 #include "kuserproxy.h"
 #include "urlitemlauncher.h"
+#include "processrunner.h"
 
 #include <QtQml>
 
@@ -39,6 +40,7 @@ void KickoffPlugin::registerTypes (const char *uri)
     qmlRegisterType<Kickoff::RecentlyUsedModel>(uri, 0, 1, "RecentlyUsedModel");
     qmlRegisterType<Kickoff::SystemModel>(uri, 0, 1, "SystemModel");
     qmlRegisterType<Kickoff::UrlItemLauncher>(uri, 0, 1, "Launcher");
+    qmlRegisterType<Kickoff::ProcessRunner>(uri, 0, 1, "ProcessRunner");
     qmlRegisterType<KUserProxy>(uri, 0, 1, "KUser");
 }
 

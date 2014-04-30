@@ -32,6 +32,17 @@ Item {
     Plasmoid.switchWidth: units.gridUnit * 20
     Plasmoid.switchHeight: units.gridUnit * 30
 
-
     Plasmoid.fullRepresentation: FullRepresentation {}
+
+    Kickoff.ProcessRunner {
+        id: processRunner
+    }
+
+    function action_menuedit() {
+        processRunner.runMenuEditor();
+    }
+
+    Component.onCompleted: {
+        plasmoid.setAction("menuedit", i18n("Edit Applications..."));
+    }
 } // root

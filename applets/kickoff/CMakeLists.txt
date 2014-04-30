@@ -23,6 +23,7 @@ set(libkickoff_SRCS
     core/systemmodel.cpp
     core/kuserproxy.cpp
     core/urlitemlauncher.cpp
+    core/processrunner.cpp
 )
 
 qt5_add_dbus_adaptor(libkickoff_SRCS core/org.kde.kickoff.xml core/applicationmodel.h Kickoff::ApplicationModel)
