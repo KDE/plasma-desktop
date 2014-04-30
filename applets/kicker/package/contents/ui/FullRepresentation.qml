@@ -346,6 +346,12 @@ Item {
         }
     }
 
+    Keys.onPressed: {
+        if (event.key == Qt.Key_Escape) {
+            plasmoid.expanded = false;
+        }
+    }
+
     Component.onCompleted: {
         kicker.reset.connect(reset);
     }

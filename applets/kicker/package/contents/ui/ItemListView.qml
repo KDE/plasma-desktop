@@ -153,6 +153,8 @@ FocusScope {
                     } else if (event.key != Qt.Key_Escape && event.text != "") {
                         return; // FIXME
                         searchField.appendText(event.text);
+                    } else if (event.key == Qt.Key_Escape) {
+                        plasmoid.expanded = false;
                     }
                 }
             }
