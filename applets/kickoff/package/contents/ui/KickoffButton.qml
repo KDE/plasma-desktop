@@ -68,6 +68,7 @@ PlasmaComponents.TabButton {
 
         horizontalAlignment: Text.AlignHCenter
         elide: Text.ElideRight
+        wrapMode: Text.WordWrap
         font.pointSize: theme.smallestFont.pointSize
     }
 } // button

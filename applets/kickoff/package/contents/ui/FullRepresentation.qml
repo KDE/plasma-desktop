@@ -30,7 +30,7 @@ import org.kde.kquickcontrolsaddons 2.0
 Item {
     id: root
     Layout.minimumWidth: units.gridUnit * 26
-    Layout.minimumHeight: units.gridUnit * 33
+    Layout.minimumHeight: units.gridUnit * 34
 
     property string previousState
     property bool switchTabsOnHover: plasmoid.configuration.switchTabsOnHover
