@@ -1,15 +1,4 @@
-External bugs:
-
-* Sidebar DND behaves strangely and doesn't work for the system
-  action favorites due to coordinate mapping bugs in Plasma's DND
-  event class.
-
 Internal todo:
-
-* Exactly when the menu should stay open or close still has some
-  loose ends vs. Plasma 1 version (needs more complex management
-  for hideOnWindowDeactivate). Behavior very close to QMenu is the
-  goal.
 
 * Being able to type into the search field from any subdialog is
   desired but currently broken (see FIXME in ItemListView).

@@ -33,6 +33,8 @@ class WindowSystem : public QObject
         ~WindowSystem();
 
         Q_INVOKABLE void forceActive(QQuickItem *item);
+
+        Q_INVOKABLE bool isActive(QQuickItem *item);
 };
 
 #endif

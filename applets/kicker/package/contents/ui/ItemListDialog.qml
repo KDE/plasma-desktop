@@ -18,6 +18,7 @@
  ***************************************************************************/
 
 import QtQuick 2.0
+import org.kde.plasma.plasmoid 2.0
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 
@@ -26,12 +27,12 @@ import org.kde.plasma.private.kicker 0.1 as Kicker
 Kicker.SubMenu {
     id: itemDialog
 
+    property alias focusParent: itemListView.focusParent
     property alias model: itemListView.model
 
     visible: false
 
     location: PlasmaCore.Types.Floating
-    flags: Qt.Popup
 
     mainItem: ItemListView {
         id: itemListView
@@ -43,6 +44,26 @@ Kicker.SubMenu {
         iconsEnabled: true
 
         dialog: itemDialog
+    }
+
+    onFocusLost: {
+        var close = true;
+
+        var target = focusParent;
+
+        while (target) {
+            if (windowSystem.isActive(target)) {
+                close = false;
+
+                break;
+            }
+
+            target = target.focusParent;
+        }
+
+        if (plasmoid.hideWindowOnDeactivate && close) {
+            plasmoid.expanded = false;
+        }
     }
 
     function delayedDestroy() {

@@ -32,8 +32,7 @@ Item {
     Layout.minimumHeight: (rootModel.count * rootList.itemHeight) + searchField.height + (2 * units.smallSpacing)
     Layout.maximumHeight: (rootModel.count * rootList.itemHeight) + searchField.height + (2 * units.smallSpacing)
 
-    property bool hideOnWindowDeactivate: (!rootList.containsMouse && !sideBar.contextMenuOpen)
-    property Item searchField: searchField
+    property bool hideOnWindowDeactivate: true
 
     function reset() {
         rootList.currentIndex = -1;
@@ -63,8 +62,6 @@ Item {
 
             width: units.iconSizes.medium + margins.left + margins.right
             height: parent.height
-
-            property bool contextMenuOpen: (favoriteApps.contextMenuOpen || favoriteSystemActions.contextMenuOpen)
 
             imagePath: "widgets/frame"
             prefix: "plain"
@@ -325,7 +322,6 @@ Item {
         Keys.onPressed: {
             if (event.key == Qt.Key_Up) {
                 if (rootList.visible) {
-                    rootList.containsMouseOverride = true;
                     rootList.currentIndex = rootList.model.count - 1;
                 }
 

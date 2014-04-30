@@ -30,13 +30,9 @@ FocusScope {
     width: units.gridUnit * 14
     height: listView.contentHeight
 
+    property Item focusParent: null
     property QtObject dialog: null
     property QtObject childDialog: null
-    property bool containsMouse: (listener.containsMouse
-        || (childDialog != null && childDialog.mainItem.containsMouse)
-        || (listView.currentItem != null && listView.currentItem.menu.opened)
-        || containsMouseOverride)
-    property bool containsMouseOverride: false
     property bool iconsEnabled: false
     property int itemHeight: (Math.max(theme.mSize(theme.defaultFont).height, units.iconSizes.small)
         + highlightItemSvg.margins.top + highlightItemSvg.margins.bottom)
@@ -44,14 +40,7 @@ FocusScope {
     property alias currentIndex: listView.currentIndex
     property alias keyNavigationWraps: listView.keyNavigationWraps
     property alias model: listView.model
-
-    onContainsMouseChanged: {
-        if (!containsMouse) {
-            resetIndexTimer.start();
-        } else {
-            resetIndexTimer.stop();
-        }
-    }
+    property alias containsMouse: listener.containsMouse
 
     Timer {
         id: dialogSpawnTimer
@@ -65,6 +54,7 @@ FocusScope {
             }
 
             childDialog = itemListDialogComponent.createObject(itemList);
+            childDialog.focusParent = itemList;
             childDialog.visualParent = listView.currentItem;
             childDialog.model = model.modelForRow(listView.currentIndex);
             childDialog.visible = true;
@@ -80,8 +70,12 @@ FocusScope {
         repeat: false
 
         onTriggered: {
-            if (focus) {
-                currentIndex = -1;
+            if (focus && (!childDialog || !childDialog.mainItem.containsMouse)) {
+                if (!dialog) {
+                    root.reset();
+                } else {
+                    currentIndex = -1;
+                }
             }
         }
     }
@@ -95,7 +89,12 @@ FocusScope {
 
         onContainsMouseChanged: {
             listView.eligibleWidth = listView.width;
-            itemList.containsMouseOverride = false;
+
+            if (containsMouse) {
+                resetIndexTimer.stop();
+            } else if (!childDialog || !dialog) {
+                resetIndexTimer.start();
+            }
         }
 
         PlasmaExtras.ScrollArea {
@@ -137,7 +136,6 @@ FocusScope {
 
                         dialogSpawnTimer.restart();
                     } else if (childDialog != null) {
-                        itemList.containsMouseOverride = false;
                         dialogSpawnTimer.stop();
                         childDialog.visible = false;
                         childDialog.delayedDestroy();

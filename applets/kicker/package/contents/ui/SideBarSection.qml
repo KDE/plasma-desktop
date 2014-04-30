@@ -30,7 +30,6 @@ DropArea {
 
     anchors.horizontalCenter: parent.horizontalCenter
 
-    property alias contextMenuOpen: flow.contextMenuOpen
     property alias model: repeater.model
 
     onDragMove: {
@@ -53,7 +52,6 @@ DropArea {
 
         property bool animating: false
         property int animationDuration: resetAnimationDurationTimer.interval
-        property bool contextMenuOpen: false
 
         clip: true
 

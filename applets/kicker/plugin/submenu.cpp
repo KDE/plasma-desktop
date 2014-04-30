@@ -22,11 +22,15 @@
 
 #include <cmath>
 
+#include <QDebug>
 #include <QScreen>
+
+#include <KWindowSystem>
 
 SubMenu::SubMenu(QQuickItem *parent) : PlasmaQuick::Dialog(parent)
 , m_facingLeft(false)
 {
+   KWindowSystem::setType(winId(), NET::Menu);
 }
 
 SubMenu::~SubMenu()
@@ -76,3 +80,16 @@ QRect SubMenu::availableScreenRectForItem(QQuickItem *item) const
 
     return screen->availableGeometry();
 }
+
+
+void SubMenu::focusOutEvent(QFocusEvent *ev)
+{
+    const QWindow *focusWindow = QGuiApplication::focusWindow();
+
+    if (!(focusWindow && focusWindow->isActive() && isAncestorOf(focusWindow))) {
+        emit focusLost();
+    }
+
+    QQuickWindow::focusOutEvent(ev);
+}
+

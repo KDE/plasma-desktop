@@ -58,12 +58,6 @@ Item {
         onActionClicked: {
             actionTriggered(actionId, actionArgument);
         }
-
-        onOpenedChanged: {
-            if (!opened) {
-                item.parent.contextMenuOpen = false;
-            }
-        }
     }
 
     PlasmaCore.IconItem {
@@ -91,7 +85,6 @@ Item {
         onPressed: {
             if (mouse.buttons & Qt.RightButton) {
                 if (item.hasActionList) {
-                    item.parent.contextMenuOpen = true;
                     item.openActionMenu(item, mouse.x, mouse.y);
                 }
             } else {
