@@ -29,7 +29,7 @@ ProcessRunner::~ProcessRunner()
 {
 }
 
-void ProcessRunner::execute(const QString& name)
+void ProcessRunner::runMenuEditor()
 {
-    KProcess::execute(name);
+    KProcess::execute("kmenuedit");
 }

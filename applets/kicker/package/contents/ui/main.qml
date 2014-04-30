@@ -41,7 +41,7 @@ Item {
     property Item dragSource: null
 
     function action_menuedit() {
-        processRunner.execute("kmenuedit");
+        processRunner.runMenuEditor();
     }
 
     function updateSvgMetrics() {
