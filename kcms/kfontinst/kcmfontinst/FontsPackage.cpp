@@ -34,9 +34,9 @@ namespace KFI
 namespace FontsPackage
 {
 
-QSet<KUrl> extract(const QString &fileName, KTempDir **tempDir)
+QSet<QUrl> extract(const QString &fileName, KTempDir **tempDir)
 {
-    QSet<KUrl> urls;
+    QSet<QUrl> urls;
 
     if(!tempDir)
         return urls;
@@ -82,7 +82,7 @@ QSet<KUrl> extract(const QString &fileName, KTempDir **tempDir)
                             name=name.mid(1);
                         }
 
-                        urls.insert(KUrl((*tempDir)->name()+name));
+                        urls.insert(QUrl((*tempDir)->name()+name));
                     }
                 }
             }

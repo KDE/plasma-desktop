@@ -24,7 +24,7 @@
 #ifndef __JOB_RUNNER_H__
 #define __JOB_RUNNER_H__
 
-#include <KUrl>
+#include <QUrl>
 #include <KDialog>
 #include "FontInstInterface.h"
 
@@ -47,7 +47,7 @@ class CJobRunner : public KDialog
 
     public:
 
-    struct Item : public KUrl
+    struct Item : public QUrl
     {
         enum EType
         {
@@ -57,9 +57,9 @@ class CJobRunner : public KDialog
             OTHER_FONT
         };
 
-        Item(const KUrl &u=KUrl(), const QString &n=QString(), bool dis=false);
+        Item(const QUrl &u=QUrl(), const QString &n=QString(), bool dis=false);
         Item(const QString &file, const QString &family, quint32 style, bool system);
-        QString displayName() const { return name.isEmpty() ? prettyUrl() : name; }
+        QString displayName() const { return name.isEmpty() ? url() : name; }
         QString name,
                 fileName;  // Only required so that we can sort an ItemList so that afm/pfms follow after pfa/pfbs
         EType   type;
@@ -88,9 +88,9 @@ class CJobRunner : public KDialog
     static QString             folderName(bool sys);
     static void startDbusService();
 
-    static KUrl encode(const QString &family, quint32 style, bool system);
+    static QUrl encode(const QString &family, quint32 style, bool system);
 
-    static void     getAssociatedUrls(const KUrl &url, KUrl::List &list, bool afmAndPfm, QWidget *widget);
+    static void     getAssociatedUrls(const QUrl &url, QList<QUrl> &list, bool afmAndPfm, QWidget *widget);
     int             exec(ECommand cmd, const ItemList &urls, bool destIsSystem);
 
     Q_SIGNALS:
@@ -110,7 +110,7 @@ class CJobRunner : public KDialog
     void    contineuToNext(bool cont);
     void    closeEvent(QCloseEvent *e);
     void    setPage(int page, const QString &msg=QString());
-    QString fileName(const KUrl &url);
+    QString fileName(const QUrl &url);
     QString errorString(int value) const;
 
     private:

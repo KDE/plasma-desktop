@@ -28,7 +28,7 @@
 #include <KParts/MainWindow>
 
 class QAction;
-class KUrl;
+class QUrl;
 
 namespace KFI
 {
@@ -41,7 +41,7 @@ class CViewer : public KParts::MainWindow
 
     CViewer();
     virtual ~CViewer() { }
-    void showUrl(const KUrl &url);
+    void showUrl(const QUrl &url);
 
     public Q_SLOTS:
 

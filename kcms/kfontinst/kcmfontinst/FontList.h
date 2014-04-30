@@ -24,7 +24,7 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#include <KUrl>
+#include <QUrl>
 #include <KFileItem>
 #include <KIO/Job>
 #include <QList>
@@ -254,7 +254,7 @@ class CFontItem : public CFontModelItem
     int                               rowNumber() const        { return (static_cast<CFamilyItem *>(parent()))->row(this); }
     const FileCont &                  files() const            { return itsStyle.files(); }
     qulonglong                        writingSystems() const   { return itsStyle.writingSystems(); }
-    KUrl                              url() const              { return CJobRunner::encode(family(), styleInfo(), isSystem()); }
+    QUrl                              url() const              { return CJobRunner::encode(family(), styleInfo(), isSystem()); }
     void                              removeFile(const File &f){ itsStyle.remove(f); }
     void                              removeFiles(const FileCont &f){ itsStyle.removeFiles(f); }
     void                              addFile(const File &f)   { itsStyle.add(f); }
@@ -337,7 +337,7 @@ class CFontListView : public QTreeView
     void            print();
     void            enable();
     void            disable();
-    void            fontsDropped(const QSet<KUrl> &);
+    void            fontsDropped(const QSet<QUrl> &);
     void            itemsSelected(const QModelIndexList &);
     void            refresh();
     void            reload();

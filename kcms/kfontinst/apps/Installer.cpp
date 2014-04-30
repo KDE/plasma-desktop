@@ -39,9 +39,9 @@
 namespace KFI
 {
 
-int CInstaller::install(const QSet<KUrl> &urls)
+int CInstaller::install(const QSet<QUrl> &urls)
 {
-    QSet<KUrl>::ConstIterator it(urls.begin()),
+    QSet<QUrl>::ConstIterator it(urls.begin()),
                               end(urls.end());
     bool                      sysInstall(false);
     CJobRunner *jobRunner=new CJobRunner(itsParent);
@@ -67,11 +67,11 @@ int CInstaller::install(const QSet<KUrl> &urls)
         }
     }
 
-    QSet<KUrl> instUrls;
+    QSet<QUrl> instUrls;
 
     for(; it!=end; ++it)
     {
-        KUrl local(KIO::NetAccess::mostLocalUrl(*it, NULL));
+        QUrl local(KIO::NetAccess::mostLocalUrl(*it, NULL));
         bool package(false);
 
         if(local.isLocalFile())
@@ -86,12 +86,12 @@ int CInstaller::install(const QSet<KUrl> &urls)
         }
         if(!package)
         {
-            KUrl::List associatedUrls;
+            QList<QUrl> associatedUrls;
 
             CJobRunner::getAssociatedUrls(*it, associatedUrls, false, itsParent);
             instUrls.insert(*it);
 
-            KUrl::List::Iterator aIt(associatedUrls.begin()),
+            QList<QUrl>::Iterator aIt(associatedUrls.begin()),
                                  aEnd(associatedUrls.end());
 
             for(; aIt!=aEnd; ++aIt)
@@ -102,7 +102,7 @@ int CInstaller::install(const QSet<KUrl> &urls)
     if(instUrls.count())
     {
         CJobRunner::ItemList      list;
-        QSet<KUrl>::ConstIterator it(instUrls.begin()),
+        QSet<QUrl>::ConstIterator it(instUrls.begin()),
                                   end(instUrls.end());
 
         for(; it!=end; ++it)
@@ -133,7 +133,7 @@ int main(int argc, char **argv)
     options.add("+[URL]", ki18n("URL to install"));
     KCmdLineArgs::addCmdLineOptions(options);
 
-    QSet<KUrl>   urls;
+    QSet<QUrl>   urls;
     KCmdLineArgs *args(KCmdLineArgs::parsedArgs());
 
     for(int i=0; i < args->count(); i++)

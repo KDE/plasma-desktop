@@ -28,7 +28,7 @@
 #include "JobRunner.h"
 #include <QtCore/QSet>
 #include <KCModule>
-#include <KUrl>
+#include <QUrl>
 #include <KConfig>
 #include <KIO/Job>
 
@@ -91,7 +91,7 @@ class CKCmFontInst : public KCModule
     void    refreshFamilies();
     void    showInfo(const QString &info);
     void    setStatusBar();
-    void    addFonts(const QSet<KUrl> &src);
+    void    addFonts(const QSet<QUrl> &src);
 
     private:
 
@@ -131,7 +131,7 @@ class CKCmFontInst : public KCModule
     KTempDir         *itsTempDir;
     QProcess         *itsPrintProc;
     QSet<QString>    itsDeletedFonts;
-    KUrl::List       itsModifiedUrls;
+    QList<QUrl>       itsModifiedUrls;
     CJobRunner       *itsRunner;
     QMenu            *itsPreviewMenu,
                      *itsPreviewListMenu;

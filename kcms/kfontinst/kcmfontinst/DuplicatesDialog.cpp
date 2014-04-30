@@ -552,7 +552,7 @@ void CFontFileListView::properties()
 
     foreach(item, items)
         if(item->parent())
-            files.append(KFileItem(KUrl::fromPath(item->text(0)),
+            files.append(KFileItem(QUrl("file:/"+item->text(0)),
                                    KMimeType::findByPath(item->text(0))->name(),
                                    item->text(COL_LINK).isEmpty() ? S_IFREG : S_IFLNK));
 

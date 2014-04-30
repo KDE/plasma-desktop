@@ -25,7 +25,7 @@
  */
 
 #include <QtCore/QSet>
-#include <KUrl>
+#include <QUrl>
 
 class QWidget;
 class KTempDir;
@@ -40,7 +40,7 @@ class CInstaller
          : itsParent(p), itsTempDir(NULL) { }
     ~CInstaller();
 
-    int install(const QSet<KUrl> &urls);
+    int install(const QSet<QUrl> &urls);
 
     private:
 

@@ -27,14 +27,14 @@
 class KTempDir;
 
 #include <QtCore/QSet>
-#include <KUrl>
+#include <QUrl>
 
 namespace KFI
 {
 
 namespace FontsPackage
 {
-    QSet<KUrl> extract(const QString &fileName, KTempDir **tempDir);
+    QSet<QUrl> extract(const QString &fileName, KTempDir **tempDir);
 }
 
 }

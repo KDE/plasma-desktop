@@ -24,7 +24,7 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#include <KUrl>
+#include <QUrl>
 #include <KFileItem>
 #include <KIO/Job>
 #include <KDirLister>

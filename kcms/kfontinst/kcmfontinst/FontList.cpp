@@ -1982,7 +1982,7 @@ void CFontListView::dropEvent(QDropEvent *event)
         QList<QUrl>::ConstIterator it(urls.begin()),
                                    end(urls.end());
         QStringList::ConstIterator mtEnd(CFontList::fontMimeTypes.constEnd());
-        QSet<KUrl>                 kurls;
+        QSet<QUrl>                 kurls;
 
         for(; it!=end; ++it)
         {

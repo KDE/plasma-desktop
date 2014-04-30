@@ -393,8 +393,8 @@ CKCmFontInst::CKCmFontInst(QWidget *parent, const QVariantList&)
     connect(itsFontListView, SIGNAL(print()), SLOT(print()));
     connect(itsFontListView, SIGNAL(enable()), SLOT(enableFonts()));
     connect(itsFontListView, SIGNAL(disable()), SLOT(disableFonts()));
-    connect(itsFontListView, SIGNAL(fontsDropped(QSet<KUrl>)),
-           SLOT(addFonts(QSet<KUrl>)));
+    connect(itsFontListView, SIGNAL(fontsDropped(QSet<QUrl>)),
+           SLOT(addFonts(QSet<QUrl>)));
     connect(itsFontListView, SIGNAL(itemsSelected(QModelIndexList)), SLOT(fontsSelected(QModelIndexList)));
     connect(itsFontListView, SIGNAL(refresh()), SLOT(setStatusBar()));
     connect(itsGroupListView, SIGNAL(unclassifiedChanged()), itsFontListView, SLOT(refreshFilter()));
@@ -494,19 +494,19 @@ void CKCmFontInst::fontsSelected(const QModelIndexList &list)
 
 void CKCmFontInst::addFonts()
 {
-    KUrl::List list=KFileDialog::getOpenUrls(KUrl(), CFontList::fontMimeTypes.join(" "), this, i18n("Add Fonts"));
+    QList<QUrl> list=KFileDialog::getOpenUrls(QUrl(), CFontList::fontMimeTypes.join(" "), this, i18n("Add Fonts"));
 
     if(list.count())
     {
-        QSet<KUrl>           urls;
-        KUrl::List::Iterator it(list.begin()),
+        QSet<QUrl>           urls;
+        QList<QUrl>::Iterator it(list.begin()),
                              end(list.end());
 
         for(; it!=end; ++it)
         {
-            if(KFI_KIO_FONTS_PROTOCOL!=(*it).protocol()) // Do not try to install from fonts:/ !!!
+            if(KFI_KIO_FONTS_PROTOCOL!=(*it).scheme()) // Do not try to install from fonts:/ !!!
             {
-                KUrl url(KIO::NetAccess::mostLocalUrl(*it, this));
+                QUrl url(KIO::NetAccess::mostLocalUrl(*it, this));
 
                 if(url.isLocalFile())
                 {
@@ -1005,7 +1005,7 @@ void CKCmFontInst::setStatusBar()
     itsDeleteFontControl->setEnabled(selectedEnabled||selectedDisabled);
 }
 
-void CKCmFontInst::addFonts(const QSet<KUrl> &src)
+void CKCmFontInst::addFonts(const QSet<QUrl> &src)
 {
     if(src.count() && !itsGroupListView->isCustom())
     {
@@ -1048,8 +1048,8 @@ void CKCmFontInst::addFonts(const QSet<KUrl> &src)
             }
         }
 
-        QSet<KUrl>                copy;
-        QSet<KUrl>::ConstIterator it,
+        QSet<QUrl>                copy;
+        QSet<QUrl>::ConstIterator it,
                                   end(src.end());
 
         //
@@ -1074,9 +1074,9 @@ void CKCmFontInst::addFonts(const QSet<KUrl> &src)
         int steps=src.count()<200 ? 1 : src.count()/10;
         for(it=src.begin(); it!=end; ++it)
         {
-            KUrl::List associatedUrls;
+            QList<QUrl> associatedUrls;
 
-            itsProgress->setLabelText(i18n("Looking for files associated with %1", (*it).prettyUrl()));
+            itsProgress->setLabelText(i18n("Looking for files associated with %1", (*it).url()));
             itsProgress->progressBar()->setValue(itsProgress->progressBar()->value()+1);
             if(1==steps || 0==(itsProgress->progressBar()->value()%steps))
             {
@@ -1089,7 +1089,7 @@ void CKCmFontInst::addFonts(const QSet<KUrl> &src)
             CJobRunner::getAssociatedUrls(*it, associatedUrls, false, this);
             copy.insert(*it);
 
-            KUrl::List::Iterator aIt(associatedUrls.begin()),
+            QList<QUrl>::Iterator aIt(associatedUrls.begin()),
                                  aEnd(associatedUrls.end());
 
             for(; aIt!=aEnd; ++aIt)

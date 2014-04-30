@@ -36,7 +36,7 @@
 #include <KActionCollection>
 #include <KShortcutsDialog>
 #include <KParts/BrowserExtension>
-#include <KUrl>
+#include <QUrl>
 #include <QAction>
 
 namespace KFI
@@ -73,14 +73,14 @@ CViewer::CViewer()
 
 void CViewer::fileOpen()
 {
-    KUrl url(KFileDialog::getOpenUrl(KUrl(), "application/x-font-ttf application/x-font-otf "
+    QUrl url(KFileDialog::getOpenUrl(QUrl(), "application/x-font-ttf application/x-font-otf "
                                              "application/x-font-type1 "
                                              "application/x-font-bdf application/x-font-pcf ",
                                      this, i18n("Select Font to View")));
     showUrl(url);
 }
 
-void CViewer::showUrl(const KUrl &url)
+void CViewer::showUrl(const QUrl &url)
 {
     if(url.isValid())
         itsPreview->openUrl(url);
@@ -128,7 +128,7 @@ class ViewerApplication : public KUniqueApplication
         {
             for (int i = 0; i < args->count(); ++i)
             {
-                KUrl url(args->url(i));
+                QUrl url(args->url(i));
 
                 if (i != 0)
                 {

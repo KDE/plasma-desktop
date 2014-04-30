@@ -87,15 +87,16 @@ void CJobRunner::startDbusService()
 static const int constDownloadFailed=-1;
 static const int constInterfaceCheck=5*1000;
 
-static void decode(const KUrl &url, Misc::TFont &font, bool &system)
+static void decode(const QUrl &url, Misc::TFont &font, bool &system)
 {
     font=FC::decode(url);
-    system=url.queryItem("sys")=="true";
+    QUrlQuery query(url);
+    system = (query.hasQueryItem("sys") && query.queryItemValue("sys") == QStringLiteral("true"));
 }
 
-KUrl CJobRunner::encode(const QString &family, quint32 style, bool system)
+QUrl CJobRunner::encode(const QString &family, quint32 style, bool system)
 {
-    KUrl url(FC::encode(family, style));
+    QUrl url(FC::encode(family, style));
 
     url.addQueryItem("sys", system ? "true" : "false");
     return url;
@@ -230,7 +231,7 @@ CJobRunner::~CJobRunner()
     delete itsTempDir;
 }
 
-void CJobRunner::getAssociatedUrls(const KUrl &url, KUrl::List &list, bool afmAndPfm, QWidget *widget)
+void CJobRunner::getAssociatedUrls(const QUrl &url, QList<QUrl> &list, bool afmAndPfm, QWidget *widget)
 {
     QString ext(url.path());
     int     dotPos(ext.lastIndexOf('.'));
@@ -255,7 +256,7 @@ void CJobRunner::getAssociatedUrls(const KUrl &url, KUrl::List &list, bool afmAn
 
         for(e=0; afm[e]; ++e)
         {
-            KUrl          statUrl(url);
+            QUrl          statUrl(url);
             KIO::UDSEntry uds;
             statUrl.setPath(Misc::changeExt(url.path(), afm[e]));
             if(localFile ? Misc::fExists(statUrl.toLocalFile()) : KIO::NetAccess::stat(statUrl, uds, widget))
@@ -269,7 +270,7 @@ void CJobRunner::getAssociatedUrls(const KUrl &url, KUrl::List &list, bool afmAn
         if(afmAndPfm || !gotAfm)
             for(e=0; pfm[e]; ++e)
             {
-                KUrl          statUrl(url);
+                QUrl          statUrl(url);
                 KIO::UDSEntry uds;
                 statUrl.setPath(Misc::changeExt(url.path(), pfm[e]));
                 if(localFile ? Misc::fExists(statUrl.toLocalFile()) : KIO::NetAccess::stat(statUrl, uds, widget))
@@ -437,7 +438,7 @@ void CJobRunner::doNext()
             default:
                 break;
         }
-        itsStatusLabel->setText(CMD_INSTALL==itsCmd ? (*itsIt).prettyUrl() : FC::createName(FC::decode(*itsIt)));
+        itsStatusLabel->setText(CMD_INSTALL==itsCmd ? (*itsIt).url() : FC::createName(FC::decode(*itsIt)));
         itsProgress->setValue(itsProgress->value()+1);
         
         // Keep copy of this iterator - so that can check whether AFM should be created.
@@ -658,13 +659,13 @@ void CJobRunner::setPage(int page, const QString &msg)
     }
 }
 
-QString CJobRunner::fileName(const KUrl &url)
+QString CJobRunner::fileName(const QUrl &url)
 {
     if(url.isLocalFile())
         return url.toLocalFile();
     else
     {
-        KUrl local(KIO::NetAccess::mostLocalUrl(url, 0L));
+        QUrl local(KIO::NetAccess::mostLocalUrl(url, 0L));
 
         if(local.isLocalFile())
             return local.toLocalFile(); // Yipee! no need to download!!
@@ -694,7 +695,7 @@ QString CJobRunner::errorString(int value) const
     if(CMD_REMOVE_FILE==itsCmd)
         urlStr=(*itsIt).fileName;
     else if(font.family.isEmpty())
-        urlStr=(*itsIt).prettyUrl();
+        urlStr=(*itsIt).url();
     else
         urlStr=FC::createName(font.family, font.styleInfo);
     
@@ -734,8 +735,8 @@ QString CJobRunner::errorString(int value) const
     }
 }
 
-CJobRunner::Item::Item(const KUrl &u, const QString &n, bool dis)
-                : KUrl(u), name(n), fileName(Misc::getFile(u.path())), isDisabled(dis)
+CJobRunner::Item::Item(const QUrl &u, const QString &n, bool dis)
+                : QUrl(u), name(n), fileName(Misc::getFile(u.path())), isDisabled(dis)
 {
     type=Misc::checkExt(fileName, "pfa") || Misc::checkExt(fileName, "pfb")
             ? TYPE1_FONT
@@ -755,7 +756,7 @@ CJobRunner::Item::Item(const KUrl &u, const QString &n, bool dis)
 }
 
 CJobRunner::Item::Item(const QString &file, const QString &family, quint32 style, bool system)
-                : KUrl(CJobRunner::encode(family, style, system)), fileName(file), type(OTHER_FONT)
+                : QUrl(CJobRunner::encode(family, style, system)), fileName(file), type(OTHER_FONT)
 {
 }
 
