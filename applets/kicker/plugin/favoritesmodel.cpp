@@ -95,28 +95,40 @@ QStringList FavoritesModel::favorites() const
     return m_favorites;
 }
 
-void FavoritesModel::setFavorites(const QStringList &favorites)
+void FavoritesModel::setFavorites(const QStringList& favorites)
 {
-    if (m_favorites != favorites) {
-        bool emitCountChanged = (m_favorites.count() != favorites.count());
+    QStringList _favorites(favorites);
+    _favorites.removeDuplicates();
 
-        beginResetModel();
-
-        m_favorites = favorites;
-
+    if (m_favorites != _favorites) {
         if (!m_sourceModel) {
             m_serviceCache.clear();
 
+            QMutableStringListIterator i(_favorites);
             KService::Ptr service;
 
-            foreach (const QString &favoriteId, m_favorites) {
-                service = KService::serviceByStorageId(favoriteId);
+            while (i.hasNext()) {
+                i.next();
+
+                service = KService::serviceByStorageId(i.value());
 
                 if (service) {
-                    m_serviceCache[favoriteId] = service;
+                    m_serviceCache[i.value()] = service;
+                } else {
+                    i.remove();
                 }
             }
+
+            if (m_favorites == _favorites) {
+                return;
+            }
         }
+
+        bool emitCountChanged = (m_favorites.count() != _favorites.count());
+
+        beginResetModel();
+
+        m_favorites = _favorites;
 
         endResetModel();
 
@@ -139,17 +151,19 @@ void FavoritesModel::addFavorite(const QString &favoriteId)
         return;
     }
 
-    beginInsertRows(QModelIndex(), m_favorites.count(), m_favorites.count());
-
-    m_favorites << favoriteId;
-
     if (!m_sourceModel) {
         KService::Ptr service = KService::serviceByStorageId(favoriteId);
 
         if (service) {
             m_serviceCache[favoriteId] = service;
+        } else {
+            return;
         }
     }
+
+    beginInsertRows(QModelIndex(), m_favorites.count(), m_favorites.count());
+
+    m_favorites << favoriteId;
 
     endInsertRows();
 
