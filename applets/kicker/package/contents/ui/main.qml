@@ -38,6 +38,7 @@ Item {
     Plasmoid.fullRepresentation: FullRepresentation { id: fullRepr }
 
     property QtObject itemListDialogComponent: Qt.createComponent("ItemListDialog.qml");
+    property Item dragSource: null
 
     function action_menuedit() {
         processRunner.execute("kmenuedit");
@@ -113,6 +114,10 @@ Item {
         runners: plasmoid.configuration.useExtraRunners ? new Array("services").concat(plasmoid.configuration.extraRunners) : "services"
     }
 
+    Kicker.DragHelper {
+        id: dragHelper
+    }
+
     Kicker.ProcessRunner {
         id: processRunner;
     }
@@ -164,6 +169,10 @@ Item {
         }
     }
 
+    function resetDragSource() {
+        dragSource = null;
+    }
+
     Component.onCompleted: {
         plasmoid.setAction("menuedit", i18n("Edit Applications..."));
 
@@ -171,5 +180,7 @@ Item {
         theme.themeChanged.connect(updateSvgMetrics);
 
         rootModel.refreshing.connect(reset);
+
+        dragHelper.dropped.connect(resetDragSource);
     }
 }

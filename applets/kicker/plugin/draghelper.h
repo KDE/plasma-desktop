@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2014 by Eike Hein <hein@kde.org>                        *
+ *   Copyright (C) 2013 by Eike Hein <hein@kde.org>                        *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -17,24 +17,28 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#include "kickerplugin.h"
-#include "draghelper.h"
-#include "processrunner.h"
-#include "rootmodel.h"
-#include "runnermodel.h"
-#include "submenu.h"
-#include "windowsystem.h"
+#ifndef DRAGHELPER_H
+#define DRAGHELPER_H
 
-#include <QtQml>
+#include <QObject>
 
-void KickerPlugin::registerTypes(const char *uri)
+class QIcon;
+class QQuickItem;
+class QUrl;
+
+class DragHelper : public QObject
 {
-    Q_ASSERT(uri == QLatin1String("org.kde.plasma.private.kicker"));
+    Q_OBJECT
 
-    qmlRegisterType<DragHelper>(uri, 0, 1, "DragHelper");
-    qmlRegisterType<ProcessRunner>(uri, 0, 1, "ProcessRunner");
-    qmlRegisterType<RootModel>(uri, 0, 1, "RootModel");
-    qmlRegisterType<RunnerModel>(uri, 0, 1, "RunnerModel");
-    qmlRegisterType<SubMenu>(uri, 0, 1, "SubMenu");
-    qmlRegisterType<WindowSystem>(uri, 0, 1, "WindowSystem");
-}
+    public:
+        DragHelper(QObject *parent = 0);
+        ~DragHelper();
+
+        Q_INVOKABLE bool isDrag(int oldX, int oldY, int newX, int newY) const;
+        Q_INVOKABLE void startDrag(QQuickItem* item) const;
+
+    Q_SIGNALS:
+        void dropped() const;
+};
+
+#endif

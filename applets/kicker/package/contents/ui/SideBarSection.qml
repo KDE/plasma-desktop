@@ -39,8 +39,8 @@ DropArea {
 
         var above = flow.childAt(event.x, event.y);
 
-        if (above && above != event.mimeData.source && event.mimeData.source.parent == flow) {
-            repeater.model.moveRow(event.mimeData.source.itemIndex, above.itemIndex);
+        if (above && above != kicker.dragSource && dragSource.parent == flow) {
+            repeater.model.moveRow(dragSource.itemIndex, above.itemIndex);
         }
 
     }

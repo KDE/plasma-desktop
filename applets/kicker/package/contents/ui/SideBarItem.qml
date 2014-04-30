@@ -21,11 +21,10 @@ import QtQuick 2.0
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kquickcontrolsaddons 2.0
-import org.kde.draganddrop 2.0
 
 import "../code/tools.js" as Tools
 
-MouseEventListener {
+Item {
     id: item
 
     width: root.width
@@ -37,35 +36,6 @@ MouseEventListener {
     property bool hasActionList: ((model.favoriteId != null)
         || (("hasActionList" in model) && (model.hasActionList != null)))
     property int itemIndex: model.index
-    property bool clicked: false
-
-    hoverEnabled: true
-    acceptedButtons: Qt.LeftButton | Qt.RightButton
-
-    onPressed: {
-        if (mouse.buttons & Qt.RightButton) {
-            if (hasActionList) {
-                openActionMenu(item, mouse.x, mouse.y);
-            }
-        } else {
-            clicked = true;
-        }
-    }
-
-    onReleased: {
-        if (clicked) {
-            repeater.model.trigger(index, "", null);
-            plasmoid.expanded = false;
-        }
-
-        clicked = false;
-    }
-
-    onContainsMouseChanged: {
-        if (!containsMouse) {
-            clicked = false;
-        }
-    }
 
     onAboutToShowActionMenu: {
         var actionList = (model.hasActionList != null) ? model.actionList : [];
@@ -93,18 +63,66 @@ MouseEventListener {
     PlasmaCore.IconItem {
         anchors.fill: parent
 
-        active: containsMouse
+        active: listener.containsMouse
 
         source: model.decoration
     }
 
-    DragArea {
+    MouseEventListener {
+        id: listener
+
         anchors.fill: parent
 
-        enabled: containsMouse
-        supportedActions: Qt.MoveAction
+        enabled: !item.parent.animating
 
-        mimeData.source: item
+        property bool pressed: false
+        property int pressX: -1
+        property int pressY: -1
+
+        hoverEnabled: true
+        acceptedButtons: Qt.LeftButton | Qt.RightButton
+
+        onPressed: {
+            if (mouse.buttons & Qt.RightButton) {
+                if (item.hasActionList) {
+                    item.openActionMenu(item, mouse.x, mouse.y);
+                }
+            } else {
+                pressed = true;
+                pressX = mouse.x;
+                pressY = mouse.y;
+            }
+        }
+
+        onReleased: {
+            if (clicked) {
+                repeater.model.trigger(index, "", null);
+                plasmoid.expanded = false;
+            }
+
+            pressed = false;
+            pressX = -1;
+            pressY = -1;
+        }
+
+        onContainsMouseChanged: {
+            if (!containsMouse) {
+                pressed = false;
+                pressX = -1;
+                pressY = -1;
+            }
+        }
+
+        onPositionChanged: {
+            if (pressX != -1 && dragHelper.isDrag(pressX, pressY, mouse.x, mouse.y)) {
+                kicker.dragSource = item;
+                dragHelper.startDrag(item);
+                pressX = -1;
+                pressY = -1;
+
+                return;
+            }
+        }
     }
 }
 
