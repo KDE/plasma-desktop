@@ -26,7 +26,6 @@
 #include "Misc.h"
 #include "Fc.h"
 #include "ActionLabel.h"
-#include <KGlobal>
 #include <KIconLoader>
 #include <kio/netaccess.h>
 #include <KStandardDirs>
@@ -58,7 +57,7 @@
 namespace KFI
 {
 
-K_GLOBAL_STATIC(FontInstInterface, theInterface)
+Q_GLOBAL_STATIC(FontInstInterface, theInterface)
 
 FontInstInterface * CJobRunner::dbus()
 {
