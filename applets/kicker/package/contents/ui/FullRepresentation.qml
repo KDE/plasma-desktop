@@ -32,7 +32,7 @@ Item {
     Layout.minimumHeight: (rootModel.count * rootList.itemHeight) + searchField.height + (2 * units.smallSpacing)
     Layout.maximumHeight: (rootModel.count * rootList.itemHeight) + searchField.height + (2 * units.smallSpacing)
 
-    property bool hideOnWindowDeactivate: !rootList.containsMouse
+    property bool hideOnWindowDeactivate: (!rootList.containsMouse && !sideBar.contextMenuOpen)
     property Item searchField: searchField
 
     function reset() {
@@ -63,6 +63,8 @@ Item {
 
             width: units.iconSizes.medium + margins.left + margins.right
             height: parent.height
+
+            property bool contextMenuOpen: (favoriteApps.contextMenuOpen || favoriteSystemActions.contextMenuOpen)
 
             imagePath: "widgets/frame"
             prefix: "plain"
