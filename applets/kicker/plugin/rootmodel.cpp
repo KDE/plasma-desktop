@@ -65,6 +65,8 @@ void RootModel::refresh()
 {
     AppsModel::refresh();
     extendEntryList();
+
+    m_favoritesModels["app"]->refresh();
 }
 
 void RootModel::extendEntryList()

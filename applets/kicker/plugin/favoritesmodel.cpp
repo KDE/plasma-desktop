@@ -228,3 +228,9 @@ void FavoritesModel::setSourceModel(AbstractModel *model)
 
     endResetModel();
 }
+
+void FavoritesModel::refresh()
+{
+     setFavorites(m_favorites);
+}
+

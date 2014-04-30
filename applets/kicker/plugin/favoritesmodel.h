@@ -53,6 +53,9 @@ class FavoritesModel : public AbstractModel
 
         void setSourceModel(AbstractModel *model);
 
+    public Q_SLOTS:
+        virtual void refresh();
+
     Q_SIGNALS:
         void favoritesChanged() const;
 
