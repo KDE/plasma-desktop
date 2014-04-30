@@ -139,8 +139,7 @@ void Autostart::load()
     m_paths << QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QStringLiteral("/autostart/")
             << QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/shutdown/")
             << QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/env/")
-            << QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/share/autostart/"); // For Importing purposes
-
+            << QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/autostart/"); // For Importing purposes
     // share/autostart shouldn't be an option as this should be reserved for global autostart entries
     m_pathName << i18n("Startup")
              << i18n("Shutdown")
@@ -267,7 +266,7 @@ void Autostart::slotAddProgram()
     if ( service->desktopEntryName().isEmpty() ) {
         // Build custom desktop file (e.g. when the user entered an executable
         // name in the OpenWithDialog).
-        desktopPath = m_paths[4] + service->name() + ".desktop";
+        desktopPath = m_paths.last() + service->name() + ".desktop";
         desktopTemplate = QUrl( desktopPath );
         KConfig kc(desktopTemplate.path(), KConfig::SimpleConfig);
         KConfigGroup kcg = kc.group("Desktop Entry");
@@ -287,10 +286,10 @@ void Autostart::slotAddProgram()
     else
     {
         // Use existing desktop file and use same file name to enable overrides.
-        desktopPath = m_paths[4] + service->desktopEntryName() + ".desktop";
-        desktopTemplate = QUrl( QStandardPaths::locate(QStandardPaths::ApplicationsLocation, service->entryPath()) );
+        desktopPath = m_paths.last() + service->desktopEntryName() + ".desktop";
+        desktopTemplate = QUrl::fromLocalFile( QStandardPaths::locate(QStandardPaths::ApplicationsLocation, service->entryPath()) );
 
-        KPropertiesDialog dlg( desktopTemplate, QUrl(m_paths[4]), service->desktopEntryName() + ".desktop", this );
+        KPropertiesDialog dlg( QUrl::fromLocalFile(service->entryPath()), QUrl::fromLocalFile(m_paths.last()), service->desktopEntryName() + ".desktop", this );
         if ( dlg.exec() != QDialog::Accepted )
             return;
     }
