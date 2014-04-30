@@ -43,10 +43,6 @@ class SubMenu : public PlasmaQuick::Dialog
 
     Q_SIGNALS:
         void facingLeftChanged() const;
-        void focusLost() const;
-
-    protected:
-        void focusOutEvent(QFocusEvent *ev);
 
     private:
         bool m_facingLeft;

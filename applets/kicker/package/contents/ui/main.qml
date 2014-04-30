@@ -174,6 +174,8 @@ Item {
     }
 
     Component.onCompleted: {
+        plasmoid.hideOnWindowDeactivate = true;
+
         plasmoid.setAction("menuedit", i18n("Edit Applications..."));
 
         updateSvgMetrics();

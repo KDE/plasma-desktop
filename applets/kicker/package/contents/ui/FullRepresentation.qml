@@ -35,19 +35,11 @@ Item {
 
     signal appendSearchText(string text)
 
-    property bool hideOnWindowDeactivate: true
-
     function reset() {
         rootList.currentIndex = -1;
 
         searchField.text = "";
         searchField.focus = true;
-    }
-
-    Binding {
-        target: plasmoid
-        property: "hideOnWindowDeactivate"
-        value: hideOnWindowDeactivate
     }
 
     Row {

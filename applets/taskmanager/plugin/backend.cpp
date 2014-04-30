@@ -41,6 +41,7 @@
 Backend::Backend(QObject* parent) : QObject(parent),
     m_groupManager(new TaskManager::GroupManager(this)),
     m_tasksModel(new TaskManager::TasksModel(m_groupManager, this)),
+    m_taskManagerItem(0),
     m_lastWindowId(0),
     m_highlightWindows(false)
 {

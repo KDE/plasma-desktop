@@ -31,8 +31,13 @@ Kicker.SubMenu {
     property alias model: itemListView.model
 
     visible: false
+    hideOnWindowDeactivate: plasmoid.hideOnWindowDeactivate
 
     location: PlasmaCore.Types.Floating
+
+    onWindowDeactivated: {
+        plasmoid.expanded = false;
+    }
 
     mainItem: ItemListView {
         id: itemListView
@@ -44,26 +49,6 @@ Kicker.SubMenu {
         iconsEnabled: true
 
         dialog: itemDialog
-    }
-
-    onFocusLost: {
-        var close = true;
-
-        var target = focusParent;
-
-        while (target) {
-            if (windowSystem.isActive(target)) {
-                close = false;
-
-                break;
-            }
-
-            target = target.focusParent;
-        }
-
-        if (plasmoid.hideWindowOnDeactivate && close) {
-            plasmoid.expanded = false;
-        }
     }
 
     function delayedDestroy() {
