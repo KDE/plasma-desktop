@@ -32,6 +32,8 @@ Item {
     Layout.minimumHeight: (rootModel.count * rootList.itemHeight) + searchField.height + (2 * units.smallSpacing)
     Layout.maximumHeight: (rootModel.count * rootList.itemHeight) + searchField.height + (2 * units.smallSpacing)
 
+    signal appendSearchText(string text)
+
     property bool hideOnWindowDeactivate: true
 
     function reset() {
@@ -340,7 +342,7 @@ Item {
             }
         }
 
-        function appendText(newText) { // FIXME: See Keys in ItemListView.
+        function appendText(newText) {
             focus = true;
             text = text + newText;
         }
@@ -353,6 +355,8 @@ Item {
     }
 
     Component.onCompleted: {
+        appendSearchText.connect(searchField.appendText);
+
         kicker.reset.connect(reset);
     }
 }

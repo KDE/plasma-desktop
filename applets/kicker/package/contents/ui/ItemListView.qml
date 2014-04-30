@@ -30,6 +30,8 @@ FocusScope {
     width: units.gridUnit * 14
     height: listView.contentHeight
 
+    signal appendSearchText(string text)
+
     property Item focusParent: null
     property QtObject dialog: null
     property QtObject childDialog: null
@@ -41,6 +43,10 @@ FocusScope {
     property alias keyNavigationWraps: listView.keyNavigationWraps
     property alias model: listView.model
     property alias containsMouse: listener.containsMouse
+
+    onFocusParentChanged: {
+        appendSearchText.connect(focusParent.appendSearchText);
+    }
 
     Timer {
         id: dialogSpawnTimer
@@ -150,14 +156,19 @@ FocusScope {
                         childDialog.mainItem.currentIndex = 0;
                     } else if (event.key == Qt.Key_Left && dialog != null) {
                         dialog.destroy();
-                    } else if (event.key != Qt.Key_Escape && event.text != "") {
-                        return; // FIXME
-                        searchField.appendText(event.text);
                     } else if (event.key == Qt.Key_Escape) {
                         plasmoid.expanded = false;
+                    } else if (event.text != "") {
+                        appendSearchText(event.text);
                     }
                 }
             }
+        }
+    }
+
+    Component.onCompleted: {
+        if (dialog == null) {
+            appendSearchText.connect(root.appendSearchText);
         }
     }
 }
