@@ -28,7 +28,7 @@
 #include <QFile>
 #include <QTextStream>
 #include <QX11Info>
-#include <KUrl>
+#include <QUrl>
 #include <KConfig>
 #include <KConfigGroup>
 #include <KGlobalSettings>

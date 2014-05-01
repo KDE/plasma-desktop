@@ -46,11 +46,11 @@ namespace FC
 #define FC_FILE_QUERY  QString::fromLatin1("file")
 #define FC_INDEX_QUERY QString::fromLatin1("index")
 
-KUrl encode(const QString &name, quint32 style, const QString &file, int index)
+QUrl encode(const QString &name, quint32 style, const QString &file, int index)
 {
-    KUrl url(KUrl::fromPath(name));
+    QUrl url(QUrl::fromLocalFile(name));
 
-    url.setProtocol(FC_PROTOCOL);
+    url.setScheme(FC_PROTOCOL);
     url.addQueryItem(FC_STYLE_QUERY, QString::number(style));
     if(!file.isEmpty())
         url.addQueryItem(FC_FILE_QUERY, file);
@@ -59,21 +59,24 @@ KUrl encode(const QString &name, quint32 style, const QString &file, int index)
     return url;
 }
 
-Misc::TFont decode(const KUrl &url)
+Misc::TFont decode(const QUrl &url)
 {
-    return FC_PROTOCOL==url.protocol()
-                ? Misc::TFont(url.path(), url.queryItem(FC_STYLE_QUERY).toUInt())
+    QUrlQuery query(url);
+    return FC_PROTOCOL==url.scheme()
+                ? Misc::TFont(url.path(), query.queryItemValue(FC_STYLE_QUERY).toUInt())
                 : Misc::TFont(QString(), 0);
 }
 
-QString getFile(const KUrl &url)
+QString getFile(const QUrl &url)
 {
-    return FC_PROTOCOL==url.protocol() ? url.queryItem(FC_FILE_QUERY) : QString();
+    QUrlQuery query(url);
+    return FC_PROTOCOL==url.scheme() ? query.queryItemValue(FC_FILE_QUERY) : QString();
 }
 
-int getIndex(const KUrl &url)
+int getIndex(const QUrl &url)
 {
-    return FC_PROTOCOL==url.protocol() ? url.queryItem(FC_INDEX_QUERY).toInt() : 0;
+    QUrlQuery query(url);
+    return FC_PROTOCOL==url.scheme() ? query.queryItemValue(FC_INDEX_QUERY).toInt() : 0;
 }
 
 int weight(int w)

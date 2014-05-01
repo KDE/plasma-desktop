@@ -31,7 +31,7 @@
 
 #include <QtCore/QDataStream>
 #include <QtCore/QFile>
-#include <KUrl>
+#include <QUrl>
 #include <kdemacros.h>
 #include "KfiConstants.h"
 
@@ -59,9 +59,9 @@ namespace Misc
         quint32 styleInfo;
     };
 
-    extern Q_DECL_EXPORT QString prettyUrl(const KUrl &url);
+    extern Q_DECL_EXPORT QString prettyUrl(const QUrl &url);
     inline Q_DECL_EXPORT bool    isHidden(const QString &f)    { return f.startsWith(QChar('.')); }
-    inline Q_DECL_EXPORT bool    isHidden(const KUrl &url)     { return isHidden(url.fileName()); }
+    inline Q_DECL_EXPORT bool    isHidden(const QUrl &url)     { return isHidden(url.fileName()); }
     extern Q_DECL_EXPORT bool    check(const QString &path, bool file, bool checkW=false);
     inline Q_DECL_EXPORT bool    fExists(const QString &p)     { return check(p, true, false); }
     inline Q_DECL_EXPORT bool    dExists(const QString &p)     { return check(p, false, false); }
@@ -87,10 +87,10 @@ namespace Misc
     extern Q_DECL_EXPORT bool    checkExt(const QString &fname, const QString &ext);
     extern Q_DECL_EXPORT bool    isBitmap(const QString &str);
     extern Q_DECL_EXPORT bool    isMetrics(const QString &str);
-    inline Q_DECL_EXPORT bool    isMetrics(const KUrl &url) { return isMetrics(url.fileName()); }
+    inline Q_DECL_EXPORT bool    isMetrics(const QUrl &url) { return isMetrics(url.fileName()); }
     inline Q_DECL_EXPORT bool    isPackage(const QString &file)
                       { return file.indexOf(KFI_FONTS_PACKAGE)==(file.length()-KFI_FONTS_PACKAGE_LEN); }
-    extern Q_DECL_EXPORT int     getIntQueryVal(const KUrl &url, const char *key, int defVal);
+    extern Q_DECL_EXPORT int     getIntQueryVal(const QUrl &url, const char *key, int defVal);
     extern Q_DECL_EXPORT bool    printable(const QString &mime);
     inline Q_DECL_EXPORT QString hide(const QString &f) { return '.'!=f[0] ? QChar('.')+f : f; }
     inline Q_DECL_EXPORT QString unhide(const QString &f) { return '.'==f[0] ? f.mid(1) : f; }

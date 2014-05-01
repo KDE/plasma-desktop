@@ -24,7 +24,7 @@
 #ifndef __FC_H__
 #define __FC_H__
 
-#include <KUrl>
+#include <QUrl>
 #include <fontconfig/fontconfig.h>
 #include "kfontinst_export.h"
 #include "KfiConstants.h"
@@ -84,10 +84,10 @@ namespace FC
 #define KFI_FC_WIDTH_ULTRAEXPANDED      FC_WIDTH_ULTRAEXPANDED
 #endif
 
-    extern Q_DECL_EXPORT KUrl        encode(const QString &name, quint32 style, const QString &file=QString(), int index=0);
-    extern Q_DECL_EXPORT Misc::TFont decode(const KUrl &url);
-    extern Q_DECL_EXPORT QString     getFile(const KUrl &url);
-    extern Q_DECL_EXPORT int         getIndex(const KUrl &url);
+    extern Q_DECL_EXPORT QUrl        encode(const QString &name, quint32 style, const QString &file=QString(), int index=0);
+    extern Q_DECL_EXPORT Misc::TFont decode(const QUrl &url);
+    extern Q_DECL_EXPORT QString     getFile(const QUrl &url);
+    extern Q_DECL_EXPORT int         getIndex(const QUrl &url);
     extern Q_DECL_EXPORT int     weight(int w); // round w to nearest fc weight
     extern Q_DECL_EXPORT int     width(int w); // round w to nearest fc width
     extern Q_DECL_EXPORT int     slant(int s); // round s to nearest fc slant

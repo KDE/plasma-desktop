@@ -30,7 +30,7 @@
 #include <QPalette>
 #include <QFile>
 #include <KGlobalSettings>
-#include <KUrl>
+#include <QUrl>
 #include <KZip>
 #include <KTempDir>
 #include <KMimeType>

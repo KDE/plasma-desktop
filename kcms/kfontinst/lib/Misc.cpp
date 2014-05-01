@@ -43,9 +43,9 @@ namespace KFI
 namespace Misc
 {
 
-QString prettyUrl(const KUrl &url)
+QString prettyUrl(const QUrl &url)
 {
-    QString u(url.prettyUrl());
+    QString u(url.url());
 
     u.replace("%20", " ");
     return u;
@@ -273,9 +273,10 @@ bool isMetrics(const QString &str)
     return checkExt(str, "afm") || checkExt(str, "pfm");
 }
 
-int getIntQueryVal(const KUrl &url, const char *key, int defVal)
+int getIntQueryVal(const QUrl &url, const char *key, int defVal)
 {
-    QString item(url.queryItem(key));
+    QUrlQuery query(url);
+    QString item(query.queryItemValue(key));
     int     val(defVal);
 
     if(!item.isNull())

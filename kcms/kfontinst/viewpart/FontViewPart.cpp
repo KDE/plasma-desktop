@@ -369,7 +369,7 @@ void CFontViewPart::previewStatus(bool st)
             else
             {
                 // TODO: Make this work! Plus, printing of disabled TTF/OTF's should also be possible!
-                KMimeType::Ptr mime=KMimeType::findByUrl(QUrl("file:/"+localFilePath()), 0, false, true);
+                KMimeType::Ptr mime=KMimeType::findByUrl(QUrl::fromLocalFile(localFilePath()), 0, false, true);
 
                 printable=mime->is("application/x-font-ttf") || mime->is("application/x-font-otf");
             }
