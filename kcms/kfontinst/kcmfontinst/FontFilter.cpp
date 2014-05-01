@@ -27,7 +27,7 @@
 #include <KIconLoader>
 #include <KToggleAction>
 #include <KSelectAction>
-#include <KIcon>
+#include <QIcon>
 #include <KMimeType>
 #include <QLabel>
 #include <QPen>
@@ -139,7 +139,7 @@ CFontFilter::CFontFilter(QWidget *parent)
     addAction(CRIT_FAMILY, i18n("Family"), true);
     addAction(CRIT_STYLE, i18n("Style"), false);
 
-    KSelectAction *foundryMenu=new KSelectAction(KIcon(itsPixmaps[CRIT_FOUNDRY]), i18n("Foundry"), this);
+    KSelectAction *foundryMenu=new KSelectAction(QIcon(itsPixmaps[CRIT_FOUNDRY]), i18n("Foundry"), this);
     itsActions[CRIT_FOUNDRY]=foundryMenu;
     itsMenu->addAction(itsActions[CRIT_FOUNDRY]);
     foundryMenu->setData((int)CRIT_FOUNDRY);
@@ -148,7 +148,7 @@ CFontFilter::CFontFilter(QWidget *parent)
 
     addAction(CRIT_FONTCONFIG, i18n("FontConfig Match"), false);
     
-    KSelectAction *ftMenu=new KSelectAction(KIcon(itsPixmaps[CRIT_FILETYPE]), i18n("File Type"), this);
+    KSelectAction *ftMenu=new KSelectAction(QIcon(itsPixmaps[CRIT_FILETYPE]), i18n("File Type"), this);
     itsActions[CRIT_FILETYPE]=ftMenu;
     itsMenu->addAction(itsActions[CRIT_FILETYPE]);
     ftMenu->setData((int)CRIT_FILETYPE);
@@ -161,7 +161,7 @@ CFontFilter::CFontFilter(QWidget *parent)
         {
             KMimeType::Ptr mime=KMimeType::mimeType(*it);
             
-            KToggleAction *act=new KToggleAction(KIcon(mime->iconName()), mime->comment(), this);
+            KToggleAction *act=new KToggleAction(QIcon::fromTheme(mime->iconName()), mime->comment(), this);
 
             ftMenu->addAction(act);
             act->setChecked(false);
@@ -182,7 +182,7 @@ CFontFilter::CFontFilter(QWidget *parent)
     addAction(CRIT_FILENAME, i18n("File Name"), false);
     addAction(CRIT_LOCATION, i18n("File Location"), false);
 
-    KSelectAction *wsMenu=new KSelectAction(KIcon(itsPixmaps[CRIT_WS]), i18n("Writing System"), this);
+    KSelectAction *wsMenu=new KSelectAction(QIcon(itsPixmaps[CRIT_WS]), i18n("Writing System"), this);
     itsActions[CRIT_WS]=wsMenu;
     itsMenu->addAction(itsActions[CRIT_WS]);
     wsMenu->setData((int)CRIT_WS);
@@ -339,7 +339,7 @@ void CFontFilter::foundryChanged(const QString &foundry)
 
 void CFontFilter::addAction(ECriteria crit, const QString &text, bool on)
 {
-    itsActions[crit]=new KToggleAction(KIcon(itsPixmaps[crit]),
+    itsActions[crit]=new KToggleAction(QIcon(itsPixmaps[crit]),
                                        text, this);
     itsMenu->addAction(itsActions[crit]);
     itsActionGroup->addAction(itsActions[crit]);

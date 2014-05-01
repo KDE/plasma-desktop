@@ -31,7 +31,6 @@
 #include <KZip>
 #include <KTempDir>
 #include <KMessageBox>
-#include <KStandardDirs>
 #include <kio/netaccess.h>
 #include "JobRunner.h"
 #include "CreateParent.h"

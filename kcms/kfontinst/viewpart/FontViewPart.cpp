@@ -50,7 +50,7 @@
 #include <KIntNumInput>
 #include <KInputDialog>
 #include <KDialog>
-#include <KIcon>
+#include <QIcon>
 #include <KMimeType>
 //#include <KFileMetaInfo>
 #include <KZip>
@@ -147,7 +147,7 @@ CFontViewPart::CFontViewPart(QWidget *parentWidget, QObject *parent, const QList
     connect(itsFaceSelector, SIGNAL(valueChanged(int)), SLOT(showFace(int)));
 
     itsChangeTextAction=actionCollection()->addAction("changeText");
-    itsChangeTextAction->setIcon(KIcon("edit-rename"));
+    itsChangeTextAction->setIcon(QIcon::fromTheme("edit-rename"));
     itsChangeTextAction->setText(i18n("Change Text..."));
     connect(itsChangeTextAction, SIGNAL(triggered(bool)), SLOT(changeText()));
 

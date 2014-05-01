@@ -59,7 +59,7 @@
 #include <KProgressDialog>
 #include <KTempDir>
 #include <KTemporaryFile>
-#include <KIcon>
+#include <QIcon>
 #include <KActionMenu>
 #include <KToggleAction>
 #include <KStandardDirs>
@@ -225,12 +225,12 @@ CKCmFontInst::CKCmFontInst(QWidget *parent, const QVariantList&)
     fontControlLayout->setSpacing(KDialog::spacingHint());
 
     // Toolbar...
-    KAction     *duplicateFontsAct=new KAction(KIcon("system-search"), i18n("Scan for Duplicate Fonts..."), this);
-                //*validateFontsAct=new KAction(KIcon("checkmark"), i18n("Validate Fonts..."), this);
+    KAction     *duplicateFontsAct=new KAction(QIcon::fromTheme("system-search"), i18n("Scan for Duplicate Fonts..."), this);
+                //*validateFontsAct=new KAction(QIcon::fromTheme("checkmark"), i18n("Validate Fonts..."), this);
 
     if(!Misc::root())
-        itsDownloadFontsAct=new KAction(KIcon("get-hot-new-stuff"), i18n("Get New Fonts..."), this);
-    itsToolsMenu=new KActionMenu(KIcon("system-run"), i18n("Tools"), this);
+        itsDownloadFontsAct=new KAction(QIcon::fromTheme("get-hot-new-stuff"), i18n("Get New Fonts..."), this);
+    itsToolsMenu=new KActionMenu(QIcon::fromTheme("system-run"), i18n("Tools"), this);
     itsToolsMenu->addAction(duplicateFontsAct);
     //itsToolsMenu->addAction(validateFontsAct);
     if(itsDownloadFontsAct)
@@ -362,7 +362,7 @@ CKCmFontInst::CKCmFontInst(QWidget *parent, const QVariantList&)
     itsPreviewMenu->addSeparator();
     CPreviewSelectAction *prevSel=new CPreviewSelectAction(itsPreviewMenu);
     itsPreviewMenu->addAction(prevSel);
-    KAction *changeTextAct=new KAction(KIcon("edit-rename"), i18n("Change Preview Text..."), this);
+    KAction *changeTextAct=new KAction(QIcon::fromTheme("edit-rename"), i18n("Change Preview Text..."), this);
     itsPreviewMenu->addAction(changeTextAct),
 
     itsPreviewListMenu = new QMenu(itsPreviewList);

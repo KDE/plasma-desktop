@@ -26,7 +26,7 @@
 #include <KStandardDirs>
 #include <KMimeType>
 #include <KMenu>
-#include <KIcon>
+#include <QIcon>
 #include <KIconLoader>
 #include <kde_file.h>
 #include <KMessageBox>
@@ -1412,21 +1412,21 @@ CFontListView::CFontListView(QWidget *parent, CFontList *model)
     setWhatsThis(model->whatsThis());
     header()->setWhatsThis(whatsThis());
     itsMenu=new QMenu(this);
-    itsDeleteAct=itsMenu->addAction(KIcon("edit-delete"), i18n("Delete"),
+    itsDeleteAct=itsMenu->addAction(QIcon::fromTheme("edit-delete"), i18n("Delete"),
                                        this, SIGNAL(del()));
     itsMenu->addSeparator();
-    itsEnableAct=itsMenu->addAction(KIcon("enablefont"), i18n("Enable"),
+    itsEnableAct=itsMenu->addAction(QIcon::fromTheme("enablefont"), i18n("Enable"),
                                        this, SIGNAL(enable()));
-    itsDisableAct=itsMenu->addAction(KIcon("disablefont"), i18n("Disable"),
+    itsDisableAct=itsMenu->addAction(QIcon::fromTheme("disablefont"), i18n("Disable"),
                                         this, SIGNAL(disable()));
     if(!Misc::app(KFI_VIEWER).isEmpty() || !Misc::app(KFI_VIEWER).isEmpty())
         itsMenu->addSeparator();
-    itsPrintAct=Misc::app(KFI_VIEWER).isEmpty() ? 0L : itsMenu->addAction(KIcon("document-print"), i18n("Print..."),
+    itsPrintAct=Misc::app(KFI_VIEWER).isEmpty() ? 0L : itsMenu->addAction(QIcon::fromTheme("document-print"), i18n("Print..."),
                                                                           this, SIGNAL(print()));
-    itsViewAct=Misc::app(KFI_VIEWER).isEmpty() ? 0L : itsMenu->addAction(KIcon("kfontview"), i18n("Open in Font Viewer"),
+    itsViewAct=Misc::app(KFI_VIEWER).isEmpty() ? 0L : itsMenu->addAction(QIcon::fromTheme("kfontview"), i18n("Open in Font Viewer"),
                                                                          this, SLOT(view()));
     itsMenu->addSeparator();
-    itsMenu->addAction(KIcon("view-refresh"), i18n("Reload"), model, SLOT(load()));
+    itsMenu->addAction(QIcon::fromTheme("view-refresh"), i18n("Reload"), model, SLOT(load()));
 }
 
 void CFontListView::getFonts(CJobRunner::ItemList &urls, QStringList &fontNames, QSet<Misc::TFont> *fonts,
