@@ -27,7 +27,7 @@
 #include <KParts/ReadOnlyPart>
 #include <KParts/BrowserExtension>
 #include <KSharedConfig>
-#include <KUrl>
+#include <QUrl>
 #include <QFrame>
 #include <QMap>
 #include "KfiConstants.h"
@@ -58,7 +58,7 @@ class CFontViewPart : public KParts::ReadOnlyPart
     CFontViewPart(QWidget *parentWidget, QObject *parent, const QList<QVariant> &args);
     virtual ~CFontViewPart();
 
-    bool openUrl(const KUrl &url);
+    bool openUrl(const QUrl &url);
 
     protected:
 

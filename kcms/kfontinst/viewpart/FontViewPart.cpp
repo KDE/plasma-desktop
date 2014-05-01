@@ -179,7 +179,7 @@ CFontViewPart::~CFontViewPart()
     itsInterface=NULL;
 }
 
-bool CFontViewPart::openUrl(const KUrl &url)
+bool CFontViewPart::openUrl(const QUrl &url)
 {
     if (!url.isValid() || !closeUrl())
         return false;
@@ -189,7 +189,7 @@ bool CFontViewPart::openUrl(const KUrl &url)
 
     itsFontDetails=FC::decode(url);
     if(!itsFontDetails.family.isEmpty() ||
-       KFI_KIO_FONTS_PROTOCOL==url.protocol() || KIO::NetAccess::mostLocalUrl(url, itsFrame).isLocalFile())
+       KFI_KIO_FONTS_PROTOCOL==url.scheme() || KIO::NetAccess::mostLocalUrl(url, itsFrame).isLocalFile())
     {
         setUrl(url);
         emit started(0);
@@ -369,7 +369,7 @@ void CFontViewPart::previewStatus(bool st)
             else
             {
                 // TODO: Make this work! Plus, printing of disabled TTF/OTF's should also be possible!
-                KMimeType::Ptr mime=KMimeType::findByUrl(KUrl::fromPath(localFilePath()), 0, false, true);
+                KMimeType::Ptr mime=KMimeType::findByUrl(QUrl("file:/"+localFilePath()), 0, false, true);
 
                 printable=mime->is("application/x-font-ttf") || mime->is("application/x-font-otf");
             }
