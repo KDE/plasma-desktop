@@ -47,6 +47,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <utime.h>
+#include <QStandardPaths>
 #include "FcEngine.h"
 #include "Misc.h"
 #include "KfiConstants.h"
@@ -211,7 +212,7 @@ CGroupList::CGroupList(QWidget *parent)
     itsSpecialGroups[CGroupListItem::UNCLASSIFIED]=
                 new CGroupListItem(CGroupListItem::UNCLASSIFIED, this);
     // Locate groups.xml file - normall will be ~/.config/fontgroups.xml
-    QString path(KGlobal::dirs()->localxdgconfdir());
+    QString path(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + '/');
 
     if(!Misc::dExists(path))
         Misc::createDir(path);

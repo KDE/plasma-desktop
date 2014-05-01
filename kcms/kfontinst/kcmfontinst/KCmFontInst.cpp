@@ -70,6 +70,7 @@
 #include <KZip>
 #include <KNewStuff3/KNS3/DownloadDialog>
 #include <KAction>
+#include <QStandardPaths>
 
 #define CFG_GROUP                  "Main Settings"
 #define CFG_PREVIEW_SPLITTER_SIZES "PreviewSplitterSizes"
@@ -861,18 +862,17 @@ void CKCmFontInst::downloadFonts()
         // Ask dbus helper for the current fonts folder name...
         // We then sym-link our knewstuff3 download folder into the fonts folder...
         QString destFolder=CJobRunner::folderName(false);
-                
-        if(!destFolder.isEmpty())
-        {
+        if(!destFolder.isEmpty()) {
             destFolder+="kfontinst";
-    
-            if(!QFile::exists(destFolder))
-                QFile::link(KStandardDirs::locateLocal("data", "kfontinst"), destFolder);
+            if(!QFile::exists(destFolder)) {
+                QFile _file(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1Char('/') + "kfontinst");
+                _file.link(destFolder);
+            }
         }
 
         doCmd(CJobRunner::CMD_UPDATE, CJobRunner::ItemList());
     }
-    
+
     delete newStuff;
 }
 

@@ -77,7 +77,7 @@ K_EXPORT_PLUGIN(CFontViewPartFactory("kfontview"))
 
 CFontViewPart::CFontViewPart(QWidget *parentWidget, QObject *parent, const QList<QVariant> &)
              : KParts::ReadOnlyPart(parent),
-               itsConfig(KGlobal::config()),
+               itsConfig(KSharedConfig::openConfig()),
                itsProc(NULL),
                itsTempDir(NULL),
                itsInterface(new FontInstInterface()),

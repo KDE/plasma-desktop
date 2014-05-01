@@ -65,7 +65,7 @@ CViewer::CViewer()
         createGUI(itsPreview);
 
         setAutoSaveSettings();
-        applyMainWindowSettings(KGlobal::config()->group("MainWindow"));
+        applyMainWindowSettings(KSharedConfig::openConfig()->group("MainWindow"));
     }
     else
         exit(0);
