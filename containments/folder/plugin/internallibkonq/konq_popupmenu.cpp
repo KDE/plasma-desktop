@@ -533,7 +533,7 @@ void KonqPopupMenuPrivate::slotPopupEmptyTrashBin()
 
 void KonqPopupMenuPrivate::slotConfigTrashBin()
 {
-  KRun::run("kcmshell4 kcmtrash", KUrl::List(), m_parentWidget);
+  KRun::run("kcmshell5 kcmtrash", KUrl::List(), m_parentWidget);
 }
 
 void KonqPopupMenuPrivate::slotPopupRestoreTrashedItems()

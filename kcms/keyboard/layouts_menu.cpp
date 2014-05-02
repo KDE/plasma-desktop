@@ -57,7 +57,7 @@ void LayoutsMenu::actionTriggered(QAction* action)
 		QStringList args;
 		args << "--args=--tab=layouts";
 		args << "kcm_keyboard";
-		KToolInvocation::kdeinitExec("kcmshell4", args);
+		KToolInvocation::kdeinitExec("kcmshell5", args);
 	}
 	else {
 		LayoutUnit layoutUnit(LayoutUnit(action->data().toString()));
