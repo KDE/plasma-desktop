@@ -156,7 +156,7 @@ void RunnerMatchesModel::setMatches(const QList< Plasma::QueryMatch > &matches)
     if (emitDataChange) {
         m_matches = matches;
 
-        emit dataChanged(index(0, 0), index(ceiling, 0));
+        emit dataChanged(index(0, 0), index(ceiling - 1, 0));
     }
 
     if (emitCountChange) {
