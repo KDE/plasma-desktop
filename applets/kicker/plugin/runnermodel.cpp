@@ -68,7 +68,7 @@ int RunnerModel::count() const
 
 QObject *RunnerModel::modelForRow(int row)
 {
-    if (row >= m_models.count()) {
+    if (row < 0 || row >= m_models.count()) {
         return 0;
     }
 
