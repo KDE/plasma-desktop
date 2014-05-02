@@ -106,12 +106,12 @@ Item {
         id: toolBoxFrame
 
         width: expandedWidth
-        height: actionList.height + toolBoxSvg.topBorder + toolBoxSvg.bottomBorder
+        height: actionList.height + toolBoxFrame.margins.top + toolBoxFrame.margins.bottom
         //opacity: toolBoxItem.showing ? 1 : 0
 
         property Item currentItem: null
 
-        imagePath: "widgets/toolbox"
+        imagePath: "widgets/background"
 
         Behavior on height {
             NumberAnimation {
@@ -131,9 +131,9 @@ Item {
         Column {
             id: actionList
 
-            x: parent.x + toolBoxSvg.topBorder
-            y: parent.y + toolBoxSvg.leftBorder
-            width: parent.width - (toolBoxSvg.leftBorder + toolBoxSvg.rightBorder)
+            x: parent.x + toolBoxFrame.margins.left
+            y: parent.y + toolBoxFrame.margins.top
+            width: parent.width - (toolBoxFrame.margins.left + toolBoxFrame.margins.right)
 
             Repeater {
                 id: unlockedList
@@ -155,8 +155,8 @@ Item {
         PlasmaComponents.Highlight {
             id: toolBoxHighlight
             opacity: toolBoxFrame.currentItem != null ? 1 : 0
-            x: (toolBoxFrame.currentItem != null) ? toolBoxFrame.currentItem.x + toolBoxSvg.topBorder : toolBoxSvg.topBorder
-            y: (toolBoxFrame.currentItem != null) ? toolBoxFrame.currentItem.y + toolBoxSvg.leftBorder : toolBoxSvg.leftBorder
+            x: (toolBoxFrame.currentItem != null) ? toolBoxFrame.currentItem.x + toolBoxFrame.margins.left : toolBoxFrame.margins.left
+            y: (toolBoxFrame.currentItem != null) ? toolBoxFrame.currentItem.y + toolBoxFrame.margins.top : toolBoxFrame.margins.top
             width: actionList.width
             height: (toolBoxFrame.currentItem != null) ? toolBoxFrame.currentItem.height : 0
             Behavior on x {

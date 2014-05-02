@@ -65,15 +65,6 @@ Item {
         onPressed: toolBoxItem.showing = false
     }
 
-    PlasmaCore.Svg {
-        id: toolBoxSvg
-        imagePath: "widgets/toolbox"
-        property int rightBorder: elementSize("right").width
-        property int topBorder: elementSize("top").height
-        property int bottomBorder: elementSize("bottom").height
-        property int leftBorder: elementSize("left").width
-    }
-
     ToolBoxButton {
         id: toolBoxButton
         visible: false
