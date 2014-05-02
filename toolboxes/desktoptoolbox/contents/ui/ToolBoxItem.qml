@@ -159,24 +159,14 @@ Item {
             y: (toolBoxFrame.currentItem != null) ? toolBoxFrame.currentItem.y + toolBoxFrame.margins.top : toolBoxFrame.margins.top
             width: actionList.width
             height: (toolBoxFrame.currentItem != null) ? toolBoxFrame.currentItem.height : 0
-            Behavior on x {
-                NumberAnimation {
-                    duration: units.shortDuration * 3
-                    easing.type: Easing.InOutQuad
-                }
-            }
+
             Behavior on opacity {
                 NumberAnimation {
                     duration: units.shortDuration * 3
                     easing.type: Easing.InOutQuad
                 }
             }
-            Behavior on y {
-                NumberAnimation {
-                    duration: units.shortDuration * 3
-                    easing.type: Easing.InOutQuad
-                }
-            }
+
         }
     }
 
