@@ -20,6 +20,8 @@
 #include "favoritesmodel.h"
 #include "actionlist.h"
 
+#include <QDebug>
+
 #include <KRun>
 
 FavoritesModel::FavoritesModel(QObject *parent) : AbstractModel(parent)
@@ -113,6 +115,7 @@ void FavoritesModel::setFavorites(const QStringList& favorites)
                 service = KService::serviceByStorageId(i.value());
 
                 if (service) {
+                    i.setValue(service->storageId());
                     m_serviceCache[i.value()] = service;
                 } else {
                     i.remove();
@@ -142,6 +145,8 @@ void FavoritesModel::setFavorites(const QStringList& favorites)
 
 bool FavoritesModel::isFavorite(const QString &favoriteId) const
 {
+    qDebug() << favoriteId;
+    qDebug() << m_favorites;
     return m_favorites.contains(favoriteId);
 }
 
@@ -151,11 +156,14 @@ void FavoritesModel::addFavorite(const QString &favoriteId)
         return;
     }
 
+    QString _favoriteId = favoriteId;
+
     if (!m_sourceModel) {
         KService::Ptr service = KService::serviceByStorageId(favoriteId);
 
         if (service) {
-            m_serviceCache[favoriteId] = service;
+            _favoriteId = service->storageId();
+            m_serviceCache[_favoriteId] = service;
         } else {
             return;
         }
@@ -163,7 +171,7 @@ void FavoritesModel::addFavorite(const QString &favoriteId)
 
     beginInsertRows(QModelIndex(), m_favorites.count(), m_favorites.count());
 
-    m_favorites << favoriteId;
+    m_favorites << _favoriteId;
 
     endInsertRows();
 
