@@ -61,7 +61,7 @@ Item {
         onReleased: PlasmaExtras.ReleasedAnimation { targetItem: toolBoxDelegate }
         onEntered: {
             toolBoxFrame.currentItem = toolBoxDelegate;
-            toolBoxHighlight.opacity = 1;
+//            toolBoxHighlight.opacity = 1;
             exitTimer.running = false;
         }
         onExited:  {

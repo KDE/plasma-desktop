@@ -109,7 +109,23 @@ Item {
         height: actionList.height + toolBoxFrame.margins.top + toolBoxFrame.margins.bottom
         //opacity: toolBoxItem.showing ? 1 : 0
 
+        property Item highlight
         property Item currentItem: null
+        onCurrentItemChanged: {
+            if (!currentItem) {
+                return
+            } else if (highlight == toolBoxHighlight1) {
+                toolBoxHighlight1.opacity = 0;
+                highlight = toolBoxHighlight2;
+                toolBoxHighlight2.item = currentItem;
+                toolBoxHighlight2.opacity = 1;
+            } else {
+                toolBoxHighlight2.opacity = 0;
+                highlight = toolBoxHighlight1;
+                toolBoxHighlight1.item = currentItem;
+                toolBoxHighlight1.opacity = 1;
+            }
+        }
 
         imagePath: "widgets/background"
 
@@ -125,7 +141,12 @@ Item {
             interval: 200
             running: true
             repeat: false
-            onTriggered: toolBoxHighlight.opacity = 0
+            onTriggered: { 
+                if (toolBoxFrame.highlight) {
+                    toolBoxFrame.highlight.opacity = 0;
+                }
+                toolBoxFrame.currentItem = null;
+            }
         }
 
         Column {
@@ -153,12 +174,14 @@ Item {
         }
 
         PlasmaComponents.Highlight {
-            id: toolBoxHighlight
-            opacity: toolBoxFrame.currentItem != null ? 1 : 0
-            x: (toolBoxFrame.currentItem != null) ? toolBoxFrame.currentItem.x + toolBoxFrame.margins.left : toolBoxFrame.margins.left
-            y: (toolBoxFrame.currentItem != null) ? toolBoxFrame.currentItem.y + toolBoxFrame.margins.top : toolBoxFrame.margins.top
+            id: toolBoxHighlight1
+            property Item item
+
+            opacity: 0
+            x: (item != null) ? item.x + toolBoxFrame.margins.left : toolBoxFrame.margins.left
+            y: (item != null) ? item.y + toolBoxFrame.margins.top : toolBoxFrame.margins.top
             width: actionList.width
-            height: (toolBoxFrame.currentItem != null) ? toolBoxFrame.currentItem.height : 0
+            height: (item != null) ? item.height : 0
 
             Behavior on opacity {
                 NumberAnimation {
@@ -166,7 +189,23 @@ Item {
                     easing.type: Easing.InOutQuad
                 }
             }
+        }
+        PlasmaComponents.Highlight {
+            id: toolBoxHighlight2
+            property Item item
 
+            opacity: 0
+            x: (item != null) ? item.x + toolBoxFrame.margins.left : toolBoxFrame.margins.left
+            y: (item != null) ? item.y + toolBoxFrame.margins.top : toolBoxFrame.margins.top
+            width: actionList.width
+            height: (item != null) ? item.height : 0
+
+            Behavior on opacity {
+                NumberAnimation {
+                    duration: units.shortDuration * 3
+                    easing.type: Easing.InOutQuad
+                }
+            }
         }
     }
 
