@@ -20,8 +20,6 @@
 #include "favoritesmodel.h"
 #include "actionlist.h"
 
-#include <QDebug>
-
 #include <KRun>
 
 FavoritesModel::FavoritesModel(QObject *parent) : AbstractModel(parent)
@@ -145,8 +143,6 @@ void FavoritesModel::setFavorites(const QStringList& favorites)
 
 bool FavoritesModel::isFavorite(const QString &favoriteId) const
 {
-    qDebug() << favoriteId;
-    qDebug() << m_favorites;
     return m_favorites.contains(favoriteId);
 }
 
