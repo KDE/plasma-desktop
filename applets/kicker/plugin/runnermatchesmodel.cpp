@@ -123,52 +123,43 @@ bool RunnerMatchesModel::trigger(int row, const QString &actionId, const QVarian
 
 void RunnerMatchesModel::setMatches(const QList< Plasma::QueryMatch > &matches)
 {
-    bool fullChange = false;
-
     int oldCount = m_matches.count();
     int newCount = matches.count();
 
-    if (newCount > oldCount) {
-        for (int row = 0; row < oldCount; ++row) {
-            if (!(m_matches.at(row) == matches.at(row))) {
-                fullChange = true;
+    bool emitCountChange = (oldCount != newCount);
 
-                break;
-            }
-        }
+    int ceiling = qMin(oldCount, newCount);
+    bool emitDataChange = false;
 
-        if (!fullChange) {
-            beginInsertRows(QModelIndex(), oldCount, newCount - 1);
+    for (int row = 0; row < ceiling; ++row) {
+        if (!(m_matches.at(row) == matches.at(row))) {
+            emitDataChange = true;
 
-            m_matches = matches;
-
-            endInsertRows();
-
-            emit countChanged();
+            break;
         }
     }
 
-    if (newCount < oldCount) {
-        for (int row = 0; row < newCount; ++row) {
-            if (!(m_matches.at(row) == matches.at(row))) {
-                fullChange = true;
+    if (newCount > oldCount) {
+        beginInsertRows(QModelIndex(), oldCount, newCount - 1);
 
-                break;
-            }
-        }
+        m_matches = matches;
 
+        endInsertRows();
+    } else if (newCount < oldCount) {
         beginRemoveRows(QModelIndex(), newCount, oldCount - 1);
 
         m_matches = matches;
 
         endRemoveRows();
-
-        emit countChanged();
     }
 
-    if (fullChange) {
+    if (emitDataChange) {
         m_matches = matches;
 
-        emit dataChanged(index(0, 0), index(newCount - 1, 0));
+        emit dataChanged(index(0, 0), index(m_matches.count() - 1, 0));
+    }
+
+    if (emitCountChange) {
+        emit countChanged();
     }
 }
