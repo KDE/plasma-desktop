@@ -1,31 +1,37 @@
 [Desktop Action bus]
 Name=Bus
+Name[nl]=Bus
 Name[uk]=Шина
 Name[x-test]=xxBusxx
 
 [Desktop Action driveType]
 Name=Drive Type
+Name[nl]=Apparaattype
 Name[uk]=Тип пристрою
 Name[x-test]=xxDrive Typexx
 
 [Desktop Action hotpluggable]
 Name=Hotpluggable
+Name[nl]=Hotplugbaar
 Name[uk]=«Гаряче» з’єднання
 Name[x-test]=xxHotpluggablexx
 
 [Desktop Action removable]
 Name=Removable
+Name[nl]=Verwijderbaar
 Name[uk]=Змінний пристрій
 Name[x-test]=xxRemovablexx
 
 [Desktop Action size]
 Name=Size
+Name[nl]=Grootte
 Name[uk]=Розмір
 Name[x-test]=xxSizexx
 
 [Desktop Entry]
 Actions=bus;driveType;hotpluggable;removable;size;
 Name=Solid Device
+Name[nl]=Solid-apparaat
 Name[uk]=Пристрій Solid
 Name[x-test]=xxSolid Devicexx
 Type=Service

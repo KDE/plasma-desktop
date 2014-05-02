@@ -1,13 +1,16 @@
 [Domain]
 Name=Font Installer
+Name[nl]=Lettertype-installatie
 Name[uk]=Встановлення шрифтів
 Name[x-test]=xxFont Installerxx
 Icon=preferences-desktop-font-installer
 [org.kde.fontinst.manage]
 Name=Manage system-wide fonts.
+Name[nl]=Beheer van systeembrede lettertypen.
 Name[uk]=Керування загальносистемними шрифтами.
 Name[x-test]=xxManage system-wide fonts.xx
 Description=Modifying the system-wide font configuration requires privileges.
+Description[nl]=Wijzigen van de systeembrede lettertypen vereist rechten.
 Description[uk]=Для зміни параметрів загальносистемних шрифтів потрібні відповідні права доступу.
 Description[x-test]=xxModifying the system-wide font configuration requires privileges.xx
 Policy=auth_admin

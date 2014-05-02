@@ -2,9 +2,11 @@ Icon=system-file-manager
 
 # ctxt: standard desktop component
 Name=File Manager
+Name[nl]=Bestandsbeheerder
 Name[uk]=Керування файлами
 Name[x-test]=xxFile Managerxx
 Comment=Here you can configure your default file manager. The entries in the K menu and all KDE applications in which you can open folders will use this file manager.
+Comment[nl]=Hier kunt u uw standaard bestandsbeheerder instellen. Alle items in het K-menu en alle KDE-programma's waarin u mappen kunt openen maken gebruik van deze instelling.
 Comment[uk]=Тут можна налаштувати ваш типовий інструмент для роботи з файлами. Всі пункти інструмента для запуску програм і всі програми KDE, у яких ви можете відкривати теки, використовуватимуть саме цей інструмент.
 Comment[x-test]=xxHere you can configure your default file manager. The entries in the K menu and all KDE applications in which you can open folders will use this file manager.xx
 configurationType=internal_filemanager

@@ -1,14 +1,17 @@
 [Global]
 IconName=preferences-desktop-accessibility
 Comment=Accessibility
+Comment[nl]=Toegankelijkheid
 Comment[uk]=Доступність
 Comment[x-test]=xxAccessibilityxx
 
 [Event/modifierkey-latched]
 Name=A modifier key has become active
+Name[nl]=Een modificatietoets is geactiveerd
 Name[uk]=Клавіша модифікатора стала активною
 Name[x-test]=xxA modifier key has become activexx
 Comment=A modifier key (e.g. Shift or Ctrl) has changed its state and is now active
+Comment[nl]=Een modificatietoets (bijv. Shift of Ctrl) is nu actief
 Comment[uk]=Клавіша модифікатора (наприклад Shift або Ctrl) змінила свій стан і тепер активна
 Comment[x-test]=xxA modifier key (e.g. Shift or Ctrl) has changed its state and is now activexx
 Sound=KDE-Sys-Special.ogg
@@ -17,9 +20,11 @@ nopresentation=236
 
 [Event/modifierkey-unlatched]
 Name=A modifier key has become inactive
+Name[nl]=Een modificatietoets is inactief geworden
 Name[uk]=Клавіша модифікатора стала неактивною
 Name[x-test]=xxA modifier key has become inactivexx
 Comment=A modifier key (e.g. Shift or Ctrl) has changed its state and is now inactive
+Comment[nl]=Een modificatietoets (bijv. Shift of Ctrl) is nu inactief
 Comment[uk]=Клавіша модифікатора (наприклад Shift або Ctrl) змінила свій стан і тепер неактивна
 Comment[x-test]=xxA modifier key (e.g. Shift or Ctrl) has changed its state and is now inactivexx
 Sound=KDE-Sys-Special.ogg
@@ -28,9 +33,11 @@ nopresentation=236
 
 [Event/modifierkey-locked]
 Name=A modifier key has been locked
+Name[nl]=Een modificatietoets is vergrendeld
 Name[uk]=Клавішу модифікатора було заблоковано
 Name[x-test]=xxA modifier key has been lockedxx
 Comment=A modifier key (e.g. Shift or Ctrl) has been locked and is now active for all of the following keypresses
+Comment[nl]=Een modificatietoets (bijv. Shift of Ctrl) is vergrendeld en nu actief voor alle volgende toetsaanslagen
 Comment[uk]=Клавішу модифікатора (наприклад Shift або Ctrl) було зафіксовано і тепер вона активна для всіх наступних натискань клавіш
 Comment[x-test]=xxA modifier key (e.g. Shift or Ctrl) has been locked and is now active for all of the following keypressesxx
 Sound=KDE-Sys-Special.ogg
@@ -39,9 +46,11 @@ nopresentation=236
 
 [Event/lockkey-locked]
 Name=A lock key has been activated
+Name[nl]=Een vergrendeltoets is geactiveerd
 Name[uk]=Було активовано клавішу фіксації
 Name[x-test]=xxA lock key has been activatedxx
 Comment=A lock key (e.g. Caps Lock or Num Lock) has changed its state and is now active
+Comment[nl]=Een vergrendeltoets (bijv. Caps Lock of Num Lock ) is nu actief
 Comment[uk]=Клавіша фіксації (наприклад Caps Lock або Num Lock) змінила свій стан і тепер активна
 Comment[x-test]=xxA lock key (e.g. Caps Lock or Num Lock) has changed its state and is now activexx
 Sound=KDE-Sys-Special.ogg
@@ -50,9 +59,11 @@ nopresentation=236
 
 [Event/lockkey-unlocked]
 Name=A lock key has been deactivated
+Name[nl]=Een vergrendeltoets is gedeactiveerd
 Name[uk]=Було деактивовано клавішу фіксації
 Name[x-test]=xxA lock key has been deactivatedxx
 Comment=A lock key (e.g. Caps Lock or Num Lock) has changed its state and is now inactive
+Comment[nl]=Een vergrendeltoets (bijv. Caps Lock of Num Lock ) is nu inactief
 Comment[uk]=Клавіша фіксації (наприклад Caps Lock або Num Lock) змінила свій стан і тепер неактивна
 Comment[x-test]=xxA lock key (e.g. Caps Lock or Num Lock) has changed its state and is now inactivexx
 Sound=KDE-Sys-Special.ogg
@@ -61,9 +72,11 @@ nopresentation=236
 
 [Event/stickykeys]
 Name=Sticky keys has been enabled or disabled
+Name[nl]=Plakkende toetsen is geactiveerd of gedeactiveerd
 Name[uk]=Було активовано або деактивовано липкі клавіші
 Name[x-test]=xxSticky keys has been enabled or disabledxx
 Comment=Sticky keys has been enabled or disabled
+Comment[nl]=Plakkende toetsen is geactiveerd of gedeactiveerd
 Comment[uk]=Було активовано або деактивовано липкі клавіші
 Comment[x-test]=xxSticky keys has been enabled or disabledxx
 Sound=KDE-Sys-Special.ogg
@@ -72,9 +85,11 @@ nopresentation=236
 
 [Event/slowkeys]
 Name=Slow keys has been enabled or disabled
+Name[nl]=Langzame toetsen is geactiveerd of gedeactiveerd
 Name[uk]=Було активовано або деактивовано повільні клавіші
 Name[x-test]=xxSlow keys has been enabled or disabledxx
 Comment=Slow keys has been enabled or disabled
+Comment[nl]=Langzame toetsen is geactiveerd of gedeactiveerd
 Comment[uk]=Було активовано або деактивовано повільні клавіші
 Comment[x-test]=xxSlow keys has been enabled or disabledxx
 Sound=KDE-Sys-Special.ogg
@@ -83,9 +98,11 @@ nopresentation=236
 
 [Event/bouncekeys]
 Name=Bounce keys has been enabled or disabled
+Name[nl]=Stuiterende toetsen is geactiveerd of gedeactiveerd
 Name[uk]=Було активовано або деактивовано пружні клавіші
 Name[x-test]=xxBounce keys has been enabled or disabledxx
 Comment=Bounce keys has been enabled or disabled
+Comment[nl]=Stuiterende toetsen is geactiveerd of gedeactiveerd
 Comment[uk]=Було активовано або деактивовано пружні клавіші
 Comment[x-test]=xxBounce keys has been enabled or disabledxx
 Sound=KDE-Sys-Special.ogg
@@ -94,9 +111,11 @@ nopresentation=236
 
 [Event/mousekeys]
 Name=Mouse keys has been enabled or disabled
+Name[nl]=Muistoetsen is geactiveerd of gedeactiveerd
 Name[uk]=Було активовано або деактивовано клавіші мишки
 Name[x-test]=xxMouse keys has been enabled or disabledxx
 Comment=Mouse keys has been enabled or disabled
+Comment[nl]=Muistoetsen is geactiveerd of gedeactiveerd
 Comment[uk]=Було активовано або деактивовано клавіші мишки
 Comment[x-test]=xxMouse keys has been enabled or disabledxx
 Sound=KDE-Sys-Special.ogg

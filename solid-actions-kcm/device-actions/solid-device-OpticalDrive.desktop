@@ -1,51 +1,61 @@
 [Desktop Action bus]
 Name=Bus
+Name[nl]=Bus
 Name[uk]=Шина
 Name[x-test]=xxBusxx
 
 [Desktop Action driveType]
 Name=Drive Type
+Name[nl]=Apparaattype
 Name[uk]=Тип пристрою
 Name[x-test]=xxDrive Typexx
 
 [Desktop Action hotpluggable]
 Name=Hotpluggable
+Name[nl]=Hotplugbaar
 Name[uk]=«Гаряче» з’єднання
 Name[x-test]=xxHotpluggablexx
 
 [Desktop Action readSpeed]
 Name=Read Speed
+Name[nl]=Leessnelheid
 Name[uk]=Швидкість читання
 Name[x-test]=xxRead Speedxx
 
 [Desktop Action removable]
 Name=Removable
+Name[nl]=Verwijderbaar
 Name[uk]=Змінний пристрій
 Name[x-test]=xxRemovablexx
 
 [Desktop Action size]
 Name=Size
+Name[nl]=Grootte
 Name[uk]=Розмір
 Name[x-test]=xxSizexx
 
 [Desktop Action supportedMedia]
 Name=Supported Media
+Name[nl]=Ondersteunde media
 Name[uk]=Підтримувані носії
 Name[x-test]=xxSupported Mediaxx
 
 [Desktop Action writeSpeed]
 Name=Write Speed
+Name[nl]=Schrijfsnelheid
 Name[uk]=Швидкість запису
 Name[x-test]=xxWrite Speedxx
 
 [Desktop Action writeSpeeds]
 Name=Write Speeds
+Name[nl]=Schrijfsnelheden
 Name[uk]=Швидкості запису
 Name[x-test]=xxWrite Speedsxx
 
 [Desktop Entry]
 Actions=bus;driveType;hotpluggable;readSpeed;removable;size;supportedMedia;writeSpeed;writeSpeeds;
 Name=Solid Device
+Name[nl]=Solid-apparaat
 Name[uk]=Пристрій Solid
 Name[x-test]=xxSolid Devicexx
 Type=Service

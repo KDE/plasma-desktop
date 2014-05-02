@@ -2,9 +2,11 @@ Icon=utilities-terminal
 
 # ctxt: standard desktop component
 Name=Terminal Emulator
+Name[nl]=Terminalprogramma
 Name[uk]=Емулятор термінала
 Name[x-test]=xxTerminal Emulatorxx
 Comment=This service allows you to configure your default terminal emulator. All KDE applications which invoke a terminal emulator application should honor this setting.
+Comment[nl]=Met deze service kunt u uw standaard terminalemulator instellen. Alle KDE-toepassingen die een terminalemulator aanroepen zullen gebruik maken van deze instelling.
 Comment[uk]=За допомогою цієї служби ви можете налаштувати ваш типовий емулятор термінала. Всі програми KDE, яким потрібен доступ до емулятора термінала будуть користуватися цими параметрами.
 Comment[x-test]=xxThis service allows you to configure your default terminal emulator. All KDE applications which invoke a terminal emulator application should honor this setting.xx
 configurationType=internal_terminal

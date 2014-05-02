@@ -1,14 +1,17 @@
 [Domain]
 Name=Date and Time Control Module
+Name[nl]=Controlemodule van datum en tijd
 Name[uk]=Модуль керування датою і часом
 Name[x-test]=xxDate and Time Control Modulexx
 Icon=preferences-system-time
 
 [org.kde.kcontrol.kcmclock.save]
 Name=Save the date/time settings
+Name[nl]=Datum- en tijdinstellingen opslaan
 Name[uk]=Зберегти параметри дати/часу
 Name[x-test]=xxSave the date/time settingsxx
 Description=System policies prevent you from saving the date/time settings.
+Description[nl]=Systeembeleid voorkwam dat u de datum- en tijdinstellingen kon opslaan.
 Description[uk]=Відповідно до загальносистемних правил, ви не можете зберігати параметри дати/часу.
 Description[x-test]=xxSystem policies prevent you from saving the date/time settings.xx
 Policy=auth_admin

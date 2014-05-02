@@ -2,9 +2,11 @@ Icon=internet-web-browser
 
 # ctxt: standard desktop component
 Name=Web Browser
+Name[nl]=Webbrowser
 Name[uk]=Переглядач інтернету
 Name[x-test]=xxWeb Browserxx
 Comment=Here you can configure your default web browser. All KDE applications in which you can select hyperlinks should honor this setting.
+Comment[nl]=Hier kunt u uw standaard webbrowser instellen. Alle KDE-toepassingen waarin u een hyperkoppeling kunt aanklikken maken gebruik van deze instelling.
 Comment[uk]=Тут можна налаштувати ваш типову програму для перегляду сторінок інтернету. Всі програми KDE, які підтримують роботу з гіперпосиланнями, будуть користуватися вказаними тут параметрами.
 Comment[x-test]=xxHere you can configure your default web browser. All KDE applications in which you can select hyperlinks should honor this setting.xx
 configurationType=internal_browser

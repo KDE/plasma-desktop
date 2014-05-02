@@ -1,21 +1,25 @@
 [Desktop Action device]
 Name=Device
+Name[nl]=Apparaat
 Name[uk]=Пристрій
 Name[x-test]=xxDevicexx
 
 [Desktop Action major]
 Name=Major
+Name[nl]=Hoofd
 Name[uk]=Головний
 Name[x-test]=xxMajorxx
 
 [Desktop Action minor]
 Name=Minor
+Name[nl]=Onder
 Name[uk]=Додатковий
 Name[x-test]=xxMinorxx
 
 [Desktop Entry]
 Actions=device;major;minor;
 Name=Solid Device
+Name[nl]=Solid-apparaat
 Name[uk]=Пристрій Solid
 Name[x-test]=xxSolid Devicexx
 Type=Service

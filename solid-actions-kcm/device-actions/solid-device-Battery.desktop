@@ -1,32 +1,38 @@
 [Desktop Action chargePercent]
 Name=Charge Percent
+Name[nl]=Ladingspercentage
 Name[uk]=Рівень заряду
 Name[x-test]=xxCharge Percentxx
 
 [Desktop Action chargeState]
 Name=Charge State
+Name[nl]=Ladingsstatus
 Name[uk]=Стан зарядженості
 Name[x-test]=xxCharge Statexx
 
 [Desktop Action plugged]
 # ctxt: battery plugged in
 Name=Plugged
+Name[nl]=Ingeplugd
 Name[uk]=З’єднано
 Name[x-test]=xxPluggedxx
 
 [Desktop Action rechargeable]
 Name=Rechargeable
+Name[nl]=Oplaadbaar
 Name[uk]=Перезарядка
 Name[x-test]=xxRechargeablexx
 
 [Desktop Action type]
 Name=Type
+Name[nl]=Type
 Name[uk]=Тип
 Name[x-test]=xxTypexx
 
 [Desktop Entry]
 Actions=chargePercent;chargeState;plugged;rechargeable;type;
 Name=Solid Device
+Name[nl]=Solid-apparaat
 Name[uk]=Пристрій Solid
 Name[x-test]=xxSolid Devicexx
 Type=Service

@@ -1,21 +1,25 @@
 [Desktop Action hasState]
 Name=Has State
+Name[nl]=Heeft status
 Name[uk]=Має стан
 Name[x-test]=xxHas Statexx
 
 [Desktop Action stateValue]
 Name=State Value
+Name[nl]=Statuswaarde
 Name[uk]=Значення стану
 Name[x-test]=xxState Valuexx
 
 [Desktop Action type]
 Name=Type
+Name[nl]=Type
 Name[uk]=Тип
 Name[x-test]=xxTypexx
 
 [Desktop Entry]
 Actions=hasState;stateValue;type;
 Name=Solid Device
+Name[nl]=Solid-apparaat
 Name[uk]=Пристрій Solid
 Name[x-test]=xxSolid Devicexx
 Type=Service

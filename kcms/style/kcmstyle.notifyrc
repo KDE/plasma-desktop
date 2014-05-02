@@ -1,17 +1,21 @@
 [Global]
 IconName=show-menu
 Name=Menubar manager
+Name[nl]=Beheerder van menubalk
 Name[uk]=Керування смужкою меню
 Name[x-test]=xxMenubar managerxx
 Comment=Menubar exporter
+Comment[nl]=Exportprogramma van menubalk
 Comment[uk]=Експортування смужки меню
 Comment[x-test]=xxMenubar exporterxx
 
 [Event/reload]
 Name=Menubar changed
+Name[nl]=Menubalk is gewijzigd
 Name[uk]=До смужки меню внесено зміни
 Name[x-test]=xxMenubar changedxx
 Comment=Settings changes will take effect only on application restart
+Comment[nl]=Wijzigingen in instellingen zullen alleen effectief zijn na het herstarten van de toepassing
 Comment[uk]=Зміни у параметрах набудуть чинності лише після перезапуску програми
 Comment[x-test]=xxSettings changes will take effect only on application restartxx
 Action=Popup
