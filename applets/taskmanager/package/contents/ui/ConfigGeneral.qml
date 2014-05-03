@@ -78,7 +78,7 @@ QtLayouts.ColumnLayout {
 
                 QtControls.ComboBox {
                     id: groupingStrategy
-                    model: [i18n("Do Not Group"), i18n("Manually"), i18n("By Program Name")]
+                    model: [i18n("Do Not Group"), i18n("By Program Name")]
                 }
             }
 
