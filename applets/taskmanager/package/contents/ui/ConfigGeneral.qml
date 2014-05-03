@@ -18,10 +18,10 @@
  ***************************************************************************/
 
 import QtQuick 2.0
-import QtQuick.Controls 1.0 as QtControls
-import QtQuick.Layouts 1.0 as QtLayouts
+import QtQuick.Controls 1.0
+import QtQuick.Layouts 1.0
 
-QtLayouts.ColumnLayout {
+ColumnLayout {
     property alias cfg_forceStripes: forceStripes.checked
     property alias cfg_showToolTips: showToolTips.checked
     property alias cfg_highlightWindows: highlightWindows.checked
@@ -34,93 +34,99 @@ QtLayouts.ColumnLayout {
     property alias cfg_showOnlyCurrentActivity: showOnlyCurrentActivity.checked
     property alias cfg_showOnlyMinimized: showOnlyMinimized.checked
 
-    QtControls.GroupBox {
+    GroupBox {
         title: i18n("Appearance")
         flat: true
 
-        QtLayouts.ColumnLayout {
-            QtControls.CheckBox {
+        ColumnLayout {
+            CheckBox {
                 id: forceStripes
                 text: i18n("Force row settings")
             }
 
-            QtControls.CheckBox {
+            CheckBox {
                 id: showToolTips
                 text: i18n("Show tooltips")
             }
 
-            QtControls.CheckBox {
+            CheckBox {
                 id: highlightWindows
                 text: i18n("Highlight windows")
             }
 
-            QtLayouts.RowLayout {
-                QtControls.Label {
+            RowLayout {
+                Label {
                     text: i18n("Maximum rows:")
                 }
 
-                QtControls.SpinBox {
+                SpinBox {
                     id: maxStripes
                 }
             }
         }
     }
 
-    QtControls.GroupBox {
+    GroupBox {
         title: i18n("Grouping and Sorting")
         flat: true
 
-        QtLayouts.ColumnLayout {
-            QtLayouts.RowLayout {
-                QtControls.Label {
+        ColumnLayout {
+            RowLayout {
+                Label {
+                    text: i18n("Sorting:")
+                }
+
+                ComboBox {
+                    id: sortingStrategy
+
+                    Layout.fillWidth: true
+
+                    model: [i18n("Do Not Sort"), i18n("Manually"), i18n("Alphabetically"), i18n("By Desktop"), i18n("By Activity")]
+                }
+            }
+
+            RowLayout {
+                Label {
                     text: i18n("Grouping:")
                 }
 
-                QtControls.ComboBox {
+                ComboBox {
                     id: groupingStrategy
+
+                    Layout.fillWidth: true
+
                     model: [i18n("Do Not Group"), i18n("By Program Name")]
                 }
             }
 
-            QtControls.CheckBox {
+            CheckBox {
                 id: onlyGroupWhenFull
                 text: i18n("Only when the task manager is full")
-            }
-
-            QtLayouts.RowLayout {
-                QtControls.Label {
-                    text: i18n("Sorting:")
-                }
-
-                QtControls.ComboBox {
-                    id: sortingStrategy
-                    model: [i18n("Do Not Sort"), i18n("Manually"), i18n("Alphabetically"), i18n("By Desktop"), i18n("By Activity")]
-                }
             }
         }
     }
 
-    QtControls.GroupBox {
+    GroupBox {
         title: i18n("Filters")
         flat: true
 
-        QtLayouts.ColumnLayout {
-            QtControls.CheckBox {
+        ColumnLayout {
+            CheckBox {
                 id: showOnlyCurrentScreen
                 text: i18n("Show only tasks from the current screen")
             }
 
-            QtControls.CheckBox {
+            CheckBox {
                 id: showOnlyCurrentDesktop
                 text: i18n("Show only tasks from the current desktop")
             }
 
-            QtControls.CheckBox {
+            CheckBox {
                 id: showOnlyCurrentActivity
                 text: i18n("Show only tasks from the current activity")
             }
 
-            QtControls.CheckBox {
+            CheckBox {
                 id: showOnlyMinimized
                 text: i18n("Show only tasks that are minimized")
             }
