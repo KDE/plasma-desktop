@@ -26,6 +26,7 @@
 #include <KLocalizedString>
 #include <KDialog>
 
+
 #include <QtDBus/QDBusMessage>
 #include <QtDBus/QDBusConnection>
 //#include <QtDBus/QDBusInterface>
@@ -36,6 +37,7 @@
 #include "xkb_rules.h"
 #include "keyboard_dbus.h"
 
+
 #include "xkb_helper.h"
 
 //temp hack
@@ -43,7 +45,6 @@
 
 
 K_PLUGIN_FACTORY(KeyboardModuleFactory, registerPlugin<KCMKeyboard>();)
-K_EXPORT_PLUGIN(KeyboardModuleFactory("kcmkeyboard"))
 
 KCMKeyboard::KCMKeyboard(QWidget *parent, const QVariantList &args)
   : KCModule(parent/*, name*/)
@@ -62,9 +63,15 @@ KCMKeyboard::KCMKeyboard(QWidget *parent, const QVariantList &args)
 
   keyboardConfig = new KeyboardConfig();
 
+  //languageDetector = new LanguageDetector();
+
   QVBoxLayout *layout = new QVBoxLayout(this);
   layout->setMargin(0);
   layout->setSpacing(KDialog::spacingHint());
+
+  //inputBoard = QApplication::clipboard();
+
+  //connect(inputBoard, SIGNAL(selectionChanged()),this, SLOT(changeLayoutAuto()));
 
   widget = new KCMKeyboardWidget(rules, keyboardConfig, args, parent);
   layout->addWidget(widget);
@@ -102,8 +109,30 @@ void KCMKeyboard::save()
 	widget->save();
 	widget->getKcmMiscWidget()->save();
 
-	QDBusMessage message = QDBusMessage::createSignal(KEYBOARD_DBUS_OBJECT_PATH, KEYBOARD_DBUS_SERVICE_NAME, KEYBOARD_DBUS_CONFIG_RELOAD_MESSAGE);
+    QDBusMessage message = QDBusMessage::createSignal(KEYBOARD_DBUS_OBJECT_PATH, KEYBOARD_DBUS_SERVICE_NAME, KEYBOARD_DBUS_CONFIG_RELOAD_MESSAGE);
     QDBusConnection::sessionBus().send(message);
 }
+
+
+/*void KCMKeyboard::changeLayoutAuto(){
+    QString inputText = inputBoard->text(QClipboard::Selection);
+    QStringList candidateLanguages;
+    inputText.remove(QRegExp("\\w*@\\w*\\.\\w*"));
+    inputText.remove(QRegExp("(\\w*\\.\\w*)*(\\/\\w*)*"));
+    qDebug()<<candidateLanguages;
+    qDebug()<<inputText;
+    QString inputLanguage = languageDetector->detectLanguage(inputText);
+    for(int i = 0; i < keyboardConfig->layouts.size(); i++){
+        const LayoutInfo *layoutinfo = rules->getLayoutInfo(keyboardConfig->layouts[i].layout);
+        QString lang = layoutinfo->description;
+        if(lang.contains(inputLanguage, Qt::CaseInsensitive)){
+            X11Helper::setLayout(keyboardConfig->layouts[i]);
+            qDebug()<<"changing layout: "<<lang;
+            emit changed(true);
+            break;
+        }
+    }
+
+}*/
 
 #include "kcm_keyboard.moc"

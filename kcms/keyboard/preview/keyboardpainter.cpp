@@ -17,37 +17,83 @@
  */
 
 #include "keyboardpainter.h"
+#include "geometry_components.h"
+#include "../flags.h"
 
 #include <QHBoxLayout>
 #include <QVBoxLayout>
 #include <QPushButton>
-
-#include <KLocalizedString>
+#include <QComboBox>
+#include <QDebug>
+#include <KLocale>
 
 
 KeyboardPainter::KeyboardPainter():
+    kbDialog(new QDialog(this)),
     kbframe(new KbPreviewFrame(this)),
-    exitButton(new QPushButton(i18n("Close"),this))
+    exitButton(new QPushButton(i18n("Close"), this)),
+    levelBox(new QComboBox(this))
 {
-    kbframe->setFixedSize( 1030, 490 );
-    exitButton->setFixedSize(120, 30);
+    kbframe->setFixedSize(1100, 490);
+    exitButton->setFixedSize( 120, 30 );
+    levelBox->setFixedSize( 360, 30 );
 
     QVBoxLayout* vLayout = new QVBoxLayout( this );
+    QHBoxLayout* hLayout = new QHBoxLayout();
+
+    hLayout->addWidget(exitButton, 0, Qt::AlignLeft);
+    hLayout->addWidget(levelBox, 0, Qt::AlignRight);
+    hLayout->addSpacing(30);
+
     vLayout->addWidget(kbframe);
-    vLayout->addWidget(exitButton);
+    vLayout->addLayout(hLayout);
 
     connect(exitButton, SIGNAL(clicked()), this, SLOT(close()));
+    connect(levelBox, SIGNAL(activated(int)), this, SLOT(levelChanged(int)));
 
     setWindowTitle(kbframe->getLayoutName());
 }
 
-void KeyboardPainter::generateKeyboardLayout(const QString& layout, const QString& variant)
+
+void KeyboardPainter::generateKeyboardLayout(const QString& layout, const QString& variant, const QString& model, const QString& title)
 {
-    kbframe->generateKeyboardLayout(layout, variant);
+    kbframe->generateKeyboardLayout(layout, variant, model);
+    kbframe->setFixedSize(getWidth(),getHeight());
+    kbDialog->setFixedSize(getWidth(),getWidth());
+    setWindowTitle(title);
+
+    int level = kbframe->getLevel();
+
+    if(level > 4){
+        levelBox->addItem( i18nc("Keyboard layout levels", "Level %1, %2", 3, 4) );
+        for(int i=5; i <= level; i += 2) {
+            levelBox->addItem( i18nc("Keyboard layout levels", "Level %1, %2", i, i+1) );
+        }
+    }
+    else {
+        levelBox->setVisible(false);
+    }
+}
+
+void KeyboardPainter::levelChanged(int l_id){
+    kbframe->setL_id(l_id);
+}
+
+int KeyboardPainter::getHeight(){
+   int height = kbframe->getHeight();
+   height = kbframe->getScaleFactor() * height + 50;
+   return height;
+}
+
+int KeyboardPainter::getWidth(){
+   int width = kbframe->getWidth();
+   width = kbframe->getScaleFactor() * width + 20;
+   return width;
 }
 
 KeyboardPainter::~KeyboardPainter()
 {
     delete kbframe;
     delete exitButton;
+    delete levelBox;
 }

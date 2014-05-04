@@ -26,6 +26,10 @@
 #include <QX11Info>
 #include <QCoreApplication>
 #include <QDebug>
+#include <QDir>
+
+#include <kdebug.h>
+#include <config-workspace.h>
 
 #include <X11/X.h>
 #include <X11/Xlib.h>
@@ -34,6 +38,7 @@
 #include <X11/extensions/XKBrules.h>
 #include <xcb/xcb.h>
 #include <fixx11h.h>
+
 
 
 // more information about the limit https://bugs.freedesktop.org/show_bug.cgi?id=19501
@@ -203,7 +208,7 @@ bool X11Helper::setGroup(unsigned int group)
         group,
         0, 0, 0
     );
-    xcb_generic_error_t *error = nullptr;
+    xcb_generic_error_t *error = NULL;
     error = xcb_request_check(QX11Info::connection(), cookie);
     if (error) {
         qDebug() << "Couldn't change the group" << error->error_code;
@@ -439,5 +444,35 @@ QString LayoutUnit::toString() const
 
 	return layout + LAYOUT_VARIANT_SEPARATOR_PREFIX+variant+LAYOUT_VARIANT_SEPARATOR_SUFFIX;
 }
+
+QString X11Helper::findXkbDir()
+{
+    QString rulesDir;
+
+    QString xkbParentDir;
+
+    QString base(XLIBDIR);
+    if( base.count('/') >= 3 ) {
+        // .../usr/lib/X11 -> /usr/share/X11/xkb vs .../usr/X11/lib -> /usr/X11/share/X11/xkb
+        QString delta = base.endsWith("X11") ? "/../../share/X11" : "/../share/X11";
+        QDir baseDir(base + delta);
+        if( baseDir.exists() ) {
+            xkbParentDir = baseDir.absolutePath();
+        }
+        else {
+            QDir baseDir(base + "/X11");	// .../usr/X11/lib/X11/xkb (old XFree)
+            if( baseDir.exists() ) {
+                xkbParentDir = baseDir.absolutePath();
+            }
+        }
+    }
+
+    if( xkbParentDir.isEmpty() ) {
+        xkbParentDir = "/usr/share/X11";
+    }
+
+    return xkbParentDir + "/xkb";
+}
+
 
 const int LayoutUnit::MAX_LABEL_LENGTH = 3;

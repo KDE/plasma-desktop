@@ -117,7 +117,7 @@ void KeyboardLayoutActionCollection::loadLayoutShortcuts(QList<LayoutUnit>& layo
 	for (QList<LayoutUnit>::iterator i = layoutUnits.begin(); i != layoutUnits.end(); ++i) {
 		LayoutUnit& layoutUnit = *i;
 		QAction* action = createLayoutShortcutActon(layoutUnit, rules, true);
-                const auto shortcut = KGlobalAccel::self()->shortcut(action);
+        const QList <QKeySequence> shortcut = KGlobalAccel::self()->shortcut(action);
 		if( ! shortcut.isEmpty() ) {
 			kDebug() << "Restored shortcut for" << layoutUnit.toString() << shortcut.first();
 			layoutUnit.setShortcut(shortcut.first());

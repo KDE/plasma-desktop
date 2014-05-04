@@ -34,7 +34,7 @@ class AddLayoutDialog: public QDialog
 	Q_OBJECT
 
 public:
-	AddLayoutDialog(const Rules* rules, Flags* flags, bool showLabel, QWidget* parent=NULL);
+    AddLayoutDialog(const Rules* rules, Flags* flags, const QString &model_, bool showLabel, QWidget* parent=NULL);
 
 	LayoutUnit getSelectedLayoutUnit() { return selectedLayoutUnit; }
 	QString getvariant(QString variant);
@@ -48,6 +48,7 @@ public Q_SLOTS:
 private:
 	const Rules* rules;
 	Flags* flags;
+    const QString& model;
 	Ui_AddLayoutDialog* layoutDialogUi;
 	QString selectedLanguage;
 	QString selectedLayout;

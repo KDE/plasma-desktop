@@ -28,6 +28,8 @@ set( kded_keyboard_SRCS
     layouts_menu.cpp
     flags.cpp
     xkb_rules.cpp
+    LanguageDetection/training_text_map.cpp
+    LanguageDetection/languagedetector.cpp
 )
 
 add_library(kded_keyboard MODULE ${kded_keyboard_SRCS})
@@ -117,31 +119,54 @@ target_link_libraries(keyboard_layout_widget
 
 install( TARGETS keyboard_layout_widget DESTINATION ${PLUGIN_INSTALL_DIR} )
 
-
 ### kcm keyboard ###
 include_directories("preview")
 
-set(kcm_keyboard_PART_SRCS 
-  kcm_keyboard.cpp
-  kcm_keyboard_widget.cpp
-  kcm_view_models.cpp
-  kcm_add_layout_dialog.cpp
-  keyboard_config.cpp
-  x11_helper.cpp
-  xkb_helper.cpp
-  xkb_rules.cpp
-  flags.cpp
-  iso_codes.cpp
-  kcmmisc.cpp
-  bindings.cpp
-  preview/keyaliases.cpp
-  preview/keyboardlayout.cpp
-  preview/keyboardpainter.cpp
-  preview/keysymbols.cpp
-  preview/keysymhelper.cpp
-  preview/kbpreviewframe.cpp
-  preview/keysym2ucs.cpp
-)
+find_package(Boost)
+
+if(Boost_FOUND)
+  ADD_DEFINITIONS(-DNEW_GEOMETRY=1)
+
+  set (CMAKE_CXX_FLAGS "-fexceptions")
+  set (CMAKE_CXX_FLAGS "-fpermissive")
+
+  set(preview_SRCS
+    preview/geometry_components.cpp
+    preview/geometry_parser.cpp
+    preview/kbpreviewframe.cpp
+    preview/keyboardlayout.cpp
+    preview/symbol_parser.cpp
+    preview/keyaliases.cpp
+    preview/keyboardlayout.cpp
+    preview/keyboardpainter.cpp
+    preview/keysymhelper.cpp
+    preview/keysym2ucs.cpp
+    preview/model_to_geometry.cpp)
+  
+else(Boost_FOUND)
+
+  message("Boost not found, install Boost libraries to enable keyboard geometry preview")
+
+endif(Boost_FOUND)
+
+
+set(kcm_keyboard_PART_SRCS
+    kcm_keyboard.cpp
+    kcm_keyboard_widget.cpp
+    kcm_view_models.cpp
+    kcm_add_layout_dialog.cpp
+    keyboard_config.cpp
+    x11_helper.cpp
+    xkb_helper.cpp
+    xkb_rules.cpp
+    flags.cpp
+    iso_codes.cpp
+    kcmmisc.cpp
+    bindings.cpp
+    LanguageDetection/training_text_map.cpp
+    LanguageDetection/languagedetector.cpp
+    ${preview_SRCS} )
+
 
 
 qt5_wrap_ui(kcm_keyboard_PART_SRCS kcm_keyboard.ui kcm_add_layout_dialog.ui kcmmiscwidget.ui)
@@ -180,4 +205,6 @@ add_subdirectory( pics )
 
 # Unit tests
 
-add_subdirectory( tests )
+# add_subdirectory( tests )
+
+add_subdirectory( LanguageDetection/langdata )

@@ -15,36 +15,86 @@
  *  along with this program; if not, write to the Free Software
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
- 
-#ifndef KEYBOARDLAYOUT_H
-#define KEYBOARDLAYOUT_H
 
-#include "keysymbols.h"
+#ifndef KEYBOARDLAYOUT_NEW_H
+#define KEYBOARDLAYOUT_NEW_H
+
 #include "keyaliases.h"
+#include <QString>
+#include <QStringList>
+#include <QList>
 
-#include <QApplication>
 
-class KeyboardLayout
-{
-    QString layoutName;
-    Aliases alias;
+class KbKey{
+private:
+    QList<QString> symbols;
+    int symbolCount;
     
 public:
-    KeyboardLayout();
+    QString keyName;
 
-    KeySymbols TLDE;
-    KeySymbols BKSL;
-    KeySymbols AE[12];
-    KeySymbols AD[12];
-    KeySymbols AC[11];
-    KeySymbols AB[11];
+    KbKey();
 
-    void generateLayout(QString a, const QString &cname);
-    QString findSymbolBaseDir();
-    void includeSymbol(QString a, const QString &cname);
-    QString getLayoutName() const {
-    	return layoutName;
+    void setKeyName(QString n);
+    void addSymbol(QString n, int i);
+    QString getSymbol(int i);
+
+    int getSymbolCount(){
+        return symbolCount;
     }
+
+    void display();
 };
 
-#endif // KEYBOARDLAYOUT_H
+
+class KbLayout{
+private:
+    QList<QString> include;
+    QString name;
+    int keyCount, includeCount, level;
+    bool parsedSymbol;
+
+public:
+    QList <KbKey> keyList;
+    QString country;
+
+    KbLayout();
+
+    void setName(QString n);
+    void addInclude(QString n);
+    void addKey();
+    QString getInclude(int i);
+    int findKey(QString n);
+
+    void setLevel(int lvl){
+        level = lvl;
+    }
+
+    int getLevel(){
+        return level;
+    }
+
+    int getKeyCount(){
+        return keyCount;
+    }
+
+    int getIncludeCount(){
+        return includeCount;
+    }
+
+    QString getLayoutName() const {
+        return name;
+    }
+
+    void setParsedSymbol(bool state){
+        parsedSymbol = state;
+    }
+
+    bool getParsedSymbol(){
+        return parsedSymbol;
+    }
+
+    void display();
+};
+
+#endif //KEYBOARDLAYOUT_NEW_H

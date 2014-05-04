@@ -46,6 +46,11 @@ QString KeySymHelper::getKeySymbol(const QString& opton)
 #else
 
     KeySym keysym = XStringToKeysym(str);
+
+    //TODO: make it more generic
+//    if( keysym == 0xfe03 )
+//	return "L3";
+    
     long ucs = keysym2ucs(keysym);
 
 //    if( ucs == -1 && (keysym >= 0xFE50 && keysym <= 0xFE5F) ) {
