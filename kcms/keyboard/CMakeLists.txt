@@ -205,7 +205,7 @@ add_subdirectory( pics )
 
 # Unit tests
 
-# add_subdirectory( tests )
+
+add_subdirectory( tests )
 
 add_subdirectory( LanguageDetection/langdata )
-
