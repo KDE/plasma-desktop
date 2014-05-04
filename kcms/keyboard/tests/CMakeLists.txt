@@ -55,10 +55,14 @@ if( X11_XTest_FOUND )
                          KF5::CoreAddons
                          KF5::DBusAddons
                          KF5::Plasma
+<<<<<<< HEAD
                          KF5::KDELibs4Support
                          KF5::GlobalAccel
                          XCB::XCB
                          XCB::XKB
+=======
+                         KF5::KDE4Support
+>>>>>>> added automatic layout switching, geometry preview and removed warnings at time of build and runtime
                          ${X11_Xkbfile_LIB}
                          ${X11_XTest_LIB}
                          ${X11_LIBRARIES}

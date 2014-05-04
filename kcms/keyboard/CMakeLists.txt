@@ -209,3 +209,4 @@ add_subdirectory( pics )
 add_subdirectory( tests )
 
 add_subdirectory( LanguageDetection/langdata )
+
