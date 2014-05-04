@@ -19,8 +19,8 @@
 #ifndef KEYSYMHELPER_H
 #define KEYSYMHELPER_H
 
-#include <QtCore/QString>
-#include <QtCore/QMap>
+#include <QString>
+#include <QMap>
 
 class KeySymHelper
 {

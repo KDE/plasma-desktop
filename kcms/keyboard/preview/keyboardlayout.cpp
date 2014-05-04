@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2012 Shivam Makkar (amourphious1992@gmail.com)
+ *  Copyright (C) 2013 Shivam Makkar (amourphious1992@gmail.com)
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -18,169 +18,101 @@
 
 
 #include "keyboardlayout.h"
-#include "keysymbols.h"
 
-#include <QMessageBox>
+#include <QDebug>
+#include <QString>
 #include <QList>
-#include <QFile>
-#include <QDir>
-
-#include <QX11Info>
-#include <X11/Xlib.h>
-#include <X11/Xatom.h>
-#include <X11/XKBlib.h>
-#include <X11/extensions/XKBrules.h>
-#include <fixx11h.h>
-#include <config-workspace.h>
 
 
-//TODO: replace this with grammar parser (e.g. antlr)
-
-
-KeyboardLayout::KeyboardLayout()
-{
+KbKey::KbKey(){
+    symbolCount = 0;
+    symbols << QString();
 }
 
-void KeyboardLayout::generateLayout(QString a,const QString& cname)
-{
-    includeSymbol(a,cname);
-    int i=a.indexOf("name[Group1]=");
-    i+=13;
 
-    QString n=a.mid(i);
-    n=n.simplified();
-    i=n.indexOf("\"",1);
-    layoutName=n.left(i);
-    layoutName.remove("\"");
-    layoutName.simplified();
-    i=n.indexOf("key");
-    n=n.mid(i);
+void KbKey::setKeyName(QString n){
+        keyName = n;
+}
 
-    QList<QString> st;
-    st=n.split("key");
 
-    KeySymbols dum;
-    QString r,y;
-
-    for(int k=0;k<st.size();k++){
-        dum.setKey(st.at(k));
-        if(dum.keyname.startsWith("Lat"))
-            dum.keyname=alias.getAlias(cname,dum.keyname);
-        if(dum.keyname=="TLDE"){
-            r=st.at(k);
-            TLDE.setKey(r);
-        }
-        if(dum.keyname=="BKSL"){
-            r=st.at(k);
-            BKSL.setKey(r);
-        }
-        if(dum.keyname.contains("AE")){
-            QString ind=dum.keyname.right(2);
-            int index=ind.toInt();
-            r=st.at(k);
-            AE[index-1].setKey(r);
-        }
-        if(dum.keyname.contains("AD")){
-            QString ind=dum.keyname.right(2);
-            int index=ind.toInt();
-            r=st.at(k);
-            AD[index-1].setKey(r);
-        }
-        if(dum.keyname.contains("AC")){
-            QString ind=dum.keyname.right(2);
-            int index=ind.toInt();
-            r=st.at(k);
-            AC[index-1].setKey(r);
-        }
-        if(dum.keyname.contains("AB")){
-            QString ind=dum.keyname.right(2);
-            int index=ind.toInt();
-            r=st.at(k);
-            AB[index-1].setKey(r);
-        }
+void KbKey::addSymbol(QString n, int i){
+    if( !symbols.contains(n)){
+        symbols[i] = n;
+        symbolCount++;
+        symbols << QString();
     }
 }
 
-void KeyboardLayout::includeSymbol(QString a,const QString& cname)
-{
-    int k=a.indexOf("include");
-    a=a.mid(k);
 
-    QList<QString>tobeinclude;
-    tobeinclude=a.split("include");
+QString KbKey::getSymbol(int i){
+    if(i < symbolCount)
+        return symbols[i];
+    else
+        return QString();
+}
 
-    QString r;
-    for(int o=1;o<tobeinclude.size();o++){
-        QString d=tobeinclude.at(o);
-        d.simplified();
-        int k=d.indexOf("\"",2);
 
-        QString incsym=d.left(k);
-        incsym.remove(" ");
-        incsym.remove("\"");
+void KbKey::display(){
+    qDebug()<<keyName<<" : ";
+    for(int i=0; i<symbolCount; i++)
+        qDebug()<<"\t"<<symbols[i];
+}
 
-        QList<QString> incfile;
-        incfile=incsym.split("(");
-        for(int i=0;i<incfile.size();i++){
-                QString z=incfile.at(i);
-                z.remove(" ");
-            incfile[i]=z;
-        }
-        if(incfile.size()==1)
-            incfile<<"basic";
-        else{
-            QString ns=incfile.at(1);
-            ns.remove(")");
-            incfile[1]=ns;
-        }
-        r=incfile.at(0);
-        r.append(incfile.at(1));
 
-        QString filename=findSymbolBaseDir();
-        filename.append(incfile.at(0));
+KbLayout::KbLayout(){
+    keyCount = 0;
+    includeCount = 0;
+    level = 4;
+    keyList << KbKey();
+    include << QString();
+    parsedSymbol = true;
+}
 
-        QFile file(filename);
-        file.open(QIODevice::ReadOnly | QIODevice::Text);
 
-        QString content = file.readAll();
-        QList<QString> symstrlist;
+void KbLayout::setName(QString n){
+    name = n;
+}
 
-        symstrlist=content.split("xkb_symbols ");
-        for(int u=1;u<symstrlist.size();u++){
-            QString cur=symstrlist.at(u);
-            int pos = cur.indexOf("{");
-            cur=cur.left(pos);
-            if(cur.contains(incfile.at(1))){
-                generateLayout(symstrlist.at(u),cname);
-                break;
-            }
-        }
+
+void KbLayout::addInclude(QString n){
+    if(!include.contains(n)){
+        include[includeCount] = n;
+        includeCount++;
+        include << QString();
     }
 }
 
-QString KeyboardLayout::findSymbolBaseDir()
-{
-    QString xkbParentDir;
 
-    QString base(XLIBDIR);
-    if( base.count('/') >= 3 ) {
-        // .../usr/lib/X11 -> /usr/share/X11/xkb vs .../usr/X11/lib -> /usr/X11/share/X11/xkb
-        QString delta = base.endsWith("X11") ? "/../../share/X11" : "/../share/X11";
-        QDir baseDir(base + delta);
-        if( baseDir.exists() ) {
-            xkbParentDir = baseDir.absolutePath();
-        }
-        else {
-            QDir baseDir(base + "/X11");	// .../usr/X11/lib/X11/xkb (old XFree)
-            if( baseDir.exists() ) {
-                xkbParentDir = baseDir.absolutePath();
-            }
+void KbLayout :: addKey(){
+    keyCount++;
+    keyList << KbKey();
+}
+
+
+QString KbLayout :: getInclude(int i){
+    if(i < includeCount)
+        return include[i];
+    else
+        return QString();
+}
+
+
+int KbLayout :: findKey(QString n){
+    for(int i = 0 ; i < keyCount ; i++){
+        if(keyList[i].keyName == n){
+            return i;
         }
     }
+    return -1;
+}
 
-    if( xkbParentDir.isEmpty() ) {
-        xkbParentDir = "/usr/share/X11";
+
+void KbLayout::display(){
+//    qDebug() << name << "\n";
+//    for(int i = 0; i<includeCount; i++){
+//        qDebug() << include[i];
+//    }
+    for(int i = 0 ; i < keyCount; i++ ){
+        keyList[i].display();
     }
-
-    return QString("%1/xkb/symbols/").arg(xkbParentDir);
 }

@@ -7,7 +7,7 @@ macro(KEYBOARD_DAEMON_UNIT_TESTS _testname)
                                      Qt5::Xml
                                      Qt5::Test
                                      KF5::I18n
-                                     KF5::KDELibs4Support
+                                     KF5::KDE4Support
                                      ${X11_Xkbfile_LIB}
                                      ${X11_LIBRARIES}
 )
@@ -24,7 +24,7 @@ target_link_libraries(flags_test
                       Qt5::Test
                       KF5::I18n
                       KF5::Plasma
-                      KF5::KDELibs4Support
+                      KF5::KDE4Support
                       ${X11_Xkbfile_LIB}
                       ${X11_LIBRARIES}
 )
@@ -44,7 +44,7 @@ if( X11_XTest_FOUND )
                          KF5::CoreAddons
                          KF5::DBusAddons
                          KF5::Plasma
-                         KF5::KDELibs4Support
+                         KF5::KDE4Support
                          ${X11_Xkbfile_LIB}
                          ${X11_XTest_LIB}
                          ${X11_LIBRARIES}

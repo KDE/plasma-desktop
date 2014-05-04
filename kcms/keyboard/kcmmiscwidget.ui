@@ -7,88 +7,16 @@
     <x>0</x>
     <y>0</y>
     <width>577</width>
-    <height>361</height>
+    <height>452</height>
    </rect>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="0" column="0">
-    <widget class="KButtonGroup" name="numlockGroupBox">
-     <property name="whatsThis">
-      <string>If supported, this option allows you to setup the state of NumLock after KDE startup.&lt;p&gt;You can configure NumLock to be turned on or off, or configure KDE not to set NumLock state.</string>
-     </property>
-     <property name="title">
-      <string>NumLock on KDE Startup</string>
-     </property>
-     <layout class="QGridLayout" name="gridLayout_7">
-      <item row="0" column="0">
-       <widget class="KButtonGroup" name="numlockButtonGroup">
-        <property name="flat">
-         <bool>true</bool>
-        </property>
-        <layout class="QGridLayout" name="gridLayout_6">
-         <item row="0" column="0">
-          <widget class="QRadioButton" name="RadioButton1">
-           <property name="text">
-            <string>T&amp;urn on</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="0">
-          <widget class="QRadioButton" name="RadioButton1_2">
-           <property name="text">
-            <string>Turn o&amp;ff</string>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="0">
-          <widget class="QRadioButton" name="RadioButton1_3">
-           <property name="text">
-            <string>Leave unchan&amp;ged</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-   </item>
    <item row="1" column="0">
     <widget class="QGroupBox" name="keyboardRepeatGroupBox">
      <property name="title">
       <string>Keyboard Repeat</string>
      </property>
      <layout class="QGridLayout" name="gridLayout_4">
-      <item row="0" column="0">
-       <widget class="KButtonGroup" name="keyboardRepeatButtonGroup">
-        <property name="flat">
-         <bool>true</bool>
-        </property>
-        <layout class="QGridLayout" name="gridLayout_3">
-         <item row="0" column="0">
-          <widget class="QRadioButton" name="keyboardRepeatOnRadioButton">
-           <property name="text">
-            <string>T&amp;urn on</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="0">
-          <widget class="QRadioButton" name="keyboardRepeatOffRadioButton">
-           <property name="text">
-            <string>Turn o&amp;ff</string>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="0">
-          <widget class="QRadioButton" name="keyboardRepeatUnchangedRadioButton">
-           <property name="text">
-            <string>Leave unchan&amp;ged</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </widget>
-      </item>
       <item row="0" column="1">
        <spacer name="horizontalSpacer_2">
         <property name="orientation">
@@ -156,11 +84,11 @@
           </widget>
          </item>
          <item row="0" column="2">
-          <widget class="KIntNumInput" name="delay">
+          <widget class="QSpinBox" name="delay" native="true">
            <property name="whatsThis">
             <string>If supported, this option allows you to set the delay after which a pressed key will start generating keycodes. The 'Repeat rate' option controls the frequency of these keycodes.</string>
            </property>
-           <property name="suffix">
+           <property name="suffix" stdset="0">
             <string> ms</string>
            </property>
           </widget>
@@ -210,13 +138,52 @@
           </widget>
          </item>
          <item row="1" column="2">
-          <widget class="KDoubleNumInput" name="rate">
+          <widget class="QDoubleSpinBox" name="rate" native="true">
            <property name="whatsThis">
             <string>If supported, this option allows you to set the rate at which keycodes are generated while a key is pressed.</string>
            </property>
-           <property name="suffix">
+           <property name="suffix" stdset="0">
             <string> repeats/s</string>
            </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QGroupBox" name="keyboardRepeatButtonGroup">
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_3">
+         <item row="0" column="0">
+          <widget class="QRadioButton" name="keyboardRepeatOnRadioButton">
+           <property name="text">
+            <string>T&amp;urn on</string>
+           </property>
+           <attribute name="buttonGroup">
+            <string notr="true">kbRepButtonGroup</string>
+           </attribute>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QRadioButton" name="keyboardRepeatOffRadioButton">
+           <property name="text">
+            <string>Turn o&amp;ff</string>
+           </property>
+           <attribute name="buttonGroup">
+            <string notr="true">kbRepButtonGroup</string>
+           </attribute>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QRadioButton" name="keyboardRepeatUnchangedRadioButton">
+           <property name="text">
+            <string>Leave unchan&amp;ged</string>
+           </property>
+           <attribute name="buttonGroup">
+            <string notr="true">kbRepButtonGroup</string>
+           </attribute>
           </widget>
          </item>
         </layout>
@@ -308,28 +275,63 @@
      </property>
     </widget>
    </item>
+   <item row="0" column="0">
+    <widget class="QGroupBox" name="numlockGroupBox">
+     <property name="whatsThis">
+      <string>If supported, this option allows you to setup the state of NumLock after KDE startup.&lt;p&gt;You can configure NumLock to be turned on or off, or configure KDE not to set NumLock state.</string>
+     </property>
+     <property name="title">
+      <string>NumLock on KDE Startup</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_7">
+      <item row="0" column="0">
+       <widget class="QGroupBox" name="numlocgroupBox">
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_6">
+         <item row="0" column="0">
+          <widget class="QRadioButton" name="RadioButton1">
+           <property name="text">
+            <string>T&amp;urn on</string>
+           </property>
+           <attribute name="buttonGroup">
+            <string notr="true">numButtonGroup</string>
+           </attribute>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QRadioButton" name="RadioButton1_2">
+           <property name="text">
+            <string>Turn o&amp;ff</string>
+           </property>
+           <attribute name="buttonGroup">
+            <string notr="true">numButtonGroup</string>
+           </attribute>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QRadioButton" name="RadioButton1_3">
+           <property name="text">
+            <string>Leave unchan&amp;ged</string>
+           </property>
+           <attribute name="buttonGroup">
+            <string notr="true">numButtonGroup</string>
+           </attribute>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
   </layout>
  </widget>
- <customwidgets>
-  <customwidget>
-   <class>KDoubleNumInput</class>
-   <extends>QWidget</extends>
-   <header>knuminput.h</header>
-   <container>1</container>
-  </customwidget>
-  <customwidget>
-   <class>KButtonGroup</class>
-   <extends>QGroupBox</extends>
-   <header>kbuttongroup.h</header>
-   <container>1</container>
-  </customwidget>
-  <customwidget>
-   <class>KIntNumInput</class>
-   <extends>QWidget</extends>
-   <header>knuminput.h</header>
-   <container>1</container>
-  </customwidget>
- </customwidgets>
  <resources/>
  <connections/>
+ <buttongroups>
+  <buttongroup name="kbRepButtonGroup"/>
+  <buttongroup name="numButtonGroup"/>
+ </buttongroups>
 </ui>

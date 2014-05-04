@@ -17,8 +17,8 @@
  */
 
 #include "xkb_rules.h"
-#include "config-workspace.h"
 
+#include <kdebug.h>
 #include <kglobal.h>
 #include <KLocalizedString>
 
@@ -27,7 +27,6 @@
 #include <QTextDocument> // for Qt::escape
 #include <QXmlAttributes>
 #include <QtConcurrentFilter>
-#include <QtDebug>
 
 //#include <libintl.h>
 //#include <locale.h>
@@ -208,7 +207,7 @@ void mergeRules(Rules* rules, Rules* extraRules)
 		}
 	}
 	rules->layoutInfos.append(layoutsToAdd);
-	qDebug() << "Merged from extra rules:" << extraRules->layoutInfos.size() << "layouts," << extraRules->modelInfos.size() << "models," << extraRules->optionGroupInfos.size() << "option groups";
+	kDebug() << "Merged from extra rules:" << extraRules->layoutInfos.size() << "layouts," << extraRules->modelInfos.size() << "models," << extraRules->optionGroupInfos.size() << "option groups";
 
 	// base rules now own the objects - remove them from extra rules so that it does not try to delete them
 	extraRules->layoutInfos.clear();
@@ -244,7 +243,7 @@ Rules* Rules::readRules(Rules* rules, const QString& filename, bool fromExtras)
 {
 	QFile file(filename);
 	if( !file.open(QFile::ReadOnly | QFile::Text) ) {
-		qCritical() << "Cannot open the rules file" << file.fileName();
+		kError() << "Cannot open the rules file" << file.fileName();
 		return NULL;
 	}
 
@@ -256,10 +255,10 @@ Rules* Rules::readRules(Rules* rules, const QString& filename, bool fromExtras)
 
 	QXmlInputSource xmlInputSource(&file);
 
-	qDebug() << "Parsing xkb rules from" << file.fileName();
+	kDebug() << "Parsing xkb rules from" << file.fileName();
 
 	if( ! reader.parse(xmlInputSource) ) {
-		qCritical() << "Failed to parse the rules file" << file.fileName();
+		kError() << "Failed to parse the rules file" << file.fileName();
 		delete rules;
 		return NULL;
 	}
@@ -293,7 +292,7 @@ bool RulesHandler::startElement(const QString &/*namespaceURI*/, const QString &
 	}
 	else if( strPath == ("xkbConfigRegistry") && ! attributes.value("version").isEmpty()  ) {
 		rules->version = attributes.value("version");
-		qDebug() << "xkbConfigRegistry version" << rules->version;
+		kDebug() << "xkbConfigRegistry version" << rules->version;
 	}
 	return true;
 }

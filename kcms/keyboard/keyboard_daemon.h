@@ -22,12 +22,13 @@
 
 #include <kdedmodule.h>
 #include <kdemacros.h>
-#include <QtCore/QStringList>
+#include <QStringList>
+#include <QClipboard>
 
 #include "layout_memory.h"
 #include "keyboard_dbus.h"
 #include "bindings.h"
-
+#include "LanguageDetection/languagedetector.h"
 
 class KActionCollection;
 class XInputEventNotifier;
@@ -36,7 +37,7 @@ class KeyboardConfig;
 class KAction;
 class Rules;
 
-class Q_DECL_EXPORT KeyboardDaemon : public KDEDModule
+class KDE_EXPORT KeyboardDaemon : public KDEDModule
 {
     Q_OBJECT
     Q_CLASSINFO("D-Bus Interface", "org.kde.KeyboardLayouts")
@@ -48,6 +49,9 @@ class Q_DECL_EXPORT KeyboardDaemon : public KDEDModule
     LayoutMemory layoutMemory;
     LayoutUnit currentLayout;
     const Rules* rules;
+    QClipboard *languageInput;
+    LanguageDetector *languageDetector;
+
 
     void registerListeners();
     void registerShortcut();
@@ -63,6 +67,7 @@ private Q_SLOTS:
     void layoutChanged();
     void layoutMapChanged();
 	bool setLayout(QAction* action);
+    void switchLayoutAuto();
 
 public Q_SLOTS:
 	Q_SCRIPTABLE bool setLayout(const QString& layout);

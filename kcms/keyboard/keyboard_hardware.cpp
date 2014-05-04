@@ -50,11 +50,11 @@ void set_repeatrate(int delay, double rate)
 	XkbDescPtr xkb = XkbAllocKeyboard();
 	if (xkb) {
 		Display* dpy = QX11Info::display();
-		int res = XkbGetControls(dpy, XkbRepeatKeysMask, xkb);
+        XkbGetControls(dpy, XkbRepeatKeysMask, xkb);
 		xkb->ctrls->repeat_delay = delay;
 		xkb->ctrls->repeat_interval = (int)floor(1000/rate + 0.5);
-		res = XkbSetControls(dpy, XkbRepeatKeysMask, xkb);
-                XkbFreeKeyboard(xkb, 0, true);
+        XkbSetControls(dpy, XkbRepeatKeysMask, xkb);
+        XkbFreeKeyboard(xkb, 0, true);
 		return;
 	}
 }
