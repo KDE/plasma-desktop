@@ -1,5 +1,8 @@
 macro(KEYBOARD_DAEMON_UNIT_TESTS _testname)
-               kde4_add_unit_test(${_testname}_test TESTNAME kcm-keyboard-${_testname} NOGUI ${_testname}_test.cpp ../${_testname}.cpp)
+               add_executable(${_testname}_test ${_testname}_test.cpp ../${_testname}.cpp)
+               ecm_mark_nongui_executable(${_testname}_test)
+               ecm_mark_as_test(${_testname}_test)
+               add_test(kcm-keyboard-${_testname} ${_testname}_test)
                target_link_libraries(${_testname}_test
                                      Qt5::Concurrent
                                      Qt5::Widgets
@@ -16,7 +19,10 @@ endmacro(KEYBOARD_DAEMON_UNIT_TESTS)
 keyboard_daemon_unit_tests(xkb_rules)
 keyboard_daemon_unit_tests(iso_codes)
 
-kde4_add_unit_test(flags_test TESTNAME kcm-keyboard-flags_test NOGUI flags_test.cpp ../flags.cpp ../x11_helper.cpp ../keyboard_config.cpp ../xkb_rules.cpp)
+add_executable(flags_test flags_test.cpp ../flags.cpp ../x11_helper.cpp ../keyboard_config.cpp ../xkb_rules.cpp)
+ecm_mark_nongui_executable(flags_test)
+ecm_mark_as_test(flags_test)
+add_test(kcm-keyboard-flags_test flags_test)
 target_link_libraries(flags_test
                       Qt5::Concurrent
                       Qt5::X11Extras
@@ -25,6 +31,8 @@ target_link_libraries(flags_test
                       KF5::I18n
                       KF5::Plasma
                       KF5::KDELibs4Support
+                      XCB::XCB
+                      XCB::XKB
                       ${X11_Xkbfile_LIB}
                       ${X11_LIBRARIES}
 )
@@ -34,7 +42,10 @@ configure_file(${CMAKE_CURRENT_SOURCE_DIR}/config/base.bad.xml ${CMAKE_CURRENT_B
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/config/base.xml ${CMAKE_CURRENT_BINARY_DIR}/config/base.xml COPYONLY)
 
 if( X11_XTest_FOUND )
-   kde4_add_unit_test(keyboard_daemon_test TESTNAME kcm-keyboard-keyboard_daemon_test NOGUI keyboard_daemon_test.cpp ../keyboard_daemon.cpp ../layout_memory.cpp ../layout_memory_persister.cpp ../flags.cpp ../x11_helper.cpp ../xkb_helper.cpp ../xinput_helper.cpp ../layout_tray_icon.cpp ../keyboard_config.cpp ../xkb_rules.cpp ../keyboard_hardware.cpp ../bindings.cpp ../layouts_menu.cpp ../numlockx.c)
+   add_executable(keyboard_daemon_test keyboard_daemon_test.cpp ../keyboard_daemon.cpp ../layout_memory.cpp ../layout_memory_persister.cpp ../flags.cpp ../x11_helper.cpp ../xkb_helper.cpp ../xinput_helper.cpp ../layout_tray_icon.cpp ../keyboard_config.cpp ../xkb_rules.cpp ../keyboard_hardware.cpp ../bindings.cpp ../layouts_menu.cpp ../numlockx.c)
+   add_test(kcm-keyboard-keyboard_daemon_test keyboard_daemon_test)
+   ecm_mark_nongui_executable(keyboard_daemon_test)
+   ecm_mark_as_test(keyboard_daemon_test)
    target_link_libraries(keyboard_daemon_test
                          Qt5::Concurrent
                          Qt5::X11Extras
@@ -45,6 +56,9 @@ if( X11_XTest_FOUND )
                          KF5::DBusAddons
                          KF5::Plasma
                          KF5::KDELibs4Support
+                         KF5::GlobalAccel
+                         XCB::XCB
+                         XCB::XKB
                          ${X11_Xkbfile_LIB}
                          ${X11_XTest_LIB}
                          ${X11_LIBRARIES}

@@ -21,6 +21,7 @@ find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
     Widgets
     X11Extras
     Svg
+    Test
     Concurrent
 )
 
