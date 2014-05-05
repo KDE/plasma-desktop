@@ -202,6 +202,7 @@ Item {
 
                 anchors.fill: parent
                 z: appletContainer.z - 2
+                visible: !plasmoid.immutable
 
                 property int zoffset: 1000
                 drag.target: appletItem
