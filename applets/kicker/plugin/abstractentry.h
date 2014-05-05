@@ -23,6 +23,7 @@
 
 #include "abstractmodel.h"
 
+#include <QIcon>
 #include <QPointer>
 #include <QString>
 
@@ -35,13 +36,13 @@ class AbstractEntry
 
         virtual EntryType type() const = 0;
 
-        QString icon() const { return m_icon; }
+        QIcon icon() const { return m_icon; }
         QString name() const { return m_name; }
 
         static bool lessThan(AbstractEntry *e1, AbstractEntry *e2);
 
     protected:
-        QString m_icon;
+        QIcon m_icon;
         QString m_name;
 };
 

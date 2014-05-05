@@ -31,7 +31,7 @@ AppGroupEntry::AppGroupEntry(KServiceGroup::Ptr group, QAbstractListModel *paren
     bool flat, int appNameFormat)
 {
     m_name = group->caption();
-    m_icon = group->icon();
+    m_icon = QIcon::fromTheme(group->icon());
     m_model = new AppsModel(group->entryPath(), flat, parentModel);
     static_cast<AppsModel *>(m_model.data())->setAppNameFormat(appNameFormat);
     QObject::connect(parentModel, SIGNAL(refreshing()), m_model, SLOT(deleteLater()));
@@ -58,7 +58,7 @@ AppEntry::AppEntry(KService::Ptr service, NameFormat nameFormat)
         m_name = i18nc("Generic name (App name)", "%1 (%2)", genericName, name);
     }
 
-    m_icon = service->icon();
+    m_icon = QIcon::fromTheme(service->icon());
     m_service = service;
 }
 
