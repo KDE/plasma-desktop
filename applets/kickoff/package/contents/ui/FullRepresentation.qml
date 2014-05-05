@@ -441,6 +441,7 @@ Item {
             }
             default: { // forward key to searchView
                 if (event.text != "" && !header.input.focus) {
+                    root.currentView.listView.currentIndex = -1;
                     if (event.text == "v" && event.modifiers & Qt.ControlModifier) {
                         header.input.paste();
                     } else {
