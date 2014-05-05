@@ -113,7 +113,7 @@ function availableSpace(x, y, width, height)
     } else if (positions[row] == undefined) {
         availableSize.width = width - Math.max(0, (x + width) - resultsFlow.width)
         availableSize.height = height
-        print(Math.max(0, (x + width) - resultsFlow.width) +" "+ resultsFlow.width)
+//         print(Math.max(0, (x + width) - resultsFlow.width) +" "+ resultsFlow.width)
         return availableSize;
     } else if (!positions[row][column]) {
 

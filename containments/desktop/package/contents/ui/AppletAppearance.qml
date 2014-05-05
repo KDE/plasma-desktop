@@ -167,14 +167,14 @@ Item {
             Connections {
                 target: plasmoid
                 onImmutableChanged: {
-                    print(" TB dragMouseArea.visible: " + plasmoid.immutable)
+//                     print(" TB dragMouseArea.visible: " + plasmoid.immutable)
                     dragMouseArea.visible = !plasmoid.immutable;
                     showAppletHandle = false;
                 }
                 onAppletRemoved: {
-                    print("Applet removed Applet-" + applet.id)
+//                     print("Applet removed Applet-" + applet.id)
                     if (applet.id == appletItem.applet.id) {
-                        print("Destroying Applet-" + applet.id)
+//                         print("Destroying Applet-" + applet.id)
                         LayoutManager.setSpaceAvailable(appletItem.x, appletItem.y, appletItem.width, appletItem.height, true)
                         //applet.action("remove").trigger();
                         //appletItem.destroy()
@@ -192,7 +192,7 @@ Item {
                     }
                 }
                 onBackgroundHintsChanged: {
-                    print("plasmoid.backgroundHintsChanged");
+//                     print("plasmoid.backgroundHintsChanged");
                     updateBackgroundHints();
                 }
             }
@@ -248,7 +248,7 @@ Item {
                 property int minimumHeight: applet && applet.Layout ? applet.Layout.minimumHeight : 0
 
                 function appletDestroyed() {
-                    print("Applet DESTROYED.");
+//                     print("Applet DESTROYED.");
                     LayoutManager.setSpaceAvailable(appletItem.x, appletItem.y, appletItem.width, appletItem.height, true)
                     applet.action("remove").trigger();
                     appletItem.destroy()
@@ -285,7 +285,7 @@ Item {
                     anchors.centerIn: parent
                     z: appletContainer.z + 1
                 }
-                Rectangle { color: "green"; opacity: 0.3; visible: debug; anchors.fill: parent; }
+//                 Rectangle { color: "green"; opacity: 0.3; visible: debug; anchors.fill: parent; }
                 Component.onCompleted: PlasmaExtras.AppearAnimation {
                     targetItem: appletItem
                 }
@@ -311,7 +311,7 @@ Item {
 
             }
 
-            Rectangle { color: "orange"; opacity: 0.1; visible: debug; anchors.fill: parent; }
+//             Rectangle { color: "orange"; opacity: 0.1; visible: debug; anchors.fill: parent; }
         }
     }
 

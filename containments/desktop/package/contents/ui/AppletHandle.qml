@@ -65,7 +65,7 @@ KQuickControlsAddons.MouseEventListener {
             bottom: parent.bottom
             left: parent.left
             right: parent.right
-            verticalCenter: parent.verticalCenter
+//             verticalCenter: parent.verticalCenter
 
             leftMargin: -margins.left
             topMargin: -margins.top
@@ -129,7 +129,7 @@ KQuickControlsAddons.MouseEventListener {
                     LayoutManager.save()
                     LayoutManager.setSpaceAvailable(appletItem.x, appletItem.y, widthAnimation.to, heightAnimation.to, false)
                 }
-                Rectangle { color: "blue"; opacity: 0.4; visible: debug; anchors.fill: parent; }
+//                 Rectangle { color: "blue"; opacity: 0.4; visible: debug; anchors.fill: parent; }
             }
         }
         ActionButton {
@@ -201,7 +201,7 @@ KQuickControlsAddons.MouseEventListener {
                             newRotation = snapTo;
                         }
                     }
-                    print("Start: " + startRotation  + " new: " + newRotation);
+//                     print("Start: " + startRotation  + " new: " + newRotation);
                     appletItem.rotation = newRotation;
                 }
                 onReleased: {
@@ -209,7 +209,7 @@ KQuickControlsAddons.MouseEventListener {
 //                    print("saving...");
                     LayoutManager.saveItem(appletItem);
                 }
-                Rectangle { color: "red"; opacity: 0.6; visible: debug; anchors.fill: parent; }
+//                 Rectangle { color: "red"; opacity: 0.6; visible: debug; anchors.fill: parent; }
             }
         }
         ActionButton {
