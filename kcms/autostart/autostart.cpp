@@ -138,9 +138,9 @@ void Autostart::load()
     // share/autostart is special as it overrides entries found in $KDEDIR/share/autostart
     m_paths << QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QStringLiteral("/autostart/")
             << QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/shutdown/")
-            << QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/env/")
-            << QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/autostart/"); // For Importing purposes
+            << QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/env/");
     // share/autostart shouldn't be an option as this should be reserved for global autostart entries
+
     m_pathName << i18n("Startup")
              << i18n("Shutdown")
              << i18n("Pre-KDE startup")
@@ -208,7 +208,7 @@ void Autostart::load()
             else
             {
                 ScriptStartItem *item = new ScriptStartItem( fi.absoluteFilePath(), m_scriptItem,this );
-                int typeOfStartup = m_paths.indexOf((item->fileName().adjusted(QUrl::RemoveFilename).toString()) );
+                int typeOfStartup = m_paths.indexOf((item->fileName().adjusted(QUrl::RemoveScheme | QUrl::RemoveFilename).toString()) );
                 ScriptStartItem::ENV type = ScriptStartItem::START;
                 switch( typeOfStartup )
                 {
@@ -266,8 +266,8 @@ void Autostart::slotAddProgram()
     if ( service->desktopEntryName().isEmpty() ) {
         // Build custom desktop file (e.g. when the user entered an executable
         // name in the OpenWithDialog).
-        desktopPath = m_paths.last() + service->name() + ".desktop";
-        desktopTemplate = QUrl( desktopPath );
+        desktopPath = m_paths.first() + service->name() + ".desktop";
+        desktopTemplate = QUrl::fromLocalFile( desktopPath );
         KConfig kc(desktopTemplate.path(), KConfig::SimpleConfig);
         KConfigGroup kcg = kc.group("Desktop Entry");
         kcg.writeEntry("Exec",service->exec());
@@ -286,10 +286,10 @@ void Autostart::slotAddProgram()
     else
     {
         // Use existing desktop file and use same file name to enable overrides.
-        desktopPath = m_paths.last() + service->desktopEntryName() + ".desktop";
+        desktopPath = m_paths.first() + service->desktopEntryName() + ".desktop";
         desktopTemplate = QUrl::fromLocalFile( QStandardPaths::locate(QStandardPaths::ApplicationsLocation, service->entryPath()) );
 
-        KPropertiesDialog dlg( QUrl::fromLocalFile(service->entryPath()), QUrl::fromLocalFile(m_paths.last()), service->desktopEntryName() + ".desktop", this );
+        KPropertiesDialog dlg( QUrl::fromLocalFile(service->entryPath()), QUrl::fromLocalFile(m_paths.first()), service->desktopEntryName() + ".desktop", this );
         if ( dlg.exec() != QDialog::Accepted )
             return;
     }
@@ -303,9 +303,9 @@ void Autostart::slotAddScript()
     int result = addDialog->exec();
     if (result == QDialog::Accepted) {
         if (addDialog->symLink())
-            KIO::link(addDialog->importUrl(), QUrl(m_paths[0]));
+            KIO::link(addDialog->importUrl(), QUrl::fromLocalFile(m_paths[0]));
         else
-            KIO::copy(addDialog->importUrl(), QUrl(m_paths[0]));
+            KIO::copy(addDialog->importUrl(), QUrl::fromLocalFile(m_paths[0]));
 
         ScriptStartItem * item = new ScriptStartItem( m_paths[0] + addDialog->importUrl().fileName(), m_scriptItem,this );
         addItem( item,  addDialog->importUrl().fileName(), addDialog->importUrl().fileName(),ScriptStartItem::START );
