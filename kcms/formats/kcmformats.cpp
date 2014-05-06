@@ -16,15 +16,23 @@
  *  along with this program; if not, write to the Free Software
  */
 
-
-#include "ui_kcmformatswidget.h"
-#include <QApplication>
-#include <QLocale>
-#include <QDebug>
-
+// own
 #include "kcmformats.h"
+#include "ui_kcmformatswidget.h"
+
+// Qt
+#include <QApplication>
+#include <QComboBox>
+#include <QFile>
+#include <QDebug>
+#include <QLocale>
+#include <QStandardPaths>
+#include <QTextStream>
+
+// Frameworks
 #include <KPluginFactory>
 #include <KLocalizedString>
+
 
 K_PLUGIN_FACTORY_WITH_JSON(KCMFormatsFactory, "formats.json", registerPlugin<KCMFormats>();)
 
@@ -48,6 +56,10 @@ void KCMFormats::load()
         qDebug() << "Found locale: " << clabel << l.bcp47Name();
         m_ui->countriesCombo->addItem(i18n("%1 (%2)", clabel, cvalue) , QVariant(cvalue));
     }
+    connect(m_ui->countriesCombo, &QComboBox::currentTextChanged, [=](const QString txt){
+        qDebug() << "Changed" << txt;
+        emit changed(true);
+    } );
     qDebug() << "Loaded.";
     emit changed(false);
 }
@@ -55,6 +67,24 @@ void KCMFormats::load()
 void KCMFormats::save()
 {
     qDebug() << "Formats save:";
+    QString cvalue = m_ui->countriesCombo->currentData().toString();
+
+    QString configPath = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation);
+    configPath.append("/export-formats-settings.sh");
+    qDebug() << "Saving to filename: " << configPath;
+
+    QFile file(configPath);
+    file.open(QIODevice::WriteOnly | QIODevice::Text);
+    QTextStream out(&file);
+
+    QString shellscript;
+    shellscript = ("export LC_ALL=" + cvalue);
+    shellscript.append("\necho setting language to cvalue");
+    out << shellscript;
+    qDebug() << "WRote shellscript: " << shellscript;
+
+    // optional, as QFile destructor will already do it:
+    file.close();
 }
 
 void KCMFormats::defaults()
