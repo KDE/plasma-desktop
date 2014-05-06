@@ -51,7 +51,6 @@ DragDrop.DropArea {
 //BEGIN functions
 function addApplet(applet, x, y) {
     var container = appletContainerComponent.createObject(root)
-    print("Applet added in test panel: " + applet + applet.title + " at: " + x + ", " + y);
 
     applet.parent = container;
     container.applet = applet;
@@ -68,7 +67,6 @@ function addApplet(applet, x, y) {
     // If the provided position is valid, use it.
     } else if (x >= 0 && y >= 0) {
         var index = LayoutManager.insertAtCoordinates(container, x, y);
-        print("Applet " + applet.id + " " + applet.title + " was added in position " + index);
 
     // Fall through to determining an appropriate insert position.
     } else {

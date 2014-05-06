@@ -131,10 +131,6 @@ Item {
 
             mainText: desktopName
 
-            Component.onCompleted: {
-                console.log(model.windows)
-            }
-
             x: model.x
             y: model.y
             width: model.width
