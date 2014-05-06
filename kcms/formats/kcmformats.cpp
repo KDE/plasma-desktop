@@ -53,14 +53,14 @@ void KCMFormats::load()
     foreach (const QLocale &l, allLocales) {
         const QString clabel = l.countryToString(l.country());
         const QString cvalue = l.bcp47Name();
-        qDebug() << "Found locale: " << clabel << l.bcp47Name();
+        //qDebug() << "Found locale: " << clabel << l.bcp47Name();
         m_ui->countriesCombo->addItem(i18n("%1 (%2)", clabel, cvalue) , QVariant(cvalue));
     }
     connect(m_ui->countriesCombo, &QComboBox::currentTextChanged, [=](const QString txt){
         qDebug() << "Changed" << txt;
         emit changed(true);
     } );
-    qDebug() << "Loaded.";
+    qDebug() << "Loaded locales: " << allLocales.count();
     emit changed(false);
 }
 
