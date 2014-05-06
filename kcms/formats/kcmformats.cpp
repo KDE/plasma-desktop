@@ -54,9 +54,9 @@ void KCMFormats::load()
         const QString clabel = l.countryToString(l.country());
         const QString cvalue = l.bcp47Name();
         //qDebug() << "Found locale: " << clabel << l.bcp47Name();
-        m_ui->countriesCombo->addItem(i18n("%1 (%2)", clabel, cvalue) , QVariant(cvalue));
+        m_ui->comboGlobal->addItem(i18n("%1 (%2)", clabel, cvalue) , QVariant(cvalue));
     }
-    connect(m_ui->countriesCombo, &QComboBox::currentTextChanged, [=](const QString txt){
+    connect(m_ui->comboGlobal, &QComboBox::currentTextChanged, [=](const QString txt){
         qDebug() << "Changed" << txt;
         emit changed(true);
     } );
@@ -67,7 +67,7 @@ void KCMFormats::load()
 void KCMFormats::save()
 {
     qDebug() << "Formats save:";
-    QString cvalue = m_ui->countriesCombo->currentData().toString();
+    QString cvalue = m_ui->comboGlobal->currentData().toString();
 
     QString configPath = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation);
     configPath.append("/export-formats-settings.sh");
