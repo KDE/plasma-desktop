@@ -440,6 +440,12 @@ Item {
                 break;
             }
             default: { // forward key to searchView
+                //header.query += event.text will break if the jey is backspace,
+                //since if the user continues to type, it will produce an invalid query,
+                //having backspace as the first character
+                if (event.key == Qt.Key_Backspace && header.query == "") {
+                    return;
+                }
                 if (event.text != "" && !header.input.focus) {
                     root.currentView.listView.currentIndex = -1;
                     if (event.text == "v" && event.modifiers & Qt.ControlModifier) {

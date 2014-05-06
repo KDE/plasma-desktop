@@ -104,8 +104,6 @@ Rectangle {
     }
 
     onContainmentChanged: {
-        print("New Containment: " + containment);
-        print("Old Containment: " + internal.oldContainment);
         //containment.parent = root;
 
         internal.newContainment = containment;
@@ -194,6 +192,5 @@ Rectangle {
         //configure the view behavior
         desktop.stayBehind = true;
         desktop.fillScreen = true;
-        print("View org.kde.desktop QML loaded")
     }
 }

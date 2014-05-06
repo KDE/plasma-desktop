@@ -51,7 +51,6 @@ DragDrop.DropArea {
 //BEGIN functions
 function addApplet(applet, x, y) {
     var container = appletContainerComponent.createObject(root)
-    print("Applet added in test panel: " + applet + applet.title + " at: " + x + ", " + y);
 
     applet.parent = container;
     container.applet = applet;
@@ -59,23 +58,48 @@ function addApplet(applet, x, y) {
     applet.visible = true;
     container.visible = true;
 
-    //is there a DND placeholder? replace it!
+    // Is there a DND placeholder? Replace it!
     if (dndSpacer.parent === currentLayout) {
         LayoutManager.insertBefore(dndSpacer, container);
         dndSpacer.parent = root;
         return;
 
-    //if the provided position is valid, try it
+    // If the provided position is valid, use it.
     } else if (x >= 0 && y >= 0) {
         var index = LayoutManager.insertAtCoordinates(container, x, y);
-        print("Applet " + applet.id + " " + applet.title + " was added in position " + index)
 
-    //give up: enqueue the applet after all the others
+    // Fall through to determining an appropriate insert position.
     } else {
-        //if lastspacer is here, enqueue after it
+        var before = null;
+
         if (lastSpacer.parent === currentLayout) {
-            LayoutManager.insertBefore(lastSpacer, container);
-        //else put it in last position
+            before = lastSpacer;
+        }
+
+        // Insert icons to the left of whatever is at the center (usually a Task Manager),
+        // if it exists.
+        // FIXME TODO: This is a real-world fix to produce a sensible initial position for
+        // launcher icons added by launcher menu applets. The basic approach has been used
+        // since Plasma 1. However, "add launcher to X" is a generic-enough concept and
+        // frequent-enough occurence that we'd like to abstract it further in the future
+        // and get rid of the uglyness of parties external to the containment adding applets
+        // of a specific type, and the containment caring about the applet type. In a better
+        // system the containment would be informed of requested launchers, and determine by
+        // itself what it wants to do with that information.
+        if (applet.pluginName == "org.kde.plasma.icon") {
+            var middle = currentLayout.childAt(root.width / 2, root.height / 2);
+
+            if (middle) {
+                before = middle;
+            }
+
+        // Otherwise if lastSpacer is here, enqueue before it.
+        } 
+
+        if (before) {
+            LayoutManager.insertBefore(before, container);
+
+        // Fall through to adding at the end.
         } else {
             container.parent = currentLayout;
         }

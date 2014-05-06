@@ -98,7 +98,7 @@ PlasmaCore.ToolTipArea {
         Behavior on opacity {
             NumberAnimation {
                 duration: theme.shortDuration
-                easing: Easing.InOutQuad
+                easing.type: Easing.InOutQuad
             }
         }
     }

@@ -31,7 +31,7 @@
 
 AutoStartItem::AutoStartItem( const QString &service, QTreeWidgetItem *parent, Autostart* )
     : QTreeWidgetItem( parent )
-    , m_fileName(service)
+    , m_fileName(QUrl::fromLocalFile(service))
 {
 }
 
@@ -53,9 +53,9 @@ void AutoStartItem::setPath(const QString &path)
         return;
 
     const QString& newFileName = path + m_fileName.fileName();
-    KIO::move(m_fileName, QUrl(newFileName));
+    KIO::move(m_fileName, QUrl::fromLocalFile(newFileName));
 
-    m_fileName = QUrl(newFileName);
+    m_fileName = QUrl::fromLocalFile(newFileName);
 }
 
 DesktopStartItem::DesktopStartItem( const QString &service, QTreeWidgetItem *parent, Autostart*autostart )

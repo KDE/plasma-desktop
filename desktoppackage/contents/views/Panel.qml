@@ -86,7 +86,6 @@ PlasmaCore.FrameSvgItem {
             break;
         case PlasmaCore.Types.BottomEdge:
         default:
-            print("PANEL disable bottom border");
             borders = borders & ~PlasmaCore.FrameSvg.BottomBorder;
             break;
         }
@@ -117,7 +116,6 @@ PlasmaCore.FrameSvgItem {
     }
 
     onContainmentChanged: {
-        print("New panel Containment: " + containment);
         containment.parent = containmentParent;
         containment.visible = true;
         containment.anchors.fill = containmentParent;
@@ -202,7 +200,6 @@ PlasmaCore.FrameSvgItem {
     }
 
     Component.onCompleted: {
-        print("PanelView QML loaded")
         adjustBorders();
         visible = true
     }
