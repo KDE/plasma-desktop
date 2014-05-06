@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>627</width>
-    <height>508</height>
+    <height>367</height>
    </rect>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
@@ -47,7 +47,14 @@
       </widget>
      </item>
      <item row="0" column="1">
-      <widget class="QComboBox" name="countriesCombo"/>
+      <widget class="QComboBox" name="countriesCombo">
+       <property name="minimumSize">
+        <size>
+         <width>300</width>
+         <height>0</height>
+        </size>
+       </property>
+      </widget>
      </item>
      <item row="2" column="0">
       <widget class="QLabel" name="label_4">
@@ -82,6 +89,13 @@
     </layout>
    </item>
    <item>
+    <widget class="QLabel" name="label_5">
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item>
     <spacer name="verticalSpacer">
      <property name="orientation">
       <enum>Qt::Vertical</enum>
@@ -89,7 +103,7 @@
      <property name="sizeHint" stdset="0">
       <size>
        <width>20</width>
-       <height>40</height>
+       <height>60</height>
       </size>
      </property>
     </spacer>

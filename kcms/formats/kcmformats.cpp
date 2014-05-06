@@ -16,10 +16,11 @@
  *  along with this program; if not, write to the Free Software
  */
 
-#include <QVBoxLayout>
-#include <QDebug>
+
 #include "ui_kcmformatswidget.h"
 #include <QApplication>
+#include <QLocale>
+#include <QDebug>
 
 #include "kcmformats.h"
 #include <KPluginFactory>
@@ -39,7 +40,15 @@ KCMFormats::KCMFormats(QWidget *parent, const QVariantList &args)
 
 void KCMFormats::load()
 {
-    qDebug() << "Load.";
+    QList<QLocale> allLocales = QLocale::matchingLocales(QLocale::AnyLanguage, QLocale::AnyScript, QLocale::AnyCountry);
+
+    foreach (const QLocale &l, allLocales) {
+        const QString clabel = l.countryToString(l.country());
+        const QString cvalue = l.bcp47Name().replace('-', '_');
+        qDebug() << "Found locale: " << clabel << l.bcp47Name();
+        m_ui->countriesCombo->addItem(i18n("%1 (%2)", clabel, cvalue) , QVariant(cvalue));
+    }
+    qDebug() << "Loaded.";
     emit changed(false);
 }
 
