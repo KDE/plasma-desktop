@@ -59,7 +59,6 @@ Pager::Pager(QObject *parent)
     : QObject(parent),
       m_displayedText(None),
       m_currentDesktopSelected(DoNothing),
-      m_rows(2),
       m_columns(0),
       m_currentDesktop(0),
       m_orientation(Qt::Horizontal),
@@ -73,6 +72,9 @@ Pager::Pager(QObject *parent)
       , m_isX11(QX11Info::isPlatformX11())
 #endif
 {
+    NETRootInfo info(QX11Info::connection(), NET::NumberOfDesktops | NET::DesktopNames, NET::WM2DesktopLayout);
+    m_rows = info.desktopLayoutColumnsRows().height();
+
     // initialize with a decent default
     m_desktopCount = qMax(1, KWindowSystem::numberOfDesktops());
     
@@ -367,6 +369,10 @@ void Pager::updateSizes()
 
 void Pager::recalculateWindowRects()
 {
+    NETRootInfo info(QX11Info::connection(), NET::NumberOfDesktops | NET::DesktopNames, NET::WM2DesktopLayout);
+    m_rows = info.desktopLayoutColumnsRows().height();
+    recalculateGridSizes(m_rows);
+
     if (!m_validSizes) {
         updateSizes();
     }
@@ -452,6 +458,9 @@ void Pager::numberOfDesktopsChanged(int num)
     if (num < 1) {
         return; // refuse to update to zero desktops
     }
+
+    NETRootInfo info(QX11Info::connection(), NET::NumberOfDesktops | NET::DesktopNames, NET::WM2DesktopLayout);
+    m_rows = info.desktopLayoutColumnsRows().height();
 
 #if HAVE_X11
     m_removeDesktopAction->setEnabled(num > 1);
