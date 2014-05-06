@@ -52,7 +52,7 @@ void KCMFormats::load()
 
     foreach (const QLocale &l, allLocales) {
         const QString clabel = l.countryToString(l.country());
-        const QString cvalue = l.bcp47Name().replace('-', '_');
+        const QString cvalue = l.bcp47Name();
         qDebug() << "Found locale: " << clabel << l.bcp47Name();
         m_ui->countriesCombo->addItem(i18n("%1 (%2)", clabel, cvalue) , QVariant(cvalue));
     }
@@ -79,7 +79,7 @@ void KCMFormats::save()
 
     QString shellscript;
     shellscript = ("export LC_ALL=" + cvalue);
-    shellscript.append("\necho setting language to cvalue");
+    //shellscript.append("\necho setting language to cvalue");
     out << shellscript;
     qDebug() << "WRote shellscript: " << shellscript;
 
