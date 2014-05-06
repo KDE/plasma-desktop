@@ -72,6 +72,10 @@ function addApplet(applet, x, y) {
     } else {
         var before = null;
 
+        if (lastSpacer.parent === currentLayout) {
+            before = lastSpacer;
+        }
+
         // Insert icons to the left of whatever is at the center (usually a Task Manager),
         // if it exists.
         // FIXME TODO: This is a real-world fix to produce a sensible initial position for
@@ -89,10 +93,8 @@ function addApplet(applet, x, y) {
                 before = middle;
             }
 
-        // Otherwise if lastSpacer is here, enqueue after it.
-        } else if (lastSpacer.parent === currentLayout) {
-            before = lastSpacer;
-        }
+        // Otherwise if lastSpacer is here, enqueue before it.
+        } 
 
         if (before) {
             LayoutManager.insertBefore(before, container);
