@@ -53,6 +53,7 @@ public:
 Q_SIGNALS:
     void touchpadStateChanged();
     void mousesChanged();
+    void touchpadReset();
     void keyboardActivityStarted();
     void keyboardActivityFinished();
 };
