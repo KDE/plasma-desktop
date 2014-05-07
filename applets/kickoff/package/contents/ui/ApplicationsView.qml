@@ -169,7 +169,11 @@ Item {
                     }
                 }
 
-                model: Kickoff.ApplicationModel {}
+                model: Kickoff.ApplicationModel {
+                    onModelReset: {
+                        applicationsView.clearBreadcrumbs();
+                    }
+                }
             } // VisualDataModel
 
             function addBreadcrumb(categoryIndex, title) {
