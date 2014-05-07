@@ -107,7 +107,7 @@ Item {
 
         onPositionChanged: {
             if (pressX != -1 && model.url && dragHelper.isDrag(pressX, pressY, mouse.x, mouse.y)) {
-                dragHelper.startDrag(item, model.url);
+                dragHelper.startDrag(kicker, model.url);
                 pressX = -1;
                 pressY = -1;
 

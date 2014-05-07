@@ -34,10 +34,13 @@ class DragHelper : public QObject
         ~DragHelper();
 
         Q_INVOKABLE bool isDrag(int oldX, int oldY, int newX, int newY) const;
-        Q_INVOKABLE void startDrag(QQuickItem* item, const QUrl &url = QUrl()) const;
+        Q_INVOKABLE void startDrag(QQuickItem* item, const QUrl &url = QUrl());
 
     Q_SIGNALS:
         void dropped() const;
+
+    private:
+        Q_INVOKABLE void doDrag(QQuickItem* item, const QUrl &url = QUrl()) const;
 };
 
 #endif
