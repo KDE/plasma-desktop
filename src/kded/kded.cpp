@@ -61,6 +61,8 @@ TouchpadDisabler::TouchpadDisabler(QObject *parent, const QVariantList &)
     connect(m_backend, SIGNAL(touchpadStateChanged()),
             SLOT(updateCurrentState()));
 
+    connect(m_backend, SIGNAL(touchpadReset()), SLOT(handleReset()));
+
     m_keyboardActivityTimeout.setSingleShot(true);
     connect(&m_keyboardActivityTimeout, SIGNAL(timeout()),
             SLOT(timerElapsed()));
@@ -204,4 +206,12 @@ void TouchpadDisabler::lateInit()
 
     updateCurrentState();
     mousePlugged();
+}
+
+void touchpadApplySavedConfig();
+
+void TouchpadDisabler::handleReset()
+{
+    m_backend->setTouchpadEnabled(m_enabled);
+    touchpadApplySavedConfig();
 }

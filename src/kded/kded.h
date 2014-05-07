@@ -56,6 +56,7 @@ private Q_SLOTS:
     void mousePlugged();
     void updateCurrentState();
     void serviceRegistered(const QString &);
+    void handleReset();
 
 private:
     void showNotification(const QString &name, const QString &text);
