@@ -43,6 +43,14 @@ DragDrop.DropArea {
 
     onIconHeightChanged: updateGridSize()
 
+    anchors {
+        leftMargin: plasmoid.availableScreenRect != undefined ? plasmoid.availableScreenRect.x : 0
+        topMargin: plasmoid.availableScreenRect != undefined ? plasmoid.availableScreenRect.y : 0
+
+        rightMargin: plasmoid.availableScreenRect != undefined ? parent.width - (plasmoid.availableScreenRect.x + plasmoid.availableScreenRect.width) : 0
+        bottomMargin: plasmoid.availableScreenRect != undefined ? parent.height - (plasmoid.availableScreenRect.y + plasmoid.availableScreenRect.height) : 0
+    }
+
     function updateGridSize()
     {
 //         print("Updategridsize");
