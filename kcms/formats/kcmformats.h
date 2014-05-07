@@ -18,11 +18,15 @@
 #ifndef __kcmformats_h__
 #define __kcmformats_h__
 
-#include <kcmodule.h>
+#include <KCModule>
+#include <KConfigGroup>
 
 namespace Ui {
     class KCMFormatsWidget;
 }
+class QComboBox;
+
+
 class KCMFormats : public KCModule
 {
     Q_OBJECT
@@ -33,8 +37,19 @@ public:
     void load();
     void save();
     void defaults();
+
 private:
+    void addLocaleToCombo(QComboBox* combo, const QLocale &locale);
+    void initCombo(QComboBox* combo);
+    void connectCombo(QComboBox* combo);
+    QList<QComboBox*> m_combos;
+
+    void readConfig();
+    void writeConfig();
+    void writeExports();
+
     Ui::KCMFormatsWidget* m_ui;
+    KConfigGroup m_config;
 };
 
 #endif
