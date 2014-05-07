@@ -38,20 +38,23 @@
 #include "customconfigdialogmanager.h"
 #include "kded/kdedactions.h"
 
+void touchpadApplySavedConfig()
+{
+    TouchpadBackend *backend = TouchpadBackend::implementation();
+    if (!backend) {
+        return;
+    }
+
+    TouchpadParameters config;
+    backend->applyConfig(config.values());
+}
+
 extern "C"
 {
     KDE_EXPORT void kcminit_touchpad()
     {
         TouchpadParameters::setSystemDefaults();
-
-        TouchpadBackend *backend = TouchpadBackend::implementation();
-
-        if (!backend) {
-            return;
-        }
-
-        TouchpadParameters config;
-        backend->applyConfig(config.values());
+        touchpadApplySavedConfig();
     }
 }
 
