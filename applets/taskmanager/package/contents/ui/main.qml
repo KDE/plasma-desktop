@@ -214,6 +214,14 @@ Item {
 
     GroupDialog { id: groupDialog }
 
+    function hasLauncher(url) {
+        return backend.groupManager.launcherExists(url);
+    }
+
+    function addLauncher(url) {
+        backend.groupManager.addLauncher(url);
+    }
+
     function updateStatus(demandsAttention) {
         if (demandsAttention) {
             plasmoid.status = PlasmaCore.Types.NeedsAttentionStatus;
