@@ -30,6 +30,7 @@ enum {
     FavoriteIdRole,
     HasActionListRole,
     ActionListRole,
+    UrlRole
 };
 
 QVariantMap createActionItem(const QString &label, const QString &actionId, const QVariant &argument = QVariant());

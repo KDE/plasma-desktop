@@ -126,6 +126,10 @@ QVariant AppsModel::data(const QModelIndex &index, int role) const
 
             return actionList;
         }
+    } else if (role == Kicker::UrlRole) {
+        if (m_entryList.at(index.row())->type() == AbstractEntry::RunnableType) {
+            return QUrl::fromLocalFile(static_cast<AppEntry *>(m_entryList.at(index.row()))->service()->entryPath());
+        }
     }
 
     return QVariant();
