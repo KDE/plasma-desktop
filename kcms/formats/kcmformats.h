@@ -48,6 +48,9 @@ private:
     void writeConfig();
     void writeExports();
 
+    void updateExample();
+    void updateEnabled();
+
     Ui::KCMFormatsWidget* m_ui;
     KConfigGroup m_config;
 };

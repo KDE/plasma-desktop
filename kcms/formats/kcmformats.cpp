@@ -83,10 +83,12 @@ void KCMFormats::load()
     }
     connect(m_ui->radioAll, &QAbstractButton::toggled, [=](bool enabled){
         qDebug() << "Changed" << enabled;
+        updateExample();
         emit changed(true);
     } );
 
     qDebug() << "Loaded locales: " << allLocales.count();
+    updateExample();
     emit changed(false);
 }
 
@@ -100,6 +102,7 @@ void KCMFormats::connectCombo(QComboBox* combo)
 {
     connect(combo, &QComboBox::currentTextChanged, [=](const QString txt){
         qDebug() << "Changed" << txt;
+        updateExample();
         emit changed(true);
     } );
 }
@@ -258,7 +261,51 @@ void KCMFormats::save()
 
 void KCMFormats::defaults()
 {
-    qDebug() << "Formats defaults:";
+    readConfig();
 }
+
+void KCMFormats::updateEnabled()
+{
+
+}
+
+void KCMFormats::updateExample()
+{
+    bool useDetailed = m_ui->radioAll->isChecked();
+
+    QLocale nloc;
+    QLocale tloc;
+    QLocale cloc;
+    QLocale mloc;
+
+    if (!useDetailed) {
+        nloc = QLocale(m_ui->comboNumbers->currentData().toString());
+        tloc = QLocale(m_ui->comboTime->currentData().toString());
+        cloc = QLocale(m_ui->comboCurrency->currentData().toString());
+        mloc = QLocale(m_ui->comboMeasurement->currentData().toString());
+
+    } else {
+        nloc = QLocale(m_ui->comboGlobal->currentData().toString());
+        tloc = QLocale(m_ui->comboGlobal->currentData().toString());
+        cloc = QLocale(m_ui->comboGlobal->currentData().toString());
+        mloc = QLocale(m_ui->comboGlobal->currentData().toString());
+    }
+
+    QString numberExample = nloc.toString(1000.01);
+    QString timeExample = tloc.toString(QDateTime::currentDateTime());
+    QString currencyExample = tloc.toCurrencyString(24.99);
+    QString measurementExample = tloc.toString(0);
+
+    qDebug() << "NumberExample: " << numberExample;
+    qDebug() << "TimeExample: " << timeExample;
+    qDebug() << "CurrencyExample: " << currencyExample;
+
+    m_ui->exampleNumbers->setText(numberExample);
+    m_ui->exampleTime->setText(timeExample);
+    m_ui->exampleCurrency->setText(currencyExample);
+    m_ui->exampleMeasurement->setText(measurementExample);
+
+}
+
 
 #include "kcmformats.moc"
