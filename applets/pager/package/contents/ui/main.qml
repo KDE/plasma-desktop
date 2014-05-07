@@ -33,8 +33,8 @@ Item {
     Layout.minimumWidth: Layout.maximumWidth
     Layout.minimumHeight: Layout.maximumHeight
 
-    Layout.maximumWidth: !root.vertical ? pager.preferredSize.width : undefined
-    Layout.maximumHeight: root.vertical ? pager.preferredSize.height : undefined
+    Layout.maximumWidth: !root.vertical ? pager.preferredSize.width : Infinity
+    Layout.maximumHeight: root.vertical ? pager.preferredSize.height : Infinity
 
     Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
     Layout.fillWidth: root.vertical 
