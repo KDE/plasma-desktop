@@ -47,7 +47,7 @@ Column {
         height: childrenRect.height
         spacing: units.largeSpacing
         Repeater {
-            model: toolTip.windows
+            model: toolTip ? toolTip.windows : null
 
             PlasmaCore.WindowThumbnail {
                 width: units.gridUnit * 15

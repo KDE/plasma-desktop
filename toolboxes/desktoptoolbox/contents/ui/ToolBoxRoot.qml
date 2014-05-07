@@ -100,7 +100,7 @@ Item {
             }
         }
         y: {
-            var maxY = main.height - item.childrenRect.height - margin
+            var maxY = main.height - (item ? item.childrenRect.height : 0) - margin
             if (toolBoxButton.y > maxY) {
                 return maxY;
             } else {
