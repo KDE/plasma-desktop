@@ -106,6 +106,10 @@ MouseEventListener {
         doubleClickInProgress = false;
     }
 
+    function linkHere(sourceUrl) {
+        dir.linkHere(sourceUrl);
+    }
+
     Timer {
         id: doubleClickTimer
 
