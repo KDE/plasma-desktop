@@ -1,6 +1,6 @@
 /*
  *  kcmformats.cpp
- *  Copyright 2014 Sebastian Kugler <sebas@kde.org>
+ *  Copyright 2014 Sebastian Kuegler <sebas@kde.org>
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -46,6 +46,7 @@ const static QString lcMonetary = QStringLiteral("LC_MONETARY");
 const static QString lcMeasurement = QStringLiteral("LC_MEASUREMENT");
 const static QString lcGlobal = QStringLiteral("Global");
 
+
 KCMFormats::KCMFormats(QWidget *parent, const QVariantList &args)
   : KCModule(parent, args)
 {
@@ -63,7 +64,6 @@ KCMFormats::KCMFormats(QWidget *parent, const QVariantList &args)
 
 void KCMFormats::load()
 {
-
     QList<QLocale> allLocales = QLocale::matchingLocales(QLocale::AnyLanguage, QLocale::AnyScript, QLocale::AnyCountry);
 
     foreach (QComboBox* combo, m_combos) {
@@ -85,6 +85,7 @@ void KCMFormats::load()
         qDebug() << "Changed" << enabled;
         emit changed(true);
     } );
+
     qDebug() << "Loaded locales: " << allLocales.count();
     emit changed(false);
 }
@@ -107,7 +108,6 @@ void KCMFormats::addLocaleToCombo(QComboBox* combo, const QLocale &locale)
 {
     const QString clabel = locale.countryToString(locale.country());
     const QString cvalue = locale.bcp47Name();
-    //qDebug() << "Found locale: " << clabel << l.bcp47Name();
     combo->addItem(i18n("%1 (%2)", clabel, cvalue) , QVariant(cvalue));
 }
 
@@ -115,7 +115,6 @@ void setCombo(QComboBox* combo, const QString &key) {
     int ix = combo->findData(key);
     if (ix > -1) {
         combo->setCurrentIndex(ix);
-        qDebug() << "set " << ix << key;
     }
 }
 
@@ -133,9 +132,7 @@ void KCMFormats::readConfig()
     setCombo(m_ui->comboTime, m_config.readEntry(lcTime, QString()));
     setCombo(m_ui->comboCurrency, m_config.readEntry(lcMonetary, QString()));
     setCombo(m_ui->comboMeasurement, m_config.readEntry(lcMeasurement, QString()));
-
 }
-
 
 void KCMFormats::writeConfig()
 {
@@ -157,14 +154,8 @@ void KCMFormats::writeConfig()
             m_config.writeEntry(lcMonetary, _global);
             m_config.writeEntry(lcMeasurement, _global);
         }
-    } else {
+    } else { // Save detailed settings
         m_config.writeEntry("useDetailed", true);
-//         const QString _numeric = m_ui->comboNumbers->currentData().toString();
-
-//         m_config.deleteEntry(lcGlobal);
-//         m_config.deleteEntry(lcTime);
-//         m_config.deleteEntry(lcMonetary);
-//         m_config.deleteEntry(lcMeasurement);
 
         if (_global.isEmpty()) {
             m_config.deleteEntry(lcGlobal);
@@ -204,13 +195,7 @@ void KCMFormats::writeConfig()
             qDebug() << "_measurement: " << _measurement;
             m_config.writeEntry(lcMeasurement, _measurement);
         }
-
-//         m_config.writeEntry(lcTime, m_ui->comboTime->currentData().toString());
-//         m_config.writeEntry(lcMonetary, m_ui->comboCurrency->currentData().toString());
-//         m_config.writeEntry(lcMeasurement, m_ui->comboMeasurement->currentData().toString());
-
     }
-
 
     m_config.sync();
 }
@@ -259,7 +244,7 @@ void KCMFormats::writeExports()
     file.open(QIODevice::WriteOnly | QIODevice::Text);
     QTextStream out(&file);
 
-    qDebug() << "Wrote shellscript: " << script;
+    qDebug() << "Wrote shellscript: " << "\n" << script;
     out << script;
     file.close();
 }
