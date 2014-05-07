@@ -21,15 +21,16 @@
 #include <cstring>
 
 #include <X11/Xlib.h>
+#include <X11/Xlib-xcb.h>
 #include <X11/extensions/XI.h>
 #include <X11/extensions/XI2proto.h>
 #include <X11/extensions/XInput2.h>
 
-XlibNotifications::XlibNotifications(Display *display,
-                                     xcb_connection_t *connection,
-                                     int device)
-    : m_connection(connection)
+XlibNotifications::XlibNotifications(Display *display, int device)
+    : m_display(display), m_device(device)
 {
+    m_connection = XGetXCBConnection(display);
+
     m_notifier = new QSocketNotifier(xcb_get_file_descriptor(m_connection),
                                      QSocketNotifier::Read, this);
 
@@ -53,19 +54,19 @@ XlibNotifications::XlibNotifications(Display *display,
 
     XIEventMask masks[2];
 
-    unsigned char propertyMask[] = { 0, 0, 0, 0 };
+    unsigned char touchpadMask[] = { 0, 0, 0, 0 };
     masks[0].deviceid = device;
-    masks[0].mask = propertyMask;
-    masks[0].mask_len = sizeof(propertyMask);
-    XISetMask(propertyMask, XI_PropertyEvent);
+    masks[0].mask = touchpadMask;
+    masks[0].mask_len = sizeof(touchpadMask);
+    XISetMask(touchpadMask, XI_PropertyEvent);
 
-    unsigned char hierarchyMask[] = { 0, 0, 0, 0 };
+    unsigned char allMask[] = { 0, 0, 0, 0 };
     masks[1].deviceid = XIAllDevices;
-    masks[1].mask = hierarchyMask;
-    masks[1].mask_len = sizeof(hierarchyMask);
-    XISetMask(hierarchyMask, XI_HierarchyChanged);
+    masks[1].mask = allMask;
+    masks[1].mask_len = sizeof(allMask);
+    XISetMask(allMask, XI_HierarchyChanged);
 
-    XISelectEvents(display, m_inputWindow, masks,
+    XISelectEvents(display, XDefaultRootWindow(display), masks,
                    sizeof(masks) / sizeof(XIEventMask));
     XFlush(display);
 
@@ -75,38 +76,73 @@ XlibNotifications::XlibNotifications(Display *display,
 
 void XlibNotifications::processEvents()
 {
-    xcb_generic_event_t *event;
-    while ((event = xcb_poll_for_event(m_connection))) {
-        QScopedPointer<xcb_generic_event_t, QScopedPointerPodDeleter>
-                eventData(event);
-        processEvent(eventData.data());
+    while (XPending(m_display)) {
+        XEvent event;
+        XNextEvent(m_display, &event);
+        processEvent(&event);
     }
 }
 
-void XlibNotifications::processEvent(xcb_generic_event_t *event)
+struct XEventDataDeleter
 {
-    if (event->response_type != GenericEvent) {
+    XEventDataDeleter(Display *display, XGenericEventCookie *cookie)
+        : m_display(display), m_cookie(cookie)
+    {
+        XGetEventData(m_display, m_cookie);
+    }
+
+    ~XEventDataDeleter()
+    {
+        if (m_cookie->data) {
+            XFreeEventData(m_display, m_cookie);
+        }
+    }
+
+    Display *m_display;
+    XGenericEventCookie *m_cookie;
+};
+
+void XlibNotifications::processEvent(XEvent *event)
+{
+    if (event->xcookie.type != GenericEvent) {
+        return;
+    }
+    if (event->xcookie.extension != m_inputOpcode) {
         return;
     }
 
-    xGenericEvent *ge = reinterpret_cast<xGenericEvent*>(event);
-    if (ge->extension != m_inputOpcode) {
-        return;
-    }
+    if (event->xcookie.evtype == XI_PropertyEvent) {
+        XEventDataDeleter helper(m_display, &event->xcookie);
+        if (!event->xcookie.data) {
+            return;
+        }
 
-    if (ge->evtype == XI_PropertyEvent) {
-        xXIPropertyEvent *propEvent = reinterpret_cast<xXIPropertyEvent *>(ge);
+        XIPropertyEvent *propEvent =
+                reinterpret_cast<XIPropertyEvent *>(event->xcookie.data);
         Q_EMIT propertyChanged(propEvent->property);
-    } else if (ge->evtype == XI_HierarchyChanged) {
-        static const int acceptEvents =
-                XIMasterAdded | XIMasterRemoved |
-                XISlaveAttached | XISlaveDetached |
-                XIDeviceEnabled | XIDeviceDisabled;
+    } else if (event->xcookie.evtype == XI_HierarchyChanged) {
+        XEventDataDeleter helper(m_display, &event->xcookie);
+        if (!event->xcookie.data) {
+            return;
+        }
 
-        xXIHierarchyEvent *hierarchyEvent =
-                reinterpret_cast<xXIHierarchyEvent *>(ge);
-        if (hierarchyEvent->flags & acceptEvents) {
-            Q_EMIT deviceChanged(hierarchyEvent->deviceid);
+        XIHierarchyEvent *hierarchyEvent =
+                reinterpret_cast<XIHierarchyEvent *>(event->xcookie.data);
+        for (uint16_t i = 0; i < hierarchyEvent->num_info; i++) {
+            if (hierarchyEvent->info[i].deviceid == m_device) {
+                if (hierarchyEvent->info[i].flags & XISlaveRemoved) {
+                    Q_EMIT touchpadDetached();
+                    return;
+                }
+            }
+            if (hierarchyEvent->info[i].use != XISlavePointer) {
+                continue;
+            }
+            if (hierarchyEvent->info[i].flags &
+                    (XIDeviceEnabled | XIDeviceDisabled))
+            {
+                Q_EMIT devicePlugged(hierarchyEvent->info[i].deviceid);
+            }
         }
     }
 }
@@ -114,6 +150,7 @@ void XlibNotifications::processEvent(xcb_generic_event_t *event)
 XlibNotifications::~XlibNotifications()
 {
     xcb_destroy_window(m_connection, m_inputWindow);
+    xcb_flush(m_connection);
 }
 
 #include "moc_xlibnotifications.cpp"

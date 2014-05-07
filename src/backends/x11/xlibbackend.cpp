@@ -602,8 +602,23 @@ TouchpadBackend::TouchpadOffState XlibBackend::getTouchpadOff()
     }
 }
 
-void XlibBackend::deviceChanged(int device)
+void XlibBackend::touchpadDetached()
 {
+    kWarning() << "Touchpad detached";
+    m_device = XIAllDevices;
+}
+
+void XlibBackend::devicePlugged(int device)
+{
+    if (m_device == XIAllDevices) {
+        m_device = findTouchpad();
+        if (m_device != XIAllDevices) {
+            kWarning() << "Touchpad reset";
+            m_notifications.reset();
+            watchForEvents(m_keyboard);
+            Q_EMIT touchpadReset();
+        }
+    }
     if (device != m_device) {
         Q_EMIT mousesChanged();
     }
@@ -663,11 +678,11 @@ QStringList XlibBackend::listMouses(const QStringList &blacklist)
 void XlibBackend::watchForEvents(bool keyboard)
 {
     if (!m_notifications) {
-        m_notifications.reset(
-                    new XlibNotifications(m_display.data(), m_connection,
-                                          m_device));
-        connect(m_notifications.data(), SIGNAL(deviceChanged(int)),
-                SLOT(deviceChanged(int)));
+        m_notifications.reset(new XlibNotifications(m_display.data(), m_device));
+        connect(m_notifications.data(), SIGNAL(devicePlugged(int)),
+                SLOT(devicePlugged(int)));
+        connect(m_notifications.data(), SIGNAL(touchpadDetached()),
+                SLOT(touchpadDetached()));
         connect(m_notifications.data(), SIGNAL(propertyChanged(xcb_atom_t)),
                 SLOT(propertyChanged(xcb_atom_t)));
     }

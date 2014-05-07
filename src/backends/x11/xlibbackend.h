@@ -61,7 +61,8 @@ public:
 
 private slots:
     void propertyChanged(xcb_atom_t);
-    void deviceChanged(int);
+    void touchpadDetached();
+    void devicePlugged(int);
 
 private:
     struct PropertyInfo *getDevProperty(const QLatin1String &propName);
