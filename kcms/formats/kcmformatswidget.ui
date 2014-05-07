@@ -17,6 +17,9 @@
      <property name="text">
       <string>&lt;h3&gt;Set Locale Country and Language&lt;/h3&gt;</string>
      </property>
+     <property name="margin">
+      <number>6</number>
+     </property>
     </widget>
    </item>
    <item>
@@ -137,7 +140,7 @@
      <item row="9" column="1">
       <widget class="QLabel" name="exampleNumbers">
        <property name="text">
-        <string>Time: 12:00 AM</string>
+        <string>1200    1,66</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -157,7 +160,7 @@
      <item row="10" column="1">
       <widget class="QLabel" name="exampleTime">
        <property name="text">
-        <string>Time: 12:00 AM</string>
+        <string>12:00 AM</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -197,7 +200,7 @@
      <item row="12" column="1">
       <widget class="QLabel" name="exampleMeasurement">
        <property name="text">
-        <string>Time: 12:00 AM</string>
+        <string>1200 km</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -205,7 +208,7 @@
       </widget>
      </item>
      <item row="3" column="0">
-      <widget class="QLabel" name="label_13">
+      <widget class="QLabel" name="labelNumbers">
        <property name="text">
         <string>Numbers:</string>
        </property>
@@ -215,7 +218,7 @@
       </widget>
      </item>
      <item row="4" column="0">
-      <widget class="QLabel" name="label_14">
+      <widget class="QLabel" name="labelTime">
        <property name="text">
         <string>Time:</string>
        </property>
@@ -225,9 +228,9 @@
       </widget>
      </item>
      <item row="5" column="0">
-      <widget class="QLabel" name="label_15">
+      <widget class="QLabel" name="labelCurrency">
        <property name="text">
-        <string>Currency</string>
+        <string>Currency:</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -235,7 +238,7 @@
       </widget>
      </item>
      <item row="6" column="0">
-      <widget class="QLabel" name="label_17">
+      <widget class="QLabel" name="labelMeasurements">
        <property name="text">
         <string>Measurement Units:</string>
        </property>
@@ -279,5 +282,86 @@
   </layout>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>radioAll</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>comboGlobal</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>154</x>
+     <y>42</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>291</x>
+     <y>73</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioDetailed</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>comboNumbers</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>154</x>
+     <y>104</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>291</x>
+     <y>135</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioDetailed</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>comboTime</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>154</x>
+     <y>104</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>291</x>
+     <y>170</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioDetailed</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>comboCurrency</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>154</x>
+     <y>104</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>291</x>
+     <y>205</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioDetailed</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>comboMeasurement</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>154</x>
+     <y>104</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>291</x>
+     <y>240</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
