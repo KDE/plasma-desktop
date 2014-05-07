@@ -18,6 +18,9 @@
 
 #include "touchpadbackend.h"
 
+#include <QThreadStorage>
+#include <QSharedPointer>
+
 #include "backends/x11/xlibbackend.h"
 
 TouchpadBackend::TouchpadBackend(QObject *parent) : QObject(parent)
@@ -27,6 +30,9 @@ TouchpadBackend::TouchpadBackend(QObject *parent) : QObject(parent)
 TouchpadBackend *TouchpadBackend::implementation()
 {
     //There will be multiple backends later
-    static XlibBackend backend;
-    return &backend;
+    static QThreadStorage<QSharedPointer<XlibBackend> > backend;
+    if (!backend.hasLocalData()) {
+        backend.setLocalData(QSharedPointer<XlibBackend>(new XlibBackend()));
+    }
+    return backend.localData().data();
 }
