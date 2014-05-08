@@ -104,7 +104,7 @@ void CfgFileManager::save(KConfig *)
 void CfgFileManager::slotAddFileManager()
 {
     KProcess proc;
-    proc << "keditfiletype";
+    proc << "keditfiletype5";
     proc << "inode/directory";
     if (proc.execute() == 0) {
         load(0);
