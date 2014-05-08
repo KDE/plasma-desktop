@@ -72,9 +72,16 @@ void KCMFormats::load()
 
     foreach (const QLocale &l, allLocales) {
         foreach (QComboBox* combo, m_combos) {
-            addLocaleToCombo(combo, l);
+            if (combo != m_ui->comboMeasurement) {
+                addLocaleToCombo(combo, l);
+            }
         }
     }
+
+    // Standard says that Imperial == en_US
+    m_ui->comboMeasurement->addItem(i18nc("Measurement units combo", "Imperial"), QVariant("en_US"));
+    // Random sane country
+    m_ui->comboMeasurement->addItem(i18nc("Measurement units combo", "Metric"), QVariant("nl_NL"));
 
     readConfig();
 
@@ -117,7 +124,7 @@ void KCMFormats::addLocaleToCombo(QComboBox* combo, const QLocale &locale)
     const QString clabel2 = locale.uiLanguages().join(", ");
     const QString cvalue = locale.bcp47Name();
 
-    const QString flagcode = locale.
+    //const QString flagcode = locale.
     QString flag( QStandardPaths::locate(QStandardPaths::GenericDataLocation, QLatin1String("locale/") + QString::fromLatin1( "l10n/%1/flag.png" ).arg(cvalue) ) );
     //qDebug() << "flag: " << clabel << cvalue << locale.name() << locale.country() << flag;
     combo->addItem(i18n("%1 %2 (%3)", clabel, clabel2, cvalue) , QVariant(cvalue));
@@ -142,7 +149,17 @@ void KCMFormats::readConfig()
     setCombo(m_ui->comboNumbers, m_config.readEntry(lcNumeric, QString()));
     setCombo(m_ui->comboTime, m_config.readEntry(lcTime, QString()));
     setCombo(m_ui->comboCurrency, m_config.readEntry(lcMonetary, QString()));
-    setCombo(m_ui->comboMeasurement, m_config.readEntry(lcMeasurement, QString()));
+
+    QString _ms = m_config.readEntry(lcMeasurement, QString());
+    if (_ms.isEmpty()) {
+        m_ui->comboMeasurement->setCurrentIndex(0);
+    } else {
+        if (QLocale(_ms).measurementSystem() == QLocale::ImperialSystem) {
+            m_ui->comboMeasurement->setCurrentIndex(1);
+        } else {
+            m_ui->comboMeasurement->setCurrentIndex(2);
+        }
+    }
     updateEnabled();
 }
 
@@ -244,8 +261,13 @@ void KCMFormats::writeExports()
         script.append(_export + lcMonetary + QLatin1Char('=') + _monetary + QLatin1Char('\n'));
     }
 
-    const QString _measurement = m_config.readEntry(lcMeasurement, QString());
+    QString _measurement = m_config.readEntry(lcMeasurement, QString());
     if (!_measurement.isEmpty()) {
+//         if (_measurement == QStringLiteral("Imperial")) {
+//             _measurement = QStringLiteral("en_US"); // Standard says that Imperial == en_US
+//         } else {
+//             _measurement = QStringLiteral("nl_NL"); // Random sane country
+//         }
         script.append(_export + lcMeasurement+ QLatin1Char('=') + _measurement + QLatin1Char('\n'));
     }
 
@@ -297,29 +319,39 @@ void KCMFormats::updateExample()
     QLocale nloc;
     QLocale tloc;
     QLocale cloc;
+    QLocale mloc;
 
     if (useDetailed) {
         nloc = QLocale(m_ui->comboNumbers->currentData().toString());
         tloc = QLocale(m_ui->comboTime->currentData().toString());
         cloc = QLocale(m_ui->comboCurrency->currentData().toString());
-
+        mloc = QLocale(m_ui->comboMeasurement->currentData().toString());
     } else {
         nloc = QLocale(m_ui->comboGlobal->currentData().toString());
         tloc = QLocale(m_ui->comboGlobal->currentData().toString());
         cloc = QLocale(m_ui->comboGlobal->currentData().toString());
+        mloc = QLocale(m_ui->comboGlobal->currentData().toString());
     }
 
     QString numberExample = nloc.toString(1000.01);
     QString timeExample = tloc.toString(QDateTime::currentDateTime());
     QString currencyExample = cloc.toCurrencyString(24.99);
+    QString measurementExample;
+    if (mloc.measurementSystem() == QLocale::ImperialSystem) {
+        measurementExample = i18nc("Example for imperial units", "4 miles, %1 inches", mloc.toString(4.1));
+    } else {
+        measurementExample = i18nc("Example for metric units", "4 km, %1 cm", nloc.toString(4.3));
+    }
 
 //     qDebug() << "NumberExample: " << numberExample;
 //     qDebug() << "TimeExample: " << timeExample;
-//     qDebug() << "CurrencyExample: " << currencyExample;
+//    qDebug() << "CurrencyExample: " << currencyExample;
+    qDebug() << "MeasureExample: " << currencyExample << mloc.name();
 
     m_ui->exampleNumbers->setText(numberExample);
     m_ui->exampleTime->setText(timeExample);
     m_ui->exampleCurrency->setText(currencyExample);
+    m_ui->exampleMeasurement->setText(measurementExample);
 }
 
 
