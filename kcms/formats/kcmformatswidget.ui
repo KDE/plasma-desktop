@@ -13,16 +13,6 @@
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <widget class="QLabel" name="label_2">
-     <property name="text">
-      <string>&lt;h3&gt;Set Locale Country and Language&lt;/h3&gt;</string>
-     </property>
-     <property name="margin">
-      <number>6</number>
-     </property>
-    </widget>
-   </item>
-   <item>
     <layout class="QFormLayout" name="formLayout">
      <property name="fieldGrowthPolicy">
       <enum>QFormLayout::ExpandingFieldsGrow</enum>
@@ -34,9 +24,9 @@
       <number>6</number>
      </property>
      <item row="0" column="0">
-      <widget class="QLabel" name="label_8">
+      <widget class="QLabel" name="label_10">
        <property name="text">
-        <string>All Formats</string>
+        <string>Region:</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -44,170 +34,29 @@
       </widget>
      </item>
      <item row="0" column="1">
-      <widget class="QRadioButton" name="radioAll">
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="1">
       <widget class="QComboBox" name="comboGlobal">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
        <property name="minimumSize">
         <size>
          <width>300</width>
          <height>0</height>
         </size>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QCheckBox" name="checkDetailed">
+       <property name="text">
+        <string>Detailed Settings</string>
        </property>
       </widget>
      </item>
      <item row="2" column="0">
-      <widget class="QLabel" name="label_7">
-       <property name="text">
-        <string>Detailed</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="1">
-      <widget class="QRadioButton" name="radioDetailed">
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="1">
-      <widget class="QComboBox" name="comboNumbers">
-       <property name="minimumSize">
-        <size>
-         <width>300</width>
-         <height>0</height>
-        </size>
-       </property>
-      </widget>
-     </item>
-     <item row="4" column="1">
-      <widget class="QComboBox" name="comboTime">
-       <property name="minimumSize">
-        <size>
-         <width>300</width>
-         <height>0</height>
-        </size>
-       </property>
-      </widget>
-     </item>
-     <item row="5" column="1">
-      <widget class="QComboBox" name="comboCurrency">
-       <property name="minimumSize">
-        <size>
-         <width>300</width>
-         <height>0</height>
-        </size>
-       </property>
-      </widget>
-     </item>
-     <item row="7" column="0">
-      <widget class="QLabel" name="label_6">
-       <property name="text">
-        <string/>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-       </property>
-      </widget>
-     </item>
-     <item row="8" column="0">
-      <widget class="QLabel" name="label_9">
-       <property name="text">
-        <string>&lt;h3&gt;Examples&lt;/h3&gt;</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-       </property>
-      </widget>
-     </item>
-     <item row="9" column="0">
-      <widget class="QLabel" name="label_12">
-       <property name="text">
-        <string>Numbers:</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-       </property>
-      </widget>
-     </item>
-     <item row="9" column="1">
-      <widget class="QLabel" name="exampleNumbers">
-       <property name="text">
-        <string>1200    1,66</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-       </property>
-      </widget>
-     </item>
-     <item row="10" column="0">
-      <widget class="QLabel" name="label_4">
-       <property name="text">
-        <string>Time:</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-       </property>
-      </widget>
-     </item>
-     <item row="10" column="1">
-      <widget class="QLabel" name="exampleTime">
-       <property name="text">
-        <string>12:00 AM</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-       </property>
-      </widget>
-     </item>
-     <item row="11" column="0">
-      <widget class="QLabel" name="label_10">
-       <property name="text">
-        <string>Currency</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-       </property>
-      </widget>
-     </item>
-     <item row="11" column="1">
-      <widget class="QLabel" name="exampleCurrency">
-       <property name="text">
-        <string>34,99€</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-       </property>
-      </widget>
-     </item>
-     <item row="12" column="0">
-      <widget class="QLabel" name="label_11">
-       <property name="text">
-        <string>Measurement Units:</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-       </property>
-      </widget>
-     </item>
-     <item row="12" column="1">
-      <widget class="QLabel" name="exampleMeasurement">
-       <property name="text">
-        <string>1200 km</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="0">
       <widget class="QLabel" name="labelNumbers">
        <property name="text">
         <string>Numbers:</string>
@@ -217,7 +66,23 @@
        </property>
       </widget>
      </item>
-     <item row="4" column="0">
+     <item row="2" column="1">
+      <widget class="QComboBox" name="comboNumbers">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>300</width>
+         <height>0</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
       <widget class="QLabel" name="labelTime">
        <property name="text">
         <string>Time:</string>
@@ -227,7 +92,23 @@
        </property>
       </widget>
      </item>
-     <item row="5" column="0">
+     <item row="3" column="1">
+      <widget class="QComboBox" name="comboTime">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>300</width>
+         <height>0</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
       <widget class="QLabel" name="labelCurrency">
        <property name="text">
         <string>Currency:</string>
@@ -237,8 +118,24 @@
        </property>
       </widget>
      </item>
-     <item row="6" column="0">
-      <widget class="QLabel" name="labelMeasurements">
+     <item row="4" column="1">
+      <widget class="QComboBox" name="comboCurrency">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>300</width>
+         <height>0</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLabel" name="labelMeasurement">
        <property name="text">
         <string>Measurement Units:</string>
        </property>
@@ -247,13 +144,119 @@
        </property>
       </widget>
      </item>
-     <item row="6" column="1">
+     <item row="5" column="1">
       <widget class="QComboBox" name="comboMeasurement">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
        <property name="minimumSize">
         <size>
          <width>300</width>
          <height>0</height>
         </size>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="0">
+      <widget class="QLabel" name="label_6">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="0">
+      <widget class="QLabel" name="label_9">
+       <property name="text">
+        <string>Examples</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="0">
+      <widget class="QLabel" name="lexNumbers">
+       <property name="text">
+        <string>Numbers:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="1">
+      <widget class="QLabel" name="exampleNumbers">
+       <property name="text">
+        <string>1200    1,66</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="0">
+      <widget class="QLabel" name="lexTime">
+       <property name="text">
+        <string>Time:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="1">
+      <widget class="QLabel" name="exampleTime">
+       <property name="text">
+        <string>12:00 AM</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+       </property>
+      </widget>
+     </item>
+     <item row="10" column="0">
+      <widget class="QLabel" name="lexCurrency">
+       <property name="text">
+        <string>Currency</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+       </property>
+      </widget>
+     </item>
+     <item row="10" column="1">
+      <widget class="QLabel" name="exampleCurrency">
+       <property name="text">
+        <string>34,99€</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+       </property>
+      </widget>
+     </item>
+     <item row="11" column="1">
+      <widget class="QLabel" name="exampleMeasurement">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+       </property>
+      </widget>
+     </item>
+     <item row="11" column="0">
+      <widget class="QLabel" name="lexMeasurement">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
        </property>
       </widget>
      </item>
@@ -282,86 +285,5 @@
   </layout>
  </widget>
  <resources/>
- <connections>
-  <connection>
-   <sender>radioAll</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>comboGlobal</receiver>
-   <slot>setEnabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>154</x>
-     <y>42</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>291</x>
-     <y>73</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>radioDetailed</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>comboNumbers</receiver>
-   <slot>setEnabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>154</x>
-     <y>104</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>291</x>
-     <y>135</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>radioDetailed</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>comboTime</receiver>
-   <slot>setEnabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>154</x>
-     <y>104</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>291</x>
-     <y>170</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>radioDetailed</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>comboCurrency</receiver>
-   <slot>setEnabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>154</x>
-     <y>104</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>291</x>
-     <y>205</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>radioDetailed</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>comboMeasurement</receiver>
-   <slot>setEnabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>154</x>
-     <y>104</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>291</x>
-     <y>240</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
 </ui>

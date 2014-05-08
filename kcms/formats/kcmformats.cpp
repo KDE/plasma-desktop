@@ -81,37 +81,46 @@ void KCMFormats::load()
     foreach (QComboBox* combo, m_combos) {
         connectCombo(combo);
     }
-    connect(m_ui->radioAll, &QAbstractButton::toggled, [=](bool enabled){
+
+    connect(m_ui->checkDetailed, &QAbstractButton::toggled, [=](bool enabled){
         qDebug() << "Changed" << enabled;
         updateExample();
+        updateEnabled();
         emit changed(true);
     } );
 
     qDebug() << "Loaded locales: " << allLocales.count();
+
+    updateEnabled();
     updateExample();
     emit changed(false);
 }
 
 void KCMFormats::initCombo(QComboBox* combo)
 {
-    const QString clabel = i18n("Use system default");
+    const QString clabel = i18n("No change");
     combo->addItem(clabel, QString());
 }
 
 void KCMFormats::connectCombo(QComboBox* combo)
 {
     connect(combo, &QComboBox::currentTextChanged, [=](const QString txt){
-        qDebug() << "Changed" << txt;
-        updateExample();
+        qDebug() << "Changed combo" << txt;
         emit changed(true);
+        updateExample();
     } );
 }
 
 void KCMFormats::addLocaleToCombo(QComboBox* combo, const QLocale &locale)
 {
     const QString clabel = locale.countryToString(locale.country());
+    const QString clabel2 = locale.uiLanguages().join(", ");
     const QString cvalue = locale.bcp47Name();
-    combo->addItem(i18n("%1 (%2)", clabel, cvalue) , QVariant(cvalue));
+
+    const QString flagcode = locale.
+    QString flag( QStandardPaths::locate(QStandardPaths::GenericDataLocation, QLatin1String("locale/") + QString::fromLatin1( "l10n/%1/flag.png" ).arg(cvalue) ) );
+    //qDebug() << "flag: " << clabel << cvalue << locale.name() << locale.country() << flag;
+    combo->addItem(i18n("%1 %2 (%3)", clabel, clabel2, cvalue) , QVariant(cvalue));
 }
 
 void setCombo(QComboBox* combo, const QString &key) {
@@ -126,8 +135,7 @@ void KCMFormats::readConfig()
     m_config = KConfigGroup(KSharedConfig::openConfig(configFile), "Formats");
 
     bool useDetailed = m_config.readEntry("useDetailed", false);
-    m_ui->radioAll->setChecked(!useDetailed);
-    m_ui->radioDetailed->setChecked(useDetailed);
+    m_ui->checkDetailed->setChecked(useDetailed);
 
     setCombo(m_ui->comboGlobal, m_config.readEntry(lcGlobal, QString()));
 
@@ -135,13 +143,14 @@ void KCMFormats::readConfig()
     setCombo(m_ui->comboTime, m_config.readEntry(lcTime, QString()));
     setCombo(m_ui->comboCurrency, m_config.readEntry(lcMonetary, QString()));
     setCombo(m_ui->comboMeasurement, m_config.readEntry(lcMeasurement, QString()));
+    updateEnabled();
 }
 
 void KCMFormats::writeConfig()
 {
     m_config = KConfigGroup(KSharedConfig::openConfig(configFile), "Formats");
     const QString _global = m_ui->comboGlobal->currentData().toString();
-    if (m_ui->radioAll->isChecked()) {
+    if (!m_ui->checkDetailed->isChecked()) {
         m_config.deleteEntry("useDetailed");
         if (_global.isEmpty()) {
             qDebug() << "Deleting them all";
@@ -212,7 +221,10 @@ void KCMFormats::writeExports()
     configPath.append("/"+exportFile);
     qDebug() << "Saving to filename: " << configPath;
 
-    QString script;
+    QString script("# Generated script, do not edit\n");
+    script.append("# Exports language-format specific env vars from startkde.\n");
+    script.append("# This script has been generated from kcmshell5 formats.\n");
+    script.append("# It will automatically be overwritten from there.\n");
     m_config = KConfigGroup(KSharedConfig::openConfig(configFile), "Formats");
 
     const QString _export = QStringLiteral("export ");
@@ -266,45 +278,48 @@ void KCMFormats::defaults()
 
 void KCMFormats::updateEnabled()
 {
+    bool enabled = m_ui->checkDetailed->isChecked();
 
+    m_ui->labelNumbers->setEnabled(enabled);
+    m_ui->labelTime->setEnabled(enabled);
+    m_ui->labelCurrency->setEnabled(enabled);
+    m_ui->labelMeasurement->setEnabled(enabled);
+    m_ui->comboNumbers->setEnabled(enabled);
+    m_ui->comboTime->setEnabled(enabled);
+    m_ui->comboCurrency->setEnabled(enabled);
+    m_ui->comboMeasurement->setEnabled(enabled);
 }
 
 void KCMFormats::updateExample()
 {
-    bool useDetailed = m_ui->radioAll->isChecked();
+    bool useDetailed = m_ui->checkDetailed->isChecked();
 
     QLocale nloc;
     QLocale tloc;
     QLocale cloc;
-    QLocale mloc;
 
-    if (!useDetailed) {
+    if (useDetailed) {
         nloc = QLocale(m_ui->comboNumbers->currentData().toString());
         tloc = QLocale(m_ui->comboTime->currentData().toString());
         cloc = QLocale(m_ui->comboCurrency->currentData().toString());
-        mloc = QLocale(m_ui->comboMeasurement->currentData().toString());
 
     } else {
         nloc = QLocale(m_ui->comboGlobal->currentData().toString());
         tloc = QLocale(m_ui->comboGlobal->currentData().toString());
         cloc = QLocale(m_ui->comboGlobal->currentData().toString());
-        mloc = QLocale(m_ui->comboGlobal->currentData().toString());
     }
 
     QString numberExample = nloc.toString(1000.01);
     QString timeExample = tloc.toString(QDateTime::currentDateTime());
-    QString currencyExample = tloc.toCurrencyString(24.99);
-    QString measurementExample = tloc.toString(0);
+    QString currencyExample = cloc.toCurrencyString(24.99);
 
-    qDebug() << "NumberExample: " << numberExample;
-    qDebug() << "TimeExample: " << timeExample;
-    qDebug() << "CurrencyExample: " << currencyExample;
+//     qDebug() << "NumberExample: " << numberExample;
+//     qDebug() << "TimeExample: " << timeExample;
+//     qDebug() << "CurrencyExample: " << currencyExample;
 
     m_ui->exampleNumbers->setText(numberExample);
     m_ui->exampleTime->setText(timeExample);
     m_ui->exampleCurrency->setText(currencyExample);
-    m_ui->exampleMeasurement->setText(measurementExample);
-
 }
 
 
