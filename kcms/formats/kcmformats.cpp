@@ -89,8 +89,9 @@ void KCMFormats::load()
         connectCombo(combo);
     }
 
-    connect(m_ui->checkDetailed, &QAbstractButton::toggled, [=](bool enabled){
+    connect(m_ui->checkDetailed, &QAbstractButton::toggled, [=](){
         //qDebug() << "Changed" << enabled;
+        //Q_UNUSED(enabled)
         updateExample();
         updateEnabled();
         emit changed(true);
@@ -111,8 +112,8 @@ void KCMFormats::initCombo(QComboBox* combo)
 
 void KCMFormats::connectCombo(QComboBox* combo)
 {
-    connect(combo, &QComboBox::currentTextChanged, [=](const QString txt){
-        qDebug() << "Changed combo" << txt;
+    connect(combo, &QComboBox::currentTextChanged, [=](){
+        //qDebug() << "Changed combo" << txt;
         emit changed(true);
         updateExample();
     } );
@@ -131,9 +132,7 @@ void KCMFormats::addLocaleToCombo(QComboBox* combo, const QLocale &locale)
     }
     QString flag( QStandardPaths::locate(QStandardPaths::GenericDataLocation, QLatin1String("locale/") + QString::fromLatin1( "l10n/%1/flag.png" ).arg(flagcode) ) );
     QIcon _icon;
-    if (flag.isEmpty()) {
-        qDebug() << "flag: " << clabel << cvalue << locale.name() << locale.country() << flagcode << flag;
-    } else {
+    if (!flag.isEmpty()) {
         _icon = QIcon(QPixmap(flag));
     }
     combo->addItem(_icon, i18n("%1 (%2)", clabel, locale.name()) , QVariant(cvalue));
@@ -179,7 +178,7 @@ void KCMFormats::writeConfig()
     if (!m_ui->checkDetailed->isChecked()) {
         m_config.deleteEntry("useDetailed");
         if (_global.isEmpty()) {
-            qDebug() << "Deleting them all";
+            //qDebug() << "Deleting them all";
             m_config.deleteEntry(lcGlobal);
             m_config.deleteEntry(lcNumeric);
             m_config.deleteEntry(lcTime);
@@ -198,7 +197,7 @@ void KCMFormats::writeConfig()
         if (_global.isEmpty()) {
             m_config.deleteEntry(lcGlobal);
         } else {
-            qDebug() << "_numeric: " << _global;
+            //qDebug() << "_numeric: " << _global;
             m_config.writeEntry(lcGlobal, _global);
         }
 
@@ -206,7 +205,7 @@ void KCMFormats::writeConfig()
         if (_numeric.isEmpty()) {
             m_config.deleteEntry(lcNumeric);
         } else {
-            qDebug() << "_numeric: " << _numeric;
+            //qDebug() << "_numeric: " << _numeric;
             m_config.writeEntry(lcNumeric, _numeric);
         }
 
@@ -214,7 +213,7 @@ void KCMFormats::writeConfig()
         if (_time.isEmpty()) {
             m_config.deleteEntry(lcTime);
         } else {
-            qDebug() << "_time: " << _time;
+            //qDebug() << "_time: " << _time;
             m_config.writeEntry(lcTime, _time);
         }
 
@@ -222,7 +221,7 @@ void KCMFormats::writeConfig()
         if (_monetary.isEmpty()) {
             m_config.deleteEntry(lcMonetary);
         } else {
-            qDebug() << "_monetary: " << _monetary;
+            //qDebug() << "_monetary: " << _monetary;
             m_config.writeEntry(lcMonetary, _monetary);
         }
 
@@ -230,7 +229,7 @@ void KCMFormats::writeConfig()
         if (_measurement.isEmpty()) {
             m_config.deleteEntry(lcMeasurement);
         } else {
-            qDebug() << "_measurement: " << _measurement;
+            //qDebug() << "_measurement: " << _measurement;
             m_config.writeEntry(lcMeasurement, _measurement);
         }
     }
@@ -245,7 +244,7 @@ void KCMFormats::writeExports()
 
     QString configPath = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation);
     configPath.append("/"+exportFile);
-    qDebug() << "Saving to filename: " << configPath;
+    //qDebug() << "Saving to filename: " << configPath;
 
     QString script("# Generated script, do not edit\n");
     script.append("# Exports language-format specific env vars from startkde.\n");
@@ -290,14 +289,14 @@ void KCMFormats::writeExports()
     file.open(QIODevice::WriteOnly | QIODevice::Text);
     QTextStream out(&file);
 
-    qDebug() << "Wrote shellscript: " << "\n" << script;
+    qDebug() << "Wrote script: " << configPath << "\n" << script;
     out << script;
     file.close();
 }
 
 void KCMFormats::save()
 {
-    qDebug() << "Formats save:";
+    //qDebug() << "Formats save:";
     writeConfig();
     writeExports();
 }
@@ -355,7 +354,7 @@ void KCMFormats::updateExample()
 //     qDebug() << "NumberExample: " << numberExample;
 //     qDebug() << "TimeExample: " << timeExample;
 //    qDebug() << "CurrencyExample: " << currencyExample;
-    qDebug() << "MeasureExample: " << currencyExample << mloc.name();
+    //qDebug() << "MeasureExample: " << currencyExample << mloc.name();
 
     m_ui->exampleNumbers->setText(numberExample);
     m_ui->exampleTime->setText(timeExample);
