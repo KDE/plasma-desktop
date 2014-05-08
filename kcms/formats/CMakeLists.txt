@@ -3,6 +3,8 @@ set(kcm_formats_PART_SRCS
     kcmformats.cpp
 )
 
+add_definitions(-DTRANSLATION_DOMAIN=\"kcmformats\")
+
 kservice_desktop_to_json(formats.desktop)
 
 qt5_wrap_ui(kcm_formats_PART_SRCS kcmformatswidget.ui )
