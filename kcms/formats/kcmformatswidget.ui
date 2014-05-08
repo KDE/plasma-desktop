@@ -52,7 +52,7 @@
      <item row="1" column="0">
       <widget class="QCheckBox" name="checkDetailed">
        <property name="text">
-        <string>Detailed Settings</string>
+        <string>De&amp;tailed Settings</string>
        </property>
       </widget>
      </item>
@@ -171,12 +171,12 @@
       </widget>
      </item>
      <item row="7" column="0">
-      <widget class="QLabel" name="label_9">
+      <widget class="QLabel" name="labelMeasurement_2">
        <property name="text">
-        <string>Examples</string>
+        <string>&lt;b&gt;Examples&lt;/b&gt;</string>
        </property>
        <property name="alignment">
-        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
        </property>
       </widget>
      </item>
@@ -193,7 +193,7 @@
      <item row="8" column="1">
       <widget class="QLabel" name="exampleNumbers">
        <property name="text">
-        <string>1200    1,66</string>
+        <string>                             </string>
        </property>
        <property name="alignment">
         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -213,7 +213,7 @@
      <item row="9" column="1">
       <widget class="QLabel" name="exampleTime">
        <property name="text">
-        <string>12:00 AM</string>
+        <string>                             </string>
        </property>
        <property name="alignment">
         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -233,17 +233,7 @@
      <item row="10" column="1">
       <widget class="QLabel" name="exampleCurrency">
        <property name="text">
-        <string>34,99€</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-       </property>
-      </widget>
-     </item>
-     <item row="11" column="1">
-      <widget class="QLabel" name="exampleMeasurement">
-       <property name="text">
-        <string/>
+        <string>                             </string>
        </property>
        <property name="alignment">
         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -253,7 +243,17 @@
      <item row="11" column="0">
       <widget class="QLabel" name="lexMeasurement">
        <property name="text">
-        <string/>
+        <string>Measurement System:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+       </property>
+      </widget>
+     </item>
+     <item row="11" column="1">
+      <widget class="QLabel" name="exampleMeasurement">
+       <property name="text">
+        <string>                               </string>
        </property>
        <property name="alignment">
         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>

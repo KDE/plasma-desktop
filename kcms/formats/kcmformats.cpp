@@ -90,7 +90,7 @@ void KCMFormats::load()
     }
 
     connect(m_ui->checkDetailed, &QAbstractButton::toggled, [=](bool enabled){
-        qDebug() << "Changed" << enabled;
+        //qDebug() << "Changed" << enabled;
         updateExample();
         updateEnabled();
         emit changed(true);
@@ -121,13 +121,22 @@ void KCMFormats::connectCombo(QComboBox* combo)
 void KCMFormats::addLocaleToCombo(QComboBox* combo, const QLocale &locale)
 {
     const QString clabel = locale.countryToString(locale.country());
-    const QString clabel2 = locale.uiLanguages().join(", ");
+    //const QString clabel2 = locale.uiLanguages().join(", ");
     const QString cvalue = locale.bcp47Name();
 
-    //const QString flagcode = locale.
-    QString flag( QStandardPaths::locate(QStandardPaths::GenericDataLocation, QLatin1String("locale/") + QString::fromLatin1( "l10n/%1/flag.png" ).arg(cvalue) ) );
-    //qDebug() << "flag: " << clabel << cvalue << locale.name() << locale.country() << flag;
-    combo->addItem(i18n("%1 %2 (%3)", clabel, clabel2, cvalue) , QVariant(cvalue));
+    QString flagcode = "de";
+    const QStringList _split = locale.name().split('_');
+    if (_split.count() > 1) {
+        flagcode = _split[1].toLower();
+    }
+    QString flag( QStandardPaths::locate(QStandardPaths::GenericDataLocation, QLatin1String("locale/") + QString::fromLatin1( "l10n/%1/flag.png" ).arg(flagcode) ) );
+    QIcon _icon;
+    if (flag.isEmpty()) {
+        qDebug() << "flag: " << clabel << cvalue << locale.name() << locale.country() << flagcode << flag;
+    } else {
+        _icon = QIcon(QPixmap(flag));
+    }
+    combo->addItem(_icon, i18n("%1 (%2)", clabel, locale.name()) , QVariant(cvalue));
 }
 
 void setCombo(QComboBox* combo, const QString &key) {
