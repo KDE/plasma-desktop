@@ -23,8 +23,6 @@
 #include <QDrag>
 #include <QMimeData>
 #include <QQuickItem>
-#include <QIcon>
-#include <QPixmap>
 
 DragHelper::DragHelper(QObject* parent) : QObject(parent)
 {
@@ -39,10 +37,26 @@ bool DragHelper::isDrag(int oldX, int oldY, int newX, int newY) const
     return ((QPoint(oldX, oldY) - QPoint(newX, newY)).manhattanLength() >= QApplication::startDragDistance());
 }
 
-void DragHelper::startDrag(QQuickItem *item) const
+void DragHelper::startDrag(QQuickItem *item, const QUrl &url)
+{
+    // This allows the caller to return, making sure we don't crash if
+    // the caller is destroyed mid-drag (as can happen due to a sycoca
+    // change).
+
+    QMetaObject::invokeMethod(this, "doDrag", Qt::QueuedConnection, Q_ARG(QQuickItem*, item), Q_ARG(QUrl, url));
+}
+
+void DragHelper::doDrag(QQuickItem *item, const QUrl &url) const
 {
     QDrag *drag = new QDrag(item);
-    drag->setMimeData(new QMimeData());
+
+    QMimeData *mimeData = new QMimeData();
+
+    if (!url.isEmpty()) {
+        mimeData->setUrls(QList<QUrl>() << url);
+    }
+
+    drag->setMimeData(mimeData);
 
     drag->exec();
 

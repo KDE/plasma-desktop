@@ -44,6 +44,7 @@
 
 #include <KDesktopFile>
 #include <KDirModel>
+#include <KIO/CopyJob>
 #include <KIO/Job>
 #include <KRun>
 
@@ -733,6 +734,13 @@ void FolderModel::openContextMenu()
         pasteTo->setEnabled(false);
     }
 }
+
+void FolderModel::linkHere(const QUrl &sourceUrl)
+{
+    KIO::CopyJob *job = KIO::link(sourceUrl, m_dirModel->dirLister()->url());
+    KIO::FileUndoManager::self()->recordCopyJob(job);
+}
+
 
 void FolderModel::updatePasteAction()
 {

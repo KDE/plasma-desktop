@@ -54,6 +54,7 @@ Item {
 
         appNameFormat: plasmoid.configuration.appNameFormat
         flat: plasmoid.configuration.limitDepth
+        appletInterface: plasmoid
 
         onRecentAppsModelChanged: {
             recentAppsModel.recentApps = plasmoid.configuration.recentApps;

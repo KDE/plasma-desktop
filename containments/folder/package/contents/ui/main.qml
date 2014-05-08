@@ -118,6 +118,10 @@ DragDrop.DropArea {
         }
     }
 
+    function addLauncher(desktopUrl) {
+        itemView.linkHere(desktopUrl);
+    }
+
     onDragEnter: {
         placeHolder.width = LayoutManager.defaultAppletSize.width;
         placeHolder.height = LayoutManager.defaultAppletSize.height;
@@ -206,6 +210,8 @@ DragDrop.DropArea {
     }
 
     ItemView {
+        id: itemView
+
         anchors.left: parent.left
         anchors.top: parent.top
         anchors.topMargin: folder.label != null ? folder.label.height : 0

@@ -75,7 +75,9 @@ Item {
         height: itemHeight
 
         property int mouseCol
-        property bool clicked: false
+        property bool pressed: false
+        property int pressX: -1
+        property int pressY: -1
 
         hoverEnabled: true
         acceptedButtons: Qt.LeftButton | Qt.RightButton
@@ -86,20 +88,32 @@ Item {
                     openActionMenu(mouseArea, mouse.x, mouse.y);
                 }
             } else {
-                clicked = true;
+                pressed = true;
+                pressX = mouse.x;
+                pressY = mouse.y;
             }
         }
 
         onReleased: {
-            if (clicked && !model.hasChildren) {
+            if (pressed && !model.hasChildren) {
                 item.ListView.view.model.trigger(index, "", null);
                 plasmoid.expanded = false;
             }
 
-            clicked = false;
+            pressed = false;
+            pressX = -1;
+            pressY = -1;
         }
 
         onPositionChanged: {
+            if (pressX != -1 && model.url && dragHelper.isDrag(pressX, pressY, mouse.x, mouse.y)) {
+                dragHelper.startDrag(kicker, model.url);
+                pressX = -1;
+                pressY = -1;
+
+                return;
+            }
+
             // FIXME: Correct escape angle calc for right screen edge.
             if (justOpenedTimer.running || !model.hasChildren) {
                 item.ListView.view.currentIndex = index;
@@ -128,7 +142,9 @@ Item {
 
         onContainsMouseChanged: {
             if (!containsMouse) {
-                clicked = false;
+                pressed = false;
+                pressX = -1;
+                pressY = -1;
                 updateCurrentItemTimer.stop();
             }
         }

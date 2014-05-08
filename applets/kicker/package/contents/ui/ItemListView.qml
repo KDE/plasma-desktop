@@ -115,6 +115,7 @@ FocusScope {
 
                 focus: true
 
+                boundsBehavior: Flickable.StopAtBounds
                 snapMode: ListView.SnapToItem
                 spacing: 0
                 keyNavigationWraps: (dialog != null)

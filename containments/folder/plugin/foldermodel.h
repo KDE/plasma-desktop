@@ -135,6 +135,8 @@ class FolderModel : public QSortFilterProxyModel
 
         Q_INVOKABLE void openContextMenu();
 
+        Q_INVOKABLE void linkHere(const QUrl &sourceUrl);
+
         QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
         KFileItem itemForIndex(const QModelIndex &index) const;
         bool isDir(const QModelIndex &index, const KDirModel *dirModel) const;

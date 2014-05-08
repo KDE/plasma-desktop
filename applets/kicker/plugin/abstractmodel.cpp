@@ -29,6 +29,7 @@ AbstractModel::AbstractModel(QObject *parent) : QAbstractListModel(parent)
     roles.insert(Kicker::FavoriteIdRole, "favoriteId");
     roles.insert(Kicker::HasActionListRole, "hasActionList");
     roles.insert(Kicker::ActionListRole, "actionList");
+    roles.insert(Kicker::UrlRole, "url");
 
     setRoleNames(roles);
 }

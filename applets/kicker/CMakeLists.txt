@@ -18,6 +18,7 @@ set(kickerplugin_SRCS
     plugin/abstractmodel.cpp
     plugin/actionlist.cpp
     plugin/appsmodel.cpp
+    plugin/containmentinterface.cpp
     plugin/draghelper.cpp
     plugin/favoritesmodel.cpp
     plugin/kickerplugin.cpp

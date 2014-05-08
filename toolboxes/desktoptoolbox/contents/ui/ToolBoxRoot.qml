@@ -29,7 +29,10 @@ import org.kde.plasma.plasmoid 2.0
 Item {
     id: main
 
-    anchors.fill: parent
+    x: plasmoid.availableScreenRect.x
+    y: plasmoid.availableScreenRect.y
+    width: plasmoid.availableScreenRect.width
+    height: plasmoid.availableScreenRect.height
 
     signal minimumWidthChanged
     signal minimumHeightChanged
@@ -39,7 +42,6 @@ Item {
     signal preferredHeightChanged
 
     property int iconSize: units.iconSizes.small
-    property variant availScreenRect: Plasmoid.availableScreenRegion(plasmoid.screen)[0]
     property int iconWidth: units.iconSizes.smallMedium
     property int iconHeight: iconWidth
 

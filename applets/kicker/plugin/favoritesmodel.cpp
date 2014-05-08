@@ -52,6 +52,8 @@ QVariant FavoritesModel::data(const QModelIndex& index, int role) const
             return service->icon();
         } else if (role == Kicker::FavoriteIdRole) {
             return QVariant("app:" + service->storageId());
+        } else if (role == Kicker::UrlRole) {
+            return QUrl::fromLocalFile(service->entryPath());
         }
     }
 

@@ -21,10 +21,9 @@
 #define DRAGHELPER_H
 
 #include <QObject>
+#include <QUrl>
 
-class QIcon;
 class QQuickItem;
-class QUrl;
 
 class DragHelper : public QObject
 {
@@ -35,10 +34,13 @@ class DragHelper : public QObject
         ~DragHelper();
 
         Q_INVOKABLE bool isDrag(int oldX, int oldY, int newX, int newY) const;
-        Q_INVOKABLE void startDrag(QQuickItem* item) const;
+        Q_INVOKABLE void startDrag(QQuickItem* item, const QUrl &url = QUrl());
 
     Q_SIGNALS:
         void dropped() const;
+
+    private:
+        Q_INVOKABLE void doDrag(QQuickItem* item, const QUrl &url = QUrl()) const;
 };
 
 #endif

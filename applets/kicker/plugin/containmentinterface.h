@@ -1,5 +1,4 @@
 /***************************************************************************
- *   Copyright (C) 2013 by Aurélien Gâteau <agateau@kde.org>               *
  *   Copyright (C) 2014 by Eike Hein <hein@kde.org>                        *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -18,29 +17,38 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#include <QVariant>
+#ifndef CONTAINMENTINTERFACE_H
+#define CONTAINMENTINTERFACE_H
 
-class KFileItem;
+#include <QObject>
+#include <QUrl>
 
-namespace Kicker
+namespace Plasma {
+    class Applet;
+}
+
+class ContainmentInterface : public QObject
 {
+    Q_OBJECT
 
-enum {
-    HasChildrenRole = Qt::UserRole +1,
-    FavoriteIdRole,
-    HasActionListRole,
-    ActionListRole,
-    UrlRole
+    public:
+        enum Target {
+            Desktop = 0,
+            Panel,
+            TaskManager
+        };
+
+        ContainmentInterface(QObject *parent = 0);
+        ~ContainmentInterface();
+
+        void setApplet(QObject *plasmoid);
+
+        bool mayAddLauncher(Target target, const QString &entryPath = QString());
+
+        void addLauncher(Target target, const QString &entryPath);
+
+    private:
+        Plasma::Applet *m_applet;
 };
 
-QVariantMap createActionItem(const QString &label, const QString &actionId, const QVariant &argument = QVariant());
-
-QVariantMap createTitleActionItem(const QString &label);
-
-QVariantMap createSeparatorActionItem();
-
-QVariantList createActionListForFileItem(const KFileItem &fileItem);
-
-bool handleFileItemAction(const KFileItem &fileItem, const QString &actionId, const QVariant &argument, bool *close);
-
-}
+#endif
