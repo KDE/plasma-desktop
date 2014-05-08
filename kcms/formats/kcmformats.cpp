@@ -32,6 +32,7 @@
 // Frameworks
 #include <KPluginFactory>
 #include <KLocalizedString>
+#include <KMessageBox>
 #include <KSharedConfig>
 
 
@@ -40,11 +41,14 @@ K_PLUGIN_FACTORY_WITH_JSON(KCMFormatsFactory, "formats.json", registerPlugin<KCM
 const static QString configFile = QStringLiteral("kdeformats");
 const static QString exportFile = QStringLiteral("export-formats-settings.sh");
 
+const static QString lcGlobal = QStringLiteral("Global");
+
 const static QString lcNumeric = QStringLiteral("LC_NUMERIC");
 const static QString lcTime = QStringLiteral("LC_TIME");
 const static QString lcMonetary = QStringLiteral("LC_MONETARY");
 const static QString lcMeasurement = QStringLiteral("LC_MEASUREMENT");
-const static QString lcGlobal = QStringLiteral("Global");
+const static QString lcCollate = QStringLiteral("LC_COLLATE");
+const static QString lcCtype = QStringLiteral("LC_CTYPE");
 
 
 KCMFormats::KCMFormats(QWidget *parent, const QVariantList &args)
@@ -174,7 +178,18 @@ void KCMFormats::readConfig()
 void KCMFormats::writeConfig()
 {
     m_config = KConfigGroup(KSharedConfig::openConfig(configFile), "Formats");
+
+    // _global ends up empty here when OK button is clicked from kcmshell5,
+    // apparently the data in the combo is gone by the time save() is called.
+    // This might be a problem in KCModule, but does not directly affect us
+    // since within systemsettings, it works fine.
+    if (m_ui->comboGlobal->count() == 0) {
+        qWarning() << "Couldn't read data from UI, writing configuration failed.";
+        return;
+    }
     const QString _global = m_ui->comboGlobal->currentData().toString();
+
+    qDebug() << "GLOBAL : " << _global << m_ui->comboGlobal->count();
     if (!m_ui->checkDetailed->isChecked()) {
         m_config.deleteEntry("useDetailed");
         if (_global.isEmpty()) {
@@ -205,7 +220,7 @@ void KCMFormats::writeConfig()
         if (_numeric.isEmpty()) {
             m_config.deleteEntry(lcNumeric);
         } else {
-            //qDebug() << "_numeric: " << _numeric;
+            qDebug() << "_numeric: " << _numeric;
             m_config.writeEntry(lcNumeric, _numeric);
         }
 
@@ -246,10 +261,10 @@ void KCMFormats::writeExports()
     configPath.append("/"+exportFile);
     //qDebug() << "Saving to filename: " << configPath;
 
-    QString script("# Generated script, do not edit\n");
-    script.append("# Exports language-format specific env vars from startkde.\n");
-    script.append("# This script has been generated from kcmshell5 formats.\n");
-    script.append("# It will automatically be overwritten from there.\n");
+    QString script(QStringLiteral("# Generated script, do not edit\n"));
+    script.append(QStringLiteral("# Exports language-format specific env vars from startkde.\n"));
+    script.append(QStringLiteral("# This script has been generated from kcmshell5 formats.\n"));
+    script.append(QStringLiteral("# It will automatically be overwritten from there.\n"));
     m_config = KConfigGroup(KSharedConfig::openConfig(configFile), "Formats");
 
     const QString _export = QStringLiteral("export ");
@@ -271,18 +286,13 @@ void KCMFormats::writeExports()
 
     QString _measurement = m_config.readEntry(lcMeasurement, QString());
     if (!_measurement.isEmpty()) {
-//         if (_measurement == QStringLiteral("Imperial")) {
-//             _measurement = QStringLiteral("en_US"); // Standard says that Imperial == en_US
-//         } else {
-//             _measurement = QStringLiteral("nl_NL"); // Random sane country
-//         }
         script.append(_export + lcMeasurement+ QLatin1Char('=') + _measurement + QLatin1Char('\n'));
     }
 
     const QString _global = m_config.readEntry(lcGlobal, QString());
     if (!_global.isEmpty()) {
-        script.append(_export + QStringLiteral("LC_COLLATE") + QLatin1Char('=') + _global + QLatin1Char('\n'));
-        script.append(_export + QStringLiteral("LC_CTYPE") + QLatin1Char('=') + _global + QLatin1Char('\n'));
+        script.append(_export + lcCollate + QLatin1Char('=') + _global + QLatin1Char('\n'));
+        script.append(_export + lcCtype + QLatin1Char('=') + _global + QLatin1Char('\n'));
     }
 
     QFile file(configPath);
@@ -299,6 +309,8 @@ void KCMFormats::save()
     //qDebug() << "Formats save:";
     writeConfig();
     writeExports();
+    KMessageBox::information(this, i18n("<p>Your changes take effect the next time you log in.</p>"),
+                             i18n("Format Settings Changed"), "FormatSettingsChanged");
 }
 
 void KCMFormats::defaults()
@@ -361,6 +373,5 @@ void KCMFormats::updateExample()
     m_ui->exampleCurrency->setText(currencyExample);
     m_ui->exampleMeasurement->setText(measurementExample);
 }
-
 
 #include "kcmformats.moc"

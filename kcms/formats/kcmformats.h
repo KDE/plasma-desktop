@@ -25,6 +25,7 @@ namespace Ui {
     class KCMFormatsWidget;
 }
 class QComboBox;
+class KMessageWidget;
 
 
 class KCMFormats : public KCModule
