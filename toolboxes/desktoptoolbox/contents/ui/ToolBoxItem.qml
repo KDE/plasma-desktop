@@ -77,7 +77,7 @@ Item {
     }
 
     function lockWidgets(lock) {
-        plasmoid.lockWidgets(lock);
+        plasmoid.action("lock").trigger();
     }
 
     function logout() {
