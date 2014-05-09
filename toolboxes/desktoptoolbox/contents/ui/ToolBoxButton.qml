@@ -139,6 +139,7 @@ Item {
     Row {
         id: buttonLayout
         x: !buttonMouse.dragging && isCorner ? units.smallSpacing*2 : 0
+        spacing: units.smallSpacing
 
         Behavior on x {
             NumberAnimation {
@@ -147,13 +148,16 @@ Item {
             }
         }
 
-        PlasmaCore.IconItem {
+        PlasmaCore.SvgItem {
             id: toolBoxIcon
+            svg: PlasmaCore.Svg {
+                imagePath: "widgets/configuration-icons"
+            }
+            elementId: "menu"
             anchors.verticalCenter: parent.verticalCenter
             width: iconSize
             height: iconSize
-            enabled: buttonMouse.containsMouse || toolBoxItem.showing
-            source: "plasma"
+            opacity: buttonMouse.containsMouse || toolBoxItem.showing ? 1 : 0.5
             rotation: isHorizontal ? 0 : 90;
             transformOrigin: Item.Center
         }

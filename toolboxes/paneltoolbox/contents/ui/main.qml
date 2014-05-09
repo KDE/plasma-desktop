@@ -40,55 +40,24 @@ Item {
         horizontalCenter: isVertical ? parent.horizontalCenter : undefined
     }
 
-    PlasmaCore.Svg {
-        id: toolBoxSvg
-        imagePath: "widgets/line"
-    }
-
     PlasmaCore.SvgItem {
-        id: toolBoxButton
-        svg: toolBoxSvg
-        width: {
-            if (isVertical) {
-                parent.width
-            } else {
-                naturalSize.width
-            }
+        svg: PlasmaCore.Svg {
+            imagePath: "widgets/configuration-icons"
         }
-        height: {
-            if (isVertical) {
-                naturalSize.height
-            } else {
-                parent.height
-            }
-        }
-        elementId: {
-            if (isVertical) {
-                return "horizontal-line"
-            } else {
-                return "vertical-line"
-            }
-        }
+        elementId: "menu"
+
+        anchors.centerIn: mouseArea
+        width: units.iconSizes.small
+        height: width
+        opacity: mouseArea.containsMouse || plasmoid.userConfiguring ? 1 : 0.5
     }
 
     MouseArea {
         id: mouseArea
-        anchors {
-            fill: parent
-            topMargin: isVertical ? 5 : 0
-            leftMargin: isVertical ? 0 : 5
-        }
+        anchors.fill: parent
         hoverEnabled: true
         onClicked: {
             main.Plasmoid.action("configure").trigger()
-        }
-        PlasmaCore.IconItem {
-            anchors {
-                fill: parent
-                margins: units.smallSpacing
-            }
-            source: "plasma"
-            enabled: mouseArea.containsMouse || main.Plasmoid.userConfiguring
         }
     }
 }
