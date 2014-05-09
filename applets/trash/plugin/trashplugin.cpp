@@ -29,5 +29,5 @@ void TrashPrivatePlugin::registerTypes(const char *uri)
     qmlRegisterType<DirModel>(uri, 1,0, "DirModel");
 }
 
-#include "moc_dirmodelplugin.cpp"
+#include "moc_trashplugin.cpp"
 
