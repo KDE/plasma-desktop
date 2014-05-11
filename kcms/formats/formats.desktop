@@ -3,7 +3,7 @@ Exec=kcmshell5 formats
 Icon=preferences-desktop-locale
 Type=Service
 X-KDE-ServiceTypes=KCModule
-X-DocPath=kcontrol/language/index.html
+X-DocPath=kcontrol/formats/index.html
 
 X-KDE-Library=kcm_formats
 X-KDE-ParentApp=kcontrol
@@ -12,7 +12,7 @@ X-KDE-System-Settings-Parent-Category=locale
 X-KDE-Weight=60
 
 Name=Formats
-Comment=Language, numeric, and time settings for your particular region
+Comment=Numeric, currency and time formatting settings for your particular region
 
 X-KDE-Keywords=language,translation,number format,locale,Country,charsets,character sets,Decimal symbol,Thousands separator,symbol,separator,sign,positive,negative,currency,money,fractional digits,calendar,time,date,formats,week,week start,first,paper,size,letter,A4,measure,metric,English,Imperial
 
