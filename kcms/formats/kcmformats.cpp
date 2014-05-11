@@ -125,7 +125,7 @@ void KCMFormats::connectCombo(QComboBox *combo)
 
 void KCMFormats::addLocaleToCombo(QComboBox *combo, const QLocale &locale)
 {
-    const QString clabel = locale.countryToString(locale.country());
+    const QString clabel = locale.nativeCountryName();
     const QString cvalue = locale.bcp47Name();
 
     QString flagcode;
