@@ -35,7 +35,6 @@
 #include <KMessageBox>
 #include <KSharedConfig>
 
-
 K_PLUGIN_FACTORY_WITH_JSON(KCMFormatsFactory, "formats.json", registerPlugin<KCMFormats>();)
 
 const static QString configFile = QStringLiteral("kdeformats");
@@ -50,12 +49,11 @@ const static QString lcMeasurement = QStringLiteral("LC_MEASUREMENT");
 const static QString lcCollate = QStringLiteral("LC_COLLATE");
 const static QString lcCtype = QStringLiteral("LC_CTYPE");
 
-
 KCMFormats::KCMFormats(QWidget *parent, const QVariantList &args)
-  : KCModule(parent, args)
+    : KCModule(parent, args)
 {
-    setQuickHelp( i18n("<h1>Formats</h1>"
-    "You can configure the formats used for time, dates, money and other numbers here."));
+    setQuickHelp(i18n("<h1>Formats</h1>"
+                      "You can configure the formats used for time, dates, money and other numbers here."));
 
     m_ui = new Ui::KCMFormatsWidget;
     m_ui->setupUi(this);
@@ -71,17 +69,16 @@ KCMFormats::~KCMFormats()
     delete m_ui;
 }
 
-
 void KCMFormats::load()
 {
     QList<QLocale> allLocales = QLocale::matchingLocales(QLocale::AnyLanguage, QLocale::AnyScript, QLocale::AnyCountry);
 
-    foreach (QComboBox* combo, m_combos) {
+    foreach(QComboBox * combo, m_combos) {
         initCombo(combo);
     }
 
-    foreach (const QLocale &l, allLocales) {
-        foreach (QComboBox* combo, m_combos) {
+    foreach(const QLocale & l, allLocales) {
+        foreach(QComboBox * combo, m_combos) {
             if (combo != m_ui->comboMeasurement) {
                 addLocaleToCombo(combo, l);
             }
@@ -95,17 +92,17 @@ void KCMFormats::load()
 
     readConfig();
 
-    foreach (QComboBox* combo, m_combos) {
+    foreach(QComboBox * combo, m_combos) {
         connectCombo(combo);
     }
 
-    connect(m_ui->checkDetailed, &QAbstractButton::toggled, [=](){
+    connect(m_ui->checkDetailed, &QAbstractButton::toggled, [ = ]() {
         //qDebug() << "Changed" << enabled;
         //Q_UNUSED(enabled)
         updateExample();
         updateEnabled();
         emit changed(true);
-    } );
+    });
 
     qDebug() << "Loaded locales: " << allLocales.count();
 
@@ -114,22 +111,22 @@ void KCMFormats::load()
     emit changed(false);
 }
 
-void KCMFormats::initCombo(QComboBox* combo)
+void KCMFormats::initCombo(QComboBox *combo)
 {
     const QString clabel = i18n("No change");
     combo->addItem(clabel, QString());
 }
 
-void KCMFormats::connectCombo(QComboBox* combo)
+void KCMFormats::connectCombo(QComboBox *combo)
 {
-    connect(combo, &QComboBox::currentTextChanged, [=](){
+    connect(combo, &QComboBox::currentTextChanged, [ = ]() {
         //qDebug() << "Changed combo" << txt;
         emit changed(true);
         updateExample();
-    } );
+    });
 }
 
-void KCMFormats::addLocaleToCombo(QComboBox* combo, const QLocale &locale)
+void KCMFormats::addLocaleToCombo(QComboBox *combo, const QLocale &locale)
 {
     const QString clabel = locale.countryToString(locale.country());
     //const QString clabel2 = locale.uiLanguages().join(", ");
@@ -140,7 +137,7 @@ void KCMFormats::addLocaleToCombo(QComboBox* combo, const QLocale &locale)
     if (_split.count() > 1) {
         flagcode = _split[1].toLower();
     }
-    QString flag( QStandardPaths::locate(QStandardPaths::GenericDataLocation, QLatin1String("locale/") + QString::fromLatin1( "l10n/%1/flag.png" ).arg(flagcode) ) );
+    QString flag(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QLatin1String("locale/") + QString::fromLatin1("l10n/%1/flag.png").arg(flagcode)));
     QIcon _icon;
     if (!flag.isEmpty()) {
         _icon = QIcon(QPixmap(flag));
@@ -148,7 +145,8 @@ void KCMFormats::addLocaleToCombo(QComboBox* combo, const QLocale &locale)
     combo->addItem(_icon, i18n("%1 (%2)", clabel, locale.name()) , QVariant(cvalue));
 }
 
-void setCombo(QComboBox* combo, const QString &key) {
+void setCombo(QComboBox *combo, const QString &key)
+{
     int ix = combo->findData(key);
     if (ix > -1) {
         combo->setCurrentIndex(ix);
@@ -264,7 +262,7 @@ void KCMFormats::writeExports()
     QString cvalue = m_ui->comboGlobal->currentData().toString();
 
     QString configPath = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation);
-    configPath.append("/"+exportFile);
+    configPath.append("/" + exportFile);
     //qDebug() << "Saving to filename: " << configPath;
 
     QString script(QStringLiteral("# Generated script, do not edit\n"));
@@ -292,7 +290,7 @@ void KCMFormats::writeExports()
 
     QString _measurement = m_config.readEntry(lcMeasurement, QString());
     if (!_measurement.isEmpty()) {
-        script.append(_export + lcMeasurement+ QLatin1Char('=') + _measurement + QLatin1Char('\n'));
+        script.append(_export + lcMeasurement + QLatin1Char('=') + _measurement + QLatin1Char('\n'));
     }
 
     const QString _global = m_config.readEntry(lcGlobal, QString());

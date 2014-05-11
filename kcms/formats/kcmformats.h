@@ -21,19 +21,19 @@
 #include <KCModule>
 #include <KConfigGroup>
 
-namespace Ui {
-    class KCMFormatsWidget;
+namespace Ui
+{
+class KCMFormatsWidget;
 }
 class QComboBox;
 class KMessageWidget;
-
 
 class KCMFormats : public KCModule
 {
     Q_OBJECT
 
 public:
-    explicit KCMFormats( QWidget *parent=0, const QVariantList &list=QVariantList() );
+    explicit KCMFormats(QWidget *parent = 0, const QVariantList &list = QVariantList());
     ~KCMFormats();
 
     void load();
@@ -41,10 +41,10 @@ public:
     void defaults();
 
 private:
-    void addLocaleToCombo(QComboBox* combo, const QLocale &locale);
-    void initCombo(QComboBox* combo);
-    void connectCombo(QComboBox* combo);
-    QList<QComboBox*> m_combos;
+    void addLocaleToCombo(QComboBox *combo, const QLocale &locale);
+    void initCombo(QComboBox *combo);
+    void connectCombo(QComboBox *combo);
+    QList<QComboBox *> m_combos;
 
     void readConfig();
     void writeConfig();
@@ -53,7 +53,7 @@ private:
     void updateExample();
     void updateEnabled();
 
-    Ui::KCMFormatsWidget* m_ui;
+    Ui::KCMFormatsWidget *m_ui;
     KConfigGroup m_config;
 };
 
