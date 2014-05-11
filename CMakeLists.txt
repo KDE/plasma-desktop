@@ -95,14 +95,14 @@ configure_file(config-X11.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-X11.h)
 configure_file(config-runtime.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-runtime.h)
 
 set(PLASMADESKTOP_VERSION_MAJOR 4)
-set(PLASMADESKTOP_VERSION_MINOR 95)
+set(PLASMADESKTOP_VERSION_MINOR 96)
 set(PLASMADESKTOP_VERSION_PATCH 0)
 set(PLASMADESKTOP_VERSION ${PLASMADESKTOP_VERSION_MAJOR}.${PLASMADESKTOP_VERSION_MINOR}.${PLASMADESKTOP_VERSION_PATCH} )
 
 set(GENERIC_LIB_SOVERSION ${PLASMADESKTOP_VERSION_MAJOR})
 set(GENERIC_LIB_VERSION "${PLASMADESKTOP_VERSION_MAJOR}.${PLASMADESKTOP_VERSION_MINOR}.${PLASMADESKTOP_VERSION_PATCH}")
 
-plasma_install_package(desktoppackage org.kde.desktop shells shell)
+plasma_install_package(desktoppackage org.kde.plasma.desktop shells shell)
 
 add_subdirectory(doc)
 # add_subdirectory(ktouchpadenabler)

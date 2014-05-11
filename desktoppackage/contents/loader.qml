@@ -25,7 +25,7 @@ import org.kde.plasma.platformcomponents 2.0 as Platform
 Item {
     id: main
 
-    property string shell  : "org.kde.desktop"
+    property string shell  : "org.kde.plasma.desktop"
     property bool willing  : true
     property int  priority : 1
 

@@ -352,8 +352,8 @@ void KCMLocale::initSettings()
     // These are the C/Posix defaults and KDE defaults where a setting doesn't exist in Posix
     // This will be used as the lowest level in the merge to obtain the KCM Defaults
     // These settings should never be saved anywhere
-    m_cConfig = KSharedConfig::openConfig( KStandardDirs::locate( "locale",
-                                           QString::fromLatin1("l10n/C/kf5_entry.desktop") ) );
+    m_cConfig = KSharedConfig::openConfig( KStandardDirs::locate( "kf5",
+                                           QString::fromLatin1("locale/countries/C/country.desktop") ) );
     m_cSettings= KConfigGroup( m_cConfig, "KCM Locale" );
 
     initCountrySettings( KGlobal::locale()->country() );
@@ -377,8 +377,8 @@ void KCMLocale::initCountrySettings( const QString &countryCode )
     // These are the Country overrides, they exclude any User, Group, or C settings
     // This will be used in the merge to obtain the KCM Defaults
     // These settings should never be saved anywhere
-    m_countryConfig = KSharedConfig::openConfig( KStandardDirs::locate( "locale",
-                                                 QString::fromLatin1("l10n/%1/kf5_entry.desktop")
+    m_countryConfig = KSharedConfig::openConfig( KStandardDirs::locate( "kf5",
+                                                 QString::fromLatin1("locale/countries/%1/country.desktop")
                                                  .arg( countryCode ) ) );
     m_countrySettings = KConfigGroup( m_countryConfig, "KCM Locale" );
     QString calendarType = m_countrySettings.readEntry( "CalendarSystem", "gregorian" );

@@ -20,7 +20,7 @@ import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as Components
 import org.kde.kquickcontrolsaddons 2.0
-import org.kde.dirmodel 2.0
+import org.kde.plasma.private.trash 1.0 as TrashPrivate
 
 MouseArea {
     id:root
@@ -32,7 +32,7 @@ MouseArea {
     hoverEnabled: true
     onClicked: Qt.openUrlExternally("trash:/");
 
-    DirModel {
+    TrashPrivate.DirModel {
         id: dirModel
         url: "trash:/"
     }
