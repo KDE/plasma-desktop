@@ -362,12 +362,12 @@ void KCMFormats::updateExample()
 
     QString numberExample = nloc.toString(1000.01);
     QString timeExample = tloc.toString(QDateTime::currentDateTime());
-    QString currencyExample = cloc.toCurrencyString(24.99);
+    QString currencyExample = cloc.toCurrencyString(24);
     QString measurementExample;
     if (mloc.measurementSystem() == QLocale::ImperialSystem) {
-        measurementExample = i18nc("Example for imperial units", "4 miles, %1 inches", mloc.toString(4.1));
+        measurementExample = i18nc("Example for imperial units", "4 miles, 200 yards");
     } else {
-        measurementExample = i18nc("Example for metric units", "4 km, %1 cm", nloc.toString(4.3));
+        measurementExample = i18nc("Example for metric units", "6km, 620m");
     }
 
 //     qDebug() << "NumberExample: " << numberExample;
