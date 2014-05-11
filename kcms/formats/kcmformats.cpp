@@ -57,7 +57,7 @@ KCMFormats::KCMFormats(QWidget *parent, const QVariantList &args)
     setQuickHelp( i18n("<h1>Formats</h1>"
     " You can configure the formats used for time, dates, money and other numbers here."));
 
-    m_ui = new Ui::KCMFormatsWidget(this);
+    m_ui = new Ui::KCMFormatsWidget;
     m_ui->setupUi(this);
     m_combos << m_ui->comboGlobal
              << m_ui->comboNumbers
@@ -65,6 +65,12 @@ KCMFormats::KCMFormats(QWidget *parent, const QVariantList &args)
              << m_ui->comboCurrency
              << m_ui->comboMeasurement;
 }
+
+KCMFormats::~KCMFormats()
+{
+    delete m_ui;
+}
+
 
 void KCMFormats::load()
 {
@@ -309,13 +315,14 @@ void KCMFormats::save()
     //qDebug() << "Formats save:";
     writeConfig();
     writeExports();
-    KMessageBox::information(this, i18n("<p>Your changes take effect the next time you log in.</p>"),
+    KMessageBox::information(this, i18n("Your changes take effect the next time you log in."),
                              i18n("Format Settings Changed"), "FormatSettingsChanged");
 }
 
 void KCMFormats::defaults()
 {
-    readConfig();
+    m_ui->checkDetailed->setChecked(false);
+    m_ui->comboGlobal->setCurrentIndex(0);
 }
 
 void KCMFormats::updateEnabled()

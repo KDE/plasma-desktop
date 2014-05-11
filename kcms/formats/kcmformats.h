@@ -34,6 +34,7 @@ class KCMFormats : public KCModule
 
 public:
     explicit KCMFormats( QWidget *parent=0, const QVariantList &list=QVariantList() );
+    ~KCMFormats();
 
     void load();
     void save();
