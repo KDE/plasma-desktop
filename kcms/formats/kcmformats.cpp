@@ -57,7 +57,7 @@ KCMFormats::KCMFormats(QWidget *parent, const QVariantList &args)
     setQuickHelp( i18n("<h1>Formats</h1>"
     " You can configure the formats used for time, dates, money and other numbers here."));
 
-    m_ui = new Ui::KCMFormatsWidget;
+    m_ui = new Ui::KCMFormatsWidget(this);
     m_ui->setupUi(this);
     m_combos << m_ui->comboGlobal
              << m_ui->comboNumbers
