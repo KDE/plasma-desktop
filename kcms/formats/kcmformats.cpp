@@ -309,7 +309,7 @@ void KCMFormats::save()
     //qDebug() << "Formats save:";
     writeConfig();
     writeExports();
-    KMessageBox::information(this, i18n("Your changes take effect the next time you log in."),
+    KMessageBox::information(this, i18n("Your changes will take effect the next time you log in."),
                              i18n("Format Settings Changed"), "FormatSettingsChanged");
 }
 
