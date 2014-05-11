@@ -97,8 +97,6 @@ void KCMFormats::load()
     }
 
     connect(m_ui->checkDetailed, &QAbstractButton::toggled, [ = ]() {
-        //qDebug() << "Changed" << enabled;
-        //Q_UNUSED(enabled)
         updateExample();
         updateEnabled();
         emit changed(true);
@@ -120,7 +118,6 @@ void KCMFormats::initCombo(QComboBox *combo)
 void KCMFormats::connectCombo(QComboBox *combo)
 {
     connect(combo, &QComboBox::currentTextChanged, [ = ]() {
-        //qDebug() << "Changed combo" << txt;
         emit changed(true);
         updateExample();
     });
@@ -129,20 +126,19 @@ void KCMFormats::connectCombo(QComboBox *combo)
 void KCMFormats::addLocaleToCombo(QComboBox *combo, const QLocale &locale)
 {
     const QString clabel = locale.countryToString(locale.country());
-    //const QString clabel2 = locale.uiLanguages().join(", ");
     const QString cvalue = locale.bcp47Name();
 
-    QString flagcode = "de";
-    const QStringList _split = locale.name().split('_');
-    if (_split.count() > 1) {
-        flagcode = _split[1].toLower();
+    QString flagcode;
+    const QStringList split = locale.name().split('_');
+    if (split.count() > 1) {
+        flagcode = split[1].toLower();
     }
     QString flag(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QLatin1String("locale/") + QString::fromLatin1("l10n/%1/flag.png").arg(flagcode)));
-    QIcon _icon;
+    QIcon flagIcon;
     if (!flag.isEmpty()) {
-        _icon = QIcon(QPixmap(flag));
+        flagIcon = QIcon(QPixmap(flag));
     }
-    combo->addItem(_icon, i18n("%1 (%2)", clabel, locale.name()) , QVariant(cvalue));
+    combo->addItem(flagIcon, i18n("%1 (%2)", clabel, locale.name()) , QVariant(cvalue));
 }
 
 void setCombo(QComboBox *combo, const QString &key)
@@ -187,6 +183,7 @@ void KCMFormats::writeConfig()
     // apparently the data in the combo is gone by the time save() is called.
     // This might be a problem in KCModule, but does not directly affect us
     // since within systemsettings, it works fine.
+    // See https://bugs.kde.org/show_bug.cgi?id=334624
     if (m_ui->comboGlobal->count() == 0) {
         qWarning() << "Couldn't read data from UI, writing configuration failed.";
         return;
@@ -263,7 +260,6 @@ void KCMFormats::writeExports()
 
     QString configPath = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation);
     configPath.append("/" + exportFile);
-    //qDebug() << "Saving to filename: " << configPath;
 
     QString script(QStringLiteral("# Generated script, do not edit\n"));
     script.append(QStringLiteral("# Exports language-format specific env vars from startkde.\n"));
