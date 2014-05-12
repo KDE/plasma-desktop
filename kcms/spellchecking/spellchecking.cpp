@@ -24,7 +24,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include <kpluginfactory.h>
 #include <sonnet/configwidget.h>
-
+#include <KConfig>
 #include <QBoxLayout>
 
 K_PLUGIN_FACTORY(SpellFactory, registerPlugin<SonnetSpellCheckingModule>();)
@@ -41,7 +41,6 @@ SonnetSpellCheckingModule::SonnetSpellCheckingModule(QWidget* parent, const QVar
 
 SonnetSpellCheckingModule::~SonnetSpellCheckingModule()
 {
-  delete m_config;
 }
 
 void SonnetSpellCheckingModule::save()
