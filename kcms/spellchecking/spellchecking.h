@@ -45,7 +45,6 @@ class SonnetSpellCheckingModule : public KCModule
 
  private:
   Sonnet::ConfigWidget *m_configWidget;
-  KConfig *m_config;
 };
 
 #endif

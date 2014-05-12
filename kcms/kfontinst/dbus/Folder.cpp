@@ -88,7 +88,7 @@ void Folder::init(bool system, bool systemBus)
     itsDisabledCfg.dirty=false;
     if(itsDisabledCfg.name.isEmpty())
     {
-        QString fileName("/"DISABLED_FONTS".xml");
+        QString fileName("/" DISABLED_FONTS ".xml");
 
         if(system)
             itsDisabledCfg.name=QString::fromLatin1(KFI_ROOT_CFG_DIR)+fileName;
@@ -214,14 +214,14 @@ void Folder::saveDisabled()
 
             QTextStream str(&file);
 
-            str << "<"DISABLED_FONTS">" << endl;
+            str << "<" DISABLED_FONTS ">" << endl;
 
             FamilyCont::ConstIterator it(itsFonts.begin()),
                                       end(itsFonts.end());
 
             for(; it!=end; ++it)
                 (*it).toXml(true, str);
-            str << "</"DISABLED_FONTS">" << endl;
+            str << "</" DISABLED_FONTS ">" << endl;
             str.flush();
 
             if(!file.finalize())
@@ -249,11 +249,11 @@ QStringList Folder::toXml(int max)
         {
             if(i)
             {
-                str << "</"FONTLIST_TAG">" << endl;
+                str << "</" FONTLIST_TAG ">" << endl;
                 rv.append(string);
                 string=QString();
             }
-            str << "<"FONTLIST_TAG" " << SYSTEM_ATTR"=\"" << (itsIsSystem ? "true" : "false") << "\">" << endl;
+            str << "<" FONTLIST_TAG " " << SYSTEM_ATTR "=\"" << (itsIsSystem ? "true" : "false") << "\">" << endl;
         }
 
         (*it).toXml(false, str);
@@ -261,7 +261,7 @@ QStringList Folder::toXml(int max)
 
     if(!string.isEmpty())
     {
-        str << "</"FONTLIST_TAG">" << endl;
+        str << "</" FONTLIST_TAG ">" << endl;
         rv.append(string);
     }
     return rv;

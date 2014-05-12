@@ -160,15 +160,6 @@ Item {
                 }
             }
         }
-
-        Connections {
-            target: plasmoid
-            onExpandedChanged: {
-                if (!expanded) {
-                    header.query = "";
-                }
-            }
-        }
     }
 
     states: [
