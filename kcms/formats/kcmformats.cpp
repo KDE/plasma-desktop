@@ -1,6 +1,6 @@
 /*
  *  kcmformats.cpp
- *  Copyright 2014 Sebastian Kuegler <sebas@kde.org>
+ *  Copyright 2014 Sebastian Kügler <sebas@kde.org>
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -96,8 +96,6 @@ void KCMFormats::load()
         emit changed(true);
     });
 
-    qDebug() << "Loaded locales: " << allLocales.count();
-
     updateEnabled();
     updateExample();
     emit changed(false);
@@ -176,11 +174,9 @@ void KCMFormats::writeConfig()
     }
     const QString global = m_ui->comboGlobal->currentData().toString();
 
-    qDebug() << "GLOBAL : " << global << m_ui->comboGlobal->count();
     if (!m_ui->checkDetailed->isChecked()) {
         m_config.deleteEntry("useDetailed");
         if (global.isEmpty()) {
-            //qDebug() << "Deleting them all";
             m_config.deleteEntry(lcGlobal);
             m_config.deleteEntry(lcNumeric);
             m_config.deleteEntry(lcTime);
@@ -201,7 +197,6 @@ void KCMFormats::writeConfig()
         if (global.isEmpty()) {
             m_config.deleteEntry(lcGlobal);
         } else {
-            //qDebug() << "numeric: " << global;
             m_config.writeEntry(lcGlobal, global);
         }
 
@@ -209,7 +204,6 @@ void KCMFormats::writeConfig()
         if (numeric.isEmpty()) {
             m_config.deleteEntry(lcNumeric);
         } else {
-            qDebug() << "numeric: " << numeric;
             m_config.writeEntry(lcNumeric, numeric);
         }
 
@@ -217,7 +211,6 @@ void KCMFormats::writeConfig()
         if (time.isEmpty()) {
             m_config.deleteEntry(lcTime);
         } else {
-            //qDebug() << "time: " << time;
             m_config.writeEntry(lcTime, time);
         }
 
@@ -225,7 +218,6 @@ void KCMFormats::writeConfig()
         if (monetary.isEmpty()) {
             m_config.deleteEntry(lcMonetary);
         } else {
-            //qDebug() << "monetary: " << monetary;
             m_config.writeEntry(lcMonetary, monetary);
         }
 
@@ -233,7 +225,6 @@ void KCMFormats::writeConfig()
         if (measurement.isEmpty()) {
             m_config.deleteEntry(lcMeasurement);
         } else {
-            //qDebug() << "measurement: " << measurement;
             m_config.writeEntry(lcMeasurement, measurement);
         }
 
@@ -241,7 +232,6 @@ void KCMFormats::writeConfig()
         if (collate.isEmpty()) {
             m_config.deleteEntry(lcCollate);
         } else {
-            qDebug() << "collate: " << collate;
             m_config.writeEntry(lcCollate, collate);
         }
     }
@@ -372,11 +362,6 @@ void KCMFormats::updateExample()
     } else {
         measurementExample = i18nc("Measurement combobox", "Metric");
     }
-
-//     qDebug() << "NumberExample: " << numberExample;
-//     qDebug() << "TimeExample: " << timeExample;
-//    qDebug() << "CurrencyExample: " << currencyExample;
-    //qDebug() << "MeasureExample: " << currencyExample << mloc.name();
 
     m_ui->exampleNumbers->setText(numberExample);
     m_ui->exampleTime->setText(timeExample);
