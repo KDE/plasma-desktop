@@ -347,6 +347,16 @@ Item {
         currentTab: bookmarkButton
         onCurrentTabChanged: root.forceActiveFocus();
 
+        Connections {
+            target: plasmoid
+            onExpandedChanged: {
+                if (!expanded) {
+                    header.query = "";
+                    bookmarkButton.clicked();
+                }
+            }
+        }
+
         KickoffButton {
             id: bookmarkButton
             tab: favoritesPage
