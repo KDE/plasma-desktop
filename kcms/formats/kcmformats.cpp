@@ -351,9 +351,9 @@ void KCMFormats::updateExample()
         mloc = QLocale(m_ui->comboGlobal->currentData().toString());
     }
 
-    QString numberExample = nloc.toString(1000.01);
-    QString timeExample = tloc.toString(QDateTime::currentDateTime());
-    QString currencyExample = cloc.toCurrencyString(24);
+    const QString numberExample = nloc.toString(1000.01);
+    const QString timeExample = tloc.toString(QDateTime::currentDateTime());
+    const QString currencyExample = cloc.toCurrencyString(24);
 
     QString measurementExample;
     if (mloc.measurementSystem() == QLocale::ImperialUKSystem) {
