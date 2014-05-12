@@ -132,7 +132,7 @@ void KCMFormats::addLocaleToCombo(QComboBox *combo, const QLocale &locale)
     if (!flag.isEmpty()) {
         flagIcon = QIcon(QPixmap(flag));
     }
-    combo->addItem(flagIcon, i18n("%1 (%2)", clabel, locale.name()) , QVariant(cvalue));
+    combo->addItem(flagIcon, i18n("%1 - %2 (%3)", clabel, locale.nativeLanguageName(), locale.name()) , QVariant(cvalue));
 }
 
 void setCombo(QComboBox *combo, const QString &key)
@@ -306,7 +306,6 @@ void KCMFormats::writeExports()
 
 void KCMFormats::save()
 {
-    //qDebug() << "Formats save:";
     writeConfig();
     writeExports();
     KMessageBox::information(this, i18n("Your changes will take effect the next time you log in."),
