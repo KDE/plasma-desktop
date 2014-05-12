@@ -37,7 +37,7 @@
 
 K_PLUGIN_FACTORY_WITH_JSON(KCMFormatsFactory, "formats.json", registerPlugin<KCMFormats>();)
 
-const static QString configFile = QStringLiteral("kdeformats");
+const static QString configFile = QStringLiteral("plasma-formatsrc");
 const static QString exportFile = QStringLiteral("export-formats-settings.sh");
 
 const static QString lcGlobal = QStringLiteral("Global");
@@ -165,7 +165,7 @@ void KCMFormats::writeConfig()
 {
     m_config = KConfigGroup(KSharedConfig::openConfig(configFile), "Formats");
 
-    // _global ends up empty here when OK button is clicked from kcmshell5,
+    // global ends up empty here when OK button is clicked from kcmshell5,
     // apparently the data in the combo is gone by the time save() is called.
     // This might be a problem in KCModule, but does not directly affect us
     // since within systemsettings, it works fine.
@@ -174,12 +174,12 @@ void KCMFormats::writeConfig()
         qWarning() << "Couldn't read data from UI, writing configuration failed.";
         return;
     }
-    const QString _global = m_ui->comboGlobal->currentData().toString();
+    const QString global = m_ui->comboGlobal->currentData().toString();
 
-    qDebug() << "GLOBAL : " << _global << m_ui->comboGlobal->count();
+    qDebug() << "GLOBAL : " << global << m_ui->comboGlobal->count();
     if (!m_ui->checkDetailed->isChecked()) {
         m_config.deleteEntry("useDetailed");
-        if (_global.isEmpty()) {
+        if (global.isEmpty()) {
             //qDebug() << "Deleting them all";
             m_config.deleteEntry(lcGlobal);
             m_config.deleteEntry(lcNumeric);
@@ -188,53 +188,53 @@ void KCMFormats::writeConfig()
             m_config.deleteEntry(lcMeasurement);
             m_config.deleteEntry(lcCollate);
         } else {
-            m_config.writeEntry(lcGlobal, _global);
-            m_config.writeEntry(lcNumeric, _global);
-            m_config.writeEntry(lcTime, _global);
-            m_config.writeEntry(lcMonetary, _global);
-            m_config.writeEntry(lcMeasurement, _global);
-            m_config.writeEntry(lcCollate, _global);
+            m_config.writeEntry(lcGlobal, global);
+            m_config.writeEntry(lcNumeric, global);
+            m_config.writeEntry(lcTime, global);
+            m_config.writeEntry(lcMonetary, global);
+            m_config.writeEntry(lcMeasurement, global);
+            m_config.writeEntry(lcCollate, global);
         }
     } else { // Save detailed settings
         m_config.writeEntry("useDetailed", true);
 
-        if (_global.isEmpty()) {
+        if (global.isEmpty()) {
             m_config.deleteEntry(lcGlobal);
         } else {
-            //qDebug() << "_numeric: " << _global;
-            m_config.writeEntry(lcGlobal, _global);
+            //qDebug() << "numeric: " << global;
+            m_config.writeEntry(lcGlobal, global);
         }
 
-        const QString _numeric = m_ui->comboNumbers->currentData().toString();
-        if (_numeric.isEmpty()) {
+        const QString numeric = m_ui->comboNumbers->currentData().toString();
+        if (numeric.isEmpty()) {
             m_config.deleteEntry(lcNumeric);
         } else {
-            qDebug() << "_numeric: " << _numeric;
-            m_config.writeEntry(lcNumeric, _numeric);
+            qDebug() << "numeric: " << numeric;
+            m_config.writeEntry(lcNumeric, numeric);
         }
 
-        const QString _time = m_ui->comboTime->currentData().toString();
-        if (_time.isEmpty()) {
+        const QString time = m_ui->comboTime->currentData().toString();
+        if (time.isEmpty()) {
             m_config.deleteEntry(lcTime);
         } else {
-            //qDebug() << "_time: " << _time;
-            m_config.writeEntry(lcTime, _time);
+            //qDebug() << "time: " << time;
+            m_config.writeEntry(lcTime, time);
         }
 
-        const QString _monetary = m_ui->comboCurrency->currentData().toString();
-        if (_monetary.isEmpty()) {
+        const QString monetary = m_ui->comboCurrency->currentData().toString();
+        if (monetary.isEmpty()) {
             m_config.deleteEntry(lcMonetary);
         } else {
-            //qDebug() << "_monetary: " << _monetary;
-            m_config.writeEntry(lcMonetary, _monetary);
+            //qDebug() << "monetary: " << monetary;
+            m_config.writeEntry(lcMonetary, monetary);
         }
 
-        const QString _measurement = m_ui->comboMeasurement->currentData().toString();
-        if (_measurement.isEmpty()) {
+        const QString measurement = m_ui->comboMeasurement->currentData().toString();
+        if (measurement.isEmpty()) {
             m_config.deleteEntry(lcMeasurement);
         } else {
-            //qDebug() << "_measurement: " << _measurement;
-            m_config.writeEntry(lcMeasurement, _measurement);
+            //qDebug() << "measurement: " << measurement;
+            m_config.writeEntry(lcMeasurement, measurement);
         }
 
         const QString collate = m_ui->comboCollate->currentData().toString();
@@ -265,19 +265,19 @@ void KCMFormats::writeExports()
 
     const QString _export = QStringLiteral("export ");
 
-    const QString _numeric = m_config.readEntry(lcNumeric, QString());
-    if (!_numeric.isEmpty()) {
-        script.append(_export + lcNumeric + QLatin1Char('=') + _numeric + QLatin1Char('\n'));
+    const QString numeric = m_config.readEntry(lcNumeric, QString());
+    if (!numeric.isEmpty()) {
+        script.append(_export + lcNumeric + QLatin1Char('=') + numeric + QLatin1Char('\n'));
     }
 
-    const QString _time = m_config.readEntry(lcTime, QString());
-    if (!_time.isEmpty()) {
-        script.append(_export + lcTime + QLatin1Char('=') + _time + QLatin1Char('\n'));
+    const QString time = m_config.readEntry(lcTime, QString());
+    if (!time.isEmpty()) {
+        script.append(_export + lcTime + QLatin1Char('=') + time + QLatin1Char('\n'));
     }
 
-    const QString _monetary = m_config.readEntry(lcMonetary, QString());
-    if (!_monetary.isEmpty()) {
-        script.append(_export + lcMonetary + QLatin1Char('=') + _monetary + QLatin1Char('\n'));
+    const QString monetary = m_config.readEntry(lcMonetary, QString());
+    if (!monetary.isEmpty()) {
+        script.append(_export + lcMonetary + QLatin1Char('=') + monetary + QLatin1Char('\n'));
     }
 
     QString _measurement = m_config.readEntry(lcMeasurement, QString());
