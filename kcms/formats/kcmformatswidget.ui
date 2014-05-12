@@ -194,6 +194,35 @@
         </widget>
        </item>
        <item row="6" column="0">
+        <widget class="QLabel" name="labelCollate">
+         <property name="text">
+          <string>Co&amp;llation and Sorting:</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+         </property>
+         <property name="buddy">
+          <cstring>comboMeasurement</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="1">
+        <widget class="QComboBox" name="comboCollate">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>300</width>
+           <height>0</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="0">
         <widget class="QLabel" name="label_6">
          <property name="text">
           <string/>
@@ -203,7 +232,7 @@
          </property>
         </widget>
        </item>
-       <item row="7" column="0">
+       <item row="8" column="0">
         <widget class="QLabel" name="labelMeasurement_2">
          <property name="text">
           <string>&lt;b&gt;Examples&lt;/b&gt;</string>
@@ -213,7 +242,7 @@
          </property>
         </widget>
        </item>
-       <item row="8" column="0">
+       <item row="9" column="0">
         <widget class="QLabel" name="lexNumbers">
          <property name="text">
           <string>Numbers:</string>
@@ -223,7 +252,7 @@
          </property>
         </widget>
        </item>
-       <item row="8" column="1">
+       <item row="9" column="1">
         <widget class="QLabel" name="exampleNumbers">
          <property name="text">
           <string/>
@@ -233,7 +262,7 @@
          </property>
         </widget>
        </item>
-       <item row="9" column="0">
+       <item row="10" column="0">
         <widget class="QLabel" name="lexTime">
          <property name="text">
           <string>Time:</string>
@@ -243,7 +272,7 @@
          </property>
         </widget>
        </item>
-       <item row="9" column="1">
+       <item row="10" column="1">
         <widget class="QLabel" name="exampleTime">
          <property name="text">
           <string/>
@@ -253,7 +282,7 @@
          </property>
         </widget>
        </item>
-       <item row="10" column="0">
+       <item row="11" column="0">
         <widget class="QLabel" name="lexCurrency">
          <property name="text">
           <string>Currency:</string>
@@ -263,7 +292,7 @@
          </property>
         </widget>
        </item>
-       <item row="10" column="1">
+       <item row="11" column="1">
         <widget class="QLabel" name="exampleCurrency">
          <property name="text">
           <string/>
@@ -273,8 +302,8 @@
          </property>
         </widget>
        </item>
-       <item row="11" column="0">
-        <widget class="QLabel" name="lexMeasurement">
+       <item row="12" column="0">
+        <widget class="QLabel" name="lexMeasurement_2">
          <property name="text">
           <string>Measurement System:</string>
          </property>
@@ -283,7 +312,7 @@
          </property>
         </widget>
        </item>
-       <item row="11" column="1">
+       <item row="12" column="1">
         <widget class="QLabel" name="exampleMeasurement">
          <property name="text">
           <string/>

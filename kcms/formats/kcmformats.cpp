@@ -61,7 +61,8 @@ KCMFormats::KCMFormats(QWidget *parent, const QVariantList &args)
              << m_ui->comboNumbers
              << m_ui->comboTime
              << m_ui->comboCurrency
-             << m_ui->comboMeasurement;
+             << m_ui->comboMeasurement
+             << m_ui->comboCollate;
 }
 
 KCMFormats::~KCMFormats()
@@ -79,16 +80,9 @@ void KCMFormats::load()
 
     foreach(const QLocale & l, allLocales) {
         foreach(QComboBox * combo, m_combos) {
-            if (combo != m_ui->comboMeasurement) {
-                addLocaleToCombo(combo, l);
-            }
+            addLocaleToCombo(combo, l);
         }
     }
-
-    // Standard says that Imperial == en_US
-    m_ui->comboMeasurement->addItem(i18nc("Measurement units combo", "Imperial"), QVariant("en_US"));
-    // Random sane country
-    m_ui->comboMeasurement->addItem(i18nc("Measurement units combo", "Metric"), QVariant("nl_NL"));
 
     readConfig();
 
@@ -125,7 +119,7 @@ void KCMFormats::connectCombo(QComboBox *combo)
 
 void KCMFormats::addLocaleToCombo(QComboBox *combo, const QLocale &locale)
 {
-    const QString clabel = locale.nativeCountryName();
+    const QString clabel = !locale.nativeCountryName().isEmpty() ? locale.nativeCountryName() : locale.countryToString(locale.country());
     const QString cvalue = locale.bcp47Name();
 
     QString flagcode;
@@ -160,18 +154,10 @@ void KCMFormats::readConfig()
 
     setCombo(m_ui->comboNumbers, m_config.readEntry(lcNumeric, QString()));
     setCombo(m_ui->comboTime, m_config.readEntry(lcTime, QString()));
+    setCombo(m_ui->comboCollate, m_config.readEntry(lcCollate, QString()));
     setCombo(m_ui->comboCurrency, m_config.readEntry(lcMonetary, QString()));
+    setCombo(m_ui->comboMeasurement, m_config.readEntry(lcMeasurement, QString()));
 
-    QString _ms = m_config.readEntry(lcMeasurement, QString());
-    if (_ms.isEmpty()) {
-        m_ui->comboMeasurement->setCurrentIndex(0);
-    } else {
-        if (QLocale(_ms).measurementSystem() == QLocale::ImperialSystem) {
-            m_ui->comboMeasurement->setCurrentIndex(1);
-        } else {
-            m_ui->comboMeasurement->setCurrentIndex(2);
-        }
-    }
     updateEnabled();
 }
 
@@ -200,12 +186,14 @@ void KCMFormats::writeConfig()
             m_config.deleteEntry(lcTime);
             m_config.deleteEntry(lcMonetary);
             m_config.deleteEntry(lcMeasurement);
+            m_config.deleteEntry(lcCollate);
         } else {
             m_config.writeEntry(lcGlobal, _global);
             m_config.writeEntry(lcNumeric, _global);
             m_config.writeEntry(lcTime, _global);
             m_config.writeEntry(lcMonetary, _global);
             m_config.writeEntry(lcMeasurement, _global);
+            m_config.writeEntry(lcCollate, _global);
         }
     } else { // Save detailed settings
         m_config.writeEntry("useDetailed", true);
@@ -248,6 +236,14 @@ void KCMFormats::writeConfig()
             //qDebug() << "_measurement: " << _measurement;
             m_config.writeEntry(lcMeasurement, _measurement);
         }
+
+        const QString collate = m_ui->comboCollate->currentData().toString();
+        if (collate.isEmpty()) {
+            m_config.deleteEntry(lcCollate);
+        } else {
+            qDebug() << "collate: " << collate;
+            m_config.writeEntry(lcCollate, collate);
+        }
     }
 
     m_config.sync();
@@ -289,9 +285,13 @@ void KCMFormats::writeExports()
         script.append(_export + lcMeasurement + QLatin1Char('=') + _measurement + QLatin1Char('\n'));
     }
 
+    QString collate = m_config.readEntry(lcCollate, QString());
+    if (!collate.isEmpty()) {
+        script.append(_export + lcCollate + QLatin1Char('=') + collate + QLatin1Char('\n'));
+    }
+
     const QString _global = m_config.readEntry(lcGlobal, QString());
     if (!_global.isEmpty()) {
-        script.append(_export + lcCollate + QLatin1Char('=') + _global + QLatin1Char('\n'));
         script.append(_export + lcCtype + QLatin1Char('=') + _global + QLatin1Char('\n'));
     }
 
@@ -327,10 +327,12 @@ void KCMFormats::updateEnabled()
     m_ui->labelTime->setEnabled(enabled);
     m_ui->labelCurrency->setEnabled(enabled);
     m_ui->labelMeasurement->setEnabled(enabled);
+    m_ui->labelCollate->setEnabled(enabled);
     m_ui->comboNumbers->setEnabled(enabled);
     m_ui->comboTime->setEnabled(enabled);
     m_ui->comboCurrency->setEnabled(enabled);
     m_ui->comboMeasurement->setEnabled(enabled);
+    m_ui->comboCollate->setEnabled(enabled);
 }
 
 void KCMFormats::updateExample()
