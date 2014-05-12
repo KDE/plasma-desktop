@@ -290,9 +290,15 @@ void KCMFormats::writeExports()
         script.append(_export + lcCollate + QLatin1Char('=') + collate + QLatin1Char('\n'));
     }
 
-    const QString _global = m_config.readEntry(lcGlobal, QString());
-    if (!_global.isEmpty()) {
-        script.append(_export + lcCtype + QLatin1Char('=') + _global + QLatin1Char('\n'));
+    QString ctype = m_config.readEntry(lcCtype, QString());
+    if (!ctype.isEmpty()) {
+        script.append(_export + lcCtype + QLatin1Char('=') + ctype + QLatin1Char('\n'));
+
+    } else {
+        const QString global = m_config.readEntry(lcGlobal, QString());
+        if (!global.isEmpty()) {
+            script.append(_export + lcCtype + QLatin1Char('=') + global + QLatin1Char('\n'));
+        }
     }
 
     QFile file(configPath);
@@ -359,10 +365,12 @@ void KCMFormats::updateExample()
     QString timeExample = tloc.toString(QDateTime::currentDateTime());
     QString currencyExample = cloc.toCurrencyString(24);
     QString measurementExample;
-    if (mloc.measurementSystem() == QLocale::ImperialSystem) {
-        measurementExample = i18nc("Example for imperial units", "4 miles, 200 yards");
+    if (mloc.measurementSystem() == QLocale::ImperialUKSystem) {
+        measurementExample = i18nc("Measurement combobox", "Imperial UK");
+    } else if (mloc.measurementSystem() == QLocale::ImperialUSSystem) {
+        measurementExample = i18nc("Measurement combobox", "Imperial US");
     } else {
-        measurementExample = i18nc("Example for metric units", "6km, 620m");
+        measurementExample = i18nc("Measurement combobox", "Metric");
     }
 
 //     qDebug() << "NumberExample: " << numberExample;
