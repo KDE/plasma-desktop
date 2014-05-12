@@ -270,17 +270,17 @@ void KCMFormats::writeExports()
         script.append(_export + lcMonetary + QLatin1Char('=') + monetary + QLatin1Char('\n'));
     }
 
-    QString _measurement = m_config.readEntry(lcMeasurement, QString());
-    if (!_measurement.isEmpty()) {
-        script.append(_export + lcMeasurement + QLatin1Char('=') + _measurement + QLatin1Char('\n'));
+    const QString measurement = m_config.readEntry(lcMeasurement, QString());
+    if (!measurement.isEmpty()) {
+        script.append(_export + lcMeasurement + QLatin1Char('=') + measurement + QLatin1Char('\n'));
     }
 
-    QString collate = m_config.readEntry(lcCollate, QString());
+    const QString collate = m_config.readEntry(lcCollate, QString());
     if (!collate.isEmpty()) {
         script.append(_export + lcCollate + QLatin1Char('=') + collate + QLatin1Char('\n'));
     }
 
-    QString ctype = m_config.readEntry(lcCtype, QString());
+    const QString ctype = m_config.readEntry(lcCtype, QString());
     if (!ctype.isEmpty()) {
         script.append(_export + lcCtype + QLatin1Char('=') + ctype + QLatin1Char('\n'));
 
@@ -332,7 +332,7 @@ void KCMFormats::updateEnabled()
 
 void KCMFormats::updateExample()
 {
-    bool useDetailed = m_ui->checkDetailed->isChecked();
+    const bool useDetailed = m_ui->checkDetailed->isChecked();
 
     QLocale nloc;
     QLocale tloc;
@@ -354,6 +354,7 @@ void KCMFormats::updateExample()
     QString numberExample = nloc.toString(1000.01);
     QString timeExample = tloc.toString(QDateTime::currentDateTime());
     QString currencyExample = cloc.toCurrencyString(24);
+
     QString measurementExample;
     if (mloc.measurementSystem() == QLocale::ImperialUKSystem) {
         measurementExample = i18nc("Measurement combobox", "Imperial UK");
