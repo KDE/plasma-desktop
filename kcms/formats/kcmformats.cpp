@@ -37,8 +37,8 @@
 
 K_PLUGIN_FACTORY_WITH_JSON(KCMFormatsFactory, "formats.json", registerPlugin<KCMFormats>();)
 
-const static QString configFile = QStringLiteral("plasma-formatsrc");
-const static QString exportFile = QStringLiteral("export-formats-settings.sh");
+const static QString configFile = QStringLiteral("plasma-localerc");
+const static QString exportFile = QStringLiteral("plasma-locale-settings.sh");
 
 const static QString lcGlobal = QStringLiteral("Global");
 
@@ -242,10 +242,9 @@ void KCMFormats::writeConfig()
 void KCMFormats::writeExports()
 {
 
-    QString cvalue = m_ui->comboGlobal->currentData().toString();
+    const QString cvalue = m_ui->comboGlobal->currentData().toString();
 
-    QString configPath = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation);
-    configPath.append("/" + exportFile);
+    const QString configPath = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + "/" + exportFile;
 
     QString script(QStringLiteral("# Generated script, do not edit\n"));
     script.append(QStringLiteral("# Exports language-format specific env vars from startkde.\n"));
@@ -316,7 +315,7 @@ void KCMFormats::defaults()
 
 void KCMFormats::updateEnabled()
 {
-    bool enabled = m_ui->checkDetailed->isChecked();
+    const bool enabled = m_ui->checkDetailed->isChecked();
 
     m_ui->labelNumbers->setEnabled(enabled);
     m_ui->labelTime->setEnabled(enabled);
