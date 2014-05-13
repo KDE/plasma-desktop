@@ -40,7 +40,7 @@ K_PLUGIN_FACTORY_WITH_JSON(KCMFormatsFactory, "formats.json", registerPlugin<KCM
 const static QString configFile = QStringLiteral("plasma-localerc");
 const static QString exportFile = QStringLiteral("plasma-locale-settings.sh");
 
-const static QString lcGlobal = QStringLiteral("Global");
+const static QString lcLang = QStringLiteral("LANG");
 
 const static QString lcNumeric = QStringLiteral("LC_NUMERIC");
 const static QString lcTime = QStringLiteral("LC_TIME");
@@ -148,7 +148,7 @@ void KCMFormats::readConfig()
     bool useDetailed = m_config.readEntry("useDetailed", false);
     m_ui->checkDetailed->setChecked(useDetailed);
 
-    setCombo(m_ui->comboGlobal, m_config.readEntry(lcGlobal, QString()));
+    setCombo(m_ui->comboGlobal, m_config.readEntry(lcLang, QString()));
 
     setCombo(m_ui->comboNumbers, m_config.readEntry(lcNumeric, QString()));
     setCombo(m_ui->comboTime, m_config.readEntry(lcTime, QString()));
@@ -175,29 +175,27 @@ void KCMFormats::writeConfig()
     const QString global = m_ui->comboGlobal->currentData().toString();
 
     if (!m_ui->checkDetailed->isChecked()) {
+        // Global setting, clean up config
         m_config.deleteEntry("useDetailed");
         if (global.isEmpty()) {
-            m_config.deleteEntry(lcGlobal);
-            m_config.deleteEntry(lcNumeric);
-            m_config.deleteEntry(lcTime);
-            m_config.deleteEntry(lcMonetary);
-            m_config.deleteEntry(lcMeasurement);
-            m_config.deleteEntry(lcCollate);
+            m_config.deleteEntry(lcLang);
         } else {
-            m_config.writeEntry(lcGlobal, global);
-            m_config.writeEntry(lcNumeric, global);
-            m_config.writeEntry(lcTime, global);
-            m_config.writeEntry(lcMonetary, global);
-            m_config.writeEntry(lcMeasurement, global);
-            m_config.writeEntry(lcCollate, global);
+            m_config.writeEntry(lcLang, global);
         }
-    } else { // Save detailed settings
+        m_config.deleteEntry(lcNumeric);
+        m_config.deleteEntry(lcTime);
+        m_config.deleteEntry(lcMonetary);
+        m_config.deleteEntry(lcMeasurement);
+        m_config.deleteEntry(lcCollate);
+        m_config.deleteEntry(lcCtype);
+    } else {
+        // Save detailed settings
         m_config.writeEntry("useDetailed", true);
 
         if (global.isEmpty()) {
-            m_config.deleteEntry(lcGlobal);
+            m_config.deleteEntry(lcLang);
         } else {
-            m_config.writeEntry(lcGlobal, global);
+            m_config.writeEntry(lcLang, global);
         }
 
         const QString numeric = m_ui->comboNumbers->currentData().toString();
@@ -254,6 +252,11 @@ void KCMFormats::writeExports()
 
     const QString _export = QStringLiteral("export ");
 
+    const QString lang = m_config.readEntry(lcLang, QString());
+    if (!lang.isEmpty()) {
+        script.append(_export + lcLang + QLatin1Char('=') + lang + QLatin1Char('\n'));
+    }
+
     const QString numeric = m_config.readEntry(lcNumeric, QString());
     if (!numeric.isEmpty()) {
         script.append(_export + lcNumeric + QLatin1Char('=') + numeric + QLatin1Char('\n'));
@@ -282,12 +285,6 @@ void KCMFormats::writeExports()
     const QString ctype = m_config.readEntry(lcCtype, QString());
     if (!ctype.isEmpty()) {
         script.append(_export + lcCtype + QLatin1Char('=') + ctype + QLatin1Char('\n'));
-
-    } else {
-        const QString global = m_config.readEntry(lcGlobal, QString());
-        if (!global.isEmpty()) {
-            script.append(_export + lcCtype + QLatin1Char('=') + global + QLatin1Char('\n'));
-        }
     }
 
     QFile file(configPath);
