@@ -302,6 +302,7 @@ Item {
         focus: true
 
         placeholderText: i18n("Search...")
+        clearButtonShown: true
 
         onTextChanged: {
             runnerModel.query = text;
