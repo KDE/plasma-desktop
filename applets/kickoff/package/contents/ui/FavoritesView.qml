@@ -46,6 +46,10 @@ Item {
         kickoffListView.currentItem.activate();
     }
 
+    function openContextMenu() {
+        listView.currentItem.openContextMenu();
+    }
+
     ContextMenu {
         id: contextMenu
 

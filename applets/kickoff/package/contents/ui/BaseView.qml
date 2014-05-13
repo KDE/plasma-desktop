@@ -41,6 +41,10 @@ Item {
         kickoffListView.currentItem.activate();
     }
 
+    function openContextMenu() {
+        listView.currentItem.openContextMenu();
+    }
+
     PlasmaExtras.ScrollArea {
         anchors.fill: parent
 

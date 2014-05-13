@@ -446,6 +446,14 @@ Item {
                 event.accepted = true;
                 break;
             }
+            case Qt.Key_M:
+            case Qt.Key_Menu: {
+                print("MENU CLICKED");
+                currentView.openContextMenu();
+                event.accepted = true;
+                break;
+            }
+
             default: { // forward key to searchView
                 //header.query += event.text will break if the jey is backspace,
                 //since if the user continues to type, it will produce an invalid query,

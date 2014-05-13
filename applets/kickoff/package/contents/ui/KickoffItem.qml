@@ -45,6 +45,12 @@ Item {
         }
     }
 
+    function openContextMenu() {
+        print("Opening context menu for " + model["url"]);
+        contextMenu.visualParent = mouseArea;
+        contextMenu.openAt(display, model, listItem.width / 4, listItem.height/2);
+    }
+
     Item {
         id: listItemDelegate
 
@@ -159,15 +165,5 @@ Item {
             font.pointSize: theme.smallestFont.pointSize
             elide: Text.ElideMiddle
         }
-/*
-        PlasmaComponents.Highlight {
-            id: itemHighlight
-            anchors {
-                fill: parent
-                margins: -(units.gridUnit/2)
-            }
-            opacity: mouseArea.containsMouse ? 1 : 0
-            Behavior on opacity { NumberAnimation { duration: theme.shortDuration } }
-        }*/
     } // listItemDelegate
 } // listItem
