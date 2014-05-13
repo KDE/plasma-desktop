@@ -1,5 +1,5 @@
 /*
-    Copyright (C) 2011  Martin Gr√§√ülin <mgraesslin@kde.org>
+    Copyright (C) 2011  Martin Gr‰ﬂlin <mgraesslin@kde.org>
     Copyright (C) 2012  Gregor Taetzner <gregor@freenet.de>
     Copyright (C) 2012  Marco Martin <mart@kde.org>
     Copyright (C) 2013  David Edmundson <davidedmundson@kde.org>
@@ -39,9 +39,6 @@ Item {
 
     property int pad: units.gridUnit
     property bool debug: false
-
-//         implicitWidth: root.minimumWidth
-//         implicitHeight: root.minimumHeight
 
     state: "Normal"
     focus: true
@@ -328,8 +325,6 @@ Item {
 
         Behavior on width { NumberAnimation { duration: units.longDuration; easing.type: Easing.InQuad; } }
         Behavior on height { NumberAnimation { duration: units.longDuration; easing.type: Easing.InQuad; } }
-
-        
 
         tabPosition: {
             switch (plasmoid.location) {
