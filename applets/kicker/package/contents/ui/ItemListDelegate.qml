@@ -36,12 +36,12 @@ Item {
 
     property bool hasChildren: (model.hasChildren != null)
     property bool hasActionList: ((model.favoriteId != null)
-        || (("hasActionList" in model) && (model.hasActionList != null)))
+        || (("hasActionList" in model) && (model.hasActionList == true)))
     property QtObject childDialog: null
     property Item menu: actionMenu
 
     onAboutToShowActionMenu: {
-        var actionList = (model.hasActionList != null) ? model.actionList : [];
+        var actionList = hasActionList ? model.actionList : [];
         Tools.fillActionMenu(actionMenu, actionList, model.favoriteId, model.display);
     }
 
