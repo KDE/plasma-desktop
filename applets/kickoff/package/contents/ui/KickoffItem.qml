@@ -62,7 +62,7 @@ Item {
             //margins: units.gridUnit / 2
         }
         //height: Math.max(elementIcon.height + units.gridUnit/2, titleElement.height + subTitleElement.height + units.gridUnit/2)
-        height: units.gridUnit * 3
+        height: units.iconSizes.medium + (units.gridUnit / 2)
 
         DragArea {
             anchors.fill: parent
@@ -126,7 +126,7 @@ Item {
             id: titleElement
 
             anchors {
-                top: elementIcon.top
+                bottom: elementIcon.verticalCenter
                 left: elementIcon.right
                 right: parent.right
                 leftMargin: units.gridUnit
@@ -141,6 +141,7 @@ Item {
                                                                     display
                 }
             }
+            elide: Text.ElideRight
         }
         PlasmaComponents.Label {
             id: subTitleElement
@@ -148,8 +149,7 @@ Item {
             anchors {
                 left: titleElement.left
                 right: parent.right
-                bottom: parent.bottom
-                top: titleElement.bottom
+                top: elementIcon.verticalCenter
             }
             height: paintedHeight
 
