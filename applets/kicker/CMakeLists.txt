@@ -21,6 +21,7 @@ set(kickerplugin_SRCS
     plugin/containmentinterface.cpp
     plugin/draghelper.cpp
     plugin/favoritesmodel.cpp
+    plugin/funnelmodel.cpp
     plugin/kickerplugin.cpp
     plugin/processrunner.cpp
     plugin/rootmodel.cpp

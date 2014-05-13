@@ -39,6 +39,12 @@ SubMenu::~SubMenu()
 
 QPoint SubMenu::popupPosition(QQuickItem* item, const QSize& size)
 {
+    /*
+    if (!item || !item->window()) {
+        return QPoint(0, 0);
+    }
+    */
+
     QPointF pos = item->mapToScene(QPointF(0, 0));
     pos = item->window()->mapToGlobal(pos.toPoint());
 

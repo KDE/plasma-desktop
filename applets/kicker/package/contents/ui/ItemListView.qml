@@ -133,8 +133,13 @@ FocusScope {
                         itemList.focus = true;
 
                         if (childDialog) {
-                            childDialog.model = model.modelForRow(currentIndex);
-                            childDialog.visualParent = listView.currentItem;
+                            if (currentItem && currentItem.hasChildren) {
+                                childDialog.model = model.modelForRow(currentIndex);
+                                childDialog.visualParent = listView.currentItem;
+                            } else {
+                                childDialog.visible = false;
+                                childDialog.delayedDestroy();
+                            }
 
                             return;
                         }

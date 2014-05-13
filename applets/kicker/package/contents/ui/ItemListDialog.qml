@@ -28,7 +28,7 @@ Kicker.SubMenu {
     id: itemDialog
 
     property alias focusParent: itemListView.focusParent
-    property alias model: itemListView.model
+    property alias model: funnelModel.sourceModel
 
     visible: false
     hideOnWindowDeactivate: plasmoid.hideOnWindowDeactivate
@@ -49,6 +49,16 @@ Kicker.SubMenu {
         iconsEnabled: true
 
         dialog: itemDialog
+
+        model: funnelModel
+
+        Kicker.FunnelModel {
+            id: funnelModel
+
+            Component.onCompleted: {
+                kicker.reset.connect(funnelModel.reset);
+            }
+        }
     }
 
     function delayedDestroy() {
