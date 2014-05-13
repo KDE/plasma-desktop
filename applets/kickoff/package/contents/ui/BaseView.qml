@@ -63,6 +63,14 @@ Item {
                 criteria: ViewSection.FullString
                 delegate: SectionDelegate {}
             }
+            Connections {
+                target: plasmoid
+                onExpandedChanged: {
+                    if (!expanded) {
+                        kickoffListView.currentIndex = -1;
+                    }
+                }
+            }
         }
     }
 }

@@ -410,7 +410,9 @@ Item {
                     break;
                 }
                 if (!currentView.deactivateCurrentIndex()) {
-                    // FIXME move to the previous tab immediately
+                    if (root.state == "Applications") {
+                        mainTabGroup.currentTab = favoritesPage;
+                    }
                     root.state = "Normal"
                 }
                 event.accepted = true;
