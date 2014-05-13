@@ -141,6 +141,11 @@ function insertAtIndex(item, position) {
 }
 
 function insertAtCoordinates(item, x, y) {
+    if (root.isHorizontal) {
+        y = layout.height / 2;
+    } else {
+        x = layout.width / 2;
+    }
     var child = layout.childAt(x, y);
 
     if (!child || child === item) {

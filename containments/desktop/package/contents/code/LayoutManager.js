@@ -206,7 +206,7 @@ function positionItem(item)
         var forwardAvail = availableSpace(forwardX, forwardY,
                                           Math.max(item.minimumWidth, item.width),
                                           Math.max(item.minimumHeight, item.height))
-        //print("checking forward "+forwardX/cellSize.width+" "+forwardY/cellSize.height+" "+forwardAvail.width/cellSize.width+" "+forwardAvail.height/cellSize.height)
+        //print("checking forward "+item.x+" "+item.y+" "+forwardX/cellSize.width+" "+forwardY/cellSize.height+" "+forwardAvail.width/cellSize.width+" "+forwardAvail.height/cellSize.height)
 
         //print("response: forwardAvail: "+forwardAvail.width+"x"+forwardAvail.height+" minimumSize: "+item.minimumWidth+"x"+item.minimumHeight+"\n\n")
 

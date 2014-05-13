@@ -218,7 +218,16 @@ Item {
                     placeHolderPaint.opacity = folder.haloOpacity;
                 }
                 onPositionChanged: {
-                    placeHolder.syncWithItem(appletItem)
+                    var pos = mapToItem(root, mouse.x, mouse.y);
+                    var newCont = plasmoid.containmentAt(pos.x, pos.y);
+
+                    if (newCont && newCont != plasmoid) {
+                        var newPos = newCont.mapFromApplet(plasmoid, pos.x, pos.y);
+                        newCont.addApplet(appletItem.applet, newPos.x, newPos.y);
+                        placeHolderPaint.opacity = 0;
+                    } else {
+                        placeHolder.syncWithItem(appletItem);
+                    }
                 }
                 onReleased: {
                     appletItem.z = appletItem.z - zoffset;

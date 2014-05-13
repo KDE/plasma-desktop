@@ -88,6 +88,12 @@ DragDrop.DropArea {
         container.applet = applet;
         //coordinated passed by param?
         if ( x >= 0 && y >= 0) {
+            if (x + container.width > root.width) {
+                x = root.width - container.width - 10;
+            }
+            if (y + container.height > root.height) {
+                x = root.height - container.height;
+            }
             container.x = x;
             container.y = y;
         //coordinates stored?
