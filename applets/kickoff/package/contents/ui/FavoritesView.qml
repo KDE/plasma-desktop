@@ -143,7 +143,7 @@ Item {
         ListView {
             id: kickoffListView
 
-            anchors.fill: parent
+            //anchors.fill: parent
             currentIndex: -1
             keyNavigationWraps: true
             interactive: contentHeight > height

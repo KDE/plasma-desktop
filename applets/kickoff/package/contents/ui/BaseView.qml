@@ -51,7 +51,7 @@ Item {
         ListView {
             id: kickoffListView
 
-            anchors.fill: parent
+            //anchors.fill: parent
 
             interactive: contentHeight > height
             boundsBehavior: Flickable.StopAtBounds

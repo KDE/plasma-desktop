@@ -241,7 +241,7 @@ void ApplicationModelPrivate::fillNode(const QString &_relPath, AppNode *node)
                 continue;
             }
 
-            qDebug() << "Service group" << serviceGroup->entryPath() << serviceGroup->icon() << serviceGroup->relPath() << serviceGroup->directoryEntryPath();
+            //qDebug() << "Service group" << serviceGroup->entryPath() << serviceGroup->icon() << serviceGroup->relPath() << serviceGroup->directoryEntryPath();
 
             icon = serviceGroup->icon();
             if (iconNameMap().contains(icon)) {

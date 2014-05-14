@@ -26,8 +26,8 @@ PlasmaComponents.ContextMenu {
 
     property string title
     property variant model
-    property bool isFavorite: favoritesModel.isFavorite(contextMenu.model.url)
-    property bool isApp: contextMenu.model.url.indexOf(".desktop") !== -1
+    property bool isFavorite: model != undefined ? favoritesModel.isFavorite(contextMenu.model.url) : false
+    property bool isApp: contextMenu.model != undefined ? contextMenu.model.url.indexOf(".desktop") !== -1 : false
 
     function openAt(title, model, x, y) {
         plasmoid.hideOnWindowDeactivate = false;
@@ -54,7 +54,7 @@ PlasmaComponents.ContextMenu {
         id: titleMenuItem
 
         text: contextMenu.title
-        icon: contextMenu.model.decoration
+        icon: contextMenu.model != undefined ? contextMenu.model.decoration : ""
         checkable: false
         enabled: false
     }
