@@ -41,8 +41,8 @@ AtticaModule::AtticaModule(QWidget* parent, const QVariantList&)
     : KCModule(parent)
 {
     KAboutData *about = new KAboutData(
-            "kcm_attica", 0, i18n("Social Desktop"),
-            PLASMA_VERSION_STRING, QString(), KAboutData::License_GPL,
+            "kcm_attica", i18n("Social Desktop"),
+            PLASMA_VERSION_STRING, QString(), KAboutLicense::GPL,
             i18n("Copyright 2009 Eckhart Wörner"));
     about->addAuthor(i18n("Eckhart Wörner"), QString(), "ewoerner@kde.org");
     about->addAuthor(i18n("Dmitry Suzdalev"), QString(), "dimsuz@gmail.com");

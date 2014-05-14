@@ -70,11 +70,11 @@ Autostart::Autostart( QWidget* parent, const QVariantList& )
     connect( widget->listCMD, SIGNAL(itemSelectionChanged()), SLOT(slotSelectionChanged()) );
 
 
-    KAboutData* about = new KAboutData(QStringLiteral("Autostart"), QString(),
+    KAboutData* about = new KAboutData(QStringLiteral("Autostart"),
                                        i18n("KDE Autostart Manager"),
                                        QStringLiteral("1.0"),
                                        i18n("KDE Autostart Manager Control Panel Module"),
-                                       KAboutData::License_GPL,
+                                       KAboutLicense::GPL,
                                        i18n("Copyright © 2006–2010 Autostart Manager team"));
     about->addAuthor(i18n("Stephen Leaf"), QString(), QStringLiteral("smileaf@gmail.com"));
     about->addAuthor(i18n("Montel Laurent"), i18n( "Maintainer" ), QStringLiteral("montel@kde.org"));

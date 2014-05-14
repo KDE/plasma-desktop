@@ -34,7 +34,7 @@ int main( int argc, char *argv[] )
     KLocale::setMainCatalog("solid-action-desktop-gen");
     // About data
     KAboutData aboutData("solid-action-desktop-gen", 0, ki18n("Solid Action Desktop File Generator"), "0.4", ki18n("Tool to automatically generate Desktop Files from Solid DeviceInterface classes for translation"),
-                         KAboutData::License_GPL, ki18n("(c) 2009, Ben Cooksley"));
+                         KAboutLicense::GPL, ki18n("(c) 2009, Ben Cooksley"));
     aboutData.addAuthor(ki18n("Ben Cooksley"), ki18n("Maintainer"), "ben@eclipse.endoftheinternet.org");
     KCmdLineArgs::init(argc, argv, &aboutData);
 

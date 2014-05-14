@@ -63,13 +63,13 @@ KCMLocale::KCMLocale( QWidget *parent, const QVariantList &args )
 {
     KAboutData *about = new KAboutData( I18N_NOOP("kcmlocale"), QString(),
                                         i18n( "Localization options for KDE applications" ),
-                                        QString(), QString(), KAboutData::License_GPL,
+                                        QString(), KAboutLicense::GPL,
                                         i18n( "Copyright 2010 John Layt" ) );
 
 //     KAboutData *about =
 //         new KAboutData( I18N_NOOP("kcmstyle"), QString(),
 //                         i18n("KDE Style Module"),
-//                         QString(), QString(), KAboutData::License_GPL,
+//                         QString(), QString(), KAboutLicense::GPL,
 //                         i18n("(c) 2002 Karol Szwed, Daniel Molkentin"));
 //
 

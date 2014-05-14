@@ -70,7 +70,7 @@ KCMDesktopTheme::KCMDesktopTheme( QWidget* parent, const QVariantList& )
     KAboutData *about =
         new KAboutData( I18N_NOOP("KCMDesktopTheme"), 0,
                         i18n("KDE Desktop Theme Module"),
-                        0, QString(), KAboutData::License_GPL,
+                        QString(), KAboutLicense::GPL,
                         i18n("(c) 2002 Karol Szwed, Daniel Molkentin"));
 
     about->addAuthor(i18n("Karol Szwed"), QString(), QStringLiteral("gallium@kde.org"));

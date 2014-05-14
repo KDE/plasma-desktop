@@ -39,7 +39,7 @@ CursorThemeConfig::CursorThemeConfig(QWidget *parent, const QVariantList &args)
     layout->addWidget(themepage);
 
     KAboutData* aboutData = new KAboutData(QStringLiteral("kcm_cursortheme"), QString(), i18n("Cursor Theme"),
-        QString(), QString(), KAboutData::License_GPL, i18n("(c) 2003-2007 Fredrik Höglund"));
+        QString(), KAboutLicense::GPL, i18n("(c) 2003-2007 Fredrik Höglund"));
     aboutData->addAuthor(i18n("Fredrik Höglund"));
     setAboutData(aboutData);
 }

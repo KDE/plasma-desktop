@@ -137,7 +137,7 @@ KBellConfig::KBellConfig(QWidget *parent, const QVariantList &args):
 
   KAboutData *about =
     new KAboutData(I18N_NOOP("kcmbell"), QString(), i18n("KDE Bell Control Module"),
-                  QString(), QString(), KAboutData::License_GPL,
+                  QString(), KAboutLicense::GPL,
                   i18n("(c) 1997 - 2001 Christian Czezatke, Matthias Elter"));
 
   about->addAuthor(i18n("Christian Czezatke"), i18n("Original author"), QStringLiteral("e9025461@student.tuwien.ac.at"));
