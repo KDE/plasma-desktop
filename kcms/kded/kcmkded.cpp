@@ -175,7 +175,7 @@ void KDEDConfig::setAutoloadEnabled(KConfig *config, const QString &filename, bo
 
 void KDEDConfig::load()
 {
-	KConfig kdedrc( "kdedrc", KConfig::NoGlobals );
+	KConfig kdedrc( "kded5rc", KConfig::NoGlobals );
 
 	_lvStartup->clear();
 	_lvLoD->clear();
@@ -239,7 +239,7 @@ void KDEDConfig::load()
 
 void KDEDConfig::save()
 {
-	KConfig kdedrc("kdedrc", KConfig::NoGlobals);
+	KConfig kdedrc("kded5rc", KConfig::NoGlobals);
 
 	KService::List offers = KServiceTypeTrader::self()->query( "KDEDModule" );
 	for ( KService::List::const_iterator it = offers.constBegin();
