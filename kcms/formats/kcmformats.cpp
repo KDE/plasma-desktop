@@ -73,15 +73,8 @@ KCMFormats::~KCMFormats()
 void KCMFormats::load()
 {
     QList<QLocale> allLocales = QLocale::matchingLocales(QLocale::AnyLanguage, QLocale::AnyScript, QLocale::AnyCountry);
-
     foreach(QComboBox * combo, m_combos) {
-        initCombo(combo);
-    }
-
-    foreach(const QLocale & l, allLocales) {
-        foreach(QComboBox * combo, m_combos) {
-            addLocaleToCombo(combo, l);
-        }
+        initCombo(combo, allLocales);
     }
 
     readConfig();
@@ -101,10 +94,13 @@ void KCMFormats::load()
     emit changed(false);
 }
 
-void KCMFormats::initCombo(QComboBox *combo)
+void KCMFormats::initCombo(QComboBox *combo, const QList<QLocale> allLocales)
 {
     const QString clabel = i18n("No change");
     combo->addItem(clabel, QString());
+    foreach(const QLocale & l, allLocales) {
+        addLocaleToCombo(combo, l);
+    }
 }
 
 void KCMFormats::connectCombo(QComboBox *combo)
