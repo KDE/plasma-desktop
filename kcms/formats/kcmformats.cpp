@@ -347,19 +347,19 @@ void KCMFormats::updateExample()
     const QString timeExample = tloc.toString(QDateTime::currentDateTime());
     const QString currencyExample = cloc.toCurrencyString(24);
 
-    QString measurementExample;
+    QString measurementSetting;
     if (mloc.measurementSystem() == QLocale::ImperialUKSystem) {
-        measurementExample = i18nc("Measurement combobox", "Imperial UK");
+        measurementSetting = i18nc("Measurement combobox", "Imperial UK");
     } else if (mloc.measurementSystem() == QLocale::ImperialUSSystem) {
-        measurementExample = i18nc("Measurement combobox", "Imperial US");
+        measurementSetting = i18nc("Measurement combobox", "Imperial US");
     } else {
-        measurementExample = i18nc("Measurement combobox", "Metric");
+        measurementSetting = i18nc("Measurement combobox", "Metric");
     }
 
     m_ui->exampleNumbers->setText(numberExample);
     m_ui->exampleTime->setText(timeExample);
     m_ui->exampleCurrency->setText(currencyExample);
-    m_ui->exampleMeasurement->setText(measurementExample);
+    m_ui->exampleMeasurement->setText(measurementSetting);
 }
 
 #include "kcmformats.moc"
