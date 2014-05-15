@@ -80,8 +80,8 @@ KColorCm::KColorCm(QWidget *parent, const QVariantList &)
       m_previousSchemeItem(0)
 {
     KAboutData* about = new KAboutData(
-        QStringLiteral("kcmcolors"), QString(), i18n("Colors"), QString(), QString(),
-        KAboutData::License_GPL,
+        QStringLiteral("kcmcolors"), QString(), i18n("Colors"), QString(),
+        KAboutLicense::GPL,
         i18n("(c) 2007 Matthew Woehlke")
     );
     about->addAuthor( i18n("Matthew Woehlke"), QString(),

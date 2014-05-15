@@ -73,7 +73,7 @@ Item {
 
         anchors.fill: parent
 
-        enabled: !item.parent.animating
+        enabled: (item.parent && !item.parent.animating)
 
         property bool pressed: false
         property int pressX: -1

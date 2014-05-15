@@ -41,13 +41,17 @@ Item {
         kickoffListView.currentItem.activate();
     }
 
+    function openContextMenu() {
+        listView.currentItem.openContextMenu();
+    }
+
     PlasmaExtras.ScrollArea {
         anchors.fill: parent
 
         ListView {
             id: kickoffListView
 
-            anchors.fill: parent
+            //anchors.fill: parent
 
             interactive: contentHeight > height
             boundsBehavior: Flickable.StopAtBounds
@@ -62,6 +66,14 @@ Item {
                 property: "group"
                 criteria: ViewSection.FullString
                 delegate: SectionDelegate {}
+            }
+            Connections {
+                target: plasmoid
+                onExpandedChanged: {
+                    if (!expanded) {
+                        kickoffListView.currentIndex = -1;
+                    }
+                }
             }
         }
     }

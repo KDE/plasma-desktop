@@ -44,7 +44,7 @@ KCMComponentChooser::KCMComponentChooser(QWidget *parent, const QVariantList &):
 
 	KAboutData *about =
 	new KAboutData( "kcmcomponentchooser", 0, i18n("Component Chooser"),
-			0, QString(), KAboutData::License_GPL,
+			QString(), KAboutLicense::GPL,
 			i18n("(c), 2002 Joseph Wenninger"));
 
 	about->addAuthor(i18n("Joseph Wenninger"), QString() , "jowenn@kde.org");

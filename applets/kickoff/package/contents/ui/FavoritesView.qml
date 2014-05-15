@@ -46,6 +46,10 @@ Item {
         kickoffListView.currentItem.activate();
     }
 
+    function openContextMenu() {
+        listView.currentItem.openContextMenu();
+    }
+
     ContextMenu {
         id: contextMenu
 
@@ -75,12 +79,12 @@ Item {
             }
         }
     }
+
     DropArea {
         property string dragUrl: ""
         property Item dragItem: null
         property int startRow: -1
         property int itemHeight: units.gridUnit * 3
-
 
         anchors.fill: scrollArea
 
@@ -108,11 +112,10 @@ Item {
             dropTarget.visible = false;
         }
         onDragEnter: {
-//             print("Drag enter");
             dragUrl = kickoffListView.currentItem.url;
             startRow = kickoffListView.currentIndex;
             syncTarget(event);
-//             print("Dragging " + dragUrl + " from row " + startRow);
+            //print("Dragging " + dragUrl + " from row " + startRow);
             dropTarget.visible = true;
         }
         onDragMove: syncTarget(event);
@@ -140,22 +143,11 @@ Item {
         ListView {
             id: kickoffListView
 
-            anchors.fill: parent
+            //anchors.fill: parent
             currentIndex: -1
             keyNavigationWraps: true
             interactive: contentHeight > height
 
-            /*
-            delegate: KQuickControlsAddons.MouseEventListener {
-                hoverEnabled: true
-                onContainsMouseChanged: {
-                    if (containsMouse) {
-                        kickoffListView.currentIndex = index;
-                    }
-                }
-                KickoffItem { id: koitem; anchors.fill: parent; }
-            }
-            */
             delegate: KickoffItem {}
             highlight: PlasmaComponents.Highlight {}
             highlightMoveDuration : 0
@@ -166,6 +158,14 @@ Item {
                 property: "group"
                 criteria: ViewSection.FullString
                 //delegate: SectionDelegate {}
+            }
+            Connections {
+                target: plasmoid
+                onExpandedChanged: {
+                    if (!expanded) {
+                        kickoffListView.currentIndex = -1;
+                    }
+                }
             }
         }
     }

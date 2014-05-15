@@ -176,7 +176,7 @@ bool AppsModel::trigger(int row, const QString &actionId, const QVariant &argume
     return false;
 }
 
-QObject *AppsModel::modelForRow(int row)
+AbstractModel *AppsModel::modelForRow(int row)
 {
     if (row < 0 || row >= m_entryList.count() || m_entryList.at(row)->type() != AbstractEntry::GroupType) {
         return 0;

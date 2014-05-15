@@ -102,6 +102,15 @@ MouseEventListener {
         }
     }
 
+    onPositionChanged: {
+        var pos = mapToItem(gridView.contentItem, mouse.x, mouse.y);
+        var item = gridView.itemAt(pos.x, pos.y);
+
+        if (!item) {
+            gridView.hoveredItem = null;
+        }
+    }
+
     onHoveredItemChanged: {
         doubleClickInProgress = false;
     }

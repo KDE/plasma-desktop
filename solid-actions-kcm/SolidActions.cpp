@@ -44,7 +44,7 @@ SolidActions::SolidActions(QWidget* parent, const QVariantList&)
 {
     KAboutData * about = new KAboutData("Device Actions", 0, ki18n("Solid Device Actions Editor"), "1.1",
                                        ki18n("Solid Device Actions Control Panel Module"),
-                                       KAboutData::License_GPL,
+                                       KAboutLicense::GPL,
                                        ki18n("(c) 2009 Solid Device Actions team"));
     about->addAuthor(ki18n("Ben Cooksley"), ki18n("Maintainer"), "ben@eclipse.endoftheinternet.org");
     setAboutData(about);

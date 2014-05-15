@@ -50,7 +50,7 @@ KCMKeyboard::KCMKeyboard(QWidget *parent, const QVariantList &args)
 {
   KAboutData *about =
 		  new KAboutData("kcmkeyboard", QString(), i18n("KDE Keyboard Control Module"),
-                  0, QString(), KAboutData::License_GPL,
+                  QString(), KAboutLicense::GPL,
                   i18n("(c) 2010 Andriy Rysin"));
 
   setAboutData( about );

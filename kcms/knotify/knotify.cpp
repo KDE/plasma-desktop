@@ -112,9 +112,9 @@ KCMKNotify::KCMKNotify(QWidget *parent, const QVariantList & )
              SLOT( slotAppActivated( int )) );
 
     KAboutData* ab = new KAboutData(
-        "kcmknotify", 0, i18n("KNotify"), "4.0",
+        "kcmknotify", i18n("KNotify"), "4.0",
         i18n("System Notification Control Panel Module"),
-        KAboutData::License_GPL, i18n("(c) 2002-2006 KDE Team"));
+        KAboutLicense::GPL, i18n("(c) 2002-2006 KDE Team"));
 
     ab->addAuthor( i18n("Olivier Goffart"), QString(), "ogoffart@kde.org" );
     ab->addAuthor( i18n("Carsten Pfeiffer"), QString(), "pfeiffer@kde.org" );

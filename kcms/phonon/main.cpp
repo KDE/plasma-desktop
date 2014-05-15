@@ -40,8 +40,8 @@ PhononKcm::PhononKcm(QWidget *parent, const QVariantList &args)
     : KCModule(parent, args)
 {
     KAboutData *about = new KAboutData(
-            "kcm_phonon", 0, i18n("Phonon Configuration Module"),
-            WORKSPACE_VERSION_STRING, QString(), KAboutData::License_GPL,
+            "kcm_phonon", i18n("Phonon Configuration Module"),
+            WORKSPACE_VERSION_STRING, QString(), KAboutLicense::GPL,
             i18n("Copyright 2006 Matthias Kretz"));
     about->addAuthor(i18n("Matthias Kretz"), QString(), "kretz@kde.org");
     about->addAuthor(i18n("Colin Guthrie"), QString(), "colin@mageia.org");

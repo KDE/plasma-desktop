@@ -48,7 +48,7 @@ WorkspaceOptionsModule::WorkspaceOptionsModule(QWidget *parent, const QVariantLi
 {
     KAboutData *about =
     new KAboutData("kcmworkspaceoptions", QString(), i18n("Global options for the Plasma Workspace"),
-                   QString(), QString(), KAboutData::License_GPL,
+                   QString(), KAboutLicense::GPL,
                    i18n("(c) 2009 Marco Martin"));
 
     about->addAuthor(i18n("Marco Martin"), i18n("Maintainer"), "notmart@gmail.com");

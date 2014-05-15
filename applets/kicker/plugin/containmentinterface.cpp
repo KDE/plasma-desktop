@@ -63,12 +63,16 @@ bool ContainmentInterface::mayAddLauncher(ContainmentInterface::Target target, c
             if (containment) {
                 return (containment->immutability() == Plasma::Types::Mutable);
             }
+
+            break;
         }
         case Panel: {
             if (containment->pluginInfo().pluginName() == QLatin1String("org.kde.panel"))
             {
                 return (containment->immutability() == Plasma::Types::Mutable);
             }
+
+            break;
         }
         case TaskManager: {
             if (!entryPath.isEmpty() && containment->pluginInfo().pluginName() == QLatin1String("org.kde.panel"))
@@ -100,6 +104,8 @@ bool ContainmentInterface::mayAddLauncher(ContainmentInterface::Target target, c
                     return !ret.toBool();
                 }
             }
+
+            break;
         }
     }
 
@@ -141,12 +147,16 @@ void ContainmentInterface::addLauncher(ContainmentInterface::Target target, cons
             } else {
                 containment->createApplet("org.kde.plasma.icon", QVariantList() << entryPath);
             }
+
+            break;
         }
         case Panel: {
             if (containment->pluginInfo().pluginName() == QLatin1String("org.kde.panel"))
             {
                 containment->createApplet("org.kde.plasma.icon", QVariantList() << entryPath);
             }
+
+            break;
         }
         case TaskManager: {
             if (containment->pluginInfo().pluginName() == QLatin1String("org.kde.panel"))
@@ -173,6 +183,8 @@ void ContainmentInterface::addLauncher(ContainmentInterface::Target target, cons
                     QMetaObject::invokeMethod(rootItem, "addLauncher", Q_ARG(QVariant, QUrl::fromLocalFile(entryPath)));
                 }
             }
+
+            break;
         }
     }
 }

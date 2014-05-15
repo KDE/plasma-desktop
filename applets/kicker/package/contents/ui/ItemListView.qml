@@ -133,8 +133,15 @@ FocusScope {
                         itemList.focus = true;
 
                         if (childDialog) {
-                            childDialog.visible = false;
-                            childDialog.delayedDestroy();
+                            if (currentItem && currentItem.hasChildren) {
+                                childDialog.model = model.modelForRow(currentIndex);
+                                childDialog.visualParent = listView.currentItem;
+                            } else {
+                                childDialog.visible = false;
+                                childDialog.delayedDestroy();
+                            }
+
+                            return;
                         }
 
                         if (currentItem != null && !currentItem.hasChildren || !plasmoid.expanded) {

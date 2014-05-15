@@ -192,7 +192,7 @@ KCMStyle::KCMStyle( QWidget* parent, const QVariantList& )
     KAboutData *about =
         new KAboutData( I18N_NOOP("kcmstyle"), QString(),
                         i18n("KDE Style Module"),
-                        QString(), QString(), KAboutData::License_GPL,
+                        QString(), KAboutLicense::GPL,
                         i18n("(c) 2002 Karol Szwed, Daniel Molkentin"));
 
     about->addAuthor(i18n("Karol Szwed"), QString(), QStringLiteral("gallium@kde.org"));

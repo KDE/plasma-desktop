@@ -28,7 +28,7 @@ Kicker.SubMenu {
     id: itemDialog
 
     property alias focusParent: itemListView.focusParent
-    property alias model: itemListView.model
+    property alias model: funnelModel.sourceModel
 
     visible: false
     hideOnWindowDeactivate: plasmoid.hideOnWindowDeactivate
@@ -42,13 +42,23 @@ Kicker.SubMenu {
     mainItem: ItemListView {
         id: itemListView
 
-        height: model != undefined ? Math.min((Math.floor((itemDialog.availableScreenRectForItem(itemListView).height
-            - itemDialog.margins.top - itemDialog.margins.bottom) / itemHeight)
+        height: model != undefined ? Math.min(((Math.floor((itemDialog.availableScreenRectForItem(itemListView).height
+            - itemDialog.margins.top - itemDialog.margins.bottom) / itemHeight) - 1)
             * itemHeight), model.count * itemHeight) : 0
 
         iconsEnabled: true
 
         dialog: itemDialog
+
+        model: funnelModel
+
+        Kicker.FunnelModel {
+            id: funnelModel
+
+            Component.onCompleted: {
+                kicker.reset.connect(funnelModel.reset);
+            }
+        }
     }
 
     function delayedDestroy() {

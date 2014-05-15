@@ -40,6 +40,10 @@ Item {
         searchView.currentItem.activate();
     }
 
+    function openContextMenu() {
+        listView.currentItem.openContextMenu();
+    }
+
     PlasmaExtras.ScrollArea {
         anchors.fill: parent
 
@@ -63,7 +67,13 @@ Item {
             }
         } // searchView
     } // ScrollArea
-
+    Keys.onPressed: {
+        print( "KEY");
+        if (event.key == Qt.Key_M || event.key == Qt.Key_Menu) {
+            print( "Menu...");
+            contextMenu.open();
+        }
+    }
     ContextMenu {
         id: contextMenu
     }

@@ -56,6 +56,10 @@ Item {
         return false;
     }
 
+    function openContextMenu() {
+        listView.currentItem.openContextMenu();
+    }
+
     ContextMenu {
         id: contextMenu
     }

@@ -55,9 +55,9 @@ IconModule::IconModule(QWidget *parent, const QVariantList &)
   tab->addTab(tab2, i18n("Ad&vanced"));
   connect(tab2, SIGNAL(changed(bool)), this, SLOT(moduleChanged(bool)));
 
-  KAboutData* about = new KAboutData("kcmicons", 0, i18n("Icons"), QString(),
+  KAboutData* about = new KAboutData("kcmicons", i18n("Icons"), QString(),
                                      i18n("Icons Control Panel Module"),
-                                     KAboutData::License_GPL,
+                                     KAboutLicense::GPL,
                                      i18n("(c) 2000-2003 Geert Jansen"));
   about->addAuthor(i18n("Geert Jansen"), QString(), "jansen@kde.org");
   about->addAuthor(i18n("Antonio Larrosa Jimenez"), QString(), "larrosa@kde.org");

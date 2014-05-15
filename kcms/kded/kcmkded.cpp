@@ -70,7 +70,7 @@ KDEDConfig::KDEDConfig(QWidget* parent, const QVariantList &) :
 {
 	KAboutData *about =
 		new KAboutData( I18N_NOOP( "kcmkded" ), 0, i18n( "KDE Service Manager" ),
-				0, QString(), KAboutData::License_GPL,
+				QString(), KAboutLicense::GPL,
 				i18n( "(c) 2002 Daniel Molkentin" ) );
 	about->addAuthor(i18n("Daniel Molkentin"), QString(),"molkentin@kde.org");
 	setAboutData( about );

@@ -433,8 +433,8 @@ QVariant FolderModel::data(const QModelIndex& index, int role) const
     } else if (role == Qt::UserRole + 4) {
         return m_dirModel->data(mapToSource(QSortFilterProxyModel::index(index.row(), 1)), Qt::DisplayRole);
     }
-    else if (role == Qt::UserRole + 6) {
-        return m_dirModel->data(mapToSource(QSortFilterProxyModel::index(index.row(), 5)), Qt::DisplayRole);
+    else if (role == Qt::UserRole + 5) {
+        return m_dirModel->data(mapToSource(QSortFilterProxyModel::index(index.row(), 6)), Qt::DisplayRole);
     }
 
     return QSortFilterProxyModel::data(index, role);

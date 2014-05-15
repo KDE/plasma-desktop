@@ -1,5 +1,5 @@
 /*
-    Copyright (C) 2011  Martin Gr√§√ülin <mgraesslin@kde.org>
+    Copyright (C) 2011  Martin Gr‰ﬂlin <mgraesslin@kde.org>
     Copyright (C) 2012  Gregor Taetzner <gregor@freenet.de>
     Copyright (C) 2012  Marco Martin <mart@kde.org>
     Copyright (C) 2013  David Edmundson <davidedmundson@kde.org>
@@ -39,9 +39,6 @@ Item {
 
     property int pad: units.gridUnit
     property bool debug: false
-
-//         implicitWidth: root.minimumWidth
-//         implicitHeight: root.minimumHeight
 
     state: "Normal"
     focus: true
@@ -329,8 +326,6 @@ Item {
         Behavior on width { NumberAnimation { duration: units.longDuration; easing.type: Easing.InQuad; } }
         Behavior on height { NumberAnimation { duration: units.longDuration; easing.type: Easing.InQuad; } }
 
-        
-
         tabPosition: {
             switch (plasmoid.location) {
             case PlasmaCore.Types.TopEdge:
@@ -415,7 +410,9 @@ Item {
                     break;
                 }
                 if (!currentView.deactivateCurrentIndex()) {
-                    // FIXME move to the previous tab immediately
+                    if (root.state == "Applications") {
+                        mainTabGroup.currentTab = favoritesPage;
+                    }
                     root.state = "Normal"
                 }
                 event.accepted = true;
@@ -449,6 +446,14 @@ Item {
                 event.accepted = true;
                 break;
             }
+            case Qt.Key_M:
+            case Qt.Key_Menu: {
+                print("MENU CLICKED");
+                currentView.openContextMenu();
+                event.accepted = true;
+                break;
+            }
+
             default: { // forward key to searchView
                 //header.query += event.text will break if the jey is backspace,
                 //since if the user continues to type, it will produce an invalid query,

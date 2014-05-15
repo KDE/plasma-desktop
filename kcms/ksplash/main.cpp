@@ -69,7 +69,7 @@ KSplashThemeMgr::KSplashThemeMgr( QWidget *parent, const QVariantList &args)
                                       , 0,ki18n("KDE splash screen theme manager")
                                       ,"0.1"
                                       ,KLocalizedString()
-                                      ,KAboutData::License_GPL
+                                      ,KAboutLicense::GPL
                                       ,ki18n("(c) 2003 KDE developers") );
   about->addAuthor(ki18n("Ravikiran Rajagopal"), KLocalizedString(), "ravi@ee.eng.ohio-state.edu");
   about->addCredit(ki18n("Brian Ledbetter"), ki18n("Original KSplash/ML author"), "brian@shadowcom.net");

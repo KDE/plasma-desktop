@@ -60,7 +60,7 @@ StandardActionsModule::StandardActionsModule(
       ,m_editor(NULL)
       ,m_actionCollection(NULL)
     {
-    KAboutData *about = new KAboutData(QStringLiteral("kcm_standard_actions"), QString(), i18n("Standard Shortcuts"), QStringLiteral("0.1"));
+    KAboutData *about = new KAboutData(QStringLiteral("kcm_standard_actions"), QString(), i18n("Standard Shortcuts"), QStringLiteral("0.1"), KAboutLicense::GPL);
     setAboutData(about);
 
     // Configure the KCM

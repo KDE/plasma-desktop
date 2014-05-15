@@ -17,29 +17,42 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#include "kickerplugin.h"
+#ifndef FUNNELMODEL_H
+#define FUNNELMODEL_H
+
 #include "abstractmodel.h"
-#include "draghelper.h"
-#include "funnelmodel.h"
-#include "processrunner.h"
-#include "rootmodel.h"
-#include "runnermodel.h"
-#include "submenu.h"
-#include "windowsystem.h"
 
-#include <QtQml>
+#include <QPointer>
 
-void KickerPlugin::registerTypes(const char *uri)
+class FunnelModel : public AbstractModel
 {
-    Q_ASSERT(uri == QLatin1String("org.kde.plasma.private.kicker"));
+    Q_OBJECT
 
-    qmlRegisterType<AbstractModel>();
+    Q_PROPERTY(AbstractModel* sourceModel READ sourceModel WRITE setSourceModel NOTIFY sourceModelChanged);
 
-    qmlRegisterType<DragHelper>(uri, 0, 1, "DragHelper");
-    qmlRegisterType<FunnelModel>(uri, 0, 1, "FunnelModel");
-    qmlRegisterType<ProcessRunner>(uri, 0, 1, "ProcessRunner");
-    qmlRegisterType<RootModel>(uri, 0, 1, "RootModel");
-    qmlRegisterType<RunnerModel>(uri, 0, 1, "RunnerModel");
-    qmlRegisterType<SubMenu>(uri, 0, 1, "SubMenu");
-    qmlRegisterType<WindowSystem>(uri, 0, 1, "WindowSystem");
-}
+    public:
+        explicit FunnelModel(QObject *parent = 0);
+        ~FunnelModel();
+
+        QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
+
+        int rowCount(const QModelIndex &parent = QModelIndex()) const;
+
+        Q_INVOKABLE bool trigger(int row, const QString &actionId, const QVariant &argument);
+
+        Q_INVOKABLE AbstractModel *modelForRow(int row);
+
+        AbstractModel *sourceModel() const;
+        void setSourceModel(AbstractModel *model);
+
+    public Q_SLOTS:
+        void reset();
+
+    Q_SIGNALS:
+        void sourceModelChanged() const;
+
+    private:
+        QPointer<AbstractModel> m_sourceModel;
+};
+
+#endif

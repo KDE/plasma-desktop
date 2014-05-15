@@ -43,6 +43,13 @@ int AbstractModel::count() const
     return rowCount();
 }
 
+AbstractModel *AbstractModel::modelForRow(int row)
+{
+    Q_UNUSED(row)
+
+    return 0;
+}
+
 int AbstractModel::rowForFavoriteId(const QString &favoriteId)
 {
     Q_UNUSED(favoriteId)
