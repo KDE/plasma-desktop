@@ -72,7 +72,15 @@ Rectangle {
     function configurationHasChanged() {
         for (var key in plasmoid.configuration) {
             if (main.currentItem["cfg_"+key] !== undefined) {
-                if (main.currentItem["cfg_"+key] != plasmoid.configuration[key]) {
+                //for objects == doesn't work
+                if (typeof plasmoid.configuration[key] == 'object') {
+                    for (var i in plasmoid.configuration[key]) {
+                        if (plasmoid.configuration[key][i] != main.currentItem["cfg_"+key][i]) {
+                            return true;
+                        }
+                    }
+                    return false;
+                } else if (main.currentItem["cfg_"+key] != plasmoid.configuration[key]) {
                     return true;
                 }
             }
