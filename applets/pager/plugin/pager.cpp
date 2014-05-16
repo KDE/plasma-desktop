@@ -371,9 +371,9 @@ void Pager::recalculateWindowRects()
 {
     NETRootInfo info(QX11Info::connection(), NET::NumberOfDesktops | NET::DesktopNames, NET::WM2DesktopLayout);
     m_rows = info.desktopLayoutColumnsRows().height();
-    recalculateGridSizes(m_rows);
 
     if (!m_validSizes) {
+        recalculateGridSizes(m_rows);
         updateSizes();
     }
 
