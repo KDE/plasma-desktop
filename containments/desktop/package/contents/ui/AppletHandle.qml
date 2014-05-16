@@ -185,10 +185,12 @@ KQuickControlsAddons.MouseEventListener {
 
                     var rot = startRotation%360;
                     var snap = 4;
-                    var newRotation = pointAngle(centerRelativePos(mouse.x, mouse.y)) - startCenterRelativeAngle + startRotation;
+                    var newRotation = Math.round(pointAngle(centerRelativePos(mouse.x, mouse.y)) - startCenterRelativeAngle + startRotation);
 
                     if (newRotation < 0) {
                         newRotation = newRotation + 360;
+                    } else if (newRotation >= 360) {
+                        newRotation = newRotation % 360;
                     }
 
                     snapIt(0);
@@ -201,7 +203,7 @@ KQuickControlsAddons.MouseEventListener {
                             newRotation = snapTo;
                         }
                     }
-//                     print("Start: " + startRotation  + " new: " + newRotation);
+                    //print("Start: " + startRotation  + " new: " + newRotation);
                     appletItem.rotation = newRotation;
                 }
                 onReleased: {
