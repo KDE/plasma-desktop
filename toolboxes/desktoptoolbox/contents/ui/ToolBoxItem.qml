@@ -107,6 +107,7 @@ Item {
 
         width: expandedWidth
         height: actionList.height + toolBoxFrame.margins.top + toolBoxFrame.margins.bottom
+        z: 1000
         //opacity: toolBoxItem.showing ? 1 : 0
 
         property Item highlight
