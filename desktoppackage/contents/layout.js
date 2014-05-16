@@ -2,7 +2,11 @@
 var panel = new Panel
 panel.screen = 0
 panel.location = 'bottom'
-panel.addWidget("org.kde.plasma.kickoff")
+
+var kickoff = panel.addWidget("org.kde.plasma.kickoff")
+kickoff.currentConfigGroup = ["Shortcuts"]
+kickoff.writeConfig("global", "Alt+F1")
+
 panel.addWidget("org.kde.plasma.pager")
 panel.addWidget("org.kde.plasma.taskmanager")
 panel.addWidget("org.kde.plasma.systemtray")
