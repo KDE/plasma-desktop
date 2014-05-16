@@ -82,42 +82,69 @@ Item {
 
     DropArea {
         property string dragUrl: ""
-        property Item dragItem: null
         property int startRow: -1
-        property int itemHeight: units.gridUnit * 3
 
         anchors.fill: scrollArea
 
         function syncTarget(event) {
-            kickoffListView.currentIndex = kickoffListView.indexAt(event.x, event.y + kickoffListView.contentY + itemHeight) + 1
-            if (kickoffListView.currentIndex === -1) {
-                if (event.y < itemHeight/2) {
-                    kickoffListView.currentIndex = 0
-                }
-            }
-            if (kickoffListView.currentItem != null && event.y + itemHeight < kickoffListView.currentItem.y) {
-                dropTarget.y = (kickoffListView.currentIndex) * itemHeight - kickoffListView.contentY
+            var pos = mapToItem(kickoffListView.contentItem, event.x, event.y);
+
+            var hoveredIndex = kickoffListView.indexAt(pos.y, pos.y);
+
+            if (hoveredIndex != -1) {
+                kickoffListView.currentIndex = hoveredIndex;
             } else {
-                dropTarget.y = (kickoffListView.count ) * itemHeight
+                kickoffListView.currentIndex = kickoffListView.count - 1;
             }
+
+            if (Math.abs(startRow - kickoffListView.currentIndex) <= 1) {
+                dropTarget.visible = false;
+                return;
+            }
+
+            var targetY = kickoffListView.currentItem.y;
+
+            pos = kickoffListView.contentItem.mapToItem(kickoffListView.currentItem, pos.x, pos.y);
+
+            if (pos.y > kickoffListView.currentItem.height / 2) {
+                targetY += kickoffListView.currentItem.height;
+            }
+
+            dropTarget.y = kickoffListView.mapFromItem(kickoffListView.contentItem, 0, targetY).y;
+            dropTarget.visible = true;
         }
 
         onDrop: {
-            var row = dropTarget.y / itemHeight;
-            print("Dropping into row : " + startRow + " " + row + " " + (event.y + kickoffListView.contentY) + " " + dragUrl);
-            row = Math.max(0, row)
-            row = Math.round(row)
-            //kickoffListView.model.dropMimeData(event.mimeData.text, [dragUrl], row, 0);
-            kickoffListView.model.move(startRow,  row);
+            if (kickoffListView.currentItem == null || !dropTarget.visible) {
+                return;
+            }
+
+            var pos = mapToItem(kickoffListView.contentItem, event.x, event.y);
+            pos = kickoffListView.contentItem.mapToItem(kickoffListView.currentItem, pos.x, pos.y);
+
+            var targetRow = kickoffListView.currentIndex;
+
+            if (kickoffListView.currentIndex < startRow) {
+                ++targetRow;
+            }
+
+            if (pos.y <= kickoffListView.currentItem.height / 2) {
+                    --targetRow;
+            }
+
+            targetRow = Math.min(kickoffListView.count, targetRow);
+
+            kickoffListView.model.move(startRow,  targetRow);
+
             dropTarget.visible = false;
         }
+
         onDragEnter: {
             dragUrl = kickoffListView.currentItem.url;
             startRow = kickoffListView.currentIndex;
             syncTarget(event);
-            //print("Dragging " + dragUrl + " from row " + startRow);
-            dropTarget.visible = true;
         }
+
         onDragMove: syncTarget(event);
 
         onDragLeave: {
@@ -127,7 +154,7 @@ Item {
         Rectangle {
             id: dropTarget
 
-            width: parent.width
+            width: kickoffListView.width
             height: Math.max(2, units.smallSpacing)
 
             visible: false
