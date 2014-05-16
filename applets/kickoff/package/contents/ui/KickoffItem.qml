@@ -88,6 +88,10 @@ Item {
                     listItem.ListView.view.currentIndex = index;
                 }
 
+                onExited: {
+                    listItem.ListView.view.currentIndex = -1;
+                }
+
                 onClicked: {
                     if (mouse.button == Qt.LeftButton) {
                         if (appView) {
