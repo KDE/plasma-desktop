@@ -87,6 +87,7 @@ Item {
         }
         PlasmaComponents.TabGroup {
             id: mainTabGroup
+            currentTab: favoritesPage
 
             anchors {
                 fill: parent
