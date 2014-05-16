@@ -31,6 +31,8 @@ Item {
     property bool isVertical: plasmoid.formFactor == 3
     visible: !plasmoid.immutable
 
+    z: 999
+
     anchors {
         left: undefined
         top: undefined
@@ -50,6 +52,12 @@ Item {
         width: units.iconSizes.small
         height: width
         opacity: mouseArea.containsMouse || plasmoid.userConfiguring ? 1 : 0.5
+        Behavior on opacity {
+            NumberAnimation {
+                duration: units.longDuration;
+                easing.type: Easing.InOutExpo;
+            }
+        }
     }
 
     MouseArea {

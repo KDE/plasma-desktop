@@ -29,6 +29,7 @@ import org.kde.plasma.plasmoid 2.0
 Item {
     id: main
 
+    z: 999
     x: plasmoid.availableScreenRect.x
     y: plasmoid.availableScreenRect.y
     width: plasmoid.availableScreenRect.width

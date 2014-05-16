@@ -160,6 +160,12 @@ Item {
             opacity: buttonMouse.containsMouse || toolBoxItem.showing ? 1 : 0.5
             rotation: isHorizontal ? 0 : 90;
             transformOrigin: Item.Center
+            Behavior on opacity {
+                NumberAnimation {
+                    duration: units.longDuration;
+                    easing.type: Easing.InOutExpo;
+                }
+            }
         }
 
         PlasmaComponents.Label {
