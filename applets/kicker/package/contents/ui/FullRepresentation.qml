@@ -45,8 +45,6 @@ Item {
         searchField.focus = true;
     }
 
-
-
     Row {
         id: mainRow
 

@@ -17,31 +17,60 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#include "kickerplugin.h"
-#include "abstractmodel.h"
-#include "draghelper.h"
-#include "funnelmodel.h"
 #include "imagepicker.h"
-#include "processrunner.h"
-#include "rootmodel.h"
-#include "runnermodel.h"
-#include "submenu.h"
-#include "windowsystem.h"
 
-#include <QtQml>
+#include <QFileDialog>
+#include <QStandardPaths>
 
-void KickerPlugin::registerTypes(const char *uri)
+#include <KLocalizedString>
+
+ImagePicker::ImagePicker(QObject *parent) : QObject(parent),
+    m_dialog(0)
 {
-    Q_ASSERT(uri == QLatin1String("org.kde.plasma.private.kicker"));
+}
 
-    qmlRegisterType<AbstractModel>();
+ImagePicker::~ImagePicker()
+{
+    delete m_dialog;
+}
 
-    qmlRegisterType<DragHelper>(uri, 0, 1, "DragHelper");
-    qmlRegisterType<FunnelModel>(uri, 0, 1, "FunnelModel");
-    qmlRegisterType<ImagePicker>(uri, 0, 1, "ImagePicker");
-    qmlRegisterType<ProcessRunner>(uri, 0, 1, "ProcessRunner");
-    qmlRegisterType<RootModel>(uri, 0, 1, "RootModel");
-    qmlRegisterType<RunnerModel>(uri, 0, 1, "RunnerModel");
-    qmlRegisterType<SubMenu>(uri, 0, 1, "SubMenu");
-    qmlRegisterType<WindowSystem>(uri, 0, 1, "WindowSystem");
+QUrl ImagePicker::url() const
+{
+    return m_url;
+}
+
+void ImagePicker::open()
+{
+    if (!m_dialog) {
+        QString path;
+        const QStringList &locations = QStandardPaths::standardLocations(QStandardPaths::PicturesLocation);
+
+        if (!locations.isEmpty()) {
+            path = locations.at(0);
+        } else {
+            // HomeLocation is guaranteed not to be empty.
+            path = QStandardPaths::standardLocations(QStandardPaths::HomeLocation).at(0);
+        }
+
+        m_dialog = new QFileDialog(0, i18n("Choose an image"),
+                                      path,
+                                      i18n("Image Files (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"));
+        m_dialog->setFileMode(QFileDialog::ExistingFile);
+        connect(m_dialog, &QDialog::accepted, this, &ImagePicker::dialogAccepted);
+    }
+
+    m_dialog->show();
+    m_dialog->raise();
+    m_dialog->activateWindow();
+}
+
+void ImagePicker::dialogAccepted()
+{
+    const QList<QUrl> &urls = m_dialog->selectedUrls();
+
+    if (!urls.isEmpty()) {
+        m_url = urls.at(0);
+
+        emit urlChanged();
+    }
 }

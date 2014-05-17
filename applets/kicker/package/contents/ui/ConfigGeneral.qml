@@ -21,6 +21,8 @@ import QtQuick 2.0
 import QtQuick.Controls 1.0
 import QtQuick.Layouts 1.0
 
+import org.kde.plasma.private.kicker 0.1 as Kicker
+
 GroupBox {
     id: configGeneral
 
@@ -55,6 +57,22 @@ GroupBox {
                     id: customButtonImage
 
                     Layout.fillWidth: true
+                }
+
+                Button {
+                    iconName: "document-open"
+
+                    onClicked: {
+                        imagePicker.open();
+                    }
+                }
+
+                Kicker.ImagePicker {
+                    id: imagePicker
+
+                    onUrlChanged: {
+                        customButtonImage.text = url;
+                    }
                 }
             }
         }

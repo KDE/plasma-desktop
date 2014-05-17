@@ -17,31 +17,36 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#include "kickerplugin.h"
-#include "abstractmodel.h"
-#include "draghelper.h"
-#include "funnelmodel.h"
-#include "imagepicker.h"
-#include "processrunner.h"
-#include "rootmodel.h"
-#include "runnermodel.h"
-#include "submenu.h"
-#include "windowsystem.h"
+#ifndef IMAGEPICKER_H
+#define IMAGEPICKER_H
 
-#include <QtQml>
+#include <QUrl>
 
-void KickerPlugin::registerTypes(const char *uri)
+class QFileDialog;
+
+class ImagePicker : public QObject
 {
-    Q_ASSERT(uri == QLatin1String("org.kde.plasma.private.kicker"));
+    Q_OBJECT
 
-    qmlRegisterType<AbstractModel>();
+    Q_PROPERTY(QUrl url READ url NOTIFY urlChanged)
 
-    qmlRegisterType<DragHelper>(uri, 0, 1, "DragHelper");
-    qmlRegisterType<FunnelModel>(uri, 0, 1, "FunnelModel");
-    qmlRegisterType<ImagePicker>(uri, 0, 1, "ImagePicker");
-    qmlRegisterType<ProcessRunner>(uri, 0, 1, "ProcessRunner");
-    qmlRegisterType<RootModel>(uri, 0, 1, "RootModel");
-    qmlRegisterType<RunnerModel>(uri, 0, 1, "RunnerModel");
-    qmlRegisterType<SubMenu>(uri, 0, 1, "SubMenu");
-    qmlRegisterType<WindowSystem>(uri, 0, 1, "WindowSystem");
-}
+    public:
+        ImagePicker(QObject *parent = 0);
+        ~ImagePicker();
+
+        QUrl url() const;
+
+        Q_INVOKABLE void open();
+
+    Q_SIGNALS:
+        void urlChanged() const;
+
+    private Q_SLOTS:
+        void dialogAccepted();
+
+    private:
+        QFileDialog *m_dialog;
+        QUrl m_url;
+};
+
+#endif
