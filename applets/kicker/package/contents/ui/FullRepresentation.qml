@@ -32,7 +32,9 @@ Item {
     Layout.minimumHeight: Math.max((rootModel.count * rootList.itemHeight) + searchField.height + (2 * units.smallSpacing),
         sideBar.margins.top + sideBar.margins.bottom + favoriteApps.contentHeight + favoriteSystemActions.contentHeight
         + sidebarSeparator.height + (4 * units.smallSpacing))
-    Layout.maximumHeight: Layout.minimumHeight
+    Layout.maximumHeight: Math.max((rootModel.count * rootList.itemHeight) + searchField.height + (2 * units.smallSpacing),
+        sideBar.margins.top + sideBar.margins.bottom + favoriteApps.contentHeight + favoriteSystemActions.contentHeight
+        + sidebarSeparator.height + (4 * units.smallSpacing))
 
     signal appendSearchText(string text)
 
