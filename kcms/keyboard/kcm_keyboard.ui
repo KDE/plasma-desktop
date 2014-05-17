@@ -19,7 +19,7 @@
    </attribute>
    <layout class="QFormLayout" name="formLayout">
     <property name="verticalSpacing">
-      <number>0</number>
+     <number>0</number>
     </property>
     <item row="0" column="0">
      <widget class="QLabel" name="label_4">
@@ -263,11 +263,11 @@
           </widget>
          </item>
          <item row="2" column="1" colspan="2">
-          <widget class="KKeySequenceWidget" name="kdeKeySequence">
+          <widget class="KKeySequenceWidget" name="kdeKeySequence" native="true">
            <property name="whatsThis">
             <string>This is a shortcut for switching layouts which is handled by KDE. It does not support modifier-only shortcuts and also may not work in some situations (e.g. if popup is active or from screensaver).</string>
            </property>
-           <property name="multiKeyShortcutsAllowed">
+           <property name="multiKeyShortcutsAllowed" stdset="0">
             <bool>false</bool>
            </property>
           </widget>
@@ -332,7 +332,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="previewbutton">
+          <widget class="QPushButton" name="previewButton">
            <property name="enabled">
             <bool>false</bool>
            </property>
@@ -436,7 +436,7 @@
    <attribute name="title">
     <string>Advanced</string>
    </attribute>
-   <layout class="QGridLayout" name="gridLayout">
+   <layout class="QGridLayout" name="gridLayout_1">
     <item row="0" column="0" colspan="2">
      <widget class="QCheckBox" name="configureKeyboardOptionsChk">
       <property name="text">
@@ -460,6 +460,13 @@
    </layout>
   </widget>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>KKeySequenceWidget</class>
+   <extends>QWidget</extends>
+   <header>kkeysequencewidget.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
  <slots>
