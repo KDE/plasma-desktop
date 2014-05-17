@@ -26,9 +26,11 @@ DropArea {
     id: root
 
     width: units.iconSizes.medium
-    height: (model.count * units.iconSizes.medium) + ((model.count - 1) * flow.spacing)
+    height: contentHeight
 
     anchors.horizontalCenter: parent.horizontalCenter
+
+    property int contentHeight: (model.count * units.iconSizes.medium) + ((model.count - 1) * flow.spacing)
 
     property alias model: repeater.model
 

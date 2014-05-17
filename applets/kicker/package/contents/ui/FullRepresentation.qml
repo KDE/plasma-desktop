@@ -20,7 +20,6 @@
 import QtQuick 2.2
 import QtQuick.Layouts 1.1
 import QtGraphicalEffects 1.0
-
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 
@@ -30,8 +29,10 @@ Item {
     Layout.minimumWidth: sideBar.width + mainRow.spacing + Math.max(rootList.width, runnerColumns.width)
     Layout.maximumWidth: sideBar.width + mainRow.spacing + Math.max(rootList.width, runnerColumns.width)
 
-    Layout.minimumHeight: (rootModel.count * rootList.itemHeight) + searchField.height + (2 * units.smallSpacing)
-    Layout.maximumHeight: (rootModel.count * rootList.itemHeight) + searchField.height + (2 * units.smallSpacing)
+    Layout.minimumHeight: Math.max((rootModel.count * rootList.itemHeight) + searchField.height + (2 * units.smallSpacing),
+        sideBar.margins.top + sideBar.margins.bottom + favoriteApps.contentHeight + favoriteSystemActions.contentHeight
+        + sidebarSeparator.height + (4 * units.smallSpacing))
+    Layout.maximumHeight: Layout.minimumHeight
 
     signal appendSearchText(string text)
 
@@ -41,6 +42,8 @@ Item {
         searchField.text = "";
         searchField.focus = true;
     }
+
+
 
     Row {
         id: mainRow
@@ -90,6 +93,9 @@ Item {
                 }]
             }
 
+            /* NOTE FIXME: The following is used to fade out favorites overflow. It's
+             * currently not used since the popup is resized to fit all favorites in-
+             * stead.
             ShaderEffectSource {
                 id: favoriteAppsWrapper
 
@@ -133,6 +139,7 @@ Item {
                 source: favoriteAppsWrapper
                 maskSource: maskGradient
             }
+            */
 
             PlasmaCore.SvgItem {
                 id: sidebarSeparator
