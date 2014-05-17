@@ -107,7 +107,6 @@ GroupBox {
                         Layout.column: 0
                         Layout.rowSpan: 2
                         Layout.alignment: Qt.AlignTop
-                        Layout.maximumWidth: 20 // FIXME HACK: Use actual radio button width.
 
                         exclusiveGroup: locationGroup
                     }
@@ -158,7 +157,6 @@ GroupBox {
                         Layout.column: 0
                         Layout.rowSpan: 2
                         Layout.alignment: Qt.AlignTop
-                        Layout.maximumWidth: 20 // FIXME HACK: Use actual radio button width.
 
                         exclusiveGroup: locationGroup
                     }
