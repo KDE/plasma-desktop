@@ -29,7 +29,7 @@ class XInputEventNotifier: public XEventNotifier {
 	Q_OBJECT
 
 public:
-	XInputEventNotifier(QWidget* parent=NULL);
+    XInputEventNotifier(QWidget* = NULL);
 
 	void start();
 	void stop();
