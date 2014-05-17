@@ -7,7 +7,7 @@ add_definitions(-DTRANSLATION_DOMAIN=\"kcmformats\")
 
 kservice_desktop_to_json(formats.desktop)
 
-qt5_wrap_ui(kcm_formats_PART_SRCS kcmformatswidget.ui )
+ki18n_wrap_ui(kcm_formats_PART_SRCS kcmformatswidget.ui )
 
 add_library(kcm_formats MODULE ${kcm_formats_PART_SRCS})
 
