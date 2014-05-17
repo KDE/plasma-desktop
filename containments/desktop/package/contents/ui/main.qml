@@ -276,32 +276,9 @@ DragDrop.DropArea {
             z: 0
             visible: false
 
-            property int moveDuration: units.shortAnimtion * 1.5
-
             Behavior on opacity {
                 NumberAnimation {
                     duration: units.longDuration
-                    easing.type: Easing.InOutQuad
-                }
-            }
-            Behavior on x {
-                enabled: placeHolderPaint.opacity > 0
-                NumberAnimation {
-                    duration: placeHolderPaint.moveDuration
-                    easing.type: Easing.InOutQuad
-                }
-            }
-            Behavior on y {
-                enabled: placeHolderPaint.opacity > 0
-                NumberAnimation {
-                    duration: placeHolderPaint.moveDuration
-                    easing.type: Easing.InOutQuad
-                }
-            }
-            Behavior on width {
-                enabled: placeHolderPaint.opacity > 0
-                NumberAnimation {
-                    duration: placeHolderPaint.moveDuration
                     easing.type: Easing.InOutQuad
                 }
             }
