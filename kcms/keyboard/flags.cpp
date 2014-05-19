@@ -18,7 +18,7 @@
 
 #include "flags.h"
 
-#include <kdebug.h>
+//#include <kdebug.h>
 #include <kstandarddirs.h>
 #include <kiconloader.h>
 #include <kglobalsettings.h>

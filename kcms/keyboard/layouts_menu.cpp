@@ -18,11 +18,11 @@
 
 #include "layouts_menu.h"
 
-#include <kmenu.h>
+//#include <kmenu.h>
 #include <ktoolinvocation.h>
 #include <klocalizedstring.h>
-#include <kdebug.h>
 
+#include <QDebug>
 #include <QAction>
 #include <QMenu>
 
@@ -81,7 +81,7 @@ int LayoutsMenu::switchToLayout(const LayoutUnit& layoutUnit, const KeyboardConf
 		res = X11Helper::setLayout(layoutUnit);
 	}
 	else {
-		kWarning() << "switchToLayout with unknown layout" << layoutUnit.toString();
+        qDebug() << "switchToLayout with unknown layout" << layoutUnit.toString();
 		res = -1;
 	}
 	return res;
