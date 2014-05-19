@@ -18,14 +18,15 @@
 
 #include "layout_memory_persister.h"
 
-#include <kdebug.h>
+
 #include <kconfiggroup.h>
 #include <ksharedconfig.h>
 #include <kstandarddirs.h>
 
-#include <QtCore/QFile>
+#include <QFile>
 #include <QtXml/qdom.h>
 #include <QtXml/qxml.h>
+#include <QDebug>
 
 #include "keyboard_config.h"
 #include "layout_memory.h"
@@ -88,7 +89,7 @@ QString LayoutMemoryPersister::getLayoutMapAsString()
 static bool isRestoreSession()
 {
     KConfigGroup c(KSharedConfig::openConfig("ksmserverrc", KConfig::NoGlobals), "General");
-    kDebug() << "loginMode:" << c.readEntry("loginMode");
+    qDebug() << "loginMode:" << c.readEntry("loginMode");
     QString loginMode = c.readEntry("loginMode");
     return loginMode != "default" && loginMode != "restoreSavedSession";	// we don't know how to restore saved session - only previous one
 }
@@ -122,7 +123,7 @@ bool LayoutMemoryPersister::saveToFile(const QFile& file_)
 
 	QFile file(file_.fileName());	// so we don't expose the file we open/close to the caller
     if( ! file.open( QIODevice::WriteOnly | QIODevice::Truncate | QIODevice::Text) ) {
-    	kWarning() << "Failed to open layout memory xml file for writing" << file.fileName();
+        qDebug() << "Failed to open layout memory xml file for writing" << file.fileName();
     	return false;
     }
 
@@ -131,13 +132,13 @@ bool LayoutMemoryPersister::saveToFile(const QFile& file_)
     out.flush();
 
     if( file.error() != QFile::NoError ) {
-    	kWarning() << "Failed to store keyboard layout memory, error" << file.error();
+        qDebug() << "Failed to store keyboard layout memory, error" << file.error();
         file.close();
     	file.remove();
     	return false;
     }
     else {
-    	kDebug() << "Keyboard layout memory stored into" << file.fileName() << "written" << file.pos();
+        qDebug() << "Keyboard layout memory stored into" << file.fileName() << "written" << file.pos();
     	return true;
     }
 }
@@ -214,7 +215,7 @@ bool LayoutMemoryPersister::restoreFromFile(const QFile& file_)
 
 	QFile file(file_.fileName());	// so we don't expose the file we open/close to the caller
     if( ! file.open( QIODevice::ReadOnly | QIODevice::Text ) ) {
-    	kWarning() << "Failed to open layout memory xml file for reading" << file.fileName() << "error:" << file.error();
+        qDebug() << "Failed to open layout memory xml file for reading" << file.fileName() << "error:" << file.error();
     	return false;
     }
 
@@ -225,17 +226,17 @@ bool LayoutMemoryPersister::restoreFromFile(const QFile& file_)
 	reader.setErrorHandler(&mapHandler);
 
 	QXmlInputSource xmlInputSource(&file);
-	kDebug() << "Restoring keyboard layout map from" << file.fileName();
+    qDebug() << "Restoring keyboard layout map from" << file.fileName();
 
 	if( ! reader.parse(xmlInputSource) ) {
-		kWarning() << "Failed to parse the layout memory file" << file.fileName();
+        qDebug() << "Failed to parse the layout memory file" << file.fileName();
 		return false;
 	}
 
 	if( layoutMemory.keyboardConfig.switchingPolicy == KeyboardConfig::SWITCH_POLICY_GLOBAL ) {
 		if( mapHandler.globalLayout.isValid() && layoutMemory.keyboardConfig.layouts.contains(mapHandler.globalLayout)) {
 			globalLayout = mapHandler.globalLayout;
-			kDebug() << "Restored global layout" << globalLayout.toString();
+            qDebug() << "Restored global layout" << globalLayout.toString();
 		}
 	}
 	else {
@@ -245,7 +246,7 @@ bool LayoutMemoryPersister::restoreFromFile(const QFile& file_)
 				layoutMemory.layoutMap.insert(key, mapHandler.layoutMap[key]);
 			}
 		}
-		kDebug() << "Restored layouts for" << layoutMemory.layoutMap.size() << "containers";
+        qDebug() << "Restored layouts for" << layoutMemory.layoutMap.size() << "containers";
 	}
 	return true;
 }
@@ -254,7 +255,7 @@ bool LayoutMemoryPersister::canPersist() {
 	// we can't persist per window - as we're using window id which is not preserved between sessions
 	bool windowMode = layoutMemory.keyboardConfig.switchingPolicy == KeyboardConfig::SWITCH_POLICY_WINDOW;
 	if( windowMode ) {
-		kDebug() << "Not saving session for window mode";
+        qDebug() << "Not saving session for window mode";
 	}
 	return !windowMode;
 }
