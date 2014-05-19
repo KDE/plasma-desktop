@@ -103,12 +103,10 @@ void ThemeModel::reload()
 
 
         Plasma::FrameSvg *svg = new Plasma::FrameSvg(this);
-        const QString svgFile = themeRoot + QStringLiteral("/widgets/background.svg");
-        if (QFile::exists(svgFile)) {
-            svg->setImagePath(svgFile);
-        } else {
-            svg->setImagePath(svgFile + "z");
-        }
+        Plasma::Theme *t = new Plasma::Theme(packageName, svg);
+        svg->setTheme(t);
+        svg->setImagePath("widgets/background");
+
         svg->setEnabledBorders(Plasma::FrameSvg::AllBorders);
         ThemeInfo info;
         info.package = packageName;
@@ -205,7 +203,7 @@ void ThemeDelegate::paint(QPainter *painter,
     painter->save();
     QFont font = painter->font();
     //font.setWeight(QFont::Bold);
-    const QString colorFile = QStandardPaths::locate(QStandardPaths::GenericDataLocation, "desktoptheme/" + package + "/colors");
+    const QString colorFile = QStandardPaths::locate(QStandardPaths::GenericDataLocation, "plasma/desktoptheme/" + package + "/colors");
     if (!colorFile.isEmpty()) {
         KSharedConfigPtr colors = KSharedConfig::openConfig(colorFile);
         KColorScheme colorScheme(QPalette::Active, KColorScheme::Window, colors);
