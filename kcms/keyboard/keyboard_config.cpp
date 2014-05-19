@@ -20,8 +20,9 @@
 
 #include <ksharedconfig.h>
 #include <kconfiggroup.h>
-#include <kdebug.h>
+//#include <kdebug.h>
 
+#include <QDebug>
 
 static const char* SWITCHING_POLICIES[] = {"Global", "Desktop", "WinClass", "Window", NULL };
 static const char* LIST_SEPARATOR = ",";
@@ -143,7 +144,7 @@ void KeyboardConfig::load()
 //    	}
 //    }
 
-	kDebug() << "configuring layouts" << configureLayouts << "configuring options" << resetOldXkbOptions;
+    qDebug() << "configuring layouts" << configureLayouts << "configuring options" << resetOldXkbOptions;
 }
 
 void KeyboardConfig::save()
