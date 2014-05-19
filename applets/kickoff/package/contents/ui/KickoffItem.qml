@@ -96,8 +96,7 @@ Item {
                     if (mouse.button == Qt.LeftButton) {
                         if (appView) {
                             appViewScrollArea.state = "OutgoingLeft";
-                        }
-                        else {
+                        } else {
                             listItem.activate();
                         }
                     } else if (mouse.button == Qt.RightButton) {

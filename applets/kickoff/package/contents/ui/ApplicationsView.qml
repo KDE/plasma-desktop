@@ -115,6 +115,8 @@ Item {
     PlasmaExtras.ScrollArea {
         id: appViewScrollArea
 
+        property Item activatedItem: null
+
         anchors {
             top: crumbContainer.bottom
             bottom: parent.bottom
@@ -127,7 +129,7 @@ Item {
 
         function moveRight() {
             state = "";
-            applicationsView.currentItem.activate();
+            activatedItem.activate()
             applicationsView.positionViewAtBeginning()
         }
 
@@ -220,6 +222,10 @@ Item {
             Transition {
                 to: "OutgoingLeft"
                 SequentialAnimation {
+                    // We need to cache the currentItem since the selection can move during animation,
+                    // and we want the item that has been clicked on, not the one that is under the
+                    // mouse once the animation is done
+                    ScriptAction { script: appViewScrollArea.activatedItem = applicationsView.currentItem }
                     NumberAnimation { properties: "x,opacity"; easing.type: Easing.InQuad; duration: units.longDuration }
                     ScriptAction { script: appViewScrollArea.moveRight() }
                 }
