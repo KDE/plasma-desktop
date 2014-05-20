@@ -23,11 +23,11 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
-Item {
+FocusScope {
     id: root
 
-    property alias showSearch   : searchButton.checked
     property alias searchString : searchText.text
+    signal closeRequested
 
     Keys.onPressed: {
         if (event.key == Qt.Key_Escape) {
@@ -38,81 +38,44 @@ Item {
         }
     }
 
-    onShowSearchChanged: if (showSearch) searchText.focus = true
-
-    height : heading.height
-    width  : parent.width
-
-    PlasmaComponents.ToolButton {
-        id: searchButton
-        iconSource: "edit-find"
-
-        checkable: true
-        checked: root.showSearch
-
-        anchors {
-            right  : parent.right
-            top    : parent.top
-            bottom : parent.bottom
-        }
-
-        onCheckedChanged: {
-            if (!checked) searchText.text = "";
-        }
-    }
+    height: childrenRect.height
 
     PlasmaExtras.Title {
         id: heading
         text: "Activities"
+        elide: Text.ElideRight
 
         anchors {
             left   : parent.left
-            right  : searchButton.left
-            bottom : parent.bottom
+            right  : closeButton.left
+            rightMargin: units.smallSpacing
             top    : parent.top
         }
     }
+
+    PlasmaComponents.ToolButton {
+        id: closeButton
+        anchors {
+            right: parent.right
+            verticalCenter: heading.verticalCenter
+        }
+        iconSource: "window-close"
+        onClicked: root.closeRequested()
+    }
+
 
     PlasmaComponents.TextField {
         id: searchText
 
         focus: true
+        clearButtonShown: true
 
         anchors {
             left   : parent.left
-            right  : searchButton.left
-            bottom : parent.bottom
-            top    : parent.top
+            right  : parent.right
+            top    : heading.bottom
         }
 
-        onTextChanged: {
-            if (text.length > 0) {
-                root.showSearch = true
-            }
-        }
+        placeholderText: "Search..."
     }
-
-    states: [
-        State {
-            name: "normal"
-            PropertyChanges { target: searchText; opacity: 0 }
-            PropertyChanges { target: heading; opacity: 1 }
-        },
-        State {
-            name: "search"
-            PropertyChanges { target: searchText; opacity: 1 }
-            PropertyChanges { target: heading; opacity: 0 }
-        }
-    ]
-
-    transitions: [
-        Transition {
-            NumberAnimation {
-                properties : "opacity"
-                duration   : units.shortDuration
-            }
-        }
-    ]
-
-    state: showSearch ? "search" : "normal"
 }

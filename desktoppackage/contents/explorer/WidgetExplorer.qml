@@ -22,7 +22,10 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kquickcontrolsaddons 2.0
+
 import QtQuick.Window 2.1
+import QtQuick.Layouts 1.1
+
 import org.kde.plasma.private.shell 2.0
 
 Item {
@@ -149,42 +152,50 @@ Item {
     Component {
         id: verticalTopBarComponent
 
-        Column {
+        GridLayout {
             anchors.top: parent.top
-            anchors.left:parent.left
+            anchors.left: parent.left
             anchors.right: parent.right
-            spacing: 4
+            columns: 2
+
+            PlasmaExtras.Title {
+                id: heading
+                text: "Widgets"
+                elide: Text.ElideRight
+                Layout.fillWidth: true
+            }
 
             PlasmaComponents.ToolButton {
-                anchors.right: parent.right
+                id: closeButton
+                anchors {
+                    right: parent.right
+                    verticalCenter: heading.verticalCenter
+                }
                 iconSource: "window-close"
                 onClicked: main.closed()
             }
+
             PlasmaComponents.TextField {
-                anchors {
-                    left: parent.left
-                    right: parent.right
-                }
                 clearButtonShown: true
-                placeholderText: i18n("Enter search term...")
+                placeholderText: i18n("Search...")
                 onTextChanged: {
                     list.contentX = 0
                     list.contentY = 0
                     widgetExplorer.widgetsModel.searchTerm = text
                 }
                 Component.onCompleted: forceActiveFocus()
+                Layout.columnSpan: 2
+                Layout.fillWidth: true
             }
             PlasmaComponents.Button {
-                anchors {
-                    left: parent.left
-                    right: parent.right
-                }
                 id: categoryButton
                 text: i18n("Categories")
                 onClicked: {
                     main.preventWindowHide = true;
                     categoriesDialog.open(0, categoryButton.height)
                 }
+                Layout.columnSpan: 2
+                Layout.fillWidth: true
             }
             Component.onCompleted: {
                 main.categoryButton = categoryButton

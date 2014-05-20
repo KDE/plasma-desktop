@@ -51,27 +51,18 @@ Item {
             event.accepted = false;
         } else {
             if (event.key == Qt.Key_Escape) {
-                if (heading.showSearch)
-                    heading.showSearch = false;
-                else
-                    root.closeRequested();
-
+                root.closeRequested();
             } else if (event.key == Qt.Key_Up) {
                 console.log("UP KEY");
-
             } else if (event.key == Qt.Key_Down) {
                 console.log("DOWN KEY");
-
             } else if (event.key == Qt.Key_Return || event.key == Qt.Key_Enter) {
                 console.log("ENTER KEY");
-
             } else if (event.key == Qt.Key_Tab) {
                 console.log("TAB KEY");
-
             } else  {
                 console.log("OTHER KEY");
-                heading.showSearch = true;
-
+                heading.forceActiveFocus();
             }
         }
     }
@@ -90,8 +81,11 @@ Item {
             left: parent.left
             right: parent.right
 
-            topMargin: units.largeSpacing
+            leftMargin: units.smallSpacing
+            rightMargin: units.smallSpacing
         }
+
+        onCloseRequested: root.closeRequested()
     }
 
     PlasmaExtras.ScrollArea {
