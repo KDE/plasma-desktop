@@ -28,32 +28,17 @@ Item {
     width: parent.width
     height: childrenRect.height
 
-//     PlasmaCore.SvgItem {
-//         anchors {
-//             left: parent.left
-//             right: parent.right
-//         }
-//         height: lineSvg.elementSize("horizontal-line").height
-//
-//         visible: sectionDelegate.y > 0
-//         svg: lineSvg
-//         elementId: "horizontal-line"
-//     }
     PlasmaExtras.Heading {
         id: sectionHeading
         anchors {
-//             bottomMargin: units.gridUnit / 4
             left: parent.left
             right: parent.right
             leftMargin: units.gridUnit
         }
 
         y: units.gridUnit / 4
-        //height: paintedHeight + units.gridUnit / 4
-        //opacity: 0.6
         level: 4
         text: section
-        //horizontalAlignment: Text.AlignHCenter
     }
     Item {
         width: parent.width
