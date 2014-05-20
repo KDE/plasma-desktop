@@ -172,6 +172,7 @@ Item {
 
             //anchors.fill: parent
             currentIndex: -1
+            boundsBehavior: Flickable.StopAtBounds
             keyNavigationWraps: true
             interactive: contentHeight > height
 
