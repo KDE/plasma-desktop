@@ -177,7 +177,7 @@ Item {
             interactive: contentHeight > height
 
             delegate: KickoffItem {}
-            highlight: PlasmaComponents.Highlight {}
+            highlight: KickoffHighlight {}
             highlightMoveDuration : 0
 
             model: favoritesModel

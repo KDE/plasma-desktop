@@ -117,7 +117,7 @@ Item {
 
             anchors {
                 left: parent.left
-                leftMargin: (units.gridUnit * 3) - units.iconSizes.medium
+                leftMargin: (units.gridUnit * 4) - units.iconSizes.medium
                 verticalCenter: parent.verticalCenter
             }
             width: units.iconSizes.medium

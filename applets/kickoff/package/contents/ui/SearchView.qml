@@ -54,7 +54,7 @@ Item {
             keyNavigationWraps: true
             boundsBehavior: Flickable.StopAtBounds
             delegate: KickoffItem {}
-            highlight: PlasmaComponents.Highlight {}
+            highlight: KickoffHighlight {}
             highlightMoveDuration : 0
             model: Kickoff.KRunnerModel{}
 

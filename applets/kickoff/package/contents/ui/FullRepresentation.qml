@@ -72,27 +72,15 @@ Item {
         id: header
     }
 
-    MouseArea {
+    Item {
         id: mainArea
-        hoverEnabled: true
-        onPositionChanged: {
-            if (mainTabGroup.currentTab.listView) {
-                mainTabGroup.currentTab.listView.currentIndex = mainTabGroup.currentTab.listView.indexAt(units.largeSpacing * 2, mouse.y);
-            } else {
-                mainTabGroup.currentTab.item.listView.currentIndex = mainTabGroup.currentTab.item.listView.indexAt(units.largeSpacing * 2, mouse.y);
-            }
-        }
-        onClicked: {
-            currentView.activateCurrentIndex(1);
-        }
+
         PlasmaComponents.TabGroup {
             id: mainTabGroup
             currentTab: favoritesPage
 
             anchors {
                 fill: parent
-                leftMargin: units.largeSpacing
-                rightMargin: units.largeSpacing
             }
 
             //pages
@@ -449,7 +437,6 @@ Item {
             }
             case Qt.Key_M:
             case Qt.Key_Menu: {
-                print("MENU CLICKED");
                 currentView.openContextMenu();
                 event.accepted = true;
                 break;
@@ -504,8 +491,4 @@ Item {
             }
         }
     ] // states
-
-    onStateChanged: {
-        print("root.state changed to : " + state);
-    }
 }

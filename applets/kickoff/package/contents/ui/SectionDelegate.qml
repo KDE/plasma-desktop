@@ -45,7 +45,7 @@ Item {
 //             bottomMargin: units.gridUnit / 4
             left: parent.left
             right: parent.right
-            //leftMargin: units.gridUnit
+            leftMargin: units.gridUnit
         }
 
         y: units.gridUnit / 4

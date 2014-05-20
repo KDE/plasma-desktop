@@ -40,10 +40,11 @@ Item {
     }
 
     function activateCurrentIndex(start) {
-        if (!applicationsView.currentItem.modelChildren)
-            if (!start)
+        if (!applicationsView.currentItem.modelChildren) {
+            if (!start) {
                 return;
-
+            }
+        }
         appViewScrollArea.state = "OutgoingLeft";
     }
 
@@ -149,7 +150,7 @@ Item {
             focus: true
             keyNavigationWraps: true
             boundsBehavior: Flickable.StopAtBounds
-            highlight: PlasmaComponents.Highlight {}
+            highlight: KickoffHighlight {}
             highlightMoveDuration : 0
 
             model: VisualDataModel {
