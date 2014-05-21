@@ -33,13 +33,13 @@ DragDrop.DropArea {
     height: 48
 
 //BEGIN properties
-    Layout.minimumWidth: currentLayout.Layout.minimumWidth
-    Layout.maximumWidth: currentLayout.Layout.maximumWidth
-    Layout.preferredWidth: currentLayout.Layout.preferredWidth
+    Layout.minimumWidth: currentLayout.Layout.minimumWidth + (isHorizontal ? toolBox.width : 0)
+    Layout.maximumWidth: currentLayout.Layout.maximumWidth + (isHorizontal ? toolBox.width : 0)
+    Layout.preferredWidth: currentLayout.Layout.preferredWidth + (isHorizontal ? toolBox.width : 0)
 
-    Layout.minimumHeight: currentLayout.Layout.minimumHeight
-    Layout.maximumHeight: currentLayout.Layout.maximumHeight
-    Layout.preferredHeight: currentLayout.Layout.preferredHeight
+    Layout.minimumHeight: currentLayout.Layout.minimumHeight + (!isHorizontal ? toolBox.height : 0)
+    Layout.maximumHeight: currentLayout.Layout.maximumHeight + (!isHorizontal ? toolBox.height : 0)
+    Layout.preferredHeight: currentLayout.Layout.preferredHeight + (!isHorizontal ? toolBox.height : 0)
 
     property Item toolBox
 
@@ -298,6 +298,8 @@ function checkLastSpacer() {
 
     Item {
         id: dndSpacer
+        Layout.preferredWidth: width
+        Layout.preferredHeight: height
         width: (plasmoid.formFactor == PlasmaCore.Types.Vertical) ? currentLayout.width : theme.mSize(theme.defaultFont).width * 10
         height: (plasmoid.formFactor == PlasmaCore.Types.Vertical) ?  theme.mSize(theme.defaultFont).width * 10 : currentLayout.height
     }
