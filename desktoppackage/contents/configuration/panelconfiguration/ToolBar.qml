@@ -102,10 +102,8 @@ Item {
             location: plasmoid.location
             type: PlasmaCore.Dialog.PopupMenu
             flags: Qt.Popup | Qt.FramelessWindowHint | Qt.WindowDoesNotAcceptFocus
-            mainItem: Column {
+            mainItem: ColumnLayout {
                 id: menuColumn
-                width: units.gridUnit * 5
-                height: units.gridUnit * 10
                 Layout.minimumWidth: menuColumn.implicitWidth
                 Layout.minimumHeight: menuColumn.implicitHeight
                 spacing: units.smallSpacing
@@ -115,10 +113,7 @@ Item {
                 }
                 PlasmaComponents.ButtonColumn {
                     spacing: 0
-                    anchors {
-                        left: parent.left
-                        right: parent.right
-                    }
+                    Layout.fillWidth: true
                     PlasmaComponents.ToolButton {
                         anchors {
                             left: parent.left
@@ -160,10 +155,7 @@ Item {
                 }
                 PlasmaComponents.ButtonColumn {
                     spacing: 0
-                    anchors {
-                        left: parent.left
-                        right: parent.right
-                    }
+                    Layout.fillWidth: true
                     PlasmaComponents.ToolButton {
                         anchors {
                             left: parent.left
@@ -210,19 +202,13 @@ Item {
                     }
                 }
                 PlasmaComponents.ToolButton {
-                    anchors {
-                        left: parent.left
-                        right: parent.right
-                    }
+                    Layout.fillWidth: true
                     text: i18n("Maximize Panel")
                     iconSource: panel.formFactor == PlasmaCore.Types.Vertical ? "zoom-fit-height" : "zoom-fit-width"
                     onClicked: panel.maximize();
                 }
                 PlasmaComponents.ToolButton {
-                    anchors {
-                        left: parent.left
-                        right: parent.right
-                    }
+                    Layout.fillWidth: true
                     text: i18n("Lock Widgets")
                     iconSource: "document-encrypt"
                     onClicked: {
@@ -231,10 +217,7 @@ Item {
                     }
                 }
                 PlasmaComponents.ToolButton {
-                    anchors {
-                        left: parent.left
-                        right: parent.right
-                    }
+                    Layout.fillWidth: true
                     text: i18n("Remove Panel")
                     iconSource: "window-close"
                     onClicked: {
