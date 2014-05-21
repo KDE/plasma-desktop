@@ -62,10 +62,6 @@ PlasmaCore.FrameSvgItem {
     function adjustBorders() {
         var borders = PlasmaCore.FrameSvg.AllBorders;
         if (!containment) {
-//             borders = borders & ~PlasmaCore.FrameSvg.BottomBorder;
-//             borders = borders & ~PlasmaCore.FrameSvg.LeftBorder;
-//             borders = borders & ~PlasmaCore.FrameSvg.RightBorder;
-//             root.enabledBorders = borders;
             return;
         }
 
