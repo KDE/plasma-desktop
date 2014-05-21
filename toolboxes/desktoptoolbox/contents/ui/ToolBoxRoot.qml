@@ -53,6 +53,9 @@ Item {
         placeToolBoxTimer.restart();
     }
 
+    LayoutMirroring.enabled: (Qt.application.layoutDirection === Qt.RightToLeft)
+    LayoutMirroring.childrenInherit: true
+    
     Connections {
         target: plasmoid
         onFocusChanged: {
