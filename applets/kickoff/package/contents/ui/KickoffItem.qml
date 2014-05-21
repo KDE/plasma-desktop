@@ -165,7 +165,6 @@ Item {
                 }
             }
             opacity: isCurrent ? 0.6 : 0
-            Behavior on opacity { NumberAnimation { duration: units.longDuration /2 } }
             font.pointSize: theme.smallestFont.pointSize
             elide: Text.ElideMiddle
         }
