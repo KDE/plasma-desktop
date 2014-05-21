@@ -150,10 +150,16 @@ function checkLastSpacer() {
     }
 
     onDragEnter: {
+        if (plasmoid.immutable) {
+            return;
+        }
         LayoutManager.insertAtCoordinates(dndSpacer, event.x, event.y)
     }
 
     onDragMove: {
+        if (plasmoid.immutable) {
+            return;
+        }
         LayoutManager.insertAtCoordinates(dndSpacer, event.x, event.y)
     }
 
@@ -162,6 +168,9 @@ function checkLastSpacer() {
     }
 
     onDrop: {
+        if (plasmoid.immutable) {
+            return;
+        }
         plasmoid.processMimeData(event.mimeData, event.x, event.y);
     }
 
