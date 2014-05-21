@@ -33,6 +33,7 @@ Item {
 
     z: 999
 
+    LayoutMirroring.enabled: (Qt.application.layoutDirection === Qt.RightToLeft)
     anchors {
         left: undefined
         top: undefined

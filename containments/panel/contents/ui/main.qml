@@ -17,7 +17,7 @@
  */
 
 import QtQuick 2.1
-import QtQuick.Layouts 1.0
+import QtQuick.Layouts 1.1
 import org.kde.plasma.plasmoid 2.0
 
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -330,6 +330,7 @@ function checkLastSpacer() {
         columns: 1
         //when horizontal layout top-to-bottom, this way it will obey our limit of one row and actually lay out left to right
         flow: isHorizontal ? GridLayout.TopToBottom : GridLayout.LeftToRight
+        layoutDirection: Qt.application.layoutDirection
     }
 
     onWidthChanged: {
@@ -343,7 +344,7 @@ function checkLastSpacer() {
         id: containmentSizeSyncTimer
         interval: 150
         onTriggered: {
-            currentLayout.x = 0
+            currentLayout.x = (Qt.application.layoutDirection === Qt.RightToLeft) ? toolBox.width : 0;
             currentLayout.y = 0
             currentLayout.width = root.width - (isHorizontal && toolBox && toolBox.visible ? toolBox.width : 0)
             currentLayout.height = root.height - (!isHorizontal && toolBox && toolBox.visible ? toolBox.height : 0)
