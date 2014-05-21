@@ -33,13 +33,13 @@ DragDrop.DropArea {
     height: 48
 
 //BEGIN properties
-    Layout.minimumWidth: currentLayout.Layout.minimumWidth + (isHorizontal ? toolBox.width : 0)
-    Layout.maximumWidth: currentLayout.Layout.maximumWidth + (isHorizontal ? toolBox.width : 0)
-    Layout.preferredWidth: currentLayout.Layout.preferredWidth + (isHorizontal ? toolBox.width : 0)
+    Layout.minimumWidth: currentLayout.Layout.minimumWidth + (isHorizontal && toolBox ? toolBox.width : 0)
+    Layout.maximumWidth: currentLayout.Layout.maximumWidth + (isHorizontal && toolBox ? toolBox.width : 0)
+    Layout.preferredWidth: currentLayout.Layout.preferredWidth + (isHorizontal && toolBox ? toolBox.width : 0)
 
-    Layout.minimumHeight: currentLayout.Layout.minimumHeight + (!isHorizontal ? toolBox.height : 0)
-    Layout.maximumHeight: currentLayout.Layout.maximumHeight + (!isHorizontal ? toolBox.height : 0)
-    Layout.preferredHeight: currentLayout.Layout.preferredHeight + (!isHorizontal ? toolBox.height : 0)
+    Layout.minimumHeight: currentLayout.Layout.minimumHeight + (!isHorizontal && toolBox ? toolBox.height : 0)
+    Layout.maximumHeight: currentLayout.Layout.maximumHeight + (!isHorizontal && toolBox ? toolBox.height : 0)
+    Layout.preferredHeight: currentLayout.Layout.preferredHeight + (!isHorizontal && toolBox? toolBox.height : 0)
 
     property Item toolBox
 
