@@ -19,6 +19,8 @@
 
 import QtQuick 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 Item {
     id: tooltipContentItem
@@ -48,13 +50,14 @@ Item {
         Column {
             spacing: units.smallSpacing
 
-            Text {
+            PlasmaExtras.Heading {
+                level: 3
+                elide: Text.ElideRight
                 text: toolTip.mainText
-                font.bold: true
             }
-
-            Text {
+            PlasmaComponents.Label {
                 text: toolTip.subText
+                opacity: 0.5
             }
         }
     }
