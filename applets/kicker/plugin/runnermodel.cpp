@@ -152,10 +152,9 @@ void RunnerModel::matchesChanged(const QList<Plasma::QueryMatch> &matches)
     // At this point, matchesForRunner contains only matches for runners which
     // do not have a model yet. Create new models for them.
     if (!matchesForRunner.isEmpty()) {
-        beginInsertRows(QModelIndex(), rowCount(), rowCount() + matchesForRunner.size() - 1);
-
         auto it = matchesForRunner.constBegin();
         auto end = matchesForRunner.constEnd();
+        int appendCount = 0;
 
         for (; it != end; ++it) {
             QList<Plasma::QueryMatch> matches = it.value();
@@ -165,16 +164,22 @@ void RunnerModel::matchesChanged(const QList<Plasma::QueryMatch> &matches)
             connect(matchesModel, SIGNAL(appLaunched(QString)), this, SIGNAL(appLaunched(QString)));
             matchesModel->setMatches(matches);
 
-            if (matches.first().runner()->id() == "services") {
+            if (it.key() == "services") {
+                beginInsertRows(QModelIndex(), 0, 0);
                 m_models.prepend(matchesModel);
+                endInsertRows();
+                emit countChanged();
             } else {
                 m_models.append(matchesModel);
+                ++appendCount;
             }
         }
 
-        endInsertRows();
-
-        emit countChanged();
+        if (appendCount > 0) {
+            beginInsertRows(QModelIndex(), rowCount() - appendCount, rowCount() - 1);
+            endInsertRows();
+            emit countChanged();
+        }
     }
 }
 
