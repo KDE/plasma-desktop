@@ -63,6 +63,7 @@ Item {
 
         PlasmaComponents.Button {
             text: buttonsLayout.showText ? i18n("Add Widgets...") : ""
+            tooltip: buttonsLayout.showText ? "" : i18n("Add Widgets...")
             iconSource: "list-add"
             Layout.preferredWidth: panel.formFactor == PlasmaCore.Types.Vertical ? Math.max(implicitWidth, parent.width) : implicitWidth
             onClicked: {
@@ -73,6 +74,7 @@ Item {
         PlasmaComponents.Button {
             iconSource: "distribute-horizontal-x"
             text: buttonsLayout.showText ? i18n("Add Spacer") : ""
+            tooltip: buttonsLayout.showText ? "" : i18n("Add Spacer")
             Layout.preferredWidth: panel.formFactor == PlasmaCore.Types.Vertical ? Math.max(implicitWidth, parent.width) : implicitWidth
             onClicked: {
                 configDialog.addPanelSpacer();
@@ -83,6 +85,7 @@ Item {
             id: settingsButton
             iconSource: "configure"
             text: buttonsLayout.showText ? i18n("More Settings...") : ""
+            tooltip: buttonsLayout.showText ? "" : i18n("More Settings...")
             Layout.preferredWidth: panel.formFactor == PlasmaCore.Types.Vertical ? Math.max(implicitWidth, parent.width) : implicitWidth
             onClicked: {
                 contextMenu.visible = !contextMenu.visible;
@@ -91,6 +94,7 @@ Item {
 
         PlasmaComponents.ToolButton {
             iconSource: "window-close"
+            tooltip: i18n("Close")
             onClicked: {
                 configDialog.close()
             }
