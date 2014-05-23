@@ -62,9 +62,6 @@ KCMDesktopTheme::KCMDesktopTheme( QWidget* parent, const QVariantList& )
     m_bDesktopThemeDirty = false;
     m_bDetailsDirty = false;
 
-    KAutostart plasmaNetbookAutoStart("plasma-netbook");
-    m_isNetbook = plasmaNetbookAutoStart.autostarts();
-
     KGlobal::dirs()->addResourceType("themes", "data", "kstyle/themes");
 
     KAboutData *about =
@@ -123,13 +120,9 @@ void KCMDesktopTheme::save()
     {
         QString theme = m_themeModel->data(m_theme->currentIndex(), ThemeModel::PackageNameRole).toString();
         qDebug() << "theme changed to " << theme;
-        if (m_isNetbook) {
-            KConfigGroup cg(KSharedConfig::openConfig("plasmarc"), "Theme-plasma-netbook");
-            cg.writeEntry("name", theme);
-        } else {
-            qDebug() << "m-defaultTheme" << theme;
-            m_defaultTheme->setThemeName(theme);
-        }
+        qDebug() << "m-defaultTheme" << theme;
+        m_defaultTheme->setThemeName(theme);
+
     }
 
     if (m_bDetailsDirty)

@@ -81,8 +81,6 @@ private:
     ThemeModel* m_themeModel;
     Plasma::Theme *m_defaultTheme;
     QProcess *m_installProcess;
-
-    bool m_isNetbook;
 };
 
 #endif // KCMDESKTOPTHEME_H
