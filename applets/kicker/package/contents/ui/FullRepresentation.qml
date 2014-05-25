@@ -226,6 +226,10 @@ Item {
 
             KeyNavigation.up: searchField
             KeyNavigation.down: searchField
+
+            Component.onCompleted: {
+                rootList.exited.connect(root.reset);
+            }
         }
 
         Row {
@@ -244,6 +248,12 @@ Item {
 
                 delegate: RunnerResultsList {
                     id: runnerMatches
+
+                    onContainsMouseChanged: {
+                        if (containsMouse) {
+                            runnerMatches.focus = true;
+                        }
+                    }
 
                     onFocusChanged: {
                         if (focus) {

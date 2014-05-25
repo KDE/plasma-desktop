@@ -30,12 +30,14 @@ FocusScope {
     width: units.gridUnit * 14
     height: listView.contentHeight
 
+    signal exited
     signal appendSearchText(string text)
 
     property Item focusParent: null
     property QtObject dialog: null
     property QtObject childDialog: null
     property bool iconsEnabled: false
+    property bool resetOnExit: false
     property int itemHeight: (Math.max(theme.mSize(theme.defaultFont).height, units.iconSizes.small)
         + highlightItemSvg.margins.top + highlightItemSvg.margins.bottom)
 
@@ -43,6 +45,7 @@ FocusScope {
     property alias keyNavigationWraps: listView.keyNavigationWraps
     property alias model: listView.model
     property alias containsMouse: listener.containsMouse
+    property alias resetOnExitDelay: resetIndexTimer.interval
 
     onFocusParentChanged: {
         appendSearchText.connect(focusParent.appendSearchText);
@@ -77,11 +80,8 @@ FocusScope {
 
         onTriggered: {
             if (focus && (!childDialog || !childDialog.mainItem.containsMouse)) {
-                if (!dialog) {
-                    root.reset();
-                } else {
-                    currentIndex = -1;
-                }
+                currentIndex = -1;
+                itemList.exited();
             }
         }
     }

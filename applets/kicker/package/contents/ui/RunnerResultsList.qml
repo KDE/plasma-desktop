@@ -28,6 +28,7 @@ FocusScope {
     height: parent.height
 
     property alias currentIndex: runnerMatches.currentIndex
+    property alias containsMouse: runnerMatches.containsMouse
 
     PlasmaCore.SvgItem {
         id: vertLine
@@ -75,6 +76,8 @@ FocusScope {
 
         iconsEnabled: true
         keyNavigationWraps: (index != 0)
+
+        resetOnExitDelay: 0
 
         model: runnerModel.modelForRow(index)
 
