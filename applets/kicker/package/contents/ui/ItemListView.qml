@@ -37,7 +37,6 @@ FocusScope {
     property QtObject dialog: null
     property QtObject childDialog: null
     property bool iconsEnabled: false
-    property bool resetOnExit: false
     property int itemHeight: (Math.max(theme.mSize(theme.defaultFont).height, units.iconSizes.small)
         + highlightItemSvg.margins.top + highlightItemSvg.margins.bottom)
 
