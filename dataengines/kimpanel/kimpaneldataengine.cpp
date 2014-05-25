@@ -29,6 +29,7 @@
 KimpanelEngine::KimpanelEngine(QObject* parent, const QVariantList& args)
     : Plasma::DataEngine(parent, args), m_panelAgent(0)
 {
+    init();
 }
 
 void KimpanelEngine::init()
@@ -58,4 +59,6 @@ Plasma::Service* KimpanelEngine::serviceForSource(const QString& source)
     return Plasma::DataEngine::serviceForSource(source);
 }
 
-K_EXPORT_PLASMA_DATAENGINE(kimpanel, KimpanelEngine)
+K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(kimpanel, KimpanelEngine, "plasma-dataengine-kimpanel.json")
+
+#include "kimpaneldataengine.moc"

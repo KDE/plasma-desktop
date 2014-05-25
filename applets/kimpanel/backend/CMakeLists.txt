@@ -1,2 +1,2 @@
-macro_optional_add_subdirectory(scim)
-macro_optional_add_subdirectory(ibus)
+add_subdirectory(scim)
+add_subdirectory(ibus)

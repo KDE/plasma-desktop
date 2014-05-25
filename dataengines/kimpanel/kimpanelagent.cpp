@@ -28,7 +28,7 @@
 #include <QString>
 #include <QStringList>
 #include <QVariant>
-#include <QDBusServiceWatcher>
+#include <QtDBus/QDBusServiceWatcher>
 
 PanelAgent::PanelAgent(QObject *parent)
     : QObject(parent)
