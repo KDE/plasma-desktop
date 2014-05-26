@@ -17,29 +17,36 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#include "folderplugin.h"
-#include "directorypicker.h"
-#include "foldermodel.h"
-#include "itemviewadapter.h"
-#include "labelgenerator.h"
-#include "mimetypesmodel.h"
-#include "placesmodel.h"
-#include "previewpluginsmodel.h"
-#include "systemsettings.h"
+#ifndef DIRECTORYPICKER_H
+#define DIRECTORYPICKER_H
 
-#include <QtQml>
+#include <QUrl>
 
-void FolderPlugin::registerTypes(const char *uri)
+class QFileDialog;
+
+class DirectoryPicker : public QObject
 {
-    Q_ASSERT(uri == QLatin1String("org.kde.plasma.private.folder"));
-    qmlRegisterType<DirectoryPicker>(uri, 0, 1, "DirectoryPicker");
-    qmlRegisterType<FolderModel>(uri, 0, 1, "FolderModel");
-    qmlRegisterType<ItemViewAdapter>(uri, 0, 1, "ItemViewAdapter");
-    qmlRegisterType<LabelGenerator>(uri, 0, 1, "LabelGenerator");
-    qmlRegisterType<FilterableMimeTypesModel>(uri, 0, 1, "FilterableMimeTypesModel");
-    qmlRegisterType<PlacesModel>(uri, 0, 1, "PlacesModel");
-    qmlRegisterType<PreviewPluginsModel>(uri, 0, 1, "PreviewPluginsModel");
-    qmlRegisterType<SystemSettings>(uri, 0, 1, "SystemSettings");
-}
+    Q_OBJECT
 
-#include "folderplugin.moc"
+    Q_PROPERTY(QUrl url READ url NOTIFY urlChanged)
+
+    public:
+        DirectoryPicker(QObject *parent = 0);
+        ~DirectoryPicker();
+
+        QUrl url() const;
+
+        Q_INVOKABLE void open();
+
+    Q_SIGNALS:
+        void urlChanged() const;
+
+    private Q_SLOTS:
+        void dialogAccepted();
+
+    private:
+        QFileDialog *m_dialog;
+        QUrl m_url;
+};
+
+#endif

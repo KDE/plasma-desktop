@@ -1,6 +1,7 @@
 plasma_install_package(package org.kde.plasma.folder)
 
 set(folderplugin_SRCS
+    plugin/directorypicker.cpp
     plugin/foldermodel.cpp
     plugin/folderplugin.cpp
     plugin/itemviewadapter.cpp
@@ -27,6 +28,7 @@ target_link_libraries(folderplugin
                       Qt5::Core
                       Qt5::Qml
                       Qt5::Quick
+                      Qt5::Widgets
                       KF5::KIOCore
                       KF5::KIOWidgets
                       KF5::KIOFileWidgets

@@ -17,29 +17,50 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#include "folderplugin.h"
 #include "directorypicker.h"
-#include "foldermodel.h"
-#include "itemviewadapter.h"
-#include "labelgenerator.h"
-#include "mimetypesmodel.h"
-#include "placesmodel.h"
-#include "previewpluginsmodel.h"
-#include "systemsettings.h"
 
-#include <QtQml>
+#include <QFileDialog>
+#include <QStandardPaths>
 
-void FolderPlugin::registerTypes(const char *uri)
+#include <KLocalizedString>
+
+DirectoryPicker::DirectoryPicker(QObject *parent) : QObject(parent),
+    m_dialog(0)
 {
-    Q_ASSERT(uri == QLatin1String("org.kde.plasma.private.folder"));
-    qmlRegisterType<DirectoryPicker>(uri, 0, 1, "DirectoryPicker");
-    qmlRegisterType<FolderModel>(uri, 0, 1, "FolderModel");
-    qmlRegisterType<ItemViewAdapter>(uri, 0, 1, "ItemViewAdapter");
-    qmlRegisterType<LabelGenerator>(uri, 0, 1, "LabelGenerator");
-    qmlRegisterType<FilterableMimeTypesModel>(uri, 0, 1, "FilterableMimeTypesModel");
-    qmlRegisterType<PlacesModel>(uri, 0, 1, "PlacesModel");
-    qmlRegisterType<PreviewPluginsModel>(uri, 0, 1, "PreviewPluginsModel");
-    qmlRegisterType<SystemSettings>(uri, 0, 1, "SystemSettings");
 }
 
-#include "folderplugin.moc"
+DirectoryPicker::~DirectoryPicker()
+{
+    delete m_dialog;
+}
+
+QUrl DirectoryPicker::url() const
+{
+    return m_url;
+}
+
+void DirectoryPicker::open()
+{
+    if (!m_dialog) {
+        m_dialog = new QFileDialog(0, i18n("Select Folder"),
+            QStandardPaths::standardLocations(QStandardPaths::HomeLocation).at(0));
+        m_dialog->setFileMode(QFileDialog::Directory);
+        m_dialog->setOption(QFileDialog::ShowDirsOnly, true);
+        connect(m_dialog, &QDialog::accepted, this, &DirectoryPicker::dialogAccepted);
+    }
+
+    m_dialog->show();
+    m_dialog->raise();
+    m_dialog->activateWindow();
+}
+
+void DirectoryPicker::dialogAccepted()
+{
+    const QList<QUrl> &urls = m_dialog->selectedUrls();
+
+    if (!urls.isEmpty()) {
+        m_url = urls.at(0);
+
+        emit urlChanged();
+    }
+}

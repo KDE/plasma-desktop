@@ -183,6 +183,24 @@ GroupBox {
                             }
                         }
                     }
+
+                    Button {
+                        iconName: "document-open"
+
+                        enabled: locationCustom.checked
+
+                        onClicked: {
+                            directoryPicker.open();
+                        }
+                    }
+
+                    Folder.DirectoryPicker {
+                        id: directoryPicker
+
+                        onUrlChanged: {
+                            locationCustomValue.text = url;
+                        }
+                    }
                 }
             }
         }
