@@ -250,7 +250,7 @@ MouseArea {
                 bottom: (plasmoid.formFactor !== PlasmaCore.Types.Vertical) ? parent.bottom : undefined
                 right: (plasmoid.formFactor !== PlasmaCore.Types.Vertical) ? undefined : parent.right
             }
-            visible: currentApplet.applet.pluginName == "org.kde.plasma.panelspacer"
+            visible: currentApplet && currentApplet.applet.pluginName == "org.kde.plasma.panelspacer"
             width: units.largeSpacing
             height: units.largeSpacing
             color: theme.textColor
@@ -262,7 +262,7 @@ MouseArea {
                 bottom: parent.bottom
                 left: (plasmoid.formFactor !== PlasmaCore.Types.Vertical) ? undefined : parent.left
             }
-            visible: currentApplet.applet.pluginName == "org.kde.plasma.panelspacer"
+            visible: currentApplet && currentApplet.applet.pluginName == "org.kde.plasma.panelspacer"
             width: units.largeSpacing
             height: units.largeSpacing
             color: theme.textColor
