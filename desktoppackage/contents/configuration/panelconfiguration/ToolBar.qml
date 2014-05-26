@@ -48,6 +48,15 @@ Item {
         text: i18n("Add Widgets...") + i18n("Add Spacer") + i18n("More Settings...")
     }
 
+    Connections {
+        target: configDialog
+        onVisibleChanged: {
+            if (!configDialog.visible) {
+                contextMenu.visible = false;
+            }
+        }
+    }
+
     GridLayout {
         id: buttonsLayout
         rows: 1
