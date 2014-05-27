@@ -71,6 +71,7 @@
 #include <QList>
 #include <QDir>
 #include <QTimer>
+#include <QStandardPaths>
 
 #include <assert.h>
 #include <unistd.h>
@@ -156,10 +157,10 @@ KonqOperations *KonqOperations::doPasteV2(QWidget *parent, const KUrl &destUrl, 
         if (copyJob) {
             op->setOperation(job, move ? MOVE : COPY, copyJob->destUrl());
             KIO::FileUndoManager::self()->recordJob(move ? KIO::FileUndoManager::Move : KIO::FileUndoManager::Copy, KUrl::List(), destUrl, job);
-            connect(copyJob, SIGNAL(copyingDone(KIO::Job*,KUrl,KUrl,time_t,bool,bool)),
-                    op, SLOT(slotCopyingDone(KIO::Job*,KUrl,KUrl)));
-            connect(copyJob, SIGNAL(copyingLinkDone(KIO::Job*,KUrl,QString,KUrl)),
-                    op, SLOT(slotCopyingLinkDone(KIO::Job*,KUrl,QString,KUrl)));
+            connect(copyJob, &KIO::CopyJob::copyingDone,
+                    op, &KonqOperations::slotCopyingDone);
+            connect(copyJob, &KIO::CopyJob::copyingLinkDone,
+                    op, &KonqOperations::slotCopyingLinkDone);
         } else if (KIO::SimpleJob *simpleJob = qobject_cast<KIO::SimpleJob*>(job)) {
             op->setOperation(job, PUT, simpleJob->url());
             KIO::FileUndoManager::self()->recordJob(KIO::FileUndoManager::Put, KUrl::List(), simpleJob->url(), job);
@@ -193,10 +194,10 @@ void KonqOperations::copy( QWidget * parent, Operation method, const KUrl::List 
     else
         job = KIO::copy( selectedUrls, destUrl );
 
-    connect(job, SIGNAL(copyingDone(KIO::Job*,KUrl,KUrl,time_t,bool,bool)),
-            op, SLOT(slotCopyingDone(KIO::Job*,KUrl,KUrl)));
-    connect(job, SIGNAL(copyingLinkDone(KIO::Job*,KUrl,QString,KUrl)),
-            op, SLOT(slotCopyingLinkDone(KIO::Job*,KUrl,QString,KUrl)));
+    connect(job, &KIO::CopyJob::copyingDone,
+            op, &KonqOperations::slotCopyingDone);
+    connect(job, &KIO::CopyJob::copyingLinkDone,
+            op, &KonqOperations::slotCopyingLinkDone);
 
     op->setOperation( job, method, destUrl );
 
@@ -246,8 +247,8 @@ void KonqOperations::_del( Operation method, const KUrl::List & _selectedUrls, C
             return;
         }
         KJobWidgets::setWindow(job, parentWidget());
-        connect( job, SIGNAL(result(KJob*)),
-                 SLOT(slotResult(KJob*)) );
+        connect( job, &KIO::Job::result,
+                 this, &KonqOperations::slotResult );
     } else {
         delete this; // this one is ok, _del is always called directly
     }
@@ -259,8 +260,8 @@ void KonqOperations::_restoreTrashedItems( const KUrl::List& urls )
     KonqMultiRestoreJob* job = new KonqMultiRestoreJob( urls );
     KJobWidgets::setWindow(job, parentWidget());
     KIO::getJobTracker()->registerJob(job);
-    connect( job, SIGNAL(result(KJob*)),
-             SLOT(slotResult(KJob*)) );
+    connect( job, &KonqMultiRestoreJob::result,
+             this, &KonqOperations::slotResult );
 }
 
 bool KonqOperations::askDeleteConfirmation( const KUrl::List & selectedUrls, int method, ConfirmationType confirmation, QWidget* widget )
@@ -419,7 +420,7 @@ void KonqOperations::asyncDrop( const KFileItem & destItem )
                     const bool ro = desktopGroup.readEntry( "ReadOnly", false );
                     const QByteArray fstype = desktopGroup.readEntry( "FSType" ).toLatin1();
                     KAutoMount* am = new KAutoMount( ro, fstype, dev, point, m_destUrl.path(), false );
-                    connect( am, SIGNAL(finished()), this, SLOT(doDropFileCopy()) );
+                    connect( am, &KAutoMount::finished, this, &KonqOperations::doDropFileCopy );
                 }
 #endif
                 return;
@@ -559,7 +560,7 @@ void KonqOperations::doDropFileCopy()
         // https://www.intevation.de/roundup/kolab/issue2026
         //
         // Similarly, linking to a temp file is pointless.
-        if (url.isLocalFile() && url.toLocalFile().startsWith(KStandardDirs::locateLocal("tmp", QString()))) {
+        if (url.isLocalFile() && url.toLocalFile().startsWith(QStandardPaths::standardLocations(QStandardPaths::TempLocation).at(0))) {
             sMoving = false;
             sDeleting = false;
             enableLinking = false;
@@ -674,10 +675,10 @@ void KonqOperations::doDropFileCopy()
     default : kError(1203) << "Unknown action " << (int)action << endl;
     }
     if (job) {
-        connect(job, SIGNAL(copyingDone(KIO::Job*,KUrl,KUrl,time_t,bool,bool)),
-                this, SLOT(slotCopyingDone(KIO::Job*,KUrl,KUrl)));
-        connect(job, SIGNAL(copyingLinkDone(KIO::Job*,KUrl,QString,KUrl)),
-                this, SLOT(slotCopyingLinkDone(KIO::Job*,KUrl,QString,KUrl)));
+        connect(job, &KIO::CopyJob::copyingDone,
+                this, &KonqOperations::slotCopyingDone);
+        connect(job, &KIO::CopyJob::copyingLinkDone,
+                this, &KonqOperations::slotCopyingLinkDone);
         return; // we still have stuff to do -> don't delete ourselves
     }
     deleteLater();
@@ -792,8 +793,8 @@ void KonqOperations::setOperation( KIO::Job * job, Operation method, const KUrl 
     if ( job )
     {
         KJobWidgets::setWindow(job, parentWidget());
-        connect( job, SIGNAL(result(KJob*)),
-                 SLOT(slotResult(KJob*)) );
+        connect( job, &KIO::Job::result,
+                 this, &KonqOperations::slotResult );
 #if 0
         KIO::CopyJob *copyJob = dynamic_cast<KIO::CopyJob*>(job);
         KonqIconViewWidget *iconView = dynamic_cast<KonqIconViewWidget*>(parent());
@@ -828,8 +829,8 @@ void KonqOperations::_statUrl( const KUrl & url, const QObject *receiver, const 
     connect( this, SIGNAL(statFinished(KFileItem)), receiver, member );
     KIO::StatJob * job = KIO::stat( url /*, KIO::HideProgressInfo?*/ );
     KJobWidgets::setWindow(job, parentWidget());
-    connect( job, SIGNAL(result(KJob*)),
-             SLOT(slotStatResult(KJob*)) );
+    connect( job, &KIO::StatJob::result,
+             this, &KonqOperations::slotStatResult );
 }
 
 void KonqOperations::slotStatResult( KJob * job )

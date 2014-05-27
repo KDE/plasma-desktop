@@ -71,8 +71,8 @@ KonqStatusBarMessageLabel::KonqStatusBarMessageLabel(QWidget* parent) :
     setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Maximum /*the sizeHint is the max*/);
 
     d->m_timer = new QTimer(this);
-    connect(d->m_timer, SIGNAL(timeout()),
-            this, SLOT(timerDone()));
+    connect(d->m_timer, &QTimer::timeout,
+            this, &KonqStatusBarMessageLabel::timerDone);
 
     d->m_closeButton = new QToolButton(this);
     d->m_closeButton->setAutoRaise(true);
@@ -80,8 +80,8 @@ KonqStatusBarMessageLabel::KonqStatusBarMessageLabel(QWidget* parent) :
     d->m_closeButton->setToolTip(i18nc("@info", "Close"));
     d->m_closeButton->setAccessibleName(i18n("Close"));
     d->m_closeButton->hide();
-    connect(d->m_closeButton, SIGNAL(clicked()),
-            this, SLOT(closeErrorMessage()));
+    connect(d->m_closeButton, &QToolButton::clicked,
+            this, &KonqStatusBarMessageLabel::closeErrorMessage);
 }
 
 KonqStatusBarMessageLabel::~KonqStatusBarMessageLabel()

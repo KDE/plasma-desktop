@@ -101,8 +101,8 @@ KonqCopyToMainMenu::KonqCopyToMainMenu(QMenu* parent, KonqCopyToMenuPrivate* _d,
       d(_d),
       m_recentDirsGroup(KGlobal::config(), m_menuType == Copy ? "kuick-copy" : "kuick-move")
 {
-    connect(this, SIGNAL(aboutToShow()), SLOT(slotAboutToShow()));
-    connect(&m_actionGroup, SIGNAL(triggered(QAction*)), SLOT(slotTriggered(QAction*)));
+    connect(this, &KonqCopyToMainMenu::aboutToShow, this, &KonqCopyToMainMenu::slotAboutToShow);
+    connect(&m_actionGroup, &QActionGroup::triggered, this, &KonqCopyToMainMenu::slotTriggered);
 }
 
 void KonqCopyToMainMenu::slotAboutToShow()
@@ -155,7 +155,7 @@ void KonqCopyToMainMenu::slotAboutToShow()
 
     // Browse... action, shows a KFileDialog
     KAction* browseAction = new KAction(i18nc("@title:menu in Copy To or Move To submenu", "Browse..."), this);
-    connect(browseAction, SIGNAL(triggered()), this, SLOT(slotBrowse()));
+    connect(browseAction, &KAction::triggered, this, &KonqCopyToMainMenu::slotBrowse);
     addAction(browseAction);
 
     addSeparator(); // looks like Qt4 handles removing it automatically if it's last in the menu, nice.
@@ -218,7 +218,7 @@ void KonqCopyToMainMenu::copyOrMoveTo(const KUrl& dest)
 KonqCopyToDirectoryMenu::KonqCopyToDirectoryMenu(QMenu* parent, KonqCopyToMainMenu* mainMenu, const QString& path)
     : KMenu(parent), m_mainMenu(mainMenu), m_path(path)
 {
-    connect(this, SIGNAL(aboutToShow()), SLOT(slotAboutToShow()));
+    connect(this, &KonqCopyToDirectoryMenu::aboutToShow, this, &KonqCopyToDirectoryMenu::slotAboutToShow);
 }
 
 void KonqCopyToDirectoryMenu::slotAboutToShow()
