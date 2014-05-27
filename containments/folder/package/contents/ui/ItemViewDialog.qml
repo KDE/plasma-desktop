@@ -70,19 +70,23 @@ Folder.SubDialog {
 
             onTriggered: {
                 if (childDialog != null) {
-                    childDialog.destroy();
+                    childDialog.closeTimer.stop();
+                    childDialog.visible = false;
                 }
 
-                dialog.destroy();
+                dialog.visible = false;
+                delayedDestroy();
             }
         }
     ]
 
+    function delayedDestroy() {
+        var timer = Qt.createQmlObject('import QtQuick 2.0; Timer { onTriggered: itemDialog.destroy() }', itemDialog);
+        timer.interval = 0;
+        timer.start();
+    }
+
     Component.onDestruction: {
         closeTimer.stop();
-
-        if (childDialog != null) {
-            childDialog.destroy();
-        }
     }
 }
