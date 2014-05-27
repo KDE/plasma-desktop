@@ -1,4 +1,5 @@
 /***************************************************************************
+ *   Copyright (C) 2014 by David Edmundson <kde@davidedmundson.co.uk>      *
  *   Copyright (C) 2014 by Eike Hein <hein@kde.org>                        *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -17,31 +18,54 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#include "folderplugin.h"
-#include "directorypicker.h"
-#include "foldermodel.h"
-#include "itemviewadapter.h"
-#include "labelgenerator.h"
-#include "mimetypesmodel.h"
-#include "placesmodel.h"
-#include "previewpluginsmodel.h"
 #include "subdialog.h"
-#include "systemsettings.h"
 
-#include <QtQml>
+#include <QScreen>
 
-void FolderPlugin::registerTypes(const char *uri)
+SubDialog::SubDialog(QQuickItem *parent) : PlasmaQuick::Dialog(parent)
 {
-    Q_ASSERT(uri == QLatin1String("org.kde.plasma.private.folder"));
-    qmlRegisterType<DirectoryPicker>(uri, 0, 1, "DirectoryPicker");
-    qmlRegisterType<FolderModel>(uri, 0, 1, "FolderModel");
-    qmlRegisterType<ItemViewAdapter>(uri, 0, 1, "ItemViewAdapter");
-    qmlRegisterType<LabelGenerator>(uri, 0, 1, "LabelGenerator");
-    qmlRegisterType<FilterableMimeTypesModel>(uri, 0, 1, "FilterableMimeTypesModel");
-    qmlRegisterType<PlacesModel>(uri, 0, 1, "PlacesModel");
-    qmlRegisterType<PreviewPluginsModel>(uri, 0, 1, "PreviewPluginsModel");
-    qmlRegisterType<SubDialog>(uri, 0, 1, "SubDialog");
-    qmlRegisterType<SystemSettings>(uri, 0, 1, "SystemSettings");
 }
 
-#include "folderplugin.moc"
+SubDialog::~SubDialog()
+{
+}
+
+QPoint SubDialog::popupPosition(QQuickItem* item, const QSize& size)
+{
+    if (!item || !item->window()) {
+        return QPoint(0, 0);
+    }
+
+    QPointF pos = item->mapToScene(QPointF(0, 0));
+    pos = item->window()->mapToGlobal(pos.toPoint());
+
+    pos.setX(pos.x() + item->width() / 2);
+    pos.setY(pos.y() + item->height() / 2);
+
+    QRect avail = availableScreenRectForItem(item);
+
+    if (pos.x() + size.width() > avail.right()) {
+        pos.setX(pos.x() - size.width());
+    }
+
+    if (pos.y() + size.height() > avail.bottom()) {
+        pos.setY(pos.y() - size.height());
+    }
+
+    return pos.toPoint();
+}
+
+QRect SubDialog::availableScreenRectForItem(QQuickItem *item) const
+{
+    QScreen *screen = QGuiApplication::primaryScreen();
+
+    const QPoint globalPosition = item->window()->mapToGlobal(item->position().toPoint());
+
+    foreach(QScreen *s, QGuiApplication::screens()) {
+        if (s->geometry().contains(globalPosition)) {
+            screen = s;
+        }
+    }
+
+    return screen->availableGeometry();
+}

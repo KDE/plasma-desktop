@@ -1,4 +1,5 @@
 /***************************************************************************
+ *   Copyright (C) 2014 by David Edmundson <kde@davidedmundson.co.uk>      *
  *   Copyright (C) 2014 by Eike Hein <hein@kde.org>                        *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -17,31 +18,24 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#include "folderplugin.h"
-#include "directorypicker.h"
-#include "foldermodel.h"
-#include "itemviewadapter.h"
-#include "labelgenerator.h"
-#include "mimetypesmodel.h"
-#include "placesmodel.h"
-#include "previewpluginsmodel.h"
-#include "subdialog.h"
-#include "systemsettings.h"
+#ifndef SUBDIALOG_H
+#define SUBDIALOG_H
 
-#include <QtQml>
+#include <dialog.h>
 
-void FolderPlugin::registerTypes(const char *uri)
+class QScreen;
+
+class SubDialog : public PlasmaQuick::Dialog
 {
-    Q_ASSERT(uri == QLatin1String("org.kde.plasma.private.folder"));
-    qmlRegisterType<DirectoryPicker>(uri, 0, 1, "DirectoryPicker");
-    qmlRegisterType<FolderModel>(uri, 0, 1, "FolderModel");
-    qmlRegisterType<ItemViewAdapter>(uri, 0, 1, "ItemViewAdapter");
-    qmlRegisterType<LabelGenerator>(uri, 0, 1, "LabelGenerator");
-    qmlRegisterType<FilterableMimeTypesModel>(uri, 0, 1, "FilterableMimeTypesModel");
-    qmlRegisterType<PlacesModel>(uri, 0, 1, "PlacesModel");
-    qmlRegisterType<PreviewPluginsModel>(uri, 0, 1, "PreviewPluginsModel");
-    qmlRegisterType<SubDialog>(uri, 0, 1, "SubDialog");
-    qmlRegisterType<SystemSettings>(uri, 0, 1, "SystemSettings");
-}
+    Q_OBJECT
 
-#include "folderplugin.moc"
+    public:
+        SubDialog(QQuickItem *parent = 0);
+        ~SubDialog();
+
+        Q_INVOKABLE QRect availableScreenRectForItem(QQuickItem *item) const;
+
+        QPoint popupPosition(QQuickItem *item, const QSize &size);
+};
+
+#endif

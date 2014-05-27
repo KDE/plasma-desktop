@@ -22,12 +22,15 @@ import org.kde.plasma.plasmoid 2.0
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 
-PlasmaCore.Dialog {
+import org.kde.plasma.private.folder 0.1 as Folder
+
+Folder.SubDialog {
     id: dialog
 
     visible: false
 
     property Item parentDelegate: null
+    property Item closeTimer: closeTimer
     property QtObject childDialog: (itemView.hoveredItem != null) ? itemView.hoveredItem.popupDialog : null
     property bool containsMouse: itemView.containsMouse || (childDialog != null && childDialog.containsMouse)
 

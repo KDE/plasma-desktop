@@ -1,5 +1,7 @@
 plasma_install_package(package org.kde.plasma.folder)
 
+include_directories(plugin/plasmaquick)
+
 set(folderplugin_SRCS
     plugin/directorypicker.cpp
     plugin/foldermodel.cpp
@@ -9,6 +11,7 @@ set(folderplugin_SRCS
     plugin/mimetypesmodel.cpp
     plugin/placesmodel.cpp
     plugin/previewpluginsmodel.cpp
+    plugin/subdialog.cpp
     plugin/systemsettings.cpp
     plugin/internallibkonq/konq_copytomenu.cpp
     plugin/internallibkonq/konq_dndpopupmenuplugin.cpp
@@ -32,6 +35,7 @@ target_link_libraries(folderplugin
                       KF5::KIOCore
                       KF5::KIOWidgets
                       KF5::KIOFileWidgets
-                      KF5::KDELibs4Support)
+                      KF5::KDELibs4Support
+                      KF5::PlasmaQuick)
 
 install(TARGETS folderplugin DESTINATION ${QML_INSTALL_DIR}/org/kde/plasma/private/folder)
