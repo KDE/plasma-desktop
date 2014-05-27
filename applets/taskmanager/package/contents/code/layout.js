@@ -154,6 +154,9 @@ function layout(container) {
 
     for (var i = 0; i < container.count; ++i) {
         item = container.itemAt(i);
+        if (!item) {
+            continue;
+        }
         item.visible = true;
 
         adjustedWidth = width;
