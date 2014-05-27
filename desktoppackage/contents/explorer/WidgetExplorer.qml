@@ -203,6 +203,12 @@ Item {
         }
     }
 
+    PlasmaCore.FrameSvgItem {
+        id: backgroundHint
+        imagePath: "widgets/viewitem"
+        prefix: "normal"
+        visible: false
+    }
     PlasmaExtras.ScrollArea {
         anchors {
             top: topBar.bottom
@@ -217,7 +223,7 @@ Item {
             id: list
 
             property int delegateWidth: list.width
-            property int delegateHeight: theme.defaultFont.pixelSize * 7 - 4
+            property int delegateHeight: units.iconSizes.huge + backgroundHint.margins.top + backgroundHint.margins.bottom
 
             snapMode: ListView.SnapToItem
             model: widgetExplorer.widgetsModel
