@@ -264,7 +264,7 @@ MouseEventListener {
     Folder.FolderModel {
         id: dir
 
-        usedByContainment: folder.isContainment
+        usedByContainment: root.isContainment
         sortMode: plasmoid.configuration.sortMode
         sortDesc: plasmoid.configuration.sortDesc
         sortDirsFirst: plasmoid.configuration.sortDirsFirst

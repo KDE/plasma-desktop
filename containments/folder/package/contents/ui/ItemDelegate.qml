@@ -47,8 +47,8 @@ Item {
     }
 
     function openPopup() {
-        if (folder.itemViewDialogComponent.status == Component.Ready) {
-            main.popupDialog = folder.itemViewDialogComponent.createObject(main);
+        if (root.itemViewDialogComponent.status == Component.Ready) {
+            main.popupDialog = root.itemViewDialogComponent.createObject(main);
             main.popupDialog.parentDelegate = main;
             main.popupDialog.visualParent = icon;
             main.popupDialog.url = model.url;
@@ -132,7 +132,7 @@ Item {
 
                 horizontalAlignment: Text.AlignHCenter
 
-                color: (folder.isContainment && main.GridView.view.isRootView) ? "white" : theme.textColor // TODO: Make configurable once we have color buttons.
+                color: (root.isContainment && main.GridView.view.isRootView) ? "white" : theme.textColor // TODO: Make configurable once we have color buttons.
 
                 text: model.display
             }

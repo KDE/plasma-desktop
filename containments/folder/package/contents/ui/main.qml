@@ -30,7 +30,7 @@ import org.kde.plasma.private.folder 0.1 as Folder
 import "plasmapackage:/code/LayoutManager.js" as LayoutManager
 
 DragDrop.DropArea {
-    id: folder
+    id: root
 
     property bool isContainment: ("containmentType" in plasmoid)
     property Item label: null
@@ -61,8 +61,8 @@ DragDrop.DropArea {
     function updateGridSize()
     {
         print("Updategridsize");
-        LayoutManager.cellSize.width = folder.iconWidth + toolBoxSvg.elementSize("left").width + toolBoxSvg.elementSize("right").width
-        LayoutManager.cellSize.height = folder.iconHeight + toolBoxSvg.elementSize("top").height + toolBoxSvg.elementSize("bottom").height;
+        LayoutManager.cellSize.width = root.iconWidth + toolBoxSvg.elementSize("left").width + toolBoxSvg.elementSize("right").width
+        LayoutManager.cellSize.height = root.iconHeight + toolBoxSvg.elementSize("top").height + toolBoxSvg.elementSize("bottom").height;
         LayoutManager.defaultAppletSize.width = LayoutManager.cellSize.width * 6;
         LayoutManager.defaultAppletSize.height = LayoutManager.cellSize.height * 6;
         layoutTimer.restart()
@@ -129,7 +129,7 @@ DragDrop.DropArea {
         placeHolder.y = event.y - placeHolder.width / 2;
         LayoutManager.positionItem(placeHolder);
         LayoutManager.setSpaceAvailable(placeHolder.x, placeHolder.y, placeHolder.width, placeHolder.height, true);
-        placeHolderPaint.opacity = folder.haloOpacity;
+        placeHolderPaint.opacity = root.haloOpacity;
     }
 
     onDragMove: {
@@ -139,7 +139,7 @@ DragDrop.DropArea {
         placeHolder.y = event.y - placeHolder.width / 2;
         LayoutManager.positionItem(placeHolder);
         LayoutManager.setSpaceAvailable(placeHolder.x, placeHolder.y, placeHolder.width, placeHolder.height, true);
-        placeHolderPaint.opacity = folder.haloOpacity;
+        placeHolderPaint.opacity = root.haloOpacity;
     }
 
     onDragLeave: {
@@ -214,7 +214,7 @@ DragDrop.DropArea {
 
         anchors.left: parent.left
         anchors.top: parent.top
-        anchors.topMargin: folder.label != null ? folder.label.height : 0
+        anchors.topMargin: root.label != null ? root.label.height : 0
         anchors.right: parent.right
         anchors.bottom: parent.bottom
 
@@ -329,10 +329,10 @@ DragDrop.DropArea {
         PlasmaComponents.Highlight {
             id: placeHolderPaint
 
-            x: placeHolder.x + (folder.iconSize/2)
-            y: placeHolder.y + (folder.iconSize/2)
-            width: placeHolder.width + (folder.iconSize/2)
-            height: placeHolder.height - folder.iconSize
+            x: placeHolder.x + (root.iconSize/2)
+            y: placeHolder.y + (root.iconSize/2)
+            width: placeHolder.width + (root.iconSize/2)
+            height: placeHolder.height - root.iconSize
             z: 0
             visible: false
 
@@ -413,6 +413,6 @@ DragDrop.DropArea {
         //clean any eventual invalid chunks in the config
         LayoutManager.save();
 
-        folder.label = labelComponent.createObject(folder);
+        root.label = labelComponent.createObject(folder);
     }
 }
