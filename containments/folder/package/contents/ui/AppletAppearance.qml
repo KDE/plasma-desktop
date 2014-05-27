@@ -33,7 +33,7 @@ Item {
     anchors.rightMargin: -handleWidth*controlsOpacity
 
     property int handleWidth: iconSize
-    property int minimumHandleHeight: 6 * (folder.iconSize + 6) + margins.top + margins.bottom
+    property int minimumHandleHeight: 6 * (root.iconSize + 6) + margins.top + margins.bottom
     property int handleHeight: (height < minimumHandleHeight) ? minimumHandleHeight : height
     property string category
 
@@ -107,7 +107,7 @@ Item {
         hoverEnabled: true
 
         onPressAndHold: {
-            if (folder.pressAndHoldHandle && !plasmoid.immutable) {
+            if (root.pressAndHoldHandle && !plasmoid.immutable) {
                 //hoverTracker.interval = 400;
                 hoverTracker.restart();
             }
@@ -118,8 +118,8 @@ Item {
             animationsEnabled = true;
             //print("Mouse is " + containsMouse);
             if (!plasmoid.immutable) {
-                if (!folder.pressAndHoldHandle) {
-                    hoverTracker.interval = folder.handleDelay;
+                if (!root.pressAndHoldHandle) {
+                    hoverTracker.interval = root.handleDelay;
                     hoverTracker.restart();
                 }
             }
@@ -138,7 +138,7 @@ Item {
             }
         }
         Rectangle { color: Qt.rgba(0,0,0,0); border.width: 3; border.color: "red"; opacity: 0.5; visible: debug; anchors.fill: parent; }
-
+    
 
 
         Item {
@@ -167,14 +167,14 @@ Item {
             Connections {
                 target: plasmoid
                 onImmutableChanged: {
-                    print(" TB dragMouseArea.visible: " + plasmoid.immutable)
+//                     print(" TB dragMouseArea.visible: " + plasmoid.immutable)
                     dragMouseArea.visible = !plasmoid.immutable;
                     showAppletHandle = false;
                 }
                 onAppletRemoved: {
-                    print("Applet removed Applet-" + applet.id)
+//                     print("Applet removed Applet-" + applet.id)
                     if (applet.id == appletItem.applet.id) {
-                        print("Destroying Applet-" + applet.id)
+//                         print("Destroying Applet-" + applet.id)
                         LayoutManager.setSpaceAvailable(appletItem.x, appletItem.y, appletItem.width, appletItem.height, true)
                         //applet.action("remove").trigger();
                         //appletItem.destroy()
@@ -192,7 +192,7 @@ Item {
                     }
                 }
                 onBackgroundHintsChanged: {
-                    print("plasmoid.backgroundHintsChanged");
+//                     print("plasmoid.backgroundHintsChanged");
                     updateBackgroundHints();
                 }
             }
@@ -202,6 +202,7 @@ Item {
 
                 anchors.fill: parent
                 z: appletContainer.z - 2
+                visible: !plasmoid.immutable
 
                 property int zoffset: 1000
                 drag.target: appletItem
@@ -215,7 +216,7 @@ Item {
                     LayoutManager.setSpaceAvailable(x, y, appletItem.width, appletItem.height, true)
 
                     placeHolder.syncWithItem(appletItem)
-                    placeHolderPaint.opacity = folder.haloOpacity;
+                    placeHolderPaint.opacity = root.haloOpacity;
                 }
                 onPositionChanged: {
                     var pos = mapToItem(root, mouse.x, mouse.y);
@@ -256,7 +257,7 @@ Item {
                 property int minimumHeight: applet && applet.Layout ? applet.Layout.minimumHeight : 0
 
                 function appletDestroyed() {
-                    print("Applet DESTROYED.");
+//                     print("Applet DESTROYED.");
                     LayoutManager.setSpaceAvailable(appletItem.x, appletItem.y, appletItem.width, appletItem.height, true)
                     applet.action("remove").trigger();
                     appletItem.destroy()
@@ -293,7 +294,7 @@ Item {
                     anchors.centerIn: parent
                     z: appletContainer.z + 1
                 }
-                Rectangle { color: "green"; opacity: 0.3; visible: debug; anchors.fill: parent; }
+//                 Rectangle { color: "green"; opacity: 0.3; visible: debug; anchors.fill: parent; }
                 Component.onCompleted: PlasmaExtras.AppearAnimation {
                     targetItem: appletItem
                 }
@@ -319,7 +320,7 @@ Item {
 
             }
 
-            Rectangle { color: "orange"; opacity: 0.1; visible: debug; anchors.fill: parent; }
+//             Rectangle { color: "orange"; opacity: 0.1; visible: debug; anchors.fill: parent; }
         }
     }
 

@@ -47,7 +47,7 @@ KQuickControlsAddons.MouseEventListener {
     //z: dragMouseArea.z + 1
 
     property int buttonMargin: 6
-    property int minimumHeight:  6 * (folder.iconSize + buttonMargin)
+    property int minimumHeight:  6 * (root.iconSize + buttonMargin)
 
     signal removeApplet
 
@@ -65,7 +65,7 @@ KQuickControlsAddons.MouseEventListener {
             bottom: parent.bottom
             left: parent.left
             right: parent.right
-            verticalCenter: parent.verticalCenter
+//             verticalCenter: parent.verticalCenter
 
             leftMargin: -margins.left
             topMargin: -margins.top
@@ -90,7 +90,7 @@ KQuickControlsAddons.MouseEventListener {
         ActionButton {
             svg: configIconsSvg
             elementId: "size-diagonal-tr2bl"
-            iconSize: folder.iconSize
+            iconSize: root.iconSize
             visible: (action && typeof(action) != "undefined") ? action.enabled : false
             action: (applet) ? applet.action("configure") : null
             Component.onCompleted: {
@@ -129,14 +129,14 @@ KQuickControlsAddons.MouseEventListener {
                     LayoutManager.save()
                     LayoutManager.setSpaceAvailable(appletItem.x, appletItem.y, widthAnimation.to, heightAnimation.to, false)
                 }
-                Rectangle { color: "blue"; opacity: 0.4; visible: debug; anchors.fill: parent; }
+//                 Rectangle { color: "blue"; opacity: 0.4; visible: debug; anchors.fill: parent; }
             }
         }
         ActionButton {
             id: rotateButton
             svg: configIconsSvg
             elementId: "rotate"
-            iconSize: folder.iconSize
+            iconSize: root.iconSize
             action: (applet) ? applet.action("rotate") : null
             Component.onCompleted: {
                 if (action && typeof(action) != "undefined") {
@@ -185,10 +185,12 @@ KQuickControlsAddons.MouseEventListener {
 
                     var rot = startRotation%360;
                     var snap = 4;
-                    var newRotation = pointAngle(centerRelativePos(mouse.x, mouse.y)) - startCenterRelativeAngle + startRotation;
+                    var newRotation = Math.round(pointAngle(centerRelativePos(mouse.x, mouse.y)) - startCenterRelativeAngle + startRotation);
 
                     if (newRotation < 0) {
                         newRotation = newRotation + 360;
+                    } else if (newRotation >= 360) {
+                        newRotation = newRotation % 360;
                     }
 
                     snapIt(0);
@@ -201,7 +203,7 @@ KQuickControlsAddons.MouseEventListener {
                             newRotation = snapTo;
                         }
                     }
-                    print("Start: " + startRotation  + " new: " + newRotation);
+                    //print("Start: " + startRotation  + " new: " + newRotation);
                     appletItem.rotation = newRotation;
                 }
                 onReleased: {
@@ -209,13 +211,13 @@ KQuickControlsAddons.MouseEventListener {
 //                    print("saving...");
                     LayoutManager.saveItem(appletItem);
                 }
-                Rectangle { color: "red"; opacity: 0.6; visible: debug; anchors.fill: parent; }
+//                 Rectangle { color: "red"; opacity: 0.6; visible: debug; anchors.fill: parent; }
             }
         }
         ActionButton {
             svg: configIconsSvg
             elementId: "configure"
-            iconSize: folder.iconSize
+            iconSize: root.iconSize
             visible: (action && typeof(action) != "undefined") ? action.enabled : false
             action: (applet) ? applet.action("configure") : null
             Component.onCompleted: {
@@ -228,7 +230,7 @@ KQuickControlsAddons.MouseEventListener {
             svg: configIconsSvg
             elementId: "size-diagonal-tr2bl" // FIXME should be maximize
             //elementId: "maximize"
-            iconSize: folder.iconSize
+            iconSize: root.iconSize
             visible: (action && typeof(action) != "undefined") ? action.enabled : false
             action: (applet) ? applet.action("run associated application") : null
             Component.onCompleted: {
@@ -242,7 +244,7 @@ KQuickControlsAddons.MouseEventListener {
         MouseArea {
             id: dragMouseArea
 
-            implicitHeight: folder.iconSize * 2
+            implicitHeight: root.iconSize * 2
             Layout.fillWidth: true
             Layout.fillHeight: true
             property int zoffset: 1000
@@ -257,7 +259,7 @@ KQuickControlsAddons.MouseEventListener {
                 LayoutManager.setSpaceAvailable(x, y, appletItem.width, appletItem.height, true)
 
                 placeHolder.syncWithItem(appletItem)
-                placeHolderPaint.opacity = folder.haloOpacity;
+                placeHolderPaint.opacity = root.haloOpacity;
             }
             onPositionChanged: {
                 var pos = mapToItem(root, mouse.x, mouse.y);
@@ -265,6 +267,7 @@ KQuickControlsAddons.MouseEventListener {
 
                 if (newCont && newCont != plasmoid) {
                     var newPos = newCont.mapFromApplet(plasmoid, pos.x, pos.y);
+
                     newCont.addApplet(appletItem.applet, newPos.x, newPos.y);
                     placeHolderPaint.opacity = 0;
                 } else {
@@ -284,7 +287,7 @@ KQuickControlsAddons.MouseEventListener {
         ActionButton {
             svg: configIconsSvg
             elementId: "close"
-            iconSize: folder.iconSize
+            iconSize: root.iconSize
             visible: {
                 var a = applet.action("remove");
                 return (a && typeof(a) != "undefined") ? a.enabled : false;
