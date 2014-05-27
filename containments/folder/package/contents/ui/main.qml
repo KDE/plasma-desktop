@@ -60,7 +60,7 @@ DragDrop.DropArea {
 
     function updateGridSize()
     {
-        print("Updategridsize");
+//         print("Updategridsize");
         LayoutManager.cellSize.width = root.iconWidth + toolBoxSvg.elementSize("left").width + toolBoxSvg.elementSize("right").width
         LayoutManager.cellSize.height = root.iconHeight + toolBoxSvg.elementSize("top").height + toolBoxSvg.elementSize("bottom").height;
         LayoutManager.defaultAppletSize.width = LayoutManager.cellSize.width * 6;
@@ -95,6 +95,12 @@ DragDrop.DropArea {
         container.applet = applet;
         //coordinated passed by param?
         if ( x >= 0 && y >= 0) {
+            if (x + container.width > root.width) {
+                x = root.width - container.width - 10;
+            }
+            if (y + container.height > root.height) {
+                x = root.height - container.height;
+            }
             container.x = x;
             container.y = y;
         //coordinates stored?
@@ -111,7 +117,7 @@ DragDrop.DropArea {
         }
 
         LayoutManager.itemGroups[container.category] = container;
-        print("Applet " + container.category + applet.title + " added at" + container.x + " " + container.y);
+//         print("Applet " + container.category + applet.title + " added at" + container.x + " " + container.y);
 
         if (container.x >= 0 && container.y >= 0) {
             LayoutManager.positionItem(container);
@@ -162,7 +168,7 @@ DragDrop.DropArea {
 
         onAppletRemoved: {
             //clean any eventual invalid chunks in the config
-            console.log("Applet removed");
+//             console.log("Applet removed");
             LayoutManager.removeApplet(applet);
             LayoutManager.save();
         }
@@ -336,32 +342,9 @@ DragDrop.DropArea {
             z: 0
             visible: false
 
-            property int moveDuration: units.shortAnimtion * 1.5
-
             Behavior on opacity {
                 NumberAnimation {
                     duration: units.longDuration
-                    easing.type: Easing.InOutQuad
-                }
-            }
-            Behavior on x {
-                enabled: placeHolderPaint.opacity > 0
-                NumberAnimation {
-                    duration: placeHolderPaint.moveDuration
-                    easing.type: Easing.InOutQuad
-                }
-            }
-            Behavior on y {
-                enabled: placeHolderPaint.opacity > 0
-                NumberAnimation {
-                    duration: placeHolderPaint.moveDuration
-                    easing.type: Easing.InOutQuad
-                }
-            }
-            Behavior on width {
-                enabled: placeHolderPaint.opacity > 0
-                NumberAnimation {
-                    duration: placeHolderPaint.moveDuration
                     easing.type: Easing.InOutQuad
                 }
             }
@@ -398,7 +381,7 @@ DragDrop.DropArea {
 
         placeHolderPaint.opacity = 0;
         placeHolderPaint.visible = true;
-        print("Containment completed.");
+//         print("Containment completed.");
         LayoutManager.resultsFlow = resultsFlow
         LayoutManager.plasmoid = plasmoid
         updateGridSize()
