@@ -34,7 +34,7 @@ Rectangle {
     property Item containment
 
     function toggleWidgetExplorer(containment) {
-        console.log("Widget Explorer toggled");
+//         console.log("Widget Explorer toggled");
 
         if (sidePanelStack.state == "widgetExplorer") {
             sidePanelStack.state = "closed";
@@ -45,7 +45,7 @@ Rectangle {
     }
 
     function toggleActivityManager() {
-        console.log("Activity manger toggled");
+//         console.log("Activity manger toggled");
         if (sidePanelStack.state == "activityManager") {
             sidePanelStack.state = "closed";
         } else {

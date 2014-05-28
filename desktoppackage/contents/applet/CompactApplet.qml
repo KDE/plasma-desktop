@@ -37,9 +37,11 @@ PlasmaCore.ToolTipArea {
     property Item expandedFeedback: expandedItem
 
     onCompactRepresentationChanged: {
-        compactRepresentation.parent = root;
-        compactRepresentation.anchors.fill = root;
-        compactRepresentation.visible = true;
+        if (compactRepresentation) {
+            compactRepresentation.parent = root;
+            compactRepresentation.anchors.fill = root;
+            compactRepresentation.visible = true;
+        }
         root.visible = true;
     }
 

@@ -35,7 +35,7 @@ BaseView {
             id: clearRecentApplications
 
             text: i18n("Clear Recent Applications")
-            icon: QIcon("edit-clear-history")
+            icon: "edit-clear-history"
             onClicked: recentlyUsedModel.clearRecentApplications();
             visible: contextMenu.isApp
         }
@@ -43,7 +43,7 @@ BaseView {
             id: clearRecentDocuments
 
             text: i18n("Clear Recent Documents")
-            icon: QIcon("edit-clear-history")
+            icon: "edit-clear-history"
             onClicked: recentlyUsedModel.clearRecentDocuments();
             visible: !contextMenu.isApp
         }
