@@ -64,8 +64,6 @@ Pager::Pager(QObject *parent)
       m_columns(0),
       m_currentDesktop(0),
       m_orientation(Qt::Horizontal),
-      m_addDesktopAction(0),
-      m_removeDesktopAction(0),
       m_showWindowIcons(false),
       m_desktopDown(false),
       m_validSizes(false),
@@ -81,8 +79,6 @@ Pager::Pager(QObject *parent)
     m_desktopCount = qMax(1, KWindowSystem::numberOfDesktops());
     
     m_pagerModel = new PagerModel(this);
-
-    createMenu();
 
     m_timer = new QTimer(this);
     m_timer->setSingleShot(true);
@@ -210,29 +206,6 @@ void Pager::setDisplayedText(Pager::DisplayedText disp)
 
     m_displayedText = disp;
     emit displayedTextChanged();
-}
-
-void Pager::createMenu()
-{
-#if HAVE_X11
-    m_addDesktopAction = new QAction(SmallIcon("list-add"),i18n("&Add Virtual Desktop"), this);
-    m_actions.append(m_addDesktopAction);
-    connect(m_addDesktopAction, SIGNAL(triggered(bool)), this , SLOT(slotAddDesktop()));
-    m_removeDesktopAction = new QAction(SmallIcon("list-remove"),i18n("&Remove Last Virtual Desktop"), this);
-    m_actions.append(m_removeDesktopAction);
-    connect(m_removeDesktopAction, SIGNAL(triggered(bool)), this , SLOT(slotRemoveDesktop()));
-
-    if (m_desktopCount <= 1) {
-        m_removeDesktopAction->setEnabled(false);
-    } else if (m_desktopCount >= MAXDESKTOPS) {
-        m_addDesktopAction->setEnabled(false);
-    }
-#endif
-}
-
-QList<QAction*> Pager::contextualActions()
-{
-  return m_actions;
 }
 
 #if HAVE_X11
@@ -463,11 +436,6 @@ void Pager::numberOfDesktopsChanged(int num)
 
     NETRootInfo info(QX11Info::connection(), NET::NumberOfDesktops | NET::DesktopNames, NET::WM2DesktopLayout);
     m_rows = info.desktopLayoutColumnsRows().height();
-
-#if HAVE_X11
-    m_removeDesktopAction->setEnabled(num > 1);
-    m_addDesktopAction->setEnabled(num < MAXDESKTOPS);
-#endif
 
     m_desktopCount = num;
 

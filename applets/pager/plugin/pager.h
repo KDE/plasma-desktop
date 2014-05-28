@@ -70,9 +70,6 @@ class Pager : public QObject
         Pager(QObject *parent = 0);
         ~Pager();
 
-        //void constraintsEvent(Plasma::Constraints);
-        virtual QList<QAction*> contextualActions();
-
         QObject *model() const { return m_pagerModel; }
 
         int currentDesktop() const { return m_currentDesktop; }
@@ -150,11 +147,6 @@ class Pager : public QObject
         QSizeF m_size;
         QSize m_preferredSize;
         Qt::Orientation m_orientation;
-
-        //list of info about animations for each desktop
-        QList<QAction*> m_actions;
-        QAction *m_addDesktopAction;
-        QAction *m_removeDesktopAction;
 
         bool m_showWindowIcons : 1;
         bool m_desktopDown : 1;
