@@ -111,6 +111,7 @@ class Pager : public QObject
         void recalculateGridSizes(int rows);
         void updateSizes();
         void recalculateWindowRects();
+        void openVirtualDesktopsKCM();
 
     protected Q_SLOTS:
         void currentDesktopChanged(int desktop);

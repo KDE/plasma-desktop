@@ -63,6 +63,10 @@ Item {
         pager.slotRemoveDesktop();
     }
 
+    function action_openKCM() {
+        pager.openVirtualDesktopsKCM();
+    }
+
     Connections {
         target: theme
         onThemeChanged: {
@@ -84,6 +88,7 @@ Item {
     Component.onCompleted: {
             plasmoid.setAction("addDesktop", i18n("Add Virtual Desktop"), "list-add");
             plasmoid.setAction("removeDesktop", i18n("Remove Virtual Desktop"), "list-remove");
+            plasmoid.setAction("openKCM", i18n("Configure Desktops"), "configure");
             windowActiveOnActiveDesktopColor = theme.textColor
             windowActiveOnActiveDesktopColor.a = 0.6
             windowActiveColor = theme.textColor

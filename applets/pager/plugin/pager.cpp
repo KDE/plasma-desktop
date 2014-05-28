@@ -38,6 +38,8 @@
 #include <KIconLoader>
 #include <KLocalizedString>
 #include <KWindowSystem>
+#include <KProcess>
+
 #if HAVE_X11
 #include <netwm.h>
 #endif
@@ -605,6 +607,10 @@ QRect Pager::fixViewportPosition( const QRect& r )
     return QRect( x - r.width() / 2, y - r.height() / 2, r.width(), r.height());
 }
 
+void Pager::openVirtualDesktopsKCM()
+{
+    KProcess::execute("kcmshell5", QStringList() << "desktop");
+}
 
 
 #include "moc_pager.cpp"
