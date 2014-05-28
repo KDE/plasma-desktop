@@ -27,10 +27,15 @@ MouseArea {
     property string activeSource: "Status"
     height: 16
     width: 16
+
     Layout.minimumWidth: 16
     Layout.minimumHeight: 16
+
+    Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
+
     implicitWidth: units.iconSizes["panel"]
     implicitHeight: implicitWidth
+
     onClicked: {
         var service = dataSource.serviceForSource(activeSource)
         var operation = service.operationDescription("toggleActivityManager")
