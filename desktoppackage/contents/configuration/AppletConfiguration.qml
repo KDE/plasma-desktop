@@ -228,6 +228,7 @@ Rectangle {
                         right: parent.right
                     }
                     font.pointSize: theme.defaultFont.pointSize*2
+                    font.weight: Font.Light
                     text: main.title
                 }
 
