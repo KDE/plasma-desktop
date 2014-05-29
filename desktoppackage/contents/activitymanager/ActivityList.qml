@@ -95,7 +95,7 @@ Flickable {
 
             ActivityItem {
 
-                width:  parent.width
+                width:  content.width
 
                 visible      : (root.filterString == "") ||
                                (title.toLowerCase().indexOf(root.filterString) != -1)
