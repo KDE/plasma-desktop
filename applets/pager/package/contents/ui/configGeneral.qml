@@ -66,6 +66,8 @@ Item {
         }
     }
 
+    Component.onCompleted: cfg_currentDesktopSelectedChanged()
+
     QtControls.ExclusiveGroup {
         id: displayedTextGroup
     }
