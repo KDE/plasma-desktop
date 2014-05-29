@@ -65,11 +65,13 @@ KCMiscKeyboardWidget::KCMiscKeyboardWidget(QWidget *parent)
   ui.rateSlider->setTickInterval(498);
 
   QList <QAbstractButton*> btns = ui.kbRepButtonGroup->buttons();
+
   for (int i = 0; i < btns.size(); i++) {
       ui.kbRepButtonGroup->setId(btns[i], i);
   }
 
   btns = ui.numButtonGroup->buttons();
+
   for (int i = 0; i < btns.size(); i++) {
       ui.numButtonGroup->setId(btns[i], i);
   }

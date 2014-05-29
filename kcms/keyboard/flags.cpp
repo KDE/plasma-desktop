@@ -18,6 +18,10 @@
 
 #include "flags.h"
 
+<<<<<<< HEAD
+=======
+//#include <kdebug.h>
+>>>>>>> b756db51d8293b4a96ab851f9174e48f8ef36429
 #include <kstandarddirs.h>
 #include <kiconloader.h>
 #include <kglobalsettings.h>
