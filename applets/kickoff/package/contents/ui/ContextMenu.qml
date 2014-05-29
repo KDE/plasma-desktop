@@ -30,23 +30,12 @@ PlasmaComponents.ContextMenu {
     property bool isApp: contextMenu.model != undefined ? contextMenu.model.url.indexOf(".desktop") !== -1 : false
 
     function openAt(title, model, x, y) {
-        plasmoid.hideOnWindowDeactivate = false;
         contextMenu.title = title
         contextMenu.model = model
 
         open(x, y)
     }
 
-    //HACK: is not possible to set a transient parent of a QWindow as a QWidget
-    //because the QWidget's window is not existent until is shown,
-    //at that point it's too late for setting a transient parent
-    onStatusChanged: {
-        if (status == PlasmaComponents.DialogStatus.Opening) {
-            plasmoid.hideOnWindowDeactivate = false;
-        } else if (status == PlasmaComponents.DialogStatus.Closed) {
-            plasmoid.hideOnWindowDeactivate = true;
-        }
-    }
    /*
     * context menu items
     */
