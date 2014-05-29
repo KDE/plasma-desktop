@@ -34,15 +34,7 @@ Item {
 
     onActionListChanged: refreshMenu();
 
-    onOpenedChanged: {
-        if (!opened) {
-            plasmoid.hideOnWindowDeactivate = true;
-        }
-    }
-
     function open(x, y) {
-        plasmoid.hideOnWindowDeactivate = false;
-
         if (x && y) {
             menu.open(x, y);
         } else {
