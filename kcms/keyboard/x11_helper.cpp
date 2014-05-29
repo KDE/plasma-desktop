@@ -309,6 +309,16 @@ XEventNotifier::XEventNotifier():
 	}
 }
 
+
+XEventNotifier::XEventNotifier(QWidget* parent):
+        QObject(parent),
+        xkbOpcode(-1)
+{
+    if( QCoreApplication::instance() == NULL ) {
+        qWarning() << "Layout Widget won't work properly without QCoreApplication instance";
+    }
+}
+
 void XEventNotifier::start()
 {
 	qDebug() << "qCoreApp" << QCoreApplication::instance();
