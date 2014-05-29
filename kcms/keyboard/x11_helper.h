@@ -112,6 +112,7 @@ Q_SIGNALS:
 
 public:
 	XEventNotifier();
+    XEventNotifier(QWidget* parent);
 	virtual ~XEventNotifier() {}
 
 	virtual void start();
