@@ -17,6 +17,7 @@
  */
 
 import QtQuick 2.0
+import QtQuick.Layouts 1.0
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -26,6 +27,8 @@ import org.kde.plasma.configuration 2.0
 AppletConfiguration {
     id: root
     isContainment: true
+    Layout.minimumWidth: units.gridUnit * 40
+    Layout.minimumHeight: units.gridUnit * 45
 
 //BEGIN model
     globalConfigModel: globalContainmentConfigModel
