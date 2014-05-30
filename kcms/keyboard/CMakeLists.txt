@@ -167,8 +167,6 @@ set(kcm_keyboard_PART_SRCS
     LanguageDetection/languagedetector.cpp
     ${preview_SRCS} )
 
-
-
 qt5_wrap_ui(kcm_keyboard_PART_SRCS kcm_keyboard.ui kcm_add_layout_dialog.ui kcmmiscwidget.ui)
 
 add_library(kcm_keyboard MODULE ${kcm_keyboard_PART_SRCS})
@@ -205,8 +203,6 @@ add_subdirectory( pics )
 
 # Unit tests
 
-
 add_subdirectory( tests )
 
 add_subdirectory( LanguageDetection/langdata )
-

@@ -10,7 +10,7 @@ macro(KEYBOARD_DAEMON_UNIT_TESTS _testname)
                                      Qt5::Xml
                                      Qt5::Test
                                      KF5::I18n
-                                     KF5::KDE4Support
+                                     KF5::KDELibs4Support
                                      ${X11_Xkbfile_LIB}
                                      ${X11_LIBRARIES}
 )
@@ -42,7 +42,7 @@ configure_file(${CMAKE_CURRENT_SOURCE_DIR}/config/base.bad.xml ${CMAKE_CURRENT_B
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/config/base.xml ${CMAKE_CURRENT_BINARY_DIR}/config/base.xml COPYONLY)
 
 if( X11_XTest_FOUND )
-   add_executable(keyboard_daemon_test keyboard_daemon_test.cpp ../keyboard_daemon.cpp ../layout_memory.cpp ../layout_memory_persister.cpp ../flags.cpp ../x11_helper.cpp ../xkb_helper.cpp ../xinput_helper.cpp ../layout_tray_icon.cpp ../keyboard_config.cpp ../xkb_rules.cpp ../keyboard_hardware.cpp ../bindings.cpp ../layouts_menu.cpp ../numlockx.c)
+   add_executable(keyboard_daemon_test keyboard_daemon_test.cpp ../keyboard_daemon.cpp ../layout_memory.cpp ../layout_memory_persister.cpp ../flags.cpp ../x11_helper.cpp ../xkb_helper.cpp ../xinput_helper.cpp ../layout_tray_icon.cpp ../keyboard_config.cpp ../xkb_rules.cpp ../keyboard_hardware.cpp ../bindings.cpp ../layouts_menu.cpp ../numlockx.c ../LanguageDetection/languagedetector.cpp ../LanguageDetection/training_text_map.cpp)
    add_test(kcm-keyboard-keyboard_daemon_test keyboard_daemon_test)
    ecm_mark_nongui_executable(keyboard_daemon_test)
    ecm_mark_as_test(keyboard_daemon_test)
@@ -55,14 +55,10 @@ if( X11_XTest_FOUND )
                          KF5::CoreAddons
                          KF5::DBusAddons
                          KF5::Plasma
-<<<<<<< HEAD
                          KF5::KDELibs4Support
                          KF5::GlobalAccel
                          XCB::XCB
                          XCB::XKB
-=======
-                         KF5::KDE4Support
->>>>>>> added automatic layout switching, geometry preview and removed warnings at time of build and runtime
                          ${X11_Xkbfile_LIB}
                          ${X11_XTest_LIB}
                          ${X11_LIBRARIES}
