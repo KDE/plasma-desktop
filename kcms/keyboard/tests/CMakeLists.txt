@@ -30,9 +30,13 @@ target_link_libraries(flags_test
                       Qt5::Test
                       KF5::I18n
                       KF5::Plasma
+<<<<<<< HEAD
                       KF5::KDELibs4Support
                       XCB::XCB
                       XCB::XKB
+=======
+                      KF5::KDE4Support
+>>>>>>> 9baef77856bc3ea3ff1bfb886016b92311ae0cc9
                       ${X11_Xkbfile_LIB}
                       ${X11_LIBRARIES}
 )
@@ -56,6 +60,7 @@ if( X11_XTest_FOUND )
                          KF5::DBusAddons
                          KF5::Plasma
 <<<<<<< HEAD
+<<<<<<< HEAD
                          KF5::KDELibs4Support
                          KF5::GlobalAccel
                          XCB::XCB
@@ -63,6 +68,9 @@ if( X11_XTest_FOUND )
 =======
                          KF5::KDE4Support
 >>>>>>> added automatic layout switching, geometry preview and removed warnings at time of build and runtime
+=======
+                         KF5::KDE4Support
+>>>>>>> 9baef77856bc3ea3ff1bfb886016b92311ae0cc9
                          ${X11_Xkbfile_LIB}
                          ${X11_XTest_LIB}
                          ${X11_LIBRARIES}
