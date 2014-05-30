@@ -27,8 +27,8 @@ import org.kde.plasma.configuration 2.0
 AppletConfiguration {
     id: root
     isContainment: true
-    Layout.minimumWidth: units.gridUnit * 40
-    Layout.minimumHeight: units.gridUnit * 45
+    Layout.minimumWidth: units.gridUnit * 32
+    Layout.minimumHeight: units.gridUnit * 36
 
 //BEGIN model
     globalConfigModel: globalContainmentConfigModel
