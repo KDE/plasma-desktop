@@ -33,6 +33,61 @@ Flickable {
     property string filterString: ""
     property bool   showingDialog: activityDeletionDialog.visible || activityConfigurationDialog.visible
 
+    property int    selectedIndex: -1
+
+    function selectNext()
+    {
+        var startingWithSelected = selectedIndex;
+
+        do {
+            selectedIndex++;
+
+            if (selectedIndex >= activitiesList.count) {
+                selectedIndex = 0;
+            }
+
+            // Searching for the first item that is visible, or back to the one
+            // that we started with
+        } while (!activitiesList.itemAt(selectedIndex).visible && startingWithSelected != selectedIndex);
+
+        updateSelectedItem();
+    }
+
+    function selectPrevious()
+    {
+        var startingWithSelected = selectedIndex;
+
+        do {
+            selectedIndex--;
+
+            if (selectedIndex < 0) {
+                selectedIndex = activitiesList.count - 1;
+            }
+
+            // Searching for the first item that is visible, or back to the one
+            // that we started with
+        } while (!activitiesList.itemAt(selectedIndex).visible && startingWithSelected != selectedIndex);
+
+        updateSelectedItem();
+    }
+
+    function updateSelectedItem()
+    {
+        for (var i = 0; i < activitiesList.count; i++) {
+            activitiesList.itemAt(i).selected = (i == selectedIndex);
+        }
+    }
+
+    function openSelected()
+    {
+        if (selectedIndex >= 0 && selectedIndex < activitiesList.count) {
+            activitiesModel.setCurrentActivity(
+                activitiesList.itemAt(selectedIndex).activityId,
+                function () {}
+            );
+        }
+    }
+
     function closeDialogs()
     {
         activityDeletionDialog.close();
@@ -100,6 +155,7 @@ Flickable {
                 visible      : (root.filterString == "") ||
                                (title.toLowerCase().indexOf(root.filterString) != -1)
 
+                activityId   : model.id
                 title        : model.name
                 icon         : model.iconSource
                 background   : model.background

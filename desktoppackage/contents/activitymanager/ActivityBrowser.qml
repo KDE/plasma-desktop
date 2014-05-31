@@ -44,25 +44,30 @@ Item {
 
     signal closeRequested()
 
-    focus: true
+    // focus: true
 
     Keys.onPressed: {
         if (newActivityDialog.visible || activityList.showingDialog) {
             event.accepted = false;
+
         } else {
             if (event.key == Qt.Key_Escape) {
                 root.closeRequested();
             } else if (event.key == Qt.Key_Up) {
-                console.log("UP KEY");
+                activityList.selectPrevious();
+
             } else if (event.key == Qt.Key_Down) {
-                console.log("DOWN KEY");
+                activityList.selectNext();
+
             } else if (event.key == Qt.Key_Return || event.key == Qt.Key_Enter) {
-                console.log("ENTER KEY");
+                activityList.openSelected();
+
             } else if (event.key == Qt.Key_Tab) {
-                console.log("TAB KEY");
+                // console.log("TAB KEY");
+
             } else  {
-                console.log("OTHER KEY");
-                heading.forceActiveFocus();
+                // console.log("OTHER KEY");
+                // heading.forceActiveFocus();
             }
         }
     }
