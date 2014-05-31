@@ -44,8 +44,6 @@ Item {
 
     signal closeRequested()
 
-    // focus: true
-
     Keys.onPressed: {
         if (newActivityDialog.visible || activityList.showingDialog) {
             event.accepted = false;
@@ -67,7 +65,7 @@ Item {
 
             } else  {
                 // console.log("OTHER KEY");
-                // heading.forceActiveFocus();
+                heading.forceActiveFocus();
             }
         }
     }
