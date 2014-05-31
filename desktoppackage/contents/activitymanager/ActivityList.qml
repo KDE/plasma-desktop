@@ -35,30 +35,16 @@ Flickable {
 
     property int    selectedIndex: -1
 
-    function selectNext()
+    function _selectRelativeToCurrent(distance)
     {
         var startingWithSelected = selectedIndex;
 
         do {
-            selectedIndex++;
+            selectedIndex += distance;
 
             if (selectedIndex >= activitiesList.count) {
                 selectedIndex = 0;
             }
-
-            // Searching for the first item that is visible, or back to the one
-            // that we started with
-        } while (!activitiesList.itemAt(selectedIndex).visible && startingWithSelected != selectedIndex);
-
-        updateSelectedItem();
-    }
-
-    function selectPrevious()
-    {
-        var startingWithSelected = selectedIndex;
-
-        do {
-            selectedIndex--;
 
             if (selectedIndex < 0) {
                 selectedIndex = activitiesList.count - 1;
@@ -68,10 +54,21 @@ Flickable {
             // that we started with
         } while (!activitiesList.itemAt(selectedIndex).visible && startingWithSelected != selectedIndex);
 
-        updateSelectedItem();
+        _updateSelectedItem();
+
     }
 
-    function updateSelectedItem()
+    function selectNext()
+    {
+        _selectRelativeToCurrent(1);
+    }
+
+    function selectPrevious()
+    {
+        _selectRelativeToCurrent(-1);
+    }
+
+    function _updateSelectedItem()
     {
         for (var i = 0; i < activitiesList.count; i++) {
             activitiesList.itemAt(i).selected = (i == selectedIndex);
