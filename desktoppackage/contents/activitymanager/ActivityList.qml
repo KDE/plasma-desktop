@@ -77,10 +77,28 @@ Flickable {
 
     function openSelected()
     {
+        var selectedItem = null;
+
         if (selectedIndex >= 0 && selectedIndex < activitiesList.count) {
+            selectedItem = activitiesList.itemAt(selectedItem);
+
+        } else if (root.filterString != "") {
+            // If we have only one item shown, activate it. It doesn't matter
+            // that it is not really selected
+
+            for (var i = 0; i < activitiesList.count; i++) {
+                var item = activitiesList.itemAt(i);
+
+                if (item.visible) {
+                    selectedItem = item;
+                    break;
+                }
+            }
+        }
+
+        if (selectedItem != null) {
             activitiesModel.setCurrentActivity(
-                activitiesList.itemAt(selectedIndex).activityId,
-                function () {}
+                selectedItem.activityId, function () {}
             );
         }
     }
