@@ -38,7 +38,6 @@ static int DEVICE_NONE = 0;
 static int DEVICE_KEYBOARD = 1;
 static int DEVICE_POINTER = 2;
 static int connectedDevices;
-static int addedDevices = 0;
 
 
 XInputEventNotifier::XInputEventNotifier(QWidget* parent):
@@ -103,8 +102,7 @@ int XInputEventNotifier::getNewDeviceEventType(xcb_generic_event_t* event)
 	int newDeviceType = DEVICE_NONE;
     int ndevices;
     XDeviceInfo	*devices = XListInputDevices(QX11Info::display(), &ndevices);
-    if((ndevices > connectedDevices && addedDevices < 20)){
-        addedDevices++;
+    if((ndevices > connectedDevices)){
         qDebug() << "id:" << devices[ndevices - 1].id << "name:" << devices[ndevices - 1].name << "used as:" << devices[ndevices-1].use;
         if( devices[ndevices - 1].use == IsXKeyboard || devices[ndevices - 1].use == IsXExtensionKeyboard ) {
             if( isRealKeyboard(devices[ndevices - 1].name) ) {
@@ -116,14 +114,10 @@ int XInputEventNotifier::getNewDeviceEventType(xcb_generic_event_t* event)
             newDeviceType = DEVICE_POINTER;
             qDebug() << "new pointer device, id:" << devices[ndevices - 1].id << "name:" << devices[ndevices - 1].name << "used as:" << devices[ndevices - 1].use;
         }
+        connectedDevices = ndevices;
     }
     else{
         connectedDevices = ndevices;
-        addedDevices = 0;
-    }
-    if(addedDevices == 20){
-        connectedDevices = ndevices;
-        addedDevices = 0;
     }
 	return newDeviceType;
 }
