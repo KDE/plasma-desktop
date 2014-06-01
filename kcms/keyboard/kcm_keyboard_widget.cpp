@@ -20,7 +20,7 @@
 
 #include <kactioncollection.h>
 #include <kaction.h>
-#include <kdebug.h>
+#include <kaboutdata.h>
 #include <klocale.h>
 #include <kglobalsettings.h>
 #include <KGlobalAccel>
@@ -31,6 +31,7 @@
 #include <QPixmap>
 #include <QVBoxLayout>
 #include <QX11Info>
+#include <QDebug>
 
 #include "keyboard_config.h"
 #include "preview/keyboardpainter.h"
@@ -606,7 +607,7 @@ void KCMKeyboardWidget::updateXkbShortcutButton(const QString& groupName, QPushB
 		const OptionGroupInfo* optionGroupInfo = rules->getOptionGroupInfo(groupName);
 		const OptionInfo* optionInfo = optionGroupInfo->getOptionInfo(option);
 		if( optionInfo == NULL || optionInfo->description == NULL ) {
-			kError() << "Could not find option info for " << option;
+            qDebug() << "Could not find option info for " << option;
 			button->setText(grpOptions.first());
 		}
 		else {
