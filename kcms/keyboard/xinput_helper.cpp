@@ -37,12 +37,16 @@
 static int DEVICE_NONE = 0;
 static int DEVICE_KEYBOARD = 1;
 static int DEVICE_POINTER = 2;
+static int connectedDevices;
+static int addedDevices = 0;
 
 
 XInputEventNotifier::XInputEventNotifier(QWidget* parent):
     XEventNotifier(parent), //TODO: destruct properly?
 	xinputEventType(-1)
 {
+    XListInputDevices(QX11Info::display(), &connectedDevices);
+    qDebug()<<"initializing connectedDevices to: "<<connectedDevices;
 }
 
 void XInputEventNotifier::start()
@@ -72,8 +76,9 @@ bool XInputEventNotifier::processOtherEvents(xcb_generic_event_t* event)
 	else if( newDeviceType == DEVICE_POINTER ) {
 		emit(newPointerDevice());
 		emit(newKeyboardDevice());	// arghhh, looks like X resets xkb map even when only pointer device is connected
-	}
-	return true;
+    }
+    XListInputDevices(QX11Info::display(), &connectedDevices);
+    return true;
 }
 
 
@@ -93,40 +98,33 @@ static bool isRealKeyboard(const char* deviceName)
 		&& strstr(deviceName, "WMI hotkeys") == NULL;
 }
 
-int XInputEventNotifier::getNewDeviceEventType(xcb_generic_event_t* /*event*/)
+int XInputEventNotifier::getNewDeviceEventType(xcb_generic_event_t* event)
 {
 	int newDeviceType = DEVICE_NONE;
-
-#if 0
-    if( xinputEventType != -1 && event->type == xinputEventType ) {
-		XDevicePresenceNotifyEvent *xdpne = (XDevicePresenceNotifyEvent*) event;
-		if( xdpne->devchange == DeviceEnabled ) {
-			int ndevices;
-			XDeviceInfo	*devices = XListInputDevices(xdpne->display, &ndevices);
-			if( devices != NULL ) {
-//				kDebug() << "New device id:" << xdpne->deviceid;
-				for(int i=0; i<ndevices; i++) {
-//					kDebug() << "id:" << devices[i].id << "name:" << devices[i].name << "used as:" << devices[i].use;
-					if( devices[i].id == xdpne->deviceid ) {
-						if( devices[i].use == IsXKeyboard || devices[i].use == IsXExtensionKeyboard ) {
-							if( isRealKeyboard(devices[i].name) ) {
-								newDeviceType = DEVICE_KEYBOARD;
-								qDebug() << "new keyboard device, id:" << devices[i].id << "name:" << devices[i].name << "used as:" << devices[i].use;
-								break;
-							}
-						}
-						if( devices[i].use == IsXPointer || devices[i].use == IsXExtensionPointer ) {
-							newDeviceType = DEVICE_POINTER;
-							qDebug() << "new pointer device, id:" << devices[i].id << "name:" << devices[i].name << "used as:" << devices[i].use;
-							break;
-						}
-					}
-				}
-				XFreeDeviceList(devices);
-			}
-		}
-	}
-#endif
+    int ndevices;
+    XDeviceInfo	*devices = XListInputDevices(QX11Info::display(), &ndevices);
+    if((ndevices > connectedDevices && addedDevices < 20)){
+        addedDevices++;
+        qDebug() << "id:" << devices[ndevices - 1].id << "name:" << devices[ndevices - 1].name << "used as:" << devices[ndevices-1].use;
+        if( devices[ndevices - 1].use == IsXKeyboard || devices[ndevices - 1].use == IsXExtensionKeyboard ) {
+            if( isRealKeyboard(devices[ndevices - 1].name) ) {
+                newDeviceType = DEVICE_KEYBOARD;
+                qDebug() << "new keyboard device, id:" << devices[ndevices - 1].id << "name:" << devices[ndevices - 1].name << "used as:" << devices[ndevices - 1].use;
+            }
+        }
+        if( devices[ndevices - 1].use == IsXPointer || devices[ndevices - 1].use == IsXExtensionPointer ) {
+            newDeviceType = DEVICE_POINTER;
+            qDebug() << "new pointer device, id:" << devices[ndevices - 1].id << "name:" << devices[ndevices - 1].name << "used as:" << devices[ndevices - 1].use;
+        }
+    }
+    else{
+        connectedDevices = ndevices;
+        addedDevices = 0;
+    }
+    if(addedDevices == 20){
+        connectedDevices = ndevices;
+        addedDevices = 0;
+    }
 	return newDeviceType;
 }
 
