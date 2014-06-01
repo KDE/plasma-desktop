@@ -35,6 +35,7 @@ MouseEventListener {
 
     property alias isRootView: gridView.isRootView
     property alias url: dir.url
+    property alias errorString: dir.errorString
     property alias filterMode: dir.filterMode
     property alias filterPattern: dir.filterPattern
     property alias filterMimeTypes: dir.filterMimeTypes

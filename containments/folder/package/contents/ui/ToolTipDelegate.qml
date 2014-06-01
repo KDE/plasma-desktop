@@ -41,10 +41,10 @@ Item {
 
             anchors.verticalCenter: parent.verticalCenter
 
-            width: theme.iconSize.medium
-            height: theme.iconSize.medium
+            width: toolTip ? theme.iconSize.medium : 0
+            height: toolTip ? theme.iconSize.medium : 0
 
-            source: toolTip.icon
+            source: toolTip ? toolTip.icon : null
         }
 
         Column {
@@ -53,10 +53,11 @@ Item {
             PlasmaExtras.Heading {
                 level: 3
                 elide: Text.ElideRight
-                text: toolTip.mainText
+                text: toolTip ? toolTip.mainText : ""
             }
+
             PlasmaComponents.Label {
-                text: toolTip.subText
+                text: toolTip ? toolTip.subText : ""
                 opacity: 0.5
             }
         }
