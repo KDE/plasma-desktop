@@ -358,7 +358,8 @@ Item {
         },
         State {
             name: "right"
-            when: plasmoid.location == PlasmaCore.Types.RightEdge
+            when: (plasmoid.location == PlasmaCore.Types.RightEdge
+                || (plasmoid.location != PlasmaCore.Types.RightEdge && mainRow.LayoutMirroring.enabled))
 
             AnchorChanges {
                 target: searchField

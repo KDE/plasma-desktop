@@ -1,9 +1,25 @@
-//-----------------------------------------------------------------------------
-//
-// kdisplay, fonts tab
-//
-// Copyright (c)  Mark Donohoe 1997
-//                Lars Knoll 1999
+/*
+    Copyright 1997 Mark Donohoe
+    Copyright 1999 Lars Knoll
+    Copyright 2000 Rik Hemsley
+
+    Ported to kcontrol2 by Geert Jansen.
+
+    This library is free software; you can redistribute it and/or
+    modify it under the terms of the GNU Library General Public
+    License as published by the Free Software Foundation; either
+    version 2 of the License, or (at your option) any later version.
+
+    This library is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+    Library General Public License for more details.
+
+    You should have received a copy of the GNU Library General Public License
+    along with this library; see the file COPYING.LIB.  If not, write to
+    the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+    Boston, MA 02110-1301, USA.
+*/
 
 #ifndef FONTS_H
 #define FONTS_H
@@ -25,21 +41,30 @@ class FontAASettings;
 
 class FontUseItem : public KFontRequester
 {
-  Q_OBJECT
+    Q_OBJECT
 
 public:
-    FontUseItem(QWidget * parent, const QString &name, const QString &grp,
-        const QString &key, const QString &rc, const QFont &default_fnt,
-        bool fixed = false);
+    FontUseItem(QWidget *parent, const QString &name, const QString &grp,
+                const QString &key, const QString &rc, const QFont &default_fnt,
+                bool fixed = false);
 
     void readFont();
     void writeFont();
     void setDefault();
     void applyFontDiff(const QFont &fnt, int fontDiffFlags);
 
-    const QString& rcFile() { return _rcfile; }
-    const QString& rcGroup() { return _rcgroup; }
-    const QString& rcKey() { return _rckey; }
+    const QString &rcFile()
+    {
+        return _rcfile;
+    }
+    const QString &rcGroup()
+    {
+        return _rcgroup;
+    }
+    const QString &rcKey()
+    {
+        return _rckey;
+    }
 
 private:
     QString _rcfile;
@@ -50,14 +75,14 @@ private:
 
 class FontAASettings : public KDialog
 {
-  Q_OBJECT
+    Q_OBJECT
 
 public:
 
 #if defined(HAVE_FONTCONFIG) && defined (HAVE_X11)
     FontAASettings(QWidget *parent);
 
-    bool save( bool useAA );
+    bool save(bool useAA);
     bool load();
     void defaults();
     int getIndex(KXftConfig::SubPixel::Type spType);
@@ -118,7 +143,7 @@ private:
 #if HAVE_X11
     int dpi_original;
     QCheckBox *checkboxForceDpi;
-    QSpinBox* spinboxDpi;
+    QSpinBox *spinboxDpi;
 #endif
     QList<FontUseItem *> fontUseList;
 };

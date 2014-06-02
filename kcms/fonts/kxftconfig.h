@@ -31,14 +31,20 @@
 
 class KXftConfig
 {
-    public:
+public:
 
-    struct Item
-    {
+    struct Item {
         Item(QDomNode &n) : node(n), toBeRemoved(false) {}
         Item()            : toBeRemoved(false)          {}
-        virtual void reset()                            { node.clear(); toBeRemoved=false; }
-        bool         added()                            { return node.isNull(); }
+        virtual void reset()
+        {
+            node.clear();
+            toBeRemoved = false;
+        }
+        bool         added()
+        {
+            return node.isNull();
+        }
 
         QDomNode node;
 
@@ -46,10 +52,8 @@ class KXftConfig
         bool toBeRemoved;
     };
 
-    struct SubPixel : public Item
-    {
-        enum Type
-        {
+    struct SubPixel : public Item {
+        enum Type {
             None,
             Rgb,
             Bgr,
@@ -58,28 +62,33 @@ class KXftConfig
         };
 
         SubPixel(Type t, QDomNode &n) : Item(n), type(t) {}
-        SubPixel(Type t=None)         : type(t)          {}
+        SubPixel(Type t = None)         : type(t)          {}
 
-        void reset() { Item::reset(); type=None; }
+        void reset()
+        {
+            Item::reset();
+            type = None;
+        }
 
         Type type;
     };
 
-    struct Exclude : public Item
-    {
+    struct Exclude : public Item {
         Exclude(double f, double t, QDomNode &n) : Item(n), from(f), to(t) {}
-        Exclude(double f=0, double t=0)          : from(f), to(t)          {}
+        Exclude(double f = 0, double t = 0)          : from(f), to(t)          {}
 
-        void reset() { Item::reset(); from=to=0; }
+        void reset()
+        {
+            Item::reset();
+            from = to = 0;
+        }
 
         double from,
                to;
     };
 
-    struct Hint : public Item
-    {
-        enum Style
-        {
+    struct Hint : public Item {
+        enum Style {
             NotSet,
             None,
             Slight,
@@ -88,34 +97,44 @@ class KXftConfig
         };
 
         Hint(Style s, QDomNode &n) : Item(n), style(s) {}
-        Hint(Style s=NotSet)       : style(s)          {}
+        Hint(Style s = NotSet)       : style(s)          {}
 
-        void reset() { Item::reset(); style=NotSet; }
+        void reset()
+        {
+            Item::reset();
+            style = NotSet;
+        }
 
         Style style;
     };
 
-    struct Hinting : public Item
-    {
+    struct Hinting : public Item {
         Hinting(bool s, QDomNode &n) : Item(n), set(s) {}
-        Hinting(bool s=true)         : set(s)          {}
+        Hinting(bool s = true)         : set(s)          {}
 
-        void reset() { Item::reset(); set=true; }
+        void reset()
+        {
+            Item::reset();
+            set = true;
+        }
 
         bool set;
     };
 
-    struct AntiAliasing : public Item
-    {
+    struct AntiAliasing : public Item {
         AntiAliasing(bool s, QDomNode &n) : Item(n), set(s) {}
-        AntiAliasing(bool s=true)         : set(s)          {}
+        AntiAliasing(bool s = true)         : set(s)          {}
 
-        void reset() { Item::reset(); set=true; }
+        void reset()
+        {
+            Item::reset();
+            set = true;
+        }
 
         bool set;
     };
 
-    public:
+public:
 
     explicit KXftConfig();
 
@@ -131,13 +150,16 @@ class KXftConfig
     void        setHintStyle(Hint::Style style);
     void        setAntiAliasing(bool set);
     bool        getAntiAliasing() const;
-    bool        changed()                            { return m_madeChanges; }
+    bool        changed()
+    {
+        return m_madeChanges;
+    }
     static QString description(SubPixel::Type t);
-    static const char * toStr(SubPixel::Type t);
+    static const char *toStr(SubPixel::Type t);
     static QString description(Hint::Style s);
-    static const char * toStr(Hint::Style s);
+    static const char *toStr(Hint::Style s);
 
-    private:
+private:
 
     void        readContents();
     void        applySubPixelType();
@@ -148,7 +170,7 @@ class KXftConfig
     void        applyExcludeRange(bool pixel);
     bool        aliasingEnabled();
 
-    private:
+private:
 
     SubPixel           m_subPixel;
     Exclude            m_excludeRange,

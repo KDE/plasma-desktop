@@ -9,11 +9,13 @@ Item {
     property int innerPadding  : units.largeSpacing
 
     property bool current      : false
-    property bool inFocus      : false
+    property bool selected     : false
     property bool stoppable    : true
 
     property alias title       : title.text
     property alias icon        : icon.source
+
+    property string activityId : ""
 
     property string background : ""
 
@@ -41,7 +43,7 @@ Item {
     PlasmaCore.FrameSvgItem {
         id: highlight
         imagePath: "widgets/viewitem"
-        visible: root.current || root.inFocus
+        visible: root.current || root.selected
 
         anchors {
             fill: parent
@@ -50,7 +52,9 @@ Item {
         }
 
         prefix:
-            root.current ? "selected" : "normal"
+            root.current  ? "selected" :
+            root.selected ? "hover" :
+                            "normal"
 
     }
 
@@ -68,7 +72,7 @@ Item {
             anchors.fill: parent
             color: "black"
 
-            opacity: .5
+            opacity: root.selected ? .8 : .5
         }
 
         Image {
@@ -84,7 +88,7 @@ Item {
             id: shade
 
             color   : "black"
-            opacity : .5
+            opacity: root.selected ? .8 : .5
 
             height  : title.height + 2 * title.anchors.margins
             width   : parent.width

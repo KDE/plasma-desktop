@@ -629,8 +629,7 @@ void FolderModel::createActions()
     connect(rename, SIGNAL(triggered()), SIGNAL(requestRename()));
 
     QAction *trash = new QAction(QIcon("user-trash"), i18n("&Move to Trash"), this);
-    connect(trash, SIGNAL(triggered(Qt::MouseButtons,Qt::KeyboardModifiers)),
-            SLOT(moveToTrash(Qt::MouseButtons,Qt::KeyboardModifiers)));
+    connect(trash, SIGNAL(triggered()), SLOT(moveSelectedToTrash()));
 
     QAction *emptyTrash = new QAction(QIcon("trash-empty"), i18n("&Empty Trash Bin"), this);
     KConfig trashConfig("trashrc", KConfig::SimpleConfig);
@@ -817,14 +816,9 @@ void FolderModel::refresh()
     m_dirModel->dirLister()->updateDirectory(m_dirModel->dirLister()->url());
 }
 
-void FolderModel::moveToTrash(Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers)
+void FolderModel::moveSelectedToTrash()
 {
-    Q_UNUSED(buttons)
-
-    KonqOperations::Operation op = (modifiers & Qt::ShiftModifier) ?
-            KonqOperations::DEL : KonqOperations::TRASH;
-
-    KonqOperations::del(QApplication::desktop(), op, selectedUrls(op == KonqOperations::TRASH));
+    KonqOperations::del(QApplication::desktop(), KonqOperations::TRASH, selectedUrls(true));
 }
 
 void FolderModel::deleteSelected()
@@ -835,4 +829,11 @@ void FolderModel::deleteSelected()
 void FolderModel::emptyTrashBin()
 {
     KonqOperations::emptyTrash(QApplication::desktop());
+}
+
+void FolderModel::undoTextChanged(const QString &text)
+{
+    if (QAction *action = m_actionCollection.action("undo")) {
+        action->setText(text);
+    }
 }

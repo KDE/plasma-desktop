@@ -172,9 +172,10 @@ class FolderModel : public QSortFilterProxyModel
         void paste();
         void pasteTo();
         void refresh();
-        void moveToTrash(Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers);
+        void moveSelectedToTrash();
         void deleteSelected();
         void emptyTrashBin();
+        void undoTextChanged(const QString &text);
 
     private:
         void createActions();

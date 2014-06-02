@@ -109,7 +109,7 @@ public:
     static QList<QString> defaultFavorites()
     {
         QList<QString> applications;
-        applications << "konqbrowser" << "KMail2" << "kdesystemsettings" << "dolphin" << "org.kde.konsole" << "org.kde.kate" << "org.kate-editor.kwrite" << "kinfocenter";
+        applications << "konqbrowser" << "KMail2" << "kdesystemsettings" << "dolphin" << "org.kde.konsole" << "org.kde.kwrite";
 
         QList<QString> desktopFiles;
 

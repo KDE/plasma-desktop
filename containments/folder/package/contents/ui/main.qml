@@ -35,7 +35,7 @@ DragDrop.DropArea {
     property bool isContainment: ("containmentType" in plasmoid)
     property Item label: null
     property Item toolBox
-    property Component itemViewDialogComponent: Qt.createComponent("ItemViewDialog.qml", Qt.Asynchronous, folder)
+    property Component itemViewDialogComponent: Qt.createComponent("ItemViewDialog.qml", Qt.Asynchronous, root)
 
     property bool debug: false
     property int handleDelay: 800
@@ -203,7 +203,7 @@ DragDrop.DropArea {
     PlasmaComponents.Label {
         anchors.fill: parent
 
-        text: dir.errorString
+        text: itemView.errorString
 
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
@@ -396,6 +396,6 @@ DragDrop.DropArea {
         //clean any eventual invalid chunks in the config
         LayoutManager.save();
 
-        root.label = labelComponent.createObject(folder);
+        root.label = labelComponent.createObject(root);
     }
 }

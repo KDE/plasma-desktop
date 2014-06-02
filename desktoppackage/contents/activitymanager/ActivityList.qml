@@ -33,6 +33,76 @@ Flickable {
     property string filterString: ""
     property bool   showingDialog: activityDeletionDialog.visible || activityConfigurationDialog.visible
 
+    property int    selectedIndex: -1
+
+    function _selectRelativeToCurrent(distance)
+    {
+        var startingWithSelected = selectedIndex;
+
+        do {
+            selectedIndex += distance;
+
+            if (selectedIndex >= activitiesList.count) {
+                selectedIndex = 0;
+            }
+
+            if (selectedIndex < 0) {
+                selectedIndex = activitiesList.count - 1;
+            }
+
+            // Searching for the first item that is visible, or back to the one
+            // that we started with
+        } while (!activitiesList.itemAt(selectedIndex).visible && startingWithSelected != selectedIndex);
+
+        _updateSelectedItem();
+
+    }
+
+    function selectNext()
+    {
+        _selectRelativeToCurrent(1);
+    }
+
+    function selectPrevious()
+    {
+        _selectRelativeToCurrent(-1);
+    }
+
+    function _updateSelectedItem()
+    {
+        for (var i = 0; i < activitiesList.count; i++) {
+            activitiesList.itemAt(i).selected = (i == selectedIndex);
+        }
+    }
+
+    function openSelected()
+    {
+        var selectedItem = null;
+
+        if (selectedIndex >= 0 && selectedIndex < activitiesList.count) {
+            selectedItem = activitiesList.itemAt(selectedItem);
+
+        } else if (root.filterString != "") {
+            // If we have only one item shown, activate it. It doesn't matter
+            // that it is not really selected
+
+            for (var i = 0; i < activitiesList.count; i++) {
+                var item = activitiesList.itemAt(i);
+
+                if (item.visible) {
+                    selectedItem = item;
+                    break;
+                }
+            }
+        }
+
+        if (selectedItem != null) {
+            activitiesModel.setCurrentActivity(
+                selectedItem.activityId, function () {}
+            );
+        }
+    }
+
     function closeDialogs()
     {
         activityDeletionDialog.close();
@@ -95,11 +165,12 @@ Flickable {
 
             ActivityItem {
 
-                width:  parent.width
+                width:  content.width
 
                 visible      : (root.filterString == "") ||
                                (title.toLowerCase().indexOf(root.filterString) != -1)
 
+                activityId   : model.id
                 title        : model.name
                 icon         : model.iconSource
                 background   : model.background

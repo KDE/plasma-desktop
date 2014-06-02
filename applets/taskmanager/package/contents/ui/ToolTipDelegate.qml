@@ -30,16 +30,16 @@ Column {
 
     property Item toolTip
 
-    property int preferredTextWidth: theme.mSize(theme.defaultFont).width * 40
+    property int preferredTextWidth: theme.mSize(theme.defaultFont).width * 30
     property int _s: units.largeSpacing / 2
 
-    Layout.minimumWidth: childrenRect.width + _s
-    Layout.minimumHeight: childrenRect.height + units.largeSpacing
-    Layout.maximumWidth: childrenRect.width + _s
-    Layout.maximumHeight: childrenRect.height + units.largeSpacing
+    Layout.minimumWidth: width
+    Layout.minimumHeight: height
+    Layout.maximumWidth: width
+    Layout.maximumHeight: height
     width: childrenRect.width + _s
-    height: childrenRect.height + units.largeSpacing
-    spacing: units.largeSpacing
+    height: childrenRect.height
+    spacing: _s
 
     Row {
         anchors.horizontalCenter: parent.horizontalCenter
@@ -50,6 +50,8 @@ Column {
             model: toolTip ? toolTip.windows : null
 
             PlasmaCore.WindowThumbnail {
+                y: _s
+
                 width: units.gridUnit * 15
                 height: units.gridUnit * 10
 
@@ -69,6 +71,7 @@ Column {
     }
 
     Row {
+        anchors.horizontalCenter: parent.horizontalCenter
         width: childrenRect.width + _s
         height: childrenRect.height + units.largeSpacing
         spacing: units.largeSpacing
@@ -78,7 +81,6 @@ Column {
             visible: toolTip != null && toolTip.icon != null
             width: tooltipIcon.width
             height: tooltipIcon.height
-            x: _s
             y: _s
 
             PlasmaCore.IconItem {
@@ -92,7 +94,6 @@ Column {
 
         Column {
             id: mainColumn
-            x: _s
             y: _s
 
             //This instance is purely for metrics

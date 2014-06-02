@@ -26,6 +26,8 @@ import org.kde.plasma.configuration 2.0
 //TODO: all of this will be done with desktop components
 Rectangle {
     id: root
+    Layout.minimumWidth: units.gridUnit * 30
+    Layout.minimumHeight: units.gridUnit * 20
 
 //BEGIN properties
     color: syspal.window
@@ -210,59 +212,51 @@ Rectangle {
                     }
                 }
             }
-            Item {
+            QtControls.ScrollView {
+                id: scroll
                 anchors {
                     top: parent.top
                     bottom: parent.bottom
                 }
                 Layout.fillWidth: true
-                height: Math.max(categoriesScroll.height, main.currentItem != null ? main.currentItem.implicitHeight : 0)
-
-                QtControls.Label {
-                    id: pageTitle
-                    anchors {
-                        top: parent.top
-                        left: parent.left
-                        right: parent.right
-                    }
-                    font.pointSize: theme.defaultFont.pointSize*2
-                    text: main.title
-                }
-
-                QtControls.StackView {
-                    id: main
-                    property string title: ""
-                    anchors {
-                        top: pageTitle.bottom
-                        topMargin: units.largeSpacing / 2
-                        left: parent.left
-                        right: parent.right
-                        bottom: parent.bottom
-                    }
-                    clip: true
-                    property string sourceFile
-                    Timer {
-                        id: pageSizeSync
-                        interval: 100
-                        onTriggered: {
-    //                                     root.width = mainColumn.implicitWidth
-    //                                     root.height = mainColumn.implicitHeight
+                Column {
+                    width: scroll.viewport.width
+                    spacing: units.largeSpacing / 2
+                    QtControls.Label {
+                        id: pageTitle
+                        anchors {
+                            left: parent.left
+                            right: parent.right
                         }
+                        font.pointSize: theme.defaultFont.pointSize*2
+                        font.weight: Font.Light
+                        text: main.title
                     }
-                    onImplicitWidthChanged: pageSizeSync.restart()
-                    onImplicitHeightChanged: pageSizeSync.restart()
-                    onSourceFileChanged: {
-                        print("Source file changed in flickable" + sourceFile);
-                        replace(Qt.resolvedUrl(sourceFile))
-                        /*
-                            * This is not needed on a desktop shell that has ok/apply/cancel buttons, i'll leave it here only for future reference until we have a prototype for the active shell.
-                            * root.pageChanged will start a timer, that in turn will call saveConfig() when triggered
 
-                        for (var prop in currentPage) {
-                            if (prop.indexOf("cfg_") === 0) {
-                                currentPage[prop+"Changed"].connect(root.pageChanged)
-                            }
-                        }*/
+                    QtControls.StackView {
+                        id: main
+                        property string title: ""
+                        anchors {
+                            left: parent.left
+                        }
+                        height: main.currentItem.implicitHeight ? main.currentItem.implicitHeight : main.currentItem.childrenRect.height
+                        width: scroll.viewport.width
+                        clip: true
+                        property string sourceFile
+
+                        onSourceFileChanged: {
+//                             print("Source file changed in flickable" + sourceFile);
+                            replace(Qt.resolvedUrl(sourceFile))
+                            /*
+                                * This is not needed on a desktop shell that has ok/apply/cancel buttons, i'll leave it here only for future reference until we have a prototype for the active shell.
+                                * root.pageChanged will start a timer, that in turn will call saveConfig() when triggered
+
+                            for (var prop in currentPage) {
+                                if (prop.indexOf("cfg_") === 0) {
+                                    currentPage[prop+"Changed"].connect(root.pageChanged)
+                                }
+                            }*/
+                        }
                     }
                 }
             }
