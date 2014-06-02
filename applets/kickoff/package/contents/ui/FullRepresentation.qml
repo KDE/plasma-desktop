@@ -436,7 +436,6 @@ Item {
                 event.accepted = true;
                 break;
             }
-            case Qt.Key_M:
             case Qt.Key_Menu: {
                 currentView.openContextMenu();
                 event.accepted = true;
