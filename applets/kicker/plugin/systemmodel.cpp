@@ -115,14 +115,19 @@ bool SystemModel::trigger(int row, const QString &actionId, const QVariant &argu
                 QDBusConnection bus = QDBusConnection::sessionBus();
                 QDBusInterface interface("org.freedesktop.ScreenSaver", "/ScreenSaver", "org.freedesktop.ScreenSaver", bus);
                 interface.asyncCall("Lock");
-                m_displayManager.startReserve();
                 break;
             }
             case SystemEntry::LogoutSession:
                 KWorkSpace::requestShutDown(KWorkSpace::ShutdownConfirmDefault, KWorkSpace::ShutdownTypeNone);
                 break;
             case SystemEntry::NewSession:
+            {
+                QDBusConnection bus = QDBusConnection::sessionBus();
+                QDBusInterface interface("org.freedesktop.ScreenSaver", "/ScreenSaver", "org.freedesktop.ScreenSaver", bus);
+                interface.asyncCall("Lock");
+                m_displayManager.startReserve();
                 break;
+            };
             case SystemEntry::SuspendToRam:
                 Solid::PowerManagement::requestSleep(Solid::PowerManagement::SuspendState, 0, 0);
                 break;
