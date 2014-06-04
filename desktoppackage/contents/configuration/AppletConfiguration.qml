@@ -239,7 +239,7 @@ Rectangle {
                         anchors {
                             left: parent.left
                         }
-                        height: main.currentItem.implicitHeight ? main.currentItem.implicitHeight : main.currentItem.childrenRect.height
+                        height: Math.max((scroll.height - pageTitle.height - parent.spacing), (main.currentItem.implicitHeight ? main.currentItem.implicitHeight : main.currentItem.childrenRect.height))
                         width: scroll.viewport.width
                         clip: true
                         property string sourceFile
