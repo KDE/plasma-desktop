@@ -1,4 +1,5 @@
-
+# KI18N Translation Domain for this library
+add_definitions(-DTRANSLATION_DOMAIN=\"kcmlaunch\")
 
 
 ########### next target ###############

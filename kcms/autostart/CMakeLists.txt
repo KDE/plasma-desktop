@@ -1,4 +1,7 @@
 project (autostart)
+# KI18N Translation Domain for this library
+add_definitions(-DTRANSLATION_DOMAIN=\"kcm_autostart\")
+
 
 set(kcm_autostart_PART_SRCS
    autostartitem.cpp
@@ -6,7 +9,7 @@ set(kcm_autostart_PART_SRCS
    advanceddialog.cpp
    autostart.cpp )
 
-qt5_wrap_ui(kcm_autostart_PART_SRCS autostartconfig.ui )
+ki18n_wrap_ui(kcm_autostart_PART_SRCS autostartconfig.ui )
 
 add_library(kcm_autostart MODULE ${kcm_autostart_PART_SRCS})
 

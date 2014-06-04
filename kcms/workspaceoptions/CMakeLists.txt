@@ -1,7 +1,9 @@
+# KI18N Translation Domain for this library
+add_definitions(-DTRANSLATION_DOMAIN=\"kcmworkspaceoptions\")
 ########### next target ###############
 
 set(kcm_workspaceoptions_PART_SRCS workspaceoptions.cpp )
-kde4_add_ui_files(kcm_workspaceoptions_PART_SRCS mainpage.ui)
+ki18n_wrap_ui(kcm_workspaceoptions_PART_SRCS mainpage.ui)
 
 kde4_add_plugin(kcm_workspaceoptions ${kcm_workspaceoptions_PART_SRCS})
 

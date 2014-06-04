@@ -1,3 +1,6 @@
+# KI18N Translation Domain for this library
+add_definitions(-DTRANSLATION_DOMAIN=\"kcm_desktoppaths\")
+
 set(kcm_desktoppaths_PART_SRCS
    globalpaths.cpp
 )

@@ -1,8 +1,10 @@
+# KI18N Translation Domain for this library
+add_definitions(-DTRANSLATION_DOMAIN=\"kcmkclock\")
 ########### next target ###############
 
 set(kcm_clock_PART_SRCS dtime.cpp main.cpp )
 
-kde4_add_ui_files(kcm_clock_PART_SRCS dateandtime.ui)
+ki18n_wrap_ui(kcm_clock_PART_SRCS dateandtime.ui)
 add_library(kcm_clock MODULE ${kcm_clock_PART_SRCS})
 
 target_link_libraries(kcm_clock

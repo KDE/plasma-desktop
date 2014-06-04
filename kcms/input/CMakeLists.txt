@@ -1,3 +1,5 @@
+# KI18N Translation Domain for this library
+add_definitions(-DTRANSLATION_DOMAIN=\"kcminput\")
 
 add_subdirectory( pics )
 
@@ -15,7 +17,7 @@ if(X11_Xcursor_FOUND)
     xcursor/itemdelegate.cpp
     xcursor/sortproxymodel.cpp
     ../krdb/krdb.cpp )
-  qt5_wrap_ui( libnoinst_SRCS xcursor/themepage.ui )
+  ki18n_wrap_ui( libnoinst_SRCS xcursor/themepage.ui )
   include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/xcursor/ )
 else()
   set( libnoinst_SRCS core/themepage.cpp )
@@ -46,7 +48,7 @@ install(TARGETS kapplymousetheme ${INSTALL_TARGETS_DEFAULT_ARGS})
 set(kcm_input_PART_SRCS mouse.cpp main.cpp logitechmouse.cpp)
 
 
-qt5_wrap_ui(kcm_input_PART_SRCS kmousedlg.ui logitechmouse_base.ui )
+ki18n_wrap_ui(kcm_input_PART_SRCS kmousedlg.ui logitechmouse_base.ui )
 qt5_add_dbus_interface(kcm_input_PART_SRCS ${klauncher_xml} klauncher_iface)
 
 add_library(kcm_input MODULE ${kcm_input_PART_SRCS})

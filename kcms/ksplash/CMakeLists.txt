@@ -1,3 +1,5 @@
+# KI18N Translation Domain for this library
+add_definitions(-DTRANSLATION_DOMAIN=\"ksplashthemes\")
 
 add_subdirectory( pics )
 

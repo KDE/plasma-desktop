@@ -1,3 +1,5 @@
+# KI18N Translation Domain for this library
+add_definitions(-DTRANSLATION_DOMAIN=\"kcmcomponentchooser\")
 
 add_subdirectory( componentservices ) 
 add_subdirectory( windowmanagers ) 
@@ -24,7 +26,7 @@ if(Q_WS_X11)
      componentchooserwm.cpp )
 endif()
 
-qt5_wrap_ui(kcm_componentchooser_SRCS
+ki18n_wrap_ui(kcm_componentchooser_SRCS
   browserconfig_ui.ui
   filemanagerconfig_ui.ui
   emailclientconfig_ui.ui
@@ -33,7 +35,7 @@ qt5_wrap_ui(kcm_componentchooser_SRCS
 )
 
 if(NOT WIN32)
-  qt5_wrap_ui(kcm_componentchooser_SRCS terminalemulatorconfig_ui.ui wmconfig_ui.ui)
+  ki18n_wrap_ui(kcm_componentchooser_SRCS terminalemulatorconfig_ui.ui wmconfig_ui.ui)
 endif()
 
 add_library(kcm_componentchooser MODULE ${kcm_componentchooser_SRCS})

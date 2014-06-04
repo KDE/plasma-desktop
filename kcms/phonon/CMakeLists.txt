@@ -1,6 +1,9 @@
 find_package(Phonon4Qt5 4.6.60 NO_MODULE)
 include_directories(BEFORE ${PHONON_INCLUDES})
 add_definitions(-DPHONON_LIB_SONAME=\"${PHONON_LIB_SONAME}\")
+# KI18N Translation Domain for this library
+add_definitions(-DTRANSLATION_DOMAIN=\"kcm_phonon\")
+
 
 find_package(PulseAudio 0.9.16)
 set_package_properties(PulseAudio PROPERTIES DESCRIPTION "PulseAudio Audio Server"
@@ -22,7 +25,7 @@ add_feature_info ("Audio setup GUI" CANBERRA_FOUND
                  )
 
 set(kcmphonon_SRCS main.cpp devicepreference.cpp backendselection.cpp)
-qt5_wrap_ui(kcmphonon_SRCS devicepreference.ui backendselection.ui)
+ki18n_wrap_ui(kcmphonon_SRCS devicepreference.ui backendselection.ui)
 set(kcmphonon_LIBS
     KF5::ConfigWidgets
     KF5::I18n
@@ -35,7 +38,7 @@ if(GLIB2_FOUND AND PULSEAUDIO_FOUND AND CANBERRA_FOUND)
   add_definitions(-DHAVE_PULSEAUDIO)
 
   set(kcmphonon_SRCS ${kcmphonon_SRCS} audiosetup.cpp testspeakerwidget.cpp)
-  qt5_wrap_ui(kcmphonon_SRCS audiosetup.ui)
+  ki18n_wrap_ui(kcmphonon_SRCS audiosetup.ui)
 
   include_directories(${GLIB2_INCLUDE_DIR} ${PULSEAUDIO_INCLUDE_DIR} ${CANBERRA_INCLUDE_DIRS})
 

@@ -1,3 +1,6 @@
+# KI18N Translation Domain for this library
+add_definitions(-DTRANSLATION_DOMAIN=\"kcmkded\")
+
 add_library(kcm_kded MODULE kcmkded.cpp)
 target_link_libraries(kcm_kded KF5::ConfigWidgets KF5::KDELibs4Support)
 
