@@ -148,10 +148,7 @@ Rectangle {
             QtControls.ScrollView {
                 id: categoriesScroll
                 frameVisible: true
-                anchors {
-                    top: parent.top
-                    bottom: parent.bottom
-                }
+                Layout.fillHeight: true
                 visible: (configDialog.configModel ? configDialog.configModel.count : 0) + globalConfigModel.count > 1
                 width: visible ? 100 : 0
                 implicitWidth: width
@@ -214,10 +211,7 @@ Rectangle {
             }
             QtControls.ScrollView {
                 id: scroll
-                anchors {
-                    top: parent.top
-                    bottom: parent.bottom
-                }
+                Layout.fillHeight: true
                 Layout.fillWidth: true
                 Column {
                     width: scroll.viewport.width
