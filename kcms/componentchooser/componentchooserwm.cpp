@@ -16,6 +16,7 @@
 #include "componentchooserwm.h"
 #include "componentchooserwm.moc"
 
+#include <kglobal.h>
 #include <kdebug.h>
 #include <kdesktopfile.h>
 #include <kmessagebox.h>
@@ -135,7 +136,7 @@ bool CfgWm::saveAndConfirm()
 bool CfgWm::tryWmLaunch()
 {
     if( currentWm() == "kwin"
-        && qstrcmp( NETRootInfo( QX11Info::display(), NET::SupportingWMCheck ).wmName(), "KWin" ) == 0 )
+        && qstrcmp( NETRootInfo( QX11Info::connection(), NET::SupportingWMCheck ).wmName(), "KWin" ) == 0 )
     {
         return true; // it is already running, don't necessarily restart e.g. after a failure with other WM
     }
