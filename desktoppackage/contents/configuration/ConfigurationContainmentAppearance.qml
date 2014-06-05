@@ -78,7 +78,7 @@ ColumnLayout {
         }
         QtControls.Label {
             anchors.verticalCenter: pluginComboBox.verticalCenter
-            text: i18n("Layout:")
+            text: i18nc("org.kde.plasma.desktop", "Layout:")
         }
         QtControls.ComboBox {
             id: pluginComboBox
@@ -101,7 +101,7 @@ ColumnLayout {
         }
         QtControls.Label {
             anchors.verticalCenter: wallpaperComboBox.verticalCenter
-            text: i18n("Wallpaper Type:")
+            text: i18nc("org.kde.plasma.desktop", "Wallpaper Type:")
         }
         QtControls.ComboBox {
             id: wallpaperComboBox

@@ -27,17 +27,17 @@ Item {
     implicitHeight: childrenRect.height
 
     property var prettyStrings: {
-        "LeftButton": i18n("Left-Button"),
-        "RightButton": i18n("Right-Button"),
-        "MidButton": i18n("Middle-Button"),
+        "LeftButton": i18nc("org.kde.plasma.desktop", "Left-Button"),
+        "RightButton": i18nc("org.kde.plasma.desktop", "Right-Button"),
+        "MidButton": i18nc("org.kde.plasma.desktop", "Middle-Button"),
 
-        "wheel:Vertical": i18n("Vertical-Scroll"),
-        "wheel:Horizontal": i18n("Horizontal-Scroll"),
+        "wheel:Vertical": i18nc("org.kde.plasma.desktop", "Vertical-Scroll"),
+        "wheel:Horizontal": i18nc("org.kde.plasma.desktop", "Horizontal-Scroll"),
 
-        "ShiftModifier": i18n("Shift"),
-        "ControlModifier": i18n("Ctrl"),
-        "AltModifier": i18n("Alt"),
-        "MetaModifier": i18n("Meta")
+        "ShiftModifier": i18nc("org.kde.plasma.desktop", "Shift"),
+        "ControlModifier": i18nc("org.kde.plasma.desktop", "Ctrl"),
+        "AltModifier": i18nc("org.kde.plasma.desktop", "Alt"),
+        "MetaModifier": i18nc("org.kde.plasma.desktop", "Meta")
     }
 
     function saveConfig() {
@@ -109,7 +109,7 @@ Item {
             }
         }
         MouseEventInputButton {
-            defaultText: i18n("Add Action");
+            defaultText: i18nc("org.kde.plasma.desktop", "Add Action");
             onEventStringChanged: {
                 configDialog.currentContainmentActionsModel.append(eventString, "org.kde.contextmenu");
             }

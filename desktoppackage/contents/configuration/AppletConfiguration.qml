@@ -114,8 +114,8 @@ Rectangle {
         id: messageDialog
         icon: StandardIcon.Warning
         property Item delegate
-        title: i18n("Apply Settings")
-        text: i18n("The settings of the current module have changed. Do you want to apply the changes or discard them?")
+        title: i18nc("org.kde.plasma.desktop", "Apply Settings")
+        text: i18nc("org.kde.plasma.desktop", "The settings of the current module have changed. Do you want to apply the changes or discard them?")
         standardButtons: StandardButton.Apply | StandardButton.Discard | StandardButton.Cancel
         onApply: {
             applyAction.trigger()
@@ -287,17 +287,17 @@ Rectangle {
             Layout.alignment: Qt.AlignVCenter | Qt.AlignRight
             QtControls.Button {
                 iconName: "dialog-ok"
-                text: i18n("Ok")
+                text: i18nc("org.kde.plasma.desktop", "Ok")
                 onClicked: acceptAction.trigger()
             }
             QtControls.Button {
                 iconName: "dialog-ok-apply"
-                text: i18n("Apply")
+                text: i18nc("org.kde.plasma.desktop", "Apply")
                 onClicked: applyAction.trigger()
             }
             QtControls.Button {
                 iconName: "dialog-cancel"
-                text: i18n("Cancel")
+                text: i18nc("org.kde.plasma.desktop", "Cancel")
                 onClicked: cancelAction.trigger()
             }
         }
