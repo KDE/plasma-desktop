@@ -21,6 +21,7 @@
 
 #include <QVector>
 #include <QSocketNotifier>
+#include <QX11Info>
 
 #include <xcb/xcb.h>
 #include <xcb/record.h>
@@ -30,7 +31,7 @@ class XRecordKeyboardMonitor : public QObject
     Q_OBJECT
 
 public:
-    XRecordKeyboardMonitor();
+    XRecordKeyboardMonitor(Display *display);
     ~XRecordKeyboardMonitor();
 
 Q_SIGNALS:

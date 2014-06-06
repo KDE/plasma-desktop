@@ -696,7 +696,7 @@ void XlibBackend::watchForEvents(bool keyboard)
         return;
     }
 
-    m_keyboard.reset(new XRecordKeyboardMonitor());
+    m_keyboard.reset(new XRecordKeyboardMonitor(m_display.data()));
     connect(m_keyboard.data(), SIGNAL(keyboardActivityStarted()),
             SIGNAL(keyboardActivityStarted()));
     connect(m_keyboard.data(), SIGNAL(keyboardActivityFinished()),

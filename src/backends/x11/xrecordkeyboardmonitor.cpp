@@ -24,9 +24,11 @@
 #include <QScopedPointer>
 
 #include <xcb/xcbext.h>
+#include <X11/Xlib.h>
 
-XRecordKeyboardMonitor::XRecordKeyboardMonitor()
-    : m_connection(xcb_connect(0, 0)), m_modifiersPressed(0), m_keysPressed(0)
+XRecordKeyboardMonitor::XRecordKeyboardMonitor(Display *display)
+    : m_connection(xcb_connect(XDisplayString(display), 0)),
+      m_modifiersPressed(0), m_keysPressed(0)
 {
     if (!m_connection) {
         return;
