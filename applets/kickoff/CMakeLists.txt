@@ -1,3 +1,4 @@
+add_definitions(-DTRANSLATION_DOMAIN=\"plasma_applet_kickoff\")
 
 #######################################################################################
 # Package
