@@ -6,5 +6,5 @@ set(attica_kde_SRCS
 
 add_library(attica_kde MODULE ${attica_kde_SRCS})
 target_link_libraries(attica_kde KF5::KIOWidgets Qt5::Widgets KF5::KCMUtils KF5::Attica KF5::Wallet KF5::KDELibs4Support)
-install(TARGETS attica_kde EXPORT kdelibsLibraryTargets ${INSTALL_TARGETS_DEFAULT_ARGS})
+install(TARGETS attica_kde DESTINATION ${PLUGIN_INSTALL_DIR})
 
