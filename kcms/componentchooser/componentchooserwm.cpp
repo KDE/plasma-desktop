@@ -13,6 +13,8 @@
  *                                                                         *
  ***************************************************************************/
 
+#include <config-workspace.h>
+
 #include "componentchooserwm.h"
 #include "componentchooserwm.moc"
 
@@ -66,7 +68,7 @@ void CfgWm::load(KConfig *)
 {
     KConfig cfg("ksmserverrc", KConfig::NoGlobals);
     KConfigGroup c( &cfg, "General");
-    loadWMs(c.readEntry("windowManager", "kwin"));
+    loadWMs(c.readEntry("windowManager", KWIN_BIN));
     emit changed(false);
 }
 
@@ -111,7 +113,7 @@ bool CfgWm::saveAndConfirm()
         { // revert config
             emit changed(true);
             c.writeEntry("windowManager", oldwm);
-            if( oldwm == "kwin" )
+            if( oldwm == KWIN_BIN )
             {
                 kwinRB->setChecked( true );
                 wmCombo->setEnabled( false );
@@ -135,7 +137,7 @@ bool CfgWm::saveAndConfirm()
 
 bool CfgWm::tryWmLaunch()
 {
-    if( currentWm() == "kwin"
+    if( currentWm() == KWIN_BIN
         && qstrcmp( NETRootInfo( QX11Info::connection(), NET::SupportingWMCheck ).wmName(), "KWin" ) == 0 )
     {
         return true; // it is already running, don't necessarily restart e.g. after a failure with other WM
@@ -166,14 +168,14 @@ bool CfgWm::tryWmLaunch()
         if( wmLaunchingState == WmLaunching )
             { // time out
             wmLaunchingState = WmFailed;
-            KProcess::startDetached( "kwin", QStringList() << "--replace" );
+            KProcess::startDetached( KWIN_BIN, QStringList() << "--replace" );
             // Let's hope KWin never fails.
             KMessageBox::sorry( window(),
                 i18n( "The running window manager has been reverted to the default KDE window manager KWin." ));
             }
         else if( wmLaunchingState == WmFailed )
             {
-            KProcess::startDetached( "kwin", QStringList() << "--replace" );
+            KProcess::startDetached( KWIN_BIN, QStringList() << "--replace" );
             // Let's hope KWin never fails.
             KMessageBox::sorry( window(),
                 i18n( "The new window manager has failed to start.\n"
@@ -215,13 +217,13 @@ void CfgWm::wmLaunchFinished( int exitcode, QProcess::ExitStatus exitstatus )
 void CfgWm::loadWMs( const QString& current )
 {
     WmData kwin;
-    kwin.internalName = "kwin";
-    kwin.exec = "kwin";
+    kwin.internalName = KWIN_BIN;
+    kwin.exec = KWIN_BIN;
     kwin.configureCommand = "";
     kwin.restartArgument = "--replace";
     kwin.parentArgument = "";
     wms[ "KWin" ] = kwin;
-    oldwm = "kwin";
+    oldwm = KWIN_BIN;
     kwinRB->setChecked( true );
     wmCombo->setEnabled( false );
 

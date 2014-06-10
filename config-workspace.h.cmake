@@ -146,6 +146,9 @@
 /* X libraries directory */
 #cmakedefine XLIBDIR "${XLIBDIR}"
 
+/* KWin binary name */
+#define KWIN_BIN "${KWIN_BIN}"
+
 /* Number of bits in a file offset, on hosts where this is settable. */
 #define _FILE_OFFSET_BITS 64
 
