@@ -22,6 +22,10 @@
 class QTreeWidget;
 class QTreeWidgetItem;
 
+#include <QObject>
+#include <QString>
+#include <QTreeWidget>
+
 class ThemePage : public QWidget
 {
 	Q_OBJECT
