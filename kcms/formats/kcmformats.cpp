@@ -19,6 +19,7 @@
 // own
 #include "kcmformats.h"
 #include "ui_kcmformatswidget.h"
+#include "writeexports.h"
 
 // Qt
 #include <QApplication>
@@ -36,18 +37,6 @@
 #include <KSharedConfig>
 
 K_PLUGIN_FACTORY_WITH_JSON(KCMFormatsFactory, "formats.json", registerPlugin<KCMFormats>();)
-
-const static QString configFile = QStringLiteral("plasma-localerc");
-const static QString exportFile = QStringLiteral("plasma-locale-settings.sh");
-
-const static QString lcLang = QStringLiteral("LANG");
-
-const static QString lcNumeric = QStringLiteral("LC_NUMERIC");
-const static QString lcTime = QStringLiteral("LC_TIME");
-const static QString lcMonetary = QStringLiteral("LC_MONETARY");
-const static QString lcMeasurement = QStringLiteral("LC_MEASUREMENT");
-const static QString lcCollate = QStringLiteral("LC_COLLATE");
-const static QString lcCtype = QStringLiteral("LC_CTYPE");
 
 KCMFormats::KCMFormats(QWidget *parent, const QVariantList &args)
     : KCModule(parent, args)
@@ -234,65 +223,6 @@ void KCMFormats::writeConfig()
     }
 
     m_config.sync();
-}
-
-void KCMFormats::writeExports()
-{
-
-    const QString cvalue = m_ui->comboGlobal->currentData().toString();
-
-    const QString configPath = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + "/" + exportFile;
-
-    QString script(QStringLiteral("# Generated script, do not edit\n"));
-    script.append(QStringLiteral("# Exports language-format specific env vars from startkde.\n"));
-    script.append(QStringLiteral("# This script has been generated from kcmshell5 formats.\n"));
-    script.append(QStringLiteral("# It will automatically be overwritten from there.\n"));
-    m_config = KConfigGroup(KSharedConfig::openConfig(configFile), "Formats");
-
-    const QString _export = QStringLiteral("export ");
-
-    const QString lang = m_config.readEntry(lcLang, QString());
-    if (!lang.isEmpty()) {
-        script.append(_export + lcLang + QLatin1Char('=') + lang + QLatin1Char('\n'));
-    }
-
-    const QString numeric = m_config.readEntry(lcNumeric, QString());
-    if (!numeric.isEmpty()) {
-        script.append(_export + lcNumeric + QLatin1Char('=') + numeric + QLatin1Char('\n'));
-    }
-
-    const QString time = m_config.readEntry(lcTime, QString());
-    if (!time.isEmpty()) {
-        script.append(_export + lcTime + QLatin1Char('=') + time + QLatin1Char('\n'));
-    }
-
-    const QString monetary = m_config.readEntry(lcMonetary, QString());
-    if (!monetary.isEmpty()) {
-        script.append(_export + lcMonetary + QLatin1Char('=') + monetary + QLatin1Char('\n'));
-    }
-
-    const QString measurement = m_config.readEntry(lcMeasurement, QString());
-    if (!measurement.isEmpty()) {
-        script.append(_export + lcMeasurement + QLatin1Char('=') + measurement + QLatin1Char('\n'));
-    }
-
-    const QString collate = m_config.readEntry(lcCollate, QString());
-    if (!collate.isEmpty()) {
-        script.append(_export + lcCollate + QLatin1Char('=') + collate + QLatin1Char('\n'));
-    }
-
-    const QString ctype = m_config.readEntry(lcCtype, QString());
-    if (!ctype.isEmpty()) {
-        script.append(_export + lcCtype + QLatin1Char('=') + ctype + QLatin1Char('\n'));
-    }
-
-    QFile file(configPath);
-    file.open(QIODevice::WriteOnly | QIODevice::Text);
-    QTextStream out(&file);
-
-    qDebug() << "Wrote script: " << configPath << "\n" << script;
-    out << script;
-    file.close();
 }
 
 void KCMFormats::save()

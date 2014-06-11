@@ -48,7 +48,6 @@ private:
 
     void readConfig();
     void writeConfig();
-    void writeExports();
 
     void updateExample();
     void updateEnabled();
