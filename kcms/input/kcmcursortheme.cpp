@@ -22,6 +22,8 @@
 #include <KPluginFactory>
 #include <KLocalizedString>
 
+#include <QVBoxLayout>
+
 K_PLUGIN_FACTORY(CursorThemeConfigFactory,
     registerPlugin<CursorThemeConfig>();
 )
