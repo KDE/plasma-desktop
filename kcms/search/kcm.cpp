@@ -25,6 +25,7 @@
 #include <QDebug>
 #include <QStandardPaths>
 #include <KLocalizedString>
+#include <KRunner/RunnerManager>
 
 #include <QVBoxLayout>
 #include <QLabel>
@@ -33,6 +34,8 @@ K_PLUGIN_FACTORY(SearchConfigModuleFactory, registerPlugin<SearchConfigModule>()
 
 SearchConfigModule::SearchConfigModule(QWidget* parent, const QVariantList& args)
     : KCModule(parent, args)
+    , m_config("krunnerrc")
+    , m_configGroup(m_config.group("PlasmaRunnerManager"))
 {
     KAboutData* about = new KAboutData("kcm_search", i18n("Configure Search"),
                                        "0.1", QString(), KAboutLicense::LGPL);
@@ -49,8 +52,6 @@ SearchConfigModule::SearchConfigModule(QWidget* parent, const QVariantList& args
 
     layout->addWidget(label);
     layout->addWidget(m_listWidget);
-
-    m_manager = new Plasma::RunnerManager(this);
 }
 
 
@@ -58,45 +59,44 @@ void SearchConfigModule::load()
 {
     m_listWidget->clear();
 
-    QStringList disabledCategories = m_manager->disabledCategories();
+    QStringList enabledCategories = m_configGroup.readEntry("enabledCategories", QStringList());
+
     KPluginInfo::List list = Plasma::RunnerManager::listRunnerInfo();
     Q_FOREACH (const KPluginInfo& info, list) {
-        QString runnerName = info.name();
-
-        Plasma::AbstractRunner* runner = info.service()->createInstance<Plasma::AbstractRunner>();
-        if (!runner)
+        QScopedPointer<Plasma::AbstractRunner> runner(info.service()->createInstance<Plasma::AbstractRunner>());
+        if (runner.isNull())
             continue;
 
         QStringList categories = runner->categories();
+        QString name = runner->name();
+
         Q_FOREACH (const QString& category, categories) {
             QListWidgetItem* item = new QListWidgetItem(category);
             item->setIcon(QIcon::fromTheme(info.icon()));
 
-            bool disabled = disabledCategories.contains(category);
-            item->setCheckState(disabled ? Qt::Unchecked : Qt::Checked);
+            bool enabled = enabledCategories.isEmpty() || enabledCategories.contains(category);
+            item->setCheckState(enabled ? Qt::Checked : Qt::Unchecked);
 
             m_listWidget->addItem(item);
         }
-
-        delete runner;
     }
 }
 
 
 void SearchConfigModule::save()
 {
-    QStringList disabledCategories;
+    QStringList enabledCategories;
     for (int i = 0; i < m_listWidget->count(); i++) {
         QListWidgetItem* item = m_listWidget->item(i);
         QString category = item->text();
 
-        bool enabled = (item->checkState() == Qt::Checked);
-        if (!enabled) {
-            disabledCategories << category;
+        if (item->checkState() == Qt::Checked) {
+            enabledCategories << category;
         }
     }
 
-    m_manager->setDisabledCategories(disabledCategories);
+    m_configGroup.writeEntry("enabledCategories", enabledCategories);
+    m_configGroup.sync();
 }
 
 void SearchConfigModule::defaults()

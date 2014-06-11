@@ -20,7 +20,8 @@
 #define _KCM_SEARCH_H
 
 #include <KCModule>
-#include <KRunner/RunnerManager>
+#include <KConfig>
+#include <KConfigGroup>
 #include <QListWidget>
 
 class SearchConfigModule : public KCModule
@@ -37,7 +38,9 @@ public Q_SLOTS:
 
 private:
     QListWidget* m_listWidget;
-    Plasma::RunnerManager* m_manager;
+
+    KConfig m_config;
+    KConfigGroup m_configGroup;
 };
 
 #endif
