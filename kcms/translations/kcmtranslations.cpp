@@ -85,7 +85,7 @@ void KCMTranslations::load()
     // Get the currently installed translations for Plasma
     // TODO May want to later add all installed .po files on system?
     m_installedTranslations.clear();
-    m_installedTranslations = KLocalizedString::availableApplicationTranslations().toList();
+    m_installedTranslations = KLocalizedString::availableApplicationTranslations("systemsettings").toList();
     if (!m_installedTranslations.contains("en_US")) {
         m_installedTranslations.append("en_US");
     }
