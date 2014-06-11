@@ -1,5 +1,8 @@
+# KI18N Translation Domain for this library
+add_definitions(-DTRANSLATION_DOMAIN=\"kcm_emoticons\")
+
 set(kcmemoticons_SRCS emoticonslist.cpp)
-qt5_wrap_ui(kcmemoticons_SRCS emoticonslist.ui)
+ki18n_wrap_ui(kcmemoticons_SRCS emoticonslist.ui)
 
 add_library(kcm_emoticons MODULE ${kcmemoticons_SRCS})
 target_link_libraries(kcm_emoticons

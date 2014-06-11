@@ -1,3 +1,5 @@
+# KI18N Translation Domain for this library
+add_definitions(-DTRANSLATION_DOMAIN=\"kcmformats\")
 
 set(kcm_formats_PART_SRCS
     kcmformats.cpp

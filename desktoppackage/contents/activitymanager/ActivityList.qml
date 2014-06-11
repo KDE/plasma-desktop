@@ -80,7 +80,7 @@ Flickable {
         var selectedItem = null;
 
         if (selectedIndex >= 0 && selectedIndex < activitiesList.count) {
-            selectedItem = activitiesList.itemAt(selectedItem);
+            selectedItem = activitiesList.itemAt(selectedIndex);
 
         } else if (root.filterString != "") {
             // If we have only one item shown, activate it. It doesn't matter

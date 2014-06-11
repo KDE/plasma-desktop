@@ -24,7 +24,7 @@ import org.kde.plasma.configuration 2.0
 import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
 
 PlasmaComponents.Button {
-    text: i18n("Screen Edge")
+    text: i18nc("org.kde.plasma.desktop", "Screen Edge")
 
     KQuickControlsAddons.MouseEventListener {
         anchors.fill: parent

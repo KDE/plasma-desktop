@@ -1,3 +1,6 @@
+# KI18N Translation Domain for this library
+add_definitions(-DTRANSLATION_DOMAIN=\"kcmkeys\")
+
 ########### next target ###############
 
 set(kcm_keys_PART_SRCS
@@ -9,7 +12,7 @@ set(kcm_keys_PART_SRCS
   export_scheme_dialog.cpp
   )
 
-qt5_wrap_ui( kcm_keys_PART_SRCS
+ki18n_wrap_ui( kcm_keys_PART_SRCS
     export_scheme_dialog.ui
     kglobalshortcutseditor.ui
     select_scheme_dialog.ui )

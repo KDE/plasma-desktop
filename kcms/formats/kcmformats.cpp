@@ -114,7 +114,10 @@ void KCMFormats::connectCombo(QComboBox *combo)
 void KCMFormats::addLocaleToCombo(QComboBox *combo, const QLocale &locale)
 {
     const QString clabel = !locale.nativeCountryName().isEmpty() ? locale.nativeCountryName() : locale.countryToString(locale.country());
-    const QString cvalue = locale.bcp47Name();
+    // This needs to use name() rather than bcp47name() or later on the export will generate a non-sense locale (e.g. "it" instead of
+    // "it_IT")
+    // TODO: Properly handle encodings (.UTF-8) and scripts (@foo)
+    const QString cvalue = locale.name();
 
     QString flagcode;
     const QStringList split = locale.name().split('_');

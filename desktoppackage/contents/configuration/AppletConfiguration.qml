@@ -114,8 +114,8 @@ Rectangle {
         id: messageDialog
         icon: StandardIcon.Warning
         property Item delegate
-        title: i18n("Apply Settings")
-        text: i18n("The settings of the current module have changed. Do you want to apply the changes or discard them?")
+        title: i18nc("org.kde.plasma.desktop", "Apply Settings")
+        text: i18nc("org.kde.plasma.desktop", "The settings of the current module have changed. Do you want to apply the changes or discard them?")
         standardButtons: StandardButton.Apply | StandardButton.Discard | StandardButton.Cancel
         onApply: {
             applyAction.trigger()
@@ -148,10 +148,7 @@ Rectangle {
             QtControls.ScrollView {
                 id: categoriesScroll
                 frameVisible: true
-                anchors {
-                    top: parent.top
-                    bottom: parent.bottom
-                }
+                Layout.fillHeight: true
                 visible: (configDialog.configModel ? configDialog.configModel.count : 0) + globalConfigModel.count > 1
                 width: visible ? 100 : 0
                 implicitWidth: width
@@ -214,10 +211,7 @@ Rectangle {
             }
             QtControls.ScrollView {
                 id: scroll
-                anchors {
-                    top: parent.top
-                    bottom: parent.bottom
-                }
+                Layout.fillHeight: true
                 Layout.fillWidth: true
                 Column {
                     width: scroll.viewport.width
@@ -239,7 +233,7 @@ Rectangle {
                         anchors {
                             left: parent.left
                         }
-                        height: main.currentItem.implicitHeight ? main.currentItem.implicitHeight : main.currentItem.childrenRect.height
+                        height: Math.max((scroll.height - pageTitle.height - parent.spacing), (main.currentItem.implicitHeight ? main.currentItem.implicitHeight : main.currentItem.childrenRect.height))
                         width: scroll.viewport.width
                         clip: true
                         property string sourceFile
@@ -293,17 +287,17 @@ Rectangle {
             Layout.alignment: Qt.AlignVCenter | Qt.AlignRight
             QtControls.Button {
                 iconName: "dialog-ok"
-                text: i18n("Ok")
+                text: i18nc("org.kde.plasma.desktop", "Ok")
                 onClicked: acceptAction.trigger()
             }
             QtControls.Button {
                 iconName: "dialog-ok-apply"
-                text: i18n("Apply")
+                text: i18nc("org.kde.plasma.desktop", "Apply")
                 onClicked: applyAction.trigger()
             }
             QtControls.Button {
                 iconName: "dialog-cancel"
-                text: i18n("Cancel")
+                text: i18nc("org.kde.plasma.desktop", "Cancel")
                 onClicked: cancelAction.trigger()
             }
         }

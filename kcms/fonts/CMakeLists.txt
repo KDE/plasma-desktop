@@ -1,3 +1,6 @@
+# KI18N Translation Domain for this library
+add_definitions(-DTRANSLATION_DOMAIN=\"kcmfonts\")
+
 if(FONTCONFIG_FOUND)
     include_directories(${FONTCONFIG_INCLUDE_DIR})
 endif()

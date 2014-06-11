@@ -47,6 +47,8 @@ find_package(KWinDBusInterface CONFIG REQUIRED)
 find_package(ScreenSaverDBusInterface CONFIG REQUIRED)
 find_package(KRunnerAppDBusInterface CONFIG REQUIRED)
 find_package(KSMServerDBusInterface CONFIG REQUIRED)
+find_package(KF5ItemModels CONFIG REQUIRED)
+find_package(KF5Emoticons CONFIG REQUIRED)
 
 find_package(KF5Activities ${KF5_VERSION})
 set_package_properties(KF5Activities PROPERTIES DESCRIPTION "management of Plasma activities"
@@ -84,6 +86,7 @@ if(X11_FOUND)
   )
   set_package_properties(XCB PROPERTIES TYPE REQUIRED)
   add_feature_info("XCB-XKB" XCB_XKB_FOUND "Required for building kcm/keyboard")
+  add_feature_info("libxft" X11_Xft_FOUND "X FreeType interface library required for font installation")
 endif()
 
 include_directories("${CMAKE_CURRENT_BINARY_DIR}")
@@ -95,7 +98,7 @@ configure_file(config-X11.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-X11.h)
 configure_file(config-runtime.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-runtime.h)
 
 set(PLASMADESKTOP_VERSION_MAJOR 4)
-set(PLASMADESKTOP_VERSION_MINOR 96)
+set(PLASMADESKTOP_VERSION_MINOR 97)
 set(PLASMADESKTOP_VERSION_PATCH 0)
 set(PLASMADESKTOP_VERSION ${PLASMADESKTOP_VERSION_MAJOR}.${PLASMADESKTOP_VERSION_MINOR}.${PLASMADESKTOP_VERSION_PATCH} )
 

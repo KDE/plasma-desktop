@@ -120,14 +120,19 @@ GroupBox {
                         model: placesModel
                         textRole: "display"
 
-                        currentIndex: enabled ? placesModel.indexForUrl(cfg_url) : 0
+                        currentIndex: Math.max(placesModel.indexForUrl(cfg_url), 0)
 
                         enabled: locationPlace.checked
 
                         onEnabledChanged: {
                             if (enabled && currentIndex != -1) {
-                                cfg_url = placesModel.urlForIndex(currentIndex);
+                                comboTimer.restart()
                             }
+                        }
+                        Timer {
+                            id: comboTimer
+                            interval: 100
+                            onTriggered: cfg_url = placesModel.urlForIndex(locationPlaceValue.currentIndex);
                         }
 
                         onActivated: {

@@ -1,3 +1,6 @@
+# KI18N Translation Domain for this library
+add_definitions(-DTRANSLATION_DOMAIN=\"kcm_standard_actions\")
+
 set(kcm_standard_actions_PART_SRCS standard_actions_module.cpp)
 
 add_library(kcm_standard_actions MODULE ${kcm_standard_actions_PART_SRCS})

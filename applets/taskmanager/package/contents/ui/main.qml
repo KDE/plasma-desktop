@@ -96,8 +96,8 @@ Item {
 
     Binding {
         target: backend.groupManager
-        property: "screen"
-        value: plasmoid.screen
+        property: "screenGeometry"
+        value: plasmoid.screenGeometry
     }
 
     Binding {

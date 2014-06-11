@@ -22,7 +22,8 @@
 #ifdef Q_OS_UNIX
 #include "componentchooserterminal.h"
 #endif
-#ifdef Q_WS_X11
+#include <config-X11.h>
+#if HAVE_X11
 #include "componentchooserwm.h"
 #endif
 
@@ -191,7 +192,7 @@ void ComponentChooser::slotServiceSelected(QListWidgetItem* it) {
 		}
 
 	}
-#ifdef Q_WS_X11
+#if HAVE_X11
 	else if (cfgType=="internal_wm")
 	{
 		if (!(configWidget && qobject_cast<CfgWm*>(configWidget)))

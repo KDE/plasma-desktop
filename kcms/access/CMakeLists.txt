@@ -1,5 +1,5 @@
-
-
+# KI18N Translation Domain for this library
+add_definitions(-DTRANSLATION_DOMAIN=\"kcmaccess\")
 
 ########### next target ###############
 find_package(Phonon4Qt5 REQUIRED NO_MODULE)

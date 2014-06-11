@@ -1,8 +1,10 @@
+# KI18N Translation Domain for this library
+add_definitions(-DTRANSLATION_DOMAIN=\"kcmsmserver\")
 
 set(kcm_smserver_PART_SRCS kcmsmserver.cpp smserverconfigimpl.cpp )
 
 
-qt5_wrap_ui(kcm_smserver_PART_SRCS smserverconfigdlg.ui )
+ki18n_wrap_ui(kcm_smserver_PART_SRCS smserverconfigdlg.ui )
 
 add_library(kcm_smserver MODULE ${kcm_smserver_PART_SRCS})
 

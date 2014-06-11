@@ -226,7 +226,7 @@ Item {
             return;
         }
 
-        if (event.key == Qt.Key_M || event.key == Qt.Key_Menu) {
+        if (event.key == Qt.Key_Menu) {
             event.accepted = true;
             openActionMenu(mouseArea);
         } else if ((event.key == Qt.Key_Enter || event.key == Qt.Key_Return) && !hasChildren) {

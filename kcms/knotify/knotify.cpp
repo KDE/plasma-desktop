@@ -161,9 +161,9 @@ void KCMKNotify::load()
 
     foreach (const QString &fullPath, fullpaths )
     {
-        int slash = fullPath.lastIndexOf( '/' ) - 1;
-        int slash2 = fullPath.lastIndexOf( '/', slash );
-        QString appname= slash2 < 0 ? QString() :  fullPath.mid( slash2+1 , slash-slash2  );
+        int slash = fullPath.lastIndexOf( '/' );
+        int dot = fullPath.lastIndexOf( '.' ) - 1;
+        QString appname = slash < 0 ? QString() :  fullPath.mid( slash + 1, dot - slash);
         if ( !appname.isEmpty() )
         {
             KConfig config(fullPath, KConfig::NoGlobals, QStandardPaths::DataLocation);

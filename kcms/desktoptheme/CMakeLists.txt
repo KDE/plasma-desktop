@@ -1,8 +1,11 @@
 # Project Needs a name ofcourse
 project(desktoptheme)
+# KI18N Translation Domain for this library
+add_definitions(-DTRANSLATION_DOMAIN=\"kcm_desktopthemedetails\")
+
 
 set(kcmdesktoptheme_SRCS kcmdesktoptheme.cpp desktopthemedetails.cpp thememodel.cpp)
-qt5_wrap_ui(kcmdesktoptheme_SRCS DesktopTheme.ui DesktopThemeDetails.ui)
+ki18n_wrap_ui(kcmdesktoptheme_SRCS DesktopTheme.ui DesktopThemeDetails.ui)
 
 add_library(kcm_desktoptheme MODULE ${kcmdesktoptheme_SRCS})
 target_link_libraries(kcm_desktoptheme ${X11_LIBRARIES}

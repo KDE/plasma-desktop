@@ -528,9 +528,7 @@ KFonts::KFonts(QWidget *parent, const QVariantList &args)
             << i18nc("font usage", "Small")         << "General"    << "smallestReadableFont" << ""
             << i18nc("font usage", "Toolbar")       << "General"    << "toolBarFont"  << ""
             << i18nc("font usage", "Menu")          << "General"    << "menuFont"     << ""
-            << i18nc("font usage", "Window title")  << "WM"         << "activeFont"   << ""
-            << i18nc("font usage", "Taskbar")       << "General"    << "taskbarFont"  << ""
-            << i18nc("font usage", "Desktop")       << "General"    << "desktopFont" << "";
+            << i18nc("font usage", "Window title")  << "WM"         << "activeFont"   << "";
 
     QList<QFont> defaultFontList;
 
@@ -550,18 +548,15 @@ KFonts::KFonts(QWidget *parent, const QVariantList &args)
     QFont f2("Sans Serif", 8); // toolbar
 #endif
     QFont f3("Sans Serif", 8); // window title
-    QFont f4("Sans Serif", 9); // taskbar
     QFont f5("Sans Serif", 8); // smallestReadableFont
 
-    defaultFontList << f0 << f1 << f5 << f2 << f0 << f3 << f4 << f0;
+    defaultFontList << f0 << f1 << f5 << f2 << f0 << f3 << f0;
 
     QList<bool> fixedList;
 
     fixedList
             <<  false
             <<  true
-            <<  false
-            <<  false
             <<  false
             <<  false
             <<  false
@@ -575,9 +570,7 @@ KFonts::KFonts(QWidget *parent, const QVariantList &args)
             << i18n("Smallest font that is still readable well.")
             << i18n("Used to display text beside toolbar icons.")
             << i18n("Used by menu bars and popup menus.")
-            << i18n("Used by the window titlebar.")
-            << i18n("Used by the taskbar.")
-            << i18n("Used for desktop icons.");
+            << i18n("Used by the window titlebar.");
 
     QVBoxLayout *layout = new QVBoxLayout(this);
     layout->setMargin(0);
