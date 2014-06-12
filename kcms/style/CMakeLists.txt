@@ -29,10 +29,10 @@ target_link_libraries(kcm_style
     KF5::Notifications
     KF5::Plasma
     ${X11_LIBRARIES}
-    KF5::KDELibs4Support KF5::NewStuff)
-if(NOT WIN32)
-    target_link_libraries(kcm_style kdecorations)
-endif()
+    KF5::KDELibs4Support
+    KF5::NewStuff
+    kdecorations
+)
 
 install(TARGETS kcm_style  DESTINATION ${PLUGIN_INSTALL_DIR})
 
