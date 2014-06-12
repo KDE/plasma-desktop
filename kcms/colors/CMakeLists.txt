@@ -19,7 +19,6 @@ target_link_libraries(kcm_colors
     ${X11_LIBRARIES})
 
 if(X11_FOUND)
-    set_target_properties(kcm_colors PROPERTIES COMPILE_FLAGS -DHAVE_X11=1)
     target_link_libraries(kcm_colors Qt5::X11Extras)
 endif()
 

@@ -23,7 +23,6 @@ add_library(kcm_fonts MODULE ${kcm_fonts_PART_SRCS})
 target_link_libraries(kcm_fonts Qt5::DBus Qt5::Xml KF5::KCMUtils KF5::I18n KF5::KDELibs4Support ${FREETYPE_LIBRARIES})
 
 if(X11_FOUND)
-    set_target_properties(kcm_fonts PROPERTIES COMPILE_FLAGS -DHAVE_X11=1)
     target_link_libraries(kcm_fonts Qt5::X11Extras)
     if(FONTCONFIG_FOUND)
         target_link_libraries(kcm_fonts ${FONTCONFIG_LIBRARIES})

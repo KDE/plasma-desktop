@@ -16,6 +16,7 @@
 *****************************************************************************/
 
 #include <config-workspace.h>
+#include <config-X11.h>
 #include <limits.h>
 #include <stdlib.h>
 #include <string.h>

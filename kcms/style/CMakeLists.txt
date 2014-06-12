@@ -18,7 +18,6 @@ qt5_add_dbus_interface(kcm_style_PART_SRCS ${klauncher_xml} klauncher_iface)
 ki18n_wrap_ui(kcm_style_PART_SRCS stylepreview.ui finetuning.ui)
 
 add_library(kcm_style MODULE ${kcm_style_PART_SRCS})
-set_target_properties(kcm_style PROPERTIES COMPILE_FLAGS -DHAVE_X11=1)
 
 target_link_libraries(kcm_style
     Qt5::X11Extras
