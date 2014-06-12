@@ -104,7 +104,7 @@ class KFONTINST_EXPORT FontInst : public QObject
     public Q_SLOTS:
 
     Q_NOREPLY    void    list(int folders, int pid);
-    Q_NOREPLY    void    stat(const QString &font, int folders, int pid);
+    Q_NOREPLY    void    statFont(const QString &font, int folders, int pid);
     Q_NOREPLY    void    install(const QString &file, bool createAfm, bool toSystem, int pid, bool checkConfig);
     Q_NOREPLY    void    uninstall(const QString &family, quint32 style, bool fromSystem, int pid, bool checkConfig);
     Q_NOREPLY    void    uninstall(const QString &name, bool fromSystem, int pid, bool checkConfig);

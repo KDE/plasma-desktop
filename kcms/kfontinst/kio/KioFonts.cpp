@@ -500,7 +500,7 @@ void CKioFonts::del(const QUrl &url, bool isFile)
         error(KIO::ERR_DOES_NOT_EXIST, url.toDisplayString());
 }
 
-void CKioFonts::stat(const QUrl &url)
+void CKioFonts::statFont(const QUrl &url)
 {
     KFI_DBUG << url;
 
@@ -771,7 +771,7 @@ Family CKioFonts::getFont(const QUrl &url, EFolder folder)
 
     KFI_DBUG << url << name;
 
-    return itsInterface->stat(name, FOLDER_SYS==folder);
+    return itsInterface->statFont(name, FOLDER_SYS==folder);
 }
 
 void CKioFonts::handleResp(int resp, const QString &file, const QString &tempFile, bool destIsSystem)
