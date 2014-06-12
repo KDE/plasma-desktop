@@ -95,11 +95,11 @@ Families FontInstInterface::list(bool system)
     return rv;
 }
 
-Family FontInstInterface::stat(const QString &file, bool system)
+Family FontInstInterface::statFont(const QString &file, bool system)
 {
     KFI_DBUG;
     Family rv;
-    itsInterface->stat(file, system ? FontInst::SYS_MASK : FontInst::USR_MASK, getpid());
+    itsInterface->statFont(file, system ? FontInst::SYS_MASK : FontInst::USR_MASK, getpid());
     if(FontInst::STATUS_OK==waitForResponse())
     {
         rv=*itsFamilies.items.begin();

@@ -34,7 +34,7 @@
       <arg name="pid" type="i" direction="in"/>
       <annotation name="org.freedesktop.DBus.Method.NoReply" value="true"/>
     </method>
-    <method name="stat">
+    <method name="statFont">
       <annotation name="com.trolltech.QtDBus.QtTypeName.Out0" value="KFI::Family"/>
       <annotation name="com.trolltech.QtDBus.QtTypeName.In0" value="KFI::Family"/>
       <arg name="name" type="s" direction="in"/>

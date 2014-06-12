@@ -157,7 +157,7 @@ void FontInst::list(int folders, int pid)
     emit fontList(pid, fonts);
 }
 
-void FontInst::stat(const QString &name, int folders, int pid)
+void FontInst::statFont(const QString &name, int folders, int pid)
 {
     KFI_DBUG << name << folders << pid;
 
