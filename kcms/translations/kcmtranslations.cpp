@@ -19,6 +19,8 @@
 
 #include "kcmtranslations.h"
 
+#include "../formats/writeexports.h"
+
 #include <KAboutData>
 #include <KActionSelector>
 #include <KLocalizedString>
@@ -26,6 +28,7 @@
 #include <KPluginFactory>
 #include <kglobalsettings.h>
 
+#include <QDebug>
 #include <QListWidget>
 #include <QListWidgetItem>
 #include <QStandardPaths>
@@ -49,7 +52,7 @@ KCMTranslations::KCMTranslations(QWidget *parent, const QVariantList &args)
     m_ui->setupUi(this);
 
     // Set the translation domain to Plasma, i.e.
-    KLocalizedString::setApplicationDomain("plasma");
+    KLocalizedString::setApplicationDomain("systemsettings");
 
     // Get the current config
     m_config = KConfigGroup(KSharedConfig::openConfig("plasma-localerc"), "Translations");
@@ -85,7 +88,7 @@ void KCMTranslations::load()
     // Get the currently installed translations for Plasma
     // TODO May want to later add all installed .po files on system?
     m_installedTranslations.clear();
-    m_installedTranslations = KLocalizedString::availableApplicationTranslations("systemsettings").toList();
+    m_installedTranslations = KLocalizedString::availableApplicationTranslations().toList();
     if (!m_installedTranslations.contains("en_US")) {
         m_installedTranslations.append("en_US");
     }
@@ -105,12 +108,12 @@ void KCMTranslations::load()
                 missingLanguages.append(languageCode);
             }
         }
-        if (!missingLanguages.isEmpty()) {
-            m_config.writeEntry("LANGUAGE", availableLanguages.join(":"), KConfig::Persistent | KConfig::Global);
-            m_config.sync();
-            m_config.config()->reparseConfiguration();
-            loadTranslations();
-        }
+        qDebug() << "Missing: av ? << " << missingLanguages << availableLanguages;
+        //m_config.writeEntry("LANGUAGE", availableLanguages.join(":"), KConfig::Persistent | KConfig::Global);
+        m_config.writeEntry("LANGUAGE", availableLanguages.join(":"));
+        m_config.sync();
+        m_config.config()->reparseConfiguration();
+        loadTranslations();
     }
 
     // Then update all the widgets to use the new settings
@@ -132,6 +135,8 @@ void KCMTranslations::load()
 // Save the new LANGUAGE setting
 void KCMTranslations::save()
 {
+    qDebug() << m_kcmTranslations.join(":");
+
     m_config.writeEntry("LANGUAGE", m_kcmTranslations.join(":"), KConfig::Persistent | KConfig::Global);
     m_config.sync();
     KMessageBox::information(this,
@@ -140,6 +145,7 @@ void KCMTranslations::save()
                              QLatin1String("LanguageChangesApplyOnlyToNewlyStartedPrograms"));
     load();
     KGlobalSettings::self()->emitChange(KGlobalSettings::SettingsChanged, KGlobalSettings::SETTINGS_LOCALE);
+    writeExports();
 }
 
 // Reimp

@@ -1,4 +1,4 @@
-/*  This file is part of the KDE workspace
+/*  This file is part of the KDE's Plasma workspace
  *  Copyright 2014 John Layt <john@layt.net>
  *
  *  This library is free software; you can redistribute it and/or
