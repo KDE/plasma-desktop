@@ -36,13 +36,13 @@ Item {
             leftMargin: units.gridUnit
         }
 
-        y: units.gridUnit / 4
+        y: Math.round(units.gridUnit / 4)
         level: 4
         text: section
     }
     Item {
         width: parent.width
-        height: units.gridUnit / 4
+        height: Math.round(units.gridUnit / 4)
         anchors.left: parent.left
         anchors.top: sectionHeading.bottom
     }
