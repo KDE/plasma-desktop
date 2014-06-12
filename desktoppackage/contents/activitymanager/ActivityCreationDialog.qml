@@ -50,6 +50,7 @@ PlasmaCore.FrameSvgItem {
     {
         y = verticalPosition - height / 2;
         opacity = 1;
+        activityNameText.forceActiveFocus();
     }
 
     function close()
