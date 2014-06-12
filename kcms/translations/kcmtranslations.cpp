@@ -55,7 +55,7 @@ KCMTranslations::KCMTranslations(QWidget *parent, const QVariantList &args)
     KLocalizedString::setApplicationDomain("systemsettings");
 
     // Get the current config
-    m_config = KConfigGroup(KSharedConfig::openConfig("plasma-localerc"), "Translations");
+    m_config = KConfigGroup(KSharedConfig::openConfig(configFile), "Translations");
 
     // Set up UI to respond to user changing the translation selection
     connect(m_ui->m_selectTranslations,         SIGNAL(added( QListWidgetItem*)),
@@ -108,8 +108,6 @@ void KCMTranslations::load()
                 missingLanguages.append(languageCode);
             }
         }
-        qDebug() << "Missing: av ? << " << missingLanguages << availableLanguages;
-        //m_config.writeEntry("LANGUAGE", availableLanguages.join(":"), KConfig::Persistent | KConfig::Global);
         m_config.writeEntry("LANGUAGE", availableLanguages.join(":"));
         m_config.sync();
         m_config.config()->reparseConfiguration();
