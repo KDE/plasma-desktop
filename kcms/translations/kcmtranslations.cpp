@@ -51,7 +51,7 @@ KCMTranslations::KCMTranslations(QWidget *parent, const QVariantList &args)
 
     m_ui->setupUi(this);
 
-    // Set the translation domain to Plasma, i.e.
+    // Set the translation domain
     KLocalizedString::setApplicationDomain("kcmtranslations");
 
     // Get the current config
@@ -88,6 +88,9 @@ void KCMTranslations::load()
     // Get the currently installed translations for Plasma
     // TODO May want to later add all installed .po files on system?
     m_installedTranslations.clear();
+
+    // We reset the application domain temporarily, so available translations for
+    // "systemsettings" are searched, not this KCM.
     KLocalizedString::setApplicationDomain("systemsettings");
     m_installedTranslations = KLocalizedString::availableApplicationTranslations().toList();
     KLocalizedString::setApplicationDomain("kcmtranslations");
@@ -103,7 +106,7 @@ void KCMTranslations::load()
     // If any missing remove them and save the settings, then tell the user
     QStringList missingLanguages;
     QStringList availableLanguages;
-    if (!m_config.isEntryImmutable("LANGUAGE")) {
+    if (!m_config.isEntryImmutable(lcLanguage)) {
         foreach (const QString &languageCode, m_kcmTranslations) {
             if (m_installedTranslations.contains(languageCode)) {
                 availableLanguages.append(languageCode);
@@ -111,7 +114,7 @@ void KCMTranslations::load()
                 missingLanguages.append(languageCode);
             }
         }
-        m_config.writeEntry("LANGUAGE", availableLanguages.join(":"));
+        m_config.writeEntry(lcLanguage, availableLanguages.join(":"));
         m_config.sync();
         m_config.config()->reparseConfiguration();
         loadTranslations();
@@ -138,7 +141,7 @@ void KCMTranslations::save()
 {
     qDebug() << m_kcmTranslations.join(":");
 
-    m_config.writeEntry("LANGUAGE", m_kcmTranslations.join(":"), KConfig::Persistent | KConfig::Global);
+    m_config.writeEntry(lcLanguage, m_kcmTranslations.join(":"), KConfig::Persistent | KConfig::Global);
     m_config.sync();
     KMessageBox::information(this,
                              i18n("Your changes will take effect the next time you log in."),
@@ -155,7 +158,9 @@ void KCMTranslations::save()
 void KCMTranslations::defaults()
 {
     // Get the users LANG setting, or if empty the system LANG
-    QString lang = m_config.readEntry("LANG", QString());
+    KConfigGroup formatsConfig = KConfigGroup(KSharedConfig::openConfig(configFile), "Formats");
+
+    QString lang = formatsConfig.readEntry("LANG", QString());
     if (lang.isEmpty() || !m_installedTranslations.contains(lang))
         lang = QLocale::system().name();
     if (!m_installedTranslations.contains(lang))
@@ -172,7 +177,7 @@ void KCMTranslations::defaults()
 void KCMTranslations::loadTranslations()
 {
     // Load the user translations
-    m_configTranslations = m_config.readEntry("LANGUAGE", QString());
+    m_configTranslations = m_config.readEntry(lcLanguage, QString());
     m_kcmTranslations.clear();
     m_kcmTranslations = m_configTranslations.split(':', QString::SkipEmptyParts);
 }
@@ -264,7 +269,7 @@ void KCMTranslations::initTranslations()
     }
 
     // If the setting is locked down by Kiosk, then don't let the user make any changes
-    if (m_config.isEntryImmutable("LANGUAGE")) {
+    if (m_config.isEntryImmutable(lcLanguage)) {
         m_ui->m_selectTranslations->setEnabled(false);
     }
 
