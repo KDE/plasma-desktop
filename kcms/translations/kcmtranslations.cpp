@@ -52,7 +52,7 @@ KCMTranslations::KCMTranslations(QWidget *parent, const QVariantList &args)
     m_ui->setupUi(this);
 
     // Set the translation domain to Plasma, i.e.
-    KLocalizedString::setApplicationDomain("systemsettings");
+    KLocalizedString::setApplicationDomain("kcmtranslations");
 
     // Get the current config
     m_config = KConfigGroup(KSharedConfig::openConfig(configFile), "Translations");
@@ -88,7 +88,10 @@ void KCMTranslations::load()
     // Get the currently installed translations for Plasma
     // TODO May want to later add all installed .po files on system?
     m_installedTranslations.clear();
+    KLocalizedString::setApplicationDomain("systemsettings");
     m_installedTranslations = KLocalizedString::availableApplicationTranslations().toList();
+    KLocalizedString::setApplicationDomain("kcmtranslations");
+
     if (!m_installedTranslations.contains("en_US")) {
         m_installedTranslations.append("en_US");
     }
@@ -241,7 +244,11 @@ void KCMTranslations::initTranslations()
         if (!m_kcmTranslations.contains(languageCode)) {
             QListWidgetItem *listItem = new QListWidgetItem(m_ui->m_selectTranslations->availableListWidget());
             // TODO This gives the name in the language itself, not in current language, need new QLocale api for that
-            listItem->setText(QLocale(languageCode).nativeLanguageName());
+            QString label = QLocale(languageCode).nativeLanguageName();
+            if (label.isEmpty()) {
+                label = languageCode;
+            }
+            listItem->setText(label);
             listItem->setData(Qt::UserRole, languageCode);
         }
     }
