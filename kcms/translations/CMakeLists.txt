@@ -1,9 +1,8 @@
-
-########### next target ###############
+add_definitions(-DTRANSLATION_DOMAIN=\"kcmtranslations\")
 
 set(kcm_translations_PART_SRCS kcmtranslations.cpp)
 
-qt5_wrap_ui(kcm_translations_PART_SRCS kcmtranslationswidget.ui)
+ki18n_wrap_ui(kcm_translations_PART_SRCS kcmtranslationswidget.ui)
 
 add_library(kcm_translations ${kcm_translations_PART_SRCS})
 
