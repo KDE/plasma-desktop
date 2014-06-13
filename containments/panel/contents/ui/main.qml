@@ -43,6 +43,7 @@ DragDrop.DropArea {
 
     property Item toolBox
 
+
     property Item dragOverlay
 
     property bool isHorizontal: plasmoid.formFactor != PlasmaCore.Types.Vertical
@@ -71,6 +72,7 @@ function addApplet(applet, x, y) {
     // Fall through to determining an appropriate insert position.
     } else {
         var before = null;
+        container.animationsEnabled = false;
 
         if (lastSpacer.parent === currentLayout) {
             before = lastSpacer;
@@ -103,6 +105,9 @@ function addApplet(applet, x, y) {
         } else {
             container.parent = currentLayout;
         }
+
+        //event compress the enable of animations
+        startupTimer.restart();
     }
 
     if (applet.Layout.fillWidth) {
@@ -219,7 +224,12 @@ function checkLastSpacer() {
 
     Plasmoid.onFormFactorChanged: containmentSizeSyncTimer.restart();
     Plasmoid.onImmutableChanged: containmentSizeSyncTimer.restart();
-    onToolBoxChanged: containmentSizeSyncTimer.restart();
+    onToolBoxChanged: {
+        containmentSizeSyncTimer.restart();
+        if (startupTimer.running) {
+            startupTimer.restart();
+        }
+    }
 //END connections
 
 //BEGIN components
@@ -228,6 +238,7 @@ function checkLastSpacer() {
         Item {
             id: container
             visible: false
+            property bool animationsEnabled: true
 
             Layout.fillWidth: applet && applet.Layout.fillWidth
             Layout.onFillWidthChanged: {
@@ -268,6 +279,10 @@ function checkLastSpacer() {
                 anchors.centerIn: parent
             }
             onXChanged: {
+                if (!animationsEnabled) {
+                    startupTimer.restart();
+                    return;
+                }
                 translation.x = oldX - x
                 translation.y = oldY - y
                 translAnim.running = true
@@ -275,6 +290,10 @@ function checkLastSpacer() {
                 oldY = y
             }
             onYChanged: {
+                if (!animationsEnabled) {
+                    startupTimer.restart();
+                    return;
+                }
                 translation.x = oldX - x
                 translation.y = oldY - y
                 translAnim.running = true
@@ -344,9 +363,15 @@ function checkLastSpacer() {
 
     onWidthChanged: {
         containmentSizeSyncTimer.restart()
+        if (startupTimer.running) {
+            startupTimer.restart();
+        }
     }
     onHeightChanged: {
         containmentSizeSyncTimer.restart()
+        if (startupTimer.running) {
+            startupTimer.restart();
+        }
     }
 
     Timer {
@@ -358,6 +383,17 @@ function checkLastSpacer() {
             currentLayout.width = root.width - (isHorizontal && toolBox && toolBox.visible ? toolBox.width : 0)
             currentLayout.height = root.height - (!isHorizontal && toolBox && toolBox.visible ? toolBox.height : 0)
             currentLayout.isLayoutHorizontal = isHorizontal
+        }
+    }
+
+    //FIXME: I don't see other ways at the moment a way to see when the UI is REALLY ready
+    Timer {
+        id: startupTimer
+        interval: 4000
+        onTriggered: {
+            for (var i = 0; i < currentLayout.children.length; ++i) {
+                currentLayout.children[i].animationsEnabled = true;
+            }
         }
     }
 //END UI elements
