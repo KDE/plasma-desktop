@@ -41,7 +41,7 @@ PlasmaComponents.TabButton {
         onClicked: button.clicked()
     }
 
-    QIconItem {
+    PlasmaCore.IconItem {
         id: iconElement
 
         anchors {
@@ -52,7 +52,7 @@ PlasmaComponents.TabButton {
         width: units.iconSizes.medium
         height: width
 
-        icon: iconSource
+        source: iconSource
     }
     PlasmaComponents.Label {
         id: labelElement
