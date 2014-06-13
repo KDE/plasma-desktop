@@ -177,6 +177,7 @@ PlasmaCore.FrameSvgItem {
             id: acceptButton
 
             text: i18n("Create")
+            enabled: activityNameText.text.trim().length > 0
             iconSource: "list-add"
             onClicked: {
                 root.close();
