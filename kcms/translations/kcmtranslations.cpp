@@ -228,7 +228,11 @@ void KCMTranslations::initTranslations()
     foreach (const QString &languageCode, m_kcmTranslations) {
         QListWidgetItem *listItem = new QListWidgetItem(m_ui->m_selectTranslations->selectedListWidget());
         // TODO This gives the name in the language itself, not in current language, need new QLocale api for that
-        listItem->setText(QLocale(languageCode).nativeLanguageName());
+        QString label = QLocale(languageCode).nativeLanguageName();
+        if (label.isEmpty()) {
+            label = languageCode;
+        }
+        listItem->setText(label);
         listItem->setData(Qt::UserRole, languageCode);
     }
 
