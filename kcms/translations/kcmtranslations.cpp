@@ -58,13 +58,13 @@ KCMTranslations::KCMTranslations(QWidget *parent, const QVariantList &args)
     m_config = KConfigGroup(KSharedConfig::openConfig(configFile), "Translations");
 
     // Set up UI to respond to user changing the translation selection
-    connect(m_ui->m_selectTranslations,         SIGNAL(added( QListWidgetItem*)),
+    connect(m_ui->m_selectTranslations,         SIGNAL(added(QListWidgetItem*)),
             this,                               SLOT(changedTranslationsSelected(QListWidgetItem*)));
-    connect(m_ui->m_selectTranslations,         SIGNAL(removed( QListWidgetItem*)),
+    connect(m_ui->m_selectTranslations,         SIGNAL(removed(QListWidgetItem*)),
             this,                               SLOT(changedTranslationsAvailable(QListWidgetItem*)));
-    connect(m_ui->m_selectTranslations,         SIGNAL(movedUp( QListWidgetItem*)),
+    connect(m_ui->m_selectTranslations,         SIGNAL(movedUp(QListWidgetItem*)),
             this,                               SLOT(changedTranslationsSelected(QListWidgetItem*)));
-    connect(m_ui->m_selectTranslations,         SIGNAL(movedDown( QListWidgetItem*)),
+    connect(m_ui->m_selectTranslations,         SIGNAL(movedDown(QListWidgetItem*)),
             this,                               SLOT(changedTranslationsSelected(QListWidgetItem*)));
 
     // If user clicks the Install button, trigger distro specific install routine
@@ -107,7 +107,7 @@ void KCMTranslations::load()
     QStringList missingLanguages;
     QStringList availableLanguages;
     if (!m_config.isEntryImmutable(lcLanguage)) {
-        foreach (const QString &languageCode, m_kcmTranslations) {
+        foreach(const QString & languageCode, m_kcmTranslations) {
             if (m_installedTranslations.contains(languageCode)) {
                 availableLanguages.append(languageCode);
             } else {
@@ -124,14 +124,14 @@ void KCMTranslations::load()
     initWidgets();
 
     // Now we have a ui built tell the user about the missing languages
-    foreach (const QString &languageCode, missingLanguages) {
+    foreach(const QString & languageCode, missingLanguages) {
         KMessageBox::information(this, ki18n("You have the language with code '%1' in your list "
                                              "of languages to use for translation but the "
                                              "localization files for it could not be found. The "
                                              "language has been removed from your configuration. "
                                              "If you want to add it again please install the "
                                              "localization files for it and add the language again.")
-                                             .subs(languageCode).toString());
+                                 .subs(languageCode).toString());
     }
 }
 
@@ -161,10 +161,12 @@ void KCMTranslations::defaults()
     KConfigGroup formatsConfig = KConfigGroup(KSharedConfig::openConfig(configFile), "Formats");
 
     QString lang = formatsConfig.readEntry("LANG", QString());
-    if (lang.isEmpty() || !m_installedTranslations.contains(lang))
+    if (lang.isEmpty() || !m_installedTranslations.contains(lang)) {
         lang = QLocale::system().name();
-    if (!m_installedTranslations.contains(lang))
+    }
+    if (!m_installedTranslations.contains(lang)) {
         lang = QStringLiteral("en_US");
+    }
 
     // Use the available lang as the default
     m_kcmTranslations.clear();
@@ -205,13 +207,13 @@ void KCMTranslations::initTranslations()
 {
     m_ui->m_selectTranslations->blockSignals(true);
 
-    m_ui->m_selectTranslations->setAvailableLabel(ki18n( "Available Languages:" ).toString());
+    m_ui->m_selectTranslations->setAvailableLabel(ki18n("Available Languages:").toString());
     QString availableHelp = ki18n("<p>This is the list of installed KDE Plasma language "
                                   "translations not currently being used.  To use a language "
                                   "translation move it to the 'Preferred Languages' list in "
                                   "the order of preference.  If no suitable languages are "
                                   "listed, then you may need to install more language packages "
-                                  "using your usual installation method.</p>" ).toString();
+                                  "using your usual installation method.</p>").toString();
     m_ui->m_selectTranslations->availableListWidget()->setToolTip(availableHelp);
     m_ui->m_selectTranslations->availableListWidget()->setWhatsThis(availableHelp);
 
@@ -233,7 +235,7 @@ void KCMTranslations::initTranslations()
     m_ui->m_selectTranslations->selectedListWidget()->clear();
 
     // Load each user selected language into the selected list
-    foreach (const QString &languageCode, m_kcmTranslations) {
+    foreach(const QString & languageCode, m_kcmTranslations) {
         QListWidgetItem *listItem = new QListWidgetItem(m_ui->m_selectTranslations->selectedListWidget());
         // TODO This gives the name in the language itself, not in current language, need new QLocale api for that
         QString label = QLocale(languageCode).nativeLanguageName();
@@ -245,7 +247,7 @@ void KCMTranslations::initTranslations()
     }
 
     // Load all the available languages the user hasn't selected into the available list
-    foreach ( const QString &languageCode, m_installedTranslations ) {
+    foreach(const QString & languageCode, m_installedTranslations) {
         if (!m_kcmTranslations.contains(languageCode)) {
             QListWidgetItem *listItem = new QListWidgetItem(m_ui->m_selectTranslations->availableListWidget());
             // TODO This gives the name in the language itself, not in current language, need new QLocale api for that
@@ -306,7 +308,7 @@ void KCMTranslations::changedTranslations()
 void KCMTranslations::initTranslationsInstall()
 {
     m_ui->m_buttonTranslationsInstall->blockSignals(true);
-    m_ui->m_buttonTranslationsInstall->setText( ki18n("Install more languages").toString());
+    m_ui->m_buttonTranslationsInstall->setText(ki18n("Install more languages").toString());
     QString helpText = ki18n("<p>Click here to install more languages</p>").toString();
     m_ui->m_buttonTranslationsInstall->setToolTip(helpText);
     m_ui->m_buttonTranslationsInstall->setWhatsThis(helpText);

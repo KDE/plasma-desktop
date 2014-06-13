@@ -32,8 +32,9 @@ class KPushButton;
 class KComboBox;
 class KIntNumInput;
 
-namespace Ui {
-  class KCMTranslationsWidget;
+namespace Ui
+{
+class KCMTranslationsWidget;
 }
 
 /**
@@ -57,8 +58,8 @@ public:
 
 private Q_SLOTS:
 
-    void changedTranslationsAvailable( QListWidgetItem * item );
-    void changedTranslationsSelected( QListWidgetItem * item );
+    void changedTranslationsAvailable(QListWidgetItem *item);
+    void changedTranslationsSelected(QListWidgetItem *item);
 
     void installTranslations();
 
