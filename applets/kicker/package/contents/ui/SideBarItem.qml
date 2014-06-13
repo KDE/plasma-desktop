@@ -71,7 +71,11 @@ Item {
     MouseEventListener {
         id: listener
 
-        anchors.fill: parent
+        anchors {
+            fill: parent
+            leftMargin: - sideBar.margins.left
+            rightMargin: - sideBar.margins.right
+        }
 
         enabled: (item.parent && !item.parent.animating)
 

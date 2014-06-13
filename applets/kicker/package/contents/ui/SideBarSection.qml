@@ -55,8 +55,6 @@ DropArea {
         property bool animating: false
         property int animationDuration: resetAnimationDurationTimer.interval
 
-        clip: true
-
         move: Transition {
             SequentialAnimation {
                 PropertyAction { target: flow; property: "animating"; value: true }
