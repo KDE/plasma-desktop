@@ -312,7 +312,7 @@ Item {
 
         anchors.bottom: mainRow.bottom
         anchors.left: parent.left
-        anchors.leftMargin: sideBar.width + mainRow.spacing + units.smallSpacing
+        anchors.leftMargin: (Qt.application.layoutDirection == Qt.LeftToRight) ? sideBar.width + mainRow.spacing + units.smallSpacing : 0
 
         width: rootList.width - (2 * units.smallSpacing)
 
@@ -352,7 +352,7 @@ Item {
 
             PropertyChanges {
                 target: searchField
-                anchors.leftMargin: sideBar.width + mainRow.spacing + units.smallSpacing
+                anchors.leftMargin: (Qt.application.layoutDirection == Qt.LeftToRight) ? sideBar.width + mainRow.spacing + units.smallSpacing : 0
                 anchors.rightMargin: undefined
             }
         },
@@ -372,7 +372,7 @@ Item {
             PropertyChanges {
                 target: searchField
                 anchors.leftMargin: undefined
-                anchors.rightMargin: sideBar.width + mainRow.spacing + units.smallSpacing
+                anchors.rightMargin: (Qt.application.layoutDirection == Qt.LeftToRight) ? sideBar.width + mainRow.spacing + units.smallSpacing : 0
             }
         }]
 
