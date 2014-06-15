@@ -51,9 +51,6 @@ KCMTranslations::KCMTranslations(QWidget *parent, const QVariantList &args)
 
     m_ui->setupUi(this);
 
-    // Set the translation domain
-    KLocalizedString::setApplicationDomain("kcmtranslations");
-
     // Get the current config
     m_config = KConfigGroup(KSharedConfig::openConfig(configFile), "Translations");
 
@@ -89,11 +86,7 @@ void KCMTranslations::load()
     // TODO May want to later add all installed .po files on system?
     m_installedTranslations.clear();
 
-    // We reset the application domain temporarily, so available translations for
-    // "systemsettings" are searched, not this KCM.
-    KLocalizedString::setApplicationDomain("systemsettings");
-    m_installedTranslations = KLocalizedString::availableApplicationTranslations().toList();
-    KLocalizedString::setApplicationDomain("kcmtranslations");
+    m_installedTranslations = KLocalizedString::availableDomainTranslations("systemsettings").toList();
 
     if (!m_installedTranslations.contains("en_US")) {
         m_installedTranslations.append("en_US");
