@@ -773,7 +773,7 @@ QList<QUrl> FolderModel::selectedUrls(bool forTrash) const
 
         if (forTrash) {
             // Prefer the local URL if there is one, since we can't trash remote URL's
-            const QString path = item.localPath();
+            const QString path = item.mostLocalUrl().toString();
             if (!path.isEmpty()) {
                 urls.append(path);
             } else {
