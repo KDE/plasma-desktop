@@ -213,6 +213,7 @@ DragDrop.DropArea {
 
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
+        wrapMode: Text.Wrap
     }
 
     ToolTipDelegate {
