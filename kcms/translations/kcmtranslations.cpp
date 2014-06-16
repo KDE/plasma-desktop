@@ -55,18 +55,18 @@ KCMTranslations::KCMTranslations(QWidget *parent, const QVariantList &args)
     m_config = KConfigGroup(KSharedConfig::openConfig(configFile), "Translations");
 
     // Set up UI to respond to user changing the translation selection
-    connect(m_ui->m_selectTranslations,         SIGNAL(added(QListWidgetItem*)),
-            this,                               SLOT(changedTranslationsSelected(QListWidgetItem*)));
-    connect(m_ui->m_selectTranslations,         SIGNAL(removed(QListWidgetItem*)),
-            this,                               SLOT(changedTranslationsAvailable(QListWidgetItem*)));
-    connect(m_ui->m_selectTranslations,         SIGNAL(movedUp(QListWidgetItem*)),
-            this,                               SLOT(changedTranslationsSelected(QListWidgetItem*)));
-    connect(m_ui->m_selectTranslations,         SIGNAL(movedDown(QListWidgetItem*)),
-            this,                               SLOT(changedTranslationsSelected(QListWidgetItem*)));
+    connect(m_ui->m_selectTranslations, &KActionSelector::added,
+            this,                       &KCMTranslations::changedTranslationsSelected);
+    connect(m_ui->m_selectTranslations, &KActionSelector::removed,
+            this,                       &KCMTranslations::changedTranslationsAvailable);
+    connect(m_ui->m_selectTranslations, &KActionSelector::movedUp,
+            this,                       &KCMTranslations::changedTranslationsSelected);
+    connect(m_ui->m_selectTranslations, &KActionSelector::movedDown,
+            this,                       &KCMTranslations::changedTranslationsSelected);
 
     // If user clicks the Install button, trigger distro specific install routine
-    connect(m_ui->m_buttonTranslationsInstall,  SIGNAL(clicked()),
-            this,                               SLOT(installTranslations()));
+    connect(m_ui->m_buttonTranslationsInstall,  &QPushButton::clicked,
+            this,                               &KCMTranslations::installTranslations);
 
     // Hide the Install button, this will be activated by those distros that support this feature.
     m_ui->m_buttonTranslationsInstall->setHidden(true);
