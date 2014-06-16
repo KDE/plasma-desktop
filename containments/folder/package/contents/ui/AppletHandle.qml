@@ -289,6 +289,9 @@ KQuickControlsAddons.MouseEventListener {
             elementId: "close"
             iconSize: root.iconSize
             visible: {
+                if (!applet) {
+                    return false;
+                }
                 var a = applet.action("remove");
                 return (a && typeof(a) != "undefined") ? a.enabled : false;
             }
