@@ -29,14 +29,13 @@ class SystemSettings : public QObject
     Q_OBJECT
 
     Q_PROPERTY(bool singleClick READ singleClick NOTIFY singleClickChanged)
-    Q_PROPERTY(int doubleClickInterval READ doubleClickInterval)
 
     public:
         SystemSettings(QObject *parent = 0);
         ~SystemSettings();
 
         bool singleClick() const;
-        int doubleClickInterval() const; // FIXME TODO: Make notifyable.
+        Q_INVOKABLE int doubleClickInterval() const;
 
         bool eventFilter(QObject *watched, QEvent *event);
 
