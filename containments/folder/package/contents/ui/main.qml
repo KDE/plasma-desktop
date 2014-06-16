@@ -33,6 +33,9 @@ DragDrop.DropArea {
     id: root
     objectName: "folder"
 
+    width: units.gridUnit * 32
+    height: units.gridUnit * 20
+
     property bool isContainment: ("containmentType" in plasmoid)
     property Item label: null
     property Item toolBox

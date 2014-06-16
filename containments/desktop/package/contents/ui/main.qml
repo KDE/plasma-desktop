@@ -67,7 +67,11 @@ DragDrop.DropArea {
         if (e != "") {
             print("Error loading AppletAppearance.qml: " + component.errorString());
         }
-
+print("AAAAA"+applet.width+" "+applet.implicitWidth+applet.Layout)
+if (applet.Layout) {
+print("BB"+applet.Layout.preferredWidth)
+print(Layout.minimumWidth)
+}
         var container = component.createObject(resultsFlow)
 
         applet.parent = container
