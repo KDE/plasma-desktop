@@ -63,7 +63,11 @@ void SearchConfigModule::load()
 
     KPluginInfo::List list = Plasma::RunnerManager::listRunnerInfo();
     Q_FOREACH (const KPluginInfo& info, list) {
-        QScopedPointer<Plasma::AbstractRunner> runner(info.service()->createInstance<Plasma::AbstractRunner>());
+        QVariantList args;
+        args << info.service()->storageId();
+
+        Plasma::AbstractRunner* r = info.service()->createInstance<Plasma::AbstractRunner>(this, args);
+        QScopedPointer<Plasma::AbstractRunner> runner(r);
         if (runner.isNull())
             continue;
 
@@ -72,7 +76,7 @@ void SearchConfigModule::load()
 
         Q_FOREACH (const QString& category, categories) {
             QListWidgetItem* item = new QListWidgetItem(category);
-            item->setIcon(QIcon::fromTheme(info.icon()));
+            item->setIcon(runner->categoryIcon(category));
 
             bool enabled = enabledCategories.isEmpty() || enabledCategories.contains(category);
             item->setCheckState(enabled ? Qt::Checked : Qt::Unchecked);
