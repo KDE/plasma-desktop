@@ -3,7 +3,7 @@ set(kcm_attica_PART_SRCS
     atticamodule.cpp
 )
 
-qt5_wrap_ui(kcm_attica_PART_SRCS providermanagement.ui providerconfigwidget.ui)
+ki18n_wrap_ui(kcm_attica_PART_SRCS providermanagement.ui providerconfigwidget.ui)
 
 add_library(kcm_attica MODULE ${kcm_attica_PART_SRCS})
 
