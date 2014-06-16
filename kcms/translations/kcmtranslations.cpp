@@ -26,7 +26,6 @@
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <KPluginFactory>
-#include <kglobalsettings.h>
 
 #include <QDebug>
 #include <QListWidget>
@@ -141,7 +140,6 @@ void KCMTranslations::save()
                              i18n("Applying Language Settings"),
                              QLatin1String("LanguageChangesApplyOnlyToNewlyStartedPrograms"));
     load();
-    KGlobalSettings::self()->emitChange(KGlobalSettings::SettingsChanged, KGlobalSettings::SETTINGS_LOCALE);
     writeExports();
 }
 

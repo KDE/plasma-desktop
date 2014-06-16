@@ -10,7 +10,6 @@ target_link_libraries(kcm_translations
     Qt5::Widgets
     KF5::KCMUtils
     KF5::I18n
-    KF5::KDELibs4Support
 )
 
 ########### install files ###############
