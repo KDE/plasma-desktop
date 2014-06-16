@@ -141,9 +141,21 @@ void ContainmentInterface::addLauncher(ContainmentInterface::Target target, cons
                     return;
                 }
 
-                QQuickItem *rootItem = gObj->childItems().first();
+                QQuickItem *rootItem = 0;
 
-                QMetaObject::invokeMethod(rootItem, "addLauncher", Q_ARG(QVariant, QUrl::fromLocalFile(entryPath)));
+                foreach(QQuickItem *item, gObj->childItems()) {
+                    if (item->objectName() == QStringLiteral("folder")) {
+                        rootItem = item;
+
+                        break;
+                    }
+                }
+
+                rootItem = gObj->childItems().at(1);
+
+                if (rootItem) {
+                    QMetaObject::invokeMethod(rootItem, "addLauncher", Q_ARG(QVariant, QUrl::fromLocalFile(entryPath)));
+                }
             } else {
                 containment->createApplet("org.kde.plasma.icon", QVariantList() << entryPath);
             }

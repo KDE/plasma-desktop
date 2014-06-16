@@ -31,6 +31,7 @@ import "plasmapackage:/code/LayoutManager.js" as LayoutManager
 
 DragDrop.DropArea {
     id: root
+    objectName: "folder"
 
     property bool isContainment: ("containmentType" in plasmoid)
     property Item label: null
