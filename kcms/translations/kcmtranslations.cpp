@@ -86,10 +86,6 @@ void KCMTranslations::load()
 
     m_installedTranslations = KLocalizedString::availableDomainTranslations("systemsettings").toList();
 
-    if (!m_installedTranslations.contains("en_US")) {
-        m_installedTranslations.append("en_US");
-    }
-
     // Load the current user translations
     loadTranslations();
 
