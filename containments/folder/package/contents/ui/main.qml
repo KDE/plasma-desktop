@@ -163,6 +163,8 @@ DragDrop.DropArea {
     Connections {
         target: plasmoid
 
+        ignoreUnknownSignals: true
+
         onAppletAdded: {
             addApplet(applet, x, y);
             //clean any eventual invalid chunks in the config
