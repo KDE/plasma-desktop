@@ -28,7 +28,6 @@
 
 #include "display.h"
 #include <KPluginFactory>
-#include <KPluginLoader>
 
 K_PLUGIN_FACTORY(DisplayFactory,
         registerPlugin<KCMDisplay>();
@@ -40,7 +39,7 @@ KCMDisplay::KCMDisplay( QWidget *parent, const QVariantList & )
 {
   m_tabs = new QTabWidget( this );
 
-  addTab( "randr", i18n( "Size && Orientation" ) );
+  addTab( "randr", i18n( "Size && Orientation" ) ); // TODO this should load kscreen?
   addTab( "nvidiadisplay", i18n( "Graphics Adaptor" ) );
   addTab( "nvidia3d", i18n( "3D Options" ) );
   addTab( "kgamma", i18n( "Monitor Gamma" ) );

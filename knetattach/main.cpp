@@ -20,11 +20,13 @@
 #include <k4aboutdata.h>
 #include <KApplication>
 #include <KCmdLineArgs>
-#include <KLocale>
+#include <KLocalizedString>
 
 #include "knetattach.h"
 
 int main(int argc, char **argv) {
+    KLocalizedString::setApplicationDomain("knetattach");
+
 	K4AboutData about("knetattach", 0, ki18n("KDE Network Wizard"), "1.0",
 		ki18n("KDE Network Wizard"),
 		K4AboutData::License_GPL,
@@ -37,9 +39,8 @@ int main(int argc, char **argv) {
 	KApplication a;
 
 	KNetAttach na;
-        a.connect( &a, SIGNAL(lastWindowClosed()), &a, SLOT(quit()) );
+    a.connect( &a, SIGNAL(lastWindowClosed()), &a, SLOT(quit()) );
 	na.show();
 
 	return a.exec();
 }
-

@@ -1,4 +1,5 @@
 ################# KDE PLUGIN for LibAttica #################
+add_definitions(-DTRANSLATION_DOMAIN=\"attica_kde\")
 
 set(attica_kde_SRCS
     kdeplatformdependent.cpp
