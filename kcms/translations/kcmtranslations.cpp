@@ -215,9 +215,6 @@ void KCMTranslations::initTranslations()
     m_ui->m_selectTranslations->selectedListWidget()->setToolTip(selectedHelp);
     m_ui->m_selectTranslations->selectedListWidget()->setWhatsThis(selectedHelp);
 
-    QString enUS;
-    QString defaultLang = i18nc("%1 = default language name", "%1 (Default)", enUS);
-
     // Clear the selector before reloading
     m_ui->m_selectTranslations->availableListWidget()->clear();
     m_ui->m_selectTranslations->selectedListWidget()->clear();
