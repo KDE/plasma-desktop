@@ -138,7 +138,7 @@ Item {
 
     Row {
         id: buttonLayout
-        x: !buttonMouse.dragging && isCorner ? units.smallSpacing*2 : 0
+        x: isCorner ? units.smallSpacing*2 : 0
         spacing: units.smallSpacing
 
         Behavior on x {
