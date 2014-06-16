@@ -182,6 +182,7 @@ class FolderModel : public QSortFilterProxyModel
         void updatePasteAction();
         QList<QUrl> selectedUrls(bool forTrash) const;
         KDirModel *m_dirModel;
+        QString m_url;
         QItemSelectionModel *m_selectionModel;
         QPointer<KFilePreviewGenerator> m_previewGenerator;
         QPointer<KAbstractViewAdapter> m_viewAdapter;
