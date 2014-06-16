@@ -35,7 +35,7 @@ Item {
     rotation: isHorizontal ? 0 : -90;
 
     transform: Translate {
-        x: state == "left" ? -height : state == "right" ? height : 0
+        x: state == "left" ? -width/2 + height/2 : state == "right" ? +width/2 - height/2 : 0
         Behavior on x {
             NumberAnimation {
                 duration: units.shortDuration * 3;
