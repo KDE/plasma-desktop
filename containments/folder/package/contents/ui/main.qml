@@ -379,6 +379,8 @@ DragDrop.DropArea {
 
     Component.onCompleted: {
         if (!isContainment) {
+            root.label = labelComponent.createObject(root);
+
             return;
         }
 
@@ -398,7 +400,5 @@ DragDrop.DropArea {
         }
         //clean any eventual invalid chunks in the config
         LayoutManager.save();
-
-        root.label = labelComponent.createObject(root);
     }
 }
