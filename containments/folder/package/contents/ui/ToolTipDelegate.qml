@@ -18,6 +18,7 @@
  ***************************************************************************/
 
 import QtQuick 2.0
+import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
@@ -41,8 +42,8 @@ Item {
 
             anchors.verticalCenter: parent.verticalCenter
 
-            width: toolTip ? theme.iconSize.medium : 0
-            height: toolTip ? theme.iconSize.medium : 0
+            width: toolTip ? units.iconSizes.medium : 0
+            height: toolTip ? units.iconSizes.medium : 0
 
             source: toolTip ? toolTip.icon : null
         }
