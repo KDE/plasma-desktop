@@ -27,7 +27,6 @@
 #include <KMessageBox>
 #include <KPluginFactory>
 
-#include <QDebug>
 #include <QListWidget>
 #include <QListWidgetItem>
 #include <QStandardPaths>
@@ -131,8 +130,6 @@ void KCMTranslations::load()
 // Save the new LANGUAGE setting
 void KCMTranslations::save()
 {
-    qDebug() << m_kcmTranslations.join(":");
-
     m_config.writeEntry(lcLanguage, m_kcmTranslations.join(":"), KConfig::Persistent | KConfig::Global);
     m_config.sync();
     KMessageBox::information(this,
