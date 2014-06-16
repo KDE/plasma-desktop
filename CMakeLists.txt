@@ -34,7 +34,6 @@ find_package(KF5 REQUIRED COMPONENTS
     NewStuff
     KDELibs4Support
     NotifyConfig
-    Su
     Attica
     Wallet
     Runner
