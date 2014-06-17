@@ -51,7 +51,7 @@ Item {
         }
     }
 
-    Rectangle { color: "orange"; visible: root.debug; anchors.fill: parent; opacity: 0.3 }
+    //Rectangle { color: "orange"; visible: root.debug; anchors.fill: parent; opacity: 0.3 }
 
     Image {
         id: faceIcon
@@ -68,7 +68,7 @@ Item {
             leftMargin: units.gridUnit
         }
 
-        Rectangle { color: "green"; opacity: 0.3; anchors.fill: parent;  visible: root.debug;  }
+        //Rectangle { color: "green"; opacity: 0.3; anchors.fill: parent;  visible: root.debug;  }
     }
 
     PlasmaCore.IconItem {
