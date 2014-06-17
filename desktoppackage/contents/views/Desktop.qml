@@ -85,10 +85,10 @@ Rectangle {
                     item.closed.connect(function(){sidePanelStack.state = "closed";});
 
                     if (sidePanelStack.state == "activityManager") {
-                        sidePanel.hideOnWindowDeactivate = Qt.binding(function() { return !sidePanelStack.item.showingDialog; })
+                        sidePanel.hideOnWindowDeactivate = Qt.binding(function() { return sidePanelStack.item && !sidePanelStack.item.showingDialog; })
                         sidePanelStack.item.forceActiveFocus();
                     } else if (sidePanelStack.state == "widgetExplorer"){
-                        sidePanel.hideOnWindowDeactivate = Qt.binding(function() { return !sidePanelStack.item.preventWindowHide; })
+                        sidePanel.hideOnWindowDeactivate = Qt.binding(function() { return sidePanelStack.item && !sidePanelStack.item.preventWindowHide; })
                     } else {
                         sidePanel.hideOnWindowDeactivate = true;
                     }
