@@ -47,6 +47,7 @@ SearchConfigModule::SearchConfigModule(QWidget* parent, const QVariantList& args
 
     QLabel* label = new QLabel(i18n("Select the search plugins"));
     m_listWidget = new QListWidget(this);
+    m_listWidget->setSortingEnabled(true);
     connect(m_listWidget, SIGNAL(itemChanged(QListWidgetItem*)),
             this, SLOT(changed()));
 
