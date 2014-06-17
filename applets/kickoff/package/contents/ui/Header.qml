@@ -39,8 +39,9 @@ Item {
 
     Timer {
         id: labelTimer
-        interval: 5000
-        running: header.state === "hint" && plasmoid.expanded && (header.query === "")
+        interval: 8000
+        repeat: true
+        running: (header.state === "hint" || header.state === "info") && plasmoid.expanded && (header.query === "")
         onTriggered: {
             if (header.state == "info") {
                 header.state = "hint";
