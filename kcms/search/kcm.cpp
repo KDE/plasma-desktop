@@ -62,6 +62,7 @@ void SearchConfigModule::load()
 
     QStringList enabledCategories = m_configGroup.readEntry("enabledCategories", QStringList());
 
+    QSet<QString> addedCategories;
     KPluginInfo::List list = Plasma::RunnerManager::listRunnerInfo();
     Q_FOREACH (const KPluginInfo& info, list) {
         QVariantList args;
@@ -76,6 +77,9 @@ void SearchConfigModule::load()
         QString name = runner->name();
 
         Q_FOREACH (const QString& category, categories) {
+            if (addedCategories.contains(category)) {
+                continue;
+            }
             QListWidgetItem* item = new QListWidgetItem(category);
             item->setIcon(runner->categoryIcon(category));
 
@@ -83,6 +87,7 @@ void SearchConfigModule::load()
             item->setCheckState(enabled ? Qt::Checked : Qt::Unchecked);
 
             m_listWidget->addItem(item);
+            addedCategories.insert(category);
         }
     }
 }
