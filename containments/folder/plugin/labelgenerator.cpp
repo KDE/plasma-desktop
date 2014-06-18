@@ -21,6 +21,9 @@
 #include "labelgenerator.h"
 #include <KFilePlacesModel>
 #include <KLocalizedString>
+#include <KShell>
+
+#include <QDebug>
 
 LabelGenerator::LabelGenerator(QObject* parent) : QObject(parent),
     m_placesModel(new KFilePlacesModel(this)),
@@ -94,14 +97,20 @@ QString LabelGenerator::displayLabel()
         if (m_url == "desktop:/") {
             return i18n("Desktop Folder");
         } else {
-            QString label(m_url);
+            QUrl url(m_url);
 
-            const QModelIndex index = m_placesModel->closestItem(m_url);
+            if (m_url.startsWith('~')) {
+                url = QUrl::fromLocalFile(KShell::tildeExpand(m_url));
+            }
+
+            QString label(url.toString(QUrl::PreferLocalFile | QUrl::StripTrailingSlash));
+
+            const QModelIndex index = m_placesModel->closestItem(url);
 
             if (index.isValid()) {
-                return m_placesModel->text(index);
+                QString root = m_placesModel->url(index).toString(QUrl::PreferLocalFile | QUrl::StripTrailingSlash);
 
-                label = label.right(label.length() - m_placesModel->url(index).toString(QUrl::PreferLocalFile | QUrl::StripTrailingSlash).length());
+                label = label.right(label.length() - root.length());
 
                 if (!label.isEmpty()) {
                     if (label.at(0) == '/') {
