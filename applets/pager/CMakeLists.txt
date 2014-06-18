@@ -1,3 +1,4 @@
+add_definitions(-DTRANSLATION_DOMAIN=\"plasma_applet_org.kde.plasma.pager\")
 plasma_install_package(package org.kde.plasma.pager)
 
 set(pager_SRCS

@@ -117,6 +117,7 @@ FocusScope {
                     dir.run(gridView.currentIndex);
                 } else {
                     doubleClickInProgress = true;
+                    doubleClickTimer.interval = systemSettings.doubleClickInterval();
                     doubleClickTimer.start();
                 }
             }
@@ -137,8 +138,6 @@ FocusScope {
 
         Timer {
             id: doubleClickTimer
-
-            interval: systemSettings.doubleClickInterval
 
             onTriggered: {
                 doubleClickInProgress = false;

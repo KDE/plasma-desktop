@@ -88,7 +88,10 @@ function save()
             configString +=  idstring + ":" + rect.x + "," + rect.y + "," + rect.width + "," + rect.height + "," + rect.rotation + ";";
         }
     }
-    plasmoid.configuration.ItemsGeometries = configString;
+
+    if (plasmoid) {
+        plasmoid.configuration.ItemsGeometries = configString;
+    }
 }
 
 function resetPositions()

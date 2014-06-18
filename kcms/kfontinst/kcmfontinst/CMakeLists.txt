@@ -12,7 +12,6 @@ add_library(kcm_fontinst MODULE ${kcm_fontinst_PART_SRCS})
 target_link_libraries(kcm_fontinst
     KF5::Archive
     KF5::KCMUtils
-    KF5::Su
     KF5::IconThemes
     KF5::KIOCore
     KF5::KIOWidgets

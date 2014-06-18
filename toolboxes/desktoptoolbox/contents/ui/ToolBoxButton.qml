@@ -35,7 +35,7 @@ Item {
     rotation: isHorizontal ? 0 : -90;
 
     transform: Translate {
-        x: state == "left" ? -height : state == "right" ? height : 0
+        x: state == "left" ? -width/2 + height/2 : state == "right" ? +width/2 - height/2 : 0
         Behavior on x {
             NumberAnimation {
                 duration: units.shortDuration * 3;
@@ -138,7 +138,15 @@ Item {
 
     Row {
         id: buttonLayout
-        x: !buttonMouse.dragging && isCorner ? units.smallSpacing*2 : 0
+
+        //when in the corner centre in the middle of the remaining space
+        //the visible space is the width of the background frame + one margin, the other is offscreen
+        //we want to work out the offset which is the visible frame width - our icon width / 2
+        //X is relative to the start of button, but the frame is one marging wider to the left so this needs taking into account
+        x: isCorner ? (buttonLayout.height +
+                            ((toolBoxButton.state == "topleft" || toolBoxButton.state == "bottomleft") ? backgroundFrame.margins.right : -backgroundFrame.margins.left)
+                            - toolBoxIcon.width) /2 : 0
+
         spacing: units.smallSpacing
 
         Behavior on x {

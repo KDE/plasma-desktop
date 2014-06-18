@@ -40,6 +40,7 @@
 #include <KIO/Paste>
 #include <KLocalizedString>
 #include <KSharedConfig>
+#include <KShell>
 #include <KUrl>
 
 #include <KDesktopFile>
@@ -127,22 +128,28 @@ QHash< int, QByteArray > FolderModel::roleNames() const
 
 QString FolderModel::url() const
 {
-    return m_dirModel->dirLister()->url().toString();
+    return m_url;
 }
 
-void FolderModel::setUrl(const QString& url)
+void FolderModel::setUrl(const QString& _url)
 {
-    if (url.isEmpty()) {
-        return;
+    QUrl url;
+
+    if (_url.startsWith('~')) {
+        url = QUrl::fromLocalFile(KShell::tildeExpand(_url));
+    } else {
+        url = _url;
     }
 
-    if (m_dirModel->dirLister()->url().path() == url) {
-        m_dirModel->dirLister()->updateDirectory(QUrl(url));
+    if (url == m_url) {
+        m_dirModel->dirLister()->updateDirectory(url);
+
         return;
     }
 
     beginResetModel();
-    m_dirModel->dirLister()->openUrl(QUrl(url));
+    m_url = _url;
+    m_dirModel->dirLister()->openUrl(url);
     endResetModel();
 
     emit urlChanged();
@@ -773,7 +780,7 @@ QList<QUrl> FolderModel::selectedUrls(bool forTrash) const
 
         if (forTrash) {
             // Prefer the local URL if there is one, since we can't trash remote URL's
-            const QString path = item.localPath();
+            const QString path = item.mostLocalUrl().toString();
             if (!path.isEmpty()) {
                 urls.append(path);
             } else {

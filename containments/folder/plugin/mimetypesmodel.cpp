@@ -102,12 +102,18 @@ int MimeTypesModel::indexOfType(const QString &name) const
 QStringList MimeTypesModel::checkedTypes() const
 {
     QStringList list;
+
     for (int i =0; i < checkedRows.size(); ++i) {
         if (checkedRows.at(i)) {
             list.append(m_mimeTypesList.at(i).name());
         }
     }
-    return list;
+
+    if (!list.isEmpty()) {
+        return list;
+    }
+
+    return QStringList("");
 }
 
 void MimeTypesModel::setCheckedTypes(const QStringList &list)

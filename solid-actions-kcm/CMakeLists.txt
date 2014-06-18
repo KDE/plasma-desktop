@@ -17,7 +17,7 @@ set(solid_action_desktop_gen_srcs
     DesktopFileGenerator.cpp
     SolidActionData.cpp )
 
-qt5_wrap_ui(kcm_solid_actions_srcs
+ki18n_wrap_ui(kcm_solid_actions_srcs
     SolidActions.ui
     AddAction.ui
     ActionEditor.ui )

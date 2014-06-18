@@ -29,9 +29,16 @@ Item {
     width: isVertical ? units.iconSizes.medium : units.iconSizes.smallMedium + units.smallSpacing * 2
     height: isVertical ? units.iconSizes.smallMedium + units.smallSpacing * 2 : units.iconSizes.medium
     property bool isVertical: plasmoid.formFactor == 3
-    visible: !plasmoid.immutable
+    opacity: plasmoid.immutable ? 0 : (mouseArea.containsMouse || plasmoid.userConfiguring ? 1 : 0.5)
 
     z: 999
+
+    Behavior on opacity {
+        NumberAnimation {
+            duration: units.longDuration;
+            easing.type: Easing.InOutExpo;
+        }
+    }
 
     LayoutMirroring.enabled: (Qt.application.layoutDirection === Qt.RightToLeft)
     anchors {
@@ -52,13 +59,6 @@ Item {
         anchors.centerIn: mouseArea
         width: units.iconSizes.small
         height: width
-        opacity: mouseArea.containsMouse || plasmoid.userConfiguring ? 1 : 0.5
-        Behavior on opacity {
-            NumberAnimation {
-                duration: units.longDuration;
-                easing.type: Easing.InOutExpo;
-            }
-        }
     }
 
     MouseArea {

@@ -31,6 +31,10 @@ import "plasmapackage:/code/LayoutManager.js" as LayoutManager
 
 DragDrop.DropArea {
     id: root
+    objectName: "folder"
+
+    width: (itemView.cellWidth * 3) + (units.largeSpacing * 3)
+    height: (itemView.cellHeight * 2) + (units.largeSpacing * 2)
 
     property bool isContainment: ("containmentType" in plasmoid)
     property Item label: null
@@ -51,11 +55,11 @@ DragDrop.DropArea {
     onIconHeightChanged: updateGridSize()
 
     anchors {
-        leftMargin: plasmoid.availableScreenRect != undefined ? plasmoid.availableScreenRect.x : 0
-        topMargin: plasmoid.availableScreenRect != undefined ? plasmoid.availableScreenRect.y : 0
+        leftMargin: plasmoid.availableScreenRect ? plasmoid.availableScreenRect.x : 0
+        topMargin: plasmoid.availableScreenRect ? plasmoid.availableScreenRect.y : 0
 
-        rightMargin: plasmoid.availableScreenRect != undefined ? parent.width - (plasmoid.availableScreenRect.x + plasmoid.availableScreenRect.width) : 0
-        bottomMargin: plasmoid.availableScreenRect != undefined ? parent.height - (plasmoid.availableScreenRect.y + plasmoid.availableScreenRect.height) : 0
+        rightMargin: plasmoid.availableScreenRect && parent ? parent.width - (plasmoid.availableScreenRect.x + plasmoid.availableScreenRect.width) : 0
+        bottomMargin: plasmoid.availableScreenRect && parent ? parent.height - (plasmoid.availableScreenRect.y + plasmoid.availableScreenRect.height) : 0
     }
 
     function updateGridSize()
@@ -83,18 +87,22 @@ DragDrop.DropArea {
         container.category = "Applet-"+applet.id;
         var config = LayoutManager.itemsConfig[container.category];
 
-        //Not a valid size? reset
-        if (applet.width > 0 && applet.height > 0) {
-            container.width = applet.width;
-            container.height = applet.height;
-        } else if (config === undefined || config.width === undefined || config.height === undefined ||
-            config.width <= 0 || config.height <=0) {
-            container.width = LayoutManager.defaultAppletSize.width;
-            container.height = LayoutManager.defaultAppletSize.height;
-        } else {
+        //we have it in the config
+        if (config !== undefined && config.width !== undefined &&
+            config.height !== undefined &&
+            config.width > 0 && config.height > 0) {
             container.width = config.width;
             container.height = config.height;
+        //we have a default
+        } else if (applet.width > 0 && applet.height > 0) {
+            container.width = applet.width;
+            container.height = applet.height;
+        //give up, assign the global default
+        } else {
+            container.width = LayoutManager.defaultAppletSize.width;
+            container.height = LayoutManager.defaultAppletSize.height;
         }
+
         container.applet = applet;
         //coordinated passed by param?
         if ( x >= 0 && y >= 0) {
@@ -163,6 +171,8 @@ DragDrop.DropArea {
     Connections {
         target: plasmoid
 
+        ignoreUnknownSignals: true
+
         onAppletAdded: {
             addApplet(applet, x, y);
             //clean any eventual invalid chunks in the config
@@ -210,6 +220,7 @@ DragDrop.DropArea {
 
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
+        wrapMode: Text.Wrap
     }
 
     ToolTipDelegate {
@@ -379,6 +390,8 @@ DragDrop.DropArea {
 
     Component.onCompleted: {
         if (!isContainment) {
+            root.label = labelComponent.createObject(root);
+
             return;
         }
 
@@ -398,7 +411,5 @@ DragDrop.DropArea {
         }
         //clean any eventual invalid chunks in the config
         LayoutManager.save();
-
-        root.label = labelComponent.createObject(root);
     }
 }
