@@ -141,7 +141,7 @@ void FolderModel::setUrl(const QString& _url)
         url = _url;
     }
 
-    if (url == m_url) {
+    if (_url == m_url) {
         m_dirModel->dirLister()->updateDirectory(url);
 
         return;
