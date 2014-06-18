@@ -178,13 +178,13 @@ GroupBox {
 
                         onEnabledChanged: {
                             if (enabled && text != "") {
-                                cfg_url = Qt.resolvedUrl(text);
+                                cfg_url = text;
                             }
                         }
 
                         onTextChanged: {
                             if (enabled) {
-                                cfg_url = Qt.resolvedUrl(text);
+                                cfg_url = text;
                             }
                         }
                     }
