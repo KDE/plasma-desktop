@@ -203,7 +203,10 @@ MouseEventListener {
         anchors {
             left: parent.left
             leftMargin: taskFrame.margins.left
-            verticalCenter: parent.verticalCenter
+            top: parent.top
+            topMargin: taskFrame.margins.top
+            bottom: parent.bottom
+            bottomMargin: taskFrame.margins.bottom
         }
 
         width: inPopup ? units.iconSizes.small : Math.min(height, parent.width - LayoutManager.horizontalMargins())
@@ -255,14 +258,12 @@ MouseEventListener {
         id: label
 
         anchors {
-            left: parent.left
-            right: parent.right
-            leftMargin: taskFrame.margins.left + icon.width + 4
+            fill: parent
+            leftMargin: taskFrame.margins.left + icon.width + (units.smallSpacing * 2)
+            topMargin: taskFrame.margins.top
             rightMargin: taskFrame.margins.right
-            verticalCenter: parent.verticalCenter
+            bottomMargin: taskFrame.margins.bottom
         }
-
-        height: Math.max(theme.mSize(theme.defaultFont).height, parent.height - taskFrame.margins.top - taskFrame.margins.bottom)
 
         visible: !model.IsLauncher && (parent.width - anchors.leftMargin - anchors.rightMargin) >= (theme.mSize(theme.defaultFont).width * 3)
 
