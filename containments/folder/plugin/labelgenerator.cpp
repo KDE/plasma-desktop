@@ -23,8 +23,6 @@
 #include <KLocalizedString>
 #include <KShell>
 
-#include <QDebug>
-
 LabelGenerator::LabelGenerator(QObject* parent) : QObject(parent),
     m_placesModel(new KFilePlacesModel(this)),
     m_rtl(false)
