@@ -211,7 +211,12 @@ function checkLastSpacer() {
         if (plasmoid.userConfiguring) {
             if (!dragOverlay) {
                 var component = Qt.createComponent("ConfigOverlay.qml");
-                dragOverlay = component.createObject(root);
+                if (component.status == Component.Ready) {
+                    dragOverlay = component.createObject(root);
+                } else {
+                    console.log("Could not create ConfigOverlay");
+                    console.log(component.errorString());
+                }
                 component.destroy();
             } else {
                 dragOverlay.visible = true;
