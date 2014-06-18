@@ -94,7 +94,7 @@ void KCMTranslations::load()
     QStringList missingLanguages;
     QStringList availableLanguages;
     if (!m_config.isEntryImmutable(lcLanguage)) {
-        foreach(const QString & languageCode, m_kcmTranslations) {
+        foreach (const QString &languageCode, m_kcmTranslations) {
             if (m_installedTranslations.contains(languageCode)) {
                 availableLanguages.append(languageCode);
             } else {
@@ -111,14 +111,14 @@ void KCMTranslations::load()
     initWidgets();
 
     // Now we have a ui built tell the user about the missing languages
-    foreach(const QString & languageCode, missingLanguages) {
+    foreach (const QString &languageCode, missingLanguages) {
         KMessageBox::information(this, i18nc("%1 is the language code",
-                                            "You have the language with code '%1' in your list "
-                                            "of languages to use for translation but the "
-                                            "localization files for it could not be found. The "
-                                            "language has been removed from your configuration. "
-                                            "If you want to add it again please install the "
-                                            "localization files for it and add the language again.", languageCode));
+                                             "You have the language with code '%1' in your list "
+                                             "of languages to use for translation but the "
+                                             "localization files for it could not be found. The "
+                                             "language has been removed from your configuration. "
+                                             "If you want to add it again please install the "
+                                             "localization files for it and add the language again.", languageCode));
     }
 }
 
@@ -171,12 +171,12 @@ void KCMTranslations::loadTranslations()
 QString KCMTranslations::quickHelp() const
 {
     return i18n("<h1>Translations</h1>\n"
-                 "<p>Here you can set your preferred language for translating the "
-                 "user interface of your applications. You can choose a single "
-                 "language, or a list of languages to be applied in sequence. Only "
-                 "language translations that are installed on your system will "
-                 "be listed as available. If your language is not listed then "
-                 "you will need to install it first.</p>");
+                "<p>Here you can set your preferred language for translating the "
+                "user interface of your applications. You can choose a single "
+                "language, or a list of languages to be applied in sequence. Only "
+                "language translations that are installed on your system will "
+                "be listed as available. If your language is not listed then "
+                "you will need to install it first.</p>");
 }
 
 void KCMTranslations::initWidgets()
@@ -193,21 +193,21 @@ void KCMTranslations::initTranslations()
 
     m_ui->m_selectTranslations->setAvailableLabel(i18n("Available Languages:"));
     QString availableHelp = i18n("This is the list of installed KDE Plasma language "
-                                  "translations not currently being used.  To use a language "
-                                  "translation move it to the 'Preferred Languages' list in "
-                                  "the order of preference.  If no suitable languages are "
-                                  "listed, then you may need to install more language packages "
-                                  "using your usual installation method.");
+                                 "translations not currently being used.  To use a language "
+                                 "translation move it to the 'Preferred Languages' list in "
+                                 "the order of preference.  If no suitable languages are "
+                                 "listed, then you may need to install more language packages "
+                                 "using your usual installation method.");
     m_ui->m_selectTranslations->availableListWidget()->setToolTip(availableHelp);
     m_ui->m_selectTranslations->availableListWidget()->setWhatsThis(availableHelp);
 
     m_ui->m_selectTranslations->setSelectedLabel(i18n("Preferred Languages:"));
     QString selectedHelp = i18n("This is the list of installed KDE Plasma language "
-                                 "translations currently being used, listed in order of "
-                                 "preference.  If a translation is not available for the "
-                                 "first language in the list, the next language will be used.  "
-                                 "If no other translations are available then US English will "
-                                 "be used.");
+                                "translations currently being used, listed in order of "
+                                "preference.  If a translation is not available for the "
+                                "first language in the list, the next language will be used.  "
+                                "If no other translations are available then US English will "
+                                "be used.");
     m_ui->m_selectTranslations->selectedListWidget()->setToolTip(selectedHelp);
     m_ui->m_selectTranslations->selectedListWidget()->setWhatsThis(selectedHelp);
 
@@ -216,7 +216,7 @@ void KCMTranslations::initTranslations()
     m_ui->m_selectTranslations->selectedListWidget()->clear();
 
     // Load each user selected language into the selected list
-    foreach(const QString & languageCode, m_kcmTranslations) {
+    foreach (const QString &languageCode, m_kcmTranslations) {
         QListWidgetItem *listItem = new QListWidgetItem(m_ui->m_selectTranslations->selectedListWidget());
         // TODO This gives the name in the language itself, not in current language, need new QLocale api for that
         QString label = QLocale(languageCode).nativeLanguageName();
@@ -228,7 +228,7 @@ void KCMTranslations::initTranslations()
     }
 
     // Load all the available languages the user hasn't selected into the available list
-    foreach(const QString & languageCode, m_installedTranslations) {
+    foreach (const QString &languageCode, m_installedTranslations) {
         if (!m_kcmTranslations.contains(languageCode)) {
             QListWidgetItem *listItem = new QListWidgetItem(m_ui->m_selectTranslations->availableListWidget());
             // TODO This gives the name in the language itself, not in current language, need new QLocale api for that
