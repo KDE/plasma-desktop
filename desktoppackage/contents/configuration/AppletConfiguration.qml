@@ -89,6 +89,10 @@ Rectangle {
         }
         return false;
     }
+
+    function settingValueChanged() {
+        applyButton.enabled = true;
+    }
 //END functions
 
 
@@ -239,14 +243,21 @@ Rectangle {
 
                         onSourceFileChanged: {
 //                             print("Source file changed in flickable" + sourceFile);
-                            replace(Qt.resolvedUrl(sourceFile))
+                            replace(Qt.resolvedUrl(sourceFile));
+                            for (var prop in currentItem) {
+                                if (prop.indexOf("cfg_") === 0) {
+                                    currentItem[prop+"Changed"].connect(root.settingValueChanged)
+                                }
+                            }
+                            currentItem["configurationChanged"].connect(root.settingValueChanged)
+                            applyButton.enabled = false;
                             /*
                                 * This is not needed on a desktop shell that has ok/apply/cancel buttons, i'll leave it here only for future reference until we have a prototype for the active shell.
                                 * root.pageChanged will start a timer, that in turn will call saveConfig() when triggered
 
-                            for (var prop in currentPage) {
+                            for (var prop in currentItem) {
                                 if (prop.indexOf("cfg_") === 0) {
-                                    currentPage[prop+"Changed"].connect(root.pageChanged)
+                                    currentItem[prop+"Changed"].connect(root.pageChanged)
                                 }
                             }*/
                         }
@@ -290,6 +301,8 @@ Rectangle {
                 onClicked: acceptAction.trigger()
             }
             QtControls.Button {
+                id: applyButton
+                enabled: false
                 iconName: "dialog-ok-apply"
                 text: i18nc("org.kde.plasma.desktop", "Apply")
                 onClicked: applyAction.trigger()

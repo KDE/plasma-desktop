@@ -23,6 +23,7 @@ import QtQuick.Layouts 1.0
 Item {
     id: root
 
+    signal configurationChanged
     implicitWidth: childrenRect.width
     implicitHeight: childrenRect.height
 
@@ -81,6 +82,7 @@ Item {
                     onCurrentIndexChanged: {
                         if (initialized && configDialog.containmentActionConfigModel.get(currentIndex).pluginName != pluginName) {
                             configDialog.currentContainmentActionsModel.update(index, action, configDialog.containmentActionConfigModel.get(currentIndex).pluginName);
+                            root.configurationChanged();
                         }
                     }
                 }
@@ -104,6 +106,7 @@ Item {
                     width: height
                     onClicked: {
                         configDialog.currentContainmentActionsModel.remove(index);
+                        root.configurationChanged();
                     }
                 }
             }
@@ -112,6 +115,7 @@ Item {
             defaultText: i18nc("org.kde.plasma.desktop", "Add Action");
             onEventStringChanged: {
                 configDialog.currentContainmentActionsModel.append(eventString, "org.kde.contextmenu");
+                root.configurationChanged();
             }
         }
     }

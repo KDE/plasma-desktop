@@ -27,6 +27,7 @@ ColumnLayout {
     property int formAlignment: wallpaperComboBox.x + (units.largeSpacing/2)
     property string currentWallpaper: ""
     property string containmentPlugin: ""
+    signal configurationChanged
 
 //BEGIN functions
     function saveConfig() {
@@ -44,6 +45,10 @@ ColumnLayout {
         for (var key in configDialog.wallpaperConfiguration) {
             if (main.currentItem["cfg_"+key] !== undefined) {
                 main.currentItem["cfg_"+key] = configDialog.wallpaperConfiguration[key]
+            }
+           
+            if (main.currentItem["cfg_"+key+"Changed"]) {
+                main.currentItem["cfg_"+key+"Changed"].connect(root.configurationChanged)
             }
         }
     }
@@ -114,6 +119,7 @@ ColumnLayout {
                 main.sourceFile = model.source
                 configDialog.currentWallpaper = model.pluginName
                 root.restoreConfig()
+                root.configurationChanged()
             }
         }
     }
