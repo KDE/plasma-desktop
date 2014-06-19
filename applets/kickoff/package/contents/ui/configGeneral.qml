@@ -19,6 +19,8 @@
 import QtQuick 2.0
 import QtQuick.Controls 1.0 as QtControls
 
+import org.kde.plasma.core 2.0 as PlasmaCore
+
 //FIXME this causes a crash in Oxygen style
 //QtControls.GroupBox {
 Item {
@@ -40,6 +42,7 @@ function i18n(arg) {
     property alias cfg_showRecentlyInstalled: showRecentlyInstalledCheckbox.checked
 
     Column {
+        spacing: units.smallSpacing
         QtControls.CheckBox {
             id: switchTabsOnHoverCheckbox
             text: i18n("Switch tabs on hover:")
