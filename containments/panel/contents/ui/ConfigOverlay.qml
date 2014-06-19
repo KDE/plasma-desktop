@@ -302,4 +302,31 @@ MouseArea {
             }
         }
     }
+    PlasmaCore.Dialog {
+        id: tooltip
+        visualParent: handle
+        visible: currentApplet
+        type: PlasmaCore.Dialog.Dock
+        flags: Qt.Popup
+        location: plasmoid.location
+        mainItem: Row {
+            Layout.minimumWidth: implicitWidth
+            Layout.minimumHeight: implicitHeight
+            Layout.maximumWidth: implicitWidth
+            Layout.maximumHeight: implicitHeight
+            PlasmaComponents.ToolButton {
+                iconSource: "configure"
+                visible: currentApplet && currentApplet.applet.action("configure") && currentApplet.applet.action("configure").enabled
+                onClicked: currentApplet.applet.action("configure").trigger()
+            }
+            PlasmaComponents.Label {
+                text: currentApplet ? currentApplet.applet.title : ""
+            }
+            PlasmaComponents.ToolButton {
+                iconSource: "window-close"
+                visible: currentApplet && currentApplet.applet.action("remove") && currentApplet.applet.action("remove").enabled
+                onClicked: currentApplet.applet.action("remove").trigger()
+            }
+        }
+    }
 }

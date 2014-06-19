@@ -138,10 +138,10 @@ void FolderModel::setUrl(const QString& _url)
     if (_url.startsWith('~')) {
         url = QUrl::fromLocalFile(KShell::tildeExpand(_url));
     } else {
-        url = _url;
+        url = QUrl::fromUserInput(_url);
     }
 
-    if (url == m_url) {
+    if (_url == m_url) {
         m_dirModel->dirLister()->updateDirectory(url);
 
         return;

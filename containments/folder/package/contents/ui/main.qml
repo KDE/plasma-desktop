@@ -33,8 +33,8 @@ DragDrop.DropArea {
     id: root
     objectName: "folder"
 
-    width: units.gridUnit * 32
-    height: units.gridUnit * 20
+    width: (itemView.cellWidth * 3) + (units.largeSpacing * 3)
+    height: (itemView.cellHeight * 2) + (units.largeSpacing * 2)
 
     property bool isContainment: ("containmentType" in plasmoid)
     property Item label: null
@@ -87,18 +87,22 @@ DragDrop.DropArea {
         container.category = "Applet-"+applet.id;
         var config = LayoutManager.itemsConfig[container.category];
 
-        //Not a valid size? reset
-        if (applet.width > 0 && applet.height > 0) {
-            container.width = applet.width;
-            container.height = applet.height;
-        } else if (config === undefined || config.width === undefined || config.height === undefined ||
-            config.width <= 0 || config.height <=0) {
-            container.width = LayoutManager.defaultAppletSize.width;
-            container.height = LayoutManager.defaultAppletSize.height;
-        } else {
+        //we have it in the config
+        if (config !== undefined && config.width !== undefined &&
+            config.height !== undefined &&
+            config.width > 0 && config.height > 0) {
             container.width = config.width;
             container.height = config.height;
+        //we have a default
+        } else if (applet.width > 0 && applet.height > 0) {
+            container.width = applet.width;
+            container.height = applet.height;
+        //give up, assign the global default
+        } else {
+            container.width = LayoutManager.defaultAppletSize.width;
+            container.height = LayoutManager.defaultAppletSize.height;
         }
+
         container.applet = applet;
         //coordinated passed by param?
         if ( x >= 0 && y >= 0) {

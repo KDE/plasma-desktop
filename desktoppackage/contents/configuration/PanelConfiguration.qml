@@ -36,16 +36,12 @@ PlasmaCore.FrameSvgItem {
 
     state: {
         switch (panel.location) {
-        //TopEdge
         case PlasmaCore.Types.TopEdge:
             return "TopEdge"
-        //LeftEdge
         case PlasmaCore.Types.LeftEdge:
             return "LeftEdge"
-        //RightEdge
         case PlasmaCore.Types.RightEdge:
             return "RightEdge"
-        //BottomEdge
         case PlasmaCore.Types.BottomEdge:
         default:
             return "BottomEdge"

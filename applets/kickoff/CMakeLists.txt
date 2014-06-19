@@ -1,4 +1,4 @@
-add_definitions(-DTRANSLATION_DOMAIN=\"plasma_applet_kickoff\")
+add_definitions(-DTRANSLATION_DOMAIN=\"plasma_applet_org.kde.plasma.kickoff\")
 
 #######################################################################################
 # Package
