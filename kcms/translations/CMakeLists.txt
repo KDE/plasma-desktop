@@ -8,6 +8,7 @@ add_library(kcm_translations ${kcm_translations_PART_SRCS})
 
 target_link_libraries(kcm_translations
     Qt5::Widgets
+    KF5::WidgetsAddons
     KF5::KCMUtils
     KF5::I18n
 )

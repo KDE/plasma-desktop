@@ -27,10 +27,11 @@
 #include <KConfigGroup>
 
 class QListWidgetItem;
-class QCheckBox;
-class KPushButton;
-class KComboBox;
-class KIntNumInput;
+// class QCheckBox;
+// class KPushButton;
+// class KComboBox;
+// class KIntNumInput;
+class KMessageWidget;
 
 namespace Ui
 {
@@ -82,6 +83,7 @@ private:
     KConfigGroup m_config;
 
     Ui::KCMTranslationsWidget *m_ui;
+    KMessageWidget *m_messageWidget;
 };
 
 #endif //KCMTRANSLATIONS_H

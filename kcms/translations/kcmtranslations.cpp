@@ -26,6 +26,7 @@
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <KPluginFactory>
+#include <KMessageWidget>
 
 #include <QListWidget>
 #include <QListWidgetItem>
@@ -37,7 +38,8 @@ K_PLUGIN_FACTORY(KCMTranslationsFactory, registerPlugin<KCMTranslations>();)
 
 KCMTranslations::KCMTranslations(QWidget *parent, const QVariantList &args)
     : KCModule(parent, args),
-      m_ui(new Ui::KCMTranslationsWidget)
+      m_ui(new Ui::KCMTranslationsWidget),
+      m_messageWidget(0)
 {
     KAboutData *about = new KAboutData(I18N_NOOP("KCMTranslations"),
                                        i18n("Translations"),
@@ -110,15 +112,28 @@ void KCMTranslations::load()
     // Then update all the widgets to use the new settings
     initWidgets();
 
-    // Now we have a ui built tell the user about the missing languages
-    foreach (const QString &languageCode, missingLanguages) {
-        KMessageBox::information(this, i18nc("%1 is the language code",
-                                             "You have the language with code '%1' in your list "
-                                             "of languages to use for translation but the "
-                                             "localization files for it could not be found. The "
-                                             "language has been removed from your configuration. "
-                                             "If you want to add it again please install the "
-                                             "localization files for it and add the language again.", languageCode));
+    if (missingLanguages.count()) {
+        const QString txt = i18ncp("%1 is the language code",
+                                                "The translation files for the language with the code '%2' "
+                                                "could not be found. The "
+                                                "language has been removed from your configuration. "
+                                                "If you want to add it back, please install the "
+                                                "localization files for it and add the language again.",
+
+                                                "The translation files for the languages with the codes "
+                                                "'%2' could not be found. These "
+                                                "languages have been removed from your configuration. "
+                                                "If you want to add them back, please install the "
+                                                "localization files for it and the languages again.",
+                            missingLanguages.count(),
+                            missingLanguages.join("', '"));
+
+        m_messageWidget = new KMessageWidget(this);
+        m_messageWidget->setMessageType(KMessageWidget::Information);
+        m_messageWidget->setWordWrap(true);
+        m_messageWidget->setText(txt);
+
+        m_ui->verticalLayout->insertWidget(0, m_messageWidget);
     }
 }
 
@@ -193,9 +208,9 @@ void KCMTranslations::initTranslations()
 
     m_ui->m_selectTranslations->setAvailableLabel(i18n("Available Languages:"));
     QString availableHelp = i18n("This is the list of installed KDE Plasma language "
-                                 "translations not currently being used.  To use a language "
+                                 "translations not currently being used. <br />To use a language "
                                  "translation move it to the 'Preferred Languages' list in "
-                                 "the order of preference.  If no suitable languages are "
+                                 "the order of preference.  <br />If no suitable languages are "
                                  "listed, then you may need to install more language packages "
                                  "using your usual installation method.");
     m_ui->m_selectTranslations->availableListWidget()->setToolTip(availableHelp);
@@ -204,8 +219,8 @@ void KCMTranslations::initTranslations()
     m_ui->m_selectTranslations->setSelectedLabel(i18n("Preferred Languages:"));
     QString selectedHelp = i18n("This is the list of installed KDE Plasma language "
                                 "translations currently being used, listed in order of "
-                                "preference.  If a translation is not available for the "
-                                "first language in the list, the next language will be used.  "
+                                "preference.  <br />If a translation is not available for the "
+                                "first language in the list, the next language will be used. <br /> "
                                 "If no other translations are available then US English will "
                                 "be used.");
     m_ui->m_selectTranslations->selectedListWidget()->setToolTip(selectedHelp);
