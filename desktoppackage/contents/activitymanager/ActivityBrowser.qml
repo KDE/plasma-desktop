@@ -100,7 +100,7 @@ Item {
             topMargin: root.spacing
         }
 
-        flickableItem: ActivityList {
+        ActivityList {
             id: activityList
 
             filterString: heading.searchString.toLowerCase()

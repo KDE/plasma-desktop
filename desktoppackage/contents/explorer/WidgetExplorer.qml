@@ -219,7 +219,7 @@ Item {
             leftMargin: units.smallSpacing
             bottomMargin: units.smallSpacing
         }
-        flickableItem: ListView {
+        ListView {
             id: list
 
             property int delegateWidth: list.width
