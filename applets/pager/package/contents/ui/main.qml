@@ -171,6 +171,13 @@ Item {
                 id: desktopMouseArea
                 anchors.fill: parent
                 onClicked: pager.changeDesktop(desktopId);
+                onWheel: {
+                    if (wheel.angleDelta.y > 0 || wheel.angleDelta.x > 0) {
+                        pager.changeDesktop((repeater.count + pager.currentDesktop - 2) % repeater.count)
+                    } else {
+                        pager.changeDesktop(pager.currentDesktop % repeater.count)
+                    }
+                }
             }
 
             Item {
