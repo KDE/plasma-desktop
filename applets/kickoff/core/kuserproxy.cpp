@@ -40,7 +40,11 @@ KUserProxy::~KUserProxy()
 
 QString KUserProxy::fullName() const
 {
-    return m_user.property(KUser::FullName).toString();
+    QString fullName = m_user.property(KUser::FullName).toString();
+    if (!fullName.isEmpty()) {
+        return fullName;
+    }
+    return loginName();
 }
 
 QString KUserProxy::loginName() const
