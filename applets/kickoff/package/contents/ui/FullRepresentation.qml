@@ -363,13 +363,13 @@ Item {
         KickoffButton {
             id: usedButton
             tab: recentlyUsedPage
-            iconSource: "document-open-recent"
+            iconSource: "view-history"
             text: i18n("Recently Used")
         }
         KickoffButton {
             id: leaveButton
             tab: leavePage
-            iconSource: "system-shutdown"
+            iconSource: "system-log-out"
             text: i18n("Leave")
         }
     } // tabBar
