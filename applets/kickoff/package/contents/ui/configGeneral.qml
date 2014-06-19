@@ -21,39 +21,32 @@ import QtQuick.Controls 1.0 as QtControls
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 
-//FIXME this causes a crash in Oxygen style
-//QtControls.GroupBox {
 Item {
 
-//FIXME i18n is broken currently
-//when fixed delete this
-function i18n(arg) {
-    return arg;
-}
     width: childrenRect.width
     height: childrenRect.height
-
-//FIXME enable when we're back to being a group box
-//     flat: true
-//     title: i18n("Appearance")
 
     property alias cfg_switchTabsOnHover: switchTabsOnHoverCheckbox.checked
     property alias cfg_showAppsByName: showApplicationsByNameCheckbox.checked
     property alias cfg_showRecentlyInstalled: showRecentlyInstalledCheckbox.checked
 
     Column {
+
         spacing: units.smallSpacing
+
         QtControls.CheckBox {
             id: switchTabsOnHoverCheckbox
-            text: i18n("Switch tabs on hover:")
+            text: i18n("Switch tabs on hover")
         }
+
         QtControls.CheckBox {
             id: showApplicationsByNameCheckbox
-            text: i18n("Show applications by name:")
+            text: i18n("Show applications by name")
         }
+
         QtControls.CheckBox {
             id: showRecentlyInstalledCheckbox
-            text: i18n("Show 'Recently Installed':")
+            text: i18n("Show 'Recently Installed'")
         }
     }
 }
