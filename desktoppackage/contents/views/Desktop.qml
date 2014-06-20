@@ -32,6 +32,7 @@ Rectangle {
     height: 768
 
     property Item containment
+    property Item wallpaper
 
     function toggleWidgetExplorer(containment) {
 //         console.log("Widget Explorer toggled");
@@ -127,12 +128,27 @@ Rectangle {
         }
     }
 
+    onWallpaperChanged: {
+        wallpaper.opacity = desktop.dashboardShown ? 0.3 : 1
+        if (!internal.oldWallpaper) {
+            internal.oldWallpaper = wallpaper;
+        }
+    }
+
+    Connections {
+        target: desktop
+        onDashboardShownChanged: {
+            wallpaper.opacity = desktop.dashboardShown ? 0.3 : 1
+        }
+    }
+
     //some properties that shouldn't be accessible from elsewhere
     QtObject {
         id: internal;
 
         property Item oldContainment: null;
         property Item newContainment: null;
+        property Item oldWallpaper: null;
     }
 
     SequentialAnimation {
@@ -182,7 +198,9 @@ Rectangle {
                     containment.anchors.right = root.right;
                     containment.anchors.bottom = root.bottom;
                     internal.oldContainment.visible = false;
+                    internal.oldWallpaper.opacity = 1;
                     internal.oldContainment = containment;
+                    internal.oldWallpaper = wallpaper;
                 }
             }
         }
