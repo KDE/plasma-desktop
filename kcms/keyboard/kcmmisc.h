@@ -27,6 +27,9 @@
 #include <QString>
 #include <QWidget>
 #include <QButtonGroup>
+#include <QLoggingCategory>
+
+Q_DECLARE_LOGGING_CATEGORY(KCM_KEYBOARD)
 
 class Ui_KeyboardConfigWidget;
 

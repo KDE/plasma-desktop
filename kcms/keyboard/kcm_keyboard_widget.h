@@ -24,6 +24,9 @@
 
 #include <kcomponentdata.h>
 #include <QTabWidget>
+#include <QLoggingCategory>
+
+Q_DECLARE_LOGGING_CATEGORY(KCM_KEYBOARD)
 
 class QWidget;
 class KeyboardConfig;

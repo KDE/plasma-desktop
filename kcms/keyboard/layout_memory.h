@@ -23,6 +23,9 @@
 #include <QtCore/QString>
 #include <QtCore/QMap>
 #include <QtGui/QWidgetList> //For WId
+#include <QLoggingCategory>
+
+Q_DECLARE_LOGGING_CATEGORY(BINDINGS)
 
 #include "x11_helper.h"
 #include "keyboard_config.h"

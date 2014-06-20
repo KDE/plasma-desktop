@@ -27,7 +27,7 @@
 #include <QTextDocument> // for Qt::escape
 #include <QXmlAttributes>
 #include <QtConcurrentFilter>
-#include <QtDebug>
+#include <QDebug>
 
 //#include <libintl.h>
 //#include <locale.h>
@@ -43,6 +43,7 @@
 #include <fixx11h.h>
 #include <config-workspace.h>
 
+Q_LOGGING_CATEGORY(XKB_RULES, "xkb_rules")
 
 class RulesHandler : public QXmlDefaultHandler
 {
@@ -147,7 +148,7 @@ QString Rules::getRulesName()
 	char *tmp = NULL;
 
 	if (XkbRF_GetNamesProp(QX11Info::display(), &tmp, &vd) && tmp != NULL ) {
-		// 			qDebug() << "namesprop" << tmp ;
+        // 			qCDebug(XKB_RULES) << "namesprop" << tmp ;
                 const QString name(tmp);
                 XFree(tmp);
 		return name;
@@ -208,7 +209,7 @@ void mergeRules(Rules* rules, Rules* extraRules)
 		}
 	}
 	rules->layoutInfos.append(layoutsToAdd);
-	qDebug() << "Merged from extra rules:" << extraRules->layoutInfos.size() << "layouts," << extraRules->modelInfos.size() << "models," << extraRules->optionGroupInfos.size() << "option groups";
+    qCDebug(XKB_RULES) << "Merged from extra rules:" << extraRules->layoutInfos.size() << "layouts," << extraRules->modelInfos.size() << "models," << extraRules->optionGroupInfos.size() << "option groups";
 
 	// base rules now own the objects - remove them from extra rules so that it does not try to delete them
 	extraRules->layoutInfos.clear();
@@ -244,7 +245,7 @@ Rules* Rules::readRules(Rules* rules, const QString& filename, bool fromExtras)
 {
 	QFile file(filename);
 	if( !file.open(QFile::ReadOnly | QFile::Text) ) {
-		qCritical() << "Cannot open the rules file" << file.fileName();
+        qCritical() << "Cannot open the rules file" << file.fileName();
 		return NULL;
 	}
 
@@ -256,10 +257,10 @@ Rules* Rules::readRules(Rules* rules, const QString& filename, bool fromExtras)
 
 	QXmlInputSource xmlInputSource(&file);
 
-	qDebug() << "Parsing xkb rules from" << file.fileName();
+    qCDebug(XKB_RULES) << "Parsing xkb rules from" << file.fileName();
 
 	if( ! reader.parse(xmlInputSource) ) {
-		qCritical() << "Failed to parse the rules file" << file.fileName();
+        qCritical() << "Failed to parse the rules file" << file.fileName();
 		delete rules;
 		return NULL;
 	}
@@ -293,7 +294,7 @@ bool RulesHandler::startElement(const QString &/*namespaceURI*/, const QString &
 	}
 	else if( strPath == ("xkbConfigRegistry") && ! attributes.value("version").isEmpty()  ) {
 		rules->version = attributes.value("version");
-		qDebug() << "xkbConfigRegistry version" << rules->version;
+        qCDebug(XKB_RULES) << "xkbConfigRegistry version" << rules->version;
 	}
 	return true;
 }
@@ -311,57 +312,57 @@ bool RulesHandler::characters(const QString &str)
 		if( strPath.endsWith("layoutList/layout/configItem/name") ) {
 			if( rules->layoutInfos.last() != NULL ) {
 				rules->layoutInfos.last()->name = str.trimmed();
-//				qDebug() << "name:" << str;
+//				qCDebug(XKB_RULES) << "name:" << str;
 			}
 			// skipping invalid entry
 		}
 		else if( strPath.endsWith("layoutList/layout/configItem/description") ) {
 			rules->layoutInfos.last()->description = str.trimmed();
-//			qDebug() << "descr:" << str;
+//			qCDebug(XKB_RULES) << "descr:" << str;
 		}
 		else if( strPath.endsWith("layoutList/layout/configItem/languageList/iso639Id") ) {
 			rules->layoutInfos.last()->languages << str.trimmed();
-//			qDebug() << "\tlang:" << str;
+//			qCDebug(XKB_RULES) << "\tlang:" << str;
 		}
 		else if( strPath.endsWith("layoutList/layout/variantList/variant/configItem/name") ) {
 			rules->layoutInfos.last()->variantInfos.last()->name = str.trimmed();
-//			qDebug() << "\tvariant name:" << str;
+//			qCDebug(XKB_RULES) << "\tvariant name:" << str;
 		}
 		else if( strPath.endsWith("layoutList/layout/variantList/variant/configItem/description") ) {
 			rules->layoutInfos.last()->variantInfos.last()->description = str.trimmed();
-//			qDebug() << "\tvariant descr:" << str;
+//			qCDebug(XKB_RULES) << "\tvariant descr:" << str;
 		}
 		else if( strPath.endsWith("layoutList/layout/variantList/variant/configItem/languageList/iso639Id") ) {
 			rules->layoutInfos.last()->variantInfos.last()->languages << str.trimmed();
-//			qDebug() << "\tvlang:" << str;
+//			qCDebug(XKB_RULES) << "\tvlang:" << str;
 		}
 		else if( strPath.endsWith("modelList/model/configItem/name") ) {
 			rules->modelInfos.last()->name = str.trimmed();
-//			qDebug() << "name:" << str;
+//			qCDebug(XKB_RULES) << "name:" << str;
 		}
 		else if( strPath.endsWith("modelList/model/configItem/description") ) {
 			rules->modelInfos.last()->description = str.trimmed();
-//			qDebug() << "\tdescr:" << str;
+//			qCDebug(XKB_RULES) << "\tdescr:" << str;
 		}
 		else if( strPath.endsWith("modelList/model/configItem/vendor") ) {
 			rules->modelInfos.last()->vendor = str.trimmed();
-//			qDebug() << "\tvendor:" << str;
+//			qCDebug(XKB_RULES) << "\tvendor:" << str;
 		}
 		else if( strPath.endsWith("optionList/group/configItem/name") ) {
 			rules->optionGroupInfos.last()->name = str.trimmed();
-//			qDebug() << "name:" << str;
+//			qCDebug(XKB_RULES) << "name:" << str;
 		}
 		else if( strPath.endsWith("optionList/group/configItem/description") ) {
 			rules->optionGroupInfos.last()->description = str.trimmed();
-//			qDebug() << "\tdescr:" << str;
+//			qCDebug(XKB_RULES) << "\tdescr:" << str;
 		}
 		else if( strPath.endsWith("optionList/group/option/configItem/name") ) {
 			rules->optionGroupInfos.last()->optionInfos.last()->name = str.trimmed();
-//			qDebug() << "name:" << str;
+//			qCDebug(XKB_RULES) << "name:" << str;
 		}
 		else if( strPath.endsWith("optionList/group/option/configItem/description") ) {
 			rules->optionGroupInfos.last()->optionInfos.last()->description = str.trimmed();
-//			qDebug() << "\tdescr:" << str;
+//			qCDebug(XKB_RULES) << "\tdescr:" << str;
 		}
 	}
 	return true;

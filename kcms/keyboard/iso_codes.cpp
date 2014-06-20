@@ -24,6 +24,7 @@
 
 #include <QtXml/QXmlAttributes>
 
+Q_LOGGING_CATEGORY(ISO_CODES, "iso.codes")
 
 class IsoCodesPrivate {
 public:
@@ -131,9 +132,9 @@ void IsoCodesPrivate::buildIsoEntryList()
 	QXmlInputSource xmlInputSource(&file);
 
 	if( ! reader.parse(xmlInputSource) ) {
-		kError() << "Failed to parse the xml file" << file.fileName();
+        qCDebug(ISO_CODES) << "Failed to parse the xml file" << file.fileName();
 		return;
 	}
 
-	kDebug() << "Loaded" << isoEntryList.count() << ("iso entry definitions for iso"+isoCode) << "from" << file.fileName();
+    qCDebug(ISO_CODES) << "Loaded" << isoEntryList.count() << ("iso entry definitions for iso"+isoCode) << "from" << file.fileName();
 }

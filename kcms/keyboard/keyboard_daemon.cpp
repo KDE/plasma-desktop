@@ -28,6 +28,8 @@
 #include <kactioncollection.h>
 #include <kglobalsettings.h>
 
+Q_LOGGING_CATEGORY(KEYBOARD_DAEMON, "keyboard_daemon")
+
 #include "x11_helper.h"
 #include "xinput_helper.h"
 #include "xkb_helper.h"
@@ -41,7 +43,7 @@
 
 
 K_PLUGIN_FACTORY(KeyboardFactory, registerPlugin<KeyboardDaemon>();)
-K_EXPORT_PLUGIN(KeyboardFactory("keyboard", "kxkb"))
+
 
 KeyboardDaemon::KeyboardDaemon(QObject *parent, const QList<QVariant>&)
 	: KDEDModule(parent),
@@ -91,7 +93,7 @@ KeyboardDaemon::~KeyboardDaemon()
 
 void KeyboardDaemon::configureKeyboard()
 {
-    qDebug() << "Configuring keyboard";
+    qCDebug(KEYBOARD_DAEMON) << "Configuring keyboard";
 	init_keyboard_hardware();
 
 	keyboardConfig.load();
@@ -196,9 +198,17 @@ void KeyboardDaemon::layoutChanged()
 	}
 
 	if( newLayout != currentLayout ) {
-            currentLayout = newLayout;
-            emit currentLayoutChanged(newLayout.toString());
-        }
+		currentLayout = newLayout;
+        QDBusMessage msg = QDBusMessage::createMethodCall(
+        QLatin1Literal("org.kde.plasma_shell"),
+        QLatin1Literal("/org/kde/osdService"),
+        QLatin1Literal("org.kde.osdService"),
+        QLatin1Literal("kbdLayoutChanged"));
+        qCDebug(KEYBOARD_DAEMON) << newLayout.getDisplayName();
+        msg.setArguments(QList<QVariant>() << newLayout.getDisplayName());
+        QDBusConnection::sessionBus().asyncCall(msg);
+		emit currentLayoutChanged(newLayout.toString());
+	}
 }
 
 void KeyboardDaemon::layoutMapChanged()
@@ -213,7 +223,7 @@ void KeyboardDaemon::layoutMapChanged()
 
 void KeyboardDaemon::switchToNextLayout()
 {
-    qDebug() << "Toggling layout";
+    qCDebug(KEYBOARD_DAEMON) << "Toggling layout";
 	X11Helper::switchToNextLayout();
 
         LayoutUnit newLayout = X11Helper::getCurrentLayout();

@@ -20,6 +20,9 @@
 #define LAYOUT_MEMORY_PERSISTER_H_
 
 #include <QtCore/QString>
+#include <QLoggingCategory>
+
+Q_DECLARE_LOGGING_CATEGORY(LAYOUT_MEMORY_PERSISTER)
 
 #include "x11_helper.h"
 

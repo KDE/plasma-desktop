@@ -27,6 +27,7 @@
 #include "x11_helper.h"
 #include "xkb_helper.h"
 
+Q_LOGGING_CATEGORY(LAYOUT_MEMORY, "layout_memory")
 
 LayoutMemory::LayoutMemory(const KeyboardConfig& keyboardConfig_):
 	prevLayoutList(X11Helper::getLayoutsList()),
@@ -72,7 +73,7 @@ QString LayoutMemory::getCurrentMapKey() {
 		WId wid = KWindowSystem::self()->activeWindow();
 		KWindowInfo winInfo(wid, NET::WMWindowType);
 		NET::WindowType windowType = winInfo.windowType( NET::NormalMask | NET::DesktopMask | NET::DialogMask );
-        qDebug() << "window type" << windowType;
+        qCDebug(LAYOUT_MEMORY) << "window type" << windowType;
 
 		// we ignore desktop type so that our keybaord layout applet on desktop could change layout properly
 		if( windowType == NET::Desktop )
@@ -86,7 +87,7 @@ QString LayoutMemory::getCurrentMapKey() {
 		WId wid = KWindowSystem::self()->activeWindow();
 		KWindowInfo winInfo(wid, NET::WMWindowType, NET::WM2WindowClass);
 		NET::WindowType windowType = winInfo.windowType( NET::NormalMask | NET::DesktopMask | NET::DialogMask );
-        qDebug() << "window type" << windowType;
+        qCDebug(LAYOUT_MEMORY) << "window type" << windowType;
 
 		// we ignore desktop type so that our keybaord layout applet on desktop could change layout properly
 		if( windowType == NET::Desktop )
@@ -96,7 +97,7 @@ QString LayoutMemory::getCurrentMapKey() {
 
 		// shall we use pid or window class ??? - class seems better (see e.g. https://bugs.kde.org/show_bug.cgi?id=245507)
 		// for window class shall we use class.class or class.name? (seem class.class is a bit better - more app-oriented)
-        qDebug() << "New active window with class.class: " << winInfo.windowClassClass();
+        qCDebug(LAYOUT_MEMORY) << "New active window with class.class: " << winInfo.windowClassClass();
 		return QString(winInfo.windowClassClass());
 //		NETWinInfo winInfoForPid( QX11Info::display(), wid, QX11Info::appRootWindow(), NET::WMPid);
 //		return QString::number(winInfoForPid.pid());
@@ -127,20 +128,20 @@ void LayoutMemory::layoutMapChanged()
 	if( prevLayoutList == newLayoutList )
 		return;
 
-    qDebug() << "Layout map change: " << LayoutSet::toString(prevLayoutList) << "-->" << LayoutSet::toString(newLayoutList);
+    qCDebug(LAYOUT_MEMORY) << "Layout map change: " << LayoutSet::toString(prevLayoutList) << "-->" << LayoutSet::toString(newLayoutList);
 	prevLayoutList = newLayoutList;
 
 	//TODO: need more thinking here on how to support external map resetting
 	if( keyboardConfig.configureLayouts
 			&& keyboardConfig.isSpareLayoutsEnabled()
 			&& isExtraSubset(keyboardConfig.layouts, newLayoutList) ) {
-        qDebug() << "Layout map change for extra layout";
+        qCDebug(LAYOUT_MEMORY) << "Layout map change for extra layout";
 		layoutChanged();	// to remember new map for active "window"
 	}
 	else {
 //		if( newLayoutList != keyboardConfig.getDefaultLayouts() ) {
 			//		layoutList = newLayoutList;
-            qDebug() << "Layout map change from external source: clearing layout memory";
+            qCDebug(LAYOUT_MEMORY) << "Layout map change from external source: clearing layout memory";
 			layoutMap.clear();
 //		}
 	}
@@ -162,10 +163,10 @@ void LayoutMemory::setCurrentLayoutFromMap()
 		return;
 
 	if( ! layoutMap.contains(layoutMapKey) ) {
-//		qDebug() << "new key for layout map" << layoutMapKey;
+//		qCDebug(LAYOUT_MEMORY) << "new key for layout map" << layoutMapKey;
 
 		if( ! X11Helper::isDefaultLayout() ) {
-//			qDebug() << "setting default layout for container key" << layoutMapKey;
+//			qCDebug(LAYOUT_MEMORY) << "setting default layout for container key" << layoutMapKey;
 			if( keyboardConfig.configureLayouts && keyboardConfig.isSpareLayoutsEnabled()
 					&& X11Helper::getLayoutsList() != keyboardConfig.getDefaultLayouts() ) {
 				XkbHelper::initializeKeyboardLayouts(keyboardConfig.getDefaultLayouts());
@@ -175,7 +176,7 @@ void LayoutMemory::setCurrentLayoutFromMap()
 	}
 	else {
 		LayoutSet layoutFromMap = layoutMap[layoutMapKey];
-        qDebug() << "Setting layout map item" << layoutFromMap.currentLayout.toString()
+        qCDebug(LAYOUT_MEMORY) << "Setting layout map item" << layoutFromMap.currentLayout.toString()
 				<< "for container key" << layoutMapKey;
 
 		LayoutSet currentLayouts = X11Helper::getCurrentLayouts();
@@ -200,7 +201,7 @@ void LayoutMemory::windowChanged(WId /*wId*/)
 {
 //	KPluginInfo::List plugins = Plasma::Containment::listContainments();
 //	foreach(KPluginInfo info, plugins) {
-//		qDebug() << "applets" << info.name();
+//		qCDebug(LAYOUT_MEMORY) << "applets" << info.name();
 //	}
 	setCurrentLayoutFromMap();
 }

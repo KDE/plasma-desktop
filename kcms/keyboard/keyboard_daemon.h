@@ -23,6 +23,9 @@
 #include <kdedmodule.h>
 #include <kdemacros.h>
 #include <QtCore/QStringList>
+#include <QLoggingCategory>
+
+Q_DECLARE_LOGGING_CATEGORY(KEYBOARD_DAEMON)
 
 #include "layout_memory.h"
 #include "keyboard_dbus.h"

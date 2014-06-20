@@ -21,6 +21,9 @@
 
 #include <QtCore/QList>
 #include <QtGui/QIcon>
+#include <QLoggingCategory>
+
+Q_DECLARE_LOGGING_CATEGORY(LAYOUTS_MENU)
 
 class QAction;
 class KeyboardConfig;
