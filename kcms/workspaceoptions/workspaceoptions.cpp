@@ -41,8 +41,7 @@ WorkspaceOptionsModule::WorkspaceOptionsModule(QWidget *parent, const QVariantLi
   : KCModule(parent, args),
     m_kwinConfig( KSharedConfig::openConfig("kwinrc")),
     m_ownConfig( KSharedConfig::openConfig("workspaceoptionsrc")),
-    m_plasmaDesktopAutostart("plasma-desktop"),
-    m_plasmaNetbookAutostart("plasma-netbook"),
+    m_plasmaShellAutostart("plasmashell"),
     m_krunnerAutostart("krunner"),
     m_ui(new Ui::MainPage)
 {
