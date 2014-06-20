@@ -27,6 +27,9 @@
 #include <QtCore/QList>
 #include <QtCore/QMap>
 #include <QtCore/QPair>
+#include <QLoggingCategory>
+
+Q_DECLARE_LOGGING_CATEGORY(KEYBOARD_CONFIG)
 
 /**
  * This class provides configuration options for keyboard module

@@ -23,8 +23,9 @@
 #include <QtCore/QString>
 #include <QtCore/QList>
 #include <QtCore/QMap>
+#include <QLoggingCategory>
 
-
+Q_DECLARE_LOGGING_CATEGORY(BINDINGS)
 /**
  * Represents an item for iso-* standards which consists of attributes and their values
  */

@@ -21,9 +21,11 @@
 #define XKB_RULES_H_
 
 #include <QtXml/QXmlDefaultHandler>
-#include <QtCore/QList>
-#include <QtCore/QStringList>
+#include <QList>
+#include <QStringList>
+#include <QLoggingCategory>
 
+Q_DECLARE_LOGGING_CATEGORY(XKB_RULES)
 
 struct ConfigItem {
 	QString name;

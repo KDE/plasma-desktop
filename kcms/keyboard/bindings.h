@@ -21,8 +21,9 @@
 #define BINDINGS_H_
 
 #include <kactioncollection.h>
+#include <QLoggingCategory>
 
-
+Q_DECLARE_LOGGING_CATEGORY(BINDINGS)
 //class QObject;
 class Rules;
 class LayoutUnit;

@@ -23,6 +23,8 @@
 
 #include <QDebug>
 
+Q_LOGGING_CATEGORY(KEYBOARD_CONFIG, "keyboard_config")
+
 static const char* SWITCHING_POLICIES[] = {"Global", "Desktop", "WinClass", "Window", NULL };
 static const char* LIST_SEPARATOR = ",";
 //static const char* DEFAULT_LAYOUT = "us";
@@ -143,7 +145,7 @@ void KeyboardConfig::load()
 //    	}
 //    }
 
-    qDebug() << "configuring layouts" << configureLayouts << "configuring options" << resetOldXkbOptions;
+    qCDebug(KEYBOARD_CONFIG) << "configuring layouts" << configureLayouts << "configuring options" << resetOldXkbOptions;
 }
 
 void KeyboardConfig::save()

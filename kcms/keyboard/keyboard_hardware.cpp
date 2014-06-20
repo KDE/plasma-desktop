@@ -22,6 +22,7 @@
 #include <QX11Info>
 #include <QCursor>	// WTF? - otherwise compiler complains
 #include <QDebug>
+#include <QLoggingCategory>
 
 #include <X11/Xlib.h>
 
@@ -36,6 +37,8 @@ extern "C" void numlockx_change_numlock_state(Display* dpy, int state);
 #include <X11/XKBlib.h>
 #include <X11/keysym.h>
 
+Q_DECLARE_LOGGING_CATEGORY(KEYBOARD_HARDWARE)
+Q_LOGGING_CATEGORY(KEYBOARD_HARDWARE, "keyboard_hardware")
 
 // This code is taken from xset utility from XFree 4.3 (http://www.xfree86.org/)
 
@@ -43,7 +46,7 @@ static
 void set_repeatrate(int delay, double rate)
 {
 	if( !X11Helper::xkbSupported(NULL) ) {
-        qDebug() << "Failed to set keyboard repeat rate: xkb is not supported";
+        qCDebug(KEYBOARD_HARDWARE) << "Failed to set keyboard repeat rate: xkb is not supported";
 		return;
 	}
 

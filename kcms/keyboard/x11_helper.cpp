@@ -35,6 +35,7 @@
 #include <xcb/xcb.h>
 #include <fixx11h.h>
 
+Q_LOGGING_CATEGORY(X11_HELPER, "x11_helper")
 
 // more information about the limit https://bugs.freedesktop.org/show_bug.cgi?id=19501
 int X11Helper::MAX_GROUP_COUNT = 4;
@@ -105,7 +106,7 @@ bool X11Helper::setLayout(const LayoutUnit& layout)
 	QList<LayoutUnit> currentLayouts = getLayoutsList();
 	int idx = currentLayouts.indexOf(layout);
 	if( idx == -1 || idx >= X11Helper::MAX_GROUP_COUNT ) {
-		qWarning() << "Layout" << layout.toString() << "is not found in current layout list"
+        qCWarning(X11_HELPER) << "Layout" << layout.toString() << "is not found in current layout list"
 								<< getLayoutsListAsString(currentLayouts);
 		return false;
 	}
@@ -128,7 +129,7 @@ LayoutUnit X11Helper::getCurrentLayout()
 	if( group < (unsigned int)currentLayouts.size() )
 		return currentLayouts[group];
 
-	qWarning() << "Current group number" << group << "is outside of current layout list" <<
+    qWarning() << "Current group number" << group << "is outside of current layout list" <<
 						getLayoutsListAsString(currentLayouts);
 	return LayoutUnit();
 }
@@ -145,7 +146,7 @@ LayoutSet X11Helper::getCurrentLayouts()
 		layoutSet.currentLayout = currentLayouts[group];
 	}
 	else {
-		qWarning() << "Current group number" << group << "is outside of current layout list" << getLayoutsListAsString(currentLayouts);
+        qWarning() << "Current group number" << group << "is outside of current layout list" << getLayoutsListAsString(currentLayouts);
 		layoutSet.currentLayout = LayoutUnit();
 	}
 
@@ -180,21 +181,21 @@ QList<LayoutUnit> X11Helper::getLayoutsList()
 //				if( layouts[i].layout == layouts[j].layout && layouts[i].getRawDisplayName().isEmpty() ) {
 //					layouts[i].setDisplayName( addNum(layouts[i].layout, 1) );
 //					layouts[j].setDisplayName( addNum(layouts[j].layout, ++n) );
-//					qDebug() << "Adding" << 1 << "to" << layouts[i].toString();
-//					qDebug() << "Adding" << n << "to" << layouts[j].toString();
+//					qCDebug(X11_HELPER) << "Adding" << 1 << "to" << layouts[i].toString();
+//					qCDebug(X11_HELPER) << "Adding" << n << "to" << layouts[j].toString();
 //				}
 //			}
 //		}
 	}
 	else {
-		qWarning() << "Failed to get layout groups from X server";
+        qWarning() << "Failed to get layout groups from X server";
 	}
 	return layouts;
 }
 
 bool X11Helper::setGroup(unsigned int group)
 {
-    qDebug() << group;
+    qCDebug(X11_HELPER) << group;
     xcb_void_cookie_t cookie;
     cookie = xcb_xkb_latch_lock_state(QX11Info::connection(),
         XCB_XKB_ID_USE_CORE_KBD,
@@ -206,7 +207,7 @@ bool X11Helper::setGroup(unsigned int group)
     xcb_generic_error_t *error = nullptr;
     error = xcb_request_check(QX11Info::connection(), cookie);
     if (error) {
-        qDebug() << "Couldn't change the group" << error->error_code;
+        qCDebug(X11_HELPER) << "Couldn't change the group" << error->error_code;
         return false;
     }
 
@@ -234,7 +235,7 @@ bool X11Helper::getGroupNames(Display* display, XkbConfig* xkbConfig, FetchType 
 
 	/* no such atom! */
 	if (rules_atom == None) {       /* property cannot exist */
-		qWarning() << "Failed to fetch layouts from server:" << "could not find the atom" << _XKB_RF_NAMES_PROP_ATOM;
+        qWarning() << "Failed to fetch layouts from server:" << "could not find the atom" << _XKB_RF_NAMES_PROP_ATOM;
 		return false;
 	}
 
@@ -247,7 +248,7 @@ bool X11Helper::getGroupNames(Display* display, XkbConfig* xkbConfig, FetchType 
 
 	/* property not found! */
 	if (ret != Success) {
-		qWarning() << "Failed to fetch layouts from server:" << "Could not get the property";
+        qWarning() << "Failed to fetch layouts from server:" << "Could not get the property";
 		return false;
 	}
 
@@ -255,11 +256,11 @@ bool X11Helper::getGroupNames(Display* display, XkbConfig* xkbConfig, FetchType 
 	if ((extra_bytes > 0) || (real_prop_type != XA_STRING) || (fmt != 8)) {
 		if (prop_data)
 			XFree(prop_data);
-		qWarning() << "Failed to fetch layouts from server:" << "Wrong property format";
+        qWarning() << "Failed to fetch layouts from server:" << "Wrong property format";
 		return false;
 	}
 
-//	qDebug() << "prop_data:" << nitems << prop_data;
+//	qCDebug(X11_HELPER) << "prop_data:" << nitems << prop_data;
 	QStringList names;
 	for(char* p=prop_data; p-prop_data < (long)nitems && p != NULL; p += strlen(p)+1) {
 		names.append( p );
@@ -279,21 +280,21 @@ bool X11Helper::getGroupNames(Display* display, XkbConfig* xkbConfig, FetchType 
 			xkbConfig->layouts << (layouts[ii] != NULL ? layouts[ii] : "");
 			xkbConfig->variants << (ii < variants.count() && variants[ii] != NULL ? variants[ii] : "");
 		}
-		qDebug() << "Fetched layout groups from X server:"
+        qCDebug(X11_HELPER) << "Fetched layout groups from X server:"
 				<< "\tlayouts:" << xkbConfig->layouts
 				<< "\tvariants:" << xkbConfig->variants;
 	}
 
 	if( fetchType == ALL || fetchType == MODEL_ONLY ) {
 		xkbConfig->keyboardModel = (names[1] != NULL ? names[1] : "");
-		qDebug() << "Fetched keyboard model from X server:" << xkbConfig->keyboardModel;
+        qCDebug(X11_HELPER) << "Fetched keyboard model from X server:" << xkbConfig->keyboardModel;
 	}
 
 	if( fetchType == ALL ) {
 		if( names.count() >= 5 ) {
 			QString options = (names[4] != NULL ? names[4] : "");
 			xkbConfig->options = options.split(OPTIONS_SEPARATOR);
-			qDebug() << "Fetched xkbOptions from X server:" << options;
+            qCDebug(X11_HELPER) << "Fetched xkbOptions from X server:" << options;
 		}
 	}
 
@@ -305,7 +306,7 @@ XEventNotifier::XEventNotifier():
 		xkbOpcode(-1)
 {
 	if( QCoreApplication::instance() == NULL ) {
-		qWarning() << "Layout Widget won't work properly without QCoreApplication instance";
+        qWarning() << "Layout Widget won't work properly without QCoreApplication instance";
 	}
 }
 
@@ -321,7 +322,7 @@ XEventNotifier::XEventNotifier(QWidget* parent):
 
 void XEventNotifier::start()
 {
-	qDebug() << "qCoreApp" << QCoreApplication::instance();
+    qCDebug(X11_HELPER) << "qCoreApp" << QCoreApplication::instance();
 	if( QCoreApplication::instance() != NULL && X11Helper::xkbSupported(&xkbOpcode) ) {
 		registerForXkbEvents(QX11Info::display());
 
@@ -416,7 +417,7 @@ int XEventNotifier::registerForXkbEvents(Display* display)
 {
     int eventMask = XkbNewKeyboardNotifyMask | XkbStateNotifyMask;
     if( ! XkbSelectEvents(display, XkbUseCoreKbd, eventMask, eventMask) ) {
-    	qWarning() << "Couldn't select desired XKB events";
+        qWarning() << "Couldn't select desired XKB events";
     	return false;
     }
     return true;

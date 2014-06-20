@@ -30,6 +30,7 @@
 #include "xkb_helper.h"
 #include "flags.h"
 
+Q_LOGGING_CATEGORY(LAYOUTS_MENU, "layouts_menu")
 
 LayoutsMenu::LayoutsMenu(const KeyboardConfig& keyboardConfig_, const Rules& rules_, Flags& flags_):
 	keyboardConfig(keyboardConfig_),
@@ -80,7 +81,7 @@ int LayoutsMenu::switchToLayout(const LayoutUnit& layoutUnit, const KeyboardConf
 		res = X11Helper::setLayout(layoutUnit);
 	}
 	else {
-        qDebug() << "switchToLayout with unknown layout" << layoutUnit.toString();
+        qCDebug(LAYOUTS_MENU) << "switchToLayout with unknown layout" << layoutUnit.toString();
 		res = -1;
 	}
 	return res;

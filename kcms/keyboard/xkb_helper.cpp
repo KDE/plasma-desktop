@@ -26,11 +26,13 @@
 #include <QX11Info>
 #include <QStandardPaths>
 #include <QDebug>
+#include <QLoggingCategory>
 
 #include <kprocess.h>
 
 #include "keyboard_config.h"
 
+Q_LOGGING_CATEGORY(XKB_HELPER, "xkb_helper")
 
 static const char* SETXKBMAP_EXEC = "setxkbmap";
 static const char* XMODMAP_EXEC = "xmodmap";
@@ -71,7 +73,7 @@ void executeXmodmap(const QString& configFileName)
     		xmodmapExe = QStandardPaths::findExecutable(XMODMAP_EXEC);
         	if( xmodmapExe.isEmpty() ) {
     			xmodmapNotFound = true;
-    			qCritical() << "Can't find" << XMODMAP_EXEC << "- xmodmap files won't be run";
+                qCCritical(XKB_HELPER) << "Can't find" << XMODMAP_EXEC << "- xmodmap files won't be run";
     			return;
         	}
     	}
@@ -79,9 +81,9 @@ void executeXmodmap(const QString& configFileName)
     	KProcess xmodmapProcess;
     	xmodmapProcess << xmodmapExe;
     	xmodmapProcess << configFileName;
-    	qDebug() << "Executing" << xmodmapProcess.program().join(" ");
+        qCDebug(XKB_HELPER) << "Executing" << xmodmapProcess.program().join(" ");
     	if( xmodmapProcess.execute() != 0 ) {
-    		qCritical() << "Failed to execute " << xmodmapProcess.program();
+            qCCritical(XKB_HELPER) << "Failed to execute " << xmodmapProcess.program();
     	}
     }
 }
@@ -107,13 +109,13 @@ bool XkbHelper::runConfigLayoutCommand(const QStringList& setxkbmapCommandArgume
 	int res = setxkbmapProcess.execute();
 
 	if( res == 0 ) {	// restore Xmodmap mapping reset by setxkbmap
-		qDebug() << "Executed successfully in " << timer.elapsed() << "ms" << setxkbmapProcess.program().join(" ");
+        qCDebug(XKB_HELPER) << "Executed successfully in " << timer.elapsed() << "ms" << setxkbmapProcess.program().join(" ");
 		restoreXmodmap();
-		qDebug() << "\t and with xmodmap" << timer.elapsed() << "ms";
+        qCDebug(XKB_HELPER) << "\t and with xmodmap" << timer.elapsed() << "ms";
 	    return true;
 	}
 	else {
-		qCritical() << "Failed to run" << setxkbmapProcess.program().join(" ") << "return code:" << res;
+        qCCritical(XKB_HELPER) << "Failed to run" << setxkbmapProcess.program().join(" ") << "return code:" << res;
 	}
 	return false;
 }

@@ -41,9 +41,7 @@
 //temp hack
 #include "kcmmisc.h"
 
-
 K_PLUGIN_FACTORY(KeyboardModuleFactory, registerPlugin<KCMKeyboard>();)
-K_EXPORT_PLUGIN(KeyboardModuleFactory("kcmkeyboard"))
 
 KCMKeyboard::KCMKeyboard(QWidget *parent, const QVariantList &args)
   : KCModule(parent/*, name*/)

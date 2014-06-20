@@ -41,6 +41,7 @@
 
 #include <X11/Xlib.h>
 
+Q_LOGGING_CATEGORY(KCMMISC, "kcmmisc")
 
 KCMiscKeyboardWidget::KCMiscKeyboardWidget(QWidget *parent)
 	: QWidget(parent),
@@ -66,18 +67,18 @@ KCMiscKeyboardWidget::KCMiscKeyboardWidget(QWidget *parent)
 
   QList <QAbstractButton*> btns = ui.kbRepButtonGroup->buttons();
 
-  for (int i = 0; i < btns.size(); i++) {
+  for (int i = 0; i < btns.size(); i++){
       ui.kbRepButtonGroup->setId(btns[i], i);
   }
 
   btns = ui.numButtonGroup->buttons();
 
-  for (int i = 0; i < btns.size(); i++) {
+  for (int i = 0; i < btns.size(); i++){
       ui.numButtonGroup->setId(btns[i], i);
   }
 
-  connect(ui.kbRepButtonGroup, SIGNAL(buttonClicked(int)), this, SLOT(changed()));
-  connect(ui.kbRepButtonGroup, SIGNAL(buttonClicked(int)), this, SLOT(keyboardRepeatStateChanged(int)));
+  connect(ui.kbRepButtonGroup, static_cast<void (QButtonGroup::*)(int)>(&QButtonGroup::buttonClicked), this, static_cast<void (KCMiscKeyboardWidget::*)(void)>(&KCMiscKeyboardWidget::changed));
+  connect(ui.kbRepButtonGroup, static_cast<void (QButtonGroup::*)(int)>(&QButtonGroup::buttonClicked), this, &KCMiscKeyboardWidget::keyboardRepeatStateChanged);
   connect(ui.delay, SIGNAL(valueChanged(int)), this, SLOT(delaySpinboxChanged(int)));
   connect(ui.delaySlider, SIGNAL(valueChanged(int)), this, SLOT(delaySliderChanged(int)));
   connect(ui.rate, SIGNAL(valueChanged(double)), this, SLOT(rateSpinboxChanged(double)));
@@ -133,7 +134,7 @@ void TriStateHelper::setTriState(QButtonGroup* group, TriState state)
     QAbstractButton* checked = group->button(getInt(state));
     if(checked){
         checked->setChecked(true);
-        //qDebug()<<"button: "<<checked->text();
+        //qCDebug(KCMMISC)<<"button: "<<checked->text();
     }
 }
 

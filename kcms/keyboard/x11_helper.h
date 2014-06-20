@@ -26,10 +26,11 @@
 #include <QWidget>
 #include <QX11Info>
 #include <QAbstractNativeEventFilter>
+#include <QLoggingCategory>
 
 #include <xcb/xcb.h>
 //#include <xcb/xkb.h>
-
+Q_DECLARE_LOGGING_CATEGORY(X11_HELPER)
 //union _xkb_event;
 //class xcb_generic_event_t;
 

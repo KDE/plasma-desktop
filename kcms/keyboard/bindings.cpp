@@ -31,6 +31,7 @@
 #include "x11_helper.h"
 #include "flags.h"
 
+Q_LOGGING_CATEGORY(BINDINGS, "bindings")
 
 static const char* actionName = I18N_NOOP("Switch to Next Keyboard Layout");
 static const char* COMPONENT_NAME = I18N_NOOP("KDE Keyboard Layout Switcher");
@@ -110,7 +111,7 @@ void KeyboardLayoutActionCollection::setLayoutShortcuts(QList<LayoutUnit>& layou
 			createLayoutShortcutActon(layoutUnit, rules, false);
 		}
 	}
-    qDebug() << "Cleaning component shortcuts on save" << KGlobalAccel::cleanComponent(COMPONENT_NAME);
+    qCDebug(BINDINGS) << "Cleaning component shortcuts on save" << KGlobalAccel::cleanComponent(COMPONENT_NAME);
 }
 
 void KeyboardLayoutActionCollection::loadLayoutShortcuts(QList<LayoutUnit>& layoutUnits, const Rules* rules)
@@ -120,15 +121,15 @@ void KeyboardLayoutActionCollection::loadLayoutShortcuts(QList<LayoutUnit>& layo
 		QAction* action = createLayoutShortcutActon(layoutUnit, rules, true);
                 const auto shortcut = KGlobalAccel::self()->shortcut(action);
 		if( ! shortcut.isEmpty() ) {
-            qDebug() << "Restored shortcut for" << layoutUnit.toString() << shortcut.first();
+            qCDebug(BINDINGS) << "Restored shortcut for" << layoutUnit.toString() << shortcut.first();
 			layoutUnit.setShortcut(shortcut.first());
 		}
 		else {
-            qDebug() << "Skipping empty shortcut for" << layoutUnit.toString();
+            qCDebug(BINDINGS) << "Skipping empty shortcut for" << layoutUnit.toString();
 			removeAction(action);
 		}
 	}
-    qDebug() << "Cleaning component shortcuts on load" << KGlobalAccel::cleanComponent(COMPONENT_NAME);
+    qCDebug(BINDINGS) << "Cleaning component shortcuts on load" << KGlobalAccel::cleanComponent(COMPONENT_NAME);
 }
 
 //KAction* KeyboardLayoutActionCollection::getAction(const LayoutUnit& layoutUnit)
