@@ -31,7 +31,6 @@
 #include <knuminput.h>
 
 #include "kcmlaunch.h"
-#include "krunner_interface.h"
 #include "kwin_interface.h"
 #include <KPluginFactory>
 #include <KPluginLoader>
@@ -203,9 +202,6 @@ LaunchConfig::save()
   c.sync();
 
   emit changed( false );
-
-  org::kde::krunner::App desktop("org.kde.krunner", "/App", QDBusConnection::sessionBus());
-  desktop.initializeStartupNotification();
 
   org::kde::kwin::Effects kwin("org.kde.KWin", "/KWin", QDBusConnection::sessionBus());
   kwin.reconfigureEffect("startupfeedback");

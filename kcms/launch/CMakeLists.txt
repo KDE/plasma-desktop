@@ -6,7 +6,6 @@ add_definitions(-DTRANSLATION_DOMAIN=\"kcmlaunch\")
 
 set(kcm_launch_PART_SRCS kcmlaunch.cpp )
 
-qt5_add_dbus_interface( kcm_launch_PART_SRCS ${KRUNNERAPP_INTERFACE} krunner_interface )
 set_source_files_properties(${KWIN_EFFECTS_INTERFACE} PROPERTIES INCLUDE "interface_util.h")
 qt5_add_dbus_interface( kcm_launch_PART_SRCS ${KWIN_EFFECTS_INTERFACE} kwin_interface )
 
