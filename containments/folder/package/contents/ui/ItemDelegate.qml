@@ -134,7 +134,7 @@ Item {
 
                 horizontalAlignment: Text.AlignHCenter
 
-                color: (root.isContainment && main.GridView.view.isRootView) ? "white" : theme.textColor // TODO: Make configurable once we have color buttons.
+                color: (root.isContainment && main.GridView.view.isRootView) ? plasmoid.configuration.textColor : theme.textColor
 
                 text: model.display
             }
