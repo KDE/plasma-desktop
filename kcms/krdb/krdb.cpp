@@ -45,6 +45,7 @@
 #include <ksavefile.h>
 #include <ktemporaryfile.h>
 #include <KLocalizedString>
+#include <kdelibs4migration.h>
 
 #include "krdb.h"
 #if HAVE_X11
@@ -587,5 +588,83 @@ void runRdb( uint flags )
     }
 #endif
   }
+
+  //Legacy support:
+  //Try to sync kde4 settings with ours
+
+  Kdelibs4Migration migration;
+  //kf5 congig groups for general and icons
+  KConfigGroup generalGroup(kglobalcfg, "General");
+  KConfigGroup iconsGroup(kglobalcfg, "Icons");
+
+  const QString colorSchemeName = generalGroup.readEntry("ColorScheme", QString());
+  //if no valid color scheme saved, something weird is going on, abort
+  if (colorSchemeName.isEmpty()) {
+      return;
+  }
+  //clone the color scheme
+  QString src = QStandardPaths::locate(QStandardPaths::GenericDataLocation, "color-schemes/" +  colorSchemeName + ".colors");
+  QString dest = migration.saveLocation("data", "color-schemes") + colorSchemeName + ".colors";
+
+  QFile::remove(dest);
+  QFile::copy(src, dest);
+
+  //Apply the color scheme
+  QString configFilePath = migration.saveLocation("config") + "kdeglobals";
+  if (configFilePath.isEmpty()) {
+      return;
+  }
+
+  KConfig kde4config(configFilePath);
+
+  KConfigGroup kde4generalGroup(&kde4config, "General");
+  kde4generalGroup.writeEntry("ColorScheme", colorSchemeName);
+
+  //fonts
+  QString font = generalGroup.readEntry("font", QString());
+  if (!font.isEmpty()) {
+      kde4generalGroup.writeEntry("font", font);
+  }
+  font = generalGroup.readEntry("desktopFont", QString());
+  if (!font.isEmpty()) {
+      kde4generalGroup.writeEntry("desktopFont", font);
+  }
+  font = generalGroup.readEntry("menuFont", QString());
+  if (!font.isEmpty()) {
+      kde4generalGroup.writeEntry("menuFont", font);
+  }
+  font = generalGroup.readEntry("smallestReadableFont", QString());
+  if (!font.isEmpty()) {
+      kde4generalGroup.writeEntry("smallestReadableFont", font);
+  }
+  font = generalGroup.readEntry("taskbarFont", QString());
+  if (!font.isEmpty()) {
+      kde4generalGroup.writeEntry("taskbarFont", font);
+  }
+  font = generalGroup.readEntry("toolBarFont", QString());
+  if (!font.isEmpty()) {
+      kde4generalGroup.writeEntry("toolBarFont", font);
+  }
+
+  //TODO: does exist any way to check if a qt4 widget style is present from a qt5 app?
+  //kde4generalGroup.writeEntry("widgetStyle", "qtcurve");
+  kde4generalGroup.sync();
+
+  KConfigGroup kde4IconGroup(&kde4config, "Icons");
+  QString iconTheme = iconsGroup.readEntry("Theme", QString());
+  if (!iconTheme.isEmpty()) {
+      kde4IconGroup.writeEntry("Theme", iconTheme);
+  }
+  kde4IconGroup.sync();
+
+  //copy all the groups in the color scheme in kdeglobals
+  KSharedConfigPtr kde4ColorConfig = KSharedConfig::openConfig(src);
+
+  foreach (const QString &grp, kde4ColorConfig->groupList()) {
+      KConfigGroup cg(kde4ColorConfig, grp);
+      KConfigGroup cg2(&kde4config, grp);
+      cg.copyTo(&cg2);
+  }
+
 }
 
