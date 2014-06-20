@@ -62,6 +62,17 @@ Item {
         listView.currentItem.openContextMenu();
     }
 
+    Connections {
+        target: plasmoid
+        onExpandedChanged: {
+            if (!expanded) {
+                applicationsView.model.rootIndex = 0;
+                applicationsView.positionViewAtBeginning();
+                applicationsView.clearBreadcrumbs();
+            }
+        }
+    }
+
     ContextMenu {
         id: contextMenu
     }
