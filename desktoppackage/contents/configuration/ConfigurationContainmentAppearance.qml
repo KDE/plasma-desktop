@@ -87,6 +87,7 @@ ColumnLayout {
         }
         QtControls.ComboBox {
             id: pluginComboBox
+            enabled: !plasmoid.immutable
             model: configDialog.containmentPluginsConfigModel
             width: theme.mSize(theme.defaultFont).width * 24
             textRole: "name"
