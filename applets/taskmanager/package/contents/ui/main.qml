@@ -89,6 +89,28 @@ Item {
         }
     }
 
+    Timer {
+        id: iconGeometryTimer
+
+        interval: 500
+        repeat: false
+
+        onTriggered: {
+            TaskTools.publishIconGeometries(taskList.children);
+        }
+    }
+
+    Connections {
+        target: plasmoid
+
+        onLocationChanged: {
+            // This is on a timer because the panel may not have
+            // settled into position yet when the location prop-
+            // erty updates.
+            iconGeometryTimer.start();
+        }
+    }
+
     Connections {
         target: plasmoid.configuration
         onLaunchersChanged: backend.launchers = plasmoid.configuration.launchers
