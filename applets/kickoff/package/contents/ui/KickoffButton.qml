@@ -58,7 +58,6 @@ PlasmaComponents.TabButton {
         id: labelElement
 
         anchors {
-            bottom: parent.bottom
             top: iconElement.bottom
             left: parent.left
             right: parent.right
