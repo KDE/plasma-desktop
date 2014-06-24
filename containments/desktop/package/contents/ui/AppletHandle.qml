@@ -117,7 +117,7 @@ KQuickControlsAddons.MouseEventListener {
                     LayoutManager.setSpaceAvailable(appletItem.x, appletItem.y, appletItem.width, appletItem.height, true)
                 }
                 onPositionChanged: {
-                    appletItem.width = Math.max(appletItem.minimumWidth, appletItem.width + mouse.x-startX);
+                    appletItem.width = Math.max(appletItem.minimumWidth + appletHandle.width, appletItem.width + mouse.x-startX);
 
                     var oldBottom = appletItem.y + appletItem.height;
                     appletItem.height = Math.max(appletItem.minimumHeight, appletItem.height + startY-mouse.y)
