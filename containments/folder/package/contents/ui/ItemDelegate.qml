@@ -114,6 +114,23 @@ Item {
                 icon: model.decoration
             }
 
+            Rectangle {
+                id: textBackground
+                anchors {
+                    left: label.left
+                    leftMargin: -units.smallSpacing
+                    top: label.top
+                    topMargin: -units.smallSpacing
+                    right: label.right
+                    rightMargin: -units.smallSpacing
+                    bottom: label.bottom
+                    bottomMargin: -units.smallSpacing
+                }
+                color: (root.isContainment && main.GridView.view.isRootView) ? theme.textColor : "transparent"
+                radius: 3
+                opacity: 0.4
+            }
+
             PlasmaComponents.Label {
                 id: label
 
@@ -134,7 +151,7 @@ Item {
 
                 horizontalAlignment: Text.AlignHCenter
 
-                color: (root.isContainment && main.GridView.view.isRootView) ? plasmoid.configuration.textColor : theme.textColor
+                color: (root.isContainment && main.GridView.view.isRootView) ? theme.backgroundColor : theme.textColor
 
                 text: model.display
             }

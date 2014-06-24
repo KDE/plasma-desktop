@@ -43,7 +43,6 @@ GroupBox {
     property alias cfg_previewPlugins: previewPluginsDialog.previewPlugins
     property alias cfg_iconSize: iconSize.value
     property alias cfg_textLines: textLines.value
-    property alias cfg_textColor: textColor.color
 
     ColumnLayout {
         GroupBox {
@@ -204,45 +203,6 @@ GroupBox {
                     }
                 }
 
-                RowLayout {
-                    visible: ("containmentType" in plasmoid)
-
-                    Label {
-                        text: i18n("Text color:")
-                    }
-
-                    Button {
-                        id: textColorButton
-
-                        text: "MMM" // mSize * 3, essentially.
-
-                        Rectangle {
-                            id: textColor
-
-                            anchors {
-                                fill: parent
-                                topMargin: (units.smallSpacing * 2)
-                                rightMargin: (units.smallSpacing * 2)
-                                bottomMargin: (units.smallSpacing * 2)
-                                leftMargin: (units.smallSpacing * 2)
-                            }
-                        }
-
-                        onClicked: {
-                            textColorDialog.visible = true;
-                        }
-                    }
-                }
-
-                ColorDialog {
-                    id: textColorDialog
-
-                    title: i18n("Choose a text color")
-
-                    onAccepted: {
-                        textColor.color = textColorDialog.color;
-                    }
-                }
             }
         }
     }
