@@ -100,6 +100,7 @@ Item {
                         } else {
                             listItem.activate();
                         }
+                        listItem.ListView.view.currentIndex = -1;
                     } else if (mouse.button == Qt.RightButton) {
                         // don't show a context menu for container
                         if (hasModelChildren || typeof(contextMenu) === "undefined") {
