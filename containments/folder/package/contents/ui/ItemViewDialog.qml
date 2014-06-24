@@ -30,7 +30,7 @@ Folder.SubDialog {
     visible: false
 
     property Item parentDelegate: null
-    property Item closeTimer: closeTimer
+    property QtObject closeTimer: closeTimer
     property QtObject childDialog: (itemView.hoveredItem != null) ? itemView.hoveredItem.popupDialog : null
     property bool containsMouse: itemView.containsMouse || (childDialog != null && childDialog.containsMouse)
 
