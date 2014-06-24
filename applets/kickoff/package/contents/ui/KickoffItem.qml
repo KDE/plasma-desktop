@@ -26,7 +26,8 @@ Item {
     id: listItem
 
     width: ListView.view.width
-    height: listItemDelegate.height // + listItemDelegate.anchors.margins*2
+//     height: listItemDelegate.height // + listItemDelegate.anchors.margins*2
+    height: (units.smallSpacing * 2) + elementIcon.height
 
     property bool dropEnabled: false
     property bool modelChildren: hasModelChildren
@@ -60,10 +61,8 @@ Item {
             right: parent.right
             top: parent.top
             bottom: parent.bottom
-            //margins: units.gridUnit / 2
+            //margins: units.smallSpacing
         }
-        //height: Math.max(elementIcon.height + units.gridUnit/2, titleElement.height + subTitleElement.height + units.gridUnit/2)
-        height: units.iconSizes.medium + (units.gridUnit / 2)
 
         DragArea {
             anchors.fill: parent
@@ -135,6 +134,7 @@ Item {
                 left: elementIcon.right
                 right: parent.right
                 leftMargin: units.gridUnit
+                rightMargin: units.gridUnit * 2
             }
             height: paintedHeight
             // TODO: games should always show the by name!
@@ -154,7 +154,8 @@ Item {
             anchors {
                 left: titleElement.left
                 right: parent.right
-                top: elementIcon.verticalCenter
+                rightMargin: units.gridUnit * 2
+                top: titleElement.bottom
             }
             height: paintedHeight
 
