@@ -59,7 +59,6 @@ Rectangle {
         id: sidePanel
         location: PlasmaCore.Types.LeftEdge
         type: PlasmaCore.Dialog.Dock
-        flags: Qt.Window|Qt.WindowStaysOnTopHint|Qt.X11BypassWindowManagerHint
 
         hideOnWindowDeactivate: true
 
