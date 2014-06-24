@@ -25,6 +25,8 @@ Item {
             fill: parent
             leftMargin: units.gridUnit
             rightMargin: units.gridUnit
+            topMargin: - units.smallSpacing
+            bottomMargin: - units.smallSpacing
         }
     }
 }
