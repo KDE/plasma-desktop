@@ -140,7 +140,7 @@ Item {
                     horizontalCenter: parent.horizontalCenter
                 }
 
-                width: parent.width - units.smallSpacing * 8 // TODO: Pick a frame prefix margin to cache and use instead.
+                width: Math.min(paintedWidth, parent.width - units.smallSpacing * 8) // TODO: Pick a frame prefix margin to cache and use instead.
                 height: undefined // Unset PlasmaComponents.Label's default.
 
                 textFormat: Text.PlainText
