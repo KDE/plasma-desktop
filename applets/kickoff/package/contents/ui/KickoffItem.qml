@@ -129,8 +129,10 @@ Item {
         PlasmaComponents.Label {
             id: titleElement
 
+            y: (parent.height - titleElement.height - ( isCurrent ? subTitleElement.paintedHeight : 0) ) / 2
+            Behavior on y { NumberAnimation { duration: units.shortDuration } }
             anchors {
-                bottom: elementIcon.verticalCenter
+                //bottom: elementIcon.verticalCenter
                 left: elementIcon.right
                 right: parent.right
                 leftMargin: units.gridUnit
