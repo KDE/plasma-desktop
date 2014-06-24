@@ -88,6 +88,7 @@ Item {
         height: childrenRect.height
 
         Flickable {
+            id: breadcrumbFlickable
             anchors {
                 top: parent.top
                 left: parent.left
@@ -96,7 +97,8 @@ Item {
             height: breadcrumbsElement.height
 
             contentWidth: breadcrumbsElement.width
-            contentX: contentWidth - width
+            pixelAligned: true
+            //contentX: contentWidth - width
 
             PlasmaComponents.ButtonRow {
                 id: breadcrumbsElement
@@ -120,6 +122,9 @@ Item {
                         root: false
                         text: model.text
                     }
+                }
+                onWidthChanged: {
+                    breadcrumbFlickable.contentX = Math.max(0, breadcrumbsElement.width - breadcrumbFlickable.width)
                 }
             }
         } // Flickable

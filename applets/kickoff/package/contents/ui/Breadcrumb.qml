@@ -66,7 +66,7 @@ Item {
         width: visible ? height : 0
 
         svg: PlasmaCore.Svg {
-            imagePath: "toolbar-icons/go"
+            imagePath: "icons/go"
         }
         elementId: "go-next"
         visible: !crumbRoot.root
