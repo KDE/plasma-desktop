@@ -179,10 +179,10 @@ Item {
             property Item item
 
             opacity: 0
-            x: (item != null) ? item.x + toolBoxFrame.margins.left : toolBoxFrame.margins.left
-            y: (item != null) ? item.y + toolBoxFrame.margins.top : toolBoxFrame.margins.top
-            width: actionList.width
-            height: (item != null) ? item.height : 0
+            x: (item != null) ? item.x + toolBoxFrame.margins.left - units.smallSpacing : toolBoxFrame.margins.left
+            y: (item != null) ? item.y + toolBoxFrame.margins.top - units.smallSpacing : toolBoxFrame.margins.top
+            width: actionList.width + units.smallSpacing * 2
+            height: (item != null) ? item.height + units.smallSpacing * 2 : 0
 
             Behavior on opacity {
                 NumberAnimation {
@@ -196,10 +196,10 @@ Item {
             property Item item
 
             opacity: 0
-            x: (item != null) ? item.x + toolBoxFrame.margins.left : toolBoxFrame.margins.left
-            y: (item != null) ? item.y + toolBoxFrame.margins.top : toolBoxFrame.margins.top
-            width: actionList.width
-            height: (item != null) ? item.height : 0
+            x: (item != null) ? item.x + toolBoxFrame.margins.left - units.smallSpacing : toolBoxFrame.margins.left
+            y: (item != null) ? item.y + toolBoxFrame.margins.top - units.smallSpacing : toolBoxFrame.margins.top
+            width: actionList.width + units.smallSpacing * 2
+            height: (item != null) ? item.height + units.smallSpacing * 2 : 0
 
             Behavior on opacity {
                 NumberAnimation {
