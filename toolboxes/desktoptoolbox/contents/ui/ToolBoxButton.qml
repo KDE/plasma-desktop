@@ -74,9 +74,14 @@ Item {
     //If the position is anything else it will updated via onXChanged during intialisation
     state: "topleft"
 
-    onXChanged: updateState()
-    onYChanged: updateState()
+    onXChanged: stateTimer.restart()
+    onYChanged: stateTimer.restart()
 
+    Timer {
+        id: stateTimer
+        interval: 100
+        onTriggered: updateState()
+    }
     function updateState() {
         var container = main;
         //print("    w: " + container.width +"x"+container.height+" : "+x+"/"+y+" tbw: " + toolBoxButton.width);
@@ -230,6 +235,8 @@ Item {
                 main.placeToolBox();
             }
             dragging = false;
+            stateTimer.stop();
+            updateState();
         }
         onCanceled: dragging = false;
     }
