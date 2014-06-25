@@ -318,12 +318,11 @@ FocusScope {
 
             onTargetItemChanged: {
                 if (targetItem != null) {
-                    var pos = mapFromItem(targetItem, targetItem.label.x, targetItem.label.y);
-                    // TODO FIXME: Use actual line edit frame margin size.
-                    x = pos.x;
-                    y = pos.y - 2;
-                    width = targetItem.label.width;
-                    height = targetItem.label.height + 4;
+                    var pos = main.mapFromItem(targetItem, targetItem.labelArea.x, targetItem.labelArea.y);
+                    x = pos.x + units.smallSpacing;
+                    y = pos.y + units.smallSpacing;
+                    width = targetItem.labelArea.width;
+                    height = targetItem.labelArea.height;
                     text = targetItem.label.text;
                     editor.selectAll();
                     visible = true;

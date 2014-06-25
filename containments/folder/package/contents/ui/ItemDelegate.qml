@@ -32,6 +32,7 @@ Item {
     property string name: model.display
     property QtObject popupDialog: null
     property Item label: label
+    property Item labelArea: textBackground
     property Item actionsOverlay: actions
     property bool hovered: (GridView.view.hoveredItem == main)
     property bool selected: model.selected
