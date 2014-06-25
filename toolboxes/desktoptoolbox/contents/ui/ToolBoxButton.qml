@@ -35,7 +35,7 @@ Item {
     rotation: isHorizontal ? 0 : -90;
 
     transform: Translate {
-        x: state == "left" ? -width/2 + height/2 : state == "right" ? +width/2 - height/2 : 0
+        x: state == "left" ? Math.round(-width/2 + height/2) : state == "right" ? + Math.round(width/2 - height/2) : 0
         Behavior on x {
             NumberAnimation {
                 duration: units.shortDuration * 3;
@@ -67,8 +67,8 @@ Item {
         enabled: visible
     }
 
-    width: buttonLayout.width
-    height: buttonLayout.height
+    width: buttonLayout.width + (buttonLayout.width % 2)
+    height: buttonLayout.height + (buttonLayout.height % 2)
 
     //x and y default to 0, so top left would be correct
     //If the position is anything else it will updated via onXChanged during intialisation
@@ -148,9 +148,9 @@ Item {
         //the visible space is the width of the background frame + one margin, the other is offscreen
         //we want to work out the offset which is the visible frame width - our icon width / 2
         //X is relative to the start of button, but the frame is one marging wider to the left so this needs taking into account
-        x: isCorner ? (buttonLayout.height +
+        x: isCorner ? Math.round((buttonLayout.height +
                             ((toolBoxButton.state == "topleft" || toolBoxButton.state == "bottomleft") ? backgroundFrame.margins.right : -backgroundFrame.margins.left)
-                            - toolBoxIcon.width) /2 : 0
+                            - toolBoxIcon.width) /2) : 0
 
         spacing: units.smallSpacing
 
