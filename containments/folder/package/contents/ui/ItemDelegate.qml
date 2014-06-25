@@ -127,7 +127,7 @@ Item {
                     bottomMargin: -units.smallSpacing
                 }
                 color: (root.isContainment && main.GridView.view.isRootView) ? theme.textColor : "transparent"
-                radius: 3
+                radius: units.smallSpacing
                 opacity: 0.4
             }
 
