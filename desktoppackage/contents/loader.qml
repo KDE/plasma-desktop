@@ -43,9 +43,5 @@ Item {
         query: "IS Keyboard"
     }
     */
-    Platform.Application {
-        application: "krunner"
-        running: main.loaded
-    }
 }
 
