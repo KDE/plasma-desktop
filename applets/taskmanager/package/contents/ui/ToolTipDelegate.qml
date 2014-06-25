@@ -64,6 +64,7 @@ Column {
 
                     onClicked: {
                         tasks.activateWindow(modelData);
+                        toolTip.hideToolTip()
                     }
                 }
             }
