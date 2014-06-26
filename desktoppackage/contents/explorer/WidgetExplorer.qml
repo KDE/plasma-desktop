@@ -35,8 +35,8 @@ Item {
     height: 800//Screen.height
 
     // The +4 is for the gap and cross button
-    property int minimumWidth: theme.mSize(heading.font).width * (heading.text.length + 4)
-    property int minimumHeight: 800//topBar.height + list.delegateHeight + (widgetExplorer.orientation == Qt.Horizontal ? scrollBar.height : 0) + 4
+    property int minimumWidth: theme.mSize(heading.font).width * (heading.text.length + 6)
+    property int minimumHeight: 800//width will be set by the dialog anyway
 
     property alias containment: widgetExplorer.containment
 
