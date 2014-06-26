@@ -68,36 +68,40 @@ PlasmaCore.FrameSvgItem {
             height: width
             icon: background.icon
         }
-        ColumnLayout {
+
+        PlasmaExtras.Heading {
+            id: titleText
+            level: 4
+            text: name
+            elide: Text.ElideRight
+            wrapMode: Text.WordWrap
+            maximumLineCount: 2
             anchors {
                 top: parent.top
-                bottom: parent.bottom
                 left: iconWidget.right
                 right: parent.right
-
                 topMargin: background.margins.top
+                leftMargin: background.margins.left
+                rightMargin: background.margins.right
+            }
+        }
+        PlasmaComponents.Label {
+            text: description
+            font.pointSize: theme.smallestFont.pointSize
+            wrapMode: Text.WordWrap
+            elide: Text.ElideRight
+
+            anchors {
+                top: titleText.bottom
+                left: iconWidget.right
+                right: parent.right
+                bottom: parent.bottom
+                topMargin: units.smallSpacing
                 bottomMargin: background.margins.bottom
                 leftMargin: background.margins.left
                 rightMargin: background.margins.right
             }
-            spacing: 4
-            PlasmaExtras.Heading {
-                id: titleText
-                level: 4
-                text: name
-                elide: Text.ElideRight
-                wrapMode: Text.WordWrap
-                Layout.fillWidth: true
-            }
-            PlasmaComponents.Label {
-                text: description
-                font.pointSize: theme.smallestFont.pointSize
-                wrapMode: Text.WordWrap
-                elide: Text.ElideRight
-                maximumLineCount: 3
-                Layout.fillWidth: true
-                Layout.fillHeight: true
-            }
+
         }
         QIconItem {
             icon: running ? "dialog-ok-apply" : undefined
