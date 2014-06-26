@@ -214,6 +214,7 @@ Item {
             model: widgetExplorer.widgetsModel
 
             clip: true //TODO work out why this is this needed
+            cacheBuffer: delegateHeight * 5 // keep 5 delegates either side
 
             delegate: AppletDelegate {}
 
