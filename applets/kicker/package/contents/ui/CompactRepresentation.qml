@@ -105,13 +105,13 @@ Item {
     MouseArea
     {
         id: mouseArea
+        property bool wasExpanded: false;
 
         anchors.fill: parent
 
         hoverEnabled: true
 
-        onClicked: {
-            plasmoid.expanded = !plasmoid.expanded;
-        }
+        onPressed: wasExpanded = plasmoid.expanded
+        onClicked: plasmoid.expanded = !wasExpanded
     }
 }

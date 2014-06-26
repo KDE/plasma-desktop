@@ -105,6 +105,12 @@ PlasmaCore.ToolTipArea {
         }
     }
  
+    Timer {
+        id: expandedSync
+        interval: 100
+        onTriggered: plasmoid.expanded = popupWindow.visible;
+    }
+
     PlasmaCore.Dialog {
         id: popupWindow
         objectName: "popupWindow"
@@ -126,7 +132,7 @@ PlasmaCore.ToolTipArea {
 
         onVisibleChanged: {
             if (!visible) {
-                plasmoid.expanded = false;
+                expandedSync.restart();
                 plasmoid.status = oldStatus;
             } else {
                 oldStatus = plasmoid.status;
