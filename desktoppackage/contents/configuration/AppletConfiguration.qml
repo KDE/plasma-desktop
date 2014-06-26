@@ -197,12 +197,7 @@ Rectangle {
                             }
                             Repeater {
                                 model: configDialog.configModel
-                                delegate: ConfigCategoryDelegate {
-                                    onClicked: {
-                                        pageTitle.text = name;
-                                    }
-
-                                }
+                                delegate: ConfigCategoryDelegate {}
                             }
                             Repeater {
                                 model: !root.isContainment ? globalConfigModel : undefined
