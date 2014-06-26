@@ -236,6 +236,9 @@ Rectangle {
                         anchors {
                             left: parent.left
                         }
+                        property bool invertAnimations: false
+
+
                         height: Math.max((scroll.height - pageTitle.height - parent.spacing), (main.currentItem  ? (main.currentItem.implicitHeight ? main.currentItem.implicitHeight : main.currentItem.childrenRect.height) : 0))
                         width: scroll.viewport.width
                         clip: true
@@ -260,6 +263,48 @@ Rectangle {
                                     currentItem[prop+"Changed"].connect(root.pageChanged)
                                 }
                             }*/
+                        }
+
+                        delegate: QtControls.StackViewDelegate {
+                            function transitionFinished(properties)
+                            {
+                                properties.exitItem.opacity = 1
+                            }
+
+                            pushTransition: QtControls.StackViewTransition {
+                                PropertyAnimation {
+                                    target: enterItem
+                                    property: "opacity"
+                                    from: 0
+                                    to: 1
+                                    duration: units.longDuration
+                                    easing.type: Easing.InOutQuad
+                                }
+                                PropertyAnimation {
+                                    target: enterItem
+                                    property: "x"
+                                    from: main.invertAnimations ? -target.width/3: target.width/3
+                                    to: 0
+                                    duration: units.longDuration
+                                    easing.type: Easing.InOutQuad
+                                }
+                                PropertyAnimation {
+                                    target: exitItem
+                                    property: "opacity"
+                                    from: 1
+                                    to: 0
+                                    duration: units.longDuration
+                                    easing.type: Easing.InOutQuad
+                                }
+                                PropertyAnimation {
+                                    target: exitItem
+                                    property: "x"
+                                    from: 0
+                                    to: invertAnimations ? target.width/3 : -target.width/3
+                                    duration: units.longDuration
+                                    easing.type: Easing.InOutQuad
+                                }
+                            }
                         }
                     }
                 }

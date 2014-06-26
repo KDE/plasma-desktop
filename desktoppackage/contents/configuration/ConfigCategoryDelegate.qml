@@ -38,6 +38,7 @@ MouseArea {
 //BEGIN functions
     function openCategory() {
         if (typeof(categoriesView.currentItem) !== "undefined") {
+            main.invertAnimations = (categoriesView.currentItem.y > delegate.y);
             categoriesView.currentItem = delegate;
         }
         main.sourceFile = model.source
