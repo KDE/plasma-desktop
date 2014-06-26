@@ -105,14 +105,14 @@ FocusScope {
         PlasmaExtras.ScrollArea {
             anchors.fill: parent
 
+            focus: true
+
             ListView {
                 id: listView
 
                 property int eligibleWidth: width
 
                 currentIndex: -1
-
-                focus: true
 
                 boundsBehavior: Flickable.StopAtBounds
                 snapMode: ListView.SnapToItem
