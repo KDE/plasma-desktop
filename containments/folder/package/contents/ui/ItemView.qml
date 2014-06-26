@@ -82,7 +82,8 @@ FocusScope {
 
             var pos = mapToItem(hoveredItem.actionsOverlay, mouse.x, mouse.y);
 
-            if (pos.x > hoveredItem.actionsOverlay.width && pos.y > hoveredItem.actionsOverlay.height) {
+
+            if (!(pos.x <= hoveredItem.actionsOverlay.width && pos.y <= hoveredItem.actionsOverlay.height)) {
                 if (gridView.shiftPressed && gridView.currentIndex != -1) {
                     dir.setRangeSelected(gridView.anchorIndex, hoveredItem.index);
                 } else {
@@ -113,7 +114,7 @@ FocusScope {
 
             var pos = mapToItem(hoveredItem.actionsOverlay, mouse.x, mouse.y);
 
-            if (pos.x > hoveredItem.actionsOverlay.width && pos.y > hoveredItem.actionsOverlay.height) {
+            if (!(pos.x <= hoveredItem.actionsOverlay.width && pos.y <= hoveredItem.actionsOverlay.height)) {
                 if (systemSettings.singleClick || doubleClickInProgress) {
                     dir.run(gridView.currentIndex);
                 } else {
