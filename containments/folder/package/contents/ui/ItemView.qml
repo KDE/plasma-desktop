@@ -67,7 +67,7 @@ FocusScope {
         hoverEnabled: true
 
         onPressed: {
-            gridView.focus = true;
+            scrollArea.focus = true;
             main.focus = true;
 
             if (childAt(mouse.x, mouse.y) != editor) {
@@ -162,8 +162,6 @@ FocusScope {
                 property bool shiftPressed: false
 
                 currentIndex: -1
-
-                focus: true
 
                 interactive: true
                 keyNavigationWraps: false
@@ -337,7 +335,7 @@ FocusScope {
                 if (visible) {
                     focus = true;
                 } else {
-                    gridView.focus = true;
+                    scrollArea.focus = true;
                 }
             }
 
