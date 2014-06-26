@@ -31,12 +31,11 @@ import org.kde.plasma.private.shell 2.0
 Item {
     id: main
 
-    width: 240
+    width: minimumWidth
     height: 800//Screen.height
-    //this is used to perfectly align the filter field and delegates
-    property int cellWidth: theme.mSize(theme.defaultFont).width * 10
 
-    property int minimumWidth: theme.mSize(theme.defaultFont).width * 12
+    // The +4 is for the gap and cross button
+    property int minimumWidth: theme.mSize(heading.font).width * (heading.text.length + 4)
     property int minimumHeight: 800//topBar.height + list.delegateHeight + (widgetExplorer.orientation == Qt.Horizontal ? scrollBar.height : 0) + 4
 
     property alias containment: widgetExplorer.containment
@@ -135,11 +134,9 @@ Item {
     }
     */
 
-    Loader {
-        id: topBar
-        property Item categoryButton
 
-        sourceComponent: verticalTopBarComponent
+    GridLayout {
+        id: topBar
         anchors {
             top: parent.top
             left: parent.left
@@ -148,58 +145,46 @@ Item {
             leftMargin: units.smallSpacing
             rightMargin: units.smallSpacing
         }
-    }
-    Component {
-        id: verticalTopBarComponent
+        columns: 2
 
-        GridLayout {
-            anchors.top: parent.top
-            anchors.left: parent.left
-            anchors.right: parent.right
-            columns: 2
+        PlasmaExtras.Title {
+            id: heading
+            text: "Widgets"
+            elide: Text.ElideRight
+            Layout.fillWidth: true
+        }
 
-            PlasmaExtras.Title {
-                id: heading
-                text: "Widgets"
-                elide: Text.ElideRight
-                Layout.fillWidth: true
+        PlasmaComponents.ToolButton {
+            id: closeButton
+            anchors {
+                right: parent.right
+                verticalCenter: heading.verticalCenter
             }
+            iconSource: "window-close"
+            onClicked: main.closed()
+        }
 
-            PlasmaComponents.ToolButton {
-                id: closeButton
-                anchors {
-                    right: parent.right
-                    verticalCenter: heading.verticalCenter
-                }
-                iconSource: "window-close"
-                onClicked: main.closed()
+        PlasmaComponents.TextField {
+            clearButtonShown: true
+            placeholderText: i18n("Search...")
+            onTextChanged: {
+                list.contentX = 0
+                list.contentY = 0
+                widgetExplorer.widgetsModel.searchTerm = text
             }
-
-            PlasmaComponents.TextField {
-                clearButtonShown: true
-                placeholderText: i18n("Search...")
-                onTextChanged: {
-                    list.contentX = 0
-                    list.contentY = 0
-                    widgetExplorer.widgetsModel.searchTerm = text
-                }
-                Component.onCompleted: forceActiveFocus()
-                Layout.columnSpan: 2
-                Layout.fillWidth: true
+            Component.onCompleted: forceActiveFocus()
+            Layout.columnSpan: 2
+            Layout.fillWidth: true
+        }
+        PlasmaComponents.Button {
+            id: categoryButton
+            text: i18n("Categories")
+            onClicked: {
+                main.preventWindowHide = true;
+                categoriesDialog.open(0, categoryButton.height)
             }
-            PlasmaComponents.Button {
-                id: categoryButton
-                text: i18n("Categories")
-                onClicked: {
-                    main.preventWindowHide = true;
-                    categoriesDialog.open(0, categoryButton.height)
-                }
-                Layout.columnSpan: 2
-                Layout.fillWidth: true
-            }
-            Component.onCompleted: {
-                main.categoryButton = categoryButton
-            }
+            Layout.columnSpan: 2
+            Layout.fillWidth: true
         }
     }
 
@@ -267,10 +252,8 @@ Item {
         }
     }
 
-    Loader {
+    Column {
         id: bottomBar
-
-        sourceComponent: verticalBottomBarComponent
         anchors {
             left: parent.left
             right: parent.right
@@ -279,52 +262,42 @@ Item {
             rightMargin: units.smallSpacing
             bottomMargin: units.smallSpacing
         }
-    }
 
-    Component {
-        id: verticalBottomBarComponent
-        Column {
+        spacing: units.smallSpacing
+
+        PlasmaComponents.Button {
             anchors {
                 left: parent.left
                 right: parent.right
-                bottom: parent.bottom
             }
+            id: getWidgetsButton
+            iconSource: "get-hot-new-stuff"
+            text: i18n("Get new widgets")
+            onClicked: {
+                main.preventWindowHide = true;
+                getWidgetsDialog.open()
+            }
+        }
 
-            spacing: units.smallSpacing
-
+        Repeater {
+            model: widgetExplorer.extraActions.length
             PlasmaComponents.Button {
                 anchors {
                     left: parent.left
                     right: parent.right
                 }
-                id: getWidgetsButton
-                iconSource: "get-hot-new-stuff"
-                text: i18n("Get new widgets")
+                iconSource: widgetExplorer.extraActions[modelData].icon
+                text: widgetExplorer.extraActions[modelData].text
                 onClicked: {
-                    main.preventWindowHide = true;
-                    getWidgetsDialog.open()
+                    widgetExplorer.extraActions[modelData].trigger()
                 }
-            }
-
-            Repeater {
-                model: widgetExplorer.extraActions.length
-                PlasmaComponents.Button {
-                    anchors {
-                        left: parent.left
-                        right: parent.right
-                    }
-                    iconSource: widgetExplorer.extraActions[modelData].icon
-                    text: widgetExplorer.extraActions[modelData].text
-                    onClicked: {
-                        widgetExplorer.extraActions[modelData].trigger()
-                    }
-                }
-            }
-
-            Component.onCompleted: {
-                main.getWidgetsButton = getWidgetsButton
             }
         }
+    }
+
+    Component.onCompleted: {
+        main.getWidgetsButton = getWidgetsButton
+        main.categoryButton = categoryButton
     }
 }
 
