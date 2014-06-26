@@ -248,11 +248,13 @@ Rectangle {
 //                             print("Source file changed in flickable" + sourceFile);
                             replace(Qt.resolvedUrl(sourceFile));
                             for (var prop in currentItem) {
-                                if (prop.indexOf("cfg_") === 0) {
-                                    currentItem[prop+"Changed"].connect(root.settingValueChanged)
+                                if (prop.indexOf("cfg_") === 0 && prop.indexOf("Changed") > 0 ) {
+                                    currentItem[prop].connect(root.settingValueChanged)
                                 }
                             }
-                            currentItem["configurationChanged"].connect(root.settingValueChanged)
+                            if (currentItem["configurationChanged"]) {
+                                currentItem["configurationChanged"].connect(root.settingValueChanged)
+                            }
                             applyButton.enabled = false;
                             /*
                                 * This is not needed on a desktop shell that has ok/apply/cancel buttons, i'll leave it here only for future reference until we have a prototype for the active shell.
@@ -300,7 +302,7 @@ Rectangle {
                                     target: exitItem
                                     property: "x"
                                     from: 0
-                                    to: invertAnimations ? target.width/3 : -target.width/3
+                                    to: main.invertAnimations ? target.width/3 : -target.width/3
                                     duration: units.longDuration
                                     easing.type: Easing.InOutQuad
                                 }
