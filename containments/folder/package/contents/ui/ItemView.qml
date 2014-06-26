@@ -86,7 +86,8 @@ FocusScope {
                 if (gridView.shiftPressed && gridView.currentIndex != -1) {
                     dir.setRangeSelected(gridView.anchorIndex, hoveredItem.index);
                 } else {
-                    if (!gridView.ctrlPressed && !(mouse.buttons & Qt.RightButton)) {
+                    if (!(mouse.buttons & Qt.RightButton) && !gridView.ctrlPressed
+                        || (mouse.buttons & Qt.RightButton) && !dir.isSelected(hoveredItem.index)) {
                         dir.clearSelection();
                     }
 

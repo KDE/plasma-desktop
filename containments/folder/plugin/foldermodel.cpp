@@ -387,6 +387,11 @@ void FolderModel::rename(int row, const QString& name)
     m_dirModel->setData(mapToSource(idx), name, Qt::EditRole);
 }
 
+bool FolderModel::isSelected(int row)
+{
+    return m_selectionModel->isSelected(index(row, 0));
+}
+
 void FolderModel::setSelected(int row)
 {
     m_selectionModel->select(index(row, 0), QItemSelectionModel::Select);
