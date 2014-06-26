@@ -95,6 +95,7 @@ Item {
                 right: parent.right
             }
             height: breadcrumbsElement.height
+            boundsBehavior: Flickable.StopAtBounds
 
             contentWidth: breadcrumbsElement.width
             pixelAligned: true
