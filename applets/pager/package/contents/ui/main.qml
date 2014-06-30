@@ -205,7 +205,9 @@ Item {
                         var i;
                         tooltipText += "<ul>";
                         for (i=0; i < Math.min(count,4); i++) {
-                            tooltipText += "<li>"+ itemAt(i).visibleName +"</li>";
+                            if (itemAt(i)) {
+                                tooltipText += "<li>"+ itemAt(i).visibleName +"</li>";
+                            }
                         }
                         tooltipText += "</ul>";
                         if (i < count) {
