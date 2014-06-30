@@ -48,6 +48,7 @@ add_subdirectory(formats)
 add_subdirectory(translations)
 add_subdirectory(spellchecking)
 add_subdirectory(phonon)
+add_subdirectory(runners)
 add_subdirectory(workspaceoptions)
 
 if( FREETYPE_FOUND )
