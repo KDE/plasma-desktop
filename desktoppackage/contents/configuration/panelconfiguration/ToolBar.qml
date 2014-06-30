@@ -76,6 +76,7 @@ Item {
             iconSource: "list-add"
             Layout.preferredWidth: panel.formFactor == PlasmaCore.Types.Vertical ? Math.max(implicitWidth, parent.width) : implicitWidth
             onClicked: {
+                configDialog.close();
                 configDialog.showAddWidgetDialog();
             }
         }
