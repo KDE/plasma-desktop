@@ -114,7 +114,7 @@ GroupBox {
                 CheckBox {
                     id: useExtraRunners
 
-                    text: i18n("Search to bookmarks, files and emails")
+                    text: i18n("Expand search to bookmarks, files and emails")
                 }
 
                 CheckBox {
