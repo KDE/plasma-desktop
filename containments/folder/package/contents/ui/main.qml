@@ -33,8 +33,8 @@ DragDrop.DropArea {
     id: root
     objectName: "folder"
 
-    width: (itemView.cellWidth * 3) + (units.largeSpacing * 3)
-    height: (itemView.cellHeight * 2) + (units.largeSpacing * 2)
+    width: isContainment ? undefined : (itemView.cellWidth * 3) + (units.largeSpacing * 3)
+    height: isContainment ? undefined: (itemView.cellHeight * 2) + (units.largeSpacing * 2)
 
     property bool isContainment: ("containmentType" in plasmoid)
     property Item label: null
