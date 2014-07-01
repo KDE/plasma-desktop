@@ -219,7 +219,7 @@ FocusScope {
 
                 Keys.onReleased: {
                     if (event.key == Qt.Key_Control) {
-                        ctrlPressed = true;
+                        ctrlPressed = false;
                     } else if (event.key == Qt.Key_Shift) {
                         shiftPressed = false;
                         anchorIndex = 0;
