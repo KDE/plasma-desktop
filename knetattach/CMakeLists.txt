@@ -17,5 +17,3 @@ install(TARGETS knetattach DESTINATION ${LIBEXEC_INSTALL_DIR})
 
 install( PROGRAMS knetattach.desktop  DESTINATION  ${XDG_APPS_INSTALL_DIR} )
 
-ecm_install_icons( ${ICON_INSTALL_DIR}  )
-
