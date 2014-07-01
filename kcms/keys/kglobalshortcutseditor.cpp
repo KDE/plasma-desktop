@@ -30,7 +30,6 @@
 #include <KGlobalAccel>
 #include <KIconLoader>
 #include <KMessageBox>
-#include <KShortcut>
 #include <KStringHandler>
 #include <KLocalizedString>
 
