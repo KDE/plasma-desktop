@@ -204,12 +204,6 @@ bool Attica::KdePlatformDependent::askForCredentials(const QUrl& baseUrl, QStrin
     Q_UNUSED(baseUrl);
     Q_UNUSED(user);
     Q_UNUSED(password);
-    kDebug() << "Attempting to start KCM for credentials";
-    KCMultiDialog KCM;
-    KCM.setWindowTitle( i18n( "Open Collaboration Providers" ) );
-    KCM.addModule( "kcm_attica" );
-    
-    KCM.exec();
 
     return false;
 }
