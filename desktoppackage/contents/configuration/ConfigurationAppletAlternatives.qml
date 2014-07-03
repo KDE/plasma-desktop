@@ -27,8 +27,14 @@ Item {
     signal configurationChanged
     implicitWidth: childrenRect.width
     implicitHeight: childrenRect.height
+    enabled: !plasmoid.immutable
 
     property string currentPlugin: plasmoid.pluginName
+
+    function saveConfig() {
+        configDialog.loadAlternative(currentPlugin);
+    }
+
     QtControls.ExclusiveGroup {
         id: group
     }
