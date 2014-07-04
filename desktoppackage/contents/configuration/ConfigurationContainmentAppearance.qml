@@ -94,6 +94,7 @@ ColumnLayout {
             onCurrentIndexChanged: {
                 var model = configDialog.containmentPluginsConfigModel.get(currentIndex)
                 root.containmentPlugin = model.pluginName
+                root.configurationChanged()
             }
         }
     }
