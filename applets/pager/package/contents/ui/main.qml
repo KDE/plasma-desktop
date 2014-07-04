@@ -201,7 +201,7 @@ Item {
 
                     //update the tooltip whenever we add or remove a window
                     onCountChanged: {
-                        var tooltipText = i18n("%1 windows", count)
+                        var tooltipText = i18np("%1 window", "%1 windows", count)
                         var i;
                         tooltipText += "<ul>";
                         for (i=0; i < Math.min(count,4); i++) {
@@ -212,7 +212,7 @@ Item {
                         tooltipText += "</ul>";
                         if (i < count) {
                             tooltipText += "<br/>"
-                            tooltipText += i18n("and %1 other windows", count-i)
+                            tooltipText += i18np("and %1 other window", "and %1 other windows", count-i)
                         }
 
 
