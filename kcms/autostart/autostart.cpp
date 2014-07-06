@@ -136,9 +136,12 @@ void Autostart::load()
     // shutdown and env may *only* contain scripts, links or binaries
     // autostart on the otherhand may contain all of the above.
     // share/autostart is special as it overrides entries found in $KDEDIR/share/autostart
+    // env and shutdown are placed under GenericConfigLocation + /plasma-workspace/ as they are used during
+    // the workspace startup and shutdown and therefore are are specific to our workspace startup and shutdown
+    // (see bug #333793)
     m_paths << QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QStringLiteral("/autostart/")
-            << QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/shutdown/")
-            << QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/env/");
+            << QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QStringLiteral("/plasma-workspace/shutdown/")
+            << QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QStringLiteral("/plasma-workspace/env/");
     // share/autostart shouldn't be an option as this should be reserved for global autostart entries
 
     m_pathName << i18n("Startup")
