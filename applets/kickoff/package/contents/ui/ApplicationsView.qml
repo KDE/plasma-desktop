@@ -87,6 +87,8 @@ Item {
         }
         height: childrenRect.height
 
+        Behavior on opacity { NumberAnimation { duration: units.longDuration } }
+
         Flickable {
             id: breadcrumbFlickable
             anchors {
@@ -143,6 +145,7 @@ Item {
             leftMargin: -units.largeSpacing
         }
 
+        Behavior on opacity { NumberAnimation { duration: units.longDuration } }
 
         width: parent.width
 
@@ -196,7 +199,9 @@ Item {
 
                 model: Kickoff.ApplicationModel {
                     onModelReset: {
+                        updatedLabelTimer.running = true;
                         applicationsView.clearBreadcrumbs();
+                        print("pling!");
                     }
                 }
             } // VisualDataModel
@@ -258,4 +263,36 @@ Item {
             }
         ]
     } // appViewScrollArea
+
+    Timer {
+        id: updatedLabelTimer
+        interval: 1500
+        running: false
+        repeat: true
+
+        onRunningChanged: {
+            if (running) {
+                updatedLabel.opacity = 1;
+                crumbContainer.opacity = 0.3;
+                appViewScrollArea.opacity = 0.3;
+            }
+        }
+        onTriggered: {
+            updatedLabel.opacity = 0;
+            crumbContainer.opacity = 1;
+            appViewScrollArea.opacity = 1;
+            running = false;
+        }
+    }
+
+    PlasmaComponents.Label {
+        id: updatedLabel
+        text: i18n("Applications updated.")
+        opacity: 0
+        visible: opacity != 0
+        anchors.centerIn: parent
+
+        Behavior on opacity { NumberAnimation { duration: units.shortDuration } }
+    }
+
 } // appViewContainer
