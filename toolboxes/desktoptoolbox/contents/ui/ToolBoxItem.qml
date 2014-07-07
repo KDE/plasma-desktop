@@ -168,7 +168,7 @@ Item {
 
             ActionDelegate {
                 label: i18nd("plasma_toolbox_org.kde.desktoptoolbox", "Leave")
-                actionIcon: "system-shutdown"
+                actionIcon: "system-log-out"
                 objectName: "leave"
                 onTriggered: logout();
             }
