@@ -201,7 +201,6 @@ Item {
                     onModelReset: {
                         updatedLabelTimer.running = true;
                         applicationsView.clearBreadcrumbs();
-                        print("pling!");
                     }
                 }
             } // VisualDataModel
