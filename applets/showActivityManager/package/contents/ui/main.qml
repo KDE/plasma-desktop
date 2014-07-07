@@ -25,16 +25,13 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 MouseArea {
     id: iconContainer
     property string activeSource: "Status"
-    height: 16
-    width: 16
+    height: units.iconSizes.large
+    width: units.iconSizes.large
 
-    Layout.minimumWidth: 16
-    Layout.minimumHeight: 16
+    Layout.minimumWidth: units.iconSizes.small
+    Layout.minimumHeight: units.iconSizes.small
 
     Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
-
-    implicitWidth: units.iconSizes["panel"]
-    implicitHeight: implicitWidth
 
     onClicked: {
         var service = dataSource.serviceForSource(activeSource)
