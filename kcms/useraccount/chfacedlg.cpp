@@ -40,8 +40,8 @@
 #include <kimagefilepreview.h>
 #include <kimageio.h>
 #include <kmessagebox.h>
-#include <konq_operations.h>
 #include <kurl.h>
+#include <kio/filecopyjob.h>
 
 #include "settings.h" // KConfigXT
 
