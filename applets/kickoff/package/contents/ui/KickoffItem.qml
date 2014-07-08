@@ -129,8 +129,7 @@ Item {
         PlasmaComponents.Label {
             id: titleElement
 
-            y: Math.round((parent.height - titleElement.height - ( (isCurrent && subTitleElement.text != "") ? subTitleElement.paintedHeight : 0) ) / 2)
-            Behavior on y { NumberAnimation { duration: units.shortDuration } }
+            y: Math.round((parent.height - titleElement.height - ( (subTitleElement.text != "") ? subTitleElement.paintedHeight : 0) ) / 2)
             anchors {
                 //bottom: elementIcon.verticalCenter
                 left: elementIcon.right
@@ -168,7 +167,7 @@ Item {
                     plasmoid.configuration.showAppsByName || subtitle == undefined ? (display.length != 0 ? display : subtitle) : subtitle;
                 }
             }
-            opacity: isCurrent ? 0.6 : 0
+            opacity: isCurrent ? 0.6 : 0.3
             font.pointSize: theme.smallestFont.pointSize
             elide: Text.ElideMiddle
         }
