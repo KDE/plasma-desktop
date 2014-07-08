@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright 2014 Sebastian KÃ¼gler <sebas@kde.org>                       *
+ *   Copyright 2014 Sebastian Kügler <sebas@kde.org>                       *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -22,15 +22,16 @@
 
 #include <QObject>
 
+#include <KDirWatch>
 #include <KUser>
 
 class KUserProxy : public QObject
 {
     Q_OBJECT
 
-    Q_PROPERTY(QString fullName READ fullName CONSTANT)
-    Q_PROPERTY(QString loginName READ loginName CONSTANT)
-    Q_PROPERTY(QString faceIconPath READ faceIconPath CONSTANT)
+    Q_PROPERTY(QString fullName READ fullName NOTIFY nameChanged)
+    Q_PROPERTY(QString loginName READ loginName NOTIFY nameChanged)
+    Q_PROPERTY(QString faceIconPath READ faceIconPath NOTIFY faceIconPathChanged)
     Q_PROPERTY(QString os READ os CONSTANT)
     Q_PROPERTY(QString host READ host CONSTANT)
 
@@ -44,9 +45,16 @@ public:
     QString os();
     QString host() const;
 
+Q_SIGNALS:
+    void nameChanged();
+    void faceIconPathChanged();
+
 private:
+    void update(const QString &path);
+    KDirWatch m_dirWatch;
     KUser m_user;
     QString m_os;
+    bool m_temporaryEmptyFaceIconPath;
 };
 
 #endif //KUSERPROXY_H

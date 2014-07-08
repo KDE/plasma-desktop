@@ -1,6 +1,6 @@
 /***************************************************************************
  *   Copyright 2013 Marco Martin <mart@kde.org>                            *
- *   Copyright 2014 Sebastian Kugler <sebas@kde.org>                       *
+ *   Copyright 2014 Sebastian Kügler <sebas@kde.org>                       *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -25,19 +25,46 @@
 #include <QTextStream>
 #include <QUrl>
 
+#include <KDirWatch>
 #include <KLocalizedString>
 
 #include <QDebug>
 
+const QString etcPasswd = QStringLiteral("/etc/passwd");
+
 KUserProxy::KUserProxy (QObject *parent)
-    : QObject(parent)
+    : QObject(parent),
+    m_temporaryEmptyFaceIconPath(false)
 {
+    m_dirWatch.addFile(m_user.faceIconPath());
+    if (QFile::exists(etcPasswd)) {
+        m_dirWatch.addFile(etcPasswd);
+    }
+
+    connect(&m_dirWatch, &KDirWatch::dirty, this, &KUserProxy::update);
+    connect(&m_dirWatch, &KDirWatch::created, this, &KUserProxy::update);
 }
 
 KUserProxy::~KUserProxy()
 {
 }
 
+void KUserProxy::update(const QString &path)
+{
+        if (path == m_user.faceIconPath()) {
+            // we need to force updates, even when the path doesn't change,
+            // but the underlying image does. Change path temporarily, to
+            // make the Image reload.
+            // Needs cache: false in the Image item to actually reload
+            m_temporaryEmptyFaceIconPath = true;
+            emit faceIconPathChanged();
+            m_temporaryEmptyFaceIconPath = false;
+            emit faceIconPathChanged();
+        } else if (path == etcPasswd) {
+            m_user = KUser();
+            emit nameChanged();
+        }
+    }
 QString KUserProxy::fullName() const
 {
     QString fullName = m_user.property(KUser::FullName).toString();
@@ -54,6 +81,9 @@ QString KUserProxy::loginName() const
 
 QString KUserProxy::faceIconPath() const
 {
+    if (m_temporaryEmptyFaceIconPath) {
+        return QString();
+    }
     const QString u = m_user.faceIconPath();
     const QFile f(u);
     if (f.exists(u)) {
