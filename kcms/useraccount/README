@@ -1,0 +1,27 @@
+
+Thu Jan 29 00:34:49 CET 2004
+Frans Englich <frans.englich@telia.com>
+
+KCM useraccount is a merge of the former kdebase/kcontrol/email 
+and kdeutils/kdepasswd/userinfo/. They existed in KDE 3.1, at least.
+
+As a bonus, on top of saving the stuff with KEMailSettings it tries 
+also to save the realname to /etc/passwd. This is done via chfn, wrapped 
+in ChfnProcess, chfnprocess.h - which is the place to ifdef/modify so 
+other systems/ychfn/whatever works.
+/etc/passwd is not the primary goal, the focus is on KDE's settings. The KCM 
+tries to hide the implementation differences and play nice with the 
+user - keep that in mind.
+
+The "face" term is rather scary.. For example I don't think the user immediately 
+associate to the login image when a phrase such as this is thrown in the face:
+"Your administrator has disallowed changing your face". Keep it in mind..
+
+Some information which was available in userinfo is left out - the home 
+folder and shell info. A typical user is not interested in the info nor 
+knows what it means. And the advanced users already knows it.
+
+If further information is added, think twice if it should not be 
+added in a "Details..." dialog - is it useful for the majority or not? 
+The SMTP setting as well as UID should be moved to that dialog too, IMO.
+
