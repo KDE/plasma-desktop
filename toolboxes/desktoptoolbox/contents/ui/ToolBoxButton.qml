@@ -168,8 +168,8 @@ Item {
             }
             elementId: "menu"
             anchors.verticalCenter: parent.verticalCenter
-            width: iconSize
-            height: iconSize
+            width: Math.min(parent.width, parent.height)*0.8
+            height: width
             opacity: buttonMouse.containsMouse || toolBoxItem.showing ? 1 : 0.5
             rotation: isHorizontal ? 0 : 90;
             transformOrigin: Item.Center
