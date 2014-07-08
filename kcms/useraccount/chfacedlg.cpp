@@ -129,8 +129,9 @@ void ChFaceDlg::addCustomPixmap( const QString &imPath, bool saveCopy )
       userfaces.mkdir( userfaces.absolutePath() );
 
     pix.save( userfaces.absolutePath() + "/.userinfo-tmp" , "PNG" );
-    // FIXME: vHanda must fix this!
-    //KonqOperations::copy( this, KonqOperations::COPY, KUrl::List( KUrl( userfaces.absolutePath() + "/.userinfo-tmp" ) ), KUrl( userfaces.absolutePath() + '/' + QFileInfo(imPath).fileName().section('.',0,0) ) );
+    auto job = KIO::file_copy(KUrl(userfaces.absolutePath() + "/.userinfo-tmp"),
+                              KUrl(userfaces.absolutePath() + '/' + QFileInfo(imPath).fileName().section('.', 0, 0)));
+    job->exec();
 #if 0
   if ( !pix.save( userfaces.absolutePath() + '/' + imPath , "PNG" ) )
     KMessageBox::sorry(this, i18n("There was an error saving the image:\n%1", userfaces.absolutePath() ) );
