@@ -9,4 +9,11 @@ target_link_libraries(kio_fonts Qt5::DBus Qt5::X11Extras Qt5::Xml KF5::Archive K
 install(TARGETS kio_fonts  DESTINATION ${PLUGIN_INSTALL_DIR} )
 install( FILES fonts.desktop  DESTINATION  ${DATA_INSTALL_DIR}/konqsidebartng/virtual_folders/services )
 install( FILES fonts.protocol  DESTINATION  ${SERVICES_INSTALL_DIR} )
-ecm_install_icons( ${ICON_INSTALL_DIR}  )
+ecm_install_icons( ICONS
+                   hi128-mimetypes-fonts-package.png
+                   hi16-mimetypes-fonts-package.png
+                   hi22-mimetypes-fonts-package.png
+                   hi32-mimetypes-fonts-package.png
+                   hi48-mimetypes-fonts-package.png
+                   hi64-mimetypes-fonts-package.png
+                   DESTINATION ${ICON_INSTALL_DIR}  )

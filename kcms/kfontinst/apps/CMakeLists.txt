@@ -48,4 +48,10 @@ install(PROGRAMS kfontview.desktop DESTINATION ${XDG_APPS_INSTALL_DIR} )
 install(FILES installfont.desktop DESTINATION
 ${SERVICES_INSTALL_DIR}/ServiceMenus )
 
-ecm_install_icons( ${ICON_INSTALL_DIR} )
+ecm_install_icons( ICONS
+                   hi16-apps-kfontview.png
+                   hi22-apps-kfontview.png
+                   hi32-apps-kfontview.png
+                   hi48-apps-kfontview.png
+                   hi64-apps-kfontview.png
+                   DESTINATION ${ICON_INSTALL_DIR} )
