@@ -20,9 +20,9 @@ set_target_properties(fontinst_helper PROPERTIES OUTPUT_NAME fontinst_helper)
 target_link_libraries(fontinst_helper 
                       Qt5::DBus Qt5::Xml ${FONTCONFIG_LIBRARIES} kfontinst)
 
-install(TARGETS fontinst_bin DESTINATION ${LIBEXEC_INSTALL_DIR} )
-install(TARGETS fontinst_helper DESTINATION ${LIBEXEC_INSTALL_DIR} )
-install(PROGRAMS fontinst_x11 DESTINATION ${LIBEXEC_INSTALL_DIR})
+install(TARGETS fontinst_bin DESTINATION ${KAUTH_HELPER_INSTALL_DIR} )
+install(TARGETS fontinst_helper DESTINATION ${KAUTH_HELPER_INSTALL_DIR} )
+install(PROGRAMS fontinst_x11 DESTINATION ${KAUTH_HELPER_INSTALL_DIR})
 
 configure_file(org.kde.fontinst.service.cmake ${CMAKE_CURRENT_BINARY_DIR}/session/org.kde.fontinst.service)
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/session/org.kde.fontinst.service DESTINATION ${DBUS_SERVICES_INSTALL_DIR} )

@@ -25,7 +25,7 @@ install(TARGETS kcm_clock  DESTINATION ${PLUGIN_INSTALL_DIR} )
 
 add_executable(kcmdatetimehelper helper.cpp ${helper_mocs})
 target_link_libraries(kcmdatetimehelper KF5::Auth KF5::ConfigCore KF5::KDELibs4Support)
-install(TARGETS kcmdatetimehelper DESTINATION ${LIBEXEC_INSTALL_DIR})
+install(TARGETS kcmdatetimehelper DESTINATION ${KAUTH_HELPER_INSTALL_DIR})
 
 kauth_install_helper_files(kcmdatetimehelper org.kde.kcontrol.kcmclock root)
 
