@@ -413,7 +413,7 @@ bool FontAASettings::save(bool useAA)
 
 void FontAASettings::defaults()
 {
-    excludeRange->setChecked(true);
+    excludeRange->setChecked(false);
     excludeFrom->setValue(8.0);
     excludeTo->setValue(15.0);
     useSubPixel->setChecked(false);
@@ -642,14 +642,16 @@ KFonts::KFonts(QWidget *parent, const QVariantList &args)
     cbAA->insertItem(AAEnabled, i18nc("Use anti-aliasing", "Enabled"));    // change AASetting type if order changes
     cbAA->insertItem(AASystem, i18nc("Use anti-aliasing", "System Settings"));
     cbAA->insertItem(AADisabled, i18nc("Use anti-aliasing", "Disabled"));
-    cbAA->setWhatsThis(i18n("If this option is selected, KDE will smooth the edges of curves in "
-                            "fonts."));
+    cbAA->setWhatsThis(i18n("If this option is selected, KDE will smooth the edges of curves in fonts."));
     aaSettingsButton = new QPushButton(i18n("Configure..."), this);
     connect(aaSettingsButton, SIGNAL(clicked()), SLOT(slotCfgAa()));
     label->setBuddy(cbAA);
     lay->addWidget(cbAA, 0, 1);
     lay->addWidget(aaSettingsButton, 0, 2);
-    connect(cbAA, SIGNAL(activated(int)), SLOT(slotUseAntiAliasing()));
+    // Initialize aaSettingsButton state based on the current cbAA->currentIndex value, will be eventually updated at load()
+    slotUseAntiAliasing();
+
+    connect(cbAA, SIGNAL(currentIndexChanged(int)), SLOT(slotUseAntiAliasing()));
 #endif
 #if HAVE_X11
     checkboxForceDpi = new QCheckBox(i18n("Force fonts DPI:"), this);
@@ -751,7 +753,6 @@ void KFonts::load()
         useAA_original = useAA = AASystem;
         cbAA->setCurrentIndex(useAA);
     }
-    aaSettingsButton->setEnabled(cbAA->currentIndex() == AAEnabled);
 #endif
 
     emit changed(false);
@@ -848,7 +849,7 @@ void KFonts::slotUseAntiAliasing()
 {
 #if defined(HAVE_FONTCONFIG) && defined (HAVE_X11)
     useAA = static_cast< AASetting >(cbAA->currentIndex());
-    aaSettingsButton->setEnabled(cbAA->currentIndex() == AAEnabled);
+    aaSettingsButton->setEnabled(useAA == AAEnabled);
     emit changed(true);
 #endif
 }
