@@ -603,8 +603,17 @@ void runRdb( uint flags )
   if (colorSchemeName.isEmpty()) {
       return;
   }
+  //fix filename, copied from ColorsCM::saveScheme()
+  QString colorSchemeFilename = colorSchemeName;
+  colorSchemeFilename.remove('\''); // So Foo's does not become FooS
+  QRegExp fixer("[\\W,.-]+(.?)");
+  int offset;
+  while ((offset = fixer.indexIn(colorSchemeFilename)) >= 0)
+      colorSchemeFilename.replace(offset, fixer.matchedLength(), fixer.cap(1).toUpper());
+  colorSchemeFilename.replace(0, 1, filename.at(0).toUpper());
+
   //clone the color scheme
-  QString src = QStandardPaths::locate(QStandardPaths::GenericDataLocation, "color-schemes/" +  colorSchemeName + ".colors");
+  QString src = QStandardPaths::locate(QStandardPaths::GenericDataLocation, "color-schemes/" +  colorSchemeFilename + ".colors");
   QString dest = migration.saveLocation("data", "color-schemes") + colorSchemeName + ".colors";
 
   QFile::remove(dest);
