@@ -41,7 +41,7 @@ PlasmaCore.SvgItem {
     property int alignment: panel.alignment
 
     property int minimumValue: (dialogRoot.vertical) ? -root.height/2 : -root.width/2
-    property int maximumValue: (dialogRoot.vertical) ? root.parent.height : root.parent.width
+    property int maximumValue: (dialogRoot.vertical) ? root.parent.height - root.height/2+1 : root.parent.width - root.width/2+1
 
     function syncPos() {
         if (dialogRoot.vertical) {
