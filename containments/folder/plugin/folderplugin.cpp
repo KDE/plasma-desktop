@@ -20,11 +20,14 @@
 #include "folderplugin.h"
 #include "directorypicker.h"
 #include "foldermodel.h"
+#include "itemgrabber.h"
 #include "itemviewadapter.h"
 #include "labelgenerator.h"
 #include "mimetypesmodel.h"
 #include "placesmodel.h"
+#include "positioner.h"
 #include "previewpluginsmodel.h"
+#include "rubberband.h"
 #include "subdialog.h"
 #include "systemsettings.h"
 
@@ -35,11 +38,14 @@ void FolderPlugin::registerTypes(const char *uri)
     Q_ASSERT(uri == QLatin1String("org.kde.plasma.private.folder"));
     qmlRegisterType<DirectoryPicker>(uri, 0, 1, "DirectoryPicker");
     qmlRegisterType<FolderModel>(uri, 0, 1, "FolderModel");
+    qmlRegisterType<ItemGrabber>(uri, 0, 1, "ItemGrabber");
     qmlRegisterType<ItemViewAdapter>(uri, 0, 1, "ItemViewAdapter");
     qmlRegisterType<LabelGenerator>(uri, 0, 1, "LabelGenerator");
     qmlRegisterType<FilterableMimeTypesModel>(uri, 0, 1, "FilterableMimeTypesModel");
     qmlRegisterType<PlacesModel>(uri, 0, 1, "PlacesModel");
+    qmlRegisterType<Positioner>(uri, 0, 1, "Positioner");
     qmlRegisterType<PreviewPluginsModel>(uri, 0, 1, "PreviewPluginsModel");
+    qmlRegisterType<RubberBand>(uri, 0, 1, "RubberBand");
     qmlRegisterType<SubDialog>(uri, 0, 1, "SubDialog");
     qmlRegisterType<SystemSettings>(uri, 0, 1, "SystemSettings");
 }

@@ -17,9 +17,20 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-// FIXME TODO: Avoid hardcoding the prop names, e.g. take them from the object.
-var iconSizes = new Array("small", "smallMedium", "medium", "large", "huge", "enormous");
+#ifndef RUBBERBAND_H
+#define RUBBERBAND_H
 
-function iconSizeFromTheme(size) {
-    return units.iconSizes[iconSizes[size]];
-}
+#include <QQuickPaintedItem>
+
+class RubberBand : public QQuickPaintedItem
+{
+    Q_OBJECT
+
+    public:
+        RubberBand(QQuickItem *parent = 0);
+        ~RubberBand();
+
+        void paint(QPainter* painter);
+};
+
+#endif

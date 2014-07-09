@@ -33,7 +33,7 @@ ConfigModel {
          icon: "preferences-desktop-icons"
          source: "ConfigIcons.qml"
     }
-    
+
     ConfigCategory {
          name: "Filter"
          icon: "view-filter"

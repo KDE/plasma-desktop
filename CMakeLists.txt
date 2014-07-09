@@ -88,6 +88,20 @@ set_package_properties(XCB PROPERTIES TYPE REQUIRED)
 add_feature_info("XCB-XKB" XCB_XKB_FOUND "Required for building kcm/keyboard")
 add_feature_info("libxft" X11_Xft_FOUND "X FreeType interface library required for font installation")
 
+if(${Qt5Gui_OPENGL_IMPLEMENTATION} STREQUAL "GL")
+    find_package(OpenGL)
+    set_package_properties(OpenGL PROPERTIES DESCRIPTION "The OpenGL libraries"
+                        URL "http://www.opengl.org"
+                        TYPE REQUIRED
+                        )
+else()
+    find_package(OpenGLES)
+    set_package_properties(OpenGLES PROPERTIES DESCRIPTION "The OpenGLES libraries"
+                        URL "http://www.khronos.org/opengles"
+                        TYPE REQUIRED
+                        )
+endif()
+
 include_directories("${CMAKE_CURRENT_BINARY_DIR}")
 
 include(ConfigureChecks.cmake)

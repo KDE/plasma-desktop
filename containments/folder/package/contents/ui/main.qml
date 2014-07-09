@@ -34,7 +34,7 @@ DragDrop.DropArea {
     objectName: "folder"
 
     width: isContainment ? undefined : (itemView.cellWidth * 3) + (units.largeSpacing * 3)
-    height: isContainment ? undefined: (itemView.cellHeight * 2) + (units.largeSpacing * 2)
+    height: isContainment ? undefined : (itemView.cellHeight * 2) + (units.largeSpacing * 2)
 
     property bool isContainment: ("containmentType" in plasmoid)
     property Item label: null
@@ -50,7 +50,8 @@ DragDrop.DropArea {
     property int iconWidth: iconSize
     property int iconHeight: iconWidth
 
-    enabled: isContainment
+    preventStealing: true
+    enabled: true
 
     onIconHeightChanged: updateGridSize()
 
@@ -140,32 +141,69 @@ DragDrop.DropArea {
     }
 
     onDragEnter: {
-        placeHolder.width = LayoutManager.defaultAppletSize.width;
-        placeHolder.height = LayoutManager.defaultAppletSize.height;
-        placeHolder.x = event.x - placeHolder.width / 2;
-        placeHolder.y = event.y - placeHolder.width / 2;
-        LayoutManager.positionItem(placeHolder);
-        LayoutManager.setSpaceAvailable(placeHolder.x, placeHolder.y, placeHolder.width, placeHolder.height, true);
-        placeHolderPaint.opacity = root.haloOpacity;
+        if (isContainment && !event.mimeData.urls.length) {
+            placeHolder.width = LayoutManager.defaultAppletSize.width;
+            placeHolder.height = LayoutManager.defaultAppletSize.height;
+            placeHolder.x = event.x - placeHolder.width / 2;
+            placeHolder.y = event.y - placeHolder.width / 2;
+            LayoutManager.positionItem(placeHolder);
+            LayoutManager.setSpaceAvailable(placeHolder.x, placeHolder.y, placeHolder.width, placeHolder.height, true);
+            placeHolderPaint.opacity = root.haloOpacity;
+        }
     }
 
     onDragMove: {
-        placeHolder.width = LayoutManager.defaultAppletSize.width;
-        placeHolder.height = LayoutManager.defaultAppletSize.height;
-        placeHolder.x = event.x - placeHolder.width / 2;
-        placeHolder.y = event.y - placeHolder.width / 2;
-        LayoutManager.positionItem(placeHolder);
-        LayoutManager.setSpaceAvailable(placeHolder.x, placeHolder.y, placeHolder.width, placeHolder.height, true);
-        placeHolderPaint.opacity = root.haloOpacity;
+        // Trigger autoscroll.
+        if (event.mimeData.urls.length) {
+            itemView.scrollLeft = (event.x < (units.largeSpacing * 3));
+            itemView.scrollRight = (event.x > width - (units.largeSpacing * 3));
+            itemView.scrollUp = (event.y < (units.largeSpacing * 3));
+            itemView.scrollDown = (event.y > height - (units.largeSpacing * 3));
+        }
+
+        if (isContainment && !event.mimeData.urls.length) {
+            placeHolder.width = LayoutManager.defaultAppletSize.width;
+            placeHolder.height = LayoutManager.defaultAppletSize.height;
+            placeHolder.x = event.x - placeHolder.width / 2;
+            placeHolder.y = event.y - placeHolder.width / 2;
+            LayoutManager.positionItem(placeHolder);
+            LayoutManager.setSpaceAvailable(placeHolder.x, placeHolder.y, placeHolder.width, placeHolder.height, true);
+            placeHolderPaint.opacity = root.haloOpacity;
+        }
     }
 
     onDragLeave: {
-        placeHolderPaint.opacity = 0;
+        // Cancel autoscroll.
+        if (event.mimeData.urls.length) {
+            itemView.scrollLeft = false;
+            itemView.scrollRight = false;
+            itemView.scrollUp = false;
+            itemView.scrollDown = false;
+        }
+
+        if (isContainment) {
+            placeHolderPaint.opacity = 0;
+        }
     }
 
     onDrop: {
-        placeHolderPaint.opacity = 0;
-        plasmoid.processMimeData(event.mimeData, event.x - placeHolder.width / 2, event.y - placeHolder.height / 2);
+        // Cancel autoscroll.
+        if (event.mimeData.urls.length) {
+            itemView.scrollLeft = false;
+            itemView.scrollRight = false;
+            itemView.scrollUp = false;
+            itemView.scrollDown = false;
+        }
+
+        if (event.mimeData.urls.length) {
+            var pos = mapToItem(itemView, event.x, event.y);
+            itemView.model.drop(root, event, itemView.indexAt(pos));
+        }
+
+        if (isContainment && !event.mimeData.urls.length) {
+            placeHolderPaint.opacity = 0;
+            plasmoid.processMimeData(event.mimeData, event.x - placeHolder.width / 2, event.y - placeHolder.height / 2);
+        }
     }
 
     Connections {
@@ -229,6 +267,18 @@ DragDrop.DropArea {
         visible: false
     }
 
+    Connections {
+        target: plasmoid.configuration
+
+        onSortModeChanged: {
+            itemView.sortMode = plasmoid.configuration.sortMode;
+        }
+
+        onPositionsChanged: {
+            itemView.positions = plasmoid.configuration.positions;
+        }
+    }
+
     ItemView {
         id: itemView
 
@@ -241,12 +291,26 @@ DragDrop.DropArea {
         isRootView: true
 
         url: plasmoid.configuration.url
+        locked: plasmoid.configuration.locked
         filterMode: plasmoid.configuration.filterMode
         filterPattern: plasmoid.configuration.filterPattern
         filterMimeTypes: plasmoid.configuration.filterMimeTypes
 
         flow: (plasmoid.configuration.arrangement == 0) ? GridView.FlowLeftToRight : GridView.FlowTopToBottom
         layoutDirection: (plasmoid.configuration.alignment == 0) ? Qt.LeftToRight : Qt.RightToLeft
+
+        onSortModeChanged: {
+            plasmoid.configuration.sortMode = sortMode;
+        }
+
+        onPositionsChanged: {
+            plasmoid.configuration.positions = itemView.positions;
+        }
+
+        Component.onCompleted: {
+            itemView.sortMode = plasmoid.configuration.sortMode;
+            itemView.positions = plasmoid.configuration.positions;
+        }
     }
 
     Item {

@@ -22,6 +22,7 @@
 #ifndef FOLDERMODEL_H
 #define FOLDERMODEL_H
 
+#include <QImage>
 #include <QItemSelection>
 #include <QPointer>
 #include <QSortFilterProxyModel>
@@ -34,7 +35,9 @@
 #include <KFilePreviewGenerator>
 #include <KDirLister>
 
+class QDrag;
 class QItemSelectionModel;
+class QQuickItem;
 
 class KActionCollection;
 class KDirModel;
@@ -63,6 +66,7 @@ class FolderModel : public QSortFilterProxyModel
     Q_PROPERTY(QString url READ url WRITE setUrl NOTIFY urlChanged)
     Q_PROPERTY(QString errorString READ errorString NOTIFY errorStringChanged)
     Q_PROPERTY(bool usedByContainment READ usedByContainment WRITE setUsedByContainment NOTIFY usedByContainmentChanged);
+    Q_PROPERTY(bool locked READ locked WRITE setLocked NOTIFY lockedChanged)
     Q_PROPERTY(int sortMode READ sortMode WRITE setSortMode NOTIFY sortModeChanged)
     Q_PROPERTY(bool sortDesc READ sortDesc WRITE setSortDesc NOTIFY sortDescChanged)
     Q_PROPERTY(bool sortDirsFirst READ sortDirsFirst WRITE setSortDirsFirst NOTIFY sortDirsFirstChanged)
@@ -75,6 +79,16 @@ class FolderModel : public QSortFilterProxyModel
     Q_PROPERTY(QStringList filterMimeTypes READ filterMimeTypes WRITE setFilterMimeTypes NOTIFY filterMimeTypesChanged)
 
     public:
+        enum DataRole {
+            BlankRole = Qt::UserRole + 1,
+            SelectedRole,
+            IsDirRole,
+            UrlRole,
+            SizeRole,
+            TypeRole,
+            FileNameRole
+        };
+
         enum FilterMode {
             NoFilter = 0,
             FilterShowMatches,
@@ -93,6 +107,9 @@ class FolderModel : public QSortFilterProxyModel
 
         bool usedByContainment() const;
         void setUsedByContainment(bool used);
+
+        bool locked() const;
+        void setLocked(bool locked);
 
         int sortMode() const;
         void setSortMode(int mode);
@@ -130,15 +147,28 @@ class FolderModel : public QSortFilterProxyModel
 
         Q_INVOKABLE bool isSelected(int row);
         Q_INVOKABLE void setSelected(int row);
-        Q_INVOKABLE void setRangeSelected(int startRow, int endRow);
         Q_INVOKABLE void toggleSelected(int row);
+        Q_INVOKABLE void setRangeSelected(int startRow, int endRow);
+        Q_INVOKABLE void updateSelection(const QVariantList &rows, bool replace);
         Q_INVOKABLE void clearSelection();
+        Q_INVOKABLE void pinSelection();
+        Q_INVOKABLE void unpinSelection();
+
+        Q_INVOKABLE void addItemDragImage(int row, int x, int y, int width, int height, const QVariant &image);
+        Q_INVOKABLE void clearDragImages();
+        Q_INVOKABLE void setDragHotSpotScrollOffset(int x, int y); // FIXME TODO: Propify.
+        Q_INVOKABLE QPoint dragCursorOffset(int row);
+        Q_INVOKABLE void dragSelected(int x, int y);
+        Q_INVOKABLE void drop(QQuickItem *target, QObject *dropEvent, int row);
+
+        Q_INVOKABLE bool isBlank(int row) const;
 
         Q_INVOKABLE void openContextMenu();
 
         Q_INVOKABLE void linkHere(const QUrl &sourceUrl);
 
         QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
+        int indexForUrl(const QUrl &url) const;
         KFileItem itemForIndex(const QModelIndex &index) const;
         bool isDir(const QModelIndex &index, const KDirModel *dirModel) const;
         bool lessThan(const QModelIndex &left, const QModelIndex &right) const;
@@ -147,6 +177,7 @@ class FolderModel : public QSortFilterProxyModel
         void urlChanged() const;
         void errorStringChanged() const;
         void usedByContainmentChanged() const;
+        void lockedChanged() const;
         void sortModeChanged() const;
         void sortDescChanged() const;
         void sortDirsFirstChanged() const;
@@ -158,6 +189,7 @@ class FolderModel : public QSortFilterProxyModel
         void filterPatternChanged() const;
         void filterMimeTypesChanged() const;
         void requestRename() const;
+        void move(int x, int y, QList<QUrl> urls);
 
     protected:
         bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const;
@@ -179,19 +211,34 @@ class FolderModel : public QSortFilterProxyModel
         void undoTextChanged(const QString &text);
 
     private:
+        struct DragImage {
+            int row;
+            QRect rect;
+            QPoint cursorOffset;
+            QImage image;
+            bool blank;
+        };
+
         void createActions();
         void updatePasteAction();
+        void addDragImage(QDrag *drag, int x, int y);
         QList<QUrl> selectedUrls(bool forTrash) const;
         KDirModel *m_dirModel;
         QString m_url;
         QItemSelectionModel *m_selectionModel;
+        QItemSelection m_pinnedSelection;
+        QModelIndexList m_dragIndexes;
+        QHash<int, DragImage *> m_dragImages;
+        QPoint m_dragHotSpotScrollOffset;
+        bool m_dragInProgress;
         QPointer<KFilePreviewGenerator> m_previewGenerator;
         QPointer<KAbstractViewAdapter> m_viewAdapter;
         KActionCollection m_actionCollection;
         KNewFileMenu *m_newMenu;
         QString m_errorString;
         bool m_usedByContainment;
-        int m_sortMode;
+        bool m_locked;
+        int m_sortMode; // FIXME TODO: Enumify.
         bool m_sortDesc;
         bool m_sortDirsFirst;
         bool m_parseDesktopFiles;
@@ -202,7 +249,6 @@ class FolderModel : public QSortFilterProxyModel
         bool m_filterPatternMatchAll;
         QSet<QString> m_mimeSet;
         QList<QRegExp> m_regExps;
-
 };
 
 #endif

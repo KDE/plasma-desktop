@@ -1,5 +1,7 @@
 /***************************************************************************
+ *   Copyright (C) 2006 David Faure <faure@kde.org>                        *
  *   Copyright (C) 2008 Fredrik Höglund <fredrik@kde.org>                  *
+ *   Copyright (C) 2008 Rafael Fernández López <ereslibre@kde.org>           *
  *   Copyright (C) 2011 Marco Martin <mart@kde.org>                        *
  *   Copyright (C) 2014 by Eike Hein <hein@kde.org>                        *
  *                                                                         *
@@ -20,12 +22,21 @@
  ***************************************************************************/
 
 #include "foldermodel.h"
+#include "itemviewadapter.h"
+#include "positioner.h"
 
 #include <QApplication>
 #include <QClipboard>
-#include <QDesktopWidget>
 #include <QCollator>
+#include <QDesktopWidget>
+#include <QDrag>
+#include <QImage>
 #include <QItemSelectionModel>
+#include <QMimeData>
+#include <QPainter>
+#include <QPixmap>
+#include <QQuickItem>
+#include <QQuickWindow>
 #include <qplatformdefs.h>
 #include <QDebug>
 
@@ -42,6 +53,7 @@
 #include <KSharedConfig>
 #include <KShell>
 #include <KUrl>
+#include <KUrlMimeData>
 
 #include <KDesktopFile>
 #include <KDirModel>
@@ -72,12 +84,14 @@ void DirLister::handleError(KIO::Job *job)
 }
 
 FolderModel::FolderModel(QObject *parent) : QSortFilterProxyModel(parent),
+    m_dragInProgress(false),
     m_previewGenerator(0),
     m_viewAdapter(0),
     m_actionCollection(this),
     m_newMenu(0),
     m_usedByContainment(false),
-    m_sortMode(0),
+    m_locked(true),
+    m_sortMode(1),
     m_sortDesc(false),
     m_sortDirsFirst(true),
     m_parseDesktopFiles(false),
@@ -103,7 +117,9 @@ FolderModel::FolderModel(QObject *parent) : QSortFilterProxyModel(parent),
     setFilterCaseSensitivity(Qt::CaseInsensitive);
     setDynamicSortFilter(true);
 
-    sort(m_sortMode, m_sortDesc ? Qt::DescendingOrder : Qt::AscendingOrder);
+    sort(m_sortMode - 1, m_sortDesc ? Qt::DescendingOrder : Qt::AscendingOrder);
+
+    setSupportedDragActions(Qt::CopyAction | Qt::MoveAction | Qt::LinkAction);
 
     createActions();
 }
@@ -117,11 +133,12 @@ QHash< int, QByteArray > FolderModel::roleNames() const
     QHash<int, QByteArray> roleNames = m_dirModel->roleNames();
     roleNames[Qt::DisplayRole] = "display";
     roleNames[Qt::DecorationRole] = "decoration";
-    roleNames[Qt::UserRole + 1] = "selected";
-    roleNames[Qt::UserRole + 2] = "isDir";
-    roleNames[Qt::UserRole + 3] = "url";
-    roleNames[Qt::UserRole + 4] = "size";
-    roleNames[Qt::UserRole + 5] = "type";
+    roleNames[BlankRole] = "blank";
+    roleNames[SelectedRole] = "selected";
+    roleNames[IsDirRole] = "isDir";
+    roleNames[UrlRole] = "url";
+    roleNames[SizeRole] = "size";
+    roleNames[TypeRole] = "type";
 
     return roleNames;
 }
@@ -150,6 +167,7 @@ void FolderModel::setUrl(const QString& _url)
     beginResetModel();
     m_url = _url;
     m_dirModel->dirLister()->openUrl(url);
+    clearDragImages();
     endResetModel();
 
     emit urlChanged();
@@ -177,6 +195,20 @@ void FolderModel::setUsedByContainment(bool used)
     }
 }
 
+bool FolderModel::locked() const
+{
+    return m_locked;
+}
+
+void FolderModel::setLocked(bool locked)
+{
+    if (m_locked != locked) {
+        m_locked = locked;
+
+        emit lockedChanged();
+    }
+}
+
 void FolderModel::dirListFailed(const QString& error)
 {
     m_errorString = error;
@@ -193,8 +225,13 @@ void FolderModel::setSortMode(int mode)
     if (m_sortMode != mode) {
         m_sortMode = mode;
 
-        invalidate();
-        sort(m_sortMode, m_sortDesc ? Qt::DescendingOrder : Qt::AscendingOrder);
+        if (mode == 0 /* Unsorted */) {
+            setDynamicSortFilter(false);
+        } else {
+            setDynamicSortFilter(true);
+            invalidate();
+            sort(m_sortMode - 1, m_sortDesc ? Qt::DescendingOrder : Qt::AscendingOrder);
+        }
 
         emit sortModeChanged();
     }
@@ -210,8 +247,10 @@ void FolderModel::setSortDesc(bool desc)
     if (m_sortDesc != desc) {
         m_sortDesc = desc;
 
-        invalidate();
-        sort(m_sortMode, m_sortDesc ? Qt::DescendingOrder : Qt::AscendingOrder);
+        if (m_sortMode != 0) {
+            invalidate();
+            sort(m_sortMode - 1, m_sortDesc ? Qt::DescendingOrder : Qt::AscendingOrder);
+        }
 
         emit sortDescChanged();
     }
@@ -227,8 +266,10 @@ void FolderModel::setSortDirsFirst(bool enable)
     if (m_sortDirsFirst != enable) {
         m_sortDirsFirst = enable;
 
-        invalidate();
-        sort(m_sortMode, m_sortDesc ? Qt::DescendingOrder : Qt::AscendingOrder);
+        if (m_sortMode != 0) {
+            invalidate();
+            sort(m_sortMode - 1, m_sortDesc ? Qt::DescendingOrder : Qt::AscendingOrder);
+        }
 
         emit sortDirsFirstChanged();
     }
@@ -371,6 +412,10 @@ void FolderModel::setFilterMimeTypes(const QStringList &mimeList)
 
 void FolderModel::run(int row)
 {
+    if (row < 0) {
+        return;
+    }
+
     KFileItem item = itemForIndex(index(row, 0));
 
     QUrl url(item.targetUrl());
@@ -383,34 +428,290 @@ void FolderModel::run(int row)
 
 void FolderModel::rename(int row, const QString& name)
 {
+    if (row < 0) {
+        return;
+    }
+
     QModelIndex idx = index(row, 0);
     m_dirModel->setData(mapToSource(idx), name, Qt::EditRole);
 }
 
 bool FolderModel::isSelected(int row)
 {
+    if (row < 0) {
+        return false;
+    }
+
     return m_selectionModel->isSelected(index(row, 0));
 }
 
 void FolderModel::setSelected(int row)
 {
-    m_selectionModel->select(index(row, 0), QItemSelectionModel::Select);
-}
+    if (row < 0) {
+        return;
+    }
 
-void FolderModel::setRangeSelected(int startRow, int endRow)
-{
-    QItemSelection selection(index(startRow, 0), index(endRow, 0));
-    m_selectionModel->select(selection, QItemSelectionModel::ClearAndSelect);
+    m_selectionModel->select(index(row, 0), QItemSelectionModel::Select);
 }
 
 void FolderModel::toggleSelected(int row)
 {
+    if (row < 0) {
+        return;
+    }
+
     m_selectionModel->select(index(row, 0), QItemSelectionModel::Toggle);
+}
+
+void FolderModel::setRangeSelected(int startRow, int endRow)
+{
+    if (startRow < 0 || endRow < 0) {
+        return;
+    }
+
+    QItemSelection selection(index(startRow, 0), index(endRow, 0));
+    m_selectionModel->select(selection, QItemSelectionModel::ClearAndSelect);
+}
+
+void FolderModel::updateSelection(const QVariantList &rows, bool toggle)
+{
+    QItemSelection newSelection;
+
+    int iRow = -1;
+
+    foreach (const QVariant &row, rows) {
+        iRow = row.toInt();
+
+        if (iRow < 0) {
+            return;
+        }
+
+        const QModelIndex &idx = index(iRow, 0);
+        newSelection.select(idx, idx);
+    }
+
+    if (toggle) {
+        QItemSelection pinnedSelection = m_pinnedSelection;
+        pinnedSelection.merge(newSelection, QItemSelectionModel::Toggle);
+        m_selectionModel->select(pinnedSelection, QItemSelectionModel::ClearAndSelect);
+    } else {
+        m_selectionModel->select(newSelection, QItemSelectionModel::ClearAndSelect);
+    }
 }
 
 void FolderModel::clearSelection()
 {
-    m_selectionModel->clear();
+    if (m_selectionModel->hasSelection()) {
+        m_selectionModel->clear();
+    }
+}
+
+void FolderModel::pinSelection()
+{
+    m_pinnedSelection = m_selectionModel->selection();
+}
+
+void FolderModel::unpinSelection()
+{
+    m_pinnedSelection = QItemSelection();
+}
+
+void FolderModel::addItemDragImage(int row, int x, int y, int width, int height, const QVariant &image)
+{
+    if (row < 0) {
+        return;
+    }
+
+    DragImage *dragImage = 0;
+
+    if (m_dragImages.contains(row)) {
+        dragImage = m_dragImages.value(row);
+        delete dragImage;
+        m_dragImages.remove(row);
+    }
+
+    dragImage = new DragImage();
+    dragImage->row = row;
+    dragImage->rect = QRect(x, y, width, height);
+    dragImage->image = image.value<QImage>();
+    dragImage->blank = false;
+
+    m_dragImages.insert(row, dragImage);
+}
+
+void FolderModel::clearDragImages()
+{
+    if (!m_dragImages.isEmpty()) {
+        foreach (DragImage *image, m_dragImages) {
+            delete image;
+        }
+
+        m_dragImages.clear();
+    }
+}
+
+void FolderModel::setDragHotSpotScrollOffset(int x, int y)
+{
+    m_dragHotSpotScrollOffset.setX(x);
+    m_dragHotSpotScrollOffset.setY(y);
+}
+
+QPoint FolderModel::dragCursorOffset(int row)
+{
+    if (!m_dragImages.contains(row)) {
+        return QPoint(-1, -1);
+    }
+
+    return m_dragImages.value(row)->cursorOffset;
+}
+
+void FolderModel::addDragImage(QDrag *drag, int x, int y)
+{
+    if (!drag || m_dragImages.isEmpty()) {
+        return;
+    }
+
+    QRegion region;
+
+    foreach (DragImage *image, m_dragImages) {
+        image->blank = isBlank(image->row);
+        image->rect.translate(-m_dragHotSpotScrollOffset.x(), -m_dragHotSpotScrollOffset.y());
+        if (!image->blank && !image->image.isNull()) {
+            region = region.united(image->rect);
+        }
+    }
+
+    QRect rect = region.boundingRect();
+    QPoint offset = rect.topLeft();
+    rect.translate(-offset.x(), -offset.y());
+
+    QImage dragImage(rect.size(), QImage::Format_RGBA8888);
+    dragImage.fill(Qt::transparent);
+
+    QPainter painter(&dragImage);
+
+    QPoint pos;
+
+    foreach (DragImage *image, m_dragImages) {
+        if (!image->blank && !image->image.isNull()) {
+            pos = image->rect.translated(-offset.x(), -offset.y()).topLeft();
+            image->cursorOffset.setX(pos.x());
+            image->cursorOffset.setY(pos.y());
+
+            painter.drawImage(pos, image->image);
+        }
+
+        // FIXME HACK: Operate on copy.
+        image->rect.translate(m_dragHotSpotScrollOffset.x(), m_dragHotSpotScrollOffset.y());
+    }
+
+    drag->setPixmap(QPixmap::fromImage(dragImage));
+    drag->setHotSpot(QPoint(x - offset.x(), y - offset.y()));
+}
+
+void FolderModel::dragSelected(int x, int y)
+{
+    //FIXME Don't drag blank ones.
+
+    if (!m_viewAdapter || !m_selectionModel->hasSelection()) {
+        return;
+    }
+
+    ItemViewAdapter *adapter = qobject_cast<ItemViewAdapter *>(m_viewAdapter);
+    QQuickItem *item = qobject_cast<QQuickItem *>(adapter->adapterView());
+
+    QDrag *drag = new QDrag(item);
+
+    addDragImage(drag, x, y);
+
+    m_dragIndexes = m_selectionModel->selectedIndexes();
+
+    qSort(m_dragIndexes.begin(), m_dragIndexes.end());
+
+    // TODO: Optimize to emit contiguous groups.
+    emit dataChanged(m_dragIndexes.first(), m_dragIndexes.last(), QVector<int>() << BlankRole);
+
+    QModelIndexList sourceDragIndexes;
+
+    foreach (const QModelIndex &index, m_dragIndexes) {
+        sourceDragIndexes.append(mapToSource(index));
+    }
+
+    drag->setMimeData(m_dirModel->mimeData(sourceDragIndexes));
+
+    item->grabMouse();
+    m_dragInProgress = true;
+    drag->exec(supportedDragActions());
+    m_dragInProgress = false;
+    item->ungrabMouse();
+
+    const QModelIndex first(m_dragIndexes.first());
+    const QModelIndex last(m_dragIndexes.last());
+    m_dragIndexes.clear();
+    // TODO: Optimize to emit contiguous groups.
+    emit dataChanged(first, last, QVector<int>() << BlankRole);
+}
+
+void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row)
+{
+    QMimeData *mimeData = qobject_cast<QMimeData *>(dropEvent->property("mimeData").value<QObject *>());
+
+    if (!mimeData) {
+        return;
+    }
+
+    if (m_dragInProgress) {
+        if (m_locked || mimeData->urls().isEmpty()) {
+            return;
+        }
+
+        setSortMode(0);
+
+        emit move(dropEvent->property("x").toInt(), dropEvent->property("y").toInt(),
+            mimeData->urls());
+
+        return;
+    }
+
+    KFileItem item;
+
+    if (row > -1 && row < rowCount()) {
+         item = itemForIndex(index(row, 0));
+    }
+
+    if (item.isNull() &&
+        mimeData->hasFormat(QLatin1String("application/x-kde-ark-dndextract-service")) &&
+        mimeData->hasFormat(QLatin1String("application/x-kde-ark-dndextract-service"))) {
+        const QString remoteDBusClient = mimeData->data(QLatin1String("application/x-kde-ark-dndextract-service"));
+        const QString remoteDBusPath = mimeData->data(QLatin1String("application/x-kde-ark-dndextract-path"));
+
+        QDBusMessage message =
+            QDBusMessage::createMethodCall(remoteDBusClient, remoteDBusPath,
+                                            QLatin1String("org.kde.ark.DndExtract"),
+                                            QLatin1String("extractSelectedFilesTo"));
+        message.setArguments(QVariantList() << m_dirModel->dirLister()->url().adjusted(QUrl::PreferLocalFile));
+
+        QDBusConnection::sessionBus().call(message);
+
+        return;
+    }
+
+    QPoint pos;
+    pos.setX(dropEvent->property("x").toInt());
+    pos.setY(dropEvent->property("y").toInt());
+
+    pos = target->mapToScene(pos).toPoint();
+    pos = target->window()->mapToGlobal(pos);
+
+    Qt::DropAction proposedAction((Qt::DropAction)dropEvent->property("proposedAction").toInt());
+    Qt::DropActions possibleActions(dropEvent->property("possibleActions").toInt());
+    Qt::MouseButtons buttons(dropEvent->property("buttons").toInt());
+    Qt::KeyboardModifiers modifiers(dropEvent->property("modifiers").toInt());
+
+    QDropEvent ev(pos, possibleActions, mimeData, buttons, modifiers);
+    ev.setDropAction(proposedAction);
+
+    KonqOperations::doDrop(item, m_dirModel->dirLister()->url(), &ev, 0, QList<QAction *>());
 }
 
 void FolderModel::selectionChanged(QItemSelection selected, QItemSelection deselected)
@@ -419,11 +720,32 @@ void FolderModel::selectionChanged(QItemSelection selected, QItemSelection desel
     indices.append(deselected.indexes());
 
     QVector<int> roles;
-    roles.append(Qt::UserRole + 1);
+    roles.append(SelectedRole);
 
     foreach(const QModelIndex index, indices) {
         emit dataChanged(index, index, roles);
     }
+
+    if (!m_selectionModel->hasSelection()) {
+        clearDragImages();
+    } else {
+        foreach (const QModelIndex &idx, deselected.indexes()) {
+            if (m_dragImages.contains(idx.row())) {
+                DragImage *image = m_dragImages.value(idx.row());
+                delete image;
+                m_dragImages.remove(idx.row());
+            }
+        }
+    }
+}
+
+bool FolderModel::isBlank(int row) const
+{
+    if (row < 0) {
+        return true;
+    }
+
+    return data(index(row, 0), BlankRole).toBool();
 }
 
 QVariant FolderModel::data(const QModelIndex& index, int role) const
@@ -432,24 +754,28 @@ QVariant FolderModel::data(const QModelIndex& index, int role) const
         return QVariant();
     }
 
-    if (role == Qt::UserRole + 1) {
+    if (role == BlankRole) {
+        return m_dragIndexes.contains(index);
+    } else if (role == SelectedRole) {
         return m_selectionModel->isSelected(index);
-    } else if (role == Qt::UserRole + 2) {
-        bool moo = isDir(mapToSource(index), m_dirModel);
-
-        return moo;
-    } else if (role == Qt::UserRole + 3) {
-        KFileItem item = itemForIndex(index);
-
-        return item.url();
-    } else if (role == Qt::UserRole + 4) {
+    } else if (role == IsDirRole) {
+        return isDir(mapToSource(index), m_dirModel);
+    } else if (role == UrlRole) {
+        return itemForIndex(index).url();
+    } else if (role == SizeRole) {
         return m_dirModel->data(mapToSource(QSortFilterProxyModel::index(index.row(), 1)), Qt::DisplayRole);
-    }
-    else if (role == Qt::UserRole + 5) {
+    } else if (role == TypeRole) {
         return m_dirModel->data(mapToSource(QSortFilterProxyModel::index(index.row(), 6)), Qt::DisplayRole);
+    } else if (role == FileNameRole) {
+        return itemForIndex(index).url().fileName();
     }
 
     return QSortFilterProxyModel::data(index, role);
+}
+
+int FolderModel::indexForUrl(const QUrl& url) const
+{
+    return mapFromSource(m_dirModel->indexForUrl(url)).row();
 }
 
 KFileItem FolderModel::itemForIndex(const QModelIndex &index) const

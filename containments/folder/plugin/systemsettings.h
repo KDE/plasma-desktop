@@ -37,6 +37,8 @@ class SystemSettings : public QObject
         bool singleClick() const;
         Q_INVOKABLE int doubleClickInterval() const;
 
+        Q_INVOKABLE bool isDrag(int oldX, int oldY, int newX, int newY) const;
+
         bool eventFilter(QObject *watched, QEvent *event);
 
     Q_SIGNALS:

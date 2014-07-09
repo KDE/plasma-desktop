@@ -24,7 +24,7 @@
 #include <QStyle>
 #include <QWidget>
 
-SystemSettings::SystemSettings(QObject* parent) : QObject(parent),
+SystemSettings::SystemSettings(QObject *parent) : QObject(parent),
     m_monitoredWidget(new QWidget())
 {
     m_monitoredWidget->resize(0, 0);
@@ -51,6 +51,12 @@ int SystemSettings::doubleClickInterval() const
 
     return qApp->doubleClickInterval();
 }
+
+bool SystemSettings::isDrag(int oldX, int oldY, int newX, int newY) const
+{
+    return ((QPoint(oldX, oldY) - QPoint(newX, newY)).manhattanLength() >= QApplication::startDragDistance());
+}
+
 
 bool SystemSettings::eventFilter(QObject *watched, QEvent *event)
 {

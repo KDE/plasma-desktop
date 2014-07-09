@@ -55,6 +55,9 @@ Folder.SubDialog {
 
         isRootView: false
 
+        locked: true
+
+        sortMode: ((plasmoid.configuration.sortMode == 0) ? 1 : plasmoid.configuration.sortMode)
         filterMode: 0
 
         // TODO: Bidi.

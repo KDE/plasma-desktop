@@ -80,6 +80,8 @@ GroupBox {
                 CheckBox {
                     id: locked
 
+                    visible: !("containmentType" in plasmoid)
+
                     text: i18n("Lock in place")
                 }
             }
@@ -101,18 +103,22 @@ GroupBox {
                     ComboBox {
                         id: sortMode
 
-                        model: [i18n("Name"), i18n("Size"), i18n("Type"), i18n("Date")]
+                        model: [i18n("Unsorted"), i18n("Name"), i18n("Size"), i18n("Type"), i18n("Date")]
                     }
                 }
 
                 CheckBox {
                     id: sortDesc
 
+                    enabled: (sortMode.currentIndex != 0)
+
                     text: i18n("Descending")
                 }
 
                 CheckBox {
                     id: sortDirsFirst
+
+                    enabled: (sortMode.currentIndex != 0)
 
                     text: i18n("Folders first")
                 }
@@ -166,6 +172,9 @@ GroupBox {
 
             ColumnLayout {
                 RowLayout {
+                    // FIXME TODO: Hide for now until position roundtripping works properly for this.
+                    visible: false
+
                     Label {
                         text: i18n("Size:")
                     }

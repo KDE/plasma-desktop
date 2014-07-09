@@ -17,9 +17,33 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-// FIXME TODO: Avoid hardcoding the prop names, e.g. take them from the object.
-var iconSizes = new Array("small", "smallMedium", "medium", "large", "huge", "enormous");
+#include "rubberband.h"
 
-function iconSizeFromTheme(size) {
-    return units.iconSizes[iconSizes[size]];
+#include <QApplication>
+#include <QStyleOptionRubberBand>
+
+RubberBand::RubberBand(QQuickItem *parent) : QQuickPaintedItem(parent)
+{
+}
+
+RubberBand::~RubberBand()
+{
+}
+
+void RubberBand::paint(QPainter *painter)
+{
+    if (!qApp || !qApp->style()) {
+        return;
+    }
+
+    QStyleOptionRubberBand opt;
+    opt.state = QStyle::State_None;
+    opt.direction = qApp->layoutDirection();
+    opt.fontMetrics = qApp->fontMetrics();
+    opt.styleObject = this;
+    opt.palette = qApp->palette();
+    opt.shape = QRubberBand::Rectangle;
+    opt.opaque = false;
+    opt.rect = contentsBoundingRect().toRect();
+    qApp->style()->drawControl(QStyle::CE_RubberBand, &opt, painter);
 }
