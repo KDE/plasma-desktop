@@ -82,6 +82,19 @@ Item {
         interval: 100
         onTriggered: updateState()
     }
+
+    function iconSize(size) {
+        if (size >= units.iconSizes.small && size < units.iconSizes.smallMedium) {
+            return units.iconSizes.small;
+        } else if (size < units.iconSizes.medium) {
+            return units.iconSizes.smallMedium;
+        } else if (size < units.iconSizes.large) {
+            return units.iconSizes.medium;
+        } else {
+            return size;
+        }
+    }
+
     function updateState() {
         var container = main;
         //print("    w: " + container.width +"x"+container.height+" : "+x+"/"+y+" tbw: " + toolBoxButton.width);
@@ -168,7 +181,7 @@ Item {
             }
             elementId: "menu"
             anchors.verticalCenter: parent.verticalCenter
-            width: Math.min(parent.width, parent.height)*0.8
+            width: iconSize(Math.min(parent.width, parent.height) * 0.8)
             height: width
             opacity: buttonMouse.containsMouse || toolBoxItem.showing ? 1 : 0.5
             rotation: isHorizontal ? 0 : 90;
