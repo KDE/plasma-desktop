@@ -610,7 +610,7 @@ void runRdb( uint flags )
   int offset;
   while ((offset = fixer.indexIn(colorSchemeFilename)) >= 0)
       colorSchemeFilename.replace(offset, fixer.matchedLength(), fixer.cap(1).toUpper());
-  colorSchemeFilename.replace(0, 1, filename.at(0).toUpper());
+  colorSchemeFilename.replace(0, 1, colorSchemeFilename.at(0).toUpper());
 
   //clone the color scheme
   QString src = QStandardPaths::locate(QStandardPaths::GenericDataLocation, "color-schemes/" +  colorSchemeFilename + ".colors");
