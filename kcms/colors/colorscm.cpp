@@ -1247,14 +1247,6 @@ void KColorCm::save()
     groupI.writeEntry("ContrastEffect", inactiveContrastBox->currentIndex());
 
     m_config->sync();
-    KGlobalSettings::self()->emitChange(KGlobalSettings::PaletteChanged);
-    if (qApp->platformName() == QStringLiteral("xcb")) {
-        // Send signal to all kwin instances
-        QDBusMessage message =
-        QDBusMessage::createSignal("/KWin", "org.kde.KWin", "reloadConfig");
-        QDBusConnection::sessionBus().send(message);
-    }
-
     KConfig      cfg("kcmdisplayrc", KConfig::NoGlobals);
     KConfigGroup displayGroup(&cfg, "X11");
 
@@ -1262,6 +1254,14 @@ void KColorCm::save()
     cfg.sync();
 
     runRdb(KRdbExportQtColors | KRdbExportGtkTheme | ( applyToAlien->isChecked() ? KRdbExportColors : 0 ) );
+
+    KGlobalSettings::self()->emitChange(KGlobalSettings::PaletteChanged);
+    if (qApp->platformName() == QStringLiteral("xcb")) {
+        // Send signal to all kwin instances
+        QDBusMessage message =
+        QDBusMessage::createSignal("/KWin", "org.kde.KWin", "reloadConfig");
+        QDBusConnection::sessionBus().send(message);
+    }
 
     emit changed(false);
 }
