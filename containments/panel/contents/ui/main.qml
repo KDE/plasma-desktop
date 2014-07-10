@@ -152,6 +152,8 @@ function checkLastSpacer() {
         LayoutManager.layout = currentLayout;
         LayoutManager.restore();
         containmentSizeSyncTimer.restart();
+        plasmoid.action("configure").visible = !plasmoid.immutable;
+        plasmoid.action("configure").enabled = !plasmoid.immutable;
     }
 
     onDragEnter: {
@@ -228,7 +230,12 @@ function checkLastSpacer() {
     }
 
     Plasmoid.onFormFactorChanged: containmentSizeSyncTimer.restart();
-    Plasmoid.onImmutableChanged: containmentSizeSyncTimer.restart();
+    Plasmoid.onImmutableChanged: {
+        containmentSizeSyncTimer.restart();
+        plasmoid.action("configure").visible = !plasmoid.immutable;
+        plasmoid.action("configure").enabled = !plasmoid.immutable;
+    }
+
     onToolBoxChanged: {
         containmentSizeSyncTimer.restart();
         if (startupTimer.running) {
