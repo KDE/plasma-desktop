@@ -32,7 +32,14 @@ Item {
                              (state == "bottomright") || (state == "bottomleft"))
     property bool isHorizontal: (state != "left" && state != "right")
 
-    rotation: isHorizontal ? 0 : -90;
+    rotation: switch(state) {
+        case "left":
+            return -90;
+        case "right":
+            return 90;
+        default:
+            return 0;
+    }
 
     transform: Translate {
         x: state == "left" ? Math.round(-width/2 + height/2) : state == "right" ? + Math.round(width/2 - height/2) : 0
