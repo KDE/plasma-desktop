@@ -80,7 +80,7 @@ GroupBox {
                 CheckBox {
                     id: locked
 
-                    visible: !("containmentType" in plasmoid)
+                    visible: ("containmentType" in plasmoid)
 
                     text: i18n("Lock in place")
                 }
