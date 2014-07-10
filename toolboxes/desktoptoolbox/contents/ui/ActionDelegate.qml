@@ -30,7 +30,7 @@ Item {
     property alias label: textLabel.text
     property alias actionIcon: iconItem.icon
     height: toolBoxDelegate.iconSize + 14
-    width: parent ? parent.width : 200
+    width: childrenRect.width
 
     visible: modelData.visible
     KQuickControlsAddons.QIconItem {
@@ -44,7 +44,11 @@ Item {
         id: textLabel
         text:  modelData.text.replace("&", "") // hack to get rid of keyboard accelerator hints
         //elide: Text.ElideMiddle
-        anchors { left: iconItem.right; right: parent.right; leftMargin: 6; verticalCenter: parent.verticalCenter; }
+        anchors {
+            left: iconItem.right;
+            leftMargin: 6;
+            verticalCenter: parent.verticalCenter;
+        }
     }
     MouseArea {
         anchors.fill: parent

@@ -105,10 +105,9 @@ Item {
     PlasmaCore.FrameSvgItem {
         id: toolBoxFrame
 
-        width: expandedWidth
+        width: actionList.width + toolBoxFrame.margins.left + toolBoxFrame.margins.right
         height: actionList.height + toolBoxFrame.margins.top + toolBoxFrame.margins.bottom
         z: 1000
-        //opacity: toolBoxItem.showing ? 1 : 0
 
         property Item highlight
         property Item currentItem: null
@@ -155,7 +154,6 @@ Item {
 
             x: parent.x + toolBoxFrame.margins.left
             y: parent.y + toolBoxFrame.margins.top
-            width: parent.width - (toolBoxFrame.margins.left + toolBoxFrame.margins.right)
 
             Repeater {
                 id: unlockedList
