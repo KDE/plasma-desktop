@@ -278,7 +278,9 @@ void Positioner::move(int from, int to) {
         if (to == -1) {
             to = lastIndex() + 1;
         }
-    } else if (!isBlank(to)) {
+    }
+
+    if (!isBlank(to)) {
         return;
     }
 
