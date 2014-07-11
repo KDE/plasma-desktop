@@ -86,7 +86,7 @@ MouseArea {
         id: queryDialog
         titleIcon: "user-trash"
         titleText: i18n("Empty Trash")
-        message: i18n("Do you really want to empty the trash? All items will be deleted.")
+        message: i18n("Do you really want to empty the trash ? All the items will be deleted.")
         acceptButtonText: i18n("Empty Trash")
         rejectButtonText: i18n("Cancel")
         onAccepted: plasmoid.runCommand("ktrash", ["--empty"]);
