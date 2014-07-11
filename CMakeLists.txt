@@ -88,6 +88,8 @@ set_package_properties(XCB PROPERTIES TYPE REQUIRED)
 add_feature_info("XCB-XKB" XCB_XKB_FOUND "Required for building kcm/keyboard")
 add_feature_info("libxft" X11_Xft_FOUND "X FreeType interface library required for font installation")
 
+include(ConfigureChecks.cmake)
+
 if(${Qt5Gui_OPENGL_IMPLEMENTATION} STREQUAL "GL")
     find_package(OpenGL)
     set_package_properties(OpenGL PROPERTIES DESCRIPTION "The OpenGL libraries"
@@ -104,7 +106,6 @@ endif()
 
 include_directories("${CMAKE_CURRENT_BINARY_DIR}")
 
-include(ConfigureChecks.cmake)
 configure_file(config-workspace.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-workspace.h)
 configure_file(config-unix.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-unix.h )
 configure_file(config-X11.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-X11.h)
