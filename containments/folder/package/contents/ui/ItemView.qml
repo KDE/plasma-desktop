@@ -204,6 +204,7 @@ FocusScope {
 
             var cPos = mapToItem(gridView.contentItem, mouse.x, mouse.y);
             var item = gridView.itemAt(cPos.x, cPos.y);
+            var leftEdge = (gridView.flow == GridView.FlowLeftToRight) ? gridView.contentX : gridView.originX;
 
             if (!item) {
                 gridView.hoveredItem = null;
@@ -219,7 +220,7 @@ FocusScope {
 
             // Trigger autoscroll.
             if (pressX != -1) {
-                gridView.scrollLeft = (mouse.x <= 0 && gridView.contentX > 0);
+                gridView.scrollLeft = (mouse.x <= 0 && gridView.contentX > leftEdge);
                 gridView.scrollRight = (mouse.x >= gridView.width
                     && gridView.contentX < gridView.contentItem.width - gridView.width);
                 gridView.scrollUp = (mouse.y <= 0 && gridView.contentY > 0);
@@ -232,11 +233,11 @@ FocusScope {
                 var rB = main.rubberBand;
 
                 if (cPos.x < cPress.x) {
-                    rB.x = Math.max(0, cPos.x);
+                    rB.x = Math.max(leftEdge, cPos.x);
                     rB.width = Math.abs(rB.x - cPress.x);
                 } else {
                     rB.x = cPress.x;
-                    var ceil = Math.max(gridView.width, gridView.contentItem.width);
+                    var ceil = Math.max(gridView.width, gridView.contentItem.width) + leftEdge;
                     rB.width = Math.min(ceil - rB.x, Math.abs(rB.x - cPos.x));
                 }
 
@@ -352,7 +353,7 @@ FocusScope {
                         var rB = main.rubberBand;
 
                         if (scrollLeft) {
-                            rB.x = 0;
+                            rB.x = (gridView.flow == GridView.FlowLeftToRight) ? gridView.contentX : gridView.originX;
                             rB.width = listener.cPress.x;
                         }
 
@@ -397,7 +398,7 @@ FocusScope {
                 onScrollLeftChanged: {
                     if (scrollLeft && gridView.visibleArea.widthRatio < 1.0) {
                         smoothX.enabled = true;
-                        contentX = 0;
+                        contentX = (gridView.flow == GridView.FlowLeftToRight) ? gridView.contentX : gridView.originX;
                     } else {
                         contentX = contentX;
                         smoothX.enabled = false;
@@ -407,7 +408,8 @@ FocusScope {
                 onScrollRightChanged: {
                     if (scrollRight && gridView.visibleArea.widthRatio < 1.0) {
                         smoothX.enabled = true;
-                        contentX = contentItem.width - width;
+                        contentX = ((gridView.flow == GridView.FlowLeftToRight) ? gridView.contentX : gridView.originX)
+                            + (contentItem.width - width);
                     } else {
                         contentX = contentX;
                         smoothX.enabled = false;
@@ -508,6 +510,7 @@ FocusScope {
                             itemY = (((rows ? s : i) + 1) * gridView.cellHeight) - midHeight;
 
                             if (gridView.layoutDirection == Qt.RightToLeft) {
+                                itemX -= (rows ? gridView.contentX : gridView.originX);
                                 itemX = (rows ? gridView.width : gridView.contentItem.width) - itemX;
                             }
 
@@ -671,6 +674,12 @@ FocusScope {
 
                     itemX = dropPos.x + offset.x;
                     itemY = dropPos.y + offset.y;
+
+                    if (gridView.layoutDirection == Qt.RightToLeft) {
+                        itemX -= (rows ? gridView.contentX : gridView.originX);
+                        itemX = (rows ? gridView.width : gridView.contentItem.width) - itemX;
+                    }
+
                     col = Math.floor(itemX / gridView.cellWidth);
                     row = Math.floor(itemY / gridView.cellHeight);
 
