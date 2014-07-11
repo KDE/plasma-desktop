@@ -136,6 +136,15 @@ Item {
         prefix: "hover"
     }
 
+    PlasmaCore.FrameSvgItem {
+        id : listItemSvg
+
+        visible: false
+
+        imagePath: "widgets/listitem"
+        prefix: "normal"
+    }
+
     PlasmaCore.Svg {
         id: arrows
 
