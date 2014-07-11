@@ -21,6 +21,8 @@ import QtQuick.Controls 1.0 as QtControls
 import QtQuick.Layouts 1.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 
+import org.kde.plasma.private.shell 2.0
+
 Item {
     id: root
 
@@ -39,6 +41,11 @@ Item {
         id: group
     }
 
+    WidgetExplorer {
+        id: widgetExplorer
+        provides: configDialog.appletProvides
+    }
+
     Column {
         anchors {
             top: parent.top
@@ -47,13 +54,14 @@ Item {
         }
 
         Repeater {
-            model: configDialog.alternativesConfigModel
-            delegate: MouseArea {
+            model: widgetExplorer.widgetsModel
+            MouseArea {
                 width: root.width
                 height: childrenRect.height
                 onClicked: radio.checked = true;
                 RowLayout {
                     width: root.width
+                    height: childrenRect.height + units.largeSpacing
                     QtControls.RadioButton {
                         id: radio
                         exclusiveGroup: group
@@ -69,12 +77,19 @@ Item {
                     PlasmaCore.IconItem {
                         width: units.iconSizes.small
                         height: width
-                        source: model.icon
+                        source: model.decoration
                     }
 
-                    QtControls.Label {
+                    ColumnLayout {
                         Layout.fillWidth: true
-                        text: model.name
+                        QtControls.Label {
+                            Layout.fillWidth: true
+                            text: model.name
+                        }
+                        QtControls.Label {
+                            Layout.fillWidth: true
+                            text: model.description
+                        }
                     }
                 }
             }

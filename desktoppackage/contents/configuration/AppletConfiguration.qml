@@ -98,7 +98,7 @@ Rectangle {
 
 //BEGIN connections
     Component.onCompleted: {
-        if (configDialog.alternativesConfigModel.count > 0 && !plasmoid.immutable) {
+        if (configDialog.appletHasAlternatives && !plasmoid.immutable) {
             globalConfigModel.appendCategory("preferences-desktop-default-applications", i18n("Alternatives"), "ConfigurationAppletAlternatives.qml", "")
         }
         if (!isContainment && configDialog.configModel && configDialog.configModel.count > 0) {
