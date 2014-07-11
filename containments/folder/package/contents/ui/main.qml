@@ -291,7 +291,7 @@ DragDrop.DropArea {
         isRootView: true
 
         url: plasmoid.configuration.url
-        locked: plasmoid.configuration.locked
+        locked: (plasmoid.configuration.locked || !isContainment)
         filterMode: plasmoid.configuration.filterMode
         filterPattern: plasmoid.configuration.filterPattern
         filterMimeTypes: plasmoid.configuration.filterMimeTypes
