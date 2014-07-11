@@ -676,14 +676,20 @@ void Positioner::applyPositions()
             if (!sourceIndices.contains(name)) {
                 continue;
             } else {
-                sourceIndex = sourceIndices.take(name);
+                sourceIndex = sourceIndices.value(name);
             }
 
             index = (stripe * m_perStripe) + pos;
 
+            if (m_proxyToSource.contains(index)) {
+                continue;
+            }
+
             m_proxyToSource.insert(index, sourceIndex);
             m_lastIndex = -1;
             m_sourceToProxy.insert(sourceIndex, index);
+
+            sourceIndices.remove(name);
         } else {
             leftOvers.append(name);
             leftOvers.append(QString::number(stripe));
