@@ -42,7 +42,7 @@ Item {
     property bool selected: model.blank ? false : model.selected
     property bool blank: model.blank
     property variant snapshot: grabber.image
-    property Item snapshotSource: main.snapshotSource
+    property Item snapshotSource: null
 
     // FIXME TODO: Replace with Qt 5.4's item-to-image API.
     Folder.ItemGrabber {
@@ -151,8 +151,8 @@ Item {
     PlasmaCore.FrameSvgItem {
         id: frame
 
-        x: units.smallSpacing * 2
-        y: units.smallSpacing * 2
+        x: units.smallSpacing * 1
+        y: units.smallSpacing * 1
 
         width: parent.width - (2 * units.smallSpacing)
         height: (icon.height + (2 * units.smallSpacing) + (label.lineCount

@@ -328,7 +328,7 @@ FocusScope {
 
                 cellWidth: iconSize + (4 * units.largeSpacing)
                 cellHeight: (iconSize + (theme.mSize(theme.defaultFont).height * plasmoid.configuration.textLines)
-                    + (2 * units.largeSpacing) + (2 * units.smallSpacing))
+                    + (3 * units.smallSpacing) + (2 * units.largeSpacing))
 
                 model: positioner
 
