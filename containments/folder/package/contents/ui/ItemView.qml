@@ -204,7 +204,7 @@ FocusScope {
 
             var cPos = mapToItem(gridView.contentItem, mouse.x, mouse.y);
             var item = gridView.itemAt(cPos.x, cPos.y);
-            var leftEdge = (gridView.flow == GridView.FlowLeftToRight) ? gridView.contentX : gridView.originX;
+            var leftEdge = Math.min(gridView.contentX, gridView.originX);
 
             if (!item) {
                 gridView.hoveredItem = null;
@@ -328,7 +328,7 @@ FocusScope {
 
                 cellWidth: iconSize + (4 * units.largeSpacing)
                 cellHeight: (iconSize + (theme.mSize(theme.defaultFont).height * plasmoid.configuration.textLines)
-                    + (2 * units.largeSpacing) + (2 * units.smallSpacing))
+                    + (3 * units.smallSpacing) + (2 * units.largeSpacing))
 
                 model: positioner
 
@@ -353,7 +353,7 @@ FocusScope {
                         var rB = main.rubberBand;
 
                         if (scrollLeft) {
-                            rB.x = (gridView.flow == GridView.FlowLeftToRight) ? gridView.contentX : gridView.originX;
+                            rB.x = Math.min(gridView.contentX, gridView.originX);
                             rB.width = listener.cPress.x;
                         }
 
