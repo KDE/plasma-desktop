@@ -20,6 +20,7 @@
  */
 
 import QtQuick 2.0
+import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
@@ -62,6 +63,10 @@ Item {
     property alias imagePath: plasmoidBackground.imagePath
 
     visible: false
+
+    onMinimumWidthChanged: appletItem.width = Math.max(minimumWidth, width);
+    onMinimumHeightChanged: appletItem.height = Math.max(minimumHeight, height);
+
 
     //FIXME: this delay is because backgroundHints gets updated only after a while in qml applets
     Timer {
@@ -138,7 +143,6 @@ Item {
             }
         }
         Rectangle { color: Qt.rgba(0,0,0,0); border.width: 3; border.color: "red"; opacity: 0.5; visible: debug; anchors.fill: parent; }
-    
 
 
         Item {
@@ -253,8 +257,35 @@ Item {
 
                 property QtObject applet
 
-                property int minimumWidth: applet && applet.Layout ? applet.Layout.minimumWidth : 0
-                property int minimumHeight: applet && applet.Layout ? applet.Layout.minimumHeight : 0
+                property var minimumSize: {
+                    var layout;
+                    var size = new Object;
+                    size['width'] = 0;
+                    size['height'] = 0;
+
+                    if (!applet) {
+                        return size;
+                    }
+                    if (applet.preferredRepresentation) {
+                        if (applet.preferredRepresentation == applet.compactRepresentation) {
+                            layout = applet.compactRepresentationItem.Layout;
+                        } else {
+                            layout = applet.fullRepresentationItem.Layout;
+                        }
+                    } else {
+                        layout = applet.compactRepresentationItem ? applet.compactRepresentationItem.Layout : null;
+                    }
+
+                    if (layout) {
+                        size.width = layout.minimumWidth;
+                        size.height = layout.minimumHeight;
+                    }
+
+                    return size;
+                }
+
+                property int minimumWidth: minimumSize.width;
+                property int minimumHeight: minimumSize.height;
 
                 function appletDestroyed() {
 //                     print("Applet DESTROYED.");
