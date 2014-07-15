@@ -29,13 +29,13 @@
 #include <QLocale>
 #include <QStandardPaths>
 #include <QTextStream>
+#include <QTextCodec>
 
 // Frameworks
 #include <KPluginFactory>
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <KSharedConfig>
-#include <KAboutData>
 
 K_PLUGIN_FACTORY_WITH_JSON(KCMFormatsFactory, "formats.json", registerPlugin<KCMFormats>();)
 
@@ -108,8 +108,8 @@ void KCMFormats::addLocaleToCombo(QComboBox *combo, const QLocale &locale)
     // "it_IT")
     // TODO: Properly handle scripts (@foo)
     QString cvalue = locale.name();
-    if (cvalue.contains('.')) { // strip the encoding
-        cvalue.truncate(cvalue.indexOf('.'));
+    if (!cvalue.contains('.')) { // explicitely add the encoding, otherwise Qt doesn't accept dead keys and garbles the output as well
+        cvalue.append(QLatin1Char('.') + QTextCodec::codecForLocale()->name());
     }
 
     QString flagcode;
@@ -127,12 +127,7 @@ void KCMFormats::addLocaleToCombo(QComboBox *combo, const QLocale &locale)
 
 void setCombo(QComboBox *combo, const QString &key)
 {
-    QString cvalue = key;
-    if (cvalue.contains('.')) { // strip the encoding
-        cvalue.truncate(cvalue.indexOf('.'));
-    }
-
-    const int ix = combo->findData(cvalue);
+    const int ix = combo->findData(key);
     if (ix > -1) {
         combo->setCurrentIndex(ix);
     }
