@@ -38,7 +38,9 @@ Item {
     property Item labelArea: textBackground
     property Item actionsOverlay: actions
     property Item hoverArea: toolTip
+    property Item popupButton: null
     property bool hovered: (GridView.view.hoveredItem == main)
+    property bool isDir: model.isDir
     property bool selected: model.blank ? false : model.selected
     property bool blank: model.blank
     property variant snapshot: grabber.image
@@ -91,6 +93,15 @@ Item {
                 popupDialog.destroy();
                 popupDialog = null;
             }
+    }
+
+    onIsDirChanged: {
+        if (isDir && main.GridView.view.isRootView && main.popupButton == null) {
+            main.popupButton = popupButtonComponent.createObject(actions);
+        } else if (main.popupButton) {
+            main.popupButton.destroy();
+            main.popupButton = null;
+        }
     }
 
     function openPopup() {
@@ -285,11 +296,5 @@ Item {
                 }
             }
         ]
-
-        Component.onCompleted: {
-            if (main.GridView.view.isRootView && model.isDir) {
-                popupButtonComponent.createObject(actions);
-            }
-        }
     }
 }
