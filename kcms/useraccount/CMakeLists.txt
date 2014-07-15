@@ -6,7 +6,7 @@ set(kcm_useraccount_PART_SRCS
     main.cpp
     chfacedlg.cpp)
 
-qt5_wrap_ui(kcm_useraccount_PART_SRCS
+ki18n_wrap_ui(kcm_useraccount_PART_SRCS
     main_widget.ui
     faceDlg.ui)
 
