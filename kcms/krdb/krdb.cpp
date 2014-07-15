@@ -621,7 +621,7 @@ void runRdb( uint flags )
 
   //Apply the color scheme
   QString configFilePath = migration.saveLocation("config") + "kdeglobals";
-  configFilePath = "/home/diau/.kde4/share/config/kdeglobals";
+
   if (configFilePath.isEmpty()) {
       return;
   }
@@ -684,5 +684,11 @@ void runRdb( uint flags )
   kglobals4.writeEntry("contrast", kglobals.readEntry("contrast", 4));
   //FIXME: this should somehow check if the kde4 version of the style is installed
   kde4generalGroup.writeEntry("widgetStyle", kglobals.readEntry("widgetStyle", "oxygen"));
+
+  //toolbar style
+  KConfigGroup toolbars4(&kde4config, "Toolbar style");
+  KConfigGroup toolbars5(kglobalcfg, "Toolbar style");
+  toolbars4.writeEntry("ToolButtonStyle", toolbars5.readEntry("ToolButtonStyle", "TextBesideIcon"));
+  toolbars4.writeEntry("ToolButtonStyleOtherToolbars", toolbars5.readEntry("ToolButtonStyleOtherToolbars", "TextBesideIcon"));
 }
 
