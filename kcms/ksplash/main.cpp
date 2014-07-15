@@ -14,15 +14,15 @@
 #include <QTabWidget>
 //Added by qt3to4:
 #include <QHBoxLayout>
+#include <QDebug>
 
 #include <kaboutdata.h>
 #include <kcmodule.h>
-#include <kdebug.h>
-#include <kstandarddirs.h>
 
 #include "installer.h"
 #include <KPluginFactory>
 #include <KPluginLoader>
+#include <klocalizedstring.h>
 
 class KSplashThemeMgr : public KCModule
 {
@@ -45,12 +45,11 @@ private:
 K_PLUGIN_FACTORY(KSplashThemeMgrFactory,
         registerPlugin< KSplashThemeMgr>();
         )
-K_EXPORT_PLUGIN(KSplashThemeMgrFactory("ksplashthemes"))
 
 // -----------------------------------------------------------------------------------------
 
 KSplashThemeMgr::KSplashThemeMgr( QWidget *parent, const QVariantList &args)
-  : KCModule( KSplashThemeMgrFactory::componentData(), parent, args ), mInstaller(new SplashInstaller(this))
+  : KCModule( parent, args ), mInstaller(new SplashInstaller(this))
 {
   init();
 
@@ -65,17 +64,15 @@ KSplashThemeMgr::KSplashThemeMgr( QWidget *parent, const QVariantList &args)
   box->addWidget(mInstaller);
 #endif
   connect( mInstaller, SIGNAL(changed(bool)), SIGNAL(changed(bool)) );
-  KAboutData *about = new KAboutData( "kcmksplash"
-                                      , 0,ki18n("KDE splash screen theme manager")
-                                      ,"0.1"
-                                      ,KLocalizedString()
-                                      ,KAboutLicense::GPL
-                                      ,ki18n("(c) 2003 KDE developers") );
-  about->addAuthor(ki18n("Ravikiran Rajagopal"), KLocalizedString(), "ravi@ee.eng.ohio-state.edu");
-  about->addCredit(ki18n("Brian Ledbetter"), ki18n("Original KSplash/ML author"), "brian@shadowcom.net");
-  about->addCredit(ki18n("KDE Theme Manager authors" ), ki18n("Original installer code") );
+  
+  KAboutData* about = new KAboutData("kcmksplash", i18n("KDE splash screen theme manager"),
+                                       "0.1", QString(), KAboutLicense::GPL);
+  
+  about->addAuthor(i18n("Ravikiran Rajagopal"), QString(), "ravi@ee.eng.ohio-state.edu");
+  about->addCredit(i18n("Brian Ledbetter"), i18n("Original KSplash/ML author"), "brian@shadowcom.net");
+  about->addCredit(i18n("KDE Theme Manager authors" ), i18n("Original installer code") );
   // Once string freeze is over, replace second argument with "Icon"
-  about->addCredit(ki18n("Hans Karlsson"), KLocalizedString(), "karlsson.h@home.se" );
+  about->addCredit(i18n("Hans Karlsson"), QString(), "karlsson.h@home.se" );
   setAboutData(about);
   //setButtons( KCModule::Default|KCModule::Apply );
 }
@@ -92,7 +89,7 @@ QString KSplashThemeMgr::quickHelp() const
 
 void KSplashThemeMgr::init()
 {
-  KGlobal::dirs()->addResourceType("ksplashthemes", "data", "ksplash/Themes");
+//  KGlobal::dirs()->addResourceType("ksplashthemes", "data", "ksplash/Themes");
 }
 
 void KSplashThemeMgr::save()

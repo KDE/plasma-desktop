@@ -24,18 +24,20 @@
 #include <QDragEnterEvent>
 #include <QMouseEvent>
 #include <QScrollArea>
+#include <QDrag>
+#include <QMimeData>
 
 #include "installer.h"
 
 #include <kdebug.h>
 #include <kfiledialog.h>
+#include <kconfiggroup.h>
 #include <kglobalsettings.h>
 #include <klocale.h>
 #include <kmessagebox.h>
 #include <kprocess.h>
 #include <kpushbutton.h>
 #include <kstandarddirs.h>
-#include <ktar.h>
 #include <kservicetypetrader.h>
 #include <kio/netaccess.h>
 #include <KNewStuff3/KNS3/DownloadDialog>
@@ -106,7 +108,7 @@ SplashInstaller::SplashInstaller (QWidget *aParent, const char *aName, bool aIni
   : QWidget(aParent), mGui(!aInit)
 {
   setObjectName(aName);
-  KGlobal::dirs()->addResourceType("ksplashthemes", "data", "ksplash/Themes");
+//  KGlobal::dirs()->addResourceType("ksplashthemes", "data", "ksplash/Themes");
 
   if (!mGui)
     return;
@@ -121,29 +123,9 @@ SplashInstaller::SplashInstaller (QWidget *aParent, const char *aName, bool aIni
   mThemesList = new ThemeListBox(this);
   mThemesList->setSizePolicy( QSizePolicy::Preferred, QSizePolicy::Expanding );
   connect(mThemesList, SIGNAL(currentRowChanged(int)), SLOT(slotSetTheme(int)));
-  connect(mThemesList, SIGNAL(filesDropped(KUrl::List)), SLOT(slotFilesDropped(KUrl::List)));
   leftbox->addWidget(mThemesList);
 
-  mBtnNew = new KPushButton( KIcon("get-hot-new-stuff"), i18n("Get New Themes..."), this );
-  mBtnNew->setToolTip(i18n("Get new themes from the Internet"));
-  mBtnNew->setWhatsThis(i18n("You need to be connected to the Internet to use this action. A dialog will display a list of themes from the http://www.kde.org website. Clicking the Install button associated with a theme will install this theme locally."));
-  leftbox->addWidget( mBtnNew );
-  connect(mBtnNew, SIGNAL(clicked()), SLOT(slotNew()));
-
-  mBtnAdd = new KPushButton( KIcon("document-import"), i18n("Install Theme File..."), this );
-  mBtnAdd->setToolTip(i18n("Install a theme archive file you already have locally"));
-  mBtnAdd->setWhatsThis(i18n("If you already have a theme archive locally, this button will unpack it and make it available for KDE applications"));
-  leftbox->addWidget( mBtnAdd );
-  connect(mBtnAdd, SIGNAL(clicked()), SLOT(slotAdd()));
-
-  mBtnRemove = new KPushButton( KIcon("edit-delete"), i18n("Remove Theme"), this );
-  mBtnRemove->setToolTip(i18n("Remove the selected theme from your disk"));
-  mBtnRemove->setWhatsThis(i18n("This will remove the selected theme from your disk."));
-  mBtnRemove->setEnabled( false );
-  leftbox->addWidget( mBtnRemove );
-  connect(mBtnRemove, SIGNAL(clicked()), SLOT(slotRemove()));
-
-  mBtnTest = new KPushButton( KIcon("document-preview"), i18n("Test Theme"), this );
+  mBtnTest = new KPushButton( QIcon::fromTheme("document-preview"), i18n("Test Theme"), this );
   mBtnTest->setToolTip(i18n("Test the selected theme"));
   mBtnTest->setWhatsThis(i18n("This will test the selected theme."));
   mBtnTest->setEnabled( false );
@@ -196,89 +178,6 @@ int SplashInstaller::addTheme(const QString &path, const QString &name)
   return i;
 }
 
-// Copy theme package into themes directory
-void SplashInstaller::addNewTheme(const KUrl &srcURL)
-{
-  const QString dir = KGlobal::dirs()->saveLocation("ksplashthemes");
-
-  KUrl url;
-  QStringList themeNames;
-  QString filename = srcURL.fileName();
-  int i = filename.lastIndexOf('.');
-  // Convert extension to lower case.
-  if (i >= 0)
-     filename = filename.left(i)+filename.mid(i).toLower();
-  url.setPath(KStandardDirs::locateLocal("tmp",filename));
-
-  // Remove file from temporary directory if it aleady exists - usually the result of a failed install.
-  if ( KIO::NetAccess::exists( url, KIO::NetAccess::SourceSide, 0 ) )
-    KIO::NetAccess::del( url, 0 );
-
-  if (srcURL.fileName().toLower() == "theme.rc" ) // uncompressed theme selected
-  {
-    QString themeName;
-    // Get the name of the Theme from the theme.rc file
-    KConfig _cnf(srcURL.path());
-    KConfigGroup cnf(&_cnf, QString("KSplash Theme: %1").arg(themeName) );
-
-    // copy directory of theme.rc to ThemesDir
-    KIO::NetAccess::dircopy(KUrl(srcURL.directory()), KUrl(dir + themeName));
-
-    themeNames << themeName;
-  }
-  else
-  {
-    bool rc = KIO::NetAccess::file_copy(srcURL, url, 0);
-    if (!rc)
-    {
-      kWarning() << "Failed to copy theme " << srcURL.fileName()
-	  << " into temporary directory " << url.path() << endl;
-      return;
-    }
-
-    // Extract into theme directory: we may have multiple themes in one tarball!
-    KTar tarFile(url.path());
-    if (!tarFile.open(QIODevice::ReadOnly))
-    {
-      kWarning() << "Unable to open archive: " << url.path();
-      KIO::NetAccess::del( url, 0 );
-      return;
-    }
-    KArchiveDirectory const *ad = tarFile.directory();
-
-    // Find first directory entry.
-    const QStringList entries = ad->entries();
-    foreach(const QString& s, entries)
-    {
-      if( ad->entry(s)->isDirectory() )
-      {
-	// each directory may contain one theme
-	themeNames << s;
-      }
-    }
-    if (themeNames.count() < 1)
-    {
-      kWarning() << "No directory in archive: " << url.path();
-      tarFile.close();
-      KIO::NetAccess::del( url, 0 );
-      return;
-    }
-
-    // copy the theme into the "ksplashthemes" directory
-    ad->copyTo(dir);
-
-    tarFile.close();
-    KIO::NetAccess::del( url, 0 );
-
-  }
-
-  readThemesList();
-  mThemesList->setCurrentRow(findTheme(themeNames.first()));
-  if (mThemesList->currentItem())
-  {
-    mThemesList->currentItem()->setSelected(true);
-  }
-}
 
 //-----------------------------------------------------------------------------
 void SplashInstaller::readThemesList()
@@ -286,7 +185,9 @@ void SplashInstaller::readThemesList()
   mThemesList->clear();
 
   // Read local themes
-  const QStringList entryList = KGlobal::dirs()->resourceDirs("ksplashthemes");
+//TODO
+//  const QStringList entryList = KGlobal::dirs()->resourceDirs("ksplashthemes");
+  QStringList entryList;
   //kDebug() << "readThemesList: " << entryList;
   QDir dir;
   QStringList subdirs;
@@ -343,37 +244,6 @@ void SplashInstaller::save()
   cnf.sync();
   emit changed( false );
 }
-
-//-----------------------------------------------------------------------------
-void SplashInstaller::slotRemove()
-{
-  int cur = mThemesList->currentRow();
-  if (cur < 0)
-    return;
-
-  bool rc = false;
-  const QString themeName = mThemesList->item(cur)->text();
-  const QString themeDir = mThemesList->text2path[themeName];
-  if (!themeDir.isEmpty())
-  {
-     KUrl url;
-     url.setPath(themeDir);
-     if (KMessageBox::warningContinueCancel(this,i18n("Delete folder %1 and its contents?", themeDir),"",KGuiItem(i18n("&Delete"),"edit-delete"))==KMessageBox::Continue)
-       rc = KIO::NetAccess::del(url,this);
-     else
-       return;
-  }
-  if (!rc)
-  {
-    KMessageBox::sorry(this, i18n("Failed to remove theme '%1'", themeName));
-    return;
-  }
-  //mThemesList->removeItem(cur);
-  readThemesList();
-  cur = (cur >= mThemesList->count())?mThemesList->count()-1:cur;
-  mThemesList->setCurrentRow(cur);
-}
-
 
 //-----------------------------------------------------------------------------
 void SplashInstaller::slotSetTheme(int id)
@@ -476,39 +346,6 @@ void SplashInstaller::slotSetTheme(int id)
     }
   }
   mBtnRemove->setEnabled( !path.isEmpty() && QFileInfo(path).isWritable());
-}
-
-//-----------------------------------------------------------------------------
-void SplashInstaller::slotNew()
-{
-  KNS3::DownloadDialog dialog("ksplash.knsrc", this);
-  dialog.exec();
-  if (!dialog.changedEntries().isEmpty())
-    readThemesList();
-}
-
-//-----------------------------------------------------------------------------
-void SplashInstaller::slotAdd()
-{
-  static QString path;
-  if (path.isEmpty()) path = QDir::homePath();
-
-  KFileDialog dlg(path, "*.tgz *.tar.gz *.tar.bz2 theme.rc|" + i18n( "KSplash Theme Files" ), this);
-  dlg.setCaption(i18n("Add Theme"));
-  if (!dlg.exec())
-    return;
-
-  path = dlg.baseUrl().url();
-  addNewTheme(dlg.selectedUrl());
-}
-
-//-----------------------------------------------------------------------------
-void SplashInstaller::slotFilesDropped(const KUrl::List &urls)
-{
-  for(KUrl::List::ConstIterator it = urls.constBegin();
-      it != urls.end();
-      ++it)
-      addNewTheme(*it);
 }
 
 //-----------------------------------------------------------------------------

@@ -42,19 +42,14 @@ Q_SIGNALS:
   void changed( bool state );
 
 protected Q_SLOTS:
-  virtual void slotNew();
-  virtual void slotAdd();
-  virtual void slotRemove();
   virtual void slotTest();
   virtual void slotSetTheme(int);
-  void slotFilesDropped(const KUrl::List &urls);
 
 protected:
   /** Scan Themes directory for available theme packages */
   virtual void readThemesList();
   /** add a theme to the list, returns the list index */
   int addTheme(const QString &path, const QString &name);
-  void addNewTheme(const KUrl &srcURL);
   int findTheme( const QString &theme );
 
 private:
