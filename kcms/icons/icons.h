@@ -81,6 +81,8 @@ private:
     void read();
     void apply();
 
+    void exportToKDE4();
+
 
     bool mbChanged[6], mbAnimated[6];
     int mSizes[6];

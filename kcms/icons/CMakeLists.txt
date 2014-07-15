@@ -18,8 +18,13 @@ target_link_libraries(kcm_icons
     KF5::Archive
     KF5::NewStuff
     KF5::KIOWidgets
+    KF5::KDELibs4Support
     ${X11_LIBRARIES}
 )
+
+if(X11_FOUND)
+    target_link_libraries(kcm_icons Qt5::X11Extras)
+endif()
 
 install(TARGETS kcm_icons  DESTINATION ${PLUGIN_INSTALL_DIR} )
 

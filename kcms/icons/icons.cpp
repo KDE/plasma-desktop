@@ -38,6 +38,8 @@
 #include <KSharedConfig>
 #include <KConfigGroup>
 
+#include <kdelibs4migration.h>
+
 Q_DECLARE_LOGGING_CATEGORY(KCM_ICONS)
 
 
@@ -332,6 +334,38 @@ void KIconConfig::preview()
     preview(2);
 }
 
+void KIconConfig::exportToKDE4()
+{
+    //TODO: killing the kde4 icon cache: possible? (kde4migration doesn't let access the cache folder)
+    Kdelibs4Migration migration;
+    QString configFilePath = migration.saveLocation("config") + "kdeglobals";
+
+    if (configFilePath.isEmpty()) {
+        return;
+    }
+
+    KSharedConfigPtr kglobalcfg = KSharedConfig::openConfig( "kdeglobals" );
+    KConfig kde4config(configFilePath);
+
+    KConfigGroup iconsGroup(kglobalcfg, "Icons");
+    KConfigGroup kde4IconGroup(&kde4config, "Icons");
+    QString iconTheme = iconsGroup.readEntry("Theme", QString());
+    if (!iconTheme.isEmpty()) {
+        kde4IconGroup.writeEntry("Theme", iconTheme);
+    }
+    kde4IconGroup.sync();
+
+    //Synchronize icon effects
+    QStringList iconGroups;
+    iconGroups << "DesktopIcons" << "DialogIcons" << "MainToolbarIcons" << "PanelIcons" << "SmallIcons" << "ToolbarIcons";
+
+    for (QString grp : iconGroups) {
+        KConfigGroup cg(kglobalcfg, grp);
+        KConfigGroup cg2(&kde4config, grp);
+        cg.copyTo(&cg2);
+    }
+}
+
 void KIconConfig::load()
 {
     read();
@@ -385,6 +419,8 @@ void KIconConfig::save()
     }
 
     mpConfig->sync();
+
+    exportToKDE4();
 
     emit changed(false);
 
