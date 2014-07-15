@@ -42,7 +42,7 @@ public:
 
 private:
     void addLocaleToCombo(QComboBox *combo, const QLocale &locale);
-    void initCombo(QComboBox *combo, const QList<QLocale> allLocales);
+    void initCombo(QComboBox *combo, const QList<QLocale> &allLocales);
     void connectCombo(QComboBox *combo);
     QList<QComboBox *> m_combos;
 

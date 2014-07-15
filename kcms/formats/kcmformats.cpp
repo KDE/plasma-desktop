@@ -35,6 +35,7 @@
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <KSharedConfig>
+#include <KAboutData>
 
 K_PLUGIN_FACTORY_WITH_JSON(KCMFormatsFactory, "formats.json", registerPlugin<KCMFormats>();)
 
@@ -61,7 +62,7 @@ KCMFormats::~KCMFormats()
 
 void KCMFormats::load()
 {
-    QList<QLocale> allLocales = QLocale::matchingLocales(QLocale::AnyLanguage, QLocale::AnyScript, QLocale::AnyCountry);
+    const QList<QLocale> allLocales = QLocale::matchingLocales(QLocale::AnyLanguage, QLocale::AnyScript, QLocale::AnyCountry);
     foreach(QComboBox * combo, m_combos) {
         initCombo(combo, allLocales);
     }
@@ -83,7 +84,7 @@ void KCMFormats::load()
     emit changed(false);
 }
 
-void KCMFormats::initCombo(QComboBox *combo, const QList<QLocale> allLocales)
+void KCMFormats::initCombo(QComboBox *combo, const QList<QLocale> & allLocales)
 {
     const QString clabel = i18n("No change");
     combo->addItem(clabel, QString());
@@ -105,25 +106,33 @@ void KCMFormats::addLocaleToCombo(QComboBox *combo, const QLocale &locale)
     const QString clabel = !locale.nativeCountryName().isEmpty() ? locale.nativeCountryName() : locale.countryToString(locale.country());
     // This needs to use name() rather than bcp47name() or later on the export will generate a non-sense locale (e.g. "it" instead of
     // "it_IT")
-    // TODO: Properly handle encodings (.UTF-8) and scripts (@foo)
-    const QString cvalue = locale.name();
+    // TODO: Properly handle scripts (@foo)
+    QString cvalue = locale.name();
+    if (cvalue.contains('.')) { // strip the encoding
+        cvalue.truncate(cvalue.indexOf('.'));
+    }
 
     QString flagcode;
     const QStringList split = locale.name().split('_');
     if (split.count() > 1) {
         flagcode = split[1].toLower();
     }
-    QString flag(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QLatin1String("locale/") + QString::fromLatin1("l10n/%1/flag.png").arg(flagcode)));
+    QString flag(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("locale/l10n/%1/flag.png").arg(flagcode)));
     QIcon flagIcon;
     if (!flag.isEmpty()) {
-        flagIcon = QIcon(QPixmap(flag));
+        flagIcon = QIcon(flag);
     }
-    combo->addItem(flagIcon, i18n("%1 - %2 (%3)", clabel, locale.nativeLanguageName(), locale.name()) , QVariant(cvalue));
+    combo->addItem(flagIcon, i18n("%1 - %2 (%3)", clabel, locale.nativeLanguageName(), locale.name()), cvalue);
 }
 
 void setCombo(QComboBox *combo, const QString &key)
 {
-    int ix = combo->findData(key);
+    QString cvalue = key;
+    if (cvalue.contains('.')) { // strip the encoding
+        cvalue.truncate(cvalue.indexOf('.'));
+    }
+
+    const int ix = combo->findData(cvalue);
     if (ix > -1) {
         combo->setCurrentIndex(ix);
     }
@@ -136,13 +145,13 @@ void KCMFormats::readConfig()
     bool useDetailed = m_config.readEntry("useDetailed", false);
     m_ui->checkDetailed->setChecked(useDetailed);
 
-    setCombo(m_ui->comboGlobal, m_config.readEntry(lcLang, QString()));
+    setCombo(m_ui->comboGlobal, m_config.readEntry(lcLang, qgetenv(lcLang.toLatin1())));
 
-    setCombo(m_ui->comboNumbers, m_config.readEntry(lcNumeric, QString()));
-    setCombo(m_ui->comboTime, m_config.readEntry(lcTime, QString()));
-    setCombo(m_ui->comboCollate, m_config.readEntry(lcCollate, QString()));
-    setCombo(m_ui->comboCurrency, m_config.readEntry(lcMonetary, QString()));
-    setCombo(m_ui->comboMeasurement, m_config.readEntry(lcMeasurement, QString()));
+    setCombo(m_ui->comboNumbers, m_config.readEntry(lcNumeric, qgetenv(lcNumeric.toLatin1())));
+    setCombo(m_ui->comboTime, m_config.readEntry(lcTime, qgetenv(lcTime.toLatin1())));
+    setCombo(m_ui->comboCollate, m_config.readEntry(lcCollate, qgetenv(lcCollate.toLatin1())));
+    setCombo(m_ui->comboCurrency, m_config.readEntry(lcMonetary, qgetenv(lcMonetary.toLatin1())));
+    setCombo(m_ui->comboMeasurement, m_config.readEntry(lcMeasurement, qgetenv(lcMeasurement.toLatin1())));
 
     updateEnabled();
 }
@@ -236,7 +245,16 @@ void KCMFormats::save()
 void KCMFormats::defaults()
 {
     m_ui->checkDetailed->setChecked(false);
-    m_ui->comboGlobal->setCurrentIndex(0);
+
+    // restore user defaults from env vars
+    setCombo(m_ui->comboGlobal, qgetenv(lcLang.toLatin1()));
+    setCombo(m_ui->comboNumbers, qgetenv(lcNumeric.toLatin1()));
+    setCombo(m_ui->comboTime, qgetenv(lcTime.toLatin1()));
+    setCombo(m_ui->comboCollate, qgetenv(lcCollate.toLatin1()));
+    setCombo(m_ui->comboCurrency, qgetenv(lcMonetary.toLatin1()));
+    setCombo(m_ui->comboMeasurement, qgetenv(lcMeasurement.toLatin1()));
+
+    updateEnabled();
 }
 
 void KCMFormats::updateEnabled()
