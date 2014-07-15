@@ -236,4 +236,6 @@ Item {
             }
         }
     }
+    Accessible.role: Accessible.MenuItem
+    Accessible.name: label.text
 }

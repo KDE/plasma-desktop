@@ -30,6 +30,9 @@ FocusScope {
     property alias currentIndex: runnerMatches.currentIndex
     property alias containsMouse: runnerMatches.containsMouse
 
+    Accessible.name: header.text
+    Accessible.role: Accessible.MenuItem
+
     PlasmaCore.SvgItem {
         id: vertLine
 
