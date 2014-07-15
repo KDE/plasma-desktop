@@ -5,8 +5,6 @@ set(kcm_formats_PART_SRCS
     kcmformats.cpp
 )
 
-add_definitions(-DTRANSLATION_DOMAIN=\"kcmformats\")
-
 ki18n_wrap_ui(kcm_formats_PART_SRCS kcmformatswidget.ui )
 
 add_library(kcm_formats MODULE ${kcm_formats_PART_SRCS})
@@ -21,4 +19,3 @@ install(TARGETS kcm_formats  DESTINATION ${PLUGIN_INSTALL_DIR} )
 ########### install files ###############
 
 install( FILES formats.desktop  DESTINATION  ${SERVICES_INSTALL_DIR} )
-
