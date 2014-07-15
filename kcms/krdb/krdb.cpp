@@ -621,6 +621,7 @@ void runRdb( uint flags )
 
   //Apply the color scheme
   QString configFilePath = migration.saveLocation("config") + "kdeglobals";
+  configFilePath = "/home/diau/.kde4/share/config/kdeglobals";
   if (configFilePath.isEmpty()) {
       return;
   }
@@ -676,5 +677,12 @@ void runRdb( uint flags )
       cg.copyTo(&cg2);
   }
 
+  //widgets settings
+  KConfigGroup kglobals4(&kde4config, "KDE");
+  kglobals4.writeEntry("ShowIconsInMenuItems", kglobals.readEntry("ShowIconsInMenuItems", true));
+  kglobals4.writeEntry("ShowIconsOnPushButtons", kglobals.readEntry("ShowIconsOnPushButtons", true));
+  kglobals4.writeEntry("contrast", kglobals.readEntry("contrast", 4));
+  //FIXME: this should somehow check if the kde4 version of the style is installed
+  kde4generalGroup.writeEntry("widgetStyle", kglobals.readEntry("widgetStyle", "oxygen"));
 }
 
