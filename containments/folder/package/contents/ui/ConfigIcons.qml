@@ -135,7 +135,7 @@ GroupBox {
         GroupBox {
             id: behaviorGroupBox
 
-            title: i18n("Behavior")
+            title: i18n("Features")
 
             flat: true
 
@@ -145,20 +145,20 @@ GroupBox {
 
                     visible: systemSettings.singleClick
 
-                    text: i18n("Show selection markers")
+                    text: i18n("Selection markers")
                 }
 
                 CheckBox {
                     id: popups
 
-                    text: i18n("Click to view folder")
+                    text: i18n("Folder preview popups")
                 }
 
                 RowLayout {
                     CheckBox {
                         id: previews
 
-                        text: i18n("Previews")
+                        text: i18n("Preview thumbnails")
                     }
 
                     Button {
