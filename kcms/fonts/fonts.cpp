@@ -542,14 +542,14 @@ KFonts::KFonts(QWidget *parent, const QVariantList &args)
 #elif defined(Q_WS_MAEMO_5) || defined(MEEGO_EDITION_HARMATTAN)
     QFont f0("Sans Serif", 16); // general/menu/desktop
     QFont f1("Monospace", 16;
-             QFont f2("Sans Serif", 16); // toolbar
+    QFont f2("Sans Serif", 16); // toolbar
 #else
-    QFont f0("Sans Serif", 9); // general/menu/desktop
-    QFont f1("Monospace", 9);
-    QFont f2("Sans Serif", 8); // toolbar
+    QFont f0("Oxygen-Sans", 10); // general/menu/desktop
+    QFont f1("Oxygen Mono", 9); // fixed font
+    QFont f2("Oxygen-Sans", 9); // toolbar
 #endif
-    QFont f3("Sans Serif", 8); // window title
-    QFont f5("Sans Serif", 8); // smallestReadableFont
+    QFont f3("Oxygen-Sans", 10); // window title
+    QFont f5("Oxygen-Sans", 8); // smallestReadableFont
 
     defaultFontList << f0 << f1 << f5 << f2 << f0 << f3 << f0;
 
