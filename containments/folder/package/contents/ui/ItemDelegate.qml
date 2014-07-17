@@ -243,11 +243,8 @@ Item {
             height: implicitHeight
 
             ItemActionButton {
-                width: systemSettings.singleClick ? units.iconSizes.small : 0
-                height: width
-
-                visible: systemSettings.singleClick
-                opacity: (systemSettings.singleClick && main.hovered) ? 1.0 : 0.0
+                visible: plasmoid.configuration.selectionMarkers && systemSettings.singleClick
+                opacity: (visible && main.hovered) ? 1.0 : 0.0
 
                 element: model.selected ? "remove" : "add"
 

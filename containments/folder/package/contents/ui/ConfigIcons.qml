@@ -24,6 +24,8 @@ import QtQuick.Layouts 1.0
 
 import org.kde.plasma.plasmoid 2.0
 
+import org.kde.plasma.private.folder 0.1 as Folder
+
 GroupBox {
     id: configIcons
 
@@ -38,11 +40,16 @@ GroupBox {
     property alias cfg_sortMode: sortMode.currentIndex
     property alias cfg_sortDesc: sortDesc.checked
     property alias cfg_sortDirsFirst: sortDirsFirst.checked
+    property alias cfg_selectionMarkers: selectionMarkers.checked
     property alias cfg_popups: popups.checked
     property alias cfg_previews: previews.checked
     property alias cfg_previewPlugins: previewPluginsDialog.previewPlugins
     property alias cfg_iconSize: iconSize.value
     property alias cfg_textLines: textLines.value
+
+    Folder.SystemSettings {
+        id: systemSettings
+    }
 
     ColumnLayout {
         GroupBox {
@@ -133,6 +140,14 @@ GroupBox {
             flat: true
 
             ColumnLayout {
+                CheckBox {
+                    id: selectionMarkers
+
+                    visible: systemSettings.singleClick
+
+                    text: i18n("Show selection markers")
+                }
+
                 CheckBox {
                     id: popups
 
