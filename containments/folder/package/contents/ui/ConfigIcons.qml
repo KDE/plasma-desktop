@@ -133,52 +133,6 @@ GroupBox {
         }
 
         GroupBox {
-            id: behaviorGroupBox
-
-            title: i18n("Features")
-
-            flat: true
-
-            ColumnLayout {
-                CheckBox {
-                    id: selectionMarkers
-
-                    visible: systemSettings.singleClick
-
-                    text: i18n("Selection markers")
-                }
-
-                CheckBox {
-                    id: popups
-
-                    text: i18n("Folder preview popups")
-                }
-
-                RowLayout {
-                    CheckBox {
-                        id: previews
-
-                        text: i18n("Preview thumbnails")
-                    }
-
-                    Button {
-                        id: previewSettings
-
-                        text: i18n("More Preview Options...")
-
-                        onClicked: {
-                            previewPluginsDialog.visible = true;
-                        }
-                    }
-                }
-            }
-        }
-
-        PreviewPluginsDialog {
-            id: previewPluginsDialog
-        }
-
-        GroupBox {
             id: appearanceGroupBox
 
             title: i18n("Appearance")
@@ -228,6 +182,52 @@ GroupBox {
                 }
 
             }
+        }
+
+        GroupBox {
+            id: behaviorGroupBox
+
+            title: i18n("Features")
+
+            flat: true
+
+            ColumnLayout {
+                CheckBox {
+                    id: selectionMarkers
+
+                    visible: systemSettings.singleClick
+
+                    text: i18n("Selection markers")
+                }
+
+                CheckBox {
+                    id: popups
+
+                    text: i18n("Folder preview popups")
+                }
+
+                RowLayout {
+                    CheckBox {
+                        id: previews
+
+                        text: i18n("Preview thumbnails")
+                    }
+
+                    Button {
+                        id: previewSettings
+
+                        text: i18n("More Preview Options...")
+
+                        onClicked: {
+                            previewPluginsDialog.visible = true;
+                        }
+                    }
+                }
+            }
+        }
+
+        PreviewPluginsDialog {
+            id: previewPluginsDialog
         }
     }
 }
