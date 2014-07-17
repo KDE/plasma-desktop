@@ -46,15 +46,17 @@ bool Positioner::enabled() const
 void Positioner::setEnabled(bool enabled)
 {
     if (m_enabled != enabled) {
-        beginResetModel();
-
         m_enabled = enabled;
+
+        if (!enabled) {
+            beginResetModel();
+        }
 
         if (enabled) {
             initMaps();
+        } else {
+            endResetModel();
         }
-
-        endResetModel();
 
         emit enabledChanged();
 
