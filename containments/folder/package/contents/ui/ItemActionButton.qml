@@ -26,7 +26,7 @@ PlasmaCore.SvgItem {
     id: actionButton
 
     width: visible ? units.iconSizes.small : 0
-    height: visible ? units.iconSizes.small : 0
+    height: width
 
     signal clicked
 
