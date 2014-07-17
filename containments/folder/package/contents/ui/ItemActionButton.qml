@@ -25,8 +25,8 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 PlasmaCore.SvgItem {
     id: actionButton
 
-    width: units.iconSizes.small
-    height: units.iconSizes.small
+    width: visible ? units.iconSizes.small : 0
+    height: visible ? units.iconSizes.small : 0
 
     signal clicked
 
