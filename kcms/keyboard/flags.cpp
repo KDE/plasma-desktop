@@ -43,7 +43,7 @@
 
 static const int FLAG_MAX_WIDTH = 21;
 static const int FLAG_MAX_HEIGHT = 14;
-static const char flagTemplate[] = "locale/l10n/%1/kf5_flag.png";
+static const char flagTemplate[] = "kf5/locale/countries/%1/flag.png";
 
 Flags::Flags():
 	svg(NULL)
