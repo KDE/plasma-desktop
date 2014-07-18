@@ -124,7 +124,7 @@ Item {
         PlasmaComponents.ToolButton {
             id: newActivityButton
 
-            text: "Create activity..."
+            text: i18n("Create activity...")
             iconSource: "list-add"
 
             width: parent.width

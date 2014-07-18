@@ -81,7 +81,7 @@ ApplicationWindow {
                 id: okButton
 
                 iconName: "dialog-ok"
-                text: i18n("Ok")
+                text: i18n("OK")
 
                 onClicked: {
                     previewPlugins = previewPluginsModel.checkedPlugins;

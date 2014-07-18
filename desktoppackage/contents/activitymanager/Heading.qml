@@ -42,7 +42,7 @@ Item {
 
     PlasmaExtras.Title {
         id: heading
-        text: "Activities"
+        text: i18n("Activities")
         elide: Text.ElideRight
 
         anchors {
@@ -76,6 +76,6 @@ Item {
             top    : heading.bottom
         }
 
-        placeholderText: "Search..."
+        placeholderText: i18n("Search...")
     }
 }
