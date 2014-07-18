@@ -25,7 +25,7 @@ function fillActionMenu(actionMenu, actionList, favoriteId, name) {
     var action = createFavoriteAction(favoriteId, name);
 
     if (action) {
-        if (actionList.length > 0) {
+        if (actionList && actionList.length > 0) {
             var separator = { "type": "separator" };
             actionList.unshift(action, separator);
         } else {
