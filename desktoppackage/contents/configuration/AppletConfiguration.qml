@@ -339,7 +339,7 @@ Rectangle {
             Layout.alignment: Qt.AlignVCenter | Qt.AlignRight
             QtControls.Button {
                 iconName: "dialog-ok"
-                text: i18nd("org.kde.plasma.desktop", "Ok")
+                text: i18nd("org.kde.plasma.desktop", "OK")
                 onClicked: acceptAction.trigger()
             }
             QtControls.Button {

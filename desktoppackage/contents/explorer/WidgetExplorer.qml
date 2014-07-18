@@ -149,7 +149,7 @@ Item {
 
         PlasmaExtras.Title {
             id: heading
-            text: "Widgets"
+            text: i18n("Widgets")
             elide: Text.ElideRight
             Layout.fillWidth: true
         }

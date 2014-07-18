@@ -207,7 +207,7 @@ Flickable {
         }
 
         PlasmaExtras.Heading {
-            text: "Stopped activities:"
+            text: i18n("Stopped activities:")
             level: 3
             visible: stoppedActivitiesList.count > 0
         }
