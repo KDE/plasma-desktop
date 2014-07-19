@@ -1,3 +1,5 @@
+add_definitions(-DTRANSLATION_DOMAIN=\"kcmkeyboard\")
+ 
 set(CMAKE_REQUIRED_LIBRARIES -lXi)
 check_function_exists(_XiGetDevicePresenceNotifyEvent XiGetDevicePresenceNotifyEvent_EXISTS)
 
