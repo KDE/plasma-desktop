@@ -47,65 +47,54 @@ ColumnLayout {
         id: scrollArea
         Layout.fillWidth: true
         Layout.fillHeight: true
-        Layout.minimumHeight: Math.min(Screen.height - units.gridUnit * 10, mainColumn.height +  units.gridUnit)
-        Layout.preferredHeight: mainColumn.height
-        Flickable {
-            id: flickable
-            pixelAligned: true
-            flickableDirection: Flickable.VerticalFlick
+        Layout.minimumHeight: Math.min(Screen.height - units.gridUnit * 10, mainList.contentHeight +  units.gridUnit)
 
-            Item {
-                width: mainColumn.width
-                height: mainColumn.height
-                PlasmaComponents.Highlight {
-                    id: highlight
-                    width: mainColumn.checkedButton.width
-                    height: mainColumn.checkedButton.height
-                    y: mainColumn.checkedButton.y
+        Layout.preferredHeight: mainList.height
+
+        ListView {
+            id: mainList
+            model: widgetExplorer.widgetsModel
+            highlight: PlasmaComponents.Highlight {
+                id: highlight
+            }
+            delegate: MouseArea {
+                width: mainList.width
+                height: childrenRect.height
+                onClicked: checked = true;
+                property bool checked: model.pluginName == alternativesDialog.currentPlugin
+                onCheckedChanged: {
+                    if (checked) {
+                        currentPlugin = model.pluginName;
+                        mainList.currentIndex = index;
+                    }
                 }
-           
-                PlasmaComponents.ButtonColumn {
-                    id: mainColumn
-                    width: flickable.width
+                Connections {
+                    target: mainList
+                    onCurrentIndexChanged: checked = false;
+                }
+                RowLayout {
+                    spacing: units.largeSpacing
+                    width: mainList.width - units.smallSpacing
+                    x: units.smallSpacing
+                    height: units.iconSizes.huge + units.largeSpacing
+                    QIconItem {
+                        width: units.iconSizes.huge
+                        height: width
+                        icon: model.decoration
+                    }
 
-                    Repeater {
-                        model: widgetExplorer.widgetsModel
-                        MouseArea {
-                            width: mainColumn.width
-                            height: childrenRect.height
-                            onClicked: checked = true;
-                            property bool checked: model.pluginName == alternativesDialog.currentPlugin
-                            onCheckedChanged: {
-                                if (checked) {
-                                    currentPlugin = model.pluginName
-                                }
-                            }
-                            RowLayout {
-                                spacing: units.largeSpacing
-                                width: mainColumn.width - highlight.marginHints.left
-                                x: highlight.marginHints.left
-                                height: units.iconSizes.huge + units.largeSpacing
-                                QIconItem {
-                                    width: units.iconSizes.huge
-                                    height: width
-                                    icon: model.decoration
-                                }
-
-                                ColumnLayout {
-                                    Layout.fillWidth: true
-                                    PlasmaExtras.Heading {
-                                        level: 4
-                                        Layout.fillWidth: true
-                                        text: model.name
-                                    }
-                                    PlasmaComponents.Label {
-                                        Layout.fillWidth: true
-                                        text: model.description
-                                        font.pointSize: theme.smallestFont.pointSize
-                                        wrapMode: Text.WordWrap
-                                    }
-                                }
-                            }
+                    ColumnLayout {
+                        Layout.fillWidth: true
+                        PlasmaExtras.Heading {
+                            level: 4
+                            Layout.fillWidth: true
+                            text: model.name
+                        }
+                        PlasmaComponents.Label {
+                            Layout.fillWidth: true
+                            text: model.description
+                            font.pointSize: theme.smallestFont.pointSize
+                            wrapMode: Text.WordWrap
                         }
                     }
                 }
