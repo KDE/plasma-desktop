@@ -68,7 +68,7 @@ ColumnLayout {
                             id: radio
                             Layout.maximumWidth: height
                             Layout.minimumWidth: height
-                            checked: model.pluginName == root.currentPlugin
+                            checked: model.pluginName == alternativesDialog.currentPlugin
                             onCheckedChanged: {
                                 if (checked) {
                                     currentPlugin = model.pluginName
