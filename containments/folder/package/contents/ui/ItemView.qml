@@ -28,7 +28,7 @@ import org.kde.kquickcontrolsaddons 2.0
 
 import org.kde.plasma.private.folder 0.1 as Folder
 
-import "../code/tools.js" as FolderTools
+import "plasmapackage:/code/tools.js" as FolderTools
 
 FocusScope {
     id: main
@@ -306,7 +306,7 @@ FocusScope {
 
                 property bool isRootView: false
 
-                property int iconSize: FolderTools.iconSizeFromTheme(plasmoid.configuration.iconSize) // TODO: DPI can change at runtime. Invalidate.
+                property int iconSize: FolderTools.iconSizeFromTheme(plasmoid.configuration.iconSize)
 
                 property Item hoveredItem: null
 
@@ -629,6 +629,22 @@ FocusScope {
                     }
 
                     updateSelection(event.modifiers);
+                }
+
+                Connections {
+                    target: units
+
+                    onIconSizesChanged: {
+                        gridView.iconSize = FolderTools.iconSizeFromTheme(plasmoid.configuration.iconSize);
+                    }
+                }
+
+                Connections {
+                    target: plasmoid.configuration
+
+                    onIconSizeChanged: {
+                        gridView.iconSize = FolderTools.iconSizeFromTheme(plasmoid.configuration.iconSize);
+                    }
                 }
             }
         }

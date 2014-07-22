@@ -17,7 +17,8 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-// FIXME TODO: Avoid hardcoding the prop names, e.g. take them from the object.
+
+
 var iconSizes = new Array("small", "smallMedium", "medium", "large", "huge", "enormous");
 
 function iconSizeFromTheme(size) {

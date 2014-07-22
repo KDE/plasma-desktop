@@ -141,9 +141,6 @@ GroupBox {
 
             ColumnLayout {
                 RowLayout {
-                    // FIXME TODO: Hide for now until position roundtripping works properly for this.
-                    visible: false
-
                     Label {
                         text: i18n("Size:")
                     }
