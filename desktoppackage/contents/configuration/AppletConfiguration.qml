@@ -98,9 +98,6 @@ Rectangle {
 
 //BEGIN connections
     Component.onCompleted: {
-        if (configDialog.appletHasAlternatives && !plasmoid.immutable) {
-            globalConfigModel.appendCategory("preferences-desktop-default-applications", i18n("Alternatives"), "ConfigurationAppletAlternatives.qml", "")
-        }
         if (!isContainment && configDialog.configModel && configDialog.configModel.count > 0) {
             main.sourceFile = configDialog.configModel.get(0).source
             main.title = configDialog.configModel.get(0).name
@@ -342,7 +339,7 @@ Rectangle {
             Layout.alignment: Qt.AlignVCenter | Qt.AlignRight
             QtControls.Button {
                 iconName: "dialog-ok"
-                text: i18nd("org.kde.plasma.desktop", "Ok")
+                text: i18nd("org.kde.plasma.desktop", "OK")
                 onClicked: acceptAction.trigger()
             }
             QtControls.Button {
