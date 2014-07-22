@@ -620,13 +620,8 @@ void Positioner::applyPositions()
                 m_resetting = false;
             } else {
                 beginResetModel();
-                m_proxyToSource.clear();
-                m_sourceToProxy.clear();
-                endResetModel();
-
                 initMaps();
-                beginInsertRows(QModelIndex(), 0, lastIndex());
-                endInsertRows();
+                endResetModel();
             }
         }
 
