@@ -19,6 +19,7 @@
 import QtQuick 2.0
 import QtQuick.Controls 1.0 as QtControls
 import QtQuick.Layouts 1.1
+import QtQuick.Window 2.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
@@ -31,7 +32,6 @@ ColumnLayout {
 
     signal configurationChanged
     Layout.minimumWidth: units.gridUnit * 20
-    //Layout.minimumHeight: mainColumn.implicitwidth
 
     property string currentPlugin: alternativesDialog.currentPlugin
 
@@ -47,11 +47,13 @@ ColumnLayout {
         id: scrollArea
         Layout.fillWidth: true
         Layout.fillHeight: true
+        Layout.minimumHeight: Math.min(Screen.height - units.gridUnit * 10, mainColumn.height +  units.gridUnit)
         Layout.preferredHeight: mainColumn.height
         
         PlasmaComponents.ButtonColumn {
             id: mainColumn
-            width: scrollArea.flickableItem.width
+            //FIXME: why -10 to hide the scrollbar? some problem here
+            width: scrollArea.flickableItem.width - 10
 
             Repeater {
                 model: widgetExplorer.widgetsModel
