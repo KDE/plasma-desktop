@@ -25,10 +25,13 @@
 #include "FcEngine.h"
 #include "CharTip.h"
 #include <KApplication>
+
+#include <QDebug>
 #include <QtGui/QPainter>
 #include <QtGui/QPaintEvent>
 #include <QtGui/QMouseEvent>
 #include <QtGui/QWheelEvent>
+#include <QX11Info>
 #include <stdlib.h>
 
 namespace KFI
@@ -73,10 +76,14 @@ void CFontPreview::showFont()
     itsLastWidth=width()+constStepSize;
     itsLastHeight=height()+constStepSize;
 
-    itsImage=itsEngine->draw(itsFontName, itsStyleInfo, itsCurrentFace,
-                             palette().text().color(), palette().base().color(),
-                             itsLastWidth, itsLastHeight,
-                             false, itsRange, &itsChars);
+    if (QX11Info::isPlatformX11()) {
+        itsImage=itsEngine->draw(itsFontName, itsStyleInfo, itsCurrentFace,
+                                palette().text().color(), palette().base().color(),
+                                itsLastWidth, itsLastHeight,
+                                false, itsRange, &itsChars);
+    } else {
+        qWarning() << "Font previews are currently only supported under X11.";
+    }
 
     if(!itsImage.isNull())
     {
