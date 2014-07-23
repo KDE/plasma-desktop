@@ -37,9 +37,9 @@ FocusScope {
     property QtObject dialog: null
     property QtObject childDialog: null
     property bool iconsEnabled: false
-    property int itemHeight: (Math.max(theme.mSize(theme.defaultFont).height, units.iconSizes.small)
+    property int itemHeight: Math.ceil((Math.max(theme.mSize(theme.defaultFont).height, units.iconSizes.small)
         + ((highlightItemSvg.margins.top > 0) ? (highlightItemSvg.margins.top
-        + highlightItemSvg.margins.bottom) : (listItemSvg.margins.top + listItemSvg.margins.bottom)))
+        + highlightItemSvg.margins.bottom) : (listItemSvg.margins.top + listItemSvg.margins.bottom))) / 2) * 2
 
     property alias currentIndex: listView.currentIndex
     property alias keyNavigationWraps: listView.keyNavigationWraps
