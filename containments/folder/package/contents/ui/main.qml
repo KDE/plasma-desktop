@@ -457,6 +457,11 @@ DragDrop.DropArea {
             root.label = labelComponent.createObject(root);
 
             return;
+        } else {
+            //WORKAROUND: that's the only place where we can inject a sensible size.
+            //if root has width defined, it will override the value we set before 
+            //the component completes
+            root.width = plasmoid.width
         }
 
         placeHolderPaint.opacity = 0;
