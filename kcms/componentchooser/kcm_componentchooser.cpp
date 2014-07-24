@@ -18,9 +18,7 @@
 //Added by qt3to4:
 #include <QVBoxLayout>
 
-#include <klocale.h>
 #include <kaboutdata.h>
-#include <kglobal.h>
 #include <kcomponentdata.h>
 #include <KPluginFactory>
 #include <KLocalizedString>
@@ -43,13 +41,12 @@ KCMComponentChooser::KCMComponentChooser(QWidget *parent, const QVariantList &):
 	setButtons( Default|Apply|Help );
 
 	KAboutData *about =
-	new KAboutData( "kcmcomponentchooser", 0, i18n("Component Chooser"),
+    new KAboutData( QStringLiteral("kcmcomponentchooser"), i18n("Component Chooser"), QStringLiteral("1.0"),
 			QString(), KAboutLicense::GPL,
 			i18n("(c), 2002 Joseph Wenninger"));
 
 	about->addAuthor(i18n("Joseph Wenninger"), QString() , "jowenn@kde.org");
 	setAboutData( about );
-
 }
 
 void KCMComponentChooser::load(){

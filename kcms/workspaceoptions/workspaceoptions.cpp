@@ -20,15 +20,8 @@
 
 #include "ui_mainpage.h"
 
-#include <QDBusInterface>
-
-#include <KDebug>
 #include <KAboutData>
-#include <KMessageBox>
 #include <KPluginFactory>
-#include <KRun>
-#include <KStandardDirs>
-#include <KUrl>
 #include <KConfigGroup>
 
 using namespace KAuth;
@@ -46,8 +39,8 @@ WorkspaceOptionsModule::WorkspaceOptionsModule(QWidget *parent, const QVariantLi
     m_ui(new Ui::MainPage)
 {
     KAboutData *about =
-    new KAboutData("kcmworkspaceoptions", QString(), i18n("Global options for the Plasma Workspace"),
-                   QString(), KAboutLicense::GPL,
+    new KAboutData(QStringLiteral("kcmworkspaceoptions"), i18n("Global options for the Plasma Workspace"),
+                   QString("1.0"), QString(), KAboutLicense::GPL,
                    i18n("(c) 2009 Marco Martin"));
 
     about->addAuthor(i18n("Marco Martin"), i18n("Maintainer"), "notmart@gmail.com");

@@ -31,7 +31,7 @@
 #include <kimageio.h>
 #include <kmimetype.h>
 #include <kstandarddirs.h>
-#include <k4aboutdata.h>
+#include <kaboutdata.h>
 #include <kmessagebox.h>
 #include <kio/netaccess.h>
 #include <kurl.h>
@@ -89,23 +89,20 @@ KCMUserAccount::KCMUserAccount( QWidget *parent, const QVariantList &)
 	_mw->lblUsername->setFont( font );
 	_mw->lblUID->setText( QString().number(_ku->uid()) );
 
-	K4AboutData *about = new K4AboutData("kcm_useraccount", 0,
-		ki18n("Password & User Information"), "0.1",
-		KLocalizedString(), K4AboutData::License_GPL,
-		ki18n("(C) 2002, Braden MacDonald, "
-			"(C) 2004 Ravikiran Rajagopal"));
+    KAboutData *about = new KAboutData("kcm_useraccount", i18n("Password & User Information"), "0.1",
+        QString(), KAboutLicense::GPL, i18n("(C) 2002, Braden MacDonald, (C) 2004 Ravikiran Rajagopal"));
 
-	about->addAuthor(ki18n("Frans Englich"), ki18n("Maintainer"), "frans.englich@telia.com");
-	about->addAuthor(ki18n("Ravikiran Rajagopal"), KLocalizedString(), "ravi@kde.org");
-	about->addAuthor(ki18n("Michael H\303\244ckel"), KLocalizedString(), "haeckel@kde.org" );
+    about->addAuthor(i18n("Frans Englich"), i18n("Maintainer"), "frans.englich@telia.com");
+    about->addAuthor(i18n("Ravikiran Rajagopal"), QString(), "ravi@kde.org");
+    about->addAuthor(i18n("Michael H\303\244ckel"), QString(), "haeckel@kde.org" );
 
-	about->addAuthor(ki18n("Braden MacDonald"), ki18n("Face editor"), "bradenm_k@shaw.ca");
-	about->addAuthor(ki18n("Geert Jansen"), ki18n("Password changer"), "jansen@kde.org",
-			"http://www.stack.nl/~geertj/");
-	about->addAuthor(ki18n("Daniel Molkentin"));
-	about->addAuthor(ki18n("Alex Zepeda"));
-	about->addAuthor(ki18n("Hans Karlsson"), ki18n("Icons"), "karlsson.h@home.se");
-	about->addAuthor(ki18n("Hermann Thomas"), ki18n("Icons"), "h.thomas@gmx.de");
+    about->addAuthor(i18n("Braden MacDonald"), i18n("Face editor"), "bradenm_k@shaw.ca");
+    about->addAuthor(i18n("Geert Jansen"), i18n("Password changer"), "jansen@kde.org", "http://www.stack.nl/~geertj/");
+    about->addAuthor(i18n("Daniel Molkentin"));
+    about->addAuthor(i18n("Alex Zepeda"));
+    about->addAuthor(i18n("Hans Karlsson"), i18n("Icons"), "karlsson.h@home.se");
+    about->addAuthor(i18n("Hermann Thomas"), i18n("Icons"), "h.thomas@gmx.de");
+    setAboutData(about);
 
 	setQuickHelp( i18n("<qt>Here you can change your personal information, which "
 			"will be used, for instance, in mail programs and word processors. You can "

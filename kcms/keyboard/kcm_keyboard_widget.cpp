@@ -20,7 +20,6 @@
 
 #include <kactioncollection.h>
 #include <kaction.h>
-#include <kaboutdata.h>
 #include <kdebug.h>
 #include <klocale.h>
 #include <kglobalsettings.h>

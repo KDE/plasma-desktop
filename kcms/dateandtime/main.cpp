@@ -27,13 +27,11 @@
 
 #include <QtDBus/QtDBus>
 #include <kaboutdata.h>
-#include <kapplication.h>
 #include <kdialog.h>
 #include <kpluginfactory.h>
 #include <kpluginloader.h>
 #include <kprocess.h>
 #include <kmessagebox.h>
-#include <kstandarddirs.h>
 
 #include "dtime.h"
 #include "helper.h"
@@ -46,10 +44,10 @@ K_EXPORT_PLUGIN(KlockModuleFactory("kcmkclock"))
 
 
 KclockModule::KclockModule(QWidget *parent, const QVariantList &)
-  : KCModule(parent/*, name*/)
+  : KCModule(parent)
 {
   KAboutData *about =
-  new KAboutData(I18N_NOOP("kcmclock"), QString(), i18n("KDE Clock Control Module"),
+  new KAboutData(QStringLiteral("kcmclock"), i18n("KDE Clock Control Module"), QStringLiteral("1.0"),
                   QString(), KAboutLicense::GPL,
                   i18n("(c) 1996 - 2001 Luca Montecchiani"));
 

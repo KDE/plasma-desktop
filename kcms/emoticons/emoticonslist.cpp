@@ -109,7 +109,7 @@ K_PLUGIN_FACTORY(EmoticonsFactory, registerPlugin<EmoticonList>();)
 EmoticonList::EmoticonList(QWidget *parent, const QVariantList &args)
         : KCModule(parent, args)
 {
-    KAboutData *about = new KAboutData("kcm_emoticons", 0, i18n("Emoticons"), "1.0", KAboutLicense::GPL);
+    KAboutData *about = new KAboutData(QStringLiteral("kcm_emoticons"), i18n("Emoticons"), QStringLiteral("1.0"), QString(), KAboutLicense::GPL);
     setAboutData(about);
 //     setButtons(Apply | Help);
     setupUi(this);
