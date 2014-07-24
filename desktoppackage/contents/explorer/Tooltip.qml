@@ -103,7 +103,7 @@ MouseArea {
             horizontalCenter: parent.horizontalCenter
         }
         PlasmaComponents.Label {
-            text: i18n("License:")
+            text: i18nd("plasma_shell_org.kde.plasma.desktop", "License:")
             Layouts.Layout.alignment: Qt.AlignVCenter|Qt.AlignRight
         }
         PlasmaComponents.Label {
@@ -112,7 +112,7 @@ MouseArea {
             wrapMode: Text.Wrap
         }
         PlasmaComponents.Label {
-            text: i18n("Author:")
+            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Author:")
             Layouts.Layout.alignment: Qt.AlignVCenter|Qt.AlignRight
         }
         PlasmaComponents.Label {
@@ -120,7 +120,7 @@ MouseArea {
             wrapMode: Text.Wrap
         }
         PlasmaComponents.Label {
-            text: i18n("Email:")
+            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Email:")
             Layouts.Layout.alignment: Qt.AlignVCenter|Qt.AlignRight
         }
         PlasmaComponents.Label {
@@ -139,7 +139,7 @@ MouseArea {
             NumberAnimation { duration: units.longDuration }
         }
         iconSource: "application-exit"
-        text: i18n("Uninstall")
+        text: i18nd("plasma_shell_org.kde.plasma.desktop", "Uninstall")
         onClicked: {
             widgetExplorer.uninstall(pluginName)
             tooltipDialog.visible = false
