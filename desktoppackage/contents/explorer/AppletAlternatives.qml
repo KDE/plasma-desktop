@@ -41,7 +41,7 @@ ColumnLayout {
     }
 
     PlasmaExtras.Heading {
-        text: i18nd("org.kde.plasma.desktop", "Alternatives");
+        text: i18nd("plasma_shell_org.kde.plasma.desktop", "Alternatives");
     }
     PlasmaExtras.ScrollArea {
         id: scrollArea
@@ -106,12 +106,12 @@ ColumnLayout {
         PlasmaComponents.Button {
             enabled: root.currentPlugin != alternativesDialog.currentPlugin
             Layout.fillWidth: true
-            text: i18nd("org.kde.plasma.desktop", "Switch");
+            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Switch");
             onClicked: alternativesDialog.loadAlternative(root.currentPlugin);
         }
         PlasmaComponents.Button {
             Layout.fillWidth: true
-            text: i18nd("org.kde.plasma.desktop", "Cancel");
+            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Cancel");
             onClicked: alternativesDialog.visible = false;
         }
     }
