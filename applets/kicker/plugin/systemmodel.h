@@ -23,7 +23,7 @@
 #include "abstractentry.h"
 #include "abstractmodel.h"
 
-#include <kworkspace/kdisplaymanager.h>
+#include <kworkspace5/kdisplaymanager.h>
 
 class SystemEntry : public AbstractEntry
 {
