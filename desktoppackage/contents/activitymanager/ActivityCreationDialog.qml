@@ -139,7 +139,7 @@ PlasmaCore.FrameSvgItem {
 
             PlasmaComponents.Label {
                 id: activityNameLabel
-                text: i18n("Activity name:")
+                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Activity name:")
 
                 elide: Text.ElideRight
 
@@ -176,7 +176,7 @@ PlasmaCore.FrameSvgItem {
         PlasmaComponents.Button {
             id: acceptButton
 
-            text: i18n("Create")
+            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Create")
             enabled: activityNameText.text.trim().length > 0
             iconSource: "list-add"
             onClicked: {
@@ -188,7 +188,7 @@ PlasmaCore.FrameSvgItem {
         PlasmaComponents.Button {
             id: cancelButton
 
-            text: i18n("Cancel")
+            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Cancel")
             iconSource: "dialog-close"
             onClicked: {
                 root.close();

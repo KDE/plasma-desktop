@@ -42,7 +42,7 @@ Item {
 
     PlasmaExtras.Title {
         id: heading
-        text: i18n("Activities")
+        text: i18nd("plasma_shell_org.kde.plasma.desktop", "Activities")
         elide: Text.ElideRight
 
         anchors {
@@ -76,6 +76,6 @@ Item {
             top    : heading.bottom
         }
 
-        placeholderText: i18n("Search...")
+        placeholderText: i18nd("plasma_shell_org.kde.plasma.desktop", "Search...")
     }
 }

@@ -96,7 +96,7 @@ PlasmaCore.FrameSvgItem {
         }
 
         PlasmaComponents.Label {
-            text: i18n("Are you sure you want to delete the activity?")
+            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Are you sure you want to delete the activity?")
             width: parent.width
         }
 
@@ -109,7 +109,7 @@ PlasmaCore.FrameSvgItem {
             exclusive: false
 
             PlasmaComponents.Button {
-                text: i18n("Delete")
+                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Delete")
                 iconSource: "list-remove"
                 onClicked: {
                     root.close();
@@ -117,7 +117,7 @@ PlasmaCore.FrameSvgItem {
                 }
             }
             PlasmaComponents.Button {
-                text: i18n("Cancel")
+                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Cancel")
                 iconSource: "dialog-close"
                 onClicked: {
                     root.close();

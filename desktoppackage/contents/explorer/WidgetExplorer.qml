@@ -149,7 +149,7 @@ Item {
 
         PlasmaExtras.Title {
             id: heading
-            text: i18n("Widgets")
+            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Widgets")
             elide: Text.ElideRight
             Layout.fillWidth: true
         }
@@ -166,7 +166,7 @@ Item {
 
         PlasmaComponents.TextField {
             clearButtonShown: true
-            placeholderText: i18n("Search...")
+            placeholderText: i18nd("plasma_shell_org.kde.plasma.desktop", "Search...")
             onTextChanged: {
                 list.contentX = 0
                 list.contentY = 0
@@ -178,7 +178,7 @@ Item {
         }
         PlasmaComponents.Button {
             id: categoryButton
-            text: i18n("Categories")
+            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Categories")
             onClicked: {
                 main.preventWindowHide = true;
                 categoriesDialog.open(0, categoryButton.height)
@@ -273,7 +273,7 @@ Item {
             }
             id: getWidgetsButton
             iconSource: "get-hot-new-stuff"
-            text: i18n("Get new widgets")
+            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Get new widgets")
             onClicked: {
                 main.preventWindowHide = true;
                 getWidgetsDialog.open()

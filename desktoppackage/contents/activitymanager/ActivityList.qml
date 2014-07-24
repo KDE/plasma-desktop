@@ -136,7 +136,7 @@ Flickable {
         id: activityConfigurationDialog
         z: 10
 
-        acceptButtonText: i18n("Apply")
+        acceptButtonText: i18nd("plasma_shell_org.kde.plasma.desktop", "Apply")
 
         width: parent.width
 
@@ -207,7 +207,7 @@ Flickable {
         }
 
         PlasmaExtras.Heading {
-            text: i18n("Stopped activities:")
+            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Stopped activities:")
             level: 3
             visible: stoppedActivitiesList.count > 0
         }

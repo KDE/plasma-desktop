@@ -24,7 +24,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 
 QtControls.Button {
     id: mouseInputButton
-    property string defaultText: i18nd("org.kde.plasma.desktop", "Add Action")
+    property string defaultText: i18nd("plasma_shell_org.kde.plasma.desktop", "Add Action")
     text: defaultText
     checkable: true
     property string eventString
@@ -35,7 +35,7 @@ QtControls.Button {
 
     onCheckedChanged: {
         if (checked) {
-            text = i18nd("org.kde.plasma.desktop", "Input Here");
+            text = i18nd("plasma_shell_org.kde.plasma.desktop", "Input Here");
             mouseInputArea.enabled = true;
         }
     }
