@@ -46,11 +46,11 @@ K_PLUGIN_FACTORY(KeyboardModuleFactory, registerPlugin<KCMKeyboard>();)
 K_EXPORT_PLUGIN(KeyboardModuleFactory("kcmkeyboard"))
 
 KCMKeyboard::KCMKeyboard(QWidget *parent, const QVariantList &args)
-  : KCModule(parent/*, name*/)
+  : KCModule(parent)
 {
   KAboutData *about =
-		  new KAboutData("kcmkeyboard", QString(), i18n("KDE Keyboard Control Module"),
-                  QString(), KAboutLicense::GPL,
+          new KAboutData("kcmkeyboard", i18n("KDE Keyboard Control Module"),
+                  QStringLiteral("1.0"), QString(), KAboutLicense::GPL,
                   i18n("(c) 2010 Andriy Rysin"));
 
   setAboutData( about );

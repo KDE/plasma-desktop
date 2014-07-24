@@ -375,8 +375,8 @@ MouseConfig::MouseConfig(QWidget *parent, const QVariantList &args)
 
 #endif
 
-  KAboutData* about = new KAboutData(QStringLiteral("kcmmouse"), QString(), i18n("Mouse"),
-        QString(), KAboutLicense::GPL, i18n("(c) 1997 - 2005 Mouse developers"));
+  KAboutData* about = new KAboutData(QStringLiteral("kcmmouse"), i18n("Mouse"),
+        QStringLiteral("1.0"), QString(), KAboutLicense::GPL, i18n("(c) 1997 - 2005 Mouse developers"));
   about->addAuthor(i18n("Patrick Dowler"));
   about->addAuthor(i18n("Dirk A. Mueller"));
   about->addAuthor(i18n("David Faure"));

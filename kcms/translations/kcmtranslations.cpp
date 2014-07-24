@@ -41,7 +41,7 @@ KCMTranslations::KCMTranslations(QWidget *parent, const QVariantList &args)
       m_ui(new Ui::KCMTranslationsWidget),
       m_messageWidget(0)
 {
-    KAboutData *about = new KAboutData(I18N_NOOP("KCMTranslations"),
+    KAboutData *about = new KAboutData(QStringLiteral("KCMTranslations"),
                                        i18n("Translations"),
                                        QString(),
                                        i18n("Configure Plasma translations"),

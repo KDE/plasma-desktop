@@ -27,8 +27,6 @@
 #include "kcmmisc.h"
 #include "ui_kcmmiscwidget.h"
 
-#include <math.h>
-
 #include <QCheckBox>
 #include <QWhatsThis>
 #include <QX11Info>

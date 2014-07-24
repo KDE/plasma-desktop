@@ -31,7 +31,6 @@
 
 #include <kcmodule.h>
 #include <kaboutdata.h>
-#include <kapplication.h>
 #include <kconfig.h>
 #include <kdialog.h>
 #include <knotification.h>
@@ -136,7 +135,7 @@ KBellConfig::KBellConfig(QWidget *parent, const QVariantList &args):
   connect(m_duration, SIGNAL(valueChanged(int)), SLOT(changed()));
 
   KAboutData *about =
-    new KAboutData(I18N_NOOP("kcmbell"), QString(), i18n("KDE Bell Control Module"),
+    new KAboutData(QStringLiteral("kcmbell"), i18n("KDE Bell Control Module"), QStringLiteral("1.0"),
                   QString(), KAboutLicense::GPL,
                   i18n("(c) 1997 - 2001 Christian Czezatke, Matthias Elter"));
 
