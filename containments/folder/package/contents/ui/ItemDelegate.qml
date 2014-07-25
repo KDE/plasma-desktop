@@ -268,7 +268,7 @@ Item {
 
                     ItemActionButton {
                         visible: plasmoid.configuration.selectionMarkers && systemSettings.singleClick
-                        opacity: (visible && main.hovered) ? 1.0 : 0.0
+                        opacity: (visible && impl.hovered) ? 1.0 : 0.0
 
                         element: model.selected ? "remove" : "add"
 
