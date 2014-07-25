@@ -90,6 +90,7 @@ class Positioner : public QAbstractItemModel
 
     private:
         void initMaps(int size = -1);
+        void updateMaps(int proxyIndex, int sourceIndex);
         int lastIndex() const;
         int firstFreeRow() const;
         void applyPositions();

@@ -290,9 +290,8 @@ void Positioner::move(int from, int to) {
 
     int sourceRow = m_proxyToSource.value(from);
     m_proxyToSource.remove(from);
-    m_proxyToSource.insert(to, sourceRow);
-    m_lastIndex = -1;
-    m_sourceToProxy.insert(sourceRow, to);
+
+    updateMaps(to, sourceRow);
 
     const QModelIndex &fromIdx = index(from, 0);
     emit dataChanged(fromIdx, fromIdx);
@@ -408,9 +407,7 @@ void Positioner::sourceRowsAboutToBeInserted(const QModelIndex &parent, int star
             free = firstFreeRow();
 
             if (free != -1) {
-                m_proxyToSource.insert(free, i);
-                m_lastIndex = -1;
-                m_sourceToProxy.insert(i, free);
+                updateMaps(free, i);
                 m_pendingChanges << createIndex(free, 0);
             } else {
                 rest = i;
@@ -425,9 +422,7 @@ void Positioner::sourceRowsAboutToBeInserted(const QModelIndex &parent, int star
             beginInsertRows(parent, firstNew, firstNew + remainder);
 
             for (int i = 0; i <= remainder; ++i) {
-                m_proxyToSource.insert(firstNew + i, rest +i);
-                m_lastIndex = -1;
-                m_sourceToProxy.insert(rest + i, firstNew + i);
+                updateMaps(firstNew + i, rest + i);
             }
         } else {
             m_ignoreNextTransaction = true;
@@ -575,10 +570,14 @@ void Positioner::initMaps(int size)
     }
 
     for (int i = 0; i <= size; ++i) {
-        m_proxyToSource.insert(i, i);
-        m_sourceToProxy.insert(i, i);
+        updateMaps(i, i);
     }
+}
 
+void Positioner::updateMaps(int proxyIndex, int sourceIndex)
+{
+    m_proxyToSource.insert(proxyIndex, sourceIndex);
+    m_sourceToProxy.insert(sourceIndex, proxyIndex);
     m_lastIndex = -1;
 }
 
@@ -633,23 +632,11 @@ void Positioner::applyPositions()
     m_sourceToProxy.clear();
     endResetModel();
 
-    QStringList positions(m_positions);
+    const QStringList &positions = m_positions.mid(2);
 
-    bool ok = false;
-
-    int stripes = positions.takeFirst().toInt(&ok);
-    if (!ok) { return; }
-    int perStripe = positions.takeFirst().toInt(&ok);
-    if (!ok) { return; }
-
-    Q_UNUSED(stripes)
-    Q_UNUSED(perStripe)
-
-    QString name;
-    int stripe = -1;
-    int pos = -1;
-    int sourceIndex = -1;
-    int index = -1;
+    if (positions.count() % 3 != 0) {
+        return;
+    }
 
     QHash<QString, int> sourceIndices;
 
@@ -658,18 +645,25 @@ void Positioner::applyPositions()
             FolderModel::UrlRole).toString(), i);
     }
 
-    int items = positions.count() / 3;
+    QString name;
+    int stripe = -1;
+    int pos = -1;
+    int sourceIndex = -1;
+    int index = -1;
+    bool ok = false;
+    int offset = 0;
 
-    QStringList leftOvers;
-
-    for (int i = 0; i < items; ++i) {
-        name = positions.takeFirst();
-        stripe = positions.takeFirst().toInt(&ok);
-        if (!ok) { return; }
-        pos = positions.takeFirst().toInt(&ok);
+    // Restore positions for items that still fit.
+    for (int i = 0; i < positions.count() / 3; ++i) {
+        offset = i * 3;
+        pos = positions.at(offset + 2).toInt(&ok);
         if (!ok) { return; }
 
         if (pos <= m_perStripe) {
+            name = positions.at(offset);
+            stripe = positions.at(offset + 1).toInt(&ok);
+            if (!ok) { return; }
+
             if (!sourceIndices.contains(name)) {
                 continue;
             } else {
@@ -682,46 +676,39 @@ void Positioner::applyPositions()
                 continue;
             }
 
-            m_proxyToSource.insert(index, sourceIndex);
-            m_lastIndex = -1;
-            m_sourceToProxy.insert(sourceIndex, index);
-
+            updateMaps(index, sourceIndex);
             sourceIndices.remove(name);
-        } else {
-            leftOvers.append(name);
-            leftOvers.append(QString::number(stripe));
-            leftOvers.append(QString::number(pos));
         }
     }
 
-    items = leftOvers.count() / 3;
-
-    for (int i = 0; i < items; ++i) {
-        name = leftOvers.takeFirst();
-        stripe = leftOvers.takeFirst().toInt(&ok);
-        if (!ok) { return; }
-        pos = leftOvers.takeFirst().toInt(&ok);
+    // Find new positions for items that didn't fit.
+    for (int i = 0; i < positions.count() / 3; ++i) {
+        offset = i * 3;
+        pos = positions.at(offset + 2).toInt(&ok);
         if (!ok) { return; }
 
-        if (!sourceIndices.contains(name)) {
-            continue;
-        } else {
-            sourceIndex = sourceIndices.take(name);
+        if (pos > m_perStripe) {
+            name = positions.at(offset);
+
+            if (!sourceIndices.contains(name)) {
+                continue;
+            } else {
+                sourceIndex = sourceIndices.take(name);
+            }
+
+            index = firstFreeRow();
+
+            if (index == -1) {
+                index = lastIndex() + 1;
+            }
+
+            updateMaps(index, sourceIndex);
         }
-
-        index = firstFreeRow();
-
-        if (index == -1) {
-            index = lastIndex() + 1;
-        }
-
-        m_proxyToSource.insert(index, sourceIndex);
-        m_lastIndex = -1;
-        m_sourceToProxy.insert(sourceIndex, index);
     }
 
     QHashIterator<QString, int> it(sourceIndices);
 
+    // Find positions for new source items we don't have records for.
     while (it.hasNext()) {
         it.next();
 
@@ -731,9 +718,7 @@ void Positioner::applyPositions()
             index = lastIndex() + 1;
         }
 
-        m_proxyToSource.insert(index, it.value());
-        m_lastIndex = -1;
-        m_sourceToProxy.insert(it.value(), index);
+        updateMaps(index, it.value());
     }
 
     m_applyPositions = false;
