@@ -555,6 +555,12 @@ FocusScope {
                         if (currentIndex != -1) {
                             anchorIndex = currentIndex;
                         }
+                    } else if (event.key == Qt.Key_Home) {
+                        currentIndex = 0;
+                        updateSelection(event.modifiers);
+                    } else if (event.key == Qt.Key_End) {
+                        currentIndex = count - 1;
+                        updateSelection(event.modifiers);
                     }
                 }
 
