@@ -595,8 +595,8 @@ void FolderModel::addDragImage(QDrag *drag, int x, int y)
     foreach (DragImage *image, m_dragImages) {
         if (!image->blank && !image->image.isNull()) {
             pos = image->rect.translated(-offset.x(), -offset.y()).topLeft();
-            image->cursorOffset.setX(pos.x());
-            image->cursorOffset.setY(pos.y());
+            image->cursorOffset.setX(pos.x() - (x - offset.x()));
+            image->cursorOffset.setY(pos.y() - (y - offset.y()));
 
             painter.drawImage(pos, image->image);
         }

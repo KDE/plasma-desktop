@@ -95,6 +95,8 @@ FocusScope {
         property Item pressedItem: null
         property int pressX: -1
         property int pressY: -1
+        property int dragX: -1
+        property int dragY: -1
         property variant cPress: null
         property bool doubleClickInProgress: false
 
@@ -258,6 +260,8 @@ FocusScope {
             // Drag initiation.
             if (pressX != -1 && systemSettings.isDrag(pressX, pressY, mouse.x, mouse.y)) {
                 if (pressedItem != null && dir.isSelected(positioner.map(pressedItem.index))) {
+                    dragX = mouse.x;
+                    dragY = mouse.y;
                     dir.dragSelected(mouse.x, mouse.y);
                     clearPressState();
                 } else {
@@ -666,6 +670,7 @@ FocusScope {
                 var step = rows ? cellWidth : cellHeight;
                 var perStripe = Math.floor(axis / step);
                 var dropPos = mapToItem(gridView.contentItem, x, y);
+                var leftEdge = Math.min(gridView.contentX, gridView.originX);
 
                 var moves = []
                 var itemX = -1;
@@ -689,8 +694,8 @@ FocusScope {
                         continue;
                     }
 
-                    itemX = dropPos.x + offset.x;
-                    itemY = dropPos.y + offset.y;
+                    itemX = Math.max(leftEdge, dropPos.x + offset.x + (listener.dragX % cellWidth));
+                    itemY = Math.max(0, dropPos.y + offset.y + (listener.dragY % cellHeight));
 
                     if (gridView.layoutDirection == Qt.RightToLeft) {
                         itemX -= (rows ? gridView.contentX : gridView.originX);
@@ -704,12 +709,15 @@ FocusScope {
                         to = ((rows ? row : col) * perStripe) + (rows ? col : row);
                     }
 
-                    moves.push(from);
-                    moves.push(to);
+                    if (from != to) {
+                        moves.push(from);
+                        moves.push(to);
+                    }
                 }
 
                 if (moves.length) {
                     positioner.move(moves);
+                    gridView.forceLayout();
                 }
 
                 dir.clearSelection();
