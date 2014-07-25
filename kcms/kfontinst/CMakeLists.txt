@@ -10,6 +10,9 @@ if (KFI_BUILD_STANDALONE)
     include(KDE4Defaults)
 endif ()
 
+# KI18N Translation Domain for this library
+add_definitions(-DTRANSLATION_DOMAIN=\"kfontinst\")
+
 if (X11_Xft_FOUND)
     check_include_files(locale.h HAVE_LOCALE_H)
     configure_file(config-fontinst.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-fontinst.h)
