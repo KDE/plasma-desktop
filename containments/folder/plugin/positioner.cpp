@@ -185,7 +185,6 @@ int Positioner::indexForUrl(const QUrl &url) const
 
 QHash< int, QByteArray > Positioner::roleNames() const
 {
-    qDebug() << "roles";
     return FolderModel::staticRoleNames();
 }
 
@@ -656,9 +655,9 @@ void Positioner::applyPositions()
     }
 
     beginResetModel();
+
     m_proxyToSource.clear();
     m_sourceToProxy.clear();
-    endResetModel();
 
     const QStringList &positions = m_positions.mid(2);
 
@@ -751,8 +750,7 @@ void Positioner::applyPositions()
 
     m_applyPositions = false;
 
-    beginInsertRows(QModelIndex(), 0, lastIndex());
-    endInsertRows();
+    endResetModel();
 }
 
 void Positioner::flushPendingChanges()
