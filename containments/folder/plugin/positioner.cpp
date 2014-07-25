@@ -269,42 +269,73 @@ void Positioner::reset()
     endResetModel();
 }
 
-void Positioner::move(int from, int to) {
-    if (!m_proxyToSource.contains(from) || from == to) {
-        return;
+void Positioner::move(const QVariantList &moves) {
+    QVector<int> fromIndices;
+    QVector<int> toIndices;
+    QVector<int> sourceRows;
+
+    for (int i = 0; i < moves.count(); ++i) {
+        const int isFrom = (i % 2 == 0);
+        const int v = moves[i].toInt();
+
+        if (isFrom) {
+            if (m_proxyToSource.contains(v)) {
+                sourceRows.append(m_proxyToSource.value(v));
+            } else {
+                sourceRows.append(-1);
+            }
+        }
+
+        (isFrom ? fromIndices : toIndices).append(v);
     }
 
-    if (to == -1) {
-        to = firstFreeRow();
+    const int oldCount = rowCount();
+
+    for (int i = 0; i < fromIndices.count(); ++i)
+    {
+        const int from = fromIndices[i];
+        int to = toIndices[i];
+        const int sourceRow = sourceRows[i];
+
+        if (!sourceRow == -1 || from == to) {
+            continue;
+        }
 
         if (to == -1) {
-            to = lastIndex() + 1;
+            to = firstFreeRow();
+
+            if (to == -1) {
+                to = lastIndex() + 1;
+            }
+        }
+
+        if (!fromIndices.contains(to) && !isBlank(to)) {
+            continue;
+        }
+
+        toIndices[i] = to;
+
+        if (!toIndices.contains(from)) {
+            m_proxyToSource.remove(from);
+        }
+
+        updateMaps(to, sourceRow);
+
+        const QModelIndex &fromIdx = index(from, 0);
+        emit dataChanged(fromIdx, fromIdx);
+
+        if (to < oldCount) {
+            const QModelIndex &toIdx = index(to, 0);
+            emit dataChanged(toIdx, toIdx);
         }
     }
 
-    if (!isBlank(to)) {
-        return;
-    }
+    const int newCount = rowCount();
 
-    int oldCount = rowCount();
-
-    int sourceRow = m_proxyToSource.value(from);
-    m_proxyToSource.remove(from);
-
-    updateMaps(to, sourceRow);
-
-    const QModelIndex &fromIdx = index(from, 0);
-    emit dataChanged(fromIdx, fromIdx);
-
-    if (to < oldCount) {
-        const QModelIndex &toIdx = index(to, 0);
-        emit dataChanged(toIdx, toIdx);
-    } else {
-        beginInsertRows(QModelIndex(), oldCount, to);
+    if (newCount > oldCount) {
+        beginInsertRows(QModelIndex(), oldCount, newCount - 1);
         endInsertRows();
     }
-
-    int newCount = rowCount();
 
     if (newCount < oldCount) {
         beginRemoveRows(QModelIndex(), newCount, oldCount - 1);

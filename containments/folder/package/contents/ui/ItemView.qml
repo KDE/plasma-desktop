@@ -667,6 +667,7 @@ FocusScope {
                 var perStripe = Math.floor(axis / step);
                 var dropPos = mapToItem(gridView.contentItem, x, y);
 
+                var moves = []
                 var itemX = -1;
                 var itemY = -1;
                 var col = -1;
@@ -703,10 +704,14 @@ FocusScope {
                         to = ((rows ? row : col) * perStripe) + (rows ? col : row);
                     }
 
-                    positioner.move(from, to);
+                    moves.push(from);
+                    moves.push(to);
                 }
 
-                // HACK Forget drag pixmaps.
+                if (moves.length) {
+                    positioner.move(moves);
+                }
+
                 dir.clearSelection();
             }
         }

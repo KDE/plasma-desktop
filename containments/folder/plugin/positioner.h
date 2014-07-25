@@ -55,7 +55,7 @@ class Positioner : public QAbstractItemModel
 
         Q_INVOKABLE void reset();
 
-        Q_INVOKABLE void move(int from, int to);
+        Q_INVOKABLE void move(const QVariantList &moves);
 
         QHash<int, QByteArray> roleNames() const;
 
