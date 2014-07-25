@@ -40,7 +40,7 @@ Item {
     property Item hoverArea: toolTip
     property Item popupButton: null
     property bool hovered: (GridView.view.hoveredItem == main)
-    property bool isDir: model.isDir
+    property bool isDir: model.blank ? false : model.isDir
     property bool selected: model.blank ? false : model.selected
     property bool blank: model.blank
     property variant snapshot: grabber.image
