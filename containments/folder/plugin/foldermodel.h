@@ -99,6 +99,7 @@ class FolderModel : public QSortFilterProxyModel
         ~FolderModel();
 
         QHash<int, QByteArray> roleNames() const;
+        static QHash<int, QByteArray> staticRoleNames();
 
         QString url() const;
         void setUrl(const QString &url);

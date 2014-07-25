@@ -185,11 +185,8 @@ int Positioner::indexForUrl(const QUrl &url) const
 
 QHash< int, QByteArray > Positioner::roleNames() const
 {
-    if (m_folderModel) {
-        return m_folderModel->roleNames();
-    }
-
-    return QAbstractItemModel::roleNames();
+    qDebug() << "roles";
+    return FolderModel::staticRoleNames();
 }
 
 QModelIndex Positioner::index(int row, int column, const QModelIndex &parent) const

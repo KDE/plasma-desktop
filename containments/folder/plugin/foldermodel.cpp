@@ -130,7 +130,12 @@ FolderModel::~FolderModel()
 
 QHash< int, QByteArray > FolderModel::roleNames() const
 {
-    QHash<int, QByteArray> roleNames = m_dirModel->roleNames();
+    return staticRoleNames();
+}
+
+QHash< int, QByteArray > FolderModel::staticRoleNames()
+{
+    QHash<int, QByteArray> roleNames;
     roleNames[Qt::DisplayRole] = "display";
     roleNames[Qt::DecorationRole] = "decoration";
     roleNames[BlankRole] = "blank";

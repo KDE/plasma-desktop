@@ -208,7 +208,7 @@ FocusScope {
             var item = gridView.itemAt(cPos.x, cPos.y);
             var leftEdge = Math.min(gridView.contentX, gridView.originX);
 
-            if (!item) {
+            if (!item || item.blank) {
                 gridView.hoveredItem = null;
             } else {
                 var aPos = mapToItem(item.actionsOverlay, mouse.x, mouse.y);
