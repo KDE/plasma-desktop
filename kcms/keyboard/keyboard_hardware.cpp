@@ -23,8 +23,6 @@
 #include <QX11Info>
 #include <QCursor>	// WTF? - otherwise compiler complains
 
-#include <X11/Xlib.h>
-
 #include <math.h>
 
 #include "x11_helper.h"
@@ -35,6 +33,7 @@ extern "C" void numlockx_change_numlock_state(Display* dpy, int state);
 
 #include <X11/XKBlib.h>
 #include <X11/keysym.h>
+#include <X11/Xlib.h>
 
 
 // This code is taken from xset utility from XFree 4.3 (http://www.xfree86.org/)
