@@ -66,7 +66,7 @@ Item {
             icon: "view-sort-ascending"
 
             onClicked: {
-                favoritesModel.sortFavoritesAscending();
+                favoritesModel.sortItems(0 /*Qt.Ascending*/);
             }
         }
         PlasmaComponents.MenuItem {
@@ -76,7 +76,7 @@ Item {
             icon: "view-sort-descending"
 
             onClicked: {
-                favoritesModel.sortFavoritesDescending();
+                favoritesModel.sortItems(1 /*Qt.Descending*/);
             }
         }
     }

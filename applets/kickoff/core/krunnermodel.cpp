@@ -286,4 +286,23 @@ QMimeData * KRunnerModel::mimeData(const QModelIndexList &indexes) const
 
 }
 
+QVariant KRunnerModel::data(const QModelIndex &index, int role) const
+{
+    QVariant data = KickoffModel::data(index, role);
+
+    // Trying to resolve URLs for runner results
+    // TODO: This should probably be provided by KRunner itself
+    if (role == UrlRole) {
+        KUrl url = data.toString();
+        KService::Ptr service = serviceForUrl(url);
+
+        if (service) {
+            data = service->entryPath();
+        }
+    }
+
+    return data;
+}
+
+
 #include "krunnermodel.moc"
