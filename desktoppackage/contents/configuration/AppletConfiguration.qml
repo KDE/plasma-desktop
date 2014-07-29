@@ -43,7 +43,7 @@ Rectangle {
     ConfigModel {
         id: globalAppletConfigModel
         ConfigCategory {
-            name: "Keyboard shortcuts"
+            name: i18nd("plasma_shell_org.kde.plasma.desktop", "Keyboard shortcuts")
             icon: "preferences-desktop-keyboard"
             source: "ConfigurationShortcuts.qml"
         }
