@@ -23,19 +23,19 @@ import org.kde.plasma.configuration 2.0
 
 ConfigModel {
     ConfigCategory {
-         name: "Location"
+         name: i18n("Location")
          icon: "folder"
          source: "ConfigLocation.qml"
     }
 
     ConfigCategory {
-         name: "Icons"
+         name: i18n("Icons")
          icon: "preferences-desktop-icons"
          source: "ConfigIcons.qml"
     }
 
     ConfigCategory {
-         name: "Filter"
+         name: i18n("Filter")
          icon: "view-filter"
          source: "ConfigFilter.qml"
     }
