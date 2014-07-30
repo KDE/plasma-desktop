@@ -196,8 +196,7 @@ DragDrop.DropArea {
         }
 
         if (event.mimeData.urls.length) {
-            var pos = mapToItem(itemView, event.x, event.y);
-            itemView.model.drop(root, event, itemView.indexAt(pos));
+            itemView.drop(root, event, mapToItem(itemView, event.x, event.y));
         }
 
         if (isContainment && !event.mimeData.urls.length) {

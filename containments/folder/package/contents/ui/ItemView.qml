@@ -58,9 +58,8 @@ FocusScope {
         dir.linkHere(sourceUrl);
     }
 
-    function indexAt(pos) {
-        var cPos = mapToItem(gridView.contentItem, pos.x, pos.y);
-        var item = gridView.itemAt(cPos.x, cPos.y);
+    function dropItemAt(pos) {
+        var item = gridView.itemAt(pos.x, pos.y);
 
         if (item) {
             if (item.blank) {
@@ -77,6 +76,17 @@ FocusScope {
         }
 
         return -1;
+    }
+
+    function drop(target, event, pos) {
+        var dropPos = mapToItem(gridView.contentItem, pos.x, pos.y);
+        var dropIndex = gridView.indexAt(dropPos.x, dropPos.y);
+        var dragPos = mapToItem(gridView.contentItem, listener.dragX, listener.dragY);
+        var dragIndex = gridView.indexAt(dragPos.x, dragPos.y);
+
+        if (listener.dragX == -1 || dragIndex != dropIndex) {
+            dir.drop(target, event, dropItemAt(dropPos));
+        }
     }
 
     onFocusChanged: {
@@ -263,6 +273,8 @@ FocusScope {
                     dragX = mouse.x;
                     dragY = mouse.y;
                     dir.dragSelected(mouse.x, mouse.y);
+                    dragX = -1;
+                    dragY = -1;
                     clearPressState();
                 } else {
                     dir.pinSelection();
