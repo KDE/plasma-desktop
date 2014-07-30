@@ -30,11 +30,11 @@ Positioner::Positioner(QObject *parent): QAbstractItemModel(parent)
 , m_lastIndex(-1)
 , m_ignoreNextTransaction(false)
 , m_pendingPositions(false)
-, m_updatePositionTimer(new QTimer(this))
+, m_updatePositionsTimer(new QTimer(this))
 {
-    m_updatePositionTimer->setSingleShot(true);
-    m_updatePositionTimer->setInterval(0);
-    connect(m_updatePositionTimer, SIGNAL(timeout()), this, SLOT(updatePositions()));
+    m_updatePositionsTimer->setSingleShot(true);
+    m_updatePositionsTimer->setInterval(0);
+    connect(m_updatePositionsTimer, SIGNAL(timeout()), this, SLOT(updatePositions()));
 }
 
 Positioner::~Positioner()
@@ -62,7 +62,7 @@ void Positioner::setEnabled(bool enabled)
         emit enabledChanged();
 
         if (!enabled) {
-            m_updatePositionTimer->start();
+            m_updatePositionsTimer->start();
         }
     }
 }
@@ -339,7 +339,7 @@ void Positioner::move(const QVariantList &moves) {
         endRemoveRows();
     }
 
-    m_updatePositionTimer->start();
+    m_updatePositionsTimer->start();
 }
 
 void Positioner::updatePositions()
@@ -535,7 +535,7 @@ void Positioner::sourceRowsInserted(const QModelIndex &parent, int first, int la
 
     flushPendingChanges();
 
-    m_updatePositionTimer->start();
+    m_updatePositionsTimer->start();
 }
 
 void Positioner::sourceRowsMoved(const QModelIndex &sourceParent, int sourceStart,
@@ -564,7 +564,7 @@ void Positioner::sourceRowsRemoved(const QModelIndex &parent, int first, int las
 
     flushPendingChanges();
 
-    m_updatePositionTimer->start();
+    m_updatePositionsTimer->start();
 }
 
 void Positioner::initMaps(int size)
@@ -726,7 +726,7 @@ void Positioner::applyPositions()
 
     m_pendingPositions = false;
 
-    m_updatePositionTimer->start();
+    m_updatePositionsTimer->start();
 }
 
 void Positioner::flushPendingChanges()

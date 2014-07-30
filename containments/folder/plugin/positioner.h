@@ -113,7 +113,7 @@ class Positioner : public QAbstractItemModel
 
         QStringList m_positions;
         bool m_pendingPositions;
-        QTimer *m_updatePositionTimer;
+        QTimer *m_updatePositionsTimer;
 
         QHash<int, int> m_proxyToSource;
         QHash<int, int> m_sourceToProxy;
