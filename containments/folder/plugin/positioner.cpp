@@ -128,7 +128,7 @@ void Positioner::setPositions(QStringList positions)
 
         if (!m_proxyToSource.isEmpty()) {
             applyPositions();
-        } else if (m_positions.size() > 5) {
+        } else if (m_positions.size() >= 5) {
             m_pendingPositions = true;
         }
     }
@@ -413,11 +413,11 @@ void Positioner::sourceModelReset()
 void Positioner::sourceRowsAboutToBeInserted(const QModelIndex &parent, int start, int end)
 {
     if (m_enabled) {
-        if (m_sourceToProxy.isEmpty()) {
+        if (m_proxyToSource.isEmpty()) {
             if (!m_pendingPositions) {
                 emit beginInsertRows(parent, start, end);
 
-                initMaps(end);
+                initMaps(end + 1);
             }
 
             return;
@@ -573,14 +573,14 @@ void Positioner::initMaps(int size)
     m_sourceToProxy.clear();
 
     if (size == -1) {
-        size = m_folderModel->rowCount() - 1;
+        size = m_folderModel->rowCount();
     }
 
     if (!size) {
         return;
     }
 
-    for (int i = 0; i <= size; ++i) {
+    for (int i = 0; i < size; ++i) {
         updateMaps(i, i);
     }
 }
