@@ -24,6 +24,8 @@
 
 class FolderModel;
 
+class QTimer;
+
 class Positioner : public QAbstractItemModel
 {
     Q_OBJECT
@@ -102,18 +104,19 @@ class Positioner : public QAbstractItemModel
         FolderModel *m_folderModel;
 
         int m_perStripe;
-        QStringList m_positions;
-        bool m_pendingPositionsUpdate;
-        bool m_applyPositions;
-        bool m_resetting; // TODO FIXME: Cleanup.
+
         int m_lastIndex;
         bool m_lastIndexDirty;
 
-        QHash<int, int> m_proxyToSource;
-        QHash<int, int> m_sourceToProxy;
-
         QModelIndexList m_pendingChanges;
         bool m_ignoreNextTransaction;
+
+        QStringList m_positions;
+        bool m_pendingPositions;
+        QTimer *m_updatePositionTimer;
+
+        QHash<int, int> m_proxyToSource;
+        QHash<int, int> m_sourceToProxy;
 };
 
 #endif

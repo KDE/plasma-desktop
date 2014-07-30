@@ -21,17 +21,20 @@
 #include "foldermodel.h"
 
 #include <QDebug>
+#include <QTimer>
 
 Positioner::Positioner(QObject *parent): QAbstractItemModel(parent)
 , m_enabled(false)
 , m_folderModel(0)
 , m_perStripe(0)
-, m_pendingPositionsUpdate(false)
-, m_applyPositions(false)
-, m_resetting(false)
 , m_lastIndex(-1)
 , m_ignoreNextTransaction(false)
+, m_pendingPositions(false)
+, m_updatePositionTimer(new QTimer(this))
 {
+    m_updatePositionTimer->setSingleShot(true);
+    m_updatePositionTimer->setInterval(0);
+    connect(m_updatePositionTimer, SIGNAL(timeout()), this, SLOT(updatePositions()));
 }
 
 Positioner::~Positioner()
@@ -48,21 +51,18 @@ void Positioner::setEnabled(bool enabled)
     if (m_enabled != enabled) {
         m_enabled = enabled;
 
-        if (!enabled) {
-            beginResetModel();
+        beginResetModel();
+
+        if (enabled && m_folderModel) {
+            initMaps();
         }
 
-        if (enabled) {
-            initMaps();
-        } else {
-            endResetModel();
-        }
+        endResetModel();
 
         emit enabledChanged();
 
-        if (!m_pendingPositionsUpdate && m_folderModel->rowCount()) {
-            m_pendingPositionsUpdate = true;
-            QMetaObject::invokeMethod(this, "updatePositions", Qt::QueuedConnection);
+        if (!enabled) {
+            m_updatePositionTimer->start();
         }
     }
 }
@@ -86,6 +86,10 @@ void Positioner::setFolderModel(QObject *folderModel)
 
         if (m_folderModel) {
             connectSignals(m_folderModel);
+
+            if (m_enabled) {
+                initMaps();
+            }
         }
 
         endResetModel();
@@ -104,15 +108,8 @@ void Positioner::setPerStripe(int perStripe)
     if (m_perStripe != perStripe) {
         m_perStripe = perStripe;
 
-        emit perStripeChanged();
-
-        if (m_enabled && m_perStripe > 0) {
+        if (m_enabled && perStripe > 0 && !m_proxyToSource.isEmpty()) {
             applyPositions();
-
-            if (!m_pendingPositionsUpdate) {
-                m_pendingPositionsUpdate = true;
-                QMetaObject::invokeMethod(this, "updatePositions", Qt::QueuedConnection);
-            }
         }
     }
 }
@@ -128,12 +125,18 @@ void Positioner::setPositions(QStringList positions)
         m_positions = positions;
 
         emit positionsChanged();
+
+        if (!m_proxyToSource.isEmpty()) {
+            applyPositions();
+        } else if (m_positions.size() > 5) {
+            m_pendingPositions = true;
+        }
     }
 }
 
 int Positioner::map(int row) const
 {
-    if (m_enabled) {
+    if (m_enabled && m_folderModel) {
         if (m_proxyToSource.contains(row)) {
             return m_proxyToSource.value(row);
         } else {
@@ -253,16 +256,14 @@ int Positioner::columnCount(const QModelIndex& parent) const
 
 void Positioner::reset()
 {
-    m_resetting = true;
-
     beginResetModel();
 
     initMaps();
 
+    endResetModel();
+
     m_positions = QStringList();
     emit positionsChanged();
-
-    endResetModel();
 }
 
 void Positioner::move(const QVariantList &moves) {
@@ -338,23 +339,14 @@ void Positioner::move(const QVariantList &moves) {
         endRemoveRows();
     }
 
-    if (!m_pendingPositionsUpdate) {
-        m_pendingPositionsUpdate = true;
-        QMetaObject::invokeMethod(this, "updatePositions", Qt::QueuedConnection);
-    }
+    m_updatePositionTimer->start();
 }
 
 void Positioner::updatePositions()
 {
-    if (m_perStripe < 1) {
-        m_pendingPositionsUpdate = false;
-
-        return;
-    }
-
     QStringList positions;
 
-    if (m_enabled && !m_proxyToSource.isEmpty()) {
+    if (m_enabled && !m_proxyToSource.isEmpty() && m_perStripe > 0) {
         positions.append(QString::number((1 + ((rowCount() - 1) / m_perStripe))));
         positions.append(QString::number(m_perStripe));
 
@@ -367,7 +359,7 @@ void Positioner::updatePositions()
                 FolderModel::UrlRole).toString();
 
             if (name.isEmpty()) {
-                qDebug() << it.value() << "Source model doesn't know this index!";
+                qDebug() << this << it.value() << "Source model doesn't know this index!";
 
                 return;
             }
@@ -378,9 +370,11 @@ void Positioner::updatePositions()
         }
     }
 
-    setPositions(positions);
+    if (positions != m_positions) {
+        m_positions = positions;
 
-    m_pendingPositionsUpdate = false;
+        emit positionsChanged();
+    }
 }
 
 void Positioner::sourceDataChanged(const QModelIndex &topLeft, const QModelIndex &bottomRight,
@@ -409,6 +403,10 @@ void Positioner::sourceModelAboutToBeReset()
 
 void Positioner::sourceModelReset()
 {
+    if (m_enabled) {
+        initMaps();
+    }
+
     emit endResetModel();
 }
 
@@ -416,12 +414,10 @@ void Positioner::sourceRowsAboutToBeInserted(const QModelIndex &parent, int star
 {
     if (m_enabled) {
         if (m_sourceToProxy.isEmpty()) {
-            if (m_positions.isEmpty()) {
+            if (!m_pendingPositions) {
                 emit beginInsertRows(parent, start, end);
 
                 initMaps(end);
-            } else {
-                m_applyPositions = true;
             }
 
             return;
@@ -462,8 +458,6 @@ void Positioner::sourceRowsAboutToBeInserted(const QModelIndex &parent, int star
 void Positioner::sourceRowsAboutToBeMoved(const QModelIndex &sourceParent, int sourceStart,
     int sourceEnd, const QModelIndex& destinationParent, int destinationRow)
 {
-    qDebug();
-
     emit beginMoveRows(sourceParent, sourceStart, sourceEnd, destinationParent, destinationRow);
 }
 
@@ -530,12 +524,10 @@ void Positioner::sourceRowsInserted(const QModelIndex &parent, int first, int la
     Q_UNUSED(last)
 
     if (!m_ignoreNextTransaction) {
-        if (!m_applyPositions) {
+        if (!m_pendingPositions) {
             emit endInsertRows();
         } else {
-            if (m_perStripe > 0) {
-                applyPositions();
-            }
+            applyPositions();
         }
     } else {
         m_ignoreNextTransaction = false;
@@ -543,17 +535,12 @@ void Positioner::sourceRowsInserted(const QModelIndex &parent, int first, int la
 
     flushPendingChanges();
 
-    if (!m_pendingPositionsUpdate && !m_applyPositions) {
-        m_pendingPositionsUpdate = true;
-        QMetaObject::invokeMethod(this, "updatePositions", Qt::QueuedConnection);
-    }
+    m_updatePositionTimer->start();
 }
 
 void Positioner::sourceRowsMoved(const QModelIndex &sourceParent, int sourceStart,
     int sourceEnd, const QModelIndex &destinationParent, int destinationRow)
 {
-    qDebug();
-
     Q_UNUSED(sourceParent)
     Q_UNUSED(sourceStart)
     Q_UNUSED(sourceEnd)
@@ -577,10 +564,7 @@ void Positioner::sourceRowsRemoved(const QModelIndex &parent, int first, int las
 
     flushPendingChanges();
 
-    if (!m_pendingPositionsUpdate) {
-        m_pendingPositionsUpdate = true;
-        QMetaObject::invokeMethod(this, "updatePositions", Qt::QueuedConnection);
-    }
+    m_updatePositionTimer->start();
 }
 
 void Positioner::initMaps(int size)
@@ -641,16 +625,6 @@ int Positioner::firstFreeRow() const
 void Positioner::applyPositions()
 {
     if (m_positions.size() < 5) {
-        if (m_folderModel) {
-            if (m_resetting) {
-                m_resetting = false;
-            } else {
-                beginResetModel();
-                initMaps();
-                endResetModel();
-            }
-        }
-
         return;
     }
 
@@ -748,9 +722,11 @@ void Positioner::applyPositions()
         updateMaps(index, it.value());
     }
 
-    m_applyPositions = false;
-
     endResetModel();
+
+    m_pendingPositions = false;
+
+    m_updatePositionTimer->start();
 }
 
 void Positioner::flushPendingChanges()
