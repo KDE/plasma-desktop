@@ -20,8 +20,7 @@ import QtQuick 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
-
-import org.kde.plasma.private.kickoff 0.1 as Kickoff
+import org.kde.kcoreaddons 1.0 as KCoreAddons
 
 Item {
     id: header
@@ -31,7 +30,7 @@ Item {
     property alias query: queryField.text
     property Item input: queryField
 
-    Kickoff.KUser {
+    KCoreAddons.KUser {
         id: kuser
     }
 
@@ -55,7 +54,7 @@ Item {
 
     Image {
         id: faceIcon
-        source: kuser.faceIconPath
+        source: kuser.faceIconUrl
         cache: false
         visible: source != ""
 

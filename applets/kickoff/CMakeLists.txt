@@ -21,7 +21,6 @@ set(libkickoff_SRCS
     core/recentapplications.cpp
     core/recentlyusedmodel.cpp
     core/systemmodel.cpp
-    core/kuserproxy.cpp
     core/urlitemlauncher.cpp
     core/processrunner.cpp
 )
