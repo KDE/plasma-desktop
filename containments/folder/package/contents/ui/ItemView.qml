@@ -761,7 +761,7 @@ FocusScope {
             adapterView: gridView
             adapterModel: positioner
             adapterIconSize: gridView.iconSize;
-            adapterVisibleArea: Qt.rect(gridView.contentX, gridView.contentY, gridView.width, gridView.height)
+            adapterVisibleArea: Qt.rect(gridView.contentX, gridView.contentY, gridView.contentWidth, gridView.contentHeight)
 
             Component.onCompleted: {
                 gridView.movementStarted.connect(viewAdapter.viewScrolled);
