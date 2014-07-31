@@ -469,41 +469,30 @@ void Positioner::sourceRowsAboutToBeRemoved(const QModelIndex &parent, int first
         for (int i = first; i <= last; ++i) {
             int proxyRow = m_sourceToProxy.take(i);
             m_proxyToSource.remove(proxyRow);
-
-            QHash<int, int> newProxyToSource;
-            QHashIterator<int, int> it(m_proxyToSource);
-
-            while (it.hasNext()) {
-                it.next();
-
-                if (it.value() > i) {
-                    newProxyToSource.insert(it.key(), it.value() - 1);
-                } else {
-                    newProxyToSource.insert(it.key(), it.value());
-                }
-            }
-
-            m_proxyToSource = newProxyToSource;
-            m_lastIndex = -1;
-
-            QHash<int, int> newSourceToProxy;
-            QHashIterator<int, int> it2(m_sourceToProxy);
-
-            while (it2.hasNext()) {
-                it2.next();
-
-                if (it2.key() > i) {
-                    newSourceToProxy.insert(it2.key() - 1, it2.value());
-                } else {
-                    newSourceToProxy.insert(it2.key(), it2.value());
-                }
-            }
-
-            m_sourceToProxy = newSourceToProxy;
-
             m_pendingChanges << createIndex(proxyRow, 0);
         }
 
+        QHash<int, int> newProxyToSource;
+        QHash<int, int> newSourceToProxy;
+        QHashIterator<int, int> it(m_sourceToProxy);
+        int delta = std::abs(first - last) + 1;
+
+        while (it.hasNext()) {
+            it.next();
+
+            if (it.key() > last) {
+                newProxyToSource.insert(it.value(), it.key() - delta);
+                newSourceToProxy.insert(it.key() - delta, it.value());
+            } else {
+                newProxyToSource.insert(it.value(), it.key());
+                newSourceToProxy.insert(it.key(), it.value());
+            }
+        }
+
+        m_proxyToSource = newProxyToSource;
+        m_sourceToProxy = newSourceToProxy;
+
+        m_lastIndex = -1;
         int newLast = lastIndex();
 
         if (oldLast > newLast) {
