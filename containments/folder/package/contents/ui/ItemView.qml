@@ -166,6 +166,7 @@ FocusScope {
                 gridView.currentIndex = hoveredItem.index;
 
                 if (mouse.buttons & Qt.RightButton) {
+                    clearPressState();
                     dir.openContextMenu();
                 }
             }
