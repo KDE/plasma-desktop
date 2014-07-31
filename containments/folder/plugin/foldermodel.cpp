@@ -665,7 +665,7 @@ void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row)
         return;
     }
 
-    if (m_dragInProgress) {
+    if (m_dragInProgress && row == -1) {
         if (m_locked || mimeData->urls().isEmpty()) {
             return;
         }
