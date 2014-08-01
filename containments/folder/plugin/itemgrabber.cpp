@@ -48,6 +48,7 @@ void ItemGrabber::setItem(QQuickItem *item)
 
     if (m_item && m_item->window()) {
         connect(m_item->window(), SIGNAL(afterRendering()), this, SLOT(grab()), Qt::DirectConnection);
+        item->update();
     } else {
         m_image = QImage();
         emit nullChanged();
@@ -84,7 +85,7 @@ void ItemGrabber::grab()
 
     QOpenGLFunctions *f = m_item->window()->openglContext()->functions();
 
-    m_image = QImage(m_item->width(), m_item->height(), QImage::Format_RGBA8888);
+    m_image = QImage(m_item->width(), m_item->height(), QImage::Format_RGBA8888_Premultiplied);
     m_image.fill(Qt::transparent);
 
     GLint prevfbo;

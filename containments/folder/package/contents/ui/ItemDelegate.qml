@@ -67,26 +67,13 @@ Item {
             property Item actionsOverlay: actions
             property Item hoverArea: toolTip
             property Item popupButton: null
-            property variant snapshot: grabber.image
-            property Item snapshotSource: null
-
-            onBlankChanged: {
-                if (snapshotSource) {
-                    snapshotSource.visible = false;
-                }
-            }
 
             onSelectedChanged: {
-                if (snapshotSource) {
-                    snapshotSource.visible = false;
-                    snapshotSource.destroy();
-                }
-
                 if (selected && !blank) {
-                    dir.addItemDragImage(positioner.map(index), main.x, main.y, main.width, main.height, snapshot);
-                    snapshotTimer.start();
+                    dir.addItemDragImage(positioner.map(index), main.x, main.y, main.width, main.height, null);
+                    grabber.item = snapshotSource;
                 } else {
-                    snapshotTimer.stop();
+                    grabber.item = null;
                 }
             }
 
@@ -111,17 +98,6 @@ Item {
                     }
             }
 
-            onSnapshotChanged: {
-                if (!grabber.null) {
-                    dir.addItemDragImage(positioner.map(index), main.x, main.y, main.width, main.height, snapshot);
-                }
-
-                if (snapshotSource) {
-                    snapshotSource.visible = false;
-                    snapshotSource.destroy();
-                }
-            }
-
             function openPopup() {
                 if (root.itemViewDialogComponent.status == Component.Ready) {
                     impl.popupDialog = root.itemViewDialogComponent.createObject(impl);
@@ -141,22 +117,28 @@ Item {
                 }
             }
 
-            Timer {
-                id: snapshotTimer
-                repeat: false
-                interval: 0
-
-                onTriggered: {
-                    dir.addItemDragImage(positioner.map(index), main.x, main.y, main.width, main.height, snapshot);
-                    impl.snapshotSource = Qt.createQmlObject("import QtQuick 2.2; ShaderEffectSource { anchors.fill: impl; live: false; sourceItem: impl; }", impl);
-                }
-            }
-
             // FIXME TODO: Replace with Qt 5.4's item-to-image API.
             Folder.ItemGrabber {
                 id: grabber
 
-                item: impl.snapshotSource
+                onImageChanged: {
+                    if (!null) {
+                        dir.addItemDragImage(positioner.map(index), main.x + frame.x, main.y + frame.y, frame.width, frame.height, image);
+                    }
+                }
+            }
+
+            ShaderEffectSource {
+                id: snapshotSource
+
+                anchors.fill: frame;
+
+                visible: frame.visible
+
+                live: true;
+                hideSource: true;
+
+                sourceItem: frame;
             }
 
             PlasmaCore.ToolTipArea {
