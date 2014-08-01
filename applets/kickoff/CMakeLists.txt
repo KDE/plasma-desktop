@@ -35,13 +35,9 @@ qt5_add_dbus_interface(libkickoff_SRCS ${KSMSERVER_DBUS_INTERFACE} ksmserver_int
 install(FILES core/qmldir DESTINATION ${QML_INSTALL_DIR}/org/kde/plasma/private/kickoff)
 add_library(kickoffplugin SHARED ${libkickoff_SRCS})
 target_link_libraries(kickoffplugin
-                              Qt5::Core
                               Qt5::Qml
                               Qt5::DBus
-                              KF5::CoreAddons
                               KF5::I18n
-                              KF5::KIOCore
-                              KF5::KIOWidgets
                               KF5::KIOFileWidgets
                               KF5::Runner
                               KF5::Solid
