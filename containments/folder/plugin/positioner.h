@@ -55,6 +55,8 @@ class Positioner : public QAbstractItemModel
         Q_INVOKABLE bool isBlank(int row) const;
         Q_INVOKABLE int indexForUrl(const QUrl &url) const;
 
+        Q_INVOKABLE void setRangeSelected(int anchor, int to);
+
         Q_INVOKABLE void reset();
 
         Q_INVOKABLE void move(const QVariantList &moves);

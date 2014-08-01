@@ -186,6 +186,29 @@ int Positioner::indexForUrl(const QUrl &url) const
     return -1;
 }
 
+void Positioner::setRangeSelected(int anchor, int to)
+{
+    if (!m_folderModel) {
+        return;
+    }
+
+    if (m_enabled) {
+        QVariantList indices;
+
+        for (int i = qMin(anchor, to); i <= qMax(anchor, to); ++i) {
+            if (m_proxyToSource.contains(i)) {
+                indices.append(m_proxyToSource.value(i));
+            }
+        }
+
+        if (indices.count()) {
+            m_folderModel->updateSelection(indices, false);
+        }
+    } else {
+        m_folderModel->setRangeSelected(anchor, to);
+    }
+}
+
 QHash< int, QByteArray > Positioner::roleNames() const
 {
     return FolderModel::staticRoleNames();

@@ -149,8 +149,8 @@ class FolderModel : public QSortFilterProxyModel
         Q_INVOKABLE bool isSelected(int row);
         Q_INVOKABLE void setSelected(int row);
         Q_INVOKABLE void toggleSelected(int row);
-        Q_INVOKABLE void setRangeSelected(int startRow, int endRow);
-        Q_INVOKABLE void updateSelection(const QVariantList &rows, bool replace);
+        Q_INVOKABLE void setRangeSelected(int anchor, int to);
+        Q_INVOKABLE void updateSelection(const QVariantList &rows, bool toggle);
         Q_INVOKABLE void clearSelection();
         Q_INVOKABLE void pinSelection();
         Q_INVOKABLE void unpinSelection();

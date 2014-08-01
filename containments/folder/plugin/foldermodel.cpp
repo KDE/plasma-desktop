@@ -468,13 +468,13 @@ void FolderModel::toggleSelected(int row)
     m_selectionModel->select(index(row, 0), QItemSelectionModel::Toggle);
 }
 
-void FolderModel::setRangeSelected(int startRow, int endRow)
+void FolderModel::setRangeSelected(int anchor, int to)
 {
-    if (startRow < 0 || endRow < 0) {
+    if (anchor < 0 || to < 0) {
         return;
     }
 
-    QItemSelection selection(index(startRow, 0), index(endRow, 0));
+    QItemSelection selection(index(anchor, 0), index(to, 0));
     m_selectionModel->select(selection, QItemSelectionModel::ClearAndSelect);
 }
 

@@ -146,7 +146,7 @@ FocusScope {
 
             if (!(pos.x <= hoveredItem.actionsOverlay.width && pos.y <= hoveredItem.actionsOverlay.height)) {
                 if (gridView.shiftPressed && gridView.currentIndex != -1) {
-                    dir.setRangeSelected(positioner.map(gridView.anchorIndex), positioner.map(hoveredItem.index));
+                    positioner.setRangeSelected(gridView.anchorIndex, hoveredItem.index);
                 } else {
                     // FIXME TODO: Clicking one item with others selected should deselect the others,
                     // which doesn't happen right now because initiating a drag after the press should
@@ -479,7 +479,7 @@ FocusScope {
 
                 function updateSelection(modifier) {
                     if (modifier & Qt.ShiftModifier) {
-                        dir.setRangeSelected(positioner.map(anchorIndex), positioner.map(currentIndex));
+                        positioner.setRangeSelected(anchorIndex, currentIndex);
                     } else {
                         dir.clearSelection();
                         dir.setSelected(positioner.map(currentIndex));
