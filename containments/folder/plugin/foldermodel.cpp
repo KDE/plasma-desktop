@@ -701,6 +701,10 @@ void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row)
         return;
     }
 
+    if (!item.acceptsDrops()) {
+        return;
+    }
+
     QPoint pos;
     pos.setX(dropEvent->property("x").toInt());
     pos.setY(dropEvent->property("y").toInt());

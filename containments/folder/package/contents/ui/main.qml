@@ -153,6 +153,10 @@ DragDrop.DropArea {
     }
 
     onDragMove: {
+        // TODO: We should reject drag moves onto file items that don't accept drops
+        // (cf. QAbstractItemModel::flags() here, but DeclarativeDropArea currently
+        // is currently incapable of rejecting drag events.
+
         // Trigger autoscroll.
         if (event.mimeData.urls.length) {
             itemView.scrollLeft = (event.x < (units.largeSpacing * 3));
@@ -458,7 +462,7 @@ DragDrop.DropArea {
             return;
         } else {
             //WORKAROUND: that's the only place where we can inject a sensible size.
-            //if root has width defined, it will override the value we set before 
+            //if root has width defined, it will override the value we set before
             //the component completes
             root.width = plasmoid.width
         }
