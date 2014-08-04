@@ -26,9 +26,15 @@
 #include <QStandardPaths>
 #include <KLocalizedString>
 #include <KRunner/RunnerManager>
+#include <KCModuleInfo>
+#include <KCModuleProxy>
 
 #include <QVBoxLayout>
 #include <QLabel>
+#include <QToolButton>
+#include <QDialog>
+#include <QDialogButtonBox>
+#include <QPushButton>
 
 K_PLUGIN_FACTORY(SearchConfigModuleFactory, registerPlugin<SearchConfigModule>();)
 
@@ -48,13 +54,118 @@ SearchConfigModule::SearchConfigModule(QWidget* parent, const QVariantList& args
     QLabel* label = new QLabel(i18n("Select the search plugins"));
     m_listWidget = new QListWidget(this);
     m_listWidget->setSortingEnabled(true);
+    m_listWidget->setMouseTracking(true);
+    m_listWidget->setIconSize(QSize(32, 32));
     connect(m_listWidget, SIGNAL(itemChanged(QListWidgetItem*)),
             this, SLOT(changed()));
 
     layout->addWidget(label);
     layout->addWidget(m_listWidget);
+
+    m_configButton = new QToolButton(m_listWidget);
+    m_configButton->setIcon(QIcon::fromTheme("configure"));
+    m_configButton->resize(m_configButton->height(), m_configButton->height());
+    m_configButton->hide();
+
+    connect(m_listWidget, &QListWidget::itemEntered, [=](QListWidgetItem * item) {
+        QList<Plasma::AbstractRunner *> runners = item->data(Qt::UserRole+1).value<QList<Plasma::AbstractRunner *> >();
+
+        if (runners.count() > 0) {
+            const QRect rect = m_listWidget->visualItemRect(item);
+            m_configButton->move(QPoint(rect.right(), rect.center().y()) - QPoint(m_configButton->width(), m_configButton->height()/2));
+            m_configButton->setVisible(true);
+            m_configButton->setProperty("runners", QVariant::fromValue(runners));
+        } else {
+            m_configButton->setVisible(false);
+        }
+    });
+
+    connect (m_configButton, &QToolButton::clicked, this, &SearchConfigModule::configureClicked);
 }
 
+void SearchConfigModule::configureClicked()
+{
+    m_configDialog = new QDialog(m_listWidget);
+    QList<Plasma::AbstractRunner *> runners = m_configButton->property("runners").value<QList<Plasma::AbstractRunner *> >();
+    // The number of KCModuleProxies in use determines whether to use a tabwidget
+    QTabWidget *newTabWidget = 0;
+    // Widget to use for the setting dialog's main widget,
+    // either a QTabWidget or a KCModuleProxy
+    QWidget *mainWidget = 0;
+    // Widget to use as the KCModuleProxy's parent.
+    // The first proxy is owned by the dialog itself
+    QWidget *moduleProxyParentWidget = m_configDialog;
+
+    Q_FOREACH (Plasma::AbstractRunner *runner, runners) {
+        const KPluginInfo pluginInfo = runner->metadata();
+        Q_FOREACH (const KService::Ptr &servicePtr, pluginInfo.kcmServices()) {
+            if (!servicePtr->noDisplay()) {
+                KCModuleInfo moduleInfo(servicePtr);
+                KCModuleProxy *currentModuleProxy = new KCModuleProxy(moduleInfo, moduleProxyParentWidget);
+                if (currentModuleProxy->realModule()) {
+                    m_moduleProxyList << currentModuleProxy;
+                    if (mainWidget && !newTabWidget) {
+                        // we already created one KCModuleProxy, so we need a tab widget.
+                        // Move the first proxy into the tab widget and ensure this and subsequent
+                        // proxies are in the tab widget
+                        newTabWidget = new QTabWidget(m_configDialog);
+                        moduleProxyParentWidget = newTabWidget;
+                        mainWidget->setParent(newTabWidget);
+                        KCModuleProxy *moduleProxy = qobject_cast<KCModuleProxy *>(mainWidget);
+                        if (moduleProxy) {
+                            newTabWidget->addTab(mainWidget, moduleProxy->moduleInfo().moduleName());
+                            mainWidget = newTabWidget;
+                        } else {
+                            delete newTabWidget;
+                            newTabWidget = 0;
+                            moduleProxyParentWidget = m_configDialog;
+                            mainWidget->setParent(0);
+                        }
+                    }
+
+                    if (newTabWidget) {
+                        newTabWidget->addTab(currentModuleProxy, servicePtr->name());
+                    } else {
+                        mainWidget = currentModuleProxy;
+                    }
+                } else {
+                    delete currentModuleProxy;
+                }
+            }
+        }
+    }
+    // it could happen that we had services to show, but none of them were real modules.
+    if (m_moduleProxyList.count()) {
+        QVBoxLayout *layout = new QVBoxLayout;
+        layout->addWidget(mainWidget);
+        const int marginHint = m_configDialog->style()->pixelMetric(QStyle::PM_DefaultChildMargin);
+        layout->insertSpacing(-1, marginHint);
+
+        QDialogButtonBox *buttonBox = new QDialogButtonBox(m_configDialog);
+        buttonBox->setStandardButtons(QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::Cancel);
+        connect(buttonBox, SIGNAL(accepted()), m_configDialog, SLOT(accept()));
+        connect(buttonBox, SIGNAL(rejected()), m_configDialog, SLOT(reject()));
+        layout->addWidget(buttonBox);
+
+        m_configDialog->setLayout(layout);
+
+        if (m_configDialog->exec() == QDialog::Accepted) {
+            foreach (KCModuleProxy *moduleProxy, m_moduleProxyList) {
+                QStringList parentComponents = moduleProxy->moduleInfo().service()->property(QStringLiteral("X-KDE-ParentComponents")).toStringList();
+                moduleProxy->save();
+            }
+        } else {
+            foreach (KCModuleProxy *moduleProxy, m_moduleProxyList) {
+                moduleProxy->load();
+            }
+        }
+
+        qDeleteAll(m_moduleProxyList);
+        m_moduleProxyList.clear();
+    }
+    m_configDialog->deleteLater();
+    m_configDialog = 0;
+}
 
 void SearchConfigModule::load()
 {
@@ -75,16 +186,34 @@ void SearchConfigModule::load()
 
         QStringList categories = runner->categories();
         QString name = runner->name();
+        Plasma::RunnerManager *manager = new Plasma::RunnerManager();
+        manager->reloadConfiguration();
+        QMultiHash <QString, Plasma::AbstractRunner *>runnerCategories;
+        Q_FOREACH (Plasma::AbstractRunner *runner, manager->runners()) {
+            Q_FOREACH (const QString& category, runner->categories()) {
+                runnerCategories.insert(category, runner);
+            }
+        }
 
         Q_FOREACH (const QString& category, categories) {
             if (addedCategories.contains(category)) {
                 continue;
             }
+
+            QList<Plasma::AbstractRunner *> runnersWithConfig;
+            Q_FOREACH (Plasma::AbstractRunner *runner, runnerCategories.values(category)) {
+                if (runner->metadata().kcmServices().count() > 0) {
+                    runnersWithConfig << runner;
+                }
+            }
+
             QListWidgetItem* item = new QListWidgetItem(category);
             item->setIcon(runner->categoryIcon(category));
 
             bool enabled = enabledCategories.isEmpty() || enabledCategories.contains(category);
             item->setCheckState(enabled ? Qt::Checked : Qt::Unchecked);
+
+            item->setData(Qt::UserRole + 1, QVariant::fromValue(runnersWithConfig));
 
             m_listWidget->addItem(item);
             addedCategories.insert(category);

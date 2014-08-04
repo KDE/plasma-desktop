@@ -24,6 +24,9 @@
 #include <KConfigGroup>
 #include <QListWidget>
 
+class QToolButton;
+class KCModuleProxy;
+
 class SearchConfigModule : public KCModule
 {
     Q_OBJECT
@@ -35,12 +38,16 @@ public Q_SLOTS:
     void load();
     void save();
     void defaults();
+    void configureClicked();
 
 private:
     QListWidget* m_listWidget;
 
     KConfig m_config;
     KConfigGroup m_configGroup;
+    QToolButton *m_configButton;
+    QDialog *m_configDialog;
+    QList<KCModuleProxy *> m_moduleProxyList;
 };
 
 #endif
