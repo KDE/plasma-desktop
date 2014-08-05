@@ -87,7 +87,7 @@ SearchConfigModule::SearchConfigModule(QWidget* parent, const QVariantList& args
 
     connect (m_configButton, &QToolButton::clicked, this, &SearchConfigModule::configureClicked);
 
-    Plasma::RunnerManager *manager = new Plasma::RunnerManager();
+    Plasma::RunnerManager *manager = new Plasma::RunnerManager(this);
     manager->reloadConfiguration();
     Q_FOREACH (Plasma::AbstractRunner *runner, manager->runners()) {
         Q_FOREACH (const QString& category, runner->categories()) {
@@ -177,8 +177,6 @@ void SearchConfigModule::configureClicked()
     }
 
     qDeleteAll(moduleProxyList);
-
-    configDialog.deleteLater();
 }
 
 void SearchConfigModule::load()
