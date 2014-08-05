@@ -13,6 +13,7 @@ target_link_libraries(kcm_plasmasearch
   KF5::KCMUtils
   KF5::Runner
   KF5::I18n
+  KF5::IconThemes
 
   Qt5::DBus
   Qt5::Widgets

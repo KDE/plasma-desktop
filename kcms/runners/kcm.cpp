@@ -28,6 +28,7 @@
 #include <KRunner/RunnerManager>
 #include <KCModuleInfo>
 #include <KCModuleProxy>
+#include <KIconLoader>
 
 #include <QVBoxLayout>
 #include <QLabel>
@@ -37,6 +38,7 @@
 #include <QPushButton>
 
 K_PLUGIN_FACTORY(SearchConfigModuleFactory, registerPlugin<SearchConfigModule>();)
+
 
 SearchConfigModule::SearchConfigModule(QWidget* parent, const QVariantList& args)
     : KCModule(parent, args)
@@ -55,17 +57,18 @@ SearchConfigModule::SearchConfigModule(QWidget* parent, const QVariantList& args
     m_listWidget = new QListWidget(this);
     m_listWidget->setSortingEnabled(true);
     m_listWidget->setMouseTracking(true);
-    m_listWidget->setIconSize(QSize(32, 32));
+    m_listWidget->setIconSize(QSize(KIconLoader::SizeMedium, KIconLoader::SizeMedium));
     connect(m_listWidget, SIGNAL(itemChanged(QListWidgetItem*)),
             this, SLOT(changed()));
 
     layout->addWidget(label);
     layout->addWidget(m_listWidget);
 
-    m_configButton = new QToolButton(m_listWidget);
+    m_configButton = new QToolButton(m_listWidget->viewport());
     m_configButton->setIcon(QIcon::fromTheme("configure"));
     m_configButton->resize(m_configButton->height(), m_configButton->height());
     m_configButton->hide();
+    m_configButton->setIconSize(QSize(KIconLoader::SizeSmall, KIconLoader::SizeSmall));
 
     connect(m_listWidget, &QListWidget::itemEntered, [=](QListWidgetItem * item) {
         QList<Plasma::AbstractRunner *> runners = item->data(RunnersRole).value<QList<Plasma::AbstractRunner *> >();
@@ -209,7 +212,7 @@ void SearchConfigModule::load()
                 }
             }
 
-            QListWidgetItem* item = new QListWidgetItem(category);
+            QListWidgetItem* item = new QListWidgetItem(category, m_listWidget);
             item->setIcon(runner->categoryIcon(category));
 
             bool enabled = enabledCategories.isEmpty() || enabledCategories.contains(category);
@@ -218,6 +221,7 @@ void SearchConfigModule::load()
             item->setData(RunnersRole, QVariant::fromValue(runnersWithConfig));
 
             m_listWidget->addItem(item);
+            item->setSizeHint(QSize(KIconLoader::SizeMedium * 1.2, KIconLoader::SizeMedium * 1.2));
             addedCategories.insert(category);
         }
     }
