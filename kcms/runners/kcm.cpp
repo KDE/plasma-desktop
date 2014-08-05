@@ -57,7 +57,8 @@ SearchConfigModule::SearchConfigModule(QWidget* parent, const QVariantList& args
     m_listWidget = new QListWidget(this);
     m_listWidget->setSortingEnabled(true);
     m_listWidget->setMouseTracking(true);
-    m_listWidget->setIconSize(QSize(KIconLoader::SizeMedium, KIconLoader::SizeMedium));
+    int size = IconSize(KIconLoader::Panel);
+    m_listWidget->setIconSize(QSize(size, size));
     connect(m_listWidget, SIGNAL(itemChanged(QListWidgetItem*)),
             this, SLOT(changed()));
 
@@ -68,7 +69,8 @@ SearchConfigModule::SearchConfigModule(QWidget* parent, const QVariantList& args
     m_configButton->setIcon(QIcon::fromTheme("configure"));
     m_configButton->resize(m_configButton->height(), m_configButton->height());
     m_configButton->hide();
-    m_configButton->setIconSize(QSize(KIconLoader::SizeSmall, KIconLoader::SizeSmall));
+    size = IconSize(KIconLoader::Small);
+    m_configButton->setIconSize(QSize(size, size));
 
     connect(m_listWidget, &QListWidget::itemEntered, [=](QListWidgetItem * item) {
         QList<Plasma::AbstractRunner *> runners = item->data(RunnersRole).value<QList<Plasma::AbstractRunner *> >();
@@ -221,7 +223,8 @@ void SearchConfigModule::load()
             item->setData(RunnersRole, QVariant::fromValue(runnersWithConfig));
 
             m_listWidget->addItem(item);
-            item->setSizeHint(QSize(KIconLoader::SizeMedium * 1.2, KIconLoader::SizeMedium * 1.2));
+            const int size = IconSize(KIconLoader::Panel) * 1.2;
+            item->setSizeHint(QSize(size, size));
             addedCategories.insert(category);
         }
     }
