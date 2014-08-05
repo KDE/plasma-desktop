@@ -17,32 +17,41 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA          *
  ***************************************************************************/
 
+#include <QDebug>
+#include <QCoreApplication>
+#include <QCommandLineParser>
+
 #include <KAboutData>
-#include <KCmdLineArgs>
-#include <KLocale>
-#include <KApplication>
+#include <KLocalizedString>
+
 #include <KDesktopFile>
-#include <KDebug>
 #include <KConfigGroup>
 
 #include "SolidActionData.h"
 
-#include <iostream>
-
 int main( int argc, char *argv[] )
 {
-    KLocale::setMainCatalog("solid-action-desktop-gen");
-    // About data
-    KAboutData aboutData("solid-action-desktop-gen", 0, ki18n("Solid Action Desktop File Generator"), "0.4", ki18n("Tool to automatically generate Desktop Files from Solid DeviceInterface classes for translation"),
-                         KAboutLicense::GPL, ki18n("(c) 2009, Ben Cooksley"));
-    aboutData.addAuthor(ki18n("Ben Cooksley"), ki18n("Maintainer"), "ben@eclipse.endoftheinternet.org");
-    KCmdLineArgs::init(argc, argv, &aboutData);
+    KLocalizedString::setApplicationDomain("kcm_solid_actions");
+    QCoreApplication application(argc, argv);
 
-    KApplication application(false);
+    // About data
+    KAboutData aboutData("solid-action-desktop-gen", i18n("Solid Action Desktop File Generator"), "0.4",
+                         i18n("Tool to automatically generate Desktop Files from Solid DeviceInterface classes for translation"),
+                         KAboutLicense::GPL, i18n("(c) 2009, Ben Cooksley"));
+    aboutData.addAuthor(i18n("Ben Cooksley"), i18n("Maintainer"), "ben@eclipse.endoftheinternet.org");
+    KAboutData::setApplicationData(aboutData);
+
+    QCommandLineParser parser;
+    parser.addHelpOption();
+    parser.addVersionOption();
+    aboutData.setupCommandLine(&parser);
+    parser.process(application);
+    aboutData.processCommandLine(&parser);
+
     SolidActionData * availActions = SolidActionData::instance();
     foreach( Solid::DeviceInterface::Type internalType, availActions->interfaceTypeList() ) {
-        QString typeName = Solid::DeviceInterface::typeToString( internalType );
-        KDesktopFile typeFile( "services", "solid-device-" + typeName + ".desktop" );
+        const QString typeName = Solid::DeviceInterface::typeToString( internalType );
+        KDesktopFile typeFile(QStandardPaths::GenericDataLocation, "solid/devices/solid-device-" + typeName + ".desktop" );
         KConfigGroup tConfig = typeFile.desktopGroup();
 
         tConfig.writeEntry( "Name", "Solid Device" );
@@ -53,11 +62,11 @@ int main( int argc, char *argv[] )
             tConfig.writeEntry( "X-KDE-Solid-Actions-Type", typeName );
         }
 
-        QStringList typeValues = availActions->propertyInternalList( internalType );
-        QString actionText = typeValues.join(";").append(";");
+        const QStringList typeValues = availActions->propertyInternalList( internalType );
+        const QString actionText = typeValues.join(";").append(";");
         tConfig.writeEntry( "Actions", actionText );
 
-        kWarning() << "Desktop file created: " + typeFile.fileName();
+        qWarning() << "Desktop file created: " + typeFile.fileName();
         foreach( const QString &tValue, typeValues ) {
             KConfigGroup vConfig = typeFile.actionGroup( tValue );
             if( !vConfig.hasKey("Name") ) {
@@ -69,6 +78,6 @@ int main( int argc, char *argv[] )
         typeFile.sync();
     }
 
-    kWarning() << "Generation now completed";
+    qWarning() << "Generation now completed";
     return 0;
 }

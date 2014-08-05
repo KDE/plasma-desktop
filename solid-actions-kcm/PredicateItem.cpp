@@ -24,7 +24,7 @@
 #include <QList>
 #include <QString>
 
-#include <KLocale>
+#include <KLocalizedString>
 #include <Solid/Predicate>
 
 class PredicateItem::Private {

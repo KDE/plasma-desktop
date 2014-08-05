@@ -21,17 +21,15 @@
 
 #include <QList>
 #include <QMetaProperty>
+#include <QDirIterator>
 
-#include <KGlobal>
-#include <kdesktopfileactions.h>
-#include <KStandardDirs>
+#include <KDesktopFileActions>
 #include <KStringHandler>
 #include <KDesktopFile>
 #include <KConfigGroup>
 
 #include <Solid/Battery>
 #include <Solid/Block>
-#include <Solid/Button>
 #include <Solid/Camera>
 #include <Solid/GenericInterface>
 #include <Solid/PortableMediaPlayer>
@@ -46,15 +44,14 @@ static SolidActionData * actData = 0;
 
 SolidActionData::SolidActionData(bool includeFiles)
 {
-    QStringList allPossibleDevices;
-    int propertyOffset = Solid::DeviceInterface::staticMetaObject.propertyOffset();
+    const int propertyOffset = Solid::DeviceInterface::staticMetaObject.propertyOffset();
 
     QList<QMetaObject> interfaceList = fillInterfaceList();
     foreach( const QMetaObject &interface, interfaceList ) {
         QString ifaceName = interface.className();
         ifaceName.remove(0, ifaceName.lastIndexOf(':') + 1);
         Solid::DeviceInterface::Type ifaceDev = Solid::DeviceInterface::stringToType( ifaceName );
-        QString cleanName = Solid::DeviceInterface::typeDescription( ifaceDev );
+        const QString cleanName = Solid::DeviceInterface::typeDescription( ifaceDev );
         types.insert( ifaceDev, cleanName );
 
         QMap<QString, QString> deviceValues;
@@ -67,15 +64,18 @@ SolidActionData::SolidActionData(bool includeFiles)
 
     if( includeFiles ) {
         // Fill the lists of possible device types / device values
-        allPossibleDevices = KGlobal::dirs()->findAllResources("data", "solid/devices/");
+        const QString deviceDir = QStandardPaths::locate(QStandardPaths::GenericDataLocation, "/solid/devices/", QStandardPaths::LocateDirectory);
         // List all the known device actions, then add their name and all values to the appropriate lists
-        foreach( const QString &desktop, allPossibleDevices ) {
+        QDirIterator it(deviceDir, QStringList() << QStringLiteral("*.desktop"));
+        while (it.hasNext()) {
+            it.next();
+            const QString desktop = it.filePath();
             KDesktopFile deviceFile(desktop);
             KConfigGroup deviceType = deviceFile.desktopGroup(); // Retrieve the configuration group where the user friendly name is
 
-            QString ifaceName = deviceType.readEntry("X-KDE-Solid-Actions-Type");
+            const QString ifaceName = deviceType.readEntry("X-KDE-Solid-Actions-Type");
             Solid::DeviceInterface::Type ifaceDev = Solid::DeviceInterface::stringToType( ifaceName );
-            QString cleanName = Solid::DeviceInterface::typeDescription( ifaceDev );
+            const QString cleanName = Solid::DeviceInterface::typeDescription( ifaceDev );
 
             types.insert( ifaceDev, cleanName ); // Read the user friendly name
 
@@ -163,7 +163,6 @@ QList<QMetaObject> SolidActionData::fillInterfaceList()
     QList<QMetaObject> interfaces;
     interfaces.append( Solid::Battery::staticMetaObject );
     interfaces.append( Solid::Block::staticMetaObject );
-    interfaces.append( Solid::Button::staticMetaObject );
     interfaces.append( Solid::Camera::staticMetaObject );
     interfaces.append( Solid::PortableMediaPlayer::staticMetaObject );
     interfaces.append( Solid::Processor::staticMetaObject );

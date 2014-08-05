@@ -20,7 +20,7 @@
 #ifndef PREDICATEMODEL_H
 #define PREDICATEMODEL_H
 
-#include <QtCore/QAbstractItemModel>
+#include <QAbstractItemModel>
 
 #include <Solid/Predicate>
 
@@ -34,12 +34,12 @@ public:
     explicit PredicateModel( PredicateItem * menuRoot, QObject *parent = 0 );
     ~PredicateModel();
 
-    QVariant data( const QModelIndex &index, int role ) const;
-    Qt::ItemFlags flags( const QModelIndex &index ) const;
-    QModelIndex index( int row, int column, const QModelIndex &parent = QModelIndex() ) const;
-    QModelIndex parent( const QModelIndex &index ) const;
-    int rowCount( const QModelIndex &parent = QModelIndex() ) const;
-    int columnCount( const QModelIndex &parent = QModelIndex() ) const;
+    QVariant data( const QModelIndex &index, int role ) const Q_DECL_OVERRIDE;
+    Qt::ItemFlags flags( const QModelIndex &index ) const Q_DECL_OVERRIDE;
+    QModelIndex index( int row, int column, const QModelIndex &parent = QModelIndex() ) const Q_DECL_OVERRIDE;
+    QModelIndex parent( const QModelIndex &index ) const Q_DECL_OVERRIDE;
+    int rowCount( const QModelIndex &parent = QModelIndex() ) const Q_DECL_OVERRIDE;
+    int columnCount( const QModelIndex &parent = QModelIndex() ) const Q_DECL_OVERRIDE;
 
     void setRootPredicate( PredicateItem * item );
     void itemUpdated( const QModelIndex& item );

@@ -22,7 +22,7 @@
 
 #include <QString>
 
-#include <kdesktopfileactions.h>
+#include <KDesktopFileActions>
 #include <KDesktopFile>
 #include <KConfigGroup>
 
@@ -48,7 +48,7 @@ ActionItem::ActionItem(const QString& pathToDesktop, const QString& action, QObj
     configGroups.append(desktopFileWrite->actionGroup(actionName));
     actionGroups.insertMulti(ActionItem::GroupAction, &configGroups.last());
 
-    QString predicateString = readKey(ActionItem::GroupDesktop, "X-KDE-Solid-Predicate", "");
+    const QString predicateString = readKey(ActionItem::GroupDesktop, "X-KDE-Solid-Predicate", "");
     predicateItem = Solid::Predicate::fromString( predicateString );
 }
 
@@ -60,22 +60,22 @@ ActionItem::~ActionItem()
 
 /// Public functions below
 
-bool ActionItem::isUserSupplied()
+bool ActionItem::isUserSupplied() const
 {
     return hasKey(ActionItem::GroupDesktop, "X-KDE-Action-Custom");
 }
 
-QString ActionItem::icon()
+QString ActionItem::icon() const
 {
     return readKey(ActionItem::GroupAction, "Icon", "");
 }
 
-QString ActionItem::exec() 
+QString ActionItem::exec() const
 {
     return readKey(ActionItem::GroupAction, "Exec", "");
 }
 
-QString ActionItem::name()
+QString ActionItem::name() const
 {
     return readKey(ActionItem::GroupAction, "Name", "");
 }
@@ -120,7 +120,7 @@ void ActionItem::setPredicate( const QString& newPredicate )
 
 /// Private functions below
 
-QString ActionItem::readKey(GroupType keyGroup, const QString& keyName, const QString& defaultValue)
+QString ActionItem::readKey(GroupType keyGroup, const QString& keyName, const QString& defaultValue) const
 {
     return configItem(ActionItem::DesktopRead, keyGroup, keyName)->readEntry(keyName, defaultValue);
 }
@@ -130,12 +130,12 @@ void ActionItem::setKey(GroupType keyGroup, const QString& keyName, const QStrin
     configItem(ActionItem::DesktopWrite, keyGroup)->writeEntry(keyName, keyContents);
 }
 
-bool ActionItem::hasKey(GroupType keyGroup, const QString& keyName)
+bool ActionItem::hasKey(GroupType keyGroup, const QString& keyName) const
 {
     return configItem(ActionItem::DesktopRead, keyGroup, keyName)->hasKey(keyName);
 }
 
-KConfigGroup * ActionItem::configItem(DesktopAction actionType, GroupType keyGroup, const QString& keyName)
+KConfigGroup * ActionItem::configItem(DesktopAction actionType, GroupType keyGroup, const QString& keyName) const
 {
     int countAccess = 0;
 

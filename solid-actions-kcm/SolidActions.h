@@ -37,15 +37,15 @@ class SolidActions: public KCModule
 public:
     SolidActions(QWidget* parent, const QVariantList&);
     ~SolidActions();
-    void load();
-    void save();
-    void defaults();
+    void load() Q_DECL_OVERRIDE;
+    void save() Q_DECL_OVERRIDE;
+    void defaults() Q_DECL_OVERRIDE;
 
 private slots:
     void addAction();
     void editAction();
     void deleteAction();
-    ActionItem * selectedAction();
+    ActionItem * selectedAction() const;
     void fillActionsList();
     void acceptActionChanges();
     void toggleEditDelete();
@@ -57,7 +57,7 @@ private:
     ActionModel * actionModel;
     ActionEditor * editUi;
     Ui::AddAction addUi;
-    KDialog * addDialog;
+    QDialog * addDialog;
     void clearActions();
 
 };

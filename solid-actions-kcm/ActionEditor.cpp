@@ -23,16 +23,16 @@
 
 #include <Solid/Predicate>
 
-ActionEditor::ActionEditor(QWidget *parent) : KDialog(parent)
+ActionEditor::ActionEditor(QWidget *parent) : QDialog(parent)
 {
     topItem = new PredicateItem( Solid::Predicate(), 0 );
     rootItem = 0;
     rootModel = new PredicateModel( topItem, this );
     // Prepare the dialog
-    setInitialSize( QSize(600, 600) ); // Set a decent initial size
+    resize( QSize(600, 600) ); // Set a decent initial size
     // setModal( true );
     // Set up the interface
-    ui.setupUi( mainWidget() );
+    ui.setupUi(this);
     ui.TvPredicateTree->setHeaderHidden( true );
     ui.TvPredicateTree->setModel( rootModel );
     ui.IbActionIcon->setIconSize( KIconLoader::SizeLarge );
@@ -46,7 +46,10 @@ ActionEditor::ActionEditor(QWidget *parent) : KDialog(parent)
     connect( ui.CbDeviceType, SIGNAL(currentIndexChanged(int)), this, SLOT(updatePropertyList()) );
     connect( ui.CbParameterType, SIGNAL(currentIndexChanged(int)), this, SLOT(manageControlStatus()) );
 
-    if( !KGlobalSettings::singleClick() ) {
+    connect(ui.buttonBox, &QDialogButtonBox::accepted, this, &ActionEditor::accept);
+    connect(ui.buttonBox, &QDialogButtonBox::rejected, this, &ActionEditor::reject);
+
+    if (ui.TvPredicateTree->style()->styleHint(QStyle::SH_ItemView_ActivateItemOnSingleClick)) {
         connect( ui.TvPredicateTree, SIGNAL(clicked(QModelIndex)), this, SLOT(updateParameter()) );
     }
 }
@@ -63,10 +66,10 @@ void ActionEditor::setActionToEdit( ActionItem * item )
     // Set all the text appropriately
     ui.IbActionIcon->setIcon( item->icon() );
     ui.LeActionFriendlyName->setText( item->name() );
-    ui.LeActionCommand->setUrl( KUrl(item->exec()) );
+    ui.LeActionCommand->setText(item->exec());
 
     setPredicate( item->predicate() );
-    setCaption( i18n("Editing Action %1", item->name()) ); // Set a friendly i18n caption
+    setWindowTitle(i18n("Editing Action '%1'", item->name()) ); // Set a friendly i18n caption
 }
 
 void ActionEditor::setPredicate( Solid::Predicate predicate )
@@ -184,7 +187,7 @@ void ActionEditor::accept()
         activeItem->setPredicate( predicate ); // Write the change
     }
 
-    KDialog::accept();
+    QDialog::accept();
 }
 
 #include "ActionEditor.moc"

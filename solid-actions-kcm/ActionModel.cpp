@@ -21,9 +21,11 @@
 #include "ActionModel.h"
 #include "ActionItem.h"
 
-#include <kdesktopfileactions.h>
-#include <KStandardDirs>
-#include <KIcon>
+#include <KDesktopFileActions>
+
+#include <QIcon>
+#include <QStandardPaths>
+#include <QDirIterator>
 
 class ActionModel::Private {
 public:
@@ -34,7 +36,7 @@ public:
 
 static bool sortAction( ActionItem * left, ActionItem * right )
 {
-    return left->name() > right->name();
+    return left->name().localeAwareCompare(right->name()) < 0;
 }
 
 ActionModel::ActionModel( QObject *parent )
@@ -73,23 +75,23 @@ QVariant ActionModel::data( const QModelIndex &index, int role ) const
 
     ActionItem * mi = d->actions.at( index.row() );
     switch ( role ) {
-        case Qt::DisplayRole:
-            if( index.column() == 0 ) {
-                theData.setValue( mi->name() );
-            } else if( index.column() == 1 ) {
-                theData.setValue( mi->involvedTypes() );
-            }
-            break;
-        case Qt::DecorationRole:
-            if( index.column() == 0 ) {
-                theData = QVariant( KIcon(mi->icon()) );
-            }
-            break;
-        case Qt::UserRole:
-            theData.setValue( mi );
-            break;
-        default:
-            break;
+    case Qt::DisplayRole:
+        if( index.column() == 0 ) {
+            theData.setValue( mi->name() );
+        } else if( index.column() == 1 ) {
+            theData.setValue( mi->involvedTypes() );
+        }
+        break;
+    case Qt::DecorationRole:
+        if( index.column() == 0 ) {
+            theData = QIcon::fromTheme(mi->icon());
+        }
+        break;
+    case Qt::UserRole:
+        theData.setValue( mi );
+        break;
+    default:
+        break;
     }
     return theData;
 }
@@ -99,16 +101,22 @@ void ActionModel::buildActionList()
     qDeleteAll( d->actions );
     d->actions.clear();
     // Prepare to search for possible actions -> we only want solid types
-    QStringList allPossibleActions = KGlobal::dirs()->findAllResources("data", "solid/actions/");
+    const QStringList actionDirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, "solid/actions", QStandardPaths::LocateDirectory);
     // Get service objects for those actions and add them to the display
-    foreach(const QString &desktop, allPossibleActions) {
-        // Get contained services list
-        QList<KServiceAction> services = KDesktopFileActions::userDefinedServices(desktop, true);
-        foreach( const KServiceAction &deviceAction, services ) {
-            ActionItem * actionItem = new ActionItem( desktop, deviceAction.name(), this ); // Create an action
-            d->actions.append( actionItem );
+    foreach (const QString & actionDir, actionDirs) {
+        QDirIterator it(actionDir, QStringList() << QStringLiteral("*.desktop"));
+        while (it.hasNext()) {
+            it.next();
+            const QString desktop = it.filePath();
+            // Get contained services list
+            QList<KServiceAction> services = KDesktopFileActions::userDefinedServices(desktop, true);
+            foreach( const KServiceAction &deviceAction, services ) {
+                ActionItem * actionItem = new ActionItem( desktop, deviceAction.name(), this ); // Create an action
+                d->actions.append( actionItem );
+            }
         }
     }
+
     qSort( d->actions.begin(), d->actions.end(), sortAction );
     reset();
 }

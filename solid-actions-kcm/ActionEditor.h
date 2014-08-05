@@ -20,7 +20,7 @@
 #ifndef ACTIONEDITOR_H
 #define ACTIONEDITOR_H
 
-#include <KDialog>
+#include <QDialog>
 
 #include "ActionItem.h"
 #include "PredicateItem.h"
@@ -28,7 +28,7 @@
 #include "SolidActionData.h"
 #include "ui_ActionEditor.h"
 
-class ActionEditor : public KDialog
+class ActionEditor : public QDialog
 {
     Q_OBJECT
 public:
@@ -38,7 +38,7 @@ public:
     void setActionToEdit( ActionItem * item );
 
 public slots:
-    virtual void accept();
+    virtual void accept() Q_DECL_OVERRIDE;
 
 private:
     SolidActionData * actionData();

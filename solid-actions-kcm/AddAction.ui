@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>289</width>
-    <height>40</height>
+    <width>266</width>
+    <height>65</height>
    </rect>
   </property>
   <layout class="QGridLayout" name="gridLayout">
@@ -21,7 +21,7 @@
       </widget>
      </item>
      <item row="0" column="1">
-      <widget class="KLineEdit" name="LeActionName">
+      <widget class="QLineEdit" name="LeActionName">
        <property name="toolTip">
         <string>Enter the name for your new action</string>
        </property>
@@ -29,15 +29,15 @@
      </item>
     </layout>
    </item>
+   <item row="1" column="0">
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
   </layout>
  </widget>
- <customwidgets>
-  <customwidget>
-   <class>KLineEdit</class>
-   <extends>QLineEdit</extends>
-   <header>klineedit.h</header>
-  </customwidget>
- </customwidgets>
  <resources/>
  <connections/>
 </ui>

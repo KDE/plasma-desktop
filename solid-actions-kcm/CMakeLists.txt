@@ -25,8 +25,8 @@ ki18n_wrap_ui(kcm_solid_actions_srcs
 add_library(kcm_solid_actions MODULE ${kcm_solid_actions_srcs})
 add_executable(solid-action-desktop-gen ${solid_action_desktop_gen_srcs})
 
-target_link_libraries(kcm_solid_actions KF5::KIOCore KF5::KIOWidgets KF5::Solid )
-target_link_libraries(solid-action-desktop-gen KF5::Solid KF5::KIOCore KF5::KIOWidgets )
+target_link_libraries(kcm_solid_actions KF5::KIOCore KF5::KIOWidgets KF5::Solid KF5::I18n KF5::IconThemes KF5::ConfigWidgets KF5::CoreAddons)
+target_link_libraries(solid-action-desktop-gen KF5::Solid KF5::KIOCore KF5::I18n KF5::KIOWidgets)
 
 ########### install files ###############
 
@@ -35,4 +35,3 @@ install( TARGETS solid-action-desktop-gen ${INSTALL_TARGETS_DEFAULT_ARGS} )
 install( FILES solid-actions.desktop DESTINATION ${SERVICES_INSTALL_DIR} )
 install( FILES solid-action-template.desktop DESTINATION ${DATA_INSTALL_DIR}/kcmsolidactions )
 install( FILES solid-device-type.desktop DESTINATION ${SERVICETYPES_INSTALL_DIR} )
-

@@ -123,7 +123,7 @@ plasma_install_package(desktoppackage org.kde.plasma.desktop shells shell)
 
 add_subdirectory(doc)
 # add_subdirectory(ktouchpadenabler)
-# add_subdirectory(solid-actions-kcm)
+add_subdirectory(solid-actions-kcm)
 
 # add_subdirectory(runners)
 add_subdirectory(containments)

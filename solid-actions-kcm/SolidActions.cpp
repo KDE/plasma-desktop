@@ -20,33 +20,32 @@
 #include "SolidActions.h"
 #include "ActionItem.h"
 
-#include <KUrl>
-#include <KDialog>
 #include <KAboutData>
 #include <KMessageBox>
 #include <KDesktopFile>
-#include <KIO/NetAccess>
-#include <KStandardDirs>
 #include <KPluginFactory>
 #include <KBuildSycocaProgressDialog>
+#include <KConfigGroup>
+#include <KStandardGuiItem>
 
 #include <QComboBox>
 #include <QPushButton>
+#include <QDebug>
 
 #include <Solid/DeviceInterface>
 #include <Solid/Predicate>
 
 K_PLUGIN_FACTORY( SolidActionsFactory, registerPlugin<SolidActions>(); )
-K_EXPORT_PLUGIN( SolidActionsFactory("kcmsolidactions", "kcm_solid_actions") )
 
 SolidActions::SolidActions(QWidget* parent, const QVariantList&)
-        : KCModule(SolidActionsFactory::componentData(), parent)
+    : KCModule(parent)
 {
-    KAboutData * about = new KAboutData("Device Actions", 0, ki18n("Solid Device Actions Editor"), "1.1",
-                                       ki18n("Solid Device Actions Control Panel Module"),
+    KAboutData * about = new KAboutData("Device Actions", i18n("Solid Device Actions Editor"), "1.2",
+                                       i18n("Solid Device Actions Control Panel Module"),
                                        KAboutLicense::GPL,
-                                       ki18n("(c) 2009 Solid Device Actions team"));
-    about->addAuthor(ki18n("Ben Cooksley"), ki18n("Maintainer"), "ben@eclipse.endoftheinternet.org");
+                                       i18n("(c) 2009, 2014 Solid Device Actions team"));
+    about->addAuthor(i18n("Ben Cooksley"), i18n("Maintainer"), "ben@eclipse.endoftheinternet.org");
+    about->addCredit(QString::fromUtf8("Lukáš Tinkl"), i18n("Port to Plasma 5"), QStringLiteral("ltinkl@redhat.com"));
     setAboutData(about);
     setButtons(KCModule::Help);
 
@@ -57,8 +56,8 @@ SolidActions::SolidActions(QWidget* parent, const QVariantList&)
     mainUi.TvActions->setHeaderHidden( true );
     mainUi.TvActions->setRootIsDecorated( false );
     mainUi.TvActions->setSelectionMode( QAbstractItemView::SingleSelection );
-    mainUi.PbAddAction->setGuiItem( KStandardGuiItem::add() );
-    mainUi.PbEditAction->setIcon( KIcon("document-edit") );
+    KStandardGuiItem::assign(mainUi.PbAddAction, KStandardGuiItem::Add);
+    mainUi.PbEditAction->setIcon( QIcon::fromTheme("document-edit") );
 
     connect( mainUi.PbAddAction, SIGNAL(clicked()), this, SLOT(slotShowAddDialog()) );
     connect( mainUi.PbEditAction, SIGNAL(clicked()), this, SLOT(editAction()) );
@@ -71,13 +70,14 @@ SolidActions::SolidActions(QWidget* parent, const QVariantList&)
     connect( editUi, SIGNAL(accepted()), this, SLOT(acceptActionChanges()) );
 
     // Prepare + connect up add action dialog
-    addDialog = new KDialog(this);
-    addUi.setupUi( addDialog->mainWidget() );
-    addDialog->setInitialSize( QSize(300, 100) ); // Set a sensible default size
+    addDialog = new QDialog(this);
+    addUi.setupUi( addDialog );
+    addDialog->resize(QSize(300, 100)); // Set a sensible default size
 
     slotTextChanged( addUi.LeActionName->text() );
     connect( addUi.LeActionName, SIGNAL(textChanged(QString)), this, SLOT(slotTextChanged(QString)) );
-    connect( addDialog, SIGNAL(okClicked()), this, SLOT(addAction()) );
+    connect( addUi.buttonBox, SIGNAL(accepted()), this, SLOT(addAction()) );
+    connect( addUi.buttonBox, SIGNAL(rejected()), addDialog, SLOT(reject()) );
 }
 
 SolidActions::~SolidActions()
@@ -95,7 +95,7 @@ void SolidActions::slotShowAddDialog()
 
 void SolidActions::slotTextChanged( const QString & text )
 {
-    addDialog->enableButtonOk( !text.isEmpty() );
+    addUi.buttonBox->button(QDialogButtonBox::Ok)->setEnabled(!text.isEmpty());
 }
 
 void SolidActions::load()
@@ -113,14 +113,18 @@ void SolidActions::save()
 
 void SolidActions::addAction()
 {
-    QString enteredName = addUi.LeActionName->text();
-    KDesktopFile templateDesktop(KStandardDirs::locate("data", "kcmsolidactions/solid-action-template.desktop")); // Lets get the template
+    const QString enteredName = addUi.LeActionName->text();
+    KDesktopFile templateDesktop(QStandardPaths::GenericDataLocation, "kcmsolidactions/solid-action-template.desktop"); // Lets get the template
 
     // Lets get a desktop file
     QString internalName = enteredName; // copy the name the user entered -> we will be making mods
     internalName.replace(QChar(' '), QChar('-'), Qt::CaseSensitive); // replace spaces with dashes
-    QString filePath = KStandardDirs::locateLocal("data", 0); // Get the location on disk for "data"
-    filePath = filePath + "solid/actions/" + internalName + ".desktop"; // Create a file path for new action
+
+    QString filePath = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + "/solid/actions/"; // Get the location on disk for "data"
+    if (!QDir().exists(filePath)) {
+        QDir().mkpath(filePath);
+    }
+    filePath += internalName + ".desktop";
 
     // Fill in an initial template
     KDesktopFile * newDesktop = templateDesktop.copyTo(filePath);
@@ -133,13 +137,14 @@ void SolidActions::addAction()
     QModelIndex newAction;
     foreach( ActionItem * newItem, actionList ) { // Lets find our new action
         if( newItem->desktopMasterPath == filePath ) {
-            int position = actionList.indexOf( newItem );
-            newAction = actionModel->index( position, 0, QModelIndex() ); // Grab it
+            const int position = actionList.indexOf( newItem );
+            newAction = actionModel->index( position, 0 ); // Grab it
             break;
         }
     }
 
     mainUi.TvActions->setCurrentIndex( newAction ); // Set it as currently active
+    addDialog->hide();
     editAction(); // Open the edit dialog
 }
 
@@ -166,13 +171,13 @@ void SolidActions::deleteAction()
 {
     ActionItem * action = selectedAction();
     if( action->isUserSupplied() ) { // Is the action user supplied?
-        KIO::NetAccess::del( KUrl(action->desktopMasterPath), this); // Remove the main desktop file then
+        QFile::remove(action->desktopMasterPath); // Remove the main desktop file then
     }
-    KIO::NetAccess::del( KUrl(action->desktopWritePath), this); // Remove the modified desktop file now
+    QFile::remove(action->desktopWritePath); // Remove the modified desktop file now
     fillActionsList(); // Update the list of actions
 }
 
-ActionItem * SolidActions::selectedAction()
+ActionItem * SolidActions::selectedAction() const
 {
     QModelIndex action = mainUi.TvActions->currentIndex();
     ActionItem * actionItem = actionModel->data( action, Qt::UserRole ).value<ActionItem*>();
@@ -181,7 +186,7 @@ ActionItem * SolidActions::selectedAction()
 
 void SolidActions::fillActionsList()
 {
-    mainUi.TvActions->selectionModel()->clearSelection();
+    mainUi.TvActions->clearSelection();
     actionModel->buildActionList();
     mainUi.TvActions->header()->setResizeMode( 0, QHeaderView::Stretch );
     mainUi.TvActions->header()->setResizeMode( 1, QHeaderView::ResizeToContents );
@@ -201,7 +206,7 @@ void SolidActions::toggleEditDelete()
 
     if( !mainUi.TvActions->currentIndex().isValid() ) { // Is an action selected?
         mainUi.PbDeleteAction->setText( i18n("No Action Selected") ); // Set a friendly disabled text
-        mainUi.PbDeleteAction->setIcon( KIcon() );
+        mainUi.PbDeleteAction->setIcon( QIcon() );
         toggle = false;
     }
 
@@ -212,18 +217,17 @@ void SolidActions::toggleEditDelete()
         return;
     }
 
-    KUrl writeDesktopFile( selectedAction()->desktopWritePath ); // Get the write desktop file
     // What functionality do we need to change?
     if( selectedAction()->isUserSupplied() ) {
         // We are able to directly delete it, enable full delete functionality
-        mainUi.PbDeleteAction->setGuiItem( KStandardGuiItem::remove() );
-    } else if( KIO::NetAccess::exists(writeDesktopFile, KIO::NetAccess::SourceSide, this) ) { // Does the write file exist?
+        KStandardGuiItem::assign(mainUi.PbDeleteAction, KStandardGuiItem::Remove);
+    } else if( QFile::exists(selectedAction()->desktopWritePath) ) { // Does the write file exist?
         // We are able to revert, lets show it
-        mainUi.PbDeleteAction->setGuiItem( KStandardGuiItem::discard() );
+        KStandardGuiItem::assign(mainUi.PbDeleteAction, KStandardGuiItem::Discard);
     } else {
         // We cannot do anything then, disable delete functionality
         mainUi.PbDeleteAction->setText( i18n("Cannot be deleted") );
-        mainUi.PbDeleteAction->setIcon( KIcon() );
+        mainUi.PbDeleteAction->setIcon( QIcon() );
         mainUi.PbDeleteAction->setEnabled( false );
     }
 }
