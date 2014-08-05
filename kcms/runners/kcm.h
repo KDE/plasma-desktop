@@ -24,23 +24,37 @@
 #include <KConfigGroup>
 #include <QListWidget>
 
+class QToolButton;
+class KCModuleProxy;
+
+namespace Plasma {
+    class AbstractRunner;
+}
+
 class SearchConfigModule : public KCModule
 {
     Q_OBJECT
 
 public:
+    enum Roles {
+        RunnersRole = Qt::UserRole + 1
+    };
+
     SearchConfigModule(QWidget* parent, const QVariantList& args);
 
 public Q_SLOTS:
     void load();
     void save();
     void defaults();
+    void configureClicked();
 
 private:
     QListWidget* m_listWidget;
 
     KConfig m_config;
     KConfigGroup m_configGroup;
+    QToolButton *m_configButton;
+    QMultiHash <QString, Plasma::AbstractRunner *> m_runnerCategories;
 };
 
 #endif
