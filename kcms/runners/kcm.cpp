@@ -70,7 +70,7 @@ SearchConfigModule::SearchConfigModule(QWidget* parent, const QVariantList& args
     connect(m_listWidget, &QListWidget::itemEntered, [=](QListWidgetItem * item) {
         QList<Plasma::AbstractRunner *> runners = item->data(RunnersRole).value<QList<Plasma::AbstractRunner *> >();
 
-        if (runners.count() > 0) {
+        if (!runners.isEmpty()) {
             const QRect rect = m_listWidget->visualItemRect(item);
             m_configButton->move(QPoint(rect.right(), rect.center().y()) - QPoint(m_configButton->width(), m_configButton->height()/2));
             m_configButton->setVisible(true);
@@ -93,7 +93,7 @@ SearchConfigModule::SearchConfigModule(QWidget* parent, const QVariantList& args
 
 void SearchConfigModule::configureClicked()
 {
-    QDialog *configDialog = new QDialog(m_listWidget);
+    QDialog configDialog(m_listWidget);
 
     // The number of KCModuleProxies in use determines whether to use a tabwidget
     QTabWidget *newTabWidget = 0;
@@ -102,7 +102,7 @@ void SearchConfigModule::configureClicked()
     QWidget *mainWidget = 0;
     // Widget to use as the KCModuleProxy's parent.
     // The first proxy is owned by the dialog itself
-    QWidget *moduleProxyParentWidget = configDialog;
+    QWidget *moduleProxyParentWidget = &configDialog;
 
     QList<KCModuleProxy *> moduleProxyList;
 
@@ -120,7 +120,7 @@ void SearchConfigModule::configureClicked()
                         // we already created one KCModuleProxy, so we need a tab widget.
                         // Move the first proxy into the tab widget and ensure this and subsequent
                         // proxies are in the tab widget
-                        newTabWidget = new QTabWidget(configDialog);
+                        newTabWidget = new QTabWidget(&configDialog);
                         moduleProxyParentWidget = newTabWidget;
                         mainWidget->setParent(newTabWidget);
                         KCModuleProxy *moduleProxy = qobject_cast<KCModuleProxy *>(mainWidget);
@@ -130,7 +130,7 @@ void SearchConfigModule::configureClicked()
                         } else {
                             delete newTabWidget;
                             newTabWidget = 0;
-                            moduleProxyParentWidget = configDialog;
+                            moduleProxyParentWidget = &configDialog;
                             mainWidget->setParent(0);
                         }
                     }
@@ -154,32 +154,26 @@ void SearchConfigModule::configureClicked()
 
     QVBoxLayout *layout = new QVBoxLayout;
     layout->addWidget(mainWidget);
-    const int marginHint = configDialog->style()->pixelMetric(QStyle::PM_DefaultChildMargin);
+    const int marginHint = configDialog.style()->pixelMetric(QStyle::PM_DefaultChildMargin);
     layout->insertSpacing(-1, marginHint);
 
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(configDialog);
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(&configDialog);
     buttonBox->setStandardButtons(QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::Cancel);
-    connect(buttonBox, SIGNAL(accepted()), configDialog, SLOT(accept()));
-    connect(buttonBox, SIGNAL(rejected()), configDialog, SLOT(reject()));
+    connect(buttonBox, &QDialogButtonBox::accepted, &configDialog, &QDialog::accept);
+    connect(buttonBox, &QDialogButtonBox::rejected, &configDialog, &QDialog::reject);
     layout->addWidget(buttonBox);
 
-    configDialog->setLayout(layout);
+    configDialog.setLayout(layout);
 
-    if (configDialog->exec() == QDialog::Accepted) {
+    if (configDialog.exec() == QDialog::Accepted) {
         foreach (KCModuleProxy *moduleProxy, moduleProxyList) {
-            QStringList parentComponents = moduleProxy->moduleInfo().service()->property(QStringLiteral("X-KDE-ParentComponents")).toStringList();
             moduleProxy->save();
-        }
-    } else {
-        foreach (KCModuleProxy *moduleProxy, moduleProxyList) {
-            moduleProxy->load();
         }
     }
 
     qDeleteAll(moduleProxyList);
-    moduleProxyList.clear();
 
-    configDialog->deleteLater();
+    configDialog.deleteLater();
 }
 
 void SearchConfigModule::load()
@@ -210,7 +204,7 @@ void SearchConfigModule::load()
 
             QList<Plasma::AbstractRunner *> runnersWithConfig;
             Q_FOREACH (Plasma::AbstractRunner *runner, m_runnerCategories.values(category)) {
-                if (runner->metadata().kcmServices().count() > 0) {
+                if (!runner->metadata().kcmServices().isEmpty()) {
                     runnersWithConfig << runner;
                 }
             }

@@ -54,7 +54,6 @@ private:
     KConfig m_config;
     KConfigGroup m_configGroup;
     QToolButton *m_configButton;
-    QList<Plasma::AbstractRunner *> m_runners;
     QMultiHash <QString, Plasma::AbstractRunner *> m_runnerCategories;
 };
 
