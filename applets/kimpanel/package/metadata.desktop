@@ -1,0 +1,20 @@
+[Desktop Entry]
+Name=Input Method Panel
+Comment=A generic input method panel
+Keywords=Input;IM;
+Type=Service
+Icon=draw-freehand
+X-KDE-ServiceTypes=Plasma/Applet
+
+X-Plasma-API=declarativeappletscript
+X-Plasma-MainScript=ui/main.qml
+
+X-KDE-PluginInfo-Author=Weng Xuetian
+X-KDE-PluginInfo-Email=wengxt@gmail.com
+X-KDE-PluginInfo-Name=org.kde.kimpanel
+X-KDE-PluginInfo-Version=1.0
+X-KDE-PluginInfo-Website=http://plasma.kde.org/
+X-KDE-PluginInfo-Category=Language
+X-KDE-PluginInfo-Depends=
+X-KDE-PluginInfo-License=GPL
+X-KDE-PluginInfo-EnabledByDefault=true
