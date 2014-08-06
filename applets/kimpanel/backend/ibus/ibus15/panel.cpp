@@ -111,9 +111,11 @@ void ibus_panel_impanel_navigate(IBusPanelImpanel* impanel, gboolean start)
     if (engine_desc) {
         const char* name = impanel->engineManager->navigate(engine_desc);
         impanel->selected = impanel->engineManager->getIndexByName(name);
+    } else {
+        return;
     }
 
-    if (impanel->selected < impanel->engineManager->length()) {
+    if (impanel->selected < impanel->engineManager->length() && impanel->selected >= 0) {
         engine_desc = impanel->engineManager->engines()[impanel->selected];
 
         ibus_property_set_icon (impanel->logo_prop, ibus_engine_desc_get_icon (engine_desc));
