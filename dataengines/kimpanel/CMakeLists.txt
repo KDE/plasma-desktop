@@ -1,3 +1,4 @@
+add_definitions(-DTRANSLATION_DOMAIN="plasma_engine_kimpanel")
 include_directories("${PROJECT_SOURCE_DIR}/libs")
 
 set(plasma_engine_kimpanel_SRCS
