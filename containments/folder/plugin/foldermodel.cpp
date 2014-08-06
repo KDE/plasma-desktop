@@ -106,6 +106,7 @@ FolderModel::FolderModel(QObject *parent) : QSortFilterProxyModel(parent),
 
     m_dirModel = new KDirModel(this);
     m_dirModel->setDirLister(dirLister);
+    m_dirModel->setDropsAllowed(KDirModel::DropOnDirectory | KDirModel::DropOnLocalExecutable);
 
     m_selectionModel = new QItemSelectionModel(this, this);
     connect(m_selectionModel, SIGNAL(selectionChanged(QItemSelection,QItemSelection)),
@@ -678,10 +679,12 @@ void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row)
         return;
     }
 
+    QModelIndex idx;
     KFileItem item;
 
     if (row > -1 && row < rowCount()) {
-         item = itemForIndex(index(row, 0));
+         idx = index(row, 0);
+         item = itemForIndex(idx);
     }
 
     if (item.isNull() &&
@@ -701,7 +704,7 @@ void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row)
         return;
     }
 
-    if (!item.acceptsDrops()) {
+    if (idx.isValid() && !(flags(idx) & Qt::ItemIsDropEnabled)) {
         return;
     }
 
