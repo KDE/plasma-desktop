@@ -70,6 +70,31 @@ ibus_property_to_propstr (IBusProperty *property,
                           IBusEngineDesc* engine = NULL);
 
 void
+impanel_update_logo_by_engine(IBusPanelImpanel* impanel, IBusEngineDesc* engine_desc)
+{
+    if (!impanel->conn) {
+        return;
+    }
+
+    const gchar* icon_name = "input-keyboard";
+    if (engine_desc) {
+        icon_name = ibus_engine_desc_get_icon (engine_desc);
+    }
+
+    ibus_property_set_icon (impanel->logo_prop, icon_name);
+
+    char propstr[512];
+    propstr[0] = '\0';
+
+    ibus_property_to_propstr(impanel->logo_prop, propstr, TRUE, engine_desc);
+
+    g_dbus_connection_emit_signal (impanel->conn,
+                                    NULL, "/kimpanel", "org.kde.kimpanel.inputmethod", "UpdateProperty",
+                                    (g_variant_new ("(s)", propstr)),
+                                    NULL);
+}
+
+void
 ibus_panel_impanel_set_bus (IBusPanelImpanel *impanel,
                             IBusBus          *bus)
 {
@@ -118,17 +143,7 @@ void ibus_panel_impanel_navigate(IBusPanelImpanel* impanel, gboolean start)
     if (impanel->selected < impanel->engineManager->length() && impanel->selected >= 0) {
         engine_desc = impanel->engineManager->engines()[impanel->selected];
 
-        ibus_property_set_icon (impanel->logo_prop, ibus_engine_desc_get_icon (engine_desc));
-
-        char propstr[512];
-        propstr[0] = '\0';
-
-        ibus_property_to_propstr(impanel->logo_prop, propstr, TRUE, engine_desc);
-
-        g_dbus_connection_emit_signal (impanel->conn,
-                                       NULL, "/kimpanel", "org.kde.kimpanel.inputmethod", "UpdateProperty",
-                                       (g_variant_new ("(s)", propstr)),
-                                       NULL);
+        impanel_update_logo_by_engine(impanel, engine_desc);
     }
 }
 
@@ -908,30 +923,12 @@ ibus_panel_impanel_focus_in (IBusPanelService *panel,
     IBusEngineDesc *engine_desc = NULL;
     engine_desc = ibus_bus_get_global_engine(impanel->bus);
 
-    const gchar* icon_name = "input-keyboard";
-    if (engine_desc) {
-        icon_name = ibus_engine_desc_get_icon (engine_desc);
-    }
-
-    ibus_property_set_icon (impanel->logo_prop, icon_name);
-
-    char propstr[512];
-    propstr[0] = '\0';
-
-    ibus_property_to_propstr(impanel->logo_prop, propstr, TRUE, engine_desc);
+    impanel_update_logo_by_engine(impanel, engine_desc);
 
     impanel->engineManager->setCurrentContext(input_context_path);
     if (!impanel->engineManager->useGlobalEngine()) {
         impanel_set_engine(impanel, impanel->engineManager->currentEngine().toUtf8().constData());
     }
-
-    if (!impanel->conn)
-        return;
-
-    g_dbus_connection_emit_signal (impanel->conn,
-                                   NULL, "/kimpanel", "org.kde.kimpanel.inputmethod", "UpdateProperty",
-                                   (g_variant_new ("(s)", propstr)),
-                                   NULL);
 }
 
 static void
@@ -1301,17 +1298,7 @@ ibus_panel_impanel_state_changed (IBusPanelService *panel)
         return;
     }
 
-    ibus_property_set_icon (impanel->logo_prop, ibus_engine_desc_get_icon (engine_desc));
-
-    char propstr[512];
-    propstr[0] = '\0';
-
-    ibus_property_to_propstr(impanel->logo_prop, propstr, TRUE, engine_desc);
-
-    g_dbus_connection_emit_signal (impanel->conn,
-                                   NULL, "/kimpanel", "org.kde.kimpanel.inputmethod", "UpdateProperty",
-                                   (g_variant_new ("(s)", propstr)),
-                                   NULL);
+    impanel_update_logo_by_engine(impanel, engine_desc);
 
     g_dbus_connection_emit_signal (impanel->conn,
                                    NULL, "/kimpanel", "org.kde.kimpanel.inputmethod", "Enable",
