@@ -65,6 +65,8 @@ void ItemViewAdapter::connect(Signal signal, QObject *receiver, const char *slot
 {
     if (signal == ScrollBarValueChanged) {
         QObject::connect(this, SIGNAL(viewScrolled()), receiver, slot);
+    } else if (signal == IconSizeChanged) {
+        QObject::connect(this, SIGNAL(adapterIconSizeChanged()), receiver, slot);
     }
 }
 
