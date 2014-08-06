@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- filename: kimpanel.xml -->
+<component>
+        <name>org.freedesktop.IBus.Panel</name>
+        <description>KDE IM Panel Component</description>
+        <exec>@LIBEXEC_INSTALL_DIR@/kimpanel-ibus-panel</exec>
+        <version>1.5.8</version>
+        <author>Weng Xuetian &lt;wengxt@gmail.com&gt;</author>
+        <license>GPL</license>
+        <homepage>http://www.kde.org</homepage>
+        <textdomain></textdomain>
+</component>

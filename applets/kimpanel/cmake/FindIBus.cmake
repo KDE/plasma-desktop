@@ -13,12 +13,12 @@
 # For details see the accompanying COPYING-CMAKE-SCRIPTS file.
 
 
-if (IBUS_LIBRARIES AND IBUS_INCLUDE_DIR)
+if (IBUS_LIBRARIES AND IBUS_INCLUDE_DIR AND IBUS_VERSION)
 
    # in cache already
    set(IBUS_FOUND TRUE)
 
-else (IBUS_LIBRARIES AND IBUS_INCLUDE_DIR)
+else ()
 
    if (NOT WIN32)
       # use pkg-config to get the directories and then use these values
@@ -45,9 +45,15 @@ else (IBUS_LIBRARIES AND IBUS_INCLUDE_DIR)
           )
    endif (PC_IBUS_FOUND)
 
+   set(IBUS_VERSION ${PC_IBUS_VERSION})
+   set(IBUS_FOUND ${PC_IBUS_FOUND})
+
    include(FindPackageHandleStandardArgs)
-   FIND_PACKAGE_HANDLE_STANDARD_ARGS(IBUS DEFAULT_MSG IBUS_LIBRARIES IBUS_INCLUDE_DIR)
+   FIND_PACKAGE_HANDLE_STANDARD_ARGS(IBUS
+                                     FOUND_VAR IBUS_FOUND
+                                     REQUIRED_VARS IBUS_LIBRARIES IBUS_INCLUDE_DIR
+                                     VERSION_VAR IBUS_VERSION)
 
-   mark_as_advanced(IBUS_LIBRARIES IBUS_INCLUDE_DIR)
+   mark_as_advanced(IBUS_LIBRARIES IBUS_INCLUDE_DIR IBUS_VERSION)
 
-endif (IBUS_LIBRARIES AND IBUS_INCLUDE_DIR)
+endif ()
