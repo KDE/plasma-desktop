@@ -252,7 +252,7 @@ void AppsModel::refresh()
             const KSycocaEntry::Ptr p = (*it);
 
             if (p->isType(KST_KServiceGroup)) {
-                KServiceGroup::Ptr subGroup = static_cast<KServiceGroup::Ptr >(p);
+                KServiceGroup::Ptr subGroup(static_cast<KServiceGroup*>(p.data()));
 
                 if (!subGroup->noDisplay() && subGroup->childCount() > 0) {
                     m_entryList << new AppGroupEntry(subGroup, this, m_flat, m_appNameFormat);
@@ -295,7 +295,7 @@ void AppsModel::processServiceGroup(KServiceGroup::Ptr group)
         const KSycocaEntry::Ptr p = (*it);
 
         if (p->isType(KST_KService)) {
-            const KService::Ptr service = static_cast<KService::Ptr>(p);
+            const KService::Ptr service(static_cast<KService*>(p.data()));
 
             if (!service->noDisplay()) {
                 bool found = false;
@@ -314,11 +314,12 @@ void AppsModel::processServiceGroup(KServiceGroup::Ptr group)
 
         } else if (p->isType(KST_KServiceGroup)) {
             if (m_flat) {
-                processServiceGroup(static_cast<KServiceGroup::Ptr>(p));
+                const KServiceGroup::Ptr serviceGroup(static_cast<KServiceGroup*>(p.data()));
+                processServiceGroup(serviceGroup);
 
                 m_sortNeeded = true;
             } else {
-                const KServiceGroup::Ptr subGroup = static_cast<KServiceGroup::Ptr>(p);
+                const KServiceGroup::Ptr subGroup(static_cast<KServiceGroup*>(p.data()));
 
                 if (!subGroup->noDisplay() && subGroup->childCount() > 0) {
                     m_entryList << new AppGroupEntry(subGroup, this, m_flat, m_appNameFormat);
