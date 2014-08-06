@@ -916,11 +916,10 @@ static void
 ibus_panel_impanel_focus_in (IBusPanelService *panel,
                              const gchar      *input_context_path)
 {
-    GDBusConnection *ibusconn;
     IBusPanelImpanel* impanel = IBUS_PANEL_IMPANEL (panel);
-    g_object_get (impanel,
-                  "connection", &ibusconn,
-                  NULL);
+    if (impanel->app->keyboardGrabbed()) {
+        return;
+    }
 
     IBusEngineDesc *engine_desc = NULL;
     engine_desc = ibus_bus_get_global_engine(impanel->bus);
