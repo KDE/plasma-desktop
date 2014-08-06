@@ -938,6 +938,16 @@ ibus_panel_impanel_focus_out (IBusPanelService *panel,
 {
     _UNUSED(panel);
     _UNUSED(input_context_path);
+    IBusPanelImpanel* impanel = IBUS_PANEL_IMPANEL (panel);
+
+    if (impanel->app->keyboardGrabbed()) {
+        return;
+    }
+
+    if (impanel->engineManager->useGlobalEngine()) {
+        return;
+    }
+    impanel->engineManager->setCurrentContext("");
 }
 
 static void
