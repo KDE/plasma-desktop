@@ -498,7 +498,6 @@ FocusScope {
                         return;
                     }
 
-                    // TODO Factor out pos<->index.
                     var rows = (gridView.flow == GridView.FlowLeftToRight);
                     var axis = rows ? gridView.width : gridView.height;
                     var step = rows ? cellWidth : cellHeight;
@@ -587,71 +586,91 @@ FocusScope {
                 }
 
                 Keys.onLeftPressed: {
-                    // FIXME TODO: Merge keyboard nav for custom positions.
                     if (positioner.enabled) {
-                        return;
+                        var newIndex = positioner.nearestItem(currentIndex,
+                            FolderTools.effectiveNavDirection(gridView.flow, gridView.layoutDirection, Qt.LeftArrow));
+
+                        if (newIndex != -1) {
+                            currentIndex = newIndex;
+                            updateSelection(event.modifiers);
+                        }
+                    } else {
+                        var oldIndex = currentIndex;
+
+                        moveCurrentIndexLeft();
+
+                        if (oldIndex == currentIndex) {
+                            return;
+                        }
+
+                        updateSelection(event.modifiers);
                     }
-
-                    var oldIndex = currentIndex;
-
-                    moveCurrentIndexLeft();
-
-                    if (oldIndex == currentIndex) {
-                        return;
-                    }
-
-                    updateSelection(event.modifiers);
                 }
 
                 Keys.onRightPressed: {
-                    // FIXME TODO: Merge keyboard nav for custom positions.
                     if (positioner.enabled) {
-                        return;
+                        var newIndex = positioner.nearestItem(currentIndex,
+                            FolderTools.effectiveNavDirection(gridView.flow, gridView.layoutDirection, Qt.RightArrow));
+
+                        if (newIndex != -1) {
+                            currentIndex = newIndex;
+                            updateSelection(event.modifiers);
+                        }
+                    } else {
+                        var oldIndex = currentIndex;
+
+                        moveCurrentIndexRight();
+
+                        if (oldIndex == currentIndex) {
+                            return;
+                        }
+
+                        updateSelection(event.modifiers);
                     }
-
-                    var oldIndex = currentIndex;
-
-                    moveCurrentIndexRight();
-
-                    if (oldIndex == currentIndex) {
-                        return;
-                    }
-
-                    updateSelection(event.modifiers);
                 }
 
                 Keys.onUpPressed: {
-                    // FIXME TODO: Merge keyboard nav for custom positions.
                     if (positioner.enabled) {
-                        return;
+                        var newIndex = positioner.nearestItem(currentIndex,
+                            FolderTools.effectiveNavDirection(gridView.flow, gridView.layoutDirection, Qt.UpArrow));
+
+                        if (newIndex != -1) {
+                            currentIndex = newIndex;
+                            updateSelection(event.modifiers);
+                        }
+                    } else {
+                        var oldIndex = currentIndex;
+
+                        moveCurrentIndexUp();
+
+                        if (oldIndex == currentIndex) {
+                            return;
+                        }
+
+                        updateSelection(event.modifiers);
                     }
-
-                    var oldIndex = currentIndex;
-
-                    moveCurrentIndexUp();
-
-                    if (oldIndex == currentIndex) {
-                        return;
-                    }
-
-                    updateSelection(event.modifiers);
                 }
 
                 Keys.onDownPressed: {
-                    // FIXME TODO: Merge keyboard nav for custom positions.
                     if (positioner.enabled) {
-                        return;
+                        var newIndex = positioner.nearestItem(currentIndex,
+                            FolderTools.effectiveNavDirection(gridView.flow, gridView.layoutDirection, Qt.DownArrow));
+
+                        if (newIndex != -1) {
+                            currentIndex = newIndex;
+                            updateSelection(event.modifiers);
+                        }
+                    } else {
+                        var oldIndex = currentIndex;
+
+                        moveCurrentIndexDown();
+
+                        if (oldIndex == currentIndex) {
+                            return;
+                        }
+
+                        updateSelection(event.modifiers);
                     }
-
-                    var oldIndex = currentIndex;
-
-                    moveCurrentIndexDown();
-
-                    if (oldIndex == currentIndex) {
-                        return;
-                    }
-
-                    updateSelection(event.modifiers);
                 }
 
                 Connections {
@@ -683,7 +702,6 @@ FocusScope {
             previewPlugins: plasmoid.configuration.previewPlugins
 
             onMove: {
-                // TODO Factor out pos<->index.
                 var rows = (gridView.flow == GridView.FlowLeftToRight);
                 var axis = rows ? gridView.width : gridView.height;
                 var step = rows ? cellWidth : cellHeight;
@@ -750,7 +768,6 @@ FocusScope {
 
             folderModel: dir
 
-            // TODO Factor out pos<->index.
             perStripe: Math.floor(((gridView.flow == GridView.FlowLeftToRight)
                 ? gridView.width : gridView.height) / ((gridView.flow == GridView.FlowLeftToRight)
                 ? gridView.cellWidth : gridView.cellHeight));

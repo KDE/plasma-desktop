@@ -27,7 +27,7 @@ Positioner::Positioner(QObject *parent): QAbstractItemModel(parent)
 , m_enabled(false)
 , m_folderModel(0)
 , m_perStripe(0)
-, m_lastIndex(-1)
+, m_lastRow(-1)
 , m_ignoreNextTransaction(false)
 , m_pendingPositions(false)
 , m_updatePositionsTimer(new QTimer(this))
@@ -147,6 +147,77 @@ int Positioner::map(int row) const
     return row;
 }
 
+int Positioner::nearestItem(int currentIndex, Qt::ArrowType direction)
+{
+    if (!m_enabled || currentIndex >= rowCount()) {
+        return -1;
+    }
+
+    if (currentIndex < 0) {
+        return firstRow();
+    }
+
+    int hDirection = 0;
+    int vDirection = 0;
+
+    switch (direction) {
+        case Qt::LeftArrow:
+            hDirection = -1;
+            break;
+        case Qt::RightArrow:
+            hDirection = 1;
+            break;
+        case Qt::UpArrow:
+            vDirection = -1;
+            break;
+        case Qt::DownArrow:
+            vDirection = 1;
+            break;
+        default:
+            return -1;
+    }
+
+    QList<int> rows(m_proxyToSource.keys());
+    qSort(rows);
+
+    int nearestItem = -1;
+    const QPoint currentPos(currentIndex % m_perStripe, currentIndex / m_perStripe);
+    int lastDistance = -1;
+    int distance = 0;
+
+    foreach (int row, rows) {
+        const QPoint pos(row % m_perStripe, row / m_perStripe);
+
+        if (row == currentIndex) {
+            continue;
+        }
+
+        if (hDirection == 0) {
+            if (vDirection * pos.y() > vDirection * currentPos.y()) {
+                distance = (pos - currentPos).manhattanLength();
+
+                if (nearestItem == -1 || distance < lastDistance
+                    || (distance == lastDistance && pos.x() == currentPos.x())) {
+                    nearestItem = row;
+                    lastDistance = distance;
+                }
+            }
+        } else if (vDirection == 0) {
+            if (hDirection * pos.x() > hDirection * currentPos.x()) {
+                distance = (pos - currentPos).manhattanLength();
+
+                if (nearestItem == -1 || distance < lastDistance
+                    || (distance == lastDistance && pos.y() == currentPos.y())) {
+                    nearestItem = row;
+                    lastDistance = distance;
+                }
+            }
+        }
+    }
+
+    return nearestItem;
+}
+
 bool Positioner::isBlank(int row) const
 {
     if (!m_enabled && m_folderModel) {
@@ -257,7 +328,7 @@ int Positioner::rowCount(const QModelIndex& parent) const
 {
     if (m_folderModel) {
         if (m_enabled) {
-            return lastIndex() + 1;
+            return lastRow() + 1;
         } else {
             return m_folderModel->rowCount(parent);
         }
@@ -325,7 +396,7 @@ void Positioner::move(const QVariantList &moves) {
             to = firstFreeRow();
 
             if (to == -1) {
-                to = lastIndex() + 1;
+                to = lastRow() + 1;
             }
         }
 
@@ -462,7 +533,7 @@ void Positioner::sourceRowsAboutToBeInserted(const QModelIndex &parent, int star
         }
 
         if (rest != -1) {
-            int firstNew = lastIndex() + 1;
+            int firstNew = lastRow() + 1;
             int remainder = (end - rest);
 
             beginInsertRows(parent, firstNew, firstNew + remainder);
@@ -487,7 +558,7 @@ void Positioner::sourceRowsAboutToBeMoved(const QModelIndex &sourceParent, int s
 void Positioner::sourceRowsAboutToBeRemoved(const QModelIndex &parent, int first, int last)
 {
     if (m_enabled) {
-        int oldLast = lastIndex();
+        int oldLast = lastRow();
 
         for (int i = first; i <= last; ++i) {
             int proxyRow = m_sourceToProxy.take(i);
@@ -515,8 +586,8 @@ void Positioner::sourceRowsAboutToBeRemoved(const QModelIndex &parent, int first
         m_proxyToSource = newProxyToSource;
         m_sourceToProxy = newSourceToProxy;
 
-        m_lastIndex = -1;
-        int newLast = lastIndex();
+        m_lastRow = -1;
+        int newLast = lastRow();
 
         if (oldLast > newLast) {
             int diff = oldLast - newLast;
@@ -601,16 +672,28 @@ void Positioner::updateMaps(int proxyIndex, int sourceIndex)
 {
     m_proxyToSource.insert(proxyIndex, sourceIndex);
     m_sourceToProxy.insert(sourceIndex, proxyIndex);
-    m_lastIndex = -1;
+    m_lastRow = -1;
 }
 
-int Positioner::lastIndex() const
+int Positioner::firstRow() const
 {
     if (!m_proxyToSource.isEmpty()) {
-        if (m_lastIndex != -1) {
-            return m_lastIndex;
+        QList<int> keys(m_proxyToSource.keys());
+        qSort(keys);
+
+        return keys.first();
+    }
+
+    return -1;
+}
+
+int Positioner::lastRow() const
+{
+    if (!m_proxyToSource.isEmpty()) {
+        if (m_lastRow != -1) {
+            return m_lastRow;
         } else {
-            QList<int> keys = m_proxyToSource.keys();
+            QList<int> keys(m_proxyToSource.keys());
             qSort(keys);
             return keys.last();
         }
@@ -622,7 +705,7 @@ int Positioner::lastIndex() const
 int Positioner::firstFreeRow() const
 {
     if (!m_proxyToSource.isEmpty()) {
-        int last = lastIndex();
+        int last = lastRow();
 
         for (int i = 0; i <= last; ++i) {
             if (!m_proxyToSource.contains(i)) {
@@ -712,7 +795,7 @@ void Positioner::applyPositions()
             index = firstFreeRow();
 
             if (index == -1) {
-                index = lastIndex() + 1;
+                index = lastRow() + 1;
             }
 
             updateMaps(index, sourceIndex);
@@ -728,7 +811,7 @@ void Positioner::applyPositions()
         index = firstFreeRow();
 
         if (index == -1) {
-            index = lastIndex() + 1;
+            index = lastRow() + 1;
         }
 
         updateMaps(index, it.value());
@@ -747,7 +830,7 @@ void Positioner::flushPendingChanges()
         return;
     }
 
-    int last = lastIndex();
+    int last = lastRow();
 
     foreach (const QModelIndex &idx, m_pendingChanges) {
         if (idx.row() <= last) {

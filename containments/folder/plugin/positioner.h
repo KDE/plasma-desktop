@@ -52,6 +52,9 @@ class Positioner : public QAbstractItemModel
         void setPositions(QStringList positions);
 
         Q_INVOKABLE int map(int row) const;
+
+        Q_INVOKABLE int nearestItem(int currentIndex, Qt::ArrowType direction);
+
         Q_INVOKABLE bool isBlank(int row) const;
         Q_INVOKABLE int indexForUrl(const QUrl &url) const;
 
@@ -95,7 +98,8 @@ class Positioner : public QAbstractItemModel
     private:
         void initMaps(int size = -1);
         void updateMaps(int proxyIndex, int sourceIndex);
-        int lastIndex() const;
+        int firstRow() const;
+        int lastRow() const;
         int firstFreeRow() const;
         void applyPositions();
         void flushPendingChanges();
@@ -107,8 +111,7 @@ class Positioner : public QAbstractItemModel
 
         int m_perStripe;
 
-        int m_lastIndex;
-        bool m_lastIndexDirty;
+        int m_lastRow;
 
         QModelIndexList m_pendingChanges;
         bool m_ignoreNextTransaction;
