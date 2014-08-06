@@ -14,7 +14,6 @@ QT5_ADD_DBUS_ADAPTOR(plasma_engine_kimpanel_SRCS
     kimpanelagent.h
     PanelAgent)
 
-kservice_desktop_to_json(plasma_engine_kimpanel plasma-dataengine-kimpanel.desktop)
 
 add_library(plasma_engine_kimpanel ${plasma_engine_kimpanel_SRCS})
 set_target_properties(plasma_engine_kimpanel PROPERTIES PREFIX "")
@@ -23,6 +22,7 @@ target_link_libraries(plasma_engine_kimpanel
 	KF5::Service
 	Qt5::DBus
 )
+kservice_desktop_to_json(plasma_engine_kimpanel plasma-dataengine-kimpanel.desktop)
 
 install(TARGETS plasma_engine_kimpanel
         DESTINATION ${PLUGIN_INSTALL_DIR}/plasma/dataengine)
