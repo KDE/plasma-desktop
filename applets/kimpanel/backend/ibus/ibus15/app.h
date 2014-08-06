@@ -37,15 +37,22 @@ public:
     virtual bool x11EventFilter(XEvent* event );
     void setTriggerKeys(QList< TriggerKey > triggersList);
     void setDoGrab(bool doGrab);
+    bool keyboardGrabbed() { return m_keyboardGrabbed; }
 private Q_SLOTS:
     void init();
     void clean();
     void grabKey();
     void ungrabKey();
+    uint getPrimaryModifier(uint state);
+    void keyRelease(const XEvent& event);
+    void accept();
+    void ungrabXKeyboard();
+    bool grabXKeyboard();
 private:
     IBusBus *m_bus;
     IBusPanelImpanel *m_impanel;
     QList< QPair< uint, uint > > m_triggersList;
+    bool m_keyboardGrabbed;
     bool m_doGrab;
 };
 

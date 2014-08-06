@@ -18,6 +18,7 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 #include "enginemanager.h"
+#include <QStringList>
 
 #define THRESHOLD 256
 
@@ -107,4 +108,68 @@ const char* EngineManager::navigate(IBusEngineDesc* engine)
     }
     i = (i + 1) % length();
     return ibus_engine_desc_get_name(m_engines[i]);
+}
+
+void EngineManager::moveToFirst(IBusEngineDesc* engine)
+{
+    int i = 0;
+    while (i < length()) {
+        if (m_engines[i] == engine ||
+            0 == g_strcmp0(ibus_engine_desc_get_name(engine), ibus_engine_desc_get_name(m_engines[i]))) {
+            break;
+        }
+        i++;
+    }
+    if (i == 0) {
+        return;
+    }
+    if (i >= m_length) {
+        return;
+    }
+
+    engine = m_engines[i];
+
+    for (int j = i; j > 0; j--) {
+        m_engines[j] = m_engines[j - 1];
+    }
+    m_engines[0] = engine;
+}
+
+int EngineManager::getIndexByName(const char* name)
+{
+    int i = 0;
+    while (i < length()) {
+        if (0 == g_strcmp0(name, ibus_engine_desc_get_name(m_engines[i]))) {
+            break;
+        }
+        i++;
+    }
+    return i;
+}
+
+void EngineManager::setOrder(const gchar** engine_names, size_t len)
+{
+    int k = 0;
+    for (size_t i = 0; i < len; i ++) {
+         int j = getIndexByName(engine_names[i]);
+         if (j < length()) {
+             if (j != k) {
+                 IBusEngineDesc* temp = m_engines[k];
+                 m_engines[k] = m_engines[j];
+                 m_engines[j] = temp;
+             }
+             k ++;
+         }
+    }
+}
+
+QStringList EngineManager::engineOrder()
+{
+    QStringList list;
+    int i = 0;
+    while (i < length()) {
+        list << QString::fromUtf8(ibus_engine_desc_get_name(m_engines[i]));
+        i++;
+    }
+    return list;
 }

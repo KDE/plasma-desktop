@@ -51,6 +51,7 @@ struct _IBusPanelImpanel {
     XkbLayoutManager* xkbLayoutManager;
     App* app;
     gboolean useSystemKeyboardLayout;
+    int selected;
 };
 
 struct _IBusPanelImpanelClass {
@@ -60,6 +61,13 @@ struct _IBusPanelImpanelClass {
 
 static void
 impanel_set_engine(IBusPanelImpanel* impanel, const char* name);
+
+
+static void
+ibus_property_to_propstr (IBusProperty *property,
+                          char *propstr,
+                          gboolean useSymbol = FALSE,
+                          IBusEngineDesc* engine = NULL);
 
 void
 ibus_panel_impanel_set_bus (IBusPanelImpanel *impanel,
@@ -73,14 +81,60 @@ void ibus_panel_impanel_set_app(IBusPanelImpanel* impanel, App* app)
     impanel->app = app;
 }
 
-void ibus_panel_impanel_navigate(IBusPanelImpanel* impanel)
+void ibus_panel_impanel_accept(IBusPanelImpanel* impanel)
 {
-    IBusEngineDesc* engine = ibus_bus_get_global_engine(impanel->bus);
-    if (!engine) {
+    if (impanel->selected >= 0 && impanel->selected < impanel->engineManager->length()) {
+        impanel_set_engine(impanel, ibus_engine_desc_get_name(impanel->engineManager->engines()[impanel->selected]));
+        impanel->selected = -1;
+    }
+}
+
+void ibus_panel_impanel_navigate(IBusPanelImpanel* impanel, gboolean start)
+{
+    if (start) {
+        impanel->selected = -1;
+    }
+
+    if (impanel->engineManager->length() < 2) {
         return;
     }
 
-    impanel_set_engine(impanel, impanel->engineManager->navigate(engine));
+    IBusEngineDesc* engine_desc = NULL;
+    if (impanel->selected < 0) {
+        engine_desc = ibus_bus_get_global_engine(impanel->bus);
+    } else if (impanel->selected < impanel->engineManager->length()) {
+        engine_desc = impanel->engineManager->engines()[impanel->selected];
+    } else {
+        engine_desc = impanel->engineManager->engines()[0];
+    }
+
+    if (engine_desc) {
+        const char* name = impanel->engineManager->navigate(engine_desc);
+        impanel->selected = impanel->engineManager->getIndexByName(name);
+    }
+
+    if (impanel->selected < impanel->engineManager->length()) {
+        engine_desc = impanel->engineManager->engines()[impanel->selected];
+
+        ibus_property_set_icon (impanel->logo_prop, ibus_engine_desc_get_icon (engine_desc));
+
+        char propstr[512];
+        propstr[0] = '\0';
+
+        ibus_property_to_propstr(impanel->logo_prop, propstr, TRUE, engine_desc);
+
+        g_dbus_connection_emit_signal (impanel->conn,
+                                       NULL, "/kimpanel", "org.kde.kimpanel.inputmethod", "UpdateProperty",
+                                       (g_variant_new ("(s)", propstr)),
+                                       NULL);
+    }
+}
+
+void ibus_panel_impanel_move_next(IBusPanelImpanel* impanel)
+{
+    if (impanel->engineManager->length() >= 2) {
+        impanel_set_engine(impanel, ibus_engine_desc_get_name(impanel->engineManager->engines()[1]));
+    }
 }
 
 
@@ -218,11 +272,18 @@ ibus_property_args_to_propstr (const char *key,
 static void
 ibus_property_to_propstr (IBusProperty *property,
                           char *propstr,
-                          gboolean useSymbol = FALSE)
+                          gboolean useSymbol,
+                          IBusEngineDesc* engine)
 {
+    const gchar* label = ibus_text_get_text (useSymbol ? ibus_property_get_symbol (property) : ibus_property_get_label(property));
+    const gchar* icon = ibus_property_get_icon (property);
+    if (engine && strncmp("xkb:", ibus_engine_desc_get_name(engine), 4) == 0) {
+        label = ibus_engine_desc_get_name(engine) + 4;
+        icon = "";
+    }
     ibus_property_args_to_propstr(ibus_property_get_key (property),
-                                  ibus_text_get_text (useSymbol ? ibus_property_get_symbol (property) : ibus_property_get_label(property)),
-                                  ibus_property_get_icon (property),
+                                  label,
+                                  icon,
                                   ibus_text_get_text (ibus_property_get_tooltip (property)),
                                   propstr);
 }
@@ -397,6 +458,22 @@ impanel_update_engines(IBusPanelImpanel* impanel, GVariant* var_engines) {
     }
 
     impanel->app->setDoGrab(len > 1);
+}
+
+static void
+impanel_update_engines_order(IBusPanelImpanel* impanel, GVariant* var_engines) {
+    const gchar** engine_names = NULL;
+    size_t len = 0;
+    engine_names = g_variant_get_strv(var_engines, &len);
+    if (len == 0) {
+        return;
+    }
+
+    impanel->engineManager->setOrder(engine_names, len);
+
+    if (impanel->engineManager->engines()) {
+        ibus_bus_set_global_engine_async(impanel->bus, ibus_engine_desc_get_name(impanel->engineManager->engines()[0]), 1000, NULL, NULL, NULL);
+    }
 }
 
 static void
@@ -677,6 +754,12 @@ on_bus_acquired (GDBusConnection *connection,
         if (var_engines)
             g_variant_unref(var_engines);
 
+        var_engines = ibus_config_get_value(config, "general", "engines-order");
+        if (var_engines) {
+            impanel_update_engines_order(impanel, var_engines);
+            g_variant_unref(var_engines);
+        }
+
         GVariant* var_triggers = ibus_config_get_value(config, "general/hotkey", "triggers");
         impanel_update_triggers(impanel, var_triggers);
         if (var_triggers)
@@ -765,6 +848,7 @@ ibus_panel_impanel_init (IBusPanelImpanel *impanel)
     impanel->bus = NULL;
     impanel->app = NULL;
     impanel->useSystemKeyboardLayout = false;
+    impanel->selected = -1;
 
     introspection_data = g_dbus_node_info_new_for_xml (introspection_xml, NULL);
     owner_id = g_bus_own_name (G_BUS_TYPE_SESSION,
@@ -822,7 +906,7 @@ ibus_panel_impanel_focus_in (IBusPanelService *panel,
     IBusEngineDesc *engine_desc = NULL;
     engine_desc = ibus_bus_get_global_engine(impanel->bus);
 
-    const gchar* icon_name = "ibus-keyboard";
+    const gchar* icon_name = "input-keyboard";
     if (engine_desc) {
         icon_name = ibus_engine_desc_get_icon (engine_desc);
     }
@@ -832,7 +916,7 @@ ibus_panel_impanel_focus_in (IBusPanelService *panel,
     char propstr[512];
     propstr[0] = '\0';
 
-    ibus_property_to_propstr(impanel->logo_prop, propstr);
+    ibus_property_to_propstr(impanel->logo_prop, propstr, TRUE, engine_desc);
 
     impanel->engineManager->setCurrentContext(input_context_path);
     if (!impanel->engineManager->useGlobalEngine()) {
@@ -1205,6 +1289,11 @@ ibus_panel_impanel_state_changed (IBusPanelService *panel)
     IBusPanelImpanel* impanel = IBUS_PANEL_IMPANEL(panel);
     if (!impanel->conn)
         return;
+
+    if (impanel->app->keyboardGrabbed()) {
+        return;
+    }
+
     IBusEngineDesc *engine_desc = ibus_bus_get_global_engine(impanel->bus);
     if (!engine_desc) {
         return;
@@ -1215,7 +1304,7 @@ ibus_panel_impanel_state_changed (IBusPanelService *panel)
     char propstr[512];
     propstr[0] = '\0';
 
-    ibus_property_to_propstr(impanel->logo_prop, propstr);
+    ibus_property_to_propstr(impanel->logo_prop, propstr, TRUE, engine_desc);
 
     g_dbus_connection_emit_signal (impanel->conn,
                                    NULL, "/kimpanel", "org.kde.kimpanel.inputmethod", "UpdateProperty",
@@ -1226,6 +1315,23 @@ ibus_panel_impanel_state_changed (IBusPanelService *panel)
                                    NULL, "/kimpanel", "org.kde.kimpanel.inputmethod", "Enable",
                                    (g_variant_new ("(b)", TRUE)),
                                    NULL);
+
+    impanel->engineManager->moveToFirst(engine_desc);
+    QStringList engineList = impanel->engineManager->engineOrder();
+
+    gchar** engine_names = g_new0 (gchar*, engineList.size() + 1);
+    size_t i = 0;
+    Q_FOREACH(const QString& name, engineList) {
+        engine_names[i] = g_strdup (name.toUtf8().constData());
+        i ++;
+    }
+
+    IBusConfig* config = ibus_bus_get_config(impanel->bus);
+    if (config) {
+        GVariant* var = g_variant_new_strv(engine_names, engineList.size());
+        ibus_config_set_value(config, "general", "engines-order", var);
+    }
+    g_strfreev(engine_names);
 }
 
 static void

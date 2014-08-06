@@ -38,78 +38,33 @@ ibus_disconnected_cb (IBusBus  *m_bus,
     app->finalize();
 }
 
-/*
- * copied from kwin/tabbox/tabbox.cpp
- * simplified a little
- */
-static bool areKeySymXsDepressed(const uint keySyms[], int nKeySyms) {
-    char keymap[32];
-
-    XQueryKeymap(QX11Info::display(), keymap);
-
-    for (int iKeySym = 0; iKeySym < nKeySyms; iKeySym++) {
-        uint keySymX = keySyms[ iKeySym ];
-        uchar keyCodeX = XKeysymToKeycode(QX11Info::display(), keySymX);
-        int i = keyCodeX / 8;
-        char mask = 1 << (keyCodeX - (i * 8));
-
-        // Abort if bad index value,
-        if (i < 0 || i >= 32)
-            return false;
-
-        // If ALL keys passed need to be depressed,
-        // If we are looking for ANY key press, and this key is depressed,
-        if (keymap[i] & mask)
-            return true;
-    }
-
-    // If we were looking for ANY key press, then none was found, return false,
-    return false;
-}
-
-/*
- * copied from kwin/tabbox/tabbox.cpp
- * simplified a little
- */
-static bool areModKeysDepressed(guint mod) {
-    uint rgKeySyms[10];
-    int nKeySyms = 0;
-    if (mod == 0)
-        return false;
-
-    mod &= GDK_MODIFIER_MASK;
-
-    if (mod & ShiftMask) {
-        rgKeySyms[nKeySyms++] = GDK_KEY_Shift_L;
-        rgKeySyms[nKeySyms++] = GDK_KEY_Shift_R;
-    }
-    if (mod & ControlMask) {
-        rgKeySyms[nKeySyms++] = GDK_KEY_Control_L;
-        rgKeySyms[nKeySyms++] = GDK_KEY_Control_R;
-    }
-    if (mod & Mod1Mask) {
-        rgKeySyms[nKeySyms++] = GDK_KEY_Alt_L;
-        rgKeySyms[nKeySyms++] = GDK_KEY_Alt_R;
-    }
-    if (mod & Mod4Mask) {
-        // It would take some code to determine whether the Win key
-        // is associated with Super or Meta, so check for both.
-        // See bug #140023 for details.
-        rgKeySyms[nKeySyms++] = GDK_KEY_Super_L;
-        rgKeySyms[nKeySyms++] = GDK_KEY_Super_R;
-        rgKeySyms[nKeySyms++] = GDK_KEY_Meta_L;
-        rgKeySyms[nKeySyms++] = GDK_KEY_Meta_R;
-    }
-
-    return areKeySymXsDepressed(rgKeySyms, nKeySyms);
-}
-
 App::App(int argc, char** argv): QApplication(argc, argv)
     ,m_bus(0)
     ,m_impanel(0)
+    ,m_keyboardGrabbed(false)
     ,m_doGrab(false)
 {
     QTimer::singleShot(0, this, SLOT(init()));
+}
+
+uint App::getPrimaryModifier(uint state)
+{
+    const GdkModifierType masks[] = {
+        GDK_MOD5_MASK,
+        GDK_MOD4_MASK,
+        GDK_MOD3_MASK,
+        GDK_MOD2_MASK,
+        GDK_MOD1_MASK,
+        GDK_CONTROL_MASK,
+        GDK_LOCK_MASK,
+        GDK_LOCK_MASK
+    };
+    for (size_t i = 0; i < sizeof(masks) / sizeof(masks[0]); i++) {
+        GdkModifierType mask = masks[i];
+        if ((state & mask) == mask)
+            return mask;
+    }
+    return 0;
 }
 
 bool App::x11EventFilter(XEvent* event)
@@ -119,12 +74,61 @@ bool App::x11EventFilter(XEvent* event)
             KeySym sym = XKeycodeToKeysym(QX11Info::display(), event->xkey.keycode, 0);
             uint state = event->xkey.state & USED_MASK;
             if (m_triggersList.contains(qMakePair<uint, uint>(sym, state))) {
-                ibus_panel_impanel_navigate(m_impanel);
+                if (m_keyboardGrabbed) {
+                    ibus_panel_impanel_navigate(m_impanel, false);
+                } else {
+                    if (grabXKeyboard()) {
+                        ibus_panel_impanel_navigate(m_impanel, true);
+                    } else {
+                        ibus_panel_impanel_move_next(m_impanel);
+                    }
+                }
             }
         } else if (event->type == KeyRelease) {
+            keyRelease(*event);
         }
     }
     return QApplication::x11EventFilter(event);
+}
+
+void App::keyRelease(const XEvent& event)
+{
+    const XKeyEvent& ev = event.xkey;
+
+    unsigned int mk = ev.state &
+                      (ShiftMask |
+                       ControlMask |
+                       Mod1Mask |
+                       Mod4Mask);
+    // ev.state is state before the key release, so just checking mk being 0 isn't enough
+    // using XQueryPointer() also doesn't seem to work well, so the check that all
+    // modifiers are released: only one modifier is active and the currently released
+    // key is this modifier - if yes, release the grab
+    int mod_index = -1;
+    for (int i = ShiftMapIndex;
+            i <= Mod5MapIndex;
+            ++i)
+        if ((mk & (1 << i)) != 0) {
+            if (mod_index >= 0)
+                return;
+            mod_index = i;
+        }
+    bool release = false;
+    if (mod_index == -1)
+        release = true;
+    else {
+        XModifierKeymap* xmk = XGetModifierMapping(QX11Info::display());
+        for (int i = 0; i < xmk->max_keypermod; i++)
+            if (xmk->modifiermap[xmk->max_keypermod * mod_index + i]
+                    == ev.keycode)
+                release = true;
+        XFreeModifiermap(xmk);
+    }
+    if (!release)
+        return;
+    if (m_keyboardGrabbed) {
+        accept();
+    }
 }
 
 
@@ -192,6 +196,39 @@ void App::ungrabKey()
         }
         XUngrabKey(QX11Info::display(), keycode, modifiers, QX11Info::appRootWindow());
     }
+}
+
+bool App::grabXKeyboard() {
+    if (QWidget::keyboardGrabber() != NULL)
+        return false;
+    if (m_keyboardGrabbed)
+        return false;
+    if (activePopupWidget() != NULL)
+        return false;
+    Qt::HANDLE w = QX11Info::appRootWindow();
+    if (XGrabKeyboard(QX11Info::display(), w, False,
+    GrabModeAsync, GrabModeAsync, QX11Info::appTime()) != GrabSuccess)
+        return false;
+    m_keyboardGrabbed = true;
+    return true;
+}
+
+void App::ungrabXKeyboard()
+{
+    if (!m_keyboardGrabbed) {
+        // grabXKeyboard() may fail sometimes, so don't fail, but at least warn anyway
+        qDebug() << "ungrabXKeyboard() called but keyboard not grabbed!";
+    }
+    m_keyboardGrabbed = false;
+    XUngrabKeyboard(QX11Info::display(), CurrentTime);
+}
+
+void App::accept()
+{
+    if (m_keyboardGrabbed)
+        ungrabXKeyboard();
+
+    ibus_panel_impanel_accept(m_impanel);
 }
 
 void App::finalize()

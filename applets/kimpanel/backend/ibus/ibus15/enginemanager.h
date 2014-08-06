@@ -25,6 +25,7 @@
 #include <QString>
 #include <QMap>
 #include <QQueue>
+#include <QStringList>
 
 class EngineManager {
 public:
@@ -40,6 +41,10 @@ public:
     bool useGlobalEngine() { return m_useGlobalEngine; }
     void setCurrentEngine(const char* name);
     const char* navigate(IBusEngineDesc* engine);
+    void moveToFirst(IBusEngineDesc* engine_desc);
+    QStringList engineOrder();
+    void setOrder(const gchar** engine_names, size_t len);
+    int getIndexByName(const char* name);
 
 private:
     QQueue<QString> m_history;
