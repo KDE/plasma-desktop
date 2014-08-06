@@ -611,7 +611,9 @@ impanel_set_engine(IBusPanelImpanel* impanel, const char* name)
     if (ibus_bus_set_global_engine(impanel->bus, name)) {
         if (!impanel->useSystemKeyboardLayout) {
             IBusEngineDesc* engine_desc = ibus_bus_get_global_engine(impanel->bus);
-            impanel->xkbLayoutManager->setLayout(engine_desc);
+            if (engine_desc) {
+                impanel->xkbLayoutManager->setLayout(engine_desc);
+            }
         }
         impanel->engineManager->setCurrentEngine(name);
     }
