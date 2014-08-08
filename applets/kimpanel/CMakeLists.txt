@@ -1,3 +1,14 @@
 add_subdirectory(backend)
 
-plasma_install_package(package org.kde.kimpanel)
+plasma_install_package(package org.kde.plasma.kimpanel)
+
+set(kimpanelplugin_SRCS
+    plugin/screen.cpp
+    plugin/kimpanelplugin.cpp
+)
+
+install(FILES plugin/qmldir DESTINATION ${QML_INSTALL_DIR}/org/kde/plasma/private/kimpanel)
+add_library(kimpanelplugin SHARED ${kimpanelplugin_SRCS})
+
+target_link_libraries(kimpanelplugin Qt5::Gui Qt5::Qml)
+install(TARGETS kimpanelplugin DESTINATION ${QML_INSTALL_DIR}/org/kde/plasma/private/kimpanel)

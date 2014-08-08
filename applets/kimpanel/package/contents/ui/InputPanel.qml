@@ -21,6 +21,7 @@ import QtQuick.Layouts 1.1
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.private.kimpanel 0.1 as Kimpanel
 
 
 PlasmaCore.Dialog {
@@ -30,7 +31,11 @@ PlasmaCore.Dialog {
     property bool verticalLayout: false
     property int highlightCandidate: -1
     property int baseSize: theme.mSize(theme.defaultFont).height
-
+    property var position: {'x': 0, 'y': 0, 'w': 0, 'h': 0};
+    
+    onPositionChanged : updatePosition();
+    onWidthChanged : updatePosition();
+    onHeightChanged : updatePosition();
 
     mainItem: Column {
         width: childrenRect.width
@@ -154,8 +159,8 @@ PlasmaCore.Dialog {
                                                 'y': data["Position"].y,
                                                 'w': data["Position"].width,
                                                 'h': data["Position"].height } : {'x' : 0, 'y': 0, 'w': 0, 'h': 0 };
-                 inputpanel.x = pos.x;
-                 inputpanel.y = pos.y + pos.h;
+                 inputpanel.position = pos;
+
                  auxLabel.text = (auxVisible && data["AuxText"]) ? data["AuxText"] : ""
                  var preeditText = (preeditVisible && data["PreeditText"]) ? data["PreeditText"] : ""
                  var caret = data["CaretPos"] ? data["CaretPos"] : 0;
@@ -184,6 +189,40 @@ PlasmaCore.Dialog {
                  inputpanel.visible = auxVisible || preeditVisible || lookupTableVisible;
             }
         }
+
+        Kimpanel.Screen {
+            id: screen
+        }
+    }
+
+    function updatePosition() {
+         var rect = screen.geometryForPoint(position.x, position.y);
+         var x, y;
+         if (position.x < rect.x) {
+             x = rect.x;
+         } else {
+             x = position.x;
+         }
+         if (position.y < rect.y) {
+             y = rect.y;
+         } else {
+             y = position.y + position.h;
+         }
+
+         if (x + inputpanel.width > rect.x + rect.width) {
+             x = rect.x + rect.width - inputpanel.width;
+         }
+         
+         if (y + inputpanel.height > rect.y + rect.height) {
+             if (y > rect.y + rect.height) {
+                 y = rect.y - window.height - 40;
+             } else {
+                 y = y - inputpanel.height - (position.h == 0 ? 40 : position.h);
+             }
+         }
+
+         inputpanel.x = x;
+         inputpanel.y = y;
     }
 
     function action(key) {
