@@ -74,30 +74,14 @@ Flow {
             id: iconDelegate
             width: items.itemWidth
             height: items.itemHeight
-
-            PlasmaCore.IconItem {
-                id: iconButton
+            StatusIcon {
                 width: items.iconSize
                 height: items.iconSize
-                anchors.centerIn: parent
-                source: model.icon
-                scale: mouseArea.pressed ? 0.9 : 1
-                active: mouseArea.containsMouse
-
-                MouseArea {
-                    id: mouseArea
-                    anchors.fill: parent
-                    hoverEnabled: true
-                    onReleased: clickHandler(model.key)
-
-                    PlasmaCore.ToolTipArea {
-                        anchors.fill: parent
-                        mainText: model.label
-                        subText: model.tip
-                        icon: model.icon
-                    }
-                }
-            } 
+                label: model.label
+                tip: model.tip
+                icon: model.icon
+                onTriggered : clickHandler(model.key)
+            }
         }
     }
 
