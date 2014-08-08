@@ -64,6 +64,7 @@ class FolderModel : public QSortFilterProxyModel
     Q_OBJECT
 
     Q_PROPERTY(QString url READ url WRITE setUrl NOTIFY urlChanged)
+    Q_PROPERTY(QUrl resolvedUrl READ resolvedUrl NOTIFY resolvedUrlChanged)
     Q_PROPERTY(QString errorString READ errorString NOTIFY errorStringChanged)
     Q_PROPERTY(bool usedByContainment READ usedByContainment WRITE setUsedByContainment NOTIFY usedByContainmentChanged);
     Q_PROPERTY(bool locked READ locked WRITE setLocked NOTIFY lockedChanged)
@@ -103,6 +104,8 @@ class FolderModel : public QSortFilterProxyModel
 
         QString url() const;
         void setUrl(const QString &url);
+
+        QUrl resolvedUrl() const;
 
         QString errorString() const;
 
@@ -176,6 +179,7 @@ class FolderModel : public QSortFilterProxyModel
 
     Q_SIGNALS:
         void urlChanged() const;
+        void resolvedUrlChanged() const;
         void errorStringChanged() const;
         void usedByContainmentChanged() const;
         void lockedChanged() const;

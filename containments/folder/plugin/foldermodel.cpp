@@ -154,32 +154,38 @@ QString FolderModel::url() const
     return m_url;
 }
 
-void FolderModel::setUrl(const QString& _url)
+void FolderModel::setUrl(const QString& url)
 {
-    QUrl url;
+    QUrl resolvedUrl;
 
-    if (_url.startsWith('~')) {
-        url = QUrl::fromLocalFile(KShell::tildeExpand(_url));
+    if (url.startsWith('~')) {
+        resolvedUrl = QUrl::fromLocalFile(KShell::tildeExpand(url));
     } else {
-        url = QUrl::fromUserInput(_url);
+        resolvedUrl = QUrl::fromUserInput(url);
     }
 
-    if (_url == m_url) {
-        m_dirModel->dirLister()->updateDirectory(url);
+    if (url == m_url) {
+        m_dirModel->dirLister()->updateDirectory(resolvedUrl);
 
         return;
     }
 
     beginResetModel();
-    m_url = _url;
-    m_dirModel->dirLister()->openUrl(url);
+    m_url = url;
+    m_dirModel->dirLister()->openUrl(resolvedUrl);
     clearDragImages();
     endResetModel();
 
     emit urlChanged();
+    emit resolvedUrlChanged();
 
     m_errorString.clear();
     emit errorStringChanged();
+}
+
+QUrl FolderModel::resolvedUrl() const
+{
+    return m_dirModel->dirLister()->url();
 }
 
 QString FolderModel::errorString() const

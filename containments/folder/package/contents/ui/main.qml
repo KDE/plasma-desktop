@@ -53,6 +53,8 @@ DragDrop.DropArea {
     preventStealing: true
     enabled: true
 
+    Plasmoid.associatedApplicationUrls: itemView.model.resolvedUrl
+
     onIconHeightChanged: updateGridSize()
 
     anchors {
