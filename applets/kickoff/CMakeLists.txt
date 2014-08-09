@@ -10,6 +10,7 @@ plasma_install_package(package org.kde.plasma.kickoff)
 
 set(libkickoff_SRCS
     core/applicationmodel.cpp
+    core/favoritesmodel.cpp
     core/itemhandlers.cpp
     core/kickoffabstractmodel.cpp
     core/kickoffmodel.cpp

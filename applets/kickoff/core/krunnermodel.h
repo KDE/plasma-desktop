@@ -53,8 +53,6 @@ public:
     // virtual Qt::DropActions supportedDropActions() const;
     // virtual Qt::DropActions supportedDragActions() const;
 
-    virtual QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
-
 private:
     void timerEvent(QTimerEvent * event);
 

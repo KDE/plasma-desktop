@@ -27,7 +27,6 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.private.kickoff 0.1 as Kickoff
 import org.kde.kquickcontrolsaddons 2.0
-import org.kde.activities 0.1 as KActivities
 
 Item {
     id: root
@@ -279,13 +278,8 @@ Item {
         } // mainTabGroup
     }
 
-    KActivities.ResourceModel {
+    Kickoff.FavoritesModel {
         id: favoritesModel
-
-        defaultItemsConfig: "kickoffrc/Favorites/FavoriteURLs"
-
-        shownActivities: ":current,:global"
-        shownAgents: "org.kde.plasma.launcher.favorites"
     }
 
     PlasmaComponents.TabBar {

@@ -26,10 +26,7 @@ PlasmaComponents.ContextMenu {
 
     property string title
     property variant model
-    property bool isGlobalFavorite: model != undefined ?
-        favoritesModel.isResourceLinkedToActivity(contextMenu.model.url, ":global") : false
-    property bool isActivityFavorite: model != undefined ?
-        favoritesModel.isResourceLinkedToActivity(contextMenu.model.url, ":current") : false
+    property bool isFavorite: model != undefined ? favoritesModel.isFavorite(contextMenu.model.url) : false
     property bool isApp: contextMenu.model != undefined ? contextMenu.model.url.indexOf(".desktop") !== -1 : false
 
     function openAt(title, model, x, y) {
@@ -55,65 +52,21 @@ PlasmaComponents.ContextMenu {
 
         separator: true
     }
-    // For applications that are not favorite at all
-    //     Add to favorites
-    //     Add to favorites of the current activity
     PlasmaComponents.MenuItem {
-        id: addToGlobalFavorites
-        text: i18n("Add To Favorites")
-        onClicked: favoritesModel.linkResourceToActivity(contextMenu.model.url, ":global", function(){});
+        id: addToFavorites
 
-        visible: contextMenu.isApp && !contextMenu.isGlobalFavorite && !contextMenu.isActivityFavorite
-    }
-    PlasmaComponents.MenuItem {
-        id: addToActivityFavorites
-        text: i18n("Add To Favorites In This Activity Only")
+        text: contextMenu.isFavorite ? i18n("Remove From Favorites") : i18n("Add To Favorites")
+        icon: contextMenu.isFavorite ? "list-remove" : "bookmark-new"
+        visible: contextMenu.isApp
+
         onClicked: {
-            favoritesModel.linkResourceToActivity(contextMenu.model.url, ":current", function(){});
+            // FIXME: apparently contextMenu.model is empty
+            if (contextMenu.isFavorite) {
+                favoritesModel.remove(contextMenu.model.url);
+            } else {
+                favoritesModel.add(contextMenu.model.url);
+            }
         }
-
-        visible: contextMenu.isApp && !contextMenu.isGlobalFavorite && !contextMenu.isActivityFavorite
-    }
-    // For applications that are favorite
-    //     Remove from favorites
-    //     Favorite only in the current activity
-    // For applications that are favorite in the current activity
-    //     Remove from favorites
-    //     Favorite in all activities
-    PlasmaComponents.MenuItem {
-        id: removeFromFavorites
-        text: i18n("Remove From Favorites")
-        onClicked: {
-            var url = contextMenu.model.url;
-            favoritesModel.unlinkResourceFromActivity(url, ":current", function(){});
-            favoritesModel.unlinkResourceFromActivity(url, ":global", function(){});
-        }
-
-        visible: contextMenu.isApp && contextMenu.isGlobalFavorite || contextMenu.isActivityFavorite
-    }
-    PlasmaComponents.MenuItem {
-        id: switchToGlobalFavorites
-        text: i18n("Set Favorite In All Activities")
-        onClicked: {
-            var url = contextMenu.model.url;
-            favoritesModel.unlinkResourceFromActivity(url, ":current", function(){
-                favoritesModel.linkResourceToActivity(url, ":global", function(){});
-            });
-        }
-
-        visible: contextMenu.isApp && !contextMenu.isGlobalFavorite && contextMenu.isActivityFavorite
-    }
-    PlasmaComponents.MenuItem {
-        id: switchToActivityFavorites
-        text: i18n("Set Favorite In Current Activity")
-        onClicked: {
-            var url = contextMenu.model.url;
-            favoritesModel.unlinkResourceFromActivity(url, ":global", function(){
-                favoritesModel.linkResourceToActivity(url, ":current", function(){});
-            });
-        }
-
-        visible: contextMenu.isApp && !contextMenu.isActivityFavorite && contextMenu.isGlobalFavorite
     }
     PlasmaComponents.MenuItem {
         id: uninstallApp
