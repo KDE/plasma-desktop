@@ -11,6 +11,7 @@ set(folderplugin_SRCS
     plugin/itemgrabber.cpp
     plugin/itemviewadapter.cpp
     plugin/labelgenerator.cpp
+    plugin/menuhelper.cpp
     plugin/mimetypesmodel.cpp
     plugin/placesmodel.cpp
     plugin/positioner.cpp

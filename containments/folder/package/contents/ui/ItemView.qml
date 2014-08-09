@@ -110,7 +110,7 @@ FocusScope {
         property variant cPress: null
         property bool doubleClickInProgress: false
 
-        acceptedButtons: (hoveredItem == null) ? Qt.LeftButton : (Qt.LeftButton | Qt.RightButton)
+        acceptedButtons: (hoveredItem == null && main.isRootView) ? Qt.LeftButton : (Qt.LeftButton | Qt.RightButton)
         hoverEnabled: true
 
         onPressXChanged: {
@@ -137,37 +137,40 @@ FocusScope {
                     dir.clearSelection();
                 }
 
-                return;
-            }
-
-            pressedItem = hoveredItem;
-
-            var pos = mapToItem(hoveredItem.actionsOverlay, mouse.x, mouse.y);
-
-            if (!(pos.x <= hoveredItem.actionsOverlay.width && pos.y <= hoveredItem.actionsOverlay.height)) {
-                if (gridView.shiftPressed && gridView.currentIndex != -1) {
-                    positioner.setRangeSelected(gridView.anchorIndex, hoveredItem.index);
-                } else {
-                    // FIXME TODO: Clicking one item with others selected should deselect the others,
-                    // which doesn't happen right now because initiating a drag after the press should
-                    // still drag all of them: The deselect needs to happen on release instead so we
-                    // can distinguish.
-                    if (!gridView.ctrlPressed && !dir.isSelected(positioner.map(hoveredItem.index))) {
-                        dir.clearSelection();
-                    }
-
-                    if (gridView.ctrlPressed) {
-                        dir.toggleSelected(positioner.map(hoveredItem.index));
-                    } else {
-                        dir.setSelected(positioner.map(hoveredItem.index));
-                    }
-                }
-
-                gridView.currentIndex = hoveredItem.index;
-
                 if (mouse.buttons & Qt.RightButton) {
                     clearPressState();
                     dir.openContextMenu();
+                }
+            } else {
+                pressedItem = hoveredItem;
+
+                var pos = mapToItem(hoveredItem.actionsOverlay, mouse.x, mouse.y);
+
+                if (!(pos.x <= hoveredItem.actionsOverlay.width && pos.y <= hoveredItem.actionsOverlay.height)) {
+                    if (gridView.shiftPressed && gridView.currentIndex != -1) {
+                        positioner.setRangeSelected(gridView.anchorIndex, hoveredItem.index);
+                    } else {
+                        // FIXME TODO: Clicking one item with others selected should deselect the others,
+                        // which doesn't happen right now because initiating a drag after the press should
+                        // still drag all of them: The deselect needs to happen on release instead so we
+                        // can distinguish.
+                        if (!gridView.ctrlPressed && !dir.isSelected(positioner.map(hoveredItem.index))) {
+                            dir.clearSelection();
+                        }
+
+                        if (gridView.ctrlPressed) {
+                            dir.toggleSelected(positioner.map(hoveredItem.index));
+                        } else {
+                            dir.setSelected(positioner.map(hoveredItem.index));
+                        }
+                    }
+
+                    gridView.currentIndex = hoveredItem.index;
+
+                    if (mouse.buttons & Qt.RightButton) {
+                        clearPressState();
+                        dir.openContextMenu();
+                    }
                 }
             }
         }
@@ -694,7 +697,7 @@ FocusScope {
         Folder.FolderModel {
             id: dir
 
-            usedByContainment: root.isContainment
+            usedByContainment: root.isContainment && main.isRootView
             sortDesc: plasmoid.configuration.sortDesc
             sortDirsFirst: plasmoid.configuration.sortDirsFirst
             parseDesktopFiles: (url == "desktop:/")

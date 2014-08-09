@@ -35,6 +35,8 @@
 #include <KFilePreviewGenerator>
 #include <KDirLister>
 
+#include <KNewFileMenu>
+
 class QDrag;
 class QItemSelectionModel;
 class QQuickItem;
@@ -42,6 +44,7 @@ class QQuickItem;
 class KActionCollection;
 class KDirModel;
 class KFileItem;
+class KFileItemActions;
 class KNewFileMenu;
 
 class DirLister : public KDirLister
@@ -78,6 +81,7 @@ class FolderModel : public QSortFilterProxyModel
     Q_PROPERTY(int filterMode READ filterMode WRITE setFilterMode NOTIFY filterModeChanged)
     Q_PROPERTY(QString filterPattern READ filterPattern WRITE setFilterPattern NOTIFY filterPatternChanged)
     Q_PROPERTY(QStringList filterMimeTypes READ filterMimeTypes WRITE setFilterMimeTypes NOTIFY filterMimeTypesChanged)
+    Q_PROPERTY(QObject* newMenu READ newMenu CONSTANT)
 
     public:
         enum DataRole {
@@ -167,6 +171,9 @@ class FolderModel : public QSortFilterProxyModel
 
         Q_INVOKABLE bool isBlank(int row) const;
 
+        Q_INVOKABLE QAction* action(const QString& name) const;
+        QObject* newMenu() const;
+        Q_INVOKABLE void updateActions();
         Q_INVOKABLE void openContextMenu();
 
         Q_INVOKABLE void linkHere(const QUrl &sourceUrl);
@@ -204,7 +211,6 @@ class FolderModel : public QSortFilterProxyModel
     private Q_SLOTS:
         void dirListFailed(const QString &error);
         void selectionChanged(QItemSelection selected, QItemSelection deselected);
-        void aboutToShowCreateNew();
         void copy();
         void cut();
         void paste();
@@ -240,6 +246,7 @@ class FolderModel : public QSortFilterProxyModel
         QPointer<KAbstractViewAdapter> m_viewAdapter;
         KActionCollection m_actionCollection;
         KNewFileMenu *m_newMenu;
+        KFileItemActions *m_fileItemActions;
         QString m_errorString;
         bool m_usedByContainment;
         bool m_locked;

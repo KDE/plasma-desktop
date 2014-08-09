@@ -39,6 +39,7 @@ DragDrop.DropArea {
     property bool isContainment: ("containmentType" in plasmoid)
     property Item label: null
     property Item toolBox
+    property variant sharedActions: ["newMenu", "paste", "undo", "refresh", "emptyTrash"]
     property Component itemViewDialogComponent: Qt.createComponent("ItemViewDialog.qml", Qt.Asynchronous, root)
 
     property bool debug: false
@@ -63,6 +64,24 @@ DragDrop.DropArea {
 
         rightMargin: plasmoid.availableScreenRect && parent ? parent.width - (plasmoid.availableScreenRect.x + plasmoid.availableScreenRect.width) : 0
         bottomMargin: plasmoid.availableScreenRect && parent ? parent.height - (plasmoid.availableScreenRect.y + plasmoid.availableScreenRect.height) : 0
+    }
+
+    function updateContextualActions() {
+        itemView.model.updateActions();
+
+        var actionName = "";
+        var appletAction = null;
+        var modelAction = null;
+
+        for (var i = 0; i < sharedActions.length; i++) {
+            actionName = sharedActions[i];
+            appletAction = plasmoid.action(actionName);
+            modelAction = itemView.model.action(actionName);
+
+            appletAction.text = modelAction.text;
+            appletAction.enabled = modelAction.enabled;
+            appletAction.visible = modelAction.visible;
+        }
     }
 
     function updateGridSize()
@@ -254,6 +273,10 @@ DragDrop.DropArea {
 
     Folder.SystemSettings {
         id: systemSettings
+    }
+
+    Folder.MenuHelper {
+        id: menuHelper
     }
 
     PlasmaComponents.Label {
@@ -458,6 +481,26 @@ DragDrop.DropArea {
     }
 
     Component.onCompleted: {
+        var actionName = "";
+        var modelAction = null;
+
+        for (var i = 0; i < sharedActions.length; i++) {
+            actionName = sharedActions[i];
+            modelAction = itemView.model.action(actionName);
+            plasmoid.setAction(actionName, modelAction.text, menuHelper.iconName(modelAction))
+
+            if (actionName == "newMenu") {
+                menuHelper.setMenu(plasmoid.action(actionName), itemView.model.newMenu);
+                plasmoid.setActionSeparator("separator1");
+            } else {
+                plasmoid.action(actionName).triggered.connect(modelAction.trigger);
+            }
+        }
+
+        plasmoid.setActionSeparator("separator2");
+
+        Plasmoid.contextualActionsAboutToShow.connect(root.updateContextualActions);
+
         if (!isContainment) {
             root.label = labelComponent.createObject(root);
 

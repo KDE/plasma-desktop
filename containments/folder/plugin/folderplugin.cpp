@@ -23,6 +23,7 @@
 #include "itemgrabber.h"
 #include "itemviewadapter.h"
 #include "labelgenerator.h"
+#include "menuhelper.h"
 #include "mimetypesmodel.h"
 #include "placesmodel.h"
 #include "positioner.h"
@@ -41,6 +42,7 @@ void FolderPlugin::registerTypes(const char *uri)
     qmlRegisterType<ItemGrabber>(uri, 0, 1, "ItemGrabber");
     qmlRegisterType<ItemViewAdapter>(uri, 0, 1, "ItemViewAdapter");
     qmlRegisterType<LabelGenerator>(uri, 0, 1, "LabelGenerator");
+    qmlRegisterType<MenuHelper>(uri, 0, 1, "MenuHelper");
     qmlRegisterType<FilterableMimeTypesModel>(uri, 0, 1, "FilterableMimeTypesModel");
     qmlRegisterType<PlacesModel>(uri, 0, 1, "PlacesModel");
     qmlRegisterType<Positioner>(uri, 0, 1, "Positioner");

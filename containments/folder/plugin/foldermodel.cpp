@@ -46,6 +46,8 @@
 #include <KAuthorized>
 #include <KBookmarkManager>
 #include <KConfigGroup>
+#include <KFileItemActions>
+#include <KFileItemListProperties>
 #include <KNewFileMenu>
 #include <KIO/FileUndoManager>
 #include <KIO/Paste>
@@ -89,6 +91,7 @@ FolderModel::FolderModel(QObject *parent) : QSortFilterProxyModel(parent),
     m_viewAdapter(0),
     m_actionCollection(this),
     m_newMenu(0),
+    m_fileItemActions(0),
     m_usedByContainment(false),
     m_locked(true),
     m_sortMode(1),
@@ -202,6 +205,13 @@ void FolderModel::setUsedByContainment(bool used)
 {
     if (m_usedByContainment != used) {
         m_usedByContainment = used;
+
+        QAction *action = m_actionCollection.action("refresh");
+
+        if (action) {
+            action->setText(m_usedByContainment ? i18n("&Refresh Desktop") : i18n("&Refresh View"));
+            action->setIcon(m_usedByContainment ? QIcon::fromTheme("user-desktop") : QIcon::fromTheme("view-refresh"));
+        }
 
         emit usedByContainmentChanged();
     }
@@ -949,12 +959,11 @@ bool FolderModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParen
 
 void FolderModel::createActions()
 {
-    bool m_usedByContainment = true;
-
     KIO::FileUndoManager *manager = KIO::FileUndoManager::self();
 
     QAction *cut = KStandardAction::cut(this, SLOT(cut()), this);
     QAction *copy = KStandardAction::copy(this, SLOT(copy()), this);
+
     QAction *undo = KStandardAction::undo(manager, SLOT(undo()), this);
     undo->setEnabled(manager->undoAvailable());
     undo->setShortcutContext(Qt::WidgetShortcut);
@@ -962,38 +971,24 @@ void FolderModel::createActions()
     connect(manager, SIGNAL(undoTextChanged(QString)), SLOT(undoTextChanged(QString)));
 
     QAction *paste = KStandardAction::paste(this, SLOT(paste()), this);
-
-    QString actionText = KIO::pasteActionText();
-    if (!actionText.isEmpty()) {
-       paste->setText(actionText);
-    } else {
-       paste->setEnabled(false);
-    }
-
     QAction *pasteTo = KStandardAction::paste(this, SLOT(pasteTo()), this);
 
     QAction *reload = new QAction(i18n("&Reload"), this);
     connect(reload, SIGNAL(triggered()), SLOT(refresh()));
 
-    QAction *refresh = new QAction(m_usedByContainment ? i18n("&Refresh Desktop") : i18n("&Refresh View"), this);
-    if (m_usedByContainment) {
-        refresh->setIcon(QIcon("user-desktop"));
-    }
+    QAction *refresh = new QAction(QIcon::fromTheme("view-refresh"), i18n("&Refresh View"), this);
     connect(refresh, SIGNAL(triggered()), SLOT(refresh()));
 
-    QAction *rename = new QAction(QIcon("edit-rename"), i18n("&Rename"), this);
+    QAction *rename = new QAction(QIcon::fromTheme("edit-rename"), i18n("&Rename"), this);
     connect(rename, SIGNAL(triggered()), SIGNAL(requestRename()));
 
-    QAction *trash = new QAction(QIcon("user-trash"), i18n("&Move to Trash"), this);
+    QAction *trash = new QAction(QIcon::fromTheme("user-trash"), i18n("&Move to Trash"), this);
     connect(trash, SIGNAL(triggered()), SLOT(moveSelectedToTrash()));
 
-    QAction *emptyTrash = new QAction(QIcon("trash-empty"), i18n("&Empty Trash Bin"), this);
-    KConfig trashConfig("trashrc", KConfig::SimpleConfig);
-    emptyTrash->setEnabled(!trashConfig.group("Status").readEntry("Empty", true));
+    QAction *emptyTrash = new QAction(QIcon::fromTheme("trash-empty"), i18n("&Empty Trash Bin"), this);
     connect(emptyTrash, SIGNAL(triggered()), SLOT(emptyTrashBin()));
 
-    QAction *del = new QAction(i18n("&Delete"), this);
-    del->setIcon(QIcon("edit-delete"));
+    QAction *del = new QAction(QIcon::fromTheme("edit-delete"), i18n("&Delete"), this);
     connect(del, SIGNAL(triggered()), SLOT(deleteSelected()));
 
     m_actionCollection.addAction("cut", cut);
@@ -1006,101 +1001,46 @@ void FolderModel::createActions()
     m_actionCollection.addAction("rename", rename);
     m_actionCollection.addAction("trash", trash);
     m_actionCollection.addAction("del", del);
-    m_actionCollection.addAction("empty_trash", emptyTrash);
+    m_actionCollection.addAction("emptyTrash", emptyTrash);
 
-    m_newMenu = new KNewFileMenu(&m_actionCollection, "new_menu", QApplication::desktop());
+    m_newMenu = new KNewFileMenu(&m_actionCollection, "newMenu", QApplication::desktop());
     m_newMenu->setModal(false);
-
-    connect(m_newMenu->menu(), SIGNAL(aboutToShow()), this, SLOT(aboutToShowCreateNew()));
 }
 
-void FolderModel::openContextMenu()
+QAction* FolderModel::action(const QString &name) const
 {
-    QModelIndexList indexes = m_selectionModel->selectedIndexes();
+    return m_actionCollection.action(name);
+}
 
-    if (!KAuthorized::authorize("action/kdesktop_rmb") || indexes.isEmpty()) {
-        return;
+QObject* FolderModel::newMenu() const
+{
+    return m_newMenu->menu();
+}
+
+void FolderModel::updateActions()
+{
+    if (m_newMenu) {
+        m_newMenu->checkUpToDate();
+        m_newMenu->setPopupFiles(m_dirModel->dirLister()->url());
     }
 
-    KFileItemList items;
-    bool hasRemoteFiles = false;
-    bool isTrashLink = false;
+    QAction *emptyTrash = m_actionCollection.action("emptyTrash");
 
-    foreach (const QModelIndex &index, indexes) {
-        KFileItem item = itemForIndex(index);
-        if (!item.isNull()) {
-            hasRemoteFiles |= item.localPath().isEmpty();
-            items.append(item);
-        }
-    }
-
-    // Check if we're showing the menu for the trash link
-    if (items.count() == 1 && items.at(0).isDesktopFile()) {
-        KDesktopFile file(items.at(0).localPath());
-        if (file.readType() == "Link" && file.readUrl() == "trash:/") {
-            isTrashLink = true;
-        }
-    }
-
-    QAction* pasteTo = m_actionCollection.action("pasteto");
-    if (pasteTo) {
-        if (QAction *paste = m_actionCollection.action("paste")) {
-            updatePasteAction();
-            pasteTo->setEnabled(paste->isEnabled());
-            pasteTo->setText(paste->text());
-        }
-    }
-
-    QList<QAction*> editActions;
-    editActions.append(m_actionCollection.action("rename"));
-
-    KSharedConfig::Ptr globalConfig = KSharedConfig::openConfig("kdeglobals", KConfig::NoGlobals);
-    KConfigGroup cg(globalConfig, "KDE");
-    bool showDeleteCommand = cg.readEntry("ShowDeleteCommand", false);
-
-    // Don't add the "Move to Trash" action if we're showing the menu for the trash link
-    if (!isTrashLink) {
-        if (!hasRemoteFiles) {
-            editActions.append(m_actionCollection.action("trash"));
+    if (emptyTrash) {
+        if (resolvedUrl() == QUrl("trash:/")) {
+            emptyTrash->setVisible(true);
+            KConfig trashConfig("trashrc", KConfig::SimpleConfig);
+            emptyTrash->setEnabled(!trashConfig.group("Status").readEntry("Empty", true));
         } else {
-            showDeleteCommand = true;
+            emptyTrash->setVisible(false);
         }
     }
-    if (showDeleteCommand) {
-        editActions.append(m_actionCollection.action("del"));
-    }
 
-    KParts::BrowserExtension::ActionGroupMap actionGroups;
-    actionGroups.insert("editactions", editActions);
+    QAction *paste = m_actionCollection.action("paste");
 
-    KParts::BrowserExtension::PopupFlags flags = KParts::BrowserExtension::ShowProperties;
-    flags |= KParts::BrowserExtension::ShowUrlOperations;
-
-    // m_newMenu can be NULL here but KonqPopupMenu does handle this.
-    KonqPopupMenu *contextMenu = new KonqPopupMenu(items, m_dirModel->dirLister()->url(), m_actionCollection, m_newMenu,
-                                                   KonqPopupMenu::ShowNewWindow, flags, 0,
-                                                   KBookmarkManager::userBookmarksManager(),
-                                                   actionGroups);
-
-    contextMenu->exec(QCursor::pos());
-    delete contextMenu;
-
-    if (pasteTo) {
-        pasteTo->setEnabled(false);
-    }
-}
-
-void FolderModel::linkHere(const QUrl &sourceUrl)
-{
-    KIO::CopyJob *job = KIO::link(sourceUrl, m_dirModel->dirLister()->url());
-    KIO::FileUndoManager::self()->recordCopyJob(job);
-}
-
-
-void FolderModel::updatePasteAction()
-{
-    if (QAction *paste = m_actionCollection.action("paste")) {
+    if (paste) {
         const QString pasteText = KIO::pasteActionText();
+
         if (pasteText.isEmpty()) {
             paste->setText(i18n("&Paste"));
             paste->setEnabled(false);
@@ -1108,15 +1048,106 @@ void FolderModel::updatePasteAction()
             paste->setText(pasteText);
             paste->setEnabled(true);
         }
+
+        QAction* pasteTo = m_actionCollection.action("pasteto");
+
+        if (pasteTo) {
+            pasteTo->setEnabled(paste->isEnabled());
+            pasteTo->setText(paste->text());
+        }
     }
 }
 
-void FolderModel::aboutToShowCreateNew()
+void FolderModel::openContextMenu()
 {
-    if (m_newMenu) {
-        m_newMenu->checkUpToDate();
-        m_newMenu->setPopupFiles(m_dirModel->dirLister()->url());
+    QModelIndexList indexes = m_selectionModel->selectedIndexes();
+
+    if (m_usedByContainment && !KAuthorized::authorize("action/kdesktop_rmb")) {
+        return;
     }
+
+    updateActions();
+
+    QMenu *menu = 0;
+
+    if (indexes.isEmpty()) {
+        menu = new QMenu();
+        menu->addAction(m_actionCollection.action("newMenu"));
+        menu->addSeparator();
+        menu->addAction(m_actionCollection.action("paste"));
+        menu->addAction(m_actionCollection.action("undo"));
+        menu->addAction(m_actionCollection.action("refresh"));
+        menu->addAction(m_actionCollection.action("emptyTrash"));
+        menu->addSeparator();
+
+        if (!m_fileItemActions) {
+            m_fileItemActions = new KFileItemActions(this);
+        }
+
+        KFileItemListProperties itemList(KFileItemList() << m_dirModel->dirLister()->rootItem());
+        m_fileItemActions->setItemListProperties(itemList);
+
+        menu->addAction(m_fileItemActions->preferredOpenWithAction(QString()));
+    } else {
+        KFileItemList items;
+        bool hasRemoteFiles = false;
+        bool isTrashLink = false;
+
+        foreach (const QModelIndex &index, indexes) {
+            KFileItem item = itemForIndex(index);
+            if (!item.isNull()) {
+                hasRemoteFiles |= item.localPath().isEmpty();
+                items.append(item);
+            }
+        }
+
+        // Check if we're showing the menu for the trash link
+        if (items.count() == 1 && items.at(0).isDesktopFile()) {
+            KDesktopFile file(items.at(0).localPath());
+            if (file.readType() == "Link" && file.readUrl() == "trash:/") {
+                isTrashLink = true;
+            }
+        }
+
+        QList<QAction*> editActions;
+        editActions.append(m_actionCollection.action("rename"));
+
+        KSharedConfig::Ptr globalConfig = KSharedConfig::openConfig("kdeglobals", KConfig::NoGlobals);
+        KConfigGroup cg(globalConfig, "KDE");
+        bool showDeleteCommand = cg.readEntry("ShowDeleteCommand", false);
+
+        // Don't add the "Move to Trash" action if we're showing the menu for the trash link
+        if (!isTrashLink) {
+            if (!hasRemoteFiles) {
+                editActions.append(m_actionCollection.action("trash"));
+            } else {
+                showDeleteCommand = true;
+            }
+        }
+        if (showDeleteCommand) {
+            editActions.append(m_actionCollection.action("del"));
+        }
+
+        KParts::BrowserExtension::ActionGroupMap actionGroups;
+        actionGroups.insert("editactions", editActions);
+
+        KParts::BrowserExtension::PopupFlags flags = KParts::BrowserExtension::ShowProperties;
+        flags |= KParts::BrowserExtension::ShowUrlOperations;
+
+        menu = new KonqPopupMenu(items, m_dirModel->dirLister()->url(), m_actionCollection, m_newMenu,
+                                 KonqPopupMenu::ShowNewWindow, flags, 0,
+                                 KBookmarkManager::userBookmarksManager(),
+                                 actionGroups);
+    }
+
+    menu->exec(QCursor::pos());
+    delete menu;
+}
+
+void FolderModel::linkHere(const QUrl &sourceUrl)
+{
+    KIO::CopyJob *job = KIO::link(sourceUrl, m_dirModel->dirLister()->url());
+    KIO::FileUndoManager::self()->recordCopyJob(job);
 }
 
 QList<QUrl> FolderModel::selectedUrls(bool forTrash) const
