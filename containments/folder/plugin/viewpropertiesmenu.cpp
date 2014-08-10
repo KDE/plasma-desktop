@@ -21,6 +21,7 @@
 
 #include <QMenu>
 
+#include <KDirModel>
 #include <KLocalizedString>
 
 ViewPropertiesMenu::ViewPropertiesMenu(QObject *parent) : QObject(parent)
@@ -56,23 +57,23 @@ ViewPropertiesMenu::ViewPropertiesMenu(QObject *parent) : QObject(parent)
     connect(m_sortMode, SIGNAL(triggered(QAction*)), this, SIGNAL(sortModeChanged()));
     action = menu->addAction(i18n("Unsorted"));
     action->setCheckable(true);
-    action->setData(0);
+    action->setData(-1);
     m_sortMode->addAction(action);
     action = menu->addAction(i18n("Name"));
     action->setCheckable(true);
-    action->setData(1);
+    action->setData(int(KDirModel::Name));
     m_sortMode->addAction(action);
     action = menu->addAction(i18n("Size"));
     action->setCheckable(true);
-    action->setData(2);
+    action->setData(int(KDirModel::Size));
     m_sortMode->addAction(action);
     action = menu->addAction(i18n("Type"));
     action->setCheckable(true);
-    action->setData(3);
+    action->setData(int(KDirModel::Type));
     m_sortMode->addAction(action);
     action = menu->addAction(i18n("Date"));
     action->setCheckable(true);
-    action->setData(4);
+    action->setData(int(KDirModel::ModifiedTime));
     m_sortMode->addAction(action);
     menu->addSeparator();
     m_sortDesc = menu->addAction(i18n("Descending"), this, SIGNAL(sortDescChanged()));

@@ -600,6 +600,14 @@ void Positioner::sourceRowsAboutToBeRemoved(const QModelIndex &parent, int first
     }
 }
 
+void Positioner::sourceLayoutAboutToBeChanged(const QList<QPersistentModelIndex> &parents,
+    QAbstractItemModel::LayoutChangeHint hint)
+{
+    Q_UNUSED(parents)
+
+    emit layoutAboutToBeChanged(QList<QPersistentModelIndex>(), hint);
+}
+
 void Positioner::sourceRowsInserted(const QModelIndex &parent, int first, int last)
 {
     Q_UNUSED(parent)
@@ -648,6 +656,18 @@ void Positioner::sourceRowsRemoved(const QModelIndex &parent, int first, int las
     flushPendingChanges();
 
     m_updatePositionsTimer->start();
+}
+
+void Positioner::sourceLayoutChanged(const QList<QPersistentModelIndex>& parents,
+    QAbstractItemModel::LayoutChangeHint hint)
+{
+    Q_UNUSED(parents)
+
+    if (m_enabled) {
+        initMaps();
+    }
+
+    emit layoutChanged(QList<QPersistentModelIndex>(), hint);
 }
 
 void Positioner::initMaps(int size)
@@ -855,6 +875,9 @@ void Positioner::connectSignals(FolderModel* model)
     connect(model, SIGNAL(rowsAboutToBeRemoved(QModelIndex,int,int)),
             this, SLOT(sourceRowsAboutToBeRemoved(QModelIndex,int,int)),
             Qt::UniqueConnection);
+    connect(model, SIGNAL(layoutAboutToBeChanged(QList<QPersistentModelIndex>,QAbstractItemModel::LayoutChangeHint)),
+            this, SLOT(sourceLayoutAboutToBeChanged(QList<QPersistentModelIndex>,QAbstractItemModel::LayoutChangeHint)),
+            Qt::UniqueConnection);
     connect(model, SIGNAL(rowsInserted(QModelIndex,int,int)),
             this, SLOT(sourceRowsInserted(QModelIndex,int,int)),
             Qt::UniqueConnection);
@@ -863,6 +886,9 @@ void Positioner::connectSignals(FolderModel* model)
             Qt::UniqueConnection);
     connect(model, SIGNAL(rowsRemoved(QModelIndex,int,int)),
             this, SLOT(sourceRowsRemoved(QModelIndex,int,int)),
+            Qt::UniqueConnection);
+    connect(model, SIGNAL(layoutChanged(QList<QPersistentModelIndex>,QAbstractItemModel::LayoutChangeHint)),
+            this, SLOT(sourceLayoutChanged(QList<QPersistentModelIndex>,QAbstractItemModel::LayoutChangeHint)),
             Qt::UniqueConnection);
 }
 
@@ -876,10 +902,14 @@ void Positioner::disconnectSignals(FolderModel* model)
             this, SLOT(sourceRowsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)));
     disconnect(model, SIGNAL(rowsAboutToBeRemoved(QModelIndex,int,int)),
             this, SLOT(sourceRowsAboutToBeRemoved(QModelIndex,int,int)));
+    disconnect(model, SIGNAL(layoutAboutToBeChanged(QList<QPersistentModelIndex>,QAbstractItemModel::LayoutChangeHint)),
+            this, SLOT(sourceLayoutAboutToBeChanged(QList<QPersistentModelIndex>,QAbstractItemModel::LayoutChangeHint)));
     disconnect(model, SIGNAL(rowsInserted(QModelIndex,int,int)),
             this, SLOT(sourceRowsInserted(QModelIndex,int,int)));
     disconnect(model, SIGNAL(rowsMoved(QModelIndex,int,int,QModelIndex,int)),
             this, SLOT(sourceRowsMoved(QModelIndex,int,int,QModelIndex,int)));
     disconnect(model, SIGNAL(rowsRemoved(QModelIndex,int,int)),
             this, SLOT(sourceRowsRemoved(QModelIndex,int,int)));
+    disconnect(model, SIGNAL(layoutChanged(QList<QPersistentModelIndex>,QAbstractItemModel::LayoutChangeHint)),
+            this, SLOT(sourceLayoutChanged(QList<QPersistentModelIndex>,QAbstractItemModel::LayoutChangeHint)));
 }

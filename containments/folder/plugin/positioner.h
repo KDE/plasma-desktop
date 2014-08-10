@@ -90,10 +90,14 @@ class Positioner : public QAbstractItemModel
         void sourceRowsAboutToBeMoved(const QModelIndex &sourceParent, int sourceStart,
             int sourceEnd, const QModelIndex &destinationParent, int destinationRow);
         void sourceRowsAboutToBeRemoved(const QModelIndex &parent, int first, int last);
+        void sourceLayoutAboutToBeChanged(const QList<QPersistentModelIndex> &parents,
+            QAbstractItemModel::LayoutChangeHint hint);
         void sourceRowsInserted(const QModelIndex &parent, int first, int last);
         void sourceRowsMoved(const QModelIndex &sourceParent, int sourceStart,
             int sourceEnd, const QModelIndex &destinationParent, int destinationRow);
         void sourceRowsRemoved(const QModelIndex &parent, int first, int last);
+        void sourceLayoutChanged(const QList<QPersistentModelIndex> &parents,
+            QAbstractItemModel::LayoutChangeHint hint);
 
     private:
         void initMaps(int size = -1);

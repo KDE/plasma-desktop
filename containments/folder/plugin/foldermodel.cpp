@@ -94,7 +94,7 @@ FolderModel::FolderModel(QObject *parent) : QSortFilterProxyModel(parent),
     m_fileItemActions(0),
     m_usedByContainment(false),
     m_locked(true),
-    m_sortMode(1),
+    m_sortMode(0),
     m_sortDesc(false),
     m_sortDirsFirst(true),
     m_parseDesktopFiles(false),
@@ -121,7 +121,7 @@ FolderModel::FolderModel(QObject *parent) : QSortFilterProxyModel(parent),
     setFilterCaseSensitivity(Qt::CaseInsensitive);
     setDynamicSortFilter(true);
 
-    sort(m_sortMode - 1, m_sortDesc ? Qt::DescendingOrder : Qt::AscendingOrder);
+    sort(m_sortMode, m_sortDesc ? Qt::DescendingOrder : Qt::AscendingOrder);
 
     setSupportedDragActions(Qt::CopyAction | Qt::MoveAction | Qt::LinkAction);
 
@@ -247,12 +247,12 @@ void FolderModel::setSortMode(int mode)
     if (m_sortMode != mode) {
         m_sortMode = mode;
 
-        if (mode == 0 /* Unsorted */) {
+        if (mode == -1 /* Unsorted */) {
             setDynamicSortFilter(false);
         } else {
-            setDynamicSortFilter(true);
             invalidate();
-            sort(m_sortMode - 1, m_sortDesc ? Qt::DescendingOrder : Qt::AscendingOrder);
+            sort(m_sortMode, m_sortDesc ? Qt::DescendingOrder : Qt::AscendingOrder);
+            setDynamicSortFilter(true);
         }
 
         emit sortModeChanged();
@@ -269,9 +269,9 @@ void FolderModel::setSortDesc(bool desc)
     if (m_sortDesc != desc) {
         m_sortDesc = desc;
 
-        if (m_sortMode != 0) {
+        if (m_sortMode != -1 /* Unsorted */) {
             invalidate();
-            sort(m_sortMode - 1, m_sortDesc ? Qt::DescendingOrder : Qt::AscendingOrder);
+            sort(m_sortMode, m_sortDesc ? Qt::DescendingOrder : Qt::AscendingOrder);
         }
 
         emit sortDescChanged();
@@ -288,9 +288,9 @@ void FolderModel::setSortDirsFirst(bool enable)
     if (m_sortDirsFirst != enable) {
         m_sortDirsFirst = enable;
 
-        if (m_sortMode != 0) {
+        if (m_sortMode != -1 /* Unsorted */) {
             invalidate();
-            sort(m_sortMode - 1, m_sortDesc ? Qt::DescendingOrder : Qt::AscendingOrder);
+            sort(m_sortMode, m_sortDesc ? Qt::DescendingOrder : Qt::AscendingOrder);
         }
 
         emit sortDirsFirstChanged();
@@ -687,7 +687,7 @@ void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row)
             return;
         }
 
-        setSortMode(0);
+        setSortMode(-1);
 
         emit move(dropEvent->property("x").toInt(), dropEvent->property("y").toInt(),
             mimeData->urls());
@@ -840,16 +840,16 @@ bool FolderModel::lessThan(const QModelIndex &left, const QModelIndex &right) co
 {
     const KDirModel *dirModel = static_cast<KDirModel*>(sourceModel());
 
-    // When sorting by size, folders are compared using the number of items in them,
-    // so they need to be given precedence over regular files as the comparison criteria is different
     if (m_sortDirsFirst || left.column() == KDirModel::Size) {
         bool leftIsDir = isDir(left, dirModel);
         bool rightIsDir = isDir(right, dirModel);
+
         if (leftIsDir && !rightIsDir) {
-            return (sortOrder() == Qt::AscendingOrder); // folders > files independent of the sorting order
+            return (sortOrder() == Qt::AscendingOrder);
         }
+
         if (!leftIsDir && rightIsDir) {
-            return (sortOrder() == Qt::DescendingOrder); // same here
+            return (sortOrder() == Qt::DescendingOrder);
         }
     }
 
@@ -859,41 +859,41 @@ bool FolderModel::lessThan(const QModelIndex &left, const QModelIndex &right) co
     int result = 0;
 
     switch (column) {
-      case KDirModel::Name:
-            // fall through to the naturalCompare call
-            break;
-        case KDirModel::ModifiedTime: {
-            const QDateTime leftTime = leftItem.time(KFileItem::ModificationTime);
-            const QDateTime rightTime = rightItem.time(KFileItem::ModificationTime);
-            if (leftTime < rightTime)
-                result = -1;
-            else if (leftTime > rightTime)
-                result = +1;
-            break;
-            }
         case KDirModel::Size: {
-            if (isDir(left, dirModel) && isDir(right, dirModel)) {
-                const int leftChildCount = dirModel->data(left, KDirModel::ChildCountRole).toInt();
-                const int rightChildCount = dirModel->data(right, KDirModel::ChildCountRole).toInt();
-                if (leftChildCount < rightChildCount)
-                    result = -1;
-                else if (leftChildCount > rightChildCount)
-                    result = +1;
-            } else {
-                const KIO::filesize_t leftSize = leftItem.size();
-                const KIO::filesize_t rightSize = rightItem.size();
-                if (leftSize < rightSize)
-                    result = -1;
-                else if (leftSize > rightSize)
-                    result = +1;
+                if (isDir(left, dirModel) && isDir(right, dirModel)) {
+                    const int leftChildCount = dirModel->data(left, KDirModel::ChildCountRole).toInt();
+                    const int rightChildCount = dirModel->data(right, KDirModel::ChildCountRole).toInt();
+                    if (leftChildCount < rightChildCount)
+                        result = -1;
+                    else if (leftChildCount > rightChildCount)
+                        result = +1;
+                } else {
+                    const KIO::filesize_t leftSize = leftItem.size();
+                    const KIO::filesize_t rightSize = rightItem.size();
+                    if (leftSize < rightSize)
+                        result = -1;
+                    else if (leftSize > rightSize)
+                        result = +1;
+                }
+
+                break;
             }
-            break;
+        case KDirModel::ModifiedTime: {
+                const QDateTime leftTime = leftItem.time(KFileItem::ModificationTime);
+                const QDateTime rightTime = rightItem.time(KFileItem::ModificationTime);
+                if (leftTime < rightTime)
+                    result = -1;
+                else if (leftTime > rightTime)
+                    result = +1;
+
+                break;
             }
         case KDirModel::Type:
-            // add other sorting modes here
-            // KDirModel::data(index, Qt::DisplayRole) returns the data in index.column()
             result = QString::compare(dirModel->data(left, Qt::DisplayRole).toString(),
                                       dirModel->data(right, Qt::DisplayRole).toString());
+            break;
+
+        default:
             break;
     }
 

@@ -37,7 +37,7 @@ GroupBox {
     property alias cfg_arrangement: arrangement.currentIndex
     property alias cfg_alignment: alignment.currentIndex
     property alias cfg_locked: locked.checked
-    property alias cfg_sortMode: sortMode.currentIndex
+    property alias cfg_sortMode: sortMode.mode
     property alias cfg_sortDesc: sortDesc.checked
     property alias cfg_sortDirsFirst: sortDirsFirst.checked
     property alias cfg_selectionMarkers: selectionMarkers.checked
@@ -110,7 +110,21 @@ GroupBox {
                     ComboBox {
                         id: sortMode
 
+                        property int mode
+                        // FIXME TODO HACK: This maps the combo box's list model to the KDirModel::ModelColumns
+                        // enum, which should be done in C++.
+                        property variant indexToMode: [-1, 0, 1, 6, 2]
+                        property variant modeToIndex: {'-1' : '0', '0' : '1', '1' : '2', '6' : '3', '2' : '4'}
+
                         model: [i18n("Unsorted"), i18n("Name"), i18n("Size"), i18n("Type"), i18n("Date")]
+
+                        onModeChanged: {
+                            currentIndex = modeToIndex[mode];
+                        }
+
+                        onCurrentIndexChanged: {
+                            mode = indexToMode[currentIndex];
+                        }
                     }
                 }
 

@@ -767,7 +767,7 @@ FocusScope {
         Folder.Positioner {
             id: positioner
 
-            enabled: (isContainment && dir.sortMode == 0)
+            enabled: (isContainment && dir.sortMode == -1)
 
             folderModel: dir
 
