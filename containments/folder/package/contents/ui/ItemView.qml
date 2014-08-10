@@ -725,17 +725,19 @@ FocusScope {
                     to = -1;
 
                     if (from == -1) {
+                        console.log("hit1");
                         continue;
                     }
 
                     var offset = dir.dragCursorOffset(positioner.map(from));
 
                     if (offset.x == -1) {
+                        console.log("hit2");
                         continue;
                     }
 
-                    itemX = Math.max(leftEdge, dropPos.x + offset.x + (listener.dragX % cellWidth));
-                    itemY = Math.max(0, dropPos.y + offset.y + (listener.dragY % cellHeight));
+                    itemX = dropPos.x + offset.x + (listener.dragX % cellWidth);
+                    itemY = dropPos.y + offset.y + (listener.dragY % cellHeight);
 
                     if (gridView.layoutDirection == Qt.RightToLeft) {
                         itemX -= (rows ? gridView.contentX : gridView.originX);
@@ -747,6 +749,10 @@ FocusScope {
 
                     if ((rows ? col : row) < perStripe) {
                         to = ((rows ? row : col) * perStripe) + (rows ? col : row);
+                    }
+
+                    if (to < 0) {
+                        return;
                     }
 
                     if (from != to) {
