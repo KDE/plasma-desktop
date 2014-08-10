@@ -749,10 +749,10 @@ FocusScope {
 
                     if ((rows ? col : row) < perStripe) {
                         to = ((rows ? row : col) * perStripe) + (rows ? col : row);
-                    }
 
-                    if (to < 0) {
-                        return;
+                        if (to < 0) {
+                            return;
+                        }
                     }
 
                     if (from != to) {
