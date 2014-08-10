@@ -40,6 +40,7 @@ GroupBox {
     property alias cfg_sortMode: sortMode.mode
     property alias cfg_sortDesc: sortDesc.checked
     property alias cfg_sortDirsFirst: sortDirsFirst.checked
+    property alias cfg_toolTips: toolTips.checked
     property alias cfg_selectionMarkers: selectionMarkers.checked
     property alias cfg_popups: popups.checked
     property alias cfg_previews: previews.checked
@@ -203,6 +204,12 @@ GroupBox {
             flat: true
 
             ColumnLayout {
+                CheckBox {
+                    id: toolTips
+
+                    text: i18n("Tooltips")
+                }
+
                 CheckBox {
                     id: selectionMarkers
 

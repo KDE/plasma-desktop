@@ -151,7 +151,7 @@ Item {
                 height: (label.y + label.paintedHeight)
 
                 mainItem: toolTipDelegate
-                active: (popupDialog == null && !model.blank)
+                active: (plasmoid.configuration.toolTips && popupDialog == null && !model.blank)
                 interactive: false
                 location: plasmoid.location
 
