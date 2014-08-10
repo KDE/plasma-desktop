@@ -633,8 +633,6 @@ void FolderModel::addDragImage(QDrag *drag, int x, int y)
 
 void FolderModel::dragSelected(int x, int y)
 {
-    //FIXME Don't drag blank ones.
-
     if (!m_viewAdapter || !m_selectionModel->hasSelection()) {
         return;
     }
