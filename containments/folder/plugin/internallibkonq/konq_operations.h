@@ -24,7 +24,6 @@
 #define __konq_operations_h__
 
 #include <kurl.h>
-#include <libkonq_export.h>
 
 #include <QObject>
 #include <QDropEvent>
@@ -39,7 +38,7 @@ class KFileItemListProperties;
  * Implements file operations (move,del,trash,paste,copy,move,link...)
  * for file managers
  */
-class LIBKONQ_EXPORT KonqOperations : public QObject
+class KonqOperations : public QObject
 {
     Q_OBJECT
 protected:
