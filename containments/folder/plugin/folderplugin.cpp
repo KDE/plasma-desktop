@@ -31,6 +31,7 @@
 #include "rubberband.h"
 #include "subdialog.h"
 #include "systemsettings.h"
+#include "viewpropertiesmenu.h"
 
 #include <QtQml>
 
@@ -50,6 +51,7 @@ void FolderPlugin::registerTypes(const char *uri)
     qmlRegisterType<RubberBand>(uri, 0, 1, "RubberBand");
     qmlRegisterType<SubDialog>(uri, 0, 1, "SubDialog");
     qmlRegisterType<SystemSettings>(uri, 0, 1, "SystemSettings");
+    qmlRegisterType<ViewPropertiesMenu>(uri, 0, 1, "ViewPropertiesMenu");
 }
 
 #include "folderplugin.moc"

@@ -23,8 +23,6 @@
 #include <QPalette>
 #include <QSize>
 
-#include <QDebug>
-
 ItemViewAdapter::ItemViewAdapter(QObject *parent) : KAbstractViewAdapter(parent),
     m_adapterView(0),
     m_adapterModel(0),

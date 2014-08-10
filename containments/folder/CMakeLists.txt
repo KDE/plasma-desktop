@@ -19,6 +19,7 @@ set(folderplugin_SRCS
     plugin/rubberband.cpp
     plugin/subdialog.cpp
     plugin/systemsettings.cpp
+    plugin/viewpropertiesmenu.cpp
     plugin/internallibkonq/konq_copytomenu.cpp
     plugin/internallibkonq/konq_dndpopupmenuplugin.cpp
     plugin/internallibkonq/konq_fileitemcapabilities.cpp

@@ -279,6 +279,43 @@ DragDrop.DropArea {
         id: menuHelper
     }
 
+    Folder.ViewPropertiesMenu {
+        id: viewPropertiesMenu
+
+        onArrangementChanged: {
+            plasmoid.configuration.arrangement = arrangement;
+        }
+
+        onAlignmentChanged: {
+            plasmoid.configuration.alignment = alignment;
+        }
+
+        onLockedChanged: {
+            plasmoid.configuration.locked = locked;
+        }
+
+        onSortModeChanged: {
+            plasmoid.configuration.sortMode = sortMode;
+        }
+
+        onSortDescChanged: {
+            plasmoid.configuration.sortDesc = sortDesc;
+        }
+
+        onSortDirsFirstChanged: {
+            plasmoid.configuration.sortDirsFirst = sortDirsFirst;
+        }
+
+        Component.onCompleted: {
+            arrangement = plasmoid.configuration.arrangement;
+            alignment = plasmoid.configuration.alignment;
+            locked = plasmoid.configuration.locked;
+            sortMode = plasmoid.configuration.sortMode;
+            sortDesc = plasmoid.configuration.sortDesc;
+            sortDirsFirst = plasmoid.configuration.sortDirsFirst;
+        }
+    }
+
     PlasmaComponents.Label {
         anchors.fill: parent
 
@@ -298,8 +335,29 @@ DragDrop.DropArea {
     Connections {
         target: plasmoid.configuration
 
+        onArrangementChanged: {
+            viewPropertiesMenu.arrangement = plasmoid.configuration.arrangement;
+        }
+
+        onAlignmentChanged: {
+            viewPropertiesMenu.alignment = plasmoid.configuration.alignment;
+        }
+
+        onLockedChanged: {
+            viewPropertiesMenu.locked = plasmoid.configuration.locked;
+        }
+
         onSortModeChanged: {
             itemView.sortMode = plasmoid.configuration.sortMode;
+            viewPropertiesMenu.sortMode = plasmoid.configuration.sortMode;
+        }
+
+        onSortDescChanged: {
+            viewPropertiesMenu.sortDesc = plasmoid.configuration.sortDesc;
+        }
+
+        onSortDirsFirstChanged: {
+            viewPropertiesMenu.sortDirsFirst = plasmoid.configuration.sortDirsFirst;
         }
 
         onPositionsChanged: {
@@ -487,11 +545,14 @@ DragDrop.DropArea {
         for (var i = 0; i < sharedActions.length; i++) {
             actionName = sharedActions[i];
             modelAction = itemView.model.action(actionName);
-            plasmoid.setAction(actionName, modelAction.text, menuHelper.iconName(modelAction))
+            plasmoid.setAction(actionName, modelAction.text, menuHelper.iconName(modelAction));
 
             if (actionName == "newMenu") {
                 menuHelper.setMenu(plasmoid.action(actionName), itemView.model.newMenu);
                 plasmoid.setActionSeparator("separator1");
+
+                plasmoid.setAction("viewProperties", i18n("Icons"), "preferences-desktop-icons");
+                menuHelper.setMenu(plasmoid.action("viewProperties"), viewPropertiesMenu.menu);
             } else {
                 plasmoid.action(actionName).triggered.connect(modelAction.trigger);
             }
