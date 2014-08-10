@@ -24,7 +24,7 @@
 #define __konq_operations_h__
 
 #include <kurl.h>
-#include "libkonq_export.h"
+#include <libkonq_export.h>
 
 #include <QObject>
 #include <QDropEvent>

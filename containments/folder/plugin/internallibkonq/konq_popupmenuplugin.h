@@ -26,7 +26,7 @@
 
 class QMenu;
 class KActionCollection;
-class KonqPopupMenuInformation;
+class KFileItemListProperties;
 
 /**
  * Base class for KonqPopupMenu plugins.
@@ -61,7 +61,7 @@ public:
      * @param menu the menu where the plugin can add its own actions
      */
     virtual void setup(KActionCollection* actionCollection,
-                       const KonqPopupMenuInformation& popupMenuInfo,
+                       const KFileItemListProperties& popupMenuInfo,
                        QMenu *menu) = 0;
 };
 

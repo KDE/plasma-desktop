@@ -32,7 +32,7 @@
 #include <kparts/browserextension.h>
 #include <kservice.h>
 
-#include "libkonq_export.h"
+#include <libkonq_export.h>
 
 class KNewFileMenu;
 class KFileItemActions;

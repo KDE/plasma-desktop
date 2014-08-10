@@ -20,7 +20,7 @@
 #ifndef KONQMIMEDATA_H
 #define KONQMIMEDATA_H
 
-#include "libkonq_export.h"
+#include <libkonq_export.h>
 #include <kurl.h>
 class QMimeData;
 

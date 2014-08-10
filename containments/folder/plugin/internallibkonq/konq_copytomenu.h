@@ -23,7 +23,7 @@
 
 #include <kurl.h>
 #include <kfileitem.h>
-#include "libkonq_export.h"
+#include <libkonq_export.h>
 
 class QMenu;
 class KonqCopyToMenuPrivate;

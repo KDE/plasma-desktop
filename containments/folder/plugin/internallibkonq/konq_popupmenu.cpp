@@ -21,13 +21,11 @@
 #include "konq_popupmenu.h"
 #include <kfileitemlistproperties.h>
 #include "konq_popupmenuplugin.h"
-#include "konq_popupmenuinformation.h"
 #include "konq_copytomenu.h"
 #include "kfileitemactions.h"
 #include "kfileitemactionplugin.h"
 #include "kabstractfileitemactionplugin.h"
 #include "kpropertiesdialog.h"
-#include "knewmenu.h"
 #include "konq_operations.h"
 
 #include <klocale.h>
@@ -37,6 +35,7 @@
 #include <krun.h>
 #include <kprotocolmanager.h>
 #include <kicon.h>
+#include <knewfilemenu.h>
 #include <kiconloader.h>
 #include <kinputdialog.h>
 #include <kglobalsettings.h>
@@ -116,7 +115,6 @@ public:
     KNewFileMenu *m_pMenuNew;
     KUrl m_sViewURL;
     KFileItemListProperties m_popupItemProperties;
-    KonqPopupMenuInformation m_popupMenuInfo; // only used by plugins
     KFileItemActions m_menuActions;
     KonqCopyToMenu m_copyToMenu;
     KBookmarkManager* m_bookmarkManager;
@@ -533,7 +531,7 @@ void KonqPopupMenuPrivate::slotPopupEmptyTrashBin()
 
 void KonqPopupMenuPrivate::slotConfigTrashBin()
 {
-  KRun::run("kcmshell5 kcmtrash", KUrl::List(), m_parentWidget);
+  KRun::run("kcmshell4 kcmtrash", KUrl::List(), m_parentWidget);
 }
 
 void KonqPopupMenuPrivate::slotPopupRestoreTrashedItems()
@@ -585,8 +583,6 @@ void KonqPopupMenuPrivate::addPlugins()
     const KService::List konqPlugins = KMimeTypeTrader::self()->query(commonMimeType, "KonqPopupMenu/Plugin", "exist Library");
 
     if (!konqPlugins.isEmpty()) {
-        m_popupMenuInfo.setItemListProperties(m_popupItemProperties);
-        m_popupMenuInfo.setParentWidget(m_parentWidget);
         KService::List::ConstIterator iterator = konqPlugins.begin();
         const KService::List::ConstIterator end = konqPlugins.end();
         for(; iterator != end; ++iterator) {
@@ -595,7 +591,7 @@ void KonqPopupMenuPrivate::addPlugins()
             if (!plugin)
                 continue;
             plugin->setParent(q);
-            plugin->setup(&m_ownActionCollection, m_popupMenuInfo, q);
+            plugin->setup(&m_ownActionCollection, m_popupItemProperties, q);
         }
     }
 
@@ -640,5 +636,3 @@ void KonqPopupMenuPrivate::slotShowOriginalFile()
     destUrl.setPath(destUrl.directory());
     KRun::runUrl(destUrl, "inode/directory", m_parentWidget);
 }
-
-#include "konq_popupmenu.moc"

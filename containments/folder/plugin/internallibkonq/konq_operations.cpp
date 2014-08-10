@@ -1034,8 +1034,17 @@ QPair<bool, QString> KonqOperations::pasteInfo(const KUrl& targetUrl)
     QClipboard* clipboard = QApplication::clipboard();
     const QMimeData* mimeData = clipboard->mimeData();
 
-    const bool canPasteData = KIO::canPasteMimeData(mimeData);
-    KUrl::List urls = KUrl::List::fromMimeData(mimeData);
+    bool canPasteData = false;
+    KUrl::List urls;
+
+    // mimeData can be 0 according to https://bugs.kde.org/show_bug.cgi?id=335053
+    if (mimeData) {
+        canPasteData = KIO::canPasteMimeData(mimeData);
+        urls = KUrl::List::fromMimeData(mimeData);
+    } else {
+        kWarning(1203) << "QApplication::clipboard()->mimeData() is 0!";
+    }
+
     if (!urls.isEmpty() || canPasteData) {
         // disable the paste action if no writing is supported
         KFileItem item(KFileItem::Unknown, KFileItem::Unknown, targetUrl);
@@ -1058,5 +1067,3 @@ QPair<bool, QString> KonqOperations::pasteInfo(const KUrl& targetUrl)
 
     return ret;
 }
-
-#include "konq_operations.moc"

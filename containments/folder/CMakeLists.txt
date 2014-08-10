@@ -22,10 +22,8 @@ set(folderplugin_SRCS
     plugin/viewpropertiesmenu.cpp
     plugin/internallibkonq/konq_copytomenu.cpp
     plugin/internallibkonq/konq_dndpopupmenuplugin.cpp
-    plugin/internallibkonq/konq_fileitemcapabilities.cpp
     plugin/internallibkonq/konqmimedata.cpp
     plugin/internallibkonq/konq_popupmenu.cpp
-    plugin/internallibkonq/konq_popupmenuinformation.cpp
     plugin/internallibkonq/konq_popupmenuplugin.cpp
     plugin/internallibkonq/konq_operations.cpp
 )
