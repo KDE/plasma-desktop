@@ -308,7 +308,7 @@ void KCMLookandFeel::setCursorTheme(const QString themeName)
     // build system (freedesktop bug #975).
 #if HAVE_XFIXES && XFIXES_MAJOR >= 2 && XCURSOR_LIB_VERSION >= 10105
     QDir themeDir = cursorThemeDir(themeName, 0);
-qWarning()<<"FFFFFFFFFFFF"<<themeDir;
+
     if (!themeDir.exists()) {
         return;
     }
