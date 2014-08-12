@@ -244,6 +244,7 @@ void KCMLookandFeel::setWidgetStyle(const QString &style)
 
     m_configGroup.writeEntry("widgetStyle", style);
     m_configGroup.sync();
+    KGlobalSettings::self()->emitChange(KGlobalSettings::StyleChanged);
 }
 
 void KCMLookandFeel::setColors(const QString &scheme, const QString &colorFile)
