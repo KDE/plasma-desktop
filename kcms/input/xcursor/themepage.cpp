@@ -232,27 +232,6 @@ void ThemePage::updatePreview()
 }
 
 
-bool ThemePage::haveXfixes()
-{
-    bool result = false;
-
-#ifdef HAVE_XFIXES
-    if (!QX11Info::isPlatformX11()) {
-        return result;
-    }
-    int event_base, error_base;
-    if (XFixesQueryExtension(QX11Info::display(), &event_base, &error_base))
-    {
-        int major, minor;
-        XFixesQueryVersion(QX11Info::display(), &major, &minor);
-        result = (major >= 2);
-    }
-#endif
-
-    return result;
-}
-
-
 bool ThemePage::applyTheme(const CursorTheme *theme, const int size)
 {
     // Require the Xcursor version that shipped with X11R6.9 or greater, since
@@ -262,7 +241,7 @@ bool ThemePage::applyTheme(const CursorTheme *theme, const int size)
     if (!theme)
         return false;
 
-    if (!haveXfixes())
+    if (!CursorTheme::haveXfixes())
         return false;
 
     QByteArray themeName = QFile::encodeName(theme->name());
