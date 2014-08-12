@@ -32,6 +32,7 @@
 #include <QProcess>
 #include <QQuickWidget>
 #include <KGlobalSettings>
+#include <KIconLoader>
 
 #include <QVBoxLayout>
 #include <QPushButton>
@@ -228,7 +229,7 @@ void KCMLookandFeel::save()
     }
 
     m_configGroup.sync();
-    runRdb(KRdbExportQtColors | KRdbExportGtkTheme | KRdbExportColors);
+    runRdb(KRdbExportQtColors | KRdbExportGtkTheme | KRdbExportColors | KRdbExportQtSettings | KRdbExportXftSettings);
 }
 
 void KCMLookandFeel::defaults()
@@ -271,6 +272,11 @@ void KCMLookandFeel::setIcons(const QString &theme)
 
     KConfigGroup cg(&m_config, "Icons");
     cg.writeEntry("Theme", theme);
+    cg.sync();
+
+    for (int i=0; i < KIconLoader::LastGroup; i++) {
+        KIconLoader::emitChange(KIconLoader::Group(i));
+    }
 }
 
 void KCMLookandFeel::setPlasmaTheme(const QString &theme)
