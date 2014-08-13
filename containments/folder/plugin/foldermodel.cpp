@@ -42,7 +42,6 @@
 
 #include "internallibkonq/konq_popupmenu.h"
 #include "internallibkonq/konq_operations.h"
-#include "internallibkonq/konqmimedata.h"
 #include <KAuthorized>
 #include <KBookmarkManager>
 #include <KConfigGroup>
@@ -1180,7 +1179,7 @@ void FolderModel::copy()
 void FolderModel::cut()
 {
     QMimeData *mimeData = QSortFilterProxyModel::mimeData(m_selectionModel->selectedIndexes());
-    KonqMimeData::addIsCutSelection(mimeData, true);
+    KIO::setClipboardDataCut(mimeData, true);
     QApplication::clipboard()->setMimeData(mimeData);
 }
 

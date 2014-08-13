@@ -23,7 +23,6 @@
 
 #include "konq_operations.h"
 #include "konq_dndpopupmenuplugin.h"
-#include "konqmimedata.h"
 
 #include <ktoolinvocation.h>
 #include <kautomount.h>
@@ -145,7 +144,7 @@ KonqOperations *KonqOperations::doPasteV2(QWidget *parent, const KUrl &destUrl, 
 {
     QClipboard *clipboard = QApplication::clipboard();
     const QMimeData *data = clipboard->mimeData();
-    const bool move = KonqMimeData::decodeIsCutSelection(data);
+    const bool move = KIO::isClipboardDataCut(data);
 
     KIO::Job *job = KIO::pasteClipboard(destUrl, parent, move);
     if (job) {
