@@ -41,33 +41,39 @@ PlasmaComponents.TabButton {
         onClicked: button.clicked()
     }
 
-    PlasmaCore.IconItem {
-        id: iconElement
-
+    Item {
         anchors {
-            topMargin: 5
-            top: parent.top
-            horizontalCenter: parent.horizontalCenter
-        }
-        width: units.iconSizes.medium
-        height: width
-
-        source: iconSource
-    }
-    PlasmaComponents.Label {
-        id: labelElement
-
-        anchors {
-            top: iconElement.bottom
+            margins: units.smallSpacing
             left: parent.left
             right: parent.right
-            topMargin: 5
-            bottomMargin: 5
+            verticalCenter: parent.verticalCenter
         }
 
-        horizontalAlignment: Text.AlignHCenter
-        elide: Text.ElideRight
-        wrapMode: Text.WordWrap
-        font.pointSize: theme.smallestFont.pointSize
+        height: childrenRect.height
+
+        PlasmaCore.IconItem {
+            id: iconElement
+
+            anchors.horizontalCenter: parent.horizontalCenter
+            width: units.iconSizes.medium
+            height: width
+
+            source: iconSource
+        }
+
+        PlasmaComponents.Label {
+            id: labelElement
+
+            anchors {
+                top: iconElement.bottom
+                left: parent.left
+                right: parent.right
+            }
+
+            horizontalAlignment: Text.AlignHCenter
+            elide: Text.ElideRight
+            wrapMode: Text.WordWrap
+            font.pointSize: theme.smallestFont.pointSize
+        }
     }
 } // button
