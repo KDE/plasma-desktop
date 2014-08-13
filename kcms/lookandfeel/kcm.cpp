@@ -102,6 +102,12 @@ KCMLookandFeel::KCMLookandFeel(QWidget* parent, const QVariantList& args)
     layout->addWidget(m_quickWidget);
 }
 
+KCMLookandFeel::~KCMLookandFeel()
+{
+    KGlobalSettings::self()->emitChange(KGlobalSettings::StyleChanged);
+}
+
+
 QStandardItemModel *KCMLookandFeel::lookAndFeelModel()
 {
     return m_model;
@@ -245,7 +251,8 @@ void KCMLookandFeel::setWidgetStyle(const QString &style)
 
     m_configGroup.writeEntry("widgetStyle", style);
     m_configGroup.sync();
-    KGlobalSettings::self()->emitChange(KGlobalSettings::StyleChanged);
+    //FIXME: changing style on the fly breaks QQuickWidgets
+    //KGlobalSettings::self()->emitChange(KGlobalSettings::StyleChanged);
 }
 
 void KCMLookandFeel::setColors(const QString &scheme, const QString &colorFile)

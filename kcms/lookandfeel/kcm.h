@@ -57,6 +57,7 @@ public:
         HasCursorsRole
     };
     KCMLookandFeel(QWidget* parent, const QVariantList& args);
+    ~KCMLookandFeel();
 
     QStandardItemModel *lookAndFeelModel();
 
