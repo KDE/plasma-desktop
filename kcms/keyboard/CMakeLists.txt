@@ -67,30 +67,6 @@ endif()
 install( TARGETS kded_keyboard DESTINATION ${PLUGIN_INSTALL_DIR} )
 install( FILES keyboard.desktop DESTINATION ${SERVICES_INSTALL_DIR}/kded )
 
-
-### plasma applet ###
-#
-# set( plasma_applet_keyboard_SRCS
-#     keyboard_applet.cpp
-#     flags.cpp
-#     keyboard_config.cpp
-#     xkb_rules.cpp
-#     x11_helper.cpp
-#     xkb_helper.cpp
-#     layouts_menu.cpp
-# )
-#
-# add_library(plasma_applet_keyboard MODULE ${plasma_applet_keyboard_SRCS})
-#
-# target_link_libraries(plasma_applet_keyboard
-#      KF5::Plasma ${KDE4_KDEUI_LIBS} Qt5::Xml ${X11_Xkbfile_LIB} ${X11_LIBRARIES}
-#      ${text_paint_LIB}
-# )
-#
-# install( TARGETS plasma_applet_keyboard DESTINATION ${PLUGIN_INSTALL_DIR} )
-# install( FILES plasma_applet_keyboard.desktop DESTINATION ${SERVICES_INSTALL_DIR} )
-#
-#
 ### widget lib ###
 
 set( keyboard_layout_widget_SRCS
