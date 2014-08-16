@@ -106,11 +106,6 @@ endif()
 
 include_directories("${CMAKE_CURRENT_BINARY_DIR}")
 
-configure_file(config-workspace.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-workspace.h)
-configure_file(config-unix.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-unix.h )
-configure_file(config-X11.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-X11.h)
-configure_file(config-runtime.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-runtime.h)
-
 set(PLASMADESKTOP_VERSION_MAJOR 4)
 set(PLASMADESKTOP_VERSION_MINOR 98)
 set(PLASMADESKTOP_VERSION_PATCH 0)
@@ -118,6 +113,11 @@ set(PLASMADESKTOP_VERSION ${PLASMADESKTOP_VERSION_MAJOR}.${PLASMADESKTOP_VERSION
 
 set(GENERIC_LIB_SOVERSION ${PLASMADESKTOP_VERSION_MAJOR})
 set(GENERIC_LIB_VERSION "${PLASMADESKTOP_VERSION_MAJOR}.${PLASMADESKTOP_VERSION_MINOR}.${PLASMADESKTOP_VERSION_PATCH}")
+
+configure_file(config-workspace.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-workspace.h)
+configure_file(config-unix.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-unix.h )
+configure_file(config-X11.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-X11.h)
+configure_file(config-runtime.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-runtime.h)
 
 plasma_install_package(desktoppackage org.kde.plasma.desktop shells shell)
 
