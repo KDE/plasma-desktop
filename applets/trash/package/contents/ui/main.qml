@@ -47,8 +47,8 @@ MouseArea {
     }
 
     Component.onCompleted: {
-        plasmoid.setAction("open", "Open","document-open");
-        plasmoid.setAction("empty","Empty","trash-empty");
+        plasmoid.setAction("open", i18nc("a verb", "Open"),"document-open");
+        plasmoid.setAction("empty",i18nc("a verb", "Empty"),"trash-empty");
         plasmoid.popupIcon = "user-trash";
     }
 
