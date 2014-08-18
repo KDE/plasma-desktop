@@ -122,6 +122,9 @@ configure_file(config-runtime.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-runtime
 
 plasma_install_package(desktoppackage org.kde.plasma.desktop shells shell)
 
+#install(DIRECTORY layout-templates DESTINATION ${DATA_INSTALL_DIR})
+plasma_install_package(layout-templates/org.kde.plasma.desktop.defaultPanel org.kde.plasma.desktop.defaultPanel layout-templates layout-template)
+
 add_subdirectory(doc)
 # add_subdirectory(ktouchpadenabler)
 add_subdirectory(solid-actions-kcm)
