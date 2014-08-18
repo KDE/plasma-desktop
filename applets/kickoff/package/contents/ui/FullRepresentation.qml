@@ -44,6 +44,11 @@ Item {
     state: "Normal"
     focus: true
 
+    function switchToFavorites() {
+        mainTabGroup.currentTab = favoritesPage;
+        root.state = "Normal";
+    }
+
     PlasmaCore.DataSource {
         id: packagekitSource
         engine: "packagekit"
