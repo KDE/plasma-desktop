@@ -111,8 +111,8 @@ GroupBox {
                         PlasmaCore.IconItem {
                             anchors.verticalCenter: parent.verticalCenter
 
-                            width: 16
-                            height: 16
+                            width: units.iconSizes.small
+                            height: units.iconSizes.small
 
                             Layout.maximumWidth: width
                             Layout.maximumHeight: height
