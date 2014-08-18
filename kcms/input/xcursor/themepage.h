@@ -41,8 +41,6 @@ class ThemePage : public QWidget, private Ui::ThemePage
         void load();
         void defaults();
 
-        static bool haveXfixes();
-
     Q_SIGNALS:
         void changed(bool);
 

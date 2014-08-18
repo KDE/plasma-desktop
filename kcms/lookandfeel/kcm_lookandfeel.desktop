@@ -1,0 +1,18 @@
+[Desktop Entry]
+Icon=preferences-desktop-theme-style
+Exec=kcmshell5 kcm_lookandfeel
+X-DocPath=kcontrol/lookandfeel/index.html
+
+Type=Service
+X-KDE-ServiceTypes=KCModule
+
+X-KDE-Library=kcm_lookandfeel
+X-KDE-ParentApp=kcontrol
+
+X-KDE-System-Settings-Parent-Category=workspacetheme
+X-KDE-Weight=1
+
+Name=Look And Feel
+Comment=Desktop Look And Feel
+X-KDE-Keywords=theme, look, feel
+Categories=Qt;KDE;X-KDE-settings-looknfeel;

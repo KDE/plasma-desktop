@@ -24,7 +24,6 @@
 #include <QFile>
 #include <QX11Info>
 
-#include "themepage.h"
 #include "cursortheme.h"
 
 #include <config-X11.h>
@@ -143,9 +142,8 @@ QPixmap CursorTheme::createIcon(int size) const
 void CursorTheme::setCursorName(qulonglong cursor, const QString &name) const
 {
 #ifdef HAVE_XFIXES
-    static bool haveXfixes = ThemePage::haveXfixes();
 
-    if (haveXfixes)
+    if (haveXfixes())
     {
         XFixesSetCursorName(QX11Info::display(), cursor,
                             QFile::encodeName(name));
@@ -153,3 +151,22 @@ void CursorTheme::setCursorName(qulonglong cursor, const QString &name) const
 #endif
 }
 
+bool CursorTheme::haveXfixes()
+{
+    bool result = false;
+
+#ifdef HAVE_XFIXES
+    if (!QX11Info::isPlatformX11()) {
+        return result;
+    }
+    int event_base, error_base;
+    if (XFixesQueryExtension(QX11Info::display(), &event_base, &error_base))
+    {
+        int major, minor;
+        XFixesQueryVersion(QX11Info::display(), &major, &minor);
+        result = (major >= 2);
+    }
+#endif
+
+    return result;
+}

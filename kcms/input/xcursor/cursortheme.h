@@ -99,6 +99,8 @@ class CursorTheme
             be used as icon for this theme. */
         virtual QPixmap createIcon(int size) const;
 
+        static bool haveXfixes();
+
     protected:
         void setTitle( const QString &title )      { m_title       = title; }
         void setDescription( const QString &desc ) { m_description = desc; }
