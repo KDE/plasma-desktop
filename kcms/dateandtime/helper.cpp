@@ -55,41 +55,41 @@ static const QString exePath = QLatin1String("/usr/sbin:/usr/bin:/sbin:/bin");
 int ClockHelper::ntp( const QStringList& ntpServers, bool ntpEnabled,
                       const QString& ntpUtility )
 {
-  int ret = 0;
+    int ret = 0;
 
-  // write to the system config file
-  QFile config_file(KDE_CONFDIR "/kcmclockrc");
-  if(!config_file.exists()) {
-    config_file.open(QIODevice::WriteOnly);
-    config_file.close();
-    config_file.setPermissions(QFile::ReadOwner | QFile::WriteOwner | QFile::ReadGroup | QFile::ReadOther);
-  }
-  KConfig _config(config_file.fileName(), KConfig::SimpleConfig);
-  KConfigGroup config(&_config, "NTP");
-  config.writeEntry("servers", ntpServers );
-  config.writeEntry("enabled", ntpEnabled );
+    // write to the system config file
+    QFile config_file(KDE_CONFDIR "/kcmclockrc");
+    if(!config_file.exists()) {
+        config_file.open(QIODevice::WriteOnly);
+        config_file.close();
+        config_file.setPermissions(QFile::ReadOwner | QFile::WriteOwner | QFile::ReadGroup | QFile::ReadOther);
+    }
+    KConfig _config(config_file.fileName(), KConfig::SimpleConfig);
+    KConfigGroup config(&_config, "NTP");
+    config.writeEntry("servers", ntpServers );
+    config.writeEntry("enabled", ntpEnabled );
 
-  if ( ntpEnabled && !ntpUtility.isEmpty() ) {
-    // NTP Time setting
-    QString timeServer = ntpServers.first();
-    if( timeServer.indexOf( QRegExp(".*\\(.*\\)$") ) != -1 ) {
-      timeServer.replace( QRegExp(".*\\("), "" );
-      timeServer.replace( QRegExp("\\).*"), "" );
-      // Would this be better?: s/^.*\(([^)]*)\).*$/\1/
+    if ( ntpEnabled && !ntpUtility.isEmpty() ) {
+        // NTP Time setting
+        QString timeServer = ntpServers.first();
+        if( timeServer.indexOf( QRegExp(".*\\(.*\\)$") ) != -1 ) {
+            timeServer.replace( QRegExp(".*\\("), "" );
+            timeServer.replace( QRegExp("\\).*"), "" );
+            // Would this be better?: s/^.*\(([^)]*)\).*$/\1/
+        }
+
+        KProcess proc;
+        proc << ntpUtility << timeServer;
+        if ( proc.execute() != 0 ) {
+            ret |= NTPError;
+        } else {
+            toHwclock();
+        }
+    } else if( ntpEnabled ) {
+        ret |= NTPError;
     }
 
-    KProcess proc;
-    proc << ntpUtility << timeServer;
-    if ( proc.execute() != 0 ) {
-      ret |= NTPError;
-    } else {
-      toHwclock();
-    }
-  } else if( ntpEnabled ) {
-    ret |= NTPError;
-  }
-
-  return ret;
+    return ret;
 }
 
 int ClockHelper::date( const QString& newdate, const QString& olddate )
@@ -110,94 +110,94 @@ int ClockHelper::date( const QString& newdate, const QString& olddate )
 int ClockHelper::tz( const QString& selectedzone )
 {
     int ret = 0;
+    QString val;
 #if defined(USE_SOLARIS)	// MARCO
+    KTemporaryFile tf;
+    tf.setPrefix("kde-tzone");
+    tf.open();
+    QTextStream ts(&tf);
 
-        KTemporaryFile tf;
-        tf.setPrefix("kde-tzone");
-        tf.open();
-        QTextStream ts(&tf);
+    QFile fTimezoneFile(INITFILE);
+    bool updatedFile = false;
 
-        QFile fTimezoneFile(INITFILE);
-        bool updatedFile = false;
+    if (fTimezoneFile.open(QIODevice::ReadOnly))
+    {
+        bool found = false;
 
-        if (fTimezoneFile.open(QIODevice::ReadOnly))
+        QTextStream is(&fTimezoneFile);
+
+        for (QString line = is.readLine(); !line.isNull();
+             line = is.readLine())
         {
-            bool found = false;
-
-            QTextStream is(&fTimezoneFile);
-
-            for (QString line = is.readLine(); !line.isNull();
-                 line = is.readLine())
-            {
-                if (line.find("TZ=") == 0)
-                {
-                    ts << "TZ=" << selectedzone << endl;
-                    found = true;
-                }
-                else
-                {
-                    ts << line << endl;
-                }
-            }
-
-            if (!found)
+            if (line.find("TZ=") == 0)
             {
                 ts << "TZ=" << selectedzone << endl;
+                found = true;
             }
-
-            updatedFile = true;
-            fTimezoneFile.close();
-        }
-
-        if (updatedFile)
-        {
-            ts.device()->reset();
-            fTimezoneFile.remove();
-
-            if (fTimezoneFile.open(QIODevice::WriteOnly | QIODevice::Truncate))
+            else
             {
-                QTextStream os(&fTimezoneFile);
-
-                for (QString line = ts->readLine(); !line.isNull();
-                     line = ts->readLine())
-                {
-                    os << line << endl;
-                }
-
-                fchmod(fTimezoneFile.handle(),
-                       S_IXUSR | S_IRUSR | S_IRGRP | S_IXGRP |
-                       S_IROTH | S_IXOTH);
-                fTimezoneFile.close();
+                ts << line << endl;
             }
         }
 
-
-        QString val = selectedzone;
-#else
-        QString tz = "/usr/share/zoneinfo/" + selectedzone;
-
-        QString zic = KStandardDirs::findExe("zic", exePath);
-        if (!zic.isEmpty()) {
-            KProcess::execute(zic, QStringList() << "-l" << selectedzone);
-        } else if (!QFile::remove("/etc/localtime")) {
-          ret |= TimezoneError;
-        } else if (!QFile::copy(tz, "/etc/localtime")) {
-          ret |= TimezoneError;
+        if (!found)
+        {
+            ts << "TZ=" << selectedzone << endl;
         }
 
-        QFile fTimezoneFile("/etc/timezone");
+        updatedFile = true;
+        fTimezoneFile.close();
+    }
 
-        if (fTimezoneFile.exists() && fTimezoneFile.open(QIODevice::WriteOnly | QIODevice::Truncate) ) {
-            QTextStream t(&fTimezoneFile);
-            t << selectedzone;
+    if (updatedFile)
+    {
+        ts.device()->reset();
+        fTimezoneFile.remove();
+
+        if (fTimezoneFile.open(QIODevice::WriteOnly | QIODevice::Truncate))
+        {
+            QTextStream os(&fTimezoneFile);
+
+            for (QString line = ts->readLine(); !line.isNull();
+                 line = ts->readLine())
+            {
+                os << line << endl;
+            }
+
+            fchmod(fTimezoneFile.handle(),
+                   S_IXUSR | S_IRUSR | S_IRGRP | S_IXGRP |
+                   S_IROTH | S_IXOTH);
             fTimezoneFile.close();
         }
+    }
 
-        QString val = ':' + tz;
+
+    val = selectedzone;
+#else
+    QString tz = "/usr/share/zoneinfo/" + selectedzone;
+
+    if (QFile::exists(tz)) { // make sure the new TZ really exists
+        QFile::remove("/etc/localtime");
+    } else {
+        return TimezoneError;
+    }
+
+    if (!QFile::link(tz, "/etc/localtime")) { // fail if we can't setup the new timezone
+        return TimezoneError;
+    }
+
+    QFile fTimezoneFile("/etc/timezone");
+
+    if (fTimezoneFile.exists() && fTimezoneFile.open(QIODevice::WriteOnly | QIODevice::Truncate)) {
+        QTextStream t(&fTimezoneFile);
+        t << selectedzone;
+        fTimezoneFile.close();
+    }
 #endif // !USE_SOLARIS
+    val = ':' + selectedzone;
 
-        setenv("TZ", val.toAscii(), 1);
-        tzset();
+    setenv("TZ", val.toLocal8Bit().constData(), 1);
+    tzset();
 
     return ret;
 }
@@ -205,50 +205,50 @@ int ClockHelper::tz( const QString& selectedzone )
 int ClockHelper::tzreset()
 {
 #if !defined(USE_SOLARIS) // Do not update the System!
-        unlink( "/etc/timezone" );
-        unlink( "/etc/localtime" );
+    unlink( "/etc/timezone" );
+    unlink( "/etc/localtime" );
 
-        setenv("TZ", "", 1);
-        tzset();
+    setenv("TZ", "", 1);
+    tzset();
 #endif // !USE SOLARIS
     return 0;
 }
 
 void ClockHelper::toHwclock()
 {
-  QString hwclock = KStandardDirs::findExe("hwclock", exePath);
-  if (!hwclock.isEmpty()) {
-    KProcess::execute(hwclock, QStringList() << "--systohc");
-  }
+    QString hwclock = KStandardDirs::findExe("hwclock", exePath);
+    if (!hwclock.isEmpty()) {
+        KProcess::execute(hwclock, QStringList() << "--systohc");
+    }
 }
 
 ActionReply ClockHelper::save(const QVariantMap &args)
 {
-  bool _ntp = args.value("ntp").toBool();
-  bool _date = args.value("date").toBool();
-  bool _tz = args.value("tz").toBool();
-  bool _tzreset = args.value("tzreset").toBool();
+    bool _ntp = args.value("ntp").toBool();
+    bool _date = args.value("date").toBool();
+    bool _tz = args.value("tz").toBool();
+    bool _tzreset = args.value("tzreset").toBool();
 
-  KComponentData data( "kcmdatetimehelper" );
+    KComponentData data( "kcmdatetimehelper" );
 
-  int ret = 0; // error code
-//  The order here is important
-  if( _ntp )
-    ret |= ntp( args.value("ntpServers").toStringList(), args.value("ntpEnabled").toBool(), args.value("ntpUtility").toString() );
-  if( _date )
-    ret |= date( args.value("newdate").toString(), args.value("olddate").toString() );
-  if( _tz )
-    ret |= tz( args.value("tzone").toString() );
-  if( _tzreset )
-    ret |= tzreset();
+    int ret = 0; // error code
+    //  The order here is important
+    if( _ntp )
+        ret |= ntp( args.value("ntpServers").toStringList(), args.value("ntpEnabled").toBool(), args.value("ntpUtility").toString() );
+    if( _date )
+        ret |= date( args.value("newdate").toString(), args.value("olddate").toString() );
+    if( _tz )
+        ret |= tz( args.value("tzone").toString() );
+    if( _tzreset )
+        ret |= tzreset();
 
-  if (ret == 0) {
-    return ActionReply::SuccessReply();
-  } else {
-    ActionReply reply(ActionReply::HelperErrorReply());
-    reply.setErrorCode(static_cast<ActionReply::Error>(ret));
-    return reply;
-  }
+    if (ret == 0) {
+        return ActionReply::SuccessReply();
+    } else {
+        ActionReply reply(ActionReply::HelperErrorReply());
+        reply.setErrorCode(static_cast<ActionReply::Error>(ret));
+        return reply;
+    }
 }
 
 KAUTH_HELPER_MAIN("org.kde.kcontrol.kcmclock", ClockHelper)
