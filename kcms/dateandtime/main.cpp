@@ -89,7 +89,7 @@ void KclockModule::save()
   ExecuteJob *job = action.execute();
 
   if (!job->exec()) {
-        KMessageBox::error(this, i18n("Unable to authenticate/execute the action: %1, %2", job->error(), job->errorString()));
+      KMessageBox::error(this, i18n("Unable to authenticate/execute the action: %1, %2", job->error(), job->errorString()));
   }
   else {
       QDBusMessage msg = QDBusMessage::createSignal("/org/kde/kcmshell_clock", "org.kde.kcmshell_clock", "clockUpdated");

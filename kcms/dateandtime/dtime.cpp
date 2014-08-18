@@ -144,13 +144,13 @@ void Dtime::serverTimeCheck() {
 
 void Dtime::findNTPutility(){
   QByteArray envpath = qgetenv("PATH");
-  if (!envpath.isEmpty() && envpath[0] == ':') {
+  if (!envpath.isEmpty() && envpath.startsWith(':')) {
     envpath = envpath.mid(1);
   }
 
   QString path = "/sbin:/usr/sbin:";
   if (!envpath.isEmpty()) {
-    path += QString::fromLocal8Bit(envpath);
+    path += QFile::decodeName(envpath);
   } else {
     path += QLatin1String("/bin:/usr/bin");
   }
@@ -218,6 +218,7 @@ oceania.pool.ntp.org")).split(',', QString::SkipEmptyParts));
 
   // read the currently set time zone
   tzonelist->setSelected(KSystemTimeZones::local().name(), true);
+  emit timeChanged(false);
 }
 
 void Dtime::save( QVariantMap& helperargs )
@@ -261,12 +262,11 @@ void Dtime::save( QVariantMap& helperargs )
 
   QStringList selectedZones(tzonelist->selection());
 
-  if (selectedZones.count() > 0) {
-    QString selectedzone(selectedZones[0]);
+  if (!selectedZones.isEmpty()) {
     helperargs["tz"] = true;
-    helperargs["tzone"] = selectedzone;
+    helperargs["tzone"] = selectedZones.first();
   } else {
-    helperargs["tzreset"] = true; // // make the helper reset the timezone
+    helperargs["tzreset"] = true; // make the helper reset the timezone
   }
 
   currentZone();
