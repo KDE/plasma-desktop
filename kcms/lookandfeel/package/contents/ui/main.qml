@@ -39,69 +39,95 @@ Rectangle {
             cellWidth: Math.floor(grid.width / Math.max(Math.floor(grid.width / (units.gridUnit*12)), 3))
             cellHeight: cellWidth / 1.6
 
-            delegate: Rectangle {
+            delegate: Item {
                 width: grid.cellWidth
                 height: grid.cellHeight
-                Connections {
-                    target: kcm
-                    onSelectedPluginChanged: {
+                Rectangle {
+                    anchors {
+                        fill: parent
+                        margins: units.smallSpacing
+                    }
+                    Connections {
+                        target: kcm
+                        onSelectedPluginChanged: {
+                            if (kcm.selectedPlugin == model.pluginName) {
+                                makeCurrentTimer.pendingIndex = index
+                            }
+                        }
+                    }
+                    Component.onCompleted: {
                         if (kcm.selectedPlugin == model.pluginName) {
                             makeCurrentTimer.pendingIndex = index
                         }
                     }
-                }
-                Component.onCompleted: {
-                    if (kcm.selectedPlugin == model.pluginName) {
-                        makeCurrentTimer.pendingIndex = index
+                    QIconItem {
+                        id: icon
+                        anchors.centerIn: parent
+                        width: units.iconSizes.large
+                        height: width
+                        icon: "view-preview"
                     }
-                }
-                QIconItem {
-                    id: icon
-                    anchors.centerIn: parent
-                    width: units.iconSizes.large
-                    height: width
-                    icon: "view-preview"
-                }
-                QtControls.Label {
-                    anchors {
-                        horizontalCenter: parent.horizontalCenter
-                        top: icon.bottom
-                        topMargin: units.gridUnit
-                    }
-                    color: "gray"
-                    text: model.display
-                }
-                Image {
-                    anchors.fill: parent
-                    source: model.screenshot
-                }
-                Rectangle {
-                    opacity: grid.currentIndex == index ? 1.0 : 0
-                    anchors.fill: parent
-                    border.width: units.smallSpacing * 2
-                    border.color: syspal.highlight
-                    color: "transparent"
-                    Behavior on opacity {
-                        PropertyAnimation {
-                            duration: units.longDuration
-                            easing.type: Easing.OutQuad
+                    Image {
+                        anchors {
+                            fill: parent
+                            margins: units.smallSpacing * 2
+                        }
+                        source: model.screenshot
+
+                        Rectangle {
+                            anchors {
+                                left: parent.left
+                                right: parent.right
+                                bottom: parent.bottom
+                            }
+                            height: childrenRect.height
+                            gradient: Gradient {
+                                GradientStop {
+                                    position: 0.0
+                                    color: "transparent"
+                                }
+                                GradientStop {
+                                    position: 1.0
+                                    color: Qt.rgba(0, 0, 0, 0.5)
+                                }
+                            }
+                            QtControls.Label {
+                                anchors {
+                                    horizontalCenter: parent.horizontalCenter
+                                }
+                                color: "white"
+                                text: model.display
+                            }
                         }
                     }
-                }
-                MouseArea {
-                    anchors.fill: parent
-                    hoverEnabled: true
-                    onClicked: {
-                        grid.currentIndex = index
-                        kcm.selectedPlugin = model.pluginName
+                    Rectangle {
+                        opacity: grid.currentIndex == index ? 1.0 : 0
+                        anchors.fill: parent
+                        border.width: units.smallSpacing * 2
+                        border.color: syspal.highlight
+                        color: "transparent"
+                        Behavior on opacity {
+                            PropertyAnimation {
+                                duration: units.longDuration
+                                easing.type: Easing.OutQuad
+                            }
+                        }
                     }
-                    Timer {
-                        interval: 1000 // FIXME TODO: Use platform value for tooltip activation delay.
+                    MouseArea {
+                        anchors.fill: parent
+                        hoverEnabled: true
+                        onClicked: {
+                            grid.currentIndex = index
+                            kcm.selectedPlugin = model.pluginName
+                        }
+                        Timer {
+                            interval: 1000 // FIXME TODO: Use platform value for tooltip activation delay.
 
-                        running: parent.containsMouse && !parent.pressedButtons
+                            running: parent.containsMouse && !parent.pressedButtons
 
-                        onTriggered: {
-                            Tooltip.showText(parent, Qt.point(parent.mouseX, parent.mouseY), model.display);
+                            onTriggered: {
+                                Tooltip.showText(parent, Qt.point(parent.mouseX, parent.mouseY), model.display);
+                            }
                         }
                     }
                 }
