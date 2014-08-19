@@ -1,13 +1,14 @@
-
-include_directories(${KDE4_INCLUDES} 
-   ${PLASMA_INCLUDE_DIR} 
-   ${X11_INCLUDE_DIR}
-   ${X11_Xrender_INCLUDE_PATH}
-   )
-link_directories(${KDE4_LIB_DIR})
-
-add_subdirectory(src)
-add_subdirectory(tests)
-
 add_subdirectory(backend)
 
+plasma_install_package(package org.kde.plasma.kimpanel)
+
+set(kimpanelplugin_SRCS
+    plugin/screen.cpp
+    plugin/kimpanelplugin.cpp
+)
+
+install(FILES plugin/qmldir DESTINATION ${QML_INSTALL_DIR}/org/kde/plasma/private/kimpanel)
+add_library(kimpanelplugin SHARED ${kimpanelplugin_SRCS})
+
+target_link_libraries(kimpanelplugin Qt5::Gui Qt5::Qml)
+install(TARGETS kimpanelplugin DESTINATION ${QML_INSTALL_DIR}/org/kde/plasma/private/kimpanel)

@@ -25,7 +25,7 @@
 // Qt
 #include <QObject>
 #include <QStringList>
-#include <QDBusContext>
+#include <QtDBus/QDBusContext>
 
 class QDBusServiceWatcher;
 class Impanel2Adaptor;

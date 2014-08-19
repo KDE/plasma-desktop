@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2012 by CSSlayer <wengxt@gmail.com>                     *
+ *   Copyright 2013 by Sebastian Kügler <sebas@kde.org>                    *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -17,21 +17,14 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#ifndef KIMPANEL_DUMMYWIDGET_H
-#define KIMPANEL_DUMMYWIDGET_H
+import QtQuick 2.0
 
-// Qt
-#include <QGraphicsWidget>
+import org.kde.plasma.configuration 2.0
 
-class DummyWidget: public QGraphicsWidget
-{
-    Q_OBJECT
-public:
-
-    DummyWidget(QGraphicsWidget* parent = 0);
-
-protected:
-    virtual void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
-};
-
-#endif // KIMPANEL_LABELGRAPHICS_H
+ConfigModel {
+    ConfigCategory {
+         name: i18n("Appearance")
+         icon: "preferences-desktop-color"
+         source: "ConfigAppearance.qml"
+    }
+}
