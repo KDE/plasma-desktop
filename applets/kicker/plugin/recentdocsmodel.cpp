@@ -73,7 +73,11 @@ QVariant RecentDocsModel::data(const QModelIndex &index, int role) const
         QVariantList actionList = Kicker::createActionListForFileItem(item);
 
         actionList.prepend(Kicker::createSeparatorActionItem());
-        QVariantMap forgetAction = Kicker::createActionItem(i18n("Forget Document"), "forget");
+
+        const QVariantMap &forgetAllAction = Kicker::createActionItem(i18n("Forget All Documents"), "forgetAll");
+        actionList.prepend(forgetAllAction);
+
+        const QVariantMap &forgetAction = Kicker::createActionItem(i18n("Forget Document"), "forget");
         actionList.prepend(forgetAction);
 
         return actionList;
@@ -103,6 +107,10 @@ bool RecentDocsModel::trigger(int row, const QString &actionId, const QVariant &
         forget(row);
 
         return false;
+    } else if (actionId == "forgetAll") {
+        forgetAll();
+
+        return true;
     }
 
     bool close = false;
@@ -158,10 +166,7 @@ void RecentDocsModel::forget(int row)
     if (row >= m_entryList.count()) {
         return;
     }
-
-    bool ok = QFile::remove(m_entryList.at(row)->desktopPath());
-
-    if (ok) {
+    if (QFile::remove(m_entryList.at(row)->desktopPath())) {
         beginRemoveRows(QModelIndex(), row, row);
 
         m_entryList.removeAt(row);
@@ -170,4 +175,19 @@ void RecentDocsModel::forget(int row)
 
         emit countChanged();
     }
+}
+
+void RecentDocsModel::forgetAll()
+{
+    beginResetModel();
+
+    for (int row = m_entryList.count() - 1; row >= 0; --row) {
+        if (QFile::remove(m_entryList.at(row)->desktopPath())) {
+            m_entryList.removeAt(row);
+        }
+    }
+
+    endResetModel();
+
+    emit countChanged();
 }

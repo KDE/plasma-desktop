@@ -106,12 +106,20 @@ void FunnelModel::setSourceModel(AbstractModel *model)
 
         endInsertRows();
     } else if (newCount < oldCount) {
-        beginRemoveRows(QModelIndex(), newCount, oldCount - 1);
+        if (newCount == 0) {
+            emit beginResetModel();
 
-        endRemoveRows();
+            emit endResetModel();
+        } else {
+            beginRemoveRows(QModelIndex(), newCount, oldCount - 1);
+
+            endRemoveRows();
+        }
     }
 
-    emit dataChanged(index(0, 0), index(qMin(oldCount, newCount) - 1, 0));
+    if (newCount > 0) {
+        emit dataChanged(index(0, 0), index(qMin(oldCount, newCount) - 1, 0));
+    }
 
     if (oldCount != newCount) {
         emit countChanged();

@@ -56,8 +56,11 @@ QVariant RecentAppsModel::data(const QModelIndex &index, int role) const
     } else if (role == Kicker::ActionListRole) {
         QVariantList actionList;
 
-        QVariantMap forgetAction = Kicker::createActionItem(i18n("Forget Application"), "forget");
+        const QVariantMap &forgetAction = Kicker::createActionItem(i18n("Forget Application"), "forget");
         actionList.append(forgetAction);
+
+        const QVariantMap &forgetAllAction = Kicker::createActionItem(i18n("Forget All Applications"), "forgetAll");
+        actionList.append(forgetAllAction);
 
         return actionList;
     }
@@ -96,7 +99,13 @@ bool RecentAppsModel::trigger(int row, const QString &actionId, const QVariant &
 
         return ran;
     } else if (actionId == "forget") {
-        return forgetApp(row);
+        forgetApp(row);
+
+        return false;
+    } else if (actionId == "forgetAll") {
+        forgetAllApps();
+
+        return true;
     }
 
     return false;
@@ -155,10 +164,10 @@ void RecentAppsModel::addApp(const QString &storageId)
     emit recentAppsChanged();
 }
 
-bool RecentAppsModel::forgetApp(int row)
+void RecentAppsModel::forgetApp(int row)
 {
     if (row < 0 || row >= m_recentApps.count()) {
-        return false;
+        return;
     }
 
     beginRemoveRows(QModelIndex(), row, row);
@@ -168,6 +177,15 @@ bool RecentAppsModel::forgetApp(int row)
     emit countChanged();
 
     emit recentAppsChanged();
+}
 
-    return false;
+void RecentAppsModel::forgetAllApps()
+{
+    beginResetModel();
+    m_recentApps.clear();
+    endResetModel();
+
+    emit countChanged();
+
+    emit recentAppsChanged();
 }

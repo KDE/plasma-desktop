@@ -59,6 +59,7 @@ class RecentDocsModel : public AbstractModel
 
     private:
         void forget(int row);
+        void forgetAll();
 
         QList<DocEntry *> m_entryList;
 };

@@ -72,10 +72,12 @@ void RootModel::refresh()
 void RootModel::extendEntryList()
 {
     m_recentAppsModel = new RecentAppsModel(this);
+    connect(m_recentAppsModel, SIGNAL(countChanged()), this, SLOT(childModelChanged()));
     connect(this, SIGNAL(appLaunched(QString)), m_recentAppsModel, SLOT(addApp(QString)));
     emit recentAppsModelChanged();
 
     RecentDocsModel *recentDocsModel = new RecentDocsModel(this);
+    connect(recentDocsModel, SIGNAL(countChanged()), this, SLOT(childModelChanged()));
 
     SystemModel *systemModel = new SystemModel(this);
     m_favoritesModels["sys"]->setSourceModel(systemModel);
@@ -91,4 +93,26 @@ void RootModel::extendEntryList()
     endInsertRows();
 
     emit countChanged();
+}
+
+void RootModel::childModelChanged()
+{
+    QObject *model = sender();
+
+    for (int i = 0; i < m_entryList.size(); ++i) {
+        const AbstractEntry *entry = m_entryList.at(i);
+
+        if (entry->type() == AbstractEntry::GroupType) {
+            const GroupEntry *group = static_cast<const GroupEntry *>(entry);
+
+            if (group->model() == model) {
+                const QModelIndex &idx = index(i, 0);
+
+                emit dataChanged(idx, idx);
+
+                break;
+            }
+        }
+
+    }
 }

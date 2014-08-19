@@ -46,9 +46,11 @@ class RecentAppsModel : public AbstractModel
 
     public Q_SLOTS:
         void addApp(const QString &storageId);
-        bool forgetApp(int row);
 
     private:
+        void forgetApp(int row);
+        void forgetAllApps();
+
         QList<QString> m_recentApps;
 };
 

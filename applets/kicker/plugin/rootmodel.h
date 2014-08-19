@@ -52,6 +52,9 @@ class RootModel : public AppsModel
     protected Q_SLOTS:
         void refresh();
 
+    private Q_SLOTS:
+        void childModelChanged();
+
     private:
         void extendEntryList();
 
