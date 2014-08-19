@@ -794,26 +794,9 @@ void KonqOperations::setOperation( KIO::Job * job, Operation method, const KUrl 
         KJobWidgets::setWindow(job, parentWidget());
         connect( job, &KIO::Job::result,
                  this, &KonqOperations::slotResult );
-#if 0
-        KIO::CopyJob *copyJob = dynamic_cast<KIO::CopyJob*>(job);
-        KonqIconViewWidget *iconView = dynamic_cast<KonqIconViewWidget*>(parent());
-        if (copyJob && iconView)
-        {
-            connect(copyJob, SIGNAL(aboutToCreate(KIO::Job*,QList<KIO::CopyInfo>)),
-                 this, SLOT(slotAboutToCreate(KIO::Job*,QList<KIO::CopyInfo>)));
-            // TODO move this connect into the iconview!
-            connect(this, SIGNAL(aboutToCreate(QPoint,QList<KIO::CopyInfo>)),
-                 iconView, SLOT(slotAboutToCreate(QPoint,QList<KIO::CopyInfo>)));
-        }
-#endif
     }
     else // for link
         slotResult( 0L );
-}
-
-void KonqOperations::slotAboutToCreate(KIO::Job *, const QList<KIO::CopyInfo> &files)
-{
-    emit aboutToCreate( m_info ? m_info->mousePos : m_pasteInfo ? m_pasteInfo->mousePos : QPoint(), files);
 }
 
 void KonqOperations::statUrl( const KUrl & url, const QObject *receiver, const char *member, QWidget* parent )

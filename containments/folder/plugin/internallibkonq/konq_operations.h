@@ -29,7 +29,7 @@
 #include <QDropEvent>
 
 class KJob;
-namespace KIO { class Job; class SimpleJob; struct CopyInfo; }
+namespace KIO { class Job; class SimpleJob; }
 class QWidget;
 class KFileItem;
 class KFileItemListProperties;
@@ -254,7 +254,6 @@ public:
 
 Q_SIGNALS:
     void statFinished( const KFileItem & item );
-    void aboutToCreate(const QPoint &pos, const QList<KIO::CopyInfo> &files);
     void aboutToCreate(const KUrl::List &urls);
     void renamingFailed(const KUrl &oldUrl, const KUrl &newUrl);
 
@@ -293,7 +292,6 @@ private:
 
 protected Q_SLOTS:
 
-    void slotAboutToCreate(KIO::Job *job, const QList<KIO::CopyInfo> &files);
     void slotResult( KJob * job );
     void slotStatResult( KJob * job );
     void asyncDrop( const KFileItem & item );
