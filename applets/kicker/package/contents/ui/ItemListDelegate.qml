@@ -34,7 +34,7 @@ Item {
     signal actionTriggered(string actionId, variant actionArgument)
     signal aboutToShowActionMenu(variant actionMenu)
 
-    property bool hasChildren: (model.hasChildren != null)
+    property bool hasChildren: (model.hasChildren == true)
     property bool hasActionList: ((model.favoriteId != null)
         || (("hasActionList" in model) && (model.hasActionList == true)))
     property QtObject childDialog: null
@@ -95,7 +95,7 @@ Item {
         }
 
         onReleased: {
-            if (pressed && !model.hasChildren) {
+            if (pressed && !hasChildren) {
                 item.ListView.view.model.trigger(index, "", null);
                 plasmoid.expanded = false;
             }
@@ -115,7 +115,7 @@ Item {
             }
 
             // FIXME: Correct escape angle calc for right screen edge.
-            if (justOpenedTimer.running || !model.hasChildren) {
+            if (justOpenedTimer.running || !hasChildren) {
                 item.ListView.view.currentIndex = index;
             } else {
                 mouseCol = mouse.x;
@@ -192,6 +192,8 @@ Item {
         PlasmaComponents.Label {
             id: label
 
+            enabled: (dialog != null || hasChildren)
+
             anchors.verticalCenter: parent.verticalCenter
 
             width: (parent.width - icon.width - arrow.width
@@ -214,7 +216,7 @@ Item {
             width: visible ? units.iconSizes.small : 0
             height: width
 
-            visible: (item.ListView.view.currentIndex == index && model.hasChildren != null)
+            visible: (item.ListView.view.currentIndex == index && hasChildren)
 
             svg: arrows
             elementId: (Qt.application.layoutDirection == Qt.RightToLeft) ? "left-arrow" : "right-arrow"
@@ -230,7 +232,7 @@ Item {
             event.accepted = true;
             openActionMenu(mouseArea);
         } else if ((event.key == Qt.Key_Enter || event.key == Qt.Key_Return) && !hasChildren) {
-            if (!model.hasChildren) {
+            if (!hasChildren) {
                 item.ListView.view.model.trigger(index, "", null);
                 plasmoid.expanded = false;
             }
