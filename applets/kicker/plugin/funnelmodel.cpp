@@ -107,9 +107,9 @@ void FunnelModel::setSourceModel(AbstractModel *model)
         endInsertRows();
     } else if (newCount < oldCount) {
         if (newCount == 0) {
-            emit beginResetModel();
+            beginResetModel();
 
-            emit endResetModel();
+            endResetModel();
         } else {
             beginRemoveRows(QModelIndex(), newCount, oldCount - 1);
 
