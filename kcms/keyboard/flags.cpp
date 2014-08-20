@@ -224,7 +224,7 @@ void Flags::drawLabel(QPainter& painter, const QString& layoutText, bool flagSho
     QColor textColor = flagShown ? Qt::black : theme.color(Plasma::Theme::TextColor);
     QPoint offset = QPoint(0, 0);
 
-    auto shadowText = [&font, &textColor, &offset](QString text) {
+    auto shadowText = [&font, &textColor, &offset, &rect](QString text) {
         //don't try to paint stuff on a future null pixmap because the text is empty
         if (text.isEmpty()) {
             return QPixmap();
@@ -244,7 +244,7 @@ void Flags::drawLabel(QPainter& painter, const QString& layoutText, bool flagSho
         //        this is the case and determine if we should be painting it differently here,
         //        doing soething different with the boundingRect call or if it's a problem
         //        in Qt itself
-        p.drawText(textPixmap.rect(), Qt::AlignCenter, text);
+        p.drawText(rect, Qt::AlignCenter, text);
         p.end();
 
         return textPixmap;
@@ -277,17 +277,17 @@ const QIcon Flags::getIconWithText(const LayoutUnit& layoutUnit, const KeyboardC
 
 	QString layoutText = Flags::getShortText(layoutUnit, keyboardConfig);
 
-	const QSize TRAY_ICON_SIZE(21, 14);
+	const QSize TRAY_ICON_SIZE(128, 128);
 	QPixmap pixmap = QPixmap(TRAY_ICON_SIZE);
 	pixmap.fill(Qt::transparent);
 
 	QPainter painter(&pixmap);
-//	p.setRenderHint(QPainter::SmoothPixmapTransform);
+	painter.setRenderHint(QPainter::SmoothPixmapTransform);
 //	p.setRenderHint(QPainter::Antialiasing);
 
 	if( keyboardConfig.indicatorType == KeyboardConfig::SHOW_LABEL_ON_FLAG ) {
     	QIcon iconf = createIcon(layoutUnit.layout);
-    	iconf.paint(&painter, painter.window(), Qt::AlignCenter);
+        painter.drawPixmap(pixmap.rect(), iconf.pixmap(TRAY_ICON_SIZE));
 	}
 
 	drawLabel(painter, layoutText, keyboardConfig.isFlagShown());
