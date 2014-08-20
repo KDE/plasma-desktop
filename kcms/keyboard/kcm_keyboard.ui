@@ -19,7 +19,7 @@
    </attribute>
    <layout class="QFormLayout" name="formLayout">
     <property name="verticalSpacing">
-      <number>0</number>
+     <number>0</number>
     </property>
     <item row="0" column="0">
      <widget class="QLabel" name="label_4">
@@ -141,7 +141,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QGroupBox" name="switchingPolicyButtonGroup">
+       <widget class="QGroupBox" name="switchingPolicyGroupBox">
         <property name="whatsThis">
          <string>If you select &quot;Application&quot; or &quot;Window&quot; switching policy, changing the keyboard layout will only affect the current application or window.</string>
         </property>
@@ -157,6 +157,9 @@
            <property name="checked">
             <bool>true</bool>
            </property>
+           <attribute name="buttonGroup">
+            <string notr="true">switchingPolicyButtonGroup</string>
+           </attribute>
           </widget>
          </item>
          <item row="1" column="0">
@@ -164,6 +167,9 @@
            <property name="text">
             <string>&amp;Desktop</string>
            </property>
+           <attribute name="buttonGroup">
+            <string notr="true">switchingPolicyButtonGroup</string>
+           </attribute>
           </widget>
          </item>
          <item row="2" column="0">
@@ -171,6 +177,9 @@
            <property name="text">
             <string>&amp;Application</string>
            </property>
+           <attribute name="buttonGroup">
+            <string notr="true">switchingPolicyButtonGroup</string>
+           </attribute>
           </widget>
          </item>
          <item row="3" column="0">
@@ -178,6 +187,9 @@
            <property name="text">
             <string>&amp;Window</string>
            </property>
+           <attribute name="buttonGroup">
+            <string notr="true">switchingPolicyButtonGroup</string>
+           </attribute>
           </widget>
          </item>
         </layout>
@@ -460,9 +472,19 @@
    </layout>
   </widget>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>KKeySequenceWidget</class>
+   <extends>QWidget</extends>
+   <header>kkeysequencewidget.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
  <slots>
   <signal>changed(bool)</signal>
  </slots>
+ <buttongroups>
+  <buttongroup name="switchingPolicyButtonGroup"/>
+ </buttongroups>
 </ui>
