@@ -88,6 +88,17 @@ void KcmTest::testKCMSave()
     KConfigGroup cg(&config, "KDE");
     QCOMPARE(cg.readEntry("widgetStyle", QString()), QString("testValue"));
     QCOMPARE(cg.readEntry("ColorScheme", QString()), QString("TestValue"));
+
+    cg = KConfigGroup(&config, "Icons");
+    QCOMPARE(cg.readEntry("Theme", QString()), QString("testValue"));
+
+    KConfig plasmaConfig("plasmarc");
+    cg = KConfigGroup(&plasmaConfig, "Theme");
+    QCOMPARE(cg.readEntry("name", QString()), QString("testValue"));
+
+    KConfig inputConfig("kcminputrc");
+    cg = KConfigGroup(&inputConfig, "Mouse");
+    QCOMPARE(cg.readEntry("cursorTheme", QString()), QString("testValue"));
 }
 
 QTEST_MAIN(KcmTest)
