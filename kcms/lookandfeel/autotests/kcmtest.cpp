@@ -99,6 +99,15 @@ void KcmTest::testKCMSave()
     KConfig inputConfig("kcminputrc");
     cg = KConfigGroup(&inputConfig, "Mouse");
     QCOMPARE(cg.readEntry("cursorTheme", QString()), QString("testValue"));
+
+    KConfig splashConfig("ksplashrc");
+    cg = KConfigGroup(&splashConfig, "KSplash");
+    QCOMPARE(cg.readEntry("Theme", QString()), QString("org.kde.test"));
+    QCOMPARE(cg.readEntry("Engine", QString()), QString("KSplashQML"));
+
+    KConfig lockerConfig("kscreenlockerrc");
+    cg = KConfigGroup(&lockerConfig, "Greeter");
+    QCOMPARE(cg.readEntry("Theme", QString()), QString("org.kde.test"));
 }
 
 QTEST_MAIN(KcmTest)
