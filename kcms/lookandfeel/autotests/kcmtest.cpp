@@ -32,6 +32,12 @@ private Q_SLOTS:
     void initTestCase();
     void cleanupTestCase();
     void testWidgetStyle();
+    void testColors();
+    void testIcons();
+    void testPlasmaTheme();
+    void testCursorTheme();
+    void testSplashScreen();
+    void testLockScreen();
     void testKCMSave();
 
 private:
@@ -79,6 +85,62 @@ void KcmTest::testWidgetStyle()
     QCOMPARE(cg.readEntry("widgetStyle", QString()), QString("customTestValue"));
 }
 
+void KcmTest::testColors()
+{
+    //TODO: test colorFile as well
+    m_KCMLookandFeel->setColors("customTestValue", QString());
+
+    KConfig config("kdeglobals");
+    KConfigGroup cg(&config, "KDE");
+    QCOMPARE(cg.readEntry("ColorScheme", QString()), QString("customTestValue"));
+}
+
+void KcmTest::testIcons()
+{
+    m_KCMLookandFeel->setIcons("customTestValue");
+
+    KConfig config("kdeglobals");
+    KConfigGroup cg(&config, "Icons");
+    QCOMPARE(cg.readEntry("Theme", QString()), QString("customTestValue"));
+}
+
+void KcmTest::testPlasmaTheme()
+{
+    m_KCMLookandFeel->setPlasmaTheme("customTestValue");
+
+    KConfig config("plasmarc");
+    KConfigGroup cg(&config, "Theme");
+    QCOMPARE(cg.readEntry("name", QString()), QString("customTestValue"));
+}
+
+void KcmTest::testCursorTheme()
+{
+    m_KCMLookandFeel->setCursorTheme("customTestValue");
+
+    KConfig config("kcminputrc");
+    KConfigGroup cg(&config, "Mouse");
+    QCOMPARE(cg.readEntry("cursorTheme", QString()), QString("customTestValue"));
+}
+
+void KcmTest::testSplashScreen()
+{
+    m_KCMLookandFeel->setSplashScreen("customTestValue");
+
+    KConfig config("ksplashrc");
+    KConfigGroup cg(&config, "KSplash");
+    QCOMPARE(cg.readEntry("Theme", QString()), QString("customTestValue"));
+    QCOMPARE(cg.readEntry("Engine", QString()), QString("KSplashQML"));
+}
+
+void KcmTest::testLockScreen()
+{
+    m_KCMLookandFeel->setLockScreen("customTestValue");
+
+    KConfig config("kscreenlockerrc");
+    KConfigGroup cg(&config, "Greeter");
+    QCOMPARE(cg.readEntry("Theme", QString()), QString("customTestValue"));
+}
+
 
 void KcmTest::testKCMSave()
 {
@@ -87,6 +149,7 @@ void KcmTest::testKCMSave()
     KConfig config("kdeglobals");
     KConfigGroup cg(&config, "KDE");
     QCOMPARE(cg.readEntry("widgetStyle", QString()), QString("testValue"));
+    //save() capitalizes the ColorScheme
     QCOMPARE(cg.readEntry("ColorScheme", QString()), QString("TestValue"));
 
     cg = KConfigGroup(&config, "Icons");
