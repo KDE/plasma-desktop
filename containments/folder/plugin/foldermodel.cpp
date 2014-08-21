@@ -48,6 +48,7 @@
 #include <KFileItemActions>
 #include <KFileItemListProperties>
 #include <KNewFileMenu>
+#include <KIO/DeleteJob>
 #include <KIO/EmptyTrashJob>
 #include <KIO/FileUndoManager>
 #include <KIO/JobUiDelegate>
@@ -1204,12 +1205,22 @@ void FolderModel::refresh()
 
 void FolderModel::moveSelectedToTrash()
 {
-    KonqOperations::del(QApplication::desktop(), KonqOperations::TRASH, selectedUrls(true));
+    const QList<QUrl> urls = selectedUrls(true);
+    KIO::JobUiDelegate uiDelegate;
+    if (uiDelegate.askDeleteConfirmation(urls, KIO::JobUiDelegate::Trash, KIO::JobUiDelegate::DefaultConfirmation)) {
+        KIO::Job* job = KIO::trash(urls);
+        job->ui()->setAutoErrorHandlingEnabled(true);
+    }
 }
 
 void FolderModel::deleteSelected()
 {
-    KonqOperations::del(QApplication::desktop(), KonqOperations::DEL, selectedUrls(false));
+    const QList<QUrl> urls = selectedUrls(false);
+    KIO::JobUiDelegate uiDelegate;
+    if (uiDelegate.askDeleteConfirmation(urls, KIO::JobUiDelegate::Delete, KIO::JobUiDelegate::DefaultConfirmation)) {
+        KIO::Job* job = KIO::del(urls);
+        job->ui()->setAutoErrorHandlingEnabled(true);
+    }
 }
 
 void FolderModel::emptyTrashBin()
