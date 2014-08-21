@@ -48,7 +48,9 @@
 #include <KFileItemActions>
 #include <KFileItemListProperties>
 #include <KNewFileMenu>
+#include <KIO/EmptyTrashJob>
 #include <KIO/FileUndoManager>
+#include <KIO/JobUiDelegate>
 #include <KIO/Paste>
 #include <KLocalizedString>
 #include <KSharedConfig>
@@ -1212,7 +1214,12 @@ void FolderModel::deleteSelected()
 
 void FolderModel::emptyTrashBin()
 {
-    KonqOperations::emptyTrash(QApplication::desktop());
+    KIO::JobUiDelegate uiDelegate;
+    uiDelegate.setWindow(QApplication::desktop());
+    if (uiDelegate.askDeleteConfirmation(QList<QUrl>(), KIO::JobUiDelegate::EmptyTrash, KIO::JobUiDelegate::DefaultConfirmation)) {
+        KIO::Job* job = KIO::emptyTrash();
+        job->ui()->setAutoErrorHandlingEnabled(true);
+    }
 }
 
 void FolderModel::undoTextChanged(const QString &text)
