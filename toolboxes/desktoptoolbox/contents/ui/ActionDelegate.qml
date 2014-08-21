@@ -32,7 +32,7 @@ Item {
     height: toolBoxDelegate.iconSize + 14
     width: childrenRect.width
 
-    visible: modelData.visible
+    visible: modelData.visible && modelData.text != ""
     KQuickControlsAddons.QIconItem {
         id: iconItem
         height: toolBoxDelegate.iconSize
