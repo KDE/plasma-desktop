@@ -69,7 +69,7 @@ XCursorTheme::XCursorTheme(const QDir &themeDir)
             sizeListString.append(QString::number(sizeList.takeFirst()));
         };
         QString tempString = i18nc(
-            "@info/plain The argument is the list of available sizes (in pixel). Example: "
+            "@info The argument is the list of available sizes (in pixel). Example: "
                 "'Available sizes: 24' or 'Available sizes: 24, 36, 48'",
             "(Available sizes: %1)",
             sizeListString);
