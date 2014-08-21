@@ -32,6 +32,7 @@ private Q_SLOTS:
     void initTestCase();
     void cleanupTestCase();
     void testWidgetStyle();
+    void testKCMSave();
 
 private:
     QDir m_configDir;
@@ -53,8 +54,12 @@ void KcmTest::initTestCase()
     Plasma::Package p = Plasma::PluginLoader::self()->loadPackage("Plasma/LookAndFeel");
     p.setPath(packagePath);
     QVERIFY(p.isValid());
-    p.install(packagePath, QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation)+"/look-and-feel/");
+    p.install(packagePath, QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation)+"/plasma/look-and-feel/");
 
+    KConfig config("kdeglobals");
+    KConfigGroup cg(&config, "KDE");
+    cg.writeEntry("LookAndFeelPackage", "org.kde.test");
+    cg.sync();
     m_KCMLookandFeel = new KCMLookandFeel(0, QVariantList());
     m_KCMLookandFeel->load();
 }
@@ -75,6 +80,15 @@ void KcmTest::testWidgetStyle()
 }
 
 
+void KcmTest::testKCMSave()
+{
+    m_KCMLookandFeel->save();
+
+    KConfig config("kdeglobals");
+    KConfigGroup cg(&config, "KDE");
+    QCOMPARE(cg.readEntry("widgetStyle", QString()), QString("testValue"));
+    QCOMPARE(cg.readEntry("ColorScheme", QString()), QString("TestValue"));
+}
 
 QTEST_MAIN(KcmTest)
 #include "kcmtest.moc"

@@ -210,8 +210,9 @@ void KCMLookandFeel::save()
                 colorScheme.remove('\''); // So Foo's does not become FooS
                 QRegExp fixer("[\\W,.-]+(.?)");
                 int offset;
-                while ((offset = fixer.indexIn(colorScheme)) >= 0)
+                while ((offset = fixer.indexIn(colorScheme)) >= 0) {
                     colorScheme.replace(offset, fixer.matchedLength(), fixer.cap(1).toUpper());
+                }
                 colorScheme.replace(0, 1, colorScheme.at(0).toUpper());
                 QString src = QStandardPaths::locate(QStandardPaths::GenericDataLocation, "color-schemes/" +  colorScheme + ".colors");
                 setColors(colorScheme, src);
@@ -264,11 +265,12 @@ void KCMLookandFeel::setWidgetStyle(const QString &style)
 
 void KCMLookandFeel::setColors(const QString &scheme, const QString &colorFile)
 {
-    if (scheme.isEmpty() || colorFile.isEmpty()) {
+    if (scheme.isEmpty() && colorFile.isEmpty()) {
         return;
     }
 
     m_configGroup.writeEntry("ColorScheme", scheme);
+    m_configGroup.sync();
 
     KSharedConfigPtr conf = KSharedConfig::openConfig(colorFile);
     foreach (const QString &grp, conf->groupList()) {
