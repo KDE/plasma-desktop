@@ -237,6 +237,10 @@ void KCMLookandFeel::save()
         }
     }
 
+    //TODO: option to enable/disable apply? they don't seem required by UI design
+    setSplashScreen(m_selectedPlugin);
+    setLockScreen(m_selectedPlugin);
+
     m_configGroup.sync();
     runRdb(KRdbExportQtColors | KRdbExportGtkTheme | KRdbExportColors | KRdbExportQtSettings | KRdbExportXftSettings);
 }
@@ -454,6 +458,35 @@ const QStringList KCMLookandFeel::cursorSearchPaths()
     m_cursorSearchPaths.replaceInStrings(QRegExp("^~\\/"), QDir::home().path() + '/');
     return m_cursorSearchPaths;
 }
+
+void KCMLookandFeel::setSplashScreen(const QString &theme)
+{
+    if (theme.isEmpty()) {
+        return;
+    }
+
+    KConfig config("ksplashrc");
+    KConfigGroup cg(&config, "KSplash");
+    cg.writeEntry("Theme", theme);
+    //TODO: a way to set none as spash in the l&f
+    cg.writeEntry("Engine", "KSplashQML");
+    cg.sync();
+}
+
+void KCMLookandFeel::setLockScreen(const QString &theme)
+{
+    if (theme.isEmpty()) {
+        return;
+    }
+
+    KConfig config("kscreenlockerrc");
+    KConfigGroup cg(&config, "Greeter");
+    cg.writeEntry("Theme", theme);
+    cg.sync();
+}
+
+
+
 
 void KCMLookandFeel::setApplyColors(bool apply)
 {

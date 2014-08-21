@@ -70,6 +70,8 @@ public:
     void setIcons(const QString &theme);
     void setPlasmaTheme(const QString &theme);
     void setCursorTheme(const QString theme);
+    void setSplashScreen(const QString &theme);
+    void setLockScreen(const QString &theme);
 
     void setApplyColors(bool apply);
     bool applyColors() const;
