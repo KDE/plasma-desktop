@@ -88,6 +88,8 @@ Item {
     Component.onCompleted: {
             plasmoid.setAction("addDesktop", i18n("Add Virtual Desktop"), "list-add");
             plasmoid.setAction("removeDesktop", i18n("Remove Virtual Desktop"), "list-remove");
+            actionEnablerBinding.target = plasmoid.action("removeDesktop");
+
             plasmoid.setAction("openKCM", i18n("Configure Desktops"), "configure");
             windowActiveOnActiveDesktopColor = theme.textColor
             windowActiveOnActiveDesktopColor.a = 0.6
@@ -102,6 +104,14 @@ Item {
             windowInactiveColor.a = 0.17;
             windowInactiveBorderColor = theme.textColor
             windowInactiveBorderColor.a = 0.5
+    }
+
+    Binding {
+        //target is set on component.onCompleted above once we've actually created the action
+        //doing it before hand breaks
+        id: actionEnablerBinding
+        property: "enabled"
+        value: repeater.count > 1
     }
 
     Pager {
