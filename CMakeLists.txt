@@ -1,4 +1,6 @@
 project(plasma-desktop)
+set(PROJECT_VERSION "5.0.95")
+set(PROJECT_VERSION_MAJOR 5)
 
 cmake_minimum_required(VERSION 2.8.12 FATAL_ERROR)
 set(QT_MIN_VERSION "5.3.0")
@@ -26,7 +28,8 @@ find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
     Concurrent
 )
 
-find_package(KF5 REQUIRED COMPONENTS
+set(KF5_MIN_VERSION "5.1.0")
+find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     Auth
     Plasma
     PlasmaQuick
@@ -39,6 +42,7 @@ find_package(KF5 REQUIRED COMPONENTS
     Attica
     Wallet
     Runner
+
 )
 
 find_package(KDecorations REQUIRED CONFIG)
@@ -106,14 +110,6 @@ else()
 endif()
 
 include_directories("${CMAKE_CURRENT_BINARY_DIR}")
-
-set(PLASMADESKTOP_VERSION_MAJOR 4)
-set(PLASMADESKTOP_VERSION_MINOR 98)
-set(PLASMADESKTOP_VERSION_PATCH 0)
-set(PLASMADESKTOP_VERSION ${PLASMADESKTOP_VERSION_MAJOR}.${PLASMADESKTOP_VERSION_MINOR}.${PLASMADESKTOP_VERSION_PATCH} )
-
-set(GENERIC_LIB_SOVERSION ${PLASMADESKTOP_VERSION_MAJOR})
-set(GENERIC_LIB_VERSION "${PLASMADESKTOP_VERSION_MAJOR}.${PLASMADESKTOP_VERSION_MINOR}.${PLASMADESKTOP_VERSION_PATCH}")
 
 configure_file(config-workspace.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-workspace.h)
 configure_file(config-unix.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-unix.h )

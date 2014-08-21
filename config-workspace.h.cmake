@@ -159,4 +159,4 @@
 /* type to use in place of socklen_t if not defined */
 #define kde_socklen_t socklen_t
 
-#define WORKSPACE_VERSION_STRING "${PLASMADESKTOP_VERSION}"
+#define WORKSPACE_VERSION_STRING "${PROJECT_VERSION}"
