@@ -35,7 +35,7 @@ public:
     {
     }
 
-    void settingsFileChanged();
+    void settingsFileChanged(const QString &file);
 
 
     LookAndFeelAccess *q;
@@ -46,8 +46,11 @@ public:
     KSharedConfig::Ptr config;
 };
 
-void LookAndFeelAccessPrivate::settingsFileChanged()
+void LookAndFeelAccessPrivate::settingsFileChanged(const QString &file)
 {
+    if (file != QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + "/kdeglobals") {
+        return;
+    }
     config->reparseConfiguration();
     KConfigGroup cg(config, "KDE");
 
@@ -89,9 +92,9 @@ LookAndFeelAccess::LookAndFeelAccess(QObject *parent)
     KDirWatch::self()->addFile(configFile);
 
     // Catch both, direct changes to the config file ...
-    connect(KDirWatch::self(), SIGNAL(dirty()), this, SLOT(settingsFileChanged()));
+    connect(KDirWatch::self(), SIGNAL(dirty(QString)), this, SLOT(settingsFileChanged(QString)));
     // ... but also remove/recreate cycles, like KConfig does it
-    connect(KDirWatch::self(), SIGNAL(created()), this, SLOT(settingsFileChanged()));
+    connect(KDirWatch::self(), SIGNAL(created(QString)), this, SLOT(settingsFileChanged(QString)));
 }
 
 LookAndFeelAccess::~LookAndFeelAccess()
