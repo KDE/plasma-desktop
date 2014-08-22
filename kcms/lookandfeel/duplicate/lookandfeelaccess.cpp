@@ -121,10 +121,13 @@ QString LookAndFeelAccess::theme()
 
 QString LookAndFeelAccess::filePath(const char *key, const QString &filename) const
 {
-    QString path = d->themePackage.filePath(key, filename);
+    QString path;
+    if (d->package.metadata().isValid() && d->themePackage.isValid()) {
+        path = d->themePackage.filePath(key, filename);
 
-    if (!path.isEmpty()) {
-        return path;
+        if (!path.isEmpty()) {
+            return path;
+        }
     }
 
     path = d->package.filePath(key, filename);
@@ -138,7 +141,7 @@ QString LookAndFeelAccess::filePath(const char *key, const QString &filename) co
 
 KPluginInfo LookAndFeelAccess::metadata() const
 {
-    if (d->package.isValid()) {
+    if (d->package.metadata().isValid() && d->package.isValid()) {
         return d->package.metadata();
     } else {
         return d->defaultPackage.metadata();
