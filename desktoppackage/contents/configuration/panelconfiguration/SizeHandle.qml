@@ -27,6 +27,8 @@ PlasmaComponents.Button {
     text: panel.location == PlasmaCore.Types.LeftEdge || panel.location == PlasmaCore.Types.RightEdge ? i18nd("plasma_shell_org.kde.plasma.desktop", "Width") : i18nd("plasma_shell_org.kde.plasma.desktop", "Height")
     KQuickControlsAddons.MouseEventListener {
         anchors.fill: parent
+        cursorShape: panel.location == PlasmaCore.Types.LeftEdge || panel.location == PlasmaCore.Types.RightEdge ? Qt.SizeHorCursor : Qt.SizeVerCursor
+
         property int startMouseX
         property int startMouseY
         onPressed: {

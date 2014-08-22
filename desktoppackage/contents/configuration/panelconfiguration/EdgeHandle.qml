@@ -27,6 +27,7 @@ PlasmaComponents.Button {
     text: i18nd("plasma_shell_org.kde.plasma.desktop", "Screen Edge")
 
     KQuickControlsAddons.MouseEventListener {
+        cursorShape: Qt.DragMoveCursor
         anchors.fill: parent
         property int lastX
         property int lastY
