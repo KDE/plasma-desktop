@@ -81,7 +81,7 @@ Q_SIGNALS:
 
 private:
     LookAndFeelAccessPrivate *const d;
-    Q_PRIVATE_SLOT(d, void settingsFileChanged())
+    Q_PRIVATE_SLOT(d, void settingsFileChanged(QString))
 };
 
 #endif
