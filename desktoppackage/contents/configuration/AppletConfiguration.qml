@@ -154,7 +154,7 @@ Rectangle {
                 frameVisible: true
                 Layout.fillHeight: true
                 visible: (configDialog.configModel ? configDialog.configModel.count : 0) + globalConfigModel.count > 1
-                width: visible ? 100 : 0
+                width: visible ? units.gridUnit * 7 : 0
                 implicitWidth: width
                 Flickable {
                     id: categoriesView
