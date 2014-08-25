@@ -230,6 +230,7 @@ Item {
         }
         onClicked: {
             print ("click state now: " + toolBoxItem.state);
+            plasmoid.contextualActionsAboutToShow();
             toolBoxItem.showing = !toolBoxItem.showing;
             plasmoid.focus = true;
         }
