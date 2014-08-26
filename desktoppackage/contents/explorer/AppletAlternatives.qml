@@ -27,92 +27,109 @@ import org.kde.kquickcontrolsaddons 2.0
 
 import org.kde.plasma.private.shell 2.0
 
-ColumnLayout {
-    id: root
+PlasmaCore.Dialog {
+    id: dialog
+    visualParent: alternativesHelper.applet
+    location: alternativesHelper.applet.location
 
-    signal configurationChanged
-    Layout.minimumWidth: units.gridUnit * 20
-
-    property string currentPlugin: alternativesDialog.currentPlugin
-
-    WidgetExplorer {
-        id: widgetExplorer
-        provides: alternativesDialog.appletProvides
+    Component.onCompleted: {
+        flags = flags |  Qt.WindowStaysOnTopHint;
+        dialog.show();
     }
 
-    PlasmaExtras.Heading {
-        text: i18nd("plasma_shell_org.kde.plasma.desktop", "Alternatives");
-    }
-    PlasmaExtras.ScrollArea {
-        id: scrollArea
-        Layout.fillWidth: true
-        Layout.fillHeight: true
-        Layout.minimumHeight: Math.min(Screen.height - units.gridUnit * 10, mainList.contentHeight +  units.gridUnit)
+    ColumnLayout {
+        id: root
 
-        Layout.preferredHeight: mainList.height
+        signal configurationChanged
+        Layout.minimumWidth: units.gridUnit * 20
 
-        ListView {
-            id: mainList
-            model: widgetExplorer.widgetsModel
-            highlight: PlasmaComponents.Highlight {
-                id: highlight
-            }
-            delegate: MouseArea {
-                width: mainList.width
-                height: childrenRect.height
-                onClicked: checked = true;
-                property bool checked: model.pluginName == alternativesDialog.currentPlugin
-                onCheckedChanged: {
-                    if (checked) {
-                        currentPlugin = model.pluginName;
-                        mainList.currentIndex = index;
-                    }
+        property string currentPlugin: alternativesHelper.currentPlugin
+
+        WidgetExplorer {
+            id: widgetExplorer
+            provides: alternativesHelper.appletProvides
+        }
+
+        PlasmaExtras.Heading {
+            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Alternatives");
+        }
+
+        PlasmaExtras.ScrollArea {
+            id: scrollArea
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+            Layout.minimumHeight: Math.min(Screen.height - units.gridUnit * 10, mainList.contentHeight +  units.gridUnit)
+
+            Layout.preferredHeight: mainList.height
+
+            ListView {
+                id: mainList
+                model: widgetExplorer.widgetsModel
+                highlight: PlasmaComponents.Highlight {
+                    id: highlight
                 }
-                Connections {
-                    target: mainList
-                    onCurrentIndexChanged: checked = false;
-                }
-                RowLayout {
-                    spacing: units.largeSpacing
-                    width: mainList.width - units.smallSpacing
-                    x: units.smallSpacing
-                    height: units.iconSizes.huge + units.largeSpacing
-                    QIconItem {
-                        width: units.iconSizes.huge
-                        height: width
-                        icon: model.decoration
-                    }
-
-                    ColumnLayout {
-                        Layout.fillWidth: true
-                        PlasmaExtras.Heading {
-                            level: 4
-                            Layout.fillWidth: true
-                            text: model.name
+                delegate: MouseArea {
+                    width: mainList.width
+                    height: childrenRect.height
+                    onClicked: checked = true;
+                    property bool checked: model.pluginName == alternativesHelper.currentPlugin
+                    onCheckedChanged: {
+                        if (checked) {
+                            root.currentPlugin = model.pluginName;
+                            mainList.currentIndex = index;
                         }
-                        PlasmaComponents.Label {
+                    }
+                    Connections {
+                        target: mainList
+                        onCurrentIndexChanged: checked = false;
+                    }
+                    RowLayout {
+                        spacing: units.largeSpacing
+                        width: mainList.width - units.smallSpacing
+                        x: units.smallSpacing
+                        height: units.iconSizes.huge + units.largeSpacing
+                        QIconItem {
+                            width: units.iconSizes.huge
+                            height: width
+                            icon: model.decoration
+                        }
+
+                        ColumnLayout {
                             Layout.fillWidth: true
-                            text: model.description
-                            font.pointSize: theme.smallestFont.pointSize
-                            wrapMode: Text.WordWrap
+                            PlasmaExtras.Heading {
+                                level: 4
+                                Layout.fillWidth: true
+                                text: model.name
+                            }
+                            PlasmaComponents.Label {
+                                Layout.fillWidth: true
+                                text: model.description
+                                font.pointSize: theme.smallestFont.pointSize
+                                wrapMode: Text.WordWrap
+                            }
                         }
                     }
                 }
             }
         }
-    }
-    RowLayout {
-        Layout.fillWidth: true
-        PlasmaComponents.Button {
-            enabled: root.currentPlugin != alternativesDialog.currentPlugin
+        RowLayout {
             Layout.fillWidth: true
-            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Switch");
-            onClicked: alternativesDialog.loadAlternative(root.currentPlugin);
-        }
-        PlasmaComponents.Button {
-            Layout.fillWidth: true
-            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Cancel");
-            onClicked: alternativesDialog.visible = false;
+            PlasmaComponents.Button {
+                enabled: root.currentPlugin != alternativesHelper.currentPlugin
+                Layout.fillWidth: true
+                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Switch");
+                onClicked: {
+                    alternativesHelper.loadAlternative(root.currentPlugin);
+                    dialog.close();
+                }
+            }
+            PlasmaComponents.Button {
+                Layout.fillWidth: true
+                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Cancel");
+                onClicked: {
+                    dialog.close();
+                }
+            }
         }
     }
 }
