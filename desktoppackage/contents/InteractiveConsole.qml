@@ -26,6 +26,7 @@ Item {
 
     property string scriptPath
     property alias mode: interactiveConsole.mode
+    signal visibleChanged(bool visible)
 
     onScriptPathChanged: {
         interactiveConsole.loadScript(scriptPath);
@@ -35,7 +36,7 @@ Item {
         id: interactiveConsole
 
         onVisibleChanged: {
-            main.visible = visible;
+            main.visibleChanged(visible);
         }
     }
 
