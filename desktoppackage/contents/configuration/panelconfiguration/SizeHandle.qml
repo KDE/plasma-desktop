@@ -39,20 +39,20 @@ PlasmaComponents.Button {
             switch (panel.location) {
             case PlasmaCore.Types.TopEdge:
                 configDialog.y = mouse.screenY - mapToItem(dialogRoot, 0, startMouseY).y
-                panel.thickness = configDialog.y - panel.y
+                panel.thickness = Math.max(units.gridUnit, configDialog.y - panel.y)
                 break;
             case PlasmaCore.Types.LeftEdge:
                 configDialog.x = mouse.screenX - mapToItem(dialogRoot, startMouseX, 0).x
-                panel.thickness = configDialog.x - panel.x
+                panel.thickness = Math.max(units.gridUnit, configDialog.x - panel.x)
                 break;
             case PlasmaCore.Types.RightEdge:
                 configDialog.x = mouse.screenX - mapToItem(dialogRoot, startMouseX, 0).x
-                panel.thickness = panel.screen.geometry.x + panel.screen.geometry.width - (configDialog.x + configDialog.width)
+                panel.thickness = Math.max(units.gridUnit, panel.screen.geometry.x + panel.screen.geometry.width - (configDialog.x + configDialog.width))
                 break;
             case PlasmaCore.Types.BottomEdge:
             default:
                 configDialog.y = mouse.screenY - mapToItem(dialogRoot, 0, startMouseY).y
-                panel.thickness = panel.screen.geometry.y + panel.screen.geometry.height - (configDialog.y + configDialog.height)
+                panel.thickness = Math.max(units.gridUnit, panel.screen.geometry.y + panel.screen.geometry.height - (configDialog.y + configDialog.height))
             }
         }
     }
