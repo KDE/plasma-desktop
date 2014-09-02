@@ -18,7 +18,6 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************/
 #include "../kcm.h"
-#include "../duplicate/shellpluginloader.h"
 // Qt
 #include <QtTest/QtTest>
 #include <Plasma/Package>
@@ -49,7 +48,6 @@ private:
 void KcmTest::initTestCase()
 {
     QStandardPaths::setTestModeEnabled(true);
-    ShellPluginLoader::init();
 
     m_configDir = QDir(QStandardPaths::writableLocation(QStandardPaths::ConfigLocation));
     m_configDir.removeRecursively();

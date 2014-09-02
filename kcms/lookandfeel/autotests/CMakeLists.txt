@@ -4,7 +4,6 @@ include(ECMMarkAsTest)
 include_directories(${CMAKE_CURRENT_BINARY_DIR}/..)
 set( kcmTest_SRCS
      kcmtest.cpp
-     ../duplicate/lookandfeelaccess.cpp
      ../kcm.cpp
      ../../krdb/krdb.cpp
      ../../input/xcursor/cursortheme.cpp

@@ -26,7 +26,7 @@
 #include <QListWidget>
 #include <QDir>
 
-#include "duplicate/lookandfeelaccess.h"
+#include <Plasma/Package>
 
 class QQuickWidget;
 class QStandardItemModel;
@@ -58,6 +58,8 @@ public:
     };
     KCMLookandFeel(QWidget* parent, const QVariantList& args);
     ~KCMLookandFeel();
+
+    QList<Plasma::Package> availablePackages(const QString &component = QString());
 
     QStandardItemModel *lookAndFeelModel();
 
@@ -100,7 +102,7 @@ private:
     const QStringList cursorSearchPaths();
     QQuickWidget *m_quickWidget;
     QStandardItemModel *m_model;
-    LookAndFeelAccess m_access;
+    Plasma::Package m_package;
     QString m_selectedPlugin;
     QStringList m_cursorSearchPaths;
 

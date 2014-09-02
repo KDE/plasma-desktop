@@ -44,7 +44,6 @@
 #include <QX11Info>
 
 #include <KLocalizedString>
-#include <Plasma/Package>
 #include <Plasma/PluginLoader>
 
 #include <X11/Xlib.h>
@@ -132,13 +131,44 @@ void KCMLookandFeel::setSelectedPlugin(const QString &plugin)
     changed();
 }
 
+QList<Plasma::Package> KCMLookandFeel::availablePackages(const QString &component)
+{
+    QList<Plasma::Package> packages;
+    QStringList paths;
+    QStringList dataPaths = QStandardPaths::standardLocations(QStandardPaths::GenericDataLocation);
+
+    for (const QString &path : dataPaths) {
+        QDir dir(path + "/plasma/look-and-feel");
+        paths << dir.entryList(QDir::AllDirs | QDir::NoDotAndDotDot);
+    }
+
+    for (const QString &path : paths) {
+        Plasma::Package pkg = Plasma::PluginLoader::self()->loadPackage("Plasma/LookAndFeel");
+        pkg.setPath(path);
+        if (component.isEmpty() || !pkg.filePath(component.toUtf8()).isEmpty()) {
+            packages << pkg;
+        }
+    }
+
+    return packages;
+}
+
 void KCMLookandFeel::load()
 {
-    setSelectedPlugin(m_access.metadata().pluginName());
+    m_package = Plasma::PluginLoader::self()->loadPackage("Plasma/LookAndFeel");
+    KConfigGroup cg(KSharedConfig::openConfig("kdeglobals"), "KDE");
+    const QString packageName = cg.readEntry("LookAndFeelPackage", "org.kde.breeze.desktop");
+    m_package.setPath(packageName);
+
+    if (!m_package.metadata().isValid()) {
+        return;
+    }
+
+    setSelectedPlugin(m_package.metadata().pluginName());
 
     m_model->clear();
 
-    const QList<Plasma::Package> pkgs = LookAndFeelAccess::availablePackages();
+    const QList<Plasma::Package> pkgs = availablePackages();
     for (const Plasma::Package &pkg : pkgs) {
         QStandardItem* row = new QStandardItem(pkg.metadata().name());
         row->setData(pkg.metadata().pluginName(), PluginNameRole);
@@ -248,7 +278,11 @@ void KCMLookandFeel::save()
 
 void KCMLookandFeel::defaults()
 {
-    setSelectedPlugin(m_access.metadata().pluginName());
+    if (!m_package.metadata().isValid()) {
+        return;
+    }
+
+    setSelectedPlugin(m_package.metadata().pluginName());
 }
 
 void KCMLookandFeel::setWidgetStyle(const QString &style)

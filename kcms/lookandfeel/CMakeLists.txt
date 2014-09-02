@@ -6,7 +6,6 @@ configure_file (config-kcm.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-kcm.h )
 
 set(kcm_lookandfeel_SRCS
   kcm.cpp
-  duplicate/lookandfeelaccess.cpp
   ../krdb/krdb.cpp
   ../input/xcursor/cursortheme.cpp
   ../input/xcursor/xcursortheme.cpp
