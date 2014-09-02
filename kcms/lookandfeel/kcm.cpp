@@ -157,8 +157,10 @@ void KCMLookandFeel::load()
 {
     m_package = Plasma::PluginLoader::self()->loadPackage("Plasma/LookAndFeel");
     KConfigGroup cg(KSharedConfig::openConfig("kdeglobals"), "KDE");
-    const QString packageName = cg.readEntry("LookAndFeelPackage", "org.kde.breeze.desktop");
-    m_package.setPath(packageName);
+    const QString packageName = cg.readEntry("LookAndFeelPackage", QString());
+    if (!packageName.isEmpty()) {
+        m_package.setPath(packageName);
+    }
 
     if (!m_package.metadata().isValid()) {
         return;
