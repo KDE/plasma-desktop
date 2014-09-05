@@ -45,12 +45,13 @@ Item {
 
             // HACK: plasmoid.configuration.sortingStrategy is an integer representation
             // of the TaskManager::GroupManager::TaskSortingStrategy enum.
-            if (tasks.dragSource && plasmoid.configuration.sortingStrategy == 1) {
-                if (tasks.dragSource != above && !tasks.dragSource.isLauncher
-                    && !(above && "isLauncher" in above && above.isLauncher)) {
-                    itemMove(tasks.dragSource.itemId,
-                        TaskTools.insertionIndexAt(tasks.dragSource.itemIndex,
-                            event.x, event.y));
+            if (tasks.dragSource && backend.sortingStrategy == 1) {
+                if (tasks.dragSource != above) {
+                    if (iconsOnly || !tasks.dragSource.isLauncher && !(above && "isLauncher" in above && above.isLauncher)) {
+                        itemMove(tasks.dragSource.itemId,
+                            TaskTools.insertionIndexAt(tasks.dragSource.itemIndex,
+                                event.x, event.y));
+                    }
                 }
             } else if (!tasks.dragSource && above && hoveredItem != above) {
                 hoveredItem = above;

@@ -91,7 +91,7 @@ function layoutHeight() {
 }
 
 function preferredMinWidth() {
-    if (tasks.vertical) {
+    if (tasks.vertical || tasks.iconsOnly) {
         return horizontalMargins() + units.iconSizes.small;
     } else {
         return horizontalMargins() + units.iconSizes.small + 3 + (theme.mSize(theme.defaultFont).width * 12);
@@ -99,7 +99,15 @@ function preferredMinWidth() {
 }
 
 function preferredMaxWidth() {
-    return Math.floor(preferredMinWidth() * 1.8);
+    if (tasks.iconsOnly) {
+        if (tasks.vertical) {
+            return tasks.width;
+        } else {
+            return tasks.height;
+        }
+    } else {
+        return Math.floor(preferredMinWidth() * 1.8);
+    }
 }
 
 function preferredMinHeight() {
@@ -161,7 +169,7 @@ function layout(container) {
 
         adjustedWidth = width;
 
-        if (!tasks.vertical) {
+        if (!tasks.vertical && !tasks.iconsOnly) {
             if (item.isLauncher) {
                 adjustedWidth = launcherWidth();
             } else if (stripes > 1 && i == backend.tasksModel.launcherCount) {

@@ -20,6 +20,7 @@
 import QtQuick 2.0
 
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.draganddrop 2.0
 import org.kde.kquickcontrolsaddons 2.0
 
@@ -70,6 +71,9 @@ MouseEventListener {
     onIsStartupChanged: {
         if (!isStartup) {
             tasks.itemGeometryChanged(itemId, x, y, width, height);
+            busyIndicator.visible = false;
+            busyIndicator.running = false;
+            icon.visible = true;
         }
     }
 
@@ -106,7 +110,7 @@ MouseEventListener {
             }
 
             if (isGroupParent) {
-                if (mouse.modifiers == Qt.ControlModifier) {
+                if ((iconsOnly || mouse.modifiers == Qt.ControlModifier) && backend.canPresentWindows()) {
                     tasks.presentWindows(model.Id);
                 } else if (groupDialog.visible) {
                     groupDialog.visible = false;
@@ -219,7 +223,7 @@ MouseEventListener {
 
             anchors.fill: parent
 
-            visible: !model.IsStartup
+            visible: false
 
             active: task.containsMouse
             enabled: !(model.Minimized && !plasmoid.configuration.showOnlyMinimized)
@@ -231,6 +235,16 @@ MouseEventListener {
                     busyIndicator.destroy();
                 }
             }
+        }
+
+        PlasmaComponents.BusyIndicator {
+            id: busyIndicator
+
+            anchors.fill: parent
+
+            visible: false
+
+            running: false
         }
 
         states: [
@@ -265,11 +279,11 @@ MouseEventListener {
             bottomMargin: taskFrame.margins.bottom
         }
 
-        visible: !model.IsLauncher && (parent.width - anchors.leftMargin - anchors.rightMargin) >= (theme.mSize(theme.defaultFont).width * 3)
+        visible: (inPopup || !iconsOnly && !model.IsLauncher && (parent.width - anchors.leftMargin - anchors.rightMargin) >= (theme.mSize(theme.defaultFont).width * 3))
 
         enabled: !model.Minimized
 
-        text: model.DisplayRole
+        text: (!inPopup && iconsOnly) ? "" : model.DisplayRole
         color: theme.textColor
         elide: !inPopup
     }
@@ -324,8 +338,10 @@ MouseEventListener {
 
     Component.onCompleted: {
         if (model.IsStartup) {
-            busyIndicator = Qt.createQmlObject('import org.kde.plasma.components 2.0 as PlasmaComponents; ' +
-                'PlasmaComponents.BusyIndicator { anchors.fill: parent; running: true }', iconBox);
+            busyIndicator.running = true;
+            busyIndicator.visible = true;
+        } else {
+            icon.visible = true;
         }
 
         if (model.hasModelChildren) {

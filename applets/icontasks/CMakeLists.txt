@@ -1,0 +1,1 @@
+install(FILES plasma-applet-org.kde.plasma.icontasks.desktop DESTINATION ${SERVICES_INSTALL_DIR})

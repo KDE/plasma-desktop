@@ -64,11 +64,15 @@ class Backend : public QObject
         QString launchers() const;
         void setLaunchers(const QString& launchers);
 
+        Q_INVOKABLE bool canPresentWindows() const;
+
     public Q_SLOTS:
         void activateItem(int id, bool toggle);
         void activateWindow(int winId);
+        void closeWindow(int winId);
         void itemContextMenu(QQuickItem *item, QObject *configAction);
         void itemHovered(int id, bool hovered);
+        void windowHovered(int winId, bool hovered);
         void itemMove(int id, int newIndex);
         void itemGeometryChanged(QQuickItem *item, int id);
         void presentWindows(int groupParentId);

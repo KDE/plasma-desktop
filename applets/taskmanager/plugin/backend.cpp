@@ -181,6 +181,15 @@ void Backend::activateWindow(int winId)
     KWindowSystem::forceActiveWindow(winId);
 }
 
+void Backend::closeWindow(int winId)
+{
+    TaskManager::AbstractGroupableItem *item = m_groupManager->rootGroup()->getMemberByWId(winId);
+
+    if (item) {
+        item->close();
+    }
+}
+
 void Backend::itemContextMenu(QQuickItem *item, QObject *configAction)
 {
     TaskManager::AbstractGroupableItem* agItem = m_groupManager->rootGroup()->getMemberById(item->property("itemId").toInt());
@@ -241,6 +250,16 @@ void Backend::itemHovered(int id, bool hovered)
     }
 }
 
+void Backend::windowHovered(int winId, bool hovered)
+{
+    if (hovered && m_highlightWindows && m_taskManagerItem && m_taskManagerItem->window()) {
+        m_lastWindowId = winId;
+        KWindowEffects::highlightWindows(m_lastWindowId, QList<WId>() << winId);
+    } else if (m_highlightWindows && m_lastWindowId) {
+        KWindowEffects::highlightWindows(m_lastWindowId, QList<WId>());
+    }
+}
+
 void Backend::itemMove(int id, int newIndex)
 {
     m_groupManager->manualSortingRequest(m_groupManager->rootGroup()->getMemberById(id), newIndex);
@@ -268,9 +287,14 @@ void Backend::itemGeometryChanged(QQuickItem *item, int id)
     taskItem->task()->publishIconGeometry(iconRect);
 }
 
+bool Backend::canPresentWindows() const
+{
+    return (KWindowSystem::compositingActive() && KWindowEffects::isEffectAvailable(KWindowEffects::PresentWindowsGroup));
+}
+
 void Backend::presentWindows(int groupParentId)
 {
-    TaskManager:: AbstractGroupableItem *item = m_groupManager->rootGroup()->getMemberById(groupParentId);
+    TaskManager::AbstractGroupableItem *item = m_groupManager->rootGroup()->getMemberById(groupParentId);
 
     if (item && m_taskManagerItem && m_taskManagerItem->window()) {
         KWindowEffects::presentWindows(m_taskManagerItem->window()->winId(), QList<WId>::fromSet(item->winIds()));

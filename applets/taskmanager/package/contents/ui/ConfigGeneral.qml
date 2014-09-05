@@ -70,6 +70,8 @@ ColumnLayout {
         title: i18n("Grouping and Sorting")
         flat: true
 
+        visible: (plasmoid.pluginName != "org.kde.plasma.icontasks")
+
         ColumnLayout {
             RowLayout {
                 Label {
@@ -110,6 +112,8 @@ ColumnLayout {
         title: i18n("Filters")
         flat: true
 
+        Layout.fillHeight: true
+
         ColumnLayout {
             CheckBox {
                 id: showOnlyCurrentScreen
@@ -128,6 +132,9 @@ ColumnLayout {
 
             CheckBox {
                 id: showOnlyMinimized
+
+                visible: (plasmoid.pluginName != "org.kde.plasma.icontasks")
+
                 text: i18n("Show only tasks that are minimized")
             }
         }

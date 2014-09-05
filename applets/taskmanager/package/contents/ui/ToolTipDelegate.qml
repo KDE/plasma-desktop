@@ -61,10 +61,63 @@ Column {
                     anchors.fill: parent
 
                     acceptedButtons: Qt.LeftButton
+                    hoverEnabled: true
 
                     onClicked: {
                         tasks.activateWindow(modelData);
                         toolTip.hideToolTip()
+                    }
+
+                    onContainsMouseChanged: {
+                        tasks.windowHovered(modelData, containsMouse);
+                    }
+
+                    Rectangle {
+                        id: closeButtonBackground
+
+                        anchors {
+                            top: parent.top
+                            right: parent.right
+                            topMargin: units.smallSpacing
+                            rightMargin: units.smallSpacing
+                        }
+
+                        width: units.iconSizes.smallMedium
+                        height: width
+
+                        opacity: parent.containsMouse ? 0.4 : 0
+
+                        Behavior on opacity {
+                            NumberAnimation { duration: units.shortDuration * 2; }
+                        }
+
+                        color: theme.backgroundColor
+                        radius: units.smallSpacing
+                    }
+
+                    PlasmaComponents.ToolButton {
+                        id: closeButton
+
+                        anchors {
+                            horizontalCenter: closeButtonBackground.horizontalCenter
+                            verticalCenter: closeButtonBackground.verticalCenter
+                        }
+
+                        opacity: parent.containsMouse ? 1.0 : 0
+
+                        Behavior on opacity {
+                            NumberAnimation { duration: units.shortDuration * 2; }
+                        }
+
+                        width: units.iconSizes.smallMedium
+                        height: width
+
+                        iconSource: "window-close"
+
+                        onClicked: {
+                            tasks.closeWindow(modelData);
+                            toolTip.hideToolTip();
+                        }
                     }
                 }
             }
@@ -72,7 +125,6 @@ Column {
     }
 
     Row {
-        anchors.horizontalCenter: parent.horizontalCenter
         width: childrenRect.width + _s
         height: childrenRect.height + units.largeSpacing
         spacing: units.largeSpacing

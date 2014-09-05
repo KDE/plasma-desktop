@@ -34,6 +34,7 @@ Item {
     anchors.fill: parent
 
     property bool vertical: (plasmoid.formFactor == PlasmaCore.Types.Vertical)
+    property bool iconsOnly: (plasmoid.pluginName == "org.kde.plasma.icontasks")
 
     Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
 
@@ -51,8 +52,10 @@ Item {
 
     signal activateItem(int id, bool toggle)
     signal activateWindow(int winId)
+    signal closeWindow(int winId);
     signal itemContextMenu(Item item, QtObject configAction)
     signal itemHovered(int id, bool hovered)
+    signal windowHovered(int winId, bool hovered)
     signal itemMove(int id, int newIndex)
     signal itemGeometryChanged(Item item, int id)
     signal presentWindows(int groupParentId)
@@ -79,8 +82,8 @@ Item {
         taskManagerItem: tasks
         highlightWindows: plasmoid.configuration.highlightWindows
 
-        groupingStrategy: plasmoid.configuration.groupingStrategy
-        sortingStrategy: plasmoid.configuration.sortingStrategy
+        groupingStrategy: iconsOnly ? 1 : plasmoid.configuration.groupingStrategy
+        sortingStrategy: iconsOnly ? 1 : plasmoid.configuration.sortingStrategy
 
         onLaunchersChanged: plasmoid.configuration.launchers = launchers
 
@@ -125,7 +128,7 @@ Item {
     Binding {
         target: backend.groupManager
         property: "onlyGroupWhenFull"
-        value: plasmoid.configuration.onlyGroupWhenFull
+        value: iconsOnly ? false : plasmoid.configuration.onlyGroupWhenFull
     }
 
     Binding {
@@ -156,6 +159,12 @@ Item {
         target: backend.groupManager
         property: "showOnlyMinimized"
         value: plasmoid.configuration.showOnlyMinimized
+    }
+
+    Binding {
+        target: backend.groupManager
+        property: "separateLaunchers"
+        value: !iconsOnly
     }
 
     TaskManager.DragHelper { id: dragHelper }
@@ -259,8 +268,10 @@ Item {
     Component.onCompleted: {
         tasks.activateItem.connect(backend.activateItem);
         tasks.activateWindow.connect(backend.activateWindow);
+        tasks.closeWindow.connect(backend.closeWindow);
         tasks.itemContextMenu.connect(backend.itemContextMenu);
         tasks.itemHovered.connect(backend.itemHovered);
+        tasks.windowHovered.connect(backend.windowHovered);
         tasks.itemMove.connect(backend.itemMove);
         tasks.itemGeometryChanged.connect(backend.itemGeometryChanged);
         tasks.presentWindows.connect(backend.presentWindows);
