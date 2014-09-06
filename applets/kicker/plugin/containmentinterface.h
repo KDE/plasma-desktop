@@ -48,6 +48,7 @@ class ContainmentInterface : public QObject
         void addLauncher(Target target, const QString &entryPath);
 
     private:
+        static QStringList m_knownTaskManagers;
         Plasma::Applet *m_applet;
 };
 

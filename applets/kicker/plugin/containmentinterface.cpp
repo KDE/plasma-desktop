@@ -26,6 +26,13 @@
 #include <QDebug>
 #include <QQuickItem>
 
+// FIXME HACK TODO: Unfortunately we have no choice but to hard-code a list of
+// applets we know to expose the correct interface right now -- this is slated
+// for replacement with some form of generic service.
+QStringList ContainmentInterface::m_knownTaskManagers = QStringList() << QLatin1String("org.kde.plasma.taskmanager")
+    << QLatin1String("org.kde.plasma.icontasks")
+    << QLatin1String("org.kde.plasma.expandingiconstaskmanager");
+
 ContainmentInterface::ContainmentInterface(QObject *parent) : QObject(parent),
     m_applet(0)
 {
@@ -80,7 +87,7 @@ bool ContainmentInterface::mayAddLauncher(ContainmentInterface::Target target, c
                 const Plasma::Applet *taskManager = 0;
 
                 foreach(const Plasma::Applet *applet, containment->applets()) {
-                    if (applet->pluginInfo().pluginName() == QLatin1String("org.kde.plasma.taskmanager")) {
+                    if (m_knownTaskManagers.contains(applet->pluginInfo().pluginName())) {
                         taskManager = applet;
 
                         break;
@@ -176,7 +183,7 @@ void ContainmentInterface::addLauncher(ContainmentInterface::Target target, cons
                 const Plasma::Applet *taskManager = 0;
 
                 foreach(const Plasma::Applet *applet, containment->applets()) {
-                    if (applet->pluginInfo().pluginName() == QLatin1String("org.kde.plasma.taskmanager")) {
+                    if (m_knownTaskManagers.contains(applet->pluginInfo().pluginName())) {
                         taskManager = applet;
 
                         break;
