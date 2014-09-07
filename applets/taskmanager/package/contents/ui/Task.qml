@@ -70,7 +70,7 @@ MouseEventListener {
 
     onIsStartupChanged: {
         if (!isStartup) {
-            tasks.itemGeometryChanged(itemId, x, y, width, height);
+            tasks.itemGeometryChanged(task, itemId);
             busyIndicator.visible = false;
             busyIndicator.running = false;
             icon.visible = true;
