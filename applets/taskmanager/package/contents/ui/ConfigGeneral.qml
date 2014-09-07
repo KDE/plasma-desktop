@@ -61,6 +61,7 @@ ColumnLayout {
 
                 SpinBox {
                     id: maxStripes
+                    minimumValue: 1
                 }
             }
         }
