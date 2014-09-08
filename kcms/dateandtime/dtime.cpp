@@ -75,10 +75,12 @@ Dtime::Dtime(QWidget * parent)
   timeServerList->setEditable(true);
   findNTPutility();
   if (ntpUtility.isEmpty()) {
+      QString toolTip = i18n("No NTP utility has been found. "
+                             "Install 'ntpdate' or 'rdate' command to enable automatic "
+                             "updating of date and time.");
       setDateTimeAuto->setEnabled(false);
-      setDateTimeAuto->setToolTip(i18n("No NTP utility has been found. "
-                                       "Install 'ntpdate' or 'rdate' command to enable automatic "
-                                       "updating of date and time."));
+      setDateTimeAuto->setToolTip(toolTip);
+      timeServerList->setToolTip(toolTip);
   }
 
   QVBoxLayout *v2 = new QVBoxLayout( timeBox );
@@ -136,7 +138,8 @@ void Dtime::currentZone()
 }
 
 void Dtime::serverTimeCheck() {
-  bool enabled = !setDateTimeAuto->isChecked();
+  // Enable time and date if the ntp utility is missing
+  bool enabled = ntpUtility.isEmpty() || !setDateTimeAuto->isChecked();
   cal->setEnabled(enabled);
   timeEdit->setEnabled(enabled);
   //kclock->setEnabled(enabled);
@@ -202,6 +205,10 @@ europe.pool.ntp.org,\
 north-america.pool.ntp.org,\
 oceania.pool.ntp.org")).split(',', QString::SkipEmptyParts));
   setDateTimeAuto->setChecked(config.readEntry("enabled", false));
+
+  if (ntpUtility.isEmpty()) {
+    timeServerList->setEnabled(false);
+  }
 
   // Reset to the current date and time
   time = QTime::currentTime();
