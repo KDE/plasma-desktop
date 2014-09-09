@@ -43,7 +43,6 @@ MouseArea {
         }
         main.sourceFile = model.source
         main.title = model.name
-        root.restoreConfig()
     }
 //END functions
 

@@ -242,6 +242,7 @@ Rectangle {
                         onSourceFileChanged: {
 //                             print("Source file changed in flickable" + sourceFile);
                             replace(Qt.resolvedUrl(sourceFile));
+                            root.restoreConfig()
                             for (var prop in currentItem) {
                                 if (prop.indexOf("cfg_") === 0 && prop.indexOf("Changed") > 0 ) {
                                     currentItem[prop].connect(root.settingValueChanged)
