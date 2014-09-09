@@ -28,13 +28,16 @@
 #include <KRun>
 #include <KSycoca>
 
-AppGroupEntry::AppGroupEntry(KServiceGroup::Ptr group, QAbstractListModel *parentModel,
+AppGroupEntry::AppGroupEntry(KServiceGroup::Ptr group, AppsModel *parentModel,
     bool flat, int appNameFormat)
 {
     m_name = group->caption();
     m_icon = QIcon::fromTheme(group->icon());
-    m_model = new AppsModel(group->entryPath(), flat, parentModel);
-    static_cast<AppsModel *>(m_model.data())->setAppNameFormat(appNameFormat);
+    AppsModel* model = new AppsModel(group->entryPath(), flat, parentModel);
+    model->setAppletInterface(parentModel->appletInterface());
+    model->setAppNameFormat(appNameFormat);
+    m_model = model;
+    QObject::connect(parentModel, SIGNAL(appletInterfaceChanged(QObject*)), model, SLOT(setAppletInterface(QObject*)));
     QObject::connect(parentModel, SIGNAL(refreshing()), m_model, SLOT(deleteLater()));
     QObject::connect(m_model, SIGNAL(appLaunched(QString)), parentModel, SIGNAL(appLaunched(QString)));
 }
@@ -72,6 +75,7 @@ AppsModel::AppsModel(const QString &entryPath, bool flat, QObject *parent)
 , m_flat(flat)
 , m_appNameFormat(AppEntry::NameOnly)
 , m_sortNeeded(false)
+, m_appletInterface(0)
 {
     refresh();
 }
@@ -110,16 +114,15 @@ QVariant AppsModel::data(const QModelIndex &index, int role) const
     } else if (role == Kicker::ActionListRole) {
         if (m_containmentInterface) {
             QVariantList actionList;
-
-            if (m_containmentInterface->mayAddLauncher(ContainmentInterface::Desktop)) {
+            if (m_containmentInterface->mayAddLauncher(m_appletInterface, ContainmentInterface::Desktop)) {
                 actionList << Kicker::createActionItem(i18n("Add to Desktop"), "addToDesktop");
             }
 
-            if (m_containmentInterface->mayAddLauncher(ContainmentInterface::Panel)) {
+            if (m_containmentInterface->mayAddLauncher(m_appletInterface, ContainmentInterface::Panel)) {
                 actionList << Kicker::createActionItem(i18n("Add to Panel"), "addToPanel");
             }
 
-            if (m_containmentInterface->mayAddLauncher(ContainmentInterface::TaskManager,
+            if (m_containmentInterface->mayAddLauncher(m_appletInterface, ContainmentInterface::TaskManager,
                 static_cast<AppEntry *>(m_entryList.at(index.row()))->service()->entryPath())) {
                 actionList << Kicker::createActionItem(i18n("Add as Launcher"), "addToTaskManager");
             }
@@ -149,17 +152,17 @@ bool AppsModel::trigger(int row, const QString &actionId, const QVariant &argume
     }
 
     if (actionId == "addToDesktop" && m_containmentInterface
-        && m_containmentInterface->mayAddLauncher(ContainmentInterface::Desktop)) {
-        m_containmentInterface->addLauncher(ContainmentInterface::Desktop,
+        && m_containmentInterface->mayAddLauncher(m_appletInterface, ContainmentInterface::Desktop)) {
+        m_containmentInterface->addLauncher(m_appletInterface, ContainmentInterface::Desktop,
             static_cast<AppEntry *>(m_entryList.at(row))->service()->entryPath());
     } else if (actionId == "addToPanel" && m_containmentInterface
-        && m_containmentInterface->mayAddLauncher(ContainmentInterface::Panel)) {
-        m_containmentInterface->addLauncher(ContainmentInterface::Panel,
+        && m_containmentInterface->mayAddLauncher(m_appletInterface, ContainmentInterface::Panel)) {
+        m_containmentInterface->addLauncher(m_appletInterface, ContainmentInterface::Panel,
             static_cast<AppEntry *>(m_entryList.at(row))->service()->entryPath());
     } else if (actionId == "addToTaskManager" && m_containmentInterface
-        && m_containmentInterface->mayAddLauncher(ContainmentInterface::TaskManager,
+        && m_containmentInterface->mayAddLauncher(m_appletInterface, ContainmentInterface::TaskManager,
             static_cast<AppEntry *>(m_entryList.at(row))->service()->entryPath())) {
-        m_containmentInterface->addLauncher(ContainmentInterface::TaskManager,
+        m_containmentInterface->addLauncher(m_appletInterface, ContainmentInterface::TaskManager,
             static_cast<AppEntry *>(m_entryList.at(row))->service()->entryPath());
     } else if (actionId.isEmpty()) {
         KService::Ptr service = static_cast<AppEntry *>(m_entryList.at(row))->service();
@@ -219,20 +222,20 @@ void AppsModel::setAppNameFormat(int format)
 
 QObject* AppsModel::appletInterface() const
 {
-    if (m_containmentInterface) {
-        return m_containmentInterface;
-    }
-
-    return 0;
+    return m_appletInterface;
 }
 
 void AppsModel::setAppletInterface(QObject* appletInterface)
 {
-    if (!m_containmentInterface) {
-        m_containmentInterface = new ContainmentInterface(this);
-    }
+    if (m_appletInterface != appletInterface) {
+        m_appletInterface = appletInterface;
 
-    m_containmentInterface->setApplet(appletInterface);
+        if (!m_containmentInterface) {
+            m_containmentInterface = new ContainmentInterface(this);
+        }
+
+        emit appletInterfaceChanged(m_appletInterface);
+    }
 }
 
 void AppsModel::refresh()

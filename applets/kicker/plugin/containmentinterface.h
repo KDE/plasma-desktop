@@ -41,15 +41,12 @@ class ContainmentInterface : public QObject
         ContainmentInterface(QObject *parent = 0);
         ~ContainmentInterface();
 
-        void setApplet(QObject *plasmoid);
+        static bool mayAddLauncher(QObject *applet, Target target, const QString &entryPath = QString());
 
-        bool mayAddLauncher(Target target, const QString &entryPath = QString());
-
-        void addLauncher(Target target, const QString &entryPath);
+        static void addLauncher(QObject *applet, Target target, const QString &entryPath);
 
     private:
         static QStringList m_knownTaskManagers;
-        Plasma::Applet *m_applet;
 };
 
 #endif

@@ -23,7 +23,6 @@
 #include <Plasma/Containment>
 #include <Plasma/Corona>
 
-#include <QDebug>
 #include <QQuickItem>
 
 // FIXME HACK TODO: Unfortunately we have no choice but to hard-code a list of
@@ -33,8 +32,7 @@ QStringList ContainmentInterface::m_knownTaskManagers = QStringList() << QLatin1
     << QLatin1String("org.kde.plasma.icontasks")
     << QLatin1String("org.kde.plasma.expandingiconstaskmanager");
 
-ContainmentInterface::ContainmentInterface(QObject *parent) : QObject(parent),
-    m_applet(0)
+ContainmentInterface::ContainmentInterface(QObject *parent) : QObject(parent)
 {
 }
 
@@ -42,16 +40,14 @@ ContainmentInterface::~ContainmentInterface()
 {
 }
 
-void ContainmentInterface::setApplet(QObject* plasmoid)
+bool ContainmentInterface::mayAddLauncher(QObject *appletInterface, ContainmentInterface::Target target, const QString &entryPath)
 {
-    if (plasmoid) {
-         m_applet = plasmoid->property("_plasma_applet").value<Plasma::Applet *>();
+    if (!appletInterface) {
+        return false;
     }
-}
 
-bool ContainmentInterface::mayAddLauncher(ContainmentInterface::Target target, const QString &entryPath)
-{
-    Plasma::Containment *containment = m_applet->containment();
+    Plasma::Applet *applet = appletInterface->property("_plasma_applet").value<Plasma::Applet *>();
+    Plasma::Containment *containment = applet->containment();
 
     if (!containment) {
         return false;
@@ -119,9 +115,14 @@ bool ContainmentInterface::mayAddLauncher(ContainmentInterface::Target target, c
     return false;
 }
 
-void ContainmentInterface::addLauncher(ContainmentInterface::Target target, const QString &entryPath)
+void ContainmentInterface::addLauncher(QObject *appletInterface, ContainmentInterface::Target target, const QString &entryPath)
 {
-    Plasma::Containment *containment = m_applet->containment();
+    if (!appletInterface) {
+        return;
+    }
+
+    Plasma::Applet *applet = appletInterface->property("_plasma_applet").value<Plasma::Applet *>();
+    Plasma::Containment *containment = applet->containment();
 
     if (!containment) {
         return;

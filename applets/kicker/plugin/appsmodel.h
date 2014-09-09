@@ -35,7 +35,7 @@ class QTimer;
 class AppGroupEntry : public AbstractGroupEntry
 {
     public:
-        AppGroupEntry(KServiceGroup::Ptr group, QAbstractListModel *parentModel,
+        AppGroupEntry(KServiceGroup::Ptr group, AppsModel *parentModel,
             bool flat, int appNameFormat);
 };
 
@@ -65,7 +65,7 @@ class AppsModel : public AbstractModel
 
     Q_PROPERTY(bool flat READ flat WRITE setFlat NOTIFY flatChanged)
     Q_PROPERTY(int appNameFormat READ appNameFormat WRITE setAppNameFormat NOTIFY appNameFormatChanged)
-    Q_PROPERTY(QObject* appletInterface READ appletInterface WRITE setAppletInterface);
+    Q_PROPERTY(QObject* appletInterface READ appletInterface WRITE setAppletInterface NOTIFY appletInterfaceChanged);
 
     public:
         explicit AppsModel(const QString &entryPath = QString(), bool flat = false, QObject *parent = 0);
@@ -86,12 +86,15 @@ class AppsModel : public AbstractModel
         void setAppNameFormat(int format);
 
         QObject *appletInterface() const;
+
+    public Q_SLOTS:
         void setAppletInterface(QObject *appletInterface);
 
     Q_SIGNALS:
         void refreshing() const;
         void flatChanged() const;
         void appNameFormatChanged() const;
+        void appletInterfaceChanged(QObject *appletInterface) const;
 
     protected Q_SLOTS:
         virtual void refresh();
@@ -110,6 +113,7 @@ class AppsModel : public AbstractModel
         bool m_flat;
         AppEntry::NameFormat m_appNameFormat;
         bool m_sortNeeded;
+        QObject *m_appletInterface;
         static ContainmentInterface *m_containmentInterface;
 };
 
