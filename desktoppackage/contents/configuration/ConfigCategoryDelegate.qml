@@ -23,23 +23,20 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 MouseArea {
     id: delegate
 
-    anchors {
-        left: parent.left
-        right: parent.right
-    }
 //BEGIN properties
     y: units.smallSpacing *2
-    width: childrenRect.width
+    width: parent.width
     height: delegateContents.height + units.smallSpacing * 4
+    hoverEnabled: true
     property bool current: model.source == main.sourceFile
     property string name: model.name
 //END properties
 
 //BEGIN functions
     function openCategory() {
-        if (typeof(categoriesView.currentItem) !== "undefined") {
-            main.invertAnimations = (categoriesView.currentItem.y > delegate.y);
-            categoriesView.currentItem = delegate;
+        if (typeof(categories.currentItem) !== "undefined") {
+            main.invertAnimations = (categories.currentItem.y > delegate.y);
+            categories.currentItem = delegate;
         }
         main.sourceFile = model.source
         main.title = model.name
@@ -62,12 +59,31 @@ MouseArea {
     }
     onCurrentChanged: {
         if (current) {
-            categoriesView.currentItem = delegate;
+            categories.currentItem = delegate;
         }
     }
 //END connections
 
 //BEGIN UI components
+    Rectangle {
+        anchors.fill: parent
+        color: syspal.highlight
+        opacity: {
+            if (categories.currentItem == delegate) {
+                return 1
+            } else if (delegate.containsMouse) {
+                return 0.3 // there's no "hover" color in SystemPalette
+            } else {
+                return 0
+            }
+        }
+        Behavior on opacity {
+            NumberAnimation {
+                duration: units.longDuration
+            }
+        }
+    }
+
     Column {
         id: delegateContents
         spacing: units.smallSpacing
@@ -90,7 +106,14 @@ MouseArea {
             text: model.name
             wrapMode: Text.Wrap
             horizontalAlignment: Text.AlignHCenter
+            font.bold: true
             color: current ? syspal.highlightedText : syspal.text
+            Behavior on color {
+                ColorAnimation {
+                    duration: units.longDuration
+                    easing.type: "InOutQuad"
+                }
+            }
         }
     }
 //END UI components

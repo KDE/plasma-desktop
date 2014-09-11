@@ -155,55 +155,26 @@ Rectangle {
                 Layout.fillHeight: true
                 visible: (configDialog.configModel ? configDialog.configModel.count : 0) + globalConfigModel.count > 1
                 width: visible ? units.gridUnit * 7 : 0
-                implicitWidth: width
-                Flickable {
-                    id: categoriesView
-                    contentWidth: parent.width
-                    contentHeight: categories.height
-                    anchors.fill: parent
+                flickableItem.interactive: false
 
-                    property Item currentItem: categoriesColumn.children[1]
+                Column {
+                    id: categories
+                    width: categoriesScroll.viewport.width
+                    height: childrenRect.height
 
-                    Item {
-                        id: categories
-                        width: parent.width
-                        height: categoriesColumn.height
+                    property Item currentItem: children[1]
 
-                        Item {
-                            width: parent.width
-                            height: categoriesView.currentItem.height
-                            y: categoriesView.currentItem.y
-                            Rectangle {
-                                color: syspal.highlight
-                                radius: 3
-                                anchors {
-                                    fill: parent
-                                    margins: 2
-                                }
-                            }
-                            Behavior on y {
-                                NumberAnimation {
-                                    duration: units.longDuration
-                                    easing.type: "InOutQuad"
-                                }
-                            }
-                        }
-                        Column {
-                            id: categoriesColumn
-                            width: parent.width
-                            Repeater {
-                                model: root.isContainment ? globalConfigModel : undefined
-                                delegate: ConfigCategoryDelegate {}
-                            }
-                            Repeater {
-                                model: configDialog.configModel
-                                delegate: ConfigCategoryDelegate {}
-                            }
-                            Repeater {
-                                model: !root.isContainment ? globalConfigModel : undefined
-                                delegate: ConfigCategoryDelegate {}
-                            }
-                        }
+                    Repeater {
+                        model: root.isContainment ? globalConfigModel : undefined
+                        delegate: ConfigCategoryDelegate {}
+                    }
+                    Repeater {
+                        model: configDialog.configModel
+                        delegate: ConfigCategoryDelegate {}
+                    }
+                    Repeater {
+                        model: !root.isContainment ? globalConfigModel : undefined
+                        delegate: ConfigCategoryDelegate {}
                     }
                 }
             }
