@@ -492,14 +492,14 @@ QString mouseKeysShortcut (Display *display) {
      sym = XK_Pointer_EnableKeys;
      code = XKeysymToKeycode(display, sym);
      if (code == 0)
-        return ""; // No shortcut available?
+        return QString(); // No shortcut available?
   }
 
   // Calculate the modifiers by searching the keysym in the X keyboard mapping
   XkbDescPtr xkbdesc = XkbGetMap(display, XkbKeyTypesMask | XkbKeySymsMask, XkbUseCoreKbd);
 
   if (!xkbdesc)
-      return ""; // Failed to obtain the mapping from server
+      return QString(); // Failed to obtain the mapping from server
 
   bool found = false;
   unsigned char modifiers = 0;
@@ -528,7 +528,7 @@ QString mouseKeysShortcut (Display *display) {
   XkbFreeClientMap (xkbdesc, 0, true);
 
   if (!found)
-     return ""; // Somehow the keycode -> keysym mapping is flawed
+     return QString(); // Somehow the keycode -> keysym mapping is flawed
 
   XEvent ev;
   ev.type = KeyPress;
@@ -615,7 +615,7 @@ void KAccessApp::createDialogContents() {
       QVBoxLayout * vlay = new QVBoxLayout();
       lay->addItem( vlay );
 
-      featuresLabel = new QLabel( "", contents );
+      featuresLabel = new QLabel( QString(), contents );
       featuresLabel->setAlignment( Qt::AlignVCenter );
       featuresLabel->setWordWrap( true );
       vlay->addWidget( featuresLabel );

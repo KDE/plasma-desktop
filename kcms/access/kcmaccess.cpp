@@ -59,13 +59,13 @@ QString mouseKeysShortcut (Display *display) {
      sym = XK_Pointer_EnableKeys;
      code = XKeysymToKeycode(display, sym);
      if (code == 0)
-        return ""; // No shortcut available?
+        return QString(); // No shortcut available?
   }
 
   // Calculate the modifiers by searching the keysym in the X keyboard mapping
   XkbDescPtr xkbdesc = XkbGetMap(display, XkbKeyTypesMask | XkbKeySymsMask, XkbUseCoreKbd);
   if (!xkbdesc)
-     return ""; // Failed to obtain the mapping from server
+     return QString(); // Failed to obtain the mapping from server
 
   bool found = false;
   unsigned char modifiers = 0;
@@ -94,7 +94,7 @@ QString mouseKeysShortcut (Display *display) {
   XkbFreeClientMap (xkbdesc, 0, true);
 
   if (!found)
-     return ""; // Somehow the keycode -> keysym mapping is flawed
+     return QString(); // Somehow the keycode -> keysym mapping is flawed
 
   XEvent ev;
   ev.type = KeyPress;
@@ -553,7 +553,7 @@ void KAccessConfig::changeFlashScreenColor()
 
 void KAccessConfig::selectSound()
 {
-  QStringList list = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QLatin1String("sound/") + "");
+  QStringList list = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QLatin1String("sound/"));
   QString start;
   if (list.count()>0)
     start = list[0];
@@ -686,7 +686,7 @@ void KAccessConfig::defaults()
 {
   systemBell->setChecked(true);
   customBell->setChecked(false);
-  soundEdit->setText("");
+  soundEdit->setText(QString());
 
   visibleBell->setChecked(false);
   invertScreen->setChecked(true);
