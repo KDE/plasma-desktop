@@ -207,7 +207,7 @@ Rectangle {
 
                         height: Math.max((scroll.height - pageTitle.height - parent.spacing), (main.currentItem  ? (main.currentItem.implicitHeight ? main.currentItem.implicitHeight : main.currentItem.childrenRect.height) : 0))
                         width: scroll.viewport.width
-                        clip: true
+
                         property string sourceFile
 
                         onSourceFileChanged: {
