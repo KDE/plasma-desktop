@@ -155,6 +155,7 @@ Rectangle {
                 Layout.fillHeight: true
                 visible: (configDialog.configModel ? configDialog.configModel.count : 0) + globalConfigModel.count > 1
                 width: visible ? units.gridUnit * 7 : 0
+                implicitWidth: width
                 flickableItem.interactive: false
 
                 Column {
