@@ -231,6 +231,7 @@ Item {
                 taskList.width = LayoutManager.layoutWidth();
                 taskList.height = LayoutManager.layoutHeight();
                 LayoutManager.layout(taskRepeater);
+                TaskTools.publishIconGeometries(taskList.children);
             }
 
             function modelWasReset() {
