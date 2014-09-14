@@ -373,6 +373,7 @@ static void createGtkrc( bool exportColors, const QPalette& cg, bool exportGtkTh
         t << "style \"MenuItem\"" << endl;
         t << "{" << endl;
         t << "  bg[PRELIGHT] = " << color( cg.color(QPalette::Highlight) ) << endl;
+        t << "  fg[PRELIGHT] = " << color( cg.color(QPalette::HighlightedText) ) << endl;
         t << "}" << endl;
         t << endl;
         t << "class \"*MenuItem\" style \"MenuItem\"" << endl;
@@ -429,7 +430,7 @@ void runRdb( uint flags )
     addColorDef(preproc, "SELECT_BACKGROUND"  , newPal.color( QPalette::Active, QPalette::Highlight));
     addColorDef(preproc, "SELECT_FOREGROUND"  , newPal.color( QPalette::Active, QPalette::HighlightedText));
     addColorDef(preproc, "WINDOW_BACKGROUND"  , newPal.color( QPalette::Active, QPalette::Base ) );
-    addColorDef(preproc, "WINDOW_FOREGROUND"  , newPal.color( QPalette::Active, QPalette::Foreground ) );
+    addColorDef(preproc, "WINDOW_FOREGROUND"  , newPal.color( QPalette::Active, QPalette::Text ) );
     addColorDef(preproc, "INACTIVE_BACKGROUND", KGlobalSettings::inactiveTitleColor());
     addColorDef(preproc, "INACTIVE_FOREGROUND", KGlobalSettings::inactiveTitleColor());
     addColorDef(preproc, "ACTIVE_BACKGROUND"  , KGlobalSettings::activeTitleColor());
