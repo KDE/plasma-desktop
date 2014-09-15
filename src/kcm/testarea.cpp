@@ -23,7 +23,7 @@
 #include <QScopedPointer>
 #include <QStandardItemModel>
 
-#include <KLocale>
+#include <KLocalizedString>
 #include <Plasma/Theme>
 
 TestArea::TestArea(QWidget *parent) : QWidget(parent)
@@ -33,11 +33,12 @@ TestArea::TestArea(QWidget *parent) : QWidget(parent)
     QStandardItemModel *model = new QStandardItemModel(m_ui.listView);
     m_ui.listView->setModel(model);
     QScopedPointer<QStandardItem> item(
-                new QStandardItem(KIcon("folder"), i18n("Drag me")));
+                new QStandardItem(QIcon::fromTheme("folder"), i18n("Drag me")));
     model->appendRow(item.data());
     item.take();
 
-    QString wallpaper = Plasma::Theme::defaultTheme()->wallpaperPath();
+    Plasma::Theme defaultTheme;
+    QString wallpaper = defaultTheme.wallpaperPath();
     static const QString stylesheet("background-image: url(%1)");
     m_ui.scrollAreaWidgetContents->setStyleSheet(stylesheet.arg(wallpaper));
 }

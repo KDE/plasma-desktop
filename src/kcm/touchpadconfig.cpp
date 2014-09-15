@@ -20,14 +20,15 @@
 
 #include <QScrollArea>
 #include <QDBusInterface>
+#include <QTabWidget>
 
 #include <KAboutData>
-#include <KAction>
+#include <QAction>
 #include <KLocalizedString>
 #include <KMessageWidget>
 #include <KNotifyConfigWidget>
 #include <KShortcutsDialog>
-#include <KTabWidget>
+#include <KConfigGroup>
 
 #include "customslider.h"
 #include "sliderpair.h"
@@ -37,6 +38,8 @@
 #include "touchpadinterface.h"
 #include "customconfigdialogmanager.h"
 #include "kded/kdedactions.h"
+
+#include "version.h"
 
 void touchpadApplySavedConfig()
 {
@@ -51,7 +54,7 @@ void touchpadApplySavedConfig()
 
 extern "C"
 {
-    KDE_EXPORT void kcminit_touchpad()
+    Q_DECL_EXPORT void kcminit_touchpad()
     {
         TouchpadParameters::setSystemDefaults();
         touchpadApplySavedConfig();
@@ -78,7 +81,7 @@ static void copyHelpFromBuddy(QObject *root)
 }
 
 template<typename T>
-QWidget *addTab(KTabWidget *tabs, T &form)
+QWidget *addTab(QTabWidget *tabs, T &form)
 {
     QScrollArea *container = new QScrollArea(tabs);
     container->setWidgetResizable(true);
@@ -98,10 +101,31 @@ QWidget *addTab(KTabWidget *tabs, T &form)
 }
 
 TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
-    : KCModule(TouchpadPluginFactory::componentData(), parent, args),
+    : KCModule(parent, args),
       m_configOutOfSync(false)
 {
-    setAboutData(new KAboutData(*componentData().aboutData()));
+    KAboutData* data = new KAboutData(QStringLiteral("kcm_touchpad"),
+                    i18n("Touchpad KCM"),
+                    TOUCHPAD_KCM_VERSION,
+                    i18n("System Settings module, daemon and Plasma applet for managing your touchpad"),
+                    KAboutLicense::GPL_V2,
+                    i18n("Copyright © 2013 Alexander Mezin"),
+                    i18n("This program incorporates work covered by this copyright notice:\n"
+                          "Copyright © 2002-2005,2007 Peter Osterlund"),
+                    QStringLiteral("https://projects.kde.org/projects/playground/utils/kcm-touchpad/"),
+		    QString());
+
+    data->addAuthor(i18n("Alexander Mezin"),
+                   i18n("Developer"),
+                   QStringLiteral("mezin.alexander@gmail.com"));
+    data->addCredit(i18n("Thomas Pfeiffer"), i18nc("Credits", "Usability, testing"));
+    data->addCredit(i18n("Alex Fiestas"), i18nc("Credits", "Helped a bit"));
+    data->addCredit(i18n("Peter Osterlund"), i18nc("Credits", "Developer of synclient"));
+    data->addCredit(i18n("Vadim Zaytsev"), i18nc("Credits", "Testing"));
+    data->addCredit(i18n("Violetta Raspryagayeva"), i18nc("Credits", "Testing"));
+
+
+    setAboutData(data);
 
     QGridLayout *layout = new QGridLayout(this);
     QVBoxLayout *messageLayout = new QVBoxLayout();
@@ -122,7 +146,7 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
     m_configOutOfSyncMessage->setVisible(false);
     messageLayout->addWidget(m_configOutOfSyncMessage);
 
-    m_loadActiveConfiguration = new KAction(m_configOutOfSyncMessage);
+    m_loadActiveConfiguration = new QAction(m_configOutOfSyncMessage);
     m_loadActiveConfiguration->setText(i18n("Show active settings"));
     connect(m_loadActiveConfiguration, SIGNAL(triggered()),
             SLOT(loadActiveConfig()));
@@ -133,7 +157,7 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
 
     // Main UI
 
-    m_tabs = new KTabWidget(this);
+    m_tabs = new QTabWidget(this);
     layout->addWidget(m_tabs, 1, 0, 1, 1);
 
     addTab(m_tabs, m_tapping);
@@ -190,7 +214,7 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
     m_backend->watchForEvents(false);
     updateMouseList();
 
-    m_daemon = new OrgKdeTouchpadInterface("org.kde.kded", "/modules/touchpad",
+    m_daemon = new OrgKdeTouchpadInterface("org.kde.kded5", "/modules/touchpad",
                                            QDBusConnection::sessionBus(), this);
     m_kdedTab->setEnabled(false);
     QDBusPendingCallWatcher *watch;
@@ -368,6 +392,6 @@ void TouchpadConfig::showConfigureNotificationsDialog()
 {
     KNotifyConfigWidget *widget =
             KNotifyConfigWidget::configure(0, componentData().componentName());
-    KDialog *dialog = qobject_cast<KDialog*>(widget->topLevelWidget());
+    QDialog *dialog = qobject_cast<QDialog*>(widget->topLevelWidget());
     connect(dialog, SIGNAL(finished()), dialog, SLOT(deleteLater()));
 }

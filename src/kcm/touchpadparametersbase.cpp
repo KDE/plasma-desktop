@@ -26,7 +26,7 @@ KConfigGroup &systemDefaults()
 {
     static KSharedConfig::Ptr p(KSharedConfig::openConfig(".touchpaddefaults",
                                                           KConfig::SimpleConfig,
-                                                          "tmp"));
+                                                          QStandardPaths::TempLocation));
     static KConfigGroup group(p->group("parameters"));
     return group;
 }

@@ -24,7 +24,7 @@
 
 #include <KConfigSkeleton>
 #include <KComboBox>
-#include <KDebug>
+#include <QDebug>
 
 #include "customslider.h"
 
@@ -148,7 +148,7 @@ bool CustomConfigDialogManager::compareWidgetProperties(const QVariantHash &p) c
         QVariant fixed(fixup(widget, i.value()));
         if (!variantFuzzyCompare(widgetValue, fixed)) {
             result = false;
-            kDebug() << "Config mismatch:"
+            qDebug() << "Config mismatch:"
                      << widget->objectName() << widgetValue << fixed;
         }
     }

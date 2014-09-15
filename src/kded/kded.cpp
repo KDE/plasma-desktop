@@ -19,7 +19,7 @@
 #include "kded.h"
 
 #include <KNotification>
-#include <KLocale>
+#include <KLocalizedString>
 
 #include "plugins.h"
 #include "kdedactions.h"
@@ -48,7 +48,7 @@ TouchpadDisabler::TouchpadDisabler(QObject *parent, const QVariantList &)
         return;
     }
 
-    m_dependecies.addWatchedService("org.kde.plasma-desktop");
+    m_dependecies.addWatchedService("org.kde.plasmashell");
     m_dependecies.addWatchedService("org.kde.kglobalaccel");
     connect(&m_dependecies, SIGNAL(serviceRegistered(QString)),
             SLOT(serviceRegistered(QString)));
@@ -112,7 +112,7 @@ void TouchpadDisabler::enable()
 
 void TouchpadDisabler::reloadSettings()
 {
-    m_settings.readConfig();
+    m_settings.load();
     m_keyboardActivityTimeout.setInterval(
                 m_settings.keyboardActivityTimeoutMs());
 
@@ -189,7 +189,8 @@ void TouchpadDisabler::showNotification(const QString &name, const QString &text
 {
     KNotification::event(name, text, QPixmap(), //Icon is specified in .notifyrc
                          0, KNotification::CloseOnTimeout,
-                         TouchpadPluginFactory::componentData());
+			 moduleName());
+                         //TouchpadPluginFactory::componentData());
 }
 
 bool TouchpadDisabler::isMousePluggedIn() const

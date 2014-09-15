@@ -18,31 +18,33 @@
 
 #include "kdedactions.h"
 
-#include <KAction>
-#include <KLocale>
+#include <QAction>
+#include <KLocalizedString>
+#include <KGlobalAccel>
 
 #include "plugins.h"
 
 TouchpadGlobalActions::TouchpadGlobalActions(QObject *parent)
     : KActionCollection(parent)
 {
-    setComponentData(TouchpadPluginFactory::componentData());
+    //setComponentName(TouchpadPluginFactory::componentData());
+    setComponentName("kcm_touchpad");
 
-    KAction *enable = addAction("Enable Touchpad");
+    QAction *enable = addAction("Enable Touchpad");
     enable->setText(i18n("Enable Touchpad"));
     connect(enable, SIGNAL(triggered()), SIGNAL(enableTriggered()));
 
-    KAction *disable = addAction("Disable Touchpad");
+    QAction *disable = addAction("Disable Touchpad");
     disable->setText(i18n("Disable Touchpad"));
     connect(disable, SIGNAL(triggered()), SIGNAL(disableTriggered()));
 
-    KAction *toggle = addAction("Toggle Touchpad");
+    QAction *toggle = addAction("Toggle Touchpad");
     toggle->setText(i18n("Toggle Touchpad"));
     connect(toggle, SIGNAL(triggered()), SIGNAL(toggleTriggered()));
 
     Q_FOREACH (QAction *i, actions()) {
-        KAction *act = qobject_cast<KAction *>(i);
-        act->setGlobalShortcut(KShortcut());
-        act->setShortcutConfigurable(true);
+        QAction *act = qobject_cast<QAction *>(i);
+        KGlobalAccel::setGlobalShortcut(act,QKeySequence());
+        KActionCollection::setShortcutsConfigurable(act,true);
     }
 }
