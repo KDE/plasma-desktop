@@ -158,24 +158,30 @@ Rectangle {
                 implicitWidth: width
                 flickableItem.interactive: false
 
-                Column {
-                    id: categories
+                Rectangle {
                     width: categoriesScroll.viewport.width
-                    height: childrenRect.height
+                    height: Math.max(categoriesScroll.viewport.height, categories.height)
+                    color: syspal.base
 
-                    property Item currentItem: children[1]
+                    Column {
+                        id: categories
+                        width: parent.width
+                        height: childrenRect.height
 
-                    Repeater {
-                        model: root.isContainment ? globalConfigModel : undefined
-                        delegate: ConfigCategoryDelegate {}
-                    }
-                    Repeater {
-                        model: configDialog.configModel
-                        delegate: ConfigCategoryDelegate {}
-                    }
-                    Repeater {
-                        model: !root.isContainment ? globalConfigModel : undefined
-                        delegate: ConfigCategoryDelegate {}
+                        property Item currentItem: children[1]
+
+                        Repeater {
+                            model: root.isContainment ? globalConfigModel : undefined
+                            delegate: ConfigCategoryDelegate {}
+                        }
+                        Repeater {
+                            model: configDialog.configModel
+                            delegate: ConfigCategoryDelegate {}
+                        }
+                        Repeater {
+                            model: !root.isContainment ? globalConfigModel : undefined
+                            delegate: ConfigCategoryDelegate {}
+                        }
                     }
                 }
             }
