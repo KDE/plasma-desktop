@@ -106,7 +106,6 @@ MouseArea {
             text: model.name
             wrapMode: Text.Wrap
             horizontalAlignment: Text.AlignHCenter
-            font.bold: true
             color: current ? syspal.highlightedText : syspal.text
             Behavior on color {
                 ColorAnimation {
