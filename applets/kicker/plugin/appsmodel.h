@@ -94,7 +94,6 @@ class AppsModel : public AbstractModel
         void refreshing() const;
         void flatChanged() const;
         void appNameFormatChanged() const;
-        void hiddenEntriesChanged() const;
         void appletInterfaceChanged(QObject *appletInterface) const;
 
     protected Q_SLOTS:
@@ -105,7 +104,6 @@ class AppsModel : public AbstractModel
 
     protected:
         QList<AbstractEntry *> m_entryList;
-        static QStringList m_hiddenEntries;
 
     private:
         void processServiceGroup(KServiceGroup::Ptr group);
