@@ -29,6 +29,7 @@
 
 class AppsModel;
 class ContainmentInterface;
+class MenuEntryEditor;
 
 class QTimer;
 
@@ -115,6 +116,7 @@ class AppsModel : public AbstractModel
         bool m_sortNeeded;
         QObject *m_appletInterface;
         static ContainmentInterface *m_containmentInterface;
+        static MenuEntryEditor *m_menuEntryEditor;
 };
 
 #endif
