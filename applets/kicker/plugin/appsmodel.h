@@ -28,7 +28,6 @@
 #include <KServiceGroup>
 
 class AppsModel;
-class ContainmentInterface;
 class MenuEntryEditor;
 
 class QTimer;
@@ -95,6 +94,7 @@ class AppsModel : public AbstractModel
         void refreshing() const;
         void flatChanged() const;
         void appNameFormatChanged() const;
+        void hiddenEntriesChanged() const;
         void appletInterfaceChanged(QObject *appletInterface) const;
 
     protected Q_SLOTS:
@@ -105,6 +105,7 @@ class AppsModel : public AbstractModel
 
     protected:
         QList<AbstractEntry *> m_entryList;
+        static QStringList m_hiddenEntries;
 
     private:
         void processServiceGroup(KServiceGroup::Ptr group);
@@ -115,7 +116,6 @@ class AppsModel : public AbstractModel
         AppEntry::NameFormat m_appNameFormat;
         bool m_sortNeeded;
         QObject *m_appletInterface;
-        static ContainmentInterface *m_containmentInterface;
         static MenuEntryEditor *m_menuEntryEditor;
 };
 
