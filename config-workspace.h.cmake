@@ -146,6 +146,9 @@
 /* X libraries directory */
 #cmakedefine XLIBDIR "${XLIBDIR}"
 
+/* PackageKit-Qt has been found */
+#cmakedefine PackageKitQt5_FOUND 1
+
 /* KWin binary name */
 #define KWIN_BIN "${KWIN_BIN}"
 

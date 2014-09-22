@@ -22,12 +22,22 @@
 #include "actionlist.h"
 #include "containmentinterface.h"
 #include "menuentryeditor.h"
+#include "config-workspace.h"
+
+#ifdef PackageKitQt5_FOUND
+#include "findpackagenamejob.h"
+#endif
 
 #include <QTimer>
+#include <QProcess>
+#include <QQmlPropertyMap>
+#include <QStandardPaths>
 
 #include <KLocalizedString>
 #include <KRun>
 #include <KSycoca>
+#include <KShell>
+#include <KJob>
 
 AppGroupEntry::AppGroupEntry(KServiceGroup::Ptr group, AppsModel *parentModel,
     bool flat, int appNameFormat)
@@ -129,17 +139,31 @@ QVariant AppsModel::data(const QModelIndex &index, int role) const
             actionList << Kicker::createActionItem(i18n("Add to Panel"), "addToPanel");
         }
 
-        if (ContainmentInterface::mayAddLauncher(m_appletInterface, ContainmentInterface::TaskManager, service->entryPath())) {
-            actionList << Kicker::createActionItem(i18n("Add as Launcher"), "addToTaskManager");
-        }
-
         if (m_menuEntryEditor->canEdit(service->entryPath())) {
             actionList << Kicker::createSeparatorActionItem();
 
-            QVariantMap editAction = Kicker::createActionItem(i18n("Edit Application..."), "editEntry");
+            QVariantMap editAction = Kicker::createActionItem(i18n("Edit Application..."), "editApplication");
             editAction["icon"] = "kmenuedit"; // TODO: Using the KMenuEdit icon might be misleading.
             actionList << editAction;
         }
+
+#ifdef PackageKitQt5_FOUND
+        QStringList files(service->entryPath());
+
+        if (service->isApplication()) {
+            files += QStandardPaths::findExecutable(KShell::splitArgs(service->exec()).first());
+        }
+
+        FindPackageJob* job = new FindPackageJob(files); // TODO: Would be great to make this async.
+
+        if (job->exec() && !job->packageNames().isEmpty()) {
+            const QString &packageName = job->packageNames().first();
+
+            QVariantMap removeAction = Kicker::createActionItem(i18n("Remove '%1'...", packageName), "removeApplication", packageName);
+            removeAction["icon"] = "applications-other";
+            actionList << removeAction;
+        }
+#endif
 
         return actionList;
     } else if (role == Kicker::UrlRole) {
@@ -166,18 +190,28 @@ bool AppsModel::trigger(int row, const QString &actionId, const QVariant &argume
 
     KService::Ptr service = static_cast<AppEntry *>(m_entryList.at(row))->service();
 
-    if (actionId == "editEntry" && m_menuEntryEditor->canEdit(service->entryPath())) {
-        QMetaObject::invokeMethod(m_menuEntryEditor, "edit", Qt::QueuedConnection,
-            Q_ARG(QString, service->entryPath()),
-            Q_ARG(QString, service->menuId()));
-
-        return true;
-    } else if (actionId == "addToDesktop" && ContainmentInterface::mayAddLauncher(m_appletInterface, ContainmentInterface::Desktop)) {
+    if (actionId == "addToDesktop" && ContainmentInterface::mayAddLauncher(m_appletInterface, ContainmentInterface::Desktop)) {
         ContainmentInterface::addLauncher(m_appletInterface, ContainmentInterface::Desktop, service->entryPath());
     } else if (actionId == "addToPanel" && ContainmentInterface::mayAddLauncher(m_appletInterface, ContainmentInterface::Panel)) {
         ContainmentInterface::addLauncher(m_appletInterface, ContainmentInterface::Panel, service->entryPath());
     } else if (actionId == "addToTaskManager" && ContainmentInterface::mayAddLauncher(m_appletInterface, ContainmentInterface::TaskManager, service->entryPath())) {
         ContainmentInterface::addLauncher(m_appletInterface, ContainmentInterface::TaskManager, service->entryPath());
+    } else if (actionId == "editApplication" && m_menuEntryEditor->canEdit(service->entryPath())) {
+        QMetaObject::invokeMethod(m_menuEntryEditor, "edit", Qt::QueuedConnection,
+            Q_ARG(QString, service->entryPath()),
+            Q_ARG(QString, service->menuId()));
+
+        return true;
+    } else if (actionId == "removeApplication") {
+        QQmlPropertyMap *config = qobject_cast<QQmlPropertyMap *>(m_appletInterface->property("configuration").value<QObject *>());
+
+        if (config && config->contains("removeApplicationCommand")) {
+            const QStringList &removeAppCmd = KShell::splitArgs(config->value("removeApplicationCommand").toString());
+
+            if (!removeAppCmd.isEmpty()) {
+                return QProcess::startDetached(removeAppCmd.first(), removeAppCmd.mid(1) << argument.toString());
+            }
+        }
     } else if (actionId.isEmpty()) {
         bool ran = KRun::run(*service, QList<QUrl>(), 0);
 
@@ -346,3 +380,5 @@ void AppsModel::checkSycocaChanges(const QStringList &changes)
         m_changeTimer->start();
     }
 }
+
+#include "appsmodel.moc"

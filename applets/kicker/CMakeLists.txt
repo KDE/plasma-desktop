@@ -37,6 +37,10 @@ set(kickerplugin_SRCS
     plugin/windowsystem.cpp
 )
 
+if(PackageKitQt5_FOUND)
+    list(APPEND kickerplugin_SRCS plugin/findpackagenamejob.cpp)
+endif()
+
 install(FILES plugin/qmldir DESTINATION ${QML_INSTALL_DIR}/org/kde/plasma/private/kicker)
 
 add_library(kickerplugin SHARED ${kickerplugin_SRCS})
@@ -58,6 +62,7 @@ target_link_libraries(kickerplugin
                       KF5::Service
                       KF5::Solid
                       KF5::WindowSystem
+                      PK::packagekitqt5
                       PW::KWorkspace)
 
 install(TARGETS kickerplugin DESTINATION ${QML_INSTALL_DIR}/org/kde/plasma/private/kicker)

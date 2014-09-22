@@ -42,5 +42,9 @@
     <entry name="alignResultsToBottom" type="Bool">
       <default>true</default>
     </entry>
+
+    <entry name="removeApplicationCommand" type="String">
+      <default>muon-discover --application</default>
+    </entry>
   </group>
 </kcfg>
