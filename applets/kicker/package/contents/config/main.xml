@@ -32,6 +32,9 @@
     <entry name="recentApps" type="StringList">
       <default>kdesystemsettings.desktop</default>
     </entry>
+    <entry name="hiddenApplications" type="StringList">
+      <default></default>
+    </entry>
 
     <entry name="useExtraRunners" type="Bool">
       <default>true</default>

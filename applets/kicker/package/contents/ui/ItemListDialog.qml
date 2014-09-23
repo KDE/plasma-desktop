@@ -58,6 +58,12 @@ Kicker.SubMenu {
             Component.onCompleted: {
                 kicker.reset.connect(funnelModel.reset);
             }
+
+            onCountChanged: {
+                if (sourceModel && count == 0) {
+                    itemDialog.delayedDestroy();
+                }
+            }
         }
     }
 
@@ -66,4 +72,6 @@ Kicker.SubMenu {
         timer.interval = 0;
         timer.start();
     }
+
+
 }

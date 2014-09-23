@@ -30,6 +30,7 @@
 class AppsModel;
 class MenuEntryEditor;
 
+class QQmlPropertyMap;
 class QTimer;
 
 class AppGroupEntry : public AbstractGroupEntry
@@ -85,6 +86,8 @@ class AppsModel : public AbstractModel
         int appNameFormat() const;
         void setAppNameFormat(int format);
 
+        QStringList hiddenEntries() const;
+
         QObject *appletInterface() const;
 
     public Q_SLOTS:
@@ -101,6 +104,7 @@ class AppsModel : public AbstractModel
 
     private Q_SLOTS:
         void checkSycocaChanges(const QStringList &changes);
+        QQmlPropertyMap *appletConfig() const;
 
     protected:
         QList<AbstractEntry *> m_entryList;
@@ -113,6 +117,7 @@ class AppsModel : public AbstractModel
         bool m_flat;
         AppEntry::NameFormat m_appNameFormat;
         bool m_sortNeeded;
+        QStringList m_hiddenEntries;
         QObject *m_appletInterface;
         static MenuEntryEditor *m_menuEntryEditor;
 };

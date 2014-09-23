@@ -25,6 +25,7 @@ AbstractModel::AbstractModel(QObject *parent) : QAbstractListModel(parent)
     QHash<int, QByteArray> roles;
     roles.insert(Qt::DisplayRole, "display");
     roles.insert(Qt::DecorationRole, "decoration");
+    roles.insert(Kicker::IsParentRole, "isParent");
     roles.insert(Kicker::HasChildrenRole, "hasChildren");
     roles.insert(Kicker::FavoriteIdRole, "favoriteId");
     roles.insert(Kicker::HasActionListRole, "hasActionList");

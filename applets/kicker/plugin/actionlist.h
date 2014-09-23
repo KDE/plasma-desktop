@@ -26,7 +26,8 @@ namespace Kicker
 {
 
 enum {
-    HasChildrenRole = Qt::UserRole +1,
+    IsParentRole = Qt::UserRole + 1,
+    HasChildrenRole,
     FavoriteIdRole,
     HasActionListRole,
     ActionListRole,

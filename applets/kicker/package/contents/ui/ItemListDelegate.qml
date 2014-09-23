@@ -192,7 +192,7 @@ Item {
         PlasmaComponents.Label {
             id: label
 
-            enabled: (dialog != null || hasChildren)
+            enabled: (!model.isParent || hasChildren)
 
             anchors.verticalCenter: parent.verticalCenter
 

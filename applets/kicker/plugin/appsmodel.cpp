@@ -88,8 +88,6 @@ AppsModel::AppsModel(const QString &entryPath, bool flat, QObject *parent)
 , m_sortNeeded(false)
 , m_appletInterface(0)
 {
-    refresh();
-
     if (!m_menuEntryEditor) {
         m_menuEntryEditor = new MenuEntryEditor();
     }
@@ -106,68 +104,109 @@ QVariant AppsModel::data(const QModelIndex &index, int role) const
         return QVariant();
     }
 
-    if (role == Qt::DisplayRole) {
-        return m_entryList.at(index.row())->name();
-    } else if (role == Qt::DecorationRole) {
-        return m_entryList.at(index.row())->icon();
-    } else if (role == Kicker::HasChildrenRole) {
-        AbstractEntry *entry = m_entryList.at(index.row());
+    const AbstractEntry *entry = m_entryList.at(index.row());
 
+    if (role == Qt::DisplayRole) {
+        return entry->name();
+    } else if (role == Qt::DecorationRole) {
+        return entry->icon();
+    } else if (role == Kicker::IsParentRole) {
+        return (entry->type() == AbstractEntry::GroupType);
+    } else if (role == Kicker::HasChildrenRole) {
         if (entry->type() == AbstractEntry::GroupType) {
-            AbstractGroupEntry *groupEntry = static_cast<AbstractGroupEntry *>(entry);
+            const AbstractGroupEntry *groupEntry = static_cast<const AbstractGroupEntry *>(entry);
 
             if (groupEntry->model() && groupEntry->model()->count()) {
                 return true;
             }
         }
     } else if (role == Kicker::FavoriteIdRole) {
-        if (m_entryList.at(index.row())->type() == AbstractEntry::RunnableType) {
+        if (entry->type() == AbstractEntry::RunnableType) {
             return QVariant("app:" + static_cast<AppEntry *>(m_entryList.at(index.row()))->service()->storageId());
         }
     } else if (role == Kicker::HasActionListRole) {
-        return (m_entryList.at(index.row())->type() == AbstractEntry::RunnableType);
+        if (entry->type() == AbstractEntry::RunnableType || !m_hiddenEntries.isEmpty()) {
+            return true;
+        } else if (entry->type() == AbstractEntry::GroupType) {
+            const AbstractGroupEntry *groupEntry = static_cast<const AbstractGroupEntry *>(entry);
+
+            if (groupEntry->model()) {
+                const AppsModel *appsModel = qobject_cast<const AppsModel *>(groupEntry->model());
+
+                if (appsModel && !appsModel->hiddenEntries().isEmpty()) {
+                    return true;
+                }
+            }
+        }
     } else if (role == Kicker::ActionListRole) {
         QVariantList actionList;
 
-        const KService::Ptr service = static_cast<AppEntry *>(m_entryList.at(index.row()))->service();
+        if (entry->type() == AbstractEntry::RunnableType) {
+            const KService::Ptr service = static_cast<const AppEntry *>(entry)->service();
 
-        if (ContainmentInterface::mayAddLauncher(m_appletInterface, ContainmentInterface::Desktop)) {
-            actionList << Kicker::createActionItem(i18n("Add to Desktop"), "addToDesktop");
-        }
+            if (ContainmentInterface::mayAddLauncher(m_appletInterface, ContainmentInterface::Desktop)) {
+                actionList << Kicker::createActionItem(i18n("Add to Desktop"), "addToDesktop");
+            }
 
-        if (ContainmentInterface::mayAddLauncher(m_appletInterface, ContainmentInterface::Panel)) {
-            actionList << Kicker::createActionItem(i18n("Add to Panel"), "addToPanel");
-        }
+            if (ContainmentInterface::mayAddLauncher(m_appletInterface, ContainmentInterface::Panel)) {
+                actionList << Kicker::createActionItem(i18n("Add to Panel"), "addToPanel");
+            }
 
-        if (m_menuEntryEditor->canEdit(service->entryPath())) {
-            actionList << Kicker::createSeparatorActionItem();
+            if (m_menuEntryEditor->canEdit(service->entryPath())) {
+                actionList << Kicker::createSeparatorActionItem();
 
-            QVariantMap editAction = Kicker::createActionItem(i18n("Edit Application..."), "editApplication");
-            editAction["icon"] = "kmenuedit"; // TODO: Using the KMenuEdit icon might be misleading.
-            actionList << editAction;
-        }
+                QVariantMap editAction = Kicker::createActionItem(i18n("Edit Application..."), "editApplication");
+                editAction["icon"] = "kmenuedit"; // TODO: Using the KMenuEdit icon might be misleading.
+                actionList << editAction;
+            }
 
 #ifdef PackageKitQt5_FOUND
-        QStringList files(service->entryPath());
+            QStringList files(service->entryPath());
 
-        if (service->isApplication()) {
-            files += QStandardPaths::findExecutable(KShell::splitArgs(service->exec()).first());
-        }
+            if (service->isApplication()) {
+                files += QStandardPaths::findExecutable(KShell::splitArgs(service->exec()).first());
+            }
 
-        FindPackageJob* job = new FindPackageJob(files); // TODO: Would be great to make this async.
+            FindPackageJob* job = new FindPackageJob(files); // TODO: Would be great to make this async.
 
-        if (job->exec() && !job->packageNames().isEmpty()) {
-            QString packageName = job->packageNames().first();
+            if (job->exec() && !job->packageNames().isEmpty()) {
+                QString packageName = job->packageNames().first();
 
-            QVariantMap removeAction = Kicker::createActionItem(i18n("Remove '%1'...", packageName), "removeApplication", packageName);
-            removeAction["icon"] = "applications-other";
-            actionList << removeAction;
-        }
+                QVariantMap removeAction = Kicker::createActionItem(i18n("Remove '%1'...", packageName), "removeApplication", packageName);
+                removeAction["icon"] = "applications-other";
+                actionList << removeAction;
+            }
 #endif
+
+            if (appletConfig() && appletConfig()->contains("hiddenApplications")) {
+                const QStringList &hiddenApps = appletConfig()->value("hiddenApplications").toStringList();
+
+                if (!hiddenApps.contains(service->menuId())) {
+                    actionList << Kicker::createActionItem(i18n("Hide Application"), "hideApplication");
+                }
+            }
+        }
+
+        if (!m_hiddenEntries.isEmpty()) {
+            actionList << Kicker::createSeparatorActionItem();
+            actionList << Kicker::createActionItem(i18n("Unhide Applications in this Submenu"), "unhideSiblingApplications");
+        }
+
+        if (entry->type() == AbstractEntry::GroupType) {
+            const AbstractGroupEntry *groupEntry = static_cast<const AbstractGroupEntry *>(entry);
+
+            if (groupEntry->model()) {
+                const AppsModel *appsModel = qobject_cast<const AppsModel *>(groupEntry->model());
+
+                if (appsModel && !appsModel->hiddenEntries().isEmpty()) {
+                    actionList << Kicker::createActionItem(i18n("Unhide Applications in '%1'", entry->name()), "unhideChildApplications");
+                }
+            }
+        }
 
         return actionList;
     } else if (role == Kicker::UrlRole) {
-        if (m_entryList.at(index.row())->type() == AbstractEntry::RunnableType) {
+        if (entry->type() == AbstractEntry::RunnableType) {
             return QUrl::fromLocalFile(static_cast<AppEntry *>(m_entryList.at(index.row()))->service()->entryPath());
         }
     }
@@ -184,11 +223,16 @@ bool AppsModel::trigger(int row, const QString &actionId, const QVariant &argume
 {
     Q_UNUSED(argument)
 
-    if (row < 0 || row >= m_entryList.count() || m_entryList.at(row)->type() != AbstractEntry::RunnableType) {
+    if (row < 0 || row >= m_entryList.count()) {
         return false;
     }
 
-    KService::Ptr service = static_cast<AppEntry *>(m_entryList.at(row))->service();
+    const AbstractEntry *entry = m_entryList.at(row);
+    KService::Ptr service;
+
+    if (entry->type() == AbstractEntry::RunnableType) {
+        service  = static_cast<const AppEntry *>(entry)->service();
+    }
 
     if (actionId == "addToDesktop" && ContainmentInterface::mayAddLauncher(m_appletInterface, ContainmentInterface::Desktop)) {
         ContainmentInterface::addLauncher(m_appletInterface, ContainmentInterface::Desktop, service->entryPath());
@@ -203,16 +247,68 @@ bool AppsModel::trigger(int row, const QString &actionId, const QVariant &argume
 
         return true;
     } else if (actionId == "removeApplication") {
-        QQmlPropertyMap *config = qobject_cast<QQmlPropertyMap *>(m_appletInterface->property("configuration").value<QObject *>());
-
-        if (config && config->contains("removeApplicationCommand")) {
-            const QStringList &removeAppCmd = KShell::splitArgs(config->value("removeApplicationCommand").toString());
+        if (appletConfig() && appletConfig()->contains("removeApplicationCommand")) {
+            const QStringList &removeAppCmd = KShell::splitArgs(appletConfig()->value("removeApplicationCommand").toString());
 
             if (!removeAppCmd.isEmpty()) {
                 return QProcess::startDetached(removeAppCmd.first(), removeAppCmd.mid(1) << argument.toString());
             }
         }
-    } else if (actionId.isEmpty()) {
+    } else if (actionId == "hideApplication") {
+        if (appletConfig() && appletConfig()->contains("hiddenApplications")) {
+            QStringList hiddenApps = appletConfig()->value("hiddenApplications").toStringList();
+
+            if (!hiddenApps.contains(service->menuId())) {
+                hiddenApps << service->menuId();
+
+                appletConfig()->insert("hiddenApplications", hiddenApps);
+                QMetaObject::invokeMethod(appletConfig(), "valueChanged", Qt::DirectConnection,
+                    Q_ARG(QString, "hiddenApplications"),
+                    Q_ARG(QVariant, hiddenApps));
+
+                refresh();
+            }
+        }
+    } else if (actionId == "unhideSiblingApplications") {
+        if (appletConfig() && appletConfig()->contains("hiddenApplications")) {
+            QStringList hiddenApps = appletConfig()->value("hiddenApplications").toStringList();
+
+            foreach(const QString& app, m_hiddenEntries) {
+                hiddenApps.removeOne(app);
+            }
+
+            appletConfig()->insert("hiddenApplications", hiddenApps);
+            QMetaObject::invokeMethod(appletConfig(), "valueChanged", Qt::DirectConnection,
+                Q_ARG(QString, "hiddenApplications"),
+                Q_ARG(QVariant, hiddenApps));
+
+            m_hiddenEntries.clear();
+
+            refresh();
+        }
+    } else if (actionId == "unhideChildApplications") {
+        if (entry->type() == AbstractEntry::GroupType
+            && appletConfig() && appletConfig()->contains("hiddenApplications")) {
+            const AbstractGroupEntry *groupEntry = static_cast<const AbstractGroupEntry *>(entry);
+
+            if (groupEntry->model()) {
+                const AppsModel *appsModel = qobject_cast<const AppsModel *>(groupEntry->model());
+
+                QStringList hiddenApps = appletConfig()->value("hiddenApplications").toStringList();
+
+                foreach(const QString& app, appsModel->hiddenEntries()) {
+                    hiddenApps.removeOne(app);
+                }
+
+                appletConfig()->insert("hiddenApplications", hiddenApps);
+                QMetaObject::invokeMethod(appletConfig(), "valueChanged", Qt::DirectConnection,
+                    Q_ARG(QString, "hiddenApplications"),
+                    Q_ARG(QVariant, hiddenApps));
+
+                refresh();
+            }
+        }
+    } else if (actionId.isEmpty() && service) {
         bool ran = KRun::run(*service, QList<QUrl>(), 0);
 
         if (ran) {
@@ -266,6 +362,11 @@ void AppsModel::setAppNameFormat(int format)
     }
 }
 
+QStringList AppsModel::hiddenEntries() const
+{
+    return m_hiddenEntries;
+}
+
 QObject* AppsModel::appletInterface() const
 {
     return m_appletInterface;
@@ -275,6 +376,8 @@ void AppsModel::setAppletInterface(QObject* appletInterface)
 {
     if (m_appletInterface != appletInterface) {
         m_appletInterface = appletInterface;
+
+        refresh();
 
         emit appletInterfaceChanged(m_appletInterface);
     }
@@ -288,6 +391,7 @@ void AppsModel::refresh()
 
     qDeleteAll(m_entryList);
     m_entryList.clear();
+    m_hiddenEntries.clear();
 
     if (m_entryPath.isEmpty()) {
         KServiceGroup::Ptr group = KServiceGroup::root();
@@ -335,6 +439,12 @@ void AppsModel::processServiceGroup(KServiceGroup::Ptr group)
 
     KServiceGroup::List list = group->entries(true);
 
+    QStringList hiddenApps;
+
+    if (appletConfig() && appletConfig()->contains("hiddenApplications")) {
+        hiddenApps = appletConfig()->value("hiddenApplications").toStringList();
+    }
+
     for (KServiceGroup::List::ConstIterator it = list.constBegin();
         it != list.constEnd(); it++) {
         const KSycocaEntry::Ptr p = (*it);
@@ -342,21 +452,28 @@ void AppsModel::processServiceGroup(KServiceGroup::Ptr group)
         if (p->isType(KST_KService)) {
             const KService::Ptr service(static_cast<KService*>(p.data()));
 
-            if (!service->noDisplay()) {
-                bool found = false;
+            if (service->noDisplay()) {
+                continue;
+            }
 
-                foreach (const AbstractEntry *entry, m_entryList) {
-                    if (entry->type() == AbstractEntry::RunnableType
-                        && static_cast<const AppEntry *>(entry)->service()->storageId() == service->storageId()) {
-                        found = true;
-                    }
-                }
+            if (hiddenApps.contains(service->menuId())) {
+                m_hiddenEntries << service->menuId();
 
-                if (!found) {
-                    m_entryList << new AppEntry(service, m_appNameFormat);
+                continue;
+            }
+
+            bool found = false;
+
+            foreach (const AbstractEntry *entry, m_entryList) {
+                if (entry->type() == AbstractEntry::RunnableType
+                    && static_cast<const AppEntry *>(entry)->service()->storageId() == service->storageId()) {
+                    found = true;
                 }
             }
 
+            if (!found) {
+                m_entryList << new AppEntry(service, m_appNameFormat);
+            }
         } else if (p->isType(KST_KServiceGroup)) {
             if (m_flat) {
                 const KServiceGroup::Ptr serviceGroup(static_cast<KServiceGroup*>(p.data()));
@@ -367,7 +484,9 @@ void AppsModel::processServiceGroup(KServiceGroup::Ptr group)
                 const KServiceGroup::Ptr subGroup(static_cast<KServiceGroup*>(p.data()));
 
                 if (!subGroup->noDisplay() && subGroup->childCount() > 0) {
-                    m_entryList << new AppGroupEntry(subGroup, this, m_flat, m_appNameFormat);
+                    AppGroupEntry *groupEntry = new AppGroupEntry(subGroup, this, m_flat, m_appNameFormat);
+                    connect(groupEntry->model(), SIGNAL(countChanged()), this, SLOT(refresh()));
+                    m_entryList << groupEntry;
                 }
             }
         }
@@ -379,6 +498,15 @@ void AppsModel::checkSycocaChanges(const QStringList &changes)
     if (changes.contains("services") || changes.contains("apps") || changes.contains("xdgdata-apps")) {
         m_changeTimer->start();
     }
+}
+
+QQmlPropertyMap *AppsModel::appletConfig() const
+{
+    if (m_appletInterface) {
+        return qobject_cast<QQmlPropertyMap *>(m_appletInterface->property("configuration").value<QObject *>());
+    }
+
+    return 0;
 }
 
 #include "appsmodel.moc"
