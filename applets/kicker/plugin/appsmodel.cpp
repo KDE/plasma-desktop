@@ -157,7 +157,7 @@ QVariant AppsModel::data(const QModelIndex &index, int role) const
         FindPackageJob* job = new FindPackageJob(files); // TODO: Would be great to make this async.
 
         if (job->exec() && !job->packageNames().isEmpty()) {
-            const QString &packageName = job->packageNames().first();
+            QString packageName = job->packageNames().first();
 
             QVariantMap removeAction = Kicker::createActionItem(i18n("Remove '%1'...", packageName), "removeApplication", packageName);
             removeAction["icon"] = "applications-other";
