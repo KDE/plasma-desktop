@@ -408,7 +408,7 @@ void runRdb( uint flags )
   KConfigGroup generalCfgGroup(kglobalcfg, "General");
 
   QString gtkTheme;
-  if (generalCfgGroup.hasKey("widgetStyle"))
+  if (kglobals.hasKey("widgetStyle"))
     gtkTheme = generalCfgGroup.readEntry("widgetStyle");
   else
     gtkTheme = "oxygen";
@@ -684,7 +684,7 @@ void runRdb( uint flags )
   kglobals4.writeEntry("ShowIconsOnPushButtons", kglobals.readEntry("ShowIconsOnPushButtons", true));
   kglobals4.writeEntry("contrast", kglobals.readEntry("contrast", 4));
   //FIXME: this should somehow check if the kde4 version of the style is installed
-  kde4generalGroup.writeEntry("widgetStyle", kglobals.readEntry("widgetStyle", "oxygen"));
+  kde4generalGroup.writeEntry("widgetStyle", kglobals.readEntry("widgetStyle", "breeze"));
 
   //toolbar style
   KConfigGroup toolbars4(&kde4config, "Toolbar style");
