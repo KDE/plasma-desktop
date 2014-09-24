@@ -492,7 +492,7 @@ void KCMStyle::save()
     // Export the changes we made to qtrc, and update all qt-only
     // applications on the fly, ensuring that we still follow the user's
     // export fonts/colors settings.
-    if (m_bStyleDirty | m_bEffectsDirty)    // Export only if necessary
+    if (m_bStyleDirty || m_bEffectsDirty)    // Export only if necessary
     {
         uint flags = KRdbExportQtSettings | KRdbExportGtkTheme;
         KConfig _kconfig( "kcmdisplayrc", KConfig::NoGlobals  );
@@ -557,6 +557,8 @@ void KCMStyle::defaults()
     bool found;
 
     found = findStyle( defaultStyle(), item );
+    if (!found)
+        found = findStyle( "oxygen", item );
     if (!found)
         found = findStyle( "plastique", item );
     if (!found)
