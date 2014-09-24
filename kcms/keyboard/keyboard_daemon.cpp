@@ -188,7 +188,7 @@ void KeyboardDaemon::globalSettingsChanged(int category)
 void KeyboardDaemon::layoutChanged()
 {
 	//TODO: pass newLayout into layoutTrayIcon?
-	LayoutUnit newLayout = X11Helper::getCurrentLayout();
+        LayoutUnit newLayout = X11Helper::getCurrentLayout();
 
 	layoutMemory.layoutChanged();
 	if( layoutTrayIcon != NULL ) {
@@ -196,18 +196,9 @@ void KeyboardDaemon::layoutChanged()
 	}
 
 	if( newLayout != currentLayout ) {
-		currentLayout = newLayout;
-        QDBusMessage msg = QDBusMessage::createMethodCall(
-        QLatin1Literal("org.kde.plasmashell"),
-        QLatin1Literal("/org/kde/osdService"),
-        QLatin1Literal("org.kde.osdService"),
-        QLatin1Literal("kbdLayoutChanged"));
-
-        qDebug() << newLayout.getDisplayName();
-        msg.setArguments(QList<QVariant>() << newLayout.getDisplayName());
-        QDBusConnection::sessionBus().asyncCall(msg);
-		emit currentLayoutChanged(newLayout.toString());
-	}
+            currentLayout = newLayout;
+            emit currentLayoutChanged(newLayout.toString());
+        }
 }
 
 void KeyboardDaemon::layoutMapChanged()
@@ -224,6 +215,17 @@ void KeyboardDaemon::switchToNextLayout()
 {
 	kDebug() << "Toggling layout";
 	X11Helper::switchToNextLayout();
+
+        LayoutUnit newLayout = X11Helper::getCurrentLayout();
+
+        QDBusMessage msg = QDBusMessage::createMethodCall(
+        QLatin1Literal("org.kde.plasmashell"),
+        QLatin1Literal("/org/kde/osdService"),
+        QLatin1Literal("org.kde.osdService"),
+        QLatin1Literal("kbdLayoutChanged"));
+
+        msg.setArguments(QList<QVariant>() << newLayout.getDisplayName());
+        QDBusConnection::sessionBus().asyncCall(msg);
 }
 
 bool KeyboardDaemon::setLayout(QAction* action)
