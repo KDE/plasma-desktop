@@ -409,7 +409,7 @@ void runRdb( uint flags )
 
   QString gtkTheme;
   if (kglobals.hasKey("widgetStyle"))
-    gtkTheme = generalCfgGroup.readEntry("widgetStyle");
+    gtkTheme = kglobals.readEntry("widgetStyle");
   else
     gtkTheme = "oxygen";
 
