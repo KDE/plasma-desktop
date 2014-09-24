@@ -169,7 +169,7 @@ public:
 QString KCMStyle::defaultStyle()
 {
 #if defined(Q_OS_UNIX) && !defined(Q_OS_MAC)
-    return QStringLiteral("oxygen");
+    return QStringLiteral("breeze");
 #else
     return QString(); // native style
 #endif
