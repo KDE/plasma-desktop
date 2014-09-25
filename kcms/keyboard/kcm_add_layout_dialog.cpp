@@ -66,7 +66,11 @@ AddLayoutDialog::AddLayoutDialog(const Rules* rules_, Flags* flags_, bool showLa
     languageChanged(0);
     connect(layoutDialogUi->languageComboBox, SIGNAL(activated(int)), this, SLOT(languageChanged(int)));
     connect(layoutDialogUi->layoutComboBox, SIGNAL(activated(int)), this, SLOT(layoutChanged(int)));
-    connect(layoutDialogUi->prevbutton,SIGNAL(clicked()),this,SLOT(preview()));
+#ifdef NEW_GEOMETRY
+    connect(layoutDialogUi->prevbutton, SIGNAL(clicked()), this, SLOT(preview()));
+#else
+    layoutDialogUi->prevbutton->setVisible(false);
+#endif
 }
 
 void AddLayoutDialog::languageChanged(int langIdx)
@@ -154,12 +158,18 @@ void AddLayoutDialog::accept()
 }
 
 
-void AddLayoutDialog::preview(){
+#ifdef NEW_GEOMETRY
+void AddLayoutDialog::preview()
+{
     int index = layoutDialogUi->variantComboBox->currentIndex();
     QString variant = layoutDialogUi->variantComboBox->itemData(index).toString();
     KeyboardPainter* layoutPreview = new KeyboardPainter();
-    layoutPreview->generateKeyboardLayout(selectedLayout, variant);
+
+    QString title = Flags::getLongText(LayoutUnit(selectedLayout, variant), rules);
+    layoutPreview->generateKeyboardLayout(selectedLayout, variant, model, title);
     layoutPreview->setModal(true);
     layoutPreview->exec();
+
     delete layoutPreview;
 }
+#endif

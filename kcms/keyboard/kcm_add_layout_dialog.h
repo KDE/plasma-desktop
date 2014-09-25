@@ -48,6 +48,7 @@ public Q_SLOTS:
 private:
 	const Rules* rules;
 	Flags* flags;
+    const QString& model;
 	Ui_AddLayoutDialog* layoutDialogUi;
 	QString selectedLanguage;
 	QString selectedLayout;

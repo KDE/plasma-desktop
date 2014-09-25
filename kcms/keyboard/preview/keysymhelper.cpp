@@ -37,13 +37,20 @@ QString KeySymHelper::getKeySymbol(const QString& opton)
     if( keySymbolMap.contains(opton) )
         return keySymbolMap[opton];
 
+    const char* str = opton.toAscii().data();
+    
 #if 0
     //TODO: figure out how to use this so we don't need our own symkey2ucs mapping
     int res = Xutf8LookupString(XIC ic, XKeyPressedEvent *event, char *buffer_return, int bytes_buffer, KeySym *keysym_return, Status *status_return);
 
 #else
 
-    KeySym keysym = XStringToKeysym(opton.toLatin1().constData());
+    KeySym keysym = XStringToKeysym(str);
+
+    //TODO: make it more generic
+//    if( keysym == 0xfe03 )
+//	return "L3";
+    
     long ucs = keysym2ucs(keysym);
 
 //    if( ucs == -1 && (keysym >= 0xFE50 && keysym <= 0xFE5F) ) {

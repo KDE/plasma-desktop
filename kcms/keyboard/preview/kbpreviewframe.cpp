@@ -19,348 +19,355 @@
 
 #include "kbpreviewframe.h"
 
+#include "geometry_parser.h"
+#include "geometry_components.h"
+#include "keyboardlayout.h"
+#include "symbol_parser.h"
+#include "model_to_geometry.h"
+
 #include <QFile>
 #include <QFont>
+#include <QFileDialog>
+#include <QHelpEvent>
+#include <math.h>
+#include <QMessageBox>
+#include <QRect>
+#include <QDesktopWidget>
 
-#include <KLocalizedString>
+#include <KApplication>
+#include <KLocale>
+
 
 
 static const QColor keyBorderColor("#d4d4d4");
-static const QColor lev12color("#d4d4d4");
-static const QColor lev34color("#FF3300");
-static const int sz=20, kszx=70, kszy=70;
-
-static const int xOffset[] = {15, 15, 40, 40 };
-static const int yOffset[] = {10, 40, 10, 40 };
+static const QColor lev12color(Qt::black);
+static const QColor lev34color("#0033FF");
+static const QColor unknownSymbolColor("#FF3300");
+static const int xOffset[] = {10, 10, -15, -15 };
+static const int yOffset[] = {5, -20, 5, -20 };
 static const QColor color[] = { lev12color, lev12color, lev34color, lev34color };
+static const int keyLevel[3][4] = { { 1, 0, 3, 2}, { 1, 0, 5, 4}, { 1, 0, 7, 6} };
+static const QRegExp fkKey("^FK\\d+$");
 
-
-// TODO: parse geometry files and display keyboard according to current keyboard model
 
 KbPreviewFrame::KbPreviewFrame(QWidget *parent) :
-    QFrame(parent)
+    QFrame(parent),
+    geometry(*new Geometry())
 {
      setFrameStyle( QFrame::Box );
      setFrameShadow(QFrame::Sunken);
+     setMouseTracking(true);
+     scaleFactor = 1;
+     l_id = 0;
 }
 
-void KbPreviewFrame::paintTLDE(QPainter &painter,int &x,int &y)
-{
-    painter.setPen(keyBorderColor);
-    painter.drawRect(x, y, kszx, kszy);
-
-    const QList <QString> symbols = keyboardLayout.TLDE.symbols;
-
-    for(int level=0; level<symbols.size(); level++) {
-    	painter.setPen(color[level]);
-    	painter.drawText(x+xOffset[level], y+yOffset[level], sz, sz, Qt::AlignTop, symbol.getKeySymbol(symbols.at(level)));
-    }
-
+KbPreviewFrame::~KbPreviewFrame() {
+    delete &geometry;
 }
 
-void KbPreviewFrame::paintAERow(QPainter &painter,int &x,int &y)
+
+int KbPreviewFrame::getWidth() const { return geometry.width; }
+int KbPreviewFrame::getHeight() const { return geometry.height; }
+
+
+//writes text on the keys call only by paintevent
+void KbPreviewFrame::drawKeySymbols(QPainter &painter, QPoint temp[], const GShape& s, const QString& name)
 {
-    paintTLDE(painter, x, y);
+    int keyindex = keyboardLayout.findKey(name);
+    int szx = scaleFactor*s.size(0)/2 < 20 ? scaleFactor*s.size(0)/3 : 20;
+    int szy = scaleFactor*s.size(1)/2 < 20 ? scaleFactor*s.size(1)/3 : 20;
+    QFont kbfont;
+    if(szx > szy)
+        kbfont.setPointSize(szy/2 < 9 ? szy : 9);
+    else
+        kbfont.setPointSize(szx/2 < 9 ? szx/2 : 9);
 
-    const int noAEk=12;
-    for(int i=0; i<noAEk; i++){
-        x+=kszx;
+    painter.setFont(kbfont);
 
-        painter.setPen(keyBorderColor);
-        painter.drawRect(x, y, kszx, kszy);
+    int cordinate[] = {0, 3, 1, 2};
+    float tooltipX = 0, toolTipY = 0;
+    QString tip;
+    if(keyindex != -1){
+        KbKey key = keyboardLayout.keyList.at(keyindex);
 
-        QList<QString> symbols = keyboardLayout.AE[i].symbols;
+        for(int level=0; level< (key.getSymbolCount() < 4 ? key.getSymbolCount() : 4); level++) {
 
-        for(int level=0; level<symbols.size(); level++) {
-        	painter.setPen(color[level]);
-        	painter.drawText(x+xOffset[level], y+yOffset[level], sz, sz, Qt::AlignTop, symbol.getKeySymbol(symbols.at(level)));
-        }
-    }
+            if(keyLevel[l_id][level] < key.getSymbolCount()){
 
-    x += kszx;
+                QString txt = symbol.getKeySymbol(key.getSymbol(keyLevel[l_id][level]));
 
-    const int bkspszx=100,bk1x=10;//,bk1y=20,
-    const int bk2y=60;
+                QColor txtColor = txt[0] == -1 ? unknownSymbolColor : color[level];
 
-    painter.setPen(keyBorderColor);
-    painter.drawRect(x, y,bkspszx,kszy);
+                painter.setPen(txtColor);
 
-    painter.setPen(lev12color);
-//    painter.drawText(x+bk1x, y+bk1y,i18n("<--"));
-    painter.drawText(x+bk1x, y+bk2y,i18n("Backspace"));
-}
+                painter.drawText(temp[cordinate[level]].x()+xOffset[level]*scaleFactor/2.5, temp[cordinate[level]].y()+yOffset[level]*scaleFactor/2.5, szx, szy, Qt::AlignTop, txt);
 
-void KbPreviewFrame::paintADRow(QPainter &painter,int &x,int&y)
-{
-    const int noADk=12;
-    const int tabszx=100;
-    const int tab3y=45;
+                QString currentSymbol = key.getSymbol(keyLevel[l_id][level]);
+                currentSymbol = currentSymbol.size() < 3 ? currentSymbol.append("\t") : currentSymbol;
 
-    painter.setPen(keyBorderColor);
-    painter.drawRect(x, y, tabszx,kszy);
-
-    painter.setPen(lev12color);
-//    painter.drawText(x+tab1x, y+tab1y,i18n("<--"));
-    painter.drawText(x+xOffset[0], y+tab3y, i18nc("Tab key", "Tab"));
-//    painter.drawText(x+tab2x, y+tab2y,i18n("-->"));
-    x+=tabszx;
-
-
-    for(int i=0; i<noADk; i++){
-        QList<QString> symbols = keyboardLayout.AD[i].symbols;
-
-        painter.setPen(keyBorderColor);
-        painter.drawRect(x, y,kszx,kszy);
-
-        for(int level=0; level<symbols.size(); level++) {
-        	painter.setPen(color[level]);
-        	painter.drawText(x+xOffset[level], y+yOffset[level], sz, sz, Qt::AlignTop, symbol.getKeySymbol(symbols.at(level)));
+                if(level == 0)
+                    tip.append(currentSymbol);
+                else
+                    tip.append("\n" + currentSymbol);
+            }
         }
 
-        x+=kszx;
-    }
-
-    painter.setPen(keyBorderColor);
-    painter.drawRect(x, y,kszx,kszy);
-
-    QList<QString> symbols = keyboardLayout.BKSL.symbols;
-
-    for(int level=0; level<symbols.size(); level++) {
-    	painter.setPen(color[level]);
-    	painter.drawText(x+xOffset[level], y+yOffset[level], sz, sz, Qt::AlignTop, symbol.getKeySymbol(symbols.at(level)));
-    }
-}
-
-void KbPreviewFrame::paintACRow(QPainter &painter,int &x,int &y)
-{
-    const int sz = 20, kszx = 70, kszy = 70, capszx = 100;
-    const int noACk = 11;
-    const int lvl2x = 40, shifx = 10, shify = 60, retsz = 140;
-
-    painter.setPen(keyBorderColor);
-    painter.drawRect(x, y,capszx,kszy);
-
-    painter.setPen(lev12color);
-//    painter.drawText(x+shifx, y+sz,i18n("^"));
-    painter.drawText(x+shifx, y+shify,i18n("Caps Lock"));
-    x+=capszx;
-
-    for(int i=0; i<noACk; i++){
-        painter.setPen(keyBorderColor);
-        painter.drawRect(x, y,kszx,kszy);
-
-        QList<QString> symbols = keyboardLayout.AC[i].symbols;
-
-        for(int level=0; level<symbols.size(); level++) {
-        	painter.setPen(color[level]);
-        	painter.drawText(x+xOffset[level], y+yOffset[level], sz, sz, Qt::AlignTop, symbol.getKeySymbol(symbols.at(level)));
+        for(int i = 0 ; i < 4; i++){
+            tooltipX += temp[i].x();
+            toolTipY += temp[i].y();
         }
 
-        x+=kszx;
+        tooltipX = tooltipX/4;
+        toolTipY = toolTipY/4;
+        QPoint tooltipPoint = QPoint(tooltipX, toolTipY);
+
+        tooltip.append(tip);
+        tipPoint.append(tooltipPoint);
     }
+    else{
+        painter.setPen(Qt::black);
 
-    painter.setPen(keyBorderColor);
-    painter.drawRect(x, y,retsz,kszy);
+        if( name.contains(fkKey) ){
+            QString tempName = name;
+            tempName.remove("K");
+            painter.drawText(temp[0].x()+s.size(0)-10, temp[0].y()+3*scaleFactor*s.size(1)/5, tempName);
+        }
+        else{
+            painter.setFont(kbfont);
+            painter.drawText(temp[0].x()+s.size(0)-10, temp[0].y()+3*scaleFactor*s.size(1)/5, name);
+        }
+        tip = name;
 
-    painter.setPen(lev12color);
-//    painter.drawText(x+ret1x, y+ret1y,i18n("|"));
-//    painter.drawText(x+ret2x, y+ret2y,i18n("<--"));
-    painter.drawText(x+shify,y+lvl2x,i18n("Enter"));
-}
-
-void KbPreviewFrame::paintABRow(QPainter &painter,int &x,int &y)
-{
-    const int noABk=10;
-    for(int i=0; i<noABk; i++) {
-        painter.setPen(keyBorderColor);
-        painter.drawRect(x, y,kszx,kszy);
-
-        QList<QString> symbols = keyboardLayout.AB[i].symbols;
-
-        for(int level=0; level<symbols.size(); level++) {
-        	painter.setPen(color[level]);
-        	painter.drawText(x+xOffset[level], y+yOffset[level], sz, sz, Qt::AlignTop, symbol.getKeySymbol(symbols.at(level)));
+        for(int i = 0 ; i < 4; i++){
+            tooltipX += temp[i].x();
+            toolTipY += temp[i].y();
         }
 
-        x+=kszx;
+        tooltipX = tooltipX/4;
+        toolTipY = toolTipY/4;
+        QPoint tooltipPoint = QPoint(tooltipX, toolTipY);
+
+        tooltip.append(tip);
+        tipPoint.append(tooltipPoint);
     }
 }
 
-void KbPreviewFrame::paintBottomRow(QPainter &painter,int &x,int &y)
-{
-    const int txtx=30, txty=35, ctrlsz=100, altsz=100, spsz=400, kszy=70;
 
-    painter.setPen(keyBorderColor);
-    painter.drawRect(x, y, ctrlsz, kszy);
-    painter.setPen(lev12color);
-    painter.drawText(x+txtx, y+txty,i18n("Ctrl"));
+//draws key shape on QFrame called only by paint event
+void KbPreviewFrame::drawShape(QPainter &painter, const GShape& s, int x, int y, int i, const QString& name){
+    painter.setPen(Qt::black);
+    int cordi_count = s.getCordi_count();
 
-    x+=ctrlsz;
+    if(geometry.sectionList[i].getAngle()==0){
+        if (cordi_count == 1){
+            int width = s.getCordii(0).x();
+            int height = s.getCordii(0).y();
 
-    painter.setPen(keyBorderColor);
-    painter.drawRect(x, y, altsz, kszy);
-    painter.setPen(lev12color);
-    painter.drawText(x+txtx, y+txty,i18n("Alt"));
+            painter.drawRoundedRect(scaleFactor*x+2, scaleFactor*y, scaleFactor*width, scaleFactor*height, 4, 4);
 
-    x+=altsz;
+            QPoint temp[4];
 
-    painter.setPen(keyBorderColor);
-    painter.drawRect(x, y, spsz, kszy);
+            temp[0]=QPoint(scaleFactor*x, scaleFactor*y);
+            temp[1]=QPoint(scaleFactor*(s.getCordii(0).x()+x), scaleFactor*y);
+            temp[2]=QPoint(scaleFactor*(s.getCordii(0).x()+x), scaleFactor*(s.getCordii(0).y()+y));
+            temp[3]=QPoint(scaleFactor*(x), scaleFactor*(s.getCordii(0).y()+y));
 
-    x+=spsz;
+            drawKeySymbols(painter, temp, s, name);
+        }
+        else{
+            QPoint temp[cordi_count];
 
-    painter.drawRect(x, y, altsz, kszy);
+            for(int i=0;i<cordi_count;i++){
+                temp[i].setX(scaleFactor*(s.getCordii(i).x()+x+1));
+                temp[i].setY(scaleFactor*(s.getCordii(i).y()+y+1));
+            }
 
-    painter.setPen(lev34color);
-    painter.drawText(x+txtx, y+txty,i18n("AltGr"));
-
-    x+=ctrlsz;
-
-    painter.setPen(keyBorderColor);
-    painter.drawRect(x, y, ctrlsz, kszy);
-
-    painter.setPen(lev12color);
-    painter.drawText(x+txtx, y+txty, i18n("Ctrl"));
-}
-
-void KbPreviewFrame::paintFnKeys(QPainter &painter,int &x,int &y)
-{
-    const int escsz=50, escx=20, escy=55;
-
-    painter.setPen(keyBorderColor);
-    painter.drawRect(x, y, escsz, escsz);
-
-    painter.setPen(lev12color);
-    painter.drawText(escx, escy, i18n("Esc"));
-
-    const int spacex=50;
-    x+=spacex;
-
-    const int fnkeyspace=60, fnkeysizex=50, fnkeysizey=50, fkc=15, fky=30, fnkig=4, fng=3;
-    int f=1;
-
-    for(int i=0;i<fng;i++){
-        x+=spacex;
-
-        for(int j=0;j<fnkig;j++){
-            x += fnkeyspace;
-            painter.setPen(keyBorderColor);
-            painter.drawRect(x, y, fnkeysizex, fnkeysizey);
-
-            painter.setPen(lev12color);
-            painter.drawText(x+fkc, y+fky, i18nc("Function key", "F%1", f));
-            f++;
+            painter.drawPolygon(temp, cordi_count);
+            drawKeySymbols(painter, temp, s, name);
         }
     }
+    else{
+        QPoint temp[cordi_count == 1 ? 4 : cordi_count];
+        int size;
+
+        if(cordi_count== 1){
+            temp[0]=QPoint(x, y);
+            temp[1]=QPoint(s.getCordii(0).x()+x, y);
+            temp[2]=QPoint(s.getCordii(0).x()+x, s.getCordii(0).y()+y);
+            temp[3]=QPoint(x, s.getCordii(0).y()+y);
+            size = 4;
+        }
+        else{
+            size = cordi_count;
+
+            for(int i=0;i<cordi_count;i++){
+                temp[i].setX((s.getCordii(i).x()+x+1));
+                temp[i].setY((s.getCordii(i).y()+y+1));
+            }
+        }
+
+        double refX, refY;
+
+        refX = geometry.sectionList[i].getLeft();
+        refY = geometry.sectionList[i].getTop();
+
+        //qDebug()<<"\ntransform";
+        for(int j=0; j<size; j++){
+            double x = temp[j].x()-refX;
+            double y = temp[j].y()-refY;
+
+            //qDebug()<<"("<<x<<","<<y<<")->";
+
+            float theta = ( 3.1459 * geometry.sectionList[i].getAngle() )/180;
+            double x_ = x*cos(theta) - y*sin(theta);
+
+            //qDebug()<<"x_= "<<x<<"*"<<cos(theta)<<"-"<<y<<"*"<<sin(theta);
+
+            double y_ = x*sin(theta) + y*cos(theta);
+
+            //qDebug()<<"\ny_= "<<x<<"*"<<sin(theta)<<"+"<<y<<"*"<<cos(theta);
+            //qDebug()<<"("<<x_<<","<<y_<<")\n";
+
+            temp[j]=QPoint(scaleFactor*(x_+refX), scaleFactor*(y_+refY));
+        }
+
+        /*for(int i=0;i<size;i++){
+            qDebug()<<temp[i];
+        }*/
+
+        painter.drawPolygon(temp, size);
+        drawKeySymbols(painter, temp, s, name);
+    }
+
 }
+
+
+//event handling for tooltip
+bool KbPreviewFrame::event(QEvent* event){
+
+    if (event->type() == QEvent::ToolTip) {
+        QHelpEvent *helpEvent = static_cast<QHelpEvent *>(event);
+        int index = itemAt(helpEvent->pos());
+
+        if (index != -1) {
+            QToolTip::showText(helpEvent->globalPos(), tooltip.at(index));
+        }
+        else {
+             QToolTip::hideText();
+             event->ignore();
+        }
+
+        return true;
+    }
+    return QWidget::event(event);
+}
+
 
 void KbPreviewFrame::paintEvent(QPaintEvent *)
 {
-    QPainter painter(this);
+    if( geometry.getParsing() && keyboardLayout.getParsedSymbol() ){
+        QPainter painter(this);
 
-    QFont kbfont;
-    kbfont.setPointSize(12);
+        QFont kbfont;
+        kbfont.setPointSize(9);
 
-    painter.setFont(kbfont);
-    painter.setBrush(QBrush(Qt::darkGray));
+        painter.setFont(kbfont);
+        painter.setBrush(QBrush("#C3C8CB"));
+        painter.setRenderHint(QPainter::Antialiasing);
 
-    const int strtx=0,strty=0,endx=1390,endy=490,kszy=70;
-    const int row1x=10,row1y=30,row2x=10,row2y=90,row5x=10,row5y=330,row3x=10,row3y=170,shifx=10,shify=60,row4x=10,row4y=250,row6x=110,row6y=410;
-    const int shiftsz=155;
-
-    painter.setPen(keyBorderColor);
-    painter.drawRect(strtx, strty, endx, endy);
-
-    painter.setPen(lev12color);
-    painter.setBrush(QBrush(Qt::black));
-
-    int x, y;
-    x=row1x;
-    y=row1y;
-
-    paintFnKeys(painter,x, y);
-
-    x=row2x;
-    y=row2y;
-
-    paintAERow(painter,x, y);
-
-    x=row3x;
-    y=row3y;
-
-    paintADRow(painter,x, y);
-
-    x=row4x;
-    y=row4y;
-
-    paintACRow(painter,x, y);
-
-    x=row5x;
-    y=row5y;
-
-    painter.setPen(keyBorderColor);
-    painter.drawRect(x, y,shiftsz,kszy);
-    painter.setPen(lev12color);
-    painter.drawText(x+shifx, y+shify,i18n("Shift"));
-    x+=shiftsz;
-
-    paintABRow(painter,x, y);
-
-    painter.setPen(keyBorderColor);
-    painter.drawRect(x, y,shiftsz,kszy);
-    painter.setPen(lev12color);
-    painter.drawText(x+shifx, y+shify,i18n("Shift"));
-
-    x=row6x;
-    y=row6y;
-
-    paintBottomRow(painter,x, y);
-
-    if( symbol.isFailed() ) {
-        painter.setPen(keyBorderColor);
-        painter.drawRect(strtx, strty, endx, endy);
-
-        const int midx=470, midy=240;
-        painter.setPen(lev12color);
-        painter.drawText(midx, midy, i18n("No preview found"));
-    }
-
-}
+        const int strtx=0, strty=0, endx=geometry.getWidth(), endy=geometry.getHeight();
 
 
-void KbPreviewFrame::generateKeyboardLayout(const QString& layout, const QString& layoutVariant)
-{
-    QString filename = keyboardLayout.findSymbolBaseDir();
-    filename.append(layout);
+        painter.setPen("#EDEEF2");
 
-    QFile file(filename);
-    file.open(QIODevice::ReadOnly | QIODevice::Text);
-    QString content = file.readAll();
-    file.close();
+        painter.drawRect(strtx, strty, scaleFactor*endx+60, scaleFactor*endy+60);
 
-    QList<QString> symstr = content.split("xkb_symbols ");
+        painter.setPen(Qt::black);
+        painter.setBrush(QBrush("#EDEEF2"));
 
-    if( layoutVariant.isEmpty() ) {
-        keyboardLayout.generateLayout(symstr.at(1), layout);
-    }
-    else {
-        for(int i=1;i<symstr.size();i++) {
-            QString h=symstr.at(i);
-            int k=h.indexOf("\"");
-            h=h.mid(k);
-            k=h.indexOf("{");
-            h=h.left(k);
-            h=h.remove(" ");
-            QString f="\"";
-            f.append(layoutVariant);
-            f.append("\"");
-            f=f.remove(" ");
+        for(int i=0;i<geometry.getSectionCount();i++){
 
-            if(h==f){
-                keyboardLayout.generateLayout(symstr.at(i), layout);
-                break;
+            painter.setPen(Qt::black);
+
+            for(int j=0;j<geometry.sectionList[i].getRowCount();j++){
+
+                int keyn = geometry.sectionList[i].rowList[j].getKeyCount();
+
+                for(int k=0;k<keyn;k++){
+
+                    Key temp = geometry.sectionList[i].rowList[j].keyList[k];
+
+                    int x = temp.getPosition().x();
+                    int y = temp.getPosition().y();
+
+                    GShape s;
+
+                    s = geometry.findShape(temp.getShapeName());
+                    QString name = temp.getName();
+
+                    drawShape(painter,s,x,y,i,name);
+
+                }
             }
         }
+
+        if( symbol.isFailed() ) {
+            painter.setPen(keyBorderColor);
+            painter.drawRect(strtx, strty, endx, endy);
+
+            const int midx=470, midy=240;
+            painter.setPen(lev12color);
+            painter.drawText(midx, midy, i18n("No preview found"));
+        }
     }
+    else{
+        QMessageBox errorBox;
+        errorBox.setText("Unable to open Preview !");
+        errorBox.exec();
+    }
+
 }
 
+// this function draws the keyboard preview on a QFrame
+void KbPreviewFrame::generateKeyboardLayout(const QString& layout, const QString& layoutVariant, const QString& model)
+{
+    geometry = grammar::parseGeometry(model);
+    int endx = geometry.getWidth(), endy = geometry.getHeight();
+
+    QDesktopWidget* desktopWidget = qApp->desktop();
+    QRect screenGeometry = desktopWidget->screenGeometry();
+    int screenWidth = screenGeometry.width();
+    //int screenHeight = screenGeometry.height();
+    //int screenWidth = QApplication::desktop()->screenGeometry().width();
+
+    scaleFactor = 2.5;
+    qDebug()<<scaleFactor;
+    while (scaleFactor*endx + screenWidth/20 > screenWidth)
+        scaleFactor -= 0.2;
+    qDebug()<<scaleFactor;
+
+    setFixedSize(scaleFactor*endx+60, scaleFactor*endy+60);
+    qDebug()<<screenWidth<<":"<<scaleFactor<<scaleFactor*endx+60<<scaleFactor*endy+60;
+    keyboardLayout = grammar::parseSymbols(layout, layoutVariant);
+}
+
+
+//this functions give the index of the tooltip over which mouse hovers
+int KbPreviewFrame::itemAt(const QPoint& pos){
+    int distance =  10000;
+    int closest = 0;
+    for(int i = 0; i < tipPoint.size(); i++){
+
+        int temp = sqrt((pos.x()-tipPoint.at(i).x())*(pos.x()-tipPoint.at(i).x()) + (pos.y()-tipPoint.at(i).y())*(pos.y()-tipPoint.at(i).y()));
+
+        if(distance > temp){
+            distance = temp;
+            closest = i;
+        }
+    }
+
+    if(distance < 25)
+        return closest;
+    else
+        return -1;
+}
