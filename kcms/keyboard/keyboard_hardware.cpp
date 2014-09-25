@@ -23,7 +23,7 @@
 #include <QCursor>	// WTF? - otherwise compiler complains
 #include <QDebug>
 #include <QLoggingCategory>
-
+#include <X11/Xlib.h>
 #include <math.h>
 
 #include "x11_helper.h"

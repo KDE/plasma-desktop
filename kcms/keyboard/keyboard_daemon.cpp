@@ -30,6 +30,8 @@
 
 Q_LOGGING_CATEGORY(KEYBOARD_DAEMON, "keyboard_daemon")
 
+Q_LOGGING_CATEGORY(KEYBOARD_DAEMON, "keyboard_daemon")
+
 #include "x11_helper.h"
 #include "xinput_helper.h"
 #include "xkb_helper.h"
