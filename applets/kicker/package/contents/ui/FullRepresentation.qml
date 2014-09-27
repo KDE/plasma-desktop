@@ -393,7 +393,11 @@ FocusScope {
                 if (runnerColumns.visible) {
                     runnerColumnsRepeater.itemAt(0).currentIndex = 0;
                 }
-
+            } else if (event.key == Qt.Key_Enter || event.key == Qt.Key_Return) {
+                if (runnerColumns.visible && runnerModel.modelForRow(0).count) {
+                    runnerModel.modelForRow(0).trigger(0, "", null);
+                    plasmoid.expanded = false;
+                }
             }
         }
 
