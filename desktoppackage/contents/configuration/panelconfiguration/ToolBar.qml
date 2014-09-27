@@ -29,6 +29,10 @@ Item {
     implicitWidth: units.gridUnit * 10
     implicitHeight: row.height + 20
 
+    readonly property string addWidgetsButtonText: i18nd("plasma_shell_org.kde.plasma.desktop", "Add Widgets...")
+    readonly property string addSpacerButtonText: i18nd("plasma_shell_org.kde.plasma.desktop", "Add Spacer")
+    readonly property string settingsButtonText: i18nd("plasma_shell_org.kde.plasma.desktop", "More Settings...")
+
     GridLayout {
         id: row
         columns: dialogRoot.vertical ? 1 : 2
@@ -45,7 +49,7 @@ Item {
     PlasmaComponents.Label {
         id: placeHolder
         visible: false
-        text: i18nd("plasma_shell_plasma_shell_org.kde.plasma.desktop", "Add Widgets...") + i18nd("plasma_shell_plasma_shell_org.kde.plasma.desktop", "Add Spacer") + i18nd("plasma_shell_plasma_shell_org.kde.plasma.desktop", "More Settings...")
+        text: addWidgetsButtonText + addSpacerButtonText + settingsButtonText
     }
 
     Connections {
@@ -71,8 +75,8 @@ Item {
         columnSpacing: units.smallSpacing
 
         PlasmaComponents.Button {
-            text: buttonsLayout.showText ? i18nd("plasma_shell_org.kde.plasma.desktop", "Add Widgets...") : ""
-            tooltip: buttonsLayout.showText ? "" : i18nd("plasma_shell_org.kde.plasma.desktop", "Add Widgets...")
+            text: buttonsLayout.showText ? root.addWidgetsButtonText : ""
+            tooltip: buttonsLayout.showText ? "" : root.addWidgetsButtonText
             iconSource: "list-add"
             Layout.preferredWidth: panel.formFactor == PlasmaCore.Types.Vertical ? Math.max(implicitWidth, parent.width) : implicitWidth
             onClicked: {
@@ -83,8 +87,8 @@ Item {
 
         PlasmaComponents.Button {
             iconSource: "distribute-horizontal-x"
-            text: buttonsLayout.showText ? i18nd("plasma_shell_org.kde.plasma.desktop", "Add Spacer") : ""
-            tooltip: buttonsLayout.showText ? "" : i18nd("plasma_shell_org.kde.plasma.desktop", "Add Spacer")
+            text: buttonsLayout.showText ? root.addSpacerButtonText : ""
+            tooltip: buttonsLayout.showText ? "" : root.addSpacerButtonText
             Layout.preferredWidth: panel.formFactor == PlasmaCore.Types.Vertical ? Math.max(implicitWidth, parent.width) : implicitWidth
             onClicked: {
                 configDialog.addPanelSpacer();
@@ -94,8 +98,8 @@ Item {
         PlasmaComponents.Button {
             id: settingsButton
             iconSource: "configure"
-            text: buttonsLayout.showText ? i18nd("plasma_shell_org.kde.plasma.desktop", "More Settings...") : ""
-            tooltip: buttonsLayout.showText ? "" : i18nd("plasma_shell_org.kde.plasma.desktop", "More Settings...")
+            text: buttonsLayout.showText ? root.settingsButtonText : ""
+            tooltip: buttonsLayout.showText ? "" : root.settingsButtonText
             Layout.preferredWidth: panel.formFactor == PlasmaCore.Types.Vertical ? Math.max(implicitWidth, parent.width) : implicitWidth
             onClicked: {
                 contextMenu.visible = !contextMenu.visible;
