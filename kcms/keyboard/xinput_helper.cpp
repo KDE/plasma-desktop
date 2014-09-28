@@ -34,9 +34,9 @@
 
 #include <fixx11h.h>
 
-static int DEVICE_NONE = 0;
-static int DEVICE_KEYBOARD = 1;
-static int DEVICE_POINTER = 2;
+static const int DEVICE_NONE = 0;
+static const int DEVICE_KEYBOARD = 1;
+static const int DEVICE_POINTER = 2;
 
 XInputEventNotifier::XInputEventNotifier(QWidget* parent):
 	XEventNotifier(), //TODO: destruct properly?

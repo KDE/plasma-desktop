@@ -32,8 +32,8 @@
 #include "keyboard_config.h"
 
 
-static const char* SETXKBMAP_EXEC = "setxkbmap";
-static const char* XMODMAP_EXEC = "xmodmap";
+static const char SETXKBMAP_EXEC[] = "setxkbmap";
+static const char XMODMAP_EXEC[] = "xmodmap";
 
 static bool setxkbmapNotFound = false;
 static QString setxkbmapExe;

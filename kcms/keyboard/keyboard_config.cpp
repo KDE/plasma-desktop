@@ -23,10 +23,10 @@
 #include <kdebug.h>
 
 
-static const char* SWITCHING_POLICIES[] = {"Global", "Desktop", "WinClass", "Window", NULL };
-static const char* LIST_SEPARATOR = ",";
+static const char* const SWITCHING_POLICIES[] = {"Global", "Desktop", "WinClass", "Window", NULL };
+static const char LIST_SEPARATOR[] = ",";
 //static const char* DEFAULT_LAYOUT = "us";
-static const char* DEFAULT_MODEL = "pc104";
+static const char DEFAULT_MODEL[] = "pc104";
 
 static const QString CONFIG_FILENAME("kxkbrc");
 static const QString CONFIG_GROUPNAME("Layout");
@@ -42,7 +42,7 @@ QString KeyboardConfig::getSwitchingPolicyString(SwitchingPolicy switchingPolicy
 	return SWITCHING_POLICIES[switchingPolicy];
 }
 
-static int findStringIndex(const char* strings[], const QString& toFind, int defaultIndex)
+static int findStringIndex(const char* const strings[], const QString& toFind, int defaultIndex)
 {
 	for(int i=0; strings[i] != NULL; i++) {
 		if( toFind == strings[i] ) {

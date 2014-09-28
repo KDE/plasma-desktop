@@ -42,7 +42,7 @@ struct ModifierKey {
    const char *unlatchedText;
 };
 
-static ModifierKey modifierKeys[] = {
+static const ModifierKey modifierKeys[] = {
     { ShiftMask, 0, "Shift",
       I18N_NOOP("The Shift key has been locked and is now active for all of the following keypresses."),
       I18N_NOOP("The Shift key is now active."),

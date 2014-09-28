@@ -31,19 +31,19 @@
 #include "layout_memory.h"
 
 
-static const char* VERSION = "1.0";
-static const char* DOC_NAME = "LayoutMap";
-static const char* ROOT_NODE = "LayoutMap";
-static const char* VERSION_ATTRIBUTE = "version";
-static const char* SWITCH_MODE_ATTRIBUTE = "SwitchMode";
-static const char* ITEM_NODE = "item";
+static const char VERSION[] = "1.0";
+static const char DOC_NAME[] = "LayoutMap";
+static const char ROOT_NODE[] = "LayoutMap";
+static const char VERSION_ATTRIBUTE[] = "version";
+static const char SWITCH_MODE_ATTRIBUTE[] = "SwitchMode";
+static const char ITEM_NODE[] = "item";
 static const QString CURRENT_LAYOUT_ATTRIBUTE("currentLayout");
-static const char* OWNER_KEY_ATTRIBUTE = "ownerKey";
-static const char* LAYOUTS_ATTRIBUTE = "layouts";
+static const char OWNER_KEY_ATTRIBUTE[] = "ownerKey";
+static const char LAYOUTS_ATTRIBUTE[] = "layouts";
 
-static const char* LIST_SEPARATOR_LM = ",";
+static const char LIST_SEPARATOR_LM[] = ",";
 
-static const char* REL_SESSION_FILE_PATH = "/session/keyboard/layout_memory.xml";
+static const char REL_SESSION_FILE_PATH[] = "/session/keyboard/layout_memory.xml";
 
 QString LayoutMemoryPersister::getLayoutMapAsString()
 {

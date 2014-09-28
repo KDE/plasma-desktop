@@ -92,12 +92,12 @@ QList<IsoCodeEntry> IsoCodes::getEntryList()
 }
 
 //const char* IsoCodes::iso_639="639";
-const char* IsoCodes::iso_639_3="639_3";
-const char* IsoCodes::attr_name="name";
+const char IsoCodes::iso_639_3[]="639_3";
+const char IsoCodes::attr_name[]="name";
 //const char* IsoCodes::attr_iso_639_2B_code="iso_639_2B_code";
 //const char* IsoCodes::attr_iso_639_2T_code="iso_639_2T_code";
 //const char* IsoCodes::attr_iso_639_1_code="iso_639_1_code";
-const char* IsoCodes::attr_iso_639_3_id="id";
+const char IsoCodes::attr_iso_639_3_id[]="id";
 
 const IsoCodeEntry* IsoCodes::getEntry(const QString& attributeName, const QString& attributeValue)
 {

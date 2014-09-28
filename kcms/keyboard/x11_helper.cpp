@@ -37,11 +37,11 @@
 
 
 // more information about the limit https://bugs.freedesktop.org/show_bug.cgi?id=19501
-int X11Helper::MAX_GROUP_COUNT = 4;
-int X11Helper::ARTIFICIAL_GROUP_LIMIT_COUNT = 8;
+const int X11Helper::MAX_GROUP_COUNT = 4;
+const int X11Helper::ARTIFICIAL_GROUP_LIMIT_COUNT = 8;
 
-const char* X11Helper::LEFT_VARIANT_STR = "(";
-const char* X11Helper::RIGHT_VARIANT_STR = ")";
+const char X11Helper::LEFT_VARIANT_STR[] = "(";
+const char X11Helper::RIGHT_VARIANT_STR[] = ")";
 
 bool X11Helper::xkbSupported(int* xkbOpcode)
 {
@@ -222,7 +222,7 @@ unsigned int X11Helper::getGroup()
 
 bool X11Helper::getGroupNames(Display* display, XkbConfig* xkbConfig, FetchType fetchType)
 {
-	static const char* OPTIONS_SEPARATOR = ",";
+	static const char OPTIONS_SEPARATOR[] = ",";
 
 	Atom real_prop_type;
 	int fmt;
@@ -413,8 +413,8 @@ int XEventNotifier::registerForXkbEvents(Display* display)
 }
 
 
-static const char* LAYOUT_VARIANT_SEPARATOR_PREFIX = "(";
-static const char* LAYOUT_VARIANT_SEPARATOR_SUFFIX = ")";
+static const char LAYOUT_VARIANT_SEPARATOR_PREFIX[] = "(";
+static const char LAYOUT_VARIANT_SEPARATOR_SUFFIX[] = ")";
 
 static QString& stripVariantName(QString& variant)
 {

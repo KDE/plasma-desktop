@@ -31,8 +31,8 @@
 #include "flags.h"
 
 
-static const char* actionName = I18N_NOOP("Switch to Next Keyboard Layout");
-static const char* COMPONENT_NAME = I18N_NOOP("KDE Keyboard Layout Switcher");
+static const char actionName[] = I18N_NOOP("Switch to Next Keyboard Layout");
+static const char COMPONENT_NAME[] = I18N_NOOP("KDE Keyboard Layout Switcher");
 
 
 KeyboardLayoutActionCollection::KeyboardLayoutActionCollection(QObject* parent, bool configAction_):
