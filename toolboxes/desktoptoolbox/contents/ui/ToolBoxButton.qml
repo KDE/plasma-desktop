@@ -192,6 +192,23 @@ Item {
             id: activityName
             opacity: isCorner ? 0 : 1
             text: toolBoxButton.text
+            Behavior on opacity {
+                //only have this animation when going from hidden -> shown
+                enabled: activityName.opacity == 0
+
+                SequentialAnimation {
+                    //pause to allow the toolbox frame to resize
+                    //otherwise we see the text overflow the box
+                    //whilst that animates
+                    PauseAnimation {
+                        duration: units.longDuration
+                    }
+                    NumberAnimation {
+                        duration: units.shortDuration
+                        easing.type: Easing.InOutExpo
+                    }
+                }
+            }
         }
     }
 
