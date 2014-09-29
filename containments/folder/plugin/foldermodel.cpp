@@ -705,7 +705,7 @@ void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row)
 
     if (item.isNull() &&
         mimeData->hasFormat(QLatin1String("application/x-kde-ark-dndextract-service")) &&
-        mimeData->hasFormat(QLatin1String("application/x-kde-ark-dndextract-service"))) {
+        mimeData->hasFormat(QLatin1String("application/x-kde-ark-dndextract-path"))) {
         const QString remoteDBusClient = mimeData->data(QLatin1String("application/x-kde-ark-dndextract-service"));
         const QString remoteDBusPath = mimeData->data(QLatin1String("application/x-kde-ark-dndextract-path"));
 
