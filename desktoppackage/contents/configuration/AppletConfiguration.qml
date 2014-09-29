@@ -105,7 +105,6 @@ Rectangle {
             main.sourceFile = globalConfigModel.get(0).source
             main.title = globalConfigModel.get(0).name
         }
-        root.restoreConfig()
 //         root.width = mainColumn.implicitWidth
 //         root.height = mainColumn.implicitHeight
     }
