@@ -54,6 +54,7 @@ public:
 
     struct SubPixel : public Item {
         enum Type {
+            NotSet,
             None,
             Rgb,
             Bgr,
@@ -62,12 +63,12 @@ public:
         };
 
         SubPixel(Type t, QDomNode &n) : Item(n), type(t) {}
-        SubPixel(Type t = None)         : type(t)          {}
+        SubPixel(Type t = NotSet)       : type(t)          {}
 
         void reset()
         {
             Item::reset();
-            type = None;
+            type = NotSet;
         }
 
         Type type;
@@ -122,16 +123,22 @@ public:
     };
 
     struct AntiAliasing : public Item {
-        AntiAliasing(bool s, QDomNode &n) : Item(n), set(s) {}
-        AntiAliasing(bool s = true)         : set(s)          {}
+        enum State {
+            NotSet,
+            Enabled,
+            Disabled
+        };
+
+        AntiAliasing(State s, QDomNode &n) : Item(n), state(s) {}
+        AntiAliasing(State s = NotSet)         : state(s) {}
 
         void reset()
         {
             Item::reset();
-            set = true;
+            state = NotSet;
         }
 
-        bool set;
+		enum State state;
     };
 
 public:
@@ -148,8 +155,8 @@ public:
     void        setExcludeRange(double from, double to); // from:0, to:0 => turn off exclude range
     bool        getHintStyle(Hint::Style &style);
     void        setHintStyle(Hint::Style style);
-    void        setAntiAliasing(bool set);
-    bool        getAntiAliasing() const;
+    void        setAntiAliasing(AntiAliasing::State state);
+    AntiAliasing::State getAntiAliasing() const;
     bool        changed()
     {
         return m_madeChanges;
@@ -158,6 +165,7 @@ public:
     static const char *toStr(SubPixel::Type t);
     static QString description(Hint::Style s);
     static const char *toStr(Hint::Style s);
+    bool        aliasingEnabled();
 
 private:
 
@@ -168,7 +176,6 @@ private:
     void        setHinting(bool set);
     void        applyHinting();
     void        applyExcludeRange(bool pixel);
-    bool        aliasingEnabled();
 
 private:
 

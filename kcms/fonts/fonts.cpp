@@ -150,7 +150,7 @@ static const char *const aa_vbgr_xpm[] = {
     "aaaaaaaaaaaa"
 };
 
-static const char *const *const aaPixmaps[] = { aa_rgb_xpm, aa_bgr_xpm, aa_vrgb_xpm, aa_vbgr_xpm };
+static const char *const *const aaPixmaps[] = { 0, 0, aa_rgb_xpm, aa_bgr_xpm, aa_vrgb_xpm, aa_vbgr_xpm };
 
 /**** DLL Interface ****/
 K_PLUGIN_FACTORY(FontFactory, registerPlugin<KFonts>();)
@@ -280,24 +280,24 @@ FontAASettings::FontAASettings(QWidget *parent)
                                      " have a linear ordering of RGB sub-pixel, some have BGR.<br />"
                                      " This feature does not work with CRT monitors.</p>");
 
-    useSubPixel = new QCheckBox(i18n("&Use sub-pixel rendering:"), mw);
-    useSubPixel->setWhatsThis(subPixelWhatsThis);
+    subPixelLabel = new QLabel(i18n("Sub-pixel rendering type: "), mw);
+    subPixelLabel->setWhatsThis(subPixelWhatsThis);
 
     subPixelType = new QComboBox(mw);
-    layout->addRow(useSubPixel, subPixelType);
+    layout->addRow(subPixelLabel, subPixelType);
 
     subPixelType->setEditable(false);
     subPixelType->setWhatsThis(subPixelWhatsThis);
 
-    for (int t = KXftConfig::SubPixel::None + 1; t <= KXftConfig::SubPixel::Vbgr; ++t) {
-        subPixelType->addItem(QPixmap(aaPixmaps[t - 1]), i18n(KXftConfig::description((KXftConfig::SubPixel::Type)t).toUtf8()));
+    for (int t = KXftConfig::SubPixel::NotSet; t <= KXftConfig::SubPixel::Vbgr; ++t) {
+        subPixelType->addItem(QPixmap(aaPixmaps[t]), i18n(KXftConfig::description((KXftConfig::SubPixel::Type)t).toUtf8()));
     }
 
     QLabel *hintingLabel = new QLabel(i18n("Hinting style: "), mw);
     hintingStyle = new QComboBox(mw);
     hintingStyle->setEditable(false);
     layout->addRow(hintingLabel, hintingStyle);
-    for (int s = KXftConfig::Hint::NotSet + 1; s <= KXftConfig::Hint::Full; ++s) {
+    for (int s = KXftConfig::Hint::NotSet; s <= KXftConfig::Hint::Full; ++s) {
         hintingStyle->addItem(i18n(KXftConfig::description((KXftConfig::Hint::Style)s).toUtf8()));
     }
 
@@ -309,7 +309,6 @@ FontAASettings::FontAASettings(QWidget *parent)
     setMainWidget(mw);
 
     connect(excludeRange, SIGNAL(toggled(bool)), SLOT(changed()));
-    connect(useSubPixel, SIGNAL(toggled(bool)), SLOT(changed()));
     connect(excludeFrom, SIGNAL(valueChanged(double)), SLOT(changed()));
     connect(excludeTo, SIGNAL(valueChanged(double)), SLOT(changed()));
     connect(subPixelType, SIGNAL(activated(QString)), SLOT(changed()));
@@ -334,27 +333,18 @@ bool FontAASettings::load()
 
     KXftConfig::SubPixel::Type spType;
 
-    if (!xft.getSubPixelType(spType) || KXftConfig::SubPixel::None == spType) {
-        useSubPixel->setChecked(false);
-    } else {
-        int idx = getIndex(spType);
+    xft.getSubPixelType(spType);
+    int idx = getIndex(spType);
 
-        if (idx > -1) {
-            useSubPixel->setChecked(true);
-            subPixelType->setCurrentIndex(idx);
-        } else {
-            useSubPixel->setChecked(false);
-        }
-    }
+    subPixelType->setCurrentIndex(idx);
 
     KXftConfig::Hint::Style hStyle;
 
     if (!xft.getHintStyle(hStyle) || KXftConfig::Hint::NotSet == hStyle) {
         KConfig kglobals("kdeglobals", KConfig::NoGlobals);
 
-        hStyle = KXftConfig::Hint::Medium;
+        hStyle = KXftConfig::Hint::NotSet;
         xft.setHintStyle(hStyle);
-        xft.apply();  // Save this setting
         KConfigGroup(&kglobals, "General").writeEntry("XftHintStyle", KXftConfig::toStr(hStyle));
         kglobals.sync();
         runRdb(KRdbExportXftSettings | KRdbExportGtkTheme);
@@ -364,16 +354,16 @@ bool FontAASettings::load()
 
     enableWidgets();
 
-    return xft.getAntiAliasing();
+    return xft.aliasingEnabled();
 }
 
-bool FontAASettings::save(bool useAA)
+bool FontAASettings::save(KXftConfig::AntiAliasing::State aaState)
 {
     KXftConfig   xft;
     KConfig      kglobals("kdeglobals", KConfig::NoGlobals);
     KConfigGroup grp(&kglobals, "General");
 
-    xft.setAntiAliasing(useAA);
+    xft.setAntiAliasing(aaState);
 
     if (excludeRange->isChecked()) {
         xft.setExcludeRange(excludeFrom->value(), excludeTo->value());
@@ -381,13 +371,15 @@ bool FontAASettings::save(bool useAA)
         xft.setExcludeRange(0, 0);
     }
 
-    KXftConfig::SubPixel::Type spType(useSubPixel->isChecked()
-                                      ? getSubPixelType()
-                                      : KXftConfig::SubPixel::None);
+    KXftConfig::SubPixel::Type spType(getSubPixelType());
 
     xft.setSubPixelType(spType);
     grp.writeEntry("XftSubPixel", KXftConfig::toStr(spType));
-    grp.writeEntry("XftAntialias", useAA);
+    if (KXftConfig::AntiAliasing::NotSet == aaState) {
+        grp.revertToDefault("XftAntialias");
+    } else {
+        grp.writeEntry("XftAntialias", aaState == KXftConfig::AntiAliasing::Enabled);
+    }
 
     bool mod = false;
     KXftConfig::Hint::Style hStyle(getHintStyle());
@@ -395,11 +387,14 @@ bool FontAASettings::save(bool useAA)
     xft.setHintStyle(hStyle);
 
     QString hs(KXftConfig::toStr(hStyle));
-
-    if (!hs.isEmpty() && hs != grp.readEntry("XftHintStyle")) {
-        grp.writeEntry("XftHintStyle", hs);
-        mod = true;
+    if (hs != grp.readEntry("XftHintStyle")) {
+        if (KXftConfig::Hint::NotSet == hStyle) {
+            grp.revertToDefault("XftHintStyle");
+        } else {
+            grp.writeEntry("XftHintStyle", hs);
+        }
     }
+    mod = true;
     kglobals.sync();
 
     if (!mod) {
@@ -416,8 +411,8 @@ void FontAASettings::defaults()
     excludeRange->setChecked(false);
     excludeFrom->setValue(8.0);
     excludeTo->setValue(15.0);
-    useSubPixel->setChecked(false);
-    hintingStyle->setCurrentIndex(getIndex(KXftConfig::Hint::Medium));
+    subPixelType->setCurrentIndex(getIndex(KXftConfig::SubPixel::NotSet));
+    hintingStyle->setCurrentIndex(getIndex(KXftConfig::Hint::NotSet));
     enableWidgets();
 }
 
@@ -439,12 +434,12 @@ KXftConfig::SubPixel::Type FontAASettings::getSubPixelType()
 {
     int t;
 
-    for (t = KXftConfig::SubPixel::None; t <= KXftConfig::SubPixel::Vbgr; ++t)
+    for (t = KXftConfig::SubPixel::NotSet; t <= KXftConfig::SubPixel::Vbgr; ++t)
         if (subPixelType->currentText() == i18n(KXftConfig::description((KXftConfig::SubPixel::Type)t).toUtf8())) {
             return (KXftConfig::SubPixel::Type)t;
         }
 
-    return KXftConfig::SubPixel::None;
+    return KXftConfig::SubPixel::NotSet;
 }
 
 int FontAASettings::getIndex(KXftConfig::Hint::Style hStyle)
@@ -478,7 +473,6 @@ void FontAASettings::enableWidgets()
     excludeFrom->setEnabled(excludeRange->isChecked());
     excludeTo->setEnabled(excludeRange->isChecked());
     excludeToLabel->setEnabled(excludeRange->isChecked());
-    subPixelType->setEnabled(useSubPixel->isChecked());
 #ifdef FT_LCD_FILTER_H
     static int ft_has_subpixel = -1;
     if (ft_has_subpixel == -1) {
@@ -489,7 +483,6 @@ void FontAASettings::enableWidgets()
             FT_Done_FreeType(ftLibrary);
         }
     }
-    useSubPixel->setEnabled(ft_has_subpixel);
     subPixelType->setEnabled(ft_has_subpixel);
 #endif
 }
@@ -803,8 +796,15 @@ void KFonts::save()
     // TODO: With AASystem the changes already made by this module should be reverted somehow.
 #if defined(HAVE_FONTCONFIG) && defined (HAVE_X11)
     bool aaSave = false;
-    if (cbAA->currentIndex() != AASystem) {
-        aaSave = aaSettings->save(useAA == AAEnabled);
+    if (cbAA->currentIndex() == AAEnabled ) {
+        aaSave = aaSettings->save(KXftConfig::AntiAliasing::Enabled);
+    } else if (cbAA->currentIndex() == AADisabled) {
+        aaSave = aaSettings->save(KXftConfig::AntiAliasing::Disabled);
+    } else {
+        // If AASystem is selected, this removes all fontconfig settings made by
+        // this module.
+        aaSettings->defaults();
+        aaSave = aaSettings->save(KXftConfig::AntiAliasing::NotSet);
     }
 
     if (aaSave || (useAA != useAA_original) || dpi != dpi_original) {

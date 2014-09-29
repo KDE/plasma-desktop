@@ -206,8 +206,10 @@ static KXftConfig::SubPixel::Type strToType(const char *str)
         return KXftConfig::SubPixel::Vrgb;
     } else if (0 == strcmp(str, "vbgr")) {
         return KXftConfig::SubPixel::Vbgr;
-    } else {
+    } else if (0 == strcmp(str, "none")) {
         return KXftConfig::SubPixel::None;
+    } else {
+		return KXftConfig::SubPixel::NotSet;
     }
 }
 
@@ -229,7 +231,6 @@ KXftConfig::KXftConfig()
     , m_file(getConfigFile())
 {
     kDebug(1208) << "Using fontconfig file:" << m_file;
-    m_antiAliasing = aliasingEnabled();
     reset();
 }
 
@@ -247,6 +248,7 @@ bool KXftConfig::reset()
     m_excludeRange.reset();
     m_excludePixelRange.reset();
     m_subPixel.reset();
+    m_antiAliasing.reset();
 
     QFile f(m_file);
 
@@ -279,14 +281,12 @@ bool KXftConfig::reset()
                 m_excludePixelRange.from = pFrom;
                 m_excludePixelRange.to = pTo;
                 m_madeChanges = true;
-                apply();
             }
         } else if (!equal(0, m_excludePixelRange.from) || !equal(0, m_excludePixelRange.to)) {
             // "pixelsize" set, but not "size" !!!
             m_excludeRange.from = (int)pixel2Point(m_excludePixelRange.from);
             m_excludeRange.to = (int)pixel2Point(m_excludePixelRange.to);
             m_madeChanges = true;
-            apply();
         }
     }
 
@@ -307,7 +307,7 @@ bool KXftConfig::apply()
             newConfig.setExcludeRange(m_excludeRange.from, m_excludeRange.to);
             newConfig.setSubPixelType(m_subPixel.type);
             newConfig.setHintStyle(m_hint.style);
-            newConfig.setAntiAliasing(m_antiAliasing.set);
+            newConfig.setAntiAliasing(m_antiAliasing.state);
 
             ok = newConfig.changed() ? newConfig.apply() : true;
             if (ok) {
@@ -450,6 +450,8 @@ QString KXftConfig::description(SubPixel::Type t)
 {
     switch (t) {
     default:
+    case SubPixel::NotSet:
+        return i18nc("use system subpixel setting", "System default");
     case SubPixel::None:
         return i18nc("no subpixel rendering", "None");
     case SubPixel::Rgb:
@@ -484,10 +486,10 @@ QString KXftConfig::description(Hint::Style s)
 {
     switch (s) {
     default:
+    case Hint::NotSet:
+        return i18nc("use system hinting settings", "System default");
     case Hint::Medium:
         return i18nc("medium hinting", "Medium");
-    case Hint::NotSet:
-        return "";
     case Hint::None:
         return i18nc("no hinting", "None");
     case Hint::Slight:
@@ -501,6 +503,8 @@ const char *KXftConfig::toStr(Hint::Style s)
 {
     switch (s) {
     default:
+    case Hint::NotSet:
+        return "";
     case Hint::Medium:
         return "hintmedium";
     case Hint::None:
@@ -544,7 +548,8 @@ void KXftConfig::readContents()
                             } else if (!(str = getEntry(ene, "bool", 2, "name", "antialias", "mode",
                                                         "assign")).isNull()) {
                                 m_antiAliasing.node = n;
-                                m_antiAliasing.set = str.toLower() != "false";
+                                m_antiAliasing.state = str.toLower() != "false" ?
+                                                       AntiAliasing::Enabled : AntiAliasing::Disabled;
                             }
                         }
                     }
@@ -633,33 +638,44 @@ void KXftConfig::readContents()
 
 void KXftConfig::applySubPixelType()
 {
-    QDomElement matchNode = m_doc.createElement("match"),
-                typeNode  = m_doc.createElement("const"),
-                editNode  = m_doc.createElement("edit");
-    QDomText    typeText  = m_doc.createTextNode(toStr(m_subPixel.type));
-
-    matchNode.setAttribute("target", "font");
-    editNode.setAttribute("mode", "assign");
-    editNode.setAttribute("name", "rgba");
-    editNode.appendChild(typeNode);
-    typeNode.appendChild(typeText);
-    matchNode.appendChild(editNode);
-    if (m_subPixel.node.isNull()) {
-        m_doc.documentElement().appendChild(matchNode);
+    if (SubPixel::NotSet == m_subPixel.type) {
+        if (!m_subPixel.node.isNull()) {
+            m_doc.documentElement().removeChild(m_subPixel.node);
+            m_subPixel.node.clear();
+        }
     } else {
-        m_doc.documentElement().replaceChild(matchNode, m_subPixel.node);
+        QDomElement matchNode = m_doc.createElement("match");
+        QDomElement typeNode  = m_doc.createElement("const");
+        QDomElement editNode  = m_doc.createElement("edit");
+        QDomText    typeText  = m_doc.createTextNode(toStr(m_subPixel.type));
+
+        matchNode.setAttribute("target", "font");
+        editNode.setAttribute("mode", "assign");
+        editNode.setAttribute("name", "rgba");
+        editNode.appendChild(typeNode);
+        typeNode.appendChild(typeText);
+        matchNode.appendChild(editNode);
+        if (m_subPixel.node.isNull()) {
+            m_doc.documentElement().appendChild(matchNode);
+        } else {
+            m_doc.documentElement().replaceChild(matchNode, m_subPixel.node);
+        }
+        m_subPixel.node = matchNode;
     }
-    m_subPixel.node = matchNode;
 }
 
 void KXftConfig::applyHintStyle()
 {
     applyHinting();
 
-    if (Hint::NotSet == m_hint.style || m_hint.toBeRemoved) {
+    if (Hint::NotSet == m_hint.style) {
         if (!m_hint.node.isNull()) {
             m_doc.documentElement().removeChild(m_hint.node);
             m_hint.node.clear();
+        }
+        if (!m_hinting.node.isNull()) {
+            m_doc.documentElement().removeChild(m_hinting.node);
+            m_hinting.node.clear();
         }
     } else {
         QDomElement matchNode = m_doc.createElement("match"),
@@ -757,37 +773,45 @@ void KXftConfig::applyExcludeRange(bool pixel)
     }
 }
 
-bool KXftConfig::getAntiAliasing() const
+KXftConfig::AntiAliasing::State KXftConfig::getAntiAliasing() const
 {
-    return m_antiAliasing.set;
+    return m_antiAliasing.state;
 }
 
-void KXftConfig::setAntiAliasing(bool set)
+void KXftConfig::setAntiAliasing(AntiAliasing::State state)
 {
-    if (set != m_antiAliasing.set) {
-        m_antiAliasing.set = set;
+    if (state != m_antiAliasing.state) {
+        m_antiAliasing.state = state;
         m_madeChanges = true;
     }
 }
 
 void KXftConfig::applyAntiAliasing()
 {
-    QDomElement matchNode = m_doc.createElement("match"),
-                typeNode  = m_doc.createElement("bool"),
-                editNode  = m_doc.createElement("edit");
-    QDomText    typeText  = m_doc.createTextNode(m_antiAliasing.set ? "true" : "false");
+    if (AntiAliasing::NotSet == m_antiAliasing.state) {
+        if (!m_antiAliasing.node.isNull()) {
+            m_doc.documentElement().removeChild(m_antiAliasing.node);
+            m_antiAliasing.node.clear();
+        }
+    } else {
+        QDomElement matchNode = m_doc.createElement("match");
+        QDomElement typeNode  = m_doc.createElement("bool");
+        QDomElement editNode  = m_doc.createElement("edit");
+        QDomText    typeText  = m_doc.createTextNode(m_antiAliasing.state == AntiAliasing::Enabled ?
+                                                     "true" : "false");
 
-    matchNode.setAttribute("target", "font");
-    editNode.setAttribute("mode", "assign");
-    editNode.setAttribute("name", "antialias");
-    editNode.appendChild(typeNode);
-    typeNode.appendChild(typeText);
-    matchNode.appendChild(editNode);
-    if (!m_antiAliasing.node.isNull()) {
-        m_doc.documentElement().removeChild(m_antiAliasing.node);
+        matchNode.setAttribute("target", "font");
+        editNode.setAttribute("mode", "assign");
+        editNode.setAttribute("name", "antialias");
+        editNode.appendChild(typeNode);
+        typeNode.appendChild(typeText);
+        matchNode.appendChild(editNode);
+        if (!m_antiAliasing.node.isNull()) {
+            m_doc.documentElement().removeChild(m_antiAliasing.node);
+        }
+        m_doc.documentElement().appendChild(matchNode);
+        m_antiAliasing.node = matchNode;
     }
-    m_doc.documentElement().appendChild(matchNode);
-    m_antiAliasing.node = matchNode;
 }
 
 // KXftConfig only parses one config file, user's .fonts.conf usually.

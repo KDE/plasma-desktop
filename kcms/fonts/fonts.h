@@ -82,13 +82,14 @@ public:
 #if defined(HAVE_FONTCONFIG) && defined (HAVE_X11)
     FontAASettings(QWidget *parent);
 
-    bool save(bool useAA);
+    bool save(KXftConfig::AntiAliasing::State aaState);
     bool load();
     void defaults();
     int getIndex(KXftConfig::SubPixel::Type spType);
     KXftConfig::SubPixel::Type getSubPixelType();
     int getIndex(KXftConfig::Hint::Style hStyle);
     KXftConfig::Hint::Style getHintStyle();
+    void setAntiAliasingState(KXftConfig::AntiAliasing::State aaState);
     void enableWidgets();
     int exec();
 #endif
@@ -101,11 +102,11 @@ protected Q_SLOTS:
 private:
 
     QCheckBox *excludeRange;
-    QCheckBox *useSubPixel;
     KDoubleNumInput *excludeFrom;
     KDoubleNumInput *excludeTo;
     QComboBox *subPixelType;
     QComboBox *hintingStyle;
+    QLabel    *subPixelLabel;
     QLabel    *excludeToLabel;
     bool      changesMade;
 #endif
