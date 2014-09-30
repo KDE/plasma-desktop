@@ -89,6 +89,7 @@ Item {
 
         Component.onCompleted: {
             launchers = plasmoid.configuration.launchers;
+            visualModel.model = backend.tasksModel;
         }
     }
 
@@ -195,7 +196,6 @@ Item {
     VisualDataModel {
         id: visualModel
 
-        model: backend.tasksModel
         delegate: Task {}
     }
 
