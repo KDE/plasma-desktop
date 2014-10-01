@@ -53,26 +53,10 @@ AppGroupEntry::AppGroupEntry(KServiceGroup::Ptr group, AppsModel *parentModel,
     QObject::connect(m_model, SIGNAL(appLaunched(QString)), parentModel, SIGNAL(appLaunched(QString)));
 }
 
-AppEntry::AppEntry(KService::Ptr service, NameFormat nameFormat)
+AppEntry::AppEntry(KService::Ptr service, const QString &name)
 : m_service(service)
 {
-    const QString &name = service->name();
-    QString genericName = service->genericName();
-
-    if (genericName.isEmpty()) {
-        genericName = service->comment();
-    }
-
-    if (nameFormat == NameOnly || genericName.isEmpty() || name == genericName) {
-        m_name = name;
-    } else if (nameFormat == GenericNameOnly) {
-        m_name = genericName;
-    } else if (nameFormat == NameAndGenericName) {
-        m_name = i18nc("App name (Generic name)", "%1 (%2)", name, genericName);
-    } else {
-        m_name = i18nc("Generic name (App name)", "%1 (%2)", genericName, name);
-    }
-
+    m_name = name;
     m_icon = QIcon::fromTheme(service->icon());
     m_service = service;
 }
@@ -84,7 +68,7 @@ AppsModel::AppsModel(const QString &entryPath, bool flat, QObject *parent)
 , m_entryPath(entryPath)
 , m_changeTimer(0)
 , m_flat(flat)
-, m_appNameFormat(AppEntry::NameOnly)
+, m_appNameFormat(NameOnly)
 , m_sortNeeded(false)
 , m_appletInterface(0)
 {
@@ -353,8 +337,8 @@ int AppsModel::appNameFormat() const
 
 void AppsModel::setAppNameFormat(int format)
 {
-    if (m_appNameFormat != (AppEntry::NameFormat)format) {
-        m_appNameFormat = (AppEntry::NameFormat)format;
+    if (m_appNameFormat != (NameFormat)format) {
+        m_appNameFormat = (NameFormat)format;
 
         refresh();
 
@@ -380,6 +364,26 @@ void AppsModel::setAppletInterface(QObject* appletInterface)
         refresh();
 
         emit appletInterfaceChanged(m_appletInterface);
+    }
+}
+
+QString AppsModel::nameFromService(const KService::Ptr service, NameFormat nameFormat)
+{
+    const QString &name = service->name();
+    QString genericName = service->genericName();
+
+    if (genericName.isEmpty()) {
+        genericName = service->comment();
+    }
+
+    if (nameFormat == NameOnly || genericName.isEmpty() || name == genericName) {
+        return name;
+    } else if (nameFormat == GenericNameOnly) {
+        return genericName;
+    } else if (nameFormat == NameAndGenericName) {
+        return i18nc("App name (Generic name)", "%1 (%2)", name, genericName);
+    } else {
+        return i18nc("Generic name (App name)", "%1 (%2)", genericName, name);
     }
 }
 
@@ -472,7 +476,7 @@ void AppsModel::processServiceGroup(KServiceGroup::Ptr group)
             }
 
             if (!found) {
-                m_entryList << new AppEntry(service, m_appNameFormat);
+                m_entryList << new AppEntry(service, nameFromService(service, m_appNameFormat));
             }
         } else if (p->isType(KST_KServiceGroup)) {
             if (m_flat) {
