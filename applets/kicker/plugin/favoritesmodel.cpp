@@ -19,6 +19,7 @@
 
 #include "favoritesmodel.h"
 #include "actionlist.h"
+#include "appsmodel.h"
 
 #include <KRun>
 
@@ -48,7 +49,10 @@ QVariant FavoritesModel::data(const QModelIndex& index, int role) const
     } else if (m_serviceCache.contains(favoritesId)) {
         KService::Ptr service = m_serviceCache[favoritesId];
 
-        if (role == Qt::DecorationRole) {
+        if (role == Qt::DisplayRole) {
+            return AppsModel::nameFromService(service,
+                (AppsModel::NameFormat)qobject_cast<AppsModel *>(parent())->appNameFormat());
+        } else if (role == Qt::DecorationRole) {
             return service->icon();
         } else if (role == Kicker::FavoriteIdRole) {
             return QVariant("app:" + service->storageId());

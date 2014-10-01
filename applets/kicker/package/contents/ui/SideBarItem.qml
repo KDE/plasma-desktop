@@ -128,5 +128,22 @@ Item {
             }
         }
     }
+
+    PlasmaCore.ToolTipArea {
+        id: toolTip
+
+        property string text: model.display
+
+        anchors {
+            fill: parent
+            leftMargin: - sideBar.margins.left
+            rightMargin: - sideBar.margins.right
+        }
+
+        interactive: false
+        location: plasmoid.location
+
+        mainItem: toolTipDelegate
+    }
 }
 
