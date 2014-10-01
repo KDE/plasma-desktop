@@ -25,9 +25,12 @@
 #include <QDBusPendingCall>
 
 #include <KAuthorized>
+#include <KConfigGroup>
 #include <KLocalizedString>
+#include <KSharedConfig>
 #include <kworkspace.h>
 #include <Solid/PowerManagement>
+#include "ksmserver_interface.h"
 
 SystemEntry::SystemEntry(SystemEntry::Action action, const QString &name, const QString &icon)
 {
@@ -40,6 +43,7 @@ SystemModel::SystemModel(QObject *parent) : AbstractModel(parent)
 {
     m_favoriteIds[SystemEntry::LockSession] = "lock-screen";
     m_favoriteIds[SystemEntry::LogoutSession] = "logout";
+    m_favoriteIds[SystemEntry::SaveSession] = "save-session";
     m_favoriteIds[SystemEntry::NewSession] = "switch-user";
     m_favoriteIds[SystemEntry::SuspendToRam] = "suspend";
     m_favoriteIds[SystemEntry::SuspendToDisk] = "hibernate";
@@ -52,6 +56,12 @@ SystemModel::SystemModel(QObject *parent) : AbstractModel(parent)
 
     if (KAuthorized::authorizeKAction("logout") && KAuthorized::authorize("logout")) {
         m_entryList << new SystemEntry(SystemEntry::LogoutSession, i18n("Logout"), "system-log-out");
+
+        const KConfigGroup c(KSharedConfig::openConfig("ksmserverrc", KConfig::NoGlobals), "General");
+
+        if (c.readEntry("loginMode") == "restoreSavedSession") {
+            m_entryList << new SystemEntry(SystemEntry::SaveSession, i18n("Save Session"), "system-save-session");
+        }
     }
 
     if (KAuthorized::authorizeKAction("start_new_session")
@@ -120,6 +130,17 @@ bool SystemModel::trigger(int row, const QString &actionId, const QVariant &argu
             case SystemEntry::LogoutSession:
                 KWorkSpace::requestShutDown(KWorkSpace::ShutdownConfirmDefault, KWorkSpace::ShutdownTypeNone);
                 break;
+            case SystemEntry::SaveSession:
+            {
+                org::kde::KSMServerInterface ksmserver(QStringLiteral("org.kde.ksmserver"),
+                    QStringLiteral("/KSMServer"), QDBusConnection::sessionBus());
+
+                if (ksmserver.isValid()) {
+                    ksmserver.saveCurrentSession();
+                }
+
+                break;
+            }
             case SystemEntry::NewSession:
             {
                 QDBusConnection bus = QDBusConnection::sessionBus();
