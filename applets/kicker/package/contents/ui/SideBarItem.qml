@@ -143,7 +143,7 @@ Item {
         interactive: false
         location: (((plasmoid.location == PlasmaCore.Types.RightEdge)
             || (Qt.application.layoutDirection == Qt.RightToLeft))
-            ? PlasmaCore.Types.RightEdhe : PlasmaCore.Types.LeftEdge)
+            ? PlasmaCore.Types.RightEdge : PlasmaCore.Types.LeftEdge)
 
         mainItem: toolTipDelegate
     }
