@@ -99,6 +99,32 @@ install( TARGETS keyboard_layout_widget DESTINATION ${PLUGIN_INSTALL_DIR} )
 ### kcm keyboard ###
 include_directories("preview")
 
+find_package(Boost)
+
+if(Boost_FOUND)
+  ADD_DEFINITIONS(-DNEW_GEOMETRY=1)
+
+  set(preview_SRCS
+    preview/geometry_components.cpp
+    preview/geometry_parser.cpp
+    preview/kbpreviewframe.cpp
+    preview/keyboardlayout.cpp
+    preview/symbol_parser.cpp
+    preview/keyaliases.cpp
+    preview/keyboardlayout.cpp
+    preview/keyboardpainter.cpp
+    preview/keysymhelper.cpp
+    preview/keysym2ucs.cpp
+    )
+
+   set_source_files_properties(preview/geometry_parser.cpp preview/symbol_parser.cpp PROPERTIES COMPILE_FLAGS "-fexceptions")
+else(Boost_FOUND)
+
+  message("Boost not found, install Boost libraries to enable keyboard geometry preview")
+
+endif(Boost_FOUND)
+
+
 set(kcm_keyboard_PART_SRCS 
   kcm_keyboard.cpp
   kcm_keyboard_widget.cpp
@@ -112,17 +138,9 @@ set(kcm_keyboard_PART_SRCS
   iso_codes.cpp
   kcmmisc.cpp
   bindings.cpp
-  preview/keyaliases.cpp
-  preview/keyboardlayout.cpp
-  preview/keyboardpainter.cpp
-  preview/keysymbols.cpp
-  preview/keysymhelper.cpp
-  preview/kbpreviewframe.cpp
-  preview/keysym2ucs.cpp
-)
+  ${preview_SRCS} )
 
-
-ki18n_wrap_ui(kcm_keyboard_PART_SRCS kcm_keyboard.ui kcm_add_layout_dialog.ui kcmmiscwidget.ui)
+qt5_wrap_ui(kcm_keyboard_PART_SRCS kcm_keyboard.ui kcm_add_layout_dialog.ui kcmmiscwidget.ui)
 
 add_library(kcm_keyboard MODULE ${kcm_keyboard_PART_SRCS})
 

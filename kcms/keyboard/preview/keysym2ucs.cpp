@@ -49,7 +49,7 @@
 
 #include <keysym2ucs.h>
 
-static const struct codepair {
+struct codepair {
   unsigned short keysym;
   unsigned short ucs;
 } keysymtab[] = {

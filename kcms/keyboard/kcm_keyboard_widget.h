@@ -24,6 +24,9 @@
 
 #include <kcomponentdata.h>
 #include <QTabWidget>
+#include <QLoggingCategory>
+
+Q_DECLARE_LOGGING_CATEGORY(KCM_KEYBOARD)
 
 class QWidget;
 class KeyboardConfig;
@@ -68,7 +71,9 @@ private Q_SLOTS:
     void moveDown();
     void configureLayoutsChanged();
     void configureXkbOptionsChanged();
+#ifdef NEW_GEOMETRY
     void previewLayout();
+#endif
 
 private:
     Rules *rules;

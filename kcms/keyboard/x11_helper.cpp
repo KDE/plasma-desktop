@@ -203,7 +203,7 @@ bool X11Helper::setGroup(unsigned int group)
         group,
         0, 0, 0
     );
-    xcb_generic_error_t *error = nullptr;
+    xcb_generic_error_t *error = 0;
     error = xcb_request_check(QX11Info::connection(), cookie);
     if (error) {
         qDebug() << "Couldn't change the group" << error->error_code;

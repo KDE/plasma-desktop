@@ -156,35 +156,41 @@ QString Rules::getRulesName()
 	return QString::null;
 }
 
+QString Rules::findXkbDir()
+{
+	QString xkbParentDir;
+
+	QString base(XLIBDIR);
+	if( base.count('/') >= 3 ) {
+		// .../usr/lib/X11 -> /usr/share/X11/xkb vs .../usr/X11/lib -> /usr/X11/share/X11/xkb
+		QString delta = base.endsWith("X11") ? "/../../share/X11" : "/../share/X11";
+		QDir baseDir(base + delta);
+		if( baseDir.exists() ) {
+			xkbParentDir = baseDir.absolutePath();
+		}
+		else {
+			QDir baseDir(base + "/X11");	// .../usr/X11/lib/X11/xkb (old XFree)
+			if( baseDir.exists() ) {
+				xkbParentDir = baseDir.absolutePath();
+			}
+		}
+	}
+
+	if( xkbParentDir.isEmpty() ) {
+		xkbParentDir = "/usr/share/X11";
+	}
+
+	return xkbParentDir + "/xkb";
+}
+
 static QString findXkbRulesFile()
 {
 	QString rulesFile;
 	QString rulesName = Rules::getRulesName();
 
 	if ( ! rulesName.isNull() ) {
-		QString xkbParentDir;
-
-		QString base(XLIBDIR);
-		if( base.count('/') >= 3 ) {
-			// .../usr/lib/X11 -> /usr/share/X11/xkb vs .../usr/X11/lib -> /usr/X11/share/X11/xkb
-			QString delta = base.endsWith("X11") ? "/../../share/X11" : "/../share/X11";
-			QDir baseDir(base + delta);
-			if( baseDir.exists() ) {
-				xkbParentDir = baseDir.absolutePath();
-			}
-			else {
-				QDir baseDir(base + "/X11");	// .../usr/X11/lib/X11/xkb (old XFree)
-				if( baseDir.exists() ) {
-					xkbParentDir = baseDir.absolutePath();
-				}
-			}
-		}
-
-		if( xkbParentDir.isEmpty() ) {
-			xkbParentDir = "/usr/share/X11";
-		}
-
-		rulesFile = QString("%1/xkb/rules/%2.xml").arg(xkbParentDir, rulesName);
+		QString xkbDir = Rules::findXkbDir();
+		rulesFile = QString("%1/rules/%2.xml").arg(xkbDir, rulesName);
 	}
 
 	return rulesFile;
@@ -415,3 +421,86 @@ bool LayoutInfo::isLanguageSupportedByVariant(const VariantInfo* variantInfo, co
 
 	return false;
 }
+
+#ifdef NEW_GEOMETRY
+
+Rules::GeometryId Rules::getGeometryId(const QString& model) {
+    QString xkbDir = Rules::findXkbDir();
+    QString rulesName = Rules::getRulesName();
+    QString ruleFileName = QString("%1/rules/%2").arg(xkbDir, rulesName);
+    QFile ruleFile(ruleFileName);
+
+    GeometryId defaultGeoId("pc", "pc104");
+
+    if ( ! ruleFile.open(QIODevice::ReadOnly | QIODevice::Text) ){
+        qCritical() << "Unable to open file" << ruleFileName;
+        return defaultGeoId;
+    }
+    
+    QString modelGeoId = model;
+    bool inTable = false;
+    QTextStream in(&ruleFile);
+    
+    while (!in.atEnd()) {
+        QString line = in.readLine().trimmed();
+
+	if( line.isEmpty() || QRegExp("^\\s*//").indexIn(line) != -1 )
+	    continue;
+
+        QRegExp modelGroupRegex("!\\s*(\\$[a-zA-Z0-9_]+)\\s*=(.*)");
+        
+        if( modelGroupRegex.indexIn(line) != -1 ) {
+    	    QStringList parts = modelGroupRegex.capturedTexts();
+    	    QString groupName = parts[1];
+    	    QStringList models = parts[2].split(QRegExp("\\s+"), QString::SkipEmptyParts);
+    	    
+//    	    qDebug() << "modelGroup definition" << groupName << ":" << models;
+    	    if( models.contains(model) ) {
+    	        modelGeoId = groupName;
+    	    }
+    	    continue;
+        }
+
+
+	if( inTable ) {
+    	    QRegExp modelTableEntry ("\\s*(\\$?[a-zA-Z0-9_]+|\\*)\\s*=\\s*([a-zA-Z0-9_]+)\\(([a-zA-Z0-9_%]+)\\)");
+    	    if( modelTableEntry.indexIn(line) == -1 ) {
+    	       if( QRegExp("^!\\s*").indexIn(line) != -1 )
+    	         break;
+    	        
+    		qWarning() << "could not parse geometry line" << line;
+    		continue;
+    	    }
+        
+    	    QStringList parts = modelTableEntry.capturedTexts();
+    	    QString modelName = parts[1];
+    	    QString fileName = parts[2];
+    	    QString geoName = parts[3];
+    	    if( geoName == "%m" ) {
+    	      geoName = model;
+    	    }
+    	    if( modelName == "*" ) {
+    		defaultGeoId = GeometryId(fileName, geoName);
+    	    }
+    	    
+//    	    qDebug() << "geo entry" << modelName << fileName << geoName;
+        
+    	    if( modelName == model ) {
+    		return GeometryId(fileName, geoName);
+    	    }
+    	    
+    	    continue;
+        }
+
+        QRegExp modelTableHeader ("!\\s+model\\s*=\\s*geometry");
+        if( modelTableHeader.indexIn(line) != -1 ) {
+    	    inTable = true;
+    	    continue;
+        }
+
+    }
+
+    return defaultGeoId;
+}
+
+#endif

@@ -31,27 +31,27 @@ KeySymbols::KeySymbols()
 
 void KeySymbols::setKey(const QString& a)
 {
-    int i=a.indexOf("<");
+    int i = a.indexOf("<");
     i++;
-    keyname=a.mid(i,4);
+    keyname = a.mid(i,4);
     keyname.remove(" ");
-    i=a.indexOf("[");
+    i = a.indexOf("[");
     i++;
 
-    QString str=a.mid(i);
-    i=str.indexOf("]");
+    QString str = a.mid(i);
+    i = str.indexOf("]");
 
-    QString st=str.left(i);
-    st=st.remove(" ");
+    QString st = str.left(i);
+    st = st.remove(" ");
     //QStringList klst;
-    symbols=st.split(",");
+    symbols = st.split(",");
 
     if( symbols.size() > MAX_GROUPS_SUPPORTED ) {
     	symbols = symbols.mid(0, MAX_GROUPS_SUPPORTED);
     }
 
     for(int k=0;k<symbols.size();k++){
-        QString du=symbols.at(k);
+        QString du = symbols.at(k);
         du.remove(" ");
         du.remove("\t");
         du.remove("\n");

@@ -20,7 +20,7 @@
 
 #include <kactioncollection.h>
 #include <kaction.h>
-#include <kdebug.h>
+#include <kaboutdata.h>
 #include <klocale.h>
 #include <kglobalsettings.h>
 #include <KGlobalAccel>
@@ -31,9 +31,12 @@
 #include <QPixmap>
 #include <QVBoxLayout>
 #include <QX11Info>
+#include <QDebug>
 
 #include "keyboard_config.h"
+#ifdef NEW_GEOMETRY
 #include "preview/keyboardpainter.h"
+#endif
 #include "xkb_rules.h"
 #include "flags.h"
 #include "x11_helper.h"
@@ -45,6 +48,7 @@
 
 #include "ui_kcm_add_layout_dialog.h"
 
+Q_LOGGING_CATEGORY(KEBOARD_WIDGET, "keyboard.widget")
 
 static const QString GROUP_SWITCH_GROUP_NAME("grp");
 static const QString LV3_SWITCH_GROUP_NAME("lv3");
@@ -228,7 +232,7 @@ void KCMKeyboardWidget::addLayout()
 		return;
 	}
 
-    AddLayoutDialog dialog(rules, keyboardConfig->isFlagShown() ? flags : NULL, keyboardConfig->isLabelShown(), this);
+    AddLayoutDialog dialog(rules, keyboardConfig->isFlagShown() ? flags : NULL, keyboardConfig->keyboardModel, keyboardConfig->isLabelShown(), this);
     dialog.setModal(true);
     if( dialog.exec() == QDialog::Accepted ) {
     	keyboardConfig->layouts.append( dialog.getSelectedLayoutUnit() );
@@ -335,8 +339,9 @@ void KCMKeyboardWidget::initializeLayoutsUI()
 	connect(uiWidget->moveUpBtn, SIGNAL(clicked(bool)), this, SLOT(moveUp()));
 	connect(uiWidget->moveDownBtn, SIGNAL(clicked(bool)), this, SLOT(moveDown()));
 
-    connect(uiWidget->previewbutton,SIGNAL(clicked(bool)),this,SLOT(previewLayout()));
-
+#ifdef NEW_GEOMETRY
+    connect(uiWidget->previewButton, SIGNAL(clicked(bool)), this, SLOT(previewLayout()));
+#endif
 	connect(uiWidget->xkbGrpClearBtn, SIGNAL(clicked(bool)), this, SLOT(clearGroupShortcuts()));
 	connect(uiWidget->xkb3rdLevelClearBtn, SIGNAL(clicked(bool)), this, SLOT(clear3rdLevelShortcuts()));
 
@@ -344,7 +349,6 @@ void KCMKeyboardWidget::initializeLayoutsUI()
 //	connect(uiWidget->xkb3rdLevelClearBtn, SIGNAL(triggered(QAction*)), this, SLOT(uiChanged()));
 	connect(uiWidget->kdeKeySequence, SIGNAL(keySequenceChanged(QKeySequence)), this, SLOT(uiChanged()));
 	connect(uiWidget->switchingPolicyButtonGroup, SIGNAL(buttonClicked(int)), this, SLOT(uiChanged()));
-
 	connect(uiWidget->xkbGrpShortcutBtn, SIGNAL(clicked(bool)), this, SLOT(scrollToGroupShortcut()));
 	connect(uiWidget->xkb3rdLevelShortcutBtn, SIGNAL(clicked(bool)), this, SLOT(scrollTo3rdLevelShortcut()));
 
@@ -362,31 +366,33 @@ void KCMKeyboardWidget::initializeLayoutsUI()
 	connect(uiWidget->layoutLoopCountSpinBox, SIGNAL(valueChanged(int)), this, SLOT(uiChanged()));
 }
 
+#ifdef NEW_GEOMETRY
 void KCMKeyboardWidget::previewLayout(){
-    QMessageBox q;
-    QModelIndex index = uiWidget->layoutsTableView->currentIndex() ;
+    QModelIndex index = uiWidget->layoutsTableView->currentIndex();
+
     QModelIndex idcountry = index.sibling(index.row(),0) ;
     QString country=uiWidget->layoutsTableView->model()->data(idcountry).toString();
     QModelIndex idvariant = index.sibling(index.row(),2) ;
     QString variant=uiWidget->layoutsTableView->model()->data(idvariant).toString();
-    if(index.row()==-1 || index.column()==-1){
-        q.setText(i18n("No layout selected "));
-        q.exec();
-    }
-    else{
-        KeyboardPainter* layoutPreview = new KeyboardPainter();
-        const LayoutInfo* layoutInfo = rules->getLayoutInfo(country);
-        foreach(const VariantInfo* variantInfo, layoutInfo->variantInfos) {
-            if(variant==variantInfo->description){
-                variant=variantInfo->name;
-                break;
-            }
+    QString model = keyboardConfig->keyboardModel;
+
+    KeyboardPainter* layoutPreview = new KeyboardPainter();
+    const LayoutInfo* layoutInfo = rules->getLayoutInfo(country);
+    foreach(const VariantInfo* variantInfo, layoutInfo->variantInfos) {
+        if(variant==variantInfo->description){
+            variant=variantInfo->name;
+            break;
         }
-        layoutPreview->generateKeyboardLayout(country,variant);
-        layoutPreview->exec();
-        layoutPreview->setModal(true);
     }
+    
+    QString title = Flags::getLongText( LayoutUnit(country, variant), rules );
+    layoutPreview->generateKeyboardLayout(country,variant, model, title);
+    layoutPreview->setModal(true);
+    layoutPreview->exec();
+
+    delete layoutPreview;
 }
+#endif
 
 void KCMKeyboardWidget::configureLayoutsChanged()
 {
@@ -416,7 +422,11 @@ void KCMKeyboardWidget::layoutSelectionChanged()
 	uiWidget->removeLayoutBtn->setEnabled( ! selected.isEmpty() );
 	QPair<int, int> rowsRange( getSelectedRowRange(selected) );
 	uiWidget->moveUpBtn->setEnabled( ! selected.isEmpty() && rowsRange.first > 0);
-    uiWidget->previewbutton->setEnabled(! selected.isEmpty());
+#ifdef NEW_GEOMETRY
+    uiWidget->previewButton->setEnabled( uiWidget->layoutsTableView->selectionModel()->selectedRows().size() == 1 );
+#else
+    uiWidget->previewButton->setVisible(false);
+#endif
 	uiWidget->moveDownBtn->setEnabled( ! selected.isEmpty() && rowsRange.second < keyboardConfig->layouts.size()-1 );
 }
 
@@ -607,7 +617,7 @@ void KCMKeyboardWidget::updateXkbShortcutButton(const QString& groupName, QPushB
 		const OptionGroupInfo* optionGroupInfo = rules->getOptionGroupInfo(groupName);
 		const OptionInfo* optionInfo = optionGroupInfo->getOptionInfo(option);
 		if( optionInfo == NULL || optionInfo->description == NULL ) {
-			kError() << "Could not find option info for " << option;
+            qCDebug(KEBOARD_WIDGET) << "Could not find option info for " << option;
 			button->setText(grpOptions.first());
 		}
 		else {
@@ -633,9 +643,9 @@ void KCMKeyboardWidget::updateShortcutsUI()
 	delete actionCollection;
 	actionCollection = new KeyboardLayoutActionCollection(this, true);
 	QAction* toggleAction = actionCollection->getToggeAction();
-    const auto shortcuts = KGlobalAccel::self()->shortcut(toggleAction);
-    uiWidget->kdeKeySequence->setKeySequence(shortcuts.isEmpty() ? QKeySequence() : shortcuts.first());
-    actionCollection->loadLayoutShortcuts(keyboardConfig->layouts, rules);
+//    const auto shortcuts = KGlobalAccel::self()->shortcut(toggleAction);
+//    uiWidget->kdeKeySequence->setKeySequence(shortcuts.isEmpty() ? QKeySequence() : shortcuts.first());
+//    actionCollection->loadLayoutShortcuts(keyboardConfig->layouts, rules);
 	layoutsTableModel->refresh();
 }
 
