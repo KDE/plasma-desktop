@@ -234,12 +234,17 @@ void KRunnerModel::matchesChanged(const QList< Plasma::QueryMatch > & m)
     while (matches.size()) {
         Plasma::QueryMatch match = matches.takeLast();
         qDebug() << "matches " << QString("krunner://") + match.runner()->id() + "/" + match.id();
+        QString mimeUrl;
+        if (runnerManager()->mimeDataForMatch(match)) {
+            mimeUrl = runnerManager()->mimeDataForMatch(match)->urls().first().toString();
+        }
         appendRow(
             StandardItemFactory::createItem(
                 match.icon(),
                 match.text(),
                 match.subtext(),
-                QString("krunner://") + match.runner()->id() + "/" + match.id()
+                QString("krunner://") + match.runner()->id() + "/" + match.id(),
+                mimeUrl
                 )
             );
     }

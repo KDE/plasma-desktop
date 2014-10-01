@@ -70,7 +70,7 @@ Item {
             delegateImage: decoration
 
             mimeData {
-                url: "file://" + model["url"]
+                url: model["mimedata"] ? model["mimedata"] : model["url"]
                 source: parent
                 text: index
             }

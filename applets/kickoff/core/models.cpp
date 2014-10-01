@@ -129,7 +129,7 @@ void StandardItemFactory::setSpecialUrlProperties(const KUrl& url, QStandardItem
 }
 
 QStandardItem *StandardItemFactory::createItem(const QIcon & icon, const QString & title,
-        const QString & description, const QString & url)
+        const QString & description, const QString & url, const QString & mimeData)
 {
     QStandardItem *appItem = new QStandardItem;
 
@@ -137,6 +137,7 @@ QStandardItem *StandardItemFactory::createItem(const QIcon & icon, const QString
     appItem->setIcon(icon);
     appItem->setData(description, Kickoff::SubTitleRole);
     appItem->setData(url, Kickoff::UrlRole);
+    appItem->setData(mimeData, Kickoff::MimeDataRole);
 
     return appItem;
 }
