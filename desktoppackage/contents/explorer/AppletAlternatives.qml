@@ -66,11 +66,12 @@ PlasmaCore.Dialog {
                 id: mainList
                 model: widgetExplorer.widgetsModel
                 highlight: PlasmaComponents.Highlight {
+                    width: mainList.width
                     id: highlight
                 }
-                delegate: MouseArea {
+                delegate: PlasmaComponents.ListItem {
                     width: mainList.width
-                    height: childrenRect.height
+                    enabled: true
                     onClicked: checked = true;
                     property bool checked: model.pluginName == alternativesHelper.currentPlugin
                     onCheckedChanged: {
@@ -84,10 +85,10 @@ PlasmaCore.Dialog {
                         onCurrentIndexChanged: checked = false;
                     }
                     RowLayout {
+                        x: 2 * units.smallSpacing
                         spacing: units.largeSpacing
-                        width: mainList.width - units.smallSpacing
-                        x: units.smallSpacing
-                        height: units.iconSizes.huge + units.largeSpacing
+                        width: implicitWidth - (4 * x)
+                        height: units.iconSizes.huge
                         QIconItem {
                             width: units.iconSizes.huge
                             height: width
