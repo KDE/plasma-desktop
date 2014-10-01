@@ -41,6 +41,7 @@ KickoffModel::KickoffModel(QObject *parent)
     roles[Kickoff::SubTitleRole] = "subtitle";
     roles[Kickoff::UrlRole] = "url";
     roles[GroupNameRole] = "group";
+    roles[Kickoff::MimeDataRole] = "mimedata";
     setRoleNames(roles);
 }
 
