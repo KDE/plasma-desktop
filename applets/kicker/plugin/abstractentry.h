@@ -37,6 +37,7 @@ class AbstractEntry
         virtual EntryType type() const = 0;
 
         QIcon icon() const { return m_icon; }
+        QString iconName() const { return m_icon.name(); }
         QString name() const { return m_name; }
 
         static bool lessThan(AbstractEntry *e1, AbstractEntry *e2);
