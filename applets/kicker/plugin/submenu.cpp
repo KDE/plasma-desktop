@@ -28,6 +28,7 @@
 #include <KWindowSystem>
 
 SubMenu::SubMenu(QQuickItem *parent) : PlasmaQuick::Dialog(parent)
+, m_offset(0)
 , m_facingLeft(false)
 {
    KWindowSystem::setType(winId(), NET::Menu);
@@ -35,6 +36,20 @@ SubMenu::SubMenu(QQuickItem *parent) : PlasmaQuick::Dialog(parent)
 
 SubMenu::~SubMenu()
 {
+}
+
+int SubMenu::offset() const
+{
+    return m_offset;
+}
+
+void SubMenu::setOffset(int offset)
+{
+    if (m_offset != offset) {
+        m_offset = offset;
+
+        emit offsetChanged();
+    }
 }
 
 QPoint SubMenu::popupPosition(QQuickItem* item, const QSize& size)
@@ -46,12 +61,12 @@ QPoint SubMenu::popupPosition(QQuickItem* item, const QSize& size)
     QPointF pos = item->mapToScene(QPointF(0, 0));
     pos = item->window()->mapToGlobal(pos.toPoint());
 
-    pos.setX(pos.x() + item->width());
+    pos.setX(pos.x() + m_offset + item->width());
 
     QRect avail = availableScreenRectForItem(item);
 
     if (pos.x() + size.width() > avail.right()) {
-        pos.setX(pos.x() - item->width() - size.width());
+        pos.setX(pos.x() - m_offset - item->width() - size.width());
 
         m_facingLeft = true;
         emit facingLeftChanged();
