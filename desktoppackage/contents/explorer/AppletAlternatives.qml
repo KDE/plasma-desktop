@@ -87,7 +87,7 @@ PlasmaCore.Dialog {
                     RowLayout {
                         x: 2 * units.smallSpacing
                         spacing: units.largeSpacing
-                        width: implicitWidth - (4 * x)
+                        width: implicitWidth - (2 * x)
                         height: units.iconSizes.huge
                         QIconItem {
                             width: units.iconSizes.huge
