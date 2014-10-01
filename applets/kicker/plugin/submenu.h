@@ -29,6 +29,7 @@ class SubMenu : public PlasmaQuick::Dialog
 {
     Q_OBJECT
 
+    Q_PROPERTY(int offset READ offset WRITE setOffset NOTIFY offsetChanged)
     Q_PROPERTY(bool facingLeft READ facingLeft NOTIFY facingLeftChanged)
 
     public:
@@ -39,12 +40,17 @@ class SubMenu : public PlasmaQuick::Dialog
 
         QPoint popupPosition(QQuickItem *item, const QSize &size);
 
+        int offset() const;
+        void setOffset(int offset);
+
         bool facingLeft() const { return m_facingLeft; }
 
     Q_SIGNALS:
+        void offsetChanged() const;
         void facingLeftChanged() const;
 
     private:
+        int m_offset;
         bool m_facingLeft;
 };
 
