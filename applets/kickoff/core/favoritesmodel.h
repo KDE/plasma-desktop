@@ -41,8 +41,12 @@ public:
     FavoritesModel(QObject *parent = NULL);
     virtual ~FavoritesModel();
 
-    /** Add a new item for @p url to the user's favorites list. */
+    /** Add a new item for @p url to the user's favorites list and sync list. */
     Q_INVOKABLE static void add(const QString& url);
+
+    /** Add a new item for @p url to the user's favorites list. */
+    static void load(const QString& url);
+
     /** Remove the item associated with @p url from the user's favorites list. */
     Q_INVOKABLE static void remove(const QString& url);
     /** Returns true if @p url is in the list of the user's favorite URLs. */
