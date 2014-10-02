@@ -40,8 +40,11 @@ PlasmaCore.Dialog {
     ColumnLayout {
         id: root
 
+        anchors.fill: parent
+
         signal configurationChanged
         Layout.minimumWidth: units.gridUnit * 20
+        Layout.minimumHeight: Math.min(Screen.height - units.gridUnit * 10, mainList.contentHeight + units.gridUnit)
 
         property string currentPlugin: alternativesHelper.currentPlugin
 
@@ -58,7 +61,6 @@ PlasmaCore.Dialog {
             id: scrollArea
             Layout.fillWidth: true
             Layout.fillHeight: true
-            Layout.minimumHeight: Math.min(Screen.height - units.gridUnit * 10, mainList.contentHeight +  units.gridUnit)
 
             Layout.preferredHeight: mainList.height
 
@@ -66,11 +68,9 @@ PlasmaCore.Dialog {
                 id: mainList
                 model: widgetExplorer.widgetsModel
                 highlight: PlasmaComponents.Highlight {
-                    width: mainList.width
                     id: highlight
                 }
                 delegate: PlasmaComponents.ListItem {
-                    width: mainList.width
                     enabled: true
                     onClicked: checked = true;
                     property bool checked: model.pluginName == alternativesHelper.currentPlugin
@@ -87,8 +87,6 @@ PlasmaCore.Dialog {
                     RowLayout {
                         x: 2 * units.smallSpacing
                         spacing: units.largeSpacing
-                        width: implicitWidth - (2 * x)
-                        height: units.iconSizes.huge
                         QIconItem {
                             width: units.iconSizes.huge
                             height: width
@@ -96,17 +94,21 @@ PlasmaCore.Dialog {
                         }
 
                         ColumnLayout {
+                            height: parent.height
                             Layout.fillWidth: true
                             PlasmaExtras.Heading {
                                 level: 4
-                                Layout.fillWidth: true
+                                width: parent.width
                                 text: model.name
+                                elide: Text.ElideRight
                             }
                             PlasmaComponents.Label {
-                                Layout.fillWidth: true
+                                width: parent.width
                                 text: model.description
                                 font.pointSize: theme.smallestFont.pointSize
+                                maximumLineCount: 2
                                 wrapMode: Text.WordWrap
+                                elide: Text.ElideRight
                             }
                         }
                     }
