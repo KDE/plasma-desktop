@@ -24,8 +24,8 @@ Item {
     id: root
 
     signal configurationChanged
-    implicitWidth: childrenRect.width
-    implicitHeight: childrenRect.height
+    implicitWidth: mainColumn.implicitWidth
+    implicitHeight: mainColumn.implicitHeight
 
     property var prettyStrings: {
         "LeftButton": i18nd("plasma_shell_org.kde.plasma.desktop", "Left-Button"),
@@ -46,6 +46,7 @@ Item {
     }
 
     Column {
+        id: mainColumn
         anchors {
             top: parent.top
             topMargin: 25
