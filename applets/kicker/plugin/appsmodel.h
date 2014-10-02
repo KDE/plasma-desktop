@@ -100,19 +100,21 @@ class AppsModel : public AbstractModel
         void flatChanged() const;
         void appNameFormatChanged() const;
         void appletInterfaceChanged(QObject *appletInterface) const;
+        void hiddenEntriesChanged();
 
     protected Q_SLOTS:
         virtual void refresh();
 
     private Q_SLOTS:
         void checkSycocaChanges(const QStringList &changes);
-        QQmlPropertyMap *appletConfig() const;
+        void childHiddenEntriesChanged();
 
     protected:
         QList<AbstractEntry *> m_entryList;
 
     private:
         void processServiceGroup(KServiceGroup::Ptr group);
+        QQmlPropertyMap *appletConfig() const;
 
         QString m_entryPath;
         QTimer *m_changeTimer;

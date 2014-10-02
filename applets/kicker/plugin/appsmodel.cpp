@@ -251,6 +251,8 @@ bool AppsModel::trigger(int row, const QString &actionId, const QVariant &argume
                     Q_ARG(QVariant, hiddenApps));
 
                 refresh();
+
+                emit hiddenEntriesChanged();
             }
         }
     } else if (actionId == "unhideSiblingApplications") {
@@ -269,6 +271,8 @@ bool AppsModel::trigger(int row, const QString &actionId, const QVariant &argume
             m_hiddenEntries.clear();
 
             refresh();
+
+            emit hiddenEntriesChanged();
         }
     } else if (actionId == "unhideChildApplications") {
         if (entry->type() == AbstractEntry::GroupType
@@ -290,6 +294,8 @@ bool AppsModel::trigger(int row, const QString &actionId, const QVariant &argume
                     Q_ARG(QVariant, hiddenApps));
 
                 refresh();
+
+                emit hiddenEntriesChanged();
             }
         }
     } else if (actionId.isEmpty() && service) {
@@ -408,7 +414,9 @@ void AppsModel::refresh()
                 KServiceGroup::Ptr subGroup(static_cast<KServiceGroup*>(p.data()));
 
                 if (!subGroup->noDisplay() && subGroup->childCount() > 0) {
-                    m_entryList << new AppGroupEntry(subGroup, this, m_flat, m_appNameFormat);
+                    AppGroupEntry *groupEntry = new AppGroupEntry(subGroup, this, m_flat, m_appNameFormat);
+                    connect(groupEntry->model(), SIGNAL(hiddenEntriesChanged()), this, SLOT(childHiddenEntriesChanged()));
+                    m_entryList << groupEntry;
                 }
             }
         }
@@ -490,6 +498,7 @@ void AppsModel::processServiceGroup(KServiceGroup::Ptr group)
                 if (!subGroup->noDisplay() && subGroup->childCount() > 0) {
                     AppGroupEntry *groupEntry = new AppGroupEntry(subGroup, this, m_flat, m_appNameFormat);
                     connect(groupEntry->model(), SIGNAL(countChanged()), this, SLOT(refresh()));
+                    connect(groupEntry->model(), SIGNAL(hiddenEntriesChanged()), this, SLOT(childHiddenEntriesChanged()));
                     m_entryList << groupEntry;
                 }
             }
@@ -501,6 +510,24 @@ void AppsModel::checkSycocaChanges(const QStringList &changes)
 {
     if (changes.contains("services") || changes.contains("apps") || changes.contains("xdgdata-apps")) {
         m_changeTimer->start();
+    }
+}
+
+void AppsModel::childHiddenEntriesChanged()
+{
+    QObject *childModel = QObject::sender();
+
+    for (int i = 0; i < m_entryList.size(); ++i) {
+        const AbstractEntry *entry = m_entryList.at(i);
+
+        if (entry->type() == AbstractEntry::GroupType) {
+            const AbstractGroupEntry *groupEntry = static_cast<const AbstractGroupEntry *>(entry);
+
+            if (groupEntry->model() == childModel) {
+                const QModelIndex &idx = index(i, 0);
+                emit dataChanged(idx, idx);
+            }
+        }
     }
 }
 
