@@ -304,7 +304,7 @@ MouseArea {
     }
     PlasmaCore.Dialog {
         id: tooltip
-        visualParent: handle
+        visualParent: currentApplet
         visible: currentApplet
         type: PlasmaCore.Dialog.Dock
         flags: Qt.Popup
