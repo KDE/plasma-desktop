@@ -25,13 +25,11 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 
 import org.kde.plasma.private.folder 0.1 as Folder
 
-GroupBox {
+Item {
     id: configIcons
 
     width: childrenRect.width
     height: childrenRect.height
-
-    flat: true
 
     property alias cfg_filterMode: filterMode.currentIndex
     property alias cfg_filterPattern: filterPattern.text
@@ -44,7 +42,8 @@ GroupBox {
     }
 
     ColumnLayout {
-        anchors.fill: parent
+        width: parent.width
+        height: parent.height
 
         ComboBox {
             id: filterMode
@@ -55,6 +54,8 @@ GroupBox {
         }
 
         Label {
+            Layout.fillWidth: true
+
             text: i18n("File name pattern:")
         }
 
@@ -67,6 +68,8 @@ GroupBox {
         }
 
         Label {
+            Layout.fillWidth: true
+
             text: i18n("File types:")
         }
 

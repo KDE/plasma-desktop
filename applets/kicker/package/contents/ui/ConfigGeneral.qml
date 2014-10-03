@@ -23,7 +23,7 @@ import QtQuick.Layouts 1.0
 
 import org.kde.plasma.private.kicker 0.1 as Kicker
 
-ColumnLayout {
+Item {
     id: configGeneral
 
     width: childrenRect.width
@@ -38,97 +38,96 @@ ColumnLayout {
     property alias cfg_useExtraRunners: useExtraRunners.checked
     property alias cfg_alignResultsToBottom: alignResultsToBottom.checked
 
-    GroupBox {
-        Layout.fillWidth: true
-
-        title: i18n("Icon")
-
-        flat: true
-
-        RowLayout {
-            CheckBox {
-                id: useCustomButtonImage
-
-                text: i18n("Use custom image:")
-            }
-
-            TextField {
-                id: customButtonImage
-
-                Layout.fillWidth: true
-            }
-
-            Button {
-                iconName: "document-open"
-
-                onClicked: {
-                    imagePicker.open();
-                }
-            }
-
-            Kicker.ImagePicker {
-                id: imagePicker
-
-                Layout.fillWidth: true
-
-                onUrlChanged: {
-                    customButtonImage.text = url;
-                }
-            }
-        }
-    }
-
-    GroupBox {
-        Layout.fillWidth: true
-
-        title: i18n("Behavior")
-
-        flat: true
-
-        ColumnLayout {
+    ColumnLayout {
+        GroupBox {
             Layout.fillWidth: true
 
+            title: i18n("Icon")
+
+            flat: true
+
             RowLayout {
-                Label {
-                    text: i18n("Show applications as:")
+                CheckBox {
+                    id: useCustomButtonImage
+
+                    text: i18n("Use custom image:")
                 }
 
-                ComboBox {
-                    id: appNameFormat
+                TextField {
+                    id: customButtonImage
+
+                    Layout.fillWidth: true
+                }
+
+                Button {
+                    iconName: "document-open"
+
+                    onClicked: {
+                        imagePicker.open();
+                    }
+                }
+
+                Kicker.ImagePicker {
+                    id: imagePicker
 
                     Layout.fillWidth: true
 
-                    model: [i18n("Name only"), i18n("Description only"), i18n("Name (Description)"), i18n("Description (Name)")]
+                    onUrlChanged: {
+                        customButtonImage.text = url;
+                    }
                 }
             }
+        }
 
-            CheckBox {
-                id: limitDepth
+        GroupBox {
+            Layout.fillWidth: true
 
-                text: i18n("Flatten menu to a single level")
+            title: i18n("Behavior")
+
+            flat: true
+
+            ColumnLayout {
+                RowLayout {
+                    Label {
+                        text: i18n("Show applications as:")
+                    }
+
+                    ComboBox {
+                        id: appNameFormat
+
+                        Layout.fillWidth: true
+
+                        model: [i18n("Name only"), i18n("Description only"), i18n("Name (Description)"), i18n("Description (Name)")]
+                    }
+                }
+
+                CheckBox {
+                    id: limitDepth
+
+                    text: i18n("Flatten menu to a single level")
+                }
             }
         }
-    }
 
-    GroupBox {
-        Layout.fillWidth: true
-        Layout.fillHeight: true
+        GroupBox {
+            Layout.fillWidth: true
 
-        title: i18n("Search")
+            title: i18n("Search")
 
-        flat: true
+            flat: true
 
-        ColumnLayout {
-            CheckBox {
-                id: useExtraRunners
+            ColumnLayout {
+                CheckBox {
+                    id: useExtraRunners
 
-                text: i18n("Expand search to bookmarks, files and emails")
-            }
+                    text: i18n("Expand search to bookmarks, files and emails")
+                }
 
-            CheckBox {
-                id: alignResultsToBottom
+                CheckBox {
+                    id: alignResultsToBottom
 
-                text: i18n("Align search results to bottom")
+                    text: i18n("Align search results to bottom")
+                }
             }
         }
     }

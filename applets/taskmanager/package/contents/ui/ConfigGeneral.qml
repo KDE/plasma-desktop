@@ -21,7 +21,10 @@ import QtQuick 2.0
 import QtQuick.Controls 1.0
 import QtQuick.Layouts 1.0
 
-ColumnLayout {
+Item {
+    width: childrenRect.width
+    height: childrenRect.height
+
     property alias cfg_forceStripes: forceStripes.checked
     property alias cfg_showToolTips: showToolTips.checked
     property alias cfg_highlightWindows: highlightWindows.checked
@@ -34,111 +37,122 @@ ColumnLayout {
     property alias cfg_showOnlyCurrentActivity: showOnlyCurrentActivity.checked
     property alias cfg_showOnlyMinimized: showOnlyMinimized.checked
 
-    GroupBox {
-        title: i18n("Appearance")
-        flat: true
+    ColumnLayout {
+        GroupBox {
+            Layout.fillWidth: true
 
-        ColumnLayout {
-            CheckBox {
-                id: forceStripes
-                text: i18n("Force row settings")
-            }
+            title: i18n("Appearance")
+            flat: true
 
-            CheckBox {
-                id: showToolTips
-                text: i18n("Show tooltips")
-            }
+            ColumnLayout {
+                Layout.fillWidth: true
 
-            CheckBox {
-                id: highlightWindows
-                text: i18n("Highlight windows")
-            }
-
-            RowLayout {
-                Label {
-                    text: i18n("Maximum rows:")
+                CheckBox {
+                    id: forceStripes
+                    text: i18n("Force row settings")
                 }
 
-                SpinBox {
-                    id: maxStripes
-                    minimumValue: 1
+                CheckBox {
+                    id: showToolTips
+                    text: i18n("Show tooltips")
+                }
+
+                CheckBox {
+                    id: highlightWindows
+                    text: i18n("Highlight windows")
+                }
+
+                RowLayout {
+                    Layout.fillHeight: false
+
+                    Label {
+                        text: i18n("Maximum rows:")
+                    }
+
+                    SpinBox {
+                        id: maxStripes
+                        minimumValue: 1
+                    }
                 }
             }
         }
-    }
 
-    GroupBox {
-        title: i18n("Grouping and Sorting")
-        flat: true
+        GroupBox {
+            Layout.fillWidth: true
 
-        visible: (plasmoid.pluginName != "org.kde.plasma.icontasks")
+            title: i18n("Grouping and Sorting")
+            flat: true
 
-        ColumnLayout {
-            RowLayout {
-                Label {
-                    text: i18n("Sorting:")
+            visible: (plasmoid.pluginName != "org.kde.plasma.icontasks")
+
+            ColumnLayout {
+                RowLayout {
+                    Label {
+                        text: i18n("Sorting:")
+                    }
+
+                    ComboBox {
+                        id: sortingStrategy
+
+                        Layout.fillWidth: true
+
+                        model: [i18n("Do Not Sort"), i18n("Manually"), i18n("Alphabetically"), i18n("By Desktop"), i18n("By Activity")]
+                    }
                 }
 
-                ComboBox {
-                    id: sortingStrategy
+                RowLayout {
+                    Label {
+                        text: i18n("Grouping:")
+                    }
 
-                    Layout.fillWidth: true
+                    ComboBox {
+                        id: groupingStrategy
 
-                    model: [i18n("Do Not Sort"), i18n("Manually"), i18n("Alphabetically"), i18n("By Desktop"), i18n("By Activity")]
+                        Layout.fillWidth: true
+
+                        model: [i18n("Do Not Group"), i18n("By Program Name")]
+                    }
                 }
-            }
 
-            RowLayout {
-                Label {
-                    text: i18n("Grouping:")
+                CheckBox {
+                    id: onlyGroupWhenFull
+                    text: i18n("Only when the task manager is full")
                 }
-
-                ComboBox {
-                    id: groupingStrategy
-
-                    Layout.fillWidth: true
-
-                    model: [i18n("Do Not Group"), i18n("By Program Name")]
-                }
-            }
-
-            CheckBox {
-                id: onlyGroupWhenFull
-                text: i18n("Only when the task manager is full")
             }
         }
-    }
 
-    GroupBox {
-        title: i18n("Filters")
-        flat: true
+        GroupBox {
+            Layout.fillWidth: true
 
-        Layout.fillHeight: true
+            title: i18n("Filters")
+            flat: true
 
-        ColumnLayout {
-            CheckBox {
-                id: showOnlyCurrentScreen
-                text: i18n("Show only tasks from the current screen")
-            }
+            ColumnLayout {
+                Layout.fillWidth: true
 
-            CheckBox {
-                id: showOnlyCurrentDesktop
-                text: i18n("Show only tasks from the current desktop")
-            }
+                CheckBox {
+                    id: showOnlyCurrentScreen
+                    text: i18n("Show only tasks from the current screen")
+                }
 
-            CheckBox {
-                id: showOnlyCurrentActivity
-                text: i18n("Show only tasks from the current activity")
-            }
+                CheckBox {
+                    id: showOnlyCurrentDesktop
+                    text: i18n("Show only tasks from the current desktop")
+                }
 
-            CheckBox {
-                id: showOnlyMinimized
+                CheckBox {
+                    id: showOnlyCurrentActivity
+                    text: i18n("Show only tasks from the current activity")
+                }
 
-                visible: (plasmoid.pluginName != "org.kde.plasma.icontasks")
+                CheckBox {
+                    id: showOnlyMinimized
 
-                text: i18n("Show only tasks that are minimized")
+                    visible: (plasmoid.pluginName != "org.kde.plasma.icontasks")
+
+                    text: i18n("Show only tasks that are minimized")
+                }
             }
         }
     }
 }
-
