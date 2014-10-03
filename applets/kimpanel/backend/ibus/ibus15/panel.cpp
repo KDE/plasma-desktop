@@ -1165,25 +1165,38 @@ ibus_panel_impanel_update_lookup_table (IBusPanelService *panel,
     gboolean has_prev = 1;
     gboolean has_next = 1;
 
-    g_dbus_connection_emit_signal (impanel->conn,
-                                   NULL, "/kimpanel", "org.kde.kimpanel.inputmethod", "UpdateLookupTable",
-                                   (g_variant_new ("(asasasbb)",
-                                                   &builder_labels,
-                                                   &builder_candidates,
-                                                   &builder_attrs,
-                                                   has_prev, has_next)),
-                                   NULL);
-
     guint cursor_pos_in_page;
     if (ibus_lookup_table_is_cursor_visible(lookup_table))
         cursor_pos_in_page = cursor_pos % page_size;
     else
         cursor_pos_in_page = -1;
 
-    g_dbus_connection_emit_signal (impanel->conn,
-                                   NULL, "/kimpanel", "org.kde.kimpanel.inputmethod", "UpdateLookupTableCursor",
-                                   (g_variant_new ("(i)", cursor_pos_in_page)),
-                                   NULL);
+    gint orientation = ibus_lookup_table_get_orientation(lookup_table);
+    if (orientation == IBUS_ORIENTATION_HORIZONTAL) {
+        orientation = 2; 
+    } else if (orientation == IBUS_ORIENTATION_VERTICAL) {
+        orientation = 1;
+    } else {
+        orientation = 0;
+    }
+
+    g_dbus_connection_call(impanel->conn,
+                           "org.kde.impanel",
+                           "/org/kde/impanel",
+                           "org.kde.impanel2",
+                           "SetLookupTable",
+                           (g_variant_new ("(asasasbbii)",
+                                           &builder_labels,
+                                           &builder_candidates,
+                                           &builder_attrs,
+                                           has_prev, has_next,
+                                           cursor_pos_in_page, orientation)),
+                           NULL,
+                           G_DBUS_CALL_FLAGS_NONE,
+                           -1,
+                           NULL,
+                           NULL,
+                           NULL);
 
     if (visible == 0)
         ibus_panel_impanel_hide_lookup_table(panel);
