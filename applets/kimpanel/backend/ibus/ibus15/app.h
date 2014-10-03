@@ -20,23 +20,32 @@
 
 #ifndef APP_H
 #define APP_H
+#include <xcb/xcb.h>
+#include <xcb/xcb_keysyms.h>
 #include <ibus.h>
 
-#include <QApplication>
+#include <QAbstractNativeEventFilter>
+#include <QGuiApplication>
 #include <QPair>
 #include "panel.h"
 
-class App : public QApplication {
+class XcbEventFilter : public QAbstractNativeEventFilter
+{
+    public:
+        virtual bool nativeEventFilter(const QByteArray &eventType, void* message, long int* result) override;
+};
+
+class App : public QGuiApplication {
     Q_OBJECT
 public:
     typedef QPair< uint, uint > TriggerKey;
     App(int argc, char** argv);
     virtual ~App();
     void finalize();
-    virtual bool x11EventFilter(XEvent* event );
     void setTriggerKeys(QList< TriggerKey > triggersList);
     void setDoGrab(bool doGrab);
     bool keyboardGrabbed() { return m_keyboardGrabbed; }
+    bool nativeEvent(xcb_generic_event_t* event);
     void init();
     void nameAcquired();
     void nameLost();
@@ -45,17 +54,19 @@ private Q_SLOTS:
     void grabKey();
     void ungrabKey();
     uint getPrimaryModifier(uint state);
-    void keyRelease(const XEvent& event);
+    void keyRelease(const xcb_key_release_event_t* event);
     void accept();
     void ungrabXKeyboard();
     bool grabXKeyboard();
 private:
+    QScopedPointer<XcbEventFilter> m_eventFilter;
     bool m_init;
     IBusBus *m_bus;
     IBusPanelImpanel *m_impanel;
     QList< QPair< uint, uint > > m_triggersList;
     bool m_keyboardGrabbed;
     bool m_doGrab;
+    xcb_key_symbols_t* m_syms;
 };
 
 #endif // APP_H

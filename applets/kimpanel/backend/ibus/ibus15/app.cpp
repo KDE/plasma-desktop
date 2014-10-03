@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2013 Weng Xuetian <wengxt@gmail.com>
+ *  Copyright (C) 2013-2014 Weng Xuetian <wengxt@gmail.com>
  *
  *  This program is free software; you can redistribute it and/or
  *  modify it under the terms of the GNU General Public License as
@@ -23,11 +23,20 @@
 #include "gdkkeysyms_p.h"
 #include <QTimer>
 #include <QDebug>
-#include <QWidget>
 #include <QX11Info>
-#include <X11/Xlib.h>
+#include <xcb/xcb_keysyms.h>
 
-#define USED_MASK (ShiftMask | ControlMask | Mod1Mask | Mod4Mask)
+#define USED_MASK (XCB_MOD_MASK_SHIFT | XCB_MOD_MASK_CONTROL | XCB_MOD_MASK_1 | XCB_MOD_MASK_4)
+
+bool XcbEventFilter::nativeEventFilter(const QByteArray &eventType, void *message, long int *result)
+{
+    Q_UNUSED(result);
+    if (eventType != "xcb_generic_event_t") {
+        return false;
+    }
+
+    return qobject_cast<App*>(qApp)->nativeEvent(static_cast<xcb_generic_event_t*>(message));
+}
 
 // callback functions from glib code
 static void name_acquired_cb (GDBusConnection* connection,
@@ -84,13 +93,17 @@ ibus_disconnected_cb (IBusBus  *m_bus,
     app->finalize();
 }
 
-App::App(int argc, char** argv): QApplication(argc, argv)
+App::App(int argc, char** argv): QGuiApplication(argc, argv)
+    ,m_eventFilter(new XcbEventFilter)
     ,m_init(false)
     ,m_bus(0)
     ,m_impanel(0)
     ,m_keyboardGrabbed(false)
     ,m_doGrab(false)
+    ,m_syms(0)
 {
+    m_syms = xcb_key_symbols_alloc(QX11Info::connection());
+    installNativeEventFilter(m_eventFilter.data());
     ibus_init ();
     m_bus = ibus_bus_new ();
     g_signal_connect (m_bus, "connected", G_CALLBACK (ibus_connected_cb), this);
@@ -120,12 +133,13 @@ uint App::getPrimaryModifier(uint state)
     return 0;
 }
 
-bool App::x11EventFilter(XEvent* event)
+bool App::nativeEvent(xcb_generic_event_t* event)
 {
-    if (event->xany.window == QX11Info::appRootWindow()) {
-        if (event->type == KeyPress) {
-            KeySym sym = XKeycodeToKeysym(QX11Info::display(), event->xkey.keycode, 0);
-            uint state = event->xkey.state & USED_MASK;
+    if ((event->response_type & ~0x80) == XCB_KEY_PRESS) {
+        auto keypress = reinterpret_cast<xcb_key_press_event_t*>(event);
+        if (keypress->event == QX11Info::appRootWindow()) {
+            auto sym = xcb_key_press_lookup_keysym(m_syms, keypress, 0);
+            uint state = keypress->state & USED_MASK;
             if (m_triggersList.contains(qMakePair<uint, uint>(sym, state))) {
                 if (m_keyboardGrabbed) {
                     ibus_panel_impanel_navigate(m_impanel, false);
@@ -137,30 +151,27 @@ bool App::x11EventFilter(XEvent* event)
                     }
                 }
             }
-        } else if (event->type == KeyRelease) {
-            keyRelease(*event);
+        }
+    } else if ((event->response_type & ~0x80) == XCB_KEY_RELEASE) {
+        auto keyrelease = reinterpret_cast<xcb_key_release_event_t*>(event);
+        if (keyrelease->event == QX11Info::appRootWindow()) {
+            keyRelease(keyrelease);
         }
     }
-    return QApplication::x11EventFilter(event);
+    return false;
 }
 
-void App::keyRelease(const XEvent& event)
+void App::keyRelease(const xcb_key_release_event_t* event)
 {
-    const XKeyEvent& ev = event.xkey;
-
-    unsigned int mk = ev.state &
-                      (ShiftMask |
-                       ControlMask |
-                       Mod1Mask |
-                       Mod4Mask);
+    unsigned int mk = event->state & USED_MASK;
     // ev.state is state before the key release, so just checking mk being 0 isn't enough
     // using XQueryPointer() also doesn't seem to work well, so the check that all
     // modifiers are released: only one modifier is active and the currently released
     // key is this modifier - if yes, release the grab
     int mod_index = -1;
-    for (int i = ShiftMapIndex;
-            i <= Mod5MapIndex;
-            ++i)
+    for (int i = XCB_MAP_INDEX_SHIFT;
+             i <= XCB_MAP_INDEX_5;
+             ++i)
         if ((mk & (1 << i)) != 0) {
             if (mod_index >= 0)
                 return;
@@ -170,12 +181,18 @@ void App::keyRelease(const XEvent& event)
     if (mod_index == -1)
         release = true;
     else {
-        XModifierKeymap* xmk = XGetModifierMapping(QX11Info::display());
-        for (int i = 0; i < xmk->max_keypermod; i++)
-            if (xmk->modifiermap[xmk->max_keypermod * mod_index + i]
-                    == ev.keycode)
-                release = true;
-        XFreeModifiermap(xmk);
+        auto cookie = xcb_get_modifier_mapping(QX11Info::connection());
+        auto reply = xcb_get_modifier_mapping_reply(QX11Info::connection(), cookie, NULL);
+        if (reply) {
+            auto keycodes = xcb_get_modifier_mapping_keycodes(reply);
+            for (int i = 0; i < reply->keycodes_per_modifier; i++) {
+                if (keycodes[reply->keycodes_per_modifier * mod_index + i]
+                        == event->detail) {
+                    release = true;
+                }
+            }
+        }
+        free(reply);
     }
     if (!release) {
         return;
@@ -258,42 +275,46 @@ void App::setDoGrab(bool doGrab)
 void App::grabKey()
 {
     Q_FOREACH(const TriggerKey& key, m_triggersList) {
-        KeySym sym = key.first;
+        xcb_keysym_t sym = key.first;
         uint modifiers = key.second;
-        Display* xdisplay = QX11Info::display();
-        KeyCode keycode = XKeysymToKeycode (xdisplay, (gulong) sym);
-        if (keycode == 0) {
+        xcb_keycode_t* keycode = xcb_key_symbols_get_keycode(m_syms, sym);
+        if (!keycode) {
             g_warning ("Can not convert keyval=%lu to keycode!", sym);
+        } else {
+            xcb_grab_key(QX11Info::connection(), true, QX11Info::appRootWindow(),
+                         modifiers, keycode[0], XCB_GRAB_MODE_ASYNC, XCB_GRAB_MODE_ASYNC);
         }
-        XGrabKey(QX11Info::display(), keycode, modifiers, QX11Info::appRootWindow(), True, GrabModeAsync, GrabModeAsync);
+        free(keycode);
     }
 }
 
 void App::ungrabKey()
 {
     Q_FOREACH(const TriggerKey& key, m_triggersList) {
-        KeySym sym = key.first;
+        xcb_keysym_t sym = key.first;
         uint modifiers = key.second;
-        Display* xdisplay = QX11Info::display();
-        KeyCode keycode = XKeysymToKeycode (xdisplay, (gulong) sym);
-        if (keycode == 0) {
+        xcb_keycode_t* keycode = xcb_key_symbols_get_keycode(m_syms, sym);
+        if (!keycode) {
             g_warning ("Can not convert keyval=%lu to keycode!", sym);
+        } else {
+            xcb_ungrab_key(QX11Info::connection(), keycode[0], QX11Info::appRootWindow(), modifiers);
         }
-        XUngrabKey(QX11Info::display(), keycode, modifiers, QX11Info::appRootWindow());
+        free(keycode);
     }
 }
 
 bool App::grabXKeyboard() {
     if (m_keyboardGrabbed)
         return false;
-    if (QWidget::keyboardGrabber() != NULL)
-        return false;
-    if (activePopupWidget() != NULL)
-        return false;
-    Qt::HANDLE w = QX11Info::appRootWindow();
-    if (XGrabKeyboard(QX11Info::display(), w, False, GrabModeAsync, GrabModeAsync, QX11Info::appTime()) == GrabSuccess) {
+    auto w = QX11Info::appRootWindow();
+    auto cookie = xcb_grab_keyboard(QX11Info::connection(), false, w, XCB_CURRENT_TIME,
+                                    XCB_GRAB_MODE_ASYNC, XCB_GRAB_MODE_ASYNC);
+    auto reply = xcb_grab_keyboard_reply(QX11Info::connection(), cookie, NULL);
+
+    if (reply && reply->status == XCB_GRAB_STATUS_SUCCESS) {
         m_keyboardGrabbed = true;
     }
+    free(reply);
     return m_keyboardGrabbed;
 }
 
@@ -304,7 +325,7 @@ void App::ungrabXKeyboard()
         qDebug() << "ungrabXKeyboard() called but keyboard not grabbed!";
     }
     m_keyboardGrabbed = false;
-    XUngrabKeyboard(QX11Info::display(), CurrentTime);
+    xcb_ungrab_keyboard(QX11Info::connection(), XCB_CURRENT_TIME);
 }
 
 void App::accept()
@@ -341,4 +362,7 @@ void App::clean()
 App::~App()
 {
     clean();
+    if (m_syms) {
+        xcb_key_symbols_free(m_syms);
+    }
 }
