@@ -152,6 +152,9 @@ PlasmaCore.Dialog {
             connectedSources: ["inputpanel"]
             onDataChanged: {
                  var data = inputPanelEngine.data["inputpanel"];
+                 if (!data) {
+                     return;
+                 }
                  var auxVisible = data["AuxVisible"] ? true : false;
                  var preeditVisible = data["PreeditVisible"] ? true : false;
                  var lookupTableVisible = data["LookupTableVisible"] ? true : false;

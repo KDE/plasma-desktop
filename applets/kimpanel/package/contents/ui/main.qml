@@ -23,20 +23,18 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.kquickcontrolsaddons 2.0
 
-Flow {
+Item {
     id: kimpanel
-    property bool vertical: plasmoid.formFactor == PlasmaCore.Types.Vertical
+    property int visibleButtons: 0
+
     Layout.minimumWidth: vertical ? 0 : height * visibleButtons
     Layout.minimumHeight: vertical ? width * visibleButtons : 0
     Layout.preferredWidth: Layout.minimumWidth
     Layout.preferredHeight: Layout.minimumHeight
 
-    property int minButtonSize: 16
+    property bool vertical: plasmoid.formFactor == PlasmaCore.Types.Vertical
 
     Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
-    property alias visibleButtons: items.count;
-
-    flow: vertical ? Flow.TopToBottom : Flow.LeftToRight
 
     function action_reloadconfig() {
          action("ReloadConfig");
@@ -59,11 +57,15 @@ Flow {
 
     InputPanel { }
 
-    Repeater {
+    GridView {
         id: items
-        property int itemWidth: parent.flow==Flow.LeftToRight ? Math.floor(parent.width/visibleButtons) : parent.width
-        property int itemHeight: parent.flow==Flow.TopToBottom ? Math.floor(parent.height/visibleButtons) : parent.height
+        property int itemWidth: !kimpanel.vertical ? Math.floor(parent.width/visibleButtons) : parent.width
+        property int itemHeight: kimpanel.vertical ? Math.floor(parent.height/visibleButtons) : parent.height
         property int iconSize: Math.min(itemWidth, itemHeight)
+        anchors.fill: parent
+        cellWidth: itemWidth
+        cellHeight: itemHeight
+        interactive: false
 
         model: ListModel {
             id: list
@@ -75,6 +77,7 @@ Flow {
             width: items.itemWidth
             height: items.itemHeight
             StatusIcon {
+                anchors.centerIn: parent
                 width: items.iconSize
                 height: items.iconSize
                 label: model.label
@@ -130,12 +133,13 @@ Flow {
         connectedSources: ["statusbar"]
         onDataChanged: {
             showMenu(actionMenu, dataEngine.data["statusbar"]["Menu"]);
-
             var data = dataEngine.data["statusbar"]["Properties"];
             if (!data) {
+                kimpanel.visibleButtons = 0;
                 return;
             }
 
+            kimpanel.visibleButtons = data.length;
             var newKeys = {};
             var i, j;
             for (i = 0; i < data.length; i ++) {

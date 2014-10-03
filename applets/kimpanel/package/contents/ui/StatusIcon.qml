@@ -29,6 +29,7 @@ Item {
     property string label;
     property string tip;
     signal triggered;
+    property int iconSize: units.roundToIconSize(Math.min(parent.width, parent.height))
 
     function extractLabelString(l) {
         if (l.length >= 2 && l.charCodeAt(0) < 127 && l.charCodeAt(1) < 127) {
@@ -38,18 +39,37 @@ Item {
         }
     }
 
-    PlasmaCore.IconItem {
-        anchors.fill: parent
+    function iconPath(p) {
+        if (p.length > 0) {
+            if (p[0] == '/') {
+                return p;
+            } else {
+                return "image://icon/" + p;
+            }
+        }
+        return p;
+    }
+
+    Image {
+        id: imageIcon
+        anchors.centerIn: parent
+        width: iconSize
+        height: iconSize
         scale: mouseArea.pressed ? 0.9 : 1
-        source: statusIcon.icon
+        source: iconPath(statusIcon.icon)
         visible: statusIcon.icon.length > 0
-        active: mouseArea.containsMouse
+        sourceSize.width: iconSize
+        sourceSize.height: iconSize
+        // active: mouseArea.containsMouse
     }
     PlasmaComponents.Label {
-        anchors.fill: parent
+        id: textIcon
+        anchors.centerIn: parent
+        width: iconSize
+        height: iconSize
         scale: (mouseArea.pressed ? 0.9 : 1)
         // kind of forced to reference a hard coded value to avoid loop binding warning
-        font.pixelSize: items.iconSize * 0.8
+        fontSizeMode: Text.Fit
         text: extractLabelString(label)
         visible: icon.length == 0
     }
