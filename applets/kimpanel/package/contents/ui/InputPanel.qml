@@ -220,7 +220,7 @@ PlasmaCore.Dialog {
              if (y > rect.y + rect.height) {
                  y = rect.y - window.height - 40;
              } else {
-                 y = y - inputpanel.height - (position.h == 0 ? 40 : position.height);
+                 y = y - inputpanel.height - (position.height == 0 ? 40 : position.height);
              }
          }
 
