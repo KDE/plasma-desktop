@@ -26,7 +26,6 @@
 #include <QPair>
 #include "panel.h"
 
-class QWidget;
 class App : public QApplication {
     Q_OBJECT
 public:
@@ -38,8 +37,10 @@ public:
     void setTriggerKeys(QList< TriggerKey > triggersList);
     void setDoGrab(bool doGrab);
     bool keyboardGrabbed() { return m_keyboardGrabbed; }
-private Q_SLOTS:
     void init();
+    void nameAcquired();
+    void nameLost();
+private Q_SLOTS:
     void clean();
     void grabKey();
     void ungrabKey();
@@ -49,6 +50,7 @@ private Q_SLOTS:
     void ungrabXKeyboard();
     bool grabXKeyboard();
 private:
+    bool m_init;
     IBusBus *m_bus;
     IBusPanelImpanel *m_impanel;
     QList< QPair< uint, uint > > m_triggersList;

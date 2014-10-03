@@ -29,6 +29,52 @@
 
 #define USED_MASK (ShiftMask | ControlMask | Mod1Mask | Mod4Mask)
 
+// callback functions from glib code
+static void name_acquired_cb (GDBusConnection* connection,
+                              const gchar* sender_name,
+                              const gchar* object_path,
+                              const gchar* interface_name,
+                              const gchar* signal_name,
+                              GVariant* parameters,
+                              gpointer self)
+{
+    Q_UNUSED(connection);
+    Q_UNUSED(sender_name);
+    Q_UNUSED(object_path);
+    Q_UNUSED(interface_name);
+    Q_UNUSED(signal_name);
+    Q_UNUSED(parameters);
+    App* app = (App*) self;
+    app->nameAcquired();
+}
+
+static void name_lost_cb (GDBusConnection* connection,
+                          const gchar* sender_name,
+                          const gchar* object_path,
+                          const gchar* interface_name,
+                          const gchar* signal_name,
+                          GVariant* parameters,
+                          gpointer self)
+{
+    Q_UNUSED(connection);
+    Q_UNUSED(sender_name);
+    Q_UNUSED(object_path);
+    Q_UNUSED(interface_name);
+    Q_UNUSED(signal_name);
+    Q_UNUSED(parameters);
+    App* app = (App*) self;
+    app->nameLost();
+}
+
+static void
+ibus_connected_cb (IBusBus  *m_bus,
+                   gpointer  user_data)
+{
+    Q_UNUSED(m_bus);
+    App* app = (App*) user_data;
+    app->init();
+}
+
 static void
 ibus_disconnected_cb (IBusBus  *m_bus,
                       gpointer  user_data)
@@ -39,12 +85,19 @@ ibus_disconnected_cb (IBusBus  *m_bus,
 }
 
 App::App(int argc, char** argv): QApplication(argc, argv)
+    ,m_init(false)
     ,m_bus(0)
     ,m_impanel(0)
     ,m_keyboardGrabbed(false)
     ,m_doGrab(false)
 {
-    QTimer::singleShot(0, this, SLOT(init()));
+    ibus_init ();
+    m_bus = ibus_bus_new ();
+    g_signal_connect (m_bus, "connected", G_CALLBACK (ibus_connected_cb), this);
+    g_signal_connect (m_bus, "disconnected", G_CALLBACK (ibus_disconnected_cb), this);
+    if (ibus_bus_is_connected (m_bus)) {
+        init();
+    }
 }
 
 uint App::getPrimaryModifier(uint state)
@@ -124,8 +177,9 @@ void App::keyRelease(const XEvent& event)
                 release = true;
         XFreeModifiermap(xmk);
     }
-    if (!release)
+    if (!release) {
         return;
+    }
     if (m_keyboardGrabbed) {
         accept();
     }
@@ -134,16 +188,47 @@ void App::keyRelease(const XEvent& event)
 
 void App::init()
 {
-    ibus_init ();
-    m_bus = ibus_bus_new ();
-    if (!m_bus || !ibus_bus_is_connected (m_bus)) {
-        exit (1);
+    // only init once
+    if (m_init) {
+        return;
     }
-    g_signal_connect (m_bus, "disconnected", G_CALLBACK (ibus_disconnected_cb), this);
+    GDBusConnection* connection = ibus_bus_get_connection (m_bus);
+    g_dbus_connection_signal_subscribe (connection,
+                                        "org.freedesktop.DBus",
+                                        "org.freedesktop.DBus",
+                                        "NameAcquired",
+                                        "/org/freedesktop/DBus",
+                                        IBUS_SERVICE_PANEL, G_DBUS_SIGNAL_FLAGS_NONE,
+                                        name_acquired_cb, this, NULL);
+
+    g_dbus_connection_signal_subscribe (connection,
+                                        "org.freedesktop.DBus",
+                                        "org.freedesktop.DBus",
+                                        "NameLost",
+                                        "/org/freedesktop/DBus",
+                                        IBUS_SERVICE_PANEL, G_DBUS_SIGNAL_FLAGS_NONE,
+                                        name_lost_cb, this, NULL);
+
+    ibus_bus_request_name (m_bus, IBUS_SERVICE_PANEL, IBUS_BUS_NAME_FLAG_ALLOW_REPLACEMENT | IBUS_BUS_NAME_FLAG_REPLACE_EXISTING);
+    m_init = true;
+}
+
+void App::nameAcquired()
+{
+    if (m_impanel) {
+        g_object_unref(m_impanel);
+    }
     m_impanel = ibus_panel_impanel_new (ibus_bus_get_connection (m_bus));
     ibus_panel_impanel_set_bus(m_impanel, m_bus);
     ibus_panel_impanel_set_app(m_impanel, this);
-    ibus_bus_request_name (m_bus, IBUS_SERVICE_PANEL, 0);
+}
+
+void App::nameLost()
+{
+    if (m_impanel) {
+        g_object_unref(m_impanel);
+    }
+    m_impanel = NULL;
 }
 
 void App::setTriggerKeys(QList< TriggerKey > triggersList)
@@ -199,18 +284,17 @@ void App::ungrabKey()
 }
 
 bool App::grabXKeyboard() {
-    if (QWidget::keyboardGrabber() != NULL)
-        return false;
     if (m_keyboardGrabbed)
+        return false;
+    if (QWidget::keyboardGrabber() != NULL)
         return false;
     if (activePopupWidget() != NULL)
         return false;
     Qt::HANDLE w = QX11Info::appRootWindow();
-    if (XGrabKeyboard(QX11Info::display(), w, False,
-    GrabModeAsync, GrabModeAsync, QX11Info::appTime()) != GrabSuccess)
-        return false;
-    m_keyboardGrabbed = true;
-    return true;
+    if (XGrabKeyboard(QX11Info::display(), w, False, GrabModeAsync, GrabModeAsync, QX11Info::appTime()) == GrabSuccess) {
+        m_keyboardGrabbed = true;
+    }
+    return m_keyboardGrabbed;
 }
 
 void App::ungrabXKeyboard()
@@ -225,8 +309,9 @@ void App::ungrabXKeyboard()
 
 void App::accept()
 {
-    if (m_keyboardGrabbed)
+    if (m_keyboardGrabbed) {
         ungrabXKeyboard();
+    }
 
     ibus_panel_impanel_accept(m_impanel);
 }
@@ -246,6 +331,7 @@ void App::clean()
 
     if (m_bus) {
         g_signal_handlers_disconnect_by_func(m_bus, (gpointer) ibus_disconnected_cb, this);
+        g_signal_handlers_disconnect_by_func(m_bus, (gpointer) ibus_connected_cb, this);
         g_object_unref(m_bus);
         m_bus = 0;
     }

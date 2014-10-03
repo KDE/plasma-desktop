@@ -37,7 +37,6 @@
 #ifndef DBUS_ERROR_FAILED
 #define DBUS_ERROR_FAILED "org.freedesktop.DBus.Error.Failed"
 #endif /* DBUS_ERROR_FAILED */
-#define _UNUSED(x) ((void) x)
 
 typedef struct _IBusPanelImpanelClass IBusPanelImpanelClass;
 
@@ -63,9 +62,8 @@ static void
 impanel_set_engine(IBusPanelImpanel* impanel, const char* name);
 
 
-static void
+static QByteArray
 ibus_property_to_propstr (IBusProperty *property,
-                          char *propstr,
                           gboolean useSymbol = FALSE,
                           IBusEngineDesc* engine = NULL);
 
@@ -83,14 +81,11 @@ impanel_update_logo_by_engine(IBusPanelImpanel* impanel, IBusEngineDesc* engine_
 
     ibus_property_set_icon (impanel->logo_prop, icon_name);
 
-    char propstr[512];
-    propstr[0] = '\0';
-
-    ibus_property_to_propstr(impanel->logo_prop, propstr, TRUE, engine_desc);
+    QByteArray propstr = ibus_property_to_propstr(impanel->logo_prop, TRUE, engine_desc);
 
     g_dbus_connection_emit_signal (impanel->conn,
                                     NULL, "/kimpanel", "org.kde.kimpanel.inputmethod", "UpdateProperty",
-                                    (g_variant_new ("(s)", propstr)),
+                                    (g_variant_new ("(s)", propstr.constData())),
                                     NULL);
 }
 
@@ -108,7 +103,7 @@ void ibus_panel_impanel_set_app(IBusPanelImpanel* impanel, App* app)
 
 void ibus_panel_impanel_accept(IBusPanelImpanel* impanel)
 {
-    if (impanel->selected >= 0 && impanel->selected < impanel->engineManager->length()) {
+    if (impanel->selected >= 0 && static_cast<size_t>(impanel->selected) < impanel->engineManager->length()) {
         impanel_set_engine(impanel, ibus_engine_desc_get_name(impanel->engineManager->engines()[impanel->selected]));
         impanel->selected = -1;
     }
@@ -127,9 +122,11 @@ void ibus_panel_impanel_navigate(IBusPanelImpanel* impanel, gboolean start)
     IBusEngineDesc* engine_desc = NULL;
     if (impanel->selected < 0) {
         engine_desc = ibus_bus_get_global_engine(impanel->bus);
-    } else if (impanel->selected < impanel->engineManager->length()) {
+    } else if (static_cast<size_t>(impanel->selected) < impanel->engineManager->length()) {
         engine_desc = impanel->engineManager->engines()[impanel->selected];
-    } else {
+    }
+
+    if (!engine_desc) {
         engine_desc = impanel->engineManager->engines()[0];
     }
 
@@ -140,7 +137,7 @@ void ibus_panel_impanel_navigate(IBusPanelImpanel* impanel, gboolean start)
         return;
     }
 
-    if (impanel->selected < impanel->engineManager->length() && impanel->selected >= 0) {
+    if (impanel->selected >= 0 && static_cast<size_t>(impanel->selected) < impanel->engineManager->length()) {
         engine_desc = impanel->engineManager->engines()[impanel->selected];
 
         impanel_update_logo_by_engine(impanel, engine_desc);
@@ -265,30 +262,28 @@ static void         ibus_panel_impanel_exec_menu                (IBusPanelImpane
 
 static const char prop_sep[] = ":";
 
-static void
+static QByteArray
 ibus_property_args_to_propstr (const char *key,
                                const char *label,
                                const char *icon,
-                               const char *tooltip,
-                               char *propstr)
+                               const char *tooltip)
 {
-    static const char pre[] = "/IBus/";
-    propstr[0] = '\0';
-    strcat(propstr, pre);
+    QByteArray propstr("/IBus");
     QByteArray str(key);
     str.replace(':', '!');
-    strcat(propstr, str.constData());
-    strcat(propstr, prop_sep);
-    strcat(propstr, label);
-    strcat(propstr, prop_sep);
-    strcat(propstr, icon);
-    strcat(propstr, prop_sep);
-    strcat(propstr, tooltip);
+    propstr += str.constData();
+    propstr += prop_sep;
+    propstr += label;
+    propstr += prop_sep;
+    propstr += icon;
+    propstr += prop_sep;
+    propstr += tooltip;
+
+    return propstr;
 }
 
-static void
+static QByteArray
 ibus_property_to_propstr (IBusProperty *property,
-                          char *propstr,
                           gboolean useSymbol,
                           IBusEngineDesc* engine)
 {
@@ -298,49 +293,44 @@ ibus_property_to_propstr (IBusProperty *property,
         label = ibus_engine_desc_get_name(engine) + 4;
         icon = "";
     }
-    ibus_property_args_to_propstr(ibus_property_get_key (property),
-                                  label,
-                                  icon,
-                                  ibus_text_get_text (ibus_property_get_tooltip (property)),
-                                  propstr);
+    return ibus_property_args_to_propstr(ibus_property_get_key (property),
+                                         label,
+                                         icon,
+                                         ibus_text_get_text (ibus_property_get_tooltip (property)));
 }
 
-static void
+static QByteArray
 ibus_engine_desc_args_to_propstr (const char *name,
                                   const char *language,
                                   const char *longname,
                                   const char *icon,
-                                  const char *description,
-                                  char *propstr)
+                                  const char *description)
 {
-    static const char pre[] = "/IBus/Engine/";
-    propstr[0] = '\0';
-    strcat(propstr, pre);
+    QByteArray propstr("/IBus/Engine/");
     QByteArray data(name);
     data.replace(':', '!');
-    strcat(propstr, data.constData());
-    strcat(propstr, prop_sep);
+    propstr += data;
+    propstr += prop_sep;
     if (language) {
-        strcat(propstr, language);
-        strcat(propstr, " - ");
+        propstr += language;
+        propstr += " - ";
     }
-    strcat(propstr, longname);
-    strcat(propstr, prop_sep);
-    strcat(propstr, icon);
-    strcat(propstr, prop_sep);
-    strcat(propstr, description);
+    propstr += longname;
+    propstr += prop_sep;
+    propstr += icon;
+    propstr += prop_sep;
+    propstr += description;
+    return propstr;
 }
 
-static void
-ibus_engine_desc_to_propstr (IBusEngineDesc *engine_desc,
-                             char *propstr)
+static QByteArray
+ibus_engine_desc_to_propstr (IBusEngineDesc *engine_desc)
 {
-    ibus_engine_desc_args_to_propstr(ibus_engine_desc_get_name(engine_desc),
-                                     ibus_engine_desc_get_language(engine_desc),
-                                     ibus_engine_desc_get_longname(engine_desc),
-                                     ibus_engine_desc_get_icon(engine_desc),
-                                     ibus_engine_desc_get_description(engine_desc),
-                                     propstr);
+    return ibus_engine_desc_args_to_propstr(ibus_engine_desc_get_name(engine_desc),
+                                            ibus_engine_desc_get_language(engine_desc),
+                                            ibus_engine_desc_get_longname(engine_desc),
+                                            ibus_engine_desc_get_icon(engine_desc),
+                                            ibus_engine_desc_get_description(engine_desc));
 }
 
 static void
@@ -468,10 +458,10 @@ impanel_update_engines(IBusPanelImpanel* impanel, GVariant* var_engines) {
     IBusEngineDesc** engines = ibus_bus_get_engines_by_names(impanel->bus, engine_names);
     g_strfreev(engine_names);
 
-    impanel->engineManager->setEngines(engines, len);
+    impanel->engineManager->setEngines(engines);
 
     if (engines && engines[0]) {
-        ibus_bus_set_global_engine_async(impanel->bus, ibus_engine_desc_get_name(engines[0]), 1000, NULL, NULL, NULL);
+        ibus_bus_set_global_engine(impanel->bus, ibus_engine_desc_get_name(engines[0]));
     }
 
     impanel->app->setDoGrab(len > 1);
@@ -489,7 +479,7 @@ impanel_update_engines_order(IBusPanelImpanel* impanel, GVariant* var_engines) {
     impanel->engineManager->setOrder(engine_names, len);
 
     if (impanel->engineManager->engines()) {
-        ibus_bus_set_global_engine_async(impanel->bus, ibus_engine_desc_get_name(impanel->engineManager->engines()[0]), 1000, NULL, NULL, NULL);
+        ibus_bus_set_global_engine(impanel->bus, ibus_engine_desc_get_name(impanel->engineManager->engines()[0]));
     }
 }
 
@@ -546,7 +536,7 @@ impanel_update_latin_layouts(IBusPanelImpanel* impanel, GVariant* variant) {
 static void
 impanel_config_value_changed_callback (IBusConfig* config, const gchar* section, const gchar* name, GVariant* value, gpointer user_data)
 {
-    _UNUSED(config);
+    Q_UNUSED(config);
     IBusPanelImpanel* impanel = ((IBusPanelImpanel *)user_data);
 
     if (g_strcmp0(section, "general") == 0 && g_strcmp0(name, "preload_engines") == 0) {
@@ -570,12 +560,12 @@ impanel_exit_callback (GDBusConnection *connection,
                                    GVariant        *parameters,
                                    gpointer         user_data)
 {
-    _UNUSED(connection);
-    _UNUSED(sender_name);
-    _UNUSED(object_path);
-    _UNUSED(interface_name);
-    _UNUSED(signal_name);
-    _UNUSED(parameters);
+    Q_UNUSED(connection);
+    Q_UNUSED(sender_name);
+    Q_UNUSED(object_path);
+    Q_UNUSED(interface_name);
+    Q_UNUSED(signal_name);
+    Q_UNUSED(parameters);
     IBusPanelImpanel* impanel = ((IBusPanelImpanel *)user_data);
     if (impanel->bus) {
         ibus_bus_exit(impanel->bus, FALSE);
@@ -591,12 +581,12 @@ impanel_panel_created_callback (GDBusConnection *connection,
                                 GVariant        *parameters,
                                 gpointer         user_data)
 {
-    _UNUSED(connection);
-    _UNUSED(sender_name);
-    _UNUSED(object_path);
-    _UNUSED(interface_name);
-    _UNUSED(signal_name);
-    _UNUSED(parameters);
+    Q_UNUSED(connection);
+    Q_UNUSED(sender_name);
+    Q_UNUSED(object_path);
+    Q_UNUSED(interface_name);
+    Q_UNUSED(signal_name);
+    Q_UNUSED(parameters);
     IBusPanelImpanel* impanel = ((IBusPanelImpanel *)user_data);
     ibus_panel_impanel_real_register_properties(impanel);
 
@@ -616,6 +606,8 @@ impanel_set_engine(IBusPanelImpanel* impanel, const char* name)
             }
         }
         impanel->engineManager->setCurrentEngine(name);
+    } else {
+        qDebug() << "set engine failed.";
     }
 }
 
@@ -628,11 +620,11 @@ impanel_trigger_property_callback (GDBusConnection *connection,
                                    GVariant        *parameters,
                                    gpointer         user_data)
 {
-    _UNUSED(connection);
-    _UNUSED(sender_name);
-    _UNUSED(object_path);
-    _UNUSED(interface_name);
-    _UNUSED(signal_name);
+    Q_UNUSED(connection);
+    Q_UNUSED(sender_name);
+    Q_UNUSED(object_path);
+    Q_UNUSED(interface_name);
+    Q_UNUSED(signal_name);
     IBusPanelImpanel* impanel = IBUS_PANEL_IMPANEL(user_data);
     gchar *s0 = NULL;
     g_variant_get (parameters, "(s)", &s0);
@@ -681,6 +673,67 @@ impanel_trigger_property_callback (GDBusConnection *connection,
 }
 
 static void
+impanel_select_candidate_callback (GDBusConnection *connection,
+                                   const gchar     *sender_name,
+                                   const gchar     *object_path,
+                                   const gchar     *interface_name,
+                                   const gchar     *signal_name,
+                                   GVariant        *parameters,
+                                   gpointer         user_data)
+{
+    Q_UNUSED(connection);
+    Q_UNUSED(sender_name);
+    Q_UNUSED(object_path);
+    Q_UNUSED(interface_name);
+    Q_UNUSED(signal_name);
+
+    gint i;
+    g_variant_get (parameters, "(i)", &i);
+    IBusPanelImpanel* impanel = IBUS_PANEL_IMPANEL(user_data);
+    ibus_panel_service_candidate_clicked((IBusPanelService *)impanel, i, 0, 0);
+}
+
+static void
+impanel_prev_page_callback (GDBusConnection *connection,
+                            const gchar     *sender_name,
+                            const gchar     *object_path,
+                            const gchar     *interface_name,
+                            const gchar     *signal_name,
+                            GVariant        *parameters,
+                            gpointer         user_data)
+{
+    Q_UNUSED(connection);
+    Q_UNUSED(sender_name);
+    Q_UNUSED(object_path);
+    Q_UNUSED(interface_name);
+    Q_UNUSED(signal_name);
+    Q_UNUSED(parameters);
+
+    IBusPanelImpanel* impanel = IBUS_PANEL_IMPANEL(user_data);
+    ibus_panel_service_page_up((IBusPanelService *)impanel);
+}
+
+static void
+impanel_next_page_callback (GDBusConnection *connection,
+                            const gchar     *sender_name,
+                            const gchar     *object_path,
+                            const gchar     *interface_name,
+                            const gchar     *signal_name,
+                            GVariant        *parameters,
+                            gpointer         user_data)
+{
+    Q_UNUSED(connection);
+    Q_UNUSED(sender_name);
+    Q_UNUSED(object_path);
+    Q_UNUSED(interface_name);
+    Q_UNUSED(signal_name);
+    Q_UNUSED(parameters);
+
+    IBusPanelImpanel* impanel = IBUS_PANEL_IMPANEL(user_data);
+    ibus_panel_service_page_down((IBusPanelService *)impanel);
+}
+
+static void
 impanel_configure_callback (GDBusConnection *connection,
                             const gchar     *sender_name,
                             const gchar     *object_path,
@@ -689,13 +742,13 @@ impanel_configure_callback (GDBusConnection *connection,
                             GVariant        *parameters,
                             gpointer         user_data)
 {
-    _UNUSED(connection);
-    _UNUSED(sender_name);
-    _UNUSED(object_path);
-    _UNUSED(interface_name);
-    _UNUSED(signal_name);
-    _UNUSED(parameters);
-    _UNUSED(user_data);
+    Q_UNUSED(connection);
+    Q_UNUSED(sender_name);
+    Q_UNUSED(object_path);
+    Q_UNUSED(interface_name);
+    Q_UNUSED(signal_name);
+    Q_UNUSED(parameters);
+    Q_UNUSED(user_data);
     pid_t pid = fork();
     if (pid == 0) {
         execlp ("ibus-setup", "ibus-setup", (char *)0);
@@ -708,7 +761,7 @@ on_bus_acquired (GDBusConnection *connection,
                  const gchar     *name,
                  gpointer         user_data)
 {
-    _UNUSED(name);
+    Q_UNUSED(name);
     IBusPanelImpanel* impanel = ((IBusPanelImpanel *)user_data);
     impanel->conn = connection;
 
@@ -728,6 +781,36 @@ on_bus_acquired (GDBusConnection *connection,
                                         NULL,
                                         G_DBUS_SIGNAL_FLAGS_NONE,
                                         impanel_trigger_property_callback,
+                                        user_data,
+                                        NULL);
+    g_dbus_connection_signal_subscribe (connection,
+                                        "org.kde.impanel",
+                                        "org.kde.impanel",
+                                        "SelectCandidate",
+                                        "/org/kde/impanel",
+                                        NULL,
+                                        G_DBUS_SIGNAL_FLAGS_NONE,
+                                        impanel_select_candidate_callback,
+                                        user_data,
+                                        NULL);
+    g_dbus_connection_signal_subscribe (connection,
+                                        "org.kde.impanel",
+                                        "org.kde.impanel",
+                                        "LookupTablePageUp",
+                                        "/org/kde/impanel",
+                                        NULL,
+                                        G_DBUS_SIGNAL_FLAGS_NONE,
+                                        impanel_prev_page_callback,
+                                        user_data,
+                                        NULL);
+    g_dbus_connection_signal_subscribe (connection,
+                                        "org.kde.impanel",
+                                        "org.kde.impanel",
+                                        "LookupTablePageDown",
+                                        "/org/kde/impanel",
+                                        NULL,
+                                        G_DBUS_SIGNAL_FLAGS_NONE,
+                                        impanel_next_page_callback,
                                         user_data,
                                         NULL);
     g_dbus_connection_signal_subscribe (connection,
@@ -812,9 +895,9 @@ on_name_acquired (GDBusConnection *connection,
                   const gchar     *name,
                   gpointer         user_data)
 {
-    _UNUSED(connection);
-    _UNUSED(name);
-    _UNUSED(user_data);
+    Q_UNUSED(connection);
+    Q_UNUSED(name);
+    Q_UNUSED(user_data);
 }
 
 static void
@@ -822,9 +905,9 @@ on_name_lost (GDBusConnection *connection,
               const gchar     *name,
               gpointer         user_data)
 {
-    _UNUSED(connection);
-    _UNUSED(name);
-    _UNUSED(user_data);
+    Q_UNUSED(connection);
+    Q_UNUSED(name);
+    Q_UNUSED(user_data);
     exit (1);
 }
 
@@ -921,9 +1004,7 @@ ibus_panel_impanel_focus_in (IBusPanelService *panel,
         return;
     }
 
-    IBusEngineDesc *engine_desc = NULL;
-    engine_desc = ibus_bus_get_global_engine(impanel->bus);
-
+    IBusEngineDesc *engine_desc = ibus_bus_get_global_engine(impanel->bus);
     impanel_update_logo_by_engine(impanel, engine_desc);
 
     impanel->engineManager->setCurrentContext(input_context_path);
@@ -936,8 +1017,8 @@ static void
 ibus_panel_impanel_focus_out (IBusPanelService *panel,
                               const gchar      *input_context_path)
 {
-    _UNUSED(panel);
-    _UNUSED(input_context_path);
+    Q_UNUSED(panel);
+    Q_UNUSED(input_context_path);
     IBusPanelImpanel* impanel = IBUS_PANEL_IMPANEL (panel);
 
     if (impanel->app->keyboardGrabbed()) {
@@ -964,19 +1045,18 @@ ibus_panel_impanel_real_register_properties(IBusPanelImpanel* impanel)
 {
     IBusProperty* property = NULL;
     guint i = 0;
-    char propstr[512];
 
     GVariantBuilder builder;
     g_variant_builder_init (&builder, G_VARIANT_TYPE ("as"));
 
-    ibus_property_to_propstr(impanel->logo_prop, propstr, TRUE);
-    g_variant_builder_add (&builder, "s", propstr);
+    QByteArray propstr = ibus_property_to_propstr(impanel->logo_prop, TRUE);
+    g_variant_builder_add (&builder, "s", propstr.constData());
 
     IBusPropList* prop_list = impanel->propManager->properties();
     if (prop_list) {
         while ( ( property = ibus_prop_list_get( prop_list, i ) ) != NULL ) {
-            ibus_property_to_propstr(property, propstr, TRUE);
-            g_variant_builder_add (&builder, "s", propstr);
+            propstr = ibus_property_to_propstr(property, TRUE);
+            g_variant_builder_add (&builder, "s", propstr.constData());
             ++i;
         }
     }
@@ -1150,27 +1230,24 @@ ibus_panel_impanel_update_property (IBusPanelService *panel,
 
     impanel->propManager->updateProperty(prop);
 
-    char propstr[512];
-    propstr[0] = '\0';
-
-    ibus_property_to_propstr(prop, propstr, TRUE);
+    QByteArray propstr = ibus_property_to_propstr(prop, TRUE);
 
     g_dbus_connection_emit_signal (impanel->conn,
                                    NULL, "/kimpanel", "org.kde.kimpanel.inputmethod", "UpdateProperty",
-                                   (g_variant_new ("(s)", propstr)),
+                                   (g_variant_new ("(s)", propstr.constData())),
                                    NULL);
 }
 
 static void
 ibus_panel_impanel_cursor_down_lookup_table (IBusPanelService *panel)
 {
-    _UNUSED(panel);
+    Q_UNUSED(panel);
 }
 
 static void
 ibus_panel_impanel_cursor_up_lookup_table (IBusPanelService *panel)
 {
-    _UNUSED(panel);
+    Q_UNUSED(panel);
 }
 
 static void
@@ -1190,7 +1267,7 @@ ibus_panel_impanel_hide_auxiliary_text (IBusPanelService *panel)
 static void
 ibus_panel_impanel_hide_language_bar (IBusPanelService *panel)
 {
-    _UNUSED(panel);
+    Q_UNUSED(panel);
 }
 
 static void
@@ -1224,19 +1301,19 @@ ibus_panel_impanel_hide_preedit_text (IBusPanelService *panel)
 static void
 ibus_panel_impanel_page_down_lookup_table (IBusPanelService *panel)
 {
-    _UNUSED(panel);
+    Q_UNUSED(panel);
 }
 
 static void
 ibus_panel_impanel_page_up_lookup_table (IBusPanelService *panel)
 {
-    _UNUSED(panel);
+    Q_UNUSED(panel);
 }
 
 static void
 ibus_panel_impanel_reset (IBusPanelService *panel)
 {
-    _UNUSED(panel);
+    Q_UNUSED(panel);
 }
 
 static void
@@ -1256,7 +1333,7 @@ ibus_panel_impanel_show_auxiliary_text (IBusPanelService *panel)
 static void
 ibus_panel_impanel_show_language_bar (IBusPanelService *panel)
 {
-    _UNUSED(panel);
+    Q_UNUSED(panel);
 }
 
 static void
@@ -1290,7 +1367,7 @@ ibus_panel_impanel_show_preedit_text (IBusPanelService *panel)
 static void
 ibus_panel_impanel_start_setup (IBusPanelService *panel)
 {
-    _UNUSED(panel);
+    Q_UNUSED(panel);
 }
 
 static void
@@ -1338,7 +1415,6 @@ static void
 ibus_panel_impanel_exec_menu(IBusPanelImpanel* impanel,
                              IBusPropList* prop_list)
 {
-    char propstr[512];
     if (!impanel->conn)
         return;
 
@@ -1350,8 +1426,8 @@ ibus_panel_impanel_exec_menu(IBusPanelImpanel* impanel,
         IBusProperty* prop = ibus_prop_list_get(prop_list, i);
         if (!prop)
             break;
-        ibus_property_to_propstr(prop, propstr);
-        g_variant_builder_add (&builder, "s", propstr);
+        QByteArray propstr = ibus_property_to_propstr(prop);
+        g_variant_builder_add (&builder, "s", propstr.constData());
         i ++;
     }
 
@@ -1365,7 +1441,6 @@ ibus_panel_impanel_exec_menu(IBusPanelImpanel* impanel,
 static void
 ibus_panel_impanel_exec_im_menu (IBusPanelImpanel* impanel)
 {
-    char propstr[512];
     if (!impanel->conn)
         return;
 
@@ -1376,8 +1451,8 @@ ibus_panel_impanel_exec_im_menu (IBusPanelImpanel* impanel)
     if (engines) {
         int i = 0;
         while (engines[i]) {
-            ibus_engine_desc_to_propstr(engines[i], propstr);
-            g_variant_builder_add (&builder, "s", propstr);
+            QByteArray propstr = ibus_engine_desc_to_propstr(engines[i]);
+            g_variant_builder_add (&builder, "s", propstr.constData());
             i ++;
         }
     }

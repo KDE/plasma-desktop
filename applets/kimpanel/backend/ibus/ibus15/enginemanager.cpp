@@ -35,23 +35,26 @@ EngineManager::~EngineManager()
 void EngineManager::freeOldEngine()
 {
     if (m_engines) {
-        int i = 0;
-        while (i < length()) {
+        for (size_t i = 0; i < m_length; i++) {
             g_object_unref(m_engines[i]);
-            i++;
         }
         g_free(m_engines);
     }
 }
 
-void EngineManager::setEngines(IBusEngineDesc** engines, int length)
+void EngineManager::setEngines(IBusEngineDesc** engines)
 {
     freeOldEngine();
     m_engineMap.clear();
     m_history.clear();
 
     m_engines = engines;
-    m_length = length;
+    m_length = 0;
+    if (engines) {
+        while (engines[m_length]) {
+            m_length++;
+        }
+    }
 }
 
 void EngineManager::setUseGlobalEngine(gboolean use)
@@ -98,13 +101,12 @@ const char* EngineManager::navigate(IBusEngineDesc* engine)
         return "";
     }
 
-    int i = 0;
-    while (i < length()) {
+    size_t i = 0;
+    for ( ; i < m_length; i ++) {
         if (m_engines[i] == engine ||
             0 == g_strcmp0(ibus_engine_desc_get_name(engine), ibus_engine_desc_get_name(m_engines[i]))) {
             break;
         }
-        i++;
     }
     i = (i + 1) % length();
     return ibus_engine_desc_get_name(m_engines[i]);
@@ -112,7 +114,7 @@ const char* EngineManager::navigate(IBusEngineDesc* engine)
 
 void EngineManager::moveToFirst(IBusEngineDesc* engine)
 {
-    int i = 0;
+    size_t i = 0;
     while (i < length()) {
         if (m_engines[i] == engine ||
             0 == g_strcmp0(ibus_engine_desc_get_name(engine), ibus_engine_desc_get_name(m_engines[i]))) {
@@ -135,24 +137,23 @@ void EngineManager::moveToFirst(IBusEngineDesc* engine)
     m_engines[0] = engine;
 }
 
-int EngineManager::getIndexByName(const char* name)
+size_t EngineManager::getIndexByName(const char* name)
 {
-    int i = 0;
-    while (i < length()) {
+    size_t i = 0;
+    for ( ; i < m_length; i++) {
         if (0 == g_strcmp0(name, ibus_engine_desc_get_name(m_engines[i]))) {
             break;
         }
-        i++;
     }
     return i;
 }
 
 void EngineManager::setOrder(const gchar** engine_names, size_t len)
 {
-    int k = 0;
+    size_t k = 0;
     for (size_t i = 0; i < len; i ++) {
-         int j = getIndexByName(engine_names[i]);
-         if (j < length()) {
+         size_t j = getIndexByName(engine_names[i]);
+         if (j < length() && j >= k) {
              if (j != k) {
                  IBusEngineDesc* temp = m_engines[k];
                  m_engines[k] = m_engines[j];
@@ -166,10 +167,8 @@ void EngineManager::setOrder(const gchar** engine_names, size_t len)
 QStringList EngineManager::engineOrder()
 {
     QStringList list;
-    int i = 0;
-    while (i < length()) {
+    for (size_t i = 0; i < m_length; i++) {
         list << QString::fromUtf8(ibus_engine_desc_get_name(m_engines[i]));
-        i++;
     }
     return list;
 }

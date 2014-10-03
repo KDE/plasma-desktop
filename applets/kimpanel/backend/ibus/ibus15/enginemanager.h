@@ -32,9 +32,9 @@ public:
     EngineManager();
     virtual ~EngineManager();
 
-    void setEngines(IBusEngineDesc** engines, int length);
+    void setEngines(IBusEngineDesc** engines);
     IBusEngineDesc** engines() { return m_engines; }
-    int length() { return m_length; }
+    size_t length() { return m_length; }
     void setUseGlobalEngine(gboolean g_variant_get_boolean);
     void setCurrentContext(const gchar* input_context_path);
     QString currentEngine();
@@ -44,14 +44,14 @@ public:
     void moveToFirst(IBusEngineDesc* engine_desc);
     QStringList engineOrder();
     void setOrder(const gchar** engine_names, size_t len);
-    int getIndexByName(const char* name);
+    size_t getIndexByName(const char* name);
 
 private:
     QQueue<QString> m_history;
     QMap<QString, QString> m_engineMap;
     QString m_currentContext;
     IBusEngineDesc** m_engines;
-    int m_length;
+    size_t m_length;
     bool m_useGlobalEngine;
     void freeOldEngine();
 };

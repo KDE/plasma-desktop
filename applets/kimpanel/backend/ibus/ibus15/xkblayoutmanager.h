@@ -20,6 +20,7 @@
 #ifndef XKBLAYOUTMANAGER_H
 #define XKBLAYOUTMANAGER_H
 
+#include <QString>
 #include <QSet>
 #include <ibus.h>
 
