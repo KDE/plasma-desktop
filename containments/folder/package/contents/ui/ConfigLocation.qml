@@ -25,13 +25,11 @@ import org.kde.plasma.plasmoid 2.0
 
 import org.kde.plasma.private.folder 0.1 as Folder
 
-GroupBox {
+Item {
     id: configLocation
 
     width: childrenRect.width
     height: childrenRect.height
-
-    flat: true
 
     property string cfg_url
     property alias cfg_labelMode: labelMode.currentIndex
@@ -59,8 +57,6 @@ GroupBox {
     }
 
     ColumnLayout {
-        width: parent.width
-
         GroupBox {
             id: locationGroupBox
 
@@ -70,8 +66,6 @@ GroupBox {
             flat: true
 
             ColumnLayout {
-                width: parent.width
-
                 ExclusiveGroup {
                     id: locationGroup
 
@@ -89,8 +83,6 @@ GroupBox {
                 }
 
                 GridLayout {
-                    Layout.fillWidth: true
-
                     RadioButton {
                         id: locationPlace
 
@@ -144,8 +136,6 @@ GroupBox {
                 }
 
                 GridLayout {
-                    Layout.fillWidth: true
-
                     RadioButton {
                         id: locationCustom
 
@@ -222,8 +212,6 @@ GroupBox {
             flat: true
 
             ColumnLayout {
-                width: parent.width
-
                 ComboBox {
                     id: labelMode
 
@@ -245,4 +233,3 @@ GroupBox {
         }
     }
 }
-
