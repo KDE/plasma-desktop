@@ -74,8 +74,8 @@ Item {
                     dir.addItemDragImage(positioner.map(index), main.x, main.y, main.width, main.height, null);
                     grabber.item = snapshotSource;
                 } else {
-                    snapshotSource.sourceItem = null;
                     grabber.item = null;
+                    snapshotSource.sourceItem = null;
                 }
             }
 
