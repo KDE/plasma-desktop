@@ -30,8 +30,6 @@
 
 
 K_PLUGIN_FACTORY(LayoutWidgetFactory, registerPlugin<LayoutWidget>();)
-K_EXPORT_PLUGIN(LayoutWidgetFactory("keyboard_layout_widget"))
-
 
 LayoutWidget::LayoutWidget(QWidget* parent, const QList<QVariant>& /*args*/):
 	QWidget(parent),

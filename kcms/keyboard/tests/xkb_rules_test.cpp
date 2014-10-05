@@ -17,7 +17,7 @@
  */
 
 #include <QApplication>
-#include <qtest_kde.h>
+#include <QtTest/QtTest>
 
 #include "../xkb_rules.h"
 
@@ -237,7 +237,6 @@ private Q_SLOTS:
 };
 
 // need kde libs for config-workspace.h used in xkb_rules.cpp
-// need GUI for xkb protocol
-QTEST_KDEMAIN( RulesTest, GUI )
+QTEST_MAIN(RulesTest)
 
 #include "xkb_rules_test.moc"

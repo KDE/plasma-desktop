@@ -23,10 +23,9 @@
 #include <kpluginfactory.h>
 //#include <kpluginloader.h>
 #include <KLocalizedString>
-#include <KDialog>
 
-#include <QtDBus/QDBusMessage>
-#include <QtDBus/QDBusConnection>
+#include <QDBusMessage>
+#include <QDBusConnection>
 //#include <QtDBus/QDBusInterface>
 
 #include "kcm_keyboard_widget.h"
@@ -42,7 +41,6 @@
 
 
 K_PLUGIN_FACTORY(KeyboardModuleFactory, registerPlugin<KCMKeyboard>();)
-K_EXPORT_PLUGIN(KeyboardModuleFactory("kcmkeyboard"))
 
 KCMKeyboard::KCMKeyboard(QWidget *parent, const QVariantList &args)
   : KCModule(parent)
@@ -63,7 +61,7 @@ KCMKeyboard::KCMKeyboard(QWidget *parent, const QVariantList &args)
 
   QVBoxLayout *layout = new QVBoxLayout(this);
   layout->setMargin(0);
-  layout->setSpacing(KDialog::spacingHint());
+//  layout->setSpacing(KDialog::spacingHint());
 
   widget = new KCMKeyboardWidget(rules, keyboardConfig, args, parent);
   layout->addWidget(widget);

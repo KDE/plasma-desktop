@@ -28,13 +28,14 @@
 #include <QFont>
 #include <QFileDialog>
 #include <QHelpEvent>
-#include <math.h>
 #include <QMessageBox>
 #include <QRect>
 #include <QDesktopWidget>
+#include <QApplication>
 
-#include <KApplication>
 #include <KLocale>
+
+#include <math.h>
 
 
 static const QColor keyBorderColor("#d4d4d4");

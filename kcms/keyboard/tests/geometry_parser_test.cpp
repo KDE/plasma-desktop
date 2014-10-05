@@ -16,8 +16,7 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#include <QDebug>
-#include <qtest_kde.h>
+#include <QtTest/QtTest>
 
 #include "../preview/geometry_parser.h"
 
@@ -99,7 +98,7 @@ private Q_SLOTS:
 
 // need kde libs for config-workspace.h used in xkb_rules.cpp
 // need GUI for xkb protocol
-QTEST_KDEMAIN( GeometryParserTest, GUI )
+QTEST_MAIN(GeometryParserTest)
 
 #include "geometry_parser_test.moc"
 

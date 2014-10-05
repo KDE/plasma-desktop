@@ -19,7 +19,6 @@
 #include "xkb_rules.h"
 #include "config-workspace.h"
 
-#include <kglobal.h>
 #include <KLocalizedString>
 
 #include <QDir>

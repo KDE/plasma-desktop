@@ -19,7 +19,6 @@
 #include "flags.h"
 
 #include <kiconloader.h>
-#include <kglobalsettings.h>
 #include <klocalizedstring.h>
 
 #include <plasma/svg.h>
@@ -30,6 +29,7 @@
 #include <QPixmap>
 #include <QPainter>
 #include <QIcon>
+#include <QFontDatabase>
 
 #include <math.h>
 
@@ -206,7 +206,7 @@ void Flags::drawLabel(QPainter& painter, const QString& layoutText, bool flagSho
 		fontSize = round( (double)fontSize * ((double)rect.width()*2/3) / width );
 	}
 	
-	int smallestReadableSize = KGlobalSettings::smallestReadableFont().pixelSize();
+	int smallestReadableSize = QFontDatabase::systemFont(QFontDatabase::SmallestReadableFont).pixelSize(); //smallestReadableFont().pixelSize();
 	if( fontSize < smallestReadableSize ) {
 		fontSize = smallestReadableSize;
 	}

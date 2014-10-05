@@ -22,8 +22,6 @@
 
 #include "ui_kcm_keyboard.h"
 
-#include <kcomponentdata.h>
-
 #include <QTabWidget>
 #include <QLoggingCategory>
 
@@ -35,7 +33,6 @@ class QWidget;
 class KeyboardConfig;
 class Rules;
 class Flags;
-class KComponentData;
 class QString;
 class QPushButton;
 class LayoutsTableModel;

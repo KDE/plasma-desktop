@@ -17,7 +17,7 @@
  */
 
 #include <QApplication>
-#include <qtest_kde.h>
+#include <QtTest/QtTest>
 
 #include "../iso_codes.h"
 
@@ -73,7 +73,6 @@ private Q_SLOTS:
 
 };
 
-//TODO: something lighter than KDEMAIN ?
-QTEST_KDEMAIN( IsoCodesTest, NoGUI )
+QTEST_MAIN(IsoCodesTest)
 
 #include "iso_codes_test.moc"

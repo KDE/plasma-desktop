@@ -17,7 +17,7 @@
  */
 
 #include <QtGui/QApplication>
-#include <qtest_kde.h>
+#include <QtTest/QtTest>
 
 #include "../layout_memory_persister.h"
 #include "../layout_memory.h"
@@ -153,7 +153,6 @@ private Q_SLOTS:
 
 };
 
-// need GUI for xkb protocol
-QTEST_KDEMAIN( LayoutMemoryPersisterTest, GUI )
+QTEST_MAIN(LayoutMemoryPersisterTest)
 
 #include "layout_memory_persister_test.moc"

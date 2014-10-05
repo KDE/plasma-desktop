@@ -18,8 +18,8 @@
 
 //#include <kapplication.h>
 
-#include <qtest_kde.h>
 #include <QtGui/QIcon>
+#include <QtTest/QtTest>
 
 #include "../flags.h"
 #include "../xkb_rules.h"
@@ -95,6 +95,6 @@ private Q_SLOTS:
 };
 
 // need GUI for xkb protocol in xkb_rules.cpp
-QTEST_KDEMAIN( KeyboardDaemonTest, GUI )
+QTEST_MAIN(KeyboardDaemonTest)
 
 #include "keyboard_daemon_test.moc"

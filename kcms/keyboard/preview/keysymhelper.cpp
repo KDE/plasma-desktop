@@ -19,10 +19,9 @@
 #include "keysymhelper.h"
 #include "keysym2ucs.h"
 
-#include <QtCore/QString>
-#include <QtCore/QChar>
-
-#include <KDebug>
+#include <QString>
+#include <QChar>
+#include <QDebug>
 
 #include <X11/XKBlib.h>
 

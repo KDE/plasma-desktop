@@ -16,7 +16,7 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#include <qtest_kde.h>
+#include <QtTest/QtTest>
 #include <QtGui/QIcon>
 
 #include "../flags.h"
@@ -97,6 +97,6 @@ private Q_SLOTS:
 };
 
 // need GUI for xkb protocol in xkb_rules.cpp
-QTEST_KDEMAIN( FlagsTest, GUI )
+QTEST_MAIN(FlagsTest)
 
 #include "flags_test.moc"

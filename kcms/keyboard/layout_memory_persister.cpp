@@ -24,8 +24,8 @@
 
 #include <QFile>
 #include <QStandardPaths>
-#include <QtXml/qdom.h>
-#include <QtXml/qxml.h>
+#include <qdom.h>
+#include <qxml.h>
 
 #include "keyboard_config.h"
 #include "layout_memory.h"
