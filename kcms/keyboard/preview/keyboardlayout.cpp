@@ -53,9 +53,9 @@ QString KbKey::getSymbol(int i){
 
 
 void KbKey::display(){
-    qDebug() << keyName << " : ";
+    qCDebug(KEYBOARD_PREVIEW) << keyName << " : ";
     for(int i=0; i<symbolCount; i++)
-        qDebug() << "\t" << symbols[i];
+        qCDebug(KEYBOARD_PREVIEW) << "\t" << symbols[i];
 }
 
 
@@ -108,9 +108,9 @@ int KbLayout :: findKey(QString n){
 
 
 void KbLayout::display(){
-//    qDebug() << name << "\n";
+//    qCDebug(KEYBOARD_PREVIEW) << name << "\n";
 //    for(int i = 0; i<includeCount; i++){
-//        qDebug() << include[i];
+//        qCDebug(KEYBOARD_PREVIEW) << include[i];
 //    }
     for(int i = 0 ; i < keyCount; i++ ){
         keyList[i].display();

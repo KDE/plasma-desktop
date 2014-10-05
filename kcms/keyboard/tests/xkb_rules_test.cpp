@@ -16,7 +16,6 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#include <kdebug.h>
 #include <QApplication>
 #include <qtest_kde.h>
 
@@ -24,6 +23,10 @@
 
 #include <qdom.h>
 #include <qxml.h>
+
+
+Q_LOGGING_CATEGORY(KCM_KEYBOARD, "kcm_keyboard")
+
 
 static const Rules::ExtrasFlag readExtras = Rules::NO_EXTRAS;
 
@@ -189,7 +192,7 @@ private Q_SLOTS:
 
     	QFile file("base2.xml");
         if( ! file.open( QIODevice::WriteOnly | QIODevice::Truncate | QIODevice::Text) ) {
-        	kWarning() << "Failed to open layout memory xml file for writing" << file.fileName();
+        	qWarning() << "Failed to open layout memory xml file for writing" << file.fileName();
         	QFAIL("failed");
         }
 

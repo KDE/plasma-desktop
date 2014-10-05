@@ -20,9 +20,14 @@
 #define KEYBOARDLAYOUT_NEW_H
 
 #include "keyaliases.h"
+
 #include <QString>
 #include <QStringList>
 #include <QList>
+#include <QLoggingCategory>
+
+
+Q_DECLARE_LOGGING_CATEGORY(KEYBOARD_PREVIEW)
 
 
 class KbKey{

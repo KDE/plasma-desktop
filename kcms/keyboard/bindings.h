@@ -21,6 +21,9 @@
 #define BINDINGS_H_
 
 #include <kactioncollection.h>
+#include <QLoggingCategory>
+
+Q_DECLARE_LOGGING_CATEGORY(KCM_KEYBOARD)
 
 
 //class QObject;

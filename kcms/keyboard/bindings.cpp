@@ -18,7 +18,6 @@
 
 #include "bindings.h"
 
-#include <kdebug.h>
 #include <kactioncollection.h>
 #include <kaction.h>
 #include <klocalizedstring.h>
@@ -109,7 +108,7 @@ void KeyboardLayoutActionCollection::setLayoutShortcuts(QList<LayoutUnit>& layou
 			createLayoutShortcutActon(layoutUnit, rules, false);
 		}
 	}
-	kDebug() << "Cleaning component shortcuts on save" << KGlobalAccel::cleanComponent(COMPONENT_NAME);
+	qCDebug(KCM_KEYBOARD) << "Cleaning component shortcuts on save" << KGlobalAccel::cleanComponent(COMPONENT_NAME);
 }
 
 void KeyboardLayoutActionCollection::loadLayoutShortcuts(QList<LayoutUnit>& layoutUnits, const Rules* rules)
@@ -119,15 +118,15 @@ void KeyboardLayoutActionCollection::loadLayoutShortcuts(QList<LayoutUnit>& layo
 		QAction* action = createLayoutShortcutActon(layoutUnit, rules, true);
                 const auto shortcut = KGlobalAccel::self()->shortcut(action);
 		if( ! shortcut.isEmpty() ) {
-			kDebug() << "Restored shortcut for" << layoutUnit.toString() << shortcut.first();
+			qCDebug(KCM_KEYBOARD, ) << "Restored shortcut for" << layoutUnit.toString() << shortcut.first();
 			layoutUnit.setShortcut(shortcut.first());
 		}
 		else {
-			kDebug() << "Skipping empty shortcut for" << layoutUnit.toString();
+			qCDebug(KCM_KEYBOARD, ) << "Skipping empty shortcut for" << layoutUnit.toString();
 			removeAction(action);
 		}
 	}
-	kDebug() << "Cleaning component shortcuts on load" << KGlobalAccel::cleanComponent(COMPONENT_NAME);
+	qCDebug(KCM_KEYBOARD) << "Cleaning component shortcuts on load" << KGlobalAccel::cleanComponent(COMPONENT_NAME);
 }
 
 //KAction* KeyboardLayoutActionCollection::getAction(const LayoutUnit& layoutUnit)

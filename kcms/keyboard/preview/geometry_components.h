@@ -22,6 +22,10 @@
 #include <QString>
 #include <QPoint>
 #include <QList>
+#include <QLoggingCategory>
+
+
+Q_DECLARE_LOGGING_CATEGORY(KEYBOARD_PREVIEW)
 
 
 class GShape

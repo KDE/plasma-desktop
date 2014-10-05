@@ -16,12 +16,13 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#include <kdebug.h>
 #include <QApplication>
 #include <qtest_kde.h>
 
 #include "../iso_codes.h"
 
+
+Q_LOGGING_CATEGORY(KCM_KEYBOARD, "kcm_keyboard")
 
 class IsoCodesTest : public QObject
 {

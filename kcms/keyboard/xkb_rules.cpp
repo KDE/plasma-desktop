@@ -44,6 +44,7 @@
 #include <config-workspace.h>
 
 
+
 class RulesHandler : public QXmlDefaultHandler
 {
 public:
@@ -147,7 +148,7 @@ QString Rules::getRulesName()
 	char *tmp = NULL;
 
 	if (XkbRF_GetNamesProp(QX11Info::display(), &tmp, &vd) && tmp != NULL ) {
-		// 			qDebug() << "namesprop" << tmp ;
+		// 			qCDebug(KCM_KEYBOARD) << "namesprop" << tmp ;
                 const QString name(tmp);
                 XFree(tmp);
 		return name;
@@ -214,7 +215,7 @@ void mergeRules(Rules* rules, Rules* extraRules)
 		}
 	}
 	rules->layoutInfos.append(layoutsToAdd);
-	qDebug() << "Merged from extra rules:" << extraRules->layoutInfos.size() << "layouts," << extraRules->modelInfos.size() << "models," << extraRules->optionGroupInfos.size() << "option groups";
+	qCDebug(KCM_KEYBOARD) << "Merged from extra rules:" << extraRules->layoutInfos.size() << "layouts," << extraRules->modelInfos.size() << "models," << extraRules->optionGroupInfos.size() << "option groups";
 
 	// base rules now own the objects - remove them from extra rules so that it does not try to delete them
 	extraRules->layoutInfos.clear();
@@ -262,7 +263,7 @@ Rules* Rules::readRules(Rules* rules, const QString& filename, bool fromExtras)
 
 	QXmlInputSource xmlInputSource(&file);
 
-	qDebug() << "Parsing xkb rules from" << file.fileName();
+	qCDebug(KCM_KEYBOARD) << "Parsing xkb rules from" << file.fileName();
 
 	if( ! reader.parse(xmlInputSource) ) {
 		qCritical() << "Failed to parse the rules file" << file.fileName();
@@ -299,7 +300,7 @@ bool RulesHandler::startElement(const QString &/*namespaceURI*/, const QString &
 	}
 	else if( strPath == ("xkbConfigRegistry") && ! attributes.value("version").isEmpty()  ) {
 		rules->version = attributes.value("version");
-		qDebug() << "xkbConfigRegistry version" << rules->version;
+		qCDebug(KCM_KEYBOARD) << "xkbConfigRegistry version" << rules->version;
 	}
 	return true;
 }
@@ -317,57 +318,57 @@ bool RulesHandler::characters(const QString &str)
 		if( strPath.endsWith("layoutList/layout/configItem/name") ) {
 			if( rules->layoutInfos.last() != NULL ) {
 				rules->layoutInfos.last()->name = str.trimmed();
-//				qDebug() << "name:" << str;
+//				qCDebug(KCM_KEYBOARD) << "name:" << str;
 			}
 			// skipping invalid entry
 		}
 		else if( strPath.endsWith("layoutList/layout/configItem/description") ) {
 			rules->layoutInfos.last()->description = str.trimmed();
-//			qDebug() << "descr:" << str;
+//			qCDebug(KCM_KEYBOARD) << "descr:" << str;
 		}
 		else if( strPath.endsWith("layoutList/layout/configItem/languageList/iso639Id") ) {
 			rules->layoutInfos.last()->languages << str.trimmed();
-//			qDebug() << "\tlang:" << str;
+//			qCDebug(KCM_KEYBOARD) << "\tlang:" << str;
 		}
 		else if( strPath.endsWith("layoutList/layout/variantList/variant/configItem/name") ) {
 			rules->layoutInfos.last()->variantInfos.last()->name = str.trimmed();
-//			qDebug() << "\tvariant name:" << str;
+//			qCDebug(KCM_KEYBOARD) << "\tvariant name:" << str;
 		}
 		else if( strPath.endsWith("layoutList/layout/variantList/variant/configItem/description") ) {
 			rules->layoutInfos.last()->variantInfos.last()->description = str.trimmed();
-//			qDebug() << "\tvariant descr:" << str;
+//			qCDebug(KCM_KEYBOARD) << "\tvariant descr:" << str;
 		}
 		else if( strPath.endsWith("layoutList/layout/variantList/variant/configItem/languageList/iso639Id") ) {
 			rules->layoutInfos.last()->variantInfos.last()->languages << str.trimmed();
-//			qDebug() << "\tvlang:" << str;
+//			qCDebug(KCM_KEYBOARD) << "\tvlang:" << str;
 		}
 		else if( strPath.endsWith("modelList/model/configItem/name") ) {
 			rules->modelInfos.last()->name = str.trimmed();
-//			qDebug() << "name:" << str;
+//			qCDebug(KCM_KEYBOARD) << "name:" << str;
 		}
 		else if( strPath.endsWith("modelList/model/configItem/description") ) {
 			rules->modelInfos.last()->description = str.trimmed();
-//			qDebug() << "\tdescr:" << str;
+//			qCDebug(KCM_KEYBOARD) << "\tdescr:" << str;
 		}
 		else if( strPath.endsWith("modelList/model/configItem/vendor") ) {
 			rules->modelInfos.last()->vendor = str.trimmed();
-//			qDebug() << "\tvendor:" << str;
+//			qCDebug(KCM_KEYBOARD) << "\tvendor:" << str;
 		}
 		else if( strPath.endsWith("optionList/group/configItem/name") ) {
 			rules->optionGroupInfos.last()->name = str.trimmed();
-//			qDebug() << "name:" << str;
+//			qCDebug(KCM_KEYBOARD) << "name:" << str;
 		}
 		else if( strPath.endsWith("optionList/group/configItem/description") ) {
 			rules->optionGroupInfos.last()->description = str.trimmed();
-//			qDebug() << "\tdescr:" << str;
+//			qCDebug(KCM_KEYBOARD) << "\tdescr:" << str;
 		}
 		else if( strPath.endsWith("optionList/group/option/configItem/name") ) {
 			rules->optionGroupInfos.last()->optionInfos.last()->name = str.trimmed();
-//			qDebug() << "name:" << str;
+//			qCDebug(KCM_KEYBOARD) << "name:" << str;
 		}
 		else if( strPath.endsWith("optionList/group/option/configItem/description") ) {
 			rules->optionGroupInfos.last()->optionInfos.last()->description = str.trimmed();
-//			qDebug() << "\tdescr:" << str;
+//			qCDebug(KCM_KEYBOARD) << "\tdescr:" << str;
 		}
 	}
 	return true;
@@ -454,7 +455,7 @@ Rules::GeometryId Rules::getGeometryId(const QString& model) {
     	    QString groupName = parts[1];
     	    QStringList models = parts[2].split(QRegExp("\\s+"), QString::SkipEmptyParts);
     	    
-//    	    qDebug() << "modelGroup definition" << groupName << ":" << models;
+//    	    qCDebug(KCM_KEYBOARD) << "modelGroup definition" << groupName << ":" << models;
     	    if( models.contains(model) ) {
     	        modelGeoId = groupName;
     	    }
@@ -483,7 +484,7 @@ Rules::GeometryId Rules::getGeometryId(const QString& model) {
     		defaultGeoId = GeometryId(fileName, geoName);
     	    }
     	    
-//    	    qDebug() << "geo entry" << modelName << fileName << geoName;
+//    	    qCDebug(KCM_KEYBOARD) << "geo entry" << modelName << fileName << geoName;
         
     	    if( modelName == model ) {
     		return GeometryId(fileName, geoName);

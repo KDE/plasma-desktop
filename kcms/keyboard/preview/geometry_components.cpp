@@ -24,6 +24,9 @@
 #include <QPoint>
 
 
+Q_LOGGING_CATEGORY(KEYBOARD_PREVIEW, "keyboard_preview")
+
+
 GShape::GShape()
 {
     cordi_count = 0;
@@ -53,11 +56,11 @@ QPoint GShape :: getCordii(int i) const
 
 void GShape::display()
 {
-    qDebug() << "shape: " << sname << "\n";
-    qDebug() << "(" << approx.x() << "," << approx.y() << ");";
+    qCDebug(KEYBOARD_PREVIEW) << "shape: " << sname << "\n";
+    qCDebug(KEYBOARD_PREVIEW) << "(" << approx.x() << "," << approx.y() << ");";
 
     for (int i = 0; i < cordi_count; i++) {
-        qDebug() << cordii[i];
+        qCDebug(KEYBOARD_PREVIEW) << cordii[i];
     }
 }
 
@@ -107,8 +110,8 @@ void Key::setKeyPosition(double x, double y)
 
 void Key::showKey()
 {
-    qDebug() << "\n\tKey: " << name << "\tshape: " << shapeName << "\toffset: " << offset;
-    qDebug() << "\tposition" << position;
+    qCDebug(KEYBOARD_PREVIEW) << "\n\tKey: " << name << "\tshape: " << shapeName << "\toffset: " << offset;
+    qCDebug(KEYBOARD_PREVIEW) << "\tposition" << position;
 }
 
 
@@ -123,15 +126,15 @@ Row::Row()
 
 void Row::addKey()
 {
-    //qDebug() << "keyCount: " << keyCount;
+    //qCDebug(KEYBOARD_PREVIEW) << "keyCount: " << keyCount;
     keyCount++;
     keyList << Key();
 }
 
 void Row::displayRow()
 {
-    qDebug() << "\nRow: (" << left << "," << top << ")\n";
-    qDebug() << "vertical: " << vertical;
+    qCDebug(KEYBOARD_PREVIEW) << "\nRow: (" << left << "," << top << ")\n";
+    qCDebug(KEYBOARD_PREVIEW) << "vertical: " << vertical;
     for (int i = 0; i < keyCount; i++) {
         keyList[i].showKey();
     }
@@ -150,17 +153,17 @@ Section::Section()
 
 void Section::addRow()
 {
-    //qDebug() << "\nrowCount: " << rowCount;
+    //qCDebug(KEYBOARD_PREVIEW) << "\nrowCount: " << rowCount;
     rowCount++;
     rowList << Row();
 }
 
 void Section::displaySection()
 {
-    //qDebug() << "\nSection: " << name << "\n\tposition: (" << left << "," << top << ");" << angle << "\n";
-    //qDebug() << "vertical: " << vertical;
+    //qCDebug(KEYBOARD_PREVIEW) << "\nSection: " << name << "\n\tposition: (" << left << "," << top << ");" << angle << "\n";
+    //qCDebug(KEYBOARD_PREVIEW) << "vertical: " << vertical;
     for (int i = 0; i < rowCount; i++) {
-        qDebug() << "\n\t";
+        qCDebug(KEYBOARD_PREVIEW) << "\n\t";
         rowList[i].displayRow();
     }
 }
@@ -207,11 +210,11 @@ void Geometry::addShape()
 
 void Geometry::display()
 {
-    qDebug() << name << "\n" << description << "\nwidth:" << width
+    qCDebug(KEYBOARD_PREVIEW) << name << "\n" << description << "\nwidth:" << width
              << "\nheight:" << height << "\n" << "sectionTop:" << sectionTop;
-    qDebug() << "\nsectionLeft:" << sectionLeft << "\nrowTop:" << rowTop << "\nrowLeft:"
+    qCDebug(KEYBOARD_PREVIEW) << "\nsectionLeft:" << sectionLeft << "\nrowTop:" << rowTop << "\nrowLeft:"
              << rowLeft << "\nkeyGap: " << keyGap << "\nkeyShape:" << keyShape << "\n";
-    qDebug() << "vertical:" << vertical;
+    qCDebug(KEYBOARD_PREVIEW) << "vertical:" << vertical;
 
     for (int i = 0; i < shape_count; i++) {
         shapes[i].display();
@@ -224,7 +227,7 @@ void Geometry::display()
 
 void Geometry::addSection()
 {
-    //qDebug() << "\nsectionCount: " << sectionCount;
+    //qCDebug(KEYBOARD_PREVIEW) << "\nsectionCount: " << sectionCount;
     sectionCount++;
     sectionList << Section();
 }

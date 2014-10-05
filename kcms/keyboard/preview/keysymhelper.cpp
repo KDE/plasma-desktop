@@ -55,12 +55,12 @@ QString KeySymHelper::getKeySymbol(const QString& opton)
 
 //    if( ucs == -1 && (keysym >= 0xFE50 && keysym <= 0xFE5F) ) {
 //        ucs = 0x0300 + (keysym & 0x000F);
-//        kWarning() << "Got dead symbol" << QString("0x%1").arg(keysym, 0, 16) << "named" << opton << "will use" << QString("0x%1").arg(ucs, 0, 16) << "as UCS";
+//        qWarning() << "Got dead symbol" << QString("0x%1").arg(keysym, 0, 16) << "named" << opton << "will use" << QString("0x%1").arg(ucs, 0, 16) << "as UCS";
 //    }
 
     if( ucs == -1 ) {
         nill++;
-        kWarning() << "No mapping from keysym:" << QString("0x%1").arg(keysym, 0, 16) << "named:" << opton << "to UCS";
+        qWarning() << "No mapping from keysym:" << QString("0x%1").arg(keysym, 0, 16) << "named:" << opton << "to UCS";
     }
     
     QString ucsStr = QString(QChar((int)ucs));
@@ -70,7 +70,7 @@ QString KeySymHelper::getKeySymbol(const QString& opton)
         ucsStr = " " + ucsStr + " ";
     }
 
-//    kWarning() << "--" << opton << "keysym: " << keysym << QString("0x%1").arg(keysym, 0, 16) << "keysym2string" << XKeysymToString(keysym)
+//    qWarning() << "--" << opton << "keysym: " << keysym << QString("0x%1").arg(keysym, 0, 16) << "keysym2string" << XKeysymToString(keysym)
 //         << "---" << QString("0x%1").arg(ucs, 0, 16) << ucsStr;
 
     keySymbolMap[opton] = ucsStr;

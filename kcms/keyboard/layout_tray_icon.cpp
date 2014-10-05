@@ -18,7 +18,6 @@
 
 #include "layout_tray_icon.h"
 
-//#include <kdebug.h>
 #include <kstatusnotifieritem.h>
 #include <klocalizedstring.h>
 

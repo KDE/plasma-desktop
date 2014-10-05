@@ -99,8 +99,8 @@ void Symbol_parser<Iterator>::getSymbol(std::string n)
     int index = layout.keyList[keyIndex].getSymbolCount();
     layout.keyList[keyIndex].addSymbol(QString::fromUtf8(n.data(), n.size()),
                                        index);
-    //qDebug() << "adding symbol: " << QString::fromUtf8(n.data(), n.size());
-    //qDebug() << "added symbol: " << layout.keyList[keyIndex].getSymbol(index) << " in " << keyIndex << " at " << index;
+    //qCDebug(KEYBOARD_PREVIEW) << "adding symbol: " << QString::fromUtf8(n.data(), n.size());
+    //qCDebug(KEYBOARD_PREVIEW) << "added symbol: " << layout.keyList[keyIndex].getSymbol(index) << " in " << keyIndex << " at " << index;
 }
 
 template<typename Iterator>
@@ -111,13 +111,13 @@ void Symbol_parser<Iterator>::addKeyName(std::string n)
         kname = alias.getAlias(layout.country, kname);
     }
     keyIndex = layout.findKey(kname);
-    //qDebug() << layout.getKeyCount();
+    //qCDebug(KEYBOARD_PREVIEW) << layout.getKeyCount();
     if (keyIndex == -1) {
         layout.keyList[layout.getKeyCount()].keyName = kname;
         keyIndex = layout.getKeyCount();
         newKey = 1;
     }
-    // qDebug() << "key at" << keyIndex;
+    // qCDebug(KEYBOARD_PREVIEW) << "key at" << keyIndex;
 }
 
 template<typename Iterator>
@@ -126,7 +126,7 @@ void Symbol_parser<Iterator>::addKey()
     if (newKey == 1) {
         layout.addKey();
         newKey = 0;
-        //qDebug() << "new key";
+        //qCDebug(KEYBOARD_PREVIEW) << "new key";
     }
 }
 
@@ -140,7 +140,7 @@ template<typename Iterator>
 void Symbol_parser<Iterator>::setName(std::string n)
 {
     layout.setName(QString::fromUtf8(n.data(), n.size()));
-    //qDebug() << layout.getLayoutName();
+    //qCDebug(KEYBOARD_PREVIEW) << layout.getLayoutName();
 }
 
 template<typename Iterator>
@@ -148,7 +148,7 @@ void Symbol_parser<Iterator>::setLevel(int lvl)
 {
     if (lvl > layout.getLevel()) {
         layout.setLevel(lvl);
-        qDebug() << lvl;
+        qCDebug(KEYBOARD_PREVIEW) << lvl;
     }
 }
 
@@ -166,7 +166,7 @@ QString findLayout(const QString &layout, const QString &layoutVariant)
 
     QFile sfile(symbolFile);
     if (!sfile.open(QIODevice::ReadOnly | QIODevice::Text)) {
-        //qDebug() << "unable to open the file";
+        //qCDebug(KEYBOARD_PREVIEW) << "unable to open the file";
         return QString("I/O ERROR");
     }
 
@@ -230,7 +230,7 @@ KbLayout parseSymbols(const QString &layout, const QString &layoutVariant)
     bool success = phrase_parse(iter, end, symbolParser, space);
 
     if (success && iter == end) {
-        qDebug() << "Symbols Parsing succeeded";
+        qCDebug(KEYBOARD_PREVIEW) << "Symbols Parsing succeeded";
         symbolParser.layout.setParsedSymbol(true);
 
     } else {
@@ -265,12 +265,12 @@ KbLayout parseSymbols(const QString &layout, const QString &layoutVariant)
         success = phrase_parse(iter, end, symbolParser, space);
 
         if (success && iter == end) {
-            qDebug() << "Symbols Parsing succeeded";
+            qCDebug(KEYBOARD_PREVIEW) << "Symbols Parsing succeeded";
             symbolParser.layout.setParsedSymbol(true);
 
         } else {
-            qDebug() << "Symbols Parsing failed\n";
-            qDebug() << input;
+            qCDebug(KEYBOARD_PREVIEW) << "Symbols Parsing failed\n";
+            qCDebug(KEYBOARD_PREVIEW) << input;
             symbolParser.layout.setParsedSymbol(false);
         }
 

@@ -27,6 +27,11 @@
 #include <QFrame>
 #include <QHash>
 #include <QToolTip>
+#include <QLoggingCategory>
+
+
+Q_DECLARE_LOGGING_CATEGORY(KEYBOARD_PREVIEW)
+
 
 class Geometry;
 class GShape;

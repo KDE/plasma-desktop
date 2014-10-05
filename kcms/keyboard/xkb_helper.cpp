@@ -79,7 +79,7 @@ void executeXmodmap(const QString& configFileName)
     	KProcess xmodmapProcess;
     	xmodmapProcess << xmodmapExe;
     	xmodmapProcess << configFileName;
-    	qDebug() << "Executing" << xmodmapProcess.program().join(" ");
+    	qCDebug(KCM_KEYBOARD) << "Executing" << xmodmapProcess.program().join(" ");
     	if( xmodmapProcess.execute() != 0 ) {
     		qCritical() << "Failed to execute " << xmodmapProcess.program();
     	}
@@ -107,9 +107,9 @@ bool XkbHelper::runConfigLayoutCommand(const QStringList& setxkbmapCommandArgume
 	int res = setxkbmapProcess.execute();
 
 	if( res == 0 ) {	// restore Xmodmap mapping reset by setxkbmap
-		qDebug() << "Executed successfully in " << timer.elapsed() << "ms" << setxkbmapProcess.program().join(" ");
+		qCDebug(KCM_KEYBOARD) << "Executed successfully in " << timer.elapsed() << "ms" << setxkbmapProcess.program().join(" ");
 		restoreXmodmap();
-		qDebug() << "\t and with xmodmap" << timer.elapsed() << "ms";
+		qCDebug(KCM_KEYBOARD) << "\t and with xmodmap" << timer.elapsed() << "ms";
 	    return true;
 	}
 	else {

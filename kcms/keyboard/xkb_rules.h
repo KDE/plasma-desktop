@@ -20,9 +20,12 @@
 #ifndef XKB_RULES_H_
 #define XKB_RULES_H_
 
-#include <QtXml/QXmlDefaultHandler>
-#include <QtCore/QList>
-#include <QtCore/QStringList>
+#include <QXmlDefaultHandler>
+#include <QList>
+#include <QStringList>
+#include <QLoggingCategory>
+
+Q_DECLARE_LOGGING_CATEGORY(KCM_KEYBOARD)
 
 
 struct ConfigItem {

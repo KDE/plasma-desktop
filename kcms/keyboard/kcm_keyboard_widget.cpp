@@ -48,7 +48,6 @@
 
 #include "ui_kcm_add_layout_dialog.h"
 
-Q_LOGGING_CATEGORY(KEBOARD_WIDGET, "keyboard.widget")
 
 static const QString GROUP_SWITCH_GROUP_NAME("grp");
 static const QString LV3_SWITCH_GROUP_NAME("lv3");
@@ -617,7 +616,7 @@ void KCMKeyboardWidget::updateXkbShortcutButton(const QString& groupName, QPushB
 		const OptionGroupInfo* optionGroupInfo = rules->getOptionGroupInfo(groupName);
 		const OptionInfo* optionInfo = optionGroupInfo->getOptionInfo(option);
 		if( optionInfo == NULL || optionInfo->description == NULL ) {
-            qCDebug(KEBOARD_WIDGET) << "Could not find option info for " << option;
+        		qCDebug(KCM_KEYBOARD) << "Could not find option info for " << option;
 			button->setText(grpOptions.first());
 		}
 		else {

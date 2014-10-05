@@ -22,6 +22,7 @@
 #include "../preview/geometry_parser.h"
 
 
+Q_LOGGING_CATEGORY(KCM_KEYBOARD, "kcm_keyboard")
 
 class GeometryParserTest : public QObject
 {

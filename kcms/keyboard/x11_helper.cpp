@@ -36,6 +36,8 @@
 #include <fixx11h.h>
 
 
+Q_LOGGING_CATEGORY(KCM_KEYBOARD, "kcm_keyboard")
+
 // more information about the limit https://bugs.freedesktop.org/show_bug.cgi?id=19501
 const int X11Helper::MAX_GROUP_COUNT = 4;
 const int X11Helper::ARTIFICIAL_GROUP_LIMIT_COUNT = 8;
@@ -180,8 +182,8 @@ QList<LayoutUnit> X11Helper::getLayoutsList()
 //				if( layouts[i].layout == layouts[j].layout && layouts[i].getRawDisplayName().isEmpty() ) {
 //					layouts[i].setDisplayName( addNum(layouts[i].layout, 1) );
 //					layouts[j].setDisplayName( addNum(layouts[j].layout, ++n) );
-//					qDebug() << "Adding" << 1 << "to" << layouts[i].toString();
-//					qDebug() << "Adding" << n << "to" << layouts[j].toString();
+//					qCDebug(KCM_KEYBOARD) << "Adding" << 1 << "to" << layouts[i].toString();
+//					qCDebug(KCM_KEYBOARD) << "Adding" << n << "to" << layouts[j].toString();
 //				}
 //			}
 //		}
@@ -194,7 +196,7 @@ QList<LayoutUnit> X11Helper::getLayoutsList()
 
 bool X11Helper::setGroup(unsigned int group)
 {
-    qDebug() << group;
+    qCDebug(KCM_KEYBOARD) << group;
     xcb_void_cookie_t cookie;
     cookie = xcb_xkb_latch_lock_state(QX11Info::connection(),
         XCB_XKB_ID_USE_CORE_KBD,
@@ -206,7 +208,7 @@ bool X11Helper::setGroup(unsigned int group)
     xcb_generic_error_t *error = 0;
     error = xcb_request_check(QX11Info::connection(), cookie);
     if (error) {
-        qDebug() << "Couldn't change the group" << error->error_code;
+        qCDebug(KCM_KEYBOARD) << "Couldn't change the group" << error->error_code;
         return false;
     }
 
@@ -259,7 +261,7 @@ bool X11Helper::getGroupNames(Display* display, XkbConfig* xkbConfig, FetchType 
 		return false;
 	}
 
-//	qDebug() << "prop_data:" << nitems << prop_data;
+//	qCDebug(KCM_KEYBOARD) << "prop_data:" << nitems << prop_data;
 	QStringList names;
 	for(char* p=prop_data; p-prop_data < (long)nitems && p != NULL; p += strlen(p)+1) {
 		names.append( p );
@@ -279,21 +281,21 @@ bool X11Helper::getGroupNames(Display* display, XkbConfig* xkbConfig, FetchType 
 			xkbConfig->layouts << (layouts[ii] != NULL ? layouts[ii] : "");
 			xkbConfig->variants << (ii < variants.count() && variants[ii] != NULL ? variants[ii] : "");
 		}
-		qDebug() << "Fetched layout groups from X server:"
+		qCDebug(KCM_KEYBOARD) << "Fetched layout groups from X server:"
 				<< "\tlayouts:" << xkbConfig->layouts
 				<< "\tvariants:" << xkbConfig->variants;
 	}
 
 	if( fetchType == ALL || fetchType == MODEL_ONLY ) {
 		xkbConfig->keyboardModel = (names[1] != NULL ? names[1] : "");
-		qDebug() << "Fetched keyboard model from X server:" << xkbConfig->keyboardModel;
+		qCDebug(KCM_KEYBOARD) << "Fetched keyboard model from X server:" << xkbConfig->keyboardModel;
 	}
 
 	if( fetchType == ALL ) {
 		if( names.count() >= 5 ) {
 			QString options = (names[4] != NULL ? names[4] : "");
 			xkbConfig->options = options.split(OPTIONS_SEPARATOR);
-			qDebug() << "Fetched xkbOptions from X server:" << options;
+			qCDebug(KCM_KEYBOARD) << "Fetched xkbOptions from X server:" << options;
 		}
 	}
 
@@ -311,7 +313,7 @@ XEventNotifier::XEventNotifier():
 
 void XEventNotifier::start()
 {
-	qDebug() << "qCoreApp" << QCoreApplication::instance();
+	qCDebug(KCM_KEYBOARD) << "qCoreApp" << QCoreApplication::instance();
 	if( QCoreApplication::instance() != NULL && X11Helper::xkbSupported(&xkbOpcode) ) {
 		registerForXkbEvents(QX11Info::display());
 

@@ -18,7 +18,6 @@
 
 #include "layout_widget.h"
 
-//#include <kdebug.h>
 #include <kpluginfactory.h>
 
 #include <QPushButton>

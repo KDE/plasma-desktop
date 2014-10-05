@@ -22,7 +22,6 @@
 #include <QtDBus/QtDBus>
 #include <QProcess>
 
-#include <kdebug.h>
 #include <kpluginfactory.h>
 #include <kaction.h>
 #include <kactioncollection.h>
@@ -91,7 +90,7 @@ KeyboardDaemon::~KeyboardDaemon()
 
 void KeyboardDaemon::configureKeyboard()
 {
-	kDebug() << "Configuring keyboard";
+	qCDebug(KCM_KEYBOARD) << "Configuring keyboard";
 	init_keyboard_hardware();
 
 	keyboardConfig.load();
@@ -213,7 +212,7 @@ void KeyboardDaemon::layoutMapChanged()
 
 void KeyboardDaemon::switchToNextLayout()
 {
-	kDebug() << "Toggling layout";
+	qCDebug(KCM_KEYBOARD) << "Toggling layout";
 	X11Helper::switchToNextLayout();
 
         LayoutUnit newLayout = X11Helper::getCurrentLayout();

@@ -37,7 +37,6 @@
 #include <KLocale>
 
 
-
 static const QColor keyBorderColor("#d4d4d4");
 static const QColor lev12color(Qt::black);
 static const QColor lev34color("#0033FF");
@@ -210,28 +209,28 @@ void KbPreviewFrame::drawShape(QPainter &painter, const GShape& s, int x, int y,
         refX = geometry.sectionList[i].getLeft();
         refY = geometry.sectionList[i].getTop();
 
-        //qDebug() <<"\ntransform";
+        //qCDebug(KEYBOARD_PREVIEW) <<"\ntransform";
         for(int j=0; j<size; j++){
             double x = temp[j].x()-refX;
             double y = temp[j].y()-refY;
 
-            //qDebug() <<"(" <<x <<"," <<y <<")->";
+            //qCDebug(KEYBOARD_PREVIEW) <<"(" <<x <<"," <<y <<")->";
 
             float theta = ( 3.1459 * geometry.sectionList[i].getAngle() )/180;
             double x_ = x*cos(theta) - y*sin(theta);
 
-            //qDebug() <<"x_= " <<x <<"*" <<cos(theta) <<"-" <<y <<"*" <<sin(theta);
+            //qCDebug(KEYBOARD_PREVIEW) <<"x_= " <<x <<"*" <<cos(theta) <<"-" <<y <<"*" <<sin(theta);
 
             double y_ = x*sin(theta) + y*cos(theta);
 
-            //qDebug() <<"\ny_= " <<x <<"*" <<sin(theta) <<"+" <<y <<"*" <<cos(theta);
-            //qDebug() <<"(" <<x_ <<"," <<y_ <<")\n";
+            //qCDebug(KEYBOARD_PREVIEW) <<"\ny_= " <<x <<"*" <<sin(theta) <<"+" <<y <<"*" <<cos(theta);
+            //qCDebug(KEYBOARD_PREVIEW) <<"(" <<x_ <<"," <<y_ <<")\n";
 
             temp[j]=QPoint(scaleFactor*(x_+refX), scaleFactor*(y_+refY));
         }
 
         /*for(int i=0;i<size;i++){
-            qDebug() <<temp[i];
+            qCDebug(KEYBOARD_PREVIEW) <<temp[i];
         }*/
 
         painter.drawPolygon(temp, size);
@@ -341,10 +340,10 @@ void KbPreviewFrame::generateKeyboardLayout(const QString& layout, const QString
     while (scaleFactor*endx + screenWidth/20 > screenWidth) {
         scaleFactor -= 0.2;
     }
-    qDebug() << "scale factor: 2.5 ->" << scaleFactor;
+    qCDebug(KEYBOARD_PREVIEW) << "scale factor: 2.5 ->" << scaleFactor;
 
     setFixedSize(scaleFactor*endx+60, scaleFactor*endy+60);
-    qDebug() << screenWidth << ":" << scaleFactor << scaleFactor*endx+60 << scaleFactor*endy+60;
+    qCDebug(KEYBOARD_PREVIEW) << screenWidth << ":" << scaleFactor << scaleFactor*endx+60 << scaleFactor*endy+60;
     keyboardLayout = grammar::parseSymbols(layout, layoutVariant);
 }
 

@@ -20,7 +20,6 @@
 
 #include <ksharedconfig.h>
 #include <kconfiggroup.h>
-#include <kdebug.h>
 
 
 static const char* const SWITCHING_POLICIES[] = {"Global", "Desktop", "WinClass", "Window", NULL };
@@ -143,7 +142,7 @@ void KeyboardConfig::load()
 //    	}
 //    }
 
-	kDebug() << "configuring layouts" << configureLayouts << "configuring options" << resetOldXkbOptions;
+	qCDebug(KCM_KEYBOARD) << "configuring layouts" << configureLayouts << "configuring options" << resetOldXkbOptions;
 }
 
 void KeyboardConfig::save()

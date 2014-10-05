@@ -20,9 +20,13 @@
 #ifndef ISO_CODES_H_
 #define ISO_CODES_H_
 
-#include <QtCore/QString>
-#include <QtCore/QList>
-#include <QtCore/QMap>
+#include <QString>
+#include <QList>
+#include <QMap>
+#include <QLoggingCategory>
+
+
+Q_DECLARE_LOGGING_CATEGORY(KCM_KEYBOARD)
 
 
 /**

@@ -29,6 +29,9 @@
 #include "bindings.h"
 
 
+Q_DECLARE_LOGGING_CATEGORY(KCM_KEYBOARD)
+
+
 class KActionCollection;
 class XInputEventNotifier;
 class LayoutTrayIcon;

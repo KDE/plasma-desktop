@@ -24,6 +24,9 @@
 #include <QtCore/QString>
 #include <QtCore/QMap>
 
+
+//Q_DECLARE_LOGGING_CATEGORY(KCM_KEYBOARD)
+
 class QPixmap;
 class QIcon;
 class LayoutUnit;

@@ -19,7 +19,6 @@
 
 #include "kcm_keyboard.h"
 
-#include <kdebug.h>
 #include <kaboutdata.h>
 #include <kpluginfactory.h>
 //#include <kpluginloader.h>

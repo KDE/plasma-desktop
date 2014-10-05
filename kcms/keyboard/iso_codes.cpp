@@ -20,7 +20,6 @@
 
 #include <kglobal.h>
 #include <klocale.h>
-#include <kdebug.h>
 
 #include <QtXml/QXmlAttributes>
 
@@ -118,7 +117,7 @@ void IsoCodesPrivate::buildIsoEntryList()
 
 	QFile file(QString("%1/iso_%2.xml").arg(isoCodesXmlDir, isoCode));
 	if( !file.open(QFile::ReadOnly | QFile::Text) ) {
-		kError() << "Can't open the xml file" << file.fileName();
+		qCritical() << "Can't open the xml file" << file.fileName();
 		return;
 	}
 
@@ -131,9 +130,9 @@ void IsoCodesPrivate::buildIsoEntryList()
 	QXmlInputSource xmlInputSource(&file);
 
 	if( ! reader.parse(xmlInputSource) ) {
-		kError() << "Failed to parse the xml file" << file.fileName();
+		qCritical() << "Failed to parse the xml file" << file.fileName();
 		return;
 	}
 
-	kDebug() << "Loaded" << isoEntryList.count() << ("iso entry definitions for iso"+isoCode) << "from" << file.fileName();
+	qCDebug(KCM_KEYBOARD) << "Loaded" << isoEntryList.count() << ("iso entry definitions for iso"+isoCode) << "from" << file.fileName();
 }

@@ -103,20 +103,20 @@ int XInputEventNotifier::getNewDeviceEventType(xcb_generic_event_t* event)
 			int ndevices;
 			XDeviceInfo	*devices = XListInputDevices(xdpne->display, &ndevices);
 			if( devices != NULL ) {
-//				kDebug() << "New device id:" << xdpne->deviceid;
+//				qCDebug(KCM_KEYBOARD, ) << "New device id:" << xdpne->deviceid;
 				for(int i=0; i<ndevices; i++) {
-//					kDebug() << "id:" << devices[i].id << "name:" << devices[i].name << "used as:" << devices[i].use;
+//					qCDebug(KCM_KEYBOARD, ) << "id:" << devices[i].id << "name:" << devices[i].name << "used as:" << devices[i].use;
 					if( devices[i].id == xdpne->deviceid ) {
 						if( devices[i].use == IsXKeyboard || devices[i].use == IsXExtensionKeyboard ) {
 							if( isRealKeyboard(devices[i].name) ) {
 								newDeviceType = DEVICE_KEYBOARD;
-								qDebug() << "new keyboard device, id:" << devices[i].id << "name:" << devices[i].name << "used as:" << devices[i].use;
+								qCDebug(KCM_KEYBOARD) << "new keyboard device, id:" << devices[i].id << "name:" << devices[i].name << "used as:" << devices[i].use;
 								break;
 							}
 						}
 						if( devices[i].use == IsXPointer || devices[i].use == IsXExtensionPointer ) {
 							newDeviceType = DEVICE_POINTER;
-							qDebug() << "new pointer device, id:" << devices[i].id << "name:" << devices[i].name << "used as:" << devices[i].use;
+							qCDebug(KCM_KEYBOARD) << "new pointer device, id:" << devices[i].id << "name:" << devices[i].name << "used as:" << devices[i].use;
 							break;
 						}
 					}
@@ -136,7 +136,7 @@ int XInputEventNotifier::registerForNewDeviceEvent(Display* display)
 
 	DevicePresence(display, xitype, xiclass);
 	XSelectExtensionEvent(display, DefaultRootWindow(display), &xiclass, 1);
-	qDebug() << "Registered for new device events from XInput, class" << xitype;
+	qCDebug(KCM_KEYBOARD) << "Registered for new device events from XInput, class" << xitype;
 	xinputEventType = xitype;
 	return xitype;
 }

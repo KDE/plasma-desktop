@@ -27,6 +27,10 @@
 #include <QtCore/QList>
 #include <QtCore/QMap>
 #include <QtCore/QPair>
+#include <QLoggingCategory>
+
+
+Q_DECLARE_LOGGING_CATEGORY(KCM_KEYBOARD)
 
 /**
  * This class provides configuration options for keyboard module

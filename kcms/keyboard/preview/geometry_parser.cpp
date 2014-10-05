@@ -334,7 +334,7 @@ void Geometry_parser<Iterator>::setRowLeft(double a)
 template<typename Iterator>
 void Geometry_parser<Iterator>::setSectionTop(double a)
 {
-    //qDebug() << "\nsectionCount" << geom.sectionCount;
+    //qCDebug(KEYBOARD_PREVIEW) << "\nsectionCount" << geom.sectionCount;
     int secn = geom.getSectionCount();
     geom.sectionList[secn].setTop(a + geom.sectionTop);
     keyCordiY = geom.sectionList[secn].getTop();
@@ -344,7 +344,7 @@ void Geometry_parser<Iterator>::setSectionTop(double a)
 template<typename Iterator>
 void Geometry_parser<Iterator>::setSectionLeft(double a)
 {
-    //qDebug() << "\nsectionCount" << geom.sectionCount;
+    //qCDebug(KEYBOARD_PREVIEW) << "\nsectionCount" << geom.sectionCount;
     int secn = geom.getSectionCount();
     geom.sectionList[secn].setLeft(a + geom.sectionLeft);
     keyCordiX = geom.sectionList[secn].getLeft();
@@ -355,7 +355,7 @@ void Geometry_parser<Iterator>::setSectionLeft(double a)
 template<typename Iterator>
 void Geometry_parser<Iterator>::setSectionAngle(double a)
 {
-    //qDebug() << "\nsectionCount" << geom.sectionCount;
+    //qCDebug(KEYBOARD_PREVIEW) << "\nsectionCount" << geom.sectionCount;
     int secn = geom.getSectionCount();
     geom.sectionList[secn].setAngle(a);
 }
@@ -391,7 +391,7 @@ void Geometry_parser<Iterator>::setKeyName(std::string n)
     int secn = geom.getSectionCount();
     int rown = geom.sectionList[secn].getRowCount();
     int keyn = geom.sectionList[secn].rowList[rown].getKeyCount();
-    //qDebug() << "\nsC: " << secn << "\trC: " << rown << "\tkn: " << keyn;
+    //qCDebug(KEYBOARD_PREVIEW) << "\nsC: " << secn << "\trC: " << rown << "\tkn: " << keyn;
     geom.sectionList[secn].rowList[rown].keyList[keyn].setKeyName(QString::fromUtf8(n.data(), n.size()));
 }
 
@@ -402,7 +402,7 @@ void Geometry_parser<Iterator>::setKeyShape(std::string n)
     int secn = geom.getSectionCount();
     int rown = geom.sectionList[secn].getRowCount();
     int keyn = geom.sectionList[secn].rowList[rown].getKeyCount();
-    //qDebug() << "\nsC: " << secn << "\trC: " << rown << "\tkn: " << keyn;
+    //qCDebug(KEYBOARD_PREVIEW) << "\nsC: " << secn << "\trC: " << rown << "\tkn: " << keyn;
     geom.sectionList[secn].rowList[rown].keyList[keyn].setShapeName(QString::fromUtf8(n.data(), n.size()));
 }
 
@@ -420,11 +420,11 @@ void Geometry_parser<Iterator>::setKeyNameandShape(std::string n)
 template<typename Iterator>
 void Geometry_parser<Iterator>::setKeyOffset()
 {
-    //qDebug() << "\nhere\n";
+    //qCDebug(KEYBOARD_PREVIEW) << "\nhere\n";
     int secn = geom.getSectionCount();
     int rown = geom.sectionList[secn].getRowCount();
     int keyn = geom.sectionList[secn].rowList[rown].getKeyCount();
-    //qDebug() << "\nsC: " << secn << "\trC: " << rown << "\tkn: " << keyn;
+    //qCDebug(KEYBOARD_PREVIEW) << "\nsC: " << secn << "\trC: " << rown << "\tkn: " << keyn;
     geom.sectionList[secn].rowList[rown].keyList[keyn].setOffset(KeyOffset);
 }
 
@@ -478,7 +478,7 @@ Geometry parseGeometry(const QString &model)
     QString geometryFile = geoId.fileName;
     QString geometryName = geoId.geoName;
 
-    qDebug() << "looking for model" << model << "geometryName" << geometryName << "in" << geometryFile;
+    qCDebug(KEYBOARD_PREVIEW) << "looking for model" << model << "geometryName" << geometryName << "in" << geometryFile;
 
     QString xkbParentDir = findGeometryBaseDir();
     geometryFile.prepend(xkbParentDir);
@@ -508,7 +508,7 @@ Geometry parseGeometry(const QString &model)
         bool success = phrase_parse(iter, end, geomertyParser, space);
 
         if (success && iter == end) {
-//                qDebug() << "Geometry parsing succeeded for" << input.left(20);
+//                qCDebug(KEYBOARD_PREVIEW) << "Geometry parsing succeeded for" << input.left(20);
             geomertyParser.geom.setParsing(true);
         } else {
             qCritical() << "Geometry parsing failed for\n\t" << input.left(30);

@@ -16,12 +16,12 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#include <kdebug.h>
 #include <kconfiggroup.h>
 #include <ksharedconfig.h>
 
 #include <QX11Info>
 #include <QCursor>	// WTF? - otherwise compiler complains
+#include <QDebug>
 
 #include <math.h>
 
@@ -42,7 +42,7 @@ static
 void set_repeatrate(int delay, double rate)
 {
 	if( !X11Helper::xkbSupported(NULL) ) {
-		kError() << "Failed to set keyboard repeat rate: xkb is not supported";
+		qCritical() << "Failed to set keyboard repeat rate: xkb is not supported";
 		return;
 	}
 

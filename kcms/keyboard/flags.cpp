@@ -18,8 +18,6 @@
 
 #include "flags.h"
 
-#include <kdebug.h>
-#include <kstandarddirs.h>
 #include <kiconloader.h>
 #include <kglobalsettings.h>
 #include <klocalizedstring.h>
@@ -27,6 +25,7 @@
 #include <plasma/svg.h>
 #include <plasma/theme.h>
 
+#include <QStandardPaths>
 #include <QStringList>
 #include <QPixmap>
 #include <QPainter>
@@ -39,6 +38,9 @@
 //for text handling
 #include "keyboard_config.h"
 #include "xkb_rules.h"
+
+
+//Q_LOGGING_CATEGORY(KCM_KEYBOARD, "kcm_keyboard")
 
 
 static const int FLAG_MAX_WIDTH = 21;
@@ -74,14 +76,14 @@ QIcon Flags::createIcon(const QString& layout)
 	QIcon icon;
 	if( ! layout.isEmpty() ) {
 		if( layout == "epo" ) {
-			QString file = KStandardDirs::locate("data", "kcmkeyboard/pics/epo.png");
+			QString file = QStandardPaths::locate(QStandardPaths::GenericDataLocation, "kcmkeyboard/pics/epo.png");
 			icon.addFile(file);
 		}
 		else {
 			QString countryCode = getCountryFromLayoutName( layout );
 			if( ! countryCode.isEmpty() ) {
 				QString file = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QString(flagTemplate).arg(countryCode));
-				//			kDebug() << "Creating icon for" << layout << "with" << file;
+				//			qCDebug(KCM_KEYBOARD, ) << "Creating icon for" << layout << "with" << file;
 				icon.addFile(file);
 			}
 		}
@@ -313,13 +315,13 @@ Plasma::Svg* Flags::getSvg()
 
 void Flags::themeChanged()
 {
-//	kDebug() << "Theme changed, new text color" << Plasma::Theme::defaultTheme()->color(Plasma::Theme::TextColor);
+//	qCDebug(KCM_KEYBOARD, ) << "Theme changed, new text color" << Plasma::Theme::defaultTheme()->color(Plasma::Theme::TextColor);
 	clearCache();
 	emit pixmapChanged();
 }
 
 void Flags::clearCache()
 {
-//	kDebug() << "Clearing flag pixmap cache";
+//	qCDebug(KCM_KEYBOARD, ) << "Clearing flag pixmap cache";
 	iconOrTextMap.clear();
 }
