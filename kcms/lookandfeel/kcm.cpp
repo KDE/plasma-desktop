@@ -173,6 +173,9 @@ void KCMLookandFeel::load()
 
     const QList<Plasma::Package> pkgs = availablePackages();
     for (const Plasma::Package &pkg : pkgs) {
+        if (!pkg.metadata().isValid()) {
+            continue;
+        }
         QStandardItem* row = new QStandardItem(pkg.metadata().name());
         row->setData(pkg.metadata().pluginName(), PluginNameRole);
         row->setData(pkg.filePath("previews", "preview.png"), ScreenhotRole);
