@@ -28,6 +28,7 @@
 
 #ifdef HAVE_XINPUT_AND_DEVICE_NOTIFY
 #include <X11/extensions/XInput.h>
+#include <xcb/xinput.h>
 #endif
 
 #include "x11_helper.h"
@@ -78,9 +79,9 @@ bool XInputEventNotifier::processOtherEvents(xcb_generic_event_t* event)
 
 #ifdef HAVE_XINPUT_AND_DEVICE_NOTIFY
 
-extern "C" {
-    extern int _XiGetDevicePresenceNotifyEvent(Display *);
-}
+//extern "C" {
+//    extern int _XiGetDevicePresenceNotifyEvent(Display *);
+//}
 
 // This is ugly but allows to skip multiple execution of setxkbmap 
 // for all keyboard devices that don't care about layouts
@@ -96,17 +97,16 @@ int XInputEventNotifier::getNewDeviceEventType(xcb_generic_event_t* event)
 {
 	int newDeviceType = DEVICE_NONE;
 
-#if 0
-	if( xinputEventType != -1 && event->type == xinputEventType ) {
-		XDevicePresenceNotifyEvent *xdpne = (XDevicePresenceNotifyEvent*) event;
+	if( xinputEventType != -1 && event->response_type == xinputEventType ) {
+		xcb_input_device_presence_notify_event_t *xdpne = reinterpret_cast<xcb_input_device_presence_notify_event_t *>(event);
 		if( xdpne->devchange == DeviceEnabled ) {
 			int ndevices;
-			XDeviceInfo	*devices = XListInputDevices(xdpne->display, &ndevices);
+			XDeviceInfo *devices = XListInputDevices(display, &ndevices);
 			if( devices != NULL ) {
-//				qCDebug(KCM_KEYBOARD, ) << "New device id:" << xdpne->deviceid;
+				qCDebug(KCM_KEYBOARD) << "New device id:" << xdpne->device_id;
 				for(int i=0; i<ndevices; i++) {
-//					qCDebug(KCM_KEYBOARD, ) << "id:" << devices[i].id << "name:" << devices[i].name << "used as:" << devices[i].use;
-					if( devices[i].id == xdpne->deviceid ) {
+					qCDebug(KCM_KEYBOARD) << "id:" << devices[i].id << "name:" << devices[i].name << "used as:" << devices[i].use;
+					if( devices[i].id == xdpne->device_id ) {
 						if( devices[i].use == IsXKeyboard || devices[i].use == IsXExtensionKeyboard ) {
 							if( isRealKeyboard(devices[i].name) ) {
 								newDeviceType = DEVICE_KEYBOARD;
@@ -125,14 +125,14 @@ int XInputEventNotifier::getNewDeviceEventType(xcb_generic_event_t* event)
 			}
 		}
 	}
-#endif
 	return newDeviceType;
 }
 
-int XInputEventNotifier::registerForNewDeviceEvent(Display* display)
+int XInputEventNotifier::registerForNewDeviceEvent(Display* display_)
 {
 	int xitype;
 	XEventClass xiclass;
+	display = display_;
 
 	DevicePresence(display, xitype, xiclass);
 	XSelectExtensionEvent(display, DefaultRootWindow(display), &xiclass, 1);

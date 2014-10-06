@@ -53,6 +53,7 @@ private:
 	int getNewDeviceEventType(xcb_generic_event_t* event);
 
 	int xinputEventType;
+	Display* display;
 };
 
 #endif /* XINPUT_HELPER_H_ */
