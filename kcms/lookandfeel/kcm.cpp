@@ -235,7 +235,10 @@ void KCMLookandFeel::save()
 
         if (m_applyColors) {
             QString colorsFile = package.filePath("colors");
+            KConfigGroup cg(conf, "kdeglobals");
+            cg = KConfigGroup(&cg, "General");
             QString colorScheme = cg.readEntry("ColorScheme", QString());
+
             if (!colorsFile.isEmpty()) {
                 if (!colorScheme.isEmpty()) {
                     setColors(colorScheme, colorsFile);
