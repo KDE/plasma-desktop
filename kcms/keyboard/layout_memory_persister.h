@@ -38,8 +38,8 @@ public:
 	bool saveToFile(const QFile& file);
 	bool restoreFromFile(const QFile& file);
 
-	bool save(const QString& moduleName);
-	bool restore(const QString& moduleName);
+	bool save();
+	bool restore();
 
 	LayoutUnit getGlobalLayout() const { return globalLayout; }
 	void setGlobalLayout(const LayoutUnit& layout) { globalLayout = layout; }

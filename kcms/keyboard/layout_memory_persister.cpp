@@ -20,9 +20,9 @@
 
 #include <kconfiggroup.h>
 #include <ksharedconfig.h>
-#include <kstandarddirs.h>
 
 #include <QFile>
+#include <QDir>
 #include <QStandardPaths>
 #include <qdom.h>
 #include <qxml.h>
@@ -43,7 +43,7 @@ static const char LAYOUTS_ATTRIBUTE[] = "layouts";
 
 static const char LIST_SEPARATOR_LM[] = ",";
 
-static const char REL_SESSION_FILE_PATH[] = "/session/keyboard/layout_memory.xml";
+static const char REL_SESSION_FILE_PATH[] = "/keyboard/session/layout_memory.xml";
 
 QString LayoutMemoryPersister::getLayoutMapAsString()
 {
@@ -93,23 +93,28 @@ static bool isRestoreSession()
     return loginMode != "default" && loginMode != "restoreSavedSession";	// we don't know how to restore saved session - only previous one
 }
 
-bool LayoutMemoryPersister::save(const QString& moduleName)
+bool LayoutMemoryPersister::save()
 {
 	if( isRestoreSession() ) {
-    	QString relPath = moduleName + REL_SESSION_FILE_PATH;
-        QFile file(KStandardDirs::locateLocal("data", relPath));
-//    	QFile file(QStandardPaths::writableLocation(QStandardPaths::DataLocation) + '/' + relPath);
+        QFileInfo fileInfo(QStandardPaths::writableLocation(QStandardPaths::DataLocation) + REL_SESSION_FILE_PATH);
+
+        QDir baseDir(fileInfo.absoluteDir());
+        if( ! baseDir.exists() ) {
+            if( ! QDir().mkpath(baseDir.absolutePath()) ) {
+                qWarning() << "Failed to create directory" << baseDir.absolutePath();
+            }
+        }
+
+        QFile file(fileInfo.absoluteFilePath());
     	return saveToFile(file);
     }
     return false;
 }
 
-bool LayoutMemoryPersister::restore(const QString& moduleName)
+bool LayoutMemoryPersister::restore()
 {
 	if( isRestoreSession() ) {
-    	QString relPath = moduleName + REL_SESSION_FILE_PATH;
-        QFile file(KStandardDirs::locateLocal("data", relPath));
-//    	QFile file(QStandardPaths::writableLocation(QStandardPaths::DataLocation) + '/' + relPath);
+        QFile file(QStandardPaths::writableLocation(QStandardPaths::DataLocation) + REL_SESSION_FILE_PATH);
     	return restoreFromFile(file);
     }
     return false;
