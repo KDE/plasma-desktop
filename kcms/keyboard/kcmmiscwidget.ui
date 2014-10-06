@@ -12,7 +12,7 @@
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0">
-    <widget class="KButtonGroup" name="numlockGroupBox">
+    <widget class="QGroupBox" name="numlockGroupBox">
      <property name="whatsThis">
       <string>If supported, this option allows you to setup the state of NumLock after KDE startup.&lt;p&gt;You can configure NumLock to be turned on or off, or configure KDE not to set NumLock state.</string>
      </property>
@@ -21,27 +21,27 @@
      </property>
      <layout class="QGridLayout" name="gridLayout_7">
       <item row="0" column="0">
-       <widget class="KButtonGroup" name="numlockButtonGroup">
+       <widget class="QGroupBox" name="numlockButtonGroup">
         <property name="flat">
          <bool>true</bool>
         </property>
         <layout class="QGridLayout" name="gridLayout_6">
          <item row="0" column="0">
-          <widget class="QRadioButton" name="RadioButton1">
+          <widget class="QRadioButton" name="radioButton1">
            <property name="text">
             <string>T&amp;urn on</string>
            </property>
           </widget>
          </item>
          <item row="1" column="0">
-          <widget class="QRadioButton" name="RadioButton1_2">
+          <widget class="QRadioButton" name="radioButton2">
            <property name="text">
             <string>&amp;Turn off</string>
            </property>
           </widget>
          </item>
          <item row="2" column="0">
-          <widget class="QRadioButton" name="RadioButton1_3">
+          <widget class="QRadioButton" name="radioButton3">
            <property name="text">
             <string>Leave unchan&amp;ged</string>
            </property>
@@ -60,7 +60,7 @@
      </property>
      <layout class="QGridLayout" name="gridLayout_4">
       <item row="0" column="0">
-       <widget class="KButtonGroup" name="keyboardRepeatButtonGroup">
+       <widget class="QGroupBox" name="keyboardRepeatButtonGroup">
         <property name="flat">
          <bool>true</bool>
         </property>
@@ -310,14 +310,6 @@
    </item>
   </layout>
  </widget>
- <customwidgets>
-  <customwidget>
-   <class>KButtonGroup</class>
-   <extends>QGroupBox</extends>
-   <header>kbuttongroup.h</header>
-   <container>1</container>
-  </customwidget>
- </customwidgets>
  <resources/>
  <connections/>
 </ui>

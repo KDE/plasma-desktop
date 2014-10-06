@@ -43,6 +43,7 @@ XInputEventNotifier::XInputEventNotifier(QWidget* parent):
 	XEventNotifier(), //TODO: destruct properly?
 	xinputEventType(-1)
 {
+  Q_UNUSED(parent)
 }
 
 void XInputEventNotifier::start()

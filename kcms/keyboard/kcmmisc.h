@@ -27,17 +27,17 @@
 #include <QString>
 #include <QWidget>
 
+class QButtonGroup;
 class Ui_KeyboardConfigWidget;
 
 enum TriState {
 	STATE_ON = 0,  STATE_OFF = 1, STATE_UNCHANGED = 2
 };
 
-class KButtonGroup;
 class TriStateHelper {
 public:
-	static void setTriState(KButtonGroup* group, TriState state);
-	static TriState getTriState(const KButtonGroup* group);
+	static void setTriState(QButtonGroup* group, TriState state);
+	static TriState getTriState(const QButtonGroup* group);
 
 	static TriState getTriState(int state) { return static_cast<TriState>(state); }
 	static int getInt(TriState state) { return static_cast<int>(state); }
@@ -84,6 +84,8 @@ private:
   enum TriState keyboardRepeat;
   enum TriState numlockState;
 
+  QButtonGroup* _numlockButtonGroup;
+  QButtonGroup* _keyboardRepeatButtonGroup;
   Ui_KeyboardConfigWidget& ui;
 };
 

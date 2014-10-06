@@ -32,6 +32,7 @@
 #include <QX11Info>
 #include <QSpinBox>
 #include <QDoubleSpinBox>
+#include <QButtonGroup>
 
 #include <klocale.h>
 #include <kconfig.h>
@@ -62,15 +63,27 @@ KCMiscKeyboardWidget::KCMiscKeyboardWidget(QWidget *parent)
   ui.rateSlider->setPageStep(500);
   ui.rateSlider->setTickInterval(498);
 
-  connect(ui.keyboardRepeatButtonGroup, SIGNAL(clicked()), this, SLOT(changed()));
-  connect(ui.keyboardRepeatButtonGroup, SIGNAL(changed(int)), this, SLOT(keyboardRepeatStateChanged(int)));
   connect(ui.delay, SIGNAL(valueChanged(int)), this, SLOT(delaySpinboxChanged(int)));
   connect(ui.delaySlider, SIGNAL(valueChanged(int)), this, SLOT(delaySliderChanged(int)));
   connect(ui.rate, SIGNAL(valueChanged(double)), this, SLOT(rateSpinboxChanged(double)));
   connect(ui.rateSlider, SIGNAL(valueChanged(int)), this, SLOT(rateSliderChanged(int)));
 
   connect(ui.click, SIGNAL(valueChanged(int)), this, SLOT(changed()));
-  connect(ui.numlockButtonGroup, SIGNAL(released(int)), this, SLOT(changed()));
+
+  _numlockButtonGroup = new QButtonGroup(ui.numlockButtonGroup);
+  _numlockButtonGroup->addButton(ui.radioButton1, 0);
+  _numlockButtonGroup->addButton(ui.radioButton2, 1);
+  _numlockButtonGroup->addButton(ui.radioButton3, 2);
+
+  connect(_numlockButtonGroup, SIGNAL(buttonClicked(int)), this, SLOT(changed()));
+
+  _keyboardRepeatButtonGroup = new QButtonGroup(ui.keyboardRepeatButtonGroup);
+  _keyboardRepeatButtonGroup->addButton(ui.keyboardRepeatOnRadioButton, 0);
+  _keyboardRepeatButtonGroup->addButton(ui.keyboardRepeatOffRadioButton, 1);
+  _keyboardRepeatButtonGroup->addButton(ui.keyboardRepeatUnchangedRadioButton, 2);
+
+  connect(_keyboardRepeatButtonGroup, SIGNAL(buttonClicked(int)), this, SLOT(changed()));
+  connect(_keyboardRepeatButtonGroup, SIGNAL(buttonClicked(int)), this, SLOT(keyboardRepeatStateChanged(int)));
 
 // Not sure why we need this - if XKB is not found the whole keyboard module won't be compiled
 //#if !defined(HAVE_XTEST) && !defined(HAVE_XKB)
@@ -95,7 +108,7 @@ int  KCMiscKeyboardWidget::getClick()
 // set the slider and LCD values
 void KCMiscKeyboardWidget::setRepeat(TriState keyboardRepeat, int delay_, double rate_)
 {
-	TriStateHelper::setTriState( ui.keyboardRepeatButtonGroup, keyboardRepeat );
+	TriStateHelper::setTriState( _keyboardRepeatButtonGroup, keyboardRepeat );
 //    ui.repeatBox->setChecked(r == AutoRepeatModeOn);
     ui.delay->setValue(delay_);
     ui.rate->setValue(rate_);
@@ -108,15 +121,15 @@ void KCMiscKeyboardWidget::setClickVolume(int v)
     ui.click->setValue(v);
 }
 
-TriState TriStateHelper::getTriState(const KButtonGroup* group)
+TriState TriStateHelper::getTriState(const QButtonGroup* group)
 {
-    int selected = group->selected();
+    int selected = group->checkedId();
     return selected < 0 ? STATE_UNCHANGED : getTriState(selected);
 }
 
-void TriStateHelper::setTriState(KButtonGroup* group, TriState state)
+void TriStateHelper::setTriState(QButtonGroup* group, TriState state)
 {
-    group->setSelected( getInt(state) );
+    group->button( getInt(state) )->click();
 }
 
 void KCMiscKeyboardWidget::load()
@@ -152,7 +165,7 @@ void KCMiscKeyboardWidget::load()
   //  setRepeat(kbd.global_auto_repeat, ui.delay->value(), ui.rate->value());
 
   numlockState = TriStateHelper::getTriState(config.readEntry( "NumLock", TriStateHelper::getInt(STATE_UNCHANGED) ));
-  TriStateHelper::setTriState( ui.numlockButtonGroup, numlockState );
+  TriStateHelper::setTriState( _numlockButtonGroup, numlockState );
 
   ui.delay->blockSignals(false);
   ui.rate->blockSignals(false);
@@ -164,8 +177,8 @@ void KCMiscKeyboardWidget::save()
   KConfigGroup config(KSharedConfig::openConfig("kcminputrc", KConfig::NoGlobals), "Keyboard");
 
   clickVolume = getClick();
-  keyboardRepeat = TriStateHelper::getTriState(ui.keyboardRepeatButtonGroup);
-  numlockState = TriStateHelper::getTriState(ui.numlockButtonGroup);
+  keyboardRepeat = TriStateHelper::getTriState(_keyboardRepeatButtonGroup);
+  numlockState = TriStateHelper::getTriState(_numlockButtonGroup);
 
   config.writeEntry("ClickVolume",clickVolume);
   config.writeEntry("KeyboardRepeating", TriStateHelper::getInt(keyboardRepeat));
@@ -179,7 +192,7 @@ void KCMiscKeyboardWidget::defaults()
 {
     setClickVolume(50);
     setRepeat(STATE_ON, 660, 25);
-    TriStateHelper::setTriState( ui.numlockButtonGroup, STATE_UNCHANGED );
+    TriStateHelper::setTriState( _numlockButtonGroup, STATE_UNCHANGED );
     emit changed(true);
 }
 
