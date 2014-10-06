@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>577</width>
-    <height>361</height>
+    <height>401</height>
    </rect>
   </property>
   <layout class="QGridLayout" name="gridLayout">
@@ -36,7 +36,7 @@
          <item row="1" column="0">
           <widget class="QRadioButton" name="RadioButton1_2">
            <property name="text">
-            <string>Turn o&amp;ff</string>
+            <string>&amp;Turn off</string>
            </property>
           </widget>
          </item>
@@ -82,7 +82,7 @@
          <item row="2" column="0">
           <widget class="QRadioButton" name="keyboardRepeatUnchangedRadioButton">
            <property name="text">
-            <string>Leave unchan&amp;ged</string>
+            <string>&amp;Leave unchanged</string>
            </property>
           </widget>
          </item>
@@ -156,7 +156,7 @@
           </widget>
          </item>
          <item row="0" column="2">
-          <widget class="KIntNumInput" name="delay">
+          <widget class="QSpinBox" name="delay">
            <property name="whatsThis">
             <string>If supported, this option allows you to set the delay after which a pressed key will start generating keycodes. The 'Repeat rate' option controls the frequency of these keycodes.</string>
            </property>
@@ -210,7 +210,7 @@
           </widget>
          </item>
          <item row="1" column="2">
-          <widget class="KDoubleNumInput" name="rate">
+          <widget class="QDoubleSpinBox" name="rate">
            <property name="whatsThis">
             <string>If supported, this option allows you to set the rate at which keycodes are generated while a key is pressed.</string>
            </property>
@@ -260,7 +260,7 @@
            <string>If supported, this option allows you to hear audible clicks from your computer's speakers when you press the keys on your keyboard. This might be useful if your keyboard does not have mechanical keys, or if the sound that the keys make is very soft.&lt;p&gt;You can change the loudness of the key click feedback by dragging the slider button or by clicking the up/down arrows on the spin box. Setting the volume to 0% turns off the key click.</string>
           </property>
           <property name="text">
-           <string>Key click &amp;volume:</string>
+           <string>&amp;Key click volume:</string>
           </property>
           <property name="buddy">
            <cstring>click</cstring>
@@ -312,21 +312,9 @@
  </widget>
  <customwidgets>
   <customwidget>
-   <class>KDoubleNumInput</class>
-   <extends>QWidget</extends>
-   <header>knuminput.h</header>
-   <container>1</container>
-  </customwidget>
-  <customwidget>
    <class>KButtonGroup</class>
    <extends>QGroupBox</extends>
    <header>kbuttongroup.h</header>
-   <container>1</container>
-  </customwidget>
-  <customwidget>
-   <class>KIntNumInput</class>
-   <extends>QWidget</extends>
-   <header>knuminput.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

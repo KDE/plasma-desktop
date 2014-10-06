@@ -641,7 +641,8 @@ void KCMKeyboardWidget::updateShortcutsUI()
 
 	delete actionCollection;
 	actionCollection = new KeyboardLayoutActionCollection(this, true);
-	QAction* toggleAction = actionCollection->getToggeAction();
+	//QAction* toggleAction = 
+	actionCollection->getToggeAction();
 //    const auto shortcuts = KGlobalAccel::self()->shortcut(toggleAction);
 //    uiWidget->kdeKeySequence->setKeySequence(shortcuts.isEmpty() ? QKeySequence() : shortcuts.first());
 //    actionCollection->loadLayoutShortcuts(keyboardConfig->layouts, rules);

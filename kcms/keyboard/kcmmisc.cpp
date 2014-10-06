@@ -30,11 +30,12 @@
 #include <QCheckBox>
 #include <QWhatsThis>
 #include <QX11Info>
+#include <QSpinBox>
+#include <QDoubleSpinBox>
 
 #include <klocale.h>
 #include <kconfig.h>
 #include <KConfigGroup>
-#include <knuminput.h>
 
 #include <X11/Xlib.h>
 
@@ -45,9 +46,10 @@ KCMiscKeyboardWidget::KCMiscKeyboardWidget(QWidget *parent)
 {
   ui.setupUi(this);
 
-  ui.delay->setRange(100, 5000, 50);
-  ui.delay->setSliderEnabled(false);
-  ui.rate->setRange(0.2, 50, 5, false);
+  ui.delay->setRange(100, 5000);
+  ui.delay->setSingleStep(50);
+  ui.rate->setRange(0.2, 50);
+  ui.rate->setSingleStep(5);
 
   sliderMax = (int)floor (0.5 + 2*(log(5000.0L)-log(100.0L)) / (log(5000.0L)-log(4999.0L)));
   ui.delaySlider->setRange(0, sliderMax);

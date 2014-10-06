@@ -18,7 +18,6 @@
 
 #include "layouts_menu.h"
 
-#include <kmenu.h>
 #include <ktoolinvocation.h>
 #include <klocalizedstring.h>
 
