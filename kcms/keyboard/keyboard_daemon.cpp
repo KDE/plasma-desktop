@@ -93,6 +93,9 @@ void KeyboardDaemon::configureKeyboard()
 	init_keyboard_hardware();
 
 	keyboardConfig.load();
+	if( keyboardConfig.configureLayouts ) {
+        XkbHelper::preInitialize();
+	}
 	XkbHelper::initializeKeyboardLayouts(keyboardConfig);
 	layoutMemory.configChanged();
 
@@ -186,7 +189,7 @@ void KeyboardDaemon::globalSettingsChanged(int category)
 void KeyboardDaemon::layoutChanged()
 {
 	//TODO: pass newLayout into layoutTrayIcon?
-        LayoutUnit newLayout = X11Helper::getCurrentLayout();
+    LayoutUnit newLayout = X11Helper::getCurrentLayout();
 
 	layoutMemory.layoutChanged();
 	if( layoutTrayIcon != NULL ) {

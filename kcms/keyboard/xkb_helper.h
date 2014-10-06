@@ -30,6 +30,7 @@ public:
 	static bool initializeKeyboardLayouts(KeyboardConfig& config);
 	static bool initializeKeyboardLayouts(const QList<LayoutUnit>& layouts);
 	static bool runConfigLayoutCommand(const QStringList& setxkbmapCommandArguments);
+    static bool preInitialize();
 };
 
 #endif /* XKB_HELPER_H_ */
