@@ -30,10 +30,20 @@ Item {
     id: main
 
     z: 999
-    x: plasmoid.availableScreenRect.x
-    y: plasmoid.availableScreenRect.y
-    width: plasmoid.availableScreenRect.width
-    height: plasmoid.availableScreenRect.height
+    anchors.fill: parent
+
+    Item {
+        id: mainArea
+        x: plasmoid.availableScreenRect.x
+        y: plasmoid.availableScreenRect.y
+        width: plasmoid.availableScreenRect.width
+        height: plasmoid.availableScreenRect.height
+
+        onXChanged: placeToolBoxTimer.restart();
+        onYChanged: placeToolBoxTimer.restart();
+        onWidthChanged: placeToolBoxTimer.restart();
+        onHeightChanged: placeToolBoxTimer.restart();
+    }
 
     signal minimumWidthChanged
     signal minimumHeightChanged
@@ -46,12 +56,8 @@ Item {
     property int iconWidth: units.iconSizes.smallMedium
     property int iconHeight: iconWidth
 
-    onWidthChanged: {
-        placeToolBoxTimer.restart();
-    }
-    onHeightChanged: {
-        placeToolBoxTimer.restart();
-    }
+    onWidthChanged: placeToolBoxTimer.restart();
+    onHeightChanged: placeToolBoxTimer.restart();
 
     LayoutMirroring.enabled: (Qt.application.layoutDirection === Qt.RightToLeft)
     LayoutMirroring.childrenInherit: true
@@ -128,33 +134,33 @@ Item {
 
         switch (ts) {
         case "top":
-            ty = 0;
+            ty = mainArea.y;
             break;
         case "left":
-            tx = 0;
+            tx = mainArea.x;
             break;
         case "right":
-            tx = main.width - toolBoxButton.width;
+            tx = mainArea.width + mainArea.x - toolBoxButton.width;
             break;
         case "bottom":
-            ty = main.height - toolBoxButton.height;
+            ty = mainArea.height + mainArea.y - toolBoxButton.height;
             break;
         case "topleft":
-            tx = 0;
-            ty = 0;
+            tx = mainArea.x;
+            ty = mainArea.y;
             break;
         case "topright":
-            tx = main.width - toolBoxButton.height;
-            ty = 0;
+            tx = mainArea.width + mainArea.x - toolBoxButton.height;
+            ty = mainArea.y;
             break;
         case "bottomleft":
-            tx = 0;
-            ty = main.height - toolBoxButton.height;
+            tx = mainArea.x;
+            ty = mainArea.height + mainArea.y - toolBoxButton.height;
             break;
         case "bottomright":
         default:
-            tx = main.width - toolBoxButton.height;
-            ty = main.height - toolBoxButton.height;
+            tx = mainArea.width + mainArea.x - toolBoxButton.height;
+            ty = mainArea.height + mainArea.y - toolBoxButton.height;
             break;
         }
         //print("XXXY Setting toolbox to: " + ts + " " + tx + "x" + ty + " screen: " + main.width+ "x" + main.height+"");
