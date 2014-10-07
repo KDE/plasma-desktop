@@ -38,21 +38,21 @@ PlasmaComponents.Button {
         onPositionChanged: {
             switch (panel.location) {
             case PlasmaCore.Types.TopEdge:
-                configDialog.y = mouse.screenY - mapToItem(dialogRoot, 0, startMouseY).y
-                panel.thickness = Math.max(units.gridUnit, configDialog.y - panel.y)
+                configDialog.y = Math.min(panel.screen.geometry.height/2, mouse.screenY - mapToItem(dialogRoot, 0, startMouseY).y);
+                panel.thickness = Math.max(units.gridUnit, configDialog.y - panel.y);
                 break;
             case PlasmaCore.Types.LeftEdge:
-                configDialog.x = mouse.screenX - mapToItem(dialogRoot, startMouseX, 0).x
-                panel.thickness = Math.max(units.gridUnit, configDialog.x - panel.x)
+                configDialog.x = Math.min(panel.screen.geometry.width/2, mouse.screenX - mapToItem(dialogRoot, startMouseX, 0).x);
+                panel.thickness = Math.max(units.gridUnit, configDialog.x - panel.x);
                 break;
             case PlasmaCore.Types.RightEdge:
-                configDialog.x = mouse.screenX - mapToItem(dialogRoot, startMouseX, 0).x
-                panel.thickness = Math.max(units.gridUnit, panel.screen.geometry.x + panel.screen.geometry.width - (configDialog.x + configDialog.width))
+                configDialog.x = Math.max(panel.screen.geometry.width/2, mouse.screenX - mapToItem(dialogRoot, startMouseX, 0).x);
+                panel.thickness = Math.max(units.gridUnit, panel.screen.geometry.x + panel.screen.geometry.width - (configDialog.x + configDialog.width));
                 break;
             case PlasmaCore.Types.BottomEdge:
             default:
-                configDialog.y = mouse.screenY - mapToItem(dialogRoot, 0, startMouseY).y
-                panel.thickness = Math.max(units.gridUnit, panel.screen.geometry.y + panel.screen.geometry.height - (configDialog.y + configDialog.height))
+                configDialog.y = Math.max(panel.screen.geometry.height/2, mouse.screenY - mapToItem(dialogRoot, 0, startMouseY).y);
+                panel.thickness = Math.max(units.gridUnit, panel.screen.geometry.y + panel.screen.geometry.height - (configDialog.y + configDialog.height));
             }
         }
     }
