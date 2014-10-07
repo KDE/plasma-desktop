@@ -26,6 +26,8 @@
 
 #include <QAbstractNativeEventFilter>
 #include <QGuiApplication>
+#include <QMap>
+#include <QByteArray>
 #include <QPair>
 #include "panel.h"
 
@@ -49,6 +51,7 @@ public:
     void init();
     void nameAcquired();
     void nameLost();
+    QByteArray normalizeIconName(const QByteArray& icon) const;
 private Q_SLOTS:
     void clean();
     void grabKey();
@@ -67,6 +70,7 @@ private:
     bool m_keyboardGrabbed;
     bool m_doGrab;
     xcb_key_symbols_t* m_syms;
+    QMap<QByteArray, QByteArray> m_iconMap;
 };
 
 #endif // APP_H

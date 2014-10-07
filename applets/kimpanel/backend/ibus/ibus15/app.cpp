@@ -93,6 +93,89 @@ ibus_disconnected_cb (IBusBus  *m_bus,
     app->finalize();
 }
 
+static void initIconMap(QMap<QByteArray, QByteArray>& iconMap)
+{
+    iconMap["gtk-about"] = "help-about";
+    iconMap["gtk-add"] = "list-add";
+    iconMap["gtk-bold"] = "format-text-bold";
+    iconMap["gtk-cdrom"] = "media-optical";
+    iconMap["gtk-clear"] = "edit-clear";
+    iconMap["gtk-close"] = "window-close";
+    iconMap["gtk-copy"] = "edit-copy";
+    iconMap["gtk-cut"] = "edit-cut";
+    iconMap["gtk-delete"] = "edit-delete";
+    iconMap["gtk-dialog-authentication"] = "dialog-password";
+    iconMap["gtk-dialog-info"] = "dialog-information";
+    iconMap["gtk-dialog-warning"] = "dialog-warning";
+    iconMap["gtk-dialog-error"] = "dialog-error";
+    iconMap["gtk-dialog-question"] = "dialog-question";
+    iconMap["gtk-directory"] = "folder";
+    iconMap["gtk-execute"] = "system-run";
+    iconMap["gtk-file"] = "text-x-generic";
+    iconMap["gtk-find"] = "edit-find";
+    iconMap["gtk-find-and-replace"] = "edit-find-replace";
+    iconMap["gtk-floppy"] = "media-floppy";
+    iconMap["gtk-fullscreen"] = "view-fullscreen";
+    iconMap["gtk-goto-bottom"] = "go-bottom";
+    iconMap["gtk-goto-first"] = "go-first";
+    iconMap["gtk-goto-last"] = "go-last";
+    iconMap["gtk-goto-top"] = "go-top";
+    iconMap["gtk-go-back"] = "go-previous";
+    iconMap["gtk-go-down"] = "go-down";
+    iconMap["gtk-go-forward"] = "go-next";
+    iconMap["gtk-go-up"] = "go-up";
+    iconMap["gtk-harddisk"] = "drive-harddisk";
+    iconMap["gtk-help"] = "help-browser";
+    iconMap["gtk-home"] = "go-home";
+    iconMap["gtk-indent"] = "format-indent-more";
+    iconMap["gtk-info"] = "dialog-information";
+    iconMap["gtk-italic"] = "format-text-italic";
+    iconMap["gtk-jump-to"] = "go-jump";
+    iconMap["gtk-justify-center"] = "format-justify-center";
+    iconMap["gtk-justify-fill"] = "format-justify-fill";
+    iconMap["gtk-justify-left"] = "format-justify-left";
+    iconMap["gtk-justify-right"] = "format-justify-right";
+    iconMap["gtk-leave-fullscreen"] = "view-restore";
+    iconMap["gtk-missing-image"] = "image-missing";
+    iconMap["gtk-media-forward"] = "media-seek-forward";
+    iconMap["gtk-media-next"] = "media-skip-forward";
+    iconMap["gtk-media-pause"] = "media-playback-pause";
+    iconMap["gtk-media-play"] = "media-playback-start";
+    iconMap["gtk-media-previous"] = "media-skip-backward";
+    iconMap["gtk-media-record"] = "media-record";
+    iconMap["gtk-media-rewind"] = "media-seek-backward";
+    iconMap["gtk-media-stop"] = "media-playback-stop";
+    iconMap["gtk-network"] = "network-workgroup";
+    iconMap["gtk-new"] = "document-new";
+    iconMap["gtk-open"] = "document-open";
+    iconMap["gtk-page-setup"] = "document-page-setup";
+    iconMap["gtk-paste"] = "edit-paste";
+    iconMap["gtk-preferences"] = "preferences-system";
+    iconMap["gtk-print"] = "document-print";
+    iconMap["gtk-print-error"] = "printer-error";
+    iconMap["gtk-properties"] = "document-properties";
+    iconMap["gtk-quit"] = "application-exit";
+    iconMap["gtk-redo"] = "edit-redo";
+    iconMap["gtk-refresh"] = "view-refresh";
+    iconMap["gtk-remove"] = "list-remove";
+    iconMap["gtk-revert-to-saved"] = "document-revert";
+    iconMap["gtk-save"] = "document-save";
+    iconMap["gtk-save-as"] = "document-save-as";
+    iconMap["gtk-select-all"] = "edit-select-all";
+    iconMap["gtk-sort-ascending"] = "view-sort-ascending";
+    iconMap["gtk-sort-descending"] = "view-sort-descending";
+    iconMap["gtk-spell-check"] = "tools-check-spelling";
+    iconMap["gtk-stop"] = "process-stop";
+    iconMap["gtk-strikethrough"] = "format-text-strikethrough";
+    iconMap["gtk-underline"] = "format-text-underline";
+    iconMap["gtk-undo"] = "edit-undo";
+    iconMap["gtk-unindent"] = "format-indent-less";
+    iconMap["gtk-zoom-100"] = "zoom-original";
+    iconMap["gtk-zoom-fit"] = "zoom-fit-best";
+    iconMap["gtk-zoom-in"] = "zoom-in";
+    iconMap["gtk-zoom-out"] = "zoom-out";
+}
+
 App::App(int argc, char** argv): QGuiApplication(argc, argv)
     ,m_eventFilter(new XcbEventFilter)
     ,m_init(false)
@@ -111,6 +194,8 @@ App::App(int argc, char** argv): QGuiApplication(argc, argv)
     if (ibus_bus_is_connected (m_bus)) {
         init();
     }
+
+    initIconMap(m_iconMap);
 }
 
 uint App::getPrimaryModifier(uint state)
@@ -246,6 +331,15 @@ void App::nameLost()
         g_object_unref(m_impanel);
     }
     m_impanel = NULL;
+}
+
+QByteArray App::normalizeIconName(const QByteArray& icon) const
+{
+    if (m_iconMap.contains(icon)) {
+        return m_iconMap[icon];
+    }
+
+    return icon;
 }
 
 void App::setTriggerKeys(QList< TriggerKey > triggersList)

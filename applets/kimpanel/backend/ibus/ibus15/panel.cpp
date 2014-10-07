@@ -44,7 +44,6 @@ struct _IBusPanelImpanel {
     IBusPanelService    parent;
     IBusBus            *bus;
     GDBusConnection    *conn;
-    IBusProperty       *logo_prop;
     PropertyManager* propManager;
     EngineManager* engineManager;
     XkbLayoutManager* xkbLayoutManager;
@@ -64,8 +63,10 @@ impanel_set_engine(IBusPanelImpanel* impanel, const char* name);
 
 static QByteArray
 ibus_property_to_propstr (IBusProperty *property,
-                          gboolean useSymbol = FALSE,
-                          IBusEngineDesc* engine = NULL);
+                          gboolean useSymbol = FALSE);
+
+static QByteArray
+ibus_engine_desc_to_logo_propstr(IBusEngineDesc* engine);
 
 void
 impanel_update_logo_by_engine(IBusPanelImpanel* impanel, IBusEngineDesc* engine_desc)
@@ -74,14 +75,7 @@ impanel_update_logo_by_engine(IBusPanelImpanel* impanel, IBusEngineDesc* engine_
         return;
     }
 
-    const gchar* icon_name = "input-keyboard";
-    if (engine_desc) {
-        icon_name = ibus_engine_desc_get_icon (engine_desc);
-    }
-
-    ibus_property_set_icon (impanel->logo_prop, icon_name);
-
-    QByteArray propstr = ibus_property_to_propstr(impanel->logo_prop, TRUE, engine_desc);
+    QByteArray propstr = ibus_engine_desc_to_logo_propstr(engine_desc);
 
     g_dbus_connection_emit_signal (impanel->conn,
                                     NULL, "/kimpanel", "org.kde.kimpanel.inputmethod", "UpdateProperty",
@@ -271,32 +265,81 @@ ibus_property_args_to_propstr (const char *key,
     QByteArray propstr("/IBus/");
     QByteArray str(key);
     str.replace(':', '!');
-    propstr += str.constData();
+
+    App* app = static_cast<App*>(qApp);
+
+    propstr += str;
     propstr += prop_sep;
-    propstr += label;
+    propstr += QByteArray(label).replace(':', '-').constData();
     propstr += prop_sep;
-    propstr += icon;
+    propstr += app->normalizeIconName(QByteArray(icon).replace(':', '-'));
     propstr += prop_sep;
-    propstr += tooltip;
+    propstr += QByteArray(tooltip).replace(':', '-').constData();
 
     return propstr;
 }
 
 static QByteArray
-ibus_property_to_propstr (IBusProperty *property,
-                          gboolean useSymbol,
-                          IBusEngineDesc* engine)
+ibus_engine_desc_to_logo_propstr(IBusEngineDesc* engine)
 {
-    const gchar* label = ibus_text_get_text (useSymbol ? ibus_property_get_symbol (property) : ibus_property_get_label(property));
-    const gchar* icon = ibus_property_get_icon (property);
-    if (engine && strncmp("xkb:", ibus_engine_desc_get_name(engine), 4) == 0) {
-        label = ibus_engine_desc_get_name(engine) + 4;
-        icon = "";
+    const gchar* label = "IBus";
+    const gchar* tooltip = "";
+    const gchar* icon = "input-keyboard";
+
+    gchar xkbLabel[3];
+    if (engine) {
+        const gchar* iconname = ibus_engine_desc_get_icon(engine);
+        if (iconname && iconname[0]) {
+            icon = iconname;
+        }
+
+        if (strncmp("xkb:", ibus_engine_desc_get_name(engine), 4) == 0) {
+            strncpy(xkbLabel, ibus_engine_desc_get_name(engine) + 4, 2);
+            xkbLabel[2] = 0;
+            int i = 0;
+            while (xkbLabel[i]) {
+                if (xkbLabel[i] == ':') {
+                    xkbLabel[i] = 0;
+                }
+                i++;
+            }
+            label = xkbLabel;
+            icon = "";
+        }
+
+        const gchar* longname = ibus_engine_desc_get_longname(engine);
+        if (longname && longname[0]) {
+            tooltip = longname;
+        }
     }
+
+    return ibus_property_args_to_propstr("Logo",
+                                         label,
+                                         icon,
+                                         tooltip);
+}
+
+static QByteArray
+ibus_property_to_propstr (IBusProperty *property,
+                          gboolean useSymbol)
+{
+    const gchar* label = NULL;
+    const gchar* tooltip = ibus_text_get_text (ibus_property_get_tooltip (property));
+    const gchar* icon = ibus_property_get_icon (property);
+
+    if (useSymbol) {
+        label = ibus_text_get_text(ibus_property_get_symbol (property));
+        if (!label || label[0] == '\0') {
+            label = ibus_text_get_text(ibus_property_get_label(property));
+        }
+    } else {
+        label = ibus_text_get_text(ibus_property_get_label(property));
+    }
+
     return ibus_property_args_to_propstr(ibus_property_get_key (property),
                                          label,
                                          icon,
-                                         ibus_text_get_text (ibus_property_get_tooltip (property)));
+                                         tooltip);
 }
 
 static QByteArray
@@ -961,17 +1004,6 @@ ibus_panel_impanel_init (IBusPanelImpanel *impanel)
                                on_name_lost,
                                impanel, NULL);
 
-    // some custom property
-    impanel->logo_prop = ibus_property_new ("Logo",
-                                            PROP_TYPE_NORMAL,
-                                            ibus_text_new_from_string ("IBus"),
-                                            "ibus",
-                                            ibus_text_new_from_string ("IBus input method"),
-                                            FALSE,
-                                            FALSE,
-                                            PROP_STATE_UNCHECKED,
-                                            NULL);
-
     impanel->propManager = new PropertyManager;
     impanel->engineManager = new EngineManager;
     impanel->xkbLayoutManager = new XkbLayoutManager;
@@ -980,8 +1012,6 @@ ibus_panel_impanel_init (IBusPanelImpanel *impanel)
 static void
 ibus_panel_impanel_destroy (IBusPanelImpanel *impanel)
 {
-    g_object_unref (impanel->logo_prop);
-    impanel->logo_prop = NULL;
     delete impanel->propManager;
     impanel->propManager = NULL;
     delete impanel->engineManager;
@@ -1049,7 +1079,13 @@ ibus_panel_impanel_real_register_properties(IBusPanelImpanel* impanel)
     GVariantBuilder builder;
     g_variant_builder_init (&builder, G_VARIANT_TYPE ("as"));
 
-    QByteArray propstr = ibus_property_to_propstr(impanel->logo_prop, TRUE);
+    IBusEngineDesc* engine_desc = NULL;
+    if (impanel->selected >= 0 && static_cast<size_t>(impanel->selected) < impanel->engineManager->length()) {
+        engine_desc = impanel->engineManager->engines()[impanel->selected];
+    } else {
+        engine_desc = ibus_bus_get_global_engine(impanel->bus);
+    }
+    QByteArray propstr = ibus_engine_desc_to_logo_propstr(engine_desc);
     g_variant_builder_add (&builder, "s", propstr.constData());
 
     IBusPropList* prop_list = impanel->propManager->properties();
