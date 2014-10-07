@@ -28,7 +28,7 @@
 
 #include <Plasma/Package>
 
-class QQuickWidget;
+class QQuickView;
 class QStandardItemModel;
 
 class KCMLookandFeel : public KCModule
@@ -100,7 +100,7 @@ Q_SIGNALS:
 private:
     QDir cursorThemeDir(const QString &theme, const int depth);
     const QStringList cursorSearchPaths();
-    QQuickWidget *m_quickWidget;
+    QQuickView *m_quickView;
     QStandardItemModel *m_model;
     Plasma::Package m_package;
     QString m_selectedPlugin;
