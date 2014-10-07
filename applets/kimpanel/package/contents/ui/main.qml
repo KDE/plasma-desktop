@@ -127,6 +127,35 @@ Item {
         }
     }
 
+    Timer {
+        id: timer
+        interval: 50
+        onTriggered: {
+            var data = dataEngine.data["statusbar"]["Properties"];
+            if (!data) {
+                return;
+            }
+            kimpanel.visibleButtons = data.length;
+            var count = list.count;
+            if (data.length < count) {
+                list.remove(data.length, count - data.length);
+            }
+
+            var i;
+            for (i = 0; i < data.length; i ++) {
+                var itemData = {'key': data[i].key,
+                                'icon': data[i].icon,
+                                'label': data[i].label,
+                                'tip': data[i].tip };
+                if (i < count) {
+                    list.set(i, itemData);
+                } else {
+                    list.append(itemData);
+                }
+            }
+        }
+    }
+
     PlasmaCore.DataSource {
         id: dataEngine
         engine: "kimpanel"
@@ -139,43 +168,7 @@ Item {
                 return;
             }
 
-            kimpanel.visibleButtons = data.length;
-            var newKeys = {};
-            var i, j;
-            for (i = 0; i < data.length; i ++) {
-                newKeys[data[i].key] = true;
-            }
-            i = 0;
-            while (i < list.count) {
-                if (newKeys[list.get(i).key]) {
-                    i++;
-                } else {
-                    list.remove(i);
-                }
-            }
-
-            for (i = 0; i < data.length; i ++) {
-                var found = false;
-                for (j = i; j < list.count; j++) {
-                    if (list.get(j).key == data[i].key) {
-                        found = true;
-                        list.set(j, {'key': data[i].key,
-                                     'icon': data[i].icon,
-                                     'label': data[i].label,
-                                     'tip': data[i].tip });
-                        if (j != i) {
-                            list.move(j, i, 1);
-                        }
-                        break;
-                    }
-                }
-                if (!found) {
-                    list.insert(i, {'key': data[i].key,
-                                    'icon': data[i].icon,
-                                    'label': data[i].label,
-                                    'tip': data[i].tip });
-                }
-            }
+            timer.restart();
         }
     }
 }
