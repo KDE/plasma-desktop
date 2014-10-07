@@ -268,7 +268,7 @@ ibus_property_args_to_propstr (const char *key,
                                const char *icon,
                                const char *tooltip)
 {
-    QByteArray propstr("/IBus");
+    QByteArray propstr("/IBus/");
     QByteArray str(key);
     str.replace(':', '!');
     propstr += str.constData();
