@@ -150,6 +150,7 @@ function checkLastSpacer() {
         LayoutManager.plasmoid = plasmoid;
         LayoutManager.root = root;
         LayoutManager.layout = currentLayout;
+        LayoutManager.lastSpacer = lastSpacer;
         LayoutManager.restore();
         containmentSizeSyncTimer.restart();
         plasmoid.action("configure").visible = !plasmoid.immutable;
