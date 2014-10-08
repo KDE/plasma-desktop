@@ -29,6 +29,10 @@ Column {
     id: tooltipContentItem
 
     property Item toolTip
+    property variant windows
+    property string mainText
+    property string subText
+    property variant icon
 
     property int preferredTextWidth: theme.mSize(theme.defaultFont).width * 30
     property int _s: units.largeSpacing / 2
@@ -47,7 +51,7 @@ Column {
         height: childrenRect.height
         spacing: units.largeSpacing
         Repeater {
-            model: toolTip ? toolTip.windows : null
+            model: windows
 
             PlasmaCore.WindowThumbnail {
                 y: _s
@@ -65,7 +69,7 @@ Column {
 
                     onClicked: {
                         tasks.activateWindow(modelData);
-                        toolTip.hideToolTip()
+                        toolTip.hideToolTip();
                     }
 
                     onContainsMouseChanged: {
@@ -131,7 +135,6 @@ Column {
 
         Item {
             id: imageContainer
-            visible: toolTip != null && toolTip.icon != null
             width: tooltipIcon.width
             height: tooltipIcon.height
             y: _s
@@ -139,9 +142,9 @@ Column {
             PlasmaCore.IconItem {
                 id: tooltipIcon
                 x: _s
-                width: toolTip != undefined && toolTip.icon != null ? units.iconSizes.desktop : 0
+                width: units.iconSizes.desktop
                 height: width
-                source: toolTip != undefined && toolTip.icon != null ? toolTip.icon : ""
+                source: icon
             }
         }
 
@@ -154,7 +157,7 @@ Column {
                 id: tooltipMaintextPlaceholder
                 visible: false
                 level: 3
-                text: toolTip ? toolTip.mainText : ""
+                text: mainText
             }
             PlasmaExtras.Heading {
                 id: tooltipMaintext
@@ -162,13 +165,13 @@ Column {
                 width: Math.min(tooltipMaintextPlaceholder.width, preferredTextWidth)
                 //width: 400
                 elide: Text.ElideRight
-                text: toolTip ? toolTip.mainText : ""
+                text: mainText
             }
             PlasmaComponents.Label {
                 id: tooltipSubtext
                 width: tooltipContentItem.preferredTextWidth
                 wrapMode: Text.WordWrap
-                text: toolTip ? toolTip.subText : ""
+                text: subText
                 opacity: 0.5
             }
         }

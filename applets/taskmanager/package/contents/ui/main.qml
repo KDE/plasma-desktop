@@ -201,6 +201,8 @@ Item {
 
     ToolTipDelegate {
         id: toolTipDelegate
+
+        visible: false
     }
 
     TaskList {
