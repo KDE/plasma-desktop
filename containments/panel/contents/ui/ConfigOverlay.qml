@@ -307,7 +307,7 @@ MouseArea {
         visualParent: currentApplet
         visible: currentApplet
         type: PlasmaCore.Dialog.Dock
-        flags: Qt.Popup
+        flags: Qt.WindowStaysOnTopHint
         location: plasmoid.location
         mainItem: Row {
             Layout.minimumWidth: implicitWidth
