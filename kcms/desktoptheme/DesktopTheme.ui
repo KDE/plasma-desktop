@@ -35,7 +35,7 @@
         <widget class="QListView" name="m_theme"/>
        </item>
        <item row="1" column="5">
-        <widget class="KPushButton" name="m_newThemeButton">
+        <widget class="QPushButton" name="m_newThemeButton">
          <property name="enabled">
           <bool>true</bool>
          </property>
@@ -87,11 +87,6 @@
   </layout>
  </widget>
  <customwidgets>
-  <customwidget>
-   <class>KPushButton</class>
-   <extends>QPushButton</extends>
-   <header>kpushbutton.h</header>
-  </customwidget>
   <customwidget>
    <class>DesktopThemeDetails</class>
    <extends>QWidget</extends>
