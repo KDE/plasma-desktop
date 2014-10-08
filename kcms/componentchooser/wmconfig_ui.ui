@@ -52,7 +52,7 @@
       </widget>
      </item>
      <item>
-      <widget class="KPushButton" name="configureButton">
+      <widget class="QPushButton" name="configureButton">
        <property name="enabled">
         <bool>false</bool>
        </property>
@@ -113,11 +113,6 @@
      <class>KComboBox</class>
      <extends>QComboBox</extends>
      <header location="global">KDE/KComboBox</header>
-   </customwidget>
-   <customwidget>
-     <class>KPushButton</class>
-     <extends>QPushButton</extends>
-     <header location="global">KDE/KPushButton</header>
    </customwidget>
  </customwidgets>
  <resources/>

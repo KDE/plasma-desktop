@@ -100,26 +100,25 @@ IconThemesConfig::IconThemesConfig(QWidget *parent)
   m_iconThemes->setRootIsDecorated(false);
   m_iconThemes->setSortingEnabled(true);
   m_iconThemes->sortByColumn(0, Qt::AscendingOrder);
-  connect(m_iconThemes,SIGNAL(currentItemChanged(QTreeWidgetItem *, QTreeWidgetItem *)),
-		SLOT(themeSelected(QTreeWidgetItem *)));
+  connect(m_iconThemes, &QTreeWidget::currentItemChanged, this, &IconThemesConfig::themeSelected);
 
   QPushButton *installButton=new QPushButton( QIcon::fromTheme("document-import"), i18n("Install Theme File..."), this);
   installButton->setObjectName( QLatin1String("InstallNewTheme" ));
   installButton->setToolTip(i18n("Install a theme archive file you already have locally"));
   installButton->setWhatsThis(i18n("If you already have a theme archive locally, this button will unpack it and make it available for KDE applications"));
-  connect(installButton,SIGNAL(clicked()),SLOT(installNewTheme()));
+  connect(installButton, &QPushButton::clicked, this, &IconThemesConfig::installNewTheme);
 
   QPushButton *newButton=new QPushButton( QIcon::fromTheme("get-hot-new-stuff"), i18n("Get New Themes..."), this);
   newButton->setObjectName( QLatin1String("GetNewTheme" ));
   newButton->setToolTip(i18n("Get new themes from the Internet"));
   newButton->setWhatsThis(i18n("You need to be connected to the Internet to use this action. A dialog will display a list of themes from the http://www.kde.org website. Clicking the Install button associated with a theme will install this theme locally."));
-  connect(newButton,SIGNAL(clicked()),SLOT(getNewTheme()));
+  connect(newButton, &QPushButton::clicked, this, &IconThemesConfig::getNewTheme);
 
   m_removeButton=new QPushButton( QIcon::fromTheme("edit-delete"), i18n("Remove Theme"), this);
   m_removeButton->setObjectName( QLatin1String("RemoveTheme" ));
   m_removeButton->setToolTip(i18n("Remove the selected theme from your disk"));
   m_removeButton->setWhatsThis(i18n("This will remove the selected theme from your disk."));
-  connect(m_removeButton,SIGNAL(clicked()),SLOT(removeSelectedTheme()));
+  connect(m_removeButton, &QPushButton::clicked, this, &IconThemesConfig::removeSelectedTheme);
 
   topLayout->addWidget(
 	new QLabel(i18n("Select the icon theme you want to use:"), this));

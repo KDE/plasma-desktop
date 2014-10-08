@@ -14,7 +14,6 @@
  ***************************************************************************/
 
 #include "componentchooser.h"
-#include "componentchooser.moc"
 
 #include "componentchooserbrowser.h"
 #include "componentchooseremail.h"

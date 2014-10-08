@@ -14,7 +14,6 @@
  ***************************************************************************/
 
 #include "componentchooserterminal.h"
-#include "componentchooserterminal.moc"
 
 #include <ktoolinvocation.h>
 #include <QtDBus/QtDBus>

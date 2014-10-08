@@ -16,7 +16,6 @@
 #include <config-workspace.h>
 
 #include "componentchooserwm.h"
-#include "componentchooserwm.moc"
 
 #include <kglobal.h>
 #include <kdebug.h>
