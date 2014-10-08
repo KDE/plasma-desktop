@@ -33,13 +33,13 @@ DragDrop.DropArea {
     height: 48
 
 //BEGIN properties
-    Layout.minimumWidth: currentLayout.Layout.minimumWidth + (isHorizontal && toolBox ? toolBox.width : 0)
-    Layout.maximumWidth: currentLayout.Layout.maximumWidth + (isHorizontal && toolBox ? toolBox.width : 0)
-    Layout.preferredWidth: currentLayout.Layout.preferredWidth + (isHorizontal && toolBox ? toolBox.width : 0)
+    Layout.minimumWidth: fixedWidth > 0 ? fixedWidth : (currentLayout.Layout.minimumWidth + (isHorizontal && toolBox ? toolBox.width : 0))
+    Layout.maximumWidth: fixedWidth > 0 ? fixedWidth : (currentLayout.Layout.maximumWidth + (isHorizontal && toolBox ? toolBox.width : 0))
+    Layout.preferredWidth: fixedWidth > 0 ? fixedWidth : (currentLayout.Layout.preferredWidth + (isHorizontal && toolBox ? toolBox.width : 0))
 
-    Layout.minimumHeight: currentLayout.Layout.minimumHeight + (!isHorizontal && toolBox ? toolBox.height : 0)
-    Layout.maximumHeight: currentLayout.Layout.maximumHeight + (!isHorizontal && toolBox ? toolBox.height : 0)
-    Layout.preferredHeight: currentLayout.Layout.preferredHeight + (!isHorizontal && toolBox? toolBox.height : 0)
+    Layout.minimumHeight: fixedHeight > 0 ? fixedHeight : (currentLayout.Layout.minimumHeight + (!isHorizontal && toolBox ? toolBox.height : 0))
+    Layout.maximumHeight: fixedHeight > 0 ? fixedHeight : (currentLayout.Layout.maximumHeight + (!isHorizontal && toolBox ? toolBox.height : 0))
+    Layout.preferredHeight: fixedHeight > 0 ? fixedHeight : (currentLayout.Layout.preferredHeight + (!isHorizontal && toolBox? toolBox.height : 0))
 
     property Item toolBox
 
@@ -47,6 +47,9 @@ DragDrop.DropArea {
     property Item dragOverlay
 
     property bool isHorizontal: plasmoid.formFactor != PlasmaCore.Types.Vertical
+    property int fixedWidth: 0
+    property int fixedHeight: 0
+
 //END properties
 
 //BEGIN functions
@@ -161,6 +164,12 @@ function checkLastSpacer() {
         if (plasmoid.immutable) {
             return;
         }
+        //during drag operations we disable panel auto resize
+        if (root.isHorizontal) {
+            root.fixedWidth = root.width
+        } else {
+            root.fixedHeight = root.height
+        }
         LayoutManager.insertAtCoordinates(dndSpacer, event.x, event.y)
     }
 
@@ -173,6 +182,8 @@ function checkLastSpacer() {
 
     onDragLeave: {
         dndSpacer.parent = root;
+        root.fixedWidth = 0;
+        root.fixedHeight = 0;
     }
 
     onDrop: {
@@ -180,6 +191,8 @@ function checkLastSpacer() {
             return;
         }
         plasmoid.processMimeData(event.mimeData, event.x, event.y);
+        root.fixedWidth = 0;
+        root.fixedHeight = 0;
     }
 
 
