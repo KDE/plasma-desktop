@@ -35,6 +35,7 @@ AdvancedDialog::AdvancedDialog( QWidget *parent, bool status )
 
     QDialogButtonBox* buttons = new QDialogButtonBox(this);
     buttons->setStandardButtons( QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
+    lay->addWidget(buttons);
     setLayout( lay );
 
     connect(buttons, SIGNAL(accepted()), SLOT(accept()));
@@ -49,7 +50,3 @@ bool AdvancedDialog::onlyInKde() const
 {
     return m_onlyInKde->isChecked();
 }
-
-
-#include "advanceddialog.moc"
-

@@ -101,5 +101,3 @@ bool AddScriptDialog::symLink() const
 {
     return m_symlink->isChecked();
 }
-
-#include "addscriptdialog.moc"
