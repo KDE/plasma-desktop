@@ -55,6 +55,7 @@ void KcmTest::initTestCase()
     QVERIFY(m_configDir.mkpath("."));
 
     const QString packagePath = QFINDTESTDATA("lookandfeel");
+
     Plasma::Package p = Plasma::PluginLoader::self()->loadPackage("Plasma/LookAndFeel");
     p.setPath(packagePath);
     QVERIFY(p.isValid());
@@ -89,7 +90,7 @@ void KcmTest::testColors()
     m_KCMLookandFeel->setColors("customTestValue", QString());
 
     KConfig config("kdeglobals");
-    KConfigGroup cg(&config, "KDE");
+    KConfigGroup cg(&config, "General");
     QCOMPARE(cg.readEntry("ColorScheme", QString()), QString("customTestValue"));
 }
 
@@ -147,6 +148,8 @@ void KcmTest::testKCMSave()
     KConfig config("kdeglobals");
     KConfigGroup cg(&config, "KDE");
     QCOMPARE(cg.readEntry("widgetStyle", QString()), QString("testValue"));
+
+    cg = KConfigGroup(&config, "General");
     //save() capitalizes the ColorScheme
     QCOMPARE(cg.readEntry("ColorScheme", QString()), QString("TestValue"));
 

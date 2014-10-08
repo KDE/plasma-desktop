@@ -191,12 +191,13 @@ void KCMLookandFeel::load()
         if (!pkg.filePath("defaults").isEmpty()) {
             KSharedConfigPtr conf = KSharedConfig::openConfig(pkg.filePath("defaults"));
             KConfigGroup cg(conf, "kdeglobals");
-            cg = KConfigGroup(&cg, "KDE");
+            cg = KConfigGroup(&cg, "General");
             bool hasColors = !cg.readEntry("ColorScheme", QString()).isEmpty();
             row->setData(hasColors, HasColorsRole);
             if (!hasColors) {
                 hasColors = !pkg.filePath("colors").isEmpty();
             }
+            cg = KConfigGroup(&cg, "KDE");
             row->setData(!cg.readEntry("widgetStyle", QString()).isEmpty(), HasWidgetStyleRole);
             cg = KConfigGroup(conf, "kdeglobals");
             cg = KConfigGroup(&cg, "Icons");
@@ -313,9 +314,9 @@ void KCMLookandFeel::setColors(const QString &scheme, const QString &colorFile)
     if (scheme.isEmpty() && colorFile.isEmpty()) {
         return;
     }
-
-    m_configGroup.writeEntry("ColorScheme", scheme);
-    m_configGroup.sync();
+    KConfigGroup configGroup(&m_config, "General");
+    configGroup.writeEntry("ColorScheme", scheme);
+    configGroup.sync();
 
     KSharedConfigPtr conf = KSharedConfig::openConfig(colorFile);
     foreach (const QString &grp, conf->groupList()) {
