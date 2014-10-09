@@ -44,6 +44,9 @@ PlasmaCore.SvgItem {
     property int maximumValue: (dialogRoot.vertical) ? root.parent.height - root.height/2+1 : root.parent.width - root.width/2+1
 
     function syncPos() {
+        if (mouseArea.pressed) {
+            return;
+        }
         if (dialogRoot.vertical) {
             if (alignment == Qt.AlignRight) {
                 y = root.parent.height - (value + offset + root.height/2)
@@ -84,6 +87,7 @@ PlasmaCore.SvgItem {
     }
 
     MouseArea {
+        id: mouseArea
         drag {
             target: parent
             axis: (dialogRoot.vertical) ? Drag.YAxis : Drag.XAxis
