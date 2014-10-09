@@ -24,8 +24,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 
 PlasmaCore.FrameSvgItem {
     id: root
-    width: containment && containment.formFactor == PlasmaCore.Types.Vertical ? panel.thickness : panel.length
-    height: containment && containment.formFactor == PlasmaCore.Types.Vertical ? panel.length : panel.thickness
+
     imagePath: "widgets/panel-background"
     prefix: {
         if (!containment) {
