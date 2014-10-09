@@ -265,6 +265,10 @@ function checkLastSpacer() {
             id: container
             visible: false
             property bool animationsEnabled: true
+            //when the applet moves caused by its resize, don't animate when
+            //the applet stays in the second half of the panel. this is completely
+            //heuristic, but looks way less "jumpy"
+            property bool movingForResize: false
 
             Layout.fillWidth: applet && applet.Layout.fillWidth
             Layout.onFillWidthChanged: {
@@ -298,6 +302,27 @@ function checkLastSpacer() {
                 }
             }
 
+            Layout.onMinimumWidthChanged: {
+                if (x > root.width/2) {
+                    movingForResize = true;
+                }
+            }
+            Layout.onMinimumHeightChanged: {
+                if (y > root.height/2) {
+                    movingForResize = true;
+                }
+            }
+            Layout.onMaximumWidthChanged: {
+                if (x > root.width/2) {
+                    movingForResize = true;
+                }
+            }
+            Layout.onMaximumHeightChanged: {
+                if (y > root.height/2) {
+                    movingForResize = true;
+                }
+            }
+
             PlasmaComponents.BusyIndicator {
                 z: 1000
                 visible: applet && applet.busy
@@ -305,6 +330,10 @@ function checkLastSpacer() {
                 anchors.centerIn: parent
             }
             onXChanged: {
+                if (movingForResize) {
+                    movingForResize = false;
+                    return;
+                }
                 if (!animationsEnabled) {
                     startupTimer.restart();
                     return;
@@ -316,6 +345,10 @@ function checkLastSpacer() {
                 oldY = y
             }
             onYChanged: {
+                if (movingForResize) {
+                    movingForResize = false;
+                    return;
+                }
                 if (!animationsEnabled) {
                     startupTimer.restart();
                     return;
