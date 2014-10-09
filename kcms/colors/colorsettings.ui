@@ -43,7 +43,7 @@
        <item row="0" column="1">
         <layout class="QVBoxLayout" name="verticalLayout_2">
          <item>
-          <widget class="KPushButton" name="schemeKnsButton">
+          <widget class="QPushButton" name="schemeKnsButton">
            <property name="toolTip">
             <string>Get new color schemes from the Internet</string>
            </property>
@@ -53,7 +53,7 @@
           </widget>
          </item>
          <item>
-          <widget class="KPushButton" name="schemeKnsUploadButton">
+          <widget class="QPushButton" name="schemeKnsUploadButton">
            <property name="enabled">
             <bool>false</bool>
            </property>
@@ -66,7 +66,7 @@
           </widget>
          </item>
          <item>
-          <widget class="KPushButton" name="schemeImportButton">
+          <widget class="QPushButton" name="schemeImportButton">
            <property name="toolTip">
             <string>Import a color scheme from a file</string>
            </property>
@@ -76,7 +76,7 @@
           </widget>
          </item>
          <item>
-          <widget class="KPushButton" name="schemeSaveButton">
+          <widget class="QPushButton" name="schemeSaveButton">
            <property name="toolTip">
             <string>Save the current color scheme</string>
            </property>
@@ -86,7 +86,7 @@
           </widget>
          </item>
          <item>
-          <widget class="KPushButton" name="schemeRemoveButton">
+          <widget class="QPushButton" name="schemeRemoveButton">
            <property name="enabled">
             <bool>false</bool>
            </property>
@@ -1239,11 +1239,6 @@
    <class>KListWidget</class>
    <extends>QListWidget</extends>
    <header>klistwidget.h</header>
-  </customwidget>
-  <customwidget>
-   <class>KPushButton</class>
-   <extends>QPushButton</extends>
-   <header>kpushbutton.h</header>
   </customwidget>
   <customwidget>
    <class>KColorButton</class>

@@ -94,10 +94,10 @@ KColorCm::KColorCm(QWidget *parent, const QVariantList &)
     setupUi(this);
     schemeKnsButton->setIcon( QIcon::fromTheme("get-hot-new-stuff") );
     schemeKnsUploadButton->setIcon( QIcon::fromTheme("get-hot-new-stuff") );
-    connect(colorSet, SIGNAL(currentIndexChanged(int)), this, SLOT(updateColorTable()));
+    connect(colorSet, static_cast<void (QComboBox::*)(int)>(&QComboBox::currentIndexChanged), this, &KColorCm::updateColorTable);
     connect(schemeList, SIGNAL(currentItemChanged(QListWidgetItem*,QListWidgetItem*)),
             this, SLOT(loadScheme(QListWidgetItem*,QListWidgetItem*)));
-    connect(applyToAlien, SIGNAL(toggled(bool)), this, SLOT(emitChanged()));
+    connect(applyToAlien, &QCheckBox::toggled, this, &KColorCm::emitChanged);
 
     // only needs to be called once
     setupColorTable();
@@ -540,7 +540,7 @@ void KColorCm::createColorEntry(const QString &text, const QString &key, QList<K
 {
     KColorButton *button = new KColorButton(this);
     button->setObjectName(QString::number(index));
-    connect(button, SIGNAL(changed(QColor)), this, SLOT(colorChanged(QColor)));
+    connect(button, &KColorButton::changed, this, &KColorCm::colorChanged);
     list.append(button);
 
     m_colorKeys.insert(index, key);
@@ -744,7 +744,7 @@ void KColorCm::setupColorTable()
         KColorButton * button = new KColorButton(this);
         commonColorTable->setRowHeight(i, button->sizeHint().height());
         button->setObjectName(QString::number(i));
-        connect(button, SIGNAL(changed(QColor)), this, SLOT(colorChanged(QColor)));
+        connect(button, &KColorButton::changed, this, &KColorCm::colorChanged);
         m_commonColorButtons << button;
 
         if (i > 8 && i < 18)
@@ -753,7 +753,7 @@ void KColorCm::setupColorTable()
             KPushButton * variesButton = new KPushButton(NULL);
             variesButton->setText(i18n("Varies"));
             variesButton->setObjectName(QString::number(i));
-            connect(variesButton, SIGNAL(clicked()), this, SLOT(variesClicked()));
+            connect(variesButton, &KPushButton::clicked, this, &KColorCm::variesClicked);
 
             QStackedWidget * widget = new QStackedWidget(this);
             widget->addWidget(button);
