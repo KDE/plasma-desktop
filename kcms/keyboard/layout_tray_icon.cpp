@@ -68,16 +68,16 @@ LayoutTrayIcon::~LayoutTrayIcon()
 
 void LayoutTrayIcon::init()
 {
-    connect(m_notifierItem, SIGNAL(activateRequested(bool,QPoint)), this, SLOT(toggleLayout()));
-    connect(m_notifierItem, SIGNAL(scrollRequested(int,Qt::Orientation)), this, SLOT(scrollRequested(int,Qt::Orientation)));
-	connect(flags, SIGNAL(pixmapChanged()), this, SLOT(layoutChanged()));
+    connect(m_notifierItem, &KStatusNotifierItem::activateRequested, this, &LayoutTrayIcon::toggleLayout);
+    connect(m_notifierItem, &KStatusNotifierItem::scrollRequested, this, &LayoutTrayIcon::scrollRequested);
+	connect(flags, &Flags::pixmapChanged, this, &LayoutTrayIcon::layoutChanged);
 }
 
 void LayoutTrayIcon::destroy()
 {
-	disconnect(flags, SIGNAL(pixmapChanged()), this, SLOT(layoutChanged()));
-    disconnect(m_notifierItem, SIGNAL(scrollRequested(int,Qt::Orientation)), this, SLOT(scrollRequested(int,Qt::Orientation)));
-    disconnect(m_notifierItem, SIGNAL(activateRequested(bool,QPoint)), this, SLOT(toggleLayout()));
+	disconnect(flags, &Flags::pixmapChanged, this, &LayoutTrayIcon::layoutChanged);
+    disconnect(m_notifierItem, &KStatusNotifierItem::scrollRequested, this, &LayoutTrayIcon::scrollRequested);
+    disconnect(m_notifierItem, &KStatusNotifierItem::activateRequested, this, &LayoutTrayIcon::toggleLayout);
 }
 
 void LayoutTrayIcon::layoutMapChanged()

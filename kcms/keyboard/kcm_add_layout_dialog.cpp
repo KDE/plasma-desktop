@@ -64,9 +64,9 @@ AddLayoutDialog::AddLayoutDialog(const Rules* rules_, Flags* flags_, bool showLa
 	}
 
     languageChanged(0);
-    connect(layoutDialogUi->languageComboBox, SIGNAL(activated(int)), this, SLOT(languageChanged(int)));
-    connect(layoutDialogUi->layoutComboBox, SIGNAL(activated(int)), this, SLOT(layoutChanged(int)));
-    connect(layoutDialogUi->prevbutton,SIGNAL(clicked()),this,SLOT(preview()));
+    connect(layoutDialogUi->languageComboBox, static_cast<void (QComboBox::*)(int)>(&QComboBox::activated), this, &AddLayoutDialog::languageChanged);
+    connect(layoutDialogUi->layoutComboBox, static_cast<void (QComboBox::*)(int)>(&QComboBox::activated), this, &AddLayoutDialog::layoutChanged);
+    connect(layoutDialogUi->prevbutton, &QPushButton::clicked, this, &AddLayoutDialog::preview);
 }
 
 void AddLayoutDialog::languageChanged(int langIdx)

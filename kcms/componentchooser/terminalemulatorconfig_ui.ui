@@ -39,7 +39,7 @@
       </spacer>
      </item>
      <item>
-      <widget class="KLineEdit" name="terminalLE">
+      <widget class="QLineEdit" name="terminalLE">
        <property name="enabled">
         <bool>false</bool>
        </property>
@@ -81,13 +81,6 @@
    </item>
   </layout>
  </widget>
- <customwidgets>
-  <customwidget>
-   <class>KLineEdit</class>
-   <extends>QLineEdit</extends>
-   <header location="global">KDE/KLineEdit</header>
-  </customwidget>
- </customwidgets>
  <resources/>
  <connections>
   <connection>

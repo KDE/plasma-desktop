@@ -36,7 +36,7 @@ KeyboardPainter::KeyboardPainter():
     vLayout->addWidget(kbframe);
     vLayout->addWidget(exitButton);
 
-    connect(exitButton, SIGNAL(clicked()), this, SLOT(close()));
+    connect(exitButton, &QPushButton::clicked, this, &KeyboardPainter::close);
 
     setWindowTitle(kbframe->getLayoutName());
 }

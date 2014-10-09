@@ -51,18 +51,18 @@ void LayoutMemory::registerListeners()
 {
 	if( keyboardConfig.switchingPolicy ==  KeyboardConfig::SWITCH_POLICY_WINDOW
 			|| keyboardConfig.switchingPolicy ==  KeyboardConfig::SWITCH_POLICY_APPLICATION ) {
-		connect(KWindowSystem::self(), SIGNAL(activeWindowChanged(WId)), this, SLOT(windowChanged(WId)));
+		connect(KWindowSystem::self(), &KWindowSystem::activeWindowChanged, this, &LayoutMemory::windowChanged);
 //		connect(KWindowSystem::self(), SIGNAL(windowRemoved(WId)), this, SLOT(windowRemoved(WId)));
 	}
 	if( keyboardConfig.switchingPolicy ==  KeyboardConfig::SWITCH_POLICY_DESKTOP ) {
-		connect(KWindowSystem::self(), SIGNAL(currentDesktopChanged(int)), this, SLOT(desktopChanged(int)));
+		connect(KWindowSystem::self(), &KWindowSystem::currentDesktopChanged, this, &LayoutMemory::desktopChanged);
 	}
 }
 
 void LayoutMemory::unregisterListeners()
 {
-    disconnect(KWindowSystem::self(), SIGNAL(activeWindowChanged(WId)), this, SLOT(windowChanged(WId)));
-    disconnect(KWindowSystem::self(), SIGNAL(currentDesktopChanged(int)), this, SLOT(desktopChanged(int)));
+    disconnect(KWindowSystem::self(), &KWindowSystem::activeWindowChanged, this, &LayoutMemory::windowChanged);
+    disconnect(KWindowSystem::self(), &KWindowSystem::currentDesktopChanged, this, &LayoutMemory::desktopChanged);
 //	disconnect(KWindowSystem::self(), SIGNAL(windowRemoved(WId)), this, SLOT(windowRemoved(WId)));
 }
 
