@@ -212,19 +212,21 @@ Item {
                     //update the tooltip whenever we add or remove a window
                     onCountChanged: {
                         var tooltipText = i18np("%1 window", "%1 windows", count)
-                        var i;
-                        tooltipText += "<ul>";
-                        for (i=0; i < Math.min(count,4); i++) {
-                            if (itemAt(i)) {
-                                tooltipText += "<li>"+ itemAt(i).visibleName +"</li>";
+
+                        if (count) {
+                            var i;
+                            tooltipText += "<ul>";
+                            for (i=0; i < Math.min(count,4); i++) {
+                                if (itemAt(i)) {
+                                    tooltipText += "<li>"+ itemAt(i).visibleName +"</li>";
+                                }
+                            }
+                            tooltipText += "</ul>";
+                            if (i < count) {
+                                tooltipText += "<br/>"
+                                tooltipText += i18np("and %1 other window", "and %1 other windows", count-i)
                             }
                         }
-                        tooltipText += "</ul>";
-                        if (i < count) {
-                            tooltipText += "<br/>"
-                            tooltipText += i18np("and %1 other window", "and %1 other windows", count-i)
-                        }
-
 
                         desktop.subText = tooltipText
                     }
