@@ -265,9 +265,8 @@ function checkLastSpacer() {
             id: container
             visible: false
             property bool animationsEnabled: true
-            //when the applet moves caused by its resize, don't animate when
-            //the applet stays in the second half of the panel. this is completely
-            //heuristic, but looks way less "jumpy"
+            //when the applet moves caused by its resize, don't animate.
+            //this is completely heuristic, but looks way less "jumpy"
             property bool movingForResize: false
 
             Layout.fillWidth: applet && applet.Layout.fillWidth
@@ -302,26 +301,10 @@ function checkLastSpacer() {
                 }
             }
 
-            Layout.onMinimumWidthChanged: {
-                if (x > root.width/2) {
-                    movingForResize = true;
-                }
-            }
-            Layout.onMinimumHeightChanged: {
-                if (y > root.height/2) {
-                    movingForResize = true;
-                }
-            }
-            Layout.onMaximumWidthChanged: {
-                if (x > root.width/2) {
-                    movingForResize = true;
-                }
-            }
-            Layout.onMaximumHeightChanged: {
-                if (y > root.height/2) {
-                    movingForResize = true;
-                }
-            }
+            Layout.onMinimumWidthChanged: movingForResize = true;
+            Layout.onMinimumHeightChanged: movingForResize = true;
+            Layout.onMaximumWidthChanged: movingForResize = true;
+            Layout.onMaximumHeightChanged: movingForResize = true;
 
             PlasmaComponents.BusyIndicator {
                 z: 1000
