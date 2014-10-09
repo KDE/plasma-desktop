@@ -113,46 +113,33 @@ PlasmaCore.FrameSvgItem {
 
         containment.locationChanged.connect(adjustBorders);
         if (containment.Layout) {
-            containment.Layout.minimumWidthChanged.connect(minimumWidthChanged);
-            containment.Layout.maximumWidthChanged.connect(maximumWidthChanged);
-            containment.Layout.preferredWidthChanged.connect(preferredWidthChanged);
+            containment.Layout.minimumWidthChanged.connect(sizeHintsTimer.restart);
+            containment.Layout.maximumWidthChanged.connect(sizeHintsTimer.restart);
+            containment.Layout.preferredWidthChanged.connect(sizeHintsTimer.restart);
 
-            containment.Layout.minimumHeightChanged.connect(minimumHeightChanged);
-            containment.Layout.maximumHeightChanged.connect(maximumHeightChanged);
-            containment.Layout.preferredHeightChanged.connect(preferredHeightChanged);
+            containment.Layout.minimumHeightChanged.connect(sizeHintsTimer.restart);
+            containment.Layout.maximumHeightChanged.connect(sizeHintsTimer.restart);
+            containment.Layout.preferredHeightChanged.connect(sizeHintsTimer.restart);
         }
         adjustBorders();
     }
 
-    function minimumWidthChanged() {
-        if (!containment.userConfiguring && containment.formFactor === PlasmaCore.Types.Horizontal) {
-            panel.length = Math.max(panel.width, containment.Layout.minimumWidth);
-        }
-    }
-    function maximumWidthChanged() {
-        if (!containment.userConfiguring && containment.formFactor === PlasmaCore.Types.Horizontal) {
-            panel.length = Math.min(panel.width, containment.Layout.maximumWidth);
-        }
-    }
-    function preferredWidthChanged() {
-        if (!containment.userConfiguring && containment.formFactor === PlasmaCore.Types.Horizontal) {
-            panel.length = Math.min(panel.maximumLength, Math.max(containment.Layout.preferredWidth, panel.minimumLength));
-        }
-    }
+    Timer {
+        id: sizeHintsTimer
+        interval: 250
+        onTriggered: {
+            if (containment.userConfiguring) {
+                return;
+            }
 
-    function minimumHeightChanged() {
-        if (!containment.userConfiguring && containment.formFactor === PlasmaCore.Types.Vertical) {
-            panel.length = Math.max(panel.height, containment.Layout.minimumWidth);
-        }
-    }
-    function maximumHeightChanged() {
-        if (!containment.userConfiguring && containment.formFactor === PlasmaCore.Types.Vertical) {
-            panel.length = Math.min(panel.height, containment.Layout.maximumWidth);
-        }
-    }
-    function preferredHeightChanged() {
-        if (!containment.userConfiguring && containment.formFactor === PlasmaCore.Types.Vertical) {
-            panel.length = Math.min(panel.maximumLength, Math.max(containment.Layout.preferredHeight, panel.minimumLength));
+            var wantedSize;
+
+            if (containment.formFactor === PlasmaCore.Types.Vertical) {
+                wantedSize = Math.max(containment.Layout.minimumHeight, Math.min(containment.Layout.preferredHeight, containment.Layout.maximumHeight));
+            } else {
+                wantedSize = Math.max(containment.Layout.minimumWidth, Math.min(containment.Layout.preferredWidth, containment.Layout.maximumWidth));
+            }
+            panel.length = Math.max(panel.minimumLength, Math.min(wantedSize, panel.maximumLength));
         }
     }
 
