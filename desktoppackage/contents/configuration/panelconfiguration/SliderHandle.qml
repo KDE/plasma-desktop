@@ -106,9 +106,9 @@ PlasmaCore.SvgItem {
                 //Center
                 } else {
                     if (root.alignment & Qt.AlignRight) {
-                        root.value = (root.parent.height/2 - parent.y + offset)*2  + root.height/2
+                        root.value = (root.parent.height/2 - parent.y + offset)*2  - root.height
                     } else if (root.alignment & Qt.AlignLeft) {
-                        root.value = (parent.y - offset - root.parent.height/2)*2  + root.height/2
+                        root.value = (parent.y - offset - root.parent.height/2)*2  + root.height
                     } else {
                         var value = parent.y - root.parent.height/2 - offset + root.height/2
                         //Snap
@@ -127,9 +127,9 @@ PlasmaCore.SvgItem {
                 //Center
                 } else {
                     if (root.alignment & Qt.AlignRight) {
-                        root.value = (root.parent.width/2 - parent.x + offset)*2  + root.width/2
+                        root.value = (root.parent.width/2 - parent.x + offset)*2  - root.width
                     } else if (root.alignment & Qt.AlignLeft) {
-                        root.value = (parent.x - offset - root.parent.width/2)*2  + root.width/2
+                        root.value = (parent.x - offset - root.parent.width/2)*2  + root.width
                     } else {
                         var value = parent.x - root.parent.width/2 - offset + root.width/2
                         //Snap
