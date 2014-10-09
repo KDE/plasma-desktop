@@ -136,6 +136,10 @@ QVariant AppsModel::data(const QModelIndex &index, int role) const
                 actionList << Kicker::createActionItem(i18n("Add to Panel"), "addToPanel");
             }
 
+            if (ContainmentInterface::mayAddLauncher(m_appletInterface, ContainmentInterface::TaskManager, service->entryPath())) {
+                actionList << Kicker::createActionItem(i18n("Add as Launcher"), "addToTaskManager");
+            }
+
             if (m_menuEntryEditor->canEdit(service->entryPath())) {
                 actionList << Kicker::createSeparatorActionItem();
 
