@@ -103,7 +103,7 @@ void ibus_panel_impanel_accept(IBusPanelImpanel* impanel)
     }
 }
 
-void ibus_panel_impanel_navigate(IBusPanelImpanel* impanel, gboolean start)
+void ibus_panel_impanel_navigate(IBusPanelImpanel* impanel, gboolean start, gboolean forward)
 {
     if (start) {
         impanel->selected = -1;
@@ -125,7 +125,7 @@ void ibus_panel_impanel_navigate(IBusPanelImpanel* impanel, gboolean start)
     }
 
     if (engine_desc) {
-        const char* name = impanel->engineManager->navigate(engine_desc);
+        const char* name = impanel->engineManager->navigate(engine_desc, forward);
         impanel->selected = impanel->engineManager->getIndexByName(name);
     } else {
         return;

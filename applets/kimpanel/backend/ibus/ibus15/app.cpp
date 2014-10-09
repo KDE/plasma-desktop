@@ -225,12 +225,14 @@ bool App::nativeEvent(xcb_generic_event_t* event)
         if (keypress->event == QX11Info::appRootWindow()) {
             auto sym = xcb_key_press_lookup_keysym(m_syms, keypress, 0);
             uint state = keypress->state & USED_MASK;
-            if (m_triggersList.contains(qMakePair<uint, uint>(sym, state))) {
+            bool forward;
+            if ((forward = m_triggersList.contains(qMakePair<uint, uint>(sym, state)))
+             || m_triggersList.contains(qMakePair<uint, uint>(sym, state & (~XCB_MOD_MASK_SHIFT)))) {
                 if (m_keyboardGrabbed) {
-                    ibus_panel_impanel_navigate(m_impanel, false);
+                    ibus_panel_impanel_navigate(m_impanel, false, forward);
                 } else {
                     if (grabXKeyboard()) {
-                        ibus_panel_impanel_navigate(m_impanel, true);
+                        ibus_panel_impanel_navigate(m_impanel, true, forward);
                     } else {
                         ibus_panel_impanel_move_next(m_impanel);
                     }
@@ -377,6 +379,10 @@ void App::grabKey()
         } else {
             xcb_grab_key(QX11Info::connection(), true, QX11Info::appRootWindow(),
                          modifiers, keycode[0], XCB_GRAB_MODE_ASYNC, XCB_GRAB_MODE_ASYNC);
+            if ((modifiers & XCB_MOD_MASK_SHIFT) == 0) {
+                xcb_grab_key(QX11Info::connection(), true, QX11Info::appRootWindow(),
+                             modifiers | XCB_MOD_MASK_SHIFT, keycode[0], XCB_GRAB_MODE_ASYNC, XCB_GRAB_MODE_ASYNC);
+            }
         }
         free(keycode);
     }
@@ -392,6 +398,9 @@ void App::ungrabKey()
             g_warning ("Can not convert keyval=%lu to keycode!", sym);
         } else {
             xcb_ungrab_key(QX11Info::connection(), keycode[0], QX11Info::appRootWindow(), modifiers);
+            if ((modifiers & XCB_MOD_MASK_SHIFT) == 0) {
+                xcb_ungrab_key(QX11Info::connection(), keycode[0], QX11Info::appRootWindow(), modifiers | XCB_MOD_MASK_SHIFT);
+            }
         }
         free(keycode);
     }

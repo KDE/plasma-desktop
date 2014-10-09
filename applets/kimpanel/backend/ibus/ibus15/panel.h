@@ -52,7 +52,7 @@ void                ibus_panel_impanel_set_bus      (IBusPanelImpanel   *impanel
 void                ibus_panel_impanel_set_app      (IBusPanelImpanel   *impanel,
                                                      App                *app);
 void                ibus_panel_impanel_accept     (IBusPanelImpanel   *impanel);
-void                ibus_panel_impanel_navigate     (IBusPanelImpanel   *impanel, gboolean start);
+void                ibus_panel_impanel_navigate     (IBusPanelImpanel   *impanel, gboolean start, gboolean forward);
 void                ibus_panel_impanel_move_next     (IBusPanelImpanel   *impanel);
 
 G_END_DECLS

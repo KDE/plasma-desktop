@@ -40,7 +40,7 @@ public:
     QString currentEngine();
     bool useGlobalEngine() { return m_useGlobalEngine; }
     void setCurrentEngine(const char* name);
-    const char* navigate(IBusEngineDesc* engine);
+    const char* navigate(IBusEngineDesc* engine, bool forward);
     void moveToFirst(IBusEngineDesc* engine_desc);
     QStringList engineOrder();
     void setOrder(const gchar** engine_names, size_t len);

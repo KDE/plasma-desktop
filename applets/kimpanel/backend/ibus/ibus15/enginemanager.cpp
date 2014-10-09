@@ -95,7 +95,7 @@ void EngineManager::setCurrentEngine(const char* name)
     }
 }
 
-const char* EngineManager::navigate(IBusEngineDesc* engine)
+const char* EngineManager::navigate(IBusEngineDesc* engine, bool forward)
 {
     if (length() == 0) {
         return "";
@@ -108,7 +108,7 @@ const char* EngineManager::navigate(IBusEngineDesc* engine)
             break;
         }
     }
-    i = (i + 1) % length();
+    i = (i + (forward ? 1 : (length() - 1))) % length();
     return ibus_engine_desc_get_name(m_engines[i]);
 }
 
