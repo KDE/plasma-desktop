@@ -22,13 +22,13 @@
 #include <QImage>
 #include <QPixmap>
 #include <QTimer>
-
-#include <kdirlister.h>
+#include <QProcess>
 #include <QDebug>
-#include <kio/previewjob.h>
-#include <kimagecache.h>
 #include <QMimeDatabase>
 
+#include <kdirlister.h>
+#include <kio/previewjob.h>
+#include <kimagecache.h>
 
 DirModel::DirModel(QObject *parent)
     : KDirModel(parent),
@@ -116,6 +116,11 @@ QVariantMap DirModel::get(int i) const
     ret.insert("mimeType", QVariant(mimeType));
 
     return ret;
+}
+
+void DirModel::emptyTrash()
+{
+    QProcess::startDetached(QStringLiteral("ktrash5 --empty"));
 }
 
 QVariant DirModel::data(const QModelIndex &index, int role) const

@@ -68,6 +68,11 @@ public:
 
     Q_INVOKABLE QVariantMap get(int index) const;
 
+    /**
+      * Helper method to empty the trash
+      */
+    Q_INVOKABLE void emptyTrash();
+
 protected Q_SLOTS:
     void showPreview(const KFileItem &item, const QPixmap &preview);
     void previewFailed(const KFileItem &item);

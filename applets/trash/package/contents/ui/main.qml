@@ -89,7 +89,7 @@ MouseArea {
         message: i18n("Do you really want to empty the trash ? All the items will be deleted.")
         acceptButtonText: i18n("Empty Trash")
         rejectButtonText: i18n("Cancel")
-        onAccepted: plasmoid.runCommand("ktrash5", ["--empty"]);
+        onAccepted: dirModel.emptyTrash();
         onRejected: queryDialog.close();
         visualParent: root
     }
