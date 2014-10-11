@@ -17,6 +17,9 @@
  */
 
 #include "keyboard_config.h"
+#ifdef NEW_GEOMETRY
+#include "preview/geometry_parser.h"
+#endif
 
 #include <ksharedconfig.h>
 #include <kconfiggroup.h>
@@ -31,6 +34,10 @@ static const QString CONFIG_FILENAME("kxkbrc");
 static const QString CONFIG_GROUPNAME("Layout");
 
 const int KeyboardConfig::NO_LOOPING = -1;
+
+#ifdef NEW_GEOMETRY
+Geometry KeyboardConfig::geometry = grammar::parseGeometry("pc104");
+#endif
 
 KeyboardConfig::KeyboardConfig()
 {
@@ -72,6 +79,9 @@ void KeyboardConfig::setDefaults()
 	showIndicator = true;
 	indicatorType = SHOW_LABEL;
 	showSingle = false;
+#ifdef NEW_GEOMETRY
+    geometry = grammar::parseGeometry(keyboardModel);
+#endif
 }
 
 static
@@ -94,6 +104,10 @@ void KeyboardConfig::load()
     KConfigGroup config(KSharedConfig::openConfig( CONFIG_FILENAME, KConfig::NoGlobals ), CONFIG_GROUPNAME);
 
     keyboardModel = config.readEntry("Model", "");
+
+#ifdef NEW_GEOMETRY
+    geometry = grammar::parseGeometry(keyboardModel);
+#endif
 
     resetOldXkbOptions = config.readEntry("ResetOldOptions", false);
     QString options = config.readEntry("Options", "");

@@ -22,6 +22,11 @@
 
 #include "x11_helper.h"
 
+#ifdef NEW_GEOMETRY
+#include "preview/geometry_components.h"
+#include "preview/geometry_parser.h"
+#endif
+
 #include <QtCore/QString>
 #include <QtCore/QStringList>
 #include <QtCore/QList>
@@ -40,6 +45,10 @@ class KeyboardConfig
 public:
 	static const int MAX_LABEL_LEN = 3;
 	static const int NO_LOOPING; // = -1;
+
+#ifdef NEW_GEOMETRY
+    static Geometry geometry;
+#endif
 
 	enum SwitchingPolicy {
 		SWITCH_POLICY_GLOBAL = 0,

@@ -66,7 +66,7 @@ public:
     explicit KbPreviewFrame(QWidget *parent = 0);
     virtual ~KbPreviewFrame();
     void paintEvent(QPaintEvent * event);
-    void generateKeyboardLayout(const QString &country, const QString &layoutVariant, const QString& model);
+    void generateKeyboardLayout(const QString &country, const QString &layoutVariant, Geometry geom);
     int getWidth() const;
     int getHeight() const;
 

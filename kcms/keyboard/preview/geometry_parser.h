@@ -152,6 +152,9 @@ struct Geometry_parser : qi::grammar<Iterator, iso::space_type> {
 
 
 Geometry parseGeometry(const QString &model);
+QString getGeometry(QString geometryFile, QString geometryName);
+QString includeGeometry(QString geometry);
+QString getGeometryStrContent(QString geometryStr);
 QString findGeometryBaseDir();
 }
 

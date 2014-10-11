@@ -328,9 +328,9 @@ void KbPreviewFrame::paintEvent(QPaintEvent *)
 }
 
 // this function draws the keyboard preview on a QFrame
-void KbPreviewFrame::generateKeyboardLayout(const QString& layout, const QString& layoutVariant, const QString& model)
+void KbPreviewFrame::generateKeyboardLayout(const QString& layout, const QString& layoutVariant, Geometry geom)
 {
-    geometry = grammar::parseGeometry(model);
+    geometry = geom;
     int endx = geometry.getWidth(), endy = geometry.getHeight();
 
     QDesktopWidget* desktopWidget = qApp->desktop();
@@ -341,10 +341,10 @@ void KbPreviewFrame::generateKeyboardLayout(const QString& layout, const QString
     while (scaleFactor*endx + screenWidth/20 > screenWidth) {
         scaleFactor -= 0.2;
     }
-    qCDebug(KEYBOARD_PREVIEW) << "scale factor: 2.5 ->" << scaleFactor;
+    qDebug() << "scale factor: 2.5 ->" << scaleFactor;
 
     setFixedSize(scaleFactor*endx+60, scaleFactor*endy+60);
-    qCDebug(KEYBOARD_PREVIEW) << screenWidth << ":" << scaleFactor << scaleFactor*endx+60 << scaleFactor*endy+60;
+    qDebug() << screenWidth << ":" << scaleFactor << scaleFactor*endx+60 << scaleFactor*endy+60;
     keyboardLayout = grammar::parseSymbols(layout, layoutVariant);
 }
 

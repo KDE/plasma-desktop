@@ -472,13 +472,87 @@ Geometry parseGeometry(const QString &model)
     using boost::spirit::iso8859_1::space;
     typedef std::string::const_iterator iterator_type;
     typedef grammar::Geometry_parser<iterator_type> Geometry_parser;
-    Geometry_parser geomertyParser;
+    Geometry_parser geometryParser;
 
     Rules::GeometryId geoId = Rules::getGeometryId(model);
     QString geometryFile = geoId.fileName;
     QString geometryName = geoId.geoName;
 
-    qCDebug(KEYBOARD_PREVIEW) << "looking for model" << model << "geometryName" << geometryName << "in" << geometryFile;
+    qDebug() << "looking for model" << model << "geometryName" << geometryName << "in" << geometryFile;
+
+    QString input = getGeometry(geometryFile, geometryName);
+    if(! input.isEmpty()){
+        geometryParser.geom = Geometry();
+        input = includeGeometry(input);
+        std::string parserInput = input.toUtf8().constData();
+
+        std::string::const_iterator iter = parserInput.begin();
+        std::string::const_iterator end = parserInput.end();
+
+        bool success = phrase_parse(iter, end, geometryParser, space);
+
+        if (success && iter == end) {
+//                qDebug() << "Geometry parsing succeeded for" << input.left(20);
+            geometryParser.geom.setParsing(true);
+            return geometryParser.geom;
+        } else {
+            qCritical() << "Geometry parsing failed for\n\t" << input.left(30);
+            geometryParser.geom.setParsing(false);
+        }
+    }
+
+    if (geometryParser.geom.getParsing()) {
+        return geometryParser.geom;
+    }
+
+    qCritical() << "Failed to get geometry" << geometryParser.geom.getName() << "falling back to pc104";
+    return parseGeometry("pc104");
+}
+
+QString includeGeometry(QString geometry){
+    QStringList lines = geometry.split("\n");
+    int includeLine = -1;
+    QString includeLineStr;
+    QString startLine = lines[0];
+    for(int i = 0; i < lines.size(); i++){
+        includeLineStr = lines[i];
+        lines[i] = lines[i].remove(" ");
+        lines[i] = lines[i].remove("\r");
+        if(lines[i].startsWith("include")){
+            includeLine = i;
+            break;
+        }
+    }
+    if(includeLine == -1){
+        return geometry;
+    }
+    geometry = geometry.remove(includeLineStr);
+    lines[includeLine] = lines[includeLine].remove("include");
+    lines[includeLine] = lines[includeLine].remove("\"");
+    lines[includeLine] = lines[includeLine].remove(")");
+    if(lines[includeLine].contains("(")){
+        QString includeFile = lines[includeLine].split("(")[0];
+        QString includeGeom = lines[includeLine].split("(")[1];
+        qDebug() << "looking to include "<< "geometryName" << includeGeom << "in" << includeFile;
+        QString includeStr = getGeometry(includeFile, includeGeom);
+        includeStr = getGeometryStrContent(includeStr);
+        geometry = geometry.remove(startLine);
+        geometry = geometry.prepend(includeStr);
+        geometry = geometry.prepend(startLine);
+        includeGeometry(geometry);
+
+    }
+    return geometry;
+}
+
+QString getGeometryStrContent(QString geometryStr){
+    int k = geometryStr.indexOf("{");
+    int k2 = geometryStr.lastIndexOf("};");
+    geometryStr = geometryStr.mid(k + 1, k2-k-2);
+    return geometryStr;
+}
+
+QString getGeometry(QString geometryFile, QString geometryName){
 
     QString xkbParentDir = findGeometryBaseDir();
     geometryFile.prepend(xkbParentDir);
@@ -486,45 +560,28 @@ Geometry parseGeometry(const QString &model)
 
     if (!gfile.open(QIODevice::ReadOnly | QIODevice::Text)) {
         qCritical() << "Unable to open the file" << geometryFile;
-        geomertyParser.geom.setParsing(false);
-        return geomertyParser.geom;
+        return QString();
     }
 
     QString gcontent = gfile.readAll();
     gfile.close();
 
-    QStringList gcontentList = gcontent.split("xkb_geometry");
+    QStringList gcontentList = gcontent.split("xkb_geometry ");
 
-    int current = 1;
-    while (geomertyParser.geom.getName() != geometryName && current < gcontentList.size()) {
-        geomertyParser.geom = Geometry();
-        QString input = gcontentList.at(current);
-        input.prepend("xkb_geometry");
-        std::string parserInput = input.toUtf8().constData();
-
-        std::string::const_iterator iter = parserInput.begin();
-        std::string::const_iterator end = parserInput.end();
-
-        bool success = phrase_parse(iter, end, geomertyParser, space);
-
-        if (success && iter == end) {
-//                qCDebug(KEYBOARD_PREVIEW) << "Geometry parsing succeeded for" << input.left(20);
-            geomertyParser.geom.setParsing(true);
-        } else {
-            qCritical() << "Geometry parsing failed for\n\t" << input.left(30);
-            geomertyParser.geom.setParsing(false);
+    int current = 0;
+    for(int i = 1; i < gcontentList.size(); i++){
+        if(gcontentList[i].startsWith("\""+ geometryName + "\"")){
+            current = i;
+            break;
         }
-
-        current++;
     }
-
-    if (geomertyParser.geom.getParsing()) {
-        return geomertyParser.geom;
+    if(current != 0){
+        return gcontentList[current].prepend("xkb_geometry ");
     }
-
-    qCritical() << "Failed to get geometry" << geomertyParser.geom.getName() << "falling back to pc104";
-    return parseGeometry("pc104");
+    else
+        return QString();
 }
+
 
 QString findGeometryBaseDir()
 {

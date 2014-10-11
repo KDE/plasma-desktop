@@ -11,9 +11,41 @@ else()
 endif()
 
 
+###including Preview###
+find_package(Boost)
+include_directories("preview")
+
+if(Boost_FOUND)
+  ADD_DEFINITIONS(-DNEW_GEOMETRY=1)
+
+  set(preview_PART_SRCS
+    preview/geometry_components.cpp
+    preview/geometry_parser.cpp
+    )
+    
+    set(preview_SRCS
+    preview/geometry_components.cpp
+    preview/geometry_parser.cpp
+    preview/kbpreviewframe.cpp
+    preview/keyboardlayout.cpp
+    preview/symbol_parser.cpp
+    preview/keyaliases.cpp
+    preview/keyboardlayout.cpp
+    preview/keyboardpainter.cpp
+    preview/keysymhelper.cpp
+    preview/keysym2ucs.cpp
+    )
+
+   set_source_files_properties(preview/geometry_parser.cpp preview/symbol_parser.cpp PROPERTIES COMPILE_FLAGS "-fexceptions")
+else(Boost_FOUND)
+
+  message("Boost not found, install Boost libraries to enable keyboard geometry preview")
+
+endif(Boost_FOUND)
+
+
 
 ### kded daemon ###
-
 set( kded_keyboard_SRCS
     keyboard_daemon.cpp
     layout_memory.cpp
@@ -30,6 +62,7 @@ set( kded_keyboard_SRCS
     layouts_menu.cpp
     flags.cpp
     xkb_rules.cpp
+    ${preview_PART_SRCS}
 )
 
 add_library(kded_keyboard MODULE ${kded_keyboard_SRCS})
@@ -75,6 +108,8 @@ set( keyboard_layout_widget_SRCS
     flags.cpp
     x11_helper.cpp
     xkb_helper.cpp
+    xkb_rules.cpp
+    ${preview_PART_SRCS}
 )
 
 # MODULE?
@@ -89,6 +124,7 @@ target_link_libraries(keyboard_layout_widget
     XCB::XCB
     XCB::XKB
     KF5::KDELibs4Support
+    Qt5::Concurrent
     ${X11_LIBRARIES}
     ${X11_Xkbfile_LIB}
 )
@@ -97,32 +133,6 @@ install( TARGETS keyboard_layout_widget DESTINATION ${PLUGIN_INSTALL_DIR} )
 
 
 ### kcm keyboard ###
-include_directories("preview")
-
-find_package(Boost)
-
-if(Boost_FOUND)
-  ADD_DEFINITIONS(-DNEW_GEOMETRY=1)
-
-  set(preview_SRCS
-    preview/geometry_components.cpp
-    preview/geometry_parser.cpp
-    preview/kbpreviewframe.cpp
-    preview/keyboardlayout.cpp
-    preview/symbol_parser.cpp
-    preview/keyaliases.cpp
-    preview/keyboardlayout.cpp
-    preview/keyboardpainter.cpp
-    preview/keysymhelper.cpp
-    preview/keysym2ucs.cpp
-    )
-
-   set_source_files_properties(preview/geometry_parser.cpp preview/symbol_parser.cpp PROPERTIES COMPILE_FLAGS "-fexceptions")
-else(Boost_FOUND)
-
-  message("Boost not found, install Boost libraries to enable keyboard geometry preview")
-
-endif(Boost_FOUND)
 
 
 set(kcm_keyboard_PART_SRCS 
