@@ -478,7 +478,7 @@ Geometry parseGeometry(const QString &model)
     QString geometryFile = geoId.fileName;
     QString geometryName = geoId.geoName;
 
-    qDebug() << "looking for model" << model << "geometryName" << geometryName << "in" << geometryFile;
+    qCDebug(KEYBOARD_PREVIEW) << "looking for model" << model << "geometryName" << geometryName << "in" << geometryFile;
 
     QString input = getGeometry(geometryFile, geometryName);
     if(! input.isEmpty()){
@@ -492,7 +492,7 @@ Geometry parseGeometry(const QString &model)
         bool success = phrase_parse(iter, end, geometryParser, space);
 
         if (success && iter == end) {
-//                qDebug() << "Geometry parsing succeeded for" << input.left(20);
+//                qCDebug(KEYBOARD_PREVIEW) << "Geometry parsing succeeded for" << input.left(20);
             geometryParser.geom.setParsing(true);
             return geometryParser.geom;
         } else {
@@ -533,7 +533,7 @@ QString includeGeometry(QString geometry){
     if(lines[includeLine].contains("(")){
         QString includeFile = lines[includeLine].split("(")[0];
         QString includeGeom = lines[includeLine].split("(")[1];
-        qDebug() << "looking to include "<< "geometryName" << includeGeom << "in" << includeFile;
+        qCDebug(KEYBOARD_PREVIEW) << "looking to include "<< "geometryName" << includeGeom << "in" << includeFile;
         QString includeStr = getGeometry(includeFile, includeGeom);
         includeStr = getGeometryStrContent(includeStr);
         geometry = geometry.remove(startLine);

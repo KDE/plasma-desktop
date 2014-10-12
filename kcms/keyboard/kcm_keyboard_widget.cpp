@@ -36,7 +36,6 @@
 #include "keyboard_config.h"
 #ifdef NEW_GEOMETRY
 #include "preview/keyboardpainter.h"
-#include "preview/geometry_components.h"
 #endif
 #include "xkb_rules.h"
 #include "flags.h"
@@ -167,10 +166,6 @@ void KCMKeyboardWidget::uiChanged()
 	keyboardConfig->configureLayouts = uiWidget->layoutsGroupBox->isChecked();
 	keyboardConfig->keyboardModel = uiWidget->keyboardModelComboBox->itemData(uiWidget->keyboardModelComboBox->currentIndex()).toString();
 
-#ifdef NEW_GEOMETRY
-    KeyboardConfig::geometry = grammar::parseGeometry(keyboardConfig->keyboardModel);
-#endif
-
 	if( uiWidget->showFlagRadioBtn->isChecked() ) {
 		keyboardConfig->indicatorType =  KeyboardConfig::SHOW_FLAG;
 	}
@@ -236,7 +231,7 @@ void KCMKeyboardWidget::addLayout()
 		return;
 	}
 
-    AddLayoutDialog dialog(rules, keyboardConfig->isFlagShown() ? flags : NULL, keyboardConfig->isLabelShown(), this);
+    AddLayoutDialog dialog(rules, keyboardConfig->isFlagShown() ? flags : NULL, keyboardConfig->keyboardModel, keyboardConfig->isLabelShown(), this);
     dialog.setModal(true);
     if( dialog.exec() == QDialog::Accepted ) {
     	keyboardConfig->layouts.append( dialog.getSelectedLayoutUnit() );
@@ -378,7 +373,7 @@ void KCMKeyboardWidget::previewLayout(){
     QString country=uiWidget->layoutsTableView->model()->data(idcountry).toString();
     QModelIndex idvariant = index.sibling(index.row(),2) ;
     QString variant=uiWidget->layoutsTableView->model()->data(idvariant).toString();
-    Geometry geometry = KeyboardConfig::geometry;
+    QString model = keyboardConfig->keyboardModel;
 
     KeyboardPainter* layoutPreview = new KeyboardPainter();
     const LayoutInfo* layoutInfo = rules->getLayoutInfo(country);
@@ -388,9 +383,9 @@ void KCMKeyboardWidget::previewLayout(){
             break;
         }
     }
-
+    
     QString title = Flags::getLongText( LayoutUnit(country, variant), rules );
-    layoutPreview->generateKeyboardLayout(country,variant, geometry, title);
+    layoutPreview->generateKeyboardLayout(country,variant, model, title);
     layoutPreview->setModal(true);
     layoutPreview->exec();
 
@@ -427,9 +422,8 @@ void KCMKeyboardWidget::layoutSelectionChanged()
 	QPair<int, int> rowsRange( getSelectedRowRange(selected) );
 	uiWidget->moveUpBtn->setEnabled( ! selected.isEmpty() && rowsRange.first > 0);
 #ifdef NEW_GEOMETRY
-    uiWidget->previewButton->setEnabled( ! selected.isEmpty() &&  uiWidget->layoutsTableView->selectionModel()->selectedRows().size() == 1 );
+    uiWidget->previewButton->setEnabled( uiWidget->layoutsTableView->selectionModel()->selectedRows().size() == 1 );
 #else
-    qDebug()<<"SHIT SHIT SHIT";
     uiWidget->previewButton->setVisible(false);
 #endif
 	uiWidget->moveDownBtn->setEnabled( ! selected.isEmpty() && rowsRange.second < keyboardConfig->layouts.size()-1 );

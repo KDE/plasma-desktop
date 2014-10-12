@@ -23,10 +23,7 @@
 #include <QDialog>
 
 #include "keyboard_config.h"
-#ifdef NEW_GEOMETRY
 #include "preview/keyboardpainter.h"
-#include "preview/geometry_components.h"
-#endif
 
 class Rules;
 class Flags;
@@ -37,7 +34,8 @@ class AddLayoutDialog: public QDialog
 	Q_OBJECT
 
 public:
-    AddLayoutDialog(const Rules* rules, Flags* flags, bool showLabel, QWidget* parent=NULL);
+	AddLayoutDialog(const Rules* rules, Flags* flags, const QString& model, bool showLabel, QWidget* parent=NULL);
+
 	LayoutUnit getSelectedLayoutUnit() { return selectedLayoutUnit; }
 	QString getvariant(QString variant);
 	void accept();
@@ -52,6 +50,7 @@ public Q_SLOTS:
 private:
 	const Rules* rules;
 	Flags* flags;
+	const QString& model;
 	Ui_AddLayoutDialog* layoutDialogUi;
 	QString selectedLanguage;
 	QString selectedLayout;
