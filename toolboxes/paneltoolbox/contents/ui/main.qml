@@ -51,10 +51,13 @@ Item {
     }
 
     PlasmaCore.SvgItem {
+        id: toolBoxIcon
         svg: PlasmaCore.Svg {
+            id: iconSvg
             imagePath: "widgets/configuration-icons"
+            onRepaintNeeded: toolBoxIcon.elementId = iconSvg.hasElement("menu") ? "menu" : "configure"
         }
-        elementId: "menu"
+        elementId: iconSvg.hasElement("menu") ? "menu" : "configure"
 
         anchors.centerIn: mouseArea
         width: units.iconSizes.small

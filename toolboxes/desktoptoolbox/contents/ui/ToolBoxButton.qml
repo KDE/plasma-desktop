@@ -171,14 +171,16 @@ Item {
         PlasmaCore.SvgItem {
             id: toolBoxIcon
             svg: PlasmaCore.Svg {
+                id: iconSvg
                 imagePath: "widgets/configuration-icons"
+                onRepaintNeeded: toolBoxIcon.elementId = iconSvg.hasElement("menu") ? "menu" : "configure"
             }
-            elementId: "menu"
+            elementId: iconSvg.hasElement("menu") ? "menu" : "configure"
             anchors.verticalCenter: parent.verticalCenter
             width: iconSize
             height: iconSize
             opacity: buttonMouse.containsMouse || toolBoxItem.showing ? 1 : 0.5
-            rotation: isHorizontal ? 0 : 90;
+            rotation: isHorizontal ? 0 : -90;
             transformOrigin: Item.Center
             Behavior on opacity {
                 NumberAnimation {
