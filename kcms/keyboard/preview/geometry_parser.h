@@ -53,7 +53,7 @@ struct keywords : qi::symbols<char, int> {
 };
 
 template<typename Iterator>
-struct Geometry_parser : qi::grammar<Iterator, iso::space_type> {
+struct GeometryParser : qi::grammar<Iterator, iso::space_type> {
 
     //comments
     qi::rule<Iterator, std::string(), iso::space_type>comments, ignore;
@@ -109,7 +109,7 @@ struct Geometry_parser : qi::grammar<Iterator, iso::space_type> {
     Geometry geom;
     keywords keyword;
     double shapeLenX, shapeLenY, approxLenX, approxLenY, keyCordiX, keyCordiY, KeyOffset;
-    Geometry_parser();
+    GeometryParser();
 
     //functions for shape
     void getShapeName(std::string n);

@@ -50,7 +50,7 @@ keywords::keywords()
 
 
 template<typename Iterator>
-Geometry_parser<Iterator>::Geometry_parser(): Geometry_parser::base_type(start)
+GeometryParser<Iterator>::GeometryParser(): GeometryParser::base_type(start)
 {
 
     using qi::lexeme;
@@ -87,52 +87,52 @@ Geometry_parser<Iterator>::Geometry_parser(): Geometry_parser::base_type(start)
     setap = '{' >> cordinatea >> *(',' >> cordinatea) >> '}';
 
     seta = '{'
-           >> cordinates[phx::bind(&Geometry_parser::setCord, this)]
-           >> *(',' >> cordinates[phx::bind(&Geometry_parser::setCord, this)])
+           >> cordinates[phx::bind(&GeometryParser::setCord, this)]
+           >> *(',' >> cordinates[phx::bind(&GeometryParser::setCord, this)])
            >> '}'
            ;
 
-    description = lit("description") >> '=' >> name[phx::bind(&Geometry_parser::getDescription, this, _1)] >> ';';
+    description = lit("description") >> '=' >> name[phx::bind(&GeometryParser::getDescription, this, _1)] >> ';';
 
     cornerRadius = (lit("cornerRadius") || lit("corner")) >> '=' >> double_;
 
     shapeDef = lit("shape")
-               >> name[phx::bind(&Geometry_parser::getShapeName, this, _1)]
+               >> name[phx::bind(&GeometryParser::getShapeName, this, _1)]
                >> '{'
-               >> *(lit("approx") >> '=' >> setap[phx::bind(&Geometry_parser::setApprox, this)] >> ',' || cornerRadius >> ',' || comments)
+               >> *(lit("approx") >> '=' >> setap[phx::bind(&GeometryParser::setApprox, this)] >> ',' || cornerRadius >> ',' || comments)
                >> seta
-               >> *((',' >> (set || lit("approx") >> '=' >> setap[phx::bind(&Geometry_parser::setApprox, this)] || cornerRadius) || comments))
+               >> *((',' >> (set || lit("approx") >> '=' >> setap[phx::bind(&GeometryParser::setApprox, this)] || cornerRadius) || comments))
                >> lit("};")
                ;
 
     keyName = '<' >> +(char_ - '>') >> '>';
 
-    keyShape = *(lit("key.")) >> lit("shape") >> '=' >> name[phx::bind(&Geometry_parser::setKeyShape, this, _1)]
-               || name[phx::bind(&Geometry_parser::setKeyShape, this, _1)];
+    keyShape = *(lit("key.")) >> lit("shape") >> '=' >> name[phx::bind(&GeometryParser::setKeyShape, this, _1)]
+               || name[phx::bind(&GeometryParser::setKeyShape, this, _1)];
 
     keyColor = lit("color") >> '=' >> name;
 
     keygap = lit("gap") >> '=' >> double_[phx::ref(KeyOffset) = _1] || double_[phx::ref(KeyOffset) = _1];
 
-    keyDesc = keyName[phx::bind(&Geometry_parser::setKeyNameandShape, this, _1)]
-              || '{' >> (keyName[phx::bind(&Geometry_parser::setKeyNameandShape, this, _1)] || keyShape
-                         || keygap[phx::bind(&Geometry_parser::setKeyOffset, this)]
+    keyDesc = keyName[phx::bind(&GeometryParser::setKeyNameandShape, this, _1)]
+              || '{' >> (keyName[phx::bind(&GeometryParser::setKeyNameandShape, this, _1)] || keyShape
+                         || keygap[phx::bind(&GeometryParser::setKeyOffset, this)]
                          || keyColor)
               >> *((','
                     >> (keyName
                         || keyShape
-                        || keygap[phx::bind(&Geometry_parser::setKeyOffset, this)]
+                        || keygap[phx::bind(&GeometryParser::setKeyOffset, this)]
                         || keyColor))
                    || comments)
               >> '}';
 
     keys = lit("keys")
            >> '{'
-           >> keyDesc[phx::bind(&Geometry_parser::setKeyCordi, this)]
-           >> *((*lit(',') >> keyDesc[phx::bind(&Geometry_parser::setKeyCordi, this)] >> *lit(',')) || comments)
+           >> keyDesc[phx::bind(&GeometryParser::setKeyCordi, this)]
+           >> *((*lit(',') >> keyDesc[phx::bind(&GeometryParser::setKeyCordi, this)] >> *lit(',')) || comments)
            >> lit("};");
 
-    geomShape = ((lit("key.shape") >> '=' >> name[phx::bind(&Geometry_parser::setGeomShape, this, _1)]) || (lit("key.color") >> '=' >> name)) >> ';';
+    geomShape = ((lit("key.shape") >> '=' >> name[phx::bind(&GeometryParser::setGeomShape, this, _1)]) || (lit("key.color") >> '=' >> name)) >> ';';
     geomLeft = lit("section.left") >> '=' >> double_[phx::ref(geom.sectionLeft) = _1] >> ';';
     geomTop = lit("section.top") >> '=' >> double_[phx::ref(geom.sectionTop) = _1] >> ';';
     geomRowTop = lit("row.top") >> '=' >> double_[phx::ref(geom.rowTop) = _1] >> ';';
@@ -144,17 +144,17 @@ Geometry_parser<Iterator>::Geometry_parser(): Geometry_parser::base_type(start)
     top = lit("top") >> '=' >> double_ >> ';';
     left = lit("left") >> '=' >> double_ >> ';';
 
-    row = lit("row")[phx::bind(&Geometry_parser::rowinit, this)]
+    row = lit("row")[phx::bind(&GeometryParser::rowinit, this)]
           >> '{'
-          >> *(top[phx::bind(&Geometry_parser::setRowTop, this, _1)]
-               || left[phx::bind(&Geometry_parser::setRowLeft, this, _1)]
-               || localShape[phx::bind(&Geometry_parser::setRowShape, this, _1)]
+          >> *(top[phx::bind(&GeometryParser::setRowTop, this, _1)]
+               || left[phx::bind(&GeometryParser::setRowLeft, this, _1)]
+               || localShape[phx::bind(&GeometryParser::setRowShape, this, _1)]
                || localColor
                || comments
-               || geomVertical[phx::bind(&Geometry_parser::setVerticalRow, this)]
+               || geomVertical[phx::bind(&GeometryParser::setVerticalRow, this)]
                || keys
               )
-          >> lit("};") || ignore || geomVertical[phx::bind(&Geometry_parser::setVerticalSection, this)];
+          >> lit("};") || ignore || geomVertical[phx::bind(&GeometryParser::setVerticalSection, this)];
 
     angle = lit("angle") >> '=' >> double_ >> ';';
 
@@ -163,20 +163,20 @@ Geometry_parser<Iterator>::Geometry_parser(): Geometry_parser::base_type(start)
     localDimension = (lit("height") || lit("width")) >> '=' >> double_ >> ';';
     priority = lit("priority") >> '=' >> double_ >> ';';
 
-    section = lit("section")[phx::bind(&Geometry_parser::sectioninit, this)]
-              >> name[phx::bind(&Geometry_parser::sectionName, this, _1)]
+    section = lit("section")[phx::bind(&GeometryParser::sectioninit, this)]
+              >> name[phx::bind(&GeometryParser::sectionName, this, _1)]
               >> '{'
-              >> *(top[phx::bind(&Geometry_parser::setSectionTop, this, _1)]
-                   || left[phx::bind(&Geometry_parser::setSectionLeft, this, _1)]
-                   || angle[phx::bind(&Geometry_parser::setSectionAngle, this, _1)]
-                   || row[phx::bind(&Geometry_parser::addRow, this)]
-                   || localShape[phx::bind(&Geometry_parser::setSectionShape, this, _1)]
+              >> *(top[phx::bind(&GeometryParser::setSectionTop, this, _1)]
+                   || left[phx::bind(&GeometryParser::setSectionLeft, this, _1)]
+                   || angle[phx::bind(&GeometryParser::setSectionAngle, this, _1)]
+                   || row[phx::bind(&GeometryParser::addRow, this)]
+                   || localShape[phx::bind(&GeometryParser::setSectionShape, this, _1)]
                    || geomAtt
                    || localColor
                    || localDimension
                    || priority
                    || comments)
-              >> lit("};") || geomVertical[phx::bind(&Geometry_parser::setVerticalGeometry, this)];
+              >> lit("};") || geomVertical[phx::bind(&GeometryParser::setVerticalGeometry, this)];
 
     shapeC = lit("shape") >> '.' >> cornerRadius >> ';';
 
@@ -202,55 +202,55 @@ Geometry_parser<Iterator>::Geometry_parser(): Geometry_parser::base_type(start)
 
     start %= *(lit("default"))
              >> lit("xkb_geometry")
-             >> name[phx::bind(&Geometry_parser::getName, this, _1)]
+             >> name[phx::bind(&GeometryParser::getName, this, _1)]
              >> input
              >> ';' >> *(comments || char_ - lit("xkb_geometry"));
 }
 
 template<typename Iterator>
-void Geometry_parser<Iterator>::setCord()
+void GeometryParser<Iterator>::setCord()
 {
     geom.setShapeCord(shapeLenX, shapeLenY);
 }
 
 
 template<typename Iterator>
-void Geometry_parser<Iterator>::setSectionShape(std::string n)
+void GeometryParser<Iterator>::setSectionShape(std::string n)
 {
     geom.sectionList[geom.getSectionCount()].setShapeName(QString::fromUtf8(n.data(), n.size()));
 }
 
 
 template<typename Iterator>
-void Geometry_parser<Iterator>::getName(std::string n)
+void GeometryParser<Iterator>::getName(std::string n)
 {
     geom.setName(QString::fromUtf8(n.data(), n.size()));
 }
 
 
 template<typename Iterator>
-void Geometry_parser<Iterator>::getDescription(std::string n)
+void GeometryParser<Iterator>::getDescription(std::string n)
 {
     geom.setDescription(QString::fromUtf8(n.data(), n.size()));
 }
 
 
 template<typename Iterator>
-void Geometry_parser<Iterator>::getShapeName(std::string n)
+void GeometryParser<Iterator>::getShapeName(std::string n)
 {
     geom.setShapeName(QString::fromUtf8(n.data(), n.size()));
 }
 
 
 template<typename Iterator>
-void Geometry_parser<Iterator>::setGeomShape(std::string n)
+void GeometryParser<Iterator>::setGeomShape(std::string n)
 {
     geom.setKeyShape(QString::fromUtf8(n.data(), n.size()));
 }
 
 
 template<typename Iterator>
-void Geometry_parser<Iterator>::setRowShape(std::string n)
+void GeometryParser<Iterator>::setRowShape(std::string n)
 {
     int secn = geom.getSectionCount();
     int rown = geom.sectionList[secn].getRowCount();
@@ -259,28 +259,28 @@ void Geometry_parser<Iterator>::setRowShape(std::string n)
 
 
 template<typename Iterator>
-void Geometry_parser<Iterator>::setApprox()
+void GeometryParser<Iterator>::setApprox()
 {
     geom.setShapeApprox(approxLenX, approxLenY);
 }
 
 
 template<typename Iterator>
-void Geometry_parser<Iterator>::addRow()
+void GeometryParser<Iterator>::addRow()
 {
     geom.sectionList[geom.getSectionCount()].addRow();
 }
 
 
 template<typename Iterator>
-void Geometry_parser<Iterator>::sectionName(std::string n)
+void GeometryParser<Iterator>::sectionName(std::string n)
 {
     geom.sectionList[geom.getSectionCount()].setName(QString::fromUtf8(n.data(), n.size()));
 }
 
 
 template<typename Iterator>
-void Geometry_parser<Iterator>::rowinit()
+void GeometryParser<Iterator>::rowinit()
 {
     int secn = geom.getSectionCount();
     int rown = geom.sectionList[secn].getRowCount();
@@ -297,7 +297,7 @@ void Geometry_parser<Iterator>::rowinit()
 
 
 template<typename Iterator>
-void Geometry_parser<Iterator>::sectioninit()
+void GeometryParser<Iterator>::sectioninit()
 {
     int secn = geom.getSectionCount();
     geom.sectionList[secn].setTop(geom.sectionTop);
@@ -310,7 +310,7 @@ void Geometry_parser<Iterator>::sectioninit()
 
 
 template<typename Iterator>
-void Geometry_parser<Iterator>::setRowTop(double a)
+void GeometryParser<Iterator>::setRowTop(double a)
 {
     int secn = geom.getSectionCount();
     int rown = geom.sectionList[secn].getRowCount();
@@ -321,7 +321,7 @@ void Geometry_parser<Iterator>::setRowTop(double a)
 
 
 template<typename Iterator>
-void Geometry_parser<Iterator>::setRowLeft(double a)
+void GeometryParser<Iterator>::setRowLeft(double a)
 {
     int secn = geom.getSectionCount();
     int rown = geom.sectionList[secn].getRowCount();
@@ -332,7 +332,7 @@ void Geometry_parser<Iterator>::setRowLeft(double a)
 
 
 template<typename Iterator>
-void Geometry_parser<Iterator>::setSectionTop(double a)
+void GeometryParser<Iterator>::setSectionTop(double a)
 {
     //qCDebug(KEYBOARD_PREVIEW) << "\nsectionCount" << geom.sectionCount;
     int secn = geom.getSectionCount();
@@ -342,7 +342,7 @@ void Geometry_parser<Iterator>::setSectionTop(double a)
 
 
 template<typename Iterator>
-void Geometry_parser<Iterator>::setSectionLeft(double a)
+void GeometryParser<Iterator>::setSectionLeft(double a)
 {
     //qCDebug(KEYBOARD_PREVIEW) << "\nsectionCount" << geom.sectionCount;
     int secn = geom.getSectionCount();
@@ -353,7 +353,7 @@ void Geometry_parser<Iterator>::setSectionLeft(double a)
 
 
 template<typename Iterator>
-void Geometry_parser<Iterator>::setSectionAngle(double a)
+void GeometryParser<Iterator>::setSectionAngle(double a)
 {
     //qCDebug(KEYBOARD_PREVIEW) << "\nsectionCount" << geom.sectionCount;
     int secn = geom.getSectionCount();
@@ -362,7 +362,7 @@ void Geometry_parser<Iterator>::setSectionAngle(double a)
 
 
 template<typename Iterator>
-void Geometry_parser<Iterator>::setVerticalRow()
+void GeometryParser<Iterator>::setVerticalRow()
 {
     int secn = geom.getSectionCount();
     int rown = geom.sectionList[secn].getRowCount();
@@ -371,7 +371,7 @@ void Geometry_parser<Iterator>::setVerticalRow()
 
 
 template<typename Iterator>
-void Geometry_parser<Iterator>::setVerticalSection()
+void GeometryParser<Iterator>::setVerticalSection()
 {
     int secn = geom.getSectionCount();
     geom.sectionList[secn].setVertical(1);
@@ -379,14 +379,14 @@ void Geometry_parser<Iterator>::setVerticalSection()
 
 
 template<typename Iterator>
-void Geometry_parser<Iterator>::setVerticalGeometry()
+void GeometryParser<Iterator>::setVerticalGeometry()
 {
     geom.setVertical(1);
 }
 
 
 template<typename Iterator>
-void Geometry_parser<Iterator>::setKeyName(std::string n)
+void GeometryParser<Iterator>::setKeyName(std::string n)
 {
     int secn = geom.getSectionCount();
     int rown = geom.sectionList[secn].getRowCount();
@@ -397,7 +397,7 @@ void Geometry_parser<Iterator>::setKeyName(std::string n)
 
 
 template<typename Iterator>
-void Geometry_parser<Iterator>::setKeyShape(std::string n)
+void GeometryParser<Iterator>::setKeyShape(std::string n)
 {
     int secn = geom.getSectionCount();
     int rown = geom.sectionList[secn].getRowCount();
@@ -408,7 +408,7 @@ void Geometry_parser<Iterator>::setKeyShape(std::string n)
 
 
 template<typename Iterator>
-void Geometry_parser<Iterator>::setKeyNameandShape(std::string n)
+void GeometryParser<Iterator>::setKeyNameandShape(std::string n)
 {
     int secn = geom.getSectionCount();
     int rown = geom.sectionList[secn].getRowCount();
@@ -418,7 +418,7 @@ void Geometry_parser<Iterator>::setKeyNameandShape(std::string n)
 
 
 template<typename Iterator>
-void Geometry_parser<Iterator>::setKeyOffset()
+void GeometryParser<Iterator>::setKeyOffset()
 {
     //qCDebug(KEYBOARD_PREVIEW) << "\nhere\n";
     int secn = geom.getSectionCount();
@@ -430,7 +430,7 @@ void Geometry_parser<Iterator>::setKeyOffset()
 
 
 template<typename Iterator>
-void Geometry_parser<Iterator>::setKeyCordi()
+void GeometryParser<Iterator>::setKeyCordi()
 {
     int secn = geom.getSectionCount();
     int rown = geom.sectionList[secn].getRowCount();
@@ -465,14 +465,12 @@ void Geometry_parser<Iterator>::setKeyCordi()
 }
 
 
-
-
 Geometry parseGeometry(const QString &model)
 {
     using boost::spirit::iso8859_1::space;
     typedef std::string::const_iterator iterator_type;
-    typedef grammar::Geometry_parser<iterator_type> Geometry_parser;
-    Geometry_parser geometryParser;
+    typedef grammar::GeometryParser<iterator_type> GeometryParser;
+    GeometryParser geometryParser;
 
     Rules::GeometryId geoId = Rules::getGeometryId(model);
     QString geometryFile = geoId.fileName;
@@ -481,7 +479,7 @@ Geometry parseGeometry(const QString &model)
     qCDebug(KEYBOARD_PREVIEW) << "looking for model" << model << "geometryName" << geometryName << "in" << geometryFile;
 
     QString input = getGeometry(geometryFile, geometryName);
-    if(! input.isEmpty()){
+    if (! input.isEmpty()) {
         geometryParser.geom = Geometry();
         input = includeGeometry(input);
         std::string parserInput = input.toUtf8().constData();
@@ -509,31 +507,32 @@ Geometry parseGeometry(const QString &model)
     return parseGeometry("pc104");
 }
 
-QString includeGeometry(QString geometry){
+QString includeGeometry(QString geometry)
+{
     QStringList lines = geometry.split("\n");
     int includeLine = -1;
     QString includeLineStr;
     QString startLine = lines[0];
-    for(int i = 0; i < lines.size(); i++){
+    for (int i = 0; i < lines.size(); i++) {
         includeLineStr = lines[i];
         lines[i] = lines[i].remove(" ");
         lines[i] = lines[i].remove("\r");
-        if(lines[i].startsWith("include")){
+        if (lines[i].startsWith("include")) {
             includeLine = i;
             break;
         }
     }
-    if(includeLine == -1){
+    if (includeLine == -1) {
         return geometry;
     }
     geometry = geometry.remove(includeLineStr);
     lines[includeLine] = lines[includeLine].remove("include");
     lines[includeLine] = lines[includeLine].remove("\"");
     lines[includeLine] = lines[includeLine].remove(")");
-    if(lines[includeLine].contains("(")){
+    if (lines[includeLine].contains("(")) {
         QString includeFile = lines[includeLine].split("(")[0];
         QString includeGeom = lines[includeLine].split("(")[1];
-        qCDebug(KEYBOARD_PREVIEW) << "looking to include "<< "geometryName" << includeGeom << "in" << includeFile;
+        qCDebug(KEYBOARD_PREVIEW) << "looking to include " << "geometryName" << includeGeom << "in" << includeFile;
         QString includeStr = getGeometry(includeFile, includeGeom);
         includeStr = getGeometryStrContent(includeStr);
         geometry = geometry.remove(startLine);
@@ -545,14 +544,16 @@ QString includeGeometry(QString geometry){
     return geometry;
 }
 
-QString getGeometryStrContent(QString geometryStr){
+QString getGeometryStrContent(QString geometryStr)
+{
     int k = geometryStr.indexOf("{");
     int k2 = geometryStr.lastIndexOf("};");
-    geometryStr = geometryStr.mid(k + 1, k2-k-2);
+    geometryStr = geometryStr.mid(k + 1, k2 - k - 2);
     return geometryStr;
 }
 
-QString getGeometry(QString geometryFile, QString geometryName){
+QString getGeometry(QString geometryFile, QString geometryName)
+{
 
     QString xkbParentDir = findGeometryBaseDir();
     geometryFile.prepend(xkbParentDir);
@@ -569,17 +570,17 @@ QString getGeometry(QString geometryFile, QString geometryName){
     QStringList gcontentList = gcontent.split("xkb_geometry ");
 
     int current = 0;
-    for(int i = 1; i < gcontentList.size(); i++){
-        if(gcontentList[i].startsWith("\""+ geometryName + "\"")){
+    for (int i = 1; i < gcontentList.size(); i++) {
+        if (gcontentList[i].startsWith("\"" + geometryName + "\"")) {
             current = i;
             break;
         }
     }
-    if(current != 0){
+    if (current != 0) {
         return gcontentList[current].prepend("xkb_geometry ");
-    }
-    else
+    } else {
         return QString();
+    }
 }
 
 

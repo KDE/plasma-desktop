@@ -25,6 +25,7 @@
 #include <QFileDialog>
 #include <QFile>
 
+
 namespace grammar
 {
 
@@ -39,8 +40,8 @@ levels::levels()
 }
 
 template<typename Iterator>
-Symbol_parser<Iterator>::Symbol_parser() :
-    Symbol_parser::base_type(start)
+SymbolParser<Iterator>::SymbolParser() :
+    SymbolParser::base_type(start)
 {
     using qi::lexeme;
     using qi::char_;
@@ -62,24 +63,24 @@ Symbol_parser<Iterator>::Symbol_parser() :
                       >> lit("*/")];
 
     include = lit("include")
-              >> name[phx::bind(&Symbol_parser::getInclude, this, _1)];
+              >> name[phx::bind(&SymbolParser::getInclude, this, _1)];
 
     type = lit("type") >> '[' >> group >> lit(']') >> lit('=') >> lit("\"")
            >> *(char_ - lvl)
-           >> *lvl[phx::bind(&Symbol_parser::setLevel, this, _1)]
+           >> *lvl[phx::bind(&SymbolParser::setLevel, this, _1)]
            >> *(char_ - lvl - '"') >> lit("\"");
 
     symbol = +(char_ - ',' - ']');
 
     symbols = *(lit("symbols") >> '[' >> group >> lit(']') >> lit('=')) >> '['
-              >> symbol[phx::bind(&Symbol_parser::getSymbol, this, _1)]
-              >> *(',' >> symbol[phx::bind(&Symbol_parser::getSymbol, this, _1)])
+              >> symbol[phx::bind(&SymbolParser::getSymbol, this, _1)]
+              >> *(',' >> symbol[phx::bind(&SymbolParser::getSymbol, this, _1)])
               >> ']';
 
     keyName = '<' >> *(char_ - '>') >> '>';
 
     key = (lit("key")
-           >> keyName[phx::bind(&Symbol_parser::addKeyName, this, _1)] >> '{'
+           >> keyName[phx::bind(&SymbolParser::addKeyName, this, _1)] >> '{'
            >> *(type >> ',') >> symbols >> *(',' >> type) >> lit("};"))
           || lit("key") >> lit(".") >> type >> lit(";");
 
@@ -87,14 +88,14 @@ Symbol_parser<Iterator>::Symbol_parser() :
          >> lit("};");
 
     start = *(char_ - lit("xkb_symbols") || comments) >> lit("xkb_symbols")
-            >> name[phx::bind(&Symbol_parser::setName, this, _1)] >> '{'
-            >> *(key[phx::bind(&Symbol_parser::addKey, this)] || include || ee
+            >> name[phx::bind(&SymbolParser::setName, this, _1)] >> '{'
+            >> *(key[phx::bind(&SymbolParser::addKey, this)] || include || ee
                  || char_ - '}' - symbolKeyword || comments) >> lit("};")
             >> *(comments || char_);
 }
 
 template<typename Iterator>
-void Symbol_parser<Iterator>::getSymbol(std::string n)
+void SymbolParser<Iterator>::getSymbol(std::string n)
 {
     int index = layout.keyList[keyIndex].getSymbolCount();
     layout.keyList[keyIndex].addSymbol(QString::fromUtf8(n.data(), n.size()),
@@ -104,7 +105,7 @@ void Symbol_parser<Iterator>::getSymbol(std::string n)
 }
 
 template<typename Iterator>
-void Symbol_parser<Iterator>::addKeyName(std::string n)
+void SymbolParser<Iterator>::addKeyName(std::string n)
 {
     QString kname = QString::fromUtf8(n.data(), n.size());
     if (kname.startsWith("Lat")) {
@@ -121,7 +122,7 @@ void Symbol_parser<Iterator>::addKeyName(std::string n)
 }
 
 template<typename Iterator>
-void Symbol_parser<Iterator>::addKey()
+void SymbolParser<Iterator>::addKey()
 {
     if (newKey == 1) {
         layout.addKey();
@@ -131,20 +132,20 @@ void Symbol_parser<Iterator>::addKey()
 }
 
 template<typename Iterator>
-void Symbol_parser<Iterator>::getInclude(std::string n)
+void SymbolParser<Iterator>::getInclude(std::string n)
 {
     layout.addInclude(QString::fromUtf8(n.data(), n.size()));
 }
 
 template<typename Iterator>
-void Symbol_parser<Iterator>::setName(std::string n)
+void SymbolParser<Iterator>::setName(std::string n)
 {
     layout.setName(QString::fromUtf8(n.data(), n.size()));
     //qCDebug(KEYBOARD_PREVIEW) << layout.getLayoutName();
 }
 
 template<typename Iterator>
-void Symbol_parser<Iterator>::setLevel(int lvl)
+void SymbolParser<Iterator>::setLevel(int lvl)
 {
     if (lvl > layout.getLevel()) {
         layout.setLevel(lvl);
@@ -210,9 +211,9 @@ KbLayout parseSymbols(const QString &layout, const QString &layoutVariant)
 
     using boost::spirit::iso8859_1::space;
     typedef std::string::const_iterator iterator_type;
-    typedef grammar::Symbol_parser<iterator_type> Symbol_parser;
+    typedef grammar::SymbolParser<iterator_type> SymbolParser;
 
-    Symbol_parser symbolParser;
+    SymbolParser symbolParser;
 
     symbolParser.layout.country = layout;
     QString input = findLayout(layout, layoutVariant);

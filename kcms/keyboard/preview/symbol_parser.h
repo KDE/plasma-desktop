@@ -56,9 +56,9 @@ struct levels : qi::symbols<char, int> {
 };
 
 template<typename Iterator>
-struct Symbol_parser : qi::grammar<Iterator, iso::space_type> {
+struct SymbolParser : qi::grammar<Iterator, iso::space_type> {
 
-    Symbol_parser();
+    SymbolParser();
 
     qi::rule<Iterator,  iso::space_type>start;
     qi::rule<Iterator, std::string(), iso::space_type>name;
