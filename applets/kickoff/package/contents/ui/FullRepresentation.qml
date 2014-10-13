@@ -75,6 +75,7 @@ Item {
 
     Item {
         id: mainArea
+        anchors.topMargin: mainTabGroup.state == "top" ? units.smallSpacing : 0
 
         PlasmaComponents.TabGroup {
             id: mainTabGroup
