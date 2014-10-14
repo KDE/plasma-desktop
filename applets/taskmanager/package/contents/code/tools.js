@@ -67,13 +67,13 @@ function insertionIndexAt(sourceIndex, x, y) {
         return index;
     } else {
         var distance = tasks.vertical ? x : y;
-        var step = tasks.vertical ? Layout.taskWidth() : Layout.taskHeight();
+        var step = tasks.vertical ? LayoutManager.taskWidth() : LayoutManager.taskHeight();
         var stripe = Math.ceil(distance / step);
 
-        if (stripe == Layout.calculateStripes()) {
+        if (stripe == LayoutManager.calculateStripes()) {
             return -1;
         } else {
-            return stripe * Layout.tasksPerStripe();
+            return stripe * LayoutManager.tasksPerStripe();
         }
     }
 }
