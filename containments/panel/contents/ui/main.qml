@@ -225,6 +225,9 @@ function checkLastSpacer() {
         }
 
         if (plasmoid.userConfiguring) {
+            for (var i = 0; i < plasmoid.applets.length; ++i) {
+                plasmoid.applets[i].expanded = false;
+            }
             if (!dragOverlay) {
                 var component = Qt.createComponent("ConfigOverlay.qml");
                 if (component.status == Component.Ready) {
