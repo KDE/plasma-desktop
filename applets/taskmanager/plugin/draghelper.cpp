@@ -54,7 +54,9 @@ void DragHelper::startDrag(QQuickItem *item, const QString &mimeType,
     drag->setPixmap(icon.pixmap(QSize(48, 48)));
     drag->setHotSpot(QPoint(drag->pixmap().width() / 2, drag->pixmap().height() / 2));
 
+    item->grabMouse();
     drag->exec();
+    item->ungrabMouse();
 
     emit dropped();
 }
