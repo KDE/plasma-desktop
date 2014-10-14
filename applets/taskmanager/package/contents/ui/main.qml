@@ -104,6 +104,14 @@ Item {
         }
     }
 
+    Timer {
+        id: modelResetTimer
+
+        interval: 0
+
+        onTriggered: LayoutManager.layout(taskRepeater)
+    }
+
     Connections {
         target: plasmoid
 
@@ -236,12 +244,8 @@ Item {
                 TaskTools.publishIconGeometries(taskList.children);
             }
 
-            function modelWasReset() {
-                LayoutManager.layout(taskRepeater);
-            }
-
             Component.onCompleted: {
-                backend.tasksModel.modelReset.connect(modelWasReset);
+                backend.tasksModel.modelReset.connect(modelResetTimer.start);
             }
         }
     }
