@@ -145,6 +145,7 @@ Item {
             id: queryField
             anchors.fill: parent
             clearButtonShown: true
+            visible: opacity > 0
             Behavior on opacity { NumberAnimation { duration: searchWidget.animationDuration / 4 } }
 
             onTextChanged: {
