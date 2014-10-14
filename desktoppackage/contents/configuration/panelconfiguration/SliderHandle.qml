@@ -44,9 +44,6 @@ PlasmaCore.SvgItem {
     property int maximumValue: (dialogRoot.vertical) ? root.parent.height - root.height/2+1 : root.parent.width - root.width/2+1
 
     function syncPos() {
-        if (mouseArea.pressed) {
-            return;
-        }
         if (dialogRoot.vertical) {
             if (alignment == Qt.AlignRight) {
                 y = root.parent.height - (value + offset + root.height/2)
@@ -54,7 +51,7 @@ PlasmaCore.SvgItem {
                 y = value + offset - root.height/2
             } else {
                 if (root.alignment & Qt.AlignRight) {
-                    y = root.parent.height/2 - value/2 + offset - root.height/2
+                    y = root.parent.height/2 - value/2 - offset + root.height/2
                 } else if (root.alignment & Qt.AlignLeft) {
                     y = root.parent.height/2 + value/2 + offset - root.height/2
                 } else {
@@ -70,7 +67,7 @@ PlasmaCore.SvgItem {
                 if (root.alignment & Qt.AlignRight) {
                     x = root.parent.width/2 - value/2 + offset - root.width/2
                 } else if (root.alignment & Qt.AlignLeft) {
-                    x = root.parent.width/2 + value/2 + offset - root.width/2
+                    x = root.parent.width/2 + value/2 + offset -root.width/2
                 } else {
                     x = root.parent.width/2 + value + offset -root.width/2
                 }
@@ -87,7 +84,6 @@ PlasmaCore.SvgItem {
     }
 
     MouseArea {
-        id: mouseArea
         drag {
             target: parent
             axis: (dialogRoot.vertical) ? Drag.YAxis : Drag.XAxis
@@ -106,9 +102,9 @@ PlasmaCore.SvgItem {
                 //Center
                 } else {
                     if (root.alignment & Qt.AlignRight) {
-                        root.value = (root.parent.height/2 - parent.y + offset)*2  - root.height
+                        root.value = (root.parent.height/2 - parent.y + offset)*2  + root.height/2
                     } else if (root.alignment & Qt.AlignLeft) {
-                        root.value = (parent.y - offset - root.parent.height/2)*2  + root.height
+                        root.value = (parent.y - offset - root.parent.height/2)*2  + root.height/2
                     } else {
                         var value = parent.y - root.parent.height/2 - offset + root.height/2
                         //Snap
@@ -127,9 +123,9 @@ PlasmaCore.SvgItem {
                 //Center
                 } else {
                     if (root.alignment & Qt.AlignRight) {
-                        root.value = (root.parent.width/2 - parent.x + offset)*2  - root.width
+                        root.value = (root.parent.width/2 - parent.x + offset)*2  + root.width/2
                     } else if (root.alignment & Qt.AlignLeft) {
-                        root.value = (parent.x - offset - root.parent.width/2)*2  + root.width
+                        root.value = (parent.x - offset - root.parent.width/2)*2  + root.width/2
                     } else {
                         var value = parent.x - root.parent.width/2 - offset + root.width/2
                         //Snap
