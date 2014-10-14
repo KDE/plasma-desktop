@@ -20,14 +20,20 @@ import QtQuick 2.0
 import org.kde.kquickcontrols 2.0
 
 Item {
+    id: root
     width: childrenRect.width
     height: childrenRect.height
+
+    signal configurationChanged
+    function saveConfig() {
+        plasmoid.globalShortcut = button.keySequence
+    }
 
     KeySequenceItem {
         id: button
         keySequence: plasmoid.globalShortcut
         onKeySequenceChanged: {
-            plasmoid.globalShortcut = button.keySequence
+            root.configurationChanged();
         }
     }
 }
