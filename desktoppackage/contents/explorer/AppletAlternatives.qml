@@ -40,11 +40,10 @@ PlasmaCore.Dialog {
     ColumnLayout {
         id: root
 
-        anchors.fill: parent
-
         signal configurationChanged
+
         Layout.minimumWidth: units.gridUnit * 20
-        Layout.minimumHeight: Math.min(Screen.height - units.gridUnit * 10, mainList.contentHeight + units.gridUnit)
+        Layout.minimumHeight: Math.min(Screen.height - units.gridUnit * 10, heading.height + buttonsRow.height + mainList.contentHeight + units.gridUnit)
 
         property string currentPlugin: alternativesHelper.currentPlugin
 
@@ -54,6 +53,7 @@ PlasmaCore.Dialog {
         }
 
         PlasmaExtras.Heading {
+            id: heading
             text: i18nd("plasma_shell_org.kde.plasma.desktop", "Alternatives");
         }
 
@@ -117,6 +117,8 @@ PlasmaCore.Dialog {
             }
         }
         RowLayout {
+            id: buttonsRow
+
             Layout.fillWidth: true
             PlasmaComponents.Button {
                 enabled: root.currentPlugin != alternativesHelper.currentPlugin
