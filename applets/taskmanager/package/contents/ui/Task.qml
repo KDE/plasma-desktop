@@ -345,8 +345,6 @@ MouseEventListener {
         if (model.hasModelChildren) {
             var component = Qt.createComponent("GroupExpanderOverlay.qml");
             component.createObject(task);
-        } else {
-            tasks.requestLayout();
         }
     }
 /*

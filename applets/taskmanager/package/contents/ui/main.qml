@@ -242,6 +242,9 @@ Item {
             id: taskRepeater
 
             model: visualModel
+
+            onItemAdded: tasks.requestLayout()
+            onItemRemoved: tasks.requestLayout()
         }
     }
 
@@ -268,8 +271,8 @@ Item {
     }
 
     Component.onCompleted: {
-        tasks.requestLayout.connect(layoutTimer.start);
-        tasks.requestLayout.connect(iconGeometryTimer.start);
+        tasks.requestLayout.connect(layoutTimer.restart);
+        tasks.requestLayout.connect(iconGeometryTimer.restart);
         tasks.activateItem.connect(backend.activateItem);
         tasks.activateWindow.connect(backend.activateWindow);
         tasks.closeWindow.connect(backend.closeWindow);
