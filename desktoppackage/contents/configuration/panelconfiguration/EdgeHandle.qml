@@ -34,6 +34,7 @@ PlasmaComponents.Button {
         property int startMouseX
         property int startMouseY
         onPressed: {
+            contextMenu.visible = false;
             lastX = mouse.screenX
             lastY = mouse.screenY
             startMouseX = mouse.x
