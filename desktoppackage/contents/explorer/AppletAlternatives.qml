@@ -40,11 +40,10 @@ PlasmaCore.Dialog {
     ColumnLayout {
         id: root
 
-        anchors.fill: parent
-
         signal configurationChanged
+
         Layout.minimumWidth: units.gridUnit * 20
-        Layout.minimumHeight: Math.min(Screen.height - units.gridUnit * 10, mainList.contentHeight + units.gridUnit)
+        Layout.minimumHeight: Math.min(Screen.height - units.gridUnit * 10, heading.height + buttonsRow.height + mainList.contentHeight + units.gridUnit)
 
         property string currentPlugin: alternativesHelper.currentPlugin
 
@@ -54,6 +53,7 @@ PlasmaCore.Dialog {
         }
 
         PlasmaExtras.Heading {
+            id: heading
             text: i18nd("plasma_shell_org.kde.plasma.desktop", "Alternatives");
         }
 
@@ -70,6 +70,7 @@ PlasmaCore.Dialog {
                 highlight: PlasmaComponents.Highlight {
                     id: highlight
                 }
+                highlightMoveDuration : 0
                 delegate: PlasmaComponents.ListItem {
                     enabled: true
                     onClicked: checked = true;
@@ -86,6 +87,7 @@ PlasmaCore.Dialog {
                     }
                     RowLayout {
                         x: 2 * units.smallSpacing
+                        width: parent.width - 2 * x
                         spacing: units.largeSpacing
                         QIconItem {
                             width: units.iconSizes.huge
@@ -98,12 +100,13 @@ PlasmaCore.Dialog {
                             Layout.fillWidth: true
                             PlasmaExtras.Heading {
                                 level: 4
-                                width: parent.width
+                                Layout.fillWidth: true
                                 text: model.name
+                                wrapMode: Text.NoWrap
                                 elide: Text.ElideRight
                             }
                             PlasmaComponents.Label {
-                                width: parent.width
+                                Layout.fillWidth: true
                                 text: model.description
                                 font.pointSize: theme.smallestFont.pointSize
                                 maximumLineCount: 2
@@ -116,6 +119,8 @@ PlasmaCore.Dialog {
             }
         }
         RowLayout {
+            id: buttonsRow
+
             Layout.fillWidth: true
             PlasmaComponents.Button {
                 enabled: root.currentPlugin != alternativesHelper.currentPlugin
