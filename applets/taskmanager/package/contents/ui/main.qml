@@ -50,6 +50,7 @@ Item {
 
     property Item dragSource: null
 
+    signal requestLayout
     signal activateItem(int id, bool toggle)
     signal activateWindow(int winId)
     signal closeWindow(int winId);
@@ -105,11 +106,16 @@ Item {
     }
 
     Timer {
-        id: modelResetTimer
+        id: layoutTimer
 
         interval: 0
+        repeat: false
 
-        onTriggered: LayoutManager.layout(taskRepeater)
+        onTriggered: {
+            taskList.width = LayoutManager.layoutWidth();
+            taskList.height = LayoutManager.layoutHeight();
+            LayoutManager.layout(taskRepeater);
+        }
     }
 
     Connections {
@@ -236,17 +242,6 @@ Item {
             id: taskRepeater
 
             model: visualModel
-
-            onCountChanged: {
-                taskList.width = LayoutManager.layoutWidth();
-                taskList.height = LayoutManager.layoutHeight();
-                LayoutManager.layout(taskRepeater);
-                TaskTools.publishIconGeometries(taskList.children);
-            }
-
-            Component.onCompleted: {
-                backend.tasksModel.modelReset.connect(modelResetTimer.start);
-            }
         }
     }
 
@@ -273,6 +268,8 @@ Item {
     }
 
     Component.onCompleted: {
+        tasks.requestLayout.connect(layoutTimer.start);
+        tasks.requestLayout.connect(iconGeometryTimer.start);
         tasks.activateItem.connect(backend.activateItem);
         tasks.activateWindow.connect(backend.activateWindow);
         tasks.closeWindow.connect(backend.closeWindow);
