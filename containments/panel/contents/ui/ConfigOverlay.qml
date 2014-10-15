@@ -141,6 +141,8 @@ MouseArea {
                 root.dragOverlay.currentApplet = null;
             }
         }
+
+        tooltip.raise();
     }
     onCurrentAppletChanged: {
         if (!root.dragOverlay.currentApplet) {
@@ -305,9 +307,10 @@ MouseArea {
     PlasmaCore.Dialog {
         id: tooltip
         visualParent: currentApplet
+
         visible: currentApplet
         type: PlasmaCore.Dialog.Dock
-        flags: Qt.WindowStaysOnTopHint|Qt.WindowDoesNotAcceptFocus
+        flags: Qt.WindowStaysOnTopHint|Qt.WindowDoesNotAcceptFocus|Qt.BypassWindowManagerHint
         location: plasmoid.location
         mainItem: Row {
             Layout.minimumWidth: implicitWidth
