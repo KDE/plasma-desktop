@@ -70,6 +70,7 @@ PlasmaCore.Dialog {
                 highlight: PlasmaComponents.Highlight {
                     id: highlight
                 }
+                highlightMoveDuration : 0
                 delegate: PlasmaComponents.ListItem {
                     enabled: true
                     onClicked: checked = true;
