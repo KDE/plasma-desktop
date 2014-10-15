@@ -87,6 +87,7 @@ PlasmaCore.Dialog {
                     }
                     RowLayout {
                         x: 2 * units.smallSpacing
+                        width: parent.width - 2 * x
                         spacing: units.largeSpacing
                         QIconItem {
                             width: units.iconSizes.huge
@@ -99,12 +100,13 @@ PlasmaCore.Dialog {
                             Layout.fillWidth: true
                             PlasmaExtras.Heading {
                                 level: 4
-                                width: parent.width
+                                Layout.fillWidth: true
                                 text: model.name
+                                wrapMode: Text.NoWrap
                                 elide: Text.ElideRight
                             }
                             PlasmaComponents.Label {
-                                width: parent.width
+                                Layout.fillWidth: true
                                 text: model.description
                                 font.pointSize: theme.smallestFont.pointSize
                                 maximumLineCount: 2
