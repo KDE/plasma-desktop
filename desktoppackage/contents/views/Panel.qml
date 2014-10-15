@@ -180,12 +180,12 @@ PlasmaCore.FrameSvgItem {
         target: containment
         onUserConfiguringChanged: {
             if (!containment.userConfiguring) {
-                minimumWidthChanged();
-                maximumWidthChanged();
-                preferredWidthChanged();
-                minimumHeightChanged();
-                maximumHeightChanged();
-                preferredHeightChanged();
+                containment.Layout.minimumWidthChanged();
+                containment.Layout.maximumWidthChanged();
+                containment.Layout.preferredWidthChanged();
+                containment.Layout.minimumHeightChanged();
+                containment.Layout.maximumHeightChanged();
+                containment.Layout.preferredHeightChanged();
             }
         }
     }
