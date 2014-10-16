@@ -189,14 +189,11 @@ Rectangle {
                 Layout.fillHeight: true
                 Layout.fillWidth: true
                 Column {
-                    width: scroll.viewport.width
                     spacing: units.largeSpacing / 2
+
                     QtControls.Label {
                         id: pageTitle
-                        anchors {
-                            left: parent.left
-                            right: parent.right
-                        }
+                        width: scroll.viewport.width
                         font.pointSize: theme.defaultFont.pointSize*2
                         font.weight: Font.Light
                         text: main.title
@@ -205,13 +202,9 @@ Rectangle {
                     QtControls.StackView {
                         id: main
                         property string title: ""
-                        anchors {
-                            left: parent.left
-                        }
                         property bool invertAnimations: false
 
-
-                        height: Math.max((scroll.height - pageTitle.height - parent.spacing), (main.currentItem  ? (main.currentItem.implicitHeight ? main.currentItem.implicitHeight : main.currentItem.childrenRect.height) : 0))
+                        height: Math.max((scroll.viewport.height - pageTitle.height - parent.spacing), (main.currentItem  ? (main.currentItem.implicitHeight ? main.currentItem.implicitHeight : main.currentItem.childrenRect.height) : 0))
                         width: scroll.viewport.width
 
                         property string sourceFile
