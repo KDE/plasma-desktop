@@ -84,6 +84,8 @@ Item {
             enabled: actionItem.type != "title" && ("enabled" in actionItem ? actionItem.enabled : true)
             separator: actionItem.type == "separator"
             icon: actionItem.icon ? actionItem.icon : null
+            checkable: actionItem.hint == "checked"
+            checked: actionItem.hint == "checked"
 
             onClicked: {
                 actionClicked(actionItem.actionId, actionItem.actionArgument);

@@ -260,7 +260,8 @@ static QByteArray
 ibus_property_args_to_propstr (const char *key,
                                const char *label,
                                const char *icon,
-                               const char *tooltip)
+                               const char *tooltip,
+                               const char *hint = "")
 {
     QByteArray propstr("/IBus/");
     QByteArray str(key);
@@ -275,6 +276,8 @@ ibus_property_args_to_propstr (const char *key,
     propstr += app->normalizeIconName(QByteArray(icon).replace(':', '-'));
     propstr += prop_sep;
     propstr += QByteArray(tooltip).replace(':', '-').constData();
+    propstr += prop_sep;
+    propstr += QByteArray(hint).replace(':', '-').constData();
 
     return propstr;
 }
@@ -336,10 +339,24 @@ ibus_property_to_propstr (IBusProperty *property,
         label = ibus_text_get_text(ibus_property_get_label(property));
     }
 
+    const char* hint = "";
+    if (ibus_property_get_prop_type(property) == PROP_TYPE_TOGGLE) {
+        if (ibus_property_get_state(property) != PROP_STATE_CHECKED) {
+            hint = "disable";
+        }
+    } else if (ibus_property_get_prop_type(property) == PROP_TYPE_RADIO) {
+        if (ibus_property_get_state(property) == PROP_STATE_CHECKED) {
+            hint = "checked";
+        }
+    }
+
+
+
     return ibus_property_args_to_propstr(ibus_property_get_key (property),
                                          label,
                                          icon,
-                                         tooltip);
+                                         tooltip,
+                                         hint);
 }
 
 static QByteArray

@@ -177,14 +177,7 @@ static KimpanelProperty String2Property(const QString &str)
     result.label = list.at(1);
     result.icon = list.at(2);
     result.tip = list.at(3);
-//X     {
-//X         result.state = KimpanelProperty::None;
-//X         int n = list.at(4).toInt();
-//X         if (n & KimpanelProperty::Active)
-//X             result.state &= KimpanelProperty::Active;
-//X         if (n & KimpanelProperty::Visible)
-//X             result.state &= KimpanelProperty::Visible;
-//X     }
+    result.hint = list.size() >= 4 ? list.at(4) : "";
 
     return result;
 }

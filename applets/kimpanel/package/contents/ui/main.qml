@@ -83,6 +83,7 @@ Item {
                 label: model.label
                 tip: model.tip
                 icon: model.icon
+                hint: model.hint
                 onTriggered : clickHandler(model.key)
             }
         }
@@ -110,7 +111,7 @@ Item {
             menu.timestamp = menuData["timestamp"];
             var actionList = [];
             for (var i = 0; i < menuData["props"].length; i++ ) {
-                actionList.push({"actionId": menuData["props"][i].key, "icon": menuData["props"][i].icon, "text": menuData["props"][i].label});
+                actionList.push({"actionId": menuData["props"][i].key, "icon": menuData["props"][i].icon, "text": menuData["props"][i].label, hint: menuData["props"][i].hint});
             }
             if (actionList.length > 0) {
                 menu.actionList = actionList;
@@ -146,7 +147,8 @@ Item {
                 var itemData = {'key': data[i].key,
                                 'icon': data[i].icon,
                                 'label': data[i].label,
-                                'tip': data[i].tip };
+                                'tip': data[i].tip,
+                                'hint': data[i].hint };
                 if (i < count) {
                     list.set(i, itemData);
                 } else {

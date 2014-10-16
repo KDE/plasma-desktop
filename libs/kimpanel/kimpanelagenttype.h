@@ -40,28 +40,21 @@ struct TextAttribute {
 };
 
 struct KimpanelProperty {
-    enum State {
-        None = 0,
-        Active = 1,
-        Visible = (1 << 1)
-    };
-    Q_DECLARE_FLAGS(States, State)
-
     KimpanelProperty() { }
 
-    KimpanelProperty(QString key, QString label, QString icon, QString tip, int state) {
+    KimpanelProperty(QString key, QString label, QString icon, QString tip, QString hint) {
         this->key = key;
         this->label = label;
         this->tip = tip;
         this->icon = icon;
-        this->state = (State) state;
+        this->hint = hint;
     }
 
     QString key;
     QString label;
     QString icon;
     QString tip;
-    States state;
+    QString hint;
 
     QVariantMap toMap() const {
         QVariantMap map;
@@ -69,11 +62,10 @@ struct KimpanelProperty {
         map["label"] = label;
         map["icon"] = icon;
         map["tip"] = tip;
-        map["state"] = (int) state;
+        map["hint"] = hint;
         return map;
     }
 };
-Q_DECLARE_OPERATORS_FOR_FLAGS(KimpanelProperty::States)
 
 struct KimpanelLookupTable {
     struct Entry {

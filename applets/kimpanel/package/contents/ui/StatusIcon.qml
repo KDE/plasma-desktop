@@ -28,8 +28,11 @@ Item {
     property string icon;
     property string label;
     property string tip;
+    property string hint;
     signal triggered;
     property int iconSize: units.roundToIconSize(Math.min(parent.width, parent.height))
+
+    opacity: 'disable' == hint ? 0.3 : 1
 
     function extractLabelString(l) {
         if (l.length >= 2 && l.charCodeAt(0) < 127 && l.charCodeAt(1) < 127) {
