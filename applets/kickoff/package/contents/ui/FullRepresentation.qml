@@ -403,6 +403,7 @@ Item {
                 if (!currentView.deactivateCurrentIndex()) {
                     if (root.state == "Applications") {
                         mainTabGroup.currentTab = favoritesPage;
+                        tabBar.currentTab = bookmarkButton;
                     }
                     root.state = "Normal"
                 }
