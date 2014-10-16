@@ -68,8 +68,12 @@ Item {
         width: iconSize
         height: iconSize
         scale: (mouseArea.pressed ? 0.9 : 1)
-        // kind of forced to reference a hard coded value to avoid loop binding warning
+        // a reasonable large size to make Text.Fit work
+        minimumPointSize: 0
+        font.pointSize: 1024
         fontSizeMode: Text.Fit
+        verticalAlignment: Text.AlignVCenter
+        horizontalAlignment: Text.AlignHCenter
         text: extractLabelString(label)
         visible: icon.length == 0
     }
