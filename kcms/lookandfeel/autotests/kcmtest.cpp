@@ -42,6 +42,7 @@ private Q_SLOTS:
 
 private:
     QDir m_configDir;
+    QDir m_dataDir;
     KCMLookandFeel *m_KCMLookandFeel;
 };
 
@@ -53,6 +54,9 @@ void KcmTest::initTestCase()
     m_configDir = QDir(QStandardPaths::writableLocation(QStandardPaths::ConfigLocation));
     m_configDir.removeRecursively();
 
+    m_dataDir = QDir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation));
+    m_dataDir.removeRecursively();
+
     QVERIFY(m_configDir.mkpath("."));
 
     const QString packagePath = QFINDTESTDATA("lookandfeel");
@@ -62,8 +66,6 @@ void KcmTest::initTestCase()
     QVERIFY(p.isValid());
 
     const QString packageRoot = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation)+"/plasma/look-and-feel/";
-    auto uninstallJob = p.uninstall("org.kde.test", packageRoot);
-    uninstallJob->exec();
     auto installJob = p.install(packagePath, packageRoot);
     installJob->exec();
 
@@ -78,6 +80,7 @@ void KcmTest::initTestCase()
 void KcmTest::cleanupTestCase()
 {
     m_configDir.removeRecursively();
+    m_dataDir.removeRecursively();
 }
 
 
