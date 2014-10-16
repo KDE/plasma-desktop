@@ -56,6 +56,56 @@ struct _IBusPanelImpanelClass {
     IBusPanelServiceClass parent;
 };
 
+/* functions prototype */
+static void         ibus_panel_impanel_class_init               (IBusPanelImpanelClass  *klass);
+static void         ibus_panel_impanel_init                     (IBusPanelImpanel       *impanel);
+static void         ibus_panel_impanel_destroy                  (IBusPanelImpanel       *impanel);
+
+static void         ibus_panel_impanel_focus_in                 (IBusPanelService       *panel,
+                                                                 const gchar            *input_context_path);
+static void         ibus_panel_impanel_focus_out                (IBusPanelService       *panel,
+                                                                 const gchar            *input_context_path);
+static void         ibus_panel_impanel_register_properties      (IBusPanelService       *panel,
+                                                                 IBusPropList           *prop_list);
+static void         ibus_panel_impanel_real_register_properties (IBusPanelImpanel       *impanel);
+static void         ibus_panel_impanel_set_cursor_location      (IBusPanelService       *panel,
+                                                                 gint                    x,
+                                                                 gint                    y,
+                                                                 gint                    w,
+                                                                 gint                    h);
+static void         ibus_panel_impanel_update_auxiliary_text    (IBusPanelService       *panel,
+                                                                 IBusText               *text,
+                                                                 gboolean                visible);
+static void         ibus_panel_impanel_update_lookup_table      (IBusPanelService       *panel,
+                                                                 IBusLookupTable        *lookup_table,
+                                                                 gboolean                visible);
+static void         ibus_panel_impanel_update_preedit_text      (IBusPanelService       *panel,
+                                                                 IBusText               *text,
+                                                                 guint                   cursor_pos,
+                                                                 gboolean                visible);
+static void         ibus_panel_impanel_update_property          (IBusPanelService       *panel,
+                                                                 IBusProperty           *prop);
+static void         ibus_panel_impanel_cursor_down_lookup_table (IBusPanelService       *panel);
+static void         ibus_panel_impanel_cursor_up_lookup_table   (IBusPanelService       *panel);
+static void         ibus_panel_impanel_hide_auxiliary_text      (IBusPanelService       *panel);
+static void         ibus_panel_impanel_hide_language_bar        (IBusPanelService       *panel);
+static void         ibus_panel_impanel_hide_lookup_table        (IBusPanelService       *panel);
+static void         ibus_panel_impanel_hide_preedit_text        (IBusPanelService       *panel);
+static void         ibus_panel_impanel_page_down_lookup_table   (IBusPanelService       *panel);
+static void         ibus_panel_impanel_page_up_lookup_table     (IBusPanelService       *panel);
+static void         ibus_panel_impanel_reset                    (IBusPanelService       *panel);
+static void         ibus_panel_impanel_show_auxiliary_text      (IBusPanelService       *panel);
+static void         ibus_panel_impanel_show_language_bar        (IBusPanelService       *panel);
+static void         ibus_panel_impanel_show_lookup_table        (IBusPanelService       *panel);
+static void         ibus_panel_impanel_show_preedit_text        (IBusPanelService       *panel);
+static void         ibus_panel_impanel_start_setup              (IBusPanelService       *panel);
+static void         ibus_panel_impanel_state_changed            (IBusPanelService       *panel);
+
+/* impanel signal handler function */
+static void         ibus_panel_impanel_exec_im_menu             (IBusPanelImpanel* impanel);
+static void         ibus_panel_impanel_exec_menu                (IBusPanelImpanel* impanel, IBusPropList* prop_list);
+
+
 
 static void
 impanel_set_engine(IBusPanelImpanel* impanel, const char* name);
@@ -132,9 +182,7 @@ void ibus_panel_impanel_navigate(IBusPanelImpanel* impanel, gboolean start, gboo
     }
 
     if (impanel->selected >= 0 && static_cast<size_t>(impanel->selected) < impanel->engineManager->length()) {
-        engine_desc = impanel->engineManager->engines()[impanel->selected];
-
-        impanel_update_logo_by_engine(impanel, engine_desc);
+        ibus_panel_impanel_real_register_properties(impanel);
     }
 }
 
@@ -204,55 +252,6 @@ static const gchar introspection_xml[] =
     "    </signal>"
     "  </interface>"
     "</node>";
-
-/* functions prototype */
-static void         ibus_panel_impanel_class_init               (IBusPanelImpanelClass  *klass);
-static void         ibus_panel_impanel_init                     (IBusPanelImpanel       *impanel);
-static void         ibus_panel_impanel_destroy                  (IBusPanelImpanel       *impanel);
-
-static void         ibus_panel_impanel_focus_in                 (IBusPanelService       *panel,
-                                                                 const gchar            *input_context_path);
-static void         ibus_panel_impanel_focus_out                (IBusPanelService       *panel,
-                                                                 const gchar            *input_context_path);
-static void         ibus_panel_impanel_register_properties      (IBusPanelService       *panel,
-                                                                 IBusPropList           *prop_list);
-static void         ibus_panel_impanel_real_register_properties (IBusPanelImpanel       *impanel);
-static void         ibus_panel_impanel_set_cursor_location      (IBusPanelService       *panel,
-                                                                 gint                    x,
-                                                                 gint                    y,
-                                                                 gint                    w,
-                                                                 gint                    h);
-static void         ibus_panel_impanel_update_auxiliary_text    (IBusPanelService       *panel,
-                                                                 IBusText               *text,
-                                                                 gboolean                visible);
-static void         ibus_panel_impanel_update_lookup_table      (IBusPanelService       *panel,
-                                                                 IBusLookupTable        *lookup_table,
-                                                                 gboolean                visible);
-static void         ibus_panel_impanel_update_preedit_text      (IBusPanelService       *panel,
-                                                                 IBusText               *text,
-                                                                 guint                   cursor_pos,
-                                                                 gboolean                visible);
-static void         ibus_panel_impanel_update_property          (IBusPanelService       *panel,
-                                                                 IBusProperty           *prop);
-static void         ibus_panel_impanel_cursor_down_lookup_table (IBusPanelService       *panel);
-static void         ibus_panel_impanel_cursor_up_lookup_table   (IBusPanelService       *panel);
-static void         ibus_panel_impanel_hide_auxiliary_text      (IBusPanelService       *panel);
-static void         ibus_panel_impanel_hide_language_bar        (IBusPanelService       *panel);
-static void         ibus_panel_impanel_hide_lookup_table        (IBusPanelService       *panel);
-static void         ibus_panel_impanel_hide_preedit_text        (IBusPanelService       *panel);
-static void         ibus_panel_impanel_page_down_lookup_table   (IBusPanelService       *panel);
-static void         ibus_panel_impanel_page_up_lookup_table     (IBusPanelService       *panel);
-static void         ibus_panel_impanel_reset                    (IBusPanelService       *panel);
-static void         ibus_panel_impanel_show_auxiliary_text      (IBusPanelService       *panel);
-static void         ibus_panel_impanel_show_language_bar        (IBusPanelService       *panel);
-static void         ibus_panel_impanel_show_lookup_table        (IBusPanelService       *panel);
-static void         ibus_panel_impanel_show_preedit_text        (IBusPanelService       *panel);
-static void         ibus_panel_impanel_start_setup              (IBusPanelService       *panel);
-static void         ibus_panel_impanel_state_changed            (IBusPanelService       *panel);
-
-/* impanel signal handler function */
-static void         ibus_panel_impanel_exec_im_menu             (IBusPanelImpanel* impanel);
-static void         ibus_panel_impanel_exec_menu                (IBusPanelImpanel* impanel, IBusPropList* prop_list);
 
 static const char prop_sep[] = ":";
 
@@ -1090,6 +1089,9 @@ ibus_panel_impanel_register_properties (IBusPanelService *panel,
 static void
 ibus_panel_impanel_real_register_properties(IBusPanelImpanel* impanel)
 {
+    if (!impanel->conn)
+        return;
+
     IBusProperty* property = NULL;
     guint i = 0;
 
@@ -1099,23 +1101,22 @@ ibus_panel_impanel_real_register_properties(IBusPanelImpanel* impanel)
     IBusEngineDesc* engine_desc = NULL;
     if (impanel->selected >= 0 && static_cast<size_t>(impanel->selected) < impanel->engineManager->length()) {
         engine_desc = impanel->engineManager->engines()[impanel->selected];
+        QByteArray propstr = ibus_engine_desc_to_logo_propstr(engine_desc);
+        g_variant_builder_add (&builder, "s", propstr.constData());
     } else {
         engine_desc = ibus_bus_get_global_engine(impanel->bus);
-    }
-    QByteArray propstr = ibus_engine_desc_to_logo_propstr(engine_desc);
-    g_variant_builder_add (&builder, "s", propstr.constData());
+        QByteArray propstr = ibus_engine_desc_to_logo_propstr(engine_desc);
+        g_variant_builder_add (&builder, "s", propstr.constData());
 
-    IBusPropList* prop_list = impanel->propManager->properties();
-    if (prop_list) {
-        while ( ( property = ibus_prop_list_get( prop_list, i ) ) != NULL ) {
-            propstr = ibus_property_to_propstr(property, TRUE);
-            g_variant_builder_add (&builder, "s", propstr.constData());
-            ++i;
+        IBusPropList* prop_list = impanel->propManager->properties();
+        if (prop_list) {
+            while ( ( property = ibus_prop_list_get( prop_list, i ) ) != NULL ) {
+                propstr = ibus_property_to_propstr(property, TRUE);
+                g_variant_builder_add (&builder, "s", propstr.constData());
+                ++i;
+            }
         }
     }
-
-    if (!impanel->conn)
-        return;
 
     g_dbus_connection_emit_signal (impanel->conn,
                                    NULL, "/kimpanel", "org.kde.kimpanel.inputmethod", "RegisterProperties",
