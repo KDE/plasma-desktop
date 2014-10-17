@@ -17,6 +17,7 @@ add_subdirectory(khtml-java-js)
 add_subdirectory(khtml-behavior)
 add_subdirectory(khtml-adblock)
 add_subdirectory(emoticons)
+add_subdirectory(baloo)
 
 if ( Q_WS_X11 )
     add_subdirectory(autostart)
