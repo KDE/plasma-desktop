@@ -177,7 +177,7 @@ static KimpanelProperty String2Property(const QString &str)
     result.label = list.at(1);
     result.icon = list.at(2);
     result.tip = list.at(3);
-    result.hint = list.size() >= 4 ? list.at(4) : "";
+    result.hint = list.size() > 4 ? list.at(4) : "";
 
     return result;
 }
