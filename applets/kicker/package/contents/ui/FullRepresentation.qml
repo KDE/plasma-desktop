@@ -151,6 +151,8 @@ FocusScope {
                 width: units.iconSizes.medium
                 height: lineSvg.horLineHeight
 
+                visible: favoriteApps.model.count && favoriteSystemActions.model.count
+
                 svg: lineSvg
                 elementId: "horizontal-line"
 
