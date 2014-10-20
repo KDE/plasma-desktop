@@ -203,7 +203,7 @@ LaunchConfig::save()
 
   emit changed( false );
 
-  org::kde::kwin::Effects kwin("org.kde.KWin", "/KWin", QDBusConnection::sessionBus());
+  org::kde::kwin::Effects kwin("org.kde.KWin", "/Effects", QDBusConnection::sessionBus());
   kwin.reconfigureEffect("startupfeedback");
 }
 
