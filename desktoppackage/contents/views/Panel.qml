@@ -95,14 +95,14 @@ PlasmaCore.FrameSvgItem {
 
         root.enabledBorders = borders;
 
-        containmentParent.anchors.topMargin = Math.min(root.margins.top, Math.max(1, root.height - units.iconSizes.smallMedium));
+        containmentParent.anchors.topMargin = Math.min(root.fixedMargins.top, Math.max(1, root.height - units.iconSizes.smallMedium));
 
-        containmentParent.anchors.bottomMargin = Math.min(root.margins.bottom, Math.max(1, root.height - units.iconSizes.smallMedium));
+        containmentParent.anchors.bottomMargin = Math.min(root.fixedMargins.bottom, Math.max(1, root.height - units.iconSizes.smallMedium));
 
-        //Base the left/right margins on height as well, to have a good radial simmetry
-        containmentParent.anchors.leftMargin = Math.min(root.margins.left, Math.max(1, root.height - units.iconSizes.smallMedium));
+        //Base the left/right fixedMargins on height as well, to have a good radial simmetry
+        containmentParent.anchors.leftMargin = Math.min(root.fixedMargins.left, Math.max(1, root.height - units.iconSizes.smallMedium));
 
-        containmentParent.anchors.leftMargin = Math.min(root.margins.left, Math.max(1, root.height - units.iconSizes.smallMedium));
+        containmentParent.anchors.leftMargin = Math.min(root.fixedMargins.left, Math.max(1, root.height - units.iconSizes.smallMedium));
     }
 
     onContainmentChanged: {
