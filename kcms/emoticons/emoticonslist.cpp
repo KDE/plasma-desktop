@@ -77,8 +77,8 @@ void EditDialog::setupDlg()
     vl->addLayout(hb);
     wdg->setLayout(vl);
     setMainWidget(wdg);
-    connect(btnIcon, SIGNAL(clicked()), this, SLOT(btnIconClicked()));
-    connect(leText, SIGNAL(textChanged(const QString &)), this, SLOT(updateOkButton()));
+    connect(btnIcon, &QPushButton::clicked, this, &EditDialog::btnIconClicked);
+    connect(leText, &KLineEdit::textChanged, this, &EditDialog::updateOkButton);
     updateOkButton();
     leText->setFocus();
 }
@@ -121,19 +121,19 @@ EmoticonList::EmoticonList(QWidget *parent, const QVariantList &args)
     btInstall->setIcon(KIcon("document-import"));
     btRemoveTheme->setIcon(KIcon("edit-delete"));
 
-    connect(themeList, SIGNAL(itemSelectionChanged()), this, SLOT(selectTheme()));
-    connect(themeList, SIGNAL(itemSelectionChanged()), this, SLOT(updateButton()));
-    connect(btRemoveTheme, SIGNAL(clicked()), this, SLOT(btRemoveThemeClicked()));
-    connect(btInstall, SIGNAL(clicked()), this, SLOT(installEmoticonTheme()));
-    connect(btNew, SIGNAL(clicked()), this, SLOT(newTheme()));
-    connect(btGetNew, SIGNAL(clicked()), this, SLOT(getNewStuff()));
-    connect(cbStrict, SIGNAL(clicked()), this, SLOT(somethingChanged()));
+    connect(themeList, &QListWidget::itemSelectionChanged, this, &EmoticonList::selectTheme);
+    connect(themeList, &QListWidget::itemSelectionChanged, this, &EmoticonList::updateButton);
+    connect(btRemoveTheme, &QPushButton::clicked, this, &EmoticonList::btRemoveThemeClicked);
+    connect(btInstall, &QPushButton::clicked, this, &EmoticonList::installEmoticonTheme);
+    connect(btNew, &QPushButton::clicked, this, &EmoticonList::newTheme);
+    connect(btGetNew, &QPushButton::clicked, this, &EmoticonList::getNewStuff);
+    connect(cbStrict, &QCheckBox::clicked, this, &EmoticonList::somethingChanged);
 
-    connect(btAdd, SIGNAL(clicked()), this, SLOT(addEmoticon()));
-    connect(btEdit, SIGNAL(clicked()), this, SLOT(editEmoticon()));
-    connect(btRemoveEmoticon, SIGNAL(clicked()), this, SLOT(btRemoveEmoticonClicked()));
-    connect(emoList, SIGNAL(itemSelectionChanged()), this, SLOT(updateButton()));
-    connect(emoList, SIGNAL(itemDoubleClicked(QListWidgetItem *)), this, SLOT(editEmoticon()));
+    connect(btAdd, &QPushButton::clicked, this, &EmoticonList::addEmoticon);
+    connect(btEdit, &QPushButton::clicked, this, &EmoticonList::editEmoticon);
+    connect(btRemoveEmoticon, &QPushButton::clicked, this, &EmoticonList::btRemoveEmoticonClicked);
+    connect(emoList, &QListWidget::itemSelectionChanged, this, &EmoticonList::updateButton);
+    connect(emoList, &QListWidget::itemDoubleClicked, this, &EmoticonList::editEmoticon);
 }
 
 EmoticonList::~EmoticonList()

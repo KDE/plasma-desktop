@@ -25,16 +25,16 @@
 #include <Solid/StorageDrive>
 
 #include <QIcon>
-#include <QDebug>
 #include <QFileDialog>
 
 #include <QDir>
 #include <QTimer>
 #include <QUrl>
 #include <KLocalizedString>
-#include <QBoxLayout>
 #include <QSpacerItem>
 #include <QPushButton>
+#include <QHBoxLayout>
+#include <QVBoxLayout>
 
 FolderSelectionWidget::FolderSelectionWidget(QWidget* parent, Qt::WindowFlags f)
     : QWidget(parent, f)

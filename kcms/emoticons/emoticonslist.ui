@@ -39,7 +39,7 @@
       <number>0</number>
      </property>
      <item>
-      <widget class="KPushButton" name="btAdd" >
+      <widget class="QPushButton" name="btAdd" >
        <property name="toolTip" >
         <string>Create a new emoticon</string>
        </property>
@@ -52,7 +52,7 @@
       </widget>
      </item>
      <item>
-      <widget class="KPushButton" name="btEdit" >
+      <widget class="QPushButton" name="btEdit" >
        <property name="toolTip" >
         <string>Modify the selected emoticon icon or text </string>
        </property>
@@ -65,7 +65,7 @@
       </widget>
      </item>
      <item>
-      <widget class="KPushButton" name="btRemoveEmoticon" >
+      <widget class="QPushButton" name="btRemoveEmoticon" >
        <property name="toolTip" >
         <string>Remove the selected emoticon</string>
        </property>
@@ -102,7 +102,7 @@
       </widget>
      </item>
      <item>
-      <widget class="KPushButton" name="btNew" >
+      <widget class="QPushButton" name="btNew" >
        <property name="toolTip" >
         <string>Design a new emoticon theme</string>
        </property>
@@ -115,7 +115,7 @@
       </widget>
      </item>
      <item>
-      <widget class="KPushButton" name="btGetNew" >
+      <widget class="QPushButton" name="btGetNew" >
        <property name="toolTip" >
         <string>Get new icon themes from the Internet</string>
        </property>
@@ -128,7 +128,7 @@
       </widget>
      </item>
      <item>
-      <widget class="KPushButton" name="btInstall" >
+      <widget class="QPushButton" name="btInstall" >
        <property name="toolTip" >
         <string>Install a theme archive file you already have locally</string>
        </property>
@@ -141,7 +141,7 @@
       </widget>
      </item>
      <item>
-      <widget class="KPushButton" name="btRemoveTheme" >
+      <widget class="QPushButton" name="btRemoveTheme" >
        <property name="toolTip" >
         <string>Remove the selected theme from your disk</string>
        </property>
@@ -157,13 +157,6 @@
    </item>
   </layout>
  </widget>
- <customwidgets>
-  <customwidget>
-   <class>KPushButton</class>
-   <extends>QPushButton</extends>
-   <header>kpushbutton.h</header>
-  </customwidget>
- </customwidgets>
  <resources/>
  <connections/>
 </ui>
