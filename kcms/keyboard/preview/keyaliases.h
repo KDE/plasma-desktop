@@ -23,9 +23,9 @@
 class Aliases
 {
 private:
-    QMap<QString,QString>qwerty;
-    QMap<QString,QString>azerty;
-    QMap<QString,QString>qwertz;
+    QMap<QString, QString>qwerty;
+    QMap<QString, QString>azerty;
+    QMap<QString, QString>qwertz;
     QString findaliasdir();
 
 public:

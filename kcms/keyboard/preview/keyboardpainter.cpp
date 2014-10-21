@@ -35,11 +35,11 @@ KeyboardPainter::KeyboardPainter():
     levelBox(new QComboBox(this))
 {
     kbframe->setFixedSize(1100, 490);
-    exitButton->setFixedSize( 120, 30 );
-    levelBox->setFixedSize( 360, 30 );
+    exitButton->setFixedSize(120, 30);
+    levelBox->setFixedSize(360, 30);
 
-    QVBoxLayout* vLayout = new QVBoxLayout( this );
-    QHBoxLayout* hLayout = new QHBoxLayout();
+    QVBoxLayout *vLayout = new QVBoxLayout(this);
+    QHBoxLayout *hLayout = new QHBoxLayout();
 
     hLayout->addWidget(exitButton, 0, Qt::AlignLeft);
     hLayout->addWidget(levelBox, 0, Qt::AlignRight);
@@ -55,40 +55,42 @@ KeyboardPainter::KeyboardPainter():
 }
 
 
-void KeyboardPainter::generateKeyboardLayout(const QString& layout, const QString& variant, const QString& model, const QString& title)
+void KeyboardPainter::generateKeyboardLayout(const QString &layout, const QString &variant, const QString &model, const QString &title)
 {
     kbframe->generateKeyboardLayout(layout, variant, model);
-    kbframe->setFixedSize(getWidth(),getHeight());
-    kbDialog->setFixedSize(getWidth(),getWidth());
+    kbframe->setFixedSize(getWidth(), getHeight());
+    kbDialog->setFixedSize(getWidth(), getWidth());
     setWindowTitle(title);
 
     int level = kbframe->getLevel();
 
-    if(level > 4){
-        levelBox->addItem( i18nc("Keyboard layout levels", "Level %1, %2", 3, 4) );
-        for(int i=5; i <= level; i += 2) {
-            levelBox->addItem( i18nc("Keyboard layout levels", "Level %1, %2", i, i+1) );
+    if (level > 4) {
+        levelBox->addItem(i18nc("Keyboard layout levels", "Level %1, %2", 3, 4));
+        for (int i = 5; i <= level; i += 2) {
+            levelBox->addItem(i18nc("Keyboard layout levels", "Level %1, %2", i, i + 1));
         }
-    }
-    else {
+    } else {
         levelBox->setVisible(false);
     }
 }
 
-void KeyboardPainter::levelChanged(int l_id){
+void KeyboardPainter::levelChanged(int l_id)
+{
     kbframe->setL_id(l_id);
 }
 
-int KeyboardPainter::getHeight(){
-   int height = kbframe->getHeight();
-   height = kbframe->getScaleFactor() * height + 50;
-   return height;
+int KeyboardPainter::getHeight()
+{
+    int height = kbframe->getHeight();
+    height = kbframe->getScaleFactor() * height + 50;
+    return height;
 }
 
-int KeyboardPainter::getWidth(){
-   int width = kbframe->getWidth();
-   width = kbframe->getScaleFactor() * width + 20;
-   return width;
+int KeyboardPainter::getWidth()
+{
+    int width = kbframe->getWidth();
+    width = kbframe->getScaleFactor() * width + 20;
+    return width;
 }
 
 KeyboardPainter::~KeyboardPainter()

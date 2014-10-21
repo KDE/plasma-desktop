@@ -211,9 +211,9 @@ void Geometry::addShape()
 void Geometry::display()
 {
     qCDebug(KEYBOARD_PREVIEW) << name << "\n" << description << "\nwidth:" << width
-             << "\nheight:" << height << "\n" << "sectionTop:" << sectionTop;
+                              << "\nheight:" << height << "\n" << "sectionTop:" << sectionTop;
     qCDebug(KEYBOARD_PREVIEW) << "\nsectionLeft:" << sectionLeft << "\nrowTop:" << rowTop << "\nrowLeft:"
-             << rowLeft << "\nkeyGap: " << keyGap << "\nkeyShape:" << keyShape << "\n";
+                              << rowLeft << "\nkeyGap: " << keyGap << "\nkeyShape:" << keyShape << "\n";
     qCDebug(KEYBOARD_PREVIEW) << "vertical:" << vertical;
 
     for (int i = 0; i < shape_count; i++) {

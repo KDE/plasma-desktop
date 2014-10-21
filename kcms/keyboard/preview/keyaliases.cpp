@@ -46,78 +46,77 @@ Aliases::Aliases()
     QList<QString>als;
     als = content.split("xkb_keycodes");
 
-    for(int i=1; i<als.size(); i++){
+    for (int i = 1; i < als.size(); i++) {
 
-        QString temp=als.at(i);
+        QString temp = als.at(i);
 
-        temp=temp.remove(" ");
-        temp=temp.remove("\n");
-        temp=temp.remove("\"");
-        temp=temp.remove(">");
-        temp=temp.remove("<");
-        temp=temp.remove(";");
-        temp=temp.remove("}");
-        temp=temp.remove("{");
+        temp = temp.remove(" ");
+        temp = temp.remove("\n");
+        temp = temp.remove("\"");
+        temp = temp.remove(">");
+        temp = temp.remove("<");
+        temp = temp.remove(";");
+        temp = temp.remove("}");
+        temp = temp.remove("{");
 
         QList<QString>alskeys;
 
-        alskeys=temp.split("alias");
+        alskeys = temp.split("alias");
 
-        if(temp.startsWith("qwerty")){
+        if (temp.startsWith("qwerty")) {
 
-            for(int k=1;k<alskeys.size();k++){
+            for (int k = 1; k < alskeys.size(); k++) {
 
-                QString tmp=alskeys.at(k);
-                int inofeq=tmp.indexOf("=");
+                QString tmp = alskeys.at(k);
+                int inofeq = tmp.indexOf("=");
 
-                QString lat=tmp.left(inofeq);
-                QString key=tmp.mid(inofeq+1);
+                QString lat = tmp.left(inofeq);
+                QString key = tmp.mid(inofeq + 1);
 
-                qwerty[lat]=key;
+                qwerty[lat] = key;
             }
         }
 
-        if(temp.startsWith("azerty")){
+        if (temp.startsWith("azerty")) {
 
-            for(int k=1;k<alskeys.size();k++){
-                QString tmp=alskeys.at(k);
+            for (int k = 1; k < alskeys.size(); k++) {
+                QString tmp = alskeys.at(k);
 
-                int inofeq=tmp.indexOf("=");
+                int inofeq = tmp.indexOf("=");
 
-                QString lat=tmp.left(inofeq);
-                QString key=tmp.mid(inofeq+1);
+                QString lat = tmp.left(inofeq);
+                QString key = tmp.mid(inofeq + 1);
 
-                azerty[lat]=key;
+                azerty[lat] = key;
             }
         }
 
-        if(temp.startsWith("qwertz")){
-            for(int k=1;k<alskeys.size();k++){
+        if (temp.startsWith("qwertz")) {
+            for (int k = 1; k < alskeys.size(); k++) {
 
-                QString tmp=alskeys.at(k);
+                QString tmp = alskeys.at(k);
 
-                int inofeq=tmp.indexOf("=");
+                int inofeq = tmp.indexOf("=");
 
-                QString lat=tmp.left(inofeq);
-                 QString key=tmp.mid(inofeq+1);
+                QString lat = tmp.left(inofeq);
+                QString key = tmp.mid(inofeq + 1);
 
-                 qwertz[lat]=key;
+                qwertz[lat] = key;
             }
-       }
-   }
+        }
+    }
 
 }
 
 
-QString Aliases::getAlias(const QString& cname, const QString& name)
+QString Aliases::getAlias(const QString &cname, const QString &name)
 {
     QMessageBox q;
     QString a = name;
 
-    if(cname=="ma" || cname == "be" || cname == "fr"){
+    if (cname == "ma" || cname == "be" || cname == "fr") {
         a = azerty.value(name);
-    }
-    else{
+    } else {
         a = qwerty.value(name);
     }
 

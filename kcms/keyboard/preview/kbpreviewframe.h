@@ -40,7 +40,7 @@ class GShape;
 class KbPreviewFrame : public QFrame
 {
     Q_OBJECT
-    
+
 private:
     static const int width = 1100, height = 490;
 
@@ -49,12 +49,12 @@ private:
     QStringList tooltip;
     QList <QPoint> tipPoint;
     int l_id;
-    Geometry& geometry;
+    Geometry &geometry;
     float scaleFactor;
     KbLayout keyboardLayout;
 
-    void drawKeySymbols(QPainter &painter, QPoint temp[], const GShape& s, const QString& name);
-    void drawShape(QPainter &painter, const GShape& s, int x, int y, int i, const QString& name);
+    void drawKeySymbols(QPainter &painter, QPoint temp[], const GShape &s, const QString &name);
+    void drawShape(QPainter &painter, const GShape &s, int x, int y, int i, const QString &name);
 
     int itemAt(const QPoint &pos);
 
@@ -65,25 +65,29 @@ protected:
 public:
     explicit KbPreviewFrame(QWidget *parent = 0);
     virtual ~KbPreviewFrame();
-    void paintEvent(QPaintEvent * event);
-    void generateKeyboardLayout(const QString& layout, const QString& layoutVariant, const QString& model);
+    void paintEvent(QPaintEvent *event);
+    void generateKeyboardLayout(const QString &layout, const QString &layoutVariant, const QString &model);
     int getWidth() const;
     int getHeight() const;
 
-    int getLevel(){
+    int getLevel()
+    {
         return keyboardLayout.getLevel();
     }
 
-    void setL_id(int lId){
+    void setL_id(int lId)
+    {
         l_id = lId;
         repaint();
     }
 
-    QString getLayoutName() const {
-    	return keyboardLayout.getLayoutName();
+    QString getLayoutName() const
+    {
+        return keyboardLayout.getLayoutName();
     }
 
-    float getScaleFactor(){
+    float getScaleFactor()
+    {
         return scaleFactor;
     }
 };

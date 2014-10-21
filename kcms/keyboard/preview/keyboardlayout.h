@@ -30,11 +30,12 @@
 Q_DECLARE_LOGGING_CATEGORY(KEYBOARD_PREVIEW)
 
 
-class KbKey{
+class KbKey
+{
 private:
     QList<QString> symbols;
     int symbolCount;
-    
+
 public:
     QString keyName;
 
@@ -44,7 +45,8 @@ public:
     void addSymbol(QString n, int i);
     QString getSymbol(int i);
 
-    int getSymbolCount(){
+    int getSymbolCount()
+    {
         return symbolCount;
     }
 
@@ -52,7 +54,8 @@ public:
 };
 
 
-class KbLayout{
+class KbLayout
+{
 private:
     QList<QString> include;
     QString name;
@@ -71,31 +74,38 @@ public:
     QString getInclude(int i);
     int findKey(QString n);
 
-    void setLevel(int lvl){
+    void setLevel(int lvl)
+    {
         level = lvl;
     }
 
-    int getLevel(){
+    int getLevel()
+    {
         return level;
     }
 
-    int getKeyCount(){
+    int getKeyCount()
+    {
         return keyCount;
     }
 
-    int getIncludeCount(){
+    int getIncludeCount()
+    {
         return includeCount;
     }
 
-    QString getLayoutName() const {
+    QString getLayoutName() const
+    {
         return name;
     }
 
-    void setParsedSymbol(bool state){
+    void setParsedSymbol(bool state)
+    {
         parsedSymbol = state;
     }
 
-    bool getParsedSymbol(){
+    bool getParsedSymbol()
+    {
         return parsedSymbol;
     }
 

@@ -24,19 +24,22 @@
 #include <QList>
 
 
-KbKey::KbKey(){
+KbKey::KbKey()
+{
     symbolCount = 0;
     symbols << QString();
 }
 
 
-void KbKey::setKeyName(QString n){
-        keyName = n;
+void KbKey::setKeyName(QString n)
+{
+    keyName = n;
 }
 
 
-void KbKey::addSymbol(QString n, int i){
-    if( !symbols.contains(n)){
+void KbKey::addSymbol(QString n, int i)
+{
+    if (!symbols.contains(n)) {
         symbols[i] = n;
         symbolCount++;
         symbols << QString();
@@ -44,22 +47,27 @@ void KbKey::addSymbol(QString n, int i){
 }
 
 
-QString KbKey::getSymbol(int i){
-    if(i < symbolCount)
+QString KbKey::getSymbol(int i)
+{
+    if (i < symbolCount) {
         return symbols[i];
-    else
+    } else {
         return QString();
+    }
 }
 
 
-void KbKey::display(){
+void KbKey::display()
+{
     qCDebug(KEYBOARD_PREVIEW) << keyName << " : ";
-    for(int i=0; i<symbolCount; i++)
+    for (int i = 0; i < symbolCount; i++) {
         qCDebug(KEYBOARD_PREVIEW) << "\t" << symbols[i];
+    }
 }
 
 
-KbLayout::KbLayout(){
+KbLayout::KbLayout()
+{
     keyCount = 0;
     includeCount = 0;
     level = 4;
@@ -69,13 +77,15 @@ KbLayout::KbLayout(){
 }
 
 
-void KbLayout::setName(QString n){
+void KbLayout::setName(QString n)
+{
     name = n;
 }
 
 
-void KbLayout::addInclude(QString n){
-    if(!include.contains(n)){
+void KbLayout::addInclude(QString n)
+{
+    if (!include.contains(n)) {
         include[includeCount] = n;
         includeCount++;
         include << QString();
@@ -83,23 +93,27 @@ void KbLayout::addInclude(QString n){
 }
 
 
-void KbLayout :: addKey(){
+void KbLayout :: addKey()
+{
     keyCount++;
     keyList << KbKey();
 }
 
 
-QString KbLayout :: getInclude(int i){
-    if(i < includeCount)
+QString KbLayout :: getInclude(int i)
+{
+    if (i < includeCount) {
         return include[i];
-    else
+    } else {
         return QString();
+    }
 }
 
 
-int KbLayout :: findKey(QString n){
-    for(int i = 0 ; i < keyCount ; i++){
-        if(keyList[i].keyName == n){
+int KbLayout :: findKey(QString n)
+{
+    for (int i = 0 ; i < keyCount ; i++) {
+        if (keyList[i].keyName == n) {
             return i;
         }
     }
@@ -107,12 +121,13 @@ int KbLayout :: findKey(QString n){
 }
 
 
-void KbLayout::display(){
+void KbLayout::display()
+{
 //    qCDebug(KEYBOARD_PREVIEW) << name << "\n";
 //    for(int i = 0; i<includeCount; i++){
 //        qCDebug(KEYBOARD_PREVIEW) << include[i];
 //    }
-    for(int i = 0 ; i < keyCount; i++ ){
+    for (int i = 0 ; i < keyCount; i++) {
         keyList[i].display();
     }
 }

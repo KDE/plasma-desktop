@@ -15,7 +15,7 @@
  *  along with this program; if not, write to the Free Software
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
- 
+
 
 #ifndef KEYBOARDPAINTER_H
 #define KEYBOARDPAINTER_H
@@ -30,17 +30,17 @@ class QComboBox;
 class KeyboardPainter : public QDialog
 {
     Q_OBJECT
-    
+
 public:
     explicit KeyboardPainter();
     ~KeyboardPainter();
-    void generateKeyboardLayout(const QString& layout, const QString& variant, const QString& model, const QString& title);
+    void generateKeyboardLayout(const QString &layout, const QString &variant, const QString &model, const QString &title);
     int getHeight();
     int getWidth();
 
 public Q_SLOTS:
     void levelChanged(int l_id);
-    
+
 private:
     QDialog *kbDialog;
     KbPreviewFrame *kbframe;

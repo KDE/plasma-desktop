@@ -26,9 +26,10 @@ class KeySymHelper
 {
 public:
     KeySymHelper();
-    
+
     QString getKeySymbol(const QString &opton);
-    bool isFailed() const {
+    bool isFailed() const
+    {
         return nill >= 120;
     }
 

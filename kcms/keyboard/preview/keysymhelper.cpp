@@ -31,16 +31,17 @@ KeySymHelper::KeySymHelper()
     nill = 0;
 }
 
-QString KeySymHelper::getKeySymbol(const QString& opton)
+QString KeySymHelper::getKeySymbol(const QString &opton)
 {
-    if( keySymbolMap.contains(opton) )
+    if (keySymbolMap.contains(opton)) {
         return keySymbolMap[opton];
+    }
 
-    const char* str = opton.toAscii().data();
-    
+    const char *str = opton.toAscii().data();
+
 #if 0
     //TODO: figure out how to use this so we don't need our own symkey2ucs mapping
-    int res = Xutf8LookupString(XIC ic, XKeyPressedEvent *event, char *buffer_return, int bytes_buffer, KeySym *keysym_return, Status *status_return);
+    int res = Xutf8LookupString(XIC ic, XKeyPressedEvent * event, char *buffer_return, int bytes_buffer, KeySym * keysym_return, Status * status_return);
 
 #else
 
@@ -48,8 +49,8 @@ QString KeySymHelper::getKeySymbol(const QString& opton)
 
     //TODO: make it more generic
 //    if( keysym == 0xfe03 )
-//	return "L3";
-    
+//  return "L3";
+
     long ucs = keysym2ucs(keysym);
 
 //    if( ucs == -1 && (keysym >= 0xFE50 && keysym <= 0xFE5F) ) {
@@ -57,15 +58,15 @@ QString KeySymHelper::getKeySymbol(const QString& opton)
 //        qWarning() << "Got dead symbol" << QString("0x%1").arg(keysym, 0, 16) << "named" << opton << "will use" << QString("0x%1").arg(ucs, 0, 16) << "as UCS";
 //    }
 
-    if( ucs == -1 ) {
+    if (ucs == -1) {
         nill++;
         qWarning() << "No mapping from keysym:" << QString("0x%1").arg(keysym, 0, 16) << "named:" << opton << "to UCS";
     }
-    
+
     QString ucsStr = QString(QChar((int)ucs));
-    
+
     // Combining Diacritical Marks
-    if( ucs >= 0x0300 && ucs <= 0x036F ) {
+    if (ucs >= 0x0300 && ucs <= 0x036F) {
         ucsStr = " " + ucsStr + " ";
     }
 
