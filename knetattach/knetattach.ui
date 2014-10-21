@@ -262,7 +262,7 @@
      </widget>
     </item>
     <item row="5" column="1">
-     <widget class="KIntSpinBox" name="_port">
+     <widget class="QSpinBox" name="_port">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
         <horstretch>1</horstretch>
@@ -385,11 +385,6 @@
   </widget>
  </widget>
  <customwidgets>
-  <customwidget>
-   <class>KIntSpinBox</class>
-   <extends>QSpinBox</extends>
-   <header>knuminput.h</header>
-  </customwidget>
   <customwidget>
    <class>KButtonGroup</class>
    <extends>QGroupBox</extends>

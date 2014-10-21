@@ -24,7 +24,7 @@
 
 #include <KIO/NetAccess>
 #include <KMessageBox>
-#include <KIcon>
+#include <QIcon>
 #include <KLocale>
 #include <KGlobalSettings>
 #include <KConfig>
@@ -54,7 +54,7 @@ KNetAttach::KNetAttach( QWidget* parent )
     connect(_createIcon, SIGNAL(toggled(bool)), this, SLOT(updateFinishButtonText(bool)));
     connect( this, SIGNAL(helpRequested()), this, SLOT(slotHelpClicked()) );
     connect( this, SIGNAL(currentIdChanged(int)), this, SLOT(slotPageChanged(int)) );
-    setWindowIcon(KIcon("knetattach"));
+    setWindowIcon(QIcon::fromTheme("knetattach"));
     setOption(HaveHelpButton, true);
     //setResizeMode(Fixed); FIXME: make the wizard fixed-geometry
     button(FinishButton)->setEnabled(false);
@@ -355,4 +355,3 @@ void KNetAttach::updateFinishButtonText(bool save)
 }
 
 // vim: ts=8 sw=4 noet
-#include "knetattach.moc"
