@@ -26,9 +26,8 @@
 #include <QRegExp>
 #include <QTextDocument> // for Qt::escape
 #include <QXmlAttributes>
-#include <QtConcurrentFilter>
-#include <QtDebug>
 
+#include <QtConcurrent>
 //#include <libintl.h>
 //#include <locale.h>
 

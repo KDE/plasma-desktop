@@ -18,7 +18,6 @@
 
 #include "keyboardpainter.h"
 
-#include <QHBoxLayout>
 #include <QVBoxLayout>
 #include <QPushButton>
 

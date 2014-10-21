@@ -18,7 +18,6 @@
 
 #include "layout_memory.h"
 
-#include <QSet>
 #include <QX11Info>
 
 #include <kdebug.h>

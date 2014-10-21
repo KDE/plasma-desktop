@@ -29,7 +29,6 @@ class QTreeView;
 class KeyboardConfig;
 class Rules;
 class Flags;
-class KeyboardLayoutActionCollection;
 
 class LayoutsTableModel : public QAbstractTableModel
 {

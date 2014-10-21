@@ -28,7 +28,6 @@
 
 class QPushButton;
 class KeyboardConfig;
-class LayoutsMenu;
 class XEventNotifier;
 
 /**

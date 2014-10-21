@@ -19,20 +19,34 @@
 #include "ui_select_scheme_dialog.h"
 
 
-#include "KDialog"
+#include "QDialog"
 #include "KStandardDirs"
 #include <KLineEdit>
 #include <KConfig>
 #include <KGlobal>
+#include <KConfigGroup>
+#include <QDialogButtonBox>
+#include <QPushButton>
+
 
 SelectSchemeDialog::SelectSchemeDialog(QWidget *parent)
- : KDialog(parent),
+ : QDialog(parent),
    ui(new Ui::SelectSchemeDialog)
 {
     m_schemes = KGlobal::dirs()->findAllResources("data", "kcmkeys/*.kksrc");
 
+    QVBoxLayout *mainLayout = new QVBoxLayout; 
+    setLayout(mainLayout);
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok|QDialogButtonBox::Cancel);
+    mOkButton = buttonBox->button(QDialogButtonBox::Ok);
+    mOkButton->setDefault(true);
+    mOkButton->setShortcut(Qt::CTRL | Qt::Key_Return);
+    connect(buttonBox, SIGNAL(accepted()), this, SLOT(accept()));
+    connect(buttonBox, SIGNAL(rejected()), this, SLOT(reject()));
+
     ui->setupUi(this);
-    setMainWidget(ui->layoutWidget);
+    mainLayout->addWidget(ui->layoutWidget);
+    mainLayout->addWidget(buttonBox);
 
     foreach (const QString &res, m_schemes) {
         KConfig config(res, KConfig::SimpleConfig);
@@ -53,7 +67,7 @@ SelectSchemeDialog::SelectSchemeDialog(QWidget *parent)
             this, SLOT(schemeActivated(int)));
     connect(ui->m_url->lineEdit(), SIGNAL(textChanged(QString)),
             this, SLOT(slotUrlChanged(QString)));
-    enableButtonOk(false);
+    mOkButton->setEnabled(false);
 }
 
 
@@ -68,14 +82,14 @@ void SelectSchemeDialog::schemeActivated(int index)
 }
 
 
-KUrl SelectSchemeDialog::selectedScheme() const
+QUrl SelectSchemeDialog::selectedScheme() const
 {
     return ui->m_url->url();
 }
 
 void SelectSchemeDialog::slotUrlChanged(const QString &_text)
 {
-    enableButtonOk(!_text.isEmpty());
+    mOkButton->setEnabled(!_text.isEmpty());
 }
 
 #include "moc_select_scheme_dialog.cpp"

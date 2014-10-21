@@ -22,7 +22,6 @@
 #include "keysymbols.h"
 #include "keyaliases.h"
 
-#include <QApplication>
 
 class KeyboardLayout
 {

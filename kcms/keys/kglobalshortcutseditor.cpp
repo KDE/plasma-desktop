@@ -26,7 +26,7 @@
 
 #include <KActionCollection>
 #include <KConfig>
-#include <KDebug>
+#include <QDebug>
 #include <KGlobalAccel>
 #include <KIconLoader>
 #include <KMessageBox>
@@ -396,7 +396,7 @@ void KGlobalShortcutsEditor::importScheme()
         return;
     }
 
-    KUrl url = dialog.selectedScheme();
+    QUrl url = dialog.selectedScheme();
     if (!url.isLocalFile()) {
         KMessageBox::sorry(this, i18n("This file (%1) does not exist. You can only select local files.",
                            url.url()));
@@ -469,7 +469,7 @@ void KGlobalShortcutsEditor::load()
 void KGlobalShortcutsEditor::save()
 {
     // The editors are responsible for the saving
-    kDebug() << "Save the changes";
+    //qDebug() << "Save the changes";
     Q_FOREACH (ComponentData *cd, d->components) {
         cd->editor()->commit();
     }
@@ -478,15 +478,15 @@ void KGlobalShortcutsEditor::save()
 
 void KGlobalShortcutsEditor::importConfiguration(KConfigBase *config)
 {
-    kDebug() << config->groupList();
+    //qDebug() << config->groupList();
 
     // In a first step clean out the current configurations. We do this
     // because we want to minimize the chance of conflicts.
     Q_FOREACH (ComponentData *cd, d->components) {
         KConfigGroup group(config, cd->uniqueName());
-        kDebug() << cd->uniqueName() << group.name();
+        //qDebug() << cd->uniqueName() << group.name();
         if (group.exists()) {
-            kDebug() << "Removing" << cd->uniqueName();
+            //qDebug() << "Removing" << cd->uniqueName();
             cd->editor()->clearConfiguration();
         }
     }
@@ -495,7 +495,7 @@ void KGlobalShortcutsEditor::importConfiguration(KConfigBase *config)
     Q_FOREACH (ComponentData *cd, d->components) {
         KConfigGroup group(config, cd->uniqueName());
         if (group.exists()) {
-            kDebug() << "Importing" << cd->uniqueName();
+            //qDebug() << "Importing" << cd->uniqueName();
             cd->editor()->importConfiguration(&group);
         }
     }
@@ -523,7 +523,7 @@ void KGlobalShortcutsEditor::exportConfiguration(QStringList components, KConfig
 void KGlobalShortcutsEditor::undo()
 {
     // The editors are responsible for the undo
-    kDebug() << "Undo the changes";
+    //qDebug() << "Undo the changes";
     Q_FOREACH (ComponentData *cd, d->components) {
         cd->editor()->undoChanges();
     }
@@ -561,16 +561,16 @@ bool KGlobalShortcutsEditor::KGlobalShortcutsEditorPrivate::loadComponent(const 
             componentPath.path(),
             bus);
     if (!component.isValid()) {
-        kDebug() << "Component " << componentPath.path() << "not valid! Skipping!";
+        //qDebug() << "Component " << componentPath.path() << "not valid! Skipping!";
         return false;
     }
 
     // Get the shortcut contexts.
     QDBusReply<QStringList> shortcutContextsRc = component.getShortcutContexts();
     if (!shortcutContextsRc.isValid()) {
-        kDebug() << "Failed to get contexts for component "
-                 << componentPath.path() <<"! Skipping!";
-        kDebug() << shortcutContextsRc.error();
+        //qDebug() << "Failed to get contexts for component "
+                 //<< componentPath.path() <<"! Skipping!";
+        //qDebug() << shortcutContextsRc.error();
         return false;
     }
     QStringList shortcutContexts = shortcutContextsRc;
@@ -583,14 +583,14 @@ bool KGlobalShortcutsEditor::KGlobalShortcutsEditorPrivate::loadComponent(const 
             component.allShortcutInfos(shortcutContext);
         if (!shortcutsRc.isValid())
             {
-            kDebug() << "allShortcutInfos() failed for " << componentPath.path() << shortcutContext;
+            //qDebug() << "allShortcutInfos() failed for " << componentPath.path() << shortcutContext;
             continue;
             }
         QList<KGlobalShortcutInfo> shortcuts = shortcutsRc;
         // Shouldn't happen. But you never know
         if (shortcuts.isEmpty()) {
-            kDebug() << "Got shortcut context" << shortcutContext << "without shortcuts for"
-                << componentPath.path();
+            //qDebug() << "Got shortcut context" << shortcutContext << "without shortcuts for"
+                //<< componentPath.path();
             continue;
         }
 
@@ -672,4 +672,3 @@ void KGlobalShortcutsEditor::KGlobalShortcutsEditorPrivate::removeComponent(
     }
 
 
-#include "kglobalshortcutseditor.moc"

@@ -24,7 +24,6 @@
 #include <kdebug.h>
 
 #include <QAction>
-#include <QMenu>
 
 #include "keyboard_config.h"
 #include "x11_helper.h"

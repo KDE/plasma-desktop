@@ -29,11 +29,9 @@
 #include "bindings.h"
 
 
-class KActionCollection;
 class XInputEventNotifier;
 class LayoutTrayIcon;
 class KeyboardConfig;
-class KAction;
 class Rules;
 
 class Q_DECL_EXPORT KeyboardDaemon : public KDEDModule

@@ -20,8 +20,6 @@
 #ifndef LAYOUT_TRAY_ICON_H_
 #define LAYOUT_TRAY_ICON_H_
 
-#include <QVariant>
-#include <QWidget>
 
 #include "flags.h"
 #include "x11_helper.h"
@@ -33,7 +31,6 @@ class LayoutsMenu;
  *  System tray icon to show layouts
  */
 class KStatusNotifierItem;
-class QActionGroup;
 class Rules;
 class Flags;
 class LayoutTrayIcon : public QObject

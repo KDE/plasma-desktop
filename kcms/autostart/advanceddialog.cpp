@@ -38,8 +38,8 @@ AdvancedDialog::AdvancedDialog( QWidget *parent, bool status )
     lay->addWidget(buttons);
     setLayout( lay );
 
-    connect(buttons, SIGNAL(accepted()), SLOT(accept()));
-    connect(buttons, SIGNAL(rejected()), SLOT(reject()));
+    connect(buttons, &QDialogButtonBox::accepted, this, &AdvancedDialog::accept);
+    connect(buttons, &QDialogButtonBox::rejected, this, &AdvancedDialog::reject);
 }
 
 AdvancedDialog::~AdvancedDialog()

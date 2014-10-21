@@ -50,8 +50,8 @@ AddScriptDialog::AddScriptDialog (QWidget* parent)
     m_buttons = new QDialogButtonBox(QDialogButtonBox::Ok|QDialogButtonBox::Cancel, this);
     m_buttons->button(QDialogButtonBox::Ok)->setEnabled(false);
     lay->addWidget(m_buttons);
-    connect(m_buttons, SIGNAL(accepted()), SLOT(accept()));
-    connect(m_buttons, SIGNAL(rejected()), SLOT(reject()));
+    connect(m_buttons, &QDialogButtonBox::accepted, this, &AddScriptDialog::accept);
+    connect(m_buttons, &QDialogButtonBox::rejected, this, &AddScriptDialog::reject);
 }
 
 AddScriptDialog::~AddScriptDialog()

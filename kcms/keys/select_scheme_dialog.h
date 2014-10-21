@@ -18,22 +18,23 @@
 #ifndef SELECT_SCHEME_DIALOG_H
 #define SELECT_SCHEME_DIALOG_H
 
-#include "KDialog"
-#include <KUrl>
+#include "QDialog"
+#include <QUrl>
+#include <QPushButton>
 
 namespace Ui
 {
 class SelectSchemeDialog;
 }
 
-class SelectSchemeDialog : public KDialog
+class SelectSchemeDialog : public QDialog
 {
     Q_OBJECT
 public:
     SelectSchemeDialog(QWidget *parent = 0);
     ~SelectSchemeDialog();
 
-    KUrl selectedScheme() const;
+    QUrl selectedScheme() const;
 
 private Q_SLOTS:
     void schemeActivated(int index);
@@ -42,6 +43,7 @@ private Q_SLOTS:
 private:
     Ui::SelectSchemeDialog *ui;
     QStringList m_schemes;
+    QPushButton *mOkButton;
 }; // SelectSchemeDialog
 
 

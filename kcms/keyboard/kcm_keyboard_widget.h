@@ -29,7 +29,6 @@ class QWidget;
 class KeyboardConfig;
 class Rules;
 class Flags;
-class KComponentData;
 class QString;
 class QPushButton;
 class LayoutsTableModel;

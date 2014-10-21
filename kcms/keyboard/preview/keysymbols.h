@@ -20,9 +20,8 @@
 #ifndef KEYSYMBOLS_H
 #define KEYSYMBOLS_H
 
-#include <QApplication>
 #include <QList>
-
+#include <QString>
 class KeySymbols
 {
 public:
