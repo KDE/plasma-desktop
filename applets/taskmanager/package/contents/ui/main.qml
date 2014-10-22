@@ -50,6 +50,7 @@ Item {
 
     property Item dragSource: null
 
+    signal requestLayout
     signal activateItem(int id, bool toggle)
     signal activateWindow(int winId)
     signal closeWindow(int winId);
@@ -89,6 +90,7 @@ Item {
 
         Component.onCompleted: {
             launchers = plasmoid.configuration.launchers;
+            visualModel.model = backend.tasksModel;
         }
     }
 
@@ -100,6 +102,19 @@ Item {
 
         onTriggered: {
             TaskTools.publishIconGeometries(taskList.children);
+        }
+    }
+
+    Timer {
+        id: layoutTimer
+
+        interval: 0
+        repeat: false
+
+        onTriggered: {
+            taskList.width = LayoutManager.layoutWidth();
+            taskList.height = LayoutManager.layoutHeight();
+            LayoutManager.layout(taskRepeater);
         }
     }
 
@@ -195,12 +210,13 @@ Item {
     VisualDataModel {
         id: visualModel
 
-        model: backend.tasksModel
         delegate: Task {}
     }
 
     ToolTipDelegate {
         id: toolTipDelegate
+
+        visible: false
     }
 
     TaskList {
@@ -227,20 +243,8 @@ Item {
 
             model: visualModel
 
-            onCountChanged: {
-                taskList.width = LayoutManager.layoutWidth();
-                taskList.height = LayoutManager.layoutHeight();
-                LayoutManager.layout(taskRepeater);
-                TaskTools.publishIconGeometries(taskList.children);
-            }
-
-            function modelWasReset() {
-                LayoutManager.layout(taskRepeater);
-            }
-
-            Component.onCompleted: {
-                backend.tasksModel.modelReset.connect(modelWasReset);
-            }
+            onItemAdded: tasks.requestLayout()
+            onItemRemoved: tasks.requestLayout()
         }
     }
 
@@ -267,6 +271,8 @@ Item {
     }
 
     Component.onCompleted: {
+        tasks.requestLayout.connect(layoutTimer.restart);
+        tasks.requestLayout.connect(iconGeometryTimer.restart);
         tasks.activateItem.connect(backend.activateItem);
         tasks.activateWindow.connect(backend.activateWindow);
         tasks.closeWindow.connect(backend.closeWindow);

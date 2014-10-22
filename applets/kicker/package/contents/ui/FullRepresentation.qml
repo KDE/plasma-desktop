@@ -151,6 +151,8 @@ FocusScope {
                 width: units.iconSizes.medium
                 height: lineSvg.horLineHeight
 
+                visible: favoriteApps.model.count && favoriteSystemActions.model.count
+
                 svg: lineSvg
                 elementId: "horizontal-line"
 
@@ -312,7 +314,7 @@ FocusScope {
 
         anchors.bottom: mainRow.bottom
         anchors.left: parent.left
-        anchors.leftMargin: (Qt.application.layoutDirection == Qt.LeftToRight) ? sideBar.width + mainRow.spacing + units.smallSpacing : 0
+        anchors.leftMargin: sideBar.width + mainRow.spacing + units.smallSpacing
 
         width: rootList.width - (2 * units.smallSpacing)
 
@@ -352,7 +354,7 @@ FocusScope {
 
             PropertyChanges {
                 target: searchField
-                anchors.leftMargin: (Qt.application.layoutDirection == Qt.LeftToRight) ? sideBar.width + mainRow.spacing + units.smallSpacing : 0
+                anchors.leftMargin: sideBar.width + mainRow.spacing + units.smallSpacing
                 anchors.rightMargin: undefined
             }
         },
@@ -372,7 +374,7 @@ FocusScope {
             PropertyChanges {
                 target: searchField
                 anchors.leftMargin: undefined
-                anchors.rightMargin: (Qt.application.layoutDirection == Qt.LeftToRight) ? sideBar.width + mainRow.spacing + units.smallSpacing : 0
+                anchors.rightMargin: sideBar.width + mainRow.spacing + units.smallSpacing
             }
         }]
 

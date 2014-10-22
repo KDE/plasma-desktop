@@ -32,6 +32,7 @@ class SystemEntry : public AbstractEntry
         {
             LockSession,
             LogoutSession,
+            SaveSession,
             NewSession,
             SuspendToRam,
             SuspendToDisk,

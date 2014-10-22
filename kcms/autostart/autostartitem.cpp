@@ -75,7 +75,7 @@ ScriptStartItem::ScriptStartItem( const QString &service, QTreeWidgetItem *paren
     m_comboBoxStartup->addItems( autostart->listPathName() );
 
     setText( 2, i18nc( "The program will be run", "Enabled" ) );
-    QObject::connect( m_comboBoxStartup,SIGNAL(activated(int)),this,SLOT(slotStartupChanged(int)) );
+    QObject::connect(m_comboBoxStartup, static_cast<void (QComboBox::*)(int)>(&QComboBox::activated), this, &ScriptStartItem::slotStartupChanged);
     QObject::connect( this,SIGNAL(askChangeStartup(ScriptStartItem*,int)),autostart,SLOT(slotChangeStartup(ScriptStartItem*,int)) );
     treeWidget()->setItemWidget ( this, Autostart::COL_RUN, m_comboBoxStartup );
 }
@@ -107,5 +107,3 @@ void ScriptStartItem::changeStartup(ScriptStartItem::ENV type )
         break;
     }
 }
-
-#include "autostartitem.moc"

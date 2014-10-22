@@ -25,9 +25,8 @@
 #include <QRegExp>
 #include <QTextDocument> // for Qt::escape
 #include <QXmlAttributes>
-#include <QtConcurrentFilter>
-#include <QtDebug>
 
+#include <QtConcurrent>
 //#include <libintl.h>
 //#include <locale.h>
 
@@ -69,7 +68,7 @@ private:
 
 static QString translate_xml_item(const QString& itemText)
 {
-	return i18n(Qt::escape(itemText).toUtf8());
+	return i18n(itemText.toHtmlEscaped().toUtf8());
 	//	return QString::fromUtf8(dgettext("xkeyboard-config", itemText.toAscii()));
 }
 

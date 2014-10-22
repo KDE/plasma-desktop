@@ -44,6 +44,11 @@ Item {
     state: "Normal"
     focus: true
 
+    function switchToFavorites() {
+        mainTabGroup.currentTab = favoritesPage;
+        root.state = "Normal";
+    }
+
     PlasmaCore.DataSource {
         id: packagekitSource
         engine: "packagekit"
@@ -75,6 +80,7 @@ Item {
 
     Item {
         id: mainArea
+        anchors.topMargin: mainTabGroup.state == "top" ? units.smallSpacing : 0
 
         PlasmaComponents.TabGroup {
             id: mainTabGroup
@@ -402,6 +408,7 @@ Item {
                 if (!currentView.deactivateCurrentIndex()) {
                     if (root.state == "Applications") {
                         mainTabGroup.currentTab = favoritesPage;
+                        tabBar.currentTab = bookmarkButton;
                     }
                     root.state = "Normal"
                 }

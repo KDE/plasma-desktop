@@ -75,7 +75,8 @@ enum DataRole {
     RelPathRole = Qt::UserRole + 8,
     IconNameRole = Qt::UserRole + 9,
     GroupNameRole = IconNameRole,
-    LastDataRole = Qt::UserRole + 10
+    MimeDataRole = Qt::UserRole + 10,
+    LastDataRole = Qt::UserRole + 100
 };
 
 /**
@@ -99,7 +100,7 @@ public:
     static QStandardItem *createItemForService(KService::Ptr service,
                                                DisplayOrder displayOrder);
     static QStandardItem *createItem(const QIcon & icon, const QString & title,
-        const QString & description, const QString & url);
+        const QString & description, const QString & url, const QString & mimeData = QString());
 
 private:
     static void setSpecialUrlProperties(const KUrl& url, QStandardItem *item);

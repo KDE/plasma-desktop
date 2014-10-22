@@ -286,8 +286,7 @@ void DesktopThemeDetails::exportTheme()
     } else {
         QString themeStoragePath = theme;
 
-        KStandardDirs dirs;
-        const QString themePath = dirs.findResource("data", "desktoptheme/" + themeStoragePath + "/metadata.desktop");
+        const QString themePath = QStandardPaths::locate(QStandardPaths::GenericDataLocation, "desktoptheme/" + themeStoragePath + "/metadata.desktop");
         if (!themePath.isEmpty()){
             QString expFileName = QFileDialog::getSaveFileName(this, i18n("Export theme to file"), QString(), i18n("Archive (*.zip)"));
             if (!expFileName.endsWith(".zip"))

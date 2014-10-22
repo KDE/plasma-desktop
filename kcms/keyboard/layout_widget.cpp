@@ -65,17 +65,17 @@ LayoutWidget::~LayoutWidget()
 
 void LayoutWidget::init()
 {
-	connect(widget, SIGNAL(clicked(bool)), this, SLOT(toggleLayout()));
-	connect(xEventNotifier, SIGNAL(layoutChanged()), this, SLOT(layoutChanged()));
-	connect(xEventNotifier, SIGNAL(layoutMapChanged()), this, SLOT(layoutChanged()));
+	connect(widget, &QPushButton::clicked, this, &LayoutWidget::toggleLayout);
+	connect(xEventNotifier, &XEventNotifier::layoutChanged, this, &LayoutWidget::layoutChanged);
+	connect(xEventNotifier, &XEventNotifier::layoutMapChanged, this, &LayoutWidget::layoutChanged);
 	xEventNotifier->start();
 }
 
 void LayoutWidget::destroy()
 {
 	xEventNotifier->stop();
-	disconnect(xEventNotifier, SIGNAL(layoutMapChanged()), this, SLOT(layoutChanged()));
-	disconnect(xEventNotifier, SIGNAL(layoutChanged()), this, SLOT(layoutChanged()));
+	disconnect(xEventNotifier, &XEventNotifier::layoutMapChanged, this, &LayoutWidget::layoutChanged);
+	disconnect(xEventNotifier, &XEventNotifier::layoutChanged, this, &LayoutWidget::layoutChanged);
 }
 
 void LayoutWidget::toggleLayout()

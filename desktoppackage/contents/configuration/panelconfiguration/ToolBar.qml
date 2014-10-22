@@ -107,6 +107,8 @@ Item {
         }
 
         PlasmaComponents.ToolButton {
+            parent: plasmoid.formFactor == PlasmaCore.Types.Horizontal ? buttonsLayout : root
+            anchors.right: plasmoid.formFactor == PlasmaCore.Types.Horizontal ? undefined : parent.right
             iconSource: "window-close"
             tooltip: i18nd("plasma_shell_org.kde.plasma.desktop", "Close")
             onClicked: {

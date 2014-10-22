@@ -22,18 +22,20 @@
 #include <QImage>
 #include <QPixmap>
 #include <QTimer>
-
-#include <kdirlister.h>
+#include <QProcess>
 #include <QDebug>
-#include <kio/previewjob.h>
-#include <kimagecache.h>
 #include <QMimeDatabase>
 
+#include <kdirlister.h>
+#include <kio/previewjob.h>
+#include <KIO/EmptyTrashJob>
+#include <kimagecache.h>
 
 DirModel::DirModel(QObject *parent)
     : KDirModel(parent),
       m_screenshotSize(180, 120)
 {
+#if 0 // unused here in trash
     QMimeDatabase db;
     QList<QMimeType> mimeList = db.allMimeTypes();
 
@@ -46,6 +48,7 @@ DirModel::DirModel(QObject *parent)
 
     //TODO: configurable mime filter
     //dirLister()->setMimeFilter(m_mimeTypes);
+#endif
 
     QHash<int, QByteArray>roleNames;
     roleNames[Qt::DisplayRole] = "display";
@@ -116,6 +119,11 @@ QVariantMap DirModel::get(int i) const
     ret.insert("mimeType", QVariant(mimeType));
 
     return ret;
+}
+
+void DirModel::emptyTrash()
+{
+    KIO::emptyTrash();
 }
 
 QVariant DirModel::data(const QModelIndex &index, int role) const

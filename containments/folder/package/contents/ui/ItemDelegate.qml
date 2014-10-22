@@ -70,10 +70,12 @@ Item {
 
             onSelectedChanged: {
                 if (selected && !blank) {
+                    snapshotSource.sourceItem = frame;
                     dir.addItemDragImage(positioner.map(index), main.x, main.y, main.width, main.height, null);
                     grabber.item = snapshotSource;
                 } else {
                     grabber.item = null;
+                    snapshotSource.sourceItem = null;
                 }
             }
 
@@ -133,12 +135,11 @@ Item {
 
                 anchors.fill: frame;
 
-                visible: frame.visible
+                enabled: sourceItem != null
 
-                live: true;
-                hideSource: true;
+                visible: frame.visible && sourceItem != null
 
-                sourceItem: frame;
+                hideSource: sourceItem != null
             }
 
             PlasmaCore.ToolTipArea {

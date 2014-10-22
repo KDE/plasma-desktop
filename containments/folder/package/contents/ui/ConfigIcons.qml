@@ -26,13 +26,11 @@ import org.kde.plasma.plasmoid 2.0
 
 import org.kde.plasma.private.folder 0.1 as Folder
 
-GroupBox {
+Item {
     id: configIcons
 
     width: childrenRect.width
     height: childrenRect.height
-
-    flat: true
 
     property alias cfg_arrangement: arrangement.currentIndex
     property alias cfg_alignment: alignment.currentIndex
@@ -56,11 +54,15 @@ GroupBox {
         GroupBox {
             id: arrangementGroupBox
 
+            Layout.fillWidth: true
+
             title: i18n("Arrangement")
 
             flat: true
 
             ColumnLayout {
+                Layout.fillWidth: true
+
                 RowLayout {
                     Label {
                         text: i18n("Arrange in:")
@@ -97,6 +99,8 @@ GroupBox {
 
         GroupBox {
             id: sortingGroupBox
+
+            Layout.fillWidth: true
 
             title: i18n("Sorting")
 
@@ -150,6 +154,7 @@ GroupBox {
         GroupBox {
             id: appearanceGroupBox
 
+            Layout.fillWidth: true
             title: i18n("Appearance")
 
             flat: true
@@ -198,6 +203,8 @@ GroupBox {
 
         GroupBox {
             id: behaviorGroupBox
+
+            Layout.fillWidth: true
 
             title: i18n("Features")
 

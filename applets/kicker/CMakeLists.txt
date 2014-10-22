@@ -41,6 +41,8 @@ if(PackageKitQt5_FOUND)
     list(APPEND kickerplugin_SRCS plugin/findpackagenamejob.cpp)
 endif()
 
+qt5_add_dbus_interface(kickerplugin_SRCS ${KSMSERVER_DBUS_INTERFACE} ksmserver_interface)
+
 install(FILES plugin/qmldir DESTINATION ${QML_INSTALL_DIR}/org/kde/plasma/private/kicker)
 
 add_library(kickerplugin SHARED ${kickerplugin_SRCS})

@@ -51,6 +51,7 @@ add_subdirectory(phonon)
 add_subdirectory(runners)
 add_subdirectory(useraccount)
 add_subdirectory(workspaceoptions)
+add_subdirectory(baloo)
 
 if( FREETYPE_FOUND )
    if(FONTCONFIG_FOUND )

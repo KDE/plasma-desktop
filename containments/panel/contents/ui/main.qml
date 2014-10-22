@@ -33,13 +33,13 @@ DragDrop.DropArea {
     height: 48
 
 //BEGIN properties
-    Layout.minimumWidth: currentLayout.Layout.minimumWidth + (isHorizontal && toolBox ? toolBox.width : 0)
-    Layout.maximumWidth: currentLayout.Layout.maximumWidth + (isHorizontal && toolBox ? toolBox.width : 0)
-    Layout.preferredWidth: currentLayout.Layout.preferredWidth + (isHorizontal && toolBox ? toolBox.width : 0)
+    Layout.minimumWidth: fixedWidth > 0 ? fixedWidth : (currentLayout.Layout.minimumWidth + (isHorizontal && toolBox ? toolBox.width : 0))
+    Layout.maximumWidth: fixedWidth > 0 ? fixedWidth : (currentLayout.Layout.maximumWidth + (isHorizontal && toolBox ? toolBox.width : 0))
+    Layout.preferredWidth: fixedWidth > 0 ? fixedWidth : (currentLayout.Layout.preferredWidth + (isHorizontal && toolBox ? toolBox.width : 0))
 
-    Layout.minimumHeight: currentLayout.Layout.minimumHeight + (!isHorizontal && toolBox ? toolBox.height : 0)
-    Layout.maximumHeight: currentLayout.Layout.maximumHeight + (!isHorizontal && toolBox ? toolBox.height : 0)
-    Layout.preferredHeight: currentLayout.Layout.preferredHeight + (!isHorizontal && toolBox? toolBox.height : 0)
+    Layout.minimumHeight: fixedHeight > 0 ? fixedHeight : (currentLayout.Layout.minimumHeight + (!isHorizontal && toolBox ? toolBox.height : 0))
+    Layout.maximumHeight: fixedHeight > 0 ? fixedHeight : (currentLayout.Layout.maximumHeight + (!isHorizontal && toolBox ? toolBox.height : 0))
+    Layout.preferredHeight: fixedHeight > 0 ? fixedHeight : (currentLayout.Layout.preferredHeight + (!isHorizontal && toolBox? toolBox.height : 0))
 
     property Item toolBox
 
@@ -47,6 +47,9 @@ DragDrop.DropArea {
     property Item dragOverlay
 
     property bool isHorizontal: plasmoid.formFactor != PlasmaCore.Types.Vertical
+    property int fixedWidth: 0
+    property int fixedHeight: 0
+
 //END properties
 
 //BEGIN functions
@@ -88,7 +91,7 @@ function addApplet(applet, x, y) {
         // of a specific type, and the containment caring about the applet type. In a better
         // system the containment would be informed of requested launchers, and determine by
         // itself what it wants to do with that information.
-        if (applet.pluginName == "org.kde.plasma.icon") {
+        if (!startupTimer.running && applet.pluginName == "org.kde.plasma.icon") {
             var middle = currentLayout.childAt(root.width / 2, root.height / 2);
 
             if (middle) {
@@ -150,6 +153,7 @@ function checkLastSpacer() {
         LayoutManager.plasmoid = plasmoid;
         LayoutManager.root = root;
         LayoutManager.layout = currentLayout;
+        LayoutManager.lastSpacer = lastSpacer;
         LayoutManager.restore();
         containmentSizeSyncTimer.restart();
         plasmoid.action("configure").visible = !plasmoid.immutable;
@@ -159,6 +163,12 @@ function checkLastSpacer() {
     onDragEnter: {
         if (plasmoid.immutable) {
             return;
+        }
+        //during drag operations we disable panel auto resize
+        if (root.isHorizontal) {
+            root.fixedWidth = root.width
+        } else {
+            root.fixedHeight = root.height
         }
         LayoutManager.insertAtCoordinates(dndSpacer, event.x, event.y)
     }
@@ -172,6 +182,8 @@ function checkLastSpacer() {
 
     onDragLeave: {
         dndSpacer.parent = root;
+        root.fixedWidth = 0;
+        root.fixedHeight = 0;
     }
 
     onDrop: {
@@ -179,6 +191,8 @@ function checkLastSpacer() {
             return;
         }
         plasmoid.processMimeData(event.mimeData, event.x, event.y);
+        root.fixedWidth = 0;
+        root.fixedHeight = 0;
     }
 
 
@@ -211,6 +225,9 @@ function checkLastSpacer() {
         }
 
         if (plasmoid.userConfiguring) {
+            for (var i = 0; i < plasmoid.applets.length; ++i) {
+                plasmoid.applets[i].expanded = false;
+            }
             if (!dragOverlay) {
                 var component = Qt.createComponent("ConfigOverlay.qml");
                 if (component.status == Component.Ready) {
@@ -252,6 +269,10 @@ function checkLastSpacer() {
             visible: false
             property bool animationsEnabled: true
 
+            //when the applet moves caused by its resize, don't animate.
+            //this is completely heuristic, but looks way less "jumpy"
+            property bool movingForResize: false
+
             Layout.fillWidth: applet && applet.Layout.fillWidth
             Layout.onFillWidthChanged: {
                 if (plasmoid.formFactor != PlasmaCore.Types.Vertical) {
@@ -284,6 +305,11 @@ function checkLastSpacer() {
                 }
             }
 
+            Layout.onMinimumWidthChanged: movingForResize = true;
+            Layout.onMinimumHeightChanged: movingForResize = true;
+            Layout.onMaximumWidthChanged: movingForResize = true;
+            Layout.onMaximumHeightChanged: movingForResize = true;
+
             PlasmaComponents.BusyIndicator {
                 z: 1000
                 visible: applet && applet.busy
@@ -291,6 +317,10 @@ function checkLastSpacer() {
                 anchors.centerIn: parent
             }
             onXChanged: {
+                if (movingForResize) {
+                    movingForResize = false;
+                    return;
+                }
                 if (!animationsEnabled) {
                     startupTimer.restart();
                     return;
@@ -302,6 +332,10 @@ function checkLastSpacer() {
                 oldY = y
             }
             onYChanged: {
+                if (movingForResize) {
+                    movingForResize = false;
+                    return;
+                }
                 if (!animationsEnabled) {
                     startupTimer.restart();
                     return;

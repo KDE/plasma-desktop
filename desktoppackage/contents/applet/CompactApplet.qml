@@ -48,6 +48,9 @@ PlasmaCore.ToolTipArea {
 
     onFullRepresentationChanged: {
 
+        if (!fullRepresentation) {
+            return;
+        }
         //if the fullRepresentation size was restored to a stored size, or if is dragged from the desktop, restore popup size
         if (fullRepresentation.width > 0) {
             popupWindow.mainItem.width = fullRepresentation.width;
@@ -77,6 +80,7 @@ PlasmaCore.ToolTipArea {
         id: expandedItem
         anchors.fill: parent
         imagePath: "widgets/tabbar"
+        visible: fromCurrentTheme
         prefix: {
             var prefix;
             switch (plasmoid.location) {

@@ -23,6 +23,7 @@
 var layout;
 var root;
 var plasmoid;
+var lastSpacer;
 
 
 function restore() {
@@ -71,6 +72,7 @@ function save() {
     plasmoid.configuration.AppletOrder = ids.join(';');
 }
 
+//insert item2 before item1
 function insertBefore(item1, item2) {
     if (item1 === item2) {
         return;
@@ -98,6 +100,7 @@ function insertBefore(item1, item2) {
     return i;
 }
 
+//insert item2 after item1
 function insertAfter(item1, item2) {
     if (item1 === item2) {
         return;
@@ -109,7 +112,12 @@ function insertAfter(item1, item2) {
     var i;
     for (i = layout.children.length - 1; i >= 0; --i) {
         child = layout.children[i];
-        if (child === item1) {
+        //never ever insert after lastSpacer
+        if (child === lastSpacer && item1 === lastSpacer) {
+            removed.push(child);
+            child.parent = root;
+            break;
+        } else if (child === item1) {
             break;
         }
 
@@ -126,6 +134,15 @@ function insertAfter(item1, item2) {
 }
 
 function insertAtIndex(item, position) {
+    if (position < 0 || position >= layout.children.length) {
+        return;
+    }
+
+    //never ever insert after lastSpacer
+    if (layout.children[position] === lastSpacer) {
+        --position;
+    }
+
     var removedItems = new Array();
 
     for (var i = position; i < layout.children.length; ++i) {

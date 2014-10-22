@@ -2,7 +2,7 @@
 <ui version="4.0">
  <author>Michael Jansen</author>
  <class>SelectSchemeDialog</class>
- <widget class="KDialog" name="SelectSchemeDialog">
+ <widget class="QDialog" name="SelectSchemeDialog">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -134,7 +134,7 @@
    <header>kcombobox.h</header>
   </customwidget>
   <customwidget>
-   <class>KDialog</class>
+   <class>QDialog</class>
    <extends>QDialog</extends>
    <header>kdialog.h</header>
    <container>1</container>

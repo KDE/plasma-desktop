@@ -56,7 +56,7 @@ KIconConfig::KIconConfig(QWidget *parent)
     top->addWidget(gbox, 0, 0, 2, 1);
     QBoxLayout *g_vlay = new QVBoxLayout(gbox);
     mpUsageList = new QListWidget(gbox);
-    connect(mpUsageList, SIGNAL(currentRowChanged(int)), SLOT(slotUsage(int)));
+    connect(mpUsageList, &QListWidget::currentRowChanged, this, &KIconConfig::slotUsage);
     g_vlay->addWidget(mpUsageList);
 
     KSeparator *sep = new KSeparator( Qt::Horizontal, this );
@@ -70,11 +70,11 @@ KIconConfig::KIconConfig(QWidget *parent)
     QPushButton *push;
 
     push = addPreviewIcon(0, i18nc("@label The icon rendered by default", "Default"), this, g_lay);
-    connect(push, SIGNAL(clicked()), SLOT(slotEffectSetup0()));
+    connect(push, &QPushButton::clicked, this, &KIconConfig::slotEffectSetup0);
     push = addPreviewIcon(1, i18nc("@label The icon rendered as active", "Active"), this, g_lay);
-    connect(push, SIGNAL(clicked()), SLOT(slotEffectSetup1()));
+    connect(push, &QPushButton::clicked, this, &KIconConfig::slotEffectSetup1);
     push = addPreviewIcon(2, i18nc("@label The icon rendered as disabled", "Disabled"), this, g_lay);
-    connect(push, SIGNAL(clicked()), SLOT(slotEffectSetup2()));
+    connect(push, &QPushButton::clicked, this, &KIconConfig::slotEffectSetup2);
 
     m_pTab1 = new QWidget(this);
     m_pTab1->setObjectName( QLatin1String("General Tab" ));
@@ -90,12 +90,12 @@ KIconConfig::KIconConfig(QWidget *parent)
     lbl->setFixedSize(lbl->sizeHint());
     grid->addWidget(lbl, 0, 0, Qt::AlignLeft);
     mpSizeBox = new QComboBox(m_pTab1);
-    connect(mpSizeBox, SIGNAL(activated(int)), SLOT(slotSize(int)));
+    connect(mpSizeBox, static_cast<void (QComboBox::*)(int)>(&QComboBox::activated), this, &KIconConfig::slotSize);
     lbl->setBuddy(mpSizeBox);
     grid->addWidget(mpSizeBox, 0, 1, Qt::AlignLeft);
 
     mpAnimatedCheck = new QCheckBox(i18n("Animate icons"), m_pTab1);
-    connect(mpAnimatedCheck, SIGNAL(toggled(bool)), SLOT(slotAnimatedCheck(bool)));
+    connect(mpAnimatedCheck, &QCheckBox::toggled, this, &KIconConfig::slotAnimatedCheck);
     grid->addWidget(mpAnimatedCheck, 2, 0, 1, 2, Qt::AlignLeft);
     grid->setRowStretch(3, 10);
 
@@ -565,12 +565,12 @@ KIconEffectSetupDialog::KIconEffectSetupDialog(const Effect &effect,
     mpEffectBox->addItem(i18n("Desaturate"));
     mpEffectBox->addItem(i18n("To Monochrome"));
 
-    connect(mpEffectBox, SIGNAL(currentRowChanged(int)), SLOT(slotEffectType(int)));
+    connect(mpEffectBox, &QListWidget::currentRowChanged, this, &KIconEffectSetupDialog::slotEffectType);
     top->addWidget(mpEffectBox, 1, 0, 2, 1, Qt::AlignLeft);
     lbl->setBuddy(mpEffectBox);
 
     mpSTCheck = new QCheckBox(i18n("&Semi-transparent"), page);
-    connect(mpSTCheck, SIGNAL(toggled(bool)), SLOT(slotSTCheck(bool)));
+    connect(mpSTCheck, &QCheckBox::toggled, this, &KIconEffectSetupDialog::slotSTCheck);
     top->addWidget(mpSTCheck, 3, 0, Qt::AlignLeft);
 
     frame = new QGroupBox(i18n("Preview"), page);
@@ -593,27 +593,25 @@ KIconEffectSetupDialog::KIconEffectSetupDialog(const Effect &effect,
     mpEffectSlider->setMinimum(0);
     mpEffectSlider->setMaximum(100);
     mpEffectSlider->setPageStep(5);
-    connect(mpEffectSlider, SIGNAL(valueChanged(int)), SLOT(slotEffectValue(int)));
+    connect(mpEffectSlider, &QSlider::valueChanged, this, &KIconEffectSetupDialog::slotEffectValue);
     form->addRow(i18n("&Amount:"), mpEffectSlider);
     mpEffectLabel = static_cast<QLabel *>(form->labelForField(mpEffectSlider));
 
     mpEColButton = new KColorButton(mpEffectGroup);
-    connect(mpEColButton, SIGNAL(changed(const QColor &)),
-                SLOT(slotEffectColor(const QColor &)));
+    connect(mpEColButton, &KColorButton::changed, this, &KIconEffectSetupDialog::slotEffectColor);
     form->addRow(i18n("Co&lor:"), mpEColButton);
     mpEffectColor = static_cast<QLabel *>(form->labelForField(mpEColButton));
 
     mpECol2Button = new KColorButton(mpEffectGroup);
-    connect(mpECol2Button, SIGNAL(changed(const QColor &)),
-                SLOT(slotEffectColor2(const QColor &)));
+    connect(mpECol2Button, &KColorButton::changed, this, &KIconEffectSetupDialog::slotEffectColor2);
     form->addRow(i18n("&Second color:"), mpECol2Button);
     mpEffectColor2 = static_cast<QLabel *>(form->labelForField(mpECol2Button));
 
     QDialogButtonBox* buttonBox = new QDialogButtonBox(this);
     buttonBox->setStandardButtons(QDialogButtonBox::Ok | QDialogButtonBox::RestoreDefaults | QDialogButtonBox::Cancel);
-    connect(buttonBox, SIGNAL(accepted()), SLOT(accept()));
-    connect(buttonBox, SIGNAL(rejected()), SLOT(reject()));
-    connect(buttonBox->button(QDialogButtonBox::RestoreDefaults), SIGNAL(clicked(bool)), SLOT(slotDefault()));
+    connect(buttonBox, &QDialogButtonBox::accepted, this, &KIconEffectSetupDialog::accept);
+    connect(buttonBox, &QDialogButtonBox::rejected, this, &KIconEffectSetupDialog::reject);
+    connect(buttonBox->button(QDialogButtonBox::RestoreDefaults), &QPushButton::clicked, this, &KIconEffectSetupDialog::slotDefault);
     topLayout->addWidget(buttonBox);
 
     init();
@@ -692,4 +690,3 @@ void KIconEffectSetupDialog::preview()
     mpPreview->setPixmap(pm);
 }
 
-#include "icons.moc"

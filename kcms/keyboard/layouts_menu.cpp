@@ -22,7 +22,6 @@
 #include <klocalizedstring.h>
 
 #include <QAction>
-#include <QMenu>
 
 #include "keyboard_config.h"
 #include "x11_helper.h"
@@ -100,7 +99,7 @@ QAction* LayoutsMenu::createAction(const LayoutUnit& layoutUnit) const
 QList<QAction*> LayoutsMenu::contextualActions()
 {
 	if( actionGroup ) {
-		disconnect(actionGroup, SIGNAL(triggered(QAction*)), this, SLOT(actionTriggered(QAction*)));
+		disconnect(actionGroup, &QActionGroup::triggered, this, &LayoutsMenu::actionTriggered);
 		delete actionGroup;
 	}
 	actionGroup = new QActionGroup(this);
@@ -135,6 +134,6 @@ QList<QAction*> LayoutsMenu::contextualActions()
 	QAction* configAction = new QAction(i18n("Configure..."), actionGroup);
 	actionGroup->addAction(configAction);
 	configAction->setData("config");
-	connect(actionGroup, SIGNAL(triggered(QAction*)), this, SLOT(actionTriggered(QAction*)));
+	connect(actionGroup, &QActionGroup::triggered, this, &LayoutsMenu::actionTriggered);
 	return actionGroup->actions();
 }

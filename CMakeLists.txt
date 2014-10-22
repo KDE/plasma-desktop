@@ -1,5 +1,5 @@
 project(plasma-desktop)
-set(PROJECT_VERSION "5.0.95")
+set(PROJECT_VERSION "5.1.90")
 set(PROJECT_VERSION_MAJOR 5)
 
 cmake_minimum_required(VERSION 2.8.12 FATAL_ERROR)
@@ -42,7 +42,6 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     Attica
     Wallet
     Runner
-
 )
 
 find_package(KDecorations REQUIRED CONFIG)
@@ -60,6 +59,16 @@ find_package(KF5Activities ${KF5_VERSION})
 set_package_properties(KF5Activities PROPERTIES DESCRIPTION "management of Plasma activities"
                        TYPE OPTIONAL
                        PURPOSE "Needed by activity related plasmoids and the pager."
+                      )
+
+# Baloo is currently part of the KF5 namespace, but it is not
+# a proper framework. Hence the strange versioning.
+# This will be fixed with Plasma 5.2, as Baloo should have
+# become a framework by then
+find_package(KF5Baloo "5.1.90")
+set_package_properties(KF5Baloo PROPERTIES DESCRIPTION "File Searching"
+                       TYPE REQUIRED
+                       PURPOSE "Needed to build to File Search KCM"
                       )
 
 find_package(USB)

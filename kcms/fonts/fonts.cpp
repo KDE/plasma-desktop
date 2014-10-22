@@ -22,7 +22,6 @@
 */
 
 #include <config-workspace.h>
-#include <config-X11.h>
 
 #include "fonts.h"
 
@@ -48,13 +47,13 @@
 #include <KApplication>
 #include <KGlobalSettings>
 #include <KMessageBox>
-#include <KNumInput>
 #include <KProcess>
 #include <KConfig>
 #include <KStandardDirs>
 #include <KDebug>
 #include <KLocalizedString>
 #include <KPluginFactory>
+#include <KDoubleNumInput>
 
 #include "../krdb/krdb.h"
 

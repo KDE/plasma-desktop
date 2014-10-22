@@ -91,13 +91,6 @@ KQuickControlsAddons.MouseEventListener {
             svg: configIconsSvg
             elementId: "size-diagonal-tr2bl"
             iconSize: root.iconSize
-            visible: (action && typeof(action) != "undefined") ? action.enabled : false
-            action: (applet) ? applet.action("configure") : null
-            Component.onCompleted: {
-                if (action && typeof(action) != "undefined") {
-                    action.enabled = true
-                }
-            }
 
             MouseArea {
                 id: resizeHandle

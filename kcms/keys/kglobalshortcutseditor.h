@@ -23,7 +23,6 @@
 #include "kshortcutseditor.h"
 
 class KActionCollection;
-class KShortcut;
 class KConfig;
 class QDBusObjectPath;
 

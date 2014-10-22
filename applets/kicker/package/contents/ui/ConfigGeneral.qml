@@ -23,13 +23,11 @@ import QtQuick.Layouts 1.0
 
 import org.kde.plasma.private.kicker 0.1 as Kicker
 
-GroupBox {
+Item {
     id: configGeneral
 
     width: childrenRect.width
     height: childrenRect.height
-
-    flat: true
 
     property alias cfg_useCustomButtonImage: useCustomButtonImage.checked
     property alias cfg_customButtonImage: customButtonImage.text
@@ -42,6 +40,8 @@ GroupBox {
 
     ColumnLayout {
         GroupBox {
+            Layout.fillWidth: true
+
             title: i18n("Icon")
 
             flat: true
@@ -70,6 +70,8 @@ GroupBox {
                 Kicker.ImagePicker {
                     id: imagePicker
 
+                    Layout.fillWidth: true
+
                     onUrlChanged: {
                         customButtonImage.text = url;
                     }
@@ -78,6 +80,8 @@ GroupBox {
         }
 
         GroupBox {
+            Layout.fillWidth: true
+
             title: i18n("Behavior")
 
             flat: true
@@ -106,6 +110,8 @@ GroupBox {
         }
 
         GroupBox {
+            Layout.fillWidth: true
+
             title: i18n("Search")
 
             flat: true

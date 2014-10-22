@@ -1,0 +1,51 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % English "INCLUDE">
+]>
+<article id="baloo" lang="&language;">
+<title>File Search Settings</title>
+<articleinfo>
+<authorgroup>
+<author>
+    <firstname>Vishesh</firstname>
+    <surname>Handa</surname>
+</author>
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
+</authorgroup>
+
+<date>2014-10-17</date>
+<releaseinfo>&kde; 5.2</releaseinfo>
+
+<keywordset>
+<keyword>KDE</keyword>
+<keyword>Systemsettings</keyword>
+<keyword>search</keyword>
+<keyword>file</keyword>
+<keyword>baloo</keyword>
+</keywordset>
+</articleinfo>
+
+<para>
+This &systemsettings; module allows you to configure which files should be
+indexed for fast searching.
+</para>
+
+<variablelist>
+<varlistentry><term><guilabel>Exclude Folders</guilabel></term>
+<listitem>
+    <para>
+        You are presented with a list of folders which should not be searched. By default
+        your entire $HOME directory is indexed, and no other drives are indexed.
+    </para>
+    <para>
+        Removable media is never indexed by default. It can be explicitly removed from
+        the list of exclude folders and it will then be indexed.
+    </para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</article>

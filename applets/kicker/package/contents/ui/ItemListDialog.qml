@@ -35,6 +35,8 @@ Kicker.SubMenu {
 
     location: PlasmaCore.Types.Floating
 
+    offset: units.smallSpacing
+
     onWindowDeactivated: {
         plasmoid.expanded = false;
     }

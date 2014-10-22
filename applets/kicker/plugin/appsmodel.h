@@ -43,14 +43,7 @@ class AppGroupEntry : public AbstractGroupEntry
 class AppEntry : public AbstractEntry
 {
     public:
-        enum NameFormat {
-            NameOnly = 0,
-            GenericNameOnly,
-            NameAndGenericName,
-            GenericNameAndName
-        };
-
-        AppEntry(KService::Ptr service, NameFormat nameFormat);
+        AppEntry(KService::Ptr service, const QString &name);
 
         EntryType type() const { return RunnableType; }
 
@@ -69,6 +62,13 @@ class AppsModel : public AbstractModel
     Q_PROPERTY(QObject* appletInterface READ appletInterface WRITE setAppletInterface NOTIFY appletInterfaceChanged);
 
     public:
+        enum NameFormat {
+            NameOnly = 0,
+            GenericNameOnly,
+            NameAndGenericName,
+            GenericNameAndName
+        };
+
         explicit AppsModel(const QString &entryPath = QString(), bool flat = false, QObject *parent = 0);
         ~AppsModel();
 
@@ -90,6 +90,8 @@ class AppsModel : public AbstractModel
 
         QObject *appletInterface() const;
 
+        static QString nameFromService(const KService::Ptr service, NameFormat nameFormat);
+
     public Q_SLOTS:
         void setAppletInterface(QObject *appletInterface);
 
@@ -98,24 +100,26 @@ class AppsModel : public AbstractModel
         void flatChanged() const;
         void appNameFormatChanged() const;
         void appletInterfaceChanged(QObject *appletInterface) const;
+        void hiddenEntriesChanged();
 
     protected Q_SLOTS:
         virtual void refresh();
 
     private Q_SLOTS:
         void checkSycocaChanges(const QStringList &changes);
-        QQmlPropertyMap *appletConfig() const;
+        void childHiddenEntriesChanged();
 
     protected:
         QList<AbstractEntry *> m_entryList;
 
     private:
         void processServiceGroup(KServiceGroup::Ptr group);
+        QQmlPropertyMap *appletConfig() const;
 
         QString m_entryPath;
         QTimer *m_changeTimer;
         bool m_flat;
-        AppEntry::NameFormat m_appNameFormat;
+        NameFormat m_appNameFormat;
         bool m_sortNeeded;
         QStringList m_hiddenEntries;
         QObject *m_appletInterface;

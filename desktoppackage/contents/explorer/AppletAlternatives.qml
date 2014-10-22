@@ -41,7 +41,9 @@ PlasmaCore.Dialog {
         id: root
 
         signal configurationChanged
+
         Layout.minimumWidth: units.gridUnit * 20
+        Layout.minimumHeight: Math.min(Screen.height - units.gridUnit * 10, heading.height + buttonsRow.height + mainList.contentHeight + units.gridUnit)
 
         property string currentPlugin: alternativesHelper.currentPlugin
 
@@ -51,6 +53,7 @@ PlasmaCore.Dialog {
         }
 
         PlasmaExtras.Heading {
+            id: heading
             text: i18nd("plasma_shell_org.kde.plasma.desktop", "Alternatives");
         }
 
@@ -58,7 +61,6 @@ PlasmaCore.Dialog {
             id: scrollArea
             Layout.fillWidth: true
             Layout.fillHeight: true
-            Layout.minimumHeight: Math.min(Screen.height - units.gridUnit * 10, mainList.contentHeight +  units.gridUnit)
 
             Layout.preferredHeight: mainList.height
 
@@ -68,9 +70,9 @@ PlasmaCore.Dialog {
                 highlight: PlasmaComponents.Highlight {
                     id: highlight
                 }
-                delegate: MouseArea {
-                    width: mainList.width
-                    height: childrenRect.height
+                highlightMoveDuration : 0
+                delegate: PlasmaComponents.ListItem {
+                    enabled: true
                     onClicked: checked = true;
                     property bool checked: model.pluginName == alternativesHelper.currentPlugin
                     onCheckedChanged: {
@@ -84,10 +86,9 @@ PlasmaCore.Dialog {
                         onCurrentIndexChanged: checked = false;
                     }
                     RowLayout {
+                        x: 2 * units.smallSpacing
+                        width: parent.width - 2 * x
                         spacing: units.largeSpacing
-                        width: mainList.width - units.smallSpacing
-                        x: units.smallSpacing
-                        height: units.iconSizes.huge + units.largeSpacing
                         QIconItem {
                             width: units.iconSizes.huge
                             height: width
@@ -95,17 +96,22 @@ PlasmaCore.Dialog {
                         }
 
                         ColumnLayout {
+                            height: parent.height
                             Layout.fillWidth: true
                             PlasmaExtras.Heading {
                                 level: 4
                                 Layout.fillWidth: true
                                 text: model.name
+                                wrapMode: Text.NoWrap
+                                elide: Text.ElideRight
                             }
                             PlasmaComponents.Label {
                                 Layout.fillWidth: true
                                 text: model.description
                                 font.pointSize: theme.smallestFont.pointSize
+                                maximumLineCount: 2
                                 wrapMode: Text.WordWrap
+                                elide: Text.ElideRight
                             }
                         }
                     }
@@ -113,6 +119,8 @@ PlasmaCore.Dialog {
             }
         }
         RowLayout {
+            id: buttonsRow
+
             Layout.fillWidth: true
             PlasmaComponents.Button {
                 enabled: root.currentPlugin != alternativesHelper.currentPlugin

@@ -26,6 +26,7 @@
 
 #include <QLabel>
 #include <QList>
+#include <config-X11.h>
 
 #include <KCModule>
 #include <KDialog>

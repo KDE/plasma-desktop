@@ -102,7 +102,7 @@ public:
         }
 
         foreach (const QString &favorite, favoriteList) {
-            FavoritesModel::add(favorite);
+            FavoritesModel::load(favorite);
         }
     }
 
@@ -170,6 +170,14 @@ FavoritesModel::~FavoritesModel()
 
 void FavoritesModel::add(const QString& url)
 {
+    FavoritesModel::load(url);
+
+    // save after each add in case we crash
+    Private::saveFavorites();
+}
+
+void FavoritesModel::load(const QString &url)
+{
     QString handledUrl;
     KService::Ptr service = Kickoff::serviceForUrl(url);
     if (service) {
@@ -184,9 +192,6 @@ void FavoritesModel::add(const QString& url)
     foreach (FavoritesModel* model, Private::models) {
         model->d->addFavoriteItem(handledUrl);
     }
-
-    // save after each add in case we crash
-    Private::saveFavorites();
 }
 
 void FavoritesModel::move(int startRow, int destRow)

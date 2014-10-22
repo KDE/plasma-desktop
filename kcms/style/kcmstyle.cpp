@@ -46,6 +46,7 @@
 #include <KColorScheme>
 #include <KStandardDirs>
 #include <KNewStuff3/KNS3/DownloadDialog>
+#include <KConfigGroup>
 #if defined(Q_OS_UNIX) && !defined(Q_OS_MAC)
 #include <kdecoration.h>
 #endif

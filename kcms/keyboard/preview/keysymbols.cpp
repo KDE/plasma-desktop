@@ -19,7 +19,6 @@
 
 #include "keysymbols.h"
 
-#include <QApplication>
 #include <QStringList>
 
 

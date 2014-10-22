@@ -42,6 +42,9 @@ MouseArea {
     property int lastX
     property int lastY
 
+    onHeightChanged: tooltip.visible = false;
+    onWidthChanged: tooltip.visible = false;
+
     onPositionChanged: {
         if (currentApplet && currentApplet.applet &&
             currentApplet.applet.pluginName == "org.kde.plasma.panelspacer") {
@@ -141,7 +144,11 @@ MouseArea {
                 root.dragOverlay.currentApplet = null;
             }
         }
+
+        tooltip.visible = true;
+        tooltip.raise();
     }
+    onExited: visibleTimer.restart();
     onCurrentAppletChanged: {
         if (!root.dragOverlay.currentApplet) {
             return;
@@ -221,6 +228,11 @@ MouseArea {
         visible: configurationArea.containsMouse
         Layout.fillWidth: currentApplet ? currentApplet.Layout.fillWidth : false
         Layout.fillHeight: currentApplet ? currentApplet.Layout.fillHeight : false
+    }
+    Timer {
+        id: visibleTimer
+        interval: 250
+        onTriggered: tooltip.visible = false;
     }
 
     Connections {
@@ -304,28 +316,37 @@ MouseArea {
     }
     PlasmaCore.Dialog {
         id: tooltip
-        visualParent: handle
+        visualParent: currentApplet
+
         visible: currentApplet
         type: PlasmaCore.Dialog.Dock
-        flags: Qt.Popup
+        flags: Qt.WindowStaysOnTopHint|Qt.WindowDoesNotAcceptFocus|Qt.BypassWindowManagerHint
         location: plasmoid.location
-        mainItem: Row {
-            Layout.minimumWidth: implicitWidth
-            Layout.minimumHeight: implicitHeight
-            Layout.maximumWidth: implicitWidth
-            Layout.maximumHeight: implicitHeight
-            PlasmaComponents.ToolButton {
-                iconSource: "configure"
-                visible: currentApplet && currentApplet.applet.action("configure") && currentApplet.applet.action("configure").enabled
-                onClicked: currentApplet.applet.action("configure").trigger()
-            }
-            PlasmaComponents.Label {
-                text: currentApplet ? currentApplet.applet.title : ""
-            }
-            PlasmaComponents.ToolButton {
-                iconSource: "window-close"
-                visible: currentApplet && currentApplet.applet.action("remove") && currentApplet.applet.action("remove").enabled
-                onClicked: currentApplet.applet.action("remove").trigger()
+        mainItem: MouseArea {
+            Layout.minimumWidth: handleRow.implicitWidth
+            Layout.minimumHeight: handleRow.implicitHeight
+            Layout.maximumWidth: handleRow.implicitWidth
+            Layout.maximumHeight: handleRow.implicitHeight
+            width: handleRow.implicitHeight
+            height: handleRow.implicitWidth
+            hoverEnabled: true
+            onEntered: visibleTimer.stop();
+            onExited: visibleTimer.restart();
+            Row {
+                id: handleRow
+                PlasmaComponents.ToolButton {
+                    iconSource: "configure"
+                    visible: currentApplet && currentApplet.applet.action("configure") && currentApplet.applet.action("configure").enabled
+                    onClicked: currentApplet.applet.action("configure").trigger()
+                }
+                PlasmaComponents.Label {
+                    text: currentApplet ? currentApplet.applet.title : ""
+                }
+                PlasmaComponents.ToolButton {
+                    iconSource: "window-close"
+                    visible: currentApplet && currentApplet.applet.action("remove") && currentApplet.applet.action("remove").enabled
+                    onClicked: currentApplet.applet.action("remove").trigger()
+                }
             }
         }
     }

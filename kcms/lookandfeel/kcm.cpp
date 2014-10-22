@@ -31,6 +31,7 @@
 #include <QStandardPaths>
 #include <QProcess>
 #include <QQuickWidget>
+#include <QQuickView>
 #include <KGlobalSettings>
 #include <KIconLoader>
 
@@ -93,16 +94,17 @@ KCMLookandFeel::KCMLookandFeel(QWidget* parent, const QVariantList& args)
     m_model->setItemRoleNames(roles);
     QVBoxLayout* layout = new QVBoxLayout(this);
 
-    m_quickWidget = new QQuickWidget(this);
-    m_quickWidget->setResizeMode(QQuickWidget::SizeRootObjectToView);
+    m_quickView = new QQuickView(0);
+    QWidget *widget = QWidget::createWindowContainer(m_quickView, this);
+    m_quickView->setResizeMode(QQuickView::SizeRootObjectToView);
     Plasma::Package package = Plasma::PluginLoader::self()->loadPackage("Plasma/Generic");
     package.setDefaultPackageRoot("plasma/kcms");
     package.setPath("kcm_lookandfeel");
-    m_quickWidget->rootContext()->setContextProperty("kcm", this);
-    m_quickWidget->setSource(QUrl::fromLocalFile(package.filePath("mainscript")));
-    setMinimumHeight(m_quickWidget->initialSize().height());
+    m_quickView->rootContext()->setContextProperty("kcm", this);
+    m_quickView->setSource(QUrl::fromLocalFile(package.filePath("mainscript")));
+    setMinimumHeight(m_quickView->initialSize().height());
 
-    layout->addWidget(m_quickWidget);
+    layout->addWidget(widget);
 }
 
 KCMLookandFeel::~KCMLookandFeel()
@@ -173,6 +175,9 @@ void KCMLookandFeel::load()
 
     const QList<Plasma::Package> pkgs = availablePackages();
     for (const Plasma::Package &pkg : pkgs) {
+        if (!pkg.metadata().isValid()) {
+            continue;
+        }
         QStandardItem* row = new QStandardItem(pkg.metadata().name());
         row->setData(pkg.metadata().pluginName(), PluginNameRole);
         row->setData(pkg.filePath("previews", "preview.png"), ScreenhotRole);
@@ -186,12 +191,13 @@ void KCMLookandFeel::load()
         if (!pkg.filePath("defaults").isEmpty()) {
             KSharedConfigPtr conf = KSharedConfig::openConfig(pkg.filePath("defaults"));
             KConfigGroup cg(conf, "kdeglobals");
-            cg = KConfigGroup(&cg, "KDE");
+            cg = KConfigGroup(&cg, "General");
             bool hasColors = !cg.readEntry("ColorScheme", QString()).isEmpty();
             row->setData(hasColors, HasColorsRole);
             if (!hasColors) {
                 hasColors = !pkg.filePath("colors").isEmpty();
             }
+            cg = KConfigGroup(&cg, "KDE");
             row->setData(!cg.readEntry("widgetStyle", QString()).isEmpty(), HasWidgetStyleRole);
             cg = KConfigGroup(conf, "kdeglobals");
             cg = KConfigGroup(&cg, "Icons");
@@ -232,7 +238,10 @@ void KCMLookandFeel::save()
 
         if (m_applyColors) {
             QString colorsFile = package.filePath("colors");
+            KConfigGroup cg(conf, "kdeglobals");
+            cg = KConfigGroup(&cg, "General");
             QString colorScheme = cg.readEntry("ColorScheme", QString());
+
             if (!colorsFile.isEmpty()) {
                 if (!colorScheme.isEmpty()) {
                     setColors(colorScheme, colorsFile);
@@ -305,9 +314,9 @@ void KCMLookandFeel::setColors(const QString &scheme, const QString &colorFile)
     if (scheme.isEmpty() && colorFile.isEmpty()) {
         return;
     }
-
-    m_configGroup.writeEntry("ColorScheme", scheme);
-    m_configGroup.sync();
+    KConfigGroup configGroup(&m_config, "General");
+    configGroup.writeEntry("ColorScheme", scheme);
+    configGroup.sync();
 
     KSharedConfigPtr conf = KSharedConfig::openConfig(colorFile);
     foreach (const QString &grp, conf->groupList()) {

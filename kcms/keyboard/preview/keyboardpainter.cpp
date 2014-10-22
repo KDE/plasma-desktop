@@ -20,7 +20,6 @@
 #include "geometry_components.h"
 #include "../flags.h"
 
-#include <QHBoxLayout>
 #include <QVBoxLayout>
 #include <QPushButton>
 #include <QComboBox>
@@ -48,7 +47,7 @@ KeyboardPainter::KeyboardPainter():
     vLayout->addWidget(kbframe);
     vLayout->addLayout(hLayout);
 
-    connect(exitButton, SIGNAL(clicked()), this, SLOT(close()));
+    connect(exitButton, &QPushButton::clicked, this, &KeyboardPainter::close);
     connect(levelBox, SIGNAL(activated(int)), this, SLOT(levelChanged(int)));
 
     setWindowTitle(kbframe->getLayoutName());

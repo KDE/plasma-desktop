@@ -57,7 +57,7 @@ Flags::Flags():
 Flags::~Flags()
 {
 	if( svg != NULL ) {
-		disconnect(svg, SIGNAL(repaintNeeded()), this, SLOT(themeChanged()));
+		disconnect(svg, &Plasma::Svg::repaintNeeded, this, &Flags::themeChanged);
 		delete svg;
 	}
 	delete transparentPixmap;
@@ -308,7 +308,7 @@ Plasma::Svg* Flags::getSvg()
 		svg = new Plasma::Svg;
 	    svg->setImagePath("widgets/labeltexture");
 	    svg->setContainsMultipleImages(true);
-	    connect(svg, SIGNAL(repaintNeeded()), this, SLOT(themeChanged()));
+	    connect(svg, &Plasma::Svg::repaintNeeded, this, &Flags::themeChanged);
 	}
 	return svg;
 }

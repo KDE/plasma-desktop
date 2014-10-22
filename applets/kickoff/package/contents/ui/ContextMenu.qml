@@ -65,6 +65,7 @@ PlasmaComponents.ContextMenu {
                 favoritesModel.remove(contextMenu.model.url);
             } else {
                 favoritesModel.add(contextMenu.model.url);
+                switchToFavorites();
             }
         }
     }

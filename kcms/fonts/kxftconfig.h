@@ -26,7 +26,6 @@
 
 #include <time.h>
 
-#include <QStringList>
 #include <QtXml/QtXml>
 
 class KXftConfig

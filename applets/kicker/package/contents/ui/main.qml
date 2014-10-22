@@ -22,6 +22,7 @@ import QtQuick.Layouts 1.1
 import org.kde.plasma.plasmoid 2.0
 
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.components 2.0 as PlasmaComponents
 
 import org.kde.plasma.private.kicker 0.1 as Kicker
 
@@ -158,6 +159,17 @@ Item {
 
         property int horLineHeight
         property int vertLineWidth
+    }
+
+    PlasmaComponents.Label {
+        id: toolTipDelegate
+
+        width: contentWidth
+        height: contentHeight
+
+        property Item toolTip
+
+        text: (toolTip != null) ? toolTip.text : ""
     }
 
     Timer {

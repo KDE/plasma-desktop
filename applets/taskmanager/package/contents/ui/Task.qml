@@ -155,8 +155,6 @@ MouseEventListener {
 
             anchors.fill: parent
 
-            property variant windows: model.WindowList
-
             active: !inPopup && !groupDialog.visible && plasmoid.configuration.showToolTips
             interactive: true
             location: plasmoid.location
@@ -166,10 +164,10 @@ MouseEventListener {
             //FIXME TODO: highlightWindows: plasmoid.configuration.highlightWindows
             onContainsMouseChanged:  {
                 if (containsMouse) {
-                    toolTip.windows = model.WindowList;
-                    toolTip.mainText = model.DisplayRole;
-                    toolTip.icon = model.DecorationRole;
-                    toolTip.subText = model.IsLauncher ? model.GenericName
+                    toolTipDelegate.windows = model.WindowList;
+                    toolTipDelegate.mainText = model.DisplayRole;
+                    toolTipDelegate.icon = model.DecorationRole;
+                    toolTipDelegate.subText = model.IsLauncher ? model.GenericName
                         : toolTip.generateSubText(model);
                 }
             }

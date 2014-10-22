@@ -53,26 +53,10 @@ AppGroupEntry::AppGroupEntry(KServiceGroup::Ptr group, AppsModel *parentModel,
     QObject::connect(m_model, SIGNAL(appLaunched(QString)), parentModel, SIGNAL(appLaunched(QString)));
 }
 
-AppEntry::AppEntry(KService::Ptr service, NameFormat nameFormat)
+AppEntry::AppEntry(KService::Ptr service, const QString &name)
 : m_service(service)
 {
-    const QString &name = service->name();
-    QString genericName = service->genericName();
-
-    if (genericName.isEmpty()) {
-        genericName = service->comment();
-    }
-
-    if (nameFormat == NameOnly || genericName.isEmpty() || name == genericName) {
-        m_name = name;
-    } else if (nameFormat == GenericNameOnly) {
-        m_name = genericName;
-    } else if (nameFormat == NameAndGenericName) {
-        m_name = i18nc("App name (Generic name)", "%1 (%2)", name, genericName);
-    } else {
-        m_name = i18nc("Generic name (App name)", "%1 (%2)", genericName, name);
-    }
-
+    m_name = name;
     m_icon = QIcon::fromTheme(service->icon());
     m_service = service;
 }
@@ -84,7 +68,7 @@ AppsModel::AppsModel(const QString &entryPath, bool flat, QObject *parent)
 , m_entryPath(entryPath)
 , m_changeTimer(0)
 , m_flat(flat)
-, m_appNameFormat(AppEntry::NameOnly)
+, m_appNameFormat(NameOnly)
 , m_sortNeeded(false)
 , m_appletInterface(0)
 {
@@ -150,6 +134,10 @@ QVariant AppsModel::data(const QModelIndex &index, int role) const
 
             if (ContainmentInterface::mayAddLauncher(m_appletInterface, ContainmentInterface::Panel)) {
                 actionList << Kicker::createActionItem(i18n("Add to Panel"), "addToPanel");
+            }
+
+            if (ContainmentInterface::mayAddLauncher(m_appletInterface, ContainmentInterface::TaskManager, service->entryPath())) {
+                actionList << Kicker::createActionItem(i18n("Add as Launcher"), "addToTaskManager");
             }
 
             if (m_menuEntryEditor->canEdit(service->entryPath())) {
@@ -267,6 +255,8 @@ bool AppsModel::trigger(int row, const QString &actionId, const QVariant &argume
                     Q_ARG(QVariant, hiddenApps));
 
                 refresh();
+
+                emit hiddenEntriesChanged();
             }
         }
     } else if (actionId == "unhideSiblingApplications") {
@@ -285,6 +275,8 @@ bool AppsModel::trigger(int row, const QString &actionId, const QVariant &argume
             m_hiddenEntries.clear();
 
             refresh();
+
+            emit hiddenEntriesChanged();
         }
     } else if (actionId == "unhideChildApplications") {
         if (entry->type() == AbstractEntry::GroupType
@@ -306,6 +298,8 @@ bool AppsModel::trigger(int row, const QString &actionId, const QVariant &argume
                     Q_ARG(QVariant, hiddenApps));
 
                 refresh();
+
+                emit hiddenEntriesChanged();
             }
         }
     } else if (actionId.isEmpty() && service) {
@@ -353,8 +347,8 @@ int AppsModel::appNameFormat() const
 
 void AppsModel::setAppNameFormat(int format)
 {
-    if (m_appNameFormat != (AppEntry::NameFormat)format) {
-        m_appNameFormat = (AppEntry::NameFormat)format;
+    if (m_appNameFormat != (NameFormat)format) {
+        m_appNameFormat = (NameFormat)format;
 
         refresh();
 
@@ -383,6 +377,26 @@ void AppsModel::setAppletInterface(QObject* appletInterface)
     }
 }
 
+QString AppsModel::nameFromService(const KService::Ptr service, NameFormat nameFormat)
+{
+    const QString &name = service->name();
+    QString genericName = service->genericName();
+
+    if (genericName.isEmpty()) {
+        genericName = service->comment();
+    }
+
+    if (nameFormat == NameOnly || genericName.isEmpty() || name == genericName) {
+        return name;
+    } else if (nameFormat == GenericNameOnly) {
+        return genericName;
+    } else if (nameFormat == NameAndGenericName) {
+        return i18nc("App name (Generic name)", "%1 (%2)", name, genericName);
+    } else {
+        return i18nc("Generic name (App name)", "%1 (%2)", genericName, name);
+    }
+}
+
 void AppsModel::refresh()
 {
     beginResetModel();
@@ -404,7 +418,9 @@ void AppsModel::refresh()
                 KServiceGroup::Ptr subGroup(static_cast<KServiceGroup*>(p.data()));
 
                 if (!subGroup->noDisplay() && subGroup->childCount() > 0) {
-                    m_entryList << new AppGroupEntry(subGroup, this, m_flat, m_appNameFormat);
+                    AppGroupEntry *groupEntry = new AppGroupEntry(subGroup, this, m_flat, m_appNameFormat);
+                    connect(groupEntry->model(), SIGNAL(hiddenEntriesChanged()), this, SLOT(childHiddenEntriesChanged()));
+                    m_entryList << groupEntry;
                 }
             }
         }
@@ -472,7 +488,7 @@ void AppsModel::processServiceGroup(KServiceGroup::Ptr group)
             }
 
             if (!found) {
-                m_entryList << new AppEntry(service, m_appNameFormat);
+                m_entryList << new AppEntry(service, nameFromService(service, m_appNameFormat));
             }
         } else if (p->isType(KST_KServiceGroup)) {
             if (m_flat) {
@@ -486,6 +502,7 @@ void AppsModel::processServiceGroup(KServiceGroup::Ptr group)
                 if (!subGroup->noDisplay() && subGroup->childCount() > 0) {
                     AppGroupEntry *groupEntry = new AppGroupEntry(subGroup, this, m_flat, m_appNameFormat);
                     connect(groupEntry->model(), SIGNAL(countChanged()), this, SLOT(refresh()));
+                    connect(groupEntry->model(), SIGNAL(hiddenEntriesChanged()), this, SLOT(childHiddenEntriesChanged()));
                     m_entryList << groupEntry;
                 }
             }
@@ -497,6 +514,24 @@ void AppsModel::checkSycocaChanges(const QStringList &changes)
 {
     if (changes.contains("services") || changes.contains("apps") || changes.contains("xdgdata-apps")) {
         m_changeTimer->start();
+    }
+}
+
+void AppsModel::childHiddenEntriesChanged()
+{
+    QObject *childModel = QObject::sender();
+
+    for (int i = 0; i < m_entryList.size(); ++i) {
+        const AbstractEntry *entry = m_entryList.at(i);
+
+        if (entry->type() == AbstractEntry::GroupType) {
+            const AbstractGroupEntry *groupEntry = static_cast<const AbstractGroupEntry *>(entry);
+
+            if (groupEntry->model() == childModel) {
+                const QModelIndex &idx = index(i, 0);
+                emit dataChanged(idx, idx);
+            }
+        }
     }
 }
 

@@ -14,5 +14,5 @@ install(TARGETS knetattach DESTINATION ${INSTALL_TARGETS_DEFAULT_ARGS})
 
 ########### install files ###############
 
-install( PROGRAMS knetattach.desktop  DESTINATION  ${XDG_APPS_INSTALL_DIR} )
+install( PROGRAMS org.kde.knetattach.desktop  DESTINATION  ${XDG_APPS_INSTALL_DIR} )
 

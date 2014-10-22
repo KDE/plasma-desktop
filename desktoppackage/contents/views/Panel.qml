@@ -24,8 +24,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 
 PlasmaCore.FrameSvgItem {
     id: root
-    width: containment && containment.formFactor == PlasmaCore.Types.Vertical ? panel.thickness : panel.length
-    height: containment && containment.formFactor == PlasmaCore.Types.Vertical ? panel.length : panel.thickness
+
     imagePath: "widgets/panel-background"
     prefix: {
         if (!containment) {
@@ -96,14 +95,14 @@ PlasmaCore.FrameSvgItem {
 
         root.enabledBorders = borders;
 
-        containmentParent.anchors.topMargin = Math.min(root.margins.top, Math.max(1, root.height - units.iconSizes.smallMedium));
+        containmentParent.anchors.topMargin = Math.min(root.fixedMargins.top, Math.max(1, root.height - units.iconSizes.smallMedium));
 
-        containmentParent.anchors.bottomMargin = Math.min(root.margins.bottom, Math.max(1, root.height - units.iconSizes.smallMedium));
+        containmentParent.anchors.bottomMargin = Math.min(root.fixedMargins.bottom, Math.max(1, root.height - units.iconSizes.smallMedium));
 
-        //Base the left/right margins on height as well, to have a good radial simmetry
-        containmentParent.anchors.leftMargin = Math.min(root.margins.left, Math.max(1, root.height - units.iconSizes.smallMedium));
+        //Base the left/right fixedMargins on height as well, to have a good radial symmetry
+        containmentParent.anchors.leftMargin = Math.min(root.fixedMargins.left, Math.max(1, root.height - units.iconSizes.smallMedium));
 
-        containmentParent.anchors.leftMargin = Math.min(root.margins.left, Math.max(1, root.height - units.iconSizes.smallMedium));
+        containmentParent.anchors.leftMargin = Math.min(root.fixedMargins.left, Math.max(1, root.height - units.iconSizes.smallMedium));
     }
 
     onContainmentChanged: {
@@ -113,46 +112,33 @@ PlasmaCore.FrameSvgItem {
 
         containment.locationChanged.connect(adjustBorders);
         if (containment.Layout) {
-            containment.Layout.minimumWidthChanged.connect(minimumWidthChanged);
-            containment.Layout.maximumWidthChanged.connect(maximumWidthChanged);
-            containment.Layout.preferredWidthChanged.connect(preferredWidthChanged);
+            containment.Layout.minimumWidthChanged.connect(sizeHintsTimer.restart);
+            containment.Layout.maximumWidthChanged.connect(sizeHintsTimer.restart);
+            containment.Layout.preferredWidthChanged.connect(sizeHintsTimer.restart);
 
-            containment.Layout.minimumHeightChanged.connect(minimumHeightChanged);
-            containment.Layout.maximumHeightChanged.connect(maximumHeightChanged);
-            containment.Layout.preferredHeightChanged.connect(preferredHeightChanged);
+            containment.Layout.minimumHeightChanged.connect(sizeHintsTimer.restart);
+            containment.Layout.maximumHeightChanged.connect(sizeHintsTimer.restart);
+            containment.Layout.preferredHeightChanged.connect(sizeHintsTimer.restart);
         }
         adjustBorders();
     }
 
-    function minimumWidthChanged() {
-        if (!containment.userConfiguring && containment.formFactor === PlasmaCore.Types.Horizontal) {
-            panel.length = Math.max(panel.width, containment.Layout.minimumWidth);
-        }
-    }
-    function maximumWidthChanged() {
-        if (!containment.userConfiguring && containment.formFactor === PlasmaCore.Types.Horizontal) {
-            panel.length = Math.min(panel.width, containment.Layout.maximumWidth);
-        }
-    }
-    function preferredWidthChanged() {
-        if (!containment.userConfiguring && containment.formFactor === PlasmaCore.Types.Horizontal) {
-            panel.length = Math.min(panel.maximumLength, Math.max(containment.Layout.preferredWidth, panel.minimumLength));
-        }
-    }
+    Timer {
+        id: sizeHintsTimer
+        interval: 250
+        onTriggered: {
+            if (containment.userConfiguring) {
+                return;
+            }
 
-    function minimumHeightChanged() {
-        if (!containment.userConfiguring && containment.formFactor === PlasmaCore.Types.Vertical) {
-            panel.length = Math.max(panel.height, containment.Layout.minimumWidth);
-        }
-    }
-    function maximumHeightChanged() {
-        if (!containment.userConfiguring && containment.formFactor === PlasmaCore.Types.Vertical) {
-            panel.length = Math.min(panel.height, containment.Layout.maximumWidth);
-        }
-    }
-    function preferredHeightChanged() {
-        if (!containment.userConfiguring && containment.formFactor === PlasmaCore.Types.Vertical) {
-            panel.length = Math.min(panel.maximumLength, Math.max(containment.Layout.preferredHeight, panel.minimumLength));
+            var wantedSize;
+
+            if (containment.formFactor === PlasmaCore.Types.Vertical) {
+                wantedSize = Math.max(containment.Layout.minimumHeight, Math.min(containment.Layout.preferredHeight, containment.Layout.maximumHeight));
+            } else {
+                wantedSize = Math.max(containment.Layout.minimumWidth, Math.min(containment.Layout.preferredWidth, containment.Layout.maximumWidth));
+            }
+            panel.length = Math.max(panel.minimumLength, Math.min(wantedSize, panel.maximumLength));
         }
     }
 
@@ -194,12 +180,12 @@ PlasmaCore.FrameSvgItem {
         target: containment
         onUserConfiguringChanged: {
             if (!containment.userConfiguring) {
-                minimumWidthChanged();
-                maximumWidthChanged();
-                preferredWidthChanged();
-                minimumHeightChanged();
-                maximumHeightChanged();
-                preferredHeightChanged();
+                containment.Layout.minimumWidthChanged();
+                containment.Layout.maximumWidthChanged();
+                containment.Layout.preferredWidthChanged();
+                containment.Layout.minimumHeightChanged();
+                containment.Layout.maximumHeightChanged();
+                containment.Layout.preferredHeightChanged();
             }
         }
     }
