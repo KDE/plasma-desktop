@@ -28,6 +28,9 @@
 
 #ifdef HAVE_XINPUT_AND_DEVICE_NOTIFY
 #include <X11/extensions/XInput.h>
+#endif
+
+#ifdef HAVE_XCB_XINPUT
 #include <xcb/xinput.h>
 #endif
 
@@ -97,7 +100,7 @@ static bool isRealKeyboard(const char* deviceName)
 int XInputEventNotifier::getNewDeviceEventType(xcb_generic_event_t* event)
 {
 	int newDeviceType = DEVICE_NONE;
-
+#ifdef HAVE_XCB_XINPUT
 	if( xinputEventType != -1 && event->response_type == xinputEventType ) {
 		xcb_input_device_presence_notify_event_t *xdpne = reinterpret_cast<xcb_input_device_presence_notify_event_t *>(event);
 		if( xdpne->devchange == DeviceEnabled ) {
@@ -126,6 +129,7 @@ int XInputEventNotifier::getNewDeviceEventType(xcb_generic_event_t* event)
 			}
 		}
 	}
+#endif
 	return newDeviceType;
 }
 

@@ -10,6 +10,10 @@ else()
     message(STATUS "_XiGetDevicePresenceNotifyEvent is not found, libXi version 1.2.0 or later is required to keep layouts with keyboard hotplugging")
 endif()
 
+if (XCB_XINPUT_FOUND)
+    add_definitions(-DHAVE_XCB_XINPUT=1)
+endif()
+
 
 
 ### kded daemon ###

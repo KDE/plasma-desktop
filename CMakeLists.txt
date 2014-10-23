@@ -97,7 +97,7 @@ find_package(XCB
     REQUIRED COMPONENTS
         XCB SHM IMAGE
     OPTIONAL_COMPONENTS
-        XKB
+        XKB XINPUT
 )
 set_package_properties(XCB PROPERTIES TYPE REQUIRED)
 add_feature_info("XCB-XKB" XCB_XKB_FOUND "Required for building kcm/keyboard")
