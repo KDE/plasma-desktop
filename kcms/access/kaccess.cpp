@@ -99,7 +99,7 @@ KAccessApp::KAccessApp(bool allowStyles, bool GUIenabled)
   overlay(0), _player(0)
 {
   _activeWindow = KWindowSystem::activeWindow();
-  connect(KWindowSystem::self(), SIGNAL(activeWindowChanged(WId)), this, SLOT(activeWindowChanged(WId)));
+  connect(KWindowSystem::self(), &KWindowSystem::activeWindowChanged, this, &KAccessApp::activeWindowChanged);
 
   features = 0;
   requestedFeatures = 0;
@@ -637,9 +637,9 @@ void KAccessApp::createDialogContents() {
 
       dialog->setMainWidget(topcontents);
 
-      connect (dialog, SIGNAL(yesClicked()), this, SLOT(yesClicked()));
-      connect (dialog, SIGNAL(noClicked()), this, SLOT(noClicked()));
-      connect (dialog, SIGNAL(closeClicked()), this, SLOT(dialogClosed()));
+      connect(dialog, &KDialog::yesClicked, this, &KAccessApp::yesClicked);
+      connect(dialog, &KDialog::noClicked, this, &KAccessApp::noClicked);
+      connect(dialog, &KDialog::closeClicked, this, &KAccessApp::dialogClosed);
    }
 }
 

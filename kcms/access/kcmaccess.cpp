@@ -221,13 +221,13 @@ KAccessConfig::KAccessConfig(QWidget *parent, const QVariantList& args)
   soundLabel->setWhatsThis( wtstr );
   soundButton->setWhatsThis( wtstr );
 
-  connect(soundButton, SIGNAL(clicked()), this, SLOT(selectSound()));
+  connect(soundButton, &QPushButton::clicked, this, &KAccessConfig::selectSound);
 
-  connect(customBell, SIGNAL(clicked()), this, SLOT(checkAccess()));
+  connect(customBell, &QCheckBox::clicked, this, &KAccessConfig::checkAccess);
 
-  connect(systemBell, SIGNAL(clicked()), this, SLOT(configChanged()));
-  connect(customBell, SIGNAL(clicked()), this, SLOT(configChanged()));
-  connect(soundEdit, SIGNAL(textChanged(QString)), this, SLOT(configChanged()));
+  connect(systemBell, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
+  connect(customBell, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
+  connect(soundEdit, &QLineEdit::textChanged, this, &KAccessConfig::configChanged);
 
   // -----------------------------------------------------
 
@@ -278,16 +278,16 @@ KAccessConfig::KAccessConfig(QWidget *parent, const QVariantList& args)
   hbox->addWidget(durationSlider);
   durationSlider->setWhatsThis( i18n("Here you can customize the duration of the \"visible bell\" effect being shown.") );
 
-  connect(invertScreen, SIGNAL(clicked()), this, SLOT(configChanged()));
-  connect(flashScreen, SIGNAL(clicked()), this, SLOT(configChanged()));
-  connect(visibleBell, SIGNAL(clicked()), this, SLOT(configChanged()));
-  connect(visibleBell, SIGNAL(clicked()), this, SLOT(checkAccess()));
-  connect(colorButton, SIGNAL(clicked()), this, SLOT(changeFlashScreenColor()));
+  connect(invertScreen, &QRadioButton::clicked, this, &KAccessConfig::configChanged);
+  connect(flashScreen, &QRadioButton::clicked, this, &KAccessConfig::configChanged);
+  connect(visibleBell, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
+  connect(visibleBell, &QCheckBox::clicked, this, &KAccessConfig::checkAccess);
+  connect(colorButton, &KColorButton::clicked, this, &KAccessConfig::changeFlashScreenColor);
 
-  connect(invertScreen, SIGNAL(clicked()), this, SLOT(invertClicked()));
-  connect(flashScreen, SIGNAL(clicked()), this, SLOT(flashClicked()));
+  connect(invertScreen, &QRadioButton::clicked, this, &KAccessConfig::invertClicked);
+  connect(flashScreen, &QRadioButton::clicked, this, &KAccessConfig::flashClicked);
 
-  connect(durationSlider, SIGNAL(valueChanged(double)), this, SLOT(configChanged()));
+  connect(durationSlider, &KDoubleNumInput::valueChanged, this, &KAccessConfig::configChanged);
 
   vbox->addStretch();
 
@@ -351,16 +351,16 @@ KAccessConfig::KAccessConfig(QWidget *parent, const QVariantList& args)
   kNotifyModifiersButton->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
   hbox->addWidget(kNotifyModifiersButton);
 
-  connect(stickyKeys, SIGNAL(clicked()), this, SLOT(configChanged()));
-  connect(stickyKeysLock, SIGNAL(clicked()), this, SLOT(configChanged()));
-  connect(stickyKeysAutoOff, SIGNAL(clicked()), this, SLOT(configChanged()));
-  connect(stickyKeys, SIGNAL(clicked()), this, SLOT(checkAccess()));
+  connect(stickyKeys, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
+  connect(stickyKeysLock, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
+  connect(stickyKeysAutoOff, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
+  connect(stickyKeys, &QCheckBox::clicked, this, &KAccessConfig::checkAccess);
 
-  connect(stickyKeysBeep, SIGNAL(clicked()), this, SLOT(configChanged()));
-  connect(toggleKeysBeep, SIGNAL(clicked()), this, SLOT(configChanged()));
-  connect(kNotifyModifiers, SIGNAL(clicked()), this, SLOT(configChanged()));
-  connect(kNotifyModifiers, SIGNAL(clicked()), this, SLOT(checkAccess()));
-  connect(kNotifyModifiersButton, SIGNAL(clicked()), this, SLOT(configureKNotify()));
+  connect(stickyKeysBeep, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
+  connect(toggleKeysBeep, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
+  connect(kNotifyModifiers, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
+  connect(kNotifyModifiers, &QCheckBox::clicked, this, &KAccessConfig::checkAccess);
+  connect(kNotifyModifiersButton, &QPushButton::clicked, this, &KAccessConfig::configureKNotify);
 
   vbox->addStretch();
 
@@ -438,18 +438,18 @@ KAccessConfig::KAccessConfig(QWidget *parent, const QVariantList& args)
   bounceKeysRejectBeep = new QCheckBox(i18n("Use the system bell whenever a key is rejected"), grp);
   hbox->addWidget(bounceKeysRejectBeep);
 
-  connect(slowKeysDelay, SIGNAL(valueChanged(double)), this, SLOT(configChanged()));
-  connect(slowKeys, SIGNAL(clicked()), this, SLOT(configChanged()));
-  connect(slowKeys, SIGNAL(clicked()), this, SLOT(checkAccess()));
+  connect(slowKeysDelay, &KDoubleNumInput::valueChanged, this, &KAccessConfig::configChanged);
+  connect(slowKeys, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
+  connect(slowKeys, &QCheckBox::clicked, this, &KAccessConfig::checkAccess);
 
-  connect(slowKeysPressBeep, SIGNAL(clicked()), this, SLOT(configChanged()));
-  connect(slowKeysAcceptBeep, SIGNAL(clicked()), this, SLOT(configChanged()));
-  connect(slowKeysRejectBeep, SIGNAL(clicked()), this, SLOT(configChanged()));
+  connect(slowKeysPressBeep, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
+  connect(slowKeysAcceptBeep, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
+  connect(slowKeysRejectBeep, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
 
-  connect(bounceKeysDelay, SIGNAL(valueChanged(double)), this, SLOT(configChanged()));
-  connect(bounceKeys, SIGNAL(clicked()), this, SLOT(configChanged()));
-  connect(bounceKeysRejectBeep, SIGNAL(clicked()), this, SLOT(configChanged()));
-  connect(bounceKeys, SIGNAL(clicked()), this, SLOT(checkAccess()));
+  connect(bounceKeysDelay, &KDoubleNumInput::valueChanged, this, &KAccessConfig::configChanged);
+  connect(bounceKeys, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
+  connect(bounceKeysRejectBeep, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
+  connect(bounceKeys, &QCheckBox::clicked, this, &KAccessConfig::checkAccess);
 
   vbox->addStretch();
 
@@ -518,15 +518,15 @@ KAccessConfig::KAccessConfig(QWidget *parent, const QVariantList& args)
   kNotifyAccessXButton->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
   hbox->addWidget(kNotifyAccessXButton);
 
-  connect(gestures, SIGNAL(clicked()), this, SLOT(configChanged()));
-  connect(timeout, SIGNAL(clicked()), this, SLOT(configChanged()));
-  connect(timeout, SIGNAL(clicked()), this, SLOT(checkAccess()));
-  connect(timeoutDelay, SIGNAL(valueChanged(int)), this, SLOT(configChanged()));
-  connect(accessxBeep, SIGNAL(clicked()), this, SLOT(configChanged()));
-  connect(gestureConfirmation, SIGNAL(clicked()), this, SLOT(configChanged()));
-  connect(kNotifyAccessX, SIGNAL(clicked()), this, SLOT(configChanged()));
-  connect(kNotifyAccessX, SIGNAL(clicked()), this, SLOT(checkAccess()));
-  connect(kNotifyAccessXButton, SIGNAL(clicked()), this, SLOT(configureKNotify()));
+  connect(gestures, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
+  connect(timeout, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
+  connect(timeout, &QCheckBox::clicked, this, &KAccessConfig::checkAccess);
+  connect(timeoutDelay, &KIntNumInput::valueChanged, this, &KAccessConfig::configChanged);
+  connect(accessxBeep, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
+  connect(gestureConfirmation, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
+  connect(kNotifyAccessX, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
+  connect(kNotifyAccessX, &QCheckBox::clicked, this, &KAccessConfig::checkAccess);
+  connect(kNotifyAccessXButton, &QPushButton::clicked, this, &KAccessConfig::configureKNotify);
 
   vbox->addStretch();
 
