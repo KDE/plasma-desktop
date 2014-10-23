@@ -27,6 +27,10 @@
 #include <QListWidget>
 #include <QDialogButtonBox>
 #include <QLoggingCategory>
+#include <QProcess>
+#include <QFile>
+#include <QDBusMessage>
+#include <QDBusConnection>
 
 #include <KColorButton>
 #include <KConfig>
@@ -37,6 +41,7 @@
 #include <KSeparator>
 #include <KSharedConfig>
 #include <KConfigGroup>
+#include <KGlobalSettings>
 
 #include <kdelibs4migration.h>
 
@@ -363,6 +368,25 @@ void KIconConfig::exportToKDE4()
         KConfigGroup cg(kglobalcfg, grp);
         KConfigGroup cg2(&kde4config, grp);
         cg.copyTo(&cg2);
+    }
+
+    QProcess cachePathProcess;
+    cachePathProcess.start("kde4-config --path cache");
+    cachePathProcess.waitForFinished();
+    QString path = cachePathProcess.readAllStandardOutput();
+    QFile cacheFile(path.remove(path.length()-1, 1)+"/icon-cache.kcache");
+    cacheFile.remove();
+
+    //message kde4 apps that icon theme is changed
+    for (int i = 0; i < KIconLoader::LastGroup; i++) {
+        KIconLoader::emitChange(KIconLoader::Group(i));
+
+        QDBusMessage message = QDBusMessage::createSignal("/KGlobalSettings", "org.kde.KGlobalSettings", "notifyChange" );
+        QList<QVariant> args;
+        args.append(static_cast<int>(KGlobalSettings::IconChanged));
+        args.append(KIconLoader::Group(i));
+        message.setArguments(args);
+        QDBusConnection::sessionBus().send(message);
     }
 }
 
