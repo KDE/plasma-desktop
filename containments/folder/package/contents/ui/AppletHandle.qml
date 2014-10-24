@@ -23,6 +23,7 @@ import QtQuick 2.0
 import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
+import org.kde.plasma.components 2.0 as PlasmaComponents
 
 import "plasmapackage:/code/LayoutManager.js" as LayoutManager
 
@@ -77,6 +78,16 @@ KQuickControlsAddons.MouseEventListener {
         imagePath: (backgroundHints == "NoBackground" || !handleMerged) ? "widgets/background" : ""
     }
 
+    PlasmaComponents.Label {
+        id: toolTipDelegate
+
+        width: contentWidth
+        height: contentHeight
+
+        property Item toolTip
+
+        text: (toolTip != null) ? toolTip.mainText : ""
+    }
     ColumnLayout {
         id: buttonColumn
         width: handleWidth
@@ -91,6 +102,7 @@ KQuickControlsAddons.MouseEventListener {
             svg: configIconsSvg
             elementId: "size-diagonal-tr2bl"
             iconSize: root.iconSize
+            mainText: i18n("Resize")
 
             MouseArea {
                 id: resizeHandle
@@ -129,6 +141,7 @@ KQuickControlsAddons.MouseEventListener {
             id: rotateButton
             svg: configIconsSvg
             elementId: "rotate"
+            mainText: i18n("Rotate")
             iconSize: root.iconSize
             action: (applet) ? applet.action("rotate") : null
             Component.onCompleted: {
@@ -221,8 +234,7 @@ KQuickControlsAddons.MouseEventListener {
         }
         ActionButton {
             svg: configIconsSvg
-            elementId: "size-diagonal-tr2bl" // FIXME should be maximize
-            //elementId: "maximize"
+            elementId: "maximize"
             iconSize: root.iconSize
             visible: (action && typeof(action) != "undefined") ? action.enabled : false
             action: (applet) ? applet.action("run associated application") : null
@@ -280,6 +292,7 @@ KQuickControlsAddons.MouseEventListener {
         ActionButton {
             svg: configIconsSvg
             elementId: "close"
+            mainText: i18n("Remove")
             iconSize: root.iconSize
             visible: {
                 if (!applet) {

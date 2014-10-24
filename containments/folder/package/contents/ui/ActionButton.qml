@@ -22,8 +22,12 @@ import QtQuick 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 
-Item {
+PlasmaCore.ToolTipArea {
     id: button
+
+    location: PlasmaCore.Types.LeftEdge
+    mainText: action !== undefined ? action.text : ""
+    mainItem: toolTipDelegate
 
     //API
     property QtObject svg
