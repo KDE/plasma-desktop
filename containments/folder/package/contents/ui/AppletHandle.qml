@@ -289,30 +289,36 @@ KQuickControlsAddons.MouseEventListener {
             }
         }
 
-        ActionButton {
-            svg: configIconsSvg
-            elementId: "close"
-            mainText: i18n("Remove")
-            iconSize: root.iconSize
-            visible: {
-                if (!applet) {
-                    return false;
+        Item {
+            Layout.minimumWidth: closeButton.width
+            Layout.minimumHeight: closeButton.height
+
+            ActionButton {
+                id: closeButton
+                svg: configIconsSvg
+                elementId: "close"
+                mainText: i18n("Remove")
+                iconSize: root.iconSize
+                visible: {
+                    if (!applet) {
+                        return false;
+                    }
+                    var a = applet.action("remove");
+                    return (a && typeof(a) != "undefined") ? a.enabled : false;
                 }
-                var a = applet.action("remove");
-                return (a && typeof(a) != "undefined") ? a.enabled : false;
-            }
-            // we don't set action, since we want to catch the button click,
-            // animate, and then trigger the "remove" action
-            // Triggering the action is handled in the appletItem, we just
-            // emit a signal here to avoid the applet-gets-removed-before-we-
-            // can-animate it race condition.
-            onClicked: {
-                appletHandle.removeApplet();
-            }
-            Component.onCompleted: {
-                var a = applet.action("remove");
-                if (a && typeof(a) != "undefined") {
-                    a.enabled = true
+                // we don't set action, since we want to catch the button click,
+                // animate, and then trigger the "remove" action
+                // Triggering the action is handled in the appletItem, we just
+                // emit a signal here to avoid the applet-gets-removed-before-we-
+                // can-animate it race condition.
+                onClicked: {
+                    appletHandle.removeApplet();
+                }
+                Component.onCompleted: {
+                    var a = applet.action("remove");
+                    if (a && typeof(a) != "undefined") {
+                        a.enabled = true
+                    }
                 }
             }
         }
