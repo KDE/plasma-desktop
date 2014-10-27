@@ -47,7 +47,7 @@ Item {
 
         anchors {
             fill: parent
-            rightMargin: -highlight.margins.right
+            leftMargin: -highlight.margins.left
             bottomMargin: -highlight.margins.bottom
         }
 
@@ -63,6 +63,7 @@ Item {
             fill: parent
 
             leftMargin: highlight.margins.left
+            rightMargin: highlight.margins.right
             topMargin: highlight.margins.top
         }
 
