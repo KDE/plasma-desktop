@@ -38,6 +38,7 @@ private Q_SLOTS:
     void testCursorTheme();
     void testSplashScreen();
     void testLockScreen();
+    void testWindowSwitcher();
     void testKCMSave();
 
 private:
@@ -149,6 +150,14 @@ void KcmTest::testLockScreen()
     QCOMPARE(cg.readEntry("Theme", QString()), QString("customTestValue"));
 }
 
+void KcmTest::testWindowSwitcher()
+{
+    m_KCMLookandFeel->setWindowSwitcher("customTestValue");
+
+    KConfig config("kwinrc");
+    KConfigGroup cg(&config, "TabBox");
+    QCOMPARE(cg.readEntry("LayoutName", QString()), QStringLiteral("customTestValue"));
+}
 
 void KcmTest::testKCMSave()
 {
@@ -181,6 +190,10 @@ void KcmTest::testKCMSave()
     KConfig lockerConfig("kscreenlockerrc");
     cg = KConfigGroup(&lockerConfig, "Greeter");
     QCOMPARE(cg.readEntry("Theme", QString()), QString("org.kde.test"));
+
+    KConfig kwinConfig("kwinrc");
+    cg = KConfigGroup(&kwinConfig, "TabBox");
+    QCOMPARE(cg.readEntry("LayoutName", QString()), QStringLiteral("testValue"));
 }
 
 QTEST_MAIN(KcmTest)

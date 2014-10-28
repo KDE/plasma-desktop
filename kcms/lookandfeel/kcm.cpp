@@ -65,6 +65,7 @@ KCMLookandFeel::KCMLookandFeel(QWidget* parent, const QVariantList& args)
     , m_applyIcons(true)
     , m_applyPlasmaTheme(true)
     , m_applyCursors(true)
+    , m_applyWindowSwitcher(true)
 {
     //This flag seems to be needed in order for QQuickWidget to work
     //see https://bugreports.qt-project.org/browse/QTBUG-40765
@@ -91,6 +92,7 @@ KCMLookandFeel::KCMLookandFeel(QWidget* parent, const QVariantList& args)
     roles[HasIconsRole] = "hasIcons";
     roles[HasPlasmaThemeRole] = "hasPlasmaTheme";
     roles[HasCursorsRole] = "hasCursors";
+    roles[HasWindowSwitcherRole] = "hasWindowSwitcher";
     m_model->setItemRoleNames(roles);
     QVBoxLayout* layout = new QVBoxLayout(this);
 
@@ -210,6 +212,10 @@ void KCMLookandFeel::load()
             cg = KConfigGroup(conf, "kcminputrc");
             cg = KConfigGroup(&cg, "Mouse");
             row->setData(!cg.readEntry("cursorTheme", QString()).isEmpty(), HasCursorsRole);
+
+            cg = KConfigGroup(conf, "kwinrc");
+            cg = KConfigGroup(&cg, "WindowSwitcher");
+            row->setData(!cg.readEntry("LayoutName", QString()).isEmpty(), HasWindowSwitcherRole);
         }
 
         m_model->appendRow(row);
@@ -277,6 +283,12 @@ void KCMLookandFeel::save()
             cg = KConfigGroup(conf, "kcminputrc");
             cg = KConfigGroup(&cg, "Mouse");
             setCursorTheme(cg.readEntry("cursorTheme", QString()));
+        }
+
+        if (m_applyWindowSwitcher) {
+            cg = KConfigGroup(conf, "kwinrc");
+            cg = KConfigGroup(&cg, "WindowSwitcher");
+            setWindowSwitcher(cg.readEntry("LayoutName", QString()));
         }
     }
 
@@ -533,7 +545,22 @@ void KCMLookandFeel::setLockScreen(const QString &theme)
     cg.sync();
 }
 
+void KCMLookandFeel::setWindowSwitcher(const QString &theme)
+{
+    if (theme.isEmpty()) {
+        return;
+    }
 
+    KConfig config("kwinrc");
+    KConfigGroup cg(&config, "TabBox");
+    cg.writeEntry("LayoutName", theme);
+    cg.sync();
+    // Reload KWin.
+    QDBusMessage message = QDBusMessage::createSignal(QStringLiteral("/KWin"),
+                                                      QStringLiteral("org.kde.KWin"),
+                                                      QStringLiteral("reloadConfig"));
+    QDBusConnection::sessionBus().send(message);
+}
 
 
 void KCMLookandFeel::setApplyColors(bool apply)
@@ -594,6 +621,20 @@ void KCMLookandFeel::setApplyPlasmaTheme(bool apply)
 bool KCMLookandFeel::applyPlasmaTheme() const
 {
     return m_applyPlasmaTheme;
+}
+
+void KCMLookandFeel::setApplyWindowSwitcher(bool apply)
+{
+    if (m_applyWindowSwitcher == apply) {
+        return;
+    }
+    m_applyWindowSwitcher = apply;
+    emit applyWindowSwitcherChanged();
+}
+
+bool KCMLookandFeel::applyWindowSwitcher() const
+{
+    return m_applyWindowSwitcher;
 }
 
 #include "kcm.moc"
