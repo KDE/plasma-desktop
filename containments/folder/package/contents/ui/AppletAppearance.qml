@@ -199,6 +199,15 @@ Item {
 //                     print("plasmoid.backgroundHintsChanged");
                     updateBackgroundHints();
                 }
+                onStatusChanged: {
+                    if (applet.status == PlasmaCore.Types.AwaitingDeletionStatus) {
+                        LayoutManager.setSpaceAvailable(appletItem.x, appletItem.y, appletItem.width, appletItem.height, true);
+                        disappearAnim.running = true;
+                    } else {
+                        LayoutManager.positionItem(appletItem);
+                        appearAnim.running = true;
+                    }
+                }
             }
 
             MouseArea {
@@ -287,13 +296,6 @@ Item {
                 property int minimumWidth: minimumSize.width;
                 property int minimumHeight: minimumSize.height;
 
-                function appletDestroyed() {
-//                     print("Applet DESTROYED.");
-                    LayoutManager.setSpaceAvailable(appletItem.x, appletItem.y, appletItem.width, appletItem.height, true)
-                    applet.action("remove").trigger();
-                    appletItem.destroy()
-                }
-
                 onAppletChanged: {
                     if (applet) {
                         appletTimer.running = true;
@@ -301,9 +303,7 @@ Item {
                 }
                 Connections {
                     target: appletHandle.item
-                    onRemoveApplet: {
-                        killAnim.running = true;
-                    }
+                    onRemoveApplet: applet.action("remove").trigger();
                 }
                 Behavior on opacity {
                     NumberAnimation {
@@ -311,15 +311,16 @@ Item {
                         easing.type: Easing.InOutQuad
                     }
                 }
-                SequentialAnimation {
-                    id: killAnim
-                    PlasmaExtras.DisappearAnimation {
-                        targetItem: appletItem
-                    }
-                    ScriptAction {
-                        script: appletContainer.appletDestroyed()
-                    }
+
+                PlasmaExtras.AppearAnimation {
+                    id: appearAnim
+                    targetItem: appletItem
                 }
+                PlasmaExtras.DisappearAnimation {
+                    id: disappearAnim
+                    targetItem: appletItem
+                }
+
                 Loader {
                     id: busyLoader
                     anchors.centerIn: parent
