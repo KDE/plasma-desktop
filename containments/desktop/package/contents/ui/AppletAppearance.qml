@@ -201,8 +201,10 @@ Item {
                 }
                 onStatusChanged: {
                     if (applet.status == PlasmaCore.Types.AwaitingDeletionStatus) {
+                        LayoutManager.setSpaceAvailable(appletItem.x, appletItem.y, appletItem.width, appletItem.height, true);
                         disappearAnim.running = true;
                     } else {
+                        LayoutManager.positionItem(appletItem);
                         appearAnim.running = true;
                     }
                 }
@@ -297,10 +299,6 @@ Item {
                 onAppletChanged: {
                     if (applet) {
                         appletTimer.running = true;
-                    } else {
-                        //                     print("Applet DESTROYED.");
-                        LayoutManager.setSpaceAvailable(appletItem.x, appletItem.y, appletItem.width, appletItem.height, true)
-                        appletItem.destroy()
                     }
                 }
                 Connections {
