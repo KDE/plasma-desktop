@@ -269,6 +269,12 @@ function checkLastSpacer() {
             visible: false
             property bool animationsEnabled: true
 
+            Connections {
+                target: applet
+                onStatusChanged: {
+                    container.visible = applet.status != PlasmaCore.Types.AwaitingDeletionStatus
+                }
+            }
             //when the applet moves caused by its resize, don't animate.
             //this is completely heuristic, but looks way less "jumpy"
             property bool movingForResize: false

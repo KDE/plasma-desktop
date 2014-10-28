@@ -188,6 +188,9 @@ PlasmaCore.FrameSvgItem {
                 containment.Layout.preferredHeightChanged();
             }
         }
+        onStatusChanged: {
+            panel.visible = containment.status != PlasmaCore.Types.AwaitingDeletionStatus
+        }
     }
 
     Component.onCompleted: {
