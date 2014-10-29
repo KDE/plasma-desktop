@@ -66,6 +66,7 @@ KCMLookandFeel::KCMLookandFeel(QWidget* parent, const QVariantList& args)
     , m_applyPlasmaTheme(true)
     , m_applyCursors(true)
     , m_applyWindowSwitcher(true)
+    , m_applyDesktopSwitcher(true)
 {
     //This flag seems to be needed in order for QQuickWidget to work
     //see https://bugreports.qt-project.org/browse/QTBUG-40765
@@ -93,6 +94,7 @@ KCMLookandFeel::KCMLookandFeel(QWidget* parent, const QVariantList& args)
     roles[HasPlasmaThemeRole] = "hasPlasmaTheme";
     roles[HasCursorsRole] = "hasCursors";
     roles[HasWindowSwitcherRole] = "hasWindowSwitcher";
+    roles[HasDesktopSwitcherRole] = "hasDesktopSwitcher";
     m_model->setItemRoleNames(roles);
     QVBoxLayout* layout = new QVBoxLayout(this);
 
@@ -216,6 +218,10 @@ void KCMLookandFeel::load()
             cg = KConfigGroup(conf, "kwinrc");
             cg = KConfigGroup(&cg, "WindowSwitcher");
             row->setData(!cg.readEntry("LayoutName", QString()).isEmpty(), HasWindowSwitcherRole);
+
+            cg = KConfigGroup(conf, "kwinrc");
+            cg = KConfigGroup(&cg, "DesktopSwitcher");
+            row->setData(!cg.readEntry("LayoutName", QString()).isEmpty(), HasDesktopSwitcherRole);
         }
 
         m_model->appendRow(row);
@@ -289,6 +295,12 @@ void KCMLookandFeel::save()
             cg = KConfigGroup(conf, "kwinrc");
             cg = KConfigGroup(&cg, "WindowSwitcher");
             setWindowSwitcher(cg.readEntry("LayoutName", QString()));
+        }
+
+        if (m_applyDesktopSwitcher) {
+            cg = KConfigGroup(conf, "kwinrc");
+            cg = KConfigGroup(&cg, "DesktopSwitcher");
+            setDesktopSwitcher(cg.readEntry("LayoutName", QString()));
         }
     }
 
@@ -562,6 +574,24 @@ void KCMLookandFeel::setWindowSwitcher(const QString &theme)
     QDBusConnection::sessionBus().send(message);
 }
 
+void KCMLookandFeel::setDesktopSwitcher(const QString &theme)
+{
+    if (theme.isEmpty()) {
+        return;
+    }
+
+    KConfig config("kwinrc");
+    KConfigGroup cg(&config, "TabBox");
+    cg.writeEntry("DesktopLayout", theme);
+    cg.writeEntry("DesktopListLayout", theme);
+    cg.sync();
+    // Reload KWin.
+    QDBusMessage message = QDBusMessage::createSignal(QStringLiteral("/KWin"),
+                                                      QStringLiteral("org.kde.KWin"),
+                                                      QStringLiteral("reloadConfig"));
+    QDBusConnection::sessionBus().send(message);
+}
+
 
 void KCMLookandFeel::setApplyColors(bool apply)
 {
@@ -635,6 +665,20 @@ void KCMLookandFeel::setApplyWindowSwitcher(bool apply)
 bool KCMLookandFeel::applyWindowSwitcher() const
 {
     return m_applyWindowSwitcher;
+}
+
+void KCMLookandFeel::setApplyDesktopSwitcher(bool apply)
+{
+    if (m_applyDesktopSwitcher == apply) {
+        return;
+    }
+    m_applyDesktopSwitcher = apply;
+    emit applyDesktopSwitcherChanged();
+}
+
+bool KCMLookandFeel::applyDesktopSwitcher() const
+{
+    return m_applyDesktopSwitcher;
 }
 
 #include "kcm.moc"

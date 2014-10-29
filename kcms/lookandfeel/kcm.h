@@ -42,6 +42,7 @@ class KCMLookandFeel : public KCModule
     Q_PROPERTY(bool applyIcons READ applyIcons WRITE setApplyIcons NOTIFY applyIconsChanged)
     Q_PROPERTY(bool applyPlasmaTheme READ applyPlasmaTheme WRITE setApplyPlasmaTheme NOTIFY applyPlasmaThemeChanged)
     Q_PROPERTY(bool applyWindowSwitcher READ applyWindowSwitcher WRITE setApplyWindowSwitcher NOTIFY applyWindowSwitcherChanged)
+    Q_PROPERTY(bool applyDesktopSwitcher READ applyDesktopSwitcher WRITE setApplyDesktopSwitcher NOTIFY applyDesktopSwitcherChanged)
 
 public:
     enum Roles {
@@ -56,7 +57,8 @@ public:
         HasIconsRole,
         HasPlasmaThemeRole,
         HasCursorsRole,
-        HasWindowSwitcherRole
+        HasWindowSwitcherRole,
+        HasDesktopSwitcherRole
     };
     KCMLookandFeel(QWidget* parent, const QVariantList& args);
     ~KCMLookandFeel();
@@ -77,6 +79,7 @@ public:
     void setSplashScreen(const QString &theme);
     void setLockScreen(const QString &theme);
     void setWindowSwitcher(const QString &theme);
+    void setDesktopSwitcher(const QString &theme);
 
     void setApplyColors(bool apply);
     bool applyColors() const;
@@ -88,6 +91,8 @@ public:
     bool applyPlasmaTheme() const;
     void setApplyWindowSwitcher(bool apply);
     bool applyWindowSwitcher() const;
+    void setApplyDesktopSwitcher(bool apply);
+    bool applyDesktopSwitcher() const;
 
 public Q_SLOTS:
     void load();
@@ -102,6 +107,7 @@ Q_SIGNALS:
     void applyIconsChanged();
     void applyPlasmaThemeChanged();
     void applyWindowSwitcherChanged();
+    void applyDesktopSwitcherChanged();
 
 private:
     QDir cursorThemeDir(const QString &theme, const int depth);
@@ -121,6 +127,7 @@ private:
     bool m_applyPlasmaTheme : 1;
     bool m_applyCursors : 1;
     bool m_applyWindowSwitcher : 1;
+    bool m_applyDesktopSwitcher : 1;
 };
 
 #endif

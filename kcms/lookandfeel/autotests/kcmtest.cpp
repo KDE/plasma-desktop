@@ -39,6 +39,7 @@ private Q_SLOTS:
     void testSplashScreen();
     void testLockScreen();
     void testWindowSwitcher();
+    void testDesktopSwitcher();
     void testKCMSave();
 
 private:
@@ -159,6 +160,16 @@ void KcmTest::testWindowSwitcher()
     QCOMPARE(cg.readEntry("LayoutName", QString()), QStringLiteral("customTestValue"));
 }
 
+void KcmTest::testDesktopSwitcher()
+{
+    m_KCMLookandFeel->setDesktopSwitcher("customTestValue");
+
+    KConfig config("kwinrc");
+    KConfigGroup cg(&config, "TabBox");
+    QCOMPARE(cg.readEntry("DesktopLayout", QString()), QStringLiteral("customTestValue"));
+    QCOMPARE(cg.readEntry("DesktopListLayout", QString()), QStringLiteral("customTestValue"));
+}
+
 void KcmTest::testKCMSave()
 {
     m_KCMLookandFeel->save();
@@ -194,6 +205,8 @@ void KcmTest::testKCMSave()
     KConfig kwinConfig("kwinrc");
     cg = KConfigGroup(&kwinConfig, "TabBox");
     QCOMPARE(cg.readEntry("LayoutName", QString()), QStringLiteral("testValue"));
+    QCOMPARE(cg.readEntry("DesktopLayout", QString()), QStringLiteral("testDesktopValue"));
+    QCOMPARE(cg.readEntry("DesktopListLayout", QString()), QStringLiteral("testDesktopValue"));
 }
 
 QTEST_MAIN(KcmTest)
