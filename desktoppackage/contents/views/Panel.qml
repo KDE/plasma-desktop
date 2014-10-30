@@ -55,7 +55,6 @@ PlasmaCore.FrameSvgItem {
 
     }
     onPrefixChanged: adjustBorders();
-    onRepaintNeeded: adjustBorders();
 
     visible: false //adjust borders is run during setup. We want to avoid painting till completed
 
