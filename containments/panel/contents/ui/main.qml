@@ -56,6 +56,8 @@ DragDrop.DropArea {
 function addApplet(applet, x, y) {
     var container = appletContainerComponent.createObject(root)
 
+    var appletWidth = applet.width;
+    var appletHeight = applet.height;
     applet.parent = container;
     container.applet = applet;
     applet.anchors.fill = container;
@@ -70,7 +72,7 @@ function addApplet(applet, x, y) {
 
     // If the provided position is valid, use it.
     } else if (x >= 0 && y >= 0) {
-        var index = LayoutManager.insertAtCoordinates(container, x, y);
+        var index = LayoutManager.insertAtCoordinates(container, x + appletWidth/2, y + appletHeight/2);
 
     // Fall through to determining an appropriate insert position.
     } else {
@@ -202,6 +204,7 @@ function checkLastSpacer() {
     }
 
     Containment.onAppletRemoved: {
+        LayoutManager.removeApplet(applet);
         var flexibleFound = false;
         for (var i = 0; i < currentLayout.children.length; ++i) {
             if (currentLayout.children[i].applet.Layout.fillWidth) {
