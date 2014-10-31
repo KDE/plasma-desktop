@@ -188,6 +188,7 @@ PlasmaCore.FrameSvgItem {
                 preferredHeightChanged();
             }
         }
+        onVisibleChanged: panel.visible = containment.visible
     }
 
     Component.onCompleted: {

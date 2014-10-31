@@ -72,6 +72,15 @@ function save() {
     plasmoid.configuration.AppletOrder = ids.join(';');
 }
 
+function removeApplet (applet) {
+    for (var i = layout.children.length - 1; i >= 0; --i) {
+        var child = layout.children[i];
+        if (child.applet === applet) {
+            child.destroy();
+        }
+    }
+}
+
 //insert item2 before item1
 function insertBefore(item1, item2) {
     if (item1 === item2) {
