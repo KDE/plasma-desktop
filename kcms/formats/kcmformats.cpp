@@ -91,6 +91,7 @@ void KCMFormats::initCombo(QComboBox *combo, const QList<QLocale> & allLocales)
     foreach(const QLocale & l, allLocales) {
         addLocaleToCombo(combo, l);
     }
+    combo->model()->sort(0);
 }
 
 void KCMFormats::connectCombo(QComboBox *combo)
