@@ -141,7 +141,7 @@ QList<Plasma::Package> KCMLookandFeel::availablePackages(const QString &componen
 {
     QList<Plasma::Package> packages;
     QStringList paths;
-    QStringList dataPaths = QStandardPaths::standardLocations(QStandardPaths::GenericDataLocation);
+    const QStringList dataPaths = QStandardPaths::standardLocations(QStandardPaths::GenericDataLocation);
 
     for (const QString &path : dataPaths) {
         QDir dir(path + "/plasma/look-and-feel");
