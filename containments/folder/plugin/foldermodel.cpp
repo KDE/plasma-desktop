@@ -53,6 +53,7 @@
 #include <KIO/FileUndoManager>
 #include <KIO/JobUiDelegate>
 #include <KIO/Paste>
+#include <KIO/PasteJob>
 #include <KLocalizedString>
 #include <KSharedConfig>
 #include <KShell>
@@ -1188,14 +1189,14 @@ void FolderModel::cut()
 
 void FolderModel::paste()
 {
-    KonqOperations::doPaste(QApplication::desktop(), m_dirModel->dirLister()->url());
+    KIO::paste(QApplication::clipboard()->mimeData(), m_dirModel->dirLister()->url());
 }
 
 void FolderModel::pasteTo()
 {
     const QList<QUrl> urls = selectedUrls(false);
     Q_ASSERT(urls.count() == 1);
-    KonqOperations::doPaste(QApplication::desktop(), urls.first());
+    KIO::paste(QApplication::clipboard()->mimeData(), urls.first());
 }
 
 void FolderModel::refresh()
