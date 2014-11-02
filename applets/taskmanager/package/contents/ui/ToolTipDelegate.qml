@@ -41,11 +41,12 @@ Column {
     Layout.minimumHeight: height
     Layout.maximumWidth: width
     Layout.maximumHeight: height
-    width: childrenRect.width + _s
+    width: Math.max(windowRow.width, appLabelRow.width)  + _s
     height: childrenRect.height
     spacing: _s
 
     Row {
+        id: windowRow
         anchors.horizontalCenter: parent.horizontalCenter
         width: childrenRect.width
         height: childrenRect.height
@@ -129,6 +130,7 @@ Column {
     }
 
     Row {
+        id: appLabelRow
         width: childrenRect.width + _s
         height: childrenRect.height + units.largeSpacing
         spacing: units.largeSpacing
