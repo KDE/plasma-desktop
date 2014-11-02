@@ -21,8 +21,10 @@
 #ifndef KONQ_COPYTOMENU_H
 #define KONQ_COPYTOMENU_H
 
-#include <kurl.h>
+#include <QUrl>
+
 #include <kfileitem.h>
+#include <libkonq_export.h>
 
 class QMenu;
 class KonqCopyToMenuPrivate;
@@ -33,15 +35,6 @@ class KonqCopyToMenuPrivate;
 class KonqCopyToMenu
 {
 public:
-    /**
-     * Creates a KonqCopyToMenu instance.
-     * Note that this instance must stay alive for at least as long as the popupmenu;
-     * it has the slots for the actions created by addActionsTo.
-     * @deprecated
-     * KDE5: remove, so that passing a parent widget is mandatory
-     */
-    KonqCopyToMenu();
-
     /**
      * Creates a KonqCopyToMenu instance, with a parent widget for the file dialog
      * and message boxes.
@@ -67,7 +60,7 @@ public:
      * Sets the URLs which the actions apply to.
      * Either call this or setItems.
      */
-    void setUrls(const KUrl::List& urls);
+    void setUrls(const QList<QUrl>& urls);
 
     /**
      * If setReadOnly(true) is called, the "Move To" submenu will not appear.

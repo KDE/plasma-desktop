@@ -23,14 +23,14 @@
 #include <kmenu.h>
 #include <QActionGroup>
 #include <QObject>
-#include <kurl.h>
+#include <QUrl>
 
 class KonqCopyToMenuPrivate
 {
 public:
-    KonqCopyToMenuPrivate(QWidget* parentWidget = 0);
+    KonqCopyToMenuPrivate(QWidget* parentWidget);
 
-    KUrl::List m_urls;
+    QList<QUrl> m_urls;
     bool m_readOnly;
     QWidget* m_parentWidget;
 };
@@ -54,7 +54,7 @@ private Q_SLOTS:
     void slotTriggered(QAction* action);
 
 private:
-    void copyOrMoveTo(const KUrl& dest);
+    void copyOrMoveTo(const QUrl &dest);
 
 private:
     MenuType m_menuType;

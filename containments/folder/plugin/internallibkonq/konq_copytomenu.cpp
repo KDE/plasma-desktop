@@ -21,16 +21,19 @@
 
 #include "konq_copytomenu.h"
 #include "konq_copytomenu_p.h"
-#include "konq_operations.h"
-#include <kaction.h>
+#include <QAction>
 #include <kdebug.h>
-#include <kicon.h>
+#include <QIcon>
 #include <kglobal.h>
 #include <kfiledialog.h>
 #include <klocale.h>
 #include <kmenu.h>
 #include <kmimetype.h>
 #include <kstringhandler.h>
+#include <KJobWidgets>
+#include <KIO/FileUndoManager>
+#include <KIO/CopyJob>
+#include <KIO/JobUiDelegate>
 #include <QDir>
 
 #ifdef Q_OS_WIN
@@ -43,11 +46,6 @@ KonqCopyToMenuPrivate::KonqCopyToMenuPrivate(QWidget* parentWidget)
 }
 
 ////
-
-KonqCopyToMenu::KonqCopyToMenu()
-    : d(new KonqCopyToMenuPrivate())
-{
-}
 
 KonqCopyToMenu::KonqCopyToMenu(QWidget* parentWidget)
     : d(new KonqCopyToMenuPrivate(parentWidget))
@@ -68,7 +66,7 @@ void KonqCopyToMenu::setItems(const KFileItemList& items)
         d->m_urls.append(item.url());
 }
 
-void KonqCopyToMenu::setUrls(const KUrl::List& urls)
+void KonqCopyToMenu::setUrls(const QList<QUrl> &urls)
 {
     d->m_urls = urls;
 }
@@ -99,7 +97,7 @@ KonqCopyToMainMenu::KonqCopyToMainMenu(QMenu* parent, KonqCopyToMenuPrivate* _d,
     : KMenu(parent), m_menuType(menuType),
       m_actionGroup(static_cast<QWidget *>(0)),
       d(_d),
-      m_recentDirsGroup(KGlobal::config(), m_menuType == Copy ? "kuick-copy" : "kuick-move")
+      m_recentDirsGroup(KSharedConfig::openConfig(), m_menuType == Copy ? "kuick-copy" : "kuick-move")
 {
     connect(this, &KonqCopyToMainMenu::aboutToShow, this, &KonqCopyToMainMenu::slotAboutToShow);
     connect(&m_actionGroup, &QActionGroup::triggered, this, &KonqCopyToMainMenu::slotTriggered);
@@ -112,14 +110,14 @@ void KonqCopyToMainMenu::slotAboutToShow()
     // Home Folder
     subMenu = new KonqCopyToDirectoryMenu(this, this, QDir::homePath());
     subMenu->setTitle(i18nc("@title:menu", "Home Folder"));
-    subMenu->setIcon(KIcon("go-home"));
+    subMenu->setIcon(QIcon::fromTheme("go-home"));
     addMenu(subMenu);
 
     // Root Folder
 #ifndef Q_OS_WIN
     subMenu = new KonqCopyToDirectoryMenu(this, this, QDir::rootPath());
     subMenu->setTitle(i18nc("@title:menu", "Root Folder"));
-    subMenu->setIcon(KIcon("folder-red"));
+    subMenu->setIcon(QIcon::fromTheme("folder-red"));
     addMenu(subMenu);
 #else
     foreach ( const QFileInfo& info, QDir::drives() ) {
@@ -148,14 +146,14 @@ void KonqCopyToMainMenu::slotAboutToShow()
         }
         subMenu = new KonqCopyToDirectoryMenu(this, this, info.absoluteFilePath());
         subMenu->setTitle(info.absoluteFilePath());
-        subMenu->setIcon(KIcon(driveIcon));
+        subMenu->setIcon(QIcon::fromTheme(driveIcon));
         addMenu(subMenu);
     }
 #endif
 
     // Browse... action, shows a KFileDialog
-    KAction* browseAction = new KAction(i18nc("@title:menu in Copy To or Move To submenu", "Browse..."), this);
-    connect(browseAction, &KAction::triggered, this, &KonqCopyToMainMenu::slotBrowse);
+    QAction * browseAction = new QAction(i18nc("@title:menu in Copy To or Move To submenu", "Browse..."), this);
+    connect(browseAction, &QAction::triggered, this, &KonqCopyToMainMenu::slotBrowse);
     addAction(browseAction);
 
     addSeparator(); // looks like Qt4 handles removing it automatically if it's last in the menu, nice.
@@ -163,9 +161,9 @@ void KonqCopyToMainMenu::slotAboutToShow()
     // Recent Destinations
     const QStringList recentDirs = m_recentDirsGroup.readPathEntry("Paths", QStringList());
     Q_FOREACH(const QString& recentDir, recentDirs) {
-        const KUrl url(recentDir);
-        const QString text = KStringHandler::csqueeze(url.pathOrUrl(), 60); // shorten very long paths (#61386)
-        KAction* act = new KAction(text, this);
+        const QUrl url(recentDir);
+        const QString text = KStringHandler::csqueeze(url.toDisplayString(), 60); // shorten very long paths (#61386)
+        QAction * act = new QAction(text, this);
         act->setData(url);
         m_actionGroup.addAction(act);
         addAction(act);
@@ -174,8 +172,8 @@ void KonqCopyToMainMenu::slotAboutToShow()
 
 void KonqCopyToMainMenu::slotBrowse()
 {
-    const KUrl dest = KFileDialog::getExistingDirectoryUrl(KUrl("kfiledialog:///copyto"),
-                                             d->m_parentWidget ? d->m_parentWidget : this);
+    const QUrl dest = KFileDialog::getExistingDirectoryUrl(QUrl("kfiledialog:///copyto"), // FIXME
+                                                           d->m_parentWidget ? d->m_parentWidget : this);
     if (!dest.isEmpty()) {
         copyOrMoveTo(dest);
     }
@@ -183,16 +181,16 @@ void KonqCopyToMainMenu::slotBrowse()
 
 void KonqCopyToMainMenu::slotTriggered(QAction* action)
 {
-    const KUrl url = action->data().value<KUrl>();
+    const QUrl url = action->data().value<QUrl>();
     Q_ASSERT(!url.isEmpty());
     copyOrMoveTo(url);
 }
 
-void KonqCopyToMainMenu::copyOrMoveTo(const KUrl& dest)
+void KonqCopyToMainMenu::copyOrMoveTo(const QUrl& dest)
 {
     // Insert into the recent destinations list
     QStringList recentDirs = m_recentDirsGroup.readPathEntry("Paths", QStringList());
-    const QString niceDest = dest.pathOrUrl();
+    const QString niceDest = dest.toDisplayString();
     if (!recentDirs.contains(niceDest)) { // don't change position if already there, moving stuff is bad usability
         recentDirs.prepend(niceDest);
         while (recentDirs.size() > 10) { // hardcoded max size
@@ -204,13 +202,15 @@ void KonqCopyToMainMenu::copyOrMoveTo(const KUrl& dest)
     // #199549: add a trailing slash to avoid unexpected results when the
     // dest doesn't exist anymore: it was creating a file with the name of
     // the now non-existing dest.
-    KUrl dirDest = dest;
-    dirDest.adjustPath(KUrl::AddTrailingSlash);
+    QUrl dirDest = dest;
+    if (!dirDest.path().endsWith('/'))
+        dirDest.setPath(dirDest.path() + '/');
 
     // And now let's do the copy or move -- with undo/redo support.
-    KonqOperations::copy(d->m_parentWidget ? d->m_parentWidget : this,
-                         m_menuType == Copy ? KonqOperations::COPY : KonqOperations::MOVE,
-                         d->m_urls, dirDest);
+    KIO::CopyJob* job = m_menuType == Copy ? KIO::copy(d->m_urls, dirDest) : KIO::move(d->m_urls, dirDest);
+    KIO::FileUndoManager::self()->recordCopyJob(job);
+    KJobWidgets::setWindow(job, d->m_parentWidget ? d->m_parentWidget : this);
+    job->ui()->setAutoErrorHandlingEnabled(true); // or connect to the result signal
 }
 
 ////
@@ -224,10 +224,10 @@ KonqCopyToDirectoryMenu::KonqCopyToDirectoryMenu(QMenu* parent, KonqCopyToMainMe
 void KonqCopyToDirectoryMenu::slotAboutToShow()
 {
     clear();
-    KAction* act = new KAction(m_mainMenu->menuType() == Copy
+    QAction * act = new QAction(m_mainMenu->menuType() == Copy
                                ? i18nc("@title:menu", "Copy Here")
                                : i18nc("@title:menu", "Move Here"), this);
-    act->setData(KUrl(m_path));
+    act->setData(QUrl::fromLocalFile(m_path));
     act->setEnabled(QFileInfo(m_path).isWritable());
     m_mainMenu->actionGroup().addAction(act);
     addAction(act);
@@ -252,7 +252,7 @@ void KonqCopyToDirectoryMenu::slotAboutToShow()
         // correctly and not misinterpreted as an indicator for a keyboard shortcut
         subMenu->setTitle(menuTitle.replace('&', "&&"));
         const QString iconName = dirMime->iconName();
-        subMenu->setIcon(KIcon(iconName));
+        subMenu->setIcon(QIcon::fromTheme(iconName));
         if (QFileInfo(subPath).isSymLink()) { // I hope this isn't too slow...
             QFont font = subMenu->menuAction()->font();
             font.setItalic(true);

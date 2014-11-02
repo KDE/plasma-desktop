@@ -18,12 +18,13 @@
 #ifndef _KONQ_DNDPOPUPMENUPLUGIN_H_
 #define _KONQ_DNDPOPUPMENUPLUGIN_H_
 
+#include "libkonq_export.h"
 #include <QObject>
 
 class QMenu;
 class KActionCollection;
 class KFileItemListProperties;
-class KUrl;
+class QUrl;
 class QAction;
 
 /**
@@ -58,7 +59,7 @@ public:
      * the menu.
      */
     virtual void setup(const KFileItemListProperties& popupMenuInfo,
-            KUrl destination,
+            QUrl destination,
             QList<QAction*>& pluginActions) = 0;
 };
 

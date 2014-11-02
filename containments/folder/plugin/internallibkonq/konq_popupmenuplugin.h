@@ -21,6 +21,7 @@
 #ifndef KONQ_POPUPMENUPLUGIN_H
 #define KONQ_POPUPMENUPLUGIN_H
 
+#include "libkonq_export.h"
 #include <QObject>
 
 class QMenu;
