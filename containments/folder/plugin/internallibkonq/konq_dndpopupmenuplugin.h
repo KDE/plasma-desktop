@@ -18,7 +18,6 @@
 #ifndef _KONQ_DNDPOPUPMENUPLUGIN_H_
 #define _KONQ_DNDPOPUPMENUPLUGIN_H_
 
-#include "libkonq_export.h"
 #include <QObject>
 
 class QMenu;

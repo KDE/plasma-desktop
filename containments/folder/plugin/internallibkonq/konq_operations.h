@@ -23,8 +23,6 @@
 #ifndef __konq_operations_h__
 #define __konq_operations_h__
 
-#include <libkonq_export.h>
-
 #include <QObject>
 #include <QDropEvent>
 #include <QUrl>
