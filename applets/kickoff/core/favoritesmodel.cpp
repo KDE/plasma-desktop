@@ -109,7 +109,18 @@ public:
     static QList<QString> defaultFavorites()
     {
         QList<QString> applications;
-        applications << "konqbrowser" << "KMail2" << "systemsettings" << "dolphin" << "org.kde.konsole" << "org.kde.kwrite";
+
+        QList<QString> browsers;
+        browsers << "konqbrowser" << "rekonq" << "firefox" << "chromium-browser" << "google-chrome";
+        foreach (const QString& browser, browsers) {
+            KService::Ptr service = KService::serviceByStorageId(browser + ".desktop");
+            if (service) {
+                applications << browser;
+                break;
+            }
+        }
+
+        applications << "kontact" << "systemsettings" << "dolphin" << "ktp-contactlist" << "kate";
 
         QList<QString> desktopFiles;
 
