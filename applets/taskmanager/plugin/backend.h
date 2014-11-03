@@ -70,6 +70,7 @@ class Backend : public QObject
         void activateItem(int id, bool toggle);
         void activateWindow(int winId);
         void closeWindow(int winId);
+        void launchNewInstance(int id);
         void itemContextMenu(QQuickItem *item, QObject *configAction);
         void itemHovered(int id, bool hovered);
         void windowHovered(int winId, bool hovered);

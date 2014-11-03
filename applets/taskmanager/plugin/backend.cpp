@@ -190,6 +190,15 @@ void Backend::closeWindow(int winId)
     }
 }
 
+void Backend::launchNewInstance(int id)
+{
+    TaskManager::AbstractGroupableItem* item = m_groupManager->rootGroup()->getMemberById(id);
+
+    if (item) {
+        item->launchNewInstance();
+    }
+}
+
 void Backend::itemContextMenu(QQuickItem *item, QObject *configAction)
 {
     TaskManager::AbstractGroupableItem* agItem = m_groupManager->rootGroup()->getMemberById(item->property("itemId").toInt());

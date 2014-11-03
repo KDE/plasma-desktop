@@ -109,7 +109,9 @@ MouseEventListener {
                 return;
             }
 
-            if (isGroupParent) {
+            if (mouse.modifiers & Qt.ShiftModifier) {
+                tasks.launchNewInstance(model.Id);
+            } else if (isGroupParent) {
                 if ((iconsOnly || mouse.modifiers == Qt.ControlModifier) && backend.canPresentWindows()) {
                     tasks.presentWindows(model.Id);
                 } else if (groupDialog.visible) {
