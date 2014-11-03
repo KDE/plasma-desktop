@@ -112,7 +112,7 @@ public:
 
         QList<QString> browsers;
         browsers << "konqbrowser" << "rekonq" << "firefox" << "chromium-browser" << "google-chrome";
-        foreach (const QString& browser, browsers) {
+        foreach (const QString &browser, browsers) {
             KService::Ptr service = KService::serviceByStorageId(browser + ".desktop");
             if (service) {
                 applications << browser;
