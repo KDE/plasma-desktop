@@ -19,7 +19,6 @@
 import QtQuick 2.0
 import QtQuick.Layouts 1.0
 import org.kde.plasma.components 2.0 as PlasmaComponents
-import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.configuration 2.0
 
@@ -56,7 +55,7 @@ Item {
         target: configDialog
         onVisibleChanged: {
             if (!configDialog.visible) {
-                contextMenu.visible = false;
+                contextMenuLoader.close()
             }
         }
     }
@@ -102,7 +101,11 @@ Item {
             tooltip: buttonsLayout.showText ? "" : root.settingsButtonText
             Layout.preferredWidth: panel.formFactor == PlasmaCore.Types.Vertical ? Math.max(implicitWidth, parent.width) : implicitWidth
             onClicked: {
-                contextMenu.visible = !contextMenu.visible;
+                if (contextMenuLoader.opened) {
+                    contextMenuLoader.close()
+                } else {
+                    contextMenuLoader.open()
+                }
             }
         }
 
@@ -116,134 +119,19 @@ Item {
             }
         }
 
-        PlasmaCore.Dialog {
-            id: contextMenu
-            visualParent: settingsButton
-            location: plasmoid.location
-            type: PlasmaCore.Dialog.PopupMenu
-            flags: Qt.Popup | Qt.FramelessWindowHint | Qt.WindowDoesNotAcceptFocus
-            mainItem: ColumnLayout {
-                id: menuColumn
-                Layout.minimumWidth: menuColumn.implicitWidth
-                Layout.minimumHeight: menuColumn.implicitHeight
-                spacing: units.smallSpacing
-                PlasmaExtras.Heading {
-                    level: 3
-                    text: i18nd("plasma_shell_org.kde.plasma.desktop", "Panel Alignment")
-                }
-                PlasmaComponents.ButtonColumn {
-                    spacing: 0
-                    Layout.fillWidth: true
-                    PlasmaComponents.ToolButton {
-                        anchors {
-                            left: parent.left
-                            right: parent.right
-                        }
-                        text: i18nd("plasma_shell_org.kde.plasma.desktop", "Left")
-                        checkable: true
-                        checked: panel.alignment == Qt.AlignLeft
-                        onClicked: panel.alignment = Qt.AlignLeft
-                        flat: false
-                    }
-                    PlasmaComponents.ToolButton {
-                        anchors {
-                            left: parent.left
-                            right: parent.right
-                        }
-                        text: i18nd("plasma_shell_org.kde.plasma.desktop", "Center")
-                        checkable: true
-                        checked: panel.alignment == Qt.AlignCenter
-                        onClicked: panel.alignment = Qt.AlignCenter
-                        flat: false
-                    }
-                    PlasmaComponents.ToolButton {
-                        anchors {
-                            left: parent.left
-                            right: parent.right
-                        }
-                        text: i18nd("plasma_shell_org.kde.plasma.desktop", "Right")
-                        checkable: true
-                        checked: panel.alignment == Qt.AlignRight
-                        onClicked: panel.alignment = Qt.AlignRight
-                        flat: false
-                    }
-                }
+        Loader {
+            id: contextMenuLoader
+            property bool opened: item && item.visible
+            source: "MoreSettingsMenu.qml"
+            active: false
 
-                PlasmaExtras.Heading {
-                    level: 3
-                    text: i18nd("plasma_shell_org.kde.plasma.desktop", "Visibility")
-                }
-                PlasmaComponents.ButtonColumn {
-                    spacing: 0
-                    Layout.fillWidth: true
-                    PlasmaComponents.ToolButton {
-                        anchors {
-                            left: parent.left
-                            right: parent.right
-                        }
-                        text: i18nd("plasma_shell_org.kde.plasma.desktop", "Always Visible")
-                        checkable: true
-                        checked: configDialog.visibilityMode == 0
-                        onClicked: configDialog.visibilityMode = 0
-                        flat: false
-                    }
-                    PlasmaComponents.ToolButton {
-                        anchors {
-                            left: parent.left
-                            right: parent.right
-                        }
-                        text: i18nd("plasma_shell_org.kde.plasma.desktop", "Auto Hide")
-                        checkable: true
-                        checked: configDialog.visibilityMode == 1
-                        onClicked: configDialog.visibilityMode = 1
-                        flat: false
-                    }
-                    PlasmaComponents.ToolButton {
-                        anchors {
-                            left: parent.left
-                            right: parent.right
-                        }
-                        text: i18nd("plasma_shell_org.kde.plasma.desktop", "Windows Can Cover")
-                        checkable: true
-                        checked: configDialog.visibilityMode == 2
-                        onClicked: configDialog.visibilityMode = 2
-                        flat: false
-                    }
-                    PlasmaComponents.ToolButton {
-                        anchors {
-                            left: parent.left
-                            right: parent.right
-                        }
-                        text: i18nd("plasma_shell_org.kde.plasma.desktop", "Windows Go Below")
-                        checkable: true
-                        checked: configDialog.visibilityMode == 3
-                        onClicked: configDialog.visibilityMode = 3
-                        flat: false
-                    }
-                }
-                PlasmaComponents.ToolButton {
-                    Layout.fillWidth: true
-                    text: i18nd("plasma_shell_org.kde.plasma.desktop", "Maximize Panel")
-                    iconSource: panel.formFactor == PlasmaCore.Types.Vertical ? "zoom-fit-height" : "zoom-fit-width"
-                    onClicked: panel.maximize();
-                }
-                PlasmaComponents.ToolButton {
-                    Layout.fillWidth: true
-                    text: i18nd("plasma_shell_org.kde.plasma.desktop", "Lock Widgets")
-                    iconSource: "document-encrypt"
-                    onClicked: {
-                        plasmoid.action("lock widgets").trigger();
-                        configDialog.close();
-                    }
-                }
-                PlasmaComponents.ToolButton {
-                    Layout.fillWidth: true
-                    text: i18nd("plasma_shell_org.kde.plasma.desktop", "Remove Panel")
-                    iconSource: "window-close"
-                    onClicked: {
-                        contextMenu.visible = false;
-                        plasmoid.action("remove").trigger();
-                    }
+            function open() {
+                active = true
+                item.visible = true
+            }
+            function close() {
+                if (item) {
+                    item.visible = false
                 }
             }
         }
