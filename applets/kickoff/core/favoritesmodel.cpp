@@ -30,6 +30,7 @@
 
 // KDE
 #include <KConfigGroup>
+#include <KMimeTypeTrader>
 #include <KService>
 #include <KDesktopFile>
 #include <KLocalizedString>
@@ -110,17 +111,20 @@ public:
     {
         QList<QString> applications;
 
-        QList<QString> browsers;
-        browsers << "konqbrowser" << "rekonq" << "firefox" << "chromium-browser" << "google-chrome";
-        foreach (const QString &browser, browsers) {
-            KService::Ptr service = KService::serviceByStorageId(browser + ".desktop");
-            if (service) {
-                applications << browser;
-                break;
+        KConfigGroup config(KSharedConfig::openConfig(), "General");
+        QString browser = config.readPathEntry("BrowserApplication", QString());
+
+        if (browser.isEmpty()) {
+            const KService::Ptr htmlApp = KMimeTypeTrader::self()->preferredService(QLatin1String("text/html"));
+
+            if (htmlApp) {
+                browser = htmlApp->storageId().replace(QLatin1String(".desktop"), QString());
             }
+        } else if (browser.startsWith('!')) {
+            browser = browser.mid(1);
         }
 
-        applications << "kontact" << "systemsettings" << "dolphin" << "ktp-contactlist" << "kate";
+        applications << browser << "kontact" << "systemsettings" << "dolphin" << "ktp-contactlist" << "kate";
 
         QList<QString> desktopFiles;
 
