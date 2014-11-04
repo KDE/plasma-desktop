@@ -1,16 +1,27 @@
 # KI18N Translation Domain for this library
-add_definitions(-DTRANSLATION_DOMAIN=\"ksplashthemes\")
+add_definitions(-DTRANSLATION_DOMAIN=\"kcm_splashscreen\")
 
-add_subdirectory( pics )
+set(kcm_splashscreen_SRCS
+  kcm.cpp
+)
 
-########### next target ###############
+add_library(kcm_splashscreen MODULE ${kcm_splashscreen_SRCS})
 
-set(kcm_ksplashthemes_PART_SRCS installer.cpp main.cpp )
-add_library(kcm_ksplashthemes MODULE ${kcm_ksplashthemes_PART_SRCS})
-target_link_libraries(kcm_ksplashthemes KF5::KIOCore KF5::KIOWidgets KF5::NewStuff)
-install(TARGETS kcm_ksplashthemes  DESTINATION ${PLUGIN_INSTALL_DIR} )
+target_link_libraries(kcm_splashscreen
+  KF5::KIOWidgets
+  KF5::CoreAddons
+  KF5::KCMUtils
+  KF5::I18n
+  KF5::Plasma
+  KF5::PlasmaQuick
 
-########### install files ###############
+  Qt5::DBus
+  Qt5::Widgets
+  Qt5::QuickWidgets
+)
 
-install( FILES ksplashthememgr.desktop  DESTINATION  ${SERVICES_INSTALL_DIR} )
-install( FILES ksplash.knsrc  DESTINATION  ${CONFIG_INSTALL_DIR} )
+
+install(FILES kcm_splashscreen.desktop DESTINATION ${SERVICES_INSTALL_DIR})
+install(TARGETS kcm_splashscreen DESTINATION ${PLUGIN_INSTALL_DIR})
+
+plasma_install_package(package kcm_splashscreen kcms kcm_splashscreen)
