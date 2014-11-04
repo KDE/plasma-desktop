@@ -61,7 +61,7 @@ void set_repeatrate(int delay, double rate)
 }
 
 static
-int set_volume(int clickVolumePercent, TriState keyboardRepeatMode)
+int set_repeat_mode(TriState keyboardRepeatMode)
 {
 	XKeyboardState   kbd;
 	XKeyboardControl kbdc;
@@ -69,10 +69,6 @@ int set_volume(int clickVolumePercent, TriState keyboardRepeatMode)
 	XGetKeyboardControl(QX11Info::display(), &kbd);
 
 	int flags = 0;
-	if( clickVolumePercent != -1 ) {
-		flags |= KBKeyClickPercent;
-		kbdc.key_click_percent = clickVolumePercent;
-	}
 	if( keyboardRepeatMode != STATE_UNCHANGED ) {
 		flags |= KBAutoRepeatMode;
 		kbdc.auto_repeat_mode = (keyboardRepeatMode==STATE_ON ? AutoRepeatModeOn : AutoRepeatModeOff);
@@ -92,11 +88,6 @@ void init_keyboard_hardware()
 	}
 	else if( keyRepeatStr == "false" || keyRepeatStr == TriStateHelper::getString(STATE_OFF) ) {
 		keyRepeat = STATE_OFF;
-	}
-
-	int clickVolumePercent = config.readEntry("ClickVolume", -1);
-	if( clickVolumePercent != -1 && keyRepeat != STATE_UNCHANGED ) {
-		set_volume(clickVolumePercent, keyRepeat);
 	}
 
 	if( keyRepeat == STATE_ON ) {

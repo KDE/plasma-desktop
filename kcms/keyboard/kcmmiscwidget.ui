@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>577</width>
-    <height>401</height>
+    <height>411</height>
    </rect>
   </property>
   <layout class="QGridLayout" name="gridLayout">
@@ -225,7 +225,7 @@
      </layout>
     </widget>
    </item>
-   <item row="4" column="0">
+   <item row="3" column="0">
     <layout class="QHBoxLayout" name="horizontalLayout_2">
      <item>
       <widget class="QLabel" name="label">
@@ -247,66 +247,24 @@
     </layout>
    </item>
    <item row="2" column="0">
-    <widget class="QGroupBox" name="groupBox">
-     <property name="title">
-      <string>Key Click</string>
-     </property>
-     <layout class="QGridLayout" name="gridLayout_5">
-      <item row="0" column="0">
-       <layout class="QHBoxLayout" name="horizontalLayout">
-        <item>
-         <widget class="QLabel" name="TextLabel1">
-          <property name="whatsThis">
-           <string>If supported, this option allows you to hear audible clicks from your computer's speakers when you press the keys on your keyboard. This might be useful if your keyboard does not have mechanical keys, or if the sound that the keys make is very soft.&lt;p&gt;You can change the loudness of the key click feedback by dragging the slider button or by clicking the up/down arrows on the spin box. Setting the volume to 0% turns off the key click.</string>
-          </property>
-          <property name="text">
-           <string>&amp;Key click volume:</string>
-          </property>
-          <property name="buddy">
-           <cstring>click</cstring>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QSlider" name="click">
-          <property name="maximum">
-           <number>100</number>
-          </property>
-          <property name="singleStep">
-           <number>10</number>
-          </property>
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="tickPosition">
-           <enum>QSlider::NoTicks</enum>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <spacer name="horizontalSpacer">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>40</width>
-            <height>20</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-       </layout>
-      </item>
-     </layout>
-    </widget>
-   </item>
-   <item row="3" column="0">
     <widget class="Line" name="line">
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
      </property>
     </widget>
+   </item>
+   <item row="4" column="0">
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
    </item>
   </layout>
  </widget>

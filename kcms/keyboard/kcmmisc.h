@@ -72,11 +72,9 @@ Q_SIGNALS:
 	void changed(bool state);
 
 private:
-  void setClickVolume( int );
   void setRepeat( TriState flag, int delay, double rate);
   void setRepeatRate( int );
 
-  int getClick();
   int getRepeatRate();
 
   int sliderMax;

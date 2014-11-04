@@ -68,8 +68,6 @@ KCMiscKeyboardWidget::KCMiscKeyboardWidget(QWidget *parent)
   connect(ui.rate, SIGNAL(valueChanged(double)), this, SLOT(rateSpinboxChanged(double)));
   connect(ui.rateSlider, SIGNAL(valueChanged(int)), this, SLOT(rateSliderChanged(int)));
 
-  connect(ui.click, SIGNAL(valueChanged(int)), this, SLOT(changed()));
-
   _numlockButtonGroup = new QButtonGroup(ui.numlockButtonGroup);
   _numlockButtonGroup->addButton(ui.radioButton1, 0);
   _numlockButtonGroup->addButton(ui.radioButton2, 1);
@@ -100,11 +98,6 @@ KCMiscKeyboardWidget::~KCMiscKeyboardWidget()
 	delete &ui;
 }
 
-int  KCMiscKeyboardWidget::getClick()
-{
-    return ui.click->value();
-}
-
 // set the slider and LCD values
 void KCMiscKeyboardWidget::setRepeat(TriState keyboardRepeat, int delay_, double rate_)
 {
@@ -114,11 +107,6 @@ void KCMiscKeyboardWidget::setRepeat(TriState keyboardRepeat, int delay_, double
     ui.rate->setValue(rate_);
     delaySpinboxChanged(delay_);
     rateSpinboxChanged(rate_);
-}
-
-void KCMiscKeyboardWidget::setClickVolume(int v)
-{
-    ui.click->setValue(v);
 }
 
 TriState TriStateHelper::getTriState(const QButtonGroup* group)
@@ -138,7 +126,6 @@ void KCMiscKeyboardWidget::load()
 
   ui.delay->blockSignals(true);
   ui.rate->blockSignals(true);
-  ui.click->blockSignals(true);
 
   // need to read as string to support old "true/false" parameter
   QString key = config.readEntry("KeyboardRepeating", TriStateHelper::getString(STATE_ON));
@@ -157,11 +144,6 @@ void KCMiscKeyboardWidget::load()
   float rate = config.readEntry( "RepeatRate", 25. );
   setRepeat(keyboardRepeat, delay, rate);
 
-  XKeyboardState kbd;
-  XGetKeyboardControl(QX11Info::display(), &kbd);
-
-  clickVolume = config.readEntry("ClickVolume", kbd.key_click_percent);
-  setClickVolume(clickVolume);
   //  setRepeat(kbd.global_auto_repeat, ui.delay->value(), ui.rate->value());
 
   numlockState = TriStateHelper::getTriState(config.readEntry( "NumLock", TriStateHelper::getInt(STATE_UNCHANGED) ));
@@ -169,18 +151,15 @@ void KCMiscKeyboardWidget::load()
 
   ui.delay->blockSignals(false);
   ui.rate->blockSignals(false);
-  ui.click->blockSignals(false);
 }
 
 void KCMiscKeyboardWidget::save()
 {
   KConfigGroup config(KSharedConfig::openConfig("kcminputrc", KConfig::NoGlobals), "Keyboard");
 
-  clickVolume = getClick();
   keyboardRepeat = TriStateHelper::getTriState(_keyboardRepeatButtonGroup);
   numlockState = TriStateHelper::getTriState(_numlockButtonGroup);
 
-  config.writeEntry("ClickVolume",clickVolume);
   config.writeEntry("KeyboardRepeating", TriStateHelper::getInt(keyboardRepeat));
   config.writeEntry("RepeatRate", ui.rate->value() );
   config.writeEntry("RepeatDelay", ui.delay->value() );
@@ -190,7 +169,6 @@ void KCMiscKeyboardWidget::save()
 
 void KCMiscKeyboardWidget::defaults()
 {
-    setClickVolume(50);
     setRepeat(STATE_ON, 660, 25);
     TriStateHelper::setTriState( _numlockButtonGroup, STATE_UNCHANGED );
     emit changed(true);
