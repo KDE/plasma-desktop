@@ -260,19 +260,9 @@ KCMStyle::KCMStyle( QWidget* parent, const QVariantList& )
     page2 = new QWidget;
     fineTuningUi.setupUi(page2);
 
-    fineTuningUi.comboGraphicEffectsLevel->setObjectName( "cbGraphicEffectsLevel" );
-    fineTuningUi.comboGraphicEffectsLevel->setEditable( false );
-    fineTuningUi.comboGraphicEffectsLevel->addItem(i18n("Low display resolution and Low CPU"), KGlobalSettings::NoEffects);
-    fineTuningUi.comboGraphicEffectsLevel->addItem(i18n("High display resolution and Low CPU"), KGlobalSettings::GradientEffects);
-    fineTuningUi.comboGraphicEffectsLevel->addItem(i18n("Low display resolution and High CPU"), KGlobalSettings::SimpleAnimationEffects);
-    fineTuningUi.comboGraphicEffectsLevel->addItem(i18n("High display resolution and High CPU"), (int) (KGlobalSettings::SimpleAnimationEffects | KGlobalSettings::GradientEffects));
-    fineTuningUi.comboGraphicEffectsLevel->addItem(i18n("Low display resolution and Very High CPU"), KGlobalSettings::ComplexAnimationEffects);
-    fineTuningUi.comboGraphicEffectsLevel->addItem(i18n("High display resolution and Very High CPU"), (int) (KGlobalSettings::ComplexAnimationEffects | KGlobalSettings::GradientEffects));
-
     connect(cbStyle, SIGNAL(activated(int)), this, SLOT(setStyleDirty()));
     connect(fineTuningUi.cbIconsOnButtons,     SIGNAL(toggled(bool)),   this, SLOT(setEffectsDirty()));
     connect(fineTuningUi.cbIconsInMenus,     SIGNAL(toggled(bool)),   this, SLOT(setEffectsDirty()));
-    connect(fineTuningUi.comboGraphicEffectsLevel, SIGNAL(activated(int)),   this, SLOT(setEffectsDirty()));
     connect(fineTuningUi.comboToolbarIcons,    SIGNAL(activated(int)), this, SLOT(setEffectsDirty()));
     connect(fineTuningUi.comboSecondaryToolbarIcons,    SIGNAL(activated(int)), this, SLOT(setEffectsDirty()));
     connect(fineTuningUi.comboMenubarStyle,    SIGNAL(activated(int)), this, SLOT(setEffectsDirty()));
@@ -410,8 +400,6 @@ void KCMStyle::save()
     // Effects page
     config.writeEntry( "ShowIconsOnPushButtons", fineTuningUi.cbIconsOnButtons->isChecked());
     config.writeEntry( "ShowIconsInMenuItems", fineTuningUi.cbIconsInMenus->isChecked());
-    KConfigGroup g( &_config, "KDE-Global GUI Settings" );
-    g.writeEntry( "GraphicEffectsLevel", fineTuningUi.comboGraphicEffectsLevel->itemData(fineTuningUi.comboGraphicEffectsLevel->currentIndex()));
 
     config.writeEntry("widgetStyle", currentStyle());
 
@@ -580,7 +568,6 @@ void KCMStyle::defaults()
     fineTuningUi.comboMenubarStyle->setCurrentIndex(menuBarStyleIndex("InApplication"));
     fineTuningUi.cbIconsOnButtons->setChecked(true);
     fineTuningUi.cbIconsInMenus->setChecked(true);
-    fineTuningUi.comboGraphicEffectsLevel->setCurrentIndex(fineTuningUi.comboGraphicEffectsLevel->findData(((int) KGlobalSettings::graphicEffectsLevelDefault())));
     emit changed(true);
 }
 
@@ -844,9 +831,6 @@ void KCMStyle::loadEffects( KConfig& config )
     fineTuningUi.cbIconsOnButtons->setChecked(configGroup.readEntry("ShowIconsOnPushButtons", true));
     fineTuningUi.cbIconsInMenus->setChecked(configGroup.readEntry("ShowIconsInMenuItems", true));
 
-    KConfigGroup graphicConfigGroup = config.group("KDE-Global GUI Settings");
-    fineTuningUi.comboGraphicEffectsLevel->setCurrentIndex(fineTuningUi.comboGraphicEffectsLevel->findData(graphicConfigGroup.readEntry("GraphicEffectsLevel", ((int) KGlobalSettings::graphicEffectsLevel()))));
-
     m_bEffectsDirty = false;
 }
 
@@ -872,8 +856,6 @@ void KCMStyle::addWhatsThis()
                             "show small icons alongside some important buttons.") );
     fineTuningUi.cbIconsInMenus->setWhatsThis( i18n( "If you enable this option, KDE Applications will "
                             "show small icons alongside most menu items.") );
-    fineTuningUi.comboGraphicEffectsLevel->setWhatsThis( i18n( "If you enable this option, KDE Applications will "
-                            "run internal animations.") );
 }
 
 #include "kcmstyle.moc"
