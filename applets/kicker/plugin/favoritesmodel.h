@@ -60,6 +60,8 @@ class FavoritesModel : public AbstractModel
         void favoritesChanged() const;
 
     private:
+        KService::Ptr defaultAppByName(const QString &name);
+
         QStringList m_favorites;
         QHash<QString, KService::Ptr> m_serviceCache;
         QPointer<AbstractModel> m_sourceModel;

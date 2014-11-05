@@ -21,7 +21,10 @@
 #include "actionlist.h"
 #include "appsmodel.h"
 
+#include <KConfigGroup>
+#include <KMimeTypeTrader>
 #include <KRun>
+#include <KSharedConfig>
 
 FavoritesModel::FavoritesModel(QObject *parent) : AbstractModel(parent)
 , m_sourceModel(0)
@@ -116,7 +119,13 @@ void FavoritesModel::setFavorites(const QStringList& favorites)
             while (i.hasNext()) {
                 i.next();
 
-                service = KService::serviceByStorageId(i.value());
+                QUrl url(i.value());
+
+                if (url.isValid() && url.scheme() == QLatin1String("preferred")) {
+                    service = defaultAppByName(url.host());
+                } else {
+                    service = KService::serviceByStorageId(i.value());
+                }
 
                 if (service) {
                     i.setValue(service->storageId());
@@ -244,3 +253,20 @@ void FavoritesModel::refresh()
      setFavorites(m_favorites);
 }
 
+KService::Ptr FavoritesModel::defaultAppByName(const QString& name)
+{
+    if (name == QLatin1String("browser")) {
+        KConfigGroup config(KSharedConfig::openConfig(), "General");
+        QString browser = config.readPathEntry("BrowserApplication", QString());
+
+        if (browser.isEmpty()) {
+            return KMimeTypeTrader::self()->preferredService(QLatin1String("text/html"));
+        } else if (browser.startsWith('!')) {
+            browser = browser.mid(1);
+        }
+
+        return KService::serviceByStorageId(browser);
+    }
+
+    return KService::Ptr();
+}
