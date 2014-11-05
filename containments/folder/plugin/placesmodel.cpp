@@ -20,6 +20,8 @@
 #include "placesmodel.h"
 
 #include <KFilePlacesModel>
+#include <KService>
+#include <KServiceTypeTrader>
 
 PlacesModel::PlacesModel(QObject *parent) : QSortFilterProxyModel(parent)
 {
@@ -37,6 +39,18 @@ PlacesModel::PlacesModel(QObject *parent) : QSortFilterProxyModel(parent)
 
 PlacesModel::~PlacesModel()
 {
+}
+
+bool PlacesModel::activityLinkingEnabled()
+{
+    const KService::List services = KServiceTypeTrader::self()->query("KFileItemAction/Plugin",
+        "Library == 'kactivitymanagerd_fileitem_linking_plugin'");
+
+    if (services.isEmpty()) {
+        return false;
+    }
+
+    return !services.at(0).data()->noDisplay();
 }
 
 QString PlacesModel::urlForIndex(int idx) const

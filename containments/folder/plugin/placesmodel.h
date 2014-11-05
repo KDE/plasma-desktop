@@ -28,9 +28,13 @@ class PlacesModel : public QSortFilterProxyModel
 {
     Q_OBJECT
 
+    Q_PROPERTY(bool activityLinkingEnabled READ activityLinkingEnabled CONSTANT)
+
     public:
         PlacesModel(QObject *parent = 0);
         ~PlacesModel();
+
+        bool activityLinkingEnabled();
 
         Q_INVOKABLE QString urlForIndex(int idx) const;
         Q_INVOKABLE int indexForUrl(const QString &url) const;

@@ -88,6 +88,7 @@ Item {
 
                 RadioButton {
                     id: locationCurrentActivity
+                    visible: placesModel.activityLinkingEnabled
                     text: i18n("Show files linked to the current activity")
                     exclusiveGroup: locationGroup
                 }
