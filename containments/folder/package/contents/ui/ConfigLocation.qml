@@ -44,6 +44,8 @@ Item {
 
         if (cfg_url == "desktop:/") {
             locationDesktop.checked = true;
+        } else if (cfg_url == "activities:/current/") {
+            locationCurrentActivity.checked = true;
         } else if (placesModel.indexForUrl(cfg_url) != -1) {
             locationPlace.checked = true;
         } else {
@@ -72,6 +74,8 @@ Item {
                     onCurrentChanged: {
                         if (current == locationDesktop) {
                             cfg_url = "desktop:/";
+                        } else if (current == locationCurrentActivity) {
+                            cfg_url = "activities:/current/";
                         }
                     }
                 }
@@ -79,6 +83,12 @@ Item {
                 RadioButton {
                     id: locationDesktop
                     text: i18n("Show the Desktop folder")
+                    exclusiveGroup: locationGroup
+                }
+
+                RadioButton {
+                    id: locationCurrentActivity
+                    text: i18n("Show files linked to the current activity")
                     exclusiveGroup: locationGroup
                 }
 
