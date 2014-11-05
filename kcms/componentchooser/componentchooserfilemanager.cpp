@@ -28,6 +28,8 @@
 #include <kconfiggroup.h>
 #include <QStandardPaths>
 
+#include "../migrationlib/kdelibs4config.h"
+
 CfgFileManager::CfgFileManager(QWidget *parent)
     : QWidget(parent), Ui::FileManagerConfig_UI(),CfgPlugin()
 {
@@ -94,6 +96,9 @@ void CfgFileManager::save(KConfig *)
         userApps.removeAll(storageId); // remove if present, to make it first in the list
         userApps.prepend(storageId);
         addedApps.writeXdgListEntry("inode/directory", userApps);
+
+        Kdelibs4SharedConfig::syncConfigGroup(&addedApps, "mimeapps.list");
+
         profile->sync();
         KBuildSycocaProgressDialog::rebuildKSycoca(this);
     }
