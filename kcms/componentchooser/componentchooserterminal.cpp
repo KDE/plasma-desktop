@@ -35,6 +35,8 @@
 
 #include <KUrl>
 
+#include "../migrationlib/kdelibs4config.h"
+
 CfgTerminalEmulator::CfgTerminalEmulator(QWidget *parent)
     : QWidget(parent), Ui::TerminalEmulatorConfig_UI(), CfgPlugin()
 {
@@ -82,7 +84,9 @@ void CfgTerminalEmulator::save(KConfig *)
 	KConfigGroup config(KSharedConfig::openConfig("kdeglobals"), "General");
 	const QString terminal = terminalCB->isChecked() ? "konsole" : terminalLE->text();
 	config.writePathEntry("TerminalApplication", terminal); // KConfig::Normal|KConfig::Global);
+
 	config.sync();
+        Kdelibs4SharedConfig::syncConfigGroup(&config, "kdeglobals");
 
 	KGlobalSettings::self()->emitChange(KGlobalSettings::SettingsChanged);
 

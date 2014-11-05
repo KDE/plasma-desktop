@@ -20,6 +20,8 @@
 
 #include <KLocalizedString>
 
+#include "../migrationlib/kdelibs4config.h"
+
 #include <KUrl>
 
 CfgBrowser::CfgBrowser(QWidget *parent)
@@ -93,6 +95,8 @@ void CfgBrowser::save(KConfig *)
     }
     config.writePathEntry( QLatin1String("BrowserApplication"), exec); // KConfig::Normal|KConfig::Global
     config.sync();
+
+    Kdelibs4SharedConfig::syncConfigGroup(&config, "kdeglobals");
 
     KGlobalSettings::self()->emitChange(KGlobalSettings::SettingsChanged);
 
