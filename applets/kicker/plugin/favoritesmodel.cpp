@@ -170,10 +170,17 @@ void FavoritesModel::addFavorite(const QString &favoriteId)
     QString _favoriteId = favoriteId;
 
     if (!m_sourceModel) {
-        KService::Ptr service = KService::serviceByStorageId(favoriteId);
+        KService::Ptr service;
+        QUrl url(_favoriteId);
+
+        if (url.isValid() && url.scheme() == QLatin1String("preferred")) {
+            service = defaultAppByName(url.host());
+        } else {
+            service = KService::serviceByStorageId(_favoriteId);
+            _favoriteId = service->storageId();
+        }
 
         if (service) {
-            _favoriteId = service->storageId();
             m_serviceCache[_favoriteId] = service;
         } else {
             return;
