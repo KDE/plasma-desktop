@@ -42,8 +42,7 @@ class ClockHelper : public QObject
         ActionReply save(const QVariantMap &map);
 
     private:
-        int ntp(const QStringList& ntpServers, bool ntpEnabled,
-                const QString& ntpUtility);
+        int ntp(const QStringList& ntpServers, bool ntpEnabled);
         int date(const QString& newdate, const QString& olddate);
         int tz(const QString& selectedzone);
         int tzreset();
