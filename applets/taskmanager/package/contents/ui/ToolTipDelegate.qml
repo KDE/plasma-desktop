@@ -158,6 +158,7 @@ Column {
                 visible: false
                 level: 3
                 text: mainText
+                textFormat: Text.PlainText
             }
             PlasmaExtras.Heading {
                 id: tooltipMaintext
@@ -166,12 +167,14 @@ Column {
                 //width: 400
                 elide: Text.ElideRight
                 text: mainText
+                textFormat: Text.PlainText
             }
             PlasmaComponents.Label {
                 id: tooltipSubtext
                 width: tooltipContentItem.preferredTextWidth
                 wrapMode: Text.WordWrap
                 text: subText
+                textFormat: Text.PlainText
                 opacity: 0.5
             }
         }
