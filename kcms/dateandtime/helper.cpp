@@ -69,7 +69,7 @@ int ClockHelper::ntp( const QStringList& ntpServers, bool ntpEnabled )
     config.writeEntry("enabled", ntpEnabled );
 
     QString ntpUtility = QStandardPaths::findExecutable("ntpdate");
-    if (!ntpUtility) {
+    if (ntpUtility.isEmpty()) {
         ntpUtility = QStandardPaths::findExecutable("rdate");
     }
 
