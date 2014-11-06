@@ -52,8 +52,7 @@
 // clears it. So we have to use a reasonable default.
 static const QString exePath = QLatin1String("/usr/sbin:/usr/bin:/sbin:/bin");
 
-int ClockHelper::ntp( const QStringList& ntpServers, bool ntpEnabled,
-                      const QString& ntpUtility )
+int ClockHelper::ntp( const QStringList& ntpServers, bool ntpEnabled )
 {
     int ret = 0;
 
@@ -68,6 +67,11 @@ int ClockHelper::ntp( const QStringList& ntpServers, bool ntpEnabled,
     KConfigGroup config(&_config, "NTP");
     config.writeEntry("servers", ntpServers );
     config.writeEntry("enabled", ntpEnabled );
+
+    QString ntpUtility = QStandardPaths::findExecutable("ntpdate");
+    if (!ntpUtility) {
+        ntpUtility = QStandardPaths::findExecutable("rdate");
+    }
 
     if ( ntpEnabled && !ntpUtility.isEmpty() ) {
         // NTP Time setting
@@ -234,7 +238,7 @@ ActionReply ClockHelper::save(const QVariantMap &args)
     int ret = 0; // error code
     //  The order here is important
     if( _ntp )
-        ret |= ntp( args.value("ntpServers").toStringList(), args.value("ntpEnabled").toBool(), args.value("ntpUtility").toString() );
+        ret |= ntp( args.value("ntpServers").toStringList(), args.value("ntpEnabled").toBool());
     if( _date )
         ret |= date( args.value("newdate").toString(), args.value("olddate").toString() );
     if( _tz )

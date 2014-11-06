@@ -246,9 +246,8 @@ void Dtime::save( QVariantMap& helperargs )
   helperargs["ntp"] = true;
   helperargs["ntpServers"] = list;
   helperargs["ntpEnabled"] = setDateTimeAuto->isChecked();
-  helperargs["ntpUtility"] = ntpUtility;
 
-  if(setDateTimeAuto->isChecked() && !ntpUtility.isEmpty()){
+  if(setDateTimeAuto->isChecked()) {
     // NTP Time setting - done in helper
     timeServer = timeServerList->currentText();
     kDebug() << "Setting date from time server " << timeServer;
