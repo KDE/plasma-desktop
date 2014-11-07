@@ -171,6 +171,9 @@ void Autostart::load()
             d.mkpath(path);
 
         QDir autostartdir( path );
+        // Check if the folder the script is in is called autostart, if so
+        // don't add it since we aren't going to autostart it.
+        bool dirSupportsScripts = (autostartdir.dirName() != QStringLiteral("autostart"));
         autostartdir.setFilter( QDir::Files );
         const QFileInfoList list = autostartdir.entryInfoList();
         for (int i = 0; i < list.size(); ++i) {
@@ -209,6 +212,8 @@ void Autostart::load()
             }
             else
             {
+                if (!dirSupportsScripts)
+                    continue;
                 ScriptStartItem *item = new ScriptStartItem( fi.absoluteFilePath(), m_scriptItem,this );
                 int typeOfStartup = m_paths.indexOf((item->fileName().adjusted(QUrl::RemoveScheme | QUrl::RemoveFilename).toString()) );
                 ScriptStartItem::ENV type = ScriptStartItem::START;
