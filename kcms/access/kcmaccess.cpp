@@ -341,7 +341,7 @@ KAccessConfig::KAccessConfig(QWidget *parent, const QVariantList& args)
   toggleKeysBeep = new QCheckBox(i18n("Use system bell whenever a locking key gets activated or deactivated"), grp);
   vvbox->addWidget(toggleKeysBeep);
 
-  kNotifyModifiers = new QCheckBox(i18n("Use KDE's system notification mechanism whenever a modifier or locking key changes its state"), grp);
+  kNotifyModifiers = new QCheckBox(i18n("Use Plasma's system notification mechanism whenever a modifier or locking key changes its state"), grp);
   vvbox->addWidget(kNotifyModifiers);
 
   hbox = new QHBoxLayout();
@@ -508,7 +508,7 @@ KAccessConfig::KAccessConfig(QWidget *parent, const QVariantList& args)
   vvbox->addWidget(gestureConfirmation);
   gestureConfirmation->setWhatsThis( i18n("If this option is checked, KDE will show a confirmation dialog whenever a keyboard accessibility feature is turned on or off.\nEnsure you know what you are doing if you uncheck it, as the keyboard accessibility settings will then always be applied without confirmation.") );
 
-  kNotifyAccessX = new QCheckBox(i18n("Use KDE's system notification mechanism whenever a keyboard accessibility feature is turned on or off"), grp);
+  kNotifyAccessX = new QCheckBox(i18n("Use Plasma's system notification mechanism whenever a keyboard accessibility feature is turned on or off"), grp);
   vvbox->addWidget(kNotifyAccessX);
 
   hbox = new QHBoxLayout();
