@@ -59,14 +59,16 @@ Autostart::Autostart( QWidget* parent, const QVariantList& )
 
     setButtons(Help);
 
-    connect( widget->btnAddScript, SIGNAL(clicked()), SLOT(slotAddScript()) );
-    connect( widget->btnAddProgram, SIGNAL(clicked()), SLOT(slotAddProgram()) );
-    connect( widget->btnRemove, SIGNAL(clicked()), SLOT(slotRemoveCMD()) );
-    connect( widget->btnAdvanced, SIGNAL(clicked()), SLOT(slotAdvanced()) );
-    connect( widget->listCMD, SIGNAL(itemDoubleClicked(QTreeWidgetItem*,int)), SLOT(slotEditCMD(QTreeWidgetItem*)) );
-    connect( widget->listCMD, SIGNAL(itemClicked(QTreeWidgetItem*,int)),this,SLOT(slotItemClicked(QTreeWidgetItem*,int)) );
     connect( widget->btnProperties, SIGNAL(clicked()), SLOT(slotEditCMD()) );
-    connect( widget->listCMD, SIGNAL(itemSelectionChanged()), SLOT(slotSelectionChanged()) );
+    connect( widget->listCMD, SIGNAL(itemDoubleClicked(QTreeWidgetItem*,int)), SLOT(slotEditCMD(QTreeWidgetItem*)) );
+
+
+    connect(widget->btnAddScript, &QPushButton::clicked, this, &Autostart::slotAddScript);
+    connect(widget->btnAddProgram, &QPushButton::clicked, this, &Autostart::slotAddProgram);
+    connect(widget->btnRemove, &QPushButton::clicked, this, &Autostart::slotRemoveCMD);
+    connect(widget->btnAdvanced, &QPushButton::clicked, this, &Autostart::slotAdvanced);
+    connect(widget->listCMD, &QTreeWidget::itemClicked, this, &Autostart::slotItemClicked);
+    connect(widget->listCMD, &QTreeWidget::itemSelectionChanged, this, &Autostart::slotSelectionChanged);
 
 
     KAboutData* about = new KAboutData(QStringLiteral("Autostart"),
