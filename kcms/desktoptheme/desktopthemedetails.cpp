@@ -85,11 +85,11 @@ DesktopThemeDetails::DesktopThemeDetails(QWidget* parent)
 
     connect(m_theme->selectionModel(), SIGNAL(selectionChanged(QItemSelection,QItemSelection)), this, SLOT(themeSelectionChanged(QItemSelection,QItemSelection)));
 
-    connect(m_enableAdvanced, SIGNAL(toggled(bool)), this, SLOT(toggleAdvancedVisible()));
-    connect(m_removeThemeButton, SIGNAL(clicked()), this, SLOT(removeTheme()));
-    connect(m_exportThemeButton, SIGNAL(clicked()), this, SLOT(exportTheme()));
+    connect(m_enableAdvanced, &QCheckBox::toggled, this, &DesktopThemeDetails::toggleAdvancedVisible);
+    connect(m_removeThemeButton, &QPushButton::clicked, this, &DesktopThemeDetails::removeTheme);
+    connect(m_exportThemeButton, &QPushButton::clicked, this, &DesktopThemeDetails::exportTheme);
 
-    connect(m_newThemeName, SIGNAL(editingFinished()), this, SLOT(newThemeInfoChanged()));
+    connect(m_newThemeName, &KLineEdit::editingFinished, this, &DesktopThemeDetails::newThemeInfoChanged);
 
     m_baseTheme = "default";
     m_themeCustomized = false;
@@ -411,7 +411,7 @@ void DesktopThemeDetails::updateReplaceItemList(const int& item)
 
     // Repopulate combobox droplist
     QComboBox *itemComboBox = static_cast<QComboBox*>(m_themeItemList->cellWidget(item,1));
-    disconnect(itemComboBox, SIGNAL(currentIndexChanged(int)), this, SLOT(replacementItemChanged()));
+    disconnect(itemComboBox, static_cast<void (QComboBox::*)(int)>(&QComboBox::currentIndexChanged), this, &DesktopThemeDetails::replacementItemChanged);
     itemComboBox->clear();
     for (int i = 0; i < m_themes.size(); ++i) {
        QString displayedDropListItem = i18n("%1 %2", m_themes.key(i), displayedItemText(item));
@@ -426,7 +426,7 @@ void DesktopThemeDetails::updateReplaceItemList(const int& item)
         itemComboBox->addItem(m_itemFileReplacements[item]);
         itemComboBox->setCurrentIndex(itemComboBox->findText(m_itemFileReplacements[item]));
     }
-    connect(itemComboBox, SIGNAL(currentIndexChanged(int)), this, SLOT(replacementItemChanged()));
+    connect(itemComboBox, static_cast<void (QComboBox::*)(int)>(&QComboBox::currentIndexChanged), this, &DesktopThemeDetails::replacementItemChanged);
 }
 
 void DesktopThemeDetails::replacementItemChanged()
@@ -451,9 +451,9 @@ void DesktopThemeDetails::replacementItemChanged()
                     m_itemFileReplacements[i.value()] = fileReplacement;
                     int index = itemComboBox->findText(fileReplacement);
                     if (index == -1) itemComboBox->addItem(fileReplacement);
-                    disconnect(itemComboBox, SIGNAL(currentIndexChanged(int)), this, SLOT(replacementItemChanged()));
+                    disconnect(itemComboBox, static_cast<void (QComboBox::*)(int)>(&QComboBox::currentIndexChanged), this, &DesktopThemeDetails::replacementItemChanged);
                     itemComboBox->setCurrentIndex(itemComboBox->findText(fileReplacement));
-                    connect(itemComboBox, SIGNAL(currentIndexChanged(int)), this, SLOT(replacementItemChanged()));
+                    connect(itemComboBox, static_cast<void (QComboBox::*)(int)>(&QComboBox::currentIndexChanged), this, &DesktopThemeDetails::replacementItemChanged);
                     m_itemThemeReplacements[i.value()] = -1; //source is not a theme
                     m_itemFileReplacements[i.value()] = itemComboBox->currentText();
                 } else {

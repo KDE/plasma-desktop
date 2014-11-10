@@ -41,8 +41,8 @@ SelectSchemeDialog::SelectSchemeDialog(QWidget *parent)
     mOkButton = buttonBox->button(QDialogButtonBox::Ok);
     mOkButton->setDefault(true);
     mOkButton->setShortcut(Qt::CTRL | Qt::Key_Return);
-    connect(buttonBox, SIGNAL(accepted()), this, SLOT(accept()));
-    connect(buttonBox, SIGNAL(rejected()), this, SLOT(reject()));
+    connect(buttonBox, &QDialogButtonBox::accepted, this, &SelectSchemeDialog::accept);
+    connect(buttonBox, &QDialogButtonBox::rejected, this, &SelectSchemeDialog::reject);
 
     ui->setupUi(this);
     mainLayout->addWidget(ui->layoutWidget);

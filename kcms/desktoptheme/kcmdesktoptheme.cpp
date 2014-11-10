@@ -215,8 +215,8 @@ void KCMDesktopTheme::installTheme(const QString &file)
         qDebug() << program << arguments.join(" ");
         QProcess *myProcess = new QProcess(this);
         //connect(myProcess, &QProcess::finished, this, &KCMDesktopTheme::installFinished);
-        connect(myProcess, SIGNAL(finished(int, QProcess::ExitStatus)), this, SLOT(installFinished(int, QProcess::ExitStatus)));
-        connect(myProcess, SIGNAL(error(QProcess::ProcessError)), this, SLOT(installError(QProcess::ProcessError)));
+        connect(myProcess, static_cast<void (QProcess::*)(int, QProcess::ExitStatus)>(&QProcess::finished), this, &KCMDesktopTheme::installFinished);
+        connect(myProcess, static_cast<void (QProcess::*)(QProcess::ProcessError)>(&QProcess::error), this, &KCMDesktopTheme::installError);
 
         myProcess->start(program, arguments);
     } else {
