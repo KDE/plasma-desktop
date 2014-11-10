@@ -196,7 +196,7 @@ MouseEventListener {
                                             task.ActivityNames.join(", ")));
                 }
 
-                return subTextEntries.join("<br />");
+                return subTextEntries.join("\n");
             }
         }
     }
