@@ -24,7 +24,7 @@ class QCheckBox;
 class QComboBox;
 class QLabel;
 
-class KIntNumInput;
+class QSpinBox;
 
 class LaunchConfig : public KCModule
 {
@@ -63,8 +63,8 @@ class LaunchConfig : public KCModule
     QLabel    * lbl_taskbarTimeout;
     QComboBox * cb_busyCursor;
     QCheckBox * cb_taskbarButton;
-    KIntNumInput * sb_cursorTimeout;
-    KIntNumInput * sb_taskbarTimeout;
+    QSpinBox * sb_cursorTimeout;
+    QSpinBox * sb_taskbarTimeout;
 
 };
 

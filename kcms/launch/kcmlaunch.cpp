@@ -75,21 +75,19 @@ LaunchConfig::LaunchConfig(QWidget * parent, const QVariantList &)
     cb_busyCursor->insertItem( 2, i18n( "Blinking Cursor" ) );
     cb_busyCursor->insertItem( 3, i18n( "Bouncing Cursor" ) );
     GroupBox1Layout->addWidget( cb_busyCursor, 0, 0 );
-    connect( cb_busyCursor, SIGNAL(activated(int)),
-            SLOT (slotBusyCursor(int)));
-    connect( cb_busyCursor, SIGNAL(activated(int)), SLOT(checkChanged()) );
+    connect(cb_busyCursor, static_cast<void (QComboBox::*)(int)>(&QComboBox::activated), this, &LaunchConfig::slotBusyCursor);
+    connect(cb_busyCursor, static_cast<void (QComboBox::*)(int)>(&QComboBox::activated), this, &LaunchConfig::checkChanged);
 
     lbl_cursorTimeout = new QLabel( GroupBox1 );
     lbl_cursorTimeout->setObjectName( "TextLabel1" );
     lbl_cursorTimeout->setText( i18n( "&Startup indication timeout:" ) );
     GroupBox1Layout->addWidget( lbl_cursorTimeout, 2, 0 );
-    sb_cursorTimeout = new KIntNumInput( GroupBox1);
+    sb_cursorTimeout = new QSpinBox( GroupBox1);
     sb_cursorTimeout->setRange( 0, 99 );
     sb_cursorTimeout->setSuffix( i18n(" sec") );
     GroupBox1Layout->addWidget( sb_cursorTimeout, 2, 1 );
     lbl_cursorTimeout->setBuddy( sb_cursorTimeout );
-    connect( sb_cursorTimeout, SIGNAL(valueChanged(int)),
-            SLOT(checkChanged()) );
+    connect(sb_cursorTimeout, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &LaunchConfig::checkChanged);
 
     QGroupBox* GroupBox2 = new QGroupBox( i18n( "Taskbar &Notification" ) );
     GroupBox2->setWhatsThis( i18n("<H1>Taskbar Notification</H1>\n"
@@ -109,21 +107,19 @@ LaunchConfig::LaunchConfig(QWidget * parent, const QVariantList &)
     cb_taskbarButton->setObjectName( "cb_taskbarButton" );
     cb_taskbarButton->setText( i18n( "Enable &taskbar notification" ) );
     GroupBox2Layout->addWidget( cb_taskbarButton, 0, 0, 1, 2 );
-    connect( cb_taskbarButton, SIGNAL(toggled(bool)),
-            SLOT(slotTaskbarButton(bool)));
-    connect( cb_taskbarButton, SIGNAL(toggled(bool)), SLOT(checkChanged()));
+    connect(cb_taskbarButton, &QCheckBox::toggled, this, &LaunchConfig::slotTaskbarButton);
+    connect(cb_taskbarButton, &QCheckBox::toggled, this, &LaunchConfig::checkChanged);
 
     lbl_taskbarTimeout = new QLabel( GroupBox2 );
     lbl_taskbarTimeout->setObjectName( "TextLabel2" );
     lbl_taskbarTimeout->setText( i18n( "Start&up indication timeout:" ) );
     GroupBox2Layout->addWidget( lbl_taskbarTimeout, 1, 0 );
-    sb_taskbarTimeout = new KIntNumInput( GroupBox2);
+    sb_taskbarTimeout = new QSpinBox( GroupBox2);
     sb_taskbarTimeout->setRange( 0, 99 );
     sb_taskbarTimeout->setSuffix( i18n(" sec") );
     GroupBox2Layout->addWidget( sb_taskbarTimeout, 1, 1 );
     lbl_taskbarTimeout->setBuddy( sb_taskbarTimeout );
-    connect( sb_taskbarTimeout, SIGNAL(valueChanged(int)),
-            SLOT(checkChanged()) );
+    connect(sb_taskbarTimeout, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &LaunchConfig::checkChanged);
 
     Form1Layout->addStretch();
 }
