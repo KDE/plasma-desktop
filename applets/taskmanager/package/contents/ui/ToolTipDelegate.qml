@@ -178,7 +178,6 @@ Column {
                 text: subText
                 textFormat: Text.PlainText
                 opacity: 0.5
-                textFormat: Text.PlainText
             }
         }
     }
