@@ -28,10 +28,10 @@ CfgBrowser::CfgBrowser(QWidget *parent)
     : QWidget(parent), Ui::BrowserConfig_UI(),CfgPlugin()
 {
     setupUi(this);
-    connect(lineExec,SIGNAL(textChanged(const QString &)),this,SLOT(configChanged()));
-    connect(radioKIO,SIGNAL(toggled(bool)),this,SLOT(configChanged()));
-    connect(radioExec,SIGNAL(toggled(bool)),this,SLOT(configChanged()));
-    connect(btnSelectBrowser,SIGNAL(clicked()),this, SLOT(selectBrowser()));
+    connect(lineExec, &KLineEdit::textChanged, this, &CfgBrowser::configChanged);
+    connect(radioKIO, &QRadioButton::toggled, this, &CfgBrowser::configChanged);
+    connect(radioExec, &QRadioButton::toggled, this, &CfgBrowser::configChanged);
+    connect(btnSelectBrowser, &QToolButton::clicked, this, &CfgBrowser::selectBrowser);
 }
 
 CfgBrowser::~CfgBrowser() {

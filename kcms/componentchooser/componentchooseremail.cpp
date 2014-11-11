@@ -38,14 +38,14 @@ CfgEmailClient::CfgEmailClient(QWidget *parent)
 
     pSettings = new KEMailSettings();
 
-    connect(kmailCB, SIGNAL(toggled(bool)), SLOT(configChanged()) );
-    connect(txtEMailClient, SIGNAL(textChanged(const QString&)), SLOT(configChanged()) );
+    connect(kmailCB, &QRadioButton::toggled, this, &CfgEmailClient::configChanged);
+    connect(txtEMailClient, &KLineEdit::textChanged, this, &CfgEmailClient::configChanged);
 #ifdef Q_OS_UNIX
-    connect(chkRunTerminal, SIGNAL(clicked()), SLOT(configChanged()) );
+    connect(chkRunTerminal, &QCheckBox::clicked, this, &CfgEmailClient::configChanged);
 #else
     chkRunTerminal->hide();
 #endif
-    connect(btnSelectEmail, SIGNAL(clicked()), SLOT(selectEmailClient()) );
+    connect(btnSelectEmail, &QToolButton::clicked, this, &CfgEmailClient::selectEmailClient);
 }
 
 CfgEmailClient::~CfgEmailClient() {

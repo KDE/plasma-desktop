@@ -34,7 +34,7 @@ CfgFileManager::CfgFileManager(QWidget *parent)
     : QWidget(parent), Ui::FileManagerConfig_UI(),CfgPlugin()
 {
     setupUi(this);
-    connect(btnSelectFileManager,SIGNAL(clicked()),this, SLOT(slotAddFileManager()));
+    connect(btnSelectFileManager, &QToolButton::clicked, this, &CfgFileManager::slotAddFileManager);
 }
 
 CfgFileManager::~CfgFileManager() {
@@ -63,7 +63,7 @@ void CfgFileManager::load(KConfig *) {
     Q_FOREACH(const KService::Ptr& service, apps)
     {
         QRadioButton* button = new QRadioButton(service->name(), this);
-        connect(button,SIGNAL(toggled(bool)),this,SLOT(configChanged()));
+        connect(button, &QRadioButton::toggled, this, &CfgFileManager::configChanged);
         button->setProperty("storageId", service->storageId());
         radioLayout->addWidget(button);
         if (first) {

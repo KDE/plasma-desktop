@@ -64,7 +64,7 @@ KTimerDialog::KTimerDialog( int msec, TimerStyle style, QWidget *parent,
     if ( buttonMask & Cancel )
         buttonOnTimeout = Cancel;
 
-    connect( totalTimer, SIGNAL( timeout() ), SLOT( slotInternalTimeout() ) );
+    connect(totalTimer, &QTimer::timeout, this, &KTimerDialog::slotInternalTimeout);
     connect( updateTimer, SIGNAL( timeout() ), SLOT( slotUpdateTime() ) );
 
     // create the widgets

@@ -41,10 +41,10 @@ CfgTerminalEmulator::CfgTerminalEmulator(QWidget *parent)
     : QWidget(parent), Ui::TerminalEmulatorConfig_UI(), CfgPlugin()
 {
 	setupUi(this);
-	connect(terminalLE,SIGNAL(textChanged(QString)), this, SLOT(configChanged()));
-	connect(terminalCB,SIGNAL(toggled(bool)),this,SLOT(configChanged()));
-	connect(otherCB,SIGNAL(toggled(bool)),this,SLOT(configChanged()));
-	connect(btnSelectTerminal,SIGNAL(clicked()),this,SLOT(selectTerminalApp()));
+	connect(terminalLE, &QLineEdit::textChanged, this, &CfgTerminalEmulator::configChanged);
+	connect(terminalCB, &QRadioButton::toggled, this, &CfgTerminalEmulator::configChanged);
+	connect(otherCB, &QRadioButton::toggled, this, &CfgTerminalEmulator::configChanged);
+	connect(btnSelectTerminal, &QToolButton::clicked, this, &CfgTerminalEmulator::selectTerminalApp);
 
 }
 
