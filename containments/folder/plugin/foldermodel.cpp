@@ -64,6 +64,7 @@
 #include <KDirModel>
 #include <KIO/CopyJob>
 #include <KIO/Job>
+#include <KProtocolInfo>
 #include <KRun>
 
 #include <sys/types.h>
@@ -109,6 +110,7 @@ FolderModel::FolderModel(QObject *parent) : QSortFilterProxyModel(parent),
     dirLister->setDelayedMimeTypes(true);
     dirLister->setAutoErrorHandlingEnabled(false, 0);
     connect(dirLister, SIGNAL(error(QString)), this, SLOT(dirListFailed(QString)));
+    connect(dirLister, SIGNAL(deleteItem(KFileItem)), this, SLOT(evictFromIsDirCache(KFileItem)));
 
     m_dirModel = new KDirModel(this);
     m_dirModel->setDirLister(dirLister);
@@ -149,6 +151,7 @@ QHash< int, QByteArray > FolderModel::staticRoleNames()
     roleNames[SelectedRole] = "selected";
     roleNames[IsDirRole] = "isDir";
     roleNames[UrlRole] = "url";
+    roleNames[LinkDestinationUrl] = "linkDestinationUrl";
     roleNames[SizeRole] = "size";
     roleNames[TypeRole] = "type";
 
@@ -178,6 +181,7 @@ void FolderModel::setUrl(const QString& url)
 
     beginResetModel();
     m_url = url;
+    m_isDirCache.clear();
     m_dirModel->dirLister()->openUrl(resolvedUrl);
     clearDragImages();
     endResetModel();
@@ -788,9 +792,27 @@ QVariant FolderModel::data(const QModelIndex& index, int role) const
     } else if (role == SelectedRole) {
         return m_selectionModel->isSelected(index);
     } else if (role == IsDirRole) {
-        return isDir(mapToSource(index), m_dirModel);
+        const QUrl &url = data(index, UrlRole).value<QUrl>();
+
+        if (m_isDirCache.contains(url)) {
+            return m_isDirCache[url];
+        } else {
+            return isDir(mapToSource(index), m_dirModel);
+        }
     } else if (role == UrlRole) {
         return itemForIndex(index).url();
+    } else if (role == LinkDestinationUrl) {
+        const KFileItem item = itemForIndex(index);
+
+        if (m_parseDesktopFiles && item.isDesktopFile()) {
+            const KDesktopFile file(item.targetUrl().path());
+
+            if (file.readType() == "Link") {
+                return file.readUrl();
+            }
+        }
+
+        return item.url();
     } else if (role == SizeRole) {
         return m_dirModel->data(mapToSource(QSortFilterProxyModel::index(index.row(), 1)), Qt::DisplayRole);
     } else if (role == TypeRole) {
@@ -822,19 +844,46 @@ bool FolderModel::isDir(const QModelIndex &index, const KDirModel *dirModel) con
     if (m_parseDesktopFiles && item.isDesktopFile()) {
         // Check if the desktop file is a link to a directory
         KDesktopFile file(item.targetUrl().path());
+
         if (file.readType() == "Link") {
             const QUrl url(file.readUrl());
+
             if (url.isLocalFile()) {
                 QT_STATBUF buf;
                 const QString path = url.adjusted(QUrl::StripTrailingSlash).toLocalFile();
                 if (QT_STAT(QFile::encodeName(path).constData(), &buf) == 0) {
                     return S_ISDIR(buf.st_mode);
                 }
+            } else if (!m_isDirCache.contains(item.url()) && KProtocolInfo::protocolClass(url.scheme()) == QString(":local")) {
+                KIO::StatJob *job = KIO::stat(url, KIO::HideProgressInfo);
+                job->setProperty("org.kde.plasma.folder_url", item.url());
+                job->setSide(KIO::StatJob::SourceSide);
+                job->setDetails(0);
+                connect(job, SIGNAL(result(KJob*)), this, SLOT(statResult(KJob*)));
             }
         }
     }
 
     return false;
+}
+
+void FolderModel::statResult(KJob *job)
+{
+    KIO::StatJob *statJob = static_cast<KIO::StatJob*>(job);
+
+    const QUrl &url = statJob->property("org.kde.plasma.folder_url").value<QUrl>();
+    const QModelIndex &idx = index(indexForUrl(url), 0);
+
+    if (idx.isValid()) {
+        m_isDirCache[url] = statJob->statResult().isDir();
+
+        emit dataChanged(idx, idx, QVector<int>() << IsDirRole);
+    }
+}
+
+void FolderModel::evictFromIsDirCache(const KFileItem& item)
+{
+    m_isDirCache.remove(item.url());
 }
 
 bool FolderModel::lessThan(const QModelIndex &left, const QModelIndex &right) const

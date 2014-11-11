@@ -104,7 +104,7 @@ Item {
                 if (root.itemViewDialogComponent.status == Component.Ready) {
                     impl.popupDialog = root.itemViewDialogComponent.createObject(impl);
                     impl.popupDialog.visualParent = icon;
-                    impl.popupDialog.url = model.url;
+                    impl.popupDialog.url = model.linkDestinationUrl;
                     impl.popupDialog.visible = true;
                 }
             }

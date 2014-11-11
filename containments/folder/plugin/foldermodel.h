@@ -45,6 +45,7 @@ class KActionCollection;
 class KDirModel;
 class KFileItem;
 class KFileItemActions;
+class KJob;
 class KNewFileMenu;
 
 class DirLister : public KDirLister
@@ -89,6 +90,7 @@ class FolderModel : public QSortFilterProxyModel
             SelectedRole,
             IsDirRole,
             UrlRole,
+            LinkDestinationUrl,
             SizeRole,
             TypeRole,
             FileNameRole
@@ -210,6 +212,8 @@ class FolderModel : public QSortFilterProxyModel
 
     private Q_SLOTS:
         void dirListFailed(const QString &error);
+        void statResult(KJob *job);
+        void evictFromIsDirCache(const KFileItem &item);
         void selectionChanged(QItemSelection selected, QItemSelection deselected);
         void copy();
         void cut();
@@ -236,6 +240,7 @@ class FolderModel : public QSortFilterProxyModel
         QList<QUrl> selectedUrls(bool forTrash) const;
         KDirModel *m_dirModel;
         QString m_url;
+        QHash<QUrl, bool> m_isDirCache;
         QItemSelectionModel *m_selectionModel;
         QItemSelection m_pinnedSelection;
         QModelIndexList m_dragIndexes;
