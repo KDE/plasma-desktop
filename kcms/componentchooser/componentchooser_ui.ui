@@ -36,7 +36,7 @@
     </widget>
    </item>
    <item row="0" column="0" rowspan="3">
-    <widget class="KListWidget" name="ServiceChooser">
+    <widget class="QListWidget" name="ServiceChooser">
      <property name="whatsThis">
       <string>&lt;qt&gt;
 &lt;p&gt;This list shows the configurable component types. Click the component you want to configure.&lt;/p&gt;
@@ -66,13 +66,6 @@
    </item>
   </layout>
  </widget>
- <customwidgets>
-  <customwidget>
-   <class>KListWidget</class>
-   <extends>QListWidget</extends>
-   <header>klistwidget.h</header>
-  </customwidget>
- </customwidgets>
  <resources/>
  <connections/>
 </ui>
