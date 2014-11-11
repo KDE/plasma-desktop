@@ -19,7 +19,6 @@
 #include <QtDBus/QtDBus>
 #include <QCheckBox>
 
-#include <kdebug.h>
 #include <kapplication.h>
 #include <klocale.h>
 #include <kmessagebox.h>

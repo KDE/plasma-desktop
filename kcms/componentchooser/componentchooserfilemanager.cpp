@@ -24,7 +24,6 @@
 #include <kprocess.h>
 #include <kmimetypetrader.h>
 #include <kopenwithdialog.h>
-#include <kglobalsettings.h>
 #include <kconfiggroup.h>
 #include <QStandardPaths>
 
