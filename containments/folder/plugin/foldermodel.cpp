@@ -1089,14 +1089,17 @@ void FolderModel::updateActions()
     QAction *paste = m_actionCollection.action("paste");
 
     if (paste) {
-        const QString pasteText = KIO::pasteActionText();
+        bool enable = false;
 
-        if (pasteText.isEmpty()) {
-            paste->setText(i18n("&Paste"));
-            paste->setEnabled(false);
-        } else {
+        const QString pasteText = KIO::pasteActionText(QApplication::clipboard()->mimeData(),
+            &enable, m_dirModel->dirLister()->rootItem());
+
+        if (enable) {
             paste->setText(pasteText);
             paste->setEnabled(true);
+        } else {
+            paste->setText(i18n("&Paste"));
+            paste->setEnabled(false);
         }
 
         QAction* pasteTo = m_actionCollection.action("pasteto");
