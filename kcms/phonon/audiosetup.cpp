@@ -274,14 +274,14 @@ AudioSetup::AudioSetup(QWidget *parent)
     placementGrid->addWidget(m_icon, 1, 2, Qt::AlignCenter);
 
     update();
-    connect(cardBox, SIGNAL(currentIndexChanged(int)), SLOT(cardChanged()));
-    connect(profileBox, SIGNAL(currentIndexChanged(int)), SLOT(profileChanged()));
-    connect(deviceBox, SIGNAL(currentIndexChanged(int)), SLOT(deviceChanged()));
-    connect(portBox, SIGNAL(currentIndexChanged(int)), SLOT(portChanged()));
+    connect(cardBox, static_cast<void (KComboBox::*)(int)>(&KComboBox::currentIndexChanged), this, &AudioSetup::cardChanged);
+    connect(profileBox, static_cast<void (KComboBox::*)(int)>(&KComboBox::currentIndexChanged), this, &AudioSetup::profileChanged);
+    connect(deviceBox, static_cast<void (KComboBox::*)(int)>(&KComboBox::currentIndexChanged), this, &AudioSetup::deviceChanged);
+    connect(portBox, static_cast<void (KComboBox::*)(int)>(&KComboBox::currentIndexChanged), this, &AudioSetup::portChanged);
 
     m_VUTimer = new QTimer(this);
     m_VUTimer->setInterval(10);
-    connect(m_VUTimer, SIGNAL(timeout()), this, SLOT(reallyUpdateVUMeter()));
+    connect(m_VUTimer, &QTimer::timeout, this, &AudioSetup::reallyUpdateVUMeter);
 
     // We require a glib event loop
     const QByteArray eventDispatcher(

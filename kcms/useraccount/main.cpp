@@ -27,7 +27,7 @@
 #include <kpassworddialog.h>
 #include <kuser.h>
 #include <kdialog.h>
-#include <kicon.h>
+#include <qicon.h>
 #include <kimageio.h>
 #include <kmimetype.h>
 #include <kstandarddirs.h>
@@ -72,7 +72,7 @@ KCMUserAccount::KCMUserAccount( QWidget *parent, const QVariantList &)
 
 	connect( _mw->btnChangeFace, SIGNAL(clicked()), SLOT(slotFaceButtonClicked()));
 	connect( _mw->btnChangePassword, SIGNAL(clicked()), SLOT(slotChangePassword()));
-	_mw->btnChangePassword->setGuiItem( KGuiItem( i18n("Change &Password..."), "preferences-desktop-user-password" ));
+	KGuiItem::assign(_mw->btnChangePassword, KGuiItem( i18n("Change &Password..."), "preferences-desktop-user-password" ));
 
 	connect( _mw->leRealname, SIGNAL(textChanged(QString)), SLOT(changed()));
 	connect( _mw->leOrganization, SIGNAL(textChanged(QString)), SLOT(changed()));
@@ -157,7 +157,7 @@ void KCMUserAccount::load()
 
 	// load user face
 	_facePixmap = QPixmap( KCFGUserAccount::faceFile() );
-	_mw->btnChangeFace->setIcon( KIcon(_facePixmap) );
+	_mw->btnChangeFace->setIcon( QIcon(_facePixmap) );
 	if (!_facePixmap.isNull()) {
 		_mw->btnChangeFace->setIconSize(_facePixmap.size());
 	}
@@ -249,7 +249,7 @@ void KCMUserAccount::save()
 void KCMUserAccount::changeFace(const QPixmap &pix)
 {
   _facePixmap = pix;
-  _mw->btnChangeFace->setIcon( KIcon(_facePixmap) );
+  _mw->btnChangeFace->setIcon( QIcon(_facePixmap) );
   if ( !_facePixmap.isNull() )
     _mw->btnChangeFace->setIconSize(_facePixmap.size());
   emit changed( true );

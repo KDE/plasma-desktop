@@ -18,7 +18,7 @@
    <item>
     <layout class="QHBoxLayout">
      <item>
-      <widget class="KPushButton" name="btnChangeFace">
+      <widget class="QPushButton" name="btnChangeFace">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -82,7 +82,7 @@
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout">
          <item>
-          <widget class="KPushButton" name="btnChangePassword">
+          <widget class="QPushButton" name="btnChangePassword">
            <property name="text">
             <string>Change Password...</string>
            </property>
@@ -288,11 +288,6 @@
    <extends>QGroupBox</extends>
    <header>kbuttongroup.h</header>
    <container>1</container>
-  </customwidget>
-  <customwidget>
-   <class>KPushButton</class>
-   <extends>QPushButton</extends>
-   <header>kpushbutton.h</header>
   </customwidget>
   <customwidget>
    <class>KLineEdit</class>

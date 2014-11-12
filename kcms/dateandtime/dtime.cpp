@@ -64,13 +64,13 @@ Dtime::Dtime(QWidget * parent)
 {
   setupUi(this);
 
-  connect(setDateTimeAuto, SIGNAL(toggled(bool)), this, SLOT(serverTimeCheck()));
-  connect(setDateTimeAuto, SIGNAL(toggled(bool)), SLOT(configChanged()));
+  connect(setDateTimeAuto, &QCheckBox::toggled, this, &Dtime::serverTimeCheck);
+  connect(setDateTimeAuto, &QCheckBox::toggled, this, &Dtime::configChanged);
 
   timeServerList->setEditable(false);
-  connect(timeServerList, SIGNAL(activated(int)), SLOT(configChanged()));
-  connect(timeServerList, SIGNAL(editTextChanged(QString)), SLOT(configChanged()));
-  connect(setDateTimeAuto, SIGNAL(toggled(bool)), timeServerList, SLOT(setEnabled(bool)));
+  connect(timeServerList, static_cast<void (QComboBox::*)(int)>(&QComboBox::activated), this, &Dtime::configChanged);
+  connect(timeServerList, &QComboBox::editTextChanged, this, &Dtime::configChanged);
+  connect(setDateTimeAuto, &QCheckBox::toggled, timeServerList, &QComboBox::setEnabled);
   timeServerList->setEnabled(false);
   timeServerList->setEditable(true);
   findNTPutility();
@@ -110,15 +110,15 @@ Dtime::Dtime(QWidget * parent)
     " using the up and down buttons to the right or by entering a new value.");
   timeEdit->setWhatsThis( wtstr );
 
-  connect( timeEdit, SIGNAL(timeChanged(QTime)), SLOT(set_time()) );
-  connect( cal, SIGNAL(dateChanged(QDate)), SLOT(changeDate(QDate)));
+  connect(timeEdit, &QTimeEdit::timeChanged, this, &Dtime::set_time);
+  connect(cal, &KDatePicker::dateChanged, this, &Dtime::changeDate);
 
-  connect( &internalTimer, SIGNAL(timeout()), SLOT(timeout()) );
+  connect(&internalTimer, &QTimer::timeout, this, &Dtime::timeout);
 
   kclock->setEnabled(false);
 
   //Timezone
-  connect( tzonelist, SIGNAL(itemSelectionChanged()), SLOT(configChanged()) );
+  connect(tzonelist, &K4TimeZoneWidget::itemSelectionChanged, this, &Dtime::configChanged);
   tzonesearch->setTreeWidget(tzonelist);
 }
 

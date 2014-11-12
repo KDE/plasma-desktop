@@ -65,14 +65,14 @@ ChFaceDlg::ChFaceDlg(const QString& picsdir, QWidget *parent)
 
   setMainWidget(faceDlg);
 
-  connect( ui.m_FacesWidget, SIGNAL(currentItemChanged(QListWidgetItem*,QListWidgetItem*)), SLOT(slotFaceWidgetSelectionChanged(QListWidgetItem*)) );
+  connect(ui.m_FacesWidget, &QListWidget::currentItemChanged, this, &ChFaceDlg::slotFaceWidgetSelectionChanged);
 
-  connect( ui.m_FacesWidget, SIGNAL(doubleClicked(QModelIndex)), SLOT(accept()) );
-  connect( this, SIGNAL(okClicked()), this, SLOT(accept()));
+  connect(ui.m_FacesWidget, &QListWidget::doubleClicked, this, &ChFaceDlg::accept);
+  connect(this, &ChFaceDlg::okClicked, this, &ChFaceDlg::accept);
 
-  connect( this, SIGNAL(user1Clicked()), this, SLOT(slotGetCustomImage()) );
+  connect(this, &ChFaceDlg::user1Clicked, this, &ChFaceDlg::slotGetCustomImage);
 
-  connect( this, SIGNAL(user2Clicked()), this, SLOT(slotRemoveImage()) );
+  connect(this, &ChFaceDlg::user2Clicked, this, &ChFaceDlg::slotRemoveImage);
 
 #if 0
   QPushButton *acquireBtn = new QPushButton( i18n("&Acquire Image..."), page );

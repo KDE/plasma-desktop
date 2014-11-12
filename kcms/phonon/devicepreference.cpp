@@ -224,8 +224,7 @@ DevicePreference::DevicePreference(QWidget *parent)
     }
     categoryTree->expandAll();
 
-    connect(categoryTree->selectionModel(),
-            SIGNAL(currentChanged(const QModelIndex &,const QModelIndex &)),
+    connect(categoryTree->selectionModel(), SIGNAL(currentChanged(const QModelIndex &,const QModelIndex &)),
             SLOT(updateDeviceList()));
 
     // Connect all model data change signals to the changed slot
@@ -248,7 +247,7 @@ DevicePreference::DevicePreference(QWidget *parent)
         }
     }
 
-    connect(showAdvancedDevicesCheckBox, SIGNAL(stateChanged (int)), this, SIGNAL(changed()));
+    connect(showAdvancedDevicesCheckBox, &QCheckBox::stateChanged, this, &DevicePreference::changed);
 
     // Connect the signals from Phonon that notify changes in the device lists
     connect(BackendCapabilities::notifier(), SIGNAL(availableAudioOutputDevicesChanged()), SLOT(updateAudioOutputDevices()));
@@ -343,8 +342,7 @@ void DevicePreference::updateDeviceList()
 
     // Reconnect the device list selection model
     if (deviceList->selectionModel()) {
-        connect(deviceList->selectionModel(),
-                SIGNAL(currentRowChanged(const QModelIndex &,const QModelIndex &)),
+        connect(deviceList->selectionModel(), SIGNAL(currentRowChanged(const QModelIndex &,const QModelIndex &)),
                 this, SLOT(updateButtonsEnabled()));
     }
 
@@ -784,8 +782,8 @@ void DevicePreference::on_applyPreferencesButton_clicked()
 
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok
                                                        | QDialogButtonBox::Cancel);
-    connect(buttonBox, SIGNAL(accepted()), dialog, SLOT(accept()));
-    connect(buttonBox, SIGNAL(rejected()), dialog, SLOT(reject()));
+    connect(buttonBox, &QDialogButtonBox::accepted, dialog.data(), &QDialog::accept);
+    connect(buttonBox, &QDialogButtonBox::rejected, dialog.data(), &QDialog::reject);
 
     QVBoxLayout *layout = new QVBoxLayout(dialog);
     layout->addWidget(label);
@@ -881,7 +879,7 @@ void DevicePreference::on_testPlaybackButton_toggled(bool down)
                                                           QStandardPaths::GenericDataLocation,
                                                           QStringLiteral("sounds/KDE-Sys-Log-In.ogg")));
             m_media->setCurrentSource(testUrl);
-            connect(m_media, SIGNAL(finished()), testPlaybackButton, SLOT(toggle()));
+            connect(m_media, &MediaObject::finished, testPlaybackButton, &QToolButton::toggle);
 
             break;
         }
@@ -950,7 +948,7 @@ void DevicePreference::on_testPlaybackButton_toggled(bool down)
         // Uninitialize the Phonon objects according to the testing type
         switch (m_testingType) {
         case dtAudioOutput:
-            disconnect(m_media, SIGNAL(finished()), testPlaybackButton, SLOT(toggle()));
+            disconnect(m_media, &MediaObject::finished, testPlaybackButton, &QToolButton::toggle);
             delete m_media;
             delete m_audioOutput;
             break;

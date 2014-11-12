@@ -80,10 +80,9 @@ BackendSelection::BackendSelection(QWidget *parent)
 
     m_emptyPage = stackedWidget->addWidget(new QWidget());
 
-    connect(m_select, SIGNAL(itemSelectionChanged()),
-            SLOT(selectionChanged()));
-    connect(m_up, SIGNAL(clicked()), SLOT(up()));
-    connect(m_down, SIGNAL(clicked()), SLOT(down()));
+    connect(m_select, &QListWidget::itemSelectionChanged, this, &BackendSelection::selectionChanged);
+    connect(m_up, &QToolButton::clicked, this, &BackendSelection::up);
+    connect(m_down, &QToolButton::clicked, this, &BackendSelection::down);
 }
 
 void BackendSelection::load()
@@ -188,9 +187,7 @@ void BackendSelection::selectionChanged()
 
         m_name->setText(backend.name);
         m_website->setText(QString("<a href=\"%1\">%1</a>").arg(backend.website));
-        connect(m_website, SIGNAL(linkActivated(QString)),
-                this, SLOT(openWebsite(QString)),
-                Qt::UniqueConnection);
+        connect(m_website, &QLabel::linkActivated, this, &BackendSelection::openWebsite, Qt::UniqueConnection);
         m_version->setText(backend.version);
     }
 }

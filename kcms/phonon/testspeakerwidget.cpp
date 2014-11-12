@@ -41,7 +41,7 @@ TestSpeakerWidget::TestSpeakerWidget(const pa_channel_position_t pos, ca_context
 {
     setCheckable(true);
     setText(_positionName());
-    connect(this, SIGNAL(toggled(bool)), SLOT(toggled(bool)));
+    connect(this, &TestSpeakerWidget::toggled, this, &TestSpeakerWidget::toggled);
 }
 
 TestSpeakerWidget::~TestSpeakerWidget()

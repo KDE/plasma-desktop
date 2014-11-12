@@ -115,14 +115,14 @@ KAccessApp::KAccessApp(bool allowStyles, bool GUIenabled)
 
 int KAccessApp::newInstance()
 {
-  KGlobal::config()->reparseConfiguration();
+  KSharedConfig::openConfig()->reparseConfiguration();
   readSettings();
   return 0;
 }
 
 void KAccessApp::readSettings()
 {
-  KSharedConfig::Ptr _config = KGlobal::config();
+  KSharedConfig::Ptr _config = KSharedConfig::openConfig();
   KConfigGroup cg(_config, "Bell");
 
   // bell ---------------------------------------------------------------
@@ -822,7 +822,7 @@ void KAccessApp::applyChanges() {
    unsigned int enabled  = requestedFeatures & ~features;
    unsigned int disabled = features & ~requestedFeatures;
 
-   KConfigGroup config(KGlobal::config(), "Keyboard");
+   KConfigGroup config(KSharedConfig::openConfig(), "Keyboard");
 
    if (enabled & XkbSlowKeysMask)
       config.writeEntry("SlowKeys", true);
@@ -839,7 +839,7 @@ void KAccessApp::applyChanges() {
    else if (disabled & XkbStickyKeysMask)
       config.writeEntry("StickyKeys", false);
 
-   KConfigGroup mousegrp(KGlobal::config(),"Mouse");
+   KConfigGroup mousegrp(KSharedConfig::openConfig(),"Mouse");
 
    if (enabled & XkbMouseKeysMask)
       mousegrp.writeEntry("MouseKeys", true);
@@ -854,7 +854,7 @@ void KAccessApp::yesClicked() {
       dialog->deleteLater();
    dialog = 0;
 
-   KConfigGroup config(KGlobal::config(), "Keyboard");
+   KConfigGroup config(KSharedConfig::openConfig(), "Keyboard");
    switch (showModeCombobox->currentIndex()) {
       case 0:
          config.writeEntry("Gestures", true);
@@ -884,7 +884,7 @@ void KAccessApp::noClicked() {
    dialog = 0;
    requestedFeatures = features;
 
-   KConfigGroup config(KGlobal::config(), "Keyboard");
+   KConfigGroup config(KSharedConfig::openConfig(), "Keyboard");
    switch (showModeCombobox->currentIndex()) {
       case 0:
          config.writeEntry("Gestures", true);
@@ -918,4 +918,3 @@ void KAccessApp::setXkbOpcode(int opcode) {
    xkb_opcode = opcode;
 }
 
-#include "kaccess.moc"

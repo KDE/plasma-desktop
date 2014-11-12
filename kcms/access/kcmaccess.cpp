@@ -28,7 +28,7 @@
 
 #include <KPluginFactory>
 #include <kcombobox.h>
-#include <kstandarddirs.h>
+
 #include <kcolorbutton.h>
 #include <kfiledialog.h>
 #include <kapplication.h>
@@ -46,6 +46,7 @@
 #define XK_XKB_KEYS
 #include <X11/keysymdef.h>
 #include <ktoolinvocation.h>
+#include <QStandardPaths>
 
 K_PLUGIN_FACTORY(KAccessConfigFactory, registerPlugin<KAccessConfig>();)
 K_EXPORT_PLUGIN(KAccessConfigFactory("kcmaccess"))
@@ -552,7 +553,7 @@ void KAccessConfig::changeFlashScreenColor()
 
 void KAccessConfig::selectSound()
 {
-  QStringList list = KGlobal::dirs()->findDirs("sound", "");
+  QStringList list = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QLatin1String("sound/") + "");
   QString start;
   if (list.count()>0)
     start = list[0];
