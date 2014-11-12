@@ -99,7 +99,7 @@ Item {
         }
 
         onReleased: {
-            if (clicked) {
+            if (pressed) {
                 repeater.model.trigger(index, "", null);
                 plasmoid.expanded = false;
             }
