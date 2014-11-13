@@ -43,6 +43,7 @@ class KdePlatformDependent : public QObject, public Attica::PlatformDependent
 {
     Q_OBJECT
     Q_INTERFACES(Attica::PlatformDependent)
+    Q_PLUGIN_METADATA(IID "org.kde.attica-kde")
 
 public:
     KdePlatformDependent();
@@ -52,7 +53,7 @@ public:
     virtual void removeDefaultProviderFile(const QUrl& url);
     virtual void enableProvider(const QUrl& baseUrl, bool enabled) const;
     virtual bool isEnabled(const QUrl& baseUrl) const;
-    
+
     virtual QNetworkReply* post(const QNetworkRequest& request, const QByteArray& data);
     virtual QNetworkReply* post(const QNetworkRequest& request, QIODevice* data);
     virtual QNetworkReply* get(const QNetworkRequest& request);
@@ -65,7 +66,7 @@ public:
 private:
     bool openWallet(bool force);
     QNetworkRequest removeAuthFromRequest(const QNetworkRequest& request);
-    
+
     KSharedConfigPtr m_config;
     //QNetworkAccessManager m_qnam;
     KIO::Integration::AccessManager* m_accessManager;
