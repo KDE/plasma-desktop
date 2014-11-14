@@ -56,11 +56,15 @@ Item {
                 TextField {
                     id: customButtonImage
 
+                    enabled: useCustomButtonImage.checked
+
                     Layout.fillWidth: true
                 }
 
                 Button {
                     iconName: "document-open"
+
+                    enabled: useCustomButtonImage.checked
 
                     onClicked: {
                         imagePicker.open();
