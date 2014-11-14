@@ -174,8 +174,7 @@ void LeaveItemHandler::saveSession()
 
 void LeaveItemHandler::standby()
 {
-    // FIXME: Use standby from KDE Power Management System's interface
-    suspendRAM();
+    Solid::PowerManagement::requestSleep(Solid::PowerManagement::StandbyState, 0, 0);
 }
 
 void LeaveItemHandler::suspendRAM()
