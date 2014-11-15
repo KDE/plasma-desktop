@@ -36,8 +36,8 @@ class EditDialog : public KDialog
 public:
     EditDialog(QWidget *parent, const QString &name);
     EditDialog(QWidget *parent, const QString &name, QListWidgetItem *itm, const QString &file);
-    QString getText() const { return leText->text(); };
-    QString getEmoticon() const { return emoticon; };
+    QString getText() const { return leText->text(); }
+    QString getEmoticon() const { return emoticon; }
 private slots:
     void btnIconClicked();
     void updateOkButton();
