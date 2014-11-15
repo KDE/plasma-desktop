@@ -64,7 +64,7 @@ int main( int argc, char* argv[] )
         && isEmpty( XGetDefault( display(), "Xcursor", "theme" ))
         && isEmpty( XcursorGetTheme( display())))
     {
-        theme = "default";
+        theme = "breeze_cursors";
         ret = 10; // means to switch to default
     }
 
