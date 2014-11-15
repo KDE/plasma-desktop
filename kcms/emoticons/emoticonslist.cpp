@@ -24,9 +24,9 @@
 #include <QIcon>
 #include <QLabel>
 #include <QListWidgetItem>
+#include <QUrl>
 
 #include <KGlobal>
-#include <KUrl>
 #include <KMessageBox>
 #include <KDebug>
 #include <KIcon>
@@ -85,7 +85,7 @@ void EditDialog::setupDlg()
 
 void EditDialog::btnIconClicked()
 {
-    KUrl url =  KFileDialog::getImageOpenUrl();
+    const QUrl url = KFileDialog::getImageOpenUrl();
 
     if (!url.isLocalFile())
         return;
@@ -147,8 +147,6 @@ bool caseInsensitiveLessThan(const QString &s1, const QString &s2)
 
 void EmoticonList::load()
 {
-    KStandardDirs dir;
-
     delFiles.clear();
     themeList->clear();
     emoMap.clear();
@@ -199,16 +197,15 @@ void EmoticonList::somethingChanged()
 
 void EmoticonList::updateButton()
 {
-    bool can = canEditTheme();
+    const bool can = canEditTheme();
     btRemoveEmoticon->setEnabled(themeList->currentItem() && emoList->selectedItems().size() && can);
-    btRemoveTheme->setEnabled(themeList->currentItem() && themeList->currentItem()->text() != "kde4" && themeList->count() > 1 && can);
+    btRemoveTheme->setEnabled(themeList->currentItem() && themeList->currentItem()->text() != "Glass" && themeList->count() > 1 && can);
     btEdit->setEnabled(themeList->currentItem() && emoList->selectedItems().size() && can);
     btAdd->setEnabled(themeList->currentItem() && can);
 }
 
 void EmoticonList::selectTheme()
 {
-
     kDebug() << "current_item: " << themeList->currentItem();
 
     updateButton();
@@ -246,7 +243,7 @@ void EmoticonList::btRemoveThemeClicked()
         return;
     }
 
-    QString name = themeList->currentItem()->text();
+    const QString name = themeList->currentItem()->text();
 
     delFiles.append(KStandardDirs::locate("emoticons", name + QDir::separator()));
     delete themeList->currentItem();
@@ -256,7 +253,7 @@ void EmoticonList::btRemoveThemeClicked()
 
 void EmoticonList::installEmoticonTheme()
 {
-    QUrl themeURL = KUrlRequesterDialog::getUrl(QUrl(), this, i18n("Drag or Type Emoticon Theme URL"));
+    const QUrl themeURL = KUrlRequesterDialog::getUrl(QUrl(), this, i18n("Drag or Type Emoticon Theme URL"));
     if (themeURL.isEmpty())
         return;
 
@@ -265,7 +262,7 @@ void EmoticonList::installEmoticonTheme()
                                       i18n("Could Not Install Emoticon Theme"));
         return;
     }
-    QStringList installed = kEmoticons.installTheme(themeURL.toLocalFile());
+    const QStringList installed = kEmoticons.installTheme(themeURL.toLocalFile());
     for (int i = 0; i < installed.size(); i++)
         loadTheme(installed.at(i));
 }
@@ -278,7 +275,7 @@ void EmoticonList::btRemoveEmoticonClicked()
 
     QListWidgetItem *itm = emoList->currentItem();
     KEmoticonsTheme theme = emoMap.value(themeList->currentItem()->text());
-    QString fPath = theme.emoticonsMap().key(itm->text().split(' '));
+    const QString fPath = theme.emoticonsMap().key(itm->text().split(' '));
     if (theme.removeEmoticon(itm->text())) {
         int ret = KMessageBox::questionYesNo(this, i18n("Do you want to remove %1 too?", fPath), i18n("Delete emoticon"));
         if (ret == KMessageBox::Yes) {
@@ -318,8 +315,8 @@ void EmoticonList::editEmoticon()
         return;
 
     KEmoticonsTheme theme = emoMap.value(themeList->currentItem()->text());
-    QString path = theme.emoticonsMap().key(emoList->currentItem()->text().split(' '));
-    QString f = QFileInfo(path).fileName();
+    const QString path = theme.emoticonsMap().key(emoList->currentItem()->text().split(' '));
+    const QString f = QFileInfo(path).fileName();
     EditDialog *dlg = new EditDialog(this, i18n("Edit Emoticon"), emoList->currentItem(), path);
 
     if (dlg->exec() == QDialog::Rejected) {
@@ -366,15 +363,15 @@ void EmoticonList::editEmoticon()
 
 void EmoticonList::newTheme()
 {
-    QString name = KInputDialog::getText(i18n("New Emoticon Theme"), i18n("Enter the name of the new emoticon theme:"));
+    const QString name = KInputDialog::getText(i18n("New Emoticon Theme"), i18n("Enter the name of the new emoticon theme:"));
     if (name.isEmpty())
         return;
-    QString path = KGlobal::dirs()->saveLocation("emoticons", name, false);
+    const QString path = KGlobal::dirs()->saveLocation("emoticons", name, false);
 
     if (KIO::NetAccess::exists(QUrl(path), KIO::NetAccess::SourceSide, this)) {
         KMessageBox::error(this, i18n("%1 theme already exists", name));
     } else {
-        QString constraint("(exist Library)");
+        const QString constraint("(exist Library)");
         KService::List srv = KServiceTypeTrader::self()->query("KEmoticons", constraint);
 
         QStringList ls;
@@ -389,7 +386,8 @@ void EmoticonList::newTheme()
         }
 
         bool ok;
-        QString type = KInputDialog::getItem(i18n("New Emoticon Theme"), i18n("Choose the type of emoticon theme to create"), ls, current, false, &ok, this);
+        const QString type = KInputDialog::getItem(i18n("New Emoticon Theme"), i18n("Choose the type of emoticon theme to create"),
+                                                   ls, current, false, &ok, this);
 
         if (ok && !type.isEmpty()) {
             int index = ls.indexOf(type);
@@ -451,24 +449,22 @@ void EmoticonList::getNewStuff()
 
 QString EmoticonList::previewEmoticon(const KEmoticonsTheme &theme)
 {
-        QString path = theme.tokenize(":)")[0].picPath;
-        if (path.isEmpty()) {
-            path = theme.emoticonsMap().keys().value(0);
-        }
-        return path;
+    QString path = theme.tokenize(":)")[0].picPath;
+    if (path.isEmpty()) {
+        path = theme.emoticonsMap().keys().value(0);
+    }
+    return path;
 }
-
-
-
 
 void EmoticonList::initDefaults()
 {
-    QList<QListWidgetItem *>ls = themeList->findItems("kde4", Qt::MatchExactly);
+    QList<QListWidgetItem *>ls = themeList->findItems("Glass", Qt::MatchExactly);
+    if (ls.isEmpty())
+        return;
     themeList->setCurrentItem( ls.first() );
 
     cbStrict->setChecked(false);
 }
-
 
 void EmoticonList::defaults()
 {
