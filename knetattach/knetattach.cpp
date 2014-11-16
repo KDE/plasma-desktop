@@ -90,13 +90,13 @@ void KNetAttach::setInformationText( const QString &type )
 {
     QString text;
 
-    if (type=="WebFolder") {
+    if (type==QLatin1String("WebFolder")) {
 	text = i18n("Enter a name for this <i>WebFolder</i> as well as a server address, port and folder path to use and press the <b>Save & Connect</b> button.");
-    } else if (type=="Fish") {
+    } else if (type==QLatin1String("Fish")) {
 	text = i18n("Enter a name for this <i>Secure shell connection</i> as well as a server address, port and folder path to use and press the <b>Save & Connect</b> button.");
-    } else if (type=="FTP") {
+    } else if (type==QLatin1String("FTP")) {
         text = i18n("Enter a name for this <i>File Transfer Protocol connection</i> as well as a server address and folder path to use and press the <b>Save & Connect</b> button.");
-    } else if (type=="SMB") {
+    } else if (type==QLatin1String("SMB")) {
         text = i18n("Enter a name for this <i>Microsoft Windows network drive</i> as well as a server address and folder path to use and press the <b>Save & Connect</b> button.");
     }
 
