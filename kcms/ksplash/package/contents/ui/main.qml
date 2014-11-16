@@ -74,7 +74,7 @@ Rectangle {
                             fill: parent
                             margins: units.smallSpacing * 2
                         }
-                        source: model.screenshot
+                        source: model.screenshot || ""
                         Rectangle {
                             anchors {
                                 left: parent.left
@@ -95,8 +95,6 @@ Rectangle {
                             QtControls.Label {
                                 anchors {
                                     horizontalCenter: parent.horizontalCenter
-                                    top: icon.bottom
-                                    topMargin: units.gridUnit
                                 }
                                 color: image.status == Image.Ready ? "white" : "gray"
                                 text: model.display
