@@ -104,7 +104,7 @@ PlasmaCore.FrameSvgItem {
         //Base the left/right fixedMargins on height as well, to have a good radial symmetry
         containmentParent.anchors.leftMargin = Math.min(root.fixedMargins.left, Math.max(1, root.height - units.iconSizes.smallMedium));
 
-        containmentParent.anchors.leftMargin = Math.min(root.fixedMargins.left, Math.max(1, root.height - units.iconSizes.smallMedium));
+        containmentParent.anchors.rightMargin = Math.min(root.fixedMargins.bottom, Math.max(1, root.height - units.iconSizes.smallMedium));
     }
 
     onContainmentChanged: {
