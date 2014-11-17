@@ -52,7 +52,8 @@ KdePlatformDependent::KdePlatformDependent()
 //         locale->insertCatalog("attica_kde");
 //     }
 
-    m_accessManager = new KIO::Integration::AccessManager(this);
+    // FIXME: Investigate how to not leak this instance witohut crashing.
+    m_accessManager = new KIO::Integration::AccessManager(0);
 }
 
 KdePlatformDependent::~KdePlatformDependent()
@@ -65,13 +66,13 @@ bool KdePlatformDependent::openWallet(bool force)
     if (m_wallet) {
         return true;
     }
-    
+
     QString networkWallet = KWallet::Wallet::NetworkWallet();
     // if not forced, or the folder doesn't exist, don't try to open the wallet
     if (force || (!KWallet::Wallet::folderDoesNotExist(networkWallet, "Attica"))) {
         m_wallet = KWallet::Wallet::openWallet(networkWallet, 0);
     }
-    
+
     if (m_wallet) {
         m_wallet->createFolder("Attica");
         m_wallet->setFolder("Attica");
@@ -109,13 +110,13 @@ bool KdePlatformDependent::saveCredentials(const QUrl& baseUrl, const QString& u
     m_passwords[baseUrl.toString()] = QPair<QString, QString> (user, password);
 
     if (!m_wallet && !openWallet(true)) {
-        
+
         if (KMessageBox::warningContinueCancel(0, i18n("Should the password be stored in the configuration file? This is unsafe.")
                 , i18n("Social Desktop Configuration"))
                 == KMessageBox::Cancel) {
             return false;
         }
-        
+
         // use kconfig
         KConfigGroup group(m_config, baseUrl.toString());
         group.writeEntry("user", user);
@@ -123,18 +124,18 @@ bool KdePlatformDependent::saveCredentials(const QUrl& baseUrl, const QString& u
         kDebug() << "Saved credentials in KConfig";
         return true;
     }
-    
+
     // Remove the entry when user name is empty
     if (user.isEmpty()) {
         m_wallet->removeEntry(baseUrl.toString());
         return true;
     }
-    
+
     QMap<QString, QString> entries;
     entries.insert("user", user);
     entries.insert("password", password);
     kDebug() << "Saved credentials in KWallet";
-    
+
     return !m_wallet->writeMap(baseUrl.toString(), entries);
 }
 
@@ -150,7 +151,7 @@ bool KdePlatformDependent::hasCredentials(const QUrl& baseUrl) const
         kDebug() << "Found credentials in KWallet";
         return true;
     }
-    
+
     KConfigGroup group(m_config, baseUrl.toString());
     QString user;
     user = group.readEntry("user", QString());
@@ -158,7 +159,7 @@ bool KdePlatformDependent::hasCredentials(const QUrl& baseUrl) const
         kDebug() << "Found credentials in KConfig";
         return true;
     }
-    
+
     kDebug() << "No credentials found";
     return false;
 }
@@ -180,11 +181,11 @@ bool KdePlatformDependent::loadCredentials(const QUrl& baseUrl, QString& user, Q
         }
         return false;
     }
-    
+
     if (!m_wallet && !openWallet(true)) {
         return false;
     }
-    
+
     QMap<QString, QString> entries;
     if (m_wallet->readMap(baseUrl.toString(), entries) != 0) {
         return false;
