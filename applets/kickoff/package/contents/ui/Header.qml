@@ -136,7 +136,7 @@ Item {
                 right: parent.right
             }
             verticalAlignment: Text.AlignBottom
-            text: i18n("Type to search...")
+            text: i18nc("Type is a verb here, not a noun", "Type to search...")
             Behavior on opacity { NumberAnimation { duration: searchWidget.animationDuration; easing.type: Easing.InOutQuad; } }
             Behavior on y { NumberAnimation { duration: searchWidget.animationDuration; easing.type: Easing.InOutQuad; } }
         }
