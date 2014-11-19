@@ -164,7 +164,7 @@ void KCMSplashScreen::save()
 
 void KCMSplashScreen::defaults()
 {
-    if (m_package.metadata().isValid()) {
+    if (!m_package.metadata().isValid()) {
         return;
     }
     setSelectedPlugin(m_package.metadata().pluginName());
