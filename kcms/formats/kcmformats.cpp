@@ -86,6 +86,7 @@ void KCMFormats::load()
 
 void KCMFormats::initCombo(QComboBox *combo, const QList<QLocale> & allLocales)
 {
+    combo->clear();
     const QString clabel = i18n("No change");
     combo->addItem(clabel, QString());
     foreach(const QLocale & l, allLocales) {
