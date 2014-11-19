@@ -23,6 +23,7 @@
 
 #include <plasma/svg.h>
 #include <plasma/theme.h>
+#include <KFontUtils>
 
 #include <QStandardPaths>
 #include <QStringList>
@@ -188,64 +189,18 @@ QString getPixmapKey(const KeyboardConfig& keyboardConfig)
 void Flags::drawLabel(QPainter& painter, const QString& layoutText, bool flagShown)
 {
 	QFont font = painter.font();
-
     QRect rect = painter.window();
-//	int fontSize = layoutText.length() == 2
-//			? height * 7 / 10
-//			: height * 5 / 10;
 
-	int fontSize = rect.height();// * 7 /10;
-
-	font.setPixelSize(fontSize);
-	font.setWeight(QFont::DemiBold);
-
-	QFontMetrics fm = painter.fontMetrics();
-	int width = fm.width(layoutText);
-
-	if( width > rect.width() * 2 / 3 ) {
-		fontSize = round( (double)fontSize * ((double)rect.width()*2/3) / width );
-	}
-	
-	fontSize = qMax(fontSize, QFontDatabase::systemFont(QFontDatabase::SmallestReadableFont).pixelSize());
-	font.setPixelSize(fontSize);
+	font.setPointSize(KFontUtils::adaptFontSize(painter, layoutText, rect.size(), rect.height()));
 
 	// we init svg so that we get notification about theme change
 	getSvg();
 
-    QColor textColor = flagShown ? Qt::black : Plasma::Theme().color(Plasma::Theme::TextColor);
+    const QColor textColor = flagShown ? Qt::black : Plasma::Theme().color(Plasma::Theme::TextColor);
 
-    auto shadowText = [&font, &textColor, &rect](QString text) {
-        //don't try to paint stuff on a future null pixmap because the text is empty
-        if (text.isEmpty()) {
-            return QPixmap();
-        }
-
-        // Draw text
-        QFontMetrics fm(font);
-        QRect textRect = fm.boundingRect(text);
-        QPixmap textPixmap(textRect.width(), fm.height());
-        textPixmap.fill(Qt::transparent);
-        QPainter p(&textPixmap);
-        p.setPen(textColor);
-        p.setFont(font);
-        // FIXME: the center alignment here is odd: the rect should be the size needed by
-        //        the text, but for some fonts and configurations this is off by a pixel or so
-        //        and "centering" the text painting 'fixes' that. Need to research why
-        //        this is the case and determine if we should be painting it differently here,
-        //        doing soething different with the boundingRect call or if it's a problem
-        //        in Qt itself
-        p.drawText(rect, Qt::AlignCenter, text);
-        p.end();
-
-        return textPixmap;
-    };
-
-    //    QPixmap pixmap = Plasma::PaintUtils::texturedText(layoutText, font, svg);
-    QPixmap labelPixmap = shadowText(layoutText);
-
-    int y = round((rect.height() - labelPixmap.height()) / 2.0);
-    int x = round((rect.width() - labelPixmap.width()) / 2.0);
-    painter.drawPixmap(QPoint(x, y), labelPixmap);
+    painter.setPen(textColor);
+    painter.setFont(font);
+    painter.drawText(rect, Qt::AlignCenter, layoutText);
 }
 
 const QIcon Flags::getIconWithText(const LayoutUnit& layoutUnit, const KeyboardConfig& keyboardConfig)
