@@ -33,13 +33,10 @@
 #include "kcmlaunch.h"
 #include "kwin_interface.h"
 #include <KPluginFactory>
-#include <KPluginLoader>
 
 K_PLUGIN_FACTORY(LaunchFactory,
         registerPlugin<LaunchConfig>();
         )
-K_EXPORT_PLUGIN(LaunchFactory("kcmlaunch"))
-
 static const int s_startupDefaultTimeout = 5;
 
 
@@ -206,13 +203,13 @@ LaunchConfig::save()
   void
 LaunchConfig::defaults()
 {
-  cb_busyCursor->setCurrentIndex(2);
+  cb_busyCursor->setCurrentIndex(3); // bouncing cursor
   cb_taskbarButton->setChecked( (bool)(Default & TaskbarButton) );
 
   sb_cursorTimeout->setValue( s_startupDefaultTimeout );
   sb_taskbarTimeout->setValue( s_startupDefaultTimeout );
 
-  slotBusyCursor( 2 );
+  slotBusyCursor(3);
   slotTaskbarButton( (bool)(Default & TaskbarButton) );
 
   checkChanged();
