@@ -212,13 +212,6 @@ void Flags::drawLabel(QPainter& painter, const QString& layoutText, bool flagSho
 	}
 	font.setPixelSize(fontSize);
 
-#ifdef DONT_USE_PLASMA
-	painter.setFont(font);
-	painter.setPen(Qt::white);
-	painter.drawText(QRect(rect).adust(1,1,0,0), Qt::AlignCenter | Qt::AlignHCenter, layoutText);
-	painter.setPen(Qt::black);
-	painter.drawText(rect, Qt::AlignCenter | Qt::AlignHCenter, layoutText);
-#else
 	// we init svg so that we get notification about theme change
 	getSvg();
 
@@ -258,7 +251,6 @@ void Flags::drawLabel(QPainter& painter, const QString& layoutText, bool flagSho
     int y = round((rect.height() - labelPixmap.height()) / 2.0);
     int x = round((rect.width() - labelPixmap.width()) / 2.0);
     painter.drawPixmap(QPoint(x, y), labelPixmap);
-#endif
 }
 
 const QIcon Flags::getIconWithText(const LayoutUnit& layoutUnit, const KeyboardConfig& keyboardConfig)
