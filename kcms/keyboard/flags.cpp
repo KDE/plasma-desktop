@@ -206,20 +206,15 @@ void Flags::drawLabel(QPainter& painter, const QString& layoutText, bool flagSho
 		fontSize = round( (double)fontSize * ((double)rect.width()*2/3) / width );
 	}
 	
-	int smallestReadableSize = QFontDatabase::systemFont(QFontDatabase::SmallestReadableFont).pixelSize(); //smallestReadableFont().pixelSize();
-	if( fontSize < smallestReadableSize ) {
-		fontSize = smallestReadableSize;
-	}
+	fontSize = qMax(fontSize, QFontDatabase::systemFont(QFontDatabase::SmallestReadableFont).pixelSize());
 	font.setPixelSize(fontSize);
 
 	// we init svg so that we get notification about theme change
 	getSvg();
 
-    Plasma::Theme theme;
-    QColor textColor = flagShown ? Qt::black : theme.color(Plasma::Theme::TextColor);
-    QPoint offset = QPoint(0, 0);
+    QColor textColor = flagShown ? Qt::black : Plasma::Theme().color(Plasma::Theme::TextColor);
 
-    auto shadowText = [&font, &textColor, &offset, &rect](QString text) {
+    auto shadowText = [&font, &textColor, &rect](QString text) {
         //don't try to paint stuff on a future null pixmap because the text is empty
         if (text.isEmpty()) {
             return QPixmap();
@@ -255,8 +250,8 @@ void Flags::drawLabel(QPainter& painter, const QString& layoutText, bool flagSho
 
 const QIcon Flags::getIconWithText(const LayoutUnit& layoutUnit, const KeyboardConfig& keyboardConfig)
 {
-	QString keySuffix(getPixmapKey(keyboardConfig));
-	QString key(layoutUnit.toString() + keySuffix);
+	const QString keySuffix(getPixmapKey(keyboardConfig));
+	const QString key(layoutUnit.toString() + keySuffix);
 	if( iconOrTextMap.contains(key) ) {
 		return iconOrTextMap[ key ];
 	}
