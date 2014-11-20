@@ -25,6 +25,8 @@ public:
     ~DesktopThemeDetails();
 
     void reloadConfig();
+    void resetToDefaultTheme();
+    void reloadModel();
 
 public Q_SLOTS:
     void replacementItemChanged();

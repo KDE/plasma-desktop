@@ -112,7 +112,16 @@ void DesktopThemeDetails::reloadConfig()
     KConfigGroup cfg = KConfigGroup(KSharedConfig::openConfig("plasmarc"), "Theme");
     const QString theme = cfg.readEntry("name", "default");
     m_theme->setCurrentIndex(m_themeModel->indexOf(theme));
+}
 
+void DesktopThemeDetails::resetToDefaultTheme()
+{
+    m_theme->setCurrentIndex(m_themeModel->indexOf("default"));
+}
+
+void DesktopThemeDetails::reloadModel()
+{
+    m_themeModel->reload();
 }
 
 void DesktopThemeDetails::save()
@@ -300,7 +309,6 @@ void DesktopThemeDetails::exportTheme()
             }
         }
     }
-
 }
 
 void DesktopThemeDetails::loadThemeItems()

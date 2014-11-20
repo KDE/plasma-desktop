@@ -80,7 +80,6 @@ private:
 
     ThemeModel* m_themeModel;
     Plasma::Theme *m_defaultTheme;
-    QProcess *m_installProcess;
 };
 
 #endif // KCMDESKTOPTHEME_H
