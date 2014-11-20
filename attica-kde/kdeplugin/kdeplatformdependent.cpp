@@ -24,15 +24,14 @@
 
 #include "kdeplatformdependent.h"
 
-#include <QtCore/QDebug>
+#include <QDebug>
 
 #include <KConfigGroup>
 #include <kcomponentdata.h>
 #include <KDebug>
 #include <KWallet/Wallet>
 #include <KGlobal>
-#include <kcmultidialog.h>
-#include <klocale.h>
+#include <KLocalizedString>
 #include <KStringHandler>
 #include <KMessageBox>
 
@@ -45,12 +44,6 @@ KdePlatformDependent::KdePlatformDependent()
     if (!KGlobal::hasMainComponent()) {
         KComponentData componentData("attica_kde");
     }
-
-//     TODO: re-enable, see http://community.kde.org/Frameworks/Porting_Notes
-//     KLocale* locale = KGlobal::locale();
-//     if (locale) {
-//         locale->insertCatalog("attica_kde");
-//     }
 
     // FIXME: Investigate how to not leak this instance witohut crashing.
     m_accessManager = new KIO::Integration::AccessManager(0);
