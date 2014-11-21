@@ -51,6 +51,10 @@ class FunnelModel : public AbstractModel
     Q_SIGNALS:
         void sourceModelChanged() const;
 
+    private Q_SLOTS:
+        void sourceRowsAboutToBeRemoved(const QModelIndex &parent, int first, int last);
+        void sourceRowsRemoved(const QModelIndex &parent, int first, int last);
+
     private:
         QPointer<AbstractModel> m_sourceModel;
 };
