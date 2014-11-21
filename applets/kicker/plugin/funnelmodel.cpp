@@ -100,7 +100,17 @@ void FunnelModel::setSourceModel(AbstractModel *model)
     int oldCount = m_sourceModel->count();
     int newCount = model->count();
 
+    disconnect(model, SIGNAL(rowsAboutToBeRemoved(QModelIndex,int,int)),
+            this, SLOT(sourceRowsAboutToBeRemoved(QModelIndex,int,int)));
+    disconnect(m_sourceModel, SIGNAL(rowsRemoved(QModelIndex,int,int)),
+            this, SLOT(sourceRowsRemoved(QModelIndex,int,int)));
+
     m_sourceModel = model;
+
+    connect(m_sourceModel, SIGNAL(rowsAboutToBeRemoved(QModelIndex,int,int)),
+            this, SLOT(sourceRowsAboutToBeRemoved(QModelIndex,int,int)));
+    connect(m_sourceModel, SIGNAL(rowsRemoved(QModelIndex,int,int)),
+            this, SLOT(sourceRowsRemoved(QModelIndex,int,int)));
 
     if (newCount > oldCount) {
         beginInsertRows(QModelIndex(), oldCount, newCount - 1);
@@ -133,5 +143,21 @@ void FunnelModel::reset()
 {
     emit beginResetModel();
     emit endResetModel();
+    emit countChanged();
+}
+
+void FunnelModel::sourceRowsAboutToBeRemoved(const QModelIndex &parent, int first, int last)
+{
+    emit beginRemoveRows(parent, first, last);
+}
+
+void FunnelModel::sourceRowsRemoved(const QModelIndex &parent, int first, int last)
+{
+    Q_UNUSED(parent)
+    Q_UNUSED(first)
+    Q_UNUSED(last)
+
+    emit endRemoveRows();
+
     emit countChanged();
 }
