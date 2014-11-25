@@ -11,13 +11,16 @@ if (X11_Xinput_FOUND)
 
     kconfig_add_kcfg_files(kded_ktouchpadenabler_SRCS settings.kcfgc )
 
-    kde4_add_plugin(kded_ktouchpadenabler
-        ${kded_ktouchpadenabler_SRCS}
-    )
+    add_library(kded_ktouchpadenabler MODULE ${kded_ktouchpadenabler_SRCS} )
 
     target_link_libraries(kded_ktouchpadenabler 
-        
-        ${KDE4_KDEUI_LIBS}
+        Qt5::X11Extras
+        KF5::ConfigGui
+        KF5::DBusAddons
+        KF5::GlobalAccel
+        KF5::I18n
+        KF5::Notifications
+        KF5::Service
         ${X11_X11_LIB}
         ${X11_Xinput_LIB}
     )

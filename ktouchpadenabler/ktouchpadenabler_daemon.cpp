@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2011, 2012 Albert Astals Cid <aacid@kde.org>            *
+ *   Copyright (C) 2011, 2012, 2014 Albert Astals Cid <aacid@kde.org>      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -21,53 +21,50 @@
 
 #include "settings.h"
 
-#include <KApplication>
-#include <KDebug>
+#include <KGlobalAccel>
 #include <KLocalizedString>
 #include <KNotification>
 #include <KPluginFactory>
 
-#include <QWidget>
+#include <QAction>
+#include <QX11Info>
 
 #include <X11/Xatom.h>
 #include <X11/extensions/XInput2.h>
-#include <X11/XF86keysym.h>
 
-class TouchpadEnablerDaemonPrivate : public QWidget
+class TouchpadEnablerDaemonPrivate : public QObject
 {
+Q_OBJECT
     public:
         TouchpadEnablerDaemonPrivate();
         ~TouchpadEnablerDaemonPrivate();
+
+        bool isOk() const { return ok; }
+
+    private Q_SLOTS:
+        void toggle();
+        void on();
+        void off();
         
-        bool initSuccessful() const { return m_keyCode != 0; }
-        
-        bool x11Event(XEvent *event);
-    
     private:
-        enum TouchpadKey { ToggleKey = 0, OnKey, OffKey };
-        static const int nKeys = OffKey + 1;
-        
         bool getEnabled(bool *currentValue) const;
-        void setEnabled(bool enabled) const;
+        void setEnabled(bool enabled, bool showNotification) const;
         
         Display *m_display;
-        KeyCode m_keyCode[nKeys];
         int m_deviceId;
         Atom m_enabledProperty;
+        bool ok;
 };
 
 TouchpadEnablerDaemonPrivate::TouchpadEnablerDaemonPrivate()
 {
     bool foundTouchpad = false;
     bool foundMoreThanOneTouchpad = false;
-    
-    for (int i = 0; i < nKeys; ++i) {
-        m_keyCode[i] = 0;
-    }
+    ok = false;
     
     m_display = QX11Info::display();
     if (!m_display) {
-        kWarning() << "Did not find a display to use. This should never happen, thus doing nothing. Please report a bug against ktouchpadenabler in http://bugs.kde.org";
+        qWarning() << "Did not find a display to use. This should never happen, thus doing nothing. Please report a bug against ktouchpadenabler in http://bugs.kde.org";
         return;
     }
     
@@ -99,31 +96,43 @@ TouchpadEnablerDaemonPrivate::TouchpadEnablerDaemonPrivate()
             XIFreeDeviceInfo(devices);
         }
     } else {
-        kWarning() << "Could not get atoms for 'Synaptics Off' or 'Device Enabled'. This should never happen, thus doing nothing. Please report a bug against ktouchpadenabler in http://bugs.kde.org";
+        qWarning() << "Could not get atoms for 'Synaptics Off' or 'Device Enabled'. This should never happen, thus doing nothing. Please report a bug against ktouchpadenabler in http://bugs.kde.org";
     }
     
     if (foundTouchpad) {
         if (!foundMoreThanOneTouchpad) {
-            m_keyCode[ToggleKey] = XKeysymToKeycode(m_display, XF86XK_TouchpadToggle);
-            m_keyCode[OnKey] = XKeysymToKeycode(m_display, XF86XK_TouchpadOn);
-            m_keyCode[OffKey] = XKeysymToKeycode(m_display, XF86XK_TouchpadOff);
-            for (int i = 0; i < nKeys; ++i) {
-                if (m_keyCode[i] != 0) {
-                    const int grabResult = XGrabKey(m_display, m_keyCode[i], AnyModifier, QX11Info::appRootWindow(), False, GrabModeAsync, GrabModeAsync);
-                    if (grabResult == BadAccess || grabResult == BadValue || grabResult == BadWindow) {
-                        kDebug() << "Could not grab ktouchpadenabler key index" << i <<". You probably have some other program grabbig it, if you are sure you don't have any, please report a bug against ktouchpadenabler in http://bugs.kde.org";
-                        m_keyCode[i] = 0;
-                    } else {
-                        bool currentlyEnabled;
-                        if (getEnabled(&currentlyEnabled)) {
-                            const bool newValue = ktouchpadenabler::Settings::self()->touchpadEnabled();
-                            if (newValue != currentlyEnabled) {
-                                setEnabled(newValue);
-                            }
-                        }
+            QAction *toggleAction = new QAction(i18n("Toggle touchpad enabled state"), this);
+            toggleAction->setObjectName("ktouchpadenabler_toggle");
+            connect(toggleAction, &QAction::triggered, this, &TouchpadEnablerDaemonPrivate::toggle);
+            bool okToggle = KGlobalAccel::setGlobalShortcut(toggleAction, QKeySequence(Qt::Key_TouchpadToggle));
+            if (!okToggle) {
+                qDebug() << "Could set global shortcut to Qt::Key_TouchpadToggle. You probably have some other program using it, if you are sure you don't have any, please report a bug against ktouchpadenabler in http://bugs.kde.org";
+            }
+
+            QAction *onAction = new QAction(i18n("Set touchpad on"), this);
+            onAction->setObjectName("ktouchpadenabler_on");
+            connect(onAction, &QAction::triggered, this, &TouchpadEnablerDaemonPrivate::on);
+            bool okOn = KGlobalAccel::setGlobalShortcut(onAction, QKeySequence(Qt::Key_TouchpadOn));
+            if (!okOn) {
+                qDebug() << "Could set global shortcut to Qt::Key_TouchpadOn. You probably have some other program using it, if you are sure you don't have any, please report a bug against ktouchpadenabler in http://bugs.kde.org";
+            }
+
+            QAction *offAction = new QAction(i18n("Set touchpad off"), this);
+            offAction->setObjectName("ktouchpadenabler_off");
+            connect(offAction, &QAction::triggered, this, &TouchpadEnablerDaemonPrivate::off);
+            bool okOff = KGlobalAccel::setGlobalShortcut(offAction, QKeySequence(Qt::Key_TouchpadOff));
+            if (!okOff) {
+                qDebug() << "Could set global shortcut to Qt::Key_TouchpadOff. You probably have some other program using it, if you are sure you don't have any, please report a bug against ktouchpadenabler in http://bugs.kde.org";
+            }
+
+            ok = okToggle || okOn || okOff;
+            if (ok) {
+                bool currentlyEnabled;
+                if (getEnabled(&currentlyEnabled)) {
+                    const bool newValue = ktouchpadenabler::Settings::self()->touchpadEnabled();
+                    if (newValue != currentlyEnabled) {
+                        setEnabled(newValue, false);
                     }
-                } else {
-                    kWarning() << "Could not match ktouchpadenabler key index" << i << "to a Keycode. This should never happen. Please report a bug against ktouchpadenabler in http://bugs.kde.org";
                 }
             }
         } else {
@@ -131,47 +140,37 @@ TouchpadEnablerDaemonPrivate::TouchpadEnablerDaemonPrivate()
             notification->sendEvent();
         }
     } else {
-        kDebug() << "Did not find a touchpad. If you have one, please report a bug against ktouchpadenabler in http://bugs.kde.org";
+        qDebug() << "Did not find a touchpad. If you have one, please report a bug against ktouchpadenabler in http://bugs.kde.org";
     }
 }
 
 TouchpadEnablerDaemonPrivate::~TouchpadEnablerDaemonPrivate()
 {
-    for (int i = 0; i < nKeys; ++i) {
-        if (m_keyCode[i] != 0) {
-            XUngrabKey(m_display, m_keyCode[i], 0 /* No modifiers */, QX11Info::appRootWindow());
-        }
+}
+
+void TouchpadEnablerDaemonPrivate::toggle()
+{
+    bool currentlyEnabled;
+    if (getEnabled(&currentlyEnabled)) {
+        bool newValue = !currentlyEnabled;
+        setEnabled(newValue, true);
     }
 }
 
-bool TouchpadEnablerDaemonPrivate::x11Event(XEvent *event)
+void TouchpadEnablerDaemonPrivate::on()
 {
-    if (event->type == KeyPress) {
-        for (int i = 0; i < nKeys; ++i) {
-            if (event->xkey.keycode == m_keyCode[i]) {
-                bool currentlyEnabled;
-                if (getEnabled(&currentlyEnabled)) {
-                    bool newValue;
-                    switch (i) {
-                        case ToggleKey: newValue = !currentlyEnabled; break;
-                        case OnKey:     newValue = true; break;
-                        case OffKey:    newValue = false; break;
-                    }
-                    if (newValue != currentlyEnabled) {
-                        setEnabled(newValue);
-                        
-                        KNotification *notification = KNotification::event(KNotification::Notification, i18n("Touchpad status"), newValue ? i18n("Touchpad enabled") : i18n("Touchpad disabled"));
-                        notification->sendEvent();
-                        
-                        ktouchpadenabler::Settings::self()->setTouchpadEnabled(newValue);
-                        ktouchpadenabler::Settings::self()->writeConfig();
-                    }
-                    return true;
-                }
-            }
-        }
+    bool currentlyEnabled;
+    if (getEnabled(&currentlyEnabled) && !currentlyEnabled) {
+        setEnabled(true, true);
     }
-    return false;
+}
+
+void TouchpadEnablerDaemonPrivate::off()
+{
+    bool currentlyEnabled;
+    if (getEnabled(&currentlyEnabled) && currentlyEnabled) {
+        setEnabled(false, true);
+    }
 }
 
 bool TouchpadEnablerDaemonPrivate::getEnabled(bool *enabled) const
@@ -189,11 +188,19 @@ bool TouchpadEnablerDaemonPrivate::getEnabled(bool *enabled) const
     }
 }
 
-void TouchpadEnablerDaemonPrivate::setEnabled(bool enabled) const
+void TouchpadEnablerDaemonPrivate::setEnabled(bool enabled, bool showNotification) const
 {
     unsigned char newValue = enabled ? 1 : 0;
     XIChangeProperty(m_display, m_deviceId, m_enabledProperty, XA_INTEGER, 8, PropModeReplace, &newValue, 1);
     XFlush(m_display);
+
+    if (showNotification) {
+        KNotification *notification = KNotification::event(KNotification::Notification, i18n("Touchpad status"), enabled ? i18n("Touchpad enabled") : i18n("Touchpad disabled"));
+        notification->sendEvent();
+
+        ktouchpadenabler::Settings::self()->setTouchpadEnabled(newValue);
+        ktouchpadenabler::Settings::self()->save();
+    }
 }
 
 TouchpadEnablerDaemon::TouchpadEnablerDaemon(QObject *parent, const QList<QVariant>&)
@@ -201,9 +208,7 @@ TouchpadEnablerDaemon::TouchpadEnablerDaemon(QObject *parent, const QList<QVaria
 {
     d = new TouchpadEnablerDaemonPrivate();
     
-    if (d->initSuccessful()) {
-        kapp->installX11EventFilter(d);
-    } else {
+    if (!d->isOk()) {
         delete d;
         d = 0;
     }
@@ -216,3 +221,5 @@ TouchpadEnablerDaemon::~TouchpadEnablerDaemon()
 
 K_PLUGIN_FACTORY(TouchpadEnablerFactory, registerPlugin<TouchpadEnablerDaemon>();)
 K_EXPORT_PLUGIN(TouchpadEnablerFactory("ktouchpadenabler"))
+
+#include "ktouchpadenabler_daemon.moc"
