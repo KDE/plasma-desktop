@@ -26,9 +26,8 @@ import "../activitymanager"
 import "../explorer"
 
 
-Rectangle {
+Item {
     id: root
-    color: Qt.rgba(0, 0, 0, 0.2)
     width: 1024
     height: 768
 
@@ -54,6 +53,13 @@ Rectangle {
             sidePanelStack.setSource(Qt.resolvedUrl("../activitymanager/ActivityManager.qml"))
             sidePanelStack.state = "activityManager";
         }
+    }
+
+    Rectangle {
+        anchors.fill: parent
+        visible: desktop.dashboardShown
+        opacity: 0.2
+        color: "black"
     }
 
     PlasmaCore.Dialog {
@@ -129,17 +135,15 @@ Rectangle {
     }
 
     onWallpaperChanged: {
-        wallpaper.opacity = desktop.dashboardShown ? 0.3 : 1
         if (!internal.oldWallpaper) {
             internal.oldWallpaper = wallpaper;
         }
     }
 
-    Connections {
-        target: desktop
-        onDashboardShownChanged: {
-            wallpaper.opacity = desktop.dashboardShown ? 0.3 : 1
-        }
+    Binding {
+        target: wallpaper
+        property: "opacity"
+        value: desktop.dashboardShown ? 0.3 : 1
     }
 
     //some properties that shouldn't be accessible from elsewhere
