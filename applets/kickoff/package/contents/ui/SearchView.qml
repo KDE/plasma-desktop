@@ -63,6 +63,7 @@ Item {
 
                 onQueryChanged: {
                     searchView.model.setQuery(header.query)
+                    searchView.currentIndex = 0
                 }
             }
         } // searchView
