@@ -32,7 +32,7 @@ PlasmaCore.Dialog {
     property int highlightCandidate: -1
     property int baseSize: theme.mSize(theme.defaultFont).height
     property rect position
-    
+
     onPositionChanged : updatePosition();
     onWidthChanged : updatePosition();
     onHeightChanged : updatePosition();
@@ -71,7 +71,7 @@ PlasmaCore.Dialog {
                 }
             }
         }
-      
+
         GridLayout {
             flow: inputpanel.verticalLayout ? GridLayout.TopToBottom : GridLayout.LeftToRight
             columns: inputpanel.verticalLayout ? 1 : tableList.count + 1
@@ -215,10 +215,10 @@ PlasmaCore.Dialog {
          if (x + inputpanel.width > rect.x + rect.width) {
              x = rect.x + rect.width - inputpanel.width;
          }
-         
+
          if (y + inputpanel.height > rect.y + rect.height) {
              if (y > rect.y + rect.height) {
-                 y = rect.y - window.height - 40;
+                 y = rect.y - inputpanel.height - 40;
              } else {
                  y = y - inputpanel.height - (position.height == 0 ? 40 : position.height);
              }
