@@ -63,7 +63,7 @@ DragDrop.DropArea {
         topMargin: plasmoid.availableScreenRect ? plasmoid.availableScreenRect.y : 0
 
         rightMargin: plasmoid.availableScreenRect && parent ? parent.width - (plasmoid.availableScreenRect.x + plasmoid.availableScreenRect.width) : 0
-        bottomMargin: plasmoid.availableScreenRect && parent ? parent.height - (plasmoid.availableScreenRect.y + plasmoid.availableScreenRect.height) : 0
+        bottomMargin: itemView.overflowing && plasmoid.availableScreenRect && parent ? parent.height - (plasmoid.availableScreenRect.y + plasmoid.availableScreenRect.height) : 0
     }
 
     function updateContextualActions() {
