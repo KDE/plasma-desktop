@@ -49,6 +49,7 @@ FocusScope {
     property alias layoutDirection: gridView.layoutDirection
     property alias cellWidth: gridView.cellWidth
     property alias cellHeight: gridView.cellHeight
+    property alias overflowing: gridView.overflowing
     property alias scrollLeft: gridView.scrollLeft
     property alias scrollRight: gridView.scrollRight
     property alias scrollUp: gridView.scrollUp
@@ -333,6 +334,8 @@ FocusScope {
                 property int anchorIndex: 0
                 property bool ctrlPressed: false
                 property bool shiftPressed: false
+
+                property bool overflowing: (visibleArea.heightRatio < 1.0 || visibleArea.widthRatio < 1.0)
 
                 property bool scrollLeft: false
                 property bool scrollRight: false
@@ -727,14 +730,12 @@ FocusScope {
                     to = -1;
 
                     if (from == -1) {
-                        console.log("hit1");
                         continue;
                     }
 
                     var offset = dir.dragCursorOffset(positioner.map(from));
 
                     if (offset.x == -1) {
-                        console.log("hit2");
                         continue;
                     }
 
