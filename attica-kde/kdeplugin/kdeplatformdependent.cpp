@@ -30,7 +30,6 @@
 #include <kcomponentdata.h>
 #include <KDebug>
 #include <KWallet/Wallet>
-#include <KGlobal>
 #include <KLocalizedString>
 #include <KStringHandler>
 #include <KMessageBox>
@@ -40,11 +39,6 @@ using namespace Attica;
 KdePlatformDependent::KdePlatformDependent()
     : m_config(KSharedConfig::openConfig("atticarc")), m_accessManager(0), m_wallet(0)
 {
-    // when a plain Qt application loads this plugin, it needs a valid KGlobal object
-    if (!KGlobal::hasMainComponent()) {
-        KComponentData componentData("attica_kde");
-    }
-
     // FIXME: Investigate how to not leak this instance witohut crashing.
     m_accessManager = new KIO::Integration::AccessManager(0);
 }
