@@ -75,9 +75,13 @@ QPoint SubMenu::popupPosition(QQuickItem* item, const QSize& size)
     pos.setY(pos.y() - margins()->property("top").toInt());
 
     if (pos.y() + size.height() > avail.bottom()) {
-        int overshoot = (avail.bottom() - (pos.y() + size.height())) * -1;
+       int overshoot = std::ceil(((avail.bottom() - (pos.y() + size.height())) * -1) / item->height()) * item->height();
 
+<<<<<<< Updated upstream
         pos.setY(pos.y() - overshoot - item->height() + margins()->property("bottom").toInt());
+=======
+        pos.setY(pos.y() - overshoot);
+>>>>>>> Stashed changes
     }
 
     return pos.toPoint();
