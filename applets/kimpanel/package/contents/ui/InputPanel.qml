@@ -84,6 +84,8 @@ PlasmaCore.Dialog {
                 delegate: Item {
                     Layout.minimumWidth: candidate.width
                     Layout.minimumHeight: candidate.height
+                    Layout.maximumWidth: candidate.width
+                    Layout.maximumHeight: candidate.height
                     Item {
                         id: candidate
                         width: childrenRect.width
