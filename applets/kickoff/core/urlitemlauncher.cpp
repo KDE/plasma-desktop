@@ -20,15 +20,21 @@
 
 #include "urlitemlauncher.h"
 
+#include <config-X11.h>
+
 // Qt
 #include <QFileInfo>
 #include <QHash>
 #include <QModelIndex>
+#if HAVE_X11
+#include <QX11Info>
+#endif
 
 // KDE
 #include <KAuthorized>
 #include <QDebug>
 #include <KRun>
+#include <KStartupInfo>
 #include <KUrl>
 #include <Solid/Device>
 #include <Solid/StorageAccess>
@@ -59,8 +65,16 @@ public:
             krunner.display();
             return true;
         }
+        // fetch current timestamp for creating ASN id.
+        // TODO: get timestamp from input event triggering the openUrl
+        quint32 timestamp = 0;
+#if HAVE_X11
+        if (QX11Info::isPlatformX11()) {
+            timestamp = QX11Info::appUserTime();
+        }
+#endif
 
-        new KRun(url, 0);
+        new KRun(url, 0, true, KStartupInfo::createNewStartupIdForTimestamp(timestamp));
         return true;
     }
 };
