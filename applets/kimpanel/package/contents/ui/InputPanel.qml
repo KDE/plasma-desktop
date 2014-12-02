@@ -28,6 +28,7 @@ PlasmaCore.Dialog {
     id: inputpanel
     type: PlasmaCore.Dialog.PopupMenu
     flags: Qt.ToolTip | Qt.WindowStaysOnTopHint | Qt.WindowDoesNotAcceptFocus
+    location: PlasmaCore.Types.Floating
     property bool verticalLayout: false
     property int highlightCandidate: -1
     property int baseSize: theme.mSize(theme.defaultFont).height
@@ -38,19 +39,18 @@ PlasmaCore.Dialog {
     onHeightChanged : updatePosition();
 
     mainItem: Column {
-        width: childrenRect.width
-        height: childrenRect.height
-        Item {
+        Layout.minimumWidth: childrenRect.width
+        Layout.minimumHeight: childrenRect.height
+        Layout.maximumWidth: childrenRect.width
+        Layout.maximumHeight: childrenRect.height
+        Row {
             id: textLabel
             width: auxLabel.width + preedit.width
             height: Math.max(preedit.height, auxLabel.height)
             PlasmaComponents.Label {
                 id: auxLabel
-                anchors.top: parent.top
             }
             Item {
-                anchors.top: parent.top
-                anchors.left: auxLabel.right
                 id: preedit
                 width: preeditLabel1.width + preeditLabel2.width + 2
                 height: Math.max(preeditLabel1.height, preeditLabel2.height)
@@ -87,26 +87,24 @@ PlasmaCore.Dialog {
                     dynamicRoles: true
                 }
                 delegate: Item {
+                    width: candidate.width
+                    height: candidate.height
                     Layout.minimumWidth: candidate.width
                     Layout.minimumHeight: candidate.height
                     Layout.maximumWidth: candidate.width
                     Layout.maximumHeight: candidate.height
-                    Item {
+                    Row {
                         id: candidate
                         width: childrenRect.width
                         height: childrenRect.height
                         property bool highlight: (inputpanel.highlightCandidate == model.index) != candidateMouseArea.containsMouse
                         PlasmaComponents.Label {
                             id: tableLabel
-                            anchors.top: parent.top
-                            anchors.left: parent.left
-                            text: model.label 
+                            text: model.label
                             color: candidate.highlight ? theme.textColor : theme.highlightColor
                         }
                         PlasmaComponents.Label {
                             id: textLabel
-                            anchors.top: parent.top
-                            anchors.left: tableLabel.right
                             text: model.text
                             color: candidate.highlight ? theme.highlightColor : theme.textColor
                         }
@@ -121,8 +119,12 @@ PlasmaCore.Dialog {
             }
             Row {
                 id: button
-                width: childrenRect.width
-                height: childrenRect.height
+                width: inputpanel.baseSize * 2
+                height: inputpanel.baseSize
+                Layout.minimumWidth: width
+                Layout.minimumHeight: height
+                Layout.maximumWidth: width
+                Layout.maximumHeight: height
                 PlasmaCore.IconItem {
                     id: prevButton
                     source: "arrow-left"
@@ -184,8 +186,8 @@ PlasmaCore.Dialog {
 
                  if (data["LookupTable"]) {
                      var table = data["LookupTable"];
-                     while (tableList.count > table.length) {
-                         tableList.remove(tableList.count - 1);
+                     if (table.length < tableList.count) {
+                         tableList.remove(table.length, tableList.count - table.length);
                      }
                      for (var i = 0; i < table.length; i ++) {
                          if (i >= tableList.count) {
