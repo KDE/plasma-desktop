@@ -40,12 +40,17 @@ PlasmaCore.Dialog {
     mainItem: Column {
         width: childrenRect.width
         height: childrenRect.height
-        Row {
+        Item {
+            id: textLabel
+            width: auxLabel.width + preedit.width
+            height: Math.max(preedit.height, auxLabel.height)
             PlasmaComponents.Label {
                 id: auxLabel
                 anchors.top: parent.top
             }
             Item {
+                anchors.top: parent.top
+                anchors.left: auxLabel.right
                 id: preedit
                 width: preeditLabel1.width + preeditLabel2.width + 2
                 height: Math.max(preeditLabel1.height, preeditLabel2.height)
