@@ -44,7 +44,6 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     Runner
 )
 
-find_package(KDecorations REQUIRED CONFIG)
 find_package(LibKWorkspace CONFIG REQUIRED)
 find_package(LibTaskManager CONFIG REQUIRED)
 find_package(KWinDBusInterface CONFIG REQUIRED)

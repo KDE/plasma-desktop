@@ -1,13 +1,6 @@
 # KI18N Translation Domain for this library
 add_definitions(-DTRANSLATION_DOMAIN=\"kcmstyle\")
 
-# needed for including kdecoration.h
-include_directories (
-    ${CMAKE_SOURCE_DIR}/kwin/libkwineffects
-    ${CMAKE_SOURCE_DIR}/kwin/libkdecorations
-    ${KDEBASE_WORKSPACE_BINARY_DIR}/kwin/libkwineffects
-)
-
 ########### next target ###############
 
 set(kcm_style_PART_SRCS ../krdb/krdb.cpp styleconfdialog.cpp kcmstyle.cpp)
@@ -30,7 +23,6 @@ target_link_libraries(kcm_style
     ${X11_LIBRARIES}
     KF5::KDELibs4Support
     KF5::NewStuff
-    kdecorations
 )
 
 install(TARGETS kcm_style  DESTINATION ${PLUGIN_INSTALL_DIR})

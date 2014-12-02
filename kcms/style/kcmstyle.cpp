@@ -47,9 +47,6 @@
 #include <KStandardDirs>
 #include <KNewStuff3/KNS3/DownloadDialog>
 #include <KConfigGroup>
-#if defined(Q_OS_UNIX) && !defined(Q_OS_MAC)
-#include <kdecoration.h>
-#endif
 
 
 #include <QFile>
@@ -435,23 +432,6 @@ void KCMStyle::save()
         notification->setText(i18n("Settings changes will take effect only on application restart"));
         notification->sendEvent();
     }
-
-#if defined(Q_OS_UNIX) && !defined(Q_OS_MAC)
-    // If user select ButtonVertical, we add (if needed) a button to titlebar
-    if (style == "ButtonVertical") {
-        KConfig _kwinConfig("kwinrc", KConfig::NoGlobals);
-        KConfigGroup kwinConfig(&_kwinConfig, "Style");
-        auto buttonsOnLeft = KDecorationOptions::readDecorationButtons(kwinConfig, "ButtonsOnLeft",
-                                                                       KDecorationOptions::defaultTitleButtonsLeft());
-        const auto buttonsOnRight = KDecorationOptions::readDecorationButtons(kwinConfig, "ButtonsOnRight",
-                                                                              KDecorationOptions::defaultTitleButtonsRight());
-        if (!buttonsOnLeft.contains(KDecorationDefines::DecorationButtonApplicationMenu) && !buttonsOnRight.contains(KDecorationDefines::DecorationButtonApplicationMenu)) {
-            buttonsOnLeft.prepend(KDecorationDefines::DecorationButtonApplicationMenu);
-        }
-        KDecorationOptions::writeDecorationButtons(kwinConfig, "ButtonsOnLeft", buttonsOnLeft);
-        kwinConfig.writeEntry("CustomButtonPositions", "true");
-    }
-#endif
 
     args = QList<QVariant>() << "appmenu" << (style != "InApplication");
     method = QDBusMessage::createMethodCall("org.kde.kded5",
