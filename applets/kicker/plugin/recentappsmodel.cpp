@@ -20,9 +20,16 @@
 #include "recentappsmodel.h"
 #include "actionlist.h"
 
+#include <config-X11.h>
+
+#if HAVE_X11
+#include <QX11Info>
+#endif
+
 #include <KLocalizedString>
 #include <KRun>
 #include <KService>
+#include <KStartupInfo>
 
 RecentAppsModel::RecentAppsModel(QObject *parent) : AbstractModel(parent)
 {
@@ -91,7 +98,15 @@ bool RecentAppsModel::trigger(int row, const QString &actionId, const QVariant &
             return false;
         }
 
-        bool ran = KRun::run(*service, QList<QUrl>(), 0);
+        quint32 timeStamp = 0;
+
+#if HAVE_X11
+        if (QX11Info::isPlatformX11()) {
+            timeStamp = QX11Info::appUserTime();
+        }
+#endif
+
+        bool ran = KRun::run(*service, QList<QUrl>(), 0, true, KStartupInfo::createNewStartupIdForTimestamp(timeStamp));
 
         if (ran) {
             addApp(storageId);

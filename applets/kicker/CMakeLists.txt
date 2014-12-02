@@ -53,6 +53,7 @@ target_link_libraries(kickerplugin
                       Qt5::Qml
                       Qt5::Quick
                       Qt5::Widgets # FIXME: Used for QFileDialog; can be removed when switching to Qt Quick Dialogs (see bug 334963).
+                      Qt5::X11Extras
                       KF5::ConfigCore
                       KF5::CoreAddons
                       KF5::I18n

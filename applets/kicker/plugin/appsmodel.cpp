@@ -28,16 +28,22 @@
 #include "findpackagenamejob.h"
 #endif
 
+#include <config-X11.h>
+
 #include <QTimer>
 #include <QProcess>
 #include <QQmlPropertyMap>
 #include <QStandardPaths>
+#if HAVE_X11
+#include <QX11Info>
+#endif
 
+#include <KJob>
 #include <KLocalizedString>
 #include <KRun>
 #include <KSycoca>
 #include <KShell>
-#include <KJob>
+#include <KStartupInfo>
 
 AppGroupEntry::AppGroupEntry(KServiceGroup::Ptr group, AppsModel *parentModel,
     bool flat, int appNameFormat)
@@ -303,7 +309,15 @@ bool AppsModel::trigger(int row, const QString &actionId, const QVariant &argume
             }
         }
     } else if (actionId.isEmpty() && service) {
-        bool ran = KRun::run(*service, QList<QUrl>(), 0);
+        quint32 timeStamp = 0;
+
+#if HAVE_X11
+        if (QX11Info::isPlatformX11()) {
+            timeStamp = QX11Info::appUserTime();
+        }
+#endif
+
+        bool ran = KRun::run(*service, QList<QUrl>(), 0, true, KStartupInfo::createNewStartupIdForTimestamp(timeStamp));
 
         if (ran) {
             emit appLaunched(service->storageId());

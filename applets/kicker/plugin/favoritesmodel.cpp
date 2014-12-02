@@ -21,10 +21,17 @@
 #include "actionlist.h"
 #include "appsmodel.h"
 
+#include <config-X11.h>
+
+#if HAVE_X11
+#include <QX11Info>
+#endif
+
 #include <KConfigGroup>
 #include <KMimeTypeTrader>
 #include <KRun>
 #include <KSharedConfig>
+#include <KStartupInfo>
 
 FavoritesModel::FavoritesModel(QObject *parent) : AbstractModel(parent)
 , m_sourceModel(0)
@@ -87,7 +94,15 @@ bool FavoritesModel::trigger(int row, const QString &actionId, const QVariant &a
     } else if (m_serviceCache.contains(favoritesId)) {
         KService::Ptr service = m_serviceCache[favoritesId];
 
-        bool ran = KRun::run(*service, QList<QUrl>(), 0);
+        quint32 timeStamp = 0;
+
+#if HAVE_X11
+        if (QX11Info::isPlatformX11()) {
+            timeStamp = QX11Info::appUserTime();
+        }
+#endif
+
+        bool ran = KRun::run(*service, QList<QUrl>(), 0, true, KStartupInfo::createNewStartupIdForTimestamp(timeStamp));
 
         if (ran) {
             emit appLaunched(service->storageId());
