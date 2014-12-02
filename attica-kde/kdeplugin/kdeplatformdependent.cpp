@@ -30,6 +30,7 @@
 #include <kcomponentdata.h>
 #include <KDebug>
 #include <KWallet/Wallet>
+#include <kcmultidialog.h>
 #include <KLocalizedString>
 #include <KStringHandler>
 #include <KMessageBox>
