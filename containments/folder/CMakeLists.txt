@@ -20,6 +20,7 @@ set(folderplugin_SRCS
     plugin/subdialog.cpp
     plugin/systemsettings.cpp
     plugin/viewpropertiesmenu.cpp
+    plugin/wheelinterceptor.cpp
     plugin/internallibkonq/konq_copytomenu.cpp
     plugin/internallibkonq/konq_dndpopupmenuplugin.cpp
     plugin/internallibkonq/konq_popupmenu.cpp

@@ -555,7 +555,7 @@ FocusScope {
                 }
 
                 Keys.onMenuPressed: {
-                     // FIXME TODO: Correct popup position.
+                    // FIXME TODO: Correct popup position.
                     return;
 
                     if (currentIndex != -1) {
@@ -697,6 +697,16 @@ FocusScope {
                     }
                 }
             }
+        }
+
+
+        Folder.WheelInterceptor {
+            anchors {
+                fill: parent
+            }
+
+            enabled: root.isContainment && !gridView.overflowing
+            destination: plasmoid
         }
 
         Folder.FolderModel {

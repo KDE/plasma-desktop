@@ -32,6 +32,7 @@
 #include "subdialog.h"
 #include "systemsettings.h"
 #include "viewpropertiesmenu.h"
+#include "wheelinterceptor.h"
 
 #include <QtQml>
 
@@ -52,6 +53,7 @@ void FolderPlugin::registerTypes(const char *uri)
     qmlRegisterType<SubDialog>(uri, 0, 1, "SubDialog");
     qmlRegisterType<SystemSettings>(uri, 0, 1, "SystemSettings");
     qmlRegisterType<ViewPropertiesMenu>(uri, 0, 1, "ViewPropertiesMenu");
+    qmlRegisterType<WheelInterceptor>(uri, 0, 1, "WheelInterceptor");
 }
 
 #include "folderplugin.moc"
