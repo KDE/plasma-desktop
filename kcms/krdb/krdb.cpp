@@ -23,8 +23,10 @@
 #include <unistd.h>
 
 #undef Unsorted
+#include <QApplication>
 #include <QBuffer>
 #include <QDir>
+#include <QFontDatabase>
 #include <QtCore/QSettings>
 #include <QtCore/QTextCodec>
 #include <QToolTip>
@@ -36,15 +38,10 @@
 #include <QtDBus/QtDBus>
 #include <klauncher_iface.h>
 
-#include <kapplication.h>
+#include <kcolorscheme.h>
 #include <kconfig.h>
 #include <kconfiggroup.h>
-#include <kdebug.h>
-#include <kglobalsettings.h>
-#include <kstandarddirs.h>
 #include <kprocess.h>
-#include <ksavefile.h>
-#include <ktemporaryfile.h>
 #include <KLocalizedString>
 #include <kdelibs4migration.h>
 
@@ -82,9 +79,19 @@ inline const char * userGtkrc(int version)
 }
 
 // -----------------------------------------------------------------------------
+static QString writableGtkrc(int version)
+{
+    QString gtkrc = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation);
+    QDir dir;
+    dir.mkpath(gtkrc);
+    gtkrc += 2==version?"gtkrc-2.0":"gtkrc";
+    return gtkrc;
+}
+
+// -----------------------------------------------------------------------------
 static void applyGtkStyles(bool active, int version)
 {
-   QString gtkkde = KStandardDirs::locateLocal("config", 2==version?"gtkrc-2.0":"gtkrc");
+   QString gtkkde = writableGtkrc(version);
    QByteArray gtkrc = getenv(gtkEnvVar(version));
    QStringList list = QFile::decodeName(gtkrc).split( ':');
    QString userHomeGtkrc = QDir::homePath()+userGtkrc(version);
@@ -171,7 +178,7 @@ static void applyQtColors( KSharedConfigPtr kglobalcfg, QSettings& settings, QPa
 static void applyQtSettings( KSharedConfigPtr kglobalcfg, QSettings& settings )
 {
   /* export font settings */
-  settings.setValue("/qt/font", KGlobalSettings::generalFont().toString());
+  settings.setValue("/qt/font", QFontDatabase::systemFont(QFontDatabase::GeneralFont).toString());
 
   /* export effects settings */
   KConfigGroup kdeCfgGroup(kglobalcfg, "General");
@@ -241,8 +248,8 @@ static void createGtkrc( bool exportColors, const QPalette& cg, bool exportGtkTh
     // lukas: why does it create in ~/.kde/share/config ???
     // pfeiffer: so that we don't overwrite the user's gtkrc.
     // it is found via the GTK_RC_FILES environment variable.
-    KSaveFile saveFile( KStandardDirs::locateLocal( "config", 2==version?"gtkrc-2.0":"gtkrc" ) );
-    if ( !saveFile.open() )
+    QSaveFile saveFile( writableGtkrc(version) );
+    if ( !saveFile.open(QIODevice::WriteOnly) )
         return;
 
     QTextStream t ( &saveFile );
@@ -395,12 +402,12 @@ void runRdb( uint flags )
 
   KSharedConfigPtr kglobalcfg = KSharedConfig::openConfig( "kdeglobals" );
   KConfigGroup kglobals(kglobalcfg, "KDE");
-  QPalette newPal = KGlobalSettings::createApplicationPalette(kglobalcfg);
+  QPalette newPal = KColorScheme::createApplicationPalette(kglobalcfg);
 
-  KTemporaryFile tmpFile;
+  QTemporaryFile tmpFile;
   if (!tmpFile.open())
   {
-    kDebug() << "Couldn't open temp file";
+    qDebug() << "Couldn't open temp file";
     exit(0);
   }
 
@@ -419,29 +426,29 @@ void runRdb( uint flags )
   // Export colors to non-(KDE/Qt) apps (e.g. Motif, GTK+ apps)
   if (exportColors)
   {
-    KGlobal::dirs()->addResourceType("appdefaults", "data", "kdisplay/app-defaults/");
-
+    KConfigGroup g(KSharedConfig::openConfig(), "WM");
     QString preproc;
     QColor backCol = newPal.color( QPalette::Active, QPalette::Background );
     addColorDef(preproc, "FOREGROUND"         , newPal.color( QPalette::Active, QPalette::Foreground ) );
     addColorDef(preproc, "BACKGROUND"         , backCol);
-    addColorDef(preproc, "HIGHLIGHT"          , backCol.light(100+(2*KGlobalSettings::contrast()+4)*16/1));
-    addColorDef(preproc, "LOWLIGHT"           , backCol.dark(100+(2*KGlobalSettings::contrast()+4)*10));
+    addColorDef(preproc, "HIGHLIGHT"          , backCol.light(100+(2*KColorScheme::contrast()+4)*16/1));
+    addColorDef(preproc, "LOWLIGHT"           , backCol.dark(100+(2*KColorScheme::contrast()+4)*10));
     addColorDef(preproc, "SELECT_BACKGROUND"  , newPal.color( QPalette::Active, QPalette::Highlight));
     addColorDef(preproc, "SELECT_FOREGROUND"  , newPal.color( QPalette::Active, QPalette::HighlightedText));
     addColorDef(preproc, "WINDOW_BACKGROUND"  , newPal.color( QPalette::Active, QPalette::Base ) );
     addColorDef(preproc, "WINDOW_FOREGROUND"  , newPal.color( QPalette::Active, QPalette::Text ) );
-    addColorDef(preproc, "INACTIVE_BACKGROUND", KGlobalSettings::inactiveTitleColor());
-    addColorDef(preproc, "INACTIVE_FOREGROUND", KGlobalSettings::inactiveTitleColor());
-    addColorDef(preproc, "ACTIVE_BACKGROUND"  , KGlobalSettings::activeTitleColor());
-    addColorDef(preproc, "ACTIVE_FOREGROUND"  , KGlobalSettings::activeTitleColor());
+    addColorDef(preproc, "INACTIVE_BACKGROUND", g.readEntry("inactiveBackground", QColor(224, 223, 222)));
+    addColorDef(preproc, "INACTIVE_FOREGROUND", g.readEntry("inactiveBackground", QColor(224, 223, 222)));
+    addColorDef(preproc, "ACTIVE_BACKGROUND"  , g.readEntry("activeBackground", QColor(48, 174, 232)));
+    addColorDef(preproc, "ACTIVE_FOREGROUND"  , g.readEntry("activeBackground", QColor(48, 174, 232)));
     //---------------------------------------------------------------
 
     tmpFile.write( preproc.toLatin1(), preproc.length() );
 
     QStringList list;
 
-    const QStringList adPaths = KGlobal::dirs()->findDirs("appdefaults", "");
+    const QStringList adPaths = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation,
+        "kdisplay/app-defaults/", QStandardPaths::LocateDirectory);
     for (QStringList::ConstIterator it = adPaths.constBegin(); it != adPaths.constEnd(); ++it) {
       QDir dSys( *it );
 
@@ -454,7 +461,7 @@ void runRdb( uint flags )
     }
 
     for (QStringList::ConstIterator it = list.constBegin(); it != list.constEnd(); ++it)
-      copyFile(tmpFile, KStandardDirs::locate("appdefaults", *it ), true);
+      copyFile(tmpFile, QStandardPaths::locate(QStandardPaths::GenericDataLocation, "kdisplay/app-defaults/"+(*it)), true);
   }
 
   // Merge ~/.Xresources or fallback to ~/.Xdefaults

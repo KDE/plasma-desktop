@@ -20,7 +20,6 @@
 
 #include "previewwidget.h"
 
-#include <KGlobalSettings>
 #include <KColorScheme>
 
 #include <QtDebug>
@@ -122,7 +121,7 @@ inline void adjustWidgetForeground(QWidget *widget, QPalette::ColorGroup state,
 void PreviewWidget::setPalette(const KSharedConfigPtr &config,
                                QPalette::ColorGroup state)
 {
-    QPalette palette = KGlobalSettings::createNewApplicationPalette(config);
+    QPalette palette = KColorScheme::createApplicationPalette(config);
 
     if (state != QPalette::Active) {
         copyPaletteBrush(palette, state, QPalette::Base);

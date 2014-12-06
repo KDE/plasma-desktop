@@ -20,8 +20,6 @@
 
 #include "setpreviewwidget.h"
 
-#include <KGlobalSettings>
-
 void setAutoFill(QWidget* widget)
 {
     widget->setAutoFillBackground(true);
@@ -102,7 +100,7 @@ bool SetPreviewWidget::eventFilter(QObject *, QEvent *ev)
 void SetPreviewWidget::setPalette(const KSharedConfigPtr &config,
                                   KColorScheme::ColorSet set)
 {
-    QPalette palette = KGlobalSettings::createApplicationPalette(config);
+    QPalette palette = KColorScheme::createApplicationPalette(config);
     KColorScheme::adjustBackground(palette, KColorScheme::NormalBackground,
                                    QPalette::Base, set, config);
     QFrame::setPalette(palette);

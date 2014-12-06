@@ -23,7 +23,6 @@
 
 #include <KCModule>
 #include <KColorScheme>
-#include <KPushButton>
 
 #include "ui_colorsettings.h"
 

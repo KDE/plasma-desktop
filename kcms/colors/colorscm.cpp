@@ -26,24 +26,25 @@
 #include <QFileDialog>
 #include <QTimer>
 #include <QHeaderView>
+#include <QInputDialog>
 #include <QStackedWidget>
+#include <QStandardPaths>
 #include <QPainter>
 #include <QBitmap>
 #include <QtDBus/QtDBus>
+#include <QColorDialog>
 
 #include <KAboutData>
 #include <KColorButton>
-#include <KColorDialog>
-#include <KDebug>
-#include <KFileDialog>
-#include <KGlobal>
-#include <KGlobalSettings>
+#include <KConfigGroup>
 #include <KColorUtils>
+#include <KColorScheme>
 #include <KInputDialog>
 #include <KMessageBox>
 #include <KPluginFactory>
-#include <KStandardDirs>
 #include <kio/netaccess.h>
+#include <kio/deletejob.h>
+#include <kio/jobuidelegate.h>
 #include <KNewStuff3/KNS3/DownloadDialog>
 #include <KNewStuff3/KNS3/UploadDialog>
 
@@ -115,7 +116,25 @@ void KColorCm::populateSchemeList()
 
     // add entries
     QIcon icon;
-    const QStringList schemeFiles = KGlobal::dirs()->findAllResources("data", "color-schemes/*.colors", KStandardDirs::NoDuplicates);
+
+    QStringList schemeFiles;
+    const QStringList schemeDirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, "color-schemes", QStandardPaths::LocateDirectory);
+    Q_FOREACH (const QString &dir, schemeDirs)
+    {
+        const QStringList fileNames = QDir(dir).entryList(QStringList()<<"*.colors");
+        Q_FOREACH (const QString &file, fileNames)
+        {
+            if( !schemeFiles.contains("color-schemes/"+file))
+            {
+                schemeFiles.append("color-schemes/"+file);
+            }
+        }
+    }
+    for (QStringList::Iterator it = schemeFiles.begin(); it != schemeFiles.end(); ++it )
+    {
+        *it = QStandardPaths::locate(QStandardPaths::GenericDataLocation, *it);
+    }
+
     for (int i = 0; i < schemeFiles.size(); ++i)
     {
         // get the file name
@@ -285,12 +304,12 @@ void KColorCm::loadScheme(QListWidgetItem *currentItem, QListWidgetItem *previou
         }
         else
         {
-            const QString path = KGlobal::dirs()->findResource("data",
+            const QString path = QStandardPaths::locate(QStandardPaths::GenericDataLocation,
                 "color-schemes/" + fileBaseName + ".colors");
 
             const int permissions = QFile(path).permissions();
             const bool canWrite = (permissions & QFile::WriteUser);
-            kDebug() << "checking permissions of " << path;
+            qDebug() << "checking permissions of " << path;
             schemeRemoveButton->setEnabled(canWrite);
             schemeKnsUploadButton->setEnabled(true);
 
@@ -306,10 +325,12 @@ void KColorCm::on_schemeRemoveButton_clicked()
 {
     if (schemeList->currentItem() != NULL)
     {
-        const QString path = KGlobal::dirs()->findResource("data",
+        const QString path = QStandardPaths::locate(QStandardPaths::GenericDataLocation,
             "color-schemes/" + schemeList->currentItem()->data(Qt::UserRole).toString() +
             ".colors");
-        if (KIO::NetAccess::del(QUrl::fromLocalFile(path), this))
+        KIO::DeleteJob *job = KIO::del(QUrl::fromLocalFile(path));
+        job->uiDelegate()->setParent(this);
+        if (job->exec())
         {
             delete schemeList->takeItem(schemeList->currentRow());
         }
@@ -348,10 +369,11 @@ void KColorCm::on_schemeImportButton_clicked()
 
             // convert KDE3 scheme to KDE4 scheme
             KConfigGroup g(config, "Color Scheme");
+            KConfigGroup generalGroup(KSharedConfig::openConfig(), "General");
 
             colorSet->setCurrentIndex(0);
-            contrastSlider->setValue(g.readEntry("contrast", KGlobalSettings::contrast()));
-            shadeSortedColumn->setChecked(g.readEntry("shadeSortColumn", KGlobalSettings::shadeSortColumn()));
+            contrastSlider->setValue(g.readEntry("contrast", KColorScheme::contrast()));
+            shadeSortedColumn->setChecked(g.readEntry("shadeSortColumn", generalGroup.readEntry("shadeSortColumn", true)));
 
             m_commonColorButtons[0]->setColor(g.readEntry("windowBackground", m_colorSchemes[KColorScheme::View].background().color()));
             m_commonColorButtons[1]->setColor(g.readEntry("windowForeground", m_colorSchemes[KColorScheme::View].foreground().color()));
@@ -420,11 +442,11 @@ void KColorCm::on_schemeKnsUploadButton_clicked()
 
         // find path
         const QString basename = schemeList->currentItem()->data(Qt::UserRole).toString();
-        const QString path = KGlobal::dirs()->findResource("data",
+        const QString path = QStandardPaths::locate(QStandardPaths::GenericDataLocation,
             "color-schemes/" + basename + ".colors");
         if (path.isEmpty() ) // if the color scheme file wasn't found
         {
-            kDebug() << "path for color scheme " << basename << " couldn't be found";
+            qDebug() << "path for color scheme " << basename << " couldn't be found";
             return;
         }
 
@@ -444,8 +466,8 @@ void KColorCm::on_schemeSaveButton_clicked()
     }
     // prompt for the name to save as
     bool ok;
-    QString name = KInputDialog::getText(i18n("Save Color Scheme"),
-        i18n("&Enter a name for the color scheme:"), previousName, &ok, this);
+    QString name = QInputDialog::getText(this, i18n("Save Color Scheme"),
+        i18n("&Enter a name for the color scheme:"), QLineEdit::Normal, previousName, &ok);
     if (ok)
     {
         saveScheme(name);
@@ -463,8 +485,8 @@ void KColorCm::saveScheme(const QString &name)
     filename.replace(0, 1, filename.at(0).toUpper());
 
     // check if that name is already in the list
-    const QString path = KGlobal::dirs()->saveLocation("data", "color-schemes/") +
-        filename + ".colors";
+    const QString path = QStandardPaths::locate(QStandardPaths::GenericDataLocation,
+        "color-schemes/" + filename + ".colors");
 
     QFile file(path);
     const int permissions = file.permissions();
@@ -488,7 +510,10 @@ void KColorCm::saveScheme(const QString &name)
         }
 
         // go ahead and save it
-        QString newpath = KGlobal::dirs()->saveLocation("data", "color-schemes/");
+        QString newpath = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation)
+                + "/color-schemes/";
+        QDir dir;
+        dir.mkpath(newpath);
         newpath += filename + ".colors";
         KSharedConfigPtr temp = m_config;
         m_config = KSharedConfig::openConfig(newpath);
@@ -556,8 +581,8 @@ void KColorCm::variesClicked()
     // find which button was changed
     const int row = sender()->objectName().toInt();
 
-    QColor color;
-    if(KColorDialog::getColor(color, this ) != QDialog::Rejected )
+    QColor color = QColorDialog::getColor(QColor(), this);
+    if(color.isValid())
     {
         changeColor(row, color);
         m_stackedWidgets[row - 9]->setCurrentIndex(0);
@@ -750,10 +775,10 @@ void KColorCm::setupColorTable()
         if (i > 8 && i < 18)
         {
             // Inactive Text row through Positive Text role all need a varies button
-            KPushButton * variesButton = new KPushButton(NULL);
+            QPushButton * variesButton = new QPushButton(NULL);
             variesButton->setText(i18n("Varies"));
             variesButton->setObjectName(QString::number(i));
-            connect(variesButton, &KPushButton::clicked, this, &KColorCm::variesClicked);
+            connect(variesButton, &QPushButton::clicked, this, &KColorCm::variesClicked);
 
             QStackedWidget * widget = new QStackedWidget(this);
             widget->addWidget(button);
@@ -1199,8 +1224,9 @@ void KColorCm::load()
 
 void KColorCm::loadOptions()
 {
-    contrastSlider->setValue(KGlobalSettings::contrast());
-    shadeSortedColumn->setChecked(KGlobalSettings::shadeSortColumn());
+    KConfigGroup generalGroup(KSharedConfig::openConfig(), "General");
+    contrastSlider->setValue(KColorScheme::contrast());
+    shadeSortedColumn->setChecked(generalGroup.readEntry("shadeSortColumn", true));
 
     KConfigGroup group(m_config, "ColorEffects:Inactive");
     useInactiveEffects->setChecked(group.readEntry("Enable", false));
@@ -1255,7 +1281,12 @@ void KColorCm::save()
 
     runRdb(KRdbExportQtColors | KRdbExportGtkTheme | ( applyToAlien->isChecked() ? KRdbExportColors : 0 ) );
 
-    KGlobalSettings::self()->emitChange(KGlobalSettings::PaletteChanged);
+    QDBusMessage message = QDBusMessage::createSignal("/KGlobalSettings", "org.kde.KGlobalSettings", "notifyChange" );
+    QList<QVariant> args;
+    args.append(0);//previous KGlobalSettings::PaletteChanged. This is now private API in khintsettings
+    args.append(0);//unused in palette changed but needed for the DBus signature
+    message.setArguments(args);
+    QDBusConnection::sessionBus().send(message);
     if (qApp->platformName() == QStringLiteral("xcb")) {
         // Send signal to all kwin instances
         QDBusMessage message =
