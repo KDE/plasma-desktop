@@ -198,6 +198,7 @@ PlasmaCore.Dialog {
                      }
                  }
 
+                 textLabel.visible = auxVisible || preeditVisible;
                  inputpanel.visible = auxVisible || preeditVisible || lookupTableVisible;
             }
         }
