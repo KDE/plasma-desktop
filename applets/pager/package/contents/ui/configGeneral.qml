@@ -1,4 +1,4 @@
-/*
+    /*
  *  Copyright 2013 David Edmundson <davidedmundson@kde.org>
  *
  *  This program is free software; you can redistribute it and/or modify
@@ -33,7 +33,7 @@ Item {
 //     title: i18n("Appearance")
 
     property int cfg_displayedText
-    property alias cfg_showWindowIcons: showRecentlyInstalledCheckbox.checked
+    property alias cfg_showWindowIcons: showWindowIcons.checked
     property int cfg_currentDesktopSelected
 
     onCfg_displayedTextChanged: {
@@ -78,7 +78,7 @@ Item {
     Layouts.GridLayout {
         columns: 2
         QtControls.Label {
-            text: i18n("Display Text:")
+            text: i18n("Display:")
             Layouts.Layout.alignment: Qt.AlignVCenter|Qt.AlignRight
         }
         QtControls.RadioButton {
@@ -105,12 +105,14 @@ Item {
             onCheckedChanged: if (checked) cfg_displayedText = 2;
         }
 
-        QtControls.Label {
-            text: i18n("Display icons:")
-            Layouts.Layout.alignment: Qt.AlignVCenter|Qt.AlignRight
-        }
+        Item {
+            width: 2
+            height: 2
+        } //spacer
+
         QtControls.CheckBox {
-            id: showRecentlyInstalledCheckbox
+            id: showWindowIcons
+            text: i18n("Icons")
         }
 
         QtControls.Label {
@@ -141,5 +143,5 @@ Item {
             onCheckedChanged: if (checked) cfg_currentDesktopSelected = 2;
         }
     }
-    
+
 }
