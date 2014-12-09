@@ -88,7 +88,8 @@ Item {
         id: wheelHandler
 
         anchors.fill: parent
+        property int wheelDelta: 0;
 
-        onWheelMoved: TaskTools.activateNextPrevTask(false, wheel.delta < 0)
+        onWheelMoved: wheelDelta = TaskTools.wheelActivateNextPrevTask(false, wheelDelta, wheel.delta);
     }
 }

@@ -17,6 +17,27 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
+function wheelActivateNextPrevTask(parentItem, wheelDelta, eventDelta) {
+    // magic number 120 for common "one click"
+    // See: http://qt-project.org/doc/qt-5/qml-qtquick-wheelevent.html#angleDelta-prop
+    wheelDelta += eventDelta;
+    var increment = 0;
+    while (wheelDelta >= 120) {
+        wheelDelta -= 120;
+        increment++;
+    }
+    while (wheelDelta <= -120) {
+        wheelDelta += 120;
+        increment--;
+    }
+    while (increment != 0) {
+        activateNextPrevTask(parentItem, increment < 0)
+        increment += (increment < 0) ? 1 : -1;
+    }
+
+    return wheelDelta;
+}
+
 function activateNextPrevTask(parentItem, next) {
     var taskIdList;
 

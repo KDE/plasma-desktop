@@ -52,6 +52,7 @@ MouseEventListener {
     property int pressX: -1
     property int pressY: -1
     property Item busyIndicator
+    property int wheelDelta: 0
 
     acceptedButtons: Qt.LeftButton | Qt.RightButton
     hoverEnabled: true
@@ -142,7 +143,7 @@ MouseEventListener {
         }
     }
 
-    onWheelMoved: TaskTools.activateNextPrevTask(task, wheel.delta < 0)
+    onWheelMoved: wheelDelta = TaskTools.wheelActivateNextPrevTask(task, wheelDelta, wheel.delta);
 
     PlasmaCore.FrameSvgItem {
         id: frame
