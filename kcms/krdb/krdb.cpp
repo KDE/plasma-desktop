@@ -84,7 +84,7 @@ static QString writableGtkrc(int version)
     QString gtkrc = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation);
     QDir dir;
     dir.mkpath(gtkrc);
-    gtkrc += 2==version?"gtkrc-2.0":"gtkrc";
+    gtkrc += 2==version?"/gtkrc-2.0":"/gtkrc";
     return gtkrc;
 }
 
