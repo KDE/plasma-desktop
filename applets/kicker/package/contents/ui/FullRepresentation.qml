@@ -26,6 +26,8 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 FocusScope {
     id: root
 
+    focus: true
+
     Layout.minimumWidth: sideBar.width + mainRow.spacing + Math.max(rootList.width, runnerColumns.width)
     Layout.maximumWidth: sideBar.width + mainRow.spacing + Math.max(rootList.width, runnerColumns.width)
 
