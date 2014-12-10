@@ -195,7 +195,12 @@ Item {
         dragSource = null;
     }
 
+    function enableHideOnWindowDeactivate() {
+        plasmoid.hideOnWindowDeactivate = true;
+    }
+
     Component.onCompleted: {
+        windowSystem.focusOut.connect(enableHideOnWindowDeactivate);
         plasmoid.hideOnWindowDeactivate = true;
 
         plasmoid.setAction("menuedit", i18n("Edit Applications..."));

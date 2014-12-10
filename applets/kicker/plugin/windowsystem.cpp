@@ -32,6 +32,18 @@ WindowSystem::~WindowSystem()
 {
 }
 
+bool WindowSystem::eventFilter(QObject* watched, QEvent* event)
+{
+    if (event->type() == QEvent::FocusOut) {
+        QMetaObject::invokeMethod(this,
+            "focusOut",
+            Qt::QueuedConnection,
+            Q_ARG(QQuickWindow*, qobject_cast<QQuickWindow *>(watched)));
+    }
+
+    return false;
+}
+
 void WindowSystem::forceActive(QQuickItem *item)
 {
     if (!item || !item->window()) {
@@ -49,4 +61,13 @@ bool WindowSystem::isActive(QQuickItem *item)
     }
 
     return item->window()->isActive();
+}
+
+void WindowSystem::monitorWindowFocus(QQuickItem* item)
+{
+    if (!item || !item->window()) {
+        return;
+    }
+
+    item->window()->installEventFilter(this);
 }

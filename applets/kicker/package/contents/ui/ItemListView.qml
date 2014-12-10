@@ -62,6 +62,13 @@ FocusScope {
                 return;
             }
 
+            windowSystem.monitorWindowFocus(itemList);
+
+            // Gets reenabled after the dialog spawn causes a focus out on this window.
+            // This avoids Kicker closing due to unreliable timing making Dialog::focusOutEvent()
+            // unable to tell focus moved to a child window.
+            plasmoid.hideOnWindowDeactivate = false;
+
             childDialog = itemListDialogComponent.createObject(itemList);
             childDialog.focusParent = itemList;
             childDialog.visualParent = listView.currentItem;

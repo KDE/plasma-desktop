@@ -23,6 +23,7 @@
 #include <QObject>
 
 class QQuickItem;
+class QQuickWindow;
 
 class WindowSystem : public QObject
 {
@@ -32,9 +33,16 @@ class WindowSystem : public QObject
         WindowSystem(QObject *parent = 0);
         ~WindowSystem();
 
+        bool eventFilter(QObject *watched, QEvent *event);
+
         Q_INVOKABLE void forceActive(QQuickItem *item);
 
         Q_INVOKABLE bool isActive(QQuickItem *item);
+
+        Q_INVOKABLE void monitorWindowFocus(QQuickItem *item);
+
+    Q_SIGNALS:
+        void focusOut(QQuickWindow *window) const;
 };
 
 #endif

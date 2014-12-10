@@ -41,6 +41,8 @@ FocusScope {
     signal appendSearchText(string text)
 
     function reset() {
+        plasmoid.hideOnWindowDeactivate = true;
+
         rootList.currentIndex = -1;
 
         searchField.text = "";
