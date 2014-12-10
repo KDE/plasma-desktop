@@ -120,8 +120,6 @@ Item {
             } else {
                 mouseCol = mouse.x;
 
-                var switchNow = false;
-
                 if (index == item.ListView.view.currentIndex) {
                     updateCurrentItem();
                 } else if ((index == item.ListView.view.currentIndex - 1) && mouse.y < (itemHeight - 6)
