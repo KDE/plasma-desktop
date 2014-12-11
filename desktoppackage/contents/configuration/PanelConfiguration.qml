@@ -29,6 +29,8 @@ import "panelconfiguration"
 PlasmaCore.FrameSvgItem {
     id: dialogRoot
 
+    signal closeContextMenu
+
 //BEGIN Properties
     width: 640
     height: 64

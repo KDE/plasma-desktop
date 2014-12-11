@@ -153,4 +153,12 @@ PlasmaCore.Dialog {
             }
         }
     }
+
+    function hide() {
+        visible = false;
+    }
+
+    Component.onCompleted: {
+        dialogRoot.closeContextMenu.connect(hide);
+    }
 }
