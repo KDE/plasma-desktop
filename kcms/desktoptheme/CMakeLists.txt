@@ -20,7 +20,7 @@ target_link_libraries(kcm_desktoptheme ${X11_LIBRARIES}
     KF5::KDELibs4Support
 )
 
-kservice_desktop_to_json(kcm_desktoptheme desktoptheme.desktop)
+kcoreaddons_desktop_to_json(kcm_desktoptheme desktoptheme.desktop)
 
 install(TARGETS kcm_desktoptheme DESTINATION ${PLUGIN_INSTALL_DIR} )
 install( FILES plasma-themes.knsrc  DESTINATION  ${CONFIG_INSTALL_DIR} )
