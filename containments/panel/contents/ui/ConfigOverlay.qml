@@ -323,26 +323,30 @@ MouseArea {
         flags: Qt.WindowStaysOnTopHint|Qt.WindowDoesNotAcceptFocus|Qt.BypassWindowManagerHint
         location: plasmoid.location
         mainItem: MouseArea {
-            Layout.minimumWidth: handleRow.implicitWidth
-            Layout.minimumHeight: handleRow.implicitHeight
-            Layout.maximumWidth: handleRow.implicitWidth
-            Layout.maximumHeight: handleRow.implicitHeight
-            width: handleRow.implicitHeight
-            height: handleRow.implicitWidth
+            width: configureButton.width + label.contentWidth + closeButton.width
+            height: Math.max(configureButton.height, label.contentHeight, closeButton.height)
             hoverEnabled: true
             onEntered: visibleTimer.stop();
             onExited: visibleTimer.restart();
             Row {
                 id: handleRow
                 PlasmaComponents.ToolButton {
+                    id: configureButton
+                    anchors.verticalCenter: parent.verticalCenter
                     iconSource: "configure"
                     visible: currentApplet && currentApplet.applet.action("configure") && currentApplet.applet.action("configure").enabled
                     onClicked: currentApplet.applet.action("configure").trigger()
                 }
                 PlasmaComponents.Label {
+                    id: label
+                    anchors.verticalCenter: parent.verticalCenter
                     text: currentApplet ? currentApplet.applet.title : ""
+                    textFormat: Text.PlainText
+                    maximumLineCount: 1
                 }
                 PlasmaComponents.ToolButton {
+                    id: closeButton
+                    anchors.verticalCenter: parent.verticalCenter
                     iconSource: "window-close"
                     visible: currentApplet && currentApplet.applet.action("remove") && currentApplet.applet.action("remove").enabled
                     onClicked: currentApplet.applet.action("remove").trigger()
