@@ -38,6 +38,7 @@ add_executable(kapplymousetheme ${kapplymousetheme_SRCS})
 target_link_libraries(kapplymousetheme ${X11_Xrender_LIB} ${X11_X11_LIB})
 if (X11_Xcursor_FOUND)
    target_link_libraries(kapplymousetheme ${X11_Xcursor_LIB})
+   target_include_directories(kapplymousetheme PRIVATE ${X11_Xcursor_INCLUDE_PATH})
 endif ()
 
 install(TARGETS kapplymousetheme ${INSTALL_TARGETS_DEFAULT_ARGS})
