@@ -39,6 +39,7 @@
 #include <KConfigGroup>
 
 #include <X11/Xlib.h>
+#include <cmath>
 
 
 KCMiscKeyboardWidget::KCMiscKeyboardWidget(QWidget *parent)

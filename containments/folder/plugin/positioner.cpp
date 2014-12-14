@@ -23,6 +23,8 @@
 #include <QDebug>
 #include <QTimer>
 
+#include <cstdlib>
+
 Positioner::Positioner(QObject *parent): QAbstractItemModel(parent)
 , m_enabled(false)
 , m_folderModel(0)
