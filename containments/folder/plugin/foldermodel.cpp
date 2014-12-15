@@ -57,8 +57,6 @@
 #include <KLocalizedString>
 #include <KSharedConfig>
 #include <KShell>
-#include <KUrl>
-#include <KUrlMimeData>
 
 #include <KDesktopFile>
 #include <KDirModel>
