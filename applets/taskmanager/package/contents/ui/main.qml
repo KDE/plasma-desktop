@@ -82,6 +82,7 @@ Item {
         id: backend
 
         taskManagerItem: tasks
+        toolTipItem: toolTipDelegate
         highlightWindows: plasmoid.configuration.highlightWindows
 
         groupingStrategy: iconsOnly ? 1 : plasmoid.configuration.groupingStrategy

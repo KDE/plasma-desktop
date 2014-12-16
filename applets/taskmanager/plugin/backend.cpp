@@ -38,6 +38,7 @@ Backend::Backend(QObject* parent) : QObject(parent),
     m_groupManager(new TaskManager::GroupManager(this)),
     m_tasksModel(new TaskManager::TasksModel(m_groupManager, this)),
     m_taskManagerItem(0),
+    m_toolTipItem(0),
     m_lastWindowId(0),
     m_highlightWindows(false)
 {
@@ -68,6 +69,19 @@ void Backend::setTaskManagerItem(QQuickItem* item)
     if (item != m_taskManagerItem) {
         m_taskManagerItem = item;
         emit taskManagerItemChanged(item);
+    }
+}
+
+QQuickItem* Backend::toolTipItem() const
+{
+    return m_toolTipItem;
+}
+
+void Backend::setToolTipItem(QQuickItem* item)
+{
+    if (item != m_toolTipItem) {
+        m_toolTipItem = item;
+        emit toolTipItemChanged(item);
     }
 }
 
@@ -263,7 +277,15 @@ void Backend::windowHovered(int winId, bool hovered)
 {
     if (hovered && m_highlightWindows && m_taskManagerItem && m_taskManagerItem->window()) {
         m_lastWindowId = winId;
-        KWindowEffects::highlightWindows(m_lastWindowId, QList<WId>() << winId);
+
+        QList<WId> windows;
+        windows.append(winId);
+
+        if (m_toolTipItem && toolTipItem()->window() && toolTipItem()->window()->isVisible()) {
+            windows.append(toolTipItem()->window()->winId());
+        }
+
+        KWindowEffects::highlightWindows(m_lastWindowId, windows);
     } else if (m_highlightWindows && m_lastWindowId) {
         KWindowEffects::highlightWindows(m_lastWindowId, QList<WId>());
     }
