@@ -83,11 +83,9 @@ PlasmaCore.Dialog {
         PlasmaComponents.ButtonColumn {
             spacing: 0
             Layout.fillWidth: true
+            Layout.minimumWidth: implicitWidth
             PlasmaComponents.ToolButton {
-                anchors {
-                    left: parent.left
-                    right: parent.right
-                }
+                width: Math.max(implicitWidth, parent.width)
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Always Visible")
                 checkable: true
                 checked: configDialog.visibilityMode == 0
@@ -95,10 +93,7 @@ PlasmaCore.Dialog {
                 flat: false
             }
             PlasmaComponents.ToolButton {
-                anchors {
-                    left: parent.left
-                    right: parent.right
-                }
+                width: Math.max(implicitWidth, parent.width)
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Auto Hide")
                 checkable: true
                 checked: configDialog.visibilityMode == 1
@@ -106,10 +101,7 @@ PlasmaCore.Dialog {
                 flat: false
             }
             PlasmaComponents.ToolButton {
-                anchors {
-                    left: parent.left
-                    right: parent.right
-                }
+                width: Math.max(implicitWidth, parent.width)
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Windows Can Cover")
                 checkable: true
                 checked: configDialog.visibilityMode == 2
@@ -117,10 +109,7 @@ PlasmaCore.Dialog {
                 flat: false
             }
             PlasmaComponents.ToolButton {
-                anchors {
-                    left: parent.left
-                    right: parent.right
-                }
+                width: Math.max(implicitWidth, parent.width)
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Windows Go Below")
                 checkable: true
                 checked: configDialog.visibilityMode == 3
