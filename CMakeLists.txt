@@ -52,7 +52,11 @@ find_package(KRunnerAppDBusInterface CONFIG REQUIRED)
 find_package(KSMServerDBusInterface CONFIG REQUIRED)
 find_package(KF5ItemModels CONFIG REQUIRED)
 find_package(KF5Emoticons CONFIG REQUIRED)
-find_package(PackageKitQt5)
+find_package(PackageKitQt5 0.9)
+set_package_properties(PackageKitQt5 PROPERTIES DESCRIPTION "Software Manager integration"
+                       TYPE OPTIONAL
+                       PURPOSE "Provides package management integration to the application launcher."
+                      )
 
 find_package(KF5Activities ${KF5_VERSION})
 set_package_properties(KF5Activities PROPERTIES DESCRIPTION "management of Plasma activities"
