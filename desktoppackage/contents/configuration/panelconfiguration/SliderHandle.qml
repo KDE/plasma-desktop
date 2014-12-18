@@ -92,7 +92,14 @@ PlasmaCore.SvgItem {
             maximumX: root.maximumValue
             maximumY: root.maximumValue
         }
-        anchors.fill: parent
+        anchors {
+            fill: parent
+            leftMargin: (dialogRoot.vertical) ? 0 : -units.gridUnit
+            rightMargin: (dialogRoot.vertical) ? 0 : -units.gridUnit
+            topMargin: (dialogRoot.vertical) ? -units.gridUnit : 0
+            bottomMargin: (dialogRoot.vertical) ? -units.gridUnit : 0
+        }
+        cursorShape: dialogRoot.vertical ? Qt.SizeVerCursor : Qt.SizeHorCursor
         onPositionChanged: {
             if (dialogRoot.vertical) {
                 if (root.alignment == Qt.AlignRight) {
