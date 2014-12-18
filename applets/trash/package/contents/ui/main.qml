@@ -36,6 +36,9 @@ MouseArea {
     TrashPrivate.DirModel {
         id: dirModel
         url: "trash:/"
+        onCountChanged: {
+            plasmoid.action("empty").enabled = count > 0;
+        }
     }
 
     function action_open() {
@@ -50,6 +53,7 @@ MouseArea {
         plasmoid.setAction("open", i18nc("a verb", "Open"),"document-open");
         plasmoid.setAction("empty",i18nc("a verb", "Empty"),"trash-empty");
         plasmoid.popupIcon = "user-trash";
+        plasmoid.action("empty").enabled = count > 0;
     }
 
     PlasmaCore.IconItem {
