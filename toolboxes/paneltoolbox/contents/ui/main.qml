@@ -44,10 +44,10 @@ Item {
     anchors {
         left: undefined
         top: undefined
-        right: isVertical ? undefined : parent.right
-        bottom: isVertical ? parent.bottom : undefined
-        verticalCenter: isVertical ? undefined : parent.verticalCenter
-        horizontalCenter: isVertical ? parent.horizontalCenter : undefined
+        right: isVertical || !parent ? undefined : parent.right
+        bottom: isVertical && parent ? parent.bottom : undefined
+        verticalCenter: isVertical || !parent ? undefined : parent.verticalCenter
+        horizontalCenter: isVertical && parent ? parent.horizontalCenter : undefined
     }
 
     PlasmaCore.SvgItem {
