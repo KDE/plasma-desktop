@@ -256,8 +256,11 @@ void RecentlyUsedModel::recentApplicationRemoved(KService::Ptr service)
 void RecentlyUsedModel::recentApplicationsCleared()
 {
     while (d->recentApplicationCount != 0) {
-        delete takeItem(0);
-        takeRow(0);
+        QList<QStandardItem *>items = takeRow(0);
+        Q_ASSERT(items.count() == 1); //model is only 1 level deep, so this will only ever remove one
+        d->itemsByPath.remove(items.first()->data(UrlRole).toString());
+        delete items[0];
+
         --d->recentApplicationCount;
     }
 }
