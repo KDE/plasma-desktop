@@ -300,7 +300,7 @@ void Backend::updateWindowHighlight()
         || (m_highlightWindows && !m_windowsToHighlight.count()))
         && m_lastWindowId) {
         KWindowEffects::highlightWindows(m_lastWindowId, m_windowsToHighlight);
-    } else if (m_windowsToHighlight.count()) {
+    } else if (m_highlightWindows && m_windowsToHighlight.count()) {
         if (m_taskManagerItem && m_taskManagerItem->window()) {
             m_lastWindowId = m_taskManagerItem->window()->winId();
         } else {
