@@ -213,7 +213,7 @@ class FolderModel : public QSortFilterProxyModel
     private Q_SLOTS:
         void dirListFailed(const QString &error);
         void statResult(KJob *job);
-        void evictFromIsDirCache(const KFileItem &item);
+        void evictFromIsDirCache(const KFileItemList &items);
         void selectionChanged(QItemSelection selected, QItemSelection deselected);
         void copy();
         void cut();

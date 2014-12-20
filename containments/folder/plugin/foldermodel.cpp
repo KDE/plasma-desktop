@@ -108,7 +108,7 @@ FolderModel::FolderModel(QObject *parent) : QSortFilterProxyModel(parent),
     dirLister->setDelayedMimeTypes(true);
     dirLister->setAutoErrorHandlingEnabled(false, 0);
     connect(dirLister, SIGNAL(error(QString)), this, SLOT(dirListFailed(QString)));
-    connect(dirLister, SIGNAL(deleteItem(KFileItem)), this, SLOT(evictFromIsDirCache(KFileItem)));
+    connect(dirLister, SIGNAL(itemsDeleted(KFileItemList)), this, SLOT(evictFromIsDirCache(KFileItemList)));
 
     m_dirModel = new KDirModel(this);
     m_dirModel->setDirLister(dirLister);
@@ -879,9 +879,11 @@ void FolderModel::statResult(KJob *job)
     }
 }
 
-void FolderModel::evictFromIsDirCache(const KFileItem& item)
+void FolderModel::evictFromIsDirCache(const KFileItemList& items)
 {
-    m_isDirCache.remove(item.url());
+    foreach (const KFileItem &item, items) {
+        m_isDirCache.remove(item.url());
+    }
 }
 
 bool FolderModel::lessThan(const QModelIndex &left, const QModelIndex &right) const
