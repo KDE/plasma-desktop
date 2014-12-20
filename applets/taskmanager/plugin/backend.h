@@ -26,6 +26,7 @@
 #include <tasksmodel.h>
 
 class QQuickItem;
+class QQuickWindow;
 
 class Backend : public QObject
 {
@@ -84,6 +85,7 @@ class Backend : public QObject
 
     private Q_SLOTS:
         void updateLaunchersCache();
+        void toolTipWindowChanged(QQuickWindow *window);
 
     Q_SIGNALS:
         void taskManagerItemChanged(QQuickItem*);
@@ -92,12 +94,15 @@ class Backend : public QObject
         void launchersChanged();
 
     private:
+        void updateWindowHighlight();
+
         TaskManager::GroupManager *m_groupManager;
         TaskManager::TasksModel *m_tasksModel;
         QQuickItem* m_taskManagerItem;
         QQuickItem* m_toolTipItem;
         WId m_lastWindowId;
         bool m_highlightWindows;
+        QList<WId> m_windowsToHighlight;
         QString m_launchers;
 };
 
