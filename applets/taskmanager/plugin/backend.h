@@ -100,7 +100,7 @@ class Backend : public QObject
         TaskManager::TasksModel *m_tasksModel;
         QQuickItem* m_taskManagerItem;
         QQuickItem* m_toolTipItem;
-        WId m_lastWindowId;
+        WId m_panelWinId;
         bool m_highlightWindows;
         QList<WId> m_windowsToHighlight;
         QString m_launchers;

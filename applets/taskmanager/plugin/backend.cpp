@@ -39,7 +39,7 @@ Backend::Backend(QObject* parent) : QObject(parent),
     m_tasksModel(new TaskManager::TasksModel(m_groupManager, this)),
     m_taskManagerItem(0),
     m_toolTipItem(0),
-    m_lastWindowId(0),
+    m_panelWinId(0),
     m_highlightWindows(false)
 {
     connect(m_groupManager, SIGNAL(launcherListChanged()), this, SLOT(updateLaunchersCache()));
@@ -296,25 +296,29 @@ void Backend::windowHovered(int winId, bool hovered)
 
 void Backend::updateWindowHighlight()
 {
-    if (((!m_highlightWindows && m_windowsToHighlight.count())
-        || (m_highlightWindows && !m_windowsToHighlight.count()))
-        && m_lastWindowId) {
-        KWindowEffects::highlightWindows(m_lastWindowId, m_windowsToHighlight);
-    } else if (m_highlightWindows && m_windowsToHighlight.count()) {
-        if (m_taskManagerItem && m_taskManagerItem->window()) {
-            m_lastWindowId = m_taskManagerItem->window()->winId();
-        } else {
-            return;
+    if (!m_highlightWindows) {
+        if (m_panelWinId) {
+            KWindowEffects::highlightWindows(m_panelWinId, QList<WId>());
+
+            m_panelWinId = 0;
         }
 
-        QList<WId> windows = m_windowsToHighlight;
-
-        if (m_toolTipItem && m_toolTipItem->window()) {
-            windows.append(m_toolTipItem->window()->winId());
-        }
-
-        KWindowEffects::highlightWindows(m_lastWindowId, windows);
+        return;
     }
+
+    if (m_taskManagerItem && m_taskManagerItem->window()) {
+        m_panelWinId = m_taskManagerItem->window()->winId();
+    } else {
+        return;
+    }
+
+    QList<WId> windows = m_windowsToHighlight;
+
+    if (windows.count() && m_toolTipItem && m_toolTipItem->window()) {
+        windows.append(m_toolTipItem->window()->winId());
+    }
+
+    KWindowEffects::highlightWindows(m_panelWinId, windows);
 }
 
 void Backend::itemMove(int id, int newIndex)
