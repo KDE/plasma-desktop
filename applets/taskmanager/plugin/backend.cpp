@@ -296,8 +296,8 @@ void Backend::windowHovered(int winId, bool hovered)
 
 void Backend::updateWindowHighlight()
 {
-    if ((!m_highlightWindows && m_windowsToHighlight.count()
-        || m_highlightWindows && !m_windowsToHighlight.count())
+    if (((!m_highlightWindows && m_windowsToHighlight.count())
+        || (m_highlightWindows && !m_windowsToHighlight.count()))
         && m_lastWindowId) {
         KWindowEffects::highlightWindows(m_lastWindowId, m_windowsToHighlight);
     } else if (m_windowsToHighlight.count()) {
