@@ -46,6 +46,7 @@ Item {
 
     function switchToFavorites() {
         mainTabGroup.currentTab = favoritesPage;
+        tabBar.currentTab = bookmarkButton;
         root.state = "Normal";
     }
 
