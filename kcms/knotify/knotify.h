@@ -27,13 +27,8 @@
 #include <kcmodule.h>
 
 class KComboBox;
-class PlayerSettingsDialog;
-namespace Ui{
-class PlayerSettingsUI;
-}
 class QPushButton;
 class KNotifyConfigWidget;
-
 
 class KCMKNotify : public KCModule
 {
@@ -51,38 +46,13 @@ public Q_SLOTS:
 
 private Q_SLOTS:
     void slotAppActivated( const int &);
-    void slotPlayerSettings();
 
 private:
 
     KComboBox *m_appCombo;
     KNotifyConfigWidget *m_notifyWidget;
-    PlayerSettingsDialog *m_playerSettings;
     QPushButton *m_psb;
 
 };
-
-class PlayerSettingsDialog : public QWidget
-{
-    Q_OBJECT
-
-public:
-    PlayerSettingsDialog( QWidget *parent );
-	~PlayerSettingsDialog();
-    void load();
-    void save();
-    void defaults();
-
-protected Q_SLOTS:
-    void externalToggled( bool on );
-    void slotChanged();
-
-    signals:
-    void changed(bool);
-private:
-    Ui::PlayerSettingsUI* m_ui;
-    bool m_change;
-};
-
 
 #endif

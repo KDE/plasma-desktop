@@ -6,8 +6,6 @@ add_definitions(-DTRANSLATION_DOMAIN=\"kcmnotify\")
 set(kcm_knotify_PART_SRCS knotify.cpp )
 
 
-ki18n_wrap_ui(kcm_knotify_PART_SRCS playersettings.ui )
-
 add_library(kcm_knotify MODULE ${kcm_knotify_PART_SRCS})
 
 

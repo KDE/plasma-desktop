@@ -44,16 +44,13 @@
 #include <KGlobal>
 #include <QStandardPaths>
 
-#include "ui_playersettings.h"
-
 static const int COL_FILENAME = 1;
 
 K_PLUGIN_FACTORY( NotifyFactory, registerPlugin<KCMKNotify>(); )
 K_EXPORT_PLUGIN( NotifyFactory("kcmnotify") )
 
 KCMKNotify::KCMKNotify(QWidget *parent, const QVariantList & )
-    : KCModule(parent),
-      m_playerSettings( 0L )
+    : KCModule(parent)
 {
     setButtons( Help | Default | Apply );
 
@@ -70,14 +67,9 @@ KCMKNotify::KCMKNotify(QWidget *parent, const QVariantList & )
 
     QVBoxLayout *layout = new QVBoxLayout( this );
     layout->setMargin( 0 );
-    QTabWidget *tab = new QTabWidget(this);
-    layout->addWidget(tab);
 
-    QWidget * app_tab = new QWidget(tab);
-    QVBoxLayout *app_layout = new QVBoxLayout( app_tab );
-
-    QLabel *label = new QLabel( i18n( "Event source:" ), app_tab );
-    m_appCombo = new KComboBox( false, app_tab );
+    QLabel *label = new QLabel( i18n( "Event source:" ), this );
+    m_appCombo = new KComboBox( false, this );
     m_appCombo->setSizeAdjustPolicy( QComboBox::AdjustToContents );
     m_appCombo->setObjectName( QLatin1String( "app combo" ) );
 
@@ -89,22 +81,14 @@ KCMKNotify::KCMKNotify(QWidget *parent, const QVariantList & )
     m_appCombo->setModel(proxyModel);
 
     QHBoxLayout *hbox = new QHBoxLayout();
-    app_layout->addLayout( hbox );
+    layout->addLayout( hbox );
     hbox->addWidget( label );
     hbox->addWidget( m_appCombo, 10 );
 
-    m_notifyWidget = new KNotifyConfigWidget( app_tab );
-    app_layout->addWidget( m_notifyWidget );
+    m_notifyWidget = new KNotifyConfigWidget( this );
+    layout->addWidget( m_notifyWidget );
 
     connect( m_notifyWidget, SIGNAL(changed(bool)), this,  SIGNAL(changed(bool)));
-
-    m_playerSettings = new PlayerSettingsDialog(tab);
-    connect(m_playerSettings, SIGNAL(changed(bool)) , this, SIGNAL(changed(bool)));
-
-/*  general->layout()->setMargin( KDialog::marginHint() );
-    hardware->layout()->setMargin( KDialog::marginHint() );*/
-    tab->addTab(app_tab, i18n("&Applications"));
-    tab->addTab(m_playerSettings, i18n("&Player Settings"));
 
     m_appCombo->setFocus();
 
@@ -138,15 +122,9 @@ void KCMKNotify::slotAppActivated(const int &index)
     m_notifyWidget->setApplication( text );
 }
 
-void KCMKNotify::slotPlayerSettings()
-{
-}
-
-
 void KCMKNotify::defaults()
 {
 //    m_notifyWidget->resetDefaults( true ); // ask user
-    m_playerSettings->defaults();
 }
 void KCMKNotify::load()
 {
@@ -194,8 +172,6 @@ void KCMKNotify::load()
     emit changed( false );
     */
 
-    m_playerSettings->load();
-
     if ( m_appCombo->count() > 0 ) {
         m_appCombo->setCurrentIndex(0);
         m_notifyWidget->setApplication( m_appCombo->itemData( 0 ).toString() );
@@ -206,98 +182,9 @@ void KCMKNotify::load()
 
 void KCMKNotify::save()
 {
-    if ( m_playerSettings )
-        m_playerSettings->save();
-
     m_notifyWidget->save(); // will dcop knotify about its new config
 
     emit changed( true );
-}
-
-///////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////
-
-PlayerSettingsDialog::PlayerSettingsDialog( QWidget *parent )
-    : QWidget(parent), m_change(false)
-{
-
-    m_ui = new Ui::PlayerSettingsUI();
-    m_ui->setupUi( this );
-
-    load();
-
-    connect( m_ui->cbExternal, SIGNAL( toggled( bool ) ), this, SLOT( externalToggled( bool ) ) );
-    connect( m_ui->cbArts, SIGNAL(clicked(bool)), this, SLOT(slotChanged()));
-    connect( m_ui->cbExternal, SIGNAL(clicked(bool)), this, SLOT(slotChanged()));
-    connect( m_ui->cbNone, SIGNAL(clicked(bool)), this, SLOT(slotChanged()));
-    connect( m_ui->volumeSlider, SIGNAL( valueChanged ( int ) ), this, SLOT( slotChanged() ) );
-    connect( m_ui->reqExternal, SIGNAL( textChanged( const QString& ) ), this, SLOT( slotChanged() ) );
-    m_ui->reqExternal->setMode(KFile::File|KFile::ExistingOnly|KFile::LocalOnly);
-}
-
-void PlayerSettingsDialog::load()
-{
-    KConfig _config( "knotifyrc", KConfig::NoGlobals  );
-    KConfigGroup config(&_config, "Sounds" );
-    bool useExternal = config.readEntry( "Use external player", false );
-    m_ui->cbExternal->setChecked( useExternal );
-    m_ui->reqExternal->setUrl( QUrl(config.readPathEntry( "External player", QString() )) );
-    m_ui->volumeSlider->setValue( config.readEntry( "Volume", 100 ) );
-
-    if ( !m_ui->cbExternal->isChecked() )
-    {
-        m_ui->cbNone->setChecked( config.readEntry( "No sound", false ) );
-    }
-    emit changed( false );
-    m_change=false;
-}
-
-void PlayerSettingsDialog::save()
-{
-    if(!m_change)
-        return;
-
-    // see kdebase/runtime/knotify/notifybysound.h
-    KConfig _config("knotifyrc", KConfig::NoGlobals);
-    KConfigGroup config(&_config, "Sounds" );
-
-    config.writePathEntry( "External player", m_ui->reqExternal->url().path() );
-    config.writeEntry( "Use external player", m_ui->cbExternal->isChecked() );
-    config.writeEntry( "Volume", m_ui->volumeSlider->value() );
-    config.writeEntry( "No sound",  m_ui->cbNone->isChecked() );
-
-    config.sync();
-
-    QDBusInterface itr("org.kde.knotify", "/Notify", "org.kde.KNotify", QDBusConnection::sessionBus(), this);
-    itr.call("reconfigure");
-    m_change=false;
-}
-
-
-void PlayerSettingsDialog::slotChanged()
-{
-    m_change=true;
-    emit changed(true);
-}
-
-void PlayerSettingsDialog::defaults()
-{
-    m_ui->cbArts->setChecked(true);
-    m_change=true;
-    emit changed(true);
-}
-
-void PlayerSettingsDialog::externalToggled( bool on )
-{
-    if ( on )
-        m_ui->reqExternal->setFocus();
-    else
-        m_ui->reqExternal->clearFocus();
-}
-
-PlayerSettingsDialog::~ PlayerSettingsDialog( )
-{
-	delete m_ui;
 }
 
 #include "knotify.moc"
