@@ -159,7 +159,7 @@ void KCMUserAccount::load()
 	_facePixmap = QPixmap( KCFGUserAccount::faceFile() );
 	_mw->btnChangeFace->setIcon( QIcon(_facePixmap) );
 	if (!_facePixmap.isNull()) {
-		_mw->btnChangeFace->setIconSize(_facePixmap.size());
+		_mw->btnChangeFace->setIconSize(_facePixmap.size().boundedTo(QSize(74,74)));
 	}
 
 	KCModule::load(); /* KConfigXT */
