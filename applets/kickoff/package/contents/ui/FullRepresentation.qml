@@ -56,6 +56,12 @@ Item {
         connectedSources: ["Status"]
     }
 
+    PlasmaCore.DataSource {
+        id: pmSource
+        engine: "powermanagement"
+        connectedSources: ["PowerDevil"]
+    }
+
     Kickoff.Launcher {
         id: launcher
     }
@@ -364,7 +370,7 @@ Item {
         KickoffButton {
             id: computerButton
             tab: systemPage
-            iconSource: "computer" // TODO: could also be computer-laptop
+            iconSource: pmSource.data["PowerDevil"] && pmSource.data["PowerDevil"]["Is Lid Present"] ? "computer-laptop" : "computer"
             text: i18n("Computer")
         }
         KickoffButton {
