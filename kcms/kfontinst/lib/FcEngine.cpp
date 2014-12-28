@@ -40,6 +40,7 @@
 #include <X11/extensions/Xrender.h>
 #include "fixx11h.h"
 #include <xcb/xcb_image.h>
+#include <QFontDatabase>
 #include "File.h"
 
 //#define KFI_FC_DEBUG
@@ -366,7 +367,7 @@ bool CFcEngine::Xft::drawString(XftFont *xftFont, const QString &text, int x, in
 
 void CFcEngine::Xft::drawString(const QString &text, int x, int &y, int h) const
 {
-    QFont   qt(KGlobalSettings::generalFont());
+    QFont   qt(QFontDatabase::systemFont(QFontDatabase::GeneralFont));
     XftFont *xftFont=XftFontOpen(QX11Info::display(), 0,
                                  FC_FAMILY, FcTypeString, (const FcChar8 *)(qt.family().toUtf8().data()),
                                  FC_WEIGHT, FcTypeInteger, qt.bold() ? FC_WEIGHT_BOLD : FC_WEIGHT_REGULAR,
@@ -1010,7 +1011,7 @@ QString CFcEngine::getPunctuation()
 QString CFcEngine::getFcLangString(FcPattern *pat, const char *val, const char *valLang)
 {
     QString                    rv;
-    QStringList                kdeLangs=KGlobal::locale()->languageList(),
+    QStringList                kdeLangs=KLocale::global()->languageList(),
                                fontLangs;
     QStringList::ConstIterator it(kdeLangs.begin()),
                                end(kdeLangs.end());

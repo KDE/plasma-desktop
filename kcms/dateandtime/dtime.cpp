@@ -55,7 +55,6 @@
 
 #include <Plasma/Svg>
 
-#include "dtime.moc"
 
 #include "helper.h"
 
@@ -100,7 +99,7 @@ Dtime::Dtime(QWidget * parent)
 
   timeEdit = new QTimeEdit( timeBox );
   timeEdit->setWrapping(true);
-  timeEdit->setDisplayFormat(KGlobal::locale()->use12Clock() ? "hh:mm:ss ap" : "HH:mm:ss");
+  timeEdit->setDisplayFormat(KLocale::global()->use12Clock() ? "hh:mm:ss ap" : "HH:mm:ss");
   v3->addWidget(timeEdit);
 
   v3->addStretch();

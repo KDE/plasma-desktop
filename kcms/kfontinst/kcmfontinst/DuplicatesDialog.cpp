@@ -38,6 +38,7 @@
 #include <KStandardDirs>
 #include <QLabel>
 #include <QTimer>
+#include <KFormat>
 #include <QGridLayout>
 #include <QDir>
 #include <QFileInfoList>
@@ -156,8 +157,8 @@ void CDuplicatesDialog::scanFinished()
                     details.clear();
                     details.append(*fit);
                     details.append("");
-                    details.append(KGlobal::locale()->formatByteSize(info.size()));
-                    details.append(KGlobal::locale()->formatDateTime(info.created()));
+                    details.append(KFormat().formatByteSize(info.size()));
+                    details.append(KLocale::global()->formatDateTime(info.created()));
                     if(info.isSymLink())
                         details.append(info.readLink());
                     new QTreeWidgetItem(top, details);
@@ -676,4 +677,3 @@ void CFontFileListView::checkFiles()
 
 }
 
-#include "DuplicatesDialog.moc"

@@ -42,6 +42,8 @@
 #include <QBoxLayout>
 #include <QEvent>
 #include <QResizeEvent>
+#include <QApplication>
+#include <QDesktopWidget>
 
 namespace KFI
 {
@@ -249,7 +251,7 @@ void CCharTip::reposition()
     rect.moveTopRight(itsParent->mapToGlobal(rect.topRight()));
 
     QPoint pos(rect.center());
-    QRect  desk(KGlobalSettings::desktopGeometry(rect.center()));
+    QRect  desk(QApplication::desktop()->screenGeometry(rect.center()));
 
     if ((rect.center().x() + width()) > desk.right())
     {
@@ -295,4 +297,3 @@ bool CCharTip::eventFilter(QObject *, QEvent *e)
 
 }
 
-#include "CharTip.moc"

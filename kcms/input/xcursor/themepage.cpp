@@ -527,7 +527,7 @@ bool ThemePage::installThemes(const QString &file)
 
     // The directory we'll install the themes to
     QString destDir = QDir::homePath() + "/.icons/";
-    KStandardDirs::makeDir(destDir); // Make sure the directory exists
+    QDir().mkpath(destDir); // Make sure the directory exists
 
     // Process each cursor theme in the archive
     foreach (const QString &dirName, themeDirs)

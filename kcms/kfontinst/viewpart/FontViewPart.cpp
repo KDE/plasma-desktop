@@ -311,7 +311,7 @@ void CFontViewPart::timeout()
                                 {
                                     fontFile=itsTempDir->name()+entry->name();
                                     //setLocalFilePath(itsTempDir->name()+entry->name());
-//                                    itsMetaUrl=KUrl::fromPath(localFilePath());
+//                                    itsMetaUrl=QUrl::fromLocalFile(localFilePath());
                                     break;
                                 }
                                 else
