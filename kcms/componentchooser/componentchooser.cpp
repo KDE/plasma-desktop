@@ -38,7 +38,7 @@
 #include <kconfiggroup.h>
 #include <KServiceTypeTrader>
 #include <KGlobal>
-#include <KIcon>
+#include <QIcon>
 #include <KLocalizedString>
 
 
@@ -134,7 +134,7 @@ ComponentChooser::ComponentChooser(QWidget *parent):
 		KConfig cfg(*it, KConfig::SimpleConfig);
 		KConfigGroup cg = cfg.group(QByteArray());
 		QListWidgetItem *item = new QListWidgetItem(
-			KIcon(cg.readEntry("Icon",QString("preferences-desktop-default-applications"))), 
+			QIcon::fromTheme(cg.readEntry("Icon",QString("preferences-desktop-default-applications"))), 
 			cg.readEntry("Name",i18n("Unknown")));
 		item->setData(Qt::UserRole, (*it));
 		ServiceChooser->addItem(item);

@@ -30,7 +30,7 @@
 #include <QDebug>
 #include <KConfigGroup>
 #include <KDesktopFile>
-#include <KIcon>
+#include <QIcon>
 #include <KMimeType>
 #include <KLocalizedString>
 #include <KGlobal>
@@ -77,7 +77,7 @@ QStandardItem *StandardItemFactory::createItemForUrl(const QString& urlString, D
         item = new QStandardItem;
         KDesktopFile desktopFile(url.toLocalFile());
         item->setText(QFileInfo(urlString.mid(0, urlString.lastIndexOf('.'))).completeBaseName());
-        item->setIcon(KIcon(desktopFile.readIcon()));
+        item->setIcon(QIcon::fromTheme(desktopFile.readIcon()));
 
         //FIXME: desktopUrl is a hack around borkage in KRecentDocuments which
         //       stores a path in the URL field!
@@ -107,7 +107,7 @@ QStandardItem *StandardItemFactory::createItemForUrl(const QString& urlString, D
 
         item->setText(basename);
         //FIXME
-//         item->setIcon(KIcon(KMimeType::iconNameForUrl(url)));
+//         item->setIcon(QIcon::fromTheme(KMimeType::iconNameForUrl(url)));
         item->setData(url.url(), Kickoff::UrlRole);
         item->setData(subTitle, Kickoff::SubTitleRole);
 
@@ -122,7 +122,7 @@ void StandardItemFactory::setSpecialUrlProperties(const KUrl& url, QStandardItem
     // specially handled URLs
     if (homeUrl() && url == *homeUrl()) {
         item->setText(i18n("Home Folder"));
-        item->setIcon(KIcon("user-home"));
+        item->setIcon(QIcon::fromTheme("user-home"));
     } else if (remoteUrl() && url == *remoteUrl()) {
         item->setText(i18n("Network Folders"));
     }
@@ -150,7 +150,7 @@ QStandardItem *StandardItemFactory::createItemForService(KService::Ptr service, 
     QString appName = service->name();
     bool nameFirst = displayOrder == NameBeforeDescription;
     appItem->setText(nameFirst || genericName.isEmpty() ? appName : genericName);
-    appItem->setIcon(KIcon(service->icon()));
+    appItem->setIcon(QIcon::fromTheme(service->icon()));
     appItem->setData(service->entryPath(), Kickoff::UrlRole);
 
     if (nameFirst) {

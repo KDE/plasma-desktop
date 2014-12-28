@@ -28,7 +28,7 @@
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <QDebug>
-#include <KIcon>
+#include <QIcon>
 #include <Solid/PowerManagement>
 #include <kworkspace.h>
 #include <kdisplaymanager.h>
@@ -50,39 +50,39 @@ QStandardItem* LeaveModel::createStandardItem(const QString& url)
     const QString basename = QFileInfo(url).baseName();
     if (basename == "logoutonly") {
         item->setText(i18n("Log out"));
-        item->setIcon(KIcon("system-log-out"));
+        item->setIcon(QIcon::fromTheme("system-log-out"));
         item->setData(i18n("End session"), Kickoff::SubTitleRole);
     } else if (basename == "lock") {
         item->setText(i18n("Lock"));
-        item->setIcon(KIcon("system-lock-screen"));
+        item->setIcon(QIcon::fromTheme("system-lock-screen"));
         item->setData(i18n("Lock screen"), Kickoff::SubTitleRole);
     } else if (basename == "switch") {
         item->setText(i18n("Switch user"));
-        item->setIcon(KIcon("system-switch-user"));
+        item->setIcon(QIcon::fromTheme("system-switch-user"));
         item->setData(i18n("Start a parallel session as a different user"), Kickoff::SubTitleRole);
     } else if (basename == "shutdown") {
         item->setText(i18n("Shut down"));
-        item->setIcon(KIcon("system-shutdown"));
+        item->setIcon(QIcon::fromTheme("system-shutdown"));
         item->setData(i18n("Turn off computer"), Kickoff::SubTitleRole);
     } else if (basename == "restart") {
         item->setText(i18nc("Restart computer", "Restart"));
-        item->setIcon(KIcon("system-reboot"));
+        item->setIcon(QIcon::fromTheme("system-reboot"));
         item->setData(i18n("Restart computer"), Kickoff::SubTitleRole);
     } else if (basename == "savesession") {
         item->setText(i18n("Save Session"));
-        item->setIcon(KIcon("document-save"));
+        item->setIcon(QIcon::fromTheme("document-save"));
         item->setData(i18n("Save current session for next login"), Kickoff::SubTitleRole);
     } else if (basename == "standby") {
         item->setText(i18nc("Puts the system on standby", "Standby"));
-        item->setIcon(KIcon("system-suspend"));
+        item->setIcon(QIcon::fromTheme("system-suspend"));
         item->setData(i18n("Pause without logging out"), Kickoff::SubTitleRole);
     } else if (basename == "suspenddisk") {
         item->setText(i18n("Hibernate"));
-        item->setIcon(KIcon("system-suspend-hibernate"));
+        item->setIcon(QIcon::fromTheme("system-suspend-hibernate"));
         item->setData(i18n("Suspend to disk"), Kickoff::SubTitleRole);
     } else if (basename == "suspendram") {
         item->setText(i18n("Sleep"));
-        item->setIcon(KIcon("system-suspend"));
+        item->setIcon(QIcon::fromTheme("system-suspend"));
         item->setData(i18n("Suspend to RAM"), Kickoff::SubTitleRole);
     } else {
         item->setText(basename);
@@ -208,5 +208,4 @@ LeaveModel::~LeaveModel()
     delete d;
 }
 
-#include "leavemodel.moc"
 

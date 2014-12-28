@@ -42,7 +42,7 @@
 #include <ksycoca.h>
 #include <kglobalsettings.h>
 #include <KLocalizedString>
-#include <KIcon>
+#include <QIcon>
 
 #include <assert.h>
 #include <stdlib.h>
@@ -147,7 +147,7 @@ void ApplicationModelPrivate::fillNode(const QString &_relPath, AppNode *node)
             }
 
             AppNode *newnode = new AppNode();
-            newnode->icon = KIcon(p->icon());
+            newnode->icon = QIcon::fromTheme(p->icon());
             newnode->appName = p->name();
             newnode->genericName = p->genericName();
             newnode->desktopEntry = p->entryPath();
@@ -262,7 +262,7 @@ void ApplicationModelPrivate::fillNode(const QString &_relPath, AppNode *node)
 
         AppNode *newnode = new AppNode();
         newnode->iconName = icon;
-        newnode->icon = KIcon(icon);
+        newnode->icon = QIcon::fromTheme(icon);
         newnode->appName = appName;
         newnode->genericName = genericName;
         newnode->relPath = relPath;
@@ -282,7 +282,7 @@ void ApplicationModelPrivate::fillNode(const QString &_relPath, AppNode *node)
 
     if (showRecentlyInstalled && _relPath.isEmpty() && !newInstalledPrograms.isEmpty()) {
         AppNode *newnode = new AppNode();
-        newnode->icon = KIcon("chronometer");
+        newnode->icon = QIcon::fromTheme("chronometer");
         newnode->appName = i18n("Recently Installed");
         newnode->relPath = "new/";
         newnode->isDir = true;
@@ -688,4 +688,3 @@ QHash<QString, QString> ApplicationModelPrivate::iconNameMap()
 } // namespace Kickoff
 
 
-#include "applicationmodel.moc"

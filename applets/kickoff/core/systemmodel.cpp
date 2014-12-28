@@ -29,7 +29,7 @@
 #include <KAuthorized>
 #include <QDebug>
 #include <KDiskFreeSpaceInfo>
-#include <KIcon>
+#include <QIcon>
 #include <KUrl>
 #include <KSycoca>
 #include <KFilePlacesModel>
@@ -236,7 +236,7 @@ QVariant SystemModel::data(const QModelIndex &index, int role) const
                 case Qt::DisplayRole:
                     return i18n("Run Command...");
                 case Qt::DecorationRole:
-                    return KIcon("system-run");
+                    return QIcon::fromTheme("system-run");
                 case SubTitleRole:
                     return i18n("Run a command or a search query");
                 case UrlRole:
@@ -252,7 +252,7 @@ QVariant SystemModel::data(const QModelIndex &index, int role) const
         case Qt::DisplayRole:
             return service->name();
         case Qt::DecorationRole:
-            return KIcon(service->icon());
+            return QIcon::fromTheme(service->icon());
         case SubTitleRole:
             return service->genericName();
         case UrlRole:
@@ -486,4 +486,3 @@ void Kickoff::SystemModel::sourceRowsRemoved(const QModelIndex &parent, int /*st
     endResetModel();
 }
 
-#include "systemmodel.moc"
