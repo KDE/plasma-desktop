@@ -41,7 +41,7 @@
 #include <QDebug>
 
 #include "internallibkonq/konq_popupmenu.h"
-#include "internallibkonq/konq_operations.h"
+#include <KIO/DropJob>
 #include <KAuthorized>
 #include <KBookmarkManager>
 #include <KConfigGroup>
@@ -742,7 +742,8 @@ void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row)
     QDropEvent ev(pos, possibleActions, mimeData, buttons, modifiers);
     ev.setDropAction(proposedAction);
 
-    KonqOperations::doDrop(item, m_dirModel->dirLister()->url(), &ev, 0, QList<QAction *>());
+    KIO::DropJob *dropJob = KIO::drop(&ev, m_dirModel->dirLister()->url());
+    dropJob->ui()->setAutoErrorHandlingEnabled(true);
 }
 
 void FolderModel::selectionChanged(QItemSelection selected, QItemSelection deselected)
