@@ -259,4 +259,3 @@ QNetworkAccessManager* Attica::KdePlatformDependent::nam()
 // TODO: re-enable, see http://community.kde.org/Frameworks/Porting_Notes
 // Q_EXPORT_PLUGIN2(attica_kde, Attica::KdePlatformDependent)
 
-#include "kdeplatformdependent.moc"
