@@ -29,7 +29,7 @@
 #include <KGlobal>
 #include <KMessageBox>
 #include <KDebug>
-#include <KIcon>
+#include <QIcon>
 #include <KAboutData>
 #include <KStandardDirs>
 #include <KFileDialog>
@@ -113,13 +113,13 @@ EmoticonList::EmoticonList(QWidget *parent, const QVariantList &args)
     setAboutData(about);
 //     setButtons(Apply | Help);
     setupUi(this);
-    btAdd->setIcon(KIcon("list-add"));
-    btEdit->setIcon(KIcon("edit-rename"));
-    btRemoveEmoticon->setIcon(KIcon("edit-delete"));
-    btNew->setIcon(KIcon("document-new"));
-    btGetNew->setIcon(KIcon("get-hot-new-stuff"));
-    btInstall->setIcon(KIcon("document-import"));
-    btRemoveTheme->setIcon(KIcon("edit-delete"));
+    btAdd->setIcon(QIcon::fromTheme("list-add"));
+    btEdit->setIcon(QIcon::fromTheme("edit-rename"));
+    btRemoveEmoticon->setIcon(QIcon::fromTheme("edit-delete"));
+    btNew->setIcon(QIcon::fromTheme("document-new"));
+    btGetNew->setIcon(QIcon::fromTheme("get-hot-new-stuff"));
+    btInstall->setIcon(QIcon::fromTheme("document-import"));
+    btRemoveTheme->setIcon(QIcon::fromTheme("edit-delete"));
 
     connect(themeList, &QListWidget::itemSelectionChanged, this, &EmoticonList::selectTheme);
     connect(themeList, &QListWidget::itemSelectionChanged, this, &EmoticonList::updateButton);

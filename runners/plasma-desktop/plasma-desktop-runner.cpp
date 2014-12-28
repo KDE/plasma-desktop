@@ -23,7 +23,7 @@
 #include <QDBusConnectionInterface>
 
 #include <QDebug>
-#include <KIcon>
+#include <QIcon>
 #include <KLocale>
 #include <KRun>
 
@@ -58,7 +58,7 @@ void PlasmaDesktopRunner::match(Plasma::RunnerContext &context)
         Plasma::QueryMatch match(this);
         match.setId("plasma-desktop-console");
         match.setType(Plasma::QueryMatch::ExactMatch);
-        match.setIcon(KIcon("plasma"));
+        match.setIcon(QIcon::fromTheme("plasma"));
         match.setText(i18n("Open Plasma desktop interactive console"));
         match.setRelevance(1.0);
         context.addMatch(context.query(), match);
@@ -67,7 +67,7 @@ void PlasmaDesktopRunner::match(Plasma::RunnerContext &context)
         Plasma::QueryMatch match(this);
         match.setId("plasma-desktop-console");
         match.setType(Plasma::QueryMatch::ExactMatch);
-        match.setIcon(KIcon("kwin"));
+        match.setIcon(QIcon::fromTheme("kwin"));
         match.setText(i18n("Open KWin interactive console"));
         match.setRelevance(1.0);
         context.addMatch(context.query(), match);
