@@ -25,7 +25,6 @@ set(folderplugin_SRCS
     plugin/internallibkonq/konq_dndpopupmenuplugin.cpp
     plugin/internallibkonq/konq_popupmenu.cpp
     plugin/internallibkonq/konq_popupmenuplugin.cpp
-    plugin/internallibkonq/konq_operations.cpp
 )
 
 install(FILES plugin/qmldir DESTINATION ${QML_INSTALL_DIR}/org/kde/plasma/private/folder)
