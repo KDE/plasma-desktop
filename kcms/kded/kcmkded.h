@@ -19,12 +19,16 @@
 #ifndef KCMKDED_H
 #define KCMKDED_H
 
-#include <kcmodule.h>
+#include <QLoggingCategory>
+
+#include <KCModule>
 
 class QPushButton;
 class QTreeWidget;
 class QTreeWidgetItem;
 class KConfig;
+
+Q_DECLARE_LOGGING_CATEGORY(KCM_KDED)
 
 class KDEDConfig : public KCModule
 {

@@ -27,12 +27,14 @@
 #include <QTreeWidget>
 #include <QVBoxLayout>
 #include <QHeaderView>
+#include <QDialogButtonBox>
+#include <QLoggingCategory>
+#include <QDialog>
+
+#include <KConfigGroup>
 
 #include <kaboutdata.h>
-#include <kdialogbuttonbox.h>
-#include <kdebug.h>
 #include <kdesktopfile.h>
-#include <kdialog.h>
 #include <kmessagebox.h>
 #include <kservice.h>
 #include <kservicetypetrader.h>
@@ -45,6 +47,9 @@ K_PLUGIN_FACTORY(KDEDFactory,
         registerPlugin<KDEDConfig>();
         )
 K_EXPORT_PLUGIN(KDEDFactory("kcmkded"))
+
+Q_LOGGING_CATEGORY(KCM_KDED, "kcm_kded")
+
 
 enum OnDemandColumns
 {
@@ -132,7 +137,7 @@ KDEDConfig::KDEDConfig(QWidget* parent, const QVariantList &) :
 	_lvStartup->header()->setStretchLastSection(true);
 	gblay->addWidget( _lvStartup );
 
-	KDialogButtonBox *buttonBox = new KDialogButtonBox( gb, Qt::Horizontal);
+	QDialogButtonBox *buttonBox = new QDialogButtonBox(Qt::Horizontal, gb);
 	_pbStart = buttonBox->addButton( i18n("Start") , QDialogButtonBox::ActionRole  );
 	_pbStop = buttonBox->addButton( i18n("Stop") , QDialogButtonBox::ActionRole );
 	gblay->addWidget( buttonBox );
@@ -186,7 +191,7 @@ void KDEDConfig::load()
 	      it != offers.constEnd(); ++it)
 	{
 		QString servicePath = (*it)->entryPath();
-		kDebug() << servicePath;
+		qCDebug(KCM_KDED) << servicePath;
 
         const KDesktopFile file(QStandardPaths::GenericDataLocation, "kservices5/" + servicePath );
 		const KConfigGroup grp = file.desktopGroup();
@@ -202,7 +207,7 @@ void KDEDConfig::load()
 			if (grp.hasKey("X-KDE-DBus-ModuleName")) {
 				treeitem->setData( StartupService, LibraryRole, grp.readEntry("X-KDE-DBus-ModuleName") );
 			} else {
-				kWarning() << "X-KDE-DBUS-ModuleName not set for module " << file.readName();
+				qCWarning(KCM_KDED) << "X-KDE-DBUS-ModuleName not set for module " << file.readName();
 				treeitem->setData( StartupService, LibraryRole, grp.readEntry("X-KDE-Library") );
 			}
 			_lvStartup->addTopLevelItem( treeitem );
@@ -215,13 +220,13 @@ void KDEDConfig::load()
 			if (grp.hasKey("X-KDE-DBus-ModuleName")) {
 				treeitem->setData( OnDemandService, LibraryRole, grp.readEntry("X-KDE-DBus-ModuleName") );
 			} else {
-				kWarning() << "X-KDE-DBUS-ModuleName not set for module " << file.readName();
+				qCWarning(KCM_KDED) << "X-KDE-DBUS-ModuleName not set for module " << file.readName();
 				treeitem->setData( OnDemandService, LibraryRole, grp.readEntry("X-KDE-Library") );
 			}
 			_lvLoD->addTopLevelItem( treeitem );
 		}
 		else {
-			kWarning() << "kcmkded: Module " << file.readName() << " not loaded on demand or startup! Skipping.";
+			qCWarning(KCM_KDED) << "kcmkded: Module " << file.readName() << " not loaded on demand or startup! Skipping.";
 		}
 	}
 
@@ -246,7 +251,7 @@ void KDEDConfig::save()
 	      it != offers.constEnd(); ++it)
 	{
 		QString servicePath = (*it)->entryPath();
-		kDebug() << servicePath;
+		qCDebug(KCM_KDED) << servicePath;
 
         const KDesktopFile file(QStandardPaths::GenericDataLocation, "kservices5/" + servicePath );
 		const KConfigGroup grp = file.desktopGroup();
@@ -345,21 +350,21 @@ void KDEDConfig::getServiceStatus()
 
 		if (!found)
 		{
-			kDebug() << "Could not relate module " << module;
+			qCDebug(KCM_KDED) << "Could not relate module " << module;
 #ifndef NDEBUG
-			kDebug() << "Candidates were:";
+			qCDebug(KCM_KDED) << "Candidates were:";
 			count = _lvLoD->topLevelItemCount();
 			for( int i = 0; i < count; ++i )
 			{
 				QTreeWidgetItem *treeitem = _lvLoD->topLevelItem( i );
-				kDebug() << treeitem->data( OnDemandService, LibraryRole ).toString();
+				qCDebug(KCM_KDED) << treeitem->data( OnDemandService, LibraryRole ).toString();
 			}
 
 			count = _lvStartup->topLevelItemCount();
 			for( int i = 0; i < count; ++i )
 			{
 				QTreeWidgetItem *treeitem = _lvStartup->topLevelItem( i );
-				kDebug() << treeitem->data( StartupService, LibraryRole ).toString();
+				qCDebug(KCM_KDED) << treeitem->data( StartupService, LibraryRole ).toString();
 			}
 #endif
 		}
@@ -456,7 +461,7 @@ void KDEDConfig::slotStartService()
 void KDEDConfig::slotStopService()
 {
 	QString service = _lvStartup->selectedItems().at(0)->data( StartupService, LibraryRole ).toString();
-	kDebug() << "Stopping: " << service;
+	qCDebug(KCM_KDED) << "Stopping: " << service;
 
 	QDBusInterface kdedInterface( "org.kde.kded5", "/kded", "org.kde.kded5" );
 	QDBusReply<bool> reply = kdedInterface.call( "unloadModule", service  );
