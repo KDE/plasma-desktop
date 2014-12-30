@@ -181,18 +181,17 @@ void KbPreviewFrame::drawShape(QPainter &painter, const GShape &s, int x, int y,
 
             drawKeySymbols(painter, temp, s, name);
         } else {
-            QPoint temp[cordi_count];
-
+            QVarLengthArray<QPoint> temp(cordi_count);
             for (int i = 0; i < cordi_count; i++) {
                 temp[i].setX(scaleFactor * (s.getCordii(i).x() + x + 1));
                 temp[i].setY(scaleFactor * (s.getCordii(i).y() + y + 1));
             }
 
-            painter.drawPolygon(temp, cordi_count);
-            drawKeySymbols(painter, temp, s, name);
+            painter.drawPolygon(temp.data(), cordi_count);
+            drawKeySymbols(painter, temp.data(), s, name); // no length passed here, is this safe?
         }
     } else {
-        QPoint temp[cordi_count == 1 ? 4 : cordi_count];
+        QVarLengthArray<QPoint> temp(cordi_count == 1 ? 4 : cordi_count);
         int size;
 
         if (cordi_count == 1) {
@@ -239,8 +238,8 @@ void KbPreviewFrame::drawShape(QPainter &painter, const GShape &s, int x, int y,
             qCDebug(KEYBOARD_PREVIEW) <<temp[i];
         }*/
 
-        painter.drawPolygon(temp, size);
-        drawKeySymbols(painter, temp, s, name);
+        painter.drawPolygon(temp.data(), size);
+        drawKeySymbols(painter, temp.data(), s, name); // no length passed here, is this safe?
     }
 
 }
