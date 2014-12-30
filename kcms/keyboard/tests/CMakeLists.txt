@@ -47,6 +47,10 @@ if(Boost_FOUND)
   ADD_DEFINITIONS(-DNEW_GEOMETRY=1)
 
   keyboard_preview_unit_tests(geometry_parser)
+   if ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang")
+      # the default maximum template expansion depth (256) is not enough
+      set_property(SOURCE ../preview/geometry_parser.cpp APPEND_STRING PROPERTY COMPILE_FLAGS " -ftemplate-depth=512")
+   endif()
 #  set_source_files_properties(${preview_SRCS} PROPERTIES COMPILE_FLAGS "-fexceptions")
 endif(Boost_FOUND)
 

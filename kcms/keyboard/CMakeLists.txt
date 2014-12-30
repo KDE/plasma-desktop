@@ -122,6 +122,10 @@ if(Boost_FOUND)
     )
 
    set_source_files_properties(preview/geometry_parser.cpp preview/symbol_parser.cpp PROPERTIES COMPILE_FLAGS "-fexceptions")
+   if ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang")
+      # the default maximum template expansion depth (256) is not enough
+      set_property(SOURCE preview/geometry_parser.cpp APPEND_STRING PROPERTY COMPILE_FLAGS " -ftemplate-depth=512")
+   endif()
 else(Boost_FOUND)
 
   message("Boost not found, install Boost libraries to enable keyboard geometry preview")
