@@ -18,11 +18,12 @@ set_package_properties(GLIB2 PROPERTIES DESCRIPTION "Low-level core library for 
                        TYPE OPTIONAL
                       )
 
-pkg_check_modules(CANBERRA libcanberra)
-add_feature_info ("Audio setup GUI" CANBERRA_FOUND
-                  "libcanberra is needed for audio setup GUI
-                  * http://0pointer.de/lennart/projects/libcanberra"
-                 )
+find_package(Canberra)
+set_package_properties(Canberra PROPERTIES DESCRIPTION "Audio setup GUI"
+                      PURPOSE "libcanberra is needed for audio setup GUI"
+                      URL "http://0pointer.de/lennart/projects/libcanberra"
+                      TYPE OPTIONAL
+                      )
 
 set(kcmphonon_SRCS main.cpp devicepreference.cpp backendselection.cpp)
 ki18n_wrap_ui(kcmphonon_SRCS devicepreference.ui backendselection.ui)
