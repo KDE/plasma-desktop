@@ -326,8 +326,14 @@ Item {
             }
         }
 
-        Behavior on width { NumberAnimation { duration: units.longDuration; easing.type: Easing.InQuad; } }
-        Behavior on height { NumberAnimation { duration: units.longDuration; easing.type: Easing.InQuad; } }
+        Behavior on width {
+            NumberAnimation { duration: units.longDuration; easing.type: Easing.InQuad; }
+            enabled: plasmoid.expanded
+        }
+        Behavior on height {
+            NumberAnimation { duration: units.longDuration; easing.type: Easing.InQuad; }
+            enabled: plasmoid.expanded
+        }
 
         tabPosition: {
             switch (plasmoid.location) {
