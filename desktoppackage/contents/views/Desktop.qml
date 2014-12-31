@@ -28,8 +28,6 @@ import "../explorer"
 
 Item {
     id: root
-    width: 1024
-    height: 768
 
     property Item containment
     property Item wallpaper
