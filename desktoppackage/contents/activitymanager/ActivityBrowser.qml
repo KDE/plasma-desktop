@@ -150,6 +150,7 @@ Item {
                 activityList.model.addActivity(activityName, function (id) {
                     activityList.model.setActivityIcon(id, newActivityDialog.activityIconSource, function() {});
                 })
+                root.forceActiveFocus() // so pressing Enter again doesn't create another activity
             }
         }
     }

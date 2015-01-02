@@ -151,6 +151,13 @@ PlasmaCore.FrameSvgItem {
 
                 width:  parent.width
 
+                onAccepted: acceptButton.clicked()
+                Keys.onPressed: {
+                    if (event.key === Qt.Key_Escape) {
+                        cancelButton.clicked()
+                    }
+                }
+
                 // text: ""
             }
 
