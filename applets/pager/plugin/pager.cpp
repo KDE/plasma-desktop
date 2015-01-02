@@ -99,7 +99,7 @@ Pager::Pager(QObject *parent)
     // connect to KWin's reloadConfig signal to get updates on the desktop layout
     QDBusConnection dbus = QDBusConnection::sessionBus();
     dbus.connect(QString(), "/KWin", "org.kde.KWin", "reloadConfig",
-                 this, SLOT(configChanged()));
+                 this, SLOT(desktopsSizeChanged()));
 
     recalculateGridSizes(m_rows);
 
