@@ -102,8 +102,8 @@ Item {
             }
             onStateChanged: {
                 if (sidePanelStack.state == "closed") {
-                    sidePanelStack.source = ""; //unload all elements
                     sidePanel.visible = false;
+                    sidePanelStack.source = ""; //unload all elements
                 }
             }
         }
