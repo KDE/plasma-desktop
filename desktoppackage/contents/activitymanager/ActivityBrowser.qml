@@ -67,9 +67,6 @@ Item {
             } else if (event.key == Qt.Key_Tab) {
                 // console.log("TAB KEY");
 
-            } else  {
-                // console.log("OTHER KEY");
-                heading.forceActiveFocus();
             }
         }
     }
