@@ -172,6 +172,17 @@ Item {
                 list.contentY = 0
                 widgetExplorer.widgetsModel.searchTerm = text
             }
+            Keys.onPressed: {
+                if (event.key === Qt.Key_Escape) {
+                    if (text.length > 0) {
+                        text = ""
+                    } else {
+                        main.closed()
+                    }
+                    event.accepted = true
+                }
+            }
+
             Component.onCompleted: forceActiveFocus()
             Layout.columnSpan: 2
             Layout.fillWidth: true
