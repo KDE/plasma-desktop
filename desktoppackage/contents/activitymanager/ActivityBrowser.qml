@@ -50,7 +50,11 @@ Item {
 
         } else {
             if (event.key == Qt.Key_Escape) {
-                root.closeRequested();
+                if (heading.searchString.length > 0) {
+                    heading.searchString = ""
+                } else {
+                    root.closeRequested();
+                }
             } else if (event.key == Qt.Key_Up) {
                 activityList.selectPrevious();
 
@@ -150,7 +154,11 @@ Item {
                 activityList.model.addActivity(activityName, function (id) {
                     activityList.model.setActivityIcon(id, newActivityDialog.activityIconSource, function() {});
                 })
-                root.forceActiveFocus() // so pressing Enter again doesn't create another activity
+            }
+            onOpacityChanged: {
+                if (opacity == 0) {
+                    heading.focusSearch()
+                }
             }
         }
     }

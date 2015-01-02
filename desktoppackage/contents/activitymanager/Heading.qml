@@ -29,6 +29,10 @@ Item {
     property alias searchString : searchText.text
     signal closeRequested
 
+    function focusSearch() {
+        searchText.forceActiveFocus()
+    }
+
     Keys.onPressed: {
         if (event.key == Qt.Key_Escape) {
             if (root.showSearch) {
