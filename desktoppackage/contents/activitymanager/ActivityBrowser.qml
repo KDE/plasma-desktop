@@ -90,6 +90,7 @@ Item {
         }
 
         onCloseRequested: root.closeRequested()
+        Component.onCompleted: focusSearch()
     }
 
     PlasmaExtras.ScrollArea {
