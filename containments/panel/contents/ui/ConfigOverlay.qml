@@ -323,13 +323,14 @@ MouseArea {
         flags: Qt.WindowStaysOnTopHint|Qt.WindowDoesNotAcceptFocus|Qt.BypassWindowManagerHint
         location: plasmoid.location
         mainItem: MouseArea {
-            width: configureButton.width + label.contentWidth + closeButton.width + (2 * handleRow.spacing)
+            width: handleRow.childrenRect.width + (2 * handleRow.spacing)
             height: Math.max(configureButton.height, label.contentHeight, closeButton.height)
             hoverEnabled: true
             onEntered: visibleTimer.stop();
             onExited: visibleTimer.restart();
             Row {
                 id: handleRow
+                anchors.horizontalCenter: parent.horizontalCenter
                 spacing: units.smallSpacing
                 PlasmaComponents.ToolButton {
                     id: configureButton
