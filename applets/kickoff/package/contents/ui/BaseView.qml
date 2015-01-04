@@ -57,6 +57,7 @@ Item {
             keyNavigationWraps: true
             highlight: KickoffHighlight {}
             highlightMoveDuration : 0
+            highlightResizeDuration: 0
 
             delegate: KickoffItem {}
 

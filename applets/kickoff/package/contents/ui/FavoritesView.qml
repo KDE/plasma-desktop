@@ -180,6 +180,7 @@ Item {
             delegate: KickoffItem {}
             highlight: KickoffHighlight {}
             highlightMoveDuration : 0
+            highlightResizeDuration: 0
 
             model: favoritesModel
 

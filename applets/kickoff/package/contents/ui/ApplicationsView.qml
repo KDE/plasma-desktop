@@ -173,6 +173,7 @@ Item {
             boundsBehavior: Flickable.StopAtBounds
             highlight: KickoffHighlight {}
             highlightMoveDuration : 0
+            highlightResizeDuration: 0
 
             model: VisualDataModel {
                 id: vmodel
