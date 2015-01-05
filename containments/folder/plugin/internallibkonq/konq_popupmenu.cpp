@@ -26,7 +26,6 @@
 #include "kfileitemactionplugin.h"
 #include "kabstractfileitemactionplugin.h"
 #include "kpropertiesdialog.h"
-#include "konq_operations.h"
 
 #include <klocale.h>
 #include <kbookmarkmanager.h>
