@@ -317,13 +317,12 @@ bool AppsModel::trigger(int row, const QString &actionId, const QVariant &argume
         }
 #endif
 
-        bool ran = KRun::run(*service, QList<QUrl>(), 0, true, KStartupInfo::createNewStartupIdForTimestamp(timeStamp));
+        new KRun(QUrl::fromLocalFile(service->entryPath()), 0, true,
+            KStartupInfo::createNewStartupIdForTimestamp(timeStamp));
 
-        if (ran) {
-            emit appLaunched(service->storageId());
-        }
+        emit appLaunched(service->storageId());
 
-        return ran;
+        return true;
     }
 
     return false;

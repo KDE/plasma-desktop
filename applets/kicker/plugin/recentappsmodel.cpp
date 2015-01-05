@@ -106,13 +106,12 @@ bool RecentAppsModel::trigger(int row, const QString &actionId, const QVariant &
         }
 #endif
 
-        bool ran = KRun::run(*service, QList<QUrl>(), 0, true, KStartupInfo::createNewStartupIdForTimestamp(timeStamp));
+        new KRun(QUrl::fromLocalFile(service->entryPath()), 0, true,
+            KStartupInfo::createNewStartupIdForTimestamp(timeStamp));
 
-        if (ran) {
-            addApp(storageId);
-        }
+        addApp(storageId);
 
-        return ran;
+        return true;
     } else if (actionId == "forget") {
         forgetApp(row);
 
