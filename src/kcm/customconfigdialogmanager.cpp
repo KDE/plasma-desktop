@@ -90,8 +90,8 @@ QVariantHash CustomConfigDialogManager::currentWidgetProperties() const
 void CustomConfigDialogManager::setWidgetProperties(const QVariantHash &p)
 {
     for (QVariantHash::ConstIterator i = p.begin(); i != p.end(); ++i) {
-        QMap<QString, QWidget *>::ConstIterator j = m_widgets.find(i.key());
-        if (j != m_widgets.end()) {
+        QMap<QString, QWidget *>::ConstIterator j = m_widgets.constFind(i.key());
+        if (j != m_widgets.constEnd()) {
             setProperty(j.value(), i.value());
         }
     }

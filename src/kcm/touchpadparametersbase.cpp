@@ -70,7 +70,7 @@ void TouchpadParametersBase::setSystemDefaults()
     QVariantHash v;
     backend->getConfig(v);
 
-    for (QVariantHash::ConstIterator i = v.begin(); i != v.end(); ++i) {
+    for (QVariantHash::ConstIterator i = v.constBegin(); i != v.constEnd(); ++i) {
         systemDefaults().writeEntry(i.key(), i.value());
     }
     systemDefaults().sync();
