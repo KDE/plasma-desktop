@@ -275,9 +275,16 @@ MouseArea {
                 right: (plasmoid.formFactor !== PlasmaCore.Types.Vertical) ? undefined : parent.right
             }
             visible: currentApplet && currentApplet.applet.pluginName == "org.kde.plasma.panelspacer"
+            opacity: !xAnim.running && !yAnim.running ? 1.0 : 0
             width: units.largeSpacing
             height: units.largeSpacing
             color: theme.textColor
+            Behavior on opacity {
+                NumberAnimation {
+                    duration: units.shortDuration
+                    easing.type: Easing.InOutQuad
+                }
+            }
         }
         Rectangle {
             anchors {
@@ -287,18 +294,27 @@ MouseArea {
                 left: (plasmoid.formFactor !== PlasmaCore.Types.Vertical) ? undefined : parent.left
             }
             visible: currentApplet && currentApplet.applet.pluginName == "org.kde.plasma.panelspacer"
+            opacity: !xAnim.running && !yAnim.running ? 1.0 : 0
             width: units.largeSpacing
             height: units.largeSpacing
             color: theme.textColor
+            Behavior on opacity {
+                NumberAnimation {
+                    duration: units.shortDuration
+                    easing.type: Easing.InOutQuad
+                }
+            }
         }
         Behavior on x {
             enabled: !configurationArea.pressed
             NumberAnimation {
+                id: xAnim
                 duration: units.longDuration
                 easing.type: Easing.InOutQuad
             }
         }
         Behavior on y {
+            id: yAnim
             enabled: !configurationArea.pressed
             NumberAnimation {
                 duration: units.longDuration
