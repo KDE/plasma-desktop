@@ -27,12 +27,15 @@ import "plasmapackage:/code/LayoutManager.js" as LayoutManager
 
 MouseArea {
     id: configurationArea
+
     z: 1000
+
     anchors {
         fill: parent
         rightMargin: (plasmoid.formFactor !== PlasmaCore.Types.Vertical) ? toolBox.width : 0
         bottomMargin: (plasmoid.formFactor === PlasmaCore.Types.Vertical) ? toolBox.height : 0
     }
+
     hoverEnabled: true
 
     property bool isResizingLeft: false
@@ -145,20 +148,26 @@ MouseArea {
             }
         }
 
-        tooltip.visible = true;
-        tooltip.raise();
+        if (root.dragOverlay.currentApplet) {
+            hideTimer.stop();
+            tooltip.visible = true;
+            tooltip.raise();
+        }
     }
-    onExited: visibleTimer.restart();
+
+    onExited: hideTimer.restart();
+
     onCurrentAppletChanged: {
-        if (!root.dragOverlay.currentApplet) {
+        if (!currentApplet || !root.dragOverlay.currentApplet) {
+            hideTimer.start();
             return;
         }
-
         handle.x = currentApplet.x;
         handle.y = currentApplet.y;
         handle.width = currentApplet.width;
         handle.height = currentApplet.height;
     }
+
     onPressed: {
         if (!root.dragOverlay.currentApplet) {
             return;
@@ -199,6 +208,7 @@ MouseArea {
         currentApplet.parent = root;
         currentApplet.z = 900;
     }
+
     onReleased: {
         if (!root.dragOverlay.currentApplet) {
             return;
@@ -223,15 +233,17 @@ MouseArea {
         handle.height = currentApplet.height;
         LayoutManager.save();
     }
+
     Item {
         id: placeHolder
         visible: configurationArea.containsMouse
         Layout.fillWidth: currentApplet ? currentApplet.Layout.fillWidth : false
         Layout.fillHeight: currentApplet ? currentApplet.Layout.fillHeight : false
     }
+
     Timer {
-        id: visibleTimer
-        interval: 250
+        id: hideTimer
+        interval: units.longDuration
         onTriggered: tooltip.visible = false;
     }
 
@@ -318,16 +330,25 @@ MouseArea {
         id: tooltip
         visualParent: currentApplet
 
-        visible: currentApplet
         type: PlasmaCore.Dialog.Dock
         flags: Qt.WindowStaysOnTopHint|Qt.WindowDoesNotAcceptFocus|Qt.BypassWindowManagerHint
         location: plasmoid.location
+
+        onVisualParentChanged: {
+            if (visualParent) {
+                configureButton.visible = currentApplet.applet.action("configure") && currentApplet.applet.action("configure").enabled;
+                closeButton.visible = currentApplet.applet.action("remove") && currentApplet.applet.action("remove").enabled;
+                label.text = currentApplet.applet.title;
+            }
+        }
+
         mainItem: MouseArea {
+            enabled: currentApplet
             width: handleRow.childrenRect.width + (2 * handleRow.spacing)
             height: Math.max(configureButton.height, label.contentHeight, closeButton.height)
             hoverEnabled: true
-            onEntered: visibleTimer.stop();
-            onExited: visibleTimer.restart();
+            onEntered: hideTimer.stop();
+            onExited:  hideTimer.restart();
             Row {
                 id: handleRow
                 anchors.horizontalCenter: parent.horizontalCenter
@@ -336,13 +357,11 @@ MouseArea {
                     id: configureButton
                     anchors.verticalCenter: parent.verticalCenter
                     iconSource: "configure"
-                    visible: currentApplet && currentApplet.applet.action("configure") && currentApplet.applet.action("configure").enabled
                     onClicked: currentApplet.applet.action("configure").trigger()
                 }
                 PlasmaComponents.Label {
                     id: label
                     anchors.verticalCenter: parent.verticalCenter
-                    text: currentApplet ? currentApplet.applet.title : ""
                     textFormat: Text.PlainText
                     maximumLineCount: 1
                 }
@@ -350,7 +369,6 @@ MouseArea {
                     id: closeButton
                     anchors.verticalCenter: parent.verticalCenter
                     iconSource: "window-close"
-                    visible: currentApplet && currentApplet.applet.action("remove") && currentApplet.applet.action("remove").enabled
                     onClicked: currentApplet.applet.action("remove").trigger()
                 }
             }
