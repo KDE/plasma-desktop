@@ -281,7 +281,7 @@ MouseArea {
             color: theme.textColor
             Behavior on opacity {
                 NumberAnimation {
-                    duration: units.shortDuration
+                    duration: units.longDuration
                     easing.type: Easing.InOutQuad
                 }
             }
@@ -300,7 +300,7 @@ MouseArea {
             color: theme.textColor
             Behavior on opacity {
                 NumberAnimation {
-                    duration: units.shortDuration
+                    duration: units.longDuration
                     easing.type: Easing.InOutQuad
                 }
             }
