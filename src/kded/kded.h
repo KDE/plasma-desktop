@@ -57,6 +57,7 @@ private Q_SLOTS:
     void updateCurrentState();
     void serviceRegistered(const QString &);
     void handleReset();
+    void serviceNameFetchFinished(QDBusPendingCallWatcher *);
 
 private:
     void showNotification(const QString &name, const QString &text);
