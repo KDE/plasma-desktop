@@ -22,13 +22,16 @@
 #include <QObject>
 #include <QVariantHash>
 
-#include <kdemacros.h>
+//#include <kdemacros.h>
 
-class KDE_EXPORT TouchpadBackend : public QObject
+class Q_DECL_EXPORT TouchpadBackend : public QObject
 {
     Q_OBJECT
+
+protected:
+	explicit TouchpadBackend(QObject *parent);
+
 public:
-    explicit TouchpadBackend(QObject *parent);
 
     static TouchpadBackend *implementation();
 

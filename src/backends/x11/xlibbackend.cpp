@@ -23,7 +23,7 @@
 #include <QScopedPointer>
 
 #include <KLocalizedString>
-#include <KDebug>
+#include <QDebug>
 
 //Includes are ordered this way because of #defines in Xorg's headers
 #include "xrecordkeyboardmonitor.h" // krazy:exclude=includes
@@ -202,8 +202,8 @@ XlibBackend::XlibBackend(QObject *parent) :
         int h = qAbs(edges.i[3] - edges.i[2]);
         m_resX = w / 90;
         m_resY = h / 50;
-        kDebug() << "Width: " << w << " height: " << h;
-        kDebug() << "Approx. resX: " << m_resX << " resY: " << m_resY;
+        qDebug() << "Width: " << w << " height: " << h;
+        qDebug() << "Approx. resX: " << m_resX << " resY: " << m_resY;
     }
 
     PropertyInfo resolution(m_display.data(), m_device, resolutionAtom, 0);
@@ -214,7 +214,7 @@ XlibBackend::XlibBackend(QObject *parent) :
                 static_cast<unsigned long>(INT_MAX));
         m_resX = qMin(static_cast<unsigned long>(resolution.i[1]),
                 static_cast<unsigned long>(INT_MAX));
-        kDebug() << "Touchpad resolution: x: " << m_resX << " y: " << m_resY;
+        qDebug() << "Touchpad resolution: x: " << m_resX << " y: " << m_resY;
     }
 
     m_scaleByResX.append("HorizScrollDelta");
@@ -224,7 +224,7 @@ XlibBackend::XlibBackend(QObject *parent) :
 
     m_resX = qMax(10, m_resX);
     m_resY = qMax(10, m_resY);
-    kDebug() << "Final resolution x:" << m_resX << " y:" << m_resY;
+    qDebug() << "Final resolution x:" << m_resX << " y:" << m_resY;
     m_negate["HorizScrollDelta"] = "InvertHorizScroll";
     m_negate["VertScrollDelta"] = "InvertVertScroll";
     m_supported.append(m_negate.values());
@@ -567,7 +567,7 @@ void XlibBackend::setTouchpadOff(TouchpadBackend::TouchpadOffState state)
         touchpadOff = 2;
         break;
     default:
-        kError() << "Unknown TouchpadOffState" << state;
+        qCritical() << "Unknown TouchpadOffState" << state;
         return;
     }
 
@@ -597,14 +597,14 @@ TouchpadBackend::TouchpadOffState XlibBackend::getTouchpadOff()
     case 2:
         return TouchpadTapAndScrollDisabled;
     default:
-        kError() << "Unknown TouchpadOff value" << off.value(0).toInt();
+        qCritical() << "Unknown TouchpadOff value" << off.value(0).toInt();
         return TouchpadFullyDisabled;
     }
 }
 
 void XlibBackend::touchpadDetached()
 {
-    kWarning() << "Touchpad detached";
+    qWarning() << "Touchpad detached";
     m_device = XIAllDevices;
 }
 
@@ -613,7 +613,7 @@ void XlibBackend::devicePlugged(int device)
     if (m_device == XIAllDevices) {
         m_device = findTouchpad();
         if (m_device != XIAllDevices) {
-            kWarning() << "Touchpad reset";
+            qWarning() << "Touchpad reset";
             m_notifications.reset();
             watchForEvents(m_keyboard);
             Q_EMIT touchpadReset();

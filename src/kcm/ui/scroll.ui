@@ -143,7 +143,7 @@
        </widget>
       </item>
       <item row="0" column="1">
-       <widget class="KDoubleNumInput" name="kcfg_VertScrollDelta">
+       <widget class="QDoubleSpinBox" name="kcfg_VertScrollDelta">
         <property name="toolTip">
          <string>Move distance of the finger for a scroll event</string>
         </property>
@@ -155,9 +155,6 @@
         </property>
         <property name="decimals">
          <number>1</number>
-        </property>
-        <property name="sliderEnabled">
-         <bool>true</bool>
         </property>
        </widget>
       </item>
@@ -172,7 +169,7 @@
        </widget>
       </item>
       <item row="1" column="1">
-       <widget class="KDoubleNumInput" name="kcfg_HorizScrollDelta">
+       <widget class="QDoubleSpinBox" name="kcfg_HorizScrollDelta">
         <property name="toolTip">
          <string>Move distance of the finger for a scroll event</string>
         </property>
@@ -184,9 +181,6 @@
         </property>
         <property name="decimals">
          <number>1</number>
-        </property>
-        <property name="sliderEnabled">
-         <bool>true</bool>
         </property>
        </widget>
       </item>
@@ -222,7 +216,7 @@
        </widget>
       </item>
       <item row="0" column="1">
-       <widget class="KDoubleNumInput" name="kcfg_CoastingSpeed">
+       <widget class="QSpinBox" name="kcfg_CoastingSpeed">
         <property name="toolTip">
          <string>Your finger needs to produce this many scrolls per second in order to start coasting</string>
         </property>
@@ -231,9 +225,6 @@
         </property>
         <property name="suffix">
          <string> scrolls/sec</string>
-        </property>
-        <property name="sliderEnabled">
-         <bool>true</bool>
         </property>
        </widget>
       </item>
@@ -248,7 +239,7 @@
        </widget>
       </item>
       <item row="1" column="1">
-       <widget class="KDoubleNumInput" name="kcfg_CoastingFriction">
+       <widget class="QSpinBox" name="kcfg_CoastingFriction">
         <property name="toolTip">
          <string>Number of scrolls/second² to decrease the coasting speed</string>
         </property>
@@ -257,9 +248,6 @@
         </property>
         <property name="suffix">
          <string> scrolls/sec²</string>
-        </property>
-        <property name="sliderEnabled">
-         <bool>true</bool>
         </property>
        </widget>
       </item>
@@ -334,7 +322,7 @@ will scroll down and counter clockwise motion will scroll up</string>
        </widget>
       </item>
       <item row="2" column="1">
-       <widget class="KDoubleNumInput" name="kcfg_CircScrollDelta">
+       <widget class="QSpinBox" name="kcfg_CircScrollDelta">
         <property name="sizePolicy">
          <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
           <horstretch>0</horstretch>
@@ -346,9 +334,6 @@ will scroll down and counter clockwise motion will scroll up</string>
         </property>
         <property name="suffix">
          <string comment="suffix - degrees (angle)">°</string>
-        </property>
-        <property name="sliderEnabled">
-         <bool>true</bool>
         </property>
        </widget>
       </item>
@@ -369,7 +354,7 @@ will scroll down and counter clockwise motion will scroll up</string>
  </widget>
  <customwidgets>
   <customwidget>
-   <class>KDoubleNumInput</class>
+   <class>QSpinBox</class>
    <extends>QWidget</extends>
    <header>knuminput.h</header>
   </customwidget>

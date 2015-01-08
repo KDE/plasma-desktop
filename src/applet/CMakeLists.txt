@@ -9,17 +9,18 @@ set(Applet_SRCS
     touchpadservice.cpp
 )
 
-qt4_generate_dbus_interface(../kded/kded.h org.kde.touchpad.xml)
-qt4_add_dbus_interfaces(Applet_SRCS
+qt5_generate_dbus_interface(../kded/kded.h org.kde.touchpad.xml)
+qt5_add_dbus_interfaces(Applet_SRCS
                         ${CMAKE_CURRENT_BINARY_DIR}/org.kde.touchpad.xml
 )
-qt4_add_dbus_interfaces(Applet_SRCS
-                        ${KDE4_DBUS_INTERFACES_DIR}/org.kde.kded.xml
+qt5_add_dbus_interfaces(Applet_SRCS
+                        ${KINIT_DBUS_INTERFACES_DIR}/org.kde.kded5.xml
 )
 
-kde4_add_plugin(plasma_engine_touchpad ${Applet_SRCS})
+add_library(plasma_engine_touchpad MODULE ${Applet_SRCS})
 target_link_libraries(plasma_engine_touchpad
-                      ${KDE4_PLASMA_LIBS}
+                      KF5::Plasma
+		      Qt5::DBus
 )
 
 install(TARGETS plasma_engine_touchpad
@@ -32,5 +33,5 @@ install(FILES touchpad.operations
         DESTINATION ${DATA_INSTALL_DIR}/plasma/services
 )
 install(FILES touchpad.svg
-        DESTINATION ${DATA_INSTALL_DIR}/desktoptheme/default/icons
+        DESTINATION ${DATA_INSTALL_DIR}/plasma/desktoptheme/default/icons
 )

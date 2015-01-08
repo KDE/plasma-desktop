@@ -24,6 +24,7 @@
 #include <QSocketNotifier>
 
 #include <xcb/xcb.h>
+#include <X11/Xlib.h>
 
 class XlibNotifications : public QObject
 {

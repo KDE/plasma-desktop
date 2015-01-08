@@ -286,7 +286,7 @@
           </widget>
          </item>
          <item row="0" column="1">
-          <widget class="KIntNumInput" name="kcfg_LockedDragTimeout">
+          <widget class="QSpinBox" name="kcfg_LockedDragTimeout">
            <property name="toolTip">
             <string>How long it takes (in milliseconds) for the &quot;Locked Drags&quot; mode to be automatically turned off after the finger is released from the touchpad</string>
            </property>
@@ -294,16 +294,13 @@
             <number>0</number>
            </property>
            <property name="maximum">
-            <number>1000</number>
+            <number>99</number>
            </property>
            <property name="singleStep">
-            <number>1000</number>
+            <number>99</number>
            </property>
            <property name="suffix">
             <string> ms</string>
-           </property>
-           <property name="sliderEnabled">
-            <bool>true</bool>
            </property>
           </widget>
          </item>
@@ -384,7 +381,7 @@
        </widget>
       </item>
       <item row="0" column="1">
-       <widget class="KIntNumInput" name="kcfg_MaxTapTime">
+       <widget class="QSpinBox" name="kcfg_MaxTapTime">
         <property name="toolTip">
          <string>Maximum time (in milliseconds) for detecting a tap</string>
         </property>
@@ -392,7 +389,7 @@
          <number>0</number>
         </property>
         <property name="maximum">
-         <number>1000</number>
+         <number>99</number>
         </property>
         <property name="singleStep">
          <number>10</number>
@@ -400,13 +397,10 @@
         <property name="suffix">
          <string> ms</string>
         </property>
-        <property name="sliderEnabled">
-         <bool>true</bool>
-        </property>
        </widget>
       </item>
       <item row="1" column="1">
-       <widget class="KDoubleNumInput" name="kcfg_MaxTapMove">
+       <widget class="QDoubleSpinBox" name="kcfg_MaxTapMove">
         <property name="toolTip">
          <string>Maximum movement of the finger for detecting a tap</string>
         </property>
@@ -419,13 +413,10 @@
         <property name="decimals">
          <number>1</number>
         </property>
-        <property name="sliderEnabled">
-         <bool>true</bool>
-        </property>
        </widget>
       </item>
       <item row="2" column="1">
-       <widget class="KIntNumInput" name="kcfg_MaxDoubleTapTime">
+       <widget class="QSpinBox" name="kcfg_MaxDoubleTapTime">
         <property name="toolTip">
          <string>Maximum time (in milliseconds) for detecting a double tap</string>
         </property>
@@ -433,7 +424,7 @@
          <number>0</number>
         </property>
         <property name="maximum">
-         <number>1000</number>
+         <number>99</number>
         </property>
         <property name="singleStep">
          <number>10</number>
@@ -441,13 +432,10 @@
         <property name="suffix">
          <string> ms</string>
         </property>
-        <property name="sliderEnabled">
-         <bool>true</bool>
-        </property>
        </widget>
       </item>
       <item row="3" column="1">
-       <widget class="KIntNumInput" name="kcfg_SingleTapTimeout">
+       <widget class="QSpinBox" name="kcfg_SingleTapTimeout">
         <property name="toolTip">
          <string>Timeout after a tap to recognize it as a single tap</string>
         </property>
@@ -455,16 +443,13 @@
          <number>0</number>
         </property>
         <property name="maximum">
-         <number>1000</number>
+         <number>99</number>
         </property>
         <property name="singleStep">
          <number>10</number>
         </property>
         <property name="suffix">
          <string> ms</string>
-        </property>
-        <property name="sliderEnabled">
-         <bool>true</bool>
         </property>
        </widget>
       </item>
@@ -475,9 +460,8 @@
  </widget>
  <customwidgets>
   <customwidget>
-   <class>KDoubleNumInput</class>
+   <class>QSpinBox</class>
    <extends>QWidget</extends>
-   <header>knuminput.h</header>
   </customwidget>
   <customwidget>
    <class>KComboBox</class>
@@ -485,9 +469,8 @@
    <header>kcombobox.h</header>
   </customwidget>
   <customwidget>
-   <class>KIntNumInput</class>
+   <class>QSpinBox</class>
    <extends>QWidget</extends>
-   <header>knuminput.h</header>
   </customwidget>
  </customwidgets>
  <tabstops>

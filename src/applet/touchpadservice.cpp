@@ -47,7 +47,7 @@ public:
     void start()
     {
         if (m_daemon) {
-            QMetaObject::invokeMethod(m_daemon, operationName().toAscii());
+            QMetaObject::invokeMethod(m_daemon, operationName().toLatin1());
         }
         emitResult();
     }

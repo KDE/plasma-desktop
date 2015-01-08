@@ -37,9 +37,9 @@ class TouchpadBackend;
 class KMessageWidget;
 class OrgKdeTouchpadInterface;
 class CustomConfigDialogManager;
-class KAction;
+class QAction;
 class KShortcutsDialog;
-class KTabWidget;
+class QTabWidget;
 class KComboBox;
 class QDBusPendingCallWatcher;
 
@@ -83,11 +83,11 @@ private:
     KMessageWidget *m_errorMessage, *m_configOutOfSyncMessage;
     TestArea *m_testArea;
     OrgKdeTouchpadInterface *m_daemon;
-    KAction *m_loadActiveConfiguration;
+    QAction *m_loadActiveConfiguration;
     bool m_configOutOfSync;
     QScopedPointer<KShortcutsDialog> m_shortcutsDialog;
     QWidget *m_kdedTab;
-    KTabWidget *m_tabs;
+    QTabWidget *m_tabs;
     KComboBox *m_mouseCombo;
 
     Ui::PointerMotionForm m_pointerMotion;

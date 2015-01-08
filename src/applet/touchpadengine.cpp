@@ -17,12 +17,12 @@
  */
 #include "touchpadengine.h"
 
-#include <QDBusConnection>
-#include <QDBusInterface>
+#include <QtDBus/QDBusConnection>
+#include <QtDBus/QDBusInterface>
 
 #include "touchpadinterface.h"
 #include "touchpadservice.h"
-#include "kdedinterface.h"
+#include "kded5interface.h"
 
 TouchpadEngine::TouchpadEngine(QObject *parent, const QVariantList &args)
     : Plasma::DataEngine(parent, args), m_source("touchpad"), m_daemon(0)
@@ -31,12 +31,12 @@ TouchpadEngine::TouchpadEngine(QObject *parent, const QVariantList &args)
 
 void TouchpadEngine::init()
 {
-    OrgKdeKdedInterface kded(QLatin1String("org.kde.kded"),
-                             QLatin1String("/kded"),
-                             QDBusConnection::sessionBus());
+    OrgKdeKded5Interface kded(QLatin1String("org.kde.kded5"),
+                              QLatin1String("/kded"),
+                              QDBusConnection::sessionBus());
     kded.loadModule("touchpad").waitForFinished();
 
-    m_daemon = new OrgKdeTouchpadInterface("org.kde.kded", "/modules/touchpad",
+    m_daemon = new OrgKdeTouchpadInterface("org.kde.kded5", "/modules/touchpad",
                                            QDBusConnection::sessionBus(), this);
     if (!m_daemon->isValid()) {
         return;
@@ -79,4 +79,4 @@ TouchpadEngine::~TouchpadEngine()
 {
 }
 
-K_EXPORT_PLASMA_DATAENGINE(touchpad, TouchpadEngine)
+//K_EXPORT_PLASMA_DATAENGINE(touchpad, TouchpadEngine)

@@ -20,22 +20,22 @@ set(SRCS
     kcm/customconfigdialogmanager.cpp
 )
 
-qt4_add_dbus_interfaces(SRCS
+qt5_add_dbus_interfaces(SRCS
                         ${CMAKE_CURRENT_BINARY_DIR}/org.kde.touchpad.xml
 )
 
-kde4_add_kcfg_files(SRCS kcm/touchpadparameters.kcfgc)
+kconfig_add_kcfg_files(SRCS kcm/touchpadparameters.kcfgc)
 
-kde4_add_ui_files(SRCS
-                  kcm/ui/pointermotion.ui
-                  kcm/ui/tap.ui
-                  kcm/ui/scroll.ui
-                  kcm/ui/sensitivity.ui
-                  kcm/ui/kded.ui
-                  kcm/ui/testarea.ui
+qt5_wrap_ui(SRCS
+            kcm/ui/pointermotion.ui
+            kcm/ui/tap.ui
+            kcm/ui/scroll.ui
+            kcm/ui/sensitivity.ui
+            kcm/ui/kded.ui
+            kcm/ui/testarea.ui
 )
 
-qt4_generate_dbus_interface(kded/kded.h org.kde.touchpad.xml)
+qt5_generate_dbus_interface(kded/kded.h org.kde.touchpad.xml)
 
 SET(SRCS
     ${SRCS}
@@ -43,17 +43,29 @@ SET(SRCS
     kded/kdedactions.cpp
 )
 
-kde4_add_kcfg_files(SRCS kded/kdedsettings.kcfgc)
+kconfig_add_kcfg_files(SRCS kded/kdedsettings.kcfgc)
 
-kde4_add_plugin(kded_touchpad
-                ${SRCS}
-                ${backend_SRCS}
+add_library(kded_touchpad MODULE
+            ${SRCS}
+            ${backend_SRCS}
 )
 target_link_libraries(kded_touchpad
                       ${backend_LIBS}
-                      ${KDE4_KDEUI_LIBS}
-                      ${KDE4_PLASMA_LIBS}
-                      ${KDE4_KNOTIFYCONFIG_LIBS}
+		      KF5::KCMUtils
+		      KF5::Notifications
+		      KF5::CoreAddons
+		      KF5::ConfigWidgets
+		      KF5::DBusAddons
+		      KF5::Completion
+		      KF5::WidgetsAddons
+		      KF5::I18n
+		      KF5::Service
+		      KF5::NotifyConfig
+		      KF5::XmlGui
+		      KF5::GlobalAccel
+		      KF5::Plasma
+                      
+		      Qt5::X11Extras
 )
 
 add_subdirectory(applet)
@@ -73,7 +85,7 @@ install(FILES ${CMAKE_CURRENT_BINARY_DIR}/org.kde.touchpad.xml
         DESTINATION ${DBUS_INTERFACES_INSTALL_DIR}
 )
 install(FILES kded/kcm_touchpad.notifyrc
-        DESTINATION ${DATA_INSTALL_DIR}/kcm_touchpad
+        DESTINATION ${KNOTIFYRC_INSTALL_DIR}
 )
 
 install(TARGETS kded_touchpad

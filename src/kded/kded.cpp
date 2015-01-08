@@ -19,7 +19,7 @@
 #include "kded.h"
 
 #include <KNotification>
-#include <KLocale>
+#include <KLocalizedString>
 
 #include "plugins.h"
 #include "kdedactions.h"
@@ -44,11 +44,13 @@ TouchpadDisabler::TouchpadDisabler(QObject *parent, const QVariantList &)
     : KDEDModule(parent), m_backend(TouchpadBackend::implementation()),
       m_enabled(true), m_keyboardActivity(false), m_mouse(false)
 {
+    KLocalizedString::setApplicationDomain("kcm_touchpad");
+
     if (!workingTouchpadFound()) {
         return;
     }
 
-    m_dependecies.addWatchedService("org.kde.plasma-desktop");
+    m_dependecies.addWatchedService("org.kde.plasmashell");
     m_dependecies.addWatchedService("org.kde.kglobalaccel");
     connect(&m_dependecies, SIGNAL(serviceRegistered(QString)),
             SLOT(serviceRegistered(QString)));
@@ -72,10 +74,25 @@ TouchpadDisabler::TouchpadDisabler(QObject *parent, const QVariantList &)
 
     m_dependecies.setWatchMode(QDBusServiceWatcher::WatchForRegistration);
     m_dependecies.setConnection(QDBusConnection::sessionBus());
+    QDBusPendingCall async = QDBusConnection::sessionBus().interface()->asyncCall(QLatin1String("ListNames"));
+    QDBusPendingCallWatcher *callWatcher = new QDBusPendingCallWatcher(async, this);
+    connect(callWatcher, SIGNAL(finished(QDBusPendingCallWatcher*)),
+            this, SLOT(serviceNameFetchFinished(QDBusPendingCallWatcher*)));
+}
+
+void TouchpadDisabler::serviceNameFetchFinished(QDBusPendingCallWatcher *callWatcher)
+{
+    QDBusPendingReply<QStringList> reply = *callWatcher;
+    callWatcher->deleteLater();
+
+    if (reply.isError() || reply.value().isEmpty()) {
+        qWarning() << "Error: Couldn't get registered services list from session bus";
+        return;
+    }
+
+    QStringList allServices = reply.value();
     Q_FOREACH (const QString &service, m_dependecies.watchedServices()) {
-        QDBusReply<bool> registered = QDBusConnection::sessionBus().interface()
-                ->isServiceRegistered(service);
-        if (!registered.isValid() || registered.value()) {
+        if (allServices.contains(service)) {
             serviceRegistered(service);
         }
     }
@@ -112,7 +129,7 @@ void TouchpadDisabler::enable()
 
 void TouchpadDisabler::reloadSettings()
 {
-    m_settings.readConfig();
+    m_settings.load();
     m_keyboardActivityTimeout.setInterval(
                 m_settings.keyboardActivityTimeoutMs());
 
@@ -188,8 +205,10 @@ void TouchpadDisabler::mousePlugged()
 void TouchpadDisabler::showNotification(const QString &name, const QString &text)
 {
     KNotification::event(name, text, QPixmap(), //Icon is specified in .notifyrc
-                         0, KNotification::CloseOnTimeout,
-                         TouchpadPluginFactory::componentData());
+                         0,
+                         KNotification::CloseOnTimeout,
+                         moduleName());
+                         //TouchpadPluginFactory::componentData());
 }
 
 bool TouchpadDisabler::isMousePluggedIn() const
