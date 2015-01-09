@@ -254,6 +254,7 @@ KQuickControlsAddons.MouseEventListener {
             Layout.fillHeight: true
             property int zoffset: 1000
             drag.target: appletItem
+            cursorShape: Qt.DragMoveCursor
 
             onPressed: {
                 appletItem.z = appletItem.z + zoffset;
