@@ -22,7 +22,7 @@ target_link_libraries(plasma_engine_kimpanel
 	KF5::Service
 	Qt5::DBus
 )
-kservice_desktop_to_json(plasma_engine_kimpanel plasma-dataengine-kimpanel.desktop)
+kcoreaddons_desktop_to_json(plasma_engine_kimpanel plasma-dataengine-kimpanel.desktop)
 
 install(TARGETS plasma_engine_kimpanel
         DESTINATION ${PLUGIN_INSTALL_DIR}/plasma/dataengine)
