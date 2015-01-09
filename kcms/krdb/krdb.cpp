@@ -386,7 +386,7 @@ static void createGtkrc( bool exportColors, const QPalette& cg, bool exportGtkTh
         t << "class \"*MenuItem\" style \"MenuItem\"" << endl;
         t << endl;
     }
-
+    saveFile.commit();
 }
 
 // -----------------------------------------------------------------------------
