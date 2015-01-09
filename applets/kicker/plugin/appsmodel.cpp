@@ -30,6 +30,7 @@
 
 #include <config-X11.h>
 
+#include <QCollator>
 #include <QTimer>
 #include <QProcess>
 #include <QQmlPropertyMap>
@@ -449,7 +450,10 @@ void AppsModel::refresh()
         processServiceGroup(group);
 
         if (m_sortNeeded) {
-            qSort(m_entryList.begin(), m_entryList.end(), AbstractEntry::lessThan);
+            QCollator c;
+
+            std::sort(m_entryList.begin(), m_entryList.end(),
+                [&c](AbstractEntry* a, AbstractEntry* b) { return c.compare(a->name(), b->name()) < 0; });
 
             m_sortNeeded = false;
         }
