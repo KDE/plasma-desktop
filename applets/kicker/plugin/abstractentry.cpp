@@ -22,8 +22,3 @@
 AbstractEntry::~AbstractEntry()
 {
 }
-
-bool AbstractEntry::lessThan(AbstractEntry *e1, AbstractEntry *e2)
-{
-    return e1->m_name < e2->m_name;
-}
