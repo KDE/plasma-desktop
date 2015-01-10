@@ -215,9 +215,7 @@ MouseEventListener {
         }
 
         width: inPopup ? units.iconSizes.small : Math.min(height, parent.width - LayoutManager.horizontalMargins())
-        height: Math.min(units.iconSizes.huge,
-                         parent.height - (parent.height - LayoutManager.verticalMargins() < units.iconSizes.small ?
-                                          Math.min(9, LayoutManager.verticalMargins()) : LayoutManager.verticalMargins()))
+        height: LayoutManager.iconSize(parent.height)
 
         PlasmaCore.IconItem {
             id: icon
