@@ -42,8 +42,14 @@ Item {
         } else {
             launcher.openUrl(model["url"]);
             plasmoid.expanded = false;
-            listItem.ListView.view.model.rootIndex = 0;
-            listItem.ListView.view.clearBreadcrumbs();
+
+            var view = listItem.ListView.view;
+            if (view.model.hasOwnProperty("rootIndex")) { // only VisualDataModel has that
+                view.model.rootIndex = 0;
+            }
+            if (view.clearBreadCrumbs) {
+                view.clearBreadCrumbs();
+            }
         }
     }
 
