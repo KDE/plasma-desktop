@@ -56,13 +56,13 @@ MouseArea {
         Behavior on opacity {
             NumberAnimation {
                 duration: units.longDuration
-                easing: Easing.InOutQuad
+                easing.type: Easing.InOutQuad
             }
         }
         Behavior on y {
             NumberAnimation {
                 duration: units.longDuration
-                easing: Easing.InOutQuad
+                easing.type: Easing.InOutQuad
             }
         }
     }
