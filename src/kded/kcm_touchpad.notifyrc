@@ -1,16 +1,52 @@
 [Global]
 Name=Touchpad
+Name[fr]=Pavé tactile
+Name[nl]=Touchpad
+Name[pt_BR]=Touchpad
+Name[sk]=Touchpad
+Name[uk]=Сенсорна панель
+Name[x-test]=xxTouchpadxx
 IconName=input-touchpad
 Comment=Touchpad
+Comment[fr]=Pavé tactile
+Comment[nl]=Touchpad
+Comment[pt_BR]=Touchpad
+Comment[sk]=Touchpad
+Comment[uk]=Сенсорна панель
+Comment[x-test]=xxTouchpadxx
 
 [Event/TouchpadDisabled]
 Name=Touchpad was disabled
+Name[fr]=Le pavé tactile a été désactivé
+Name[nl]=Touchpad was uitgeschakeld
+Name[pt_BR]=O touchpad foi desativado
+Name[sk]=Touchpad bol zakázaný
+Name[uk]=Сенсорну панель вимкнено
+Name[x-test]=xxTouchpad was disabledxx
 Comment=Touchpad was disabled because mouse is detected
+Comment[fr]=Le pavé tactile a été désactivé car une souris a été détectée
+Comment[nl]=Touchpad was uitgeschakeld omdat er een muis is gedetecteerd
+Comment[pt_BR]=O touchpad foi desativado porque o mouse foi detectado
+Comment[sk]=Touchpad bol zakázaný, lebo bola zistená myš
+Comment[uk]=Сенсорну панель вимкнено, оскільки виявлено мишу
+Comment[x-test]=xxTouchpad was disabled because mouse is detectedxx
 Sound=KDE-Sys-App-Positive.ogg
 Action=Popup
 
 [Event/TouchpadEnabled]
 Name=Touchpad was enabled
+Name[fr]=Le pavé tactile a été activé
+Name[nl]=Touchpad was ingeschakeld
+Name[pt_BR]=O touchpad foi ativado
+Name[sk]=Touchpad bol povolený
+Name[uk]=Сенсорну панель увімкнено
+Name[x-test]=xxTouchpad was enabledxx
 Comment=Touchpad was enabled because the mouse was unplugged
+Comment[fr]=Le pavé tactile a été activé car la souris a été débranchée
+Comment[nl]=Touchpad was ingeschakeld omdat er een muis is uitgetrokken
+Comment[pt_BR]=O touchpad foi ativado porque o mouse foi desconectado
+Comment[sk]=Touchpad bol povolený, pretože myš bola odpojená
+Comment[uk]=Сенсорну панель увімкнено, оскільки мишу було від’єднано
+Comment[x-test]=xxTouchpad was enabled because the mouse was unpluggedxx
 Sound=KDE-Sys-App-Negative.ogg
 Action=Sound
