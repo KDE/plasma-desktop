@@ -1,5 +1,8 @@
 [Global]
 Name=Touchpad
+Name[ca]=Ratolí tàctil
+Name[es]=Panel táctil
+Name[fi]=Kosketuslevy
 Name[fr]=Pavé tactile
 Name[nl]=Touchpad
 Name[pl]=Gładzik
@@ -11,6 +14,9 @@ Name[uk]=Сенсорна панель
 Name[x-test]=xxTouchpadxx
 IconName=input-touchpad
 Comment=Touchpad
+Comment[ca]=Ratolí tàctil
+Comment[es]=Panel táctil
+Comment[fi]=Kosketuslevy
 Comment[fr]=Pavé tactile
 Comment[nl]=Touchpad
 Comment[pl]=Gładzik
@@ -23,6 +29,9 @@ Comment[x-test]=xxTouchpadxx
 
 [Event/TouchpadDisabled]
 Name=Touchpad was disabled
+Name[ca]=El ratolí tàctil s'ha desactivat
+Name[es]=El panel táctil ha sido desactivado
+Name[fi]=Kosketuslevy poistettiin käytöstä
 Name[fr]=Le pavé tactile a été désactivé
 Name[nl]=Touchpad was uitgeschakeld
 Name[pl]=Gładzik został wyłączony
@@ -33,6 +42,9 @@ Name[sv]=Tryckplattan stängdes av
 Name[uk]=Сенсорну панель вимкнено
 Name[x-test]=xxTouchpad was disabledxx
 Comment=Touchpad was disabled because mouse is detected
+Comment[ca]=El ratolí tàctil s'ha desactivat perquè s'ha detectat un ratolí
+Comment[es]=El panel táctil ha sido desactivado porque se ha detectado un ratón
+Comment[fi]=Kosketuslevy poistettiin käytöstä, koska havaittiin hiiri
 Comment[fr]=Le pavé tactile a été désactivé car une souris a été détectée
 Comment[nl]=Touchpad was uitgeschakeld omdat er een muis is gedetecteerd
 Comment[pl]=Gładzik został wyłączony, bo podłączono mysz
@@ -47,6 +59,9 @@ Action=Popup
 
 [Event/TouchpadEnabled]
 Name=Touchpad was enabled
+Name[ca]=El ratolí tàctil s'ha activat
+Name[es]=El panel táctil ha sido activado
+Name[fi]=Kosketuslevy otettiin käyttöön
 Name[fr]=Le pavé tactile a été activé
 Name[nl]=Touchpad was ingeschakeld
 Name[pl]=Gładzik został włączony
@@ -57,6 +72,9 @@ Name[sv]=Tryckplattan aktiverades
 Name[uk]=Сенсорну панель увімкнено
 Name[x-test]=xxTouchpad was enabledxx
 Comment=Touchpad was enabled because the mouse was unplugged
+Comment[ca]=El ratolí tàctil s'ha activat perquè en ratolí s'ha desendollat
+Comment[es]=El panel táctil ha sido activado porque se ha desconectado el ratón
+Comment[fi]=Kosketuslevy otettiin käyttöön, koska hiiri irrotettiin
 Comment[fr]=Le pavé tactile a été activé car la souris a été débranchée
 Comment[nl]=Touchpad was ingeschakeld omdat er een muis is uitgetrokken
 Comment[pl]=Gładzik został włączony, bo odłączono mysz
