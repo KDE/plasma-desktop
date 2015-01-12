@@ -54,6 +54,7 @@ PlasmaCore.FrameSvgItem {
         }
 
     }
+
     onPrefixChanged: adjustBorders();
 
     visible: false //adjust borders is run during setup. We want to avoid painting till completed
@@ -96,15 +97,6 @@ PlasmaCore.FrameSvgItem {
         }
 
         root.enabledBorders = borders;
-
-        containmentParent.anchors.topMargin = Math.min(root.fixedMargins.top, Math.max(1, root.height - units.iconSizes.smallMedium));
-
-        containmentParent.anchors.bottomMargin = Math.min(root.fixedMargins.bottom, Math.max(1, root.height - units.iconSizes.smallMedium));
-
-        //Base the left/right fixedMargins on height as well, to have a good radial symmetry
-        containmentParent.anchors.leftMargin = Math.min(root.fixedMargins.left, Math.max(1, root.height - units.iconSizes.smallMedium));
-
-        containmentParent.anchors.rightMargin = Math.min(root.fixedMargins.right, Math.max(1, root.height - units.iconSizes.smallMedium));
     }
 
     onContainmentChanged: {
@@ -148,10 +140,12 @@ PlasmaCore.FrameSvgItem {
         id: containmentParent
         anchors {
             fill: parent
-            leftMargin: root.margins.left
-            topMargin: root.margins.top
-            rightMargin: root.margins.right
-            bottomMargin: root.margins.bottom
+            topMargin: Math.min(root.fixedMargins.top, Math.max(1, root.height - units.iconSizes.smallMedium));
+            bottomMargin: Math.min(root.fixedMargins.bottom, Math.max(1, root.height - units.iconSizes.smallMedium));
+
+            //Base the left/right fixedMargins on height as well, to have a good radial symmetry
+            leftMargin: Math.min(root.fixedMargins.left, Math.max(1, root.height - units.iconSizes.smallMedium));
+            rightMargin: Math.min(root.fixedMargins.right, Math.max(1, root.height - units.iconSizes.smallMedium));
         }
     }
 
