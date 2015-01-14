@@ -152,7 +152,7 @@ void ThemePage::updateSizeComboBox()
                 maxIconHeight = m_pixmap.height();
             sizeComboBox->addItem(
                 QIcon(m_pixmap),
-                i18nc("@item:inlistbox size", "resolution dependent"),
+                i18nc("@item:inlistbox size", "Resolution dependent"),
                 0);
             comboBoxList << 0;
             foreach (i, sizes)
