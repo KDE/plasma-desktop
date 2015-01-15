@@ -50,44 +50,45 @@ QStandardItem* LeaveModel::createStandardItem(const QString& url)
     const QString basename = QFileInfo(url).baseName();
     if (basename == "logoutonly") {
         item->setText(i18n("Log out"));
-        item->setIcon(QIcon::fromTheme("system-log-out"));
         item->setData(i18n("End session"), Kickoff::SubTitleRole);
+        item->setData("system-log-out", Kickoff::IconNameRole);
     } else if (basename == "lock") {
         item->setText(i18n("Lock"));
-        item->setIcon(QIcon::fromTheme("system-lock-screen"));
         item->setData(i18n("Lock screen"), Kickoff::SubTitleRole);
+        item->setData("system-lock-screen", Kickoff::IconNameRole);
     } else if (basename == "switch") {
         item->setText(i18n("Switch user"));
-        item->setIcon(QIcon::fromTheme("system-switch-user"));
         item->setData(i18n("Start a parallel session as a different user"), Kickoff::SubTitleRole);
+        item->setData("system-switch-user", Kickoff::IconNameRole);
     } else if (basename == "shutdown") {
         item->setText(i18n("Shut down"));
-        item->setIcon(QIcon::fromTheme("system-shutdown"));
         item->setData(i18n("Turn off computer"), Kickoff::SubTitleRole);
+        item->setData("system-shutdown", Kickoff::IconNameRole);
     } else if (basename == "restart") {
         item->setText(i18nc("Restart computer", "Restart"));
-        item->setIcon(QIcon::fromTheme("system-reboot"));
         item->setData(i18n("Restart computer"), Kickoff::SubTitleRole);
+        item->setData("system-reboot", Kickoff::IconNameRole);
     } else if (basename == "savesession") {
         item->setText(i18n("Save Session"));
-        item->setIcon(QIcon::fromTheme("document-save"));
         item->setData(i18n("Save current session for next login"), Kickoff::SubTitleRole);
+        item->setData("document-save", Kickoff::IconNameRole);
     } else if (basename == "standby") {
         item->setText(i18nc("Puts the system on standby", "Standby"));
-        item->setIcon(QIcon::fromTheme("system-suspend"));
         item->setData(i18n("Pause without logging out"), Kickoff::SubTitleRole);
+        item->setData("system-suspend", Kickoff::IconNameRole);
     } else if (basename == "suspenddisk") {
         item->setText(i18n("Hibernate"));
-        item->setIcon(QIcon::fromTheme("system-suspend-hibernate"));
         item->setData(i18n("Suspend to disk"), Kickoff::SubTitleRole);
+        item->setData("system-suspend-hibernate", Kickoff::IconNameRole);
     } else if (basename == "suspendram") {
         item->setText(i18n("Sleep"));
-        item->setIcon(QIcon::fromTheme("system-suspend"));
         item->setData(i18n("Suspend to RAM"), Kickoff::SubTitleRole);
+        item->setData("system-suspend", Kickoff::IconNameRole);
     } else {
         item->setText(basename);
         item->setData(url, Kickoff::SubTitleRole);
     }
+
     item->setData(url, Kickoff::UrlRole);
     return item;
 }
@@ -102,6 +103,7 @@ LeaveModel::LeaveModel(QObject *parent)
     roles[Kickoff::SubTitleRole] = "subtitle";
     roles[Kickoff::UrlRole] = "url";
     roles[GroupNameRole] = "group";
+    roles[Kickoff::IconNameRole] = "iconName";
     setRoleNames(roles);
     updateModel();
     Kickoff::UrlItemLauncher::addGlobalHandler(Kickoff::UrlItemLauncher::ProtocolHandler, "leave", new Kickoff::LeaveItemHandler);

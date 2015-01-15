@@ -24,4 +24,5 @@ BaseView {
     objectName: "LeaveView"
 
     model: Kickoff.LeaveModel {}
+    delegate: KickoffLeaveItem {}
 }
