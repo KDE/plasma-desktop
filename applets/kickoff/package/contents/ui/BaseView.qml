@@ -26,6 +26,7 @@ import org.kde.draganddrop 2.0
 
 Item {
     property alias model: kickoffListView.model
+    property alias delegate: kickoffListView.delegate
 
     property ListView listView: kickoffListView
 
