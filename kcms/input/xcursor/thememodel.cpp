@@ -25,7 +25,6 @@
 #include <QX11Info>
 
 #include "thememodel.h"
-#include "thememodel.moc"
 #include "xcursortheme.h"
 
 #include <X11/Xlib.h>

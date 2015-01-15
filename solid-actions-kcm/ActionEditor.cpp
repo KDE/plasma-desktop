@@ -190,4 +190,3 @@ void ActionEditor::accept()
     QDialog::accept();
 }
 
-#include "ActionEditor.moc"

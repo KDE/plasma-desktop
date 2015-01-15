@@ -187,4 +187,3 @@ void LeaveItemHandler::suspendDisk()
     Solid::PowerManagement::requestSleep(Solid::PowerManagement::HibernateState, 0, 0);
 }
 
-#include "itemhandlers.moc"

@@ -43,7 +43,6 @@
 #include <QX11Info>
 
 #include "themepage.h"
-#include "themepage.moc"
 
 #include "thememodel.h"
 #include "itemdelegate.h"

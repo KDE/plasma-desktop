@@ -42,4 +42,3 @@ void KickoffPlugin::registerTypes (const char *uri)
     qmlRegisterType<Kickoff::ProcessRunner>(uri, 0, 1, "ProcessRunner");
 }
 
-#include "kickoffplugin.moc"

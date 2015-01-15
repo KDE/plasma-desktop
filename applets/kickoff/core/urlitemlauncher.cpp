@@ -175,4 +175,3 @@ void UrlItemLauncher::addGlobalHandler(HandlerType type, const QString& name, Ur
 }
 
 
-#include "urlitemlauncher.moc"

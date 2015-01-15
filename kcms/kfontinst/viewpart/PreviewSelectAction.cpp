@@ -95,4 +95,3 @@ void CPreviewSelectAction::selected(int index)
 
 }
 
-#include "PreviewSelectAction.moc"

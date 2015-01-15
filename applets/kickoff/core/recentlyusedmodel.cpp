@@ -281,5 +281,4 @@ void RecentlyUsedModel::clearRecentDocumentsAndApplications()
 }
 
 
-#include "recentlyusedmodel.moc"
 

@@ -561,4 +561,3 @@ QQmlPropertyMap *AppsModel::appletConfig() const
     return 0;
 }
 
-#include "appsmodel.moc"

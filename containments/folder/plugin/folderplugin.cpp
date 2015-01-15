@@ -56,4 +56,3 @@ void FolderPlugin::registerTypes(const char *uri)
     qmlRegisterType<WheelInterceptor>(uri, 0, 1, "WheelInterceptor");
 }
 
-#include "folderplugin.moc"

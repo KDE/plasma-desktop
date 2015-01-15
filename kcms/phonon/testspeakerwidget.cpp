@@ -201,4 +201,3 @@ const char* TestSpeakerWidget::_positionSoundName()
     return NULL;
 }
 
-#include "testspeakerwidget.moc"

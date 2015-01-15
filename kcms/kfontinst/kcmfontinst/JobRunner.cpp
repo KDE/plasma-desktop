@@ -769,4 +769,3 @@ bool CJobRunner::Item::operator<(const Item &o) const
 
 }
 
-#include "JobRunner.moc"

@@ -50,4 +50,3 @@ void TaskManagerPlugin::registerTypes(const char *uri)
     qmlRegisterType<TextLabel>(uri, 0, 1, "TextLabel");
 }
 
-#include "taskmanagerplugin.moc"

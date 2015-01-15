@@ -291,4 +291,3 @@ QMimeData * KRunnerModel::mimeData(const QModelIndexList &indexes) const
 
 }
 
-#include "krunnermodel.moc"

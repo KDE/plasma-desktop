@@ -16,7 +16,6 @@
  ***************************************************************************/
 
 #include "smserverconfigimpl.h"
-#include "smserverconfigimpl.moc"
 
 SMServerConfigImpl::SMServerConfigImpl(QWidget *parent ) : SMServerConfigDlg(parent) {
     connect(confirmLogoutCheck,SIGNAL(toggled(bool)), SLOT(configChanged()));

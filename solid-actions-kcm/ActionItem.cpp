@@ -155,4 +155,3 @@ KConfigGroup * ActionItem::configItem(DesktopAction actionType, GroupType keyGro
     return actionGroups.values(keyGroup)[0]; // Implement a backstop so a valid value is always returned
 }
 
-#include "ActionItem.moc"

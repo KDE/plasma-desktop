@@ -96,5 +96,4 @@ Qt::DropActions KickoffModel::supportedDragActions() const
     return Qt::CopyAction;
 }
 
-#include "kickoffmodel.moc"
 
