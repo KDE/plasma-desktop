@@ -32,14 +32,12 @@ public:
 
     Plasma::Service *serviceForSource(const QString &source);
 
-protected:
-    void init();
-
 private Q_SLOTS:
     void mousePluggedInChanged(bool);
     void enabledChanged(bool);
 
 private:
+    void init();
     QString m_source;
     OrgKdeTouchpadInterface *m_daemon;
 };
