@@ -423,6 +423,7 @@ FocusScope {
         appendSearchText.connect(searchField.appendText);
 
         kicker.reset.connect(reset);
+        windowSystem.hidden.connect(reset);
     }
 }
 
