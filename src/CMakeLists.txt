@@ -26,7 +26,7 @@ qt5_add_dbus_interfaces(SRCS
 
 kconfig_add_kcfg_files(SRCS kcm/touchpadparameters.kcfgc)
 
-qt5_wrap_ui(SRCS
+ki18n_wrap_ui(SRCS
             kcm/ui/pointermotion.ui
             kcm/ui/tap.ui
             kcm/ui/scroll.ui

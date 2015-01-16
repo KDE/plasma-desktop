@@ -27,6 +27,7 @@
 TouchpadEngine::TouchpadEngine(QObject *parent, const QVariantList &args)
     : Plasma::DataEngine(parent, args), m_source("touchpad"), m_daemon(0)
 {
+    init();
 }
 
 void TouchpadEngine::init()
