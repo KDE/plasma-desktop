@@ -27,7 +27,7 @@ Item {
 
     width: ListView.view.width
 //     height: listItemDelegate.height // + listItemDelegate.anchors.margins*2
-    height: (units.smallSpacing * 2) + elementIcon.height
+    height: (units.smallSpacing * 2) + Math.max(elementIcon.height, titleElement.height + subTitleElement.height)
 
     property bool dropEnabled: false
     property bool modelChildren: hasModelChildren
