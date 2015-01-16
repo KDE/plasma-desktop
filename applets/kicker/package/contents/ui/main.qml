@@ -184,6 +184,7 @@ Item {
 
         onExpandedChanged: {
             if (expanded) {
+                windowSystem.monitorWindowVisibility(plasmoid.fullRepresentationItem);
                 justOpenedTimer.start();
             } else {
                 kicker.reset();

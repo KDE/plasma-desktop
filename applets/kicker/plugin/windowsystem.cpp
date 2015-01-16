@@ -71,3 +71,22 @@ void WindowSystem::monitorWindowFocus(QQuickItem* item)
 
     item->window()->installEventFilter(this);
 }
+
+void WindowSystem::monitorWindowVisibility(QQuickItem* item)
+{
+    if (!item || !item->window()) {
+        return;
+    }
+
+    connect(item->window(), &QQuickWindow::visibilityChanged, this,
+        &WindowSystem::monitoredWindowVisibilityChanged, Qt::UniqueConnection);
+}
+
+void WindowSystem::monitoredWindowVisibilityChanged(bool visible) const
+{
+    QQuickWindow *w = static_cast<QQuickWindow *>(QObject::sender());
+
+    if (!visible) {
+        emit hidden(w);
+    }
+}
