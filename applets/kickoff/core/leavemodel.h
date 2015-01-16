@@ -36,6 +36,7 @@ public:
     static QStandardItem* createStandardItem(const QString& url);
     virtual QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const;
 
+private Q_SLOTS:
     void updateModel();
 
 private:

@@ -32,6 +32,7 @@
 #include <Solid/PowerManagement>
 #include <kworkspace.h>
 #include <kdisplaymanager.h>
+#include <kdirwatch.h>
 
 // Local
 #include "models.h"
@@ -107,6 +108,15 @@ LeaveModel::LeaveModel(QObject *parent)
     setRoleNames(roles);
     updateModel();
     Kickoff::UrlItemLauncher::addGlobalHandler(Kickoff::UrlItemLauncher::ProtocolHandler, "leave", new Kickoff::LeaveItemHandler);
+
+
+    const QString configFile = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + "/ksmserverrc";
+    KDirWatch::self()->addFile(configFile);
+
+    // Catch both, direct changes to the config file ...
+    connect(KDirWatch::self(), &KDirWatch::dirty, this, &LeaveModel::updateModel);
+    // ... but also remove/recreate cycles, like KConfig does it
+    connect(KDirWatch::self(), &KDirWatch::created, this, &LeaveModel::updateModel);
 }
 
 QVariant LeaveModel::headerData(int section, Qt::Orientation orientation, int role) const
