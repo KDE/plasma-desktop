@@ -211,9 +211,6 @@ void FavoritesModel::load(const QString &url)
 
 void FavoritesModel::move(int startRow, int destRow)
 {
-    // just move the item
-//     Private::globalFavoriteList.move(startRow, destRow);
-
     foreach (FavoritesModel* model, Private::models) {
         qDebug() << "Move : " << startRow << destRow << model->rowCount();
         if (destRow >= model->rowCount()) {
@@ -222,6 +219,11 @@ void FavoritesModel::move(int startRow, int destRow)
         if (startRow >= model->rowCount()) {
             startRow = model->rowCount() - 1;
         }
+
+        if (startRow < 0 || destRow < 0) {
+            continue;
+        }
+
         qDebug() << "Move : " << startRow << destRow << model->rowCount();
         Private::globalFavoriteList.move(startRow, destRow);
         model->d->moveFavoriteItem(startRow, destRow);
