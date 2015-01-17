@@ -21,6 +21,7 @@
 #define DIRECTORYPICKER_H
 
 #include <QUrl>
+#include <QObject>
 
 class QFileDialog;
 
