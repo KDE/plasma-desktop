@@ -19,7 +19,7 @@
     with this program; if not, write to the Free Software Foundation, Inc.,
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
-import QtQuick 2.0
+import QtQuick 2.3
 import org.kde.plasma.plasmoid 2.0
 import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -471,7 +471,8 @@ Item {
                 }
                 if (event.text != "" && !header.input.focus) {
                     root.currentView.listView.currentIndex = -1;
-                    if (event.text == "v" && event.modifiers & Qt.ControlModifier) {
+
+                    if (event.matches(StandardKey.Paste) ) {
                         header.input.paste();
                     } else {
                         header.query = "";
