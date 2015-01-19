@@ -2,7 +2,7 @@
     Copyright (C) 2011  Martin Gräßlin <mgraesslin@kde.org>
     Copyright (C) 2012  Gregor Taetzner <gregor@freenet.de>
     Copyright (C) 2012  Marco Martin <mart@kde.org>
-    Copyright (C) 2013  David Edmundson <davidedmundson@kde.org>
+    Copyright (C) 2013 2014 David Edmundson <davidedmundson@kde.org>
     Copyright 2014 Sebastian Kügler <sebas@kde.org>
 
     This program is free software; you can redistribute it and/or modify
@@ -463,7 +463,7 @@ Item {
             }
 
             default: { // forward key to searchView
-                //header.query += event.text will break if the jey is backspace,
+                //header.query += event.text will break if the key is backspace,
                 //since if the user continues to type, it will produce an invalid query,
                 //having backspace as the first character
                 if (event.key == Qt.Key_Backspace && header.query == "") {
