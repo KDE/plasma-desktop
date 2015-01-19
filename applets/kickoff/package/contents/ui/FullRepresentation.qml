@@ -474,7 +474,8 @@ Item {
 
                     if (event.matches(StandardKey.Paste) ) {
                         header.input.paste();
-                    } else {
+                    } else if (! (event.key & Qt.Key_Escape)) {
+                        //if special key, do nothing. Qt.Escape is 0x10000000 which happens to be a mask used for all special keys in Qt.
                         header.query = "";
                         header.query += event.text;
                     }
