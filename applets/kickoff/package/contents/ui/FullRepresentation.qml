@@ -2,7 +2,7 @@
     Copyright (C) 2011  Martin Gräßlin <mgraesslin@kde.org>
     Copyright (C) 2012  Gregor Taetzner <gregor@freenet.de>
     Copyright (C) 2012  Marco Martin <mart@kde.org>
-    Copyright (C) 2013  David Edmundson <davidedmundson@kde.org>
+    Copyright (C) 2013 2014 David Edmundson <davidedmundson@kde.org>
     Copyright 2014 Sebastian Kügler <sebas@kde.org>
 
     This program is free software; you can redistribute it and/or modify
@@ -19,7 +19,7 @@
     with this program; if not, write to the Free Software Foundation, Inc.,
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
-import QtQuick 2.0
+import QtQuick 2.3
 import org.kde.plasma.plasmoid 2.0
 import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -463,7 +463,7 @@ Item {
             }
 
             default: { // forward key to searchView
-                //header.query += event.text will break if the jey is backspace,
+                //header.query += event.text will break if the key is backspace,
                 //since if the user continues to type, it will produce an invalid query,
                 //having backspace as the first character
                 if (event.key == Qt.Key_Backspace && header.query == "") {
@@ -471,9 +471,11 @@ Item {
                 }
                 if (event.text != "" && !header.input.focus) {
                     root.currentView.listView.currentIndex = -1;
-                    if (event.text == "v" && event.modifiers & Qt.ControlModifier) {
+
+                    if (event.matches(StandardKey.Paste) ) {
                         header.input.paste();
-                    } else {
+                    } else if (! (event.key & Qt.Key_Escape)) {
+                        //if special key, do nothing. Qt.Escape is 0x10000000 which happens to be a mask used for all special keys in Qt.
                         header.query = "";
                         header.query += event.text;
                     }
