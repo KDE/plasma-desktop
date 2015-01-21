@@ -34,6 +34,7 @@
 #include <kio/netaccess.h>
 #include "JobRunner.h"
 #include "CreateParent.h"
+#include "config-workspace.h"
 
 namespace KFI
 {
@@ -120,7 +121,7 @@ CInstaller::~CInstaller()
 
 }
 
-static K4AboutData aboutData("kfontinst", KFI_CATALOGUE, ki18n("Font Installer"), "1.0", ki18n("Simple font installer"),
+static K4AboutData aboutData("kfontinst", KFI_CATALOGUE, ki18n("Font Installer"), WORKSPACE_VERSION_STRING, ki18n("Simple font installer"),
                             K4AboutData::License_GPL, ki18n("(C) Craig Drummond, 2007"));
 
 int main(int argc, char **argv)
