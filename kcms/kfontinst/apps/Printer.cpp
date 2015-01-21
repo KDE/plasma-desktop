@@ -43,6 +43,8 @@
 #include <k4aboutdata.h>
 #include <KApplication>
 
+#include "config-workspace.h"
+
 #if defined(Q_WS_X11) || defined(Q_WS_QWS)
 #include <fontconfig/fontconfig.h>
 #include <ft2build.h>
@@ -416,7 +418,7 @@ void CPrinter::closeEvent(QCloseEvent *e)
     slotButtonClicked(0);
 }
 
-static K4AboutData aboutData("kfontprint", KFI_CATALOGUE, ki18n("Font Printer"), "1.1", ki18n("Simple font printer"),
+static K4AboutData aboutData("kfontprint", KFI_CATALOGUE, ki18n("Font Printer"), WORKSPACE_VERSION_STRING, ki18n("Simple font printer"),
                              K4AboutData::License_GPL, ki18n("(C) Craig Drummond, 2007"));
 
 int main(int argc, char **argv)

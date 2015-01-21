@@ -21,6 +21,7 @@
  * Boston, MA 02110-1301, USA.
  */
 
+#include "config-workspace.h"
 #include "Viewer.h"
 #include "KfiConstants.h"
 #include <KConfigGroup>
@@ -145,7 +146,7 @@ class ViewerApplication : public KUniqueApplication
 
 }
 
-static K4AboutData aboutData("kfontview", KFI_CATALOGUE, ki18n("Font Viewer"), "1.1", ki18n("Simple font viewer"),
+static K4AboutData aboutData("kfontview", KFI_CATALOGUE, ki18n("Font Viewer"), WORKSPACE_VERSION_STRING, ki18n("Simple font viewer"),
                              K4AboutData::License_GPL, ki18n("(C) Craig Drummond, 2004-2007"));
 
 int main(int argc, char **argv)
