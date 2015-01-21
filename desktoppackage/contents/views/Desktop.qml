@@ -109,6 +109,18 @@ Item {
         }
     }
 
+    Connections {
+        target: containment
+        onAvailableScreenRectChanged: {
+            var rect = containment.availableScreenRect;
+            sidePanel.requestActivate();
+            // get the current available screen geometry and subtract the dialog's frame margins
+            sidePanelStack.height = containment ? rect.height - sidePanel.margins.top - sidePanel.margins.bottom : 1000;
+            sidePanel.x = desktop.x + rect.x;
+            sidePanel.y = desktop.y + rect.y;
+        }
+    }
+
     onContainmentChanged: {
         //containment.parent = root;
 
