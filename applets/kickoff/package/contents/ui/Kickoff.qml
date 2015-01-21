@@ -34,6 +34,8 @@ Item {
 
     Plasmoid.fullRepresentation: FullRepresentation {}
 
+    Plasmoid.icon: plasmoid.configuration.icon
+
     Kickoff.ProcessRunner {
         id: processRunner
     }
