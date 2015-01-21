@@ -7,6 +7,8 @@ ki18n_wrap_ui(knetattach_SRCS knetattach.ui )
 
 add_executable(knetattach ${knetattach_SRCS})
 
+target_compile_definitions(knetattach PRIVATE -DPROJECT_VERSION="${PROJECT_VERSION}")
+
 target_link_libraries(knetattach KF5::KIOWidgets KF5::KDELibs4Support)
 
 install(TARGETS knetattach DESTINATION ${INSTALL_TARGETS_DEFAULT_ARGS})
