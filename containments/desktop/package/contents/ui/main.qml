@@ -86,6 +86,11 @@ DragDrop.DropArea {
         } else if (applet.width > 0 && applet.height > 0) {
             container.width = applet.width;
             container.height = applet.height;
+            //the container needs to be bigger than applet of margins factor
+            if (applet.backgroundHints != PlasmaCore.Types.NoBackground) {
+                container.width += container.margins.left + container.margins.right;
+                container.height += container.margins.top + container.margins.bottom;
+            }
         //give up, assign the global default
         } else {
             container.width = LayoutManager.defaultAppletSize.width;
@@ -101,8 +106,20 @@ DragDrop.DropArea {
             if (y + container.height > root.height) {
                 x = root.height - container.height;
             }
-            container.x = x;
-            container.y = y;
+
+            // on applet undo or via scripting, the applet position will be saved
+            // in applet's scene coordinates so remap it to resultsflow's coordinates
+            var pos = root.parent.mapToItem(resultsFlow, x, y);
+
+            container.x = pos.x;
+            container.y = pos.y;
+            //to be sure it's restored at the same position, take margins into account
+            //if there is a background
+            if (applet.backgroundHints != PlasmaCore.Types.NoBackground) {
+                container.x -= container.margins.left;
+                container.y -= container.margins.top;
+            }
+
         //coordinates stored?
         } else if (config !== undefined && config.x !== undefined && config.y !== undefined &&
             config.x >= 0 && config.y >= 0) {

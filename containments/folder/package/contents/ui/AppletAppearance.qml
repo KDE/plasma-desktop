@@ -153,7 +153,7 @@ Item {
 
             PlasmaCore.FrameSvgItem {
                 id: plasmoidBackground
-                visible: backgroundHints != "NoBackground"
+                visible: backgroundHints != PlasmaCore.Types.NoBackground
                 imagePath: "widgets/background"
                 anchors { left: parent.left; top: parent.top; bottom: parent.bottom; }
                 width: (showAppletHandle && handleMerged) ? parent.width : parent.width-handleWidth;
@@ -317,7 +317,10 @@ Item {
                         targetItem: appletItem
                     }
                     ScriptAction {
-                        script: appletContainer.appletDestroyed()
+                        script: {
+                            appletItem.scale = 1;
+                            appletContainer.appletDestroyed();
+                        }
                     }
                 }
                 Loader {
