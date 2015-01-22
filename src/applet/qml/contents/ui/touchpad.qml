@@ -21,7 +21,6 @@
 import QtQuick 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
-import org.kde.qtextracomponents 2.0
 
 Item {
     id: root
@@ -84,28 +83,28 @@ Item {
         }
     }
 
-    QIconItem {
+    PlasmaCore.IconItem {
         anchors.fill: parent
         visible: !hasTouchpad
-        icon: "dialog-warning"
-    }
+        source: "dialog-warning"
 
-    PlasmaCore.ToolTip {
-        target: root
-        mainText: {
-            if (!hasTouchpad) {
-                return i18n("No touchpad was found");
+
+        PlasmaCore.ToolTipArea {
+            mainText: {
+                if (!hasTouchpad) {
+                    return i18n("No touchpad was found");
+                }
+
+                return enabled ? i18n("Touchpad is enabled")
+                               : i18n("Touchpad is disabled")
             }
+            image: {
+                if (!hasTouchpad) {
+                    return "dialog-error"
+                }
 
-            return enabled ? i18n("Touchpad is enabled")
-                           : i18n("Touchpad is disabled")
-        }
-        image: {
-            if (!hasTouchpad) {
-                return "dialog-error"
+                return enabled ? "input-touchpad" : "process-stop"
             }
-
-            return enabled ? "input-touchpad" : "process-stop"
         }
     }
 

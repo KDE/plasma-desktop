@@ -80,4 +80,6 @@ TouchpadEngine::~TouchpadEngine()
 {
 }
 
-//K_EXPORT_PLASMA_DATAENGINE(touchpad, TouchpadEngine)
+K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(touchpad, TouchpadEngine, "plasma-dataengine-touchpad.json")
+
+#include "touchpadengine.moc"

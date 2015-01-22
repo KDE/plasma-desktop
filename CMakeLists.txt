@@ -1,6 +1,7 @@
 project(kcm-touchpad)
 set(PROJECT_VERSION "5.1.95")
 cmake_minimum_required(VERSION 2.8.12)
+add_definitions(-DTRANSLATION_DOMAIN=\"kcm_touchpad\")
 
 set(CMAKE_MODULE_PATH
     ${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules
