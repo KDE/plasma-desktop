@@ -204,12 +204,7 @@ DragDrop.DropArea {
     Item {
         id: resultsFlow
         anchors.fill: parent
-
-        anchors {
-            top: parent.top
-            topMargin: 5
-            horizontalCenter: parent.horizontalCenter
-        }
+        anchors.topMargin: 5
 
         //This is just for event compression when a lot of boxes are created one after the other
         Timer {
