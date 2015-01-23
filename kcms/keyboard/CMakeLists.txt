@@ -27,7 +27,6 @@ set( kded_keyboard_SRCS
     xkb_helper.cpp
     keyboard_config.cpp
     keyboard_hardware.cpp
-    numlockx.c
     bindings.cpp
 # next are temporary for sys tray UI
     layout_tray_icon.cpp
@@ -53,6 +52,7 @@ target_link_libraries(kded_keyboard
     KF5::WindowSystem
     KF5::Plasma
     KF5::XmlGui
+    KF5::GuiAddons
     KF5::KDELibs4Support
     XCB::XCB
     XCB::XKB
