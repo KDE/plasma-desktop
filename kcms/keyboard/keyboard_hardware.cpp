@@ -18,9 +18,9 @@
 
 #include <kconfiggroup.h>
 #include <ksharedconfig.h>
+#include <KModifierKeyInfo>
 
 #include <QX11Info>
-#include <QCursor>	// WTF? - otherwise compiler complains
 #include <QDebug>
 
 #include <math.h>
@@ -28,13 +28,9 @@
 #include "x11_helper.h"
 #include "kcmmisc.h"
 
-// from numlockx.c
-extern "C" void numlockx_change_numlock_state(Display* dpy, int state);
-
 #include <X11/XKBlib.h>
 #include <X11/keysym.h>
 #include <X11/Xlib.h>
-
 
 // This code is taken from xset utility from XFree 4.3 (http://www.xfree86.org/)
 
@@ -99,6 +95,7 @@ void init_keyboard_hardware()
 
 	TriState numlockState = TriStateHelper::getTriState( config.readEntry( "NumLock", TriStateHelper::getInt(STATE_UNCHANGED) ) );
 	if( numlockState != STATE_UNCHANGED ) {
-		numlockx_change_numlock_state(QX11Info::display(), numlockState == STATE_ON );
+        KModifierKeyInfo keyInfo;
+        keyInfo.setKeyLocked(Qt::Key_NumLock, numlockState == STATE_ON);
 	}
 }
