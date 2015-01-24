@@ -60,9 +60,15 @@ KCMFormats::~KCMFormats()
     delete m_ui;
 }
 
+bool countryLessThan(const QLocale & c1, const QLocale & c2)
+{
+    return QString::localeAwareCompare(c1.nativeCountryName(), c2.nativeCountryName()) < 0;
+}
+
 void KCMFormats::load()
 {
-    const QList<QLocale> allLocales = QLocale::matchingLocales(QLocale::AnyLanguage, QLocale::AnyScript, QLocale::AnyCountry);
+    QList<QLocale> allLocales = QLocale::matchingLocales(QLocale::AnyLanguage, QLocale::AnyScript, QLocale::AnyCountry);
+    qSort(allLocales.begin(), allLocales.end(), countryLessThan);
     foreach(QComboBox * combo, m_combos) {
         initCombo(combo, allLocales);
     }
@@ -92,7 +98,6 @@ void KCMFormats::initCombo(QComboBox *combo, const QList<QLocale> & allLocales)
     foreach(const QLocale & l, allLocales) {
         addLocaleToCombo(combo, l);
     }
-    combo->model()->sort(0);
 }
 
 void KCMFormats::connectCombo(QComboBox *combo)
