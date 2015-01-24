@@ -124,7 +124,7 @@ void KCMFormats::addLocaleToCombo(QComboBox *combo, const QLocale &locale)
     if (split.count() > 1) {
         flagcode = split[1].toLower();
     }
-    QString flag(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("locale/l10n/%1/flag.png").arg(flagcode)));
+    QString flag(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("kf5/locale/countries/%1/flag.png").arg(flagcode)));
     QIcon flagIcon;
     if (!flag.isEmpty()) {
         flagIcon = QIcon(flag);
