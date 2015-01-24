@@ -24,7 +24,7 @@
 
 #include "plugins.h"
 
-TouchpadGlobalActions::TouchpadGlobalActions(QObject *parent)
+TouchpadGlobalActions::TouchpadGlobalActions(bool isConfiguration, QObject *parent)
     : KActionCollection(parent)
 {
     //setComponentName(TouchpadPluginFactory::componentData());
@@ -42,9 +42,11 @@ TouchpadGlobalActions::TouchpadGlobalActions(QObject *parent)
     toggle->setText(i18n("Toggle Touchpad"));
     connect(toggle, SIGNAL(triggered()), SIGNAL(toggleTriggered()));
 
-    Q_FOREACH (QAction *i, actions()) {
-        QAction *act = qobject_cast<QAction *>(i);
+    Q_FOREACH (QAction *act, actions()) {
         KGlobalAccel::setGlobalShortcut(act,QKeySequence());
         KActionCollection::setShortcutsConfigurable(act,true);
+        if (isConfiguration) {
+            act->setProperty("isConfigurationAction", true);
+        }
     }
 }

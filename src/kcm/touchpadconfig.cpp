@@ -203,7 +203,7 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
             SLOT(showConfigureNotificationsDialog()));
     m_shortcutsDialog.reset(new KShortcutsDialog(KShortcutsEditor::GlobalAction,
                                                  KShortcutsEditor::LetterShortcutsDisallowed));
-    m_shortcutsDialog->addCollection(new TouchpadGlobalActions(this),
+    m_shortcutsDialog->addCollection(new TouchpadGlobalActions(true, this),
                                      i18n("Enable/Disable Touchpad"));
     connect(m_kded.configureShortcutsButton, SIGNAL(clicked()),
             m_shortcutsDialog.data(), SLOT(show()));

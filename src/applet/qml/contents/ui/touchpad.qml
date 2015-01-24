@@ -42,7 +42,7 @@ Item {
                 //Hide plasmoid from notification area after short delay
                 delayedStatusUpdate.restart()
             } else {
-                plasmoid.status = ActiveStatus
+                plasmoid.status = PlasmaCore.Types.ActiveStatus
             }
 
             icon.elementId = data.enabled ? "touchpad_enabled"
@@ -66,11 +66,11 @@ Item {
         onTriggered: {
             if (!hasTouchpad) {
                 //Setting this in Component.onCompleted didn't work
-                plasmoid.status = PassiveStatus
+                plasmoid.status = PlasmaCore.Types.PassiveStatus
                 return
             }
 
-            plasmoid.status = enabled ? PassiveStatus : ActiveStatus
+            plasmoid.status = enabled ? PlasmaCore.Types.PassiveStatus : PlasmaCore.Types.ActiveStatus
         }
     }
 
