@@ -25,7 +25,7 @@ class TouchpadGlobalActions : public KActionCollection
 {
     Q_OBJECT
 public:
-    explicit TouchpadGlobalActions(QObject *parent);
+    explicit TouchpadGlobalActions(bool isConfiguration, QObject *parent);
 
 Q_SIGNALS:
     void enableTriggered();

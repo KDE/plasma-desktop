@@ -218,7 +218,7 @@ bool TouchpadDisabler::isMousePluggedIn() const
 
 void TouchpadDisabler::lateInit()
 {
-    TouchpadGlobalActions *actions = new TouchpadGlobalActions(this);
+    TouchpadGlobalActions *actions = new TouchpadGlobalActions(false, this);
     connect(actions, SIGNAL(enableTriggered()), SLOT(enable()));
     connect(actions, SIGNAL(disableTriggered()), SLOT(disable()));
     connect(actions, SIGNAL(toggleTriggered()), SLOT(toggle()));
