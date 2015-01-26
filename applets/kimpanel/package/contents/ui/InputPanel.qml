@@ -31,7 +31,8 @@ PlasmaCore.Dialog {
     location: PlasmaCore.Types.Floating
     property bool verticalLayout: false
     property int highlightCandidate: -1
-    property int baseSize: theme.mSize(theme.defaultFont).height
+    property font preferredFont: plasmoid.configuration.use_default_font ? theme.defaultFont : plasmoid.configuration.font
+    property int baseSize: theme.mSize(preferredFont).height
     property rect position
 
     onPositionChanged : updatePosition();
@@ -49,6 +50,7 @@ PlasmaCore.Dialog {
             height: Math.max(preedit.height, auxLabel.height)
             PlasmaComponents.Label {
                 id: auxLabel
+                font: preferredFont
             }
             Item {
                 id: preedit
@@ -59,6 +61,7 @@ PlasmaCore.Dialog {
                     id: preeditLabel1
                     anchors.top: parent.top
                     anchors.left: parent.left
+                    font: preferredFont
                 }
                 Rectangle {
                     color: theme.textColor
@@ -73,6 +76,7 @@ PlasmaCore.Dialog {
                     id: preeditLabel2
                     anchors.top: parent.top
                     anchors.left: preeditLabel1.right
+                    font: preferredFont
                 }
             }
         }
@@ -102,11 +106,13 @@ PlasmaCore.Dialog {
                             id: tableLabel
                             text: model.label
                             color: candidate.highlight ? theme.textColor : theme.highlightColor
+                            font: preferredFont
                         }
                         PlasmaComponents.Label {
                             id: textLabel
                             text: model.text
                             color: candidate.highlight ? theme.highlightColor : theme.textColor
+                            font: preferredFont
                         }
                     }
                     MouseArea {
