@@ -28,6 +28,10 @@
 class QQuickItem;
 class QQuickWindow;
 
+namespace TaskManager {
+    class BasicMenu;
+}
+
 class Backend : public QObject
 {
     Q_OBJECT
@@ -84,6 +88,7 @@ class Backend : public QObject
         void presentWindows(int groupParentId);
 
     private Q_SLOTS:
+        void actuallyOpenContextMenu();
         void updateLaunchersCache();
         void toolTipWindowChanged(QQuickWindow *window);
 
@@ -98,6 +103,7 @@ class Backend : public QObject
 
         TaskManager::GroupManager *m_groupManager;
         TaskManager::TasksModel *m_tasksModel;
+        TaskManager::BasicMenu *m_contextMenu;
         QQuickItem* m_taskManagerItem;
         QQuickItem* m_toolTipItem;
         WId m_panelWinId;

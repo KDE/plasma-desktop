@@ -30,6 +30,7 @@
 #include <QQuickItem>
 #include <QQuickWindow>
 #include <QScreen>
+#include <QTimer>
 
 #include <KAuthorized>
 #include <kwindoweffects.h>
@@ -37,6 +38,7 @@
 Backend::Backend(QObject* parent) : QObject(parent),
     m_groupManager(new TaskManager::GroupManager(this)),
     m_tasksModel(new TaskManager::TasksModel(m_groupManager, this)),
+    m_contextMenu(0),
     m_taskManagerItem(0),
     m_toolTipItem(0),
     m_panelWinId(0),
@@ -242,32 +244,42 @@ void Backend::itemContextMenu(QQuickItem *item, QObject *configAction)
         actionList << action;
     }
 
-    TaskManager::BasicMenu* menu = 0;
-
     if (agItem->itemType() == TaskManager::TaskItemType && !agItem->isStartupItem()) {
         TaskManager::TaskItem* taskItem = static_cast<TaskManager::TaskItem*>(agItem);
-        menu = new TaskManager::BasicMenu(0, taskItem, m_groupManager, actionList);
+        m_contextMenu = new TaskManager::BasicMenu(0, taskItem, m_groupManager, actionList);
     } else if (agItem->itemType() == TaskManager::GroupItemType) {
         TaskManager::TaskGroup* taskGroup = static_cast<TaskManager::TaskGroup*>(agItem);
         const int maxWidth = 0.8 * item->window()->screen()->size().width();
-        menu = new TaskManager::BasicMenu(0, taskGroup, m_groupManager, actionList, QList <QAction*>(), maxWidth);
+        m_contextMenu = new TaskManager::BasicMenu(0, taskGroup, m_groupManager, actionList, QList <QAction*>(), maxWidth);
     } else if (agItem->itemType() == TaskManager::LauncherItemType) {
-        menu = new TaskManager::BasicMenu(0, static_cast<TaskManager::LauncherItem*>(agItem),
+        m_contextMenu = new TaskManager::BasicMenu(0, static_cast<TaskManager::LauncherItem*>(agItem),
             m_groupManager, actionList);
     }
 
-    if (!menu) {
+    if (!m_contextMenu) {
         return;
     }
 
-    menu->adjustSize();
+    m_contextMenu->adjustSize();
 
     if (m_taskManagerItem && !m_taskManagerItem->property("vertical").toBool()) {
-        menu->setMinimumWidth(item->width());
+        m_contextMenu->setMinimumWidth(item->width());
     }
 
-    menu->exec(QCursor::pos());
-    menu->deleteLater();
+    // Close menu when the delegate is destroyed.
+    connect(item, &QQuickItem::destroyed, m_contextMenu, &TaskManager::BasicMenu::deleteLater);
+
+    // Interrupt the call chain from the delegate in case it's destroyed while
+    // we're in QMenu::exec();
+    // FIXME TODO: Just use a lambda on Qt 5.4+.
+    QMetaObject::invokeMethod(this, "actuallyOpenContextMenu", Qt::QueuedConnection);
+}
+
+void Backend::actuallyOpenContextMenu()
+{
+    m_contextMenu->exec(QCursor::pos());
+    m_contextMenu = 0;
+    m_contextMenu->deleteLater();
 }
 
 void Backend::itemHovered(int id, bool hovered)
