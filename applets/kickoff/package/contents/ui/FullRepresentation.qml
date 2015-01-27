@@ -297,6 +297,8 @@ Item {
 
     PlasmaComponents.TabBar {
         id: tabBar
+        LayoutMirroring.enabled: Qt.application.layoutDirection == Qt.RightToLeft
+        LayoutMirroring.childrenInherit: true
 
         width: {
             if (!visible) {
