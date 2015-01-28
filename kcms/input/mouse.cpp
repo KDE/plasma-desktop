@@ -791,7 +791,7 @@ void MouseSettings::save(KConfig *config)
 
   Kdelibs4SharedConfig::syncConfigGroup(&group, "kinputrc");
 
-  group = KConfigGroup(KSharedConfig::openConfig(), "KDE");
+  group = KConfigGroup(KSharedConfig::openConfig("kdeglobals"), "KDE");
   group.writeEntry("DoubleClickInterval", doubleClickInterval, KConfig::Persistent);
   group.writeEntry("StartDragTime", dragStartTime, KConfig::Persistent);
   group.writeEntry("StartDragDist", dragStartDist, KConfig::Persistent);
