@@ -25,22 +25,20 @@
 #include <QWidget>
 
 SystemSettings::SystemSettings(QObject *parent) : QObject(parent),
-    m_monitoredWidget(new QWidget())
+    m_widget(new QWidget())
 {
-    m_monitoredWidget->resize(0, 0);
-    m_monitoredWidget->hide();
-
-    m_monitoredWidget->installEventFilter(this);
+    m_widget->resize(0, 0);
+    m_widget->hide();
 }
 
 SystemSettings::~SystemSettings()
 {
-    delete m_monitoredWidget;
+    delete m_widget;
 }
 
 bool SystemSettings::singleClick() const
 {
-    return m_monitoredWidget->style()->styleHint(QStyle::SH_ItemView_ActivateItemOnSingleClick);
+    return m_widget->style()->styleHint(QStyle::SH_ItemView_ActivateItemOnSingleClick);
 }
 
 int SystemSettings::doubleClickInterval() const
@@ -55,16 +53,4 @@ int SystemSettings::doubleClickInterval() const
 bool SystemSettings::isDrag(int oldX, int oldY, int newX, int newY) const
 {
     return ((QPoint(oldX, oldY) - QPoint(newX, newY)).manhattanLength() >= QApplication::startDragDistance());
-}
-
-
-bool SystemSettings::eventFilter(QObject *watched, QEvent *event)
-{
-    Q_UNUSED(watched)
-
-    if (event->type() == QEvent::StyleChange) {
-        emit singleClickChanged();
-    }
-
-    return false;
 }

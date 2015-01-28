@@ -28,26 +28,16 @@ class SystemSettings : public QObject
 {
     Q_OBJECT
 
-    Q_PROPERTY(bool singleClick READ singleClick NOTIFY singleClickChanged)
-
     public:
         SystemSettings(QObject *parent = 0);
         ~SystemSettings();
 
-        bool singleClick() const;
+        Q_INVOKABLE bool singleClick() const;
         Q_INVOKABLE int doubleClickInterval() const;
-
         Q_INVOKABLE bool isDrag(int oldX, int oldY, int newX, int newY) const;
 
-        bool eventFilter(QObject *watched, QEvent *event);
-
-    Q_SIGNALS:
-        void singleClickChanged();
-
     private:
-        // Keeping our own widget around is ugly, but beats filtering all
-        // events on something busy like the main window.
-        QWidget *m_monitoredWidget;
+        QWidget *m_widget;
 
 };
 
