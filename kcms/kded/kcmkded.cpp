@@ -145,11 +145,11 @@ KDEDConfig::KDEDConfig(QWidget* parent, const QVariantList &) :
 	_pbStart->setEnabled( false );
 	_pbStop->setEnabled( false );
 
-	connect(_pbStart, SIGNAL(clicked()), SLOT(slotStartService()));
-	connect(_pbStop, SIGNAL(clicked()), SLOT(slotStopService()));
-	connect(_lvLoD, SIGNAL(itemSelectionChanged()), SLOT(slotLodItemSelected()));
-	connect(_lvStartup, SIGNAL(itemSelectionChanged()), SLOT(slotStartupItemSelected()));
-	connect(_lvStartup, SIGNAL(itemChanged(QTreeWidgetItem*, int)), SLOT(slotItemChecked(QTreeWidgetItem*, int)) );
+	connect(_pbStart, &QPushButton::clicked, this, &KDEDConfig::slotStartService);
+	connect(_pbStop, &QPushButton::clicked, this, &KDEDConfig::slotStopService);
+	connect(_lvLoD, &QTreeWidget::itemSelectionChanged, this, &KDEDConfig::slotLodItemSelected);
+	connect(_lvStartup, &QTreeWidget::itemSelectionChanged, this, &KDEDConfig::slotStartupItemSelected);
+	connect(_lvStartup, &QTreeWidget::itemChanged, this, &KDEDConfig::slotItemChecked);
 
 }
 
