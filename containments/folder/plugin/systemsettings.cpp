@@ -19,9 +19,9 @@
 
 #include "systemsettings.h"
 
-#include <QApplication>
-#include <QEvent>
+#include <QGuiApplication>
 #include <QStyle>
+#include <QStyleHints>
 #include <QWidget>
 
 SystemSettings::SystemSettings(QObject *parent) : QObject(parent),
@@ -38,19 +38,19 @@ SystemSettings::~SystemSettings()
 
 bool SystemSettings::singleClick() const
 {
+    // FIXME TODO: Check back for whether this eventually got added to
+    // QGuiApplication::styleHints() / Qt.styleHints.
     return m_widget->style()->styleHint(QStyle::SH_ItemView_ActivateItemOnSingleClick);
 }
 
 int SystemSettings::doubleClickInterval() const
 {
-    if (!qApp) {
-        return 400;
-    }
-
-    return qApp->doubleClickInterval();
+    return QGuiApplication::styleHints()->mouseDoubleClickInterval();
 }
 
 bool SystemSettings::isDrag(int oldX, int oldY, int newX, int newY) const
 {
-    return ((QPoint(oldX, oldY) - QPoint(newX, newY)).manhattanLength() >= QApplication::startDragDistance());
+    // FIXME TODO: QGuiApplication::styleHints() will be available as
+    // Qt.styleHints in QML starting with Qt 5.5.
+    return ((QPoint(oldX, oldY) - QPoint(newX, newY)).manhattanLength() >= QGuiApplication::styleHints()->startDragDistance());
 }
