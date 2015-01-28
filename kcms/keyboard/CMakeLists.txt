@@ -183,5 +183,7 @@ add_subdirectory( pics )
 
 
 # Unit tests
-
-add_subdirectory( tests )
+if(BUILD_TESTING)
+    find_package(Qt5Test ${QT_MIN_VERSION} CONFIG REQUIRED)
+    add_subdirectory( tests )
+endif()
