@@ -77,6 +77,7 @@
 
 #undef Below
 
+#include "../migrationlib/kdelibs4config.h"
 
 K_PLUGIN_FACTORY(MouseConfigFactory,
         registerPlugin<MouseConfig>(); // mouse
@@ -788,14 +789,19 @@ void MouseSettings::save(KConfig *config)
       group.writeEntry("MouseButtonMapping",QString("LeftHanded"));
   group.writeEntry( "ReverseScrollPolarity", reverseScrollPolarity );
 
-  group = config->group("KDE");
-  group.writeEntry("DoubleClickInterval", doubleClickInterval, KConfig::Persistent|KConfig::Global);
-  group.writeEntry("StartDragTime", dragStartTime, KConfig::Persistent|KConfig::Global);
-  group.writeEntry("StartDragDist", dragStartDist, KConfig::Persistent|KConfig::Global);
-  group.writeEntry("WheelScrollLines", wheelScrollLines, KConfig::Persistent|KConfig::Global);
-  group.writeEntry("SingleClick", singleClick, KConfig::Persistent|KConfig::Global);
-  group.writeEntry("AutoSelectDelay", autoSelectDelay, KConfig::Persistent|KConfig::Global);
-  group.writeEntry("ChangeCursor", changeCursor,KConfig::Persistent|KConfig::Global);
+  Kdelibs4SharedConfig::syncConfigGroup(&group, "kinputrc");
+
+  group = KConfigGroup(KSharedConfig::openConfig("kdeglobals"), "KDE");
+  group.writeEntry("DoubleClickInterval", doubleClickInterval, KConfig::Persistent);
+  group.writeEntry("StartDragTime", dragStartTime, KConfig::Persistent);
+  group.writeEntry("StartDragDist", dragStartDist, KConfig::Persistent);
+  group.writeEntry("WheelScrollLines", wheelScrollLines, KConfig::Persistent);
+  group.writeEntry("SingleClick", singleClick, KConfig::Persistent);
+  group.writeEntry("AutoSelectDelay", autoSelectDelay, KConfig::Persistent);
+  group.writeEntry("ChangeCursor", changeCursor,KConfig::Persistent);
+
+  Kdelibs4SharedConfig::syncConfigGroup(&group, "kdeglobals");
+
   // This iterates through the various Logitech mice, if we have support.
 #ifdef HAVE_LIBUSB
   LogitechMouse *logitechMouse;
@@ -804,6 +810,7 @@ void MouseSettings::save(KConfig *config)
   }
 #endif
   config->sync();
+
   KGlobalSettings::self()->emitChange(KGlobalSettings::SettingsChanged, KGlobalSettings::SETTINGS_MOUSE);
 }
 

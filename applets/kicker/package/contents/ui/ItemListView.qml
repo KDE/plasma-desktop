@@ -62,6 +62,11 @@ FocusScope {
                 return;
             }
 
+            if (childDialog != null) {
+                childDialog.visible = false;
+                childDialog.delayedDestroy();
+            }
+
             windowSystem.monitorWindowFocus(itemList);
 
             // Gets reenabled after the dialog spawn causes a focus out on this window.
@@ -152,12 +157,13 @@ FocusScope {
                         }
 
                         if (currentItem != null && !currentItem.hasChildren || !plasmoid.expanded) {
+                            dialogSpawnTimer.stop();
+
                             return;
                         }
 
                         dialogSpawnTimer.restart();
                     } else if (childDialog != null) {
-                        dialogSpawnTimer.stop();
                         childDialog.visible = false;
                         childDialog.delayedDestroy();
                         childDialog = null;
