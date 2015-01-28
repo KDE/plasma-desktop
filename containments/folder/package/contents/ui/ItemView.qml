@@ -205,7 +205,7 @@ FocusScope {
             var pos = mapToItem(hoveredItem.actionsOverlay, mouse.x, mouse.y);
 
             if (!(pos.x <= hoveredItem.actionsOverlay.width && pos.y <= hoveredItem.actionsOverlay.height)) {
-                if (systemSettings.singleClick || doubleClickInProgress) {
+                if (systemSettings.singleClick() || doubleClickInProgress) {
                     dir.run(positioner.map(gridView.currentIndex));
                 } else {
                     doubleClickInProgress = true;
