@@ -31,6 +31,7 @@ MouseArea {
     property bool constrained: formFactor==PlasmaCore.Types.Vertical||formFactor==PlasmaCore.Types.Horizontal
     hoverEnabled: true
     onClicked: Qt.openUrlExternally("trash:/");
+    Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
 
     Plasmoid.backgroundHints: PlasmaCore.Types.TranslucentBackground
     TrashPrivate.DirModel {
