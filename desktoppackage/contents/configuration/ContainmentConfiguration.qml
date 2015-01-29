@@ -28,7 +28,7 @@ AppletConfiguration {
     id: root
     isContainment: true
     Layout.minimumWidth: Math.min(plasmoid.availableScreenRect.width, units.gridUnit * 32)
-    Layout.minimumHeight: Math.min(plasmoid.availableScreenRect.height, units.gridUnit * 36)
+    Layout.minimumHeight: Math.min(plasmoid.availableScreenRect.height - units.gridUnit * 3, units.gridUnit * 36)
 
 //BEGIN model
     globalConfigModel: globalContainmentConfigModel
