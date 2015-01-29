@@ -46,9 +46,6 @@
 #include <QDBusReply>
 #include <QDragEnterEvent>
 #include <QEvent>
-#include <QLayout>
-#include <QLabel>
-#include <QLineEdit>
 #include <QPixmap>
 #include <QProcess>
 #include <QStandardPaths>

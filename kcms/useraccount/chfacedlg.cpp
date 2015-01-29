@@ -27,8 +27,6 @@
 
 #include "chfacedlg.h"
 
-#include <QLayout>
-#include <QLabel>
 #include <QPixmap>
 #include <QImage>
 #include <QPushButton>
