@@ -24,7 +24,7 @@
 #include <QPushButton>
 #include <QComboBox>
 #include <QDebug>
-#include <KLocale>
+#include <KLocalizedString>
 
 
 KeyboardPainter::KeyboardPainter():

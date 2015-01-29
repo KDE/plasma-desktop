@@ -21,7 +21,7 @@
 #include <kactioncollection.h>
 #include <kaction.h>
 #include <kaboutdata.h>
-#include <klocale.h>
+#include <KLocalizedString>
 #include <kglobalsettings.h>
 #include <KGlobalAccel>
 

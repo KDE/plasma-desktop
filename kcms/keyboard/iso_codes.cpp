@@ -18,7 +18,7 @@
 
 #include "iso_codes.h"
 
-#include <klocale.h>
+#include <KLocalizedString>
 
 #include <QtXml/QXmlAttributes>
 

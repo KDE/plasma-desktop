@@ -34,9 +34,10 @@
 #include <QDoubleSpinBox>
 #include <QButtonGroup>
 
-#include <klocale.h>
+#include <KLocalizedString>
 #include <kconfig.h>
 #include <KConfigGroup>
+#include <KSharedConfig>
 
 #include <X11/Xlib.h>
 #include <cmath>

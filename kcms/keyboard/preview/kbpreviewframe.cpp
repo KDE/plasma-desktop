@@ -33,7 +33,7 @@
 #include <QDesktopWidget>
 #include <QApplication>
 
-#include <KLocale>
+#include <KLocalizedString>
 
 #include <math.h>
 
