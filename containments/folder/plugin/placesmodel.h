@@ -39,6 +39,9 @@ class PlacesModel : public QSortFilterProxyModel
         Q_INVOKABLE QString urlForIndex(int idx) const;
         Q_INVOKABLE int indexForUrl(const QString &url) const;
 
+    Q_SIGNALS:
+        void placesChanged() const;
+
     protected:
         bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const;
 
