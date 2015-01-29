@@ -50,7 +50,6 @@
 
 // KDE
 #include <kconfiggroup.h>
-#include <kdebug.h>
 #include <kfileitem.h>
 #include <kglobalsettings.h>
 #include <kio/copyjob.h>
@@ -62,6 +61,8 @@
 #include <kmessagebox.h>
 #include <kurlrequester.h>
 #include <KPluginFactory>
+
+Q_LOGGING_CATEGORY(KCM_DESKTOPPATH, "kcm_desktoppath")
 
 K_PLUGIN_FACTORY(KcmDesktopPathsFactory, registerPlugin<DesktopPathConfig>();)
 
@@ -223,7 +224,7 @@ static QString translatePath( QString path ) // krazy:exclude=passbyvalue
     if (cleanHomeDirPath(path, homeDir0) ||
         cleanHomeDirPath(path, homeDir1) ||
         cleanHomeDirPath(path, homeDir2) ) {
-        // kDebug() << "Path was replaced\n";
+        // qCDebug(KCM_DESKTOPPATH) << "Path was replaced\n";
     }
 
     return path;
@@ -249,21 +250,21 @@ void DesktopPathConfig::save()
         // * Inside destination -> let them be moved with the desktop (but adjust name if necessary)
         // * Not inside destination -> move first
         // !!!
-        kDebug() << "desktopURL=" << desktopURL;
+        qCDebug(KCM_DESKTOPPATH) << "desktopURL=" << desktopURL;
         QString urlDesktop = urDesktop->url().toLocalFile();
         if ( !urlDesktop.endsWith('/'))
             urlDesktop+='/';
 
         if ( desktopURL.isParentOf( autostartURL ) )
         {
-            kDebug() << "Autostart is on the desktop";
+            qCDebug(KCM_DESKTOPPATH) << "Autostart is on the desktop";
 
             // Either the Autostart field wasn't changed (-> need to update it)
             if ( newAutostartURL.matches(autostartURL, QUrl::StripTrailingSlash) )
             {
                 // Hack. It could be in a subdir inside desktop. Hmmm... Argl.
                 urAutostart->setUrl(QUrl::fromLocalFile(urlDesktop + QStringLiteral("Autostart/")));
-                kDebug() << "Autostart is moved with the desktop";
+                qCDebug(KCM_DESKTOPPATH) << "Autostart is moved with the desktop";
                 autostartMoved = true;
             }
             // or it has been changed (->need to move it from here)
@@ -317,7 +318,7 @@ void DesktopPathConfig::save()
         pathChanged = true;
 
     if (pathChanged) {
-        kDebug() << "sending message SettingsChanged";
+        qCDebug(KCM_DESKTOPPATH) << "sending message SettingsChanged";
         KGlobalSettings::self()->emitChange(KGlobalSettings::SettingsChanged, KGlobalSettings::SETTINGS_PATHS);
     }
 }
@@ -409,14 +410,14 @@ bool DesktopPathConfig::moveDir( const QUrl & src, const QUrl & dest, const QStr
         }
         else
         {
-            kDebug() << "Direct move from" << src << "to" << dest;
+            qCDebug(KCM_DESKTOPPATH) << "Direct move from" << src << "to" << dest;
             KIO::Job * job = KIO::move( src, dest );
             KJobWidgets::setWindow(job, this);
             connect(job, &KIO::Job::result, this, &DesktopPathConfig::slotResult);
             job->exec();
         }
     }
-    kDebug() << "DesktopPathConfig::slotResult returning " << m_ok;
+    qCDebug(KCM_DESKTOPPATH) << "DesktopPathConfig::slotResult returning " << m_ok;
     return m_ok;
 }
 
@@ -425,7 +426,7 @@ void DesktopPathConfig::slotEntries(KIO::Job*, const KIO::UDSEntryList& list)
     QListIterator<KIO::UDSEntry> it(list);
     while (it.hasNext()) {
         KFileItem file(it.next(), m_copyFromSrc, true, true);
-        kDebug() << file.url();
+        qCDebug(KCM_DESKTOPPATH) << file.url();
         if (file.url() == m_copyFromSrc || file.url().fileName() == "..") {
             continue;
         }
