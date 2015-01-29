@@ -27,10 +27,6 @@
 #include <KConfigGroup>
 
 class QListWidgetItem;
-// class QCheckBox;
-// class KPushButton;
-// class KComboBox;
-// class KIntNumInput;
 class KMessageWidget;
 
 namespace Ui

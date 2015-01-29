@@ -39,7 +39,6 @@
 #include <KConfigGroup>
 #include <KColorUtils>
 #include <KColorScheme>
-#include <KInputDialog>
 #include <KMessageBox>
 #include <KPluginFactory>
 #include <kio/netaccess.h>

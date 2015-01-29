@@ -19,10 +19,10 @@
 
 
 #include <KAboutData>
-#include <KAction>
+#include <QAction>
 #include <KActionCollection>
 #include <KConfigGroup>
-#include <KDebug>
+#include <QDebug>
 #include <KPluginFactory>
 #include <KSharedConfig>
 #include <KShortcutsEditor>
@@ -125,7 +125,7 @@ void StandardActionsModule::load()
         KStandardShortcut::StandardShortcut shortcutId = static_cast<KStandardShortcut::StandardShortcut>(i);
         if(!shortcutIdsAdded.contains(shortcutId))
             {
-            KAction *action = new KAction(KStandardShortcut::label(shortcutId), this);
+            QAction *action = new QAction(KStandardShortcut::label(shortcutId), this);
             action->setWhatsThis(KStandardShortcut::whatsThis(shortcutId));
             dressUpAction(action, shortcutId);
             m_actionCollection->addAction(KStandardShortcut::name(shortcutId), action);
