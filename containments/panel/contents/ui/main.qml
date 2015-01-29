@@ -318,7 +318,7 @@ function checkLastSpacer() {
                 visible: applet && applet.busy
                 running: visible
                 anchors.centerIn: parent
-                width: parent.width
+                width: Math.min(parent.width, parent.height)
                 height: width
             }
             onXChanged: {
