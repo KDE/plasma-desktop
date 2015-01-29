@@ -318,6 +318,8 @@ function checkLastSpacer() {
                 visible: applet && applet.busy
                 running: visible
                 anchors.centerIn: parent
+                width: parent.width
+                height: width
             }
             onXChanged: {
                 if (movingForResize) {
