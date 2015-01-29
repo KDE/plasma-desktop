@@ -742,7 +742,7 @@ void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row)
     QDropEvent ev(pos, possibleActions, mimeData, buttons, modifiers);
     ev.setDropAction(proposedAction);
 
-    KIO::DropJob *dropJob = KIO::drop(&ev, m_dirModel->dirLister()->url());
+    KIO::DropJob *dropJob = KIO::drop(&ev, item.isNull() ? m_dirModel->dirLister()->url() : item.url());
     dropJob->ui()->setAutoErrorHandlingEnabled(true);
 }
 

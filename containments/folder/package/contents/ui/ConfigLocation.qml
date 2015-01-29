@@ -35,27 +35,37 @@ Item {
     property alias cfg_labelMode: labelMode.currentIndex
     property alias cfg_labelText: labelText.text
 
-    onCfg_urlChanged: {
-        if (locationGroup.current != null) {
+    onCfg_urlChanged: applyConfig()
+
+    function applyConfig(force) {
+        if (!force && locationGroup.current != null) {
             return;
         }
 
-        locationCustomValue.text = "";
-
         if (cfg_url == "desktop:/") {
             locationDesktop.checked = true;
+            locationCustomValue.text = "";
         } else if (cfg_url == "activities:/current/") {
             locationCurrentActivity.checked = true;
-        } else if (placesModel.indexForUrl(cfg_url) != -1) {
-            locationPlace.checked = true;
+            locationCustomValue.text = "";
         } else {
-            locationCustom.checked = true;
-            locationCustomValue.text = cfg_url;
+            var placeForUrl = placesModel.indexForUrl(cfg_url);
+
+            if (placeForUrl != -1) {
+                locationPlace.checked = true;
+                locationPlaceValue.currentIndex = placeForUrl;
+                locationCustomValue.text = "";
+            } else {
+                locationCustom.checked = true;
+                locationCustomValue.text = cfg_url;
+            }
         }
     }
 
     Folder.PlacesModel {
         id: placesModel
+
+        onPlacesChanged: applyConfig(true)
     }
 
     ColumnLayout {
@@ -123,25 +133,10 @@ Item {
                         model: placesModel
                         textRole: "display"
 
-                        currentIndex: Math.max(placesModel.indexForUrl(cfg_url), 0)
-
                         enabled: locationPlace.checked
 
-                        onEnabledChanged: {
-                            if (enabled && currentIndex != -1) {
-                                comboTimer.restart()
-                            }
-                        }
-                        Timer {
-                            id: comboTimer
-                            interval: 100
-                            onTriggered: cfg_url = placesModel.urlForIndex(locationPlaceValue.currentIndex);
-                        }
-
                         onActivated: {
-                            if (enabled) {
-                                cfg_url = placesModel.urlForIndex(index);
-                            }
+                            cfg_url = placesModel.urlForIndex(index);
                         }
                     }
                 }

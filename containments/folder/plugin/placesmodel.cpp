@@ -27,6 +27,9 @@ PlacesModel::PlacesModel(QObject *parent) : QSortFilterProxyModel(parent)
 {
     m_sourceModel = new KFilePlacesModel(this);
 
+    connect(m_sourceModel, &KFilePlacesModel::rowsInserted, this, &PlacesModel::placesChanged);
+    connect(m_sourceModel, &KFilePlacesModel::rowsRemoved, this, &PlacesModel::placesChanged);
+
     setSourceModel(m_sourceModel);
 
     QHash<int, QByteArray> roleNames = m_sourceModel->roleNames();
