@@ -18,7 +18,6 @@ target_link_libraries(kcm_launch
     Qt5::DBus
     KF5::KCMUtils
     KF5::I18n
-    KF5::KDELibs4Support
 )
 
 install(TARGETS kcm_launch  DESTINATION ${PLUGIN_INSTALL_DIR} )

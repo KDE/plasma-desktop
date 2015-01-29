@@ -20,15 +20,13 @@
 #include <QLabel>
 #include <QGroupBox>
 
-//Added by qt3to4:
 #include <QVBoxLayout>
 #include <QGridLayout>
+#include <QSpinBox>
 
-#include <kapplication.h>
+#include <KConfigGroup>
 #include <KLocalizedString>
 #include <kconfig.h>
-#include <kdialog.h>
-#include <knuminput.h>
 
 #include "kcmlaunch.h"
 #include "kwin_interface.h"
