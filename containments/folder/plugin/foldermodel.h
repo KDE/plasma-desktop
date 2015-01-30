@@ -155,6 +155,7 @@ class FolderModel : public QSortFilterProxyModel
 
         Q_INVOKABLE void rename(int row, const QString& name);
 
+        Q_INVOKABLE bool hasSelection();
         Q_INVOKABLE bool isSelected(int row);
         Q_INVOKABLE void setSelected(int row);
         Q_INVOKABLE void toggleSelected(int row);
