@@ -39,6 +39,7 @@ public:
   void	load();
 
 private:
+  bool kauthSave();
   QTabWidget   *tab;
   Dtime	*dtime;
   KProcess *process;

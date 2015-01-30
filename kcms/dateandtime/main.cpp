@@ -21,6 +21,7 @@
 #include "main.h"
 
 #include <unistd.h>
+#include <time.h>
 
 //Added by qt3to4:
 #include <QVBoxLayout>
@@ -76,22 +77,45 @@ KclockModule::KclockModule(QWidget *parent, const QVariantList &)
   process = NULL;
 }
 
-void KclockModule::save()
+bool KclockModule::kauthSave()
 {
-  setDisabled(true);
-
   QVariantMap helperargs;
-  dtime->save( helperargs );
+  helperargs["ntp"] = true;
+  helperargs["ntpServers"] = dtime->ntpServers();
+  helperargs["ntpEnabled"] = dtime->ntpEnabled();
+
+  if (!dtime->ntpEnabled()) {
+      QDateTime newTime = dtime->userTime();
+      qDebug() << "Set date to " << dtime->userTime();
+      helperargs["date"] = true;
+      helperargs["newdate"] = QString::number(newTime.toTime_t());
+      helperargs["olddate"] = QString::number(::time(0));
+  }
+
+  QString selectedTimeZone = dtime->selectedTimeZone();
+  if (!selectedTimeZone.isEmpty()) {
+    helperargs["tz"] = true;
+    helperargs["tzone"] = selectedTimeZone;
+  } else {
+    helperargs["tzreset"] = true; // make the helper reset the timezone
+  }
 
   Action action = authAction();
   action.setArguments(helperargs);
 
   ExecuteJob *job = action.execute();
-
-  if (!job->exec()) {
+  bool rc = job->exec();
+  if (!rc) {
       KMessageBox::error(this, i18n("Unable to authenticate/execute the action: %1, %2", job->error(), job->errorString()));
   }
-  else {
+  return rc;
+}
+
+void KclockModule::save()
+{
+  setDisabled(true);
+
+  if (kauthSave()) {
       QDBusMessage msg = QDBusMessage::createSignal("/org/kde/kcmshell_clock", "org.kde.kcmshell_clock", "clockUpdated");
       QDBusConnection::sessionBus().send(msg);
   }

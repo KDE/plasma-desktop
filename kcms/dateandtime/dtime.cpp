@@ -72,6 +72,9 @@ Dtime::Dtime(QWidget * parent)
   connect(setDateTimeAuto, &QCheckBox::toggled, timeServerList, &QComboBox::setEnabled);
   timeServerList->setEnabled(false);
   timeServerList->setEditable(true);
+
+#ifdef NO_SYSTEMD
+
   findNTPutility();
   if (ntpUtility.isEmpty()) {
       QString toolTip = i18n("No NTP utility has been found. "
@@ -81,6 +84,7 @@ Dtime::Dtime(QWidget * parent)
       setDateTimeAuto->setToolTip(toolTip);
       timeServerList->setToolTip(toolTip);
   }
+#endif
 
   QVBoxLayout *v2 = new QVBoxLayout( timeBox );
   v2->setMargin( 0 );
@@ -227,7 +231,17 @@ oceania.pool.ntp.org")).split(',', QString::SkipEmptyParts));
   emit timeChanged(false);
 }
 
-void Dtime::save( QVariantMap& helperargs )
+QString Dtime::selectedTimeZone() const
+{
+    QStringList selectedZones(tzonelist->selection());
+    if (!selectedZones.isEmpty()) {
+        return selectedZones.first();
+    }
+
+    return QString();
+}
+
+QStringList Dtime::ntpServers() const
 {
   // Save the order, but don't duplicate!
   QStringList list;
@@ -241,40 +255,17 @@ void Dtime::save( QVariantMap& helperargs )
     if( list.count() == 10)
       break;
   }
+  return list;
+}
 
-  helperargs["ntp"] = true;
-  helperargs["ntpServers"] = list;
-  helperargs["ntpEnabled"] = setDateTimeAuto->isChecked();
+bool Dtime::ntpEnabled() const
+{
+    return setDateTimeAuto->isChecked();
+}
 
-  if(setDateTimeAuto->isChecked()) {
-    // NTP Time setting - done in helper
-    timeServer = timeServerList->currentText();
-    kDebug() << "Setting date from time server " << timeServer;
-  }
-  else {
-    // User time setting
-    QDateTime dt(date, QTime(timeEdit->time()));
-
-    kDebug() << "Set date " << dt;
-
-    helperargs["date"] = true;
-    helperargs["newdate"] = QString::number(dt.toTime_t());
-    helperargs["olddate"] = QString::number(::time(0));
-  }
-
-  // restart time
-  internalTimer.start( 1000 );
-
-  QStringList selectedZones(tzonelist->selection());
-
-  if (!selectedZones.isEmpty()) {
-    helperargs["tz"] = true;
-    helperargs["tzone"] = selectedZones.first();
-  } else {
-    helperargs["tzreset"] = true; // make the helper reset the timezone
-  }
-
-  currentZone();
+QDateTime Dtime::userTime() const
+{
+    return QDateTime(date, QTime(timeEdit->time()));
 }
 
 void Dtime::processHelperErrors( int code )

@@ -48,9 +48,13 @@ class Dtime : public QWidget, public Ui::DateAndTime
  public:
   Dtime( QWidget *parent=0 );
 
-  void	save( QVariantMap &helperargs );
   void processHelperErrors( int code );
   void	load();
+
+  QString selectedTimeZone() const;
+  QStringList ntpServers() const;
+  bool ntpEnabled() const;
+  QDateTime userTime() const;
 
   QString quickHelp() const;
 
