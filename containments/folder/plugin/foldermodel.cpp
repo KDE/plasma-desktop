@@ -463,6 +463,11 @@ void FolderModel::rename(int row, const QString& name)
     m_dirModel->setData(mapToSource(idx), name, Qt::EditRole);
 }
 
+bool FolderModel::hasSelection()
+{
+    return m_selectionModel->hasSelection();
+}
+
 bool FolderModel::isSelected(int row)
 {
     if (row < 0) {
@@ -1229,12 +1234,20 @@ QList<QUrl> FolderModel::selectedUrls(bool forTrash) const
 
 void FolderModel::copy()
 {
+    if (!m_selectionModel->hasSelection()) {
+        return;
+    }
+
     QMimeData *mimeData = QSortFilterProxyModel::mimeData(m_selectionModel->selectedIndexes());
     QApplication::clipboard()->setMimeData(mimeData);
 }
 
 void FolderModel::cut()
 {
+    if (!m_selectionModel->hasSelection()) {
+        return;
+    }
+
     QMimeData *mimeData = QSortFilterProxyModel::mimeData(m_selectionModel->selectedIndexes());
     KIO::setClipboardDataCut(mimeData, true);
     QApplication::clipboard()->setMimeData(mimeData);
@@ -1259,6 +1272,10 @@ void FolderModel::refresh()
 
 void FolderModel::moveSelectedToTrash()
 {
+    if (!m_selectionModel->hasSelection()) {
+        return;
+    }
+
     const QList<QUrl> urls = selectedUrls(true);
     KIO::JobUiDelegate uiDelegate;
     if (uiDelegate.askDeleteConfirmation(urls, KIO::JobUiDelegate::Trash, KIO::JobUiDelegate::DefaultConfirmation)) {
@@ -1269,6 +1286,10 @@ void FolderModel::moveSelectedToTrash()
 
 void FolderModel::deleteSelected()
 {
+    if (!m_selectionModel->hasSelection()) {
+        return;
+    }
+
     const QList<QUrl> urls = selectedUrls(false);
     KIO::JobUiDelegate uiDelegate;
     if (uiDelegate.askDeleteConfirmation(urls, KIO::JobUiDelegate::Delete, KIO::JobUiDelegate::DefaultConfirmation)) {

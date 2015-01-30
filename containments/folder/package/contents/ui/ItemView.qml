@@ -566,7 +566,9 @@ FocusScope {
 
                 Keys.onPressed: {
                     if (event.matches(StandardKey.Delete)) {
-                        dir.action("trash").trigger();
+                        if (dir.hasSelection()) {
+                            dir.action("trash").trigger();
+                        }
                     } else if (event.key == Qt.Key_Control) {
                         ctrlPressed = true;
                     } else if (event.key == Qt.Key_Shift) {
