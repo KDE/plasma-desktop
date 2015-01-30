@@ -19,6 +19,7 @@
 #include "kdedactions.h"
 
 #include <QAction>
+#include <QDebug>
 #include <KLocalizedString>
 #include <KGlobalAccel>
 
