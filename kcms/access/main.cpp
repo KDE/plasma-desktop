@@ -24,11 +24,15 @@
 #include <k4aboutdata.h>
 #include <kcmdlineargs.h>
 #include <KLocalizedString>
-#include <kdemacros.h>
 #include <QX11Info>
+#include <Kdelibs4ConfigMigrator>
 
 extern "C" Q_DECL_EXPORT int kdemain(int argc, char * argv[] )
 {
+    Kdelibs4ConfigMigrator migrate(QStringLiteral("kaccess"));
+    migrate.setConfigFiles(QStringList() << QStringLiteral("kaccessrc"));
+    migrate.migrate();
+
   K4AboutData about(I18N_NOOP("kaccess"), 0, ki18n("KDE Accessibility Tool"),
                   0, KLocalizedString(), K4AboutData::License_GPL,
                   ki18n("(c) 2000, Matthias Hoelzer-Kluepfel"));
