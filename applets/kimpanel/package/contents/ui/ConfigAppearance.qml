@@ -83,7 +83,7 @@ Item {
 
     QtDialogs.FontDialog {
         id: fontDialog
-        title: i18n("Select Font")
+        title: i18nc("@title:window", "Select Font")
 
         onAccepted: {
             cfg_font = font
