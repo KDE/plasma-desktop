@@ -24,16 +24,11 @@
 #include "FcEngine.h"
 
 #include <QPainter>
-#include <QPixmap>
 #include <QFile>
 #include <QTextStream>
 #include <QX11Info>
-#include <QUrl>
 #include <KConfig>
-#include <KConfigGroup>
-#include <KGlobalSettings>
 #include <kio/netaccess.h>
-#include <KGlobal>
 #include <math.h>
 #include <X11/Xlib.h>
 #include <X11/Xft/Xft.h>
@@ -42,7 +37,7 @@
 #include <xcb/xcb_image.h>
 #include <QFontDatabase>
 #include "File.h"
-
+#include <KConfigGroup>
 //#define KFI_FC_DEBUG
 
 #define KFI_PREVIEW_GROUP      "KFontInst Preview Settings"

@@ -22,10 +22,7 @@
  */
 
 #include "FontList.h"
-#include <KGlobal>
-#include <KStandardDirs>
 #include <KMimeType>
-#include <KMenu>
 #include <QIcon>
 #include <KIconLoader>
 #include <kde_file.h>
@@ -33,18 +30,13 @@
 #include <KColorScheme>
 #include <QProcess>
 #include <QFont>
-#include <QMap>
 #include <QFile>
 #include <QDir>
-#include <QFileInfo>
 #include <QPixmap>
 #include <QDropEvent>
-#include <QDateTime>
 #include <QHeaderView>
-#include <QPainter>
 #include <QMenu>
 #include <QTimer>
-#include <QApplication>
 #include <QtDBus/QDBusServiceWatcher>
 #include <QDrag>
 #include <stdlib.h>

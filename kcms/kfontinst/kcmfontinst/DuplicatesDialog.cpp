@@ -28,29 +28,26 @@
 #include "FcEngine.h"
 #include "FontList.h"
 #include "JobRunner.h"
-#include <KGlobal>
 #include <KIconLoader>
 #include <KMessageBox>
 #include <KFileItem>
 #include <KMimeType>
 #include <KPropertiesDialog>
 #include <KShell>
-#include <KStandardDirs>
 #include <QLabel>
-#include <QTimer>
 #include <KFormat>
 #include <QGridLayout>
 #include <QDir>
 #include <QFileInfoList>
 #include <QFileInfo>
 #include <QHeaderView>
-#include <QDateTime>
 #include <QMenu>
 #include <QContextMenuEvent>
 #include <QAction>
 #include <QApplication>
 #include <QDesktopWidget>
 #include <QProcess>
+#include <KLocale>
 #if defined USE_POLICYKIT && USE_POLICYKIT==1
 #include <QtDBus/QDBusInterface>
 #endif

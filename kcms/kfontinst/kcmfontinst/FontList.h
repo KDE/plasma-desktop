@@ -35,7 +35,6 @@
 #include <QModelIndex>
 #include <QVariant>
 #include <QSortFilterProxyModel>
-#include <QFontDatabase>
 #include "Misc.h"
 #include "JobRunner.h"
 #include "FontFilter.h"

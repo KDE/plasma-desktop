@@ -27,7 +27,6 @@
 #include <QImage>
 #include <QSize>
 #include <QWidget>
-#include <QColor>
 #include <QPaintEvent>
 #include "KfiConstants.h"
 #include "FcEngine.h"

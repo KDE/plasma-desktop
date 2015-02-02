@@ -26,7 +26,6 @@
 #include "Misc.h"
 #include "Fc.h"
 #include "ActionLabel.h"
-#include <KIconLoader>
 #include <kio/netaccess.h>
 #include <KStandardDirs>
 #include <KTempDir>

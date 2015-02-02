@@ -24,7 +24,6 @@
 #include "FontPreview.h"
 #include "FcEngine.h"
 #include "CharTip.h"
-#include <KApplication>
 #include <QtGui/QPainter>
 #include <QtGui/QPaintEvent>
 #include <QtGui/QMouseEvent>

@@ -33,10 +33,8 @@
 #include "FontPreview.h"
 #include "UnicodeCategories.h"
 #include <KApplication>
-#include <KGlobalSettings>
 #include <QLabel>
 #include <QToolTip>
-#include <QPainter>
 #include <QTimer>
 #include <QPixmap>
 #include <QBoxLayout>

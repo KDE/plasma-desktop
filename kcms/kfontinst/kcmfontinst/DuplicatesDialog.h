@@ -24,7 +24,6 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#include <QPixmap>
 #include <QThread>
 #include <QTreeWidget>
 #include <KDialog>

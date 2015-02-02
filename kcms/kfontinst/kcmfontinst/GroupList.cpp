@@ -23,25 +23,19 @@
 
 #include "GroupList.h"
 #include "FontList.h"
-#include <KGlobal>
-#include <KStandardDirs>
-#include <KMimeType>
 #include <KIconLoader>
 #include <kde_file.h>
 #include <KMessageBox>
 #include <KSaveFile>
 #include <QFont>
-#include <QFontDatabase>
 #include <QDropEvent>
 #include <QHeaderView>
 #include <QMenu>
 #include <QApplication>
 #include <QStyledItemDelegate>
 #include <QPainter>
-#include <QLinearGradient>
 #include <QDomElement>
 #include <QTextStream>
-#include <QDir>
 #include <QEvent>
 #include <QTimer>
 #include <stdlib.h>
