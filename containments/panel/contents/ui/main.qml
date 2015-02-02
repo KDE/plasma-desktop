@@ -72,7 +72,7 @@ function addApplet(applet, x, y) {
 
     // If the provided position is valid, use it.
     } else if (x >= 0 && y >= 0) {
-        var index = LayoutManager.insertAtCoordinates(container, x + appletWidth/2, y + appletHeight/2);
+        var index = LayoutManager.insertAtCoordinates(container, x , y);
 
     // Fall through to determining an appropriate insert position.
     } else {
@@ -207,7 +207,9 @@ function checkLastSpacer() {
         LayoutManager.removeApplet(applet);
         var flexibleFound = false;
         for (var i = 0; i < currentLayout.children.length; ++i) {
-            if (currentLayout.children[i].applet.Layout.fillWidth) {
+            if (((root.isHorizontal && currentLayout.children[i].applet.Layout.fillWidth) ||
+                (!root.isHorizontal && currentLayout.children[i].applet.Layout.fillHeight)) &&
+                currentLayout.children[i].applet.visible) {
                 flexibleFound = true;
                 break
             }
