@@ -135,6 +135,12 @@ Item {
 
                         enabled: locationPlace.checked
 
+                        onEnabledChanged: {
+                            if (enabled && currentIndex != -1) {
+                                cfg_url = placesModel.urlForIndex(currentIndex);
+                            }
+                        }
+
                         onActivated: {
                             cfg_url = placesModel.urlForIndex(index);
                         }

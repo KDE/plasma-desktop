@@ -28,8 +28,6 @@
 #include <KCmdLineArgs>
 #include <k4aboutdata.h>
 #include <KApplication>
-#include <KZip>
-#include <KTempDir>
 #include <KMessageBox>
 #include <kio/netaccess.h>
 #include "JobRunner.h"

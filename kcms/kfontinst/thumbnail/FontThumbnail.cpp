@@ -25,12 +25,9 @@
 #include "KfiConstants.h"
 #include "FcEngine.h"
 #include <QImage>
-#include <QPixmap>
 #include <QApplication>
 #include <QPalette>
 #include <QFile>
-#include <KGlobalSettings>
-#include <QUrl>
 #include <KZip>
 #include <KTempDir>
 #include <KMimeType>

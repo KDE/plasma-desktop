@@ -30,7 +30,6 @@
 #include <QIcon>
 #include <KMimeType>
 #include <QLabel>
-#include <QPen>
 #include <QPainter>
 #include <QStyleOption>
 #include <QSet>

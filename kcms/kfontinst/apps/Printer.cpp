@@ -25,7 +25,6 @@
 #include "Printer.h"
 #include "FcEngine.h"
 #include "ActionLabel.h"
-#include <QCoreApplication>
 #include <QTextStream>
 #include <QFile>
 #include <QPainter>

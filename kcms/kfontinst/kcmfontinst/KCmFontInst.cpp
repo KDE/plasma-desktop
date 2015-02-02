@@ -38,7 +38,6 @@
 #include <QSplitter>
 #include <QProgressBar>
 #include <QApplication>
-#include <QComboBox>
 #include <QPainter>
 #include <QMenu>
 #include <QLabel>
@@ -57,13 +56,9 @@
 #include <KInputDialog>
 #include <KIconLoader>
 #include <KProgressDialog>
-#include <KTempDir>
 #include <KTemporaryFile>
 #include <QIcon>
 #include <KActionMenu>
-#include <KToggleAction>
-#include <KStandardDirs>
-#include <KMenu>
 #include <KPluginFactory>
 #include <KPluginLoader>
 #include <KStandardAction>

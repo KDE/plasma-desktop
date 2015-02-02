@@ -28,16 +28,13 @@
 #include "PreviewSelectAction.h"
 #include "FontInstInterface.h"
 #include "FontInst.h"
-#include <QGridLayout>
 #include <QBoxLayout>
 #include <QPushButton>
 #include <QFrame>
 #include <QFile>
 #include <QLabel>
-#include <QValidator>
 #include <QRegExp>
 #include <QTimer>
-#include <QApplication>
 #include <QGroupBox>
 #include <QProcess>
 #include <kio/netaccess.h>
