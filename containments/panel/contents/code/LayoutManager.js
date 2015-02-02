@@ -175,7 +175,7 @@ function insertAtCoordinates(item, x, y) {
     var child = layout.childAt(x, y);
 
     if (!child || child === item) {
-        return -1;
+        child = layout.children[0];
     }
     item.parent = root;
 
