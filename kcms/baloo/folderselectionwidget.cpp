@@ -131,7 +131,7 @@ void FolderSelectionWidget::setFolders(QStringList includeDirs, QStringList excl
         item->setData(Qt::DisplayRole, display);
         item->setData(Qt::WhatsThisRole, url);
         item->setData(UrlRole, url);
-        item->setData(Qt::DecorationRole, QIcon(iconName(url)));
+        item->setData(Qt::DecorationRole, QIcon::fromTheme(iconName(url)));
         item->setToolTip(makeHomePretty(url));
 
         m_listWidget->addItem(item);
