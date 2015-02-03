@@ -266,15 +266,8 @@ Item {
                     if (!applet) {
                         return size;
                     }
-                    if (applet.preferredRepresentation) {
-                        if (applet.preferredRepresentation == applet.compactRepresentation) {
-                            layout = applet.compactRepresentationItem.Layout;
-                        } else {
-                            layout = applet.fullRepresentationItem.Layout;
-                        }
-                    } else {
-                        layout = applet.compactRepresentationItem ? applet.compactRepresentationItem.Layout : null;
-                    }
+
+                    layout = applet.Layout
 
                     if (layout) {
                         size.width = layout.minimumWidth;
