@@ -23,8 +23,28 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 PlasmaCore.IconItem {
     id: icon
 
-    Layout.minimumWidth: plasmoid.formFactor == PlasmaCore.Types.Vertical ? 0 : height
-    Layout.minimumHeight: plasmoid.formFactor == PlasmaCore.Types.Vertical ? width : 0
+    Layout.minimumWidth: {
+        switch (plasmoid.formFactor) {
+        case PlasmaCore.Types.Vertical:
+            return 0;
+        case PlasmaCore.Types.Horizontal:
+            return height;
+        default:
+            return units.gridUnit * 3;
+        }
+    }
+
+    Layout.minimumHeight: {
+        switch (plasmoid.formFactor) {
+        case PlasmaCore.Types.Vertical:
+            return width;
+        case PlasmaCore.Types.Horizontal:
+            return 0;
+        default:
+            return units.gridUnit * 3;
+        }
+    }
+
     source: plasmoid.icon ? plasmoid.icon : "plasma"
     active: mouseArea.containsMouse
 
