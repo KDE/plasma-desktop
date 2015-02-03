@@ -27,6 +27,7 @@ class QPushButton;
 class QTreeWidget;
 class QTreeWidgetItem;
 class KConfig;
+class KPluginMetaData;
 
 Q_DECLARE_LOGGING_CATEGORY(KCM_KDED)
 
@@ -51,8 +52,8 @@ protected Q_SLOTS:
 	void slotItemChecked(QTreeWidgetItem *item, int column);
 	void getServiceStatus();
 
-        bool autoloadEnabled(KConfig *config, const QString &filename);
-        void setAutoloadEnabled(KConfig *config, const QString &filename, bool b);
+        bool autoloadEnabled(KConfig *config, const KPluginMetaData &filename);
+        void setAutoloadEnabled(KConfig *config, const KPluginMetaData &filename, bool b);
 
 private:
 	QTreeWidget *_lvLoD;

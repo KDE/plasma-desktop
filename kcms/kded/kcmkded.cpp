@@ -31,16 +31,17 @@
 #include <QLoggingCategory>
 #include <QDialog>
 
-#include <KConfigGroup>
-
 #include <kaboutdata.h>
 #include <kdesktopfile.h>
 #include <kmessagebox.h>
 #include <kservice.h>
 #include <kservicetypetrader.h>
 
+#include <KConfigGroup>
+#include <KPluginInfo>
 #include <KPluginFactory>
 #include <KPluginLoader>
+#include <KPluginMetaData>
 #include <KLocalizedString>
 
 K_PLUGIN_FACTORY(KDEDFactory,
@@ -153,80 +154,108 @@ KDEDConfig::KDEDConfig(QWidget* parent, const QVariantList &) :
 
 }
 
-QString setModuleGroup(const QString &filename)
+QString setModuleGroup(const KPluginMetaData &module)
 {
-	QString module = filename;
-	int i = module.lastIndexOf('/');
-	if (i != -1)
-	   module = module.mid(i+1);
-	i = module.lastIndexOf('.');
-	if (i != -1)
-	   module = module.left(i);
-
-	return QString("Module-%1").arg(module);
+	return QStringLiteral("Module-%1").arg(module.pluginId());
 }
 
-bool KDEDConfig::autoloadEnabled(KConfig *config, const QString &filename)
+bool KDEDConfig::autoloadEnabled(KConfig *config, const KPluginMetaData &module)
 {
-	KConfigGroup cg(config, setModuleGroup(filename));
+	KConfigGroup cg(config, setModuleGroup(module));
 	return cg.readEntry("autoload", true);
 }
 
-void KDEDConfig::setAutoloadEnabled(KConfig *config, const QString &filename, bool b)
+void KDEDConfig::setAutoloadEnabled(KConfig *config, const KPluginMetaData &module, bool b)
 {
-	KConfigGroup cg(config, setModuleGroup(filename));
+	KConfigGroup cg(config, setModuleGroup(module));
 	return cg.writeEntry("autoload", b);
+}
+
+// This code was copied from kded.cpp
+// TODO: move this KCM to the KDED framework and share the code?
+static QVector<KPluginMetaData> availableModules()
+{
+	QVector<KPluginMetaData> plugins = KPluginLoader::findPlugins("kf5/kded");
+	QSet<QString> moduleIds;
+	foreach (const KPluginMetaData &md, plugins) {
+		moduleIds.insert(md.pluginId());
+	}
+	// also search for old .desktop based kded modules
+	KPluginInfo::List oldStylePlugins = KPluginInfo::fromServices(KServiceTypeTrader::self()->query("KDEDModule"));
+	foreach (const KPluginInfo &info, oldStylePlugins) {
+		if (moduleIds.contains(info.pluginName())) {
+			qCWarning(KCM_KDED).nospace() << "kded module " << info.pluginName() << " has already been found using "
+			"JSON metadata, please don't install the now unneeded .desktop file (" << info.entryPath() << ").";
+		} else {
+			qCDebug(KCM_KDED).nospace() << "kded module " << info.pluginName() << " still uses .desktop files ("
+			<< info.entryPath() << "). Please port it to JSON metadata.";
+			plugins.append(info.toMetaData());
+		}
+	}
+	return plugins;
+}
+
+// this code was copied from kded.cpp
+static bool isModuleLoadedOnDemand(const KPluginMetaData &module)
+{
+	bool loadOnDemand = true;
+	// use toVariant() since it could be string or bool in the json and QJsonObject does not convert
+	QVariant p = module.rawData().value("X-KDE-Kded-load-on-demand").toVariant();
+	if (p.isValid() && p.canConvert<bool>() && (p.toBool() == false)) {
+		loadOnDemand = false;
+	}
+	return loadOnDemand;
 }
 
 void KDEDConfig::load()
 {
-	KConfig kdedrc( "kded5rc", KConfig::NoGlobals );
+	KConfig kdedrc("kded5rc", KConfig::NoGlobals);
 
 	_lvStartup->clear();
 	_lvLoD->clear();
 
-	KService::List offers = KServiceTypeTrader::self()->query( "KDEDModule" );
 	QTreeWidgetItem* treeitem = 0L;
-	for ( KService::List::const_iterator it = offers.constBegin();
-	      it != offers.constEnd(); ++it)
-	{
-		QString servicePath = (*it)->entryPath();
-		qCDebug(KCM_KDED) << servicePath;
+	const auto modules = availableModules();
+	for (const KPluginMetaData &mod : modules) {
+		QString servicePath = mod.metaDataFileName();
 
-        const KDesktopFile file(QStandardPaths::GenericDataLocation, "kservices5/" + servicePath );
-		const KConfigGroup grp = file.desktopGroup();
+		// autoload defaults to false if it is not found
+		const bool autoload = mod.rawData().value(QStringLiteral("X-KDE-Kded-autoload")).toVariant().toBool();
+		const QString dbusModuleName = mod.value(QStringLiteral("X-KDE-DBus-ModuleName"));
+		qCDebug(KCM_KDED) << "reading kded info from" << servicePath << "autoload =" << autoload << "dbus module name =" << dbusModuleName;
+
 		// The logic has to be identical to Kded::initModules.
 		// They interpret X-KDE-Kded-autoload as false if not specified
 		//                X-KDE-Kded-load-on-demand as true if not specified
-		if ( grp.readEntry("X-KDE-Kded-autoload", false) ) {
+		if (autoload) {
 			treeitem = new QTreeWidgetItem();
-			treeitem->setCheckState( StartupUse, autoloadEnabled(&kdedrc, file.name()) ? Qt::Checked : Qt::Unchecked );
-			treeitem->setText( StartupService, file.readName() );
-			treeitem->setText( StartupDescription, file.readComment() );
-			treeitem->setText( StartupStatus, NOT_RUNNING );
-			if (grp.hasKey("X-KDE-DBus-ModuleName")) {
-				treeitem->setData( StartupService, LibraryRole, grp.readEntry("X-KDE-DBus-ModuleName") );
+			treeitem->setCheckState(StartupUse, autoloadEnabled(&kdedrc, mod.pluginId()) ? Qt::Checked : Qt::Unchecked);
+			treeitem->setText(StartupService, mod.name());
+			treeitem->setText(StartupDescription, mod.description());
+			treeitem->setText(StartupStatus, NOT_RUNNING);
+			if (!dbusModuleName.isEmpty()) {
+				treeitem->setData(StartupService, LibraryRole, dbusModuleName);
 			} else {
-				qCWarning(KCM_KDED) << "X-KDE-DBUS-ModuleName not set for module " << file.readName();
-				treeitem->setData( StartupService, LibraryRole, grp.readEntry("X-KDE-Library") );
+				qCWarning(KCM_KDED) << "X-KDE-DBUS-ModuleName not set for module " << mod.name() << "from file" << mod.metaDataFileName();
+				treeitem->setData(StartupService, LibraryRole, mod.fileName());
 			}
-			_lvStartup->addTopLevelItem( treeitem );
+			_lvStartup->addTopLevelItem(treeitem);
 		}
-		else if ( grp.readEntry("X-KDE-Kded-load-on-demand", true) ) {
+		else if (isModuleLoadedOnDemand(mod)) {
 			treeitem = new QTreeWidgetItem();
-			treeitem->setText( OnDemandService, file.readName() );
-			treeitem->setText( OnDemandDescription, file.readComment() );
-			treeitem->setText( OnDemandStatus, NOT_RUNNING );
-			if (grp.hasKey("X-KDE-DBus-ModuleName")) {
-				treeitem->setData( OnDemandService, LibraryRole, grp.readEntry("X-KDE-DBus-ModuleName") );
+			treeitem->setText(OnDemandService, mod.name() );
+			treeitem->setText(OnDemandDescription, mod.description());
+			treeitem->setText(OnDemandStatus, NOT_RUNNING);
+			if (!dbusModuleName.isEmpty()) {
+				treeitem->setData(OnDemandService, LibraryRole, dbusModuleName);
 			} else {
-				qCWarning(KCM_KDED) << "X-KDE-DBUS-ModuleName not set for module " << file.readName();
-				treeitem->setData( OnDemandService, LibraryRole, grp.readEntry("X-KDE-Library") );
+				qCWarning(KCM_KDED) << "X-KDE-DBUS-ModuleName not set for module " << mod.name() << "from file" << mod.metaDataFileName();
+				treeitem->setData(OnDemandService, LibraryRole, mod.fileName());
 			}
-			_lvLoD->addTopLevelItem( treeitem );
+			_lvLoD->addTopLevelItem(treeitem);
 		}
 		else {
-			qCWarning(KCM_KDED) << "kcmkded: Module " << file.readName() << " not loaded on demand or startup! Skipping.";
+			qCWarning(KCM_KDED) << "kcmkded: Module " << mod.name() << "from file" << mod.metaDataFileName() << " not loaded on demand or startup! Skipping.";
 		}
 	}
 
@@ -246,26 +275,19 @@ void KDEDConfig::save()
 {
 	KConfig kdedrc("kded5rc", KConfig::NoGlobals);
 
-	KService::List offers = KServiceTypeTrader::self()->query( "KDEDModule" );
-	for ( KService::List::const_iterator it = offers.constBegin();
-	      it != offers.constEnd(); ++it)
-	{
-		QString servicePath = (*it)->entryPath();
-		qCDebug(KCM_KDED) << servicePath;
-
-        const KDesktopFile file(QStandardPaths::GenericDataLocation, "kservices5/" + servicePath );
-		const KConfigGroup grp = file.desktopGroup();
-		if (grp.readEntry("X-KDE-Kded-autoload", false)){
-
-			QString libraryName = grp.readEntry( "X-KDE-Library" );
+	const auto modules = availableModules();
+	for (const KPluginMetaData &mod : modules) {
+		qCDebug(KCM_KDED) << "saving settings for kded module" << mod.metaDataFileName();
+		// autoload defaults to false if it is not found
+		const bool autoload = mod.rawData().value(QStringLiteral("X-KDE-Kded-autoload")).toVariant().toBool();
+		if (autoload) {
+			const QString libraryName = mod.fileName();
 			int count = _lvStartup->topLevelItemCount();
-			for( int i = 0; i < count; ++i )
-			{
-				QTreeWidgetItem *treeitem = _lvStartup->topLevelItem( i );
-				if ( treeitem->data( StartupService, LibraryRole ).toString() == libraryName )
-				{
+			for(int i = 0; i < count; ++i) {
+				QTreeWidgetItem *treeitem = _lvStartup->topLevelItem(i);
+				if ( treeitem->data(StartupService, LibraryRole ).toString() == libraryName) {
 					// we found a match, now compare and see what changed
-					setAutoloadEnabled( &kdedrc, servicePath, treeitem->checkState( StartupUse ) == Qt::Checked);
+					setAutoloadEnabled(&kdedrc, mod, treeitem->checkState( StartupUse ) == Qt::Checked);
 					break;
 				}
 			}
@@ -275,8 +297,8 @@ void KDEDConfig::save()
 
 	emit changed(false);
 
-	QDBusInterface kdedInterface( "org.kde.kded5", "/kded", "org.kde.kded5" );
-	kdedInterface.call( "reconfigure" );
+	QDBusInterface kdedInterface("org.kde.kded5", "/kded", "org.kde.kded5");
+	kdedInterface.call("reconfigure");
 	QTimer::singleShot(0, this, SLOT(slotServiceRunningToggled()));
 }
 
@@ -310,6 +332,7 @@ void KDEDConfig::getServiceStatus()
 		KMessageBox::error(this, i18n("Unable to contact KDED."));
 		return;
 	}
+	qCDebug(KCM_KDED) << "Loaded kded modules:" << modules;
 
     // Initialize
 	int count = _lvLoD->topLevelItemCount();
@@ -470,7 +493,7 @@ void KDEDConfig::slotStopService()
 		if ( reply.value() )
 			slotServiceRunningToggled();
 		else
-			KMessageBox::error(this, "<qt>" + i18n("Unable to stop server <em>%1</em>.", service) + "</qt>");
+			KMessageBox::error(this, "<qt>" + i18n("Unable to stop service <em>%1</em>.", service) + "</qt>");
 	}
 	else {
 		KMessageBox::error(this, "<qt>" + i18n("Unable to stop service <em>%1</em>.<br /><br /><i>Error: %2</i>",
