@@ -109,7 +109,8 @@ public:
 //               primaryNamePolicy(ApplicationModel::GenericNamePrimary),
               displayOrder(NameAfterDescription),
               allowSeparators(_allowSeparators),
-              showRecentlyInstalled(true)
+              showRecentlyInstalled(true),
+              sortAppsByName(false)
     {
         systemApplications = Kickoff::systemApplicationList();
     }
@@ -131,6 +132,7 @@ public:
     DisplayOrder displayOrder;
     bool allowSeparators;
     bool showRecentlyInstalled;
+    bool sortAppsByName;
 
     QStringList newInstalledPrograms;
     QHash<QString, QDate> seenPrograms;
@@ -166,7 +168,7 @@ void ApplicationModelPrivate::fillNode(const QString &_relPath, AppNode *node)
     const KServiceGroup::List list = root->entries(true /* sorted */,
                                                    true /* exclude no display entries */,
                                                    allowSeparators /* allow separators */,
-                                                   true /* sort by generic name */);
+                                                   !sortAppsByName /* sort by generic name */);
 
     // application name <-> service map for detecting duplicate entries
     QHash<QString, KService::Ptr> existingServices;
@@ -358,6 +360,21 @@ void ApplicationModel::setShowRecentlyInstalled(bool showRecentlyInstalled)
 bool ApplicationModel::showRecentlyInstalled() const
 {
    return d->showRecentlyInstalled;
+}
+
+bool ApplicationModel::sortAppsByName() const
+{
+    return d->sortAppsByName;
+}
+
+void ApplicationModel::setSortAppsByName(bool sortAppsByName)
+{
+    if (d->sortAppsByName != sortAppsByName) {
+        d->sortAppsByName = sortAppsByName;
+        reloadMenu();
+
+        emit sortAppsByNameChanged();
+    }
 }
 
 int ApplicationModel::columnCount(const QModelIndex &parent) const
