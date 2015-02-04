@@ -114,7 +114,7 @@ public:
     void setShowRecentlyInstalled(bool showRecentlyInstalled);
 
     bool sortAppsByName() const;
-    void setortAppsByName(bool sortAppsByName);
+    void setSortAppsByName(bool sortAppsByName);
 
     Q_INVOKABLE int rowForModelIndex(const QModelIndex &index) const;
 
