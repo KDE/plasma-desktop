@@ -199,6 +199,7 @@ Item {
                 }
 
                 model: Kickoff.ApplicationModel {
+                    sortAppsByName: plasmoid.configuration.showAppsByName
                     onModelReset: {
                         updatedLabelTimer.running = true;
                         applicationsView.clearBreadcrumbs();

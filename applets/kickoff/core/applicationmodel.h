@@ -42,6 +42,8 @@ class ApplicationModel : public KickoffAbstractModel
 {
     Q_OBJECT
 
+    Q_PROPERTY(bool sortAppsByName READ sortAppsByName WRITE setSortAppsByName NOTIFY sortAppsByNameChanged)
+
 public:
     ApplicationModel(QObject *parent = 0, bool allowSeparators = false);
     virtual ~ApplicationModel();
@@ -108,9 +110,16 @@ public:
     virtual int rowCount(const QModelIndex &parent = QModelIndex()) const;
 
     void setApplet(Plasma::Applet *applet);
-    void setShowRecentlyInstalled(bool showRecentlyInstalled);
     bool showRecentlyInstalled() const;
+    void setShowRecentlyInstalled(bool showRecentlyInstalled);
+
+    bool sortAppsByName() const;
+    void setortAppsByName(bool sortAppsByName);
+
     Q_INVOKABLE int rowForModelIndex(const QModelIndex &index) const;
+
+Q_SIGNALS:
+    void sortAppsByNameChanged();
 
 public Q_SLOTS:
     void reloadMenu();
