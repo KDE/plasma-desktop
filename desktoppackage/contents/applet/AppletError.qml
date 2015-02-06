@@ -17,12 +17,14 @@
  */
 
 import QtQuick 2.0
-
+import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 
-Row {
+RowLayout {
     id: root
+    Layout.minimumWidth: units.gridUnit * 20
+    Layout.minimumHeight: units.gridUnit * 8
 
     property alias reason: messageText.text
 
@@ -31,14 +33,18 @@ Row {
     PlasmaCore.IconItem {
         id: icon
         anchors.verticalCenter: parent.verticalCenter
-        width: units.iconSizes.huge
-        height: width
+        Layout.minimumWidth: units.iconSizes.huge
+        Layout.minimumHeight: units.iconSizes.huge
         source: "dialog-error"
     }
 
-    PlasmaComponents.Label {
+    PlasmaComponents.TextArea {
         id: messageText
-        anchors.verticalCenter: parent.verticalCenter
+        Layout.fillWidth: true
+        Layout.fillHeight: true
+        verticalAlignment: TextEdit.AlignVCenter
+        backgroundVisible: false
+        readOnly: true
         width: parent.width - icon.width
         wrapMode: Text.Wrap
     }
