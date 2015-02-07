@@ -46,89 +46,89 @@ class KComboBox;
 
 class KAccessApp : public KUniqueApplication
 {
-  Q_OBJECT
+    Q_OBJECT
 
 public:
 
-  explicit KAccessApp(bool allowStyles=true, bool GUIenabled=true);
+    explicit KAccessApp(bool allowStyles = true, bool GUIenabled = true);
 
 #if 0
-  bool x11EventFilter(XEvent *event);
+    bool x11EventFilter(XEvent *event);
 #endif
 
-  int newInstance();
+    int newInstance();
 
-  void setXkbOpcode(int opcode);
+    void setXkbOpcode(int opcode);
 
 protected:
 
-  void readSettings();
+    void readSettings();
 
-  void xkbStateNotify();
-  void xkbBellNotify(XkbBellNotifyEvent *event);
-  void xkbControlsNotify(XkbControlsNotifyEvent *event);
+    void xkbStateNotify();
+    void xkbBellNotify(XkbBellNotifyEvent *event);
+    void xkbControlsNotify(XkbControlsNotifyEvent *event);
 
 
 private Q_SLOTS:
 
-  void activeWindowChanged(WId wid);
-  void notifyChanges();
-  void applyChanges();
-  void yesClicked();
-  void noClicked();
-  void dialogClosed();
+    void activeWindowChanged(WId wid);
+    void notifyChanges();
+    void applyChanges();
+    void yesClicked();
+    void noClicked();
+    void dialogClosed();
 
 
 private:
-   void  createDialogContents();
-   void  initMasks();
+    void  createDialogContents();
+    void  initMasks();
 
-  int xkb_opcode;
-  unsigned int features;
-  unsigned int requestedFeatures;
+    int xkb_opcode;
+    unsigned int features;
+    unsigned int requestedFeatures;
 
-  bool    _systemBell, _artsBell, _visibleBell, _visibleBellInvert;
-  QColor  _visibleBellColor;
-  int     _visibleBellPause;
+    bool    _systemBell, _artsBell, _visibleBell, _visibleBellInvert;
+    QColor  _visibleBellColor;
+    int     _visibleBellPause;
 
-  bool    _gestures, _gestureConfirmation;
-  bool    _kNotifyModifiers, _kNotifyAccessX;
+    bool    _gestures, _gestureConfirmation;
+    bool    _kNotifyModifiers, _kNotifyAccessX;
 
-  QWidget *overlay;
+    QWidget *overlay;
 
-  Phonon::MediaObject *_player;
-  QString _currentPlayerSource;
+    Phonon::MediaObject *_player;
+    QString _currentPlayerSource;
 
-  WId _activeWindow;
+    WId _activeWindow;
 
-  KDialog *dialog;
-  QLabel *featuresLabel;
-  KComboBox *showModeCombobox;
+    KDialog *dialog;
+    QLabel *featuresLabel;
+    KComboBox *showModeCombobox;
 
-  int keys[8];
-  int state;
+    int keys[8];
+    int state;
 };
 
 
 class VisualBell : public QWidget
 {
-  Q_OBJECT
+    Q_OBJECT
 
 public:
 
-  VisualBell(int pause)
-    : QWidget(( QWidget* )0, Qt::X11BypassWindowManagerHint), _pause(pause)
+    VisualBell(int pause)
+        : QWidget((QWidget*)0, Qt::X11BypassWindowManagerHint), _pause(pause)
     {}
 
 
 protected:
 
-  void paintEvent(QPaintEvent *);
+    void paintEvent(QPaintEvent *);
 
 
 private:
 
-  int _pause;
+    int _pause;
 
 };
 
