@@ -26,6 +26,7 @@
 #include <kcmodule.h>
 #include <knuminput.h>
 
+#include "ui_accessibility.h"
 
 class QCheckBox;
 class QLabel;
@@ -82,6 +83,8 @@ private:
     KIntNumInput *timeoutDelay;
     QCheckBox *accessxBeep, *kNotifyAccessX;
     QPushButton *kNotifyAccessXButton;
+
+    Ui::access ui;
 };
 
 

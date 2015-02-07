@@ -7,9 +7,11 @@ include_directories(${PHONON_INCLUDE_DIR})
 
 set(kcm_access_PART_SRCS kcmaccess.cpp )
 
+ki18n_wrap_ui(kcm_access_PART_SRCS
+  accessibility.ui
+)
 
 add_library(kcm_access MODULE ${kcm_access_PART_SRCS})
-
 
 target_link_libraries(kcm_access
     Qt5::X11Extras

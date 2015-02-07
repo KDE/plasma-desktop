@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>access</class>
+ <widget class="QWidget" name="access">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>596</width>
+    <height>447</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QTabWidget" name="tab">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="tabBell">
+      <attribute name="title">
+       <string>&amp;Bell</string>
+      </attribute>
+     </widget>
+     <widget class="QWidget" name="tabModifier">
+      <attribute name="title">
+       <string>Modifier Keys</string>
+      </attribute>
+     </widget>
+     <widget class="QWidget" name="tabKeyFilters">
+      <attribute name="title">
+       <string>&amp;Keyboard Filters</string>
+      </attribute>
+     </widget>
+     <widget class="QWidget" name="tabActivationGestures">
+      <attribute name="title">
+       <string>&amp;Activation Gestures</string>
+      </attribute>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

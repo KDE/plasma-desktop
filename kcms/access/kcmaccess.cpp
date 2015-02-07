@@ -178,26 +178,19 @@ QString mouseKeysShortcut(Display *display)
 KAccessConfig::KAccessConfig(QWidget *parent, const QVariantList& args)
     : KCModule(parent, args)
 {
-
     KAboutData *about =
         new KAboutData("kcmaccess", i18n("KDE Accessibility Tool"), "1.0",
                        QString(), KAboutLicense::GPL, i18n("(c) 2000, Matthias Hoelzer-Kluepfel"));
 
     about->addAuthor(i18n("Matthias Hoelzer-Kluepfel"), i18n("Author") , QStringLiteral("hoelzer@kde.org"));
-
     setAboutData(about);
 
-    QVBoxLayout *main = new QVBoxLayout(this);
-    main->setMargin(0);
-    QTabWidget *tab = new QTabWidget(this);
-    main->addWidget(tab);
+    ui.setupUi(this);
 
     // bell settings ---------------------------------------
-    QWidget *bell = new QWidget(this);
+    QVBoxLayout *vbox = new QVBoxLayout(ui.tabBell);
 
-    QVBoxLayout *vbox = new QVBoxLayout(bell);
-
-    QGroupBox *grp = new QGroupBox(i18n("Audible Bell"), bell);
+    QGroupBox *grp = new QGroupBox(i18n("Audible Bell"), ui.tabBell);
     QHBoxLayout *layout = new QHBoxLayout;
     grp->setLayout(layout);
     vbox->addWidget(grp);
@@ -243,7 +236,7 @@ KAccessConfig::KAccessConfig(QWidget *parent, const QVariantList& args)
     // -----------------------------------------------------
 
     // visible bell ----------------------------------------
-    grp = new QGroupBox(i18n("Visible Bell"), bell);
+    grp = new QGroupBox(i18n("Visible Bell"), ui.tabBell);
     layout = new QHBoxLayout;
     grp->setLayout(layout);
     vbox->addWidget(grp);
@@ -302,17 +295,12 @@ KAccessConfig::KAccessConfig(QWidget *parent, const QVariantList& args)
 
     vbox->addStretch();
 
-    // -----------------------------------------------------
-
-    tab->addTab(bell, i18n("&Bell"));
-
 
     // modifier key settings -------------------------------
-    QWidget *modifiers = new QWidget(this);
 
-    vbox = new QVBoxLayout(modifiers);
+    vbox = new QVBoxLayout(ui.tabModifier);
 
-    grp = new QGroupBox(i18n("S&ticky Keys"), modifiers);
+    grp = new QGroupBox(i18n("S&ticky Keys"), ui.tabModifier);
     layout = new QHBoxLayout;
     grp->setLayout(layout);
     vbox->addWidget(grp);
@@ -341,7 +329,7 @@ KAccessConfig::KAccessConfig(QWidget *parent, const QVariantList& args)
     stickyKeysBeep = new QCheckBox(i18n("Use system bell whenever a modifier gets latched, locked or unlocked"), grp);
     hbox->addWidget(stickyKeysBeep);
 
-    grp = new QGroupBox(i18n("Locking Keys"), modifiers);
+    grp = new QGroupBox(i18n("Locking Keys"), ui.tabModifier);
     layout = new QHBoxLayout;
     grp->setLayout(layout);
     vbox->addWidget(grp);
@@ -375,13 +363,10 @@ KAccessConfig::KAccessConfig(QWidget *parent, const QVariantList& args)
 
     vbox->addStretch();
 
-    tab->addTab(modifiers, i18n("&Modifier Keys"));
-
     // key filter settings ---------------------------------
-    QWidget *filters = new QWidget(this);
 
-    vbox = new QVBoxLayout(filters);
-    grp = new QGroupBox(i18n("Slo&w Keys"), filters);
+    vbox = new QVBoxLayout(ui.tabKeyFilters);
+    grp = new QGroupBox(i18n("Slo&w Keys"), ui.tabKeyFilters);
     layout = new QHBoxLayout;
     grp->setLayout(layout);
     vbox->addWidget(grp);
@@ -421,7 +406,7 @@ KAccessConfig::KAccessConfig(QWidget *parent, const QVariantList& args)
     slowKeysRejectBeep = new QCheckBox(i18n("&Use system bell whenever a key is rejected"), grp);
     hbox->addWidget(slowKeysRejectBeep);
 
-    grp = new QGroupBox(i18n("Bounce Keys"), filters);
+    grp = new QGroupBox(i18n("Bounce Keys"), ui.tabKeyFilters);
     layout = new QHBoxLayout;
     grp->setLayout(layout);
     vbox->addWidget(grp);
@@ -464,14 +449,11 @@ KAccessConfig::KAccessConfig(QWidget *parent, const QVariantList& args)
 
     vbox->addStretch();
 
-    tab->addTab(filters, i18n("&Keyboard Filters"));
 
     // gestures --------------------------------------------
-    QWidget *features = new QWidget(this);
+    vbox = new QVBoxLayout(ui.tabActivationGestures);
 
-    vbox = new QVBoxLayout(features);
-
-    grp = new QGroupBox(i18n("Activation Gestures"), features);
+    grp = new QGroupBox(i18n("Activation Gestures"), ui.tabActivationGestures);
     layout = new QHBoxLayout;
     grp->setLayout(layout);
     vbox->addWidget(grp);
@@ -504,7 +486,7 @@ KAccessConfig::KAccessConfig(QWidget *parent, const QVariantList& args)
     timeoutDelay->setLabel(i18n("Timeout:"), Qt::AlignVCenter | Qt::AlignLeft);;
     hbox->addWidget(timeoutDelay);
 
-    grp = new QGroupBox(i18n("Notification"), features);
+    grp = new QGroupBox(i18n("Notification"), ui.tabActivationGestures);
     layout = new QHBoxLayout;
     grp->setLayout(layout);
     vbox->addWidget(grp);
@@ -540,8 +522,6 @@ KAccessConfig::KAccessConfig(QWidget *parent, const QVariantList& args)
     connect(kNotifyAccessXButton, &QPushButton::clicked, this, &KAccessConfig::configureKNotify);
 
     vbox->addStretch();
-
-    tab->addTab(features, i18n("Activation Gestures"));
 }
 
 
