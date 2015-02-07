@@ -23,6 +23,204 @@
       <attribute name="title">
        <string>&amp;Bell</string>
       </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QGroupBox" name="groupBox">
+         <property name="title">
+          <string>Audible Bell</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QCheckBox" name="systemBell">
+            <property name="toolTip">
+             <string>If this option is checked, the default system bell will be used. Usually, this is just a &quot;beep&quot;.</string>
+            </property>
+            <property name="text">
+             <string>Use &amp;system bell</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="customBell">
+            <property name="toolTip">
+             <string>Check this option if you want to use a customized bell, playing a sound file. If you do this, you will probably want to turn off the system bell.</string>
+            </property>
+            <property name="text">
+             <string>Us&amp;e customized bell</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout">
+            <item>
+             <spacer name="horizontalSpacer">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Fixed</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>24</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QLabel" name="soundLabel">
+              <property name="toolTip">
+               <string>If the option &quot;Use customized bell&quot; is enabled, you can choose a sound file here. Click &quot;Browse...&quot; to choose a sound file using the file dialog.</string>
+              </property>
+              <property name="text">
+               <string>Sound &amp;to play:</string>
+              </property>
+              <property name="buddy">
+               <cstring>soundEdit</cstring>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="soundEdit">
+              <property name="toolTip">
+               <string>If the option &quot;Use customized bell&quot; is enabled, you can choose a sound file here. Click &quot;Browse...&quot; to choose a sound file using the file dialog.</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="soundButton">
+              <property name="toolTip">
+               <string>If the option &quot;Use customized bell&quot; is enabled, you can choose a sound file here. Click &quot;Browse...&quot; to choose a sound file using the file dialog.</string>
+              </property>
+              <property name="text">
+               <string>Browse...</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBox_2">
+         <property name="title">
+          <string>Visible Bell</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout">
+          <item row="0" column="0" colspan="4">
+           <widget class="QCheckBox" name="visibleBell">
+            <property name="toolTip">
+             <string>This option will turn on the &quot;visible bell&quot;, i.e. a visible notification shown every time that normally just a bell would occur. This is especially useful for deaf people.</string>
+            </property>
+            <property name="text">
+             <string>&amp;Use visible bell</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QRadioButton" name="flashScreen">
+            <property name="toolTip">
+             <string>The screen will turn to a custom color for the amount of time specified below.</string>
+            </property>
+            <property name="text">
+             <string>F&amp;lash screen</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QRadioButton" name="invertScreen">
+            <property name="toolTip">
+             <string>All screen colors will be inverted for the amount of time specified below.</string>
+            </property>
+            <property name="text">
+             <string>I&amp;nvert screen</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <spacer name="horizontalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>24</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="3" column="2">
+           <widget class="KColorButton" name="colorButton" native="true">
+            <property name="toolTip">
+             <string>Click here to choose the color used for the &quot;flash screen&quot; visible bell.</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>&amp;Duration:</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+            <property name="buddy">
+             <cstring>duration</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="2">
+           <widget class="QSpinBox" name="duration">
+            <property name="toolTip">
+             <string>Here you can customize the duration of the &quot;visible bell&quot; effect being shown.</string>
+            </property>
+            <property name="suffix">
+             <string> msec</string>
+            </property>
+            <property name="minimum">
+             <number>100</number>
+            </property>
+            <property name="maximum">
+             <number>2000</number>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="3">
+           <spacer name="horizontalSpacer_3">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
      </widget>
      <widget class="QWidget" name="tabModifier">
       <attribute name="title">
@@ -43,6 +241,14 @@
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>KColorButton</class>
+   <extends>QWidget</extends>
+   <header location="global">kcolorbutton.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

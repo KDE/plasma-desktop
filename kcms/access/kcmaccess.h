@@ -61,14 +61,6 @@ protected Q_SLOTS:
 
 private:
 
-    QCheckBox *systemBell, *customBell, *visibleBell;
-    QRadioButton *invertScreen, *flashScreen;
-    QLabel    *soundLabel, *colorLabel;
-    QLineEdit *soundEdit;
-    QPushButton *soundButton;
-    KColorButton *colorButton;
-    KDoubleNumInput *durationSlider;
-
     QCheckBox *stickyKeys, *stickyKeysLock, *stickyKeysAutoOff;
     QCheckBox *stickyKeysBeep, *toggleKeysBeep, *kNotifyModifiers;
     QPushButton *kNotifyModifiersButton;
