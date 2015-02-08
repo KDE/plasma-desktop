@@ -61,10 +61,6 @@ protected Q_SLOTS:
 
 private:
 
-    QCheckBox *stickyKeys, *stickyKeysLock, *stickyKeysAutoOff;
-    QCheckBox *stickyKeysBeep, *toggleKeysBeep, *kNotifyModifiers;
-    QPushButton *kNotifyModifiersButton;
-
     QCheckBox *slowKeys, *bounceKeys;
     KDoubleNumInput *slowKeysDelay, *bounceKeysDelay;
     QCheckBox *slowKeysPressBeep, *slowKeysAcceptBeep;

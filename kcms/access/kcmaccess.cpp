@@ -207,84 +207,32 @@ KAccessConfig::KAccessConfig(QWidget *parent, const QVariantList& args)
 
     // modifier key settings -------------------------------
 
-    QVBoxLayout* vbox = new QVBoxLayout(ui.tabModifier);
+    connect(ui.stickyKeys, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
+    connect(ui.stickyKeysLock, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
+    connect(ui.stickyKeysAutoOff, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
+    connect(ui.stickyKeys, &QCheckBox::clicked, this, &KAccessConfig::checkAccess);
 
-    QGroupBox* grp = new QGroupBox(i18n("S&ticky Keys"), ui.tabModifier);
-    QHBoxLayout *layout = new QHBoxLayout;
+    connect(ui.stickyKeysBeep, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
+    connect(ui.toggleKeysBeep, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
+    connect(ui.kNotifyModifiers, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
+    connect(ui.kNotifyModifiers, &QCheckBox::clicked, this, &KAccessConfig::checkAccess);
+    connect(ui.kNotifyModifiersButton, &QPushButton::clicked, this, &KAccessConfig::configureKNotify);
+
+    // key filter settings ---------------------------------
+
+    QVBoxLayout* vbox = new QVBoxLayout(ui.tabKeyFilters);
+    QGroupBox* grp = new QGroupBox(i18n("Slo&w Keys"), ui.tabKeyFilters);
+    QBoxLayout* layout = new QHBoxLayout;
     grp->setLayout(layout);
     vbox->addWidget(grp);
 
     QVBoxLayout* vvbox = new QVBoxLayout();
     layout->addLayout(vvbox);
 
-    stickyKeys = new QCheckBox(i18n("Use &sticky keys"), grp);
-    vvbox->addWidget(stickyKeys);
-
-    QHBoxLayout* hbox = new QHBoxLayout();
-    vvbox->addLayout(hbox);
-    hbox->addSpacing(24);
-    stickyKeysLock = new QCheckBox(i18n("&Lock sticky keys"), grp);
-    hbox->addWidget(stickyKeysLock);
-
-    hbox = new QHBoxLayout();
-    vvbox->addLayout(hbox);
-    hbox->addSpacing(24);
-    stickyKeysAutoOff = new QCheckBox(i18n("Turn sticky keys off when two keys are pressed simultaneously"), grp);
-    hbox->addWidget(stickyKeysAutoOff);
-
-    hbox = new QHBoxLayout();
-    vvbox->addLayout(hbox);
-    hbox->addSpacing(24);
-    stickyKeysBeep = new QCheckBox(i18n("Use system bell whenever a modifier gets latched, locked or unlocked"), grp);
-    hbox->addWidget(stickyKeysBeep);
-
-    grp = new QGroupBox(i18n("Locking Keys"), ui.tabModifier);
-    layout = new QHBoxLayout;
-    grp->setLayout(layout);
-    vbox->addWidget(grp);
-
-    vvbox = new QVBoxLayout();
-    layout->addLayout(vvbox);
-
-    toggleKeysBeep = new QCheckBox(i18n("Use system bell whenever a locking key gets activated or deactivated"), grp);
-    vvbox->addWidget(toggleKeysBeep);
-
-    kNotifyModifiers = new QCheckBox(i18n("Use Plasma's system notification mechanism whenever a modifier or locking key changes its state"), grp);
-    vvbox->addWidget(kNotifyModifiers);
-
-    hbox = new QHBoxLayout();
-    vvbox->addLayout(hbox);
-    hbox->addStretch(1);
-    kNotifyModifiersButton = new QPushButton(i18n("Configure &Notifications..."), grp);
-    kNotifyModifiersButton->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
-    hbox->addWidget(kNotifyModifiersButton);
-
-    connect(stickyKeys, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
-    connect(stickyKeysLock, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
-    connect(stickyKeysAutoOff, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
-    connect(stickyKeys, &QCheckBox::clicked, this, &KAccessConfig::checkAccess);
-
-    connect(stickyKeysBeep, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
-    connect(toggleKeysBeep, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
-    connect(kNotifyModifiers, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
-    connect(kNotifyModifiers, &QCheckBox::clicked, this, &KAccessConfig::checkAccess);
-    connect(kNotifyModifiersButton, &QPushButton::clicked, this, &KAccessConfig::configureKNotify);
-
-    // key filter settings ---------------------------------
-
-    vbox = new QVBoxLayout(ui.tabKeyFilters);
-    grp = new QGroupBox(i18n("Slo&w Keys"), ui.tabKeyFilters);
-    layout = new QHBoxLayout;
-    grp->setLayout(layout);
-    vbox->addWidget(grp);
-
-    vvbox = new QVBoxLayout();
-    layout->addLayout(vvbox);
-
     slowKeys = new QCheckBox(i18n("&Use slow keys"), grp);
     vvbox->addWidget(slowKeys);
 
-    hbox = new QHBoxLayout();
+    QHBoxLayout* hbox = new QHBoxLayout();
     vvbox->addLayout(hbox);
     hbox->addSpacing(24);
     slowKeysDelay = new KDoubleNumInput(grp);
@@ -483,12 +431,12 @@ void KAccessConfig::load()
 
     KConfigGroup keyboardGroup(KSharedConfig::openConfig("kaccessrc"), "Keyboard");
 
-    stickyKeys->setChecked(keyboardGroup.readEntry("StickyKeys", false));
-    stickyKeysLock->setChecked(keyboardGroup.readEntry("StickyKeysLatch", true));
-    stickyKeysAutoOff->setChecked(keyboardGroup.readEntry("StickyKeysAutoOff", false));
-    stickyKeysBeep->setChecked(keyboardGroup.readEntry("StickyKeysBeep", true));
-    toggleKeysBeep->setChecked(keyboardGroup.readEntry("ToggleKeysBeep", false));
-    kNotifyModifiers->setChecked(keyboardGroup.readEntry("kNotifyModifiers", false));
+    ui.stickyKeys->setChecked(keyboardGroup.readEntry("StickyKeys", false));
+    ui.stickyKeysLock->setChecked(keyboardGroup.readEntry("StickyKeysLatch", true));
+    ui.stickyKeysAutoOff->setChecked(keyboardGroup.readEntry("StickyKeysAutoOff", false));
+    ui.stickyKeysBeep->setChecked(keyboardGroup.readEntry("StickyKeysBeep", true));
+    ui.toggleKeysBeep->setChecked(keyboardGroup.readEntry("ToggleKeysBeep", false));
+    ui.kNotifyModifiers->setChecked(keyboardGroup.readEntry("kNotifyModifiers", false));
 
     slowKeys->setChecked(keyboardGroup.readEntry("SlowKeys", false));
     slowKeysDelay->setValue(keyboardGroup.readEntry("SlowKeysDelay", 500));
@@ -530,12 +478,12 @@ void KAccessConfig::save()
 
     KConfigGroup keyboardGroup(KSharedConfig::openConfig("kaccessrc"), "Keyboard");
 
-    keyboardGroup.writeEntry("StickyKeys", stickyKeys->isChecked());
-    keyboardGroup.writeEntry("StickyKeysLatch", stickyKeysLock->isChecked());
-    keyboardGroup.writeEntry("StickyKeysAutoOff", stickyKeysAutoOff->isChecked());
-    keyboardGroup.writeEntry("StickyKeysBeep", stickyKeysBeep->isChecked());
-    keyboardGroup.writeEntry("ToggleKeysBeep", toggleKeysBeep->isChecked());
-    keyboardGroup.writeEntry("kNotifyModifiers", kNotifyModifiers->isChecked());
+    keyboardGroup.writeEntry("StickyKeys", ui.stickyKeys->isChecked());
+    keyboardGroup.writeEntry("StickyKeysLatch", ui.stickyKeysLock->isChecked());
+    keyboardGroup.writeEntry("StickyKeysAutoOff", ui.stickyKeysAutoOff->isChecked());
+    keyboardGroup.writeEntry("StickyKeysBeep", ui.stickyKeysBeep->isChecked());
+    keyboardGroup.writeEntry("ToggleKeysBeep", ui.toggleKeysBeep->isChecked());
+    keyboardGroup.writeEntry("kNotifyModifiers", ui.kNotifyModifiers->isChecked());
 
     keyboardGroup.writeEntry("SlowKeys", slowKeys->isChecked());
     keyboardGroup.writeEntry("SlowKeysDelay", slowKeysDelay->value());
@@ -601,12 +549,12 @@ void KAccessConfig::defaults()
     bounceKeysDelay->setValue(500);
     bounceKeysRejectBeep->setChecked(true);
 
-    stickyKeys->setChecked(false);
-    stickyKeysLock->setChecked(true);
-    stickyKeysAutoOff->setChecked(false);
-    stickyKeysBeep->setChecked(true);
-    toggleKeysBeep->setChecked(false);
-    kNotifyModifiers->setChecked(false);
+    ui.stickyKeys->setChecked(false);
+    ui.stickyKeysLock->setChecked(true);
+    ui.stickyKeysAutoOff->setChecked(false);
+    ui.stickyKeysBeep->setChecked(true);
+    ui.toggleKeysBeep->setChecked(false);
+    ui.kNotifyModifiers->setChecked(false);
 
     gestures->setChecked(false);
     timeout->setChecked(false);
@@ -647,10 +595,10 @@ void KAccessConfig::checkAccess()
     ui.colorButton->setEnabled(visible);
     ui.duration->setEnabled(visible);
 
-    bool sticky = stickyKeys->isChecked();
-    stickyKeysLock->setEnabled(sticky);
-    stickyKeysAutoOff->setEnabled(sticky);
-    stickyKeysBeep->setEnabled(sticky);
+    bool sticky = ui.stickyKeys->isChecked();
+    ui.stickyKeysLock->setEnabled(sticky);
+    ui.stickyKeysAutoOff->setEnabled(sticky);
+    ui.stickyKeysBeep->setEnabled(sticky);
 
     bool slow = slowKeys->isChecked();
     slowKeysDelay->setEnabled(slow);
