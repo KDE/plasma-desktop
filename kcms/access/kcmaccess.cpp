@@ -25,30 +25,23 @@
 #include <math.h>
 
 #include <QtWidgets/qfiledialog.h>
-#include <QX11Info>
+#include <QStandardPaths>
 #include <QtDBus/QtDBus>
+#include <QX11Info>
 
-#include <KLocalizedString>
-
-#include <KPluginFactory>
-#include <kcolorbutton.h>
-#include <kfiledialog.h>
-#include <kapplication.h>
 #include <kaboutdata.h>
-#include <kshortcut.h>
-#include <knotifyconfigwidget.h>
-#include <kkeyserver.h>
-#include <kdemacros.h>
 #include <KConfigGroup>
-#include <KGlobal>
+#include <KSharedConfig>
+#include <kkeyserver.h>
+#include <knotifyconfigwidget.h>
+#include <KPluginFactory>
+#include <ktoolinvocation.h>
 
 #include <X11/Xlib.h>
 #include <X11/XKBlib.h>
 #define XK_MISCELLANY
 #define XK_XKB_KEYS
 #include <X11/keysymdef.h>
-#include <ktoolinvocation.h>
-#include <QStandardPaths>
 
 K_PLUGIN_FACTORY(KAccessConfigFactory, registerPlugin<KAccessConfig>();)
 K_EXPORT_PLUGIN(KAccessConfigFactory("kcmaccess"))
