@@ -61,11 +61,6 @@ protected Q_SLOTS:
 
 private:
 
-    QCheckBox *slowKeys, *bounceKeys;
-    KDoubleNumInput *slowKeysDelay, *bounceKeysDelay;
-    QCheckBox *slowKeysPressBeep, *slowKeysAcceptBeep;
-    QCheckBox *slowKeysRejectBeep, *bounceKeysRejectBeep;
-
     QCheckBox *gestures, *gestureConfirmation;
     QCheckBox *timeout;
     KIntNumInput *timeoutDelay;

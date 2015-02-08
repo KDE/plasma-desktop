@@ -220,100 +220,28 @@ KAccessConfig::KAccessConfig(QWidget *parent, const QVariantList& args)
 
     // key filter settings ---------------------------------
 
-    QVBoxLayout* vbox = new QVBoxLayout(ui.tabKeyFilters);
-    QGroupBox* grp = new QGroupBox(i18n("Slo&w Keys"), ui.tabKeyFilters);
+    connect(ui.slowKeysDelay, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &KAccessConfig::configChanged);
+    connect(ui.slowKeys, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
+    connect(ui.slowKeys, &QCheckBox::clicked, this, &KAccessConfig::checkAccess);
+
+    connect(ui.slowKeysPressBeep, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
+    connect(ui.slowKeysAcceptBeep, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
+    connect(ui.slowKeysRejectBeep, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
+
+    connect(ui.bounceKeysDelay, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &KAccessConfig::configChanged);
+    connect(ui.bounceKeys, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
+    connect(ui.bounceKeysRejectBeep, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
+    connect(ui.bounceKeys, &QCheckBox::clicked, this, &KAccessConfig::checkAccess);
+
+    // gestures --------------------------------------------
+    QVBoxLayout* vbox = new QVBoxLayout(ui.tabActivationGestures);
+
+    QGroupBox* grp = new QGroupBox(i18n("Activation Gestures"), ui.tabActivationGestures);
     QBoxLayout* layout = new QHBoxLayout;
     grp->setLayout(layout);
     vbox->addWidget(grp);
 
     QVBoxLayout* vvbox = new QVBoxLayout();
-    layout->addLayout(vvbox);
-
-    slowKeys = new QCheckBox(i18n("&Use slow keys"), grp);
-    vvbox->addWidget(slowKeys);
-
-    QHBoxLayout* hbox = new QHBoxLayout();
-    vvbox->addLayout(hbox);
-    hbox->addSpacing(24);
-    slowKeysDelay = new KDoubleNumInput(grp);
-    slowKeysDelay->setRange(50, 10000, 100);
-    slowKeysDelay->setExponentRatio(2);
-    slowKeysDelay->setDecimals(0);
-    slowKeysDelay->setSuffix(i18n(" msec"));
-    slowKeysDelay->setLabel(i18n("Acceptance dela&y:"), Qt::AlignVCenter | Qt::AlignLeft);
-    hbox->addWidget(slowKeysDelay);
-
-    hbox = new QHBoxLayout();
-    vvbox->addLayout(hbox);
-    hbox->addSpacing(24);
-    slowKeysPressBeep = new QCheckBox(i18n("&Use system bell whenever a key is pressed"), grp);
-    hbox->addWidget(slowKeysPressBeep);
-
-    hbox = new QHBoxLayout();
-    vvbox->addLayout(hbox);
-    hbox->addSpacing(24);
-    slowKeysAcceptBeep = new QCheckBox(i18n("&Use system bell whenever a key is accepted"), grp);
-    hbox->addWidget(slowKeysAcceptBeep);
-
-    hbox = new QHBoxLayout();
-    vvbox->addLayout(hbox);
-    hbox->addSpacing(24);
-    slowKeysRejectBeep = new QCheckBox(i18n("&Use system bell whenever a key is rejected"), grp);
-    hbox->addWidget(slowKeysRejectBeep);
-
-    grp = new QGroupBox(i18n("Bounce Keys"), ui.tabKeyFilters);
-    layout = new QHBoxLayout;
-    grp->setLayout(layout);
-    vbox->addWidget(grp);
-
-    vvbox = new QVBoxLayout();
-    layout->addLayout(vvbox);
-
-    bounceKeys = new QCheckBox(i18n("Use bou&nce keys"), grp);
-    vvbox->addWidget(bounceKeys);
-
-    hbox = new QHBoxLayout();
-    vvbox->addLayout(hbox);
-    hbox->addSpacing(24);
-    bounceKeysDelay = new KDoubleNumInput(grp);
-    bounceKeysDelay->setRange(100, 5000, 100);
-    bounceKeysDelay->setExponentRatio(2);
-    bounceKeysDelay->setDecimals(0);
-    bounceKeysDelay->setSuffix(i18n(" msec"));
-    bounceKeysDelay->setLabel(i18n("D&ebounce time:"), Qt::AlignVCenter | Qt::AlignLeft);;
-    hbox->addWidget(bounceKeysDelay);
-
-    hbox = new QHBoxLayout();
-    vvbox->addLayout(hbox);
-    hbox->addSpacing(24);
-    bounceKeysRejectBeep = new QCheckBox(i18n("Use the system bell whenever a key is rejected"), grp);
-    hbox->addWidget(bounceKeysRejectBeep);
-
-    connect(slowKeysDelay, &KDoubleNumInput::valueChanged, this, &KAccessConfig::configChanged);
-    connect(slowKeys, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
-    connect(slowKeys, &QCheckBox::clicked, this, &KAccessConfig::checkAccess);
-
-    connect(slowKeysPressBeep, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
-    connect(slowKeysAcceptBeep, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
-    connect(slowKeysRejectBeep, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
-
-    connect(bounceKeysDelay, &KDoubleNumInput::valueChanged, this, &KAccessConfig::configChanged);
-    connect(bounceKeys, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
-    connect(bounceKeysRejectBeep, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
-    connect(bounceKeys, &QCheckBox::clicked, this, &KAccessConfig::checkAccess);
-
-    vbox->addStretch();
-
-
-    // gestures --------------------------------------------
-    vbox = new QVBoxLayout(ui.tabActivationGestures);
-
-    grp = new QGroupBox(i18n("Activation Gestures"), ui.tabActivationGestures);
-    layout = new QHBoxLayout;
-    grp->setLayout(layout);
-    vbox->addWidget(grp);
-
-    vvbox = new QVBoxLayout();
     layout->addLayout(vvbox);
 
     gestures = new QCheckBox(i18n("Use gestures for activating sticky keys and slow keys"), grp);
@@ -332,7 +260,7 @@ KAccessConfig::KAccessConfig(QWidget *parent, const QVariantList& args)
     timeout = new QCheckBox(i18n("Turn sticky keys and slow keys off after a certain period of inactivity."), grp);
     vvbox->addWidget(timeout);
 
-    hbox = new QHBoxLayout();
+    QHBoxLayout* hbox = new QHBoxLayout();
     vvbox->addLayout(hbox);
     hbox->addSpacing(24);
     timeoutDelay = new KIntNumInput(grp);
@@ -438,15 +366,15 @@ void KAccessConfig::load()
     ui.toggleKeysBeep->setChecked(keyboardGroup.readEntry("ToggleKeysBeep", false));
     ui.kNotifyModifiers->setChecked(keyboardGroup.readEntry("kNotifyModifiers", false));
 
-    slowKeys->setChecked(keyboardGroup.readEntry("SlowKeys", false));
-    slowKeysDelay->setValue(keyboardGroup.readEntry("SlowKeysDelay", 500));
-    slowKeysPressBeep->setChecked(keyboardGroup.readEntry("SlowKeysPressBeep", true));
-    slowKeysAcceptBeep->setChecked(keyboardGroup.readEntry("SlowKeysAcceptBeep", true));
-    slowKeysRejectBeep->setChecked(keyboardGroup.readEntry("SlowKeysRejectBeep", true));
+    ui.slowKeys->setChecked(keyboardGroup.readEntry("SlowKeys", false));
+    ui.slowKeysDelay->setValue(keyboardGroup.readEntry("SlowKeysDelay", 500));
+    ui.slowKeysPressBeep->setChecked(keyboardGroup.readEntry("SlowKeysPressBeep", true));
+    ui.slowKeysAcceptBeep->setChecked(keyboardGroup.readEntry("SlowKeysAcceptBeep", true));
+    ui.slowKeysRejectBeep->setChecked(keyboardGroup.readEntry("SlowKeysRejectBeep", true));
 
-    bounceKeys->setChecked(keyboardGroup.readEntry("BounceKeys", false));
-    bounceKeysDelay->setValue(keyboardGroup.readEntry("BounceKeysDelay", 500));
-    bounceKeysRejectBeep->setChecked(keyboardGroup.readEntry("BounceKeysRejectBeep", true));
+    ui.bounceKeys->setChecked(keyboardGroup.readEntry("BounceKeys", false));
+    ui.bounceKeysDelay->setValue(keyboardGroup.readEntry("BounceKeysDelay", 500));
+    ui.bounceKeysRejectBeep->setChecked(keyboardGroup.readEntry("BounceKeysRejectBeep", true));
 
     gestures->setChecked(keyboardGroup.readEntry("Gestures", false));
     timeout->setChecked(keyboardGroup.readEntry("AccessXTimeout", false));
@@ -485,16 +413,16 @@ void KAccessConfig::save()
     keyboardGroup.writeEntry("ToggleKeysBeep", ui.toggleKeysBeep->isChecked());
     keyboardGroup.writeEntry("kNotifyModifiers", ui.kNotifyModifiers->isChecked());
 
-    keyboardGroup.writeEntry("SlowKeys", slowKeys->isChecked());
-    keyboardGroup.writeEntry("SlowKeysDelay", slowKeysDelay->value());
-    keyboardGroup.writeEntry("SlowKeysPressBeep", slowKeysPressBeep->isChecked());
-    keyboardGroup.writeEntry("SlowKeysAcceptBeep", slowKeysAcceptBeep->isChecked());
-    keyboardGroup.writeEntry("SlowKeysRejectBeep", slowKeysRejectBeep->isChecked());
+    keyboardGroup.writeEntry("SlowKeys", ui.slowKeys->isChecked());
+    keyboardGroup.writeEntry("SlowKeysDelay", ui.slowKeysDelay->value());
+    keyboardGroup.writeEntry("SlowKeysPressBeep", ui.slowKeysPressBeep->isChecked());
+    keyboardGroup.writeEntry("SlowKeysAcceptBeep", ui.slowKeysAcceptBeep->isChecked());
+    keyboardGroup.writeEntry("SlowKeysRejectBeep", ui.slowKeysRejectBeep->isChecked());
 
 
-    keyboardGroup.writeEntry("BounceKeys", bounceKeys->isChecked());
-    keyboardGroup.writeEntry("BounceKeysDelay", bounceKeysDelay->value());
-    keyboardGroup.writeEntry("BounceKeysRejectBeep", bounceKeysRejectBeep->isChecked());
+    keyboardGroup.writeEntry("BounceKeys", ui.bounceKeys->isChecked());
+    keyboardGroup.writeEntry("BounceKeysDelay", ui.bounceKeysDelay->value());
+    keyboardGroup.writeEntry("BounceKeysRejectBeep", ui.bounceKeysRejectBeep->isChecked());
 
     keyboardGroup.writeEntry("Gestures", gestures->isChecked());
     keyboardGroup.writeEntry("AccessXTimeout", timeout->isChecked());
@@ -539,15 +467,15 @@ void KAccessConfig::defaults()
 
     ui.duration->setValue(500);
 
-    slowKeys->setChecked(false);
-    slowKeysDelay->setValue(500);
-    slowKeysPressBeep->setChecked(true);
-    slowKeysAcceptBeep->setChecked(true);
-    slowKeysRejectBeep->setChecked(true);
+    ui.slowKeys->setChecked(false);
+    ui.slowKeysDelay->setValue(500);
+    ui.slowKeysPressBeep->setChecked(true);
+    ui.slowKeysAcceptBeep->setChecked(true);
+    ui.slowKeysRejectBeep->setChecked(true);
 
-    bounceKeys->setChecked(false);
-    bounceKeysDelay->setValue(500);
-    bounceKeysRejectBeep->setChecked(true);
+    ui.bounceKeys->setChecked(false);
+    ui.bounceKeysDelay->setValue(500);
+    ui.bounceKeysRejectBeep->setChecked(true);
 
     ui.stickyKeys->setChecked(false);
     ui.stickyKeysLock->setChecked(true);
@@ -600,15 +528,15 @@ void KAccessConfig::checkAccess()
     ui.stickyKeysAutoOff->setEnabled(sticky);
     ui.stickyKeysBeep->setEnabled(sticky);
 
-    bool slow = slowKeys->isChecked();
-    slowKeysDelay->setEnabled(slow);
-    slowKeysPressBeep->setEnabled(slow);
-    slowKeysAcceptBeep->setEnabled(slow);
-    slowKeysRejectBeep->setEnabled(slow);
+    bool slow = ui.slowKeys->isChecked();
+    ui.slowKeysDelay->setEnabled(slow);
+    ui.slowKeysPressBeep->setEnabled(slow);
+    ui.slowKeysAcceptBeep->setEnabled(slow);
+    ui.slowKeysRejectBeep->setEnabled(slow);
 
-    bool bounce = bounceKeys->isChecked();
-    bounceKeysDelay->setEnabled(bounce);
-    bounceKeysRejectBeep->setEnabled(bounce);
+    bool bounce = ui.bounceKeys->isChecked();
+    ui.bounceKeysDelay->setEnabled(bounce);
+    ui.bounceKeysRejectBeep->setEnabled(bounce);
 
     bool useTimeout = timeout->isChecked();
     timeoutDelay->setEnabled(useTimeout);
