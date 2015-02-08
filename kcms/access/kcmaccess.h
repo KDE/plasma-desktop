@@ -24,17 +24,7 @@
 
 
 #include <kcmodule.h>
-#include <knuminput.h>
-
 #include "ui_accessibility.h"
-
-class QCheckBox;
-class QLabel;
-class QLineEdit;
-class QPushButton;
-class QRadioButton;
-class KColorButton;
-class QSlider;
 
 class KAccessConfig : public KCModule
 {
@@ -60,13 +50,6 @@ protected Q_SLOTS:
     void configureKNotify();
 
 private:
-
-    QCheckBox *gestures, *gestureConfirmation;
-    QCheckBox *timeout;
-    KIntNumInput *timeoutDelay;
-    QCheckBox *accessxBeep, *kNotifyAccessX;
-    QPushButton *kNotifyAccessXButton;
-
     Ui::access ui;
 };
 

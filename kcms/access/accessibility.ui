@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>596</width>
+    <width>686</width>
     <height>447</height>
    </rect>
   </property>
@@ -156,7 +156,7 @@
            </spacer>
           </item>
           <item row="3" column="2">
-           <widget class="KColorButton" name="colorButton" native="true">
+           <widget class="KColorButton" name="colorButton">
             <property name="toolTip">
              <string>Click here to choose the color used for the &quot;flash screen&quot; visible bell.</string>
             </property>
@@ -566,6 +566,182 @@
       <attribute name="title">
        <string>&amp;Activation Gestures</string>
       </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_14">
+       <item>
+        <widget class="QGroupBox" name="activationgestures">
+         <property name="title">
+          <string>Activation Gestures</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_12">
+          <item>
+           <widget class="QCheckBox" name="gestures">
+            <property name="toolTip">
+             <string>If this option is checked, the default system bell will be used. Usually, this is just a &quot;beep&quot;.</string>
+            </property>
+            <property name="text">
+             <string>Use gestures for activating sticky keys and slow keys</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="timeout">
+            <property name="toolTip">
+             <string/>
+            </property>
+            <property name="text">
+             <string>Turn sticky keys and slow keys off after a certain period of inactivity.</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_8">
+            <item>
+             <spacer name="horizontalSpacer_11">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Fixed</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>24</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="timeoutDelay">
+              <property name="toolTip">
+               <string>Here you can customize the duration of the &quot;visible bell&quot; effect being shown.</string>
+              </property>
+              <property name="suffix">
+               <string> min</string>
+              </property>
+              <property name="minimum">
+               <number>1</number>
+              </property>
+              <property name="maximum">
+               <number>30</number>
+              </property>
+              <property name="singleStep">
+               <number>4</number>
+              </property>
+              <property name="value">
+               <number>5</number>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_14">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="notification">
+         <property name="title">
+          <string>Notification</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_13">
+          <item>
+           <widget class="QCheckBox" name="accessxBeep">
+            <property name="toolTip">
+             <string>Check this option if you want to use a customized bell, playing a sound file. If you do this, you will probably want to turn off the system bell.</string>
+            </property>
+            <property name="text">
+             <string>Use the system bell whenever a gesture is used to turn an accessibility feature on or off</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="gestureConfirmation">
+            <property name="toolTip">
+             <string>If this option is checked, KDE will show a confirmation dialog whenever a keyboard accessibility feature is turned on or off.
+Ensure you know what you are doing if you uncheck it, as the keyboard accessibility settings will then always be applied without confirmation.</string>
+            </property>
+            <property name="text">
+             <string>Show a confirmation dialog whenever a keyboard accessibility feature is turned on or off</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="kNotifyAccess">
+            <property name="text">
+             <string>Use Plasma's system notification mechanism whenever a keyboard accessibility feature is turned on or off</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_9">
+            <item>
+             <spacer name="horizontalSpacer_12">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Fixed</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>24</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QPushButton" name="kNotifyAccessButton">
+              <property name="text">
+               <string>Configure &amp;Notifications...</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_13">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_4">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>69</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
      </widget>
     </widget>
    </item>
@@ -574,11 +750,45 @@
  <customwidgets>
   <customwidget>
    <class>KColorButton</class>
-   <extends>QWidget</extends>
+   <extends>QPushButton</extends>
    <header location="global">kcolorbutton.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>
+ <tabstops>
+  <tabstop>tab</tabstop>
+  <tabstop>systemBell</tabstop>
+  <tabstop>customBell</tabstop>
+  <tabstop>soundEdit</tabstop>
+  <tabstop>soundButton</tabstop>
+  <tabstop>visibleBell</tabstop>
+  <tabstop>invertScreen</tabstop>
+  <tabstop>flashScreen</tabstop>
+  <tabstop>colorButton</tabstop>
+  <tabstop>duration</tabstop>
+  <tabstop>stickyKeys</tabstop>
+  <tabstop>stickyKeysLock</tabstop>
+  <tabstop>stickyKeysAutoOff</tabstop>
+  <tabstop>stickyKeysBeep</tabstop>
+  <tabstop>toggleKeysBeep</tabstop>
+  <tabstop>kNotifyModifiers</tabstop>
+  <tabstop>kNotifyModifiersButton</tabstop>
+  <tabstop>slowKeys</tabstop>
+  <tabstop>slowKeysDelay</tabstop>
+  <tabstop>slowKeysPressBeep</tabstop>
+  <tabstop>slowKeysAcceptBeep</tabstop>
+  <tabstop>slowKeysRejectBeep</tabstop>
+  <tabstop>bounceKeys</tabstop>
+  <tabstop>bounceKeysDelay</tabstop>
+  <tabstop>bounceKeysRejectBeep</tabstop>
+  <tabstop>gestures</tabstop>
+  <tabstop>timeout</tabstop>
+  <tabstop>timeoutDelay</tabstop>
+  <tabstop>accessxBeep</tabstop>
+  <tabstop>gestureConfirmation</tabstop>
+  <tabstop>kNotifyAccess</tabstop>
+  <tabstop>kNotifyAccessButton</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

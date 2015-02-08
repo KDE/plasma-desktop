@@ -24,25 +24,13 @@
 #include <stdlib.h>
 #include <math.h>
 
-
-#include <QTabWidget>
-#include <QLabel>
-#include <QCheckBox>
-#include <QLineEdit>
-#include <QRadioButton>
+#include <QtWidgets/qfiledialog.h>
 #include <QX11Info>
 #include <QtDBus/QtDBus>
 
-//Added by qt3to4:
-#include <QVBoxLayout>
-#include <QHBoxLayout>
-#include <QGroupBox>
-#include <QFileDialog>
 #include <KLocalizedString>
 
 #include <KPluginFactory>
-#include <kcombobox.h>
-
 #include <kcolorbutton.h>
 #include <kfiledialog.h>
 #include <kapplication.h>
@@ -233,78 +221,28 @@ KAccessConfig::KAccessConfig(QWidget *parent, const QVariantList& args)
     connect(ui.bounceKeysRejectBeep, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
     connect(ui.bounceKeys, &QCheckBox::clicked, this, &KAccessConfig::checkAccess);
 
-    // gestures --------------------------------------------
-    QVBoxLayout* vbox = new QVBoxLayout(ui.tabActivationGestures);
+    // ui.gestures --------------------------------------------
 
-    QGroupBox* grp = new QGroupBox(i18n("Activation Gestures"), ui.tabActivationGestures);
-    QBoxLayout* layout = new QHBoxLayout;
-    grp->setLayout(layout);
-    vbox->addWidget(grp);
-
-    QVBoxLayout* vvbox = new QVBoxLayout();
-    layout->addLayout(vvbox);
-
-    gestures = new QCheckBox(i18n("Use gestures for activating sticky keys and slow keys"), grp);
-    vvbox->addWidget(gestures);
     QString shortcut = mouseKeysShortcut(QX11Info::display());
     if (shortcut.isEmpty())
-        gestures->setWhatsThis(i18n("Here you can activate keyboard gestures that turn on the following features: \n"
+        ui.gestures->setToolTip(i18n("Here you can activate keyboard gestures that turn on the following features: \n"
                                     "Sticky keys: Press Shift key 5 consecutive times\n"
                                     "Slow keys: Hold down Shift for 8 seconds"));
     else
-        gestures->setWhatsThis(i18n("Here you can activate keyboard gestures that turn on the following features: \n"
+        ui.gestures->setToolTip(i18n("Here you can activate keyboard gestures that turn on the following features: \n"
                                     "Mouse Keys: %1\n"
                                     "Sticky keys: Press Shift key 5 consecutive times\n"
                                     "Slow keys: Hold down Shift for 8 seconds", shortcut));
 
-    timeout = new QCheckBox(i18n("Turn sticky keys and slow keys off after a certain period of inactivity."), grp);
-    vvbox->addWidget(timeout);
-
-    QHBoxLayout* hbox = new QHBoxLayout();
-    vvbox->addLayout(hbox);
-    hbox->addSpacing(24);
-    timeoutDelay = new KIntNumInput(grp);
-    timeoutDelay->setSuffix(i18n(" min"));
-    timeoutDelay->setRange(1, 30, 4);
-    timeoutDelay->setLabel(i18n("Timeout:"), Qt::AlignVCenter | Qt::AlignLeft);;
-    hbox->addWidget(timeoutDelay);
-
-    grp = new QGroupBox(i18n("Notification"), ui.tabActivationGestures);
-    layout = new QHBoxLayout;
-    grp->setLayout(layout);
-    vbox->addWidget(grp);
-
-    vvbox = new QVBoxLayout();
-    layout->addLayout(vvbox);
-
-    accessxBeep = new QCheckBox(i18n("Use the system bell whenever a gesture is used to turn an accessibility feature on or off"), grp);
-    vvbox->addWidget(accessxBeep);
-
-    gestureConfirmation = new QCheckBox(i18n("Show a confirmation dialog whenever a keyboard accessibility feature is turned on or off"), grp);
-    vvbox->addWidget(gestureConfirmation);
-    gestureConfirmation->setWhatsThis(i18n("If this option is checked, KDE will show a confirmation dialog whenever a keyboard accessibility feature is turned on or off.\nEnsure you know what you are doing if you uncheck it, as the keyboard accessibility settings will then always be applied without confirmation."));
-
-    kNotifyAccessX = new QCheckBox(i18n("Use Plasma's system notification mechanism whenever a keyboard accessibility feature is turned on or off"), grp);
-    vvbox->addWidget(kNotifyAccessX);
-
-    hbox = new QHBoxLayout();
-    vvbox->addLayout(hbox);
-    hbox->addStretch(1);
-    kNotifyAccessXButton = new QPushButton(i18n("Configure &Notifications..."), grp);
-    kNotifyAccessXButton->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
-    hbox->addWidget(kNotifyAccessXButton);
-
-    connect(gestures, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
-    connect(timeout, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
-    connect(timeout, &QCheckBox::clicked, this, &KAccessConfig::checkAccess);
-    connect(timeoutDelay, &KIntNumInput::valueChanged, this, &KAccessConfig::configChanged);
-    connect(accessxBeep, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
-    connect(gestureConfirmation, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
-    connect(kNotifyAccessX, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
-    connect(kNotifyAccessX, &QCheckBox::clicked, this, &KAccessConfig::checkAccess);
-    connect(kNotifyAccessXButton, &QPushButton::clicked, this, &KAccessConfig::configureKNotify);
-
-    vbox->addStretch();
+    connect(ui.gestures, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
+    connect(ui.timeout, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
+    connect(ui.timeout, &QCheckBox::clicked, this, &KAccessConfig::checkAccess);
+    connect(ui.timeoutDelay, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &KAccessConfig::configChanged);
+    connect(ui.accessxBeep, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
+    connect(ui.gestureConfirmation, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
+    connect(ui.kNotifyAccess, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
+    connect(ui.kNotifyAccess, &QCheckBox::clicked, this, &KAccessConfig::checkAccess);
+    connect(ui.kNotifyAccessButton, &QPushButton::clicked, this, &KAccessConfig::configureKNotify);
 }
 
 
@@ -376,13 +314,13 @@ void KAccessConfig::load()
     ui.bounceKeysDelay->setValue(keyboardGroup.readEntry("BounceKeysDelay", 500));
     ui.bounceKeysRejectBeep->setChecked(keyboardGroup.readEntry("BounceKeysRejectBeep", true));
 
-    gestures->setChecked(keyboardGroup.readEntry("Gestures", false));
-    timeout->setChecked(keyboardGroup.readEntry("AccessXTimeout", false));
-    timeoutDelay->setValue(keyboardGroup.readEntry("AccessXTimeoutDelay", 30));
+    ui.gestures->setChecked(keyboardGroup.readEntry("Gestures", false));
+    ui.timeout->setChecked(keyboardGroup.readEntry("AccessXTimeout", false));
+    ui.timeoutDelay->setValue(keyboardGroup.readEntry("AccessXTimeoutDelay", 30));
 
-    accessxBeep->setChecked(keyboardGroup.readEntry("AccessXBeep", true));
-    gestureConfirmation->setChecked(keyboardGroup.readEntry("GestureConfirmation", false));
-    kNotifyAccessX->setChecked(keyboardGroup.readEntry("kNotifyAccessX", false));
+    ui.accessxBeep->setChecked(keyboardGroup.readEntry("AccessXBeep", true));
+    ui.gestureConfirmation->setChecked(keyboardGroup.readEntry("GestureConfirmation", false));
+    ui.kNotifyAccess->setChecked(keyboardGroup.readEntry("kNotifyAccess", false));
 
     checkAccess();
 
@@ -424,13 +362,13 @@ void KAccessConfig::save()
     keyboardGroup.writeEntry("BounceKeysDelay", ui.bounceKeysDelay->value());
     keyboardGroup.writeEntry("BounceKeysRejectBeep", ui.bounceKeysRejectBeep->isChecked());
 
-    keyboardGroup.writeEntry("Gestures", gestures->isChecked());
-    keyboardGroup.writeEntry("AccessXTimeout", timeout->isChecked());
-    keyboardGroup.writeEntry("AccessXTimeoutDelay", timeoutDelay->value());
+    keyboardGroup.writeEntry("Gestures", ui.gestures->isChecked());
+    keyboardGroup.writeEntry("AccessXTimeout", ui.timeout->isChecked());
+    keyboardGroup.writeEntry("AccessXTimeoutDelay", ui.timeoutDelay->value());
 
-    keyboardGroup.writeEntry("AccessXBeep", accessxBeep->isChecked());
-    keyboardGroup.writeEntry("GestureConfirmation", gestureConfirmation->isChecked());
-    keyboardGroup.writeEntry("kNotifyAccessX", kNotifyAccessX->isChecked());
+    keyboardGroup.writeEntry("AccessXBeep", ui.accessxBeep->isChecked());
+    keyboardGroup.writeEntry("GestureConfirmation", ui.gestureConfirmation->isChecked());
+    keyboardGroup.writeEntry("kNotifyAccess", ui.kNotifyAccess->isChecked());
 
 
     cg.sync();
@@ -484,13 +422,13 @@ void KAccessConfig::defaults()
     ui.toggleKeysBeep->setChecked(false);
     ui.kNotifyModifiers->setChecked(false);
 
-    gestures->setChecked(false);
-    timeout->setChecked(false);
-    timeoutDelay->setValue(30);
+    ui.gestures->setChecked(false);
+    ui.timeout->setChecked(false);
+    ui.timeoutDelay->setValue(30);
 
-    accessxBeep->setChecked(true);
-    gestureConfirmation->setChecked(true);
-    kNotifyAccessX->setChecked(false);
+    ui.accessxBeep->setChecked(true);
+    ui.gestureConfirmation->setChecked(true);
+    ui.kNotifyAccess->setChecked(false);
 
     checkAccess();
 
@@ -538,8 +476,8 @@ void KAccessConfig::checkAccess()
     ui.bounceKeysDelay->setEnabled(bounce);
     ui.bounceKeysRejectBeep->setEnabled(bounce);
 
-    bool useTimeout = timeout->isChecked();
-    timeoutDelay->setEnabled(useTimeout);
+    bool useTimeout = ui.timeout->isChecked();
+    ui.timeoutDelay->setEnabled(useTimeout);
 }
 
 extern "C"
