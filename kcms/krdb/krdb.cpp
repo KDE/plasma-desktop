@@ -634,7 +634,7 @@ void runRdb( uint flags )
       return;
   }
 
-  KConfig kde4config(configFilePath);
+  KConfig kde4config(configFilePath, KConfig::SimpleConfig);
 
   KConfigGroup kde4generalGroup(&kde4config, "General");
   kde4generalGroup.writeEntry("ColorScheme", colorSchemeName);
@@ -677,7 +677,7 @@ void runRdb( uint flags )
   kde4IconGroup.sync();
 
   //copy all the groups in the color scheme in kdeglobals
-  KSharedConfigPtr kde4ColorConfig = KSharedConfig::openConfig(src);
+  KSharedConfigPtr kde4ColorConfig = KSharedConfig::openConfig(src, KConfig::SimpleConfig);
 
   foreach (const QString &grp, kde4ColorConfig->groupList()) {
       KConfigGroup cg(kde4ColorConfig, grp);
