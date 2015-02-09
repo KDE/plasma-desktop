@@ -73,7 +73,7 @@ KCMLookandFeel::KCMLookandFeel(QWidget* parent, const QVariantList& args)
     //also, it seems to work only if set in the kcm, not in the systemsettings' main
     qApp->setAttribute(Qt::AA_DontCreateNativeWidgetSiblings);
     qmlRegisterType<QStandardItemModel>();
-    KAboutData* about = new KAboutData("kcm_lookandfeel", i18n("Configure Splash screen details"),
+    KAboutData* about = new KAboutData("kcm_lookandfeel", i18n("Configure Look and Feel details"),
                                        "0.1", QString(), KAboutLicense::LGPL);
     about->addAuthor(i18n("Marco Martin"), QString(), "mart@kde.org");
     setAboutData(about);
