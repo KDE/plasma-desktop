@@ -41,12 +41,11 @@
 #include <KConfig>
 #include <KGlobal>
 #include <KLocalizedString>
-#include <netwm.h>
 #include <KShortcut>
 #include <kwindowsystem.h>
 #include <kkeyserver.h>
 
-#include <X11/XKBlib.h>
+#include <netwm.h>
 #define XK_MISCELLANY
 #define XK_XKB_KEYS
 #include <X11/keysymdef.h>
@@ -154,6 +153,8 @@ KAccessApp::KAccessApp(bool allowStyles, bool GUIenabled)
     unsigned char latched = XkbStateMods(&state_return);
     unsigned char locked  = XkbModLocks(&state_return);
     state = ((int)locked) << 8 | latched;
+
+    qApp->installNativeEventFilter(this);
 }
 
 int KAccessApp::newInstance()
@@ -374,32 +375,36 @@ void KAccessApp::initMasks()
     }
 }
 
-#warning x11EventFilter needs porting to QAbstractNativeEventFilter
-#if 0
-bool KAccessApp::x11EventFilter(XEvent *event)
+struct xkb_any_ {
+    uint8_t response_type;
+    uint8_t xkbType;
+    uint16_t sequence;
+    xcb_timestamp_t time;
+    uint8_t deviceID;
+};
+
+bool KAccessApp::nativeEventFilter(const QByteArray& eventType, void* message, long int* result)
 {
-    // handle XKB events
-    if (event->type == xkb_opcode) {
-        XkbAnyEvent *ev = (XkbAnyEvent*) event;
-
-        switch (ev->xkb_type) {
-        case XkbStateNotify:
-            xkbStateNotify();
-            break;
-        case XkbBellNotify:
-            xkbBellNotify((XkbBellNotifyEvent*)event);
-            break;
-        case XkbControlsNotify:
-            xkbControlsNotify((XkbControlsNotifyEvent*)event);
-            break;
+    if (eventType == "xcb_generic_event_t") {
+        xcb_generic_event_t* event = static_cast<xcb_generic_event_t *>(message);
+        if ((event->response_type & ~0x80) == XkbEventCode + xkb_opcode) {
+            xkb_any_ *ev = reinterpret_cast<xkb_any_*>(event);
+            switch (ev->xkbType) {
+                case XCB_XKB_EVENT_TYPE_STATE_NOTIFY:
+                    xkbStateNotify();
+                    break;
+                case XCB_XKB_EVENT_TYPE_BELL_NOTIFY:
+                    xkbBellNotify(reinterpret_cast<xcb_xkb_bell_notify_event_t*>(event));
+                    break;
+                case XCB_XKB_EVENT_TYPE_CONTROLS_NOTIFY:
+                    xkbControlsNotify(reinterpret_cast<xcb_xkb_controls_notify_event_t*>(event));
+                    break;
+            }
+            return true;
         }
-        return true;
     }
-
-    // process other events as usual
-    return KApplication::x11EventFilter(event);
+    return false;
 }
-#endif
 
 
 void VisualBell::paintEvent(QPaintEvent *event)
@@ -450,10 +455,10 @@ void KAccessApp::xkbStateNotify()
     }
 }
 
-void KAccessApp::xkbBellNotify(XkbBellNotifyEvent *event)
+void KAccessApp::xkbBellNotify(xcb_xkb_bell_notify_event_t *event)
 {
     // bail out if we should not really ring
-    if (event->event_only)
+    if (event->eventOnly)
         return;
 
     // flash the visible bell
@@ -667,9 +672,13 @@ void KAccessApp::createDialogContents()
     }
 }
 
-void KAccessApp::xkbControlsNotify(XkbControlsNotifyEvent *event)
+void KAccessApp::xkbControlsNotify(xcb_xkb_controls_notify_event_t *event)
 {
-    unsigned int newFeatures = event->enabled_ctrls & (XkbSlowKeysMask | XkbBounceKeysMask | XkbStickyKeysMask | XkbMouseKeysMask);
+    unsigned int newFeatures = event->enabledControls & (
+        XCB_XKB_BOOL_CTRL_SLOW_KEYS |
+        XCB_XKB_BOOL_CTRL_BOUNCE_KEYS |
+        XCB_XKB_BOOL_CTRL_STICKY_KEYS  |
+        XCB_XKB_BOOL_CTRL_MOUSE_KEYS);
 
     if (newFeatures != features) {
         unsigned int enabled  = newFeatures & ~features;
@@ -692,24 +701,24 @@ void KAccessApp::xkbControlsNotify(XkbControlsNotifyEvent *event)
             QStringList enabledFeatures;
             QStringList disabledFeatures;
 
-            if (enabled & XkbStickyKeysMask)
-                enabledFeatures << i18n("Sticky keys");
-            else if (disabled & XkbStickyKeysMask)
-                disabledFeatures << i18n("Sticky keys");
-
-            if (enabled & XkbSlowKeysMask)
+            if (enabled & XCB_XKB_BOOL_CTRL_SLOW_KEYS)
                 enabledFeatures << i18n("Slow keys");
-            else if (disabled & XkbSlowKeysMask)
+            else if (disabled & XCB_XKB_BOOL_CTRL_SLOW_KEYS)
                 disabledFeatures << i18n("Slow keys");
 
-            if (enabled & XkbBounceKeysMask)
+            if (enabled & XCB_XKB_BOOL_CTRL_BOUNCE_KEYS)
                 enabledFeatures << i18n("Bounce keys");
-            else if (disabled & XkbBounceKeysMask)
+            else if (disabled & XCB_XKB_BOOL_CTRL_BOUNCE_KEYS)
                 disabledFeatures << i18n("Bounce keys");
 
-            if (enabled & XkbMouseKeysMask)
+            if (enabled & XCB_XKB_BOOL_CTRL_STICKY_KEYS)
+                enabledFeatures << i18n("Sticky keys");
+            else if (disabled & XCB_XKB_BOOL_CTRL_STICKY_KEYS)
+                disabledFeatures << i18n("Sticky keys");
+
+            if (enabled & XCB_XKB_BOOL_CTRL_MOUSE_KEYS)
                 enabledFeatures << i18n("Mouse keys");
-            else if (disabled & XkbMouseKeysMask)
+            else if (disabled & XCB_XKB_BOOL_CTRL_MOUSE_KEYS)
                 disabledFeatures << i18n("Mouse keys");
 
             QString question;
@@ -783,11 +792,11 @@ void KAccessApp::xkbControlsNotify(XkbControlsNotifyEvent *event)
                 explanation = i18n("An application has requested to change this setting.");
 
                 if (_gestures) {
-                    if ((enabled | disabled) == XkbSlowKeysMask)
+                    if ((enabled | disabled) == XCB_XKB_BOOL_CTRL_SLOW_KEYS)
                         explanation = i18n("You held down the Shift key for 8 seconds or an application has requested to change this setting.");
-                    else if ((enabled | disabled) == XkbStickyKeysMask)
+                    else if ((enabled | disabled) == XCB_XKB_BOOL_CTRL_STICKY_KEYS)
                         explanation = i18n("You pressed the Shift key 5 consecutive times or an application has requested to change this setting.");
-                    else if ((enabled | disabled) == XkbMouseKeysMask) {
+                    else if ((enabled | disabled) == XCB_XKB_BOOL_CTRL_MOUSE_KEYS) {
                         QString shortcut = mouseKeysShortcut(QX11Info::display());
                         if (!shortcut.isEmpty() && !shortcut.isNull())
                             explanation = i18n("You pressed %1 or an application has requested to change this setting.", shortcut);
@@ -819,24 +828,24 @@ void KAccessApp::notifyChanges()
     unsigned int enabled  = requestedFeatures & ~features;
     unsigned int disabled = features & ~requestedFeatures;
 
-    if (enabled & XkbSlowKeysMask)
+    if (enabled & XCB_XKB_BOOL_CTRL_SLOW_KEYS)
         KNotification::event("slowkeys", i18n("Slow keys has been enabled. From now on, you need to press each key for a certain length of time before it gets accepted."));
-    else if (disabled & XkbSlowKeysMask)
+    else if (disabled & XCB_XKB_BOOL_CTRL_SLOW_KEYS)
         KNotification::event("slowkeys", i18n("Slow keys has been disabled."));
 
-    if (enabled & XkbBounceKeysMask)
+    if (enabled & XCB_XKB_BOOL_CTRL_BOUNCE_KEYS)
         KNotification::event("bouncekeys", i18n("Bounce keys has been enabled. From now on, each key will be blocked for a certain length of time after it was used."));
-    else if (disabled & XkbBounceKeysMask)
+    else if (disabled & XCB_XKB_BOOL_CTRL_BOUNCE_KEYS)
         KNotification::event("bouncekeys", i18n("Bounce keys has been disabled."));
 
-    if (enabled & XkbStickyKeysMask)
+    if (enabled & XCB_XKB_BOOL_CTRL_STICKY_KEYS)
         KNotification::event("stickykeys", i18n("Sticky keys has been enabled. From now on, modifier keys will stay latched after you have released them."));
-    else if (disabled & XkbStickyKeysMask)
+    else if (disabled & XCB_XKB_BOOL_CTRL_STICKY_KEYS)
         KNotification::event("stickykeys", i18n("Sticky keys has been disabled."));
 
-    if (enabled & XkbMouseKeysMask)
+    if (enabled & XCB_XKB_BOOL_CTRL_MOUSE_KEYS)
         KNotification::event("mousekeys", i18n("Mouse keys has been enabled. From now on, you can use the number pad of your keyboard in order to control the mouse."));
-    else if (disabled & XkbMouseKeysMask)
+    else if (disabled & XCB_XKB_BOOL_CTRL_MOUSE_KEYS)
         KNotification::event("mousekeys", i18n("Mouse keys has been disabled."));
 }
 
@@ -848,26 +857,26 @@ void KAccessApp::applyChanges()
 
     KConfigGroup config(KSharedConfig::openConfig(), "Keyboard");
 
-    if (enabled & XkbSlowKeysMask)
+    if (enabled & XCB_XKB_BOOL_CTRL_SLOW_KEYS)
         config.writeEntry("SlowKeys", true);
-    else if (disabled & XkbSlowKeysMask)
+    else if (disabled & XCB_XKB_BOOL_CTRL_SLOW_KEYS)
         config.writeEntry("SlowKeys", false);
 
-    if (enabled & XkbBounceKeysMask)
+    if (enabled & XCB_XKB_BOOL_CTRL_BOUNCE_KEYS)
         config.writeEntry("BounceKeys", true);
-    else if (disabled & XkbBounceKeysMask)
+    else if (disabled & XCB_XKB_BOOL_CTRL_BOUNCE_KEYS)
         config.writeEntry("BounceKeys", false);
 
-    if (enabled & XkbStickyKeysMask)
+    if (enabled & XCB_XKB_BOOL_CTRL_STICKY_KEYS)
         config.writeEntry("StickyKeys", true);
-    else if (disabled & XkbStickyKeysMask)
+    else if (disabled & XCB_XKB_BOOL_CTRL_STICKY_KEYS)
         config.writeEntry("StickyKeys", false);
 
     KConfigGroup mousegrp(KSharedConfig::openConfig(), "Mouse");
 
-    if (enabled & XkbMouseKeysMask)
+    if (enabled & XCB_XKB_BOOL_CTRL_MOUSE_KEYS)
         mousegrp.writeEntry("MouseKeys", true);
-    else if (disabled & XkbMouseKeysMask)
+    else if (disabled & XCB_XKB_BOOL_CTRL_MOUSE_KEYS)
         mousegrp.writeEntry("MouseKeys", false);
     mousegrp.sync();
     config.sync();

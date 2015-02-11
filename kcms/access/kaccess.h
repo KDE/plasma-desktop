@@ -23,6 +23,7 @@
 #define __K_ACCESS_H__
 
 
+#include <QtCore/QAbstractNativeEventFilter>
 #include <QWidget>
 #include <QColor>
 #include <QLabel>
@@ -36,37 +37,32 @@
 
 #include <X11/Xlib.h>
 #define explicit int_explicit        // avoid compiler name clash in XKBlib.h
+#include <xcb/xkb.h>
 #include <X11/XKBlib.h>
 #undef explicit
 #include <fixx11h.h>
 
-class KDialog;
 class QLabel;
+class KDialog;
 class KComboBox;
 
-class KAccessApp : public KUniqueApplication
+class KAccessApp : public KUniqueApplication, QAbstractNativeEventFilter
 {
     Q_OBJECT
-
 public:
 
     explicit KAccessApp(bool allowStyles = true, bool GUIenabled = true);
-
-#if 0
-    bool x11EventFilter(XEvent *event);
-#endif
-
     int newInstance();
-
     void setXkbOpcode(int opcode);
+    virtual bool nativeEventFilter(const QByteArray& eventType, void* message, long int* result);
 
 protected:
 
     void readSettings();
 
     void xkbStateNotify();
-    void xkbBellNotify(XkbBellNotifyEvent *event);
-    void xkbControlsNotify(XkbControlsNotifyEvent *event);
+    void xkbBellNotify(xcb_xkb_bell_notify_event_t *event);
+    void xkbControlsNotify(xcb_xkb_controls_notify_event_t *event);
 
 
 private Q_SLOTS:
