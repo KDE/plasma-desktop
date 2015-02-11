@@ -40,6 +40,7 @@ target_link_libraries(kdeinit_kaccess
     Qt5::X11Extras
     KF5::ConfigCore
     KF5::Completion
+    KF5::GlobalAccel
     KF5::I18n
     KF5::IconThemes
     KF5::Notifications

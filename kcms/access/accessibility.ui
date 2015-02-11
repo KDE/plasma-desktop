@@ -743,6 +743,33 @@ Ensure you know what you are doing if you uncheck it, as the keyboard accessibil
        </item>
       </layout>
      </widget>
+     <widget class="QWidget" name="tabScreenReader">
+      <attribute name="title">
+       <string>Screen Reader</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_15">
+       <item>
+        <widget class="QCheckBox" name="screenReaderEnabled">
+         <property name="text">
+          <string>Screen reader enabled</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_5">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
     </widget>
    </item>
   </layout>

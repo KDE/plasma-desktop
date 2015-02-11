@@ -236,6 +236,9 @@ KAccessConfig::KAccessConfig(QWidget *parent, const QVariantList& args)
     connect(ui.kNotifyAccess, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
     connect(ui.kNotifyAccess, &QCheckBox::clicked, this, &KAccessConfig::checkAccess);
     connect(ui.kNotifyAccessButton, &QPushButton::clicked, this, &KAccessConfig::configureKNotify);
+
+    // screen reader
+    connect(ui.screenReaderEnabled, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
 }
 
 
@@ -334,6 +337,7 @@ void KAccessConfig::save()
     cg.writeEntry("VisibleBellColor", ui.colorButton->color());
 
     cg.writeEntry("VisibleBellPause", ui.duration->value());
+    cg.sync();
 
     KConfigGroup keyboardGroup(KSharedConfig::openConfig("kaccessrc"), "Keyboard");
 
@@ -364,8 +368,10 @@ void KAccessConfig::save()
     keyboardGroup.writeEntry("kNotifyAccess", ui.kNotifyAccess->isChecked());
 
 
-    cg.sync();
     keyboardGroup.sync();
+
+    KConfigGroup screenReaderGroup(KSharedConfig::openConfig("kaccessrc"), "ScreenReader");
+    screenReaderGroup.writeEntry("Enabled", ui.screenReaderEnabled->isChecked());
 
     if (ui.systemBell->isChecked() ||
         ui.customBell->isChecked() ||
@@ -422,6 +428,8 @@ void KAccessConfig::defaults()
     ui.accessxBeep->setChecked(true);
     ui.gestureConfirmation->setChecked(true);
     ui.kNotifyAccess->setChecked(false);
+
+    ui.screenReaderEnabled->setChecked(false);
 
     checkAccess();
 

@@ -23,6 +23,7 @@
 
 #include "kaccess.h"
 
+#include <QtCore/qprocess.h>
 #include <QTimer>
 #include <QPainter>
 
@@ -31,6 +32,7 @@
 #include <QGroupBox>
 #include <QHBoxLayout>
 #include <QVBoxLayout>
+#include <QtWidgets/qaction.h>
 
 #include <KDialog>
 #include <KMessageBox>
@@ -40,8 +42,10 @@
 #include <KNotification>
 #include <KConfig>
 #include <KGlobal>
+#include <kglobalaccel.h>
 #include <KLocalizedString>
 #include <KShortcut>
+#include <ktoolinvocation.h>
 #include <kwindowsystem.h>
 #include <kkeyserver.h>
 
@@ -138,7 +142,7 @@ static const ModifierKey modifierKeys[] = {
 
 KAccessApp::KAccessApp(bool allowStyles, bool GUIenabled)
     : KUniqueApplication(allowStyles, GUIenabled),
-      overlay(0), _player(0)
+    overlay(0), _player(0), toggleScreenReaderAction(new QAction(this))
 {
     _activeWindow = KWindowSystem::activeWindow();
     connect(KWindowSystem::self(), &KWindowSystem::activeWindowChanged, this, &KAccessApp::activeWindowChanged);
@@ -317,15 +321,12 @@ void KAccessApp::readSettings()
     // select AccessX events
     XkbSelectEvents(QX11Info::display(), XkbUseCoreKbd, XkbAllEventsMask, XkbAllEventsMask);
 
-    // do we need to stay running to perform notifications?
     if (!_artsBell && !_visibleBell && !(_gestures && _gestureConfirmation)
         && !_kNotifyModifiers && !_kNotifyAccessX) {
 
-        // We will exit, but the features need to stay configured
         uint ctrls = XkbStickyKeysMask | XkbSlowKeysMask | XkbBounceKeysMask | XkbMouseKeysMask | XkbAudibleBellMask | XkbControlsNotifyMask;
         uint values = xkb->ctrls->enabled_ctrls & ctrls;
         XkbSetAutoResetControls(QX11Info::display(), ctrls, &ctrls, &values);
-        exit(0);
     } else {
         // reset them after program exit
         uint ctrls = XkbStickyKeysMask | XkbSlowKeysMask | XkbBounceKeysMask | XkbMouseKeysMask | XkbAudibleBellMask | XkbControlsNotifyMask;
@@ -335,6 +336,42 @@ void KAccessApp::readSettings()
 
     delete overlay;
     overlay = 0;
+
+    KConfigGroup screenReaderGroup(_config, "ScreenReader");
+    setScreenReaderEnabled(screenReaderGroup.readEntry("Enabled", false));
+
+    QString shortcut = screenReaderGroup.readEntry("Shortcut", QStringLiteral("Meta+Alt+S"));
+
+    toggleScreenReaderAction->setText(i18n("Toggle Screen Reader On and Off"));
+    toggleScreenReaderAction->setObjectName("Toggle Screen Reader On and Off");
+    KGlobalAccel::self()->setGlobalShortcut(toggleScreenReaderAction,
+                                      QKeySequence(shortcut));
+    connect(toggleScreenReaderAction, &QAction::triggered, this, &KAccessApp::toggleScreenReader);
+}
+
+void KAccessApp::toggleScreenReader()
+{
+    KSharedConfig::Ptr _config = KSharedConfig::openConfig();
+    KConfigGroup screenReaderGroup(_config, "ScreenReader");
+    bool enabled = !screenReaderGroup.readEntry("Enabled", false);
+    screenReaderGroup.writeEntry("Enabled", enabled);
+    setScreenReaderEnabled(enabled);
+}
+
+void KAccessApp::setScreenReaderEnabled(bool enabled)
+{
+    if (enabled) {
+        QStringList args;
+        args << "set" << "org.gnome.desktop.a11y.applications" << "screen-reader-enabled" << "true";
+        int ret = QProcess::execute("gsettings", args);
+        if (ret == 0) {
+            KToolInvocation::startServiceByDesktopName("orca");
+        }
+    } else {
+        QStringList args;
+        args << "set" << "org.gnome.desktop.a11y.applications" << "screen-reader-enabled" << "false";
+        QProcess::execute("gsettings", args);
+    }
 }
 
 static int maskToBit(int mask)

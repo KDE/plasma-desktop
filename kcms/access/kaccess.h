@@ -73,11 +73,12 @@ private Q_SLOTS:
     void yesClicked();
     void noClicked();
     void dialogClosed();
-
+    void toggleScreenReader();
 
 private:
-    void  createDialogContents();
-    void  initMasks();
+    void createDialogContents();
+    void initMasks();
+    void setScreenReaderEnabled(bool enabled);
 
     int xkb_opcode;
     unsigned int features;
@@ -103,6 +104,8 @@ private:
 
     int keys[8];
     int state;
+
+    QAction *toggleScreenReaderAction;
 };
 
 
