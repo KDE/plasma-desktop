@@ -214,7 +214,7 @@ KAccessConfig::KAccessConfig(QWidget *parent, const QVariantList& args)
     connect(ui.bounceKeysRejectBeep, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
     connect(ui.bounceKeys, &QCheckBox::clicked, this, &KAccessConfig::checkAccess);
 
-    // ui.gestures --------------------------------------------
+    // gestures --------------------------------------------
 
     QString shortcut = mouseKeysShortcut(QX11Info::display());
     if (shortcut.isEmpty())
