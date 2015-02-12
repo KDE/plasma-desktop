@@ -32,7 +32,7 @@ TouchpadBackend *TouchpadBackend::implementation()
     //There will be multiple backends later
     static QThreadStorage<QSharedPointer<XlibBackend> > backend;
     if (!backend.hasLocalData()) {
-        backend.setLocalData(QSharedPointer<XlibBackend>(new XlibBackend()));
+        backend.setLocalData(QSharedPointer<XlibBackend>(XlibBackend::initialize()));
     }
     return backend.localData().data();
 }

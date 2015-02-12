@@ -66,5 +66,6 @@ struct Parameter {
 };
 
 extern const struct Parameter synapticsProperties[];
+extern const struct Parameter libinputProperties[];
 
 #endif

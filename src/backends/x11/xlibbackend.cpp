@@ -135,61 +135,36 @@ struct PropertyInfo
     }
 };
 
-XlibBackend::~XlibBackend()
+class XlibSynapticsBackend : public XlibBackend
 {
-}
+public:
+    XlibSynapticsBackend(QObject *parent = 0);
+};
 
-XlibBackend::XlibBackend(QObject *parent) :
-    TouchpadBackend(parent),
-    m_display(XOpenDisplay(0)), m_connection(0),
-    m_resX(1), m_resY(1)
+class XlibLibinputBackend : public XlibBackend
 {
-    if (m_display) {
-        m_connection = XGetXCBConnection(m_display.data());
-    }
+public:
+    XlibLibinputBackend(QObject *parent = 0);
+};
 
-    if (!m_connection) {
-        m_errorString = i18n("Cannot connect to X server");
-        return;
-    }
-
-    m_floatType.intern(m_connection, "FLOAT");
+XlibSynapticsBackend::XlibSynapticsBackend(QObject *parent) :
+    XlibBackend(parent)
+{
     m_capsAtom.intern(m_connection, SYNAPTICS_PROP_CAPABILITIES);
-    m_enabledAtom.intern(m_connection, XI_PROP_ENABLED);
-    m_touchpadOffAtom.intern(m_connection, SYNAPTICS_PROP_OFF);
-    m_mouseAtom.intern(m_connection, XI_MOUSE);
-    m_keyboardAtom.intern(m_connection, XI_KEYBOARD);
-    XcbAtom resolutionAtom(m_connection, SYNAPTICS_PROP_RESOLUTION);
-    XcbAtom edgesAtom(m_connection, SYNAPTICS_PROP_EDGES);
-
-    for (const Parameter *param = synapticsProperties; param->name; param++) {
-        QLatin1String name(param->prop_name);
-
-        if (!m_atoms.contains(name)) {
-            m_atoms.insert(name, QSharedPointer<XcbAtom>(
-                               new XcbAtom(m_connection, param->prop_name)));
-        }
-    }
-
-    if (!m_capsAtom.atom()) {
-        m_errorString =
-                i18n("Synaptics driver is not installed (or is not used)");
+    if (!m_capsAtom.atom())
         return;
-    }
 
-    m_device = findTouchpad();
+    m_device = findTouchpad(m_capsAtom);
     if (m_device == XIAllDevices) {
         m_errorString = i18n("No touchpad found");
         return;
     }
 
-    for (const Parameter *p = synapticsProperties; p->name; p++) {
-        if (getParameter(p).isValid()) {
-            m_supported.append(p->name);
-        }
-    }
+    m_touchpadOffAtom.intern(m_connection, SYNAPTICS_PROP_OFF);
+    XcbAtom resolutionAtom(m_connection, SYNAPTICS_PROP_RESOLUTION);
+    XcbAtom edgesAtom(m_connection, SYNAPTICS_PROP_EDGES);
 
-    if (m_supported.isEmpty()) {
+    if (!loadSupportedProperties(synapticsProperties)) {
         m_errorString = i18n("Cannot read any of touchpad's properties");
         return;
     }
@@ -288,9 +263,97 @@ XlibBackend::XlibBackend(QObject *parent) :
             m_supported.removeAll(i.value());
         }
     }
+
+    m_identifierAtom.intern(m_connection, SYNAPTICS_PROP_CAPABILITIES);
+    m_paramList = synapticsProperties;
 }
 
-int XlibBackend::findTouchpad()
+XlibLibinputBackend::XlibLibinputBackend(QObject *parent) :
+    XlibBackend(parent)
+{
+    XcbAtom identifier(m_connection,
+                       "libinput Tapping Enabled",
+                       true);
+
+    if (!identifier.atom())
+        return;
+
+    m_device = findTouchpad(identifier);
+    if (m_device == XIAllDevices) {
+        m_errorString = i18n("No touchpad found");
+        return;
+    }
+
+    m_identifierAtom.intern(m_connection,
+                            "libinput Send Events Modes Available");
+
+    if (!loadSupportedProperties(libinputProperties)) {
+        m_errorString = i18n("Cannot read any of touchpad's properties");
+        return;
+    }
+
+    /* FIXME: has a different format than Synaptics Off but we don't expose
+       the toggle so this is just to stop it from crashing when we check
+       m_touchpadOffAtom  */
+    m_touchpadOffAtom.intern(m_connection,
+                             "libinput Send Events Mode enabled");
+
+
+    XcbAtom scroll_methods(m_connection,
+                           "libinput Scroll Methods Available",
+                           true);
+    if (scroll_methods.atom() != 0) {
+        PropertyInfo methods(m_display.data(),
+                             m_device,
+                             scroll_methods.atom(),
+                             0);
+        if (!methods.value(0).toInt())
+            m_supported.removeAll("VertTwoFingerScroll");
+        else if (!methods.value(1).toInt())
+            m_supported.removeAll("VertEdgeScroll");
+    }
+
+    m_paramList = libinputProperties;
+}
+
+XlibBackend* XlibBackend::initialize(QObject *parent)
+{
+    QScopedPointer<Display, XDisplayCleanup> display(XOpenDisplay(0));
+    xcb_connection_t *connection = XGetXCBConnection(display.data());
+    XcbAtom synaptics_prop_capablities, libinput_prop_tapping;
+
+    libinput_prop_tapping.intern(connection, "libinput Tapping Enabled");
+    if (libinput_prop_tapping.atom())
+        return new XlibLibinputBackend(parent);
+    else
+        return new XlibSynapticsBackend(parent);
+}
+
+XlibBackend::~XlibBackend()
+{
+}
+
+XlibBackend::XlibBackend(QObject *parent) :
+    TouchpadBackend(parent),
+    m_display(XOpenDisplay(0)), m_connection(0),
+    m_resX(1), m_resY(1)
+{
+    if (m_display) {
+        m_connection = XGetXCBConnection(m_display.data());
+    }
+
+    if (!m_connection) {
+        m_errorString = i18n("Cannot connect to X server");
+        return;
+    }
+
+    m_floatType.intern(m_connection, "FLOAT");
+    m_mouseAtom.intern(m_connection, XI_MOUSE);
+    m_keyboardAtom.intern(m_connection, XI_KEYBOARD);
+    m_enabledAtom.intern(m_connection, XI_PROP_ENABLED);
+}
+
+int XlibBackend::findTouchpad(XcbAtom &identifier)
 {
     int nDevices = 0;
     QSharedPointer<XIDeviceInfo> deviceInfo(
@@ -306,7 +369,7 @@ int XlibBackend::findTouchpad()
                                      &nProperties), XDeleter);
 
         if (std::count(properties.data(), properties.data() + nProperties,
-                       m_capsAtom.atom()))
+                       identifier.atom()))
         {
             return info->deviceid;
         }
@@ -315,14 +378,34 @@ int XlibBackend::findTouchpad()
     return XIAllDevices;
 }
 
-static const Parameter *findParameter(const QString &name)
+const Parameter * XlibBackend::findParameter(const QString &name)
 {
-    for (const Parameter *par = synapticsProperties; par->name; par++) {
+    for (const Parameter *par = m_paramList; par->name; par++) {
         if (name == par->name) {
             return par;
         }
     }
     return 0;
+}
+
+bool XlibBackend::loadSupportedProperties(const Parameter *props)
+{
+    for (const Parameter *param = props; param->name; param++) {
+        QLatin1String name(param->prop_name);
+
+        if (!m_atoms.contains(name)) {
+            m_atoms.insert(name, QSharedPointer<XcbAtom>(
+                               new XcbAtom(m_connection, param->prop_name)));
+        }
+    }
+
+    for (const Parameter *p = props; p->name; p++) {
+        if (getParameter(p).isValid()) {
+            m_supported.append(p->name);
+        }
+    }
+
+    return !m_supported.isEmpty();
 }
 
 double XlibBackend::getPropertyScale(const QString &name) const
@@ -611,7 +694,7 @@ void XlibBackend::touchpadDetached()
 void XlibBackend::devicePlugged(int device)
 {
     if (m_device == XIAllDevices) {
-        m_device = findTouchpad();
+        m_device = findTouchpad(m_identifierAtom);
         if (m_device != XIAllDevices) {
             qWarning() << "Touchpad reset";
             m_notifications.reset();

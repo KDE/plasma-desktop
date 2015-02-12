@@ -21,6 +21,7 @@
 #include <cmath>
 
 #include <QWidget>
+#include <QGroupBox>
 
 #include <KConfigSkeleton>
 #include <KComboBox>
@@ -44,7 +45,11 @@ CustomConfigDialogManager::CustomConfigDialogManager(QWidget *parent,
         }
         m_widgets[name] = child;
 
-        if (!supported.contains(name)) {
+        /* FIXME: this should probably be less hackish */
+        if (name == "Tapping" &&
+            !supported.contains("Tapping"))
+            qobject_cast<QGroupBox *>(child)->setCheckable(false);
+        else if (!supported.contains(name)) {
             child->setEnabled(false);
         }
 

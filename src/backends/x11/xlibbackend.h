@@ -28,6 +28,7 @@
 #include <QX11Info>
 
 #include "touchpadbackend.h"
+#include "synclientproperties.h"
 
 #include <xcb/xcb.h>
 
@@ -41,7 +42,7 @@ class XlibBackend : public TouchpadBackend
     Q_OBJECT
 
 public:
-    explicit XlibBackend(QObject *parent = 0);
+    static XlibBackend* initialize(QObject *parent = 0);
     ~XlibBackend();
 
     bool applyConfig(const QVariantHash &);
@@ -64,7 +65,8 @@ private slots:
     void touchpadDetached();
     void devicePlugged(int);
 
-private:
+protected:
+    explicit XlibBackend(QObject *parent);
     struct PropertyInfo *getDevProperty(const QLatin1String &propName);
     bool setParameter(const struct Parameter *, const QVariant &);
     QVariant getParameter(const struct Parameter *);
@@ -78,11 +80,15 @@ private:
     QScopedPointer<Display, XDisplayCleanup> m_display;
     xcb_connection_t *m_connection;
 
-    XcbAtom m_floatType, m_capsAtom, m_enabledAtom, m_touchpadOffAtom,
+    XcbAtom m_floatType, m_capsAtom, m_identifierAtom, m_enabledAtom, m_touchpadOffAtom,
     m_mouseAtom, m_keyboardAtom;
 
-    int findTouchpad();
+    int findTouchpad(XcbAtom &identifier);
     int m_device;
+
+    const struct Parameter *m_paramList;
+    const Parameter *findParameter(const QString &name);
+    bool loadSupportedProperties(const struct Parameter *props);
 
     QMap<QLatin1String, QSharedPointer<XcbAtom> > m_atoms;
     QMap<QLatin1String, struct PropertyInfo> m_props;

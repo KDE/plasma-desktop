@@ -5,6 +5,11 @@
                           http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
     <kcfgfile name="touchpadrc"/>
     <group name="parameters">
+        <entry name="Tapping" type="Bool">
+            <default code="true">
+                systemDefault("Tapping", true)
+            </default>
+        </entry>
         <entry name="$(TapAction)Button" type="Enum">
             <parameter name="TapAction" type="Enum">
                 <values>
