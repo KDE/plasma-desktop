@@ -1,1 +1,1 @@
-install(FILES plasma-applet-org.kde.plasma.icontasks.desktop DESTINATION ${SERVICES_INSTALL_DIR})
+install(FILES metadata.desktop DESTINATION ${PLASMA_DATA_INSTALL_DIR}/plasmoids/org.kde.plasma.icontasks )
