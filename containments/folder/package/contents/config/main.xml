@@ -93,6 +93,13 @@
     <entry name="filterMimeTypes" type="StringList">
       <default></default>
     </entry>
+
+    <entry name="pressToMove" type="Bool">
+      <default>false</default>
+    </entry>
+    <entry name="pressToHandle" type="Bool">
+      <default>false</default>
+    </entry>
   </group>
 </kcfg>
 

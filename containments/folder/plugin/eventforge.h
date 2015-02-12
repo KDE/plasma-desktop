@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2014 by Eike Hein <hein@kde.org>                        *
+ *   Copyright (C) 2015 by Eike Hein <hein@kde.org>                   *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -17,32 +17,27 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-import QtQuick 2.0
+#ifndef EVENTFORGE_H
+#define EVENTFORGE_H
 
-import org.kde.plasma.configuration 2.0
+#include <QObject>
 
-ConfigModel {
-    ConfigCategory {
-         name: i18n("Location")
-         icon: "folder"
-         source: "ConfigLocation.qml"
-    }
+class QQuickItem;
 
-    ConfigCategory {
-         name: i18n("Icons")
-         icon: "preferences-desktop-icons"
-         source: "ConfigIcons.qml"
-    }
+class EventForge : public QObject
+{
+    Q_OBJECT
 
-    ConfigCategory {
-         name: i18n("Filter")
-         icon: "view-filter"
-         source: "ConfigFilter.qml"
-    }
+    public:
+        EventForge(QObject *parent = 0);
+        ~EventForge();
 
-    ConfigCategory {
-         name: "Experimental" /* Intentionally not i18n'd. */
-         icon: "kmines" /* It's a mine field. Geddit? */
-         source: "ConfigExperimental.qml"
-    }
-}
+        Q_INVOKABLE void sendLeftPress(QQuickItem *item, int x, int y);
+        Q_INVOKABLE void sendUngrabRecursive(QQuickItem *parentItem);
+        Q_INVOKABLE void makeGrab(QQuickItem *item);
+
+    private:
+        static QList<QQuickItem *> allChildItemsRecursive(QQuickItem *parentItem);
+};
+
+#endif

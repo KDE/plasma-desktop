@@ -40,7 +40,6 @@ Item {
 
     property bool showAppletHandle: false
     property real controlsOpacity: (plasmoid.immutable || !showAppletHandle) ? 0 : 1
-    property bool handleShown: true
     property string backgroundHints: "NoBackground"
     property bool hasBackground: false
     property bool handleMerged: (height > minimumHandleHeight)
@@ -111,32 +110,48 @@ Item {
 
         hoverEnabled: true
 
+        property int pressX: -1
+        property int pressY: -1
+
+        onPressed: {
+            pressX = mouse.x;
+            pressY = mouse.y;
+        }
+
         onPressAndHold: {
-            if (root.pressAndHoldHandle && !plasmoid.immutable) {
-                //hoverTracker.interval = 400;
-                hoverTracker.restart();
+            if (!plasmoid.immtuable && plasmoid.configuration.pressToMove) {
+                if (!dragMouseArea.dragging && !systemSettings.isDrag(pressX, pressY, mouse.x, mouse.y)) {
+                    if (plasmoid.configuration.pressToHandle) {
+                        showAppletHandle = true;
+                    }
+
+                    eventForge.sendUngrabRecursive(appletItem);
+                    eventForge.makeGrab(dragMouseArea);
+                    eventForge.sendLeftPress(dragMouseArea, mouse.x, mouse.y);
+                }
             }
+
+            pressX = -1;
+            pressY = -1;
         }
 
         onContainsMouseChanged: {
-
             animationsEnabled = true;
-            //print("Mouse is " + containsMouse);
-            if (!plasmoid.immutable) {
-                if (!root.pressAndHoldHandle) {
-                    hoverTracker.interval = root.handleDelay;
-                    hoverTracker.restart();
-                }
+
+            if (!plasmoid.immutable && (!plasmoid.configuration.pressToMove || !containsMouse)) {
+                hoverTracker.restart();
             }
         }
 
         Timer {
             id: hoverTracker
             repeat: false
-            interval: handleDelay
+            interval: root.handleDelay
             onTriggered: {
                 if (mouseListener.containsMouse || (appletHandle.item && (appletHandle.item.containsMouse || appletHandle.item.pressed))) {
-                    showAppletHandle = true;
+                    if (!plasmoid.configuration.pressToMove) {
+                        showAppletHandle = true;
+                    }
                 } else {
                     showAppletHandle = false;
                 }
@@ -209,12 +224,18 @@ Item {
                 visible: !plasmoid.immutable
 
                 property int zoffset: 1000
-                drag.target: appletItem
+
+                property bool dragging: false
+                property int pressX: -1
+                property int pressY: -1
 
                 onPressed: {
+                    dragging = true;
                     appletItem.z = appletItem.z + zoffset;
                     animationsEnabled = false
-                    mouse.accepted = true
+                    mouse.accepted = true;
+                    pressX = mouse.x;
+                    pressY = mouse.y;
                     var x = Math.round(appletItem.x/LayoutManager.cellSize.width)*LayoutManager.cellSize.width
                     var y = Math.round(appletItem.y/LayoutManager.cellSize.height)*LayoutManager.cellSize.height
                     LayoutManager.setSpaceAvailable(x, y, appletItem.width, appletItem.height, true)
@@ -222,7 +243,14 @@ Item {
                     placeHolder.syncWithItem(appletItem)
                     placeHolderPaint.opacity = root.haloOpacity;
                 }
+
                 onPositionChanged: {
+                    var xDiff = pressX - mouse.x;
+                    var yDiff = pressY - mouse.y;
+
+                    appletItem.x = appletItem.x - xDiff;
+                    appletItem.y = appletItem.y - yDiff;
+
                     var pos = mapToItem(root, mouse.x, mouse.y);
                     var newCont = plasmoid.containmentAt(pos.x, pos.y);
 
@@ -234,13 +262,15 @@ Item {
                         placeHolder.syncWithItem(appletItem);
                     }
                 }
+
                 onReleased: {
                     appletItem.z = appletItem.z - zoffset;
-                    repositionTimer.running = false
-                    placeHolderPaint.opacity = 0
-                    animationsEnabled = true
-                    LayoutManager.positionItem(appletItem)
-                    LayoutManager.save()
+                    repositionTimer.running = false;
+                    placeHolderPaint.opacity = 0;
+                    animationsEnabled = true;
+                    LayoutManager.positionItem(appletItem);
+                    LayoutManager.save();
+                    dragging = false;
                 }
             }
 

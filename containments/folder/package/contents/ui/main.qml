@@ -45,7 +45,6 @@ DragDrop.DropArea {
     property bool debug: false
     property int handleDelay: 800
     property real haloOpacity: 0.5
-    property bool pressAndHoldHandle: false
 
     property int iconSize: 16
     property int iconWidth: iconSize
@@ -290,6 +289,10 @@ DragDrop.DropArea {
 
     Folder.SystemSettings {
         id: systemSettings
+    }
+
+    Folder.EventForge {
+        id: eventForge
     }
 
     Folder.MenuHelper {

@@ -6,6 +6,7 @@ include_directories(plugin/plasmaquick)
 
 set(folderplugin_SRCS
     plugin/directorypicker.cpp
+    plugin/eventforge.cpp
     plugin/foldermodel.cpp
     plugin/folderplugin.cpp
     plugin/itemgrabber.cpp

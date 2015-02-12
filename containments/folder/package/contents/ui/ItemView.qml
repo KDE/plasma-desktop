@@ -176,20 +176,8 @@ FocusScope {
             }
         }
 
-        onReleased: {
-            if (main.rubberBand) {
-                main.rubberBand.visible = false;
-                main.rubberBand.enabled = false;
-                main.rubberBand.destroy();
-                main.rubberBand = null;
-                gridView.interactive = true;
-                gridView.cachedRectangleSelection = null;
-                dir.unpinSelection();
-            }
-
-            clearPressState();
-            gridView.cancelAutoscroll();
-        }
+        onCanceled: pressCanceled()
+        onReleased: pressCanceled()
 
         onClicked: {
             clearPressState();
@@ -299,6 +287,21 @@ FocusScope {
 
         onHoveredItemChanged: {
             doubleClickInProgress = false;
+        }
+
+        function pressCanceled() {
+            if (main.rubberBand) {
+                main.rubberBand.visible = false;
+                main.rubberBand.enabled = false;
+                main.rubberBand.destroy();
+                main.rubberBand = null;
+                gridView.interactive = true;
+                gridView.cachedRectangleSelection = null;
+                dir.unpinSelection();
+            }
+
+            clearPressState();
+            gridView.cancelAutoscroll();
         }
 
         function clearPressState() {
@@ -860,5 +863,4 @@ FocusScope {
             dir.requestRename.connect(rename);
         }
     }
-
 }
