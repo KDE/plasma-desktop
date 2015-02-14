@@ -2,6 +2,7 @@
  *  main.cpp
  *
  *  Copyright (C) 1998 Luca Montecchiani <m.luca@usa.net>
+ *  Copyright (C) 2015 David Edmundson <davidedmundson@kde.org>
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -31,7 +32,6 @@
 #include <kdialog.h>
 #include <kpluginfactory.h>
 #include <kpluginloader.h>
-#include <kprocess.h>
 #include <kmessagebox.h>
 
 #include "dtime.h"
@@ -40,6 +40,8 @@
 #include <kauthaction.h>
 #include <kauthexecutejob.h>
 
+#include "timedated_interface.h"
+
 K_PLUGIN_FACTORY(KlockModuleFactory, registerPlugin<KclockModule>();)
 K_EXPORT_PLUGIN(KlockModuleFactory("kcmkclock"))
 
@@ -47,6 +49,15 @@ K_EXPORT_PLUGIN(KlockModuleFactory("kcmkclock"))
 KclockModule::KclockModule(QWidget *parent, const QVariantList &)
   : KCModule(parent)
 {
+  auto reply = QDBusConnection::systemBus().call(QDBusMessage::createMethodCall("org.freedesktop.DBus",
+                                                                                "/",
+                                                                                "org.freedesktop.DBus",
+                                                                                "ListActivatableNames"));
+
+  if (!reply.arguments().isEmpty() &&  reply.arguments().first().value<QStringList>().contains("org.freedesktop.timedate1")) {
+      m_haveTimedated = true;
+  }
+
   KAboutData *about =
   new KAboutData(QStringLiteral("kcmclock"), i18n("KDE Clock Control Module"), QStringLiteral("1.0"),
                   QString(), KAboutLicense::GPL,
@@ -62,19 +73,24 @@ KclockModule::KclockModule(QWidget *parent, const QVariantList &)
     " the root password, but feel the system time should be corrected, please contact your system"
     " administrator."));
 
+
   QVBoxLayout *layout = new QVBoxLayout(this);
   layout->setMargin(0);
   layout->setSpacing(KDialog::spacingHint());
 
-  dtime = new Dtime(this);
+  dtime = new Dtime(this, m_haveTimedated);
   layout->addWidget(dtime);
   connect(dtime, SIGNAL(timeChanged(bool)), this, SIGNAL(changed(bool)));
 
   setButtons(Help|Apply);
 
-  setNeedsAuthorization(true);
-
-  process = NULL;
+    if (m_haveTimedated) {
+        setAuthAction(KAuth::Action("org.freedesktop.timedate1.set-time"));
+    } else {
+        //auth action name will be automatically guessed from the KCM name
+        qWarning() << "Timedated not found, using legacy saving mode";
+        setNeedsAuthorization(true);
+    }
 }
 
 bool KclockModule::kauthSave()
@@ -111,11 +127,63 @@ bool KclockModule::kauthSave()
   return rc;
 }
 
+bool KclockModule::timedatedSave()
+{
+
+    OrgFreedesktopTimedate1Interface timedateIface("org.freedesktop.timedate1", "/org/freedesktop/timedate1", QDBusConnection::systemBus());
+
+    bool rc = true;
+    //final arg in each method is "user-interaction" i.e whether it's OK for polkit to ask for auth
+
+    //we cannot send requests up front then block for all replies as we need NTP to be disabled before we can make a call to SetTime
+    //timedated processes these in parallel and will return an error otherwise
+
+    auto reply = timedateIface.SetNTP(dtime->ntpEnabled(), true);
+    reply.waitForFinished();
+    if (reply.isError()) {
+        KMessageBox::error(this, i18n("Unable to change NTP settings"));
+        qWarning() << "Failed to enable NTP" << reply.error().name() << reply.error().message();
+        rc = false;
+    }
+
+
+    if (!dtime->ntpEnabled()) {
+        qint64 timeDiff = dtime->userTime().toMSecsSinceEpoch() - QDateTime::currentMSecsSinceEpoch();
+        //*1000 for milliseconds -> microseconds
+        auto reply = timedateIface.SetTime(timeDiff * 1000, true, true);
+        reply.waitForFinished();
+        if (reply.isError()) {
+            KMessageBox::error(this, i18n("Unable to set current time"));
+            qWarning() << "Failed to set current time" << reply.error().name() << reply.error().message();
+            rc = false;
+        }
+    }
+    QString selectedTimeZone = dtime->selectedTimeZone();
+    if (!selectedTimeZone.isEmpty()) {
+        auto reply = timedateIface.SetTimezone(selectedTimeZone, true);
+        reply.waitForFinished();
+        if (reply.isError()) {
+            KMessageBox::error(this, i18n("Unable to set timezone"));
+            qWarning() << "Failed to set timezone" << reply.error().name() << reply.error().message();
+            rc = false;
+        }
+    }
+
+    return rc;
+}
+
 void KclockModule::save()
 {
   setDisabled(true);
 
-  if (kauthSave()) {
+  bool success = false;
+  if (m_haveTimedated) {
+    success = timedatedSave();
+  } else {
+    success = kauthSave();
+  }
+
+  if (success) {
       QDBusMessage msg = QDBusMessage::createSignal("/org/kde/kcmshell_clock", "org.kde.kcmshell_clock", "clockUpdated");
       QDBusConnection::sessionBus().send(msg);
   }
@@ -125,9 +193,14 @@ void KclockModule::save()
   // timezone and reloading of data, so that the new timezone is taken into account.
   // The Ultimate solution to this would be if KSTZ emitted a signal when a new
   // local timezone was found.
-  QTimer::singleShot(5000, this, SLOT(load()));
 
   // setDisabled(false) happens in load(), since QTimer::singleShot is non-blocking
+  if (!m_haveTimedated) {
+    QTimer::singleShot(5000, this, SLOT(load()));
+  } else {
+    load();
+  }
+
 }
 
 void KclockModule::load()

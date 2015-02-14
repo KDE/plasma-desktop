@@ -55,11 +55,13 @@
 
 #include <Plasma/Svg>
 
+#include "timedated_interface.h"
 
 #include "helper.h"
 
-Dtime::Dtime(QWidget * parent)
-  : QWidget(parent)
+Dtime::Dtime(QWidget * parent, bool haveTimeDated):
+    QWidget(parent),
+    m_haveTimedated(haveTimeDated)
 {
   setupUi(this);
 
@@ -73,18 +75,17 @@ Dtime::Dtime(QWidget * parent)
   timeServerList->setEnabled(false);
   timeServerList->setEditable(true);
 
-#ifdef NO_SYSTEMD
-
-  findNTPutility();
-  if (ntpUtility.isEmpty()) {
-      QString toolTip = i18n("No NTP utility has been found. "
-                             "Install 'ntpdate' or 'rdate' command to enable automatic "
-                             "updating of date and time.");
-      setDateTimeAuto->setEnabled(false);
-      setDateTimeAuto->setToolTip(toolTip);
-      timeServerList->setToolTip(toolTip);
+  if (!haveTimeDated) {
+    findNTPutility();
+    if (ntpUtility.isEmpty()) {
+        QString toolTip = i18n("No NTP utility has been found. "
+                                "Install 'ntpdate' or 'rdate' command to enable automatic "
+                                "updating of date and time.");
+        setDateTimeAuto->setEnabled(false);
+        setDateTimeAuto->setToolTip(toolTip);
+        timeServerList->setToolTip(toolTip);
+    }
   }
-#endif
 
   QVBoxLayout *v2 = new QVBoxLayout( timeBox );
   v2->setMargin( 0 );
@@ -196,21 +197,35 @@ void Dtime::configChanged(){
 
 void Dtime::load()
 {
-  // The config is actually written to the system config, but the user does not have any local config,
-  // since there is nothing writing it.
-  KConfig _config( "kcmclockrc", KConfig::NoGlobals );
-  KConfigGroup config(&_config, "NTP");
-  timeServerList->clear();
-  timeServerList->addItems(config.readEntry("servers",
-    i18n("Public Time Server (pool.ntp.org),\
-asia.pool.ntp.org,\
-europe.pool.ntp.org,\
-north-america.pool.ntp.org,\
-oceania.pool.ntp.org")).split(',', QString::SkipEmptyParts));
-  setDateTimeAuto->setChecked(config.readEntry("enabled", false));
+    QString currentTimeZone;
 
-  if (ntpUtility.isEmpty()) {
-    timeServerList->setEnabled(false);
+    if (m_haveTimedated) {
+        OrgFreedesktopTimedate1Interface timeDatedIface("org.freedesktop.timedate1", "/org/freedesktop/timedate1", QDBusConnection::systemBus());
+        //the server list is not relevant for timesyncd, it fetches it from the network
+        timeServerList->setVisible(false);
+        timeServerLabel->setVisible(false);
+        setDateTimeAuto->setEnabled(timeDatedIface.canNTP());
+        setDateTimeAuto->setChecked(timeDatedIface.nTP());
+
+        currentTimeZone = timeDatedIface.timezone();
+    } else {
+        // The config is actually written to the system config, but the user does not have any local config,
+        // since there is nothing writing it.
+        KConfig _config( "kcmclockrc", KConfig::NoGlobals );
+        KConfigGroup config(&_config, "NTP");
+        timeServerList->clear();
+        timeServerList->addItems(config.readEntry("servers",
+            i18n("Public Time Server (pool.ntp.org),\
+        asia.pool.ntp.org,\
+        europe.pool.ntp.org,\
+        north-america.pool.ntp.org,\
+        oceania.pool.ntp.org")).split(',', QString::SkipEmptyParts));
+        setDateTimeAuto->setChecked(config.readEntry("enabled", false));
+
+        if (ntpUtility.isEmpty()) {
+            timeServerList->setEnabled(false);
+        }
+        currentTimeZone  = KSystemTimeZones::local().name();
   }
 
   // Reset to the current date and time
@@ -226,8 +241,7 @@ oceania.pool.ntp.org")).split(',', QString::SkipEmptyParts));
   //Timezone
   currentZone();
 
-  // read the currently set time zone
-  tzonelist->setSelected(KSystemTimeZones::local().name(), true);
+  tzonelist->setSelected(currentTimeZone, true);
   emit timeChanged(false);
 }
 

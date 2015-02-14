@@ -46,7 +46,7 @@ class Dtime : public QWidget, public Ui::DateAndTime
 {
   Q_OBJECT
  public:
-  Dtime( QWidget *parent=0 );
+  Dtime( QWidget *parent, bool haveTimedated);
 
   void processHelperErrors( int code );
   void	load();
@@ -85,6 +85,7 @@ private:
   int		BufI;
   bool		refresh;
   bool		ontimeout;
+  bool  m_haveTimedated;
 };
 
 class Kclock : public QWidget

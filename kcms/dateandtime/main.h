@@ -27,6 +27,7 @@ class Dtime;
 class QTabWidget;
 class KProcess;
 
+class OrgFreedesktopTimedate1Interface;
 
 class KclockModule : public KCModule
 {
@@ -40,9 +41,12 @@ public:
 
 private:
   bool kauthSave();
+  bool timedatedSave();
+
   QTabWidget   *tab;
   Dtime	*dtime;
-  KProcess *process;
+
+  bool m_haveTimedated = false;
 };
 
 #endif // main_included
