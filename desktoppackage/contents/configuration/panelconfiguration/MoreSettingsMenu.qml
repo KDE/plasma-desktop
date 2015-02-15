@@ -46,7 +46,7 @@ PlasmaCore.Dialog {
                     left: parent.left
                     right: parent.right
                 }
-                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Left")
+                text: panel.formFactor === PlasmaCore.Types.Vertical ? i18nd("plasma_shell_org.kde.plasma.desktop", "Top") : i18nd("plasma_shell_org.kde.plasma.desktop", "Left")
                 checkable: true
                 checked: panel.alignment == Qt.AlignLeft
                 onClicked: panel.alignment = Qt.AlignLeft
@@ -68,7 +68,7 @@ PlasmaCore.Dialog {
                     left: parent.left
                     right: parent.right
                 }
-                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Right")
+                text: panel.formFactor === PlasmaCore.Types.Vertical ? i18nd("plasma_shell_org.kde.plasma.desktop", "Bottom") : i18nd("plasma_shell_org.kde.plasma.desktop", "Right")
                 checkable: true
                 checked: panel.alignment == Qt.AlignRight
                 onClicked: panel.alignment = Qt.AlignRight
