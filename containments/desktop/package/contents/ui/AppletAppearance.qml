@@ -258,20 +258,13 @@ Item {
                 property QtObject applet
 
                 property var minimumSize: {
-                    var layout;
-                    var size = new Object;
-                    size['width'] = 0;
-                    size['height'] = 0;
-
-                    if (!applet) {
-                        return size;
-                    }
-
-                    layout = applet.Layout
-
-                    if (layout) {
-                        size.width = layout.minimumWidth;
-                        size.height = layout.minimumHeight;
+                    var size;
+                    if (applet && applet.layout) {
+                        var layout = applet.Layout
+                        size = { 'width': layout.minimumWidth,
+                                 'height': layout.minimumHeight };
+                    } else {
+                        size = { 'width': 0, 'height': 0 };
                     }
 
                     return size;
