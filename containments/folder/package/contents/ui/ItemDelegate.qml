@@ -34,6 +34,7 @@ Item {
     property string name: model.blank ? "" : model.display
     property bool blank: model.blank
     property QtObject popupDialog: loader.item ? loader.item.popupDialog : null
+    property Item iconArea: loader.item ? loader.item.iconArea : null
     property Item label: loader.item ? loader.item.label : null
     property Item labelArea: loader.item ? loader.item.labelArea : null
     property Item actionsOverlay: loader.item ? loader.item.actionsOverlay : null
@@ -62,6 +63,7 @@ Item {
             property bool isDir: model.blank ? false : model.isDir
             property bool hovered: (main.GridView.view.hoveredItem == main)
             property QtObject popupDialog: null
+            property Item iconArea: icon
             property Item label: label
             property Item labelArea: textBackground
             property Item actionsOverlay: actions
@@ -169,8 +171,8 @@ Item {
             PlasmaCore.FrameSvgItem {
                 id: frame
 
-                x: units.smallSpacing * 1
-                y: units.smallSpacing * 1
+                x: units.smallSpacing
+                y: units.smallSpacing
 
                 width: parent.width - (2 * units.smallSpacing)
                 height: (icon.height + (2 * units.smallSpacing) + (label.lineCount

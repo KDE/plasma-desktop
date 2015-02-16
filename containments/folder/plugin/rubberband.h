@@ -31,6 +31,14 @@ class RubberBand : public QQuickPaintedItem
         ~RubberBand();
 
         void paint(QPainter* painter);
+
+        Q_INVOKABLE bool intersects(const QRectF &rect);
+
+    protected:
+        void geometryChanged(const QRectF &newGeometry, const QRectF &oldGeometry);
+
+    private:
+        QRectF m_geometry;
 };
 
 #endif
