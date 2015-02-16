@@ -503,25 +503,20 @@ FocusScope {
                 }
 
                 function rectangleSelect(x, y, width, height) {
-                    if (!main.rubberBand) {
-                        return;
-                    }
-
                     var rows = (gridView.flow == GridView.FlowLeftToRight);
                     var axis = rows ? gridView.width : gridView.height;
                     var step = rows ? cellWidth : cellHeight;
-                    var midWidth = gridView.cellWidth / 2;
-                    var midHeight = gridView.cellHeight / 2;
                     var perStripe = Math.floor(axis / step);
                     var stripes = Math.ceil(gridView.count / perStripe);
-                    var index = 0;
-                    var itemX = 0;
-                    var itemY = 0;
+                    var cWidth = gridView.cellWidth - (2 * units.smallSpacing);
+                    var cHeight = gridView.cellHeight - (2 * units.smallSpacing);
+                    var midWidth = gridView.cellWidth / 2;
+                    var midHeight = gridView.cellHeight / 2;
                     var indices = [];
 
                     for (var s = 0; s < stripes; s++) {
                         for (var i = 0; i < perStripe; i++) {
-                            index = (s * perStripe) + i;
+                            var index = (s * perStripe) + i;
 
                             if (index >= gridView.count) {
                                 break;
@@ -531,16 +526,42 @@ FocusScope {
                                 continue;
                             }
 
-                            itemX = (((rows ? i : s) + 1) * gridView.cellWidth) - midWidth;
-                            itemY = (((rows ? s : i) + 1) * gridView.cellHeight) - midHeight;
+                            var itemX = ((rows ? i : s) * gridView.cellWidth);
+                            var itemY = ((rows ? s : i) * gridView.cellHeight);
 
                             if (gridView.layoutDirection == Qt.RightToLeft) {
                                 itemX -= (rows ? gridView.contentX : gridView.originX);
                                 itemX = (rows ? gridView.width : gridView.contentItem.width) - itemX;
                             }
 
-                            if (itemX > x && itemX < (x + width) && itemY > y && itemY < (y + height)) {
-                                indices.push(positioner.map(index));
+                            // Check if the rubberband intersects this cell first to avoid doing more
+                            // expensive work.
+                            if (main.rubberBand.intersects(Qt.rect(itemX + units.smallSpacing, itemY + units.smallSpacing,
+                                cWidth, cHeight))) {
+                                var item = gridView.contentItem.childAt(itemX + midWidth, itemY + midHeight);
+
+                                // If this is a visible item, check for intersection with the actual
+                                // icon or label rects for better feel.
+                                if (item && item.iconArea) {
+                                    var iconRect = Qt.rect(itemX + item.iconArea.x, itemY + item.iconArea.y,
+                                        item.iconArea.width, item.iconArea.height);
+
+                                    if (main.rubberBand.intersects(iconRect)) {
+                                        indices.push(positioner.map(index));
+                                        continue;
+                                    }
+
+                                    var labelRect = Qt.rect(itemX + item.labelArea.x, itemY + item.labelArea.y,
+                                        item.labelArea.width, item.labelArea.height);
+
+                                    if (main.rubberBand.intersects(labelRect)) {
+                                        indices.push(positioner.map(index));
+                                        continue;
+                                    }
+                                } else {
+                                    // Otherwise be content with the cell intersection.
+                                    indices.push(positioner.map(index));
+                                }
                             }
                         }
                     }

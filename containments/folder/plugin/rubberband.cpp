@@ -47,3 +47,17 @@ void RubberBand::paint(QPainter *painter)
     opt.rect = contentsBoundingRect().toRect();
     qApp->style()->drawControl(QStyle::CE_RubberBand, &opt, painter);
 }
+
+bool RubberBand::intersects(const QRectF &rect)
+{
+    return m_geometry.intersects(rect);
+}
+
+void RubberBand::geometryChanged(const QRectF &newGeometry, const QRectF &oldGeometry)
+{
+    Q_UNUSED(oldGeometry);
+
+    m_geometry = newGeometry;
+
+    QQuickItem::geometryChanged(newGeometry, oldGeometry);
+}
