@@ -259,7 +259,7 @@ Item {
 
                 property var minimumSize: {
                     var size;
-                    if (applet && applet.layout) {
+                    if (applet && applet.Layout) {
                         var layout = applet.Layout
                         size = { 'width': layout.minimumWidth,
                                  'height': layout.minimumHeight };
