@@ -1,6 +1,7 @@
 /*
  *   Copyright 2011 Sebastian Kügler <sebas@kde.org>
  *   Copyright 2011 Marco Martin <mart@kde.org>
+ *   Copyright 2015 Kai Uwe Broulik <kde@privat.broulik.de>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -62,21 +63,6 @@ Item {
     LayoutMirroring.enabled: (Qt.application.layoutDirection === Qt.RightToLeft)
     LayoutMirroring.childrenInherit: true
 
-    Connections {
-        target: plasmoid
-        onFocusChanged: {
-            if (!plasmoid.focus) {
-                toolBoxItem.showing = false;
-            }
-        }
-    }
-    MouseArea {
-        id: toolBoxDismisser
-        anchors.fill: parent
-        visible: toolBoxItem.showing
-        onPressed: toolBoxItem.showing = false
-    }
-
     ToolBoxButton {
         id: toolBoxButton
         visible: false
@@ -96,35 +82,15 @@ Item {
         }
     }
 
-    PlasmaExtras.ConditionalLoader {
-        id: toolBoxItem
-        property alias showing: toolBoxItem.when
-        state: item ? item.state : "collapsed"
-        property int margin: 22
-        width: item ? item.width : 0
-        height: item ? item.height : 0
-        x: {
-            var maxX = main.width - toolBoxItem.width - margin
-            if (toolBoxButton.x > maxX) {
-                return maxX;
-            } else {
-                return Math.max(toolBoxButton.x, margin);
-            }
-        }
-        y: {
-            var maxY = main.height - (item ? item.childrenRect.height : 0) - margin
-            if (toolBoxButton.y > maxY) {
-                return maxY;
-            } else {
-                return Math.max(toolBoxButton.y, margin);
-            }
-        }
-        anchors.margins: 16
-
-        source: Component {
-            ToolBoxItem {
-                showing: toolBoxItem.showing
-            }
+    Loader {
+        id: toolBoxLoader
+        active: false
+        sourceComponent: PlasmaCore.Dialog {
+            flags: Qt.WindowStaysOnTopHint
+            location: PlasmaCore.Types.Floating
+            visualParent: toolBoxButton
+            hideOnWindowDeactivate: true
+            mainItem: ToolBoxItem { }
         }
     }
 
@@ -166,6 +132,5 @@ Item {
         //print("XXXY Setting toolbox to: " + ts + " " + tx + "x" + ty + " screen: " + main.width+ "x" + main.height+"");
         toolBoxButton.x = tx;
         toolBoxButton.y = ty;
-
     }
 }

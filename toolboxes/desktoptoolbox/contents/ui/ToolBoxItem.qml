@@ -1,5 +1,6 @@
 /***************************************************************************
  *   Copyright 2012 by Sebastian Kügler <sebas@kde.org>                    *
+ *   Copyright 2015 by Kai Uwe Broulik <kde@privat.broulik.de>             *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -24,45 +25,13 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
 
 Item {
-    id: toolBoxItem
-
-    property bool showing//: state != "collapsed"
-    property int expandedWidth: 240
-    property int expandedHeight: 240
-
-    width: childrenRect.width
-    height: childrenRect.height
-    transformOrigin: {
-        if (toolBoxButton.state == "topright") {
-            return Item.TopRight;
-        } else if (toolBoxButton.state == "right") {
-            return Item.Right;
-        } else if (toolBoxButton.state == "bottomright") {
-            return Item.BottomRight;
-        } else if (toolBoxButton.state == "bottom") {
-            return Item.Bottom;
-        } else if (toolBoxButton.state == "bottomleft") {
-            return Item.BottomLeft;
-        } else if (toolBoxButton.state == "left") {
-            return Item.Left;
-        } else if (toolBoxButton.state == "topleft") {
-            return Item.TopLeft;
-        } else if (toolBoxButton.state == "top") {
-            return Item.Top;
-        }
-    }
-
-    state: "collapsed"
+    width: units.gridUnit * 14
+    height: actionsColumn.implicitHeight
 
     PlasmaCore.DataSource {
         id: dataEngine
         engine: "powermanagement"
         connectedSources: ["PowerDevil"]
-    }
-
-    onShowingChanged: {
-        print("TB showing changed to " + showing);
-        state = showing ? "expanded" : "collapsed";
     }
 
     function performOperation(what) {
@@ -101,140 +70,47 @@ Item {
         print("TB FIXME: Show Activity Manager");
     }
 
-
-    PlasmaCore.FrameSvgItem {
-        id: toolBoxFrame
-
-        width: actionList.width + toolBoxFrame.margins.left + toolBoxFrame.margins.right
-        height: actionList.height + toolBoxFrame.margins.top + toolBoxFrame.margins.bottom
-        z: 1000
-
-        property Item highlight
-        property Item currentItem: null
-        onCurrentItemChanged: {
-            if (!currentItem) {
-                return
-            } else if (highlight == toolBoxHighlight1) {
-                toolBoxHighlight1.opacity = 0;
-                highlight = toolBoxHighlight2;
-                toolBoxHighlight2.item = currentItem;
-                toolBoxHighlight2.opacity = 1;
-            } else {
-                toolBoxHighlight2.opacity = 0;
-                highlight = toolBoxHighlight1;
-                toolBoxHighlight1.item = currentItem;
-                toolBoxHighlight1.opacity = 1;
-            }
-        }
-
-        imagePath: "widgets/background"
-
-        Behavior on height {
-            NumberAnimation {
-                duration: units.shortDuration
-                easing.type: Easing.OutQuad
-            }
-        }
-
-        Timer {
-            id: exitTimer
-            interval: 200
-            running: true
-            repeat: false
-            onTriggered: { 
-                if (toolBoxFrame.highlight) {
-                    toolBoxFrame.highlight.opacity = 0;
-                }
-                toolBoxFrame.currentItem = null;
-            }
-        }
-
-        Column {
-            id: actionList
-
-            x: parent.x + toolBoxFrame.margins.left
-            y: parent.y + toolBoxFrame.margins.top
-
-            Repeater {
-                id: unlockedList
-                model: plasmoid.actions
-                delegate: ActionDelegate {
-                    actionIcon: modelData.icon
-                    objectName: modelData.objectName
-                }
-            }
-
-            ActionDelegate {
-                label: i18nd("plasma_toolbox_org.kde.desktoptoolbox", "Leave")
-                actionIcon: "system-log-out"
-                objectName: "leave"
-                onTriggered: logout();
-            }
-        }
-
-        PlasmaComponents.Highlight {
-            id: toolBoxHighlight1
-            property Item item
-
-            opacity: 0
-            x: (item != null) ? item.x + toolBoxFrame.margins.left - units.smallSpacing : toolBoxFrame.margins.left
-            y: (item != null) ? item.y + toolBoxFrame.margins.top - units.smallSpacing : toolBoxFrame.margins.top
-            width: actionList.width + units.smallSpacing * 2
-            height: (item != null) ? item.height + units.smallSpacing * 2 : 0
-
-            Behavior on opacity {
-                NumberAnimation {
-                    duration: units.shortDuration * 3
-                    easing.type: Easing.InOutQuad
-                }
-            }
-        }
-        PlasmaComponents.Highlight {
-            id: toolBoxHighlight2
-            property Item item
-
-            opacity: 0
-            x: (item != null) ? item.x + toolBoxFrame.margins.left - units.smallSpacing : toolBoxFrame.margins.left
-            y: (item != null) ? item.y + toolBoxFrame.margins.top - units.smallSpacing : toolBoxFrame.margins.top
-            width: actionList.width + units.smallSpacing * 2
-            height: (item != null) ? item.height + units.smallSpacing * 2 : 0
-
-            Behavior on opacity {
-                NumberAnimation {
-                    duration: units.shortDuration * 3
-                    easing.type: Easing.InOutQuad
-                }
-            }
-        }
+    PlasmaComponents.Highlight {
+        id: highlight
+        y: actionsColumn.currentItem ? actionsColumn.currentItem.y : 0
+        width: actionsColumn.currentItem ? actionsColumn.currentItem.width : 0
+        height: actionsColumn.currentItem ? actionsColumn.currentItem.height : 0
+        visible: actionsColumn.currentItem !== null
     }
 
-    states: [
-        State {
-            name: "expanded"
-            PropertyChanges { target: toolBoxItem; opacity: 1.0; scale: 1; enabled: true}
-        },
-        State {
-            name: "collapsed"
-            PropertyChanges { target: toolBoxItem; opacity: 0; scale: 0.8; enabled: false}
-        }
-    ]
+    Timer {
+        id: exitTimer
+        interval: 1
+        onTriggered: actionsColumn.currentItem = null
+    }
 
-    transitions: [
-        Transition {
-            ParallelAnimation {
-                NumberAnimation {
-                    target: toolBoxItem
-                    properties: "opacity"
-                    easing.type: Easing.InExpo
-                    duration: units.longDuration
-                }
-                NumberAnimation {
-                    target: toolBoxItem
-                    properties: "scale"
-                    easing.type: Easing.InExpo
-                    duration: units.shortDuration * 3
-                }
+    Column {
+        id: actionsColumn
+
+        property Item currentItem: null
+
+        width: parent.width
+        spacing: 0
+
+        Repeater {
+            id: unlockedList
+            model: plasmoid.actions
+            delegate: ActionDelegate {
+                width: parent.width
+                objectName: modelData.objectName
+                icon: modelData.icon
+                text: (modelData.text || "").replace("&", "") // hack to get rid of keyboard accelerator hints
+                visible: modelData.visible && modelData.text !== ""
+                enabled: modelData.enabled
             }
         }
-    ]
+
+        ActionDelegate {
+            width: parent.width
+            objectName: "leave"
+            text: i18nd("plasma_toolbox_org.kde.desktoptoolbox", "Leave")
+            icon: "system-log-out"
+            onClicked: logout()
+        }
+    }
 }

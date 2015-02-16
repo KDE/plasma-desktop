@@ -1,5 +1,6 @@
 /***************************************************************************
  *   Copyright 2012 by Sebastian Kügler <sebas@kde.org>                    *
+ *   Copyright 2015 by Kai Uwe Broulik <kde@privat.broulik.de>             *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -179,7 +180,7 @@ Item {
             anchors.verticalCenter: parent.verticalCenter
             width: iconSize
             height: iconSize
-            opacity: buttonMouse.containsMouse || toolBoxItem.showing ? 1 : 0.5
+            opacity: buttonMouse.containsMouse || (toolBoxLoader.item && toolBoxLoader.item.visible) ? 1 : 0.5
             rotation: isHorizontal ? 0 : -90;
             transformOrigin: Item.Center
             Behavior on opacity {
@@ -248,9 +249,10 @@ Item {
             }
         }
         onClicked: {
-            print ("click state now: " + toolBoxItem.state);
             plasmoid.contextualActionsAboutToShow();
-            toolBoxItem.showing = !toolBoxItem.showing;
+            toolBoxLoader.active = true
+            // the dialog auto-closes on losing focus
+            toolBoxLoader.item.visible = true
             plasmoid.focus = true;
         }
         onReleased: {

@@ -1,5 +1,6 @@
 /***************************************************************************
  *   Copyright 2012 by Sebastian Kügler <sebas@kde.org>                    *
+ *   Copyright 2015 by Kai Uwe Broulik <kde@privat.broulik.de>             *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -18,61 +19,50 @@
  ***************************************************************************/
 
 import QtQuick 2.0
+import QtQuick.Layouts 1.1
+
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
 
-Item {
-    id: toolBoxDelegate
-    signal triggered
-    property int iconSize: 22
-    property Item view: unlockedList
-    property alias label: textLabel.text
-    property alias actionIcon: iconItem.icon
-    height: toolBoxDelegate.iconSize + 14
-    width: childrenRect.width
+MouseArea {
+    id: delegate
+    property alias icon: iconItem.icon
+    property alias text: textLabel.text
 
-    visible: modelData.visible && modelData.text != ""
-    enabled: modelData.enabled
-    KQuickControlsAddons.QIconItem {
-        id: iconItem
-        height: toolBoxDelegate.iconSize
-        width: toolBoxDelegate.iconSize
-        anchors { left: parent.left; verticalCenter: parent.verticalCenter; leftMargin: 4 }
+    height: labelRow.implicitHeight + units.smallSpacing * 2
+    hoverEnabled: true
+    onClicked: {
+        if (typeof modelData !== "undefined") {
+            modelData.trigger()
+        }
+        toolBoxLoader.item.visible = false
     }
+    onEntered: {
+        exitTimer.stop()
+        actionsColumn.currentItem = delegate
+    }
+    onExited: exitTimer.restart()
 
-    PlasmaComponents.Label {
-        id: textLabel
-        text:  modelData.text.replace("&", "") // hack to get rid of keyboard accelerator hints
-        //elide: Text.ElideMiddle
+    RowLayout {
+        id: labelRow
         anchors {
-            left: iconItem.right;
-            leftMargin: 6;
-            verticalCenter: parent.verticalCenter;
+            left: parent.left
+            right: parent.right
+            margins: units.smallSpacing
+            verticalCenter: parent.verticalCenter
         }
-    }
-    MouseArea {
-        anchors.fill: parent
-        anchors.margins: -6
-        hoverEnabled: true
-        onClicked: {
-            if (typeof(modelData) == "undefined") {
-                triggered();
-            } else {
-                modelData.trigger();
-            }
+        spacing: units.smallSpacing
+
+        KQuickControlsAddons.QIconItem {
+            id: iconItem
+            width: units.iconSizes.medium
+            height: width
         }
-        onPressed: PlasmaExtras.PressedAnimation { targetItem: toolBoxDelegate }
-        onReleased: PlasmaExtras.ReleasedAnimation { targetItem: toolBoxDelegate }
-        onEntered: {
-            toolBoxFrame.currentItem = toolBoxDelegate;
-//            toolBoxHighlight.opacity = 1;
-            exitTimer.running = false;
-        }
-        onExited:  {
-            if (toolBoxFrame.currentItem != null) {
-                exitTimer.start()
-            }
+
+        PlasmaComponents.Label {
+            id: textLabel
+            Layout.fillWidth: true
         }
     }
 }
