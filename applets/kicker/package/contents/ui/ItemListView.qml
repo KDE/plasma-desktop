@@ -80,7 +80,8 @@ FocusScope {
             childDialog.model = model.modelForRow(listView.currentIndex);
             childDialog.visible = true;
 
-            windowSystem.forceActive(itemList);
+            windowSystem.forceActive(childDialog.mainItem);
+            childDialog.mainItem.focus = true;
         }
     }
 
