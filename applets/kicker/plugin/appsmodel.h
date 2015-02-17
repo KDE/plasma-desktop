@@ -120,7 +120,6 @@ class AppsModel : public AbstractModel
         QTimer *m_changeTimer;
         bool m_flat;
         NameFormat m_appNameFormat;
-        bool m_sortNeeded;
         QStringList m_hiddenEntries;
         QObject *m_appletInterface;
         static MenuEntryEditor *m_menuEntryEditor;

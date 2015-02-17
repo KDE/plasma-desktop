@@ -76,7 +76,6 @@ AppsModel::AppsModel(const QString &entryPath, bool flat, QObject *parent)
 , m_changeTimer(0)
 , m_flat(flat)
 , m_appNameFormat(NameOnly)
-, m_sortNeeded(false)
 , m_appletInterface(0)
 {
     if (!m_menuEntryEditor) {
@@ -449,14 +448,16 @@ void AppsModel::refresh()
         KServiceGroup::Ptr group = KServiceGroup::group(m_entryPath);
         processServiceGroup(group);
 
-        if (m_sortNeeded) {
-            QCollator c;
+        QCollator c;
 
-            std::sort(m_entryList.begin(), m_entryList.end(),
-                [&c](AbstractEntry* a, AbstractEntry* b) { return c.compare(a->name(), b->name()) < 0; });
-
-            m_sortNeeded = false;
-        }
+        std::sort(m_entryList.begin(), m_entryList.end(),
+            [&c](AbstractEntry* a, AbstractEntry* b) {
+                if (a->type() != b->type()) {
+                    return a->type() > b->type();
+                } else {
+                    return c.compare(a->name(), b->name()) < 0;
+                }
+            });
     }
 
     endResetModel();
@@ -511,8 +512,6 @@ void AppsModel::processServiceGroup(KServiceGroup::Ptr group)
             if (m_flat) {
                 const KServiceGroup::Ptr serviceGroup(static_cast<KServiceGroup*>(p.data()));
                 processServiceGroup(serviceGroup);
-
-                m_sortNeeded = true;
             } else {
                 const KServiceGroup::Ptr subGroup(static_cast<KServiceGroup*>(p.data()));
 
