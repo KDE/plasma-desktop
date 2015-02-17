@@ -97,7 +97,7 @@ Item {
         var x = toolBoxButton.x - mainArea.x;
         var y = toolBoxButton.y - mainArea.y;
 
-        var cornerSnap = toolBoxIcon.width;
+        var cornerSnap = iconWidth
 
         if (x < cornerSnap && y < cornerSnap) {
             toolBoxButton.state = "topleft";
