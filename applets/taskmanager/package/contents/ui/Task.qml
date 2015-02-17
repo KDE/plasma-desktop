@@ -143,7 +143,11 @@ MouseEventListener {
         }
     }
 
-    onWheelMoved: wheelDelta = TaskTools.wheelActivateNextPrevTask(task, wheelDelta, wheel.delta);
+    onWheelMoved: {
+        if (plasmoid.configuration.wheelEnabled) {
+            wheelDelta = TaskTools.wheelActivateNextPrevTask(task, wheelDelta, wheel.delta);
+        }
+    }
 
     PlasmaCore.FrameSvgItem {
         id: frame

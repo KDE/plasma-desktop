@@ -89,6 +89,7 @@ Item {
 
         anchors.fill: parent
         property int wheelDelta: 0;
+        enabled: plasmoid.configuration.wheelEnabled
 
         onWheelMoved: wheelDelta = TaskTools.wheelActivateNextPrevTask(false, wheelDelta, wheel.delta);
     }

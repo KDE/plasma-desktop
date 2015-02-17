@@ -27,6 +27,7 @@ Item {
 
     property alias cfg_forceStripes: forceStripes.checked
     property alias cfg_showToolTips: showToolTips.checked
+    property alias cfg_wheelEnabled: wheelEnabled.checked
     property alias cfg_highlightWindows: highlightWindows.checked
     property alias cfg_maxStripes: maxStripes.value
     property alias cfg_groupingStrategy: groupingStrategy.currentIndex
@@ -57,11 +58,6 @@ Item {
                     text: i18n("Show tooltips")
                 }
 
-                CheckBox {
-                    id: highlightWindows
-                    text: i18n("Highlight windows")
-                }
-
                 RowLayout {
                     Layout.fillHeight: false
 
@@ -73,6 +69,27 @@ Item {
                         id: maxStripes
                         minimumValue: 1
                     }
+                }
+            }
+        }
+
+        GroupBox {
+            Layout.fillWidth: true
+
+            title: i18n("Behavior")
+            flat: true
+
+            ColumnLayout {
+                Layout.fillWidth: true
+
+                CheckBox {
+                    id: wheelEnabled
+                    text: i18n("Cycle through tasks with mouse wheel")
+                }
+
+                CheckBox {
+                    id: highlightWindows
+                    text: i18n("Highlight windows")
                 }
             }
         }
