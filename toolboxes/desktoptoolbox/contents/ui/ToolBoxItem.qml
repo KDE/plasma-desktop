@@ -19,19 +19,44 @@
  ***************************************************************************/
 
 import QtQuick 2.0
+import QtQuick.Layouts 1.1
+
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
 
-Item {
+ListView {
+    id: menu
     width: units.gridUnit * 14
-    height: actionsColumn.implicitHeight
+    height: contentHeight
 
-    PlasmaCore.DataSource {
-        id: dataEngine
-        engine: "powermanagement"
-        connectedSources: ["PowerDevil"]
+    currentIndex: -1
+    focus: true
+    keyNavigationWraps: true
+
+    onVisibleChanged: currentIndex = -1
+
+    // needs to be on released, otherwise Dashboard hides because it already gained focus
+    // because of the dialog closing right on the key *press* event
+    Keys.onReleased: {
+        if (event.key === Qt.Key_Escape) {
+            toolBoxLoader.item.visible = false
+            event.accepted = true
+        }
+    }
+
+    Keys.onPressed: {
+        if (event.key === Qt.Key_Return || event.key === Qt.Key_Enter) {
+            if (currentIndex >= 0) {
+                if (model[currentIndex].operation) {
+                    performOperation(model[currentIndex].operation)
+                } else {
+                    model[currentIndex].trigger()
+                }
+            }
+            toolBoxLoader.item.visible = false
+            event.accepted = true
+        }
     }
 
     function performOperation(what) {
@@ -40,77 +65,81 @@ Item {
         return service.startOperationCall(operation);
     }
 
-    function lockScreen() {
-        print("TB locking...");
-        performOperation("lockScreen");
+    highlightMoveDuration: 0
+    highlightResizeDuration: 0
+    highlight: PlasmaComponents.Highlight { }
+
+    PlasmaCore.DataSource {
+        id: dataEngine
+        engine: "powermanagement"
+        connectedSources: ["PowerDevil"]
     }
 
-    function lockWidgets(lock) {
-        plasmoid.action("lock").trigger();
-    }
-
-    function logout() {
-        print("TB shutdown...");
-        performOperation("requestShutDown");
-    }
-
-    function containmentSettings() {
-        plasmoid.action("configure").trigger();
-    }
-
-    function shortcutSettings() {
-        print("FIXME: implement shortcut settings");
-    }
-
-    function showWidgetsExplorer() {
-        plasmoid.action("add widgets").trigger();
-    }
-
-    function showActivities() {
-        print("TB FIXME: Show Activity Manager");
-    }
-
-    PlasmaComponents.Highlight {
-        id: highlight
-        y: actionsColumn.currentItem ? actionsColumn.currentItem.y : 0
-        width: actionsColumn.currentItem ? actionsColumn.currentItem.width : 0
-        height: actionsColumn.currentItem ? actionsColumn.currentItem.height : 0
-        visible: actionsColumn.currentItem !== null
-    }
-
-    Timer {
-        id: exitTimer
-        interval: 1
-        onTriggered: actionsColumn.currentItem = null
-    }
-
-    Column {
-        id: actionsColumn
-
-        property Item currentItem: null
-
-        width: parent.width
-        spacing: 0
-
-        Repeater {
-            id: unlockedList
-            model: plasmoid.actions
-            delegate: ActionDelegate {
-                width: parent.width
-                objectName: modelData.objectName
-                icon: modelData.icon
-                text: (modelData.text || "").replace("&", "") // hack to get rid of keyboard accelerator hints
-                visible: modelData.visible && modelData.text !== ""
-                enabled: modelData.enabled
+    model: {
+        var model = []
+        var actions = plasmoid.actions
+        for (var i = 0, j = actions.length; i < j; ++i) {
+            var action = actions[i]
+            if (action && action.visible && action.text !== "") {
+                model.push(action)
             }
         }
 
-        ActionDelegate {
-            width: parent.width
-            objectName: "leave"
-            text: i18nd("plasma_toolbox_org.kde.desktoptoolbox", "Leave")
-            icon: "system-log-out"
-            onClicked: logout()
+        model.push({
+            text: i18nd("plasma_toolbox_org.kde.desktoptoolbox", "Leave"),
+            icon: "system-log-out",
+            visible: true,
+            enabled: true,
+            operation: "requestShutDown" // cannot put function() into a model :(
+        })
+        return model
+    }
+
+    delegate: MouseArea {
+        width: menu.width
+        height: labelRow.implicitHeight + units.smallSpacing * 2
+        hoverEnabled: true
+        enabled: modelData.enabled
+        opacity: modelData.enabled ? 1 : 0.5
+
+        onEntered: menu.currentIndex = index
+        onExited: menu.currentIndex = -1
+
+        onClicked: {
+            if (modelData.operation) {
+                performOperation(modelData.operation)
+            } else {
+                modelData.trigger()
+            }
+            toolBoxLoader.item.visible = false
+        }
+
+        Accessible.role: Accessible.MenuItem
+        Accessible.name: textLabel.text
+
+        RowLayout {
+            id: labelRow
+            anchors {
+                left: parent.left
+                right: parent.right
+                margins: units.smallSpacing
+                verticalCenter: parent.verticalCenter
+            }
+            spacing: units.smallSpacing
+
+            KQuickControlsAddons.QIconItem {
+                width: units.iconSizes.medium
+                height: width
+                icon: modelData.icon
+                Accessible.ignored: true
+            }
+
+            PlasmaComponents.Label {
+                id: textLabel
+                Layout.fillWidth: true
+                text: modelData.text.replace("&", "") // hack to get rid of keyboard accelerator hints
+                Accessible.ignored: true
+            }
         }
     }
 }
