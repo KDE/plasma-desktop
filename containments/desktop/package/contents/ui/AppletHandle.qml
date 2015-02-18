@@ -103,6 +103,7 @@ KQuickControlsAddons.MouseEventListener {
             elementId: "size-diagonal-tr2bl"
             iconSize: root.iconSize
             mainText: i18n("Resize")
+            active: !resizeHandle.pressed
 
             MouseArea {
                 id: resizeHandle
@@ -115,6 +116,7 @@ KQuickControlsAddons.MouseEventListener {
                 property int startY
 
                 onPressed: {
+                    parent.hideToolTip();
                     mouse.accepted = true
                     animationsEnabled = false;
                     startX = mouse.x;
@@ -144,13 +146,14 @@ KQuickControlsAddons.MouseEventListener {
             mainText: i18n("Rotate")
             iconSize: root.iconSize
             action: (applet) ? applet.action("rotate") : null
+            active: !rotateHandle.pressed
             Component.onCompleted: {
                 if (action && typeof(action) != "undefined") {
                     action.enabled = true
                 }
             }
             MouseArea {
-
+                id: rotateHandle
                 anchors {
                     fill: parent
                     margins: -buttonMargin
@@ -180,6 +183,7 @@ KQuickControlsAddons.MouseEventListener {
                 }
 
                 onPressed: {
+                    parent.hideToolTip();
                     mouse.accepted = true
                     animationsEnabled = false;
                     startRotation = appletItem.rotation;

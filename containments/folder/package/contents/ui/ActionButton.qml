@@ -120,6 +120,7 @@ PlasmaCore.ToolTipArea {
         anchors.bottomMargin: -10
         preventStealing: true
         onPressed: {
+            console.log("HWEFUIWHEFIUWEFHWEF")
             buttonItem.elementId = "pressed"
             shadowItem.opacity = 0;
             button.x = button.x + button.pressedOffset;
