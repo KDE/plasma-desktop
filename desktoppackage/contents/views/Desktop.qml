@@ -22,6 +22,8 @@ import QtQuick 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.shell 2.0 as Shell
+import org.kde.kwindowsystem 1.0
+
 import "../activitymanager"
 import "../explorer"
 
@@ -53,6 +55,10 @@ Item {
         }
     }
 
+    KWindowSystem {
+        id: kwindowsystem
+    }
+
     Rectangle {
         anchors.fill: parent
         visible: desktop.dashboardShown
@@ -72,7 +78,6 @@ Item {
                 sidePanelStack.state = "closed";
             } else {
                 var rect = containment.availableScreenRect;
-                sidePanel.requestActivate();
                 // get the current available screen geometry and subtract the dialog's frame margins
                 sidePanelStack.height = containment ? rect.height - sidePanel.margins.top - sidePanel.margins.bottom : 1000;
                 sidePanel.x = desktop.x + rect.x;
@@ -99,6 +104,7 @@ Item {
                     }
                 }
                 sidePanel.visible = true;
+                kwindowsystem.forceActivateWindow(sidePanel)
             }
             onStateChanged: {
                 if (sidePanelStack.state == "closed") {
