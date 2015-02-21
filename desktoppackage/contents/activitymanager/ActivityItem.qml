@@ -24,26 +24,31 @@ Item {
 
     property string background : ""
 
-    function updateBackground() {
-        console.log("QML Getting the wallpaperThumbnail");
-        if (backgroundWallpaper.width * backgroundWallpaper.height == 0)
-            return;
+    function updateBackground(valid) {
+        if (valid) {
+            console.log("Switcher: QML Getting the wallpaperThumbnail");
 
-        // Try to get the pixmap, if it is not available, this function
-        // will be called again when the thumbnailer finishes its job
-        // console.log("Loading background for " + root.title);
-        backgroundWallpaper.pixmap = ActivitySwitcher.Backend.wallpaperThumbnail(
-            background,
-            backgroundWallpaper.width,
-            backgroundWallpaper.height,
-            updateBackground
-            );
-        backgroundColor.visible = false;
+            // Try to get the pixmap, if it is not available, this function
+            // will be called again when the thumbnailer finishes its job
+            // console.log("Loading background for " + root.title);
+            backgroundWallpaper.pixmap = ActivitySwitcher.Backend.wallpaperThumbnail(
+                background,
+                backgroundWallpaper.width,
+                backgroundWallpaper.height,
+                updateBackground
+                );
+            backgroundColor.visible = false;
+
+        } else {
+            backgroundColor.color = "#000000";
+            backgroundColor.visible = true;
+
+        }
     }
 
     onBackgroundChanged: if (background[0] != '#') {
         // We have a proper wallpaper, hurroo!
-        updateBackground();
+        updateBackground(true);
 
     } else {
         // We have only a color
@@ -60,8 +65,8 @@ Item {
     // Marco removed displayAspectRatio
     height : width * 9.0 / 16.0
 
-    onWidthChanged: updateBackground()
-    onHeightChanged: updateBackground()
+    onWidthChanged: updateBackground(true)
+    onHeightChanged: updateBackground(true)
 
 
     Item {

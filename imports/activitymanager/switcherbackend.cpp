@@ -308,9 +308,15 @@ void SwitcherBackend::setShouldShowSwitcher(const bool &shouldShowSwitcher)
 QPixmap SwitcherBackend::wallpaperThumbnail(const QString &path, int width, int height,
             const QJSValue &_callback)
 {
+    // qDebug() << "SwitcherBackend: Requesting wallpaper: " << path << width << height;
+
     QJSValue callback(_callback);
 
-    QPixmap preview = QPixmap(QSize(width, height));
+    if (path.isEmpty()) {
+        callback.call({false});
+    }
+
+    QPixmap preview = QPixmap(QSize(0, 0));
 
     if (width == 0) {
         width = 320;
@@ -320,15 +326,20 @@ QPixmap SwitcherBackend::wallpaperThumbnail(const QString &path, int width, int 
         height = 240;
     }
 
+
     const auto pixmapKey = path + "/"
         + QString::number(width) + "x"
         + QString::number(height);
+
+    // qDebug() << "SwitcherBackend: Wallpaper cache id is: " << pixmapKey;
 
     if (m_wallpaperCache->findPixmap(pixmapKey, &preview)) {
         return preview;
     }
 
     QUrl file(path);
+
+    // qDebug() << "SwitcherBackend: Cache miss. We need to generate the thumbnail: " << file;
 
     if (!m_previewJobs.contains(file) && file.isValid()) {
         m_previewJobs.insert(file);
@@ -344,14 +355,21 @@ QPixmap SwitcherBackend::wallpaperThumbnail(const QString &path, int width, int 
         connect(job, &KIO::PreviewJob::gotPreview,
                 this, [=] (const KFileItem& item, const QPixmap& pixmap) mutable {
                     Q_UNUSED(item);
-                    m_previewJobs.remove(path);
                     m_wallpaperCache->insertPixmap(pixmapKey, pixmap);
-                    callback.call({});
+                    m_previewJobs.remove(path);
+
+                    // qDebug() << "SwitcherBackend: Got the thumbnail for " << path << "saving under" << pixmapKey;
+                    callback.call({true});
+
                 });
         connect(job, &KIO::PreviewJob::failed,
-                this, [=] (const KFileItem& item) {
+                this, [=] (const KFileItem& item) mutable {
                     Q_UNUSED(item);
                     m_previewJobs.remove(path);
+
+                    qWarning() << "SwitcherBackend: FAILED to get the thumbnail for "
+                               << path << job->detailedErrorStrings(&file);
+                    callback.call({false});
                 });
 
     }
