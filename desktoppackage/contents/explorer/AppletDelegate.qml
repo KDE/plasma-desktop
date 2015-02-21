@@ -18,7 +18,7 @@
  */
 
 import QtQuick 2.0
-import QtQuick.Layouts 1.0
+import QtQuick.Layouts 1.1
 
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
@@ -26,22 +26,13 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.draganddrop 2.0
 import org.kde.kquickcontrolsaddons 2.0
 
-PlasmaCore.FrameSvgItem {
-    id: background
+Item {
+    id: delegate
+
+    readonly property string pluginName: model.pluginName
+
     width: list.delegateWidth
     height: list.delegateHeight
-
-    property variant icon: decoration
-    property string title: name
-    property string description: model.description
-    property string author: model.author
-    property string email: model.email
-    property string license: model.license
-    property string pluginName: model.pluginName
-    property bool local: model.local
-
-    imagePath: "widgets/viewitem"
-    prefix: mouseArea.containsMouse ? "hover" : "normal"
 
     DragArea {
         anchors.fill: parent
@@ -60,68 +51,62 @@ PlasmaCore.FrameSvgItem {
             main.preventWindowHide = false;
         }
 
-        QIconItem {
-            id: iconWidget
-            anchors.verticalCenter: parent.verticalCenter
-            x: y
-            width: units.iconSizes.huge
-            height: width
-            icon: background.icon
-        }
-
-        PlasmaExtras.Heading {
-            id: titleText
-            level: 4
-            text: name
-            elide: Text.ElideRight
-            wrapMode: Text.WordWrap
-            maximumLineCount: 2
+        RowLayout {
             anchors {
-                top: parent.top
-                left: iconWidget.right
-                right: parent.right
-                topMargin: background.margins.top
-                leftMargin: background.margins.left
-                rightMargin: background.margins.right
+                fill: parent
+                margins: units.smallSpacing
             }
-        }
-        PlasmaComponents.Label {
-            text: description
-            font.pointSize: theme.smallestFont.pointSize
-            wrapMode: Text.WordWrap
-            elide: Text.ElideRight
+            spacing: units.largeSpacing
 
-            anchors {
-                top: titleText.bottom
-                left: iconWidget.right
-                right: parent.right
-                bottom: parent.bottom
-                topMargin: units.smallSpacing
-                bottomMargin: background.margins.bottom
-                leftMargin: background.margins.left
-                rightMargin: background.margins.right
+            QIconItem {
+                id: iconWidget
+                width: units.iconSizes.huge
+                height: width
+                icon: model.decoration
+
+                QIconItem {
+                    anchors {
+                        top: parent.top
+                        left: parent.left
+                        margins: units.smallSpacing
+                    }
+                    icon: visible ? "dialog-ok-apply" : undefined
+                    visible: running
+                    width: units.iconSizes.small
+                    height: width
+                }
             }
 
-        }
-        QIconItem {
-            icon: running ? "dialog-ok-apply" : undefined
-            visible: running
-            width: units.iconSizes.small
-            height: width
-            anchors {
-                top: iconWidget.top
-                left: iconWidget.left
-                topMargin: units.smallSpacing
-                leftMargin: units.smallSpacing
+            ColumnLayout {
+                Layout.fillWidth: true
+                spacing: units.smallSpacing
+
+                PlasmaExtras.Heading {
+                    Layout.fillWidth: true
+                    level: 4
+                    text: model.name
+                    elide: Text.ElideRight
+                    wrapMode: Text.WordWrap
+                    maximumLineCount: 2
+                }
+                PlasmaComponents.Label {
+                    Layout.fillWidth: true
+                    text: model.description
+                    font.pointSize: theme.smallestFont.pointSize
+                    wrapMode: Text.WordWrap
+                    elide: Text.ElideRight
+                    maximumLineCount: 2
+                }
             }
         }
+
         MouseArea {
             id: mouseArea
             anchors.fill: parent
             hoverEnabled: true
             onDoubleClicked: widgetExplorer.addApplet(pluginName)
-            //onEntered: tooltipDialog.appletDelegate = background
-            //onExited: tooltipDialog.appletDelegate = null
+            onEntered: delegate.ListView.view.currentIndex = index
+            onExited: delegate.ListView.view.currentIndex = -1
         }
     }
 }
