@@ -70,6 +70,7 @@ Item {
         id: sidePanel
         location: PlasmaCore.Types.LeftEdge
         type: PlasmaCore.Dialog.Dock
+        flags: Qt.WindowStaysOnTopHint
 
         hideOnWindowDeactivate: true
 
