@@ -33,12 +33,8 @@ import org.kde.plasma.private.shell 2.0
 Item {
     id: main
 
-    width: minimumWidth
+    width: Math.max(heading.paintedWidth, units.gridUnit * 15)
     height: 800//Screen.height
-
-    // The +4 is for the gap and cross button
-    property int minimumWidth: theme.mSize(heading.font).width * (heading.text.length + 6)
-    property int minimumHeight: 800//width will be set by the dialog anyway
 
     property alias containment: widgetExplorer.containment
 
@@ -189,7 +185,6 @@ Item {
         PlasmaExtras.Title {
             id: heading
             text: i18nd("plasma_shell_org.kde.plasma.desktop", "Widgets")
-            elide: Text.ElideRight
             Layout.fillWidth: true
         }
 
@@ -248,14 +243,9 @@ Item {
         ListView {
             id: list
 
-            property int delegateWidth: list.width
-            property int delegateHeight: units.iconSizes.huge + backgroundHint.margins.top + backgroundHint.margins.bottom
-
             model: widgetExplorer.widgetsModel
             activeFocusOnTab: true
             currentIndex: -1
-
-            cacheBuffer: delegateHeight * 5 // keep 5 delegates either side
 
             delegate: AppletDelegate {}
             highlight: PlasmaComponents.Highlight {}

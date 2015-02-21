@@ -31,8 +31,8 @@ Item {
 
     readonly property string pluginName: model.pluginName
 
-    width: list.delegateWidth
-    height: list.delegateHeight
+    width: list.width
+    height: iconWidget.height + units.largeSpacing
 
     DragArea {
         anchors.fill: parent
@@ -55,6 +55,7 @@ Item {
             anchors {
                 fill: parent
                 margins: units.smallSpacing
+                rightMargin: units.smallSpacing * 2 // don't cram the text to the border too much
             }
             spacing: units.largeSpacing
 
@@ -82,20 +83,24 @@ Item {
                 spacing: units.smallSpacing
 
                 PlasmaExtras.Heading {
+                    id: heading
                     Layout.fillWidth: true
                     level: 4
                     text: model.name
                     elide: Text.ElideRight
                     wrapMode: Text.WordWrap
                     maximumLineCount: 2
+                    lineHeight: 0.95
                 }
                 PlasmaComponents.Label {
                     Layout.fillWidth: true
+                    // otherwise causes binding loop due to the way the Plasma sets the height
+                    height: implicitHeight
                     text: model.description
                     font.pointSize: theme.smallestFont.pointSize
                     wrapMode: Text.WordWrap
                     elide: Text.ElideRight
-                    maximumLineCount: 2
+                    maximumLineCount: heading.lineCount === 1 ? 3 : 2
                 }
             }
         }
