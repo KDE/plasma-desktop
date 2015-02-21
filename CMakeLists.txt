@@ -145,5 +145,7 @@ add_subdirectory(applets)
 add_subdirectory(kcms)
 add_subdirectory(knetattach)
 add_subdirectory(attica-kde)
+add_subdirectory(imports/activitymanager/)
+
 
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)

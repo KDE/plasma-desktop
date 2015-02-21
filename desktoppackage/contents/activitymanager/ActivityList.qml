@@ -32,6 +32,7 @@ Flickable {
     property var    model: activitiesModel
     property string filterString: ""
     property bool   showingDialog: activityDeletionDialog.visible || activityConfigurationDialog.visible
+    property bool   showSwitcherOnly: false
 
     property int    selectedIndex: -1
 
@@ -155,6 +156,7 @@ Flickable {
         id: content
 
         width: parent.width
+        spacing: units.smallSpacing * 2
 
         // Running activities
 
@@ -209,13 +211,13 @@ Flickable {
         PlasmaExtras.Heading {
             text: i18nd("plasma_shell_org.kde.plasma.desktop", "Stopped activities:")
             level: 3
-            visible: stoppedActivitiesList.count > 0
+            visible: !root.showSwitcherOnly && stoppedActivitiesList.count > 0
         }
 
         Repeater {
             id: stoppedActivitiesList
 
-            model: stoppedActivitiesModel
+            model: root.showSwitcherOnly ? null : stoppedActivitiesModel
 
             delegate: StoppedActivityItem {
                 id: stoppedActivityItem

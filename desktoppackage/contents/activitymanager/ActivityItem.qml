@@ -2,6 +2,8 @@ import QtQuick 2.0
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.extras 2.0 as PlasmaExtras
+import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddonsComponents
+import org.kde.plasma.activityswitcher 1.0 as ActivitySwitcher
 
 Item {
     id: root
@@ -15,14 +17,33 @@ Item {
     property alias title       : title.text
     property alias icon        : icon.source
 
+    z : current  ? 10 :
+        selected ?  5 : 0
+
     property string activityId : ""
 
     property string background : ""
 
+    function updateBackground() {
+        console.log("QML Getting the wallpaperThumbnail");
+        if (backgroundWallpaper.width * backgroundWallpaper.height == 0)
+            return;
+
+        // Try to get the pixmap, if it is not available, this function
+        // will be called again when the thumbnailer finishes its job
+        // console.log("Loading background for " + root.title);
+        backgroundWallpaper.pixmap = ActivitySwitcher.Backend.wallpaperThumbnail(
+            background,
+            backgroundWallpaper.width,
+            backgroundWallpaper.height,
+            updateBackground
+            );
+        backgroundColor.visible = false;
+    }
+
     onBackgroundChanged: if (background[0] != '#') {
         // We have a proper wallpaper, hurroo!
-        backgroundWallpaper.source = background
-        backgroundColor.visible = false
+        updateBackground();
 
     } else {
         // We have only a color
@@ -39,32 +60,13 @@ Item {
     // Marco removed displayAspectRatio
     height : width * 9.0 / 16.0
 
-    // Background until we get something real
-    PlasmaCore.FrameSvgItem {
-        id: highlight
-        imagePath: "widgets/viewitem"
-        visible: root.current || root.selected
+    onWidthChanged: updateBackground()
+    onHeightChanged: updateBackground()
 
-        anchors {
-            fill: parent
-            leftMargin: -highlight.margins.left
-            bottomMargin: -highlight.margins.bottom
-        }
-
-        prefix:
-            root.current  ? "selected" :
-            root.selected ? "hover" :
-                            "normal"
-
-    }
 
     Item {
         anchors {
             fill: parent
-
-            leftMargin: highlight.margins.left
-            rightMargin: highlight.margins.right
-            topMargin: highlight.margins.top
         }
 
         // Background until we get something real
@@ -76,7 +78,7 @@ Item {
             opacity: root.selected ? .8 : .5
         }
 
-        Image {
+        KQuickControlsAddonsComponents.QPixmapItem {
             id: backgroundWallpaper
             anchors.fill: parent
 
@@ -89,7 +91,7 @@ Item {
             id: shade
 
             color   : "black"
-            opacity: root.selected ? .8 : .5
+            opacity : root.selected ? 1.0 : 0.5
 
             height  : title.height + 2 * title.anchors.margins
             width   : parent.width
@@ -101,6 +103,31 @@ Item {
             }
         }
 
+        Rectangle {
+            id: highlight
+
+            // opacity: root.current ? 1.0 : 0
+            visible:  root.current
+
+            border.width: root.current ? units.smallSpacing * 1.5 : 0
+            border.color: theme.highlightColor
+
+            anchors {
+                fill: parent
+                // Hide the rounding error on the bottom of the rectangle
+                bottomMargin: -1
+            }
+
+            color: "transparent"
+
+            // Behavior on opacity {
+            //     PropertyAnimation {
+            //         duration: units.shortDuration
+            //         easing.type: Easing.OutQuad
+            //     }
+            // }
+        }
+
         PlasmaCore.IconItem {
             id: icon
 
@@ -108,8 +135,8 @@ Item {
             height : width
 
             anchors {
-                bottom  : parent.bottom
-                left    : parent.left
+                bottom  : shade.bottom
+                left    : shade.left
                 margins : root.innerPadding
             }
         }

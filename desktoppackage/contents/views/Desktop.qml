@@ -21,9 +21,8 @@ import QtQuick 2.0
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
-import org.kde.plasma.shell 2.0 as Shell
 import org.kde.kwindowsystem 1.0
-
+import org.kde.plasma.activityswitcher 1.0 as ActivitySwitcher
 import "../activitymanager"
 import "../explorer"
 
@@ -34,24 +33,41 @@ Item {
     property Item containment
     property Item wallpaper
 
+    Connections {
+        target: ActivitySwitcher.Backend
+        onShouldShowSwitcherChanged: {
+            if (ActivitySwitcher.Backend.shouldShowSwitcher) {
+                if (sidePanelStack.state != "activityManager") {
+                    root.toggleActivityManager();
+                }
+
+            } else {
+                if (sidePanelStack.state == "activityManager") {
+                    root.toggleActivityManager();
+                }
+
+            }
+        }
+    }
+
     function toggleWidgetExplorer(containment) {
 //         console.log("Widget Explorer toggled");
 
         if (sidePanelStack.state == "widgetExplorer") {
             sidePanelStack.state = "closed";
         } else {
-            sidePanelStack.setSource(Qt.resolvedUrl("../explorer/WidgetExplorer.qml"), {"containment": containment})
             sidePanelStack.state = "widgetExplorer";
+            sidePanelStack.setSource(Qt.resolvedUrl("../explorer/WidgetExplorer.qml"), {"containment": containment})
         }
     }
 
     function toggleActivityManager() {
-//         console.log("Activity manger toggled");
+        console.log("Activity manger toggled");
         if (sidePanelStack.state == "activityManager") {
             sidePanelStack.state = "closed";
         } else {
-            sidePanelStack.setSource(Qt.resolvedUrl("../activitymanager/ActivityManager.qml"))
             sidePanelStack.state = "activityManager";
+            sidePanelStack.setSource(Qt.resolvedUrl("../activitymanager/ActivityManager.qml"))
         }
     }
 
@@ -77,6 +93,7 @@ Item {
         onVisibleChanged: {
             if (!visible) {
                 sidePanelStack.state = "closed";
+                ActivitySwitcher.Backend.shouldShowSwitcher = false;
             } else {
                 var rect = containment.availableScreenRect;
                 // get the current available screen geometry and subtract the dialog's frame margins
@@ -91,12 +108,19 @@ Item {
             asynchronous: true
             height: 1000 //start with some arbitrary height, will be changed from onVisibleChanged
             width: item ? item.width: 0
+            state: "closed"
+
             onLoaded: {
                 if (sidePanelStack.item) {
                     item.closed.connect(function(){sidePanelStack.state = "closed";});
 
                     if (sidePanelStack.state == "activityManager") {
-                        sidePanel.hideOnWindowDeactivate = Qt.binding(function() { return sidePanelStack.item && !sidePanelStack.item.showingDialog; })
+                        sidePanelStack.item.showSwitcherOnly =
+                            ActivitySwitcher.Backend.shouldShowSwitcher
+                        sidePanel.hideOnWindowDeactivate = Qt.binding(function() {
+                            return !ActivitySwitcher.Backend.shouldShowSwitcher
+                                && !sidePanelStack.item.showingDialog;
+                        })
                         sidePanelStack.item.forceActiveFocus();
                     } else if (sidePanelStack.state == "widgetExplorer"){
                         sidePanel.hideOnWindowDeactivate = Qt.binding(function() { return sidePanelStack.item && !sidePanelStack.item.preventWindowHide; })
