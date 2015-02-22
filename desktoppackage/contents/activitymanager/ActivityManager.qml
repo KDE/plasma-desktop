@@ -39,14 +39,11 @@ FocusScope {
     property int cellWidth: theme.mSize(theme.defaultFont).width * 30
     property int spacing: 2 * units.smallSpacing
 
-    property int minimumWidth: cellWidth + 4 * 2
-    property int minimumHeight: 0
-
     property bool showSwitcherOnly: false
 
     property bool showingDialog: activityBrowser.showingDialog
 
-    width: minimumWidth
+    width: units.gridUnit * 16
 
     Item {
         id: activityBrowser

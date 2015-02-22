@@ -33,7 +33,7 @@ import org.kde.plasma.private.shell 2.0
 Item {
     id: main
 
-    width: Math.max(heading.paintedWidth, units.gridUnit * 15)
+    width: Math.max(heading.paintedWidth, units.gridUnit * 16)
     height: 800//Screen.height
 
     property alias containment: widgetExplorer.containment
