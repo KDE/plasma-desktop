@@ -246,6 +246,7 @@ Item {
             model: widgetExplorer.widgetsModel
             activeFocusOnTab: true
             currentIndex: -1
+            keyNavigationWraps: true
 
             delegate: AppletDelegate {}
             highlight: PlasmaComponents.Highlight {}
