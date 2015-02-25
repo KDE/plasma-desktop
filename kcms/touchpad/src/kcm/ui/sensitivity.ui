@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SensitivityForm</class>
+ <widget class="QWidget" name="SensitivityForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>430</width>
+    <height>210</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Sensitivity</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string comment="Touchpad">Sensitivity</string>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+     <layout class="QFormLayout" name="formLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Pressure for detecting a touch:</string>
+        </property>
+        <property name="buddy">
+         <cstring>kcfg_FingerHigh</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>Pressure for detecting a release:</string>
+        </property>
+        <property name="buddy">
+         <cstring>kcfg_FingerLow</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QSlider" name="kcfg_FingerHigh">
+        <property name="toolTip">
+         <string>When finger pressure goes above this value, the driver counts it as a touch</string>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="tickPosition">
+         <enum>QSlider::TicksBelow</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QSlider" name="kcfg_FingerLow">
+        <property name="toolTip">
+         <string>When finger pressure drops below this value, the driver counts it as a release</string>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="tickPosition">
+         <enum>QSlider::TicksBelow</enum>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="kcfg_PalmDetect">
+     <property name="toolTip">
+      <string>If palm detection should be enabled. Note that this also requires hardware/firmware support from the touchpad</string>
+     </property>
+     <property name="title">
+      <string comment="Touchpad">Palm Detection</string>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <layout class="QFormLayout" name="formLayout_2">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string comment="Palm detection">Minimum width:</string>
+        </property>
+        <property name="buddy">
+         <cstring>kcfg_PalmMinWidth</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_4">
+        <property name="text">
+         <string comment="Palm detection">Minimum pressure:</string>
+        </property>
+        <property name="buddy">
+         <cstring>kcfg_PalmMinZ</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QSlider" name="kcfg_PalmMinWidth">
+        <property name="toolTip">
+         <string>Minimum finger width at which touch is considered a palm</string>
+        </property>
+        <property name="pageStep">
+         <number>1</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="tickPosition">
+         <enum>QSlider::TicksBelow</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QSlider" name="kcfg_PalmMinZ">
+        <property name="toolTip">
+         <string>Minimum finger pressure at which touch is considered a palm</string>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="tickPosition">
+         <enum>QSlider::TicksBelow</enum>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>kcfg_FingerHigh</tabstop>
+  <tabstop>kcfg_FingerLow</tabstop>
+  <tabstop>kcfg_PalmDetect</tabstop>
+  <tabstop>kcfg_PalmMinWidth</tabstop>
+  <tabstop>kcfg_PalmMinZ</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
