@@ -8,9 +8,6 @@ if(NOT X11_Xinput_FOUND)
     message(FATAL_ERROR "Xinput not found")
 endif()
 
-pkg_search_module(SYNAPTICS REQUIRED xorg-synaptics)
-pkg_search_module(XORG REQUIRED xorg-server)
-
 include_directories(${XCB_INCLUDE_DIR}
                     ${X11_XCB_INCLUDE_DIR}
                     ${X11_Xinput_INCLUDE_PATH}

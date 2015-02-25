@@ -51,8 +51,10 @@ add_subdirectory(runners)
 add_subdirectory(useraccount)
 add_subdirectory(workspaceoptions)
 add_subdirectory(baloo)
-add_subdirectory(touchpad)
 
+if (SYNAPTICS_FOUND)
+    add_subdirectory(touchpad)
+endif()
 
 if( FREETYPE_FOUND )
    if(FONTCONFIG_FOUND )
