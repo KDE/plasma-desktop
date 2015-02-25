@@ -684,7 +684,7 @@ void FolderModel::dragSelected(int x, int y)
 
 void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row)
 {
-    QMimeData *mimeData = qobject_cast<QMimeData *>(dropEvent->property("mimeData").value<QObject *>());
+    QMimeData *mimeData = qobject_cast<QMimeData *>(dropEvent->property("mimeData").value<QObject *>()->property("mimeData").value<QObject *>());
 
     if (!mimeData) {
         return;
