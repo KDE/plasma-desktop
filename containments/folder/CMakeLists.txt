@@ -9,7 +9,6 @@ set(folderplugin_SRCS
     plugin/eventforge.cpp
     plugin/foldermodel.cpp
     plugin/folderplugin.cpp
-    plugin/itemgrabber.cpp
     plugin/itemviewadapter.cpp
     plugin/labelgenerator.cpp
     plugin/menuhelper.cpp

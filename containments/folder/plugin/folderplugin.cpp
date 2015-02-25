@@ -21,7 +21,6 @@
 #include "directorypicker.h"
 #include "eventforge.h"
 #include "foldermodel.h"
-#include "itemgrabber.h"
 #include "itemviewadapter.h"
 #include "labelgenerator.h"
 #include "menuhelper.h"
@@ -43,7 +42,6 @@ void FolderPlugin::registerTypes(const char *uri)
     qmlRegisterType<DirectoryPicker>(uri, 0, 1, "DirectoryPicker");
     qmlRegisterType<EventForge>(uri, 0, 1, "EventForge");
     qmlRegisterType<FolderModel>(uri, 0, 1, "FolderModel");
-    qmlRegisterType<ItemGrabber>(uri, 0, 1, "ItemGrabber");
     qmlRegisterType<ItemViewAdapter>(uri, 0, 1, "ItemViewAdapter");
     qmlRegisterType<LabelGenerator>(uri, 0, 1, "LabelGenerator");
     qmlRegisterType<MenuHelper>(uri, 0, 1, "MenuHelper");
