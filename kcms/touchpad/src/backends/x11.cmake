@@ -12,7 +12,7 @@ include_directories(${XCB_INCLUDE_DIR}
                     ${X11_XCB_INCLUDE_DIR}
                     ${X11_Xinput_INCLUDE_PATH}
                     ${X11_X11_INCLUDE_PATH}
-                    ${SYNAPTICS_INCLUDE_DIRS}
+                    ${Synaptics_INCLUDE_DIRS}
                     ${XORG_INCLUDE_DIRS}
 )
 
