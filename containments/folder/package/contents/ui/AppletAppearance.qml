@@ -154,7 +154,7 @@ Item {
                     if (!plasmoid.configuration.pressToMove) {
                         showAppletHandle = true;
                     }
-                } else {
+                } else if (!(plasmoid.configuration.pressToHandle && dragMouseArea.dragging)) {
                     showAppletHandle = false;
                 }
             }
@@ -233,7 +233,7 @@ Item {
 
                 onPressed: {
                     appletItem.z = appletItem.z + zoffset;
-                    animationsEnabled = false
+                    animationsEnabled = plasmoid.configuration.pressToHandle ? true : false;
                     mouse.accepted = true;
                     pressX = mouse.x;
                     pressY = mouse.y;
