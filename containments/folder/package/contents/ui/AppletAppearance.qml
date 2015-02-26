@@ -120,10 +120,12 @@ Item {
 
         onPressAndHold: {
             if (!plasmoid.immtuable && plasmoid.configuration.pressToMove) {
-                if (!dragMouseArea.drag.active && !systemSettings.isDrag(pressX, pressY, mouse.x, mouse.y)) {
+                if (!dragMouseArea.dragging && !systemSettings.isDrag(pressX, pressY, mouse.x, mouse.y)) {
                     if (plasmoid.configuration.pressToHandle) {
                         showAppletHandle = true;
                     }
+
+                    dragMouseArea.dragging = true;
 
                     eventForge.sendUngrabRecursive(appletItem);
                     eventForge.makeGrab(dragMouseArea);
@@ -152,7 +154,7 @@ Item {
                     if (!plasmoid.configuration.pressToMove) {
                         showAppletHandle = true;
                     }
-                } else if (!(plasmoid.configuration.pressToHandle && dragMouseArea.drag.active)) {
+                } else if (!(plasmoid.configuration.pressToHandle && dragMouseArea.dragging)) {
                     showAppletHandle = false;
                 }
             }
@@ -224,7 +226,13 @@ Item {
                 visible: !plasmoid.immutable
 
                 property int zoffset: 1000
+
                 drag.target: appletItem
+                property bool dragging: false // Set by mouseListener.onPressAndHold -- drag.active only becomes true on movement.
+
+                onDraggingChanged: {
+                    cursorShape = dragging ? Qt.DragMoveCursor : Qt.ArrowCursor;
+                }
 
                 onPressed: {
                     appletItem.z = appletItem.z + zoffset;
@@ -258,6 +266,7 @@ Item {
                     animationsEnabled = true;
                     LayoutManager.positionItem(appletItem);
                     LayoutManager.save();
+                    dragging = false;
                 }
             }
 
