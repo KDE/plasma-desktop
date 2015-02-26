@@ -120,7 +120,7 @@ Item {
 
         onPressAndHold: {
             if (!plasmoid.immtuable && plasmoid.configuration.pressToMove) {
-                if (!dragMouseArea.dragging && !systemSettings.isDrag(pressX, pressY, mouse.x, mouse.y)) {
+                if (!dragMouseArea.drag.active && !systemSettings.isDrag(pressX, pressY, mouse.x, mouse.y)) {
                     if (plasmoid.configuration.pressToHandle) {
                         showAppletHandle = true;
                     }
@@ -128,8 +128,6 @@ Item {
                     eventForge.sendUngrabRecursive(appletItem);
                     eventForge.makeGrab(dragMouseArea);
                     eventForge.sendLeftPress(dragMouseArea, mouse.x, mouse.y);
-
-                    dragMouseArea.dragging = true;
                 }
             }
 
@@ -154,7 +152,7 @@ Item {
                     if (!plasmoid.configuration.pressToMove) {
                         showAppletHandle = true;
                     }
-                } else if (!(plasmoid.configuration.pressToHandle && dragMouseArea.dragging)) {
+                } else if (!(plasmoid.configuration.pressToHandle && dragMouseArea.drag.active)) {
                     showAppletHandle = false;
                 }
             }
@@ -226,17 +224,12 @@ Item {
                 visible: !plasmoid.immutable
 
                 property int zoffset: 1000
-
-                property bool dragging: false
-                property int pressX: -1
-                property int pressY: -1
+                drag.target: appletItem
 
                 onPressed: {
                     appletItem.z = appletItem.z + zoffset;
                     animationsEnabled = plasmoid.configuration.pressToHandle ? true : false;
                     mouse.accepted = true;
-                    pressX = mouse.x;
-                    pressY = mouse.y;
                     var x = Math.round(appletItem.x/LayoutManager.cellSize.width)*LayoutManager.cellSize.width
                     var y = Math.round(appletItem.y/LayoutManager.cellSize.height)*LayoutManager.cellSize.height
                     LayoutManager.setSpaceAvailable(x, y, appletItem.width, appletItem.height, true)
@@ -246,12 +239,6 @@ Item {
                 }
 
                 onPositionChanged: {
-                    var xDiff = pressX - mouse.x;
-                    var yDiff = pressY - mouse.y;
-
-                    appletItem.x = appletItem.x - xDiff;
-                    appletItem.y = appletItem.y - yDiff;
-
                     var pos = mapToItem(root, mouse.x, mouse.y);
                     var newCont = plasmoid.containmentAt(pos.x, pos.y);
 
@@ -271,7 +258,6 @@ Item {
                     animationsEnabled = true;
                     LayoutManager.positionItem(appletItem);
                     LayoutManager.save();
-                    dragging = false;
                 }
             }
 
