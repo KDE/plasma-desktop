@@ -128,6 +128,8 @@ Item {
                     eventForge.sendUngrabRecursive(appletItem);
                     eventForge.makeGrab(dragMouseArea);
                     eventForge.sendLeftPress(dragMouseArea, mouse.x, mouse.y);
+
+                    dragMouseArea.dragging = true;
                 }
             }
 
@@ -230,7 +232,6 @@ Item {
                 property int pressY: -1
 
                 onPressed: {
-                    dragging = true;
                     appletItem.z = appletItem.z + zoffset;
                     animationsEnabled = false
                     mouse.accepted = true;
