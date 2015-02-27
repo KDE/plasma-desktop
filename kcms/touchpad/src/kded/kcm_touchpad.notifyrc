@@ -1,16 +1,46 @@
 [Global]
 Name=Touchpad
+Name[nl]=Touchpad
+Name[pt_BR]=Touchpad
+Name[sv]=Tryckplatta
+Name[uk]=Сенсорна панель
+Name[x-test]=xxTouchpadxx
 IconName=input-touchpad
 Comment=Touchpad
+Comment[nl]=Touchpad
+Comment[pt_BR]=Touchpad
+Comment[sv]=Tryckplatta
+Comment[uk]=Сенсорна панель
+Comment[x-test]=xxTouchpadxx
 
 [Event/TouchpadDisabled]
 Name=Touchpad was disabled
+Name[nl]=Touchpad was uitgeschakeld
+Name[pt_BR]=O touchpad foi desativado
+Name[sv]=Tryckplattan är inaktiverad
+Name[uk]=Сенсорну панель вимкнено
+Name[x-test]=xxTouchpad was disabledxx
 Comment=Touchpad was disabled because mouse is detected
+Comment[nl]=Touchpad was uitgeschakeld omdat er een muis is gedetecteerd
+Comment[pt_BR]=O touchpad foi desativado porque o mouse foi detectado
+Comment[sv]=Tryckplattan är inaktiverad eftersom en mus detekterades
+Comment[uk]=Сенсорну панель вимкнено, оскільки виявлено мишу
+Comment[x-test]=xxTouchpad was disabled because mouse is detectedxx
 Sound=KDE-Sys-App-Positive.ogg
 Action=Popup
 
 [Event/TouchpadEnabled]
 Name=Touchpad was enabled
+Name[nl]=Touchpad was ingeschakeld
+Name[pt_BR]=O touchpad foi ativado
+Name[sv]=Tryckplattan är aktiverad
+Name[uk]=Сенсорну панель увімкнено
+Name[x-test]=xxTouchpad was enabledxx
 Comment=Touchpad was enabled because the mouse was unplugged
+Comment[nl]=Touchpad was ingeschakeld omdat er een muis is uitgetrokken
+Comment[pt_BR]=O touchpad foi ativado porque o mouse foi desconectado
+Comment[sv]=Tryckplattan är aktiverad eftersom musen kopplades bort
+Comment[uk]=Сенсорну панель увімкнено, оскільки мишу було від’єднано
+Comment[x-test]=xxTouchpad was enabled because the mouse was unpluggedxx
 Sound=KDE-Sys-App-Negative.ogg
 Action=Sound
