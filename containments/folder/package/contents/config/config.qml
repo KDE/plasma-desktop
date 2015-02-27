@@ -19,6 +19,7 @@
 
 import QtQuick 2.0
 
+import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.configuration 2.0
 
 ConfigModel {
@@ -44,5 +45,6 @@ ConfigModel {
          name: "Experimental" /* Intentionally not i18n'd. */
          icon: "kmines" /* It's a mine field. Geddit? */
          source: "ConfigExperimental.qml"
+         visible: ("containmentType" in plasmoid)
     }
 }
