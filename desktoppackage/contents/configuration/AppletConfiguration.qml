@@ -20,6 +20,7 @@ import QtQuick 2.0
 import QtQuick.Dialogs 1.1
 import QtQuick.Controls 1.0 as QtControls
 import QtQuick.Layouts 1.0
+import org.kde.plasma.core 2.1 as PlasmaCore
 import org.kde.plasma.configuration 2.0
 
 
@@ -47,6 +48,13 @@ Rectangle {
             icon: "preferences-desktop-keyboard"
             source: "ConfigurationShortcuts.qml"
         }
+    }
+
+    PlasmaCore.SortFilterModel {
+        id: configDialogFilterModel
+        sourceModel: configDialog.configModel
+        filterRole: "visible"
+        filterCallback: function(source_row, value) { return value; }
     }
 //END model
 
@@ -174,7 +182,7 @@ Rectangle {
                             delegate: ConfigCategoryDelegate {}
                         }
                         Repeater {
-                            model: configDialog.configModel
+                            model: configDialogFilterModel
                             delegate: ConfigCategoryDelegate {}
                         }
                         Repeater {
