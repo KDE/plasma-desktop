@@ -1,13 +1,21 @@
 [Global]
 Name=Touchpad
+Name[ca]=Ratolí tàctil
+Name[es]=Panel táctil
 Name[nl]=Touchpad
+Name[pl]=Gładzik
+Name[pt]=Rato por Toque
 Name[pt_BR]=Touchpad
 Name[sv]=Tryckplatta
 Name[uk]=Сенсорна панель
 Name[x-test]=xxTouchpadxx
 IconName=input-touchpad
 Comment=Touchpad
+Comment[ca]=Ratolí tàctil
+Comment[es]=Panel táctil
 Comment[nl]=Touchpad
+Comment[pl]=Gładzik
+Comment[pt]=Rato por Toque
 Comment[pt_BR]=Touchpad
 Comment[sv]=Tryckplatta
 Comment[uk]=Сенсорна панель
@@ -15,13 +23,21 @@ Comment[x-test]=xxTouchpadxx
 
 [Event/TouchpadDisabled]
 Name=Touchpad was disabled
+Name[ca]=El ratolí tàctil s'ha desactivat
+Name[es]=El panel táctil ha sido desactivado
 Name[nl]=Touchpad was uitgeschakeld
+Name[pl]=Gładzik został wyłączony
+Name[pt]=O rato por toque foi desactivado
 Name[pt_BR]=O touchpad foi desativado
 Name[sv]=Tryckplattan är inaktiverad
 Name[uk]=Сенсорну панель вимкнено
 Name[x-test]=xxTouchpad was disabledxx
 Comment=Touchpad was disabled because mouse is detected
+Comment[ca]=El ratolí tàctil s'ha desactivat perquè s'ha detectat un ratolí
+Comment[es]=El panel táctil ha sido desactivado porque se ha detectado un ratón
 Comment[nl]=Touchpad was uitgeschakeld omdat er een muis is gedetecteerd
+Comment[pl]=Gładzik został wyłączony, bo podłączono mysz
+Comment[pt]=O rato por toque foi desactivado porque foi detectado um rato
 Comment[pt_BR]=O touchpad foi desativado porque o mouse foi detectado
 Comment[sv]=Tryckplattan är inaktiverad eftersom en mus detekterades
 Comment[uk]=Сенсорну панель вимкнено, оскільки виявлено мишу
@@ -31,13 +47,21 @@ Action=Popup
 
 [Event/TouchpadEnabled]
 Name=Touchpad was enabled
+Name[ca]=El ratolí tàctil s'ha activat
+Name[es]=El panel táctil ha sido activado
 Name[nl]=Touchpad was ingeschakeld
+Name[pl]=Gładzik został włączony
+Name[pt]=O rato por toque foi activado
 Name[pt_BR]=O touchpad foi ativado
 Name[sv]=Tryckplattan är aktiverad
 Name[uk]=Сенсорну панель увімкнено
 Name[x-test]=xxTouchpad was enabledxx
 Comment=Touchpad was enabled because the mouse was unplugged
+Comment[ca]=El ratolí tàctil s'ha activat perquè en ratolí s'ha desendollat
+Comment[es]=El panel táctil ha sido activado porque se ha desconectado el ratón
 Comment[nl]=Touchpad was ingeschakeld omdat er een muis is uitgetrokken
+Comment[pl]=Gładzik został włączony, bo odłączono mysz
+Comment[pt]=O rato por toque foi activado porque o rato foi desligado
 Comment[pt_BR]=O touchpad foi ativado porque o mouse foi desconectado
 Comment[sv]=Tryckplattan är aktiverad eftersom musen kopplades bort
 Comment[uk]=Сенсорну панель увімкнено, оскільки мишу було від’єднано
