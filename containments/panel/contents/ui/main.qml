@@ -445,7 +445,9 @@ function checkLastSpacer() {
         interval: 4000
         onTriggered: {
             for (var i = 0; i < currentLayout.children.length; ++i) {
-                currentLayout.children[i].animationsEnabled = true;
+                if ( currentLayout.children[i].hasOwnProperty('animationsEnabled') ) {
+                    currentLayout.children[i].animationsEnabled = true;
+                }
             }
         }
     }
