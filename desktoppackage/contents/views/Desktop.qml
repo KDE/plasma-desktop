@@ -63,7 +63,7 @@ Item {
     }
 
     function toggleActivityManager() {
-        console.log("Activity manger toggled");
+        console.log("Activity manager toggled");
         if (sidePanelStack.state == "activityManager") {
             sidePanelStack.state = "closed";
         } else {
