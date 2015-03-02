@@ -66,7 +66,10 @@ Item {
         }
     }
 
-    Component.onCompleted: cfg_currentDesktopSelectedChanged()
+    Component.onCompleted: {
+        cfg_currentDesktopSelectedChanged();
+        cfg_displayedTextChanged();
+    }
 
     QtControls.ExclusiveGroup {
         id: displayedTextGroup
