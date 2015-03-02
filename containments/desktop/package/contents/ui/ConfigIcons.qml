@@ -24,6 +24,7 @@ import QtQuick.Layouts 1.0
 
 import org.kde.plasma.plasmoid 2.0
 
+import org.kde.private.desktopcontainment.desktop 0.1 as Desktop
 import org.kde.private.desktopcontainment.folder 0.1 as Folder
 
 Item {
@@ -46,7 +47,7 @@ Item {
     property alias cfg_iconSize: iconSize.value
     property alias cfg_textLines: textLines.value
 
-    Folder.SystemSettings {
+    Desktop.SystemSettings {
         id: systemSettings
     }
 
