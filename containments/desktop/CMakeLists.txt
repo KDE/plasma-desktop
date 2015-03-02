@@ -1,1 +1,2 @@
+add_subdirectory(plugins)
 plasma_install_package(package org.kde.desktopcontainment plasmoids containment)

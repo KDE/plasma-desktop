@@ -17,47 +17,52 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#include "rubberband.h"
+import QtQuick 2.0
+import QtQuick.Controls 1.0
+import QtQuick.Dialogs 1.1
+import QtQuick.Layouts 1.0
 
-#include <QApplication>
-#include <QStyleOptionRubberBand>
+import org.kde.plasma.plasmoid 2.0
 
-RubberBand::RubberBand(QQuickItem *parent) : QQuickPaintedItem(parent)
-{
-}
+Item {
+    id: configExperimental
 
-RubberBand::~RubberBand()
-{
-}
+    width: childrenRect.width
+    height: childrenRect.height
 
-void RubberBand::paint(QPainter *painter)
-{
-    if (!qApp || !qApp->style()) {
-        return;
+    property alias cfg_pressToMove: pressToMove.checked
+    property alias cfg_pressToHandle: pressToHandle.checked
+
+    GroupBox {
+        id: behaviorGroupBox
+
+        visible: ("containmentType" in plasmoid)
+
+        Layout.fillWidth: true
+
+        title: "Behavior" /* Intentionally not i18n'd. */
+
+        flat: true
+
+        ColumnLayout {
+            Layout.fillWidth: true
+
+            CheckBox {
+                id: pressToMove
+
+                text: "Press and hold applets to move" /* Intentionally not i18n'd. */
+            }
+
+            CheckBox {
+                anchors.left: parent.left
+                anchors.leftMargin: 25
+
+                id: pressToHandle
+
+                enabled: pressToMove.checked
+
+                text: "Press and hold to reveal handle" /* Intentionally not i18n'd. */
+            }
+        }
     }
-
-    QStyleOptionRubberBand opt;
-    opt.state = QStyle::State_None;
-    opt.direction = qApp->layoutDirection();
-    opt.fontMetrics = qApp->fontMetrics();
-    opt.styleObject = this;
-    opt.palette = qApp->palette();
-    opt.shape = QRubberBand::Rectangle;
-    opt.opaque = false;
-    opt.rect = contentsBoundingRect().toRect();
-    qApp->style()->drawControl(QStyle::CE_RubberBand, &opt, painter);
-}
-
-bool RubberBand::intersects(const QRectF &rect)
-{
-    return m_geometry.intersects(rect);
-}
-
-void RubberBand::geometryChanged(const QRectF &newGeometry, const QRectF &oldGeometry)
-{
-    Q_UNUSED(oldGeometry);
-
-    m_geometry = newGeometry;
-
-    QQuickItem::geometryChanged(newGeometry, oldGeometry);
 }

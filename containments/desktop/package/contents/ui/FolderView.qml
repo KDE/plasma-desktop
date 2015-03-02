@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2014 by Eike Hein <hein@kde.org>                        *
+ *   Copyright (C) 2014-2015 by Eike Hein <hein@kde.org>                   *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -26,9 +26,8 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kquickcontrolsaddons 2.0
 
-import org.kde.plasma.private.folder 0.1 as Folder
-
-import "plasmapackage:/code/tools.js" as FolderTools
+import org.kde.private.desktopcontainment.folder 0.1 as Folder
+import "plasmapackage:/code/FolderTools.js" as FolderTools
 
 FocusScope {
     id: main
@@ -271,7 +270,7 @@ FocusScope {
                     clearPressState();
                 } else {
                     dir.pinSelection();
-                    main.rubberBand = Qt.createQmlObject("import QtQuick 2.0; import org.kde.plasma.private.folder 0.1 as Folder;"
+                    main.rubberBand = Qt.createQmlObject("import QtQuick 2.0; import org.kde.private.desktopcontainment.folder 0.1 as Folder;"
                         + "Folder.RubberBand { x: " + cPress.x + "; y: " + cPress.y + "; width: 0; height: 0; z: 99999; }",
                         gridView.contentItem);
                     gridView.interactive = false;
@@ -358,7 +357,7 @@ FocusScope {
 
                 model: positioner
 
-                delegate: ItemDelegate {
+                delegate: FolderItemDelegate {
                     width: gridView.cellWidth
                     height: gridView.cellHeight
                 }

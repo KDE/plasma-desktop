@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2014 by Eike Hein <hein@kde.org>                        *
+ *   Copyright (C) 2014-2015 by Eike Hein <hein@kde.org>                   *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -98,8 +98,8 @@ Item {
             }
 
             function openPopup() {
-                if (root.itemViewDialogComponent.status == Component.Ready) {
-                    impl.popupDialog = root.itemViewDialogComponent.createObject(impl);
+                if (folderViewDialogComponent.status == Component.Ready) {
+                    impl.popupDialog = folderViewDialogComponent.createObject(impl);
                     impl.popupDialog.visualParent = icon;
                     impl.popupDialog.url = model.linkDestinationUrl;
                     impl.popupDialog.visible = true;
@@ -223,7 +223,7 @@ Item {
                     width: implicitWidth
                     height: implicitHeight
 
-                    ItemActionButton {
+                    FolderItemActionButton {
                         visible: plasmoid.configuration.selectionMarkers && systemSettings.singleClick()
                         opacity: (visible && impl.hovered) ? 1.0 : 0.0
 
@@ -236,7 +236,7 @@ Item {
                 Component {
                     id: popupButtonComponent
 
-                    ItemActionButton {
+                    FolderItemActionButton {
                         opacity: (plasmoid.configuration.popups && impl.hovered && impl.popupDialog == null) ? 1.0 : 0.0
 
                         element: "open"

@@ -19,7 +19,6 @@
 
 #include "folderplugin.h"
 #include "directorypicker.h"
-#include "eventforge.h"
 #include "foldermodel.h"
 #include "itemviewadapter.h"
 #include "labelgenerator.h"
@@ -38,9 +37,8 @@
 
 void FolderPlugin::registerTypes(const char *uri)
 {
-    Q_ASSERT(uri == QLatin1String("org.kde.plasma.private.folder"));
+    Q_ASSERT(uri == QLatin1String("org.kde.private.desktopcontainment.folder"));
     qmlRegisterType<DirectoryPicker>(uri, 0, 1, "DirectoryPicker");
-    qmlRegisterType<EventForge>(uri, 0, 1, "EventForge");
     qmlRegisterType<FolderModel>(uri, 0, 1, "FolderModel");
     qmlRegisterType<ItemViewAdapter>(uri, 0, 1, "ItemViewAdapter");
     qmlRegisterType<LabelGenerator>(uri, 0, 1, "LabelGenerator");

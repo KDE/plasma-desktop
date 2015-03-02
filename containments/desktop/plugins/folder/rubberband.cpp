@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2014 by Eike Hein <hein@kde.org>                        *
+ *   Copyright (C) 2014-2015 by Eike Hein <hein@kde.org>                   *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -17,34 +17,47 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-import QtQuick 2.0
+#include "rubberband.h"
 
-import org.kde.plasma.plasmoid 2.0
-import org.kde.plasma.configuration 2.0
+#include <QApplication>
+#include <QStyleOptionRubberBand>
 
-ConfigModel {
-    ConfigCategory {
-         name: i18n("Location")
-         icon: "folder"
-         source: "ConfigLocation.qml"
+RubberBand::RubberBand(QQuickItem *parent) : QQuickPaintedItem(parent)
+{
+}
+
+RubberBand::~RubberBand()
+{
+}
+
+void RubberBand::paint(QPainter *painter)
+{
+    if (!qApp || !qApp->style()) {
+        return;
     }
 
-    ConfigCategory {
-         name: i18n("Icons")
-         icon: "preferences-desktop-icons"
-         source: "ConfigIcons.qml"
-    }
+    QStyleOptionRubberBand opt;
+    opt.state = QStyle::State_None;
+    opt.direction = qApp->layoutDirection();
+    opt.fontMetrics = qApp->fontMetrics();
+    opt.styleObject = this;
+    opt.palette = qApp->palette();
+    opt.shape = QRubberBand::Rectangle;
+    opt.opaque = false;
+    opt.rect = contentsBoundingRect().toRect();
+    qApp->style()->drawControl(QStyle::CE_RubberBand, &opt, painter);
+}
 
-    ConfigCategory {
-         name: i18n("Filter")
-         icon: "view-filter"
-         source: "ConfigFilter.qml"
-    }
+bool RubberBand::intersects(const QRectF &rect)
+{
+    return m_geometry.intersects(rect);
+}
 
-    ConfigCategory {
-         name: "Experimental" /* Intentionally not i18n'd. */
-         icon: "kmines" /* It's a mine field. Geddit? */
-         source: "ConfigExperimental.qml"
-         visible: ("containmentType" in plasmoid)
-    }
+void RubberBand::geometryChanged(const QRectF &newGeometry, const QRectF &oldGeometry)
+{
+    Q_UNUSED(oldGeometry);
+
+    m_geometry = newGeometry;
+
+    QQuickItem::geometryChanged(newGeometry, oldGeometry);
 }

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2014 by Eike Hein <hein@kde.org>                        *
+ *   Copyright (C) 2014-2015 by Eike Hein <hein@kde.org>                   *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -17,54 +17,14 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-import QtQuick 2.0
-import QtQuick.Controls 1.0
-import QtQuick.Dialogs 1.1
-import QtQuick.Layouts 1.0
+#include "desktopplugin.h"
+#include "eventforge.h"
 
-import org.kde.plasma.plasmoid 2.0
+#include <QtQml>
 
-import org.kde.plasma.private.folder 0.1 as Folder
-
-Item {
-    id: configExperimental
-
-    width: childrenRect.width
-    height: childrenRect.height
-
-    property alias cfg_pressToMove: pressToMove.checked
-    property alias cfg_pressToHandle: pressToHandle.checked
-
-    GroupBox {
-        id: behaviorGroupBox
-
-        visible: ("containmentType" in plasmoid)
-
-        Layout.fillWidth: true
-
-        title: "Behavior" /* Intentionally not i18n'd. */
-
-        flat: true
-
-        ColumnLayout {
-            Layout.fillWidth: true
-
-            CheckBox {
-                id: pressToMove
-
-                text: "Press and hold applets to move" /* Intentionally not i18n'd. */
-            }
-
-            CheckBox {
-                anchors.left: parent.left
-                anchors.leftMargin: 25
-
-                id: pressToHandle
-
-                enabled: pressToMove.checked
-
-                text: "Press and hold to reveal handle" /* Intentionally not i18n'd. */
-            }
-        }
-    }
+void DesktopPlugin::registerTypes(const char *uri)
+{
+    Q_ASSERT(uri == QLatin1String("org.kde.private.desktopcontainment.desktop"));
+    qmlRegisterType<EventForge>(uri, 0, 1, "EventForge");
 }
+

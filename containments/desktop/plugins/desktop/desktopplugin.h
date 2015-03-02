@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2014 by Eike Hein <hein@kde.org>                        *
+ *   Copyright (C) 2014-2015 by Eike Hein <hein@kde.org>                   *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -17,28 +17,19 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#ifndef RUBBERBAND_H
-#define RUBBERBAND_H
+#ifndef DESKTOPPLUGIN_H
+#define DESKTOPPLUGIN_H
 
-#include <QQuickPaintedItem>
+#include <QQmlEngine>
+#include <QQmlExtensionPlugin>
 
-class RubberBand : public QQuickPaintedItem
+class DesktopPlugin : public QQmlExtensionPlugin
 {
     Q_OBJECT
+    Q_PLUGIN_METADATA(IID "org.qt-project.Qt.QQmlExtensionInterface")
 
     public:
-        RubberBand(QQuickItem *parent = 0);
-        ~RubberBand();
-
-        void paint(QPainter* painter);
-
-        Q_INVOKABLE bool intersects(const QRectF &rect);
-
-    protected:
-        void geometryChanged(const QRectF &newGeometry, const QRectF &oldGeometry);
-
-    private:
-        QRectF m_geometry;
+        virtual void registerTypes(const char *uri);
 };
 
-#endif
+#endif // DESKTOPPLUGIN_H

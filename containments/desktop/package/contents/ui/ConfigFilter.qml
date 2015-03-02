@@ -23,7 +23,7 @@ import QtQuick.Layouts 1.0
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 
-import org.kde.plasma.private.folder 0.1 as Folder
+import org.kde.private.desktopcontainment.folder 0.1 as Folder
 
 Item {
     id: configIcons

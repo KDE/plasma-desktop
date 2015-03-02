@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2014 by Eike Hein <hein@kde.org>                        *
+ *   Copyright (C) 2014-2015 by Eike Hein <hein@kde.org>                   *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -22,7 +22,7 @@ import org.kde.plasma.plasmoid 2.0
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 
-import org.kde.plasma.private.folder 0.1 as Folder
+import org.kde.private.desktopcontainment.folder 0.1 as Folder
 
 Folder.SubDialog {
     id: dialog
@@ -30,10 +30,10 @@ Folder.SubDialog {
     visible: false
 
     property QtObject closeTimer: closeTimer
-    property QtObject childDialog: (itemView.hoveredItem != null) ? itemView.hoveredItem.popupDialog : null
-    property bool containsMouse: itemView.containsMouse || (childDialog != null && childDialog.containsMouse)
+    property QtObject childDialog: (folderView.hoveredItem != null) ? folderView.hoveredItem.popupDialog : null
+    property bool containsMouse: folderView.containsMouse || (childDialog != null && childDialog.containsMouse)
 
-    property alias url: itemView.url
+    property alias url: folderView.url
 
     location: PlasmaCore.Types.Floating
     hideOnWindowDeactivate: (childDialog == null)
@@ -46,8 +46,8 @@ Folder.SubDialog {
         }
     }
 
-    mainItem: ItemView {
-        id: itemView
+    mainItem: FolderView {
+        id: folderView
 
         width: cellWidth * 3 + 10 // FIXME HACK: Use actual scrollbar width.
         height: cellHeight * 2
