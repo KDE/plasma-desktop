@@ -166,14 +166,14 @@ DragDrop.DropArea {
         // is currently incapable of rejecting drag events.
 
         // Trigger autoscroll.
-        if (isFolder && event.mimeData.urls.length) {
+        if (isFolder && event.mimeData.hasUrls) {
             folderViewLayer.view.scrollLeft = (event.x < (units.largeSpacing * 3));
             folderViewLayer.view.scrollRight = (event.x > width - (units.largeSpacing * 3));
             folderViewLayer.view.scrollUp = (event.y < (units.largeSpacing * 3));
             folderViewLayer.view.scrollDown = (event.y > height - (units.largeSpacing * 3));
         }
 
-        if (isContainment && !event.mimeData.urls.length) {
+        if (isContainment && !event.mimeData.v) {
             placeHolder.width = LayoutManager.defaultAppletSize.width;
             placeHolder.height = LayoutManager.defaultAppletSize.height;
             placeHolder.x = event.x - placeHolder.width / 2;
@@ -186,7 +186,7 @@ DragDrop.DropArea {
 
     onDragLeave: {
         // Cancel autoscroll.
-        if (isFolder && event.mimeData.urls.length) {
+        if (isFolder && event.mimeData.hasUrls) {
             folderViewLayer.view.scrollLeft = false;
             folderViewLayer.view.scrollRight = false;
             folderViewLayer.view.scrollUp = false;
@@ -199,7 +199,7 @@ DragDrop.DropArea {
     }
 
     onDrop: {
-        if (isFolder && event.mimeData.urls.length) {
+        if (isFolder && event.mimeData.hasUrls) {
             // Cancel autoscroll.
             folderViewLayer.view.scrollLeft = false;
             folderViewLayer.view.scrollRight = false;
@@ -209,7 +209,7 @@ DragDrop.DropArea {
             folderViewLayer.view.drop(root, event, mapToItem(folderViewLayer.view, event.x, event.y));
         }
 
-        if (isContainment && !event.mimeData.urls.length) {
+        if (isContainment && !event.mimeData.hasUrls) {
             placeHolderPaint.opacity = 0;
             plasmoid.processMimeData(event.mimeData, event.x - placeHolder.width / 2, event.y - placeHolder.height / 2);
         }
