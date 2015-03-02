@@ -50,6 +50,6 @@ ConfigModel {
          name: "Experimental" /* Intentionally not i18n'd. */
          icon: "kmines" /* It's a mine field. Geddit? */
          source: "ConfigExperimental.qml"
-         visible: isFolder && ("containmentType" in plasmoid)
+         visible: ("containmentType" in plasmoid)
     }
 }
