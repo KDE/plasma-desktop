@@ -61,10 +61,6 @@ Item {
         size: "16x16"
     }
 
-    Folder.SystemSettings {
-        id: systemSettings
-    }
-
     Folder.MenuHelper {
         id: menuHelper
     }

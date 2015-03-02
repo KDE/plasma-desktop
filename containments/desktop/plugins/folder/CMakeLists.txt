@@ -13,7 +13,6 @@ set(folderplugin_SRCS
     previewpluginsmodel.cpp
     rubberband.cpp
     subdialog.cpp
-    systemsettings.cpp
     viewpropertiesmenu.cpp
     wheelinterceptor.cpp
     internallibkonq/konq_copytomenu.cpp
@@ -30,7 +29,6 @@ target_link_libraries(folderplugin
                       Qt5::Core
                       Qt5::Qml
                       Qt5::Quick
-                      Qt5::Widgets
                       KF5::KIOCore
                       KF5::KIOWidgets
                       KF5::KIOFileWidgets

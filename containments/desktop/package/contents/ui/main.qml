@@ -247,6 +247,10 @@ DragDrop.DropArea {
         imagePath: "widgets/configuration-icons"
     }
 
+    Desktop.SystemSettings {
+        id: systemSettings
+    }
+
     Desktop.EventForge {
         id: eventForge
     }
