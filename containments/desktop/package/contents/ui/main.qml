@@ -173,7 +173,7 @@ DragDrop.DropArea {
             folderViewLayer.view.scrollDown = (event.y > height - (units.largeSpacing * 3));
         }
 
-        if (isContainment && !event.mimeData.v) {
+        if (isContainment && !event.mimeData.hasUrls) {
             placeHolder.width = LayoutManager.defaultAppletSize.width;
             placeHolder.height = LayoutManager.defaultAppletSize.height;
             placeHolder.x = event.x - placeHolder.width / 2;
