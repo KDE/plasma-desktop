@@ -50,7 +50,7 @@ KclockModule::KclockModule(QWidget *parent, const QVariantList &)
   : KCModule(parent)
 {
   auto reply = QDBusConnection::systemBus().call(QDBusMessage::createMethodCall("org.freedesktop.DBus",
-                                                                                "/",
+                                                                                "/org/freedesktop/DBus",
                                                                                 "org.freedesktop.DBus",
                                                                                 "ListActivatableNames"));
 
