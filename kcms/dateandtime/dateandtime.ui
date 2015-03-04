@@ -79,6 +79,9 @@
         <layout class="QHBoxLayout" name="horizontalLayout">
          <item>
           <widget class="KDatePicker" name="cal">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
            <property name="whatsThis">
             <string>Here you can change the system date's day of the month, month and year.</string>
            </property>
@@ -86,6 +89,9 @@
          </item>
          <item>
           <widget class="QWidget" name="timeBox" native="true">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
            <property name="sizePolicy">
             <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
              <horstretch>0</horstretch>
@@ -158,6 +164,21 @@
        </item>
        <item>
         <widget class="K4TimeZoneWidget" name="tzonelist">
+         <column>
+          <property name="text">
+           <string notr="true">1</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string notr="true">2</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string notr="true">3</string>
+          </property>
+         </column>
         </widget>
        </item>
       </layout>
@@ -189,5 +210,38 @@
   </customwidget>
  </customwidgets>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>setDateTimeAuto</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>cal</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>94</x>
+     <y>62</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>94</x>
+     <y>143</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>setDateTimeAuto</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>timeBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>421</x>
+     <y>54</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>495</x>
+     <y>213</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
