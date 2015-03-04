@@ -344,14 +344,17 @@ void Kclock::resizeEvent( QResizeEvent * )
 void Kclock::setClockSize(const QSize &size)
 {
     int dim = qMin(size.width(), size.height());
-    QSize newSize = QSize(dim, dim);
+    QSize newSize = QSize(dim, dim) * devicePixelRatio();
 
     if (newSize != m_faceCache.size()) {
         m_faceCache = QPixmap(newSize);
         m_handsCache = QPixmap(newSize);
         m_glassCache = QPixmap(newSize);
+        m_faceCache.setDevicePixelRatio(devicePixelRatio());
+        m_handsCache.setDevicePixelRatio(devicePixelRatio());
+        m_glassCache.setDevicePixelRatio(devicePixelRatio());
 
-        m_theme->resize(newSize);
+        m_theme->resize(QSize(dim, dim));
         m_repaintCache = RepaintAll;
     }
 }
@@ -424,6 +427,8 @@ void Kclock::paintInterface(QPainter *p, const QRect &rect)
 
     // paint face and glass cache
     QRect faceRect = m_faceCache.rect();
+    QRect targetRect = QRect(QPoint(0, 0), QSize(m_faceCache.width() / devicePixelRatio(), m_faceCache.height() / devicePixelRatio()));
+
     if (m_repaintCache == RepaintAll) {
         m_faceCache.fill(Qt::transparent);
         m_glassCache.fill(Qt::transparent);
@@ -433,7 +438,7 @@ void Kclock::paintInterface(QPainter *p, const QRect &rect)
         facePainter.setRenderHint(QPainter::SmoothPixmapTransform);
         glassPainter.setRenderHint(QPainter::SmoothPixmapTransform);
 
-        m_theme->paint(&facePainter, m_faceCache.rect(), "ClockFace");
+        m_theme->paint(&facePainter, targetRect, "ClockFace");
 
         glassPainter.save();
         QRectF elementRect = QRectF(QPointF(0, 0), m_theme->elementSize("HandCenterScrew"));
@@ -441,7 +446,7 @@ void Kclock::paintInterface(QPainter *p, const QRect &rect)
         m_theme->paint(&glassPainter, elementRect, "HandCenterScrew");
         glassPainter.restore();
 
-        m_theme->paint(&glassPainter, faceRect, "Glass");
+        m_theme->paint(&glassPainter, targetRect, "Glass");
 
         // get vertical translation, see drawHand() for more details
         m_verticalTranslation = m_theme->elementRect("ClockFace").center().y();
@@ -452,18 +457,17 @@ void Kclock::paintInterface(QPainter *p, const QRect &rect)
         m_handsCache.fill(Qt::transparent);
 
         QPainter handsPainter(&m_handsCache);
-        handsPainter.drawPixmap(faceRect, m_faceCache, faceRect);
+        handsPainter.drawPixmap(targetRect, m_faceCache, faceRect);
         handsPainter.setRenderHint(QPainter::SmoothPixmapTransform);
 
-        drawHand(&handsPainter, faceRect, m_verticalTranslation, hours, "Hour");
-        drawHand(&handsPainter, faceRect, m_verticalTranslation, minutes, "Minute");
+        drawHand(&handsPainter, targetRect, m_verticalTranslation, hours, "Hour");
+        drawHand(&handsPainter, targetRect, m_verticalTranslation, minutes, "Minute");
     }
 
     // reset repaint cache flag
     m_repaintCache = RepaintNone;
 
     // paint caches and second hand
-    QRect targetRect = faceRect;
     if (targetRect.width() < rect.width()) {
         targetRect.moveLeft((rect.width() - targetRect.width()) / 2);
     }
