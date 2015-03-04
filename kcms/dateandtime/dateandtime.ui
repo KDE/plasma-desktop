@@ -80,7 +80,7 @@
          <item>
           <widget class="KDatePicker" name="cal">
            <property name="enabled">
-            <bool>false</bool>
+            <bool>true</bool>
            </property>
            <property name="whatsThis">
             <string>Here you can change the system date's day of the month, month and year.</string>
@@ -90,7 +90,7 @@
          <item>
           <widget class="QWidget" name="timeBox" native="true">
            <property name="enabled">
-            <bool>false</bool>
+            <bool>true</bool>
            </property>
            <property name="sizePolicy">
             <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
@@ -215,7 +215,7 @@
    <sender>setDateTimeAuto</sender>
    <signal>toggled(bool)</signal>
    <receiver>cal</receiver>
-   <slot>setEnabled(bool)</slot>
+   <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
      <x>94</x>
@@ -231,7 +231,7 @@
    <sender>setDateTimeAuto</sender>
    <signal>toggled(bool)</signal>
    <receiver>timeBox</receiver>
-   <slot>setEnabled(bool)</slot>
+   <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
      <x>421</x>
