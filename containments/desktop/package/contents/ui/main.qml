@@ -36,8 +36,10 @@ DragDrop.DropArea {
     anchors {
         leftMargin: plasmoid.availableScreenRect ? plasmoid.availableScreenRect.x : 0
         topMargin: plasmoid.availableScreenRect ? plasmoid.availableScreenRect.y : 0
-        rightMargin: plasmoid.availableScreenRect && parent ? parent.width - (plasmoid.availableScreenRect.x + plasmoid.availableScreenRect.width) : 0
-        bottomMargin: folderViewLayer.view.overflowing && plasmoid.availableScreenRect && parent ? parent.height - (plasmoid.availableScreenRect.y + plasmoid.availableScreenRect.height) : 0
+        rightMargin: (plasmoid.availableScreenRect && parent ?
+            parent.width - (plasmoid.availableScreenRect.x + plasmoid.availableScreenRect.width) : 0)
+        bottomMargin: (folderViewLayer.view && folderViewLayer.view.overflowing && plasmoid.availableScreenRect && parent
+            ? parent.height - (plasmoid.availableScreenRect.y + plasmoid.availableScreenRect.height) : 0)
     }
 
     width: isContainment ? undefined : (folderViewLayer.view.cellWidth * 3) + (units.largeSpacing * 3)
@@ -58,7 +60,7 @@ DragDrop.DropArea {
 
     preventStealing: true
 
-    Plasmoid.associatedApplicationUrls: isFolder ? folderViewLayer.model.resolvedUrl : undefined
+    Plasmoid.associatedApplicationUrls: isFolder ? folderViewLayer.model.resolvedUrl : null
 
     onIconHeightChanged: updateGridSize()
 
