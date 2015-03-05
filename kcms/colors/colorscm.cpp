@@ -366,7 +366,7 @@ void KColorCm::on_schemeImportButton_clicked()
                 return;
             }
 
-            // convert KDE3 scheme to KDE4 scheme
+            // convert KDE3 scheme to new scheme
             KConfigGroup g(config, "Color Scheme");
             KConfigGroup generalGroup(KSharedConfig::openConfig(), "General");
 
@@ -408,7 +408,7 @@ void KColorCm::on_schemeImportButton_clicked()
         }
         else
         {
-            // load KDE4 scheme
+            // load scheme
             loadScheme(config);
 
             // save it
