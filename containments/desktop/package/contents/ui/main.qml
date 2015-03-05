@@ -42,8 +42,8 @@ DragDrop.DropArea {
             ? parent.height - (plasmoid.availableScreenRect.y + plasmoid.availableScreenRect.height) : 0)
     }
 
-    width: isContainment ? undefined : (folderViewLayer.view.cellWidth * 3) + (units.largeSpacing * 3)
-    height: isContainment ? undefined : (folderViewLayer.view.cellHeight * 2) + (units.largeSpacing * 2)
+    width: isContainment ? undefined : (folderViewLayer.view.cellWidth * 3) + (units.largeSpacing * 2)
+    height: isContainment ? undefined : (folderViewLayer.view.cellHeight * 2) + units.largeSpacing
 
     property bool isFolder: (plasmoid.pluginName == "org.kde.plasma.folder")
     property bool isContainment: ("containmentType" in plasmoid)
