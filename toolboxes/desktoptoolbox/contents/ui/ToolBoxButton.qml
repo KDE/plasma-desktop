@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright 2012 by Sebastian Kügler <sebas@kde.org>                    *
+ *   Copyright 2012,2015 by Sebastian Kügler <sebas@kde.org>               *
  *   Copyright 2015 by Kai Uwe Broulik <kde@privat.broulik.de>             *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -137,6 +137,7 @@ Item {
     PlasmaCore.FrameSvgItem {
         id: backgroundFrame
         imagePath: isCorner ? "widgets/translucentbackground" : "widgets/background"
+        opacity: buttonMouse.containsMouse ? 1.0 : 0.4
         x: -margins.left
         y: -margins.top
         width: (isCorner ? buttonLayout.height : buttonLayout.width) + margins.left + margins.right
@@ -145,6 +146,11 @@ Item {
             NumberAnimation {
                 duration: units.longDuration;
                 easing.type: Easing.InOutQuad;
+            }
+        }
+        Behavior on opacity {
+            NumberAnimation {
+                duration: units.longDuration;
             }
         }
     }
@@ -157,7 +163,7 @@ Item {
         //we want to work out the offset which is the visible frame width - our icon width / 2
         //X is relative to the start of button, but the frame is one marging wider to the left so this needs taking into account
         x: isCorner ? Math.round((buttonLayout.height +
-                            ((toolBoxButton.state == "topleft" || toolBoxButton.state == "bottomleft") ? backgroundFrame.margins.right : -backgroundFrame.margins.left)
+                            ((toolBoxButton.state == "topleft" || toolBoxButton.state == "bottomleft") ? backgroundFrame.margins.left : -backgroundFrame.margins.left)
                             - toolBoxIcon.width) /2) : 0
 
         spacing: units.smallSpacing
@@ -259,7 +265,7 @@ Item {
             main.Plasmoid.configuration.ToolBoxButtonState = toolBoxButton.state;
             main.Plasmoid.configuration.ToolBoxButtonX = toolBoxButton.x;
             main.Plasmoid.configuration.ToolBoxButtonY = toolBoxButton.y;
-            print("Saved coordinates for ToolBox in config: " + toolBoxButton.x + ", " +toolBoxButton.x);
+            //print("Saved coordinates for ToolBox in config: " + toolBoxButton.x + ", " +toolBoxButton.x);
             if (dragging) {
                 main.placeToolBox();
             }
