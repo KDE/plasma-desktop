@@ -32,8 +32,6 @@ import "plasmapackage:/code/LayoutManager.js" as LayoutManager
 Item {
     id: appletItem
 
-    anchors.rightMargin: -handleWidth*controlsOpacity
-
     property int handleWidth: iconSize
     property int minimumHandleHeight: 6 * (root.iconSize + 6) + margins.top + margins.bottom
     property int handleHeight: (height < minimumHandleHeight) ? minimumHandleHeight : height
@@ -122,7 +120,7 @@ Item {
         onPressAndHold: {
             if (!plasmoid.immtuable && plasmoid.configuration.pressToMove) {
                 if (!dragMouseArea.dragging && !systemSettings.isDrag(pressX, pressY, mouse.x, mouse.y)) {
-                    if (plasmoid.configuration.pressToHandle) {
+                    if (plasmoid.configuration.pressToHandle && !plasmoid.immutable) {
                         showAppletHandle = true;
                     }
 
@@ -160,8 +158,6 @@ Item {
                 }
             }
         }
-        Rectangle { color: Qt.rgba(0,0,0,0); border.width: 3; border.color: "red"; opacity: 0.5; visible: debug; anchors.fill: parent; }
-
 
         Item {
             anchors { left: parent.left; top: parent.top; bottom: parent.bottom; }
@@ -239,11 +235,11 @@ Item {
                     appletItem.z = appletItem.z + zoffset;
                     animationsEnabled = plasmoid.configuration.pressToHandle ? true : false;
                     mouse.accepted = true;
-                    var x = Math.round(appletItem.x/LayoutManager.cellSize.width)*LayoutManager.cellSize.width
-                    var y = Math.round(appletItem.y/LayoutManager.cellSize.height)*LayoutManager.cellSize.height
-                    LayoutManager.setSpaceAvailable(x, y, appletItem.width, appletItem.height, true)
+                    var x = Math.round(appletItem.x/LayoutManager.cellSize.width)*LayoutManager.cellSize.width;
+                    var y = Math.round(appletItem.y/LayoutManager.cellSize.height)*LayoutManager.cellSize.height;
+                    LayoutManager.setSpaceAvailable(x, y, appletItem.width, appletItem.height, true);
 
-                    placeHolder.syncWithItem(appletItem)
+                    placeHolder.syncWithItem(appletItem);
                     placeHolderPaint.opacity = root.haloOpacity;
                 }
 

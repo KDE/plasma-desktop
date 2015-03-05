@@ -330,7 +330,7 @@ DragDrop.DropArea {
         Item {
             id: placeHolder
 
-            x: -10000 // move offscreen initially to avoid flickering
+            x: -10000 // Move offscreen initially to avoid flickering.
             width: 100
             height: 100
 
@@ -340,23 +340,23 @@ DragDrop.DropArea {
             property Item syncItem
 
             function syncWithItem(item) {
-                syncItem = item
-                minimumWidth = item.minimumWidth
-                minimumHeight = item.minimumHeight
-                repositionTimer.running = true
+                syncItem = item;
+                minimumWidth = item.minimumWidth;
+                minimumHeight = item.minimumHeight;
+                repositionTimer.running = true;
                 if (placeHolderPaint.opacity < 1) {
-                    placeHolder.delayedSyncWithItem()
+                    placeHolder.delayedSyncWithItem();
                 }
             }
 
             function delayedSyncWithItem() {
-                placeHolder.x = placeHolder.syncItem.x
-                placeHolder.y = placeHolder.syncItem.y
-                placeHolder.width = placeHolder.syncItem.width
-                placeHolder.height = placeHolder.syncItem.height
-                //only positionItem here, we don't want to save
-                LayoutManager.positionItem(placeHolder)
-                LayoutManager.setSpaceAvailable(placeHolder.x, placeHolder.y, placeHolder.width, placeHolder.height, true)
+                placeHolder.x = placeHolder.syncItem.x;
+                placeHolder.y = placeHolder.syncItem.y;
+                placeHolder.width = placeHolder.syncItem.width + (plasmoid.immutable ? 0 : syncItem.handleWidth)
+                placeHolder.height = placeHolder.syncItem.height;
+                // Only positionItem here, we don't want to save.
+                LayoutManager.positionItem(placeHolder);
+                LayoutManager.setSpaceAvailable(placeHolder.x, placeHolder.y, placeHolder.width, placeHolder.height, true);
             }
 
             Timer {
@@ -371,10 +371,10 @@ DragDrop.DropArea {
         PlasmaComponents.Highlight {
             id: placeHolderPaint
 
-            x: placeHolder.x + (root.iconSize/2)
-            y: placeHolder.y + (root.iconSize/2)
-            width: placeHolder.width + (root.iconSize/2)
-            height: placeHolder.height - root.iconSize
+            x: placeHolder.x
+            y: placeHolder.y
+            width: placeHolder.width
+            height: placeHolder.height
             z: 0
 
             visible: false
