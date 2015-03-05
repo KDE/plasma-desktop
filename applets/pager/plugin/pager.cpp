@@ -114,6 +114,10 @@ Pager::~Pager()
 {
 }
 
+int Pager::desktopCount() const
+{
+    return m_desktopCount;
+}
 
 
 void Pager::setCurrentDesktop(int desktop)
@@ -327,7 +331,11 @@ void Pager::updateSizes()
         ph = m_size.height();
     }
 
-    m_preferredSize = QSize(pw, ph);
+    if (m_desktopCount > 1) {
+        m_preferredSize = QSize(pw, ph);
+    } else {
+        m_preferredSize = QSize(1, 1); // 0, 0 doesn't collapse completely, leaves uncanny spacing
+    }
     emit preferredSizeChanged();
 
     QRectF itemRect(QPointF(leftMargin, topMargin) , QSizeF(itemWidth, itemHeight));
@@ -437,7 +445,10 @@ void Pager::numberOfDesktopsChanged(int num)
     NETRootInfo info(QX11Info::connection(), NET::NumberOfDesktops | NET::DesktopNames, NET::WM2DesktopLayout);
     m_rows = info.desktopLayoutColumnsRows().height();
 
-    m_desktopCount = num;
+    if (num != m_desktopCount) {
+        m_desktopCount = num;
+        emit desktopCountChanged();
+    }
 
     m_pagerModel->clearDesktopRects();
     recalculateGridSizes(m_rows);

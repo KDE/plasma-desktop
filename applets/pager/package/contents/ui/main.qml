@@ -46,7 +46,7 @@ Item {
     property int dragSwitchDesktopId: -1
 
     anchors.fill: parent
-    //visible: repeater.count > 1 // FIXME: re-enable and fix collapsing
+    visible: pager.desktopCount > 1
 
     property color windowActiveOnActiveDesktopColor: theme.textColor
     property color windowInactiveOnActiveDesktopColor: theme.textColor
