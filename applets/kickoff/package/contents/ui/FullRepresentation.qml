@@ -385,7 +385,7 @@ Item {
             id: usedButton
             tab: recentlyUsedPage
             iconSource: "view-history"
-            text: i18n("Recently Used")
+            text: i18n("History")
         }
         KickoffButton {
             id: leaveButton
