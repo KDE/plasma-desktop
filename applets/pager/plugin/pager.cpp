@@ -77,7 +77,7 @@ Pager::Pager(QObject *parent)
 
     // initialize with a decent default
     m_desktopCount = qMax(1, KWindowSystem::numberOfDesktops());
-    
+
     m_pagerModel = new PagerModel(this);
 
     m_timer = new QTimer(this);
@@ -172,7 +172,7 @@ void Pager::setSize(const QSizeF &size)
 
     m_size = size;
     emit sizeChanged();
-    
+
     m_validSizes = false;
 
     startTimer();
