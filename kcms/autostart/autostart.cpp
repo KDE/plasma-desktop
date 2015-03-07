@@ -302,8 +302,9 @@ void Autostart::slotAddProgram()
         if ( dlg.exec() != QDialog::Accepted )
             return;
     }
+    KDesktopFile newConf(desktopTemplate.path());
     DesktopStartItem * item = new DesktopStartItem( desktopPath, m_programItem,this );
-    addItem( item, service->name(), m_pathName[0],  service->exec() , false);
+    addItem( item, service->name(), m_pathName[0], newConf.desktopGroup().readEntry("Exec") , false);
 }
 
 void Autostart::slotAddScript()
