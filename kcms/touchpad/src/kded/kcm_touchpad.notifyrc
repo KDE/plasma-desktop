@@ -1,6 +1,7 @@
 [Global]
 Name=Touchpad
 Name[ca]=Ratolí tàctil
+Name[el]=Επιφάνεια αφής
 Name[en_GB]=Touchpad
 Name[es]=Panel táctil
 Name[nl]=Touchpad
@@ -19,6 +20,7 @@ Name[zh_CN]=触摸板
 IconName=input-touchpad
 Comment=Touchpad
 Comment[ca]=Ratolí tàctil
+Comment[el]=Επιφάνεια αφής
 Comment[en_GB]=Touchpad
 Comment[es]=Panel táctil
 Comment[nl]=Touchpad
@@ -38,6 +40,7 @@ Comment[zh_CN]=触摸板
 [Event/TouchpadDisabled]
 Name=Touchpad was disabled
 Name[ca]=El ratolí tàctil s'ha desactivat
+Name[el]=Η επιφάνεια αφής απενεργοποιήθηκε
 Name[en_GB]=Touchpad was disabled
 Name[es]=El panel táctil ha sido desactivado
 Name[nl]=Touchpad was uitgeschakeld
@@ -55,6 +58,7 @@ Name[x-test]=xxTouchpad was disabledxx
 Name[zh_CN]=触摸板已禁用
 Comment=Touchpad was disabled because mouse is detected
 Comment[ca]=El ratolí tàctil s'ha desactivat perquè s'ha detectat un ratolí
+Comment[el]=Η επιφάνεια αφής απενεργοποιήθηκε γιατί ανιχνεύτηκε ένα ποντίκι
 Comment[en_GB]=Touchpad was disabled because mouse is detected
 Comment[es]=El panel táctil ha sido desactivado porque se ha detectado un ratón
 Comment[nl]=Touchpad was uitgeschakeld omdat er een muis is gedetecteerd
@@ -76,6 +80,7 @@ Action=Popup
 [Event/TouchpadEnabled]
 Name=Touchpad was enabled
 Name[ca]=El ratolí tàctil s'ha activat
+Name[el]=Η επιφάνεια αφής ενεργοποιήθηκε
 Name[en_GB]=Touchpad was enabled
 Name[es]=El panel táctil ha sido activado
 Name[nl]=Touchpad was ingeschakeld
@@ -93,6 +98,7 @@ Name[x-test]=xxTouchpad was enabledxx
 Name[zh_CN]=触摸板已启用
 Comment=Touchpad was enabled because the mouse was unplugged
 Comment[ca]=El ratolí tàctil s'ha activat perquè en ratolí s'ha desendollat
+Comment[el]=Η επιφάνεια αφής ενεργοποιήθηκε γιατί το ποντίκι αποσυνδέθηκε
 Comment[en_GB]=Touchpad was enabled because the mouse was unplugged
 Comment[es]=El panel táctil ha sido activado porque se ha desconectado el ratón
 Comment[nl]=Touchpad was ingeschakeld omdat er een muis is uitgetrokken
