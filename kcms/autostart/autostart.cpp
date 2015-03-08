@@ -353,14 +353,14 @@ void Autostart::slotRemoveCMD()
 
 void Autostart::slotEditCMD(QTreeWidgetItem* ent)
 {
+
     if (!ent) return;
-    AutoStartItem *entry = dynamic_cast<AutoStartItem*>( ent );
-    if ( entry )
+    DesktopStartItem *desktopEntry = dynamic_cast<DesktopStartItem*>( ent );
+    if ( desktopEntry )
     {
-        const KFileItem kfi = KFileItem( KFileItem::Unknown, KFileItem::Unknown, QUrl( entry->fileName() ), true );
+        const KFileItem kfi = KFileItem( KFileItem::Unknown, KFileItem::Unknown, QUrl( desktopEntry->fileName() ), true );
         if (! slotEditCMD( kfi ))
             return;
-        DesktopStartItem *desktopEntry = dynamic_cast<DesktopStartItem*>( entry );
         if (desktopEntry) {
             KService service(desktopEntry->fileName().path());
             addItem( desktopEntry, service.name(), m_pathName.value(m_paths.indexOf(desktopEntry->fileName().adjusted(QUrl::RemoveFilename).toString())), service.exec(),false );
