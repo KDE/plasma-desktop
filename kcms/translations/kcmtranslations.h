@@ -20,7 +20,6 @@
 #ifndef KCMTRANSLATIONS_H
 #define KCMTRANSLATIONS_H
 
-#include <QMap>
 
 #include <KCModule>
 #include <KSharedConfig>
