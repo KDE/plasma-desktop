@@ -22,7 +22,6 @@
 
 #include <KColorScheme>
 
-#include <QtDebug>
 
 PreviewWidget::PreviewWidget(QWidget *parent) : QFrame(parent)
 {

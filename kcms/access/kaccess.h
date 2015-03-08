@@ -31,7 +31,6 @@
 
 
 #include <KUniqueApplication>
-#include <KUrl>
 
 #include <phonon/MediaObject>
 

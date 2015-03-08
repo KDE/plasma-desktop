@@ -18,7 +18,6 @@
 #include <QDialog>
 
 #include <KCModule>
-#include <KConfig>
 #include <KSharedConfig>
 
 class QCheckBox;

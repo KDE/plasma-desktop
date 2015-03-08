@@ -26,16 +26,16 @@
 #include <QtCore/qprocess.h>
 #include <QTimer>
 #include <QPainter>
+#include <QMessageBox>
+#include <QDesktopWidget>
 
 #include <QLabel>
-#include <QDesktopWidget>
-#include <QGroupBox>
 #include <QHBoxLayout>
 #include <QVBoxLayout>
-#include <QtWidgets/qaction.h>
+#include <qaction.h>
 
+#include <KStandardGuiItem>
 #include <KDialog>
-#include <KMessageBox>
 #include <KComboBox>
 #include <KIconLoader>
 #include <KDebug>

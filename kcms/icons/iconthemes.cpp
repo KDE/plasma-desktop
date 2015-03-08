@@ -40,12 +40,12 @@
 #include <QStandardPaths>
 #include <QUrl>
 #include <qtemporaryfile.h>
+#include <QApplication>
 
 #include <KBuildSycocaProgressDialog>
 #include <KLocalizedString>
 #include <KSharedDataCache>
 #include <KIconTheme>
-#include <KService>
 #include <KConfig>
 #include <KConfigGroup>
 #include <KSharedConfig>

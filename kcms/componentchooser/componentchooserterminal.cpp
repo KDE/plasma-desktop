@@ -30,7 +30,6 @@
 #include <kconfiggroup.h>
 #include <KLocalizedString>
 #include <KGlobalSettings>
-#include <KToolInvocation>
 
 #include <KUrl>
 

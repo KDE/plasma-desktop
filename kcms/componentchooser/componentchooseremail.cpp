@@ -20,9 +20,8 @@
 #include <kopenwithdialog.h>
 
 #include <KLocalizedString>
-#include <KGlobal>
 #include <KConfigGroup>
-
+#include <KSharedConfig>
 #include <KUrl>
 
 // for chmod:
