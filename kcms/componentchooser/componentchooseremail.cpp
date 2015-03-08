@@ -22,7 +22,7 @@
 #include <KLocalizedString>
 #include <KConfigGroup>
 #include <KSharedConfig>
-#include <KUrl>
+#include <QUrl>
 
 // for chmod:
 #include <sys/types.h>
@@ -78,7 +78,7 @@ void CfgEmailClient::configChanged()
 
 void CfgEmailClient::selectEmailClient()
 {
-    KUrl::List urlList;
+    QList<QUrl> urlList;
     KOpenWithDialog dlg(urlList, i18n("Select preferred email client:"), QString(), this);
     // hide "Do not &close when command exits" here, we don't need it for a mail client
     dlg.hideNoCloseOnExit();

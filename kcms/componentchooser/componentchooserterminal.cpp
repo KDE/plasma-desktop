@@ -31,7 +31,7 @@
 #include <KLocalizedString>
 #include <KGlobalSettings>
 
-#include <KUrl>
+#include <QUrl>
 
 #include "../migrationlib/kdelibs4config.h"
 
@@ -98,7 +98,7 @@ void CfgTerminalEmulator::save(KConfig *)
 
 void CfgTerminalEmulator::selectTerminalApp()
 {
-	KUrl::List urlList;
+	QList<QUrl> urlList;
 	KOpenWithDialog dlg(urlList, i18n("Select preferred terminal application:"), QString(), this);
 	// hide "Run in &terminal" here, we don't need it for a Terminal Application
 	dlg.hideRunInTerminal();

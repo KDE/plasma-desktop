@@ -22,7 +22,7 @@
 
 #include "../migrationlib/kdelibs4config.h"
 
-#include <KUrl>
+#include <QUrl>
 
 CfgBrowser::CfgBrowser(QWidget *parent)
     : QWidget(parent), Ui::BrowserConfig_UI(),CfgPlugin()
@@ -105,7 +105,7 @@ void CfgBrowser::save(KConfig *)
 
 void CfgBrowser::selectBrowser()
 {
-    KUrl::List urlList;
+    QList<QUrl> urlList;
     KOpenWithDialog dlg(urlList, i18n("Select preferred Web browser application:"), QString(), this);
     if (dlg.exec() != QDialog::Accepted)
         return;
