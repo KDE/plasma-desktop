@@ -354,11 +354,6 @@ will scroll down and counter clockwise motion will scroll up</string>
  </widget>
  <customwidgets>
   <customwidget>
-   <class>QSpinBox</class>
-   <extends>QWidget</extends>
-   <header>knuminput.h</header>
-  </customwidget>
-  <customwidget>
    <class>KComboBox</class>
    <extends>QComboBox</extends>
    <header>kcombobox.h</header>
