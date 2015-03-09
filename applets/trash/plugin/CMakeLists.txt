@@ -1,5 +1,3 @@
-project(trashplugin)
-
 set(trashplugin_SRCS
     dirmodel.cpp
     trashplugin.cpp

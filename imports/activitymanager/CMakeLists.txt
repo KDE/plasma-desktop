@@ -1,7 +1,3 @@
-# vim:set softtabstop=3 shiftwidth=3 tabstop=3 expandtab:
-
-project (activity-switcher-imports)
-
 find_package (ECM 0.0.8 REQUIRED NO_MODULE)
 set (CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${ECM_MODULE_PATH})
 

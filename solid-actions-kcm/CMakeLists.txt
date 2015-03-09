@@ -1,5 +1,3 @@
-project (solid-actions)
-
 add_definitions(-DTRANSLATION_DOMAIN="kcm_solid_actions")
 
 add_subdirectory(device-actions)

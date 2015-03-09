@@ -1,4 +1,3 @@
-project(kcm-touchpad)
 add_definitions(-DTRANSLATION_DOMAIN=\"kcm_touchpad\")
 
 set(CMAKE_MODULE_PATH
