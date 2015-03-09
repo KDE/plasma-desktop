@@ -27,11 +27,12 @@
 #include <QDir>
 
 #include <Plasma/Package>
+#include <QuickAddons/ConfigModule>
 
 class QQuickView;
 class QStandardItemModel;
 
-class KCMLookandFeel : public KCModuleQml
+class KCMLookandFeel : public KDeclarative::ConfigModule
 {
     Q_OBJECT
     Q_PROPERTY(QStandardItemModel *lookAndFeelModel READ lookAndFeelModel CONSTANT)
@@ -60,7 +61,7 @@ public:
         HasWindowSwitcherRole,
         HasDesktopSwitcherRole
     };
-    KCMLookandFeel(QWidget* parent, const QVariantList& args);
+    KCMLookandFeel(QObject* parent, const QVariantList& args);
     ~KCMLookandFeel();
 
     QList<Plasma::Package> availablePackages(const QString &component = QString());

@@ -24,6 +24,8 @@ target_link_libraries(kcm_lookandfeel
   KF5::Plasma
   KF5::PlasmaQuick
   KF5::KDELibs4Support
+  KF5::Declarative
+  KF5::QuickAddons
 
   Qt5::DBus
   Qt5::Widgets
@@ -49,4 +51,4 @@ if(BUILD_TESTING)
    add_subdirectory(autotests)
 endif()
 
-plasma_install_package(package kcm_lookandfeel kcms kcm_lookandfeel)
+kpackage_install_package(package kcm_lookandfeel kcms)

@@ -56,8 +56,8 @@
 
 K_PLUGIN_FACTORY(KCMLookandFeelFactory, registerPlugin<KCMLookandFeel>();)
 
-KCMLookandFeel::KCMLookandFeel(QWidget* parent, const QVariantList& args)
-    : KCModuleQml(parent, args)
+KCMLookandFeel::KCMLookandFeel(QObject* parent, const QVariantList& args)
+    : KDeclarative::ConfigModule(parent, args)
     , m_config("kdeglobals")
     , m_configGroup(m_config.group("KDE"))
     , m_applyColors(true)
@@ -121,7 +121,7 @@ void KCMLookandFeel::setSelectedPlugin(const QString &plugin)
 
     m_selectedPlugin = plugin;
     emit selectedPluginChanged();
-    changed();
+    setNeedsSave(true);
 }
 
 QList<Plasma::Package> KCMLookandFeel::availablePackages(const QString &component)

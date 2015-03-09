@@ -42,6 +42,7 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     Attica
     Wallet
     Runner
+    Declarative
 )
 
 find_package(LibKWorkspace CONFIG REQUIRED)
