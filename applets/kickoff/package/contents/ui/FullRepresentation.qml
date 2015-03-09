@@ -493,12 +493,20 @@ Item {
                 target: root
                 Keys.forwardTo: [tabBar.layout]
             }
+            PropertyChanges {
+                target: tabBar
+                visible: true
+            }
         },
         State {
             name: "Applications"
             PropertyChanges {
                 target: root
                 Keys.forwardTo: [root]
+            }
+            PropertyChanges {
+                target: tabBar
+                visible: true
             }
         },
         State {
