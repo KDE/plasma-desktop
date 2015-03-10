@@ -19,39 +19,42 @@
 
 .pragma library
 
-var positions = new Array();
+var positions = []
 
-var cellSize = new Object();
-cellSize.width = 24;
-cellSize.height = 24;
+var cellSize = {
+    width: 24,
+    height: 24
+}
 
-var defaultAppletSize = new Object();
-defaultAppletSize.width = cellSize.width * 6;
-defaultAppletSize.height = cellSize.height * 6;
-
+var defaultAppletSize = {
+    width: cellSize.width * 6,
+    height: cellSize.height * 6
+}
 
 var resultsFlow
 var plasmoid;
 var itemsConfig
 
 //bookkeeping for the item groups
-var itemGroups = new Object()
+var itemGroups = {}
 
 function restore()
 {
-    var appletsMap = new Object();
+    var appletsMap = {};
     var applet;
-    for (var i = 0; i < plasmoid.applets.length; ++i) {
+    var appletsLength = plasmoid.applets.length
+    for (var i = 0; i < appletsLength; ++i) {
         applet = plasmoid.applets[i];
-        appletsMap["Applet-"+applet.id] = applet;
+        appletsMap["Applet-" + applet.id] = applet;
     }
 
-    itemsConfig = new Object();
+    itemsConfig = {};
     var configString = String(plasmoid.configuration.ItemsGeometries)
     //print("Config read from configfile: " + configString);
     //array, a cell for encoded item geometry
     var itemsStrings = configString.split(";")
-    for (var i=0; i<itemsStrings.length; i++) {
+    var itemsStringsLength = itemsStrings.length
+    for (var i = 0; i < itemsStringsLength; ++i) {
         //[id, encoded geometry]
         var idConfig = itemsStrings[i].split(":")
         idConfig[0] = idConfig[0].replace("%3A", ":")
@@ -66,26 +69,26 @@ function restore()
         if (rect.length < 5) {
             continue
         }
-        var geomObject = new Object()
-        geomObject.x = rect[0]
-        geomObject.y = rect[1]
-        geomObject.width = rect[2]
-        geomObject.height = rect[3]
-        geomObject.rotation = parseFloat(rect[4])
-        //print("xxxxx Rotation: " + geomObject.rotation + " " + rect[4]);
-        itemsConfig[idConfig[0]] = geomObject
+
+        itemsConfig[idConfig[0]] = {
+            x: rect[0],
+            y: rect[1],
+            width: rect[2],
+            height: rect[3],
+            rotation: parseFloat(rect[4])
+        };
     }
 }
 
 function save()
 {
-    var configString = String();
+    var configString = "";
 
     for (var _id in itemsConfig) {
         var rect = itemsConfig[_id];
         var idstring = _id.replace(":", "%3A");
         if (idstring != "undefined") {
-            configString +=  idstring + ":" + rect.x + "," + rect.y + "," + rect.width + "," + rect.height + "," + rect.rotation + ";";
+            configString += idstring + ":" + rect.x + "," + rect.y + "," + rect.width + "," + rect.height + "," + rect.rotation + ";";
         }
     }
 
@@ -96,7 +99,7 @@ function save()
 
 function resetPositions()
 {
-    positions = new Array()
+    positions = []
 }
 
 //returns the available size at a given position
@@ -107,36 +110,38 @@ function availableSpace(x, y, width, height)
     var rowsWidth = Math.ceil(width/cellSize.width)
     var columnsHeight = Math.ceil(height/cellSize.height)
 
-    var availableSize = new Object
-    availableSize.width = 0
-    availableSize.height = 0
+    var availableSize = {
+        width: 0,
+        height: 0
+    }
 
     if (x < 0 || y < 0) {
         return availableSize;
-    } else if (positions[row] == undefined) {
-        availableSize.width = width - Math.max(0, (x + width) - resultsFlow.width)
-        availableSize.height = height
-//         print(Math.max(0, (x + width) - resultsFlow.width) +" "+ resultsFlow.width)
-        return availableSize;
-    } else if (!positions[row][column]) {
+    }
+    if (positions[row] === undefined) {
+        return {
+            width: width - Math.max(0, (x + width) - resultsFlow.width),
+            height: height
+        }
+    }
 
-        for (var w=0; w < rowsWidth; w++) {
-            //occupied?
-            var free = true;
-
-            if (positions[row+w] && positions[row+w][column]) {
+    if (!positions[row][column]) {
+        for (var w = 0; w < rowsWidth; ++w) {
+            if (positions[row + w] && positions[row + w][column]) {
                 break;
             } else {
                 availableSize.width = w+1
             }
         }
 
-        for (var h=0; h < columnsHeight; h++) {
+        for (var h = 0; h < columnsHeight; ++h) {
             //occupied?
             var free = true
+
             //using availableSize.width instead of rowsWidth or the result will be 0
-            for (var i = row; i < row+availableSize.width; ++i) {
-                if (positions[i] && positions[i][column+h]) {
+            var rowEnd = row + availableSize.width
+            for (var i = row; i < rowEnd; ++i) {
+                if (positions[i] && positions[i][column + h]) {
                     free = false
                     break
                 }
@@ -168,11 +173,13 @@ function setSpaceAvailable(x, y, width, height, available)
     var rowsWidth = Math.round(width/cellSize.width)
     var columnsHeight = Math.round(height/cellSize.height)
 
-    for (var i = row; i<row+rowsWidth; ++i) {
+    var rowEnd = row + rowsWidth;
+    for (var i = row; i < rowEnd; ++i) {
         if (!positions[i]) {
-            positions[i] = new Array()
+            positions[i] = []
         }
-        for (var j = column; j<column+columnsHeight; ++j) {
+        var columnEnd = column + columnsHeight;
+        for (var j = column; j < columnEnd; ++j) {
             positions[i][j] = !available
             //print("set "+i+" "+j+" "+!available)
         }
@@ -281,13 +288,14 @@ function removeApplet(applet) {
 }
 
 function saveItem(item) {
-    var rect = new Object()
-    rect.x = item.x
-    rect.y = item.y
-    rect.width = item.width
-    rect.height = item.height
-    rect.rotation = item.rotation
-    //print("-- Saving rotation : " + rect.rotation);
+    var rect = {
+        x: item.x,
+        y: item.y,
+        width: item.width,
+        height: item.height,
+        rotation: item.rotation
+    };
+
     //save only things that actually have a category (exclude the placeholder)
     if (item.category) {
         //print("-- Saving rotation : " + rect.rotation);
