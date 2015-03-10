@@ -119,9 +119,13 @@ void KCMLookandFeel::setSelectedPlugin(const QString &plugin)
         return;
     }
 
+    const bool firstTime = m_selectedPlugin.isNull();
     m_selectedPlugin = plugin;
     emit selectedPluginChanged();
-    setNeedsSave(true);
+
+    if (!firstTime) {
+        setNeedsSave(true);
+    }
 }
 
 QList<Plasma::Package> KCMLookandFeel::availablePackages(const QString &component)
