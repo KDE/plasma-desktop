@@ -1,6 +1,7 @@
 [Global]
 Name=Touchpad
 Name[ca]=Ratolí tàctil
+Name[de]=Touchpad
 Name[el]=Επιφάνεια αφής
 Name[en_GB]=Touchpad
 Name[es]=Panel táctil
@@ -21,6 +22,7 @@ Name[zh_CN]=触摸板
 IconName=input-touchpad
 Comment=Touchpad
 Comment[ca]=Ratolí tàctil
+Comment[de]=Touchpad
 Comment[el]=Επιφάνεια αφής
 Comment[en_GB]=Touchpad
 Comment[es]=Panel táctil
@@ -42,6 +44,7 @@ Comment[zh_CN]=触摸板
 [Event/TouchpadDisabled]
 Name=Touchpad was disabled
 Name[ca]=El ratolí tàctil s'ha desactivat
+Name[de]=Touchpad wurde deaktiviert
 Name[el]=Η επιφάνεια αφής απενεργοποιήθηκε
 Name[en_GB]=Touchpad was disabled
 Name[es]=El panel táctil ha sido desactivado
@@ -84,6 +87,7 @@ Action=Popup
 [Event/TouchpadEnabled]
 Name=Touchpad was enabled
 Name[ca]=El ratolí tàctil s'ha activat
+Name[de]=Touchpad wurde aktiviert
 Name[el]=Η επιφάνεια αφής ενεργοποιήθηκε
 Name[en_GB]=Touchpad was enabled
 Name[es]=El panel táctil ha sido activado
