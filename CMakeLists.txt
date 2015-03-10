@@ -64,8 +64,8 @@ set_package_properties(KF5Activities PROPERTIES DESCRIPTION "management of Plasm
                        PURPOSE "Needed by activity related plasmoids and the pager."
                       )
 
-find_package(KF5ActivitiesStats)
-set_package_properties(KF5ActivitiesStats PROPERTIES DESCRIPTION "Usage statistics for activity data"
+find_package(KF5ActivitiesExperimentalStats)
+set_package_properties(KF5ActivitiesExperimentalStats PROPERTIES DESCRIPTION "Usage statistics for activity data"
                        TYPE OPTIONAL
                        PURPOSE "Used by task manager and launcher menus."
                       )

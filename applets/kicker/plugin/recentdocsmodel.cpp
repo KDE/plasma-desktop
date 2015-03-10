@@ -29,8 +29,8 @@
 #include <KFileItem>
 #include <KRun>
 
-#include <kactivitiesstats/resultmodel.h>
-#include <kactivitiesstats/terms.h>
+#include <KActivities/Experimental/Stats/ResultModel>
+#include <KActivities/Experimental/Stats/Terms>
 
 namespace KAStats = KActivities::Experimental::Stats;
 
@@ -137,7 +137,7 @@ void RecentDocsModel::refresh()
 {
     QObject *oldModel = sourceModel();
 
-    auto query = (LinkedResources | RecentlyUsedFirst | Agent(":any") | Type(":any") | Activity(":current"));
+    auto query = (UsedResources | RecentlyUsedFirst | Agent::any() | Type::any() | Activity::current());
 
     ResultModel *model = new ResultModel(query);
     model->setItemCountLimit(15);
