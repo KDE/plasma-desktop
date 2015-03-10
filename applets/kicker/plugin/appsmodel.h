@@ -78,7 +78,7 @@ class AppsModel : public AbstractModel
 
         Q_INVOKABLE bool trigger(int row, const QString &actionId, const QVariant &argument);
 
-        Q_INVOKABLE AbstractModel *modelForRow(int row);
+        Q_INVOKABLE QAbstractItemModel *modelForRow(int row);
 
         bool flat() const;
         void setFlat(bool flat);

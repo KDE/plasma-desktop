@@ -1,6 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2012 by Aurélien Gâteau <agateau@kde.org>               *
- *   Copyright (C) 2014 by Eike Hein <hein@kde.org>                        *
+ *   Copyright (C) 2014-2015 by Eike Hein <hein@kde.org>                   *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -21,28 +21,13 @@
 #ifndef RECENTDOCSMODEL_H
 #define RECENTDOCSMODEL_H
 
-#include "abstractentry.h"
-#include "abstractmodel.h"
+#include <QSortFilterProxyModel>
 
-class DocEntry : public AbstractEntry
-{
-    public:
-        DocEntry(const QString &name, const QString &icon,
-            const QString &url, const QString &desktopPath);
-
-        EntryType type() const { return RunnableType; }
-
-        QString url() const { return m_url; }
-        QString desktopPath() const { return m_desktopPath; }
-
-    private:
-        QString m_url;
-        QString m_desktopPath;
-};
-
-class RecentDocsModel : public AbstractModel
+class RecentDocsModel : public QSortFilterProxyModel
 {
     Q_OBJECT
+
+    Q_PROPERTY(int count READ rowCount NOTIFY countChanged)
 
     public:
         explicit RecentDocsModel(QObject *parent = 0);
@@ -50,9 +35,10 @@ class RecentDocsModel : public AbstractModel
 
         QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
 
-        int rowCount(const QModelIndex &parent = QModelIndex()) const;
-
         Q_INVOKABLE bool trigger(int row, const QString &actionId, const QVariant &argument);
+
+    Q_SIGNALS:
+        void countChanged() const;
 
     private Q_SLOTS:
         void refresh();
@@ -60,8 +46,6 @@ class RecentDocsModel : public AbstractModel
     private:
         void forget(int row);
         void forgetAll();
-
-        QList<DocEntry *> m_entryList;
 };
 
 #endif

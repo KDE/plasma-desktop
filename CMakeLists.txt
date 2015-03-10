@@ -64,6 +64,12 @@ set_package_properties(KF5Activities PROPERTIES DESCRIPTION "management of Plasm
                        PURPOSE "Needed by activity related plasmoids and the pager."
                       )
 
+find_package(KF5ActivitiesStats)
+set_package_properties(KF5ActivitiesStats PROPERTIES DESCRIPTION "Usage statistics for activity data"
+                       TYPE OPTIONAL
+                       PURPOSE "Used by task manager and launcher menus."
+                      )
+
 # Baloo is currently part of the KF5 namespace, but it is not
 # a proper framework. Hence the strange versioning.
 # This will be fixed with Plasma 5.2, as Baloo should have

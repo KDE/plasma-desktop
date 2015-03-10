@@ -106,7 +106,7 @@ QVariant AppsModel::data(const QModelIndex &index, int role) const
         if (entry->type() == AbstractEntry::GroupType) {
             const AbstractGroupEntry *groupEntry = static_cast<const AbstractGroupEntry *>(entry);
 
-            if (groupEntry->model() && groupEntry->model()->count()) {
+            if (groupEntry->model() && groupEntry->model()->rowCount()) {
                 return true;
             }
         }
@@ -328,7 +328,7 @@ bool AppsModel::trigger(int row, const QString &actionId, const QVariant &argume
     return false;
 }
 
-AbstractModel *AppsModel::modelForRow(int row)
+QAbstractItemModel *AppsModel::modelForRow(int row)
 {
     if (row < 0 || row >= m_entryList.count() || m_entryList.at(row)->type() != AbstractEntry::GroupType) {
         return 0;

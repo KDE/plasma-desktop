@@ -36,7 +36,7 @@ class AbstractModel : public QAbstractListModel
 
         Q_INVOKABLE virtual bool trigger(int row, const QString &actionId, const QVariant &argument) = 0;
 
-        Q_INVOKABLE virtual AbstractModel *modelForRow(int row);
+        Q_INVOKABLE virtual QAbstractItemModel *modelForRow(int row);
 
         virtual int rowForFavoriteId(const QString &favoriteId);
 

@@ -1,6 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2012 by Aurélien Gâteau <agateau@kde.org>               *
- *   Copyright (C) 2014 by Eike Hein <hein@kde.org>                        *
+ *   Copyright (C) 2014-2015 by Eike Hein <hein@kde.org>                   *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -21,57 +21,70 @@
 #include "recentdocsmodel.h"
 #include "actionlist.h"
 
-#include <QSet>
+#include <QDebug>
+#include <QIcon>
+#include <QMimeType>
+#include <QMimeDatabase>
 
-#include <KDesktopFile>
-#include <KDirWatch>
 #include <KFileItem>
-#include <KLocalizedString>
-#include <KRecentDocument>
 #include <KRun>
 
-DocEntry::DocEntry(const QString &name, const QString &icon,
-    const QString &url, const QString &desktopPath)
-{
-    m_name = name;
-    m_icon = QIcon::fromTheme(icon);
-    m_url = url;
-    m_desktopPath = desktopPath;
-}
+#include <kactivitiesstats/resultmodel.h>
+#include <kactivitiesstats/terms.h>
 
-RecentDocsModel::RecentDocsModel(QObject *parent) : AbstractModel(parent)
-{
-    KDirWatch *watch = new KDirWatch(this);
-    watch->addDir(KRecentDocument::recentDocumentDirectory());
+namespace KAStats = KActivities::Experimental::Stats;
 
-    connect(watch, SIGNAL(created(QString)), SLOT(refresh()));
-    connect(watch, SIGNAL(deleted(QString)), SLOT(refresh()));
-    connect(watch, SIGNAL(dirty(QString)), SLOT(refresh()));
+using namespace KAStats;
+using namespace KAStats::Terms;
+
+RecentDocsModel::RecentDocsModel(QObject *parent) : QSortFilterProxyModel(parent)
+{
+    connect(this, &QSortFilterProxyModel::rowsInserted, this, &RecentDocsModel::countChanged);
+    connect(this, &QSortFilterProxyModel::rowsRemoved, this, &RecentDocsModel::countChanged);
 
     refresh();
+
+    // FIXME TODO: Duplication from AbstractModel.
+    QHash<int, QByteArray> roles;
+    roles.insert(Qt::DisplayRole, "display");
+    roles.insert(Qt::DecorationRole, "decoration");
+    roles.insert(Kicker::IsParentRole, "isParent");
+    roles.insert(Kicker::HasChildrenRole, "hasChildren");
+    roles.insert(Kicker::FavoriteIdRole, "favoriteId");
+    roles.insert(Kicker::HasActionListRole, "hasActionList");
+    roles.insert(Kicker::ActionListRole, "actionList");
+    roles.insert(Kicker::UrlRole, "url");
+
+    setRoleNames(roles);
 }
 
 RecentDocsModel::~RecentDocsModel()
 {
-    qDeleteAll(m_entryList);
 }
 
 QVariant RecentDocsModel::data(const QModelIndex &index, int role) const
 {
-    if (!index.isValid() || index.row() >= m_entryList.count()) {
+    if (!index.isValid()) {
         return QVariant();
     }
 
+    const QUrl url(QSortFilterProxyModel::data(index, ResultModel::ResourceRole).toString());
+    const KFileItem fileItem(url);
+
+    if (!url.isValid() || !fileItem.isFile()) {
+        return QLatin1String("Resource not a file!");
+    }
+
     if (role == Qt::DisplayRole) {
-        return m_entryList.at(index.row())->name();
+        return url.fileName();
     } else if (role == Qt::DecorationRole) {
-        return m_entryList.at(index.row())->icon();
+        return QIcon::fromTheme(fileItem.iconName());
     } else if (role == Kicker::HasActionListRole) {
         return true;
     } else if (role == Kicker::ActionListRole) {
-        KFileItem item(QUrl(m_entryList.at(index.row())->url()));
-        QVariantList actionList = Kicker::createActionListForFileItem(item);
+        QVariantList actionList = Kicker::createActionListForFileItem(fileItem);
 
+        /* FIXME TODO: No support in KActivities.
         actionList.prepend(Kicker::createSeparatorActionItem());
 
         const QVariantMap &forgetAllAction = Kicker::createActionItem(i18n("Forget All Documents"), "forgetAll");
@@ -79,6 +92,7 @@ QVariant RecentDocsModel::data(const QModelIndex &index, int role) const
 
         const QVariantMap &forgetAction = Kicker::createActionItem(i18n("Forget Document"), "forget");
         actionList.prepend(forgetAction);
+        */
 
         return actionList;
     }
@@ -86,18 +100,13 @@ QVariant RecentDocsModel::data(const QModelIndex &index, int role) const
     return QVariant();
 }
 
-int RecentDocsModel::rowCount(const QModelIndex &parent) const
-{
-    return parent.isValid() ? 0 : m_entryList.count();
-}
-
 bool RecentDocsModel::trigger(int row, const QString &actionId, const QVariant &argument)
 {
-    if (row < 0 || row >= m_entryList.count()) {
+    if (row < 0 || row >= rowCount()) {
         return false;
     }
 
-    QUrl url(m_entryList.at(row)->url());
+    QUrl url(QSortFilterProxyModel::data(index(row, 0), ResultModel::ResourceRole).toString());
 
     if (actionId.isEmpty()) {
         new KRun(url, 0);
@@ -126,68 +135,28 @@ bool RecentDocsModel::trigger(int row, const QString &actionId, const QVariant &
 
 void RecentDocsModel::refresh()
 {
-    beginResetModel();
+    QObject *oldModel = sourceModel();
 
-    qDeleteAll(m_entryList);
-    m_entryList.clear();
+    auto query = (LinkedResources | RecentlyUsedFirst | Agent(":any") | Type(":any") | Activity(":current"));
 
-    QSet<QString> urls;
+    ResultModel *model = new ResultModel(query);
+    model->setItemCountLimit(15);
 
-    foreach (const QString &path, KRecentDocument::recentDocuments()) {
-        KDesktopFile file(path);
-        QString url = file.readUrl();
+    setSourceModel(model);
 
-        if (urls.contains(url)) {
-            continue;
-        }
-
-        QString name = file.readName();
-
-        if (name.isEmpty()) {
-            name = url;
-        }
-
-        if (name.isEmpty()) {
-            continue;
-        }
-
-        m_entryList << new DocEntry(name, file.readIcon(), url, path);
-
-        urls.insert(url);
-    }
-
-    endResetModel();
+    delete oldModel;
 
     emit countChanged();
 }
 
 void RecentDocsModel::forget(int row)
 {
-    if (row >= m_entryList.count()) {
-        return;
-    }
-    if (QFile::remove(m_entryList.at(row)->desktopPath())) {
-        beginRemoveRows(QModelIndex(), row, row);
+    Q_UNUSED(row)
 
-        m_entryList.removeAt(row);
-
-        endRemoveRows();
-
-        emit countChanged();
-    }
+    // FIXME TODO: No support in KActivities.
 }
 
 void RecentDocsModel::forgetAll()
 {
-    beginResetModel();
-
-    for (int row = m_entryList.count() - 1; row >= 0; --row) {
-        if (QFile::remove(m_entryList.at(row)->desktopPath())) {
-            m_entryList.removeAt(row);
-        }
-    }
-
-    endResetModel();
-
-    emit countChanged();
+    // FIXME TODO: FIXME TODO: No support in KActivities.
 }

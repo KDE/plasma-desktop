@@ -26,7 +26,7 @@
 #include <KLocalizedString>
 
 GroupEntry::GroupEntry(const QString &name, const QString &icon,
-    AbstractModel *model, AbstractModel *parentModel)
+    QAbstractItemModel *model, AbstractModel *parentModel)
 {
     m_name = name;
     m_icon = QIcon::fromTheme(icon);

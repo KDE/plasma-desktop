@@ -44,7 +44,7 @@ int AbstractModel::count() const
     return rowCount();
 }
 
-AbstractModel *AbstractModel::modelForRow(int row)
+QAbstractItemModel *AbstractModel::modelForRow(int row)
 {
     Q_UNUSED(row)
 
