@@ -20,16 +20,15 @@
 #ifndef _KCM_SEARCH_H
 #define _KCM_SEARCH_H
 
-#include <KCModule>
 #include <KConfig>
 #include <KConfigGroup>
 
 #include <Plasma/Package>
+#include <QuickAddons/ConfigModule>
 
-class QQuickView;
 class QStandardItemModel;
 
-class KCMSplashScreen : public KCModule
+class KCMSplashScreen : public KDeclarative::ConfigModule
 {
     Q_OBJECT
     Q_PROPERTY(QStandardItemModel *splashModel READ splashModel CONSTANT)
@@ -40,7 +39,7 @@ public:
         PluginNameRole = Qt::UserRole +1,
         ScreenhotRole
     };
-    KCMSplashScreen(QWidget* parent, const QVariantList& args);
+    KCMSplashScreen(QObject* parent, const QVariantList& args);
 
     QList<Plasma::Package> availablePackages(const QString &component);
 
