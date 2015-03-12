@@ -60,6 +60,11 @@ PlasmaCore.FrameSvgItem {
         onMinimumLengthChanged: ruler.minimumLength = panel.minimumLength
         onMaximumLengthChanged: ruler.maximumLength = panel.maximumLength
     }
+
+    Connections {
+        target: plasmoid
+        onImmutableChanged: configDialog.close()
+    }
 //END Connections
 
 
