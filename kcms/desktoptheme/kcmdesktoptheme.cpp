@@ -30,7 +30,7 @@
 #include "thememodel.h"
 
 #include <QFileDialog>
-#include <QDebug>
+#include "kcm_desktoptheme_debug.h"
 
 #include <KAboutData>
 #include <KNewStuff3/KNS3/DownloadDialog>
@@ -100,7 +100,7 @@ void KCMDesktopTheme::load()
 
 void KCMDesktopTheme::save()
 {
-    qDebug() << "Save!";
+    qCDebug(KCM_DESKTOP_THEME_LOG) << "Save!";
     // Don't do anything if we don't need to.
     if ( !( m_bDesktopThemeDirty) && !(m_bDetailsDirty) )
         return;
@@ -109,8 +109,8 @@ void KCMDesktopTheme::save()
     if ( m_bDesktopThemeDirty )
     {
         QString theme = m_themeModel->data(m_theme->currentIndex(), ThemeModel::PackageNameRole).toString();
-        qDebug() << "theme changed to " << theme;
-        qDebug() << "m-defaultTheme" << theme;
+        qCDebug(KCM_DESKTOP_THEME_LOG) << "theme changed to " << theme;
+        qCDebug(KCM_DESKTOP_THEME_LOG) << "m-defaultTheme" << theme;
         m_defaultTheme->setThemeName(theme);
 
     }
@@ -124,7 +124,7 @@ void KCMDesktopTheme::save()
     m_bDesktopThemeDirty = false;
     m_bDetailsDirty = false;
     emit changed( false );
-    qDebug() << "saved.";
+    qCDebug(KCM_DESKTOP_THEME_LOG) << "saved.";
 }
 
 void KCMDesktopTheme::defaults()
@@ -189,7 +189,7 @@ void KCMDesktopTheme::fileBrowserCompleted()
 {
     if (m_dialog && m_dialog->selectedFiles().count() > 0) {
         foreach (const QString &file, m_dialog->selectedFiles()) {
-            qDebug() << "INSTALL Theme file: " << file;
+            qCDebug(KCM_DESKTOP_THEME_LOG) << "INSTALL Theme file: " << file;
             m_newThemeButton->setEnabled(false);
             installTheme(file);
         }
@@ -198,13 +198,13 @@ void KCMDesktopTheme::fileBrowserCompleted()
 
 void KCMDesktopTheme::installTheme(const QString &file)
 {
-    qDebug() << "Installing ... " << file;
+    qCDebug(KCM_DESKTOP_THEME_LOG) << "Installing ... " << file;
 
     QString program = "plasmapkg2";
     QStringList arguments;
     arguments << "-t" << "theme" << "-i" << file;
 
-    qDebug() << program << arguments.join(" ");
+    qCDebug(KCM_DESKTOP_THEME_LOG) << program << arguments.join(" ");
     QProcess *myProcess = new QProcess(this);
     connect(myProcess, static_cast<void (QProcess::*)(int, QProcess::ExitStatus)>(&QProcess::finished), this, &KCMDesktopTheme::installFinished);
     connect(myProcess, static_cast<void (QProcess::*)(QProcess::ProcessError)>(&QProcess::error), this, &KCMDesktopTheme::installError);
@@ -217,12 +217,12 @@ void KCMDesktopTheme::installFinished(int exitCode, QProcess::ExitStatus exitSta
     Q_UNUSED(exitStatus)
 
     if (exitCode == 0) {
-        qDebug() << "Theme installed successfully :)";
+        qCDebug(KCM_DESKTOP_THEME_LOG) << "Theme installed successfully :)";
         m_themeModel->reload();
         m_detailsWidget->reloadModel();
         m_statusLabel->setText(i18n("Theme installed successfully."));
     } else {
-        qWarning() << "Theme installation failed.";
+        qCWarning(KCM_DESKTOP_THEME_LOG) << "Theme installation failed.";
         m_statusLabel->setText(i18n("Theme installation failed. (%1)", exitCode));
     }
     m_newThemeButton->setEnabled(true);
@@ -230,7 +230,7 @@ void KCMDesktopTheme::installFinished(int exitCode, QProcess::ExitStatus exitSta
 
 void KCMDesktopTheme::installError(QProcess::ProcessError e)
 {
-    qWarning() << "Theme installation failed: " << e;
+    qCWarning(KCM_DESKTOP_THEME_LOG) << "Theme installation failed: " << e;
     m_statusLabel->setText(i18n("Theme installation failed."));
     m_newThemeButton->setEnabled(true);
 }
