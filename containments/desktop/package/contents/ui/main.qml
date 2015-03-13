@@ -265,10 +265,26 @@ DragDrop.DropArea {
         property Item view: item ? item.view : null
         property QtObject model: item ? item.model : null
 
+        focus: true
+
         active: isFolder
         asynchronous: false
 
         source: "FolderViewLayer.qml"
+
+        onFocusChanged: {
+            if (!focus && model) {
+                model.clearSelection();
+            }
+        }
+
+        Connections {
+            target: folderViewLayer.view
+
+            onPressed: {
+                folderViewLayer.focus = true;
+            }
+        }
     }
 
     Item {
