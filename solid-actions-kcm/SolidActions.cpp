@@ -59,15 +59,15 @@ SolidActions::SolidActions(QWidget* parent, const QVariantList&)
     KStandardGuiItem::assign(mainUi.PbAddAction, KStandardGuiItem::Add);
     mainUi.PbEditAction->setIcon( QIcon::fromTheme("document-edit") );
 
-    connect( mainUi.PbAddAction, SIGNAL(clicked()), this, SLOT(slotShowAddDialog()) );
-    connect( mainUi.PbEditAction, SIGNAL(clicked()), this, SLOT(editAction()) );
-    connect( mainUi.PbDeleteAction, SIGNAL(clicked()), this, SLOT(deleteAction()) );
+    connect(mainUi.PbAddAction, &QPushButton::clicked, this, &SolidActions::slotShowAddDialog);
+    connect(mainUi.PbEditAction, &QPushButton::clicked, this, &SolidActions::editAction);
+    connect(mainUi.PbDeleteAction, &QPushButton::clicked, this, &SolidActions::deleteAction);
     connect( mainUi.TvActions->selectionModel(), SIGNAL(currentChanged(QModelIndex,QModelIndex)), this, SLOT(toggleEditDelete()) );
-    connect( mainUi.TvActions, SIGNAL(doubleClicked(QModelIndex)), this, SLOT(editAction()) );
+    connect(mainUi.TvActions, &QTreeView::doubleClicked, this, &SolidActions::editAction);
 
     // Prepare + connect up with Edit dialog
     editUi = new ActionEditor(this);
-    connect( editUi, SIGNAL(accepted()), this, SLOT(acceptActionChanges()) );
+    connect(editUi, &ActionEditor::accepted, this, &SolidActions::acceptActionChanges);
 
     // Prepare + connect up add action dialog
     addDialog = new QDialog(this);
@@ -75,9 +75,9 @@ SolidActions::SolidActions(QWidget* parent, const QVariantList&)
     addDialog->resize(QSize(300, 100)); // Set a sensible default size
 
     slotTextChanged( addUi.LeActionName->text() );
-    connect( addUi.LeActionName, SIGNAL(textChanged(QString)), this, SLOT(slotTextChanged(QString)) );
-    connect( addUi.buttonBox, SIGNAL(accepted()), this, SLOT(addAction()) );
-    connect( addUi.buttonBox, SIGNAL(rejected()), addDialog, SLOT(reject()) );
+    connect(addUi.LeActionName, &QLineEdit::textChanged, this, &SolidActions::slotTextChanged);
+    connect(addUi.buttonBox, &QDialogButtonBox::accepted, this, &SolidActions::addAction);
+    connect(addUi.buttonBox, &QDialogButtonBox::rejected, addDialog, &QDialog::reject);
 }
 
 SolidActions::~SolidActions()

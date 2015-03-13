@@ -40,17 +40,17 @@ ActionEditor::ActionEditor(QWidget *parent) : QDialog(parent)
     ui.CbDeviceType->addItems( actionData()->interfaceList() );
 
     // Connect up with everything needed -> slot names explain
-    connect( ui.TvPredicateTree, SIGNAL(activated(QModelIndex)), this, SLOT(updateParameter()) );
-    connect( ui.PbParameterSave, SIGNAL(clicked()), this, SLOT(saveParameter()) );
-    connect( ui.PbParameterReset, SIGNAL(clicked()), this, SLOT(updateParameter()) );
-    connect( ui.CbDeviceType, SIGNAL(currentIndexChanged(int)), this, SLOT(updatePropertyList()) );
-    connect( ui.CbParameterType, SIGNAL(currentIndexChanged(int)), this, SLOT(manageControlStatus()) );
+    connect(ui.TvPredicateTree, &QTreeView::activated, this, &ActionEditor::updateParameter);
+    connect(ui.PbParameterSave, &QPushButton::clicked, this, &ActionEditor::saveParameter);
+    connect(ui.PbParameterReset, &QPushButton::clicked, this, &ActionEditor::updateParameter);
+    connect(ui.CbDeviceType, static_cast<void (QComboBox::*)(int)>(&QComboBox::currentIndexChanged), this, &ActionEditor::updatePropertyList);
+    connect(ui.CbParameterType, static_cast<void (QComboBox::*)(int)>(&QComboBox::currentIndexChanged), this, &ActionEditor::manageControlStatus);
 
     connect(ui.buttonBox, &QDialogButtonBox::accepted, this, &ActionEditor::accept);
     connect(ui.buttonBox, &QDialogButtonBox::rejected, this, &ActionEditor::reject);
 
     if (ui.TvPredicateTree->style()->styleHint(QStyle::SH_ItemView_ActivateItemOnSingleClick)) {
-        connect( ui.TvPredicateTree, SIGNAL(clicked(QModelIndex)), this, SLOT(updateParameter()) );
+        connect(ui.TvPredicateTree, &QTreeView::clicked, this, &ActionEditor::updateParameter);
     }
 }
 
