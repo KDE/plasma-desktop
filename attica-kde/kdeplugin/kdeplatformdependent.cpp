@@ -24,12 +24,11 @@
 
 #include "kdeplatformdependent.h"
 
-#include <QDebug>
+#include "attica_plugin_debug.h"
 
 #include <KConfigGroup>
-#include <kcomponentdata.h>
-#include <KDebug>
-#include <KWallet/Wallet>
+#include "attica_plugin_debug.h"
+#include <KWallet/KWallet>
 #include <kcmultidialog.h>
 #include <KLocalizedString>
 #include <KStringHandler>
@@ -109,7 +108,7 @@ bool KdePlatformDependent::saveCredentials(const QUrl& baseUrl, const QString& u
         KConfigGroup group(m_config, baseUrl.toString());
         group.writeEntry("user", user);
         group.writeEntry("password", KStringHandler::obscure(password));
-        kDebug() << "Saved credentials in KConfig";
+        qCDebug(ATTICA_PLUGIN_LOG) << "Saved credentials in KConfig";
         return true;
     }
 
@@ -122,7 +121,7 @@ bool KdePlatformDependent::saveCredentials(const QUrl& baseUrl, const QString& u
     QMap<QString, QString> entries;
     entries.insert("user", user);
     entries.insert("password", password);
-    kDebug() << "Saved credentials in KWallet";
+    qCDebug(ATTICA_PLUGIN_LOG) << "Saved credentials in KWallet";
 
     return !m_wallet->writeMap(baseUrl.toString(), entries);
 }
@@ -136,7 +135,7 @@ bool KdePlatformDependent::hasCredentials(const QUrl& baseUrl) const
     QString networkWallet = KWallet::Wallet::NetworkWallet();
     if (!KWallet::Wallet::folderDoesNotExist(networkWallet, "Attica") &&
         !KWallet::Wallet::keyDoesNotExist(networkWallet, "Attica", baseUrl.toString())) {
-        kDebug() << "Found credentials in KWallet";
+        qCDebug(ATTICA_PLUGIN_LOG) << "Found credentials in KWallet";
         return true;
     }
 
@@ -144,11 +143,11 @@ bool KdePlatformDependent::hasCredentials(const QUrl& baseUrl) const
     QString user;
     user = group.readEntry("user", QString());
     if (!user.isEmpty()) {
-        kDebug() << "Found credentials in KConfig";
+        qCDebug(ATTICA_PLUGIN_LOG) << "Found credentials in KConfig";
         return true;
     }
 
-    kDebug() << "No credentials found";
+    qCDebug(ATTICA_PLUGIN_LOG) << "No credentials found";
     return false;
 }
 
@@ -163,7 +162,7 @@ bool KdePlatformDependent::loadCredentials(const QUrl& baseUrl, QString& user, Q
         user = group.readEntry("user", QString());
         password = KStringHandler::obscure(group.readEntry("password", QString()));
         if (!user.isEmpty()) {
-            kDebug() << "Successfully loaded credentials from kconfig";
+            qCDebug(ATTICA_PLUGIN_LOG) << "Successfully loaded credentials from kconfig";
             m_passwords[baseUrl.toString()] = QPair<QString, QString> (user, password);
             return true;
         }
@@ -180,7 +179,7 @@ bool KdePlatformDependent::loadCredentials(const QUrl& baseUrl, QString& user, Q
     }
     user = entries.value("user");
     password = entries.value("password");
-    kDebug() << "Successfully loaded credentials.";
+    qCDebug(ATTICA_PLUGIN_LOG) << "Successfully loaded credentials.";
 
     m_passwords[baseUrl.toString()] = QPair<QString, QString> (user, password);
 
@@ -205,7 +204,7 @@ QList<QUrl> KdePlatformDependent::getDefaultProviderFiles() const
     foreach (const QString& pathString, pathStrings) {
         paths.append(QUrl(pathString));
     }
-    qDebug() << "Loaded paths from config:" << paths;
+    qCDebug(ATTICA_PLUGIN_LOG) << "Loaded paths from config:" << paths;
     return paths;
 }
 
@@ -218,7 +217,7 @@ void KdePlatformDependent::addDefaultProviderFile(const QUrl& url)
         pathStrings.append(urlString);
         group.writeEntry("providerFiles", pathStrings);
         group.sync();
-        kDebug() << "wrote providers: " << pathStrings;
+        qCDebug(ATTICA_PLUGIN_LOG) << "wrote providers: " << pathStrings;
     }
 }
 
