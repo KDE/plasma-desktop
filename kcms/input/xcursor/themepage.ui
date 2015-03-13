@@ -51,7 +51,7 @@
     </widget>
    </item>
    <item row="4" column="2">
-    <widget class="KPushButton" name="installKnsButton">
+    <widget class="QPushButton" name="installKnsButton">
      <property name="toolTip">
       <string>Get new color schemes from the Internet</string>
      </property>
@@ -61,14 +61,14 @@
     </widget>
    </item>
    <item row="5" column="2">
-    <widget class="KPushButton" name="installButton">
+    <widget class="QPushButton" name="installButton">
      <property name="text">
       <string>Install From File...</string>
      </property>
     </widget>
    </item>
    <item row="6" column="2">
-    <widget class="KPushButton" name="removeButton">
+    <widget class="QPushButton" name="removeButton">
      <property name="text">
       <string>Remove Theme</string>
      </property>
@@ -103,11 +103,6 @@
   </layout>
  </widget>
  <customwidgets>
-  <customwidget>
-   <class>KPushButton</class>
-   <extends>QPushButton</extends>
-   <header>kpushbutton.h</header>
-  </customwidget>
   <customwidget>
    <class>PreviewWidget</class>
    <extends>QWidget</extends>
