@@ -43,6 +43,7 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     Attica
     Wallet
     Runner
+    GlobalAccel
 )
 
 find_package(LibKWorkspace CONFIG REQUIRED)
