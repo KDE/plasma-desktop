@@ -67,7 +67,7 @@ Item {
     MouseArea {
         id: mouseArea
         anchors.fill: parent
-        hoverEnabled: true
+        hoverEnabled: enabled
         enabled: !plasmoid.immutable
         onClicked: {
             main.Plasmoid.action("configure").trigger()
