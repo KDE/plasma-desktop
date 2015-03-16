@@ -49,9 +49,9 @@ install(FILES installfont.desktop DESTINATION
 ${SERVICES_INSTALL_DIR}/ServiceMenus )
 
 ecm_install_icons( ICONS
-                   hi16-apps-kfontview.png
-                   hi22-apps-kfontview.png
-                   hi32-apps-kfontview.png
-                   hi48-apps-kfontview.png
-                   hi64-apps-kfontview.png
-                   DESTINATION ${ICON_INSTALL_DIR} )
+                   16-apps-kfontview.png
+                   22-apps-kfontview.png
+                   32-apps-kfontview.png
+                   48-apps-kfontview.png
+                   64-apps-kfontview.png
+                   DESTINATION ${ICON_INSTALL_DIR} THEME hicolor)

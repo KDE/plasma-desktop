@@ -40,7 +40,7 @@ Item {
 
         Layout.fillWidth: true
 
-        title: "Behavior" /* Intentionally not i18n'd. */
+        title: i18n("Widget Handling")
 
         flat: true
 
@@ -50,7 +50,7 @@ Item {
             CheckBox {
                 id: pressToMove
 
-                text: "Press and hold applets to move" /* Intentionally not i18n'd. */
+                text: i18n("Press and hold applets to move")
             }
 
             CheckBox {
@@ -61,7 +61,7 @@ Item {
 
                 enabled: pressToMove.checked
 
-                text: "Press and hold to reveal handle" /* Intentionally not i18n'd. */
+                text: i18n("Press and hold to reveal handle")
             }
         }
     }

@@ -29,8 +29,10 @@ import org.kde.kquickcontrolsaddons 2.0
 import org.kde.private.desktopcontainment.folder 0.1 as Folder
 import "plasmapackage:/code/FolderTools.js" as FolderTools
 
-FocusScope {
+Item {
     id: main
+
+    signal pressed
 
     property QtObject model: dir
     property Item rubberBand: null
@@ -89,12 +91,6 @@ FocusScope {
         }
     }
 
-    onFocusChanged: {
-        if (!focus) {
-            dir.clearSelection();
-        }
-    }
-
     MouseEventListener {
         id: listener
 
@@ -123,7 +119,6 @@ FocusScope {
 
         onPressed: {
             scrollArea.focus = true;
-            main.focus = true;
 
             if (childAt(mouse.x, mouse.y) != editor) {
                 editor.targetItem = null;
@@ -173,6 +168,8 @@ FocusScope {
                     }
                 }
             }
+
+            main.pressed();
         }
 
         onCanceled: pressCanceled()
@@ -323,6 +320,8 @@ FocusScope {
             anchors {
                 fill: parent
             }
+
+            focus: true
 
             GridView {
                 id: gridView

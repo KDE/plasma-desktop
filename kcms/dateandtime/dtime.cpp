@@ -442,7 +442,7 @@ void Kclock::paintInterface(QPainter *p, const QRect &rect)
 
         glassPainter.save();
         QRectF elementRect = QRectF(QPointF(0, 0), m_theme->elementSize("HandCenterScrew"));
-        glassPainter.translate(faceRect.width() / 2 - elementRect.width() / 2, faceRect.height() / 2 - elementRect.height() / 2);
+        glassPainter.translate(faceRect.width() / (2 * devicePixelRatio()) - elementRect.width() / 2, faceRect.height() / (2 * devicePixelRatio()) - elementRect.height() / 2);
         m_theme->paint(&glassPainter, elementRect, "HandCenterScrew");
         glassPainter.restore();
 

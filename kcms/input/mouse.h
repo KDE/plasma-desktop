@@ -38,8 +38,6 @@
 
 #include <kapplication.h>
 
-#include <kglobalsettings.h>
-#include <knuminput.h>
 
 #include <config-workspace.h>
 #include <config-kcontrol-input.h>

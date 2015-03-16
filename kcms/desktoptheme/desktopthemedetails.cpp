@@ -32,7 +32,7 @@
 #include <qstandardpaths.h>
 #include <KLocalizedString>
 
-#include <QDebug>
+#include "kcm_desktoptheme_debug.h"
 
 struct ThemeItemNameType {
         const char* m_type;

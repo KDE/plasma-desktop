@@ -2,7 +2,7 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"kcm_desktopthemedetails\")
 
 
-set(kcmdesktoptheme_SRCS kcmdesktoptheme.cpp desktopthemedetails.cpp thememodel.cpp)
+set(kcmdesktoptheme_SRCS kcmdesktoptheme.cpp desktopthemedetails.cpp thememodel.cpp kcm_desktoptheme_debug.cpp)
 ki18n_wrap_ui(kcmdesktoptheme_SRCS DesktopTheme.ui DesktopThemeDetails.ui)
 
 add_library(kcm_desktoptheme MODULE ${kcmdesktoptheme_SRCS})

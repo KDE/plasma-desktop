@@ -47,9 +47,9 @@ ConfigModel {
     }
 
     ConfigCategory {
-         name: "Experimental" /* Intentionally not i18n'd. */
-         icon: "kmines" /* It's a mine field. Geddit? */
-         source: "ConfigExperimental.qml"
-         visible: ("containmentType" in plasmoid)
+         name: i18n("Tweaks")
+         icon: "preferences-other"
+         source: "ConfigTweaks.qml"
+         visible: plasmoid.configuration.showTweaks && ("containmentType" in plasmoid)
     }
 }
