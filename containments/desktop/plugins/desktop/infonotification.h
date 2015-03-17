@@ -30,7 +30,6 @@ class InfoNotification : public QObject
     Q_OBJECT
 
     Q_PROPERTY(bool enabled READ enabled WRITE setEnabled NOTIFY enabledChanged)
-    Q_PROPERTY(bool show READ show WRITE setShow NOTIFY showChanged)
     Q_PROPERTY(QString iconName READ iconName WRITE setIconName NOTIFY iconNameChanged)
     Q_PROPERTY(QString titleText READ titleText WRITE setTitleText NOTIFY titleTextChanged)
     Q_PROPERTY(QString text READ text WRITE setText NOTIFY textChanged)
@@ -42,9 +41,6 @@ class InfoNotification : public QObject
 
         bool enabled() const;
         void setEnabled(bool enabled);
-
-        bool show() const;
-        void setShow(bool show);
 
         QString iconName() const;
         void setIconName(const QString &iconName);
@@ -58,10 +54,11 @@ class InfoNotification : public QObject
         QString acknowledgeActionText() const;
         void setAcknowledgeActionText(const QString &acknowledgeActionText);
 
+        Q_INVOKABLE void show();
+
     Q_SIGNALS:
         void acknowledged() const;
         void enabledChanged() const;
-        void showChanged() const;
         void iconNameChanged() const;
         void titleTextChanged() const;
         void textChanged() const;
@@ -69,7 +66,6 @@ class InfoNotification : public QObject
 
     private:
         bool m_enabled;
-        bool m_show;
         QString m_iconName;
         QString m_titleText;
         QString m_text;

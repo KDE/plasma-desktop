@@ -23,7 +23,6 @@
 
 InfoNotification::InfoNotification(QObject *parent) : QObject(parent)
     , m_enabled(false)
-    , m_show(false)
 {
 }
 
@@ -46,34 +45,23 @@ void InfoNotification::setEnabled(bool enabled)
     }
 }
 
-bool InfoNotification::show() const
+void InfoNotification::show()
 {
-    return m_show;
-}
-
-void InfoNotification::setShow(bool show)
-{
-    if (m_show != show) {
-        m_show = show;
-
-        emit showChanged();
-
-        if (m_show && m_enabled) {
-            if (m_notification) {
-                delete m_notification;
-            }
-
-            m_notification = new KNotification(QStringLiteral("notification"));
-            m_notification->setFlags(KNotification::DefaultEvent);
-            m_notification->setIconName(m_iconName);
-            m_notification->setTitle(m_titleText);
-            m_notification->setText(m_text);
-            m_notification->setActions(QStringList() << m_acknowledgeActionText);
-
-            connect(m_notification, &KNotification::action1Activated, this, &InfoNotification::acknowledged);
-
-            m_notification->sendEvent();
+    if (m_enabled) {
+        if (m_notification) {
+            delete m_notification;
         }
+
+        m_notification = new KNotification(QStringLiteral("notification"));
+        m_notification->setFlags(KNotification::DefaultEvent);
+        m_notification->setIconName(m_iconName);
+        m_notification->setTitle(m_titleText);
+        m_notification->setText(m_text);
+        m_notification->setActions(QStringList() << m_acknowledgeActionText);
+
+        connect(m_notification, &KNotification::action1Activated, this, &InfoNotification::acknowledged);
+
+        m_notification->sendEvent();
     }
 }
 

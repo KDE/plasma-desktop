@@ -237,7 +237,17 @@ DragDrop.DropArea {
         onImmutableChanged: {
             if (!plasmoid.immutable && lockActionInterface.actionTriggered) {
                 lockActionInterface.actionTriggered = false;
-                pressToMoveHelp.show = true;
+                pressToMoveHelp.show();
+            }
+        }
+    }
+
+    Connections {
+        target: plasmoid.configuration
+
+        onPressToMoveChanged: {
+            if (plasmoid.configuration.pressToMove && plasmoid.configuration.pressToMoveHelp && !plasmoid.immutable) {
+                pressToMoveHelp.show();
             }
         }
     }
