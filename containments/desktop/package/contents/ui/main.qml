@@ -235,8 +235,7 @@ DragDrop.DropArea {
         }
 
         onImmutableChanged: {
-            if (!plasmoid.immutable && lockActionInterface.actionTriggered) {
-                lockActionInterface.actionTriggered = false;
+            if (!plasmoid.immutable) {
                 pressToMoveHelp.show();
             }
         }
@@ -249,18 +248,6 @@ DragDrop.DropArea {
             if (plasmoid.configuration.pressToMove && plasmoid.configuration.pressToMoveHelp && !plasmoid.immutable) {
                 pressToMoveHelp.show();
             }
-        }
-    }
-
-    Connections {
-        id: lockActionInterface
-
-        property bool actionTriggered: false
-
-        target: plasmoid.action("lock widgets")
-
-        onTriggered: {
-            actionTriggered = true;
         }
     }
 
