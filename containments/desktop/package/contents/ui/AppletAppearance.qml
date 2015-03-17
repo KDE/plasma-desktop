@@ -119,7 +119,7 @@ Item {
         }
 
         onPressAndHold: {
-            if (!plasmoid.immtuable && plasmoid.configuration.pressToMove) {
+            if (!plasmoid.immutable && plasmoid.configuration.pressToMove) {
                 if (!dragMouseArea.dragging && !systemSettings.isDrag(pressX, pressY, mouse.x, mouse.y)) {
                     showAppletHandle = true;
 
