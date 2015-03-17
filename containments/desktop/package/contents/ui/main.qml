@@ -233,6 +233,40 @@ DragDrop.DropArea {
             LayoutManager.removeApplet(applet);
             LayoutManager.save();
         }
+
+        onImmutableChanged: {
+            if (!plasmoid.immutable && lockActionInterface.actionTriggered) {
+                lockActionInterface.actionTriggered = false;
+                pressToMoveHelp.show = true;
+            }
+        }
+    }
+
+    Connections {
+        id: lockActionInterface
+
+        property bool actionTriggered: false
+
+        target: plasmoid.action("lock widgets")
+
+        onTriggered: {
+            actionTriggered = true;
+        }
+    }
+
+    Desktop.InfoNotification {
+        id: pressToMoveHelp
+
+        enabled: plasmoid.configuration.pressToMove && plasmoid.configuration.pressToMoveHelp
+
+        iconName: "plasma"
+        titleText: i18n("Widgets unlocked")
+        text: i18n("You can press and hold widgets to move them and reveal their handles.")
+        acknowledgeActionText: i18n("Got it")
+
+        onAcknowledged: {
+            plasmoid.configuration.pressToMoveHelp = false;
+        }
     }
 
     PlasmaCore.Svg {
