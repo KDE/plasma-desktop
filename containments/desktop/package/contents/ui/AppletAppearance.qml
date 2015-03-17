@@ -120,9 +120,7 @@ Item {
         onPressAndHold: {
             if (!plasmoid.immtuable && plasmoid.configuration.pressToMove) {
                 if (!dragMouseArea.dragging && !systemSettings.isDrag(pressX, pressY, mouse.x, mouse.y)) {
-                    if (plasmoid.configuration.pressToHandle && !plasmoid.immutable) {
-                        showAppletHandle = true;
-                    }
+                    showAppletHandle = true;
 
                     dragMouseArea.dragging = true;
 
@@ -153,7 +151,7 @@ Item {
                     if (!plasmoid.configuration.pressToMove) {
                         showAppletHandle = true;
                     }
-                } else if (!(plasmoid.configuration.pressToHandle && dragMouseArea.dragging)) {
+                } else if (!dragMouseArea.dragging) {
                     showAppletHandle = false;
                 }
             }
@@ -233,7 +231,7 @@ Item {
 
                 onPressed: {
                     appletItem.z = appletItem.z + zoffset;
-                    animationsEnabled = plasmoid.configuration.pressToHandle ? true : false;
+                    animationsEnabled = plasmoid.configuration.pressToMove ? true : false;
                     mouse.accepted = true;
                     var x = Math.round(appletItem.x/LayoutManager.cellSize.width)*LayoutManager.cellSize.width;
                     var y = Math.round(appletItem.y/LayoutManager.cellSize.height)*LayoutManager.cellSize.height;

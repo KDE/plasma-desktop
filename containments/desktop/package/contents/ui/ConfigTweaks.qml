@@ -22,6 +22,8 @@ import QtQuick.Controls 1.0
 import QtQuick.Dialogs 1.1
 import QtQuick.Layouts 1.0
 
+import org.kde.plasma.components 2.0 as PlasmaComponents
+
 import org.kde.plasma.plasmoid 2.0
 
 Item {
@@ -31,37 +33,37 @@ Item {
     height: childrenRect.height
 
     property alias cfg_pressToMove: pressToMove.checked
-    property alias cfg_pressToHandle: pressToHandle.checked
 
-    GroupBox {
-        id: behaviorGroupBox
+    ColumnLayout {
+        width: parent.width
 
-        visible: ("containmentType" in plasmoid)
-
-        Layout.fillWidth: true
-
-        title: i18n("Widget Handling")
-
-        flat: true
-
-        ColumnLayout {
+        PlasmaComponents.Label {
             Layout.fillWidth: true
 
-            CheckBox {
-                id: pressToMove
+            wrapMode: Text.WordWrap
 
-                text: i18n("Press and hold applets to move")
-            }
+            text: i18n("Tweaks are experimental options that may become defaults depending on your feedback.")
+        }
 
-            CheckBox {
-                anchors.left: parent.left
-                anchors.leftMargin: 25
+        GroupBox {
+            id: behaviorGroupBox
 
-                id: pressToHandle
+            visible: ("containmentType" in plasmoid)
 
-                enabled: pressToMove.checked
+            Layout.fillWidth: true
 
-                text: i18n("Press and hold to reveal handle")
+            title: i18n("Widget Handling")
+
+            flat: true
+
+            ColumnLayout {
+                Layout.fillWidth: true
+
+                CheckBox {
+                    id: pressToMove
+
+                    text: i18n("Press and hold widgets to move them and reveal their handles")
+                }
             }
         }
     }
