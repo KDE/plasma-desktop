@@ -32,9 +32,6 @@
 #include <kactivities/controller.h>
 #include <kimagecache.h>
 
-// Boost
-#include <boost/container/flat_set.hpp>
-
 class QAction;
 class QQmlEngine;
 class QJSEngine;
