@@ -72,6 +72,8 @@ QVariant RecentDocsModel::data(const QModelIndex &index, int role) const
     const KFileItem fileItem(url);
 
     if (!url.isValid() || !fileItem.isFile()) {
+        qDebug() << "URL:" << QSortFilterProxyModel::data(index, ResultModel::ResourceRole);
+        qDebug() << "URL is not a file:" << url;
         return QLatin1String("Resource not a file!");
     }
 
@@ -137,7 +139,12 @@ void RecentDocsModel::refresh()
 {
     QObject *oldModel = sourceModel();
 
-    auto query = (UsedResources | RecentlyUsedFirst | Agent::any() | Type::any() | Activity::current());
+    auto query = UsedResources
+                    | RecentlyUsedFirst
+                    | Agent::any()
+                    | Type::any()
+                    | Activity::current()
+                    | Url::file();
 
     ResultModel *model = new ResultModel(query);
     model->setItemCountLimit(15);
