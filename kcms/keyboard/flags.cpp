@@ -44,14 +44,30 @@
 //Q_LOGGING_CATEGORY(KCM_KEYBOARD, "kcm_keyboard")
 
 
-static const int FLAG_MAX_WIDTH = 21;
-static const int FLAG_MAX_HEIGHT = 14;
+static const int FLAG_MAX_SIZE = 22;
 static const char flagTemplate[] = "kf5/locale/countries/%1/flag.png";
+
+int iconSize(int s)
+{
+    if (s < 16) {
+        return 16;
+    } else if (s < 22) {
+        return 22;
+    } else if (s < 32) {
+        return 32;
+    } else if (s < 48) {
+        return 48;
+    } else if (s < 64) {
+        return 64;
+    } else {
+        return 128;
+    }
+}
 
 Flags::Flags():
 	svg(NULL)
 {
-	transparentPixmap = new QPixmap(FLAG_MAX_WIDTH, FLAG_MAX_HEIGHT);
+	transparentPixmap = new QPixmap(FLAG_MAX_SIZE, FLAG_MAX_SIZE);
 	transparentPixmap->fill(Qt::transparent);
 }
 
@@ -76,18 +92,33 @@ QIcon Flags::createIcon(const QString& layout)
 {
 	QIcon icon;
 	if( ! layout.isEmpty() ) {
+        QString file;
 		if( layout == "epo" ) {
-			QString file = QStandardPaths::locate(QStandardPaths::GenericDataLocation, "kcmkeyboard/pics/epo.png");
-			icon.addFile(file);
+			file = QStandardPaths::locate(QStandardPaths::GenericDataLocation, "kcmkeyboard/pics/epo.png");
 		}
 		else {
 			QString countryCode = getCountryFromLayoutName( layout );
 			if( ! countryCode.isEmpty() ) {
-				QString file = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QString(flagTemplate).arg(countryCode));
+				file = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QString(flagTemplate).arg(countryCode));
 				//			qCDebug(KCM_KEYBOARD, ) << "Creating icon for" << layout << "with" << file;
-				icon.addFile(file);
 			}
 		}
+
+		if (!file.isEmpty()) {
+            QImage flagImg;
+            flagImg.load(file);
+            const int size = iconSize(qMax(flagImg.width(), flagImg.height()));
+            QPixmap iconPix(size, size);
+            iconPix.fill(Qt::transparent);
+            QRect dest(flagImg.rect());
+            dest.moveCenter(iconPix.rect().center());
+
+            QPainter painter(&iconPix);
+            painter.drawImage(dest, flagImg);
+            painter.end();
+
+            icon.addPixmap(iconPix);
+        }
 	}
 	return icon;
 }
