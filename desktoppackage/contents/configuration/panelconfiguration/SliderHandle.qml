@@ -51,7 +51,7 @@ PlasmaCore.SvgItem {
                 y = value + offset - root.height/2
             } else {
                 if (root.alignment & Qt.AlignRight) {
-                    y = root.parent.height/2 - value/2 - offset + root.height/2
+                    y = root.parent.height/2 - value/2 + offset - root.height/2
                 } else if (root.alignment & Qt.AlignLeft) {
                     y = root.parent.height/2 + value/2 + offset - root.height/2
                 } else {
