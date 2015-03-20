@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2014 by Eike Hein <hein@kde.org>                        *
+ *   Copyright (C) 2015 by Eike Hein <hein@kde.org>                        *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -17,34 +17,39 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#ifndef ABSTRACTMODEL_H
-#define ABSTRACTMODEL_H
+#ifndef FORWARDINGMODEL_H
+#define FORWARDINGMODEL_H
 
-#include <QAbstractListModel>
+#include "abstractmodel.h"
 
-class AbstractModel : public QAbstractListModel
+#include <QPointer>
+
+class ForwardingModel : public AbstractModel
 {
     Q_OBJECT
 
-    Q_PROPERTY(int count READ count NOTIFY countChanged)
-
     public:
-        explicit AbstractModel(QObject *parent = 0);
-        ~AbstractModel();
+        explicit ForwardingModel(QObject *parent = 0);
+        ~ForwardingModel();
 
-        int count() const;
+        QAbstractItemModel *sourceModel() const;
+        void setSourceModel(QAbstractItemModel *sourceModel);
 
-        int columnCount(const QModelIndex &parent = QModelIndex()) const;
+        bool canFetchMore(const QModelIndex &parent) const;
+        void fetchMore(const QModelIndex &parent);
 
-        Q_INVOKABLE virtual bool trigger(int row, const QString &actionId, const QVariant &argument) = 0;
+        QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const;
+        QModelIndex parent(const QModelIndex &index) const;
 
-        Q_INVOKABLE virtual AbstractModel *modelForRow(int row);
+        QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
 
-        virtual int rowForFavoriteId(const QString &favoriteId);
+        int rowCount(const QModelIndex &parent = QModelIndex()) const;
 
-    Q_SIGNALS:
-        void countChanged() const;
-        void appLaunched(const QString& storageId) const;
+    private:
+        void connectSignals();
+        void disconnectSignals();
+
+        QPointer<QAbstractItemModel> m_sourceModel;
 };
 
 #endif

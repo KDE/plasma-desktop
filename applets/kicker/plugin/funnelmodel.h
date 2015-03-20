@@ -40,7 +40,7 @@ class FunnelModel : public AbstractModel
 
         Q_INVOKABLE bool trigger(int row, const QString &actionId, const QVariant &argument);
 
-        Q_INVOKABLE QAbstractItemModel *modelForRow(int row);
+        Q_INVOKABLE AbstractModel *modelForRow(int row);
 
         AbstractModel *sourceModel() const;
         void setSourceModel(AbstractModel *model);

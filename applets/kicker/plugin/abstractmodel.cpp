@@ -44,7 +44,16 @@ int AbstractModel::count() const
     return rowCount();
 }
 
-QAbstractItemModel *AbstractModel::modelForRow(int row)
+int AbstractModel::columnCount(const QModelIndex &parent) const
+{
+    if (parent.isValid()) {
+        return 0;
+    }
+
+    return 1;
+}
+
+AbstractModel *AbstractModel::modelForRow(int row)
 {
     Q_UNUSED(row)
 

@@ -37,25 +37,9 @@ namespace KAStats = KActivities::Experimental::Stats;
 using namespace KAStats;
 using namespace KAStats::Terms;
 
-RecentDocsModel::RecentDocsModel(QObject *parent) : QSortFilterProxyModel(parent)
+RecentDocsModel::RecentDocsModel(QObject *parent) : ForwardingModel(parent)
 {
-    connect(this, &QSortFilterProxyModel::rowsInserted, this, &RecentDocsModel::countChanged);
-    connect(this, &QSortFilterProxyModel::rowsRemoved, this, &RecentDocsModel::countChanged);
-
     refresh();
-
-    // FIXME TODO: Duplication from AbstractModel.
-    QHash<int, QByteArray> roles;
-    roles.insert(Qt::DisplayRole, "display");
-    roles.insert(Qt::DecorationRole, "decoration");
-    roles.insert(Kicker::IsParentRole, "isParent");
-    roles.insert(Kicker::HasChildrenRole, "hasChildren");
-    roles.insert(Kicker::FavoriteIdRole, "favoriteId");
-    roles.insert(Kicker::HasActionListRole, "hasActionList");
-    roles.insert(Kicker::ActionListRole, "actionList");
-    roles.insert(Kicker::UrlRole, "url");
-
-    setRoleNames(roles);
 }
 
 RecentDocsModel::~RecentDocsModel()
@@ -68,11 +52,11 @@ QVariant RecentDocsModel::data(const QModelIndex &index, int role) const
         return QVariant();
     }
 
-    const QUrl url(QSortFilterProxyModel::data(index, ResultModel::ResourceRole).toString());
+    const QUrl url(sourceModel()->data(index, ResultModel::ResourceRole).toString());
     const KFileItem fileItem(url);
 
     if (!url.isValid() || !fileItem.isFile()) {
-        qDebug() << "URL:" << QSortFilterProxyModel::data(index, ResultModel::ResourceRole);
+        qDebug() << "URL:" << sourceModel()->data(index, ResultModel::ResourceRole);
         qDebug() << "URL is not a file:" << url;
         return QLatin1String("Resource not a file!");
     }
@@ -108,7 +92,7 @@ bool RecentDocsModel::trigger(int row, const QString &actionId, const QVariant &
         return false;
     }
 
-    QUrl url(QSortFilterProxyModel::data(index(row, 0), ResultModel::ResourceRole).toString());
+    QUrl url(sourceModel()->data(sourceModel()->index(row, 0), ResultModel::ResourceRole).toString());
 
     if (actionId.isEmpty()) {
         new KRun(url, 0);
@@ -152,8 +136,6 @@ void RecentDocsModel::refresh()
     setSourceModel(model);
 
     delete oldModel;
-
-    emit countChanged();
 }
 
 void RecentDocsModel::forget(int row)

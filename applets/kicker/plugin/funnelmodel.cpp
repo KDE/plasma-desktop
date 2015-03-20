@@ -54,7 +54,7 @@ bool FunnelModel::trigger(int row, const QString &actionId, const QVariant &argu
     return m_sourceModel->trigger(row, actionId, argument);
 }
 
-QAbstractItemModel* FunnelModel::modelForRow(int row)
+AbstractModel* FunnelModel::modelForRow(int row)
 {
     if (!m_sourceModel) {
         return 0;

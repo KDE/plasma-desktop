@@ -21,13 +21,11 @@
 #ifndef RECENTDOCSMODEL_H
 #define RECENTDOCSMODEL_H
 
-#include <QSortFilterProxyModel>
+#include "forwardingmodel.h"
 
-class RecentDocsModel : public QSortFilterProxyModel
+class RecentDocsModel : public ForwardingModel
 {
     Q_OBJECT
-
-    Q_PROPERTY(int count READ rowCount NOTIFY countChanged)
 
     public:
         explicit RecentDocsModel(QObject *parent = 0);
@@ -36,9 +34,6 @@ class RecentDocsModel : public QSortFilterProxyModel
         QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
 
         Q_INVOKABLE bool trigger(int row, const QString &actionId, const QVariant &argument);
-
-    Q_SIGNALS:
-        void countChanged() const;
 
     private Q_SLOTS:
         void refresh();

@@ -29,7 +29,7 @@ class GroupEntry : public AbstractGroupEntry
 {
     public:
         GroupEntry(const QString &name, const QString &icon,
-            QAbstractItemModel *model, AbstractModel *parentModel);
+            AbstractModel *model, AbstractModel *parentModel);
 };
 
 class RootModel : public AppsModel

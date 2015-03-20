@@ -50,10 +50,10 @@ class AbstractGroupEntry : public AbstractEntry
     public:
         EntryType type() const { return GroupType; }
 
-        QAbstractItemModel *model() const { return m_model; }
+        AbstractModel *model() const { return m_model; }
 
     protected:
-        QPointer<QAbstractItemModel> m_model;
+        QPointer<AbstractModel> m_model;
 };
 
 #endif
