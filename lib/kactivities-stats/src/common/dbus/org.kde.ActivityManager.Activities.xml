@@ -1,0 +1,102 @@
+<!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN" "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+<node>
+  <interface name="org.kde.ActivityManager.Activities">
+
+    <method name="CurrentActivity">
+      <arg type="s" direction="out"/>
+    </method>
+    <method name="SetCurrentActivity">
+      <arg type="b" direction="out"/>
+      <arg name="activity" type="s" direction="in"/>
+    </method>
+
+    <method name="AddActivity">
+      <arg type="s" direction="out"/>
+      <arg name="name" type="s" direction="in"/>
+    </method>
+    <method name="StartActivity">
+      <arg name="activity" type="s" direction="in"/>
+    </method>
+    <method name="StopActivity">
+      <arg name="activity" type="s" direction="in"/>
+    </method>
+    <method name="ActivityState">
+      <arg type="i" direction="out"/>
+      <arg name="activity" type="s" direction="in"/>
+    </method>
+    <method name="RemoveActivity">
+      <arg name="activity" type="s" direction="in"/>
+    </method>
+
+    <method name="ListActivities">
+      <arg type="as" direction="out"/>
+    </method>
+    <method name="ListActivities">
+      <arg type="as" direction="out"/>
+      <arg name="state" type="i" direction="in"/>
+    </method>
+
+    <method name="ListActivitiesWithInformation">
+      <arg type="a(sssd)" direction="out"/>
+      <annotation name="com.trolltech.QtDBus.QtTypeName.Out0" value="ActivityInfoList" />
+      <annotation name="org.qtproject.QtDBus.QtTypeName.Out0" value="ActivityInfoList" />
+    </method>
+    <method name="ActivityInformation">
+      <arg type="(sssd)" direction="out"/>
+      <annotation name="com.trolltech.QtDBus.QtTypeName.Out0" value="ActivityInfo" />
+      <annotation name="org.qtproject.QtDBus.QtTypeName.Out0" value="ActivityInfo" />
+      <arg name="activity" type="s" direction="in"/>
+    </method>
+
+    <method name="ActivityName">
+      <arg type="s" direction="out"/>
+      <arg name="activity" type="s" direction="in"/>
+    </method>
+    <method name="SetActivityName">
+      <arg name="activity" type="s" direction="in"/>
+      <arg name="name" type="s" direction="in"/>
+    </method>
+
+    <method name="ActivityIcon">
+      <arg type="s" direction="out"/>
+      <arg name="activity" type="s" direction="in"/>
+    </method>
+    <method name="SetActivityIcon">
+      <arg name="activity" type="s" direction="in"/>
+      <arg name="icon" type="s" direction="in"/>
+    </method>
+
+    <signal name="CurrentActivityChanged">
+      <arg name="activity" type="s" direction="out"/>
+    </signal>
+
+    <signal name="ActivityAdded">
+      <arg name="activity" type="s" direction="out"/>
+    </signal>
+    <signal name="ActivityStarted">
+      <arg name="activity" type="s" direction="out"/>
+    </signal>
+    <signal name="ActivityStopped">
+      <arg name="activity" type="s" direction="out"/>
+    </signal>
+    <signal name="ActivityRemoved">
+      <arg name="activity" type="s" direction="out"/>
+    </signal>
+    <signal name="ActivityChanged">
+      <arg name="activity" type="s" direction="out"/>
+    </signal>
+    <signal name="ActivityNameChanged">
+      <arg name="activity" type="s" direction="out"/>
+      <arg name="name" type="s" direction="out"/>
+    </signal>
+    <signal name="ActivityIconChanged">
+      <arg name="activity" type="s" direction="out"/>
+      <arg name="icon" type="s" direction="out"/>
+    </signal>
+    <signal name="ActivityStateChanged">
+      <arg name="activity" type="s" direction="out"/>
+      <arg name="state" type="i" direction="out"/>
+    </signal>
+
+  </interface>
+</node>
