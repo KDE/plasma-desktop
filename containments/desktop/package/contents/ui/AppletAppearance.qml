@@ -66,20 +66,6 @@ Item {
     onMinimumWidthChanged: appletItem.width = Math.max(minimumWidth, width);
     onMinimumHeightChanged: appletItem.height = Math.max(minimumHeight, height);
 
-
-    //FIXME: this delay is because backgroundHints gets updated only after a while in qml applets
-    Timer {
-        id: appletTimer
-        interval: 50
-        repeat: false
-        running: false
-        onTriggered: {
-            updateBackgroundHints();
-            applet.parent = appletContainer;
-            applet.anchors.fill = appletContainer;
-        }
-    }
-
     function updateBackgroundHints() {
         hasBackground = (applet.backgroundHints != "NoBackground");
         if (applet.backgroundHints == 1) {
@@ -303,9 +289,14 @@ Item {
                 }
 
                 onAppletChanged: {
-                    if (applet) {
-                        appletTimer.running = true;
+                    if (!applet) {
+                        return;
                     }
+
+                    applet.parent = appletContainer;
+                    applet.anchors.fill = appletContainer;
+                    
+                    updateBackgroundHints();
                 }
                 Connections {
                     target: appletHandle.item
