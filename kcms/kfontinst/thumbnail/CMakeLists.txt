@@ -1,8 +1,3 @@
-
-include_directories(
-    ${kcms_SOURCE_DIR}/kfontinst/viewpart/
-     )
-
 set(fontthumbnail_PART_SRCS FontThumbnail.cpp )
 
 add_library(fontthumbnail MODULE ${fontthumbnail_PART_SRCS})
