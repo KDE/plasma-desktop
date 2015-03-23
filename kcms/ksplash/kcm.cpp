@@ -40,8 +40,8 @@
 
 K_PLUGIN_FACTORY(KCMSplashScreenFactory, registerPlugin<KCMSplashScreen>();)
 
-KCMSplashScreen::KCMSplashScreen(QWidget* parent, const QVariantList& args)
-    : KCModule(parent, args)
+KCMSplashScreen::KCMSplashScreen(QObject* parent, const QVariantList& args)
+    : KQuickAddons::ConfigModule(parent, args)
     , m_config("ksplashrc")
     , m_configGroup(m_config.group("KSplash"))
 {
@@ -57,19 +57,6 @@ KCMSplashScreen::KCMSplashScreen(QWidget* parent, const QVariantList& args)
     roles[PluginNameRole] = "pluginName";
     roles[ScreenhotRole] = "screenshot";
     m_model->setItemRoleNames(roles);
-    QVBoxLayout* layout = new QVBoxLayout(this);
-
-    m_quickView = new QQuickView();
-    QWidget *widget = QWidget::createWindowContainer(m_quickView, this);
-    m_quickView->setResizeMode(QQuickView::SizeRootObjectToView);
-    Plasma::Package package = Plasma::PluginLoader::self()->loadPackage("Plasma/Generic");
-    package.setDefaultPackageRoot("plasma/kcms");
-    package.setPath("kcm_splashscreen");
-    m_quickView->rootContext()->setContextProperty("kcm", this);
-    m_quickView->setSource(QUrl::fromLocalFile(package.filePath("mainscript")));
-    setMinimumHeight(m_quickView->initialSize().height());
-
-    layout->addWidget(widget);
 }
 
 QList<Plasma::Package> KCMSplashScreen::availablePackages(const QString &component)
@@ -113,7 +100,7 @@ void KCMSplashScreen::setSelectedPlugin(const QString &plugin)
 
     m_selectedPlugin = plugin;
     emit selectedPluginChanged();
-    changed();
+    setNeedsSave(true);
 }
 
 void KCMSplashScreen::load()
@@ -180,7 +167,7 @@ void KCMSplashScreen::test(const QString &plugin)
     QStringList arguments;
     arguments << plugin << "--test";
     if (proc.execute("ksplashqml", arguments)) {
-        QMessageBox::critical(this, i18n("Error"), i18n("Failed to successfully test the splash screen."));
+        QMessageBox::critical(0, i18n("Error"), i18n("Failed to successfully test the splash screen."));
     }
 }
 
