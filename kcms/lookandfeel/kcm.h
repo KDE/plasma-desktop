@@ -20,7 +20,6 @@
 #ifndef _KCM_SEARCH_H
 #define _KCM_SEARCH_H
 
-#include <KCModuleQml>
 #include <KConfig>
 #include <KConfigGroup>
 #include <QListWidget>
