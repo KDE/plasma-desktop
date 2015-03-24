@@ -43,8 +43,10 @@ if (X11_Xfixes_FOUND)
    target_link_libraries(kcm_lookandfeel ${X11_Xfixes_LIB})
 endif ()
 
+kcoreaddons_desktop_to_json(kcm_lookandfeel "kcm_lookandfeel.desktop")
+
 install(FILES kcm_lookandfeel.desktop DESTINATION ${SERVICES_INSTALL_DIR})
-install(TARGETS kcm_lookandfeel DESTINATION ${PLUGIN_INSTALL_DIR})
+install(TARGETS kcm_lookandfeel DESTINATION ${PLUGIN_INSTALL_DIR}/kcms)
 
 if(BUILD_TESTING)
    find_package(Qt5Test ${QT_MIN_VERSION} CONFIG REQUIRED)

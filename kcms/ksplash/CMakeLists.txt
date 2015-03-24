@@ -20,8 +20,9 @@ target_link_libraries(kcm_splashscreen
   Qt5::QuickWidgets
 )
 
+kcoreaddons_desktop_to_json(kcm_splashscreen "kcm_splashscreen.desktop")
 
 install(FILES kcm_splashscreen.desktop DESTINATION ${SERVICES_INSTALL_DIR})
-install(TARGETS kcm_splashscreen DESTINATION ${PLUGIN_INSTALL_DIR})
+install(TARGETS kcm_splashscreen DESTINATION ${PLUGIN_INSTALL_DIR}/kcms)
 
 kpackage_install_package(package kcm_splashscreen kcms)
