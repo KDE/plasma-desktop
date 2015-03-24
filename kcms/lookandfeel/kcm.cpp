@@ -54,7 +54,7 @@
 #  include <X11/extensions/Xfixes.h>
 #endif
 
-K_PLUGIN_FACTORY(KCMLookandFeelFactory, registerPlugin<KCMLookandFeel>();)
+K_PLUGIN_FACTORY_WITH_JSON(KCMLookandFeelFactory, "kcm_lookandfeel.json", registerPlugin<KCMLookandFeel>();)
 
 KCMLookandFeel::KCMLookandFeel(QObject* parent, const QVariantList& args)
     : KQuickAddons::ConfigModule(parent, args)

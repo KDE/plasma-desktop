@@ -38,7 +38,7 @@
 #include <KLocalizedString>
 #include <Plasma/PluginLoader>
 
-K_PLUGIN_FACTORY(KCMSplashScreenFactory, registerPlugin<KCMSplashScreen>();)
+K_PLUGIN_FACTORY_WITH_JSON(KCMSplashScreenFactory, "kcm_splashscreen.json", registerPlugin<KCMSplashScreen>();)
 
 KCMSplashScreen::KCMSplashScreen(QObject* parent, const QVariantList& args)
     : KQuickAddons::ConfigModule(parent, args)

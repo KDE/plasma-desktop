@@ -45,6 +45,7 @@ endif ()
 
 kcoreaddons_desktop_to_json(kcm_lookandfeel "kcm_lookandfeel.desktop")
 
+#this desktop file is installed only for retrocompatibility with sycoca
 install(FILES kcm_lookandfeel.desktop DESTINATION ${SERVICES_INSTALL_DIR})
 install(TARGETS kcm_lookandfeel DESTINATION ${PLUGIN_INSTALL_DIR}/kcms)
 
