@@ -118,7 +118,7 @@ PlasmaCore.ToolTipArea {
 
     Connections {
         target: plasmoid.action("configure")
-        onTriggered: popupWindow.visible = false;
+        onTriggered: plasmoid.expanded = false
     }
 
     PlasmaCore.Dialog {
