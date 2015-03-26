@@ -93,7 +93,7 @@ public:
 
     bool isValid() const
     {
-        return currentValue;
+        return currentValue.is_initialized();
     }
 
     static bool sameSource(const Private &left, const Private &right)
