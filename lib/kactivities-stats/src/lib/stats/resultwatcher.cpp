@@ -47,15 +47,13 @@
 #include "utils/lazy_val.h"
 #include "utils/qsqlquery_iterator.h"
 
-#include <boost/algorithm/cxx11/any_of.hpp>
+#include <algorithm>
 
 #include <utils/debug_and_return.h>
 
 namespace KActivities {
 namespace Experimental {
 namespace Stats {
-
-using boost::algorithm::any_of;
 
 // Main class
 
@@ -77,21 +75,25 @@ public:
     // activity or not). The :global special value is not special here
     bool activityMatches(const QString &activity) const
     {
-        return any_of(query.activities(), [&] (const QString &matcher) {
-            return (matcher == ANY_ACTIVITY_TAG)     ? true :
-                   (matcher == CURRENT_ACTIVITY_TAG) ? activity == ActivitiesSync::currentActivity(activities) :
-                                                       activity == matcher;
-        });
+        return std::any_of(query.activities().cbegin(), query.activities().cend(),
+            [&] (const QString &matcher) {
+                return (matcher == ANY_ACTIVITY_TAG)     ? true :
+                       (matcher == CURRENT_ACTIVITY_TAG) ? activity == ActivitiesSync::currentActivity(activities) :
+                                                           activity == matcher;
+            }
+        );
     }
 
     // Same as above, but for agents
     bool agentMatches(const QString &agent) const
     {
-        return any_of(query.agents(), [&] (const QString &matcher) {
-            return (matcher == ANY_AGENT_TAG)     ? true :
-                   (matcher == CURRENT_AGENT_TAG) ? agent == QCoreApplication::applicationName() :
-                                                    agent == matcher;
-        });
+        return std::any_of(query.agents().cbegin(), query.agents().cend(),
+            [&] (const QString &matcher) {
+                return (matcher == ANY_AGENT_TAG)     ? true :
+                       (matcher == CURRENT_AGENT_TAG) ? agent == QCoreApplication::applicationName() :
+                                                        agent == matcher;
+            }
+        );
     }
 
     bool typeMatches(const QString &resource) const
@@ -114,9 +116,11 @@ public:
             return QString();
         });
 
-        return any_of(query.types(), [&] (const QString &matcher) {
-            return matcher == ANY_TYPE_TAG || matcher == type;
-        });
+        return std::any_of(query.types().cbegin(), query.types().cend(),
+            [&] (const QString &matcher) {
+                return matcher == ANY_TYPE_TAG || matcher == type;
+            }
+        );
     }
 
     bool eventMatches(const QString &agent, const QString &resource,
