@@ -29,8 +29,8 @@
 #include <KFileItem>
 #include <KRun>
 
-#include <KActivities/Experimental/Stats/ResultModel>
-#include <KActivities/Experimental/Stats/Terms>
+#include <KActivitiesExperimentalStats/ResultModel>
+#include <KActivitiesExperimentalStats/Terms>
 
 namespace KAStats = KActivities::Experimental::Stats;
 
