@@ -33,17 +33,9 @@ Item {
     z: 999
     anchors.fill: parent
 
-    Item {
-        id: mainArea
-        x: plasmoid.availableScreenRect.x
-        y: plasmoid.availableScreenRect.y
-        width: plasmoid.availableScreenRect.width
-        height: plasmoid.availableScreenRect.height
-
-        onXChanged: placeToolBoxTimer.restart();
-        onYChanged: placeToolBoxTimer.restart();
-        onWidthChanged: placeToolBoxTimer.restart();
-        onHeightChanged: placeToolBoxTimer.restart();
+    Connections {
+        target: plasmoid
+        onAvailableScreenRegionChanged: placeToolBoxTimer.restart();
     }
 
     signal minimumWidthChanged
@@ -97,40 +89,50 @@ Item {
     function placeToolBox(ts) {
         var tx = Plasmoid.configuration.ToolBoxButtonX
         var ty = Plasmoid.configuration.ToolBoxButtonY
+        var pos;
 
         switch (ts) {
         case "top":
-            ty = mainArea.y;
+            ty = main.y;
+            pos = plasmoid.adjustToAvailableScreenRegion(tx, ty, toolBoxButton.width, toolBoxButton.height);
             break;
         case "left":
-            tx = mainArea.x;
+            tx = main.x;
+            pos = plasmoid.adjustToAvailableScreenRegion(tx, ty, toolBoxButton.width, toolBoxButton.height);
             break;
         case "right":
-            tx = mainArea.width + mainArea.x - toolBoxButton.width;
+            tx = main.width + main.x - toolBoxButton.width;
+            pos = plasmoid.adjustToAvailableScreenRegion(tx, ty, toolBoxButton.width, toolBoxButton.height);
             break;
         case "bottom":
-            ty = mainArea.height + mainArea.y - toolBoxButton.height;
+            ty = main.height + main.y - toolBoxButton.height;
+            pos = plasmoid.adjustToAvailableScreenRegion(tx, ty, toolBoxButton.width, toolBoxButton.height);
             break;
         case "topleft":
-            tx = mainArea.x;
-            ty = mainArea.y;
+            tx = main.x;
+            ty = main.y;
+            pos = plasmoid.adjustToAvailableScreenRegion(tx, ty, toolBoxButton.height, toolBoxButton.height);
             break;
         case "topright":
-            tx = mainArea.width + mainArea.x - toolBoxButton.height;
-            ty = mainArea.y;
+            tx = main.width + main.x - toolBoxButton.height;
+            ty = main.y;
+            pos = plasmoid.adjustToAvailableScreenRegion(tx, ty, toolBoxButton.height, toolBoxButton.height);
             break;
         case "bottomleft":
-            tx = mainArea.x;
-            ty = mainArea.height + mainArea.y - toolBoxButton.height;
+            tx = main.x;
+            ty = main.height + main.y - toolBoxButton.height;
+            pos = plasmoid.adjustToAvailableScreenRegion(tx, ty, toolBoxButton.height, toolBoxButton.height);
             break;
         case "bottomright":
         default:
-            tx = mainArea.width + mainArea.x - toolBoxButton.height;
-            ty = mainArea.height + mainArea.y - toolBoxButton.height;
+            tx = main.width + main.x - toolBoxButton.height;
+            ty = main.height + main.y - toolBoxButton.height;
+            pos = plasmoid.adjustToAvailableScreenRegion(tx, ty, toolBoxButton.height, toolBoxButton.height);
             break;
         }
         //print("XXXY Setting toolbox to: " + ts + " " + tx + "x" + ty + " screen: " + main.width+ "x" + main.height+"");
-        toolBoxButton.x = tx;
-        toolBoxButton.y = ty;
+
+        toolBoxButton.x = pos.x;
+        toolBoxButton.y = pos.y;
     }
 }
