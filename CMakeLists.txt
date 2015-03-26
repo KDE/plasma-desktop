@@ -144,6 +144,10 @@ plasma_install_package(layout-templates/org.kde.plasma.desktop.defaultPanel org.
 add_subdirectory(doc)
 add_subdirectory(solid-actions-kcm)
 
+# Temporary inclusion of kactivities-stats library to the repository
+# until it matures enough to go to kactivities framework
+add_subdirectory(lib/kactivities-stats)
+
 # add_subdirectory(runners)
 add_subdirectory(containments)
 add_subdirectory(toolboxes)

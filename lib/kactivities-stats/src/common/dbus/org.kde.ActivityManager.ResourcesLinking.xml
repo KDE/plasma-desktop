@@ -1,0 +1,49 @@
+<!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN" "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+<node>
+  <interface name="org.kde.ActivityManager.ResourcesLinking">
+
+    <method name="LinkResourceToActivity">
+      <arg name="agent" type="s" direction="in"/>
+      <arg name="resource" type="s" direction="in"/>
+      <arg name="activity" type="s" direction="in"/>
+    </method>
+    <method name="LinkResourceToActivity">
+      <arg name="agent" type="s" direction="in"/>
+      <arg name="resource" type="s" direction="in"/>
+    </method>
+
+    <method name="UnlinkResourceFromActivity">
+      <arg name="agent" type="s" direction="in"/>
+      <arg name="resource" type="s" direction="in"/>
+      <arg name="activity" type="s" direction="in"/>
+    </method>
+    <method name="UnlinkResourceFromActivity">
+      <arg name="agent" type="s" direction="in"/>
+      <arg name="resource" type="s" direction="in"/>
+    </method>
+
+    <method name="IsResourceLinkedToActivity">
+      <arg name="agent" type="s" direction="in"/>
+      <arg name="resource" type="s" direction="in"/>
+      <arg name="activity" type="s" direction="in"/>
+      <arg type="b" direction="out"/>
+    </method>
+    <method name="IsResourceLinkedToActivity">
+      <arg name="agent" type="s" direction="in"/>
+      <arg name="resource" type="s" direction="in"/>
+      <arg type="b" direction="out"/>
+    </method>
+
+    <signal name="ResourceLinkedToActivity">
+      <arg name="agent" type="s" direction="out"/>
+      <arg name="resource" type="s" direction="out"/>
+      <arg name="activity" type="s" direction="out"/>
+    </signal>
+    <signal name="ResourceUnlinkedFromActivity">
+      <arg name="agent" type="s" direction="out"/>
+      <arg name="resource" type="s" direction="out"/>
+      <arg name="activity" type="s" direction="out"/>
+    </signal>
+
+  </interface>
+</node>

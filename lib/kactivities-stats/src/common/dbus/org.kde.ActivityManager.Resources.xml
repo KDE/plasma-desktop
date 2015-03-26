@@ -1,0 +1,23 @@
+<!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN" "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+<node>
+  <interface name="org.kde.ActivityManager.Resources">
+
+    <method name="RegisterResourceEvent">
+      <arg name="application" type="s" direction="in"/>
+      <arg name="windowId" type="u" direction="in"/>
+      <arg name="uri" type="s" direction="in"/>
+      <arg name="event" type="u" direction="in"/>
+    </method>
+
+    <method name="RegisterResourceMimetype">
+      <arg name="uri" type="s" direction="in"/>
+      <arg name="mimetype" type="s" direction="in"/>
+    </method>
+
+    <method name="RegisterResourceTitle">
+      <arg name="uri" type="s" direction="in"/>
+      <arg name="title" type="s" direction="in"/>
+    </method>
+
+  </interface>
+</node>
