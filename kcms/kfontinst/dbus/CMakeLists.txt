@@ -1,5 +1,4 @@
-include_directories(${CMAKE_CURRENT_BINARY_DIR}
-                    ${kcms_SOURCE_DIR}/fonts)
+
 add_definitions(${QT_DEFINITIONS})
 
 set(fontinst_bin_SRCS FcConfig.cpp FontInst.cpp Folder.cpp Main.cpp Utils.cpp ${libkfontinstdbusiface_SRCS} )

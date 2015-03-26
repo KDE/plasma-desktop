@@ -26,6 +26,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
+import org.kde.plasma.plasmoid 2.0
 
 import "plasmapackage:/code/LayoutManager.js" as LayoutManager
 
@@ -64,20 +65,6 @@ Item {
 
     onMinimumWidthChanged: appletItem.width = Math.max(minimumWidth, width);
     onMinimumHeightChanged: appletItem.height = Math.max(minimumHeight, height);
-
-
-    //FIXME: this delay is because backgroundHints gets updated only after a while in qml applets
-    Timer {
-        id: appletTimer
-        interval: 50
-        repeat: false
-        running: false
-        onTriggered: {
-            updateBackgroundHints();
-            applet.parent = appletContainer;
-            applet.anchors.fill = appletContainer;
-        }
-    }
 
     function updateBackgroundHints() {
         hasBackground = (applet.backgroundHints != "NoBackground");
@@ -118,11 +105,9 @@ Item {
         }
 
         onPressAndHold: {
-            if (!plasmoid.immtuable && plasmoid.configuration.pressToMove) {
+            if (!plasmoid.immutable && plasmoid.configuration.pressToMove) {
                 if (!dragMouseArea.dragging && !systemSettings.isDrag(pressX, pressY, mouse.x, mouse.y)) {
-                    if (plasmoid.configuration.pressToHandle && !plasmoid.immutable) {
-                        showAppletHandle = true;
-                    }
+                    showAppletHandle = true;
 
                     dragMouseArea.dragging = true;
 
@@ -153,7 +138,7 @@ Item {
                     if (!plasmoid.configuration.pressToMove) {
                         showAppletHandle = true;
                     }
-                } else if (!(plasmoid.configuration.pressToHandle && dragMouseArea.dragging)) {
+                } else if (!dragMouseArea.dragging) {
                     showAppletHandle = false;
                 }
             }
@@ -227,13 +212,23 @@ Item {
                 drag.target: appletItem
                 property bool dragging: false // Set by mouseListener.onPressAndHold -- drag.active only becomes true on movement.
 
+                function endDrag() {
+                    appletItem.z = appletItem.z - zoffset;
+                    repositionTimer.running = false;
+                    placeHolderPaint.opacity = 0;
+                    animationsEnabled = true;
+                    LayoutManager.positionItem(appletItem);
+                    LayoutManager.save();
+                    dragging = false;
+                }
+
                 onDraggingChanged: {
                     cursorShape = dragging ? Qt.DragMoveCursor : Qt.ArrowCursor;
                 }
 
                 onPressed: {
                     appletItem.z = appletItem.z + zoffset;
-                    animationsEnabled = plasmoid.configuration.pressToHandle ? true : false;
+                    animationsEnabled = plasmoid.configuration.pressToMove ? true : false;
                     mouse.accepted = true;
                     var x = Math.round(appletItem.x/LayoutManager.cellSize.width)*LayoutManager.cellSize.width;
                     var y = Math.round(appletItem.y/LayoutManager.cellSize.height)*LayoutManager.cellSize.height;
@@ -256,15 +251,8 @@ Item {
                     }
                 }
 
-                onReleased: {
-                    appletItem.z = appletItem.z - zoffset;
-                    repositionTimer.running = false;
-                    placeHolderPaint.opacity = 0;
-                    animationsEnabled = true;
-                    LayoutManager.positionItem(appletItem);
-                    LayoutManager.save();
-                    dragging = false;
-                }
+                onCanceled: endDrag()
+                onReleased: endDrag()
             }
 
             Item {
@@ -304,9 +292,14 @@ Item {
                 }
 
                 onAppletChanged: {
-                    if (applet) {
-                        appletTimer.running = true;
+                    if (!applet) {
+                        return;
                     }
+
+                    applet.parent = appletContainer;
+                    applet.anchors.fill = appletContainer;
+                    
+                    updateBackgroundHints();
                 }
                 Connections {
                     target: appletHandle.item

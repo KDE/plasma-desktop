@@ -17,6 +17,8 @@
  */
 
 import QtQuick 2.0
+import QtQuick.Controls 1.0 as QtControls
+import QtQuick.Layouts 1.0
 import org.kde.kquickcontrols 2.0
 
 Item {
@@ -29,11 +31,22 @@ Item {
         plasmoid.globalShortcut = button.keySequence
     }
 
-    KeySequenceItem {
-        id: button
-        keySequence: plasmoid.globalShortcut
-        onKeySequenceChanged: {
-            root.configurationChanged();
+    ColumnLayout {
+        anchors {
+            left: parent.left
+            right: parent.right
+        }
+        QtControls.Label {
+            Layout.fillWidth: true
+            text: i18n("This shortcut will activate the applet: it will give the keyboard focus to it, and if the applet has a popup (such as the start menu), the popup will be open.")
+            wrapMode: Text.WordWrap
+        }
+        KeySequenceItem {
+            id: button
+            keySequence: plasmoid.globalShortcut
+            onKeySequenceChanged: {
+                root.configurationChanged();
+            }
         }
     }
 }

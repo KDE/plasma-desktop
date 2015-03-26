@@ -10,7 +10,6 @@ find_package (KF5GuiAddons    ${KF5_DEP_VERSION} CONFIG REQUIRED)
 find_package (KF5KIO          ${KF5_DEP_VERSION} CONFIG REQUIRED)
 find_package (KF5Activities   ${KF5_DEP_VERSION} CONFIG REQUIRED)
 
-find_package (Boost)
 find_package (X11)
 set_package_properties (
    X11 PROPERTIES DESCRIPTION "X11 libraries"
@@ -25,8 +24,6 @@ set (
    )
 
 add_library (activityswitcherextensionplugin SHARED ${activityswitcher_imports_LIB_SRCS})
-
-target_include_directories (activityswitcherextensionplugin PRIVATE ${Boost_INCLUDE_DIRS})
 
 target_link_libraries (
    activityswitcherextensionplugin

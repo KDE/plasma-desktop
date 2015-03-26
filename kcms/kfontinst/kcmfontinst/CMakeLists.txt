@@ -1,7 +1,3 @@
-include_directories( 
-	${kcms_SOURCE_DIR}/kfontinst/viewpart/
-	 )
-
 set(kcm_fontinst_PART_SRCS ${libkfontinstview_SRCS} ${libkfontinstjobrunner_SRCS} ${libkfontinstdbusiface_SRCS}
     DuplicatesDialog.cpp FontList.cpp GroupList.cpp KCmFontInst.cpp PrintDialog.cpp
     FontFilter.cpp FontFilterProxyStyle.cpp FcQuery.cpp PreviewList.cpp)

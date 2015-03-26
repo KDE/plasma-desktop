@@ -1,9 +1,3 @@
-include_directories(
-	${kcms_SOURCE_DIR}/kfontinst/kcmfontinst/
-	${kcms_SOURCE_DIR}/kfontinst/viewpart/
-	${CMAKE_CURRENT_BINARY_DIR}
-	)
-
 set(kfontinst_bin_SRCS ${libkfontinstjobrunner_SRCS} ${libkfontinstdbusiface_SRCS} Installer.cpp )
 # qt5_add_dbus_interface(kfontinst_bin_SRCS ../dbus/org.kde.fontinst.xml FontInstInterfaceBase)
 

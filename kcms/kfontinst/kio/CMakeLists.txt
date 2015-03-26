@@ -1,7 +1,3 @@
-# include_directories(${kcms_SOURCE_DIR}/fonts
-#                     ${kcms_SOURCE_DIR}/kfontinst/kcmfontinst
-#                     ${CMAKE_CURRENT_BINARY_DIR})
-
 set(kio_fonts_PART_SRCS FontInstInterface.cpp KioFonts.cpp ${libkfontinstdbusiface_SRCS})
 # qt5_add_dbus_interface(kio_fonts_PART_SRCS ../dbus/org.kde.fontinst.xml FontinstIface)
 add_library(kio_fonts MODULE ${kio_fonts_PART_SRCS} ${KFI_FONTINST_AUTH_SRC} )

@@ -100,6 +100,9 @@ PlasmaCore.FrameSvgItem {
     }
 
     onContainmentChanged: {
+        if (!containment) {
+            return;
+        }
         containment.parent = containmentParent;
         containment.visible = true;
         containment.anchors.fill = containmentParent;

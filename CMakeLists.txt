@@ -38,11 +38,13 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     KCMUtils
     NewStuff
     KDELibs4Support
+    Notifications
     NotifyConfig
     Attica
     Wallet
     Runner
     GlobalAccel
+    Declarative
 )
 
 find_package(LibKWorkspace CONFIG REQUIRED)
