@@ -54,11 +54,13 @@ public:
 
     void updateValue()
     {
+        using namespace boost;
+
         if (!resultSet || !resultSet->d->query.seek(currentRow)) {
-            currentValue = boost::optional<Result>();
+            currentValue = none;
 
         } else {
-            currentValue = boost::make_optional(std::move(resultSet->d->currentResult()));
+            currentValue = make_optional(std::move(resultSet->d->currentResult()));
 
         }
     }
@@ -73,8 +75,8 @@ public:
 
     bool operator==(const Private &other) const
     {
-        bool thisValid  = currentValue;
-        bool otherValid = other.currentValue;
+        bool thisValid  = currentValue.is_initialized();
+        bool otherValid = other.currentValue.is_initialized();
 
         return
             // If one is valid, and the other is not,
