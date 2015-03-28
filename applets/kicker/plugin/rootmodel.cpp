@@ -82,13 +82,14 @@ void RootModel::extendEntryList()
     SystemModel *systemModel = new SystemModel(this);
     m_favoritesModels["sys"]->setSourceModel(systemModel);
 
-    beginInsertRows(QModelIndex(), 0, 0);
-    GroupEntry *entry = new GroupEntry(i18n("Recent Applications"), QString(), m_recentAppsModel, this);
+    beginInsertRows(QModelIndex(), 0, 1);
+    GroupEntry *entry = new GroupEntry(i18n("Recent Documents"), QString(), recentDocsModel, this);
+    m_entryList.prepend(entry);
+    entry = new GroupEntry(i18n("Recent Applications"), QString(), m_recentAppsModel, this);
     m_entryList.prepend(entry);
     endInsertRows();
 
-    beginInsertRows(QModelIndex(), m_entryList.size(), m_entryList.size() + 1);
-    m_entryList << new GroupEntry(i18n("Recent Documents"), QString(), recentDocsModel, this);
+    beginInsertRows(QModelIndex(), m_entryList.size(), m_entryList.size());
     m_entryList << new GroupEntry(i18n("Power / Session"), QString(), systemModel, this);
     endInsertRows();
 
