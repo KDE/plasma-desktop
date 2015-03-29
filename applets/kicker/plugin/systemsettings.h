@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2014 by Eike Hein <hein@kde.org>                        *
+ *   Copyright (C) 2015 by Eike Hein <hein@kde.org>                        *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -17,37 +17,20 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#ifndef IMAGEPICKER_H
-#define IMAGEPICKER_H
+#ifndef SYSTEMSETTINGS_H
+#define SYSTEMSETTINGS_H
 
-#include <QUrl>
 #include <QObject>
 
-class QFileDialog;
-
-class ImagePicker : public QObject
+class SystemSettings : public QObject
 {
     Q_OBJECT
 
-    Q_PROPERTY(QUrl url READ url NOTIFY urlChanged)
-
     public:
-        ImagePicker(QObject *parent = 0);
-        ~ImagePicker();
+        SystemSettings(QObject *parent = 0);
+        ~SystemSettings();
 
-        QUrl url() const;
-
-        Q_INVOKABLE void open();
-
-    Q_SIGNALS:
-        void urlChanged() const;
-
-    private Q_SLOTS:
-        void dialogAccepted();
-
-    private:
-        QFileDialog *m_dialog;
-        QUrl m_url;
+        Q_INVOKABLE QString picturesLocation() const;
 };
 
 #endif

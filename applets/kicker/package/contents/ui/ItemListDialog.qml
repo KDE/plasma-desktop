@@ -66,6 +66,10 @@ Kicker.SubMenu {
                     itemDialog.delayedDestroy();
                 }
             }
+
+            onSourceModelChanged: {
+                itemListView.currentIndex = -1;
+            }
         }
     }
 

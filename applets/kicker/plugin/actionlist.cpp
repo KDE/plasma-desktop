@@ -109,7 +109,7 @@ bool handleFileItemAction(const KFileItem &fileItem, const QString &actionId, co
             return false;
         }
 
-        KRun::run(*service, QList<QUrl>() << fileItem.url(), QApplication::activeWindow());
+        KRun::runService(*service, QList<QUrl>() << fileItem.url(), QApplication::activeWindow());
 
         *close = true;
 

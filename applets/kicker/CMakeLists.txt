@@ -24,7 +24,6 @@ set(kickerplugin_SRCS
     plugin/favoritesmodel.cpp
     plugin/forwardingmodel.cpp
     plugin/funnelmodel.cpp
-    plugin/imagepicker.cpp
     plugin/kickerplugin.cpp
     plugin/menuentryeditor.cpp
     plugin/processrunner.cpp
@@ -35,6 +34,7 @@ set(kickerplugin_SRCS
     plugin/recentdocsmodel.cpp
     plugin/submenu.cpp
     plugin/systemmodel.cpp
+    plugin/systemsettings.cpp
     plugin/windowsystem.cpp
 )
 
@@ -53,7 +53,6 @@ target_link_libraries(kickerplugin
                       Qt5::DBus
                       Qt5::Qml
                       Qt5::Quick
-                      Qt5::Widgets # FIXME: Used for QFileDialog; can be removed when switching to Qt Quick Dialogs (see bug 334963).
                       Qt5::X11Extras
                       KF5::ActivitiesExperimentalStats
                       KF5::ConfigCore
