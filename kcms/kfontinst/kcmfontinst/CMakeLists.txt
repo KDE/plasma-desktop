@@ -24,14 +24,14 @@ install( FILES fontinst.desktop  DESTINATION  ${SERVICES_INSTALL_DIR} )
 install( FILES kfontinst.knsrc DESTINATION  ${CONFIG_INSTALL_DIR} )
 
 ecm_install_icons( ICONS
-                   hi16-actions-addfont.png
-                   hi16-actions-disablefont.png
-                   hi16-actions-enablefont.png
-                   hi16-actions-fontstatus.png
-                   hi22-actions-addfont.png
-                   hi22-actions-disablefont.png
-                   hi22-actions-enablefont.png
-                   hi22-actions-fontstatus.png
-                   hi16-actions-addfont.png
+                   16-actions-addfont.png
+                   16-actions-disablefont.png
+                   16-actions-enablefont.png
+                   16-actions-fontstatus.png
+                   22-actions-addfont.png
+                   22-actions-disablefont.png
+                   22-actions-enablefont.png
+                   22-actions-fontstatus.png
+                   16-actions-addfont.png
                    DESTINATION
-                   ${DATA_INSTALL_DIR}/kfontinst/icons )
+                   ${DATA_INSTALL_DIR}/kfontinst/icons THEME hicolor)
