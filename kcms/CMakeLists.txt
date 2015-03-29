@@ -51,7 +51,7 @@ add_subdirectory(workspaceoptions)
 add_subdirectory(baloo)
 
 if (SYNAPTICS_FOUND)
-    #add_subdirectory(touchpad)
+    add_subdirectory(touchpad)
 endif()
 
 if( FREETYPE_FOUND )
