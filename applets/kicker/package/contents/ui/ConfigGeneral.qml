@@ -81,7 +81,7 @@ Item {
                     selectFolder: false
                     selectMultiple: false
 
-                    nameFilters: [ "Image Files (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)" ]
+                    nameFilters: [ i18n("Image Files (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)") ]
 
                     onFileUrlChanged: {
                         customButtonImage.text = fileUrl;
