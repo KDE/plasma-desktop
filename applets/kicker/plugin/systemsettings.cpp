@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2014 by Eike Hein <hein@kde.org>                        *
+ *   Copyright (C) 2015 by Eike Hein <hein@kde.org>                        *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -17,31 +17,30 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#include "kickerplugin.h"
-#include "abstractmodel.h"
-#include "draghelper.h"
-#include "funnelmodel.h"
-#include "processrunner.h"
-#include "rootmodel.h"
-#include "runnermodel.h"
-#include "submenu.h"
 #include "systemsettings.h"
-#include "windowsystem.h"
 
-#include <QtQml>
+#include <QStandardPaths>
 
-void KickerPlugin::registerTypes(const char *uri)
+SystemSettings::SystemSettings(QObject *parent) : QObject(parent)
 {
-    Q_ASSERT(uri == QLatin1String("org.kde.plasma.private.kicker"));
+}
 
-    qmlRegisterType<AbstractModel>();
+SystemSettings::~SystemSettings()
+{
+}
 
-    qmlRegisterType<DragHelper>(uri, 0, 1, "DragHelper");
-    qmlRegisterType<FunnelModel>(uri, 0, 1, "FunnelModel");
-    qmlRegisterType<ProcessRunner>(uri, 0, 1, "ProcessRunner");
-    qmlRegisterType<RootModel>(uri, 0, 1, "RootModel");
-    qmlRegisterType<RunnerModel>(uri, 0, 1, "RunnerModel");
-    qmlRegisterType<SubMenu>(uri, 0, 1, "SubMenu");
-    qmlRegisterType<SystemSettings>(uri, 0, 1, "SystemSettings");
-    qmlRegisterType<WindowSystem>(uri, 0, 1, "WindowSystem");
+QString SystemSettings::picturesLocation() const
+{
+    QString path;
+
+    const QStringList &locations = QStandardPaths::standardLocations(QStandardPaths::PicturesLocation);
+
+    if (!locations.isEmpty()) {
+        path = locations.at(0);
+    } else {
+        // HomeLocation is guaranteed not to be empty.
+        path = QStandardPaths::standardLocations(QStandardPaths::HomeLocation).at(0);
+    }
+
+    return path;
 }
