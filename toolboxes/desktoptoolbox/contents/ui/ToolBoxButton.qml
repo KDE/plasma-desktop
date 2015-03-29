@@ -94,8 +94,8 @@ Item {
         var container = main;
         //print("    w: " + container.width +"x"+container.height+" : "+x+"/"+y+" tbw: " + toolBoxButton.width);
 
-        var x = toolBoxButton.x - mainArea.x;
-        var y = toolBoxButton.y - mainArea.y;
+        var x = toolBoxButton.x - main.x;
+        var y = toolBoxButton.y - main.y;
 
         var cornerSnap = iconWidth
 

@@ -20,18 +20,18 @@
 #ifndef _KCM_SEARCH_H
 #define _KCM_SEARCH_H
 
-#include <KCModule>
 #include <KConfig>
 #include <KConfigGroup>
 #include <QListWidget>
 #include <QDir>
 
 #include <Plasma/Package>
+#include <KQuickAddons/ConfigModule>
 
 class QQuickView;
 class QStandardItemModel;
 
-class KCMLookandFeel : public KCModule
+class KCMLookandFeel : public KQuickAddons::ConfigModule
 {
     Q_OBJECT
     Q_PROPERTY(QStandardItemModel *lookAndFeelModel READ lookAndFeelModel CONSTANT)
@@ -60,7 +60,7 @@ public:
         HasWindowSwitcherRole,
         HasDesktopSwitcherRole
     };
-    KCMLookandFeel(QWidget* parent, const QVariantList& args);
+    KCMLookandFeel(QObject* parent, const QVariantList& args);
     ~KCMLookandFeel();
 
     QList<Plasma::Package> availablePackages(const QString &component = QString());
@@ -112,7 +112,6 @@ Q_SIGNALS:
 private:
     QDir cursorThemeDir(const QString &theme, const int depth);
     const QStringList cursorSearchPaths();
-    QQuickView *m_quickView;
     QStandardItemModel *m_model;
     Plasma::Package m_package;
     QString m_selectedPlugin;

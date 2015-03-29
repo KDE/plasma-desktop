@@ -116,6 +116,11 @@ PlasmaCore.ToolTipArea {
         onTriggered: plasmoid.expanded = popupWindow.visible;
     }
 
+    Connections {
+        target: plasmoid.action("configure")
+        onTriggered: plasmoid.expanded = false
+    }
+
     PlasmaCore.Dialog {
         id: popupWindow
         objectName: "popupWindow"

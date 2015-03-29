@@ -54,10 +54,10 @@
 #  include <X11/extensions/Xfixes.h>
 #endif
 
-K_PLUGIN_FACTORY(KCMLookandFeelFactory, registerPlugin<KCMLookandFeel>();)
+K_PLUGIN_FACTORY_WITH_JSON(KCMLookandFeelFactory, "kcm_lookandfeel.json", registerPlugin<KCMLookandFeel>();)
 
-KCMLookandFeel::KCMLookandFeel(QWidget* parent, const QVariantList& args)
-    : KCModule(parent, args)
+KCMLookandFeel::KCMLookandFeel(QObject* parent, const QVariantList& args)
+    : KQuickAddons::ConfigModule(parent, args)
     , m_config("kdeglobals")
     , m_configGroup(m_config.group("KDE"))
     , m_applyColors(true)
@@ -96,19 +96,6 @@ KCMLookandFeel::KCMLookandFeel(QWidget* parent, const QVariantList& args)
     roles[HasWindowSwitcherRole] = "hasWindowSwitcher";
     roles[HasDesktopSwitcherRole] = "hasDesktopSwitcher";
     m_model->setItemRoleNames(roles);
-    QVBoxLayout* layout = new QVBoxLayout(this);
-
-    m_quickView = new QQuickView(0);
-    QWidget *widget = QWidget::createWindowContainer(m_quickView, this);
-    m_quickView->setResizeMode(QQuickView::SizeRootObjectToView);
-    Plasma::Package package = Plasma::PluginLoader::self()->loadPackage("Plasma/Generic");
-    package.setDefaultPackageRoot("plasma/kcms");
-    package.setPath("kcm_lookandfeel");
-    m_quickView->rootContext()->setContextProperty("kcm", this);
-    m_quickView->setSource(QUrl::fromLocalFile(package.filePath("mainscript")));
-    setMinimumHeight(m_quickView->initialSize().height());
-
-    layout->addWidget(widget);
 }
 
 KCMLookandFeel::~KCMLookandFeel()
@@ -132,9 +119,13 @@ void KCMLookandFeel::setSelectedPlugin(const QString &plugin)
         return;
     }
 
+    const bool firstTime = m_selectedPlugin.isNull();
     m_selectedPlugin = plugin;
     emit selectedPluginChanged();
-    changed();
+
+    if (!firstTime) {
+        setNeedsSave(true);
+    }
 }
 
 QList<Plasma::Package> KCMLookandFeel::availablePackages(const QString &component)

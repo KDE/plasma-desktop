@@ -212,6 +212,16 @@ Item {
                 drag.target: appletItem
                 property bool dragging: false // Set by mouseListener.onPressAndHold -- drag.active only becomes true on movement.
 
+                function endDrag() {
+                    appletItem.z = appletItem.z - zoffset;
+                    repositionTimer.running = false;
+                    placeHolderPaint.opacity = 0;
+                    animationsEnabled = true;
+                    LayoutManager.positionItem(appletItem);
+                    LayoutManager.save();
+                    dragging = false;
+                }
+
                 onDraggingChanged: {
                     cursorShape = dragging ? Qt.DragMoveCursor : Qt.ArrowCursor;
                 }
@@ -241,15 +251,8 @@ Item {
                     }
                 }
 
-                onReleased: {
-                    appletItem.z = appletItem.z - zoffset;
-                    repositionTimer.running = false;
-                    placeHolderPaint.opacity = 0;
-                    animationsEnabled = true;
-                    LayoutManager.positionItem(appletItem);
-                    LayoutManager.save();
-                    dragging = false;
-                }
+                onCanceled: endDrag()
+                onReleased: endDrag()
             }
 
             Item {

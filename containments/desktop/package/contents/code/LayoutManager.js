@@ -194,8 +194,10 @@ function normalizeItemPosition(item)
     var width = Math.max(cellSize.width, Math.round(item.width/cellSize.width)*cellSize.width)
     var height = Math.max(cellSize.height, Math.round(item.height/cellSize.height)*cellSize.height)
 
-    item.x = x
-    item.y = y
+    var pos = plasmoid.adjustToAvailableScreenRegion(x, y, width, height);
+    item.x = pos.x;
+    item.y = pos.y;
+
     /*item.width = width
     item.height = height*/
 }
@@ -204,6 +206,10 @@ function positionItem(item)
 {
     var x = Math.max(0, Math.round(item.x/cellSize.width)*cellSize.width)
     var y = Math.max(0, Math.round(item.y/cellSize.height)*cellSize.height)
+
+    var pos = plasmoid.adjustToAvailableScreenRegion(x, y, item.width, item.height);
+    x = pos.x;
+    y = pos.y;
 
     var forwardX = x
     var forwardY = y
