@@ -19,6 +19,7 @@
 
 import QtQuick 2.0
 import QtQuick.Controls 1.0
+import QtQuick.Dialogs 1.2
 import QtQuick.Layouts 1.0
 
 import org.kde.plasma.private.kicker 0.1 as Kicker
@@ -67,18 +68,28 @@ Item {
                     enabled: useCustomButtonImage.checked
 
                     onClicked: {
+                        imagePicker.folder = systemSettings.picturesLocation();
                         imagePicker.open();
                     }
                 }
 
-                Kicker.ImagePicker {
+                FileDialog {
                     id: imagePicker
 
-                    Layout.fillWidth: true
+                    title: i18n("Choose an image")
 
-                    onUrlChanged: {
-                        customButtonImage.text = url;
+                    selectFolder: false
+                    selectMultiple: false
+
+                    nameFilters: [ "Image Files (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)" ]
+
+                    onFileUrlChanged: {
+                        customButtonImage.text = fileUrl;
                     }
+                }
+
+                Kicker.SystemSettings {
+                    id: systemSettings
                 }
             }
         }
