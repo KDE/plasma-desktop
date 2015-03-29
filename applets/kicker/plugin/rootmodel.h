@@ -36,17 +36,33 @@ class RootModel : public AppsModel
 {
     Q_OBJECT
 
+    Q_PROPERTY(bool showRecentApps READ showRecentApps WRITE setShowRecentApps NOTIFY showRecentAppsChanged)
+    Q_PROPERTY(bool showRecentDocs READ showRecentDocs WRITE setShowRecentDocs NOTIFY showRecentDocsChanged)
+    Q_PROPERTY(bool showRecentContacts READ showRecentContacts WRITE setShowRecentContacts NOTIFY showRecentContactsChanged)
+
     Q_PROPERTY(QObject* recentAppsModel READ recentAppsModel NOTIFY recentAppsModelChanged)
 
     public:
         explicit RootModel(QObject *parent = 0);
         ~RootModel();
 
+        bool showRecentApps() const;
+        void setShowRecentApps(bool show);
+
+        bool showRecentDocs() const;
+        void setShowRecentDocs(bool show);
+
+        bool showRecentContacts() const;
+        void setShowRecentContacts(bool show);
+
         Q_INVOKABLE QObject *favoritesModelForPrefix(const QString &prefix);
 
         QObject *recentAppsModel();
 
     Q_SIGNALS:
+        void showRecentAppsChanged() const;
+        void showRecentDocsChanged() const;
+        void showRecentContactsChanged() const;
         void recentAppsModelChanged() const;
 
     protected Q_SLOTS:
@@ -57,6 +73,10 @@ class RootModel : public AppsModel
 
     private:
         void extendEntryList();
+
+        bool m_showRecentApps;
+        bool m_showRecentDocs;
+        bool m_showRecentContacts;
 
         QHash<QString, FavoritesModel *> m_favoritesModels;
         RecentAppsModel *m_recentAppsModel;

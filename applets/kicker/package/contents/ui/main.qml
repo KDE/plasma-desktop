@@ -57,9 +57,15 @@ Item {
         flat: plasmoid.configuration.limitDepth
         appletInterface: plasmoid
 
+        showRecentApps: plasmoid.configuration.showRecentApps
+        showRecentDocs: plasmoid.configuration.showRecentDocs
+        showRecentContacts: plasmoid.configuration.showRecentContacts
+
         onRecentAppsModelChanged: {
-            recentAppsModel.recentApps = plasmoid.configuration.recentApps;
-            runnerModel.appLaunched.connect(recentAppsModel.addApp);
+            if (recentAppsModel) {
+                recentAppsModel.recentApps = plasmoid.configuration.recentApps;
+                runnerModel.appLaunched.connect(recentAppsModel.addApp);
+            }
         }
 
         Component.onCompleted: {

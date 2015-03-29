@@ -31,6 +31,7 @@ set(kickerplugin_SRCS
     plugin/runnermodel.cpp
     plugin/runnermatchesmodel.cpp
     plugin/recentappsmodel.cpp
+    plugin/recentcontactsmodel.cpp
     plugin/recentdocsmodel.cpp
     plugin/submenu.cpp
     plugin/systemmodel.cpp
@@ -61,6 +62,8 @@ target_link_libraries(kickerplugin
                       KF5::KDELibs4Support # FIXME: New Solid power management API doesn't exist yet, so we need to use deprecated stuff.
                       KF5::KIOCore
                       KF5::KIOWidgets
+                      KF5::People
+                      KF5::PeopleWidgets
                       KF5::PlasmaQuick
                       KF5::Runner
                       KF5::Service

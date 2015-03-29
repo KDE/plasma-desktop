@@ -1,6 +1,6 @@
 /***************************************************************************
- *   Copyright (C) 2012 Aurélien Gâteau <agateau@kde.org>                  *
- *   Copyright (C) 2014 by Eike Hein <hein@kde.org>                        *
+ *   Copyright (C) 2012 by Aurélien Gâteau <agateau@kde.org>               *
+ *   Copyright (C) 2014-2015 by Eike Hein <hein@kde.org>                   *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -18,42 +18,40 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#ifndef ABSTRACTENTRY_H
-#define ABSTRACTENTRY_H
+#ifndef RECENTCONTACTSMODEL_H
+#define RECENTCONTACTSMODEL_H
 
-#include "abstractmodel.h"
+#include "forwardingmodel.h"
 
-#include <QIcon>
-#include <QPointer>
-#include <QString>
+namespace KPeople {
+    class PersonData;
+}
 
-class AbstractEntry
+class RecentContactsModel : public ForwardingModel
 {
+    Q_OBJECT
+
     public:
-        enum EntryType { RunnableType, GroupType, DividerType };
+        explicit RecentContactsModel(QObject *parent = 0);
+        ~RecentContactsModel();
 
-        virtual ~AbstractEntry();
+        QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
 
-        virtual EntryType type() const = 0;
+        Q_INVOKABLE bool trigger(int row, const QString &actionId, const QVariant &argument);
 
-        QIcon icon() const { return m_icon; }
-        QString iconName() const { return m_icon.name(); }
-        QString name() const { return m_name; }
+    private Q_SLOTS:
+        void refresh();
+        void buildCache();
+        void personDataChanged();
 
-    protected:
-        QIcon m_icon;
-        QString m_name;
-};
+    private:
+        void insertPersonData(const QString &id, int row);
 
-class AbstractGroupEntry : public AbstractEntry
-{
-    public:
-        EntryType type() const { return GroupType; }
+        void forget(int row);
+        void forgetAll();
 
-        AbstractModel *model() const { return m_model; }
-
-    protected:
-        QPointer<AbstractModel> m_model;
+        QHash<QString, KPeople::PersonData *> m_idToData;
+        QHash<KPeople::PersonData *, int> m_dataToRow;
 };
 
 #endif

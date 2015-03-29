@@ -36,6 +36,10 @@ Item {
     property alias cfg_appNameFormat: appNameFormat.currentIndex
     property alias cfg_limitDepth: limitDepth.checked
 
+    property alias cfg_showRecentApps: showRecentApps.checked
+    property alias cfg_showRecentDocs: showRecentDocs.checked
+    property alias cfg_showRecentContacts: showRecentContacts.checked
+
     property alias cfg_useExtraRunners: useExtraRunners.checked
     property alias cfg_alignResultsToBottom: alignResultsToBottom.checked
 
@@ -120,6 +124,34 @@ Item {
                     id: limitDepth
 
                     text: i18n("Flatten menu to a single level")
+                }
+            }
+        }
+
+        GroupBox {
+            Layout.fillWidth: true
+
+            title: i18n("Categories")
+
+            flat: true
+
+            ColumnLayout {
+                CheckBox {
+                    id: showRecentApps
+
+                    text: i18n("Show recent applications")
+                }
+
+                CheckBox {
+                    id: showRecentDocs
+
+                    text: i18n("Show recent documents")
+                }
+
+                CheckBox {
+                    id: showRecentContacts
+
+                    text: i18n("Show recent contacts")
                 }
             }
         }
