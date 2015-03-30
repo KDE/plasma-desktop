@@ -156,6 +156,7 @@ MouseEventListener {
 
         imagePath: "widgets/tasks"
         prefix: TaskTools.taskPrefix("normal")
+        onRepaintNeeded: prefix = TaskTools.taskPrefix("normal")
 
         PlasmaCore.ToolTipArea {
             id: toolTip
