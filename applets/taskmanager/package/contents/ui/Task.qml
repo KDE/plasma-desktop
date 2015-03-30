@@ -155,7 +155,10 @@ MouseEventListener {
         anchors.fill: parent
 
         imagePath: "widgets/tasks"
+        property string basePrefix: "normal"
         prefix: TaskTools.taskPrefix("normal")
+        onRepaintNeeded: prefix = TaskTools.taskPrefix(basePrefix);
+        onBasePrefixChanged: prefix = TaskTools.taskPrefix(basePrefix);
 
         PlasmaCore.ToolTipArea {
             id: toolTip
@@ -298,7 +301,7 @@ MouseEventListener {
 
             PropertyChanges {
                 target: frame
-                prefix: ""
+                basePrefix: ""
             }
         },
         State {
@@ -307,7 +310,7 @@ MouseEventListener {
 
             PropertyChanges {
                 target: frame
-                prefix: TaskTools.taskPrefix("hover");
+                basePrefix: "hover"
             }
         },
         State {
@@ -316,7 +319,7 @@ MouseEventListener {
 
             PropertyChanges {
                 target: frame
-                prefix: TaskTools.taskPrefix("attention");
+                basePrefix: "attention"
             }
         },
         State {
@@ -325,7 +328,7 @@ MouseEventListener {
 
             PropertyChanges {
                 target: frame
-                prefix: TaskTools.taskPrefix("minimized");
+                basePrefix: "minimized"
             }
         },
         State {
@@ -334,7 +337,7 @@ MouseEventListener {
 
             PropertyChanges {
                 target: frame
-                prefix: TaskTools.taskPrefix("focus");
+                basePrefix: "focus"
             }
         }
     ]

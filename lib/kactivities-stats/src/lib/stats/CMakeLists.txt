@@ -88,9 +88,14 @@ ecm_generate_headers (
    REQUIRED_HEADERS KActivitiesStats_HEADERS
 )
 
+if (NOT KACTIVITIES_INSTALL_EXPERIMENTAL_HEADERS)
+    set (SKIP_NAMELINK LIBRARY NAMELINK_SKIP)
+endif ()
+
 install (
    TARGETS KF5ActivitiesExperimentalStats
    EXPORT KF5ActivitiesExperimentalStatsLibraryTargets
+   ${SKIP_NAMELINK}
    ${KF5_INSTALL_TARGETS_DEFAULT_ARGS}
    )
 

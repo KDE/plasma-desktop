@@ -26,7 +26,14 @@ PlasmaCore.FrameSvgItem {
     id: root
 
     imagePath: "widgets/panel-background"
-    prefix: {
+    onPrefixChanged: adjustBorders();
+    onRepaintNeeded: adjustPrefix();
+
+    visible: false //adjust borders is run during setup. We want to avoid painting till completed
+
+    property Item containment
+
+    function adjustPrefix() {
         if (!containment) {
             return "";
         }
@@ -45,21 +52,14 @@ PlasmaCore.FrameSvgItem {
             pre = "south";
             break;
         default:
-            return "";
+            prefix = "";
         }
         if (hasElementPrefix(pre)) {
-            return pre;
+            prefix = pre;
         } else {
-            return "";
+            prefix = "";
         }
-
     }
-
-    onPrefixChanged: adjustBorders();
-
-    visible: false //adjust borders is run during setup. We want to avoid painting till completed
-
-    property Item containment
 
     function adjustBorders() {
         var borders = PlasmaCore.FrameSvg.AllBorders;
