@@ -24,10 +24,13 @@
 #include <QDebug>
 #include <QAction>
 
+#include <KLocalizedString>
+
 #include <KActivitiesExperimentalStats/ResultModel>
 #include <KActivitiesExperimentalStats/Terms>
 
 #include <kpeople/widgets/actions.h> //FIXME TODO: Pretty include in KPeople broken.
+#include <kpeople/widgets/persondetailsdialog.h>
 #include <KPeople/PersonData>
 
 namespace KAStats = KActivities::Experimental::Stats;
@@ -69,9 +72,11 @@ QVariant RecentContactsModel::data(const QModelIndex &index, int role) const
     } else if (role == Qt::DecorationRole) {
         return data->presenceIconName();
     } else if (role == Kicker::HasActionListRole) {
-        return false;
+        return true;
     } else if (role == Kicker::ActionListRole) {
         QVariantList actionList ;
+
+        actionList << Kicker::createActionItem(i18n("Show Contact Information..."), "showContactInfo");
 
         /* FIXME TODO: No support in KActivities.
         actionList.prepend(Kicker::createSeparatorActionItem());
@@ -121,6 +126,14 @@ bool RecentContactsModel::trigger(int row, const QString &actionId, const QVaria
         }
 
         return false;
+    } else if (actionId == "showContactInfo") {
+        QString id = sourceModel()->data(sourceModel()->index(row, 0), ResultModel::ResourceRole).toString();
+
+        KPeople::PersonDetailsDialog *view = new KPeople::PersonDetailsDialog(0);
+        KPeople::PersonData *data = new KPeople::PersonData(id, view);
+        view->setPerson(data);
+        view->setAttribute(Qt::WA_DeleteOnClose);
+        view->show();
     } else if (actionId == "forget") {
         forget(row);
 
