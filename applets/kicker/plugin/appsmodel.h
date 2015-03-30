@@ -72,11 +72,11 @@ class AppsModel : public AbstractModel
         explicit AppsModel(const QString &entryPath = QString(), bool flat = false, QObject *parent = 0);
         ~AppsModel();
 
-        QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
+        virtual QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
 
         int rowCount(const QModelIndex &parent = QModelIndex()) const;
 
-        Q_INVOKABLE bool trigger(int row, const QString &actionId, const QVariant &argument);
+        Q_INVOKABLE virtual bool trigger(int row, const QString &actionId, const QVariant &argument);
 
         Q_INVOKABLE AbstractModel *modelForRow(int row);
 

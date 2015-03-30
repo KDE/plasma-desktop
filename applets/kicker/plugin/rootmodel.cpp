@@ -18,6 +18,7 @@
  ***************************************************************************/
 
 #include "rootmodel.h"
+#include "actionlist.h"
 #include "favoritesmodel.h"
 #include "recentappsmodel.h"
 #include "recentdocsmodel.h"
@@ -40,6 +41,8 @@ RootModel::RootModel(QObject *parent) : AppsModel(QString(), parent)
 , m_showRecentDocs(true)
 , m_showRecentContacts(true)
 , m_recentAppsModel(0)
+, m_recentDocsModel(0)
+, m_recentContactsModel(0)
 {
     FavoritesModel *favoritesModel = new FavoritesModel(this);
     connect(favoritesModel, SIGNAL(appLaunched(QString)), this, SIGNAL(appLaunched(QString)));
@@ -53,6 +56,63 @@ RootModel::RootModel(QObject *parent) : AppsModel(QString(), parent)
 
 RootModel::~RootModel()
 {
+}
+
+QVariant RootModel::data(const QModelIndex& index, int role) const
+{
+    if (!index.isValid() || index.row() >= m_entryList.count()) {
+        return QVariant();
+    }
+
+    if (role == Kicker::HasActionListRole || role == Kicker::ActionListRole) {
+        const AbstractEntry *entry = m_entryList.at(index.row());
+
+        if (entry->type() == AbstractEntry::GroupType) {
+            const GroupEntry *group = static_cast<const GroupEntry *>(entry);
+            AbstractModel *model = group->model();
+
+            if (model == m_recentAppsModel
+                || model == m_recentDocsModel
+                || model == m_recentContactsModel) {
+                if (role ==  Kicker::HasActionListRole) {
+                    return true;
+                } else if (role == Kicker::ActionListRole) {
+                    return QVariantList() << Kicker::createActionItem(i18n("Hide %1",
+                        group->name()), "hideCategory");
+                }
+            }
+        }
+    }
+
+    return AppsModel::data(index, role);
+}
+
+bool RootModel::trigger(int row, const QString& actionId, const QVariant& argument)
+{
+    if (actionId == "hideCategory") {
+        const AbstractEntry *entry = m_entryList.at(row);
+
+        if (entry->type() == AbstractEntry::GroupType) {
+            const GroupEntry *group = static_cast<const GroupEntry *>(entry);
+            AbstractModel *model = group->model();
+
+            if (model == m_recentAppsModel) {
+                setShowRecentApps(false);
+
+                return true;
+            } else if (model == m_recentDocsModel) {
+                setShowRecentDocs(false);
+
+                return true;
+            } else if (model == m_recentContactsModel) {
+                setShowRecentContacts(false);
+
+                return true;
+            }
+        }
+    }
+
+    return AppsModel::trigger(row, actionId, argument);
 }
 
 bool RootModel::showRecentApps() const
@@ -133,18 +193,18 @@ void RootModel::extendEntryList()
 
     emit recentAppsModelChanged();
 
-    RecentDocsModel *recentDocsModel = 0;
+    m_recentDocsModel = 0;
 
     if (m_showRecentDocs) {
-        recentDocsModel = new RecentDocsModel(this);
-        connect(recentDocsModel, SIGNAL(countChanged()), this, SLOT(childModelChanged()));
+        m_recentDocsModel = new RecentDocsModel(this);
+        connect(m_recentDocsModel, SIGNAL(countChanged()), this, SLOT(childModelChanged()));
     }
 
-    RecentContactsModel *recentContactsModel = 0;
+    m_recentContactsModel = 0;
 
     if (m_showRecentContacts) {
-        recentContactsModel = new RecentContactsModel(this);
-        connect(recentContactsModel, SIGNAL(countChanged()), this, SLOT(childModelChanged()));
+        m_recentContactsModel = new RecentContactsModel(this);
+        connect(m_recentContactsModel, SIGNAL(countChanged()), this, SLOT(childModelChanged()));
     }
 
     SystemModel *systemModel = new SystemModel(this);
@@ -152,21 +212,21 @@ void RootModel::extendEntryList()
 
     int insertCount = 0;
     if (m_recentAppsModel) ++insertCount;
-    if (recentDocsModel) ++insertCount;
-    if (recentContactsModel) ++insertCount;
+    if (m_recentDocsModel) ++insertCount;
+    if (m_recentContactsModel) ++insertCount;
 
     if (insertCount) {
         beginInsertRows(QModelIndex(), 0, insertCount - 1);
 
         GroupEntry *entry = 0;
 
-        if (recentContactsModel) {
-            entry = new GroupEntry(i18n("Recent Contacts"), QString(), recentContactsModel, this);
+        if (m_recentContactsModel) {
+            entry = new GroupEntry(i18n("Recent Contacts"), QString(), m_recentContactsModel, this);
             m_entryList.prepend(entry);
         }
 
-        if (recentDocsModel) {
-            entry = new GroupEntry(i18n("Recent Documents"), QString(), recentDocsModel, this);
+        if (m_recentDocsModel) {
+            entry = new GroupEntry(i18n("Recent Documents"), QString(), m_recentDocsModel, this);
             m_entryList.prepend(entry);
         }
 

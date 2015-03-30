@@ -68,6 +68,18 @@ Item {
             }
         }
 
+        onShowRecentAppsChanged: {
+            plasmoid.configuration.showRecentApps = showRecentApps;
+        }
+
+        onShowRecentDocsChanged: {
+            plasmoid.configuration.showRecentDocs = showRecentDocs;
+        }
+
+        onShowRecentContactsChanged: {
+            plasmoid.configuration.showRecentContacts = showRecentContacts;
+        }
+
         Component.onCompleted: {
             favoritesModelForPrefix("app").favorites = plasmoid.configuration.favoriteApps;
             favoritesModelForPrefix("sys").favorites = plasmoid.configuration.favoriteSystemActions;

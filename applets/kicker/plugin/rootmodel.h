@@ -24,6 +24,8 @@
 
 class FavoritesModel;
 class RecentAppsModel;
+class RecentDocsModel;
+class RecentContactsModel;
 
 class GroupEntry : public AbstractGroupEntry
 {
@@ -45,6 +47,10 @@ class RootModel : public AppsModel
     public:
         explicit RootModel(QObject *parent = 0);
         ~RootModel();
+
+        QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
+
+        Q_INVOKABLE virtual bool trigger(int row, const QString &actionId, const QVariant &argument);
 
         bool showRecentApps() const;
         void setShowRecentApps(bool show);
@@ -80,6 +86,8 @@ class RootModel : public AppsModel
 
         QHash<QString, FavoritesModel *> m_favoritesModels;
         RecentAppsModel *m_recentAppsModel;
+        RecentDocsModel *m_recentDocsModel;
+        RecentContactsModel *m_recentContactsModel;
 };
 
 #endif
