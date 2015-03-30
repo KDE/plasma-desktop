@@ -102,11 +102,25 @@ bool RecentContactsModel::trigger(int row, const QString &actionId, const QVaria
 
         const QList<QAction *> actionList = KPeople::actionsForPerson(id, this);
 
-        foreach(const QAction *action, actionList) {
-            qDebug() << action << action->text();
+        if (!actionList.isEmpty()) {
+            QAction *chat = 0;
+
+            foreach (QAction *action, actionList) {
+                const QVariant &actionType = action->property("actionType");
+
+                if (!actionType.isNull() && actionType.toInt() == KPeople::ActionType::TextChatAction) {
+                    chat = action;
+                }
+            }
+
+            if (chat) {
+                chat->trigger();
+
+                return true;
+            }
         }
 
-        return true;
+        return false;
     } else if (actionId == "forget") {
         forget(row);
 
