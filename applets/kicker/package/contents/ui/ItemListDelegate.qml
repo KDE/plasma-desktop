@@ -222,11 +222,7 @@ Item {
     }
 
     Keys.onPressed: {
-        if (!hasActionList) {
-            return;
-        }
-
-        if (event.key == Qt.Key_Menu) {
+        if (event.key == Qt.Key_Menu && hasActionList) {
             event.accepted = true;
             openActionMenu(mouseArea);
         } else if ((event.key == Qt.Key_Enter || event.key == Qt.Key_Return) && !hasChildren) {
