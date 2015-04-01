@@ -43,6 +43,7 @@ FocusScope {
 
     property alias currentIndex: listView.currentIndex
     property alias keyNavigationWraps: listView.keyNavigationWraps
+    property alias showChildDialogs: listView.showChildDialogs
     property alias model: listView.model
     property alias containsMouse: listener.containsMouse
     property alias resetOnExitDelay: resetIndexTimer.interval
@@ -53,6 +54,8 @@ FocusScope {
 
     Timer {
         id: dialogSpawnTimer
+
+        property bool focusOnSpawn: false
 
         interval: 70
         repeat: false
@@ -82,6 +85,12 @@ FocusScope {
 
             windowSystem.forceActive(childDialog.mainItem);
             childDialog.mainItem.focus = true;
+
+            if (focusOnSpawn) {
+                childDialog.mainItem.showChildDialogs = false;
+                childDialog.mainItem.currentIndex = 0;
+                childDialog.mainItem.showChildDialogs = true;
+            }
         }
     }
 
@@ -124,6 +133,7 @@ FocusScope {
             ListView {
                 id: listView
 
+                property bool showChildDialogs: true
                 property int eligibleWidth: width
 
                 currentIndex: -1
@@ -163,7 +173,10 @@ FocusScope {
                             return;
                         }
 
-                        dialogSpawnTimer.restart();
+                        if (showChildDialogs) {
+                            dialogSpawnTimer.focusOnSpawn = true;
+                            dialogSpawnTimer.restart();
+                        }
                     } else if (childDialog != null) {
                         childDialog.visible = false;
                         childDialog.delayedDestroy();
@@ -172,10 +185,23 @@ FocusScope {
                 }
 
                 Keys.onPressed: {
-                    if (event.key == Qt.Key_Right && childDialog != null) {
+                    if (event.key == Qt.Key_Up) {
+                        event.accepted = true;
+                        showChildDialogs = false;
+                        decrementCurrentIndex();
+                        showChildDialogs = true;
+                    } else if (event.key == Qt.Key_Down) {
+                        event.accepted = true;
+                        showChildDialogs = false;
+                        incrementCurrentIndex();
+                        showChildDialogs = true;
+                    } else if (event.key == Qt.Key_Right && childDialog != null) {
                         windowSystem.forceActive(childDialog.mainItem);
                         childDialog.mainItem.focus = true;
                         childDialog.mainItem.currentIndex = 0;
+                    } else if (event.key == Qt.Key_Right && childDialog == null) {
+                        dialogSpawnTimer.focusOnSpawn = true;
+                        dialogSpawnTimer.restart();
                     } else if (event.key == Qt.Key_Left && dialog != null) {
                         dialog.destroy();
                     } else if (event.key == Qt.Key_Escape) {
