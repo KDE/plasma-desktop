@@ -50,7 +50,7 @@ AppGroupEntry::AppGroupEntry(KServiceGroup::Ptr group, AppsModel *parentModel,
     bool flat, int appNameFormat)
 {
     m_name = group->caption();
-    m_icon = QIcon::fromTheme(group->icon());
+    m_icon = QIcon::fromTheme(group->icon(), QIcon::fromTheme("unknown"));
     AppsModel* model = new AppsModel(group->entryPath(), flat, parentModel);
     model->setAppletInterface(parentModel->appletInterface());
     model->setAppNameFormat(appNameFormat);
@@ -64,7 +64,7 @@ AppEntry::AppEntry(KService::Ptr service, const QString &name)
 : m_service(service)
 {
     m_name = name;
-    m_icon = QIcon::fromTheme(service->icon());
+    m_icon = QIcon::fromTheme(service->icon(), QIcon::fromTheme("unknown"));
     m_service = service;
 }
 
