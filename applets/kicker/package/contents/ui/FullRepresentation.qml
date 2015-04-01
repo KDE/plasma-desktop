@@ -385,7 +385,9 @@ FocusScope {
         Keys.onPressed: {
             if (event.key == Qt.Key_Up) {
                 if (rootList.visible) {
+                    rootList.showChildDialogs = false;
                     rootList.currentIndex = rootList.model.count - 1;
+                    rootList.showChildDialogs = true;
                 }
 
                 if (runnerColumns.visible) {
@@ -393,7 +395,9 @@ FocusScope {
                 }
             } else if (event.key == Qt.Key_Down) {
                 if (rootList.visible) {
+                    rootList.showChildDialogs = false;
                     rootList.currentIndex = 0;
+                    rootList.showChildDialogs = true;
                 }
 
                 if (runnerColumns.visible) {
