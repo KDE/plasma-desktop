@@ -36,7 +36,7 @@ SystemEntry::SystemEntry(SystemEntry::Action action, const QString &name, const 
 {
     m_action = action;
     m_name = name;
-    m_icon = QIcon::fromTheme(icon);
+    m_icon = QIcon::fromTheme(icon, QIcon::fromTheme("unknown"));
 }
 
 SystemModel::SystemModel(QObject *parent) : AbstractModel(parent)
