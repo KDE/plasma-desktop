@@ -199,7 +199,8 @@ FocusScope {
                         windowSystem.forceActive(childDialog.mainItem);
                         childDialog.mainItem.focus = true;
                         childDialog.mainItem.currentIndex = 0;
-                    } else if (event.key == Qt.Key_Right && childDialog == null) {
+                    } else if (event.key == Qt.Key_Right && childDialog == null
+                        && currentItem != null && currentItem.hasChildren) {
                         dialogSpawnTimer.focusOnSpawn = true;
                         dialogSpawnTimer.restart();
                     } else if (event.key == Qt.Key_Left && dialog != null) {
