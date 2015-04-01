@@ -227,6 +227,7 @@ Item {
             openActionMenu(mouseArea);
         } else if ((event.key == Qt.Key_Enter || event.key == Qt.Key_Return) && !hasChildren) {
             if (!hasChildren) {
+                event.accepted = true;
                 item.ListView.view.model.trigger(index, "", null);
                 plasmoid.expanded = false;
             }
