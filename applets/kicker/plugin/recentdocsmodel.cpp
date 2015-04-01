@@ -34,7 +34,7 @@ DocEntry::DocEntry(const QString &name, const QString &icon,
     const QString &url, const QString &desktopPath)
 {
     m_name = name;
-    m_icon = QIcon::fromTheme(icon);
+    m_icon = QIcon::fromTheme(icon, QIcon::fromTheme("unknown"));
     m_url = url;
     m_desktopPath = desktopPath;
 }

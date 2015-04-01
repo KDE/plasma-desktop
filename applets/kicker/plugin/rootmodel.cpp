@@ -29,7 +29,7 @@ GroupEntry::GroupEntry(const QString &name, const QString &icon,
     AbstractModel *model, AbstractModel *parentModel)
 {
     m_name = name;
-    m_icon = QIcon::fromTheme(icon);
+    m_icon = QIcon::fromTheme(icon, QIcon::fromTheme("unknown"));
     m_model = model;
     QObject::connect(parentModel, SIGNAL(refreshing()), m_model, SLOT(deleteLater()));
 }
