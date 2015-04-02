@@ -31,6 +31,7 @@ FocusScope {
     height: listView.contentHeight
 
     signal exited
+    signal keyNavigationAtListEnd
     signal appendSearchText(string text)
 
     property Item focusParent: null
@@ -153,7 +154,7 @@ FocusScope {
 
                 onCurrentIndexChanged: {
                     if (currentIndex != -1) {
-                        itemList.focus = true;
+                        itemList.forceActiveFocus();
 
                         if (childDialog) {
                             if (currentItem && currentItem.hasChildren) {
@@ -187,11 +188,25 @@ FocusScope {
                 Keys.onPressed: {
                     if (event.key == Qt.Key_Up) {
                         event.accepted = true;
+
+                        if (!keyNavigationWraps && currentIndex == 0) {
+                            itemList.keyNavigationAtListEnd();
+
+                            return;
+                        }
+
                         showChildDialogs = false;
                         decrementCurrentIndex();
                         showChildDialogs = true;
                     } else if (event.key == Qt.Key_Down) {
                         event.accepted = true;
+
+                        if (!keyNavigationWraps && currentIndex == count - 1) {
+                            itemList.keyNavigationAtListEnd();
+
+                            return;
+                        }
+
                         showChildDialogs = false;
                         incrementCurrentIndex();
                         showChildDialogs = true;

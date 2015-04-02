@@ -27,6 +27,8 @@ FocusScope {
     width: rootList.width + vertLine.width + vertLine.anchors.leftMargin
     height: parent.height
 
+    signal keyNavigationAtListEnd
+
     property alias currentIndex: runnerMatches.currentIndex
     property alias containsMouse: runnerMatches.containsMouse
 
@@ -90,5 +92,9 @@ FocusScope {
                 visible: false;
             }
         }
+    }
+
+    Component.onCompleted: {
+        runnerMatches.keyNavigationAtListEnd.connect(keyNavigationAtListEnd);
     }
 }
