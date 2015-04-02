@@ -615,7 +615,7 @@ QVariant CFontList::headerData(int section, Qt::Orientation orientation,
 //                     return SmallIcon("fontstatus");
 //                 break;
             case Qt::TextAlignmentRole:
-                return Qt::AlignLeft;
+                return QVariant(Qt::AlignLeft | Qt::AlignVCenter);
             case Qt::ToolTipRole:
                 if(COL_STATUS==section)
                     return i18n("This column shows the status of the font family, and of the "
@@ -1107,8 +1107,10 @@ QVariant CFontListSortFilterProxy::data(const QModelIndex &idx, int role) const
                                   ? "dialog-ok" : "dialog-cancel", 10);
             break;
         case Qt::SizeHintRole:
-            if(mi->isFamily())
-                return SmallIcon("dialog-ok").size()+QSize(0, 4);
+            if(mi->isFamily()) {
+                const int s = KIconLoader::global()->currentSize(KIconLoader::Small);
+                return QSize(s, s + 4);
+            }
         default:
             break;
     }

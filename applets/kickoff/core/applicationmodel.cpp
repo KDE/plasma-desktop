@@ -149,7 +149,7 @@ void ApplicationModelPrivate::fillNode(const QString &_relPath, AppNode *node)
             }
 
             AppNode *newnode = new AppNode();
-            newnode->icon = QIcon::fromTheme(p->icon());
+            newnode->icon = QIcon::fromTheme(p->icon(), QIcon::fromTheme("unknown"));
             newnode->appName = p->name();
             newnode->genericName = p->genericName();
             newnode->desktopEntry = p->entryPath();
@@ -264,7 +264,7 @@ void ApplicationModelPrivate::fillNode(const QString &_relPath, AppNode *node)
 
         AppNode *newnode = new AppNode();
         newnode->iconName = icon;
-        newnode->icon = QIcon::fromTheme(icon);
+        newnode->icon = QIcon::fromTheme(icon, QIcon::fromTheme("unknown"));
         newnode->appName = appName;
         newnode->genericName = genericName;
         newnode->relPath = relPath;

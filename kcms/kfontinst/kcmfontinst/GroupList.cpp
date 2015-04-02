@@ -286,7 +286,10 @@ QVariant CGroupList::data(const QModelIndex &index, int role) const
                         }
                         break;
                     case Qt::SizeHintRole:
-                        return SmallIcon("dialog-ok").size()+QSize(0, 4);
+                    {
+                        const int s = KIconLoader::global()->currentSize(KIconLoader::Small);
+                        return QSize(s, s + 4);
+                    }
                     case Qt::EditRole:
                     case Qt::DisplayRole:
                         return grp->name();
@@ -380,7 +383,7 @@ QVariant CGroupList::headerData(int section, Qt::Orientation orientation, int ro
             case Qt::DisplayRole:
                 return i18n("Group");
             case Qt::TextAlignmentRole:
-                return Qt::AlignLeft;
+                return QVariant(Qt::AlignLeft | Qt::AlignVCenter);
             case Qt::WhatsThisRole:
                 return whatsThis();
             default:

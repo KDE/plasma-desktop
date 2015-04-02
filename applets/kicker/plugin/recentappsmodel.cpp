@@ -26,6 +26,8 @@
 #include <QX11Info>
 #endif
 
+#include <QIcon>
+
 #include <KLocalizedString>
 #include <KRun>
 #include <KService>
@@ -55,7 +57,7 @@ QVariant RecentAppsModel::data(const QModelIndex &index, int role) const
     if (role == Qt::DisplayRole) {
         return service->name();
     } else if (role == Qt::DecorationRole) {
-        return service->icon().isEmpty() ? QLatin1String("unknown") : service->icon();
+        return QIcon::fromTheme(service->icon(), QIcon::fromTheme("unknown"));
     } else if (role == Kicker::FavoriteIdRole) {
         return QVariant("app:" + storageId);
     } else if (role == Kicker::HasActionListRole) {
