@@ -77,7 +77,7 @@ QStandardItem *StandardItemFactory::createItemForUrl(const QString& urlString, D
         item = new QStandardItem;
         KDesktopFile desktopFile(url.toLocalFile());
         item->setText(QFileInfo(urlString.mid(0, urlString.lastIndexOf('.'))).completeBaseName());
-        item->setIcon(QIcon::fromTheme(desktopFile.readIcon()));
+        item->setIcon(QIcon::fromTheme(desktopFile.readIcon(), QIcon::fromTheme("unknown")));
 
         //FIXME: desktopUrl is a hack around borkage in KRecentDocuments which
         //       stores a path in the URL field!
@@ -107,7 +107,7 @@ QStandardItem *StandardItemFactory::createItemForUrl(const QString& urlString, D
 
         item->setText(basename);
         //FIXME
-//         item->setIcon(QIcon::fromTheme(KMimeType::iconNameForUrl(url)));
+//         item->setIcon(QIcon::fromTheme(KMimeType::iconNameForUrl(url), QIcon::fromTheme("unknown")));
         item->setData(url.url(), Kickoff::UrlRole);
         item->setData(subTitle, Kickoff::SubTitleRole);
 
@@ -150,7 +150,7 @@ QStandardItem *StandardItemFactory::createItemForService(KService::Ptr service, 
     QString appName = service->name();
     bool nameFirst = displayOrder == NameBeforeDescription;
     appItem->setText(nameFirst || genericName.isEmpty() ? appName : genericName);
-    appItem->setIcon(QIcon::fromTheme(service->icon()));
+    appItem->setIcon(QIcon::fromTheme(service->icon(), QIcon::fromTheme("unknown")));
     appItem->setData(service->entryPath(), Kickoff::UrlRole);
 
     if (nameFirst) {
