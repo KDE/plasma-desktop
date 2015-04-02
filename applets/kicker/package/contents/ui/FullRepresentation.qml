@@ -170,6 +170,10 @@ FocusScope {
 
             model: rootModel
 
+            onKeyNavigationAtListEnd: {
+                searchField.focus = true;
+            }
+
             states: [ State {
                 name: "top"
                 when: (plasmoid.location == PlasmaCore.Types.TopEdge)
@@ -180,9 +184,6 @@ FocusScope {
                     anchors.bottom: parent.bottom
                 }
             }]
-
-            KeyNavigation.up: searchField
-            KeyNavigation.down: searchField
 
             Component.onCompleted: {
                 rootList.exited.connect(root.reset);
@@ -205,6 +206,10 @@ FocusScope {
 
                 delegate: RunnerResultsList {
                     id: runnerMatches
+
+                    onKeyNavigationAtListEnd: {
+                        searchField.focus = true;
+                    }
 
                     onContainsMouseChanged: {
                         if (containsMouse) {
@@ -255,10 +260,6 @@ FocusScope {
                     Component.onDestruction: {
                         runnerColumns.focusChanged.disconnect(focusChanged);
                     }
-
-
-                    KeyNavigation.up: (index == 0) ? searchField : null
-                    KeyNavigation.down: (index == 0) ? searchField : null
                 }
             }
         }
