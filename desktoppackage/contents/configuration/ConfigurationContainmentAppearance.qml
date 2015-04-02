@@ -31,6 +31,9 @@ ColumnLayout {
 
 //BEGIN functions
     function saveConfig() {
+        if (main.currentItem.saveConfig) {
+            main.currentItem.saveConfig()
+        }
         for (var key in configDialog.wallpaperConfiguration) {
             if (main.currentItem["cfg_"+key] !== undefined) {
                 configDialog.wallpaperConfiguration[key] = main.currentItem["cfg_"+key]
