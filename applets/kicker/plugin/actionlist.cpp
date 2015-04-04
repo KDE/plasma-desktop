@@ -26,7 +26,14 @@
 #include <KMimeTypeTrader>
 #include <KPropertiesDialog>
 #include <KRun>
-#include <KService>
+
+#include <KActivitiesExperimentalStats/ResultSet>
+#include <KActivitiesExperimentalStats/Terms>
+
+namespace KAStats = KActivities::Experimental::Stats;
+
+using namespace KAStats;
+using namespace KAStats::Terms;
 
 namespace Kicker
 {
@@ -117,6 +124,84 @@ bool handleFileItemAction(const KFileItem &fileItem, const QString &actionId, co
     }
 
     return false;
+}
+
+QVariantList recentDocumentActions(KService::Ptr service)
+{
+    QVariantList list;
+
+    if (!service) {
+        return list;
+    }
+
+    QString storageId = service->storageId();
+
+    if (storageId.isEmpty()) {
+        return list;
+    }
+
+    if (storageId.startsWith("org.kde.")) {
+        storageId = storageId.right(storageId.length() - 8);
+    }
+
+    if (storageId.endsWith(".desktop")) {
+        storageId = storageId.left(storageId.length() - 8);
+    }
+
+    auto query = UsedResources
+                    | RecentlyUsedFirst
+                    | Agent(storageId)
+                    | Type::any()
+                    | Activity::current()
+                    | Url::file();
+
+    ResultSet results(query);
+
+    ResultSet::const_iterator resultIt;
+    resultIt = results.begin();
+
+    while (list.length() < 6 && resultIt != results.end()) {
+        const QString resource = (*resultIt).resource();
+        const QUrl url(resource);
+
+        if (!url.isValid()) {
+            continue;
+        }
+
+        const KFileItem fileItem(url);
+
+        if (!fileItem.isFile()) {
+            continue;
+        }
+
+        if (list.length() == 0) {
+            list << createTitleActionItem(i18n("Recent documents:"));
+        }
+
+        QVariantMap item = createActionItem(url.fileName(), "_kicker_recentDocument", resource);
+        item["icon"] = fileItem.iconName();
+
+        list << item;
+
+        ++resultIt;
+    }
+
+    return list;
+}
+
+bool handleRecentDocumentAction(KService::Ptr service, const QVariant &_argument)
+{
+    if (!service) {
+        return false;
+    }
+
+    QString argument = _argument.toString();
+
+    if (argument.isEmpty()) {
+        return false;
+    }
+
+    return (KRun::runService(*service, QList<QUrl>() << QUrl(argument), QApplication::activeWindow()) != 0);
 }
 
 }

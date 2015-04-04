@@ -73,11 +73,17 @@ QVariant RecentAppsModel::data(const QModelIndex &index, int role) const
     } else if (role == Kicker::ActionListRole) {
         QVariantList actionList;
 
-        const QVariantMap &forgetAllAction = Kicker::createActionItem(i18n("Forget All Applications"), "forgetAll");
-        actionList.prepend(forgetAllAction);
+        actionList << Kicker::recentDocumentActions(service);
+
+        if (actionList.count()) {
+            actionList << Kicker::createSeparatorActionItem();
+        }
 
         const QVariantMap &forgetAction = Kicker::createActionItem(i18n("Forget Application"), "forget");
-        actionList.prepend(forgetAction);
+        actionList << forgetAction;
+
+        const QVariantMap &forgetAllAction = Kicker::createActionItem(i18n("Forget All Applications"), "forgetAll");
+        actionList << forgetAllAction;
 
         return actionList;
     }
@@ -129,6 +135,14 @@ bool RecentAppsModel::trigger(int row, const QString &actionId, const QVariant &
         // FIXME TODO.
 
         return true;
+    } else {
+        const QString storageId = sourceModel()->data(sourceModel()->index(row, 0),
+            ResultModel::ResourceRole).toString().section(':', 1);
+        KService::Ptr service = KService::serviceByStorageId(storageId);
+
+        if (service) {
+            return Kicker::handleRecentDocumentAction(service, argument);
+        }
     }
 
     return false;

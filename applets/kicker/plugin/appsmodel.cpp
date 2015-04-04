@@ -129,11 +129,17 @@ QVariant AppsModel::data(const QModelIndex &index, int role) const
             }
         }
     } else if (role == Kicker::ActionListRole) {
+        const KService::Ptr service = static_cast<const AppEntry *>(entry)->service();
+
         QVariantList actionList;
 
-        if (entry->type() == AbstractEntry::RunnableType) {
-            const KService::Ptr service = static_cast<const AppEntry *>(entry)->service();
+        actionList << Kicker::recentDocumentActions(service);
 
+        if (actionList.count()) {
+            actionList << Kicker::createSeparatorActionItem();
+        }
+
+        if (entry->type() == AbstractEntry::RunnableType) {
             if (ContainmentInterface::mayAddLauncher(m_appletInterface, ContainmentInterface::Desktop)) {
                 actionList << Kicker::createActionItem(i18n("Add to Desktop"), "addToDesktop");
             }
@@ -228,7 +234,27 @@ bool AppsModel::trigger(int row, const QString &actionId, const QVariant &argume
         service  = static_cast<const AppEntry *>(entry)->service();
     }
 
-    if (actionId == "addToDesktop" && ContainmentInterface::mayAddLauncher(m_appletInterface, ContainmentInterface::Desktop)) {
+    if (actionId.isEmpty()) {
+        if (!service) {
+            return false;
+        }
+
+        quint32 timeStamp = 0;
+
+#if HAVE_X11
+        if (QX11Info::isPlatformX11()) {
+            timeStamp = QX11Info::appUserTime();
+        }
+#endif
+
+        new KRun(QUrl::fromLocalFile(service->entryPath()), 0, true,
+            KStartupInfo::createNewStartupIdForTimestamp(timeStamp));
+
+        KActivities::ResourceInstance::notifyAccessed(QUrl("applications:" + service->storageId()),
+            "org.kde.plasma.kicker");
+
+        return true;
+    } else if (actionId == "addToDesktop" && ContainmentInterface::mayAddLauncher(m_appletInterface, ContainmentInterface::Desktop)) {
         ContainmentInterface::addLauncher(m_appletInterface, ContainmentInterface::Desktop, service->entryPath());
     } else if (actionId == "addToPanel" && ContainmentInterface::mayAddLauncher(m_appletInterface, ContainmentInterface::Panel)) {
         ContainmentInterface::addLauncher(m_appletInterface, ContainmentInterface::Panel, service->entryPath());
@@ -308,22 +334,8 @@ bool AppsModel::trigger(int row, const QString &actionId, const QVariant &argume
                 emit hiddenEntriesChanged();
             }
         }
-    } else if (actionId.isEmpty() && service) {
-        quint32 timeStamp = 0;
-
-#if HAVE_X11
-        if (QX11Info::isPlatformX11()) {
-            timeStamp = QX11Info::appUserTime();
-        }
-#endif
-
-        new KRun(QUrl::fromLocalFile(service->entryPath()), 0, true,
-            KStartupInfo::createNewStartupIdForTimestamp(timeStamp));
-
-        KActivities::ResourceInstance::notifyAccessed(QUrl("applications:" + service->storageId()),
-            "org.kde.plasma.kicker");
-
-        return true;
+    } else if (service) {
+        return Kicker::handleRecentDocumentAction(service, argument);
     }
 
     return false;

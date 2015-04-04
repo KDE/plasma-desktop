@@ -20,6 +20,8 @@
 
 #include <QVariant>
 
+#include <KService>
+
 class KFileItem;
 
 namespace Kicker
@@ -41,7 +43,9 @@ QVariantMap createTitleActionItem(const QString &label);
 QVariantMap createSeparatorActionItem();
 
 QVariantList createActionListForFileItem(const KFileItem &fileItem);
-
 bool handleFileItemAction(const KFileItem &fileItem, const QString &actionId, const QVariant &argument, bool *close);
+
+QVariantList recentDocumentActions(KService::Ptr service);
+bool handleRecentDocumentAction(KService::Ptr service, const QVariant &argument);
 
 }

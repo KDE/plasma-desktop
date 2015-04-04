@@ -61,7 +61,7 @@ QVariant RecentDocsModel::data(const QModelIndex &index, int role) const
     if (role == Qt::DisplayRole) {
         return url.fileName();
     } else if (role == Qt::DecorationRole) {
-        return QIcon::fromTheme(fileItem.iconName());
+        return QIcon::fromTheme(fileItem.iconName(), QIcon::fromTheme("unknown"));
     } else if (role == Kicker::HasActionListRole) {
         return true;
     } else if (role == Kicker::ActionListRole) {
@@ -69,11 +69,11 @@ QVariant RecentDocsModel::data(const QModelIndex &index, int role) const
 
         actionList.prepend(Kicker::createSeparatorActionItem());
 
-        const QVariantMap &forgetAllAction = Kicker::createActionItem(i18n("Forget All Documents"), "forgetAll");
-        actionList.prepend(forgetAllAction);
-
         const QVariantMap &forgetAction = Kicker::createActionItem(i18n("Forget Document"), "forget");
-        actionList.prepend(forgetAction);
+        actionList << forgetAction;
+
+        const QVariantMap &forgetAllAction = Kicker::createActionItem(i18n("Forget All Documents"), "forgetAll");
+        actionList << forgetAllAction;
 
         return actionList;
     }

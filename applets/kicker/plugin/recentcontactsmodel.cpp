@@ -74,11 +74,11 @@ QVariant RecentContactsModel::data(const QModelIndex &index, int role) const
     } else if (role == Kicker::ActionListRole) {
         QVariantList actionList ;
 
-        const QVariantMap &forgetAllAction = Kicker::createActionItem(i18n("Forget All Contacts"), "forgetAll");
-        actionList.prepend(forgetAllAction);
-
         const QVariantMap &forgetAction = Kicker::createActionItem(i18n("Forget Contact"), "forget");
         actionList << forgetAction;
+
+        const QVariantMap &forgetAllAction = Kicker::createActionItem(i18n("Forget All Contacts"), "forgetAll");
+        actionList << forgetAllAction;
 
         actionList << Kicker::createSeparatorActionItem();
 

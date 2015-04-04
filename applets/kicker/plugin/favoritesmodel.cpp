@@ -69,6 +69,10 @@ QVariant FavoritesModel::data(const QModelIndex& index, int role) const
             return QVariant("app:" + service->storageId());
         } else if (role == Kicker::UrlRole) {
             return QUrl::fromLocalFile(service->entryPath());
+        } else if (role == Kicker::HasActionListRole) {
+            return true;
+        } else if (role == Kicker::ActionListRole) {
+            return Kicker::recentDocumentActions(service);
         }
     }
 
@@ -95,21 +99,25 @@ bool FavoritesModel::trigger(int row, const QString &actionId, const QVariant &a
     } else if (m_serviceCache.contains(favoritesId)) {
         KService::Ptr service = m_serviceCache[favoritesId];
 
-        quint32 timeStamp = 0;
+        if (actionId.isEmpty()) {
+            quint32 timeStamp = 0;
 
-#if HAVE_X11
-        if (QX11Info::isPlatformX11()) {
-            timeStamp = QX11Info::appUserTime();
+    #if HAVE_X11
+            if (QX11Info::isPlatformX11()) {
+                timeStamp = QX11Info::appUserTime();
+            }
+    #endif
+
+            new KRun(QUrl::fromLocalFile(service->entryPath()), 0, true,
+                KStartupInfo::createNewStartupIdForTimestamp(timeStamp));
+
+            KActivities::ResourceInstance::notifyAccessed(QUrl("applications:" + service->storageId()),
+                "org.kde.plasma.kicker");
+
+            return true;
+        } else {
+            return Kicker::handleRecentDocumentAction(service, argument);
         }
-#endif
-
-        new KRun(QUrl::fromLocalFile(service->entryPath()), 0, true,
-            KStartupInfo::createNewStartupIdForTimestamp(timeStamp));
-
-        KActivities::ResourceInstance::notifyAccessed(QUrl("applications:" + service->storageId()),
-            "org.kde.plasma.kicker");
-
-        return true;
     }
 
     return false;
