@@ -196,7 +196,7 @@ QVariantList recentDocumentActions(KService::Ptr service)
     }
 
     if (list.count()) {
-        list << createActionItem(i18n("Forget Documents"), "_kicker_forgetRecentDocuments");
+        list << createActionItem(i18n("Forget Recent Documents"), "_kicker_forgetRecentDocuments");
     }
 
     return list;
