@@ -98,9 +98,11 @@ void KCMSplashScreen::setSelectedPlugin(const QString &plugin)
         return;
     }
 
+    if (!m_selectedPlugin.isEmpty()) {
+        setNeedsSave(true);
+    }
     m_selectedPlugin = plugin;
     emit selectedPluginChanged();
-    setNeedsSave(true);
 }
 
 void KCMSplashScreen::load()
@@ -147,6 +149,7 @@ void KCMSplashScreen::save()
     }
 
     m_configGroup.sync();
+    setNeedsSave(false);
 }
 
 void KCMSplashScreen::defaults()
