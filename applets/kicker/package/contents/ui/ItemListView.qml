@@ -175,7 +175,7 @@ FocusScope {
                         }
 
                         if (showChildDialogs) {
-                            dialogSpawnTimer.focusOnSpawn = true;
+                            dialogSpawnTimer.focusOnSpawn = false;
                             dialogSpawnTimer.restart();
                         }
                     } else if (childDialog != null) {
