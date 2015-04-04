@@ -21,7 +21,6 @@
 #include "recentdocsmodel.h"
 #include "actionlist.h"
 
-#include <QDebug>
 #include <QIcon>
 #include <QMimeType>
 #include <QMimeDatabase>
@@ -56,8 +55,6 @@ QVariant RecentDocsModel::data(const QModelIndex &index, int role) const
     const KFileItem fileItem(url);
 
     if (!url.isValid() || !fileItem.isFile()) {
-        qDebug() << "URL:" << sourceModel()->data(index, ResultModel::ResourceRole);
-        qDebug() << "URL is not a file:" << url;
         return QLatin1String("Resource not a file!");
     }
 

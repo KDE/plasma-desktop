@@ -19,8 +19,6 @@
 
 #include "forwardingmodel.h"
 
-#include <QDebug>
-
 ForwardingModel::ForwardingModel(QObject *parent) : AbstractModel(parent)
 {
 }

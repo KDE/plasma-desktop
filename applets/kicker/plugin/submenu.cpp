@@ -22,7 +22,6 @@
 
 #include <cmath>
 
-#include <QDebug>
 #include <QScreen>
 
 #include <KWindowSystem>

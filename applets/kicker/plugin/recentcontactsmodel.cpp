@@ -21,7 +21,6 @@
 #include "recentcontactsmodel.h"
 #include "actionlist.h"
 
-#include <QDebug>
 #include <QAction>
 
 #include <KLocalizedString>
@@ -54,7 +53,6 @@ QVariant RecentContactsModel::data(const QModelIndex &index, int role) const
     }
 
     QString id = sourceModel()->data(index, ResultModel::ResourceRole).toString();
-    qDebug() << id;
 
     KPeople::PersonData *data = 0;
 
