@@ -45,7 +45,6 @@ RootModel::RootModel(QObject *parent) : AppsModel(QString(), parent)
 , m_recentContactsModel(0)
 {
     FavoritesModel *favoritesModel = new FavoritesModel(this);
-    connect(favoritesModel, SIGNAL(appLaunched(QString)), this, SIGNAL(appLaunched(QString)));
     m_favoritesModels["app"] = favoritesModel;
 
     favoritesModel = new FavoritesModel(this);
@@ -168,11 +167,6 @@ QObject *RootModel::favoritesModelForPrefix(const QString &prefix)
     return m_favoritesModels.value(prefix);
 }
 
-QObject *RootModel::recentAppsModel()
-{
-    return m_recentAppsModel;
-}
-
 void RootModel::refresh()
 {
     AppsModel::refresh();
@@ -188,10 +182,7 @@ void RootModel::extendEntryList()
     if (m_showRecentApps) {
         m_recentAppsModel = new RecentAppsModel(this);
         connect(m_recentAppsModel, SIGNAL(countChanged()), this, SLOT(childModelChanged()));
-        connect(this, SIGNAL(appLaunched(QString)), m_recentAppsModel, SLOT(addApp(QString)));
     }
-
-    emit recentAppsModelChanged();
 
     m_recentDocsModel = 0;
 

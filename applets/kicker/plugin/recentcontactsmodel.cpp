@@ -82,7 +82,7 @@ QVariant RecentContactsModel::data(const QModelIndex &index, int role) const
         const QVariantMap &forgetAction = Kicker::createActionItem(i18n("Forget Contact"), "forget");
         actionList << forgetAction;
 
-        actionList << (Kicker::createSeparatorActionItem();
+        actionList << Kicker::createSeparatorActionItem();
 
         actionList << Kicker::createActionItem(i18n("Show Contact Information..."), "showContactInfo");
 
@@ -143,7 +143,7 @@ bool RecentContactsModel::trigger(int row, const QString &actionId, const QVaria
 
         return false;
     } else if (actionId == "forgetAll") {
-        forgetAll();
+        // FIXME TODO.
 
         return true;
     }

@@ -39,6 +39,7 @@
 #include <QX11Info>
 #endif
 
+#include <KActivities/ResourceInstance>
 #include <KJob>
 #include <KLocalizedString>
 #include <KRun>
@@ -57,7 +58,6 @@ AppGroupEntry::AppGroupEntry(KServiceGroup::Ptr group, AppsModel *parentModel,
     m_model = model;
     QObject::connect(parentModel, SIGNAL(appletInterfaceChanged(QObject*)), model, SLOT(setAppletInterface(QObject*)));
     QObject::connect(parentModel, SIGNAL(refreshing()), m_model, SLOT(deleteLater()));
-    QObject::connect(m_model, SIGNAL(appLaunched(QString)), parentModel, SIGNAL(appLaunched(QString)));
 }
 
 AppEntry::AppEntry(KService::Ptr service, const QString &name)
@@ -320,7 +320,8 @@ bool AppsModel::trigger(int row, const QString &actionId, const QVariant &argume
         new KRun(QUrl::fromLocalFile(service->entryPath()), 0, true,
             KStartupInfo::createNewStartupIdForTimestamp(timeStamp));
 
-        emit appLaunched(service->storageId());
+        KActivities::ResourceInstance::notifyAccessed(QUrl("applications:" + service->storageId()),
+            "org.kde.plasma.kicker");
 
         return true;
     }

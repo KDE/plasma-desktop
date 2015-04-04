@@ -61,7 +61,6 @@ class RunnerModel : public QAbstractListModel
         void countChanged() const;
         void runnersChanged() const;
         void queryChanged() const;
-        void appLaunched(const QString& storageId) const;
 
     private Q_SLOTS:
         void startQuery();

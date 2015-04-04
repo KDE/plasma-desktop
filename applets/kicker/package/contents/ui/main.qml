@@ -61,13 +61,6 @@ Item {
         showRecentDocs: plasmoid.configuration.showRecentDocs
         showRecentContacts: plasmoid.configuration.showRecentContacts
 
-        onRecentAppsModelChanged: {
-            if (recentAppsModel) {
-                recentAppsModel.recentApps = plasmoid.configuration.recentApps;
-                runnerModel.appLaunched.connect(recentAppsModel.addApp);
-            }
-        }
-
         onShowRecentAppsChanged: {
             plasmoid.configuration.showRecentApps = showRecentApps;
         }
@@ -83,8 +76,6 @@ Item {
         Component.onCompleted: {
             favoritesModelForPrefix("app").favorites = plasmoid.configuration.favoriteApps;
             favoritesModelForPrefix("sys").favorites = plasmoid.configuration.favoriteSystemActions;
-            recentAppsModel.recentApps = plasmoid.configuration.recentApps;
-            runnerModel.appLaunched.connect(recentAppsModel.addApp);
         }
     }
 
@@ -97,10 +88,6 @@ Item {
 
         onFavoriteSystemActionsChanged: {
             rootModel.favoritesModelForPrefix("sys").favorites = plasmoid.configuration.favoriteSystemActions;
-        }
-
-        onRecentAppsChanged: {
-            rootModel.recentAppsModel.recentApps = plasmoid.configuration.recentApps;
         }
     }
 
@@ -117,14 +104,6 @@ Item {
 
         onFavoritesChanged: {
             plasmoid.configuration.favoriteSystemActions = target.favorites;
-        }
-    }
-
-    Connections {
-        target: rootModel.recentAppsModel
-
-        onRecentAppsChanged: {
-            plasmoid.configuration.recentApps = target.recentApps;
         }
     }
 

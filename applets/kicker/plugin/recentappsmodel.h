@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013-2014 by Eike Hein <hein@kde.org>                   *
+ *   Copyright (C) 2014-2015 by Eike Hein <hein@kde.org>                   *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -20,13 +20,11 @@
 #ifndef RECENTAPPSMODEL_H
 #define RECENTAPPSMODEL_H
 
-#include "abstractmodel.h"
+#include "forwardingmodel.h"
 
-class RecentAppsModel : public AbstractModel
+class RecentAppsModel : public ForwardingModel
 {
     Q_OBJECT
-
-    Q_PROPERTY(QStringList recentApps READ recentApps WRITE setRecentApps NOTIFY recentAppsChanged)
 
     public:
         explicit RecentAppsModel(QObject *parent = 0);
@@ -34,24 +32,10 @@ class RecentAppsModel : public AbstractModel
 
         QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
 
-        int rowCount(const QModelIndex &parent = QModelIndex()) const;
-
         Q_INVOKABLE bool trigger(int row, const QString &actionId, const QVariant &argument);
 
-        QStringList recentApps() const;
-        void setRecentApps(const QStringList &recentApps);
-
-    Q_SIGNALS:
-        void recentAppsChanged() const;
-
-    public Q_SLOTS:
-        void addApp(const QString &storageId);
-
-    private:
-        void forgetApp(int row);
-        void forgetAllApps();
-
-        QList<QString> m_recentApps;
+    private Q_SLOTS:
+        void refresh();
 };
 
 #endif

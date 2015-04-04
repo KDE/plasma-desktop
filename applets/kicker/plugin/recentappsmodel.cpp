@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013-2014 by Eike Hein <hein@kde.org>                   *
+ *   Copyright (C) 2014-2015 by Eike Hein <hein@kde.org>                   *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -22,20 +22,29 @@
 
 #include <config-X11.h>
 
+#include <QIcon>
 #if HAVE_X11
 #include <QX11Info>
 #endif
 
-#include <QIcon>
-
+#include <KActivities/ResourceInstance>
 #include <KLocalizedString>
 #include <KRun>
 #include <KService>
 #include <KStartupInfo>
-#include <KActivities/ResourceInstance>
 
-RecentAppsModel::RecentAppsModel(QObject *parent) : AbstractModel(parent)
+#include <KActivitiesExperimentalStats/Cleaning>
+#include <KActivitiesExperimentalStats/ResultModel>
+#include <KActivitiesExperimentalStats/Terms>
+
+namespace KAStats = KActivities::Experimental::Stats;
+
+using namespace KAStats;
+using namespace KAStats::Terms;
+
+RecentAppsModel::RecentAppsModel(QObject *parent) : ForwardingModel(parent)
 {
+    refresh();
 }
 
 RecentAppsModel::~RecentAppsModel()
@@ -44,14 +53,14 @@ RecentAppsModel::~RecentAppsModel()
 
 QVariant RecentAppsModel::data(const QModelIndex &index, int role) const
 {
-    if (!index.isValid() || index.row() >= m_recentApps.count()) {
+    if (!index.isValid()) {
         return QVariant();
     }
 
-    const QString storageId = m_recentApps.at(index.row());
+    const QString storageId = sourceModel()->data(index, ResultModel::ResourceRole).toString().section(':', 1);
     KService::Ptr service = KService::serviceByStorageId(storageId);
 
-    if (!service) {
+    if (!service || !service->isApplication()) {
         return QVariant();
     }
 
@@ -59,18 +68,18 @@ QVariant RecentAppsModel::data(const QModelIndex &index, int role) const
         return service->name();
     } else if (role == Qt::DecorationRole) {
         return QIcon::fromTheme(service->icon(), QIcon::fromTheme("unknown"));
-    } else if (role == Kicker::FavoriteIdRole) {
-        return QVariant("app:" + storageId);
     } else if (role == Kicker::HasActionListRole) {
         return true;
     } else if (role == Kicker::ActionListRole) {
         QVariantList actionList;
 
-        const QVariantMap &forgetAction = Kicker::createActionItem(i18n("Forget Application"), "forget");
-        actionList.append(forgetAction);
-
+        /* FIXME TODO Not yet possible with KAS.
         const QVariantMap &forgetAllAction = Kicker::createActionItem(i18n("Forget All Applications"), "forgetAll");
-        actionList.append(forgetAllAction);
+        actionList.prepend(forgetAllAction);
+        */
+
+        const QVariantMap &forgetAction = Kicker::createActionItem(i18n("Forget Application"), "forget");
+        actionList.prepend(forgetAction);
 
         return actionList;
     }
@@ -78,23 +87,17 @@ QVariant RecentAppsModel::data(const QModelIndex &index, int role) const
     return QVariant();
 }
 
-int RecentAppsModel::rowCount(const QModelIndex &parent) const
-{
-    return parent.isValid() ? 0 : m_recentApps.count();
-}
-
 bool RecentAppsModel::trigger(int row, const QString &actionId, const QVariant &argument)
 {
     Q_UNUSED(argument)
 
-    if (row < 0 || row >= m_recentApps.count()) {
+    if (row < 0 || row >= rowCount()) {
         return false;
     }
 
-    const QString storageId = m_recentApps.at(row);
-
-
     if (actionId.isEmpty()) {
+        const QString storageId = sourceModel()->data(sourceModel()->index(row, 0),
+            ResultModel::ResourceRole).toString().section(':', 1);
         KService::Ptr service = KService::serviceByStorageId(storageId);
 
         if (!service) {
@@ -112,15 +115,20 @@ bool RecentAppsModel::trigger(int row, const QString &actionId, const QVariant &
         new KRun(QUrl::fromLocalFile(service->entryPath()), 0, true,
             KStartupInfo::createNewStartupIdForTimestamp(timeStamp));
 
-        addApp(storageId);
+        KActivities::ResourceInstance::notifyAccessed(QUrl("applications:" + storageId),
+            "org.kde.plasma.kicker");
 
         return true;
     } else if (actionId == "forget") {
-        forgetApp(row);
+        if (sourceModel()) {
+            ResultModel *resultModel = static_cast<ResultModel *>(sourceModel());
+            resultModel->forgetResource(sourceModel()->data(sourceModel()->index(row, 0),
+                ResultModel::ResourceRole).toString());
+        }
 
         return false;
     } else if (actionId == "forgetAll") {
-        forgetAllApps();
+        // FIXME TODO.
 
         return true;
     }
@@ -128,84 +136,21 @@ bool RecentAppsModel::trigger(int row, const QString &actionId, const QVariant &
     return false;
 }
 
-QStringList RecentAppsModel::recentApps() const
+void RecentAppsModel::refresh()
 {
-    return m_recentApps;
-}
+    QObject *oldModel = sourceModel();
 
-void RecentAppsModel::setRecentApps(const QStringList &recentApps)
-{
-    if (m_recentApps != recentApps) {
-        bool emitCountChanged = (m_recentApps.count() != recentApps.count());
+    auto query = UsedResources
+                    | RecentlyUsedFirst
+                    | Agent::any()
+                    | Type::any()
+                    | Activity::current()
+                    | Url::startsWith("applications:");
 
-        beginResetModel();
+    ResultModel *model = new ResultModel(query);
+    model->setItemCountLimit(15);
 
-        m_recentApps = recentApps;
+    setSourceModel(model);
 
-        endResetModel();
-
-        if (emitCountChanged) {
-            emit countChanged();
-        }
-
-        emit recentAppsChanged();
-    }
-}
-
-void RecentAppsModel::addApp(const QString &storageId)
-{
-    if (storageId.isEmpty()) {
-        return;
-    }
-
-    KActivities::ResourceInstance::notifyAccessed(
-        QUrl("applications:" + storageId), "org.kde.plasma.kicker");
-
-    int index = m_recentApps.indexOf(storageId);
-
-    if (index > 0) {
-        beginMoveRows(QModelIndex(), index, index, QModelIndex(), 0);
-        m_recentApps.move(index, 0);
-        endMoveRows();
-    } else if (index == -1) {
-        if (m_recentApps.count() < 15) {
-            beginInsertRows(QModelIndex(), 0, 0);
-            m_recentApps.prepend(storageId);
-            endInsertRows();
-            emit countChanged();
-        } else {
-            beginResetModel();
-            m_recentApps.prepend(storageId);
-            m_recentApps.removeLast();
-            endResetModel();
-        }
-    }
-
-    emit recentAppsChanged();
-}
-
-void RecentAppsModel::forgetApp(int row)
-{
-    if (row < 0 || row >= m_recentApps.count()) {
-        return;
-    }
-
-    beginRemoveRows(QModelIndex(), row, row);
-    m_recentApps.removeAt(row);
-    endRemoveRows();
-
-    emit countChanged();
-
-    emit recentAppsChanged();
-}
-
-void RecentAppsModel::forgetAllApps()
-{
-    beginResetModel();
-    m_recentApps.clear();
-    endResetModel();
-
-    emit countChanged();
-
-    emit recentAppsChanged();
+    delete oldModel;
 }

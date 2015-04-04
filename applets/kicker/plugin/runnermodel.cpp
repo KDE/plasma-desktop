@@ -161,7 +161,6 @@ void RunnerModel::matchesChanged(const QList<Plasma::QueryMatch> &matches)
             Q_ASSERT(!matches.isEmpty());
             QString name = matches.first().runner()->name();
             RunnerMatchesModel *matchesModel = new RunnerMatchesModel(it.key(), name, m_runnerManager, this);
-            connect(matchesModel, SIGNAL(appLaunched(QString)), this, SIGNAL(appLaunched(QString)));
             matchesModel->setMatches(matches);
 
             if (it.key() == "services") {

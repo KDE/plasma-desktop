@@ -44,7 +44,6 @@ class AbstractModel : public QAbstractListModel
 
     Q_SIGNALS:
         void countChanged() const;
-        void appLaunched(const QString& storageId) const;
 };
 
 #endif

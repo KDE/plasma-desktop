@@ -112,8 +112,6 @@ bool RunnerMatchesModel::trigger(int row, const QString &actionId, const QVarian
         }
 
         match.setSelectedAction(action);
-    } else if (m_runnerId == "services") {
-        emit appLaunched(match.data().toString());
     }
 
     m_runnerManager->run(match);

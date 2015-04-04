@@ -27,6 +27,7 @@
 #include <QX11Info>
 #endif
 
+#include <KActivities/ResourceInstance>
 #include <KConfigGroup>
 #include <KMimeTypeTrader>
 #include <KRun>
@@ -105,7 +106,8 @@ bool FavoritesModel::trigger(int row, const QString &actionId, const QVariant &a
         new KRun(QUrl::fromLocalFile(service->entryPath()), 0, true,
             KStartupInfo::createNewStartupIdForTimestamp(timeStamp));
 
-        emit appLaunched(service->storageId());
+        KActivities::ResourceInstance::notifyAccessed(QUrl("applications:" + service->storageId()),
+            "org.kde.plasma.kicker");
 
         return true;
     }

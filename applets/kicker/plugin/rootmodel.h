@@ -42,8 +42,6 @@ class RootModel : public AppsModel
     Q_PROPERTY(bool showRecentDocs READ showRecentDocs WRITE setShowRecentDocs NOTIFY showRecentDocsChanged)
     Q_PROPERTY(bool showRecentContacts READ showRecentContacts WRITE setShowRecentContacts NOTIFY showRecentContactsChanged)
 
-    Q_PROPERTY(QObject* recentAppsModel READ recentAppsModel NOTIFY recentAppsModelChanged)
-
     public:
         explicit RootModel(QObject *parent = 0);
         ~RootModel();
@@ -62,8 +60,6 @@ class RootModel : public AppsModel
         void setShowRecentContacts(bool show);
 
         Q_INVOKABLE QObject *favoritesModelForPrefix(const QString &prefix);
-
-        QObject *recentAppsModel();
 
     Q_SIGNALS:
         void showRecentAppsChanged() const;

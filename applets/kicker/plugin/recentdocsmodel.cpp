@@ -21,7 +21,6 @@
 #include "recentdocsmodel.h"
 #include "actionlist.h"
 
-#include <QDebug>
 #include <QIcon>
 
 #include <KFileItem>
@@ -56,7 +55,7 @@ QVariant RecentDocsModel::data(const QModelIndex &index, int role) const
     const KFileItem fileItem(url);
 
     if (!url.isValid() || !fileItem.isFile()) {
-        return QLatin1String("Resource not a file!");
+        return QVariant();
     }
 
     if (role == Qt::DisplayRole) {
