@@ -53,6 +53,7 @@ target_link_libraries(kickerplugin
                       Qt5::Qml
                       Qt5::Quick
                       Qt5::X11Extras
+                      KF5::Activities
                       KF5::ConfigCore
                       KF5::CoreAddons
                       KF5::I18n
