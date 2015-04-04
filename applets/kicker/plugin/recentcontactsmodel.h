@@ -47,9 +47,6 @@ class RecentContactsModel : public ForwardingModel
     private:
         void insertPersonData(const QString &id, int row);
 
-        void forget(int row);
-        void forgetAll();
-
         QHash<QString, KPeople::PersonData *> m_idToData;
         QHash<KPeople::PersonData *, int> m_dataToRow;
 };

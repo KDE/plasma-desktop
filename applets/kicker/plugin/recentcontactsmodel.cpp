@@ -74,17 +74,17 @@ QVariant RecentContactsModel::data(const QModelIndex &index, int role) const
     } else if (role == Kicker::ActionListRole) {
         QVariantList actionList ;
 
-        actionList << Kicker::createActionItem(i18n("Show Contact Information..."), "showContactInfo");
-
-        /* FIXME TODO: No support in KActivities.
-        actionList.prepend(Kicker::createSeparatorActionItem());
-
+        /* FIXME TODO: Not yet possible in KAS.
         const QVariantMap &forgetAllAction = Kicker::createActionItem(i18n("Forget All Contacts"), "forgetAll");
         actionList.prepend(forgetAllAction);
+        */
 
         const QVariantMap &forgetAction = Kicker::createActionItem(i18n("Forget Contact"), "forget");
-        actionList.prepend(forgetAction);
-        */
+        actionList << forgetAction;
+
+        actionList << (Kicker::createSeparatorActionItem();
+
+        actionList << Kicker::createActionItem(i18n("Show Contact Information..."), "showContactInfo");
 
         return actionList;
     }
@@ -133,7 +133,13 @@ bool RecentContactsModel::trigger(int row, const QString &actionId, const QVaria
         view->setAttribute(Qt::WA_DeleteOnClose);
         view->show();
     } else if (actionId == "forget") {
-        forget(row);
+        if (sourceModel()) {
+            ResultModel *resultModel = static_cast<ResultModel *>(sourceModel());
+            resultModel->forgetResource(sourceModel()->data(sourceModel()->index(row, 0),
+                ResultModel::ResourceRole).toString());
+        }
+
+        return false;
 
         return false;
     } else if (actionId == "forgetAll") {
@@ -213,16 +219,4 @@ void RecentContactsModel::personDataChanged()
 
         emit dataChanged(idx, idx);
     }
-}
-
-void RecentContactsModel::forget(int row)
-{
-    Q_UNUSED(row)
-
-    // FIXME TODO: No support in KActivities.
-}
-
-void RecentContactsModel::forgetAll()
-{
-    // FIXME TODO: FIXME TODO: No support in KActivities.
 }
