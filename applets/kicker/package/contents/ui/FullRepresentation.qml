@@ -385,24 +385,32 @@ FocusScope {
 
         Keys.onPressed: {
             if (event.key == Qt.Key_Up) {
-                if (rootList.visible) {
+                if (rootList.visible && rootList.count) {
                     rootList.showChildDialogs = false;
                     rootList.currentIndex = rootList.model.count - 1;
                     rootList.showChildDialogs = true;
                 }
 
                 if (runnerColumns.visible) {
-                    runnerColumnsRepeater.itemAt(0).currentIndex = runnerModel.modelForRow(0).count - 1;
+                    for (var i = 0; i < runnerModel.count; ++i) {
+                        if (runnerModel.modelForRow(i).count) {
+                            runnerColumnsRepeater.itemAt(i).currentIndex = runnerModel.modelForRow(i).count - 1;
+                        }
+                    }
                 }
             } else if (event.key == Qt.Key_Down) {
-                if (rootList.visible) {
+                if (rootList.visible && rootList.count) {
                     rootList.showChildDialogs = false;
                     rootList.currentIndex = 0;
                     rootList.showChildDialogs = true;
                 }
 
                 if (runnerColumns.visible) {
-                    runnerColumnsRepeater.itemAt(0).currentIndex = 0;
+                    for (var i = 0; i < runnerModel.count; ++i) {
+                        if (runnerModel.modelForRow(i).count) {
+                            runnerColumnsRepeater.itemAt(i).currentIndex = 0;
+                        }
+                    }
                 }
             } else if (event.key == Qt.Key_Enter || event.key == Qt.Key_Return) {
                 if (runnerColumns.visible && runnerModel.modelForRow(0).count) {
