@@ -359,7 +359,7 @@ FocusScope {
 
         Keys.onPressed: {
             if (event.key == Qt.Key_Up) {
-                if (rootList.visible && rootList.count) {
+                if (rootList.visible) {
                     rootList.showChildDialogs = false;
                     rootList.currentIndex = rootList.model.count - 1;
                     rootList.showChildDialogs = true;
@@ -369,11 +369,12 @@ FocusScope {
                     for (var i = 0; i < runnerModel.count; ++i) {
                         if (runnerModel.modelForRow(i).count) {
                             runnerColumnsRepeater.itemAt(i).currentIndex = runnerModel.modelForRow(i).count - 1;
+                            break;
                         }
                     }
                 }
             } else if (event.key == Qt.Key_Down) {
-                if (rootList.visible && rootList.count) {
+                if (rootList.visible) {
                     rootList.showChildDialogs = false;
                     rootList.currentIndex = 0;
                     rootList.showChildDialogs = true;
