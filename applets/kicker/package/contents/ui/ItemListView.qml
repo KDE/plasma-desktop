@@ -168,7 +168,7 @@ FocusScope {
                             return;
                         }
 
-                        if (currentItem != null && !currentItem.hasChildren || !plasmoid.expanded) {
+                        if (currentItem == null || !currentItem.hasChildren || !plasmoid.expanded) {
                             dialogSpawnTimer.stop();
 
                             return;
