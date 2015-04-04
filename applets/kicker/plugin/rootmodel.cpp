@@ -39,7 +39,7 @@ GroupEntry::GroupEntry(const QString &name, const QString &icon,
 RootModel::RootModel(QObject *parent) : AppsModel(QString(), parent)
 , m_showRecentApps(true)
 , m_showRecentDocs(true)
-, m_showRecentContacts(true)
+, m_showRecentContacts(false)
 , m_recentAppsModel(0)
 , m_recentDocsModel(0)
 , m_recentContactsModel(0)
