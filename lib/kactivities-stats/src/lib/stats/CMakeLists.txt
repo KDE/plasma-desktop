@@ -84,7 +84,9 @@ ecm_generate_headers (
    ResultSet
    ResultWatcher
    ResultModel
+   Cleaning
    Version
+
    PREFIX KActivitiesExperimentalStats
    REQUIRED_HEADERS KActivitiesStats_HEADERS
 )
