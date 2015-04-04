@@ -69,10 +69,8 @@ QVariant RecentDocsModel::data(const QModelIndex &index, int role) const
 
         actionList.prepend(Kicker::createSeparatorActionItem());
 
-        /* FIXME TODO Not yet possible with KAS.
         const QVariantMap &forgetAllAction = Kicker::createActionItem(i18n("Forget All Documents"), "forgetAll");
         actionList.prepend(forgetAllAction);
-        */
 
         const QVariantMap &forgetAction = Kicker::createActionItem(i18n("Forget Document"), "forget");
         actionList.prepend(forgetAction);

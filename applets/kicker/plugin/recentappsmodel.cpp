@@ -73,10 +73,8 @@ QVariant RecentAppsModel::data(const QModelIndex &index, int role) const
     } else if (role == Kicker::ActionListRole) {
         QVariantList actionList;
 
-        /* FIXME TODO Not yet possible with KAS.
         const QVariantMap &forgetAllAction = Kicker::createActionItem(i18n("Forget All Applications"), "forgetAll");
         actionList.prepend(forgetAllAction);
-        */
 
         const QVariantMap &forgetAction = Kicker::createActionItem(i18n("Forget Application"), "forget");
         actionList.prepend(forgetAction);
