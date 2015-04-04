@@ -27,6 +27,7 @@
 #include <KPropertiesDialog>
 #include <KRun>
 
+#include <KActivitiesExperimentalStats/Cleaning>
 #include <KActivitiesExperimentalStats/ResultSet>
 #include <KActivitiesExperimentalStats/Terms>
 
@@ -126,6 +127,22 @@ bool handleFileItemAction(const KFileItem &fileItem, const QString &actionId, co
     return false;
 }
 
+// HACK TEMP FIXME TODO IVAN
+QString storageIdFromService(KService::Ptr service)
+{
+    QString storageId = service->storageId();
+
+    if (storageId.startsWith("org.kde.")) {
+        storageId = storageId.right(storageId.length() - 8);
+    }
+
+    if (storageId.endsWith(".desktop")) {
+        storageId = storageId.left(storageId.length() - 8);
+    }
+
+    return storageId;
+}
+
 QVariantList recentDocumentActions(KService::Ptr service)
 {
     QVariantList list;
@@ -134,18 +151,10 @@ QVariantList recentDocumentActions(KService::Ptr service)
         return list;
     }
 
-    QString storageId = service->storageId();
+    const QString storageId = storageIdFromService(service);
 
     if (storageId.isEmpty()) {
         return list;
-    }
-
-    if (storageId.startsWith("org.kde.")) {
-        storageId = storageId.right(storageId.length() - 8);
-    }
-
-    if (storageId.endsWith(".desktop")) {
-        storageId = storageId.left(storageId.length() - 8);
     }
 
     auto query = UsedResources
@@ -160,7 +169,7 @@ QVariantList recentDocumentActions(KService::Ptr service)
     ResultSet::const_iterator resultIt;
     resultIt = results.begin();
 
-    while (list.length() < 6 && resultIt != results.end()) {
+    while (list.count() < 6 && resultIt != results.end()) {
         const QString resource = (*resultIt).resource();
         const QUrl url(resource);
 
@@ -174,7 +183,7 @@ QVariantList recentDocumentActions(KService::Ptr service)
             continue;
         }
 
-        if (list.length() == 0) {
+        if (list.count() == 0) {
             list << createTitleActionItem(i18n("Recent documents:"));
         }
 
@@ -186,13 +195,30 @@ QVariantList recentDocumentActions(KService::Ptr service)
         ++resultIt;
     }
 
+    if (list.count()) {
+        list << createActionItem(i18n("Forget Documents"), "_kicker_forgetRecentDocuments");
+    }
+
     return list;
 }
 
-bool handleRecentDocumentAction(KService::Ptr service, const QVariant &_argument)
+bool handleRecentDocumentAction(KService::Ptr service, const QString &actionId, const QVariant &_argument)
 {
     if (!service) {
         return false;
+    }
+
+    if (actionId == "_kicker_forgetRecentDocuments") {
+        const QString storageId = storageIdFromService(service);
+
+        if (storageId.isEmpty()) {
+            return false;
+        }
+
+        // IVAN
+        // forgetResource(Activity::current(), Agent(storageId), "*");
+
+        return true;
     }
 
     QString argument = _argument.toString();

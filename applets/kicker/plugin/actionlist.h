@@ -46,6 +46,6 @@ QVariantList createActionListForFileItem(const KFileItem &fileItem);
 bool handleFileItemAction(const KFileItem &fileItem, const QString &actionId, const QVariant &argument, bool *close);
 
 QVariantList recentDocumentActions(KService::Ptr service);
-bool handleRecentDocumentAction(KService::Ptr service, const QVariant &argument);
+bool handleRecentDocumentAction(KService::Ptr service, const QString &actionId, const QVariant &argument);
 
 }

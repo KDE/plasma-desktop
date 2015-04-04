@@ -102,7 +102,7 @@ bool RecentDocsModel::trigger(int row, const QString &actionId, const QVariant &
 
         return false;
     } else if (actionId == "forgetAll") {
-        // FIXME TODO.
+        // IVAN
 
         return true;
     }

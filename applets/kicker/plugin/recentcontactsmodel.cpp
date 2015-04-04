@@ -141,7 +141,7 @@ bool RecentContactsModel::trigger(int row, const QString &actionId, const QVaria
 
         return false;
     } else if (actionId == "forgetAll") {
-        // FIXME TODO.
+        // IVAN
 
         return true;
     }

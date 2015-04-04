@@ -116,7 +116,7 @@ bool FavoritesModel::trigger(int row, const QString &actionId, const QVariant &a
 
             return true;
         } else {
-            return Kicker::handleRecentDocumentAction(service, argument);
+            return Kicker::handleRecentDocumentAction(service, actionId, argument);
         }
     }
 

@@ -335,7 +335,7 @@ bool AppsModel::trigger(int row, const QString &actionId, const QVariant &argume
             }
         }
     } else if (service) {
-        return Kicker::handleRecentDocumentAction(service, argument);
+        return Kicker::handleRecentDocumentAction(service, actionId, argument);
     }
 
     return false;

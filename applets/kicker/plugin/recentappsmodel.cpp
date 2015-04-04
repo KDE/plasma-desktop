@@ -134,7 +134,7 @@ bool RecentAppsModel::trigger(int row, const QString &actionId, const QVariant &
 
         return false;
     } else if (actionId == "forgetAll") {
-        // FIXME TODO.
+        // IVAN
 
         return true;
     } else {
@@ -143,7 +143,7 @@ bool RecentAppsModel::trigger(int row, const QString &actionId, const QVariant &
         KService::Ptr service = KService::serviceByStorageId(storageId);
 
         if (service) {
-            return Kicker::handleRecentDocumentAction(service, argument);
+            return Kicker::handleRecentDocumentAction(service, actionId, argument);
         }
     }
 
