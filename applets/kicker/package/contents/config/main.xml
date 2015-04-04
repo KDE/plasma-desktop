@@ -29,13 +29,13 @@
     <entry name="favoriteSystemActions" type="StringList">
       <default>logout,reboot,shutdown</default>
     </entry>
-    <entry name="recentApps" type="StringList">
-      <default>kdesystemsettings.desktop</default>
-    </entry>
     <entry name="hiddenApplications" type="StringList">
       <default></default>
     </entry>
 
+    <entry name="showRecentApps" type="Bool">
+      <default>true</default>
+    </entry>
     <entry name="showRecentDocs" type="Bool">
       <default>true</default>
     </entry>
