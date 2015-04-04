@@ -126,7 +126,7 @@ bool Query::operator!= (const Query &right) const
 IMPLEMENT_QUERY_LIST_FIELD(Types,      types,      QStringList(":any"))
 IMPLEMENT_QUERY_LIST_FIELD(Agents,     agents,     QStringList(":current"))
 IMPLEMENT_QUERY_LIST_FIELD(Activities, activities, QStringList(":current"))
-IMPLEMENT_QUERY_LIST_FIELD(UrlFilters, urlFilters, QStringList("%"))
+IMPLEMENT_QUERY_LIST_FIELD(UrlFilters, urlFilters, QStringList("*"))
 
 #undef IMPLEMENT_QUERY_LIST_FIELD
 
