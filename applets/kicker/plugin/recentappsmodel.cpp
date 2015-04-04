@@ -32,6 +32,7 @@
 #include <KRun>
 #include <KService>
 #include <KStartupInfo>
+#include <KActivities/ResourceInstance>
 
 RecentAppsModel::RecentAppsModel(QObject *parent) : AbstractModel(parent)
 {
@@ -156,6 +157,9 @@ void RecentAppsModel::addApp(const QString &storageId)
     if (storageId.isEmpty()) {
         return;
     }
+
+    KActivities::ResourceInstance::notifyAccessed(
+        QUrl("applications:" + storageId), "org.kde.plasma.kicker");
 
     int index = m_recentApps.indexOf(storageId);
 

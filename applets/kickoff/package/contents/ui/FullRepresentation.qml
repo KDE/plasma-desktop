@@ -48,6 +48,7 @@ Item {
         mainTabGroup.currentTab = favoritesPage;
         tabBar.currentTab = bookmarkButton;
         root.state = "Normal";
+        header.input.text = ""
     }
 
     PlasmaCore.DataSource {
