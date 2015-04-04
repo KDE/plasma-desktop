@@ -192,6 +192,21 @@ public:
         emit q->resultsInvalidated();
     }
 
+    void onStatsForResourceDeleted(const QString &activity,
+                                   const QString &agent,
+                                   const QString &resource)
+    {
+        if (query.selection() == Terms::LinkedResources) return;
+
+        if (activityMatches(activity) && agentMatches(agent)) {
+            if (resource.contains('*')) {
+                q->resultsInvalidated();
+            } else if (typeMatches(resource)) {
+                q->resultRemoved(resource);
+            }
+        }
+    }
+
     QScopedPointer<org::kde::ActivityManager::ResourcesLinking> linking;
     QScopedPointer<org::kde::ActivityManager::ResourcesScoring> scoring;
 

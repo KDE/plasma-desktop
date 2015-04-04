@@ -114,7 +114,7 @@ public:
         if (append) {
             q->appendRow(documentItem);
         } else {
-            q->insertRow(0, documentItem);
+            q->insertRow(recentApplicationCount, documentItem);
         }
     }
 

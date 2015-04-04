@@ -13,6 +13,7 @@ set (
    resultwatcher.cpp
    resultmodel.cpp
    activitiessync_p.cpp
+   cleaning.cpp
 
    ${KACTIVITIES_CURRENT_ROOT_SOURCE_DIR}/src/common/database/Database.cpp
    ${KACTIVITIES_CURRENT_ROOT_SOURCE_DIR}/src/common/database/schema/ResourcesDatabaseSchema.cpp

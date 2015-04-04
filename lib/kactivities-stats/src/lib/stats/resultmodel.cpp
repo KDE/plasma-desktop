@@ -23,6 +23,7 @@
 // Qt
 #include <QDebug>
 #include <QDateTime>
+#include <QCoreApplication>
 
 // STL and Boost
 #include <functional>
@@ -34,6 +35,7 @@
 #include <utils/qsqlquery_iterator.h>
 #include "resultset.h"
 #include "resultwatcher.h"
+#include "cleaning.h"
 #include "kactivities/consumer.h"
 
 #include <utils/member_matcher.h>
@@ -377,6 +379,19 @@ void ResultModel::setItemCountLimit(int count)
 int ResultModel::itemCountLimit() const
 {
     return d->itemCountLimit;
+}
+
+void ResultModel::forgetResource(const QString &resource)
+{
+    foreach (const QString &activity, d->query.activities()) {
+        foreach (const QString &agent, d->query.agents()) {
+            Stats::forgetResource(
+                    activity,
+                    agent == CURRENT_AGENT_TAG ?
+                        QCoreApplication::applicationName() : agent,
+                    resource);
+        }
+    }
 }
 
 

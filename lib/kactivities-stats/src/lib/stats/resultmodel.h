@@ -70,6 +70,8 @@ public:
     int itemCountLimit() const;
     void setItemCountLimit(int count);
 
+    void forgetResource(const QString &resource);
+
 private:
     class Private;
     Private *const d;
