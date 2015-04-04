@@ -19,6 +19,7 @@
 
 #include "recentappsmodel.h"
 #include "actionlist.h"
+#include "appsmodel.h"
 
 #include <config-X11.h>
 
@@ -65,7 +66,8 @@ QVariant RecentAppsModel::data(const QModelIndex &index, int role) const
     }
 
     if (role == Qt::DisplayRole) {
-        return service->name();
+            return AppsModel::nameFromService(service,
+                (AppsModel::NameFormat)qobject_cast<AppsModel *>(QObject::parent())->appNameFormat());
     } else if (role == Qt::DecorationRole) {
         return QIcon::fromTheme(service->icon(), QIcon::fromTheme("unknown"));
     } else if (role == Kicker::HasActionListRole) {
