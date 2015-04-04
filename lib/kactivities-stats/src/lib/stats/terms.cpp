@@ -54,20 +54,20 @@ IMPLEMENT_SPECIAL_TERM_VALUE(Activity, global, ":global")
 IMPLEMENT_SPECIAL_TERM_VALUE(Activity, current, ":current")
 
 IMPLEMENT_TERM_CONSTRUCTORS(Url)
-IMPLEMENT_SPECIAL_TERM_VALUE(Url, localFile, "/%")
-IMPLEMENT_SPECIAL_TERM_VALUE(Url, file, QStringList() << "/%" << "smb:%" << "fish:%" << "sftp:%" << "ftp:%")
+IMPLEMENT_SPECIAL_TERM_VALUE(Url, localFile, "/*")
+IMPLEMENT_SPECIAL_TERM_VALUE(Url, file, QStringList() << "/*" << "smb:*" << "fish:*" << "sftp:*" << "ftp:*")
 
 #undef IMPLEMENT_TERM_CONSTRUCTORS
 #undef IMPLEMENT_SPECIAL_TERM_VALUE
 
 Terms::Url Terms::Url::startsWith(const QString &prefix)
 {
-    return Url(prefix + "%");
+    return Url(prefix + "*");
 }
 
 Terms::Url Terms::Url::contains(const QString &infix)
 {
-    return Url("%" + infix + "%");
+    return Url("*" + infix + "*");
 }
 
 } // namespace Stats

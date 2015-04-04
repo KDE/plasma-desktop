@@ -23,6 +23,8 @@
 #include <QSqlQuery>
 #include <QSqlError>
 #include <QCoreApplication>
+#include <QList>
+#include <QRegExp>
 
 // Local
 #include <common/database/Database.h>
@@ -60,6 +62,7 @@ namespace Stats {
 class ResultWatcher::Private {
 public:
     mutable ActivitiesSync::ConsumerPtr activities;
+    QList<QRegExp> urlFilters;
 
     Private(ResultWatcher *parent, Query query)
         : linking(new KAMD_DBUS_CLASS_INTERFACE(Resources/Linking, ResourcesLinking, Q_NULLPTR))
@@ -67,6 +70,9 @@ public:
         , q(parent)
         , query(query)
     {
+        for (const auto& urlFilter: query.urlFilters()) {
+            urlFilters << QRegExp(urlFilter, Qt::CaseSensitive, QRegExp::WildcardUnix);
+        }
     }
 
     // Processing the list of activities as specified by the query.
@@ -92,6 +98,16 @@ public:
                 return (matcher == ANY_AGENT_TAG)     ? true :
                        (matcher == CURRENT_AGENT_TAG) ? agent == QCoreApplication::applicationName() :
                                                         agent == matcher;
+            }
+        );
+    }
+
+    // Same as above, but for urls
+    bool urlMatches(const QString &url) const
+    {
+        return std::any_of(urlFilters.cbegin(), urlFilters.cend(),
+            [&] (const QRegExp &matcher) {
+                return matcher.exactMatch(url);
             }
         );
     }
@@ -130,7 +146,9 @@ public:
         // from the cheapest, to the most expensive
         return agentMatches(agent)
                && activityMatches(activity)
-               && typeMatches(resource);
+               && urlMatches(resource)
+               && typeMatches(resource)
+               ;
     }
 
     void onResourceLinkedToActivity(const QString &agent,
