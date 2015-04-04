@@ -282,20 +282,43 @@ FocusScope {
                         var target = null;
 
                         if (event.key == Qt.Key_Right) {
-                            if (index < (runnerColumnsRepeater.count - 1)) {
-                                target = runnerColumnsRepeater.itemAt(index + 1);
-                            } else {
-                                target = runnerColumnsRepeater.itemAt(0);
+                            var targets = new Array();
+
+                            for (var i = index + 1; i < runnerModel.count; ++i) {
+                                targets[targets.length] = i;
+                            }
+
+                            for (var i = 0; i < index; ++i) {
+                                targets[targets.length] = i;
+                            }
+
+                            for (var i = 0; i < targets.length; ++i) {
+                                if (runnerModel.modelForRow(targets[i]).count) {
+                                    target = runnerColumnsRepeater.itemAt(targets[i]);
+                                    break;
+                                }
                             }
                         } else if (event.key == Qt.Key_Left) {
-                            if (index == 0) {
-                                target = runnerColumnsRepeater.itemAt(0);
-                            } else {
-                                target = runnerColumnsRepeater.itemAt(index - 1);
+                            var targets = new Array();
+
+                            for (var i = index - 1; i >= 0; --i) {
+                                targets[targets.length] = i;
+                            }
+
+                            for (var i = runnerModel.count - 1; i > index; --i) {
+                                targets[targets.length] = i;
+                            }
+
+                            for (var i = 0; i < targets.length; ++i) {
+                                if (runnerModel.modelForRow(targets[i]).count) {
+                                    target = runnerColumnsRepeater.itemAt(targets[i]);
+                                    break;
+                                }
                             }
                         }
 
                         if (target) {
+                            event.accepted = true;
                             currentIndex = -1;
                             target.currentIndex = 0;
                             target.focus = true;
@@ -409,6 +432,7 @@ FocusScope {
                     for (var i = 0; i < runnerModel.count; ++i) {
                         if (runnerModel.modelForRow(i).count) {
                             runnerColumnsRepeater.itemAt(i).currentIndex = 0;
+                            break;
                         }
                     }
                 }
