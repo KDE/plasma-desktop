@@ -21,13 +21,14 @@
 #include "recentdocsmodel.h"
 #include "actionlist.h"
 
+#include <QDebug>
 #include <QIcon>
-#include <QMimeType>
-#include <QMimeDatabase>
 
 #include <KFileItem>
+#include <KLocalizedString>
 #include <KRun>
 
+#include <KActivitiesExperimentalStats/Cleaning>
 #include <KActivitiesExperimentalStats/ResultModel>
 #include <KActivitiesExperimentalStats/Terms>
 
@@ -67,15 +68,15 @@ QVariant RecentDocsModel::data(const QModelIndex &index, int role) const
     } else if (role == Kicker::ActionListRole) {
         QVariantList actionList = Kicker::createActionListForFileItem(fileItem);
 
-        /* FIXME TODO: No support in KActivities.
         actionList.prepend(Kicker::createSeparatorActionItem());
 
+        /* FIXME TODO Not yet possible with KAS.
         const QVariantMap &forgetAllAction = Kicker::createActionItem(i18n("Forget All Documents"), "forgetAll");
         actionList.prepend(forgetAllAction);
+        */
 
         const QVariantMap &forgetAction = Kicker::createActionItem(i18n("Forget Document"), "forget");
         actionList.prepend(forgetAction);
-        */
 
         return actionList;
     }
@@ -96,11 +97,15 @@ bool RecentDocsModel::trigger(int row, const QString &actionId, const QVariant &
 
         return true;
     } else if (actionId == "forget") {
-        forget(row);
+        if (sourceModel()) {
+            ResultModel *resultModel = static_cast<ResultModel *>(sourceModel());
+            resultModel->forgetResource(sourceModel()->data(sourceModel()->index(row, 0),
+                ResultModel::ResourceRole).toString());
+        }
 
         return false;
     } else if (actionId == "forgetAll") {
-        forgetAll();
+        // FIXME TODO.
 
         return true;
     }
@@ -133,16 +138,4 @@ void RecentDocsModel::refresh()
     setSourceModel(model);
 
     delete oldModel;
-}
-
-void RecentDocsModel::forget(int row)
-{
-    Q_UNUSED(row)
-
-    // FIXME TODO: No support in KActivities.
-}
-
-void RecentDocsModel::forgetAll()
-{
-    // FIXME TODO: FIXME TODO: No support in KActivities.
 }

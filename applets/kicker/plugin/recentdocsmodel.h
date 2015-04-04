@@ -37,10 +37,6 @@ class RecentDocsModel : public ForwardingModel
 
     private Q_SLOTS:
         void refresh();
-
-    private:
-        void forget(int row);
-        void forgetAll();
 };
 
 #endif
