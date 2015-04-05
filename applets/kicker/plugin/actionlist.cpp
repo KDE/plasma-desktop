@@ -158,11 +158,11 @@ QVariantList recentDocumentActions(KService::Ptr service)
     }
 
     auto query = UsedResources
-                    | RecentlyUsedFirst
-                    | Agent(storageId)
-                    | Type::any()
-                    | Activity::current()
-                    | Url::file();
+        | RecentlyUsedFirst
+        | Agent(storageId)
+        | Type::any()
+        | Activity::current()
+        | Url::file();
 
     ResultSet results(query);
 
@@ -215,10 +215,15 @@ bool handleRecentDocumentAction(KService::Ptr service, const QString &actionId, 
             return false;
         }
 
-        // IVAN
-        // forgetResource(Activity::current(), Agent(storageId), "*");
+        auto query = UsedResources
+            | Agent(storageId)
+            | Type::any()
+            | Activity::current()
+            | Url::file();
 
-        return true;
+        //KAStats::forgetResources(query);
+
+        return false;
     }
 
     QString argument = _argument.toString();
