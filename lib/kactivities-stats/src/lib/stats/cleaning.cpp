@@ -20,6 +20,7 @@
 
 #include <QString>
 #include <QDBusReply>
+#include <QDebug>
 
 #include "cleaning.h"
 #include "common/dbus/common.h"
@@ -29,27 +30,47 @@ namespace Experimental {
 namespace Stats {
 
 
-void forgetResource(const QString &activity, const QString &agent,
+void forgetResource(Terms::Activity activities, Terms::Agent agents,
                     const QString &resource)
 {
     KAMD_DECL_DBUS_INTERFACE(scoring, Resources/Scoring, ResourcesScoring);
-    scoring.call("DeleteStatsForResource", activity, agent, resource);
+    for (const auto& activity: activities.values) {
+        for (const auto& agent: agents.values) {
+            scoring.call("DeleteStatsForResource", activity, agent, resource);
+        }
+    }
 }
 
-void forgetRecentStats(const QString &activity, int count, TimeUnit what)
+void forgetResources(const Query &query)
 {
     KAMD_DECL_DBUS_INTERFACE(scoring, Resources/Scoring, ResourcesScoring);
-    scoring.call("DeleteRecentStats", activity, count,
-            what == Hours  ? "h" :
-            what == Days   ? "d" :
-                             "m"
-        );
+    for (const auto& activity: query.activities()) {
+        for (const auto& agent: query.agents()) {
+            for (const auto& urlFilter: query.urlFilters()) {
+                scoring.call("DeleteStatsForResource", activity, agent, urlFilter);
+            }
+        }
+    }
 }
 
-void forgetEarlierStats(const QString &activity, int months)
+void forgetRecentStats(Terms::Activity activities, int count, TimeUnit what)
 {
     KAMD_DECL_DBUS_INTERFACE(scoring, Resources/Scoring, ResourcesScoring);
-    scoring.call("DeleteEarlierStats", activity, months);
+    for (const auto& activity: activities.values) {
+        scoring.call("DeleteRecentStats", activity, count,
+                what == Hours  ? "h" :
+                what == Days   ? "d" :
+                                 "m"
+            );
+    }
+}
+
+void forgetEarlierStats(Terms::Activity activities, int months)
+{
+    KAMD_DECL_DBUS_INTERFACE(scoring, Resources/Scoring, ResourcesScoring);
+    for (const auto& activity: activities.values) {
+        scoring.call("DeleteEarlierStats", activity, months);
+    }
 }
 
 } // namespace Stats

@@ -21,6 +21,8 @@
 #define CLEANING_H
 
 #include <QString>
+#include "terms.h"
+#include "query.h"
 
 namespace KActivities {
 namespace Experimental {
@@ -29,7 +31,7 @@ namespace Stats {
 /**
  * Forget the resource(s) for the specified activity and agent
  */
-void forgetResource(const QString &activity, const QString &agent,
+void forgetResource(Terms::Activity activity, Terms::Agent agent,
                     const QString &resource);
 
 enum TimeUnit {
@@ -41,12 +43,14 @@ enum TimeUnit {
 /**
  * Forget recent stats for the specified activity and time
  */
-void forgetRecentStats(const QString &activity, int count, TimeUnit what);
+void forgetRecentStats(Terms::Activity activity, int count, TimeUnit what);
 
 /**
  * Forget events that are older than the specified number of months
  */
-void forgetEarlierStats(const QString &activity, int months);
+void forgetEarlierStats(Terms::Activity activity, int months);
+
+void forgetResources(const Query &query);
 
 } // namespace Stats
 } // namespace Experimental

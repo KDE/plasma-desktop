@@ -96,13 +96,15 @@ bool RecentDocsModel::trigger(int row, const QString &actionId, const QVariant &
     } else if (actionId == "forget") {
         if (sourceModel()) {
             ResultModel *resultModel = static_cast<ResultModel *>(sourceModel());
-            resultModel->forgetResource(sourceModel()->data(sourceModel()->index(row, 0),
-                ResultModel::ResourceRole).toString());
+            resultModel->forgetResource(row);
         }
 
         return false;
     } else if (actionId == "forgetAll") {
-        // IVAN
+        if (sourceModel()) {
+            ResultModel *resultModel = static_cast<ResultModel *>(sourceModel());
+            resultModel->forgetAllResources();
+        }
 
         return true;
     }

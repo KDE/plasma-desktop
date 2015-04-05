@@ -71,6 +71,8 @@ public:
     void setItemCountLimit(int count);
 
     void forgetResource(const QString &resource);
+    void forgetResource(int row);
+    void forgetAllResources();
 
 private:
     class Private;
