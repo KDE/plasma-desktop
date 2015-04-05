@@ -84,7 +84,7 @@ public:
         return std::any_of(query.activities().cbegin(), query.activities().cend(),
             [&] (const QString &matcher) {
                 return (matcher == ANY_ACTIVITY_TAG)     ? true :
-                       (matcher == CURRENT_ACTIVITY_TAG) ? activity == ActivitiesSync::currentActivity(activities) :
+                       (matcher == CURRENT_ACTIVITY_TAG) ? (matcher == activity || activity == ActivitiesSync::currentActivity(activities)) :
                                                            activity == matcher;
             }
         );
@@ -96,7 +96,7 @@ public:
         return std::any_of(query.agents().cbegin(), query.agents().cend(),
             [&] (const QString &matcher) {
                 return (matcher == ANY_AGENT_TAG)     ? true :
-                       (matcher == CURRENT_AGENT_TAG) ? agent == QCoreApplication::applicationName() :
+                       (matcher == CURRENT_AGENT_TAG) ? (matcher == agent || agent == QCoreApplication::applicationName()) :
                                                         agent == matcher;
             }
         );
@@ -252,6 +252,9 @@ ResultWatcher::ResultWatcher(Query query)
     QObject::connect(
         d->scoring.data(), &ResourcesScoring::ResourceScoreUpdated,
         this, std::bind(&Private::onResourceScoreUpdated, d, _1, _2, _3, _4, _5, _6));
+    QObject::connect(
+        d->scoring.data(), &ResourcesScoring::ResourceScoreDeleted,
+        this, std::bind(&Private::onStatsForResourceDeleted, d, _1, _2, _3));
     QObject::connect(
         d->scoring.data(), &ResourcesScoring::RecentStatsDeleted,
         this, std::bind(&Private::onRecentStatsDeleted, d, _1, _2, _3));

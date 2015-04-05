@@ -208,6 +208,8 @@ public:
 
         if (!result) return;
 
+        qDebug() << "removing row " << result.index << " of " << cache.size();
+
         q->beginRemoveRows(QModelIndex(), result.index, result.index);
 
         cache.removeAt(result.index);

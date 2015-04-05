@@ -19,32 +19,27 @@
 
 
 #include <QString>
+#include <QDBusReply>
 
 #include "cleaning.h"
 #include "common/dbus/common.h"
-#include <resourcesscoring_interface.h>
 
 namespace KActivities {
 namespace Experimental {
 namespace Stats {
 
+
 void forgetResource(const QString &activity, const QString &agent,
                     const QString &resource)
 {
-    OrgKdeActivityManagerResourcesScoringInterface scoring(
-        KAMD_DBUS_SERVICE, KAMD_DBUS_OBJECT_PATH(Resources),
-        QDBusConnection::sessionBus());
-
-    scoring.DeleteStatsForResource(activity, agent, resource);
+    KAMD_DECL_DBUS_INTERFACE(scoring, Resources/Scoring, ResourcesScoring);
+    scoring.call("DeleteStatsForResource", activity, agent, resource);
 }
 
 void forgetRecentStats(const QString &activity, int count, TimeUnit what)
 {
-    OrgKdeActivityManagerResourcesScoringInterface scoring(
-        KAMD_DBUS_SERVICE, KAMD_DBUS_OBJECT_PATH(Resources),
-        QDBusConnection::sessionBus());
-
-    scoring.DeleteRecentStats(activity, count,
+    KAMD_DECL_DBUS_INTERFACE(scoring, Resources/Scoring, ResourcesScoring);
+    scoring.call("DeleteRecentStats", activity, count,
             what == Hours  ? "h" :
             what == Days   ? "d" :
                              "m"
@@ -53,11 +48,8 @@ void forgetRecentStats(const QString &activity, int count, TimeUnit what)
 
 void forgetEarlierStats(const QString &activity, int months)
 {
-    OrgKdeActivityManagerResourcesScoringInterface scoring(
-        KAMD_DBUS_SERVICE, KAMD_DBUS_OBJECT_PATH(Resources),
-        QDBusConnection::sessionBus());
-
-    scoring.DeleteEarlierStats(activity, months);
+    KAMD_DECL_DBUS_INTERFACE(scoring, Resources/Scoring, ResourcesScoring);
+    scoring.call("DeleteEarlierStats", activity, months);
 }
 
 } // namespace Stats
