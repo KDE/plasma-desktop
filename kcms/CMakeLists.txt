@@ -49,6 +49,7 @@ add_subdirectory(runners)
 add_subdirectory(useraccount)
 add_subdirectory(workspaceoptions)
 add_subdirectory(baloo)
+add_subdirectory(solid_actions)
 
 if (SYNAPTICS_FOUND)
     add_subdirectory(touchpad)
