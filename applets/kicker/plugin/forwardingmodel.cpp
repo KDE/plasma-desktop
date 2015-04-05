@@ -133,6 +133,12 @@ void ForwardingModel::connectSignals()
             Qt::UniqueConnection);
     connect(m_sourceModel, SIGNAL(rowsRemoved(QModelIndex,int,int)),
             this, SIGNAL(countChanged()), Qt::UniqueConnection);
+    connect(m_sourceModel, SIGNAL(modelAboutToBeReset()),
+            this, SIGNAL(modelAboutToBeReset()),
+            Qt::UniqueConnection);
+    connect(m_sourceModel, SIGNAL(modelReset()),
+            this, SIGNAL(modelReset()),
+            Qt::UniqueConnection);
     connect(m_sourceModel, SIGNAL(layoutChanged(QList<QPersistentModelIndex>,QAbstractItemModel::LayoutChangeHint)),
             this, SIGNAL(layoutChanged(QList<QPersistentModelIndex>,QAbstractItemModel::LayoutChangeHint)),
             Qt::UniqueConnection);

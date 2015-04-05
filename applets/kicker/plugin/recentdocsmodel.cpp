@@ -67,7 +67,7 @@ QVariant RecentDocsModel::data(const QModelIndex &index, int role) const
     } else if (role == Kicker::ActionListRole) {
         QVariantList actionList = Kicker::createActionListForFileItem(fileItem);
 
-        actionList.prepend(Kicker::createSeparatorActionItem());
+        actionList << Kicker::createSeparatorActionItem();
 
         const QVariantMap &forgetAction = Kicker::createActionItem(i18n("Forget Document"), "forget");
         actionList << forgetAction;

@@ -137,8 +137,6 @@ bool RecentContactsModel::trigger(int row, const QString &actionId, const QVaria
         }
 
         return false;
-
-        return false;
     } else if (actionId == "forgetAll") {
         if (sourceModel()) {
             ResultModel *resultModel = static_cast<ResultModel *>(sourceModel());
@@ -172,6 +170,8 @@ void RecentContactsModel::refresh()
     connect(model, SIGNAL(rowsRemoved(QModelIndex,int,int)),
             this, SLOT(buildCache()), Qt::UniqueConnection);
     connect(model, SIGNAL(rowsMoved(QModelIndex,int,int,QModelIndex,int)),
+            this, SLOT(buildCache()), Qt::UniqueConnection);
+    connect(model, SIGNAL(modelReset()),
             this, SLOT(buildCache()), Qt::UniqueConnection);
 
     setSourceModel(model);
