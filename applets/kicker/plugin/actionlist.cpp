@@ -221,7 +221,7 @@ bool handleRecentDocumentAction(KService::Ptr service, const QString &actionId, 
             | Activity::current()
             | Url::file();
 
-        //KAStats::forgetResources(query);
+        KAStats::forgetResources(query);
 
         return false;
     }
