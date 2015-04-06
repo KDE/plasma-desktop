@@ -116,8 +116,6 @@ void ToolboxInterface::setToolboxVisible(bool visible)
         return;
     }
 
-    gObj->installEventFilter(this);
-
     foreach(QQuickItem *item, gObj->childItems()) {
         if (item->objectName() == QStringLiteral("org.kde.desktoptoolbox")) {
             m_toolboxFound = true;
@@ -125,7 +123,11 @@ void ToolboxInterface::setToolboxVisible(bool visible)
 
             item->setVisible(visible);
 
+            gObj->removeEventFilter(this);
+
             return;
         }
     }
+
+    gObj->installEventFilter(this);
 }
