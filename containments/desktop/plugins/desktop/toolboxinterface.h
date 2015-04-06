@@ -22,8 +22,6 @@
 
 #include <QObject>
 
-class QQuickItem;
-
 class ToolboxInterface : public QObject
 {
     Q_OBJECT
