@@ -131,17 +131,17 @@ QVariant AppsModel::data(const QModelIndex &index, int role) const
             }
         }
     } else if (role == Kicker::ActionListRole) {
-        const KService::Ptr service = static_cast<const AppEntry *>(entry)->service();
-
         QVariantList actionList;
 
-        actionList << Kicker::recentDocumentActions(service);
-
-        if (actionList.count()) {
-            actionList << Kicker::createSeparatorActionItem();
-        }
-
         if (entry->type() == AbstractEntry::RunnableType) {
+            const KService::Ptr service = static_cast<const AppEntry *>(entry)->service();
+
+            actionList << Kicker::recentDocumentActions(service);
+
+            if (actionList.count()) {
+                actionList << Kicker::createSeparatorActionItem();
+            }
+
             if (ContainmentInterface::mayAddLauncher(m_appletInterface, ContainmentInterface::Desktop)) {
                 actionList << Kicker::createActionItem(i18n("Add to Desktop"), "addToDesktop");
             }
