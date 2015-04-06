@@ -45,6 +45,8 @@ void ForwardingModel::setSourceModel(QAbstractItemModel *sourceModel)
     connectSignals();
 
     emit countChanged();
+
+    emit sourceModelChanged();
 }
 
 bool ForwardingModel::canFetchMore(const QModelIndex &parent) const
@@ -53,41 +55,41 @@ bool ForwardingModel::canFetchMore(const QModelIndex &parent) const
         return false;
     }
 
-    return m_sourceModel->canFetchMore(parent);
+    return m_sourceModel->canFetchMore(indexToSourceIndex(parent));
 }
 
 void ForwardingModel::fetchMore(const QModelIndex &parent)
 {
     if (m_sourceModel) {
-        m_sourceModel->fetchMore(parent);
+        m_sourceModel->fetchMore(indexToSourceIndex(parent));
     }
 }
 
 QModelIndex ForwardingModel::index(int row, int column, const QModelIndex &parent) const
 {
+    Q_UNUSED(parent)
+
     if (!m_sourceModel) {
         return QModelIndex();
     }
 
-    return m_sourceModel->index(row, column, parent);
+    return createIndex(row, column);
 }
 
 QModelIndex ForwardingModel::parent(const QModelIndex &index) const
 {
-    if (!m_sourceModel) {
-        return QModelIndex();
-    }
+    Q_UNUSED(index)
 
-    return m_sourceModel->parent(index);
+    return QModelIndex();
 }
 
 QVariant ForwardingModel::data(const QModelIndex &index, int role) const
 {
-    if (m_sourceModel) {
-        m_sourceModel->data(index, role);
+    if (!m_sourceModel) {
+        return QVariant();
     }
 
-    return QVariant();
+    return m_sourceModel->data(indexToSourceIndex(index), role);
 }
 
 int ForwardingModel::rowCount(const QModelIndex &parent) const
@@ -96,7 +98,47 @@ int ForwardingModel::rowCount(const QModelIndex &parent) const
         return 0;
     }
 
-    return m_sourceModel->rowCount(parent);
+    return m_sourceModel->rowCount(indexToSourceIndex(parent));
+}
+
+QModelIndex ForwardingModel::indexToSourceIndex(const QModelIndex& index) const
+{
+    if (!m_sourceModel || !index.isValid()) {
+        return QModelIndex();
+    }
+
+    return m_sourceModel->index(index.row(), index.column(),
+        index.parent().isValid() ? indexToSourceIndex(index.parent()) : QModelIndex());
+}
+
+bool ForwardingModel::trigger(int row, const QString &actionId, const QVariant &argument)
+{
+    if (!m_sourceModel) {
+        return false;
+    }
+
+    AbstractModel *abstractModel = qobject_cast<AbstractModel *>(m_sourceModel);
+
+    if (!abstractModel) {
+        return false;
+    }
+
+    return abstractModel->trigger(row, actionId, argument);
+}
+
+AbstractModel* ForwardingModel::modelForRow(int row)
+{
+    if (!m_sourceModel) {
+        return 0;
+    }
+
+    AbstractModel *abstractModel = qobject_cast<AbstractModel *>(m_sourceModel);
+
+    if (!abstractModel) {
+        return 0;
+    }
+
+    return abstractModel->modelForRow(row);
 }
 
 void ForwardingModel::connectSignals()
@@ -138,6 +180,9 @@ void ForwardingModel::connectSignals()
             Qt::UniqueConnection);
     connect(m_sourceModel, SIGNAL(modelReset()),
             this, SIGNAL(modelReset()),
+            Qt::UniqueConnection);
+    connect(m_sourceModel, SIGNAL(modelReset()),
+            this, SIGNAL(countChanged()),
             Qt::UniqueConnection);
     connect(m_sourceModel, SIGNAL(layoutChanged(QList<QPersistentModelIndex>,QAbstractItemModel::LayoutChangeHint)),
             this, SIGNAL(layoutChanged(QList<QPersistentModelIndex>,QAbstractItemModel::LayoutChangeHint)),

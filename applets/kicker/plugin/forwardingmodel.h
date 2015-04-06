@@ -28,12 +28,14 @@ class ForwardingModel : public AbstractModel
 {
     Q_OBJECT
 
+    Q_PROPERTY(QAbstractItemModel* sourceModel READ sourceModel WRITE setSourceModel NOTIFY sourceModelChanged);
+
     public:
         explicit ForwardingModel(QObject *parent = 0);
         ~ForwardingModel();
 
         QAbstractItemModel *sourceModel() const;
-        void setSourceModel(QAbstractItemModel *sourceModel);
+        virtual void setSourceModel(QAbstractItemModel *sourceModel);
 
         bool canFetchMore(const QModelIndex &parent) const;
         void fetchMore(const QModelIndex &parent);
@@ -41,11 +43,20 @@ class ForwardingModel : public AbstractModel
         QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const;
         QModelIndex parent(const QModelIndex &index) const;
 
-        QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
+        virtual QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
 
         int rowCount(const QModelIndex &parent = QModelIndex()) const;
 
-    private:
+        Q_INVOKABLE bool trigger(int row, const QString &actionId, const QVariant &argument);
+
+        Q_INVOKABLE AbstractModel *modelForRow(int row);
+
+    Q_SIGNALS:
+        void sourceModelChanged() const;
+
+    protected:
+        QModelIndex indexToSourceIndex(const QModelIndex &index) const;
+
         void connectSignals();
         void disconnectSignals();
 

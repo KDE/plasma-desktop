@@ -20,43 +20,20 @@
 #ifndef FUNNELMODEL_H
 #define FUNNELMODEL_H
 
-#include "abstractmodel.h"
+#include "forwardingmodel.h"
 
-#include <QPointer>
-
-class FunnelModel : public AbstractModel
+class FunnelModel : public ForwardingModel
 {
     Q_OBJECT
-
-    Q_PROPERTY(AbstractModel* sourceModel READ sourceModel WRITE setSourceModel NOTIFY sourceModelChanged);
 
     public:
         explicit FunnelModel(QObject *parent = 0);
         ~FunnelModel();
 
-        QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
-
-        int rowCount(const QModelIndex &parent = QModelIndex()) const;
-
-        Q_INVOKABLE bool trigger(int row, const QString &actionId, const QVariant &argument);
-
-        Q_INVOKABLE AbstractModel *modelForRow(int row);
-
-        AbstractModel *sourceModel() const;
-        void setSourceModel(AbstractModel *model);
+        void setSourceModel(QAbstractItemModel *model);
 
     public Q_SLOTS:
         void reset();
-
-    Q_SIGNALS:
-        void sourceModelChanged() const;
-
-    private Q_SLOTS:
-        void sourceRowsAboutToBeRemoved(const QModelIndex &parent, int first, int last);
-        void sourceRowsRemoved(const QModelIndex &parent, int first, int last);
-
-    private:
-        QPointer<AbstractModel> m_sourceModel;
 };
 
 #endif
