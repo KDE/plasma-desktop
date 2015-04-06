@@ -31,9 +31,6 @@ class FunnelModel : public ForwardingModel
         ~FunnelModel();
 
         void setSourceModel(QAbstractItemModel *model);
-
-    public Q_SLOTS:
-        void reset();
 };
 
 #endif

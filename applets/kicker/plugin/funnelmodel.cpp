@@ -91,10 +91,3 @@ void FunnelModel::setSourceModel(QAbstractItemModel *model)
 
     emit sourceModelChanged();
 }
-
-void FunnelModel::reset()
-{
-    emit beginResetModel();
-    emit endResetModel();
-    emit countChanged();
-}

@@ -141,6 +141,13 @@ AbstractModel* ForwardingModel::modelForRow(int row)
     return abstractModel->modelForRow(row);
 }
 
+void ForwardingModel::reset()
+{
+    emit beginResetModel();
+    emit endResetModel();
+    emit countChanged();
+}
+
 void ForwardingModel::connectSignals()
 {
     if (!m_sourceModel) {
