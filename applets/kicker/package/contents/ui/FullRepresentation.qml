@@ -30,12 +30,14 @@ FocusScope {
     Layout.minimumWidth: sideBar.width + mainRow.spacing + Math.max(rootList.width, runnerColumns.width)
     Layout.maximumWidth: sideBar.width + mainRow.spacing + Math.max(rootList.width, runnerColumns.width)
 
-    Layout.minimumHeight: Math.max((rootModel.count * rootList.itemHeight) + searchField.height + (2 * units.smallSpacing),
-        sideBar.margins.top + sideBar.margins.bottom + favoriteApps.contentHeight + favoriteSystemActions.contentHeight
-        + sidebarSeparator.height + (4 * units.smallSpacing))
-    Layout.maximumHeight: Math.max((rootModel.count * rootList.itemHeight) + searchField.height + (2 * units.smallSpacing),
-        sideBar.margins.top + sideBar.margins.bottom + favoriteApps.contentHeight + favoriteSystemActions.contentHeight
-        + sidebarSeparator.height + (4 * units.smallSpacing))
+    Layout.minimumHeight: Math.max(((rootModel.count - (rootList.hasDivider ? 1 : 0)) * rootList.itemHeight)
+        + searchField.height + (2 * units.smallSpacing), sideBar.margins.top + sideBar.margins.bottom
+        + favoriteApps.contentHeight + favoriteSystemActions.contentHeight + sidebarSeparator.height
+        + (4 * units.smallSpacing)) + (rootList.hasDivider ? rootList.dividerHeight : 0)
+    Layout.maximumHeight: Math.max(((rootModel.count - (rootList.hasDivider ? 1 : 0)) * rootList.itemHeight)
+        + searchField.height + (2 * units.smallSpacing), sideBar.margins.top + sideBar.margins.bottom
+        + favoriteApps.contentHeight + favoriteSystemActions.contentHeight + sidebarSeparator.height
+        + (4 * units.smallSpacing)) + (rootList.hasDivider ? rootList.dividerHeight : 0)
 
     signal appendSearchText(string text)
 
@@ -165,6 +167,9 @@ FocusScope {
             height: (rootModel.count * rootList.itemHeight)
 
             visible: (searchField.text == "")
+
+            property bool hasDivider: (rootModel.showRecentApps
+                || rootModel.showRecentDocs || rootModel.showRecentContacts)
 
             iconsEnabled: false
 

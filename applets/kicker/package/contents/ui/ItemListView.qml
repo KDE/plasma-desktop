@@ -41,6 +41,7 @@ FocusScope {
     property int itemHeight: Math.ceil((Math.max(theme.mSize(theme.defaultFont).height, units.iconSizes.small)
         + Math.max(highlightItemSvg.margins.top + highlightItemSvg.margins.bottom,
         listItemSvg.margins.top + listItemSvg.margins.bottom)) / 2) * 2
+    property int dividerHeight: lineSvg.horLineHeight + (2 * units.smallSpacing)
 
     property alias currentIndex: listView.currentIndex
     property alias keyNavigationWraps: listView.keyNavigationWraps
@@ -146,7 +147,11 @@ FocusScope {
 
                 delegate: ItemListDelegate {}
 
-                highlight: PlasmaComponents.Highlight { anchors.fill: listView.currentItem }
+                highlight: PlasmaComponents.Highlight {
+                    anchors.fill: listView.currentItem;
+
+                    visible: listView.currentItem && !listView.currentItem.isDivider
+                }
 
                 onCountChanged: {
                     currentIndex = -1;
@@ -197,6 +202,11 @@ FocusScope {
 
                         showChildDialogs = false;
                         decrementCurrentIndex();
+
+                        if (currentItem.isDivider) {
+                            decrementCurrentIndex();
+                        }
+
                         showChildDialogs = true;
                     } else if (event.key == Qt.Key_Down) {
                         event.accepted = true;
@@ -209,6 +219,11 @@ FocusScope {
 
                         showChildDialogs = false;
                         incrementCurrentIndex();
+
+                        if (currentItem.isDivider) {
+                            incrementCurrentIndex();
+                        }
+
                         showChildDialogs = true;
                     } else if (event.key == Qt.Key_Right && childDialog != null) {
                         windowSystem.forceActive(childDialog.mainItem);

@@ -28,17 +28,23 @@ import "../code/tools.js" as Tools
 Item {
     id: item
 
-    height: itemHeight
+    height: isDivider ? dividerHeight : itemHeight
     width: ListView.view.width
+
+    enabled: !isDivider
 
     signal actionTriggered(string actionId, variant actionArgument)
     signal aboutToShowActionMenu(variant actionMenu)
 
+    property bool isDivider: (model.isDivider == true)
     property bool hasChildren: (model.hasChildren == true)
     property bool hasActionList: ((model.favoriteId != null)
         || (("hasActionList" in model) && (model.hasActionList == true)))
     property QtObject childDialog: null
     property Item menu: actionMenu
+
+    Accessible.role: isDivider ? Accessible.Separator: Accessible.MenuItem
+    Accessible.name: label.text
 
     onAboutToShowActionMenu: {
         var actionList = hasActionList ? model.actionList : [];
@@ -72,7 +78,7 @@ Item {
             verticalCenter: parent.verticalCenter
         }
 
-        height: itemHeight
+        height: parent.height
 
         property int mouseCol
         property bool pressed: false
@@ -206,7 +212,7 @@ Item {
             text: model.display
         }
 
-         PlasmaCore.SvgItem {
+        PlasmaCore.SvgItem {
             id: arrow
 
             anchors.verticalCenter: parent.verticalCenter
@@ -221,6 +227,33 @@ Item {
         }
     }
 
+    Component {
+        id: dividerComponent
+
+        PlasmaCore.SvgItem {
+            width: parent.width
+            height: lineSvg.horLineHeight
+
+            svg: lineSvg
+            elementId: "horizontal-line"
+        }
+    }
+
+    Loader {
+        id: dividerLoader
+
+        anchors.left: parent.left
+        anchors.leftMargin: highlightItemSvg.margins.left
+        anchors.right: parent.right
+        anchors.rightMargin: highlightItemSvg.margins.right
+        anchors.verticalCenter: parent.verticalCenter
+
+        active: isDivider
+
+        asynchronous: false
+        sourceComponent: dividerComponent
+    }
+
     Keys.onPressed: {
         if (event.key == Qt.Key_Menu && hasActionList) {
             event.accepted = true;
@@ -233,6 +266,4 @@ Item {
             }
         }
     }
-    Accessible.role: Accessible.MenuItem
-    Accessible.name: label.text
 }

@@ -102,6 +102,8 @@ QVariant AppsModel::data(const QModelIndex &index, int role) const
         return entry->icon();
     } else if (role == Kicker::IsParentRole) {
         return (entry->type() == AbstractEntry::GroupType);
+    } else if (role == Kicker::IsDividerRole) {
+        return (entry->type() == AbstractEntry::DividerType);
     } else if (role == Kicker::HasChildrenRole) {
         if (entry->type() == AbstractEntry::GroupType) {
             const AbstractGroupEntry *groupEntry = static_cast<const AbstractGroupEntry *>(entry);

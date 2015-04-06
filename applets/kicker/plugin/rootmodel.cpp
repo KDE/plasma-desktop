@@ -207,9 +207,11 @@ void RootModel::extendEntryList()
     if (m_recentContactsModel) ++insertCount;
 
     if (insertCount) {
-        beginInsertRows(QModelIndex(), 0, insertCount - 1);
+        beginInsertRows(QModelIndex(), 0, insertCount);
 
         GroupEntry *entry = 0;
+
+        m_entryList.prepend(new DividerEntry());
 
         if (m_recentContactsModel) {
             entry = new GroupEntry(i18n("Recent Contacts"), QString(), m_recentContactsModel, this);

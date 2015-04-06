@@ -56,4 +56,10 @@ class AbstractGroupEntry : public AbstractEntry
         QPointer<AbstractModel> m_model;
 };
 
+class DividerEntry : public AbstractEntry
+{
+    public:
+        EntryType type() const { return DividerType; }
+};
+
 #endif
