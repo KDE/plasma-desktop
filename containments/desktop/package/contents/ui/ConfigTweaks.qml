@@ -51,6 +51,7 @@ Item {
         Desktop.ToolboxInterface {
             id: toolboxInterface
 
+            showToolbox: plasmoid.configuration.showToolbox
             appletInterface: plasmoid
         }
 
