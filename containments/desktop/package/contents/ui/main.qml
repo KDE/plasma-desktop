@@ -244,6 +244,11 @@ DragDrop.DropArea {
         }
     }
 
+    Desktop.ToolboxInterface {
+        showToolbox: plasmoid.configuration.showToolbox
+        appletInterface: plasmoid
+    }
+
     Desktop.InfoNotification {
         id: pressToMoveHelp
 

@@ -29,6 +29,7 @@ import org.kde.plasma.plasmoid 2.0
 
 Item {
     id: main
+    objectName: "org.kde.desktoptoolbox"
 
     z: 999
     anchors.fill: parent

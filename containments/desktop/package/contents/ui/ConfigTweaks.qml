@@ -26,12 +26,15 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 
 import org.kde.plasma.plasmoid 2.0
 
+import org.kde.private.desktopcontainment.desktop 0.1 as Desktop
+
 Item {
     id: configExperimental
 
     width: childrenRect.width
     height: childrenRect.height
 
+    property alias cfg_showToolbox: showToolbox.checked
     property alias cfg_pressToMove: pressToMove.checked
 
     ColumnLayout {
@@ -45,11 +48,32 @@ Item {
             text: i18n("Tweaks are experimental options that may become defaults depending on your feedback.")
         }
 
+        Desktop.ToolboxInterface {
+            id: toolboxInterface
+
+            appletInterface: plasmoid
+        }
+
         GroupBox {
-            id: behaviorGroupBox
+            Layout.fillWidth: true
 
-            visible: ("containmentType" in plasmoid)
+            visible: toolboxInterface.toolboxFound
 
+            title: i18n("Desktop Layout")
+            flat: true
+
+            ColumnLayout {
+                Layout.fillWidth: true
+
+                CheckBox {
+                    id: showToolbox
+
+                    text: i18n("Show the desktop toolbox")
+                }
+            }
+        }
+
+        GroupBox {
             Layout.fillWidth: true
 
             title: i18n("Widget Handling")
