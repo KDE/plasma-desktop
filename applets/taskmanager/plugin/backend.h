@@ -30,6 +30,7 @@ class QQuickWindow;
 
 namespace TaskManager {
     class BasicMenu;
+    class LauncherItem;
 }
 
 class Backend : public QObject
@@ -88,6 +89,7 @@ class Backend : public QObject
         void presentWindows(int groupParentId);
 
     private Q_SLOTS:
+        void handleRecentDocumentAction() const;
         void actuallyOpenContextMenu();
         void updateLaunchersCache();
         void toolTipWindowChanged(QQuickWindow *window);
@@ -99,6 +101,8 @@ class Backend : public QObject
         void launchersChanged();
 
     private:
+        void addRecentDocumentActions(TaskManager::LauncherItem *launcher,
+            TaskManager::BasicMenu *menu) const;
         void updateWindowHighlight();
 
         TaskManager::GroupManager *m_groupManager;

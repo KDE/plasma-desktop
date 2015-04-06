@@ -19,7 +19,12 @@ target_link_libraries(taskmanagerplugin
                       Qt5::Qml
                       Qt5::Quick
                       Qt5::Widgets
+                      KF5::Activities
+                      KF5::ActivitiesExperimentalStats
+                      KF5::I18n
                       KF5::KIOCore
+                      KF5::KIOWidgets
+                      KF5::Service
                       KF5::WindowSystem)
 
 install(TARGETS taskmanagerplugin DESTINATION ${QML_INSTALL_DIR}/org/kde/plasma/private/taskmanager)

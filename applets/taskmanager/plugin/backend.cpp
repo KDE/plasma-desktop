@@ -26,6 +26,7 @@
 #include <taskgroup.h>
 #include <tasksmodel.h>
 
+#include <QApplication>
 #include <QCursor>
 #include <QQuickItem>
 #include <QQuickWindow>
@@ -33,7 +34,20 @@
 #include <QTimer>
 
 #include <KAuthorized>
+#include <KFileItem>
+#include <KLocalizedString>
+#include <KRun>
+#include <KService>
 #include <kwindoweffects.h>
+
+#include <KActivitiesExperimentalStats/Cleaning>
+#include <KActivitiesExperimentalStats/ResultSet>
+#include <KActivitiesExperimentalStats/Terms>
+
+namespace KAStats = KActivities::Experimental::Stats;
+
+using namespace KAStats;
+using namespace KAStats::Terms;
 
 Backend::Backend(QObject* parent) : QObject(parent),
     m_groupManager(new TaskManager::GroupManager(this)),
@@ -252,8 +266,9 @@ void Backend::itemContextMenu(QQuickItem *item, QObject *configAction)
         const int maxWidth = 0.8 * item->window()->screen()->size().width();
         m_contextMenu = new TaskManager::BasicMenu(0, taskGroup, m_groupManager, actionList, QList <QAction*>(), maxWidth);
     } else if (agItem->itemType() == TaskManager::LauncherItemType) {
-        m_contextMenu = new TaskManager::BasicMenu(0, static_cast<TaskManager::LauncherItem*>(agItem),
-            m_groupManager, actionList);
+        TaskManager::LauncherItem *launcher = static_cast<TaskManager::LauncherItem *>(agItem);
+        m_contextMenu = new TaskManager::BasicMenu(0, launcher, m_groupManager, actionList);
+        addRecentDocumentActions(launcher, m_contextMenu);
     }
 
     if (!m_contextMenu) {
@@ -273,6 +288,126 @@ void Backend::itemContextMenu(QQuickItem *item, QObject *configAction)
     // we're in QMenu::exec();
     // FIXME TODO: Just use a lambda on Qt 5.4+.
     QMetaObject::invokeMethod(this, "actuallyOpenContextMenu", Qt::QueuedConnection);
+}
+
+void Backend::addRecentDocumentActions(TaskManager::LauncherItem *launcher, TaskManager::BasicMenu* menu) const
+{
+    if (!launcher || !menu || !launcher->launcherUrl().isLocalFile()) {
+        return;
+    }
+
+    QAction *firstAction = menu->actions().at(0);
+
+    if (!firstAction) {
+        return;
+    }
+
+    QString desktopName = launcher->launcherUrl().fileName();
+    QString storageId = desktopName;
+
+    if (storageId.startsWith("org.kde.")) {
+        storageId = storageId.right(storageId.length() - 8);
+    }
+
+    if (storageId.endsWith(".desktop")) {
+        storageId = storageId.left(storageId.length() - 8);
+    }
+
+    auto query = UsedResources
+        | RecentlyUsedFirst
+        | Agent(storageId)
+        | Type::any()
+        | Activity::current()
+        | Url::file();
+
+    ResultSet results(query);
+
+    ResultSet::const_iterator resultIt;
+    resultIt = results.begin();
+
+    int actions = 0;
+
+    while (actions < 5 && resultIt != results.end()) {
+        const QString resource = (*resultIt).resource();
+        const QUrl url(resource);
+
+        if (!url.isValid()) {
+            continue;
+        }
+
+        const KFileItem fileItem(url);
+
+        if (!fileItem.isFile()) {
+            continue;
+        }
+
+        if (actions == 0) {
+            menu->insertSection(firstAction, i18n("Recent Documents"));
+        }
+
+        QAction *action = new QAction(menu);
+        action->setText(url.fileName());
+        action->setIcon(QIcon::fromTheme(fileItem.iconName(), QIcon::fromTheme("unknown")));
+        action->setProperty("agent", storageId);
+        action->setProperty("entryPath", launcher->launcherUrl());
+        action->setData(resource);
+        connect(action, &QAction::triggered, this, &Backend::handleRecentDocumentAction);
+
+        menu->insertAction(firstAction, action);
+
+        ++resultIt;
+        ++actions;
+    }
+
+    if (actions > 0) {
+        QAction *action = new QAction(menu);
+        action->setText(i18n("Forget Recent Documents"));
+        action->setProperty("agent", storageId);
+        connect(action, &QAction::triggered, this, &Backend::handleRecentDocumentAction);
+        menu->insertAction(firstAction, action);
+
+        menu->insertSeparator(firstAction);
+    }
+}
+
+void Backend::handleRecentDocumentAction() const
+{
+    const QAction *action = qobject_cast<QAction* >(sender());
+
+    if (!action) {
+        return;
+    }
+
+    const QString agent = action->property("agent").toString();
+
+    if (agent.isEmpty()) {
+        return;
+    }
+
+    const QString desktopPath = action->property("entryPath").toUrl().toLocalFile();
+    const QString resource = action->data().toString();
+
+    if (desktopPath.isEmpty() || resource.isEmpty()) {
+        auto query = UsedResources
+            | Agent(agent)
+            | Type::any()
+            | Activity::current()
+            | Url::file();
+
+        KAStats::forgetResources(query);
+
+        return;
+    }
+
+    KService::Ptr service = KService::serviceByDesktopPath(desktopPath);
+
+        qDebug() << service;
+
+    if (!service) {
+        return;
+    }
+
+    KRun::runService(*service, QList<QUrl>() << QUrl(resource), QApplication::activeWindow());
 }
 
 void Backend::actuallyOpenContextMenu()
