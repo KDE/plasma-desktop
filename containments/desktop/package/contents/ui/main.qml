@@ -244,9 +244,10 @@ DragDrop.DropArea {
         }
     }
 
-    Desktop.ToolboxInterface {
-        showToolbox: plasmoid.configuration.showToolbox
-        appletInterface: plasmoid
+    Binding {
+        target: toolBox
+        property: "visible"
+        value: plasmoid.configuration.showToolbox
     }
 
     Desktop.InfoNotification {

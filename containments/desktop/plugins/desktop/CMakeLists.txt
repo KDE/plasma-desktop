@@ -3,7 +3,6 @@ set(desktopplugin_SRCS
     eventforge.cpp
     infonotification.cpp
     systemsettings.cpp
-    toolboxinterface.cpp
 )
 
 install(FILES qmldir DESTINATION ${QML_INSTALL_DIR}/org/kde/private/desktopcontainment/desktop)
@@ -15,10 +14,6 @@ target_link_libraries(desktopplugin
                       Qt5::Qml
                       Qt5::Quick
                       Qt5::Widgets
-                      KF5::ConfigCore
-                      KF5::Notifications
-                      KF5::Package
-                      KF5::PlasmaQuick
-                      KF5::Service)
+                      KF5::Notifications)
 
 install(TARGETS desktopplugin DESTINATION ${QML_INSTALL_DIR}/org/kde/private/desktopcontainment/desktop)
