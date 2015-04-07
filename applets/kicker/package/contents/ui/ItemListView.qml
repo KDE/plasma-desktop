@@ -44,6 +44,7 @@ FocusScope {
     property int dividerHeight: lineSvg.horLineHeight + (2 * units.smallSpacing)
 
     property alias currentIndex: listView.currentIndex
+    property alias currentItem: listView.currentItem
     property alias keyNavigationWraps: listView.keyNavigationWraps
     property alias showChildDialogs: listView.showChildDialogs
     property alias model: listView.model
@@ -122,7 +123,8 @@ FocusScope {
 
             if (containsMouse) {
                 resetIndexTimer.stop();
-            } else if (!childDialog || !dialog) {
+            } else if ((!childDialog || !dialog)
+                && (!currentItem || !currentItem.menu.opened)) {
                 resetIndexTimer.start();
             }
         }
@@ -187,6 +189,12 @@ FocusScope {
                         childDialog.visible = false;
                         childDialog.delayedDestroy();
                         childDialog = null;
+                    }
+                }
+
+                onCurrentItemChanged: {
+                    if (currentItem) {
+                        currentItem.menu.closed.connect(resetIndexTimer.restart);
                     }
                 }
 

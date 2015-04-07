@@ -31,8 +31,15 @@ Item {
     property bool opened: menu ? (menu.status != PlasmaComponents.DialogStatus.Closed) : false
 
     signal actionClicked(string actionId, variant actionArgument)
+    signal closed
 
     onActionListChanged: refreshMenu();
+
+    onOpenedChanged: {
+        if (!opened) {
+            closed();
+        }
+    }
 
     function open(x, y) {
         if (x && y) {
