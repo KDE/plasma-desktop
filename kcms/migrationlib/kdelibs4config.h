@@ -25,7 +25,7 @@
 class Kdelibs4SharedConfig
 {
 public:
-    static KSharedConfig::Ptr openConfig(const QString &fileName, KConfig::OpenFlags mode=KConfig::FullConfig)
+    static KSharedConfig::Ptr openConfig(const QString &fileName, KConfig::OpenFlags mode=KConfig::SimpleConfig)
     {
         Kdelibs4Migration migration;
         QString configDirPath = migration.saveLocation("config");

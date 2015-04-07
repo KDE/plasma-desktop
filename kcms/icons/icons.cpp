@@ -350,7 +350,7 @@ void KIconConfig::exportToKDE4()
     }
 
     KSharedConfigPtr kglobalcfg = KSharedConfig::openConfig( "kdeglobals" );
-    KConfig kde4config(configFilePath);
+    KConfig kde4config(configFilePath, KConfig::SimpleConfig);
 
     KConfigGroup iconsGroup(kglobalcfg, "Icons");
     KConfigGroup kde4IconGroup(&kde4config, "Icons");
