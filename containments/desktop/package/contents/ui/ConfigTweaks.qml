@@ -26,8 +26,6 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 
 import org.kde.plasma.plasmoid 2.0
 
-import org.kde.private.desktopcontainment.desktop 0.1 as Desktop
-
 Item {
     id: configExperimental
 
@@ -46,13 +44,6 @@ Item {
             wrapMode: Text.WordWrap
 
             text: i18n("Tweaks are experimental options that may become defaults depending on your feedback.")
-        }
-
-        Desktop.ToolboxInterface {
-            id: toolboxInterface
-
-            showToolbox: plasmoid.configuration.showToolbox
-            appletInterface: plasmoid
         }
 
         GroupBox {
