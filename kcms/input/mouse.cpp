@@ -527,10 +527,10 @@ void MouseConfig::save()
   settings->reverseScrollPolarity = generalTab->cbScrollPolarity->isChecked();
 
   settings->apply();
-  KConfig config( "kcminputrc" );
+  KConfig config( "kcminputrc", KConfig::SimpleConfig );
   settings->save(&config);
 
-  KConfig ac("kaccessrc");
+  KConfig ac("kaccessrc", KConfig::SimpleConfig);
 
   KConfigGroup group = ac.group("Mouse");
 
@@ -791,7 +791,8 @@ void MouseSettings::save(KConfig *config)
 
   Kdelibs4SharedConfig::syncConfigGroup(&group, "kinputrc");
 
-  group = KConfigGroup(KSharedConfig::openConfig("kdeglobals"), "KDE");
+  KSharedConfig::Ptr profile = KSharedConfig::openConfig("kdeglobals", KConfig::SimpleConfig);
+  group = KConfigGroup(profile, "KDE");
   group.writeEntry("DoubleClickInterval", doubleClickInterval, KConfig::Persistent);
   group.writeEntry("StartDragTime", dragStartTime, KConfig::Persistent);
   group.writeEntry("StartDragDist", dragStartDist, KConfig::Persistent);

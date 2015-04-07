@@ -83,7 +83,8 @@ void CfgBrowser::load(KConfig *)
 
 void CfgBrowser::save(KConfig *)
 {
-    KConfigGroup config(KSharedConfig::openConfig("kdeglobals"), QLatin1String("General") );
+    KSharedConfig::Ptr profile = KSharedConfig::openConfig("kdeglobals", KConfig::SimpleConfig);
+    KConfigGroup config(profile, QLatin1String("General"));
     QString exec;
     if (radioExec->isChecked())
     {

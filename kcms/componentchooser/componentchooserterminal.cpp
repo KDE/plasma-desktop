@@ -79,7 +79,8 @@ void CfgTerminalEmulator::load(KConfig *) {
 
 void CfgTerminalEmulator::save(KConfig *)
 {
-	KConfigGroup config(KSharedConfig::openConfig("kdeglobals"), "General");
+	KSharedConfig::Ptr profile = KSharedConfig::openConfig("kdeglobals", KConfig::SimpleConfig);
+	KConfigGroup config(profile, QLatin1String("General"));
 	const QString terminal = terminalCB->isChecked() ? "konsole" : terminalLE->text();
 	config.writePathEntry("TerminalApplication", terminal); // KConfig::Normal|KConfig::Global);
 
