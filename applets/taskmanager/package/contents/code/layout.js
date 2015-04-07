@@ -25,15 +25,11 @@ function verticalMargins() {
     return taskFrame.margins.top + taskFrame.margins.bottom;
 }
 
-function iconSize(availableSpace) {
-    return Math.min(units.iconSizes.huge,
-        availableSpace - (availableSpace - verticalMargins() < units.iconSizes.small ?
-        Math.min(9, verticalMargins()) : verticalMargins()));
-}
-
 function adjustMargin(height, margin) {
-    if ((height - verticalMargins()) < units.iconSizes.small) {
-        return Math.floor((margin * (units.iconSizes.small / height)) / 2);
+    var available = height - verticalMargins();
+
+    if (available < units.iconSizes.small) {
+        return Math.floor((margin * (units.iconSizes.small / available)) / 3);
     }
 
     return margin;
