@@ -31,6 +31,14 @@ function iconSize(availableSpace) {
         Math.min(9, verticalMargins()) : verticalMargins()));
 }
 
+function adjustMargin(height, margin) {
+    if ((height - verticalMargins()) < units.iconSizes.small) {
+        return Math.floor((margin * (units.iconSizes.small / height)) / 2);
+    }
+
+    return margin;
+}
+
 function launcherLayoutTasks() {
     return Math.round(backend.tasksModel.launcherCount / Math.floor(preferredMinWidth() / launcherWidth()));
 }
@@ -152,7 +160,8 @@ function taskHeight() {
 }
 
 function launcherWidth() {
-    return iconSize(tasks.height) + horizontalMargins();
+    return (tasks.height + horizontalMargins())
+        - (adjustMargin(tasks.height, taskFrame.margins.top) + adjustMargin(tasks.height, taskFrame.margins.bottom));
 }
 
 function layout(container) {

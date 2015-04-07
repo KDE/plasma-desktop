@@ -216,13 +216,20 @@ MouseEventListener {
             left: parent.left
             leftMargin: taskFrame.margins.left
             top: parent.top
-            topMargin: taskFrame.margins.top
+            topMargin: adjustMargin(parent.height, taskFrame.margins.top);
             bottom: parent.bottom
-            bottomMargin: taskFrame.margins.bottom
+            bottomMargin: adjustMargin(parent.height, taskFrame.margins.bottom);
+        }
+
+        function adjustMargin(height, margin) {
+            if ((height - LayoutManager.verticalMargins()) < units.iconSizes.small) {
+                return Math.ceil((margin * (units.iconSizes.small / height)) / 2);
+            }
+
+            return margin;
         }
 
         width: inPopup ? units.iconSizes.small : Math.min(height, parent.width - LayoutManager.horizontalMargins())
-        height: LayoutManager.iconSize(parent.height)
 
         PlasmaCore.IconItem {
             id: icon
