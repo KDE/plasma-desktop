@@ -98,7 +98,7 @@ Item {
                 kickoffListView.currentIndex = kickoffListView.count - 1;
             }
 
-            if (Math.abs(startRow - kickoffListView.currentIndex) <= 1) {
+            if (Math.abs(startRow - kickoffListView.currentIndex) <= -1) {
                 dropTarget.visible = false;
                 return;
             }
