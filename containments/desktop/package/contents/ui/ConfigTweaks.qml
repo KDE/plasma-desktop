@@ -49,8 +49,6 @@ Item {
         GroupBox {
             Layout.fillWidth: true
 
-            visible: toolboxInterface.toolboxFound
-
             title: i18n("Desktop Layout")
             flat: true
 
