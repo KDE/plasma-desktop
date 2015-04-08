@@ -15,8 +15,8 @@
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date>2013-12-05</date>
-<releaseinfo>&kde; 4.12</releaseinfo>
+<date>2015-04-08</date>
+<releaseinfo>Plasma 5.3</releaseinfo>
 
 <keywordset>
 <keyword>KDE</keyword>
@@ -62,9 +62,9 @@ icons will be used in: for example the desktop, toolbars &etc;
 </itemizedlist>
 
 <important><para>Please note that some of these settings may depend on
-your selected icon theme. &kde; comes with three icon themes by default,
-Oxygen, Monochrome and Crystal SVG.  There are additional color themes
-in the kdeartwork package.</para></important>
+your selected icon theme. &kde; comes with several icon themes by default,
+Oxygen, Monochrome and Breeze.<!--FIXME still valid in 5.3?  There are additional color themes
+in the kdeartwork package.--></para></important>
 
 <para>There are two pages in this module: <guilabel>Theme</guilabel> and <guilabel>Advanced</guilabel>. <guilabel>Theme</guilabel> manages the icon themes while <guilabel>Advanced</guilabel> lets you configure how icons will be used in &kde;.</para>
 </sect2>
