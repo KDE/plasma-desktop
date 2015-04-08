@@ -164,7 +164,7 @@ FocusScope {
 
             anchors.top: parent.top
 
-            height: (rootModel.count * rootList.itemHeight)
+            height: ((rootModel.count - (hasDivider ? 1 : 0)) * itemHeight) + (hasDivider ? dividerHeight : 0)
 
             visible: (searchField.text == "")
 
