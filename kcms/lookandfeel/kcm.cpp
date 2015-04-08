@@ -77,7 +77,7 @@ KCMLookandFeel::KCMLookandFeel(QObject* parent, const QVariantList& args)
                                        "0.1", QString(), KAboutLicense::LGPL);
     about->addAuthor(i18n("Marco Martin"), QString(), "mart@kde.org");
     setAboutData(about);
-    setButtons(Help | Apply | Default);
+    setButtons(Apply | Default);
 
     m_model = new QStandardItemModel(this);
     QHash<int, QByteArray> roles = m_model->roleNames();
