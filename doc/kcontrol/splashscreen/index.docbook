@@ -18,8 +18,8 @@
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date>2010-09-25</date>
-<releaseinfo>&kde; 4.5</releaseinfo>
+<date>2015-04-08</date>
+<releaseinfo>Plasma 5.3</releaseinfo>
 
 <keywordset>
 <keyword>KDE</keyword>
@@ -29,10 +29,7 @@
 </keywordset>
 </articleinfo>
 
-<!--sect1 id="kcm_splashscreen">
-<title>Splash Screen Theme Manager</title>
--->
-<para>This module provides an interface to install and view splash screen themes.</para>
+<para>This module provides an interface to view and select splash screen themes.</para>
 
 <para>
 <screenshot>
@@ -48,9 +45,12 @@
 </screenshot>
 </para>
 
-<para>On the left you can see the list of already installed splash screens. The current splash screen name is highlighted.</para>
-<para>On the right is displayed a preview of the current splash screen with some information about it below the preview.</para>
+<para>On this page you can see previews of already installed splash screens. The preview of the current splash screen is highlighted.</para>
 
+<para>Hoover a preview image with the mouse cursor then the button <guilabel>Test Splashscreen</guilabel> appears at the top right of the image.
+Press this button to view the splashscreen in action.</para>
+
+<!-- not in 5.3
 <variablelist>
 <varlistentry><term><guilabel>Get New Themes...</guilabel></term>
 <listitem>
@@ -100,7 +100,7 @@ This shows you the theme and the associated icons as they will be displayed as s
 </listitem>
 </varlistentry>
 </variablelist>
-<!--/sect1-->
+-->
 </article>
 
 <!--
