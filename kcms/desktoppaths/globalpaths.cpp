@@ -427,7 +427,7 @@ void DesktopPathConfig::slotEntries(KIO::Job*, const KIO::UDSEntryList& list)
     while (it.hasNext()) {
         KFileItem file(it.next(), m_copyFromSrc, true, true);
         qCDebug(KCM_DESKTOPPATH) << file.url();
-        if (file.url() == m_copyFromSrc || file.url().fileName() == "..") {
+        if (file.url() == m_copyFromSrc || file.name() == "..") {
             continue;
         }
 
