@@ -22,14 +22,13 @@ import QtQuick 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.draganddrop 2.0
-import org.kde.kquickcontrolsaddons 2.0
 
 import org.kde.plasma.private.taskmanager 0.1 as TaskManager
 
 import "../code/layout.js" as LayoutManager
 import "../code/tools.js" as TaskTools
 
-MouseEventListener {
+MouseArea {
     id: task
 
     width: groupDialog.mainItem.width
@@ -91,11 +90,11 @@ MouseEventListener {
     }
 
     onPressed: {
-        if (mouse.buttons & Qt.LeftButton) {
+        if (mouse.button == Qt.LeftButton) {
             pressed = true;
             pressX = mouse.x;
             pressY = mouse.y;
-        } else if (mouse.buttons & Qt.RightButton) {
+        } else if (mouse.button == Qt.RightButton) {
             if (plasmoid.configuration.showToolTips) {
                 toolTip.hideToolTip();
             }
@@ -105,6 +104,7 @@ MouseEventListener {
     }
 
     onReleased: {
+    console.log("RE");
         if (pressed) {
             if (!mouse.button == Qt.LeftButton) {
                 return;
@@ -143,9 +143,9 @@ MouseEventListener {
         }
     }
 
-    onWheelMoved: {
+    onWheel: {
         if (plasmoid.configuration.wheelEnabled) {
-            wheelDelta = TaskTools.wheelActivateNextPrevTask(task, wheelDelta, wheel.delta);
+            wheelDelta = TaskTools.wheelActivateNextPrevTask(task, wheelDelta, wheel.angleDelta.y);
         }
     }
 

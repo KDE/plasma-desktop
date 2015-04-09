@@ -20,7 +20,6 @@
 import QtQuick 2.0
 
 import org.kde.draganddrop 2.0
-import org.kde.kquickcontrolsaddons 2.0
 
 import "../code/layout.js" as LayoutManager
 import "../code/tools.js" as TaskTools
@@ -84,13 +83,13 @@ Item {
         }
     }
 
-    MouseEventListener {
+    MouseArea {
         id: wheelHandler
 
         anchors.fill: parent
         property int wheelDelta: 0;
         enabled: plasmoid.configuration.wheelEnabled
 
-        onWheelMoved: wheelDelta = TaskTools.wheelActivateNextPrevTask(false, wheelDelta, wheel.delta);
+        onWheel: wheelDelta = TaskTools.wheelActivateNextPrevTask(false, wheelDelta, wheel.angleDelta.y);
     }
 }
