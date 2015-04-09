@@ -210,7 +210,7 @@ static bool cleanHomeDirPath( QString &path, const QString &homeDir )
 static QString translatePath( QString path ) // krazy:exclude=passbyvalue
 {
     // keep only one single '/' at the beginning - needed for cleanHomeDirPath()
-    while (path[0] == '/' && path[1] == '/')
+    while (path.length() >= 2 && path[0] == '/' && path[1] == '/')
         path.remove(0,1);
 
     // we probably should escape any $ ` and \ characters that may occur in the path, but the Qt code that reads back
