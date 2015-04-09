@@ -17,7 +17,7 @@ qt5_add_dbus_interfaces(Applet_SRCS
                         ${CMAKE_CURRENT_BINARY_DIR}/org.kde.touchpad.xml
 )
 qt5_add_dbus_interfaces(Applet_SRCS
-                        ${KINIT_DBUS_INTERFACES_DIR}/org.kde.kded5.xml
+                        ${KDED_DBUS_INTERFACE}
 )
 
 add_library(plasma_engine_touchpad MODULE ${Applet_SRCS})

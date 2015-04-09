@@ -1,3 +1,5 @@
+find_package(KDED ${KF5_MIN_VERSION} CONFIG REQUIRED)
+
 add_definitions(-DTRANSLATION_DOMAIN=\"kcm_touchpad\")
 
 set(CMAKE_MODULE_PATH
