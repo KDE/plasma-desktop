@@ -13,8 +13,8 @@
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date>2013-12-05</date>
-<releaseinfo>&kde; 4.12</releaseinfo>
+<date>2015-04-09</date>
+<releaseinfo>Plasma 5.3</releaseinfo>
 
 <keywordset>
 <keyword>KDE</keyword>
@@ -35,11 +35,12 @@
 audible cues, or who have difficulty using a keyboard.  </para>
 
 <para>
-The module is divided into four tabs: <link
+The module is divided into five tabs: <link
 linkend="access-bell"><guilabel>Bell</guilabel></link>, <link
 linkend="access-modifier-keys"><guilabel>Modifier keys</guilabel></link>, <link
-linkend="access-keyboard-filters"><guilabel>Keyboard Filters</guilabel></link> and <link
-linkend="access-activation-gestures"><guilabel>Activation Gestures</guilabel></link>.
+linkend="access-keyboard-filters"><guilabel>Keyboard Filters</guilabel></link>, <link
+linkend="access-activation-gestures"><guilabel>Activation Gestures</guilabel></link> and 
+<guilabel>Screen Reader</guilabel>.
 </para>
 
 <sect3 id="access-bell">
@@ -88,8 +89,8 @@ screen</guilabel> selection.
 </para>
 
 <para>
-The slider bar can be used to adjust the duration of the visible
-bell.  The default value is 500ms, or half a second.
+The spin box can be used to adjust the duration of the visible
+bell.  The default value is 500 msec, or half a second.
 </para>
 
 </sect3>
@@ -183,7 +184,7 @@ which allows you to edit the notifications for status changes of all keys</para>
 <listitem>
 <para>
 If this option is enabled, you must hold the key down for a
-specified length of time (adjustable with the slider) before the
+specified length of time (adjustable with the spin box) before the
 keystroke will be accepted. This helps prevent accidental key strokes.
 </para>
 </listitem>
@@ -196,7 +197,7 @@ Use system bell whenever a key is pressed/accepted/rejected
 <listitem>
 <para>
 If this option is enabled, you must wait for a specified length of time
-(configurable with the slider) before the next key press can be
+(configurable with the spin box) before the next key press can be
 accepted. This prevents accidental multiple key strokes.
 </para>
 </listitem>
