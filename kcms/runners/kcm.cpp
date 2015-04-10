@@ -49,7 +49,7 @@ SearchConfigModule::SearchConfigModule(QWidget* parent, const QVariantList& args
                                        "0.1", QString(), KAboutLicense::LGPL);
     about->addAuthor(i18n("Vishesh Handa"), QString(), "vhanda@kde.org");
     setAboutData(about);
-    setButtons(Help | Apply | Default);
+    setButtons(Apply | Default);
 
     QVBoxLayout* layout = new QVBoxLayout(this);
 
