@@ -14,8 +14,8 @@
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date>2013-12-05</date>
-<releaseinfo>&kde; 4.12</releaseinfo>
+<date>2015-04-09</date>
+<releaseinfo>Plasma 5.3</releaseinfo>
 
 <keywordset>
 <keyword>KDE</keyword>
@@ -36,11 +36,6 @@ informed on what is happening.</para>
 <para>Using this module, you can determine what &kde; does to communicate
 each event.</para>
 
-<para>This settings module consists of the two tabs <guilabel>Applications</guilabel> 
-and <guilabel>Player Settings</guilabel>.</para>
-
-<sect2 id="notify-applications">
-<title>Applications</title>
 <para>To configure a notification, simply select the application from the drop down box at the top
 of the dialog labeled <guilabel>Event source:</guilabel>.  This will lead to a list of 
 all configurable notifications for the application. The list of notifications includes 6 columns to 
@@ -80,7 +75,7 @@ the left of the notification name.  These columns (from left to right) are:</par
 
 </variablelist>
 
-<sect3><title>Change a notification</title>
+<sect2><title>Change a notification</title>
 <para>To make a change to a notification, click on the name of the notification once with the &LMB;.  The notification will be highlighted 
 and the checkboxes for all notification types are enabled.</para>
 
@@ -114,7 +109,7 @@ a message box appear in response to a system notification.  One notification doe
 <term><guilabel>Run command</guilabel></term>
 <listitem><para>If a mark is in this checkbox, a separate program will be executed when this notification is performed.  To specify the program to execute, enter the pathname in the text box to the right of the checkbox.  You can use the folder button (located to the far right of the dialog box) to browse your directory tree.</para></listitem>
 </varlistentry>
-
+<!--not in 5.3
 <varlistentry>
 <term><guilabel>Speech</guilabel></term>
 <listitem><para>If a mark is in this checkbox, &kde; will use Jovie to speak the event 
@@ -129,31 +124,12 @@ substitution strings in the text:
 </simplelist>
 </para></listitem>
 </varlistentry>
+-->
 </variablelist>
 
 <tip><para>You can use the icon columns (located to the left of the notifications) to quickly select or deselect the options. Clicking in the column with the &LMB; will toggle the notification on and off.</para></tip>
-</sect3>
 </sect2>
 
-<sect2>
-<title>Player Settings</title>
-
-<variablelist>
-<varlistentry>
-<term><guilabel>Use the &kde; sound system</guilabel></term>
-<listitem><para>If a mark is in this radio button, &kde; will play all sound notifications through the &kde; sound system.  You can adjust the volume of system notifications using the slider.</para>
-<note><para>The slider only affects &kde; system notifications.  Changes to this slider will not affect other sounds on your computer.</para></note></listitem>
-</varlistentry>
-<varlistentry>
-<term><guilabel>Use an external player</guilabel></term>
-<listitem><para>If a mark is in this radio button, &kde; will not use the &kde; sound system to play the sound.  This is a good choice if the sound format you want to use is not supported by the &kde; notification system. After checking the radio box, enter the full path and name of the program you want to use into the text field.  You can use the folder button (located along the right side) to browse the directory tree.</para></listitem>
-</varlistentry>
-<varlistentry>
-<term><guilabel>No audio output</guilabel></term>
-<listitem><para>Disables all sound notifications.</para></listitem>
-</varlistentry>
-</variablelist>
-</sect2>
 </sect1>
 
 </article>
