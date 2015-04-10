@@ -34,6 +34,7 @@
 #include <QTimer>
 
 #include <KAuthorized>
+#include <KDesktopFile>
 #include <KFileItem>
 #include <KLocalizedString>
 #include <KRun>
@@ -506,5 +507,18 @@ void Backend::presentWindows(int groupParentId)
 
     if (item && m_taskManagerItem && m_taskManagerItem->window()) {
         KWindowEffects::presentWindows(m_taskManagerItem->window()->winId(), QList<WId>::fromSet(item->winIds()));
+    }
+}
+
+void Backend::urlDropped(const QUrl& url)
+{
+    if (!url.isValid() || !url.isLocalFile()) {
+        return;
+    }
+
+    KDesktopFile desktopFile(url.toLocalFile());
+
+    if (desktopFile.hasApplicationType()) {
+        m_groupManager->addLauncher(url);
     }
 }

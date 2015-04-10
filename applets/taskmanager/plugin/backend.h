@@ -87,6 +87,7 @@ class Backend : public QObject
         void itemMove(int id, int newIndex);
         void itemGeometryChanged(QQuickItem *item, int id);
         void presentWindows(int groupParentId);
+        void urlDropped(const QUrl &url);
 
     private Q_SLOTS:
         void handleRecentDocumentAction() const;

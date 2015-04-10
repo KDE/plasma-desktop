@@ -104,7 +104,6 @@ MouseArea {
     }
 
     onReleased: {
-    console.log("RE");
         if (pressed) {
             if (!mouse.button == Qt.LeftButton) {
                 return;

@@ -285,6 +285,7 @@ Item {
         tasks.itemMove.connect(backend.itemMove);
         tasks.itemGeometryChanged.connect(backend.itemGeometryChanged);
         tasks.presentWindows.connect(backend.presentWindows);
+        mouseHandler.urlDropped.connect(backend.urlDropped);
         dragHelper.dropped.connect(resetDragSource);
     }
 }

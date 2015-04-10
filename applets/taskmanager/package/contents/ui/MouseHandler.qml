@@ -25,13 +25,16 @@ import "../code/layout.js" as LayoutManager
 import "../code/tools.js" as TaskTools
 
 Item {
+    signal urlDropped(url url)
+
     property Item target
 
     DropArea {
         id: dropHandler
 
-        preventStealing: true;
         anchors.fill: parent
+
+        preventStealing: true;
 
         property Item hoveredItem
 
@@ -64,6 +67,12 @@ Item {
         onDragLeave: {
             hoveredItem = null;
             activationTimer.stop();
+        }
+
+        onDrop: {
+            if (event.mimeData.hasUrls) {
+                parent.urlDropped(event.mimeData.url);
+            }
         }
 
         Timer {
