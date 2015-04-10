@@ -15,8 +15,8 @@
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date>2013-12-05</date>
-<releaseinfo>&kde; 4.12</releaseinfo>
+<date>2015-04-09</date>
+<releaseinfo>Plasmaa 5.3</releaseinfo>
 
 <keywordset>
 <keyword>KDE</keyword>
@@ -68,8 +68,9 @@ without opening and analyzing the format of each and every file.</para>
 <title>How to use this module</title>
 
 <para>You can start this module  
-by opening &systemsettings; and selecting <guilabel>File Associations</guilabel> in the 
-<guilabel>Common Appearance and Behavior</guilabel> category. Alternatively, you can start it by
+by opening &systemsettings; and selecting <menuchoice><guimenu>Applications</guimenu>
+<guimenuitem>File Associations</guimenuitem></menuchoice> in the 
+<guilabel>Personalization</guilabel> category. Alternatively, you can start it by
 typing <command>kcmshell5 filetypes</command> from the terminal or &krunner;.</para>
 
 <para>The file associations are organized into several categories, and
