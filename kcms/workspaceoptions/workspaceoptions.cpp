@@ -47,7 +47,7 @@ WorkspaceOptionsModule::WorkspaceOptionsModule(QWidget *parent, const QVariantLi
 
     setAboutData(about);
 
-    setButtons(Help|Apply);
+    setButtons(Apply);
 
     m_ui->setupUi(this);
 
