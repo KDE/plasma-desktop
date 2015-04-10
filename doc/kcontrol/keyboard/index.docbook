@@ -15,8 +15,8 @@
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date>2013-12-05</date>
-<releaseinfo>&kde; 4.12</releaseinfo>
+<date>2015-04-09</date>
+<releaseinfo>Plasmaa 5.3</releaseinfo>
 
 <keywordset>
 <keyword>KDE</keyword>
@@ -87,25 +87,11 @@ key will start generating keycodes.</para>
 generated while a key is pressed.</para>
 </listitem>
 </varlistentry>
-<varlistentry>
-<term><guilabel>Key click volume</guilabel></term>
-<listitem>
-<para>If supported, this option allows you to hear audible clicks from
-your computer's speakers when you press the keys on your keyboard. In
-essence, this simulates the <quote>click</quote> of a mechanical
-type-writer. You can change the loudness of the key click feedback by
-dragging the slider button. Setting the volume to 0% by moving the slider
-to the left turns off the key click.</para>
-<para>Type some characters into the <guilabel>Test area</guilabel> text box to
-verify the volume you selected.</para>
-<para>Many computers won't support this function.</para>
-<tip><para>Very few people would choose to enable this option, since it
-generally annoys everyone else in the room. However, if your heart
-yearns for the pre-soft-key era, this may help you to re-experience the
-warm sentimentality of days-gone-by.</para></tip>
-</listitem>
-</varlistentry>
 </variablelist>
+
+<para>Type some characters into the <guilabel>Test area</guilabel> text box to
+verify the settings.</para>
+<para>Many computers won't support this function.</para>
 
 </listitem>
 </varlistentry>
