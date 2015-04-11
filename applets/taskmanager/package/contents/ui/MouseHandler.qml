@@ -70,7 +70,7 @@ Item {
         }
 
         onDrop: {
-            if (event.mimeData.hasUrls) {
+            if (!tasks.dragSource && event.mimeData.hasUrls) {
                 parent.urlDropped(event.mimeData.url);
             }
         }
