@@ -14,8 +14,8 @@
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date>2013-11-05</date>
-<releaseinfo>4.12</releaseinfo>
+<date>2015-04-10</date>
+<releaseinfo>Plasma 5.3</releaseinfo>
 
 <keywordset>
 <keyword>KDE</keyword>
@@ -73,7 +73,7 @@
   Note that system schemes cannot be removed; trying to do so will display an
   error.</para>
 
-  <para>&kde; ships with several schemes. If you have an Internet connection,
+  <para>Plasma ships with several schemes. If you have an Internet connection,
   you can also browse and retrieve user-created schemes using <guibutton>Get
   New Schemes...</guibutton>.</para>
 
@@ -81,20 +81,9 @@
     <title>Importing Schemes</title>
 
     <para>You can also import schemes that you have downloaded or otherwise
-    obtained, as well as import &kde; 3 schemes. &kde; 4 color schemes are
-    named like &quot;*.colors&quot;, while &kde; 3 schemes are named like
-    &quot;*.kcsrc&quot;.</para>
+    obtained, as well as import &kde; 4 schemes named like &quot;*.colors&quot;.
+    </para>
 
-    <para>Because &kde; 4 has many more color roles than &kde;, importing a
-    &kde; 3 scheme is different from importing a &kde; 4 scheme. When a
-    &kde; 4 scheme is imported, it becomes part of your saved scheme
-    collection. When a &kde; 3 scheme is imported, the colors that exist in
-    &kde; 3 are overlaid onto the active scheme, and the result is not
-    automatically saved into your collection. After importing a &kde; 3 scheme,
-    you will likely need to adjust the colors that are new in &kde; 4, as well
-    as the state effects. For best results, before importing a &kde; 3 scheme,
-    select a similar &kde; 4 scheme (you do not need to apply the scheme before
-    importing).</para>
   </sect3>
 </sect2>
 
@@ -114,7 +103,7 @@
       users feel that it causes distracting &quot;flickering&quot; since
       windows must be repainted when they become inactive. Unlike desktop
       effects, color state effects do not require compositing support and will
-      work on all systems, however they will only work on &kde; 4 applications.
+      work on all systems, however they will only work on &kde; applications.
     </para></listitem>
     <listitem><para><guilabel>Inactive selection changes color</guilabel>
       &mdash; If checked, the current selection in elements which do not have
@@ -127,9 +116,9 @@
       color to paint the column whose information is being used to sort the
       items in the list.
     </para></listitem>
-    <listitem><para><guilabel>Apply colors to non-KDE4 applications</guilabel>
-      &mdash; If checked, &kde; will attempt to export its color scheme so that
-      non-&kde; 4 applications will use the same colors. Most applications will
+    <listitem><para><guilabel>Apply colors to non-Qt applications</guilabel>
+      &mdash; If checked, Plasma will attempt to export its color scheme so that
+      non-Qt applications will use the same colors. Most applications will
       honor the exported scheme to varying degrees, though some may have bugs
       or otherwise not honor the exported scheme.
     </para></listitem>
@@ -156,7 +145,7 @@
   are done.</para>
 
   <para>The <guilabel>Common Colors</guilabel> set, which is displayed
-  initially, is not actually a &quot;set&quot; in the sense used by &kde; (see
+  initially, is not actually a &quot;set&quot; in the sense used by Plasma (see
   next section), but presents a number of color roles in a way that makes it
   easier to edit the scheme as a whole. When creating a new color scheme, you
   will usually change these colors first, and use the other sets to tweak
@@ -176,7 +165,7 @@
   <sect3>
     <title>Color Sets</title>
 
-    <para>&kde; 4 breaks the color scheme into several sets based on the type
+    <para>Plasma breaks the color scheme into several sets based on the type
     of user interface element, as follows:</para>
     <itemizedlist>
       <listitem><para><guilabel>View</guilabel> &mdash;
