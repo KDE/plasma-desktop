@@ -256,7 +256,7 @@ Item {
             plasmoid.contextualActionsAboutToShow();
             toolBoxLoader.active = true
             // the dialog auto-closes on losing focus
-            toolBoxLoader.item.visible = true
+            toolBoxLoader.item.visible = !main.dialogWasVisible
             plasmoid.focus = true;
         }
         onReleased: {

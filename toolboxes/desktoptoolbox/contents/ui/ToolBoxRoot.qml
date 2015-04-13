@@ -49,6 +49,7 @@ Item {
     property int iconSize: units.iconSizes.small
     property int iconWidth: units.iconSizes.smallMedium
     property int iconHeight: iconWidth
+    property bool dialogWasVisible: false
 
     onWidthChanged: placeToolBoxTimer.restart();
     onHeightChanged: placeToolBoxTimer.restart();
@@ -83,7 +84,15 @@ Item {
             location: PlasmaCore.Types.Floating
             visualParent: toolBoxButton
             hideOnWindowDeactivate: true
-            mainItem: ToolBoxItem { }
+            mainItem: ToolBoxItem {
+                id: dialog
+                Timer {
+                    id: visibleTimer
+                    interval: 300
+                    onTriggered: main.dialogWasVisible = dialog.visible
+                }
+            }
+            onVisibleChanged: visibleTimer.restart();
         }
     }
 
