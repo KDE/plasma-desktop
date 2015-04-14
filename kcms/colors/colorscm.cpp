@@ -1181,6 +1181,12 @@ void KColorCm::on_useInactiveEffects_stateChanged(int state)
     inactiveSelectionEffect->setChecked(group.readEntry("ChangeSelectionColor", bool(state != Qt::Unchecked)));
     m_disableUpdates = false;
 
+    if ((state != Qt::Unchecked) && tabWidget->count() < 5) {
+        tabWidget->insertTab(4, pageInactive, i18n("Inactive"));
+    } else if ((state == Qt::Unchecked) && tabWidget->count() > 4) {
+        tabWidget->removeTab(4);
+    }
+
     emit changed(true);
 }
 
@@ -1229,6 +1235,12 @@ void KColorCm::loadOptions()
 
     KConfigGroup group(m_config, "ColorEffects:Inactive");
     useInactiveEffects->setChecked(group.readEntry("Enable", false));
+
+    if (useInactiveEffects->isChecked() && tabWidget->count() < 5) {
+        tabWidget->insertTab(4, pageInactive, i18n("Inactive"));
+    } else if (!useInactiveEffects->isChecked() && tabWidget->count() > 4) {
+        tabWidget->removeTab(4);
+    }
     // NOTE: keep this in sync with kdelibs/kdeui/colors/kcolorscheme.cpp
     // NOTE: remove extra logic from updateFromOptions and on_useInactiveEffects_stateChanged when this changes!
     inactiveSelectionEffect->setChecked(group.readEntry("ChangeSelectionColor", group.readEntry("Enable", true)));
