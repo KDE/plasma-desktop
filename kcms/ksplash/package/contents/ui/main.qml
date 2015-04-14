@@ -25,10 +25,9 @@ import QtQuick.Controls.Private 1.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 
-Rectangle {
+Item {
     implicitWidth: units.gridUnit * 20
     implicitHeight: units.gridUnit * 20
-    color: syspal.window
 
     SystemPalette {id: syspal}
     QtControls.ScrollView {

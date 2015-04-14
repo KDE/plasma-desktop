@@ -26,10 +26,9 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.kcm 1.0
 
-Rectangle {
+Item {
     implicitWidth: units.gridUnit * 20
     implicitHeight: units.gridUnit * 20
-    color: syspal.window
 
     ConfigModule.quickHelp: i18n("This module lets you configure the look of the whole workspace with some ready to go presets.")
 
