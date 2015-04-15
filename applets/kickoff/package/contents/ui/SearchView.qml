@@ -53,7 +53,9 @@ Item {
             anchors.fill: parent
             keyNavigationWraps: true
             boundsBehavior: Flickable.StopAtBounds
-            delegate: KickoffItem {}
+            delegate: KickoffItem {
+                showAppsByName: false //krunner results have the most relevant field in the "display" column, which is showAppsByName = false
+            }
             highlight: KickoffHighlight {}
             highlightMoveDuration : 0
             highlightResizeDuration: 0

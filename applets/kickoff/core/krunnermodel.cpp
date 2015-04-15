@@ -27,6 +27,7 @@
 #include <QMimeData>
 #include <QString>
 #include <QTimerEvent>
+#include <QQmlEngine>
 
 // KDE
 #include <KService>
@@ -287,6 +288,7 @@ QMimeData * KRunnerModel::mimeData(const QModelIndexList &indexes) const
         urls.populateMimeData(mimeData);
     }
 
+    QQmlEngine::setObjectOwnership(mimeData, QQmlEngine::JavaScriptOwnership);
     return mimeData;
 
 }
