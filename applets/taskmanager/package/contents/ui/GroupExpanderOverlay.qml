@@ -24,6 +24,11 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 PlasmaCore.SvgItem {
     id: arrow
 
+    anchors {
+        bottom: arrow.parent.bottom
+        horizontalCenter: iconBox.horizontalCenter
+    }
+
     states: [
         State {
             name: "top"
@@ -62,19 +67,6 @@ PlasmaCore.SvgItem {
                 anchors.bottom: undefined
                 anchors.horizontalCenter: undefined
                 anchors.verticalCenter: iconBox.verticalCenter
-            }
-        },
-        State {
-            name: "bottom"
-            when: plasmoid.location != PlasmaCore.Types.TopEdge || plasmoid.location != PlasmaCore.Types.LeftEdge || plasmoid.location != PlasmaCore.Types.RightEdge
-            AnchorChanges {
-                target: arrow
-                anchors.top: undefined
-                anchors.left: undefined
-                anchors.right: undefined
-                anchors.bottom: arrow.parent.bottom
-                anchors.horizontalCenter: iconBox.horizontalCenter
-                anchors.verticalCenter: undefined
             }
         }
     ]
