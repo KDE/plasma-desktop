@@ -76,13 +76,6 @@ Item {
         id: kwindowsystem
     }
 
-    Rectangle {
-        anchors.fill: parent
-        visible: desktop.dashboardShown
-        opacity: 0.2
-        color: "black"
-    }
-
     PlasmaCore.Dialog {
         id: sidePanel
         location: PlasmaCore.Types.LeftEdge
@@ -180,12 +173,6 @@ Item {
         if (!internal.oldWallpaper) {
             internal.oldWallpaper = wallpaper;
         }
-    }
-
-    Binding {
-        target: wallpaper
-        property: "opacity"
-        value: desktop.dashboardShown ? 0.3 : 1
     }
 
     //some properties that shouldn't be accessible from elsewhere
