@@ -50,7 +50,6 @@
 #include "kickoffadaptor.h"
 // Local
 #include "models.h"
-#include "itemhandlers.h"
 
 #include <Plasma/Applet>
 
@@ -324,8 +323,6 @@ ApplicationModel::ApplicationModel(QObject *parent, bool allowSeparators)
 
     // TODO: remove me again
     reloadMenu();
-
-    UrlItemLauncher::addGlobalHandler(UrlItemLauncher::ExtensionHandler, "desktop", new ServiceItemHandler);
 }
 
 ApplicationModel::~ApplicationModel()

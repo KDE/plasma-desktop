@@ -51,6 +51,8 @@ public:
         //      to preserve the order of the applications in the list loaded from the KConfig
         //      source
         QDateTime dateTime = QDateTime::currentDateTime();
+        // we have to make sure the artificial timestamps will never be more recent than the first run service
+        dateTime = dateTime.addSecs(-maxServices);
         foreach(const QString& application, recentApplications) {
             ServiceInfo info;
             info.storageId = application;

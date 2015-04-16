@@ -41,6 +41,7 @@
 
 // Local
 #include "models.h"
+#include "itemhandlers.h"
 
 // DBus
 #include "krunner_interface.h"
@@ -111,6 +112,7 @@ UrlItemLauncher::UrlItemLauncher(QObject *parent)
         : QObject(parent)
         , d(new Private)
 {
+    addGlobalHandler(ExtensionHandler, "desktop", new ServiceItemHandler);
 }
 
 UrlItemLauncher::~UrlItemLauncher()
