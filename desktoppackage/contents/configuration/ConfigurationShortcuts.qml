@@ -38,7 +38,7 @@ Item {
         }
         QtControls.Label {
             Layout.fillWidth: true
-            text: i18n("This shortcut will activate the applet: it will give the keyboard focus to it, and if the applet has a popup (such as the start menu), the popup will be open.")
+            text: i18nd("plasma_shell_org.kde.plasma.desktop", "This shortcut will activate the applet: it will give the keyboard focus to it, and if the applet has a popup (such as the start menu), the popup will be open.")
             wrapMode: Text.WordWrap
         }
         KeySequenceItem {
