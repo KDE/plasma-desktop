@@ -194,9 +194,9 @@ function checkLastSpacer() {
         }
        
         plasmoid.processMimeData(event.mimeData, event.x, event.y);
-        dndSpacer.parent = root;
         root.fixedWidth = 0;
         root.fixedHeight = 0;
+        containmentSizeSyncTimer.restart();
     }
 
 
@@ -435,6 +435,7 @@ function checkLastSpacer() {
         id: containmentSizeSyncTimer
         interval: 150
         onTriggered: {
+            dndSpacer.parent = root;
             currentLayout.x = (Qt.application.layoutDirection === Qt.RightToLeft) ? toolBox.width : 0;
             currentLayout.y = 0
             currentLayout.width = root.width - (isHorizontal && toolBox && !plasmoid.immutable ? toolBox.width : 0)
