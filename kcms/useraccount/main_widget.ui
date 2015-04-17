@@ -7,8 +7,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>399</width>
-    <height>557</height>
+    <width>439</width>
+    <height>671</height>
    </rect>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
@@ -235,36 +235,6 @@
     </widget>
    </item>
    <item>
-    <widget class="KButtonGroup" name="kcfg_EchoMode">
-     <property name="title">
-      <string>At Password Prompt</string>
-     </property>
-     <layout class="QVBoxLayout" name="verticalLayout_2">
-      <item>
-       <widget class="QRadioButton" name="rdbOneStar">
-        <property name="text">
-         <string>Show one bullet for each letter</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QRadioButton" name="rdbThreeStars">
-        <property name="text">
-         <string>Show three bullets for each letter</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QRadioButton" name="rdbShowPassword">
-        <property name="text">
-         <string>Show nothing</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-   </item>
-   <item>
     <spacer>
      <property name="orientation">
       <enum>Qt::Vertical</enum>
@@ -283,12 +253,6 @@
   </layout>
  </widget>
  <customwidgets>
-  <customwidget>
-   <class>KButtonGroup</class>
-   <extends>QGroupBox</extends>
-   <header>kbuttongroup.h</header>
-   <container>1</container>
-  </customwidget>
   <customwidget>
    <class>KLineEdit</class>
    <extends>QLineEdit</extends>

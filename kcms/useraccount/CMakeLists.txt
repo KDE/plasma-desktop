@@ -10,7 +10,7 @@ ki18n_wrap_ui(kcm_useraccount_PART_SRCS
     main_widget.ui
     faceDlg.ui)
 
-kconfig_add_kcfg_files(kcm_useraccount_PART_SRCS settings.kcfgc pass.kcfgc)
+kconfig_add_kcfg_files(kcm_useraccount_PART_SRCS settings.kcfgc)
 
 add_library(kcm_useraccount MODULE ${kcm_useraccount_PART_SRCS})
 
@@ -23,4 +23,3 @@ target_link_libraries(kcm_useraccount
 
 install(TARGETS kcm_useraccount DESTINATION ${PLUGIN_INSTALL_DIR})
 install(FILES kcm_useraccount.desktop DESTINATION  ${SERVICES_INSTALL_DIR})
-install(FILES kcm_useraccount.kcfg kcm_useraccount_pass.kcfg DESTINATION ${KCFG_INSTALL_DIR})

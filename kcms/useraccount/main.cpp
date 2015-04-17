@@ -38,7 +38,6 @@
 #include <kdebug.h>
 
 #include "settings.h"
-#include "pass.h"
 #include <KPluginFactory>
 #include <KPluginLoader>
 
@@ -105,7 +104,6 @@ KCMUserAccount::KCMUserAccount( QWidget *parent, const QVariantList &)
 			"will be used, for instance, in mail programs and word processors. You can "
 			"change your login password by clicking <em>Change Password...</em>.</qt>") );
 
-	addConfig( KCFGPassword::self(), this );
 	load();
 }
 
