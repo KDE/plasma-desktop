@@ -527,7 +527,7 @@ KFonts::KFonts(QWidget *parent, const QVariantList &args)
 
     // NOTE: keep in sync with kdelibs/kdeui/kernel/kglobalsettings.cpp
 
-#ifdef Q_WS_MAC
+#ifdef Q_OS_MAC
     QFont f0("Lucida Grande", 13); // general/menu/desktop
     QFont f1("Monaco", 10);
     QFont f2("Lucida Grande", 11); // toolbar
@@ -543,7 +543,7 @@ KFonts::KFonts(QWidget *parent, const QVariantList &args)
     QFont f3("Oxygen-Sans", 10); // window title
     QFont f5("Oxygen-Sans", 8); // smallestReadableFont
 
-    defaultFontList << f0 << f1 << f5 << f2 << f0 << f3 << f0;
+    defaultFontList << f0 << f1 << f5 << f2 << f0 << f3;
 
     QList<bool> fixedList;
 
@@ -582,7 +582,6 @@ KFonts::KFonts(QWidget *parent, const QVariantList &args)
     unsigned int count = 0;
 
     while (it != nameGroupKeyRc.constEnd()) {
-
         QString name = *it; it++;
         QString group = *it; it++;
         QString key = *it; it++;
