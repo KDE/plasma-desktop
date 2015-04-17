@@ -34,6 +34,7 @@ Item {
     property bool appView: false
     property bool isCurrent: listItem.ListView.view.currentIndex === index;
     property string url: model["url"]
+    property bool showAppsByName: plasmoid.configuration.showAppsByName
 
     function activate() {
         if (hasModelChildren) {
@@ -149,7 +150,7 @@ Item {
                 if (hasModelChildren) {
                     return display;
                 } else {
-                    plasmoid.configuration.showAppsByName || display.length == 0 ? (subtitle == undefined ? display : subtitle) :
+                    showAppsByName || display.length == 0 ? (subtitle == undefined ? display : subtitle) :
                                                                     display
                 }
             }
@@ -170,7 +171,7 @@ Item {
                 if (hasModelChildren) {
                     return subtitle;
                 } else {
-                    plasmoid.configuration.showAppsByName || subtitle == undefined ? (display.length != 0 ? display : subtitle) : subtitle;
+                    showAppsByName || subtitle == undefined ? (display.length != 0 ? display : subtitle) : subtitle;
                 }
             }
             opacity: isCurrent ? 0.6 : 0.3
