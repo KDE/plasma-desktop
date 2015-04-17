@@ -24,7 +24,6 @@
 // Qt
 
 // KDE
-#include <KDesktopFile>
 #include <KDirWatch>
 #include <KRecentDocument>
 #include <KLocalizedString>
@@ -100,17 +99,13 @@ public:
 
     void addRecentDocument(const QString& desktopPath, bool append) {
         // remove existing item if any
-        KDesktopFile desktopFile(desktopPath);
-        KUrl documentUrl = desktopFile.readUrl();
-
-        removeExistingItem(documentUrl.url());
+        removeExistingItem(desktopPath);
 
         QStandardItem *documentItem = StandardItemFactory::createItemForUrl(desktopPath, displayOrder);
         documentItem->setData(true, Kickoff::SubTitleMandatoryRole);
         documentItem->setData(documentTitle, Kickoff::GroupNameRole);
         itemsByPath.insert(desktopPath, documentItem);
 
-        //qDebug() << "Document item" << documentItem << "text" << documentItem->text() << "url" << documentUrl.url();
         if (append) {
             q->appendRow(documentItem);
         } else {
@@ -159,12 +154,12 @@ RecentlyUsedModel::RecentlyUsedModel(QObject *parent, RecentType recenttype, int
         d->loadRecentApplications();
 
         // listen for changes to the list of recent applications
-        connect(RecentApplications::self(), SIGNAL(applicationAdded(KService::Ptr,int)),
-                this, SLOT(recentApplicationAdded(KService::Ptr,int)));
-        connect(RecentApplications::self(), SIGNAL(applicationRemoved(KService::Ptr)),
-                this, SLOT(recentApplicationRemoved(KService::Ptr)));
-        connect(RecentApplications::self(), SIGNAL(cleared()),
-                this, SLOT(recentApplicationsCleared()));
+        connect(RecentApplications::self(), &RecentApplications::applicationAdded,
+                this, &RecentlyUsedModel::recentApplicationAdded);
+        connect(RecentApplications::self(), &RecentApplications::applicationRemoved,
+                this, &RecentlyUsedModel::recentApplicationRemoved);
+        connect(RecentApplications::self(), &RecentApplications::cleared,
+                this, &RecentlyUsedModel::recentApplicationsCleared);
     }
 
     if (recenttype != ApplicationsOnly) {
@@ -173,8 +168,9 @@ RecentlyUsedModel::RecentlyUsedModel(QObject *parent, RecentType recenttype, int
         // listen for changes to the list of recent documents
         KDirWatch *recentDocWatch = new KDirWatch(this);
         recentDocWatch->addDir(KRecentDocument::recentDocumentDirectory(), KDirWatch::WatchFiles);
-        connect(recentDocWatch, SIGNAL(created(QString)), this, SLOT(recentDocumentAdded(QString)));
-        connect(recentDocWatch, SIGNAL(deleted(QString)), this, SLOT(recentDocumentRemoved(QString)));
+        connect(recentDocWatch, &KDirWatch::created, this, &RecentlyUsedModel::recentDocumentAdded);
+        connect(recentDocWatch, &KDirWatch::deleted, this, &RecentlyUsedModel::recentDocumentRemoved);
+        connect(recentDocWatch, &KDirWatch::dirty, this, &RecentlyUsedModel::recentDocumentChanged);
     }
 }
 
@@ -233,10 +229,21 @@ void RecentlyUsedModel::recentDocumentAdded(const QString& path)
     qDebug() << "Recent document added" << path;
     d->addRecentDocument(path, false);
 }
+
 void RecentlyUsedModel::recentDocumentRemoved(const QString& path)
 {
     qDebug() << "Recent document removed" << path;
     d->removeExistingItem(path);
+}
+
+void RecentlyUsedModel::recentDocumentChanged(const QString& path)
+{
+    // filter out the noise from parent dir/temp files
+    if (!d->itemsByPath.contains(path)) {
+        return;
+    }
+    qDebug() << "Recent document changed" << path;
+    d->addRecentDocument(path, false);
 }
 
 void RecentlyUsedModel::recentApplicationAdded(KService::Ptr service, int)
