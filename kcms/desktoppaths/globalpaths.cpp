@@ -281,7 +281,7 @@ void DesktopPathConfig::save()
         if ( moveDir( desktopLocation(), QUrl::fromLocalFile( urlDesktop ), i18n("Desktop") ) )
         {
             //save in XDG path
-            const QString userDirsFile(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/user-dirs.dirs"));
+            const QString userDirsFile(QStandardPaths::writableLocation(QStandardPaths::ConfigLocation) + QStringLiteral("/user-dirs.dirs"));
             KConfig xdgUserConf( userDirsFile, KConfig::SimpleConfig );
             KConfigGroup g( &xdgUserConf, "" );
             g.writeEntry( "XDG_DESKTOP_DIR", QString("\"" + translatePath( urlDesktop ) + "\"") );
