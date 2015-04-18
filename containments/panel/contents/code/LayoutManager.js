@@ -127,6 +127,10 @@ function insertAfter(item1, item2) {
             child.parent = root;
             break;
         } else if (child === item1) {
+            //Already in position, do nothing
+            if (layout.children[i+1] === item2) {
+                return;
+            }
             break;
         }
 
@@ -174,7 +178,31 @@ function insertAtCoordinates(item, x, y) {
     }
     var child = layout.childAt(x, y);
 
-    if (!child || child === item) {
+    //if we got a place inside the space between 2 applets, we have to find it manually
+    if (!child) {
+        if (root.isHorizontal) {
+            for (var i = 0; i < layout.children.length; ++i) {
+                var candidate = layout.children[i];
+                if (x >= candidate.x && x < candidate.x + candidate.width + layout.rowSpacing) {
+                    child = candidate;
+                    break;
+                }
+            }
+        } else {
+            for (var i = 0; i < layout.children.length; ++i) {
+                var candidate = layout.children[i];
+                if (y >= candidate.x && y < candidate.y + candidate.height + layout.columnSpacing) {
+                    child = candidate;
+                    break;
+                }
+            }
+        }
+    }
+    //already in position
+    if (child === item) {
+        return;
+    }
+    if (!child) {
         child = layout.children[0];
     }
     item.parent = root;

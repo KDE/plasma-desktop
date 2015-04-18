@@ -192,7 +192,9 @@ function checkLastSpacer() {
         if (plasmoid.immutable) {
             return;
         }
+       
         plasmoid.processMimeData(event.mimeData, event.x, event.y);
+        dndSpacer.parent = root;
         root.fixedWidth = 0;
         root.fixedHeight = 0;
     }
@@ -388,6 +390,8 @@ function checkLastSpacer() {
     GridLayout {
         id: currentLayout
         property bool isLayoutHorizontal
+        rowSpacing: units.gridUnit.smallSpacing
+        columnSpacing: units.gridUnit.smallSpacing
 
         Layout.preferredWidth: {
             var width = 0;
