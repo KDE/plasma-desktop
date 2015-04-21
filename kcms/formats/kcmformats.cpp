@@ -297,13 +297,14 @@ void KCMFormats::updateExample()
     }
 
     const QString numberExample = nloc.toString(1000.01);
-    const QString timeExample = tloc.toString(QDateTime::currentDateTime());
+    const QString timeExample = i18n("%1 (long format)", tloc.toString(QDateTime::currentDateTime())) + QStringLiteral("\n") +
+            i18n("%1 (short format)", tloc.toString(QDateTime::currentDateTime(), QLocale::ShortFormat));
     const QString currencyExample = cloc.toCurrencyString(24);
 
     QString measurementSetting;
     if (mloc.measurementSystem() == QLocale::ImperialUKSystem) {
         measurementSetting = i18nc("Measurement combobox", "Imperial UK");
-    } else if (mloc.measurementSystem() == QLocale::ImperialUSSystem) {
+    } else if (mloc.measurementSystem() == QLocale::ImperialUSSystem || mloc.measurementSystem() == QLocale::ImperialSystem) {
         measurementSetting = i18nc("Measurement combobox", "Imperial US");
     } else {
         measurementSetting = i18nc("Measurement combobox", "Metric");
