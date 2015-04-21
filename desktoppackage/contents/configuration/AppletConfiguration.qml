@@ -301,6 +301,8 @@ Rectangle {
                 } else {
                     root.saveConfig();
                 }
+
+                applyButton.enabled = false;
             }
         }
 
