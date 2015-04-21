@@ -40,6 +40,17 @@ bool DragHelper::isDrag(int oldX, int oldY, int newX, int newY) const
 }
 
 void DragHelper::startDrag(QQuickItem *item, const QString &mimeType,
+    const QVariant &mimeData, const QUrl &url, const QIcon &icon)
+{
+    QMetaObject::invokeMethod(this, "startDragInternal", Qt::QueuedConnection,
+        Q_ARG(QQuickItem*, item),
+        Q_ARG(QString, mimeType),
+        Q_ARG(QVariant, mimeData),
+        Q_ARG(QUrl, url),
+        Q_ARG(QIcon, icon));
+}
+
+void DragHelper::startDragInternal(QQuickItem *item, const QString &mimeType,
     const QVariant &mimeData, const QUrl &url, const QIcon &icon) const
 {
     QList<QUrl> urlList;
