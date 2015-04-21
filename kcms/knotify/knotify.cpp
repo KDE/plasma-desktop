@@ -73,13 +73,6 @@ KCMKNotify::KCMKNotify(QWidget *parent, const QVariantList & )
     m_appCombo->setSizeAdjustPolicy( QComboBox::AdjustToContents );
     m_appCombo->setObjectName( QLatin1String( "app combo" ) );
 
-    // We want to sort the combo box
-    QSortFilterProxyModel *proxyModel = new QSortFilterProxyModel(this);
-    proxyModel->setSourceModel(new QStandardItemModel(0, 1, proxyModel));
-    // Now configure and set our sort model
-    proxyModel->setSortCaseSensitivity(Qt::CaseInsensitive);
-    m_appCombo->setModel(proxyModel);
-
     QHBoxLayout *hbox = new QHBoxLayout();
     layout->addLayout( hbox );
     hbox->addWidget( label );
