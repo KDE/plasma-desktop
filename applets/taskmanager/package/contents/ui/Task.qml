@@ -133,7 +133,7 @@ MouseArea {
     onPositionChanged: {
         if (pressX != -1 && dragHelper.isDrag(pressX, pressY, mouse.x, mouse.y)) {
             tasks.dragSource = task;
-            dragHelper.startDrag(task, model.MimeType, model.MimeData,
+            dragHelper.startDrag(tasks, model.MimeType, model.MimeData,
                 model.LauncherUrl, model.DecorationRole);
             pressX = -1;
             pressY = -1;

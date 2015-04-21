@@ -36,10 +36,14 @@ class DragHelper : public QObject
 
         Q_INVOKABLE bool isDrag(int oldX, int oldY, int newX, int newY) const;
         Q_INVOKABLE void startDrag(QQuickItem* item, const QString &mimeType,
-            const QVariant &mimeData, const QUrl &url, const QIcon &icon) const;
+            const QVariant &mimeData, const QUrl &url, const QIcon &icon);
 
     Q_SIGNALS:
         void dropped() const;
+
+    private Q_SLOTS:
+        void startDragInternal(QQuickItem* item, const QString &mimeType,
+            const QVariant &mimeData, const QUrl &url, const QIcon &icon) const;
 };
 
 #endif
