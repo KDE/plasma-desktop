@@ -7,8 +7,8 @@ configure_file (config-kcm.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-kcm.h )
 set(kcm_lookandfeel_SRCS
   kcm.cpp
   ../krdb/krdb.cpp
-  ../input/xcursor/cursortheme.cpp
-  ../input/xcursor/xcursortheme.cpp
+  ../cursortheme/xcursor/cursortheme.cpp
+  ../cursortheme/xcursor/xcursortheme.cpp
 )
 
 set(klauncher_xml ${KINIT_DBUS_INTERFACES_DIR}/kf5_org.kde.KLauncher.xml)

@@ -19,7 +19,7 @@
 
 #include "kcm.h"
 #include "../krdb/krdb.h"
-#include "../input/xcursor/xcursortheme.h"
+#include "../cursortheme/xcursor/xcursortheme.h"
 #include "config-kcm.h"
 #include <klauncher_iface.h>
 

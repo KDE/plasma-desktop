@@ -50,6 +50,7 @@ add_subdirectory(useraccount)
 add_subdirectory(workspaceoptions)
 add_subdirectory(baloo)
 add_subdirectory(solid_actions)
+add_subdirectory(cursortheme)
 
 if (SYNAPTICS_FOUND)
     add_subdirectory(touchpad)
