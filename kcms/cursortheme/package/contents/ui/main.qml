@@ -85,8 +85,13 @@ Item {
                                 height: nativeHeight
                                 pixmap: model.decoration
                             }
-                            QtControls.Label {
-                                text: model.display
+                            Column {
+                                QtControls.Label {
+                                    text: model.display
+                                }
+                                QtControls.Label {
+                                    text: model.description
+                                }
                             }
                         }
                     }

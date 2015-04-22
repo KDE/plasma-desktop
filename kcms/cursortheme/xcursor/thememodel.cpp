@@ -50,6 +50,14 @@ CursorThemeModel::~CursorThemeModel()
    list.clear();
 }
 
+QHash<int, QByteArray> CursorThemeModel::roleNames() const
+{
+    QHash<int, QByteArray> roleNames = QAbstractTableModel::roleNames();
+    roleNames[CursorTheme::DisplayDetailRole] = "description";
+
+    return roleNames;
+}
+
 void CursorThemeModel::refreshList()
 {
     beginResetModel();
