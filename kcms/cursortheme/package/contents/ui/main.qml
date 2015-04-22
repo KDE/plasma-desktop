@@ -104,6 +104,9 @@ Item {
                 model: kcm.sizesModel
                 textRole: "display"
                 enabled: kcm.canResize
+                onCurrentTextChanged: {
+                    kcm.preferredSize = parseInt(sizeCombo.currentText) !== NaN ? parseInt(sizeCombo.currentText) : 0
+                }
             }
             QtControls.Button {
                 Layout.fillWidth: true

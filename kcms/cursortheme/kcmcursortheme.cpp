@@ -43,6 +43,8 @@
 #include <X11/Xlib.h>
 #include <X11/Xcursor/Xcursor.h>
 
+#include <klauncher_iface.h>
+
 #ifdef HAVE_XFIXES
 #  include <X11/extensions/Xfixes.h>
 #endif
@@ -51,11 +53,13 @@ K_PLUGIN_FACTORY_WITH_JSON(CursorThemeConfigFactory, "kcm_cursortheme.json", reg
 
 CursorThemeConfig::CursorThemeConfig(QObject *parent, const QVariantList &args)
     : KQuickAddons::ConfigModule(parent, args),
+      m_appliedSize(0),
+      m_preferredSize(0),
+      m_selectedThemeRow(-1),
       m_canInstall(true),
       m_canRemove(true),
       m_canResize(true),
-      m_canConfigure(true),
-      m_selectedThemeRow(-1)
+      m_canConfigure(true)
 {
     qmlRegisterType<PreviewWidget>("org.kde.private.kcm_cursortheme", 1, 0, "PreviewWidget");
     qmlRegisterType<SortProxyModel>();
@@ -173,6 +177,23 @@ int CursorThemeConfig::selectedThemeRow() const
     return m_selectedThemeRow;
 }
 
+void CursorThemeConfig::setPreferredSize(int size)
+{
+    if (m_preferredSize == size) {
+        return;
+    }
+
+    m_preferredSize = size;
+    emit preferredSizeChanged();
+    setNeedsSave(true);
+}
+
+int CursorThemeConfig::preferredSize() const
+{
+    return m_preferredSize;
+}
+
+
 
 QAbstractItemModel *CursorThemeConfig::cursorsModel()
 {
@@ -240,24 +261,24 @@ void CursorThemeConfig::updateSizeComboBox()
             };
 
             // select an item
-            int selectItem = comboBoxList.indexOf(preferredSize);
-            if (selectItem < 0)  // preferredSize not available for this theme
+            int selectItem = comboBoxList.indexOf(m_preferredSize);
+            if (selectItem < 0)  // m_preferredSize not available for this theme
             {
-                /* Search the value next to preferredSize. The first entry (0)
-                   is ignored. (If preferredSize would have been 0, then we
-                   would had found it yet. As preferredSize is not 0, we won't
+                /* Search the value next to m_preferredSize. The first entry (0)
+                   is ignored. (If m_preferredSize would have been 0, then we
+                   would had found it yet. As m_preferredSize is not 0, we won't
                    default to "automatic size".)*/
                 int j;
                 int distance;
                 int smallestDistance;
                 selectItem = 1;
                 j = comboBoxList.value(selectItem);
-                smallestDistance = j < preferredSize ? preferredSize - j : j - preferredSize;
+                smallestDistance = j < m_preferredSize ? m_preferredSize - j : j - m_preferredSize;
                 for (int i = 2; i < comboBoxList.size(); ++i)
                 {
                     j = comboBoxList.value(i);
-                    distance = j < preferredSize ? preferredSize - j : j - preferredSize;
-                    if (distance < smallestDistance || (distance == smallestDistance && j > preferredSize))
+                    distance = j < m_preferredSize ? m_preferredSize - j : j - m_preferredSize;
+                    if (distance < smallestDistance || (distance == smallestDistance && j > m_preferredSize))
                     {
                         smallestDistance = distance;
                         selectItem = i;
@@ -266,6 +287,7 @@ void CursorThemeConfig::updateSizeComboBox()
             };
             //TODO
             //sizeComboBox->setCurrentIndex(selectItem);
+            setPreferredSize(selectItem);
         };
     };
     //sizeComboBox->setIconSize(QSize(maxIconWidth, maxIconHeight));
@@ -280,37 +302,6 @@ void CursorThemeConfig::updateSizeComboBox()
     };
 
 }
-
-
-int CursorThemeConfig::selectedSize() const
-{
-    return 0;
-//TODO
-#if 0
-  if (sizeComboBox->isEnabled() && sizeComboBox->currentIndex() >= 0)
-      return sizeComboBox->itemData(sizeComboBox->currentIndex(), Qt::UserRole).toInt();
-  return 0;
-#endif
-}
-
-
-void CursorThemeConfig::updatePreview()
-{
-//TODO
-#if 0
-    QModelIndex selected = selectedIndex();
-
-    if (selected.isValid()) {
-        const CursorTheme *theme = m_proxyModel->theme(selected);
-        preview->setTheme(theme, selectedSize());
-        setCanRemove(theme->isWritable());
-    } else {
-        preview->setTheme(NULL, 0);
-        setCanRemove(false);
-    };
-#endif
-}
-
 
 bool CursorThemeConfig::applyTheme(const CursorTheme *theme, const int size)
 {
@@ -374,7 +365,6 @@ bool CursorThemeConfig::applyTheme(const CursorTheme *theme, const int size)
 void CursorThemeConfig::save()
 {
     const CursorTheme *theme = selectedIndex().isValid() ? m_proxyModel->theme(selectedIndex()) : NULL;
-    const int size = selectedSize();
 
     KConfig config("kcminputrc");
     KConfigGroup c(&config, "Mouse");
@@ -382,11 +372,10 @@ void CursorThemeConfig::save()
     {
         c.writeEntry("cursorTheme", theme->name());
     };
-    c.writeEntry("cursorSize", size);
-    preferredSize = size;
+    c.writeEntry("cursorSize", m_preferredSize);
     c.sync();
 
-    if (!applyTheme(theme, size))
+    if (!applyTheme(theme, m_preferredSize))
     {
         KMessageBox::information(0,
                                  i18n("You have to restart KDE for these changes to take effect."),
@@ -394,7 +383,7 @@ void CursorThemeConfig::save()
     }
 
     m_appliedIndex = selectedIndex();
-    m_appliedSize = size;
+    m_appliedSize = m_preferredSize;
     setNeedsSave(false);
 }
 
@@ -430,25 +419,14 @@ void CursorThemeConfig::load()
     // Load cursor size
     int size = cg.readEntry("cursorSize", 0);
     if (size <= 0)
-        preferredSize = 0;
+        m_preferredSize = 0;
     else
-        preferredSize = size;
+        m_preferredSize = size;
     updateSizeComboBox(); // This handles also the kiosk mode
 
     m_appliedSize = size;
 
     const CursorTheme *theme = m_proxyModel->theme(m_appliedIndex);
-
-    if (m_appliedIndex.isValid())
-    {
-        // Select the current theme
-//TODO
-/*        view->setCurrentIndex(m_appliedIndex);
-        view->scrollTo(m_appliedIndex, QListView::PositionAtCenter);
-
-        // Update the preview widget as well
-        preview->setTheme(theme, size);*/
-    }
 
     if (!theme || !theme->isWritable()) {
         setCanRemove(false);
@@ -462,7 +440,7 @@ void CursorThemeConfig::defaults()
 {
     QModelIndex defaultIndex = m_proxyModel->findIndex("breeze_cursors");
     setSelectedThemeRow(defaultIndex.row());
-    preferredSize = 0;
+    m_preferredSize = 0;
     updateSizeComboBox();
     setNeedsSave(true);
 }
@@ -471,7 +449,6 @@ void CursorThemeConfig::defaults()
 void CursorThemeConfig::selectionChanged()
 {
     updateSizeComboBox();
-    updatePreview();
 
     setNeedsSave(m_appliedIndex != selectedIndex());
 }
@@ -479,23 +456,6 @@ void CursorThemeConfig::selectionChanged()
 QModelIndex CursorThemeConfig::selectedIndex() const
 {
     return m_proxyModel->index(m_selectedThemeRow, 0);
-}
-
-void CursorThemeConfig::sizeChanged()
-{
-    updatePreview();
-    setNeedsSave(selectedSize() != m_appliedSize);
-}
-
-void CursorThemeConfig::preferredSizeChanged()
-{
-    //TODO
-    /*
-    int index = sizeComboBox->currentIndex();
-    if (index >= 0)
-        preferredSize = sizeComboBox->itemData(index, Qt::UserRole).toInt();
-    else
-        preferredSize = 0;*/
 }
 
 void CursorThemeConfig::getNewClicked()

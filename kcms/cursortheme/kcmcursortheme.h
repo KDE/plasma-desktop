@@ -37,6 +37,7 @@ class CursorThemeConfig : public KQuickAddons::ConfigModule
     Q_PROPERTY(QAbstractItemModel *cursorsModel READ cursorsModel CONSTANT)
     Q_PROPERTY(QAbstractItemModel *sizesModel READ sizesModel CONSTANT)
     Q_PROPERTY(int selectedThemeRow READ selectedThemeRow WRITE setSelectedThemeRow NOTIFY selectedThemeRowChanged)
+    Q_PROPERTY(int preferredSize READ preferredSize WRITE setPreferredSize NOTIFY preferredSizeChanged)
 
 public:
     CursorThemeConfig(QObject *parent, const QVariantList &);
@@ -63,6 +64,11 @@ public:
     int selectedThemeRow() const;
     void setSelectedThemeRow(int row);
 
+    /** @returns 0 if in the UI "automatic size" is selected, otherwise
+                    returns the custom size. */
+    int preferredSize() const;
+    void setPreferredSize(int size);
+
     QAbstractItemModel *cursorsModel();
     QAbstractItemModel *sizesModel();
 
@@ -72,6 +78,7 @@ Q_SIGNALS:
     void canResizeChanged();
     void canConfigureChanged();
     void selectedThemeRowChanged();
+    void preferredSizeChanged();
 
 public Q_SLOTS:
     void getNewClicked();
@@ -80,11 +87,6 @@ public Q_SLOTS:
 
 private Q_SLOTS:
     void selectionChanged();
-    /** Updates the preview. If the size has changed, it also emits changed() */
-    void sizeChanged();
-    /** Sets #preferredSize to the item that is currently selected in sizeComboBox.
-        If none is selected, it is set to 0. */
-    void preferredSizeChanged();
     /** Updates the size combo box. It loads the size list of the selected cursor
         theme with the corresponding icons and chooses an appropriate entry. It
         enables the combo box and the label if the theme provides more than one
@@ -94,18 +96,6 @@ private Q_SLOTS:
 
 
 private:
-    /** @returns 0 if in the UI "automatic size" is selected, otherwise
-                    returns the custom size. */
-    int selectedSize() const;
-    /** Holds the last size that was choosen by the user. Example: The user chooses
-        theme1 which provides the sizes 24 and 36. He chooses 36. preferredSize gets
-        set to 36. Now, he switchs to theme2 which provides the sizes 30 and 40.
-        preferredSize still is 36, so the UI will default to 40, which is next to 36.
-        Now, he chooses theme3 which provides the sizes 34 and 44. preferredSize is
-        still 36, so the UI defaults to 34. Now the user changes manually to 44. This
-        will also change preferredSize. */
-    int preferredSize;
-    void updatePreview();
     QModelIndex selectedIndex() const;
     bool installThemes(const QString &file);
     /** Applies a given theme, using XFixes, XCursor and KGlobalSettings.
@@ -126,6 +116,15 @@ private:
     int m_appliedSize;
     // This index refers to the CursorThemeModel, not the proxy or the view
     QPersistentModelIndex m_appliedIndex;
+
+/** Holds the last size that was choosen by the user. Example: The user chooses
+    theme1 which provides the sizes 24 and 36. He chooses 36. preferredSize gets
+    set to 36. Now, he switchs to theme2 which provides the sizes 30 and 40.
+    preferredSize still is 36, so the UI will default to 40, which is next to 36.
+    Now, he chooses theme3 which provides the sizes 34 and 44. preferredSize is
+    still 36, so the UI defaults to 34. Now the user changes manually to 44. This
+    will also change preferredSize. */
+    int m_preferredSize;
 
     int m_selectedThemeRow;
     bool m_canInstall;
