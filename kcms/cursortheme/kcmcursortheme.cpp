@@ -19,7 +19,6 @@
 #include "kcmcursortheme.h"
 
 #include "xcursor/thememodel.h"
-#include "xcursor/itemdelegate.h"
 #include "xcursor/sortproxymodel.h"
 #include "xcursor/cursortheme.h"
 #include "xcursor/previewwidget.h"

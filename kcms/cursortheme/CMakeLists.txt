@@ -9,7 +9,6 @@ if(X11_Xcursor_FOUND)
     xcursor/cursortheme.cpp
     xcursor/xcursortheme.cpp
     xcursor/previewwidget.cpp
-    xcursor/itemdelegate.cpp
     xcursor/sortproxymodel.cpp
     ../krdb/krdb.cpp )
   include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/xcursor/ )
