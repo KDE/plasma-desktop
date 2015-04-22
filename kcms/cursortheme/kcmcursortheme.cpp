@@ -24,25 +24,18 @@
 
 #include <QVBoxLayout>
 
-K_PLUGIN_FACTORY(CursorThemeConfigFactory,
-    registerPlugin<CursorThemeConfig>();
-)
-K_EXPORT_PLUGIN(CursorThemeConfigFactory("kcm_cursortheme", "kcminput"))
+K_PLUGIN_FACTORY_WITH_JSON(CursorThemeConfigFactory, "cursortheme.json", registerPlugin<CursorThemeConfig>();)
 
-
-CursorThemeConfig::CursorThemeConfig(QWidget *parent, const QVariantList &args)
-    : KCModule(parent, args)
+CursorThemeConfig::CursorThemeConfig(QObject *parent, const QVariantList &args)
+    : KQuickAddons::ConfigModule(parent, args)
 {
-    QLayout *layout = new QVBoxLayout(this);
-    layout->setMargin(0);
-
-    themepage = new ThemePage(this);
+    themepage = new ThemePage();
     connect(themepage, SIGNAL(changed(bool)), SLOT(changed()));
-    layout->addWidget(themepage);
 
     KAboutData* aboutData = new KAboutData(QStringLiteral("kcm_cursortheme"), i18n("Cursor Theme"),
         QStringLiteral("1.0"), QString(), KAboutLicense::GPL, i18n("(c) 2003-2007 Fredrik Höglund"));
     aboutData->addAuthor(i18n("Fredrik Höglund"));
+    aboutData->addAuthor(i18n("Marco Martin"));
     setAboutData(aboutData);
 }
 
@@ -54,19 +47,19 @@ CursorThemeConfig::~CursorThemeConfig()
 void CursorThemeConfig::load()
 {
     themepage->load();
-    emit changed(false);
+    setNeedsSave(false);
 }
 
 void CursorThemeConfig::save()
 {
     themepage->save();
-    emit changed(false);
+    setNeedsSave(false);
 }
 
 void CursorThemeConfig::defaults()
 {
     themepage->defaults();
-    changed();
+    setNeedsSave(true);
 }
 
 #include "kcmcursortheme.moc"

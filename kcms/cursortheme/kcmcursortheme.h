@@ -19,15 +19,15 @@
 #ifndef KCMCURSORTHEME_H
 #define KCMCURSORTHEME_H
 
-#include <KCModule>
+#include <KQuickAddons/ConfigModule>
 #include "themepage.h"
 
-class CursorThemeConfig : public KCModule
+class CursorThemeConfig : public KQuickAddons::ConfigModule
 {
     Q_OBJECT
 
 public:
-    CursorThemeConfig(QWidget *parent, const QVariantList &);
+    CursorThemeConfig(QObject *parent, const QVariantList &);
     ~CursorThemeConfig();
 
 public:

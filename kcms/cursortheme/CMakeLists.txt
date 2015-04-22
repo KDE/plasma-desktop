@@ -40,6 +40,7 @@ target_link_libraries(kcm_cursortheme
     KF5::KIOWidgets
     KF5::KDELibs4Support
     KF5::NewStuff
+    KF5::QuickAddons
     ${X11_LIBRARIES}
     XCB::XCB
 )
@@ -53,9 +54,12 @@ endif ()
 
 install(TARGETS kcm_cursortheme  DESTINATION ${PLUGIN_INSTALL_DIR} )
 
+kcoreaddons_desktop_to_json(kcm_cursortheme "kcm_cursortheme.desktop")
 
 ########### install files ###############
 
-install( FILES cursortheme.desktop  DESTINATION  ${SERVICES_INSTALL_DIR} )
+install( FILES kcm_cursortheme.desktop  DESTINATION  ${SERVICES_INSTALL_DIR} )
 install( FILES xcursor/xcursor.knsrc DESTINATION  ${CONFIG_INSTALL_DIR} )
+
+kpackage_install_package(package kcm_cursortheme kcms)
 
