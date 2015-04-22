@@ -31,6 +31,7 @@ add_library(kcm_cursortheme MODULE ${kcm_cursortheme_PART_SRCS})
 target_link_libraries(kcm_cursortheme
     Qt5::DBus
     Qt5::X11Extras
+    Qt5::Quick
     KF5::Archive
     KF5::KCMUtils
     KF5::I18n

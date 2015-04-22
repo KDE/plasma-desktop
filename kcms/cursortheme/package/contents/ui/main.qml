@@ -26,6 +26,8 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.kcm 1.0
 
+import org.kde.private.kcm_cursortheme 1.0
+
 Item {
     implicitWidth: units.gridUnit * 20
     implicitHeight: units.gridUnit * 20
@@ -41,41 +43,52 @@ Item {
 
     RowLayout {
         anchors.fill: parent
-        QtControls.ScrollView {
-            Rectangle {
-                anchors.fill: parent
-                z: -1
-            }
+        ColumnLayout {
             Layout.fillWidth: true
             Layout.fillHeight: true
-            frameVisible: true
-            ListView {
-                id: view
-                model: kcm.cursorsModel
-                highlightMoveDuration: 0
-                highlightResizeDuration: 0
-                onCurrentIndexChanged: {
-                    kcm.selectedThemeRow = currentIndex;
+            PreviewWidget {
+                Layout.alignment: Qt.AlignHCenter
+                Layout.minimumWidth: 400
+                Layout.minimumHeight: 40
+                themeModel: kcm.cursorsModel
+                currentIndex: view.currentIndex
+            }
+            QtControls.ScrollView {
+                Rectangle {
+                    anchors.fill: parent
+                    z: -1
                 }
-                delegate: MouseArea {
-                    onClicked: view.currentIndex = index
-                    width: view.width
-                    height: childrenRect.height
-                    Row {
-                    //    height: 48
+                Layout.fillWidth: true
+                Layout.fillHeight: true
+                frameVisible: true
+                ListView {
+                    id: view
+                    model: kcm.cursorsModel
+                    highlightMoveDuration: 0
+                    highlightResizeDuration: 0
+                    onCurrentIndexChanged: {
+                        kcm.selectedThemeRow = currentIndex;
+                    }
+                    delegate: MouseArea {
+                        onClicked: view.currentIndex = index
                         width: view.width
-                        QPixmapItem {
-                            width: nativeWidth
-                            height: nativeHeight
-                            pixmap: model.decoration
-                        }
-                        QtControls.Label {
-                            text: model.display
+                        height: childrenRect.height
+                        Row {
+                        //    height: 48
+                            width: view.width
+                            QPixmapItem {
+                                width: nativeWidth
+                                height: nativeHeight
+                                pixmap: model.decoration
+                            }
+                            QtControls.Label {
+                                text: model.display
+                            }
                         }
                     }
-                }
-                highlight: Rectangle {
-                    color: syspal.highlight
+                    highlight: Rectangle {
+                        color: syspal.highlight
+                    }
                 }
             }
         }

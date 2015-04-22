@@ -34,6 +34,7 @@
  */
 class SortProxyModel : public QSortFilterProxyModel
 {
+    Q_OBJECT
     public:
         SortProxyModel(QObject *parent = 0) : QSortFilterProxyModel(parent) {}
         ~SortProxyModel() {}

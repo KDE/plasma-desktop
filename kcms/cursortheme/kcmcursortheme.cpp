@@ -22,6 +22,7 @@
 #include "xcursor/itemdelegate.h"
 #include "xcursor/sortproxymodel.h"
 #include "xcursor/cursortheme.h"
+#include "xcursor/previewwidget.h"
 
 #include <KAboutData>
 #include <KPluginFactory>
@@ -57,6 +58,8 @@ CursorThemeConfig::CursorThemeConfig(QObject *parent, const QVariantList &args)
       m_canConfigure(true),
       m_selectedThemeRow(-1)
 {
+    qmlRegisterType<PreviewWidget>("org.kde.private.kcm_cursortheme", 1, 0, "PreviewWidget");
+    qmlRegisterType<SortProxyModel>();
 
     KAboutData* aboutData = new KAboutData(QStringLiteral("kcm_cursortheme"), i18n("Cursor Theme"),
         QStringLiteral("1.0"), QString(), KAboutLicense::GPL, i18n("(c) 2003-2007 Fredrik Höglund"));
