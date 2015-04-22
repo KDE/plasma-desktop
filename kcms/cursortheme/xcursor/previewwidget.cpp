@@ -120,7 +120,8 @@ QRect PreviewCursor::rect() const
 
 PreviewWidget::PreviewWidget(QQuickItem *parent)
         : QQuickPaintedItem(parent),
-          m_currentIndex(-1)
+          m_currentIndex(-1),
+          m_currentSize(0)
 {
     setAcceptHoverEvents(true);
     current = NULL;
@@ -161,7 +162,7 @@ void PreviewWidget::setCurrentIndex(int idx)
         return;
     }
     const CursorTheme *theme = m_themeModel->theme(m_themeModel->index(idx, 0));
-    setTheme(theme, 0);
+    setTheme(theme, m_currentSize);
 }
 
 int PreviewWidget::currentIndex() const
@@ -169,7 +170,28 @@ int PreviewWidget::currentIndex() const
     return m_currentIndex;
 }
 
-QSize PreviewWidget::sizeHint() const
+void PreviewWidget::setCurrentSize(int size)
+{
+    if (m_currentSize == size) {
+        return;
+    }
+
+    m_currentSize = size;
+    emit currentSizeChanged();
+
+    if (!m_themeModel) {
+        return;
+    }
+    const CursorTheme *theme = m_themeModel->theme(m_themeModel->index(m_currentIndex, 0));
+    setTheme(theme, size);
+}
+
+int PreviewWidget::currentSize() const
+{
+    return m_currentSize;
+}
+
+void PreviewWidget::updateImplicitSize()
 {
     qreal totalWidth = 0;
     qreal maxHeight = 0;
@@ -183,7 +205,8 @@ QSize PreviewWidget::sizeHint() const
     totalWidth += (list.count() - 1) * cursorSpacing;
     maxHeight = qMax(maxHeight, widgetMinHeight);
 
-    return QSize(qMax(totalWidth, widgetMinWidth), qMax(height(), maxHeight));
+    setImplicitWidth(qMax(totalWidth, widgetMinWidth));
+    setImplicitHeight(qMax(height(), maxHeight));
 }
 
 
@@ -191,7 +214,7 @@ void PreviewWidget::layoutItems()
 {
     if (!list.isEmpty())
     {
-        QSize size = sizeHint();
+        QSize size(implicitWidth(), implicitHeight());
         int cursorWidth = size.width() / list.count();
         int nextX = (width() - size.width()) / 2;
 
@@ -218,8 +241,7 @@ void PreviewWidget::setTheme(const CursorTheme *theme, const int size)
             list << new PreviewCursor(theme, cursor_names[i], size);
 
         needLayout = true;
-        //TODO
-        //updateGeometry();
+        updateImplicitSize();
     }
 
     current = NULL;

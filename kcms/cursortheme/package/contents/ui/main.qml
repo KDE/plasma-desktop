@@ -48,10 +48,14 @@ Item {
             Layout.fillHeight: true
             PreviewWidget {
                 Layout.alignment: Qt.AlignHCenter
-                Layout.minimumWidth: 400
-                Layout.minimumHeight: 40
+                Layout.minimumWidth: implicitWidth
+                Layout.minimumHeight: implicitHeight
+                Layout.maximumWidth: Layout.minimumWidth
+                Layout.maximumHeight: Layout.minimumHeight
                 themeModel: kcm.cursorsModel
                 currentIndex: view.currentIndex
+                //The ComboBox component is a disaster
+                currentSize: parseInt(sizeCombo.currentText) !== NaN ? parseInt(sizeCombo.currentText) : 0
             }
             QtControls.ScrollView {
                 Rectangle {
@@ -95,6 +99,7 @@ Item {
 
         ColumnLayout {
             QtControls.ComboBox {
+                id: sizeCombo
                 Layout.fillWidth: true
                 model: kcm.sizesModel
                 textRole: "display"

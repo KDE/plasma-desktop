@@ -31,6 +31,7 @@ class PreviewWidget : public QQuickPaintedItem
     Q_OBJECT
     Q_PROPERTY(SortProxyModel *themeModel READ themeModel WRITE setThemeModel NOTIFY themeModelChanged)
     Q_PROPERTY(int currentIndex READ currentIndex WRITE setCurrentIndex NOTIFY currentIndexChanged)
+    Q_PROPERTY(int currentSize READ currentSize WRITE setCurrentSize NOTIFY currentSizeChanged)
 
 
     public:
@@ -39,7 +40,7 @@ class PreviewWidget : public QQuickPaintedItem
 
         void setTheme(const CursorTheme *theme, const int size);
         void setUseLables(bool);
-        QSize sizeHint() const;
+        void updateImplicitSize();
 
         void setThemeModel(SortProxyModel *themeModel);
         SortProxyModel *themeModel();
@@ -47,9 +48,13 @@ class PreviewWidget : public QQuickPaintedItem
         void setCurrentIndex(int idx);
         int currentIndex() const;
 
+        void setCurrentSize(int size);
+        int currentSize() const;
+
     Q_SIGNALS:
         void themeModelChanged();
         void currentIndexChanged();
+        void currentSizeChanged();
 
     protected:
         void paint(QPainter *);
@@ -64,6 +69,7 @@ class PreviewWidget : public QQuickPaintedItem
         bool needLayout:1;
         QPointer<SortProxyModel> m_themeModel;
         int m_currentIndex;
+        int m_currentSize;
 };
 
 #endif // PREVIEWWIDGET_H
