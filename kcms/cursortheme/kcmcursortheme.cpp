@@ -16,12 +16,15 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
+#include <config-X11.h>
+
 #include "kcmcursortheme.h"
 
 #include "xcursor/thememodel.h"
 #include "xcursor/sortproxymodel.h"
 #include "xcursor/cursortheme.h"
 #include "xcursor/previewwidget.h"
+#include "../krdb/krdb.h"
 
 #include <KAboutData>
 #include <KPluginFactory>
@@ -34,6 +37,7 @@
 #include <KIO/DeleteJob>
 #include <kio/netaccess.h>
 #include <KTar>
+#include <KGlobalSettings>
 
 #include <KNewStuff3/KNS3/DownloadDialog>
 
