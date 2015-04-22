@@ -21,6 +21,8 @@
 
 #include <KQuickAddons/ConfigModule>
 
+class QStandardItemModel;
+
 class CursorThemeModel;
 class SortProxyModel;
 class CursorTheme;
@@ -32,6 +34,9 @@ class CursorThemeConfig : public KQuickAddons::ConfigModule
     Q_PROPERTY(bool canRemove READ canRemove WRITE setCanRemove NOTIFY canRemoveChanged)
     Q_PROPERTY(bool canResize READ canResize WRITE setCanResize NOTIFY canResizeChanged)
     Q_PROPERTY(bool canConfigure READ canConfigure WRITE setCanConfigure NOTIFY canConfigureChanged)
+    Q_PROPERTY(QAbstractItemModel *cursorsModel READ cursorsModel CONSTANT)
+    Q_PROPERTY(QAbstractItemModel *sizesModel READ sizesModel CONSTANT)
+    Q_PROPERTY(int selectedThemeRow READ selectedThemeRow WRITE setSelectedThemeRow NOTIFY selectedThemeRowChanged)
 
 public:
     CursorThemeConfig(QObject *parent, const QVariantList &);
@@ -55,11 +60,18 @@ public:
     bool canConfigure() const;
     void setCanConfigure(bool can);
 
+    int selectedThemeRow() const;
+    void setSelectedThemeRow(int row);
+
+    QAbstractItemModel *cursorsModel();
+    QAbstractItemModel *sizesModel();
+
 Q_SIGNALS:
     void canInstallChanged();
     void canRemoveChanged();
     void canResizeChanged();
     void canConfigureChanged();
+    void selectedThemeRowChanged();
 
 public Q_SLOTS:
     void getNewClicked();
@@ -109,11 +121,13 @@ private:
 
     CursorThemeModel *m_model;
     SortProxyModel *m_proxyModel;
+    QStandardItemModel *m_sizesModel;
 
     int m_appliedSize;
     // This index refers to the CursorThemeModel, not the proxy or the view
     QPersistentModelIndex m_appliedIndex;
 
+    int m_selectedThemeRow;
     bool m_canInstall;
     bool m_canRemove;
     bool m_canResize;

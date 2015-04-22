@@ -50,7 +50,7 @@ if (X11_Xfixes_FOUND)
    target_link_libraries(kcm_cursortheme ${X11_Xfixes_LIB})
 endif ()
 
-install(TARGETS kcm_cursortheme  DESTINATION ${PLUGIN_INSTALL_DIR} )
+install(TARGETS kcm_cursortheme  DESTINATION ${PLUGIN_INSTALL_DIR}/kcms )
 
 kcoreaddons_desktop_to_json(kcm_cursortheme "kcm_cursortheme.desktop")
 

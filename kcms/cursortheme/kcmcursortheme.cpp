@@ -38,6 +38,7 @@
 #include <KNewStuff3/KNS3/DownloadDialog>
 
 #include <QX11Info>
+#include <QStandardItemModel>
 
 #include <X11/Xlib.h>
 #include <X11/Xcursor/Xcursor.h>
@@ -46,14 +47,15 @@
 #  include <X11/extensions/Xfixes.h>
 #endif
 
-K_PLUGIN_FACTORY_WITH_JSON(CursorThemeConfigFactory, "cursortheme.json", registerPlugin<CursorThemeConfig>();)
+K_PLUGIN_FACTORY_WITH_JSON(CursorThemeConfigFactory, "kcm_cursortheme.json", registerPlugin<CursorThemeConfig>();)
 
 CursorThemeConfig::CursorThemeConfig(QObject *parent, const QVariantList &args)
     : KQuickAddons::ConfigModule(parent, args),
       m_canInstall(true),
       m_canRemove(true),
       m_canResize(true),
-      m_canConfigure(true)
+      m_canConfigure(true),
+      m_selectedThemeRow(-1)
 {
 
     KAboutData* aboutData = new KAboutData(QStringLiteral("kcm_cursortheme"), i18n("Cursor Theme"),
@@ -68,6 +70,8 @@ CursorThemeConfig::CursorThemeConfig(QObject *parent, const QVariantList &args)
     m_proxyModel->setSourceModel(m_model);
     m_proxyModel->setFilterCaseSensitivity(Qt::CaseSensitive);
     m_proxyModel->sort(NameColumn, Qt::AscendingOrder);
+
+    m_sizesModel = new QStandardItemModel(this);
 
     // Disable the install button if we can't install new themes to ~/.icons,
     // or Xcursor isn't set up to look for cursor themes there.
@@ -141,6 +145,34 @@ bool CursorThemeConfig::canConfigure() const
     return m_canConfigure;
 }
 
+void CursorThemeConfig::setSelectedThemeRow(int row)
+{
+    if (m_selectedThemeRow == row) {
+        return;
+    }
+
+    m_selectedThemeRow = row;
+    emit selectedThemeRowChanged();
+    setNeedsSave(true);
+    updateSizeComboBox();
+}
+
+int CursorThemeConfig::selectedThemeRow() const
+{
+    return m_selectedThemeRow;
+}
+
+
+QAbstractItemModel *CursorThemeConfig::cursorsModel()
+{
+    return m_proxyModel;
+}
+
+QAbstractItemModel *CursorThemeConfig::sizesModel()
+{
+    return m_sizesModel;
+}
+
 bool CursorThemeConfig::iconsIsWritable() const
 {
     const QFileInfo icons = QFileInfo(QDir::homePath() + "/.icons");
@@ -153,9 +185,9 @@ bool CursorThemeConfig::iconsIsWritable() const
 
 void CursorThemeConfig::updateSizeComboBox()
 {
-#if 0
+
     // clear the combo box
-    sizeComboBox->clear();
+    m_sizesModel->clear();
 
     // refill the combo box and adopt its icon size
     QModelIndex selected = selectedIndex();
@@ -178,10 +210,10 @@ void CursorThemeConfig::updateSizeComboBox()
                 maxIconWidth = m_pixmap.width();
             if (m_pixmap.height() > maxIconHeight)
                 maxIconHeight = m_pixmap.height();
-            sizeComboBox->addItem(
-                QIcon(m_pixmap),
-                i18nc("@item:inlistbox size", "Resolution dependent"),
-                0);
+            QStandardItem *item = new QStandardItem(QIcon(m_pixmap),
+                i18nc("@item:inlistbox size", "Resolution dependent"));
+            item->setData(0);
+            m_sizesModel->appendRow(item);
             comboBoxList << 0;
             foreach (i, sizes)
             {
@@ -190,7 +222,9 @@ void CursorThemeConfig::updateSizeComboBox()
                     maxIconWidth = m_pixmap.width();
                 if (m_pixmap.height() > maxIconHeight)
                     maxIconHeight = m_pixmap.height();
-                sizeComboBox->addItem(QIcon(m_pixmap), QString::number(i), i);
+                QStandardItem *item = new QStandardItem(QIcon(m_pixmap), QString::number(i));
+                item->setData(i);
+                m_sizesModel->appendRow(item);
                 comboBoxList << i;
             };
 
@@ -219,10 +253,11 @@ void CursorThemeConfig::updateSizeComboBox()
                     };
                 }
             };
-            sizeComboBox->setCurrentIndex(selectItem);
+            //TODO
+            //sizeComboBox->setCurrentIndex(selectItem);
         };
     };
-    sizeComboBox->setIconSize(QSize(maxIconWidth, maxIconHeight));
+    //sizeComboBox->setIconSize(QSize(maxIconWidth, maxIconHeight));
 
     // enable or disable the combobox
     KConfig c("kcminputrc");
@@ -230,15 +265,16 @@ void CursorThemeConfig::updateSizeComboBox()
     if (cg.isEntryImmutable("cursorSize")) {
         setCanResize(false);
     } else {
-        setCanResize(sizeComboBox->count() > 0);
+        setCanResize(m_sizesModel->rowCount() > 0);
     };
-#endif
+
 }
 
 
 int CursorThemeConfig::selectedSize() const
 {
     return 0;
+//TODO
 #if 0
   if (sizeComboBox->isEnabled() && sizeComboBox->currentIndex() >= 0)
       return sizeComboBox->itemData(sizeComboBox->currentIndex(), Qt::UserRole).toInt();
@@ -249,6 +285,7 @@ int CursorThemeConfig::selectedSize() const
 
 void CursorThemeConfig::updatePreview()
 {
+//TODO
 #if 0
     QModelIndex selected = selectedIndex();
 
@@ -413,8 +450,7 @@ void CursorThemeConfig::load()
 void CursorThemeConfig::defaults()
 {
     QModelIndex defaultIndex = m_proxyModel->findIndex("breeze_cursors");
-    //TODO
-    //view->setCurrentIndex(defaultIndex);
+    setSelectedThemeRow(defaultIndex.row());
     preferredSize = 0;
     updateSizeComboBox();
     setNeedsSave(true);
@@ -431,13 +467,7 @@ void CursorThemeConfig::selectionChanged()
 
 QModelIndex CursorThemeConfig::selectedIndex() const
 {
-    //TODO
-    /*
-    QModelIndexList selection = view->selectionModel()->selectedIndexes();
-    if (!selection.isEmpty()) {
-        return (selection.at(0));
-    }*/
-    return QModelIndex();
+    return m_proxyModel->index(m_selectedThemeRow, 0);
 }
 
 void CursorThemeConfig::sizeChanged()

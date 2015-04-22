@@ -34,5 +34,78 @@ Item {
 
     SystemPalette {id: syspal}
 
-    
+    Connections {
+        target: kcm
+        onSelectedThemeRowChanged: view.currentIndex = kcm.selectedThemeRow;
+    }
+
+    RowLayout {
+        anchors.fill: parent
+        QtControls.ScrollView {
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+            frameVisible: true
+            ListView {
+                id: view
+                model: kcm.cursorsModel
+                onCurrentIndexChanged: {
+                    kcm.selectedThemeRow = currentIndex;
+                }
+                delegate: MouseArea {
+                    onClicked: view.currentIndex = index
+                    width: view.width
+                    height: childrenRect.height
+                    Row {
+                    //    height: 48
+                        width: view.width
+                        QPixmapItem {
+                            width: nativeWidth
+                            height: nativeHeight
+                            pixmap: model.decoration
+                        }
+                        QtControls.Label {
+                            text: model.display
+                        }
+                    }
+                }
+                highlight: Rectangle {
+                    color: syspal.highlight
+                }
+            }
+        }
+
+        ColumnLayout {
+            QtControls.ComboBox {
+                Layout.fillWidth: true
+                model: kcm.sizesModel
+                textRole: "display"
+                enabled: kcm.canResize
+            }
+            QtControls.Button {
+                Layout.fillWidth: true
+                iconName: "get-hot-new-stuff"
+                text: i18n("Get New Theme...")
+                onClicked: kcm.getNewClicked();
+                enabled: kcm.canInstall
+            }
+            QtControls.Button {
+                Layout.fillWidth: true
+                iconName: "document-import"
+                text: i18n("Install From File...")
+                onClicked: kcm.installClicked();
+                enabled: kcm.canInstall
+            }
+            QtControls.Button {
+                Layout.fillWidth: true
+                iconName: "edit-delete"
+                text: i18n("Remove Theme")
+                onClicked: kcm.removeClicked();
+                enabled: kcm.canRemove
+            }
+            Item {
+                Layout.fillWidth: true
+                Layout.fillHeight: true
+            }
+        }
+    }
 }
