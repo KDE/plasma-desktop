@@ -5,7 +5,6 @@ include_directories( ${LIBUSB_INCLUDE_DIR} )
 
 if(X11_Xcursor_FOUND)
   set( libnoinst_SRCS
-    xcursor/themepage.cpp
     xcursor/thememodel.cpp
     xcursor/cursortheme.cpp
     xcursor/xcursortheme.cpp
@@ -13,7 +12,6 @@ if(X11_Xcursor_FOUND)
     xcursor/itemdelegate.cpp
     xcursor/sortproxymodel.cpp
     ../krdb/krdb.cpp )
-  ki18n_wrap_ui( libnoinst_SRCS xcursor/themepage.ui )
   include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/xcursor/ )
 else()
   set( libnoinst_SRCS core/themepage.cpp )
