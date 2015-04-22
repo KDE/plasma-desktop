@@ -76,21 +76,25 @@ Item {
                     delegate: MouseArea {
                         onClicked: view.currentIndex = index
                         width: view.width
-                        height: childrenRect.height
-                        Row {
-                        //    height: 48
-                            width: view.width
+                        height: Math.round(childrenRect.height * 1.5)
+                        RowLayout {
+                            anchors.centerIn: parent
+                            width: view.width - (childrenRect.height * 1.5 - childrenRect.height) * 2
+                            spacing: (childrenRect.height * 1.5 - childrenRect.height)
                             QPixmapItem {
-                                width: nativeWidth
-                                height: nativeHeight
+                                Layout.minimumWidth: nativeWidth
+                                Layout.minimumHeight: nativeHeight
                                 pixmap: model.decoration
                             }
-                            Column {
+                            ColumnLayout {
                                 QtControls.Label {
+                                    Layout.fillWidth: true
                                     text: model.display
                                 }
                                 QtControls.Label {
+                                    Layout.fillWidth: true
                                     text: model.description
+                                    wrapMode: Text.WordWrap
                                 }
                             }
                         }
