@@ -155,6 +155,15 @@ void CursorThemeConfig::setSelectedThemeRow(int row)
     emit selectedThemeRowChanged();
     setNeedsSave(true);
     updateSizeComboBox();
+
+    QModelIndex selected = selectedIndex();
+
+    if (selected.isValid()) {
+        const CursorTheme *theme = m_proxyModel->theme(selected);
+        setCanRemove(theme->isWritable());
+    } else {
+        setCanRemove(false);
+    };
 }
 
 int CursorThemeConfig::selectedThemeRow() const

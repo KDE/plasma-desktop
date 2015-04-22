@@ -42,12 +42,18 @@ Item {
     RowLayout {
         anchors.fill: parent
         QtControls.ScrollView {
+            Rectangle {
+                anchors.fill: parent
+                z: -1
+            }
             Layout.fillWidth: true
             Layout.fillHeight: true
             frameVisible: true
             ListView {
                 id: view
                 model: kcm.cursorsModel
+                highlightMoveDuration: 0
+                highlightResizeDuration: 0
                 onCurrentIndexChanged: {
                     kcm.selectedThemeRow = currentIndex;
                 }
