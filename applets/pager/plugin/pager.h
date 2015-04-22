@@ -157,9 +157,7 @@ class Pager : public QObject
         bool m_validSizes : 1;
 
         QDesktopWidget *m_desktopWidget;
-#if HAVE_X11
         bool m_isX11;
-#endif
     };
 
 #endif

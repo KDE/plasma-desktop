@@ -70,11 +70,18 @@ Pager::Pager(QObject *parent)
       m_desktopWidget(QApplication::desktop())
 #if HAVE_X11
       , m_isX11(QX11Info::isPlatformX11())
+#else
+      , m_isX11(false)
 #endif
 {
-    NETRootInfo info(QX11Info::connection(), NET::NumberOfDesktops | NET::DesktopNames, NET::WM2DesktopLayout);
-    m_rows = info.desktopLayoutColumnsRows().height();
-
+    //give rows the minimum default for non X11 systems
+    m_rows = 1;
+#if HAVE_X11
+    if (m_isX11) {
+      NETRootInfo info(QX11Info::connection(), NET::NumberOfDesktops | NET::DesktopNames, NET::WM2DesktopLayout);
+      m_rows = info.desktopLayoutColumnsRows().height();
+    }
+#endif
     // initialize with a decent default
     m_desktopCount = qMax(1, KWindowSystem::numberOfDesktops());
 
@@ -352,6 +359,10 @@ void Pager::updateSizes()
 
 void Pager::recalculateWindowRects()
 {
+    if (!m_isX11) {
+        return;
+    }
+#if HAVE_X11
     NETRootInfo info(QX11Info::connection(), NET::NumberOfDesktops | NET::DesktopNames, NET::WM2DesktopLayout);
     m_rows = info.desktopLayoutColumnsRows().height();
 
@@ -363,7 +374,6 @@ void Pager::recalculateWindowRects()
     QList<WId> windows = KWindowSystem::stackingOrder();
     m_pagerModel->clearWindowRects();
 
-#if HAVE_X11
     foreach (WId window, windows) {
         KWindowInfo info = KWindowSystem::windowInfo(window, NET::WMGeometry | NET::WMFrameExtents |
                                                              NET::WMWindowType | NET::WMDesktop |
@@ -438,6 +448,10 @@ void Pager::currentActivityChanged(const QString &activity)
 
 void Pager::numberOfDesktopsChanged(int num)
 {
+    if (!m_isX11) {
+        return;
+    }
+#if HAVE_X11
     if (num < 1) {
         return; // refuse to update to zero desktops
     }
@@ -453,6 +467,7 @@ void Pager::numberOfDesktopsChanged(int num)
     m_pagerModel->clearDesktopRects();
     recalculateGridSizes(m_rows);
     recalculateWindowRects();
+#endif
 }
 
 void Pager::desktopNamesChanged()
@@ -464,12 +479,17 @@ void Pager::desktopNamesChanged()
 
 void Pager::windowChanged(WId id, const unsigned long* dirty)
 {
+    if (!m_isX11) {
+        return;
+    }
     Q_UNUSED(id)
+#if HAVE_X11
 
     if (dirty[NETWinInfo::PROTOCOLS] & (NET::WMGeometry | NET::WMDesktop) ||
         dirty[NETWinInfo::PROTOCOLS2] & NET::WM2Activities) {
         startTimer();
     }
+#endif
 }
 
 void Pager::desktopsSizeChanged()
