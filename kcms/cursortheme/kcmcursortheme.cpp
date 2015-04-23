@@ -289,12 +289,9 @@ void CursorThemeConfig::updateSizeComboBox()
                     };
                 }
             };
-            //TODO
-            //sizeComboBox->setCurrentIndex(selectItem);
             setPreferredSize(selectItem);
         };
     };
-    //sizeComboBox->setIconSize(QSize(maxIconWidth, maxIconHeight));
 
     // enable or disable the combobox
     KConfig c("kcminputrc");
