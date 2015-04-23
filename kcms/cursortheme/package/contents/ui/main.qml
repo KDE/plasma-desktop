@@ -68,6 +68,7 @@ RowLayout {
                 highlightResizeDuration: 0
                 onCurrentIndexChanged: {
                     kcm.selectedThemeRow = currentIndex;
+                    positionViewAtIndex(currentIndex, ListView.Beginning);
                 }
                 delegate: Delegate {}
             }

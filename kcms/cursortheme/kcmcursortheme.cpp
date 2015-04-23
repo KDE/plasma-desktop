@@ -429,6 +429,8 @@ void CursorThemeConfig::load()
 
     const CursorTheme *theme = m_proxyModel->theme(m_appliedIndex);
 
+    setSelectedThemeRow(m_appliedIndex.row());
+
     if (!theme || !theme->isWritable()) {
         setCanRemove(false);
     }
