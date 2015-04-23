@@ -19,11 +19,8 @@
 import QtQuick 2.1
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 1.0 as QtControls
-import org.kde.kquickcontrolsaddons 2.0
-import QtQuick.Controls.Private 1.0
 //We need units from it
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.kcm 1.0
 
 import org.kde.private.kcm_cursortheme 1.0
@@ -47,6 +44,7 @@ Item {
             Layout.fillWidth: true
             Layout.fillHeight: true
             PreviewWidget {
+                id: previewWidget
                 Layout.alignment: Qt.AlignHCenter
                 Layout.minimumWidth: implicitWidth
                 Layout.minimumHeight: implicitHeight
@@ -73,42 +71,16 @@ Item {
                     onCurrentIndexChanged: {
                         kcm.selectedThemeRow = currentIndex;
                     }
-                    delegate: MouseArea {
-                        onClicked: view.currentIndex = index
-                        width: view.width
-                        height: Math.round(childrenRect.height * 1.5)
-                        RowLayout {
-                            anchors.centerIn: parent
-                            width: view.width - (childrenRect.height * 1.5 - childrenRect.height) * 2
-                            spacing: (childrenRect.height * 1.5 - childrenRect.height)
-                            QPixmapItem {
-                                Layout.minimumWidth: nativeWidth
-                                Layout.minimumHeight: nativeHeight
-                                pixmap: model.decoration
-                            }
-                            ColumnLayout {
-                                QtControls.Label {
-                                    Layout.fillWidth: true
-                                    text: model.display
-                                }
-                                QtControls.Label {
-                                    Layout.fillWidth: true
-                                    text: model.description
-                                    wrapMode: Text.WordWrap
-                                }
-                            }
-                        }
-                    }
-                    highlight: Rectangle {
-                        color: syspal.highlight
-                    }
+                    delegate: Delegate {}
                 }
             }
         }
 
         ColumnLayout {
+
             QtControls.ComboBox {
                 id: sizeCombo
+                Layout.minimumHeight: previewWidget.height
                 Layout.fillWidth: true
                 model: kcm.sizesModel
                 textRole: "display"
