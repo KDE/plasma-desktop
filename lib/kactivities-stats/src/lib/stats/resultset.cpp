@@ -202,6 +202,13 @@ public:
         return "resource GLOB '" + urlFilter + "'";
     }
 
+    QString mimetypeClause(const QString &mimetype) const
+    {
+        if (mimetype == "*") return "1";
+
+        return "mimetype GLOB '" + mimetype + "'";
+    }
+
     /**
      * Transforms the input list's elements with the f member method,
      * and returns the resulting list
@@ -235,6 +242,7 @@ public:
             "  , rl.usedActivity      as activity \n"
             "  , rl.initiatingAgent   as agent \n"
             "  , COALESCE(ri.title, rl.targettedResource) as title \n"
+            "  , ri.mimetype as mimetype \n"
 
             "FROM \n"
             "    ResourceLink rl \n"
@@ -251,6 +259,7 @@ public:
             "    ($agentsFilter) \n"
             "    AND ($activitiesFilter) \n"
             "    AND ($urlFilter)\n"
+            "    AND ($mimetypeFilter)\n"
 
             "GROUP BY resource, title \n"
             "ORDER BY $orderingColumn resource ASC\n";
@@ -277,6 +286,10 @@ public:
         QStringList urlFilter = transformedList(
                 queryDefinition.urlFilters(), &Private::urlFilterClause);
 
+        // WHERE clause for filtering on resource mime
+        QStringList mimetypeFilter = transformedList(
+                queryDefinition.types(), &Private::mimetypeClause);
+
         auto query = _query;
 
         return
@@ -285,6 +298,7 @@ public:
                 .replace("$agentsFilter", agentsFilter.join(" OR "))
                 .replace("$activitiesFilter", activitiesFilter.join(" OR "))
                 .replace("$urlFilter", urlFilter.join(" OR "))
+                .replace("$mimetypeFilter", mimetypeFilter.join(" OR "))
             ;
     }
 
@@ -302,6 +316,7 @@ public:
             "  , rsc.usedActivity      as activity \n"
             "  , rsc.initiatingAgent   as agent \n"
             "  , COALESCE(ri.title, rsc.targettedResource) as title \n"
+            "  , ri.mimetype as mimetype \n"
 
             "FROM \n"
             "    ResourceScoreCache rsc \n"
@@ -313,6 +328,7 @@ public:
             "    ($agentsFilter) \n"
             "    AND ($activitiesFilter) \n"
             "    AND ($urlFilter)\n"
+            "    AND ($mimetypeFilter)\n"
 
             "GROUP BY resource, title \n"
             "ORDER BY $orderingColumn resource ASC\n";
@@ -339,6 +355,10 @@ public:
         QStringList urlFilter = transformedList(
                 queryDefinition.urlFilters(), &Private::urlFilterClause);
 
+        // WHERE clause for filtering on resource mime
+        QStringList mimetypeFilter = transformedList(
+                queryDefinition.types(), &Private::mimetypeClause);
+
         auto query = _query;
 
         return kamd::utils::debug_and_return("Query: ",
@@ -347,6 +367,7 @@ public:
                 .replace("$agentsFilter", agentsFilter.join(" OR "))
                 .replace("$activitiesFilter", activitiesFilter.join(" OR "))
                 .replace("$urlFilter", urlFilter.join(" OR "))
+                .replace("$mimetypeFilter", mimetypeFilter.join(" OR "))
             );
     }
 
