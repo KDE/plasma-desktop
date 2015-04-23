@@ -61,8 +61,12 @@ RowLayout {
             Layout.fillWidth: true
             Layout.fillHeight: true
             frameVisible: true
+            highlightOnFocus: true
+            activeFocusOnTab: true
             ListView {
                 id: view
+                focus: true
+                activeFocusOnTab: true
                 model: kcm.cursorsModel
                 highlightMoveDuration: 0
                 highlightResizeDuration: 0
@@ -71,6 +75,13 @@ RowLayout {
                     positionViewAtIndex(currentIndex, ListView.Beginning);
                 }
                 delegate: Delegate {}
+                Keys.onPressed: {
+                    if (event.key == Qt.Key_Up) {
+                        view.decrementCurrentIndex();
+                    } else if (event.key == Qt.Key_Down) {
+                        view.incrementCurrentIndex();
+                    }
+                }
             }
         }
     }
@@ -91,21 +102,21 @@ RowLayout {
         QtControls.Button {
             Layout.fillWidth: true
             iconName: "get-hot-new-stuff"
-            text: i18n("Get New Theme...")
+            text: i18n("&Get New Theme...")
             onClicked: kcm.getNewClicked();
             enabled: kcm.canInstall
         }
         QtControls.Button {
             Layout.fillWidth: true
             iconName: "document-import"
-            text: i18n("Install From File...")
+            text: i18n("&Install From File...")
             onClicked: kcm.installClicked();
             enabled: kcm.canInstall
         }
         QtControls.Button {
             Layout.fillWidth: true
             iconName: "edit-delete"
-            text: i18n("Remove Theme")
+            text: i18n("Remove &Theme")
             onClicked: kcm.removeClicked();
             enabled: kcm.canRemove
         }

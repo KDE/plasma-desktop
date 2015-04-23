@@ -26,7 +26,10 @@ import org.kde.kcm 1.0
 
 MouseArea {
     id: delegate
-    onClicked: view.currentIndex = index
+    onClicked: {
+        view.currentIndex = index;
+        view.forceActiveFocus();
+    }
     width: view.width
     height: delegateLayout.height + units.largeSpacing * 2
     hoverEnabled: true
