@@ -1,8 +1,6 @@
 # KI18N Translation Domain for this library
 add_definitions(-DTRANSLATION_DOMAIN=\"kcmcursortheme\")
 
-include_directories( ${LIBUSB_INCLUDE_DIR} )
-
 if(X11_Xcursor_FOUND)
   set( libnoinst_SRCS
     xcursor/themepage.cpp
