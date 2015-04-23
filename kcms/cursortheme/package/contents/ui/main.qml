@@ -25,7 +25,7 @@ import org.kde.kcm 1.0
 
 import org.kde.private.kcm_cursortheme 1.0
 
-Item {
+RowLayout {
     implicitWidth: units.gridUnit * 20
     implicitHeight: units.gridUnit * 20
 
@@ -38,82 +38,80 @@ Item {
         onSelectedThemeRowChanged: view.currentIndex = kcm.selectedThemeRow;
     }
 
-    RowLayout {
-        anchors.fill: parent
-        ColumnLayout {
+    ColumnLayout {
+        Layout.fillWidth: true
+        Layout.fillHeight: true
+        PreviewWidget {
+            id: previewWidget
+            Layout.alignment: Qt.AlignHCenter
+            Layout.minimumWidth: implicitWidth
+            Layout.minimumHeight: implicitHeight
+            Layout.maximumWidth: Layout.minimumWidth
+            Layout.maximumHeight: Layout.minimumHeight
+            themeModel: kcm.cursorsModel
+            currentIndex: view.currentIndex
+            //The ComboBox component is a disaster
+            currentSize: parseInt(sizeCombo.currentText) !== NaN ? parseInt(sizeCombo.currentText) : 0
+        }
+        QtControls.ScrollView {
+            Rectangle {
+                anchors.fill: parent
+                z: -1
+            }
             Layout.fillWidth: true
             Layout.fillHeight: true
-            PreviewWidget {
-                id: previewWidget
-                Layout.alignment: Qt.AlignHCenter
-                Layout.minimumWidth: implicitWidth
-                Layout.minimumHeight: implicitHeight
-                Layout.maximumWidth: Layout.minimumWidth
-                Layout.maximumHeight: Layout.minimumHeight
-                themeModel: kcm.cursorsModel
-                currentIndex: view.currentIndex
-                //The ComboBox component is a disaster
-                currentSize: parseInt(sizeCombo.currentText) !== NaN ? parseInt(sizeCombo.currentText) : 0
-            }
-            QtControls.ScrollView {
-                Rectangle {
-                    anchors.fill: parent
-                    z: -1
+            frameVisible: true
+            ListView {
+                id: view
+                model: kcm.cursorsModel
+                highlightMoveDuration: 0
+                highlightResizeDuration: 0
+                onCurrentIndexChanged: {
+                    kcm.selectedThemeRow = currentIndex;
                 }
-                Layout.fillWidth: true
-                Layout.fillHeight: true
-                frameVisible: true
-                ListView {
-                    id: view
-                    model: kcm.cursorsModel
-                    highlightMoveDuration: 0
-                    highlightResizeDuration: 0
-                    onCurrentIndexChanged: {
-                        kcm.selectedThemeRow = currentIndex;
-                    }
-                    delegate: Delegate {}
-                }
-            }
-        }
-
-        ColumnLayout {
-
-            QtControls.ComboBox {
-                id: sizeCombo
-                Layout.minimumHeight: previewWidget.height
-                Layout.fillWidth: true
-                model: kcm.sizesModel
-                textRole: "display"
-                enabled: kcm.canResize
-                onCurrentTextChanged: {
-                    kcm.preferredSize = parseInt(sizeCombo.currentText) !== NaN ? parseInt(sizeCombo.currentText) : 0
-                }
-            }
-            QtControls.Button {
-                Layout.fillWidth: true
-                iconName: "get-hot-new-stuff"
-                text: i18n("Get New Theme...")
-                onClicked: kcm.getNewClicked();
-                enabled: kcm.canInstall
-            }
-            QtControls.Button {
-                Layout.fillWidth: true
-                iconName: "document-import"
-                text: i18n("Install From File...")
-                onClicked: kcm.installClicked();
-                enabled: kcm.canInstall
-            }
-            QtControls.Button {
-                Layout.fillWidth: true
-                iconName: "edit-delete"
-                text: i18n("Remove Theme")
-                onClicked: kcm.removeClicked();
-                enabled: kcm.canRemove
-            }
-            Item {
-                Layout.fillWidth: true
-                Layout.fillHeight: true
+                delegate: Delegate {}
             }
         }
     }
+
+    ColumnLayout {
+
+        QtControls.ComboBox {
+            id: sizeCombo
+            Layout.minimumHeight: previewWidget.height
+            Layout.fillWidth: true
+            model: kcm.sizesModel
+            textRole: "display"
+            enabled: kcm.canResize
+            onCurrentTextChanged: {
+                kcm.preferredSize = parseInt(sizeCombo.currentText) !== NaN ? parseInt(sizeCombo.currentText) : 0
+            }
+        }
+        QtControls.Button {
+            Layout.fillWidth: true
+            iconName: "get-hot-new-stuff"
+            text: i18n("Get New Theme...")
+            onClicked: kcm.getNewClicked();
+            enabled: kcm.canInstall
+        }
+        QtControls.Button {
+            Layout.fillWidth: true
+            iconName: "document-import"
+            text: i18n("Install From File...")
+            onClicked: kcm.installClicked();
+            enabled: kcm.canInstall
+        }
+        QtControls.Button {
+            Layout.fillWidth: true
+            iconName: "edit-delete"
+            text: i18n("Remove Theme")
+            onClicked: kcm.removeClicked();
+            enabled: kcm.canRemove
+        }
+        Item {
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+        }
+    }
 }
+
