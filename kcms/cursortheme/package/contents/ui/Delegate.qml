@@ -25,15 +25,16 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kcm 1.0
 
 MouseArea {
+    id: delegate
     onClicked: view.currentIndex = index
     width: view.width
     height: delegateLayout.height + units.largeSpacing * 2
     hoverEnabled: true
     Rectangle {
         anchors.fill: parent
-        opacity: view.currentIndex == index ? 1 : 0.3
+        opacity: delegate.ListView.isCurrentItem ? 1 : 0.3
         color: {
-            if (view.currentIndex == index || parent.containsMouse) {
+            if (delegate.ListView.isCurrentItem || parent.containsMouse) {
                 return syspal.highlight;
             } else if (index % 2 == 0) {
                 return syspal.base;
@@ -56,13 +57,13 @@ MouseArea {
             QtControls.Label {
                 Layout.fillWidth: true
                 text: model.display
-                color: view.currentIndex == index ? syspal.highlightedText : syspal.text
+                color: delegate.ListView.isCurrentItem ? syspal.highlightedText : syspal.text
             }
             QtControls.Label {
                 Layout.fillWidth: true
                 text: model.description
                 wrapMode: Text.WordWrap
-                color: view.currentIndex == index ? syspal.highlightedText : syspal.text
+                color: delegate.ListView.isCurrentItem ? syspal.highlightedText : syspal.text
             }
         }
     }
