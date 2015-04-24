@@ -23,8 +23,6 @@ import QtQuick.Controls 1.0 as QtControls
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kcm 1.0
 
-import org.kde.private.kcm_cursortheme 1.0
-
 RowLayout {
     implicitWidth: units.gridUnit * 20
     implicitHeight: units.gridUnit * 20
@@ -41,18 +39,6 @@ RowLayout {
     ColumnLayout {
         Layout.fillWidth: true
         Layout.fillHeight: true
-        PreviewWidget {
-            id: previewWidget
-            Layout.alignment: Qt.AlignHCenter
-            Layout.minimumWidth: implicitWidth
-            Layout.minimumHeight: implicitHeight
-            Layout.maximumWidth: Layout.minimumWidth
-            Layout.maximumHeight: Layout.minimumHeight
-            themeModel: kcm.cursorsModel
-            currentIndex: view.currentIndex
-            //The ComboBox component is a disaster
-            currentSize: parseInt(sizeCombo.currentText) !== NaN ? parseInt(sizeCombo.currentText) : 0
-        }
         QtControls.ScrollView {
             Rectangle {
                 anchors.fill: parent
@@ -90,7 +76,6 @@ RowLayout {
 
         QtControls.ComboBox {
             id: sizeCombo
-            Layout.minimumHeight: previewWidget.height
             Layout.fillWidth: true
             model: kcm.sizesModel
             textRole: "display"

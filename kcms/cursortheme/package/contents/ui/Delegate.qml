@@ -23,7 +23,7 @@ import org.kde.kquickcontrolsaddons 2.0
 //We need units from it
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kcm 1.0
-
+import org.kde.private.kcm_cursortheme 1.0
 MouseArea {
     id: delegate
     onClicked: {
@@ -33,9 +33,10 @@ MouseArea {
     width: view.width
     height: delegateLayout.height + units.largeSpacing * 2
     hoverEnabled: true
+
     Rectangle {
         anchors.fill: parent
-        opacity: delegate.ListView.isCurrentItem ? 1 : 0.3
+        opacity: delegate.ListView.isCurrentItem ? 1 : 0.4
         color: {
             if (delegate.ListView.isCurrentItem || parent.containsMouse) {
                 return syspal.highlight;
@@ -46,28 +47,37 @@ MouseArea {
             }
         }
     }
-    RowLayout {
+    ColumnLayout {
         id: delegateLayout
         anchors.centerIn: parent
         width: view.width - units.largeSpacing * 2
-        spacing: units.largeSpacing
-        QPixmapItem {
-            Layout.minimumWidth: nativeWidth
-            Layout.minimumHeight: nativeHeight
-            pixmap: model.decoration
+        //TODO: an Header component
+        QtControls.Label {
+            Layout.fillWidth: true
+            text: model.display
+            color: delegate.ListView.isCurrentItem ? syspal.highlightedText : syspal.text
+            font.pointSize: commentLabel.font.pointSize * 1.5
         }
-        ColumnLayout {
-            QtControls.Label {
-                Layout.fillWidth: true
-                text: model.display
-                color: delegate.ListView.isCurrentItem ? syspal.highlightedText : syspal.text
-            }
-            QtControls.Label {
-                Layout.fillWidth: true
-                text: model.description
-                wrapMode: Text.WordWrap
-                color: delegate.ListView.isCurrentItem ? syspal.highlightedText : syspal.text
-            }
+        PreviewWidget {
+            id: previewWidget
+            Layout.minimumWidth: implicitWidth
+            Layout.minimumHeight: implicitHeight
+            Layout.maximumWidth: Layout.minimumWidth
+            Layout.maximumHeight: Layout.minimumHeight
+            themeModel: kcm.cursorsModel
+            currentIndex: index
+            //The ComboBox component is a disaster
+            currentSize: parseInt(sizeCombo.currentText) !== NaN ? parseInt(sizeCombo.currentText) : 0
         }
+
+        QtControls.Label {
+            id: commentLabel
+            Layout.fillWidth: true
+            text: model.description
+            wrapMode: Text.WordWrap
+            color: delegate.ListView.isCurrentItem ? syspal.highlightedText : syspal.text
+        }
+
+
     }
 }
