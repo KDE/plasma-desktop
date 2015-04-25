@@ -23,7 +23,6 @@ import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.kquickcontrolsaddons 2.0
-import org.kde.kcoreaddons 1.0 as KCoreAddons
 
 Item {
     id: main
@@ -134,7 +133,7 @@ Item {
                     if (containsMouse && !model.blank) {
                         toolTip.icon = model.decoration;
                         toolTip.mainText = model.display;
-                        toolTip.subText = model.type + "\n" + KCoreAddons.Format.formatByteSize(model.size)
+                        toolTip.subText = model.type + "\n" + model.size
                         main.GridView.view.hoveredItem = main;
                     }
                 }
