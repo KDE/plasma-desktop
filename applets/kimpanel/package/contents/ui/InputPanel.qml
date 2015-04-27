@@ -234,7 +234,7 @@ PlasmaCore.Dialog {
 
          if (y + inputpanel.height > rect.y + rect.height) {
              if (y > rect.y + rect.height) {
-                 y = rect.y - inputpanel.height - 40;
+                 y = rect.y + rect.height - inputpanel.height - 40;
              } else {
                  y = y - inputpanel.height - (position.height == 0 ? 40 : position.height);
              }
