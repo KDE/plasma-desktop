@@ -58,16 +58,20 @@ MouseArea {
             color: delegate.ListView.isCurrentItem ? syspal.highlightedText : syspal.text
             font.pointSize: commentLabel.font.pointSize * 1.5
         }
-        PreviewWidget {
-            id: previewWidget
-            Layout.minimumWidth: implicitWidth
-            Layout.minimumHeight: implicitHeight
-            Layout.maximumWidth: Layout.minimumWidth
-            Layout.maximumHeight: Layout.minimumHeight
-            themeModel: kcm.cursorsModel
-            currentIndex: index
-            //The ComboBox component is a disaster
-            currentSize: parseInt(sizeCombo.currentText) !== NaN ? parseInt(sizeCombo.currentText) : 0
+        RowLayout {
+            Layout.fillWidth: true
+            PreviewWidget {
+                id: previewWidget
+                Layout.fillWidth: true
+                Layout.minimumWidth: implicitWidth
+                Layout.maximumWidth: Layout.minimumWidth
+                Layout.minimumHeight: implicitHeight
+                Layout.maximumHeight: Layout.minimumHeight
+                themeModel: kcm.cursorsModel
+                currentIndex: index
+                //The ComboBox component is a disaster
+                currentSize: parseInt(sizeCombo.currentText) !== NaN ? parseInt(sizeCombo.currentText) : 0
+            }
         }
 
         QtControls.Label {
@@ -79,5 +83,30 @@ MouseArea {
         }
 
 
+    }
+    ColumnLayout {
+        visible: delegate.ListView.isCurrentItem
+        anchors {
+            right: parent.right
+            verticalCenter: parent.verticalCenter
+            rightMargin: units.largeSpacing
+        }
+        QtControls.ComboBox {
+            id: sizeCombo
+            Layout.fillWidth: true
+            model: kcm.sizesModel
+            textRole: "display"
+            enabled: kcm.canResize
+            onCurrentTextChanged: {
+                kcm.preferredSize = parseInt(sizeCombo.currentText) !== NaN ? parseInt(sizeCombo.currentText) : 0
+            }
+        }
+        QtControls.Button {
+            Layout.fillWidth: true
+            iconName: "edit-delete"
+            text: i18n("Remove &Theme")
+            onClicked: kcm.removeTheme(index);
+            enabled: kcm.canRemove
+        }
     }
 }

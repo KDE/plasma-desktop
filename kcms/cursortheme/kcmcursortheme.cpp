@@ -504,14 +504,17 @@ void CursorThemeConfig::installClicked()
 }
 
 
-void CursorThemeConfig::removeClicked()
+void CursorThemeConfig::removeTheme(int row)
 {
-    // We don't have to check if the current index is valid, since
-    // the remove button will be disabled when there's no selection.
-    const CursorTheme *theme = m_proxyModel->theme(selectedIndex());
+    QModelIndex idx = m_proxyModel->index(row, 0);
+    if (!idx.isValid()) {
+        return;
+    }
+
+    const CursorTheme *theme = m_proxyModel->theme(idx);
 
     // Don't let the user delete the currently configured theme
-    if (selectedIndex() == m_appliedIndex) {
+    if (idx == m_appliedIndex) {
         KMessageBox::sorry(0, i18n("<qt>You cannot delete the theme you are currently "
                 "using.<br />You have to switch to another theme first.</qt>"));
         return;
@@ -533,7 +536,7 @@ void CursorThemeConfig::removeClicked()
     KIO::del(QUrl::fromLocalFile(theme->path())); // async
 
     // Remove the theme from the model
-    m_proxyModel->removeTheme(selectedIndex());
+    m_proxyModel->removeTheme(idx);
 
     // TODO:
     //  Since it's possible to substitute cursors in a system theme by adding a local

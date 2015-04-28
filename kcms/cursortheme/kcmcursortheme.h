@@ -83,7 +83,7 @@ Q_SIGNALS:
 public Q_SLOTS:
     void getNewClicked();
     void installClicked();
-    void removeClicked();
+    void removeTheme(int row);
 
 private Q_SLOTS:
     void selectionChanged();

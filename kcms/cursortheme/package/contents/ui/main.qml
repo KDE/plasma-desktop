@@ -23,7 +23,9 @@ import QtQuick.Controls 1.0 as QtControls
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kcm 1.0
 
-RowLayout {
+import org.kde.private.kcm_cursortheme 1.0
+
+ColumnLayout {
     implicitWidth: units.gridUnit * 20
     implicitHeight: units.gridUnit * 20
 
@@ -72,42 +74,24 @@ RowLayout {
         }
     }
 
-    ColumnLayout {
+    RowLayout {
+        Layout.maximumHeight: Layout.minimumHeight
+        Item {
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+        }
 
-        QtControls.ComboBox {
-            id: sizeCombo
-            Layout.fillWidth: true
-            model: kcm.sizesModel
-            textRole: "display"
-            enabled: kcm.canResize
-            onCurrentTextChanged: {
-                kcm.preferredSize = parseInt(sizeCombo.currentText) !== NaN ? parseInt(sizeCombo.currentText) : 0
-            }
-        }
         QtControls.Button {
-            Layout.fillWidth: true
-            iconName: "get-hot-new-stuff"
-            text: i18n("&Get New Theme...")
-            onClicked: kcm.getNewClicked();
-            enabled: kcm.canInstall
-        }
-        QtControls.Button {
-            Layout.fillWidth: true
             iconName: "document-import"
             text: i18n("&Install From File...")
             onClicked: kcm.installClicked();
             enabled: kcm.canInstall
         }
         QtControls.Button {
-            Layout.fillWidth: true
-            iconName: "edit-delete"
-            text: i18n("Remove &Theme")
-            onClicked: kcm.removeClicked();
-            enabled: kcm.canRemove
-        }
-        Item {
-            Layout.fillWidth: true
-            Layout.fillHeight: true
+            iconName: "get-hot-new-stuff"
+            text: i18n("&Get New Theme...")
+            onClicked: kcm.getNewClicked();
+            enabled: kcm.canInstall
         }
     }
 }
