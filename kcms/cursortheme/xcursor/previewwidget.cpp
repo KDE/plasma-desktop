@@ -289,6 +289,12 @@ void PreviewWidget::hoverMoveEvent(QHoverEvent *e)
     current = NULL;
 }
 
+void PreviewWidget::hoverLeaveEvent(QHoverEvent *e)
+{
+    if (window()) {
+        window()->unsetCursor();
+    }
+}
 
 void PreviewWidget::resizeEvent(QResizeEvent *)
 {

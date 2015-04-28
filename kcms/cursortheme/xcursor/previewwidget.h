@@ -59,6 +59,7 @@ class PreviewWidget : public QQuickPaintedItem
     protected:
         void paint(QPainter *);
         void hoverMoveEvent(QHoverEvent *event);
+        void hoverLeaveEvent(QHoverEvent *e);
         void resizeEvent(QResizeEvent *);
 
     private:
