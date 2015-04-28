@@ -48,8 +48,8 @@ Item {
         mainTabGroup.currentTab = favoritesPage;
         tabBar.currentTab = bookmarkButton;
         header.query = ""
+        header.state = "hint";
         root.state = "Normal";
-        header.input.text = ""
     }
 
     PlasmaCore.DataSource {
@@ -359,8 +359,7 @@ Item {
             target: plasmoid
             onExpandedChanged: {
                 if (!expanded) {
-                    header.query = "";
-                    bookmarkButton.clicked();
+                    switchToFavorites()
                 }
             }
         }
@@ -452,10 +451,10 @@ Item {
                 break;
             }
             case Qt.Key_Escape: {
-                if (header.query == "") {
+                if (header.state != "query") {
                     plasmoid.expanded = false;
                 } else {
-                    header.query = "";
+                    switchToFavorites();
                 }
                 event.accepted = true;
                 break;

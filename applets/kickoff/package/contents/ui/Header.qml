@@ -21,6 +21,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kcoreaddons 1.0 as KCoreAddons
+import org.kde.kquickcontrolsaddons 2.0
 
 Item {
     id: header
@@ -34,7 +35,7 @@ Item {
         id: kuser
     }
 
-    state: (header.query != "") ? "query" : "hint"
+    state: (query !== "") ? "query" : "hint"
 
     Timer {
         id: labelTimer
@@ -56,7 +57,7 @@ Item {
         id: faceIcon
         source: kuser.faceIconUrl
         cache: false
-        visible: source != ""
+        visible: source !== ""
 
         width: units.gridUnit * 3
         height: width
@@ -69,17 +70,35 @@ Item {
         }
 
         //Rectangle { color: "green"; opacity: 0.3; anchors.fill: parent;  visible: root.debug;  }
+
+        MouseArea {
+            anchors.fill: parent
+            acceptedButtons: Qt.LeftButton
+            cursorShape: Qt.PointingHandCursor
+            onClicked: {
+                KCMShell.open("kcm_useraccount")
+            }
+        }
     }
 
     PlasmaCore.IconItem {
         source: "user-identity"
-        visible: faceIcon.source == ""
+        visible: faceIcon.source === ""
         width: units.gridUnit * 3
         height: width
         anchors {
             top: faceIcon.top
             right: faceIcon.right
             rightMargin: -units.gridUnit/2
+        }
+
+        MouseArea {
+            anchors.fill: parent
+            acceptedButtons: Qt.LeftButton
+            cursorShape: Qt.PointingHandCursor
+            onClicked: {
+                KCMShell.open("kcm_useraccount")
+            }
         }
     }
 
@@ -141,24 +160,39 @@ Item {
             Behavior on y { NumberAnimation { duration: searchWidget.animationDuration; easing.type: Easing.InOutQuad; } }
         }
 
-        PlasmaComponents.TextField {
-            id: queryField
-            anchors.fill: parent
-            clearButtonShown: true
-            visible: opacity > 0
-            Behavior on opacity { NumberAnimation { duration: searchWidget.animationDuration / 4 } }
 
-            onTextChanged: {
-                if (root.state != "Search") {
-                    root.previousState = root.state;
-                    root.state = "Search";
-                }
-                if (text == "") {
-                    root.state = root.previousState;
-                    root.forceActiveFocus();
-                    header.state = "info";
-                } else {
-                    header.state = "query";
+        MouseArea {
+            anchors.fill: parent
+            cursorShape: header.state === "hint" ? Qt.PointingHandCursor : Qt.ArrowCursor
+            acceptedButtons: Qt.LeftButton
+            enabled: header.state === "hint"
+            onClicked: {
+                root.previousState = "Normal"
+                root.state = "Search"
+                header.state = "query"
+                queryField.forceActiveFocus()
+            }
+
+            PlasmaComponents.TextField {
+                id: queryField
+                anchors.fill: parent
+                clearButtonShown: true
+                visible: opacity > 0
+                placeholderText: i18nc("Type is a verb here, not a noun", "Type to search...")
+                Behavior on opacity { NumberAnimation { duration: searchWidget.animationDuration / 4 } }
+
+                onTextChanged: {
+                    if (root.state != "Search") {
+                        root.previousState = root.state;
+                        root.state = "Search";
+                    }
+                    if (text == "") {
+                        root.state = root.previousState;
+                        root.forceActiveFocus();
+                        header.state = "info";
+                    } else {
+                        header.state = "query";
+                    }
                 }
             }
         }
