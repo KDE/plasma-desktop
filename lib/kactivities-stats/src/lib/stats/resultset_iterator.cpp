@@ -178,7 +178,7 @@ iterator iterator::operator--(int)
 
 iterator ResultSet::begin() const
 {
-    return const_iterator(this, 0);
+    return const_iterator(this, d->database ? 0 : -1);
 }
 
 iterator ResultSet::end() const

@@ -154,7 +154,7 @@ public:
 
     void initQuery()
     {
-        if (query.isActive()) {
+        if (!database || query.isActive()) {
             return;
         }
 
@@ -399,7 +399,14 @@ ResultSet::ResultSet(Query query)
     using namespace Common;
 
     d->database = Database::instance(Database::ResourcesDatabase, Database::ReadOnly);
-    Q_ASSERT_X(d->database, "ResultSet constructor", "Database is NULL");
+
+    if (!(d->database)) {
+        qWarning() << "KActivities ERROR: There is no database. This probably means "
+                      "that you do not have the Activity Manager running, or that "
+                      "something else is broken on your system. Recent documents and "
+                      "alike will not work!";
+        Q_ASSERT_X((bool)d->database, "ResultSet constructor", "Database is NULL");
+    }
 
     d->queryDefinition = query;
 
@@ -431,8 +438,6 @@ ResultSet::~ResultSet()
 ResultSet::Result ResultSet::at(int index) const
 {
     Q_ASSERT_X(d->query.isActive(), "ResultSet::at", "Query is not active");
-    // Q_ASSERT_X(d->query.size() >= 0, "ResultSet::at", "This query is not countable?!");
-    // Q_ASSERT_X(index < d->query.size(), "ResultSet::at", "This index does not exist");
 
     d->query.seek(index);
 

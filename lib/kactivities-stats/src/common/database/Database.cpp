@@ -45,15 +45,12 @@ public:
 Database::Locker::Locker(Database &database)
     : m_database(database.d->database)
 {
-    qDebug() << "DATABASE: Transaction";
     m_database.transaction();
 }
 
 Database::Locker::~Locker()
 {
-    qDebug() << "DATABASE: Commit...";
     m_database.commit();
-    qDebug() << "DATABASE: Commit done";
 }
 
 
@@ -97,13 +94,11 @@ Database::Ptr Database::instance(Source source, OpenMode openMode)
         auto ptr = search->second.lock();
 
         if (ptr) {
-            qDebug() << "Matched an existing database";
             return std::move(ptr);
         }
     }
 
     // Creating a new database instance
-    // qDebug() << "We do not have an instance for this thread / mode";
     auto ptr = std::make_shared<Database>();
 
     auto databaseConnectionName =
@@ -126,54 +121,52 @@ Database::Ptr Database::instance(Source source, OpenMode openMode)
     ptr->d->database.setDatabaseName(ResourcesDatabaseSchema::path());
 
     if (!ptr->d->database.open()) {
-        qDebug() << "Database is not open: "
-                 << ptr->d->database.connectionName()
-                 << ptr->d->database.databaseName()
-                 << ptr->d->database.lastError();
+        qWarning() << "KActivities: Database is not open: "
+                   << ptr->d->database.connectionName()
+                   << ptr->d->database.databaseName()
+                   << ptr->d->database.lastError();
 
         if (info.openMode == ReadWrite) {
-            qFatal("Opening the database in RW mode should always succeed");
-        }
-        ptr.reset();
-
-    } else {
-        databases[info] = ptr;
-
-        if (info.openMode == ReadOnly) {
-            // From now on, only SELECT queries will work
-            ptr->setPragma("query_only = 1");
-
-            // These should not make any difference
-            ptr->setPragma("synchronous = 0");
-
-        } else {
-            // Using the write-ahead log and sync = NORMAL for faster writes
-            ptr->setPragma("synchronous = 1");
+            qFatal("KActivities: Opening the database in RW mode should always succeed");
         }
 
-        // Maybe we should use the write-ahead log
-        auto walResult = ptr->pragma("journal_mode = WAL");
-
-        if (walResult != "wal") {
-            qFatal("Database can not be opened in WAL mode. Check your version "
-                   "of SQLite (required >3.7.0). And whether your filesystem "
-                   "supports shared memory");
-        }
-
-        // We don't have a big database, lets flush the WAL when
-        // it reaches 400k, not 4M as is default
-        ptr->setPragma("wal_autocheckpoint = 100");
-
-        qDebug() << "Database connection: " << databaseConnectionName
-            << "\n    query_only:         " << ptr->pragma("query_only")
-            << "\n    journal_mode:       " << ptr->pragma("journal_mode")
-            << "\n    wal_autocheckpoint: " << ptr->pragma("wal_autocheckpoint")
-            << "\n    synchronous:        " << ptr->pragma("synchronous")
-            ;
-
+        return Q_NULLPTR;
 
     }
 
+    databases[info] = ptr;
+
+    if (info.openMode == ReadOnly) {
+        // From now on, only SELECT queries will work
+        ptr->setPragma("query_only = 1");
+
+        // These should not make any difference
+        ptr->setPragma("synchronous = 0");
+
+    } else {
+        // Using the write-ahead log and sync = NORMAL for faster writes
+        ptr->setPragma("synchronous = 1");
+    }
+
+    // Maybe we should use the write-ahead log
+    auto walResult = ptr->pragma("journal_mode = WAL");
+
+    if (walResult != "wal") {
+        qFatal("KActivities: Database can not be opened in WAL mode. Check the "
+               "SQLite version (required >3.7.0). And whether your filesystem "
+               "supports shared memory");
+    }
+
+    // We don't have a big database, lets flush the WAL when
+    // it reaches 400k, not 4M as is default
+    ptr->setPragma("wal_autocheckpoint = 100");
+
+    qDebug() << "KActivities: Database connection: " << databaseConnectionName
+        << "\n    query_only:         " << ptr->pragma("query_only")
+        << "\n    journal_mode:       " << ptr->pragma("journal_mode")
+        << "\n    wal_autocheckpoint: " << ptr->pragma("wal_autocheckpoint")
+        << "\n    synchronous:        " << ptr->pragma("synchronous")
+        ;
 
     return std::move(ptr);
 }
