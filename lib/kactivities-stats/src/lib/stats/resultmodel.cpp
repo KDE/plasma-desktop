@@ -43,7 +43,7 @@
 #include <common/specialvalues.h>
 
 #define CHUNK_SIZE 10
-#define DEFAULT_ITEM_COUNT_LIMIT 20
+#define DEFAULT_ITEM_COUNT_LIMIT 5
 
 namespace KActivities {
 namespace Experimental {
@@ -199,6 +199,8 @@ public:
             cache.insert(destinationIndex, result);
 
             q->endInsertRows();
+
+            trim();
         }
     }
 
@@ -253,6 +255,15 @@ public:
 
         q->endResetModel();
 
+    }
+
+    void trim()
+    {
+        if (itemCountLimit >= cache.size()) return;
+
+        q->beginRemoveRows(QModelIndex(), itemCountLimit, cache.size() - 1);
+        cache.erase(cache.begin() + itemCountLimit, cache.end());
+        q->endRemoveRows();
     }
 
     void init()
@@ -377,7 +388,19 @@ bool ResultModel::canFetchMore(const QModelIndex &parent) const
 void ResultModel::setItemCountLimit(int count)
 {
     d->itemCountLimit = count;
-    // TODO: ...
+
+    const int oldSize = d->cache.size();
+
+    if (oldSize > count) {
+        // We need to remove all items from the tail if the new
+        // size is less than the current number of loaded items
+        d->trim();
+
+    } else if (oldSize < count) {
+        // If the requested size is bigger, we are resetting the
+        // model
+        d->reset();
+    }
 }
 
 int ResultModel::itemCountLimit() const
