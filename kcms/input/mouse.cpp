@@ -71,9 +71,12 @@
 
 #include <X11/X.h>
 #include <X11/Xlib.h>
+#include <X11/Xatom.h>
+#include <X11/extensions/XInput2.h>
 #include <X11/Xutil.h>
 #include <kglobalsettings.h>
 #include <QX11Info>
+#include <xorg/evdev-properties.h>
 
 #undef Below
 
@@ -743,22 +746,6 @@ void MouseSettings::apply(bool force)
               map[1] = (unsigned char) middle_button;
               map[2] = (unsigned char) 1;
           }
-          if( num_buttons >= 5 )
-          {
-          // Apps seem to expect logical buttons 4,5 are the vertical wheel.
-          // With mice with more than 3 buttons (not including wheel) the physical
-          // buttons mapped to logical 4,5 may not be physical 4,5 , so keep
-          // this mapping, only possibly reversing them.
-              int pos;
-              for( pos = 0; pos < num_buttons; ++pos )
-                  if( map[pos] == 4 || map[pos] == 5 )
-                      break;
-              if( pos < num_buttons - 1 )
-              {
-                  map[pos] = reverseScrollPolarity ? (unsigned char) 5 : (unsigned char) 4;
-                  map[pos+1] = reverseScrollPolarity ? (unsigned char) 4 : (unsigned char) 5;
-              }
-          }
       }
       int retval;
       if (remap)
@@ -766,6 +753,74 @@ void MouseSettings::apply(bool force)
                                             num_buttons)) == MappingBusy)
               /* keep trying until the pointer is free */
           { };
+
+      // apply reverseScrollPolarity
+      if (reverseScrollPolarity) {
+          Display *dpy = QX11Info::display();
+          Atom prop_wheel_emulation = XInternAtom(dpy, EVDEV_PROP_WHEEL, True);
+          Atom prop_scroll_distance = XInternAtom(dpy, EVDEV_PROP_SCROLL_DISTANCE, True);
+          Atom prop_wheel_emulation_axes = XInternAtom(dpy, EVDEV_PROP_WHEEL_AXES, True);
+          int ndevices_return;
+          XIDeviceInfo *info = XIQueryDevice(dpy, XIAllDevices, &ndevices_return);
+          for (int i = 0; i < ndevices_return; ++i) {
+              if ((info + i)->use == XISlavePointer) {
+                  int deviceid = (info + i)->deviceid;
+                  Status status;
+                  Atom type_return;
+                  int format_return;
+                  unsigned long num_items_return;
+                  unsigned long bytes_after_return;
+                  unsigned char *data;
+                  unsigned char *data2;
+                  status = XIGetProperty(dpy, deviceid, prop_wheel_emulation, 0, 1,
+                                         False, XA_INTEGER, &type_return, &format_return,
+                                         &num_items_return, &bytes_after_return, &data);
+                  if (status != Success) { continue; }
+
+                  // pointer device without wheel emulation
+                  if (type_return != XA_INTEGER || data == NULL || *(Bool*)data == False) {
+                      status = XIGetProperty(dpy, deviceid, prop_scroll_distance, 0, 3,
+                                             False, XA_INTEGER, &type_return, &format_return,
+                                             &num_items_return, &bytes_after_return, &data2);
+                      // negate scroll distance
+                      if (status == Success && type_return == XA_INTEGER &&
+                              format_return == 32 && num_items_return == 3) {
+                          int32_t *vals = (int32_t*)data2;
+                          for (int i=0; i< num_items_return; ++i) {
+                              int32_t val = *(vals+i);
+                              if (val > 0) { *(vals+i) = -val; }
+                          }
+                          XIChangeProperty(dpy, deviceid, prop_scroll_distance, XA_INTEGER,
+                                           32, XIPropModeReplace, data2, 3);
+                      }
+                  } else { // wheel emulation used, reverse wheel axes
+                      status = XIGetProperty(dpy, deviceid, prop_wheel_emulation_axes, 0, 4,
+                                             False, XA_INTEGER, &type_return, &format_return,
+                                             &num_items_return, &bytes_after_return, &data2);
+                      if (status == Success && type_return == XA_INTEGER &&
+                              format_return == 8 && num_items_return == 4) {
+                          // when scroll direction is not reversed,
+                          // up button id is usually smaller than down button id,
+                          // we use this assumption to detect if already reversed
+                          for (int i=0; i<2; ++i) {
+                              unsigned char up = *(data2 + i*2);
+                              unsigned char down = *(data2 + i*2+1);
+                              if (up != 0 && down != 0 && up < down) {
+                                  *(data2 + i*2) = down;
+                                  *(data2 + i*2+1) = up;
+                              }
+                          }
+                          XIChangeProperty(dpy, deviceid, prop_wheel_emulation_axes, XA_INTEGER,
+                                           8, XIPropModeReplace, data2, 4);
+                      }
+                  }
+
+                  if (data != NULL) { XFree(data); }
+                  if (data2 != NULL) { XFree(data2); }
+              }
+          }
+          XIFreeDeviceInfo(info);
+      }
       m_handedNeedsApply = false;
   }
 
