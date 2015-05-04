@@ -17,7 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-import QtQuick 2.0
+import QtQuick 2.4
 import QtQuick.Layouts 1.1
 
 import org.kde.plasma.components 2.0 as PlasmaComponents
@@ -32,7 +32,7 @@ Item {
     readonly property string pluginName: model.pluginName
 
     width: list.width
-    height: iconWidget.height + units.largeSpacing
+    height: iconContainer.height + units.largeSpacing
 
     DragArea {
         anchors.fill: parent
@@ -59,22 +59,75 @@ Item {
             }
             spacing: units.largeSpacing
 
-            QIconItem {
-                id: iconWidget
+            Item {
+                id: iconContainer
                 width: units.iconSizes.huge
                 height: width
-                icon: model.decoration
 
                 QIconItem {
-                    anchors {
-                        top: parent.top
-                        left: parent.left
-                        margins: units.smallSpacing
+                    id: iconWidget
+                    anchors.fill: parent
+                    icon: model.decoration
+                }
+
+                Item {
+                    id: badgeMask
+                    anchors.fill: parent
+
+                    Rectangle {
+                        x: Math.round(-units.smallSpacing * 1.5 / 2)
+                        y: x
+                        width: runningBadge.width + Math.round(units.smallSpacing * 1.5)
+                        height: width
+                        radius: height
+                        visible: running
                     }
-                    icon: visible ? "dialog-ok-apply" : undefined
+                }
+
+                Rectangle {
+                    id: runningBadge
+                    width: height
+                    height: Math.round(theme.mSize(countLabel.font).height * 1.3)
+                    radius: height
+                    color: theme.highlightColor
                     visible: running
-                    width: units.iconSizes.small
-                    height: width
+                    onVisibleChanged: maskShaderSource.scheduleUpdate()
+
+                    PlasmaComponents.Label {
+                        id: countLabel
+                        anchors.fill: parent
+                        horizontalAlignment: Text.AlignHCenter
+                        verticalAlignment: Text.AlignVCenter
+                        color: theme.backgroundColor
+                        text: running
+                    }
+                }
+
+                ShaderEffect {
+                    anchors.fill: parent
+                    property var source: ShaderEffectSource {
+                        sourceItem: iconWidget
+                        hideSource: true
+                        live: false
+                    }
+                    property var mask: ShaderEffectSource {
+                        id: maskShaderSource
+                        sourceItem: badgeMask
+                        hideSource: true
+                        live: false
+                    }
+
+                    supportsAtlasTextures: true
+
+                    fragmentShader: "
+                        varying highp vec2 qt_TexCoord0;
+                        uniform highp float qt_Opacity;
+                        uniform lowp sampler2D source;
+                        uniform lowp sampler2D mask;
+                        void main() {
+                            gl_FragColor = texture2D(source, qt_TexCoord0.st) * (1.0 - (texture2D(mask, qt_TexCoord0.st).a)) * qt_Opacity;
+                        }
+                    "
                 }
             }
 
