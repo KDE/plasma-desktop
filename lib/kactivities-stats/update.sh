@@ -18,8 +18,9 @@ if [ "$project_name" != "kactivities" ]; then
 fi
 
 kactivities_branch="`git rev-parse --abbrev-ref HEAD`"
-if [ "$kactivities_branch" != "master" ]; then
-    echo "The branch of kactivities needs to be ivan/libkactivities-experimental-stats"
+if [ "$2" != "--force-branch" -a "$kactivities_branch" != "master" ]; then
+    echo "The branch of kactivities needs to be master"
+    echo "Alternatively, you could call $0 $1 --force-branch"
     exit 1
 fi
 

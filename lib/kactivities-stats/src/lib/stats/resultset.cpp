@@ -204,7 +204,7 @@ public:
 
     QString mimetypeClause(const QString &mimetype) const
     {
-        if (mimetype == "*") return "1";
+        if (mimetype == ":any" || mimetype == "*") return "1";
 
         return "mimetype GLOB '" + mimetype + "'";
     }
