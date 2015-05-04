@@ -1,3 +1,7 @@
+if(NOT X11_Xinput_FOUND)
+    message(FATAL_ERROR "Xinput not found")
+endif()
+
 # KI18N Translation Domain for this library
 add_definitions(-DTRANSLATION_DOMAIN=\"kcminput\")
 
@@ -54,6 +58,8 @@ qt5_add_dbus_interface(kcm_input_PART_SRCS ${klauncher_xml} klauncher_iface)
 
 add_library(kcm_input MODULE ${kcm_input_PART_SRCS})
 
+include_directories(${X11_X11_INCLUDE_PATH}${X11_Xinput_INCLUDE_PATH})
+
 target_link_libraries(kcm_input
     Qt5::DBus
     Qt5::X11Extras
@@ -62,9 +68,10 @@ target_link_libraries(kcm_input
     KF5::KIOCore
     KF5::KIOWidgets
     KF5::KDELibs4Support
-    ${X11_LIBRARIES}
+    ${X11_X11_LIB}
+    ${X11_Xinput_LIB}
     ${LIBUSB_LIBRARIES}
-    )
+)
 if (X11_Xcursor_FOUND)
    target_link_libraries(kcm_input ${X11_Xcursor_LIB})
 endif ()
