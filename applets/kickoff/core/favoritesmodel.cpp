@@ -35,7 +35,7 @@
 #include <KDesktopFile>
 #include <KLocalizedString>
 #include <KUrl>
-
+#include <Kdelibs4ConfigMigrator>
 
 
 using namespace Kickoff;
@@ -47,6 +47,10 @@ public:
             : q(parent),
               displayOrder(NameAfterDescription)
     {
+        Kdelibs4ConfigMigrator migrator("plasma");//app name is unused for what we want, but we get a warning otherwise
+        migrator.setConfigFiles(QStringList("kickoffrc"));
+        migrator.migrate();
+
         init();
     }
 

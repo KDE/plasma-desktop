@@ -118,6 +118,11 @@ Item {
         }
 
         onPressed: {
+            // Ignore press events outside the viewport (i.e. on scrollbars).
+            if (!scrollArea.viewport.contains(Qt.point(mouse.x,mouse.y))) {
+                return;
+            }
+
             scrollArea.focus = true;
 
             if (childAt(mouse.x, mouse.y) != editor) {
@@ -567,8 +572,8 @@ Item {
                     gridView.cachedRectangleSelection = indices;
                 }
 
-                Behavior on contentX { id: smoothX; SmoothedAnimation { velocity: 700 } }
-                Behavior on contentY { id: smoothY; SmoothedAnimation { velocity: 700 } }
+                Behavior on contentX { id: smoothX; enabled: false; SmoothedAnimation { velocity: 700 } }
+                Behavior on contentY { id: smoothY; enabled: false; SmoothedAnimation { velocity: 700 } }
 
                 Keys.onReturnPressed: {
                     if (currentIndex != -1) {
