@@ -17,7 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-import QtQuick 2.2
+import QtQuick 2.4
 import org.kde.plasma.plasmoid 2.0
 
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -188,6 +188,14 @@ Item {
                     opacity: 0.4
                 }
 
+                TextMetrics {
+                    id: labelMetrics
+
+                    font: label.font
+                    elide: Text.ElideNone
+                    text: label.text
+                }
+
                 PlasmaComponents.Label {
                     id: label
 
@@ -197,7 +205,7 @@ Item {
                         horizontalCenter: parent.horizontalCenter
                     }
 
-                    width: Math.min(paintedWidth, parent.width - units.smallSpacing * 8) // FIXME TODO: Pick a frame prefix margin to cache and use instead.
+                    width: Math.min(labelMetrics.advanceWidth, parent.width - units.smallSpacing * 8) // FIXME TODO: Pick a frame prefix margin to cache and use instead.
                     height: undefined // Unset PlasmaComponents.Label's default.
 
                     textFormat: Text.PlainText
