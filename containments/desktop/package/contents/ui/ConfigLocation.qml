@@ -60,6 +60,8 @@ Item {
                 locationCustomValue.text = cfg_url;
             }
         }
+
+        locationPlaceValue.enabled = locationPlace.checked;
     }
 
     Folder.PlacesModel {
@@ -112,6 +114,10 @@ Item {
                         Layout.alignment: Qt.AlignTop
 
                         exclusiveGroup: locationGroup
+
+                        onCheckedChanged: {
+                            locationPlaceValue.enabled = checked;
+                        }
                     }
 
                     Label {
@@ -133,7 +139,7 @@ Item {
                         model: placesModel
                         textRole: "display"
 
-                        enabled: locationPlace.checked
+                        enabled: true
 
                         onEnabledChanged: {
                             if (enabled && currentIndex != -1) {
