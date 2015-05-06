@@ -19,24 +19,47 @@
 #ifndef PREVIEWWIDGET_H
 #define PREVIEWWIDGET_H
 
-#include <QWidget>
+#include <QQuickPaintedItem>
+#include <QPointer>
+#include "sortproxymodel.h"
 
 class CursorTheme;
 class PreviewCursor;
 
-class PreviewWidget : public QWidget
+class PreviewWidget : public QQuickPaintedItem
 {
+    Q_OBJECT
+    Q_PROPERTY(SortProxyModel *themeModel READ themeModel WRITE setThemeModel NOTIFY themeModelChanged)
+    Q_PROPERTY(int currentIndex READ currentIndex WRITE setCurrentIndex NOTIFY currentIndexChanged)
+    Q_PROPERTY(int currentSize READ currentSize WRITE setCurrentSize NOTIFY currentSizeChanged)
+
+
     public:
-        PreviewWidget(QWidget *parent);
+        PreviewWidget(QQuickItem *parent = 0);
         ~PreviewWidget();
 
         void setTheme(const CursorTheme *theme, const int size);
         void setUseLables(bool);
-        QSize sizeHint() const;
+        void updateImplicitSize();
+
+        void setThemeModel(SortProxyModel *themeModel);
+        SortProxyModel *themeModel();
+
+        void setCurrentIndex(int idx);
+        int currentIndex() const;
+
+        void setCurrentSize(int size);
+        int currentSize() const;
+
+    Q_SIGNALS:
+        void themeModelChanged();
+        void currentIndexChanged();
+        void currentSizeChanged();
 
     protected:
-        void paintEvent(QPaintEvent *);
-        void mouseMoveEvent(QMouseEvent *);
+        void paint(QPainter *);
+        void hoverMoveEvent(QHoverEvent *event);
+        void hoverLeaveEvent(QHoverEvent *e);
         void resizeEvent(QResizeEvent *);
 
     private:
@@ -45,6 +68,9 @@ class PreviewWidget : public QWidget
         QList<PreviewCursor*> list;
         const PreviewCursor *current;
         bool needLayout:1;
+        QPointer<SortProxyModel> m_themeModel;
+        int m_currentIndex;
+        int m_currentSize;
 };
 
 #endif // PREVIEWWIDGET_H
