@@ -58,6 +58,23 @@ namespace Terms {
     };
 
     /**
+     * How many items do you need?
+     */
+    struct KACTIVITIESSTATS_EXPORT Limit {
+        Limit(int value);
+        static Limit all();
+        int value;
+    };
+
+    /**
+     * How many items to skip?
+     */
+    struct KACTIVITIESSTATS_EXPORT Offset {
+        Offset(int value);
+        int value;
+    };
+
+    /**
      * Term to filter the resources according to their types
      */
     struct KACTIVITIESSTATS_EXPORT Type {
@@ -205,6 +222,12 @@ QDebug operator<<(QDebug dbg, const KActivities::Experimental::Stats::Terms::Act
 
 KACTIVITIESSTATS_EXPORT
 QDebug operator<<(QDebug dbg, const KActivities::Experimental::Stats::Terms::Url &url);
+
+KACTIVITIESSTATS_EXPORT
+QDebug operator<<(QDebug dbg, const KActivities::Experimental::Stats::Terms::Limit &limit);
+
+KACTIVITIESSTATS_EXPORT
+QDebug operator<<(QDebug dbg, const KActivities::Experimental::Stats::Terms::Offset &offset);
 
 #endif // KACTIVITIES_STATS_TERMS_H
 

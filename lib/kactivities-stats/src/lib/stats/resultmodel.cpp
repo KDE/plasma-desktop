@@ -42,8 +42,9 @@
 #include <utils/slide.h>
 #include <common/specialvalues.h>
 
-#define CHUNK_SIZE 10
-#define DEFAULT_ITEM_COUNT_LIMIT 5
+#define MAX_CHUNK_LOAD_SIZE 50
+
+#define QDBG qDebug() << "KActivitiesStats(" << (void*)this << ")"
 
 namespace KActivities {
 namespace Experimental {
@@ -53,9 +54,8 @@ class ResultModel::Private {
 public:
     Private(Query query, ResultModel *parent)
         : query(query)
-        , results(query)
         , watcher(query)
-        , itemCountLimit(DEFAULT_ITEM_COUNT_LIMIT)
+        , hasMore(true)
         , q(parent)
     {
         using Common::Database;
@@ -96,23 +96,32 @@ public:
 
     void fetchMore(bool emitChanges)
     {
-        if (!resultIt.isSourceValid()) {
-            // We haven't loaded anything yet
-            resultIt = results.begin();
-            Q_ASSERT(resultIt.isSourceValid());
+        using namespace Terms;
 
-        };
+        if (!hasMore) return;
 
-        int chunkSize = CHUNK_SIZE;
-        int insertedCount = 0;
         const int previousSize = cache.size();
 
-        while ((chunkSize --> 0) && (cache.size() < itemCountLimit) &&
-                resultIt != results.end()) {
-            cache.append(*resultIt);
-            ++resultIt;
+        // We want to load itemCountLimit - previousSize new items,
+        // but not more than chunkSize. We are skipping
+        // the first previousSize elements from the result set
+
+        int wantToInsertCount = qMin(MAX_CHUNK_LOAD_SIZE,
+                                     query.limit() - previousSize);
+        int insertedCount = 0;
+
+        // In order to see whether there are more results, we need to pass
+        // the count increased by one
+        ResultSet results(query | Offset(previousSize) | Limit(wantToInsertCount + 1));
+        auto it = results.begin();
+
+        while ((wantToInsertCount --> 0) && (it != results.end())) {
+            cache.append(*it);
             ++insertedCount;
+            ++it;
         }
+
+        hasMore = (it != results.end());
 
         if (emitChanges && insertedCount) {
             q->beginInsertRows(QModelIndex(), previousSize,
@@ -129,10 +138,10 @@ public:
         using kamd::utils::slide_one;
         using boost::lower_bound;
 
-        qDebug() << "result added:" << resource
-                 << "score:" << score
-                 << "last:" << lastUpdate
-                 << "first:" << firstUpdate;
+        QDBG << "result added:" << resource
+             << "score:" << score
+             << "last:" << lastUpdate
+             << "first:" << firstUpdate;
 
         // This can also be called when the resource score
         // has been updated, so we need to check whether
@@ -180,10 +189,10 @@ public:
             q->beginInsertRows(QModelIndex(), destinationIndex,
                                destinationIndex);
 
-            qDebug() << "inserting" << resource
-                     << "score:" << score
-                     << "last:" << lastUpdate
-                     << "first:" << firstUpdate;
+            QDBG << "inserting" << resource
+                 << "score:" << score
+                 << "last:" << lastUpdate
+                 << "first:" << firstUpdate;
 
             ResultSet::Result result;
             result.setResource(resource);
@@ -210,7 +219,7 @@ public:
 
         if (!result) return;
 
-        qDebug() << "removing row " << result.index << " of " << cache.size();
+        QDBG << "removing row " << result.index << " of " << cache.size();
 
         q->beginRemoveRows(QModelIndex(), result.index, result.index);
 
@@ -247,9 +256,13 @@ public:
     {
         q->beginResetModel();
 
+        QDBG << "Model reset";
+        // TODO: Make this a little bit smarter
+        //       - there is a possibility that the new list of
+        //       items will not differ significantly to the old one
+        //       in which case it does not need to be a full model reset
+
         cache.clear();
-        results = ResultSet(query);
-        resultIt = results.begin();
 
         init();
 
@@ -259,10 +272,11 @@ public:
 
     void trim()
     {
-        if (itemCountLimit >= cache.size()) return;
+        const int limit = query.limit();
+        if (limit >= cache.size()) return;
 
-        q->beginRemoveRows(QModelIndex(), itemCountLimit, cache.size() - 1);
-        cache.erase(cache.begin() + itemCountLimit, cache.end());
+        q->beginRemoveRows(QModelIndex(), limit, cache.size() - 1);
+        cache.erase(cache.begin() + limit, cache.end());
         q->endRemoveRows();
     }
 
@@ -277,12 +291,10 @@ public:
     }
 
     Query query;
-    ResultSet results;
     ResultWatcher watcher;
 
-    int itemCountLimit;
+    bool hasMore;
 
-    ResultSet::const_iterator resultIt;
     QList<ResultSet::Result> cache;
     KActivities::Consumer activities;
     Common::Database::Ptr database;
@@ -378,35 +390,33 @@ void ResultModel::fetchMore(const QModelIndex &parent)
 
 bool ResultModel::canFetchMore(const QModelIndex &parent) const
 {
-    return parent.isValid()                     ? false
-         : d->cache.size() >= d->itemCountLimit ? false
-         : !d->resultIt.isSourceValid()         ? true
-         : d->resultIt != d->results.end()
-         ;
+    return parent.isValid()                    ? false
+         : d->cache.size() >= d->query.limit() ? false
+         : d->hasMore;
 }
 
-void ResultModel::setItemCountLimit(int count)
-{
-    d->itemCountLimit = count;
-
-    const int oldSize = d->cache.size();
-
-    if (oldSize > count) {
-        // We need to remove all items from the tail if the new
-        // size is less than the current number of loaded items
-        d->trim();
-
-    } else if (oldSize < count) {
-        // If the requested size is bigger, we are resetting the
-        // model
-        d->reset();
-    }
-}
-
-int ResultModel::itemCountLimit() const
-{
-    return d->itemCountLimit;
-}
+// void ResultModel::setItemCountLimit(int count)
+// {
+//     d->itemCountLimit = count;
+//
+//     const int oldSize = d->cache.size();
+//
+//     if (oldSize > count) {
+//         // We need to remove all items from the tail if the new
+//         // size is less than the current number of loaded items
+//         d->trim();
+//
+//     } else if (oldSize < count) {
+//         // If the requested size is bigger, we are resetting the
+//         // model
+//         d->reset();
+//     }
+// }
+//
+// int ResultModel::itemCountLimit() const
+// {
+//     return d->itemCountLimit;
+// }
 
 void ResultModel::forgetResource(const QString &resource)
 {

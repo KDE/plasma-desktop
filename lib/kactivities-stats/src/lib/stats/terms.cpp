@@ -60,6 +60,21 @@ IMPLEMENT_SPECIAL_TERM_VALUE(Url, file, QStringList() << "/*" << "smb:*" << "fis
 #undef IMPLEMENT_TERM_CONSTRUCTORS
 #undef IMPLEMENT_SPECIAL_TERM_VALUE
 
+Terms::Limit::Limit(int value)
+    : value(value)
+{
+}
+
+Terms::Limit Terms::Limit::all()
+{
+    return Limit(0);
+}
+
+Terms::Offset::Offset(int value)
+    : value(value)
+{
+}
+
 Terms::Url Terms::Url::startsWith(const QString &prefix)
 {
     return Url(prefix + "*");
@@ -97,6 +112,9 @@ QDEBUG_TERM_OUT(Type,     _.values)
 QDEBUG_TERM_OUT(Agent,    _.values)
 QDEBUG_TERM_OUT(Activity, _.values)
 QDEBUG_TERM_OUT(Url,      _.values)
+
+QDEBUG_TERM_OUT(Limit,    _.value)
+QDEBUG_TERM_OUT(Offset,   _.value)
 
 #undef QDEBUG_TERM_OUT
 

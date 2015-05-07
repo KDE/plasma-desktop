@@ -129,10 +129,10 @@ void RecentDocsModel::refresh()
                     | Agent::any()
                     | Type::any()
                     | Activity::current()
-                    | Url::file();
+                    | Url::file()
+                    | Limit(15);
 
     ResultModel *model = new ResultModel(query);
-    model->setItemCountLimit(15);
 
     QModelIndex index;
 

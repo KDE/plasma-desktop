@@ -161,10 +161,10 @@ void RecentAppsModel::refresh()
                     | Agent::any()
                     | Type::any()
                     | Activity::current()
-                    | Url::startsWith("applications:");
+                    | Url::startsWith("applications:")
+                    | Limit(15);
 
     ResultModel *model = new ResultModel(query);
-    model->setItemCountLimit(15);
 
     QModelIndex index;
 
