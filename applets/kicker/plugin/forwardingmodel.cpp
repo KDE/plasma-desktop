@@ -174,8 +174,6 @@ void ForwardingModel::connectSignals()
             Qt::UniqueConnection);
     connect(m_sourceModel, SIGNAL(rowsInserted(QModelIndex,int,int)),
             this, SIGNAL(countChanged()), Qt::UniqueConnection);
-    connect(m_sourceModel, SIGNAL(rowsInserted(QModelIndex,int,int)),
-            this, SLOT(foo(QModelIndex,int,int)), Qt::UniqueConnection);
     connect(m_sourceModel, SIGNAL(rowsMoved(QModelIndex,int,int,QModelIndex,int)),
             this, SIGNAL(rowsMoved(QModelIndex,int,int,QModelIndex,int)),
             Qt::UniqueConnection);
