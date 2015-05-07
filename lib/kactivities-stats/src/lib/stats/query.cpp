@@ -54,12 +54,21 @@ namespace details {
 
 class Query::Private {
 public:
+    Private()
+        : limit(10)
+        , offset(0)
+        , ordering(Terms::HighScoredFirst)
+    {
+    }
+
     Terms::Select   selection;
     QStringList     types;
     QStringList     agents;
     QStringList     activities;
     QStringList     urlFilters;
     Terms::Order    ordering;
+    int             limit;
+    int             offset;
 };
 
 Query::Query(Terms::Select selection)
@@ -140,6 +149,16 @@ void Query::setSelection(Terms::Select selection)
     d->selection = selection;
 }
 
+void Query::setLimit(int limit)
+{
+    d->limit = limit;
+}
+
+void Query::setOffset(int offset)
+{
+    d->offset = offset;
+}
+
 Terms::Order Query::ordering() const
 {
     return d->ordering;
@@ -148,6 +167,16 @@ Terms::Order Query::ordering() const
 Terms::Select Query::selection() const
 {
     return d->selection;
+}
+
+int Query::limit() const
+{
+    return d->limit;
+}
+
+int Query::offset() const
+{
+    return d->offset;
 }
 
 } // namespace Stats

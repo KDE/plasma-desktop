@@ -158,10 +158,10 @@ void RecentContactsModel::refresh()
                     | Agent("KTp")
                     | Type::any()
                     | Activity::current()
-                    | Url::startsWith("ktp");
+                    | Url::startsWith("ktp")
+                    | Limit(15);
 
     ResultModel *model = new ResultModel(query);
-    model->setItemCountLimit(15);
 
     QModelIndex index;
 

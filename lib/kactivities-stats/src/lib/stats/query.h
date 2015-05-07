@@ -39,7 +39,9 @@ namespace Stats {
 
 /**
  * Class which defines what resource statistics should be
- * returned
+ * returned.
+ *
+ * By default, limit will be set to 10.
  */
 class KACTIVITIESSTATS_EXPORT Query {
 public:
@@ -61,6 +63,8 @@ public:
     QStringList activities() const;
     QStringList urlFilters() const;
     Terms::Order ordering() const;
+    int offset() const;
+    int limit() const;
 
     void setSelection(Terms::Select selection);
     void addTypes(const QStringList &types);
@@ -68,6 +72,8 @@ public:
     void addActivities(const QStringList &activities);
     void addUrlFilters(const QStringList &urlFilters);
     void setOrdering(Terms::Order ordering);
+    void setOffset(int offset);
+    void setLimit(int limit);
 
     void clearTypes();
     void clearAgents();
@@ -108,6 +114,16 @@ private:
     inline void addTerm(Terms::Select selection)
     {
         setSelection(selection);
+    }
+
+    inline void addTerm(Terms::Limit limit)
+    {
+        setLimit(limit.value);
+    }
+
+    inline void addTerm(Terms::Offset offset)
+    {
+        setOffset(offset.value);
     }
 
 public:

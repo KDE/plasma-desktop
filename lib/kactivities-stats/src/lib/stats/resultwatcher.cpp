@@ -53,6 +53,8 @@
 
 #include <utils/debug_and_return.h>
 
+#define QDBG qDebug() << "KActivitiesStats(" << (void*)this << ")"
+
 namespace KActivities {
 namespace Experimental {
 namespace Stats {
@@ -73,6 +75,11 @@ public:
         for (const auto& urlFilter: query.urlFilters()) {
             urlFilters << QRegExp(urlFilter, Qt::CaseSensitive, QRegExp::WildcardUnix);
         }
+
+        m_resultInvalidationTimer.setSingleShot(true);
+        m_resultInvalidationTimer.setInterval(200);
+        connect(&m_resultInvalidationTimer, &QTimer::timeout,
+                q, emit &ResultWatcher::resultsInvalidated);
     }
 
     // Processing the list of activities as specified by the query.
@@ -199,7 +206,7 @@ public:
         // The linked resources do not really care about the stats
         if (query.selection() == Terms::LinkedResources) return;
 
-        emit q->resultsInvalidated();
+        scheduleResultsInvalidation();
     }
 
     void onRecentStatsDeleted(QString, int, QString)
@@ -207,7 +214,7 @@ public:
         // The linked resources do not really care about the stats
         if (query.selection() == Terms::LinkedResources) return;
 
-        emit q->resultsInvalidated();
+        scheduleResultsInvalidation();
     }
 
     void onStatsForResourceDeleted(const QString &activity,
@@ -218,11 +225,24 @@ public:
 
         if (activityMatches(activity) && agentMatches(agent)) {
             if (resource.contains('*')) {
-                q->resultsInvalidated();
+                scheduleResultsInvalidation();
+
             } else if (typeMatches(resource)) {
-                q->resultRemoved(resource);
+                if (!m_resultInvalidationTimer.isActive()) {
+                    // Remove a result only if we haven't an invalidation
+                    // request scheduled
+                    q->resultRemoved(resource);
+                }
             }
         }
+    }
+
+    // Lets not send a lot of invalidation events at once
+    QTimer m_resultInvalidationTimer;
+    void scheduleResultsInvalidation()
+    {
+        QDBG << "Scheduling invalidation";
+        m_resultInvalidationTimer.start();
     }
 
     QScopedPointer<org::kde::ActivityManager::ResourcesLinking> linking;

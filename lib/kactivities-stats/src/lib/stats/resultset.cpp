@@ -220,6 +220,23 @@ public:
         return result;
     }
 
+    QString limitOffsetSuffix() const
+    {
+        QString result;
+
+        const int limit = queryDefinition.limit();
+        if (limit > 0) {
+            result += " LIMIT " + QString::number(limit);
+        }
+
+        const int offset = queryDefinition.offset();
+        if (offset > 0) {
+            result += " OFFSET " + QString::number(offset);
+        }
+
+        return result;
+    }
+
     QString linkedResourcesQuery() const
     {
         // TODO: We need to correct the scores based on the time that passed
@@ -253,7 +270,8 @@ public:
             "    AND ($urlFilter)\n"
 
             "GROUP BY resource, title \n"
-            "ORDER BY $orderingColumn resource ASC\n";
+            "ORDER BY $orderingColumn resource ASC \n"
+            ;
 
         // ORDER BY column
         auto ordering = queryDefinition.ordering();
@@ -277,7 +295,7 @@ public:
         QStringList urlFilter = transformedList(
                 queryDefinition.urlFilters(), &Private::urlFilterClause);
 
-        auto query = _query;
+        auto query = _query + limitOffsetSuffix();
 
         return
             query
@@ -315,7 +333,9 @@ public:
             "    AND ($urlFilter)\n"
 
             "GROUP BY resource, title \n"
-            "ORDER BY $orderingColumn resource ASC\n";
+            "ORDER BY $orderingColumn resource ASC\n"
+            ;
+
 
         // ORDER BY column
         auto ordering = queryDefinition.ordering();
@@ -339,7 +359,7 @@ public:
         QStringList urlFilter = transformedList(
                 queryDefinition.urlFilters(), &Private::urlFilterClause);
 
-        auto query = _query;
+        auto query = _query + limitOffsetSuffix();
 
         return kamd::utils::debug_and_return("Query: ",
             query

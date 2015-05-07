@@ -29,6 +29,10 @@ namespace Stats {
 /**
  * Class that can query the KActivities usage tracking mechanism
  * for resources.
+ *
+ * Note: It is important to note that you should not create a
+ * long-living instance of ResultSet. It might lock the database
+ * and break proper updating mechanisms.
  */
 class KACTIVITIESSTATS_EXPORT ResultSet {
 public:
