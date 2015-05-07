@@ -46,6 +46,8 @@ void FunnelModel::setSourceModel(QAbstractItemModel *model)
 
         m_sourceModel = model;
 
+        connectSignals();
+
         emit endResetModel();
 
         emit countChanged();
