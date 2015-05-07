@@ -108,6 +108,9 @@ public:
 
         int wantToInsertCount = qMin(MAX_CHUNK_LOAD_SIZE,
                                      query.limit() - previousSize);
+
+        if (wantToInsertCount == 0) return;
+
         int insertedCount = 0;
 
         // In order to see whether there are more results, we need to pass
@@ -357,7 +360,7 @@ QVariant ResultModel::data(const QModelIndex &item, int role) const
 {
     const auto row = item.row();
 
-    if (row >= d->cache.size()) return QVariant();
+    if (row < 0 || row >= d->cache.size()) return QVariant();
 
     const auto &result = d->cache[row];
 
