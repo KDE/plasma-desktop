@@ -25,6 +25,7 @@
 #include <QQuickItem>
 #include <QIcon>
 #include <QPixmap>
+#include <QPointer>
 
 DragHelper::DragHelper(QObject* parent) : QObject(parent)
 {
@@ -53,6 +54,8 @@ void DragHelper::startDrag(QQuickItem *item, const QString &mimeType,
 void DragHelper::startDragInternal(QQuickItem *item, const QString &mimeType,
     const QVariant &mimeData, const QUrl &url, const QIcon &icon) const
 {
+    QPointer<QQuickItem> grabber = item;
+
     QList<QUrl> urlList;
     urlList.append(url);
 
@@ -60,14 +63,18 @@ void DragHelper::startDragInternal(QQuickItem *item, const QString &mimeType,
     dragData->setData(mimeType, mimeData.toByteArray());
     dragData->setUrls(urlList);
 
-    QDrag *drag = new QDrag(item);
+    QDrag *drag = new QDrag(static_cast<QQuickItem *>(parent()));
     drag->setMimeData(dragData);
     drag->setPixmap(icon.pixmap(QSize(48, 48)));
     drag->setHotSpot(QPoint(drag->pixmap().width() / 2, drag->pixmap().height() / 2));
 
-    item->grabMouse();
+    grabber->grabMouse();
+
     drag->exec();
-    item->ungrabMouse();
+
+    if (grabber) {
+        grabber->ungrabMouse();
+    }
 
     emit dropped();
 }
