@@ -162,7 +162,12 @@ void RecentContactsModel::refresh()
 
     ResultModel *model = new ResultModel(query);
     model->setItemCountLimit(15);
-    model->fetchMore(QModelIndex());
+
+    QModelIndex index;
+
+    if (model->canFetchMore(index)) {
+        model->fetchMore(index);
+    }
 
     // FIXME TODO: Don't wipe entire cache on transactions.
     connect(model, SIGNAL(rowsInserted(QModelIndex,int,int)),

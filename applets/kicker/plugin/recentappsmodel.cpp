@@ -166,6 +166,12 @@ void RecentAppsModel::refresh()
     ResultModel *model = new ResultModel(query);
     model->setItemCountLimit(15);
 
+    QModelIndex index;
+
+    if (model->canFetchMore(index)) {
+        model->fetchMore(index);
+    }
+
     setSourceModel(model);
 
     delete oldModel;
