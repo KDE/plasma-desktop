@@ -68,6 +68,7 @@ namespace Terms {
 
     /**
      * How many items to skip?
+     * This can be specified only if limit is also set to a finite value.
      */
     struct KACTIVITIESSTATS_EXPORT Offset {
         Offset(int value);

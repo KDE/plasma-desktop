@@ -234,11 +234,11 @@ public:
         const int limit = queryDefinition.limit();
         if (limit > 0) {
             result += " LIMIT " + QString::number(limit);
-        }
 
-        const int offset = queryDefinition.offset();
-        if (offset > 0) {
-            result += " OFFSET " + QString::number(offset);
+            const int offset = queryDefinition.offset();
+            if (offset > 0) {
+                result += " OFFSET " + QString::number(offset);
+            }
         }
 
         return result;

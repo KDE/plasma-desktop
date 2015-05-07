@@ -176,6 +176,7 @@ int Query::limit() const
 
 int Query::offset() const
 {
+    Q_ASSERT_X(d->limit > 0, "Query::offset", "Offset can only be specified if limit is set");
     return d->offset;
 }
 
