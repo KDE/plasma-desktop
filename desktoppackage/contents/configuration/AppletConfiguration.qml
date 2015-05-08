@@ -88,7 +88,14 @@ Rectangle {
 //BEGIN connections
     Component.onCompleted: {
         if (!isContainment && configDialog.configModel && configDialog.configModel.count > 0) {
-            main.sourceFile = configDialog.configModel.get(0).source
+            if (configDialog.configModel.get(0).source) {
+                main.sourceFile = configDialog.configModel.get(0).source
+            } else if (configDialog.configModel.get(0).kcm) {
+                main.sourceFile = Qt.resolvedUrl("ConfigurationKcmPage.qml");
+                main.currentItem.kcm = configDialog.configModel.get(0).kcm;
+            } else {
+                main.sourceFile = "";
+            }
             main.title = configDialog.configModel.get(0).name
         } else {
             main.sourceFile = globalConfigModel.get(0).source
@@ -215,6 +222,9 @@ Rectangle {
                         property string sourceFile
 
                         onSourceFileChanged: {
+                            if (!sourceFile) {
+                                return;
+                            }
 //                             print("Source file changed in flickable" + sourceFile);
                             replace(Qt.resolvedUrl(sourceFile));
                             root.restoreConfig()
