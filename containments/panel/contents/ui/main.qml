@@ -390,8 +390,8 @@ function checkLastSpacer() {
     GridLayout {
         id: currentLayout
         property bool isLayoutHorizontal
-        rowSpacing: units.gridUnit.smallSpacing
-        columnSpacing: units.gridUnit.smallSpacing
+        rowSpacing: units.smallSpacing
+        columnSpacing: units.smallSpacing
 
         Layout.preferredWidth: {
             var width = 0;
