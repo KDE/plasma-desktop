@@ -46,6 +46,14 @@
     <entry name="launchers" type="String">
       <default></default>
     </entry>
+    <entry name="middleClickAction" type="Enum">
+      <choices>
+            <choice name="None"/>
+            <choice name="Close"/>
+            <choice name="NewInstance"/>
+      </choices>
+      <default>0</default>
+    </entry>
   </group>
 
 </kcfg>

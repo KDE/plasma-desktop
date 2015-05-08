@@ -53,7 +53,8 @@ Item {
     signal requestLayout
     signal activateItem(int id, bool toggle)
     signal activateWindow(int winId)
-    signal closeWindow(int winId);
+    signal closeByWinId(int winId);
+    signal closeByItemId(int itemId);
     signal launchNewInstance(int id)
     signal itemContextMenu(Item item, QtObject configAction)
     signal itemHovered(int id, bool hovered)
@@ -277,7 +278,8 @@ Item {
         tasks.requestLayout.connect(iconGeometryTimer.restart);
         tasks.activateItem.connect(backend.activateItem);
         tasks.activateWindow.connect(backend.activateWindow);
-        tasks.closeWindow.connect(backend.closeWindow);
+        tasks.closeByWinId.connect(backend.closeByWinId);
+        tasks.closeByItemId.connect(backend.closeByItemId);
         tasks.launchNewInstance.connect(backend.launchNewInstance);
         tasks.itemContextMenu.connect(backend.itemContextMenu);
         tasks.itemHovered.connect(backend.itemHovered);

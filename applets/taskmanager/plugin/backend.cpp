@@ -225,9 +225,18 @@ void Backend::activateWindow(int winId)
     KWindowSystem::forceActiveWindow(winId);
 }
 
-void Backend::closeWindow(int winId)
+void Backend::closeByWinId(int winId)
 {
     TaskManager::AbstractGroupableItem *item = m_groupManager->rootGroup()->getMemberByWId(winId);
+
+    if (item) {
+        item->close();
+    }
+}
+
+void Backend::closeByItemId(int itemId)
+{
+    TaskManager::AbstractGroupableItem *item = m_groupManager->rootGroup()->getMemberById(itemId);
 
     if (item) {
         item->close();

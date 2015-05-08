@@ -120,7 +120,7 @@ Column {
                         iconSource: "window-close"
 
                         onClicked: {
-                            tasks.closeWindow(modelData);
+                            tasks.closeByWinId(modelData);
                             toolTip.hideToolTip();
                         }
                     }

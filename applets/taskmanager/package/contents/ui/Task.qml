@@ -53,7 +53,7 @@ MouseArea {
     property Item busyIndicator
     property int wheelDelta: 0
 
-    acceptedButtons: Qt.LeftButton | Qt.RightButton
+    acceptedButtons: Qt.LeftButton | Qt.RightButton | Qt.MidButton
     hoverEnabled: true
 
     onItemIndexChanged: {
@@ -90,7 +90,7 @@ MouseArea {
     }
 
     onPressed: {
-        if (mouse.button == Qt.LeftButton) {
+        if (mouse.button == Qt.LeftButton || mouse.button == Qt.MidButton) {
             pressed = true;
             pressX = mouse.x;
             pressY = mouse.y;
@@ -105,23 +105,27 @@ MouseArea {
 
     onReleased: {
         if (pressed) {
-            if (!mouse.button == Qt.LeftButton) {
-                return;
-            }
-
-            if (mouse.modifiers & Qt.ShiftModifier) {
-                tasks.launchNewInstance(model.Id);
-            } else if (isGroupParent) {
-                if ((iconsOnly || mouse.modifiers == Qt.ControlModifier) && backend.canPresentWindows()) {
-                    tasks.presentWindows(model.Id);
-                } else if (groupDialog.visible) {
-                    groupDialog.visible = false;
-                } else {
-                    groupDialog.visualParent = task;
-                    groupDialog.visible = true;
+            if (mouse.button == Qt.MidButton) {
+                if (plasmoid.configuration.middleClickAction == TaskManager.Backend.NewInstance) {
+                    tasks.launchNewInstance(model.Id);
+                } else if (plasmoid.configuration.middleClickAction == TaskManager.Backend.Close) {
+                    tasks.closeByItemId(model.Id);
                 }
-            } else {
-                tasks.activateItem(model.Id, true);
+            } else if (mouse.button == Qt.LeftButton) {
+                if (mouse.modifiers & Qt.ShiftModifier) {
+                    tasks.launchNewInstance(model.Id);
+                } else if (isGroupParent) {
+                    if ((iconsOnly || mouse.modifiers == Qt.ControlModifier) && backend.canPresentWindows()) {
+                        tasks.presentWindows(model.Id);
+                    } else if (groupDialog.visible) {
+                        groupDialog.visible = false;
+                    } else {
+                        groupDialog.visualParent = task;
+                        groupDialog.visible = true;
+                    }
+                } else {
+                    tasks.activateItem(model.Id, true);
+                }
             }
         }
 

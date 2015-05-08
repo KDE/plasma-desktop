@@ -48,6 +48,13 @@ class Backend : public QObject
     Q_PROPERTY(QString launchers READ launchers WRITE setLaunchers NOTIFY launchersChanged)
 
     public:
+        enum MiddleClickAction {
+            None = 0,
+            Close,
+            NewInstance
+        };
+        Q_ENUMS(MiddleClickAction)
+
         Backend(QObject *parent = 0);
         ~Backend();
 
@@ -79,7 +86,8 @@ class Backend : public QObject
     public Q_SLOTS:
         void activateItem(int id, bool toggle);
         void activateWindow(int winId);
-        void closeWindow(int winId);
+        void closeByWinId(int winId);
+        void closeByItemId(int itemId);
         void launchNewInstance(int id);
         void itemContextMenu(QQuickItem *item, QObject *configAction);
         void itemHovered(int id, bool hovered);

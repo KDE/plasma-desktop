@@ -31,6 +31,7 @@ Item {
     property alias cfg_highlightWindows: highlightWindows.checked
     property alias cfg_maxStripes: maxStripes.value
     property alias cfg_groupingStrategy: groupingStrategy.currentIndex
+    property alias cfg_middleClickAction: middleClickAction.currentIndex
     property alias cfg_onlyGroupWhenFull: onlyGroupWhenFull.checked
     property alias cfg_sortingStrategy: sortingStrategy.currentIndex
     property alias cfg_showOnlyCurrentScreen: showOnlyCurrentScreen.checked
@@ -90,6 +91,18 @@ Item {
                 CheckBox {
                     id: highlightWindows
                     text: i18n("Highlight windows")
+                }
+
+                RowLayout {
+                    Label {
+                        text: i18n("On middle-click:")
+                    }
+
+                    ComboBox {
+                        id: middleClickAction
+                        Layout.fillWidth: true
+                        model: [i18nc("The click action", "None"), i18n("Close Window or Group"), i18n("New Instance")]
+                    }
                 }
             }
         }
