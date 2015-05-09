@@ -34,11 +34,9 @@
  */
 class SortProxyModel : public QSortFilterProxyModel
 {
-    Q_OBJECT
     public:
         SortProxyModel(QObject *parent = 0) : QSortFilterProxyModel(parent) {}
         ~SortProxyModel() {}
-        QHash<int, QByteArray> roleNames() const;
         inline const CursorTheme *theme(const QModelIndex &index) const;
         inline QModelIndex findIndex(const QString &name) const;
         inline QModelIndex defaultIndex() const;

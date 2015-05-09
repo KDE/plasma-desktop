@@ -18,7 +18,6 @@
 
 #include <QPainter>
 #include <QMouseEvent>
-#include <QQuickWindow>
 
 #include "previewwidget.h"
 
@@ -54,8 +53,8 @@ namespace {
 
     const int numCursors      = 9;     // The number of cursors from the above list to be previewed
     const int cursorSpacing   = 20;    // Spacing between preview cursors
-    const qreal widgetMinWidth  = 10;    // The minimum width of the preview widget
-    const qreal widgetMinHeight = 48;    // The minimum height of the preview widget
+    const int widgetMinWidth  = 10;    // The minimum width of the preview widget
+    const int widgetMinHeight = 48;    // The minimum height of the preview widget
 }
 
 
@@ -118,12 +117,9 @@ QRect PreviewCursor::rect() const
 
 
 
-PreviewWidget::PreviewWidget(QQuickItem *parent)
-        : QQuickPaintedItem(parent),
-          m_currentIndex(-1),
-          m_currentSize(0)
+PreviewWidget::PreviewWidget(QWidget *parent) : QWidget(parent)
 {
-    setAcceptHoverEvents(true);
+    setMouseTracking(true);
     current = NULL;
 }
 
@@ -134,79 +130,22 @@ PreviewWidget::~PreviewWidget()
     list.clear();
 }
 
-void PreviewWidget::setThemeModel(SortProxyModel *themeModel)
+
+QSize PreviewWidget::sizeHint() const
 {
-    if (m_themeModel == themeModel) {
-        return;
-    }
-
-    m_themeModel = themeModel;
-    emit themeModelChanged();
-}
-
-SortProxyModel *PreviewWidget::themeModel()
-{
-    return m_themeModel;
-}
-
-void PreviewWidget::setCurrentIndex(int idx)
-{
-    if (m_currentIndex == idx) {
-        return;
-    }
-
-    m_currentIndex = idx;
-    emit currentIndexChanged();
-
-    if (!m_themeModel) {
-        return;
-    }
-    const CursorTheme *theme = m_themeModel->theme(m_themeModel->index(idx, 0));
-    setTheme(theme, m_currentSize);
-}
-
-int PreviewWidget::currentIndex() const
-{
-    return m_currentIndex;
-}
-
-void PreviewWidget::setCurrentSize(int size)
-{
-    if (m_currentSize == size) {
-        return;
-    }
-
-    m_currentSize = size;
-    emit currentSizeChanged();
-
-    if (!m_themeModel) {
-        return;
-    }
-    const CursorTheme *theme = m_themeModel->theme(m_themeModel->index(m_currentIndex, 0));
-    setTheme(theme, size);
-}
-
-int PreviewWidget::currentSize() const
-{
-    return m_currentSize;
-}
-
-void PreviewWidget::updateImplicitSize()
-{
-    qreal totalWidth = 0;
-    qreal maxHeight = 0;
+    int totalWidth = 0;
+    int maxHeight = 0;
 
     foreach (const PreviewCursor *c, list)
     {
         totalWidth += c->width();
-        maxHeight = qMax(c->height(), (int)maxHeight);
+        maxHeight = qMax(c->height(), maxHeight);
     }
 
     totalWidth += (list.count() - 1) * cursorSpacing;
     maxHeight = qMax(maxHeight, widgetMinHeight);
 
-    setImplicitWidth(qMax(totalWidth, widgetMinWidth));
-    setImplicitHeight(qMax(height(), maxHeight));
+    return QSize(qMax(totalWidth, widgetMinWidth), qMax(height(), maxHeight));
 }
 
 
@@ -214,7 +153,7 @@ void PreviewWidget::layoutItems()
 {
     if (!list.isEmpty())
     {
-        QSize size(implicitWidth(), implicitHeight());
+        QSize size = sizeHint();
         int cursorWidth = size.width() / list.count();
         int nextX = (width() - size.width()) / 2;
 
@@ -241,7 +180,7 @@ void PreviewWidget::setTheme(const CursorTheme *theme, const int size)
             list << new PreviewCursor(theme, cursor_names[i], size);
 
         needLayout = true;
-        updateImplicitSize();
+        updateGeometry();
     }
 
     current = NULL;
@@ -249,8 +188,10 @@ void PreviewWidget::setTheme(const CursorTheme *theme, const int size)
 }
 
 
-void PreviewWidget::paint(QPainter *painter)
+void PreviewWidget::paintEvent(QPaintEvent *)
 {
+    QPainter p(this);
+
     if (needLayout)
         layoutItems();
 
@@ -259,12 +200,12 @@ void PreviewWidget::paint(QPainter *painter)
         if (c->pixmap().isNull())
             continue;
 
-        painter->drawPixmap(c->position(), *c);
+        p.drawPixmap(c->position(), *c);
     }
 }
 
 
-void PreviewWidget::hoverMoveEvent(QHoverEvent *e)
+void PreviewWidget::mouseMoveEvent(QMouseEvent *e)
 {
     if (needLayout)
         layoutItems();
@@ -276,8 +217,8 @@ void PreviewWidget::hoverMoveEvent(QHoverEvent *e)
             if (c != current)
             {
                 const uint32_t cursor = *c;
-                if (QX11Info::isPlatformX11() && (cursor != XCB_CURSOR_NONE) && window()) {
-                    xcb_change_window_attributes(QX11Info::connection(), window()->winId(), XCB_CW_CURSOR, &cursor);
+                if (QX11Info::isPlatformX11() && (cursor != XCB_CURSOR_NONE)) {
+                    xcb_change_window_attributes(QX11Info::connection(), winId(), XCB_CW_CURSOR, &cursor);
                 }
                 current = c;
             }
@@ -289,12 +230,6 @@ void PreviewWidget::hoverMoveEvent(QHoverEvent *e)
     current = NULL;
 }
 
-void PreviewWidget::hoverLeaveEvent(QHoverEvent *e)
-{
-    if (window()) {
-        window()->unsetCursor();
-    }
-}
 
 void PreviewWidget::resizeEvent(QResizeEvent *)
 {
