@@ -184,7 +184,7 @@ QVariantList recentDocumentActions(KService::Ptr service)
         }
 
         if (list.count() == 0) {
-            list << createTitleActionItem(i18n("Recent documents:"));
+            list << createTitleActionItem(i18n("Recent Documents"));
         }
 
         QVariantMap item = createActionItem(url.fileName(), "_kicker_recentDocument", resource);

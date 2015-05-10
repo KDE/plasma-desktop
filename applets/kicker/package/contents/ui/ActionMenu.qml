@@ -88,6 +88,7 @@ Item {
             text: actionItem.text ? actionItem.text : ""
             enabled: actionItem.type != "title" && ("enabled" in actionItem ? actionItem.enabled : true)
             separator: actionItem.type == "separator"
+            section: actionItem.type == "title"
             icon: actionItem.icon ? actionItem.icon : null
 
             onClicked: {
