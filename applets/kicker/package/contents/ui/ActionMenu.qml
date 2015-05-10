@@ -68,8 +68,6 @@ Item {
             var item = contextMenuItemComponent.createObject(menu, {
                 "actionItem": actionItem,
             });
-
-            menu.addMenuItem(item);
         });
     }
 
