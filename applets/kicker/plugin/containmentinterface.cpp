@@ -159,8 +159,6 @@ void ContainmentInterface::addLauncher(QObject *appletInterface, ContainmentInte
                     }
                 }
 
-                rootItem = gObj->childItems().at(1);
-
                 if (rootItem) {
                     QMetaObject::invokeMethod(rootItem, "addLauncher", Q_ARG(QVariant, QUrl::fromLocalFile(entryPath)));
                 }
