@@ -141,6 +141,21 @@ AbstractModel* ForwardingModel::modelForRow(int row)
     return abstractModel->modelForRow(row);
 }
 
+int ForwardingModel::separatorCount() const
+{
+    if (!m_sourceModel) {
+        return 0;
+    }
+
+    AbstractModel *abstractModel = qobject_cast<AbstractModel *>(m_sourceModel);
+
+    if (!abstractModel) {
+        return 0;
+    }
+
+    return abstractModel->separatorCount();
+}
+
 void ForwardingModel::reset()
 {
     emit beginResetModel();

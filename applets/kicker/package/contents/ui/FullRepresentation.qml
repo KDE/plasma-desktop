@@ -30,14 +30,16 @@ FocusScope {
     Layout.minimumWidth: sideBar.width + mainRow.spacing + Math.max(rootList.width, runnerColumns.width)
     Layout.maximumWidth: sideBar.width + mainRow.spacing + Math.max(rootList.width, runnerColumns.width)
 
-    Layout.minimumHeight: Math.max(((rootModel.count - (rootList.hasDivider ? 1 : 0)) * rootList.itemHeight)
+    Layout.minimumHeight: Math.max(((rootModel.count - rootModel.separatorCount) * rootList.itemHeight)
+        + (rootModel.separatorCount * rootList.separatorHeight)
         + searchField.height + (2 * units.smallSpacing), sideBar.margins.top + sideBar.margins.bottom
         + favoriteApps.contentHeight + favoriteSystemActions.contentHeight + sidebarSeparator.height
-        + (4 * units.smallSpacing)) + (rootList.hasDivider ? rootList.dividerHeight : 0)
-    Layout.maximumHeight: Math.max(((rootModel.count - (rootList.hasDivider ? 1 : 0)) * rootList.itemHeight)
+        + (4 * units.smallSpacing))
+    Layout.maximumHeight: Math.max(((rootModel.count - rootModel.separatorCount) * rootList.itemHeight)
+        + (rootModel.separatorCount * rootList.separatorHeight)
         + searchField.height + (2 * units.smallSpacing), sideBar.margins.top + sideBar.margins.bottom
         + favoriteApps.contentHeight + favoriteSystemActions.contentHeight + sidebarSeparator.height
-        + (4 * units.smallSpacing)) + (rootList.hasDivider ? rootList.dividerHeight : 0)
+        + (4 * units.smallSpacing))
 
     signal appendSearchText(string text)
 
@@ -164,12 +166,9 @@ FocusScope {
 
             anchors.top: parent.top
 
-            height: ((rootModel.count - (hasDivider ? 1 : 0)) * itemHeight) + (hasDivider ? dividerHeight : 0)
+            height: ((rootModel.count - rootModel.separatorCount) * itemHeight) + (rootModel.separatorCount * separatorHeight)
 
             visible: (searchField.text == "")
-
-            property bool hasDivider: (rootModel.showRecentApps
-                || rootModel.showRecentDocs || rootModel.showRecentContacts)
 
             iconsEnabled: false
 

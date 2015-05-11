@@ -72,9 +72,11 @@ MenuEntryEditor *AppsModel::m_menuEntryEditor = 0;
 
 AppsModel::AppsModel(const QString &entryPath, bool flat, QObject *parent)
 : AbstractModel(parent)
+, m_separatorCount(0)
 , m_entryPath(entryPath)
 , m_changeTimer(0)
 , m_flat(flat)
+, m_sortNeeded(false)
 , m_appNameFormat(NameOnly)
 , m_appletInterface(0)
 {
@@ -102,8 +104,8 @@ QVariant AppsModel::data(const QModelIndex &index, int role) const
         return entry->icon();
     } else if (role == Kicker::IsParentRole) {
         return (entry->type() == AbstractEntry::GroupType);
-    } else if (role == Kicker::IsDividerRole) {
-        return (entry->type() == AbstractEntry::DividerType);
+    } else if (role == Kicker::IsSeparatorRole) {
+        return (entry->type() == AbstractEntry::SeparatorType);
     } else if (role == Kicker::HasChildrenRole) {
         if (entry->type() == AbstractEntry::GroupType) {
             const AbstractGroupEntry *groupEntry = static_cast<const AbstractGroupEntry *>(entry);
@@ -352,6 +354,11 @@ AbstractModel *AppsModel::modelForRow(int row)
     return static_cast<AbstractGroupEntry *>(m_entryList.at(row))->model();
 }
 
+int AppsModel::separatorCount() const
+{
+    return m_separatorCount;
+}
+
 bool AppsModel::flat() const
 {
     return m_flat;
@@ -434,10 +441,16 @@ void AppsModel::refresh()
     qDeleteAll(m_entryList);
     m_entryList.clear();
     m_hiddenEntries.clear();
+    m_separatorCount = 0;
+    m_sortNeeded = false;
 
     if (m_entryPath.isEmpty()) {
         KServiceGroup::Ptr group = KServiceGroup::root();
-        KServiceGroup::List list = group->entries(true);
+
+        bool sortByGenericName = (appNameFormat() == GenericNameOnly || appNameFormat() == GenericNameAndName);
+
+        KServiceGroup::List list = group->entries(true /* sorted */, true /* excludeNoDisplay */,
+            true /* allowSeparators */, sortByGenericName /* sortByGenericName */);
 
         for (KServiceGroup::List::ConstIterator it = list.constBegin(); it != list.constEnd(); it++) {
             const KSycocaEntry::Ptr p = (*it);
@@ -463,21 +476,29 @@ void AppsModel::refresh()
         KServiceGroup::Ptr group = KServiceGroup::group(m_entryPath);
         processServiceGroup(group);
 
-        QCollator c;
+        while (m_entryList.last()->type() == AbstractEntry::SeparatorType) {
+            m_entryList.removeLast();
+            --m_separatorCount;
+        }
 
-        std::sort(m_entryList.begin(), m_entryList.end(),
-            [&c](AbstractEntry* a, AbstractEntry* b) {
-                if (a->type() != b->type()) {
-                    return a->type() > b->type();
-                } else {
-                    return c.compare(a->name(), b->name()) < 0;
-                }
-            });
+        if (m_sortNeeded) {
+            QCollator c;
+
+            std::sort(m_entryList.begin(), m_entryList.end(),
+                [&c](AbstractEntry* a, AbstractEntry* b) {
+                    if (a->type() != b->type()) {
+                        return a->type() > b->type();
+                    } else {
+                        return c.compare(a->name(), b->name()) < 0;
+                    }
+                });
+        }
     }
 
     endResetModel();
 
     emit countChanged();
+    emit separatorCountChanged();
 }
 
 void AppsModel::processServiceGroup(KServiceGroup::Ptr group)
@@ -486,7 +507,20 @@ void AppsModel::processServiceGroup(KServiceGroup::Ptr group)
         return;
     }
 
-    KServiceGroup::List list = group->entries(true);
+    bool sortByGenericName = (appNameFormat() == GenericNameOnly || appNameFormat() == GenericNameAndName);
+
+    KServiceGroup::List list = group->entries(true /* sorted */, true /* excludeNoDisplay */,
+        true /* allowSeparators */, sortByGenericName /* sortByGenericName */);
+
+    bool hasSubGroups = false;
+
+    foreach(KServiceGroup::Ptr grp, group->groupEntries(KServiceGroup::ExcludeNoDisplay)) {
+        if (grp->childCount() > 0) {
+            hasSubGroups = true;
+
+            break;
+        }
+    }
 
     QStringList hiddenApps;
 
@@ -523,19 +557,33 @@ void AppsModel::processServiceGroup(KServiceGroup::Ptr group)
             if (!found) {
                 m_entryList << new AppEntry(service, nameFromService(service, m_appNameFormat));
             }
+        } else if (p->isType(KST_KServiceSeparator) && (!m_flat || (m_flat && !hasSubGroups))) {
+            if (!m_entryList.count()) {
+                continue;
+            }
+
+            if (m_entryList.last()->type() == AbstractEntry::SeparatorType) {
+                continue;
+            }
+
+            m_entryList << new SeparatorEntry();
+            ++m_separatorCount;
         } else if (p->isType(KST_KServiceGroup)) {
+            const KServiceGroup::Ptr subGroup(static_cast<KServiceGroup*>(p.data()));
+
+            if (subGroup->childCount() == 0) {
+                continue;
+            }
+
             if (m_flat) {
+                m_sortNeeded = true;
                 const KServiceGroup::Ptr serviceGroup(static_cast<KServiceGroup*>(p.data()));
                 processServiceGroup(serviceGroup);
             } else {
-                const KServiceGroup::Ptr subGroup(static_cast<KServiceGroup*>(p.data()));
-
-                if (!subGroup->noDisplay() && subGroup->childCount() > 0) {
-                    AppGroupEntry *groupEntry = new AppGroupEntry(subGroup, this, m_flat, m_appNameFormat);
-                    connect(groupEntry->model(), SIGNAL(countChanged()), this, SLOT(refresh()));
-                    connect(groupEntry->model(), SIGNAL(hiddenEntriesChanged()), this, SLOT(childHiddenEntriesChanged()));
-                    m_entryList << groupEntry;
-                }
+                AppGroupEntry *groupEntry = new AppGroupEntry(subGroup, this, m_flat, m_appNameFormat);
+                connect(groupEntry->model(), SIGNAL(countChanged()), this, SLOT(refresh()));
+                connect(groupEntry->model(), SIGNAL(hiddenEntriesChanged()), this, SLOT(childHiddenEntriesChanged()));
+                m_entryList << groupEntry;
             }
         }
     }

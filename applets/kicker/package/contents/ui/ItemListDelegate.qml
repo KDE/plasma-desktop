@@ -28,22 +28,22 @@ import "../code/tools.js" as Tools
 Item {
     id: item
 
-    height: isDivider ? dividerHeight : itemHeight
+    height: isSeparator ? separatorHeight : itemHeight
     width: ListView.view.width
 
-    enabled: !isDivider
+    enabled: !isSeparator
 
     signal actionTriggered(string actionId, variant actionArgument)
     signal aboutToShowActionMenu(variant actionMenu)
 
-    property bool isDivider: (model.isDivider == true)
+    property bool isSeparator: (model.isSeparator == true)
     property bool hasChildren: (model.hasChildren == true)
     property bool hasActionList: ((model.favoriteId != null)
         || (("hasActionList" in model) && (model.hasActionList == true)))
     property QtObject childDialog: null
     property Item menu: actionMenu
 
-    Accessible.role: isDivider ? Accessible.Separator: Accessible.MenuItem
+    Accessible.role: isSeparator ? Accessible.Separator: Accessible.MenuItem
     Accessible.name: label.text
 
     onAboutToShowActionMenu: {
@@ -228,7 +228,7 @@ Item {
     }
 
     Component {
-        id: dividerComponent
+        id: separatorComponent
 
         PlasmaCore.SvgItem {
             width: parent.width
@@ -240,7 +240,7 @@ Item {
     }
 
     Loader {
-        id: dividerLoader
+        id: separatorLoader
 
         anchors.left: parent.left
         anchors.leftMargin: highlightItemSvg.margins.left
@@ -248,10 +248,10 @@ Item {
         anchors.rightMargin: highlightItemSvg.margins.right
         anchors.verticalCenter: parent.verticalCenter
 
-        active: isDivider
+        active: isSeparator
 
         asynchronous: false
-        sourceComponent: dividerComponent
+        sourceComponent: separatorComponent
     }
 
     Keys.onPressed: {

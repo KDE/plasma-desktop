@@ -30,7 +30,7 @@
 class AbstractEntry
 {
     public:
-        enum EntryType { RunnableType, GroupType, DividerType };
+        enum EntryType { RunnableType, GroupType, SeparatorType };
 
         virtual ~AbstractEntry();
 
@@ -56,10 +56,10 @@ class AbstractGroupEntry : public AbstractEntry
         QPointer<AbstractModel> m_model;
 };
 
-class DividerEntry : public AbstractEntry
+class SeparatorEntry : public AbstractEntry
 {
     public:
-        EntryType type() const { return DividerType; }
+        EntryType type() const { return SeparatorType; }
 };
 
 #endif

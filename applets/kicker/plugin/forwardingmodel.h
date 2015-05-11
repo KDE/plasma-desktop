@@ -51,6 +51,8 @@ class ForwardingModel : public AbstractModel
 
         Q_INVOKABLE AbstractModel *modelForRow(int row);
 
+        int separatorCount() const;
+
     public Q_SLOTS:
         void reset();
 

@@ -41,7 +41,7 @@ FocusScope {
     property int itemHeight: Math.ceil((Math.max(theme.mSize(theme.defaultFont).height, units.iconSizes.small)
         + Math.max(highlightItemSvg.margins.top + highlightItemSvg.margins.bottom,
         listItemSvg.margins.top + listItemSvg.margins.bottom)) / 2) * 2
-    property int dividerHeight: lineSvg.horLineHeight + (2 * units.smallSpacing)
+    property int separatorHeight: lineSvg.horLineHeight + (2 * units.smallSpacing)
 
     property alias currentIndex: listView.currentIndex
     property alias currentItem: listView.currentItem
@@ -152,7 +152,7 @@ FocusScope {
                 highlight: PlasmaComponents.Highlight {
                     anchors.fill: listView.currentItem;
 
-                    visible: listView.currentItem && !listView.currentItem.isDivider
+                    visible: listView.currentItem && !listView.currentItem.isSeparator
                 }
 
                 onCountChanged: {
@@ -211,7 +211,7 @@ FocusScope {
                         showChildDialogs = false;
                         decrementCurrentIndex();
 
-                        if (currentItem.isDivider) {
+                        if (currentItem.isSeparator) {
                             decrementCurrentIndex();
                         }
 
@@ -228,7 +228,7 @@ FocusScope {
                         showChildDialogs = false;
                         incrementCurrentIndex();
 
-                        if (currentItem.isDivider) {
+                        if (currentItem.isSeparator) {
                             incrementCurrentIndex();
                         }
 

@@ -80,6 +80,8 @@ class AppsModel : public AbstractModel
 
         Q_INVOKABLE AbstractModel *modelForRow(int row);
 
+        int separatorCount() const;
+
         bool flat() const;
         void setFlat(bool flat);
 
@@ -111,6 +113,7 @@ class AppsModel : public AbstractModel
 
     protected:
         QList<AbstractEntry *> m_entryList;
+        int m_separatorCount;
 
     private:
         void processServiceGroup(KServiceGroup::Ptr group);
@@ -119,6 +122,7 @@ class AppsModel : public AbstractModel
         QString m_entryPath;
         QTimer *m_changeTimer;
         bool m_flat;
+        bool m_sortNeeded;
         NameFormat m_appNameFormat;
         QStringList m_hiddenEntries;
         QObject *m_appletInterface;

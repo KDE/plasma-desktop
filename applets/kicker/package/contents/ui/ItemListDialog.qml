@@ -46,7 +46,8 @@ Kicker.SubMenu {
 
         height: model != undefined ? Math.min(((Math.floor((itemDialog.availableScreenRectForItem(itemListView).height
             - itemDialog.margins.top - itemDialog.margins.bottom) / itemHeight) - 1)
-            * itemHeight), model.count * itemHeight) : 0
+            * itemHeight) - (model.separatorCount * itemHeight) + (model.separatorCount * separatorHeight),
+            ((model.count - model.separatorCount) * itemHeight) + (model.separatorCount * separatorHeight)) : 0
 
         iconsEnabled: true
 

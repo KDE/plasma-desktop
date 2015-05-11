@@ -27,12 +27,14 @@ class AbstractModel : public QAbstractListModel
     Q_OBJECT
 
     Q_PROPERTY(int count READ count NOTIFY countChanged)
+    Q_PROPERTY(int separatorCount READ separatorCount NOTIFY separatorCountChanged)
 
     public:
         explicit AbstractModel(QObject *parent = 0);
         ~AbstractModel();
 
         int count() const;
+        virtual int separatorCount() const;
 
         int columnCount(const QModelIndex &parent = QModelIndex()) const;
 
@@ -44,6 +46,7 @@ class AbstractModel : public QAbstractListModel
 
     Q_SIGNALS:
         void countChanged() const;
+        void separatorCountChanged() const;
 };
 
 #endif

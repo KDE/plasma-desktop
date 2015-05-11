@@ -26,7 +26,7 @@ AbstractModel::AbstractModel(QObject *parent) : QAbstractListModel(parent)
     roles.insert(Qt::DisplayRole, "display");
     roles.insert(Qt::DecorationRole, "decoration");
     roles.insert(Kicker::IsParentRole, "isParent");
-    roles.insert(Kicker::IsDividerRole, "isDivider");
+    roles.insert(Kicker::IsSeparatorRole, "isSeparator");
     roles.insert(Kicker::HasChildrenRole, "hasChildren");
     roles.insert(Kicker::FavoriteIdRole, "favoriteId");
     roles.insert(Kicker::HasActionListRole, "hasActionList");
@@ -43,6 +43,11 @@ AbstractModel::~AbstractModel()
 int AbstractModel::count() const
 {
     return rowCount();
+}
+
+int AbstractModel::separatorCount() const
+{
+    return 0;
 }
 
 int AbstractModel::columnCount(const QModelIndex &parent) const

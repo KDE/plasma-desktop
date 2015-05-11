@@ -211,7 +211,8 @@ void RootModel::extendEntryList()
 
         GroupEntry *entry = 0;
 
-        m_entryList.prepend(new DividerEntry());
+        m_entryList.prepend(new SeparatorEntry());
+        ++m_separatorCount;
 
         if (m_recentContactsModel) {
             entry = new GroupEntry(i18n("Recent Contacts"), QString(), m_recentContactsModel, this);
@@ -236,6 +237,7 @@ void RootModel::extendEntryList()
     endInsertRows();
 
     emit countChanged();
+    emit separatorCountChanged();
 }
 
 void RootModel::childModelChanged()
