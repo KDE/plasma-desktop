@@ -25,7 +25,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
 import org.kde.plasma.components 2.0 as PlasmaComponents
 
-import "plasmapackage:/code/LayoutManager.js" as LayoutManager
+import "LayoutManager.js" as LayoutManager
 
 KQuickControlsAddons.MouseEventListener {
     id: appletHandle

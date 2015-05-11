@@ -28,7 +28,7 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
 import org.kde.plasma.plasmoid 2.0
 
-import "plasmapackage:/code/LayoutManager.js" as LayoutManager
+import "LayoutManager.js" as LayoutManager
 
 Item {
     id: appletItem

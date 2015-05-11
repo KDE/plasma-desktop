@@ -27,7 +27,7 @@ import org.kde.draganddrop 2.0 as DragDrop
 
 import org.kde.private.desktopcontainment.desktop 0.1 as Desktop
 
-import "plasmapackage:/code/LayoutManager.js" as LayoutManager
+import "LayoutManager.js" as LayoutManager
 
 DragDrop.DropArea {
     id: root

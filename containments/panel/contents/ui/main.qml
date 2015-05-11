@@ -25,7 +25,7 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.draganddrop 2.0 as DragDrop
 
-import "plasmapackage:/code/LayoutManager.js" as LayoutManager
+import "LayoutManager.js" as LayoutManager
 
 DragDrop.DropArea {
     id: root
