@@ -507,20 +507,22 @@ void AppsModel::processServiceGroup(KServiceGroup::Ptr group)
         return;
     }
 
-    bool sortByGenericName = (appNameFormat() == GenericNameOnly || appNameFormat() == GenericNameAndName);
-
-    KServiceGroup::List list = group->entries(true /* sorted */, true /* excludeNoDisplay */,
-        true /* allowSeparators */, sortByGenericName /* sortByGenericName */);
-
     bool hasSubGroups = false;
 
-    foreach(KServiceGroup::Ptr grp, group->groupEntries(KServiceGroup::ExcludeNoDisplay)) {
-        if (grp->childCount() > 0) {
+    foreach(KServiceGroup::Ptr subGroup, group->groupEntries(KServiceGroup::ExcludeNoDisplay)) {
+        if (subGroup->childCount() > 0) {
             hasSubGroups = true;
 
             break;
         }
     }
+
+    bool sortByGenericName = (appNameFormat() == GenericNameOnly || appNameFormat() == GenericNameAndName);
+
+    KServiceGroup::List list = group->entries(true /* sorted */,
+        true /* excludeNoDisplay */,
+        (!m_flat || (m_flat && !hasSubGroups)) /* allowSeparators */,
+        sortByGenericName /* sortByGenericName */);
 
     QStringList hiddenApps;
 
@@ -557,7 +559,7 @@ void AppsModel::processServiceGroup(KServiceGroup::Ptr group)
             if (!found) {
                 m_entryList << new AppEntry(service, nameFromService(service, m_appNameFormat));
             }
-        } else if (p->isType(KST_KServiceSeparator) && (!m_flat || (m_flat && !hasSubGroups))) {
+        } else if (p->isType(KST_KServiceSeparator)) {
             if (!m_entryList.count()) {
                 continue;
             }
