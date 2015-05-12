@@ -25,8 +25,8 @@ import org.kde.draganddrop 2.0
 
 
 Item {
-    property alias model: kickoffListView.model
-    property alias delegate: kickoffListView.delegate
+    property alias model: vmodel.model
+    property alias delegate: vmodel.delegate
 
     property ListView listView: kickoffListView
 
@@ -60,7 +60,11 @@ Item {
             highlightMoveDuration : 0
             highlightResizeDuration: 0
 
-            delegate: KickoffItem {}
+            model: VisualDataModel {
+                id: vmodel
+
+                delegate: KickoffItem {}
+            }
 
             section {
                 property: "group"

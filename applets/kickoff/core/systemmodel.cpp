@@ -90,6 +90,7 @@ SystemModel::SystemModel(QObject *parent)
     roles[Qt::DecorationRole] = "decoration";
     roles[Kickoff::SubTitleRole] = "subtitle";
     roles[Kickoff::UrlRole] = "url";
+    roles[Kickoff::DeviceUdiRole] = "deviceudi";
     roles[Kickoff::GroupNameRole] = "group";
     setRoleNames(roles);
 }
@@ -264,6 +265,15 @@ QVariant SystemModel::data(const QModelIndex &index, int role) const
 
     if (role == UrlRole) {
         return d->placesModel->url(mapToSource(index)).url();
+    }
+    if (role == DeviceUdiRole) {
+        QModelIndex sourceIndex = mapToSource(index);
+        if (d->placesModel->isDevice(sourceIndex)) {
+            Solid::Device dev = d->placesModel->deviceForIndex(sourceIndex);
+            return dev.udi();
+        } else {
+            return QVariant();
+        }
     }
     if (role == SubTitleRole) {
         QModelIndex sourceIndex = mapToSource(index);

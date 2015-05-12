@@ -37,14 +37,19 @@ Item {
     property bool showAppsByName: plasmoid.configuration.showAppsByName
 
     function activate() {
+        var view = listItem.ListView.view;
+
         if (hasModelChildren) {
-            listItem.ListView.view.addBreadcrumb(listItem.ListView.view.model.modelIndex(index), display);
-            listItem.ListView.view.model.rootIndex = listItem.ListView.view.model.modelIndex(index);
+            view.addBreadcrumb(view.model.modelIndex(index), display);
+            view.model.rootIndex = view.model.modelIndex(index);
         } else {
-            launcher.openUrl(model["url"]);
+            if (view.model.hasOwnProperty("modelIndex")) { // only VisualDataModel has that
+                launcher.openItem(view.model.modelIndex(index));
+            } else {
+                launcher.openUrl(url);
+            }
             plasmoid.expanded = false;
 
-            var view = listItem.ListView.view;
             if (view.model.hasOwnProperty("rootIndex")) { // only VisualDataModel has that
                 view.model.rootIndex = 0;
             }
