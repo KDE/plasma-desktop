@@ -30,7 +30,7 @@
 #include <KService>
 #include <KToolInvocation>
 #include <KUrl>
-#include <Solid/PowerManagement>
+#include <Solid/Power/PowerManagement>
 
 // KDE Base
 #include <kworkspace.h>
@@ -174,16 +174,15 @@ void LeaveItemHandler::saveSession()
 
 void LeaveItemHandler::standby()
 {
-    Solid::PowerManagement::requestSleep(Solid::PowerManagement::StandbyState, 0, 0);
+    Solid::PowerManagement::requestSleep(Solid::PowerManagement::StandbyState);
 }
 
 void LeaveItemHandler::suspendRAM()
 {
-    Solid::PowerManagement::requestSleep(Solid::PowerManagement::SuspendState, 0, 0);
+    Solid::PowerManagement::requestSleep(Solid::PowerManagement::SuspendState);
 }
 
 void LeaveItemHandler::suspendDisk()
 {
-    Solid::PowerManagement::requestSleep(Solid::PowerManagement::HibernateState, 0, 0);
+    Solid::PowerManagement::requestSleep(Solid::PowerManagement::HibernateState);
 }
-

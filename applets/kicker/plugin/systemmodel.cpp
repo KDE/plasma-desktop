@@ -29,7 +29,7 @@
 #include <KLocalizedString>
 #include <KSharedConfig>
 #include <kworkspace.h>
-#include <Solid/PowerManagement>
+#include <Solid/Power/PowerManagement>
 #include "ksmserver_interface.h"
 
 SystemEntry::SystemEntry(SystemEntry::Action action, const QString &name, const QString &icon)
@@ -70,18 +70,21 @@ SystemModel::SystemModel(QObject *parent) : AbstractModel(parent)
         m_entryList << new SystemEntry(SystemEntry::NewSession, i18n("New Session"), "system-switch-user");
     }
 
-    QSet<Solid::PowerManagement::SleepState> sleepStates = Solid::PowerManagement::supportedSleepStates();
-
-    if (sleepStates.contains(Solid::PowerManagement::SuspendState)) {
+    if (Solid::PowerManagement::canSuspend()) {
         m_entryList << new SystemEntry(SystemEntry::SuspendToRam, i18n("Suspend"), "system-suspend");
     }
 
-    if (sleepStates.contains(Solid::PowerManagement::HibernateState)) {
+    if (Solid::PowerManagement::canHibernate()) {
         m_entryList << new SystemEntry(SystemEntry::SuspendToDisk, i18n("Hibernate"), "system-suspend-hibernate");
     }
 
-    m_entryList << new SystemEntry(SystemEntry::Reboot, i18n("Restart"), "system-reboot");
-    m_entryList << new SystemEntry(SystemEntry::Shutdown, i18n("Shutdown"), "system-shutdown");
+    if (Solid::PowerManagement::canReboot()) {
+        m_entryList << new SystemEntry(SystemEntry::Reboot, i18n("Restart"), "system-reboot");
+    }
+
+    if (Solid::PowerManagement::canShutdown()) {
+        m_entryList << new SystemEntry(SystemEntry::Shutdown, i18n("Shutdown"), "system-shutdown");
+    }
 }
 
 SystemModel::~SystemModel()
@@ -150,10 +153,10 @@ bool SystemModel::trigger(int row, const QString &actionId, const QVariant &argu
                 break;
             };
             case SystemEntry::SuspendToRam:
-                Solid::PowerManagement::requestSleep(Solid::PowerManagement::SuspendState, 0, 0);
+                Solid::PowerManagement::suspend();
                 break;
             case SystemEntry::SuspendToDisk:
-                Solid::PowerManagement::requestSleep(Solid::PowerManagement::HibernateState, 0, 0);
+                Solid::PowerManagement::hibernate();
                 break;
             case SystemEntry::Shutdown:
                 KWorkSpace::requestShutDown(KWorkSpace::ShutdownConfirmDefault, KWorkSpace::ShutdownTypeHalt);

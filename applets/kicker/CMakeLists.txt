@@ -60,7 +60,6 @@ target_link_libraries(kickerplugin
                       KF5::ConfigCore
                       KF5::CoreAddons
                       KF5::I18n
-                      KF5::KDELibs4Support # FIXME: New Solid power management API doesn't exist yet, so we need to use deprecated stuff.
                       KF5::KIOCore
                       KF5::KIOWidgets
                       KF5::People
@@ -70,6 +69,7 @@ target_link_libraries(kickerplugin
                       KF5::Service
                       KF5::Solid
                       KF5::WindowSystem
+                      KF5::SolidPower
                       PW::KWorkspace)
 
 if(PackageKitQt5_FOUND)

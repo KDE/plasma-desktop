@@ -29,7 +29,7 @@
 #include <KLocalizedString>
 #include <QDebug>
 #include <QIcon>
-#include <Solid/PowerManagement>
+#include <Solid/Power/PowerManagement>
 #include <kworkspace.h>
 #include <kdisplaymanager.h>
 #include <kdirwatch.h>
@@ -178,7 +178,7 @@ void LeaveModel::updateModel()
 //FIXME: the proper fix is to implement the KWorkSpace methods for Windows
 #ifndef Q_WS_WIN
     const QString system = i18n("System");
-    QSet< Solid::PowerManagement::SleepState > spdMethods = Solid::PowerManagement::supportedSleepStates();
+    const QSet< Solid::PowerManagement::SleepState > spdMethods = Solid::PowerManagement::supportedSleepStates();
     if (spdMethods.contains(Solid::PowerManagement::StandbyState)) {
         QStandardItem *standbyOption = createStandardItem("leave:/standby");
         standbyOption->setData(system, Kickoff::GroupNameRole);
@@ -219,5 +219,3 @@ LeaveModel::~LeaveModel()
 {
     delete d;
 }
-
-
