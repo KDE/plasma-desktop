@@ -217,16 +217,24 @@ MouseArea {
 
         anchors {
             left: parent.left
-            leftMargin: taskFrame.margins.left
+            leftMargin: tasks.vertical && !label.visible ? adjustMargin(true, parent.width, taskFrame.margins.left) : taskFrame.margins.left
             top: parent.top
-            topMargin: adjustMargin(parent.height, taskFrame.margins.top);
+            topMargin: adjustMargin(false, parent.height, taskFrame.margins.top);
             bottom: parent.bottom
-            bottomMargin: adjustMargin(parent.height, taskFrame.margins.bottom);
+            bottomMargin: adjustMargin(false, parent.height, taskFrame.margins.bottom);
+            right: tasks.vertical && !label.visible ? parent.right : undefined
+            rightMargin: tasks.vertical && !label.visible ? adjustMargin(true, parent.width, taskFrame.margins.right) : undefined
         }
 
-        function adjustMargin(height, margin) {
-            if ((height - LayoutManager.verticalMargins()) < units.iconSizes.small) {
-                return Math.ceil((margin * (units.iconSizes.small / height)) / 2);
+        function adjustMargin(vert, size, margin) {
+            if (!size) {
+                return margin;
+            }
+
+            var margins = vert ? LayoutManager.horizontalMargins() : LayoutManager.verticalMargins();
+
+            if ((size - margins) < units.iconSizes.small) {
+                return Math.ceil((margin * (units.iconSizes.small / size)) / 2);
             }
 
             return margin;
@@ -295,7 +303,7 @@ MouseArea {
             bottomMargin: taskFrame.margins.bottom
         }
 
-        visible: (inPopup || !iconsOnly && !model.IsLauncher && (parent.width - anchors.leftMargin - anchors.rightMargin) >= (theme.mSize(theme.defaultFont).width * 3))
+        visible: (inPopup || !iconsOnly && !model.IsLauncher && (parent.width - LayoutManager.horizontalMargins()) >= (theme.mSize(theme.defaultFont).width * 5))
 
         enabled: !model.Minimized
 
