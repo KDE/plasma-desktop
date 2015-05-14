@@ -33,6 +33,8 @@ PlasmaCore.FrameSvgItem {
 
     property Item containment
 
+    property bool veticalPanel: containment && containment.formFactor === PlasmaCore.Types.Vertical
+
     function adjustPrefix() {
         if (!containment) {
             return "";
@@ -143,12 +145,12 @@ PlasmaCore.FrameSvgItem {
         id: containmentParent
         anchors {
             fill: parent
-            topMargin: Math.min(root.fixedMargins.top, Math.max(1, root.height - units.iconSizes.smallMedium));
-            bottomMargin: Math.min(root.fixedMargins.bottom, Math.max(1, root.height - units.iconSizes.smallMedium));
+            topMargin: Math.min(root.fixedMargins.top, Math.max(1, (veticalPanel ? root.width : root.height) - units.iconSizes.smallMedium));
+            bottomMargin: Math.min(root.fixedMargins.bottom, Math.max(1, (veticalPanel ? root.width : root.height) - units.iconSizes.smallMedium));
 
             //Base the left/right fixedMargins on height as well, to have a good radial symmetry
-            leftMargin: Math.min(root.fixedMargins.left, Math.max(1, root.height - units.iconSizes.smallMedium));
-            rightMargin: Math.min(root.fixedMargins.right, Math.max(1, root.height - units.iconSizes.smallMedium));
+            leftMargin: Math.min(root.fixedMargins.left, Math.max(1, (veticalPanel ? root.width : root.height) - units.iconSizes.smallMedium));
+            rightMargin: Math.min(root.fixedMargins.right, Math.max(1, (veticalPanel ? root.width : root.height) - units.iconSizes.smallMedium));
         }
     }
 
