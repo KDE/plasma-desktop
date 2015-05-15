@@ -21,6 +21,13 @@
 #include "sortproxymodel.h"
 #include "cursortheme.h"
 
+QHash<int, QByteArray> SortProxyModel::roleNames() const
+{
+    QHash<int, QByteArray> roleNames = QSortFilterProxyModel::roleNames();
+    roleNames[CursorTheme::DisplayDetailRole] = "description";
+
+    return roleNames;
+}
 
 int SortProxyModel::compare(const QModelIndex &left, const QModelIndex &right, int role) const
 {
