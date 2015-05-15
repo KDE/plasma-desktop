@@ -106,7 +106,7 @@ bool RecentDocsModel::trigger(int row, const QString &actionId, const QVariant &
             resultModel->forgetAllResources();
         }
 
-        return true;
+        return false;
     }
 
     bool close = false;

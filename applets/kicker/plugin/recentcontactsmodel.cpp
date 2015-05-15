@@ -143,7 +143,7 @@ bool RecentContactsModel::trigger(int row, const QString &actionId, const QVaria
             resultModel->forgetAllResources();
         }
 
-        return true;
+        return false;
     }
 
     return false;
