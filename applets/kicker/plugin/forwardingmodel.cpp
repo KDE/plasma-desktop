@@ -169,6 +169,7 @@ void ForwardingModel::connectSignals()
         return;
     }
 
+    connect(m_sourceModel, SIGNAL(destroyed()), this, SLOT(reset());
     connect(m_sourceModel, SIGNAL(dataChanged(QModelIndex,QModelIndex,QVector<int>)),
             this, SIGNAL(dataChanged(QModelIndex,QModelIndex,QVector<int>)),
             Qt::UniqueConnection);
