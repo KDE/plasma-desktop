@@ -138,7 +138,7 @@ bool RecentAppsModel::trigger(int row, const QString &actionId, const QVariant &
             resultModel->forgetAllResources();
         }
 
-        return true;
+        return false;
     } else {
         const QString storageId = sourceModel()->data(sourceModel()->index(row, 0),
             ResultModel::ResourceRole).toString().section(':', 1);

@@ -46,6 +46,12 @@ Item {
     Accessible.role: isDivider ? Accessible.Separator: Accessible.MenuItem
     Accessible.name: label.text
 
+    onHasChildrenChanged: {
+        if (!hasChildren && ListView.view.currentItem == item) {
+            ListView.view.currentIndex = -1;
+        }
+    }
+
     onAboutToShowActionMenu: {
         var actionList = hasActionList ? model.actionList : [];
         Tools.fillActionMenu(actionMenu, actionList, model.favoriteId, model.display);
