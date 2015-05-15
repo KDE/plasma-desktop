@@ -285,6 +285,7 @@ public:
 
     void init()
     {
+        hasMore = true;
         fetchMore(false);
     }
 
