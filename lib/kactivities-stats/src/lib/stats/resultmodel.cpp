@@ -42,7 +42,7 @@
 #include <utils/slide.h>
 #include <common/specialvalues.h>
 
-#define MAX_CHUNK_LOAD_SIZE 50
+#define MAX_CHUNK_LOAD_SIZE 5
 
 #define QDBG qDebug() << "KActivitiesStats(" << (void*)this << ")"
 
@@ -285,6 +285,7 @@ public:
 
     void init()
     {
+        hasMore = true;
         fetchMore(false);
     }
 
