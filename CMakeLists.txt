@@ -111,10 +111,13 @@ set_package_properties(XCB PROPERTIES TYPE REQUIRED)
 add_feature_info("XCB-XKB" XCB_XKB_FOUND "Required for building kcm/keyboard")
 add_feature_info("libxft" X11_Xft_FOUND "X FreeType interface library required for font installation")
 
+find_package(Evdev)
+set_package_properties(Evdev PROPERTIES TYPE OPTIONAL)
+add_feature_info("Evdev" EVDEV_FOUND "Evdev driver headers needed for input KCM")
+
 find_package(Synaptics)
 set_package_properties(Synaptics PROPERTIES TYPE OPTIONAL)
 add_feature_info("Synaptics" SYNAPTICS_FOUND "Synaptics libraries needed for touchpad KCM")
-
 include(ConfigureChecks.cmake)
 
 if(${Qt5Gui_OPENGL_IMPLEMENTATION} STREQUAL "GL")

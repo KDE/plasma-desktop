@@ -58,7 +58,9 @@ qt5_add_dbus_interface(kcm_input_PART_SRCS ${klauncher_xml} klauncher_iface)
 
 add_library(kcm_input MODULE ${kcm_input_PART_SRCS})
 
-include_directories(${X11_X11_INCLUDE_PATH}${X11_Xinput_INCLUDE_PATH})
+include_directories(${X11_X11_INCLUDE_PATH}
+                    ${X11_Xinput_INCLUDE_PATH}
+                    ${Evdev_INCLUDE_DIRS})
 
 target_link_libraries(kcm_input
     Qt5::DBus
