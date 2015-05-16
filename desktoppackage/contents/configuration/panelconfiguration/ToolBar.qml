@@ -25,7 +25,7 @@ import org.kde.plasma.configuration 2.0
 Item {
     id: root
     state: parent.state
-    implicitWidth: units.gridUnit * 10
+    implicitWidth: Math.max(buttonsLayout.width, row.width) + units.smallSpacing * 2
     implicitHeight: row.height + 20
 
     readonly property string addWidgetsButtonText: i18nd("plasma_shell_org.kde.plasma.desktop", "Add Widgets...")
@@ -41,8 +41,12 @@ Item {
         rowSpacing: units.smallSpacing
         columnSpacing: units.smallSpacing
 
-        EdgeHandle {}
-        SizeHandle {}
+        EdgeHandle {
+          Layout.alignment: Qt.AlignHCenter
+        }
+        SizeHandle {
+          Layout.alignment: Qt.AlignHCenter
+        }
     }
 
     PlasmaComponents.Label {
@@ -77,7 +81,7 @@ Item {
             text: buttonsLayout.showText ? root.addWidgetsButtonText : ""
             tooltip: buttonsLayout.showText ? "" : root.addWidgetsButtonText
             iconSource: "list-add"
-            Layout.preferredWidth: panel.formFactor == PlasmaCore.Types.Vertical ? Math.max(implicitWidth, parent.width) : implicitWidth
+            Layout.fillWidth: true
             onClicked: {
                 configDialog.close();
                 configDialog.showAddWidgetDialog();
@@ -88,7 +92,7 @@ Item {
             iconSource: "distribute-horizontal-x"
             text: buttonsLayout.showText ? root.addSpacerButtonText : ""
             tooltip: buttonsLayout.showText ? "" : root.addSpacerButtonText
-            Layout.preferredWidth: panel.formFactor == PlasmaCore.Types.Vertical ? Math.max(implicitWidth, parent.width) : implicitWidth
+            Layout.fillWidth: true
             onClicked: {
                 configDialog.addPanelSpacer();
             }
@@ -99,7 +103,7 @@ Item {
             iconSource: "configure"
             text: buttonsLayout.showText ? root.settingsButtonText : ""
             tooltip: buttonsLayout.showText ? "" : root.settingsButtonText
-            Layout.preferredWidth: panel.formFactor == PlasmaCore.Types.Vertical ? Math.max(implicitWidth, parent.width) : implicitWidth
+            Layout.fillWidth: true
             onClicked: {
                 if (contextMenuLoader.opened) {
                     contextMenuLoader.close()
