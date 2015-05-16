@@ -76,7 +76,7 @@
 #include <X11/Xutil.h>
 #include <kglobalsettings.h>
 #include <QX11Info>
-#include <xorg/evdev-properties.h>
+#include <evdev-properties.h>
 
 #undef Below
 

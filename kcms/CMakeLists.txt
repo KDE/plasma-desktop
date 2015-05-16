@@ -14,7 +14,7 @@ if(X11_Xkb_FOUND AND XCB_XKB_FOUND)
     add_subdirectory( keyboard )
 endif()
 
-if (LIBUSB_FOUND)
+if (LIBUSB_FOUND AND EVDEV_FOUND)
     add_subdirectory( input )
 endif()
 
