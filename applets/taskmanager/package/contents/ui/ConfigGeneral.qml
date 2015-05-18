@@ -43,33 +43,28 @@ Item {
         GroupBox {
             Layout.fillWidth: true
 
-            title: i18n("Appearance")
+            title: i18n("Arrangement")
             flat: true
 
-            ColumnLayout {
+            GridLayout {
+                columns: 2
                 Layout.fillWidth: true
+
+                Label {
+                    text: i18n("Maximum rows:")
+                }
+
+                SpinBox {
+                    id: maxStripes
+                    minimumValue: 1
+                }
 
                 CheckBox {
                     id: forceStripes
-                    text: i18n("Force row settings")
-                }
-
-                CheckBox {
-                    id: showToolTips
-                    text: i18n("Show tooltips")
-                }
-
-                RowLayout {
-                    Layout.fillHeight: false
-
-                    Label {
-                        text: i18n("Maximum rows:")
-                    }
-
-                    SpinBox {
-                        id: maxStripes
-                        minimumValue: 1
-                    }
+                    Layout.column: 1
+                    Layout.row: 1
+                    text: i18n("Always arrange tasks in columns of as many rows")
+                    enabled: maxStripes.value > 1
                 }
             }
         }
@@ -82,6 +77,11 @@ Item {
 
             ColumnLayout {
                 Layout.fillWidth: true
+
+                CheckBox {
+                    id: showToolTips
+                    text: i18n("Show tooltips")
+                }
 
                 CheckBox {
                     id: wheelEnabled
@@ -116,38 +116,45 @@ Item {
             visible: (plasmoid.pluginName != "org.kde.plasma.icontasks")
 
             ColumnLayout {
-                RowLayout {
+                GridLayout {
+                    columns: 3
                     Label {
+                        Layout.fillWidth: true
                         text: i18n("Sorting:")
+                        horizontalAlignment: Text.AlignRight
                     }
 
                     ComboBox {
                         id: sortingStrategy
-
                         Layout.fillWidth: true
-
                         model: [i18n("Do Not Sort"), i18n("Manually"), i18n("Alphabetically"), i18n("By Desktop"), i18n("By Activity")]
                     }
-                }
 
-                RowLayout {
                     Label {
+                        Layout.fillWidth: true
+                        Layout.row: 1
+                        Layout.column: 0
                         text: i18n("Grouping:")
+                        horizontalAlignment: Text.AlignRight
                     }
 
                     ComboBox {
                         id: groupingStrategy
-
+                        Layout.row: 1
+                        Layout.column: 1
                         Layout.fillWidth: true
-
                         model: [i18n("Do Not Group"), i18n("By Program Name")]
+                    }
+                    CheckBox {
+                        id: onlyGroupWhenFull
+                        Layout.column: 1
+                        Layout.row: 2
+                        Layout.columnSpan: 2
+                        text: i18n("Only when the task manager is full")
+                        enabled: groupingStrategy.currentIndex > 0
                     }
                 }
 
-                CheckBox {
-                    id: onlyGroupWhenFull
-                    text: i18n("Only when the task manager is full")
-                }
             }
         }
 

@@ -233,7 +233,12 @@ Item {
         onWidthChanged: LayoutManager.layout(taskRepeater)
         onHeightChanged: LayoutManager.layout(taskRepeater)
 
-        flow: tasks.vertical ? Flow.TopToBottom : Flow.LeftToRight
+        flow: {
+            if (tasks.vertical) {
+                return plasmoid.configuration.forceStripes ? Flow.LeftToRight : Flow.TopToBottom
+            }
+            return plasmoid.configuration.forceStripes ? Flow.TopToBottom : Flow.LeftToRight
+        }
 
         onAnimatingChanged: {
             if (!animating) {
