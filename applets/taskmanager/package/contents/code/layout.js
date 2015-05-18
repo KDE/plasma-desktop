@@ -156,8 +156,10 @@ function taskHeight() {
 }
 
 function launcherWidth() {
-    return (tasks.height + horizontalMargins())
-        - (adjustMargin(tasks.height, taskFrame.margins.top) + adjustMargin(tasks.height, taskFrame.margins.bottom));
+    var baseWidth = tasks.vertical ? preferredMinHeight() : tasks.height;
+
+    return (baseWidth + horizontalMargins())
+        - (adjustMargin(baseWidth, taskFrame.margins.top) + adjustMargin(baseWidth, taskFrame.margins.bottom));
 }
 
 function layout(container) {
