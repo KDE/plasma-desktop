@@ -515,6 +515,11 @@ void Backend::presentWindows(int groupParentId)
     TaskManager::AbstractGroupableItem *item = m_groupManager->rootGroup()->getMemberById(groupParentId);
 
     if (item && m_taskManagerItem && m_taskManagerItem->window()) {
+        if (m_windowsToHighlight.count()) {
+            m_windowsToHighlight.clear();
+            updateWindowHighlight();
+        }
+
         KWindowEffects::presentWindows(m_taskManagerItem->window()->winId(), QList<WId>::fromSet(item->winIds()));
     }
 }
