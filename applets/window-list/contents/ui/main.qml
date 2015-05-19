@@ -119,12 +119,6 @@ operation.Id = id;
         }
     }
 
-    PlasmaCore.SortFilterModel {
-        id: tasksModelSortedByDesktop
-        sortRole: "desktop"
-        sourceModel: tasksSource.models.tasks
-    }
-
     Column {
         id: col
 
@@ -159,7 +153,7 @@ operation.Id = id;
             bottom: parent.bottom
         }
 
-        model: tasksModelSortedByDesktop
+        model: tasksSource.models.tasks
         section.property: "desktop"
         section.criteria: ViewSection.FullString
         iconSize: main.iconSize
