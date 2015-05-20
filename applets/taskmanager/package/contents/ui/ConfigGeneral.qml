@@ -21,9 +21,13 @@ import QtQuick 2.0
 import QtQuick.Controls 1.0
 import QtQuick.Layouts 1.0
 
+import org.kde.plasma.core 2.0 as PlasmaCore
+
 Item {
     width: childrenRect.width
     height: childrenRect.height
+
+    property bool vertical: (plasmoid.formFactor == PlasmaCore.Types.Vertical)
 
     property alias cfg_forceStripes: forceStripes.checked
     property alias cfg_showToolTips: showToolTips.checked
@@ -51,7 +55,7 @@ Item {
                 Layout.fillWidth: true
 
                 Label {
-                    text: i18n("Maximum rows:")
+                    text: vertical ? i18n("Maximum columns:") : i18n("Maximum rows:")
                 }
 
                 SpinBox {
@@ -63,7 +67,7 @@ Item {
                     id: forceStripes
                     Layout.column: 1
                     Layout.row: 1
-                    text: i18n("Always arrange tasks in columns of as many rows")
+                    text: vertical ? i18n("Always arrange tasks in rows of as many columns") : i18n("Always arrange tasks in columns of as many rows")
                     enabled: maxStripes.value > 1
                 }
             }
