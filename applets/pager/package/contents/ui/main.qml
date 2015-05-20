@@ -266,7 +266,7 @@ Item {
                             pixmap: model.icon
                             height: nativeHeight
                             width: nativeWidth
-                            visible: pager.showWindowIcons && (windowRect.width >= icon.width) && (windowRect.height >= icon.height)
+                            visible: pager.showWindowIcons
                         }
 
                         MouseArea {
