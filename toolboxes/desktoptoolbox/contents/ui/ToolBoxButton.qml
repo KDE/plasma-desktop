@@ -103,12 +103,12 @@ Item {
             toolBoxButton.state = "topleft";
         } else if (container.width - x - buttonLayout.width < cornerSnap && y < cornerSnap) {
             toolBoxButton.state = "topright";
-        } else if (container.width - x - buttonLayout.width < cornerSnap && container.height - y - buttonLayout.height  < cornerSnap) {
+        } else if (container.width - x - buttonLayout.width < cornerSnap && container.height - y - buttonLayout.width  < cornerSnap) {
             toolBoxButton.state = "bottomright";
-        } else if (x < cornerSnap && container.height - y - buttonLayout.height < cornerSnap) {
+        } else if (x < cornerSnap && container.height - y - buttonLayout.width < cornerSnap) {
             toolBoxButton.state = "bottomleft";
         //top diagonal half
-        } else if (x > y) {
+        } else if (x > (y * (container.width/container.height))) {
             //Top edge
             if (container.width - x > y ) {
                 toolBoxButton.state = "top";
