@@ -32,7 +32,7 @@
 # SUCH DAMAGE.
 
 find_package(PkgConfig)
-pkg_check_modules(PC_EVDEV xorg-evdev)
+pkg_check_modules(PC_EVDEV xorg-evdev>=2.8.99.1)
 
 find_path(Evdev_INCLUDE_DIRS
     NAMES evdev-properties.h
