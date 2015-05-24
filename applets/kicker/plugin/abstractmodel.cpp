@@ -72,3 +72,9 @@ int AbstractModel::rowForFavoriteId(const QString &favoriteId)
 
     return -1;
 }
+
+
+QVariantList AbstractModel::actions() const
+{
+    return QVariantList();
+}

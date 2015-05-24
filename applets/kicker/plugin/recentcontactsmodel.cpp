@@ -94,11 +94,9 @@ bool RecentContactsModel::trigger(int row, const QString &actionId, const QVaria
 {
     Q_UNUSED(argument)
 
-    if (row < 0 || row >= rowCount()) {
-        return false;
-    }
+    bool withinBounds = row < 0 || row >= rowCount();
 
-    if (actionId.isEmpty()) {
+    if (actionId.isEmpty() && withinBounds) {
         QString id = sourceModel()->data(sourceModel()->index(row, 0), ResultModel::ResourceRole).toString();
 
         const QList<QAction *> actionList = KPeople::actionsForPerson(id, this);
@@ -122,7 +120,7 @@ bool RecentContactsModel::trigger(int row, const QString &actionId, const QVaria
         }
 
         return false;
-    } else if (actionId == "showContactInfo") {
+    } else if (actionId == "showContactInfo" && withinBounds) {
         QString id = sourceModel()->data(sourceModel()->index(row, 0), ResultModel::ResourceRole).toString();
 
         KPeople::PersonDetailsDialog *view = new KPeople::PersonDetailsDialog(0);
@@ -130,7 +128,7 @@ bool RecentContactsModel::trigger(int row, const QString &actionId, const QVaria
         view->setPerson(data);
         view->setAttribute(Qt::WA_DeleteOnClose);
         view->show();
-    } else if (actionId == "forget") {
+    } else if (actionId == "forget" && withinBounds) {
         if (sourceModel()) {
             ResultModel *resultModel = static_cast<ResultModel *>(sourceModel());
             resultModel->forgetResource(row);
@@ -147,6 +145,17 @@ bool RecentContactsModel::trigger(int row, const QString &actionId, const QVaria
     }
 
     return false;
+}
+
+QVariantList RecentContactsModel::actions() const
+{
+    QVariantList actionList;
+
+    if (rowCount()) {
+        actionList << Kicker::createActionItem(i18n("Forget All Contacts"), "forgetAll");
+    }
+
+    return actionList;
 }
 
 void RecentContactsModel::refresh()

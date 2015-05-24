@@ -44,6 +44,8 @@ class AbstractModel : public QAbstractListModel
 
         virtual int rowForFavoriteId(const QString &favoriteId);
 
+        virtual QVariantList actions() const;
+
     Q_SIGNALS:
         void countChanged() const;
         void separatorCountChanged() const;

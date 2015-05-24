@@ -83,17 +83,15 @@ QVariant RecentDocsModel::data(const QModelIndex &index, int role) const
 
 bool RecentDocsModel::trigger(int row, const QString &actionId, const QVariant &argument)
 {
-    if (row < 0 || row >= rowCount()) {
-        return false;
-    }
+    bool withinBounds = row < 0 || row >= rowCount();
 
-    QUrl url(sourceModel()->data(sourceModel()->index(row, 0), ResultModel::ResourceRole).toString());
+    if (actionId.isEmpty() && withinBounds) {
+        QUrl url(sourceModel()->data(sourceModel()->index(row, 0), ResultModel::ResourceRole).toString());
 
-    if (actionId.isEmpty()) {
         new KRun(url, 0);
 
         return true;
-    } else if (actionId == "forget") {
+    } else if (actionId == "forget" && withinBounds) {
         if (sourceModel()) {
             ResultModel *resultModel = static_cast<ResultModel *>(sourceModel());
             resultModel->forgetResource(row);
@@ -107,17 +105,30 @@ bool RecentDocsModel::trigger(int row, const QString &actionId, const QVariant &
         }
 
         return false;
-    }
+    } else if (withinBounds) {
+        bool close = false;
 
-    bool close = false;
+        QUrl url(sourceModel()->data(sourceModel()->index(row, 0), ResultModel::ResourceRole).toString());
 
-    KFileItem item(url);
+        KFileItem item(url);
 
-    if (Kicker::handleFileItemAction(item, actionId, argument, &close)) {
-        return close;
+        if (Kicker::handleFileItemAction(item, actionId, argument, &close)) {
+            return close;
+        }
     }
 
     return false;
+}
+
+QVariantList RecentDocsModel::actions() const
+{
+    QVariantList actionList;
+
+    if (rowCount()) {
+        actionList << Kicker::createActionItem(i18n("Forget All Documents"), "forgetAll");
+    }
+
+    return actionList;
 }
 
 void RecentDocsModel::refresh()

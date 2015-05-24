@@ -35,6 +35,8 @@ class RecentDocsModel : public ForwardingModel
 
         Q_INVOKABLE bool trigger(int row, const QString &actionId, const QVariant &argument);
 
+        QVariantList actions() const;
+
     private Q_SLOTS:
         void refresh();
 };

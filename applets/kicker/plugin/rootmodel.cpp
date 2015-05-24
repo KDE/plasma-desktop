@@ -76,8 +76,12 @@ QVariant RootModel::data(const QModelIndex& index, int role) const
                 if (role ==  Kicker::HasActionListRole) {
                     return true;
                 } else if (role == Kicker::ActionListRole) {
-                    return QVariantList() << Kicker::createActionItem(i18n("Hide %1",
+                    QVariantList actionList;
+                    actionList << model->actions();
+                    actionList << Kicker::createSeparatorActionItem();
+                    actionList << Kicker::createActionItem(i18n("Hide %1",
                         group->name()), "hideCategory");
+                    return actionList;
                 }
             }
         }
@@ -88,11 +92,12 @@ QVariant RootModel::data(const QModelIndex& index, int role) const
 
 bool RootModel::trigger(int row, const QString& actionId, const QVariant& argument)
 {
-    if (actionId == "hideCategory") {
-        const AbstractEntry *entry = m_entryList.at(row);
+    const AbstractEntry *entry = m_entryList.at(row);
 
-        if (entry->type() == AbstractEntry::GroupType) {
-            const GroupEntry *group = static_cast<const GroupEntry *>(entry);
+    if (entry->type() == AbstractEntry::GroupType) {
+        const GroupEntry *group = static_cast<const GroupEntry *>(entry);
+
+        if (actionId == "hideCategory") {
             AbstractModel *model = group->model();
 
             if (model == m_recentAppsModel) {
@@ -108,6 +113,9 @@ bool RootModel::trigger(int row, const QString& actionId, const QVariant& argume
 
                 return true;
             }
+        } else {
+            const GroupEntry *group = static_cast<const GroupEntry *>(entry);
+            return group->model()->trigger(-1, actionId, QVariant());
         }
     }
 

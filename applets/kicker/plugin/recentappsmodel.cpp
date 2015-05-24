@@ -97,11 +97,9 @@ bool RecentAppsModel::trigger(int row, const QString &actionId, const QVariant &
 {
     Q_UNUSED(argument)
 
-    if (row < 0 || row >= rowCount()) {
-        return false;
-    }
+    bool withinBounds = row < 0 || row >= rowCount();
 
-    if (actionId.isEmpty()) {
+    if (actionId.isEmpty() && withinBounds) {
         const QString storageId = sourceModel()->data(sourceModel()->index(row, 0),
             ResultModel::ResourceRole).toString().section(':', 1);
         KService::Ptr service = KService::serviceByStorageId(storageId);
@@ -125,7 +123,7 @@ bool RecentAppsModel::trigger(int row, const QString &actionId, const QVariant &
             "org.kde.plasma.kicker");
 
         return true;
-    } else if (actionId == "forget") {
+    } else if (actionId == "forget" && withinBounds) {
         if (sourceModel()) {
             ResultModel *resultModel = static_cast<ResultModel *>(sourceModel());
             resultModel->forgetResource(row);
@@ -139,7 +137,7 @@ bool RecentAppsModel::trigger(int row, const QString &actionId, const QVariant &
         }
 
         return false;
-    } else {
+    } else if (withinBounds) {
         const QString storageId = sourceModel()->data(sourceModel()->index(row, 0),
             ResultModel::ResourceRole).toString().section(':', 1);
         KService::Ptr service = KService::serviceByStorageId(storageId);
@@ -150,6 +148,17 @@ bool RecentAppsModel::trigger(int row, const QString &actionId, const QVariant &
     }
 
     return false;
+}
+
+QVariantList RecentAppsModel::actions() const
+{
+    QVariantList actionList;
+
+    if (rowCount()) {
+        actionList << Kicker::createActionItem(i18n("Forget All Applications"), "forgetAll");
+    }
+
+    return actionList;
 }
 
 void RecentAppsModel::refresh()

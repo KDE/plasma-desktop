@@ -123,8 +123,7 @@ FocusScope {
 
             if (containsMouse) {
                 resetIndexTimer.stop();
-            } else if ((!childDialog || !dialog)
-                && (!currentItem || !currentItem.menu.opened)) {
+            } else if (!childDialog && (!currentItem || !currentItem.menu.opened)) {
                 resetIndexTimer.start();
             }
         }
