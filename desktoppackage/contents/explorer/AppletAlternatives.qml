@@ -54,7 +54,7 @@ PlasmaCore.Dialog {
 
         PlasmaExtras.Heading {
             id: heading
-            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Alternatives");
+            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Alternative Widgets");
         }
 
         PlasmaExtras.ScrollArea {
