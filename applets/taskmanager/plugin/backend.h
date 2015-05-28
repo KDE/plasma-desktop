@@ -21,6 +21,7 @@
 #define BACKEND_H
 
 #include <QObject>
+#include <QPointer>
 
 #include <groupmanager.h>
 #include <tasksmodel.h>
@@ -116,7 +117,7 @@ class Backend : public QObject
 
         TaskManager::GroupManager *m_groupManager;
         TaskManager::TasksModel *m_tasksModel;
-        TaskManager::BasicMenu *m_contextMenu;
+        QPointer<TaskManager::BasicMenu> m_contextMenu;
         QQuickItem* m_taskManagerItem;
         QQuickItem* m_toolTipItem;
         WId m_panelWinId;
