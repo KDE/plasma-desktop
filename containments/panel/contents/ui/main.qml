@@ -209,9 +209,10 @@ function checkLastSpacer() {
         LayoutManager.removeApplet(applet);
         var flexibleFound = false;
         for (var i = 0; i < currentLayout.children.length; ++i) {
-            if (((root.isHorizontal && currentLayout.children[i].applet.Layout.fillWidth) ||
-                (!root.isHorizontal && currentLayout.children[i].applet.Layout.fillHeight)) &&
-                currentLayout.children[i].applet.visible) {
+            var applet = currentLayout.children[i].applet;
+            if (((root.isHorizontal && applet.Layout.fillWidth) ||
+                (!root.isHorizontal && applet.Layout.fillHeight)) &&
+                applet.visible) {
                 flexibleFound = true;
                 break
             }
