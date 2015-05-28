@@ -138,6 +138,14 @@ void ServerConfigModule::save()
     const QString exe = QStandardPaths::findExecutable(QLatin1String("baloo_file_cleaner"));
     QProcess::startDetached(exe);
 
+    // Update the baloo_file's config cache
+    QDBusMessage message = QDBusMessage::createMethodCall(QLatin1String("org.kde.baloo"),
+                                                          QLatin1String("/indexer"),
+                                                          QLatin1String("org.kde.baloo"),
+                                                          QLatin1String("updateConfig"));
+
+    QDBusConnection::sessionBus().asyncCall(message);
+
     // all values saved -> no changes
     Q_EMIT changed(false);
 }
