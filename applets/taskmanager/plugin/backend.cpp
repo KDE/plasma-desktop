@@ -63,6 +63,7 @@ Backend::Backend(QObject* parent) : QObject(parent),
 
 Backend::~Backend()
 {
+    delete m_contextMenu;
 }
 
 TaskManager::GroupManager* Backend::groupManager() const
@@ -412,8 +413,11 @@ void Backend::handleRecentDocumentAction() const
 
 void Backend::actuallyOpenContextMenu()
 {
+    if (!m_contextMenu) {
+        return;
+    }
+
     m_contextMenu->exec(QCursor::pos());
-    m_contextMenu = 0;
     m_contextMenu->deleteLater();
 }
 
