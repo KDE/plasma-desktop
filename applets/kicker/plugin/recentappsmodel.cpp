@@ -97,7 +97,7 @@ bool RecentAppsModel::trigger(int row, const QString &actionId, const QVariant &
 {
     Q_UNUSED(argument)
 
-    bool withinBounds = row < 0 || row >= rowCount();
+    bool withinBounds = row >= 0 && row < rowCount();
 
     if (actionId.isEmpty() && withinBounds) {
         const QString storageId = sourceModel()->data(sourceModel()->index(row, 0),

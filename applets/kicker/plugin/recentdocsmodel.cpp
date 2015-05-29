@@ -83,7 +83,7 @@ QVariant RecentDocsModel::data(const QModelIndex &index, int role) const
 
 bool RecentDocsModel::trigger(int row, const QString &actionId, const QVariant &argument)
 {
-    bool withinBounds = row < 0 || row >= rowCount();
+    bool withinBounds = row >= 0 && row < rowCount();
 
     if (actionId.isEmpty() && withinBounds) {
         QUrl url(sourceModel()->data(sourceModel()->index(row, 0), ResultModel::ResourceRole).toString());

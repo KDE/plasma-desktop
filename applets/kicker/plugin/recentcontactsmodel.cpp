@@ -94,7 +94,7 @@ bool RecentContactsModel::trigger(int row, const QString &actionId, const QVaria
 {
     Q_UNUSED(argument)
 
-    bool withinBounds = row < 0 || row >= rowCount();
+    bool withinBounds = row >= 0 && row < rowCount();
 
     if (actionId.isEmpty() && withinBounds) {
         QString id = sourceModel()->data(sourceModel()->index(row, 0), ResultModel::ResourceRole).toString();
