@@ -88,7 +88,9 @@ public:
     // activity or not). The :global special value is not special here
     bool activityMatches(const QString &activity) const
     {
-        return std::any_of(query.activities().cbegin(), query.activities().cend(),
+        return
+            activity == ANY_ACTIVITY_TAG ||
+            std::any_of(query.activities().cbegin(), query.activities().cend(),
             [&] (const QString &matcher) {
                 return (matcher == ANY_ACTIVITY_TAG)     ? true :
                        (matcher == CURRENT_ACTIVITY_TAG) ? (matcher == activity || activity == ActivitiesSync::currentActivity(activities)) :
@@ -100,7 +102,9 @@ public:
     // Same as above, but for agents
     bool agentMatches(const QString &agent) const
     {
-        return std::any_of(query.agents().cbegin(), query.agents().cend(),
+        return
+            agent == ANY_AGENT_TAG ||
+            std::any_of(query.agents().cbegin(), query.agents().cend(),
             [&] (const QString &matcher) {
                 return (matcher == ANY_AGENT_TAG)     ? true :
                        (matcher == CURRENT_AGENT_TAG) ? (matcher == agent || agent == QCoreApplication::applicationName()) :

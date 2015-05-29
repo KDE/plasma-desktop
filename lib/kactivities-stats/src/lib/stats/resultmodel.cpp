@@ -33,16 +33,17 @@
 // Local
 #include <common/database/Database.h>
 #include <utils/qsqlquery_iterator.h>
+#include <utils/slide.h>
+#include <utils/member_matcher.h>
 #include "resultset.h"
 #include "resultwatcher.h"
 #include "cleaning.h"
 #include "kactivities/consumer.h"
 
-#include <utils/member_matcher.h>
-#include <utils/slide.h>
 #include <common/specialvalues.h>
 
 #define MAX_CHUNK_LOAD_SIZE 5
+#define MAX_RELOAD_CACHE_SIZE 50
 
 #define QDBG qDebug() << "KActivitiesStats(" << (void*)this << ")"
 
@@ -53,7 +54,8 @@ namespace Stats {
 class ResultModel::Private {
 public:
     Private(Query query, ResultModel *parent)
-        : query(query)
+        : cache(this, query.limit())
+        , query(query)
         , watcher(query)
         , hasMore(true)
         , q(parent)
@@ -62,76 +64,317 @@ public:
         database = Database::instance(Database::ResourcesDatabase, Database::ReadOnly);
     }
 
-    //_ findResource(...) -> (index, iterator)
-
-    struct FindResult {
-        FindResult(Private * const d, QList<ResultSet::Result>::iterator iterator)
-            : d(d)
-            , iterator(iterator)
-            , index(iterator == d->cache.end() ? -1 : iterator - d->cache.begin())
-        {
-        }
-
-        Private * const d;
-        QList<ResultSet::Result>::iterator iterator;
-        int index;
-
-        operator bool() const
-        {
-            return iterator != d->cache.end();
-        }
+    enum Fetch {
+        FetchReset,   // Remove old data and reload
+        FetchReload,  // Update all data
+        FetchMore     // Load more data if there is any
     };
 
-    inline FindResult findResource(const QString &resource)
-    {
-        using namespace kamd::utils::member_matcher;
-        using boost::find_if;
+    class Cache {
+    public:
+        typedef QList<ResultSet::Result> Items;
 
-        return FindResult(
-            this,
-            find_if(cache, member(&ResultSet::Result::resource) == resource));
+        Cache(Private *d, int limit)
+            : m_countLimit(limit)
+            , d(d)
+        {
+        }
+
+        inline int size() const
+        {
+            return m_items.size();
+        }
+
+    private:
+
+        QList<ResultSet::Result> m_items;
+        int m_countLimit;
+        Private *const d;
+
+    public:
+        //_ Fancy iterator
+
+        struct FindCacheResult {
+            Cache *const cache;
+            Items::iterator iterator;
+            int index;
+
+            FindCacheResult(Cache *cache, Items::iterator iterator)
+                : cache(cache)
+                , iterator(iterator)
+                , index(iterator == cache->m_items.end() ? -1 : iterator - cache->m_items.begin())
+            {
+            }
+
+            operator bool() const
+            {
+                return iterator != cache->m_items.end();
+            }
+        };
+        //^
+
+        inline FindCacheResult find(const QString &resource)
+        {
+            using namespace kamd::utils::member_matcher;
+            using boost::find_if;
+
+            return FindCacheResult(
+                this, find_if(m_items, member(&ResultSet::Result::resource)
+                                           == resource));
+        }
+
+        template <typename What, typename Predicate>
+        inline FindCacheResult lowerBound(What &&what, Predicate &&predicate)
+        {
+            return FindCacheResult(
+                this,
+                boost::lower_bound(m_items, std::forward<What>(what),
+                                   std::forward<Predicate>(predicate)));
+        }
+
+        inline void insertAt(const FindCacheResult &at,
+                             const ResultSet::Result &result)
+        {
+            m_items.insert(at.iterator, result);
+        }
+
+        inline void removeAt(const FindCacheResult &at)
+        {
+            m_items.removeAt(at.index);
+        }
+
+        inline const ResultSet::Result &operator[] (int index) const
+        {
+            return m_items[index];
+        }
+
+        inline void clear()
+        {
+            if (m_items.size() == 0) return;
+
+            d->q->beginRemoveRows(QModelIndex(), 0, m_items.size());
+            m_items.clear();
+            d->q->endRemoveRows();
+        }
+
+        inline void replace(const Items &newItems, int from = 0)
+        {
+            using namespace kamd::utils::member_matcher;
+
+            // Based on 'The string to string correction problem
+            // with block moves' paper by Walter F. Tichy
+            //
+            // In essence, it goes like this:
+            //
+            // Take the first element from the new list, and try to find
+            // it in the old one. If you can not find it, it is a new item
+            // item - send the 'inserted' event.
+            // If you did find it, test whether the following items also
+            // match. This detects blocks of items that have moved.
+            //
+            // In this example, we find 'b', and then detect the rest of the
+            // moved block 'b' 'c' 'd'
+            //
+            // Old items:  a[b c d]e f g
+            //               ^
+            //              /
+            // New items: [b c d]a f g
+            //
+            // After processing one block, just repeat until the end of the
+            // new list is reached.
+            //
+            // Then remove all remaining elements from the old list.
+            //
+            // The main addition here compared to the original papers is that
+            // our 'strings' can not hold two instances of the same element,
+            // and that we support updating from arbitrary position.
+
+            auto newBlockStart = newItems.cbegin();
+
+            // How many items should we add?
+            // This should remove the need for post-replace-trimming
+            // in the case where somebody called this with too much new items.
+            const int maxToReplace = m_countLimit - from;
+
+            if (maxToReplace <= 0) return;
+
+            const auto newItemsEnd =
+                newItems.size() <= maxToReplace ? newItems.cend() :
+                                                  newItems.cbegin() + maxToReplace;
+
+
+            // Finding the blocks until we reach the end of the newItems list
+            //
+            // from = 4
+            // Old items: X Y Z U a b c d e f g
+            //                      ^ oldBlockStart points to the first element
+            //                        of the currently processed block in the old list
+            //
+            // New items: _ _ _ _ b c d a f g
+            //                    ^ newBlockStartIndex is the index of the first
+            //                      element of the block that is currently being
+            //                      processed (with 'from' offset)
+
+            while (newBlockStart != newItemsEnd) {
+
+                const int newBlockStartIndex
+                    = from + std::distance(newItems.cbegin(), newBlockStart);
+
+                const auto oldBlockStart = std::find_if(
+                    m_items.begin() + from, m_items.end(),
+                    member(&ResultSet::Result::resource) == newBlockStart->resource());
+
+                if (oldBlockStart == m_items.end()) {
+                    // This item was not found in the old cache, so we are
+                    // inserting a new item at the same position it had in
+                    // the newItems array
+                    d->q->beginInsertRows(QModelIndex(), newBlockStartIndex,
+                                          newBlockStartIndex);
+
+                    m_items.insert(newBlockStartIndex, *newBlockStart);
+                    d->q->endInsertRows();
+
+                    // This block contained only one item, move on to find
+                    // the next block - it starts from the next item
+                    ++newBlockStart;
+
+                } else {
+                    // We are searching for a block of matching items.
+                    // This is a reimplementation of std::mismatch that
+                    // accepts two complete ranges that is available only
+                    // since C++14, so we can not use it.
+                    auto newBlockEnd = newBlockStart;
+                    auto oldBlockEnd = oldBlockStart;
+
+                    while (newBlockEnd != newItemsEnd &&
+                           oldBlockEnd != m_items.end() &&
+                           newBlockEnd->resource() == oldBlockEnd->resource()) {
+                        ++newBlockEnd;
+                        ++oldBlockEnd;
+                    }
+
+                    // We have found matching blocks
+                    // [newBlockStart, newBlockEnd) and [oldBlockStart, newBlockEnd)
+                    const int oldBlockStartIndex
+                        = std::distance(m_items.begin() + from, oldBlockStart);
+
+                    const int blockSize
+                        = std::distance(oldBlockStart, oldBlockEnd);
+
+                    if (oldBlockStartIndex != newBlockStartIndex) {
+                        // If these blocks do not have the same start,
+                        // we need to send the move event.
+                        d->q->beginMoveRows(QModelIndex(), oldBlockStartIndex,
+                                            oldBlockStartIndex + blockSize - 1,
+                                            QModelIndex(), newBlockStartIndex);
+
+                        // Moving the items from the old location to the new one
+                        kamd::utils::slide(
+                                oldBlockStart, oldBlockEnd,
+                                m_items.begin() + newBlockStartIndex);
+
+                        d->q->endMoveRows();
+                    }
+
+                    // Skip all the items in this block, and continue with
+                    // the search
+                    newBlockStart = newBlockEnd;
+                }
+            }
+
+            // We have avoided the need for trimming for the most part,
+            // but if the newItems list was shorter than needed, we still
+            // need to trim the rest.
+            trim(from + newItems.size());
+        }
+
+        inline void trim()
+        {
+            trim(m_countLimit);
+        }
+
+        inline void trim(int limit)
+        {
+            if (m_items.size() <= limit) return;
+
+            // Example:
+            //   limit is 5,
+            //   current cache (0, 1, 2, 3, 4, 5, 6, 7), size = 8
+            // We need to delete from 5 to 7
+
+            d->q->beginRemoveRows(QModelIndex(), limit, m_items.size() - 1);
+            m_items.erase(m_items.begin() + limit, m_items.end());
+            d->q->endRemoveRows();
+        }
+
+    } cache;
+
+    void reload()
+    {
+        fetch(FetchReload);
     }
 
-    //^
+    void init()
+    {
+        fetch(FetchReset);
+    }
 
-    void fetchMore(bool emitChanges)
+    void fetch(int from, int count)
     {
         using namespace Terms;
 
-        if (!hasMore) return;
+        if (from + count > query.limit()) {
+            count = query.limit() - from;
+        }
 
-        const int previousSize = cache.size();
-
-        // We want to load itemCountLimit - previousSize new items,
-        // but not more than chunkSize. We are skipping
-        // the first previousSize elements from the result set
-
-        int wantToInsertCount = qMin(MAX_CHUNK_LOAD_SIZE,
-                                     query.limit() - previousSize);
-
-        if (wantToInsertCount == 0) return;
-
-        int insertedCount = 0;
+        if (count <= 0) return;
 
         // In order to see whether there are more results, we need to pass
         // the count increased by one
-        ResultSet results(query | Offset(previousSize) | Limit(wantToInsertCount + 1));
+        ResultSet results(query | Offset(from) | Limit(count + 1));
+
         auto it = results.begin();
 
-        while ((wantToInsertCount --> 0) && (it != results.end())) {
-            cache.append(*it);
-            ++insertedCount;
+        Cache::Items newItems;
+
+        while (count --> 0 && it != results.end()) {
+            newItems << *it;
             ++it;
         }
 
         hasMore = (it != results.end());
 
-        if (emitChanges && insertedCount) {
-            q->beginInsertRows(QModelIndex(), previousSize,
-                               cache.size() + 1);
-            q->endInsertRows();
+        cache.replace(newItems, from);
+    }
+
+    void fetch(Fetch mode)
+    {
+        if (mode == FetchReset) {
+            // Removing the previously cached data
+            // and loading all from scratch
+            cache.clear();
+
+            fetch(0, MAX_CHUNK_LOAD_SIZE);
+
+        } else if (mode == FetchReload) {
+            if (cache.size() > MAX_RELOAD_CACHE_SIZE) {
+                // If the cache is big, we are pretending
+                // we were asked to reset the model
+                fetch(FetchReset);
+
+            } else {
+                // We are only updating the currently
+                // cached items, nothing more
+                fetch(0, cache.size());
+
+            }
+
+        } else { // FetchMore
+            // Load a new batch of data
+            fetch(cache.size(), MAX_CHUNK_LOAD_SIZE);
         }
     }
+
 
     void onResultAdded(const QString &resource, double score, uint lastUpdate,
                        uint firstUpdate)
@@ -141,7 +384,8 @@ public:
         using kamd::utils::slide_one;
         using boost::lower_bound;
 
-        QDBG << "result added:" << resource
+        QDBG << "ResultModel::Private::onResultAdded "
+             << "result added:" << resource
              << "score:" << score
              << "last:" << lastUpdate
              << "first:" << firstUpdate;
@@ -149,21 +393,19 @@ public:
         // This can also be called when the resource score
         // has been updated, so we need to check whether
         // we already have it in the cache
-        const auto result = findResource(resource);
+        const auto result = cache.find(resource);
 
         // TODO: We should also sort by the resource, not only on a single field
         const auto destination =
             query.ordering() == HighScoredFirst ?
-                lower_bound(cache, score, member(&ResultSet::Result::score) > _) :
+                cache.lowerBound(score, member(&ResultSet::Result::score) > _) :
             query.ordering() == RecentlyUsedFirst ?
-                lower_bound(cache, lastUpdate, member(&ResultSet::Result::lastUpdate) > _) :
+                cache.lowerBound(lastUpdate, member(&ResultSet::Result::lastUpdate) > _) :
             query.ordering() == RecentlyCreatedFirst ?
-                lower_bound(cache, firstUpdate, member(&ResultSet::Result::firstUpdate) > _) :
+                cache.lowerBound(firstUpdate, member(&ResultSet::Result::firstUpdate) > _) :
             // otherwise
-                lower_bound(cache, resource, member(&ResultSet::Result::resource) > _)
+                cache.lowerBound(resource, member(&ResultSet::Result::resource) > _)
             ;
-
-        const int destinationIndex = destination - cache.begin();
 
         if (result) {
             // We already have the resource in the cache
@@ -178,9 +420,9 @@ public:
 
             bool moving
                 = q->beginMoveRows(QModelIndex(), currentIndex, currentIndex,
-                                   QModelIndex(), destinationIndex);
+                                   QModelIndex(), destination.index);
 
-            slide_one(result.iterator, destination);
+            slide_one(result.iterator, destination.iterator);
 
             if (moving) {
                 q->endMoveRows();
@@ -189,13 +431,8 @@ public:
         } else {
             // We do not have the resource in the cache
 
-            q->beginInsertRows(QModelIndex(), destinationIndex,
-                               destinationIndex);
-
-            QDBG << "inserting" << resource
-                 << "score:" << score
-                 << "last:" << lastUpdate
-                 << "first:" << firstUpdate;
+            q->beginInsertRows(QModelIndex(), destination.index,
+                               destination.index);
 
             ResultSet::Result result;
             result.setResource(resource);
@@ -208,32 +445,32 @@ public:
             result.setLastUpdate(lastUpdate);
             result.setFirstUpdate(firstUpdate);
 
-            cache.insert(destinationIndex, result);
+            cache.insertAt(destination, result);
 
             q->endInsertRows();
 
-            trim();
+            cache.trim();
         }
     }
 
     void onResultRemoved(const QString &resource)
     {
-        const auto result = findResource(resource);
+        const auto result = cache.find(resource);
 
         if (!result) return;
 
-        QDBG << "removing row " << result.index << " of " << cache.size();
-
         q->beginRemoveRows(QModelIndex(), result.index, result.index);
 
-        cache.removeAt(result.index);
+        cache.removeAt(result);
 
         q->endRemoveRows();
+
+        fetch(cache.size(), 1);
     }
 
     void onResourceTitleChanged(const QString &resource, const QString &title)
     {
-        const auto result = findResource(resource);
+        const auto result = cache.find(resource);
 
         if (!result) return;
 
@@ -246,7 +483,7 @@ public:
     {
         // TODO: This can add or remove items from the model
 
-        const auto result = findResource(resource);
+        const auto result = cache.find(resource);
 
         if (!result) return;
 
@@ -255,51 +492,10 @@ public:
         q->dataChanged(q->index(result.index), q->index(result.index));
     }
 
-    void reset()
-    {
-        q->beginResetModel();
-
-        QDBG << "Model reset";
-        // TODO: Make this a little bit smarter
-        //       - there is a possibility that the new list of
-        //       items will not differ significantly to the old one
-        //       in which case it does not need to be a full model reset
-
-        cache.clear();
-
-        init();
-
-        q->endResetModel();
-
-    }
-
-    void trim()
-    {
-        const int limit = query.limit();
-        if (limit >= cache.size()) return;
-
-        q->beginRemoveRows(QModelIndex(), limit, cache.size() - 1);
-        cache.erase(cache.begin() + limit, cache.end());
-        q->endRemoveRows();
-    }
-
-    void init()
-    {
-        hasMore = true;
-        fetchMore(false);
-    }
-
-    void onCurrentActivityChanged(const QString &activity)
-    {
-        reset();
-    }
-
     Query query;
     ResultWatcher watcher;
-
     bool hasMore;
 
-    QList<ResultSet::Result> cache;
     KActivities::Consumer activities;
     Common::Database::Ptr database;
 
@@ -321,13 +517,20 @@ public:
         }
     }
 
+    void onCurrentActivityChanged(const QString &activity)
+    {
+        Q_UNUSED(activity);
+        reload();
+    }
+
 private:
     ResultModel *const q;
 
 };
 
 ResultModel::ResultModel(Query query, QObject *parent)
-    : d(new Private(query, this))
+    : QAbstractListModel(parent)
+    , d(new Private(query, this))
 {
     using namespace std::placeholders;
 
@@ -342,7 +545,7 @@ ResultModel::ResultModel(Query query, QObject *parent)
             this, std::bind(&Private::onResourceMimetypeChanged, d, _1, _2));
 
     connect(&d->watcher, &ResultWatcher::resultsInvalidated,
-            this, std::bind(&Private::reset, d));
+            this, std::bind(&Private::reload, d));
 
     if (query.activities().contains(CURRENT_ACTIVITY_TAG)) {
         connect(&d->activities, &KActivities::Consumer::currentActivityChanged,
@@ -355,6 +558,17 @@ ResultModel::ResultModel(Query query, QObject *parent)
 ResultModel::~ResultModel()
 {
     delete d;
+}
+
+QHash<int, QByteArray> ResultModel::roleNames() const
+{
+    return {
+        { ResourceRole    , "resource" },
+        { TitleRole       , "title" },
+        { ScoreRole       , "score" },
+        { FirstUpdateRole , "created" },
+        { LastUpdateRole  , "modified" }
+    };
 }
 
 QVariant ResultModel::data(const QModelIndex &item, int role) const
@@ -378,6 +592,9 @@ QVariant ResultModel::data(const QModelIndex &item, int role) const
 QVariant ResultModel::headerData(int section, Qt::Orientation orientation,
                                  int role) const
 {
+    Q_UNUSED(section);
+    Q_UNUSED(orientation);
+    Q_UNUSED(role);
     return QVariant();
 }
 
@@ -389,7 +606,7 @@ int ResultModel::rowCount(const QModelIndex &parent) const
 void ResultModel::fetchMore(const QModelIndex &parent)
 {
     if (parent.isValid()) return;
-    d->fetchMore(true);
+    d->fetch(Private::FetchMore);
 }
 
 bool ResultModel::canFetchMore(const QModelIndex &parent) const
@@ -399,33 +616,12 @@ bool ResultModel::canFetchMore(const QModelIndex &parent) const
          : d->hasMore;
 }
 
-// void ResultModel::setItemCountLimit(int count)
-// {
-//     d->itemCountLimit = count;
-//
-//     const int oldSize = d->cache.size();
-//
-//     if (oldSize > count) {
-//         // We need to remove all items from the tail if the new
-//         // size is less than the current number of loaded items
-//         d->trim();
-//
-//     } else if (oldSize < count) {
-//         // If the requested size is bigger, we are resetting the
-//         // model
-//         d->reset();
-//     }
-// }
-//
-// int ResultModel::itemCountLimit() const
-// {
-//     return d->itemCountLimit;
-// }
-
 void ResultModel::forgetResource(const QString &resource)
 {
+    QDBG << "Forget: " << resource;
     foreach (const QString &activity, d->query.activities()) {
         foreach (const QString &agent, d->query.agents()) {
+            QDBG << "Forget for " << activity << " and " << agent;
             Stats::forgetResource(
                     activity,
                     agent == CURRENT_AGENT_TAG ?

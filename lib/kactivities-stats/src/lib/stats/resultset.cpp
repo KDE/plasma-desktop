@@ -381,14 +381,14 @@ public:
 
         auto query = _query + limitOffsetSuffix();
 
-        return kamd::utils::debug_and_return("Query: ",
+        return  // kamd::utils::debug_and_return("Query: ",
             query
                 .replace("$orderingColumn", orderingColumn)
                 .replace("$agentsFilter", agentsFilter.join(" OR "))
                 .replace("$activitiesFilter", activitiesFilter.join(" OR "))
                 .replace("$urlFilter", urlFilter.join(" OR "))
                 .replace("$mimetypeFilter", mimetypeFilter.join(" OR "))
-            );
+            ;
     }
 
     QString allResourcesQuery() const

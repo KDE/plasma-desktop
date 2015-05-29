@@ -157,52 +157,6 @@ fromValue(const _Result & value)
     return valueFutureInterface->start();
 }
 
-template <typename _ReturnType, typename _Continuation>
-void continueWith(const QFuture<_ReturnType> &future,
-                  _Continuation &&continuation)
-{
-    if (!future.isFinished()) {
-        auto watcher = new QFutureWatcher<decltype(future.result())>();
-        QObject::connect(watcher, &QFutureWatcherBase::finished,
-            watcher,
-            [=] {
-                continuation(watcher->result());
-                watcher->deleteLater();
-            },
-            Qt::QueuedConnection
-        );
-
-        watcher->setFuture(future);
-
-    } else {
-        continuation(future.result());
-
-    }
-}
-
-template <typename _Continuation>
-void continueWith(const QFuture<void> &future,
-                  _Continuation &&continuation)
-{
-    if (!future.isFinished()) {
-        auto watcher = new QFutureWatcher<void>();
-        QObject::connect(watcher, &QFutureWatcherBase::finished,
-            watcher,
-            [=] {
-                continuation();
-                watcher->deleteLater();
-            },
-            Qt::QueuedConnection
-        );
-
-        watcher->setFuture(future);
-
-    } else {
-        continuation();
-
-    }
-}
-
 QFuture<void> fromVoid();
 
 } // namespace DBusFuture

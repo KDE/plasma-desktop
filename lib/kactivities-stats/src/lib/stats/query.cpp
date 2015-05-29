@@ -28,16 +28,19 @@ namespace details {
     inline void validateTypes(QStringList &types)
     {
         // Nothing at the moment
+        Q_UNUSED(types);
     }
 
     inline void validateAgents(QStringList &agents)
     {
         // Nothing at the moment
+        Q_UNUSED(agents);
     }
 
     inline void validateActivities(QStringList &activities)
     {
         // Nothing at the moment
+        Q_UNUSED(activities);
     }
 
     inline void validateUrlFilters(QStringList &urlFilters)
@@ -55,9 +58,9 @@ namespace details {
 class Query::Private {
 public:
     Private()
-        : limit(10)
+        : ordering(Terms::HighScoredFirst)
+        , limit(10)
         , offset(0)
-        , ordering(Terms::HighScoredFirst)
     {
     }
 
