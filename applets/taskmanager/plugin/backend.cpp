@@ -293,7 +293,7 @@ void Backend::itemContextMenu(QQuickItem *item, QObject *configAction)
     }
 
     // Close menu when the delegate is destroyed.
-    connect(item, &QQuickItem::destroyed, m_contextMenu, &TaskManager::BasicMenu::deleteLater);
+    connect(item, &QQuickItem::destroyed, m_contextMenu.data(), &TaskManager::BasicMenu::deleteLater);
 
     // Interrupt the call chain from the delegate in case it's destroyed while
     // we're in QMenu::exec();
