@@ -34,6 +34,8 @@ Item {
     property Item label: null
 
     property alias model: folderView.model
+    property alias overflowing: folderView.overflowing
+    property alias flow: folderView.flow
 
     function updateContextualActions() {
         folderView.model.updateActions();
