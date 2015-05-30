@@ -24,6 +24,7 @@
 #include <QDebug>
 #include <QDateTime>
 #include <QCoreApplication>
+#include <QFile>
 
 // STL and Boost
 #include <functional>
@@ -286,6 +287,14 @@ public:
             // but if the newItems list was shorter than needed, we still
             // need to trim the rest.
             trim(from + newItems.size());
+
+            // Check whether we got an item representing a non-existent file,
+            // if so, schedule its removal from the database
+            for (const auto &item: newItems) {
+                if (item.resource().startsWith('/') && !QFile(item.resource()).exists()) {
+                    d->q->forgetResource(item.resource());
+                }
+            }
         }
 
         inline void trim()
@@ -520,7 +529,12 @@ public:
     void onCurrentActivityChanged(const QString &activity)
     {
         Q_UNUSED(activity);
-        reload();
+        // If the current activity has changed, and
+        // the query lists items for the ':current' one,
+        // reset the model (not a simple refresh this time)
+        if (query.activities().contains(CURRENT_ACTIVITY_TAG)) {
+            fetch(FetchReset);
+        }
     }
 
 private:
@@ -618,10 +632,8 @@ bool ResultModel::canFetchMore(const QModelIndex &parent) const
 
 void ResultModel::forgetResource(const QString &resource)
 {
-    QDBG << "Forget: " << resource;
     foreach (const QString &activity, d->query.activities()) {
         foreach (const QString &agent, d->query.agents()) {
-            QDBG << "Forget for " << activity << " and " << agent;
             Stats::forgetResource(
                     activity,
                     agent == CURRENT_AGENT_TAG ?
