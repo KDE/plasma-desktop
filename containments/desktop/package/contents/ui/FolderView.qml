@@ -196,6 +196,7 @@ Item {
             if (!(pos.x <= hoveredItem.actionsOverlay.width && pos.y <= hoveredItem.actionsOverlay.height)) {
                 if (systemSettings.singleClick() || doubleClickInProgress) {
                     dir.run(positioner.map(gridView.currentIndex));
+                    hoveredItem = null;
                 } else {
                     doubleClickInProgress = true;
                     doubleClickTimer.interval = systemSettings.doubleClickInterval();
