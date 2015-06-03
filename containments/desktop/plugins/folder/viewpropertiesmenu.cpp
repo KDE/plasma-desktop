@@ -95,6 +95,35 @@ QObject* ViewPropertiesMenu::menu() const
     return m_menu;
 }
 
+bool ViewPropertiesMenu::showLayoutActions() const
+{
+    return m_alignment->isVisible() && m_arrangement->isVisible();
+}
+
+void ViewPropertiesMenu::setShowLayoutActions(bool show)
+{
+    if (showLayoutActions() != show) {
+        m_arrangement->setVisible(show);
+        m_alignment->setVisible(show);
+
+        emit showLayoutActionsChanged();
+    }
+}
+
+bool ViewPropertiesMenu::showLockAction() const
+{
+    return m_locked->isVisible();
+}
+
+void ViewPropertiesMenu::setShowLockAction(bool show)
+{
+    if (m_locked->isVisible() != show) {
+        m_locked->setVisible(show);
+
+        emit showLockActionChanged();
+    }
+}
+
 int ViewPropertiesMenu::arrangement() const
 {
     return m_arrangement->checkedAction()->data().toInt();

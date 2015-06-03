@@ -70,6 +70,9 @@ Item {
     Folder.ViewPropertiesMenu {
         id: viewPropertiesMenu
 
+        showLayoutActions: !isPopup
+        showLockAction: isContainment
+
         onArrangementChanged: {
             plasmoid.configuration.arrangement = arrangement;
         }
@@ -118,6 +121,16 @@ Item {
         id: toolTipDelegate
 
         visible: false
+    }
+
+    Connections {
+        target: plasmoid
+
+        onExpandedChanged: {
+            if (root.isPopup && !plasmoid.expanded && folderView.url != plasmoid.configuration.url) {
+                folderView.url = plasmoid.configuration.url;
+            }
+        }
     }
 
     Connections {
@@ -192,17 +205,18 @@ Item {
 
         PlasmaComponents.Label {
             width: parent.width
-            height: visible ? implicitHeight : 0
+            height: visible ? implicitHeight + units.smallSpacing : 0
 
             visible: (plasmoid.configuration.labelMode != 0)
 
             horizontalAlignment: Text.AlignHCenter
+            verticalAlignment: Text.AlignTop
             text: labelGenerator.displayLabel
 
             Folder.LabelGenerator {
                 id: labelGenerator
 
-                url: plasmoid.configuration.url
+                url: folderView.model.resolvedUrl
                 rtl: (Qt.application.layoutDirection == Qt.RightToLeft)
                 labelMode: plasmoid.configuration.labelMode
                 labelText: plasmoid.configuration.labelText

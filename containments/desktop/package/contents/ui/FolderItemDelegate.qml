@@ -30,6 +30,7 @@ Item {
     property int index: model.index
     property string name: model.blank ? "" : model.display
     property bool blank: model.blank
+    property bool isDir: loader.item ? loader.item.isDir : false
     property QtObject popupDialog: loader.item ? loader.item.popupDialog : null
     property Item iconArea: loader.item ? loader.item.iconArea : null
     property Item label: loader.item ? loader.item.label : null
@@ -142,12 +143,29 @@ Item {
             PlasmaCore.FrameSvgItem {
                 id: frame
 
-                x: units.smallSpacing
-                y: units.smallSpacing
+                x: root.isPopup ? 0 : units.smallSpacing
+                y: root.isPopup ? 0 : units.smallSpacing
 
-                width: parent.width - (2 * units.smallSpacing)
-                height: (icon.height + (2 * units.smallSpacing) + (label.lineCount
-                    * theme.mSize(theme.defaultFont).height) + (2 * units.largeSpacing))
+                width: {
+                    if (root.isPopup) {
+                        if (main.GridView.view.overflowing) {
+                            return parent.width - units.smallSpacing;
+                        } else {
+                            return parent.width;
+                        }
+                    }
+
+                    return parent.width - (units.smallSpacing * 2);
+                }
+
+                height: {
+                    if (root.isPopup) {
+                        return parent.height;
+                    }
+
+                    return (icon.height + (2 * units.smallSpacing) + (label.lineCount
+                    * theme.mSize(theme.defaultFont).height) + (2 * units.largeSpacing));
+                }
 
                 visible: !model.blank
                 enabled: visible
@@ -158,19 +176,26 @@ Item {
                     id: icon
 
                     anchors {
-                        top: parent.top
+                        top: root.isPopup ? undefined : parent.top
                         topMargin: units.largeSpacing
-                        horizontalCenter: parent.horizontalCenter
+                        left: root.isPopup ? parent.left : undefined
+                        leftMargin: units.smallSpacing
+                        horizontalCenter: root.isPopup ? undefined : parent.horizontalCenter
+                        verticalCenter: root.isPopup ? parent.verticalCenter : undefined
                     }
 
                     width: main.GridView.view.iconSize
                     height: main.GridView.view.iconSize
+
+                    opacity: root.isPopup ? (1.3 - selectionButton.opacity) : 1.0
 
                     icon: model.decoration
                 }
 
                 Rectangle {
                     id: textBackground
+
+                    visible: root.isContainment
 
                     anchors {
                         left: label.left
@@ -200,21 +225,31 @@ Item {
                     id: label
 
                     anchors {
-                        top: icon.bottom
+                        top: root.isPopup ? undefined : icon.bottom
                         topMargin: 2 * units.smallSpacing
-                        horizontalCenter: parent.horizontalCenter
+                        left: root.isPopup ? icon.right : undefined
+                        leftMargin: units.smallSpacing * 2
+                        horizontalCenter: root.isPopup ? undefined : parent.horizontalCenter
+                        verticalCenter: root.isPopup ? parent.verticalCenter : undefined
                     }
 
-                    width: Math.min(labelMetrics.advanceWidth, parent.width - units.smallSpacing * 8) // FIXME TODO: Pick a frame prefix margin to cache and use instead.
+                    width: {
+                        if (root.isPopup) {
+                            return parent.width - icon.width - (units.smallSpacing * 4);
+                        }
+
+                        return Math.min(labelMetrics.advanceWidth, parent.width - units.smallSpacing * 8);
+                    }
+
                     height: undefined // Unset PlasmaComponents.Label's default.
 
                     textFormat: Text.PlainText
 
-                    maximumLineCount: plasmoid.configuration.textLines
+                    maximumLineCount: root.isPopup ? 1 : plasmoid.configuration.textLines
                     wrapMode: Text.Wrap
                     elide: Text.ElideRight
 
-                    horizontalAlignment: Text.AlignHCenter
+                    horizontalAlignment: root.isPopup ? Text.AlignHLeft : Text.AlignHCenter
 
                     color: (root.isContainment && main.GridView.view.isRootView) ? theme.backgroundColor : theme.textColor
 
@@ -224,13 +259,19 @@ Item {
                 Column {
                     id: actions
 
-                    x: units.smallSpacing * 3 // FIXME TODO: Pick a frame prefix margin to cache and use instead.
-                    y: units.smallSpacing * 3 // FIXME TODO: Pick a frame prefix margin to cache and use instead.
+                    x: units.smallSpacing * 3
+                    y: units.smallSpacing * 3
+
+                    anchors {
+                        centerIn: root.isPopup ? icon : undefined
+                    }
 
                     width: implicitWidth
                     height: implicitHeight
 
                     FolderItemActionButton {
+                        id: selectionButton
+
                         visible: plasmoid.configuration.selectionMarkers && systemSettings.singleClick()
                         opacity: (visible && impl.hovered) ? 1.0 : 0.0
 
@@ -244,6 +285,8 @@ Item {
                     id: popupButtonComponent
 
                     FolderItemActionButton {
+                        visible: !root.isPopup
+
                         opacity: (plasmoid.configuration.popups && impl.hovered && impl.popupDialog == null) ? 1.0 : 0.0
 
                         element: "open"

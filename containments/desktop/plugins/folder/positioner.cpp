@@ -390,7 +390,7 @@ void Positioner::move(const QVariantList &moves) {
         int to = toIndices[i];
         const int sourceRow = sourceRows[i];
 
-        if (!sourceRow == -1 || from == to) {
+        if (sourceRow == -1 || from == to) {
             continue;
         }
 

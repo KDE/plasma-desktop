@@ -33,11 +33,29 @@ DragDrop.DropArea {
     id: root
     objectName: isFolder ? "folder" : "desktop"
 
-    width: isContainment ? undefined : (folderViewLayer.view.cellWidth * 3) + (units.largeSpacing * 2)
-    height: isContainment ? undefined : (folderViewLayer.view.cellHeight * 2) + units.largeSpacing
+    width: {
+        if (isContainment) {
+            return undefined;
+        } else if (isPopup) {
+            return units.gridUnit * 18;
+        }
+
+        return (folderViewLayer.view.cellWidth * 3) + (units.largeSpacing * 2);
+    }
+
+    height: {
+        if (isContainment) {
+            return undefined;
+        } else if (isPopup) {
+            return (folderViewLayer.view.cellHeight * 15);
+        }
+
+        return (folderViewLayer.view.cellHeight * 2) + units.largeSpacing;
+    }
 
     property bool isFolder: (plasmoid.pluginName == "org.kde.plasma.folder")
     property bool isContainment: ("containmentType" in plasmoid)
+    property bool isPopup: (plasmoid.location != PlasmaCore.Types.Floating)
 
     property Item toolBox
 

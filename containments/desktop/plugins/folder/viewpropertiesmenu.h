@@ -32,6 +32,9 @@ class ViewPropertiesMenu : public QObject
 
     Q_PROPERTY(QObject* menu READ menu CONSTANT);
 
+    Q_PROPERTY(bool showLayoutActions READ showLayoutActions WRITE setShowLayoutActions NOTIFY showLayoutActionsChanged)
+    Q_PROPERTY(bool showLockAction READ showLockAction WRITE setShowLockAction NOTIFY showLockActionChanged)
+
     Q_PROPERTY(int arrangement READ arrangement WRITE setArrangement NOTIFY arrangementChanged)
     Q_PROPERTY(int alignment READ alignment WRITE setAlignment NOTIFY alignmentChanged)
     Q_PROPERTY(bool locked READ locked WRITE setLocked NOTIFY lockedChanged)
@@ -44,6 +47,12 @@ class ViewPropertiesMenu : public QObject
         ~ViewPropertiesMenu();
 
         QObject* menu() const;
+
+        bool showLayoutActions() const;
+        void setShowLayoutActions(bool show);
+
+        bool showLockAction() const;
+        void setShowLockAction(bool show);
 
         int arrangement() const;
         void setArrangement(int arrangement);
@@ -64,6 +73,8 @@ class ViewPropertiesMenu : public QObject
         void setSortDirsFirst(bool sortDirsFirst);
 
     Q_SIGNALS:
+        void showLayoutActionsChanged() const;
+        void showLockActionChanged() const;
         void arrangementChanged() const;
         void alignmentChanged() const;
         void lockedChanged() const;

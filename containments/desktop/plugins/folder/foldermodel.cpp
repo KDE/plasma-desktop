@@ -99,6 +99,7 @@ FolderModel::FolderModel(QObject *parent) : QSortFilterProxyModel(parent),
     m_sortMode(0),
     m_sortDesc(false),
     m_sortDirsFirst(true),
+    m_openDirsInPlace(false),
     m_parseDesktopFiles(false),
     m_previews(false),
     m_filterMode(NoFilter),
@@ -163,13 +164,7 @@ QString FolderModel::url() const
 
 void FolderModel::setUrl(const QString& url)
 {
-    QUrl resolvedUrl;
-
-    if (url.startsWith('~')) {
-        resolvedUrl = QUrl::fromLocalFile(KShell::tildeExpand(url));
-    } else {
-        resolvedUrl = QUrl::fromUserInput(url);
-    }
+    const QUrl &resolvedUrl = resolve(url);
 
     if (url == m_url) {
         m_dirModel->dirLister()->updateDirectory(resolvedUrl);
@@ -194,6 +189,19 @@ void FolderModel::setUrl(const QString& url)
 QUrl FolderModel::resolvedUrl() const
 {
     return m_dirModel->dirLister()->url();
+}
+
+QUrl FolderModel::resolve(const QString& url)
+{
+    QUrl resolvedUrl;
+
+    if (url.startsWith('~')) {
+        resolvedUrl = QUrl::fromLocalFile(KShell::tildeExpand(url));
+    } else {
+        resolvedUrl = QUrl::fromUserInput(url);
+    }
+
+    return resolvedUrl;
 }
 
 QString FolderModel::errorString() const
@@ -299,6 +307,20 @@ void FolderModel::setSortDirsFirst(bool enable)
         }
 
         emit sortDirsFirstChanged();
+    }
+}
+
+bool FolderModel::openDirsInPlace() const
+{
+    return m_openDirsInPlace;
+}
+
+void FolderModel::setOpenDirsInPlace(bool enable)
+{
+    if (m_openDirsInPlace != enable) {
+        m_openDirsInPlace = enable;
+
+        emit openDirsInPlaceChanged();
     }
 }
 
@@ -437,6 +459,15 @@ void FolderModel::setFilterMimeTypes(const QStringList &mimeList)
     }
 }
 
+void FolderModel::up()
+{
+    const QUrl &up = KIO::upUrl(resolvedUrl());
+
+    if (up.isValid()) {
+        setUrl(up.toString());
+    }
+}
+
 void FolderModel::run(int row)
 {
     if (row < 0) {
@@ -445,12 +476,18 @@ void FolderModel::run(int row)
 
     KFileItem item = itemForIndex(index(row, 0));
 
-    QUrl url(item.targetUrl());
-    if (url.scheme().isEmpty()) {
-        url.setScheme("file");
-    }
+    if (m_openDirsInPlace && item.isDir()) {
+        setUrl(item.url().toString());
+    } else {
+        QUrl url(item.targetUrl());
 
-    new KRun(url, 0);
+        // FIXME TODO: This can go once we depend on a KIO w/ fe1f50caaf2.
+        if (url.scheme().isEmpty()) {
+            url.setScheme("file");
+        }
+
+        new KRun(url, 0);
+    }
 }
 
 void FolderModel::rename(int row, const QString& name)

@@ -23,6 +23,7 @@ import QtQuick.Dialogs 1.1
 import QtQuick.Layouts 1.0
 
 import org.kde.plasma.plasmoid 2.0
+import org.kde.plasma.core 2.0 as PlasmaCore
 
 import org.kde.private.desktopcontainment.desktop 0.1 as Desktop
 import org.kde.private.desktopcontainment.folder 0.1 as Folder
@@ -32,6 +33,8 @@ Item {
 
     width: childrenRect.width
     height: childrenRect.height
+
+    property bool isPopup: (plasmoid.location != PlasmaCore.Types.Floating)
 
     property alias cfg_arrangement: arrangement.currentIndex
     property alias cfg_alignment: alignment.currentIndex
@@ -56,6 +59,8 @@ Item {
             id: arrangementGroupBox
 
             Layout.fillWidth: true
+
+            visible: !isPopup
 
             title: i18n("Arrangement")
 
@@ -156,6 +161,9 @@ Item {
             id: appearanceGroupBox
 
             Layout.fillWidth: true
+
+            visible: !isPopup
+
             title: i18n("Appearance")
 
             flat: true
@@ -228,6 +236,8 @@ Item {
 
                 CheckBox {
                     id: popups
+
+                    visible: !isPopup
 
                     text: i18n("Folder preview popups")
                 }

@@ -55,6 +55,7 @@ Item {
     property alias scrollRight: gridView.scrollRight
     property alias scrollUp: gridView.scrollUp
     property alias scrollDown: gridView.scrollDown
+    property Item upButton: null
 
     function linkHere(sourceUrl) {
         dir.linkHere(sourceUrl);
@@ -91,10 +92,29 @@ Item {
         }
     }
 
+    function makeUpButton() {
+        return Qt.createQmlObject("UpButtonItem {}", main);
+    }
+
+    Connections {
+        target: root
+
+        onIsPopupChanged: {
+            if (upButton == null && root.isPopup) {
+                upButton = makeUpButton();
+            } else if (upButton != null) {
+                upButton.destroy();
+            }
+        }
+    }
+
     MouseEventListener {
         id: listener
 
-        anchors.fill: parent
+        anchors {
+            topMargin: upButton != null ? upButton.height : undefined
+            fill: parent
+        }
 
         property alias hoveredItem: gridView.hoveredItem
 
@@ -160,7 +180,7 @@ Item {
 
                         if (gridView.ctrlPressed) {
                             dir.toggleSelected(positioner.map(hoveredItem.index));
-                        } else {
+                        } else if (!(systemSettings.singleClick() && root.isPopup && hoveredItem.isDir)) {
                             dir.setSelected(positioner.map(hoveredItem.index));
                         }
                     }
@@ -272,6 +292,11 @@ Item {
                     dragY = -1;
                     clearPressState();
                 } else {
+                    // Disable rubberband in popup list view mode.
+                    if (root.isPopup) {
+                        return;
+                    }
+
                     dir.pinSelection();
                     main.rubberBand = Qt.createQmlObject("import QtQuick 2.0; import org.kde.private.desktopcontainment.folder 0.1 as Folder;"
                         + "Folder.RubberBand { x: " + cPress.x + "; y: " + cPress.y + "; width: 0; height: 0; z: 99999; }",
@@ -323,9 +348,7 @@ Item {
         PlasmaExtras.ScrollArea {
             id: scrollArea
 
-            anchors {
-                fill: parent
-            }
+            anchors.fill: parent
 
             focus: true
 
@@ -334,7 +357,7 @@ Item {
 
                 property bool isRootView: false
 
-                property int iconSize: FolderTools.iconSizeFromTheme(plasmoid.configuration.iconSize)
+                property int iconSize: makeIconSize()
 
                 property Item hoveredItem: null
 
@@ -356,9 +379,22 @@ Item {
                 keyNavigationWraps: false
                 boundsBehavior: Flickable.StopAtBounds
 
-                cellWidth: iconSize + (4 * units.largeSpacing)
-                cellHeight: (iconSize + (theme.mSize(theme.defaultFont).height * plasmoid.configuration.textLines)
-                    + (3 * units.smallSpacing) + (2 * units.largeSpacing))
+                cellWidth: {
+                    if (root.isPopup) {
+                        return gridView.width;
+                    }
+
+                    return iconSize + (4 * units.largeSpacing);
+                }
+
+                cellHeight: {
+                    if (root.isPopup) {
+                        return Math.max(iconSize, theme.mSize(theme.defaultFont).height) + (2 * units.smallSpacing);
+                    }
+
+                    return (iconSize + (theme.mSize(theme.defaultFont).height * plasmoid.configuration.textLines)
+                        + (3 * units.smallSpacing) + (2 * units.largeSpacing));
+                }
 
                 model: positioner
 
@@ -488,6 +524,14 @@ Item {
                     if (cachedRectangleSelection) {
                         dir.updateSelection(cachedRectangleSelection, gridView.ctrlPressed);
                     }
+                }
+
+                function makeIconSize() {
+                    if (root.isPopup) {
+                        return units.iconSizes.smallMedium;
+                    }
+
+                    return FolderTools.iconSizeFromTheme(plasmoid.configuration.iconSize);
                 }
 
                 function updateSelection(modifier) {
@@ -715,7 +759,7 @@ Item {
                     target: units
 
                     onIconSizesChanged: {
-                        gridView.iconSize = FolderTools.iconSizeFromTheme(plasmoid.configuration.iconSize);
+                        gridView.iconSize = makeIconSize();
                     }
                 }
 
@@ -723,17 +767,14 @@ Item {
                     target: plasmoid.configuration
 
                     onIconSizeChanged: {
-                        gridView.iconSize = FolderTools.iconSizeFromTheme(plasmoid.configuration.iconSize);
+                        gridView.iconSize = makeIconSize();
                     }
                 }
             }
         }
 
-
         Folder.WheelInterceptor {
-            anchors {
-                fill: parent
-            }
+            anchors.fill: parent
 
             enabled: root.isContainment && !gridView.overflowing
             destination: plasmoid
@@ -745,6 +786,7 @@ Item {
             usedByContainment: root.isContainment && main.isRootView
             sortDesc: plasmoid.configuration.sortDesc
             sortDirsFirst: plasmoid.configuration.sortDirsFirst
+            openDirsInPlace: root.isPopup
             parseDesktopFiles: (url == "desktop:/")
             previews: plasmoid.configuration.previews
             previewPlugins: plasmoid.configuration.previewPlugins
@@ -886,6 +928,12 @@ Item {
 
         Component.onCompleted: {
             dir.requestRename.connect(rename);
+        }
+    }
+
+    Component.onCompleted: {
+        if (upButton == null && root.isPopup) {
+            upButton = makeUpButton();
         }
     }
 }
