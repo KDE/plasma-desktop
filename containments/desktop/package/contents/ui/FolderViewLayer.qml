@@ -211,6 +211,7 @@ Item {
 
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignTop
+            elide: Text.ElideMiddle
             text: labelGenerator.displayLabel
 
             Folder.LabelGenerator {
