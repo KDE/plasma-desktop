@@ -28,31 +28,31 @@ ViewPropertiesMenu::ViewPropertiesMenu(QObject *parent) : QObject(parent)
 {
     m_menu = new QMenu();
 
-    QMenu *menu = m_menu->addMenu(i18n("Arrange In"));
+    m_arrangementMenu = m_menu->addMenu(i18n("Arrange In"));
     m_arrangement = new QActionGroup(this);
     connect(m_arrangement, SIGNAL(triggered(QAction*)), this, SIGNAL(arrangementChanged()));
-    QAction *action = menu->addAction(i18n("Rows"));
+    QAction *action = m_arrangementMenu->addAction(i18n("Rows"));
     action->setCheckable(true);
     action->setData(0);
     m_arrangement->addAction(action);
-    action = menu->addAction(i18n("Columns"));
+    action = m_arrangementMenu->addAction(i18n("Columns"));
     action->setData(1);
     action->setCheckable(true);
     m_arrangement->addAction(action);
 
-    menu = m_menu->addMenu(i18n("Align"));
+    m_alignmentMenu = m_menu->addMenu(i18n("Align"));
     m_alignment = new QActionGroup(this);
     connect(m_alignment, SIGNAL(triggered(QAction*)), this, SIGNAL(alignmentChanged()));
-    action = menu->addAction(i18n("Left"));
+    action = m_alignmentMenu->addAction(i18n("Left"));
     action->setCheckable(true);
     action->setData(0);
     m_alignment->addAction(action);
-    action = menu->addAction(i18n("Right"));
+    action = m_alignmentMenu->addAction(i18n("Right"));
     action->setCheckable(true);
     action->setData(1);
     m_alignment->addAction(action);
 
-    menu = m_menu->addMenu(i18n("Sort By"));
+    QMenu *menu = m_menu->addMenu(i18n("Sort By"));
     m_sortMode = new QActionGroup(this);
     connect(m_sortMode, SIGNAL(triggered(QAction*)), this, SIGNAL(sortModeChanged()));
     action = menu->addAction(i18n("Unsorted"));
@@ -97,14 +97,14 @@ QObject* ViewPropertiesMenu::menu() const
 
 bool ViewPropertiesMenu::showLayoutActions() const
 {
-    return m_alignment->isVisible() && m_arrangement->isVisible();
+    return m_alignmentMenu->menuAction()->isVisible() && m_arrangementMenu->menuAction()->isVisible();
 }
 
 void ViewPropertiesMenu::setShowLayoutActions(bool show)
 {
     if (showLayoutActions() != show) {
-        m_arrangement->setVisible(show);
-        m_alignment->setVisible(show);
+        m_arrangementMenu->menuAction()->setVisible(show);
+        m_alignmentMenu->menuAction()->setVisible(show);
 
         emit showLayoutActionsChanged();
     }

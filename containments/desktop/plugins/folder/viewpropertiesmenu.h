@@ -84,7 +84,9 @@ class ViewPropertiesMenu : public QObject
 
     private:
         QMenu *m_menu;
+        QMenu *m_arrangementMenu;
         QActionGroup *m_arrangement;
+        QMenu *m_alignmentMenu;
         QActionGroup *m_alignment;
         QActionGroup *m_sortMode;
         QAction *m_sortDesc;
