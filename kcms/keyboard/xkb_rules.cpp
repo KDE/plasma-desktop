@@ -142,6 +142,9 @@ Rules::Rules():
 
 QString Rules::getRulesName()
 {
+    if (!QX11Info::isPlatformX11()) {
+        return QString();
+    }
 	XkbRF_VarDefsRec vd;
 	char *tmp = NULL;
 
