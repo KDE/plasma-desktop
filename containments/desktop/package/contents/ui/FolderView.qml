@@ -770,7 +770,7 @@ Item {
                     target: units
 
                     onIconSizesChanged: {
-                        gridView.iconSize = makeIconSize();
+                        gridView.iconSize = gridView.makeIconSize();
                     }
                 }
 
@@ -778,7 +778,7 @@ Item {
                     target: plasmoid.configuration
 
                     onIconSizeChanged: {
-                        gridView.iconSize = makeIconSize();
+                        gridView.iconSize = gridView.makeIconSize();
                     }
                 }
             }
