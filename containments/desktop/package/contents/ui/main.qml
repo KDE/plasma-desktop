@@ -69,6 +69,7 @@ DragDrop.DropArea {
 
     preventStealing: true
 
+    Plasmoid.icon: plasmoid.configuration.icon
     Plasmoid.associatedApplicationUrls: isFolder ? folderViewLayer.model.resolvedUrl : null
 
     onIconHeightChanged: updateGridSize()

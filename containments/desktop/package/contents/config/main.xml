@@ -6,6 +6,10 @@
   <kcfgfile name=""/>
 
   <group name="General">
+    <entry name="icon" type="String">
+      <default>folder</default>
+    </entry>
+
     <entry name="ItemsGeometries" type="String">
       <label>Encoded geometries of items (resource categories).</label>
     </entry>

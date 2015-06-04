@@ -1,5 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2014 by Eike Hein <hein@kde.org>                        *
+ *   Copyright (C) 2015 by Kai Uwe Broulik <kde@privat.broulik.de>         *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -24,6 +25,8 @@ import QtQuick.Layouts 1.0
 
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.kquickcontrolsaddons 2.0
 
 import org.kde.private.desktopcontainment.desktop 0.1 as Desktop
 import org.kde.private.desktopcontainment.folder 0.1 as Folder
@@ -36,6 +39,7 @@ Item {
 
     property bool isPopup: (plasmoid.location != PlasmaCore.Types.Floating)
 
+    property string cfg_icon: plasmoid.configuration.icon
     property alias cfg_arrangement: arrangement.currentIndex
     property alias cfg_alignment: alignment.currentIndex
     property alias cfg_locked: locked.checked
@@ -54,7 +58,74 @@ Item {
         id: systemSettings
     }
 
+    IconDialog {
+        id: iconDialog
+        onIconNameChanged: cfg_icon = iconName || "folder"
+    }
+
     ColumnLayout {
+        GroupBox {
+            id: panelButtonGroupBox
+
+            Layout.fillWidth: true
+
+            visible: isPopup
+
+            title: i18n("Panel Button")
+
+            flat: true
+
+            RowLayout {
+                spacing: units.smallSpacing
+
+                Label {
+                    text: i18n("Icon:")
+                }
+
+                Button {
+                    id: iconButton
+                    Layout.minimumWidth: units.iconSizes.large + units.smallSpacing * 2
+                    Layout.maximumWidth: Layout.minimumWidth
+                    Layout.minimumHeight: Layout.minimumWidth
+                    Layout.maximumHeight: Layout.minimumWidth
+
+                    checkable: true
+
+                    onClicked: {
+                        checked = Qt.binding(function() {
+                            return iconMenu.status === PlasmaComponents.DialogStatus.Open;
+                        })
+
+                        iconMenu.open(0, height);
+                    }
+
+                    PlasmaCore.IconItem {
+                        anchors.centerIn: parent
+                        width: units.iconSizes.large
+                        height: width
+                        source: cfg_icon
+                    }
+                }
+
+                PlasmaComponents.ContextMenu {
+                    id: iconMenu
+                    visualParent: iconButton
+
+                    PlasmaComponents.MenuItem {
+                        text: i18nc("@item:inmenu Open icon chooser dialog", "Choose...")
+                        icon: "document-open-folder"
+                        onClicked: iconDialog.open()
+                    }
+
+                    PlasmaComponents.MenuItem {
+                        text: i18nc("@item:inmenu Reset icon to default", "Clear Icon")
+                        icon: "edit-clear"
+                        onClicked: cfg_icon = "folder"
+                    }
+                }
+            }
+        }
+
         GroupBox {
             id: arrangementGroupBox
 
