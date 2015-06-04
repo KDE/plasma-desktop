@@ -20,6 +20,7 @@
  ***************************************************************************/
 
 import QtQuick 2.0
+
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
@@ -84,13 +85,13 @@ DragDrop.DropArea {
         leftMargin: plasmoid.availableScreenRect ? plasmoid.availableScreenRect.x : 0
         topMargin: plasmoid.availableScreenRect ? plasmoid.availableScreenRect.y : 0
 
-        // Don't apply the right margin if the folderView is in column mode and not overflowing
-        // In this way, the last column remains droppable even if a small part of the icon is behind a panel
+        // Don't apply the right margin if the folderView is in column mode and not overflowing.
+        // In this way, the last column remains droppable even if a small part of the icon is behind a panel.
         rightMargin: (folderViewLayer.view.overflowing  || folderViewLayer.view.flow == GridView.FlowLeftToRight)
             && plasmoid.availableScreenRect && parent
             ? parent.width - (plasmoid.availableScreenRect.x + plasmoid.availableScreenRect.width) : 0
 
-        // Same mechanism as the right margin but applied here to the bottom when the folderView is in row mode
+        // Same mechanism as the right margin but applied here to the bottom when the folderView is in row mode.
         bottomMargin: (folderViewLayer.view.overflowing || folderViewLayer.view.flow == GridView.FlowTopToBottom)
             && plasmoid.availableScreenRect && parent
             ? parent.height - (plasmoid.availableScreenRect.y + plasmoid.availableScreenRect.height) : 0

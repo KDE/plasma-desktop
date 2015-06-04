@@ -215,6 +215,12 @@ Item {
 
             property Item windowPin: null
 
+            onVisibleChanged: {
+                if (root.isPopup && !visible) {
+                    plasmoid.hideOnWindowDeactivate = true;
+                }
+            }
+
             Connections {
                 target: root
 
