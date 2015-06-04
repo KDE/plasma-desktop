@@ -37,7 +37,7 @@ DragDrop.DropArea {
         if (isContainment) {
             return undefined;
         } else if (isPopup) {
-            return units.gridUnit * 18;
+            return units.gridUnit * 16;
         }
 
         return (folderViewLayer.view.cellWidth * 3) + (units.largeSpacing * 2);
@@ -47,7 +47,7 @@ DragDrop.DropArea {
         if (isContainment) {
             return undefined;
         } else if (isPopup) {
-            return (folderViewLayer.view.cellHeight * 15);
+            return (folderViewLayer.view.cellHeight * 14);
         }
 
         return (folderViewLayer.view.cellHeight * 2) + units.largeSpacing;
@@ -298,6 +298,24 @@ DragDrop.DropArea {
         onAcknowledged: {
             plasmoid.configuration.pressToMoveHelp = false;
         }
+    }
+
+    PlasmaCore.FrameSvgItem {
+        id : highlightItemSvg
+
+        visible: false
+
+        imagePath: isPopup ? "widgets/viewitem" : ""
+        prefix: "hover"
+    }
+
+    PlasmaCore.FrameSvgItem {
+        id : listItemSvg
+
+        visible: false
+
+        imagePath: isPopup ? "widgets/viewitem" : ""
+        prefix: "normal"
     }
 
     PlasmaCore.Svg {

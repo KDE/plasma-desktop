@@ -399,7 +399,9 @@ Item {
 
                 cellHeight: {
                     if (root.isPopup) {
-                        return Math.max(iconSize, theme.mSize(theme.defaultFont).height) + (2 * units.smallSpacing);
+                        return Math.ceil((Math.max(theme.mSize(theme.defaultFont).height, iconSize)
+                            + Math.max(highlightItemSvg.margins.top + highlightItemSvg.margins.bottom,
+                            listItemSvg.margins.top + listItemSvg.margins.bottom)) / 2) * 2;
                     }
 
                     return (iconSize + (theme.mSize(theme.defaultFont).height * plasmoid.configuration.textLines)
@@ -538,7 +540,7 @@ Item {
 
                 function makeIconSize() {
                     if (root.isPopup) {
-                        return units.iconSizes.smallMedium;
+                        return units.iconSizes.small;
                     }
 
                     return FolderTools.iconSizeFromTheme(plasmoid.configuration.iconSize);
