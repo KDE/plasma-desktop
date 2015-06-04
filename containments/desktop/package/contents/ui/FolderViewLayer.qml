@@ -32,7 +32,8 @@ Item {
 
     property Item view: folderView
     property Item label: null
-    property int labelHeight: theme.mSize(theme.defaultFont).height + units.smallSpacing
+    property int labelHeight: theme.mSize(theme.defaultFont).height
+        + (root.isPopup ? (units.smallSpacing * 2) : 0)
 
     property alias model: folderView.model
     property alias overflowing: folderView.overflowing
@@ -204,24 +205,69 @@ Item {
     Component {
         id: labelComponent
 
-        PlasmaComponents.Label {
+        Item {
+            id: label
+
             width: parent.width
             height: visible ? labelHeight : 0
 
             visible: (plasmoid.configuration.labelMode != 0)
 
-            horizontalAlignment: Text.AlignHCenter
-            verticalAlignment: Text.AlignTop
-            elide: Text.ElideMiddle
-            text: labelGenerator.displayLabel
+            property Item windowPin: null
 
-            Folder.LabelGenerator {
-                id: labelGenerator
+            Connections {
+                target: root
 
-                url: folderView.model.resolvedUrl
-                rtl: (Qt.application.layoutDirection == Qt.RightToLeft)
-                labelMode: plasmoid.configuration.labelMode
-                labelText: plasmoid.configuration.labelText
+                onIsPopupChanged: {
+                    if (windowPin == null && root.isPopup) {
+                        windowPin = windowPinComponent.createObject(label);
+                    } else if (upButton != null) {
+                        windowPin.destroy();
+                    }
+                }
+            }
+
+            PlasmaComponents.Label {
+                width: parent.width - (windowPin != null ? windowPin.width - units.smallSpacing : 0)
+                height: parent.height
+
+                horizontalAlignment: Text.AlignHCenter
+                verticalAlignment: Text.AlignTop
+                elide: Text.ElideMiddle
+                text: labelGenerator.displayLabel
+
+                Folder.LabelGenerator {
+                    id: labelGenerator
+
+                    url: folderView.model.resolvedUrl
+                    rtl: (Qt.application.layoutDirection == Qt.RightToLeft)
+                    labelMode: plasmoid.configuration.labelMode
+                    labelText: plasmoid.configuration.labelText
+                }
+            }
+
+            Component {
+                id: windowPinComponent
+
+                PlasmaComponents.ToolButton {
+                    id: windowPin
+
+                    anchors.right: parent.right
+
+                    visible: root.isPopup
+
+                    width: root.isPopup ? Math.round(units.gridUnit * 1.25) : 0
+                    height: width
+                    checkable: true
+                    iconSource: "window-pin"
+                    onCheckedChanged: plasmoid.hideOnWindowDeactivate = !checked
+                }
+            }
+
+            Component.onCompleted: {
+                if (root.isPopup) {
+                    windowPin = windowPinComponent.createObject(label);
+                }
             }
         }
     }
