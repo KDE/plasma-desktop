@@ -219,6 +219,8 @@ Item {
                     color: (root.isContainment && main.GridView.view.isRootView) ? theme.backgroundColor : theme.textColor
 
                     text: model.blank ? "" : model.display
+
+                    Component.onCompleted: textFix.disableMouseHandling(label) // FIXME TODO: See https://codereview.qt-project.org/#/c/113758/
                 }
 
                 Column {
