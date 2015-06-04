@@ -32,6 +32,7 @@ Item {
 
     property Item view: folderView
     property Item label: null
+    property int labelHeight: theme.mSize(theme.defaultFont).height + units.smallSpacing
 
     property alias model: folderView.model
     property alias overflowing: folderView.overflowing
@@ -205,7 +206,7 @@ Item {
 
         PlasmaComponents.Label {
             width: parent.width
-            height: visible ? implicitHeight + units.smallSpacing : 0
+            height: visible ? labelHeight : 0
 
             visible: (plasmoid.configuration.labelMode != 0)
 

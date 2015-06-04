@@ -47,7 +47,13 @@ DragDrop.DropArea {
         if (isContainment) {
             return undefined;
         } else if (isPopup) {
-            return (folderViewLayer.view.cellHeight * 14);
+            var height = (folderViewLayer.view.cellHeight * 15) + units.smallSpacing;
+
+            if (plasmoid.configuration.labelMode != 0) {
+                height += folderViewLayer.item.labelHeight;
+            }
+
+            return height;
         }
 
         return (folderViewLayer.view.cellHeight * 2) + units.largeSpacing;
