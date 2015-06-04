@@ -221,7 +221,7 @@ Item {
                 CheckBox {
                     id: selectionMarkers
 
-                    visible: systemSettings.singleClick
+                    visible: systemSettings.singleClick()
 
                     text: i18n("Selection markers")
                 }
