@@ -188,7 +188,7 @@ Item {
 
                         if (gridView.ctrlPressed) {
                             dir.toggleSelected(positioner.map(hoveredItem.index));
-                        } else if (!(systemSettings.singleClick() && root.isPopup && hoveredItem.isDir)) {
+                        } else {
                             dir.setSelected(positioner.map(hoveredItem.index));
                         }
                     }
