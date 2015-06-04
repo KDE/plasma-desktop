@@ -75,7 +75,6 @@ class FolderModel : public QSortFilterProxyModel
     Q_PROPERTY(int sortMode READ sortMode WRITE setSortMode NOTIFY sortModeChanged)
     Q_PROPERTY(bool sortDesc READ sortDesc WRITE setSortDesc NOTIFY sortDescChanged)
     Q_PROPERTY(bool sortDirsFirst READ sortDirsFirst WRITE setSortDirsFirst NOTIFY sortDirsFirstChanged)
-    Q_PROPERTY(bool openDirsInPlace READ openDirsInPlace WRITE setOpenDirsInPlace NOTIFY openDirsInPlaceChanged)
     Q_PROPERTY(bool parseDesktopFiles READ parseDesktopFiles WRITE setParseDesktopFiles NOTIFY parseDesktopFilesChanged)
     Q_PROPERTY(QObject* viewAdapter READ viewAdapter WRITE setViewAdapter NOTIFY viewAdapterChanged)
     Q_PROPERTY(bool previews READ previews WRITE setPreviews NOTIFY previewsChanged)
@@ -132,9 +131,6 @@ class FolderModel : public QSortFilterProxyModel
         bool sortDirsFirst() const;
         void setSortDirsFirst(bool enable);
 
-        bool openDirsInPlace() const;
-        void setOpenDirsInPlace(bool enable);
-
         bool parseDesktopFiles() const;
         void setParseDesktopFiles(bool enable);
 
@@ -157,6 +153,7 @@ class FolderModel : public QSortFilterProxyModel
         void setFilterMimeTypes(const QStringList &mimeList);
 
         Q_INVOKABLE void up();
+        Q_INVOKABLE void cd(int row);
 
         Q_INVOKABLE void run(int row);
 
@@ -203,7 +200,6 @@ class FolderModel : public QSortFilterProxyModel
         void sortModeChanged() const;
         void sortDescChanged() const;
         void sortDirsFirstChanged() const;
-        void openDirsInPlaceChanged() const;
         void parseDesktopFilesChanged() const;
         void viewAdapterChanged();
         void previewsChanged() const;
@@ -267,7 +263,6 @@ class FolderModel : public QSortFilterProxyModel
         int m_sortMode; // FIXME TODO: Enumify.
         bool m_sortDesc;
         bool m_sortDirsFirst;
-        bool m_openDirsInPlace;
         bool m_parseDesktopFiles;
         bool m_previews;
         QStringList m_previewPlugins;

@@ -99,7 +99,6 @@ FolderModel::FolderModel(QObject *parent) : QSortFilterProxyModel(parent),
     m_sortMode(0),
     m_sortDesc(false),
     m_sortDirsFirst(true),
-    m_openDirsInPlace(false),
     m_parseDesktopFiles(false),
     m_previews(false),
     m_filterMode(NoFilter),
@@ -310,20 +309,6 @@ void FolderModel::setSortDirsFirst(bool enable)
     }
 }
 
-bool FolderModel::openDirsInPlace() const
-{
-    return m_openDirsInPlace;
-}
-
-void FolderModel::setOpenDirsInPlace(bool enable)
-{
-    if (m_openDirsInPlace != enable) {
-        m_openDirsInPlace = enable;
-
-        emit openDirsInPlaceChanged();
-    }
-}
-
 bool FolderModel::parseDesktopFiles() const
 {
     return m_parseDesktopFiles;
@@ -468,6 +453,19 @@ void FolderModel::up()
     }
 }
 
+void FolderModel::cd(int row)
+{
+    if (row < 0) {
+        return;
+    }
+
+    KFileItem item = itemForIndex(index(row, 0));
+
+    if (item.isDir()) {
+        setUrl(item.url().toString());
+    }
+}
+
 void FolderModel::run(int row)
 {
     if (row < 0) {
@@ -476,18 +474,14 @@ void FolderModel::run(int row)
 
     KFileItem item = itemForIndex(index(row, 0));
 
-    if (m_openDirsInPlace && item.isDir()) {
-        setUrl(item.url().toString());
-    } else {
-        QUrl url(item.targetUrl());
+    QUrl url(item.targetUrl());
 
-        // FIXME TODO: This can go once we depend on a KIO w/ fe1f50caaf2.
-        if (url.scheme().isEmpty()) {
-            url.setScheme("file");
-        }
-
-        new KRun(url, 0);
+    // FIXME TODO: This can go once we depend on a KIO w/ fe1f50caaf2.
+    if (url.scheme().isEmpty()) {
+        url.setScheme("file");
     }
+
+    new KRun(url, 0);
 }
 
 void FolderModel::rename(int row, const QString& name)

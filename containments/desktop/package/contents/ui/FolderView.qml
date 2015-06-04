@@ -126,7 +126,15 @@ Item {
         property variant cPress: null
         property bool doubleClickInProgress: false
 
-        acceptedButtons: (hoveredItem == null && main.isRootView) ? Qt.LeftButton : (Qt.LeftButton | Qt.RightButton)
+        acceptedButtons: {
+            if (hoveredItem == null && main.isRootView) {
+                return root.isPopup ? (Qt.LeftButton | Qt.MiddleButton) : Qt.LeftButton;
+            }
+
+            return root.isPopup ? (Qt.LeftButton | Qt.MiddleButton | Qt.RightButton)
+                : (Qt.LeftButton | Qt.RightButton);
+        }
+
         hoverEnabled: true
 
         onPressXChanged: {
@@ -215,7 +223,9 @@ Item {
 
             if (!(pos.x <= hoveredItem.actionsOverlay.width && pos.y <= hoveredItem.actionsOverlay.height)) {
                 if (systemSettings.singleClick() || doubleClickInProgress) {
-                    dir.run(positioner.map(gridView.currentIndex));
+                    var func = root.isPopup && (mouse.button == Qt.LeftButton) ? dir.cd : dir.run;
+                    func(positioner.map(gridView.currentIndex));
+
                     hoveredItem = null;
                 } else {
                     doubleClickInProgress = true;
@@ -622,7 +632,8 @@ Item {
 
                 Keys.onReturnPressed: {
                     if (currentIndex != -1) {
-                        dir.run(positioner.map(currentIndex));
+                        var func = root.isPopup ? dir.cd : dir.run;
+                        func(positioner.map(currentIndex));
                     }
                 }
 
@@ -786,7 +797,6 @@ Item {
             usedByContainment: root.isContainment && main.isRootView
             sortDesc: plasmoid.configuration.sortDesc
             sortDirsFirst: plasmoid.configuration.sortDirsFirst
-            openDirsInPlace: root.isPopup
             parseDesktopFiles: (url == "desktop:/")
             previews: plasmoid.configuration.previews
             previewPlugins: plasmoid.configuration.previewPlugins
