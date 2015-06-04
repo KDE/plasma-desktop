@@ -29,6 +29,7 @@
 #include "previewpluginsmodel.h"
 #include "rubberband.h"
 #include "subdialog.h"
+#include "textfix.h"
 #include "viewpropertiesmenu.h"
 #include "wheelinterceptor.h"
 
@@ -48,6 +49,7 @@ void FolderPlugin::registerTypes(const char *uri)
     qmlRegisterType<PreviewPluginsModel>(uri, 0, 1, "PreviewPluginsModel");
     qmlRegisterType<RubberBand>(uri, 0, 1, "RubberBand");
     qmlRegisterType<SubDialog>(uri, 0, 1, "SubDialog");
+    qmlRegisterType<TextFix>(uri, 0, 1, "TextFix");
     qmlRegisterType<ViewPropertiesMenu>(uri, 0, 1, "ViewPropertiesMenu");
     qmlRegisterType<WheelInterceptor>(uri, 0, 1, "WheelInterceptor");
 }
