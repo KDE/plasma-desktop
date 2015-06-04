@@ -38,6 +38,7 @@ Item {
     property Item rubberBand: null
 
     property alias isRootView: gridView.isRootView
+    property alias currentIndex: gridView.currentIndex
     property alias url: dir.url
     property alias positions: positioner.positions
     property alias errorString: dir.errorString

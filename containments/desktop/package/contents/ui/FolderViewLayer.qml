@@ -129,8 +129,13 @@ Item {
         target: plasmoid
 
         onExpandedChanged: {
-            if (root.isPopup && !plasmoid.expanded && folderView.url != plasmoid.configuration.url) {
-                folderView.url = plasmoid.configuration.url;
+            if (root.isPopup && !plasmoid.expanded) {
+                if (folderView.url != plasmoid.configuration.url) {
+                    folderView.url = plasmoid.configuration.url;
+                }
+
+                folderView.currentIndex = -1;
+                folderView.model.clearSelection();
             }
         }
     }
