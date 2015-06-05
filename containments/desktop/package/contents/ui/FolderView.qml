@@ -224,7 +224,7 @@ Item {
 
             if (!(pos.x <= hoveredItem.actionsOverlay.width && pos.y <= hoveredItem.actionsOverlay.height)) {
                 if (systemSettings.singleClick() || doubleClickInProgress) {
-                    var func = root.isPopup && (mouse.button == Qt.LeftButton) ? dir.cd : dir.run;
+                    var func = root.isPopup && (mouse.button == Qt.LeftButton) && hoveredItem.isDir ? dir.cd : dir.run;
                     func(positioner.map(gridView.currentIndex));
 
                     hoveredItem = null;
