@@ -27,7 +27,7 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kquickcontrolsaddons 2.0
 
 import org.kde.private.desktopcontainment.folder 0.1 as Folder
-import "plasmapackage:/code/FolderTools.js" as FolderTools
+import "FolderTools.js" as FolderTools
 
 Item {
     id: main
