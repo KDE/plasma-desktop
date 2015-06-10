@@ -180,9 +180,7 @@ DragDrop.DropArea {
             folderViewLayer.view.scrollRight = (event.x > width - (units.largeSpacing * 3));
             folderViewLayer.view.scrollUp = (event.y < (units.largeSpacing * 3));
             folderViewLayer.view.scrollDown = (event.y > height - (units.largeSpacing * 3));
-        }
-
-        if (isContainment && !event.mimeData.hasUrls) {
+        } else if (isContainment) {
             placeHolder.width = LayoutManager.defaultAppletSize.width;
             placeHolder.height = LayoutManager.defaultAppletSize.height;
             placeHolder.x = event.x - placeHolder.width / 2;
@@ -216,9 +214,7 @@ DragDrop.DropArea {
             folderViewLayer.view.scrollDown = false;
 
             folderViewLayer.view.drop(root, event, mapToItem(folderViewLayer.view, event.x, event.y));
-        }
-
-        if (isContainment && !event.mimeData.hasUrls) {
+        } else if (isContainment) {
             placeHolderPaint.opacity = 0;
             plasmoid.processMimeData(event.mimeData, event.x - placeHolder.width / 2, event.y - placeHolder.height / 2);
         }
