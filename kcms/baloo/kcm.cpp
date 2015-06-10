@@ -127,7 +127,7 @@ void ServerConfigModule::save()
     }
     else {
         QDBusMessage message = QDBusMessage::createMethodCall(QLatin1String("org.kde.baloo"),
-                                                              QLatin1String("/indexer"),
+                                                              QLatin1String("/"),
                                                               QLatin1String("org.kde.baloo"),
                                                               QLatin1String("quit"));
 
@@ -140,7 +140,7 @@ void ServerConfigModule::save()
 
     // Update the baloo_file's config cache
     QDBusMessage message = QDBusMessage::createMethodCall(QLatin1String("org.kde.baloo"),
-                                                          QLatin1String("/indexer"),
+                                                          QLatin1String("/"),
                                                           QLatin1String("org.kde.baloo"),
                                                           QLatin1String("updateConfig"));
 
