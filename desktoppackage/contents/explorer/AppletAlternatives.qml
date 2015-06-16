@@ -45,7 +45,31 @@ PlasmaCore.Dialog {
         Layout.minimumWidth: units.gridUnit * 20
         Layout.minimumHeight: Math.min(Screen.height - units.gridUnit * 10, heading.height + buttonsRow.height + mainList.contentHeight + units.gridUnit)
 
-        property string currentPlugin: alternativesHelper.currentPlugin
+        property string currentPlugin
+        // we don't want a binding here, just set it to the current plugin once
+        Component.onCompleted: currentPlugin = alternativesHelper.currentPlugin
+
+        QtControls.Action {
+            shortcut: "Escape"
+            onTriggered: dialog.close()
+        }
+        QtControls.Action {
+            shortcut: "Return"
+            onTriggered: switchButton.clicked(null)
+        }
+        QtControls.Action {
+            shortcut: "Enter"
+            onTriggered: switchButton.clicked(null)
+        }
+
+        QtControls.Action {
+            shortcut: "Up"
+            onTriggered: mainList.decrementCurrentIndex()
+        }
+        QtControls.Action {
+            shortcut: "Down"
+            onTriggered: mainList.incrementCurrentIndex()
+        }
 
         WidgetExplorer {
             id: widgetExplorer
@@ -55,6 +79,16 @@ PlasmaCore.Dialog {
         PlasmaExtras.Heading {
             id: heading
             text: i18nd("plasma_shell_org.kde.plasma.desktop", "Alternatives");
+        }
+
+        // HACK for some reason initially setting the index does not work
+        // I tried setting it in Component.onCompleted of either delegate and list
+        // but that did not help either, hence the Timer as a last resort
+        Timer {
+            id: setCurrentIndexTimer
+            property int desiredIndex: 0
+            interval: 0
+            onTriggered: mainList.currentIndex = desiredIndex
         }
 
         PlasmaExtras.ScrollArea {
@@ -67,24 +101,32 @@ PlasmaCore.Dialog {
             ListView {
                 id: mainList
                 model: widgetExplorer.widgetsModel
+                boundsBehavior: Flickable.StopAtBounds
                 highlight: PlasmaComponents.Highlight {
                     id: highlight
                 }
                 highlightMoveDuration : 0
+
                 delegate: PlasmaComponents.ListItem {
                     enabled: true
-                    onClicked: checked = true;
-                    property bool checked: model.pluginName == alternativesHelper.currentPlugin
-                    onCheckedChanged: {
-                        if (checked) {
-                            root.currentPlugin = model.pluginName;
-                            mainList.currentIndex = index;
+                    onClicked: mainList.currentIndex = index
+
+                    Component.onCompleted: {
+                        if (model.pluginName === alternativesHelper.currentPlugin) {
+                            setCurrentIndexTimer.desiredIndex = index
+                            setCurrentIndexTimer.restart()
                         }
                     }
+
                     Connections {
                         target: mainList
-                        onCurrentIndexChanged: checked = false;
+                        onCurrentIndexChanged: {
+                            if (mainList.currentIndex === index) {
+                                root.currentPlugin = model.pluginName
+                            }
+                        }
                     }
+
                     RowLayout {
                         x: 2 * units.smallSpacing
                         width: parent.width - 2 * x
@@ -123,15 +165,19 @@ PlasmaCore.Dialog {
 
             Layout.fillWidth: true
             PlasmaComponents.Button {
+                id: switchButton
                 enabled: root.currentPlugin != alternativesHelper.currentPlugin
                 Layout.fillWidth: true
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Switch");
                 onClicked: {
-                    alternativesHelper.loadAlternative(root.currentPlugin);
-                    dialog.close();
+                    if (enabled) {
+                        alternativesHelper.loadAlternative(root.currentPlugin);
+                        dialog.close();
+                    }
                 }
             }
             PlasmaComponents.Button {
+                id: cancelButton
                 Layout.fillWidth: true
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Cancel");
                 onClicked: {
