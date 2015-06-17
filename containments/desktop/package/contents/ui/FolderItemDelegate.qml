@@ -205,7 +205,7 @@ Item {
                         horizontalCenter: parent.horizontalCenter
                     }
 
-                    width: Math.min(labelMetrics.advanceWidth, parent.width - units.smallSpacing * 8) // FIXME TODO: Pick a frame prefix margin to cache and use instead.
+                    width: Math.min(labelMetrics.advanceWidth + units.smallSpacing, parent.width - units.smallSpacing * 8) // FIXME TODO: Pick a frame prefix margin to cache and use instead.
                     height: undefined // Unset PlasmaComponents.Label's default.
 
                     textFormat: Text.PlainText
