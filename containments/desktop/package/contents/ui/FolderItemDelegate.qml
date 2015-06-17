@@ -241,6 +241,7 @@ Item {
                         return Math.min(labelMetrics.advanceWidth, parent.width - units.smallSpacing * 8);
                     }
 
+                    width: Math.min(labelMetrics.advanceWidth + units.smallSpacing, parent.width - units.smallSpacing * 8)
                     height: undefined // Unset PlasmaComponents.Label's default.
 
                     textFormat: Text.PlainText
