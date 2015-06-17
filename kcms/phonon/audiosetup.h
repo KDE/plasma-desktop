@@ -33,7 +33,7 @@ typedef struct {
     quint32 index;
     QString name;
     QString icon;
-    QMap<quint32, QPair<QString, QString> > profiles;
+    QMultiMap<quint32, QPair<QString, QString> > profiles;
     QString activeProfile;
 } cardInfo;
 
