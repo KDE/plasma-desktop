@@ -1,5 +1,6 @@
 set(trashplugin_SRCS
     dirmodel.cpp
+    trash.cpp
     trashplugin.cpp
     )
 

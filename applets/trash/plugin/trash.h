@@ -1,6 +1,6 @@
 /*
- *   Copyright 2012 by Marco Martin <mart@kde.org>
-
+ *   Copyright 2015 Kai Uwe Broulik <kde@privat.broulik.de>
+ *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
  *   published by the Free Software Foundation; either version 2, or
@@ -17,22 +17,25 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#include "trashplugin.h"
-#include "dirmodel.h"
-#include "trash.h"
+#ifndef TRASH_H
+#define TRASH_H
 
-#include <QtQml>
+#include <QObject>
 
-static QObject *trash_singletonProvider(QQmlEngine *engine, QJSEngine *scriptEngine)
+class Trash : public QObject
 {
-    Q_UNUSED(engine)
-    Q_UNUSED(scriptEngine)
-    return new Trash();
-}
+    Q_OBJECT
 
-void TrashPrivatePlugin::registerTypes(const char *uri)
-{
-    Q_ASSERT(uri == QLatin1String("org.kde.plasma.private.trash"));
-    qmlRegisterType<DirModel>(uri, 1,0, "DirModel");
-    qmlRegisterSingletonType<Trash>(uri, 1, 0, "Trash", trash_singletonProvider);
-}
+public:
+    explicit Trash(QObject *parent = nullptr);
+    virtual ~Trash() = default;
+
+    Q_INVOKABLE void trashUrls(const QList<QUrl> &urls);
+    Q_INVOKABLE void emptyTrash();
+    Q_INVOKABLE bool canBeTrashed(const QUrl &url) const;
+    Q_INVOKABLE QList<QUrl> trashableUrls(const QList<QUrl> &urls) const;
+
+};
+
+
+#endif // TRASH_H
