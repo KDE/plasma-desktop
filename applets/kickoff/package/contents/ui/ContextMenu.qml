@@ -40,19 +40,6 @@ PlasmaComponents.ContextMenu {
     * context menu items
     */
     PlasmaComponents.MenuItem {
-        id: titleMenuItem
-
-        text: contextMenu.title
-        icon: contextMenu.model != undefined ? contextMenu.model.decoration : ""
-        checkable: false
-        enabled: false
-    }
-    PlasmaComponents.MenuItem {
-        id: titleSeparator
-
-        separator: true
-    }
-    PlasmaComponents.MenuItem {
         id: addToFavorites
 
         text: contextMenu.isFavorite ? i18n("Remove From Favorites") : i18n("Add To Favorites")
