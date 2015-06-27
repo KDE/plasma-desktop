@@ -192,7 +192,7 @@ static QString findXkbRulesFile()
 
 	if ( ! rulesName.isNull() ) {
 		QString xkbDir = Rules::findXkbDir();
-		rulesFile = QString("%1/rules/%2.xml").arg(xkbDir, rulesName);
+		rulesFile = QStringLiteral("%1/rules/%2.xml").arg(xkbDir, rulesName);
 	}
 
 	return rulesFile;
