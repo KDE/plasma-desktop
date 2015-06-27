@@ -151,8 +151,10 @@ XlibSynapticsBackend::XlibSynapticsBackend(QObject *parent) :
     XlibBackend(parent)
 {
     m_capsAtom.intern(m_connection, SYNAPTICS_PROP_CAPABILITIES);
-    if (!m_capsAtom.atom())
+    if (!m_capsAtom.atom()) {
+        m_errorString = i18nc("Synaptics touchpad driver","Synaptics backend not found");
         return;
+    }
 
     m_device = findTouchpad(m_capsAtom);
     if (m_device == XIAllDevices) {
@@ -275,8 +277,10 @@ XlibLibinputBackend::XlibLibinputBackend(QObject *parent) :
                        "libinput Tapping Enabled",
                        true);
 
-    if (!identifier.atom())
+    if (!identifier.atom()) {
+        m_errorString = i18nc("Libinput touchpad driver","Libinput backend not found");
         return;
+    }
 
     m_device = findTouchpad(identifier);
     if (m_device == XIAllDevices) {
@@ -318,15 +322,17 @@ XlibLibinputBackend::XlibLibinputBackend(QObject *parent) :
 
 XlibBackend* XlibBackend::initialize(QObject *parent)
 {
+    XlibBackend* backend = nullptr;
     QScopedPointer<Display, XDisplayCleanup> display(XOpenDisplay(0));
     xcb_connection_t *connection = XGetXCBConnection(display.data());
     XcbAtom synaptics_prop_capablities, libinput_prop_tapping;
 
-    libinput_prop_tapping.intern(connection, "libinput Tapping Enabled");
-    if (libinput_prop_tapping.atom())
-        return new XlibLibinputBackend(parent);
-    else
-        return new XlibSynapticsBackend(parent);
+    backend = new XlibLibinputBackend(parent);
+    if (! backend->errorString().isNull()) {
+        delete backend;
+        backend = new XlibSynapticsBackend(parent);
+    }
+    return backend;
 }
 
 XlibBackend::~XlibBackend()
