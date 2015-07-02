@@ -37,7 +37,7 @@ public slots:
     void onFinish();
 
 private slots:
-    void toggled(bool);
+    void onToggle(bool);
 
 private:
     QString _positionName();

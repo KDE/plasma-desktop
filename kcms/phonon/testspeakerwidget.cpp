@@ -41,7 +41,7 @@ TestSpeakerWidget::TestSpeakerWidget(const pa_channel_position_t pos, ca_context
 {
     setCheckable(true);
     setText(_positionName());
-    connect(this, &TestSpeakerWidget::toggled, this, &TestSpeakerWidget::toggled);
+    connect(this, &TestSpeakerWidget::toggled, this, &TestSpeakerWidget::onToggle);
 }
 
 TestSpeakerWidget::~TestSpeakerWidget()
@@ -50,7 +50,7 @@ TestSpeakerWidget::~TestSpeakerWidget()
         s_CurrentWidget = NULL;
 }
 
-void TestSpeakerWidget::toggled(bool state)
+void TestSpeakerWidget::onToggle(bool state)
 {
     if (s_CurrentIndex != PA_INVALID_INDEX) {
         ca_context_cancel(m_Canberra, s_CurrentIndex);
