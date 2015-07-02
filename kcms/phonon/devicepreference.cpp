@@ -877,7 +877,7 @@ void DevicePreference::on_testPlaybackButton_toggled(bool down)
             createPath(m_media, m_audioOutput);
             static QUrl testUrl = QUrl::fromLocalFile(QStandardPaths::locate(
                                                           QStandardPaths::GenericDataLocation,
-                                                          QStringLiteral("sounds/KDE-Sys-Log-In.ogg")));
+                                                          QStringLiteral("sounds/Oxygen-Sys-Log-In.ogg")));
             m_media->setCurrentSource(testUrl);
             connect(m_media, &MediaObject::finished, testPlaybackButton, &QToolButton::toggle);
 
