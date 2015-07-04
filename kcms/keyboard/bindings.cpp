@@ -42,7 +42,7 @@ KeyboardLayoutActionCollection::KeyboardLayoutActionCollection(QObject* parent, 
 	toggleAction->setText( i18n(actionName) );
         KGlobalAccel::self()->setShortcut(toggleAction,
                                           QList<QKeySequence>() << QKeySequence(Qt::ALT+Qt::CTRL+Qt::Key_K),
-                                          KGlobalAccel::NoAutoloading);
+                                          KGlobalAccel::Autoloading);
 	if( configAction ) {
 	    toggleAction->setProperty("isConfigurationAction", true);
 	}
