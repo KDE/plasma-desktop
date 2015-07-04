@@ -49,15 +49,15 @@ DragDrop.DropArea {
             return undefined;
         } else if (isPopup) {
             var height = (folderViewLayer.view.cellHeight * 15) + units.smallSpacing;
-
-            if (plasmoid.configuration.labelMode != 0) {
-                height += folderViewLayer.item.labelHeight;
-            }
-
-            return height;
+        } else {
+            var height = (folderViewLayer.view.cellHeight * 2) + units.largeSpacing
         }
 
-        return (folderViewLayer.view.cellHeight * 2) + units.largeSpacing;
+        if (plasmoid.configuration.labelMode != 0) {
+            height += folderViewLayer.item.labelHeight;
+        }
+
+        return height
     }
 
     property bool isFolder: (plasmoid.pluginName == "org.kde.plasma.folder")
