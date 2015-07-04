@@ -143,6 +143,10 @@ Item {
                 folderView.model.clearSelection();
             }
         }
+
+        onExternalData: {
+            folderView.url = data
+        }
     }
 
     Connections {
