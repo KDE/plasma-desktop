@@ -1,6 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2012 Aurélien Gâteau <agateau@kde.org>                  *
- *   Copyright (C) 2014 by Eike Hein <hein@kde.org>                        *
+ *   Copyright (C) 2014-2015 by Eike Hein <hein@kde.org>                   *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -24,41 +24,53 @@
 #include "abstractmodel.h"
 
 #include <QIcon>
-#include <QPointer>
-#include <QString>
+#include <QUrl>
 
 class AbstractEntry
 {
     public:
-        enum EntryType { RunnableType, GroupType, SeparatorType };
-
+        explicit AbstractEntry(AbstractModel *owner);
         virtual ~AbstractEntry();
+
+        enum EntryType { RunnableType, GroupType, SeparatorType };
 
         virtual EntryType type() const = 0;
 
-        QIcon icon() const { return m_icon; }
-        QString iconName() const { return m_icon.name(); }
-        QString name() const { return m_name; }
+        AbstractModel *owner() const;
+
+        virtual bool isValid() const;
+
+        virtual QIcon icon() const;
+        virtual QString name() const;
+
+        virtual QString id() const;
+        virtual QUrl url() const;
+
+        virtual bool hasChildren() const;
+        virtual AbstractModel *childModel() const;
+
+        virtual bool hasActions() const;
+        virtual QVariantList actions() const;
+
+        virtual bool run(const QString& actionId = QString(), const QVariant &argument = QVariant());
 
     protected:
-        QIcon m_icon;
-        QString m_name;
+        AbstractModel* m_owner;
 };
 
 class AbstractGroupEntry : public AbstractEntry
 {
     public:
+        explicit AbstractGroupEntry(AbstractModel *owner);
+
         EntryType type() const { return GroupType; }
-
-        AbstractModel *model() const { return m_model; }
-
-    protected:
-        QPointer<AbstractModel> m_model;
 };
 
 class SeparatorEntry : public AbstractEntry
 {
     public:
+        explicit SeparatorEntry(AbstractModel *owner);
+
         EntryType type() const { return SeparatorType; }
 };
 

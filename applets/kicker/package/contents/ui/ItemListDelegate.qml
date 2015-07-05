@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013-2014 by Eike Hein <hein@kde.org>                   *
+ *   Copyright (C) 2013-2015 by Eike Hein <hein@kde.org>                   *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -54,7 +54,7 @@ Item {
 
     onAboutToShowActionMenu: {
         var actionList = hasActionList ? model.actionList : [];
-        Tools.fillActionMenu(actionMenu, actionList, model.favoriteId, model.display);
+        Tools.fillActionMenu(actionMenu, actionList, ListView.view.model.favoritesModel, model.favoriteId);
     }
 
     onActionTriggered: {
@@ -202,7 +202,7 @@ Item {
         PlasmaComponents.Label {
             id: label
 
-            enabled: (!model.isParent || hasChildren)
+            enabled: hasChildren
 
             anchors.verticalCenter: parent.verticalCenter
 

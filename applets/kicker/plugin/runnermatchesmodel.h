@@ -50,6 +50,8 @@ class RunnerMatchesModel : public AbstractModel
 
         void setMatches(const QList<Plasma::QueryMatch> &matches);
 
+        AbstractModel* favoritesModel();
+
     private:
         QString m_runnerId;
         QString m_name;

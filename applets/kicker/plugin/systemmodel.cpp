@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2014 by Eike Hein <hein@kde.org>                   *
+ *   Copyright (C) 2014-2015 by Eike Hein <hein@kde.org>                   *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -19,69 +19,30 @@
 
 #include "systemmodel.h"
 #include "actionlist.h"
-
-#include <QDBusConnection>
-#include <QDBusInterface>
-#include <QDBusPendingCall>
-
-#include <KAuthorized>
-#include <KConfigGroup>
-#include <KLocalizedString>
-#include <KSharedConfig>
-#include <kworkspace.h>
-#include <Solid/PowerManagement>
-#include "ksmserver_interface.h"
-
-SystemEntry::SystemEntry(SystemEntry::Action action, const QString &name, const QString &icon)
-{
-    m_action = action;
-    m_name = name;
-    m_icon = QIcon::fromTheme(icon, QIcon::fromTheme("unknown"));
-}
+#include "favoritesmodel.h"
+#include "systementry.h"
 
 SystemModel::SystemModel(QObject *parent) : AbstractModel(parent)
+, m_favoritesModel(new FavoritesModel(this))
 {
-    m_favoriteIds[SystemEntry::LockSession] = "lock-screen";
-    m_favoriteIds[SystemEntry::LogoutSession] = "logout";
-    m_favoriteIds[SystemEntry::SaveSession] = "save-session";
-    m_favoriteIds[SystemEntry::NewSession] = "switch-user";
-    m_favoriteIds[SystemEntry::SuspendToRam] = "suspend";
-    m_favoriteIds[SystemEntry::SuspendToDisk] = "hibernate";
-    m_favoriteIds[SystemEntry::Reboot] = "reboot";
-    m_favoriteIds[SystemEntry::Shutdown] = "shutdown";
+    QList<SystemEntry *> actions;
 
-    if (KAuthorized::authorizeKAction("lock_screen")) {
-        m_entryList << new SystemEntry(SystemEntry::LockSession, i18n("Lock"), "system-lock-screen");
-    }
+    actions << new SystemEntry(this, SystemEntry::LockSession);
+    actions << new SystemEntry(this, SystemEntry::LogoutSession);
+    actions << new SystemEntry(this, SystemEntry::SaveSession);
+    actions << new SystemEntry(this, SystemEntry::NewSession);
+    actions << new SystemEntry(this, SystemEntry::SuspendToRam);
+    actions << new SystemEntry(this, SystemEntry::SuspendToDisk);
+    actions << new SystemEntry(this, SystemEntry::Reboot);
+    actions << new SystemEntry(this, SystemEntry::Shutdown);
 
-    if (KAuthorized::authorizeKAction("logout") && KAuthorized::authorize("logout")) {
-        m_entryList << new SystemEntry(SystemEntry::LogoutSession, i18n("Logout"), "system-log-out");
-
-        const KConfigGroup c(KSharedConfig::openConfig("ksmserverrc", KConfig::NoGlobals), "General");
-
-        if (c.readEntry("loginMode") == "restoreSavedSession") {
-            m_entryList << new SystemEntry(SystemEntry::SaveSession, i18n("Save Session"), "system-save-session");
+    foreach(SystemEntry *entry, actions) {
+        if (entry->isValid()) {
+            m_entryList << entry;
+        } else {
+            delete entry;
         }
     }
-
-    if (KAuthorized::authorizeKAction("start_new_session")
-        && m_displayManager.isSwitchable()
-        && m_displayManager.numReserve() >= 0) {
-        m_entryList << new SystemEntry(SystemEntry::NewSession, i18n("New Session"), "system-switch-user");
-    }
-
-    QSet<Solid::PowerManagement::SleepState> sleepStates = Solid::PowerManagement::supportedSleepStates();
-
-    if (sleepStates.contains(Solid::PowerManagement::SuspendState)) {
-        m_entryList << new SystemEntry(SystemEntry::SuspendToRam, i18n("Suspend"), "system-suspend");
-    }
-
-    if (sleepStates.contains(Solid::PowerManagement::HibernateState)) {
-        m_entryList << new SystemEntry(SystemEntry::SuspendToDisk, i18n("Hibernate"), "system-suspend-hibernate");
-    }
-
-    m_entryList << new SystemEntry(SystemEntry::Reboot, i18n("Restart"), "system-reboot");
-    m_entryList << new SystemEntry(SystemEntry::Shutdown, i18n("Shutdown"), "system-shutdown");
 }
 
 SystemModel::~SystemModel()
@@ -95,12 +56,14 @@ QVariant SystemModel::data(const QModelIndex &index, int role) const
         return QVariant();
     }
 
+    const AbstractEntry *entry = m_entryList.at(index.row());
+
     if (role == Qt::DisplayRole) {
-        return m_entryList.at(index.row())->name();
+        return entry->name();
     } else if (role == Qt::DecorationRole) {
-        return m_entryList.at(index.row())->iconName();
+        return entry->icon();
     } else if (role == Kicker::FavoriteIdRole) {
-        return QVariant("sys:" + m_favoriteIds[m_entryList.at(index.row())->action()]);
+        return entry->id();
     }
 
     return QVariant();
@@ -117,51 +80,7 @@ bool SystemModel::trigger(int row, const QString &actionId, const QVariant &argu
     Q_UNUSED(argument)
 
     if (row >= 0 && row < m_entryList.count()) {
-        SystemEntry::Action action = m_entryList.at(row)->action();
-
-        switch (action) {
-            case SystemEntry::LockSession:
-            {
-                QDBusConnection bus = QDBusConnection::sessionBus();
-                QDBusInterface interface("org.freedesktop.ScreenSaver", "/ScreenSaver", "org.freedesktop.ScreenSaver", bus);
-                interface.asyncCall("Lock");
-                break;
-            }
-            case SystemEntry::LogoutSession:
-                KWorkSpace::requestShutDown(KWorkSpace::ShutdownConfirmDefault, KWorkSpace::ShutdownTypeNone);
-                break;
-            case SystemEntry::SaveSession:
-            {
-                org::kde::KSMServerInterface ksmserver(QStringLiteral("org.kde.ksmserver"),
-                    QStringLiteral("/KSMServer"), QDBusConnection::sessionBus());
-
-                if (ksmserver.isValid()) {
-                    ksmserver.saveCurrentSession();
-                }
-
-                break;
-            }
-            case SystemEntry::NewSession:
-            {
-                QDBusConnection bus = QDBusConnection::sessionBus();
-                QDBusInterface interface("org.freedesktop.ScreenSaver", "/ScreenSaver", "org.freedesktop.ScreenSaver", bus);
-                interface.asyncCall("Lock");
-                m_displayManager.startReserve();
-                break;
-            };
-            case SystemEntry::SuspendToRam:
-                Solid::PowerManagement::requestSleep(Solid::PowerManagement::SuspendState, 0, 0);
-                break;
-            case SystemEntry::SuspendToDisk:
-                Solid::PowerManagement::requestSleep(Solid::PowerManagement::HibernateState, 0, 0);
-                break;
-            case SystemEntry::Shutdown:
-                KWorkSpace::requestShutDown(KWorkSpace::ShutdownConfirmDefault, KWorkSpace::ShutdownTypeHalt);
-                break;
-            case SystemEntry::Reboot:
-                KWorkSpace::requestShutDown(KWorkSpace::ShutdownConfirmDefault, KWorkSpace::ShutdownTypeReboot);
-                break;
-        }
+        m_entryList.at(row)->run();
 
         return true;
     }
@@ -169,16 +88,7 @@ bool SystemModel::trigger(int row, const QString &actionId, const QVariant &argu
     return false;
 }
 
-int SystemModel::rowForFavoriteId(const QString& favoriteId)
+AbstractModel* SystemModel::favoritesModel()
 {
-    const SystemEntry::Action action = m_favoriteIds.key(favoriteId);
-
-    for (int i = 0; i < m_entryList.count(); ++i) {
-        if (action == m_entryList.at(i)->action()) {
-            return i;
-        }
-    }
-
-    return -1;
+    return m_favoritesModel;
 }
-

@@ -1,6 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2013 by Aurélien Gâteau <agateau@kde.org>               *
- *   Copyright (C) 2014 by Eike Hein <hein@kde.org>                        *
+ *   Copyright (C) 2014-2015 by Eike Hein <hein@kde.org>                   *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -28,8 +28,7 @@ namespace Kicker
 {
 
 enum {
-    IsParentRole = Qt::UserRole + 1,
-    IsSeparatorRole,
+    IsSeparatorRole = Qt::UserRole + 1,
     HasChildrenRole,
     FavoriteIdRole,
     HasActionListRole,

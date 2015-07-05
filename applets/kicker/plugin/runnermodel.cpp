@@ -26,8 +26,9 @@
 #include <KRunner/AbstractRunner>
 #include <KRunner/RunnerManager>
 
-RunnerModel::RunnerModel(QObject *parent) : QAbstractListModel(parent),
-    m_runnerManager(0)
+RunnerModel::RunnerModel(QObject *parent) : QAbstractListModel(parent)
+, m_favoritesModel(0)
+, m_runnerManager(0)
 {
     QHash<int, QByteArray> roles;
     roles.insert(Qt::DisplayRole, "display");
@@ -41,6 +42,26 @@ RunnerModel::RunnerModel(QObject *parent) : QAbstractListModel(parent),
 
 RunnerModel::~RunnerModel()
 {
+}
+
+AbstractModel *RunnerModel::favoritesModel() const
+{
+    return m_favoritesModel;
+}
+
+void RunnerModel::setFavoritesModel(AbstractModel *model)
+{
+    if (m_favoritesModel != model) {
+        m_favoritesModel = model;
+
+        clear();
+
+        if (!m_query.isEmpty()) {
+            m_queryTimer.start();
+        }
+
+        emit favoritesModelChanged();
+    }
 }
 
 QVariant RunnerModel::data(const QModelIndex &index, int role) const

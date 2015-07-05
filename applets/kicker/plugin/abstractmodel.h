@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2014 by Eike Hein <hein@kde.org>                        *
+ *   Copyright (C) 2014-2015 by Eike Hein <hein@kde.org>                   *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -22,33 +22,52 @@
 
 #include <QAbstractListModel>
 
+class AbstractEntry;
+
 class AbstractModel : public QAbstractListModel
 {
     Q_OBJECT
 
     Q_PROPERTY(int count READ count NOTIFY countChanged)
     Q_PROPERTY(int separatorCount READ separatorCount NOTIFY separatorCountChanged)
+    Q_PROPERTY(int iconSize READ iconSize WRITE setIconSize NOTIFY iconSizeChanged)
+    Q_PROPERTY(QObject* favoritesModel READ favoritesModel CONSTANT)
 
     public:
         explicit AbstractModel(QObject *parent = 0);
         ~AbstractModel();
+
+        virtual QHash<int, QByteArray> roleNames() const;
 
         int count() const;
         virtual int separatorCount() const;
 
         int columnCount(const QModelIndex &parent = QModelIndex()) const;
 
+        int iconSize() const;
+        void setIconSize(int size);
+
         Q_INVOKABLE virtual bool trigger(int row, const QString &actionId, const QVariant &argument) = 0;
+
+        Q_INVOKABLE virtual void refresh();
 
         Q_INVOKABLE virtual AbstractModel *modelForRow(int row);
 
-        virtual int rowForFavoriteId(const QString &favoriteId);
-
+        virtual bool hasActions() const;
         virtual QVariantList actions() const;
+
+        virtual AbstractModel* favoritesModel();
+        AbstractModel* rootModel();
+
+        virtual void entryChanged(AbstractEntry *entry);
 
     Q_SIGNALS:
         void countChanged() const;
         void separatorCountChanged() const;
+        void iconSizeChanged() const;
+
+    private:
+        int m_iconSize;
 };
 
 #endif

@@ -20,6 +20,7 @@
 
 #include "recentcontactsmodel.h"
 #include "actionlist.h"
+#include "contactentry.h"
 
 #include <QAction>
 
@@ -69,6 +70,8 @@ QVariant RecentContactsModel::data(const QModelIndex &index, int role) const
         return data->name();
     } else if (role == Qt::DecorationRole) {
         return data->presenceIconName();
+    } else if (role == Kicker::FavoriteIdRole) {
+        return id;
     } else if (role == Kicker::HasActionListRole) {
         return true;
     } else if (role == Kicker::ActionListRole) {
@@ -121,13 +124,8 @@ bool RecentContactsModel::trigger(int row, const QString &actionId, const QVaria
 
         return false;
     } else if (actionId == "showContactInfo" && withinBounds) {
-        QString id = sourceModel()->data(sourceModel()->index(row, 0), ResultModel::ResourceRole).toString();
-
-        KPeople::PersonDetailsDialog *view = new KPeople::PersonDetailsDialog(0);
-        KPeople::PersonData *data = new KPeople::PersonData(id, view);
-        view->setPerson(data);
-        view->setAttribute(Qt::WA_DeleteOnClose);
-        view->show();
+        ContactEntry::showPersonDetailsDialog(sourceModel()->data(sourceModel()->index(row, 0),
+            ResultModel::ResourceRole).toString());
     } else if (actionId == "forget" && withinBounds) {
         if (sourceModel()) {
             ResultModel *resultModel = static_cast<ResultModel *>(sourceModel());
@@ -145,6 +143,11 @@ bool RecentContactsModel::trigger(int row, const QString &actionId, const QVaria
     }
 
     return false;
+}
+
+bool RecentContactsModel::hasActions() const
+{
+    return rowCount();
 }
 
 QVariantList RecentContactsModel::actions() const

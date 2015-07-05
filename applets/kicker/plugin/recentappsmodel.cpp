@@ -20,6 +20,7 @@
 #include "recentappsmodel.h"
 #include "actionlist.h"
 #include "appsmodel.h"
+#include "appentry.h"
 
 #include <config-X11.h>
 
@@ -66,10 +67,12 @@ QVariant RecentAppsModel::data(const QModelIndex &index, int role) const
     }
 
     if (role == Qt::DisplayRole) {
-            return AppsModel::nameFromService(service,
-                (AppsModel::NameFormat)qobject_cast<AppsModel *>(QObject::parent())->appNameFormat());
+            return AppEntry::nameFromService(service,
+                (AppEntry::NameFormat)qobject_cast<AppsModel *>(QObject::parent())->appNameFormat());
     } else if (role == Qt::DecorationRole) {
         return QIcon::fromTheme(service->icon(), QIcon::fromTheme("unknown"));
+    } else if (role == Kicker::FavoriteIdRole) {
+        return service->storageId();
     } else if (role == Kicker::HasActionListRole) {
         return true;
     } else if (role == Kicker::ActionListRole) {
@@ -148,6 +151,11 @@ bool RecentAppsModel::trigger(int row, const QString &actionId, const QVariant &
     }
 
     return false;
+}
+
+bool RecentAppsModel::hasActions() const
+{
+    return rowCount();
 }
 
 QVariantList RecentAppsModel::actions() const

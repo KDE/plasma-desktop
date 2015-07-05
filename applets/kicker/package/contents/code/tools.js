@@ -1,6 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2013 by Aurélien Gâteau <agateau@kde.org>               *
- *   Copyright (C) 2013-2014 by Eike Hein <hein@kde.org>                   *
+ *   Copyright (C) 2013-2015 by Eike Hein <hein@kde.org>                   *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -18,11 +18,11 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-function fillActionMenu(actionMenu, actionList, favoriteId, name) {
+function fillActionMenu(actionMenu, actionList, favoriteModel, favoriteId) {
     // Accessing actionList can be a costly operation, so we don't
     // access it until we need the menu.
 
-    var action = createFavoriteAction(favoriteId, name);
+    var action = createFavoriteAction(favoriteModel, favoriteId);
 
     if (action) {
         if (actionList && actionList.length > 0) {
@@ -36,20 +36,14 @@ function fillActionMenu(actionMenu, actionList, favoriteId, name) {
     actionMenu.actionList = actionList;
 }
 
-function createFavoriteAction(favoriteId, name) {
-    if (favoriteId == null) {
-        return null;
-    }
-
-    var favoriteModel = rootModel.favoritesModelForPrefix(favoriteId.split(":")[0])
-
-    if (favoriteModel === null) {
+function createFavoriteAction(favoriteModel, favoriteId) {
+    if (favoriteModel === null || favoriteId == null) {
         return null;
     }
 
     var action = {};
 
-    if (favoriteModel.isFavorite(favoriteId.split(":")[1])) {
+    if (favoriteModel.isFavorite(favoriteId)) {
         action.text = i18n("Remove from Favorites");
         action.icon = "list-remove";
         action.actionId = "_kicker_favorite_remove";
@@ -59,7 +53,7 @@ function createFavoriteAction(favoriteId, name) {
         action.actionId = "_kicker_favorite_add";
     }
 
-    action.actionArgument = { favoriteId: favoriteId, text: name };
+    action.actionArgument = { favoriteModel: favoriteModel, favoriteId: favoriteId };
 
     return action;
 }
@@ -83,16 +77,14 @@ function triggerAction(model, index, actionId, actionArgument) {
 
 function handleFavoriteAction(actionId, actionArgument) {
     var favoriteId = actionArgument.favoriteId;
+    var favoriteModel = actionArgument.favoriteModel;
 
-    var favoriteModel = rootModel.favoritesModelForPrefix(actionArgument.favoriteId.split(":")[0])
-
-    if (favoriteModel === null) {
+    if (favoriteModel === null || favoriteId == null) {
         return null;
     }
-
     if (actionId == "_kicker_favorite_remove") {
-        favoriteModel.removeFavorite(actionArgument.favoriteId.split(":")[1]);
+        favoriteModel.removeFavorite(favoriteId);
     } else if (actionId == "_kicker_favorite_add") {
-        favoriteModel.addFavorite(actionArgument.favoriteId.split(":")[1]);
+        favoriteModel.addFavorite(favoriteId);
     }
 }

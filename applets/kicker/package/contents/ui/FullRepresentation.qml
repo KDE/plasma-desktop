@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013-2014 by Eike Hein <hein@kde.org>                   *
+ *   Copyright (C) 2013-2015 by Eike Hein <hein@kde.org>                   *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -80,7 +80,7 @@ FocusScope {
                 height: (sideBar.height - sideBar.margins.top - sideBar.margins.bottom
                     - favoriteSystemActions.height - sidebarSeparator.height - (4 * units.smallSpacing))
 
-                model: rootModel.favoritesModelForPrefix("app")
+                model: globalFavorites
 
                 states: [ State {
                     name: "top"
@@ -98,6 +98,12 @@ FocusScope {
                         anchors.bottomMargin: sideBar.margins.bottom
                     }
                 }]
+
+                Binding {
+                    target: globalFavorites
+                    property: "iconSize"
+                    value: units.iconSizes.medium
+                }
             }
 
             PlasmaCore.SvgItem {
@@ -140,7 +146,7 @@ FocusScope {
                 anchors.bottom: parent.bottom
                 anchors.bottomMargin: sideBar.margins.bottom
 
-                model: rootModel.favoritesModelForPrefix("sys")
+                model: systemFavorites
 
                 states: [ State {
                     name: "top"
@@ -419,4 +425,3 @@ FocusScope {
         windowSystem.hidden.connect(reset);
     }
 }
-

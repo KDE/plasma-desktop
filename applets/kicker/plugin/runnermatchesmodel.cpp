@@ -1,6 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2012 by Aurélien Gâteau <agateau@kde.org>               *
- *   Copyright (C) 2014 by Eike Hein <hein@kde.org>                        *
+ *   Copyright (C) 2014-2015 by Eike Hein <hein@kde.org>                   *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -19,6 +19,7 @@
  ***************************************************************************/
 
 #include "runnermatchesmodel.h"
+#include "runnermodel.h"
 #include "actionlist.h"
 
 #include <QAction>
@@ -49,7 +50,7 @@ QVariant RunnerMatchesModel::data(const QModelIndex &index, int role) const
         return match.icon();
     } else if (role == Kicker::FavoriteIdRole) {
         if (m_runnerId == "services") {
-            return QVariant("app:" + match.data().toString());
+            return match.data().toString();
         }
     } else if (role == Kicker::HasActionListRole) {
         // Hack to expose the protected Plasma::AbstractRunner::actions() method.
@@ -160,4 +161,9 @@ void RunnerMatchesModel::setMatches(const QList< Plasma::QueryMatch > &matches)
     if (emitCountChange) {
         emit countChanged();
     }
+}
+
+AbstractModel *RunnerMatchesModel::favoritesModel()
+{
+    return static_cast<RunnerModel *>(parent())->favoritesModel();
 }

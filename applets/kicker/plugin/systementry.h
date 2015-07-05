@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2014-2015 by Eike Hein <hein@kde.org>                   *
+ *   Copyright (C) 2015 by Eike Hein <hein@kde.org>                        *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -17,51 +17,50 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#ifndef FAVORITESMODEL_H
-#define FAVORITESMODEL_H
+#ifndef SYSTEMENTRY_H
+#define SYSTEMENTRY_H
 
-#include "abstractmodel.h"
+#include "abstractentry.h"
 
-#include <QPointer>
+class KDisplayManager;
 
-#include <KService>
-
-class FavoritesModel : public AbstractModel
+class SystemEntry : public AbstractEntry
 {
-    Q_OBJECT
-
-    Q_PROPERTY(QStringList favorites READ favorites WRITE setFavorites NOTIFY favoritesChanged)
-
     public:
-        explicit FavoritesModel(QObject *parent = 0);
-        ~FavoritesModel();
+        enum Action
+        {
+            NoAction = 0,
+            LockSession,
+            LogoutSession,
+            SaveSession,
+            NewSession,
+            SuspendToRam,
+            SuspendToDisk,
+            Reboot,
+            Shutdown
+        };
 
-        QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
+        explicit SystemEntry(AbstractModel *owner, Action action);
+        explicit SystemEntry(AbstractModel *owner, const QString &id);
 
-        int rowCount(const QModelIndex &parent = QModelIndex()) const;
+        EntryType type() const { return RunnableType; }
 
-        Q_INVOKABLE bool trigger(int row, const QString &actionId, const QVariant &argument);
+        bool isValid() const;
 
-        QStringList favorites() const;
-        void setFavorites(const QStringList &favorites);
+        QIcon icon() const;
+        QString name() const;
 
-        Q_INVOKABLE bool isFavorite(const QString &id) const;
-        Q_INVOKABLE void addFavorite(const QString &id);
-        Q_INVOKABLE void removeFavorite(const QString &id);
+        QString id() const;
 
-        Q_INVOKABLE void moveRow(int from, int to);
-
-    public Q_SLOTS:
-        virtual void refresh();
-
-    Q_SIGNALS:
-        void favoritesChanged() const;
+        bool run(const QString& actionId = QString(), const QVariant &argument = QVariant());
 
     private:
-        AbstractEntry *favoriteFromId(const QString &id);
+        void init();
 
-        QList<AbstractEntry *> m_entryList;
-        QStringList m_favorites;
+        Action m_action;
+        bool m_valid;
+
+        static KDisplayManager *m_displayManager;
 };
 
 #endif

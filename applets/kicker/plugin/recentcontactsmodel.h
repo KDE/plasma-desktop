@@ -39,6 +39,7 @@ class RecentContactsModel : public ForwardingModel
 
         Q_INVOKABLE bool trigger(int row, const QString &actionId, const QVariant &argument);
 
+        bool hasActions() const;
         QVariantList actions() const;
 
     private Q_SLOTS:

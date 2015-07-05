@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2014 by Eike Hein <hein@kde.org>                   *
+ *   Copyright (C) 2014-2015 by Eike Hein <hein@kde.org>                   *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -26,21 +26,39 @@ class FavoritesModel;
 class RecentAppsModel;
 class RecentDocsModel;
 class RecentContactsModel;
+class SystemModel;
+
+class RootModel;
 
 class GroupEntry : public AbstractGroupEntry
 {
     public:
-        GroupEntry(const QString &name, const QString &icon,
-            AbstractModel *model, AbstractModel *parentModel);
+        GroupEntry(RootModel *parentModel, const QString &name,
+            const QString &iconName, AbstractModel *childModel);
+
+        QIcon icon() const;
+        QString name() const;
+
+        bool hasChildren() const;
+        AbstractModel *childModel() const;
+
+    private:
+        QString m_name;
+        QString m_iconName;
+        QPointer<AbstractModel> m_childModel;
 };
 
 class RootModel : public AppsModel
 {
     Q_OBJECT
 
+    Q_PROPERTY(QObject* systemFavoritesModel READ systemFavoritesModel NOTIFY systemFavoritesModelChanged)
+
     Q_PROPERTY(bool showRecentApps READ showRecentApps WRITE setShowRecentApps NOTIFY showRecentAppsChanged)
     Q_PROPERTY(bool showRecentDocs READ showRecentDocs WRITE setShowRecentDocs NOTIFY showRecentDocsChanged)
     Q_PROPERTY(bool showRecentContacts READ showRecentContacts WRITE setShowRecentContacts NOTIFY showRecentContactsChanged)
+
+    Q_PROPERTY(QObject* appletInterface READ appletInterface WRITE setAppletInterface NOTIFY appletInterfaceChanged);
 
     public:
         explicit RootModel(QObject *parent = 0);
@@ -59,31 +77,38 @@ class RootModel : public AppsModel
         bool showRecentContacts() const;
         void setShowRecentContacts(bool show);
 
-        Q_INVOKABLE QObject *favoritesModelForPrefix(const QString &prefix);
+        QObject *appletInterface() const;
+        void setAppletInterface(QObject *appletInterface);
+
+        AbstractModel* favoritesModel();
+        AbstractModel* systemFavoritesModel();
 
     Q_SIGNALS:
+        void systemFavoritesModelChanged() const;
         void showRecentAppsChanged() const;
         void showRecentDocsChanged() const;
         void showRecentContactsChanged() const;
         void recentAppsModelChanged() const;
+        void appletInterfaceChanged() const;
 
     protected Q_SLOTS:
         void refresh();
 
-    private Q_SLOTS:
-        void childModelChanged();
-
     private:
         void extendEntryList();
+
+        FavoritesModel *m_favorites;
+        SystemModel *m_systemModel;
 
         bool m_showRecentApps;
         bool m_showRecentDocs;
         bool m_showRecentContacts;
 
-        QHash<QString, FavoritesModel *> m_favoritesModels;
         RecentAppsModel *m_recentAppsModel;
         RecentDocsModel *m_recentDocsModel;
         RecentContactsModel *m_recentContactsModel;
+
+        QObject *m_appletInterface;
 };
 
 #endif

@@ -21,6 +21,8 @@
 #ifndef RUNNERMODEL_H
 #define RUNNERMODEL_H
 
+#include "abstractmodel.h"
+
 #include <QAbstractListModel>
 #include <QTimer>
 
@@ -30,6 +32,7 @@ namespace Plasma {
     class RunnerManager;
 }
 
+class AbstractModel;
 class RunnerMatchesModel;
 
 class RunnerModel : public QAbstractListModel
@@ -37,6 +40,7 @@ class RunnerModel : public QAbstractListModel
     Q_OBJECT
 
     Q_PROPERTY(int count READ count NOTIFY countChanged)
+    Q_PROPERTY(AbstractModel* favoritesModel READ favoritesModel WRITE setFavoritesModel NOTIFY favoritesModelChanged)
     Q_PROPERTY(QStringList runners READ runners WRITE setRunners NOTIFY runnersChanged);
     Q_PROPERTY(QString query READ query WRITE setQuery NOTIFY queryChanged);
 
@@ -57,8 +61,12 @@ class RunnerModel : public QAbstractListModel
         QString query() const;
         void setQuery(const QString &query);
 
+        AbstractModel *favoritesModel() const;
+        void setFavoritesModel(AbstractModel *model);
+
     Q_SIGNALS:
         void countChanged() const;
+        void favoritesModelChanged() const;
         void runnersChanged() const;
         void queryChanged() const;
 
@@ -70,6 +78,7 @@ class RunnerModel : public QAbstractListModel
         void createManager();
         void clear();
 
+        AbstractModel *m_favoritesModel;
         Plasma::RunnerManager *m_runnerManager;
         QStringList m_runners;
         QList<RunnerMatchesModel *> m_models;

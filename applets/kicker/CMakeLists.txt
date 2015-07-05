@@ -18,10 +18,13 @@ set(kickerplugin_SRCS
     plugin/abstractentry.cpp
     plugin/abstractmodel.cpp
     plugin/actionlist.cpp
+    plugin/appentry.cpp
     plugin/appsmodel.cpp
+    plugin/contactentry.cpp
     plugin/containmentinterface.cpp
     plugin/draghelper.cpp
     plugin/favoritesmodel.cpp
+    plugin/fileentry.cpp
     plugin/forwardingmodel.cpp
     plugin/funnelmodel.cpp
     plugin/kickerplugin.cpp
@@ -34,6 +37,7 @@ set(kickerplugin_SRCS
     plugin/recentcontactsmodel.cpp
     plugin/recentdocsmodel.cpp
     plugin/submenu.cpp
+    plugin/systementry.cpp
     plugin/systemmodel.cpp
     plugin/systemsettings.cpp
     plugin/windowsystem.cpp

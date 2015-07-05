@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2014 by Eike Hein <hein@kde.org>                        *
+ *   Copyright (C) 2014-2015 by Eike Hein <hein@kde.org>                   *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -41,6 +41,13 @@ Item {
     property QtObject itemListDialogComponent: Qt.createComponent("ItemListDialog.qml");
     property Item dragSource: null
 
+    property QtObject globalFavorites: rootModel.favoritesModel
+    property QtObject systemFavorites: rootModel.systemFavoritesModel
+
+    onSystemFavoritesChanged: {
+        systemFavorites.favorites = plasmoid.configuration.favoriteSystemActions;
+    }
+
     function action_menuedit() {
         processRunner.runMenuEditor();
     }
@@ -74,25 +81,12 @@ Item {
         }
 
         Component.onCompleted: {
-            favoritesModelForPrefix("app").favorites = plasmoid.configuration.favoriteApps;
-            favoritesModelForPrefix("sys").favorites = plasmoid.configuration.favoriteSystemActions;
+            favoritesModel.favorites = plasmoid.configuration.favoriteApps;
         }
     }
 
     Connections {
-        target: plasmoid.configuration
-
-        onFavoriteAppsChanged: {
-            rootModel.favoritesModelForPrefix("app").favorites = plasmoid.configuration.favoriteApps;
-        }
-
-        onFavoriteSystemActionsChanged: {
-            rootModel.favoritesModelForPrefix("sys").favorites = plasmoid.configuration.favoriteSystemActions;
-        }
-    }
-
-    Connections {
-        target: rootModel.favoritesModelForPrefix("app")
+        target: globalFavorites
 
         onFavoritesChanged: {
             plasmoid.configuration.favoriteApps = target.favorites;
@@ -100,16 +94,29 @@ Item {
     }
 
     Connections {
-        target: rootModel.favoritesModelForPrefix("sys")
+        target: systemFavorites
 
         onFavoritesChanged: {
             plasmoid.configuration.favoriteSystemActions = target.favorites;
         }
     }
 
+    Connections {
+        target: plasmoid.configuration
+
+        onFavoriteAppsChanged: {
+            globalFavorites.favorites = plasmoid.configuration.favoriteApps;
+        }
+
+        onFavoriteSystemActionsChanged: {
+            systemFavorites.favorites = plasmoid.configuration.favoriteSystemActions;
+        }
+    }
+
     Kicker.RunnerModel {
         id: runnerModel
 
+        favoritesModel: globalFavorites
         runners: plasmoid.configuration.useExtraRunners ? new Array("services").concat(plasmoid.configuration.extraRunners) : "services"
     }
 

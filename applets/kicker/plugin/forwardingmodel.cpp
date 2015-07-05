@@ -141,6 +141,17 @@ AbstractModel* ForwardingModel::modelForRow(int row)
     return abstractModel->modelForRow(row);
 }
 
+AbstractModel* ForwardingModel::favoritesModel()
+{
+    AbstractModel *sourceModel = qobject_cast<AbstractModel *>(m_sourceModel);
+
+    if (sourceModel) {
+        return sourceModel->favoritesModel();
+    }
+
+    return AbstractModel::favoritesModel();
+}
+
 int ForwardingModel::separatorCount() const
 {
     if (!m_sourceModel) {

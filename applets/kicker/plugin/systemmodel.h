@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2014 by Eike Hein <hein@kde.org>                        *
+ *   Copyright (C) 2014-2015 by Eike Hein <hein@kde.org>                   *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -20,35 +20,9 @@
 #ifndef SYSTEMMODEL_H
 #define SYSTEMMODEL_H
 
-#include "abstractentry.h"
 #include "abstractmodel.h"
 
-#include <kworkspace5/kdisplaymanager.h>
-
-class SystemEntry : public AbstractEntry
-{
-    public:
-        enum Action
-        {
-            LockSession,
-            LogoutSession,
-            SaveSession,
-            NewSession,
-            SuspendToRam,
-            SuspendToDisk,
-            Reboot,
-            Shutdown
-        };
-
-        SystemEntry(Action action, const QString &name, const QString &icon);
-
-        EntryType type() const { return RunnableType; }
-
-        Action action() const { return m_action; }
-
-    private:
-        Action m_action;
-};
+class SystemEntry;
 
 class SystemModel : public AbstractModel
 {
@@ -64,12 +38,11 @@ class SystemModel : public AbstractModel
 
         Q_INVOKABLE bool trigger(int row, const QString &actionId, const QVariant &argument);
 
-        int rowForFavoriteId(const QString &favoriteId);
+        AbstractModel* favoritesModel();
 
     private:
         QList<SystemEntry *> m_entryList;
-        QHash<SystemEntry::Action, QString> m_favoriteIds;
-        KDisplayManager m_displayManager;
+        AbstractModel *m_favoritesModel;
 };
 
 #endif

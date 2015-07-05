@@ -27,30 +27,51 @@
 
 #include <KLocalizedString>
 
-GroupEntry::GroupEntry(const QString &name, const QString &icon,
-    AbstractModel *model, AbstractModel *parentModel)
+GroupEntry::GroupEntry(RootModel *parentModel, const QString &name,
+    const QString &iconName, AbstractModel *childModel)
+: AbstractGroupEntry(parentModel)
+, m_name(name)
+, m_iconName(iconName)
+, m_childModel(childModel)
 {
-    m_name = name;
-    m_icon = QIcon::fromTheme(icon, QIcon::fromTheme("unknown"));
-    m_model = model;
-    QObject::connect(parentModel, SIGNAL(refreshing()), m_model, SLOT(deleteLater()));
+    QObject::connect(parentModel, &RootModel::refreshing, childModel, &AbstractModel::deleteLater);
+
+    QObject::connect(childModel, &AbstractModel::countChanged,
+        [parentModel, this] { if (parentModel) { parentModel->entryChanged(this); } }
+    );
+}
+
+QString GroupEntry::name() const
+{
+    return m_name;
+}
+
+QIcon GroupEntry::icon() const
+{
+    return QIcon::fromTheme(m_iconName, QIcon::fromTheme("unknown"));
+}
+
+bool GroupEntry::hasChildren() const
+{
+    return m_childModel && m_childModel->count() > 0;
+}
+
+AbstractModel *GroupEntry::childModel() const
+{
+    return m_childModel;
 }
 
 RootModel::RootModel(QObject *parent) : AppsModel(QString(), parent)
+, m_favorites(new FavoritesModel(this))
+, m_systemModel(nullptr)
 , m_showRecentApps(true)
 , m_showRecentDocs(true)
 , m_showRecentContacts(false)
 , m_recentAppsModel(0)
 , m_recentDocsModel(0)
 , m_recentContactsModel(0)
+, m_appletInterface(0)
 {
-    FavoritesModel *favoritesModel = new FavoritesModel(this);
-    m_favoritesModels["app"] = favoritesModel;
-
-    favoritesModel = new FavoritesModel(this);
-    m_favoritesModels["sys"] = favoritesModel;
-
-    extendEntryList();
 }
 
 RootModel::~RootModel()
@@ -68,7 +89,7 @@ QVariant RootModel::data(const QModelIndex& index, int role) const
 
         if (entry->type() == AbstractEntry::GroupType) {
             const GroupEntry *group = static_cast<const GroupEntry *>(entry);
-            AbstractModel *model = group->model();
+            AbstractModel *model = group->childModel();
 
             if (model == m_recentAppsModel
                 || model == m_recentDocsModel
@@ -95,10 +116,8 @@ bool RootModel::trigger(int row, const QString& actionId, const QVariant& argume
     const AbstractEntry *entry = m_entryList.at(row);
 
     if (entry->type() == AbstractEntry::GroupType) {
-        const GroupEntry *group = static_cast<const GroupEntry *>(entry);
-
         if (actionId == "hideCategory") {
-            AbstractModel *model = group->model();
+            AbstractModel *model = entry->childModel();
 
             if (model == m_recentAppsModel) {
                 setShowRecentApps(false);
@@ -113,9 +132,8 @@ bool RootModel::trigger(int row, const QString& actionId, const QVariant& argume
 
                 return true;
             }
-        } else {
-            const GroupEntry *group = static_cast<const GroupEntry *>(entry);
-            return group->model()->trigger(-1, actionId, QVariant());
+        } else if (entry->childModel()->hasActions()) {
+            return entry->childModel()->trigger(-1, actionId, QVariant());
         }
     }
 
@@ -170,17 +188,45 @@ void RootModel::setShowRecentContacts(bool show)
     }
 }
 
-QObject *RootModel::favoritesModelForPrefix(const QString &prefix)
+QObject* RootModel::appletInterface() const
 {
-    return m_favoritesModels.value(prefix);
+    return m_appletInterface;
+}
+
+void RootModel::setAppletInterface(QObject* appletInterface)
+{
+    if (m_appletInterface != appletInterface) {
+        m_appletInterface = appletInterface;
+
+        refresh();
+
+        emit appletInterfaceChanged();
+    }
+}
+
+AbstractModel* RootModel::favoritesModel()
+{
+    return m_favorites;
+}
+
+AbstractModel* RootModel::systemFavoritesModel()
+{
+    if (m_systemModel) {
+        return m_systemModel->favoritesModel();
+    }
+
+    return nullptr;
 }
 
 void RootModel::refresh()
 {
+    if (!m_appletInterface) {
+        return;
+    }
+
     AppsModel::refresh();
     extendEntryList();
-
-    m_favoritesModels["app"]->refresh();
+    m_favorites->refresh();
 }
 
 void RootModel::extendEntryList()
@@ -189,25 +235,19 @@ void RootModel::extendEntryList()
 
     if (m_showRecentApps) {
         m_recentAppsModel = new RecentAppsModel(this);
-        connect(m_recentAppsModel, SIGNAL(countChanged()), this, SLOT(childModelChanged()));
     }
 
     m_recentDocsModel = 0;
 
     if (m_showRecentDocs) {
         m_recentDocsModel = new RecentDocsModel(this);
-        connect(m_recentDocsModel, SIGNAL(countChanged()), this, SLOT(childModelChanged()));
     }
 
     m_recentContactsModel = 0;
 
     if (m_showRecentContacts) {
         m_recentContactsModel = new RecentContactsModel(this);
-        connect(m_recentContactsModel, SIGNAL(countChanged()), this, SLOT(childModelChanged()));
     }
-
-    SystemModel *systemModel = new SystemModel(this);
-    m_favoritesModels["sys"]->setSourceModel(systemModel);
 
     int insertCount = 0;
     if (m_recentAppsModel) ++insertCount;
@@ -219,21 +259,21 @@ void RootModel::extendEntryList()
 
         GroupEntry *entry = 0;
 
-        m_entryList.prepend(new SeparatorEntry());
+        m_entryList.prepend(new SeparatorEntry(this));
         ++m_separatorCount;
 
         if (m_recentContactsModel) {
-            entry = new GroupEntry(i18n("Recent Contacts"), QString(), m_recentContactsModel, this);
+            entry = new GroupEntry(this, i18n("Recent Contacts"), QString(), m_recentContactsModel);
             m_entryList.prepend(entry);
         }
 
         if (m_recentDocsModel) {
-            entry = new GroupEntry(i18n("Recent Documents"), QString(), m_recentDocsModel, this);
+            entry = new GroupEntry(this, i18n("Recent Documents"), QString(), m_recentDocsModel);
             m_entryList.prepend(entry);
         }
 
         if (m_recentAppsModel) {
-            entry = new GroupEntry(i18n("Recent Applications"), QString(), m_recentAppsModel, this);
+            entry = new GroupEntry(this, i18n("Recent Applications"), QString(), m_recentAppsModel);
             m_entryList.prepend(entry);
         }
 
@@ -241,31 +281,11 @@ void RootModel::extendEntryList()
     }
 
     beginInsertRows(QModelIndex(), m_entryList.size(), m_entryList.size());
-    m_entryList << new GroupEntry(i18n("Power / Session"), QString(), systemModel, this);
+    m_systemModel = new SystemModel(this);
+    m_entryList << new GroupEntry(this, i18n("Power / Session"), QString(), m_systemModel);
     endInsertRows();
 
+    emit systemFavoritesModelChanged();
     emit countChanged();
     emit separatorCountChanged();
-}
-
-void RootModel::childModelChanged()
-{
-    QObject *model = sender();
-
-    for (int i = 0; i < m_entryList.size(); ++i) {
-        const AbstractEntry *entry = m_entryList.at(i);
-
-        if (entry->type() == AbstractEntry::GroupType) {
-            const GroupEntry *group = static_cast<const GroupEntry *>(entry);
-
-            if (group->model() == model) {
-                const QModelIndex &idx = index(i, 0);
-
-                emit dataChanged(idx, idx);
-
-                break;
-            }
-        }
-
-    }
 }

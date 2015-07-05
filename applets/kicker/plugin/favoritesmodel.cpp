@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2014 by Eike Hein <hein@kde.org>                   *
+ *   Copyright (C) 2014-2015 by Eike Hein <hein@kde.org>                   *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -18,62 +18,40 @@
  ***************************************************************************/
 
 #include "favoritesmodel.h"
+#include "appentry.h"
+#include "contactentry.h"
+#include "fileentry.h"
+#include "systementry.h"
 #include "actionlist.h"
-#include "appsmodel.h"
-
-#include <config-X11.h>
-
-#if HAVE_X11
-#include <QX11Info>
-#endif
-
-#include <KActivities/ResourceInstance>
-#include <KConfigGroup>
-#include <KMimeTypeTrader>
-#include <KRun>
-#include <KSharedConfig>
-#include <KStartupInfo>
 
 FavoritesModel::FavoritesModel(QObject *parent) : AbstractModel(parent)
-, m_sourceModel(0)
 {
 }
 
 FavoritesModel::~FavoritesModel()
 {
+    qDeleteAll(m_entryList);
 }
 
 QVariant FavoritesModel::data(const QModelIndex& index, int role) const
 {
-    if (!index.isValid() || index.row() >= m_favorites.count()) {
+
+    if (!index.isValid() || index.row() >= m_entryList.count()) {
         return QVariant();
     }
 
-    const QString &favoritesId = m_favorites.at(index.row());
+    const AbstractEntry *entry = m_entryList.at(index.row());
 
-    if (m_sourceModel) {
-        int rowInSource = m_sourceModel->rowForFavoriteId(favoritesId);
-
-        QModelIndex sourceIndex = m_sourceModel->index(rowInSource);
-
-        return m_sourceModel->data(sourceIndex, role);
-    } else if (m_serviceCache.contains(favoritesId)) {
-        KService::Ptr service = m_serviceCache[favoritesId];
-
-        if (role == Qt::DisplayRole) {
-            return AppsModel::nameFromService(service,
-                (AppsModel::NameFormat)qobject_cast<AppsModel *>(parent())->appNameFormat());
-        } else if (role == Qt::DecorationRole) {
-            return service->icon();
-        } else if (role == Kicker::FavoriteIdRole) {
-            return QVariant("app:" + service->storageId());
-        } else if (role == Kicker::UrlRole) {
-            return QUrl::fromLocalFile(service->entryPath());
-        } else if (role == Kicker::HasActionListRole) {
-            return true;
-        } else if (role == Kicker::ActionListRole) {
-            return Kicker::recentDocumentActions(service);
-        }
+    if (role == Qt::DisplayRole) {
+        return entry->name();
+    } else if (role == Qt::DecorationRole) {
+        return entry->icon();
+    } else if (role == Kicker::FavoriteIdRole) {
+        return entry->id();
+    } else if (role == Kicker::HasActionListRole) {
+        return entry->hasActions();
+    } else if (role == Kicker::ActionListRole) {
+        return entry->actions();
     }
 
     return QVariant();
@@ -81,46 +59,16 @@ QVariant FavoritesModel::data(const QModelIndex& index, int role) const
 
 int FavoritesModel::rowCount(const QModelIndex& parent) const
 {
-    return parent.isValid() ? 0 : m_favorites.count();
+    return parent.isValid() ? 0 : m_entryList.count();
 }
 
 bool FavoritesModel::trigger(int row, const QString &actionId, const QVariant &argument)
 {
-    if (row < 0 || row >= m_favorites.count()) {
+    if (row < 0 || row >= m_entryList.count()) {
         return false;
     }
 
-    const QString &favoritesId = m_favorites.at(row);
-
-    if (m_sourceModel) {
-        int rowInSource = m_sourceModel->rowForFavoriteId(favoritesId);
-
-        return m_sourceModel->trigger(rowInSource, actionId, argument);
-    } else if (m_serviceCache.contains(favoritesId)) {
-        KService::Ptr service = m_serviceCache[favoritesId];
-
-        if (actionId.isEmpty()) {
-            quint32 timeStamp = 0;
-
-    #if HAVE_X11
-            if (QX11Info::isPlatformX11()) {
-                timeStamp = QX11Info::appUserTime();
-            }
-    #endif
-
-            new KRun(QUrl::fromLocalFile(service->entryPath()), 0, true,
-                KStartupInfo::createNewStartupIdForTimestamp(timeStamp));
-
-            KActivities::ResourceInstance::notifyAccessed(QUrl("applications:" + service->storageId()),
-                "org.kde.plasma.kicker");
-
-            return true;
-        } else {
-            return Kicker::handleRecentDocumentAction(service, actionId, argument);
-        }
-    }
-
-    return false;
+    return m_entryList.at(row)->run(actionId, argument);
 }
 
 QStringList FavoritesModel::favorites() const
@@ -133,112 +81,55 @@ void FavoritesModel::setFavorites(const QStringList& favorites)
     QStringList _favorites(favorites);
     _favorites.removeDuplicates();
 
-    if (m_favorites != _favorites) {
-        if (!m_sourceModel) {
-            m_serviceCache.clear();
-
-            QMutableStringListIterator i(_favorites);
-            KService::Ptr service;
-
-            while (i.hasNext()) {
-                i.next();
-
-                QUrl url(i.value());
-
-                if (url.isValid() && url.scheme() == QLatin1String("preferred")) {
-                    service = defaultAppByName(url.host());
-                } else {
-                    service = KService::serviceByStorageId(i.value());
-                }
-
-                if (service) {
-                    i.setValue(service->storageId());
-                    m_serviceCache[i.value()] = service;
-                } else {
-                    i.remove();
-                }
-            }
-
-            if (m_favorites == _favorites) {
-                return;
-            }
-        }
-
-        bool emitCountChanged = (m_favorites.count() != _favorites.count());
-
-        beginResetModel();
-
+    if (_favorites != m_favorites) {
         m_favorites = _favorites;
-
-        endResetModel();
-
-        if (emitCountChanged) {
-            emit countChanged();
-        }
-
-        emit favoritesChanged();
+        refresh();
     }
 }
 
-bool FavoritesModel::isFavorite(const QString &favoriteId) const
+bool FavoritesModel::isFavorite(const QString &id) const
 {
-    return m_favorites.contains(favoriteId);
+    return m_favorites.contains(id);
 }
 
-void FavoritesModel::addFavorite(const QString &favoriteId)
+void FavoritesModel::addFavorite(const QString &id)
 {
-    if (favoriteId.isEmpty()) {
+    if (id.isEmpty()) {
         return;
     }
 
-    QString _favoriteId = favoriteId;
+    AbstractEntry *entry = favoriteFromId(id);
 
-    if (!m_sourceModel) {
-        KService::Ptr service;
-        QUrl url(_favoriteId);
-
-        if (url.isValid() && url.scheme() == QLatin1String("preferred")) {
-            service = defaultAppByName(url.host());
-        } else {
-            service = KService::serviceByStorageId(_favoriteId);
-            _favoriteId = service->storageId();
-        }
-
-        if (service) {
-            m_serviceCache[_favoriteId] = service;
-        } else {
-            return;
-        }
+    if (!entry || !entry->isValid()) {
+        delete entry;
+        return;
     }
 
-    beginInsertRows(QModelIndex(), m_favorites.count(), m_favorites.count());
+    beginInsertRows(QModelIndex(), m_entryList.count(), m_entryList.count());
 
-    m_favorites << _favoriteId;
+    m_entryList << entry;
+    m_favorites << entry->id();
 
     endInsertRows();
 
     emit countChanged();
-
     emit favoritesChanged();
 }
 
-void FavoritesModel::removeFavorite(const QString &favoriteId)
+void FavoritesModel::removeFavorite(const QString &id)
 {
-    int index = m_favorites.indexOf(favoriteId);
+    int index = m_favorites.indexOf(id);
 
     if (index != -1) {
         beginRemoveRows(QModelIndex(), index, index);
 
+        delete m_entryList[index];
+        m_entryList.removeAt(index);
         m_favorites.removeAt(index);
-
-        if (!m_sourceModel) {
-            m_serviceCache.remove(favoriteId);
-        }
 
         endRemoveRows();
 
         emit countChanged();
-
         emit favoritesChanged();
     }
 }
@@ -258,6 +149,7 @@ void FavoritesModel::moveRow(int from, int to)
     bool ok = beginMoveRows(QModelIndex(), from, from, QModelIndex(), modelTo);
 
     if (ok) {
+        m_entryList.move(from, to);
         m_favorites.move(from, to);
 
         endMoveRows();
@@ -266,38 +158,58 @@ void FavoritesModel::moveRow(int from, int to)
     }
 }
 
-void FavoritesModel::setSourceModel(AbstractModel *model)
+void FavoritesModel::refresh()
 {
     beginResetModel();
 
-    m_sourceModel = model;
+    int oldCount = m_entryList.count();
 
-    if (!m_sourceModel) {
-        m_serviceCache.clear();
+    qDeleteAll(m_entryList);
+    m_entryList.clear();
+
+    QStringList newFavorites;
+
+    foreach(const QString &id, m_favorites) {
+        AbstractEntry *entry = favoriteFromId(id);
+
+        if (entry && entry->isValid()) {
+            m_entryList << entry;
+            newFavorites << entry->id();
+        } else if (entry) {
+            delete entry;
+        }
     }
+
+    m_favorites = newFavorites;
 
     endResetModel();
-}
 
-void FavoritesModel::refresh()
-{
-     setFavorites(m_favorites);
-}
-
-KService::Ptr FavoritesModel::defaultAppByName(const QString& name)
-{
-    if (name == QLatin1String("browser")) {
-        KConfigGroup config(KSharedConfig::openConfig(), "General");
-        QString browser = config.readPathEntry("BrowserApplication", QString());
-
-        if (browser.isEmpty()) {
-            return KMimeTypeTrader::self()->preferredService(QLatin1String("text/html"));
-        } else if (browser.startsWith('!')) {
-            browser = browser.mid(1);
-        }
-
-        return KService::serviceByStorageId(browser);
+    if (oldCount != m_entryList.count()) {
+        emit countChanged();
     }
 
-    return KService::Ptr();
+    emit favoritesChanged();
+}
+
+AbstractEntry *FavoritesModel::favoriteFromId(const QString &id)
+{
+    const QUrl url(id);
+    const QString &s = url.scheme();
+
+    if ((s.isEmpty() && id.contains(QStringLiteral(".desktop"))) || s == QStringLiteral("preferred")) {
+        return new AppEntry(this, id);
+    } else if (s == QStringLiteral("ktp")) {
+        return new ContactEntry(this, id);
+    } else {
+        AbstractEntry *entry = new SystemEntry(this, id);
+
+        if (!entry->isValid()) {
+            delete entry;
+            return new FileEntry(this, url);
+        }
+
+        return entry;
+    }
+
+    return nullptr;
 }

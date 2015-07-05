@@ -62,6 +62,8 @@ QVariant RecentDocsModel::data(const QModelIndex &index, int role) const
         return url.fileName();
     } else if (role == Qt::DecorationRole) {
         return QIcon::fromTheme(fileItem.iconName(), QIcon::fromTheme("unknown"));
+    } else if (role == Kicker::FavoriteIdRole) {
+        return url.toString();
     } else if (role == Kicker::HasActionListRole) {
         return true;
     } else if (role == Kicker::ActionListRole) {
@@ -118,6 +120,11 @@ bool RecentDocsModel::trigger(int row, const QString &actionId, const QVariant &
     }
 
     return false;
+}
+
+bool RecentDocsModel::hasActions() const
+{
+    return rowCount();
 }
 
 QVariantList RecentDocsModel::actions() const
