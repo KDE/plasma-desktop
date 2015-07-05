@@ -35,7 +35,7 @@ DragDrop.DropArea {
     objectName: isFolder ? "folder" : "desktop"
 
     width: {
-        if (isContainment) {
+        if (isContainment || !folderViewLayer.ready) {
             return undefined;
         } else if (isPopup) {
             return units.gridUnit * 16;
@@ -45,7 +45,7 @@ DragDrop.DropArea {
     }
 
     height: {
-        if (isContainment) {
+        if (isContainment || !folderViewLayer.ready) {
             return undefined;
         } else if (isPopup) {
             var height = (folderViewLayer.view.cellHeight * 15) + units.smallSpacing;
@@ -77,7 +77,7 @@ DragDrop.DropArea {
     preventStealing: true
 
     Plasmoid.icon: plasmoid.configuration.icon
-    Plasmoid.associatedApplicationUrls: isFolder ? folderViewLayer.model.resolvedUrl : null
+    Plasmoid.associatedApplicationUrls: folderViewLayer.ready ? folderViewLayer.model.resolvedUrl : null
 
     onIconHeightChanged: updateGridSize()
 
@@ -87,12 +87,12 @@ DragDrop.DropArea {
 
         // Don't apply the right margin if the folderView is in column mode and not overflowing.
         // In this way, the last column remains droppable even if a small part of the icon is behind a panel.
-        rightMargin: (folderViewLayer.view.overflowing  || folderViewLayer.view.flow == GridView.FlowLeftToRight)
+        rightMargin: folderViewLayer.ready && (folderViewLayer.view.overflowing  || folderViewLayer.view.flow == GridView.FlowLeftToRight)
             && plasmoid.availableScreenRect && parent
             ? parent.width - (plasmoid.availableScreenRect.x + plasmoid.availableScreenRect.width) : 0
 
         // Same mechanism as the right margin but applied here to the bottom when the folderView is in row mode.
-        bottomMargin: (folderViewLayer.view.overflowing || folderViewLayer.view.flow == GridView.FlowTopToBottom)
+        bottomMargin: folderViewLayer.ready && (folderViewLayer.view.overflowing || folderViewLayer.view.flow == GridView.FlowTopToBottom)
             && plasmoid.availableScreenRect && parent
             ? parent.height - (plasmoid.availableScreenRect.y + plasmoid.availableScreenRect.height) : 0
     }
@@ -348,6 +348,7 @@ DragDrop.DropArea {
 
         anchors.fill: parent
 
+        property bool ready: status == Loader.Ready
         property Item view: item ? item.view : null
         property QtObject model: item ? item.model : null
 
