@@ -162,7 +162,7 @@ Item {
         //the visible space is the width of the background frame + one margin, the other is offscreen
         //we want to work out the offset which is the visible frame width - our icon width / 2
         //X is relative to the start of button, but the frame is one marging wider to the left so this needs taking into account
-        x: isCorner ? parent.width/2 - width/2 + ((toolBoxButton.state == "topleft" || toolBoxButton.state == "bottomleft") ? + units.smallSpacing : 0) : 0
+        x: isCorner ? Math.round((parent.width - width) / 2 + units.smallSpacing) : 0
 
         spacing: units.smallSpacing
 
