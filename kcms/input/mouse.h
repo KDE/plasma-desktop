@@ -35,6 +35,7 @@
 #include <QLCDNumber>
 #include <QPushButton>
 #include <QRadioButton>
+#include <QX11Info>
 
 #include <kapplication.h>
 
@@ -68,7 +69,7 @@ class MouseSettings
 {
 public:
   void save(KConfig *);
-  void load(KConfig *);
+  void load(KConfig *, Display *dpy = QX11Info::display());
   void apply(bool force=false);
 public:
  int num_buttons;

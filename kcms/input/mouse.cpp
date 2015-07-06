@@ -604,18 +604,19 @@ void MouseConfig::slotHandedChanged(int val){
   settings->m_handedNeedsApply = true;
 }
 
-void MouseSettings::load(KConfig *config)
+void MouseSettings::load(KConfig *config, Display *dpy)
 {
   int accel_num, accel_den, threshold;
   double accel;
-  XGetPointerControl( QX11Info::display(),
+
+  XGetPointerControl( dpy,
               &accel_num, &accel_den, &threshold );
   accel = float(accel_num) / float(accel_den);
 
   // get settings from X server
   int h = RIGHT_HANDED;
   unsigned char map[20];
-  num_buttons = XGetPointerMapping(QX11Info::display(), map, 20);
+  num_buttons = XGetPointerMapping(dpy, map, 20);
 
   handedEnabled = true;
 
