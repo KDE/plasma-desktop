@@ -103,24 +103,6 @@ extern "C"
         if (exportKDEColors)
             flags |= KRdbExportColors;
         runRdb( flags );
-
-        // Write some Qt root property.
-#if defined(Q_OS_UNIX) && !defined(Q_OS_MAC)
-#ifndef __osf__      // this crashes under Tru64 randomly -- will fix later
-        QByteArray properties;
-        QDataStream d(&properties, QIODevice::WriteOnly);
-        d.setVersion( 3 );      // Qt2 apps need this.
-        d << kapp->palette() << KGlobalSettings::generalFont();
-        Atom a = XInternAtom(QX11Info::display(), "_QT_DESKTOP_PROPERTIES", false);
-
-        // do it for all root windows - multihead support
-        int screen_count = ScreenCount(QX11Info::display());
-        for (int i = 0; i < screen_count; i++)
-            XChangeProperty(QX11Info::display(), RootWindow(QX11Info::display(), i),
-                            a, a, 8, PropModeReplace,
-                            (unsigned char*) properties.data(), properties.size());
-#endif
-#endif
     }
 }
 
