@@ -55,6 +55,10 @@ public:
     void setXkbOpcode(int opcode);
     virtual bool nativeEventFilter(const QByteArray& eventType, void* message, long int* result);
 
+    bool isFailed() const {
+        return m_error;
+    }
+
 protected:
 
     void readSettings();
@@ -105,6 +109,7 @@ private:
     int state;
 
     QAction *toggleScreenReaderAction;
+    bool m_error;
 };
 
 

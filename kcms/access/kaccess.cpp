@@ -144,12 +144,18 @@ KAccessApp::KAccessApp(bool allowStyles, bool GUIenabled)
     : KUniqueApplication(allowStyles, GUIenabled),
     overlay(0), _player(0), toggleScreenReaderAction(new QAction(this))
 {
+    m_error = false;
     _activeWindow = KWindowSystem::activeWindow();
     connect(KWindowSystem::self(), &KWindowSystem::activeWindowChanged, this, &KAccessApp::activeWindowChanged);
 
     features = 0;
     requestedFeatures = 0;
     dialog = 0;
+
+    if (!QX11Info::isPlatformX11()) {
+        m_error = true;
+        return;
+    }
 
     initMasks();
     XkbStateRec state_return;

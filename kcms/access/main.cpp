@@ -55,6 +55,9 @@ extern "C" Q_DECL_EXPORT int kdemain(int argc, char * argv[])
 
     // we need an application object for QX11Info
     KAccessApp app;
+    if (app.isFailed()) {
+        return 1;
+    }
 
     // verify the X server has matching XKB extension
     // if yes, the XKB extension is initialized
