@@ -343,6 +343,11 @@ DragDrop.DropArea {
         id: eventForge
     }
 
+    MouseArea { // unfocus any plasmoid when clicking empty desktop area
+        anchors.fill: parent
+        onClicked: root.forceActiveFocus()
+    }
+
     Loader {
         id: folderViewLayer
 
