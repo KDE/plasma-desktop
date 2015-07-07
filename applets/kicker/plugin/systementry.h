@@ -48,6 +48,7 @@ class SystemEntry : public AbstractEntry
         bool isValid() const;
 
         QIcon icon() const;
+        QString iconName() const;
         QString name() const;
 
         QString id() const;

@@ -202,7 +202,7 @@ Item {
         PlasmaComponents.Label {
             id: label
 
-            enabled: hasChildren
+            enabled: !isParent || (isParent && hasChildren)
 
             anchors.verticalCenter: parent.verticalCenter
 

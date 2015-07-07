@@ -56,12 +56,12 @@ QVariant SystemModel::data(const QModelIndex &index, int role) const
         return QVariant();
     }
 
-    const AbstractEntry *entry = m_entryList.at(index.row());
+    const SystemEntry *entry = m_entryList.at(index.row());
 
     if (role == Qt::DisplayRole) {
         return entry->name();
     } else if (role == Qt::DecorationRole) {
-        return entry->icon();
+        return entry->iconName();
     } else if (role == Kicker::FavoriteIdRole) {
         return entry->id();
     }

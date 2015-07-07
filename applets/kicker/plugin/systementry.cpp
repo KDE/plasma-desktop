@@ -113,36 +113,47 @@ bool SystemEntry::isValid() const
 
 QIcon SystemEntry::icon() const
 {
+    const QString &name = iconName();
+
+    if (!name.isEmpty()) {
+        return QIcon::fromTheme(name, QIcon::fromTheme("unknown"));
+    }
+
+    return QIcon::fromTheme("unknown");
+}
+
+QString SystemEntry::iconName() const
+{
     switch (m_action) {
         case LockSession:
-            return QIcon::fromTheme("system-lock-screen", QIcon::fromTheme("unknown"));
+            return "system-lock-screen";
             break;
         case LogoutSession:
-            return QIcon::fromTheme("system-log-out", QIcon::fromTheme("unknown"));
+            return "system-log-out";
             break;
         case SaveSession:
-            return QIcon::fromTheme("system-save-session", QIcon::fromTheme("unknown"));
+            return "system-save-session";
             break;
         case NewSession:
-            return QIcon::fromTheme("system-switch-user", QIcon::fromTheme("unknown"));
+            return "system-switch-user";
             break;
         case SuspendToRam:
-            return QIcon::fromTheme("suspend", QIcon::fromTheme("unknown"));
+            return "system-suspend";
             break;
         case SuspendToDisk:
-            return QIcon::fromTheme("system-suspend-hibernate", QIcon::fromTheme("unknown"));
+            return "system-suspend-hibernate";
             break;
         case Reboot:
-            return QIcon::fromTheme("system-reboot", QIcon::fromTheme("unknown"));
+            return "system-reboot";
             break;
         case Shutdown:
-            return QIcon::fromTheme("system-shutdown", QIcon::fromTheme("unknown"));
+            return "system-shutdown";
             break;
         default:
             break;
     }
 
-    return QIcon();
+    return QString();
 }
 
 QString SystemEntry::name() const
