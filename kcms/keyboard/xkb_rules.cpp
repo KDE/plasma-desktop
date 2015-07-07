@@ -160,29 +160,7 @@ QString Rules::getRulesName()
 
 QString Rules::findXkbDir()
 {
-	QString xkbParentDir;
-
-	QString base(XLIBDIR);
-	if( base.count('/') >= 3 ) {
-		// .../usr/lib/X11 -> /usr/share/X11/xkb vs .../usr/X11/lib -> /usr/X11/share/X11/xkb
-		QString delta = base.endsWith("X11") ? "/../../share/X11" : "/../share/X11";
-		QDir baseDir(base + delta);
-		if( baseDir.exists() ) {
-			xkbParentDir = baseDir.absolutePath();
-		}
-		else {
-			QDir baseDir(base + "/X11");	// .../usr/X11/lib/X11/xkb (old XFree)
-			if( baseDir.exists() ) {
-				xkbParentDir = baseDir.absolutePath();
-			}
-		}
-	}
-
-	if( xkbParentDir.isEmpty() ) {
-		xkbParentDir = "/usr/share/X11";
-	}
-
-	return xkbParentDir + "/xkb";
+	return QStringLiteral(XKBDIR);
 }
 
 static QString findXkbRulesFile()

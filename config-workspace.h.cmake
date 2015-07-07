@@ -140,11 +140,8 @@
 /* Define to 1 if you can safely include both <sys/time.h> and <time.h>. */
 #cmakedefine TIME_WITH_SYS_TIME 1
 
-/* X binaries directory */
-#cmakedefine XBINDIR "${XBINDIR}"
-
-/* X libraries directory */
-#cmakedefine XLIBDIR "${XLIBDIR}"
+/* xkb resources directory */
+#cmakedefine XKBDIR "${XKBDIR}"
 
 /* PackageKit-Qt has been found */
 #cmakedefine PackageKitQt5_FOUND 1
