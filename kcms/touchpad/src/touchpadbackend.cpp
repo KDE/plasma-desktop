@@ -20,6 +20,7 @@
 
 #include <QThreadStorage>
 #include <QSharedPointer>
+#include <QX11Info>
 
 #include "backends/x11/xlibbackend.h"
 
@@ -32,7 +33,9 @@ TouchpadBackend *TouchpadBackend::implementation()
     //There will be multiple backends later
     static QThreadStorage<QSharedPointer<XlibBackend> > backend;
     if (!backend.hasLocalData()) {
-        backend.setLocalData(QSharedPointer<XlibBackend>(XlibBackend::initialize()));
+        if (QX11Info::isPlatformX11()) {
+            backend.setLocalData(QSharedPointer<XlibBackend>(XlibBackend::initialize()));
+        }
     }
     return backend.localData().data();
 }
