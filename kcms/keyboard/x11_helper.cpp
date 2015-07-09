@@ -128,6 +128,9 @@ bool X11Helper::isDefaultLayout() {
 
 LayoutUnit X11Helper::getCurrentLayout()
 {
+    if (!QX11Info::isPlatformX11()) {
+        return LayoutUnit();
+    }
 	QList<LayoutUnit> currentLayouts = getLayoutsList();
 	unsigned int group = X11Helper::getGroup();
 	if( group < (unsigned int)currentLayouts.size() )
