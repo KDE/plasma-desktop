@@ -7,12 +7,6 @@ add_definitions(-DTRANSLATION_DOMAIN=\"kcminput\")
 
 add_subdirectory( pics )
 
-configure_file (config-kcontrol-input.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-kcontrol-input.h )
-
-if (LIBUSB_FOUND)
-include_directories( ${LIBUSB_INCLUDE_DIR} )
-endif ()
-
 
 ########### next target ###############
 
@@ -34,13 +28,9 @@ install(TARGETS kapplymousetheme ${INSTALL_TARGETS_DEFAULT_ARGS})
 
 set(kcm_input_PART_SRCS mouse.cpp main.cpp)
 
-if (LIBUSB_FOUND)
-   set(kcm_input_PART_SRCS ${kcm_input_PART_SRCS} logitechmouse.cpp)
-endif ()
-
 set(klauncher_xml ${KINIT_DBUS_INTERFACES_DIR}/kf5_org.kde.KLauncher.xml)
 
-ki18n_wrap_ui(kcm_input_PART_SRCS kmousedlg.ui logitechmouse_base.ui )
+ki18n_wrap_ui(kcm_input_PART_SRCS kmousedlg.ui)
 qt5_add_dbus_interface(kcm_input_PART_SRCS ${klauncher_xml} klauncher_iface)
 
 add_library(kcm_input MODULE ${kcm_input_PART_SRCS})
@@ -65,10 +55,6 @@ if (X11_Xcursor_FOUND)
 endif ()
 if (X11_Xfixes_FOUND)
    target_link_libraries(kcm_input ${X11_Xfixes_LIB})
-endif ()
-
-if (LIBUSB_FOUND)
-   target_link_libraries(kcm_input ${LIBUSB_LIBRARIES})
 endif ()
 
 install(TARGETS kcm_input  DESTINATION ${PLUGIN_INSTALL_DIR} )

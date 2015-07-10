@@ -325,60 +325,6 @@ MouseConfig::MouseConfig(QWidget *parent, const QVariantList &args)
 
   settings = new MouseSettings;
 
-  // This part is for handling features on Logitech USB mice.
-  // It only works if libusb is available.
-#ifdef HAVE_LIBUSB
-
-  static const
-  struct device_table {
-      int idVendor;
-      int idProduct;
-      const char* Model;
-      const char* Name;
-      int flags;
-  } device_table[] = {
-      { VENDOR_LOGITECH, 0xC00E, "M-BJ58", "Wheel Mouse Optical", HAS_RES },
-      { VENDOR_LOGITECH, 0xC00F, "M-BJ79", "MouseMan Traveler", HAS_RES },
-      { VENDOR_LOGITECH, 0xC012, "M-BL63B", "MouseMan Dual Optical", HAS_RES },
-      { VENDOR_LOGITECH, 0xC01B, "M-BP86", "MX310 Optical Mouse", HAS_RES },
-      { VENDOR_LOGITECH, 0xC01D, "M-BS81A", "MX510 Optical Mouse", HAS_RES | HAS_SS | HAS_SSR },
-      { VENDOR_LOGITECH, 0xC024, "M-BP82", "MX300 Optical Mouse", HAS_RES },
-      { VENDOR_LOGITECH, 0xC025, "M-BP81A", "MX500 Optical Mouse", HAS_RES | HAS_SS | HAS_SSR },
-      { VENDOR_LOGITECH, 0xC031, "M-UT58A", "iFeel Mouse (silver)", HAS_RES },
-      { VENDOR_LOGITECH, 0xC501, "C-BA4-MSE", "Mouse Receiver", HAS_CSR },
-      { VENDOR_LOGITECH, 0xC502, "C-UA3-DUAL", "Dual Receiver", HAS_CSR | USE_CH2},
-      { VENDOR_LOGITECH, 0xC504, "C-BD9-DUAL", "Cordless Freedom Optical", HAS_CSR | USE_CH2 },
-      { VENDOR_LOGITECH, 0xC505, "C-BG17-DUAL", "Cordless Elite Duo", HAS_SS | HAS_SSR | HAS_CSR | USE_CH2},
-      { VENDOR_LOGITECH, 0xC506, "C-BF16-MSE", "MX700 Optical Mouse", HAS_SS | HAS_CSR },
-      { VENDOR_LOGITECH, 0xC508, "C-BA4-MSE", "Cordless Optical TrackMan", HAS_SS | HAS_CSR },
-      { VENDOR_LOGITECH, 0xC50B, "967300-0403", "Cordless MX Duo Receiver", HAS_SS|HAS_CSR },
-      { VENDOR_LOGITECH, 0xC50E, "M-RAG97", "MX1000 Laser Mouse", HAS_SS | HAS_CSR },
-      { VENDOR_LOGITECH, 0xC702, "C-UF15", "Receiver for Cordless Presenter", HAS_CSR },
-      { 0, 0, 0, 0, 0 }
-  };
-
-  usb_init();
-  usb_find_busses();
-  usb_find_devices();
-
-  struct usb_bus *bus;
-  struct usb_device *dev;
-
-  for (bus = usb_busses; bus; bus = bus->next) {
-      for (dev = bus->devices; dev; dev = dev->next) {
-	  for (int n = 0; device_table[n].idVendor; n++)
-	      if ( (device_table[n].idVendor == dev->descriptor.idVendor) &&
-		   (device_table[n].idProduct == dev->descriptor.idProduct) ) {
-		  // OK, we have a device that appears to be one of the ones we support
-		  LogitechMouse *mouse = new LogitechMouse( dev, device_table[n].flags, this, device_table[n].Name );
-		  settings->logitechMouseList.append(mouse);
-		  tabwidget->addTab( (QWidget*)mouse, device_table[n].Name );
-	      }
-      }
-  }
-
-#endif
-
   KAboutData* about = new KAboutData(QStringLiteral("kcmmouse"), i18n("Mouse"),
         QStringLiteral("1.0"), QString(), KAboutLicense::GPL, i18n("(c) 1997 - 2005 Mouse developers"));
   about->addAuthor(i18n("Patrick Dowler"));
@@ -825,13 +771,6 @@ void MouseSettings::apply(bool force)
       m_handedNeedsApply = false;
   }
 
-  // This iterates through the various Logitech mice, if we have support.
-  #ifdef HAVE_LIBUSB
-  LogitechMouse *logitechMouse;
-  Q_FOREACH( logitechMouse, logitechMouseList ) {
-      logitechMouse->applyChanges();
-  }
-  #endif
 }
 
 void MouseSettings::save(KConfig *config)
@@ -858,14 +797,6 @@ void MouseSettings::save(KConfig *config)
   group.writeEntry("ChangeCursor", changeCursor,KConfig::Persistent);
 
   Kdelibs4SharedConfig::syncConfigGroup(&group, "kdeglobals");
-
-  // This iterates through the various Logitech mice, if we have support.
-#ifdef HAVE_LIBUSB
-  LogitechMouse *logitechMouse;
-  Q_FOREACH( logitechMouse, logitechMouseList ) {
-      logitechMouse->save(config);
-  }
-#endif
   config->sync();
 
   KGlobalSettings::self()->emitChange(KGlobalSettings::SettingsChanged, KGlobalSettings::SETTINGS_MOUSE);

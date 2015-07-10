@@ -41,10 +41,6 @@
 
 
 #include <config-workspace.h>
-#include <config-kcontrol-input.h>
-#ifdef HAVE_LIBUSB
-#include "logitechmouse.h"
-#endif
 
 #include <kcmodule.h>
 #include "ui_kmousedlg.h"
@@ -88,10 +84,6 @@ public:
  int wheelScrollLines;
  bool reverseScrollPolarity;
 
- #ifdef HAVE_LIBUSB
- // TODO: In Qt4, replace with a better container.
- QList <LogitechMouse*> logitechMouseList;
- #endif
 };
 
 class MouseConfig : public KCModule

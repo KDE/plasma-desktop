@@ -79,14 +79,6 @@ set_package_properties(KF5Baloo PROPERTIES DESCRIPTION "File Searching"
                        PURPOSE "Needed to build to File Search KCM"
                       )
 
-find_package(USB)
-set(HAVE_LIBUSB ${LIBUSB_FOUND})
-set_package_properties(USB PROPERTIES DESCRIPTION "User level access to USB devices"
-                       URL "http://libusb.sourceforge.net"
-                       TYPE OPTIONAL
-                       PURPOSE "Provides Logitech mouse support in KControl."
-                      )
-
 find_package(Fontconfig)
 set_package_properties(Fontconfig PROPERTIES DESCRIPTION "Font access configuration library"
                        URL "http://www.freedesktop.org/wiki/Software/fontconfig"
