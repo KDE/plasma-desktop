@@ -3,12 +3,7 @@ add_definitions(-DTRANSLATION_DOMAIN=\"useraccount\")
 add_subdirectory(pics)
 
 set(kcm_useraccount_PART_SRCS
-    main.cpp
-    chfacedlg.cpp)
-
-ki18n_wrap_ui(kcm_useraccount_PART_SRCS
-    main_widget.ui
-    faceDlg.ui)
+    main.cpp)
 
 kconfig_add_kcfg_files(kcm_useraccount_PART_SRCS settings.kcfgc)
 

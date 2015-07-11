@@ -1,6 +1,5 @@
-
 /**
- *  Copyright (C) 2004 Frans Englich <frans.englich@telia.com>
+ *  Copyright (C) 2015 Leslie Zhai <xiang.zhai@i-soft.com.cn>
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -22,33 +21,20 @@
 #include <kcmodule.h>
 #include <kemailsettings.h>
 
-#include "ui_main_widget.h"
-
-#include "chfacedlg.h"
+#include <QListWidget>
+#include <QLabel>
 
 class KUser;
 class QEvent;
 class QObject;
 class KUrl;
 
-class MainWidget : public QWidget, public Ui::MainWidget
-{
-public:
-  MainWidget( QWidget *parent ) : QWidget( parent ) {
-    setupUi( this );
-  }
-};
-
-
-/**
- * Please see the README
- */
 class KCMUserAccount : public KCModule
 {
 	Q_OBJECT
 
 public:
-	explicit KCMUserAccount(QWidget* parent, const QVariantList& list=QVariantList());
+	explicit KCMUserAccount(QWidget* parent, const QVariantList& list = QVariantList());
 	~KCMUserAccount();
 
 	/**
@@ -60,27 +46,18 @@ public:
 	 */
 	void load();
 
-	void save();
-
-	/**
-	 * For the face button
-	 */
-	bool eventFilter(QObject *, QEvent *e);
-
-private Q_SLOTS:
-	void slotChangePassword();
-	//void configChanged() { emit changed(true); };
-	void slotFaceButtonClicked();
+private slots:
+    void slotItemClicked(QListWidgetItem* item);
 
 private:
-	void changeFace(const QPixmap& pix);
-	inline KUrl* decodeImgDrop(QDropEvent *e, QWidget *wdg);
+    QListWidget* _accountList;
+    KUser* _ku;
+    QLabel* _currentFaceIcon;
+    QLabel* _currentFullName;
+    QLabel* _currentAccountType;
 
-	KEMailSettings *_kes;
-	KUser *_ku;
-	MainWidget *_mw;
-	QPixmap _facePixmap;
-
+    QIcon _faceIcon(QString faceIconPath);
+    QPixmap _facePixmap(QString faceIconPath);
 };
 
 #endif // MAIN_H
