@@ -1,5 +1,5 @@
 # KI18N Translation Domain for this library
-add_definitions(-DTRANSLATION_DOMAIN=\"kcmcursortheme\")
+add_definitions(-DTRANSLATION_DOMAIN=\"kcmmousetheme\")
 
 if(X11_Xcursor_FOUND)
   set( libnoinst_SRCS
