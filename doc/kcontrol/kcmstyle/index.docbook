@@ -8,14 +8,14 @@
 <article id="kcmstyle" lang="&language;">
 <articleinfo>
 
-<title>Style</title>
+<title>Widget Style</title>
 <authorgroup>
 <author>&Mike.McBride; &Mike.McBride.mail;</author>
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date>2013-06-02</date>
-<releaseinfo>&kde; 4.11</releaseinfo>
+<date>2015-07-07</date>
+<releaseinfo>Plasma 5.3</releaseinfo>
 
 <keywordset>
 <keyword>KDE</keyword>
@@ -23,14 +23,14 @@
 <keyword>style</keyword>
 </keywordset>
 </articleinfo>
-<sect1 id="style">
-<title>Style</title>
 
-<sect2 id="style-intro">
-<title>Introduction</title>
+<variablelist>
+<varlistentry>
+<term>Introduction</term>
+<listitem>
 
 <para>This module is used to configure how the individual widgets are
-drawn by &kde;.</para>
+drawn by Plasma.</para>
 
 <note><para>A <emphasis>Widget</emphasis> is a commonly-used
 programmer's term for referring to User Interface elements such as
@@ -46,127 +46,30 @@ url="help:/kcontrol/colors/index.html">Colors</ulink>.</para>
 <para>This panel is divided into two tabs:  <guilabel>Applications</guilabel> 
 and <guilabel>Fine Tuning</guilabel>.</para>
 
-<sect3 id="style-applications">
-<title><guilabel>Applications</guilabel> tab</title>
+</listitem>
+</varlistentry>
 
+<varlistentry>
+<term><guilabel>Applications</guilabel> tab</term>
+<listitem>
 <para>The top drop down box, labeled <guilabel>Widget Style</guilabel> 
 contains a list of the pre-defined styles.
 Each style has a name, and a brief description.</para>
 
-<para>To change styles, simply click on the style name, and a preview 
+<para>To change styles, select a style in the drop down box, and a preview
 of the style will be displayed in the preview box below the style list.</para>
 
 <para> If a style is configurable, the <guibutton>Configure...</guibutton> button 
 at the right side of the drop down box is enabled and can be used to open
 a dialog to select further settings.</para>
-<!--
-<para>The other options available here are:</para>
 
+</listitem>
+</varlistentry>
+
+<varlistentry> 
+<term><guilabel>Fine Tuning</guilabel> tab</term>
+<listitem>
 <variablelist>
-
-<varlistentry> 
-<term><guilabel>Enable tooltips</guilabel></term>
-<listitem>
-<para>This will toggle tooltips off and on.</para>
-</listitem> 
-</varlistentry> 
-</variablelist>
--->
-<!-- 
-<varlistentry> 
-<term><guilabel>Menubar on the top of
-the screen in the style of MacOS</guilabel></term>
-<listitem>
-<para>This will turn on a menubar at the top of the screen.
-This menubar will reflect the menu options of the active
-application.</para>
-</listitem> 
-</varlistentry> 
-</variablelist>
--->
-</sect3>
-<!-- kwincompositing
-<sect3 id="style-effects">
-<title><guilabel>Effects</guilabel> tab</title>
-
-<para>If you click on the <guilabel>Effects</guilabel> tab, you will see the panel is divided 
-into two sections.</para>
-<para>At the top of the first section, is a checkbox labeled <guilabel>Enable 
-GUI effects</guilabel>.  If there is no mark in front of this checkbox, then all 
-visual effects of this panel are disabled.  To edit any of these effects, simply 
-place a mark in this checkbox.</para>
-
-<para>Below that checkbox, are the following choices: </para>
-<variablelist>
-<varlistentry>
-<term><guilabel>Combobox effect:</guilabel></term>
-<listitem><para>This combobox has two options.  If this option is set to <guilabel>Animate</guilabel> 
-then when a combo box is selected, it will appear to scroll down.  If <guilabel>Disable</guilabel> 
-is selected, then the combobox list appears instantly.</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term><guilabel>Tool tip effect:</guilabel></term>
-<listitem><para>This combobox has three options.  If this option is set to <guilabel>Animate</guilabel> 
-then when a tool tip appears, it will have a short animation.  If <guilabel>Fade</guilabel> is 
-selected, the tool tip appears to fade from the background.  If <guilabel>Disable</guilabel> 
-is selected, then the tool tip appears instantly.</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term><guilabel>Menu effect:</guilabel></term>
-<listitem><para>This combobox has four options.  If this option is set to <guilabel>Animate</guilabel> 
-then when a menu list appears, it will appear to scroll downward.  If <guilabel>Fade</guilabel> is 
-selected, the menu list appears to fade from the background.  If <guilabel>Make Transparent</guilabel> 
-is selected, the menu list will have a transparent look to it.  The details of that transparency is 
-configured in the next part of the dialog.  If <guilabel>Disable</guilabel> 
-is selected, then the menu list appears instantly.</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term><guilabel>Menu tear-off handles:</guilabel></term>
-<listitem><para>If this option is set to <guilabel>Disable</guilabel>, then no menus can be separated 
-from the application. If <guilabel>Application Level</guilabel> is selected, then it is left up 
-to each individual application to determine which menus can be torn separated from the application.</para>
-<note><para>Many applications do not have tear off menus.  You cannot tell &kde; to force an 
-application to allow tear off menus.  This is determined by the authors of the application.</para></note></listitem>
-</varlistentry>
-</variablelist>
-
-<para>The next checkbox, labeled <guilabel>Menu drop shadow</guilabel> is used to toggle the drop shadow behind all 
-&kde; menus.  A drop shadow is a dark, soft line on the bottom and right sides of the menu, which give the menus the 
-appearance that the menu is lifted off the application, and the menu is creating a shadow on the application.</para>
-
-<para>The next section only applies if the combobox labeled <guilabel>Menu Effect</guilabel> is set to 
-<guilabel>Make Transparent</guilabel>.  You can use the combo box labeled <guilabel>Menu transparency type:</guilabel> 
-to select the method &kde; uses to generate the transparency.  You can use the slider to determine the level of 
-transparency in menus.  A preview is visible on the right side of this section.</para>
-
-</sect3>
--->
-
-<sect3 id="style-misc">
-<title><guilabel>Fine Tuning</guilabel> tab</title>
-
-<variablelist> 
-<!-- removed in 4.2
-<varlistentry> 
-<term><guilabel>Highlight buttons under mouse.</guilabel></term>
-<listitem>
-<para>If there is a mark in this checkbox, when the mouse pointer is above a toolbar 
-button, that button will be highlighted with a square around the button.  This is a good visual 
-indicator of which button will be selected with a mouse click.</para>
-</listitem> 
-</varlistentry> 
-
-<varlistentry> 
-<term><guilabel>Transparent toolbars when moving</guilabel></term>
-<listitem>
-<para>As the title suggests, if this option is selected, the toolbars will be transparent when 
-you are moving them around on the screen.</para>
-</listitem> 
-</varlistentry> 
--->
 <varlistentry> 
 <term><guilabel>Graphical effects</guilabel></term>
 <listitem>
@@ -211,6 +114,10 @@ Each application can override the setting used in this panel.</para></tip>
 </listitem> 
 </varlistentry> 
 
+<!-- appmenu is so far not in kf5, status in kf5 see
+https://forum.kde.org/viewtopic.php?f=285&t=125058&p=336313&hilit=appmenu#p336313
+https://bugs.kde.org/show_bug.cgi?id=341071#c9
+
 <varlistentry> 
 <term><guilabel>Menubar style</guilabel></term>
 <listitem>
@@ -226,13 +133,14 @@ Select an application, press <keycombo action="simul">&Alt;<keycap>F2</keycap></
 and type the menu action you want to perform.</para>
 </listitem> 
 </varlistentry> 
+-->
+</variablelist>
+
+</listitem>
+</varlistentry>
+
 
 </variablelist>
 
-</sect3>
-
-</sect2>
-
-</sect1>
 
 </article>
