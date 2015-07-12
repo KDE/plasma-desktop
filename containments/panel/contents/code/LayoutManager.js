@@ -17,9 +17,6 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-.pragma library
-
-
 var layout;
 var root;
 var plasmoid;
