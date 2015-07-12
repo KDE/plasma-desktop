@@ -44,6 +44,7 @@ KCMUserAccount::KCMUserAccount(QWidget *parent, const QVariantList &)
     _accountList(NULL),
     _ku(NULL),
     _am(NULL),
+    _currentUser(NULL),
     _currentFaceIcon(NULL),
     _currentFullName(NULL),
     _currentAccountType(NULL),
@@ -71,8 +72,8 @@ KCMUserAccount::KCMUserAccount(QWidget *parent, const QVariantList &)
     formLayout->addRow(_currentFaceIcon, _currentFullName);
 
     _currentAccountType = new QComboBox;
-    _currentAccountType->addItem(i18n("Administrator"));
     _currentAccountType->addItem(i18n("Standard"));
+    _currentAccountType->addItem(i18n("Administrator"));
     formLayout->addRow(i18n("Account Type"), _currentAccountType);
 
     _currentLanguage = new QLabel("English");
@@ -158,32 +159,41 @@ QPixmap KCMUserAccount::_facePixmap(QString faceIconPath)
     return QPixmap(faceIconPath);
 }
 
-void KCMUserAccount::slotItemClicked(QListWidgetItem* item) 
+void KCMUserAccount::slotItemClicked(QListWidgetItem *item) 
 {
     QString itemText = item->text();
     KUser user(itemText);
-    AccountsService::UserAccount* amUser = _am->findUserByName(itemText);
+    
+    _currentUser = _am->findUserByName(itemText);
 
-    if (!user.isValid() || amUser == NULL) {
+    if (!user.isValid() || _currentUser == NULL) {
         return;
     }
 
     _currentFaceIcon->setIcon(_faceIcon(user.faceIconPath()));
-    _currentFullName->setText(amUser->displayName());
+    _currentFullName->setText(_currentUser->displayName());
 
-    _currentAccountType->setCurrentText(
-        amUser->accountType() == AccountsService::UserAccount::AdministratorAccountType ? 
-        i18n("Administrator") : 
-        i18n("Standard"));
+    _currentAccountType->setCurrentText((int)_currentUser->accountType() ? 
+                                        i18n("Administrator") : 
+                                        i18n("Standard"));
+    connect(_currentAccountType, SIGNAL(activated(int)), this, SLOT(changed()));
 
-    _currentLanguage->setText(amUser->language());
+    _currentLanguage->setText(_currentUser->language());
 
-    _autoLoginButton->setChecked(amUser->automaticLogin());
-    _nonAutoLoginButton->setChecked(!amUser->automaticLogin());
+    connect(_passwdEdit, SIGNAL(textChanged(const QString &)), this, SLOT(changed()));
+
+    _autoLoginButton->setChecked(_currentUser->automaticLogin());
+    connect(_autoLoginButton, SIGNAL(clicked()), this, SLOT(changed()));
+    _nonAutoLoginButton->setChecked(!_currentUser->automaticLogin());
+    connect(_nonAutoLoginButton, SIGNAL(clicked()), this, SLOT(changed()));
 }
 
 void KCMUserAccount::load()
 {
+    while (_accountList->count()) {
+        _accountList->takeItem(0);
+    }
+    
     QString myAccountLoginName = _ku->loginName();
     
     QListWidgetItem *item = new QListWidgetItem(i18n("My Account"));
@@ -206,6 +216,22 @@ void KCMUserAccount::load()
             _accountList->addItem(item);
         }
     }
+
+    KCModule::load();
+}
+
+void KCMUserAccount::save() 
+{
+    KCModule::save();
+
+    if (_currentUser == NULL) {
+        return;
+    }
+
+    _currentUser->setAccountType((AccountsService::UserAccount::AccountType)_currentAccountType->currentIndex());
+
+    // FIXME: QtAccountsService fail to setAutomaticLogin?
+    _currentUser->setAutomaticLogin(_autoLoginButton->isChecked());
 }
 
 #include "main.moc"

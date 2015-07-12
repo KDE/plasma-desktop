@@ -41,13 +41,8 @@ public:
 	explicit KCMUserAccount(QWidget *parent, const QVariantList & list = QVariantList());
 	~KCMUserAccount();
 
-	/**
-	 * The user data is loaded from  chfn(/etc/password) 
-	 * The user won't notice this(assuming they change the KDE settings via 
-	 * this KCM) and will make KDE play nice with environments which use 
-	 * /etc/password.
-	 */
 	void load();
+    void save();
 
 private slots:
     void slotItemClicked(QListWidgetItem *item);
@@ -55,6 +50,7 @@ private slots:
 private:
     KUser *_ku;
     AccountsService::AccountsManager *_am;
+    AccountsService::UserAccount *_currentUser;
     QListWidget *_accountList;
     QPushButton *_currentFaceIcon;
     QLabel *_currentFullName;
