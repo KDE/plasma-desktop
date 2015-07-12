@@ -19,27 +19,30 @@
 #define MAIN_H
 
 #include <kcmodule.h>
-#include <kemailsettings.h>
+
+/* QtAccountsService */
+#include <AccountsManager>
 
 #include <QListWidget>
+#include <QPushButton>
 #include <QLabel>
+#include <QComboBox>
+#include <QRadioButton>
 
 class KUser;
-class QEvent;
+class AccountsManager;
 class QObject;
-class KUrl;
 
 class KCMUserAccount : public KCModule
 {
 	Q_OBJECT
 
 public:
-	explicit KCMUserAccount(QWidget* parent, const QVariantList& list = QVariantList());
+	explicit KCMUserAccount(QWidget *parent, const QVariantList & list = QVariantList());
 	~KCMUserAccount();
 
 	/**
-	 * The user data is loaded from  chfn(/etc/password) and then 
-	 * written back as well as to KDE's own(KEmailSettings).
+	 * The user data is loaded from  chfn(/etc/password) 
 	 * The user won't notice this(assuming they change the KDE settings via 
 	 * this KCM) and will make KDE play nice with environments which use 
 	 * /etc/password.
@@ -47,14 +50,19 @@ public:
 	void load();
 
 private slots:
-    void slotItemClicked(QListWidgetItem* item);
+    void slotItemClicked(QListWidgetItem *item);
 
 private:
-    QListWidget* _accountList;
-    KUser* _ku;
-    QLabel* _currentFaceIcon;
-    QLabel* _currentFullName;
-    QLabel* _currentAccountType;
+    KUser *_ku;
+    AccountsService::AccountsManager *_am;
+    QListWidget *_accountList;
+    QPushButton *_currentFaceIcon;
+    QLabel *_currentFullName;
+    QComboBox *_currentAccountType;
+    QLabel *_currentLanguage;
+    QLineEdit *_passwdEdit;
+    QRadioButton *_autoLoginButton;
+    QRadioButton *_nonAutoLoginButton;
 
     QIcon _faceIcon(QString faceIconPath);
     QPixmap _facePixmap(QString faceIconPath);

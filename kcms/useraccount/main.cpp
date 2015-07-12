@@ -17,19 +17,9 @@
 
 #include "main.h"
 
-//#include <kpushbutton.h>
-//#include <kguiitem.h>
-//#include <kpassworddialog.h>
 #include <kuser.h>
 #include <kdialog.h>
-//#include <qicon.h>
-//#include <kimageio.h>
-//#include <kmimetype.h>
-//#include <kstandarddirs.h>
 #include <kaboutdata.h>
-//#include <kmessagebox.h>
-//#include <kio/netaccess.h>
-//#include <kurl.h>
 #include <kdebug.h>
 
 #include "settings.h"
@@ -42,44 +32,64 @@
 #include <QIcon>
 #include <QLineEdit>
 
+static const int faceIconSize = 46;
+
 K_PLUGIN_FACTORY(Factory,
         registerPlugin<KCMUserAccount>();
         )
 K_EXPORT_PLUGIN(Factory("useraccount"))
 
-KCMUserAccount::KCMUserAccount(QWidget* parent, const QVariantList&)
+KCMUserAccount::KCMUserAccount(QWidget *parent, const QVariantList &)
   : KCModule(parent),
     _accountList(NULL),
     _ku(NULL),
+    _am(NULL),
     _currentFaceIcon(NULL),
     _currentFullName(NULL),
-    _currentAccountType(NULL)
+    _currentAccountType(NULL),
+    _currentLanguage(NULL),
+    _passwdEdit(NULL)
 {
-	QHBoxLayout* topLayout = new QHBoxLayout(this);
+	QHBoxLayout *topLayout = new QHBoxLayout(this);
     topLayout->setSpacing(KDialog::spacingHint());
     topLayout->setMargin(0);
 
     _accountList = new QListWidget;
-    _accountList->setIconSize(QSize(46, 46));
+    _accountList->setIconSize(QSize(faceIconSize, faceIconSize));
 	connect(_accountList, SIGNAL(itemClicked(QListWidgetItem*)), 
             this, SLOT(slotItemClicked(QListWidgetItem*)));
     topLayout->addWidget(_accountList);
 
-    QFormLayout* formLayout = new QFormLayout;
+    QFormLayout *formLayout = new QFormLayout;
     topLayout->addLayout(formLayout);
 
-    _currentFaceIcon = new QLabel;
+    _currentFaceIcon = new QPushButton;
+    _currentFaceIcon->setMinimumWidth(faceIconSize);
+    _currentFaceIcon->setMinimumHeight(faceIconSize);
+    _currentFaceIcon->setIconSize(QSize(faceIconSize, faceIconSize));
     _currentFullName = new QLabel("FullName");
     formLayout->addRow(_currentFaceIcon, _currentFullName);
 
-    _currentAccountType = new QLabel("Administrator");
+    _currentAccountType = new QComboBox;
+    _currentAccountType->addItem(i18n("Administrator"));
+    _currentAccountType->addItem(i18n("Standard"));
     formLayout->addRow(i18n("Account Type"), _currentAccountType);
+
+    _currentLanguage = new QLabel("English");
+    formLayout->addRow(i18n("Language"), _currentLanguage);
 
     formLayout->addRow(new QLabel(i18n("Login Options")));
 
-    QLineEdit* passwdEdit = new QLineEdit("password");
-    passwdEdit->setEchoMode(QLineEdit::PasswordEchoOnEdit);
-    formLayout->addRow(i18n("Password"), passwdEdit);
+    _passwdEdit = new QLineEdit("password");
+    _passwdEdit->setEchoMode(QLineEdit::PasswordEchoOnEdit);
+    formLayout->addRow(i18n("Password"), _passwdEdit);
+
+    QHBoxLayout *hbox = new QHBoxLayout;
+    _autoLoginButton = new QRadioButton(i18n("Yes"));
+    _nonAutoLoginButton = new QRadioButton(i18n("No"));
+    hbox->addWidget(_autoLoginButton);
+    hbox->addWidget(_nonAutoLoginButton);
+    formLayout->addRow(i18n("Automatic Login"), hbox);
 
     KAboutData *about = new KAboutData("kcm_useraccount", i18n("Password & User Information"), "0.1",
         QString(), KAboutLicense::GPL, i18n("(C) 2015, Leslie Zhai"));
@@ -92,11 +102,16 @@ KCMUserAccount::KCMUserAccount(QWidget* parent, const QVariantList&)
 			"change your login password by clicking <em>Change Password...</em>.</qt>") );
 
     _ku = new KUser;
+
+    _am = new AccountsService::AccountsManager;
 }
 
 KCMUserAccount::~KCMUserAccount()
 {
     if (_accountList) {
+        while (_accountList->count()) {
+            _accountList->takeItem(0);
+        }
         delete _accountList;
         _accountList = NULL;
     }
@@ -120,6 +135,11 @@ KCMUserAccount::~KCMUserAccount()
         delete _ku;
         _ku = NULL;
     }
+
+    if (_am) {
+        delete _am;
+        _am = NULL;
+    }
 }
 
 QIcon KCMUserAccount::_faceIcon(QString faceIconPath) 
@@ -130,7 +150,7 @@ QIcon KCMUserAccount::_faceIcon(QString faceIconPath)
 QPixmap KCMUserAccount::_facePixmap(QString faceIconPath) 
 {
     if (faceIconPath == "") {
-        QPixmap pixmap(46, 46);
+        QPixmap pixmap(faceIconSize, faceIconSize);
         pixmap.fill();
         return pixmap;
     }
@@ -142,21 +162,31 @@ void KCMUserAccount::slotItemClicked(QListWidgetItem* item)
 {
     QString itemText = item->text();
     KUser user(itemText);
+    AccountsService::UserAccount* amUser = _am->findUserByName(itemText);
 
-    if (!user.isValid())
+    if (!user.isValid() || amUser == NULL) {
         return;
+    }
 
-    _currentFaceIcon->setPixmap(_facePixmap(user.faceIconPath()));
-    _currentFullName->setText(user.fullName() != "" ? user.fullName() : user.loginName());
+    _currentFaceIcon->setIcon(_faceIcon(user.faceIconPath()));
+    _currentFullName->setText(amUser->displayName());
 
-    _currentAccountType->setText(user.isSuperUser() ? "Administrator" : "Standard");
+    _currentAccountType->setCurrentText(
+        amUser->accountType() == AccountsService::UserAccount::AdministratorAccountType ? 
+        i18n("Administrator") : 
+        i18n("Standard"));
+
+    _currentLanguage->setText(amUser->language());
+
+    _autoLoginButton->setChecked(amUser->automaticLogin());
+    _nonAutoLoginButton->setChecked(!amUser->automaticLogin());
 }
 
 void KCMUserAccount::load()
 {
     QString myAccountLoginName = _ku->loginName();
     
-    QListWidgetItem* item = new QListWidgetItem(i18n("My Account"));
+    QListWidgetItem *item = new QListWidgetItem(i18n("My Account"));
     _accountList->addItem(item);
 
     item = new QListWidgetItem(QIcon(QPixmap(KCFGUserAccount::faceFile())), 

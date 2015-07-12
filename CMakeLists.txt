@@ -126,6 +126,12 @@ else()
                         )
 endif()
 
+find_package(QtAccountsService)
+set_package_properties(QtAccountsService PROPERTIES DESCRIPTION "Qt-style API to use freedesktop.org's AccountsService DBus service"
+                    URL "https://github.com/hawaii-desktop/qtaccountsservice"
+                    TYPE REQUIRED
+                    )
+
 include_directories("${CMAKE_CURRENT_BINARY_DIR}")
 
 configure_file(config-workspace.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-workspace.h)
