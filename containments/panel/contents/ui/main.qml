@@ -42,6 +42,7 @@ DragDrop.DropArea {
     Layout.preferredHeight: fixedHeight > 0 ? fixedHeight : (currentLayout.Layout.preferredHeight + (!isHorizontal && toolBox? toolBox.height : 0))
 
     property Item toolBox
+    property var layoutManager: LayoutManager
 
 
     property Item dragOverlay

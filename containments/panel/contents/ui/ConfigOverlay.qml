@@ -23,8 +23,6 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.kquickcontrolsaddons 2.0
 
-import "LayoutManager.js" as LayoutManager
-
 MouseArea {
     id: configurationArea
 
@@ -133,9 +131,9 @@ MouseArea {
 
                 if ((plasmoid.formFactor === PlasmaCore.Types.Vertical && posInItem.y < item.height/2) ||
                     (plasmoid.formFactor !== PlasmaCore.Types.Vertical && posInItem.x < item.width/2)) {
-                    LayoutManager.insertBefore(item, placeHolder);
+                    root.layoutManager.insertBefore(item, placeHolder);
                 } else {
-                    LayoutManager.insertAfter(item, placeHolder);
+                    root.layoutManager.insertAfter(item, placeHolder);
                 }
             }
 
@@ -204,7 +202,7 @@ MouseArea {
         lastY = mouse.y;
         placeHolder.width = currentApplet.width;
         placeHolder.height = currentApplet.height;
-        LayoutManager.insertBefore(currentApplet, placeHolder);
+        root.layoutManager.insertBefore(currentApplet, placeHolder);
         currentApplet.parent = root;
         currentApplet.z = 900;
     }
@@ -223,7 +221,7 @@ MouseArea {
         configurationArea.isResizingLeft = false;
         configurationArea.isResizingRight = false;
 
-        LayoutManager.insertBefore(placeHolder, currentApplet);
+        root.layoutManager.insertBefore(placeHolder, currentApplet);
         placeHolder.parent = configurationArea;
         currentApplet.z = 1;
 
@@ -231,7 +229,7 @@ MouseArea {
         handle.y = currentApplet.y;
         handle.width = currentApplet.width;
         handle.height = currentApplet.height;
-        LayoutManager.save();
+        root.layoutManager.save();
     }
 
     Item {
