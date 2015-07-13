@@ -25,8 +25,6 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
 import org.kde.plasma.components 2.0 as PlasmaComponents
 
-import "LayoutManager.js" as LayoutManager
-
 KQuickControlsAddons.MouseEventListener {
     id: appletHandle
 
@@ -121,7 +119,7 @@ KQuickControlsAddons.MouseEventListener {
                     animationsEnabled = false;
                     startX = mouse.x;
                     startY = mouse.y;
-                    LayoutManager.setSpaceAvailable(appletItem.x, appletItem.y, appletItem.width, appletItem.height, true)
+                    root.layoutManager.setSpaceAvailable(appletItem.x, appletItem.y, appletItem.width, appletItem.height, true)
                 }
                 onPositionChanged: {
                     appletItem.width = Math.max(appletItem.minimumWidth + appletHandle.width, appletItem.width + mouse.x-startX);
@@ -132,9 +130,9 @@ KQuickControlsAddons.MouseEventListener {
                 }
                 onReleased: {
                     animationsEnabled = true
-                    LayoutManager.positionItem(appletItem)
-                    LayoutManager.save()
-                    LayoutManager.setSpaceAvailable(appletItem.x, appletItem.y, widthAnimation.to, heightAnimation.to, false)
+                    root.layoutManager.positionItem(appletItem)
+                    root.layoutManager.save()
+                    root.layoutManager.setSpaceAvailable(appletItem.x, appletItem.y, widthAnimation.to, heightAnimation.to, false)
                 }
 //                 Rectangle { color: "blue"; opacity: 0.4; visible: debug; anchors.fill: parent; }
             }
@@ -187,7 +185,7 @@ KQuickControlsAddons.MouseEventListener {
                     mouse.accepted = true
                     animationsEnabled = false;
                     startRotation = appletItem.rotation;
-                    LayoutManager.setSpaceAvailable(appletItem.x, appletItem.y, appletItem.width, appletItem.height, true)
+                    root.layoutManager.setSpaceAvailable(appletItem.x, appletItem.y, appletItem.width, appletItem.height, true)
 
                     startCenterRelativeAngle = pointAngle(centerRelativePos(mouse.x, mouse.y));
                 }
@@ -219,7 +217,7 @@ KQuickControlsAddons.MouseEventListener {
                 onReleased: {
                     // save rotation
 //                    print("saving...");
-                    LayoutManager.saveItem(appletItem);
+                    root.layoutManager.saveItem(appletItem);
                 }
 //                 Rectangle { color: "red"; opacity: 0.6; visible: debug; anchors.fill: parent; }
             }
@@ -264,9 +262,9 @@ KQuickControlsAddons.MouseEventListener {
                 appletItem.z = appletItem.z + zoffset;
                 animationsEnabled = false
                 mouse.accepted = true
-                var x = Math.round(appletItem.x/LayoutManager.cellSize.width)*LayoutManager.cellSize.width
-                var y = Math.round(appletItem.y/LayoutManager.cellSize.height)*LayoutManager.cellSize.height
-                LayoutManager.setSpaceAvailable(x, y, appletItem.width, appletItem.height, true)
+                var x = Math.round(appletItem.x / root.layoutManager.cellSize.width) * root.layoutManager.cellSize.width
+                var y = Math.round(appletItem.y / root.layoutManager.cellSize.height) * root.layoutManager.cellSize.height
+                root.layoutManager.setSpaceAvailable(x, y, appletItem.width, appletItem.height, true)
 
                 placeHolder.syncWithItem(appletItem)
                 placeHolderPaint.opacity = root.haloOpacity;
@@ -289,8 +287,8 @@ KQuickControlsAddons.MouseEventListener {
                 repositionTimer.running = false
                 placeHolderPaint.opacity = 0
                 animationsEnabled = true
-                LayoutManager.positionItem(appletItem)
-                LayoutManager.save()
+                root.layoutManager.positionItem(appletItem)
+                root.layoutManager.save()
             }
         }
 

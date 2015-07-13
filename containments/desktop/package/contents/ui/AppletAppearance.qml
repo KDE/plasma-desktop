@@ -28,8 +28,6 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
 import org.kde.plasma.plasmoid 2.0
 
-import "LayoutManager.js" as LayoutManager
-
 Item {
     id: appletItem
 
@@ -45,12 +43,12 @@ Item {
     property bool handleMerged: (height > minimumHandleHeight)
     property bool animationsEnabled: false
 
-    property int minimumWidth: Math.max(LayoutManager.cellSize.width,
+    property int minimumWidth: Math.max(root.layoutManager.cellSize.width,
                            appletContainer.minimumWidth +
                            appletItem.contents.anchors.leftMargin +
                            appletItem.contents.anchors.rightMargin)
 
-    property int minimumHeight: Math.max(LayoutManager.cellSize.height,
+    property int minimumHeight: Math.max(root.layoutManager.cellSize.height,
                             appletContainer.minimumHeight +
                             appletItem.contents.anchors.topMargin +
                             appletItem.contents.anchors.bottomMargin)
@@ -178,7 +176,7 @@ Item {
 //                     print("Applet removed Applet-" + applet.id)
                     if (applet.id == appletItem.applet.id) {
 //                         print("Destroying Applet-" + applet.id)
-                        LayoutManager.setSpaceAvailable(appletItem.x, appletItem.y, appletItem.width, appletItem.height, true)
+                        root.layoutManager.setSpaceAvailable(appletItem.x, appletItem.y, appletItem.width, appletItem.height, true)
                         //applet.action("remove").trigger();
                         //appletItem.destroy()
                         appletItem.destroy();
@@ -217,8 +215,8 @@ Item {
                     repositionTimer.running = false;
                     placeHolderPaint.opacity = 0;
                     animationsEnabled = true;
-                    LayoutManager.positionItem(appletItem);
-                    LayoutManager.save();
+                    root.layoutManager.positionItem(appletItem);
+                    root.layoutManager.save();
                     dragging = false;
                 }
 
@@ -230,9 +228,9 @@ Item {
                     appletItem.z = appletItem.z + zoffset;
                     animationsEnabled = plasmoid.configuration.pressToMove ? true : false;
                     mouse.accepted = true;
-                    var x = Math.round(appletItem.x/LayoutManager.cellSize.width)*LayoutManager.cellSize.width;
-                    var y = Math.round(appletItem.y/LayoutManager.cellSize.height)*LayoutManager.cellSize.height;
-                    LayoutManager.setSpaceAvailable(x, y, appletItem.width, appletItem.height, true);
+                    var x = Math.round(appletItem.x / root.layoutManager.cellSize.width) * root.layoutManager.cellSize.width;
+                    var y = Math.round(appletItem.y / root.layoutManager.cellSize.height) * root.layoutManager.cellSize.height;
+                    root.layoutManager.setSpaceAvailable(x, y, appletItem.width, appletItem.height, true);
 
                     placeHolder.syncWithItem(appletItem);
                     placeHolderPaint.opacity = root.haloOpacity;
@@ -286,7 +284,7 @@ Item {
 
                 function appletDestroyed() {
 //                     print("Applet DESTROYED.");
-                    LayoutManager.setSpaceAvailable(appletItem.x, appletItem.y, appletItem.width, appletItem.height, true)
+                    root.layoutManager.setSpaceAvailable(appletItem.x, appletItem.y, appletItem.width, appletItem.height, true)
                     applet.action("remove").trigger();
                     appletItem.destroy()
                 }

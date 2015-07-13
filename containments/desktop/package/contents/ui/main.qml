@@ -65,6 +65,7 @@ DragDrop.DropArea {
     property bool isPopup: (plasmoid.location != PlasmaCore.Types.Floating)
 
     property Item toolBox
+    property var layoutManager: LayoutManager
 
     property bool debug: false
     property int handleDelay: 800
