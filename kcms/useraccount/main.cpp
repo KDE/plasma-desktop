@@ -162,15 +162,14 @@ QPixmap KCMUserAccount::_facePixmap(QString faceIconPath)
 void KCMUserAccount::slotItemClicked(QListWidgetItem *item) 
 {
     QString itemText = item->text();
-    KUser user(itemText);
     
     _currentUser = _am->findUserByName(itemText);
 
-    if (!user.isValid() || _currentUser == NULL) {
+    if (_currentUser == NULL) {
         return;
     }
 
-    _currentFaceIcon->setIcon(_faceIcon(user.faceIconPath()));
+    _currentFaceIcon->setIcon(_faceIcon(_currentUser->iconFileName()));
     _currentFullName->setText(_currentUser->displayName());
 
     _currentAccountType->setCurrentText((int)_currentUser->accountType() ? 
@@ -199,7 +198,8 @@ void KCMUserAccount::load()
     QListWidgetItem *item = new QListWidgetItem(i18n("My Account"));
     _accountList->addItem(item);
 
-    item = new QListWidgetItem(QIcon(QPixmap(KCFGUserAccount::faceFile())), 
+    AccountsService::UserAccount *myUserAccount = _am->findUserByName(myAccountLoginName);
+    item = new QListWidgetItem(QIcon(QPixmap(myUserAccount->iconFileName())), 
                                myAccountLoginName);
     _accountList->addItem(item);
     _accountList->setCurrentItem(item);
@@ -211,7 +211,9 @@ void KCMUserAccount::load()
     foreach (KUser user, _ku->allUsers()) {
         if (user.loginName() != myAccountLoginName && 
             user.homeDir().startsWith("/home")) {
-            item = new QListWidgetItem(_faceIcon(user.faceIconPath()), 
+            AccountsService::UserAccount *userAccount = 
+                _am->findUserByName(user.loginName()); 
+            item = new QListWidgetItem(_faceIcon(userAccount->iconFileName()), 
                                        user.loginName());
             _accountList->addItem(item);
         }
