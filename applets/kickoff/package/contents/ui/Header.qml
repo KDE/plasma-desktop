@@ -40,6 +40,10 @@ Item {
 
     AccountsManager {
         id: accountsManager
+
+        onIconFileChanged: {
+            faceIcon.source = iconFileName;
+        }
     }
 
     state: (query !== "") ? "query" : "hint"
