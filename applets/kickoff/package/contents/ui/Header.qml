@@ -1,5 +1,6 @@
 /*
  *    Copyright 2014  Sebastian Kügler <sebas@kde.org>
+ *    Copyright 2015  Leslie Zhai <xiang.zhai@i-soft.com.cn>
  *
  *    This program is free software; you can redistribute it and/or modify
  *    it under the terms of the GNU General Public License as published by
@@ -22,6 +23,7 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kcoreaddons 1.0 as KCoreAddons
 import org.kde.kquickcontrolsaddons 2.0
+import QtAccountsService 1.0
 
 Item {
     id: header
@@ -30,9 +32,14 @@ Item {
 
     property alias query: queryField.text
     property Item input: queryField
+    property UserAccount loginUserAccount
 
     KCoreAddons.KUser {
         id: kuser
+    }
+
+    AccountsManager {
+        id: accountsManager
     }
 
     state: (query !== "") ? "query" : "hint"
@@ -55,7 +62,7 @@ Item {
 
     Image {
         id: faceIcon
-        source: kuser.faceIconUrl
+        source: accountsManager.findUserIconFile(kuser.loginName)
         cache: false
         visible: source !== ""
 
