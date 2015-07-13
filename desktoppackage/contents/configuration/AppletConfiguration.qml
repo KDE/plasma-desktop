@@ -237,6 +237,7 @@ Rectangle {
                                 currentItem["configurationChanged"].connect(root.settingValueChanged)
                             }
                             applyButton.enabled = false;
+                            scroll.flickableItem.contentY = 0
                             /*
                                 * This is not needed on a desktop shell that has ok/apply/cancel buttons, i'll leave it here only for future reference until we have a prototype for the active shell.
                                 * root.pageChanged will start a timer, that in turn will call saveConfig() when triggered
