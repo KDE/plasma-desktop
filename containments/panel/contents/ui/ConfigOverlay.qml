@@ -241,7 +241,7 @@ MouseArea {
 
     Timer {
         id: hideTimer
-        interval: units.longDuration
+        interval: units.longDuration * 3
         onTriggered: tooltip.visible = false;
     }
 
@@ -371,7 +371,10 @@ MouseArea {
                     id: configureButton
                     anchors.verticalCenter: parent.verticalCenter
                     iconSource: "configure"
-                    onClicked: currentApplet.applet.action("configure").trigger()
+                    onClicked: {
+                        tooltip.visible = false;
+                        currentApplet.applet.action("configure").trigger()
+                    }
                 }
                 PlasmaComponents.Label {
                     id: label
@@ -383,7 +386,10 @@ MouseArea {
                     id: closeButton
                     anchors.verticalCenter: parent.verticalCenter
                     iconSource: "window-close"
-                    onClicked: currentApplet.applet.action("remove").trigger()
+                    onClicked: {
+                        tooltip.visible = false;
+                        currentApplet.applet.action("remove").trigger();
+                    }
                 }
             }
         }
