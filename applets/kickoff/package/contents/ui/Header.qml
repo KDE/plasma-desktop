@@ -32,7 +32,6 @@ Item {
 
     property alias query: queryField.text
     property Item input: queryField
-    property UserAccount loginUserAccount
 
     KCoreAddons.KUser {
         id: kuser
@@ -41,8 +40,8 @@ Item {
     AccountsManager {
         id: accountsManager
 
-        onIconFileChanged: {
-            faceIcon.source = iconFileName;
+        onUserAccountChanged: {
+            faceIcon.source = accountsManager.findUserIconFile(kuser.loginName) != "" ? accountsManager.findUserIconFile(kuser.loginName) : kuser.faceIconUrl;
         }
     }
 
@@ -66,7 +65,7 @@ Item {
 
     Image {
         id: faceIcon
-        source: accountsManager.findUserIconFile(kuser.loginName)
+        source: accountsManager.findUserIconFile(kuser.loginName) != "" ? accountsManager.findUserIconFile(kuser.loginName) : kuser.faceIconUrl
         cache: false
         visible: source !== ""
 
