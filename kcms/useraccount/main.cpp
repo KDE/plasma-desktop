@@ -175,6 +175,11 @@ void KCMUserAccount::slotItemClicked(QListWidgetItem *item)
     _currentAccountType->setCurrentText((int)_currentUser->accountType() ? 
                                         i18n("Administrator") : 
                                         i18n("Standard"));
+    if (_currentUser->userName() == _ku->loginName()) {
+        _currentAccountType->setEnabled(true);
+    } else {
+        _currentAccountType->setEnabled(false);
+    }
     connect(_currentAccountType, SIGNAL(activated(int)), this, SLOT(changed()));
 
     _currentLanguage->setText(_currentUser->language());
