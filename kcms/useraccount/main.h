@@ -21,7 +21,7 @@
 #include <kcmodule.h>
 
 /* QtAccountsService */
-#include <AccountsManager>
+#include <QtAccountsService/AccountsManager>
 
 #include <QListWidget>
 #include <QPushButton>
@@ -49,8 +49,8 @@ private slots:
 
 private:
     KUser *_ku;
-    AccountsService::AccountsManager *_am;
-    AccountsService::UserAccount *_currentUser;
+    QtAccountsService::AccountsManager *_am;
+    QtAccountsService::UserAccount *_currentUser;
     QListWidget *_accountList;
     QPushButton *_currentFaceIcon;
     QLabel *_currentFullName;

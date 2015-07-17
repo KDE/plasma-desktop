@@ -104,7 +104,7 @@ KCMUserAccount::KCMUserAccount(QWidget *parent, const QVariantList &)
 
     _ku = new KUser;
 
-    _am = new AccountsService::AccountsManager;
+    _am = new QtAccountsService::AccountsManager;
 }
 
 KCMUserAccount::~KCMUserAccount()
@@ -203,7 +203,7 @@ void KCMUserAccount::load()
     QListWidgetItem *item = new QListWidgetItem(i18n("My Account"));
     _accountList->addItem(item);
 
-    AccountsService::UserAccount *myUserAccount = _am->findUserByName(myAccountLoginName);
+    QtAccountsService::UserAccount *myUserAccount = _am->findUserByName(myAccountLoginName);
     item = new QListWidgetItem(QIcon(QPixmap(myUserAccount->iconFileName())), 
                                myAccountLoginName);
     _accountList->addItem(item);
@@ -216,7 +216,7 @@ void KCMUserAccount::load()
     foreach (KUser user, _ku->allUsers()) {
         if (user.loginName() != myAccountLoginName && 
             user.homeDir().startsWith("/home")) {
-            AccountsService::UserAccount *userAccount = 
+            QtAccountsService::UserAccount *userAccount = 
                 _am->findUserByName(user.loginName()); 
             item = new QListWidgetItem(_faceIcon(userAccount->iconFileName()), 
                                        user.loginName());
@@ -235,7 +235,7 @@ void KCMUserAccount::save()
         return;
     }
 
-    _currentUser->setAccountType((AccountsService::UserAccount::AccountType)_currentAccountType->currentIndex());
+    _currentUser->setAccountType((QtAccountsService::UserAccount::AccountType)_currentAccountType->currentIndex());
 
     // FIXME: QtAccountsService fail to setAutomaticLogin?
     _currentUser->setAutomaticLogin(_autoLoginButton->isChecked());
