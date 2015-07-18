@@ -3,7 +3,11 @@ add_definitions(-DTRANSLATION_DOMAIN=\"useraccount\")
 add_subdirectory(pics)
 
 set(kcm_useraccount_PART_SRCS
-    main.cpp)
+    main.cpp
+    pwdedit.cpp
+    chgpwddlg.cpp
+    adduserdlg.cpp
+    removeuserdlg.cpp)
 
 kconfig_add_kcfg_files(kcm_useraccount_PART_SRCS settings.kcfgc)
 

@@ -23,6 +23,8 @@
 /* QtAccountsService */
 #include <QtAccountsService/AccountsManager>
 
+#include "pwdedit.h"
+
 #include <QListWidget>
 #include <QPushButton>
 #include <QLabel>
@@ -30,7 +32,6 @@
 #include <QRadioButton>
 
 class KUser;
-class AccountsManager;
 class QObject;
 
 class KCMUserAccount : public KCModule
@@ -46,17 +47,21 @@ public:
 
 private slots:
     void slotItemClicked(QListWidgetItem *item);
+    void slotPasswordEditPressed();
+    void slotAddBtnClicked();
+    void slotRemoveBtnClicked();
 
 private:
     KUser *_ku;
     QtAccountsService::AccountsManager *_am;
     QtAccountsService::UserAccount *_currentUser;
     QListWidget *_accountList;
+    QPushButton *_removeBtn;
     QPushButton *_currentFaceIcon;
     QLabel *_currentFullName;
     QComboBox *_currentAccountType;
     QLabel *_currentLanguage;
-    QLineEdit *_passwdEdit;
+    PwdEdit *_passwdEdit;
     QRadioButton *_autoLoginButton;
     QRadioButton *_nonAutoLoginButton;
 

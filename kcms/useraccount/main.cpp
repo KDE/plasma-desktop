@@ -16,6 +16,9 @@
  */
 
 #include "main.h"
+#include "chgpwddlg.h"
+#include "adduserdlg.h"
+#include "removeuserdlg.h"
 
 #include <kuser.h>
 #include <kdialog.h>
@@ -27,12 +30,15 @@
 #include <KPluginLoader>
 
 #include <QHBoxLayout>
+#include <QVBoxLayout>
 #include <QFormLayout>
 #include <QLabel>
 #include <QIcon>
 #include <QLineEdit>
+#include <QPushButton>
 
 static const int faceIconSize = 46;
+static const int opIconSize = 32;
 
 K_PLUGIN_FACTORY(Factory,
         registerPlugin<KCMUserAccount>();
@@ -42,6 +48,7 @@ K_EXPORT_PLUGIN(Factory("useraccount"))
 KCMUserAccount::KCMUserAccount(QWidget *parent, const QVariantList &)
   : KCModule(parent),
     _accountList(NULL),
+    _removeBtn(NULL),
     _ku(NULL),
     _am(NULL),
     _currentUser(NULL),
@@ -55,11 +62,29 @@ KCMUserAccount::KCMUserAccount(QWidget *parent, const QVariantList &)
     topLayout->setSpacing(KDialog::spacingHint());
     topLayout->setMargin(0);
 
+    QVBoxLayout *vbox = new QVBoxLayout;
     _accountList = new QListWidget;
     _accountList->setIconSize(QSize(faceIconSize, faceIconSize));
 	connect(_accountList, SIGNAL(itemClicked(QListWidgetItem*)), 
             this, SLOT(slotItemClicked(QListWidgetItem*)));
-    topLayout->addWidget(_accountList);
+    vbox->addWidget(_accountList);
+
+    QHBoxLayout *hbox = new QHBoxLayout;
+    QPushButton *addBtn = new QPushButton;
+    addBtn->setMaximumWidth(opIconSize);
+    addBtn->setMaximumHeight(opIconSize);
+    addBtn->setIcon(QIcon::fromTheme("list-add"));
+    connect(addBtn, SIGNAL(clicked()), this, SLOT(slotAddBtnClicked()));
+    hbox->addWidget(addBtn);
+    _removeBtn = new QPushButton;
+    _removeBtn->setEnabled(false);
+    _removeBtn->setMaximumWidth(opIconSize);
+    _removeBtn->setMaximumHeight(opIconSize);
+    _removeBtn->setIcon(QIcon::fromTheme("list-remove"));
+    connect(_removeBtn, SIGNAL(clicked()), this, SLOT(slotRemoveBtnClicked()));
+    hbox->addWidget(_removeBtn);
+    vbox->addLayout(hbox);
+    topLayout->addLayout(vbox);
 
     QFormLayout *formLayout = new QFormLayout;
     topLayout->addLayout(formLayout);
@@ -77,15 +102,17 @@ KCMUserAccount::KCMUserAccount(QWidget *parent, const QVariantList &)
     formLayout->addRow(i18n("Account Type"), _currentAccountType);
 
     _currentLanguage = new QLabel("English");
-    formLayout->addRow(i18n("Language"), _currentLanguage);
+    // @pm not implement language, right?
+    //formLayout->addRow(i18n("Language"), _currentLanguage);
 
     formLayout->addRow(new QLabel(i18n("Login Options")));
 
-    _passwdEdit = new QLineEdit("password");
+    _passwdEdit = new PwdEdit("password");
     _passwdEdit->setEchoMode(QLineEdit::PasswordEchoOnEdit);
+    connect(_passwdEdit, SIGNAL(pressed()), this, SLOT(slotPasswordEditPressed()));
     formLayout->addRow(i18n("Password"), _passwdEdit);
 
-    QHBoxLayout *hbox = new QHBoxLayout;
+    hbox = new QHBoxLayout;
     _autoLoginButton = new QRadioButton(i18n("Yes"));
     _nonAutoLoginButton = new QRadioButton(i18n("No"));
     hbox->addWidget(_autoLoginButton);
@@ -143,6 +170,24 @@ KCMUserAccount::~KCMUserAccount()
     }
 }
 
+void KCMUserAccount::slotPasswordEditPressed() 
+{
+    ChgPwdDlg *chgPwdDlg = new ChgPwdDlg(_am, this);
+    chgPwdDlg->show();
+}
+
+void KCMUserAccount::slotAddBtnClicked()
+{
+    AddUserDlg *addUserDlg = new AddUserDlg(_am, this);
+    addUserDlg->show();
+}
+
+void KCMUserAccount::slotRemoveBtnClicked()
+{
+    RemoveUserDlg *removeUserDlg = new RemoveUserDlg(_am, this);
+    removeUserDlg->show();
+}
+
 QIcon KCMUserAccount::_faceIcon(QString faceIconPath) 
 {
     return QIcon(_facePixmap(faceIconPath));
@@ -166,6 +211,7 @@ void KCMUserAccount::slotItemClicked(QListWidgetItem *item)
     _currentUser = _am->findUserByName(itemText);
 
     if (_currentUser == NULL) {
+        _removeBtn->setEnabled(false);
         return;
     }
 
@@ -176,9 +222,11 @@ void KCMUserAccount::slotItemClicked(QListWidgetItem *item)
                                         i18n("Administrator") : 
                                         i18n("Standard"));
     if (_currentUser->userName() == _ku->loginName()) {
-        _currentAccountType->setEnabled(true);
-    } else {
         _currentAccountType->setEnabled(false);
+        _removeBtn->setEnabled(false);
+    } else {
+        _currentAccountType->setEnabled(true);
+        _removeBtn->setEnabled(true);
     }
     connect(_currentAccountType, SIGNAL(activated(int)), this, SLOT(changed()));
 
