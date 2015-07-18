@@ -56,7 +56,7 @@ MouseArea {
 
 //BEGIN connections
     onClicked: {
-        print("model source: " + model.source + " " + main.sourceFile);
+        //print("model source: " + model.source + " " + main.sourceFile);
         if (applyButton.enabled) {
             messageDialog.delegate = delegate;
             messageDialog.open();
