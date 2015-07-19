@@ -68,8 +68,14 @@ QStandardItem *StandardItemFactory::createItemForUrl(const QString& urlString, D
         // or they may be other types such as links.
         //
         // first look in the KDE service database to see if this file is a service,
+        // then we try to look it up by storage id (for eg. system settings entries)
         // otherwise represent it as a generic .desktop file
         KService::Ptr service = KService::serviceByDesktopPath(url.toLocalFile());
+        if (service) {
+            return createItemForService(service, displayOrder);
+        }
+
+        service = KService::serviceByStorageId(urlString);
         if (service) {
             return createItemForService(service, displayOrder);
         }
