@@ -23,6 +23,7 @@
 /* QtAccountsService */
 #include <QtAccountsService/AccountsManager>
 
+#include "faceiconbutton.h"
 #include "pwdedit.h"
 
 #include <QListWidget>
@@ -47,6 +48,8 @@ public:
 
 private slots:
     void slotItemClicked(QListWidgetItem *item);
+    void slotFaceIconClicked(QString filePath);
+    void slotFaceIconPressed(QPoint pos);
     void slotPasswordEditPressed();
     void slotAddBtnClicked();
     void slotRemoveBtnClicked();
@@ -57,7 +60,7 @@ private:
     QtAccountsService::UserAccount *_currentUser;
     QListWidget *_accountList;
     QPushButton *_removeBtn;
-    QPushButton *_currentFaceIcon;
+    FaceIconButton *_currentFaceIcon;
     QLabel *_currentFullName;
     QComboBox *_currentAccountType;
     QLabel *_currentLanguage;

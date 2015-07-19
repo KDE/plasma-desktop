@@ -16,6 +16,7 @@
  */
 
 #include "main.h"
+#include "faceiconpopup.h"
 #include "chgpwddlg.h"
 #include "adduserdlg.h"
 #include "removeuserdlg.h"
@@ -37,7 +38,6 @@
 #include <QLineEdit>
 #include <QPushButton>
 
-static const int faceIconSize = 46;
 static const int opIconSize = 32;
 
 K_PLUGIN_FACTORY(Factory,
@@ -89,10 +89,12 @@ KCMUserAccount::KCMUserAccount(QWidget *parent, const QVariantList &)
     QFormLayout *formLayout = new QFormLayout;
     topLayout->addLayout(formLayout);
 
-    _currentFaceIcon = new QPushButton;
+    _currentFaceIcon = new FaceIconButton;
     _currentFaceIcon->setMinimumWidth(faceIconSize);
     _currentFaceIcon->setMinimumHeight(faceIconSize);
     _currentFaceIcon->setIconSize(QSize(faceIconSize, faceIconSize));
+    connect(_currentFaceIcon, SIGNAL(pressed(QPoint)), 
+            this, SLOT(slotFaceIconPressed(QPoint)));
     _currentFullName = new QLabel("FullName");
     formLayout->addRow(_currentFaceIcon, _currentFullName);
 
@@ -170,6 +172,20 @@ KCMUserAccount::~KCMUserAccount()
     }
 }
 
+void KCMUserAccount::slotFaceIconClicked(QString filePath) 
+{
+    if (_currentUser)
+        _currentUser->setIconFileName(filePath);
+}
+
+void KCMUserAccount::slotFaceIconPressed(QPoint pos)
+{
+    FaceIconPopup *faceIconPopup = new FaceIconPopup;
+    connect(faceIconPopup, SIGNAL(clickFaceIcon(QString)), 
+            this, SLOT(slotFaceIconClicked(QString)));
+    faceIconPopup->popup(pos);
+}
+
 void KCMUserAccount::slotPasswordEditPressed() 
 {
     ChgPwdDlg *chgPwdDlg = new ChgPwdDlg(_am, this);
@@ -188,22 +204,6 @@ void KCMUserAccount::slotRemoveBtnClicked()
     removeUserDlg->show();
 }
 
-QIcon KCMUserAccount::_faceIcon(QString faceIconPath) 
-{
-    return QIcon(_facePixmap(faceIconPath));
-}
-
-QPixmap KCMUserAccount::_facePixmap(QString faceIconPath) 
-{
-    if (faceIconPath == "") {
-        QPixmap pixmap(faceIconSize, faceIconSize);
-        pixmap.fill();
-        return pixmap;
-    }
-
-    return QPixmap(faceIconPath);
-}
-
 void KCMUserAccount::slotItemClicked(QListWidgetItem *item) 
 {
     QString itemText = item->text();
@@ -215,7 +215,7 @@ void KCMUserAccount::slotItemClicked(QListWidgetItem *item)
         return;
     }
 
-    _currentFaceIcon->setIcon(_faceIcon(_currentUser->iconFileName()));
+    _currentFaceIcon->setIcon(FaceIconPopup::faceIcon(_currentUser->iconFileName()));
     _currentFullName->setText(_currentUser->displayName());
 
     _currentAccountType->setCurrentText((int)_currentUser->accountType() ? 
@@ -266,8 +266,9 @@ void KCMUserAccount::load()
             user.homeDir().startsWith("/home")) {
             QtAccountsService::UserAccount *userAccount = 
                 _am->findUserByName(user.loginName()); 
-            item = new QListWidgetItem(_faceIcon(userAccount->iconFileName()), 
-                                       user.loginName());
+            item = new QListWidgetItem(
+                        FaceIconPopup::faceIcon(userAccount->iconFileName()), 
+                        user.loginName());
             _accountList->addItem(item);
         }
     }

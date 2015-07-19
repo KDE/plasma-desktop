@@ -4,6 +4,8 @@ add_subdirectory(pics)
 
 set(kcm_useraccount_PART_SRCS
     main.cpp
+    faceiconbutton.cpp
+    faceiconpopup.cpp
     pwdedit.cpp
     chgpwddlg.cpp
     adduserdlg.cpp
