@@ -182,7 +182,7 @@ QStringList Kickoff::systemApplicationList()
     KConfigGroup appsGroup = componentData().config()->group("SystemApplications");
     QStringList apps;
     apps << "systemsettings";
-    apps = appsGroup.readEntry("DesktopFiles", apps);
+    apps << appsGroup.readEntry("DesktopFiles", apps);
     return apps;
 }
 

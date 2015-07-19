@@ -93,6 +93,8 @@ SystemModel::SystemModel(QObject *parent)
     roles[Kickoff::DeviceUdiRole] = "deviceudi";
     roles[Kickoff::GroupNameRole] = "group";
     setRoleNames(roles);
+
+    reloadApplications();
 }
 
 SystemModel::~SystemModel()
