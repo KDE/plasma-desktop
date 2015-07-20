@@ -67,6 +67,8 @@ private:
     PwdEdit *_passwdEdit;
     QRadioButton *_autoLoginButton;
     QRadioButton *_nonAutoLoginButton;
+    QString _editUserName;
+    QString _editIconFilePath;
 
     QIcon _faceIcon(QString faceIconPath);
     QPixmap _facePixmap(QString faceIconPath);

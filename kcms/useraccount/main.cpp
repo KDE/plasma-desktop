@@ -56,7 +56,9 @@ KCMUserAccount::KCMUserAccount(QWidget *parent, const QVariantList &)
     _currentFullName(NULL),
     _currentAccountType(NULL),
     _currentLanguage(NULL),
-    _passwdEdit(NULL)
+    _passwdEdit(NULL),
+    _editUserName(""),
+    _editIconFilePath("")
 {
 	QHBoxLayout *topLayout = new QHBoxLayout(this);
     topLayout->setSpacing(KDialog::spacingHint());
@@ -174,8 +176,13 @@ KCMUserAccount::~KCMUserAccount()
 
 void KCMUserAccount::slotFaceIconClicked(QString filePath) 
 {
-    if (_currentUser)
+    if (_currentUser) {
         _currentUser->setIconFileName(filePath);
+        _currentFaceIcon->setIcon(FaceIconPopup::faceIcon(filePath));
+        _editUserName = _currentUser->userName();
+        _editIconFilePath = filePath;
+        load();
+    }
 }
 
 void KCMUserAccount::slotFaceIconPressed(QPoint pos)
@@ -256,7 +263,8 @@ void KCMUserAccount::load()
                                myAccountLoginName);
     _accountList->addItem(item);
     _accountList->setCurrentItem(item);
-    slotItemClicked(item);
+    if (_editUserName == "")
+        slotItemClicked(item);
 
     item = new QListWidgetItem(i18n("Other Accounts"));
     _accountList->addItem(item);
@@ -265,11 +273,17 @@ void KCMUserAccount::load()
         if (user.loginName() != myAccountLoginName && 
             user.homeDir().startsWith("/home")) {
             QtAccountsService::UserAccount *userAccount = 
-                _am->findUserByName(user.loginName()); 
+                _am->findUserByName(user.loginName());
+            QString iconFilePath = _editUserName == user.loginName() ? 
+                                   _editIconFilePath : 
+                                   userAccount->iconFileName();
             item = new QListWidgetItem(
-                        FaceIconPopup::faceIcon(userAccount->iconFileName()), 
+                        FaceIconPopup::faceIcon(iconFilePath), 
                         user.loginName());
             _accountList->addItem(item);
+
+            if (_editUserName != "")
+                _accountList->setCurrentItem(item);
         }
     }
 
