@@ -29,6 +29,8 @@ FaceIconPopup::FaceIconPopup(QWidget *parent, Qt::WindowFlags f)
     setFixedSize(400, 300);
 
     QGridLayout *layout = new QGridLayout;
+    layout->setContentsMargins(0, 0, 0, 0);
+    layout->setSpacing(0);
     setLayout(layout);
 
     QDir dir("/usr/share/pixmaps/faces");
@@ -38,7 +40,7 @@ FaceIconPopup::FaceIconPopup(QWidget *parent, Qt::WindowFlags f)
         QFileInfo fileInfo = list.at(i);
         for (int j = 0; j < columnCount; j++) {
             QFileInfo fileInfo = list.at(i * columnCount + j);
-            layout->addWidget(m_createPixmapButton(fileInfo.absoluteFilePath()), 
+            layout->addWidget(m_createFaceIconLabel(fileInfo.absoluteFilePath()), 
                               i, j);
         }
     }
@@ -54,31 +56,45 @@ void FaceIconPopup::popup(QPoint pos)
     show();
 }
 
-QIcon FaceIconPopup::faceIcon(QString faceIconPath)                          
-{                                                                                  
-    if (faceIconPath == "") {                                                      
-        QPixmap pixmap(faceIconSize, faceIconSize);                                
-        pixmap.fill();                                                             
-        return QIcon(pixmap);                                                             
-    }                                                                              
-                                                                                   
-    return QIcon(QPixmap(faceIconPath));                                                  
+QPixmap FaceIconPopup::facePixmap(const QString faceIconPath) 
+{
+    if (!QFile::exists(faceIconPath)) {
+        QPixmap pixmap(faceIconSize, faceIconSize);
+        pixmap.fill();
+        return pixmap;
+    }
+
+    return QPixmap(faceIconPath);
 }
 
-void FaceIconPopup::slotButtonClicked() 
+QIcon FaceIconPopup::faceIcon(const QString faceIconPath)
+{                                                                                  
+    return QIcon(facePixmap(faceIconPath));
+}
+
+void FaceIconPopup::slotPressed(QString filePath)
 {
-    emit clickFaceIcon(m_clickedFilePath);
+    emit clickFaceIcon(filePath);
     close();
 }
 
-QPushButton *FaceIconPopup::m_createPixmapButton(QString filePath)
+FaceIconLabel *FaceIconPopup::m_createFaceIconLabel(QString filePath)
 {
-    QPushButton *button = new QPushButton;
-    button->setIcon(faceIcon(filePath));
-    button->setMinimumWidth(faceIconSize);
-    button->setMinimumHeight(faceIconSize);
-    button->setIconSize(QSize(faceIconSize, faceIconSize));
-    m_clickedFilePath = filePath;
-    connect(button, SIGNAL(clicked()), this, SLOT(slotButtonClicked()));
-    return button;                                                                  
+    FaceIconLabel *label = new FaceIconLabel(filePath);
+    connect(label, SIGNAL(pressed(QString)), this, SLOT(slotPressed(QString)));
+    return label;
+}
+
+FaceIconLabel::FaceIconLabel(QString filePath, QWidget *parent)
+  : QLabel(parent),
+    m_filePath(filePath)
+{
+    setPixmap(FaceIconPopup::facePixmap(m_filePath).scaled(faceIconSize, faceIconSize));
+    setMaximumWidth(faceIconSize);
+    setMaximumHeight(faceIconSize);
+}
+
+void FaceIconLabel::mousePressEvent(QMouseEvent *) 
+{
+    emit pressed(m_filePath);
 }

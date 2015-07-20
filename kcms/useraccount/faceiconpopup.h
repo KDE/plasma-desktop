@@ -20,9 +20,11 @@
 
 #include <QWidget>
 #include <QIcon>
-#include <QPushButton>
+#include <QLabel>
 
 const int faceIconSize = 46;
+
+class FaceIconLabel;
 
 class FaceIconPopup : public QWidget 
 {
@@ -35,17 +37,34 @@ public:
 
     void popup(QPoint pos);
 
-    static QIcon faceIcon(QString faceIconPath);
+    static QPixmap facePixmap(const QString faceIconPath);
+    static QIcon faceIcon(const QString faceIconPath);
 
 Q_SIGNALS:
     void clickFaceIcon(QString filePath);
 
 private slots:
-    void slotButtonClicked();
+    void slotPressed(QString filePath);
 
 private:
-    QPushButton *m_createPixmapButton(QString filePath);
-    QString m_clickedFilePath;
+    FaceIconLabel *m_createFaceIconLabel(QString filePath);
+};
+
+class FaceIconLabel : public QLabel 
+{
+    Q_OBJECT
+
+public:
+    explicit FaceIconLabel(QString filePath, QWidget *parent = NULL);
+
+Q_SIGNALS:
+    void pressed(QString filePath);
+
+protected:
+    void mousePressEvent(QMouseEvent *);
+
+private:
+    QString m_filePath;
 };
 
 #endif /* __FACEICONPOPUP_H__ */
