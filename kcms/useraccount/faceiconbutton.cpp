@@ -30,5 +30,5 @@ FaceIconButton::~FaceIconButton()
 
 void FaceIconButton::mousePressEvent(QMouseEvent *ev) 
 {
-    emit pressed(QPoint(ev->globalX(), ev->globalY()));
+    emit pressed(QWidget::mapToGlobal(QPoint(0, height())));
 }
