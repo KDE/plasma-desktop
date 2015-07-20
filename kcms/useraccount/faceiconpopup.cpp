@@ -65,9 +65,9 @@ QIcon FaceIconPopup::faceIcon(QString faceIconPath)
     return QIcon(QPixmap(faceIconPath));                                                  
 }
 
-void FaceIconPopup::slotButtonClicked(QString filePath) 
+void FaceIconPopup::slotButtonClicked() 
 {
-    emit clickFaceIcon(filePath);
+    emit clickFaceIcon(m_clickedFilePath);
     close();
 }
 
@@ -78,6 +78,7 @@ QPushButton *FaceIconPopup::m_createPixmapButton(QString filePath)
     button->setMinimumWidth(faceIconSize);
     button->setMinimumHeight(faceIconSize);
     button->setIconSize(QSize(faceIconSize, faceIconSize));
-    connect(button, SIGNAL(clicked()), this, SLOT(slotButtonClicked(filePath)));
+    m_clickedFilePath = filePath;
+    connect(button, SIGNAL(clicked()), this, SLOT(slotButtonClicked()));
     return button;                                                                  
 }

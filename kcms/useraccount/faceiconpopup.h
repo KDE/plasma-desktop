@@ -41,10 +41,11 @@ Q_SIGNALS:
     void clickFaceIcon(QString filePath);
 
 private slots:
-    void slotButtonClicked(QString filePath);
+    void slotButtonClicked();
 
 private:
     QPushButton *m_createPixmapButton(QString filePath);
+    QString m_clickedFilePath;
 };
 
 #endif /* __FACEICONPOPUP_H__ */
