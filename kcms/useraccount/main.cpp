@@ -253,19 +253,27 @@ void KCMUserAccount::load()
         _accountList->takeItem(0);
     }
     
+    // My Account
     QString myAccountLoginName = _ku->loginName();
     
     QListWidgetItem *item = new QListWidgetItem(i18n("My Account"));
     _accountList->addItem(item);
 
     QtAccountsService::UserAccount *myUserAccount = _am->findUserByName(myAccountLoginName);
-    item = new QListWidgetItem(QIcon(QPixmap(myUserAccount->iconFileName())), 
+    QString iconFilePath = _editUserName == myAccountLoginName ? 
+                           _editIconFilePath : 
+                           myUserAccount->iconFileName();
+    item = new QListWidgetItem(FaceIconPopup::faceIcon(iconFilePath), 
                                myAccountLoginName);
     _accountList->addItem(item);
     _accountList->setCurrentItem(item);
+    if (_editUserName == myAccountLoginName)
+        _accountList->setCurrentItem(item);
+
     if (_editUserName == "")
         slotItemClicked(item);
 
+    // Other Accounts
     item = new QListWidgetItem(i18n("Other Accounts"));
     _accountList->addItem(item);
 
@@ -282,7 +290,7 @@ void KCMUserAccount::load()
                         user.loginName());
             _accountList->addItem(item);
 
-            if (_editUserName != "")
+            if (_editUserName == user.loginName())
                 _accountList->setCurrentItem(item);
         }
     }
