@@ -181,6 +181,12 @@ Item {
 
     Binding {
         target: backend.groupManager
+        property: "alwaysUseLauncherIcons"
+        value: plasmoid.configuration.alwaysUseLauncherIcons
+    }
+
+    Binding {
+        target: backend.groupManager
         property: "separateLaunchers"
         value: !iconsOnly
     }
