@@ -28,6 +28,7 @@
 
 #include <QListWidget>
 #include <QPushButton>
+#include <QLineEdit>
 #include <QLabel>
 #include <QComboBox>
 #include <QRadioButton>
@@ -61,9 +62,10 @@ private:
     QtAccountsService::UserAccount *_currentUser;
     bool _unlocked;
     QListWidget *_accountList;
+    QPushButton *_addBtn;
     QPushButton *_removeBtn;
     FaceIconButton *_currentFaceIcon;
-    QLabel *_currentFullName;
+    QLineEdit *_currentFullName;
     QComboBox *_currentAccountType;
     QLabel *_currentLanguage;
     PwdEdit *_passwdEdit;

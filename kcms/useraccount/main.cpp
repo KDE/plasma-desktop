@@ -37,10 +37,7 @@
 #include <QHBoxLayout>
 #include <QVBoxLayout>
 #include <QFormLayout>
-#include <QLabel>
 #include <QIcon>
-#include <QLineEdit>
-#include <QPushButton>
 
 static const int opIconSize = 32;
 static const QString unlockActionId = "org.freedesktop.accounts.user-administration";
@@ -53,6 +50,7 @@ K_EXPORT_PLUGIN(Factory("useraccount"))
 KCMUserAccount::KCMUserAccount(QWidget *parent, const QVariantList &)
   : KCModule(parent),
     _accountList(NULL),
+    _addBtn(NULL),
     _removeBtn(NULL),
     _ku(NULL),
     _am(NULL),
@@ -79,12 +77,13 @@ KCMUserAccount::KCMUserAccount(QWidget *parent, const QVariantList &)
 
     QHBoxLayout *hbox = new QHBoxLayout;
     hbox->setAlignment(Qt::AlignLeft);
-    QPushButton *addBtn = new QPushButton;
-    addBtn->setMaximumWidth(opIconSize);
-    addBtn->setMaximumHeight(opIconSize);
-    addBtn->setIcon(QIcon::fromTheme("list-add"));
-    connect(addBtn, SIGNAL(clicked()), this, SLOT(slotAddBtnClicked()));
-    hbox->addWidget(addBtn);
+    _addBtn = new QPushButton;
+    _addBtn->setEnabled(_unlocked);
+    _addBtn->setMaximumWidth(opIconSize);
+    _addBtn->setMaximumHeight(opIconSize);
+    _addBtn->setIcon(QIcon::fromTheme("list-add"));
+    connect(_addBtn, SIGNAL(clicked()), this, SLOT(slotAddBtnClicked()));
+    hbox->addWidget(_addBtn);
     _removeBtn = new QPushButton;
     _removeBtn->setEnabled(false);
     _removeBtn->setMaximumWidth(opIconSize);
@@ -120,7 +119,8 @@ KCMUserAccount::KCMUserAccount(QWidget *parent, const QVariantList &)
     _currentFaceIcon->setIconSize(QSize(faceIconSize, faceIconSize));
     connect(_currentFaceIcon, SIGNAL(pressed(QPoint)), 
             this, SLOT(slotFaceIconPressed(QPoint)));
-    _currentFullName = new QLabel("FullName");
+    _currentFullName = new QLineEdit("FullName");
+    _currentFullName->setEnabled(false);
     formLayout->addRow(_currentFaceIcon, _currentFullName);
 
     _currentAccountType = new QComboBox;
@@ -136,6 +136,7 @@ KCMUserAccount::KCMUserAccount(QWidget *parent, const QVariantList &)
     formLayout->addRow(new QLabel(i18n("Login Options")));
 
     _passwdEdit = new PwdEdit("password");
+    _passwdEdit->setEnabled(false);
     _passwdEdit->setMaximumWidth(124);
     _passwdEdit->setEchoMode(QLineEdit::PasswordEchoOnEdit);
     connect(_passwdEdit, SIGNAL(pressed()), this, SLOT(slotPasswordEditPressed()));
@@ -143,7 +144,9 @@ KCMUserAccount::KCMUserAccount(QWidget *parent, const QVariantList &)
 
     hbox = new QHBoxLayout;
     _autoLoginButton = new QRadioButton(i18n("Yes"));
+    _autoLoginButton->setEnabled(_unlocked);
     _nonAutoLoginButton = new QRadioButton(i18n("No"));
+    _nonAutoLoginButton->setEnabled(_unlocked);
     hbox->addWidget(_autoLoginButton);
     hbox->addWidget(_nonAutoLoginButton);
     formLayout->addRow(i18n("Automatic Login"), hbox);
@@ -261,12 +264,17 @@ void KCMUserAccount::slotItemClicked(QListWidgetItem *item)
                                         i18n("Administrator") : 
                                         i18n("Standard"));
     if (_currentUser->userName() == _ku->loginName()) {
-        _currentAccountType->setEnabled(_unlocked);
+        _currentFullName->setEnabled(true);
+        _currentAccountType->setEnabled(false);
+        _passwdEdit->setEnabled(true);
         _removeBtn->setEnabled(false);
     } else {
-        _currentAccountType->setEnabled(true);
-        _removeBtn->setEnabled(true);
+        _currentFullName->setEnabled(_unlocked);
+        _currentAccountType->setEnabled(_unlocked);
+        _passwdEdit->setEnabled(_unlocked);
+        _removeBtn->setEnabled(_unlocked);
     }
+    connect(_currentFullName, SIGNAL(editingFinished()), this, SLOT(changed()));
     connect(_currentAccountType, SIGNAL(activated(int)), this, SLOT(changed()));
 
     _currentLanguage->setText(_currentUser->language());
@@ -289,6 +297,13 @@ void KCMUserAccount::actionActivated()
         unlockActionId, subject, PolkitQt1::Authority::AllowUserInteraction);
     if (result == PolkitQt1::Authority::Yes)
         _unlocked = true;
+    else 
+        _unlocked = false;
+
+    _addBtn->setEnabled(_unlocked);
+    _autoLoginButton->setEnabled(_unlocked);
+    _nonAutoLoginButton->setEnabled(_unlocked);
+    load();
 }
 
 void KCMUserAccount::load()
@@ -342,9 +357,10 @@ void KCMUserAccount::save()
 {
     KCModule::save();
 
-    if (_currentUser == NULL) {
+    if (_currentUser == NULL)
         return;
-    }
+
+    _currentUser->setRealName(_currentFullName->text());
 
     _currentUser->setAccountType((QtAccountsService::UserAccount::AccountType)_currentAccountType->currentIndex());
 
