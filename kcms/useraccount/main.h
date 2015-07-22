@@ -53,11 +53,13 @@ private slots:
     void slotPasswordEditPressed();
     void slotAddBtnClicked();
     void slotRemoveBtnClicked();
+    void actionActivated();
 
 private:
     KUser *_ku;
     QtAccountsService::AccountsManager *_am;
     QtAccountsService::UserAccount *_currentUser;
+    bool _unlocked;
     QListWidget *_accountList;
     QPushButton *_removeBtn;
     FaceIconButton *_currentFaceIcon;

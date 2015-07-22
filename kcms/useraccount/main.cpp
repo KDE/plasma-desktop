@@ -31,6 +31,8 @@
 #include <KPluginLoader>
 
 #include <PolkitQt1/Gui/ActionButton>
+#include <PolkitQt1/Authority>
+#include <PolkitQt1/Subject>
 
 #include <QHBoxLayout>
 #include <QVBoxLayout>
@@ -41,6 +43,7 @@
 #include <QPushButton>
 
 static const int opIconSize = 32;
+static const QString unlockActionId = "org.freedesktop.accounts.user-administration";
 
 K_PLUGIN_FACTORY(Factory,
         registerPlugin<KCMUserAccount>();
@@ -54,6 +57,7 @@ KCMUserAccount::KCMUserAccount(QWidget *parent, const QVariantList &)
     _ku(NULL),
     _am(NULL),
     _currentUser(NULL),
+    _unlocked(false),
     _currentFaceIcon(NULL),
     _currentFullName(NULL),
     _currentAccountType(NULL),
@@ -102,9 +106,12 @@ KCMUserAccount::KCMUserAccount(QWidget *parent, const QVariantList &)
     QPushButton *unlockBtn = new QPushButton;
     unlockBtn->setMaximumWidth(opIconSize);
     unlockBtn->setMaximumHeight(opIconSize);
-    unlockBtn->setIcon(QIcon::fromTheme("action-unlocked"));
+    unlockBtn->setIcon(QIcon::fromTheme("object-unlocked"));
     PolkitQt1::Gui::ActionButton *actionBtn = new PolkitQt1::Gui::ActionButton(
-        unlockBtn, "org.freedesktop.accounts.user-administration", this);
+        unlockBtn, unlockActionId, this);
+    connect(actionBtn, SIGNAL(clicked(QAbstractButton*,bool)), 
+            actionBtn, SLOT(activate()));
+    connect(actionBtn, SIGNAL(authorized()), this, SLOT(actionActivated()));
     formLayout->addRow(unlockBtn);
 
     _currentFaceIcon = new FaceIconButton;
@@ -206,9 +213,8 @@ void KCMUserAccount::slotFaceIconClicked(QString filePath)
 void KCMUserAccount::slotFaceIconPressed(QPoint pos)
 {
     if (_currentUser->userName() != _ku->loginName()) {
-        // Unlock
-
-        return;
+        if (!_unlocked)
+            return;
     }
     
     FaceIconPopup *faceIconPopup = new FaceIconPopup;
@@ -255,7 +261,7 @@ void KCMUserAccount::slotItemClicked(QListWidgetItem *item)
                                         i18n("Administrator") : 
                                         i18n("Standard"));
     if (_currentUser->userName() == _ku->loginName()) {
-        _currentAccountType->setEnabled(false);
+        _currentAccountType->setEnabled(_unlocked);
         _removeBtn->setEnabled(false);
     } else {
         _currentAccountType->setEnabled(true);
@@ -271,6 +277,18 @@ void KCMUserAccount::slotItemClicked(QListWidgetItem *item)
     connect(_autoLoginButton, SIGNAL(clicked()), this, SLOT(changed()));
     _nonAutoLoginButton->setChecked(!_currentUser->automaticLogin());
     connect(_nonAutoLoginButton, SIGNAL(clicked()), this, SLOT(changed()));
+}
+
+void KCMUserAccount::actionActivated()
+{
+    PolkitQt1::Authority::Result result;
+    PolkitQt1::UnixProcessSubject subject(static_cast<uint>(
+        QCoreApplication::applicationPid()));
+
+    result = PolkitQt1::Authority::instance()->checkAuthorizationSync(
+        unlockActionId, subject, PolkitQt1::Authority::AllowUserInteraction);
+    if (result == PolkitQt1::Authority::Yes)
+        _unlocked = true;
 }
 
 void KCMUserAccount::load()
@@ -330,7 +348,6 @@ void KCMUserAccount::save()
 
     _currentUser->setAccountType((QtAccountsService::UserAccount::AccountType)_currentAccountType->currentIndex());
 
-    // FIXME: QtAccountsService fail to setAutomaticLogin?
     _currentUser->setAutomaticLogin(_autoLoginButton->isChecked());
 }
 
