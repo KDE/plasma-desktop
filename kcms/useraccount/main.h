@@ -69,9 +69,6 @@ private:
     QRadioButton *_nonAutoLoginButton;
     QString _editUserName;
     QString _editIconFilePath;
-
-    QIcon _faceIcon(QString faceIconPath);
-    QPixmap _facePixmap(QString faceIconPath);
 };
 
 #endif // MAIN_H

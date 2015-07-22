@@ -67,11 +67,13 @@ KCMUserAccount::KCMUserAccount(QWidget *parent, const QVariantList &)
     QVBoxLayout *vbox = new QVBoxLayout;
     _accountList = new QListWidget;
     _accountList->setIconSize(QSize(faceIconSize, faceIconSize));
-	connect(_accountList, SIGNAL(itemClicked(QListWidgetItem*)), 
+    _accountList->setMaximumWidth(206);
+    connect(_accountList, SIGNAL(itemClicked(QListWidgetItem*)), 
             this, SLOT(slotItemClicked(QListWidgetItem*)));
     vbox->addWidget(_accountList);
 
     QHBoxLayout *hbox = new QHBoxLayout;
+    hbox->setAlignment(Qt::AlignLeft);
     QPushButton *addBtn = new QPushButton;
     addBtn->setMaximumWidth(opIconSize);
     addBtn->setMaximumHeight(opIconSize);
@@ -88,7 +90,12 @@ KCMUserAccount::KCMUserAccount(QWidget *parent, const QVariantList &)
     vbox->addLayout(hbox);
     topLayout->addLayout(vbox);
 
+    topLayout->addSpacing(22);
+
     QFormLayout *formLayout = new QFormLayout;
+    formLayout->setLabelAlignment(Qt::AlignLeft);
+    formLayout->setHorizontalSpacing(30);
+    formLayout->setVerticalSpacing(18);
     topLayout->addLayout(formLayout);
 
     _currentFaceIcon = new FaceIconButton;
@@ -101,6 +108,7 @@ KCMUserAccount::KCMUserAccount(QWidget *parent, const QVariantList &)
     formLayout->addRow(_currentFaceIcon, _currentFullName);
 
     _currentAccountType = new QComboBox;
+    _currentAccountType->setMaximumWidth(124);
     _currentAccountType->addItem(i18n("Standard"));
     _currentAccountType->addItem(i18n("Administrator"));
     formLayout->addRow(i18n("Account Type"), _currentAccountType);
@@ -112,6 +120,7 @@ KCMUserAccount::KCMUserAccount(QWidget *parent, const QVariantList &)
     formLayout->addRow(new QLabel(i18n("Login Options")));
 
     _passwdEdit = new PwdEdit("password");
+    _passwdEdit->setMaximumWidth(124);
     _passwdEdit->setEchoMode(QLineEdit::PasswordEchoOnEdit);
     connect(_passwdEdit, SIGNAL(pressed()), this, SLOT(slotPasswordEditPressed()));
     formLayout->addRow(i18n("Password"), _passwdEdit);
