@@ -651,6 +651,9 @@ void MouseConfig::slotWheelScrollLinesChanged(int value)
 
 void MouseSettings::apply(bool force)
 {
+  if (!QX11Info::isPlatformX11()) {
+      return;
+  }
   XChangePointerControl( QX11Info::display(),
                          true, true, int(qRound(accelRate*10)), 10, thresholdMove);
 
