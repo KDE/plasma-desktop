@@ -233,7 +233,6 @@ void KCMUserAccount::slotUnlockBtnClicked()
 void KCMUserAccount::slotFaceIconClicked(QString filePath) 
 {
     if (_currentUser) {
-        qDebug() << __PRETTY_FUNCTION__ << _currentUser->userName() << filePath;
         _currentUser->setIconFileName(filePath);
         _currentFaceIcon->setIcon(FaceIconPopup::faceIcon(filePath));
         _editUserName = _currentUser->userName();

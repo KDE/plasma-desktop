@@ -17,37 +17,45 @@
 
 #include "faceiconpopup.h"
 
-#include <QGridLayout>
 #include <QDir>
 #include <QFileInfo>
 
 static const unsigned int columnCount = 5;
 
 FaceIconPopup::FaceIconPopup(QWidget *parent, Qt::WindowFlags f)
-  : QWidget(parent, f)
+  : QWidget(parent, f),
+    m_layout(NULL)
 {
-    setFixedSize(400, 300);
+    setFixedSize(280, 320);
 
-    QGridLayout *layout = new QGridLayout;
-    layout->setContentsMargins(0, 0, 0, 0);
-    layout->setSpacing(0);
-    setLayout(layout);
+    m_layout = new QGridLayout;
+    setLayout(m_layout);
 
     QDir dir("/usr/share/pixmaps/faces");
     dir.setFilter(QDir::Files | QDir::NoSymLinks);
     QFileInfoList list = dir.entryInfoList();
+
+    dir.setPath("/usr/share/kdm/pics/users");
+    dir.setFilter(QDir::Files | QDir::NoSymLinks);
+    list << dir.entryInfoList();
+
     for (int i = 0; i < list.size() / columnCount; i++) {
         QFileInfo fileInfo = list.at(i);
         for (int j = 0; j < columnCount; j++) {
             QFileInfo fileInfo = list.at(i * columnCount + j);
-            layout->addWidget(m_createFaceIconLabel(fileInfo.absoluteFilePath()), 
-                              i, j);
+            m_layout->addWidget(
+                m_createFaceIconLabel(fileInfo.absoluteFilePath()),
+                i, j);
         }
     }
 }
 
 FaceIconPopup::~FaceIconPopup() 
 {
+    if (m_layout) {
+        delete m_layout;
+        m_layout = NULL;
+    }
 }
 
 void FaceIconPopup::popup(QPoint pos) 

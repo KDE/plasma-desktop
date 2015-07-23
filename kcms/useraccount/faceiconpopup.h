@@ -21,6 +21,7 @@
 #include <QWidget>
 #include <QIcon>
 #include <QLabel>
+#include <QGridLayout>
 
 const int faceIconSize = 46;
 
@@ -47,6 +48,8 @@ private slots:
     void slotPressed(QString filePath);
 
 private:
+    QGridLayout *m_layout;
+
     FaceIconLabel *m_createFaceIconLabel(QString filePath);
 };
 
