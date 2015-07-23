@@ -56,6 +56,7 @@ private slots:
     void slotPasswordEditPressed();
     void slotAddBtnClicked();
     void slotRemoveBtnClicked();
+    void slotUnlockBtnClicked();
     void actionActivated();
 
 private:
@@ -76,6 +77,8 @@ private:
     QRadioButton *_nonAutoLoginButton;
     QString _editUserName;
     QString _editIconFilePath;
+
+    void _unlockUi();
 };
 
 #endif // MAIN_H

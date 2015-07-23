@@ -110,7 +110,7 @@ KCMUserAccount::KCMUserAccount(QWidget *parent, const QVariantList &)
         unlockBtn, unlockActionId, this);
     _actionBtn->setText(i18n("Unlock"));
     _actionBtn->setIcon(QIcon::fromTheme("document-encrypt"));
-    connect(_actionBtn, SIGNAL(clicked(QAbstractButton*,bool)), 
+    connect(_actionBtn, SIGNAL(clicked(QAbstractButton *, bool)), 
             _actionBtn, SLOT(activate()));
     connect(_actionBtn, SIGNAL(authorized()), this, SLOT(actionActivated()));
     formLayout->addRow(unlockBtn);
@@ -132,8 +132,6 @@ KCMUserAccount::KCMUserAccount(QWidget *parent, const QVariantList &)
     formLayout->addRow(i18n("Account Type"), _currentAccountType);
 
     _currentLanguage = new QLabel("English");
-    // @pm not implement language, right?
-    //formLayout->addRow(i18n("Language"), _currentLanguage);
 
     formLayout->addRow(new QLabel(i18n("Login Options")));
 
@@ -166,6 +164,10 @@ KCMUserAccount::KCMUserAccount(QWidget *parent, const QVariantList &)
     _ku = new KUser;
 
     _am = new QtAccountsService::AccountsManager;
+    connect(_am, &QtAccountsService::AccountsManager::userDeleted,
+            this, &KCMUserAccount::load);
+    connect(_am, &QtAccountsService::AccountsManager::userAdded,
+            this, &KCMUserAccount::load);
 }
 
 KCMUserAccount::~KCMUserAccount()
@@ -201,6 +203,30 @@ KCMUserAccount::~KCMUserAccount()
     if (_am) {
         delete _am;
         _am = NULL;
+    }
+}
+
+void KCMUserAccount::_unlockUi() 
+{
+    _actionBtn->setText(_unlocked ? i18n("Lock") : i18n("Unlock"));
+    _actionBtn->setIcon(_unlocked ?
+                        QIcon::fromTheme("document-encrypted") :
+                        QIcon::fromTheme("document-encrypt"));
+    _addBtn->setEnabled(_unlocked);
+    _autoLoginButton->setEnabled(_unlocked);
+    _nonAutoLoginButton->setEnabled(_unlocked);
+    load();
+}
+
+void KCMUserAccount::slotUnlockBtnClicked() 
+{
+    if (_unlocked) {
+        _unlocked = false;
+        _unlockUi();
+        disconnect(_actionBtn, SIGNAL(clicked(QAbstractButton *, bool)),
+                   this, SLOT(slotUnlockBtnClicked()));
+        connect(_actionBtn, SIGNAL(clicked(QAbstractButton *, bool)),
+                _actionBtn, SLOT(activate()));
     }
 }
 
@@ -336,14 +362,11 @@ void KCMUserAccount::actionActivated()
     else 
         _unlocked = false;
 
-    _actionBtn->setText(_unlocked ? i18n("Lock") : i18n("Unlock"));
-    _actionBtn->setIcon(_unlocked ? 
-                        QIcon::fromTheme("document-encrypted") : 
-                        QIcon::fromTheme("document-encrypt"));
-    _addBtn->setEnabled(_unlocked);
-    _autoLoginButton->setEnabled(_unlocked);
-    _nonAutoLoginButton->setEnabled(_unlocked);
-    load();
+    _unlockUi();
+    disconnect(_actionBtn, SIGNAL(clicked(QAbstractButton *, bool)),
+               _actionBtn, SLOT(activate()));
+    connect(_actionBtn, SIGNAL(clicked(QAbstractButton*, bool)),
+            this, SLOT(slotUnlockBtnClicked()));
 }
 
 void KCMUserAccount::load()
