@@ -23,6 +23,8 @@
 /* QtAccountsService */
 #include <QtAccountsService/AccountsManager>
 
+#include <PolkitQt1/Gui/ActionButton>
+
 #include "faceiconbutton.h"
 #include "pwdedit.h"
 
@@ -62,6 +64,7 @@ private:
     QtAccountsService::UserAccount *_currentUser;
     bool _unlocked;
     QListWidget *_accountList;
+    PolkitQt1::Gui::ActionButton *_actionBtn;
     QPushButton *_addBtn;
     QPushButton *_removeBtn;
     FaceIconButton *_currentFaceIcon;

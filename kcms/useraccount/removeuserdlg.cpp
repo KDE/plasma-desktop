@@ -1,5 +1,6 @@
 /**
  *  Copyright (C) 2015 Leslie Zhai <xiang.zhai@i-soft.com.cn>
+ *  Copyright (C) 2015 fjiang <fujiang.zhu@i-soft.com.cn>
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -17,16 +18,93 @@
 
 #include "removeuserdlg.h"
 
-RemoveUserDlg::RemoveUserDlg(QtAccountsService::AccountsManager *am, 
+#include <unistd.h>
+#include <QMessageBox>
+#include <qapplication.h>
+#include <kdialog.h>
+
+RemoveUserDlg::RemoveUserDlg(QtAccountsService::AccountsManager *am,
+                             QtAccountsService::UserAccount *ua,
                              QWidget *parent, 
                              Qt::WindowFlags f)
-  : QWidget(parent, f),
-    _am(am)
+  : KDialog(parent),
+    _am(am),
+    _ua(ua)
 {
     setWindowModality(Qt::WindowModal);
-    setFixedSize(400, 300);
+    setButtons(0);
+    setWindowFlags(windowFlags()&~Qt::WindowMaximizeButtonHint);
+
+    Dlg = new QWidget;
+    ui.setupUi(Dlg);
+
+    setMainWidget(Dlg);
+    Dlg->setWindowModality(Qt::WindowModal);
+
+    QObject::connect(ui._cancelBtn, SIGNAL(clicked()), this, SLOT(close()));
+    QObject::connect(ui._delBtn, SIGNAL(clicked()), this, SLOT(slotDeleteByAction()));
+    QObject::connect(ui._delAccountRadio, SIGNAL(clicked()), this, SLOT(slotDeleteUserKeepFile()));
+    QObject::connect(ui._delAllRadio, SIGNAL(clicked()), this, SLOT(slotDeleteUserDelFile()));
+    QObject::connect(ui._delBakRadio, SIGNAL(clicked()), this, SLOT(slotDeleteUserMoveFile()));
+    setFixedSize(515, 250);
+}
+
+
+void RemoveUserDlg::relDeleteUser(bool keepFileFlag)
+{
+    if (_ua && _ua->automaticLogin())
+        _ua->setAutomaticLogin(0);
+
+    if (_am && _am->deleteUser(_ua->userId(), !keepFileFlag)) {
+        _am->uncacheUser(_ua);
+    } else {
+        char info[128] = "";
+        strncpy(info, "Failed to delete user", sizeof(info));
+        QMessageBox::warning(this, "warning", info);
+    }
+
+    close();
+}
+
+
+void RemoveUserDlg::slotDeleteByAction()
+{
+    if (keepFileFlag == 1)
+        relDeleteUser(true);
+    else if (keepFileFlag == 0)
+        relDeleteUser(false);
+    else if (keepFileFlag == 2)
+        close();
+    else
+        close();
+}
+
+void RemoveUserDlg::slotDeleteUserDelFile()
+{
+    keepFileFlag = 0;
+}
+
+
+void RemoveUserDlg::slotDeleteUserKeepFile()
+{
+    keepFileFlag = 1;
+}
+
+void RemoveUserDlg::slotDeleteUserMoveFile()
+{
+    keepFileFlag = 2;
+    return;
 }
 
 RemoveUserDlg::~RemoveUserDlg() 
 {
+    if(ui._deleteInfoHead) delete ui._deleteInfoHead;
+    if(ui._delAllRadio) delete ui._delAllRadio;
+    if(ui._delAccountRadio) delete ui._delAccountRadio;
+    if(ui._delBakRadio) delete ui._delBakRadio;
+    if(ui._delBtn) delete ui._delBtn;
+    if(ui._cancelBtn) delete ui._cancelBtn;
+    if(ui._deleteInfo) delete ui._deleteInfo;
+
+    delete Dlg;
 }

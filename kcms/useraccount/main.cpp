@@ -1,5 +1,6 @@
 /**
  *  Copyright (C) 2015 Leslie Zhai <xiang.zhai@i-soft.com.cn>
+ *  Copyright (C) 2015 fjiang <fujiang.zhu@i-soft.com.cn>
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -30,7 +31,6 @@
 #include <KPluginFactory>
 #include <KPluginLoader>
 
-#include <PolkitQt1/Gui/ActionButton>
 #include <PolkitQt1/Authority>
 #include <PolkitQt1/Subject>
 
@@ -38,6 +38,7 @@
 #include <QVBoxLayout>
 #include <QFormLayout>
 #include <QIcon>
+#include <QMessageBox>
 
 static const int opIconSize = 32;
 static const QString unlockActionId = "org.freedesktop.accounts.user-administration";
@@ -103,14 +104,15 @@ KCMUserAccount::KCMUserAccount(QWidget *parent, const QVariantList &)
     topLayout->addLayout(formLayout);
 
     QPushButton *unlockBtn = new QPushButton;
-    unlockBtn->setMaximumWidth(opIconSize);
+    unlockBtn->setMaximumWidth(100);
     unlockBtn->setMaximumHeight(opIconSize);
-    unlockBtn->setIcon(QIcon::fromTheme("object-unlocked"));
-    PolkitQt1::Gui::ActionButton *actionBtn = new PolkitQt1::Gui::ActionButton(
+    _actionBtn = new PolkitQt1::Gui::ActionButton(
         unlockBtn, unlockActionId, this);
-    connect(actionBtn, SIGNAL(clicked(QAbstractButton*,bool)), 
-            actionBtn, SLOT(activate()));
-    connect(actionBtn, SIGNAL(authorized()), this, SLOT(actionActivated()));
+    _actionBtn->setText(i18n("Unlock"));
+    _actionBtn->setIcon(QIcon::fromTheme("document-encrypt"));
+    connect(_actionBtn, SIGNAL(clicked(QAbstractButton*,bool)), 
+            _actionBtn, SLOT(activate()));
+    connect(_actionBtn, SIGNAL(authorized()), this, SLOT(actionActivated()));
     formLayout->addRow(unlockBtn);
 
     _currentFaceIcon = new FaceIconButton;
@@ -228,8 +230,13 @@ void KCMUserAccount::slotFaceIconPressed(QPoint pos)
 
 void KCMUserAccount::slotPasswordEditPressed() 
 {
-    ChgPwdDlg *chgPwdDlg = new ChgPwdDlg(_am, this);
+    ChgPwdDlg *chgPwdDlg = new ChgPwdDlg(_currentUser, this);
     chgPwdDlg->show();
+
+    if (chgPwdDlg->exec() == QDialog::Accepted)
+        QMessageBox::warning(this, "warning", "info", "okok");
+
+    delete chgPwdDlg;
 }
 
 void KCMUserAccount::slotAddBtnClicked()
@@ -240,8 +247,37 @@ void KCMUserAccount::slotAddBtnClicked()
 
 void KCMUserAccount::slotRemoveBtnClicked()
 {
-    RemoveUserDlg *removeUserDlg = new RemoveUserDlg(_am, this);
-    removeUserDlg->show();
+    char info[512] = "";
+
+    if (!_currentUser || !_am)
+        return;
+
+    if (getuid() == _currentUser->userId()) {
+        strncpy(info, "You cannot delete your own account.", sizeof(info));
+        QMessageBox::warning(this, "warning", info);
+        return;
+    } else if(0) {
+        strncpy(info, "Deleting a user while they are logged in can leave the "
+                      "system in an inconsistent state.", 
+                sizeof(info));
+        QMessageBox::warning(this, "warning", info);
+        return;
+    } else if(_currentUser->isLocalAccount()) {
+        snprintf(info, sizeof(info), "will delete local account, uid[%d]", 
+                 (int)_currentUser->userId());
+    } else {
+        strncpy(info, "will delete enterprise user account.", sizeof(info));
+        QMessageBox::warning(this, "warning", info);
+        return;
+    }
+
+    RemoveUserDlg *removeUserDlg = new RemoveUserDlg(_am, _currentUser, this);
+    if (removeUserDlg->exec() == QDialog::Accepted)
+        QMessageBox::warning(this, "warning", "info", "ok");
+
+    delete removeUserDlg;
+
+    return;
 }
 
 void KCMUserAccount::slotItemClicked(QListWidgetItem *item) 
@@ -300,6 +336,10 @@ void KCMUserAccount::actionActivated()
     else 
         _unlocked = false;
 
+    _actionBtn->setText(_unlocked ? i18n("Lock") : i18n("Unlock"));
+    _actionBtn->setIcon(_unlocked ? 
+                        QIcon::fromTheme("document-encrypted") : 
+                        QIcon::fromTheme("document-encrypt"));
     _addBtn->setEnabled(_unlocked);
     _autoLoginButton->setEnabled(_unlocked);
     _nonAutoLoginButton->setEnabled(_unlocked);
