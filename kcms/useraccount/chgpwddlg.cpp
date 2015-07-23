@@ -87,7 +87,7 @@ void ChgPwdDlg::slotChangePwd()
         qsrand(time(NULL));
         int n = qrand();
         char salt[8] = "";
-        snprintf(salt, sizeof(salt), "$6$%02d", n);
+        snprintf(salt, sizeof(salt) - 1, "$6$%02d", n);
         char *crystr = crypt(qPrintable(newStr), salt);
         if (crystr == NULL) {
             QMessageBox::warning(this, "warning", 

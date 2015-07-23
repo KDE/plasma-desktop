@@ -288,7 +288,7 @@ void KCMUserAccount::slotRemoveBtnClicked()
         QMessageBox::warning(this, "warning", info);
         return;
     } else if(_currentUser->isLocalAccount()) {
-        snprintf(info, sizeof(info), "will delete local account, uid[%d]", 
+        snprintf(info, sizeof(info) - 1, "will delete local account, uid[%d]", 
                  (int)_currentUser->userId());
     } else {
         strncpy(info, "will delete enterprise user account.", sizeof(info));
