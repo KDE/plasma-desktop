@@ -595,6 +595,8 @@ Kicker.FullScreenWindow {
 
                         property bool allApps: false
                         property int eligibleWidth: width
+                        property int hItemMargins: Math.max(highlightItemSvg.margins.left + highlightItemSvg.margins.right,
+                            listItemSvg.margins.left + listItemSvg.margins.right)
 
                         model: rootModel
 
@@ -751,6 +753,7 @@ Kicker.FullScreenWindow {
                             }
 
                             filterListColumn.columns = Math.ceil(width / cellSize);
+                            filterListScrollArea.width = width + hItemMargins + (units.gridUnit * 2);
                         }
 
                         function applyFilter() {
