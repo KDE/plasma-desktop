@@ -98,13 +98,5 @@ void RemoveUserDlg::slotDeleteUserMoveFile()
 
 RemoveUserDlg::~RemoveUserDlg() 
 {
-    if(ui._deleteInfoHead) delete ui._deleteInfoHead;
-    if(ui._delAllRadio) delete ui._delAllRadio;
-    if(ui._delAccountRadio) delete ui._delAccountRadio;
-    if(ui._delBakRadio) delete ui._delBakRadio;
-    if(ui._delBtn) delete ui._delBtn;
-    if(ui._cancelBtn) delete ui._cancelBtn;
-    if(ui._deleteInfo) delete ui._deleteInfo;
-
     delete Dlg;
 }

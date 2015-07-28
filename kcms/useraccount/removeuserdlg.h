@@ -68,6 +68,7 @@ public:
         _delAllRadio = new QRadioButton(Dialog);
         _delAllRadio->setObjectName(QStringLiteral("_delAllRadio"));
         _delAllRadio->setGeometry(QRect(93, 89, 200, 21));
+        _delAllRadio->setChecked(true);
         QSizePolicy sizePolicy1(QSizePolicy::Expanding, QSizePolicy::Preferred);
         sizePolicy1.setHorizontalStretch(0);
         sizePolicy1.setVerticalStretch(0);
@@ -152,7 +153,7 @@ private:
     Ui::dlg ui;
     QWidget *Dlg;
     void relDeleteUser(bool keepFileFlag);
-    int keepFileFlag = -1;
+    int keepFileFlag = 0;
 };
 
 

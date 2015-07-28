@@ -43,7 +43,7 @@ AddUserDlg::AddUserDlg(QtAccountsService::AccountsManager *am,
     QObject::connect(ui.cancelBtn, SIGNAL(clicked()), this, SLOT(close()));
     QObject::connect(ui.addBtn, SIGNAL(clicked()), this, SLOT(slotAddUser()));
 
-    setFixedSize(436, 520);
+    setFixedSize(436, 460);
 }
 
 AddUserDlg::~AddUserDlg() 
@@ -111,8 +111,10 @@ void AddUserDlg::slotAddUser()
     user = __am->findUserByName(userName);
 
     if (!user) {
-        QMessageBox::warning(this, "warning",i18n("The user has been added,but cannot find it."));
+        QMessageBox::warning(this, "warning",
+            i18n("The user has been added,but cannot find it, please change password manually."));
         delete __am;
+        close();
         return;
     }
 
@@ -123,13 +125,13 @@ void AddUserDlg::slotAddUser()
     char *crystr = crypt(qPrintable(ui.verifyPwdEdit->text()), salt);
     if (crystr == NULL) {
         QMessageBox::warning(this, "warning",
-            i18n("fail to crypt password, please try again."));
+            i18n("fail to crypt password, please change password manually."));
         delete __am;
+        close();
         return;
     }
     user->setPassword(crystr);
     user->setAutomaticLogin(ui.autoLoginCheckBox->isChecked()?true:false);
-    user->setLanguage(ui.accLangComBox->currentText() );
 
     delete __am;
 

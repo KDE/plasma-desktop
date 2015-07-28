@@ -55,17 +55,6 @@ ChgPwdDlg::ChgPwdDlg(QtAccountsService::UserAccount *ua,
 
 ChgPwdDlg::~ChgPwdDlg() 
 {
-
-    if (ui.curPwdEdit) delete ui.curPwdEdit;
-    if (ui.curPwdLabel) delete ui.curPwdLabel;
-    if (ui.curPwdLabel_2) delete ui.curPwdLabel_2;
-    if (ui.cancelBtn) delete ui.cancelBtn;
-    if (ui.changeBtn) delete ui.changeBtn;
-    if (ui.newPwdEdit) delete ui.newPwdEdit;
-    if (ui.verPwdEdit) delete ui.verPwdEdit;
-    if (ui.verPwdLabel) delete ui.verPwdLabel;
-    if (ui.newPwdLabel) delete ui.newPwdLabel;
-
     delete Dlg;
 }
 
@@ -90,12 +79,12 @@ void ChgPwdDlg::slotChangePwd()
         snprintf(salt, sizeof(salt) - 1, "$6$%02d", n);
         char *crystr = crypt(qPrintable(newStr), salt);
         if (crystr == NULL) {
-            QMessageBox::warning(this, "warning", 
+            QMessageBox::warning(this, "warning",
                 i18n("fail to crypt password, please try again."));
             close();
         }
         _ua->setPassword(crystr);
-        KWallet::Wallet::changePassword(newStr, effectiveWinId());
+        KWallet::Wallet::changePassword(_ua->userName(), effectiveWinId());
         close();
     } else {
         QMessageBox::warning(this, "warning", 

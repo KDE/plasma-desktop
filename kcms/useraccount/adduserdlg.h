@@ -1,7 +1,6 @@
 /**
  *  Copyright (C) 2015 Leslie Zhai <xiang.zhai@i-soft.com.cn>
  *  Copyright (C) 2015 fjiang <fujiang.zhu@i-soft.com.cn>
- *  
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
  *  the Free Software Foundation; either version 2 of the License, or
@@ -48,8 +47,6 @@ public:
     QLabel *verifyPwdLabel;
     QLabel *AccTypeLable;
     QComboBox *AccTypeComBox;
-    QLabel *accLanguageLabel;
-    QComboBox *accLangComBox;
     QLabel *autoLoginLabel;
     QCheckBox *autoLoginCheckBox;
     QCheckBox *canLoginCheckBox;
@@ -60,17 +57,20 @@ public:
         if (Dialog->objectName().isEmpty())
             Dialog->setObjectName(QStringLiteral("Dialog"));
 
-        Dialog->resize(436, 510);
+		Dialog->resize(436, 460);
         userNameEdit = new QLineEdit(Dialog);
         userNameEdit->setObjectName(QStringLiteral("userNameEdit"));
-        userNameEdit->setGeometry(QRect(150, 130, 171, 21));
+        userNameEdit->setGeometry(QRect(150, 113, 171, 21));
         userNameEdit->setContextMenuPolicy(Qt::NoContextMenu);
         userNameEdit->setAutoFillBackground(true);
         userNameEdit->setMaxLength(32);
         userNameEdit->setEchoMode(QLineEdit::Normal);
+        QRegExp regx("[A-Za-z0-9_-]+$");
+        QValidator *validator = new QRegExpValidator(regx, userNameEdit );
+        userNameEdit->setValidator( validator );
         userNameLabel = new QLabel(Dialog);
         userNameLabel->setObjectName(QStringLiteral("userNameLabel"));
-        userNameLabel->setGeometry(QRect(10, 130, 131, 20));
+        userNameLabel->setGeometry(QRect(10, 113, 131, 20));
         userNameLabel->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         headLable = new QLabel(Dialog);
         headLable->setObjectName(QStringLiteral("headLable"));
@@ -83,18 +83,18 @@ public:
         headLable->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
         cancelBtn = new QPushButton(Dialog);
         cancelBtn->setObjectName(QStringLiteral("cancelBtn"));
-        cancelBtn->setGeometry(QRect(260, 450, 75, 27));
+        cancelBtn->setGeometry(QRect(260, 394, 75, 27));
         addBtn = new QPushButton(Dialog);
         addBtn->setObjectName(QStringLiteral("addBtn"));
-        addBtn->setGeometry(QRect(100, 450, 75, 27));
+        addBtn->setGeometry(QRect(100, 394, 75, 27));
         PwdEdit = new QLineEdit(Dialog);
         PwdEdit->setObjectName(QStringLiteral("PwdEdit"));
-        PwdEdit->setGeometry(QRect(150, 170, 171, 21));
+        PwdEdit->setGeometry(QRect(150, 153, 171, 21));
         PwdEdit->setMaxLength(32);
         PwdEdit->setEchoMode(QLineEdit::PasswordEchoOnEdit);
         passwordLabel = new QLabel(Dialog);
         passwordLabel->setObjectName(QStringLiteral("passwordLabel"));
-        passwordLabel->setGeometry(QRect(10, 170, 131, 20));
+        passwordLabel->setGeometry(QRect(10, 153, 131, 20));
         passwordLabel->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         littleHeadLabel = new QLabel(Dialog);
         littleHeadLabel->setObjectName(QStringLiteral("littleHeadLabel"));
@@ -102,40 +102,33 @@ public:
         littleHeadLabel->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
         verifyPwdEdit = new QLineEdit(Dialog);
         verifyPwdEdit->setObjectName(QStringLiteral("verifyPwdEdit"));
-        verifyPwdEdit->setGeometry(QRect(150, 210, 171, 21));
+        verifyPwdEdit->setGeometry(QRect(150, 193, 171, 21));
         verifyPwdEdit->setMaxLength(32);
         verifyPwdEdit->setEchoMode(QLineEdit::PasswordEchoOnEdit);
         verifyPwdLabel = new QLabel(Dialog);
         verifyPwdLabel->setObjectName(QStringLiteral("verifyPwdLabel"));
-        verifyPwdLabel->setGeometry(QRect(10, 210, 131, 20));
+        verifyPwdLabel->setGeometry(QRect(10, 193, 131, 20));
         verifyPwdLabel->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         AccTypeLable = new QLabel(Dialog);
         AccTypeLable->setObjectName(QStringLiteral("AccTypeLable"));
-        AccTypeLable->setGeometry(QRect(10, 250, 131, 20));
+        AccTypeLable->setGeometry(QRect(10, 236, 131, 20));
         AccTypeLable->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         AccTypeComBox = new QComboBox(Dialog);
         AccTypeComBox->setObjectName(QStringLiteral("AccTypeComBox"));
-        AccTypeComBox->setGeometry(QRect(150, 250, 171, 25));
-        accLanguageLabel = new QLabel(Dialog);
-        accLanguageLabel->setObjectName(QStringLiteral("accLanguageLabel"));
-        accLanguageLabel->setGeometry(QRect(10, 290, 131, 20));
-        accLanguageLabel->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-        accLangComBox = new QComboBox(Dialog);
-        accLangComBox->setObjectName(QStringLiteral("accLangComBox"));
-        accLangComBox->setGeometry(QRect(150, 290, 171, 25));
+        AccTypeComBox->setGeometry(QRect(150, 233, 171, 25));
         autoLoginLabel = new QLabel(Dialog);
         autoLoginLabel->setObjectName(QStringLiteral("autoLoginLabel"));
-        autoLoginLabel->setGeometry(QRect(10, 330, 131, 20));
+        autoLoginLabel->setGeometry(QRect(10, 273, 131, 20));
         autoLoginLabel->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         autoLoginCheckBox = new QCheckBox(Dialog);
         autoLoginCheckBox->setObjectName(QStringLiteral("autoLoginCheckBox"));
-        autoLoginCheckBox->setGeometry(QRect(150, 330, 91, 21));
+        autoLoginCheckBox->setGeometry(QRect(150, 273, 91, 21));
         canLoginCheckBox = new QCheckBox(Dialog);
         canLoginCheckBox->setObjectName(QStringLiteral("canLoginCheckBox"));
-        canLoginCheckBox->setGeometry(QRect(150, 360, 91, 21));
+        canLoginCheckBox->setGeometry(QRect(150, 305, 91, 21));
         canLoginLabel = new QLabel(Dialog);
         canLoginLabel->setObjectName(QStringLiteral("canLoginLabel"));
-        canLoginLabel->setGeometry(QRect(10, 360, 131, 20));
+        canLoginLabel->setGeometry(QRect(10, 305, 131, 20));
         canLoginLabel->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         retranslateUi(Dialog);
@@ -155,27 +148,23 @@ public:
         verifyPwdLabel->setText(QApplication::translate("Dialog", "Verify Password", 0));
         AccTypeLable->setText(QApplication::translate("Dialog", "Account Type", 0));
         AccTypeComBox->clear();
-        AccTypeComBox->insertItems(0, QStringList() 
-            << QApplication::translate("Dialog", "Standard", 0)
-            << QApplication::translate("Dialog", "Administrator", 0)
-        );
-        accLanguageLabel->setText(QApplication::translate("Dialog", "Account Language", 0));
-        accLangComBox->clear();
-        accLangComBox->insertItems(0, QStringList() 
-            << QApplication::translate("Dialog", "Chinese", 0)
-            << QApplication::translate("Dialog", "English", 0)
+        AccTypeComBox->insertItems(0, QStringList()
+         << QApplication::translate("Dialog", "Standard", 0)
+         << QApplication::translate("Dialog", "Administrator", 0)
         );
         autoLoginLabel->setText(QApplication::translate("Dialog", "Auto Login", 0));
         autoLoginCheckBox->setText(QApplication::translate("Dialog", "Enabled", 0));
         canLoginCheckBox->setText(QApplication::translate("Dialog", "Enabled", 0));
         canLoginLabel->setText(QApplication::translate("Dialog", "Login Not Permitted", 0));
     } // retranslateUi
+
 };
 
-namespace Ui 
-{
+namespace Ui {
     class Dialog: public Ui_Dialog {};
 } // namespace Ui
+
+
 
 class AddUserDlg : public KDialog
 {
