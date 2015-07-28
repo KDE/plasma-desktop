@@ -26,6 +26,7 @@
 #include <kdialog.h>
 #include <kaboutdata.h>
 #include <kdebug.h>
+#include <KToolInvocation>
 
 #include "settings.h"
 #include <KPluginFactory>
@@ -150,6 +151,13 @@ KCMUserAccount::KCMUserAccount(QWidget *parent, const QVariantList &)
     hbox->addWidget(_autoLoginButton);
     hbox->addWidget(_nonAutoLoginButton);
     formLayout->addRow(i18n("Automatic Login"), hbox);
+
+    QLabel *autostart = new QLabel(i18n("<a href=\"#\">Autostart application configuration</a>"));
+    connect(autostart, &QLabel::linkActivated, [this]() {
+                KToolInvocation::kdeinitExec(QString("kcmshell5"),
+                    QStringList() << QString("autostart"));
+            });
+    formLayout->addRow(autostart);
 
     KAboutData *about = new KAboutData("kcm_useraccount", i18n("Password & User Information"), "0.1",
         QString(), KAboutLicense::GPL, i18n("(C) 2015, Leslie Zhai"));
