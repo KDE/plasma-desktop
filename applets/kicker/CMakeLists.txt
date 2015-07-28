@@ -27,6 +27,7 @@ set(kickerplugin_SRCS
     plugin/fileentry.cpp
     plugin/forwardingmodel.cpp
     plugin/funnelmodel.cpp
+    plugin/fullscreenwindow.cpp
     plugin/kickerplugin.cpp
     plugin/menuentryeditor.cpp
     plugin/processrunner.cpp

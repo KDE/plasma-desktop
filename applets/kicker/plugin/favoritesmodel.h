@@ -36,6 +36,8 @@ class FavoritesModel : public AbstractModel
         explicit FavoritesModel(QObject *parent = 0);
         ~FavoritesModel();
 
+        QString description() const;
+
         QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
 
         int rowCount(const QModelIndex &parent = QModelIndex()) const;
@@ -50,6 +52,8 @@ class FavoritesModel : public AbstractModel
         Q_INVOKABLE void removeFavorite(const QString &id);
 
         Q_INVOKABLE void moveRow(int from, int to);
+
+        AbstractModel* favoritesModel();
 
     public Q_SLOTS:
         virtual void refresh();

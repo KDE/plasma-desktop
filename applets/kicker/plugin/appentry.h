@@ -78,7 +78,7 @@ class AppGroupEntry : public AbstractGroupEntry
 {
     public:
         AppGroupEntry(AppsModel *parentModel, KServiceGroup::Ptr group,
-            bool flat, int appNameFormat);
+            bool flat, bool separators, int appNameFormat);
 
         QIcon icon() const;
         QString name() const;

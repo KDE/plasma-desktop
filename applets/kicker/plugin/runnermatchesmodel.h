@@ -39,6 +39,8 @@ class RunnerMatchesModel : public AbstractModel
         explicit RunnerMatchesModel(const QString &runnerId, const QString &name,
             Plasma::RunnerManager *manager, QObject *parent = 0);
 
+        QString description() const;
+
         QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
 
         int rowCount(const QModelIndex &parent = QModelIndex()) const;

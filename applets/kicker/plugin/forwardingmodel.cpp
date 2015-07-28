@@ -27,6 +27,21 @@ ForwardingModel::~ForwardingModel()
 {
 }
 
+QString ForwardingModel::description() const
+{
+    if (!m_sourceModel) {
+        return QString();
+    }
+
+    AbstractModel *abstractModel = qobject_cast<AbstractModel *>(m_sourceModel);
+
+    if (!abstractModel) {
+        return QString();
+    }
+
+    return abstractModel->description();
+}
+
 QAbstractItemModel *ForwardingModel::sourceModel() const
 {
     return m_sourceModel;
@@ -45,8 +60,8 @@ void ForwardingModel::setSourceModel(QAbstractItemModel *sourceModel)
     endResetModel();
 
     emit countChanged();
-
     emit sourceModelChanged();
+    emit descriptionChanged();
 }
 
 bool ForwardingModel::canFetchMore(const QModelIndex &parent) const
@@ -126,6 +141,21 @@ bool ForwardingModel::trigger(int row, const QString &actionId, const QVariant &
     return abstractModel->trigger(row, actionId, argument);
 }
 
+QString ForwardingModel::labelForRow(int row)
+{
+    if (!m_sourceModel) {
+        return QString();
+    }
+
+    AbstractModel *abstractModel = qobject_cast<AbstractModel *>(m_sourceModel);
+
+    if (!abstractModel) {
+        return QString();
+    }
+
+    return abstractModel->labelForRow(row);
+}
+
 AbstractModel* ForwardingModel::modelForRow(int row)
 {
     if (!m_sourceModel) {
@@ -172,6 +202,7 @@ void ForwardingModel::reset()
     emit beginResetModel();
     emit endResetModel();
     emit countChanged();
+    emit separatorCountChanged();
 }
 
 void ForwardingModel::connectSignals()

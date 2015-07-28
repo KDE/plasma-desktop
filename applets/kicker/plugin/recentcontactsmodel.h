@@ -35,6 +35,8 @@ class RecentContactsModel : public ForwardingModel
         explicit RecentContactsModel(QObject *parent = 0);
         ~RecentContactsModel();
 
+        QString description() const;
+
         QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
 
         Q_INVOKABLE bool trigger(int row, const QString &actionId, const QVariant &argument);

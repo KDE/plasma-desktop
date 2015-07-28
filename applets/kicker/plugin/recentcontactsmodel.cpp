@@ -47,6 +47,11 @@ RecentContactsModel::~RecentContactsModel()
 {
 }
 
+QString RecentContactsModel::description() const
+{
+    return i18n("Contacts");
+}
+
 QVariant RecentContactsModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid()) {

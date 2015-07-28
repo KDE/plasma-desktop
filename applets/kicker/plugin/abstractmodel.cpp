@@ -80,6 +80,11 @@ void AbstractModel::refresh()
 {
 }
 
+QString AbstractModel::labelForRow(int row)
+{
+    return data(index(row, 0), Qt::DisplayRole).toString();
+}
+
 AbstractModel *AbstractModel::modelForRow(int row)
 {
     Q_UNUSED(row)

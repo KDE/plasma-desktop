@@ -22,6 +22,8 @@
 #include "favoritesmodel.h"
 #include "systementry.h"
 
+#include <KLocalizedString>
+
 SystemModel::SystemModel(QObject *parent) : AbstractModel(parent)
 , m_favoritesModel(new FavoritesModel(this))
 {
@@ -48,6 +50,11 @@ SystemModel::SystemModel(QObject *parent) : AbstractModel(parent)
 SystemModel::~SystemModel()
 {
     qDeleteAll(m_entryList);
+}
+
+QString SystemModel::description() const
+{
+    return i18n("System actions");
 }
 
 QVariant SystemModel::data(const QModelIndex &index, int role) const

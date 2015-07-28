@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2014 by Eike Hein <hein@kde.org>                        *
+ *   Copyright (C) 2015 by Eike Hein <hein@kde.org>                        *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -17,33 +17,45 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#include "kickerplugin.h"
-#include "abstractmodel.h"
-#include "draghelper.h"
-#include "fullscreenwindow.h"
-#include "funnelmodel.h"
-#include "processrunner.h"
-#include "rootmodel.h"
-#include "runnermodel.h"
-#include "submenu.h"
-#include "systemsettings.h"
-#include "windowsystem.h"
+#ifndef FULLSCREENWINDOW_H
+#define FULLSCREENWINDOW_H
 
-#include <QtQml>
+#include <Plasma/Theme>
 
-void KickerPlugin::registerTypes(const char *uri)
+#include <QQuickWindow>
+#include <QQuickItem>
+
+class FullScreenWindow : public QQuickWindow
 {
-    Q_ASSERT(uri == QLatin1String("org.kde.plasma.private.kicker"));
+    Q_OBJECT
 
-    qmlRegisterType<AbstractModel>();
+    Q_PROPERTY(QQuickItem* mainItem READ mainItem WRITE setMainItem NOTIFY mainItemChanged)
 
-    qmlRegisterType<DragHelper>(uri, 0, 1, "DragHelper");
-    qmlRegisterType<FullScreenWindow>(uri, 0, 1, "FullScreenWindow");
-    qmlRegisterType<FunnelModel>(uri, 0, 1, "FunnelModel");
-    qmlRegisterType<ProcessRunner>(uri, 0, 1, "ProcessRunner");
-    qmlRegisterType<RootModel>(uri, 0, 1, "RootModel");
-    qmlRegisterType<RunnerModel>(uri, 0, 1, "RunnerModel");
-    qmlRegisterType<SubMenu>(uri, 0, 1, "SubMenu");
-    qmlRegisterType<SystemSettings>(uri, 0, 1, "SystemSettings");
-    qmlRegisterType<WindowSystem>(uri, 0, 1, "WindowSystem");
-}
+    Q_CLASSINFO("DefaultProperty", "mainItem")
+
+    public:
+        FullScreenWindow(QQuickItem *parent = 0);
+        ~FullScreenWindow();
+
+        QQuickItem *mainItem() const;
+        void setMainItem(QQuickItem *mainItem);
+
+        Q_INVOKABLE void toggle();
+
+    Q_SIGNALS:
+        void mainItemChanged() const;
+
+    private Q_SLOTS:
+        void updateTheme();
+        void parentScreenChanged(const QScreen *screen);
+
+    protected:
+        void showEvent(QShowEvent *event) Q_DECL_OVERRIDE;
+        void hideEvent(QHideEvent *event) Q_DECL_OVERRIDE;
+
+    private:
+        QQuickItem *m_mainItem;
+        Plasma::Theme m_theme;
+};
+
+#endif

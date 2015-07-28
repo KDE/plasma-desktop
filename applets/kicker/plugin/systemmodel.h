@@ -32,6 +32,8 @@ class SystemModel : public AbstractModel
         explicit SystemModel(QObject *parent = 0);
         ~SystemModel();
 
+        QString description() const;
+
         QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
 
         int rowCount(const QModelIndex &parent = QModelIndex()) const;

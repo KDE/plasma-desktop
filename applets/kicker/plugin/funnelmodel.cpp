@@ -53,6 +53,7 @@ void FunnelModel::setSourceModel(QAbstractItemModel *model)
         emit countChanged();
 
         emit sourceModelChanged();
+        emit descriptionChanged();
 
         return;
     }
@@ -91,4 +92,5 @@ void FunnelModel::setSourceModel(QAbstractItemModel *model)
     }
 
     emit sourceModelChanged();
+    emit descriptionChanged();
 }
