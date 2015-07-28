@@ -578,6 +578,8 @@ Kicker.FullScreenWindow {
 
                     Behavior on opacity { SmoothedAnimation { duration: units.longDuration; velocity: 0.01 } }
 
+                    verticalScrollBarPolicy: (opacity == 1.0) ? Qt.ScrollBarAsNeeded : Qt.ScrollBarAlwaysOff
+
                     onEnabledChanged: {
                         if (!enabled) {
                             filterList.currentIndex = -1;
