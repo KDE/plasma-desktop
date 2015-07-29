@@ -37,11 +37,11 @@ Item {
         id: kuser
     }
 
-    AccountsManager {
-        id: accountsManager
+    UserAccount {
+        id: userAccount
 
-        onUserAccountChanged: {
-            faceIcon.source = accountsManager.findUserIconFile(kuser.loginName) != "" ? accountsManager.findUserIconFile(kuser.loginName) : kuser.faceIconUrl;
+        onAccountChanged: {
+            faceIcon.source = userAccount.iconFileName != "" ? userAccount.iconFileName : kuser.faceIconUrl;
         }
     }
 
@@ -65,7 +65,7 @@ Item {
 
     Image {
         id: faceIcon
-        source: accountsManager.findUserIconFile(kuser.loginName) != "" ? accountsManager.findUserIconFile(kuser.loginName) : kuser.faceIconUrl
+        source: userAccount.iconFileName != "" ? userAccount.iconFileName : kuser.faceIconUrl
         cache: false
         visible: source !== ""
 
