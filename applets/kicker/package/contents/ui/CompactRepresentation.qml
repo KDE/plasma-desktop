@@ -121,6 +121,7 @@ Item {
         onClicked: {
             if (isDash) {
                 dashWindow.toggle();
+                justOpenedTimer.start();
             } else {
                 plasmoid.expanded = !wasExpanded;
             }
