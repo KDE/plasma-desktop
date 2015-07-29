@@ -60,11 +60,14 @@ ChgPwdDlg::~ChgPwdDlg()
 
 void ChgPwdDlg::slotChangePwd()
 {
-    if (!ui.newPwdEdit || !ui.verPwdEdit)
-        close();
+    if (!ui.newPwdEdit || !ui.verPwdEdit) {
+        return;
+    }
 
-    if (!_ua)
+    if (!_ua) {
         close();
+        return;
+    }
 
     if (ui.newPwdEdit->text().isEmpty() || ui.verPwdEdit->text().isEmpty())
         return;
