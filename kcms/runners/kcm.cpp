@@ -53,7 +53,22 @@ SearchConfigModule::SearchConfigModule(QWidget* parent, const QVariantList& args
 
     QVBoxLayout* layout = new QVBoxLayout(this);
 
-    QLabel* label = new QLabel(i18n("Select the search plugins"));
+    QHBoxLayout *headerLayout = new QHBoxLayout(this);
+
+    QLabel *label = new QLabel(i18n("Select the search plugins"));
+
+    QPushButton *clearHistoryButton = new QPushButton(i18n("Clear History"));
+    clearHistoryButton->setIcon(QIcon::fromTheme("edit-clear-history"));
+    connect(clearHistoryButton, &QPushButton::clicked, this, [this] {
+        KConfigGroup generalConfig(m_config.group("General"));
+        generalConfig.deleteEntry("history");
+        generalConfig.sync();
+    });
+
+    headerLayout->addWidget(label);
+    headerLayout->addStretch();
+    headerLayout->addWidget(clearHistoryButton);
+
     m_listWidget = new QListWidget(this);
     m_listWidget->setSortingEnabled(true);
     m_listWidget->setMouseTracking(true);
@@ -62,7 +77,7 @@ SearchConfigModule::SearchConfigModule(QWidget* parent, const QVariantList& args
     connect(m_listWidget, SIGNAL(itemChanged(QListWidgetItem*)),
             this, SLOT(changed()));
 
-    layout->addWidget(label);
+    layout->addLayout(headerLayout);
     layout->addWidget(m_listWidget);
 
     m_configButton = new QToolButton(m_listWidget->viewport());
