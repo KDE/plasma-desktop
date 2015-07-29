@@ -258,6 +258,11 @@ void RootModel::refresh()
 
             for (int i = 0; i < model->count(); ++i) {
                 AbstractEntry *appEntry = static_cast<AbstractEntry *>(model->index(i, 0).internalPointer());
+
+                if (appEntry->name().isEmpty()) {
+                    continue;
+                }
+
                 const QChar &first = appEntry->name().at(0).toUpper();
                 m_categoryHash[first.isDigit() ? QStringLiteral("0-9") : first].append(appEntry);
             }
