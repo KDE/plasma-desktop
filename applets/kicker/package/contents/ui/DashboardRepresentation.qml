@@ -385,9 +385,10 @@ Kicker.FullScreenWindow {
                 Item {
                     id: mainGridContainer
 
+                    anchors.fill: parent
                     z: (opacity == 1.0) ? 1 : 0
 
-                    anchors.fill: parent
+                    enabled: (opacity == 1.0) ? 1 : 0
 
                     property int headerHeight: mainColumnLabel.height + mainColumnLabelUnderline.height + units.largeSpacing
 
@@ -474,8 +475,9 @@ Kicker.FullScreenWindow {
                     }
 
                     z: (opacity == 1.0) ? 1 : 0
-
                     width: parent.width
+
+                    enabled: (opacity == 1.0) ? 1 : 0
 
                     model: runnerModel
 
@@ -516,8 +518,9 @@ Kicker.FullScreenWindow {
                     }
 
                     z: (opacity == 1.0) ? 1 : 0
-
                     width: parent.width
+
+                    enabled: (opacity == 1.0) ? 1 : 0
 
                     model: runnerModel
 
