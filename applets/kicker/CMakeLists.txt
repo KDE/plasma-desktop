@@ -27,6 +27,7 @@ set(kickerplugin_SRCS
     plugin/fileentry.cpp
     plugin/forwardingmodel.cpp
     plugin/funnelmodel.cpp
+    plugin/fullscreenwindow.cpp
     plugin/kickerplugin.cpp
     plugin/menuentryeditor.cpp
     plugin/processrunner.cpp
@@ -40,6 +41,7 @@ set(kickerplugin_SRCS
     plugin/systementry.cpp
     plugin/systemmodel.cpp
     plugin/systemsettings.cpp
+    plugin/wheelinterceptor.cpp
     plugin/windowsystem.cpp
 )
 

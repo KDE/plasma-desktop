@@ -53,6 +53,11 @@ RecentAppsModel::~RecentAppsModel()
 {
 }
 
+QString RecentAppsModel::description() const
+{
+    return i18n("Applications");
+}
+
 QVariant RecentAppsModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid()) {

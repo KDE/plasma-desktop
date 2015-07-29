@@ -272,15 +272,15 @@ KService::Ptr AppEntry::defaultAppByName(const QString& name)
 }
 
 AppGroupEntry::AppGroupEntry(AppsModel *parentModel, KServiceGroup::Ptr group,
-    bool flat, int appNameFormat) : AbstractGroupEntry(parentModel)
+    bool flat, bool separators, int appNameFormat) : AbstractGroupEntry(parentModel)
 {
     m_name = group->caption();
     m_icon = QIcon::fromTheme(group->icon(), QIcon::fromTheme("unknown"));
-    AppsModel* model = new AppsModel(group->entryPath(), flat, parentModel);
+    AppsModel* model = new AppsModel(group->entryPath(), flat, separators, parentModel);
     model->setAppNameFormat(appNameFormat);
     m_childModel = model;
 
-    QObject::connect(parentModel, &AppsModel::refreshing, model, &AppsModel::deleteLater);
+    QObject::connect(parentModel, &AppsModel::cleared, model, &AppsModel::deleteLater);
 
     QObject::connect(model, &AppsModel::countChanged,
         [parentModel, this] { if (parentModel) { parentModel->entryChanged(this); } }

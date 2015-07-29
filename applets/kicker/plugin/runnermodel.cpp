@@ -29,6 +29,7 @@
 RunnerModel::RunnerModel(QObject *parent) : QAbstractListModel(parent)
 , m_favoritesModel(0)
 , m_runnerManager(0)
+, m_deleteWhenEmpty(false)
 {
     QHash<int, QByteArray> roles;
     roles.insert(Qt::DisplayRole, "display");
@@ -61,6 +62,20 @@ void RunnerModel::setFavoritesModel(AbstractModel *model)
         }
 
         emit favoritesModelChanged();
+    }
+}
+
+bool RunnerModel::deleteWhenEmpty() const
+{
+    return m_deleteWhenEmpty;
+}
+
+void RunnerModel::setDeleteWhenEmpty(bool deleteWhenEmpty)
+{
+    if (m_deleteWhenEmpty != deleteWhenEmpty) {
+        m_deleteWhenEmpty = deleteWhenEmpty;
+
+        emit deleteWhenEmptyChanged();
     }
 }
 
@@ -167,7 +182,14 @@ void RunnerModel::matchesChanged(const QList<Plasma::QueryMatch> &matches)
         RunnerMatchesModel *matchesModel = m_models.at(row);
         QList<Plasma::QueryMatch> matches = matchesForRunner.take(matchesModel->runnerId());
 
-        matchesModel->setMatches(matches);
+        if (m_deleteWhenEmpty && matches.isEmpty()) {
+            beginRemoveRows(QModelIndex(), row, row);
+            m_models.removeAt(row);
+            delete matchesModel;
+            endRemoveRows();
+        } else {
+            matchesModel->setMatches(matches);
+        }
     }
 
     // At this point, matchesForRunner contains only matches for runners which

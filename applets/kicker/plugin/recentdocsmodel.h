@@ -31,6 +31,8 @@ class RecentDocsModel : public ForwardingModel
         explicit RecentDocsModel(QObject *parent = 0);
         ~RecentDocsModel();
 
+        QString description() const;
+
         QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
 
         Q_INVOKABLE bool trigger(int row, const QString &actionId, const QVariant &argument);

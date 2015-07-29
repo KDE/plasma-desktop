@@ -1,6 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2012 by Aurélien Gâteau <agateau@kde.org>               *
- *   Copyright (C) 2014 by Eike Hein <hein@kde.org>                        *
+ *   Copyright (C) 2014-2015 by Eike Hein <hein@kde.org>                   *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -18,47 +17,54 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#ifndef RUNNERMATCHESMODEL_H
-#define RUNNERMATCHESMODEL_H
+#include "wheelinterceptor.h"
 
-#include "abstractmodel.h"
+#include <QCoreApplication>
 
-#include <KRunner/QueryMatch>
-
-namespace Plasma {
-    class RunnerManager;
+WheelInterceptor::WheelInterceptor(QQuickItem *parent) : QQuickItem(parent)
+{
 }
 
-class RunnerMatchesModel : public AbstractModel
+WheelInterceptor::~WheelInterceptor()
 {
-    Q_OBJECT
+}
 
-    Q_PROPERTY(QString name READ name CONSTANT)
+QQuickItem* WheelInterceptor::destination() const
+{
+    return m_destination;
+}
 
-    public:
-        explicit RunnerMatchesModel(const QString &runnerId, const QString &name,
-            Plasma::RunnerManager *manager, QObject *parent = 0);
+void WheelInterceptor::setDestination(QQuickItem *destination)
+{
+    if (m_destination != destination) {
+        m_destination = destination;
 
-        QString description() const;
+        emit destinationChanged();
+    }
+}
 
-        QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
+void WheelInterceptor::wheelEvent(QWheelEvent* event)
+{
+    if (m_destination) {
+        QCoreApplication::sendEvent(m_destination, event);
+    }
+}
 
-        int rowCount(const QModelIndex &parent = QModelIndex()) const;
+QQuickItem *WheelInterceptor::findWheelArea(QQuickItem *parent) const
+{
+    if (!parent) {
+        return nullptr;
+    }
 
-        Q_INVOKABLE bool trigger(int row, const QString &actionId, const QVariant &argument);
+    foreach(QQuickItem *child, parent->childItems()) {
+        // HACK: ScrollView adds the WheelArea below its flickableItem with
+        // z==-1. This is reasonable non-risky considering we know about
+        // everything else in there, and worst case we break the mouse wheel.
+        if (child->z() == -1) {
+            return child;
+        }
+    }
 
-        QString runnerId() const { return m_runnerId; }
-        QString name() const { return m_name; }
+    return nullptr;
+}
 
-        void setMatches(const QList<Plasma::QueryMatch> &matches);
-
-        AbstractModel* favoritesModel();
-
-    private:
-        QString m_runnerId;
-        QString m_name;
-        Plasma::RunnerManager *m_runnerManager;
-        QList<Plasma::QueryMatch> m_matches;
-};
-
-#endif

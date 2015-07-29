@@ -45,6 +45,11 @@ RecentDocsModel::~RecentDocsModel()
 {
 }
 
+QString RecentDocsModel::description() const
+{
+    return i18n("Documents");
+}
+
 QVariant RecentDocsModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid()) {

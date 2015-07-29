@@ -35,13 +35,20 @@ class AppsModel : public AbstractModel
     Q_OBJECT
 
     Q_PROPERTY(bool flat READ flat WRITE setFlat NOTIFY flatChanged)
+    Q_PROPERTY(bool showSeparators READ showSeparators WRITE setShowSeparators NOTIFY showSeparatorsChanged)
     Q_PROPERTY(int appNameFormat READ appNameFormat WRITE setAppNameFormat NOTIFY appNameFormatChanged)
 
     public:
-        explicit AppsModel(const QString &entryPath = QString(), bool flat = false, QObject *parent = 0);
+        explicit AppsModel(const QString &entryPath = QString(), bool flat = false, bool separators = true, QObject *parent = 0);
+        explicit AppsModel(const QList<AbstractEntry *> entryList, bool deleteEntriesOnDestruction, QObject *parent = 0);
         ~AppsModel();
 
+        QString description() const;
+        void setDescription(const QString &text);
+
         virtual QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
+
+        QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const;
 
         int rowCount(const QModelIndex &parent = QModelIndex()) const;
 
@@ -54,6 +61,9 @@ class AppsModel : public AbstractModel
         bool flat() const;
         void setFlat(bool flat);
 
+        bool showSeparators() const;
+        void setShowSeparators(bool showSeparators);
+
         int appNameFormat() const;
         void setAppNameFormat(int format);
 
@@ -62,25 +72,33 @@ class AppsModel : public AbstractModel
         void entryChanged(AbstractEntry *entry);
 
     Q_SIGNALS:
-        void refreshing() const;
+        void cleared() const;
         void flatChanged() const;
+        void showSeparatorsChanged() const;
         void appNameFormatChanged() const;
-        void hiddenEntriesChanged();
+        void hiddenEntriesChanged() const;
 
     protected Q_SLOTS:
         virtual void refresh();
 
     protected:
+        void refreshInternal();
+
         QList<AbstractEntry *> m_entryList;
+        bool m_deleteEntriesOnDestruction;
         int m_separatorCount;
+        bool m_showSeparators;
 
     private Q_SLOTS:
         void checkSycocaChanges(const QStringList &changes);
 
     private:
         void processServiceGroup(KServiceGroup::Ptr group);
+        void sortEntries();
 
+        QString m_description;
         QString m_entryPath;
+        bool m_staticEntryList;
         QTimer *m_changeTimer;
         bool m_flat;
         bool m_sortNeeded;

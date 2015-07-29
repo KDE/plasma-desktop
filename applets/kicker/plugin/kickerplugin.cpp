@@ -20,12 +20,14 @@
 #include "kickerplugin.h"
 #include "abstractmodel.h"
 #include "draghelper.h"
+#include "fullscreenwindow.h"
 #include "funnelmodel.h"
 #include "processrunner.h"
 #include "rootmodel.h"
 #include "runnermodel.h"
 #include "submenu.h"
 #include "systemsettings.h"
+#include "wheelinterceptor.h"
 #include "windowsystem.h"
 
 #include <QtQml>
@@ -37,11 +39,13 @@ void KickerPlugin::registerTypes(const char *uri)
     qmlRegisterType<AbstractModel>();
 
     qmlRegisterType<DragHelper>(uri, 0, 1, "DragHelper");
+    qmlRegisterType<FullScreenWindow>(uri, 0, 1, "FullScreenWindow");
     qmlRegisterType<FunnelModel>(uri, 0, 1, "FunnelModel");
     qmlRegisterType<ProcessRunner>(uri, 0, 1, "ProcessRunner");
     qmlRegisterType<RootModel>(uri, 0, 1, "RootModel");
     qmlRegisterType<RunnerModel>(uri, 0, 1, "RunnerModel");
     qmlRegisterType<SubMenu>(uri, 0, 1, "SubMenu");
     qmlRegisterType<SystemSettings>(uri, 0, 1, "SystemSettings");
+    qmlRegisterType<WheelInterceptor>(uri, 0, 1, "WheelInterceptor");
     qmlRegisterType<WindowSystem>(uri, 0, 1, "WindowSystem");
 }

@@ -28,6 +28,8 @@ class AbstractModel : public QAbstractListModel
 {
     Q_OBJECT
 
+    Q_PROPERTY(QString description READ description NOTIFY descriptionChanged)
+
     Q_PROPERTY(int count READ count NOTIFY countChanged)
     Q_PROPERTY(int separatorCount READ separatorCount NOTIFY separatorCountChanged)
     Q_PROPERTY(int iconSize READ iconSize WRITE setIconSize NOTIFY iconSizeChanged)
@@ -38,6 +40,8 @@ class AbstractModel : public QAbstractListModel
         ~AbstractModel();
 
         virtual QHash<int, QByteArray> roleNames() const;
+
+        virtual QString description() const = 0;
 
         int count() const;
         virtual int separatorCount() const;
@@ -51,6 +55,8 @@ class AbstractModel : public QAbstractListModel
 
         Q_INVOKABLE virtual void refresh();
 
+        Q_INVOKABLE virtual QString labelForRow(int row);
+
         Q_INVOKABLE virtual AbstractModel *modelForRow(int row);
 
         virtual bool hasActions() const;
@@ -62,6 +68,7 @@ class AbstractModel : public QAbstractListModel
         virtual void entryChanged(AbstractEntry *entry);
 
     Q_SIGNALS:
+        void descriptionChanged() const;
         void countChanged() const;
         void separatorCountChanged() const;
         void iconSizeChanged() const;

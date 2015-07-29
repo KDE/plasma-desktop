@@ -26,6 +26,7 @@ Item {
     id: root
 
     property bool vertical: (plasmoid.formFactor == PlasmaCore.Types.Vertical)
+    property QtObject dashWindow: null
 
     PlasmaCore.IconItem {
         id: buttonIcon
@@ -111,7 +112,24 @@ Item {
 
         hoverEnabled: true
 
-        onPressed: wasExpanded = plasmoid.expanded
-        onClicked: plasmoid.expanded = !wasExpanded
+        onPressed: {
+            if (!isDash) {
+                wasExpanded = plasmoid.expanded
+            }
+        }
+
+        onClicked: {
+            if (isDash) {
+                dashWindow.toggle();
+            } else {
+                plasmoid.expanded = !wasExpanded;
+            }
+        }
+    }
+
+    Component.onCompleted: {
+        if (isDash) {
+            dashWindow = Qt.createQmlObject("DashboardRepresentation {}", root);
+        }
     }
 }

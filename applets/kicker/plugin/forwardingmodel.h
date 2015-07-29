@@ -34,6 +34,8 @@ class ForwardingModel : public AbstractModel
         explicit ForwardingModel(QObject *parent = 0);
         ~ForwardingModel();
 
+        QString description() const;
+
         QAbstractItemModel *sourceModel() const;
         virtual void setSourceModel(QAbstractItemModel *sourceModel);
 
@@ -48,6 +50,8 @@ class ForwardingModel : public AbstractModel
         int rowCount(const QModelIndex &parent = QModelIndex()) const;
 
         Q_INVOKABLE bool trigger(int row, const QString &actionId, const QVariant &argument);
+
+        Q_INVOKABLE QString labelForRow(int row);
 
         Q_INVOKABLE AbstractModel *modelForRow(int row);
 

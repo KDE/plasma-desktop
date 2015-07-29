@@ -28,10 +28,14 @@
 #include <KLocalizedString>
 #include <KSycoca>
 
-AppsModel::AppsModel(const QString &entryPath, bool flat, QObject *parent)
+AppsModel::AppsModel(const QString &entryPath, bool flat, bool separators, QObject *parent)
 : AbstractModel(parent)
+, m_deleteEntriesOnDestruction(true)
 , m_separatorCount(0)
+, m_showSeparators(separators)
+, m_description(i18n("Applications"))
 , m_entryPath(entryPath)
+, m_staticEntryList(false)
 , m_changeTimer(0)
 , m_flat(flat)
 , m_sortNeeded(false)
@@ -42,9 +46,57 @@ AppsModel::AppsModel(const QString &entryPath, bool flat, QObject *parent)
     }
 }
 
+AppsModel::AppsModel(const QList<AbstractEntry *> entryList, bool deleteEntriesOnDestruction, QObject *parent)
+: AbstractModel(parent)
+, m_deleteEntriesOnDestruction(deleteEntriesOnDestruction)
+, m_separatorCount(0)
+, m_showSeparators(false)
+, m_description(i18n("Applications"))
+, m_entryPath(QString())
+, m_staticEntryList(true)
+, m_changeTimer(0)
+, m_flat(true)
+, m_sortNeeded(false)
+, m_appNameFormat(AppEntry::NameOnly)
+{
+    foreach(AbstractEntry *suggestedEntry, entryList) {
+        bool found = false;
+
+        foreach (const AbstractEntry *entry, m_entryList) {
+            if (entry->type() == AbstractEntry::RunnableType
+                && static_cast<const AppEntry *>(entry)->service()->storageId()
+                == static_cast<const AppEntry *>(suggestedEntry)->service()->storageId()) {
+                found = true;
+            }
+        }
+
+        if (!found) {
+            m_entryList << suggestedEntry;
+        }
+    }
+
+    sortEntries();
+}
+
 AppsModel::~AppsModel()
 {
-    qDeleteAll(m_entryList);
+    if (m_deleteEntriesOnDestruction) {
+        qDeleteAll(m_entryList);
+    }
+}
+
+QString AppsModel::description() const
+{
+    return m_description;
+}
+
+void AppsModel::setDescription(const QString &text)
+{
+    if (m_description != text) {
+        m_description = text;
+
+        emit descriptionChanged();
+    }
 }
 
 QVariant AppsModel::data(const QModelIndex &index, int role) const
@@ -90,6 +142,12 @@ QVariant AppsModel::data(const QModelIndex &index, int role) const
 
     return QVariant();
 }
+
+QModelIndex AppsModel::index(int row, int column, const QModelIndex &parent) const
+{
+    return hasIndex(row, column, parent) ? createIndex(row, column, m_entryList.at(row)) : QModelIndex();
+}
+
 
 int AppsModel::rowCount(const QModelIndex &parent) const
 {
@@ -217,6 +275,21 @@ void AppsModel::setFlat(bool flat)
     }
 }
 
+bool AppsModel::showSeparators() const
+{
+    return m_showSeparators;
+}
+
+void AppsModel::setShowSeparators(bool showSeparators) {
+    if (m_showSeparators != showSeparators) {
+        m_showSeparators = showSeparators;
+
+        refresh();
+
+        emit showSeparatorsChanged();
+    }
+}
+
 int AppsModel::appNameFormat() const
 {
     return m_appNameFormat;
@@ -240,12 +313,32 @@ QStringList AppsModel::hiddenEntries() const
 
 void AppsModel::refresh()
 {
+    if (m_staticEntryList) {
+        return;
+    }
+
     beginResetModel();
 
-    emit refreshing();
+    refreshInternal();
 
-    qDeleteAll(m_entryList);
-    m_entryList.clear();
+    endResetModel();
+
+    emit countChanged();
+    emit separatorCountChanged();
+}
+
+void AppsModel::refreshInternal()
+{
+    if (m_staticEntryList) {
+        return;
+    }
+
+    if (m_entryList.count()) {
+        qDeleteAll(m_entryList);
+        m_entryList.clear();
+        emit cleared();
+    }
+
     m_hiddenEntries.clear();
     m_separatorCount = 0;
     m_sortNeeded = false;
@@ -265,7 +358,7 @@ void AppsModel::refresh()
                 KServiceGroup::Ptr subGroup(static_cast<KServiceGroup*>(p.data()));
 
                 if (!subGroup->noDisplay() && subGroup->childCount() > 0) {
-                    AppGroupEntry *groupEntry = new AppGroupEntry(this, subGroup, m_flat, m_appNameFormat);
+                    AppGroupEntry *groupEntry = new AppGroupEntry(this, subGroup, m_flat, m_showSeparators, m_appNameFormat);
                     m_entryList << groupEntry;
                 }
             }
@@ -289,23 +382,9 @@ void AppsModel::refresh()
         }
 
         if (m_sortNeeded) {
-            QCollator c;
-
-            std::sort(m_entryList.begin(), m_entryList.end(),
-                [&c](AbstractEntry* a, AbstractEntry* b) {
-                    if (a->type() != b->type()) {
-                        return a->type() > b->type();
-                    } else {
-                        return c.compare(a->name(), b->name()) < 0;
-                    }
-                });
+            sortEntries();
         }
     }
-
-    endResetModel();
-
-    emit countChanged();
-    emit separatorCountChanged();
 }
 
 void AppsModel::processServiceGroup(KServiceGroup::Ptr group)
@@ -369,7 +448,7 @@ void AppsModel::processServiceGroup(KServiceGroup::Ptr group)
             if (!found) {
                 m_entryList << new AppEntry(this, service, m_appNameFormat);
             }
-        } else if (p->isType(KST_KServiceSeparator)) {
+        } else if (p->isType(KST_KServiceSeparator) && m_showSeparators) {
             if (!m_entryList.count()) {
                 continue;
             }
@@ -392,11 +471,25 @@ void AppsModel::processServiceGroup(KServiceGroup::Ptr group)
                 const KServiceGroup::Ptr serviceGroup(static_cast<KServiceGroup*>(p.data()));
                 processServiceGroup(serviceGroup);
             } else {
-                AppGroupEntry *groupEntry = new AppGroupEntry(this, subGroup, m_flat, m_appNameFormat);
+                AppGroupEntry *groupEntry = new AppGroupEntry(this, subGroup, m_flat, m_showSeparators, m_appNameFormat);
                 m_entryList << groupEntry;
             }
         }
     }
+}
+
+void AppsModel::sortEntries()
+{
+    QCollator c;
+
+    std::sort(m_entryList.begin(), m_entryList.end(),
+        [&c](AbstractEntry* a, AbstractEntry* b) {
+            if (a->type() != b->type()) {
+                return a->type() > b->type();
+            } else {
+                return c.compare(a->name(), b->name()) < 0;
+            }
+        });
 }
 
 void AppsModel::checkSycocaChanges(const QStringList &changes)

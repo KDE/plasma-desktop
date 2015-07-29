@@ -25,6 +25,7 @@
 #include <QAction>
 #include <QIcon>
 
+#include <KLocalizedString>
 #include <KRunner/RunnerManager>
 
 RunnerMatchesModel::RunnerMatchesModel(const QString &runnerId, const QString &name,
@@ -34,6 +35,11 @@ RunnerMatchesModel::RunnerMatchesModel(const QString &runnerId, const QString &n
 , m_name(name)
 , m_runnerManager(manager)
 {
+}
+
+QString RunnerMatchesModel::description() const
+{
+    return m_name;
 }
 
 QVariant RunnerMatchesModel::data(const QModelIndex &index, int role) const

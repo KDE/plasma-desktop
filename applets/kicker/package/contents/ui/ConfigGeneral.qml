@@ -30,6 +30,8 @@ Item {
     width: childrenRect.width
     height: childrenRect.height
 
+    property bool isDash: (plasmoid.pluginName == "org.kde.plasma.kickerdash")
+
     property alias cfg_useCustomButtonImage: useCustomButtonImage.checked
     property alias cfg_customButtonImage: customButtonImage.text
 
@@ -123,6 +125,8 @@ Item {
                 CheckBox {
                     id: limitDepth
 
+                    visible: !isDash
+
                     text: i18n("Flatten menu to a single level")
                 }
             }
@@ -172,6 +176,8 @@ Item {
 
                 CheckBox {
                     id: alignResultsToBottom
+
+                    visible: !isDash
 
                     text: i18n("Align search results to bottom")
                 }

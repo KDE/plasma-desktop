@@ -1,6 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2012 by Aurélien Gâteau <agateau@kde.org>               *
- *   Copyright (C) 2014 by Eike Hein <hein@kde.org>                        *
+ *   Copyright (C) 2015 by Eike Hein <hein@kde.org>                        *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -18,47 +17,45 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#ifndef RUNNERMATCHESMODEL_H
-#define RUNNERMATCHESMODEL_H
+#ifndef FULLSCREENWINDOW_H
+#define FULLSCREENWINDOW_H
 
-#include "abstractmodel.h"
+#include <Plasma/Theme>
 
-#include <KRunner/QueryMatch>
+#include <QQuickWindow>
+#include <QQuickItem>
 
-namespace Plasma {
-    class RunnerManager;
-}
-
-class RunnerMatchesModel : public AbstractModel
+class FullScreenWindow : public QQuickWindow
 {
     Q_OBJECT
 
-    Q_PROPERTY(QString name READ name CONSTANT)
+    Q_PROPERTY(QQuickItem* mainItem READ mainItem WRITE setMainItem NOTIFY mainItemChanged)
+
+    Q_CLASSINFO("DefaultProperty", "mainItem")
 
     public:
-        explicit RunnerMatchesModel(const QString &runnerId, const QString &name,
-            Plasma::RunnerManager *manager, QObject *parent = 0);
+        FullScreenWindow(QQuickItem *parent = 0);
+        ~FullScreenWindow();
 
-        QString description() const;
+        QQuickItem *mainItem() const;
+        void setMainItem(QQuickItem *mainItem);
 
-        QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
+        Q_INVOKABLE void toggle();
 
-        int rowCount(const QModelIndex &parent = QModelIndex()) const;
+    Q_SIGNALS:
+        void mainItemChanged() const;
 
-        Q_INVOKABLE bool trigger(int row, const QString &actionId, const QVariant &argument);
+    private Q_SLOTS:
+        void updateTheme();
+        void parentScreenChanged(const QScreen *screen);
 
-        QString runnerId() const { return m_runnerId; }
-        QString name() const { return m_name; }
-
-        void setMatches(const QList<Plasma::QueryMatch> &matches);
-
-        AbstractModel* favoritesModel();
+    protected:
+        void showEvent(QShowEvent *event) Q_DECL_OVERRIDE;
+        void hideEvent(QHideEvent *event) Q_DECL_OVERRIDE;
 
     private:
-        QString m_runnerId;
-        QString m_name;
-        Plasma::RunnerManager *m_runnerManager;
-        QList<Plasma::QueryMatch> m_matches;
+        QQuickItem *m_mainItem;
+        Plasma::Theme m_theme;
 };
 
 #endif

@@ -54,6 +54,7 @@ class RootModel : public AppsModel
 
     Q_PROPERTY(QObject* systemFavoritesModel READ systemFavoritesModel NOTIFY systemFavoritesModelChanged)
 
+    Q_PROPERTY(bool showAllSubtree READ showAllSubtree WRITE setShowAllSubtree NOTIFY showAllSubtreeChanged)
     Q_PROPERTY(bool showRecentApps READ showRecentApps WRITE setShowRecentApps NOTIFY showRecentAppsChanged)
     Q_PROPERTY(bool showRecentDocs READ showRecentDocs WRITE setShowRecentDocs NOTIFY showRecentDocsChanged)
     Q_PROPERTY(bool showRecentContacts READ showRecentContacts WRITE setShowRecentContacts NOTIFY showRecentContactsChanged)
@@ -67,6 +68,9 @@ class RootModel : public AppsModel
         QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
 
         Q_INVOKABLE virtual bool trigger(int row, const QString &actionId, const QVariant &argument);
+
+        bool showAllSubtree() const;
+        void setShowAllSubtree(bool show);
 
         bool showRecentApps() const;
         void setShowRecentApps(bool show);
@@ -84,7 +88,9 @@ class RootModel : public AppsModel
         AbstractModel* systemFavoritesModel();
 
     Q_SIGNALS:
+        void refreshed() const;
         void systemFavoritesModelChanged() const;
+        void showAllSubtreeChanged() const;
         void showRecentAppsChanged() const;
         void showRecentDocsChanged() const;
         void showRecentContactsChanged() const;
@@ -100,6 +106,7 @@ class RootModel : public AppsModel
         FavoritesModel *m_favorites;
         SystemModel *m_systemModel;
 
+        bool m_showAllSubtree;
         bool m_showRecentApps;
         bool m_showRecentDocs;
         bool m_showRecentContacts;

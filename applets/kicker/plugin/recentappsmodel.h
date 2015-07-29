@@ -30,6 +30,8 @@ class RecentAppsModel : public ForwardingModel
         explicit RecentAppsModel(QObject *parent = 0);
         ~RecentAppsModel();
 
+        QString description() const;
+
         QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
 
         Q_INVOKABLE bool trigger(int row, const QString &actionId, const QVariant &argument);

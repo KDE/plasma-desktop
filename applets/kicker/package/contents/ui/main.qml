@@ -33,10 +33,12 @@ Item {
 
     signal reset
 
+    property bool isDash: (plasmoid.pluginName == "org.kde.plasma.kickerdash")
+
     Plasmoid.preferredRepresentation: Plasmoid.compactRepresentation
 
     Plasmoid.compactRepresentation: CompactRepresentation {}
-    Plasmoid.fullRepresentation: FullRepresentation { id: fullRepr }
+    Plasmoid.fullRepresentation: MenuRepresentation {}
 
     property QtObject itemListDialogComponent: Qt.createComponent("ItemListDialog.qml");
     property Item dragSource: null
@@ -61,9 +63,11 @@ Item {
         id: rootModel
 
         appNameFormat: plasmoid.configuration.appNameFormat
-        flat: plasmoid.configuration.limitDepth
+        flat: isDash ? true : plasmoid.configuration.limitDepth
+        showSeparators: !isDash
         appletInterface: plasmoid
 
+        showAllSubtree: isDash
         showRecentApps: plasmoid.configuration.showRecentApps
         showRecentDocs: plasmoid.configuration.showRecentDocs
         showRecentContacts: plasmoid.configuration.showRecentContacts
@@ -118,6 +122,8 @@ Item {
 
         favoritesModel: globalFavorites
         runners: plasmoid.configuration.useExtraRunners ? new Array("services").concat(plasmoid.configuration.extraRunners) : "services"
+
+        deleteWhenEmpty: isDash
     }
 
     Kicker.DragHelper {
@@ -213,7 +219,7 @@ Item {
         updateSvgMetrics();
         theme.themeChanged.connect(updateSvgMetrics);
 
-        rootModel.refreshing.connect(reset);
+        rootModel.refreshed.connect(reset);
 
         dragHelper.dropped.connect(resetDragSource);
     }

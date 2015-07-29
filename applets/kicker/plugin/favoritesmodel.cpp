@@ -24,6 +24,8 @@
 #include "systementry.h"
 #include "actionlist.h"
 
+#include <KLocalizedString>
+
 FavoritesModel::FavoritesModel(QObject *parent) : AbstractModel(parent)
 {
 }
@@ -31,6 +33,11 @@ FavoritesModel::FavoritesModel(QObject *parent) : AbstractModel(parent)
 FavoritesModel::~FavoritesModel()
 {
     qDeleteAll(m_entryList);
+}
+
+QString FavoritesModel::description() const
+{
+    return i18n("Favorites");
 }
 
 QVariant FavoritesModel::data(const QModelIndex& index, int role) const
@@ -156,6 +163,11 @@ void FavoritesModel::moveRow(int from, int to)
 
         emit favoritesChanged();
     }
+}
+
+AbstractModel *FavoritesModel::favoritesModel()
+{
+    return this;
 }
 
 void FavoritesModel::refresh()
