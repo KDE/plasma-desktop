@@ -30,6 +30,8 @@ import org.kde.plasma.private.kicker 0.1 as Kicker
 import "../code/tools.js" as Tools
 
 /* TODO
+ * mouse wheel on nested view
+ * dnd locks mouse
  * Reverse layout in rtl locales.
  * Keep cursor column when arrow'ing down past partial rows.
 */

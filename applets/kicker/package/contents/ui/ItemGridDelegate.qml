@@ -59,7 +59,7 @@ MouseArea {
     }
 
     onReleased: {
-        if (pressed) {
+        if (pressed && GridView.view.currentItem == item) {
             GridView.view.model.trigger(index, "", null);
             root.toggle();
         }
