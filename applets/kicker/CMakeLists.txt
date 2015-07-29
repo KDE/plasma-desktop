@@ -41,6 +41,7 @@ set(kickerplugin_SRCS
     plugin/systementry.cpp
     plugin/systemmodel.cpp
     plugin/systemsettings.cpp
+    plugin/wheelinterceptor.cpp
     plugin/windowsystem.cpp
 )
 

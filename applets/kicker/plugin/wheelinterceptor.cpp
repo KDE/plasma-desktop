@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2014 by Eike Hein <hein@kde.org>                        *
+ *   Copyright (C) 2014-2015 by Eike Hein <hein@kde.org>                   *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -17,35 +17,54 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#include "kickerplugin.h"
-#include "abstractmodel.h"
-#include "draghelper.h"
-#include "fullscreenwindow.h"
-#include "funnelmodel.h"
-#include "processrunner.h"
-#include "rootmodel.h"
-#include "runnermodel.h"
-#include "submenu.h"
-#include "systemsettings.h"
 #include "wheelinterceptor.h"
-#include "windowsystem.h"
 
-#include <QtQml>
+#include <QCoreApplication>
 
-void KickerPlugin::registerTypes(const char *uri)
+WheelInterceptor::WheelInterceptor(QQuickItem *parent) : QQuickItem(parent)
 {
-    Q_ASSERT(uri == QLatin1String("org.kde.plasma.private.kicker"));
-
-    qmlRegisterType<AbstractModel>();
-
-    qmlRegisterType<DragHelper>(uri, 0, 1, "DragHelper");
-    qmlRegisterType<FullScreenWindow>(uri, 0, 1, "FullScreenWindow");
-    qmlRegisterType<FunnelModel>(uri, 0, 1, "FunnelModel");
-    qmlRegisterType<ProcessRunner>(uri, 0, 1, "ProcessRunner");
-    qmlRegisterType<RootModel>(uri, 0, 1, "RootModel");
-    qmlRegisterType<RunnerModel>(uri, 0, 1, "RunnerModel");
-    qmlRegisterType<SubMenu>(uri, 0, 1, "SubMenu");
-    qmlRegisterType<SystemSettings>(uri, 0, 1, "SystemSettings");
-    qmlRegisterType<WheelInterceptor>(uri, 0, 1, "WheelInterceptor");
-    qmlRegisterType<WindowSystem>(uri, 0, 1, "WindowSystem");
 }
+
+WheelInterceptor::~WheelInterceptor()
+{
+}
+
+QQuickItem* WheelInterceptor::destination() const
+{
+    return m_destination;
+}
+
+void WheelInterceptor::setDestination(QQuickItem *destination)
+{
+    if (m_destination != destination) {
+        m_destination = destination;
+
+        emit destinationChanged();
+    }
+}
+
+void WheelInterceptor::wheelEvent(QWheelEvent* event)
+{
+    if (m_destination) {
+        QCoreApplication::sendEvent(m_destination, event);
+    }
+}
+
+QQuickItem *WheelInterceptor::findWheelArea(QQuickItem *parent) const
+{
+    if (!parent) {
+        return nullptr;
+    }
+
+    foreach(QQuickItem *child, parent->childItems()) {
+        // HACK: ScrollView adds the WheelArea below its flickableItem with
+        // z==-1. This is reasonable non-risky considering we know about
+        // everything else in there, and worst case we break the mouse wheel.
+        if (child->z() == -1) {
+            return child;
+        }
+    }
+
+    return nullptr;
+}
+

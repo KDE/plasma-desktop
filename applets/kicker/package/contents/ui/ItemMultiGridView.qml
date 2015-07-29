@@ -22,6 +22,8 @@ import QtQuick 2.4
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
+import org.kde.plasma.private.kicker 0.1 as Kicker
+
 PlasmaExtras.ScrollArea {
     id: itemMultiGrid
 
@@ -210,6 +212,15 @@ PlasmaExtras.ScrollArea {
                             itemMultiGrid.keyNavDown();
                         }
                     }
+                }
+
+                // HACK: Steal wheel events from the nested grid view and forward them to
+                // the ScrollView's internal WheelArea.
+                Kicker.WheelInterceptor {
+                    anchors.fill: gridView
+                    z: 1
+
+                    destination: findWheelArea(itemMultiGrid.flickableItem)
                 }
             }
         }
