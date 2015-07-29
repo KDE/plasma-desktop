@@ -61,6 +61,7 @@ void DragHelper::startDragInternal(QQuickItem *item, const QString &mimeType,
 
     QMimeData *dragData = new QMimeData();
     dragData->setData(mimeType, mimeData.toByteArray());
+    dragData->setData("application/x-orgkdeplasmataskmanager_taskbuttonitem", mimeData.toByteArray());
     dragData->setUrls(urlList);
 
     QDrag *drag = new QDrag(static_cast<QQuickItem *>(parent()));

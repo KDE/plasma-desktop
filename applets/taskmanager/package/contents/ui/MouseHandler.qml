@@ -70,7 +70,12 @@ Item {
         }
 
         onDrop: {
-            if (!tasks.dragSource && event.mimeData.hasUrls) {
+            // Reject internal drops.
+            if (event.mimeData.formats.indexOf("application/x-orgkdeplasmataskmanager_taskbuttonitem") >= 0) {
+                return;
+            }
+
+            if (event.mimeData.hasUrls) {
                 parent.urlDropped(event.mimeData.url);
             }
         }
