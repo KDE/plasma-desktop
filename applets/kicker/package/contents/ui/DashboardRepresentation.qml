@@ -30,9 +30,9 @@ import org.kde.plasma.private.kicker 0.1 as Kicker
 import "../code/tools.js" as Tools
 
 /* TODO
- * mouse wheel on nested view
- * Reverse layout in rtl locales.
- * Keep cursor column when arrow'ing down past partial rows.
+ * Reverse middleRow layout + keyboard nav + filter list text alignment in rtl locales.
+ * Keep cursor column when arrow'ing down past non-full trailing rows into a lower grid.
+ * Make DND transitions cleaner by performing an item swap instead of index reinsertion.
 */
 
 Kicker.FullScreenWindow {
