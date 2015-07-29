@@ -29,12 +29,12 @@
 
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2013-06-19</date>
-<releaseinfo>&kde; 4.11</releaseinfo>
+<date>2015-07-22</date>
+<releaseinfo>Plasma 5.4</releaseinfo>
 
 <abstract>
 <para>
-&plasma;, the most visible pillar of &kde;, is the core interface to the desktop.
+&plasma; is the core user interface to the desktop.
 </para>
 </abstract>
 
@@ -54,17 +54,13 @@
 <chapter id="introduction">
 <title>Introduction</title>
 
-<para>
-&plasma; is one of the key technologies of &kde; Software Compilation 4 (also known as the
-“Pillars of &kde;”), and one of the most visible to users. As &plasma;
-treats the user interface differently than a traditional desktop, there may be
-confusion on what &plasma; is, what it does, and how to perform common tasks.
+<para><!--https://www.kde.org/workspaces/-->
+&plasma; provides a modern and customizable environment for running your favorite applications 
+and accessing your information wherever it may be. Other common attributes of the &plasma; Desktop 
+include advanced window management and desktop effects, support for KDE Plasma Widgets, 
+integrated search, hardware management and a high degree of customizability.
 </para>
 
-<para>
-This document attempts to address these problems by providing answers to the
-most common questions.
-</para>
 </chapter>
 
 <chapter id="using-kapp">
@@ -90,7 +86,7 @@ Applets, or small applications that live on the desktop.
 </listitem>
 </varlistentry>
 <varlistentry>
-<term>Containments</term>
+<term>Containments</term><!--FIXME remove it, just a technical term with no meaning for joe user?-->
 <listitem>
 <para>
 Applets that act as the container for the &plasma; widgets
@@ -111,7 +107,7 @@ itself. Both are containments in the &plasma; sense.
 
 <para><note><para>The &plasma; Desktop can be configured in countless ways. The screenshot seen below shows a fairly standard desktop. Some distributions apply extensive customizations, so your desktop may look different.
 </para>
-<para>Similarly, the graphical appearance of the interface elements can be styled. These screenshots uses the &kde; default style, Oxygen.</para></note>
+<para>Similarly, the graphical appearance of the interface elements can be styled. These screenshots uses the &plasma; default style, Breeze.</para></note>
 </para>
 <para>
 <screenshot>
@@ -147,14 +143,14 @@ itself. Both are containments in the &plasma; sense.
 </screenshot>
 </para>
 <orderedlist>
-<listitem><para>The program starter. Usually this will be <link linkend="panel-kickoff">&kickoff;</link>.</para></listitem>
+<listitem><para>The program starter. Usually this will be <link linkend="panel-kickoff">Application Launcher</link>.</para></listitem>
 <listitem><para>A couple of icons giving easy access to often used applications</para></listitem>
-<listitem><para>The Pager widget</para></listitem>
+<!--listitem><para>The Pager widget</para></listitem-->
 <listitem><para>The <link linkend="panel-taskbar">Task Manager</link>, which shows the titles of windows belonging to the applications currently running. No application had opened a window, when the screenshot was taken</para></listitem>
 <listitem><para>The <link linkend="panel-system-tray">System Tray</link></para></listitem>
 <listitem><para>The <link linkend="panel-digital-clock">Digital Clock</link> widget</para></listitem>
 <listitem><para>The <link linkend="toolboxes">Panel Toolbox</link></para></listitem>
-<listitem><para>The Desktop Toolbox (previously known as a Cashew)</para></listitem>
+<listitem><para>The Desktop Toolbox</para></listitem>
 <listitem><para>A Folder View widget, showing the content of the Desktop folder</para></listitem>
 </orderedlist>
 
@@ -166,7 +162,7 @@ itself. Both are containments in the &plasma; sense.
 
 <para id="panel-kickoff">
 The default panel holds a few &plasma; widgets: starting from the left, there is the
-&kickoff; application launcher. You can use it to start applications, open recently
+application launcher. You can use it to start applications, open recently
 opened files and the usual logout/shutdown options. There is also a structure
 that allows you to browse through your applications. The layout has been
 optimized for the use case that is most common: starting an application. The
@@ -181,7 +177,7 @@ Note that you need to <quote>unlock</quote> &plasma; by means of <mousebutton>ri
 clicking on the desktop for any kind of modification). If you prefer the
 traditional menu-style application launcher, change it by
 <mousebutton>right</mousebutton> clicking on the menu button and selecting
-<guimenuitem>Switch to Classic Menu Style</guimenuitem>.
+<guimenuitem>Alternatives</guimenuitem>.
 </para>
 
 <para id="panel-taskbar">
@@ -191,8 +187,8 @@ desktop only by checking <guimenuitem>Only show tasks from the
 current desktop</guimenuitem> when you right click on the task manager, between
 two windows. The size of the text on the taskbar items can be set
 in &systemsettings; under the
-<menuchoice><guimenu>Application Appearance</guimenu><guisubmenu>Fonts</guisubmenu>
-<guimenuitem>Taskbar</guimenuitem></menuchoice>. Right-clicking on the taskbar
+<menuchoice><guimenu>Appearance</guimenu><guisubmenu>Fonts</guisubmenu>
+</menuchoice>. Right-clicking on the taskbar
 brings the Settings dialog where you can choose several options to customize
 your taskbar.
 <screenshot>
@@ -404,7 +400,7 @@ wallpapers through &knewstuff;.
 </screenshot>
 
 <para>To change the &plasma; theme or download a new one through &knewstuff;
-open the <menuchoice><guimenu>Workspace Appearance</guimenu> <guimenuitem>Desktop
+open the <menuchoice><guimenu>Appearance</guimenu> <guimenuitem>Desktop
 Theme</guimenuitem></menuchoice> page in the &systemsettings;.</para>
 
 <para>
@@ -422,17 +418,35 @@ you are used to from traditional desktops.
 <para>
 &krunner; is a versatile mini command-line. You can use it to start applications,
 open web pages, access bookmarks, search through your desktop data, calculate
-short equations, and many more.Pressing <keycombo
-action="simul">&Alt;<keycap>F2</keycap></keycombo> opens the &krunner; dialog.
+short equations, and many more. Pressing <keycombo
+action="simul">&Alt;<keysym>Space</keysym></keycombo> opens the &krunner; dialog.
 You just start typing and &krunner; will start searching matches as soon as
 you've entered more than two characters. You can open the settings dialog to
 learn about &krunner;’s functionality, provided by plugins. You can
 navigate through the matches using the tab and arrow keys.
 </para>
 <!-- whitout tab no arrow keys-->
+<screenshot>
+<screeninfo>&krunner; dialog</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="krunner.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase>&krunner; dialog</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+
+<para>Use the <inlinemediaobject><imageobject><imagedata fileref='krunner-configure.png' format='PNG'/>
+</imageobject></inlinemediaobject> button to open the <guilabel>Plasma Search</guilabel> &systemsettings; 
+module and configure where and what to seach for in &krunner;
+</para>
+
 <para>
-If you want to know what is going on on your system, there is the <guibutton>Show
-System Activity</guibutton> button, giving you quick access to a list of windows
+<!--FIXME no longer in kf5 in krunner - use Crl+Esc to launch -->
+If you want to know what is going on on your system, pressing <keycombo
+action="simul">&Ctrl;&Esc;</keycombo> gives you quick access to a list of windows
 and processes, with options to monitor their output and kill processes.
 </para>
 
@@ -442,7 +456,7 @@ and processes, with options to monitor their output and kill processes.
 <title>Activities</title>
 
 <para>
-The desktop toolbox, accessed via the upper right corner has a button for
+The desktop toolbox, accessed via the upper left corner has a button for
 displaying your activities, of which &plasma; allows you to have more than one.
 Basically, that is multiple desktop containments hosting multiple sets of &plasma; widgets.
 Display the <quote>Activities</quote> bar, select one of the predefined activities
