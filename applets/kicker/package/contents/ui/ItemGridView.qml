@@ -95,85 +95,85 @@ FocusScope {
         gridView.forceLayout();
     }
 
-    MouseEventListener {
+    DropArea {
+        id: dropArea
+
         anchors.fill: parent
 
-        hoverEnabled: true
-
-        onPressed: {
-            pressX = mouse.x;
-            pressY = mouse.y;
-        }
-
-        onReleased: {
-            pressX = -1;
-            pressY = -1;
-        }
-
-        onClicked: {
-            var cPos = mapToItem(gridView.contentItem, mouse.x, mouse.y);
-            var item = gridView.itemAt(cPos.x, cPos.y);
-
-            if (!item) {
-                root.toggle();
+        onDragMove: {
+            if (!dragEnabled || gridView.animating) {
+                return;
             }
-        }
 
-        onPositionChanged: {
-            var cPos = mapToItem(gridView.contentItem, mouse.x, mouse.y);
+            var cPos = mapToItem(gridView.contentItem, event.x, event.y);
             var item = gridView.itemAt(cPos.x, cPos.y);
 
-            if (!item) {
-                gridView.currentIndex = -1;
-            } else {
-                gridView.currentIndex = item.itemIndex;
-                itemGrid.focus = (currentIndex != -1)
+            if (item && item != kicker.dragSource && kicker.dragSource.parent == gridView.contentItem) {
+                item.GridView.view.model.moveRow(dragSource.itemIndex, item.itemIndex);
+            }
 
-                if (dragEnabled && pressX != -1 && dragHelper.isDrag(pressX, pressY, mouse.x, mouse.y)) {
-                    kicker.dragSource = item;
-                    dragHelper.startDrag(kicker, item.url);
+        }
+
+        MouseEventListener {
+            anchors.fill: parent
+
+            hoverEnabled: true
+
+            onPressed: {
+                pressX = mouse.x;
+                pressY = mouse.y;
+            }
+
+            onReleased: {
+                pressX = -1;
+                pressY = -1;
+            }
+
+            onClicked: {
+                var cPos = mapToItem(gridView.contentItem, mouse.x, mouse.y);
+                var item = gridView.itemAt(cPos.x, cPos.y);
+
+                if (!item) {
+                    root.toggle();
+                }
+            }
+
+            onPositionChanged: {
+                var cPos = mapToItem(gridView.contentItem, mouse.x, mouse.y);
+                var item = gridView.itemAt(cPos.x, cPos.y);
+
+                if (!item) {
+                    gridView.currentIndex = -1;
+                } else {
+                    gridView.currentIndex = item.itemIndex;
+                    itemGrid.focus = (currentIndex != -1)
+
+                    if (dragEnabled && pressX != -1 && dragHelper.isDrag(pressX, pressY, mouse.x, mouse.y)) {
+                        kicker.dragSource = item;
+                        dragHelper.startDrag(kicker, item.url);
+                        pressX = -1;
+                        pressY = -1;
+                    }
+                }
+            }
+
+            onContainsMouseChanged: {
+                if (!containsMouse) {
+                    gridView.currentIndex = -1;
                     pressX = -1;
                     pressY = -1;
                 }
             }
-        }
 
-        onContainsMouseChanged: {
-            if (!containsMouse) {
-                gridView.currentIndex = -1;
-                pressX = -1;
-                pressY = -1;
-            }
-        }
+            Timer {
+                id: resetAnimationDurationTimer
 
-        Timer {
-            id: resetAnimationDurationTimer
+                interval: 120
+                repeat: false
 
-            interval: 120
-            repeat: false
-
-            onTriggered: {
-                gridView.animationDuration = interval - 20;
-            }
-        }
-
-        DropArea {
-            id: dropArea
-
-            anchors.fill: parent
-
-            onDragMove: {
-                if (!dragEnabled || gridView.animating) {
-                    return;
+                onTriggered: {
+                    gridView.animationDuration = interval - 20;
                 }
-
-                var cPos = mapToItem(gridView.contentItem, event.x, event.y);
-                var item = gridView.itemAt(cPos.x, cPos.y);
-
-                if (item && item != kicker.dragSource && kicker.dragSource.parent == gridView.contentItem) {
-                    item.GridView.view.model.moveRow(dragSource.itemIndex, item.itemIndex);
-                }
-
             }
 
             PlasmaExtras.ScrollArea {
