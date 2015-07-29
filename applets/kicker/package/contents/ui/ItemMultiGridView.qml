@@ -29,7 +29,6 @@ PlasmaExtras.ScrollArea {
 
     anchors {
         top: parent.top
-        bottom: parent.bottom
     }
 
     width: parent.width

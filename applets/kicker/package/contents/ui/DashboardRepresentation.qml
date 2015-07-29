@@ -38,12 +38,13 @@ import "../code/tools.js" as Tools
 Kicker.FullScreenWindow {
     id: root
 
-    property int iconSize: (Math.floor(width / units.iconSizes.huge) > 22) ? units.iconSizes.huge : units.iconSizes.large
+    property bool smallScreen: (Math.floor(width / units.iconSizes.huge) <= 22)
+    property int iconSize: smallScreen ? units.iconSizes.large : units.iconSizes.huge
     property int cellSize: iconSize + theme.mSize(theme.defaultFont).height
         + (2 * units.smallSpacing)
         + (2 * Math.max(highlightItemSvg.margins.top + highlightItemSvg.margins.bottom,
                         highlightItemSvg.margins.left + highlightItemSvg.margins.right))
-    property int columns: Math.floor((80/100) * Math.ceil(width / cellSize))
+    property int columns: Math.floor(((smallScreen ? 85 : 80)/100) * Math.ceil(width / cellSize))
     property bool searching: (searchField.text != "")
 
     onVisibleChanged: {
@@ -227,7 +228,7 @@ Kicker.FullScreenWindow {
                 horizontalCenter: parent.horizontalCenter
             }
 
-            y: (middleRow.anchors.topMargin / 2)
+            y: (middleRow.anchors.topMargin / 2) - (smallScreen ? (height/2) : 0)
 
             font.pointSize: dummyHeading.font.pointSize * 1.5
 
@@ -267,9 +268,9 @@ Kicker.FullScreenWindow {
 
             anchors {
                 top: parent.top
-                topMargin: units.gridUnit * 10
+                topMargin: units.gridUnit * (smallScreen ? 6 : 9)
                 bottom: parent.bottom
-                bottomMargin: (units.gridUnit * 10) - mainGridContainer.headerHeight
+                bottomMargin: (units.gridUnit * 2)
                 horizontalCenter: parent.horizontalCenter
             }
 
@@ -476,10 +477,10 @@ Kicker.FullScreenWindow {
                         anchors {
                             top: mainColumnLabelUnderline.bottom
                             topMargin: units.largeSpacing
-                            bottom: parent.bottom
                         }
 
                         width: parent.width
+                        height: systemFavoritesGrid.y + systemFavoritesGrid.height - mainGridContainer.headerHeight
 
                         cellWidth: cellSize
                         cellHeight: cellSize
@@ -508,11 +509,11 @@ Kicker.FullScreenWindow {
 
                     anchors {
                         top: parent.top
-                        bottom: parent.bottom
                     }
 
                     z: (opacity == 1.0) ? 1 : 0
                     width: parent.width
+                    height: systemFavoritesGrid.y + systemFavoritesGrid.height
 
                     enabled: (opacity == 1.0) ? 1 : 0
 
@@ -551,11 +552,11 @@ Kicker.FullScreenWindow {
 
                     anchors {
                         top: parent.top
-                        bottom: parent.bottom
                     }
 
                     z: (opacity == 1.0) ? 1 : 0
                     width: parent.width
+                    height: systemFavoritesGrid.y + systemFavoritesGrid.height
 
                     enabled: (opacity == 1.0) ? 1 : 0
 
@@ -608,7 +609,7 @@ Kicker.FullScreenWindow {
                     Behavior on x { SmoothedAnimation { duration: units.longDuration; velocity: 0.01 } }
 
                     width: parent.width
-                    height: parent.height
+                    height: mainGrid.height
 
                     enabled: !searching
 
