@@ -144,7 +144,7 @@ Kicker.FullScreenWindow {
 
             property bool done: false
 
-            interval: 300
+            interval: 1000
             repeat: false
 
             onTriggered: {
@@ -160,6 +160,12 @@ Kicker.FullScreenWindow {
                         done = true;
                         break;
                     }
+                }
+            }
+
+            function defer() {
+                if (running && !done) {
+                    restart();
                 }
             }
         }
@@ -339,6 +345,10 @@ Kicker.FullScreenWindow {
 
                     dragEnabled: true
 
+                    onCurrentIndexChanged: {
+                        preloadAllAppsTimer.defer();
+                    }
+
                     onKeyNavRight: {
                         mainColumn.tryActivate(currentRow(), 0);
                     }
@@ -372,6 +382,10 @@ Kicker.FullScreenWindow {
                     model: systemFavorites
 
                     dragEnabled: true
+
+                    onCurrentIndexChanged: {
+                        preloadAllAppsTimer.defer();
+                    }
 
                     onKeyNavRight: {
                         mainColumn.tryActivate(globalFavoritesGrid.rows + currentRow(), 0);
@@ -470,6 +484,10 @@ Kicker.FullScreenWindow {
                         cellHeight: cellSize
 
                         model: funnelModel
+
+                        onCurrentIndexChanged: {
+                            preloadAllAppsTimer.defer();
+                        }
 
                         onKeyNavLeft: {
                             var row = currentRow();
@@ -781,12 +799,17 @@ Kicker.FullScreenWindow {
 
                         function applyFilter() {
                             if (!searching && currentIndex >= 0) {
+                                if (preloadAllAppsTimer.running) {
+                                    preloadAllAppsTimer.stop();
+                                }
+
                                 var model = rootModel.modelForRow(currentIndex);
 
                                 if (model.description == "KICKER_ALL_MODEL") {
                                     allAppsGrid.model = model;
                                     allApps = true;
                                     funnelModel.sourceModel = null;
+                                    preloadAllAppsTimer.done = true;
                                 } else {
                                     funnelModel.sourceModel = model;
                                     allApps = false;
