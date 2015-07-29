@@ -268,7 +268,7 @@ Kicker.FullScreenWindow {
 
             anchors {
                 top: parent.top
-                topMargin: units.gridUnit * (smallScreen ? 6 : 9)
+                topMargin: units.gridUnit * (smallScreen ? 6 : 10)
                 bottom: parent.bottom
                 bottomMargin: (units.gridUnit * 2)
                 horizontalCenter: parent.horizontalCenter
