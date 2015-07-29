@@ -89,7 +89,7 @@ PlasmaExtras.ScrollArea {
 
             delegate: Item {
                 width: column.width
-                height: headerHeight + gridView.height + footerHeight
+                height: headerHeight + gridView.height + (index == repeater.count - 1 ? 0 : footerHeight)
 
                 property int headerHeight: (gridViewLabel.height
                     + gridViewLabelUnderline.height + units.largeSpacing)
