@@ -102,14 +102,6 @@ void FullScreenWindow::hideEvent(QHideEvent *event)
 void FullScreenWindow::updateTheme()
 {
     KWindowEffects::enableBlurBehind(winId(), true);
-
-    return;
-
-    KWindowEffects::enableBackgroundContrast(winId(),
-        m_theme.backgroundContrastEnabled(),
-        m_theme.backgroundContrast(),
-        m_theme.backgroundIntensity(),
-        m_theme.backgroundSaturation());
 }
 
 void FullScreenWindow::parentScreenChanged(const QScreen *screen)
