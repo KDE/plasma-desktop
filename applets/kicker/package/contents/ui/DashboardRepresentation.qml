@@ -31,7 +31,6 @@ import "../code/tools.js" as Tools
 
 /* TODO
  * mouse wheel on nested view
- * dnd locks mouse
  * Reverse layout in rtl locales.
  * Keep cursor column when arrow'ing down past partial rows.
 */
@@ -84,6 +83,23 @@ Kicker.FullScreenWindow {
                 if (!searching) {
                     filterList.applyFilter();
                     funnelModel.reset();
+                }
+            }
+
+            onDragSourceChanged: {
+                if (!dragSource) {
+                    // FIXME TODO HACK: Reset favorites grids post-DND to work around
+                    // mouse grab bug despite QQuickWindow::mouseGrabberItem==0x0.
+                    // Needs a more involved hunt through Qt Quick sources later since
+                    // it's not happening with near-identical code in the menu repr.
+                    var index = globalFavoritesGrid.currentIndex;
+                    globalFavoritesGrid.model = null;
+                    globalFavoritesGrid.model = globalFavorites;
+                    globalFavoritesGrid.currentIndex = index;
+                    index = systemFavoritesGrid.currentIndex;
+                    systemFavoritesGrid.model = null;
+                    systemFavoritesGrid.model = systemFavorites;
+                    systemFavoritesGrid.currentIndex = index;
                 }
             }
         }
