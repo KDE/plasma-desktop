@@ -98,7 +98,7 @@ MouseArea {
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.verticalCenter: showLabel ? undefined : parent.verticalCenter
 
-        width: units.iconSizes.huge
+        width: iconSize
         height: width
 
         icon: model.decoration

@@ -38,7 +38,8 @@ import "../code/tools.js" as Tools
 Kicker.FullScreenWindow {
     id: root
 
-    property int cellSize: units.iconSizes.huge + theme.mSize(theme.defaultFont).height
+    property int iconSize: (Math.floor(width / units.iconSizes.huge) > 22) ? units.iconSizes.huge : units.iconSizes.large
+    property int cellSize: iconSize + theme.mSize(theme.defaultFont).height
         + (2 * units.smallSpacing)
         + (2 * Math.max(highlightItemSvg.margins.top + highlightItemSvg.margins.bottom,
                         highlightItemSvg.margins.left + highlightItemSvg.margins.right))
@@ -360,7 +361,7 @@ Kicker.FullScreenWindow {
                     Binding {
                         target: globalFavorites
                         property: "iconSize"
-                        value: units.iconSizes.huge
+                        value: root.iconSize
                     }
                 }
 
