@@ -189,6 +189,7 @@ QStringList Kickoff::systemApplicationList()
     QStringList apps;
     apps << "systemsettings";
     apps << appsGroup.readEntry("DesktopFiles", apps);
+    apps.removeDuplicates();
     return apps;
 }
 
