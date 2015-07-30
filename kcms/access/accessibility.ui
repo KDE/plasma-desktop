@@ -753,6 +753,16 @@ Ensure you know what you are doing if you uncheck it, as the keyboard accessibil
         </widget>
        </item>
        <item>
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>Please note that you may have to log out once to allow the screen reader to work properly.</string>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
         <spacer name="verticalSpacer_5">
          <property name="orientation">
           <enum>Qt::Vertical</enum>
