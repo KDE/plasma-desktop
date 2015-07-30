@@ -58,7 +58,7 @@ KCMUserAccount::KCMUserAccount(QWidget *parent, const QVariantList &)
     _ku(NULL),
     _am(NULL),
     _currentUser(NULL),
-    _unlocked(true),
+    _unlocked(false),
     _currentFaceIcon(NULL),
     _currentRealName(NULL),
     _currentAccountType(NULL),
@@ -80,6 +80,16 @@ KCMUserAccount::KCMUserAccount(QWidget *parent, const QVariantList &)
 
     QHBoxLayout *hbox = new QHBoxLayout;
     hbox->setAlignment(Qt::AlignRight);
+    QPushButton *unlockBtn = new QPushButton;
+    unlockBtn->setMaximumWidth(opIconSize);
+    unlockBtn->setMaximumHeight(opIconSize);
+    _actionBtn = new PolkitQt1::Gui::ActionButton(
+        unlockBtn, unlockActionId, this);
+    _actionBtn->setIcon(QIcon::fromTheme("document-encrypt"));
+    connect(_actionBtn, SIGNAL(clicked(QAbstractButton *, bool)),
+            _actionBtn, SLOT(activate()));
+    connect(_actionBtn, SIGNAL(authorized()), this, SLOT(actionActivated()));
+    hbox->addWidget(unlockBtn);
     _addBtn = new QPushButton;
     _addBtn->setEnabled(_unlocked);
     _addBtn->setMaximumWidth(opIconSize);
@@ -108,19 +118,6 @@ KCMUserAccount::KCMUserAccount(QWidget *parent, const QVariantList &)
     QLabel *subTitle = new QLabel(i18n("User Information Configuration"));
     subTitle->setStyleSheet("QLabel { color: #cccccc; }");
     formLayout->addRow(subTitle);
-
-    // TODO: it needs to find good place to put Unlock Button
-    //QPushButton *unlockBtn = new QPushButton;
-    //unlockBtn->setMaximumWidth(100);
-    //unlockBtn->setMaximumHeight(opIconSize);
-    //_actionBtn = new PolkitQt1::Gui::ActionButton(
-    //    unlockBtn, unlockActionId, this);
-    //_actionBtn->setText(i18n("Unlock"));
-    //_actionBtn->setIcon(QIcon::fromTheme("document-encrypt"));
-    //connect(_actionBtn, SIGNAL(clicked(QAbstractButton *, bool)),
-    //        _actionBtn, SLOT(activate()));
-    //connect(_actionBtn, SIGNAL(authorized()), this, SLOT(actionActivated()));
-    //formLayout->addRow(unlockBtn);
 
     _currentFaceIcon = new FaceIconButton;
     _currentFaceIcon->setMinimumWidth(faceIconSize);
@@ -222,7 +219,6 @@ KCMUserAccount::~KCMUserAccount()
 
 void KCMUserAccount::_unlockUi() 
 {
-    _actionBtn->setText(_unlocked ? i18n("Lock") : i18n("Unlock"));
     _actionBtn->setIcon(_unlocked ?
                         QIcon::fromTheme("document-encrypted") :
                         QIcon::fromTheme("document-encrypt"));
