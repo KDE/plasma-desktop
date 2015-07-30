@@ -318,6 +318,9 @@ void KAccessConfig::load()
     ui.gestureConfirmation->setChecked(keyboardGroup.readEntry("GestureConfirmation", false));
     ui.kNotifyAccess->setChecked(keyboardGroup.readEntry("kNotifyAccess", false));
 
+    KConfigGroup screenReaderGroup(KSharedConfig::openConfig("kaccessrc"), "ScreenReader");
+    ui.screenReaderEnabled->setChecked(screenReaderGroup.readEntry("Enabled", false));
+
     checkAccess();
 
     emit changed(false);
