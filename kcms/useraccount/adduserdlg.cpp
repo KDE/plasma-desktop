@@ -47,6 +47,9 @@ AddUserDlg::AddUserDlg(QtAccountsService::AccountsManager *am,
     connect(ui.faceIconPushButton, SIGNAL(pressed(QPoint)),
             this, SLOT(slotFaceIconPressed(QPoint)));
 
+    connect(_am, SIGNAL(userAdded(UserAccount *)),
+                this, SLOT(slotUserAdded(UserAccount*)));
+
     setFixedSize(400, 450);
 }
 
@@ -103,22 +106,17 @@ void AddUserDlg::slotAddUser()
     bool ret = _am->createUser(userName,userName,accType);
     if (!ret) {
         QMessageBox::warning(this, "warning",i18n("Failed to add user."));
+        close();
         return;
     }
 
-    QTime dieTime = QTime::currentTime().addSecs(1);
-    while (QTime::currentTime() < dieTime ) {
-        QCoreApplication::processEvents(QEventLoop::AllEvents,1);
-    }
+    close();
+}
 
-    QtAccountsService::AccountsManager *__am = new QtAccountsService::AccountsManager;
-    user = __am->findUserByName(userName);
-
-    if (!user) {
-        QMessageBox::warning(this, "warning",
-            i18n("The user has been added,but cannot find it, please change password manually."));
-        delete __am;
-        close();
+void AddUserDlg::slotUserAdded(UserAccount* ua)
+{
+    if (!ua) {
+        QMessageBox::warning(this, "warning","ua is null");
         return;
     }
 
@@ -130,19 +128,18 @@ void AddUserDlg::slotAddUser()
     if (crystr == NULL) {
         QMessageBox::warning(this, "warning",
             i18n("fail to crypt password, please change password manually."));
-        delete __am;
-        close();
         return;
     }
-    user->setPassword(crystr);
-    user->setAutomaticLogin(ui.autoLoginCheckBox->isChecked()?true:false);
+    ua->setPassword(crystr);
+    ua->setAutomaticLogin( ui.autoLoginCheckBox->isChecked() ? true : false);
+    ua->setLocked(ui.disLoginCheckBox->isChecked() ? true : false);
     if (!iconFilePath.isEmpty()) {
-        user->setIconFileName(iconFilePath);
+        ua->setIconFileName(iconFilePath);
+        iconFilePath = "";
     }
-    delete __am;
 
-    close();
 }
+
 void AddUserDlg::slotFaceIconClicked(QString filePath)
 {
     _currentFaceIcon->setIcon(FaceIconPopup::faceIcon(filePath));
@@ -157,4 +154,3 @@ void AddUserDlg::slotFaceIconPressed(QPoint pos)
             this, SLOT(slotFaceIconClicked(QString)));
     faceIconPopup->popup(pos);
 }
-

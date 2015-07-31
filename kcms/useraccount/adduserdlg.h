@@ -30,10 +30,15 @@
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
 #include <QtAccountsService/AccountsManager>
+#include <QtAccountsService/UserAccount>
 #include <KDialog>
 
 #include "faceiconbutton.h"
 #include "faceiconpopup.h"
+
+/* connect(_am, SIGNAL(userAdded(UserAccount *)),this, SLOT(slotUserAdded(UserAccount*)));
+*/
+typedef QtAccountsService::UserAccount UserAccount;
 
 class Ui_Dialog
 {
@@ -210,8 +215,6 @@ namespace Ui {
     class Dialog: public Ui_Dialog {};
 } // namespace Ui
 
-
-
 class AddUserDlg : public KDialog
 {
     Q_OBJECT
@@ -226,6 +229,7 @@ private slots:
     void slotAddUser();
     void slotFaceIconClicked(QString filePath);
     void slotFaceIconPressed(QPoint pos);
+    void slotUserAdded(UserAccount* ua);
 private:
     QtAccountsService::AccountsManager *_am;
     Ui::Dialog ui;
