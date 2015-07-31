@@ -31,7 +31,6 @@ ChgPwdDlg::ChgPwdDlg(QtAccountsService::UserAccount *ua,
 {
     setWindowModality(Qt::WindowModal);
     setButtons(0);
-    setWindowFlags(windowFlags()&~Qt::WindowMaximizeButtonHint);
 
     Dlg = new QWidget;
     ui.setupUi(Dlg);
@@ -45,7 +44,7 @@ ChgPwdDlg::ChgPwdDlg(QtAccountsService::UserAccount *ua,
         }
     }
     setMainWidget(Dlg);
-    Dlg->setWindowModality(Qt::WindowModal);
+    this->setWindowTitle(i18n("Change Password"));
 
     QObject::connect(ui.cancelBtn, SIGNAL(clicked()), this, SLOT(close()));
     QObject::connect(ui.changeBtn, SIGNAL(clicked()), this, SLOT(slotChangePwd()));
@@ -87,7 +86,8 @@ void ChgPwdDlg::slotChangePwd()
             close();
         }
         _ua->setPassword(crystr);
-        KWallet::Wallet::changePassword(_ua->userName(), effectiveWinId());
+        // TODO:
+        //KWallet::Wallet::changePassword(_ua->userName(), effectiveWinId());
         close();
     } else {
         QMessageBox::warning(this, "warning", 

@@ -17,6 +17,7 @@
  */
 
 #include "adduserdlg.h"
+#include "faceiconpopup.h"
 
 #include <unistd.h>
 #include <QMessageBox>
@@ -32,18 +33,21 @@ AddUserDlg::AddUserDlg(QtAccountsService::AccountsManager *am,
 {
     setWindowModality(Qt::WindowModal);
     setButtons(0);
-    setWindowFlags(windowFlags()&~Qt::WindowMaximizeButtonHint);
 
     Dlg = new QWidget;
     ui.setupUi(Dlg);
 
     setMainWidget(Dlg);
-    Dlg->setWindowModality(Qt::WindowModal);
+    this->setWindowTitle(i18n("Add User"));
 
     QObject::connect(ui.cancelBtn, SIGNAL(clicked()), this, SLOT(close()));
     QObject::connect(ui.addBtn, SIGNAL(clicked()), this, SLOT(slotAddUser()));
 
-    setFixedSize(436, 460);
+    _currentFaceIcon = ui.faceIconPushButton;
+    connect(ui.faceIconPushButton, SIGNAL(pressed(QPoint)),
+            this, SLOT(slotFaceIconPressed(QPoint)));
+
+    setFixedSize(400, 450);
 }
 
 AddUserDlg::~AddUserDlg() 
@@ -92,9 +96,9 @@ void AddUserDlg::slotAddUser()
         return;
     }
 
-    QtAccountsService::UserAccount::AccountType accType = ui.AccTypeComBox->currentIndex() == 0 ?
-                QtAccountsService::UserAccount::StandardAccountType :
-                QtAccountsService::UserAccount::AdministratorAccountType;
+    QtAccountsService::UserAccount::AccountType accType = ui.canLoginCheckBox->isChecked() ?
+                QtAccountsService::UserAccount::AdministratorAccountType :
+                QtAccountsService::UserAccount::StandardAccountType;
 
     bool ret = _am->createUser(userName,userName,accType);
     if (!ret) {
@@ -103,9 +107,9 @@ void AddUserDlg::slotAddUser()
     }
 
     QTime dieTime = QTime::currentTime().addSecs(1);
-
-    while (QTime::currentTime() < dieTime)
-        QCoreApplication::processEvents(QEventLoop::AllEvents, 1);
+    while (QTime::currentTime() < dieTime ) {
+        QCoreApplication::processEvents(QEventLoop::AllEvents,1);
+    }
 
     QtAccountsService::AccountsManager *__am = new QtAccountsService::AccountsManager;
     user = __am->findUserByName(userName);
@@ -132,8 +136,25 @@ void AddUserDlg::slotAddUser()
     }
     user->setPassword(crystr);
     user->setAutomaticLogin(ui.autoLoginCheckBox->isChecked()?true:false);
-
+    if (!iconFilePath.isEmpty()) {
+        user->setIconFileName(iconFilePath);
+    }
     delete __am;
 
     close();
 }
+void AddUserDlg::slotFaceIconClicked(QString filePath)
+{
+    _currentFaceIcon->setIcon(FaceIconPopup::faceIcon(filePath));
+    iconFilePath = filePath;
+}
+
+void AddUserDlg::slotFaceIconPressed(QPoint pos)
+{
+
+    FaceIconPopup *faceIconPopup = new FaceIconPopup;
+    connect(faceIconPopup, SIGNAL(clickFaceIcon(QString)),
+            this, SLOT(slotFaceIconClicked(QString)));
+    faceIconPopup->popup(pos);
+}
+

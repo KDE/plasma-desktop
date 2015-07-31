@@ -84,6 +84,7 @@ public:
         _delBakRadio->setGeometry(QRect(93, 149, 381, 21));
         sizePolicy1.setHeightForWidth(_delBakRadio->sizePolicy().hasHeightForWidth());
         _delBakRadio->setSizePolicy(sizePolicy1);
+        _delBakRadio->setDisabled(true);
         _delBtn = new QPushButton(Dialog);
         _delBtn->setObjectName(QStringLiteral("_delBtn"));
         _delBtn->setGeometry(QRect(151, 200, 98, 27));

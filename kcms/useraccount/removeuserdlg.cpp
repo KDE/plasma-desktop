@@ -33,13 +33,12 @@ RemoveUserDlg::RemoveUserDlg(QtAccountsService::AccountsManager *am,
 {
     setWindowModality(Qt::WindowModal);
     setButtons(0);
-    setWindowFlags(windowFlags()&~Qt::WindowMaximizeButtonHint);
 
     Dlg = new QWidget;
     ui.setupUi(Dlg);
 
     setMainWidget(Dlg);
-    Dlg->setWindowModality(Qt::WindowModal);
+    setWindowTitle(i18n("Remove User"));
 
     QObject::connect(ui._cancelBtn, SIGNAL(clicked()), this, SLOT(close()));
     QObject::connect(ui._delBtn, SIGNAL(clicked()), this, SLOT(slotDeleteByAction()));
