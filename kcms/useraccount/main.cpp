@@ -440,6 +440,7 @@ void KCMUserAccount::save()
     _currentUser->setRealName(_currentRealName->text());
     _currentUser->setAccountType((QtAccountsService::UserAccount::AccountType)_currentAccountType->isChecked());
     _currentUser->setAutomaticLogin(_autoLoginBox->isChecked());
+    _currentUser->setLocked(_userLockedBox->isChecked());
 }
 
 #include "main.moc"
