@@ -155,6 +155,9 @@ KCMUserAccount::KCMUserAccount(QWidget *parent, const QVariantList &)
     _autoLoginBox->setEnabled(_unlocked);
     formLayout->addRow(i18n("Automatic Login:"), _autoLoginBox);
 
+    _userLockedBox = new QCheckBox;
+    formLayout->addRow(i18n("Login Not Permitted"), _userLockedBox);
+
     QLabel *autostart = new QLabel(i18n("<a href=\"#\">Autostart application configuration</a>"));
     connect(autostart, &QLabel::linkActivated, [this]() {
                 KToolInvocation::kdeinitExec(QString("kcmshell5"),
@@ -337,14 +340,16 @@ void KCMUserAccount::slotItemClicked(QListWidgetItem *item)
         _currentRealName->setEnabled(true);
         _currentAccountType->setEnabled(false);
         _passwdEdit->setEnabled(true);
+        _userLockedBox->setEnabled(false);
         _removeBtn->setEnabled(false);
     } else {
         _currentRealName->setEnabled(_unlocked);
         _currentAccountType->setEnabled(_unlocked);
         _passwdEdit->setEnabled(_unlocked);
+        _userLockedBox->setEnabled(_unlocked);
         _removeBtn->setEnabled(_unlocked);
     }
-    connect(_currentRealName, SIGNAL(editingFinished()), this, SLOT(changed()));
+    connect(_currentRealName, SIGNAL(textEdited(const QString &)), this, SLOT(changed()));
     connect(_currentAccountType, SIGNAL(clicked()), this, SLOT(changed()));
 
     _currentLanguage->setText(_currentUser->language());
@@ -353,6 +358,9 @@ void KCMUserAccount::slotItemClicked(QListWidgetItem *item)
 
     _autoLoginBox->setChecked(_currentUser->automaticLogin());
     connect(_autoLoginBox, SIGNAL(clicked()), this, SLOT(changed()));
+
+    _userLockedBox->setChecked(_currentUser->isLocked());
+    connect(_userLockedBox, SIGNAL(clicked()), this, SLOT(changed()));
 }
 
 void KCMUserAccount::actionActivated()
@@ -426,15 +434,11 @@ void KCMUserAccount::load()
 
 void KCMUserAccount::save() 
 {
-    KCModule::save();
-
     if (_currentUser == NULL)
         return;
 
     _currentUser->setRealName(_currentRealName->text());
-
     _currentUser->setAccountType((QtAccountsService::UserAccount::AccountType)_currentAccountType->isChecked());
-
     _currentUser->setAutomaticLogin(_autoLoginBox->isChecked());
 }
 

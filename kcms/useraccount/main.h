@@ -74,6 +74,7 @@ private:
     QLabel *_currentLanguage;
     PwdEdit *_passwdEdit;
     QCheckBox *_autoLoginBox;
+    QCheckBox *_userLockedBox;
     QString _editUserName;
     QString _editIconFilePath;
 
