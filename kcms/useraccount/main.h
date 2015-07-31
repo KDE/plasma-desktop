@@ -32,8 +32,7 @@
 #include <QPushButton>
 #include <QLineEdit>
 #include <QLabel>
-#include <QComboBox>
-#include <QRadioButton>
+#include <QCheckBox>
 
 class KUser;
 class QObject;
@@ -69,12 +68,12 @@ private:
     QPushButton *_addBtn;
     QPushButton *_removeBtn;
     FaceIconButton *_currentFaceIcon;
-    QLineEdit *_currentFullName;
-    QComboBox *_currentAccountType;
+    QLineEdit *_currentUserName;
+    QLineEdit *_currentRealName;
+    QCheckBox *_currentAccountType;
     QLabel *_currentLanguage;
     PwdEdit *_passwdEdit;
-    QRadioButton *_autoLoginButton;
-    QRadioButton *_nonAutoLoginButton;
+    QCheckBox *_autoLoginBox;
     QString _editUserName;
     QString _editIconFilePath;
 

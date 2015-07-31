@@ -42,6 +42,7 @@
 #include <QMessageBox>
 
 static const int opIconSize = 32;
+static const int ctrlMaxWidth = 124;
 static const QString unlockActionId = "org.freedesktop.accounts.user-administration";
 
 K_PLUGIN_FACTORY(Factory,
@@ -59,7 +60,7 @@ KCMUserAccount::KCMUserAccount(QWidget *parent, const QVariantList &)
     _currentUser(NULL),
     _unlocked(false),
     _currentFaceIcon(NULL),
-    _currentFullName(NULL),
+    _currentRealName(NULL),
     _currentAccountType(NULL),
     _currentLanguage(NULL),
     _passwdEdit(NULL),
@@ -78,7 +79,17 @@ KCMUserAccount::KCMUserAccount(QWidget *parent, const QVariantList &)
     vbox->addWidget(_accountList);
 
     QHBoxLayout *hbox = new QHBoxLayout;
-    hbox->setAlignment(Qt::AlignLeft);
+    hbox->setAlignment(Qt::AlignRight);
+    QPushButton *unlockBtn = new QPushButton;
+    unlockBtn->setMaximumWidth(opIconSize);
+    unlockBtn->setMaximumHeight(opIconSize);
+    _actionBtn = new PolkitQt1::Gui::ActionButton(
+        unlockBtn, unlockActionId, this);
+    _actionBtn->setIcon(QIcon::fromTheme("document-encrypt"));
+    connect(_actionBtn, SIGNAL(clicked(QAbstractButton *, bool)),
+            _actionBtn, SLOT(activate()));
+    connect(_actionBtn, SIGNAL(authorized()), this, SLOT(actionActivated()));
+    hbox->addWidget(unlockBtn);
     _addBtn = new QPushButton;
     _addBtn->setEnabled(_unlocked);
     _addBtn->setMaximumWidth(opIconSize);
@@ -99,22 +110,14 @@ KCMUserAccount::KCMUserAccount(QWidget *parent, const QVariantList &)
     topLayout->addSpacing(22);
 
     QFormLayout *formLayout = new QFormLayout;
-    formLayout->setLabelAlignment(Qt::AlignLeft);
-    formLayout->setHorizontalSpacing(30);
-    formLayout->setVerticalSpacing(18);
+    formLayout->setLabelAlignment(Qt::AlignRight);
+    formLayout->setHorizontalSpacing(10);
+    formLayout->setVerticalSpacing(10);
     topLayout->addLayout(formLayout);
 
-    QPushButton *unlockBtn = new QPushButton;
-    unlockBtn->setMaximumWidth(100);
-    unlockBtn->setMaximumHeight(opIconSize);
-    _actionBtn = new PolkitQt1::Gui::ActionButton(
-        unlockBtn, unlockActionId, this);
-    _actionBtn->setText(i18n("Unlock"));
-    _actionBtn->setIcon(QIcon::fromTheme("document-encrypt"));
-    connect(_actionBtn, SIGNAL(clicked(QAbstractButton *, bool)), 
-            _actionBtn, SLOT(activate()));
-    connect(_actionBtn, SIGNAL(authorized()), this, SLOT(actionActivated()));
-    formLayout->addRow(unlockBtn);
+    QLabel *subTitle = new QLabel(i18n("User Information Configuration"));
+    subTitle->setStyleSheet("QLabel { color: #cccccc; }");
+    formLayout->addRow(subTitle);
 
     _currentFaceIcon = new FaceIconButton;
     _currentFaceIcon->setMinimumWidth(faceIconSize);
@@ -122,35 +125,35 @@ KCMUserAccount::KCMUserAccount(QWidget *parent, const QVariantList &)
     _currentFaceIcon->setIconSize(QSize(faceIconSize, faceIconSize));
     connect(_currentFaceIcon, SIGNAL(pressed(QPoint)), 
             this, SLOT(slotFaceIconPressed(QPoint)));
-    _currentFullName = new QLineEdit("FullName");
-    _currentFullName->setEnabled(false);
-    formLayout->addRow(_currentFaceIcon, _currentFullName);
+    _currentUserName = new QLineEdit("UserName");
+    _currentUserName->setMaximumWidth(ctrlMaxWidth);
+    _currentUserName->setEnabled(false);
+    formLayout->addRow(_currentFaceIcon, _currentUserName);
 
-    _currentAccountType = new QComboBox;
-    _currentAccountType->setMaximumWidth(124);
-    _currentAccountType->addItem(i18n("Standard"));
-    _currentAccountType->addItem(i18n("Administrator"));
-    formLayout->addRow(i18n("Account Type"), _currentAccountType);
-
-    _currentLanguage = new QLabel("English");
-
-    formLayout->addRow(new QLabel(i18n("Login Options")));
+    _currentRealName = new QLineEdit("FullName");
+    _currentRealName->setMaximumWidth(ctrlMaxWidth);
+    _currentRealName->setEnabled(false);
+    formLayout->addRow(i18n("Real Name:"), _currentRealName);
 
     _passwdEdit = new PwdEdit("password");
     _passwdEdit->setEnabled(false);
-    _passwdEdit->setMaximumWidth(124);
+    _passwdEdit->setMaximumWidth(ctrlMaxWidth);
     _passwdEdit->setEchoMode(QLineEdit::PasswordEchoOnEdit);
     connect(_passwdEdit, SIGNAL(pressed()), this, SLOT(slotPasswordEditPressed()));
-    formLayout->addRow(i18n("Password"), _passwdEdit);
+    formLayout->addRow(i18n("Password:"), _passwdEdit);
 
-    hbox = new QHBoxLayout;
-    _autoLoginButton = new QRadioButton(i18n("Yes"));
-    _autoLoginButton->setEnabled(_unlocked);
-    _nonAutoLoginButton = new QRadioButton(i18n("No"));
-    _nonAutoLoginButton->setEnabled(_unlocked);
-    hbox->addWidget(_autoLoginButton);
-    hbox->addWidget(_nonAutoLoginButton);
-    formLayout->addRow(i18n("Automatic Login"), hbox);
+    subTitle = new QLabel(i18n("Advanced Information Configuration"));
+    subTitle->setStyleSheet("QLabel { color: #cccccc; }");
+    formLayout->addRow(subTitle);
+
+    _currentAccountType = new QCheckBox;
+    formLayout->addRow(i18n("Administrator:"), _currentAccountType);
+
+    _currentLanguage = new QLabel("English");
+
+    _autoLoginBox = new QCheckBox;
+    _autoLoginBox->setEnabled(_unlocked);
+    formLayout->addRow(i18n("Automatic Login:"), _autoLoginBox);
 
     QLabel *autostart = new QLabel(i18n("<a href=\"#\">Autostart application configuration</a>"));
     connect(autostart, &QLabel::linkActivated, [this]() {
@@ -193,9 +196,9 @@ KCMUserAccount::~KCMUserAccount()
         _currentFaceIcon = NULL;
     }
 
-    if (_currentFullName) {
-        delete _currentFullName;
-        _currentFullName = NULL;
+    if (_currentRealName) {
+        delete _currentRealName;
+        _currentRealName = NULL;
     }
 
     if (_currentAccountType) {
@@ -216,13 +219,11 @@ KCMUserAccount::~KCMUserAccount()
 
 void KCMUserAccount::_unlockUi() 
 {
-    _actionBtn->setText(_unlocked ? i18n("Lock") : i18n("Unlock"));
     _actionBtn->setIcon(_unlocked ?
                         QIcon::fromTheme("document-encrypted") :
                         QIcon::fromTheme("document-encrypt"));
     _addBtn->setEnabled(_unlocked);
-    _autoLoginButton->setEnabled(_unlocked);
-    _nonAutoLoginButton->setEnabled(_unlocked);
+    _autoLoginBox->setEnabled(_unlocked);
     load();
 }
 
@@ -327,33 +328,31 @@ void KCMUserAccount::slotItemClicked(QListWidgetItem *item)
     connect(_currentUser, SIGNAL(accountChanged()), this, SLOT(load()));
 
     _currentFaceIcon->setIcon(FaceIconPopup::faceIcon(_currentUser->iconFileName()));
-    _currentFullName->setText(_currentUser->displayName());
+    _currentUserName->setText(_currentUser->userName());
 
-    _currentAccountType->setCurrentText((int)_currentUser->accountType() ? 
-                                        i18n("Administrator") : 
-                                        i18n("Standard"));
+    _currentRealName->setText(_currentUser->displayName());
+
+    _currentAccountType->setChecked((int)_currentUser->accountType());
     if (_currentUser->userName() == _ku->loginName()) {
-        _currentFullName->setEnabled(true);
+        _currentRealName->setEnabled(true);
         _currentAccountType->setEnabled(false);
         _passwdEdit->setEnabled(true);
         _removeBtn->setEnabled(false);
     } else {
-        _currentFullName->setEnabled(_unlocked);
+        _currentRealName->setEnabled(_unlocked);
         _currentAccountType->setEnabled(_unlocked);
         _passwdEdit->setEnabled(_unlocked);
         _removeBtn->setEnabled(_unlocked);
     }
-    connect(_currentFullName, SIGNAL(editingFinished()), this, SLOT(changed()));
-    connect(_currentAccountType, SIGNAL(activated(int)), this, SLOT(changed()));
+    connect(_currentRealName, SIGNAL(editingFinished()), this, SLOT(changed()));
+    connect(_currentAccountType, SIGNAL(clicked()), this, SLOT(changed()));
 
     _currentLanguage->setText(_currentUser->language());
 
     connect(_passwdEdit, SIGNAL(textChanged(const QString &)), this, SLOT(changed()));
 
-    _autoLoginButton->setChecked(_currentUser->automaticLogin());
-    connect(_autoLoginButton, SIGNAL(clicked()), this, SLOT(changed()));
-    _nonAutoLoginButton->setChecked(!_currentUser->automaticLogin());
-    connect(_nonAutoLoginButton, SIGNAL(clicked()), this, SLOT(changed()));
+    _autoLoginBox->setChecked(_currentUser->automaticLogin());
+    connect(_autoLoginBox, SIGNAL(clicked()), this, SLOT(changed()));
 }
 
 void KCMUserAccount::actionActivated()
@@ -386,6 +385,7 @@ void KCMUserAccount::load()
     QString myAccountLoginName = _ku->loginName();
     
     QListWidgetItem *item = new QListWidgetItem(i18n("My Account"));
+    item->setFlags(!Qt::ItemIsEnabled);
     _accountList->addItem(item);
 
     QtAccountsService::UserAccount *myUserAccount = _am->findUserByName(myAccountLoginName);
@@ -402,6 +402,7 @@ void KCMUserAccount::load()
 
     // Other Accounts
     item = new QListWidgetItem(i18n("Other Accounts"));
+    item->setFlags(!Qt::ItemIsEnabled);
     _accountList->addItem(item);
 
     foreach (KUser user, _ku->allUsers()) {
@@ -430,11 +431,11 @@ void KCMUserAccount::save()
     if (_currentUser == NULL)
         return;
 
-    _currentUser->setRealName(_currentFullName->text());
+    _currentUser->setRealName(_currentRealName->text());
 
-    _currentUser->setAccountType((QtAccountsService::UserAccount::AccountType)_currentAccountType->currentIndex());
+    _currentUser->setAccountType((QtAccountsService::UserAccount::AccountType)_currentAccountType->isChecked());
 
-    _currentUser->setAutomaticLogin(_autoLoginButton->isChecked());
+    _currentUser->setAutomaticLogin(_autoLoginBox->isChecked());
 }
 
 #include "main.moc"
