@@ -38,7 +38,7 @@ Item {
     ColumnLayout {
         width: parent.width
 
-        PlasmaComponents.Label {
+        Label {
             Layout.fillWidth: true
 
             wrapMode: Text.WordWrap
