@@ -22,6 +22,7 @@ import QtQuick 2.2
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.kquickcontrolsaddons 2.0 as KQuickControls
 import org.kde.plasma.platformcomponents 2.0 as PlasmaPlatformComponents
 import org.kde.activities 0.1 as Activities
 
@@ -56,7 +57,6 @@ PlasmaCore.FrameSvgItem {
     function close()
     {
         opacity = 0;
-        iconDialog.closeDialog();
     }
 
     opacity: 0
@@ -112,15 +112,13 @@ PlasmaCore.FrameSvgItem {
             width: height
             height: activityNameLabel.height + activityNameText.height
 
-            PlasmaPlatformComponents.IconDialog {
+            KQuickControls.IconDialog {
                 id: iconDialog
+                onIconNameChanged: activityIconButton.iconSource = iconName
             }
 
             onClicked: {
-                var newIcon = iconDialog.openDialog()
-                if (newIcon != "") {
-                   activityIconButton.iconSource = newIcon;
-                }
+                iconDialog.open();
             }
 
         }
