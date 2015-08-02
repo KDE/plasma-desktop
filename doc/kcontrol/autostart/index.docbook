@@ -12,8 +12,8 @@
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date>2013-12-05</date>
-<releaseinfo>&kde; 4.12</releaseinfo>
+<date>2015-07-22</date>
+<releaseinfo>&plasma; 5.4</releaseinfo>
 
 <keywordset>
 <keyword>KDE</keyword>
@@ -27,41 +27,47 @@
 <sect1 id="kcm_autostart">
 <title>Autostart Manager</title>
 
-<para>This module is a configuration tool for managing what programs start up with your personal &kde;. It allows you to add programs or scripts so they automatically start during the startup of your &kde; session and to manage them. </para>
+<para>This module is a configuration tool for managing what programs start up with your personal &plasma;. It allows you to add programs or scripts so they automatically start during the startup or shutdown of your &plasma; session and to manage them.</para>
 
 <note><para>Please note that in this module all changes are immediately applied.</para></note>
 
-<para>The program scans <filename>~/.config/autostart/</filename>, your <filename class="directory">KDE  Autostart</filename> folder (<filename class="directory">$KDEHOME/Autostart</filename> as default), <filename class="directory">$KDEHOME/env</filename> and <filename class="directory">$KDEHOME/shutdown</filename> folders to check what programs and scripts are already there and displays them. It allows you to manage them easily. 
+<para>The program scans <filename>$HOME/.config/autostart/</filename>,
+<filename class="directory">$HOME/.config/plasma-workspace/env</filename> and <filename class="directory">$HOME/.config/plasma-workspace/shutdown</filename> folders to check what programs and scripts are already there and displays them. It allows you to manage them easily.
 </para>
-<!--Found this on forum.kde.org:
-The following folders are all checked for .desktop files:
-~/[.kde4|.kde]/Autostart 
-~/[.kde4|.kde]/share/autostart
-~/.config/autostart
-~/.local/share/autostart
-~/Desktop/autostart
-/etc/xdg/autostart
-/usr/share/autostart
-see also http://www.sharpley.org.uk/node/8
--->
+
+<note><para>The autostart feature has a bug, currently it is not possible to run a script after the startup of your &plasma; session.</para></note>
+
 <note><para>Note that you can change the location of your <filename class="directory">Autostart</filename> 
-folder in <menuchoice><guimenu>Account Details</guimenu> <guimenuitem>Paths</guimenuitem></menuchoice> 
-in the <guilabel>Common Appearance and Behaviour</guilabel> category of the &systemsettings; and set a different folder 
-than <filename class="directory">$KDEHOME/Autostart</filename>.</para></note>
-<!-- add info about system autostart desktop files, which are not handled here?
-eg /usr/share/autostart/kalarm.autostart.desktop installed with kalarm on my 11.04 system
-kalarm has a settings option "Start at login" which handles the autostart
-how to prevent eg kopete from autostart at login?
--->
+folder in <menuchoice><guimenu>Applications</guimenu> <guimenuitem>Locations</guimenuitem></menuchoice> 
+in the <guilabel>Personalization</guilabel> category of the &systemsettings; and set a different folder 
+than <filename class="directory">$HOME/.config/autostart</filename>.</para></note>
+
+<para>Please read also <ulink url="help:/kcontrol/kcmsmserver">Desktop Session</ulink> and <ulink url="help:kcontrol/kded">Background Services</ulink> for information how to configure the startup behavior of your &plasma; session.</para>
+
+<para>Some &kde; applications handle the autostart behavior on their own, &eg; you can enable or disable autostart of an application in the settings dialog (&kalarm;) or you have to use <menuchoice><guimenu>File</guimenu><guimenuitem>Quit</guimenuitem></menuchoice> (&konversation;, &kopete;), otherwise the application is still running in the systemtray and will be restarted on next login.
+</para>
+
+<sect2 id="migration">
+<title>Migration from &kde; Workspaces 4</title>
+<para>To migrate your personal autostart setting from &kde; Workspaces 4:</para>
+<simplelist>
+<member>Copy desktop files from <filename class="directory">$HOME/.kde/Autostart</filename> to <filename class="directory">$HOME/.config/autostart</filename></member>
+<member>Copy pre startup script files from <filename class="directory">$HOME/.kde/Autostart</filename> to <filename class="directory">$HOME/.config/plasma-workspace/env</filename></member>
+<member>Copy shutdown script files from <filename class="directory">$HOME/.kde/Autostart</filename> to <filename class="directory">$HOME/.config/plasma-workspace/shutdown</filename></member>
+</simplelist>
+</sect2>
+
+<!--FIXME Disabling Autostart Files Provided By Your Distribution -> http://www.sharpley.org.uk/node/8 -->
+
 <sect2 id="current">
 <title>Files display</title>
-<para>The main part of the module displays the programs that are loaded when &kde; starts and scripts that are run when &kde; starts, shutdowns or before &kde; starts.</para>
+<para>The main part of the module displays the programs that are loaded when &plasma; starts and scripts that are run when &plasma; starts, shutdowns or before &plasma; starts.</para>
 
 <variablelist>
 <varlistentry><term><guilabel>Name</guilabel></term>
 <listitem>
 <para>
-You cannot amend this column. It states the name of the program or script you want to start with &kde;. The name is extracted from the Desktop file from the Name key for a program and is the filename for a script.
+You cannot amend this column. It states the name of the program or script you want to start with &plasma;. The name is extracted from the Desktop file from the Name key for a program and is the filename for a script.
 </para>
 </listitem>
 </varlistentry>
@@ -69,10 +75,10 @@ You cannot amend this column. It states the name of the program or script you wa
 <varlistentry><term><guilabel>Command</guilabel></term>
 <listitem>
 <para>
-This column lists the commands that are run to start the program. Commands can be modified through the <guibutton>Properties</guibutton> button or by double clicking the program/script row. The command is extracted from the Desktop file from the Exec key.
+This column lists the commands that are run to start the program. Commands for a program can be modified through the <guibutton>Properties</guibutton> button or by double clicking the program row. The command is extracted from the Desktop file from the Exec key.
 </para>
 <para>
-For a script the command is the path to the script.
+For a script the command is the path to the script and can not be modified.
 </para>
 </listitem>
 </varlistentry>
@@ -80,10 +86,10 @@ For a script the command is the path to the script.
 <varlistentry><term><guilabel>Status</guilabel></term>
 <listitem>
 <para>
-This setting is only available for programs through Desktop files. You can keep a program in the <filename class="directory">Autostart</filename> folder but disable it from being run at &kde; start. Setting the program to <guilabel>Disabled</guilabel> will not run it on start.
+This setting is only available for programs through Desktop files. You can keep a program in the <filename class="directory">Autostart</filename> folder but disable it from being run at &plasma; start. Unchecking the status <guilabel>Enabled</guilabel> the program will not run on start.
 </para>
 <para>
-Setting a program to <guilabel>Disabled</guilabel> sets the Desktop file Hidden property to true in the <filename class="directory">Autostart</filename> folder.
+Unchecking the status <guilabel>Enabled</guilabel> sets the Desktop file Hidden property to true in the <filename class="directory">Autostart</filename> folder.
 </para>
 </listitem>
 </varlistentry>
@@ -91,19 +97,19 @@ Setting a program to <guilabel>Disabled</guilabel> sets the Desktop file Hidden 
 <varlistentry><term><guilabel>Run On</guilabel></term>
 <listitem>
 <para>
-Programs (Desktop files) can only be run on startup. Scripts can be run on <guilabel>Startup</guilabel>, <guilabel>Shutdown</guilabel> or <guilabel>Pre-KDE Startup</guilabel>. This column allows you to change when your script is run. Startup is when &kde; starts, shutdown is when you log out of &kde; and pre-KDE startup is before &kde; starts. 
+Programs (Desktop files) can only be run on startup. Scripts can be run on <guilabel>Startup</guilabel>, <guilabel>Shutdown</guilabel> or <guilabel>Pre-KDE Startup</guilabel>. This column allows you to change when your script is run. Startup is when &plasma; starts, shutdown is when you log out of &plasma; and pre-KDE startup is before &plasma; starts. 
 </para>
 <para>
-Scripts and desktop files set to run on <guilabel>Startup</guilabel> are copied or symlinked in <filename class="directory">$KDEHOME/Autostart</filename> and will be run during &kde; startup.
+Scripts and desktop files set to run on <guilabel>Startup</guilabel> are copied or symlinked in <filename class="directory">$HOME/.config/autostart</filename> and will be run during &plasma; startup.
 </para>
 <para>
-Scripts set on to be ran on <guilabel>Shutdown</guilabel> are copied or symlinked in the <filename class="directory">$KDEHOME/shutdown</filename> directory and will be automatically run during &kde; shutdown after the user has logged out. 
+Scripts set on to be ran on <guilabel>Shutdown</guilabel> are copied or symlinked in the <filename class="directory">$HOME/.config/plasma-workspace/shutdown</filename> directory and will be automatically run during &plasma; shutdown after the user has logged out.
 </para>
 <para>
-Scripts set to run at <guilabel>Pre-&kde; Startup</guilabel> are copied or symlinked in <filename class="directory">$KDEHOME/env</filename> and are sourced during &kde; startup (the <filename>startkde</filename> script will look for scripts here).
+Scripts set to run at <guilabel>Pre-&kde; Startup</guilabel> are copied or symlinked in <filename class="directory">$HOME/.config/plasma-workspace/env</filename> and are sourced during &plasma; startup (the <filename>startkde</filename> script will look for scripts here).
 </para>
 <note><para>
-Only scripts with the <filename>sh</filename> extension can be read by &kde; for <guilabel>Pre-&kde; startup</guilabel> and <guilabel>Shutdown</guilabel> modes.
+Only scripts with the <filename class="extension">.sh</filename> extension can be read by &plasma; for <guilabel>Pre-&kde; startup</guilabel> and <guilabel>Shutdown</guilabel> modes.
 </para></note>
 </listitem>
 </varlistentry>
@@ -120,7 +126,7 @@ On the right you have some buttons to change the way Autostart is configure. You
 <varlistentry><term><guibutton>Add Program</guibutton></term>
 <listitem>
 <para>
-Clicking this button displays the standard &kde; <guilabel>Choose Application</guilabel> dialog and allows you to choose which program you want to start. After choosing the program, clicking <guibutton>OK</guibutton> brings you the properties for this program. 
+Clicking this button displays the standard &plasma; <guilabel>Choose Application</guilabel> dialog and allows you to choose which program you want to start. After choosing the program, clicking <guibutton>OK</guibutton> brings you the properties for this program. 
 </para>
 <para>
 This will copy the program Desktop file in your <filename class="directory">Autostart</filename> folder. 
@@ -152,7 +158,7 @@ This button (only enabled for programs &ie; Desktop files) allows you to change 
 <varlistentry><term><guibutton>Advanced</guibutton></term>
 <listitem>
 <para>
-This button only applies to programs (&ie; Desktop files). A dialog asks you if you only want the program to autostart only in &kde; (and not in other desktop environments you might run). By default, the program will autostart in all desktop environments you might run. Checking <guilabel>Autostart only in KDE</guilabel> will autostart the program only if you start the &kde; desktop environment.
+This button only applies to programs (&ie; Desktop files). A dialog asks you if you only want the program to autostart only in &plasma; (and not in other desktop environments you might run). By default, the program will autostart in all desktop environments you might run. Checking <guilabel>Autostart only in KDE</guilabel> will autostart the program only if you start the &plasma; desktop environment.
 </para>
 <para>
 This sets the value KDE to the OnlyShowIn key of the program Desktop file.
@@ -163,11 +169,6 @@ This sets the value KDE to the OnlyShowIn key of the program Desktop file.
 </sect2>
 </sect1>
 </article>
-<!-- see also Service Manager - Startup Services:
-This shows all KDE services that can be loaded on KDE startup. Checked services will be invoked on next startup.
-
-and Session Management - Restore sessions?
--->
 
 <!--
 Local Variables:
