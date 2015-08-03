@@ -40,6 +40,9 @@ Item {
     UserAccount {
         id: userAccount
 
+        Component.onCompleted: {
+            faceIcon.source = userAccount.iconFileName != "" ? userAccount.iconFileName : kuser.faceIconUrl;
+        }
         onAccountChanged: {
             faceIcon.source = userAccount.iconFileName != "" ? userAccount.iconFileName : kuser.faceIconUrl;
         }
@@ -65,7 +68,7 @@ Item {
 
     Image {
         id: faceIcon
-        source: userAccount.iconFileName != "" ? userAccount.iconFileName : kuser.faceIconUrl
+        source: kuser.faceIconUrl
         cache: false
         visible: source !== ""
 
