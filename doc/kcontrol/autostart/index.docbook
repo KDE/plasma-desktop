@@ -42,7 +42,7 @@ folder in <menuchoice><guimenu>Applications</guimenu> <guimenuitem>Locations</gu
 in the <guilabel>Personalization</guilabel> category of the &systemsettings; and set a different folder 
 than <filename class="directory">$HOME/.config/autostart</filename>.</para></note>
 
-<para>Please read also <ulink url="help:/kcontrol/kcmsmserver">Desktop Session</ulink> and <ulink url="help:kcontrol/kded">Background Services</ulink> for information how to configure the startup behavior of your &plasma; session.</para>
+<para>Please read also <ulink url="help:/kcontrol/kcmsmserver">Desktop Session</ulink> and <ulink url="help:/kcontrol/kded">Background Services</ulink> for information how to configure the startup behavior of your &plasma; session.</para>
 
 <para>Some &kde; applications handle the autostart behavior on their own, &eg; you can enable or disable autostart of an application in the settings dialog (&kalarm;) or you have to use <menuchoice><guimenu>File</guimenu><guimenuitem>Quit</guimenuitem></menuchoice> (&konversation;, &kopete;), otherwise the application is still running in the systemtray and will be restarted on next login.
 </para>
