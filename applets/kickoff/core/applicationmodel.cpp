@@ -147,7 +147,11 @@ void ApplicationModelPrivate::fillNode(const QString &_relPath, AppNode *node)
             if (p->noDisplay()) {
                 continue;
             }
-
+            // Filter out apps that have formfactors set, but do not contain "desktop"
+            const KPluginMetaData md(p->entryPath());
+            if (!md.formFactors().isEmpty() && !md.formFactors().contains(QStringLiteral("desktop"))) {
+                continue;
+            }
             AppNode *newnode = new AppNode();
             newnode->icon = QIcon::fromTheme(p->icon(), QIcon::fromTheme("unknown"));
             newnode->appName = p->name();
@@ -192,7 +196,11 @@ void ApplicationModelPrivate::fillNode(const QString &_relPath, AppNode *node)
             if (service->noDisplay()) {
                 continue;
             }
-
+            // Filter out apps that have formfactors set, but do not contain "desktop"
+            const KPluginMetaData md(service->entryPath());
+            if (!md.formFactors().isEmpty() && !md.formFactors().contains(QStringLiteral("desktop"))) {
+                continue;
+            }
             icon = service->icon();
             appName = service->name();
             genericName = service->genericName();
