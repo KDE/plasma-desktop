@@ -94,7 +94,7 @@ Database::Ptr Database::instance(Source source, OpenMode openMode)
         auto ptr = search->second.lock();
 
         if (ptr) {
-            return std::move(ptr);
+            return ptr;
         }
     }
 
@@ -168,7 +168,7 @@ Database::Ptr Database::instance(Source source, OpenMode openMode)
         << "\n    synchronous:        " << ptr->pragma("synchronous")
         ;
 
-    return std::move(ptr);
+    return ptr;
 }
 
 Database::Database()

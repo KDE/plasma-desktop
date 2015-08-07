@@ -43,7 +43,7 @@
 
 #include <common/specialvalues.h>
 
-#define MAX_CHUNK_LOAD_SIZE 5
+#define MAX_CHUNK_LOAD_SIZE 50
 #define MAX_RELOAD_CACHE_SIZE 50
 
 #define QDBG qDebug() << "KActivitiesStats(" << (void*)this << ")"

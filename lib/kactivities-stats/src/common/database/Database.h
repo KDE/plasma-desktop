@@ -67,7 +67,7 @@ public:
     };
 
     #define DATABASE_TRANSACTION(A) \
-        qDebug() << "Location:" << __FILE__ << __LINE__; \
+        /* enable this for debugging only: qDebug() << "Location:" << __FILE__ << __LINE__; */ \
         Common::Database::Locker lock(A)
 
 private:
