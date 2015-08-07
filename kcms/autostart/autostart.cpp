@@ -146,7 +146,7 @@ void Autostart::load()
     // share/autostart shouldn't be an option as this should be reserved for global autostart entries
 
     m_pathName << i18n("Startup")
-             << i18n("Shutdown")
+             << i18n("Logout")
              << i18n("Pre-KDE startup")
         ;
     widget->listCMD->clear();
