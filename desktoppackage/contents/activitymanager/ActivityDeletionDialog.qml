@@ -100,7 +100,6 @@ PlasmaCore.FrameSvgItem {
 
             topMargin    : units.smallSpacing + root.margins.top
             leftMargin   : units.smallSpacing + root.margins.left
-            bottomMargin : units.smallSpacing + root.margins.bottom
             rightMargin  : units.smallSpacing + root.margins.right
         }
 
