@@ -20,7 +20,6 @@
 
 import QtQuick 2
 import org.kde.solid 1.0 as Solid
-import org.kde.plasma.platformcomponents 2.0 as Platform
 
 Item {
     id: main
