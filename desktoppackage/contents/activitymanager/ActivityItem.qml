@@ -4,6 +4,9 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddonsComponents
 import org.kde.plasma.activityswitcher 1.0 as ActivitySwitcher
+import org.kde.activities 0.1 as Activities
+
+import "static.js" as S
 
 Item {
     id: root
@@ -57,8 +60,6 @@ Item {
     }
 
     signal clicked
-    signal configureClicked
-    signal stopClicked
 
     width  : 200
     // height : width * 1 / units.displayAspectRatio
@@ -136,8 +137,9 @@ Item {
         PlasmaCore.IconItem {
             id: icon
 
-            width  : units.iconSizes.medium
-            height : width
+            width   : units.iconSizes.medium
+            height  : width
+            visible : shade.visible
 
             anchors {
                 bottom  : shade.bottom
@@ -149,8 +151,9 @@ Item {
         PlasmaComponents.Label {
             id: title
 
-            color : "white"
-            elide : Text.ElideRight
+            color   : "white"
+            elide   : Text.ElideRight
+            visible : shade.visible
 
             anchors {
                 bottom  : parent.bottom
@@ -161,7 +164,6 @@ Item {
         }
 
         // Controls
-
         MouseArea {
             id: rootArea
 
@@ -174,7 +176,7 @@ Item {
         ControlButton {
             id: stopButton
 
-            onClicked: root.stopClicked()
+            onClicked: activitiesModel.stopActivity(activityId, function () {});
 
             icon: "close"
             visible: root.stoppable
@@ -189,7 +191,18 @@ Item {
         ControlButton {
             id: configButton
 
-            onClicked: root.configureClicked()
+            onClicked: S.openActivityConfigurationDialog(
+                            configureDialog,
+                            root.activityId,
+                            root.title,
+                            root.icon,
+                            // We need to pass some QML-only variables
+                            {
+                                kactivities: activitiesModel,
+                                readyStatus: Loader.Ready,
+                                i18nd:       i18nd
+                            }
+                        )
 
             icon: "configure"
 
@@ -200,17 +213,35 @@ Item {
             }
         }
 
+        Loader {
+            id: configureDialog
+
+            anchors.fill: parent
+
+            property bool itemVisible: status == Loader.Ready && item.visible
+        }
+
+
         states: [
             State {
                 name: "plain"
-                PropertyChanges { target: stopButton; opacity: 0 }
-                PropertyChanges { target: configButton; opacity: 0 }
+                PropertyChanges { target: stopButton   ; opacity: 0.2 }
+                PropertyChanges { target: configButton ; opacity: 0.2 }
+                PropertyChanges { target: shade        ; visible: true }
             },
             State {
-                name: "showControls"
-                PropertyChanges { target: stopButton; opacity: 1 }
-                PropertyChanges { target: configButton; opacity: 1 }
+                name: "showingControls"
+                PropertyChanges { target: stopButton   ; opacity: 1 }
+                PropertyChanges { target: configButton ; opacity: 1 }
+                PropertyChanges { target: shade        ; visible: true }
+            },
+            State {
+                name: "showingOverlayDialog"
+                PropertyChanges { target: stopButton   ; opacity: 0 }
+                PropertyChanges { target: configButton ; opacity: 0 }
+                PropertyChanges { target: shade        ; visible: false }
             }
+
         ]
 
         transitions: [
@@ -222,6 +253,9 @@ Item {
             }
         ]
 
-        state: rootArea.containsMouse ? "showControls" : "plain"
+        state:
+            configureDialog.itemVisible ? "showingOverlayDialog"
+            : rootArea.containsMouse    ? "showingControls"
+            : /* otherwise */             "plain"
     }
 }

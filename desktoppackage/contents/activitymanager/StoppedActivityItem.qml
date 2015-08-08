@@ -22,22 +22,25 @@ import QtQuick 2.2
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.extras 2.0 as PlasmaExtras
+import org.kde.activities 0.1 as Activities
+
+import "static.js" as S
 
 Item {
     id: root
 
     property int innerPadding: units.smallSpacing
 
-    property alias title      : title.text
-    property alias icon       : icon.source
+    property string activityId : ""
 
-    /*signal clicked*/
-    signal configureClicked
-    signal deleteClicked
+    property alias title       : title.text
+    property alias icon        : icon.source
+
+    property bool showingDialog: configureDialog.itemVisible || deleteDialog.itemVisible
+
     signal clicked
 
     width  : 200
-    height : icon.height + innerPadding * 2
 
     // Background until we get something real
     PlasmaCore.FrameSvgItem {
@@ -104,7 +107,18 @@ Item {
         ControlButton {
             id: deleteButton
 
-            onClicked: root.deleteClicked()
+            onClicked: S.openActivityDeletionDialog(
+                            deleteDialog,
+                            root.activityId,
+                            root.title,
+                            root.icon,
+                            // We need to pass some QML-only variables
+                            {
+                                kactivities: activitiesModel,
+                                readyStatus: Loader.Ready,
+                                i18nd:       i18nd
+                            }
+                        )
 
             icon: "delete"
 
@@ -118,7 +132,18 @@ Item {
         ControlButton {
             id: configButton
 
-            onClicked: root.configureClicked()
+            onClicked: S.openActivityConfigurationDialog(
+                            configureDialog,
+                            root.activityId,
+                            root.title,
+                            root.icon,
+                            // We need to pass some QML-only variables
+                            {
+                                kactivities: activitiesModel,
+                                readyStatus: Loader.Ready,
+                                i18nd:       i18nd
+                            }
+                        )
 
             icon: "configure"
 
@@ -129,16 +154,46 @@ Item {
             }
         }
 
+        Loader {
+            id: deleteDialog
+
+            anchors.fill: parent
+
+            property bool itemVisible: status == Loader.Ready && item.visible
+        }
+
+        Loader {
+            id: configureDialog
+
+            anchors.fill: parent
+
+            property bool itemVisible: status == Loader.Ready && item.visible
+        }
+
         states: [
             State {
                 name: "plain"
-                PropertyChanges { target: deleteButton; opacity: 0 }
-                PropertyChanges { target: configButton; opacity: 0 }
+                PropertyChanges { target: deleteButton ; opacity: 0 }
+                PropertyChanges { target: configButton ; opacity: 0 }
+                PropertyChanges { target: icon         ; visible: true }
+                PropertyChanges { target: title        ; visible: true }
+                PropertyChanges { target: root         ; height: icon.height + innerPadding }
             },
             State {
-                name: "showControls"
-                PropertyChanges { target: deleteButton; opacity: 1 }
-                PropertyChanges { target: configButton; opacity: 1 }
+                name: "showingControls"
+                PropertyChanges { target: deleteButton ; opacity: 1 }
+                PropertyChanges { target: configButton ; opacity: 1 }
+                PropertyChanges { target: icon         ; visible: true }
+                PropertyChanges { target: title        ; visible: true }
+                PropertyChanges { target: root         ; height: icon.height + innerPadding }
+            },
+            State {
+                name: "showingOverlayDialog"
+                PropertyChanges { target: deleteButton ; opacity: 0 }
+                PropertyChanges { target: configButton ; opacity: 0 }
+                PropertyChanges { target: icon         ; visible: false }
+                PropertyChanges { target: title        ; visible: false }
+                PropertyChanges { target: root         ; height: width * 9.0 / 16.0 }
             }
         ]
 
@@ -151,8 +206,13 @@ Item {
             }
         ]
 
-        state: rootArea.containsMouse ? "showControls" : "plain"
+        state:
+            root.showingDialog          ? "showingOverlayDialog"
+            : rootArea.containsMouse    ? "showingControls"
+            : /* otherwise */             "plain"
     }
+
+    Behavior on height { PropertyAnimation { duration: units.shortDuration } }
 }
 
 

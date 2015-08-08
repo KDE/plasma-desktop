@@ -26,6 +26,8 @@ import org.kde.kquickcontrolsaddons 2.0 as KQuickControls
 import org.kde.plasma.platformcomponents 2.0 as PlasmaPlatformComponents
 import org.kde.activities 0.1 as Activities
 
+import "static.js" as S
+
 PlasmaCore.FrameSvgItem {
     id: root
 
@@ -52,11 +54,15 @@ PlasmaCore.FrameSvgItem {
         y = verticalPosition - height / 2;
         opacity = 1;
         activityNameText.forceActiveFocus();
+
+        S.openedDialog(root);
     }
 
     function close()
     {
         opacity = 0;
+
+        S.closedDialog(root);
     }
 
     opacity: 0

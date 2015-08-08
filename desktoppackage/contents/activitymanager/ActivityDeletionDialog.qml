@@ -23,6 +23,8 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 
+import "static.js" as S
+
 PlasmaCore.FrameSvgItem {
     id: root
 
@@ -31,13 +33,13 @@ PlasmaCore.FrameSvgItem {
 
     imagePath: "dialogs/background"
 
+    property alias activityName: activityNameText.text
+    property alias activityIconSource: icon.source
+
+    property alias acceptButtonText: acceptButton.text
+    property alias cancelButtonText: cancelButton.text
+
     property string activityId: ""
-
-
-
-
-
-
 
     MouseArea {
         anchors.fill: parent
@@ -48,11 +50,16 @@ PlasmaCore.FrameSvgItem {
     {
         y = verticalPosition - height / 2;
         opacity = 1;
+        activityNameText.forceActiveFocus();
+
+        S.openedDialog(root);
     }
 
     function close()
     {
         opacity = 0;
+
+        S.closedDialog(root);
     }
 
     opacity: 0
@@ -81,51 +88,91 @@ PlasmaCore.FrameSvgItem {
         }
     }
 
-    height: content.height + margins.top + margins.bottom
-    Column {
+    height: content.height + margins.top + margins.bottom + dialogButtons.height
+
+    Item {
         id: content
 
         anchors {
-            left: parent.left
-            right: parent.right
+            left  : parent.left
+            right : parent.right
+            top   : parent.top
 
-            topMargin: root.margins.top
-            leftMargin: root.margins.left
-            bottomMargin: root.margins.bottom
-            rightMargin: root.margins.right
+            topMargin    : units.smallSpacing + root.margins.top
+            leftMargin   : units.smallSpacing + root.margins.left
+            bottomMargin : units.smallSpacing + root.margins.bottom
+            rightMargin  : units.smallSpacing + root.margins.right
+        }
+
+        PlasmaCore.IconItem {
+            id: icon
+
+            anchors {
+                left: parent.left
+                top: parent.top
+            }
+
+            width: height
+            height: units.iconSizes.medium
         }
 
         PlasmaComponents.Label {
-            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Are you sure you want to delete the activity?")
-            width: parent.width
-        }
+            id: activityNameText
 
-        Item {
-            height: units.largeSpacing
-            width: parent.width
-        }
+            anchors {
+                left:  icon.right
+                top:   parent.top
+                right: parent.right
 
-        PlasmaComponents.ButtonRow {
-            exclusive: false
-
-            PlasmaComponents.Button {
-                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Delete")
-                iconSource: "list-remove"
-                onClicked: {
-                    root.close();
-                    root.accepted();
-                }
+                leftMargin: units.largeSpacing
             }
-            PlasmaComponents.Button {
-                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Cancel")
-                iconSource: "dialog-close"
-                onClicked: {
-                    root.close();
-                    root.canceled();
-                }
-            }
-
         }
 
+        PlasmaComponents.Label {
+            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Are you sure you want to delete this activity?")
+            width: parent.width
+
+            anchors {
+                top: icon.bottom
+                left: parent.left
+                right: parent.right
+            }
+        }
+    }
+
+    PlasmaComponents.ButtonRow {
+        id: dialogButtons
+
+        anchors {
+            right:  parent.right
+            bottom: parent.bottom
+            rightMargin:  root.margins.right
+            bottomMargin: root.margins.bottom
+        }
+
+        exclusive: false
+
+        PlasmaComponents.Button {
+            id: acceptButton
+
+            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Delete")
+            enabled: activityNameText.text.trim().length > 0
+            iconSource: "list-add"
+            onClicked: {
+                root.close();
+                root.accepted();
+            }
+        }
+
+        PlasmaComponents.Button {
+            id: cancelButton
+
+            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Cancel")
+            iconSource: "dialog-close"
+            onClicked: {
+                root.close();
+                root.canceled();
+            }
+        }
     }
 }

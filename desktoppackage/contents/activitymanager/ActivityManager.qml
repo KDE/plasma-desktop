@@ -27,6 +27,8 @@ import org.kde.kquickcontrolsaddons 2.0
 
 import org.kde.activities 0.1 as Activities
 
+import "static.js" as S
+
 FocusScope {
     id: root
     signal closed()
@@ -41,8 +43,6 @@ FocusScope {
 
     property bool showSwitcherOnly: false
 
-    property bool showingDialog: activityBrowser.showingDialog
-
     width: units.gridUnit * 16
 
     Item {
@@ -50,25 +50,17 @@ FocusScope {
 
         property int spacing: 2 * units.smallSpacing
 
-        property bool showingDialog:
-            activityList.showingDialog ||
-            (
-                newActivityDialog.status == Loader.Ready &&
-                newActivityDialog.item.visible
-            )
-
         Connections {
             target: parent
             onVisibleChanged: {
-                newActivityDialog.item.close();
-                activityList.closeDialogs();
+                S.closeAllDialogs();
             }
         }
 
         signal closeRequested()
 
         Keys.onPressed: {
-            if (activityBrowser.showingDialog) {
+            if (S.isAnyDialogShown()) {
                 event.accepted = false;
 
             } else {
@@ -137,10 +129,6 @@ FocusScope {
                 showSwitcherOnly: root.showSwitcherOnly
 
                 filterString: heading.searchString.toLowerCase()
-
-                onShowingDialogChanged:
-                    if (showingDialog && newActivityDialog.status == Loader.Ready)
-                        newActivityDialog.item.close()
             }
         }
 
@@ -165,9 +153,13 @@ FocusScope {
 
                 width: parent.width
 
-                onClicked: {
-                    newActivityDialog.loadAndOpen();
-                }
+                onClicked: S.openActivityCreationDialog(
+                                newActivityDialog,
+                                {
+                                    kactivities: activityList.model,
+                                    readyStatus: Loader.Ready
+                                }
+                            )
 
                 opacity: newActivityDialog.status == Loader.Ready ?
                               1 - newActivityDialog.item.opacity : 1
@@ -182,37 +174,6 @@ FocusScope {
                 anchors.left:   newActivityButton.left
                 anchors.right:  newActivityButton.right
 
-                function loadAndOpen() {
-                    if (newActivityDialog.source == "ActivityCreationDialog.qml") {
-                        showDialog();
-
-                    } else {
-                        newActivityDialog.source = "ActivityCreationDialog.qml";
-
-                    }
-
-                }
-
-                function showDialog() {
-                    activityList.closeDialogs();
-                    newActivityDialog.item.open(
-                        newActivityDialog.item.height / 2);
-                }
-
-                onLoaded: {
-                    newActivityDialog.item.accepted.connect(function() {
-                        activityList.model.addActivity(item.activityName, function (id) {
-                            activityList.model.setActivityIcon(id, newActivityDialog.item.activityIconSource, function() {});
-                        });
-                    });
-                    showDialog();
-                }
-
-                onOpacityChanged: {
-                    if (opacity == 0) {
-                        heading.focusSearch();
-                    }
-                }
             }
         }
 

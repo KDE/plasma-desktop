@@ -22,6 +22,7 @@ import QtQuick 2.2
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.activities 0.1 as Activities
 
+import "static.js" as S
 
 Flickable {
     id: root
@@ -31,7 +32,6 @@ Flickable {
 
     property var    model: activitiesModel
     property string filterString: ""
-    property bool   showingDialog: activityDeletionDialog.visible || activityConfigurationDialog.visible
     property bool   showSwitcherOnly: false
 
     property int    selectedIndex: -1
@@ -104,12 +104,6 @@ Flickable {
         }
     }
 
-    function closeDialogs()
-    {
-        activityDeletionDialog.close();
-        activityConfigurationDialog.close();
-    }
-
     Activities.ActivityModel {
         id: activitiesModel
 
@@ -122,19 +116,8 @@ Flickable {
         shownStates: "Stopped,Starting"
     }
 
-    ActivityDeletionDialog {
-        id: activityDeletionDialog
-        z: 10
-
-        width: parent.width
-
-        onAccepted: {
-            activitiesModel.removeActivity(activityDeletionDialog.activityId, function () {})
-        }
-    }
-
     ActivityCreationDialog {
-        id: activityConfigurationDialog
+        id: activityCreationDialog
         z: 10
 
         acceptButtonText: i18nd("plasma_shell_org.kde.plasma.desktop", "Apply")
@@ -142,12 +125,12 @@ Flickable {
         width: parent.width
 
         onAccepted: {
-            var id = activityConfigurationDialog.activityId
+            var id = activityCreationDialog.activityId
             activitiesModel.setActivityName(id,
-                activityConfigurationDialog.activityName,
+                activityCreationDialog.activityName,
                 function () {});
             activitiesModel.setActivityIcon(id,
-                activityConfigurationDialog.activityIconSource,
+                activityCreationDialog.activityIconSource,
                 function () {});
         }
     }
@@ -183,20 +166,6 @@ Flickable {
                 onClicked          : {
                     activitiesModel.setCurrentActivity(model.id, function () {})
                 }
-
-                onStopClicked      : {
-                    activitiesModel.stopActivity(model.id, function () {});
-                }
-
-                onConfigureClicked : {
-                    activityConfigurationDialog.activityId = model.id;
-                    activityConfigurationDialog.activityName = title;
-                    activityConfigurationDialog.activityIconSource = icon;
-
-                    var selfLocation = mapToItem(root, width / 2, height / 2);
-                    activityConfigurationDialog.open(selfLocation.y);
-                    activityDeletionDialog.close();
-                }
             }
         }
 
@@ -209,6 +178,8 @@ Flickable {
         }
 
         PlasmaExtras.Heading {
+            id: stoppedActivitiesHeading
+
             text: i18nd("plasma_shell_org.kde.plasma.desktop", "Stopped activities:")
             level: 3
             visible: !root.showSwitcherOnly && stoppedActivitiesList.count > 0
@@ -227,32 +198,32 @@ Flickable {
                 visible      : (root.filterString == "") ||
                                (title.toLowerCase().indexOf(root.filterString) != -1)
 
+                activityId   : model.id
                 title        : model.name
                 icon         : model.iconSource
                 innerPadding : 2 * units.smallSpacing
 
-                onClicked          : {
+                onClicked: {
                     stoppedActivitiesModel.setCurrentActivity(model.id, function () {})
                 }
 
-                onDeleteClicked    : {
-                    activityDeletionDialog.activityId = model.id;
+                onShowingDialogChanged: {
+                    var desiredY = y + (width * 9.0 / 16.0) - root.height;
+                    // width * 9 / 16 is the size of the expanded item
 
-                    var selfLocation = mapToItem(root, width / 2, height / 2);
-                    activityDeletionDialog.open(selfLocation.y);
-                    activityConfigurationDialog.close();
-                }
-
-                onConfigureClicked : {
-                    activityConfigurationDialog.activityId = model.id;
-                    activityConfigurationDialog.activityName = title;
-                    activityConfigurationDialog.activityIconSource = icon;
-
-                    var selfLocation = mapToItem(root, width / 2, height / 2);
-                    activityConfigurationDialog.open(selfLocation.y);
-                    activityDeletionDialog.close();
+                    if (root.contentY < desiredY) {
+                        root.contentY = desiredY;
+                    }
                 }
             }
+        }
+
+        Item {
+            // spacer
+            width  : parent.width
+            height : units.largeSpacing * 2
+
+            visible: stoppedActivitiesHeading.visible
         }
 
         add: Transition {
