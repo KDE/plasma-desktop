@@ -143,9 +143,10 @@ void KCMKeyboardWidget::updateUI()
 	updateHardwareUI();
 	updateXkbOptionsUI();
 	updateSwitcingPolicyUI();
-    updateLayoutsUI();
-    updateShortcutsUI();
-    uiUpdating = false;
+	updateLayoutsUI();
+	updateShortcutsUI();
+	layoutSelectionChanged();
+	uiUpdating = false;
 }
 
 void KCMKeyboardWidget::uiChanged()
@@ -154,6 +155,7 @@ void KCMKeyboardWidget::uiChanged()
 		return;
 
 	((LayoutsTableModel*)uiWidget->layoutsTableView->model())->refresh();
+	layoutSelectionChanged();
 // this collapses the tree so use more fine-grained updates
 //	((LayoutsTableModel*)uiWidget->xkbOptionsTreeView->model())->refresh();
 
@@ -204,6 +206,7 @@ void KCMKeyboardWidget::uiChanged()
 	keyboardConfig->layoutLoopCount = loop;
 
 	layoutsTableModel->refresh();
+	layoutSelectionChanged();
 
 	emit changed(true);
 }
