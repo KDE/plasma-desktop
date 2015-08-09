@@ -250,7 +250,7 @@ MouseArea {
             visible: false
 
             active: task.containsMouse
-            enabled: !(model.Minimized && !plasmoid.configuration.showOnlyMinimized)
+            enabled: true
 
             source: model.DecorationRole
 
@@ -305,7 +305,7 @@ MouseArea {
 
         visible: (inPopup || !iconsOnly && !model.IsLauncher && (parent.width - LayoutManager.horizontalMargins()) >= (theme.mSize(theme.defaultFont).width * 7))
 
-        enabled: !model.Minimized
+        enabled: true
 
         text: (!inPopup && iconsOnly) ? "" : model.DisplayRole
         color: theme.textColor
