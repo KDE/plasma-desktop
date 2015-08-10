@@ -25,7 +25,7 @@ import org.kde.draganddrop 2.0
 import org.kde.plasma.private.pager 2.0
 import "utils.js" as Utils
 
-Item {
+MouseArea {
     id: root
 
     property bool vertical: (plasmoid.formFactor == PlasmaCore.Types.Vertical)
@@ -47,6 +47,7 @@ Item {
 
     anchors.fill: parent
     visible: pager.desktopCount > 1
+    acceptedButtons: Qt.NoButton
 
     property color windowActiveOnActiveDesktopColor: theme.textColor
     property color windowInactiveOnActiveDesktopColor: theme.textColor
@@ -65,6 +66,14 @@ Item {
 
     function action_openKCM() {
         pager.openVirtualDesktopsKCM();
+    }
+
+    onWheel: {
+        if (wheel.angleDelta.y > 0 || wheel.angleDelta.x > 0) {
+            pager.changeDesktop((repeater.count + pager.currentDesktop - 2) % repeater.count)
+        } else {
+            pager.changeDesktop(pager.currentDesktop % repeater.count)
+        }
     }
 
     Connections {
@@ -181,13 +190,6 @@ Item {
                 id: desktopMouseArea
                 anchors.fill: parent
                 onClicked: pager.changeDesktop(desktopId);
-                onWheel: {
-                    if (wheel.angleDelta.y > 0 || wheel.angleDelta.x > 0) {
-                        pager.changeDesktop((repeater.count + pager.currentDesktop - 2) % repeater.count)
-                    } else {
-                        pager.changeDesktop(pager.currentDesktop % repeater.count)
-                    }
-                }
             }
 
             Item {
