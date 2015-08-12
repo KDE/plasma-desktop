@@ -614,6 +614,7 @@ bool KGlobalShortcutsEditor::KGlobalShortcutsEditorPrivate::loadComponent(const 
             const QString &objectName = shortcut.uniqueName();
             QAction *action = col->addAction(objectName);
             action->setProperty("isConfigurationAction", QVariant(true)); // see KAction::~KAction
+            action->setProperty("componentDisplayName", shortcut.componentFriendlyName());
             action->setText(shortcut.friendlyName());
 
             // Always call this to enable global shortcuts for the action. The editor widget
