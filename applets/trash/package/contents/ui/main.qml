@@ -20,6 +20,7 @@ import QtQuick.Layouts 1.1
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as Components
+import org.kde.kcoreaddons 1.0 as KCoreAddons
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.draganddrop 2.0 as DragDrop
 import org.kde.plasma.private.trash 1.0 as TrashPrivate
@@ -82,9 +83,15 @@ DragDrop.DropArea {
         TrashPrivate.Trash.emptyTrash()
     }
 
+    function action_openkcm() {
+        KCMShell.open(["trash"]);
+    }
+
     Component.onCompleted: {
+        plasmoid.removeAction("configure");
         plasmoid.setAction("open", i18nc("a verb", "Open"),"document-open");
         plasmoid.setAction("empty",i18nc("a verb", "Empty"),"trash-empty");
+        plasmoid.setAction("openkcm", i18n("Trash Settings"), "configure");
         plasmoid.popupIcon = "user-trash";
         plasmoid.action("empty").enabled = count > 0;
     }
