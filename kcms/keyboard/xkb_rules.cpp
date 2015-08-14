@@ -68,8 +68,8 @@ private:
 
 static QString translate_xml_item(const QString& itemText)
 {
-	return i18n(itemText.toHtmlEscaped().toUtf8());
-	//	return QString::fromUtf8(dgettext("xkeyboard-config", itemText.toAscii()));
+    //messages are already extracted from the source XML files by xkb
+    return i18nd("xkeyboard-config", itemText.toUtf8());
 }
 
 static QString translate_description(ConfigItem* item)
