@@ -39,6 +39,17 @@ PlasmaCore.FrameSvgItem {
     onMinimumLengthChanged: leftMinimumLengthHandle.value = minimumLength
     onMaximumLengthChanged: leftMaximumLengthHandle.value = maximumLength
 
+    /* As offset and length have a different meaning in all alignments, the panel shifts on alignment change.
+     * This could result in wrong panel positions (e.g. panel shifted over monitor border).
+     * The fancy version would be a recalculation of all values, so that the panel stays at it's current position,
+     * but this would be error prone and complicated. As the panel alignment is rarely changed, it's not worth it.
+     * The more easy approach is just setting the panel offset to zero. This makes sure the panel has a valid position and size.
+     */
+    Connections {
+        target: panel
+        onAlignmentChanged: offset = 0
+    }
+
     Component.onCompleted: {
         offsetHandle.value = panel.offset
         minimumLengthHandle.value = panel.minimumLength
