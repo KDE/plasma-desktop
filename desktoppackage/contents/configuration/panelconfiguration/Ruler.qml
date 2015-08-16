@@ -26,6 +26,7 @@ import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
 PlasmaCore.FrameSvgItem {
     id: root
 
+    //Those properties get updated by PanelConfiguration.qml whenever a value in the panel changes
     property alias offset: offsetHandle.value
     property alias minimumLength: minimumLengthHandle.value
     property alias maximumLength: maximumLengthHandle.value
@@ -73,7 +74,7 @@ PlasmaCore.FrameSvgItem {
         offset: panel.offset
         graphicElementName: "minslider"
         onValueChanged: panel.minimumLength = value
-        minimumValue:  Math.max(offsetHandle.position + units.gridUnit * 3, (panel.alignment == Qt.AlignCenter) ? ((dialogRoot.vertical) ? root.height/2 : root.width/2) : ((dialogRoot.vertical) ? -height/2 : -width/2));
+        minimumPosition:  Math.max(offsetHandle.position + units.gridUnit * 3, (panel.alignment == Qt.AlignCenter) ? ((dialogRoot.vertical) ? root.height/2 : root.width/2) : ((dialogRoot.vertical) ? -height/2 : -width/2));
     }
     SliderHandle {
         id: maximumLengthHandle
@@ -82,7 +83,7 @@ PlasmaCore.FrameSvgItem {
         offset: panel.offset
         graphicElementName: "maxslider"
         onValueChanged: panel.maximumLength = value
-        minimumValue: Math.max(offsetHandle.position + units.gridUnit * 3, (panel.alignment == Qt.AlignCenter) ? ((dialogRoot.vertical) ? root.height/2 : root.width/2) : ((dialogRoot.vertical) ? -height/2 : -width/2));
+        minimumPosition: Math.max(offsetHandle.position + units.gridUnit * 3, (panel.alignment == Qt.AlignCenter) ? ((dialogRoot.vertical) ? root.height/2 : root.width/2) : ((dialogRoot.vertical) ? -height/2 : -width/2));
     }
     SliderHandle {
         id: leftMinimumLengthHandle
@@ -91,7 +92,7 @@ PlasmaCore.FrameSvgItem {
         offset: panel.offset
         graphicElementName: "maxslider"
         onValueChanged: panel.minimumLength = value
-        maximumValue: Math.min(offsetHandle.position - units.gridUnit * 3, (panel.alignment == Qt.AlignCenter) ? ((dialogRoot.vertical) ? root.height/2-height : root.width/2-width) : ((dialogRoot.vertical) ? root.height-height/2 : root.width-width/2));
+        maximumPosition: Math.min(offsetHandle.position - units.gridUnit * 3, (panel.alignment == Qt.AlignCenter) ? ((dialogRoot.vertical) ? root.height/2-height : root.width/2-width) : ((dialogRoot.vertical) ? root.height-height/2 : root.width-width/2));
     }
     SliderHandle {
         id: leftMaximumLengthHandle
@@ -100,7 +101,7 @@ PlasmaCore.FrameSvgItem {
         offset: panel.offset
         graphicElementName: "minslider"
         onValueChanged: panel.maximumLength = value
-        maximumValue: Math.min(offsetHandle.position - units.gridUnit * 3, (panel.alignment == Qt.AlignCenter) ? ((dialogRoot.vertical) ? root.height/2-height : root.width/2-width) : ((dialogRoot.vertical) ? root.height-height/2 : root.width-width/2));
+        maximumPosition: Math.min(offsetHandle.position - units.gridUnit * 3, (panel.alignment == Qt.AlignCenter) ? ((dialogRoot.vertical) ? root.height/2-height : root.width/2-width) : ((dialogRoot.vertical) ? root.height-height/2 : root.width-width/2));
     }
 
     states: [
