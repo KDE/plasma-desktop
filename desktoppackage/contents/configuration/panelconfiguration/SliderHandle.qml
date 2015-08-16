@@ -53,8 +53,8 @@ PlasmaCore.SvgItem {
     property int alignment: panel.alignment
 
     //The maximum/minimum Position (X/Y) the silder can be moved to
-    property int minimumPosition: (dialogRoot.vertical) ? -root.height/2 : -root.width/2
-    property int maximumPosition: (dialogRoot.vertical) ? root.parent.height - root.height/2+1 : root.parent.width - root.width/2+1
+    property int minimumPosition
+    property int maximumPosition
 
     function syncPos() {
         if (dialogRoot.vertical) {
