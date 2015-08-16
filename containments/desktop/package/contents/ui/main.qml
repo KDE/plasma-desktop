@@ -346,7 +346,10 @@ DragDrop.DropArea {
 
     MouseArea { // unfocus any plasmoid when clicking empty desktop area
         anchors.fill: parent
-        onClicked: root.forceActiveFocus()
+        onPressed: {
+            root.forceActiveFocus()
+            mouse.accepted = false // Bug 351277
+        }
     }
 
     Loader {
