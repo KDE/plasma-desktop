@@ -82,7 +82,7 @@ QStandardItem* LeaveModel::createStandardItem(const QString& url)
         item->setData(i18n("Suspend to disk"), Kickoff::SubTitleRole);
         item->setData("system-suspend-hibernate", Kickoff::IconNameRole);
     } else if (basename == "suspendram") {
-        item->setText(i18n("Sleep"));
+        item->setText(i18n("Suspend"));
         item->setData(i18n("Suspend to RAM"), Kickoff::SubTitleRole);
         item->setData("system-suspend", Kickoff::IconNameRole);
     } else {
