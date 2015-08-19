@@ -111,18 +111,7 @@ bool SystemEntry::isValid() const
     return m_valid;
 }
 
-QIcon SystemEntry::icon() const
-{
-    const QString &name = iconName();
-
-    if (!name.isEmpty()) {
-        return QIcon::fromTheme(name, QIcon::fromTheme("unknown"));
-    }
-
-    return QIcon::fromTheme("unknown");
-}
-
-QString SystemEntry::iconName() const
+QVariant SystemEntry::icon() const
 {
     switch (m_action) {
         case LockSession:

@@ -46,7 +46,7 @@ bool ContactEntry::isValid() const {
     return m_personData;
 }
 
-QIcon ContactEntry::icon() const
+QVariant ContactEntry::icon() const
 {
     if (m_personData) {
         QPixmap photo = m_personData->photo();

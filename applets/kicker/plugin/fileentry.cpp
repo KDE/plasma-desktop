@@ -37,7 +37,7 @@ bool FileEntry::isValid() const
     return m_fileItem && m_fileItem->isFile();
 }
 
-QIcon FileEntry::icon() const
+QVariant FileEntry::icon() const
 {
     if (m_fileItem) {
         return QIcon::fromTheme(m_fileItem->iconName(), QIcon::fromTheme("unknown"));

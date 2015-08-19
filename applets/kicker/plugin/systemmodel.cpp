@@ -68,7 +68,7 @@ QVariant SystemModel::data(const QModelIndex &index, int role) const
     if (role == Qt::DisplayRole) {
         return entry->name();
     } else if (role == Qt::DecorationRole) {
-        return entry->iconName();
+        return entry->icon();
     } else if (role == Kicker::FavoriteIdRole) {
         return entry->id();
     }

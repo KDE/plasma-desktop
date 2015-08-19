@@ -90,7 +90,7 @@ MouseArea {
         }
     }
 
-    QIconItem {
+    PlasmaCore.IconItem {
         id: icon
 
         y: showLabel ? (2 * highlightItemSvg.margins.top) : undefined
@@ -101,7 +101,8 @@ MouseArea {
         width: iconSize
         height: width
 
-        icon: model.decoration
+        source: model.decoration
+        colorGroup: PlasmaCore.ColorScope.colorGroup
     }
 
     PlasmaComponents.Label {

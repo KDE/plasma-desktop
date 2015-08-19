@@ -40,7 +40,7 @@ class AbstractEntry
 
         virtual bool isValid() const;
 
-        virtual QIcon icon() const;
+        virtual QVariant icon() const;
         virtual QString name() const;
 
         virtual QString id() const;

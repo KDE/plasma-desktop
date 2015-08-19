@@ -35,7 +35,7 @@ class ContactEntry : public AbstractEntry
 
         bool isValid() const;
 
-        QIcon icon() const;
+        QVariant icon() const;
         QString name() const;
 
         QString id() const;

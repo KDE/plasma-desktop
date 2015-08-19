@@ -79,7 +79,7 @@ AppEntry::AppEntry(AbstractModel *owner, const QString &id) : AbstractEntry(owne
 void AppEntry::init(NameFormat nameFormat)
 {
     m_name = nameFromService(m_service, nameFormat);
-    m_icon = QIcon::fromTheme(m_service->icon(), QIcon::fromTheme("unknown"));
+    m_icon = m_service->icon();
 
     if (!m_appletInterface) {
         AbstractModel *rootModel = m_owner->rootModel();
@@ -97,7 +97,7 @@ bool AppEntry::isValid() const
     return m_service;
 }
 
-QIcon AppEntry::icon() const
+QVariant AppEntry::icon() const
 {
     return m_icon;
 }
@@ -275,7 +275,7 @@ AppGroupEntry::AppGroupEntry(AppsModel *parentModel, KServiceGroup::Ptr group,
     bool flat, bool separators, int appNameFormat) : AbstractGroupEntry(parentModel)
 {
     m_name = group->caption();
-    m_icon = QIcon::fromTheme(group->icon(), QIcon::fromTheme("unknown"));
+    m_icon = group->icon();
     AppsModel* model = new AppsModel(group->entryPath(), flat, separators, parentModel);
     model->setAppNameFormat(appNameFormat);
     m_childModel = model;
@@ -291,7 +291,7 @@ AppGroupEntry::AppGroupEntry(AppsModel *parentModel, KServiceGroup::Ptr group,
     );
 }
 
-QIcon AppGroupEntry::icon() const
+QVariant AppGroupEntry::icon() const
 {
     return m_icon;
 }

@@ -46,7 +46,7 @@ QString GroupEntry::name() const
     return m_name;
 }
 
-QIcon GroupEntry::icon() const
+QVariant GroupEntry::icon() const
 {
     return QIcon::fromTheme(m_iconName, QIcon::fromTheme("unknown"));
 }

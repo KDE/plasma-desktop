@@ -38,9 +38,9 @@ bool AbstractEntry::isValid() const
     return true;
 }
 
-QIcon AbstractEntry::icon() const
+QVariant AbstractEntry::icon() const
 {
-    return QIcon();
+    return QVariant();
 }
 
 QString AbstractEntry::name() const

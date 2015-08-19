@@ -36,7 +36,7 @@ class GroupEntry : public AbstractGroupEntry
         GroupEntry(RootModel *parentModel, const QString &name,
             const QString &iconName, AbstractModel *childModel);
 
-        QIcon icon() const;
+        QVariant icon() const;
         QString name() const;
 
         bool hasChildren() const;

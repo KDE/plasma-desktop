@@ -47,7 +47,7 @@ class AppEntry : public AbstractEntry
 
         bool isValid() const;
 
-        QIcon icon() const;
+        QVariant icon() const;
         QString name() const;
         KService::Ptr service() const;
 
@@ -67,7 +67,7 @@ class AppEntry : public AbstractEntry
 
         QString m_id;
         QString m_name;
-        QIcon m_icon;
+        QString m_icon;
         KService::Ptr m_service;
         static QObject *m_appletInterface;
         static QQmlPropertyMap *m_appletConfig;
@@ -80,7 +80,7 @@ class AppGroupEntry : public AbstractGroupEntry
         AppGroupEntry(AppsModel *parentModel, KServiceGroup::Ptr group,
             bool flat, bool separators, int appNameFormat);
 
-        QIcon icon() const;
+        QVariant icon() const;
         QString name() const;
 
         bool hasChildren() const;
@@ -88,7 +88,7 @@ class AppGroupEntry : public AbstractGroupEntry
 
     private:
         QString m_name;
-        QIcon m_icon;
+        QString m_icon;
         QPointer<AbstractModel> m_childModel;
 };
 
