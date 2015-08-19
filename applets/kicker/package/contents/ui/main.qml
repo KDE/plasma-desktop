@@ -35,10 +35,11 @@ Item {
 
     property bool isDash: (plasmoid.pluginName == "org.kde.plasma.kickerdash")
 
-    Plasmoid.preferredRepresentation: Plasmoid.compactRepresentation
+    // this is a bit of a hack to prevent Plasma from spawning a dialog on its own when we're Dash
+    Plasmoid.preferredRepresentation: isDash ? Plasmoid.fullRepresentation : Plasmoid.compactRepresentation
 
-    Plasmoid.compactRepresentation: CompactRepresentation {}
-    Plasmoid.fullRepresentation: MenuRepresentation {}
+    Plasmoid.compactRepresentation: isDash ? null : compactRepresentation
+    Plasmoid.fullRepresentation: isDash ? compactRepresentation : menuRepresentation
 
     property QtObject itemListDialogComponent: Qt.createComponent("ItemListDialog.qml");
     property Item dragSource: null
@@ -57,6 +58,16 @@ Item {
     function updateSvgMetrics() {
         lineSvg.horLineHeight = lineSvg.elementSize("horizontal-line").height;
         lineSvg.vertLineWidth = lineSvg.elementSize("vertical-line").width;
+    }
+
+    Component {
+        id: compactRepresentation
+        CompactRepresentation {}
+    }
+
+    Component {
+        id: menuRepresentation
+        MenuRepresentation {}
     }
 
     Kicker.RootModel {

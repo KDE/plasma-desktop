@@ -131,6 +131,10 @@ Item {
     Component.onCompleted: {
         if (isDash) {
             dashWindow = Qt.createQmlObject("DashboardRepresentation {}", root);
+            plasmoid.activated.connect(function() {
+                dashWindow.toggle()
+                justOpenedTimer.start()
+            })
         }
     }
 }
