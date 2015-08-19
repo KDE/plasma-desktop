@@ -73,369 +73,229 @@ Kicker.FullScreenWindow {
         filterListScrollArea.focus = true;
     }
 
-    mainItem: MouseArea {
+    mainItem: PlasmaCore.ColorScope {
         anchors.fill: parent
+        colorGroup: PlasmaCore.Theme.ComplementaryColorGroup
 
-        acceptedButtons: Qt.LeftButton | Qt.RightButton
+        MouseArea {
+            anchors.fill: parent
 
-        Connections {
-            target: kicker
+            acceptedButtons: Qt.LeftButton | Qt.RightButton
 
-            onReset: {
-                if (!searching) {
-                    filterList.applyFilter();
-                    funnelModel.reset();
-                }
-            }
+            Connections {
+                target: kicker
 
-            onDragSourceChanged: {
-                if (!dragSource) {
-                    // FIXME TODO HACK: Reset favorites grids post-DND to work around
-                    // mouse grab bug despite QQuickWindow::mouseGrabberItem==0x0.
-                    // Needs a more involved hunt through Qt Quick sources later since
-                    // it's not happening with near-identical code in the menu repr.
-                    var index = globalFavoritesGrid.currentIndex;
-                    globalFavoritesGrid.model = null;
-                    globalFavoritesGrid.model = globalFavorites;
-                    globalFavoritesGrid.currentIndex = index;
-                    index = systemFavoritesGrid.currentIndex;
-                    systemFavoritesGrid.model = null;
-                    systemFavoritesGrid.model = systemFavorites;
-                    systemFavoritesGrid.currentIndex = index;
-                }
-            }
-        }
-
-        PlasmaComponents.Menu {
-            id: contextMenu
-
-            PlasmaComponents.MenuItem {
-                action: plasmoid.action("configure")
-            }
-        }
-
-        PlasmaExtras.Heading {
-            id: dummyHeading
-
-            visible: false
-
-            width: 0
-
-            level: 1
-        }
-
-        TextMetrics {
-            id: headingMetrics
-
-            font: dummyHeading.font
-        }
-
-        Kicker.FunnelModel {
-            id: funnelModel
-
-            onSourceModelChanged: {
-                if (mainColumn.visible) {
-                    mainGrid.currentIndex = -1;
-                    mainGrid.forceLayout();
-                }
-            }
-        }
-
-        Timer {
-            id: preloadAllAppsTimer
-
-            property bool done: false
-
-            interval: 1000
-            repeat: false
-
-            onTriggered: {
-                if (done || searching) {
-                    return;
+                onReset: {
+                    if (!searching) {
+                        filterList.applyFilter();
+                        funnelModel.reset();
+                    }
                 }
 
-                for (var i = 0; i < rootModel.count; ++i) {
-                    var model = rootModel.modelForRow(i);
-
-                    if (model.description == "KICKER_ALL_MODEL") {
-                        allAppsGrid.model = model;
-                        done = true;
-                        break;
+                onDragSourceChanged: {
+                    if (!dragSource) {
+                        // FIXME TODO HACK: Reset favorites grids post-DND to work around
+                        // mouse grab bug despite QQuickWindow::mouseGrabberItem==0x0.
+                        // Needs a more involved hunt through Qt Quick sources later since
+                        // it's not happening with near-identical code in the menu repr.
+                        var index = globalFavoritesGrid.currentIndex;
+                        globalFavoritesGrid.model = null;
+                        globalFavoritesGrid.model = globalFavorites;
+                        globalFavoritesGrid.currentIndex = index;
+                        index = systemFavoritesGrid.currentIndex;
+                        systemFavoritesGrid.model = null;
+                        systemFavoritesGrid.model = systemFavorites;
+                        systemFavoritesGrid.currentIndex = index;
                     }
                 }
             }
 
-            function defer() {
-                if (running && !done) {
-                    restart();
-                }
-            }
-        }
+            PlasmaComponents.Menu {
+                id: contextMenu
 
-        PlasmaComponents.TextField {
-            id: searchField
-
-            width: 0
-            height: 0
-
-            visible: false
-
-            property string bufferedText
-
-            onTextChanged: {
-                runnerModel.query = text;
-            }
-
-            function appendText(appendText) {
-                if (text == "" || searchTimer.running) {
-                    bufferedText += appendText;
-                    searchTimer.start();
-                } else {
-                    text += appendText;
+                PlasmaComponents.MenuItem {
+                    action: plasmoid.action("configure")
                 }
             }
 
-            function backspace() {
-                if (searchTimer.running) {
-                    bufferedText = bufferedText.slice(0, -1);
-                } else {
-                    text = text.slice(0, -1);
-                }
+            PlasmaExtras.Heading {
+                id: dummyHeading
+
+                visible: false
+
+                width: 0
+
+                level: 1
             }
 
-            function clear() {
-                text = "";
+            TextMetrics {
+                id: headingMetrics
+
+                font: dummyHeading.font
+            }
+
+            Kicker.FunnelModel {
+                id: funnelModel
+
+                onSourceModelChanged: {
+                    if (mainColumn.visible) {
+                        mainGrid.currentIndex = -1;
+                        mainGrid.forceLayout();
+                    }
+                }
             }
 
             Timer {
-                id: searchTimer
+                id: preloadAllAppsTimer
 
-                interval: 150
+                property bool done: false
+
+                interval: 1000
                 repeat: false
 
                 onTriggered: {
-                    searchField.focus = true;
-                    searchField.text = searchField.bufferedText;
-                    searchField.bufferedText = "";
+                    if (done || searching) {
+                        return;
+                    }
+
+                    for (var i = 0; i < rootModel.count; ++i) {
+                        var model = rootModel.modelForRow(i);
+
+                        if (model.description == "KICKER_ALL_MODEL") {
+                            allAppsGrid.model = model;
+                            done = true;
+                            break;
+                        }
+                    }
+                }
+
+                function defer() {
+                    if (running && !done) {
+                        restart();
+                    }
                 }
             }
-        }
 
-        PlasmaExtras.Heading {
-            id: searchHeading
+            PlasmaComponents.TextField {
+                id: searchField
 
-            anchors {
-                horizontalCenter: parent.horizontalCenter
+                width: 0
+                height: 0
+
+                visible: false
+
+                property string bufferedText
+
+                onTextChanged: {
+                    runnerModel.query = text;
+                }
+
+                function appendText(appendText) {
+                    if (text == "" || searchTimer.running) {
+                        bufferedText += appendText;
+                        searchTimer.start();
+                    } else {
+                        text += appendText;
+                    }
+                }
+
+                function backspace() {
+                    if (searchTimer.running) {
+                        bufferedText = bufferedText.slice(0, -1);
+                    } else {
+                        text = text.slice(0, -1);
+                    }
+                }
+
+                function clear() {
+                    text = "";
+                }
+
+                Timer {
+                    id: searchTimer
+
+                    interval: 150
+                    repeat: false
+
+                    onTriggered: {
+                        searchField.focus = true;
+                        searchField.text = searchField.bufferedText;
+                        searchField.bufferedText = "";
+                    }
+                }
             }
 
-            y: (middleRow.anchors.topMargin / 2) - (smallScreen ? (height/2) : 0)
+            PlasmaExtras.Heading {
+                id: searchHeading
 
-            font.pointSize: dummyHeading.font.pointSize * 1.5
+                anchors {
+                    horizontalCenter: parent.horizontalCenter
+                }
 
-            elide: Text.ElideRight
-            wrapMode: Text.NoWrap
-            opacity: 1.0
+                y: (middleRow.anchors.topMargin / 2) - (smallScreen ? (height/2) : 0)
 
-            color: "white"
+                font.pointSize: dummyHeading.font.pointSize * 1.5
 
-            level: 1
+                elide: Text.ElideRight
+                wrapMode: Text.NoWrap
+                opacity: 1.0
 
-            text: searching ? i18n("Searching for '%1'", searchField.text) : i18n("Type to search.")
-        }
+                color: "white"
 
-        PlasmaComponents.ToolButton {
-            id: cancelSearchButton
+                level: 1
 
-            anchors {
-                left: searchHeading.right
-                leftMargin: units.largeSpacing
-                verticalCenter: searchHeading.verticalCenter
+                text: searching ? i18n("Searching for '%1'", searchField.text) : i18n("Type to search.")
             }
 
-            width: units.iconSizes.large
-            height: width
+            PlasmaComponents.ToolButton {
+                id: cancelSearchButton
 
-            visible: (searchField.text != "")
+                anchors {
+                    left: searchHeading.right
+                    leftMargin: units.largeSpacing
+                    verticalCenter: searchHeading.verticalCenter
+                }
 
-            iconName: "dialog-close"
-            flat: false
+                width: units.iconSizes.large
+                height: width
 
-            onClicked: searchField.clear();
-        }
+                visible: (searchField.text != "")
 
-        Row {
-            id: middleRow
+                iconName: "dialog-close"
+                flat: false
 
-            anchors {
-                top: parent.top
-                topMargin: units.gridUnit * (smallScreen ? 6 : 10)
-                bottom: parent.bottom
-                bottomMargin: (units.gridUnit * 2)
-                horizontalCenter: parent.horizontalCenter
+                onClicked: searchField.clear();
             }
 
-            width: (root.columns * cellSize) + (2 * spacing)
-
-            spacing: units.gridUnit * 2
-
-            Item {
-                id: favoritesColumn
+            Row {
+                id: middleRow
 
                 anchors {
                     top: parent.top
+                    topMargin: units.gridUnit * (smallScreen ? 6 : 10)
                     bottom: parent.bottom
+                    bottomMargin: (units.gridUnit * 2)
+                    horizontalCenter: parent.horizontalCenter
                 }
 
-                width: (columns * cellSize) + units.gridUnit
+                width: (root.columns * cellSize) + (2 * spacing)
 
-                property int columns: 3
+                spacing: units.gridUnit * 2
 
-                PlasmaExtras.Heading {
-                    id: favoritesColumnLabel
+                Item {
+                    id: favoritesColumn
 
                     anchors {
                         top: parent.top
+                        bottom: parent.bottom
                     }
 
-                    x: units.smallSpacing
-                    width: parent.width - x
+                    width: (columns * cellSize) + units.gridUnit
 
-                    elide: Text.ElideRight
-                    wrapMode: Text.NoWrap
-                    opacity: 1.0
-
-                    color: "white"
-
-                    level: 1
-
-                    text: i18n("Favorites")
-                }
-
-                PlasmaCore.SvgItem {
-                    id: favoritesColumnLabelUnderline
-
-                    anchors {
-                        top: favoritesColumnLabel.bottom
-                    }
-
-                    width: parent.width - units.gridUnit
-                    height: lineSvg.horLineHeight
-
-                    svg: lineSvg
-                    elementId: "horizontal-line"
-                }
-
-                ItemGridView {
-                    id: globalFavoritesGrid
-
-                    anchors {
-                        top: favoritesColumnLabelUnderline.top
-                        topMargin: units.largeSpacing
-                    }
-
-                    property int rows: (Math.floor((parent.height - favoritesColumnLabel.height
-                        - favoritesColumnLabelUnderline.height - units.largeSpacing) / cellSize)
-                        - systemFavoritesGrid.rows)
-
-                    width: parent.width
-                    height: rows * cellSize
-
-                    cellWidth: cellSize
-                    cellHeight: cellSize
-
-                    model: globalFavorites
-
-                    dragEnabled: true
-
-                    onCurrentIndexChanged: {
-                        preloadAllAppsTimer.defer();
-                    }
-
-                    onKeyNavRight: {
-                        mainColumn.tryActivate(currentRow(), 0);
-                    }
-
-                    onKeyNavDown: {
-                        systemFavoritesGrid.tryActivate(0, currentCol());
-                    }
-
-                    Binding {
-                        target: globalFavorites
-                        property: "iconSize"
-                        value: root.iconSize
-                    }
-                }
-
-                ItemGridView {
-                    id: systemFavoritesGrid
-
-                    anchors {
-                        top: globalFavoritesGrid.bottom
-                    }
-
-                    property int rows: Math.ceil(count / Math.floor(width / cellSize))
-
-                    width: parent.width
-                    height: rows * cellSize
-
-                    cellWidth: cellSize
-                    cellHeight: cellSize
-
-                    model: systemFavorites
-
-                    dragEnabled: true
-
-                    onCurrentIndexChanged: {
-                        preloadAllAppsTimer.defer();
-                    }
-
-                    onKeyNavRight: {
-                        mainColumn.tryActivate(globalFavoritesGrid.rows + currentRow(), 0);
-                    }
-
-                    onKeyNavUp: {
-                        globalFavoritesGrid.tryActivate(globalFavoritesGrid.rows - 1, currentCol());
-                    }
-                }
-            }
-
-            Item {
-                id: mainColumn
-
-                anchors.top: parent.top
-
-                width: (columns * cellSize) + units.gridUnit
-                height: Math.floor(parent.height / cellSize) * cellSize + mainGridContainer.headerHeight
-
-                property int columns: root.columns - favoritesColumn.columns - filterListColumn.columns
-                property Item visibleGrid: mainGrid
-
-                function tryActivate(row, col) {
-                    if (visibleGrid) {
-                        visibleGrid.tryActivate(row, col);
-                    }
-                }
-
-                Item {
-                    id: mainGridContainer
-
-                    anchors.fill: parent
-                    z: (opacity == 1.0) ? 1 : 0
-
-                    enabled: (opacity == 1.0) ? 1 : 0
-
-                    property int headerHeight: mainColumnLabel.height + mainColumnLabelUnderline.height + units.largeSpacing
-
-                    opacity: (!searching && !filterList.allApps) ? 1.0 : 0.0
-
-                    onOpacityChanged: {
-                        if (opacity == 1.0) {
-                            mainColumn.visibleGrid = mainGrid;
-                        }
-                    }
+                    property int columns: 3
 
                     PlasmaExtras.Heading {
-                        id: mainColumnLabel
+                        id: favoritesColumnLabel
 
                         anchors {
                             top: parent.top
@@ -452,16 +312,14 @@ Kicker.FullScreenWindow {
 
                         level: 1
 
-                        text: funnelModel.description
+                        text: i18n("Favorites")
                     }
 
                     PlasmaCore.SvgItem {
-                        id: mainColumnLabelUnderline
-
-                        visible: mainGrid.count
+                        id: favoritesColumnLabelUnderline
 
                         anchors {
-                            top: mainColumnLabel.bottom
+                            top: favoritesColumnLabel.bottom
                         }
 
                         width: parent.width - units.gridUnit
@@ -472,27 +330,217 @@ Kicker.FullScreenWindow {
                     }
 
                     ItemGridView {
-                        id: mainGrid
+                        id: globalFavoritesGrid
 
                         anchors {
-                            top: mainColumnLabelUnderline.bottom
+                            top: favoritesColumnLabelUnderline.top
                             topMargin: units.largeSpacing
                         }
 
+                        property int rows: (Math.floor((parent.height - favoritesColumnLabel.height
+                            - favoritesColumnLabelUnderline.height - units.largeSpacing) / cellSize)
+                            - systemFavoritesGrid.rows)
+
                         width: parent.width
-                        height: systemFavoritesGrid.y + systemFavoritesGrid.height - mainGridContainer.headerHeight
+                        height: rows * cellSize
 
                         cellWidth: cellSize
                         cellHeight: cellSize
 
-                        model: funnelModel
+                        model: globalFavorites
+
+                        dragEnabled: true
 
                         onCurrentIndexChanged: {
                             preloadAllAppsTimer.defer();
                         }
 
+                        onKeyNavRight: {
+                            mainColumn.tryActivate(currentRow(), 0);
+                        }
+
+                        onKeyNavDown: {
+                            systemFavoritesGrid.tryActivate(0, currentCol());
+                        }
+
+                        Binding {
+                            target: globalFavorites
+                            property: "iconSize"
+                            value: root.iconSize
+                        }
+                    }
+
+                    ItemGridView {
+                        id: systemFavoritesGrid
+
+                        anchors {
+                            top: globalFavoritesGrid.bottom
+                        }
+
+                        property int rows: Math.ceil(count / Math.floor(width / cellSize))
+
+                        width: parent.width
+                        height: rows * cellSize
+
+                        cellWidth: cellSize
+                        cellHeight: cellSize
+
+                        model: systemFavorites
+
+                        dragEnabled: true
+
+                        onCurrentIndexChanged: {
+                            preloadAllAppsTimer.defer();
+                        }
+
+                        onKeyNavRight: {
+                            mainColumn.tryActivate(globalFavoritesGrid.rows + currentRow(), 0);
+                        }
+
+                        onKeyNavUp: {
+                            globalFavoritesGrid.tryActivate(globalFavoritesGrid.rows - 1, currentCol());
+                        }
+                    }
+                }
+
+                Item {
+                    id: mainColumn
+
+                    anchors.top: parent.top
+
+                    width: (columns * cellSize) + units.gridUnit
+                    height: Math.floor(parent.height / cellSize) * cellSize + mainGridContainer.headerHeight
+
+                    property int columns: root.columns - favoritesColumn.columns - filterListColumn.columns
+                    property Item visibleGrid: mainGrid
+
+                    function tryActivate(row, col) {
+                        if (visibleGrid) {
+                            visibleGrid.tryActivate(row, col);
+                        }
+                    }
+
+                    Item {
+                        id: mainGridContainer
+
+                        anchors.fill: parent
+                        z: (opacity == 1.0) ? 1 : 0
+
+                        enabled: (opacity == 1.0) ? 1 : 0
+
+                        property int headerHeight: mainColumnLabel.height + mainColumnLabelUnderline.height + units.largeSpacing
+
+                        opacity: (!searching && !filterList.allApps) ? 1.0 : 0.0
+
+                        onOpacityChanged: {
+                            if (opacity == 1.0) {
+                                mainColumn.visibleGrid = mainGrid;
+                            }
+                        }
+
+                        PlasmaExtras.Heading {
+                            id: mainColumnLabel
+
+                            anchors {
+                                top: parent.top
+                            }
+
+                            x: units.smallSpacing
+                            width: parent.width - x
+
+                            elide: Text.ElideRight
+                            wrapMode: Text.NoWrap
+                            opacity: 1.0
+
+                            color: "white"
+
+                            level: 1
+
+                            text: funnelModel.description
+                        }
+
+                        PlasmaCore.SvgItem {
+                            id: mainColumnLabelUnderline
+
+                            visible: mainGrid.count
+
+                            anchors {
+                                top: mainColumnLabel.bottom
+                            }
+
+                            width: parent.width - units.gridUnit
+                            height: lineSvg.horLineHeight
+
+                            svg: lineSvg
+                            elementId: "horizontal-line"
+                        }
+
+                        ItemGridView {
+                            id: mainGrid
+
+                            anchors {
+                                top: mainColumnLabelUnderline.bottom
+                                topMargin: units.largeSpacing
+                            }
+
+                            width: parent.width
+                            height: systemFavoritesGrid.y + systemFavoritesGrid.height - mainGridContainer.headerHeight
+
+                            cellWidth: cellSize
+                            cellHeight: cellSize
+
+                            model: funnelModel
+
+                            onCurrentIndexChanged: {
+                                preloadAllAppsTimer.defer();
+                            }
+
+                            onKeyNavLeft: {
+                                var row = currentRow();
+                                var target = row + 1 > globalFavoritesGrid.rows ? systemFavoritesGrid : globalFavoritesGrid;
+                                var targetRow = row + 1 > globalFavoritesGrid.rows ? row - globalFavoritesGrid.rows : row;
+                                target.tryActivate(targetRow, favoritesColumn.columns - 1);
+                            }
+
+                            onKeyNavRight: {
+                                filterListScrollArea.focus = true;
+                            }
+                        }
+                    }
+
+                    ItemMultiGridView {
+                        id: allAppsGrid
+
+                        anchors {
+                            top: parent.top
+                        }
+
+                        z: (opacity == 1.0) ? 1 : 0
+                        width: parent.width
+                        height: systemFavoritesGrid.y + systemFavoritesGrid.height
+
+                        enabled: (opacity == 1.0) ? 1 : 0
+
+                        model: runnerModel
+
+                        opacity: filterList.allApps ? 1.0 : 0.0
+
+                        onOpacityChanged: {
+                            if (opacity == 1.0) {
+                                allAppsGrid.flickableItem.contentY = 0;
+                                mainColumn.visibleGrid = allAppsGrid;
+                            }
+                        }
+
                         onKeyNavLeft: {
-                            var row = currentRow();
+                            var row = 0;
+
+                            for (var i = 0; i < subGridIndex; i++) {
+                                row += subGridAt(i).lastRow() + 2; // Header counts as one.
+                            }
+
+                            row += subGridAt(subGridIndex).currentRow();
+
                             var target = row + 1 > globalFavoritesGrid.rows ? systemFavoritesGrid : globalFavoritesGrid;
                             var targetRow = row + 1 > globalFavoritesGrid.rows ? row - globalFavoritesGrid.rows : row;
                             target.tryActivate(targetRow, favoritesColumn.columns - 1);
@@ -502,366 +550,323 @@ Kicker.FullScreenWindow {
                             filterListScrollArea.focus = true;
                         }
                     }
-                }
 
-                ItemMultiGridView {
-                    id: allAppsGrid
+                    ItemMultiGridView {
+                        id: runnerGrid
 
-                    anchors {
-                        top: parent.top
-                    }
-
-                    z: (opacity == 1.0) ? 1 : 0
-                    width: parent.width
-                    height: systemFavoritesGrid.y + systemFavoritesGrid.height
-
-                    enabled: (opacity == 1.0) ? 1 : 0
-
-                    model: runnerModel
-
-                    opacity: filterList.allApps ? 1.0 : 0.0
-
-                    onOpacityChanged: {
-                        if (opacity == 1.0) {
-                            allAppsGrid.flickableItem.contentY = 0;
-                            mainColumn.visibleGrid = allAppsGrid;
-                        }
-                    }
-
-                    onKeyNavLeft: {
-                        var row = 0;
-
-                        for (var i = 0; i < subGridIndex; i++) {
-                            row += subGridAt(i).lastRow() + 2; // Header counts as one.
+                        anchors {
+                            top: parent.top
                         }
 
-                        row += subGridAt(subGridIndex).currentRow();
+                        z: (opacity == 1.0) ? 1 : 0
+                        width: parent.width
+                        height: systemFavoritesGrid.y + systemFavoritesGrid.height
 
-                        var target = row + 1 > globalFavoritesGrid.rows ? systemFavoritesGrid : globalFavoritesGrid;
-                        var targetRow = row + 1 > globalFavoritesGrid.rows ? row - globalFavoritesGrid.rows : row;
-                        target.tryActivate(targetRow, favoritesColumn.columns - 1);
-                    }
+                        enabled: (opacity == 1.0) ? 1 : 0
 
-                    onKeyNavRight: {
-                        filterListScrollArea.focus = true;
-                    }
-                }
+                        model: runnerModel
 
-                ItemMultiGridView {
-                    id: runnerGrid
+                        grabFocus: true
 
-                    anchors {
-                        top: parent.top
-                    }
+                        opacity: searching ? 1.0 : 0.0
 
-                    z: (opacity == 1.0) ? 1 : 0
-                    width: parent.width
-                    height: systemFavoritesGrid.y + systemFavoritesGrid.height
-
-                    enabled: (opacity == 1.0) ? 1 : 0
-
-                    model: runnerModel
-
-                    grabFocus: true
-
-                    opacity: searching ? 1.0 : 0.0
-
-                    onOpacityChanged: {
-                        if (opacity == 1.0) {
-                            mainColumn.visibleGrid = runnerGrid;
-                        }
-                    }
-
-                    onKeyNavLeft: {
-                        var row = 0;
-
-                        for (var i = 0; i < subGridIndex; i++) {
-                            row += subGridAt(i).lastRow() + 2; // Header counts as one.
+                        onOpacityChanged: {
+                            if (opacity == 1.0) {
+                                mainColumn.visibleGrid = runnerGrid;
+                            }
                         }
 
-                        row += subGridAt(subGridIndex).currentRow();
+                        onKeyNavLeft: {
+                            var row = 0;
 
-                        var target = row + 1 > globalFavoritesGrid.rows ? systemFavoritesGrid : globalFavoritesGrid;
-                        var targetRow = row + 1 > globalFavoritesGrid.rows ? row - globalFavoritesGrid.rows : row;
-                        target.tryActivate(targetRow, favoritesColumn.columns - 1);
-                    }
-                }
-            }
-
-            Item {
-                id: filterListColumn
-
-                anchors {
-                    top: parent.top
-                    topMargin: mainColumnLabelUnderline.y + mainColumnLabelUnderline.height + units.largeSpacing
-                    bottom: parent.bottom
-                }
-
-                width: columns * cellSize
-
-                property int columns: 3
-
-                PlasmaExtras.ScrollArea {
-                    id: filterListScrollArea
-
-                    x: root.visible ? 0 : units.gridUnit
-
-                    Behavior on x { SmoothedAnimation { duration: units.longDuration; velocity: 0.01 } }
-
-                    width: parent.width
-                    height: mainGrid.height
-
-                    enabled: !searching
-
-                    property alias currentIndex: filterList.currentIndex
-
-                    opacity: root.visible ? (searching ? 0.30 : 1.0) : 0.3
-
-                    Behavior on opacity { SmoothedAnimation { duration: units.longDuration; velocity: 0.01 } }
-
-                    verticalScrollBarPolicy: (opacity == 1.0) ? Qt.ScrollBarAsNeeded : Qt.ScrollBarAlwaysOff
-
-                    onEnabledChanged: {
-                        if (!enabled) {
-                            filterList.currentIndex = -1;
-                        }
-                    }
-
-                    onCurrentIndexChanged: {
-                        focus = (currentIndex != -1);
-                    }
-
-                    ListView {
-                        id: filterList
-
-                        focus: true
-
-                        property bool allApps: false
-                        property int eligibleWidth: width
-                        property int hItemMargins: Math.max(highlightItemSvg.margins.left + highlightItemSvg.margins.right,
-                            listItemSvg.margins.left + listItemSvg.margins.right)
-
-                        model: rootModel
-
-                        boundsBehavior: Flickable.StopAtBounds
-                        snapMode: ListView.SnapToItem
-                        spacing: 0
-
-                        delegate: MouseArea {
-                            id: item
-
-                            signal actionTriggered(string actionId, variant actionArgument)
-                            signal aboutToShowActionMenu(variant actionMenu)
-
-                            property int textWidth: label.contentWidth
-                            property int mouseCol
-                            property bool hasActionList: ((model.favoriteId != null)
-                                || (("hasActionList" in model) && (model.hasActionList == true)))
-                            property Item menu: actionMenu
-
-                            width: parent.width
-                            height: Math.ceil((label.paintedHeight
-                                + Math.max(highlightItemSvg.margins.top + highlightItemSvg.margins.bottom,
-                                listItemSvg.margins.top + listItemSvg.margins.bottom)) / 2) * 2
-
-                            Accessible.role: Accessible.MenuItem
-                            Accessible.name: model.display
-
-                            acceptedButtons: Qt.LeftButton | Qt.RightButton
-
-                            hoverEnabled: true
-
-                            onContainsMouseChanged: {
-                                if (!containsMouse) {
-                                    updateCurrentItemTimer.stop();
-                                }
+                            for (var i = 0; i < subGridIndex; i++) {
+                                row += subGridAt(i).lastRow() + 2; // Header counts as one.
                             }
 
-                            onPositionChanged: { // Lazy menu implementation.
-                                mouseCol = mouse.x;
+                            row += subGridAt(subGridIndex).currentRow();
 
-                                if (justOpenedTimer.running || ListView.view.currentIndex == 0 || index == ListView.view.currentIndex) {
-                                    updateCurrentItem();
-                                } else if ((index == ListView.view.currentIndex - 1) && mouse.y < (height - 6)
-                                    || (index == ListView.view.currentIndex + 1) && mouse.y > 5) {
+                            var target = row + 1 > globalFavoritesGrid.rows ? systemFavoritesGrid : globalFavoritesGrid;
+                            var targetRow = row + 1 > globalFavoritesGrid.rows ? row - globalFavoritesGrid.rows : row;
+                            target.tryActivate(targetRow, favoritesColumn.columns - 1);
+                        }
+                    }
+                }
 
-                                    if (mouse.x > ListView.view.eligibleWidth - 5) {
+                Item {
+                    id: filterListColumn
+
+                    anchors {
+                        top: parent.top
+                        topMargin: mainColumnLabelUnderline.y + mainColumnLabelUnderline.height + units.largeSpacing
+                        bottom: parent.bottom
+                    }
+
+                    width: columns * cellSize
+
+                    property int columns: 3
+
+                    PlasmaExtras.ScrollArea {
+                        id: filterListScrollArea
+
+                        x: root.visible ? 0 : units.gridUnit
+
+                        Behavior on x { SmoothedAnimation { duration: units.longDuration; velocity: 0.01 } }
+
+                        width: parent.width
+                        height: mainGrid.height
+
+                        enabled: !searching
+
+                        property alias currentIndex: filterList.currentIndex
+
+                        opacity: root.visible ? (searching ? 0.30 : 1.0) : 0.3
+
+                        Behavior on opacity { SmoothedAnimation { duration: units.longDuration; velocity: 0.01 } }
+
+                        verticalScrollBarPolicy: (opacity == 1.0) ? Qt.ScrollBarAsNeeded : Qt.ScrollBarAlwaysOff
+
+                        onEnabledChanged: {
+                            if (!enabled) {
+                                filterList.currentIndex = -1;
+                            }
+                        }
+
+                        onCurrentIndexChanged: {
+                            focus = (currentIndex != -1);
+                        }
+
+                        ListView {
+                            id: filterList
+
+                            focus: true
+
+                            property bool allApps: false
+                            property int eligibleWidth: width
+                            property int hItemMargins: Math.max(highlightItemSvg.margins.left + highlightItemSvg.margins.right,
+                                listItemSvg.margins.left + listItemSvg.margins.right)
+
+                            model: rootModel
+
+                            boundsBehavior: Flickable.StopAtBounds
+                            snapMode: ListView.SnapToItem
+                            spacing: 0
+
+                            delegate: MouseArea {
+                                id: item
+
+                                signal actionTriggered(string actionId, variant actionArgument)
+                                signal aboutToShowActionMenu(variant actionMenu)
+
+                                property int textWidth: label.contentWidth
+                                property int mouseCol
+                                property bool hasActionList: ((model.favoriteId != null)
+                                    || (("hasActionList" in model) && (model.hasActionList == true)))
+                                property Item menu: actionMenu
+
+                                width: parent.width
+                                height: Math.ceil((label.paintedHeight
+                                    + Math.max(highlightItemSvg.margins.top + highlightItemSvg.margins.bottom,
+                                    listItemSvg.margins.top + listItemSvg.margins.bottom)) / 2) * 2
+
+                                Accessible.role: Accessible.MenuItem
+                                Accessible.name: model.display
+
+                                acceptedButtons: Qt.LeftButton | Qt.RightButton
+
+                                hoverEnabled: true
+
+                                onContainsMouseChanged: {
+                                    if (!containsMouse) {
+                                        updateCurrentItemTimer.stop();
+                                    }
+                                }
+
+                                onPositionChanged: { // Lazy menu implementation.
+                                    mouseCol = mouse.x;
+
+                                    if (justOpenedTimer.running || ListView.view.currentIndex == 0 || index == ListView.view.currentIndex) {
+                                        updateCurrentItem();
+                                    } else if ((index == ListView.view.currentIndex - 1) && mouse.y < (height - 6)
+                                        || (index == ListView.view.currentIndex + 1) && mouse.y > 5) {
+
+                                        if (mouse.x > ListView.view.eligibleWidth - 5) {
+                                            updateCurrentItem();
+                                        }
+                                    } else if (mouse.x > ListView.view.eligibleWidth) {
                                         updateCurrentItem();
                                     }
-                                } else if (mouse.x > ListView.view.eligibleWidth) {
-                                    updateCurrentItem();
+
+                                    updateCurrentItemTimer.restart();
                                 }
 
-                                updateCurrentItemTimer.restart();
-                            }
-
-                            onPressed: {
-                                if (mouse.buttons & Qt.RightButton) {
-                                    if (hasActionList) {
-                                        openActionMenu(item, mouse.x, mouse.y);
+                                onPressed: {
+                                    if (mouse.buttons & Qt.RightButton) {
+                                        if (hasActionList) {
+                                            openActionMenu(item, mouse.x, mouse.y);
+                                        }
                                     }
                                 }
-                            }
 
-                            onAboutToShowActionMenu: {
-                                var actionList = hasActionList ? model.actionList : [];
-                                Tools.fillActionMenu(actionMenu, actionList, ListView.view.model.favoritesModel, model.favoriteId);
-                            }
+                                onAboutToShowActionMenu: {
+                                    var actionList = hasActionList ? model.actionList : [];
+                                    Tools.fillActionMenu(actionMenu, actionList, ListView.view.model.favoritesModel, model.favoriteId);
+                                }
 
-                            onActionTriggered: {
-                                Tools.triggerAction(ListView.view.model, model.index, actionId, actionArgument);
-                            }
+                                onActionTriggered: {
+                                    Tools.triggerAction(ListView.view.model, model.index, actionId, actionArgument);
+                                }
 
-                            function openActionMenu(visualParent, x, y) {
-                                aboutToShowActionMenu(actionMenu);
-                                actionMenu.visualParent = visualParent;
-                                actionMenu.open(x, y);
-                            }
+                                function openActionMenu(visualParent, x, y) {
+                                    aboutToShowActionMenu(actionMenu);
+                                    actionMenu.visualParent = visualParent;
+                                    actionMenu.open(x, y);
+                                }
 
-                            function updateCurrentItem() {
-                                ListView.view.currentIndex = index;
-                                ListView.view.eligibleWidth = Math.min(width, mouseCol);
-                            }
+                                function updateCurrentItem() {
+                                    ListView.view.currentIndex = index;
+                                    ListView.view.eligibleWidth = Math.min(width, mouseCol);
+                                }
 
-                            ActionMenu {
-                                id: actionMenu
+                                ActionMenu {
+                                    id: actionMenu
 
-                                onActionClicked: {
-                                    actionTriggered(actionId, actionArgument);
+                                    onActionClicked: {
+                                        actionTriggered(actionId, actionArgument);
+                                    }
+                                }
+
+                                Timer {
+                                    id: updateCurrentItemTimer
+
+                                    interval: 50
+                                    repeat: false
+
+                                    onTriggered: parent.updateCurrentItem()
+                                }
+
+                                PlasmaExtras.Heading {
+                                    id: label
+
+                                    anchors {
+                                        fill: parent
+                                        leftMargin: highlightItemSvg.margins.left
+                                        rightMargin: highlightItemSvg.margins.right
+                                    }
+
+                                    elide: Text.ElideRight
+                                    wrapMode: Text.NoWrap
+                                    opacity: 1.0
+
+                                    color: "white"
+
+                                    level: 1
+
+                                    text: model.display
                                 }
                             }
 
-                            Timer {
-                                id: updateCurrentItemTimer
-
-                                interval: 50
-                                repeat: false
-
-                                onTriggered: parent.updateCurrentItem()
-                            }
-
-                            PlasmaExtras.Heading {
-                                id: label
-
+                            highlight: PlasmaComponents.Highlight {
                                 anchors {
-                                    fill: parent
-                                    leftMargin: highlightItemSvg.margins.left
-                                    rightMargin: highlightItemSvg.margins.right
+                                    top: filterList.currentItem ? filterList.currentItem.top : undefined
+                                    left: filterList.currentItem ? filterList.currentItem.left : undefined
+                                    bottom: filterList.currentItem ? filterList.currentItem.bottom : undefined
                                 }
 
-                                elide: Text.ElideRight
-                                wrapMode: Text.NoWrap
-                                opacity: 1.0
+                                opacity: filterListScrollArea.focus ? 1.0 : 0.7
 
-                                color: "white"
+                                width: (highlightItemSvg.margins.left
+                                    + filterList.currentItem.textWidth
+                                    + highlightItemSvg.margins.right
+                                    + units.smallSpacing)
 
-                                level: 1
-
-                                text: model.display
-                            }
-                        }
-
-                        highlight: PlasmaComponents.Highlight {
-                            anchors {
-                                top: filterList.currentItem ? filterList.currentItem.top : undefined
-                                left: filterList.currentItem ? filterList.currentItem.left : undefined
-                                bottom: filterList.currentItem ? filterList.currentItem.bottom : undefined
+                                visible: filterList.currentItem
                             }
 
-                            opacity: filterListScrollArea.focus ? 1.0 : 0.7
+                            highlightFollowsCurrentItem: false
+                            highlightMoveDuration: 0
+                            highlightResizeDuration: 0
 
-                            width: (highlightItemSvg.margins.left
-                                + filterList.currentItem.textWidth
-                                + highlightItemSvg.margins.right
-                                + units.smallSpacing)
+                            onCurrentIndexChanged: applyFilter()
 
-                            visible: filterList.currentItem
-                        }
+                            onCountChanged: {
+                                var width = 0;
 
-                        highlightFollowsCurrentItem: false
-                        highlightMoveDuration: 0
-                        highlightResizeDuration: 0
+                                for (var i = 0; i < rootModel.count; ++i) {
+                                    headingMetrics.text = rootModel.labelForRow(i);
 
-                        onCurrentIndexChanged: applyFilter()
-
-                        onCountChanged: {
-                            var width = 0;
-
-                            for (var i = 0; i < rootModel.count; ++i) {
-                                headingMetrics.text = rootModel.labelForRow(i);
-
-                                if (headingMetrics.width > width) {
-                                    width = headingMetrics.width;
-                                }
-                            }
-
-                            filterListColumn.columns = Math.ceil(width / cellSize);
-                            filterListScrollArea.width = width + hItemMargins + (units.gridUnit * 2);
-                        }
-
-                        function applyFilter() {
-                            if (!searching && currentIndex >= 0) {
-                                if (preloadAllAppsTimer.running) {
-                                    preloadAllAppsTimer.stop();
+                                    if (headingMetrics.width > width) {
+                                        width = headingMetrics.width;
+                                    }
                                 }
 
-                                var model = rootModel.modelForRow(currentIndex);
+                                filterListColumn.columns = Math.ceil(width / cellSize);
+                                filterListScrollArea.width = width + hItemMargins + (units.gridUnit * 2);
+                            }
 
-                                if (model.description == "KICKER_ALL_MODEL") {
-                                    allAppsGrid.model = model;
-                                    allApps = true;
-                                    funnelModel.sourceModel = null;
-                                    preloadAllAppsTimer.done = true;
+                            function applyFilter() {
+                                if (!searching && currentIndex >= 0) {
+                                    if (preloadAllAppsTimer.running) {
+                                        preloadAllAppsTimer.stop();
+                                    }
+
+                                    var model = rootModel.modelForRow(currentIndex);
+
+                                    if (model.description == "KICKER_ALL_MODEL") {
+                                        allAppsGrid.model = model;
+                                        allApps = true;
+                                        funnelModel.sourceModel = null;
+                                        preloadAllAppsTimer.done = true;
+                                    } else {
+                                        funnelModel.sourceModel = model;
+                                        allApps = false;
+                                    }
                                 } else {
-                                    funnelModel.sourceModel = model;
+                                    funnelModel.sourceModel = null;
                                     allApps = false;
                                 }
-                            } else {
-                                funnelModel.sourceModel = null;
-                                allApps = false;
                             }
-                        }
 
-                        Keys.onPressed: {
-                            if (event.key == Qt.Key_Left) {
-                                event.accepted = true;
+                            Keys.onPressed: {
+                                if (event.key == Qt.Key_Left) {
+                                    event.accepted = true;
 
-                                var currentRow = Math.max(0, Math.ceil(currentItem.y / cellSize) - 1);
-                                mainColumn.tryActivate(currentRow, mainColumn.columns - 1);
+                                    var currentRow = Math.max(0, Math.ceil(currentItem.y / cellSize) - 1);
+                                    mainColumn.tryActivate(currentRow, mainColumn.columns - 1);
+                                }
                             }
                         }
                     }
                 }
             }
-        }
 
-        onPressed: {
-            if (mouse.button == Qt.RightButton) {
-                contextMenu.open(mouse.x, mouse.y);
+            onPressed: {
+                if (mouse.button == Qt.RightButton) {
+                    contextMenu.open(mouse.x, mouse.y);
+                }
             }
-        }
 
-        onClicked: {
-            if (mouse.button == Qt.LeftButton) {
-                root.toggle();
-            }
-        }
-
-        Keys.onPressed: {
-            if (event.key == Qt.Key_Escape) {
-                event.accepted = true;
-
-                if (searching) {
-                    searchField.clear();
-                } else {
+            onClicked: {
+                if (mouse.button == Qt.LeftButton) {
                     root.toggle();
                 }
-            } else if (event.key == Qt.Key_Backspace) {
-                event.accepted = true;
-                searchField.backspace();
-            } else if (event.text != "") {
-                event.accepted = true;
-                searchField.appendText(event.text);
+            }
+
+            Keys.onPressed: {
+                if (event.key == Qt.Key_Escape) {
+                    event.accepted = true;
+
+                    if (searching) {
+                        searchField.clear();
+                    } else {
+                        root.toggle();
+                    }
+                } else if (event.key == Qt.Key_Backspace) {
+                    event.accepted = true;
+                    searchField.backspace();
+                } else if (event.text != "") {
+                    event.accepted = true;
+                    searchField.appendText(event.text);
+                }
             }
         }
     }

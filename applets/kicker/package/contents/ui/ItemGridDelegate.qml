@@ -123,8 +123,6 @@ MouseArea {
         elide: Text.ElideRight
         wrapMode: Text.NoWrap
 
-        color: "white" // FIXME TODO: Respect theming?
-
         text: model.display
     }
 
