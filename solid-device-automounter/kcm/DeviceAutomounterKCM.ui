@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DeviceAutomounterKCM</class>
+ <widget class="QWidget" name="DeviceAutomounterKCM">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>615</width>
+    <height>380</height>
+   </rect>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_2">
+   <item row="0" column="0" colspan="3">
+    <widget class="QCheckBox" name="automountEnabled">
+     <property name="whatsThis">
+      <string>When this is unchecked, no device automounting of any kind will happen, regardless of anything selected in the &quot;Device Overrides&quot; section.</string>
+     </property>
+     <property name="text">
+      <string>Enable automatic mounting of removable media</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeType">
+      <enum>QSizePolicy::Fixed</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>22</width>
+       <height>76</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="1" column="1">
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QCheckBox" name="automountUnknownDevices">
+       <property name="whatsThis">
+        <string>When this is checked, only remembered devices will be automatically mounted. A device is 'remembered' if it has ever been mounted before. For instance, plugging in a USB media player to charge is not sufficient to 'remember' it - if the files are not accessed, it will not be automatically mounted the next time it is seen. Once they have been accessed, however, the device's contents will be automatically made available to the system.</string>
+       </property>
+       <property name="text">
+        <string>Only automatically mount removable media that has been manually mounted before</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="automountOnLogin">
+       <property name="whatsThis">
+        <string>If any removable storage devices are connected to your system when you login to your desktop, their contents will automatically be made available to your system for other programs to read.</string>
+       </property>
+       <property name="text">
+        <string>Mount all removable media at login</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="automountOnPlugin">
+       <property name="whatsThis">
+        <string>When this is checked, the contents of any storage device will automatically be made available to the system when it is plugged in or attached.</string>
+       </property>
+       <property name="text">
+        <string>Automatically mount removable media when attached</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="1" column="2">
+    <spacer name="horizontalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>40</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="2" column="0" colspan="3">
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string>Device Overrides</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QTreeView" name="deviceView">
+        <property name="whatsThis">
+         <string>This list contains the storage devices known to the system. If &quot;Automount on Login&quot; is checked, the device will be automatically mounted even though &quot;Mount all removable media at login&quot; is unchecked. The same applies for &quot;Automount on Attach&quot;.
+
+If &quot;Enable automatic mounting of removable media&quot; is unchecked, the overrides do not apply and no devices will be automatically mounted.</string>
+        </property>
+        <property name="editTriggers">
+         <set>QAbstractItemView::NoEditTriggers</set>
+        </property>
+        <property name="selectionMode">
+         <enum>QAbstractItemView::ExtendedSelection</enum>
+        </property>
+        <property name="rootIsDecorated">
+         <bool>true</bool>
+        </property>
+        <property name="itemsExpandable">
+         <bool>true</bool>
+        </property>
+        <property name="sortingEnabled">
+         <bool>true</bool>
+        </property>
+        <property name="animated">
+         <bool>true</bool>
+        </property>
+        <property name="allColumnsShowFocus">
+         <bool>true</bool>
+        </property>
+        <property name="expandsOnDoubleClick">
+         <bool>false</bool>
+        </property>
+        <attribute name="headerShowSortIndicator" stdset="0">
+         <bool>true</bool>
+        </attribute>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QPushButton" name="forgetDevice">
+          <property name="whatsThis">
+           <string>Clicking this button causes the selected devices to be 'forgotten'. This is only useful if &quot;Only automatically mount removable media that has been manually mounted before&quot; is checked. Once a device is forgotten and the system is set to only automatically mount familiar devices, the device will not be automatically mounted.</string>
+          </property>
+          <property name="text">
+           <string>Forget Device</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

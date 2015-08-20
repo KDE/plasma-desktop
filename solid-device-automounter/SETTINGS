@@ -1,0 +1,23 @@
+This document describes the kded_device_automounterrc settings and how they affect behavior.
+
+General/AutomountUnknownDevices:If true, all devices get mounted regardles of
+				the other conditions.
+
+General/AutomountOnPlugin:	When this is set to true, devices might get
+				mounted when they are inserted.
+
+General/AutomountOnLogin:	When true, devices might get mounted when
+				the module is loaded.
+
+General/AutomountEnabled:	Determines if automounting is globally enabled.
+
+Devices/<dev>/EverMounted:	Used to determine if a device is 'known'. A device
+				is known if it has ever been mounted.
+
+Devices/<dev>/LastSeenMounted:	Saves the 'mounted' state between desktop
+				sessions. Devices with this set to true are
+				automagically remounted when the module loads.
+
+Devices/<dev>/ForceAutomount:	Determines if this device should get
+				automounted regardless of anything else,
+				including AutomountEnabled.
