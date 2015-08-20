@@ -229,7 +229,7 @@ void KDEDConfig::load()
 		//                X-KDE-Kded-load-on-demand as true if not specified
 		if (autoload) {
 			treeitem = new QTreeWidgetItem();
-			treeitem->setCheckState(StartupUse, autoloadEnabled(&kdedrc, mod.pluginId()) ? Qt::Checked : Qt::Unchecked);
+			treeitem->setCheckState(StartupUse, autoloadEnabled(&kdedrc, mod) ? Qt::Checked : Qt::Unchecked);
 			treeitem->setText(StartupService, mod.name());
 			treeitem->setText(StartupDescription, mod.description());
 			treeitem->setText(StartupStatus, NOT_RUNNING);
@@ -277,11 +277,11 @@ void KDEDConfig::save()
 
 	const auto modules = availableModules();
 	for (const KPluginMetaData &mod : modules) {
-		qCDebug(KCM_KDED) << "saving settings for kded module" << mod.metaDataFileName();
+		qCDebug(KCM_KDED) << "saving settings for kded module" << mod.pluginId();
 		// autoload defaults to false if it is not found
 		const bool autoload = mod.rawData().value(QStringLiteral("X-KDE-Kded-autoload")).toVariant().toBool();
 		if (autoload) {
-			const QString libraryName = mod.fileName();
+			const QString libraryName = mod.pluginId();
 			int count = _lvStartup->topLevelItemCount();
 			for(int i = 0; i < count; ++i) {
 				QTreeWidgetItem *treeitem = _lvStartup->topLevelItem(i);
