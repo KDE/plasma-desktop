@@ -133,14 +133,22 @@ void Autostart::addItem(ScriptStartItem* item, const QString& name, const QStrin
 
 void Autostart::load()
 {
-    // share/autostart may *only* contain .desktop files
-    // shutdown and env may *only* contain scripts, links or binaries
-    // autostart on the otherhand may contain all of the above.
-    // share/autostart is special as it overrides entries found in $KDEDIR/share/autostart
-    // env and shutdown are placed under GenericConfigLocation + /plasma-workspace/ as they are used during
-    // the workspace startup and shutdown and therefore are are specific to our workspace startup and shutdown
-    // (see bug #333793)
-    m_paths << QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QStringLiteral("/autostart/")
+    // FDO user autostart directories are
+    // .config/autostart which has .desktop files executed by klaunch
+
+    //Then we have KDE specific locations which run scripts
+    // .config/autostart-scripts which has scripts executed by ksmserver
+    // .config/plasma-workspace/shutdown which has scripts executed by startkde
+    // .config/plasma-workspace/env which has scripts executed by startkde
+
+    //in the case of pre-startup they have to end in .sh
+    //everywhere else it doesn't matter
+
+    //the comment above describes how autostart *currently* works, it is not definitive documentation on how autostart *should* work
+
+    m_desktopPath = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QStringLiteral("/autostart");
+
+    m_paths << QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QStringLiteral("/autostart-scripts/")
             << QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QStringLiteral("/plasma-workspace/shutdown/")
             << QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QStringLiteral("/plasma-workspace/env/");
     // share/autostart shouldn't be an option as this should be reserved for global autostart entries
@@ -167,23 +175,20 @@ void Autostart::load()
     widget->listCMD->expandItem( m_programItem );
     widget->listCMD->expandItem( m_scriptItem );
 
-    foreach (const QString& path, m_paths) {
-        QDir d(path);
+    //add programs
+    {
+        QDir d(m_desktopPath);
         if (!d.exists())
-            d.mkpath(path);
-
-        QDir autostartdir( path );
-        // Check if the folder the script is in is called autostart, if so
-        // don't add it since we aren't going to autostart it.
-        bool dirSupportsScripts = (autostartdir.dirName() != QStringLiteral("autostart"));
+            d.mkpath(m_desktopPath);
+        QDir autostartdir( m_desktopPath );
         autostartdir.setFilter( QDir::Files );
         const QFileInfoList list = autostartdir.entryInfoList();
+
         for (int i = 0; i < list.size(); ++i) {
             QFileInfo fi = list.at(i);
             QString filename = fi.fileName();
             bool desktopFile = filename.endsWith(".desktop");
-            if ( desktopFile )
-            {
+            if ( desktopFile ) {
                 KDesktopFile config(fi.absoluteFilePath());
                 //kDebug() << fi.absoluteFilePath() << "trying" << config.desktopGroup().readEntry("Exec");
                 QStringList commandLine = KShell::splitArgs(config.desktopGroup().readEntry("Exec"));
@@ -204,47 +209,60 @@ void Autostart::load()
                 const QStringList onlyShowList = grp.readXdgListEntry("OnlyShowIn");
 
                 const bool disabled = hidden ||
-                                      notShowList.contains("KDE") ||
-                                      (!onlyShowList.isEmpty() && !onlyShowList.contains("KDE"));
+                                        notShowList.contains("KDE") ||
+                                        (!onlyShowList.isEmpty() && !onlyShowList.contains("KDE"));
 
                 int indexPath = m_paths.indexOf((item->fileName().adjusted(QUrl::RemoveFilename).toString() ) );
                 if ( indexPath > 2 )
                     indexPath = 0; //.kde/share/autostart and .config/autostart load destkop at startup
                 addItem(item, config.readName(), m_pathName.value(indexPath),  grp.readEntry("Exec"), disabled );
             }
+        }
+    }
+
+    //add scripts
+
+    foreach (const QString& path, m_paths) {
+        QDir d(path);
+        if (!d.exists())
+            d.mkpath(path);
+
+        QDir autostartdir( path );
+        autostartdir.setFilter( QDir::Files );
+        const QFileInfoList list = autostartdir.entryInfoList();
+
+        for (int i = 0; i < list.size(); ++i) {
+            QFileInfo fi = list.at(i);
+
+            ScriptStartItem *item = new ScriptStartItem( fi.absoluteFilePath(), m_scriptItem,this );
+            int typeOfStartup = m_paths.indexOf((item->fileName().adjusted(QUrl::RemoveScheme | QUrl::RemoveFilename).toString()) );
+            ScriptStartItem::ENV type = ScriptStartItem::START;
+            switch( typeOfStartup )
+            {
+            case 0:
+                type =ScriptStartItem::START;
+                break;
+            case 1:
+                type = ScriptStartItem::SHUTDOWN;
+                break;
+            case 2:
+                type = ScriptStartItem::PRE_START;
+                break;
+            default:
+                qDebug()<<" type is not defined :"<<type;
+                break;
+            }
+            if ( fi.isSymLink() ) {
+                QString link = fi.readLink();
+                addItem(item, fi.fileName(), link, type );
+            }
             else
             {
-                if (!dirSupportsScripts)
-                    continue;
-                ScriptStartItem *item = new ScriptStartItem( fi.absoluteFilePath(), m_scriptItem,this );
-                int typeOfStartup = m_paths.indexOf((item->fileName().adjusted(QUrl::RemoveScheme | QUrl::RemoveFilename).toString()) );
-                ScriptStartItem::ENV type = ScriptStartItem::START;
-                switch( typeOfStartup )
-                {
-                case 0:
-                    type =ScriptStartItem::START;
-                    break;
-                case 1:
-                    type = ScriptStartItem::SHUTDOWN;
-                    break;
-                case 2:
-                    type = ScriptStartItem::PRE_START;
-                    break;
-                default:
-                    qDebug()<<" type is not defined :"<<type;
-                    break;
-                }
-                if ( fi.isSymLink() ) {
-                    QString link = fi.readLink();
-                    addItem(item, filename, link, type );
-                }
-                else
-                {
-                    addItem( item, filename, filename,type );
-                }
+                addItem( item, fi.fileName(), fi.fileName(),type );
             }
         }
     }
+
     //Update button
     slotSelectionChanged();
     widget->listCMD->resizeColumnToContents(COL_NAME);
@@ -275,7 +293,7 @@ void Autostart::slotAddProgram()
     if ( service->desktopEntryName().isEmpty() ) {
         // Build custom desktop file (e.g. when the user entered an executable
         // name in the OpenWithDialog).
-        desktopPath = m_paths.first() + service->name() + ".desktop";
+        desktopPath = m_desktopPath + service->name() + ".desktop";
         desktopTemplate = QUrl::fromLocalFile( desktopPath );
         KConfig kc(desktopTemplate.path(), KConfig::SimpleConfig);
         KConfigGroup kcg = kc.group("Desktop Entry");
@@ -295,10 +313,10 @@ void Autostart::slotAddProgram()
     else
     {
         // Use existing desktop file and use same file name to enable overrides.
-        desktopPath = m_paths.first() + service->desktopEntryName() + ".desktop";
+        desktopPath = m_desktopPath + service->desktopEntryName() + ".desktop";
         desktopTemplate = QUrl::fromLocalFile( QStandardPaths::locate(QStandardPaths::ApplicationsLocation, service->entryPath()) );
 
-        KPropertiesDialog dlg( QUrl::fromLocalFile(service->entryPath()), QUrl::fromLocalFile(m_paths.first()), service->desktopEntryName() + ".desktop", this );
+        KPropertiesDialog dlg( QUrl::fromLocalFile(service->entryPath()), QUrl::fromLocalFile(m_desktopPath), service->desktopEntryName() + ".desktop", this );
         if ( dlg.exec() != QDialog::Accepted )
             return;
     }
