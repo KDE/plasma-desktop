@@ -66,6 +66,7 @@ private Q_SLOTS:
 
 private:
     QTreeWidgetItem *m_programItem, *m_scriptItem;
+    QString m_desktopPath;
     QStringList m_paths;
     QStringList m_pathName;
 
