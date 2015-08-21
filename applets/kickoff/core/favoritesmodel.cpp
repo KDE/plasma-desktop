@@ -128,7 +128,17 @@ public:
             browser = browser.mid(1);
         }
 
-        applications << browser << "kontact" << "systemsettings" << "dolphin" << "ktp-contactlist" << "kate";
+        // List default apps with their current desktop file name as well as
+        // previous ones to be able to find a suitable one across all KDE
+        // Application releases (i.e. find one that is installed regardless of
+        // whether it uses the current or a previous name).
+        // BUG: 351550
+        applications  << browser
+                      << "org.kde.kontact" << "kontact"
+                      << "org.kde.systemsettings" << "systemsettings"
+                      << "org.kde.dolphin" << "dolphin"
+                      << "org.kde.ktpcontactlist" << "ktp-contactlist"
+                      << "org.kde.kate" << "kate";
 
         QList<QString> desktopFiles;
 
