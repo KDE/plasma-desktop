@@ -84,6 +84,13 @@ Item {
 
         hideOnWindowDeactivate: true
 
+        /*
+        If there is no setGeometry call on QWindow the XCB backend will not pass our requested position to kwin
+        as our window position tends to be 0, setX,setY no-ops and means we never set a position as far as QWindow is concerned
+        by setting it to something silly and setting it back before we show the window we avoid that bug.
+        */
+        x: -10
+
         onVisibleChanged: {
             if (!visible) {
                 sidePanelStack.state = "closed";
