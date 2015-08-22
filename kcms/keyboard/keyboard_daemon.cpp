@@ -38,8 +38,9 @@
 #include "layout_memory_persister.h"
 #include "layouts_menu.h"
 
-
-K_PLUGIN_FACTORY(KeyboardFactory, registerPlugin<KeyboardDaemon>();)
+K_PLUGIN_FACTORY_WITH_JSON(KeyboardFactory,
+                           "keyboard.json",
+                           registerPlugin<KeyboardDaemon>();)
 
 KeyboardDaemon::KeyboardDaemon(QObject *parent, const QList<QVariant>&)
 	: KDEDModule(parent),

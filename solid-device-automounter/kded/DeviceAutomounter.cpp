@@ -28,8 +28,9 @@
 
 #include <QTimer>
 
-K_PLUGIN_FACTORY(DeviceAutomounterFactory, registerPlugin<DeviceAutomounter>();)
-K_EXPORT_PLUGIN(DeviceAutomounterFactory("kded_device_automounter"))
+K_PLUGIN_FACTORY_WITH_JSON(DeviceAutomounterFactory,
+                           "device_automounter.json",
+                           registerPlugin<DeviceAutomounter>();)
 
 DeviceAutomounter::DeviceAutomounter(QObject *parent, const QVariantList &args)
     : KDEDModule(parent)

@@ -35,7 +35,10 @@ set( kded_keyboard_SRCS
     xkb_rules.cpp
 )
 
+include_directories(${CMAKE_CURRENT_BINARY_DIR})
 add_library(kded_keyboard MODULE ${kded_keyboard_SRCS})
+set_target_properties(kded_keyboard PROPERTIES OUTPUT_NAME keyboard)
+kcoreaddons_desktop_to_json(kded_keyboard keyboard.desktop)
 
 target_link_libraries(kded_keyboard
     Qt5::Concurrent
@@ -68,8 +71,7 @@ if(XiGetDevicePresence_FOUND)
   target_link_libraries(kded_keyboard ${X11_Xinput_LIB})
 endif()
 
-install( TARGETS kded_keyboard DESTINATION ${PLUGIN_INSTALL_DIR} )
-install( FILES keyboard.desktop DESTINATION ${SERVICES_INSTALL_DIR}/kded )
+install( TARGETS kded_keyboard DESTINATION ${PLUGIN_INSTALL_DIR}/kf5/kded )
 
 ### widget lib ###
 
