@@ -242,9 +242,23 @@ void KCMTranslations::initTranslations()
         if (!m_kcmTranslations.contains(languageCode)) {
             QListWidgetItem *listItem = new QListWidgetItem(m_ui->m_selectTranslations->availableListWidget());
             // TODO This gives the name in the language itself, not in current language, need new QLocale api for that
-            QString label = QLocale(languageCode).nativeLanguageName();
+            const QLocale l(languageCode);
+            QString label = l.nativeLanguageName();
             if (label.isEmpty()) {
                 label = languageCode;
+            } else if (languageCode.contains("@")) {
+                label = i18nc("%1 is language name, %2 is language code name", "%1 (%2)", label, languageCode);
+            } else if (l.name() != languageCode) {
+                if (m_installedTranslations.contains(l.name())) {
+                    // KDE languageCode got translated by QLocale to a locale code we also have on the list
+                    // Currently only this happens with pt that gets trasnated to pt_BR
+                    if (languageCode == QLatin1String("pt")) {
+                        label = QLocale("pt_PT").nativeLanguageName();
+                    } else {
+                        qWarning() << "Language code morphed into another existing language code, please report" << languageCode << l.name();
+                        label = i18nc("%1 is language name, %2 is language code name", "%1 (%2)", label, languageCode);
+                    }
+                }
             }
             listItem->setText(label);
             listItem->setData(Qt::UserRole, languageCode);
