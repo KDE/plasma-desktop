@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>686</width>
+    <width>649</width>
     <height>447</height>
    </rect>
   </property>
@@ -14,7 +14,7 @@
    <item>
     <widget class="QTabWidget" name="tab">
      <property name="currentIndex">
-      <number>0</number>
+      <number>3</number>
      </property>
      <widget class="QWidget" name="tabBell">
       <attribute name="title">
@@ -80,6 +80,12 @@
             </item>
             <item>
              <widget class="QLineEdit" name="soundEdit">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
               <property name="toolTip">
                <string>If the option &quot;Use customized bell&quot; is enabled, you can choose a sound file here. Click &quot;Browse...&quot; to choose a sound file using the file dialog.</string>
               </property>
@@ -301,7 +307,7 @@
           <item>
            <widget class="QCheckBox" name="kNotifyModifiers">
             <property name="text">
-             <string>Use Plasma's system notification mechanism whenever a modifier or locking key changes its state</string>
+             <string>Use Plasma's notification mechanism for modifier or locking key state changes</string>
             </property>
            </widget>
           </item>
@@ -660,7 +666,7 @@
              <string>Check this option if you want to use a customized bell, playing a sound file. If you do this, you will probably want to turn off the system bell.</string>
             </property>
             <property name="text">
-             <string>Use the system bell whenever a gesture is used to turn an accessibility feature on or off</string>
+             <string>Use the system bell whenever a gesture is used to toggle an accessibility feature</string>
             </property>
            </widget>
           </item>
@@ -671,14 +677,14 @@
 Ensure you know what you are doing if you uncheck it, as the keyboard accessibility settings will then always be applied without confirmation.</string>
             </property>
             <property name="text">
-             <string>Show a confirmation dialog whenever a keyboard accessibility feature is turned on or off</string>
+             <string>Show a confirmation dialog whenever a keyboard accessibility feature is toggled</string>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QCheckBox" name="kNotifyAccess">
             <property name="text">
-             <string>Use Plasma's system notification mechanism whenever a keyboard accessibility feature is turned on or off</string>
+             <string>Use Plasma's notification mechanism whenever a keyboard accessibility feature is toggled</string>
             </property>
            </widget>
           </item>
@@ -785,7 +791,7 @@ Ensure you know what you are doing if you uncheck it, as the keyboard accessibil
   <customwidget>
    <class>KColorButton</class>
    <extends>QPushButton</extends>
-   <header location="global">kcolorbutton.h</header>
+   <header>kcolorbutton.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>
