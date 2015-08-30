@@ -216,7 +216,7 @@ Rectangle {
                         property string title: ""
                         property bool invertAnimations: false
 
-                        height: Math.max((pageTitle.height + parent.spacing), (main.currentItem  ? (main.currentItem.implicitHeight ? main.currentItem.implicitHeight : main.currentItem.childrenRect.height) : 0))
+                        height: Math.max((scroll.viewport.height - pageTitle.height - parent.spacing), (main.currentItem  ? (main.currentItem.implicitHeight ? main.currentItem.implicitHeight : main.currentItem.childrenRect.height) : 0))
                         width: scroll.viewport.width
 
                         property string sourceFile
