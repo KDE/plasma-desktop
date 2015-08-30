@@ -146,7 +146,7 @@ void Autostart::load()
 
     //the comment above describes how autostart *currently* works, it is not definitive documentation on how autostart *should* work
 
-    m_desktopPath = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QStringLiteral("/autostart");
+    m_desktopPath = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QStringLiteral("/autostart/");
 
     m_paths << QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QStringLiteral("/autostart-scripts/")
             << QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QStringLiteral("/plasma-workspace/shutdown/")
