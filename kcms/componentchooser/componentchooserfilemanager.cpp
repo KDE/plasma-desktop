@@ -87,7 +87,7 @@ void CfgFileManager::save(KConfig *)
     kDebug() << storageId;
     if (!storageId.isEmpty()) {
         // This is taken from filetypes/mimetypedata.cpp
-        KSharedConfig::Ptr profile = KSharedConfig::openConfig("mimeapps.list", KConfig::NoGlobals, QStandardPaths::ApplicationsLocation);
+        KSharedConfig::Ptr profile = KSharedConfig::openConfig("mimeapps.list", KConfig::NoGlobals, QStandardPaths::GenericConfigLocation);
         if (!profile->isConfigWritable(true)) // warn user if mimeapps.list is root-owned (#155126/#94504)
             return;
         KConfigGroup addedApps(profile, "Added Associations");
