@@ -6,8 +6,6 @@ set(kcm_file_SRCS
   folderselectionwidget.cpp
 )
 
-qt5_add_dbus_interface(kcm_file_SRCS ${BALOO_DBUS_INTERFACES_DIR}/org.kde.baloo.file.indexer.xml fileindexerinterface)
-
 ki18n_wrap_ui(kcm_file_SRCS
   configwidget.ui
 )
