@@ -33,6 +33,7 @@ public:
 
 private:
     KEMailSettings *pSettings;
+    KService::Ptr m_emailClientService;
 
 protected Q_SLOTS:
     void selectEmailClient();
