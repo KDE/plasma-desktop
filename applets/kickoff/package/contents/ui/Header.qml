@@ -76,7 +76,7 @@ Item {
             acceptedButtons: Qt.LeftButton
             cursorShape: Qt.PointingHandCursor
             onClicked: {
-                KCMShell.open("kcm_useraccount")
+                KCMShell.open("user_manager")
             }
         }
     }
