@@ -96,6 +96,10 @@ void CfgFileManager::save(KConfig *)
         userApps.prepend(storageId);
         addedApps.writeXdgListEntry("inode/directory", userApps);
 
+        // Save the default file manager as per mime-apps spec 1.0.1
+        KConfigGroup defaultApp(profile, "Default Applications");
+        defaultApp.writeXdgListEntry("inode/directory", QStringList(storageId));
+
         Kdelibs4SharedConfig::syncConfigGroup(&addedApps, "mimeapps.list");
 
         profile->sync();
