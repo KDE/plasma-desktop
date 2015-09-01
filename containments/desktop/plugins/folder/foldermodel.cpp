@@ -1228,7 +1228,7 @@ void FolderModel::openContextMenu()
                                  KonqPopupMenu::ShowNewWindow, flags, 0,
                                  KBookmarkManager::userBookmarksManager(),
                                  actionGroups);
-        connect(menu, &QMenu::triggered, [menu]() { menu->deleteLater(); });
+        connect(menu, &QMenu::aboutToHide, [menu]() { menu->deleteLater(); });
     }
 
     menu->popup(QCursor::pos());
