@@ -1228,10 +1228,10 @@ void FolderModel::openContextMenu()
                                  KonqPopupMenu::ShowNewWindow, flags, 0,
                                  KBookmarkManager::userBookmarksManager(),
                                  actionGroups);
+        connect(menu, &QMenu::triggered, [menu]() { menu->deleteLater(); });
     }
 
-    menu->exec(QCursor::pos());
-    delete menu;
+    menu->popup(QCursor::pos());
 }
 
 void FolderModel::linkHere(const QUrl &sourceUrl)
