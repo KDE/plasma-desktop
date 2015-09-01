@@ -646,6 +646,7 @@ Kicker.FullScreenWindow {
                         boundsBehavior: Flickable.StopAtBounds
                         snapMode: ListView.SnapToItem
                         spacing: 0
+                        keyNavigationWraps: true
 
                         delegate: MouseArea {
                             id: item
