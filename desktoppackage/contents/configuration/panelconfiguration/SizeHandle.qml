@@ -25,7 +25,12 @@ import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
 
 PlasmaComponents.Button {
     text: panel.location == PlasmaCore.Types.LeftEdge || panel.location == PlasmaCore.Types.RightEdge ? i18nd("plasma_shell_org.kde.plasma.desktop", "Width") : i18nd("plasma_shell_org.kde.plasma.desktop", "Height")
+
+    checkable: true
+    checked: mel.pressed
+
     KQuickControlsAddons.MouseEventListener {
+        id: mel
         anchors.fill: parent
         cursorShape: panel.location == PlasmaCore.Types.LeftEdge || panel.location == PlasmaCore.Types.RightEdge ? Qt.SizeHorCursor : Qt.SizeVerCursor
 

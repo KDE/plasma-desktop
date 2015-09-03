@@ -25,8 +25,11 @@ import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
 
 PlasmaComponents.Button {
     text: i18nd("plasma_shell_org.kde.plasma.desktop", "Screen Edge")
+    checkable: true
+    checked: mel.pressed
 
     KQuickControlsAddons.MouseEventListener {
+        id: mel
         cursorShape: Qt.DragMoveCursor
         anchors.fill: parent
         property int lastX

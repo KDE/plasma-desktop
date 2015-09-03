@@ -87,7 +87,7 @@ void CfgFileManager::save(KConfig *)
     kDebug() << storageId;
     if (!storageId.isEmpty()) {
         // This is taken from filetypes/mimetypedata.cpp
-        KSharedConfig::Ptr profile = KSharedConfig::openConfig("mimeapps.list", KConfig::NoGlobals, QStandardPaths::ApplicationsLocation);
+        KSharedConfig::Ptr profile = KSharedConfig::openConfig("mimeapps.list", KConfig::NoGlobals, QStandardPaths::GenericConfigLocation);
         if (!profile->isConfigWritable(true)) // warn user if mimeapps.list is root-owned (#155126/#94504)
             return;
         KConfigGroup addedApps(profile, "Added Associations");
@@ -95,6 +95,10 @@ void CfgFileManager::save(KConfig *)
         userApps.removeAll(storageId); // remove if present, to make it first in the list
         userApps.prepend(storageId);
         addedApps.writeXdgListEntry("inode/directory", userApps);
+
+        // Save the default file manager as per mime-apps spec 1.0.1
+        KConfigGroup defaultApp(profile, "Default Applications");
+        defaultApp.writeXdgListEntry("inode/directory", QStringList(storageId));
 
         Kdelibs4SharedConfig::syncConfigGroup(&addedApps, "mimeapps.list");
 

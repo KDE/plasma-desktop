@@ -84,6 +84,7 @@ void CfgEmailClient::selectEmailClient()
     dlg.hideNoCloseOnExit();
     if (dlg.exec() != QDialog::Accepted) return;
     QString client = dlg.text();
+    m_emailClientService = dlg.service();
 
     // get the preferred Terminal Application
     KConfigGroup confGroup( KSharedConfig::openConfig(), QLatin1String("General") );
@@ -112,6 +113,18 @@ void CfgEmailClient::save(KConfig *)
     {
         pSettings->setSetting(KEMailSettings::ClientProgram, txtEMailClient->text());
         pSettings->setSetting(KEMailSettings::ClientTerminal, (chkRunTerminal->isChecked()) ? "true" : "false");
+    }
+
+    // Save the default email client in mimeapps.list into the group [Default Applications]
+    KSharedConfig::Ptr profile = KSharedConfig::openConfig("mimeapps.list", KConfig::NoGlobals, QStandardPaths::GenericConfigLocation);
+    if (profile->isConfigWritable(true)) {
+        KConfigGroup defaultApp(profile, "Default Applications");
+        if (kmailCB->isChecked()) {
+            defaultApp.writeXdgListEntry("x-scheme-handler/mailto", QStringList("org.kde.kmail.desktop"));
+        } else if (m_emailClientService) {
+            defaultApp.writeXdgListEntry("x-scheme-handler/mailto", QStringList(m_emailClientService->storageId()));
+        }
+        profile->sync();
     }
 
     // insure proper permissions -- contains sensitive data
