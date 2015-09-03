@@ -152,5 +152,6 @@ add_subdirectory(knetattach)
 add_subdirectory(attica-kde)
 add_subdirectory(imports/activitymanager/)
 add_subdirectory(solid-device-automounter)
+add_subdirectory(kaccess)
 
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
