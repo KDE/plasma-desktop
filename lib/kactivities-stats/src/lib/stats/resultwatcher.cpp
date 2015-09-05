@@ -51,8 +51,6 @@
 
 #include <algorithm>
 
-#include <utils/debug_and_return.h>
-
 #define QDBG qDebug() << "KActivitiesStats(" << (void*)this << ")"
 
 namespace KActivities {
@@ -61,12 +59,12 @@ namespace Stats {
 
 // Main class
 
-class ResultWatcher::Private {
+class ResultWatcherPrivate {
 public:
     mutable ActivitiesSync::ConsumerPtr activities;
     QList<QRegExp> urlFilters;
 
-    Private(ResultWatcher *parent, Query query)
+    ResultWatcherPrivate(ResultWatcher *parent, Query query)
         : linking(new KAMD_DBUS_CLASS_INTERFACE(Resources/Linking, ResourcesLinking, Q_NULLPTR))
         , scoring(new KAMD_DBUS_CLASS_INTERFACE(Resources/Scoring, ResourcesScoring, Q_NULLPTR))
         , q(parent)
@@ -78,9 +76,22 @@ public:
 
         m_resultInvalidationTimer.setSingleShot(true);
         m_resultInvalidationTimer.setInterval(200);
-        connect(&m_resultInvalidationTimer, &QTimer::timeout,
-                q, emit &ResultWatcher::resultsInvalidated);
+        QObject::connect(&m_resultInvalidationTimer, &QTimer::timeout,
+                         q, emit &ResultWatcher::resultsInvalidated);
     }
+
+    // Like boost any_of, but returning true if the range is empty
+    template <typename Collection, typename Predicate>
+    inline bool any_of(const Collection &collection, Predicate &&predicate) const
+    {
+        const auto begin = collection.cbegin();
+        const auto end = collection.cend();
+
+        return begin == end
+               || std::any_of(begin, end, std::forward<Predicate>(predicate));
+    }
+
+#define DEBUG_MATCHERS 0
 
     // Processing the list of activities as specified by the query.
     // If it contains :any, we are returning true, otherwise
@@ -88,39 +99,56 @@ public:
     // activity or not). The :global special value is not special here
     bool activityMatches(const QString &activity) const
     {
-        return
+        #if DEBUG_MATCHERS
+        qDebug() << "Activity " << activity << "matching against"
+                 << query.activities();
+        #endif
+
+        return kamd::utils::debug_and_return(DEBUG_MATCHERS, " -> returning ",
             activity == ANY_ACTIVITY_TAG ||
-            std::any_of(query.activities().cbegin(), query.activities().cend(),
-            [&] (const QString &matcher) {
-                return (matcher == ANY_ACTIVITY_TAG)     ? true :
-                       (matcher == CURRENT_ACTIVITY_TAG) ? (matcher == activity || activity == ActivitiesSync::currentActivity(activities)) :
-                                                           activity == matcher;
+            any_of(query.activities(), [&] (const QString &matcher) {
+                return
+                    matcher == ANY_ACTIVITY_TAG
+                        ? true
+                    : matcher == CURRENT_ACTIVITY_TAG
+                        ? (matcher == activity || activity == ActivitiesSync::currentActivity(activities))
+                    : activity == matcher;
             }
-        );
+        ));
     }
 
     // Same as above, but for agents
     bool agentMatches(const QString &agent) const
     {
-        return
+        #if DEBUG_MATCHERS
+        qDebug() << "Agent " << agent << "matching against" << query.agents();
+        #endif
+
+        return kamd::utils::debug_and_return(DEBUG_MATCHERS, " -> returning ",
             agent == ANY_AGENT_TAG ||
-            std::any_of(query.agents().cbegin(), query.agents().cend(),
-            [&] (const QString &matcher) {
-                return (matcher == ANY_AGENT_TAG)     ? true :
-                       (matcher == CURRENT_AGENT_TAG) ? (matcher == agent || agent == QCoreApplication::applicationName()) :
-                                                        agent == matcher;
+            any_of(query.agents(), [&] (const QString &matcher) {
+                return
+                    matcher == ANY_AGENT_TAG
+                        ? true
+                    : matcher == CURRENT_AGENT_TAG
+                        ? (matcher == agent || agent == QCoreApplication::applicationName())
+                    : agent == matcher;
             }
-        );
+        ));
     }
 
     // Same as above, but for urls
     bool urlMatches(const QString &url) const
     {
-        return std::any_of(urlFilters.cbegin(), urlFilters.cend(),
-            [&] (const QRegExp &matcher) {
+        #if DEBUG_MATCHERS
+        qDebug() << "Url " << url << "matching against" << urlFilters;
+        #endif
+
+        return kamd::utils::debug_and_return(DEBUG_MATCHERS, " -> returning ",
+            any_of(urlFilters, [&] (const QRegExp &matcher) {
                 return matcher.exactMatch(url);
             }
-        );
+        ));
     }
 
     bool typeMatches(const QString &resource) const
@@ -143,12 +171,19 @@ public:
             return QString();
         });
 
-        return std::any_of(query.types().cbegin(), query.types().cend(),
-            [&] (const QString &matcher) {
+        #if DEBUG_MATCHERS
+        qDebug() << "Type " << "...type..." << "matching against" << query.types();
+        qDebug() << "ANY_TYPE_TAG" << ANY_TYPE_TAG;
+        #endif
+
+        return kamd::utils::debug_and_return(DEBUG_MATCHERS, " -> returning ",
+            any_of(query.types(), [&] (const QString &matcher) {
                 return matcher == ANY_TYPE_TAG || matcher == type;
             }
-        );
+        ));
     }
+
+#undef DEBUG_MATCHERS
 
     bool eventMatches(const QString &agent, const QString &resource,
                       const QString &activity) const
@@ -171,8 +206,9 @@ public:
 
         if (!eventMatches(agent, resource, activity)) return;
 
-        // TODO: See whether it makes sense to have lastUpdate/firstUpdate here as well
-        emit q->resultAdded(resource, std::numeric_limits<double>::infinity(), 0, 0);
+        // TODO: See whether it makes sense to have
+        // lastUpdate/firstUpdate here as well
+        emit q->resultLinked(resource);
     }
 
     void onResourceUnlinkedFromActivity(const QString &agent,
@@ -184,7 +220,7 @@ public:
 
         if (!eventMatches(agent, resource, activity)) return;
 
-        emit q->resultRemoved(resource);
+        emit q->resultUnlinked(resource);
     }
 
     void onResourceScoreUpdated(const QString &activity, const QString &agent,
@@ -201,7 +237,7 @@ public:
 
         if (!eventMatches(agent, resource, activity)) return;
 
-        emit q->resultAdded(resource, score, lastUpdate, firstUpdate);
+        emit q->resultScoreUpdated(resource, score, lastUpdate, firstUpdate);
     }
 
 
@@ -256,8 +292,9 @@ public:
     Query query;
 };
 
-ResultWatcher::ResultWatcher(Query query)
-    : d(new Private(this, query))
+ResultWatcher::ResultWatcher(Query query, QObject *parent)
+    : QObject(parent)
+    , d(new ResultWatcherPrivate(this, query))
 {
     using namespace org::kde::ActivityManager;
     using namespace std::placeholders;
@@ -267,24 +304,24 @@ ResultWatcher::ResultWatcher(Query query)
     // Connecting the linking service
     QObject::connect(
         d->linking.data(), &ResourcesLinking::ResourceLinkedToActivity,
-        this, std::bind(&Private::onResourceLinkedToActivity, d, _1, _2, _3));
+        this, std::bind(&ResultWatcherPrivate::onResourceLinkedToActivity, d, _1, _2, _3));
     QObject::connect(
         d->linking.data(), &ResourcesLinking::ResourceUnlinkedFromActivity,
-        this, std::bind(&Private::onResourceUnlinkedFromActivity, d, _1, _2, _3));
+        this, std::bind(&ResultWatcherPrivate::onResourceUnlinkedFromActivity, d, _1, _2, _3));
 
     // Connecting the scoring service
     QObject::connect(
         d->scoring.data(), &ResourcesScoring::ResourceScoreUpdated,
-        this, std::bind(&Private::onResourceScoreUpdated, d, _1, _2, _3, _4, _5, _6));
+        this, std::bind(&ResultWatcherPrivate::onResourceScoreUpdated, d, _1, _2, _3, _4, _5, _6));
     QObject::connect(
         d->scoring.data(), &ResourcesScoring::ResourceScoreDeleted,
-        this, std::bind(&Private::onStatsForResourceDeleted, d, _1, _2, _3));
+        this, std::bind(&ResultWatcherPrivate::onStatsForResourceDeleted, d, _1, _2, _3));
     QObject::connect(
         d->scoring.data(), &ResourcesScoring::RecentStatsDeleted,
-        this, std::bind(&Private::onRecentStatsDeleted, d, _1, _2, _3));
+        this, std::bind(&ResultWatcherPrivate::onRecentStatsDeleted, d, _1, _2, _3));
     QObject::connect(
         d->scoring.data(), &ResourcesScoring::EarlierStatsDeleted,
-        this, std::bind(&Private::onEarlierStatsDeleted, d, _1, _2));
+        this, std::bind(&ResultWatcherPrivate::onEarlierStatsDeleted, d, _1, _2));
 
 }
 

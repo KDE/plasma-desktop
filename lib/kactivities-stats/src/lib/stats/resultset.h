@@ -22,9 +22,15 @@
 
 #include "query.h"
 
+#include <QDebug>
+
 namespace KActivities {
 namespace Experimental {
 namespace Stats {
+
+class ResultSetPrivate;
+class ResultSet_ResultPrivate;
+class ResultSet_IteratorPrivate;
 
 /**
  * Class that can query the KActivities usage tracking mechanism
@@ -48,23 +54,30 @@ public:
         Result(const Result &result);
         Result &operator=(Result result);
 
-        QString resource() const; ///< URL of the resource
-        QString title() const;    ///< Title of the resource, or URL if title is not known
-        QString mimetype() const; ///< Mimetype of the resource, or URL if title is not known
-        double score() const;     ///< The score calculated based on the usage statistics
-        uint lastUpdate() const;  ///< Timestamp of the last update
-        uint firstUpdate() const; ///< Timestamp of the first update
+        enum LinkStatus {
+            NotLinked = 0,
+            Unknown   = 1,
+            Linked    = 2
+        };
 
-        void setResource(const QString &resource);
-        void setTitle(const QString &title);
-        void setMimetype(const QString &mimetype);
+        QString resource() const;      ///< URL of the resource
+        QString title() const;         ///< Title of the resource, or URL if title is not known
+        QString mimetype() const;      ///< Mimetype of the resource, or URL if title is not known
+        double score() const;          ///< The score calculated based on the usage statistics
+        uint lastUpdate() const;       ///< Timestamp of the last update
+        uint firstUpdate() const;      ///< Timestamp of the first update
+        LinkStatus linkStatus() const; ///< Differentiates between linked and non-linked resources in mixed queries
+
+        void setResource(QString resource);
+        void setTitle(QString title);
+        void setMimetype(QString mimetype);
         void setScore(double score);
         void setLastUpdate(uint lastUpdate);
         void setFirstUpdate(uint firstUpdate);
+        void setLinkStatus(LinkStatus linkedStatus);
 
     private:
-        class Private;
-        Private * d;
+        ResultSet_ResultPrivate * d;
     };
 
     /**
@@ -151,8 +164,7 @@ public:
 
         friend class ResultSet;
 
-        class Private;
-        Private* const d;
+        ResultSet_IteratorPrivate* const d;
     };
 
     /**
@@ -187,8 +199,8 @@ public:
     inline const_iterator constEnd() const   { return cend(); }
 
 private:
-    class Private;
-    Private *d;
+    friend class ResultSet_IteratorPrivate;
+    ResultSetPrivate *d;
 };
 
 bool KACTIVITIESSTATS_EXPORT operator==(const ResultSet::const_iterator &left,
@@ -209,6 +221,17 @@ bool KACTIVITIESSTATS_EXPORT operator>=(const ResultSet::const_iterator &left,
 ResultSet::const_iterator::difference_type KACTIVITIESSTATS_EXPORT
 operator-(const ResultSet::const_iterator &left,
           const ResultSet::const_iterator &right);
+
+inline QDebug operator<< (QDebug out, const ResultSet::Result &result)
+{
+    return out
+        << (result.linkStatus() == ResultSet::Result::Linked ? "⊤" :
+            result.linkStatus() == ResultSet::Result::NotLinked ? "⊥" : "?")
+        << result.score()
+        << result.title()
+        << result.resource()
+        ;
+}
 
 } // namespace Stats
 } // namespace Experimental

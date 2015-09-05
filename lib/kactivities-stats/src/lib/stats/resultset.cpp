@@ -44,7 +44,7 @@ namespace Stats {
 
 using namespace Terms;
 
-class ResultSet::Result::Private {
+class ResultSet_ResultPrivate {
 public:
     QString resource;
     QString title;
@@ -52,11 +52,12 @@ public:
     double  score;
     uint    lastUpdate;
     uint    firstUpdate;
+    ResultSet::Result::LinkStatus linkStatus;
 
 };
 
 ResultSet::Result::Result()
-    : d(new Private())
+    : d(new ResultSet_ResultPrivate())
 {
 }
 
@@ -67,7 +68,7 @@ ResultSet::Result::Result(Result &&result)
 }
 
 ResultSet::Result::Result(const Result &result)
-    : d(new Private(*result.d))
+    : d(new ResultSet_ResultPrivate(*result.d))
 {
 }
 
@@ -83,68 +84,28 @@ ResultSet::Result::~Result()
     delete d;
 }
 
-QString ResultSet::Result::resource() const
-{
-    return d->resource;
-}
+#define CREATE_GETTER_AND_SETTER(Type, Name, Set)                              \
+    Type ResultSet::Result::Name() const                                       \
+    {                                                                          \
+        return d->Name;                                                        \
+    }                                                                          \
+                                                                               \
+    void ResultSet::Result::Set(Type Name)                                     \
+    {                                                                          \
+        d->Name = Name;                                                        \
+    }
 
-QString ResultSet::Result::title() const
-{
-    return d->title;
-}
+CREATE_GETTER_AND_SETTER(QString, resource, setResource)
+CREATE_GETTER_AND_SETTER(QString, title, setTitle)
+CREATE_GETTER_AND_SETTER(QString, mimetype, setMimetype)
+CREATE_GETTER_AND_SETTER(double, score, setScore)
+CREATE_GETTER_AND_SETTER(uint, lastUpdate, setLastUpdate)
+CREATE_GETTER_AND_SETTER(uint, firstUpdate, setFirstUpdate)
+CREATE_GETTER_AND_SETTER(ResultSet::Result::LinkStatus, linkStatus, setLinkStatus)
 
-QString ResultSet::Result::mimetype() const
-{
-    return d->mimetype;
-}
+#undef CREATE_GETTER_AND_SETTER
 
-double ResultSet::Result::score() const
-{
-    return d->score;
-}
-
-uint ResultSet::Result::lastUpdate() const
-{
-    return d->lastUpdate;
-}
-
-uint ResultSet::Result::firstUpdate() const
-{
-    return d->firstUpdate;
-}
-
-void ResultSet::Result::setResource(const QString &resource)
-{
-    d->resource = resource;
-}
-
-void ResultSet::Result::setTitle(const QString &title)
-{
-    d->title = title;
-}
-
-void ResultSet::Result::setMimetype(const QString &mimetype)
-{
-    d->mimetype = mimetype;
-}
-
-void ResultSet::Result::setScore(double score)
-{
-    d->score = score;
-}
-
-void ResultSet::Result::setLastUpdate(uint lastUpdate)
-{
-    d->lastUpdate = lastUpdate;
-}
-
-void ResultSet::Result::setFirstUpdate(uint firstUpdate)
-{
-    d->firstUpdate = firstUpdate;
-}
-
-
-class ResultSet::Private {
+class ResultSetPrivate {
 public:
     Common::Database::Ptr database;
     QSqlQuery query;
@@ -160,11 +121,15 @@ public:
 
         auto selection = queryDefinition.selection();
 
-        query = database->execQuery(
+        query = database->execQuery(replaceQueryParameters(
                 selection == LinkedResources ? linkedResourcesQuery()
               : selection == UsedResources   ? usedResourcesQuery()
               : selection == AllResources    ? allResourcesQuery()
-              : QString());
+              : QString()));
+
+        if (query.lastError().isValid()) {
+            qDebug() << "Error: " << query.lastError();
+        }
 
         Q_ASSERT_X(query.isActive(), "ResultSet initQuery", "Query is not valid");
     }
@@ -238,12 +203,56 @@ public:
         return result;
     }
 
-    QString linkedResourcesQuery() const
+    inline QString replaceQueryParameters(const QString &_query) const
+    {
+        // ORDER BY column
+        auto ordering = queryDefinition.ordering();
+        QString orderingColumn = QStringLiteral("linkStatus DESC, ") + (
+                ordering == HighScoredFirst      ? "score DESC,"
+              : ordering == RecentlyCreatedFirst ? "firstUpdate DESC,"
+              : ordering == RecentlyUsedFirst    ? "lastUpdate DESC,"
+              : ordering == OrderByTitle         ? "title ASC,"
+              : QString()
+            );
+
+
+        // WHERE clause for filtering on agents
+        QStringList agentsFilter = transformedList(
+                queryDefinition.agents(), &ResultSetPrivate::agentClause);
+
+        // WHERE clause for filtering on activities
+        QStringList activitiesFilter = transformedList(
+                queryDefinition.activities(), &ResultSetPrivate::activityClause);
+
+        // WHERE clause for filtering on resource URLs
+        QStringList urlFilter = transformedList(
+                queryDefinition.urlFilters(), &ResultSetPrivate::urlFilterClause);
+
+        // WHERE clause for filtering on resource mime
+        QStringList mimetypeFilter = transformedList(
+                queryDefinition.types(), &ResultSetPrivate::mimetypeClause);
+
+        auto query = _query
+            + "\nORDER BY $orderingColumn resource ASC\n"
+            + limitOffsetSuffix();
+
+
+        return kamd::utils::debug_and_return("Query: ",
+            query
+                .replace("$orderingColumn", orderingColumn)
+                .replace("$agentsFilter", agentsFilter.join(" OR "))
+                .replace("$activitiesFilter", activitiesFilter.join(" OR "))
+                .replace("$urlFilter", urlFilter.join(" OR "))
+                .replace("$mimetypeFilter", mimetypeFilter.join(" OR "))
+            );
+    }
+
+    const QString &linkedResourcesQuery() const
     {
         // TODO: We need to correct the scores based on the time that passed
         //       since the cache was last updated, although, for this query,
         //       scores are not that important.
-        static const QString _query =
+        static const QString query =
             "\n"
             "SELECT \n"
             "    rl.targettedResource as resource \n"
@@ -254,6 +263,7 @@ public:
             "  , rl.initiatingAgent   as agent \n"
             "  , COALESCE(ri.title, rl.targettedResource) as title \n"
             "  , ri.mimetype as mimetype \n"
+            "  , 2       as linkStatus \n"
 
             "FROM \n"
             "    ResourceLink rl \n"
@@ -273,52 +283,16 @@ public:
             "    AND ($mimetypeFilter)\n"
 
             "GROUP BY resource, title \n"
-            "ORDER BY $orderingColumn resource ASC \n"
             ;
 
-        // ORDER BY column
-        auto ordering = queryDefinition.ordering();
-        QString orderingColumn =
-                ordering == HighScoredFirst      ? "score DESC,"
-              : ordering == RecentlyCreatedFirst ? "firstUpdate DESC,"
-              : ordering == RecentlyUsedFirst    ? "lastUpdate DESC,"
-              : ordering == OrderByTitle         ? "title ASC,"
-              : QString();
-
-
-        // WHERE clause for filtering on agents
-        QStringList agentsFilter = transformedList(
-                queryDefinition.agents(), &Private::agentClause);
-
-        // WHERE clause for filtering on activities
-        QStringList activitiesFilter = transformedList(
-                queryDefinition.activities(), &Private::activityClause);
-
-        // WHERE clause for filtering on resource URLs
-        QStringList urlFilter = transformedList(
-                queryDefinition.urlFilters(), &Private::urlFilterClause);
-
-        // WHERE clause for filtering on resource mime
-        QStringList mimetypeFilter = transformedList(
-                queryDefinition.types(), &Private::mimetypeClause);
-
-        auto query = _query + limitOffsetSuffix();
-
-        return
-            query
-                .replace("$orderingColumn", orderingColumn)
-                .replace("$agentsFilter", agentsFilter.join(" OR "))
-                .replace("$activitiesFilter", activitiesFilter.join(" OR "))
-                .replace("$urlFilter", urlFilter.join(" OR "))
-                .replace("$mimetypeFilter", mimetypeFilter.join(" OR "))
-            ;
+        return query;
     }
 
-    QString usedResourcesQuery() const
+    const QString &usedResourcesQuery() const
     {
         // TODO: We need to correct the scores based on the time that passed
         //       since the cache was last updated
-        static const QString _query =
+        static const QString query =
             "\n"
             "SELECT \n"
             "    rsc.targettedResource as resource \n"
@@ -329,6 +303,7 @@ public:
             "  , rsc.initiatingAgent   as agent \n"
             "  , COALESCE(ri.title, rsc.targettedResource) as title \n"
             "  , ri.mimetype as mimetype \n"
+            "  , 1 as linkStatus \n" // Note: this is replaced by allResourcesQuery
 
             "FROM \n"
             "    ResourceScoreCache rsc \n"
@@ -343,72 +318,60 @@ public:
             "    AND ($mimetypeFilter)\n"
 
             "GROUP BY resource, title \n"
-            "ORDER BY $orderingColumn resource ASC\n"
             ;
-
-
-        // ORDER BY column
-        auto ordering = queryDefinition.ordering();
-        QString orderingColumn =
-                ordering == HighScoredFirst      ? "score DESC,"
-              : ordering == RecentlyCreatedFirst ? "firstUpdate DESC,"
-              : ordering == RecentlyUsedFirst    ? "lastUpdate DESC,"
-              : ordering == OrderByTitle         ? "title ASC,"
-              : QString();
-
-
-        // WHERE clause for filtering on agents
-        QStringList agentsFilter = transformedList(
-                queryDefinition.agents(), &Private::agentClause);
-
-        // WHERE clause for filtering on activities
-        QStringList activitiesFilter = transformedList(
-                queryDefinition.activities(), &Private::activityClause);
-
-        // WHERE clause for filtering on resource URLs
-        QStringList urlFilter = transformedList(
-                queryDefinition.urlFilters(), &Private::urlFilterClause);
-
-        // WHERE clause for filtering on resource mime
-        QStringList mimetypeFilter = transformedList(
-                queryDefinition.types(), &Private::mimetypeClause);
-
-        auto query = _query + limitOffsetSuffix();
-
-        return  // kamd::utils::debug_and_return("Query: ",
-            query
-                .replace("$orderingColumn", orderingColumn)
-                .replace("$agentsFilter", agentsFilter.join(" OR "))
-                .replace("$activitiesFilter", activitiesFilter.join(" OR "))
-                .replace("$urlFilter", urlFilter.join(" OR "))
-                .replace("$mimetypeFilter", mimetypeFilter.join(" OR "))
-            ;
-    }
-
-    QString allResourcesQuery() const
-    {
-        // TODO: Get this to work
-        static QString query =
-            "SELECT * FROM ResourceLink ";
 
         return query;
     }
 
-    Result currentResult() const
+    const QString &allResourcesQuery() const
     {
-        Result result;
+        // TODO: Implement counting of the linked items
+        // int linkedItemsCount = 0; // ...;
+        //
+        // if (linkedItemsCount >= limit) {
+        //     return linkedResourcesQuery();
+        //
+        // } else if (linkedItemsCount == 0) {
+        //     return usedResourcesQuery();
+        //
+        // } else {
+            static QString usedResourcesQuery_ = usedResourcesQuery();
+
+            static const QString query =
+                "WITH LinkedResourcesResults as (\n" +
+                linkedResourcesQuery() +
+                "\n)\n" +
+                "SELECT * FROM LinkedResourcesResults \n" +
+                "UNION \n" +
+                usedResourcesQuery_
+                    .replace("WHERE ",
+                        "WHERE rsc.targettedResource NOT IN "
+                        "(SELECT resource FROM LinkedResourcesResults) AND ")
+                    .replace("1 as linkStatus", "0 as linkStatus");
+        // }
+
+        return query;
+    }
+
+    ResultSet::Result currentResult() const
+    {
+        ResultSet::Result result;
         result.setResource(query.value("resource").toString());
         result.setTitle(query.value("title").toString());
         result.setMimetype(query.value("mimetype").toString());
         result.setScore(query.value("score").toDouble());
         result.setLastUpdate(query.value("lastUpdate").toInt());
         result.setFirstUpdate(query.value("firstUpdate").toInt());
+
+        result.setLinkStatus(
+            (ResultSet::Result::LinkStatus)query.value("linkStatus").toInt());
+
         return result;
     }
 };
 
 ResultSet::ResultSet(Query query)
-    : d(new Private())
+    : d(new ResultSetPrivate())
 {
     using namespace Common;
 
@@ -434,7 +397,7 @@ ResultSet::ResultSet(ResultSet &&source)
 }
 
 ResultSet::ResultSet(const ResultSet &source)
-    : d(new Private(*source.d))
+    : d(new ResultSetPrivate(*source.d))
 {
 }
 

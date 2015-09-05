@@ -55,9 +55,9 @@ namespace details {
 
 } // namespace details
 
-class Query::Private {
+class QueryPrivate {
 public:
-    Private()
+    QueryPrivate()
         : ordering(Terms::HighScoredFirst)
         , limit(10)
         , offset(0)
@@ -75,7 +75,7 @@ public:
 };
 
 Query::Query(Terms::Select selection)
-    : d(new Private())
+    : d(new QueryPrivate())
 {
     d->selection = selection;
 }
@@ -87,7 +87,7 @@ Query::Query(Query &&source)
 }
 
 Query::Query(const Query &source)
-    : d(new Private(*source.d))
+    : d(new QueryPrivate(*source.d))
 {
 }
 

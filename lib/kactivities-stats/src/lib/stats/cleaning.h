@@ -31,8 +31,9 @@ namespace Stats {
 /**
  * Forget the resource(s) for the specified activity and agent
  */
-void KACTIVITIESSTATS_EXPORT forgetResource(Terms::Activity activity, Terms::Agent agent,
-                    const QString &resource);
+void KACTIVITIESSTATS_EXPORT forgetResource(Terms::Activity activity,
+                                            Terms::Agent agent,
+                                            const QString &resource);
 
 enum KACTIVITIESSTATS_EXPORT TimeUnit {
     Hours,
@@ -43,12 +44,15 @@ enum KACTIVITIESSTATS_EXPORT TimeUnit {
 /**
  * Forget recent stats for the specified activity and time
  */
-void KACTIVITIESSTATS_EXPORT forgetRecentStats(Terms::Activity activity, int count, TimeUnit what);
+void KACTIVITIESSTATS_EXPORT forgetRecentStats(Terms::Activity activity,
+                                               int count,
+                                               TimeUnit what);
 
 /**
  * Forget events that are older than the specified number of months
  */
-void KACTIVITIESSTATS_EXPORT forgetEarlierStats(Terms::Activity activity, int months);
+void KACTIVITIESSTATS_EXPORT forgetEarlierStats(Terms::Activity activity,
+                                                int months);
 
 void KACTIVITIESSTATS_EXPORT forgetResources(const Query &query);
 

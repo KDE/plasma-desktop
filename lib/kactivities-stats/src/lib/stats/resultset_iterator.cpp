@@ -27,9 +27,9 @@ typedef ResultSet::const_iterator iterator;
 
 // Iterator
 
-class iterator::Private {
+class ResultSet_IteratorPrivate {
 public:
-    Private(const ResultSet *resultSet, int currentRow = -1)
+    ResultSet_IteratorPrivate(const ResultSet *resultSet, int currentRow = -1)
         : resultSet(resultSet)
         , currentRow(currentRow)
     {
@@ -38,7 +38,7 @@ public:
 
     const ResultSet *resultSet;
     int currentRow;
-    boost::optional<Result> currentValue;
+    boost::optional<ResultSet::Result> currentValue;
 
     inline void moveTo(int row)
     {
@@ -60,12 +60,14 @@ public:
             currentValue = none;
 
         } else {
-            currentValue = make_optional(std::move(resultSet->d->currentResult()));
+            auto value = resultSet->d->currentResult();
+            currentValue = make_optional(std::move(value));
 
         }
     }
 
-    friend void swap(Private &left, Private &right)
+    friend void swap(ResultSet_IteratorPrivate &left,
+                     ResultSet_IteratorPrivate &right)
     {
         using namespace std;
         swap(left.resultSet,    right.resultSet);
@@ -73,7 +75,7 @@ public:
         swap(left.currentValue, right.currentValue);
     }
 
-    bool operator==(const Private &other) const
+    bool operator==(const ResultSet_IteratorPrivate &other) const
     {
         bool thisValid  = currentValue.is_initialized();
         bool otherValid = other.currentValue.is_initialized();
@@ -96,7 +98,8 @@ public:
         return currentValue.is_initialized();
     }
 
-    static bool sameSource(const Private &left, const Private &right)
+    static bool sameSource(const ResultSet_IteratorPrivate &left,
+                           const ResultSet_IteratorPrivate &right)
     {
         return left.resultSet == right.resultSet &&
                left.resultSet != Q_NULLPTR;
@@ -105,17 +108,18 @@ public:
 };
 
 iterator::const_iterator(const ResultSet *resultSet, int currentRow)
-    : d(new Private(resultSet, currentRow))
+    : d(new ResultSet_IteratorPrivate(resultSet, currentRow))
 {
 }
 
 iterator::const_iterator()
-    : d(new Private(Q_NULLPTR, -1))
+    : d(new ResultSet_IteratorPrivate(Q_NULLPTR, -1))
 {
 }
 
 iterator::const_iterator(const const_iterator &source)
-    : d(new Private(source.d->resultSet, source.d->currentRow))
+    : d(new ResultSet_IteratorPrivate(source.d->resultSet,
+                                      source.d->currentRow))
 {
 }
 
@@ -236,7 +240,7 @@ bool operator!=(const iterator &left, const iterator &right)
 #define COMPARATOR_IMPL(OP)                                                    \
     bool operator OP(const iterator &left, const iterator &right)              \
     {                                                                          \
-        return iterator::Private::sameSource(*left.d, *right.d)                \
+        return ResultSet_IteratorPrivate::sameSource(*left.d, *right.d)        \
                    ? left.d->currentRow OP right.d->currentRow                 \
                    : false;                                                    \
     }
@@ -250,7 +254,7 @@ COMPARATOR_IMPL(>=)
 
 iterator::difference_type operator-(const iterator &left, const iterator &right)
 {
-    return iterator::Private::sameSource(*left.d, *right.d)
+    return ResultSet_IteratorPrivate::sameSource(*left.d, *right.d)
                ? left.d->currentRow - right.d->currentRow
                : 0;
 }

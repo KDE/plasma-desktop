@@ -34,6 +34,8 @@ namespace KActivities {
 namespace Experimental {
 namespace Stats {
 
+class ResultModelPrivate;
+
 /**
  * ResultModel
  */
@@ -54,10 +56,12 @@ public:
         TitleRole       = Qt::UserRole + 1,
         ScoreRole       = Qt::UserRole + 2,
         FirstUpdateRole = Qt::UserRole + 3,
-        LastUpdateRole  = Qt::UserRole + 4
+        LastUpdateRole  = Qt::UserRole + 4,
+        LinkStatusRole  = Qt::UserRole + 5
     };
 
-    int rowCount(const QModelIndex &parent) const Q_DECL_OVERRIDE;
+    int rowCount(const QModelIndex &parent
+                 = QModelIndex()) const Q_DECL_OVERRIDE;
     QVariant data(const QModelIndex &item,
                   int role = Qt::DisplayRole) const Q_DECL_OVERRIDE;
     QHash<int, QByteArray> roleNames() const Q_DECL_OVERRIDE;
@@ -76,8 +80,8 @@ public:
     void forgetAllResources();
 
 private:
-    class Private;
-    Private *const d;
+    friend class ResultModelPrivate;
+    ResultModelPrivate *const d;
 };
 
 } // namespace Stats

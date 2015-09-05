@@ -37,6 +37,8 @@ namespace KActivities {
 namespace Experimental {
 namespace Stats {
 
+class QueryPrivate;
+
 /**
  * Class which defines what resource statistics should be
  * returned.
@@ -146,8 +148,7 @@ public:
     }
 
 private:
-    class Private;
-    Private* d;
+    QueryPrivate* d;
 };
 
 template <typename Term>
