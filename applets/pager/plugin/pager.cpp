@@ -589,6 +589,21 @@ void Pager::changeDesktop(int newDesktop)
 #endif
 }
 
+void Pager::dropMimeData(QMimeData *mimeData, int desktopId)
+{
+    if (!mimeData) {
+        return;
+    }
+
+    bool ok;
+    const QList<WId> &ids = TaskManager::Task::idsFromMimeData(mimeData, &ok);
+    if (ok) {
+        foreach (const WId &id, ids) {
+            KWindowSystem::setOnDesktop(id, desktopId + 1);
+        }
+    }
+}
+
 // KWindowSystem does not translate position when mapping viewports
 // to virtual desktops (it'd probably break more things than fix),
 // so the offscreen coordinates need to be fixed
