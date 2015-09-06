@@ -171,6 +171,8 @@ MouseArea {
             DropArea {
                 id: droparea
                 anchors.fill: parent
+                preventStealing: true
+
                 onDragEnter: {
                     root.dragSwitchDesktopId = desktop.desktopId;
                     dragTimer.start();
