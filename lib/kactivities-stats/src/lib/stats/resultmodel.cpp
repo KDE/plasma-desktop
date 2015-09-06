@@ -505,12 +505,12 @@ public:
             = result ? result.iterator->linkStatus()
                      : ResultSet::Result::NotLinked;
 
-        const auto destination = destinationFor(*result.iterator);
-
         if (result) {
             // We are only updating a result we already had,
             // lets fill out the data and send the update signal.
             // Move it if necessary.
+
+            const auto destination = destinationFor(*result.iterator);
 
             auto &item = *result.iterator;
 
@@ -526,9 +526,6 @@ public:
             // lets fill out the data and insert it
             // at the desired position
 
-            q->beginInsertRows(QModelIndex(), destination.index,
-                               destination.index);
-
             ResultSet::Result result;
             result.setResource(resource);
 
@@ -540,6 +537,11 @@ public:
             result.setLinkStatus(linkStatus);
             result.setLastUpdate(lastUpdate);
             result.setFirstUpdate(firstUpdate);
+
+            const auto destination = destinationFor(result);
+
+            q->beginInsertRows(QModelIndex(), destination.index,
+                               destination.index);
 
             cache.insertAt(destination, result);
 
