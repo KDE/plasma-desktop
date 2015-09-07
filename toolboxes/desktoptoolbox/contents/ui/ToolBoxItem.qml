@@ -72,7 +72,7 @@ ListView {
     PlasmaCore.DataSource {
         id: dataEngine
         engine: "powermanagement"
-        connectedSources: ["PowerDevil"]
+        connectedSources: ["PowerDevil", "Sleep States"]
     }
 
     model: {
@@ -83,6 +83,16 @@ ListView {
             if (action && action.visible && action.text !== "") {
                 model.push(action)
             }
+        }
+
+        if (dataEngine.data["Sleep States"].LockScreen) {
+            model.push({
+                text: i18nd("plasma_toolbox_org.kde.desktoptoolbox", "Lock Screen"),
+                icon: "system-lock-screen",
+                visible: true,
+                enabled: true,
+                operation: "lockScreen"
+            })
         }
 
         model.push({
