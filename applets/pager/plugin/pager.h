@@ -56,8 +56,7 @@ class Pager : public QObject
     public:
         enum CurrentDesktopSelected {
             DoNothing = 0,
-            ShowDesktop,
-            ShowDashboard
+            ShowDesktop
         };
         Q_ENUMS(CurrentDesktopSelected)
 

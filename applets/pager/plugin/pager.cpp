@@ -571,14 +571,11 @@ void Pager::changeDesktop(int newDesktop)
         return;
     }
     if (m_currentDesktop == newDesktop+1) {
-        // toogle the desktop or the dashboard
+        // toogle the desktop
         if (m_currentDesktopSelected == ShowDesktop) {
             NETRootInfo info(QX11Info::connection(), 0);
             m_desktopDown = !m_desktopDown;
             info.setShowingDesktop(m_desktopDown);
-        } else if (m_currentDesktopSelected == ShowDashboard) {
-            QDBusInterface plasmaApp("org.kde.plasma-desktop", "/App");
-            plasmaApp.call("toggleDashboard");
         }
     } else {
         KWindowSystem::setCurrentDesktop(newDesktop + 1);
