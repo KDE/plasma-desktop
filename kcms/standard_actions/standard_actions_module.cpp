@@ -47,10 +47,9 @@ static void dressUpAction(QAction *action, KStandardShortcut::StandardShortcut s
     const auto hardcoded = KStandardShortcut::hardcodedDefaultShortcut(shortcutId);
     const auto active    = KStandardShortcut::shortcut(shortcutId);
 
-    auto shortcuts = active;
-    shortcuts << hardcoded;
     // Set the hardcoded default shortcut as default shortcut
-    action->setShortcuts(shortcuts);
+    action->setProperty("defaultShortcuts", QVariant::fromValue(hardcoded));
+    action->setShortcuts(active);
     }
 
 StandardActionsModule::StandardActionsModule(
