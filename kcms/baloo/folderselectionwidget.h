@@ -32,7 +32,7 @@ class FolderSelectionWidget : public QWidget
 public:
     explicit FolderSelectionWidget(QWidget* parent = 0, Qt::WindowFlags f = 0);
 
-    void setFolders(QStringList includeDirs, QStringList exclude);
+    void setDirectoryList(QStringList includeDirs, QStringList exclude);
     QStringList includeFolders() const;
     QStringList excludeFolders() const;
 
@@ -51,19 +51,41 @@ private Q_SLOTS:
     void slotCurrentItemChanged(QListWidgetItem* current, QListWidgetItem*);
 
 private:
-    QString getFolderDisplayName(const QString& url) const;
+    QString folderDisplayName(const QString& url) const;
     bool shouldShowMountPoint(const QString& mountPoint);
     QString fetchMountPoint(const QString& url) const;
     void showMessage(const QString& message);
 
+    /**
+     * @brief Get the theme valid icon name for \p path.
+     *
+     * @param path Path to be analysed.
+     * @return One of: "user-home", "drive-harddisk" or "folder"
+     */
     QString iconName(QString path) const;
 
+    /**
+     * @brief Widget with the list of directories.
+     *
+     */
     QListWidget* m_listWidget;
     QStringList m_mountPoints;
 
+    /**
+     * @brief Button to add a directory to the list.
+     *
+     */
     QPushButton* m_addButton;
+    /**
+     * @brief Button to remove the selected directory from the list.
+     *
+     */
     QPushButton* m_removeButton;
 
+    /**
+     * @brief Information, warning or error message widget.
+     *
+     */
     KMessageWidget* m_messageWidget;
 };
 

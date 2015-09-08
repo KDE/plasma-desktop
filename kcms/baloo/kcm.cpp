@@ -70,10 +70,10 @@ ServerConfigModule::ServerConfigModule(QWidget* parent, const QVariantList& args
     const QPixmap pixmap = QIcon::fromTheme(QLatin1String("baloo")).pixmap(QSize(pixelSize, pixelSize));
     m_pixmapLabel->setPixmap(pixmap);
 
-    connect(m_folderSelectionWidget, SIGNAL(changed()),
+    connect(m_excludeFolders_FSW, SIGNAL(changed()),
             this, SLOT(changed()));
-    connect(m_folderSelectionWidget, SIGNAL(changed()),
-            this, SLOT(folderSelectionChanged()));
+    connect(m_excludeFolders_FSW, SIGNAL(changed()),
+            this, SLOT(onDirectoryListChanged()));
     connect(m_enableCheckbox, SIGNAL(stateChanged(int)),
             this, SLOT(changed()));
 }
@@ -93,7 +93,7 @@ void ServerConfigModule::load()
 
     QStringList includeFolders = config.includeFolders();
     QStringList excludeFolders = config.excludeFolders();
-    m_folderSelectionWidget->setFolders(includeFolders, excludeFolders);
+    m_excludeFolders_FSW->setDirectoryList(includeFolders, excludeFolders);
 
     // All values loaded -> no changes
     Q_EMIT changed(false);
@@ -102,10 +102,10 @@ void ServerConfigModule::load()
 
 void ServerConfigModule::save()
 {
-    QStringList includeFolders = m_folderSelectionWidget->includeFolders();
-    QStringList excludeFolders = m_folderSelectionWidget->excludeFolders();
+    QStringList includeFolders = m_excludeFolders_FSW->includeFolders();
+    QStringList excludeFolders = m_excludeFolders_FSW->excludeFolders();
 
-    bool mountPointsEx = m_folderSelectionWidget->allMountPointsExcluded();
+    bool mountPointsEx = m_excludeFolders_FSW->allMountPointsExcluded();
 
     bool enabled = m_enableCheckbox->isChecked();
     if (mountPointsEx)
@@ -153,12 +153,12 @@ void ServerConfigModule::save()
 
 void ServerConfigModule::defaults()
 {
-    m_folderSelectionWidget->setFolders(defaultFolders(), QStringList());
+    m_excludeFolders_FSW->setDirectoryList(defaultFolders(), QStringList());
 }
 
-void ServerConfigModule::folderSelectionChanged()
+void ServerConfigModule::onDirectoryListChanged()
 {
-    const bool disabled = m_folderSelectionWidget->allMountPointsExcluded();
+    const bool disabled = m_excludeFolders_FSW->allMountPointsExcluded();
     m_enableCheckbox->setChecked(!disabled);
 }
 
