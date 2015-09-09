@@ -138,7 +138,8 @@ public:
                       << "org.kde.systemsettings" << "systemsettings"
                       << "org.kde.dolphin" << "dolphin"
                       << "org.kde.ktpcontactlist" << "ktp-contactlist"
-                      << "org.kde.kate" << "kate";
+                      << "org.kde.kate" << "kate"
+                      << "org.kde.discover" << "muon-discover" << "discover";
 
         QList<QString> desktopFiles;
 
