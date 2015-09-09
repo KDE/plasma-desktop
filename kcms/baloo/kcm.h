@@ -39,7 +39,7 @@ public Q_SLOTS:
     void save();
     void defaults();
 
-    void folderSelectionChanged();
+    void onDirectoryListChanged();
 private:
     bool m_previouslyEnabled;
 };

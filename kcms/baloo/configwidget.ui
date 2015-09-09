@@ -40,7 +40,7 @@
     </layout>
    </item>
    <item>
-    <widget class="QGroupBox" name="m_groupBox">
+    <widget class="QGroupBox" name="m_excludeFolders_GB">
      <property name="title">
       <string>Do not search in these locations</string>
      </property>
@@ -49,7 +49,7 @@
      </property>
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
-       <widget class="FolderSelectionWidget" name="m_folderSelectionWidget" native="true"/>
+       <widget class="FolderSelectionWidget" name="m_excludeFolders_FSW" native="true"/>
       </item>
      </layout>
     </widget>

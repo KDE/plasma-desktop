@@ -88,7 +88,7 @@ namespace {
         return url;
     }
 }
-void FolderSelectionWidget::setFolders(QStringList includeDirs, QStringList exclude)
+void FolderSelectionWidget::setDirectoryList(QStringList includeDirs, QStringList exclude)
 {
     m_listWidget->clear();
     m_mountPoints.clear();
@@ -126,7 +126,7 @@ void FolderSelectionWidget::setFolders(QStringList includeDirs, QStringList excl
 
     Q_FOREACH (QString url, excludeList) {
         QListWidgetItem* item = new QListWidgetItem(m_listWidget);
-        QString display = getFolderDisplayName(url);
+        QString display = folderDisplayName(url);
 
         item->setData(Qt::DisplayRole, display);
         item->setData(Qt::WhatsThisRole, url);
@@ -244,9 +244,9 @@ void FolderSelectionWidget::slotAddButtonClicked()
     qDeleteAll(deleteList);
 
     QListWidgetItem* item = new QListWidgetItem(m_listWidget);
-    QString display = getFolderDisplayName(url);
+    QString displayName = folderDisplayName(url);
 
-    item->setData(Qt::DisplayRole, display);
+    item->setData(Qt::DisplayRole, displayName);
     item->setData(Qt::WhatsThisRole, url);
     item->setData(UrlRole, url);
     item->setData(Qt::DecorationRole, QIcon::fromTheme(iconName(url)));
@@ -281,7 +281,7 @@ void FolderSelectionWidget::showMessage(const QString& message)
 }
 
 
-QString FolderSelectionWidget::getFolderDisplayName(const QString& url) const
+QString FolderSelectionWidget::folderDisplayName(const QString& url) const
 {
     QString name = url;
 
