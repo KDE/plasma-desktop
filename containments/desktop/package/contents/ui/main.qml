@@ -244,6 +244,7 @@ DragDrop.DropArea {
         } else if (isContainment) {
             placeHolderPaint.opacity = 0;
             plasmoid.processMimeData(event.mimeData, event.x - placeHolder.width / 2, event.y - placeHolder.height / 2);
+            event.accept(event.proposedAction);
         }
     }
 

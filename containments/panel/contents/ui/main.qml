@@ -195,6 +195,7 @@ function checkLastSpacer() {
         }
        
         plasmoid.processMimeData(event.mimeData, event.x, event.y);
+        event.accept(event.proposedAction);
         root.fixedWidth = 0;
         root.fixedHeight = 0;
         containmentSizeSyncTimer.restart();
