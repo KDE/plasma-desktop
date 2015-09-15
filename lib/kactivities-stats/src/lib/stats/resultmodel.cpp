@@ -510,14 +510,14 @@ public:
             // lets fill out the data and send the update signal.
             // Move it if necessary.
 
-            const auto destination = destinationFor(*result.iterator);
-
             auto &item = *result.iterator;
 
             item.setScore(score);
             item.setLinkStatus(linkStatus);
             item.setLastUpdate(lastUpdate);
             item.setFirstUpdate(firstUpdate);
+
+            const auto destination = destinationFor(item);
 
             repositionResult(result, destination);
 

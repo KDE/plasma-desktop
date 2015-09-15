@@ -24,6 +24,7 @@
 #include <utils/d_ptr.h>
 #include <memory>
 #include <QSqlQuery>
+#include <QRegExp>
 
 namespace Common {
 
@@ -73,6 +74,74 @@ public:
 private:
     D_PTR;
 };
+
+template <typename EscapeFunction>
+QString parseStarPattern(const QString &pattern, const QString &joker,
+                                   EscapeFunction escape)
+{
+    const auto begin     = pattern.constBegin();
+    const auto end       = pattern.constEnd();
+
+    auto currentStart    = pattern.constBegin();
+    auto currentPosition = pattern.constBegin();
+
+    bool isEscaped = false;
+
+    // This should be available in the QString class...
+    auto stringFromIterators = [&](const QString::const_iterator &currentStart,
+                                   const QString::const_iterator &currentPosition) {
+        return pattern.mid(
+                std::distance(begin, currentStart),
+                std::distance(currentStart, currentPosition));
+    };
+
+    // Escaping % and _ for sql like
+    // auto escape = [] (QString str) {
+    //     return str.replace("%", "\\%").replace("_", "\\_");
+    // };
+
+    QString resultPattern;
+    resultPattern.reserve(pattern.size() * 1.5);
+
+    for (; currentPosition != end; ++currentPosition) {
+        if (isEscaped) {
+            // Just skip the current character
+            isEscaped = false;
+
+        } else if (*currentPosition == '\\') {
+            // Skip two characters
+            isEscaped = true;
+
+        } else if (*currentPosition == '*') {
+            // Replacing the star with the sql like joker - %
+            resultPattern.append(escape(stringFromIterators(
+                                    currentStart, currentPosition)) + joker);
+            currentStart = currentPosition + 1;
+
+        } else {
+            // This one is boring, nothing to do
+        }
+    }
+
+    if (currentStart != currentPosition) {
+        resultPattern.append(escape(stringFromIterators(
+                                currentStart, currentPosition)));
+    }
+
+    return resultPattern;
+}
+
+inline QString starPatternToLike(const QString &pattern)
+{
+    return parseStarPattern(pattern, "%", [] (QString str) {
+        return str.replace("%", "\\%").replace("_", "\\_");
+    });
+}
+
+inline QRegExp starPatternToRegex(const QString &pattern)
+{
+    return QRegExp(parseStarPattern(pattern, ".*", QRegExp::escape));
+}
 
 } // namespace Common
 
