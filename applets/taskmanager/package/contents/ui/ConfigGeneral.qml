@@ -33,7 +33,6 @@ Item {
     property alias cfg_showToolTips: showToolTips.checked
     property alias cfg_wheelEnabled: wheelEnabled.checked
     property alias cfg_highlightWindows: highlightWindows.checked
-    property alias cfg_alwaysUseLauncherIcons: alwaysUseLauncherIcons.checked
     property alias cfg_maxStripes: maxStripes.value
     property alias cfg_groupingStrategy: groupingStrategy.currentIndex
     property alias cfg_middleClickAction: middleClickAction.currentIndex
@@ -96,11 +95,6 @@ Item {
                 CheckBox {
                     id: highlightWindows
                     text: i18n("Highlight windows")
-                }
-
-                CheckBox {
-                    id: alwaysUseLauncherIcons
-                    text: i18n("Use launcher icons for running applications")
                 }
 
                 RowLayout {
