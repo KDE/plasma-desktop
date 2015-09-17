@@ -380,13 +380,17 @@ void KCMKeyboardWidget::previewLayout(){
 
     KeyboardPainter* layoutPreview = new KeyboardPainter();
     const LayoutInfo* layoutInfo = rules->getLayoutInfo(country);
+    if (!layoutInfo) {
+        return;
+    }
+
     foreach(const VariantInfo* variantInfo, layoutInfo->variantInfos) {
         if(variant==variantInfo->description){
             variant=variantInfo->name;
             break;
         }
     }
-    
+
     QString title = Flags::getLongText( LayoutUnit(country, variant), rules );
     layoutPreview->generateKeyboardLayout(country,variant, model, title);
     layoutPreview->setModal(true);
@@ -644,11 +648,10 @@ void KCMKeyboardWidget::updateShortcutsUI()
 
 	delete actionCollection;
 	actionCollection = new KeyboardLayoutActionCollection(this, true);
-	//QAction* toggleAction = 
-	actionCollection->getToggeAction();
-//    const auto shortcuts = KGlobalAccel::self()->shortcut(toggleAction);
-//    uiWidget->kdeKeySequence->setKeySequence(shortcuts.isEmpty() ? QKeySequence() : shortcuts.first());
-//    actionCollection->loadLayoutShortcuts(keyboardConfig->layouts, rules);
+	QAction* toggleAction = actionCollection->getToggeAction();
+	const auto shortcuts = KGlobalAccel::self()->shortcut(toggleAction);
+	uiWidget->kdeKeySequence->setKeySequence(shortcuts.isEmpty() ? QKeySequence() : shortcuts.first());
+	actionCollection->loadLayoutShortcuts(keyboardConfig->layouts, rules);
 	layoutsTableModel->refresh();
 }
 
