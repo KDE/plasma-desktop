@@ -720,10 +720,9 @@ void MouseSettings::apply(bool force)
               unsigned long num_items_return;
               unsigned long bytes_after_return;
 
-              unsigned char *data;
-              unsigned char *data2;
+              unsigned char *data = nullptr;
+              unsigned char *data2 = nullptr;
               //data returned is an 1 byte boolean
-
               status = XIGetProperty(dpy, deviceid, prop_wheel_emulation, 0, 1,
                                      False, XA_INTEGER, &type_return, &format_return,
                                      &num_items_return, &bytes_after_return, &data);
