@@ -719,15 +719,18 @@ void MouseSettings::apply(bool force)
               int format_return;
               unsigned long num_items_return;
               unsigned long bytes_after_return;
+
               unsigned char *data;
               unsigned char *data2;
+              //data returned is an 1 byte boolean
+
               status = XIGetProperty(dpy, deviceid, prop_wheel_emulation, 0, 1,
                                      False, XA_INTEGER, &type_return, &format_return,
                                      &num_items_return, &bytes_after_return, &data);
               if (status != Success) { continue; }
 
               // pointer device without wheel emulation
-              if (type_return != XA_INTEGER || data == NULL || *(Bool*)data == False) {
+              if (type_return != XA_INTEGER || data == NULL || *data == False) {
                   status = XIGetProperty(dpy, deviceid, prop_scroll_distance, 0, 3,
                                          False, XA_INTEGER, &type_return, &format_return,
                                          &num_items_return, &bytes_after_return, &data2);
