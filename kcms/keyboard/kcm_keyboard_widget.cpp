@@ -380,6 +380,10 @@ void KCMKeyboardWidget::previewLayout(){
 
     KeyboardPainter* layoutPreview = new KeyboardPainter();
     const LayoutInfo* layoutInfo = rules->getLayoutInfo(country);
+    if (!layoutInfo) {
+        return;
+    }
+
     foreach(const VariantInfo* variantInfo, layoutInfo->variantInfos) {
         if(variant==variantInfo->description){
             variant=variantInfo->name;
