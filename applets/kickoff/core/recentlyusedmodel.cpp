@@ -209,6 +209,7 @@ void RecentlyUsedModel::setNameDisplayOrder(DisplayOrder displayOrder)
 
     d->itemsByPath.clear();
     clear();
+    d->recentApplicationCount = 0;
 
     if (d->recenttype != DocumentsOnly) {
         d->loadRecentApplications();
@@ -256,7 +257,8 @@ void RecentlyUsedModel::recentApplicationAdded(KService::Ptr service, int)
 void RecentlyUsedModel::recentApplicationRemoved(KService::Ptr service)
 {
     if (service) {
-        d->removeExistingItem(service->entryPath());
+        if (d->removeExistingItem(service->entryPath()))
+            --d->recentApplicationCount;
     }
 }
 
