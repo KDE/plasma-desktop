@@ -109,9 +109,9 @@ Item {
 
                     dragMouseArea.dragging = true;
 
-                    eventForge.sendUngrabRecursive(appletItem);
-                    eventForge.makeGrab(dragMouseArea);
-                    eventForge.sendLeftPress(dragMouseArea, mouse.x, mouse.y);
+                    eventGenerator.sendGrabEvent(appletItem, KQuickControlsAddons.EventGenerator.UngrabMouse);
+                    eventGenerator.sendGrabEvent(dragMouseArea, KQuickControlsAddons.EventGenerator.GrabMouse);
+                    eventGenerator.sendMouseEvent(dragMouseArea, KQuickControlsAddons.EventGenerator.MouseButtonPress, mouse.x, mouse.y, Qt.LeftButton, Qt.LeftButton, 0);
                 }
             }
 

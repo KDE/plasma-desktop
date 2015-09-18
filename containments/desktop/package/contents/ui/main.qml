@@ -25,6 +25,7 @@ import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.draganddrop 2.0 as DragDrop
+import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
 
 import org.kde.private.desktopcontainment.desktop 0.1 as Desktop
 
@@ -341,8 +342,8 @@ DragDrop.DropArea {
         id: systemSettings
     }
 
-    Desktop.EventForge {
-        id: eventForge
+    KQuickControlsAddons.EventGenerator {
+        id: eventGenerator
     }
 
     MouseArea { // unfocus any plasmoid when clicking empty desktop area

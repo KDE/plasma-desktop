@@ -1,6 +1,5 @@
 set(desktopplugin_SRCS
     desktopplugin.cpp
-    eventforge.cpp
     infonotification.cpp
     systemsettings.cpp
 )
