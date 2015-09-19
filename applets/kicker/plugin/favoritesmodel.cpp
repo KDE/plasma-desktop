@@ -27,6 +27,7 @@
 #include <KLocalizedString>
 
 FavoritesModel::FavoritesModel(QObject *parent) : AbstractModel(parent)
+, m_enabled(true)
 {
 }
 
@@ -78,6 +79,20 @@ bool FavoritesModel::trigger(int row, const QString &actionId, const QVariant &a
     return m_entryList.at(row)->run(actionId, argument);
 }
 
+bool FavoritesModel::enabled() const
+{
+    return m_enabled;
+}
+
+void FavoritesModel::setEnabled(bool enable)
+{
+    if (m_enabled != enable) {
+        m_enabled = enable;
+
+        emit enabledChanged();
+    }
+}
+
 QStringList FavoritesModel::favorites() const
 {
     return m_favorites;
@@ -101,7 +116,7 @@ bool FavoritesModel::isFavorite(const QString &id) const
 
 void FavoritesModel::addFavorite(const QString &id)
 {
-    if (id.isEmpty()) {
+    if (!m_enabled || id.isEmpty()) {
         return;
     }
 
@@ -125,6 +140,10 @@ void FavoritesModel::addFavorite(const QString &id)
 
 void FavoritesModel::removeFavorite(const QString &id)
 {
+    if (!m_enabled || id.isEmpty()) {
+        return;
+    }
+
     int index = m_favorites.indexOf(id);
 
     if (index != -1) {

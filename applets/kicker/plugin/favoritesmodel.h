@@ -30,6 +30,7 @@ class FavoritesModel : public AbstractModel
 {
     Q_OBJECT
 
+    Q_PROPERTY(bool enabled READ enabled WRITE setEnabled NOTIFY enabledChanged)
     Q_PROPERTY(QStringList favorites READ favorites WRITE setFavorites NOTIFY favoritesChanged)
 
     public:
@@ -43,6 +44,9 @@ class FavoritesModel : public AbstractModel
         int rowCount(const QModelIndex &parent = QModelIndex()) const;
 
         Q_INVOKABLE bool trigger(int row, const QString &actionId, const QVariant &argument);
+
+        bool enabled() const;
+        void setEnabled(bool enable);
 
         QStringList favorites() const;
         void setFavorites(const QStringList &favorites);
@@ -59,10 +63,13 @@ class FavoritesModel : public AbstractModel
         virtual void refresh();
 
     Q_SIGNALS:
+        void enabledChanged() const;
         void favoritesChanged() const;
 
     private:
         AbstractEntry *favoriteFromId(const QString &id);
+
+        bool m_enabled;
 
         QList<AbstractEntry *> m_entryList;
         QStringList m_favorites;
