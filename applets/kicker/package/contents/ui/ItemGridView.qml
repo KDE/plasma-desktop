@@ -19,7 +19,6 @@
 
 import QtQuick 2.4
 
-import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kquickcontrolsaddons 2.0
@@ -33,8 +32,7 @@ FocusScope {
     signal keyNavUp
     signal keyNavDown
 
-    property bool dragEnabled: true
-    property bool dropEnabled: false
+    property bool dragEnabled: false
     property bool showLabels: true
 
     property int pressX: -1
@@ -51,12 +49,6 @@ FocusScope {
 
     property alias horizontalScrollBarPolicy: scrollArea.horizontalScrollBarPolicy
     property alias verticalScrollBarPolicy: scrollArea.verticalScrollBarPolicy
-
-    onDropEnabledChanged: {
-        if (!dropEnabled && "dropPlaceHolderIndex" in model) {
-            model.dropPlaceHolderIndex = -1;
-        }
-    }
 
     onFocusChanged: {
         if (!focus) {
@@ -109,57 +101,17 @@ FocusScope {
         anchors.fill: parent
 
         onDragMove: {
-            if (!dropEnabled || gridView.animating || !kicker.dragSource) {
+            if (!dragEnabled || gridView.animating) {
                 return;
             }
 
-            var x = Math.max(0, event.x - (width % cellWidth));
-            var cPos = mapToItem(gridView.contentItem, x, event.y);
+            var cPos = mapToItem(gridView.contentItem, event.x, event.y);
             var item = gridView.itemAt(cPos.x, cPos.y);
 
-            if (item) {
-                if (kicker.dragSource.parent == gridView.contentItem) {
-                    if (item != kicker.dragSource) {
-                        item.GridView.view.model.moveRow(dragSource.itemIndex, item.itemIndex);
-                    }
-                } else if (kicker.dragSource.view.model.favoritesModel == model
-                    && !model.isFavorite(kicker.dragSource.favoriteId)) {
-                    var hasPlaceholder = (model.dropPlaceholderIndex != -1);
-
-                    model.dropPlaceholderIndex = item.itemIndex;
-
-                    if (!hasPlaceholder) {
-                        gridView.currentIndex = (item.itemIndex - 1);
-                    }
-                }
-            } else if (kicker.dragSource.parent != gridView.contentItem
-                && kicker.dragSource.view.model.favoritesModel == model
-                && !model.isFavorite(kicker.dragSource.favoriteId)) {
-                    var hasPlaceholder = (model.dropPlaceholderIndex != -1);
-
-                    model.dropPlaceholderIndex = hasPlaceholder ? model.count - 1 : model.count;
-
-                    if (!hasPlaceholder) {
-                        gridView.currentIndex = (model.count - 1);
-                    }
-            } else {
-                model.dropPlaceholderIndex = -1;
-                gridView.currentIndex = -1;
+            if (item && item != kicker.dragSource && kicker.dragSource.parent == gridView.contentItem) {
+                item.GridView.view.model.moveRow(dragSource.itemIndex, item.itemIndex);
             }
-        }
 
-        onDragLeave: {
-            if ("dropPlaceholderIndex" in model) {
-                model.dropPlaceholderIndex = -1;
-                gridView.currentIndex = -1;
-            }
-        }
-
-        onDrop: {
-            if (kicker.dragSource && kicker.dragSource.parent != gridView.contentItem && kicker.dragSource.view.model.favoritesModel == model) {
-                model.addFavorite(kicker.dragSource.favoriteId, model.dropPlaceholderIndex);
-                gridView.currentIndex = -1;
-            }
         }
 
         MouseEventListener {
@@ -237,14 +189,14 @@ FocusScope {
                     id: gridView
 
                     property bool animating: false
-                    property int animationDuration: dropEnabled ? resetAnimationDurationTimer.interval : 0
+                    property int animationDuration: dragEnabled ? resetAnimationDurationTimer.interval : 0
 
                     focus: true
 
                     currentIndex: -1
 
                     move: Transition {
-                        enabled: itemGrid.dropEnabled
+                        enabled: itemGrid.dragEnabled
 
                         SequentialAnimation {
                             PropertyAction { target: gridView; property: "animating"; value: true }
@@ -260,7 +212,7 @@ FocusScope {
                     }
 
                     moveDisplaced: Transition {
-                        enabled: itemGrid.dropEnabled
+                        enabled: itemGrid.dragEnabled
 
                         SequentialAnimation {
                             PropertyAction { target: gridView; property: "animating"; value: true }
@@ -282,42 +234,7 @@ FocusScope {
                         showLabel: showLabels
                     }
 
-                    highlight: Item {
-                        property bool isDropPlaceHolder: "dropPlaceholderIndex" in model && currentIndex == model.dropPlaceholderIndex
-
-                        PlasmaComponents.Highlight {
-                            visible: gridView.currentItem && !isDropPlaceHolder
-
-                            anchors.fill: parent
-                        }
-
-                        PlasmaCore.FrameSvgItem {
-                            visible: gridView.currentItem && isDropPlaceHolder
-
-                            anchors.fill: parent
-
-                            imagePath: "widgets/viewitem"
-                            prefix: "selected"
-
-                            opacity: 0.5
-
-                            PlasmaCore.IconItem {
-                                anchors {
-                                    right: parent.right
-                                    rightMargin: parent.margins.right
-                                    bottom: parent.bottom
-                                    bottomMargin: parent.margins.bottom
-                                }
-
-                                width: units.iconSizes.smallMedium
-                                height: width
-
-                                source: "list-add"
-                                active: false
-                            }
-                        }
-                    }
-
+                    highlight: PlasmaComponents.Highlight {}
                     highlightFollowsCurrentItem: true
                     highlightMoveDuration: 0
 

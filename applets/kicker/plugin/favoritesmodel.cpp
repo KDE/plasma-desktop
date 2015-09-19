@@ -27,9 +27,6 @@
 #include <KLocalizedString>
 
 FavoritesModel::FavoritesModel(QObject *parent) : AbstractModel(parent)
-, m_enabled(true)
-, m_maxFavorites(-1)
-, m_dropPlaceholderIndex(-1)
 {
 }
 
@@ -45,25 +42,12 @@ QString FavoritesModel::description() const
 
 QVariant FavoritesModel::data(const QModelIndex& index, int role) const
 {
-    if (!index.isValid() || index.row() >= rowCount()) {
+
+    if (!index.isValid() || index.row() >= m_entryList.count()) {
         return QVariant();
     }
 
-    if (index.row() == m_dropPlaceholderIndex) {
-        if (role == Kicker::IsDropPlaceholderRole) {
-            return true;
-        } else {
-            return QVariant();
-        }
-    }
-
-    int mappedIndex = index.row();
-
-    if (m_dropPlaceholderIndex != -1 && mappedIndex > m_dropPlaceholderIndex) {
-        --mappedIndex;
-    }
-
-    const AbstractEntry *entry = m_entryList.at(mappedIndex);
+    const AbstractEntry *entry = m_entryList.at(index.row());
 
     if (role == Qt::DisplayRole) {
         return entry->name();
@@ -82,7 +66,7 @@ QVariant FavoritesModel::data(const QModelIndex& index, int role) const
 
 int FavoritesModel::rowCount(const QModelIndex& parent) const
 {
-    return parent.isValid() ? 0 : m_entryList.count() + (m_dropPlaceholderIndex != -1 ? 1 : 0);
+    return parent.isValid() ? 0 : m_entryList.count();
 }
 
 bool FavoritesModel::trigger(int row, const QString &actionId, const QVariant &argument)
@@ -92,20 +76,6 @@ bool FavoritesModel::trigger(int row, const QString &actionId, const QVariant &a
     }
 
     return m_entryList.at(row)->run(actionId, argument);
-}
-
-bool FavoritesModel::enabled() const
-{
-    return m_enabled;
-}
-
-void FavoritesModel::setEnabled(bool enable)
-{
-    if (m_enabled != enable) {
-        m_enabled = enable;
-
-        emit enabledChanged();
-    }
 }
 
 QStringList FavoritesModel::favorites() const
@@ -124,37 +94,14 @@ void FavoritesModel::setFavorites(const QStringList& favorites)
     }
 }
 
-int FavoritesModel::maxFavorites() const
-{
-    return m_maxFavorites;
-}
-
-void FavoritesModel::setMaxFavorites(int max)
-{
-    if (m_maxFavorites != max)
-    {
-        m_maxFavorites = max;
-
-        if (m_maxFavorites != -1 && m_favorites.count() > m_maxFavorites) {
-            refresh();
-        }
-
-        emit maxFavoritesChanged();
-    }
-}
-
 bool FavoritesModel::isFavorite(const QString &id) const
 {
     return m_favorites.contains(id);
 }
 
-void FavoritesModel::addFavorite(const QString &id, int index)
+void FavoritesModel::addFavorite(const QString &id)
 {
-    if (!m_enabled || id.isEmpty()) {
-        return;
-    }
-
-    if (m_maxFavorites != -1 && m_favorites.count() == m_maxFavorites) {
+    if (id.isEmpty()) {
         return;
     }
 
@@ -165,14 +112,10 @@ void FavoritesModel::addFavorite(const QString &id, int index)
         return;
     }
 
-    setDropPlaceholderIndex(-1);
+    beginInsertRows(QModelIndex(), m_entryList.count(), m_entryList.count());
 
-    int insertIndex = (index != -1) ? index : m_entryList.count();
-
-    beginInsertRows(QModelIndex(), insertIndex, insertIndex);
-
-    m_entryList.insert(insertIndex, entry);
-    m_favorites.insert(insertIndex, entry->id());
+    m_entryList << entry;
+    m_favorites << entry->id();
 
     endInsertRows();
 
@@ -182,15 +125,9 @@ void FavoritesModel::addFavorite(const QString &id, int index)
 
 void FavoritesModel::removeFavorite(const QString &id)
 {
-    if (!m_enabled || id.isEmpty()) {
-        return;
-    }
-
     int index = m_favorites.indexOf(id);
 
     if (index != -1) {
-        setDropPlaceholderIndex(-1);
-
         beginRemoveRows(QModelIndex(), index, index);
 
         delete m_entryList[index];
@@ -214,8 +151,6 @@ void FavoritesModel::moveRow(int from, int to)
         return;
     }
 
-    setDropPlaceholderIndex(-1);
-
     int modelTo = to + (to > from ? 1 : 0);
 
     bool ok = beginMoveRows(QModelIndex(), from, from, QModelIndex(), modelTo);
@@ -230,42 +165,6 @@ void FavoritesModel::moveRow(int from, int to)
     }
 }
 
-int FavoritesModel::dropPlaceholderIndex() const
-{
-    return m_dropPlaceholderIndex;
-}
-
-void FavoritesModel::setDropPlaceholderIndex(int index)
-{
-    if (index == -1 && m_dropPlaceholderIndex != -1) {
-        beginRemoveRows(QModelIndex(), m_dropPlaceholderIndex, m_dropPlaceholderIndex);
-
-        m_dropPlaceholderIndex = index;
-
-        endRemoveRows();
-
-        emit countChanged();
-    } else if (index != -1 && m_dropPlaceholderIndex == -1) {
-        beginInsertRows(QModelIndex(), index, index);
-
-        m_dropPlaceholderIndex = index;
-
-        endInsertRows();
-
-        emit countChanged();
-    } else if (m_dropPlaceholderIndex != index) {
-        int modelTo = index + (index > m_dropPlaceholderIndex ? 1 : 0);
-
-        bool ok = beginMoveRows(QModelIndex(), m_dropPlaceholderIndex, m_dropPlaceholderIndex, QModelIndex(), modelTo);
-
-        if (ok) {
-            m_dropPlaceholderIndex = index;
-
-            endMoveRows();
-        }
-    }
-}
-
 AbstractModel *FavoritesModel::favoritesModel()
 {
     return this;
@@ -274,8 +173,6 @@ AbstractModel *FavoritesModel::favoritesModel()
 void FavoritesModel::refresh()
 {
     beginResetModel();
-
-    setDropPlaceholderIndex(-1);
 
     int oldCount = m_entryList.count();
 
@@ -290,10 +187,6 @@ void FavoritesModel::refresh()
         if (entry && entry->isValid()) {
             m_entryList << entry;
             newFavorites << entry->id();
-
-            if (m_maxFavorites != -1 && newFavorites.count() == m_maxFavorites) {
-                break;
-            }
         } else if (entry) {
             delete entry;
         }

@@ -37,7 +37,7 @@ function fillActionMenu(actionMenu, actionList, favoriteModel, favoriteId) {
 }
 
 function createFavoriteAction(favoriteModel, favoriteId) {
-    if (favoriteModel === null || !favoriteModel.enabled || favoriteId == null) {
+    if (favoriteModel === null || favoriteId == null) {
         return null;
     }
 
@@ -47,12 +47,10 @@ function createFavoriteAction(favoriteModel, favoriteId) {
         action.text = i18n("Remove from Favorites");
         action.icon = "list-remove";
         action.actionId = "_kicker_favorite_remove";
-    } else if (favoriteModel.maxFavorites == -1 || favoriteModel.count < favoriteModel.maxFavorites) {
+    } else {
         action.text = i18n("Add to Favorites");
         action.icon = "bookmark-new";
         action.actionId = "_kicker_favorite_add";
-    } else {
-        return null;
     }
 
     action.actionArgument = { favoriteModel: favoriteModel, favoriteId: favoriteId };

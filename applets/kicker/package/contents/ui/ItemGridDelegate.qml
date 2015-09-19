@@ -37,12 +37,10 @@ MouseArea {
     property bool showLabel: true
 
     property int itemIndex: model.index
-    property string favoriteId: model.favoriteId
     property url url: model.url != undefined ? model.url : ""
     property bool pressed: false
     property bool hasActionList: ((model.favoriteId != null)
         || (("hasActionList" in model) && (model.hasActionList == true)))
-    property Item view: GridView.view
     property Item menu: actionMenu
 
     Accessible.role: Accessible.MenuItem
