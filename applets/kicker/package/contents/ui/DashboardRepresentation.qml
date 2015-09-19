@@ -90,18 +90,11 @@ Kicker.FullScreenWindow {
 
             onDragSourceChanged: {
                 if (!dragSource) {
-                    // FIXME TODO HACK: Reset favorites grids post-DND to work around
+                    // FIXME TODO HACK: Reset all views post-DND to work around
                     // mouse grab bug despite QQuickWindow::mouseGrabberItem==0x0.
                     // Needs a more involved hunt through Qt Quick sources later since
                     // it's not happening with near-identical code in the menu repr.
-                    var index = globalFavoritesGrid.currentIndex;
-                    globalFavoritesGrid.model = null;
-                    globalFavoritesGrid.model = globalFavorites;
-                    globalFavoritesGrid.currentIndex = index;
-                    index = systemFavoritesGrid.currentIndex;
-                    systemFavoritesGrid.model = null;
-                    systemFavoritesGrid.model = systemFavorites;
-                    systemFavoritesGrid.currentIndex = index;
+                    rootModel.refresh();
                 }
             }
         }
@@ -345,7 +338,7 @@ Kicker.FullScreenWindow {
 
                     model: globalFavorites
 
-                    dragEnabled: true
+                    dropEnabled: true
 
                     onCurrentIndexChanged: {
                         preloadAllAppsTimer.defer();
@@ -383,7 +376,7 @@ Kicker.FullScreenWindow {
 
                     model: systemFavorites
 
-                    dragEnabled: true
+                    dropEnabled: true
 
                     onCurrentIndexChanged: {
                         preloadAllAppsTimer.defer();
