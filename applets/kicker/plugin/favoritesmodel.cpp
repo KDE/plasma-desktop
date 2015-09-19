@@ -28,6 +28,7 @@
 
 FavoritesModel::FavoritesModel(QObject *parent) : AbstractModel(parent)
 , m_enabled(true)
+, m_maxFavorites(-1)
 {
 }
 
@@ -109,6 +110,25 @@ void FavoritesModel::setFavorites(const QStringList& favorites)
     }
 }
 
+int FavoritesModel::maxFavorites() const
+{
+    return m_maxFavorites;
+}
+
+void FavoritesModel::setMaxFavorites(int max)
+{
+    if (m_maxFavorites != max)
+    {
+        m_maxFavorites = max;
+
+        if (m_maxFavorites != -1 && m_favorites.count() > m_maxFavorites) {
+            refresh();
+        }
+
+        emit maxFavoritesChanged();
+    }
+}
+
 bool FavoritesModel::isFavorite(const QString &id) const
 {
     return m_favorites.contains(id);
@@ -117,6 +137,10 @@ bool FavoritesModel::isFavorite(const QString &id) const
 void FavoritesModel::addFavorite(const QString &id)
 {
     if (!m_enabled || id.isEmpty()) {
+        return;
+    }
+
+    if (m_maxFavorites != -1 && m_favorites.count() == m_maxFavorites) {
         return;
     }
 
@@ -206,6 +230,10 @@ void FavoritesModel::refresh()
         if (entry && entry->isValid()) {
             m_entryList << entry;
             newFavorites << entry->id();
+
+            if (m_maxFavorites != -1 && newFavorites.count() == m_maxFavorites) {
+                break;
+            }
         } else if (entry) {
             delete entry;
         }

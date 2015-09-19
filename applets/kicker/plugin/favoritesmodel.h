@@ -32,6 +32,7 @@ class FavoritesModel : public AbstractModel
 
     Q_PROPERTY(bool enabled READ enabled WRITE setEnabled NOTIFY enabledChanged)
     Q_PROPERTY(QStringList favorites READ favorites WRITE setFavorites NOTIFY favoritesChanged)
+    Q_PROPERTY(int maxFavorites READ maxFavorites WRITE setMaxFavorites NOTIFY maxFavoritesChanged)
 
     public:
         explicit FavoritesModel(QObject *parent = 0);
@@ -51,6 +52,9 @@ class FavoritesModel : public AbstractModel
         QStringList favorites() const;
         void setFavorites(const QStringList &favorites);
 
+        int maxFavorites() const;
+        void setMaxFavorites(int max);
+
         Q_INVOKABLE bool isFavorite(const QString &id) const;
         Q_INVOKABLE void addFavorite(const QString &id);
         Q_INVOKABLE void removeFavorite(const QString &id);
@@ -65,6 +69,7 @@ class FavoritesModel : public AbstractModel
     Q_SIGNALS:
         void enabledChanged() const;
         void favoritesChanged() const;
+        void maxFavoritesChanged() const;
 
     private:
         AbstractEntry *favoriteFromId(const QString &id);
@@ -73,6 +78,7 @@ class FavoritesModel : public AbstractModel
 
         QList<AbstractEntry *> m_entryList;
         QStringList m_favorites;
+        int m_maxFavorites;
 };
 
 #endif
