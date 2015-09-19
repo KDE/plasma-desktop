@@ -1,6 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2013 by Aurélien Gâteau <agateau@kde.org>               *
- *   Copyright (C) 2014 by Eike Hein <hein@kde.org>                        *
+ *   Copyright (C) 2014-2015 by Eike Hein <hein@kde.org>                   *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -42,6 +42,10 @@ Item {
     }
 
     function open(x, y) {
+        if (!actionList) {
+            return;
+        }
+
         if (x && y) {
             menu.open(x, y);
         } else {
@@ -54,15 +58,11 @@ Item {
             menu.destroy();
         }
 
-        menu = contextMenuComponent.createObject(root);
-
-        if (!actionList || actionList.length == 0) {
-            var item = emptyMenuItemComponent.createObject(menu);
-
-            menu.addMenuItem(item);
-
+        if (!actionList) {
             return;
         }
+
+        menu = contextMenuComponent.createObject(root);
 
         actionList.forEach(function(actionItem) {
             var item = contextMenuItemComponent.createObject(menu, {
@@ -94,14 +94,6 @@ Item {
             onClicked: {
                 actionClicked(actionItem.actionId, actionItem.actionArgument);
             }
-        }
-    }
-
-    Component {
-        id: emptyMenuItemComponent
-        PlasmaComponents.MenuItem {
-            text: i18n("(Empty)")
-            enabled: false
         }
     }
 }
