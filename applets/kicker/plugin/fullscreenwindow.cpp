@@ -81,6 +81,10 @@ void FullScreenWindow::setVisualParent(QQuickItem *item)
         m_visualParentItem = item;
 
         if (m_visualParentItem) {
+            if (m_visualParentItem->window()) {
+                visualParentWindowChanged(m_visualParentItem->window());
+            }
+
             connect(m_mainItem, &QQuickItem::windowChanged, this, &FullScreenWindow::visualParentWindowChanged);
         }
 
@@ -133,6 +137,8 @@ void FullScreenWindow::visualParentWindowChanged(QQuickWindow *window)
     m_visualParentWindow = window;
 
     if (m_visualParentWindow) {
+        visualParentScreenChanged(m_visualParentWindow->screen());
+
         connect(m_visualParentWindow, &QQuickWindow::screenChanged, this, &FullScreenWindow::visualParentScreenChanged);
     }
 }
@@ -140,7 +146,7 @@ void FullScreenWindow::visualParentWindowChanged(QQuickWindow *window)
 void FullScreenWindow::visualParentScreenChanged(QScreen *screen)
 {
     if (screen) {
-        setScreen(parent()->screen());
+        setScreen(screen);
         resize(screen->size());
     }
 }
