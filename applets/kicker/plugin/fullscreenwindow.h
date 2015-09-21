@@ -30,6 +30,7 @@ class FullScreenWindow : public QQuickWindow
     Q_OBJECT
 
     Q_PROPERTY(QQuickItem* mainItem READ mainItem WRITE setMainItem NOTIFY mainItemChanged)
+    Q_PROPERTY(QQuickItem* visualParent READ visualParent WRITE setVisualParent NOTIFY visualParentChanged)
 
     Q_CLASSINFO("DefaultProperty", "mainItem")
 
@@ -38,16 +39,21 @@ class FullScreenWindow : public QQuickWindow
         ~FullScreenWindow();
 
         QQuickItem *mainItem() const;
-        void setMainItem(QQuickItem *mainItem);
+        void setMainItem(QQuickItem *item);
+
+        QQuickItem *visualParent() const;
+        void setVisualParent(QQuickItem *item);
 
         Q_INVOKABLE void toggle();
 
     Q_SIGNALS:
         void mainItemChanged() const;
+        void visualParentChanged() const;
 
     private Q_SLOTS:
         void updateTheme();
-        void parentScreenChanged(const QScreen *screen);
+        void visualParentWindowChanged(QQuickWindow *window);
+        void visualParentScreenChanged(QScreen *screen);
 
     protected:
         void showEvent(QShowEvent *event) Q_DECL_OVERRIDE;
@@ -55,6 +61,8 @@ class FullScreenWindow : public QQuickWindow
 
     private:
         QQuickItem *m_mainItem;
+        QPointer<QQuickItem> m_visualParentItem;
+        QPointer<QQuickWindow> m_visualParentWindow;
         Plasma::Theme m_theme;
 };
 

@@ -28,6 +28,12 @@ Item {
     property bool vertical: (plasmoid.formFactor == PlasmaCore.Types.Vertical)
     property QtObject dashWindow: null
 
+    onDashWindowChanged: {
+        if (dashWindow) {
+            dashWindow.visualParent = root;
+        }
+    }
+
     PlasmaCore.IconItem {
         id: buttonIcon
 

@@ -27,6 +27,8 @@
 
 FullScreenWindow::FullScreenWindow(QQuickItem *parent) : QQuickWindow(parent ? parent->window() : 0)
 , m_mainItem(0)
+, m_visualParentItem(0)
+, m_visualParentWindow(0)
 {
     setClearBeforeRendering(true);
     setColor(QColor(0, 0, 0, 188));
@@ -35,10 +37,6 @@ FullScreenWindow::FullScreenWindow(QQuickItem *parent) : QQuickWindow(parent ? p
     setIcon(QIcon::fromTheme("plasma"));
 
     connect(&m_theme, &Plasma::Theme::themeChanged, this, &FullScreenWindow::updateTheme);
-
-    if (parent && parent->window()) {
-        connect(parent->window(), &QWindow::screenChanged, this, &FullScreenWindow::parentScreenChanged);
-    }
 }
 
 FullScreenWindow::~FullScreenWindow()
@@ -50,21 +48,43 @@ QQuickItem *FullScreenWindow::mainItem() const
     return m_mainItem;
 }
 
-void FullScreenWindow::setMainItem(QQuickItem *mainItem)
+void FullScreenWindow::setMainItem(QQuickItem *item)
 {
-    if (m_mainItem != mainItem) {
+    if (m_mainItem != item) {
         if (m_mainItem) {
             m_mainItem->setVisible(false);
         }
 
-        m_mainItem = mainItem;
+        m_mainItem = item;
 
-        if (mainItem) {
+        if (m_mainItem) {
             m_mainItem->setVisible(isVisible());
             m_mainItem->setParentItem(contentItem());
         }
 
         emit mainItemChanged();
+    }
+}
+
+QQuickItem *FullScreenWindow::visualParent() const
+{
+    return m_visualParentItem;
+}
+
+void FullScreenWindow::setVisualParent(QQuickItem *item)
+{
+    if (m_visualParentItem != item) {
+        if (m_visualParentItem) {
+            disconnect(m_mainItem, &QQuickItem::windowChanged, this, &FullScreenWindow::visualParentWindowChanged);
+        }
+
+        m_visualParentItem = item;
+
+        if (m_visualParentItem) {
+            connect(m_mainItem, &QQuickItem::windowChanged, this, &FullScreenWindow::visualParentWindowChanged);
+        }
+
+        emit visualParentChanged();
     }
 }
 
@@ -104,7 +124,20 @@ void FullScreenWindow::updateTheme()
     KWindowEffects::enableBlurBehind(winId(), true);
 }
 
-void FullScreenWindow::parentScreenChanged(const QScreen *screen)
+void FullScreenWindow::visualParentWindowChanged(QQuickWindow *window)
+{
+    if (m_visualParentWindow) {
+        disconnect(m_visualParentWindow, &QQuickWindow::screenChanged, this, &FullScreenWindow::visualParentScreenChanged);
+    }
+
+    m_visualParentWindow = window;
+
+    if (m_visualParentWindow) {
+        connect(m_visualParentWindow, &QQuickWindow::screenChanged, this, &FullScreenWindow::visualParentScreenChanged);
+    }
+}
+
+void FullScreenWindow::visualParentScreenChanged(QScreen *screen)
 {
     if (screen) {
         setScreen(parent()->screen());
