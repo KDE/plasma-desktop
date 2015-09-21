@@ -42,7 +42,12 @@ class SystemModel : public AbstractModel
 
         AbstractModel* favoritesModel();
 
+    protected Q_SLOTS:
+        virtual void refresh();
+
     private:
+        void init();
+
         QList<SystemEntry *> m_entryList;
         AbstractModel *m_favoritesModel;
 };

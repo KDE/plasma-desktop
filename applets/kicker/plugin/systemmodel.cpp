@@ -22,10 +22,32 @@
 #include "favoritesmodel.h"
 #include "systementry.h"
 
+#include <QStandardPaths>
+
+#include <KDirWatch>
 #include <KLocalizedString>
 
 SystemModel::SystemModel(QObject *parent) : AbstractModel(parent)
 , m_favoritesModel(new FavoritesModel(this))
+{
+    init();
+
+    const QString configFile = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + "/ksmserverrc";
+
+    KDirWatch *watch = new KDirWatch(this);
+
+    watch->addFile(configFile);
+
+    connect(watch, &KDirWatch::dirty, this, &SystemModel::refresh);
+    connect(watch, &KDirWatch::created, this, &SystemModel::refresh);
+}
+
+SystemModel::~SystemModel()
+{
+    qDeleteAll(m_entryList);
+}
+
+void SystemModel::init()
 {
     QList<SystemEntry *> actions;
 
@@ -45,11 +67,6 @@ SystemModel::SystemModel(QObject *parent) : AbstractModel(parent)
             delete entry;
         }
     }
-}
-
-SystemModel::~SystemModel()
-{
-    qDeleteAll(m_entryList);
 }
 
 QString SystemModel::description() const
@@ -98,4 +115,20 @@ bool SystemModel::trigger(int row, const QString &actionId, const QVariant &argu
 AbstractModel* SystemModel::favoritesModel()
 {
     return m_favoritesModel;
+}
+
+void SystemModel::refresh()
+{
+    beginResetModel();
+
+    qDeleteAll(m_entryList);
+    m_entryList.clear();
+
+    init();
+
+    endResetModel();
+
+    emit countChanged();
+
+    m_favoritesModel->refresh();
 }

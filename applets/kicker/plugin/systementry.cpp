@@ -101,6 +101,12 @@ void SystemEntry::init()
         case SuspendToDisk:
             m_valid = Solid::PowerManagement::supportedSleepStates().contains(Solid::PowerManagement::HibernateState);
             break;
+        case Reboot:
+            m_valid = KWorkSpace::canShutDown(KWorkSpace::ShutdownConfirmDefault, KWorkSpace::ShutdownTypeReboot);
+            break;
+        case Shutdown:
+            m_valid = KWorkSpace::canShutDown(KWorkSpace::ShutdownConfirmDefault, KWorkSpace::ShutdownTypeHalt);
+            break;
         default:
             m_valid = true;
     }

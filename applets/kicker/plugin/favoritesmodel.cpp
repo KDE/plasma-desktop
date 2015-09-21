@@ -319,15 +319,10 @@ AbstractEntry *FavoritesModel::favoriteFromId(const QString &id)
         return new AppEntry(this, id);
     } else if (s == QStringLiteral("ktp")) {
         return new ContactEntry(this, id);
+    } else if (url.isValid() && !url.scheme().isEmpty()) {
+        return new FileEntry(this, url);
     } else {
-        AbstractEntry *entry = new SystemEntry(this, id);
-
-        if (!entry->isValid()) {
-            delete entry;
-            return new FileEntry(this, url);
-        }
-
-        return entry;
+        return new SystemEntry(this, id);
     }
 
     return nullptr;
