@@ -222,7 +222,7 @@ MouseArea {
             topMargin: adjustMargin(false, parent.height, taskFrame.margins.top);
             bottom: parent.bottom
             bottomMargin: adjustMargin(false, parent.height, taskFrame.margins.bottom);
-            right: tasks.vertical && !label.visible ? parent.right : undefined
+            right: (tasks.vertical && !label.visible && !inPopup) ? parent.right : undefined
             rightMargin: tasks.vertical && !label.visible ? adjustMargin(true, parent.width, taskFrame.margins.right) : undefined
         }
 
@@ -303,7 +303,7 @@ MouseArea {
             bottomMargin: taskFrame.margins.bottom
         }
 
-        visible: (inPopup || !iconsOnly && !model.IsLauncher && (parent.width - LayoutManager.horizontalMargins()) >= (theme.mSize(theme.defaultFont).width * 5))
+        visible: (inPopup || !iconsOnly && !model.IsLauncher && (parent.width - LayoutManager.horizontalMargins()) >= (theme.mSize(theme.defaultFont).width * 7))
 
         enabled: !model.Minimized
 
