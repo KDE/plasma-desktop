@@ -33,7 +33,7 @@ import org.kde.plasma.private.shell 2.0
 Item {
     id: main
 
-    width: Math.max(heading.paintedWidth, units.gridUnit * 16)
+    width: Math.max(heading.paintedWidth, units.iconSizes.enormous * 2 + units.smallSpacing * 4 + 20)
     height: 800//Screen.height
 
     property alias containment: widgetExplorer.containment
@@ -240,18 +240,20 @@ Item {
             leftMargin: units.smallSpacing
             bottomMargin: units.smallSpacing
         }
-        ListView {
+        GridView {
             id: list
 
             model: widgetExplorer.widgetsModel
             activeFocusOnTab: true
             currentIndex: -1
             keyNavigationWraps: true
+            cellWidth: units.iconSizes.enormous + units.smallSpacing * 2
+            cellHeight: cellWidth + units.gridUnit * 4 + units.smallSpacing * 2
 
             delegate: AppletDelegate {}
             highlight: PlasmaComponents.Highlight {}
             highlightMoveDuration: 0
-            highlightResizeDuration: 0
+            //highlightResizeDuration: 0
 
             //slide in to view from the left
             add: Transition {

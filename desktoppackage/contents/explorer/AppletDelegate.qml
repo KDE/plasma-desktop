@@ -31,8 +31,8 @@ Item {
 
     readonly property string pluginName: model.pluginName
 
-    width: list.width
-    height: iconContainer.height + units.largeSpacing
+    width: list.cellWidth
+    height: list.cellHeight
 
     DragArea {
         anchors.fill: parent
@@ -51,24 +51,41 @@ Item {
             main.preventWindowHide = false;
         }
 
-        RowLayout {
+        ColumnLayout {
+            id: mainLayout
+            spacing: units.smallSpacing
             anchors {
-                fill: parent
-                margins: units.smallSpacing
+                left: parent.left
+                right: parent.right
+                //bottom: parent.bottom
+                margins: units.smallSpacing * 2
                 rightMargin: units.smallSpacing * 2 // don't cram the text to the border too much
+                verticalCenter: parent.verticalCenter
             }
-            spacing: units.largeSpacing
 
             Item {
                 id: iconContainer
-                width: units.iconSizes.huge
+                width: units.iconSizes.enormous
                 height: width
+                anchors.horizontalCenter: parent.horizontalCenter
 
-                QIconItem {
+                Item {
                     id: iconWidget
                     anchors.fill: parent
-                    icon: model.decoration
+                    QIconItem {
+                        anchors.fill: parent
+                        icon: model.decoration
+                        visible: model.screenshot == ""
+                    }
+                    Image {
+                        width: units.iconSizes.enormous
+                        height: width
+                        anchors.fill: parent
+                        fillMode: Image.PreserveAspectFit
+                        source: model.screenshot
+                    }
                 }
+
 
                 Item {
                     id: badgeMask
@@ -98,7 +115,6 @@ Item {
                         anchors.fill: parent
                         horizontalAlignment: Text.AlignHCenter
                         verticalAlignment: Text.AlignVCenter
-                        color: theme.backgroundColor
                         text: running
                     }
                 }
@@ -130,31 +146,27 @@ Item {
                     "
                 }
             }
-
-            ColumnLayout {
+            PlasmaExtras.Heading {
+                id: heading
                 Layout.fillWidth: true
-                spacing: units.smallSpacing
-
-                PlasmaExtras.Heading {
-                    id: heading
-                    Layout.fillWidth: true
-                    level: 4
-                    text: model.name
-                    elide: Text.ElideRight
-                    wrapMode: Text.WordWrap
-                    maximumLineCount: 2
-                    lineHeight: 0.95
-                }
-                PlasmaComponents.Label {
-                    Layout.fillWidth: true
-                    // otherwise causes binding loop due to the way the Plasma sets the height
-                    height: implicitHeight
-                    text: model.description
-                    font.pointSize: theme.smallestFont.pointSize
-                    wrapMode: Text.WordWrap
-                    elide: Text.ElideRight
-                    maximumLineCount: heading.lineCount === 1 ? 3 : 2
-                }
+                level: 4
+                text: model.name
+                elide: Text.ElideRight
+                wrapMode: Text.WordWrap
+                maximumLineCount: 2
+                lineHeight: 0.95
+                horizontalAlignment: Text.AlignHCenter
+            }
+            PlasmaComponents.Label {
+                Layout.fillWidth: true
+                // otherwise causes binding loop due to the way the Plasma sets the height
+                height: implicitHeight
+                text: model.description
+                font.pointSize: theme.smallestFont.pointSize
+                wrapMode: Text.WordWrap
+                elide: Text.ElideRight
+                maximumLineCount: heading.lineCount === 1 ? 3 : 2
+                horizontalAlignment: Text.AlignHCenter
             }
         }
 
@@ -163,8 +175,8 @@ Item {
             anchors.fill: parent
             hoverEnabled: true
             onDoubleClicked: widgetExplorer.addApplet(pluginName)
-            onEntered: delegate.ListView.view.currentIndex = index
-            onExited: delegate.ListView.view.currentIndex = -1
+            onEntered: list.currentIndex = index
+            onExited: list.currentIndex = -1
         }
     }
 }
