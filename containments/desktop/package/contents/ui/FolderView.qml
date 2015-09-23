@@ -592,6 +592,7 @@ Item {
 
                             if (gridView.layoutDirection == Qt.RightToLeft) {
                                 itemX -= (rows ? gridView.contentX : gridView.originX);
+                                itemX += cWidth;
                                 itemX = (rows ? gridView.width : gridView.contentItem.width) - itemX;
                             }
 
