@@ -42,6 +42,12 @@ public Q_SLOTS:
     void onDirectoryListChanged();
 private:
     bool m_previouslyEnabled;
+    /**
+     * @brief Check if all mount points are in the excluded from indexing list.
+     *
+     * @return True if all mount points are excluded. False otherwise.
+     */
+    bool allMountPointsExcluded();
 };
 }
 

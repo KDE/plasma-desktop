@@ -34,6 +34,7 @@
 #include <QDBusConnection>
 #include <QDBusMessage>
 #include <QDBusPendingCall>
+#include <QStorageInfo>
 
 #include <Baloo/IndexerConfig>
 
@@ -105,7 +106,7 @@ void ServerConfigModule::save()
     QStringList includeFolders = m_excludeFolders_FSW->includeFolders();
     QStringList excludeFolders = m_excludeFolders_FSW->excludeFolders();
 
-    bool mountPointsEx = m_excludeFolders_FSW->allMountPointsExcluded();
+    bool mountPointsEx = allMountPointsExcluded();
 
     bool enabled = m_enableCheckbox->isChecked();
     if (mountPointsEx)
@@ -158,8 +159,23 @@ void ServerConfigModule::defaults()
 
 void ServerConfigModule::onDirectoryListChanged()
 {
-    const bool disabled = m_excludeFolders_FSW->allMountPointsExcluded();
-    m_enableCheckbox->setChecked(!disabled);
+    m_enableCheckbox->setChecked(!allMountPointsExcluded());
+}
+
+bool ServerConfigModule::allMountPointsExcluded()
+{
+    QStringList mountPoints;
+    Q_FOREACH (const QStorageInfo &si, QStorageInfo::mountedVolumes()) {
+        mountPoints << si.rootPath();
+    }
+
+    const QStringList excluded = m_excludeFolders_FSW->excludeFolders();
+
+    if (excluded.toSet() == mountPoints.toSet()) {
+        return true;
+    }
+
+    return false;
 }
 
 #include "kcm.moc"

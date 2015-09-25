@@ -40,8 +40,6 @@ public:
         UrlRole = Qt::UserRole + 1
     };
 
-    bool allMountPointsExcluded() const;
-
 Q_SIGNALS:
     void changed();
 

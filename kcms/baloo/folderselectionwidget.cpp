@@ -329,11 +329,6 @@ bool FolderSelectionWidget::shouldShowMountPoint(const QString& mountPoint)
     return true;
 }
 
-bool FolderSelectionWidget::allMountPointsExcluded() const
-{
-    return excludeFolders().toSet() == m_mountPoints.toSet();
-}
-
 QString FolderSelectionWidget::iconName(QString path) const
 {
     // Ensure paths end with /
