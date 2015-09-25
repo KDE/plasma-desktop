@@ -246,13 +246,10 @@ void KCMKeyboardWidget::addLayout()
     updateLoopCount();
 }
 
-static
-inline int min(int x, int y) { return x < y ? x : y; }
-
 void KCMKeyboardWidget::updateLoopCount()
 {
-	int maxLoop = min(X11Helper::MAX_GROUP_COUNT, keyboardConfig->layouts.count() - 1);
-	uiWidget->layoutLoopCountSpinBox->setMaximum(maxLoop);
+	int maxLoop = qMin(X11Helper::MAX_GROUP_COUNT, keyboardConfig->layouts.count() - 1);
+	uiWidget->layoutLoopCountSpinBox->setMaximum(qMax(MIN_LOOPING_COUNT, maxLoop));
 
 	bool layoutsConfigured = uiWidget->layoutsGroupBox->isChecked();
 
@@ -274,12 +271,12 @@ void KCMKeyboardWidget::updateLoopCount()
 	if( uiWidget->layoutLoopingCheckBox->isChecked() ) {
 		if( uiWidget->layoutLoopCountSpinBox->text().isEmpty() ) {
 			uiWidget->layoutLoopCountSpinBox->setValue(maxLoop);
-//			keyboardConfig->layoutLoopCount = maxLoop;
+			keyboardConfig->layoutLoopCount = maxLoop;
 		}
 	}
 	else {
 		uiWidget->layoutLoopCountSpinBox->clear();
-//		keyboardConfig->layoutLoopCount = KeyboardConfig::NO_LOOPING;
+		keyboardConfig->layoutLoopCount = KeyboardConfig::NO_LOOPING;
 	}
 }
 
@@ -673,11 +670,16 @@ void KCMKeyboardWidget::updateLayoutsUI() {
 	uiWidget->layoutLoopingCheckBox->setChecked(loopingOn);
 	uiWidget->layoutLoopingGroupBox->setEnabled(loopingOn);
 	if( loopingOn ) {
+		// Set maximum to 99 to make sure following setValue succeeds
+		// Correct maximum value will be set in updateLoopCount()
+		uiWidget->layoutLoopCountSpinBox->setMaximum(99);
 		uiWidget->layoutLoopCountSpinBox->setValue(keyboardConfig->layoutLoopCount);
 	}
 	else {
 		uiWidget->layoutLoopCountSpinBox->clear();
 	}
+
+	updateLoopCount();
 }
 
 void KCMKeyboardWidget::updateHardwareUI()
