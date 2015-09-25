@@ -130,7 +130,6 @@ void LayoutMemory::layoutMapChanged()
 
 	//TODO: need more thinking here on how to support external map resetting
 	if( keyboardConfig.configureLayouts
-			&& keyboardConfig.isSpareLayoutsEnabled()
 			&& isExtraSubset(keyboardConfig.layouts, newLayoutList) ) {
 		qCDebug(KCM_KEYBOARD, ) << "Layout map change for extra layout";
 		layoutChanged();	// to remember new map for active "window"
@@ -164,8 +163,7 @@ void LayoutMemory::setCurrentLayoutFromMap()
 
 		if( ! X11Helper::isDefaultLayout() ) {
 //			qCDebug(KCM_KEYBOARD, ) << "setting default layout for container key" << layoutMapKey;
-			if( keyboardConfig.configureLayouts && keyboardConfig.isSpareLayoutsEnabled()
-					&& X11Helper::getLayoutsList() != keyboardConfig.getDefaultLayouts() ) {
+			if( keyboardConfig.configureLayouts && X11Helper::getLayoutsList() != keyboardConfig.getDefaultLayouts() ) {
 				XkbHelper::initializeKeyboardLayouts(keyboardConfig.getDefaultLayouts());
 			}
 			X11Helper::setDefaultLayout();
@@ -178,7 +176,7 @@ void LayoutMemory::setCurrentLayoutFromMap()
 
 		LayoutSet currentLayouts = X11Helper::getCurrentLayouts();
 		if( layoutFromMap.layouts != currentLayouts.layouts ) {
-			if( keyboardConfig.configureLayouts && keyboardConfig.isSpareLayoutsEnabled() ) {
+			if( keyboardConfig.configureLayouts ) {
 				XkbHelper::initializeKeyboardLayouts(layoutFromMap.layouts);
 			}
 			X11Helper::setLayout( layoutFromMap.currentLayout );
