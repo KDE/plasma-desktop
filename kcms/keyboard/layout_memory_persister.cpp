@@ -45,6 +45,14 @@ static const char LIST_SEPARATOR_LM[] = ",";
 
 static const char REL_SESSION_FILE_PATH[] = "/keyboard/session/layout_memory.xml";
 
+static bool isDefaultLayoutConfig(const LayoutSet &layout, const QList<LayoutUnit> &defaultLayouts)
+{
+    if (defaultLayouts.isEmpty() || layout.layouts != defaultLayouts || layout.currentLayout != defaultLayouts.first()) {
+        return false;
+    }
+    return true;
+}
+
 QString LayoutMemoryPersister::getLayoutMapAsString()
 {
 	if( ! canPersist() )
@@ -66,6 +74,10 @@ QString LayoutMemoryPersister::getLayoutMapAsString()
 	}
 	else {
 		foreach(const QString& key , layoutMemory.layoutMap.keys()) {
+			if (isDefaultLayoutConfig(layoutMemory.layoutMap[key], layoutMemory.keyboardConfig.getDefaultLayouts())) {
+				continue;
+			}
+
 			QDomElement item = doc.createElement(ITEM_NODE);
 			item.setAttribute(OWNER_KEY_ATTRIBUTE, key);
 			item.setAttribute(CURRENT_LAYOUT_ATTRIBUTE, layoutMemory.layoutMap[key].currentLayout.toString());
