@@ -21,7 +21,6 @@
 #define KEYBOARD_DAEMON_H_
 
 #include <kdedmodule.h>
-#include <kdemacros.h>
 #include <QtCore/QStringList>
 
 #include "layout_memory.h"
