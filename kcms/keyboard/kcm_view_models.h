@@ -76,6 +76,9 @@ public:
 	QWidget *createEditor(QWidget *parent, const QStyleOptionViewItem &option,
 			const QModelIndex &index) const;
 
+	void updateEditorGeometry(QWidget *editor,
+			const QStyleOptionViewItem &option, const QModelIndex &index) const;
+
 //    void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const;
 
 private:
@@ -151,9 +154,9 @@ public:
             return 0;
 
         if( !index.parent().isValid() )
-            return Qt::ItemIsEnabled;
+            return Qt::ItemIsEnabled | Qt::ItemIsSelectable;
 
-        return Qt::ItemIsEnabled | Qt::ItemIsUserCheckable;
+        return Qt::ItemIsEnabled | Qt::ItemIsUserCheckable | Qt::ItemIsSelectable;
     }
 
     bool setData ( const QModelIndex & index, const QVariant & value, int role = Qt::EditRole );

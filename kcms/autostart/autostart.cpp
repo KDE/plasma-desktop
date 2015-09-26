@@ -290,7 +290,7 @@ void Autostart::slotAddProgram()
     // https://bugs.launchpad.net/ubuntu/+source/kde-workspace/+bug/923360
     QString desktopPath;
     QUrl desktopTemplate;
-    if ( service->desktopEntryName().isEmpty() ) {
+    if ( service->desktopEntryName().isEmpty() || service->entryPath().isEmpty()) {
         // Build custom desktop file (e.g. when the user entered an executable
         // name in the OpenWithDialog).
         desktopPath = m_desktopPath + service->name() + ".desktop";

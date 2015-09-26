@@ -275,11 +275,11 @@
           </widget>
          </item>
          <item row="2" column="1" colspan="2">
-          <widget class="KKeySequenceWidget" name="kdeKeySequence" native="true">
+          <widget class="KKeySequenceWidget" name="kdeKeySequence">
            <property name="whatsThis">
             <string>This is a shortcut for switching layouts which is handled by KDE. It does not support modifier-only shortcuts and also may not work in some situations (e.g. if popup is active or from screensaver).</string>
            </property>
-           <property name="multiKeyShortcutsAllowed" stdset="0">
+           <property name="multiKeyShortcutsAllowed">
             <bool>false</bool>
            </property>
           </widget>
@@ -460,9 +460,6 @@
      <widget class="QTreeView" name="xkbOptionsTreeView">
       <property name="enabled">
        <bool>false</bool>
-      </property>
-      <property name="selectionMode">
-       <enum>QAbstractItemView::NoSelection</enum>
       </property>
       <property name="headerHidden">
        <bool>true</bool>
