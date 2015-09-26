@@ -56,7 +56,7 @@ target_link_libraries(kded_keyboard
     KF5::Plasma
     KF5::XmlGui
     KF5::GuiAddons
-    KF5::KDELibs4Support
+    KF5::IconThemes
     XCB::XCB
     XCB::XKB
     ${X11_LIBRARIES}
@@ -138,9 +138,10 @@ target_link_libraries(kcm_keyboard
     KF5::WindowSystem
     KF5::Plasma
     KF5::XmlGui
+    KF5::GuiAddons
+    KF5::IconThemes
     XCB::XCB
     XCB::XKB
-    KF5::KDELibs4Support
     ${X11_Xkbfile_LIB}
     ${X11_LIBRARIES}
     ${text_paint_LIB}

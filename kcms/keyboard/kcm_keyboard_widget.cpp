@@ -19,10 +19,8 @@
 #include "kcm_keyboard_widget.h"
 
 #include <kactioncollection.h>
-#include <kaction.h>
 #include <kaboutdata.h>
 #include <KLocalizedString>
-#include <kglobalsettings.h>
 #include <KGlobalAccel>
 
 #include <QMessageBox>
@@ -125,9 +123,6 @@ void KCMKeyboardWidget::save()
 	actionCollection = new KeyboardLayoutActionCollection(this, true);
 	actionCollection->setToggleShortcut(uiWidget->kdeKeySequence->keySequence());
 	actionCollection->setLayoutShortcuts(keyboardConfig->layouts, rules);
-
-	//TODO: skip if no change in shortcuts?
-    KGlobalSettings::emitChange(KGlobalSettings::SettingsChanged, KGlobalSettings::SETTINGS_SHORTCUTS);
 }
 
 void KCMKeyboardWidget::updateUI()
@@ -645,7 +640,7 @@ void KCMKeyboardWidget::updateShortcutsUI()
 
 	delete actionCollection;
 	actionCollection = new KeyboardLayoutActionCollection(this, true);
-	QAction* toggleAction = actionCollection->getToggeAction();
+	QAction* toggleAction = actionCollection->getToggleAction();
 	const auto shortcuts = KGlobalAccel::self()->shortcut(toggleAction);
 	uiWidget->kdeKeySequence->setKeySequence(shortcuts.isEmpty() ? QKeySequence() : shortcuts.first());
 	actionCollection->loadLayoutShortcuts(keyboardConfig->layouts, rules);

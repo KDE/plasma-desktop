@@ -58,7 +58,6 @@ class Q_DECL_EXPORT KeyboardDaemon : public KDEDModule
 
 private Q_SLOTS:
 	void switchToNextLayout();
-	void globalSettingsChanged(int category);
     void configureKeyboard();
     void configureMouse();
     void layoutChanged();

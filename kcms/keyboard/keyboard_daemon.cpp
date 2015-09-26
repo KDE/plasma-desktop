@@ -18,14 +18,12 @@
 
 #include "keyboard_daemon.h"
 
+#include <QAction>
 #include <QX11Info>
 #include <QtDBus/QtDBus>
 #include <QProcess>
 
 #include <kpluginfactory.h>
-#include <kaction.h>
-#include <kactioncollection.h>
-#include <kglobalsettings.h>
 
 #include "x11_helper.h"
 #include "xinput_helper.h"
@@ -132,12 +130,10 @@ void KeyboardDaemon::registerShortcut()
 	if( actionCollection == NULL ) {
 		actionCollection = new KeyboardLayoutActionCollection(this, false);
 
-		QAction* toggleLayoutAction = actionCollection->getToggeAction();
+		QAction* toggleLayoutAction = actionCollection->getToggleAction();
 		connect(toggleLayoutAction, SIGNAL(triggered()), this, SLOT(switchToNextLayout()));
 		actionCollection->loadLayoutShortcuts(keyboardConfig.layouts, rules);
 		connect(actionCollection, SIGNAL(actionTriggered(QAction*)), this, SLOT(setLayout(QAction*)));
-
-		connect(KGlobalSettings::self(), SIGNAL(settingsChanged(int)), this, SLOT(globalSettingsChanged(int)));
     }
 }
 
@@ -145,10 +141,8 @@ void KeyboardDaemon::unregisterShortcut()
 {
 	// register KDE keyboard shortcut for switching layouts
     if( actionCollection != NULL ) {
-        disconnect(KGlobalSettings::self(), SIGNAL(settingsChanged(int)), this, SLOT(globalSettingsChanged(int)));
-
 		disconnect(actionCollection, SIGNAL(actionTriggered(QAction*)), this, SLOT(setLayout(QAction*)));
-        disconnect(actionCollection->getToggeAction(), SIGNAL(triggered()), this, SLOT(switchToNextLayout()));
+        disconnect(actionCollection->getToggleAction(), SIGNAL(triggered()), this, SLOT(switchToNextLayout()));
 
         delete actionCollection;
         actionCollection = NULL;
@@ -175,15 +169,6 @@ void KeyboardDaemon::unregisterListeners()
 		disconnect(xEventNotifier, SIGNAL(newKeyboardDevice()), this, SLOT(configureKeyboard()));
 		disconnect(xEventNotifier, SIGNAL(layoutChanged()), this, SLOT(layoutChanged()));
 		disconnect(xEventNotifier, SIGNAL(layoutMapChanged()), this, SLOT(layoutMapChanged()));
-	}
-}
-
-void KeyboardDaemon::globalSettingsChanged(int category)
-{
-	if ( category == KGlobalSettings::SETTINGS_SHORTCUTS) {
-//TODO: optimize this? seems like we'll get configReload and globalShortcuts from kcm so we'll reconfigure twice
-		unregisterShortcut();
-		registerShortcut();
 	}
 }
 
@@ -232,7 +217,7 @@ void KeyboardDaemon::switchToNextLayout()
 
 bool KeyboardDaemon::setLayout(QAction* action)
 {
-	if( action == actionCollection->getToggeAction() )
+	if( action == actionCollection->getToggleAction() )
 		return false;
 
 	LayoutUnit layoutUnit(action->data().toString());

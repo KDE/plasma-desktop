@@ -18,13 +18,12 @@
 
 #include "bindings.h"
 
-#include <kactioncollection.h>
-#include <kaction.h>
 #include <klocalizedstring.h>
 #include <kglobalaccel.h>
 #include <kaboutdata.h>
 
-#include <QtCore/QList>
+#include <QList>
+#include <QAction>
 
 #include "x11_helper.h"
 #include "flags.h"
@@ -53,7 +52,7 @@ KeyboardLayoutActionCollection::~KeyboardLayoutActionCollection()
     clear();
 }
 
-QAction* KeyboardLayoutActionCollection::getToggeAction()
+QAction* KeyboardLayoutActionCollection::getToggleAction()
 {
 	return action(0);
 }
@@ -80,7 +79,7 @@ QAction* KeyboardLayoutActionCollection::createLayoutShortcutActon(const LayoutU
 
 void KeyboardLayoutActionCollection::setToggleShortcut(const QKeySequence& keySequence)
 {
-    KGlobalAccel::self()->setShortcut(getToggeAction(), QList<QKeySequence>() << keySequence, KGlobalAccel::NoAutoloading);
+    KGlobalAccel::self()->setShortcut(getToggleAction(), QList<QKeySequence>() << keySequence, KGlobalAccel::NoAutoloading);
 }
 
 //KAction* KeyboardLayoutActionCollection::setShortcut(LayoutUnit& layoutUnit, const QKeySequence& keySequence, const Rules* rules)

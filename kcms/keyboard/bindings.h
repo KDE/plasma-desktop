@@ -37,7 +37,7 @@ public:
 	KeyboardLayoutActionCollection(QObject* parent, bool configAction);
 	virtual ~KeyboardLayoutActionCollection();
 
-	QAction* getToggeAction();
+	QAction* getToggleAction();
 //	KAction* getAction(const LayoutUnit& layoutUnit);
 	QAction* createLayoutShortcutActon(const LayoutUnit& layoutUnit, const Rules* rules, bool autoload);
 //	KAction* setShortcut(LayoutUnit& layoutUnit, const QKeySequence& keySequence, const Rules* rules);
