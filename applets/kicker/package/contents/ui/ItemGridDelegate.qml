@@ -130,6 +130,16 @@ MouseArea {
         text: model.display
     }
 
+    PlasmaCore.ToolTipArea {
+        id: toolTip
+
+        property string text: model.display
+
+        anchors.fill: parent
+        active: root.visible && label.truncated
+        mainItem: toolTipDelegate
+    }
+
     Keys.onPressed: {
         if (event.key == Qt.Key_Menu && hasActionList) {
             event.accepted = true;
