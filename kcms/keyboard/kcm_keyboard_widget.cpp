@@ -304,7 +304,7 @@ void KCMKeyboardWidget::initializeLayoutsUI()
 	uiWidget->layoutsTableView->setColumnWidth(LayoutsTableModel::DISPLAY_NAME_COLUMN, 50);
 	uiWidget->layoutsTableView->setColumnWidth(LayoutsTableModel::SHORTCUT_COLUMN, 130);
 
-	connect(layoutsTableModel, SIGNAL(dataChanged(QModelIndex,QModelIndex)), this, SLOT(uiChanged()));
+	connect(layoutsTableModel, &LayoutsTableModel::dataChanged, this, [this]() { Q_EMIT changed(true); });
 
 	uiWidget->layoutLoopCountSpinBox->setMinimum(MIN_LOOPING_COUNT);
 

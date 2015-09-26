@@ -56,6 +56,8 @@ void LayoutsTableModel::refresh()
 {
 	beginResetModel();
 	endResetModel();
+
+	countryFlags->clearCache();
 }
 
 int LayoutsTableModel::rowCount(const QModelIndex &/*parent*/) const
@@ -234,7 +236,7 @@ bool LayoutsTableModel::setData(const QModelIndex &index, const QVariant &value,
 			|| (index.column() != DISPLAY_NAME_COLUMN && index.column() != VARIANT_COLUMN && index.column() != SHORTCUT_COLUMN) )
 		return false;
 
-	if (index.row() >= keyboardConfig->layouts.size())
+	if (index.row() >= keyboardConfig->layouts.size() || index.data(role) == value)
 		return false;
 
 	LayoutUnit& layoutUnit = keyboardConfig->layouts[index.row()];
@@ -280,8 +282,17 @@ QWidget *LabelEditDelegate::createEditor(QWidget *parent, const QStyleOptionView
 	QLineEdit* lineEdit = static_cast<QLineEdit*>(widget);
 	if( lineEdit != NULL ) {
 		lineEdit->setMaxLength(LayoutUnit::MAX_LABEL_LENGTH);
+		connect(lineEdit, &QLineEdit::textEdited, this, [this, lineEdit]() {
+			Q_EMIT const_cast<LabelEditDelegate*>(this)->commitData(lineEdit);
+		});
 	}
 	return widget;
+}
+
+void LabelEditDelegate::updateEditorGeometry(QWidget *editor,
+		const QStyleOptionViewItem &option, const QModelIndex &/* index */) const
+{
+	editor->setGeometry(option.rect);
 }
 
 //void LabelEditDelegate::paint( QPainter * painter, const QStyleOptionViewItem & option, const QModelIndex & index ) const
@@ -321,6 +332,9 @@ QWidget *VariantComboDelegate::createEditor(QWidget *parent, const QStyleOptionV
 	QComboBox *editor = new QComboBox(parent);
 	const LayoutUnit& layoutUnit = keyboardConfig->layouts[index.row()];
 	populateComboWithVariants(editor, layoutUnit.layout, rules);
+	connect(editor, &QComboBox::currentTextChanged, this, [this, editor]() {
+		Q_EMIT const_cast<VariantComboDelegate*>(this)->commitData(editor);
+	});
 	return editor;
 }
 
@@ -370,6 +384,9 @@ QWidget *KKeySequenceWidgetDelegate::createEditor(QWidget *parent, const QStyleO
 	editor->setKeySequence(layoutUnit.getShortcut());
 
 	editor->captureKeySequence();
+	connect(editor, &KKeySequenceWidget::keySequenceChanged, this, [this, editor]() {
+		Q_EMIT const_cast<KKeySequenceWidgetDelegate*>(this)->commitData(editor);
+	});
 
 	return editor;
 }
