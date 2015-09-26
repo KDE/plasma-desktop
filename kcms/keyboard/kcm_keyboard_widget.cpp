@@ -582,7 +582,7 @@ void KCMKeyboardWidget::configureXkbOptionsChanged()
 	if( uiWidget->configureKeyboardOptionsChk->isChecked() && keyboardConfig->xkbOptions.isEmpty() ) {
 		populateWithCurrentXkbOptions();
 	}
-	((LayoutsTableModel*)uiWidget->xkbOptionsTreeView->model())->refresh();
+	((XkbOptionsTreeModel*)uiWidget->xkbOptionsTreeView->model())->reset();
 	uiChanged();
 }
 

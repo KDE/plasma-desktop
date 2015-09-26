@@ -154,9 +154,9 @@ public:
             return 0;
 
         if( !index.parent().isValid() )
-            return Qt::ItemIsEnabled;
+            return Qt::ItemIsEnabled | Qt::ItemIsSelectable;
 
-        return Qt::ItemIsEnabled | Qt::ItemIsUserCheckable;
+        return Qt::ItemIsEnabled | Qt::ItemIsUserCheckable | Qt::ItemIsSelectable;
     }
 
     bool setData ( const QModelIndex & index, const QVariant & value, int role = Qt::EditRole );
