@@ -87,11 +87,12 @@ void init_keyboard_hardware()
 	}
 
 	if( keyRepeat == STATE_ON ) {
-		int delay_ = config.readEntry("RepeatDelay", 250);
-		double rate_ = config.readEntry("RepeatRate", 30.);
+		int delay_ = config.readEntry("RepeatDelay", 660);
+		double rate_ = config.readEntry("RepeatRate", 25.);
 		set_repeatrate(delay_, rate_);
 	}
 
+	set_repeat_mode(keyRepeat);
 
 	TriState numlockState = TriStateHelper::getTriState( config.readEntry( "NumLock", TriStateHelper::getInt(STATE_UNCHANGED) ) );
 	if( numlockState != STATE_UNCHANGED ) {
