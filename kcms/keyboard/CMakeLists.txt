@@ -1,5 +1,5 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"kcmkeyboard\")
- 
+
 set(CMAKE_REQUIRED_LIBRARIES -lXi)
 check_function_exists(_XiGetDevicePresenceNotifyEvent XiGetDevicePresenceNotifyEvent_EXISTS)
 
@@ -73,35 +73,6 @@ endif()
 
 install( TARGETS kded_keyboard DESTINATION ${PLUGIN_INSTALL_DIR}/kf5/kded )
 
-### widget lib ###
-
-set( keyboard_layout_widget_SRCS
-    layout_widget.cpp
-    keyboard_config.cpp
-    flags.cpp
-    x11_helper.cpp
-    xkb_helper.cpp
-)
-
-# MODULE?
-add_library(keyboard_layout_widget MODULE ${keyboard_layout_widget_SRCS})
-
-target_link_libraries(keyboard_layout_widget
-    Qt5::X11Extras
-    Qt5::Xml
-    KF5::I18n
-    KF5::Service
-    KF5::Plasma
-    XCB::XCB
-    XCB::XKB
-    KF5::KDELibs4Support
-    ${X11_LIBRARIES}
-    ${X11_Xkbfile_LIB}
-)
-
-install( TARGETS keyboard_layout_widget DESTINATION ${PLUGIN_INSTALL_DIR} )
-
-
 ### kcm keyboard ###
 include_directories("preview")
 
@@ -135,7 +106,7 @@ else(Boost_FOUND)
 endif(Boost_FOUND)
 
 
-set(kcm_keyboard_PART_SRCS 
+set(kcm_keyboard_PART_SRCS
   kcm_keyboard.cpp
   kcm_keyboard_widget.cpp
   kcm_view_models.cpp
