@@ -142,8 +142,8 @@ void KCMiscKeyboardWidget::load()
   }
 
 //  keyboardRepeat = (key ? AutoRepeatModeOn : AutoRepeatModeOff);
-  float delay = config.readEntry( "RepeatDelay", 660 );
-  float rate = config.readEntry( "RepeatRate", 25. );
+  int delay = config.readEntry("RepeatDelay", DEFAULT_REPEAT_DELAY);
+  double rate = config.readEntry("RepeatRate", DEFAULT_REPEAT_RATE);
   setRepeat(keyboardRepeat, delay, rate);
 
   //  setRepeat(kbd.global_auto_repeat, ui.delay->value(), ui.rate->value());
@@ -171,7 +171,7 @@ void KCMiscKeyboardWidget::save()
 
 void KCMiscKeyboardWidget::defaults()
 {
-    setRepeat(STATE_ON, 660, 25);
+    setRepeat(STATE_ON, DEFAULT_REPEAT_DELAY, DEFAULT_REPEAT_RATE);
     TriStateHelper::setTriState( _numlockButtonGroup, STATE_UNCHANGED );
     emit changed(true);
 }

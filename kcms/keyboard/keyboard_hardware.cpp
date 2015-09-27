@@ -45,11 +45,11 @@ void set_repeatrate(int delay, double rate)
 	XkbDescPtr xkb = XkbAllocKeyboard();
 	if (xkb) {
 		Display* dpy = QX11Info::display();
-		//int res = 
+		//int res =
 		XkbGetControls(dpy, XkbRepeatKeysMask, xkb);
 		xkb->ctrls->repeat_delay = delay;
 		xkb->ctrls->repeat_interval = (int)floor(1000/rate + 0.5);
-		//res = 
+		//res =
 		XkbSetControls(dpy, XkbRepeatKeysMask, xkb);
         XkbFreeKeyboard(xkb, 0, true);
 		return;
@@ -87,8 +87,8 @@ void init_keyboard_hardware()
 	}
 
 	if( keyRepeat == STATE_ON ) {
-		int delay_ = config.readEntry("RepeatDelay", 660);
-		double rate_ = config.readEntry("RepeatRate", 25.);
+		int delay_ = config.readEntry("RepeatDelay", DEFAULT_REPEAT_DELAY);
+		double rate_ = config.readEntry("RepeatRate", DEFAULT_REPEAT_RATE);
 		set_repeatrate(delay_, rate_);
 	}
 
