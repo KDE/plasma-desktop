@@ -55,6 +55,8 @@ QVariant FavoritesModel::data(const QModelIndex& index, int role) const
         return entry->icon();
     } else if (role == Kicker::FavoriteIdRole) {
         return entry->id();
+    } else if (role == Kicker::UrlRole) {
+        return entry->url();
     } else if (role == Kicker::HasActionListRole) {
         return entry->hasActions();
     } else if (role == Kicker::ActionListRole) {
