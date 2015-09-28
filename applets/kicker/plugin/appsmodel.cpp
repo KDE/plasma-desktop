@@ -113,6 +113,8 @@ QVariant AppsModel::data(const QModelIndex &index, int role) const
         return entry->icon();
     } else if (role == Kicker::FavoriteIdRole && entry->type() == AbstractEntry::RunnableType) {
         return entry->id();
+    } else if (role == Kicker::UrlRole && entry->type() == AbstractEntry::RunnableType) {
+        return entry->url();
     } else if (role == Kicker::IsParentRole) {
         return (entry->type() == AbstractEntry::GroupType);
     } else if (role == Kicker::IsSeparatorRole) {
