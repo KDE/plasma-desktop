@@ -147,6 +147,6 @@ void FullScreenWindow::visualParentScreenChanged(QScreen *screen)
 {
     if (screen) {
         setScreen(screen);
-        resize(screen->size());
+        setGeometry(screen->geometry());
     }
 }
