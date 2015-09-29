@@ -143,31 +143,7 @@ MouseConfig::MouseConfig(QWidget *parent, const QVariantList &args)
     generalTab->singleClick->setWhatsThis( wtstr );
 
 
-    connect(generalTab->cbAutoSelect, SIGNAL(clicked()), this, SLOT(changed()));
-
-    wtstr = i18n("If you check this option, pausing the mouse pointer"
-         " over an icon on the screen will automatically select that icon."
-         " This may be useful when single clicks activate icons, and you"
-         " want only to select the icon without activating it.");
-    generalTab->cbAutoSelect->setWhatsThis( wtstr );
-
-    wtstr = i18n("If you have checked the option to automatically select"
-         " icons, this slider allows you to select how long the mouse pointer"
-         " must be paused over the icon before it is selected.");
-    generalTab->slAutoSelect->setWhatsThis( wtstr );
-
-    connect(generalTab->slAutoSelect, SIGNAL(valueChanged(int)), this, SLOT(changed()));
-
-    connect(generalTab->cb_pointershape, SIGNAL(clicked()), this, SLOT(changed()));
-
     connect(generalTab->singleClick, SIGNAL(clicked()), this, SLOT(changed()));
-    connect(generalTab->singleClick, SIGNAL(clicked()), this, SLOT(slotClick()));
-    connect(generalTab->singleClick, SIGNAL(clicked()), this, SLOT(slotSmartSliderEnabling()));
-
-    connect( generalTab->doubleClick, SIGNAL(clicked()), this, SLOT(slotClick()) );
-    connect( generalTab->cbAutoSelect, SIGNAL(clicked()), this, SLOT(slotClick()) );
-    connect(generalTab->cbAutoSelect, SIGNAL(clicked()), this, SLOT(slotSmartSliderEnabling()));
-
 
     // Only allow setting reversing scroll polarity if we have scroll buttons
     unsigned char map[20];
@@ -419,14 +395,6 @@ void MouseConfig::load()
 
   generalTab->singleClick->setChecked( settings->singleClick );
   generalTab->doubleClick->setChecked(!settings->singleClick);
-  generalTab->cb_pointershape->setChecked(settings->changeCursor);
-  generalTab->cbAutoSelect->setChecked( settings->autoSelectDelay >= 0 );
-  if ( settings->autoSelectDelay < 0 )
-     generalTab->slAutoSelect->setValue( 0 );
-  else
-     generalTab->slAutoSelect->setValue( settings->autoSelectDelay );
-  slotClick();
-
 
   KConfig ac("kaccessrc");
 
@@ -470,9 +438,6 @@ void MouseConfig::save()
   settings->dragStartDist = dragStartDist->value();
   settings->wheelScrollLines = wheelScrollLines->value();
   settings->singleClick = !generalTab->doubleClick->isChecked();
-  settings->autoSelectDelay = generalTab->cbAutoSelect->isChecked()? generalTab->slAutoSelect->value():-1;
-//  settings->changeCursor = generalTab->singleClick->isChecked();
-  settings->changeCursor = generalTab->cb_pointershape->isChecked();
   settings->reverseScrollPolarity = generalTab->cbScrollPolarity->isChecked();
 
   settings->apply();
@@ -514,11 +479,7 @@ void MouseConfig::defaults()
     dragStartDist->setValue(4);
     wheelScrollLines->setValue(3);
     generalTab->doubleClick->setChecked( !KDE_DEFAULT_SINGLECLICK );
-    generalTab->cbAutoSelect->setChecked( KDE_DEFAULT_AUTOSELECTDELAY != -1 );
-    generalTab->slAutoSelect->setValue( KDE_DEFAULT_AUTOSELECTDELAY == -1 ? 50 : KDE_DEFAULT_AUTOSELECTDELAY );
     generalTab->singleClick->setChecked( KDE_DEFAULT_SINGLECLICK );
-    generalTab->cb_pointershape->setChecked(KDE_DEFAULT_CHANGECURSOR);
-    slotClick();
 
   mouseKeys->setChecked(false);
   mk_delay->setValue(160);
@@ -530,15 +491,6 @@ void MouseConfig::defaults()
   checkAccess();
 
   changed();
-}
-
-void MouseConfig::slotClick()
-{
-  // Autoselect has a meaning only in single-click mode
-  generalTab->cbAutoSelect->setEnabled(!generalTab->doubleClick->isChecked() || generalTab->singleClick->isChecked());
-  // Delay has a meaning only for autoselect
-  bool bDelay = generalTab->cbAutoSelect->isChecked() && ! generalTab->doubleClick->isChecked();
-   generalTab->slAutoSelect->setEnabled( bDelay );
 }
 
 /** No descriptions */
@@ -630,8 +582,6 @@ void MouseSettings::load(KConfig *config, Display *dpy)
   wheelScrollLines = group.readEntry("WheelScrollLines", 3);
 
   singleClick = group.readEntry("SingleClick", KDE_DEFAULT_SINGLECLICK);
-  autoSelectDelay = group.readEntry("AutoSelectDelay", KDE_DEFAULT_AUTOSELECTDELAY);
-  changeCursor = group.readEntry("ChangeCursor", KDE_DEFAULT_CHANGECURSOR);
 }
 
 void MouseConfig::slotThreshChanged(int value)
@@ -796,8 +746,6 @@ void MouseSettings::save(KConfig *config)
   group.writeEntry("StartDragDist", dragStartDist, KConfig::Persistent);
   group.writeEntry("WheelScrollLines", wheelScrollLines, KConfig::Persistent);
   group.writeEntry("SingleClick", singleClick, KConfig::Persistent);
-  group.writeEntry("AutoSelectDelay", autoSelectDelay, KConfig::Persistent);
-  group.writeEntry("ChangeCursor", changeCursor,KConfig::Persistent);
 
   Kdelibs4SharedConfig::syncConfigGroup(&group, "kdeglobals");
   config->sync();
@@ -808,12 +756,6 @@ void MouseSettings::save(KConfig *config)
 void MouseConfig::slotScrollPolarityChanged()
 {
   settings->m_handedNeedsApply = true;
-}
-
-void MouseConfig::slotSmartSliderEnabling()
-{
-  bool enabled = generalTab->singleClick->isChecked() ? generalTab->cbAutoSelect->isChecked() : false;
-  generalTab->slAutoSelect->setEnabled(enabled);
 }
 
 #include "mouse.moc"

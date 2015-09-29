@@ -36,6 +36,7 @@
 #include <QPushButton>
 #include <QRadioButton>
 #include <QX11Info>
+#include <KDoubleNumInput>
 
 #include <kapplication.h>
 
@@ -79,8 +80,6 @@ public:
  int dragStartTime;
  int dragStartDist;
  bool singleClick;
- int autoSelectDelay;
- bool changeCursor;
  int wheelScrollLines;
  bool reverseScrollPolarity;
 
@@ -99,7 +98,6 @@ public:
 
 private Q_SLOTS:
 
-  void slotClick();
   /** No descriptions */
   void slotHandedChanged(int val);
   void slotScrollPolarityChanged();
@@ -107,7 +105,6 @@ private Q_SLOTS:
   void slotThreshChanged(int value);
   void slotDragStartDistChanged(int value);
   void slotWheelScrollLinesChanged(int value);
-  void slotSmartSliderEnabling();
 
 private:
 
