@@ -172,90 +172,97 @@ Item {
 
                 imagePath: "widgets/viewitem"
 
-                QIconItem {
-                    id: icon
+                PlasmaCore.ColorScope {
+                    anchors.fill: parent
 
-                    anchors {
-                        top: root.isPopup ? undefined : parent.top
-                        topMargin: units.largeSpacing
-                        left: root.isPopup ? parent.left : undefined
-                        leftMargin: units.smallSpacing
-                        horizontalCenter: root.isPopup ? undefined : parent.horizontalCenter
-                        verticalCenter: root.isPopup ? parent.verticalCenter : undefined
-                    }
+                    colorGroup: ((root.isContainment && main.GridView.view.isRootView) ? PlasmaCore.Theme.ComplementaryColorGroup
+                        : PlasmaCore.Theme.NormalColorGroup)
 
-                    width: main.GridView.view.iconSize
-                    height: main.GridView.view.iconSize
+                    QIconItem {
+                        id: icon
 
-                    opacity: root.isPopup ? (1.3 - selectionButton.opacity) : 1.0
-
-                    icon: model.decoration
-                }
-
-                Rectangle {
-                    id: textBackground
-
-                    visible: root.isContainment
-
-                    anchors {
-                        left: label.left
-                        leftMargin: -units.smallSpacing
-                        top: label.top
-                        topMargin: -units.smallSpacing
-                        right: label.right
-                        rightMargin: -units.smallSpacing
-                        bottom: label.bottom
-                        bottomMargin: -units.smallSpacing
-                    }
-
-                    color: (root.isContainment && main.GridView.view.isRootView) ? theme.textColor : "transparent"
-                    radius: units.smallSpacing
-                    opacity: 0.4
-                }
-
-                TextMetrics {
-                    id: labelMetrics
-
-                    font: label.font
-                    elide: Text.ElideNone
-                    text: label.text
-                }
-
-                PlasmaComponents.Label {
-                    id: label
-
-                    anchors {
-                        top: root.isPopup ? undefined : icon.bottom
-                        topMargin: 2 * units.smallSpacing
-                        left: root.isPopup ? icon.right : undefined
-                        leftMargin: units.smallSpacing * 2
-                        horizontalCenter: root.isPopup ? undefined : parent.horizontalCenter
-                        verticalCenter: root.isPopup ? parent.verticalCenter : undefined
-                    }
-
-                    width: {
-                        if (root.isPopup) {
-                            return parent.width - icon.width - (units.smallSpacing * 4);
+                        anchors {
+                            top: root.isPopup ? undefined : parent.top
+                            topMargin: units.largeSpacing
+                            left: root.isPopup ? parent.left : undefined
+                            leftMargin: units.smallSpacing
+                            horizontalCenter: root.isPopup ? undefined : parent.horizontalCenter
+                            verticalCenter: root.isPopup ? parent.verticalCenter : undefined
                         }
 
-                        return Math.min(labelMetrics.advanceWidth + units.smallSpacing, parent.width - units.smallSpacing * 8);
+                        width: main.GridView.view.iconSize
+                        height: main.GridView.view.iconSize
+
+                        opacity: root.isPopup ? (1.3 - selectionButton.opacity) : 1.0
+
+                        icon: model.decoration
                     }
 
-                    height: undefined // Unset PlasmaComponents.Label's default.
+                    Rectangle {
+                        id: textBackground
 
-                    textFormat: Text.PlainText
+                        visible: root.isContainment
 
-                    maximumLineCount: root.isPopup ? 1 : plasmoid.configuration.textLines
-                    wrapMode: Text.Wrap
-                    elide: Text.ElideRight
+                        anchors {
+                            left: label.left
+                            leftMargin: -units.smallSpacing
+                            top: label.top
+                            topMargin: -units.smallSpacing
+                            right: label.right
+                            rightMargin: -units.smallSpacing
+                            bottom: label.bottom
+                            bottomMargin: -units.smallSpacing
+                        }
 
-                    horizontalAlignment: root.isPopup ? Text.AlignHLeft : Text.AlignHCenter
+                        color: (root.isContainment && main.GridView.view.isRootView) ? PlasmaCore.ColorScope.backgroundColor : "transparent"
+                        radius: units.smallSpacing
+                        opacity: 0.4
+                    }
 
-                    color: (root.isContainment && main.GridView.view.isRootView) ? theme.backgroundColor : theme.textColor
+                    TextMetrics {
+                        id: labelMetrics
 
-                    text: model.blank ? "" : model.display
+                        font: label.font
+                        elide: Text.ElideNone
+                        text: label.text
+                    }
 
-                    Component.onCompleted: textFix.disableMouseHandling(label) // FIXME TODO: See https://codereview.qt-project.org/#/c/113758/
+                    PlasmaComponents.Label {
+                        id: label
+
+                        anchors {
+                            top: root.isPopup ? undefined : icon.bottom
+                            topMargin: 2 * units.smallSpacing
+                            left: root.isPopup ? icon.right : undefined
+                            leftMargin: units.smallSpacing * 2
+                            horizontalCenter: root.isPopup ? undefined : parent.horizontalCenter
+                            verticalCenter: root.isPopup ? parent.verticalCenter : undefined
+                        }
+
+                        width: {
+                            if (root.isPopup) {
+                                return parent.width - icon.width - (units.smallSpacing * 4);
+                            }
+
+                            return Math.min(labelMetrics.advanceWidth + units.smallSpacing, parent.width - units.smallSpacing * 8);
+                        }
+
+                        height: undefined // Unset PlasmaComponents.Label's default.
+
+                        textFormat: Text.PlainText
+
+                        maximumLineCount: root.isPopup ? 1 : plasmoid.configuration.textLines
+                        wrapMode: Text.Wrap
+                        elide: Text.ElideRight
+
+                        horizontalAlignment: root.isPopup ? Text.AlignHLeft : Text.AlignHCenter
+
+                        color: PlasmaCore.ColorScope.textColor
+
+                        text: model.blank ? "" : model.display
+
+                        Component.onCompleted: textFix.disableMouseHandling(label) // FIXME TODO: See https://codereview.qt-project.org/#/c/113758/
+                    }
                 }
 
                 Column {
