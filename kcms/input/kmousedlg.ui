@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>416</width>
-    <height>329</height>
+    <width>478</width>
+    <height>371</height>
    </rect>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -125,98 +125,6 @@
         </property>
        </widget>
       </item>
-      <item>
-       <layout class="QHBoxLayout">
-        <item>
-         <spacer>
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="sizeType">
-           <enum>QSizePolicy::Fixed</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>20</width>
-            <height>20</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item>
-         <layout class="QVBoxLayout">
-          <item>
-           <widget class="QCheckBox" name="cb_pointershape">
-            <property name="text">
-             <string>Cha&amp;nge pointer shape over icons</string>
-            </property>
-            <property name="checked">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QCheckBox" name="cbAutoSelect">
-            <property name="text">
-             <string>A&amp;utomatically select icons</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_2">
-            <item>
-             <spacer name="horizontalSpacer">
-              <property name="orientation">
-               <enum>Qt::Horizontal</enum>
-              </property>
-              <property name="sizeType">
-               <enum>QSizePolicy::Fixed</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>20</width>
-                <height>20</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
-            <item>
-             <widget class="KIntNumInput" name="slAutoSelect">
-              <property name="enabled">
-               <bool>false</bool>
-              </property>
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="label">
-               <string comment="label. delay (on milliseconds) to automatically select icons">Delay</string>
-              </property>
-              <property name="minimum">
-               <number>0</number>
-              </property>
-              <property name="maximum">
-               <number>2000</number>
-              </property>
-              <property name="singleStep">
-               <number>125</number>
-              </property>
-              <property name="suffix">
-               <string comment="milliseconds. time to automatically select the items"> ms</string>
-              </property>
-              <property name="sliderEnabled">
-               <bool>true</bool>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-         </layout>
-        </item>
-       </layout>
-      </item>
      </layout>
     </widget>
    </item>
@@ -238,58 +146,16 @@
    </item>
   </layout>
  </widget>
- <customwidgets>
-  <customwidget>
-   <class>KIntNumInput</class>
-   <extends>QWidget</extends>
-   <header>knuminput.h</header>
-  </customwidget>
- </customwidgets>
  <tabstops>
   <tabstop>rightHanded</tabstop>
   <tabstop>leftHanded</tabstop>
   <tabstop>cbScrollPolarity</tabstop>
   <tabstop>doubleClick</tabstop>
   <tabstop>singleClick</tabstop>
-  <tabstop>cb_pointershape</tabstop>
-  <tabstop>cbAutoSelect</tabstop>
  </tabstops>
  <includes>
   <include location="global">kdialog.h</include>
  </includes>
  <resources/>
- <connections>
-  <connection>
-   <sender>singleClick</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>cb_pointershape</receiver>
-   <slot>setEnabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>40</x>
-     <y>209</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>69</x>
-     <y>240</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>singleClick</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>cbAutoSelect</receiver>
-   <slot>setEnabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>40</x>
-     <y>209</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>69</x>
-     <y>264</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
 </ui>
