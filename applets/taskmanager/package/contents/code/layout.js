@@ -118,7 +118,7 @@ function preferredMaxWidth() {
             return tasks.height + horizontalMargins();
         }
     } else {
-        return Math.floor(preferredMinWidth() * 1.8);
+        return Math.floor(preferredMinWidth() * 1.6);
     }
 }
 
