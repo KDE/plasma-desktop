@@ -69,7 +69,10 @@ private:
 static QString translate_xml_item(const QString& itemText)
 {
     //messages are already extracted from the source XML files by xkb
-    return i18nd("xkeyboard-config", itemText.toUtf8());
+    //the characters '<' and '>' (but not '"') are HTML-escaped in the xkeyboard-config translation files, so we need to convert them before/after looking up the translation
+    //note that we cannot use QString::toHtmlEscaped() here because that would convert '"' as well
+    QString msgid(itemText);
+    return i18nd("xkeyboard-config", msgid.replace(QLatin1Literal("<"), QLatin1Literal("&lt;")).replace(QLatin1Literal(">"), QLatin1Literal("&gt;")).toUtf8()).replace(QLatin1Literal("&lt;"), QLatin1Literal("<")).replace(QLatin1Literal("&gt;"), QLatin1Literal(">"));
 }
 
 static QString translate_description(ConfigItem* item)
