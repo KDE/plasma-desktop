@@ -135,11 +135,10 @@ void LayoutMemory::layoutMapChanged()
 		layoutChanged();	// to remember new map for active "window"
 	}
 	else {
-//		if( newLayoutList != keyboardConfig.getDefaultLayouts() ) {
-			//		layoutList = newLayoutList;
+		if (newLayoutList != keyboardConfig.getDefaultLayouts()) {
 			qCDebug(KCM_KEYBOARD, ) << "Layout map change from external source: clearing layout memory";
 			layoutMap.clear();
-//		}
+		}
 	}
 }
 

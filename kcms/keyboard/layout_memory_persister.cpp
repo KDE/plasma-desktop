@@ -97,39 +97,25 @@ QString LayoutMemoryPersister::getLayoutMapAsString()
 	return doc.toString();
 }
 
-static bool isRestoreSession()
-{
-    KConfigGroup c(KSharedConfig::openConfig("ksmserverrc", KConfig::NoGlobals), "General");
-    qCDebug(KCM_KEYBOARD) << "loginMode:" << c.readEntry("loginMode");
-    QString loginMode = c.readEntry("loginMode");
-    return loginMode != "default" && loginMode != "restoreSavedSession";	// we don't know how to restore saved session - only previous one
-}
-
 bool LayoutMemoryPersister::save()
 {
-	if( isRestoreSession() ) {
-        QFileInfo fileInfo(QStandardPaths::writableLocation(QStandardPaths::DataLocation) + REL_SESSION_FILE_PATH);
+    QFileInfo fileInfo(QStandardPaths::writableLocation(QStandardPaths::DataLocation) + REL_SESSION_FILE_PATH);
 
-        QDir baseDir(fileInfo.absoluteDir());
-        if( ! baseDir.exists() ) {
-            if( ! QDir().mkpath(baseDir.absolutePath()) ) {
-                qWarning() << "Failed to create directory" << baseDir.absolutePath();
-            }
+    QDir baseDir(fileInfo.absoluteDir());
+    if( ! baseDir.exists() ) {
+        if( ! QDir().mkpath(baseDir.absolutePath()) ) {
+            qWarning() << "Failed to create directory" << baseDir.absolutePath();
         }
-
-        QFile file(fileInfo.absoluteFilePath());
-    	return saveToFile(file);
     }
-    return false;
+
+    QFile file(fileInfo.absoluteFilePath());
+    return saveToFile(file);
 }
 
 bool LayoutMemoryPersister::restore()
 {
-	if( isRestoreSession() ) {
-        QFile file(QStandardPaths::writableLocation(QStandardPaths::DataLocation) + REL_SESSION_FILE_PATH);
-    	return restoreFromFile(file);
-    }
-    return false;
+    QFile file(QStandardPaths::writableLocation(QStandardPaths::DataLocation) + REL_SESSION_FILE_PATH);
+    return restoreFromFile(file);
 }
 
 
