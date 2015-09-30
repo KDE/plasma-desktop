@@ -60,7 +60,7 @@ Item {
                 //bottom: parent.bottom
                 margins: units.smallSpacing * 2
                 rightMargin: units.smallSpacing * 2 // don't cram the text to the border too much
-                verticalCenter: parent.verticalCenter
+                top: parent.top
             }
 
             Item {
