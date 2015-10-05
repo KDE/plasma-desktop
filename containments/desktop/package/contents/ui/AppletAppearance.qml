@@ -109,7 +109,7 @@ Item {
 
                     dragMouseArea.dragging = true;
 
-                    eventGenerator.sendGrabEvent(appletItem, KQuickControlsAddons.EventGenerator.UngrabMouse);
+                    eventGenerator.sendGrabEventRecursive(appletItem, KQuickControlsAddons.EventGenerator.UngrabMouse);
                     eventGenerator.sendGrabEvent(dragMouseArea, KQuickControlsAddons.EventGenerator.GrabMouse);
                     eventGenerator.sendMouseEvent(dragMouseArea, KQuickControlsAddons.EventGenerator.MouseButtonPress, mouse.x, mouse.y, Qt.LeftButton, Qt.LeftButton, 0);
                 }
