@@ -51,7 +51,7 @@ void MenuEntryEditor::edit(const QString& entryPath, const QString& menuId)
         const QString &fileName = entryUrl.fileName();
 
         if (appsDir.exists(fileName)) {
-            KPropertiesDialog::showDialog(entryUrl);
+            KPropertiesDialog::showDialog(entryUrl, 0, false);
         } else {
             if (!appsDir.exists()) {
                 if (!QDir::root().mkpath(appsPath)) {
@@ -59,12 +59,10 @@ void MenuEntryEditor::edit(const QString& entryPath, const QString& menuId)
                 }
             }
 
-            QPointer<KPropertiesDialog> dialog = new KPropertiesDialog(entryUrl,
+            KPropertiesDialog *dialog = new KPropertiesDialog(entryUrl,
                 QUrl::fromLocalFile(appsPath), menuId);
-
-            dialog->exec();
-
-            delete dialog;
+            //KPropertiesDialog deletes itself
+            dialog->show();
         }
     }
 }
