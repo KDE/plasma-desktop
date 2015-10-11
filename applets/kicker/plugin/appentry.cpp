@@ -215,9 +215,7 @@ bool AppEntry::run(const QString& actionId, const QVariant &argument)
     } else if (actionId == "addToTaskManager" && ContainmentInterface::mayAddLauncher(m_appletInterface, ContainmentInterface::TaskManager, m_service->entryPath())) {
         ContainmentInterface::addLauncher(m_appletInterface, ContainmentInterface::TaskManager, m_service->entryPath());
     } else if (actionId == "editApplication" && m_menuEntryEditor->canEdit(m_service->entryPath())) {
-        QMetaObject::invokeMethod(m_menuEntryEditor, "edit", Qt::QueuedConnection,
-            Q_ARG(QString, m_service->entryPath()),
-            Q_ARG(QString, m_service->menuId()));
+        m_menuEntryEditor->edit(m_service->entryPath(), m_service->menuId());
 
         return true;
     } else if (actionId == "removeApplication") {
