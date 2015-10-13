@@ -288,8 +288,29 @@ void Backend::itemContextMenu(QQuickItem *item, QObject *configAction)
 
     m_contextMenu->adjustSize();
 
-    if (m_taskManagerItem && !m_taskManagerItem->property("vertical").toBool()) {
+    const bool isVertical = (m_taskManagerItem && m_taskManagerItem->property("vertical").toBool());
+
+    if (!isVertical) {
         m_contextMenu->setMinimumWidth(item->width());
+    }
+
+    QPoint pos = item->window()->mapToGlobal(item->mapToScene(QPointF(0, 0)).toPoint());
+    QScreen *screen = item->window()->screen();
+
+    if (screen) {
+        if (isVertical) {
+            int adjustedX = pos.x() + item->width();
+            if (adjustedX + m_contextMenu->width() > screen->geometry().width()) {
+                adjustedX = pos.x() - m_contextMenu->width();
+            }
+            pos.setX(adjustedX);
+        } else {
+            int adjustedY = pos.y() + item->height();
+            if (adjustedY + m_contextMenu->height() > screen->geometry().height()) {
+                adjustedY = pos.y() - m_contextMenu->height();
+            }
+            pos.setY(adjustedY);
+        }
     }
 
     // Close menu when the delegate is destroyed.
@@ -297,8 +318,14 @@ void Backend::itemContextMenu(QQuickItem *item, QObject *configAction)
 
     // Interrupt the call chain from the delegate in case it's destroyed while
     // we're in QMenu::exec();
-    // FIXME TODO: Just use a lambda on Qt 5.4+.
-    QMetaObject::invokeMethod(this, "actuallyOpenContextMenu", Qt::QueuedConnection);
+    QTimer::singleShot(0, this, [=] {
+        if (!m_contextMenu) {
+            return;
+        }
+
+        m_contextMenu->exec(pos);
+        m_contextMenu->deleteLater();
+    });
 }
 
 void Backend::addRecentDocumentActions(TaskManager::LauncherItem *launcher, TaskManager::BasicMenu* menu) const
@@ -419,16 +446,6 @@ void Backend::handleRecentDocumentAction() const
     }
 
     KRun::runService(*service, QList<QUrl>() << QUrl(resource), QApplication::activeWindow());
-}
-
-void Backend::actuallyOpenContextMenu()
-{
-    if (!m_contextMenu) {
-        return;
-    }
-
-    m_contextMenu->exec(QCursor::pos());
-    m_contextMenu->deleteLater();
 }
 
 void Backend::itemHovered(int id, bool hovered)

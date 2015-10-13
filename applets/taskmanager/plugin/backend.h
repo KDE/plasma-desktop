@@ -100,7 +100,6 @@ class Backend : public QObject
 
     private Q_SLOTS:
         void handleRecentDocumentAction() const;
-        void actuallyOpenContextMenu();
         void updateLaunchersCache();
         void toolTipWindowChanged(QQuickWindow *window);
 
