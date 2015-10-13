@@ -45,6 +45,7 @@ QDBusArgument &operator<<(QDBusArgument &arg, const ActivityInfo r)
 
     arg << r.id;
     arg << r.name;
+    arg << r.description;
     arg << r.icon;
     arg << r.state;
 
@@ -59,6 +60,7 @@ const QDBusArgument &operator>>(const QDBusArgument &arg, ActivityInfo &r)
 
     arg >> r.id;
     arg >> r.name;
+    arg >> r.description;
     arg >> r.icon;
     arg >> r.state;
 

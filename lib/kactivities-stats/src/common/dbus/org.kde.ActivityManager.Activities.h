@@ -28,15 +28,18 @@
 struct ActivityInfo {
     QString id;
     QString name;
+    QString description;
     QString icon;
     int state;
 
-    ActivityInfo(const QString & id = QString(),
-                 const QString & name = QString(),
-                 const QString & icon = QString(),
+    ActivityInfo(const QString &id = QString(),
+                 const QString &name = QString(),
+                 const QString &description = QString(),
+                 const QString &icon = QString(),
                  int state = 0)
         : id(id)
         , name(name)
+        , description(description)
         , icon(icon)
         , state(state)
     {
