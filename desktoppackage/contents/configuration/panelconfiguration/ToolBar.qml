@@ -59,7 +59,7 @@ Item {
         target: configDialog
         onVisibleChanged: {
             if (!configDialog.visible) {
-                contextMenuLoader.close()
+                settingsButton.checked = false
             }
         }
     }
@@ -104,11 +104,12 @@ Item {
             text: buttonsLayout.showText ? root.settingsButtonText : ""
             tooltip: buttonsLayout.showText ? "" : root.settingsButtonText
             Layout.fillWidth: true
-            onClicked: {
-                if (contextMenuLoader.opened) {
-                    contextMenuLoader.close()
-                } else {
+            checkable: true
+            onCheckedChanged: {
+                if (checked) {
                     contextMenuLoader.open()
+                } else {
+                    contextMenuLoader.close()
                 }
             }
         }
