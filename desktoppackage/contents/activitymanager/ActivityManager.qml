@@ -26,8 +26,7 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kquickcontrolsaddons 2.0
 
 import org.kde.activities 0.1 as Activities
-
-import "static.js" as S
+import org.kde.activities.settings 0.1
 
 FocusScope {
     id: root
@@ -50,44 +49,32 @@ FocusScope {
 
         property int spacing: 2 * units.smallSpacing
 
-        Connections {
-            target: parent
-            onVisibleChanged: {
-                S.closeAllDialogs();
-            }
-        }
-
         signal closeRequested()
 
         Keys.onPressed: {
-            if (S.isAnyDialogShown()) {
-                event.accepted = false;
-
-            } else {
-                if (event.key == Qt.Key_Escape) {
-                    if (heading.searchString.length > 0) {
-                        heading.searchString = "";
-                    } else {
-                        activityBrowser.closeRequested();
-                    }
-
-                } else if (event.key == Qt.Key_Up) {
-                    activityList.selectPrevious();
-
-                } else if (event.key == Qt.Key_Down) {
-                    activityList.selectNext();
-
-                } else if (event.key == Qt.Key_Return || event.key == Qt.Key_Enter) {
-                    activityList.openSelected();
-
-                } else if (event.key == Qt.Key_Tab) {
-                    // console.log("TAB KEY");
-
-                } else  {
-                    // console.log("OTHER KEY");
-                    // event.accepted = false;
-                    // heading.forceActiveFocus();
+            if (event.key == Qt.Key_Escape) {
+                if (heading.searchString.length > 0) {
+                    heading.searchString = "";
+                } else {
+                    activityBrowser.closeRequested();
                 }
+
+            } else if (event.key == Qt.Key_Up) {
+                activityList.selectPrevious();
+
+            } else if (event.key == Qt.Key_Down) {
+                activityList.selectNext();
+
+            } else if (event.key == Qt.Key_Return || event.key == Qt.Key_Enter) {
+                activityList.openSelected();
+
+            } else if (event.key == Qt.Key_Tab) {
+                // console.log("TAB KEY");
+
+            } else  {
+                // console.log("OTHER KEY");
+                // event.accepted = false;
+                // heading.forceActiveFocus();
             }
         }
 
@@ -129,6 +116,8 @@ FocusScope {
                 showSwitcherOnly: root.showSwitcherOnly
 
                 filterString: heading.searchString.toLowerCase()
+
+                itemsWidth: root.width - units.smallSpacing
             }
         }
 
@@ -153,13 +142,7 @@ FocusScope {
 
                 width: parent.width
 
-                onClicked: S.openActivityCreationDialog(
-                                newActivityDialog,
-                                {
-                                    kactivities: activityList.model,
-                                    readyStatus: Loader.Ready
-                                }
-                            )
+                onClicked: ActivitySettings.newActivity()
 
                 opacity: newActivityDialog.status == Loader.Ready ?
                               1 - newActivityDialog.item.opacity : 1

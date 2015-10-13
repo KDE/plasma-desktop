@@ -19,10 +19,13 @@
  */
 
 import QtQuick 2.2
+
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.extras 2.0 as PlasmaExtras
+
 import org.kde.activities 0.1 as Activities
+import org.kde.activities.settings 0.1
 
 import "static.js" as S
 
@@ -36,11 +39,10 @@ Item {
     property alias title       : title.text
     property alias icon        : icon.source
 
-    property bool showingDialog: configureDialog.itemVisible || deleteDialog.itemVisible
-
     signal clicked
 
     width  : 200
+    height : icon.height + 2 * units.smallSpacing
 
     // Background until we get something real
     PlasmaCore.FrameSvgItem {
@@ -101,118 +103,93 @@ Item {
             anchors.fill : parent
             hoverEnabled : true
 
+            Accessible.name          : root.title
+            Accessible.role          : Accessible.Button
+            Accessible.selectable    : false
+            Accessible.onPressAction : root.clicked()
+
             onClicked    : root.clicked()
+            onEntered    : S.showActivityItemActionsBar(root)
         }
 
-        ControlButton {
-            id: deleteButton
+        Item {
+            id: controlBar
 
-            onClicked: S.openActivityDeletionDialog(
-                            deleteDialog,
-                            root.activityId,
-                            root.title,
-                            root.icon,
-                            // We need to pass some QML-only variables
-                            {
-                                kactivities: activitiesModel,
-                                readyStatus: Loader.Ready,
-                                i18nd:       i18nd
-                            }
-                        )
+            height: root.state == "showingControls" ?
+                        root.height :
+                        0
 
-            icon: "delete"
-
-            anchors {
-                right   : parent.right
-                top     : parent.top
-                margins : root.innerPadding
-            }
-        }
-
-        ControlButton {
-            id: configButton
-
-            onClicked: S.openActivityConfigurationDialog(
-                            configureDialog,
-                            root.activityId,
-                            root.title,
-                            root.icon,
-                            // We need to pass some QML-only variables
-                            {
-                                kactivities: activitiesModel,
-                                readyStatus: Loader.Ready,
-                                i18nd:       i18nd
-                            }
-                        )
-
-            icon: "configure"
-
-            anchors {
-                left    : parent.left
-                top     : parent.top
-                margins : root.innerPadding
-            }
-        }
-
-        Loader {
-            id: deleteDialog
-
-            anchors.fill: parent
-
-            property bool itemVisible: status == Loader.Ready && item.visible
-        }
-
-        Loader {
-            id: configureDialog
-
-            anchors.fill: parent
-
-            property bool itemVisible: status == Loader.Ready && item.visible
-        }
-
-        states: [
-            State {
-                name: "plain"
-                PropertyChanges { target: deleteButton ; opacity: 0 }
-                PropertyChanges { target: configButton ; opacity: 0 }
-                PropertyChanges { target: icon         ; visible: true }
-                PropertyChanges { target: title        ; visible: true }
-                PropertyChanges { target: root         ; height: icon.height + innerPadding }
-            },
-            State {
-                name: "showingControls"
-                PropertyChanges { target: deleteButton ; opacity: 1 }
-                PropertyChanges { target: configButton ; opacity: 1 }
-                PropertyChanges { target: icon         ; visible: true }
-                PropertyChanges { target: title        ; visible: true }
-                PropertyChanges { target: root         ; height: icon.height + innerPadding }
-            },
-            State {
-                name: "showingOverlayDialog"
-                PropertyChanges { target: deleteButton ; opacity: 0 }
-                PropertyChanges { target: configButton ; opacity: 0 }
-                PropertyChanges { target: icon         ; visible: false }
-                PropertyChanges { target: title        ; visible: false }
-                PropertyChanges { target: root         ; height: width * 9.0 / 16.0 }
-            }
-        ]
-
-        transitions: [
-            Transition {
+            Behavior on height {
                 NumberAnimation {
-                    properties : "opacity"
-                    duration   : units.shortDuration
+                    duration: units.longDuration
                 }
             }
-        ]
 
-        state:
-            root.showingDialog          ? "showingOverlayDialog"
-            : rootArea.containsMouse    ? "showingControls"
-            : /* otherwise */             "plain"
+            Behavior on opacity {
+                NumberAnimation {
+                    duration: units.shortDuration
+                }
+            }
+
+            clip: true
+
+            anchors {
+                left   : parent.left
+                right  : parent.right
+                bottom : parent.bottom
+            }
+
+            PlasmaComponents.Button {
+                id: configButton
+
+                iconSource: "configure"
+                tooltip: i18nd("plasma_shell_org.kde.plasma.desktop", "Configure")
+
+                onClicked: ActivitySettings.configureActivity(root.activityId)
+
+                anchors {
+                    left       : parent.left
+                    leftMargin : 2 * units.smallSpacing + 2
+                    verticalCenter: parent.verticalCenter
+                }
+            }
+
+            PlasmaComponents.Button {
+                id: deleteButton
+
+                iconSource: "edit-delete"
+                tooltip: i18nd("plasma_shell_org.kde.plasma.desktop", "Delete")
+
+                onClicked: ActivitySettings.deleteActivity(root.activityId)
+
+                anchors {
+                    right       : parent.right
+                    rightMargin : 2 * units.smallSpacing + 2
+                    verticalCenter: parent.verticalCenter
+                }
+            }
+        }
     }
 
-    Behavior on height { PropertyAnimation { duration: units.shortDuration } }
+    states: [
+        State {
+            name: "plain"
+            PropertyChanges { target: controlBar; opacity: 0 }
+        },
+        State {
+            name: "showingControls"
+            PropertyChanges { target: controlBar; opacity: 1 }
+        }
+    ]
+
+    transitions: [
+        Transition {
+            NumberAnimation {
+                properties : "opacity"
+                duration   : units.shortDuration
+            }
+        }
+    ]
 }
 
 

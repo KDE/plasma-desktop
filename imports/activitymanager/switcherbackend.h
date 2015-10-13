@@ -63,6 +63,8 @@ public Q_SLOTS:
     QPixmap wallpaperThumbnail(const QString &path, int width, int height,
             const QJSValue &callback);
 
+    QString lastTimeUsedString(const QString &activity);
+
 private:
     template <typename Handler>
     inline void registerShortcut(const QString &actionName, const QString &name,
@@ -91,6 +93,7 @@ private:
     KActivities::Controller m_activities;
     bool m_shouldShowSwitcher;
     QTimer m_modKeyPollingTimer;
+    QString m_previousActivity;
 
     KImageCache *m_wallpaperCache;
     QSet<QUrl> m_previewJobs;

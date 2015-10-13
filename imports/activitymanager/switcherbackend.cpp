@@ -25,14 +25,17 @@
 
 // Qt
 #include <QAction>
-#include <QDebug>
+// #include <QDebug>
 #include <QX11Info>
 #include <QTimer>
+#include <QDateTime>
 
 // KDE
 #include <kglobalaccel.h>
 #include <klocalizedstring.h>
 #include <KIO/PreviewJob>
+#include <KConfig>
+#include <KConfigGroup>
 
 // X11
 #include <X11/keysym.h>
@@ -147,8 +150,6 @@ inline void SwitcherBackend::registerShortcut(const QString &actionName,
     using KActivities::Controller;
 
     connect(action, &QAction::triggered, this, std::forward<Handler>(handler));
-    connect(&m_activities, &Controller::currentActivityChanged,
-            this, &SwitcherBackend::currentActivityChangedSlot);
 }
 
 SwitcherBackend::SwitcherBackend(QObject *parent)
@@ -170,6 +171,9 @@ SwitcherBackend::SwitcherBackend(QObject *parent)
 
     connect(&m_modKeyPollingTimer, &QTimer::timeout,
             this, &SwitcherBackend::showActivitySwitcherIfNeeded);
+    connect(&m_activities, &KActivities::Controller::currentActivityChanged,
+            this, &SwitcherBackend::currentActivityChangedSlot);
+    m_previousActivity = m_activities.currentActivity();
 }
 
 SwitcherBackend::~SwitcherBackend()
@@ -282,6 +286,26 @@ void SwitcherBackend::currentActivityChangedSlot(const QString &id)
     // Safe, we have a long-lived Consumer object
     KActivities::Info activity(id);
     emit showSwitchNotification(id, activity.name(), activity.icon());
+
+    KConfig config("kactivitymanagerd-switcher");
+    KConfigGroup times(&config, "LastUsed");
+
+    const auto now = QDateTime::currentDateTime().toTime_t();
+
+    // Updating the time for the activity we just switched to
+    // in the case we do not power off properly, and on the next
+    // start, kamd switches to another activity for some reason
+    times.writeEntry(id, now);
+
+    if (!m_previousActivity.isEmpty()) {
+        // When leaving an activity, say goodbye and fondly remember
+        // the time we saw it
+        times.writeEntry(m_previousActivity, now);
+    }
+
+    times.sync();
+
+    m_previousActivity = id;
 }
 
 bool SwitcherBackend::shouldShowSwitcher() const
@@ -308,15 +332,16 @@ void SwitcherBackend::setShouldShowSwitcher(const bool &shouldShowSwitcher)
 QPixmap SwitcherBackend::wallpaperThumbnail(const QString &path, int width, int height,
             const QJSValue &_callback)
 {
-    // qDebug() << "SwitcherBackend: Requesting wallpaper: " << path << width << height;
+    QPixmap preview = QPixmap(QSize(1, 1));
 
     QJSValue callback(_callback);
 
     if (path.isEmpty()) {
         callback.call({false});
+        return preview;
     }
 
-    QPixmap preview = QPixmap(QSize(0, 0));
+    // qDebug() << "SwitcherBackend: Requesting wallpaper: " << path << width << height;
 
     if (width == 0) {
         width = 320;
@@ -360,8 +385,8 @@ QPixmap SwitcherBackend::wallpaperThumbnail(const QString &path, int width, int 
 
                     // qDebug() << "SwitcherBackend: Got the thumbnail for " << path << "saving under" << pixmapKey;
                     callback.call({true});
-
                 });
+
         connect(job, &KIO::PreviewJob::failed,
                 this, [=] (const KFileItem& item) mutable {
                     Q_UNUSED(item);
@@ -377,6 +402,33 @@ QPixmap SwitcherBackend::wallpaperThumbnail(const QString &path, int width, int 
     return preview;
 }
 
+QString SwitcherBackend::lastTimeUsedString(const QString &activity)
+{
+    KConfig config("kactivitymanagerd-switcher");
+    KConfigGroup times(&config, "LastUsed");
+
+    const auto now = QDateTime::currentDateTime().toTime_t();
+    const auto time = times.readEntry(activity, 0);
+
+    if (time == 0) return i18n("Used some time ago");
+
+    auto diff = now - time;
+
+    // We do not need to be precise
+    const auto seconds = diff % 60; diff /= 60;
+    const auto minutes = diff % 60; diff /= 60;
+    const auto hours   = diff % 24; diff /= 24;
+    const auto days    = diff % 30; diff /= 30;
+    const auto months  = diff % 12; diff /= 12;
+    const auto years   = diff;
+
+    return (years > 0)   ? i18n("Used a long time ago")
+         : (months > 0)  ? i18ncp("amount in months",  "Used a month ago",  "Used %1 months ago", months)
+         : (days > 0)    ? i18ncp("amount in days",    "Used a day ago",    "Used %1 days ago",   days)
+         : (hours > 0)   ? i18ncp("amount in hours",   "Used an hour ago",  "Used %1 hours ago",  hours)
+         : (minutes > 0) ? i18ncp("amount in minutes", "Used a minute ago", "Used %1 minutes ago",  minutes)
+         :                 i18n("Used a moment ago");
+}
 
 
 #include "switcherbackend.moc"

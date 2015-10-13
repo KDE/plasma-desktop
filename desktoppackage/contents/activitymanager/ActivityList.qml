@@ -22,17 +22,17 @@ import QtQuick 2.2
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.activities 0.1 as Activities
 
-import "static.js" as S
-
 Flickable {
     id: root
 
-    /*contentWidth: content.width*/
+    // contentWidth: content.width
     contentHeight: content.height
 
     property var    model: activitiesModel
     property string filterString: ""
     property bool   showSwitcherOnly: false
+
+    property int itemsWidth: 0
 
     property int    selectedIndex: -1
 
@@ -116,29 +116,11 @@ Flickable {
         shownStates: "Stopped,Starting"
     }
 
-    ActivityCreationDialog {
-        id: activityCreationDialog
-        z: 10
-
-        acceptButtonText: i18nd("plasma_shell_org.kde.plasma.desktop", "Apply")
-
-        width: parent.width
-
-        onAccepted: {
-            var id = activityCreationDialog.activityId
-            activitiesModel.setActivityName(id,
-                activityCreationDialog.activityName,
-                function () {});
-            activitiesModel.setActivityIcon(id,
-                activityCreationDialog.activityIconSource,
-                function () {});
-        }
-    }
-
     Column {
         id: content
 
-        width: parent.width
+        // width: root.width - (root.width % 10)
+        width: root.itemsWidth
         spacing: units.smallSpacing * 2
 
         // Running activities
@@ -205,15 +187,6 @@ Flickable {
 
                 onClicked: {
                     stoppedActivitiesModel.setCurrentActivity(model.id, function () {})
-                }
-
-                onShowingDialogChanged: {
-                    var desiredY = y + (width * 9.0 / 16.0) - root.height;
-                    // width * 9 / 16 is the size of the expanded item
-
-                    if (root.contentY < desiredY) {
-                        root.contentY = desiredY;
-                    }
                 }
             }
         }

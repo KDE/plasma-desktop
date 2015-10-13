@@ -19,67 +19,104 @@
  */
 
 import QtQuick 2.2
+import QtQuick.Layouts 1.2
+
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
+import org.kde.activities.settings 0.1
+
 Item {
     id: root
 
-    property alias searchString : searchText.text
+    property alias searchString: searchText.text
+    property bool showingSearch: false
+
     signal closeRequested
 
     function focusSearch() {
         searchText.forceActiveFocus()
     }
 
+    onShowingSearchChanged: if (!showingSearch) searchText.text = ""
+
     Keys.onPressed: {
         if (event.key == Qt.Key_Escape) {
-            if (root.showSearch) {
+            if (root.showingSearch) {
                 event.accepted = true;
-                searchButton.checked = false;
+                root.showingSearch = false;
             }
         }
     }
 
     height: childrenRect.height
 
-    PlasmaExtras.Title {
-        id: heading
-        text: i18nd("plasma_shell_org.kde.plasma.desktop", "Activities")
-        elide: Text.ElideRight
+    RowLayout {
+        id: buttonRow
 
         anchors {
-            left   : parent.left
-            right  : closeButton.left
-            rightMargin: units.smallSpacing
-            top    : parent.top
-        }
-    }
-
-    PlasmaComponents.ToolButton {
-        id: closeButton
-        anchors {
+            top: parent.top
+            left: parent.left
             right: parent.right
-            verticalCenter: heading.verticalCenter
-        }
-        iconSource: "window-close"
-        onClicked: root.closeRequested()
-    }
-
-
-    PlasmaComponents.TextField {
-        id: searchText
-
-        focus: true
-        clearButtonShown: true
-
-        anchors {
-            left   : parent.left
-            right  : parent.right
-            top    : heading.bottom
         }
 
-        placeholderText: i18nd("plasma_shell_org.kde.plasma.desktop", "Search...")
+        height: closeButton.height
+
+        Item {
+            PlasmaExtras.Title {
+                id: heading
+
+                anchors.fill: parent
+
+                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Activities")
+                elide: Text.ElideRight
+
+                visible: !root.showingSearch
+            }
+
+            PlasmaComponents.TextField {
+                id: searchText
+
+                anchors.fill: parent
+
+                focus: true
+                clearButtonShown: true
+                visible: root.showingSearch
+
+                placeholderText: i18nd("plasma_shell_org.kde.plasma.desktop", "Search...")
+
+                onTextChanged: if (text != "") root.showingSearch = true
+            }
+
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+        }
+
+        PlasmaComponents.ToolButton {
+            id: searchButton
+            iconSource: "edit-find"
+
+            // checkable: true
+            // onClicked: root.closeRequested()
+            onClicked: root.showingSearch = !root.showingSearch
+            checked: root.showingSearch
+        }
+
+        PlasmaComponents.ToolButton {
+            id: configureButton
+            iconSource: "configure"
+            onClicked: {
+                ActivitySettings.configureActivities();
+                root.closeRequested();
+            }
+        }
+
+        PlasmaComponents.ToolButton {
+            id: closeButton
+            iconSource: "window-close"
+            onClicked: root.closeRequested()
+        }
+
     }
 }
