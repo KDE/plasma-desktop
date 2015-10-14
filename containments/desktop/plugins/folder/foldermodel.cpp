@@ -1007,6 +1007,11 @@ inline bool FolderModel::matchMimeType(const KFileItem &item) const
     if (m_mimeSet.isEmpty()) {
         return false;
     }
+
+    if (m_mimeSet.contains(QStringLiteral("all/all")) || m_mimeSet.contains(QStringLiteral("all/allfiles"))) {
+        return true;
+    }
+
     const QString mimeType = item.determineMimeType().name();
     return m_mimeSet.contains(mimeType);
 }
