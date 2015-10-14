@@ -50,8 +50,7 @@ class FullScreenWindow : public QQuickWindow
         void parentScreenChanged(const QScreen *screen);
 
     protected:
-        void showEvent(QShowEvent *event) Q_DECL_OVERRIDE;
-        void hideEvent(QHideEvent *event) Q_DECL_OVERRIDE;
+        bool event(QEvent *event) Q_DECL_OVERRIDE;
 
     private:
         QQuickItem *m_mainItem;
