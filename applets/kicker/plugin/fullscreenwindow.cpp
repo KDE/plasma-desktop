@@ -101,26 +101,28 @@ void FullScreenWindow::toggle() {
     }
 }
 
-void FullScreenWindow::showEvent(QShowEvent *event)
+bool FullScreenWindow::event(QEvent *event)
 {
-    updateTheme();
+    if (event->type() == QEvent::Expose) {
+        KWindowSystem::setState(winId(), NET::SkipTaskbar | NET::SkipPager);
+    } else if (event->type() == QEvent::Show) {
+        updateTheme();
 
-    if (m_mainItem) {
-        m_mainItem->setVisible(true);
+        if (m_mainItem) {
+            m_mainItem->setVisible(true);
+        }
+    } else if (event->type() == QEvent::Hide) {
+        if (m_mainItem) {
+            m_mainItem->setVisible(false);
+        }
+    } else if (event->type() == QEvent::FocusOut) {
+        if (isVisible()) {
+            KWindowSystem::raiseWindow(winId());
+            KWindowSystem::forceActiveWindow(winId());
+        }
     }
 
-    QQuickWindow::showEvent(event);
-
-    KWindowSystem::setState(winId(), NET::SkipTaskbar | NET::SkipPager);
-}
-
-void FullScreenWindow::hideEvent(QHideEvent *event)
-{
-    if (m_mainItem) {
-        m_mainItem->setVisible(false);
-    }
-
-    QQuickWindow::hideEvent(event);
+    return QQuickWindow::event(event);
 }
 
 void FullScreenWindow::updateTheme()
