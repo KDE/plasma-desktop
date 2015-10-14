@@ -294,6 +294,11 @@ void Backend::itemContextMenu(QQuickItem *item, QObject *configAction)
         m_contextMenu->setMinimumWidth(item->width());
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< Updated upstream
+=======
+>>>>>>> Plasma/5.4
     QPoint pos = item->window()->mapToGlobal(item->mapToScene(QPointF(0, 0)).toPoint());
     QScreen *screen = item->window()->screen();
 
@@ -311,6 +316,12 @@ void Backend::itemContextMenu(QQuickItem *item, QObject *configAction)
             }
             pos.setY(adjustedY);
         }
+    }
+
+    // Ungrab before showing the menu so the Qt Quick View doesn't stumble
+    // over the pointer leaving its window while handling a click.
+    if (item->window()->mouseGrabberItem()) {
+        item->window()->mouseGrabberItem()->ungrabMouse();
     }
 
     // Close menu when the delegate is destroyed.
