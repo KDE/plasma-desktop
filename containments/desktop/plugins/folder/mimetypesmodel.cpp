@@ -80,6 +80,8 @@ void MimeTypesModel::setRowChecked(int row, bool checked)
     QModelIndex idx = index(row, 0);
 
     emit dataChanged(idx, idx);
+
+    emit checkedTypesChanged();
 }
 
 void MimeTypesModel::checkAll()
@@ -87,6 +89,8 @@ void MimeTypesModel::checkAll()
     checkedRows = QVector<bool>(m_mimeTypesList.size(), true);
 
     emit dataChanged(index(0, 0), index(m_mimeTypesList.size() - 1, 0));
+
+    emit checkedTypesChanged();
 }
 
 int MimeTypesModel::indexOfType(const QString &name) const
