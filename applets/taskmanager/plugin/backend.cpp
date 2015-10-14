@@ -292,6 +292,34 @@ void Backend::itemContextMenu(QQuickItem *item, QObject *configAction)
         m_contextMenu->setMinimumWidth(item->width());
     }
 
+<<<<<<< Updated upstream
+=======
+    QPoint pos = item->window()->mapToGlobal(item->mapToScene(QPointF(0, 0)).toPoint());
+    QScreen *screen = item->window()->screen();
+
+    if (screen) {
+        if (isVertical) {
+            int adjustedX = pos.x() + item->width();
+            if (adjustedX + m_contextMenu->width() > screen->geometry().width()) {
+                adjustedX = pos.x() - m_contextMenu->width();
+            }
+            pos.setX(adjustedX);
+        } else {
+            int adjustedY = pos.y() + item->height();
+            if (adjustedY + m_contextMenu->height() > screen->geometry().height()) {
+                adjustedY = pos.y() - m_contextMenu->height();
+            }
+            pos.setY(adjustedY);
+        }
+    }
+
+    // Ungrab before showing the menu so the Qt Quick View doesn't stumble
+    // over the pointer leaving its window while handling a click.
+    if (item->window()->mouseGrabberItem()) {
+        item->window()->mouseGrabberItem()->ungrabMouse();
+    }
+
+>>>>>>> Stashed changes
     // Close menu when the delegate is destroyed.
     connect(item, &QQuickItem::destroyed, m_contextMenu.data(), &TaskManager::BasicMenu::deleteLater);
 
