@@ -294,11 +294,6 @@ void Backend::itemContextMenu(QQuickItem *item, QObject *configAction)
         m_contextMenu->setMinimumWidth(item->width());
     }
 
-<<<<<<< HEAD
-=======
-<<<<<<< Updated upstream
-=======
->>>>>>> Plasma/5.4
     QPoint pos = item->window()->mapToGlobal(item->mapToScene(QPointF(0, 0)).toPoint());
     QScreen *screen = item->window()->screen();
 
