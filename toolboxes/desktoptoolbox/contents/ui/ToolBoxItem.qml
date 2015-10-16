@@ -23,7 +23,6 @@ import QtQuick.Layouts 1.1
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
-import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
 
 ListView {
     id: menu
@@ -137,10 +136,10 @@ ListView {
             }
             spacing: units.smallSpacing
 
-            KQuickControlsAddons.QIconItem {
+            PlasmaCore.IconItem {
                 width: units.iconSizes.medium
                 height: width
-                icon: modelData.icon
+                source: modelData.icon
                 Accessible.ignored: true
             }
 
