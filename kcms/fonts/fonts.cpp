@@ -536,12 +536,12 @@ KFonts::KFonts(QWidget *parent, const QVariantList &args)
     QFont f1("Monospace", 16;
     QFont f2("Sans Serif", 16); // toolbar
 #else
-    QFont f0("Oxygen-Sans", 10); // general/menu/desktop
+    QFont f0("Noto Sans", 10); // general/menu/desktop
     QFont f1("Oxygen Mono", 9); // fixed font
-    QFont f2("Oxygen-Sans", 9); // toolbar
+    QFont f2("Noto Sans", 9); // toolbar
 #endif
-    QFont f3("Oxygen-Sans", 10); // window title
-    QFont f5("Oxygen-Sans", 8); // smallestReadableFont
+    QFont f3("Noto Sans", 10); // window title
+    QFont f5("Noto Sans", 8); // smallestReadableFont
 
     defaultFontList << f0 << f1 << f5 << f2 << f0 << f3;
 
