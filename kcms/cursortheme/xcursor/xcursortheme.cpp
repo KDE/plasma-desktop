@@ -29,6 +29,7 @@
 #include <X11/Xlib.h>
 #include <X11/Xcursor/Xcursor.h>
 
+#include <KWindowSystem/fixx11h.h>
 #include "xcursortheme.h"
 
 
