@@ -1,0 +1,6 @@
+[KNewStuff3]
+ProvidersUrl=http://pling:cappu123.@www.pling.cc/ocs/providers.xml
+Categories=Look and Feel
+StandardResource=tmp
+InstallationCommand=kpackagetool5 -i %f
+UninstallCommand=kpackagetool5  -r %f

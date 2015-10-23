@@ -26,6 +26,7 @@ target_link_libraries(kcmTest
         KF5::KDELibs4Support
         KF5::Declarative
         KF5::QuickAddons
+        KF5::NewStuff
 
         Qt5::DBus
         Qt5::Widgets

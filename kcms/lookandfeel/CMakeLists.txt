@@ -22,6 +22,7 @@ target_link_libraries(kcm_lookandfeel
   KF5::KCMUtils
   KF5::I18n
   KF5::Plasma
+  KF5::NewStuff
   KF5::PlasmaQuick
   KF5::KDELibs4Support
   KF5::Declarative

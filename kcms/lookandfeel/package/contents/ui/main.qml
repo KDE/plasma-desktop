@@ -155,5 +155,11 @@ Item {
                 }
             }
         }
+        QtControls.Button {
+            Layout.alignment: Qt.AlignRight
+            iconName: "get-hot-new-stuff"
+            text: "Get New Look And Feel..."
+            onClicked: kcm.getNewLookAndFeel();
+        }
     }
 }

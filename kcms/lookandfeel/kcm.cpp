@@ -34,6 +34,8 @@
 #include <QQuickView>
 #include <KGlobalSettings>
 #include <KIconLoader>
+#include <KNewStuff3/KNS3/DownloadDialog>
+//#include <KNewStuff3/kns3/downloaddialog.h>
 
 #include <QVBoxLayout>
 #include <QPushButton>
@@ -310,6 +312,22 @@ void KCMLookandFeel::defaults()
     }
 
     setSelectedPlugin(m_package.metadata().pluginName());
+}
+
+void KCMLookandFeel::getNewLookAndFeel()
+{
+    if (!m_newStuffDialog) {
+        m_newStuffDialog = new KNS3::DownloadDialog( QString::fromLatin1("lookandfeel.knsrc") );
+        KNS3::DownloadDialog *strong = m_newStuffDialog.data();
+        strong->setTitle(i18n("Download Look And Feel"));
+        connect(m_newStuffDialog.data(), &KNS3::DownloadDialog::accepted,
+                this, [=]() {
+                    if (m_model && (!m_newStuffDialog || m_newStuffDialog.data()->changedEntries().size() > 0)) {
+                        load();
+                    }
+                });
+    }
+    m_newStuffDialog.data()->show();
 }
 
 void KCMLookandFeel::setWidgetStyle(const QString &style)

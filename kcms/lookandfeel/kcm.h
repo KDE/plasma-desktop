@@ -31,6 +31,10 @@
 class QQuickView;
 class QStandardItemModel;
 
+namespace KNS3 {
+    class DownloadDialog;
+}
+
 class KCMLookandFeel : public KQuickAddons::ConfigModule
 {
     Q_OBJECT
@@ -98,6 +102,7 @@ public Q_SLOTS:
     void load();
     void save();
     void defaults();
+    void getNewLookAndFeel();
 
 Q_SIGNALS:
     void selectedPluginChanged();
@@ -116,6 +121,7 @@ private:
     Plasma::Package m_package;
     QString m_selectedPlugin;
     QStringList m_cursorSearchPaths;
+    QPointer<KNS3::DownloadDialog> m_newStuffDialog;
 
     KConfig m_config;
     KConfigGroup m_configGroup;
