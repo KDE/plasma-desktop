@@ -137,7 +137,7 @@ Item {
     PlasmaCore.FrameSvgItem {
         id: backgroundFrame
         imagePath: isCorner ? "widgets/translucentbackground" : "widgets/background"
-        opacity: buttonMouse.containsMouse ? 1.0 : 0.4
+        opacity: buttonMouse.containsMouse || (toolBoxLoader.item && toolBoxLoader.item.visible) ? 1.0 : 0.4
         x: -margins.left
         y: -margins.top
         width: (isCorner ? buttonLayout.height : buttonLayout.width) + margins.left + margins.right
