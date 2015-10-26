@@ -265,6 +265,14 @@ Item {
         ]
     } // appViewScrollArea
 
+    MouseArea {
+        anchors.fill: appViewScrollArea
+        acceptedButtons: Qt.BackButton
+        onClicked: {
+            deactivateCurrentIndex()
+        }
+    }
+
     Timer {
         id: updatedLabelTimer
         interval: 1500
