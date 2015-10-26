@@ -955,20 +955,21 @@ int FontInst::performAction(const QVariantMap &args)
 
     KAuth::ExecuteJob* j = action.execute();
     j->exec();
-#warning Error checking for KAuth disabled
-    qWarning() << "Error checking for KAuth calls disabled";
-//     KAuth::ActionReply reply = j->reply();
-//
-//     switch(reply.type())
-//     {
-//         case KAuth::ActionReply::KAuthErrorType:
-//             KFI_DBUG << "KAuth failed - error code:" << reply.errorCode();
-//             return KIO::ERR_COULD_NOT_AUTHENTICATE;
-//         case KAuth::ActionReply::HelperErrorType:
-//             KFI_DBUG << "Helper failed - error code:" << reply.errorCode();
-//             return (int)reply.errorCode();
-//     }
-
+    if (j->error()) {
+        qWarning() << "kauth action failed" <<  j->errorString() << j->errorText();
+        //error is a KAuth::ActionReply::Error rest of this code expects KIO error codes which are extended by EStatus
+        switch (j->error()) {
+            case KAuth::ActionReply::Error::UserCancelledError:
+                return KIO::ERR_USER_CANCELED;
+            case KAuth::ActionReply::Error::AuthorizationDeniedError:
+                /*fall through*/
+            case KAuth::ActionReply::Error::NoSuchActionError:
+                return KIO::ERR_COULD_NOT_AUTHENTICATE;
+            default:
+                return KIO::ERR_INTERNAL;
+        }
+        return KIO::ERR_INTERNAL;
+    }
     KFI_DBUG << "Success!";
     return STATUS_OK;
 }
