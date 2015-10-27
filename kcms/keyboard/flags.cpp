@@ -41,9 +41,6 @@
 #include "xkb_rules.h"
 
 
-//Q_LOGGING_CATEGORY(KCM_KEYBOARD, "kcm_keyboard")
-
-
 static const int FLAG_MAX_SIZE = 22;
 static const char flagTemplate[] = "kf5/locale/countries/%1/flag.png";
 

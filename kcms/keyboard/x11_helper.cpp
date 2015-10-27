@@ -36,7 +36,7 @@
 #include <fixx11h.h>
 
 
-Q_LOGGING_CATEGORY(KCM_KEYBOARD, "kcm_keyboard")
+Q_LOGGING_CATEGORY(KCM_KEYBOARD, "kcm_keyboard", QtWarningMsg)
 
 // more information about the limit https://bugs.freedesktop.org/show_bug.cgi?id=19501
 const int X11Helper::MAX_GROUP_COUNT = 4;
