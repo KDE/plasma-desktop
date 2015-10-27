@@ -99,6 +99,15 @@ Kicker.FullScreenWindow {
             }
         }
 
+        Connections {
+            target: plasmoid
+            onUserConfiguringChanged: {
+                if (plasmoid.userConfiguring) {
+                    root.hide()
+                }
+            }
+        }
+
         PlasmaComponents.Menu {
             id: contextMenu
 
