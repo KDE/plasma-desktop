@@ -247,7 +247,7 @@ Item {
             activeFocusOnTab: true
             currentIndex: -1
             keyNavigationWraps: true
-            cellWidth: units.iconSizes.enormous + units.smallSpacing * 2
+            cellWidth: width/2
             cellHeight: cellWidth + units.gridUnit * 4 + units.smallSpacing * 2
 
             delegate: AppletDelegate {}
