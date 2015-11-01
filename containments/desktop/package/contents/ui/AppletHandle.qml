@@ -120,6 +120,7 @@ KQuickControlsAddons.MouseEventListener {
                     startX = mouse.x;
                     startY = mouse.y;
                     root.layoutManager.setSpaceAvailable(appletItem.x, appletItem.y, appletItem.width, appletItem.height, true)
+                    appletContainer.clip = true
                 }
                 onPositionChanged: {
                     appletItem.width = Math.max(appletItem.minimumWidth + appletHandle.width, appletItem.width + mouse.x-startX);
@@ -133,6 +134,7 @@ KQuickControlsAddons.MouseEventListener {
                     root.layoutManager.positionItem(appletItem)
                     root.layoutManager.save()
                     root.layoutManager.setSpaceAvailable(appletItem.x, appletItem.y, widthAnimation.to, heightAnimation.to, false)
+                    appletContainer.clip = false
                 }
 //                 Rectangle { color: "blue"; opacity: 0.4; visible: debug; anchors.fill: parent; }
             }
