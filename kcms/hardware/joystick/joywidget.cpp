@@ -104,7 +104,7 @@ JoyWidget::JoyWidget(QWidget *parent)
   vboxLeft->addWidget(xyPos = new PosWidget);
 
   vboxLeft->addWidget(trace = new QCheckBox(i18n("Show trace")));
-  connect(trace, SIGNAL(toggled(bool)), this, SLOT(traceChanged(bool)));
+  connect(trace, &QAbstractButton::toggled, this, &JoyWidget::traceChanged);
 
   QVBoxLayout *vboxMid = new QVBoxLayout;
   vboxMid->setSpacing(KDialog::spacingHint());
@@ -114,7 +114,7 @@ JoyWidget::JoyWidget(QWidget *parent)
 
   // calculate the column width we need
   QFontMetrics fm(font());
-  int colWidth = qMax(fm.width(PRESSED), fm.width("-32767")) + 10;  // -32767 largest string
+  int colWidth = qMax(fm.width(PRESSED), fm.width(QStringLiteral("-32767"))) + 10;  // -32767 largest string
 
   vboxMid->addWidget(new QLabel(i18n("Buttons:")));
   buttonTbl = new TableWidget(0, 1);
@@ -146,7 +146,7 @@ JoyWidget::JoyWidget(QWidget *parent)
 
   // calibrate button
   calibrate = new QPushButton(i18n("Calibrate"));
-  connect(calibrate, SIGNAL(clicked()), this, SLOT(calibrateDevice()));
+  connect(calibrate, &QAbstractButton::clicked, this, &JoyWidget::calibrateDevice);
   calibrate->setEnabled(false);
 
   vboxLeft->addStretch();
@@ -154,7 +154,7 @@ JoyWidget::JoyWidget(QWidget *parent)
 
   // set up a timer for idle processing of joystick events
   idle = new QTimer(this);
-  connect(idle, SIGNAL(timeout()), this, SLOT(checkDevice()));
+  connect(idle, &QTimer::timeout, this, &JoyWidget::checkDevice);
 
   // check which devicefiles we have
   init();
@@ -200,7 +200,7 @@ void JoyWidget::init()
 
     // we found one
 
-    device->addItem(QString("%1 (%2)").arg(joy->text()).arg(joy->device()));
+    device->addItem(QStringLiteral("%1 (%2)").arg(joy->text()).arg(joy->device()));
 
     // display values for first device
     if ( first )
@@ -216,7 +216,7 @@ void JoyWidget::init()
   if ( device->count() == 0 )
   {
     messageBox->show();
-    messageBox->setText(QString("<qt>%1</qt>").arg(
+    messageBox->setText(QStringLiteral("<qt>%1</qt>").arg(
       i18n("No joystick device automatically found on this computer.<br />"
            "Checks were done in /dev/js[0-4] and /dev/input/js[0-4]<br />"
            "If you know that there is one attached, please enter the correct device file.")));
@@ -236,7 +236,7 @@ void JoyWidget::restoreCurrDev()
 {
   if ( !joydev )  // no device open
   {
-    device->setEditText("");
+    device->setEditText(QLatin1String(""));
     calibrate->setEnabled(false);
   }
   else
@@ -259,7 +259,7 @@ void JoyWidget::deviceChanged(const QString &dev)
   int start, stop;
   QString devName;
 
-  if ( (start = dev.indexOf("/dev")) == -1 )
+  if ( (start = dev.indexOf(QStringLiteral("/dev"))) == -1 )
   {
     KMessageBox::sorry(this,
       i18n("The given device name is invalid (does not contain /dev).\n"
@@ -270,7 +270,7 @@ void JoyWidget::deviceChanged(const QString &dev)
     return;
   }
 
-  if ( (stop = dev.indexOf(")", start)) != -1 )  // seems to be text selected from our list
+  if ( (stop = dev.indexOf(QStringLiteral(")"), start)) != -1 )  // seems to be text selected from our list
     devName = dev.mid(start, stop - start);
   else
     devName = dev.mid(start);
@@ -338,7 +338,7 @@ void JoyWidget::checkDevice()
       buttonTbl->setItem(number, 0, new QTableWidgetItem());
 
     if ( value == 0 )  // button release
-      buttonTbl->item(number, 0)->setText("-");
+      buttonTbl->item(number, 0)->setText(QStringLiteral("-"));
     else
       buttonTbl->item(number, 0)->setText(PRESSED);
   }
@@ -354,7 +354,7 @@ void JoyWidget::checkDevice()
     if ( ! axesTbl->item(number, 0) )
       axesTbl->setItem(number, 0, new QTableWidgetItem());
 
-    axesTbl->item(number, 0)->setText(QString("%1").arg(int(value)));
+    axesTbl->item(number, 0)->setText(QStringLiteral("%1").arg(int(value)));
   }
 }
 

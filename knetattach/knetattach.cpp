@@ -45,15 +45,15 @@ KNetAttach::KNetAttach( QWidget* parent )
 {
     setupUi( this );
 
-    connect(_recent, SIGNAL(toggled(bool)), _recentConnectionName, SLOT(setEnabled(bool)));
-    connect(_connectionName, SIGNAL(textChanged(QString)), this, SLOT(updateParametersPageStatus()));
-    connect(_user, SIGNAL(textChanged(QString)), this, SLOT(updateParametersPageStatus()));
-    connect(_host, SIGNAL(textChanged(QString)), this, SLOT(updateParametersPageStatus()));
-    connect(_path, SIGNAL(textChanged(QString)), this, SLOT(updateParametersPageStatus()));
-    connect(_useEncryption, SIGNAL(toggled(bool)), this, SLOT(updatePort(bool)));
-    connect(_createIcon, SIGNAL(toggled(bool)), this, SLOT(updateFinishButtonText(bool)));
-    connect( this, SIGNAL(helpRequested()), this, SLOT(slotHelpClicked()) );
-    connect( this, SIGNAL(currentIdChanged(int)), this, SLOT(slotPageChanged(int)) );
+    connect(_recent, &QAbstractButton::toggled, _recentConnectionName, &QWidget::setEnabled);
+    connect(_connectionName, &QLineEdit::textChanged, this, &KNetAttach::updateParametersPageStatus);
+    connect(_user, &QLineEdit::textChanged, this, &KNetAttach::updateParametersPageStatus);
+    connect(_host, &QLineEdit::textChanged, this, &KNetAttach::updateParametersPageStatus);
+    connect(_path, &QLineEdit::textChanged, this, &KNetAttach::updateParametersPageStatus);
+    connect(_useEncryption, &QAbstractButton::toggled, this, &KNetAttach::updatePort);
+    connect(_createIcon, &QAbstractButton::toggled, this, &KNetAttach::updateFinishButtonText);
+    connect( this, &QWizard::helpRequested, this, &KNetAttach::slotHelpClicked );
+    connect( this, &QWizard::currentIdChanged, this, &KNetAttach::slotPageChanged );
     setWindowIcon(QIcon::fromTheme("knetattach"));
     setOption(HaveHelpButton, true);
     //setResizeMode(Fixed); FIXME: make the wizard fixed-geometry

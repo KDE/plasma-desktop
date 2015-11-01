@@ -46,7 +46,7 @@ static const int xOffset[] = {10, 10, -15, -15 };
 static const int yOffset[] = {5, -20, 5, -20 };
 static const QColor color[] = { lev12color, lev12color, lev34color, lev34color };
 static const int keyLevel[3][4] = { { 1, 0, 3, 2}, { 1, 0, 5, 4}, { 1, 0, 7, 6} };
-static const QRegExp fkKey("^FK\\d+$");
+static const QRegExp fkKey(QStringLiteral("^FK\\d+$"));
 
 
 KbPreviewFrame::KbPreviewFrame(QWidget *parent) :
@@ -136,7 +136,7 @@ void KbPreviewFrame::drawKeySymbols(QPainter &painter, QPoint temp[], const GSha
 
         if (name.contains(fkKey)) {
             QString tempName = name;
-            tempName.remove("K");
+            tempName.remove(QStringLiteral("K"));
             painter.drawText(temp[0].x() + s.size(0) - 10, temp[0].y() + 3 * scaleFactor * s.size(1) / 5, tempName);
         } else {
             painter.setFont(kbfont);
@@ -324,7 +324,7 @@ void KbPreviewFrame::paintEvent(QPaintEvent *)
         }
     } else {
         QMessageBox errorBox;
-        errorBox.setText("Unable to open Preview !");
+        errorBox.setText(QStringLiteral("Unable to open Preview !"));
         errorBox.exec();
     }
 

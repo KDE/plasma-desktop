@@ -46,8 +46,8 @@ PlacesModel::~PlacesModel()
 
 bool PlacesModel::activityLinkingEnabled()
 {
-    const KService::List services = KServiceTypeTrader::self()->query("KFileItemAction/Plugin",
-        "Library == 'kactivitymanagerd_fileitem_linking_plugin'");
+    const KService::List services = KServiceTypeTrader::self()->query(QStringLiteral("KFileItemAction/Plugin"),
+        QStringLiteral("Library == 'kactivitymanagerd_fileitem_linking_plugin'"));
 
     if (services.isEmpty()) {
         return false;

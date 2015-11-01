@@ -65,7 +65,7 @@ void CfgEmailClient::load(KConfig *)
     otherCB->setChecked(!useKMail);
     txtEMailClient->setText(emailClient);
     txtEMailClient->setFixedHeight(txtEMailClient->sizeHint().height());
-    chkRunTerminal->setChecked((pSettings->getSetting(KEMailSettings::ClientTerminal) == "true"));
+    chkRunTerminal->setChecked((pSettings->getSetting(KEMailSettings::ClientTerminal) == QLatin1String("true")));
 
     emit changed(false);
 
@@ -87,8 +87,8 @@ void CfgEmailClient::selectEmailClient()
     m_emailClientService = dlg.service();
 
     // get the preferred Terminal Application
-    KConfigGroup confGroup( KSharedConfig::openConfig(), QLatin1String("General") );
-    QString preferredTerminal = confGroup.readPathEntry("TerminalApplication", QLatin1String("konsole"));
+    KConfigGroup confGroup( KSharedConfig::openConfig(), QStringLiteral("General") );
+    QString preferredTerminal = confGroup.readPathEntry("TerminalApplication", QStringLiteral("konsole"));
     preferredTerminal += QLatin1String(" -e ");
 
     int len = preferredTerminal.length();
@@ -107,7 +107,7 @@ void CfgEmailClient::save(KConfig *)
     if (kmailCB->isChecked())
     {
         pSettings->setSetting(KEMailSettings::ClientProgram, QString());
-        pSettings->setSetting(KEMailSettings::ClientTerminal, "false");
+        pSettings->setSetting(KEMailSettings::ClientTerminal, QStringLiteral("false"));
     }
     else
     {
@@ -116,11 +116,11 @@ void CfgEmailClient::save(KConfig *)
     }
 
     // Save the default email client in mimeapps.list into the group [Default Applications]
-    KSharedConfig::Ptr profile = KSharedConfig::openConfig("mimeapps.list", KConfig::NoGlobals, QStandardPaths::GenericConfigLocation);
+    KSharedConfig::Ptr profile = KSharedConfig::openConfig(QStringLiteral("mimeapps.list"), KConfig::NoGlobals, QStandardPaths::GenericConfigLocation);
     if (profile->isConfigWritable(true)) {
         KConfigGroup defaultApp(profile, "Default Applications");
         if (kmailCB->isChecked()) {
-            defaultApp.writeXdgListEntry("x-scheme-handler/mailto", QStringList("org.kde.kmail.desktop"));
+            defaultApp.writeXdgListEntry("x-scheme-handler/mailto", QStringList(QStringLiteral("org.kde.kmail.desktop")));
         } else if (m_emailClientService) {
             defaultApp.writeXdgListEntry("x-scheme-handler/mailto", QStringList(m_emailClientService->storageId()));
         }
@@ -128,10 +128,10 @@ void CfgEmailClient::save(KConfig *)
     }
 
     // insure proper permissions -- contains sensitive data
-    QString cfgName(QStandardPaths::locate(QStandardPaths::ConfigLocation, "emails"));
+    QString cfgName(QStandardPaths::locate(QStandardPaths::ConfigLocation, QStringLiteral("emails")));
     if (!cfgName.isEmpty())
         ::chmod(QFile::encodeName(cfgName), 0600);
-    QDBusMessage message = QDBusMessage::createSignal("/Component", "org.kde.Kcontrol", "KDE_emailSettingsChanged" );
+    QDBusMessage message = QDBusMessage::createSignal(QStringLiteral("/Component"), QStringLiteral("org.kde.Kcontrol"), QStringLiteral("KDE_emailSettingsChanged") );
     QDBusConnection::sessionBus().send(message);
     emit changed(false);
 }

@@ -45,9 +45,9 @@ LayoutTrayIcon::LayoutTrayIcon(const Rules* rules_, const KeyboardConfig& keyboa
     m_notifierItem->setStatus(KStatusNotifierItem::Active);
     m_notifierItem->setToolTipTitle(i18nc("tooltip title", "Keyboard Layout"));
     m_notifierItem->setTitle(i18nc("tooltip title", "Keyboard Layout"));
-    m_notifierItem->setToolTipIconByName("preferences-desktop-keyboard");
+    m_notifierItem->setToolTipIconByName(QStringLiteral("preferences-desktop-keyboard"));
 
-	QMenu* menu = new QMenu("");
+	QMenu* menu = new QMenu(QLatin1String(""));
     m_notifierItem->setContextMenu(menu);
 	m_notifierItem->setStandardActionsEnabled(false);
 
@@ -122,5 +122,5 @@ void LayoutTrayIcon::scrollRequested(int delta, Qt::Orientation /*orientation*/)
 
 const QIcon LayoutTrayIcon::getFlag(const QString& layout) const
 {
-    return keyboardConfig.isFlagShown() ? flags->getIcon(layout) : QIcon::fromTheme("preferences-desktop-keyboard");
+    return keyboardConfig.isFlagShown() ? flags->getIcon(layout) : QIcon::fromTheme(QStringLiteral("preferences-desktop-keyboard"));
 }

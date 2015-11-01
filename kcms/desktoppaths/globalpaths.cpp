@@ -199,7 +199,7 @@ static bool cleanHomeDirPath( QString &path, const QString &homeDir )
     int len = homeDir.length();
     // replace by "$HOME" if possible
     if (len && (path.length() == len || path[len] == '/')) {
-        path.replace(0, len, QString::fromLatin1("$HOME"));
+        path.replace(0, len, QStringLiteral("$HOME"));
         return true;
     } else
         return false;
@@ -362,7 +362,7 @@ bool DesktopPathConfig::moveDir( const QUrl & src, const QUrl & dest, const QStr
         return true;
     // Do not move $HOME! #193057
     const QString translatedPath = translatePath(src.toLocalFile());
-    if (translatedPath == "$HOME" || translatedPath == "$HOME/") {
+    if (translatedPath == QLatin1String("$HOME") || translatedPath == QLatin1String("$HOME/")) {
         return true;
     }
 
@@ -427,7 +427,7 @@ void DesktopPathConfig::slotEntries(KIO::Job*, const KIO::UDSEntryList& list)
     while (it.hasNext()) {
         KFileItem file(it.next(), m_copyFromSrc, true, true);
         qCDebug(KCM_DESKTOPPATH) << file.url();
-        if (file.url() == m_copyFromSrc || file.name() == "..") {
+        if (file.url() == m_copyFromSrc || file.name() == QLatin1String("..")) {
             continue;
         }
 

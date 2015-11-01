@@ -27,8 +27,8 @@ static const char LIST_SEPARATOR[] = ",";
 //static const char* DEFAULT_LAYOUT = "us";
 static const char DEFAULT_MODEL[] = "pc104";
 
-static const QString CONFIG_FILENAME("kxkbrc");
-static const QString CONFIG_GROUPNAME("Layout");
+static const QString CONFIG_FILENAME(QStringLiteral("kxkbrc"));
+static const QString CONFIG_GROUPNAME(QStringLiteral("Layout"));
 
 const int KeyboardConfig::NO_LOOPING = -1;
 

@@ -91,7 +91,7 @@ Dtime::Dtime(QWidget * parent, bool haveTimeDated):
   v2->setMargin( 0 );
 
   kclock = new Kclock( timeBox );
-  kclock->setObjectName("Kclock");
+  kclock->setObjectName(QStringLiteral("Kclock"));
   kclock->setMinimumSize(150,150);
   v2->addWidget( kclock );
 
@@ -155,7 +155,7 @@ void Dtime::findNTPutility(){
     envpath = envpath.mid(1);
   }
 
-  QString path = "/sbin:/usr/sbin:";
+  QString path = QStringLiteral("/sbin:/usr/sbin:");
   if (!envpath.isEmpty()) {
     path += QFile::decodeName(envpath);
   } else {
@@ -200,7 +200,7 @@ void Dtime::load()
     QString currentTimeZone;
 
     if (m_haveTimedated) {
-        OrgFreedesktopTimedate1Interface timeDatedIface("org.freedesktop.timedate1", "/org/freedesktop/timedate1", QDBusConnection::systemBus());
+        OrgFreedesktopTimedate1Interface timeDatedIface(QStringLiteral("org.freedesktop.timedate1"), QStringLiteral("/org/freedesktop/timedate1"), QDBusConnection::systemBus());
         //the server list is not relevant for timesyncd, it fetches it from the network
         timeServerList->setVisible(false);
         timeServerLabel->setVisible(false);
@@ -211,7 +211,7 @@ void Dtime::load()
     } else {
         // The config is actually written to the system config, but the user does not have any local config,
         // since there is nothing writing it.
-        KConfig _config( "kcmclockrc", KConfig::NoGlobals );
+        KConfig _config( QStringLiteral("kcmclockrc"), KConfig::NoGlobals );
         KConfigGroup config(&_config, "NTP");
         timeServerList->clear();
         timeServerList->addItems(config.readEntry("servers",
@@ -321,7 +321,7 @@ Kclock::Kclock(QWidget *parent)
     : QWidget(parent)
 {
     m_theme = new Plasma::Svg(this);
-    m_theme->setImagePath("widgets/clock");
+    m_theme->setImagePath(QStringLiteral("widgets/clock"));
     m_theme->setContainsMultipleImages(true);
 }
 
@@ -438,18 +438,18 @@ void Kclock::paintInterface(QPainter *p, const QRect &rect)
         facePainter.setRenderHint(QPainter::SmoothPixmapTransform);
         glassPainter.setRenderHint(QPainter::SmoothPixmapTransform);
 
-        m_theme->paint(&facePainter, targetRect, "ClockFace");
+        m_theme->paint(&facePainter, targetRect, QStringLiteral("ClockFace"));
 
         glassPainter.save();
-        QRectF elementRect = QRectF(QPointF(0, 0), m_theme->elementSize("HandCenterScrew"));
+        QRectF elementRect = QRectF(QPointF(0, 0), m_theme->elementSize(QStringLiteral("HandCenterScrew")));
         glassPainter.translate(faceRect.width() / (2 * devicePixelRatio()) - elementRect.width() / 2, faceRect.height() / (2 * devicePixelRatio()) - elementRect.height() / 2);
-        m_theme->paint(&glassPainter, elementRect, "HandCenterScrew");
+        m_theme->paint(&glassPainter, elementRect, QStringLiteral("HandCenterScrew"));
         glassPainter.restore();
 
-        m_theme->paint(&glassPainter, targetRect, "Glass");
+        m_theme->paint(&glassPainter, targetRect, QStringLiteral("Glass"));
 
         // get vertical translation, see drawHand() for more details
-        m_verticalTranslation = m_theme->elementRect("ClockFace").center().y();
+        m_verticalTranslation = m_theme->elementRect(QStringLiteral("ClockFace")).center().y();
     }
 
     // paint hour and minute hands cache
@@ -460,8 +460,8 @@ void Kclock::paintInterface(QPainter *p, const QRect &rect)
         handsPainter.drawPixmap(targetRect, m_faceCache, faceRect);
         handsPainter.setRenderHint(QPainter::SmoothPixmapTransform);
 
-        drawHand(&handsPainter, targetRect, m_verticalTranslation, hours, "Hour");
-        drawHand(&handsPainter, targetRect, m_verticalTranslation, minutes, "Minute");
+        drawHand(&handsPainter, targetRect, m_verticalTranslation, hours, QStringLiteral("Hour"));
+        drawHand(&handsPainter, targetRect, m_verticalTranslation, minutes, QStringLiteral("Minute"));
     }
 
     // reset repaint cache flag
@@ -475,7 +475,7 @@ void Kclock::paintInterface(QPainter *p, const QRect &rect)
     p->drawPixmap(targetRect, m_handsCache, faceRect);
     if (m_showSecondHand) {
         p->setRenderHint(QPainter::SmoothPixmapTransform);
-        drawHand(p, targetRect, m_verticalTranslation, seconds, "Second");
+        drawHand(p, targetRect, m_verticalTranslation, seconds, QStringLiteral("Second"));
     }
     p->drawPixmap(targetRect, m_glassCache, faceRect);
 }

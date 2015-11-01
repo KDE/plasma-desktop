@@ -140,7 +140,7 @@ public:
 
 void ApplicationModelPrivate::fillNode(const QString &_relPath, AppNode *node)
 {
-     if (_relPath=="new/") {
+     if (_relPath==QLatin1String("new/")) {
         Q_FOREACH (const QString &it, newInstalledPrograms) {
             KService::Ptr p = KService::serviceByStorageId(it);
 
@@ -153,7 +153,7 @@ void ApplicationModelPrivate::fillNode(const QString &_relPath, AppNode *node)
                 continue;
             }
             AppNode *newnode = new AppNode();
-            newnode->icon = QIcon::fromTheme(p->icon(), QIcon::fromTheme("unknown"));
+            newnode->icon = QIcon::fromTheme(p->icon(), QIcon::fromTheme(QStringLiteral("unknown")));
             newnode->appName = p->name();
             newnode->genericName = p->genericName();
             newnode->desktopEntry = p->entryPath();
@@ -272,7 +272,7 @@ void ApplicationModelPrivate::fillNode(const QString &_relPath, AppNode *node)
 
         AppNode *newnode = new AppNode();
         newnode->iconName = icon;
-        newnode->icon = QIcon::fromTheme(icon, QIcon::fromTheme("unknown"));
+        newnode->icon = QIcon::fromTheme(icon, QIcon::fromTheme(QStringLiteral("unknown")));
         newnode->appName = appName;
         newnode->genericName = genericName;
         newnode->relPath = relPath;
@@ -292,9 +292,9 @@ void ApplicationModelPrivate::fillNode(const QString &_relPath, AppNode *node)
 
     if (showRecentlyInstalled && _relPath.isEmpty() && !newInstalledPrograms.isEmpty()) {
         AppNode *newnode = new AppNode();
-        newnode->icon = QIcon::fromTheme("chronometer");
+        newnode->icon = QIcon::fromTheme(QStringLiteral("chronometer"));
         newnode->appName = i18n("Recently Installed");
-        newnode->relPath = "new/";
+        newnode->relPath = QStringLiteral("new/");
         newnode->isDir = true;
         newnode->parent = node;
         node->children.prepend(newnode);
@@ -325,8 +325,8 @@ ApplicationModel::ApplicationModel(QObject *parent, bool allowSeparators)
     setRoleNames(roles);
     QDBusConnection dbus = QDBusConnection::sessionBus();
     (void)new KickoffAdaptor(this);
-    QDBusConnection::sessionBus().registerObject("/kickoff", this);
-    dbus.connect(QString(), "/kickoff", "org.kde.plasma", "reloadMenu", this, SLOT(reloadMenu()));
+    QDBusConnection::sessionBus().registerObject(QStringLiteral("/kickoff"), this);
+    dbus.connect(QString(), QStringLiteral("/kickoff"), QStringLiteral("org.kde.plasma"), QStringLiteral("reloadMenu"), this, SLOT(reloadMenu()));
     connect(KSycoca::self(), SIGNAL(databaseChanged(QStringList)), this, SLOT(checkSycocaChange(QStringList)));
 
     // TODO: remove me again
@@ -414,7 +414,7 @@ QVariant ApplicationModel::data(const QModelIndex &index, int role) const
         }
     case Kickoff::UrlRole:
         if (node->isDir) {
-            return QString::fromLatin1("applications://%1").arg(node->desktopEntry);
+            return QStringLiteral("applications://%1").arg(node->desktopEntry);
         } else {
             return node->desktopEntry;
         }
@@ -561,7 +561,7 @@ void ApplicationModel::reloadMenu()
 
 void ApplicationModel::checkSycocaChange(const QStringList &changes)
 {
-    if (changes.contains("services") || changes.contains("apps")) {
+    if (changes.contains(QStringLiteral("services")) || changes.contains(QStringLiteral("apps"))) {
         reloadMenu();
     }
 }
@@ -645,7 +645,7 @@ bool ApplicationModel::createNewProgramListForPath(const QString &relPath)
         } else if (e->isType(KST_KService)) {
             KService::Ptr s(KService::Ptr(static_cast<KService*>(e.data())));
             if (s->isApplication() && !s->noDisplay()) {
-                QString shortStorageId = s->storageId().remove(".desktop");
+                QString shortStorageId = s->storageId().remove(QStringLiteral(".desktop"));
                 QHash<QString, QDate>::Iterator it_find = d->seenPrograms.find(shortStorageId);
                 if (it_find == d->seenPrograms.end()) {
                     seenProgramsChanged = true;
@@ -695,17 +695,17 @@ QHash<QString, QString> ApplicationModelPrivate::iconNameMap()
 {
     static QHash<QString, QString> map;
     if (map.isEmpty()) {
-        map.insert("gnome-util", "applications-accessories");
+        map.insert(QStringLiteral("gnome-util"), QStringLiteral("applications-accessories"));
         // accessibility Oxygen icon was missing when this list was compiled
-        map.insert("accessibility-directory", "applications-other");
-        map.insert("gnome-devel", "applications-development");
-        map.insert("package_edutainment", "applications-education");
-        map.insert("gnome-joystick", "applications-games");
-        map.insert("gnome-graphics", "applications-graphics");
-        map.insert("gnome-globe", "applications-internet");
-        map.insert("gnome-multimedia", "applications-multimedia");
-        map.insert("gnome-applications", "applications-office");
-        map.insert("gnome-system", "applications-system");
+        map.insert(QStringLiteral("accessibility-directory"), QStringLiteral("applications-other"));
+        map.insert(QStringLiteral("gnome-devel"), QStringLiteral("applications-development"));
+        map.insert(QStringLiteral("package_edutainment"), QStringLiteral("applications-education"));
+        map.insert(QStringLiteral("gnome-joystick"), QStringLiteral("applications-games"));
+        map.insert(QStringLiteral("gnome-graphics"), QStringLiteral("applications-graphics"));
+        map.insert(QStringLiteral("gnome-globe"), QStringLiteral("applications-internet"));
+        map.insert(QStringLiteral("gnome-multimedia"), QStringLiteral("applications-multimedia"));
+        map.insert(QStringLiteral("gnome-applications"), QStringLiteral("applications-office"));
+        map.insert(QStringLiteral("gnome-system"), QStringLiteral("applications-system"));
     }
     return map;
 }

@@ -93,7 +93,7 @@ void LabelGenerator::setLabelText(const QString& text)
 QString LabelGenerator::displayLabel()
 {
     if (m_labelMode == 1 /* Default */) {
-        if (m_url == "desktop:/") {
+        if (m_url == QLatin1String("desktop:/")) {
             return i18n("Desktop Folder");
         } else {
             QUrl url(m_url);

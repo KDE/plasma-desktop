@@ -78,7 +78,7 @@ KDEDConfig::KDEDConfig(QWidget* parent, const QVariantList &) :
         new KAboutData( I18N_NOOP( "kcmkded" ), i18n( "KDE Service Manager" ),
                 QStringLiteral("1.0"), QString(), KAboutLicense::GPL,
 				i18n( "(c) 2002 Daniel Molkentin" ) );
-	about->addAuthor(i18n("Daniel Molkentin"), QString(),"molkentin@kde.org");
+	about->addAuthor(i18n("Daniel Molkentin"), QString(),QStringLiteral("molkentin@kde.org"));
 	setAboutData( about );
 	setButtons(Apply|Default|Help);
 	setQuickHelp( i18n("<h1>Service Manager</h1><p>This module allows you to have an overview of all plugins of the "
@@ -175,13 +175,13 @@ void KDEDConfig::setAutoloadEnabled(KConfig *config, const KPluginMetaData &modu
 // TODO: move this KCM to the KDED framework and share the code?
 static QVector<KPluginMetaData> availableModules()
 {
-	QVector<KPluginMetaData> plugins = KPluginLoader::findPlugins("kf5/kded");
+	QVector<KPluginMetaData> plugins = KPluginLoader::findPlugins(QStringLiteral("kf5/kded"));
 	QSet<QString> moduleIds;
 	foreach (const KPluginMetaData &md, plugins) {
 		moduleIds.insert(md.pluginId());
 	}
 	// also search for old .desktop based kded modules
-	KPluginInfo::List oldStylePlugins = KPluginInfo::fromServices(KServiceTypeTrader::self()->query("KDEDModule"));
+	KPluginInfo::List oldStylePlugins = KPluginInfo::fromServices(KServiceTypeTrader::self()->query(QStringLiteral("KDEDModule")));
 	foreach (const KPluginInfo &info, oldStylePlugins) {
 		if (moduleIds.contains(info.pluginName())) {
 			qCWarning(KCM_KDED).nospace() << "kded module " << info.pluginName() << " has already been found using "
@@ -200,7 +200,7 @@ static bool isModuleLoadedOnDemand(const KPluginMetaData &module)
 {
 	bool loadOnDemand = true;
 	// use toVariant() since it could be string or bool in the json and QJsonObject does not convert
-	QVariant p = module.rawData().value("X-KDE-Kded-load-on-demand").toVariant();
+	QVariant p = module.rawData().value(QStringLiteral("X-KDE-Kded-load-on-demand")).toVariant();
 	if (p.isValid() && p.canConvert<bool>() && (p.toBool() == false)) {
 		loadOnDemand = false;
 	}
@@ -209,7 +209,7 @@ static bool isModuleLoadedOnDemand(const KPluginMetaData &module)
 
 void KDEDConfig::load()
 {
-	KConfig kdedrc("kded5rc", KConfig::NoGlobals);
+	KConfig kdedrc(QStringLiteral("kded5rc"), KConfig::NoGlobals);
 
 	_lvStartup->clear();
 	_lvLoD->clear();
@@ -273,7 +273,7 @@ void KDEDConfig::load()
 
 void KDEDConfig::save()
 {
-	KConfig kdedrc("kded5rc", KConfig::NoGlobals);
+	KConfig kdedrc(QStringLiteral("kded5rc"), KConfig::NoGlobals);
 
 	const auto modules = availableModules();
 	for (const KPluginMetaData &mod : modules) {
@@ -297,9 +297,9 @@ void KDEDConfig::save()
 
 	emit changed(false);
 
-	QDBusInterface kdedInterface("org.kde.kded5", "/kded", "org.kde.kded5");
-	kdedInterface.call("reconfigure");
-	QTimer::singleShot(0, this, SLOT(slotServiceRunningToggled()));
+	QDBusInterface kdedInterface(QStringLiteral("org.kde.kded5"), QStringLiteral("/kded"), QStringLiteral("org.kde.kded5"));
+	kdedInterface.call(QStringLiteral("reconfigure"));
+	QTimer::singleShot(0, this, &KDEDConfig::slotServiceRunningToggled);
 }
 
 
@@ -320,8 +320,8 @@ void KDEDConfig::defaults()
 void KDEDConfig::getServiceStatus()
 {
 	QStringList modules;
-	QDBusInterface kdedInterface( "org.kde.kded5", "/kded", "org.kde.kded5" );
-	QDBusReply<QStringList> reply = kdedInterface.call( "loadedModules"  );
+	QDBusInterface kdedInterface( QStringLiteral("org.kde.kded5"), QStringLiteral("/kded"), QStringLiteral("org.kde.kded5") );
+	QDBusReply<QStringList> reply = kdedInterface.call( QStringLiteral("loadedModules")  );
 
 	if ( reply.isValid() ) {
 		modules = reply.value();
@@ -466,8 +466,8 @@ void KDEDConfig::slotStartService()
 {
 	QString service = _lvStartup->selectedItems().at(0)->data( StartupService, LibraryRole ).toString();
 
-	QDBusInterface kdedInterface( "org.kde.kded5", "/kded","org.kde.kded5" );
-	QDBusReply<bool> reply = kdedInterface.call( "loadModule", service  );
+	QDBusInterface kdedInterface( QStringLiteral("org.kde.kded5"), QStringLiteral("/kded"),QStringLiteral("org.kde.kded5") );
+	QDBusReply<bool> reply = kdedInterface.call( QStringLiteral("loadModule"), service  );
 
 	if ( reply.isValid() ) {
 		if ( reply.value() )
@@ -486,8 +486,8 @@ void KDEDConfig::slotStopService()
 	QString service = _lvStartup->selectedItems().at(0)->data( StartupService, LibraryRole ).toString();
 	qCDebug(KCM_KDED) << "Stopping: " << service;
 
-	QDBusInterface kdedInterface( "org.kde.kded5", "/kded", "org.kde.kded5" );
-	QDBusReply<bool> reply = kdedInterface.call( "unloadModule", service  );
+	QDBusInterface kdedInterface( QStringLiteral("org.kde.kded5"), QStringLiteral("/kded"), QStringLiteral("org.kde.kded5") );
+	QDBusReply<bool> reply = kdedInterface.call( QStringLiteral("unloadModule"), service  );
 
 	if ( reply.isValid() ) {
 		if ( reply.value() )

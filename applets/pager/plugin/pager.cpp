@@ -89,23 +89,23 @@ Pager::Pager(QObject *parent)
 
     m_timer = new QTimer(this);
     m_timer->setSingleShot(true);
-    connect(m_timer, SIGNAL(timeout()), this, SLOT(recalculateWindowRects()));
+    connect(m_timer, &QTimer::timeout, this, &Pager::recalculateWindowRects);
 
     connect(KWindowSystem::self(), SIGNAL(currentDesktopChanged(int)), this, SLOT(currentDesktopChanged(int)));
-    connect(KWindowSystem::self(), SIGNAL(windowAdded(WId)), this, SLOT(startTimerFast()));
-    connect(KWindowSystem::self(), SIGNAL(windowRemoved(WId)), this, SLOT(startTimerFast()));
-    connect(KWindowSystem::self(), SIGNAL(activeWindowChanged(WId)), this, SLOT(startTimerFast()));
-    connect(KWindowSystem::self(), SIGNAL(numberOfDesktopsChanged(int)), this, SLOT(numberOfDesktopsChanged(int)));
-    connect(KWindowSystem::self(), SIGNAL(desktopNamesChanged()), this, SLOT(desktopNamesChanged()));
-    connect(KWindowSystem::self(), SIGNAL(stackingOrderChanged()), this, SLOT(startTimerFast()));
+    connect(KWindowSystem::self(), &KWindowSystem::windowAdded, this, &Pager::startTimerFast);
+    connect(KWindowSystem::self(), &KWindowSystem::windowRemoved, this, &Pager::startTimerFast);
+    connect(KWindowSystem::self(), &KWindowSystem::activeWindowChanged, this, &Pager::startTimerFast);
+    connect(KWindowSystem::self(), &KWindowSystem::numberOfDesktopsChanged, this, &Pager::numberOfDesktopsChanged);
+    connect(KWindowSystem::self(), &KWindowSystem::desktopNamesChanged, this, &Pager::desktopNamesChanged);
+    connect(KWindowSystem::self(), &KWindowSystem::stackingOrderChanged, this, &Pager::startTimerFast);
     connect(KWindowSystem::self(), SIGNAL(windowChanged(WId,const ulong*)), this, SLOT(windowChanged(WId,const ulong*)));
     connect(KWindowSystem::self(), SIGNAL(showingDesktopChanged(bool)), this, SLOT(startTimer()));
-    connect(m_desktopWidget, SIGNAL(screenCountChanged(int)), SLOT(desktopsSizeChanged()));
-    connect(m_desktopWidget, SIGNAL(resized(int)), SLOT(desktopsSizeChanged()));
+    connect(m_desktopWidget, &QDesktopWidget::screenCountChanged, this, &Pager::desktopsSizeChanged);
+    connect(m_desktopWidget, &QDesktopWidget::resized, this, &Pager::desktopsSizeChanged);
 
     // connect to KWin's reloadConfig signal to get updates on the desktop layout
     QDBusConnection dbus = QDBusConnection::sessionBus();
-    dbus.connect(QString(), "/KWin", "org.kde.KWin", "reloadConfig",
+    dbus.connect(QString(), QStringLiteral("/KWin"), QStringLiteral("org.kde.KWin"), QStringLiteral("reloadConfig"),
                  this, SLOT(desktopsSizeChanged()));
 
     recalculateGridSizes(m_rows);
@@ -113,7 +113,7 @@ Pager::Pager(QObject *parent)
     setCurrentDesktop(KWindowSystem::currentDesktop());
 
     KActivities::Consumer *act = new KActivities::Consumer(this);
-    connect(act, SIGNAL(currentActivityChanged(QString)), this, SLOT(currentActivityChanged(QString)));
+    connect(act, &KActivities::Consumer::currentActivityChanged, this, &Pager::currentActivityChanged);
     m_currentActivity = act->currentActivity();
 }
 
@@ -395,7 +395,7 @@ void Pager::recalculateWindowRects()
         //check activity
         NETWinInfo netInfo(QX11Info::connection(), window, QX11Info::appRootWindow(), 0, NET::WM2Activities);
         QString result(netInfo.activities());
-        if (!result.isEmpty() && result != "00000000-0000-0000-0000-000000000000") {
+        if (!result.isEmpty() && result != QLatin1String("00000000-0000-0000-0000-000000000000")) {
             QStringList activities = result.split(',');
             if (!activities.contains(m_currentActivity)) {
                 continue;
@@ -620,7 +620,7 @@ QRect Pager::fixViewportPosition( const QRect& r )
 
 void Pager::openVirtualDesktopsKCM()
 {
-    QProcess::startDetached("kcmshell5", QStringList() << "desktop");
+    QProcess::startDetached(QStringLiteral("kcmshell5"), QStringList() << QStringLiteral("desktop"));
 }
 
 

@@ -504,20 +504,20 @@ Geometry parseGeometry(const QString &model)
     }
 
     qCritical() << "Failed to get geometry" << geometryParser.geom.getName() << "falling back to pc104";
-    return parseGeometry("pc104");
+    return parseGeometry(QStringLiteral("pc104"));
 }
 
 QString includeGeometry(QString geometry)
 {
-    QStringList lines = geometry.split("\n");
+    QStringList lines = geometry.split(QStringLiteral("\n"));
     int includeLine = -1;
     QString includeLineStr;
     QString startLine = lines[0];
     for (int i = 0; i < lines.size(); i++) {
         includeLineStr = lines[i];
-        lines[i] = lines[i].remove(" ");
-        lines[i] = lines[i].remove("\r");
-        if (lines[i].startsWith("include")) {
+        lines[i] = lines[i].remove(QStringLiteral(" "));
+        lines[i] = lines[i].remove(QStringLiteral("\r"));
+        if (lines[i].startsWith(QLatin1String("include"))) {
             includeLine = i;
             break;
         }
@@ -526,12 +526,12 @@ QString includeGeometry(QString geometry)
         return geometry;
     }
     geometry = geometry.remove(includeLineStr);
-    lines[includeLine] = lines[includeLine].remove("include");
-    lines[includeLine] = lines[includeLine].remove("\"");
-    lines[includeLine] = lines[includeLine].remove(")");
-    if (lines[includeLine].contains("(")) {
-        QString includeFile = lines[includeLine].split("(")[0];
-        QString includeGeom = lines[includeLine].split("(")[1];
+    lines[includeLine] = lines[includeLine].remove(QStringLiteral("include"));
+    lines[includeLine] = lines[includeLine].remove(QStringLiteral("\""));
+    lines[includeLine] = lines[includeLine].remove(QStringLiteral(")"));
+    if (lines[includeLine].contains(QStringLiteral("("))) {
+        QString includeFile = lines[includeLine].split(QStringLiteral("("))[0];
+        QString includeGeom = lines[includeLine].split(QStringLiteral("("))[1];
         qCDebug(KEYBOARD_PREVIEW) << "looking to include " << "geometryName" << includeGeom << "in" << includeFile;
         QString includeStr = getGeometry(includeFile, includeGeom);
         includeStr = getGeometryStrContent(includeStr);
@@ -546,8 +546,8 @@ QString includeGeometry(QString geometry)
 
 QString getGeometryStrContent(QString geometryStr)
 {
-    int k = geometryStr.indexOf("{");
-    int k2 = geometryStr.lastIndexOf("};");
+    int k = geometryStr.indexOf(QStringLiteral("{"));
+    int k2 = geometryStr.lastIndexOf(QLatin1String("};"));
     geometryStr = geometryStr.mid(k + 1, k2 - k - 2);
     return geometryStr;
 }
@@ -567,7 +567,7 @@ QString getGeometry(QString geometryFile, QString geometryName)
     QString gcontent = gfile.readAll();
     gfile.close();
 
-    QStringList gcontentList = gcontent.split("xkb_geometry ");
+    QStringList gcontentList = gcontent.split(QStringLiteral("xkb_geometry "));
 
     int current = 0;
     for (int i = 1; i < gcontentList.size(); i++) {
@@ -587,7 +587,7 @@ QString getGeometry(QString geometryFile, QString geometryName)
 QString findGeometryBaseDir()
 {
     QString xkbDir = Rules::findXkbDir();
-    return QString("%1/geometry/").arg(xkbDir);
+    return QStringLiteral("%1/geometry/").arg(xkbDir);
 }
 
 }

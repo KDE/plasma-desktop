@@ -43,7 +43,7 @@ private Q_SLOTS:
         QVERIFY( isoCodes != NULL );
         QVERIFY( ! isoCodes->getEntryList().isEmpty() );
 //        const IsoCodeEntry* isoEntry = isoCodes->getEntry(IsoCodes::attr_iso_639_2T_code, "eng");
-        const IsoCodeEntry* isoEntry = isoCodes->getEntry(IsoCodes::attr_iso_639_3_id, "eng");
+        const IsoCodeEntry* isoEntry = isoCodes->getEntry(IsoCodes::attr_iso_639_3_id, QStringLiteral("eng"));
         QVERIFY( isoEntry != NULL );
         QVERIFY( ! isoEntry->empty() );
 //        QCOMPARE( isoEntry->value(IsoCodes::attr_iso_639_2T_code), QString("eng") );
@@ -56,7 +56,7 @@ private Q_SLOTS:
     void testIso639_3_Codes() {
         QVERIFY( isoCodes != NULL );
         QVERIFY( ! isoCodes->getEntryList().isEmpty() );
-        const IsoCodeEntry* isoEntry = isoCodes->getEntry(IsoCodes::attr_iso_639_3_id, "ant");
+        const IsoCodeEntry* isoEntry = isoCodes->getEntry(IsoCodes::attr_iso_639_3_id, QStringLiteral("ant"));
         QVERIFY( isoEntry != NULL );
         QVERIFY( ! isoEntry->empty() );
         QVERIFY( isoEntry->value("name") != QString("ant") );

@@ -66,7 +66,7 @@ void CfgComponent::save(KConfig *cfg) {
 
 		KConfigGroup mainGroup = cfg->group(QByteArray());
 		QString serviceTypeToConfigure=mainGroup.readEntry("ServiceTypeToConfigure");
-		KConfig store(mainGroup.readPathEntry("storeInFile", "null"));
+		KConfig store(mainGroup.readPathEntry("storeInFile", QStringLiteral("null")));
 		KConfigGroup cg(&store, mainGroup.readEntry("valueSection"));
 		cg.writePathEntry(mainGroup.readEntry("valueName", "kcm_componenchooser_null"),
                                   m_lookupDict.value(ComponentSelector->currentText()));
@@ -91,7 +91,7 @@ void CfgComponent::load(KConfig *cfg) {
 		m_revLookupDict.insert((*tit)->desktopEntryName(), (*tit)->name());
 	}
 
-	KConfig store(mainGroup.readPathEntry("storeInFile","null"));
+	KConfig store(mainGroup.readPathEntry("storeInFile",QStringLiteral("null")));
         const KConfigGroup group(&store, mainGroup.readEntry("valueSection"));
 	QString setting = group.readEntry(mainGroup.readEntry("valueName","kcm_componenchooser_null"), QString());
 
@@ -127,21 +127,21 @@ ComponentChooser::ComponentChooser(QWidget *parent):
 	setupUi(this);
 	static_cast<QGridLayout*>(layout())->setRowStretch(1, 1);
 
-	const QStringList services=KGlobal::dirs()->findAllResources( "data","kcm_componentchooser/*.desktop",
+	const QStringList services=KGlobal::dirs()->findAllResources( "data",QStringLiteral("kcm_componentchooser/*.desktop"),
 															KStandardDirs::NoDuplicates);
 	for (QStringList::const_iterator it=services.constBegin(); it!=services.constEnd(); ++it)
 	{
 		KConfig cfg(*it, KConfig::SimpleConfig);
 		KConfigGroup cg = cfg.group(QByteArray());
 		QListWidgetItem *item = new QListWidgetItem(
-			QIcon::fromTheme(cg.readEntry("Icon",QString("preferences-desktop-default-applications"))), 
+			QIcon::fromTheme(cg.readEntry("Icon",QStringLiteral("preferences-desktop-default-applications"))), 
 			cg.readEntry("Name",i18n("Unknown")));
 		item->setData(Qt::UserRole, (*it));
 		ServiceChooser->addItem(item);
 	}
 	ServiceChooser->setFixedWidth(ServiceChooser->sizeHintForColumn(0) + 20);
 	ServiceChooser->sortItems();
-	connect(ServiceChooser,SIGNAL(currentItemChanged(QListWidgetItem*, QListWidgetItem*)),this,SLOT(slotServiceSelected(QListWidgetItem*)));
+	connect(ServiceChooser,&QListWidget::currentItemChanged,this,&ComponentChooser::slotServiceSelected);
 	ServiceChooser->setCurrentRow(0);
 	slotServiceSelected(ServiceChooser->item(0));
 
@@ -161,7 +161,7 @@ void ComponentChooser::slotServiceSelected(QListWidgetItem* it) {
 
 	QString cfgType=cfg.group(QByteArray()).readEntry("configurationType");
 	QWidget *newConfigWidget = 0;
-	if (cfgType.isEmpty() || (cfgType=="component"))
+	if (cfgType.isEmpty() || (cfgType==QLatin1String("component")))
 	{
 		if (!(configWidget && qobject_cast<CfgComponent*>(configWidget)))
 		{
@@ -174,7 +174,7 @@ void ComponentChooser::slotServiceSelected(QListWidgetItem* it) {
                         static_cast<CfgComponent*>(configWidget)->ChooserDocu->setText(i18n("Choose from the list below which component should be used by default for the %1 service.", it->text()));
                 }
 	}
-	else if (cfgType=="internal_email")
+	else if (cfgType==QLatin1String("internal_email"))
 	{
 		if (!(configWidget && qobject_cast<CfgEmailClient*>(configWidget)))
 		{
@@ -183,7 +183,7 @@ void ComponentChooser::slotServiceSelected(QListWidgetItem* it) {
 
 	}
 #ifdef Q_OS_UNIX
-	else if (cfgType=="internal_terminal")
+	else if (cfgType==QLatin1String("internal_terminal"))
 	{
 		if (!(configWidget && qobject_cast<CfgTerminalEmulator*>(configWidget)))
 		{
@@ -192,7 +192,7 @@ void ComponentChooser::slotServiceSelected(QListWidgetItem* it) {
 
 	}
 #if HAVE_X11
-	else if (cfgType=="internal_wm")
+	else if (cfgType==QLatin1String("internal_wm"))
 	{
 		if (!(configWidget && qobject_cast<CfgWm*>(configWidget)))
 		{
@@ -202,7 +202,7 @@ void ComponentChooser::slotServiceSelected(QListWidgetItem* it) {
 	}
 #endif
 #endif
-	else if (cfgType=="internal_filemanager")
+	else if (cfgType==QLatin1String("internal_filemanager"))
 	{
 		if (!(configWidget && qobject_cast<CfgFileManager*>(configWidget)))
 		{
@@ -210,7 +210,7 @@ void ComponentChooser::slotServiceSelected(QListWidgetItem* it) {
 		}
 
 	}
-	else if (cfgType=="internal_browser")
+	else if (cfgType==QLatin1String("internal_browser"))
 	{
 		if (!(configWidget && qobject_cast<CfgBrowser*>(configWidget)))
 		{

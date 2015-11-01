@@ -41,20 +41,20 @@ static QString setxkbmapExe;
 static bool xmodmapNotFound = false;
 static QString xmodmapExe;
 
-static const QString COMMAND_OPTIONS_SEPARATOR(",");
+static const QString COMMAND_OPTIONS_SEPARATOR(QStringLiteral(","));
 
 static
 QString getSetxkbmapExe()
 {
 	if( setxkbmapNotFound )
-		return "";
+		return QLatin1String("");
 
 	if( setxkbmapExe.isEmpty() ) {
 		setxkbmapExe = QStandardPaths::findExecutable(SETXKBMAP_EXEC);
 		if( setxkbmapExe.isEmpty() ) {
 			setxkbmapNotFound = true;
 			qCritical() << "Can't find" << SETXKBMAP_EXEC << "- keyboard layouts won't be configured";
-			return "";
+			return QLatin1String("");
 		}
 	}
 	return setxkbmapExe;
@@ -79,7 +79,7 @@ void executeXmodmap(const QString& configFileName)
     	KProcess xmodmapProcess;
     	xmodmapProcess << xmodmapExe;
     	xmodmapProcess << configFileName;
-    	qCDebug(KCM_KEYBOARD) << "Executing" << xmodmapProcess.program().join(" ");
+    	qCDebug(KCM_KEYBOARD) << "Executing" << xmodmapProcess.program().join(QStringLiteral(" "));
     	if( xmodmapProcess.execute() != 0 ) {
     		qCritical() << "Failed to execute " << xmodmapProcess.program();
     	}
@@ -92,7 +92,7 @@ void restoreXmodmap()
 	// TODO: is just home .Xmodmap enough or should system be involved too?
 	//    QString configFileName = QDir("/etc/X11/xinit").filePath(".Xmodmap");
 	//    executeXmodmap(configFileName);
-	QString configFileName = QDir::home().filePath(".Xmodmap");
+	QString configFileName = QDir::home().filePath(QStringLiteral(".Xmodmap"));
 	executeXmodmap(configFileName);
 }
 
@@ -107,13 +107,13 @@ bool XkbHelper::runConfigLayoutCommand(const QStringList& setxkbmapCommandArgume
 	int res = setxkbmapProcess.execute();
 
 	if( res == 0 ) {	// restore Xmodmap mapping reset by setxkbmap
-		qCDebug(KCM_KEYBOARD) << "Executed successfully in " << timer.elapsed() << "ms" << setxkbmapProcess.program().join(" ");
+		qCDebug(KCM_KEYBOARD) << "Executed successfully in " << timer.elapsed() << "ms" << setxkbmapProcess.program().join(QStringLiteral(" "));
 		restoreXmodmap();
 		qCDebug(KCM_KEYBOARD) << "\t and with xmodmap" << timer.elapsed() << "ms";
 	    return true;
 	}
 	else {
-		qCritical() << "Failed to run" << setxkbmapProcess.program().join(" ") << "return code:" << res;
+		qCritical() << "Failed to run" << setxkbmapProcess.program().join(QStringLiteral(" ")) << "return code:" << res;
 	}
 	return false;
 }
@@ -128,10 +128,10 @@ bool XkbHelper::initializeKeyboardLayouts(const QList<LayoutUnit>& layoutUnits)
 	}
 
 	QStringList setxkbmapCommandArguments;
-	setxkbmapCommandArguments.append("-layout");
+	setxkbmapCommandArguments.append(QStringLiteral("-layout"));
 	setxkbmapCommandArguments.append(layouts.join(COMMAND_OPTIONS_SEPARATOR));
-	if( ! variants.join("").isEmpty() ) {
-		setxkbmapCommandArguments.append("-variant");
+	if( ! variants.join(QLatin1String("")).isEmpty() ) {
+		setxkbmapCommandArguments.append(QStringLiteral("-variant"));
 		setxkbmapCommandArguments.append(variants.join(COMMAND_OPTIONS_SEPARATOR));
 	}
 
@@ -145,7 +145,7 @@ bool XkbHelper::initializeKeyboardLayouts(KeyboardConfig& config)
 		XkbConfig xkbConfig;
 		X11Helper::getGroupNames(QX11Info::display(), &xkbConfig, X11Helper::MODEL_ONLY);
 		if( xkbConfig.keyboardModel != config.keyboardModel ) {
-			setxkbmapCommandArguments.append("-model");
+			setxkbmapCommandArguments.append(QStringLiteral("-model"));
 			setxkbmapCommandArguments.append(config.keyboardModel);
 		}
 	}
@@ -158,18 +158,18 @@ bool XkbHelper::initializeKeyboardLayouts(KeyboardConfig& config)
 			variants.append(layoutUnit.variant);
 		}
 
-		setxkbmapCommandArguments.append("-layout");
+		setxkbmapCommandArguments.append(QStringLiteral("-layout"));
 		setxkbmapCommandArguments.append(layouts.join(COMMAND_OPTIONS_SEPARATOR));
-		if( ! variants.join("").isEmpty() ) {
-			setxkbmapCommandArguments.append("-variant");
+		if( ! variants.join(QLatin1String("")).isEmpty() ) {
+			setxkbmapCommandArguments.append(QStringLiteral("-variant"));
 			setxkbmapCommandArguments.append(variants.join(COMMAND_OPTIONS_SEPARATOR));
 		}
 	}
 	if( config.resetOldXkbOptions ) {
-		setxkbmapCommandArguments.append("-option");
+		setxkbmapCommandArguments.append(QStringLiteral("-option"));
 	}
 	if( ! config.xkbOptions.isEmpty() ) {
-		setxkbmapCommandArguments.append("-option");
+		setxkbmapCommandArguments.append(QStringLiteral("-option"));
 		setxkbmapCommandArguments.append(config.xkbOptions.join(COMMAND_OPTIONS_SEPARATOR));
 	}
 
@@ -186,13 +186,13 @@ bool XkbHelper::preInitialize()
 {
     // stop ibus so it does not mess with our layouts, we can remove this when we integrate IM into keyboard module
 
-    QString ibusExe = QStandardPaths::findExecutable("ibus");
+    QString ibusExe = QStandardPaths::findExecutable(QStringLiteral("ibus"));
     if( ibusExe.isEmpty() ) {
         return 0;
     }
 
     KProcess ibusProcess;
-    ibusProcess << ibusExe << "exit";
+    ibusProcess << ibusExe << QStringLiteral("exit");
     ibusProcess.setOutputChannelMode(KProcess::SeparateChannels);
     int res = ibusProcess.execute();
 

@@ -36,7 +36,7 @@ Positioner::Positioner(QObject *parent): QAbstractItemModel(parent)
 {
     m_updatePositionsTimer->setSingleShot(true);
     m_updatePositionsTimer->setInterval(0);
-    connect(m_updatePositionsTimer, SIGNAL(timeout()), this, SLOT(updatePositions()));
+    connect(m_updatePositionsTimer, &QTimer::timeout, this, &Positioner::updatePositions);
 }
 
 Positioner::~Positioner()
@@ -865,53 +865,53 @@ void Positioner::flushPendingChanges()
 
 void Positioner::connectSignals(FolderModel* model)
 {
-    connect(model, SIGNAL(dataChanged(QModelIndex,QModelIndex,QVector<int>)),
-            this, SLOT(sourceDataChanged(QModelIndex,QModelIndex,QVector<int>)),
+    connect(model, &QAbstractItemModel::dataChanged,
+            this, &Positioner::sourceDataChanged,
             Qt::UniqueConnection);
-    connect(model, SIGNAL(rowsAboutToBeInserted(QModelIndex,int,int)),
-            this, SLOT(sourceRowsAboutToBeInserted(QModelIndex,int,int)),
+    connect(model, &QAbstractItemModel::rowsAboutToBeInserted,
+            this, &Positioner::sourceRowsAboutToBeInserted,
             Qt::UniqueConnection);
-    connect(model, SIGNAL(rowsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)),
-            this, SLOT(sourceRowsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)),
+    connect(model, &QAbstractItemModel::rowsAboutToBeMoved,
+            this, &Positioner::sourceRowsAboutToBeMoved,
             Qt::UniqueConnection);
-    connect(model, SIGNAL(rowsAboutToBeRemoved(QModelIndex,int,int)),
-            this, SLOT(sourceRowsAboutToBeRemoved(QModelIndex,int,int)),
+    connect(model, &QAbstractItemModel::rowsAboutToBeRemoved,
+            this, &Positioner::sourceRowsAboutToBeRemoved,
             Qt::UniqueConnection);
-    connect(model, SIGNAL(layoutAboutToBeChanged(QList<QPersistentModelIndex>,QAbstractItemModel::LayoutChangeHint)),
-            this, SLOT(sourceLayoutAboutToBeChanged(QList<QPersistentModelIndex>,QAbstractItemModel::LayoutChangeHint)),
+    connect(model, &QAbstractItemModel::layoutAboutToBeChanged,
+            this, &Positioner::sourceLayoutAboutToBeChanged,
             Qt::UniqueConnection);
-    connect(model, SIGNAL(rowsInserted(QModelIndex,int,int)),
-            this, SLOT(sourceRowsInserted(QModelIndex,int,int)),
+    connect(model, &QAbstractItemModel::rowsInserted,
+            this, &Positioner::sourceRowsInserted,
             Qt::UniqueConnection);
-    connect(model, SIGNAL(rowsMoved(QModelIndex,int,int,QModelIndex,int)),
-            this, SLOT(sourceRowsMoved(QModelIndex,int,int,QModelIndex,int)),
+    connect(model, &QAbstractItemModel::rowsMoved,
+            this, &Positioner::sourceRowsMoved,
             Qt::UniqueConnection);
-    connect(model, SIGNAL(rowsRemoved(QModelIndex,int,int)),
-            this, SLOT(sourceRowsRemoved(QModelIndex,int,int)),
+    connect(model, &QAbstractItemModel::rowsRemoved,
+            this, &Positioner::sourceRowsRemoved,
             Qt::UniqueConnection);
-    connect(model, SIGNAL(layoutChanged(QList<QPersistentModelIndex>,QAbstractItemModel::LayoutChangeHint)),
-            this, SLOT(sourceLayoutChanged(QList<QPersistentModelIndex>,QAbstractItemModel::LayoutChangeHint)),
+    connect(model, &QAbstractItemModel::layoutChanged,
+            this, &Positioner::sourceLayoutChanged,
             Qt::UniqueConnection);
 }
 
 void Positioner::disconnectSignals(FolderModel* model)
 {
-    disconnect(model, SIGNAL(dataChanged(QModelIndex,QModelIndex,QVector<int>)),
-            this, SLOT(sourceDataChanged(QModelIndex,QModelIndex,QVector<int>)));
-    disconnect(model, SIGNAL(rowsAboutToBeInserted(QModelIndex,int,int)),
-            this, SLOT(sourceRowsAboutToBeInserted(QModelIndex,int,int)));
-    disconnect(model, SIGNAL(rowsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)),
-            this, SLOT(sourceRowsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)));
-    disconnect(model, SIGNAL(rowsAboutToBeRemoved(QModelIndex,int,int)),
-            this, SLOT(sourceRowsAboutToBeRemoved(QModelIndex,int,int)));
-    disconnect(model, SIGNAL(layoutAboutToBeChanged(QList<QPersistentModelIndex>,QAbstractItemModel::LayoutChangeHint)),
-            this, SLOT(sourceLayoutAboutToBeChanged(QList<QPersistentModelIndex>,QAbstractItemModel::LayoutChangeHint)));
-    disconnect(model, SIGNAL(rowsInserted(QModelIndex,int,int)),
-            this, SLOT(sourceRowsInserted(QModelIndex,int,int)));
-    disconnect(model, SIGNAL(rowsMoved(QModelIndex,int,int,QModelIndex,int)),
-            this, SLOT(sourceRowsMoved(QModelIndex,int,int,QModelIndex,int)));
-    disconnect(model, SIGNAL(rowsRemoved(QModelIndex,int,int)),
-            this, SLOT(sourceRowsRemoved(QModelIndex,int,int)));
-    disconnect(model, SIGNAL(layoutChanged(QList<QPersistentModelIndex>,QAbstractItemModel::LayoutChangeHint)),
-            this, SLOT(sourceLayoutChanged(QList<QPersistentModelIndex>,QAbstractItemModel::LayoutChangeHint)));
+    disconnect(model, &QAbstractItemModel::dataChanged,
+            this, &Positioner::sourceDataChanged);
+    disconnect(model, &QAbstractItemModel::rowsAboutToBeInserted,
+            this, &Positioner::sourceRowsAboutToBeInserted);
+    disconnect(model, &QAbstractItemModel::rowsAboutToBeMoved,
+            this, &Positioner::sourceRowsAboutToBeMoved);
+    disconnect(model, &QAbstractItemModel::rowsAboutToBeRemoved,
+            this, &Positioner::sourceRowsAboutToBeRemoved);
+    disconnect(model, &QAbstractItemModel::layoutAboutToBeChanged,
+            this, &Positioner::sourceLayoutAboutToBeChanged);
+    disconnect(model, &QAbstractItemModel::rowsInserted,
+            this, &Positioner::sourceRowsInserted);
+    disconnect(model, &QAbstractItemModel::rowsMoved,
+            this, &Positioner::sourceRowsMoved);
+    disconnect(model, &QAbstractItemModel::rowsRemoved,
+            this, &Positioner::sourceRowsRemoved);
+    disconnect(model, &QAbstractItemModel::layoutChanged,
+            this, &Positioner::sourceLayoutChanged);
 }

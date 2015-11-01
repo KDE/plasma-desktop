@@ -60,7 +60,7 @@ QString KeySymHelper::getKeySymbol(const QString &opton)
 
     if (ucs == -1) {
         nill++;
-        qWarning() << "No mapping from keysym:" << QString("0x%1").arg(keysym, 0, 16) << "named:" << opton << "to UCS";
+        qWarning() << "No mapping from keysym:" << QStringLiteral("0x%1").arg(keysym, 0, 16) << "named:" << opton << "to UCS";
     }
 
     QString ucsStr = QString(QChar((int)ucs));

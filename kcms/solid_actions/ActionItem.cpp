@@ -48,7 +48,7 @@ ActionItem::ActionItem(const QString& pathToDesktop, const QString& action, QObj
     configGroups.append(desktopFileWrite->actionGroup(actionName));
     actionGroups.insertMulti(ActionItem::GroupAction, &configGroups.last());
 
-    const QString predicateString = readKey(ActionItem::GroupDesktop, "X-KDE-Solid-Predicate", "");
+    const QString predicateString = readKey(ActionItem::GroupDesktop, QStringLiteral("X-KDE-Solid-Predicate"), QLatin1String(""));
     predicateItem = Solid::Predicate::fromString( predicateString );
 }
 
@@ -62,22 +62,22 @@ ActionItem::~ActionItem()
 
 bool ActionItem::isUserSupplied() const
 {
-    return hasKey(ActionItem::GroupDesktop, "X-KDE-Action-Custom");
+    return hasKey(ActionItem::GroupDesktop, QStringLiteral("X-KDE-Action-Custom"));
 }
 
 QString ActionItem::icon() const
 {
-    return readKey(ActionItem::GroupAction, "Icon", "");
+    return readKey(ActionItem::GroupAction, QStringLiteral("Icon"), QLatin1String(""));
 }
 
 QString ActionItem::exec() const
 {
-    return readKey(ActionItem::GroupAction, "Exec", "");
+    return readKey(ActionItem::GroupAction, QStringLiteral("Exec"), QLatin1String(""));
 }
 
 QString ActionItem::name() const
 {
-    return readKey(ActionItem::GroupAction, "Name", "");
+    return readKey(ActionItem::GroupAction, QStringLiteral("Name"), QLatin1String(""));
 }
 
 Solid::Predicate ActionItem::predicate() const
@@ -94,27 +94,27 @@ QString ActionItem::involvedTypes() const
         deviceTypes << actData->nameFromInterface( devType );
     }
 
-    return deviceTypes.join(", ");
+    return deviceTypes.join(QStringLiteral(", "));
 }
 
 void ActionItem::setIcon(const QString& nameOfIcon)
 {
-    setKey(ActionItem::GroupAction, "Icon", nameOfIcon);
+    setKey(ActionItem::GroupAction, QStringLiteral("Icon"), nameOfIcon);
 }
 
 void ActionItem::setName(const QString& nameOfAction)
 {
-    setKey(ActionItem::GroupAction, "Name", nameOfAction);
+    setKey(ActionItem::GroupAction, QStringLiteral("Name"), nameOfAction);
 }
 
 void ActionItem::setExec(const QString& execUrl)
 {
-    setKey(ActionItem::GroupAction, "Exec", execUrl);
+    setKey(ActionItem::GroupAction, QStringLiteral("Exec"), execUrl);
 }
 
 void ActionItem::setPredicate( const QString& newPredicate )
 {
-    setKey(ActionItem::GroupDesktop, "X-KDE-Solid-Predicate", newPredicate);
+    setKey(ActionItem::GroupDesktop, QStringLiteral("X-KDE-Solid-Predicate"), newPredicate);
     predicateItem = Solid::Predicate::fromString( newPredicate );
 }
 

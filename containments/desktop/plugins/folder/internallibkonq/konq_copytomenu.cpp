@@ -80,13 +80,13 @@ void KonqCopyToMenu::addActionsTo(QMenu* menu)
 {
     KMenu* mainCopyMenu = new KonqCopyToMainMenu(menu, d, Copy);
     mainCopyMenu->setTitle(i18nc("@title:menu", "Copy To"));
-    mainCopyMenu->menuAction()->setObjectName( QLatin1String("copyTo_submenu" )); // for the unittest
+    mainCopyMenu->menuAction()->setObjectName( QStringLiteral("copyTo_submenu" )); // for the unittest
     menu->addMenu(mainCopyMenu);
 
     if (!d->m_readOnly) {
         KMenu* mainMoveMenu = new KonqCopyToMainMenu(menu, d, Move);
         mainMoveMenu->setTitle(i18nc("@title:menu", "Move To"));
-        mainMoveMenu->menuAction()->setObjectName( QLatin1String("moveTo_submenu" )); // for the unittest
+        mainMoveMenu->menuAction()->setObjectName( QStringLiteral("moveTo_submenu" )); // for the unittest
         menu->addMenu(mainMoveMenu);
     }
 }
@@ -110,14 +110,14 @@ void KonqCopyToMainMenu::slotAboutToShow()
     // Home Folder
     subMenu = new KonqCopyToDirectoryMenu(this, this, QDir::homePath());
     subMenu->setTitle(i18nc("@title:menu", "Home Folder"));
-    subMenu->setIcon(QIcon::fromTheme("go-home"));
+    subMenu->setIcon(QIcon::fromTheme(QStringLiteral("go-home")));
     addMenu(subMenu);
 
     // Root Folder
 #ifndef Q_OS_WIN
     subMenu = new KonqCopyToDirectoryMenu(this, this, QDir::rootPath());
     subMenu->setTitle(i18nc("@title:menu", "Root Folder"));
-    subMenu->setIcon(QIcon::fromTheme("folder-red"));
+    subMenu->setIcon(QIcon::fromTheme(QStringLiteral("folder-red")));
     addMenu(subMenu);
 #else
     foreach ( const QFileInfo& info, QDir::drives() ) {
@@ -172,7 +172,7 @@ void KonqCopyToMainMenu::slotAboutToShow()
 
 void KonqCopyToMainMenu::slotBrowse()
 {
-    const QUrl dest = KFileDialog::getExistingDirectoryUrl(QUrl("kfiledialog:///copyto"), // FIXME
+    const QUrl dest = KFileDialog::getExistingDirectoryUrl(QUrl(QStringLiteral("kfiledialog:///copyto")), // FIXME
                                                            d->m_parentWidget ? d->m_parentWidget : this);
     if (!dest.isEmpty()) {
         copyOrMoveTo(dest);
@@ -240,7 +240,7 @@ void KonqCopyToDirectoryMenu::slotAboutToShow()
     // and we only care about local directories so we use QDir directly.
     QDir dir(m_path);
     const QStringList entries = dir.entryList(QDir::Dirs | QDir::NoDotAndDotDot, QDir::LocaleAware);
-    KMimeType::Ptr dirMime = KMimeType::mimeType("inode/directory");
+    KMimeType::Ptr dirMime = KMimeType::mimeType(QStringLiteral("inode/directory"));
     Q_FOREACH(const QString& subDir, entries) {
         QString subPath = m_path;
         if (!subPath.endsWith('/'))
@@ -250,7 +250,7 @@ void KonqCopyToDirectoryMenu::slotAboutToShow()
         QString menuTitle(subDir);
         // Replace '&' by "&&" to make sure that '&' inside the directory name is displayed
         // correctly and not misinterpreted as an indicator for a keyboard shortcut
-        subMenu->setTitle(menuTitle.replace('&', "&&"));
+        subMenu->setTitle(menuTitle.replace('&', QLatin1String("&&")));
         const QString iconName = dirMime->iconName();
         subMenu->setIcon(QIcon::fromTheme(iconName));
         if (QFileInfo(subPath).isSymLink()) { // I hope this isn't too slow...

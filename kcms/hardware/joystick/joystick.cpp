@@ -44,10 +44,10 @@ Joystick::Joystick(QWidget *parent, const QVariantList &)
   : KCModule(parent)
 {
   setButtons(Help);
-  setAboutData(new KAboutData("kcmjoystick", i18n("KDE Joystick Control Module"), "1.0",
+  setAboutData(new KAboutData(QStringLiteral("kcmjoystick"), i18n("KDE Joystick Control Module"), QStringLiteral("1.0"),
                                i18n("KDE System Settings Module to test Joysticks"),
                                KAboutLicense::GPL, i18n("(c) 2004, Martin Koller"),
-                               QString(), "kollix@aon.at"));
+                               QString(), QStringLiteral("kollix@aon.at")));
 
   setQuickHelp( i18n("<h1>Joystick</h1>"
               "This module helps to check if your joystick is working correctly.<br />"

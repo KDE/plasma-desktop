@@ -33,5 +33,5 @@ ProcessRunner::~ProcessRunner()
 
 void ProcessRunner::runMenuEditor()
 {
-    KProcess::startDetached("kmenuedit");
+    KProcess::startDetached(QStringLiteral("kmenuedit"));
 }

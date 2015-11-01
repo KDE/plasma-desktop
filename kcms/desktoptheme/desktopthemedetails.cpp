@@ -65,7 +65,7 @@ DesktopThemeDetails::DesktopThemeDetails(QWidget* parent)
       m_themeModel(0)
 
 {
-    setWindowIcon(QIcon::fromTheme("preferences-desktop"));
+    setWindowIcon(QIcon::fromTheme(QStringLiteral("preferences-desktop")));
     setupUi(this);
 
     QFont font = QFont();
@@ -91,7 +91,7 @@ DesktopThemeDetails::DesktopThemeDetails(QWidget* parent)
 
     connect(m_newThemeName, &KLineEdit::editingFinished, this, &DesktopThemeDetails::newThemeInfoChanged);
 
-    m_baseTheme = "default";
+    m_baseTheme = QStringLiteral("default");
     m_themeCustomized = false;
     resetThemeDetails();
     adjustSize();
@@ -109,14 +109,14 @@ void DesktopThemeDetails::cleanup()
 void DesktopThemeDetails::reloadConfig()
 {
     // Theme
-    KConfigGroup cfg = KConfigGroup(KSharedConfig::openConfig("plasmarc"), "Theme");
+    KConfigGroup cfg = KConfigGroup(KSharedConfig::openConfig(QStringLiteral("plasmarc")), "Theme");
     const QString theme = cfg.readEntry("name", "default");
     m_theme->setCurrentIndex(m_themeModel->indexOf(theme));
 }
 
 void DesktopThemeDetails::resetToDefaultTheme()
 {
-    m_theme->setCurrentIndex(m_themeModel->indexOf("default"));
+    m_theme->setCurrentIndex(m_themeModel->indexOf(QStringLiteral("default")));
 }
 
 void DesktopThemeDetails::reloadModel()
@@ -129,13 +129,13 @@ void DesktopThemeDetails::save()
     QString themeRoot;
     KStandardDirs dirs;
     if (m_newThemeName->text().isEmpty()) {
-        themeRoot = ".customized";
+        themeRoot = QStringLiteral(".customized");
         //Toggle customized theme directory name to ensure theme reload
         if (QDir(dirs.locateLocal("data", "plasma/desktoptheme/" + themeRoot + '/', false)).exists()) {
             themeRoot = themeRoot + '1';
         }
     } else {
-        themeRoot = m_newThemeName->text().replace(' ',"_").remove(QRegExp("[^A-Za-z0-9_]"));
+        themeRoot = m_newThemeName->text().replace(' ',QLatin1String("_")).remove(QRegExp(QStringLiteral("[^A-Za-z0-9_]")));
     }
 
     //Save theme items
@@ -169,7 +169,7 @@ void DesktopThemeDetails::save()
         while (i.hasNext()) {
             i.next();
             //Get root directory where item should reside (relative to theme root)
-            QString itemRoot = "";
+            QString itemRoot = QLatin1String("");
             if (m_itemPaths[i.key()].lastIndexOf('/', -1) != -1) {
                 itemRoot= m_itemPaths[i.key()].left(m_itemPaths[i.key()].lastIndexOf('/', -1));
             }
@@ -250,7 +250,7 @@ void DesktopThemeDetails::save()
 void DesktopThemeDetails::removeTheme()
 {
     bool removeTheme = true;
-    KConfigGroup cfg = KConfigGroup(KSharedConfig::openConfig("plasmarc"), "Theme");
+    KConfigGroup cfg = KConfigGroup(KSharedConfig::openConfig(QStringLiteral("plasmarc")), "Theme");
     QString activeTheme = cfg.readEntry("name", "default");
     const QString theme = m_theme->currentIndex().data(ThemeModel::PackageNameRole).toString();
     const QString themeName = m_theme->currentIndex().data(Qt::DisplayRole).toString();
@@ -261,7 +261,7 @@ void DesktopThemeDetails::removeTheme()
             removeTheme = false;
         }
     } else {
-        if (theme == "default") {
+        if (theme == QLatin1String("default")) {
             KMessageBox::information(this, i18n("Removal of the default desktop theme is not allowed."), i18n("Remove Desktop Theme"));
             removeTheme = false;
         } else {
@@ -274,8 +274,8 @@ void DesktopThemeDetails::removeTheme()
     KStandardDirs dirs;
     if (removeTheme) {
         if (theme == activeTheme) {
-            setDesktopTheme("default");
-            activeTheme = "default";
+            setDesktopTheme(QStringLiteral("default"));
+            activeTheme = QStringLiteral("default");
         }
         if (QDir(dirs.locateLocal("data", "plasma/desktoptheme/" + theme, false)).exists()) {
             KIO::DeleteJob *deleteTheme = KIO::del(QUrl::fromLocalFile(dirs.locateLocal("data", "plasma/desktoptheme/" + theme, false)), KIO::HideProgressInfo);
@@ -292,7 +292,7 @@ void DesktopThemeDetails::exportTheme()
     const QString theme = m_theme->currentIndex().data(ThemeModel::PackageNameRole).toString();
 
     if (m_themeCustomized ||
-        (isCustomized(theme) && m_newThemeName->text() == "")) {
+        (isCustomized(theme) && m_newThemeName->text() == QLatin1String(""))) {
         KMessageBox::information(this, i18n("Please apply theme item changes (with a new theme name) before attempting to export theme."), i18n("Export Desktop Theme"));
     } else {
         QString themeStoragePath = theme;
@@ -300,7 +300,7 @@ void DesktopThemeDetails::exportTheme()
         const QString themePath = QStandardPaths::locate(QStandardPaths::GenericDataLocation, "plasma/desktoptheme/" + themeStoragePath + "/metadata.desktop");
         if (!themePath.isEmpty()){
             QString expFileName = QFileDialog::getSaveFileName(this, i18n("Export theme to file"), QString(), i18n("Archive (*.zip)"));
-            if (!expFileName.endsWith(".zip"))
+            if (!expFileName.endsWith(QLatin1String(".zip")))
                 expFileName = expFileName + ".zip";
             if (!expFileName.isEmpty()) {
                 KUrl path(themePath);
@@ -329,7 +329,7 @@ void DesktopThemeDetails::loadThemeItems()
     // Get installed themes
     m_themes.clear(); // clear installed theme list
     m_themeRoots.clear(); // clear installed theme root paths
-    QStringList themes = dirs.findAllResources("data", "plasma/desktoptheme/*/metadata.desktop",
+    QStringList themes = dirs.findAllResources("data", QStringLiteral("plasma/desktoptheme/*/metadata.desktop"),
                                                KStandardDirs::NoDuplicates);
 
 
@@ -377,7 +377,7 @@ void DesktopThemeDetails::loadThemeItems()
             while (!in.atEnd()) {
                 line = in.readLine();
                 settingsPair = line.split('=');
-                if (settingsPair.at(0) == "baseTheme") {
+                if (settingsPair.at(0) == QLatin1String("baseTheme")) {
                     m_baseTheme = settingsPair.at(1);
                 } else {
                     if (m_themeRoots.key(settingsPair.at(1), -1) != -1) { // theme for current item exists
@@ -503,13 +503,13 @@ void DesktopThemeDetails::resetThemeDetails()
     if (!author.isEmpty()) {
         m_themeInfoAuthor->setText(i18n(" Author: %1",author));
     } else {
-        m_themeInfoAuthor->setText("");
+        m_themeInfoAuthor->setText(QLatin1String(""));
     }
     QString version = m_theme->currentIndex().data(ThemeModel::PackageVersionRole).toString();
     if (!version.isEmpty()) {
        m_themeInfoVersion->setText(i18n("Version: %1",version));
     } else {
-       m_themeInfoVersion->setText("");
+       m_themeInfoVersion->setText(QLatin1String(""));
     }
 
     loadThemeItems();
@@ -537,7 +537,7 @@ void DesktopThemeDetails::toggleAdvancedVisible()
 }
 
 bool DesktopThemeDetails::isCustomized(const QString& theme) {
-    if (theme == ".customized" || theme == ".customized1") {
+    if (theme == QLatin1String(".customized") || theme == QLatin1String(".customized1")) {
         return true;
     } else {
         return false;
@@ -549,12 +549,12 @@ void DesktopThemeDetails::clearCustomized(const QString& themeRoot) {
 
     if ((isCustomized(themeRoot))) {
         // Remove both possible unnamed customized directories
-        if (QDir(dirs.locateLocal("data", "plasma/desktoptheme/.customized", false)).exists()) {
-            KIO::DeleteJob *clearCustom = KIO::del(QUrl::fromLocalFile(dirs.locateLocal("data", "plasma/desktoptheme/.customized", false)), KIO::HideProgressInfo);
+        if (QDir(dirs.locateLocal("data", QStringLiteral("plasma/desktoptheme/.customized"), false)).exists()) {
+            KIO::DeleteJob *clearCustom = KIO::del(QUrl::fromLocalFile(dirs.locateLocal("data", QStringLiteral("plasma/desktoptheme/.customized"), false)), KIO::HideProgressInfo);
             KIO::NetAccess::synchronousRun(clearCustom, this);
         }
-        if (QDir(dirs.locateLocal("data", "plasma/desktoptheme/.customized1", false)).exists()) {
-            KIO::DeleteJob *clearCustom1 = KIO::del(QUrl::fromLocalFile(dirs.locateLocal("data", "plasma/desktoptheme/.customized1", false)), KIO::HideProgressInfo);
+        if (QDir(dirs.locateLocal("data", QStringLiteral("plasma/desktoptheme/.customized1"), false)).exists()) {
+            KIO::DeleteJob *clearCustom1 = KIO::del(QUrl::fromLocalFile(dirs.locateLocal("data", QStringLiteral("plasma/desktoptheme/.customized1"), false)), KIO::HideProgressInfo);
             KIO::NetAccess::synchronousRun(clearCustom1, this);
         }
     } else {
@@ -578,7 +578,7 @@ QString DesktopThemeDetails::displayedItemText(int item) {
 void DesktopThemeDetails::themeSelectionChanged(const QItemSelection newSelection, const QItemSelection oldSelection)
 {
     QString theme = m_theme->currentIndex().data(ThemeModel::PackageNameRole).toString();
-    if (theme == "default") {
+    if (theme == QLatin1String("default")) {
         m_removeThemeButton->setEnabled(false);
     } else {
         m_removeThemeButton->setEnabled(true);
@@ -590,9 +590,9 @@ void DesktopThemeDetails::themeSelectionChanged(const QItemSelection newSelectio
 
 void DesktopThemeDetails::setDesktopTheme(QString themeRoot)
 {
-    KConfig config(QStandardPaths::locate(QStandardPaths::ConfigLocation, "plasmarc"));
+    KConfig config(QStandardPaths::locate(QStandardPaths::ConfigLocation, QStringLiteral("plasmarc")));
     KConfigGroup cg = KConfigGroup(&config, "Theme");
-    if (themeRoot == "default") {
+    if (themeRoot == QLatin1String("default")) {
         cg.deleteEntry("name");
     } else {
         cg.writeEntry("name", themeRoot);

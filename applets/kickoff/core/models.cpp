@@ -83,7 +83,7 @@ QStandardItem *StandardItemFactory::createItemForUrl(const QString& urlString, D
         item = new QStandardItem;
         KDesktopFile desktopFile(url.toLocalFile());
         item->setText(QFileInfo(urlString.mid(0, urlString.lastIndexOf('.'))).completeBaseName());
-        item->setIcon(QIcon::fromTheme(desktopFile.readIcon(), QIcon::fromTheme("unknown")));
+        item->setIcon(QIcon::fromTheme(desktopFile.readIcon(), QIcon::fromTheme(QStringLiteral("unknown"))));
 
         //FIXME: desktopUrl is a hack around borkage in KRecentDocuments which
         //       stores a path in the URL field!
@@ -101,7 +101,7 @@ QStandardItem *StandardItemFactory::createItemForUrl(const QString& urlString, D
         item->setData(subTitle, Kickoff::SubTitleRole);
 
         setSpecialUrlProperties(desktopUrl, item);
-    } else if (url.scheme() == "leave") {
+    } else if (url.scheme() == QLatin1String("leave")) {
         item = LeaveModel::createStandardItem(urlString);
     } else {
         item = new QStandardItem;
@@ -128,7 +128,7 @@ void StandardItemFactory::setSpecialUrlProperties(const KUrl& url, QStandardItem
     // specially handled URLs
     if (homeUrl() && url == *homeUrl()) {
         item->setText(i18n("Home Folder"));
-        item->setIcon(QIcon::fromTheme("user-home"));
+        item->setIcon(QIcon::fromTheme(QStringLiteral("user-home")));
     } else if (remoteUrl() && url == *remoteUrl()) {
         item->setText(i18n("Network Folders"));
     }
@@ -156,7 +156,7 @@ QStandardItem *StandardItemFactory::createItemForService(KService::Ptr service, 
     QString appName = service->name();
     bool nameFirst = displayOrder == NameBeforeDescription;
     appItem->setText(nameFirst || genericName.isEmpty() ? appName : genericName);
-    appItem->setIcon(QIcon::fromTheme(service->icon(), QIcon::fromTheme("unknown")));
+    appItem->setIcon(QIcon::fromTheme(service->icon(), QIcon::fromTheme(QStringLiteral("unknown"))));
     appItem->setData(service->entryPath(), Kickoff::UrlRole);
 
     if (nameFirst) {
@@ -177,8 +177,8 @@ bool Kickoff::isLaterVersion(KService::Ptr first , KService::Ptr second)
 {
     // a very crude heuristic using the .desktop path names
     // which only understands kde3 vs kde4
-    bool firstIsKde4 = first->entryPath().contains("kde4");
-    bool secondIsKde4 = second->entryPath().contains("kde4");
+    bool firstIsKde4 = first->entryPath().contains(QStringLiteral("kde4"));
+    bool secondIsKde4 = second->entryPath().contains(QStringLiteral("kde4"));
 
     return firstIsKde4 && !secondIsKde4;
 }
@@ -187,7 +187,7 @@ QStringList Kickoff::systemApplicationList()
 {
     KConfigGroup appsGroup = componentData().config()->group("SystemApplications");
     QStringList apps;
-    apps << "systemsettings";
+    apps << QStringLiteral("systemsettings");
     apps << appsGroup.readEntry("DesktopFiles", apps);
     apps.removeDuplicates();
     return apps;

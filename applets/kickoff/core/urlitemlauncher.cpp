@@ -60,9 +60,9 @@ class GenericItemHandler : public UrlItemHandler
 {
 public:
     virtual bool openUrl(const KUrl& url) {
-        if (url.protocol() == "run" && KAuthorized::authorize("run_command")) {
-            QString interface("org.kde.krunner");
-            org::kde::krunner::App krunner(interface, "/App", QDBusConnection::sessionBus());
+        if (url.protocol() == QLatin1String("run") && KAuthorized::authorize(QStringLiteral("run_command"))) {
+            QString interface(QStringLiteral("org.kde.krunner"));
+            org::kde::krunner::App krunner(interface, QStringLiteral("/App"), QDBusConnection::sessionBus());
             krunner.display();
             return true;
         }
@@ -112,7 +112,7 @@ UrlItemLauncher::UrlItemLauncher(QObject *parent)
         : QObject(parent)
         , d(new Private)
 {
-    addGlobalHandler(ExtensionHandler, "desktop", new ServiceItemHandler);
+    addGlobalHandler(ExtensionHandler, QStringLiteral("desktop"), new ServiceItemHandler);
 }
 
 UrlItemLauncher::~UrlItemLauncher()
@@ -130,8 +130,8 @@ bool UrlItemLauncher::openItem(const QModelIndex& index)
             Solid::StorageAccess *access = device.as<Solid::StorageAccess>();
 
             if (access && !access->isAccessible()) {
-                connect(access, SIGNAL(setupDone(Solid::ErrorType,QVariant,QString)),
-                        this, SLOT(onSetupDone(Solid::ErrorType,QVariant,QString)));
+                connect(access, &Solid::StorageAccess::setupDone,
+                        this, &UrlItemLauncher::onSetupDone);
                 access->setup();
                 return true;
             }

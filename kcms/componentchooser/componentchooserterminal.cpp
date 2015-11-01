@@ -61,11 +61,11 @@ void CfgTerminalEmulator::defaults()
 
 
 void CfgTerminalEmulator::load(KConfig *) {
-        KConfigGroup config(KSharedConfig::openConfig("kdeglobals"), "General");
-	QString terminal = config.readPathEntry("TerminalApplication","konsole");
-	if (terminal == "konsole")
+        KConfigGroup config(KSharedConfig::openConfig(QStringLiteral("kdeglobals")), "General");
+	QString terminal = config.readPathEntry("TerminalApplication",QStringLiteral("konsole"));
+	if (terminal == QLatin1String("konsole"))
 	{
-	   terminalLE->setText("xterm");
+	   terminalLE->setText(QStringLiteral("xterm"));
 	   terminalCB->setChecked(true);
 	}
 	else
@@ -79,13 +79,13 @@ void CfgTerminalEmulator::load(KConfig *) {
 
 void CfgTerminalEmulator::save(KConfig *)
 {
-	KSharedConfig::Ptr profile = KSharedConfig::openConfig("kdeglobals", KConfig::SimpleConfig);
-	KConfigGroup config(profile, QLatin1String("General"));
-	const QString terminal = terminalCB->isChecked() ? "konsole" : terminalLE->text();
+	KSharedConfig::Ptr profile = KSharedConfig::openConfig(QStringLiteral("kdeglobals"), KConfig::SimpleConfig);
+	KConfigGroup config(profile, QStringLiteral("General"));
+	const QString terminal = terminalCB->isChecked() ? QStringLiteral("konsole") : terminalLE->text();
 	config.writePathEntry("TerminalApplication", terminal); // KConfig::Normal|KConfig::Global);
 
 	config.sync();
-        Kdelibs4SharedConfig::syncConfigGroup(&config, "kdeglobals");
+        Kdelibs4SharedConfig::syncConfigGroup(&config, QStringLiteral("kdeglobals"));
 
 	KGlobalSettings::self()->emitChange(KGlobalSettings::SettingsChanged);
 

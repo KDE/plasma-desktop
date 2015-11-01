@@ -49,12 +49,12 @@ K_EXPORT_PLUGIN(KlockModuleFactory("kcmkclock"))
 KclockModule::KclockModule(QWidget *parent, const QVariantList &)
   : KCModule(parent)
 {
-  auto reply = QDBusConnection::systemBus().call(QDBusMessage::createMethodCall("org.freedesktop.DBus",
-                                                                                "/org/freedesktop/DBus",
-                                                                                "org.freedesktop.DBus",
-                                                                                "ListActivatableNames"));
+  auto reply = QDBusConnection::systemBus().call(QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.DBus"),
+                                                                                QStringLiteral("/org/freedesktop/DBus"),
+                                                                                QStringLiteral("org.freedesktop.DBus"),
+                                                                                QStringLiteral("ListActivatableNames")));
 
-  if (!reply.arguments().isEmpty() &&  reply.arguments().first().value<QStringList>().contains("org.freedesktop.timedate1")) {
+  if (!reply.arguments().isEmpty() &&  reply.arguments().first().value<QStringList>().contains(QStringLiteral("org.freedesktop.timedate1"))) {
       m_haveTimedated = true;
   }
 
@@ -85,7 +85,7 @@ KclockModule::KclockModule(QWidget *parent, const QVariantList &)
   setButtons(Help|Apply);
 
     if (m_haveTimedated) {
-        setAuthAction(KAuth::Action("org.freedesktop.timedate1.set-time"));
+        setAuthAction(KAuth::Action(QStringLiteral("org.freedesktop.timedate1.set-time")));
     } else {
         //auth action name will be automatically guessed from the KCM name
         qWarning() << "Timedated not found, using legacy saving mode";
@@ -96,24 +96,24 @@ KclockModule::KclockModule(QWidget *parent, const QVariantList &)
 bool KclockModule::kauthSave()
 {
   QVariantMap helperargs;
-  helperargs["ntp"] = true;
-  helperargs["ntpServers"] = dtime->ntpServers();
-  helperargs["ntpEnabled"] = dtime->ntpEnabled();
+  helperargs[QStringLiteral("ntp")] = true;
+  helperargs[QStringLiteral("ntpServers")] = dtime->ntpServers();
+  helperargs[QStringLiteral("ntpEnabled")] = dtime->ntpEnabled();
 
   if (!dtime->ntpEnabled()) {
       QDateTime newTime = dtime->userTime();
       qDebug() << "Set date to " << dtime->userTime();
-      helperargs["date"] = true;
-      helperargs["newdate"] = QString::number(newTime.toTime_t());
-      helperargs["olddate"] = QString::number(::time(0));
+      helperargs[QStringLiteral("date")] = true;
+      helperargs[QStringLiteral("newdate")] = QString::number(newTime.toTime_t());
+      helperargs[QStringLiteral("olddate")] = QString::number(::time(0));
   }
 
   QString selectedTimeZone = dtime->selectedTimeZone();
   if (!selectedTimeZone.isEmpty()) {
-    helperargs["tz"] = true;
-    helperargs["tzone"] = selectedTimeZone;
+    helperargs[QStringLiteral("tz")] = true;
+    helperargs[QStringLiteral("tzone")] = selectedTimeZone;
   } else {
-    helperargs["tzreset"] = true; // make the helper reset the timezone
+    helperargs[QStringLiteral("tzreset")] = true; // make the helper reset the timezone
   }
 
   Action action = authAction();
@@ -130,7 +130,7 @@ bool KclockModule::kauthSave()
 bool KclockModule::timedatedSave()
 {
 
-    OrgFreedesktopTimedate1Interface timedateIface("org.freedesktop.timedate1", "/org/freedesktop/timedate1", QDBusConnection::systemBus());
+    OrgFreedesktopTimedate1Interface timedateIface(QStringLiteral("org.freedesktop.timedate1"), QStringLiteral("/org/freedesktop/timedate1"), QDBusConnection::systemBus());
 
     bool rc = true;
     //final arg in each method is "user-interaction" i.e whether it's OK for polkit to ask for auth
@@ -184,7 +184,7 @@ void KclockModule::save()
   }
 
   if (success) {
-      QDBusMessage msg = QDBusMessage::createSignal("/org/kde/kcmshell_clock", "org.kde.kcmshell_clock", "clockUpdated");
+      QDBusMessage msg = QDBusMessage::createSignal(QStringLiteral("/org/kde/kcmshell_clock"), QStringLiteral("org.kde.kcmshell_clock"), QStringLiteral("clockUpdated"));
       QDBusConnection::sessionBus().send(msg);
   }
 

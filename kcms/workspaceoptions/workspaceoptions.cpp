@@ -32,18 +32,18 @@ K_EXPORT_PLUGIN(WorkspaceOptionsModuleFactory("kcmworkspaceoptions"))
 
 WorkspaceOptionsModule::WorkspaceOptionsModule(QWidget *parent, const QVariantList &args)
   : KCModule(parent, args),
-    m_kwinConfig( KSharedConfig::openConfig("kwinrc")),
-    m_ownConfig( KSharedConfig::openConfig("workspaceoptionsrc")),
-    m_plasmaShellAutostart("plasmashell"),
-    m_krunnerAutostart("krunner"),
+    m_kwinConfig( KSharedConfig::openConfig(QStringLiteral("kwinrc"))),
+    m_ownConfig( KSharedConfig::openConfig(QStringLiteral("workspaceoptionsrc"))),
+    m_plasmaShellAutostart(QStringLiteral("plasmashell")),
+    m_krunnerAutostart(QStringLiteral("krunner")),
     m_ui(new Ui::MainPage)
 {
     KAboutData *about =
     new KAboutData(QStringLiteral("kcmworkspaceoptions"), i18n("Global options for the Plasma Workspace"),
-                   QString("1.0"), QString(), KAboutLicense::GPL,
+                   QStringLiteral("1.0"), QString(), KAboutLicense::GPL,
                    i18n("(c) 2009 Marco Martin"));
 
-    about->addAuthor(i18n("Marco Martin"), i18n("Maintainer"), "notmart@gmail.com");
+    about->addAuthor(i18n("Marco Martin"), i18n("Maintainer"), QStringLiteral("notmart@gmail.com"));
 
     setAboutData(about);
 
@@ -63,7 +63,7 @@ WorkspaceOptionsModule::~WorkspaceOptionsModule()
 void WorkspaceOptionsModule::save()
 {
     {
-        KConfig config("plasmarc");
+        KConfig config(QStringLiteral("plasmarc"));
         KConfigGroup cg(&config, "PlasmaToolTips");
         cg.writeEntry("Delay", m_ui->showToolTips->isChecked() ? 0.7 : -1);
     }
@@ -73,7 +73,7 @@ void WorkspaceOptionsModule::save()
 void WorkspaceOptionsModule::load()
 {
     {
-        KConfig config("plasmarc");
+        KConfig config(QStringLiteral("plasmarc"));
         KConfigGroup cg(&config, "PlasmaToolTips");
         m_ui->showToolTips->setChecked(cg.readEntry("Delay", 0.7) > 0);
     }

@@ -47,8 +47,8 @@ public:
             : q(parent),
               displayOrder(NameAfterDescription)
     {
-        Kdelibs4ConfigMigrator migrator("plasma");//app name is unused for what we want, but we get a warning otherwise
-        migrator.setConfigFiles(QStringList("kickoffrc"));
+        Kdelibs4ConfigMigrator migrator(QStringLiteral("plasma"));//app name is unused for what we want, but we get a warning otherwise
+        migrator.setConfigFiles(QStringList(QStringLiteral("kickoffrc")));
         migrator.migrate();
 
         init();
@@ -119,7 +119,7 @@ public:
         QString browser = config.readPathEntry("BrowserApplication", QString());
 
         if (browser.isEmpty()) {
-            const KService::Ptr htmlApp = KMimeTypeTrader::self()->preferredService(QLatin1String("text/html"));
+            const KService::Ptr htmlApp = KMimeTypeTrader::self()->preferredService(QStringLiteral("text/html"));
 
             if (htmlApp) {
                 browser = htmlApp->storageId().replace(QLatin1String(".desktop"), QString());
@@ -134,12 +134,12 @@ public:
         // whether it uses the current or a previous name).
         // BUG: 351550
         applications  << browser
-                      << "org.kde.kontact" << "kontact"
-                      << "org.kde.systemsettings" << "systemsettings"
-                      << "org.kde.dolphin" << "dolphin"
-                      << "org.kde.ktpcontactlist" << "ktp-contactlist"
-                      << "org.kde.kate" << "kate"
-                      << "org.kde.discover" << "muon-discover" << "discover";
+                      << QStringLiteral("org.kde.kontact") << QStringLiteral("kontact")
+                      << QStringLiteral("org.kde.systemsettings") << QStringLiteral("systemsettings")
+                      << QStringLiteral("org.kde.dolphin") << QStringLiteral("dolphin")
+                      << QStringLiteral("org.kde.ktpcontactlist") << QStringLiteral("ktp-contactlist")
+                      << QStringLiteral("org.kde.kate") << QStringLiteral("kate")
+                      << QStringLiteral("org.kde.discover") << QStringLiteral("muon-discover") << QStringLiteral("discover");
 
         QList<QString> desktopFiles;
 

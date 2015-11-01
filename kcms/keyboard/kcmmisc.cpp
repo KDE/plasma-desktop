@@ -66,9 +66,9 @@ KCMiscKeyboardWidget::KCMiscKeyboardWidget(QWidget *parent)
   ui.rateSlider->setTickInterval(498);
 
   connect(ui.delay, SIGNAL(valueChanged(int)), this, SLOT(delaySpinboxChanged(int)));
-  connect(ui.delaySlider, SIGNAL(valueChanged(int)), this, SLOT(delaySliderChanged(int)));
+  connect(ui.delaySlider, &QAbstractSlider::valueChanged, this, &KCMiscKeyboardWidget::delaySliderChanged);
   connect(ui.rate, SIGNAL(valueChanged(double)), this, SLOT(rateSpinboxChanged(double)));
-  connect(ui.rateSlider, SIGNAL(valueChanged(int)), this, SLOT(rateSliderChanged(int)));
+  connect(ui.rateSlider, &QAbstractSlider::valueChanged, this, &KCMiscKeyboardWidget::rateSliderChanged);
 
   _numlockButtonGroup = new QButtonGroup(ui.numlockButtonGroup);
   _numlockButtonGroup->addButton(ui.radioButton1, 0);
@@ -124,17 +124,17 @@ void TriStateHelper::setTriState(QButtonGroup* group, TriState state)
 
 void KCMiscKeyboardWidget::load()
 {
-  KConfigGroup config(KSharedConfig::openConfig("kcminputrc", KConfig::NoGlobals), "Keyboard");
+  KConfigGroup config(KSharedConfig::openConfig(QStringLiteral("kcminputrc"), KConfig::NoGlobals), "Keyboard");
 
   ui.delay->blockSignals(true);
   ui.rate->blockSignals(true);
 
   // need to read as string to support old "true/false" parameter
   QString key = config.readEntry("KeyboardRepeating", TriStateHelper::getString(STATE_ON));
-  if( key == "true" || key == TriStateHelper::getString(STATE_ON)) {
+  if( key == QLatin1String("true") || key == TriStateHelper::getString(STATE_ON)) {
 	  keyboardRepeat = STATE_ON;
   }
-  else if( key == "false" || key == TriStateHelper::getString(STATE_OFF)) {
+  else if( key == QLatin1String("false") || key == TriStateHelper::getString(STATE_OFF)) {
 	  keyboardRepeat = STATE_OFF;
   }
   else {
@@ -157,7 +157,7 @@ void KCMiscKeyboardWidget::load()
 
 void KCMiscKeyboardWidget::save()
 {
-  KConfigGroup config(KSharedConfig::openConfig("kcminputrc", KConfig::NoGlobals), "Keyboard");
+  KConfigGroup config(KSharedConfig::openConfig(QStringLiteral("kcminputrc"), KConfig::NoGlobals), "Keyboard");
 
   keyboardRepeat = TriStateHelper::getTriState(_keyboardRepeatButtonGroup);
   numlockState = TriStateHelper::getTriState(_numlockButtonGroup);

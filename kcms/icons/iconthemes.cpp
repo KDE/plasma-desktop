@@ -76,11 +76,11 @@ IconThemesConfig::IconThemesConfig(QWidget *parent)
   QHBoxLayout *lh2=new QHBoxLayout( m_preview );
   lh2->setSpacing(0);
   m_previewExec=new QLabel(m_preview);
-  m_previewExec->setPixmap(DesktopIcon("system-run"));
+  m_previewExec->setPixmap(DesktopIcon(QStringLiteral("system-run")));
   m_previewFolder=new QLabel(m_preview);
-  m_previewFolder->setPixmap(DesktopIcon("folder"));
+  m_previewFolder->setPixmap(DesktopIcon(QStringLiteral("folder")));
   m_previewDocument=new QLabel(m_preview);
-  m_previewDocument->setPixmap(DesktopIcon("document"));
+  m_previewDocument->setPixmap(DesktopIcon(QStringLiteral("document")));
 
   lh2->addStretch(10);
   lh2->addWidget(m_previewExec);
@@ -102,20 +102,20 @@ IconThemesConfig::IconThemesConfig(QWidget *parent)
   m_iconThemes->sortByColumn(0, Qt::AscendingOrder);
   connect(m_iconThemes, &QTreeWidget::currentItemChanged, this, &IconThemesConfig::themeSelected);
 
-  QPushButton *installButton=new QPushButton( QIcon::fromTheme("document-import"), i18n("Install Theme File..."), this);
-  installButton->setObjectName( QLatin1String("InstallNewTheme" ));
+  QPushButton *installButton=new QPushButton( QIcon::fromTheme(QStringLiteral("document-import")), i18n("Install Theme File..."), this);
+  installButton->setObjectName( QStringLiteral("InstallNewTheme" ));
   installButton->setToolTip(i18n("Install a theme archive file you already have locally"));
   installButton->setWhatsThis(i18n("If you already have a theme archive locally, this button will unpack it and make it available for KDE applications"));
   connect(installButton, &QPushButton::clicked, this, &IconThemesConfig::installNewTheme);
 
-  QPushButton *newButton=new QPushButton( QIcon::fromTheme("get-hot-new-stuff"), i18n("Get New Themes..."), this);
-  newButton->setObjectName( QLatin1String("GetNewTheme" ));
+  QPushButton *newButton=new QPushButton( QIcon::fromTheme(QStringLiteral("get-hot-new-stuff")), i18n("Get New Themes..."), this);
+  newButton->setObjectName( QStringLiteral("GetNewTheme" ));
   newButton->setToolTip(i18n("Get new themes from the Internet"));
   newButton->setWhatsThis(i18n("You need to be connected to the Internet to use this action. A dialog will display a list of themes from the http://www.kde.org website. Clicking the Install button associated with a theme will install this theme locally."));
   connect(newButton, &QPushButton::clicked, this, &IconThemesConfig::getNewTheme);
 
-  m_removeButton=new QPushButton( QIcon::fromTheme("edit-delete"), i18n("Remove Theme"), this);
-  m_removeButton->setObjectName( QLatin1String("RemoveTheme" ));
+  m_removeButton=new QPushButton( QIcon::fromTheme(QStringLiteral("edit-delete")), i18n("Remove Theme"), this);
+  m_removeButton->setObjectName( QStringLiteral("RemoveTheme" ));
   m_removeButton->setToolTip(i18n("Remove the selected theme from your disk"));
   m_removeButton->setWhatsThis(i18n("This will remove the selected theme from your disk."));
   connect(m_removeButton, &QPushButton::clicked, this, &IconThemesConfig::removeSelectedTheme);
@@ -174,7 +174,7 @@ void IconThemesConfig::loadThemes()
 
  //  Just in case we have duplicated icon theme names on separate directories
     for (int i = 2; themeNames.find(tname) != themeNames.end(); ++i)
-        tname=QString("%1-%2").arg(name).arg(i);
+        tname=QStringLiteral("%1-%2").arg(name).arg(i);
 
     QTreeWidgetItem *newitem = new QTreeWidgetItem();
     newitem->setText(0, name);
@@ -242,7 +242,7 @@ void IconThemesConfig::installNewTheme()
 bool IconThemesConfig::installThemes(const QStringList &themes, const QString &archiveName)
 {
   bool everythingOk = true;
-  QString localThemesDir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1String("/icons/") + "./");
+  QString localThemesDir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/icons/") + "./");
 
   QProgressDialog progressDiag(this);
   progressDiag.setLabelText(i18n("Installing icon themes..."));
@@ -306,8 +306,8 @@ QStringList IconThemesConfig::findThemeDirs(const QString &archiveName)
     possibleDir = const_cast<KArchiveEntry*>(themeDir->entry(*it));
     if (possibleDir->isDirectory()) {
       subDir = dynamic_cast<KArchiveDirectory*>( possibleDir );
-      if (subDir && (subDir->entry("index.theme") != NULL ||
-                     subDir->entry("index.desktop") != NULL))
+      if (subDir && (subDir->entry(QStringLiteral("index.theme")) != NULL ||
+                     subDir->entry(QStringLiteral("index.desktop")) != NULL))
         foundThemes.append(subDir->name());
     }
   }
@@ -318,7 +318,7 @@ QStringList IconThemesConfig::findThemeDirs(const QString &archiveName)
 
 void IconThemesConfig::getNewTheme()
 {
-  KNS3::DownloadDialog dialog("icons.knsrc", this);
+  KNS3::DownloadDialog dialog(QStringLiteral("icons.knsrc"), this);
   dialog.exec();
   if (!dialog.changedEntries().isEmpty()) {
     for(int i = 0; i < dialog.changedEntries().size(); i ++) {
@@ -418,15 +418,15 @@ void loadPreview(QLabel *label, KIconTheme& icontheme, const QStringList& iconna
     foreach(const QString &iconthemename, QStringList() << icontheme.internalName() << icontheme.inherits()) {
       foreach(const QString &name, iconnames) {
         //load the icon image
-        QString path = KIconTheme(iconthemename).iconPath(QString("%1.png").arg(name), size, KIconLoader::MatchBest);
+        QString path = KIconTheme(iconthemename).iconPath(QStringLiteral("%1.png").arg(name), size, KIconLoader::MatchBest);
         if (path != QString()) {
             label->setPixmap(QPixmap(path).scaled(size, size));
             return;
         }
         //could not find the .png, try loading the .svg or .svgz
-        path = KIconTheme(iconthemename).iconPath(QString("%1.svg").arg(name), size, KIconLoader::MatchBest);
+        path = KIconTheme(iconthemename).iconPath(QStringLiteral("%1.svg").arg(name), size, KIconLoader::MatchBest);
         if( path == QString() ) {
-            path = KIconTheme(iconthemename).iconPath(QString("%1.svgz").arg(name), size, KIconLoader::MatchBest);
+            path = KIconTheme(iconthemename).iconPath(QStringLiteral("%1.svgz").arg(name), size, KIconLoader::MatchBest);
             if( path == QString() ) {
                 continue;
             }
@@ -455,9 +455,9 @@ void IconThemesConfig::themeSelected(QTreeWidgetItem *item)
 
   updateRemoveButton();
 
-  loadPreview(m_previewExec,     icontheme, QStringList() << "system-run" << "exec");
-  loadPreview(m_previewFolder,   icontheme, QStringList() << "folder");
-  loadPreview(m_previewDocument, icontheme, QStringList() << "document" << "text-x-generic");
+  loadPreview(m_previewExec,     icontheme, QStringList() << QStringLiteral("system-run") << QStringLiteral("exec"));
+  loadPreview(m_previewFolder,   icontheme, QStringList() << QStringLiteral("folder"));
+  loadPreview(m_previewDocument, icontheme, QStringList() << QStringLiteral("document") << QStringLiteral("text-x-generic"));
 
   emit changed(true);
   m_bChanged = true;
@@ -480,14 +480,14 @@ void IconThemesConfig::save()
   if (!selected)
      return;
 
-  KConfigGroup config(KSharedConfig::openConfig("kdeglobals", KConfig::SimpleConfig), "Icons");
+  KConfigGroup config(KSharedConfig::openConfig(QStringLiteral("kdeglobals"), KConfig::SimpleConfig), "Icons");
   config.writeEntry("Theme", selected->data(0, ThemeNameRole).toString());
   config.sync();
 
   KIconTheme::reconfigure();
   emit changed(false);
 
-  KSharedDataCache::deleteCache("icon-cache");
+  KSharedDataCache::deleteCache(QStringLiteral("icon-cache"));
 
   for (int i=0; i<KIconLoader::LastGroup; i++)
   {

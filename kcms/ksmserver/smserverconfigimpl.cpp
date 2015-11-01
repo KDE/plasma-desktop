@@ -18,15 +18,15 @@
 #include "smserverconfigimpl.h"
 
 SMServerConfigImpl::SMServerConfigImpl(QWidget *parent ) : SMServerConfigDlg(parent) {
-    connect(confirmLogoutCheck,SIGNAL(toggled(bool)), SLOT(configChanged()));
-    connect(previousSessionRadio,SIGNAL(toggled(bool)), SLOT(configChanged()));
-    connect(savedSessionRadio,SIGNAL(toggled(bool)), SLOT(configChanged()));
-    connect(emptySessionRadio,SIGNAL(toggled(bool)), SLOT(configChanged()));
-    connect(logoutRadio,SIGNAL(toggled(bool)), SLOT(configChanged()));
-    connect(haltRadio,SIGNAL(toggled(bool)), SLOT(configChanged()));
-    connect(rebootRadio,SIGNAL(toggled(bool)), SLOT(configChanged()));
-    connect(excludeLineedit,SIGNAL(textChanged(QString)),SLOT(configChanged()));
-    connect(offerShutdownCheck,SIGNAL(toggled(bool)),SLOT(configChanged()));
+    connect(confirmLogoutCheck,&QAbstractButton::toggled, this, &SMServerConfigImpl::configChanged);
+    connect(previousSessionRadio,&QAbstractButton::toggled, this, &SMServerConfigImpl::configChanged);
+    connect(savedSessionRadio,&QAbstractButton::toggled, this, &SMServerConfigImpl::configChanged);
+    connect(emptySessionRadio,&QAbstractButton::toggled, this, &SMServerConfigImpl::configChanged);
+    connect(logoutRadio,&QAbstractButton::toggled, this, &SMServerConfigImpl::configChanged);
+    connect(haltRadio,&QAbstractButton::toggled, this, &SMServerConfigImpl::configChanged);
+    connect(rebootRadio,&QAbstractButton::toggled, this, &SMServerConfigImpl::configChanged);
+    connect(excludeLineedit,&QLineEdit::textChanged,this, &SMServerConfigImpl::configChanged);
+    connect(offerShutdownCheck,&QAbstractButton::toggled,this, &SMServerConfigImpl::configChanged);
 }
 SMServerConfigImpl::~SMServerConfigImpl(){
 }

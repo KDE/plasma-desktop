@@ -36,7 +36,7 @@ CalDialog::CalDialog(QWidget *parent, JoyDevice *joy)
   : KDialog( parent ),
     joydev(joy)
 {
-  setObjectName( "calibrateDialog" );
+  setObjectName( QStringLiteral("calibrateDialog") );
   setModal( true );
   setCaption( i18n("Calibration") );
   setButtons( Cancel | User1 );
@@ -49,7 +49,7 @@ CalDialog::CalDialog(QWidget *parent, JoyDevice *joy)
   text = new QLabel(main);
   text->setMinimumHeight(200);
   valueLbl = new QLabel(main);
-  connect(this,SIGNAL(user1Clicked()),this,SLOT(slotUser1()));
+  connect(this,&KDialog::user1Clicked,this,&CalDialog::slotUser1);
 }
 
 //--------------------------------------------------------------
@@ -91,7 +91,7 @@ void CalDialog::calibrate()
     else if ( i == 1 )
       hint = i18n("(usually Y)");
     else
-      hint = "";
+      hint = QLatin1String("");
 
     // minimum position
     text->setText(i18n("<qt>Calibration is about to check the value range your device delivers.<br /><br />"

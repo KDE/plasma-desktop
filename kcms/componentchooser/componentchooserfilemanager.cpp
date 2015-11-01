@@ -51,7 +51,7 @@ void CfgFileManager::defaults()
 
 static KService::List appOffers()
 {
-    return KMimeTypeTrader::self()->query("inode/directory", "Application");
+    return KMimeTypeTrader::self()->query(QStringLiteral("inode/directory"), QStringLiteral("Application"));
 }
 
 void CfgFileManager::load(KConfig *) {
@@ -87,7 +87,7 @@ void CfgFileManager::save(KConfig *)
     kDebug() << storageId;
     if (!storageId.isEmpty()) {
         // This is taken from filetypes/mimetypedata.cpp
-        KSharedConfig::Ptr profile = KSharedConfig::openConfig("mimeapps.list", KConfig::NoGlobals, QStandardPaths::GenericConfigLocation);
+        KSharedConfig::Ptr profile = KSharedConfig::openConfig(QStringLiteral("mimeapps.list"), KConfig::NoGlobals, QStandardPaths::GenericConfigLocation);
         if (!profile->isConfigWritable(true)) // warn user if mimeapps.list is root-owned (#155126/#94504)
             return;
         KConfigGroup addedApps(profile, "Added Associations");
@@ -100,7 +100,7 @@ void CfgFileManager::save(KConfig *)
         KConfigGroup defaultApp(profile, "Default Applications");
         defaultApp.writeXdgListEntry("inode/directory", QStringList(storageId));
 
-        Kdelibs4SharedConfig::syncConfigGroup(&addedApps, "mimeapps.list");
+        Kdelibs4SharedConfig::syncConfigGroup(&addedApps, QStringLiteral("mimeapps.list"));
 
         profile->sync();
         KBuildSycocaProgressDialog::rebuildKSycoca(this);
@@ -112,8 +112,8 @@ void CfgFileManager::save(KConfig *)
 void CfgFileManager::slotAddFileManager()
 {
     KProcess proc;
-    proc << "keditfiletype5";
-    proc << "inode/directory";
+    proc << QStringLiteral("keditfiletype5");
+    proc << QStringLiteral("inode/directory");
     if (proc.execute() == 0) {
         load(0);
     }

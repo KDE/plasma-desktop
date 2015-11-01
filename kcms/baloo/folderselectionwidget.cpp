@@ -54,11 +54,11 @@ FolderSelectionWidget::FolderSelectionWidget(QWidget* parent, Qt::WindowFlags f)
     hLayout->addItem(spacer);
 
     m_addButton = new QPushButton(this);
-    m_addButton->setIcon(QIcon::fromTheme(QLatin1String("list-add")));
+    m_addButton->setIcon(QIcon::fromTheme(QStringLiteral("list-add")));
     connect(m_addButton, &QPushButton::clicked, this, &FolderSelectionWidget::slotAddButtonClicked);
 
     m_removeButton = new QPushButton(this);
-    m_removeButton->setIcon(QIcon::fromTheme(QLatin1String("list-remove")));
+    m_removeButton->setIcon(QIcon::fromTheme(QStringLiteral("list-remove")));
     m_removeButton->setEnabled(false);
     connect(m_removeButton, &QPushButton::clicked, this, &FolderSelectionWidget::slotRemoveButtonClicked);
 
@@ -84,7 +84,7 @@ namespace {
 
     QString makeHomePretty(const QString& url) {
         if (url.startsWith(QDir::homePath()))
-            return QString(url).replace(0, QDir::homePath().length(), QLatin1String("~"));
+            return QString(url).replace(0, QDir::homePath().length(), QStringLiteral("~"));
         return url;
     }
 }
@@ -277,7 +277,7 @@ void FolderSelectionWidget::showMessage(const QString& message)
     m_messageWidget->setMessageType(KMessageWidget::Warning);
     m_messageWidget->animatedShow();
 
-    QTimer::singleShot(3000, m_messageWidget, SLOT(animatedHide()));
+    QTimer::singleShot(3000, m_messageWidget, &KMessageWidget::animatedHide);
 }
 
 
@@ -298,7 +298,7 @@ QString FolderSelectionWidget::folderDisplayName(const QString& url) const
         // Check Mount allMountPointsExcluded
         Q_FOREACH (QString mountPoint, m_mountPoints) {
             if (url.startsWith(mountPoint)) {
-                name = QLatin1Char('[') + QDir(mountPoint).dirName() + QLatin1String("]/") + url.mid(mountPoint.length());
+                name = QLatin1Char('[') + QDir(mountPoint).dirName() + QStringLiteral("]/") + url.mid(mountPoint.length());
                 break;
             }
         }
@@ -340,11 +340,11 @@ QString FolderSelectionWidget::iconName(QString path) const
         homePath.append(QDir::separator());
 
     if (path == homePath)
-        return QLatin1String("user-home");
+        return QStringLiteral("user-home");
 
     if (m_mountPoints.contains(path))
-        return QLatin1String("drive-harddisk");
+        return QStringLiteral("drive-harddisk");
 
-    return QLatin1String("folder");
+    return QStringLiteral("folder");
 }
 

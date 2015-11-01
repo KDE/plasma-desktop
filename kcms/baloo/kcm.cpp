@@ -57,24 +57,24 @@ ServerConfigModule::ServerConfigModule(QWidget* parent, const QVariantList& args
     : KCModule(parent, args)
 {
     KAboutData* about = new KAboutData(
-        QLatin1String("kcm_baloofile"), i18n("Configure File Search"),
-        QLatin1String("0.1"), QString(), KAboutLicense::GPL,
+        QStringLiteral("kcm_baloofile"), i18n("Configure File Search"),
+        QStringLiteral("0.1"), QString(), KAboutLicense::GPL,
         i18n("Copyright 2007-2010 Sebastian Trüg"));
-    about->addAuthor(i18n("Sebastian Trüg"), QString(), QLatin1String("trueg@kde.org"));
-    about->addAuthor(i18n("Vishesh Handa"), QString(), QLatin1String("vhanda@kde.org"));
+    about->addAuthor(i18n("Sebastian Trüg"), QString(), QStringLiteral("trueg@kde.org"));
+    about->addAuthor(i18n("Vishesh Handa"), QString(), QStringLiteral("vhanda@kde.org"));
     setAboutData(about);
     setButtons(Help | Apply | Default);
 
     setupUi(this);
 
     int pixelSize = style()->pixelMetric(QStyle::PM_LargeIconSize);
-    const QPixmap pixmap = QIcon::fromTheme(QLatin1String("baloo")).pixmap(QSize(pixelSize, pixelSize));
+    const QPixmap pixmap = QIcon::fromTheme(QStringLiteral("baloo")).pixmap(QSize(pixelSize, pixelSize));
     m_pixmapLabel->setPixmap(pixmap);
 
     connect(m_excludeFolders_FSW, SIGNAL(changed()),
             this, SLOT(changed()));
-    connect(m_excludeFolders_FSW, SIGNAL(changed()),
-            this, SLOT(onDirectoryListChanged()));
+    connect(m_excludeFolders_FSW, &FolderSelectionWidget::changed,
+            this, &ServerConfigModule::onDirectoryListChanged);
     connect(m_enableCheckbox, SIGNAL(stateChanged(int)),
             this, SLOT(changed()));
 }
@@ -123,27 +123,27 @@ void ServerConfigModule::save()
 
     // Start Baloo
     if (enabled) {
-        const QString exe = QStandardPaths::findExecutable(QLatin1String("baloo_file"));
+        const QString exe = QStandardPaths::findExecutable(QStringLiteral("baloo_file"));
         QProcess::startDetached(exe);
     }
     else {
-        QDBusMessage message = QDBusMessage::createMethodCall(QLatin1String("org.kde.baloo"),
-                                                              QLatin1String("/"),
-                                                              QLatin1String("org.kde.baloo"),
-                                                              QLatin1String("quit"));
+        QDBusMessage message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.baloo"),
+                                                              QStringLiteral("/"),
+                                                              QStringLiteral("org.kde.baloo"),
+                                                              QStringLiteral("quit"));
 
         QDBusConnection::sessionBus().asyncCall(message);
     }
 
     // Start cleaner
-    const QString exe = QStandardPaths::findExecutable(QLatin1String("baloo_file_cleaner"));
+    const QString exe = QStandardPaths::findExecutable(QStringLiteral("baloo_file_cleaner"));
     QProcess::startDetached(exe);
 
     // Update the baloo_file's config cache
-    QDBusMessage message = QDBusMessage::createMethodCall(QLatin1String("org.kde.baloo"),
-                                                          QLatin1String("/"),
-                                                          QLatin1String("org.kde.baloo"),
-                                                          QLatin1String("updateConfig"));
+    QDBusMessage message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.baloo"),
+                                                          QStringLiteral("/"),
+                                                          QStringLiteral("org.kde.baloo"),
+                                                          QStringLiteral("updateConfig"));
 
     QDBusConnection::sessionBus().asyncCall(message);
 

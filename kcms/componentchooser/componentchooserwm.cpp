@@ -39,11 +39,11 @@ CfgWm::CfgWm(QWidget *parent)
 {
     setupUi(this);
     connect(wmCombo,SIGNAL(activated(int)), this, SLOT(configChanged()));
-    connect(kwinRB,SIGNAL(toggled(bool)),this,SLOT(configChanged()));
-    connect(differentRB,SIGNAL(toggled(bool)),this,SLOT(configChanged()));
-    connect(differentRB,SIGNAL(toggled(bool)),this,SLOT(checkConfigureWm()));
+    connect(kwinRB,&QAbstractButton::toggled,this,&CfgWm::configChanged);
+    connect(differentRB,&QAbstractButton::toggled,this,&CfgWm::configChanged);
+    connect(differentRB,&QAbstractButton::toggled,this,&CfgWm::checkConfigureWm);
     connect(wmCombo,SIGNAL(activated(int)),this,SLOT(checkConfigureWm()));
-    connect(configureButton,SIGNAL(clicked()),this,SLOT(configureWm()));
+    connect(configureButton,&QAbstractButton::clicked,this,&CfgWm::configureWm);
 
     KGlobal::dirs()->addResourceType( "windowmanagers", "data", "ksmserver/windowmanagers" );
 }
@@ -65,7 +65,7 @@ void CfgWm::defaults()
 
 void CfgWm::load(KConfig *)
 {
-    KConfig cfg("ksmserverrc", KConfig::NoGlobals);
+    KConfig cfg(QStringLiteral("ksmserverrc"), KConfig::NoGlobals);
     KConfigGroup c( &cfg, "General");
     loadWMs(c.readEntry("windowManager", KWIN_BIN));
     emit changed(false);
@@ -78,7 +78,7 @@ void CfgWm::save(KConfig *)
 
 bool CfgWm::saveAndConfirm()
 {
-    KConfig cfg("ksmserverrc", KConfig::NoGlobals);
+    KConfig cfg(QStringLiteral("ksmserverrc"), KConfig::NoGlobals);
     KConfigGroup c( &cfg, "General");
     c.writeEntry("windowManager", currentWm());
     emit changed(false);
@@ -89,7 +89,7 @@ bool CfgWm::saveAndConfirm()
     {
         KMessageBox::information( this,
             i18n( "The new window manager will be used when KDE is started the next time." ),
-            i18n( "Window Manager Change" ), "windowmanagerchange" );
+            i18n( "Window Manager Change" ), QStringLiteral("windowmanagerchange") );
         oldwm = currentWm();
         return true;
     }
@@ -99,13 +99,13 @@ bool CfgWm::saveAndConfirm()
         {
             oldwm = currentWm();
             cfg.sync();
-            QDBusInterface ksmserver("org.kde.ksmserver", "/KSMServer" );
-            ksmserver.call( QDBus::NoBlock, "wmChanged" );
+            QDBusInterface ksmserver(QStringLiteral("org.kde.ksmserver"), QStringLiteral("/KSMServer") );
+            ksmserver.call( QDBus::NoBlock, QStringLiteral("wmChanged") );
             KMessageBox::information( window(),
                 i18n( "A new window manager is running.\n"
                     "It is still recommended to restart this KDE session to make sure "
                     "all running applications adjust for this change." ),
-                    i18n( "Window Manager Replaced" ), "restartafterwmchange" );
+                    i18n( "Window Manager Replaced" ), QStringLiteral("restartafterwmchange") );
             return true;
         }
         else
@@ -142,7 +142,7 @@ bool CfgWm::tryWmLaunch()
         return true; // it is already running, don't necessarily restart e.g. after a failure with other WM
     }
     KMessageBox::information( window(), i18n( "Your running window manager will be now replaced with "
-        "the configured one." ), i18n( "Window Manager Change" ), "windowmanagerchange" );
+        "the configured one." ), i18n( "Window Manager Change" ), QStringLiteral("windowmanagerchange") );
     wmLaunchingState = WmLaunching;
     wmProcess = new KProcess;
     *wmProcess << KShell::splitArgs( currentWmData().exec ) << currentWmData().restartArgument;
@@ -152,8 +152,8 @@ bool CfgWm::tryWmLaunch()
     wmProcess->start();
     wmDialog = new KTimerDialog( 20000, KTimerDialog::CountDown, window(), i18n( "Config Window Manager Change" ),
         KTimerDialog::Ok | KTimerDialog::Cancel, KTimerDialog::Cancel );
-    wmDialog->setButtonGuiItem( KDialog::Ok, KGuiItem( i18n( "&Accept Change" ), "dialog-ok" ));
-    wmDialog->setButtonGuiItem( KDialog::Cancel, KGuiItem( i18n( "&Revert to Previous" ), "dialog-cancel" ));
+    wmDialog->setButtonGuiItem( KDialog::Ok, KGuiItem( i18n( "&Accept Change" ), QStringLiteral("dialog-ok") ));
+    wmDialog->setButtonGuiItem( KDialog::Cancel, KGuiItem( i18n( "&Revert to Previous" ), QStringLiteral("dialog-cancel") ));
     QLabel *label = new QLabel(
         i18n( "The configured window manager is being launched.\n"
             "Please check it has started properly and confirm the change.\n"
@@ -167,14 +167,14 @@ bool CfgWm::tryWmLaunch()
         if( wmLaunchingState == WmLaunching )
             { // time out
             wmLaunchingState = WmFailed;
-            KProcess::startDetached( KWIN_BIN, QStringList() << "--replace" );
+            KProcess::startDetached( KWIN_BIN, QStringList() << QStringLiteral("--replace") );
             // Let's hope KWin never fails.
             KMessageBox::sorry( window(),
                 i18n( "The running window manager has been reverted to the default KDE window manager KWin." ));
             }
         else if( wmLaunchingState == WmFailed )
             {
-            KProcess::startDetached( KWIN_BIN, QStringList() << "--replace" );
+            KProcess::startDetached( KWIN_BIN, QStringList() << QStringLiteral("--replace") );
             // Let's hope KWin never fails.
             KMessageBox::sorry( window(),
                 i18n( "The new window manager has failed to start.\n"
@@ -218,16 +218,16 @@ void CfgWm::loadWMs( const QString& current )
     WmData kwin;
     kwin.internalName = KWIN_BIN;
     kwin.exec = KWIN_BIN;
-    kwin.configureCommand = "";
-    kwin.restartArgument = "--replace";
-    kwin.parentArgument = "";
-    wms[ "KWin" ] = kwin;
+    kwin.configureCommand = QLatin1String("");
+    kwin.restartArgument = QStringLiteral("--replace");
+    kwin.parentArgument = QLatin1String("");
+    wms[ QStringLiteral("KWin") ] = kwin;
     oldwm = KWIN_BIN;
     kwinRB->setChecked( true );
     wmCombo->setEnabled( false );
 
     QStringList list = KGlobal::dirs()->findAllResources( "windowmanagers", QString(), KStandardDirs::NoDuplicates );
-    QRegExp reg( ".*/([^/\\.]*)\\.[^/\\.]*" );
+    QRegExp reg( QStringLiteral(".*/([^/\\.]*)\\.[^/\\.]*") );
     foreach( const QString& wmfile, list )
     {
         KDesktopFile file( wmfile );
@@ -275,7 +275,7 @@ void CfgWm::loadWMs( const QString& current )
 
 CfgWm::WmData CfgWm::currentWmData() const
 {
-    return kwinRB->isChecked() ? wms[ "KWin" ] : wms[ wmCombo->currentText() ];
+    return kwinRB->isChecked() ? wms[ QStringLiteral("KWin") ] : wms[ wmCombo->currentText() ];
 }
 
 QString CfgWm::currentWm() const

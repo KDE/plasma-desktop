@@ -98,7 +98,7 @@ void KCMTranslations::load()
                 missingLanguages.append(languageCode);
             }
         }
-        m_config.writeEntry(lcLanguage, availableLanguages.join(":"));
+        m_config.writeEntry(lcLanguage, availableLanguages.join(QStringLiteral(":")));
         m_config.sync();
         m_config.config()->reparseConfiguration();
         loadTranslations();
@@ -136,12 +136,12 @@ void KCMTranslations::load()
 // Save the new LANGUAGE setting
 void KCMTranslations::save()
 {
-    m_config.writeEntry(lcLanguage, m_kcmTranslations.join(":"), KConfig::Persistent | KConfig::Global);
+    m_config.writeEntry(lcLanguage, m_kcmTranslations.join(QStringLiteral(":")), KConfig::Persistent | KConfig::Global);
     m_config.sync();
     KMessageBox::information(this,
                              i18n("Your changes will take effect the next time you log in."),
                              i18n("Applying Language Settings"),
-                             QLatin1String("LanguageChangesApplyOnlyToNewlyStartedPrograms"));
+                             QStringLiteral("LanguageChangesApplyOnlyToNewlyStartedPrograms"));
     load();
     writeExports();
 }
@@ -194,7 +194,7 @@ void KCMTranslations::initWidgets()
     initTranslations();
     initTranslationsInstall();
     // Init the KCM "Apply" button
-    emit changed(m_kcmTranslations.join(":") != m_configTranslations);
+    emit changed(m_kcmTranslations.join(QStringLiteral(":")) != m_configTranslations);
 }
 
 void KCMTranslations::initTranslations()
@@ -246,14 +246,14 @@ void KCMTranslations::initTranslations()
             QString label = l.nativeLanguageName();
             if (label.isEmpty()) {
                 label = languageCode;
-            } else if (languageCode.contains("@")) {
+            } else if (languageCode.contains(QStringLiteral("@"))) {
                 label = i18nc("%1 is language name, %2 is language code name", "%1 (%2)", label, languageCode);
             } else if (l.name() != languageCode) {
                 if (m_installedTranslations.contains(l.name())) {
                     // KDE languageCode got translated by QLocale to a locale code we also have on the list
                     // Currently only this happens with pt that gets trasnated to pt_BR
                     if (languageCode == QLatin1String("pt")) {
-                        label = QLocale("pt_PT").nativeLanguageName();
+                        label = QLocale(QStringLiteral("pt_PT")).nativeLanguageName();
                     } else {
                         qWarning() << "Language code morphed into another existing language code, please report" << languageCode << l.name();
                         label = i18nc("%1 is language name, %2 is language code name", "%1 (%2)", label, languageCode);

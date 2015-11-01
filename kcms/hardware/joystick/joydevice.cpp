@@ -49,7 +49,7 @@ QString JoyDevice::errText(ErrorCode code) const
 {
   switch ( code )
   {
-    case SUCCESS: return "";
+    case SUCCESS: return QLatin1String("");
 
     case OPEN_FAILED:
     {
@@ -211,7 +211,7 @@ void JoyDevice::close()
   ::close(joyFd);
 
   joyFd = -1;
-  descr = "";
+  descr = QLatin1String("");
 
   delete [] amin;
   delete [] amax;

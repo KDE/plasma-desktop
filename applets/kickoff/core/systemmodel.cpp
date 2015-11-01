@@ -58,16 +58,16 @@ public:
     {
         q->setSourceModel(placesModel);
 
-        connect(placesModel, SIGNAL(dataChanged(QModelIndex,QModelIndex)),
-                q, SLOT(sourceDataChanged(QModelIndex,QModelIndex)));
-        connect(placesModel, SIGNAL(rowsAboutToBeInserted(QModelIndex,int,int)),
-                q, SLOT(sourceRowsAboutToBeInserted(QModelIndex,int,int)));
-        connect(placesModel, SIGNAL(rowsInserted(QModelIndex,int,int)),
-                q, SLOT(sourceRowsInserted(QModelIndex,int,int)));
-        connect(placesModel, SIGNAL(rowsAboutToBeRemoved(QModelIndex,int,int)),
-                q, SLOT(sourceRowsAboutToBeRemoved(QModelIndex,int,int)));
-        connect(placesModel, SIGNAL(rowsRemoved(QModelIndex,int,int)),
-                q, SLOT(sourceRowsRemoved(QModelIndex,int,int)));
+        connect(placesModel, &QAbstractItemModel::dataChanged,
+                q, &SystemModel::sourceDataChanged);
+        connect(placesModel, &QAbstractItemModel::rowsAboutToBeInserted,
+                q, &SystemModel::sourceRowsAboutToBeInserted);
+        connect(placesModel, &QAbstractItemModel::rowsInserted,
+                q, &SystemModel::sourceRowsInserted);
+        connect(placesModel, &QAbstractItemModel::rowsAboutToBeRemoved,
+                q, &SystemModel::sourceRowsAboutToBeRemoved);
+        connect(placesModel, &QAbstractItemModel::rowsRemoved,
+                q, &SystemModel::sourceRowsRemoved);
 
         connect(KSycoca::self(), SIGNAL(databaseChanged(QStringList)), q, SLOT(reloadApplications()));
     }
@@ -119,7 +119,7 @@ QModelIndex SystemModel::mapFromSource(const QModelIndex &sourceIndex) const
         }
     }
     int count = d->appsList.size() -1;
-    if (KAuthorized::authorize("run_command")) {
+    if (KAuthorized::authorize(QStringLiteral("run_command"))) {
         ++count;
     }
     for (int i=0; i<d->placesModel->rowCount(); ++i) {
@@ -158,7 +158,7 @@ QModelIndex SystemModel::index(int row, int column, const QModelIndex &parent) c
 {
     Q_UNUSED(parent)
     int count = d->appsList.size()-1;
-    if (KAuthorized::authorize("run_command")) {
+    if (KAuthorized::authorize(QStringLiteral("run_command"))) {
         ++count;
     }
     if (row <= count) {
@@ -195,7 +195,7 @@ int SystemModel::rowCount(const QModelIndex &parent) const
 {
     Q_UNUSED(parent)
     int count = d->appsList.size();
-    if (KAuthorized::authorize("run_command")) {
+    if (KAuthorized::authorize(QStringLiteral("run_command"))) {
         ++count;
     }
     for (int i=0; i<d->placesModel->rowCount(); ++i) {
@@ -239,7 +239,7 @@ QVariant SystemModel::data(const QModelIndex &index, int role) const
                 case Qt::DisplayRole:
                     return i18n("Run Command...");
                 case Qt::DecorationRole:
-                    return QIcon::fromTheme("system-run");
+                    return QIcon::fromTheme(QStringLiteral("system-run"));
                 case SubTitleRole:
                     return i18n("Run a command or a search query");
                 case UrlRole:
@@ -358,7 +358,7 @@ void SystemModel::refreshUsageInfo()
     if (d->usageFinder) {
         d->refreshRequested = true;
     } else {
-        QTimer::singleShot(100, this, SLOT(startUsageInfoFetch()));
+        QTimer::singleShot(100, this, &SystemModel::startUsageInfoFetch);
     }
 }
 
@@ -381,7 +381,7 @@ void SystemModel::usageFinderFinished()
 {
     if (d->refreshRequested) {
         d->refreshRequested = false;
-        QTimer::singleShot(100, this, SLOT(startUsageInfoFetch()));
+        QTimer::singleShot(100, this, &SystemModel::startUsageInfoFetch);
     }
 }
 
@@ -393,12 +393,12 @@ void SystemModel::startUsageInfoFetch()
 
     UsageFinder *usageFinder = new UsageFinder(this);
     d->usageFinder = usageFinder;
-    connect(usageFinder, SIGNAL(finished()),
-            this, SLOT(usageFinderFinished()));
-    connect(usageFinder, SIGNAL(finished()),
-            usageFinder, SLOT(deleteLater()));
-    connect(usageFinder, SIGNAL(usageInfo(int,QString,UsageInfo)),
-            this, SLOT(setUsageInfo(int,QString,UsageInfo)));
+    connect(usageFinder, &QThread::finished,
+            this, &SystemModel::usageFinderFinished);
+    connect(usageFinder, &QThread::finished,
+            usageFinder, &QObject::deleteLater);
+    connect(usageFinder, &UsageFinder::usageInfo,
+            this, &SystemModel::setUsageInfo);
 
     bool hasDevices = false;
 

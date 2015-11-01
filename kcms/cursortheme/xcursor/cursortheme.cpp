@@ -38,7 +38,7 @@ CursorTheme::CursorTheme(const QString &title, const QString &description)
 {
     setTitle(title);
     setDescription(description);
-    setSample("left_ptr");
+    setSample(QStringLiteral("left_ptr"));
     setIsHidden(false);
     setIsWritable(false);
 }
@@ -127,8 +127,8 @@ QPixmap CursorTheme::createIcon(int size) const
     QPixmap pixmap;
     QImage image = loadImage(sample(), size);
 
-    if (image.isNull() && sample() != "left_ptr")
-        image = loadImage("left_ptr", size);
+    if (image.isNull() && sample() != QLatin1String("left_ptr"))
+        image = loadImage(QStringLiteral("left_ptr"), size);
 
     if (!image.isNull())
     {

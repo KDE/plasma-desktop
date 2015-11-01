@@ -49,7 +49,7 @@ namespace details {
         const auto end = urlFilters.end();
 
         for (; i != end ; ++i) {
-            i->replace("'", "");
+            i->replace(QLatin1String("'"), QLatin1String(""));
         }
     }
 

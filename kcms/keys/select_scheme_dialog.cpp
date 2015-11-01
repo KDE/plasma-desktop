@@ -33,7 +33,7 @@ SelectSchemeDialog::SelectSchemeDialog(QWidget *parent)
  : QDialog(parent),
    ui(new Ui::SelectSchemeDialog)
 {
-    m_schemes = KGlobal::dirs()->findAllResources("data", "kcmkeys/*.kksrc");
+    m_schemes = KGlobal::dirs()->findAllResources("data", QStringLiteral("kcmkeys/*.kksrc"));
 
     QVBoxLayout *mainLayout = new QVBoxLayout; 
     setLayout(mainLayout);
@@ -65,8 +65,8 @@ SelectSchemeDialog::SelectSchemeDialog(QWidget *parent)
 
     connect(ui->m_schemes, SIGNAL(activated(int)),
             this, SLOT(schemeActivated(int)));
-    connect(ui->m_url->lineEdit(), SIGNAL(textChanged(QString)),
-            this, SLOT(slotUrlChanged(QString)));
+    connect(ui->m_url->lineEdit(), &QLineEdit::textChanged,
+            this, &SelectSchemeDialog::slotUrlChanged);
     mOkButton->setEnabled(false);
 }
 

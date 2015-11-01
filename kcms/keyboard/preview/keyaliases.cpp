@@ -42,31 +42,31 @@ Aliases::Aliases()
     file.close();
 
     QList<QString>als;
-    als = content.split("xkb_keycodes");
+    als = content.split(QStringLiteral("xkb_keycodes"));
 
     for (int i = 1; i < als.size(); i++) {
 
         QString temp = als.at(i);
 
-        temp = temp.remove(" ");
-        temp = temp.remove("\n");
-        temp = temp.remove("\"");
-        temp = temp.remove(">");
-        temp = temp.remove("<");
-        temp = temp.remove(";");
-        temp = temp.remove("}");
-        temp = temp.remove("{");
+        temp = temp.remove(QStringLiteral(" "));
+        temp = temp.remove(QStringLiteral("\n"));
+        temp = temp.remove(QStringLiteral("\""));
+        temp = temp.remove(QStringLiteral(">"));
+        temp = temp.remove(QStringLiteral("<"));
+        temp = temp.remove(QStringLiteral(";"));
+        temp = temp.remove(QStringLiteral("}"));
+        temp = temp.remove(QStringLiteral("{"));
 
         QList<QString>alskeys;
 
-        alskeys = temp.split("alias");
+        alskeys = temp.split(QStringLiteral("alias"));
 
-        if (temp.startsWith("qwerty")) {
+        if (temp.startsWith(QLatin1String("qwerty"))) {
 
             for (int k = 1; k < alskeys.size(); k++) {
 
                 QString tmp = alskeys.at(k);
-                int inofeq = tmp.indexOf("=");
+                int inofeq = tmp.indexOf(QStringLiteral("="));
 
                 QString lat = tmp.left(inofeq);
                 QString key = tmp.mid(inofeq + 1);
@@ -75,12 +75,12 @@ Aliases::Aliases()
             }
         }
 
-        if (temp.startsWith("azerty")) {
+        if (temp.startsWith(QLatin1String("azerty"))) {
 
             for (int k = 1; k < alskeys.size(); k++) {
                 QString tmp = alskeys.at(k);
 
-                int inofeq = tmp.indexOf("=");
+                int inofeq = tmp.indexOf(QStringLiteral("="));
 
                 QString lat = tmp.left(inofeq);
                 QString key = tmp.mid(inofeq + 1);
@@ -89,12 +89,12 @@ Aliases::Aliases()
             }
         }
 
-        if (temp.startsWith("qwertz")) {
+        if (temp.startsWith(QLatin1String("qwertz"))) {
             for (int k = 1; k < alskeys.size(); k++) {
 
                 QString tmp = alskeys.at(k);
 
-                int inofeq = tmp.indexOf("=");
+                int inofeq = tmp.indexOf(QStringLiteral("="));
 
                 QString lat = tmp.left(inofeq);
                 QString key = tmp.mid(inofeq + 1);
@@ -112,7 +112,7 @@ QString Aliases::getAlias(const QString &cname, const QString &name)
     QMessageBox q;
     QString a = name;
 
-    if (cname == "ma" || cname == "be" || cname == "fr") {
+    if (cname == QLatin1String("ma") || cname == QLatin1String("be") || cname == QLatin1String("fr")) {
         a = azerty.value(name);
     } else {
         a = qwerty.value(name);
@@ -124,5 +124,5 @@ QString Aliases::getAlias(const QString &cname, const QString &name)
 QString Aliases::findaliasdir()
 {
     QString xkbDir = Rules::findXkbDir();
-    return QString("%1/keycodes/aliases").arg(xkbDir);
+    return QStringLiteral("%1/keycodes/aliases").arg(xkbDir);
 }

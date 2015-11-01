@@ -42,13 +42,13 @@ K_PLUGIN_FACTORY_WITH_JSON(KCMSplashScreenFactory, "kcm_splashscreen.json", regi
 
 KCMSplashScreen::KCMSplashScreen(QObject* parent, const QVariantList& args)
     : KQuickAddons::ConfigModule(parent, args)
-    , m_config("ksplashrc")
+    , m_config(QStringLiteral("ksplashrc"))
     , m_configGroup(m_config.group("KSplash"))
 {
     qmlRegisterType<QStandardItemModel>();
-    KAboutData* about = new KAboutData("kcm_splashscreen", i18n("Configure Splash screen details"),
-                                       "0.1", QString(), KAboutLicense::LGPL);
-    about->addAuthor(i18n("Marco Martin"), QString(), "mart@kde.org");
+    KAboutData* about = new KAboutData(QStringLiteral("kcm_splashscreen"), i18n("Configure Splash screen details"),
+                                       QStringLiteral("0.1"), QString(), KAboutLicense::LGPL);
+    about->addAuthor(i18n("Marco Martin"), QString(), QStringLiteral("mart@kde.org"));
     setAboutData(about);
     setButtons(Help | Apply | Default);
 
@@ -71,7 +71,7 @@ QList<Plasma::Package> KCMSplashScreen::availablePackages(const QString &compone
     }
 
     for (const QString &path : paths) {
-        Plasma::Package pkg = Plasma::PluginLoader::self()->loadPackage("Plasma/LookAndFeel");
+        Plasma::Package pkg = Plasma::PluginLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"));
         pkg.setPath(path);
         pkg.setFallbackPackage(Plasma::Package());
         if (component.isEmpty() || !pkg.filePath(component.toUtf8()).isEmpty()) {
@@ -107,8 +107,8 @@ void KCMSplashScreen::setSelectedPlugin(const QString &plugin)
 
 void KCMSplashScreen::load()
 {
-    m_package = Plasma::PluginLoader::self()->loadPackage("Plasma/LookAndFeel");
-    KConfigGroup cg(KSharedConfig::openConfig("kdeglobals"), "KDE");
+    m_package = Plasma::PluginLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"));
+    KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral("kdeglobals")), "KDE");
     const QString packageName = cg.readEntry("LookAndFeelPackage", QString());
     if (!packageName.isEmpty()) {
         m_package.setPath(packageName);
@@ -126,11 +126,11 @@ void KCMSplashScreen::load()
     row->setData("None", PluginNameRole);
     m_model->appendRow(row);
 
-    const QList<Plasma::Package> pkgs = availablePackages("splashmainscript");
+    const QList<Plasma::Package> pkgs = availablePackages(QStringLiteral("splashmainscript"));
     for (const Plasma::Package &pkg : pkgs) {
         QStandardItem* row = new QStandardItem(pkg.metadata().name());
         row->setData(pkg.metadata().pluginName(), PluginNameRole);
-        row->setData(pkg.filePath("previews", "splash.png"), ScreenhotRole);
+        row->setData(pkg.filePath("previews", QStringLiteral("splash.png")), ScreenhotRole);
         m_model->appendRow(row);
     }
 }
@@ -140,7 +140,7 @@ void KCMSplashScreen::save()
 {
     if (m_selectedPlugin.isEmpty()) {
         return;
-    } else if (m_selectedPlugin == "None") {
+    } else if (m_selectedPlugin == QLatin1String("None")) {
         m_configGroup.writeEntry("Theme", m_selectedPlugin);
         m_configGroup.writeEntry("Engine", "none");
     } else {
@@ -162,14 +162,14 @@ void KCMSplashScreen::defaults()
 
 void KCMSplashScreen::test(const QString &plugin)
 {
-    if (plugin.isEmpty() || plugin == "None") {
+    if (plugin.isEmpty() || plugin == QLatin1String("None")) {
         return;
     }
 
     QProcess proc;
     QStringList arguments;
-    arguments << plugin << "--test";
-    if (proc.execute("ksplashqml", arguments)) {
+    arguments << plugin << QStringLiteral("--test");
+    if (proc.execute(QStringLiteral("ksplashqml"), arguments)) {
         QMessageBox::critical(0, i18n("Error"), i18n("Failed to successfully test the splash screen."));
     }
 }

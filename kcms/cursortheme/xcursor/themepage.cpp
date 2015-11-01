@@ -61,9 +61,9 @@ ThemePage::ThemePage(QWidget *parent)
     : QWidget(parent)
 {
     setupUi(this);
-    installKnsButton->setIcon(QIcon::fromTheme("get-hot-new-stuff"));
-    installButton->setIcon(QIcon::fromTheme("document-import"));
-    removeButton->setIcon(QIcon::fromTheme("edit-delete"));
+    installKnsButton->setIcon(QIcon::fromTheme(QStringLiteral("get-hot-new-stuff")));
+    installButton->setIcon(QIcon::fromTheme(QStringLiteral("document-import")));
+    removeButton->setIcon(QIcon::fromTheme(QStringLiteral("edit-delete")));
 
     model = new CursorThemeModel(this);
 
@@ -82,8 +82,8 @@ ThemePage::ThemePage(QWidget *parent)
 
     // Make sure we find out about selection changes
     connect(view->selectionModel(),
-            SIGNAL(selectionChanged(QItemSelection,QItemSelection)),
-            SLOT(selectionChanged()));
+            &QItemSelectionModel::selectionChanged,
+            this, &ThemePage::selectionChanged);
 
     // Make sure we find out about size changes
     connect(sizeComboBox,
@@ -102,9 +102,9 @@ ThemePage::ThemePage(QWidget *parent)
             installKnsButton->setEnabled(false);
     }
 
-    connect(installKnsButton, SIGNAL(clicked()), SLOT(getNewClicked()));
-    connect(installButton, SIGNAL(clicked()), SLOT(installClicked()));
-    connect(removeButton,  SIGNAL(clicked()), SLOT(removeClicked()));
+    connect(installKnsButton, &QAbstractButton::clicked, this, &ThemePage::getNewClicked);
+    connect(installButton, &QAbstractButton::clicked, this, &ThemePage::installClicked);
+    connect(removeButton,  &QAbstractButton::clicked, this, &ThemePage::removeClicked);
 }
 
 
@@ -196,7 +196,7 @@ void ThemePage::updateSizeComboBox()
     sizeComboBox->setIconSize(QSize(maxIconWidth, maxIconHeight));
 
     // enable or disable the combobox
-    KConfig c("kcminputrc");
+    KConfig c(QStringLiteral("kcminputrc"));
     KConfigGroup cg(&c, "Mouse");
     if (cg.isEntryImmutable("cursorSize")) {
         sizeComboBox->setEnabled(false);
@@ -261,21 +261,21 @@ bool ThemePage::applyTheme(const CursorTheme *theme, const int size)
     QStringList names;
 
     // Qt cursors
-    names << "left_ptr"       << "up_arrow"      << "cross"      << "wait"
-          << "left_ptr_watch" << "ibeam"         << "size_ver"   << "size_hor"
-          << "size_bdiag"     << "size_fdiag"    << "size_all"   << "split_v"
-          << "split_h"        << "pointing_hand" << "openhand"
-          << "closedhand"     << "forbidden"     << "whats_this" << "copy" << "move" << "link";
+    names << QStringLiteral("left_ptr")       << QStringLiteral("up_arrow")      << QStringLiteral("cross")      << QStringLiteral("wait")
+          << QStringLiteral("left_ptr_watch") << QStringLiteral("ibeam")         << QStringLiteral("size_ver")   << QStringLiteral("size_hor")
+          << QStringLiteral("size_bdiag")     << QStringLiteral("size_fdiag")    << QStringLiteral("size_all")   << QStringLiteral("split_v")
+          << QStringLiteral("split_h")        << QStringLiteral("pointing_hand") << QStringLiteral("openhand")
+          << QStringLiteral("closedhand")     << QStringLiteral("forbidden")     << QStringLiteral("whats_this") << QStringLiteral("copy") << QStringLiteral("move") << QStringLiteral("link");
 
     // X core cursors
-    names << "X_cursor"            << "right_ptr"           << "hand1"
-          << "hand2"               << "watch"               << "xterm"
-          << "crosshair"           << "left_ptr_watch"      << "center_ptr"
-          << "sb_h_double_arrow"   << "sb_v_double_arrow"   << "fleur"
-          << "top_left_corner"     << "top_side"            << "top_right_corner"
-          << "right_side"          << "bottom_right_corner" << "bottom_side"
-          << "bottom_left_corner"  << "left_side"           << "question_arrow"
-          << "pirate";
+    names << QStringLiteral("X_cursor")            << QStringLiteral("right_ptr")           << QStringLiteral("hand1")
+          << QStringLiteral("hand2")               << QStringLiteral("watch")               << QStringLiteral("xterm")
+          << QStringLiteral("crosshair")           << QStringLiteral("left_ptr_watch")      << QStringLiteral("center_ptr")
+          << QStringLiteral("sb_h_double_arrow")   << QStringLiteral("sb_v_double_arrow")   << QStringLiteral("fleur")
+          << QStringLiteral("top_left_corner")     << QStringLiteral("top_side")            << QStringLiteral("top_right_corner")
+          << QStringLiteral("right_side")          << QStringLiteral("bottom_right_corner") << QStringLiteral("bottom_side")
+          << QStringLiteral("bottom_left_corner")  << QStringLiteral("left_side")           << QStringLiteral("question_arrow")
+          << QStringLiteral("pirate");
 
     foreach (const QString &name, names)
     {
@@ -295,7 +295,7 @@ void ThemePage::save()
     const CursorTheme *theme = selectedIndex().isValid() ? proxy->theme(selectedIndex()) : NULL;
     const int size = selectedSize();
 
-    KConfig config("kcminputrc");
+    KConfig config(QStringLiteral("kcminputrc"));
     KConfigGroup c(&config, "Mouse");
     if (theme)
     {
@@ -309,7 +309,7 @@ void ThemePage::save()
     {
         KMessageBox::information(this,
                                  i18n("You have to restart KDE for these changes to take effect."),
-                                 i18n("Cursor Settings Changed"), "CursorSettingsChanged");
+                                 i18n("Cursor Settings Changed"), QStringLiteral("CursorSettingsChanged"));
     }
 
     appliedIndex = selectedIndex();
@@ -327,7 +327,7 @@ void ThemePage::load()
     }
 
     // Get the name of the theme KDE is configured to use
-    KConfig c("kcminputrc");
+    KConfig c(QStringLiteral("kcminputrc"));
     KConfigGroup cg(&c, "Mouse");
     currentTheme = cg.readEntry("cursorTheme", currentTheme);
 
@@ -375,7 +375,7 @@ void ThemePage::load()
 void ThemePage::defaults()
 {
     view->selectionModel()->clear();
-    QModelIndex defaultIndex = proxy->findIndex("breeze_cursors");
+    QModelIndex defaultIndex = proxy->findIndex(QStringLiteral("breeze_cursors"));
     view->setCurrentIndex(defaultIndex);
     preferredSize = 0;
     updateSizeComboBox();
@@ -416,7 +416,7 @@ void ThemePage::preferredSizeChanged()
 
 void ThemePage::getNewClicked()
 {
-    KNS3::DownloadDialog dialog("xcursor.knsrc", this);
+    KNS3::DownloadDialog dialog(QStringLiteral("xcursor.knsrc"), this);
     if (dialog.exec()) {
         KNS3::Entry::List list = dialog.changedEntries();
         if (list.count() > 0)
@@ -513,10 +513,10 @@ bool ThemePage::installThemes(const QString &file)
     foreach(const QString &name, archiveDir->entries())
     {
         const KArchiveEntry *entry = archiveDir->entry(name);
-        if (entry->isDirectory() && entry->name().toLower() != "default")
+        if (entry->isDirectory() && entry->name().toLower() != QLatin1String("default"))
         {
             const KArchiveDirectory *dir = static_cast<const KArchiveDirectory *>(entry);
-            if (dir->entry("index.theme") && dir->entry("cursors"))
+            if (dir->entry(QStringLiteral("index.theme")) && dir->entry(QStringLiteral("cursors")))
                 themeDirs << dir->name();
         }
     }

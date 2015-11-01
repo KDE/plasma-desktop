@@ -73,46 +73,46 @@ bool LeaveItemHandler::openUrl(const KUrl& url)
 {
     m_logoutAction = url.path().remove('/');
 
-    if (m_logoutAction == "sleep") {
+    if (m_logoutAction == QLatin1String("sleep")) {
         // decouple dbus call, otherwise we'll run into a dead-lock
-        QTimer::singleShot(0, this, SLOT(suspendRAM()));
+        QTimer::singleShot(0, this, &LeaveItemHandler::suspendRAM);
             return true;
-    } else if (m_logoutAction == "hibernate") {
+    } else if (m_logoutAction == QLatin1String("hibernate")) {
         // decouple dbus call, otherwise we'll run into a dead-lock
-        QTimer::singleShot(0, this, SLOT(suspendDisk()));
+        QTimer::singleShot(0, this, &LeaveItemHandler::suspendDisk);
             return true;
-    } else if (m_logoutAction == "lock") {
+    } else if (m_logoutAction == QLatin1String("lock")) {
         // decouple dbus call, otherwise we'll run into a dead-lock
-        QTimer::singleShot(0, this, SLOT(lock()));
+        QTimer::singleShot(0, this, &LeaveItemHandler::lock);
         return true;
-    } else if (m_logoutAction == "switch") {
+    } else if (m_logoutAction == QLatin1String("switch")) {
         // decouple dbus call, otherwise we'll run into a dead-lock
-        QTimer::singleShot(0, this, SLOT(switchUser()));
+        QTimer::singleShot(0, this, &LeaveItemHandler::switchUser);
         return true;
-    } else if (m_logoutAction == "logout" || m_logoutAction == "logoutonly" ||
-               m_logoutAction == "restart" || m_logoutAction == "shutdown") {
+    } else if (m_logoutAction == QLatin1String("logout") || m_logoutAction == QLatin1String("logoutonly") ||
+               m_logoutAction == QLatin1String("restart") || m_logoutAction == QLatin1String("shutdown")) {
         // decouple dbus call, otherwise we'll run into a dead-lock
-        QTimer::singleShot(0, this, SLOT(logout()));
+        QTimer::singleShot(0, this, &LeaveItemHandler::logout);
         return true;
-    } else if (m_logoutAction == "savesession") {
+    } else if (m_logoutAction == QLatin1String("savesession")) {
         // decouple dbus call, otherwise we'll run into a dead-lock
-        QTimer::singleShot(0, this, SLOT(saveSession()));
+        QTimer::singleShot(0, this, &LeaveItemHandler::saveSession);
         return true;
-    } else if (m_logoutAction == "standby") {
+    } else if (m_logoutAction == QLatin1String("standby")) {
         // decouple dbus call, otherwise we'll run into a dead-lock
-        QTimer::singleShot(0, this, SLOT(standby()));
+        QTimer::singleShot(0, this, &LeaveItemHandler::standby);
         return true;
-    } else if (m_logoutAction == "suspendram") {
+    } else if (m_logoutAction == QLatin1String("suspendram")) {
         // decouple dbus call, otherwise we'll run into a dead-lock
-        QTimer::singleShot(0, this, SLOT(suspendRAM()));
+        QTimer::singleShot(0, this, &LeaveItemHandler::suspendRAM);
         return true;
-    } else if (m_logoutAction == "suspenddisk") {
+    } else if (m_logoutAction == QLatin1String("suspenddisk")) {
         // decouple dbus call, otherwise we'll run into a dead-lock
-        QTimer::singleShot(0, this, SLOT(suspendDisk()));
+        QTimer::singleShot(0, this, &LeaveItemHandler::suspendDisk);
         return true;
-    } else if (m_logoutAction == "run") {
+    } else if (m_logoutAction == QLatin1String("run")) {
         // decouple dbus call, otherwise we'll run into a dead-lock
-        QTimer::singleShot(0, this, SLOT(runCommand()));
+        QTimer::singleShot(0, this, &LeaveItemHandler::runCommand);
         return true;
     }
 
@@ -121,9 +121,9 @@ bool LeaveItemHandler::openUrl(const KUrl& url)
 
 void LeaveItemHandler::runCommand()
 {
-    if (KAuthorized::authorize("run_command")) {
-        QString interface("org.kde.krunner");
-        org::kde::krunner::App krunner(interface, "/App", QDBusConnection::sessionBus());
+    if (KAuthorized::authorize(QStringLiteral("run_command"))) {
+        QString interface(QStringLiteral("org.kde.krunner"));
+        org::kde::krunner::App krunner(interface, QStringLiteral("/App"), QDBusConnection::sessionBus());
         krunner.display();
     }
 }
@@ -133,15 +133,15 @@ void LeaveItemHandler::logout()
     KWorkSpace::ShutdownConfirm confirm = KWorkSpace::ShutdownConfirmDefault;
     KWorkSpace::ShutdownType type = KWorkSpace::ShutdownTypeNone;
 
-    if (m_logoutAction == "logout" || m_logoutAction == "logoutonly") {
+    if (m_logoutAction == QLatin1String("logout") || m_logoutAction == QLatin1String("logoutonly")) {
         type = KWorkSpace::ShutdownTypeNone;
-    } else if (m_logoutAction == "lock") {
+    } else if (m_logoutAction == QLatin1String("lock")) {
         qDebug() << "Locking screen";
-    } else if (m_logoutAction == "switch") {
+    } else if (m_logoutAction == QLatin1String("switch")) {
         qDebug() << "Switching user";
-    } else if (m_logoutAction == "restart") {
+    } else if (m_logoutAction == QLatin1String("restart")) {
         type = KWorkSpace::ShutdownTypeReboot;
-    } else if (m_logoutAction == "shutdown") {
+    } else if (m_logoutAction == QLatin1String("shutdown")) {
         type = KWorkSpace::ShutdownTypeHalt;
     }
 
@@ -150,23 +150,23 @@ void LeaveItemHandler::logout()
 
 void LeaveItemHandler::lock()
 {
-    QString interface("org.freedesktop.ScreenSaver");
-    org::freedesktop::ScreenSaver screensaver(interface, "/ScreenSaver", QDBusConnection::sessionBus());
+    QString interface(QStringLiteral("org.freedesktop.ScreenSaver"));
+    org::freedesktop::ScreenSaver screensaver(interface, QStringLiteral("/ScreenSaver"), QDBusConnection::sessionBus());
     screensaver.Lock();
 }
 
 void LeaveItemHandler::switchUser()
 {
-    QString interface("org.kde.krunner");
-    org::kde::krunner::App krunner(interface, "/App", QDBusConnection::sessionBus());
+    QString interface(QStringLiteral("org.kde.krunner"));
+    org::kde::krunner::App krunner(interface, QStringLiteral("/App"), QDBusConnection::sessionBus());
     krunner.switchUser();
 }
 
 void LeaveItemHandler::saveSession()
 {
-    QString interface("org.kde.ksmserver");
+    QString interface(QStringLiteral("org.kde.ksmserver"));
 
-    org::kde::KSMServerInterface ksmserver(interface, "/KSMServer", QDBusConnection::sessionBus());
+    org::kde::KSMServerInterface ksmserver(interface, QStringLiteral("/KSMServer"), QDBusConnection::sessionBus());
     if (ksmserver.isValid()) {
         ksmserver.saveCurrentSession();
     }

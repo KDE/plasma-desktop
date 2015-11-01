@@ -47,8 +47,8 @@
 #include "ui_kcm_add_layout_dialog.h"
 
 
-static const QString GROUP_SWITCH_GROUP_NAME("grp");
-static const QString LV3_SWITCH_GROUP_NAME("lv3");
+static const QString GROUP_SWITCH_GROUP_NAME(QStringLiteral("grp"));
+static const QString LV3_SWITCH_GROUP_NAME(QStringLiteral("lv3"));
 //static const QString RESET_XKB_OPTIONS("-option");
 
 static const int TAB_HARDWARE = 0;
@@ -100,10 +100,10 @@ void KCMKeyboardWidget::handleParameters(const QVariantList &args)
     foreach(const QVariant& arg, args) {
   	  if( arg.type() == QVariant::String ) {
   		  QString str = arg.toString();
-  		  if( str == "--tab=layouts" ) {
+  		  if( str == QLatin1String("--tab=layouts") ) {
   			  setCurrentIndex(TAB_LAYOUTS);
   		  }
-  		  else if( str == "--tab=advanced" ) {
+  		  else if( str == QLatin1String("--tab=advanced") ) {
   	  		  setCurrentIndex(TAB_ADVANCED);
   	  	  }
   	  }
@@ -308,55 +308,55 @@ void KCMKeyboardWidget::initializeLayoutsUI()
 	uiWidget->layoutsTableView->setAcceptDrops(true);
 #endif
 
-	uiWidget->moveUpBtn->setIcon(QIcon::fromTheme("arrow-up"));
-    uiWidget->moveDownBtn->setIcon(QIcon::fromTheme("arrow-down"));
-	uiWidget->addLayoutBtn->setIcon(QIcon::fromTheme("list-add"));
-    uiWidget->removeLayoutBtn->setIcon(QIcon::fromTheme("list-remove"));
+	uiWidget->moveUpBtn->setIcon(QIcon::fromTheme(QStringLiteral("arrow-up")));
+    uiWidget->moveDownBtn->setIcon(QIcon::fromTheme(QStringLiteral("arrow-down")));
+	uiWidget->addLayoutBtn->setIcon(QIcon::fromTheme(QStringLiteral("list-add")));
+    uiWidget->removeLayoutBtn->setIcon(QIcon::fromTheme(QStringLiteral("list-remove")));
 
-    QIcon clearIcon = qApp->isLeftToRight() ? QIcon::fromTheme("edit-clear-locationbar-rtl") : QIcon::fromTheme("edit-clear-locationbar-ltr");
+    QIcon clearIcon = qApp->isLeftToRight() ? QIcon::fromTheme(QStringLiteral("edit-clear-locationbar-rtl")) : QIcon::fromTheme(QStringLiteral("edit-clear-locationbar-ltr"));
 	uiWidget->xkbGrpClearBtn->setIcon(clearIcon);
 	uiWidget->xkb3rdLevelClearBtn->setIcon(clearIcon);
 
-	QIcon configIcon = QIcon::fromTheme("configure");
+	QIcon configIcon = QIcon::fromTheme(QStringLiteral("configure"));
 	uiWidget->xkbGrpShortcutBtn->setIcon(configIcon);
 	uiWidget->xkb3rdLevelShortcutBtn->setIcon(configIcon);
 
     uiWidget->kdeKeySequence->setModifierlessAllowed(false);
 
-	connect(uiWidget->addLayoutBtn, SIGNAL(clicked(bool)), this, SLOT(addLayout()));
-	connect(uiWidget->removeLayoutBtn, SIGNAL(clicked(bool)), this, SLOT(removeLayout()));
+	connect(uiWidget->addLayoutBtn, &QAbstractButton::clicked, this, &KCMKeyboardWidget::addLayout);
+	connect(uiWidget->removeLayoutBtn, &QAbstractButton::clicked, this, &KCMKeyboardWidget::removeLayout);
 //	connect(uiWidget->layoutsTable, SIGNAL(itemSelectionChanged()), this, SLOT(layoutSelectionChanged()));
-	connect(uiWidget->layoutsTableView->selectionModel(), SIGNAL(selectionChanged(QItemSelection,QItemSelection)), this, SLOT(layoutSelectionChanged()));
+	connect(uiWidget->layoutsTableView->selectionModel(), &QItemSelectionModel::selectionChanged, this, &KCMKeyboardWidget::layoutSelectionChanged);
 
 //	connect(uiWidget->moveUpBtn, SIGNAL(triggered(QAction*)), this, SLOT(moveUp()));
 //	connect(uiWidget->moveDownBtn, SIGNAL(triggered(QAction*)), this, SLOT(moveDown()));
-	connect(uiWidget->moveUpBtn, SIGNAL(clicked(bool)), this, SLOT(moveUp()));
-	connect(uiWidget->moveDownBtn, SIGNAL(clicked(bool)), this, SLOT(moveDown()));
+	connect(uiWidget->moveUpBtn, &QAbstractButton::clicked, this, &KCMKeyboardWidget::moveUp);
+	connect(uiWidget->moveDownBtn, &QAbstractButton::clicked, this, &KCMKeyboardWidget::moveDown);
 
 #ifdef NEW_GEOMETRY
-    connect(uiWidget->previewButton, SIGNAL(clicked(bool)), this, SLOT(previewLayout()));
+    connect(uiWidget->previewButton, &QAbstractButton::clicked, this, &KCMKeyboardWidget::previewLayout);
 #endif
-	connect(uiWidget->xkbGrpClearBtn, SIGNAL(clicked(bool)), this, SLOT(clearGroupShortcuts()));
-	connect(uiWidget->xkb3rdLevelClearBtn, SIGNAL(clicked(bool)), this, SLOT(clear3rdLevelShortcuts()));
+	connect(uiWidget->xkbGrpClearBtn, &QAbstractButton::clicked, this, &KCMKeyboardWidget::clearGroupShortcuts);
+	connect(uiWidget->xkb3rdLevelClearBtn, &QAbstractButton::clicked, this, &KCMKeyboardWidget::clear3rdLevelShortcuts);
 
 //	connect(uiWidget->xkbGrpClearBtn, SIGNAL(triggered(QAction*)), this, SLOT(uiChanged()));
 //	connect(uiWidget->xkb3rdLevelClearBtn, SIGNAL(triggered(QAction*)), this, SLOT(uiChanged()));
-	connect(uiWidget->kdeKeySequence, SIGNAL(keySequenceChanged(QKeySequence)), this, SLOT(uiChanged()));
+	connect(uiWidget->kdeKeySequence, &KKeySequenceWidget::keySequenceChanged, this, &KCMKeyboardWidget::uiChanged);
 	connect(uiWidget->switchingPolicyButtonGroup, SIGNAL(buttonClicked(int)), this, SLOT(uiChanged()));
-	connect(uiWidget->xkbGrpShortcutBtn, SIGNAL(clicked(bool)), this, SLOT(scrollToGroupShortcut()));
-	connect(uiWidget->xkb3rdLevelShortcutBtn, SIGNAL(clicked(bool)), this, SLOT(scrollTo3rdLevelShortcut()));
+	connect(uiWidget->xkbGrpShortcutBtn, &QAbstractButton::clicked, this, &KCMKeyboardWidget::scrollToGroupShortcut);
+	connect(uiWidget->xkb3rdLevelShortcutBtn, &QAbstractButton::clicked, this, &KCMKeyboardWidget::scrollTo3rdLevelShortcut);
 
 	//	connect(uiWidget->configureLayoutsChk, SIGNAL(toggled(bool)), uiWidget->layoutsGroupBox, SLOT(setEnabled(bool)));
-	connect(uiWidget->layoutsGroupBox, SIGNAL(toggled(bool)), this, SLOT(configureLayoutsChanged()));
+	connect(uiWidget->layoutsGroupBox, &QGroupBox::toggled, this, &KCMKeyboardWidget::configureLayoutsChanged);
 
-	connect(uiWidget->showIndicatorChk, SIGNAL(clicked(bool)), this, SLOT(uiChanged()));
-	connect(uiWidget->showIndicatorChk, SIGNAL(toggled(bool)), uiWidget->showSingleChk, SLOT(setEnabled(bool)));
-	connect(uiWidget->showFlagRadioBtn, SIGNAL(clicked(bool)), this, SLOT(uiChanged()));
-	connect(uiWidget->showLabelRadioBtn, SIGNAL(clicked(bool)), this, SLOT(uiChanged()));
-	connect(uiWidget->showLabelOnFlagRadioBtn, SIGNAL(clicked(bool)), this, SLOT(uiChanged()));
-	connect(uiWidget->showSingleChk, SIGNAL(toggled(bool)), this, SLOT(uiChanged()));
+	connect(uiWidget->showIndicatorChk, &QAbstractButton::clicked, this, &KCMKeyboardWidget::uiChanged);
+	connect(uiWidget->showIndicatorChk, &QAbstractButton::toggled, uiWidget->showSingleChk, &QWidget::setEnabled);
+	connect(uiWidget->showFlagRadioBtn, &QAbstractButton::clicked, this, &KCMKeyboardWidget::uiChanged);
+	connect(uiWidget->showLabelRadioBtn, &QAbstractButton::clicked, this, &KCMKeyboardWidget::uiChanged);
+	connect(uiWidget->showLabelOnFlagRadioBtn, &QAbstractButton::clicked, this, &KCMKeyboardWidget::uiChanged);
+	connect(uiWidget->showSingleChk, &QAbstractButton::toggled, this, &KCMKeyboardWidget::uiChanged);
 
-	connect(uiWidget->layoutLoopingCheckBox, SIGNAL(clicked(bool)), this, SLOT(uiChanged()));
+	connect(uiWidget->layoutLoopingCheckBox, &QAbstractButton::clicked, this, &KCMKeyboardWidget::uiChanged);
 	connect(uiWidget->layoutLoopCountSpinBox, SIGNAL(valueChanged(int)), this, SLOT(uiChanged()));
 }
 
@@ -565,11 +565,11 @@ void KCMKeyboardWidget::initializeXkbOptionsUI()
 
 	XkbOptionsTreeModel* model = new XkbOptionsTreeModel(rules, keyboardConfig, uiWidget->xkbOptionsTreeView);
 	uiWidget->xkbOptionsTreeView->setModel(model);
-	connect(model, SIGNAL(dataChanged(QModelIndex,QModelIndex)), this, SLOT(uiChanged()));
+	connect(model, &QAbstractItemModel::dataChanged, this, &KCMKeyboardWidget::uiChanged);
 
-	connect(uiWidget->configureKeyboardOptionsChk, SIGNAL(toggled(bool)), this, SLOT(configureXkbOptionsChanged()));
+	connect(uiWidget->configureKeyboardOptionsChk, &QAbstractButton::toggled, this, &KCMKeyboardWidget::configureXkbOptionsChanged);
 	//	connect(uiWidget->configureKeyboardOptionsChk, SIGNAL(toggled(bool)), this, SLOT(uiChanged()));
-	connect(uiWidget->configureKeyboardOptionsChk, SIGNAL(toggled(bool)), uiWidget->xkbOptionsTreeView, SLOT(setEnabled(bool)));
+	connect(uiWidget->configureKeyboardOptionsChk, &QAbstractButton::toggled, uiWidget->xkbOptionsTreeView, &QWidget::setEnabled);
 }
 
 void KCMKeyboardWidget::configureXkbOptionsChanged()

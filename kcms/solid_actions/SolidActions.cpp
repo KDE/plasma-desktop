@@ -40,12 +40,12 @@ K_PLUGIN_FACTORY( SolidActionsFactory, registerPlugin<SolidActions>(); )
 SolidActions::SolidActions(QWidget* parent, const QVariantList&)
     : KCModule(parent)
 {
-    KAboutData * about = new KAboutData("Device Actions", i18n("Solid Device Actions Editor"), "1.2",
+    KAboutData * about = new KAboutData(QStringLiteral("Device Actions"), i18n("Solid Device Actions Editor"), QStringLiteral("1.2"),
                                        i18n("Solid Device Actions Control Panel Module"),
                                        KAboutLicense::GPL,
                                        i18n("(c) 2009, 2014 Solid Device Actions team"));
-    about->addAuthor(i18n("Ben Cooksley"), i18n("Maintainer"), "ben@eclipse.endoftheinternet.org");
-    about->addCredit(QString::fromUtf8("Lukáš Tinkl"), i18n("Port to Plasma 5"), QStringLiteral("ltinkl@redhat.com"));
+    about->addAuthor(i18n("Ben Cooksley"), i18n("Maintainer"), QStringLiteral("ben@eclipse.endoftheinternet.org"));
+    about->addCredit(QStringLiteral("Lukáš Tinkl"), i18n("Port to Plasma 5"), QStringLiteral("ltinkl@redhat.com"));
     setAboutData(about);
     setButtons(KCModule::Help);
 
@@ -57,12 +57,12 @@ SolidActions::SolidActions(QWidget* parent, const QVariantList&)
     mainUi.TvActions->setRootIsDecorated( false );
     mainUi.TvActions->setSelectionMode( QAbstractItemView::SingleSelection );
     KStandardGuiItem::assign(mainUi.PbAddAction, KStandardGuiItem::Add);
-    mainUi.PbEditAction->setIcon( QIcon::fromTheme("document-edit") );
+    mainUi.PbEditAction->setIcon( QIcon::fromTheme(QStringLiteral("document-edit")) );
 
     connect(mainUi.PbAddAction, &QPushButton::clicked, this, &SolidActions::slotShowAddDialog);
     connect(mainUi.PbEditAction, &QPushButton::clicked, this, &SolidActions::editAction);
     connect(mainUi.PbDeleteAction, &QPushButton::clicked, this, &SolidActions::deleteAction);
-    connect( mainUi.TvActions->selectionModel(), SIGNAL(currentChanged(QModelIndex,QModelIndex)), this, SLOT(toggleEditDelete()) );
+    connect( mainUi.TvActions->selectionModel(), &QItemSelectionModel::currentChanged, this, &SolidActions::toggleEditDelete );
     connect(mainUi.TvActions, &QTreeView::doubleClicked, this, &SolidActions::editAction);
 
     // Prepare + connect up with Edit dialog
@@ -114,7 +114,7 @@ void SolidActions::save()
 void SolidActions::addAction()
 {
     const QString enteredName = addUi.LeActionName->text();
-    KDesktopFile templateDesktop(QStandardPaths::GenericDataLocation, "kcmsolidactions/solid-action-template.desktop"); // Lets get the template
+    KDesktopFile templateDesktop(QStandardPaths::GenericDataLocation, QStringLiteral("kcmsolidactions/solid-action-template.desktop")); // Lets get the template
 
     // Lets get a desktop file
     QString internalName = enteredName; // copy the name the user entered -> we will be making mods
@@ -128,7 +128,7 @@ void SolidActions::addAction()
 
     // Fill in an initial template
     KDesktopFile * newDesktop = templateDesktop.copyTo(filePath);
-    newDesktop->actionGroup("open").writeEntry("Name", enteredName); // ditto
+    newDesktop->actionGroup(QStringLiteral("open")).writeEntry("Name", enteredName); // ditto
     delete newDesktop; // Force file to be written
 
     // Prepare to open the editDialog

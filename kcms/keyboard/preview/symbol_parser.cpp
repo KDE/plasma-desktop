@@ -108,7 +108,7 @@ template<typename Iterator>
 void SymbolParser<Iterator>::addKeyName(std::string n)
 {
     QString kname = QString::fromUtf8(n.data(), n.size());
-    if (kname.startsWith("Lat")) {
+    if (kname.startsWith(QLatin1String("Lat"))) {
         kname = alias.getAlias(layout.country, kname);
     }
     keyIndex = layout.findKey(kname);
@@ -156,7 +156,7 @@ void SymbolParser<Iterator>::setLevel(int lvl)
 QString findSymbolBaseDir()
 {
     QString xkbDir = Rules::findXkbDir();
-    return QString("%1/symbols/").arg(xkbDir);
+    return QStringLiteral("%1/symbols/").arg(xkbDir);
 }
 
 QString findLayout(const QString &layout, const QString &layoutVariant)
@@ -168,12 +168,12 @@ QString findLayout(const QString &layout, const QString &layoutVariant)
     QFile sfile(symbolFile);
     if (!sfile.open(QIODevice::ReadOnly | QIODevice::Text)) {
         //qCDebug(KEYBOARD_PREVIEW) << "unable to open the file";
-        return QString("I/O ERROR");
+        return QStringLiteral("I/O ERROR");
     }
 
     QString scontent = sfile.readAll();
     sfile.close();
-    QStringList scontentList = scontent.split("xkb_symbols");
+    QStringList scontentList = scontent.split(QStringLiteral("xkb_symbols"));
 
     QString variant;
     QString input;
@@ -191,12 +191,12 @@ QString findLayout(const QString &layout, const QString &layoutVariant)
 
             QString symbolCont = scontentList.at(current);
 
-            int index = symbolCont.indexOf("\"");
+            int index = symbolCont.indexOf(QStringLiteral("\""));
             symbolCont = symbolCont.mid(index);
-            index = symbolCont.indexOf("{");
+            index = symbolCont.indexOf(QStringLiteral("{"));
             symbolCont = symbolCont.left(index);
-            symbolCont = symbolCont.remove(" ");
-            variant = symbolCont.remove("\"");
+            symbolCont = symbolCont.remove(QStringLiteral(" "));
+            variant = symbolCont.remove(QStringLiteral("\""));
 
             input.prepend("xkb_symbols");
             current++;
@@ -218,7 +218,7 @@ KbLayout parseSymbols(const QString &layout, const QString &layoutVariant)
     symbolParser.layout.country = layout;
     QString input = findLayout(layout, layoutVariant);
 
-    if (input == "I/O ERROR") {
+    if (input == QLatin1String("I/O ERROR")) {
         symbolParser.layout.setParsedSymbol(false);
         return symbolParser.layout;
     }
@@ -243,11 +243,11 @@ KbLayout parseSymbols(const QString &layout, const QString &layoutVariant)
             currentInclude < symbolParser.layout.getIncludeCount();
             currentInclude++) {
         QString include = symbolParser.layout.getInclude(currentInclude);
-        QStringList includeFile = include.split("(");
+        QStringList includeFile = include.split(QStringLiteral("("));
         if (includeFile.size() == 2) {
             QString file = includeFile.at(0);
             QString layout = includeFile.at(1);
-            layout.remove(")");
+            layout.remove(QStringLiteral(")"));
             input = findLayout(file, layout);
 
         }
@@ -281,7 +281,7 @@ KbLayout parseSymbols(const QString &layout, const QString &layoutVariant)
     if (symbolParser.layout.getParsedSymbol()) {
         return symbolParser.layout;
     } else {
-        return parseSymbols("us", "basic");
+        return parseSymbols(QStringLiteral("us"), QStringLiteral("basic"));
     }
 }
 

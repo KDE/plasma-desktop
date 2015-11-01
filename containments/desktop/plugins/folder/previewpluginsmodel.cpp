@@ -35,7 +35,7 @@ PreviewPluginsModel::PreviewPluginsModel(QObject *parent)
     roleNames[Qt::CheckStateRole] = "checked";
     setRoleNames(roleNames);
 
-    m_plugins = KServiceTypeTrader::self()->query("ThumbCreator");
+    m_plugins = KServiceTypeTrader::self()->query(QStringLiteral("ThumbCreator"));
     qStableSort(m_plugins.begin(), m_plugins.end(), lessThan);
 
     m_checkedRows = QVector<bool>(m_plugins.size(), false);

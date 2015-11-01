@@ -50,7 +50,7 @@
 
 // We cannot rely on the $PATH environment variable, because D-Bus activation
 // clears it. So we have to use a reasonable default.
-static const QString exePath = QLatin1String("/usr/sbin:/usr/bin:/sbin:/bin");
+static const QString exePath = QStringLiteral("/usr/sbin:/usr/bin:/sbin:/bin");
 
 int ClockHelper::ntp( const QStringList& ntpServers, bool ntpEnabled )
 {
@@ -68,17 +68,17 @@ int ClockHelper::ntp( const QStringList& ntpServers, bool ntpEnabled )
     config.writeEntry("servers", ntpServers );
     config.writeEntry("enabled", ntpEnabled );
 
-    QString ntpUtility = QStandardPaths::findExecutable("ntpdate");
+    QString ntpUtility = QStandardPaths::findExecutable(QStringLiteral("ntpdate"));
     if (ntpUtility.isEmpty()) {
-        ntpUtility = QStandardPaths::findExecutable("rdate");
+        ntpUtility = QStandardPaths::findExecutable(QStringLiteral("rdate"));
     }
 
     if ( ntpEnabled && !ntpUtility.isEmpty() ) {
         // NTP Time setting
         QString timeServer = ntpServers.first();
-        if( timeServer.indexOf( QRegExp(".*\\(.*\\)$") ) != -1 ) {
-            timeServer.replace( QRegExp(".*\\("), "" );
-            timeServer.replace( QRegExp("\\).*"), "" );
+        if( timeServer.indexOf( QRegExp(QStringLiteral(".*\\(.*\\)$")) ) != -1 ) {
+            timeServer.replace( QRegExp(QStringLiteral(".*\\(")), QLatin1String("") );
+            timeServer.replace( QRegExp(QStringLiteral("\\).*")), QLatin1String("") );
             // Would this be better?: s/^.*\(([^)]*)\).*$/\1/
         }
 
@@ -117,7 +117,7 @@ int ClockHelper::tz( const QString& selectedzone )
 
     //only allow letters, numbers hyphen underscore plus and forward slash
     //allowed pattern taken from time-util.c in systemd
-    if (!QRegExp("[a-zA-Z0-9-_+/]*").exactMatch(selectedzone)) {
+    if (!QRegExp(QStringLiteral("[a-zA-Z0-9-_+/]*")).exactMatch(selectedzone)) {
         return ret;
     }
 
@@ -188,16 +188,16 @@ int ClockHelper::tz( const QString& selectedzone )
     QString tz = "/usr/share/zoneinfo/" + selectedzone;
 
     if (QFile::exists(tz)) { // make sure the new TZ really exists
-        QFile::remove("/etc/localtime");
+        QFile::remove(QStringLiteral("/etc/localtime"));
     } else {
         return TimezoneError;
     }
 
-    if (!QFile::link(tz, "/etc/localtime")) { // fail if we can't setup the new timezone
+    if (!QFile::link(tz, QStringLiteral("/etc/localtime"))) { // fail if we can't setup the new timezone
         return TimezoneError;
     }
 
-    QFile fTimezoneFile("/etc/timezone");
+    QFile fTimezoneFile(QStringLiteral("/etc/timezone"));
 
     if (fTimezoneFile.exists() && fTimezoneFile.open(QIODevice::WriteOnly | QIODevice::Truncate)) {
         QTextStream t(&fTimezoneFile);
@@ -227,29 +227,29 @@ int ClockHelper::tzreset()
 
 void ClockHelper::toHwclock()
 {
-    QString hwclock = KStandardDirs::findExe("hwclock", exePath);
+    QString hwclock = KStandardDirs::findExe(QStringLiteral("hwclock"), exePath);
     if (!hwclock.isEmpty()) {
-        KProcess::execute(hwclock, QStringList() << "--systohc");
+        KProcess::execute(hwclock, QStringList() << QStringLiteral("--systohc"));
     }
 }
 
 ActionReply ClockHelper::save(const QVariantMap &args)
 {
-    bool _ntp = args.value("ntp").toBool();
-    bool _date = args.value("date").toBool();
-    bool _tz = args.value("tz").toBool();
-    bool _tzreset = args.value("tzreset").toBool();
+    bool _ntp = args.value(QStringLiteral("ntp")).toBool();
+    bool _date = args.value(QStringLiteral("date")).toBool();
+    bool _tz = args.value(QStringLiteral("tz")).toBool();
+    bool _tzreset = args.value(QStringLiteral("tzreset")).toBool();
 
     KComponentData data( "kcmdatetimehelper" );
 
     int ret = 0; // error code
     //  The order here is important
     if( _ntp )
-        ret |= ntp( args.value("ntpServers").toStringList(), args.value("ntpEnabled").toBool());
+        ret |= ntp( args.value(QStringLiteral("ntpServers")).toStringList(), args.value(QStringLiteral("ntpEnabled")).toBool());
     if( _date )
-        ret |= date( args.value("newdate").toString(), args.value("olddate").toString() );
+        ret |= date( args.value(QStringLiteral("newdate")).toString(), args.value(QStringLiteral("olddate")).toString() );
     if( _tz )
-        ret |= tz( args.value("tzone").toString() );
+        ret |= tz( args.value(QStringLiteral("tzone")).toString() );
     if( _tzreset )
         ret |= tzreset();
 

@@ -89,11 +89,11 @@ KColorCm::KColorCm(QWidget *parent, const QVariantList &)
     about->addAuthor( i18n("Jeremy Whiting"), QString(), QStringLiteral("jpwhiting@kde.org"));
     setAboutData( about );
 
-    m_config = KSharedConfig::openConfig("kdeglobals");
+    m_config = KSharedConfig::openConfig(QStringLiteral("kdeglobals"));
 
     setupUi(this);
-    schemeKnsButton->setIcon( QIcon::fromTheme("get-hot-new-stuff") );
-    schemeKnsUploadButton->setIcon( QIcon::fromTheme("get-hot-new-stuff") );
+    schemeKnsButton->setIcon( QIcon::fromTheme(QStringLiteral("get-hot-new-stuff")) );
+    schemeKnsUploadButton->setIcon( QIcon::fromTheme(QStringLiteral("get-hot-new-stuff")) );
     connect(colorSet, static_cast<void (QComboBox::*)(int)>(&QComboBox::currentIndexChanged), this, &KColorCm::updateColorTable);
     connect(schemeList, SIGNAL(currentItemChanged(QListWidgetItem*,QListWidgetItem*)),
             this, SLOT(loadScheme(QListWidgetItem*,QListWidgetItem*)));
@@ -117,10 +117,10 @@ void KColorCm::populateSchemeList()
     QIcon icon;
 
     QStringList schemeFiles;
-    const QStringList schemeDirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, "color-schemes", QStandardPaths::LocateDirectory);
+    const QStringList schemeDirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("color-schemes"), QStandardPaths::LocateDirectory);
     Q_FOREACH (const QString &dir, schemeDirs)
     {
-        const QStringList fileNames = QDir(dir).entryList(QStringList()<<"*.colors");
+        const QStringList fileNames = QDir(dir).entryList(QStringList()<<QStringLiteral("*.colors"));
         Q_FOREACH (const QString &file, fileNames)
         {
             if( !schemeFiles.contains("color-schemes/"+file))
@@ -271,9 +271,9 @@ void KColorCm::loadScheme(QListWidgetItem *currentItem, QListWidgetItem *previou
                 i18n("Are you sure?"),
                 KStandardGuiItem::cont(),
                 KStandardGuiItem::cancel(),
-                "noDiscardWarning")) // if the user decides to cancel
+                QStringLiteral("noDiscardWarning"))) // if the user decides to cancel
             {
-                QTimer::singleShot(0, this, SLOT(selectPreviousSchemeAgain()));
+                QTimer::singleShot(0, this, &KColorCm::selectPreviousSchemeAgain);
                 return;
             }
         }
@@ -354,7 +354,7 @@ void KColorCm::on_schemeImportButton_clicked()
         // load the scheme
         KSharedConfigPtr config = KSharedConfig::openConfig(url.path());
 
-        if (config->groupList().contains("Color Scheme"))
+        if (config->groupList().contains(QStringLiteral("Color Scheme")))
         {
             if (KMessageBox::Continue != KMessageBox::warningContinueCancel(this,
                 i18n("The scheme you have selected appears to be a KDE3 scheme.\n\n"
@@ -419,7 +419,7 @@ void KColorCm::on_schemeImportButton_clicked()
 
 void KColorCm::on_schemeKnsButton_clicked()
 {
-    KNS3::DownloadDialog dialog("colorschemes.knsrc", this);
+    KNS3::DownloadDialog dialog(QStringLiteral("colorschemes.knsrc"), this);
     dialog.exec();
     if ( ! dialog.changedEntries().isEmpty() )
     {
@@ -450,7 +450,7 @@ void KColorCm::on_schemeKnsUploadButton_clicked()
         }
 
         // upload
-        KNS3::UploadDialog dialog("colorschemes.knsrc", this);
+        KNS3::UploadDialog dialog(QStringLiteral("colorschemes.knsrc"), this);
         dialog.setUploadFile(QUrl::fromLocalFile(path) );
         dialog.exec();
     }
@@ -477,7 +477,7 @@ void KColorCm::saveScheme(const QString &name)
 {
     QString filename = name;
     filename.remove('\''); // So Foo's does not become FooS
-    QRegExp fixer("[\\W,.-]+(.?)");
+    QRegExp fixer(QStringLiteral("[\\W,.-]+(.?)"));
     int offset;
     while ((offset = fixer.indexIn(filename)) >= 0)
         filename.replace(offset, fixer.matchedLength(), fixer.cap(1).toUpper());
@@ -800,18 +800,18 @@ void KColorCm::setupColorTable()
     colorTable->horizontalHeader()->setMinimumSectionSize(minWidth);
     colorTable->horizontalHeader()->setResizeMode(1, QHeaderView::ResizeToContents);
 
-    createColorEntry(i18n("Normal Background"),    "BackgroundNormal",    m_backgroundButtons, 0);
-    createColorEntry(i18n("Alternate Background"), "BackgroundAlternate", m_backgroundButtons, 1);
-    createColorEntry(i18n("Normal Text"),          "ForegroundNormal",    m_foregroundButtons, 2);
-    createColorEntry(i18n("Inactive Text"),        "ForegroundInactive",  m_foregroundButtons, 3);
-    createColorEntry(i18n("Active Text"),          "ForegroundActive",    m_foregroundButtons, 4);
-    createColorEntry(i18n("Link Text"),            "ForegroundLink",      m_foregroundButtons, 5);
-    createColorEntry(i18n("Visited Text"),         "ForegroundVisited",   m_foregroundButtons, 6);
-    createColorEntry(i18n("Negative Text"),        "ForegroundNegative",  m_foregroundButtons, 7);
-    createColorEntry(i18n("Neutral Text"),         "ForegroundNeutral",   m_foregroundButtons, 8);
-    createColorEntry(i18n("Positive Text"),        "ForegroundPositive",  m_foregroundButtons, 9);
-    createColorEntry(i18n("Focus Decoration"),     "DecorationFocus",     m_decorationButtons, 10);
-    createColorEntry(i18n("Hover Decoration"),     "DecorationHover",     m_decorationButtons, 11);
+    createColorEntry(i18n("Normal Background"),    QStringLiteral("BackgroundNormal"),    m_backgroundButtons, 0);
+    createColorEntry(i18n("Alternate Background"), QStringLiteral("BackgroundAlternate"), m_backgroundButtons, 1);
+    createColorEntry(i18n("Normal Text"),          QStringLiteral("ForegroundNormal"),    m_foregroundButtons, 2);
+    createColorEntry(i18n("Inactive Text"),        QStringLiteral("ForegroundInactive"),  m_foregroundButtons, 3);
+    createColorEntry(i18n("Active Text"),          QStringLiteral("ForegroundActive"),    m_foregroundButtons, 4);
+    createColorEntry(i18n("Link Text"),            QStringLiteral("ForegroundLink"),      m_foregroundButtons, 5);
+    createColorEntry(i18n("Visited Text"),         QStringLiteral("ForegroundVisited"),   m_foregroundButtons, 6);
+    createColorEntry(i18n("Negative Text"),        QStringLiteral("ForegroundNegative"),  m_foregroundButtons, 7);
+    createColorEntry(i18n("Neutral Text"),         QStringLiteral("ForegroundNeutral"),   m_foregroundButtons, 8);
+    createColorEntry(i18n("Positive Text"),        QStringLiteral("ForegroundPositive"),  m_foregroundButtons, 9);
+    createColorEntry(i18n("Focus Decoration"),     QStringLiteral("DecorationFocus"),     m_decorationButtons, 10);
+    createColorEntry(i18n("Hover Decoration"),     QStringLiteral("DecorationHover"),     m_decorationButtons, 11);
 
     colorTable->horizontalHeader()->setResizeMode(0, QHeaderView::Stretch);
     colorTable->horizontalHeader()->setResizeMode(1, QHeaderView::ResizeToContents);
@@ -1136,19 +1136,19 @@ QString KColorCm::colorSetGroupKey(int colorSet)
     QString group;
     switch (colorSet) {
         case KColorScheme::Window:
-            group = "Colors:Window";
+            group = QStringLiteral("Colors:Window");
             break;
         case KColorScheme::Button:
-            group = "Colors:Button";
+            group = QStringLiteral("Colors:Button");
             break;
         case KColorScheme::Selection:
-            group = "Colors:Selection";
+            group = QStringLiteral("Colors:Selection");
             break;
         case KColorScheme::Tooltip:
-            group = "Colors:Tooltip";
+            group = QStringLiteral("Colors:Tooltip");
             break;
         default:
-            group = "Colors:View";
+            group = QStringLiteral("Colors:View");
     }
     return group;
 }
@@ -1219,7 +1219,7 @@ void KColorCm::load()
     if(!itemList.isEmpty()) // "Current" is already selected, so don't handle the case that itemList is empty
         schemeList->setCurrentItem(itemList.at(0));
 
-    KConfig      cfg("kcmdisplayrc", KConfig::NoGlobals);
+    KConfig      cfg(QStringLiteral("kcmdisplayrc"), KConfig::NoGlobals);
     group = KConfigGroup(&cfg, "X11");
 
     applyToAlien->blockSignals(true); // don't emit SIGNAL(toggled(bool)) which would call SLOT(emitChanged())
@@ -1284,7 +1284,7 @@ void KColorCm::save()
     groupI.writeEntry("ContrastEffect", inactiveContrastBox->currentIndex());
 
     m_config->sync();
-    KConfig      cfg("kcmdisplayrc", KConfig::NoGlobals);
+    KConfig      cfg(QStringLiteral("kcmdisplayrc"), KConfig::NoGlobals);
     KConfigGroup displayGroup(&cfg, "X11");
 
     displayGroup.writeEntry("exportKDEColors", applyToAlien->isChecked());
@@ -1292,7 +1292,7 @@ void KColorCm::save()
 
     runRdb(KRdbExportQtColors | KRdbExportGtkTheme | ( applyToAlien->isChecked() ? KRdbExportColors : 0 ) );
 
-    QDBusMessage message = QDBusMessage::createSignal("/KGlobalSettings", "org.kde.KGlobalSettings", "notifyChange" );
+    QDBusMessage message = QDBusMessage::createSignal(QStringLiteral("/KGlobalSettings"), QStringLiteral("org.kde.KGlobalSettings"), QStringLiteral("notifyChange") );
     QList<QVariant> args;
     args.append(0);//previous KGlobalSettings::PaletteChanged. This is now private API in khintsettings
     args.append(0);//unused in palette changed but needed for the DBus signature
@@ -1301,7 +1301,7 @@ void KColorCm::save()
     if (qApp->platformName() == QStringLiteral("xcb")) {
         // Send signal to all kwin instances
         QDBusMessage message =
-        QDBusMessage::createSignal("/KWin", "org.kde.KWin", "reloadConfig");
+        QDBusMessage::createSignal(QStringLiteral("/KWin"), QStringLiteral("org.kde.KWin"), QStringLiteral("reloadConfig"));
         QDBusConnection::sessionBus().send(message);
     }
 

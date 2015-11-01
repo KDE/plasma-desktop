@@ -183,7 +183,7 @@ Geometry::Geometry()
     vertical = 0;
     sectionList << Section();
     shapes << GShape();
-    keyShape = QString("NORM");
+    keyShape = QStringLiteral("NORM");
     parsedGeometry = true;
 }
 

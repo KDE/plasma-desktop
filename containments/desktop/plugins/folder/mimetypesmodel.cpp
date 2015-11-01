@@ -117,7 +117,7 @@ QStringList MimeTypesModel::checkedTypes() const
         return list;
     }
 
-    return QStringList("");
+    return QStringList(QLatin1String(""));
 }
 
 void MimeTypesModel::setCheckedTypes(const QStringList &list)
@@ -143,7 +143,7 @@ FilterableMimeTypesModel::FilterableMimeTypesModel(QObject *parent) : QSortFilte
     setSourceModel(m_sourceModel);
     setDynamicSortFilter(true);
 
-    connect(m_sourceModel, SIGNAL(checkedTypesChanged()), this, SIGNAL(checkedTypesChanged()));
+    connect(m_sourceModel, &MimeTypesModel::checkedTypesChanged, this, &FilterableMimeTypesModel::checkedTypesChanged);
 }
 
 FilterableMimeTypesModel::~FilterableMimeTypesModel()

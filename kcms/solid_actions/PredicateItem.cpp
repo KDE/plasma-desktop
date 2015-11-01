@@ -201,7 +201,7 @@ void PredicateItem::updateChildrenStatus()
         qDeleteAll( d->children );
         d->children.clear();
     } else if( d->children.count() == 0 ) {
-        Solid::Predicate templItem = Solid::Predicate::fromString("IS StorageVolume");
+        Solid::Predicate templItem = Solid::Predicate::fromString(QStringLiteral("IS StorageVolume"));
         new PredicateItem( templItem, this );
         new PredicateItem( templItem, this );
     }

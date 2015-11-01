@@ -165,10 +165,10 @@ void KGlobalShortcutsEditor::KGlobalShortcutsEditorPrivate::initGUI()
 
     // Build the menu
     QMenu *menu = new QMenu(q);
-    menu->addAction( QIcon::fromTheme("document-import"), i18n("Import Scheme..."), q, SLOT(importScheme()));
-    menu->addAction( QIcon::fromTheme("document-export"), i18n("Export Scheme..."), q, SLOT(exportScheme()));
+    menu->addAction( QIcon::fromTheme(QStringLiteral("document-import")), i18n("Import Scheme..."), q, SLOT(importScheme()));
+    menu->addAction( QIcon::fromTheme(QStringLiteral("document-export")), i18n("Export Scheme..."), q, SLOT(exportScheme()));
     menu->addAction( i18n("Set All Shortcuts to None"), q, SLOT(clearConfiguration()));
-    QAction *action = menu->addAction( QIcon::fromTheme("edit-delete"), i18n("Remove Component"));
+    QAction *action = menu->addAction( QIcon::fromTheme(QStringLiteral("edit-delete")), i18n("Remove Component"));
     connect(action, &QAction::triggered, [this]() {
         QString name = ui.components->currentText();
         QString componentUnique = components.value(name)->uniqueName();
@@ -277,7 +277,7 @@ void KGlobalShortcutsEditor::addCollection(
                                   KIconLoader::DefaultState, QStringList(), 0, true);
         // if NULL pixmap is returned, use the F.D.O "system-run" icon
         if (pixmap.isNull()) {
-            pixmap = KIconLoader::global()->loadIcon("system-run", KIconLoader::Small);
+            pixmap = KIconLoader::global()->loadIcon(QStringLiteral("system-run"), KIconLoader::Small);
         }
 
         // Add to the component combobox
@@ -289,7 +289,7 @@ void KGlobalShortcutsEditor::addCollection(
         ComponentData *cd = new ComponentData(id, objectPath, editor);
         d->components.insert(friendlyName, cd);
 
-        connect(editor, SIGNAL(keyChange()), this, SLOT(_k_key_changed()));
+        connect(editor, &KShortcutsEditor::keyChange, this, &KGlobalShortcutsEditor::_k_key_changed);
     } else {
         // Known component.
         editor = (*iter)->editor();
@@ -369,7 +369,7 @@ void KGlobalShortcutsEditor::exportScheme()
             {
             // do not overwrite the Settings group. That makes it possible to
             // update the standard scheme kksrc file with the editor.
-            if (group == "Settings") continue;
+            if (group == QLatin1String("Settings")) continue;
             config.deleteGroup(group);
             }
         exportConfiguration(dia.selectedComponents(), &config);
@@ -416,8 +416,8 @@ void KGlobalShortcutsEditor::load()
     qDBusRegisterMetaType<KGlobalShortcutInfo>();
 
     org::kde::KGlobalAccel kglobalaccel(
-            "org.kde.kglobalaccel",
-            "/kglobalaccel",
+            QStringLiteral("org.kde.kglobalaccel"),
+            QStringLiteral("/kglobalaccel"),
             d->bus);
 
     if (!kglobalaccel.isValid()) {
@@ -549,7 +549,7 @@ void KGlobalShortcutsEditor::_k_key_changed()
 
 QDBusObjectPath KGlobalShortcutsEditor::KGlobalShortcutsEditorPrivate::componentPath(const QString &componentUnique)
 {
-    return QDBusObjectPath(QLatin1String("/component/") + componentUnique);
+    return QDBusObjectPath(QStringLiteral("/component/") + componentUnique);
 }
 
 
@@ -557,7 +557,7 @@ bool KGlobalShortcutsEditor::KGlobalShortcutsEditorPrivate::loadComponent(const 
 {
     // Get the component
     org::kde::kglobalaccel::Component component(
-            "org.kde.kglobalaccel",
+            QStringLiteral("org.kde.kglobalaccel"),
             componentPath.path(),
             bus);
     if (!component.isValid()) {
@@ -599,8 +599,8 @@ bool KGlobalShortcutsEditor::KGlobalShortcutsEditorPrivate::loadComponent(const 
         QString componentContextId = componentUnique;
         // kglobalaccel knows that '|' is our separator between
         // component and context
-        if (shortcutContext != "default") {
-            componentContextId += QString("|") + shortcutContext;
+        if (shortcutContext != QLatin1String("default")) {
+            componentContextId += QStringLiteral("|") + shortcutContext;
         }
 
         // Create a action collection for our current component:context
@@ -635,7 +635,7 @@ bool KGlobalShortcutsEditor::KGlobalShortcutsEditorPrivate::loadComponent(const 
 
         QString componentFriendlyName = shortcuts[0].componentFriendlyName();
 
-        if (shortcuts[0].contextUniqueName() != "default")
+        if (shortcuts[0].contextUniqueName() != QLatin1String("default"))
             {
             componentFriendlyName +=
                 QString('[') + shortcuts[0].contextFriendlyName() + QString(']');

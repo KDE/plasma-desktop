@@ -287,8 +287,8 @@ bool X11Helper::getGroupNames(Display* display, XkbConfig* xkbConfig, FetchType 
 		QStringList variants = names[3].split(OPTIONS_SEPARATOR);
 
 		for(int ii=0; ii<layouts.count(); ii++) {
-			xkbConfig->layouts << (layouts[ii] != NULL ? layouts[ii] : "");
-			xkbConfig->variants << (ii < variants.count() && variants[ii] != NULL ? variants[ii] : "");
+			xkbConfig->layouts << (layouts[ii] != NULL ? layouts[ii] : QLatin1String(""));
+			xkbConfig->variants << (ii < variants.count() && variants[ii] != NULL ? variants[ii] : QLatin1String(""));
 		}
 		qCDebug(KCM_KEYBOARD) << "Fetched layout groups from X server:"
 				<< "\tlayouts:" << xkbConfig->layouts
@@ -296,13 +296,13 @@ bool X11Helper::getGroupNames(Display* display, XkbConfig* xkbConfig, FetchType 
 	}
 
 	if( fetchType == ALL || fetchType == MODEL_ONLY ) {
-		xkbConfig->keyboardModel = (names[1] != NULL ? names[1] : "");
+		xkbConfig->keyboardModel = (names[1] != NULL ? names[1] : QLatin1String(""));
 		qCDebug(KCM_KEYBOARD) << "Fetched keyboard model from X server:" << xkbConfig->keyboardModel;
 	}
 
 	if( fetchType == ALL ) {
 		if( names.count() >= 5 ) {
-			QString options = (names[4] != NULL ? names[4] : "");
+			QString options = (names[4] != NULL ? names[4] : QLatin1String(""));
 			xkbConfig->options = options.split(OPTIONS_SEPARATOR);
 			qCDebug(KCM_KEYBOARD) << "Fetched xkbOptions from X server:" << options;
 		}
@@ -440,7 +440,7 @@ LayoutUnit::LayoutUnit(const QString& fullLayoutName)
 {
 	QStringList lv = fullLayoutName.split(LAYOUT_VARIANT_SEPARATOR_PREFIX);
 	layout = lv[0];
-	variant = lv.size() > 1 ? stripVariantName(lv[1]) : "";
+	variant = lv.size() > 1 ? stripVariantName(lv[1]) : QLatin1String("");
 }
 
 QString LayoutUnit::toString() const

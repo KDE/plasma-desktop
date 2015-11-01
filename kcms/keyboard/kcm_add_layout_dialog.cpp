@@ -32,7 +32,7 @@ AddLayoutDialog::AddLayoutDialog(const Rules* rules_, Flags* flags_, const QStri
 		rules(rules_),
 		flags(flags_),
 		model(model_),
-		selectedLanguage("no_language")
+		selectedLanguage(QStringLiteral("no_language"))
 {
     layoutDialogUi = new Ui_AddLayoutDialog();
     layoutDialogUi->setupUi(this);
@@ -151,7 +151,7 @@ void AddLayoutDialog::accept()
 	selectedLayoutUnit.variant = layoutDialogUi->variantComboBox->itemData(layoutDialogUi->variantComboBox->currentIndex()).toString();
     QString label = layoutDialogUi->labelEdit->text();
 	if( label == selectedLayoutUnit.layout ) {
-		label = "";
+		label = QLatin1String("");
 	}
 	selectedLayoutUnit.setDisplayName( label );
 	selectedLayoutUnit.setShortcut(layoutDialogUi->kkeysequencewidget->keySequence());

@@ -50,11 +50,11 @@ const QIcon LayoutsMenu::getFlag(const QString& layout) const
 void LayoutsMenu::actionTriggered(QAction* action)
 {
 	QString data = action->data().toString();
-	if( data == "config" ) {
+	if( data == QLatin1String("config") ) {
 		QStringList args;
-		args << "--args=--tab=layouts";
-		args << "kcm_keyboard";
-		KToolInvocation::kdeinitExec("kcmshell5", args);
+		args << QStringLiteral("--args=--tab=layouts");
+		args << QStringLiteral("kcm_keyboard");
+		KToolInvocation::kdeinitExec(QStringLiteral("kcmshell5"), args);
 	}
 	else {
 		LayoutUnit layoutUnit(LayoutUnit(action->data().toString()));

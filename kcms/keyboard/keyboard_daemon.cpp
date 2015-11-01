@@ -107,8 +107,8 @@ void KeyboardDaemon::configureKeyboard()
 void KeyboardDaemon::configureMouse()
 {
     QStringList modules;
-    modules << "mouse";
-    QProcess::startDetached("kcminit", modules);
+    modules << QStringLiteral("mouse");
+    QProcess::startDetached(QStringLiteral("kcminit"), modules);
 }
 
 void KeyboardDaemon::setupTrayIcon()
@@ -131,7 +131,7 @@ void KeyboardDaemon::registerShortcut()
 		actionCollection = new KeyboardLayoutActionCollection(this, false);
 
 		QAction* toggleLayoutAction = actionCollection->getToggleAction();
-		connect(toggleLayoutAction, SIGNAL(triggered()), this, SLOT(switchToNextLayout()));
+		connect(toggleLayoutAction, &QAction::triggered, this, &KeyboardDaemon::switchToNextLayout);
 		actionCollection->loadLayoutShortcuts(keyboardConfig.layouts, rules);
 		connect(actionCollection, SIGNAL(actionTriggered(QAction*)), this, SLOT(setLayout(QAction*)));
     }
@@ -142,7 +142,7 @@ void KeyboardDaemon::unregisterShortcut()
 	// register KDE keyboard shortcut for switching layouts
     if( actionCollection != NULL ) {
 		disconnect(actionCollection, SIGNAL(actionTriggered(QAction*)), this, SLOT(setLayout(QAction*)));
-        disconnect(actionCollection->getToggleAction(), SIGNAL(triggered()), this, SLOT(switchToNextLayout()));
+        disconnect(actionCollection->getToggleAction(), &QAction::triggered, this, &KeyboardDaemon::switchToNextLayout);
 
         delete actionCollection;
         actionCollection = NULL;
@@ -154,10 +154,10 @@ void KeyboardDaemon::registerListeners()
 	if( xEventNotifier == NULL ) {
 		xEventNotifier = new XInputEventNotifier();
 	}
-	connect(xEventNotifier, SIGNAL(newPointerDevice()), this, SLOT(configureMouse()));
-	connect(xEventNotifier, SIGNAL(newKeyboardDevice()), this, SLOT(configureKeyboard()));
-	connect(xEventNotifier, SIGNAL(layoutMapChanged()), this, SLOT(layoutMapChanged()));
-	connect(xEventNotifier, SIGNAL(layoutChanged()), this, SLOT(layoutChanged()));
+	connect(xEventNotifier, &XInputEventNotifier::newPointerDevice, this, &KeyboardDaemon::configureMouse);
+	connect(xEventNotifier, &XInputEventNotifier::newKeyboardDevice, this, &KeyboardDaemon::configureKeyboard);
+	connect(xEventNotifier, &XEventNotifier::layoutMapChanged, this, &KeyboardDaemon::layoutMapChanged);
+	connect(xEventNotifier, &XEventNotifier::layoutChanged, this, &KeyboardDaemon::layoutChanged);
 	xEventNotifier->start();
 }
 
@@ -165,10 +165,10 @@ void KeyboardDaemon::unregisterListeners()
 {
 	if( xEventNotifier != NULL ) {
 		xEventNotifier->stop();
-		disconnect(xEventNotifier, SIGNAL(newPointerDevice()), this, SLOT(configureMouse()));
-		disconnect(xEventNotifier, SIGNAL(newKeyboardDevice()), this, SLOT(configureKeyboard()));
-		disconnect(xEventNotifier, SIGNAL(layoutChanged()), this, SLOT(layoutChanged()));
-		disconnect(xEventNotifier, SIGNAL(layoutMapChanged()), this, SLOT(layoutMapChanged()));
+		disconnect(xEventNotifier, &XInputEventNotifier::newPointerDevice, this, &KeyboardDaemon::configureMouse);
+		disconnect(xEventNotifier, &XInputEventNotifier::newKeyboardDevice, this, &KeyboardDaemon::configureKeyboard);
+		disconnect(xEventNotifier, &XEventNotifier::layoutChanged, this, &KeyboardDaemon::layoutChanged);
+		disconnect(xEventNotifier, &XEventNotifier::layoutMapChanged, this, &KeyboardDaemon::layoutMapChanged);
 	}
 }
 
@@ -206,10 +206,10 @@ void KeyboardDaemon::switchToNextLayout()
         LayoutUnit newLayout = X11Helper::getCurrentLayout();
 
         QDBusMessage msg = QDBusMessage::createMethodCall(
-        QLatin1Literal("org.kde.plasmashell"),
-        QLatin1Literal("/org/kde/osdService"),
-        QLatin1Literal("org.kde.osdService"),
-        QLatin1Literal("kbdLayoutChanged"));
+        QStringLiteral("org.kde.plasmashell"),
+        QStringLiteral("/org/kde/osdService"),
+        QStringLiteral("org.kde.osdService"),
+        QStringLiteral("kbdLayoutChanged"));
 
         msg.setArguments(QList<QVariant>() << newLayout.getDisplayName());
         QDBusConnection::sessionBus().asyncCall(msg);

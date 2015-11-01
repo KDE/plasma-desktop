@@ -50,8 +50,8 @@ void CfgBrowser::defaults()
 
 void CfgBrowser::load(KConfig *) 
 {
-    KConfigGroup config(KSharedConfig::openConfig("kdeglobals"), QLatin1String("General") );
-    QString exec = config.readPathEntry( QLatin1String("BrowserApplication"), QString("") );
+    KConfigGroup config(KSharedConfig::openConfig(QStringLiteral("kdeglobals")), QStringLiteral("General") );
+    QString exec = config.readPathEntry( QStringLiteral("BrowserApplication"), QLatin1String("") );
     if (exec.isEmpty())
     {
         radioKIO->setChecked(true);
@@ -83,8 +83,8 @@ void CfgBrowser::load(KConfig *)
 
 void CfgBrowser::save(KConfig *)
 {
-    KSharedConfig::Ptr profile = KSharedConfig::openConfig("kdeglobals", KConfig::SimpleConfig);
-    KConfigGroup config(profile, QLatin1String("General"));
+    KSharedConfig::Ptr profile = KSharedConfig::openConfig(QStringLiteral("kdeglobals"), KConfig::SimpleConfig);
+    KConfigGroup config(profile, QStringLiteral("General"));
     QString exec;
     if (radioExec->isChecked())
     {
@@ -94,10 +94,10 @@ void CfgBrowser::save(KConfig *)
         else if (!exec.isEmpty())
             exec = '!' + exec; // Literal command
     }
-    config.writePathEntry( QLatin1String("BrowserApplication"), exec); // KConfig::Normal|KConfig::Global
+    config.writePathEntry( QStringLiteral("BrowserApplication"), exec); // KConfig::Normal|KConfig::Global
     config.sync();
 
-    Kdelibs4SharedConfig::syncConfigGroup(&config, "kdeglobals");
+    Kdelibs4SharedConfig::syncConfigGroup(&config, QStringLiteral("kdeglobals"));
 
     KGlobalSettings::self()->emitChange(KGlobalSettings::SettingsChanged);
 

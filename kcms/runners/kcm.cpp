@@ -42,12 +42,12 @@ K_PLUGIN_FACTORY(SearchConfigModuleFactory, registerPlugin<SearchConfigModule>()
 
 SearchConfigModule::SearchConfigModule(QWidget* parent, const QVariantList& args)
     : KCModule(parent, args)
-    , m_config("krunnerrc")
+    , m_config(QStringLiteral("krunnerrc"))
     , m_configGroup(m_config.group("PlasmaRunnerManager"))
 {
-    KAboutData* about = new KAboutData("kcm_search", i18n("Configure Search"),
-                                       "0.1", QString(), KAboutLicense::LGPL);
-    about->addAuthor(i18n("Vishesh Handa"), QString(), "vhanda@kde.org");
+    KAboutData* about = new KAboutData(QStringLiteral("kcm_search"), i18n("Configure Search"),
+                                       QStringLiteral("0.1"), QString(), KAboutLicense::LGPL);
+    about->addAuthor(i18n("Vishesh Handa"), QString(), QStringLiteral("vhanda@kde.org"));
     setAboutData(about);
     setButtons(Apply | Default);
 
@@ -58,7 +58,7 @@ SearchConfigModule::SearchConfigModule(QWidget* parent, const QVariantList& args
     QLabel *label = new QLabel(i18n("Select the search plugins"));
 
     QPushButton *clearHistoryButton = new QPushButton(i18n("Clear History"));
-    clearHistoryButton->setIcon(QIcon::fromTheme("edit-clear-history"));
+    clearHistoryButton->setIcon(QIcon::fromTheme(QStringLiteral("edit-clear-history")));
     connect(clearHistoryButton, &QPushButton::clicked, this, [this] {
         KConfigGroup generalConfig(m_config.group("General"));
         generalConfig.deleteEntry("history");
@@ -81,7 +81,7 @@ SearchConfigModule::SearchConfigModule(QWidget* parent, const QVariantList& args
     layout->addWidget(m_listWidget);
 
     m_configButton = new QToolButton(m_listWidget->viewport());
-    m_configButton->setIcon(QIcon::fromTheme("configure"));
+    m_configButton->setIcon(QIcon::fromTheme(QStringLiteral("configure")));
     m_configButton->resize(m_configButton->height(), m_configButton->height());
     m_configButton->hide();
     size = IconSize(KIconLoader::Small);

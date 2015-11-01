@@ -114,7 +114,7 @@ void IsoCodesPrivate::buildIsoEntryList()
 {
 	loaded = true;
 
-	QFile file(QString("%1/iso_%2.xml").arg(isoCodesXmlDir, isoCode));
+	QFile file(QStringLiteral("%1/iso_%2.xml").arg(isoCodesXmlDir, isoCode));
 	if( !file.open(QFile::ReadOnly | QFile::Text) ) {
 		qCritical() << "Can't open the xml file" << file.fileName();
 		return;

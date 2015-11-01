@@ -58,7 +58,7 @@ K_PLUGIN_FACTORY_WITH_JSON(KCMLookandFeelFactory, "kcm_lookandfeel.json", regist
 
 KCMLookandFeel::KCMLookandFeel(QObject* parent, const QVariantList& args)
     : KQuickAddons::ConfigModule(parent, args)
-    , m_config("kdeglobals")
+    , m_config(QStringLiteral("kdeglobals"))
     , m_configGroup(m_config.group("KDE"))
     , m_applyColors(true)
     , m_applyWidgetStyle(true)
@@ -73,9 +73,9 @@ KCMLookandFeel::KCMLookandFeel(QObject* parent, const QVariantList& args)
     //also, it seems to work only if set in the kcm, not in the systemsettings' main
     qApp->setAttribute(Qt::AA_DontCreateNativeWidgetSiblings);
     qmlRegisterType<QStandardItemModel>();
-    KAboutData* about = new KAboutData("kcm_lookandfeel", i18n("Configure Look and Feel details"),
-                                       "0.1", QString(), KAboutLicense::LGPL);
-    about->addAuthor(i18n("Marco Martin"), QString(), "mart@kde.org");
+    KAboutData* about = new KAboutData(QStringLiteral("kcm_lookandfeel"), i18n("Configure Look and Feel details"),
+                                       QStringLiteral("0.1"), QString(), KAboutLicense::LGPL);
+    about->addAuthor(i18n("Marco Martin"), QString(), QStringLiteral("mart@kde.org"));
     setAboutData(about);
     setButtons(Apply | Default);
 
@@ -140,7 +140,7 @@ QList<Plasma::Package> KCMLookandFeel::availablePackages(const QString &componen
     }
 
     for (const QString &path : paths) {
-        Plasma::Package pkg = Plasma::PluginLoader::self()->loadPackage("Plasma/LookAndFeel");
+        Plasma::Package pkg = Plasma::PluginLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"));
         pkg.setPath(path);
         pkg.setFallbackPackage(Plasma::Package());
         if (component.isEmpty() || !pkg.filePath(component.toUtf8()).isEmpty()) {
@@ -153,8 +153,8 @@ QList<Plasma::Package> KCMLookandFeel::availablePackages(const QString &componen
 
 void KCMLookandFeel::load()
 {
-    m_package = Plasma::PluginLoader::self()->loadPackage("Plasma/LookAndFeel");
-    KConfigGroup cg(KSharedConfig::openConfig("kdeglobals"), "KDE");
+    m_package = Plasma::PluginLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"));
+    KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral("kdeglobals")), "KDE");
     const QString packageName = cg.readEntry("LookAndFeelPackage", QString());
     if (!packageName.isEmpty()) {
         m_package.setPath(packageName);
@@ -175,7 +175,7 @@ void KCMLookandFeel::load()
         }
         QStandardItem* row = new QStandardItem(pkg.metadata().name());
         row->setData(pkg.metadata().pluginName(), PluginNameRole);
-        row->setData(pkg.filePath("previews", "preview.png"), ScreenhotRole);
+        row->setData(pkg.filePath("previews", QStringLiteral("preview.png")), ScreenhotRole);
 
         //What the package provides
         row->setData(!pkg.filePath("splashmainscript").isEmpty(), HasSplashRole);
@@ -222,7 +222,7 @@ void KCMLookandFeel::load()
 
 void KCMLookandFeel::save()
 {
-    Plasma::Package package = Plasma::PluginLoader::self()->loadPackage("Plasma/LookAndFeel");
+    Plasma::Package package = Plasma::PluginLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"));
     package.setPath(m_selectedPlugin);
 
     if (!package.isValid()) {
@@ -253,7 +253,7 @@ void KCMLookandFeel::save()
                 }
             } else if (!colorScheme.isEmpty()) {
                 colorScheme.remove('\''); // So Foo's does not become FooS
-                QRegExp fixer("[\\W,.-]+(.?)");
+                QRegExp fixer(QStringLiteral("[\\W,.-]+(.?)"));
                 int offset;
                 while ((offset = fixer.indexIn(colorScheme)) >= 0) {
                     colorScheme.replace(offset, fixer.matchedLength(), fixer.cap(1).toUpper());
@@ -362,7 +362,7 @@ void KCMLookandFeel::setPlasmaTheme(const QString &theme)
         return;
     }
 
-    KConfig config("plasmarc");
+    KConfig config(QStringLiteral("plasmarc"));
     KConfigGroup cg(&config, "Theme");
     cg.writeEntry("name", theme);
     cg.sync();
@@ -375,7 +375,7 @@ void KCMLookandFeel::setCursorTheme(const QString themeName)
         return;
     }
 
-    KConfig config("kcminputrc");
+    KConfig config(QStringLiteral("kcminputrc"));
     KConfigGroup cg(&config, "Mouse");
     cg.writeEntry("cursorTheme", themeName);
     cg.sync();
@@ -412,21 +412,21 @@ void KCMLookandFeel::setCursorTheme(const QString themeName)
     QStringList names;
 
     // Qt cursors
-    names << "left_ptr"       << "up_arrow"      << "cross"      << "wait"
-          << "left_ptr_watch" << "ibeam"         << "size_ver"   << "size_hor"
-          << "size_bdiag"     << "size_fdiag"    << "size_all"   << "split_v"
-          << "split_h"        << "pointing_hand" << "openhand"
-          << "closedhand"     << "forbidden"     << "whats_this" << "copy" << "move" << "link";
+    names << QStringLiteral("left_ptr")       << QStringLiteral("up_arrow")      << QStringLiteral("cross")      << QStringLiteral("wait")
+          << QStringLiteral("left_ptr_watch") << QStringLiteral("ibeam")         << QStringLiteral("size_ver")   << QStringLiteral("size_hor")
+          << QStringLiteral("size_bdiag")     << QStringLiteral("size_fdiag")    << QStringLiteral("size_all")   << QStringLiteral("split_v")
+          << QStringLiteral("split_h")        << QStringLiteral("pointing_hand") << QStringLiteral("openhand")
+          << QStringLiteral("closedhand")     << QStringLiteral("forbidden")     << QStringLiteral("whats_this") << QStringLiteral("copy") << QStringLiteral("move") << QStringLiteral("link");
 
     // X core cursors
-    names << "X_cursor"            << "right_ptr"           << "hand1"
-          << "hand2"               << "watch"               << "xterm"
-          << "crosshair"           << "left_ptr_watch"      << "center_ptr"
-          << "sb_h_double_arrow"   << "sb_v_double_arrow"   << "fleur"
-          << "top_left_corner"     << "top_side"            << "top_right_corner"
-          << "right_side"          << "bottom_right_corner" << "bottom_side"
-          << "bottom_left_corner"  << "left_side"           << "question_arrow"
-          << "pirate";
+    names << QStringLiteral("X_cursor")            << QStringLiteral("right_ptr")           << QStringLiteral("hand1")
+          << QStringLiteral("hand2")               << QStringLiteral("watch")               << QStringLiteral("xterm")
+          << QStringLiteral("crosshair")           << QStringLiteral("left_ptr_watch")      << QStringLiteral("center_ptr")
+          << QStringLiteral("sb_h_double_arrow")   << QStringLiteral("sb_v_double_arrow")   << QStringLiteral("fleur")
+          << QStringLiteral("top_left_corner")     << QStringLiteral("top_side")            << QStringLiteral("top_right_corner")
+          << QStringLiteral("right_side")          << QStringLiteral("bottom_right_corner") << QStringLiteral("bottom_side")
+          << QStringLiteral("bottom_left_corner")  << QStringLiteral("left_side")           << QStringLiteral("question_arrow")
+          << QStringLiteral("pirate");
 
     foreach (const QString &name, names) {
         XFixesChangeCursorByName(QX11Info::display(), theme.loadCursor(name, 0), QFile::encodeName(name));
@@ -454,12 +454,12 @@ QDir KCMLookandFeel::cursorThemeDir(const QString &theme, const int depth)
         }
 
         // If there's a cursors subdir, we'll assume this is a cursor theme
-        if (dir.exists("cursors")) {
+        if (dir.exists(QStringLiteral("cursors"))) {
             return dir;
         }
 
         // If the theme doesn't have an index.theme file, it can't inherit any themes.
-        if (!dir.exists("index.theme")) {
+        if (!dir.exists(QStringLiteral("index.theme"))) {
             continue;
         }
 
@@ -518,7 +518,7 @@ const QStringList KCMLookandFeel::cursorSearchPaths()
     }
 
     // Expand all occurrences of ~/ to the home dir
-    m_cursorSearchPaths.replaceInStrings(QRegExp("^~\\/"), QDir::home().path() + '/');
+    m_cursorSearchPaths.replaceInStrings(QRegExp(QStringLiteral("^~\\/")), QDir::home().path() + '/');
     return m_cursorSearchPaths;
 }
 
@@ -528,7 +528,7 @@ void KCMLookandFeel::setSplashScreen(const QString &theme)
         return;
     }
 
-    KConfig config("ksplashrc");
+    KConfig config(QStringLiteral("ksplashrc"));
     KConfigGroup cg(&config, "KSplash");
     cg.writeEntry("Theme", theme);
     //TODO: a way to set none as spash in the l&f
@@ -542,7 +542,7 @@ void KCMLookandFeel::setLockScreen(const QString &theme)
         return;
     }
 
-    KConfig config("kscreenlockerrc");
+    KConfig config(QStringLiteral("kscreenlockerrc"));
     KConfigGroup cg(&config, "Greeter");
     cg.writeEntry("Theme", theme);
     cg.sync();
@@ -554,7 +554,7 @@ void KCMLookandFeel::setWindowSwitcher(const QString &theme)
         return;
     }
 
-    KConfig config("kwinrc");
+    KConfig config(QStringLiteral("kwinrc"));
     KConfigGroup cg(&config, "TabBox");
     cg.writeEntry("LayoutName", theme);
     cg.sync();
@@ -571,7 +571,7 @@ void KCMLookandFeel::setDesktopSwitcher(const QString &theme)
         return;
     }
 
-    KConfig config("kwinrc");
+    KConfig config(QStringLiteral("kwinrc"));
     KConfigGroup cg(&config, "TabBox");
     cg.writeEntry("DesktopLayout", theme);
     cg.writeEntry("DesktopListLayout", theme);

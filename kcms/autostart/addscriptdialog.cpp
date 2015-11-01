@@ -44,7 +44,7 @@ AddScriptDialog::AddScriptDialog (QWidget* parent)
     m_symlink = new QCheckBox( i18n( "Create as symlink" ), this ); //TODO fix text
     m_symlink->setChecked( true );
     lay->addWidget( m_symlink );
-    connect( m_url->lineEdit(), SIGNAL(textChanged(QString)), SLOT(textChanged(QString)) );
+    connect( m_url->lineEdit(), &QLineEdit::textChanged, this, &AddScriptDialog::textChanged );
     m_url->lineEdit()->setFocus();
 
     m_buttons = new QDialogButtonBox(QDialogButtonBox::Ok|QDialogButtonBox::Cancel, this);

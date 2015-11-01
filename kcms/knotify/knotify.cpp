@@ -71,7 +71,7 @@ KCMKNotify::KCMKNotify(QWidget *parent, const QVariantList & )
     QLabel *label = new QLabel( i18n( "Event source:" ), this );
     m_appCombo = new KComboBox( false, this );
     m_appCombo->setSizeAdjustPolicy( QComboBox::AdjustToContents );
-    m_appCombo->setObjectName( QLatin1String( "app combo" ) );
+    m_appCombo->setObjectName( QStringLiteral( "app combo" ) );
 
     QHBoxLayout *hbox = new QHBoxLayout();
     layout->addLayout( hbox );
@@ -89,20 +89,20 @@ KCMKNotify::KCMKNotify(QWidget *parent, const QVariantList & )
              SLOT( slotAppActivated( int )) );
 
     KAboutData* ab = new KAboutData(
-        "kcmknotify", i18n("KNotify"), "4.0",
+        QStringLiteral("kcmknotify"), i18n("KNotify"), QStringLiteral("4.0"),
         i18n("System Notification Control Panel Module"),
         KAboutLicense::GPL, i18n("(c) 2002-2006 KDE Team"));
 
-    ab->addAuthor( i18n("Olivier Goffart"), QString(), "ogoffart@kde.org" );
-    ab->addAuthor( i18n("Carsten Pfeiffer"), QString(), "pfeiffer@kde.org" );
+    ab->addAuthor( i18n("Olivier Goffart"), QString(), QStringLiteral("ogoffart@kde.org") );
+    ab->addAuthor( i18n("Carsten Pfeiffer"), QString(), QStringLiteral("pfeiffer@kde.org") );
     ab->addCredit( i18n("Charles Samuels"), i18n("Original implementation"),
-        "charles@altair.dhs.org" );
+        QStringLiteral("charles@altair.dhs.org") );
     setAboutData( ab );
 }
 
 KCMKNotify::~KCMKNotify()
 {
-    KConfig _config("knotifyrc", KConfig::NoGlobals);
+    KConfig _config(QStringLiteral("knotifyrc"), KConfig::NoGlobals);
     KConfigGroup config(&_config, "Misc" );
     config.writeEntry( "LastConfiguredApp", m_appCombo->currentText() );
     config.sync();
@@ -128,7 +128,7 @@ void KCMKNotify::load()
 //    m_notifyWidget->clear();
 
     QStringList fullpaths =
-        KGlobal::dirs()->findAllResources("data", "*/*.notifyrc", KStandardDirs::NoDuplicates );
+        KGlobal::dirs()->findAllResources("data", QStringLiteral("*/*.notifyrc"), KStandardDirs::NoDuplicates );
 
     foreach (const QString &fullPath, fullpaths )
     {
@@ -138,9 +138,9 @@ void KCMKNotify::load()
         if ( !appname.isEmpty() )
         {
             KConfig config(fullPath, KConfig::NoGlobals, QStandardPaths::DataLocation);
-            KConfigGroup globalConfig( &config, QString::fromLatin1("Global") );
-            QString icon = globalConfig.readEntry(QString::fromLatin1("IconName"), QString::fromLatin1("misc"));
-            QString description = globalConfig.readEntry( QString::fromLatin1("Comment"), appname );
+            KConfigGroup globalConfig( &config, QLatin1String("Global") );
+            QString icon = globalConfig.readEntry(QStringLiteral("IconName"), QStringLiteral("misc"));
+            QString description = globalConfig.readEntry( QStringLiteral("Comment"), appname );
             m_appCombo->addItem( QIcon::fromTheme( icon ), description, appname );
         }
     }

@@ -64,7 +64,7 @@ SolidActionData::SolidActionData(bool includeFiles)
 
     if( includeFiles ) {
         // Fill the lists of possible device types / device values
-        const QString deviceDir = QStandardPaths::locate(QStandardPaths::GenericDataLocation, "/solid/devices/", QStandardPaths::LocateDirectory);
+        const QString deviceDir = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("/solid/devices/"), QStandardPaths::LocateDirectory);
         // List all the known device actions, then add their name and all values to the appropriate lists
         QDirIterator it(deviceDir, QStringList() << QStringLiteral("*.desktop"));
         while (it.hasNext()) {
@@ -142,10 +142,10 @@ int SolidActionData::interfacePosition( Solid::DeviceInterface::Type devInterfac
 QString SolidActionData::generateUserString( QString className )
 {
     QString finalString;
-    QRegExp camelCase("([A-Z])"); // Create the split regexp
+    QRegExp camelCase(QStringLiteral("([A-Z])")); // Create the split regexp
 
     finalString = className.remove(0, className.lastIndexOf(':') + 1); // Remove any Class information
-    finalString = finalString.replace( camelCase, " \\1" ); // Use Camel Casing to add spaces
+    finalString = finalString.replace( camelCase, QStringLiteral(" \\1") ); // Use Camel Casing to add spaces
     finalString = KStringHandler::capwords( finalString ); // Captialise everything
     return finalString.trimmed();
 }

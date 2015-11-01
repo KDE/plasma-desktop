@@ -32,7 +32,7 @@
 int main(int argc, char **argv)
 {
     QCoreApplication app(argc, argv);
-    QSettings settings(QLatin1String("Trolltech"));
+    QSettings settings(QStringLiteral("Trolltech"));
     QString qversion = qVersion();
     if (qversion.count('.') > 1) {
         qversion.truncate(qversion.lastIndexOf('.'));
@@ -40,7 +40,7 @@ int main(int argc, char **argv)
     if (qversion.contains('-')) {
         qversion.truncate(qversion.lastIndexOf('-'));
     }
-    const QString &libPathKey = QString("/qt/%1/libraryPath").arg(qversion);
+    const QString &libPathKey = QStringLiteral("/qt/%1/libraryPath").arg(qversion);
 
     QStringList kdeAdded;
     KComponentData kcd("krdb libraryPath fix");
@@ -51,8 +51,8 @@ int main(int argc, char **argv)
             continue;
         }
         kdeAdded.prepend(path);
-        if (path.contains("/lib64/")) {
-            path.replace("/lib64/", "/lib/");
+        if (path.contains(QStringLiteral("/lib64/"))) {
+            path.replace(QLatin1String("/lib64/"), QLatin1String("/lib/"));
             if (!kdeAdded.contains(path)) {
                 kdeAdded.prepend(path);
             }
@@ -68,8 +68,8 @@ int main(int argc, char **argv)
         libraryPath.removeAll(path);
     }
 
-    settings.remove("/qt/KDE/kdeAddedLibraryPaths");
-    settings.setValue(libPathKey, libraryPath.join(QLatin1String(":")));
+    settings.remove(QStringLiteral("/qt/KDE/kdeAddedLibraryPaths"));
+    settings.setValue(libPathKey, libraryPath.join(QStringLiteral(":")));
 
     return 0;
 }

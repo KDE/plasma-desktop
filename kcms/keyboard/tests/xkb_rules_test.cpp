@@ -114,47 +114,47 @@ private Q_SLOTS:
     }
 
     void testWriteNewXml() {
-    	QDomDocument doc("xkbConfigRegistry");
-    	QDomElement root = doc.createElement("xkbConfigRegistry");
-    	root.setAttribute("version", "2.0");
+    	QDomDocument doc(QStringLiteral("xkbConfigRegistry"));
+    	QDomElement root = doc.createElement(QStringLiteral("xkbConfigRegistry"));
+    	root.setAttribute(QStringLiteral("version"), QStringLiteral("2.0"));
     	doc.appendChild(root);
 
-    	QDomElement modelList = doc.createElement("modelList");
+    	QDomElement modelList = doc.createElement(QStringLiteral("modelList"));
     	root.appendChild(modelList);
     	foreach(const ModelInfo* modelInfo, rules->modelInfos) {
-        	QDomElement model = doc.createElement("model");
-        	model.setAttribute("name", modelInfo->name);
-        	model.setAttribute("description", modelInfo->description);
-        	model.setAttribute("vendor", modelInfo->vendor);
+        	QDomElement model = doc.createElement(QStringLiteral("model"));
+        	model.setAttribute(QStringLiteral("name"), modelInfo->name);
+        	model.setAttribute(QStringLiteral("description"), modelInfo->description);
+        	model.setAttribute(QStringLiteral("vendor"), modelInfo->vendor);
     		modelList.appendChild(model);
     	}
 
-    	QDomElement layoutList = doc.createElement("layoutList");
+    	QDomElement layoutList = doc.createElement(QStringLiteral("layoutList"));
     	foreach(const LayoutInfo* layoutInfo, rules->layoutInfos) {
-        	QDomElement layout = doc.createElement("layout");
-        	layout.setAttribute("name", layoutInfo->name);
-        	layout.setAttribute("description", layoutInfo->description);
+        	QDomElement layout = doc.createElement(QStringLiteral("layout"));
+        	layout.setAttribute(QStringLiteral("name"), layoutInfo->name);
+        	layout.setAttribute(QStringLiteral("description"), layoutInfo->description);
 
-        	QDomElement langList = doc.createElement("languageList");
+        	QDomElement langList = doc.createElement(QStringLiteral("languageList"));
         	foreach(const QString& lang, layoutInfo->languages) {
-            	QDomElement langNode = doc.createElement("lang");
-            	langNode.setAttribute("iso639Id", lang);
+            	QDomElement langNode = doc.createElement(QStringLiteral("lang"));
+            	langNode.setAttribute(QStringLiteral("iso639Id"), lang);
             	langList.appendChild(langNode);
         	}
         	if( langList.hasChildNodes() ) {
         		layout.appendChild(langList);
         	}
 
-        	QDomElement variantList = doc.createElement("variantList");
+        	QDomElement variantList = doc.createElement(QStringLiteral("variantList"));
         	foreach(const VariantInfo* variantInfo, layoutInfo->variantInfos) {
-            	QDomElement variant = doc.createElement("variant");
-            	variant.setAttribute("name", variantInfo->name);
-            	variant.setAttribute("description", variantInfo->description);
+            	QDomElement variant = doc.createElement(QStringLiteral("variant"));
+            	variant.setAttribute(QStringLiteral("name"), variantInfo->name);
+            	variant.setAttribute(QStringLiteral("description"), variantInfo->description);
 
-            	QDomElement langList = doc.createElement("languageList");
+            	QDomElement langList = doc.createElement(QStringLiteral("languageList"));
             	foreach(const QString& lang, variantInfo->languages) {
-                	QDomElement langNode = doc.createElement("lang");
-                	langNode.setAttribute("iso639Id", lang);
+                	QDomElement langNode = doc.createElement(QStringLiteral("lang"));
+                	langNode.setAttribute(QStringLiteral("iso639Id"), lang);
                 	langList.appendChild(langNode);
             	}
             	if( langList.hasChildNodes() ) {
@@ -171,17 +171,17 @@ private Q_SLOTS:
     	}
     	root.appendChild(layoutList);
 
-    	QDomElement optionGroupList = doc.createElement("optionList");
+    	QDomElement optionGroupList = doc.createElement(QStringLiteral("optionList"));
     	foreach(const OptionGroupInfo* optionGroupInfo, rules->optionGroupInfos) {
-        	QDomElement optionGroup = doc.createElement("optionGroup");
-        	optionGroup.setAttribute("name", optionGroupInfo->name);
-        	optionGroup.setAttribute("description", optionGroupInfo->description);
-        	optionGroup.setAttribute("exclusive", optionGroupInfo->exclusive);
+        	QDomElement optionGroup = doc.createElement(QStringLiteral("optionGroup"));
+        	optionGroup.setAttribute(QStringLiteral("name"), optionGroupInfo->name);
+        	optionGroup.setAttribute(QStringLiteral("description"), optionGroupInfo->description);
+        	optionGroup.setAttribute(QStringLiteral("exclusive"), optionGroupInfo->exclusive);
 
         	foreach(const OptionInfo* optionGroupInfo, optionGroupInfo->optionInfos) {
-            	QDomElement option = doc.createElement("option");
-            	option.setAttribute("name", optionGroupInfo->name);
-            	option.setAttribute("description", optionGroupInfo->description);
+            	QDomElement option = doc.createElement(QStringLiteral("option"));
+            	option.setAttribute(QStringLiteral("name"), optionGroupInfo->name);
+            	option.setAttribute(QStringLiteral("description"), optionGroupInfo->description);
             	optionGroup.appendChild(option);
         	}
 
@@ -189,7 +189,7 @@ private Q_SLOTS:
     	}
     	root.appendChild(optionGroupList);
 
-    	QFile file("base2.xml");
+    	QFile file(QStringLiteral("base2.xml"));
         if( ! file.open( QIODevice::WriteOnly | QIODevice::Truncate | QIODevice::Text) ) {
         	qWarning() << "Failed to open layout memory xml file for writing" << file.fileName();
         	QFAIL("failed");
@@ -203,12 +203,12 @@ private Q_SLOTS:
     	QVERIFY(!rules->version.isEmpty());
 
     	Rules* rules10 = new Rules();
-    	Rules::readRules(rules10, QString("config/base.xml"), false);
+    	Rules::readRules(rules10, QStringLiteral("config/base.xml"), false);
     	QCOMPARE(rules10->version, QString("1.0"));
     	delete rules10;
 
     	Rules* rules11 = new Rules();
-    	Rules::readRules(rules11, QString("config/base.1.1.xml"), false);
+    	Rules::readRules(rules11, QStringLiteral("config/base.1.1.xml"), false);
     	QCOMPARE(rules11->version, QString("1.1"));
 
     	foreach(const LayoutInfo* layoutInfo, rules11->layoutInfos) {

@@ -529,8 +529,8 @@ public:
             ResultSet::Result result;
             result.setResource(resource);
 
-            result.setTitle(" ");
-            result.setMimetype(" ");
+            result.setTitle(QStringLiteral(" "));
+            result.setMimetype(QStringLiteral(" "));
             fillTitleAndMimetype(result);
 
             result.setScore(score);
@@ -616,8 +616,8 @@ public:
 
         // Only one item at most
         for (const auto &item: query) {
-            result.setTitle(item["title"].toString());
-            result.setMimetype(item["mimetype"].toString());
+            result.setTitle(item[QStringLiteral("title")].toString());
+            result.setMimetype(item[QStringLiteral("mimetype")].toString());
         }
     }
 

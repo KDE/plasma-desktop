@@ -66,11 +66,11 @@ DeviceAutomounterKCM::DeviceAutomounterKCM(QWidget *parent, const QVariantList &
     connect(automountUnknownDevices, &QCheckBox::stateChanged, this, emitChanged);
     connect(m_devices, &DeviceModel::dataChanged, this, emitChanged);
 
-    connect(automountEnabled, SIGNAL(stateChanged(int)), this, SLOT(enabledChanged()));
+    connect(automountEnabled, &QCheckBox::stateChanged, this, &DeviceAutomounterKCM::enabledChanged);
 
-    connect(deviceView->selectionModel(), SIGNAL(selectionChanged(const QItemSelection, const QItemSelection)), this, SLOT(updateForgetDeviceButton()));
+    connect(deviceView->selectionModel(), &QItemSelectionModel::selectionChanged, this, &DeviceAutomounterKCM::updateForgetDeviceButton);
 
-    connect(forgetDevice, SIGNAL(clicked(bool)), this, SLOT(forgetSelectedDevices()));
+    connect(forgetDevice, &QAbstractButton::clicked, this, &DeviceAutomounterKCM::forgetSelectedDevices);
 
     forgetDevice->setEnabled(false);
 }

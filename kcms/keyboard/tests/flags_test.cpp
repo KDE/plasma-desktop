@@ -51,15 +51,15 @@ private Q_SLOTS:
 
         QVERIFY( ! flags->getTransparentPixmap().isNull() );
 
-        const QIcon iconUs(flags->getIcon("us"));
+        const QIcon iconUs(flags->getIcon(QStringLiteral("us")));
         QVERIFY( ! iconUs.isNull() );
         QVERIFY( flags->getIcon("--").isNull() );
 
     	KeyboardConfig keyboardConfig;
-        LayoutUnit layoutUnit("us");
-        LayoutUnit layoutUnit1("us", "intl");
-        layoutUnit1.setDisplayName("usi");
-        LayoutUnit layoutUnit2("us", "other");
+        LayoutUnit layoutUnit(QStringLiteral("us"));
+        LayoutUnit layoutUnit1(QStringLiteral("us"), QStringLiteral("intl"));
+        layoutUnit1.setDisplayName(QStringLiteral("usi"));
+        LayoutUnit layoutUnit2(QStringLiteral("us"), QStringLiteral("other"));
 
         keyboardConfig.indicatorType = KeyboardConfig::SHOW_FLAG;
         const QIcon iconUsFlag = flags->getIconWithText(layoutUnit, keyboardConfig);

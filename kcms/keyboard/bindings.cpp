@@ -60,7 +60,7 @@ QAction* KeyboardLayoutActionCollection::getToggleAction()
 QAction* KeyboardLayoutActionCollection::createLayoutShortcutActon(const LayoutUnit& layoutUnit, const Rules* rules, bool autoload)
 {
 	QString longLayoutName = Flags::getLongText( layoutUnit, rules );
-	QString actionName = "Switch keyboard layout to ";
+	QString actionName = QStringLiteral("Switch keyboard layout to ");
 	actionName += longLayoutName;
 	QAction* action = addAction( actionName );
 	action->setText( i18n("Switch keyboard layout to %1", longLayoutName) );

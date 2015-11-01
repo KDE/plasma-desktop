@@ -36,7 +36,7 @@ DeviceAutomounter::DeviceAutomounter(QObject *parent, const QVariantList &args)
     : KDEDModule(parent)
 {
     Q_UNUSED(args);
-    QTimer::singleShot(0, this, SLOT(init()));
+    QTimer::singleShot(0, this, &DeviceAutomounter::init);
 }
 
 DeviceAutomounter::~DeviceAutomounter()
@@ -45,7 +45,7 @@ DeviceAutomounter::~DeviceAutomounter()
 
 void DeviceAutomounter::init()
 {
-    connect(Solid::DeviceNotifier::instance(), SIGNAL(deviceAdded(const QString&)), this, SLOT(deviceAdded(const QString&)));
+    connect(Solid::DeviceNotifier::instance(), &Solid::DeviceNotifier::deviceAdded, this, &DeviceAutomounter::deviceAdded);
     QList<Solid::Device> volumes = Solid::Device::listFromType(Solid::DeviceInterface::StorageVolume);
     foreach(Solid::Device volume, volumes) {
         // sa can be 0 (e.g. for the swap partition)

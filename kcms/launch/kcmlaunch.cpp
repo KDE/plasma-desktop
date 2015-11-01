@@ -64,7 +64,7 @@ LaunchConfig::LaunchConfig(QWidget * parent, const QVariantList &)
     GroupBox1Layout->setColumnStretch( 1, 1 );
 
     cb_busyCursor = new QComboBox( GroupBox1);
-    cb_busyCursor->setObjectName( "cb_busyCursor" );
+    cb_busyCursor->setObjectName( QStringLiteral("cb_busyCursor") );
     cb_busyCursor->insertItem( 0, i18n( "No Busy Cursor" ) );
     cb_busyCursor->insertItem( 1, i18n( "Passive Busy Cursor" ) );
     cb_busyCursor->insertItem( 2, i18n( "Blinking Cursor" ) );
@@ -74,7 +74,7 @@ LaunchConfig::LaunchConfig(QWidget * parent, const QVariantList &)
     connect(cb_busyCursor, static_cast<void (QComboBox::*)(int)>(&QComboBox::activated), this, &LaunchConfig::checkChanged);
 
     lbl_cursorTimeout = new QLabel( GroupBox1 );
-    lbl_cursorTimeout->setObjectName( "TextLabel1" );
+    lbl_cursorTimeout->setObjectName( QStringLiteral("TextLabel1") );
     lbl_cursorTimeout->setText( i18n( "&Startup indication timeout:" ) );
     GroupBox1Layout->addWidget( lbl_cursorTimeout, 2, 0 );
     sb_cursorTimeout = new QSpinBox( GroupBox1);
@@ -99,14 +99,14 @@ LaunchConfig::LaunchConfig(QWidget * parent, const QVariantList &)
     GroupBox2Layout->setColumnStretch( 1, 1 );
 
     cb_taskbarButton = new QCheckBox( GroupBox2 );
-    cb_taskbarButton->setObjectName( "cb_taskbarButton" );
+    cb_taskbarButton->setObjectName( QStringLiteral("cb_taskbarButton") );
     cb_taskbarButton->setText( i18n( "Enable &taskbar notification" ) );
     GroupBox2Layout->addWidget( cb_taskbarButton, 0, 0, 1, 2 );
     connect(cb_taskbarButton, &QCheckBox::toggled, this, &LaunchConfig::slotTaskbarButton);
     connect(cb_taskbarButton, &QCheckBox::toggled, this, &LaunchConfig::checkChanged);
 
     lbl_taskbarTimeout = new QLabel( GroupBox2 );
-    lbl_taskbarTimeout->setObjectName( "TextLabel2" );
+    lbl_taskbarTimeout->setObjectName( QStringLiteral("TextLabel2") );
     lbl_taskbarTimeout->setText( i18n( "Start&up indication timeout:" ) );
     GroupBox2Layout->addWidget( lbl_taskbarTimeout, 1, 0 );
     sb_taskbarTimeout = new QSpinBox( GroupBox2);
@@ -140,7 +140,7 @@ LaunchConfig::slotTaskbarButton(bool b)
   void
 LaunchConfig::load()
 {
-  KConfig conf("klaunchrc", KConfig::NoGlobals);
+  KConfig conf(QStringLiteral("klaunchrc"), KConfig::NoGlobals);
   KConfigGroup c = conf.group("FeedbackStyle");
 
   bool busyCursor =
@@ -176,7 +176,7 @@ LaunchConfig::load()
   void
 LaunchConfig::save()
 {
-  KConfig conf("klaunchrc", KConfig::NoGlobals);
+  KConfig conf(QStringLiteral("klaunchrc"), KConfig::NoGlobals);
   KConfigGroup  c = conf.group("FeedbackStyle");
 
   c.writeEntry("BusyCursor",   cb_busyCursor->currentIndex() != 0);
@@ -194,8 +194,8 @@ LaunchConfig::save()
 
   emit changed( false );
 
-  org::kde::kwin::Effects kwin("org.kde.KWin", "/Effects", QDBusConnection::sessionBus());
-  kwin.reconfigureEffect("startupfeedback");
+  org::kde::kwin::Effects kwin(QStringLiteral("org.kde.KWin"), QStringLiteral("/Effects"), QDBusConnection::sessionBus());
+  kwin.reconfigureEffect(QStringLiteral("startupfeedback"));
 }
 
   void
@@ -216,7 +216,7 @@ LaunchConfig::defaults()
   void
 LaunchConfig::checkChanged()
 {
-  KConfig conf("klaunchrc", KConfig::NoGlobals);
+  KConfig conf(QStringLiteral("klaunchrc"), KConfig::NoGlobals);
   KConfigGroup  c = conf.group("FeedbackStyle");
 
   bool savedBusyCursor =

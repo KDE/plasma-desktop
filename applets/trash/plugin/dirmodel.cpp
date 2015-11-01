@@ -60,18 +60,18 @@ DirModel::DirModel(QObject *parent)
 
     m_previewTimer = new QTimer(this);
     m_previewTimer->setSingleShot(true);
-    connect(m_previewTimer, SIGNAL(timeout()),
-            this, SLOT(delayedPreview()));
+    connect(m_previewTimer, &QTimer::timeout,
+            this, &DirModel::delayedPreview);
 
     //using the same cache of the engine, they index both by url
-    m_imageCache = new KImageCache("org.kde.dirmodel-qml", 10485760);
+    m_imageCache = new KImageCache(QStringLiteral("org.kde.dirmodel-qml"), 10485760);
 
-    connect(this, SIGNAL(rowsInserted(QModelIndex,int,int)),
-            this, SIGNAL(countChanged()));
-    connect(this, SIGNAL(rowsRemoved(QModelIndex,int,int)),
-            this, SIGNAL(countChanged()));
-    connect(this, SIGNAL(modelReset()),
-            this, SIGNAL(countChanged()));
+    connect(this, &QAbstractItemModel::rowsInserted,
+            this, &DirModel::countChanged);
+    connect(this, &QAbstractItemModel::rowsRemoved,
+            this, &DirModel::countChanged);
+    connect(this, &QAbstractItemModel::modelReset,
+            this, &DirModel::countChanged);
 }
 
 DirModel::~DirModel()
@@ -115,8 +115,8 @@ QVariantMap DirModel::get(int i) const
     QString mimeType = item.mimetype();
 
     QVariantMap ret;
-    ret.insert("url", QVariant(url));
-    ret.insert("mimeType", QVariant(mimeType));
+    ret.insert(QStringLiteral("url"), QVariant(url));
+    ret.insert(QStringLiteral("mimeType"), QVariant(mimeType));
 
     return ret;
 }
@@ -180,10 +180,10 @@ void DirModel::delayedPreview()
         KIO::PreviewJob* job = KIO::filePreview(list, m_screenshotSize);
         job->setIgnoreMaximumSize(true);
         // qDebug() << "Created job" << job;
-        connect(job, SIGNAL(gotPreview(KFileItem,QPixmap)),
-                this, SLOT(showPreview(KFileItem,QPixmap)));
-        connect(job, SIGNAL(failed(KFileItem)),
-                this, SLOT(previewFailed(KFileItem)));
+        connect(job, &KIO::PreviewJob::gotPreview,
+                this, &DirModel::showPreview);
+        connect(job, &KIO::PreviewJob::failed,
+                this, &DirModel::previewFailed);
     }
 
     m_filesToPreview.clear();

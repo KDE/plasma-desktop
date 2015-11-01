@@ -67,7 +67,7 @@ StandardActionsModule::StandardActionsModule(
 
     // Create and configure the editor
     m_editor = new KShortcutsEditor(this, KShortcutsEditor::WidgetAction | KShortcutsEditor::WindowAction | KShortcutsEditor::ApplicationAction); // there will be no global actions, so make sure that column is hidden
-    connect(m_editor, SIGNAL(keyChange()), this, SLOT(keyChanged()));
+    connect(m_editor, &KShortcutsEditor::keyChange, this, &StandardActionsModule::keyChanged);
 
     // Make a layout
     QVBoxLayout *global = new QVBoxLayout;
@@ -157,7 +157,7 @@ void StandardActionsModule::save()
         "<ul><li>Applications need to be restarted to see the changes.</li>"
         "    <li>This change could introduce shortcut conflicts in some applications.</li>"
         "</ul>" );
-    KMessageBox::information(this, message, title, "shortcuts_saved_info");
+    KMessageBox::information(this, message, title, QStringLiteral("shortcuts_saved_info"));
     }
 
 #include "standard_actions_module.moc"

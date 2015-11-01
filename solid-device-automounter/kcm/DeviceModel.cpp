@@ -34,8 +34,8 @@ DeviceModel::DeviceModel(QObject *parent)
 {
     reload();
     
-    connect(Solid::DeviceNotifier::instance(), SIGNAL(deviceAdded(const QString)), this, SLOT(deviceAttached(const QString)));
-    connect(Solid::DeviceNotifier::instance(), SIGNAL(deviceRemoved(const QString)), this, SLOT(deviceRemoved(const QString)));
+    connect(Solid::DeviceNotifier::instance(), &Solid::DeviceNotifier::deviceAdded, this, &DeviceModel::deviceAttached);
+    connect(Solid::DeviceNotifier::instance(), &Solid::DeviceNotifier::deviceRemoved, this, &DeviceModel::deviceRemoved);
 }
 
 void DeviceModel::forgetDevice(const QString &udi)

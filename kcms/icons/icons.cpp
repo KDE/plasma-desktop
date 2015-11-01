@@ -82,7 +82,7 @@ KIconConfig::KIconConfig(QWidget *parent)
     connect(push, &QPushButton::clicked, this, &KIconConfig::slotEffectSetup2);
 
     m_pTab1 = new QWidget(this);
-    m_pTab1->setObjectName( QLatin1String("General Tab" ));
+    m_pTab1->setObjectName( QStringLiteral("General Tab" ));
     top->addWidget(m_pTab1, 0, 1);
 
     QGridLayout *grid = new QGridLayout(m_pTab1);
@@ -149,16 +149,16 @@ void KIconConfig::init()
     mpUsageList->addItem(i18n("All Icons"));
 
     // For reading the configuration
-    mGroups += "Desktop";
-    mGroups += "Toolbar";
-    mGroups += "MainToolbar";
-    mGroups += "Small";
-    mGroups += "Panel";
-    mGroups += "Dialog";
+    mGroups += QStringLiteral("Desktop");
+    mGroups += QStringLiteral("Toolbar");
+    mGroups += QStringLiteral("MainToolbar");
+    mGroups += QStringLiteral("Small");
+    mGroups += QStringLiteral("Panel");
+    mGroups += QStringLiteral("Dialog");
 
-    mStates += "Default";
-    mStates += "Active";
-    mStates += "Disabled";
+    mStates += QStringLiteral("Default");
+    mStates += QStringLiteral("Active");
+    mStates += QStringLiteral("Disabled");
 }
 
 void KIconConfig::initDefaults()
@@ -197,22 +197,22 @@ void KIconConfig::initDefaults()
 	mEffects[i][2] = mDefaultEffect[2];
     }
     // Animate desktop icons by default
-    int group = mGroups.indexOf( "Desktop" );
+    int group = mGroups.indexOf( QStringLiteral("Desktop") );
     if ( group != -1 )
         mbAnimated[group] = true;
 
     // This is the new default in KDE 2.2, in sync with the kiconeffect of kdelibs Nolden 2001/06/11
-    int activeState = mStates.indexOf( "Active" );
+    int activeState = mStates.indexOf( QStringLiteral("Active") );
     if ( activeState != -1 )
     {
-        int group = mGroups.indexOf( "Desktop" );
+        int group = mGroups.indexOf( QStringLiteral("Desktop") );
         if ( group != -1 )
         {
             mEffects[ group ][ activeState ].type = KIconEffect::ToGamma;
             mEffects[ group ][ activeState ].value = 0.7f;
         }
 
-        group = mGroups.indexOf( "Panel" );
+        group = mGroups.indexOf( QStringLiteral("Panel") );
         if ( group != -1 )
         {
             mEffects[ group ][ activeState ].type = KIconEffect::ToGamma;
@@ -263,17 +263,17 @@ void KIconConfig::read()
 	for (it2=mStates.constBegin(), j=0; it2!=mStates.constEnd(); ++it2, j++)
 	{
 	    QString tmp = iconGroup.readEntry(*it2 + "Effect", QString());
-	    if (tmp == "togray")
+	    if (tmp == QLatin1String("togray"))
 		effect = KIconEffect::ToGray;
-	    else if (tmp == "colorize")
+	    else if (tmp == QLatin1String("colorize"))
 		effect = KIconEffect::Colorize;
-	    else if (tmp == "togamma")
+	    else if (tmp == QLatin1String("togamma"))
 		effect = KIconEffect::ToGamma;
-	    else if (tmp == "desaturate")
+	    else if (tmp == QLatin1String("desaturate"))
 		effect = KIconEffect::DeSaturate;
-	    else if (tmp == "tomonochrome")
+	    else if (tmp == QLatin1String("tomonochrome"))
 		effect = KIconEffect::ToMonochrome;
-	    else if (tmp == "none")
+	    else if (tmp == QLatin1String("none"))
 		effect = KIconEffect::NoEffect;
 	    else continue;
 	    mEffects[i][j].type = effect;
@@ -349,7 +349,7 @@ void KIconConfig::exportToKDE4()
         return;
     }
 
-    KSharedConfigPtr kglobalcfg = KSharedConfig::openConfig( "kdeglobals" );
+    KSharedConfigPtr kglobalcfg = KSharedConfig::openConfig( QStringLiteral("kdeglobals") );
     KConfig kde4config(configFilePath, KConfig::SimpleConfig);
 
     KConfigGroup iconsGroup(kglobalcfg, "Icons");
@@ -362,7 +362,7 @@ void KIconConfig::exportToKDE4()
 
     //Synchronize icon effects
     QStringList iconGroups;
-    iconGroups << "DesktopIcons" << "DialogIcons" << "MainToolbarIcons" << "PanelIcons" << "SmallIcons" << "ToolbarIcons";
+    iconGroups << QStringLiteral("DesktopIcons") << QStringLiteral("DialogIcons") << QStringLiteral("MainToolbarIcons") << QStringLiteral("PanelIcons") << QStringLiteral("SmallIcons") << QStringLiteral("ToolbarIcons");
 
     for (QString grp : iconGroups) {
         KConfigGroup cg(kglobalcfg, grp);
@@ -371,7 +371,7 @@ void KIconConfig::exportToKDE4()
     }
 
     QProcess cachePathProcess;
-    cachePathProcess.start("kde4-config --path cache");
+    cachePathProcess.start(QStringLiteral("kde4-config --path cache"));
     cachePathProcess.waitForFinished();
     QString path = cachePathProcess.readAllStandardOutput();
     QFile cacheFile(path.remove(path.length()-1, 1)+"/icon-cache.kcache");
@@ -381,7 +381,7 @@ void KIconConfig::exportToKDE4()
     for (int i = 0; i < KIconLoader::LastGroup; i++) {
         KIconLoader::emitChange(KIconLoader::Group(i));
 
-        QDBusMessage message = QDBusMessage::createSignal("/KGlobalSettings", "org.kde.KGlobalSettings", "notifyChange" );
+        QDBusMessage message = QDBusMessage::createSignal(QStringLiteral("/KGlobalSettings"), QStringLiteral("org.kde.KGlobalSettings"), QStringLiteral("notifyChange") );
         QList<QVariant> args;
         args.append(static_cast<int>(KGlobalSettings::IconChanged));
         args.append(KIconLoader::Group(i));
@@ -416,22 +416,22 @@ void KIconConfig::save()
 	    switch (mEffects[i][j].type)
 	    {
 	    case KIconEffect::ToGray:
-		tmp = "togray";
+		tmp = QStringLiteral("togray");
 		break;
 	    case KIconEffect::ToGamma:
-		tmp = "togamma";
+		tmp = QStringLiteral("togamma");
 		break;
 	    case KIconEffect::Colorize:
-		tmp = "colorize";
+		tmp = QStringLiteral("colorize");
 		break;
 	    case KIconEffect::DeSaturate:
-		tmp = "desaturate";
+		tmp = QStringLiteral("desaturate");
 		break;
 	    case KIconEffect::ToMonochrome:
-		tmp = "tomonochrome";
+		tmp = QStringLiteral("tomonochrome");
 		break;
 	    default:
-		tmp = "none";
+		tmp = QStringLiteral("none");
 		break;
 	    }
 	    cg.writeEntry(*it2 + "Effect", tmp, KConfig::Normal|KConfig::Global);

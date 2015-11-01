@@ -36,17 +36,17 @@ private Q_SLOTS:
     }
 
     void testGeometryParser() {
-        QString model = "pc104";
+        QString model = QStringLiteral("pc104");
         Geometry geometry = grammar::parseGeometry(model);
 
         QCOMPARE(geometry.getName(), model);
 
-	model = "hpdv5";
+	model = QStringLiteral("hpdv5");
         geometry = grammar::parseGeometry(model);
         
         QCOMPARE(geometry.getName(), QString("dv5"));
 
-	model = "microsoftelite";
+	model = QStringLiteral("microsoftelite");
         geometry = grammar::parseGeometry(model);
         
 //        QCOMPARE(geometry.getFile(), QString("microsoft"));

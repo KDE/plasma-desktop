@@ -187,7 +187,7 @@ void Autostart::load()
         for (int i = 0; i < list.size(); ++i) {
             QFileInfo fi = list.at(i);
             QString filename = fi.fileName();
-            bool desktopFile = filename.endsWith(".desktop");
+            bool desktopFile = filename.endsWith(QLatin1String(".desktop"));
             if ( desktopFile ) {
                 KDesktopFile config(fi.absoluteFilePath());
                 //kDebug() << fi.absoluteFilePath() << "trying" << config.desktopGroup().readEntry("Exec");
@@ -209,8 +209,8 @@ void Autostart::load()
                 const QStringList onlyShowList = grp.readXdgListEntry("OnlyShowIn");
 
                 const bool disabled = hidden ||
-                                        notShowList.contains("KDE") ||
-                                        (!onlyShowList.isEmpty() && !onlyShowList.contains("KDE"));
+                                        notShowList.contains(QStringLiteral("KDE")) ||
+                                        (!onlyShowList.isEmpty() && !onlyShowList.contains(QStringLiteral("KDE")));
 
                 int indexPath = m_paths.indexOf((item->fileName().adjusted(QUrl::RemoveFilename).toString() ) );
                 if ( indexPath > 2 )
@@ -350,7 +350,7 @@ void Autostart::slotRemoveCMD()
     if ( startItem )
     {
         QUrl path(startItem->fileName());
-        path.setScheme("file");
+        path.setScheme(QStringLiteral("file"));
         m_programItem->takeChild( m_programItem->indexOfChild( startItem ) );
         KIO::del(path);
         delete item;
@@ -361,7 +361,7 @@ void Autostart::slotRemoveCMD()
         if ( scriptItem )
         {
             QUrl path(scriptItem->fileName());
-            path.setScheme("file");
+            path.setScheme(QStringLiteral("file"));
             m_scriptItem->takeChild( m_scriptItem->indexOfChild( scriptItem ) );
             KIO::del(path);
             delete item;
@@ -413,21 +413,21 @@ void Autostart::slotAdvanced()
     if (grp.hasKey("OnlyShowIn"))
     {
         lstEntry = grp.readXdgListEntry("OnlyShowIn");
-        status = lstEntry.contains("KDE");
+        status = lstEntry.contains(QStringLiteral("KDE"));
     }
 
     AdvancedDialog *dlg = new AdvancedDialog( this,status );
     if ( dlg->exec() )
     {
         status = dlg->onlyInKde();
-        if ( lstEntry.contains( "KDE" ) && !status )
+        if ( lstEntry.contains( QStringLiteral("KDE") ) && !status )
         {
-            lstEntry.removeAll( "KDE" );
+            lstEntry.removeAll( QStringLiteral("KDE") );
             grp.writeXdgListEntry( "OnlyShowIn", lstEntry );
         }
-        else if ( !lstEntry.contains( "KDE" ) && status )
+        else if ( !lstEntry.contains( QStringLiteral("KDE") ) && status )
         {
-            lstEntry.append( "KDE" );
+            lstEntry.append( QStringLiteral("KDE") );
             grp.writeXdgListEntry( "OnlyShowIn", lstEntry );
         }
     }
@@ -442,7 +442,7 @@ void Autostart::slotChangeStartup( ScriptStartItem* item, int index )
     {
         item->setPath(m_paths.value(index));
         widget->listCMD->setCurrentItem( item );
-        if ( ( index == 2 ) && !item->fileName().path().endsWith( ".sh" ))
+        if ( ( index == 2 ) && !item->fileName().path().endsWith( QLatin1String(".sh") ))
             KMessageBox::information( this, i18n( "Only files with “.sh” extensions are allowed for setting up the environment." ) );
 
     }

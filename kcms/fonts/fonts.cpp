@@ -307,9 +307,9 @@ FontAASettings::FontAASettings(QWidget *parent)
     enableWidgets();
     setMainWidget(mw);
 
-    connect(excludeRange, SIGNAL(toggled(bool)), SLOT(changed()));
-    connect(excludeFrom, SIGNAL(valueChanged(double)), SLOT(changed()));
-    connect(excludeTo, SIGNAL(valueChanged(double)), SLOT(changed()));
+    connect(excludeRange, &QAbstractButton::toggled, this, &FontAASettings::changed);
+    connect(excludeFrom, &KDoubleNumInput::valueChanged, this, &FontAASettings::changed);
+    connect(excludeTo, &KDoubleNumInput::valueChanged, this, &FontAASettings::changed);
     connect(subPixelType, SIGNAL(activated(QString)), SLOT(changed()));
     connect(hintingStyle, SIGNAL(activated(QString)), SLOT(changed()));
 }
@@ -599,7 +599,7 @@ KFonts::KFonts(QWidget *parent, const QVariantList &args)
         );
 
         fontUseList.append(i);
-        connect(i, SIGNAL(fontSelected(QFont)), SLOT(fontSelected()));
+        connect(i, &KFontRequester::fontSelected, this, &KFonts::fontSelected);
 
         QLabel *fontUse = new QLabel(i18nc("Font role", "%1: ", name), this);
         fontUse->setAlignment(Qt::AlignRight | Qt::AlignVCenter);
@@ -617,7 +617,7 @@ KFonts::KFonts(QWidget *parent, const QVariantList &args)
     QPushButton *fontAdjustButton = new QPushButton(i18n("Ad&just All Fonts..."), this);
     fontAdjustButton->setWhatsThis(i18n("Click to change all fonts"));
     hblay->addWidget(fontAdjustButton);
-    connect(fontAdjustButton, SIGNAL(clicked()), SLOT(slotApplyFontDiff()));
+    connect(fontAdjustButton, &QAbstractButton::clicked, this, &KFonts::slotApplyFontDiff);
 
     layout->addSpacing(KDialog::spacingHint());
 
@@ -635,7 +635,7 @@ KFonts::KFonts(QWidget *parent, const QVariantList &args)
     cbAA->insertItem(AADisabled, i18nc("Use anti-aliasing", "Disabled"));
     cbAA->setWhatsThis(i18n("If this option is selected, KDE will smooth the edges of curves in fonts."));
     aaSettingsButton = new QPushButton(i18n("Configure..."), this);
-    connect(aaSettingsButton, SIGNAL(clicked()), SLOT(slotCfgAa()));
+    connect(aaSettingsButton, &QAbstractButton::clicked, this, &KFonts::slotCfgAa);
     label->setBuddy(cbAA);
     lay->addWidget(cbAA, 0, 1);
     lay->addWidget(aaSettingsButton, 0, 2);
@@ -666,7 +666,7 @@ KFonts::KFonts(QWidget *parent, const QVariantList &args)
     spinboxDpi->setEnabled(false);
     connect(spinboxDpi, SIGNAL(valueChanged(int)), SLOT(changed()));
     connect(checkboxForceDpi, SIGNAL(toggled(bool)), SLOT(changed()));
-    connect(checkboxForceDpi, SIGNAL(toggled(bool)), spinboxDpi, SLOT(setEnabled(bool)));
+    connect(checkboxForceDpi, &QAbstractButton::toggled, spinboxDpi, &QWidget::setEnabled);
     lay->addWidget(spinboxDpi, 1, 1);
 #endif
     layout->addStretch(1);

@@ -30,7 +30,7 @@ const QString name = QStringLiteral("Resources");
 
 QString version()
 {
-    return "2015.02.09";
+    return QStringLiteral("2015.02.09");
 }
 
 QStringList schema()
@@ -40,9 +40,9 @@ QStringList schema()
     return QStringList()
 
         << // Schema informations table, used for versioning
-           "CREATE TABLE IF NOT EXISTS SchemaInfo ("
+           QStringLiteral("CREATE TABLE IF NOT EXISTS SchemaInfo ("
                "key text PRIMARY KEY, value text"
-           ")"
+           ")")
 
         << QStringLiteral("INSERT OR IGNORE INTO schemaInfo VALUES ('version', '%1')").arg(version())
         << QStringLiteral("UPDATE schemaInfo SET value = '%1' WHERE key = 'version'").arg(version())
@@ -52,17 +52,17 @@ QStringList schema()
            // a resource. The Accessed event is mapped to those.
            // Focussing events are not stored in order not to get a
            // huge database file and to lessen writes to the disk.
-           "CREATE TABLE IF NOT EXISTS ResourceEvent ("
+           QStringLiteral("CREATE TABLE IF NOT EXISTS ResourceEvent ("
                "usedActivity TEXT, "
                "initiatingAgent TEXT, "
                "targettedResource TEXT, "
                "start INTEGER, "
                "end INTEGER "
-           ")"
+           ")")
 
         << // The ResourceScoreCache table stores the calcualted scores
            // for resources based on the recorded events.
-           "CREATE TABLE IF NOT EXISTS ResourceScoreCache ("
+           QStringLiteral("CREATE TABLE IF NOT EXISTS ResourceScoreCache ("
                "usedActivity TEXT, "
                "initiatingAgent TEXT, "
                "targettedResource TEXT, "
@@ -71,7 +71,7 @@ QStringList schema()
                "firstUpdate INTEGER, "
                "lastUpdate INTEGER, "
                "PRIMARY KEY(usedActivity, initiatingAgent, targettedResource)"
-           ")"
+           ")")
 
 
         << // @since 2014.05.05
@@ -80,12 +80,12 @@ QStringList schema()
            // The additional features compared to the old days are
            // the ability to limit the link to specific applications, and
            // to create global links.
-           "CREATE TABLE IF NOT EXISTS ResourceLink ("
+           QStringLiteral("CREATE TABLE IF NOT EXISTS ResourceLink ("
                "usedActivity TEXT, "
                "initiatingAgent TEXT, "
                "targettedResource TEXT, "
                "PRIMARY KEY(usedActivity, initiatingAgent, targettedResource)"
-           ")"
+           ")")
 
         << // @since 2015.01.18
            // The ResourceInfo table stores the collected information about a
@@ -94,14 +94,14 @@ QStringList schema()
            // If these are automatically retrieved (works for files), the
            // flag is set to true. This is done for the agents to be able to
            // override these.
-           "CREATE TABLE IF NOT EXISTS ResourceInfo ("
+           QStringLiteral("CREATE TABLE IF NOT EXISTS ResourceInfo ("
                "targettedResource TEXT, "
                "title TEXT, "
                "mimetype TEXT, "
                "autoTitle INTEGER, "
                "autoMimetype INTEGER, "
                "PRIMARY KEY(targettedResource)"
-           ")"
+           ")")
 
        ;
 }
@@ -174,12 +174,12 @@ void initSchema(Database &database)
     // of the database, but the old data.
     if (dbSchemaVersion < QStringLiteral("2015.02.09")) {
         const QString updateActivity =
-            "SET usedActivity=':global' "
-            "WHERE usedActivity IS NULL OR usedActivity = ''";
+            QStringLiteral("SET usedActivity=':global' "
+            "WHERE usedActivity IS NULL OR usedActivity = ''");
 
         const QString updateAgent =
-            "SET initiatingAgent=':global' "
-            "WHERE initiatingAgent IS NULL OR initiatingAgent = ''";
+            QStringLiteral("SET initiatingAgent=':global' "
+            "WHERE initiatingAgent IS NULL OR initiatingAgent = ''");
 
         // When the activity field was empty, it meant the file was
         // linked to all activities (aka :global)

@@ -95,7 +95,7 @@ extern "C"
     Q_DECL_EXPORT void kcminit_style()
     {
         uint flags = KRdbExportQtSettings | KRdbExportQtColors | KRdbExportXftSettings | KRdbExportGtkTheme;
-        KConfig _config( "kcmdisplayrc", KConfig::NoGlobals  );
+        KConfig _config( QStringLiteral("kcmdisplayrc"), KConfig::NoGlobals  );
         KConfigGroup config(&_config, "X11");
 
         // This key is written by the "colors" module.
@@ -170,7 +170,7 @@ KCMStyle::KCMStyle( QWidget* parent, const QVariantList& )
     KGlobal::dirs()->addResourceType("themes", "data", "kstyle/themes");
 
     KAboutData *about =
-        new KAboutData( QStringLiteral("kcmstyle"), i18n("KDE Style Module"), QString("1.0"),
+        new KAboutData( QStringLiteral("kcmstyle"), i18n("KDE Style Module"), QStringLiteral("1.0"),
                         QString(), KAboutLicense::GPL,
                         i18n("(c) 2002 Karol Szwed, Daniel Molkentin"));
 
@@ -199,13 +199,13 @@ KCMStyle::KCMStyle( QWidget* parent, const QVariantList& )
         widgetLayout->addLayout( gbWidgetStyleLayout );
     gbWidgetStyleLayout->setAlignment( Qt::AlignTop );
     hbLayout = new QHBoxLayout( );
-    hbLayout->setObjectName( "hbLayout" );
+    hbLayout->setObjectName( QStringLiteral("hbLayout") );
 
     QLabel* label=new QLabel(i18n("Widget style:"),this);
     hbLayout->addWidget( label );
 
     cbStyle = new KComboBox( gbWidgetStyle );
-        cbStyle->setObjectName( "cbStyle" );
+        cbStyle->setObjectName( QStringLiteral("cbStyle") );
     cbStyle->setEditable( false );
     hbLayout->addWidget( cbStyle );
     hbLayout->setStretchFactor( cbStyle, 1 );
@@ -232,7 +232,7 @@ KCMStyle::KCMStyle( QWidget* parent, const QVariantList& )
 
     connect( cbStyle, SIGNAL(activated(int)), this, SLOT(styleChanged()) );
     connect( cbStyle, SIGNAL(activated(int)), this, SLOT(updateConfigButton()));
-    connect( pbConfigStyle, SIGNAL(clicked()), this, SLOT(styleSpecificConfig()));
+    connect( pbConfigStyle, &QAbstractButton::clicked, this, &KCMStyle::styleSpecificConfig);
 
     // Add Page2 (Effects)
     // -------------------
@@ -240,8 +240,8 @@ KCMStyle::KCMStyle( QWidget* parent, const QVariantList& )
     fineTuningUi.setupUi(page2);
 
     connect(cbStyle, SIGNAL(activated(int)), this, SLOT(setStyleDirty()));
-    connect(fineTuningUi.cbIconsOnButtons,     SIGNAL(toggled(bool)),   this, SLOT(setEffectsDirty()));
-    connect(fineTuningUi.cbIconsInMenus,     SIGNAL(toggled(bool)),   this, SLOT(setEffectsDirty()));
+    connect(fineTuningUi.cbIconsOnButtons,     &QAbstractButton::toggled,   this, &KCMStyle::setEffectsDirty);
+    connect(fineTuningUi.cbIconsInMenus,     &QAbstractButton::toggled,   this, &KCMStyle::setEffectsDirty);
     connect(fineTuningUi.comboToolbarIcons,    SIGNAL(activated(int)), this, SLOT(setEffectsDirty()));
     connect(fineTuningUi.comboSecondaryToolbarIcons,    SIGNAL(activated(int)), this, SLOT(setEffectsDirty()));
     connect(fineTuningUi.comboMenubarStyle,    SIGNAL(activated(int)), this, SLOT(setEffectsDirty()));
@@ -346,7 +346,7 @@ void KCMStyle::changeEvent( QEvent *event )
 
 void KCMStyle::load()
 {
-    KConfig config( "kdeglobals", KConfig::FullConfig );
+    KConfig config( QStringLiteral("kdeglobals"), KConfig::FullConfig );
 
     loadStyle( config );
     loadEffects( config );
@@ -370,11 +370,11 @@ void KCMStyle::save()
     if (fineTuningUi.cbIconsInMenus->isChecked() != showMenuIcons) {
         KMessageBox::information(this,
           i18n("<p>Changes to the visibility of menu icons will only affect newly started applications.</p>"),
-          i18nc("@title:window", "Menu Icons Changed"), "MenuIconsChanged");
+          i18nc("@title:window", "Menu Icons Changed"), QStringLiteral("MenuIconsChanged"));
     }
 
     // Save effects.
-        KConfig      _config("kdeglobals", KConfig::NoGlobals);
+        KConfig      _config(QStringLiteral("kdeglobals"), KConfig::NoGlobals);
         KConfigGroup config(&_config, "KDE");
     // Effects page
     config.writeEntry( "ShowIconsOnPushButtons", fineTuningUi.cbIconsOnButtons->isChecked());
@@ -401,41 +401,41 @@ void KCMStyle::save()
     menuBarStyleGroup.writeEntry("Style", style);
     _config.sync();
 
-    QDBusMessage method = QDBusMessage::createMethodCall("org.kde.kappmenu",
-                                                         "/KAppMenu",
-                                                         "org.kde.kappmenu",
-                                                         "reconfigure");
+    QDBusMessage method = QDBusMessage::createMethodCall(QStringLiteral("org.kde.kappmenu"),
+                                                         QStringLiteral("/KAppMenu"),
+                                                         QStringLiteral("org.kde.kappmenu"),
+                                                         QStringLiteral("reconfigure"));
     QDBusConnection::sessionBus().asyncCall(method);
 
-    if (previous == "InApplication" && style != "InApplication") {
+    if (previous == QLatin1String("InApplication") && style != QLatin1String("InApplication")) {
         load = true;
-        KNotification *notification = new KNotification("reload", 0);
+        KNotification *notification = new KNotification(QStringLiteral("reload"), 0);
         notification->setComponentName(QStringLiteral("kcmstyle"));
         notification->setText(i18n("Settings changes will take effect only on application restart"));
         notification->sendEvent();
     }
 
-    args = QList<QVariant>() << "appmenu" << (style != "InApplication");
-    method = QDBusMessage::createMethodCall("org.kde.kded5",
-                                            "/kded",
-                                            "org.kde.kded5",
-                                            "setModuleAutoloading");
+    args = QList<QVariant>() << "appmenu" << (style != QLatin1String("InApplication"));
+    method = QDBusMessage::createMethodCall(QStringLiteral("org.kde.kded5"),
+                                            QStringLiteral("/kded"),
+                                            QStringLiteral("org.kde.kded5"),
+                                            QStringLiteral("setModuleAutoloading"));
     method.setArguments(args);
     QDBusConnection::sessionBus().asyncCall(method);
 
     args = QList<QVariant>() << "appmenu";
     if (load) {
-        method = QDBusMessage::createMethodCall("org.kde.kded5",
-                                                "/kded",
-                                                "org.kde.kded5",
-                                                "loadModule");
-        QDBusMessage method = QDBusMessage::createMethodCall("org.kde.kappmenu", "/KAppMenu", "org.kde.kappmenu", "reconfigure");
+        method = QDBusMessage::createMethodCall(QStringLiteral("org.kde.kded5"),
+                                                QStringLiteral("/kded"),
+                                                QStringLiteral("org.kde.kded5"),
+                                                QStringLiteral("loadModule"));
+        QDBusMessage method = QDBusMessage::createMethodCall(QStringLiteral("org.kde.kappmenu"), QStringLiteral("/KAppMenu"), QStringLiteral("org.kde.kappmenu"), QStringLiteral("reconfigure"));
         QDBusConnection::sessionBus().asyncCall(method);
-    } else if (style == "InApplication") {
-        method = QDBusMessage::createMethodCall("org.kde.kded5",
-                                                "/kded",
-                                                "org.kde.kded5",
-                                                "unloadModule");
+    } else if (style == QLatin1String("InApplication")) {
+        method = QDBusMessage::createMethodCall(QStringLiteral("org.kde.kded5"),
+                                                QStringLiteral("/kded"),
+                                                QStringLiteral("org.kde.kded5"),
+                                                QStringLiteral("unloadModule"));
     }
     method.setArguments(args);
     QDBusConnection::sessionBus().asyncCall(method);
@@ -446,7 +446,7 @@ void KCMStyle::save()
     if (m_bStyleDirty || m_bEffectsDirty)    // Export only if necessary
     {
         uint flags = KRdbExportQtSettings | KRdbExportGtkTheme;
-        KConfig _kconfig( "kcmdisplayrc", KConfig::NoGlobals  );
+        KConfig _kconfig( QStringLiteral("kcmdisplayrc"), KConfig::NoGlobals  );
         KConfigGroup kconfig(&_kconfig, "X11");
         bool exportKDEColors = kconfig.readEntry("exportKDEColors", true);
         if (exportKDEColors)
@@ -467,7 +467,7 @@ void KCMStyle::save()
 #if defined(Q_OS_UNIX) && !defined(Q_OS_MAC)
         // Send signal to all kwin instances
         QDBusMessage message =
-        QDBusMessage::createSignal("/KWin", "org.kde.KWin", "reloadConfig");
+        QDBusMessage::createSignal(QStringLiteral("/KWin"), QStringLiteral("org.kde.KWin"), QStringLiteral("reloadConfig"));
         QDBusConnection::sessionBus().send(message);
 #endif
     }
@@ -509,15 +509,15 @@ void KCMStyle::defaults()
 
     found = findStyle( defaultStyle(), item );
     if (!found)
-        found = findStyle( "oxygen", item );
+        found = findStyle( QStringLiteral("oxygen"), item );
     if (!found)
-        found = findStyle( "plastique", item );
+        found = findStyle( QStringLiteral("plastique"), item );
     if (!found)
-        found = findStyle( "windows", item );
+        found = findStyle( QStringLiteral("windows"), item );
     if (!found)
-        found = findStyle( "platinum", item );
+        found = findStyle( QStringLiteral("platinum"), item );
     if (!found)
-        found = findStyle( "motif", item );
+        found = findStyle( QStringLiteral("motif"), item );
 
     cbStyle->setCurrentIndex( item );
 
@@ -525,9 +525,9 @@ void KCMStyle::defaults()
     switchStyle( currentStyle() );  // make resets visible
 
     // Effects
-    fineTuningUi.comboToolbarIcons->setCurrentIndex(toolbarButtonIndex("TextBesideIcon"));
-    fineTuningUi.comboSecondaryToolbarIcons->setCurrentIndex(toolbarButtonIndex("TextBesideIcon"));
-    fineTuningUi.comboMenubarStyle->setCurrentIndex(menuBarStyleIndex("InApplication"));
+    fineTuningUi.comboToolbarIcons->setCurrentIndex(toolbarButtonIndex(QStringLiteral("TextBesideIcon")));
+    fineTuningUi.comboSecondaryToolbarIcons->setCurrentIndex(toolbarButtonIndex(QStringLiteral("TextBesideIcon")));
+    fineTuningUi.comboMenubarStyle->setCurrentIndex(menuBarStyleIndex(QStringLiteral("InApplication")));
     fineTuningUi.cbIconsOnButtons->setChecked(true);
     fineTuningUi.cbIconsInMenus->setChecked(true);
     emit changed(true);
@@ -558,7 +558,7 @@ void KCMStyle::loadStyle( KConfig& config )
     styleEntries.clear();
 
     QString strWidgetStyle;
-    QStringList list = KGlobal::dirs()->findAllResources("themes", "*.themerc",
+    QStringList list = KGlobal::dirs()->findAllResources("themes", QStringLiteral("*.themerc"),
                                                          KStandardDirs::Recursive |
                                                          KStandardDirs::NoDuplicates);
     for (QStringList::iterator it = list.begin(); it != list.end(); ++it)
@@ -723,25 +723,25 @@ QString KCMStyle::toolbarButtonText(int index)
 {
     switch (index) {
         case 1:
-            return "TextOnly";
+            return QStringLiteral("TextOnly");
         case 2:
-            return "TextBesideIcon";
+            return QStringLiteral("TextBesideIcon");
         case 3:
-            return "TextUnderIcon";
+            return QStringLiteral("TextUnderIcon");
         default:
             break;
     }
 
-    return "NoText";
+    return QStringLiteral("NoText");
 }
 
 int KCMStyle::toolbarButtonIndex(const QString &text)
 {
-    if (text == "TextOnly") {
+    if (text == QLatin1String("TextOnly")) {
         return 1;
-    } else if (text == "TextBesideIcon") {
+    } else if (text == QLatin1String("TextBesideIcon")) {
         return 2;
-    } else if (text == "TextUnderIcon") {
+    } else if (text == QLatin1String("TextUnderIcon")) {
         return 3;
     }
 
@@ -752,23 +752,23 @@ QString KCMStyle::menuBarStyleText(int index)
 {
     switch (index) {
         case 1:
-            return "ButtonVertical";
+            return QStringLiteral("ButtonVertical");
         case 2:
-            return "TopMenuBar";
+            return QStringLiteral("TopMenuBar");
         case 3:
-            return "Others";
+            return QStringLiteral("Others");
     }
 
-    return "InApplication";
+    return QStringLiteral("InApplication");
 }
 
 int KCMStyle::menuBarStyleIndex(const QString &text)
 {
-    if (text == "ButtonVertical") {
+    if (text == QLatin1String("ButtonVertical")) {
         return 1;
-    } else if (text == "TopMenuBar") {
+    } else if (text == QLatin1String("TopMenuBar")) {
         return 2;
-    } else if (text == "Others") {
+    } else if (text == QLatin1String("Others")) {
         return 3;
     }
 

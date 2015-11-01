@@ -75,14 +75,14 @@ int set_repeat_mode(TriState keyboardRepeatMode)
 
 void init_keyboard_hardware()
 {
-    KConfigGroup config(KSharedConfig::openConfig( "kcminputrc" ), "Keyboard");
+    KConfigGroup config(KSharedConfig::openConfig( QStringLiteral("kcminputrc") ), "Keyboard");
 
 	QString keyRepeatStr = config.readEntry("KeyboardRepeating", TriStateHelper::getString(STATE_ON));
 	TriState keyRepeat = STATE_UNCHANGED;
-	if( keyRepeatStr == "true" || keyRepeatStr == TriStateHelper::getString(STATE_ON) ) {
+	if( keyRepeatStr == QLatin1String("true") || keyRepeatStr == TriStateHelper::getString(STATE_ON) ) {
 		keyRepeat = STATE_ON;
 	}
-	else if( keyRepeatStr == "false" || keyRepeatStr == TriStateHelper::getString(STATE_OFF) ) {
+	else if( keyRepeatStr == QLatin1String("false") || keyRepeatStr == TriStateHelper::getString(STATE_OFF) ) {
 		keyRepeat = STATE_OFF;
 	}
 

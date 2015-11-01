@@ -37,7 +37,7 @@ static const char ROOT_NODE[] = "LayoutMap";
 static const char VERSION_ATTRIBUTE[] = "version";
 static const char SWITCH_MODE_ATTRIBUTE[] = "SwitchMode";
 static const char ITEM_NODE[] = "item";
-static const QString CURRENT_LAYOUT_ATTRIBUTE("currentLayout");
+static const QString CURRENT_LAYOUT_ATTRIBUTE(QStringLiteral("currentLayout"));
 static const char OWNER_KEY_ATTRIBUTE[] = "ownerKey";
 static const char LAYOUTS_ATTRIBUTE[] = "layouts";
 
@@ -56,7 +56,7 @@ static bool isDefaultLayoutConfig(const LayoutSet &layout, const QList<LayoutUni
 QString LayoutMemoryPersister::getLayoutMapAsString()
 {
 	if( ! canPersist() )
-		return "";
+		return QLatin1String("");
 
 	QDomDocument doc(DOC_NAME);
 	QDomElement root = doc.createElement(ROOT_NODE);
@@ -66,7 +66,7 @@ QString LayoutMemoryPersister::getLayoutMapAsString()
 
 	if( layoutMemory.keyboardConfig.switchingPolicy == KeyboardConfig::SWITCH_POLICY_GLOBAL ) {
 		if( ! globalLayout.isValid() )
-			return "";
+			return QLatin1String("");
 
 		QDomElement item = doc.createElement(ITEM_NODE);
 		item.setAttribute(CURRENT_LAYOUT_ATTRIBUTE, globalLayout.toString());

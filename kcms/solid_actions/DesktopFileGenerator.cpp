@@ -35,10 +35,10 @@ int main( int argc, char *argv[] )
     QCoreApplication application(argc, argv);
 
     // About data
-    KAboutData aboutData("solid-action-desktop-gen", i18n("Solid Action Desktop File Generator"), "0.4",
+    KAboutData aboutData(QStringLiteral("solid-action-desktop-gen"), i18n("Solid Action Desktop File Generator"), QStringLiteral("0.4"),
                          i18n("Tool to automatically generate Desktop Files from Solid DeviceInterface classes for translation"),
                          KAboutLicense::GPL, i18n("(c) 2009, Ben Cooksley"));
-    aboutData.addAuthor(i18n("Ben Cooksley"), i18n("Maintainer"), "ben@eclipse.endoftheinternet.org");
+    aboutData.addAuthor(i18n("Ben Cooksley"), i18n("Maintainer"), QStringLiteral("ben@eclipse.endoftheinternet.org"));
     KAboutData::setApplicationData(aboutData);
 
     QCommandLineParser parser;
@@ -63,7 +63,7 @@ int main( int argc, char *argv[] )
         }
 
         const QStringList typeValues = availActions->propertyInternalList( internalType );
-        const QString actionText = typeValues.join(";").append(";");
+        const QString actionText = typeValues.join(QStringLiteral(";")).append(";");
         tConfig.writeEntry( "Actions", actionText );
 
         qWarning() << "Desktop file created: " + typeFile.fileName();

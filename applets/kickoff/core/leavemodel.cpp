@@ -49,39 +49,39 @@ QStandardItem* LeaveModel::createStandardItem(const QString& url)
     //Q_ASSERT(KUrl(url).scheme() == "leave");
     QStandardItem *item = new QStandardItem();
     const QString basename = QFileInfo(url).baseName();
-    if (basename == "logoutonly") {
+    if (basename == QLatin1String("logoutonly")) {
         item->setText(i18n("Log out"));
         item->setData(i18n("End session"), Kickoff::SubTitleRole);
         item->setData("system-log-out", Kickoff::IconNameRole);
-    } else if (basename == "lock") {
+    } else if (basename == QLatin1String("lock")) {
         item->setText(i18n("Lock"));
         item->setData(i18n("Lock screen"), Kickoff::SubTitleRole);
         item->setData("system-lock-screen", Kickoff::IconNameRole);
-    } else if (basename == "switch") {
+    } else if (basename == QLatin1String("switch")) {
         item->setText(i18n("Switch user"));
         item->setData(i18n("Start a parallel session as a different user"), Kickoff::SubTitleRole);
         item->setData("system-switch-user", Kickoff::IconNameRole);
-    } else if (basename == "shutdown") {
+    } else if (basename == QLatin1String("shutdown")) {
         item->setText(i18n("Shut down"));
         item->setData(i18n("Turn off computer"), Kickoff::SubTitleRole);
         item->setData("system-shutdown", Kickoff::IconNameRole);
-    } else if (basename == "restart") {
+    } else if (basename == QLatin1String("restart")) {
         item->setText(i18nc("Restart computer", "Restart"));
         item->setData(i18n("Restart computer"), Kickoff::SubTitleRole);
         item->setData("system-reboot", Kickoff::IconNameRole);
-    } else if (basename == "savesession") {
+    } else if (basename == QLatin1String("savesession")) {
         item->setText(i18n("Save Session"));
         item->setData(i18n("Save current session for next login"), Kickoff::SubTitleRole);
         item->setData("document-save", Kickoff::IconNameRole);
-    } else if (basename == "standby") {
+    } else if (basename == QLatin1String("standby")) {
         item->setText(i18nc("Puts the system on standby", "Standby"));
         item->setData(i18n("Pause without logging out"), Kickoff::SubTitleRole);
         item->setData("system-suspend", Kickoff::IconNameRole);
-    } else if (basename == "suspenddisk") {
+    } else if (basename == QLatin1String("suspenddisk")) {
         item->setText(i18n("Hibernate"));
         item->setData(i18n("Suspend to disk"), Kickoff::SubTitleRole);
         item->setData("system-suspend-hibernate", Kickoff::IconNameRole);
-    } else if (basename == "suspendram") {
+    } else if (basename == QLatin1String("suspendram")) {
         item->setText(i18n("Suspend"));
         item->setData(i18n("Suspend to RAM"), Kickoff::SubTitleRole);
         item->setData("system-suspend", Kickoff::IconNameRole);
@@ -107,7 +107,7 @@ LeaveModel::LeaveModel(QObject *parent)
     roles[Kickoff::IconNameRole] = "iconName";
     setRoleNames(roles);
     updateModel();
-    Kickoff::UrlItemLauncher::addGlobalHandler(Kickoff::UrlItemLauncher::ProtocolHandler, "leave", new Kickoff::LeaveItemHandler);
+    Kickoff::UrlItemLauncher::addGlobalHandler(Kickoff::UrlItemLauncher::ProtocolHandler, QStringLiteral("leave"), new Kickoff::LeaveItemHandler);
 
 
     const QString configFile = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + "/ksmserverrc";
@@ -142,33 +142,33 @@ void LeaveModel::updateModel()
     const QString session = i18n("Session");
 
     // Logout
-    const bool canLogout = KAuthorized::authorizeKAction("logout") && KAuthorized::authorize("logout");
+    const bool canLogout = KAuthorized::authorizeKAction(QStringLiteral("logout")) && KAuthorized::authorize(QStringLiteral("logout"));
     if (canLogout) {
-        QStandardItem *logoutOption = createStandardItem("leave:/logoutonly");
+        QStandardItem *logoutOption = createStandardItem(QStringLiteral("leave:/logoutonly"));
         logoutOption->setData(session, Kickoff::GroupNameRole);
         appendRow(logoutOption);
     }
 
     // Lock
-    if (KAuthorized::authorizeKAction("lock_screen")) {
-        QStandardItem *lockOption = createStandardItem("leave:/lock");
+    if (KAuthorized::authorizeKAction(QStringLiteral("lock_screen"))) {
+        QStandardItem *lockOption = createStandardItem(QStringLiteral("leave:/lock"));
         lockOption->setData(session, Kickoff::GroupNameRole);
         appendRow(lockOption);
     }
 
     // Save Session
     if (canLogout) {
-        KConfigGroup c(KSharedConfig::openConfig("ksmserverrc", KConfig::NoGlobals), "General");
-        if (c.readEntry("loginMode") == "restoreSavedSession") {
-            QStandardItem *saveSessionOption = createStandardItem("leave:/savesession");
+        KConfigGroup c(KSharedConfig::openConfig(QStringLiteral("ksmserverrc"), KConfig::NoGlobals), "General");
+        if (c.readEntry("loginMode") == QLatin1String("restoreSavedSession")) {
+            QStandardItem *saveSessionOption = createStandardItem(QStringLiteral("leave:/savesession"));
             saveSessionOption->setData(session, Kickoff::GroupNameRole);
             appendRow(saveSessionOption);
         }
     }
 
     // Switch User
-    if (KDisplayManager().isSwitchable() && KAuthorized::authorize(QLatin1String("switch_user")))  {
-        QStandardItem *switchUserOption = createStandardItem("leave:/switch");
+    if (KDisplayManager().isSwitchable() && KAuthorized::authorize(QStringLiteral("switch_user")))  {
+        QStandardItem *switchUserOption = createStandardItem(QStringLiteral("leave:/switch"));
         switchUserOption->setData(session, Kickoff::GroupNameRole);
         appendRow(switchUserOption);
     }
@@ -180,19 +180,19 @@ void LeaveModel::updateModel()
     const QString system = i18n("System");
     QSet< Solid::PowerManagement::SleepState > spdMethods = Solid::PowerManagement::supportedSleepStates();
     if (spdMethods.contains(Solid::PowerManagement::StandbyState)) {
-        QStandardItem *standbyOption = createStandardItem("leave:/standby");
+        QStandardItem *standbyOption = createStandardItem(QStringLiteral("leave:/standby"));
         standbyOption->setData(system, Kickoff::GroupNameRole);
         appendRow(standbyOption);
     }
 
     if (spdMethods.contains(Solid::PowerManagement::SuspendState)) {
-        QStandardItem *suspendramOption = createStandardItem("leave:/suspendram");
+        QStandardItem *suspendramOption = createStandardItem(QStringLiteral("leave:/suspendram"));
         suspendramOption->setData(system, Kickoff::GroupNameRole);
         appendRow(suspendramOption);
     }
 
     if (spdMethods.contains(Solid::PowerManagement::HibernateState)) {
-        QStandardItem *suspenddiskOption = createStandardItem("leave:/suspenddisk");
+        QStandardItem *suspenddiskOption = createStandardItem(QStringLiteral("leave:/suspenddisk"));
         suspenddiskOption->setData(system, Kickoff::GroupNameRole);
         appendRow(suspenddiskOption);
     }
@@ -200,14 +200,14 @@ void LeaveModel::updateModel()
     if (canLogout) {
         if (KWorkSpace::canShutDown(KWorkSpace::ShutdownConfirmDefault, KWorkSpace::ShutdownTypeReboot)) {
             // Restart
-            QStandardItem *restartOption = createStandardItem("leave:/restart");
+            QStandardItem *restartOption = createStandardItem(QStringLiteral("leave:/restart"));
             restartOption->setData(system, Kickoff::GroupNameRole);
             appendRow(restartOption);
         }
 
         if (KWorkSpace::canShutDown(KWorkSpace::ShutdownConfirmDefault, KWorkSpace::ShutdownTypeHalt)) {
             // Shutdown
-            QStandardItem *shutDownOption = createStandardItem("leave:/shutdown");
+            QStandardItem *shutDownOption = createStandardItem(QStringLiteral("leave:/shutdown"));
             shutDownOption->setData(system, Kickoff::GroupNameRole);
             appendRow(shutDownOption);
         }

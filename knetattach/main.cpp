@@ -42,7 +42,7 @@ int main(int argc, char **argv) {
     parser.process(app);
     aboutData.processCommandLine(&parser);
 	KNetAttach na;
-    app.connect( &app, SIGNAL(lastWindowClosed()), &app, SLOT(quit()) );
+    app.connect( &app, &QGuiApplication::lastWindowClosed, &app, &QCoreApplication::quit );
 	na.show();
 
 	return app.exec();

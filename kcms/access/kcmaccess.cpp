@@ -160,7 +160,7 @@ KAccessConfig::KAccessConfig(QWidget *parent, const QVariantList& args)
     : KCModule(parent, args)
 {
     KAboutData *about =
-        new KAboutData("kcmaccess", i18n("KDE Accessibility Tool"), "1.0",
+        new KAboutData(QStringLiteral("kcmaccess"), i18n("KDE Accessibility Tool"), QStringLiteral("1.0"),
                        QString(), KAboutLicense::GPL, i18n("(c) 2000, Matthias Hoelzer-Kluepfel"));
 
     about->addAuthor(i18n("Matthias Hoelzer-Kluepfel"), i18n("Author") , QStringLiteral("hoelzer@kde.org"));
@@ -248,7 +248,7 @@ KAccessConfig::~KAccessConfig()
 
 void KAccessConfig::configureKNotify()
 {
-    KNotifyConfigWidget::configure(this, "kaccess");
+    KNotifyConfigWidget::configure(this, QStringLiteral("kaccess"));
 }
 
 void KAccessConfig::changeFlashScreenColor()
@@ -260,7 +260,7 @@ void KAccessConfig::changeFlashScreenColor()
 
 void KAccessConfig::selectSound()
 {
-    QStringList list = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QLatin1String("sound/"));
+    QStringList list = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("sound/"));
     QString start;
     if (list.count() > 0)
         start = list[0];
@@ -278,7 +278,7 @@ void KAccessConfig::configChanged()
 
 void KAccessConfig::load()
 {
-    KConfigGroup cg(KSharedConfig::openConfig("kaccessrc"), "Bell");
+    KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral("kaccessrc")), "Bell");
 
     ui.systemBell->setChecked(cg.readEntry("SystemBell", true));
     ui.customBell->setChecked(cg.readEntry("ArtsBell", false));
@@ -291,7 +291,7 @@ void KAccessConfig::load()
 
     ui.duration->setValue(cg.readEntry("VisibleBellPause", 500));
 
-    KConfigGroup keyboardGroup(KSharedConfig::openConfig("kaccessrc"), "Keyboard");
+    KConfigGroup keyboardGroup(KSharedConfig::openConfig(QStringLiteral("kaccessrc")), "Keyboard");
 
     ui.stickyKeys->setChecked(keyboardGroup.readEntry("StickyKeys", false));
     ui.stickyKeysLock->setChecked(keyboardGroup.readEntry("StickyKeysLatch", true));
@@ -318,7 +318,7 @@ void KAccessConfig::load()
     ui.gestureConfirmation->setChecked(keyboardGroup.readEntry("GestureConfirmation", false));
     ui.kNotifyAccess->setChecked(keyboardGroup.readEntry("kNotifyAccess", false));
 
-    KConfigGroup screenReaderGroup(KSharedConfig::openConfig("kaccessrc"), "ScreenReader");
+    KConfigGroup screenReaderGroup(KSharedConfig::openConfig(QStringLiteral("kaccessrc")), "ScreenReader");
     ui.screenReaderEnabled->setChecked(screenReaderGroup.readEntry("Enabled", false));
 
     checkAccess();
@@ -329,7 +329,7 @@ void KAccessConfig::load()
 
 void KAccessConfig::save()
 {
-    KConfigGroup cg(KSharedConfig::openConfig("kaccessrc"), "Bell");
+    KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral("kaccessrc")), "Bell");
 
     cg.writeEntry("SystemBell", ui.systemBell->isChecked());
     cg.writeEntry("ArtsBell", ui.customBell->isChecked());
@@ -342,7 +342,7 @@ void KAccessConfig::save()
     cg.writeEntry("VisibleBellPause", ui.duration->value());
     cg.sync();
 
-    KConfigGroup keyboardGroup(KSharedConfig::openConfig("kaccessrc"), "Keyboard");
+    KConfigGroup keyboardGroup(KSharedConfig::openConfig(QStringLiteral("kaccessrc")), "Keyboard");
 
     keyboardGroup.writeEntry("StickyKeys", ui.stickyKeys->isChecked());
     keyboardGroup.writeEntry("StickyKeysLatch", ui.stickyKeysLock->isChecked());
@@ -373,13 +373,13 @@ void KAccessConfig::save()
 
     keyboardGroup.sync();
 
-    KConfigGroup screenReaderGroup(KSharedConfig::openConfig("kaccessrc"), "ScreenReader");
+    KConfigGroup screenReaderGroup(KSharedConfig::openConfig(QStringLiteral("kaccessrc")), "ScreenReader");
     screenReaderGroup.writeEntry("Enabled", ui.screenReaderEnabled->isChecked());
 
     if (ui.systemBell->isChecked() ||
         ui.customBell->isChecked() ||
         ui.visibleBell->isChecked()) {
-        KConfig _cfg("kdeglobals", KConfig::NoGlobals);
+        KConfig _cfg(QStringLiteral("kdeglobals"), KConfig::NoGlobals);
         KConfigGroup cfg(&_cfg, "General");
         cfg.writeEntry("UseSystemBell", true);
         cfg.sync();
@@ -388,7 +388,7 @@ void KAccessConfig::save()
     // make kaccess reread the configuration
     // turning a11y features off needs to be done by kaccess
     // so run it to clear any enabled features and it will exit if it should
-    KToolInvocation::startServiceByDesktopName("kaccess");
+    KToolInvocation::startServiceByDesktopName(QStringLiteral("kaccess"));
 
     emit changed(false);
 }
@@ -491,8 +491,8 @@ extern "C"
      */
     Q_DECL_EXPORT void kcminit_access()
     {
-        KConfig config("kaccessrc", KConfig::NoGlobals);
-        KToolInvocation::startServiceByDesktopName("kaccess");
+        KConfig config(QStringLiteral("kaccessrc"), KConfig::NoGlobals);
+        KToolInvocation::startServiceByDesktopName(QStringLiteral("kaccess"));
     }
 }
 

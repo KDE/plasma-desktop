@@ -59,13 +59,13 @@ Plasma::RunnerManager * runnerManager() {
         // initializing allowed runners
         QStringList allowed;
         allowed
-            << "places"
-            << "shell"
-            << "services"
-            << "bookmarks"
-            << "recentdocuments"
-            << "locations"
-            << "baloosearch";
+            << QStringLiteral("places")
+            << QStringLiteral("shell")
+            << QStringLiteral("services")
+            << QStringLiteral("bookmarks")
+            << QStringLiteral("recentdocuments")
+            << QStringLiteral("locations")
+            << QStringLiteral("baloosearch");
 
         _runnerManager->setAllowedRunners(allowed);
 
@@ -111,7 +111,7 @@ KService::Ptr Kickoff::serviceForUrl(const KUrl & url)
 
     // URL path example: services_kde4-kate.desktop
     // or: services_firefox.desktop
-    id.remove("services_");
+    id.remove(QStringLiteral("services_"));
 
     return KService::serviceByStorageId(id);
 }
@@ -178,11 +178,11 @@ KRunnerModel::KRunnerModel(QObject *parent)
         , d(new Private())
 {
     connect(runnerManager(),
-            SIGNAL(matchesChanged(QList<Plasma::QueryMatch>)),
+            &Plasma::RunnerManager::matchesChanged,
             this,
-            SLOT(matchesChanged(QList<Plasma::QueryMatch>)));
+            &KRunnerModel::matchesChanged);
 
-    UrlItemLauncher::addGlobalHandler(UrlItemLauncher::ProtocolHandler, "krunner", new KRunnerItemHandler);
+    UrlItemLauncher::addGlobalHandler(UrlItemLauncher::ProtocolHandler, QStringLiteral("krunner"), new KRunnerItemHandler);
 }
 
 KRunnerModel::~KRunnerModel()
@@ -234,7 +234,7 @@ void KRunnerModel::matchesChanged(const QList< Plasma::QueryMatch > & m)
 
     while (matches.size()) {
         Plasma::QueryMatch match = matches.takeLast();
-        qDebug() << "matches " << QString("krunner://") + match.runner()->id() + "/" + match.id();
+        qDebug() << "matches " << QStringLiteral("krunner://") + match.runner()->id() + "/" + match.id();
         QString mimeUrl;
         if (runnerManager()->mimeDataForMatch(match)) {
             mimeUrl = runnerManager()->mimeDataForMatch(match)->urls().first().toString();
@@ -244,7 +244,7 @@ void KRunnerModel::matchesChanged(const QList< Plasma::QueryMatch > & m)
                 match.icon(),
                 match.text(),
                 match.subtext(),
-                QString("krunner://") + match.runner()->id() + "/" + match.id(),
+                QStringLiteral("krunner://") + match.runner()->id() + "/" + match.id(),
                 mimeUrl
                 )
             );
@@ -258,7 +258,7 @@ Qt::ItemFlags KRunnerModel::flags(const QModelIndex &index) const
     if (index.isValid()) {
         KUrl url = data(index, UrlRole).toString();
         QString host = url.host();
-        if (host != "services") {
+        if (host != QLatin1String("services")) {
             flags &= ~ ( Qt::ItemIsDragEnabled | Qt::ItemIsDropEnabled );
         }
     } else {

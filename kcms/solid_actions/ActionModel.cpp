@@ -101,7 +101,7 @@ void ActionModel::buildActionList()
     qDeleteAll( d->actions );
     d->actions.clear();
     // Prepare to search for possible actions -> we only want solid types
-    const QStringList actionDirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, "solid/actions", QStandardPaths::LocateDirectory);
+    const QStringList actionDirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("solid/actions"), QStandardPaths::LocateDirectory);
     // Get service objects for those actions and add them to the display
     foreach (const QString & actionDir, actionDirs) {
         QDirIterator it(actionDir, QStringList() << QStringLiteral("*.desktop"));

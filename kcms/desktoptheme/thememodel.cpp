@@ -68,13 +68,13 @@ void ThemeModel::reload()
 
     // get all desktop themes
     QStringList themes;
-    const QStringList &packs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, "plasma/desktoptheme", QStandardPaths::LocateDirectory);
+    const QStringList &packs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("plasma/desktoptheme"), QStandardPaths::LocateDirectory);
     foreach (const QString &ppath, packs) {
         const QDir cd(ppath);
         const QStringList &entries = cd.entryList(QDir::Dirs | QDir::Hidden);
         foreach (const QString pack, entries) {
             const QString _metadata = ppath+QLatin1Char('/')+pack+QStringLiteral("/metadata.desktop");
-            if ((pack != "." && pack != "..") &&
+            if ((pack != QLatin1String(".") && pack != QLatin1String("..")) &&
                 (QFile::exists(_metadata))) {
                 themes << _metadata;
             }
@@ -105,7 +105,7 @@ void ThemeModel::reload()
         Plasma::FrameSvg *svg = new Plasma::FrameSvg(this);
         Plasma::Theme *t = new Plasma::Theme(packageName, svg);
         svg->setTheme(t);
-        svg->setImagePath("widgets/background");
+        svg->setImagePath(QStringLiteral("widgets/background"));
 
         svg->setEnabledBorders(Plasma::FrameSvg::AllBorders);
         ThemeInfo info;

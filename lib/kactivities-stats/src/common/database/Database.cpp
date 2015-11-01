@@ -111,10 +111,10 @@ Database::Ptr Database::instance(Source source, OpenMode openMode)
     ptr->d->database
         = QSqlDatabase::contains(databaseConnectionName)
               ? QSqlDatabase::database(databaseConnectionName)
-              : QSqlDatabase::addDatabase("QSQLITE", databaseConnectionName);
+              : QSqlDatabase::addDatabase(QStringLiteral("QSQLITE"), databaseConnectionName);
 
     if (info.openMode == ReadOnly) {
-        ptr->d->database.setConnectOptions("QSQLITE_OPEN_READONLY");
+        ptr->d->database.setConnectOptions(QStringLiteral("QSQLITE_OPEN_READONLY"));
     }
 
     // We are allowing the database file to be overridden mostly for testing purposes
@@ -138,18 +138,18 @@ Database::Ptr Database::instance(Source source, OpenMode openMode)
 
     if (info.openMode == ReadOnly) {
         // From now on, only SELECT queries will work
-        ptr->setPragma("query_only = 1");
+        ptr->setPragma(QStringLiteral("query_only = 1"));
 
         // These should not make any difference
-        ptr->setPragma("synchronous = 0");
+        ptr->setPragma(QStringLiteral("synchronous = 0"));
 
     } else {
         // Using the write-ahead log and sync = NORMAL for faster writes
-        ptr->setPragma("synchronous = 1");
+        ptr->setPragma(QStringLiteral("synchronous = 1"));
     }
 
     // Maybe we should use the write-ahead log
-    auto walResult = ptr->pragma("journal_mode = WAL");
+    auto walResult = ptr->pragma(QStringLiteral("journal_mode = WAL"));
 
     if (walResult != "wal") {
         qFatal("KActivities: Database can not be opened in WAL mode. Check the "
@@ -159,13 +159,13 @@ Database::Ptr Database::instance(Source source, OpenMode openMode)
 
     // We don't have a big database, lets flush the WAL when
     // it reaches 400k, not 4M as is default
-    ptr->setPragma("wal_autocheckpoint = 100");
+    ptr->setPragma(QStringLiteral("wal_autocheckpoint = 100"));
 
     qDebug() << "KActivities: Database connection: " << databaseConnectionName
-        << "\n    query_only:         " << ptr->pragma("query_only")
-        << "\n    journal_mode:       " << ptr->pragma("journal_mode")
-        << "\n    wal_autocheckpoint: " << ptr->pragma("wal_autocheckpoint")
-        << "\n    synchronous:        " << ptr->pragma("synchronous")
+        << "\n    query_only:         " << ptr->pragma(QStringLiteral("query_only"))
+        << "\n    journal_mode:       " << ptr->pragma(QStringLiteral("journal_mode"))
+        << "\n    wal_autocheckpoint: " << ptr->pragma(QStringLiteral("wal_autocheckpoint"))
+        << "\n    synchronous:        " << ptr->pragma(QStringLiteral("synchronous"))
         ;
 
     return ptr;

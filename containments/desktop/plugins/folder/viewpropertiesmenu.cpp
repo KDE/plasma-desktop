@@ -30,7 +30,7 @@ ViewPropertiesMenu::ViewPropertiesMenu(QObject *parent) : QObject(parent)
 
     m_arrangementMenu = m_menu->addMenu(i18n("Arrange In"));
     m_arrangement = new QActionGroup(this);
-    connect(m_arrangement, SIGNAL(triggered(QAction*)), this, SIGNAL(arrangementChanged()));
+    connect(m_arrangement, &QActionGroup::triggered, this, &ViewPropertiesMenu::arrangementChanged);
     QAction *action = m_arrangementMenu->addAction(i18n("Rows"));
     action->setCheckable(true);
     action->setData(0);
@@ -42,7 +42,7 @@ ViewPropertiesMenu::ViewPropertiesMenu(QObject *parent) : QObject(parent)
 
     m_alignmentMenu = m_menu->addMenu(i18n("Align"));
     m_alignment = new QActionGroup(this);
-    connect(m_alignment, SIGNAL(triggered(QAction*)), this, SIGNAL(alignmentChanged()));
+    connect(m_alignment, &QActionGroup::triggered, this, &ViewPropertiesMenu::alignmentChanged);
     action = m_alignmentMenu->addAction(i18n("Left"));
     action->setCheckable(true);
     action->setData(0);
@@ -54,7 +54,7 @@ ViewPropertiesMenu::ViewPropertiesMenu(QObject *parent) : QObject(parent)
 
     QMenu *menu = m_menu->addMenu(i18n("Sort By"));
     m_sortMode = new QActionGroup(this);
-    connect(m_sortMode, SIGNAL(triggered(QAction*)), this, SIGNAL(sortModeChanged()));
+    connect(m_sortMode, &QActionGroup::triggered, this, &ViewPropertiesMenu::sortModeChanged);
     action = menu->addAction(i18n("Unsorted"));
     action->setCheckable(true);
     action->setData(-1);

@@ -100,13 +100,13 @@ static void applyGtkStyles(bool active, int version)
    QLatin1String systemGtkrc = QLatin1String(sysGtkrc(version));
    if (!list.contains(systemGtkrc))
       list.prepend(systemGtkrc);
-   list.removeAll("");
+   list.removeAll(QLatin1String(""));
    list.removeAll(gtkkde);
    list.append(gtkkde);
 
    // Pass env. var to kdeinit.
    QString name = gtkEnvVar(version);
-   QString value = list.join(":");
+   QString value = list.join(QStringLiteral(":"));
    org::kde::KLauncher klauncher(QStringLiteral("org.kde.klauncher5"), QStringLiteral("/KLauncher"), QDBusConnection::sessionBus());
    klauncher.setLaunchEnv(name, value);
 }
@@ -128,9 +128,9 @@ static void applyQtColors( KSharedConfigPtr kglobalcfg, QSettings& settings, QPa
      discg   << newPal.color(QPalette::Disabled,
                 (QPalette::ColorRole) i).name();
 
-  settings.setValue("/qt/Palette/active", actcg);
-  settings.setValue("/qt/Palette/inactive", inactcg);
-  settings.setValue("/qt/Palette/disabled", discg);
+  settings.setValue(QStringLiteral("/qt/Palette/active"), actcg);
+  settings.setValue(QStringLiteral("/qt/Palette/inactive"), inactcg);
+  settings.setValue(QStringLiteral("/qt/Palette/disabled"), discg);
 
   // export kwin's colors to qtrc for kstyle to use
   KConfigGroup wmCfgGroup(kglobalcfg, "WM");
@@ -138,39 +138,39 @@ static void applyQtColors( KSharedConfigPtr kglobalcfg, QSettings& settings, QPa
   // active colors
   QColor clr = newPal.color( QPalette::Active, QPalette::Background );
   clr = wmCfgGroup.readEntry("activeBackground", clr);
-  settings.setValue("/qt/KWinPalette/activeBackground", clr.name());
+  settings.setValue(QStringLiteral("/qt/KWinPalette/activeBackground"), clr.name());
   if (QPixmap::defaultDepth() > 8)
     clr = clr.dark(110);
   clr = wmCfgGroup.readEntry("activeBlend", clr);
-  settings.setValue("/qt/KWinPalette/activeBlend", clr.name());
+  settings.setValue(QStringLiteral("/qt/KWinPalette/activeBlend"), clr.name());
   clr = newPal.color( QPalette::Active, QPalette::HighlightedText );
   clr = wmCfgGroup.readEntry("activeForeground", clr);
-  settings.setValue("/qt/KWinPalette/activeForeground", clr.name());
+  settings.setValue(QStringLiteral("/qt/KWinPalette/activeForeground"), clr.name());
   clr = newPal.color( QPalette::Active,QPalette::Background );
   clr = wmCfgGroup.readEntry("frame", clr);
-  settings.setValue("/qt/KWinPalette/frame", clr.name());
+  settings.setValue(QStringLiteral("/qt/KWinPalette/frame"), clr.name());
   clr = wmCfgGroup.readEntry("activeTitleBtnBg", clr);
-  settings.setValue("/qt/KWinPalette/activeTitleBtnBg", clr.name());
+  settings.setValue(QStringLiteral("/qt/KWinPalette/activeTitleBtnBg"), clr.name());
 
   // inactive colors
   clr = newPal.color(QPalette::Inactive, QPalette::Background);
   clr = wmCfgGroup.readEntry("inactiveBackground", clr);
-  settings.setValue("/qt/KWinPalette/inactiveBackground", clr.name());
+  settings.setValue(QStringLiteral("/qt/KWinPalette/inactiveBackground"), clr.name());
   if (QPixmap::defaultDepth() > 8)
     clr = clr.dark(110);
   clr = wmCfgGroup.readEntry("inactiveBlend", clr);
-  settings.setValue("/qt/KWinPalette/inactiveBlend", clr.name());
+  settings.setValue(QStringLiteral("/qt/KWinPalette/inactiveBlend"), clr.name());
   clr = newPal.color(QPalette::Inactive, QPalette::Background).dark();
   clr = wmCfgGroup.readEntry("inactiveForeground", clr);
-  settings.setValue("/qt/KWinPalette/inactiveForeground", clr.name());
+  settings.setValue(QStringLiteral("/qt/KWinPalette/inactiveForeground"), clr.name());
   clr = newPal.color(QPalette::Inactive, QPalette::Background);
   clr = wmCfgGroup.readEntry("inactiveFrame", clr);
-  settings.setValue("/qt/KWinPalette/inactiveFrame", clr.name());
+  settings.setValue(QStringLiteral("/qt/KWinPalette/inactiveFrame"), clr.name());
   clr = wmCfgGroup.readEntry("inactiveTitleBtnBg", clr);
-  settings.setValue("/qt/KWinPalette/inactiveTitleBtnBg", clr.name());
+  settings.setValue(QStringLiteral("/qt/KWinPalette/inactiveTitleBtnBg"), clr.name());
 
   KConfigGroup kdeCfgGroup(kglobalcfg, "KDE");
-  settings.setValue("/qt/KDE/contrast", kdeCfgGroup.readEntry("contrast", 7));
+  settings.setValue(QStringLiteral("/qt/KDE/contrast"), kdeCfgGroup.readEntry("contrast", 7));
 }
 
 // -----------------------------------------------------------------------------
@@ -178,7 +178,7 @@ static void applyQtColors( KSharedConfigPtr kglobalcfg, QSettings& settings, QPa
 static void applyQtSettings( KSharedConfigPtr kglobalcfg, QSettings& settings )
 {
   /* export font settings */
-  settings.setValue("/qt/font", QFontDatabase::systemFont(QFontDatabase::GeneralFont).toString());
+  settings.setValue(QStringLiteral("/qt/font"), QFontDatabase::systemFont(QFontDatabase::GeneralFont).toString());
 
   /* export effects settings */
   KConfigGroup kdeCfgGroup(kglobalcfg, "General");
@@ -189,18 +189,18 @@ static void applyQtSettings( KSharedConfigPtr kglobalcfg, QSettings& settings )
 
   QStringList guieffects;
   if (effectsEnabled) {
-    guieffects << QString("general");
+    guieffects << QStringLiteral("general");
     if (fadeMenus)
-      guieffects << QString("fademenu");
+      guieffects << QStringLiteral("fademenu");
     if (animateCombobox)
-      guieffects << QString("animatecombo");
+      guieffects << QStringLiteral("animatecombo");
     if (fadeTooltips)
-      guieffects << QString("fadetooltip");
+      guieffects << QStringLiteral("fadetooltip");
   }
   else
-    guieffects << QString("none");
+    guieffects << QStringLiteral("none");
 
-  settings.setValue("/qt/GUIEffects", guieffects);
+  settings.setValue(QStringLiteral("/qt/GUIEffects"), guieffects);
 }
 
 // -----------------------------------------------------------------------------
@@ -240,7 +240,7 @@ static QString item( int i ) {
 
 static QString color( const QColor& col )
 {
-    return QString( "{ %1, %2, %3 }" ).arg( item( col.red() ) ).arg( item( col.green() ) ).arg( item( col.blue() ) );
+    return QStringLiteral( "{ %1, %2, %3 }" ).arg( item( col.red() ) ).arg( item( col.green() ) ).arg( item( col.blue() ) );
 }
 
 static void createGtkrc( bool exportColors, const QPalette& cg, bool exportGtkTheme, const QString& gtkTheme, int version )
@@ -273,20 +273,20 @@ static void createGtkrc( bool exportColors, const QPalette& cg, bool exportGtkTh
     if (exportGtkTheme)
     {
         QString gtkStyle;
-        if (gtkTheme.toLower() == "oxygen")
-            gtkStyle = QString("oxygen-gtk");
+        if (gtkTheme.toLower() == QLatin1String("oxygen"))
+            gtkStyle = QStringLiteral("oxygen-gtk");
         else
             gtkStyle = gtkTheme;
 
         bool exist_gtkrc = false;
         QByteArray gtkrc = getenv(gtkEnvVar(version));
-        QStringList listGtkrc = QFile::decodeName(gtkrc).split(":");
+        QStringList listGtkrc = QFile::decodeName(gtkrc).split(QStringLiteral(":"));
         if (listGtkrc.contains(saveFile.fileName()))
             listGtkrc.removeAll(saveFile.fileName());
         listGtkrc.append(QDir::homePath() + userGtkrc(version));
         listGtkrc.append(QDir::homePath() + "/.gtkrc-2.0-kde");
         listGtkrc.append(QDir::homePath() + "/.gtkrc-2.0-kde4");
-        listGtkrc.removeAll("");
+        listGtkrc.removeAll(QLatin1String(""));
         listGtkrc.removeDuplicates();
         for (int i = 0; i < listGtkrc.size(); ++i)
         {
@@ -297,17 +297,17 @@ static void createGtkrc( bool exportColors, const QPalette& cg, bool exportGtkTh
         if (!exist_gtkrc)
         {
             QString gtk2ThemeFilename;
-            gtk2ThemeFilename = QString("%1/.themes/%2/gtk-2.0/gtkrc").arg(QDir::homePath()).arg(gtkStyle);
+            gtk2ThemeFilename = QStringLiteral("%1/.themes/%2/gtk-2.0/gtkrc").arg(QDir::homePath()).arg(gtkStyle);
             if (!QFile::exists(gtk2ThemeFilename)) {
                 QStringList gtk2ThemePath;
                 gtk2ThemeFilename.clear();
                 QByteArray xdgDataDirs = getenv("XDG_DATA_DIRS");
                 gtk2ThemePath.append(QDir::homePath() + "/.local");
-                gtk2ThemePath.append(QFile::decodeName(xdgDataDirs).split(":"));
+                gtk2ThemePath.append(QFile::decodeName(xdgDataDirs).split(QStringLiteral(":")));
                 gtk2ThemePath.removeDuplicates();
                 for (int i = 0; i < gtk2ThemePath.size(); ++i)
                 {
-                    gtk2ThemeFilename = QString("%1/themes/%2/gtk-2.0/gtkrc").arg(gtk2ThemePath.at(i)).arg(gtkStyle);
+                    gtk2ThemeFilename = QStringLiteral("%1/themes/%2/gtk-2.0/gtkrc").arg(gtk2ThemePath.at(i)).arg(gtkStyle);
                     if (QFile::exists(gtk2ThemeFilename))
                         break;
                     else
@@ -321,7 +321,7 @@ static void createGtkrc( bool exportColors, const QPalette& cg, bool exportGtkTh
                 t << endl;
                 t << "gtk-theme-name=\"" << gtkStyle << "\"" << endl;
                 t << endl;
-                if (gtkStyle == "oxygen-gtk")
+                if (gtkStyle == QLatin1String("oxygen-gtk"))
                     exportColors = false;
             }
         }
@@ -400,7 +400,7 @@ void runRdb( uint flags )
   bool exportXftSettings = flags & KRdbExportXftSettings;
   bool exportGtkTheme    = flags & KRdbExportGtkTheme;
 
-  KSharedConfigPtr kglobalcfg = KSharedConfig::openConfig( "kdeglobals" );
+  KSharedConfigPtr kglobalcfg = KSharedConfig::openConfig( QStringLiteral("kdeglobals") );
   KConfigGroup kglobals(kglobalcfg, "KDE");
   QPalette newPal = KColorScheme::createApplicationPalette(kglobalcfg);
 
@@ -418,7 +418,7 @@ void runRdb( uint flags )
   if (kglobals.hasKey("widgetStyle"))
     gtkTheme = kglobals.readEntry("widgetStyle");
   else
-    gtkTheme = "oxygen";
+    gtkTheme = QStringLiteral("oxygen");
 
   createGtkrc( exportColors, newPal, exportGtkTheme, gtkTheme, 1 );
   createGtkrc( exportColors, newPal, exportGtkTheme, gtkTheme, 2 );
@@ -448,14 +448,14 @@ void runRdb( uint flags )
     QStringList list;
 
     const QStringList adPaths = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation,
-        "kdisplay/app-defaults/", QStandardPaths::LocateDirectory);
+        QStringLiteral("kdisplay/app-defaults/"), QStandardPaths::LocateDirectory);
     for (QStringList::ConstIterator it = adPaths.constBegin(); it != adPaths.constEnd(); ++it) {
       QDir dSys( *it );
 
       if ( dSys.exists() ) {
         dSys.setFilter( QDir::Files );
         dSys.setSorting( QDir::Name );
-        dSys.setNameFilters(QStringList("*.ad"));
+        dSys.setNameFilters(QStringList(QStringLiteral("*.ad")));
         list += dSys.entryList();
       }
     }
@@ -475,7 +475,7 @@ void runRdb( uint flags )
     copyFile(tmpFile, homeDir + "/.Xdefaults", true);
 
   // Export the Xcursor theme & size settings
-  KConfigGroup mousecfg(KSharedConfig::openConfig( "kcminputrc" ), "Mouse" );
+  KConfigGroup mousecfg(KSharedConfig::openConfig( QStringLiteral("kcminputrc") ), "Mouse" );
   QString theme = mousecfg.readEntry("cursorTheme", QString());
   QString size  = mousecfg.readEntry("cursorSize", QString());
   QString contents;
@@ -490,25 +490,25 @@ void runRdb( uint flags )
   {
     if (generalCfgGroup.hasKey("XftAntialias"))
     {
-      contents += "Xft.antialias: ";
+      contents += QLatin1String("Xft.antialias: ");
       if(generalCfgGroup.readEntry("XftAntialias", true))
-        contents += "1\n";
+        contents += QLatin1String("1\n");
       else
-        contents += "0\n";
+        contents += QLatin1String("0\n");
     }
 
     if (generalCfgGroup.hasKey("XftHintStyle"))
     {
       QString hintStyle = generalCfgGroup.readEntry("XftHintStyle", "hintmedium");
-      contents += "Xft.hinting: ";
+      contents += QLatin1String("Xft.hinting: ");
       if(hintStyle.isEmpty())
-        contents += "-1\n";
+        contents += QLatin1String("-1\n");
       else
       {
-        if(hintStyle!="hintnone")
-          contents += "1\n";
+        if(hintStyle!=QLatin1String("hintnone"))
+          contents += QLatin1String("1\n");
         else
-          contents += "0\n";
+          contents += QLatin1String("0\n");
         contents += "Xft.hintstyle: " + hintStyle + '\n';
       }
     }
@@ -520,7 +520,7 @@ void runRdb( uint flags )
         contents += "Xft.rgba: " + subPixel + '\n';
     }
 
-    KConfig _cfgfonts( "kcmfonts" );
+    KConfig _cfgfonts( QStringLiteral("kcmfonts") );
     KConfigGroup cfgfonts(&_cfgfonts, "General");
 
     if( cfgfonts.readEntry( "forceFontDPI", 0 ) != 0 )
@@ -528,7 +528,7 @@ void runRdb( uint flags )
     else
     {
       KProcess proc;
-      proc << "xrdb" << "-quiet" << "-remove" << "-nocpp";
+      proc << QStringLiteral("xrdb") << QStringLiteral("-quiet") << QStringLiteral("-remove") << QStringLiteral("-nocpp");
       proc.start();
       if (proc.waitForStarted())
       {
@@ -546,7 +546,7 @@ void runRdb( uint flags )
 
   KProcess proc;
 #ifndef NDEBUG
-  proc << "xrdb" << "-merge" << tmpFile.fileName();
+  proc << QStringLiteral("xrdb") << QStringLiteral("-merge") << tmpFile.fileName();
 #else
   proc << "xrdb" << "-quiet" << "-merge" << tmpFile.fileName();
 #endif
@@ -558,7 +558,7 @@ void runRdb( uint flags )
   /* Qt exports */
   if ( exportQtColors || exportQtSettings )
   {
-    QSettings* settings = new QSettings(QLatin1String("Trolltech"));
+    QSettings* settings = new QSettings(QStringLiteral("Trolltech"));
 
     if ( exportQtColors )
       applyQtColors( kglobalcfg, *settings, newPal );    // For kcmcolors
@@ -581,7 +581,7 @@ void runRdb( uint flags )
 
         static Atom qt_settings_timestamp = 0;
         if (!qt_settings_timestamp) {
-            QString atomname("_QT_SETTINGS_TIMESTAMP_");
+            QString atomname(QStringLiteral("_QT_SETTINGS_TIMESTAMP_"));
             atomname += XDisplayName( 0 ); // Use the $DISPLAY envvar.
             qt_settings_timestamp = XInternAtom( QX11Info::display(), atomname.toLatin1(), False);
         }
@@ -614,7 +614,7 @@ void runRdb( uint flags )
   //fix filename, copied from ColorsCM::saveScheme()
   QString colorSchemeFilename = colorSchemeName;
   colorSchemeFilename.remove('\''); // So Foo's does not become FooS
-  QRegExp fixer("[\\W,.-]+(.?)");
+  QRegExp fixer(QStringLiteral("[\\W,.-]+(.?)"));
   int offset;
   while ((offset = fixer.indexIn(colorSchemeFilename)) >= 0)
       colorSchemeFilename.replace(offset, fixer.matchedLength(), fixer.cap(1).toUpper());
@@ -622,7 +622,7 @@ void runRdb( uint flags )
 
   //clone the color scheme
   QString src = QStandardPaths::locate(QStandardPaths::GenericDataLocation, "color-schemes/" +  colorSchemeFilename + ".colors");
-  QString dest = migration.saveLocation("data", "color-schemes") + colorSchemeName + ".colors";
+  QString dest = migration.saveLocation("data", QStringLiteral("color-schemes")) + colorSchemeName + ".colors";
 
   QFile::remove(dest);
   QFile::copy(src, dest);

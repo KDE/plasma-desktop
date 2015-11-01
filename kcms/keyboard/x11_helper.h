@@ -216,7 +216,7 @@ struct LayoutSet {
 
 	QString toString() const {
 		QString str(currentLayout.toString());
-		str += ": ";
+		str += QLatin1String(": ");
 		foreach(const LayoutUnit& layoutUnit, layouts) {
 			str += layoutUnit.toString() + " ";
 		}

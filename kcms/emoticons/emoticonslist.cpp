@@ -113,13 +113,13 @@ EmoticonList::EmoticonList(QWidget *parent, const QVariantList &args)
     setAboutData(about);
 //     setButtons(Apply | Help);
     setupUi(this);
-    btAdd->setIcon(QIcon::fromTheme("list-add"));
-    btEdit->setIcon(QIcon::fromTheme("edit-rename"));
-    btRemoveEmoticon->setIcon(QIcon::fromTheme("edit-delete"));
-    btNew->setIcon(QIcon::fromTheme("document-new"));
-    btGetNew->setIcon(QIcon::fromTheme("get-hot-new-stuff"));
-    btInstall->setIcon(QIcon::fromTheme("document-import"));
-    btRemoveTheme->setIcon(QIcon::fromTheme("edit-delete"));
+    btAdd->setIcon(QIcon::fromTheme(QStringLiteral("list-add")));
+    btEdit->setIcon(QIcon::fromTheme(QStringLiteral("edit-rename")));
+    btRemoveEmoticon->setIcon(QIcon::fromTheme(QStringLiteral("edit-delete")));
+    btNew->setIcon(QIcon::fromTheme(QStringLiteral("document-new")));
+    btGetNew->setIcon(QIcon::fromTheme(QStringLiteral("get-hot-new-stuff")));
+    btInstall->setIcon(QIcon::fromTheme(QStringLiteral("document-import")));
+    btRemoveTheme->setIcon(QIcon::fromTheme(QStringLiteral("edit-delete")));
 
     connect(themeList, &QListWidget::itemSelectionChanged, this, &EmoticonList::selectTheme);
     connect(themeList, &QListWidget::itemSelectionChanged, this, &EmoticonList::updateButton);
@@ -199,7 +199,7 @@ void EmoticonList::updateButton()
 {
     const bool can = canEditTheme();
     btRemoveEmoticon->setEnabled(themeList->currentItem() && emoList->selectedItems().size() && can);
-    btRemoveTheme->setEnabled(themeList->currentItem() && themeList->currentItem()->text() != "Glass" && themeList->count() > 1 && can);
+    btRemoveTheme->setEnabled(themeList->currentItem() && themeList->currentItem()->text() != QLatin1String("Glass") && themeList->count() > 1 && can);
     btEdit->setEnabled(themeList->currentItem() && emoList->selectedItems().size() && can);
     btAdd->setEnabled(themeList->currentItem() && can);
 }
@@ -371,8 +371,8 @@ void EmoticonList::newTheme()
     if (KIO::NetAccess::exists(QUrl(path), KIO::NetAccess::SourceSide, this)) {
         KMessageBox::error(this, i18n("%1 theme already exists", name));
     } else {
-        const QString constraint("(exist Library)");
-        KService::List srv = KServiceTypeTrader::self()->query("KEmoticons", constraint);
+        const QString constraint(QStringLiteral("(exist Library)"));
+        KService::List srv = KServiceTypeTrader::self()->query(QStringLiteral("KEmoticons"), constraint);
 
         QStringList ls;
         int current = 0;
@@ -380,7 +380,7 @@ void EmoticonList::newTheme()
         for (int i = 0; i < srv.size(); ++i) {
             ls << srv.at(i)->name();
 
-            if (srv.at(i)->property("X-KDE-Priority").toInt() > srv.at(current)->property("X-KDE-Priority").toInt()) {
+            if (srv.at(i)->property(QStringLiteral("X-KDE-Priority")).toInt() > srv.at(current)->property(QStringLiteral("X-KDE-Priority")).toInt()) {
                 current = i;
             }
         }
@@ -425,7 +425,7 @@ void EmoticonList::loadTheme(const QString &name)
 
 void EmoticonList::getNewStuff()
 {
-    KNS3::DownloadDialog dialog("emoticons.knsrc", this);
+    KNS3::DownloadDialog dialog(QStringLiteral("emoticons.knsrc"), this);
     dialog.exec();
     if (!dialog.changedEntries().isEmpty()) {
         KNS3::Entry::List entries = dialog.changedEntries();
@@ -449,7 +449,7 @@ void EmoticonList::getNewStuff()
 
 QString EmoticonList::previewEmoticon(const KEmoticonsTheme &theme)
 {
-    QString path = theme.tokenize(":)")[0].picPath;
+    QString path = theme.tokenize(QStringLiteral(":)"))[0].picPath;
     if (path.isEmpty()) {
         path = theme.emoticonsMap().keys().value(0);
     }
@@ -458,7 +458,7 @@ QString EmoticonList::previewEmoticon(const KEmoticonsTheme &theme)
 
 void EmoticonList::initDefaults()
 {
-    QList<QListWidgetItem *>ls = themeList->findItems("Glass", Qt::MatchExactly);
+    QList<QListWidgetItem *>ls = themeList->findItems(QStringLiteral("Glass"), Qt::MatchExactly);
     if (ls.isEmpty())
         return;
     themeList->setCurrentItem( ls.first() );

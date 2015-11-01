@@ -24,7 +24,7 @@
 StyleConfigDialog::StyleConfigDialog(QWidget* parent, QString styleName)
   : KDialog( parent )
 {
-  setObjectName( "StyleConfigDialog" );
+  setObjectName( QStringLiteral("StyleConfigDialog") );
   setModal( true );
   setCaption( i18n( "Configure %1", styleName ) );
   setButtons( Default | Ok | Cancel );

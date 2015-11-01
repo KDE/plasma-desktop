@@ -36,7 +36,7 @@ void forgetResource(Terms::Activity activities, Terms::Agent agents,
     KAMD_DECL_DBUS_INTERFACE(scoring, Resources/Scoring, ResourcesScoring);
     for (const auto& activity: activities.values) {
         for (const auto& agent: agents.values) {
-            scoring.call("DeleteStatsForResource", activity, agent, resource);
+            scoring.call(QStringLiteral("DeleteStatsForResource"), activity, agent, resource);
         }
     }
 }
@@ -47,7 +47,7 @@ void forgetResources(const Query &query)
     for (const auto& activity: query.activities()) {
         for (const auto& agent: query.agents()) {
             for (const auto& urlFilter: query.urlFilters()) {
-                scoring.call("DeleteStatsForResource", activity, agent, urlFilter);
+                scoring.call(QStringLiteral("DeleteStatsForResource"), activity, agent, urlFilter);
             }
         }
     }
@@ -57,7 +57,7 @@ void forgetRecentStats(Terms::Activity activities, int count, TimeUnit what)
 {
     KAMD_DECL_DBUS_INTERFACE(scoring, Resources/Scoring, ResourcesScoring);
     for (const auto& activity: activities.values) {
-        scoring.call("DeleteRecentStats", activity, count,
+        scoring.call(QStringLiteral("DeleteRecentStats"), activity, count,
                 what == Hours  ? "h" :
                 what == Days   ? "d" :
                                  "m"
@@ -69,7 +69,7 @@ void forgetEarlierStats(Terms::Activity activities, int months)
 {
     KAMD_DECL_DBUS_INTERFACE(scoring, Resources/Scoring, ResourcesScoring);
     for (const auto& activity: activities.values) {
-        scoring.call("DeleteEarlierStats", activity, months);
+        scoring.call(QStringLiteral("DeleteEarlierStats"), activity, months);
     }
 }
 

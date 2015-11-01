@@ -453,7 +453,7 @@ bool KAccessApp::nativeEventFilter(const QByteArray& eventType, void* message, l
 void VisualBell::paintEvent(QPaintEvent *event)
 {
     QWidget::paintEvent(event);
-    QTimer::singleShot(_pause, this, SLOT(hide()));
+    QTimer::singleShot(_pause, this, &QWidget::hide);
 }
 
 

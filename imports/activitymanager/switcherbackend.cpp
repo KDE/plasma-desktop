@@ -251,7 +251,7 @@ void SwitcherBackend::keybdSwitchedToAnotherActivity()
 {
     m_lastInvokedAction = dynamic_cast<QAction*>(sender());
 
-    QTimer::singleShot(0, this, SLOT(showActivitySwitcherIfNeeded()));
+    QTimer::singleShot(0, this, &SwitcherBackend::showActivitySwitcherIfNeeded);
 }
 
 void SwitcherBackend::showActivitySwitcherIfNeeded()

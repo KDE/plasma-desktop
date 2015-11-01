@@ -195,7 +195,7 @@ const QStringList CursorThemeModel::searchPaths()
     }
 
     // Expand all occurrences of ~/ to the home dir
-    baseDirs.replaceInStrings(QRegExp("^~\\/"), QDir::home().path() + '/');
+    baseDirs.replaceInStrings(QRegExp(QStringLiteral("^~\\/")), QDir::home().path() + '/');
     return baseDirs;
 }
 
@@ -226,11 +226,11 @@ bool CursorThemeModel::isCursorTheme(const QString &theme, const int depth)
             continue;
 
         // If there's a cursors subdir, we'll assume this is a cursor theme
-        if (dir.exists("cursors"))
+        if (dir.exists(QStringLiteral("cursors")))
             return true;
 
         // If the theme doesn't have an index.theme file, it can't inherit any themes.
-        if (!dir.exists("index.theme"))
+        if (!dir.exists(QStringLiteral("index.theme")))
             continue;
 
         // Open the index.theme file, so we can get the list of inherited themes
@@ -270,10 +270,10 @@ bool CursorThemeModel::handleDefault(const QDir &themeDir)
     }
 
     // If there's no cursors subdir, or if it's empty
-    if (!themeDir.exists("cursors") || QDir(themeDir.path() + "/cursors")
+    if (!themeDir.exists(QStringLiteral("cursors")) || QDir(themeDir.path() + "/cursors")
           .entryList(QDir::Files | QDir::NoDotAndDotDot ).isEmpty())
     {
-        if (themeDir.exists("index.theme"))
+        if (themeDir.exists(QStringLiteral("index.theme")))
         {
             XCursorTheme theme(themeDir);
             if (!theme.inherits().isEmpty())
@@ -282,19 +282,19 @@ bool CursorThemeModel::handleDefault(const QDir &themeDir)
         return true;
     }
 
-    defaultName = QLatin1String("default");
+    defaultName = QStringLiteral("default");
     return false;
 }
 
 
 void CursorThemeModel::processThemeDir(const QDir &themeDir)
 {
-    bool haveCursors = themeDir.exists("cursors");
+    bool haveCursors = themeDir.exists(QStringLiteral("cursors"));
 
     // Special case handling of "default", since it's usually either a
     // symlink to another theme, or an empty theme that inherits another
     // theme.
-    if (defaultName.isNull() && themeDir.dirName() == "default")
+    if (defaultName.isNull() && themeDir.dirName() == QLatin1String("default"))
     {
         if (handleDefault(themeDir))
             return;
@@ -302,7 +302,7 @@ void CursorThemeModel::processThemeDir(const QDir &themeDir)
 
     // If the directory doesn't have a cursors subdir and lacks an
     // index.theme file it can't be a cursor theme.
-    if (!themeDir.exists("index.theme") && !haveCursors)
+    if (!themeDir.exists(QStringLiteral("index.theme")) && !haveCursors)
         return;
 
     static bool isX11 = QX11Info::isPlatformX11();
@@ -368,7 +368,7 @@ void CursorThemeModel::insertThemes()
 
     // The theme Xcursor will end up using if no theme is configured
     if (defaultName.isNull() || !hasTheme(defaultName))
-        defaultName = QLatin1String("KDE_Classic");
+        defaultName = QStringLiteral("KDE_Classic");
 }
 
 

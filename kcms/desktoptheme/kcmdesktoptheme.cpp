@@ -68,18 +68,18 @@ KCMDesktopTheme::KCMDesktopTheme( QWidget* parent, const QVariantList& )
     about->addAuthor(QStringLiteral("Ralf Nolden"), QString(), QStringLiteral("nolden@kde.org"));
     setAboutData( about );
 
-    m_newThemeButton->setIcon(QIcon::fromTheme("get-hot-new-stuff"));
+    m_newThemeButton->setIcon(QIcon::fromTheme(QStringLiteral("get-hot-new-stuff")));
 
     m_themeModel = new ThemeModel(this);
     m_theme->setModel(m_themeModel);
     m_theme->setItemDelegate(new ThemeDelegate(m_theme));
     m_theme->setVerticalScrollMode(QAbstractItemView::ScrollPerItem);
 
-    connect(m_detailsWidget, SIGNAL(changed()), this, SLOT(detailChanged()));
+    connect(m_detailsWidget, &DesktopThemeDetails::changed, this, &KCMDesktopTheme::detailChanged);
 
-    connect(m_theme->selectionModel(), SIGNAL(currentChanged(QModelIndex,QModelIndex)),
-            this, SLOT(setDesktopThemeDirty()));
-    connect(m_newThemeButton, SIGNAL(clicked()), this, SLOT(getNewThemes()));
+    connect(m_theme->selectionModel(), &QItemSelectionModel::currentChanged,
+            this, &KCMDesktopTheme::setDesktopThemeDirty);
+    connect(m_newThemeButton, &QAbstractButton::clicked, this, &KCMDesktopTheme::getNewThemes);
     connect(m_fileInstallButton, &QPushButton::clicked, this, &KCMDesktopTheme::showFileDialog);
 }
 
@@ -129,7 +129,7 @@ void KCMDesktopTheme::save()
 
 void KCMDesktopTheme::defaults()
 {
-    m_theme->setCurrentIndex(m_themeModel->indexOf("default"));
+    m_theme->setCurrentIndex(m_themeModel->indexOf(QStringLiteral("default")));
     m_detailsWidget->resetToDefaultTheme();
     setDesktopThemeDirty();
 }
@@ -142,7 +142,7 @@ void KCMDesktopTheme::setDesktopThemeDirty()
 
 void KCMDesktopTheme::getNewThemes()
 {
-    KNS3::DownloadDialog dialog("plasma-themes.knsrc", this);
+    KNS3::DownloadDialog dialog(QStringLiteral("plasma-themes.knsrc"), this);
     dialog.exec();
     KNS3::Entry::List entries = dialog.changedEntries();
 
@@ -157,7 +157,7 @@ void KCMDesktopTheme::loadDesktopTheme()
     QApplication::setOverrideCursor(QCursor(Qt::WaitCursor));
     m_themeModel->reload();
     QString themeName;
-    KConfigGroup cg(KSharedConfig::openConfig("plasmarc"), "Theme");
+    KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral("plasmarc")), "Theme");
     themeName = cg.readEntry("name", m_defaultTheme->themeName());
 
     m_theme->setCurrentIndex(m_themeModel->indexOf(themeName));
@@ -200,11 +200,11 @@ void KCMDesktopTheme::installTheme(const QString &file)
 {
     qCDebug(KCM_DESKTOP_THEME_LOG) << "Installing ... " << file;
 
-    QString program = "plasmapkg2";
+    QString program = QStringLiteral("plasmapkg2");
     QStringList arguments;
-    arguments << "-t" << "theme" << "-i" << file;
+    arguments << QStringLiteral("-t") << QStringLiteral("theme") << QStringLiteral("-i") << file;
 
-    qCDebug(KCM_DESKTOP_THEME_LOG) << program << arguments.join(" ");
+    qCDebug(KCM_DESKTOP_THEME_LOG) << program << arguments.join(QStringLiteral(" "));
     QProcess *myProcess = new QProcess(this);
     connect(myProcess, static_cast<void (QProcess::*)(int, QProcess::ExitStatus)>(&QProcess::finished), this, &KCMDesktopTheme::installFinished);
     connect(myProcess, static_cast<void (QProcess::*)(QProcess::ProcessError)>(&QProcess::error), this, &KCMDesktopTheme::installError);

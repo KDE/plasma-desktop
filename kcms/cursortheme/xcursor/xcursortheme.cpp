@@ -44,7 +44,7 @@ XCursorTheme::XCursorTheme(const QDir &themeDir)
     setPath(themeDir.path());
     setIsWritable(QFileInfo(themeDir.path()).isWritable()); // ### perhaps this shouldn't be cached
 
-    if (themeDir.exists("index.theme"))
+    if (themeDir.exists(QStringLiteral("index.theme")))
         parseIndexFile();
 
     QString cursorFile = path() + "/cursors/left_ptr";
@@ -105,27 +105,27 @@ QString XCursorTheme::findAlternative(const QString &name) const
         // If Xcursor fails to load the cursor, Qt creates it with the correct name using the
         // core protcol instead (which in turn calls Xcursor). We emulate that process here.
         // Note that there's a core cursor called cross, but it's not the one Qt expects.
-        alternatives.insert("cross",          "crosshair");
-        alternatives.insert("up_arrow",       "center_ptr");
-        alternatives.insert("wait",           "watch");
-        alternatives.insert("ibeam",          "xterm");
-        alternatives.insert("size_all",       "fleur");
-        alternatives.insert("pointing_hand",  "hand2");
+        alternatives.insert(QStringLiteral("cross"),          QStringLiteral("crosshair"));
+        alternatives.insert(QStringLiteral("up_arrow"),       QStringLiteral("center_ptr"));
+        alternatives.insert(QStringLiteral("wait"),           QStringLiteral("watch"));
+        alternatives.insert(QStringLiteral("ibeam"),          QStringLiteral("xterm"));
+        alternatives.insert(QStringLiteral("size_all"),       QStringLiteral("fleur"));
+        alternatives.insert(QStringLiteral("pointing_hand"),  QStringLiteral("hand2"));
 
         // Precomputed MD5 hashes for the hardcoded bitmap cursors in Qt and KDE.
         // Note that the MD5 hash for left_ptr_watch is for the KDE version of that cursor.
-        alternatives.insert("size_ver",       "00008160000006810000408080010102");
-        alternatives.insert("size_hor",       "028006030e0e7ebffc7f7070c0600140");
-        alternatives.insert("size_bdiag",     "fcf1c3c7cd4491d801f1e1c78f100000");
-        alternatives.insert("size_fdiag",     "c7088f0f3e6c8088236ef8e1e3e70000");
-        alternatives.insert("whats_this",     "d9ce0ab605698f320427677b458ad60b");
-        alternatives.insert("split_h",        "14fef782d02440884392942c11205230");
-        alternatives.insert("split_v",        "2870a09082c103050810ffdffffe0204");
-        alternatives.insert("forbidden",      "03b6e0fcb3499374a867c041f52298f0");
-        alternatives.insert("left_ptr_watch", "3ecb610c1bf2410f44200f48c40d3599");
-        alternatives.insert("hand2",          "e29285e634086352946a0e7090d73106");
-        alternatives.insert("openhand",       "9141b49c8149039304290b508d208c40");
-        alternatives.insert("closedhand",     "05e88622050804100c20044008402080");
+        alternatives.insert(QStringLiteral("size_ver"),       QStringLiteral("00008160000006810000408080010102"));
+        alternatives.insert(QStringLiteral("size_hor"),       QStringLiteral("028006030e0e7ebffc7f7070c0600140"));
+        alternatives.insert(QStringLiteral("size_bdiag"),     QStringLiteral("fcf1c3c7cd4491d801f1e1c78f100000"));
+        alternatives.insert(QStringLiteral("size_fdiag"),     QStringLiteral("c7088f0f3e6c8088236ef8e1e3e70000"));
+        alternatives.insert(QStringLiteral("whats_this"),     QStringLiteral("d9ce0ab605698f320427677b458ad60b"));
+        alternatives.insert(QStringLiteral("split_h"),        QStringLiteral("14fef782d02440884392942c11205230"));
+        alternatives.insert(QStringLiteral("split_v"),        QStringLiteral("2870a09082c103050810ffdffffe0204"));
+        alternatives.insert(QStringLiteral("forbidden"),      QStringLiteral("03b6e0fcb3499374a867c041f52298f0"));
+        alternatives.insert(QStringLiteral("left_ptr_watch"), QStringLiteral("3ecb610c1bf2410f44200f48c40d3599"));
+        alternatives.insert(QStringLiteral("hand2"),          QStringLiteral("e29285e634086352946a0e7090d73106"));
+        alternatives.insert(QStringLiteral("openhand"),       QStringLiteral("9141b49c8149039304290b508d208c40"));
+        alternatives.insert(QStringLiteral("closedhand"),     QStringLiteral("05e88622050804100c20044008402080"));
     }
 
     return alternatives.value(name, QString());

@@ -90,8 +90,8 @@ QIcon Flags::createIcon(const QString& layout)
 	QIcon icon;
 	if( ! layout.isEmpty() ) {
         QString file;
-		if( layout == "epo" ) {
-			file = QStandardPaths::locate(QStandardPaths::GenericDataLocation, "kcmkeyboard/pics/epo.png");
+		if( layout == QLatin1String("epo") ) {
+			file = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("kcmkeyboard/pics/epo.png"));
 		}
 		else {
 			QString countryCode = getCountryFromLayoutName( layout );
@@ -128,12 +128,12 @@ QString Flags::getCountryFromLayoutName(const QString& layout)  const
 {
 	QString countryCode = layout;
 
-	if( countryCode == "nec_vndr/jp" )
-		return "jp";
+	if( countryCode == QLatin1String("nec_vndr/jp") )
+		return QStringLiteral("jp");
 
 //	if( NON_COUNTRY_LAYOUTS.contain(layout) )
 	if( countryCode.length() > 2 )
-		return "";
+		return QLatin1String("");
 
 	return countryCode;
 }
@@ -143,7 +143,7 @@ QString Flags::getCountryFromLayoutName(const QString& layout)  const
 QString Flags::getShortText(const LayoutUnit& layoutUnit, const KeyboardConfig& keyboardConfig)
 {
 	if( layoutUnit.isEmpty() )
-		return QString("--");
+		return QStringLiteral("--");
 
 	QString layoutText = layoutUnit.layout;
 
@@ -173,7 +173,7 @@ static QString getDisplayText(const QString& layout, const QString& variant, con
 {
 	if( variant.isEmpty() )
 		return layout;
-	if( rules == NULL || rules->version == "1.0" )
+	if( rules == NULL || rules->version == QLatin1String("1.0") )
 		return i18nc("layout - variant", "%1 - %2", layout, variant);
 	return variant;
 }
@@ -205,13 +205,13 @@ QString getPixmapKey(const KeyboardConfig& keyboardConfig)
 {
 	switch(keyboardConfig.indicatorType) {
 	case KeyboardConfig::SHOW_FLAG:
-		return "_fl";
+		return QStringLiteral("_fl");
 	case KeyboardConfig::SHOW_LABEL_ON_FLAG:
-		return "_bt";
+		return QStringLiteral("_bt");
 	case KeyboardConfig::SHOW_LABEL:
-		return "_lb";
+		return QStringLiteral("_lb");
 	}
-	return "_";	// should not happen
+	return QStringLiteral("_");	// should not happen
 }
 
 void Flags::drawLabel(QPainter& painter, const QString& layoutText, bool flagShown)
@@ -276,7 +276,7 @@ Plasma::Svg* Flags::getSvg()
 {
 	if( svg == NULL ) {
 		svg = new Plasma::Svg;
-	    svg->setImagePath("widgets/labeltexture");
+	    svg->setImagePath(QStringLiteral("widgets/labeltexture"));
 	    svg->setContainsMultipleImages(true);
 	    connect(svg, &Plasma::Svg::repaintNeeded, this, &Flags::themeChanged);
 	}
