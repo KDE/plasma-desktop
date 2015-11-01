@@ -38,12 +38,12 @@
 
     <method name="ListActivitiesWithInformation">
       <arg type="a(sssd)" direction="out"/>
-      <annotation name="com.trolltech.QtDBus.QtTypeName.Out0" value="ActivityInfoList" />
+      <annotation name="org.qtproject.QtDBus.QtTypeName.Out0" value="ActivityInfoList" />
       <annotation name="org.qtproject.QtDBus.QtTypeName.Out0" value="ActivityInfoList" />
     </method>
     <method name="ActivityInformation">
       <arg type="(sssd)" direction="out"/>
-      <annotation name="com.trolltech.QtDBus.QtTypeName.Out0" value="ActivityInfo" />
+      <annotation name="org.qtproject.QtDBus.QtTypeName.Out0" value="ActivityInfo" />
       <annotation name="org.qtproject.QtDBus.QtTypeName.Out0" value="ActivityInfo" />
       <arg name="activity" type="s" direction="in"/>
     </method>
