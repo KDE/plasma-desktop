@@ -1,6 +1,7 @@
 [Global]
 Name=Touchpad
 Name[ca]=Ratolí tàctil
+Name[ca@valencia]=Ratolí tàctil
 Name[cs]=Touchpad
 Name[da]=Touchpad
 Name[de]=Touchpad
@@ -37,6 +38,7 @@ Name[zh_TW]=觸控板
 IconName=input-touchpad
 Comment=Touchpad
 Comment[ca]=Ratolí tàctil
+Comment[ca@valencia]=Ratolí tàctil
 Comment[cs]=Touchpad
 Comment[da]=Touchpad
 Comment[de]=Touchpad
@@ -74,6 +76,7 @@ Comment[zh_TW]=觸控板
 [Event/TouchpadDisabled]
 Name=Touchpad was disabled
 Name[ca]=El ratolí tàctil s'ha desactivat
+Name[ca@valencia]=El ratolí tàctil s'ha desactivat
 Name[cs]=Touchpad byl zakázán
 Name[da]=Touchpad deaktiveret
 Name[de]=Touchpad wurde deaktiviert
@@ -109,6 +112,7 @@ Name[zh_CN]=触摸板已禁用
 Name[zh_TW]=觸控板已關閉
 Comment=Touchpad was disabled because mouse is detected
 Comment[ca]=El ratolí tàctil s'ha desactivat perquè s'ha detectat un ratolí
+Comment[ca@valencia]=El ratolí tàctil s'ha desactivat perquè s'ha detectat un ratolí
 Comment[cs]=Touchpad byl zakázán protože byla zjištěna myš
 Comment[da]=Touchpad blev deaktiveret fordi musen blev detekteret
 Comment[de]=Das Touchpad wurde deaktiviert, weil eine Maus erkannt wurde
@@ -148,6 +152,7 @@ Action=Popup
 [Event/TouchpadEnabled]
 Name=Touchpad was enabled
 Name[ca]=El ratolí tàctil s'ha activat
+Name[ca@valencia]=El ratolí tàctil s'ha activat
 Name[cs]=Touchpad byl povolen
 Name[da]=Touchpad aktiveret
 Name[de]=Touchpad wurde aktiviert
@@ -182,6 +187,7 @@ Name[zh_CN]=触摸板已启用
 Name[zh_TW]=觸控板已開啟
 Comment=Touchpad was enabled because the mouse was unplugged
 Comment[ca]=El ratolí tàctil s'ha activat perquè en ratolí s'ha desendollat
+Comment[ca@valencia]=El ratolí tàctil s'ha activat perquè en ratolí s'ha desendollat
 Comment[cs]=Touchpad byl povolen protože byla odpojena myš
 Comment[da]=Touchpad blev aktiveret fordi musen blev frakoblet
 Comment[de]=Das Touchpad wurde aktiviert, weil eine Maus abgezogen wurde
