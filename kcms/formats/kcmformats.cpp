@@ -62,7 +62,13 @@ KCMFormats::~KCMFormats()
 
 bool countryLessThan(const QLocale & c1, const QLocale & c2)
 {
-    return QString::localeAwareCompare(c1.nativeCountryName(), c2.nativeCountryName()) < 0;
+    // Ensure that the "Default (C)" locale always appears at the top
+    if (c1.name()=="C" && c2.name()!="C") return true;
+    if (c2.name()=="C") return false;
+
+    const QString ncn1 = !c1.nativeCountryName().isEmpty() ? c1.nativeCountryName() : QLocale::countryToString(c1.country());
+    const QString ncn2 = !c2.nativeCountryName().isEmpty() ? c2.nativeCountryName() : QLocale::countryToString(c2.country());
+    return QString::localeAwareCompare(ncn1, ncn2) < 0;
 }
 
 void KCMFormats::load()
@@ -110,7 +116,7 @@ void KCMFormats::connectCombo(QComboBox *combo)
 
 void KCMFormats::addLocaleToCombo(QComboBox *combo, const QLocale &locale)
 {
-    const QString clabel = !locale.nativeCountryName().isEmpty() ? locale.nativeCountryName() : locale.countryToString(locale.country());
+    const QString clabel = !locale.nativeCountryName().isEmpty() ? locale.nativeCountryName() : QLocale::countryToString(locale.country());
     // This needs to use name() rather than bcp47name() or later on the export will generate a non-sense locale (e.g. "it" instead of
     // "it_IT")
     // TODO: Properly handle scripts (@foo)
@@ -128,8 +134,16 @@ void KCMFormats::addLocaleToCombo(QComboBox *combo, const QLocale &locale)
     QIcon flagIcon;
     if (!flag.isEmpty()) {
         flagIcon = QIcon(flag);
+    } else {
+        flagIcon = QIcon::fromTheme("unknown");
     }
-    combo->addItem(flagIcon, i18n("%1 - %2 (%3)", clabel, locale.nativeLanguageName(), locale.name()), cvalue);
+
+    const QString nativeLangName = locale.nativeLanguageName();
+    if (!nativeLangName.isEmpty()) {
+        combo->addItem(flagIcon, i18n("%1 - %2 (%3)", clabel, nativeLangName, locale.name()), cvalue);
+    } else {
+        combo->addItem(flagIcon, i18n("%1 (%2)", clabel, locale.name()), cvalue);
+    }
 }
 
 void setCombo(QComboBox *combo, const QString &key)
