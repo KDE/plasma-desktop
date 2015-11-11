@@ -20,6 +20,7 @@
 #include "kickerplugin.h"
 #include "abstractmodel.h"
 #include "appsmodel.h"
+#include "computermodel.h"
 #include "draghelper.h"
 #include "favoritesmodel.h"
 #include "fullscreenwindow.h"
@@ -43,6 +44,7 @@ void KickerPlugin::registerTypes(const char *uri)
     qmlRegisterType<AbstractModel>();
 
     qmlRegisterType<AppsModel>(uri, 0, 1, "AppsModel");
+    qmlRegisterType<ComputerModel>(uri, 0, 1, "ComputerModel");
     qmlRegisterType<DragHelper>(uri, 0, 1, "DragHelper");
     qmlRegisterType<FavoritesModel>(uri, 0, 1, "FavoritesModel");
     qmlRegisterType<FullScreenWindow>(uri, 0, 1, "FullScreenWindow");

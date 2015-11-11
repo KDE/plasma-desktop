@@ -72,7 +72,7 @@ AppEntry::AppEntry(AbstractModel *owner, const QString &id) : AbstractEntry(owne
     }
 
     if (m_service) {
-        init((NameFormat)qobject_cast<AppsModel* >(owner->rootModel())->appNameFormat());
+        init((NameFormat)owner->rootModel()->property("appNameFormat").toInt());
     }
 }
 

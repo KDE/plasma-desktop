@@ -20,6 +20,7 @@ set(kickerplugin_SRCS
     plugin/actionlist.cpp
     plugin/appentry.cpp
     plugin/appsmodel.cpp
+    plugin/computermodel.cpp
     plugin/contactentry.cpp
     plugin/containmentinterface.cpp
     plugin/draghelper.cpp
@@ -48,6 +49,7 @@ if(PackageKitQt5_FOUND)
     list(APPEND kickerplugin_SRCS plugin/findpackagenamejob.cpp)
 endif()
 
+qt5_add_dbus_interface(kickerplugin_SRCS ${KRUNNERAPP_INTERFACE} krunner_interface)
 qt5_add_dbus_interface(kickerplugin_SRCS ${KSMSERVER_DBUS_INTERFACE} ksmserver_interface)
 
 install(FILES plugin/qmldir DESTINATION ${QML_INSTALL_DIR}/org/kde/plasma/private/kicker)
@@ -65,6 +67,7 @@ target_link_libraries(kickerplugin
                       KF5::ConfigCore
                       KF5::CoreAddons
                       KF5::I18n
+                      KF5::ItemModels
                       KF5::KDELibs4Support # FIXME: New Solid power management API doesn't exist yet, so we need to use deprecated stuff.
                       KF5::KIOCore
                       KF5::KIOWidgets
