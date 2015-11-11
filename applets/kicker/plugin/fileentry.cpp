@@ -34,7 +34,7 @@ FileEntry::FileEntry(AbstractModel *owner, const QUrl &url) : AbstractEntry(owne
 
 bool FileEntry::isValid() const
 {
-    return m_fileItem && m_fileItem->isFile();
+    return m_fileItem && (m_fileItem->isFile() || m_fileItem->isDir());
 }
 
 QIcon FileEntry::icon() const
@@ -49,7 +49,7 @@ QIcon FileEntry::icon() const
 QString FileEntry::name() const
 {
     if (m_fileItem) {
-        return m_fileItem->url().fileName();
+        return m_fileItem->text();
     }
 
     return QString();
@@ -58,7 +58,7 @@ QString FileEntry::name() const
 QString FileEntry::description() const
 {
     if (m_fileItem) {
-        return m_fileItem->url().toString();
+        return m_fileItem->url().toString(QUrl::PreferLocalFile);
     }
 
     return QString();
