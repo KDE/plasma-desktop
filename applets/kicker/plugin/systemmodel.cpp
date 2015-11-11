@@ -87,6 +87,8 @@ QVariant SystemModel::data(const QModelIndex &index, int role) const
         return entry->name();
     } else if (role == Qt::DecorationRole) {
         return entry->iconName();
+    } else if (role == Kicker::DescriptionRole) {
+        return entry->description();
     } else if (role == Kicker::GroupRole) {
         return entry->group();
     } else if (role == Kicker::FavoriteIdRole) {

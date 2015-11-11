@@ -68,6 +68,7 @@ class AppEntry : public AbstractEntry
 
         QString m_id;
         QString m_name;
+        QString m_description;
         QIcon m_icon;
         KService::Ptr m_service;
         static QObject *m_appletInterface;

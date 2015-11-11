@@ -79,6 +79,13 @@ AppEntry::AppEntry(AbstractModel *owner, const QString &id) : AbstractEntry(owne
 void AppEntry::init(NameFormat nameFormat)
 {
     m_name = nameFromService(m_service, nameFormat);
+
+    if (nameFormat == GenericNameOnly) {
+        m_description = nameFromService(m_service, NameOnly);
+    } else {
+        m_description = nameFromService(m_service, GenericNameOnly);
+    }
+
     m_icon = QIcon::fromTheme(m_service->icon(), QIcon::fromTheme("unknown"));
 
     if (!m_appletInterface) {
@@ -109,7 +116,7 @@ QString AppEntry::name() const
 
 QString AppEntry::description() const
 {
-    return m_service->comment();
+    return m_description;
 }
 
 KService::Ptr AppEntry::service() const
