@@ -48,15 +48,7 @@ PlasmaCore.FrameSvgItem {
         }
 
         onClicked: {
-            if (systemSettings.singleClick()) {
-                dir.up();
-            }
-        }
-
-        onDoubleClicked: {
-            if (!systemSettings.singleClick()) {
-                dir.up();
-            }
+            dir.up();
         }
     }
 
