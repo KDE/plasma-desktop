@@ -331,7 +331,7 @@ Kicker.FullScreenWindow {
                     id: globalFavoritesGrid
 
                     anchors {
-                        top: favoritesColumnLabelUnderline.top
+                        top: favoritesColumnLabelUnderline.bottom
                         topMargin: units.largeSpacing
                     }
 
