@@ -37,6 +37,7 @@ class AppsModel : public AbstractModel
     Q_PROPERTY(bool flat READ flat WRITE setFlat NOTIFY flatChanged)
     Q_PROPERTY(bool showSeparators READ showSeparators WRITE setShowSeparators NOTIFY showSeparatorsChanged)
     Q_PROPERTY(int appNameFormat READ appNameFormat WRITE setAppNameFormat NOTIFY appNameFormatChanged)
+    Q_PROPERTY(QObject* appletInterface READ appletInterface WRITE setAppletInterface NOTIFY appletInterfaceChanged);
 
     public:
         explicit AppsModel(const QString &entryPath = QString(), bool flat = false, bool separators = true, QObject *parent = 0);
@@ -68,6 +69,9 @@ class AppsModel : public AbstractModel
         int appNameFormat() const;
         void setAppNameFormat(int format);
 
+        QObject *appletInterface() const;
+        void setAppletInterface(QObject *appletInterface);
+
         QStringList hiddenEntries() const;
 
         void entryChanged(AbstractEntry *entry);
@@ -77,6 +81,7 @@ class AppsModel : public AbstractModel
         void flatChanged() const;
         void showSeparatorsChanged() const;
         void appNameFormatChanged() const;
+        void appletInterfaceChanged() const;
         void hiddenEntriesChanged() const;
 
     protected Q_SLOTS:
@@ -89,6 +94,8 @@ class AppsModel : public AbstractModel
         bool m_deleteEntriesOnDestruction;
         int m_separatorCount;
         bool m_showSeparators;
+
+        QObject *m_appletInterface;
 
     private Q_SLOTS:
         void checkSycocaChanges(const QStringList &changes);

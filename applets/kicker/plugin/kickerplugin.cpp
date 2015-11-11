@@ -19,7 +19,9 @@
 
 #include "kickerplugin.h"
 #include "abstractmodel.h"
+#include "appsmodel.h"
 #include "draghelper.h"
+#include "favoritesmodel.h"
 #include "fullscreenwindow.h"
 #include "funnelmodel.h"
 #include "processrunner.h"
@@ -40,7 +42,9 @@ void KickerPlugin::registerTypes(const char *uri)
 
     qmlRegisterType<AbstractModel>();
 
+    qmlRegisterType<AppsModel>(uri, 0, 1, "AppsModel");
     qmlRegisterType<DragHelper>(uri, 0, 1, "DragHelper");
+    qmlRegisterType<FavoritesModel>(uri, 0, 1, "FavoritesModel");
     qmlRegisterType<FullScreenWindow>(uri, 0, 1, "FullScreenWindow");
     qmlRegisterType<FunnelModel>(uri, 0, 1, "FunnelModel");
     qmlRegisterType<ProcessRunner>(uri, 0, 1, "ProcessRunner");

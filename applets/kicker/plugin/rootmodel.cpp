@@ -70,7 +70,6 @@ RootModel::RootModel(QObject *parent) : AppsModel(QString(), parent)
 , m_recentAppsModel(0)
 , m_recentDocsModel(0)
 , m_recentContactsModel(0)
-, m_appletInterface(0)
 {
 }
 
@@ -201,22 +200,6 @@ void RootModel::setShowRecentContacts(bool show)
         refresh();
 
         emit showRecentContactsChanged();
-    }
-}
-
-QObject* RootModel::appletInterface() const
-{
-    return m_appletInterface;
-}
-
-void RootModel::setAppletInterface(QObject* appletInterface)
-{
-    if (m_appletInterface != appletInterface) {
-        m_appletInterface = appletInterface;
-
-        refresh();
-
-        emit appletInterfaceChanged();
     }
 }
 

@@ -22,6 +22,7 @@
 #include "actionlist.h"
 
 #include <QCollator>
+#include <QDebug>
 #include <QQmlPropertyMap>
 #include <QTimer>
 
@@ -33,6 +34,7 @@ AppsModel::AppsModel(const QString &entryPath, bool flat, bool separators, QObje
 , m_deleteEntriesOnDestruction(true)
 , m_separatorCount(0)
 , m_showSeparators(separators)
+, m_appletInterface(nullptr)
 , m_description(i18n("Applications"))
 , m_entryPath(entryPath)
 , m_staticEntryList(false)
@@ -51,6 +53,7 @@ AppsModel::AppsModel(const QList<AbstractEntry *> entryList, bool deleteEntriesO
 , m_deleteEntriesOnDestruction(deleteEntriesOnDestruction)
 , m_separatorCount(0)
 , m_showSeparators(false)
+, m_appletInterface(nullptr)
 , m_description(i18n("Applications"))
 , m_entryPath(QString())
 , m_staticEntryList(true)
@@ -321,6 +324,22 @@ void AppsModel::setAppNameFormat(int format)
     }
 }
 
+QObject* AppsModel::appletInterface() const
+{
+    return m_appletInterface;
+}
+
+void AppsModel::setAppletInterface(QObject* appletInterface)
+{
+    if (m_appletInterface != appletInterface) {
+        m_appletInterface = appletInterface;
+
+        refresh();
+
+        emit appletInterfaceChanged();
+    }
+}
+
 QStringList AppsModel::hiddenEntries() const
 {
     return m_hiddenEntries;
@@ -332,11 +351,19 @@ void AppsModel::refresh()
         return;
     }
 
+    if (rootModel() == this && !m_appletInterface) {
+        return;
+    }
+
     beginResetModel();
 
     refreshInternal();
 
     endResetModel();
+
+    if (favoritesModel()) {
+        favoritesModel()->refresh();
+    }
 
     emit countChanged();
     emit separatorCountChanged();

@@ -58,8 +58,6 @@ class RootModel : public AppsModel
     Q_PROPERTY(bool showRecentDocs READ showRecentDocs WRITE setShowRecentDocs NOTIFY showRecentDocsChanged)
     Q_PROPERTY(bool showRecentContacts READ showRecentContacts WRITE setShowRecentContacts NOTIFY showRecentContactsChanged)
 
-    Q_PROPERTY(QObject* appletInterface READ appletInterface WRITE setAppletInterface NOTIFY appletInterfaceChanged);
-
     public:
         explicit RootModel(QObject *parent = 0);
         ~RootModel();
@@ -80,9 +78,6 @@ class RootModel : public AppsModel
         bool showRecentContacts() const;
         void setShowRecentContacts(bool show);
 
-        QObject *appletInterface() const;
-        void setAppletInterface(QObject *appletInterface);
-
         AbstractModel* favoritesModel();
         AbstractModel* systemFavoritesModel();
 
@@ -94,7 +89,6 @@ class RootModel : public AppsModel
         void showRecentDocsChanged() const;
         void showRecentContactsChanged() const;
         void recentAppsModelChanged() const;
-        void appletInterfaceChanged() const;
 
     protected Q_SLOTS:
         void refresh();
@@ -113,8 +107,6 @@ class RootModel : public AppsModel
         RecentUsageModel *m_recentAppsModel;
         RecentUsageModel *m_recentDocsModel;
         RecentContactsModel *m_recentContactsModel;
-
-        QObject *m_appletInterface;
 };
 
 #endif
