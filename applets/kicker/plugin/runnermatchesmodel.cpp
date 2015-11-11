@@ -57,7 +57,7 @@ QVariant RunnerMatchesModel::data(const QModelIndex &index, int role) const
     } else if (role == Kicker::DescriptionRole) {
         return match.subtext();
     } else if (role == Kicker::FavoriteIdRole) {
-        if (m_runnerId == "services") {
+        if (match.runner()->id() == "services") {
             return match.data().toString();
         }
     } else if (role == Kicker::HasActionListRole) {

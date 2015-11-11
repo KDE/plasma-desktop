@@ -23,12 +23,14 @@
 
 #include <QSet>
 
+#include <KLocalizedString>
 #include <KRunner/AbstractRunner>
 #include <KRunner/RunnerManager>
 
 RunnerModel::RunnerModel(QObject *parent) : QAbstractListModel(parent)
 , m_favoritesModel(0)
 , m_runnerManager(0)
+, m_mergeResults(false)
 , m_deleteWhenEmpty(false)
 {
     QHash<int, QByteArray> roles;
@@ -75,7 +77,33 @@ void RunnerModel::setDeleteWhenEmpty(bool deleteWhenEmpty)
     if (m_deleteWhenEmpty != deleteWhenEmpty) {
         m_deleteWhenEmpty = deleteWhenEmpty;
 
+        clear();
+
+        if (!m_query.isEmpty()) {
+            m_queryTimer.start();
+        }
+
         emit deleteWhenEmptyChanged();
+    }
+}
+
+bool RunnerModel::mergeResults() const
+{
+    return m_mergeResults;
+}
+
+void RunnerModel::setMergeResults(bool merge)
+{
+    if (m_mergeResults != merge) {
+        m_mergeResults = merge;
+
+        clear();
+
+        if (!m_query.isEmpty()) {
+            m_queryTimer.start();
+        }
+
+        emit mergeResultsChanged();
     }
 }
 
@@ -167,14 +195,39 @@ void RunnerModel::matchesChanged(const QList<Plasma::QueryMatch> &matches)
     QHash<QString, QList<Plasma::QueryMatch> > matchesForRunner;
 
     foreach (const Plasma::QueryMatch &match, matches) {
-        QString runnerId = match.runner()->id();
-        auto it = matchesForRunner.find(runnerId);
+        auto it = matchesForRunner.find(match.runner()->id());
 
         if (it == matchesForRunner.end()) {
-            it = matchesForRunner.insert(runnerId, QList<Plasma::QueryMatch>());
+            it = matchesForRunner.insert(match.runner()->id(), QList<Plasma::QueryMatch>());
         }
 
         it.value().append(match);
+    }
+
+    if (m_mergeResults) {
+        RunnerMatchesModel *matchesModel = nullptr;
+
+        if (m_models.isEmpty()) {
+            matchesModel = new RunnerMatchesModel(QString(), i18n("Search results"),
+                m_runnerManager, this);
+
+            beginInsertRows(QModelIndex(), 0, 0);
+            m_models.append(matchesModel);
+            endInsertRows();
+            emit countChanged();
+        } else {
+            matchesModel = m_models.at(0);
+        }
+
+        QList<Plasma::QueryMatch> matches;
+
+        foreach (const QString &runnerId, m_runners) {
+            matches.append(matchesForRunner.take(runnerId));
+        }
+
+        matchesModel->setMatches(matches);
+
+        return;
     }
 
     // Assign matches to existing models. If there is no match for a model, delete it.
@@ -202,8 +255,8 @@ void RunnerModel::matchesChanged(const QList<Plasma::QueryMatch> &matches)
         for (; it != end; ++it) {
             QList<Plasma::QueryMatch> matches = it.value();
             Q_ASSERT(!matches.isEmpty());
-            QString name = matches.first().runner()->name();
-            RunnerMatchesModel *matchesModel = new RunnerMatchesModel(it.key(), name, m_runnerManager, this);
+            RunnerMatchesModel *matchesModel = new RunnerMatchesModel(it.key(),
+                matches.first().runner()->name(), m_runnerManager, this);
             matchesModel->setMatches(matches);
 
             if (it.key() == "services") {

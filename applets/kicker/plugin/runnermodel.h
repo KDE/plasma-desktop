@@ -43,6 +43,7 @@ class RunnerModel : public QAbstractListModel
     Q_PROPERTY(AbstractModel* favoritesModel READ favoritesModel WRITE setFavoritesModel NOTIFY favoritesModelChanged)
     Q_PROPERTY(QStringList runners READ runners WRITE setRunners NOTIFY runnersChanged);
     Q_PROPERTY(QString query READ query WRITE setQuery NOTIFY queryChanged);
+    Q_PROPERTY(bool mergeResults READ mergeResults WRITE setMergeResults NOTIFY mergeResultsChanged)
     Q_PROPERTY(bool deleteWhenEmpty READ deleteWhenEmpty WRITE setDeleteWhenEmpty NOTIFY deleteWhenEmptyChanged)
 
     public:
@@ -65,6 +66,9 @@ class RunnerModel : public QAbstractListModel
         AbstractModel *favoritesModel() const;
         void setFavoritesModel(AbstractModel *model);
 
+        bool mergeResults() const;
+        void setMergeResults(bool merge);
+
         bool deleteWhenEmpty() const;
         void setDeleteWhenEmpty(bool deleteWhenEmpty);
 
@@ -73,6 +77,7 @@ class RunnerModel : public QAbstractListModel
         void favoritesModelChanged() const;
         void runnersChanged() const;
         void queryChanged() const;
+        void mergeResultsChanged() const;
         void deleteWhenEmptyChanged();
 
     private Q_SLOTS:
@@ -89,6 +94,7 @@ class RunnerModel : public QAbstractListModel
         QList<RunnerMatchesModel *> m_models;
         QString m_query;
         QTimer m_queryTimer;
+        bool m_mergeResults;
         bool m_deleteWhenEmpty;
 };
 
