@@ -258,6 +258,17 @@ AbstractModel *AppsModel::modelForRow(int row)
     return m_entryList.at(row)->childModel();
 }
 
+int AppsModel::rowForModel(AbstractModel *model)
+{
+    for (int i = 0; i < m_entryList.count(); ++i) {
+        if (m_entryList.at(i)->childModel() == model) {
+            return i;
+        }
+    }
+
+    return -1;
+}
+
 int AppsModel::separatorCount() const
 {
     return m_separatorCount;

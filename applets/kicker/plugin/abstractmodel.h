@@ -58,6 +58,7 @@ class AbstractModel : public QAbstractListModel
         Q_INVOKABLE virtual QString labelForRow(int row);
 
         Q_INVOKABLE virtual AbstractModel *modelForRow(int row);
+        Q_INVOKABLE virtual int rowForModel(AbstractModel *model);
 
         virtual bool hasActions() const;
         virtual QVariantList actions() const;

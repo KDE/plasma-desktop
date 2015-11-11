@@ -94,6 +94,13 @@ AbstractModel *AbstractModel::modelForRow(int row)
     return 0;
 }
 
+int AbstractModel::rowForModel(AbstractModel *model)
+{
+    Q_UNUSED(model)
+
+    return -1;
+}
+
 bool AbstractModel::hasActions() const
 {
     return false;

@@ -55,6 +55,7 @@ class AppsModel : public AbstractModel
         Q_INVOKABLE virtual bool trigger(int row, const QString &actionId, const QVariant &argument);
 
         Q_INVOKABLE AbstractModel *modelForRow(int row);
+        Q_INVOKABLE int rowForModel(AbstractModel *model);
 
         int separatorCount() const;
 
