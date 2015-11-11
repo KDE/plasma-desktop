@@ -132,7 +132,20 @@ Item {
         id: runnerModel
 
         favoritesModel: globalFavorites
-        runners: plasmoid.configuration.useExtraRunners ? new Array("services").concat(plasmoid.configuration.extraRunners) : "services"
+
+        runners: {
+            var runners = new Array("services");
+
+            if (isDash) {
+                runners.push("desktopsessions");
+            }
+
+            if (plasmoid.configuration.useExtraRunners) {
+                runners.concat(plasmoid.configuration.extraRunners);
+            }
+
+            return runners;
+        }
 
         deleteWhenEmpty: isDash
     }
