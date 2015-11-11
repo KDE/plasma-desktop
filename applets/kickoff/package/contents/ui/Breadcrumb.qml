@@ -45,13 +45,13 @@ Item {
             // Remove all the breadcrumbs in front of the clicked one
             while (crumbModel.count > 0 && crumbRoot.depth < crumbModel.get(crumbModel.count-1).depth) {
                 crumbModel.remove(crumbModel.count-1)
-                crumbModel.indexes.pop()
+                crumbModel.models.pop()
             }
 
             if (crumbRoot.root) {
-                applicationsView.newModelIndex = 0;
+                applicationsView.newModel = rootModel;
             } else {
-                applicationsView.newModelIndex = crumbModel.indexes[index];
+                applicationsView.newModel = crumbModel.models[index];
             }
             appViewScrollArea.state = "OutgoingRight";
         }

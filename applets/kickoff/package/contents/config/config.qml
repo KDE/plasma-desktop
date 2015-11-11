@@ -24,6 +24,6 @@ ConfigModel {
     ConfigCategory {
          name: i18n("Appearance")
          icon: "preferences-desktop-color"
-         source: "configGeneral.qml"
+         source: "ConfigGeneral.qml"
     }
 }

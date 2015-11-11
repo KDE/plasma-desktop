@@ -1,6 +1,7 @@
 /*
     Copyright (C) 2011  Martin Gräßlin <mgraesslin@kde.org>
     Copyright (C) 2012 Marco Martin <mart@kde.org>
+    Copyright (C) 2015  Eike Hein <hein@kde.org>
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -20,13 +21,12 @@ import QtQuick 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.components 2.0 as PlasmaComponents
-import org.kde.plasma.private.kickoff 0.1 as Kickoff
 import org.kde.draganddrop 2.0
 
 
 Item {
-    property alias model: vmodel.model
-    property alias delegate: vmodel.delegate
+    property alias model: kickoffListView.model
+    property alias delegate: kickoffListView.delegate
 
     property ListView listView: kickoffListView
 
@@ -43,7 +43,7 @@ Item {
     }
 
     function openContextMenu() {
-        listView.currentItem.openContextMenu();
+        kickoffListView.currentItem.openActionMenu();
     }
 
     PlasmaExtras.ScrollArea {
@@ -60,11 +60,7 @@ Item {
             highlightMoveDuration : 0
             highlightResizeDuration: 0
 
-            model: VisualDataModel {
-                id: vmodel
-
-                delegate: KickoffItem {}
-            }
+            delegate: KickoffItem {}
 
             section {
                 property: "group"

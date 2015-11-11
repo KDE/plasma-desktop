@@ -2,6 +2,7 @@
     Copyright (C) 2011  Martin Gräßlin <mgraesslin@kde.org>
     Copyright (C) 2012  Gregor Taetzner <gregor@freenet.de>
     Copyright 2014 Sebastian Kügler <sebas@kde.org>
+    Copyright (C) 2015  Eike Hein <hein@kde.org>
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -21,7 +22,6 @@ import QtQuick 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.components 2.0 as PlasmaComponents
-import org.kde.plasma.private.kickoff 0.1 as Kickoff
 
 Item {
     id: appViewContainer
@@ -49,6 +49,10 @@ Item {
         appViewScrollArea.state = "OutgoingLeft";
     }
 
+    function openContextMenu() {
+        applicationsView.currentItem.openActionMenu();
+    }
+
     function deactivateCurrentIndex() {
         if (crumbModel.count > 0) { // this is not the case when switching from the "Applications" to the "Favorites" tab using the "Left" key
             breadcrumbsElement.children[crumbModel.count-1].clickCrumb();
@@ -58,23 +62,24 @@ Item {
         return false;
     }
 
-    function openContextMenu() {
-        listView.currentItem.openContextMenu();
+    function reset() {
+        applicationsView.model = rootModel;
+        applicationsView.positionViewAtBeginning();
+        applicationsView.clearBreadcrumbs();
+    }
+
+    function refreshed() {
+        reset();
+        updatedLabelTimer.running = true;
     }
 
     Connections {
         target: plasmoid
         onExpandedChanged: {
             if (!expanded) {
-                applicationsView.model.rootIndex = 0;
-                applicationsView.positionViewAtBeginning();
-                applicationsView.clearBreadcrumbs();
+                reset();
             }
         }
-    }
-
-    ContextMenu {
-        id: contextMenu
     }
 
     Item {
@@ -117,8 +122,8 @@ Item {
                 Repeater {
                     model: ListModel {
                         id: crumbModel
-                        // Array of the category indexes
-                        property var indexes: []
+                        // Array of the models
+                        property var models: []
                     }
 
                     Breadcrumb {
@@ -158,15 +163,15 @@ Item {
         function moveLeft() {
             state = "";
             // newModelIndex set by clicked breadcrumb
-            var oldIndex = applicationsView.model.rootIndex;
-            applicationsView.model.rootIndex = applicationsView.newModelIndex;
-            applicationsView.positionViewAtIndex(applicationsView.model.model.rowForModelIndex(oldIndex), ListView.Center)
+            var oldModel = applicationsView.model;
+            applicationsView.model = applicationsView.newModel;
+            applicationsView.positionViewAtIndex(applicationsView.model.rowForModel(oldModel), ListView.Center)
         }
 
         ListView {
             id: applicationsView
 
-            property variant newModelIndex
+            property variant newModel
 
             focus: true
             keyNavigationWraps: true
@@ -175,46 +180,36 @@ Item {
             highlightMoveDuration : 0
             highlightResizeDuration: 0
 
-            model: VisualDataModel {
-                id: vmodel
+            model: rootModel
 
-                delegate: KickoffItem {
-                    id: kickoffItem
+            delegate: KickoffItem {
+                id: kickoffItem
 
-                    appView: true
+                appView: true
 
-                    PlasmaCore.SvgItem {
-                        anchors {
-                            right: parent.right
-                            verticalCenter: parent.verticalCenter
-                            rightMargin: y
-                        }
-                        height: units.iconSizes.small
-                        width: height
-
-                        svg: arrowSvg
-                        elementId: "go-next"
-                        visible: hasModelChildren
+                PlasmaCore.SvgItem {
+                    anchors {
+                        right: parent.right
+                        verticalCenter: parent.verticalCenter
+                        rightMargin: y
                     }
-                }
+                    height: units.iconSizes.small
+                    width: height
 
-                model: Kickoff.ApplicationModel {
-                    sortAppsByName: plasmoid.configuration.showAppsByName
-                    onModelReset: {
-                        updatedLabelTimer.running = true;
-                        applicationsView.clearBreadcrumbs();
-                    }
+                    svg: arrowSvg
+                    elementId: "go-next"
+                    visible: model.hasChildren
                 }
-            } // VisualDataModel
+            }
 
-            function addBreadcrumb(categoryIndex, title) {
+            function addBreadcrumb(model, title) {
                 crumbModel.append({"text": title, "depth": crumbModel.count+1})
-                crumbModel.indexes.push(categoryIndex);
+                crumbModel.models.push(model);
             }
 
             function clearBreadcrumbs() {
                 crumbModel.clear();
-                crumbModel.indexes = [];
+                crumbModel.models = [];
             }
 
             PlasmaCore.Svg {
@@ -302,6 +297,10 @@ Item {
         anchors.centerIn: parent
 
         Behavior on opacity { NumberAnimation { duration: units.shortDuration } }
+    }
+
+    Component.onCompleted: {
+        rootModel.cleared.connect(refreshed);
     }
 
 } // appViewContainer

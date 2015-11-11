@@ -2,6 +2,7 @@
     Copyright (C) 2011  Martin Gräßlin <mgraesslin@kde.org>
     Copyright (C) 2012  Gregor Taetzner <gregor@freenet.de>
     Copyright 2014 Sebastian Kügler <sebas@kde.org>
+    Copyright (C) 2015  Eike Hein <hein@kde.org>
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -22,6 +23,8 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.draganddrop 2.0
 
+import "../code/tools.js" as Tools
+
 Item {
     id: listItem
 
@@ -29,40 +32,59 @@ Item {
 //     height: listItemDelegate.height // + listItemDelegate.anchors.margins*2
     height: (units.smallSpacing * 2) + Math.max(elementIcon.height, titleElement.height + subTitleElement.height)
 
+    signal actionTriggered(string actionId, variant actionArgument)
+    signal aboutToShowActionMenu(variant actionMenu)
+
     property bool dropEnabled: false
-    property bool modelChildren: hasModelChildren
     property bool appView: false
+    property bool modelChildren: model.hasChildren
     property bool isCurrent: listItem.ListView.view.currentIndex === index;
-    property string url: model["url"]
+    property string url: model.url
     property bool showAppsByName: plasmoid.configuration.showAppsByName
+
+    property bool hasActionList: ((model.favoriteId != null)
+        || (("hasActionList" in model) && (model.hasActionList == true)))
+    property Item menu: actionMenu
+
+    onAboutToShowActionMenu: {
+        var actionList = hasActionList ? model.actionList : [];
+        Tools.fillActionMenu(actionMenu, actionList, ListView.view.model.favoritesModel, model.favoriteId);
+    }
+
+    onActionTriggered: {
+        Tools.triggerAction(ListView.view.model, model.index, actionId, actionArgument);
+    }
 
     function activate() {
         var view = listItem.ListView.view;
 
-        if (hasModelChildren) {
-            view.addBreadcrumb(view.model.modelIndex(index), display);
-            view.model.rootIndex = view.model.modelIndex(index);
+        if (model.hasChildren) {
+            var childModel = view.model.modelForRow(index);
+
+            view.addBreadcrumb(childModel, display);
+            view.model = childModel;
         } else {
-            if (view.model.hasOwnProperty("modelIndex")) { // only VisualDataModel has that
-                launcher.openItem(view.model.modelIndex(index));
-            } else {
-                launcher.openUrl(url);
-            }
+            view.model.trigger(index, "", null);
             plasmoid.expanded = false;
 
-            if (view.model.hasOwnProperty("rootIndex")) { // only VisualDataModel has that
-                view.model.rootIndex = 0;
-            }
-            if (view.clearBreadCrumbs) {
-                view.clearBreadCrumbs();
+            if (view.reset) {
+                view.reset();
             }
         }
     }
 
-    function openContextMenu() {
-        print("Opening context menu for " + model["url"]);
-        contextMenu.visualParent = mouseArea;
-        contextMenu.openAt(display, model, listItem.width / 4, listItem.height/2);
+    function openActionMenu(visualParent, x, y) {
+        aboutToShowActionMenu(actionMenu);
+        actionMenu.visualParent = visualParent != undefined ? visualParent : mouseArea;
+        actionMenu.open(x, y);
+    }
+
+    ActionMenu {
+        id: actionMenu
+
+        onActionClicked: {
+            actionTriggered(actionId, actionArgument);
+        }
     }
 
     Item {
@@ -76,51 +98,69 @@ Item {
             //margins: units.smallSpacing
         }
 
-        DragArea {
-            anchors.fill: parent
-            supportedActions: Qt.MoveAction | Qt.LinkAction
-            delegateImage: decoration
+        MouseArea {
+            id: mouseArea
 
-            mimeData {
-                url: model["mimedata"] ? model["mimedata"] : model["url"]
-                source: parent
-                text: index
+            anchors.fill: parent
+            //anchors.margins: -8
+
+            property bool pressed: false
+            property int pressX: -1
+            property int pressY: -1
+
+            hoverEnabled: true
+            acceptedButtons: Qt.LeftButton | Qt.RightButton
+
+            onEntered: {
+                listItem.ListView.view.currentIndex = index;
             }
 
-            MouseArea {
-                id: mouseArea
+            onExited: {
+                listItem.ListView.view.currentIndex = -1;
+            }
 
-                anchors.fill: parent
-                //anchors.margins: -8
-
-                hoverEnabled: true
-                acceptedButtons: Qt.LeftButton | Qt.RightButton
-
-                onEntered: {
-                    listItem.ListView.view.currentIndex = index;
+            onPressed: {
+                if (mouse.buttons & Qt.RightButton) {
+                    if (hasActionList) {
+                        openActionMenu(mouseArea, mouse.x, mouse.y);
+                    }
+                } else {
+                    pressed = true;
+                    pressX = mouse.x;
+                    pressY = mouse.y;
                 }
+            }
 
-                onExited: {
+            onReleased: {
+                if (pressed) {
+                    if (appView) {
+                        appViewScrollArea.state = "OutgoingLeft";
+                    } else {
+                        listItem.activate();
+                    }
+
                     listItem.ListView.view.currentIndex = -1;
                 }
 
-                onClicked: {
-                    if (mouse.button == Qt.LeftButton) {
-                        if (appView) {
-                            appViewScrollArea.state = "OutgoingLeft";
-                        } else {
-                            listItem.activate();
-                        }
-                        listItem.ListView.view.currentIndex = -1;
-                    } else if (mouse.button == Qt.RightButton) {
-                        // don't show a context menu for container
-                        if (hasModelChildren || typeof(contextMenu) === "undefined") {
-                            return;
-                        }
+                pressed = false;
+                pressX = -1;
+                pressY = -1;
+            }
 
-                        contextMenu.visualParent = mouseArea
-                        contextMenu.openAt(titleElement.text, model, mouse.x, mouse.y);
-                    }
+            onPositionChanged: {
+                if (pressX != -1 && model.url && dragHelper.isDrag(pressX, pressY, mouse.x, mouse.y)) {
+                    dragHelper.startDrag(root, model.url);
+                    pressed = false;
+                    pressX = -1;
+                    pressY = -1;
+                }
+            }
+
+            onContainsMouseChanged: {
+                if (!containsMouse) {
+                    pressed = false;
+                    pressX = -1;
+                    pressY = -1;
                 }
             }
         }
@@ -151,14 +191,7 @@ Item {
             }
             height: paintedHeight
             // TODO: games should always show the by name!
-            text: {
-                if (hasModelChildren) {
-                    return display;
-                } else {
-                    showAppsByName || display.length == 0 ? (subtitle == undefined ? display : subtitle) :
-                                                                    display
-                }
-            }
+            text: model.display
             elide: Text.ElideRight
         }
         PlasmaComponents.Label {
@@ -172,16 +205,22 @@ Item {
             }
             height: paintedHeight
 
-            text: {
-                if (hasModelChildren) {
-                    return subtitle;
-                } else {
-                    showAppsByName || subtitle == undefined ? (display.length != 0 ? display : subtitle) : subtitle;
-                }
-            }
+            text: model.description
             opacity: isCurrent ? 0.6 : 0.3
             font.pointSize: theme.smallestFont.pointSize
             elide: Text.ElideMiddle
         }
     } // listItemDelegate
+
+    Keys.onPressed: {
+        if (event.key == Qt.Key_Menu && hasActionList) {
+            event.accepted = true;
+            openActionMenu(mouseArea);
+        } else if ((event.key == Qt.Key_Enter || event.key == Qt.Key_Return) && !modelChildren) {
+            if (!modelChildren) {
+                event.accepted = true;
+                listItem.activate();
+            }
+        }
+    }
 } // listItem

@@ -25,7 +25,6 @@ import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
-import org.kde.plasma.private.kickoff 0.1 as Kickoff
 import org.kde.kquickcontrolsaddons 2.0
 
 Item {
@@ -35,7 +34,6 @@ Item {
 
     property string previousState
     property bool switchTabsOnHover: plasmoid.configuration.switchTabsOnHover
-    property bool showAppsByName: plasmoid.configuration.showAppsByName
     property Item currentView: mainTabGroup.currentTab.decrementCurrentIndex ? mainTabGroup.currentTab : mainTabGroup.currentTab.item
 
     property int pad: units.gridUnit
@@ -53,19 +51,9 @@ Item {
     }
 
     PlasmaCore.DataSource {
-        id: packagekitSource
-        engine: "packagekit"
-        connectedSources: ["Status"]
-    }
-
-    PlasmaCore.DataSource {
         id: pmSource
         engine: "powermanagement"
         connectedSources: ["PowerDevil"]
-    }
-
-    Kickoff.Launcher {
-        id: launcher
     }
 
     PlasmaCore.Svg {
@@ -111,7 +99,7 @@ Item {
             PlasmaExtras.ConditionalLoader {
                 id: systemPage
                 when: mainTabGroup.currentTab == systemPage
-                source: Qt.resolvedUrl("SystemView.qml")
+                source: Qt.resolvedUrl("ComputerView.qml")
             }
             PlasmaExtras.ConditionalLoader {
                 id: recentlyUsedPage
@@ -291,10 +279,6 @@ Item {
                 }
             ]
         } // mainTabGroup
-    }
-
-    Kickoff.FavoritesModel {
-        id: favoritesModel
     }
 
     PlasmaComponents.TabBar {

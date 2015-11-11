@@ -2,6 +2,7 @@
     Copyright (C) 2011  Martin Gräßlin <mgraesslin@kde.org>
     Copyright (C) 2012 Marco Martin <mart@kde.org>
     Copyright 2014 Sebastian Kügler <sebas@kde.org>
+    Copyright (C) 2015  Eike Hein <hein@kde.org>
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -25,8 +26,7 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.draganddrop 2.0
 
-import org.kde.plasma.private.kickoff 0.1 as Kickoff
-
+import org.kde.plasma.private.kicker 0.1 as Kicker
 
 Item {
     anchors.fill: parent
@@ -48,37 +48,7 @@ Item {
     }
 
     function openContextMenu() {
-        listView.currentItem.openContextMenu();
-    }
-
-    ContextMenu {
-        id: contextMenu
-
-        PlasmaComponents.MenuItem {
-            id: actionsSeparator
-
-            separator: true
-        }
-        PlasmaComponents.MenuItem {
-            id: sortFavoritesAscending
-
-            text: i18n("Sort Alphabetically (A to Z)")
-            icon: "view-sort-ascending"
-
-            onClicked: {
-                favoritesModel.sortFavoritesAscending();
-            }
-        }
-        PlasmaComponents.MenuItem {
-            id: sortFavoritesDescending
-
-            text: i18n("Sort Alphabetically (Z to A)")
-            icon: "view-sort-descending"
-
-            onClicked: {
-                favoritesModel.sortFavoritesDescending();
-            }
-        }
+        kickoffListView.currentItem.openActionMenu();
     }
 
     DropArea {
@@ -135,7 +105,7 @@ Item {
 
             targetRow = Math.min(kickoffListView.count, targetRow);
 
-            kickoffListView.model.move(startRow,  targetRow);
+            kickoffListView.model.moveRow(startRow,  targetRow);
 
             dropTarget.visible = false;
         }
@@ -182,7 +152,7 @@ Item {
             highlightMoveDuration : 0
             highlightResizeDuration: 0
 
-            model: favoritesModel
+            model: globalFavorites
 
             section {
                 property: "group"

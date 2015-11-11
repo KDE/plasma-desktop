@@ -12,12 +12,18 @@
     <entry name="showAppsByName" type="Bool">
       <default>false</default>
     </entry>
-    <entry name="showRecentlyInstalled" type="Bool">
-      <default>false</default>
-    </entry>
     <entry name="icon" type="String">
       <default>start-here-kde</default>
     </entry>
-  </group>
+    <entry name="favorites" type="StringList">
+      <default>preferred://browser,kontact.desktop,systemsettings.desktop,org.kde.dolphin.desktop,ktp-contactlist.desktop,org.kde.kate.desktop,org.kde.discover</default>
+    </entry>
+    <entry name="systemApplications" type="StringList">
+      <default>systemsettings.desktop</default>
+    </entry>
+    <entry name="runners" type="StringList">
+      <default>services,places,shell,bookmarks,recentdocuments,locations,baloosearch</default>
+    </entry>
+    </group>
 
 </kcfg>

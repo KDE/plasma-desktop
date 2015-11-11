@@ -1,6 +1,7 @@
 /*
     Copyright (C) 2011  Martin Gräßlin <mgraesslin@kde.org>
     Copyright (C) 2012  Gregor Taetzner <gregor@freenet.de>
+    Copyright (C) 2015  Eike Hein <hein@kde.org>
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -20,7 +21,7 @@ import QtQuick 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.components 2.0 as PlasmaComponents
-import org.kde.plasma.private.kickoff 0.1 as Kickoff
+
 Item {
     id: searchViewContainer
 
@@ -41,7 +42,7 @@ Item {
     }
 
     function openContextMenu() {
-        searchView.currentItem.openContextMenu();
+        searchView.currentItem.openActionMenu();
     }
 
     PlasmaExtras.ScrollArea {
@@ -59,25 +60,29 @@ Item {
             highlight: KickoffHighlight {}
             highlightMoveDuration : 0
             highlightResizeDuration: 0
-            model: Kickoff.KRunnerModel{}
 
             Connections {
                 target: header
 
                 onQueryChanged: {
-                    searchView.model.setQuery(header.query)
-                    searchView.currentIndex = 0
+                    runnerModel.query = header.query;
+
+                    if (!header.query) {
+                        searchView.model = null;
+                    }
+                }
+            }
+
+            Connections {
+                target: runnerModel
+
+                onCountChanged: {
+                    if (runnerModel.count && !searchView.model) {
+                        searchView.model = runnerModel.modelForRow(0);
+                        searchView.currentIndex = 0;
+                    }
                 }
             }
         } // searchView
     } // ScrollArea
-    Keys.onPressed: {
-        if (event.key == Qt.Key_Menu) {
-            print( "Context Menu triggered by key...");
-            contextMenu.open();
-        }
-    }
-    ContextMenu {
-        id: contextMenu
-    }
 }

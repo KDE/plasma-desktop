@@ -33,7 +33,6 @@ Item {
     property string cfg_icon: plasmoid.configuration.icon
     property alias cfg_switchTabsOnHover: switchTabsOnHoverCheckbox.checked
     property alias cfg_showAppsByName: showApplicationsByNameCheckbox.checked
-    property alias cfg_showRecentlyInstalled: showRecentlyInstalledCheckbox.checked
 
     KQuickAddons.IconDialog {
         id: iconDialog
@@ -101,11 +100,6 @@ Item {
         QtControls.CheckBox {
             id: showApplicationsByNameCheckbox
             text: i18n("Show applications by name")
-        }
-
-        QtControls.CheckBox {
-            id: showRecentlyInstalledCheckbox
-            text: i18n("Show 'Recently Installed'")
         }
     }
 }
