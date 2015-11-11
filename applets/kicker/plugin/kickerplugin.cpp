@@ -23,6 +23,7 @@
 #include "fullscreenwindow.h"
 #include "funnelmodel.h"
 #include "processrunner.h"
+#include "recentusagemodel.h"
 #include "rootmodel.h"
 #include "runnermodel.h"
 #include "submenu.h"
@@ -43,6 +44,7 @@ void KickerPlugin::registerTypes(const char *uri)
     qmlRegisterType<FullScreenWindow>(uri, 0, 1, "FullScreenWindow");
     qmlRegisterType<FunnelModel>(uri, 0, 1, "FunnelModel");
     qmlRegisterType<ProcessRunner>(uri, 0, 1, "ProcessRunner");
+    qmlRegisterType<RecentUsageModel>(uri, 0, 1, "RecentUsageModel");
     qmlRegisterType<RootModel>(uri, 0, 1, "RootModel");
     qmlRegisterType<RunnerModel>(uri, 0, 1, "RunnerModel");
     qmlRegisterType<SubMenu>(uri, 0, 1, "SubMenu");

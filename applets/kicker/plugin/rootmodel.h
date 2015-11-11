@@ -23,9 +23,8 @@
 #include "appsmodel.h"
 
 class FavoritesModel;
-class RecentAppsModel;
-class RecentDocsModel;
 class RecentContactsModel;
+class RecentUsageModel;
 class SystemModel;
 
 class RootModel;
@@ -111,8 +110,8 @@ class RootModel : public AppsModel
         bool m_showRecentDocs;
         bool m_showRecentContacts;
 
-        RecentAppsModel *m_recentAppsModel;
-        RecentDocsModel *m_recentDocsModel;
+        RecentUsageModel *m_recentAppsModel;
+        RecentUsageModel *m_recentDocsModel;
         RecentContactsModel *m_recentContactsModel;
 
         QObject *m_appletInterface;

@@ -20,9 +20,8 @@
 #include "rootmodel.h"
 #include "actionlist.h"
 #include "favoritesmodel.h"
-#include "recentappsmodel.h"
-#include "recentdocsmodel.h"
 #include "recentcontactsmodel.h"
+#include "recentusagemodel.h"
 #include "systemmodel.h"
 
 #include <KLocalizedString>
@@ -297,12 +296,12 @@ void RootModel::refresh()
     }
 
     if (m_showRecentDocs) {
-        m_recentDocsModel = new RecentDocsModel(this);
+        m_recentDocsModel = new RecentUsageModel(this, RecentUsageModel::OnlyDocs);
         m_entryList.prepend(new GroupEntry(this, i18n("Recent Documents"), QString(), m_recentDocsModel));
     }
 
     if (m_showRecentApps) {
-        m_recentAppsModel = new RecentAppsModel(this);
+        m_recentAppsModel = new RecentUsageModel(this, RecentUsageModel::OnlyApps);
         m_entryList.prepend(new GroupEntry(this, i18n("Recent Applications"), QString(), m_recentAppsModel));
     }
 

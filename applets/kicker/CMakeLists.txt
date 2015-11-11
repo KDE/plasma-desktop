@@ -34,9 +34,8 @@ set(kickerplugin_SRCS
     plugin/rootmodel.cpp
     plugin/runnermodel.cpp
     plugin/runnermatchesmodel.cpp
-    plugin/recentappsmodel.cpp
     plugin/recentcontactsmodel.cpp
-    plugin/recentdocsmodel.cpp
+    plugin/recentusagemodel.cpp
     plugin/submenu.cpp
     plugin/systementry.cpp
     plugin/systemmodel.cpp

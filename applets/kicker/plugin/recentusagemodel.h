@@ -17,18 +17,32 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#ifndef RECENTAPPSMODEL_H
-#define RECENTAPPSMODEL_H
+#ifndef RECENTUSAGEMODEL_H
+#define RECENTUSAGEMODEL_H
 
 #include "forwardingmodel.h"
 
-class RecentAppsModel : public ForwardingModel
+#include <QSortFilterProxyModel>
+
+class GroupSortProxy : public QSortFilterProxyModel
+{
+    public:
+        explicit GroupSortProxy(QAbstractItemModel *sourceModel);
+        ~GroupSortProxy();
+
+    protected:
+        bool lessThan(const QModelIndex &left, const QModelIndex &right) const;
+};
+
+class RecentUsageModel : public ForwardingModel
 {
     Q_OBJECT
 
     public:
-        explicit RecentAppsModel(QObject *parent = 0);
-        ~RecentAppsModel();
+        enum IncludeUsage { AppsAndDocs, OnlyApps, OnlyDocs };
+
+        explicit RecentUsageModel(QObject *parent = 0, IncludeUsage usage = AppsAndDocs);
+        ~RecentUsageModel();
 
         QString description() const;
 
@@ -41,6 +55,16 @@ class RecentAppsModel : public ForwardingModel
 
     private Q_SLOTS:
         void refresh();
+
+    private:
+        QVariant appData(const QString &resource, int role) const;
+        QVariant docData(const QString &resource, int role) const;
+
+        QString resourceAt(int row) const;
+
+        QString forgetAllActionName() const;
+
+        IncludeUsage m_usage;
 };
 
 #endif
