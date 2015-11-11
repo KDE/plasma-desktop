@@ -196,6 +196,40 @@ QString SystemEntry::name() const
     return QString();
 }
 
+QString SystemEntry::description() const
+{
+    switch (m_action) {
+        case LockSession:
+            return i18n("Lock screen");
+            break;
+        case LogoutSession:
+            return i18n("End session");
+            break;
+        case SaveSession:
+            return i18n("Save Session");
+            break;
+        case NewSession:
+            return i18n("Start a parallel session as a different user");
+            break;
+        case SuspendToRam:
+            return i18n("Suspend to RAM");
+            break;
+        case SuspendToDisk:
+            return i18n("Suspend to disk");
+            break;
+        case Reboot:
+            return i18n("Restart computer");
+            break;
+        case Shutdown:
+            return i18n("Turn off computer");
+            break;
+        default:
+            break;
+    }
+
+    return QString();
+}
+
 QString SystemEntry::id() const
 {
     switch (m_action) {

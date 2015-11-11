@@ -28,7 +28,8 @@ namespace Kicker
 {
 
 enum {
-    FavoriteIdRole = Qt::UserRole + 1,
+    DescriptionRole = Qt::UserRole + 1,
+    FavoriteIdRole,
     IsSeparatorRole,
     IsDropPlaceholderRole,
     IsParentRole,

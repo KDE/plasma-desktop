@@ -50,6 +50,7 @@ class SystemEntry : public AbstractEntry
         QIcon icon() const;
         QString iconName() const;
         QString name() const;
+        QString description() const;
 
         QString id() const;
 

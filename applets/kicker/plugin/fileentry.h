@@ -35,6 +35,7 @@ class FileEntry : public AbstractEntry
 
         QIcon icon() const;
         QString name() const;
+        QString description() const;
 
         QString id() const;
         QUrl url() const;

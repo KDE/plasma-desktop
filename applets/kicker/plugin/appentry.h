@@ -49,6 +49,7 @@ class AppEntry : public AbstractEntry
 
         QIcon icon() const;
         QString name() const;
+        QString description() const;
         KService::Ptr service() const;
 
         QString id() const;

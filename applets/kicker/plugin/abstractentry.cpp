@@ -48,6 +48,11 @@ QString AbstractEntry::name() const
     return QString();
 }
 
+QString AbstractEntry::description() const
+{
+    return QString();
+}
+
 QString AbstractEntry::id() const
 {
     return QString();

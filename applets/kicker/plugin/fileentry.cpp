@@ -55,6 +55,15 @@ QString FileEntry::name() const
     return QString();
 }
 
+QString FileEntry::description() const
+{
+    if (m_fileItem) {
+        return m_fileItem->url().toString();
+    }
+
+    return QString();
+}
+
 QString FileEntry::id() const
 {
     if (m_fileItem) {

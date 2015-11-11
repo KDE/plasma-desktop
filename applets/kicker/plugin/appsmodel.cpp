@@ -111,6 +111,8 @@ QVariant AppsModel::data(const QModelIndex &index, int role) const
         return entry->name();
     } else if (role == Qt::DecorationRole) {
         return entry->icon();
+    } else if (role == Kicker::DescriptionRole) {
+        return entry->description();
     } else if (role == Kicker::FavoriteIdRole && entry->type() == AbstractEntry::RunnableType) {
         return entry->id();
     } else if (role == Kicker::UrlRole && entry->type() == AbstractEntry::RunnableType) {

@@ -34,6 +34,7 @@ QHash<int, QByteArray> AbstractModel::roleNames() const
     QHash<int, QByteArray> roles;
     roles.insert(Qt::DisplayRole, "display");
     roles.insert(Qt::DecorationRole, "decoration");
+    roles.insert(Kicker::DescriptionRole, "description");
     roles.insert(Kicker::FavoriteIdRole, "favoriteId");
     roles.insert(Kicker::IsParentRole, "isParent");
     roles.insert(Kicker::IsSeparatorRole, "isSeparator");

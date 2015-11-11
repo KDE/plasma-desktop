@@ -54,6 +54,8 @@ QVariant RunnerMatchesModel::data(const QModelIndex &index, int role) const
         return match.text();
     } else if (role == Qt::DecorationRole) {
         return match.icon();
+    } else if (role == Kicker::DescriptionRole) {
+        return match.subtext();
     } else if (role == Kicker::FavoriteIdRole) {
         if (m_runnerId == "services") {
             return match.data().toString();

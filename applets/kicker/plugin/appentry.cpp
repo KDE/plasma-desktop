@@ -107,6 +107,11 @@ QString AppEntry::name() const
     return m_name;
 }
 
+QString AppEntry::description() const
+{
+    return m_service->comment();
+}
+
 KService::Ptr AppEntry::service() const
 {
     return m_service;
