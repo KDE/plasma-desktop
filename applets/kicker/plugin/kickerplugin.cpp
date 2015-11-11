@@ -26,6 +26,7 @@
 #include "rootmodel.h"
 #include "runnermodel.h"
 #include "submenu.h"
+#include "systemmodel.h"
 #include "systemsettings.h"
 #include "wheelinterceptor.h"
 #include "windowsystem.h"
@@ -45,6 +46,7 @@ void KickerPlugin::registerTypes(const char *uri)
     qmlRegisterType<RootModel>(uri, 0, 1, "RootModel");
     qmlRegisterType<RunnerModel>(uri, 0, 1, "RunnerModel");
     qmlRegisterType<SubMenu>(uri, 0, 1, "SubMenu");
+    qmlRegisterType<SystemModel>(uri, 0, 1, "SystemModel");
     qmlRegisterType<SystemSettings>(uri, 0, 1, "SystemSettings");
     qmlRegisterType<WheelInterceptor>(uri, 0, 1, "WheelInterceptor");
     qmlRegisterType<WindowSystem>(uri, 0, 1, "WindowSystem");
