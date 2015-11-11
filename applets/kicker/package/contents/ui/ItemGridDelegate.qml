@@ -75,7 +75,11 @@ MouseArea {
     }
 
     onActionTriggered: {
-        Tools.triggerAction(GridView.view.model, model.index, actionId, actionArgument);
+        var close = Tools.triggerAction(GridView.view.model, model.index, actionId, actionArgument);
+
+        if (close) {
+            root.toggle();
+        }
     }
 
     function openActionMenu(visualParent, x, y) {

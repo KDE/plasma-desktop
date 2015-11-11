@@ -74,7 +74,11 @@ function triggerAction(model, index, actionId, actionArgument) {
 
     if (closeRequested) {
         plasmoid.expanded = false;
+
+        return true;
     }
+
+    return false;
 }
 
 function handleFavoriteAction(actionId, actionArgument) {
