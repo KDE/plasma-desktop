@@ -42,6 +42,7 @@ class AbstractEntry
 
         virtual QIcon icon() const;
         virtual QString name() const;
+        virtual QString group() const;
         virtual QString description() const;
 
         virtual QString id() const;

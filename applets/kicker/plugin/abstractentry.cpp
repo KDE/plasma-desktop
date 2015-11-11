@@ -48,6 +48,12 @@ QString AbstractEntry::name() const
     return QString();
 }
 
+
+QString AbstractEntry::group() const
+{
+    return QString();
+}
+
 QString AbstractEntry::description() const
 {
     return QString();

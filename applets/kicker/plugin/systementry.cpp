@@ -196,6 +196,40 @@ QString SystemEntry::name() const
     return QString();
 }
 
+QString SystemEntry::group() const
+{
+    switch (m_action) {
+        case LockSession:
+            return i18n("Session");
+            break;
+        case LogoutSession:
+            return i18n("Session");
+            break;
+        case SaveSession:
+            return i18n("Session");
+            break;
+        case NewSession:
+            return i18n("Session");
+            break;
+        case SuspendToRam:
+            return i18n("System");
+            break;
+        case SuspendToDisk:
+            return i18n("System");
+            break;
+        case Reboot:
+            return i18n("System");
+            break;
+        case Shutdown:
+            return i18n("System");
+            break;
+        default:
+            break;
+    }
+
+    return QString();
+}
+
 QString SystemEntry::description() const
 {
     switch (m_action) {
