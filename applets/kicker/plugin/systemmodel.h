@@ -40,8 +40,6 @@ class SystemModel : public AbstractModel
 
         Q_INVOKABLE bool trigger(int row, const QString &actionId, const QVariant &argument);
 
-        AbstractModel* favoritesModel();
-
     protected Q_SLOTS:
         virtual void refresh();
 
@@ -49,7 +47,6 @@ class SystemModel : public AbstractModel
         void init();
 
         QList<SystemEntry *> m_entryList;
-        AbstractModel *m_favoritesModel;
 };
 
 #endif

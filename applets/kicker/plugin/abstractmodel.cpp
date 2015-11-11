@@ -21,6 +21,7 @@
 #include "actionlist.h"
 
 AbstractModel::AbstractModel(QObject *parent) : QAbstractListModel(parent)
+, m_favoritesModel(nullptr)
 , m_iconSize(32)
 {
 }
@@ -113,7 +114,26 @@ QVariantList AbstractModel::actions() const
 
 AbstractModel* AbstractModel::favoritesModel()
 {
-    return rootModel()->favoritesModel();
+    if (m_favoritesModel) {
+        return m_favoritesModel;
+    } else {
+        AbstractModel *model = rootModel();
+
+        if (model) {
+            return model->favoritesModel();
+        }
+    }
+
+    return nullptr;
+}
+
+void AbstractModel::setFavoritesModel(AbstractModel *model)
+{
+    if (m_favoritesModel != model) {
+        m_favoritesModel = model;
+
+        emit favoritesModelChanged();
+    }
 }
 
 AbstractModel* AbstractModel::rootModel()

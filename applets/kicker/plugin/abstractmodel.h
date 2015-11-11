@@ -33,7 +33,7 @@ class AbstractModel : public QAbstractListModel
     Q_PROPERTY(int count READ count NOTIFY countChanged)
     Q_PROPERTY(int separatorCount READ separatorCount NOTIFY separatorCountChanged)
     Q_PROPERTY(int iconSize READ iconSize WRITE setIconSize NOTIFY iconSizeChanged)
-    Q_PROPERTY(QObject* favoritesModel READ favoritesModel CONSTANT)
+    Q_PROPERTY(AbstractModel* favoritesModel READ favoritesModel WRITE setFavoritesModel NOTIFY favoritesModelChanged)
 
     public:
         explicit AbstractModel(QObject *parent = 0);
@@ -64,6 +64,7 @@ class AbstractModel : public QAbstractListModel
         virtual QVariantList actions() const;
 
         virtual AbstractModel* favoritesModel();
+        virtual void setFavoritesModel(AbstractModel *model);
         AbstractModel* rootModel();
 
         virtual void entryChanged(AbstractEntry *entry);
@@ -73,6 +74,10 @@ class AbstractModel : public QAbstractListModel
         void countChanged() const;
         void separatorCountChanged() const;
         void iconSizeChanged() const;
+        void favoritesModelChanged() const;
+
+    protected:
+        AbstractModel *m_favoritesModel;
 
     private:
         int m_iconSize;

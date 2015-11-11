@@ -28,9 +28,10 @@
 #include <KLocalizedString>
 
 SystemModel::SystemModel(QObject *parent) : AbstractModel(parent)
-, m_favoritesModel(new FavoritesModel(this))
 {
     init();
+
+    m_favoritesModel = new FavoritesModel(this);
 
     const QString configFile = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + "/ksmserverrc";
 
@@ -112,11 +113,6 @@ bool SystemModel::trigger(int row, const QString &actionId, const QVariant &argu
     }
 
     return false;
-}
-
-AbstractModel* SystemModel::favoritesModel()
-{
-    return m_favoritesModel;
 }
 
 void SystemModel::refresh()
