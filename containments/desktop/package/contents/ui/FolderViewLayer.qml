@@ -248,6 +248,8 @@ Item {
             }
 
             PlasmaComponents.Label {
+                id: text
+
                 width: parent.width - (windowPin != null ? windowPin.width - units.smallSpacing : 0)
                 height: parent.height
 
@@ -263,6 +265,18 @@ Item {
                     rtl: (Qt.application.layoutDirection == Qt.RightToLeft)
                     labelMode: plasmoid.configuration.labelMode
                     labelText: plasmoid.configuration.labelText
+                }
+            }
+
+            MouseArea {
+                anchors.fill: text
+
+                onClicked: {
+                    var action = plasmoid.action("run associated application");
+
+                    if (action) {
+                        action.trigger();
+                    }
                 }
             }
 
