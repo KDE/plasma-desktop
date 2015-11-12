@@ -69,7 +69,7 @@ bool GroupSortProxy::lessThan(const QModelIndex &left, const QModelIndex &right)
         return false;
     }
 
-    return (mapToSource(left).row() < mapToSource(right).row());
+    return (left.row() < right.row());
 }
 
 RecentUsageModel::RecentUsageModel(QObject *parent, IncludeUsage usage) : ForwardingModel(parent)

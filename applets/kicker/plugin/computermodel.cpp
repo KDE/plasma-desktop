@@ -78,7 +78,7 @@ bool FilteredPlacesModel::lessThan(const QModelIndex &left, const QModelIndex &r
         return true;
     }
 
-    return (mapToSource(left).row() < mapToSource(right).row());
+    return (left.row() < right.row());
 }
 
 RunCommandModel::RunCommandModel(QObject *parent) : AbstractModel(parent)
