@@ -43,6 +43,8 @@ PlasmaExtras.ScrollArea {
     property alias model: repeater.model
     property alias count: repeater.count
 
+    flickableItem.flickableDirection: Flickable.VerticalFlick
+
     onFocusChanged: {
         if (!focus) {
             for (var i = 0; i < repeater.count; i++) {
