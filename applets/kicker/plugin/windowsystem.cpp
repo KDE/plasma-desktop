@@ -35,10 +35,7 @@ WindowSystem::~WindowSystem()
 bool WindowSystem::eventFilter(QObject* watched, QEvent* event)
 {
     if (event->type() == QEvent::FocusOut) {
-        QMetaObject::invokeMethod(this,
-            "focusOut",
-            Qt::QueuedConnection,
-            Q_ARG(QQuickWindow*, qobject_cast<QQuickWindow *>(watched)));
+        emit focusOut(qobject_cast<QQuickWindow *>(watched));
     }
 
     return false;
