@@ -145,7 +145,7 @@ Item {
         }
 
         onExternalData: {
-            folderView.url = data
+            plasmoid.configuration.url = data
         }
     }
 
