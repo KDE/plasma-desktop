@@ -104,6 +104,7 @@ Item {
             }
 
             targetRow = Math.min(kickoffListView.count, targetRow);
+            targetRow = Math.max(0, targetRow);
 
             kickoffListView.model.moveRow(startRow,  targetRow);
 
