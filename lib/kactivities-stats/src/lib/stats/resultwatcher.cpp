@@ -36,7 +36,6 @@
 #include <functional>
 #include <mutex>
 #include <limits>
-#include <boost/optional.hpp>
 
 // KActivities
 #include <kactivities/consumer.h>

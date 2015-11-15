@@ -11,7 +11,9 @@
 #include <QFuture>
 #include <QFutureWatcher>
 #include <QDebug>
-#include <boost/optional.hpp>
+
+#include "utils/optional_view.h"
+// #include <boost/optional.hpp>
 
 #ifdef ENABLE_QJSVALUE_CONTINUATION
 #include <QJSValue>
@@ -59,9 +61,10 @@ namespace detail { //_
     inline void pass_value(const QFuture<_ReturnType> &future,
                            _Continuation &&continuation)
     {
+        using namespace kamd::utils;
         continuation(future.resultCount() > 0
-                         ? boost::make_optional(future.result())
-                         : boost::none);
+                         ? make_optional_view(future.result())
+                         : none());
     }
 
     template <typename _Continuation>

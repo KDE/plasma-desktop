@@ -130,10 +130,6 @@ namespace member_matcher {
             {
                 return first(item, value) ||
                        (!first(value, item) && second(item, value));
-                //  (bool)(std::get<0>(lhs) < std::get<0>(rhs)) ||
-                //      (!(bool)(std::get<0>(rhs) < std::get<0>(lhs))
-                //       && lhstail < rhstail)
-                // return first(item, value) || second(item, value);
             }
 
             First first;

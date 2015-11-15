@@ -157,6 +157,17 @@ fromValue(const _Result & value)
     return valueFutureInterface->start();
 }
 
+template <typename _Result>
+QFuture<_Result>
+fromReply(const QDBusPendingReply<_Result> &reply)
+{
+    using namespace detail;
+
+    auto callFutureInterface = new DBusCallFutureInterface<_Result>(reply);
+
+    return callFutureInterface->start();
+}
+
 QFuture<void> fromVoid();
 
 } // namespace DBusFuture

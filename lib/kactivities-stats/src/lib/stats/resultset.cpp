@@ -33,7 +33,6 @@
 #include <iterator>
 #include <functional>
 #include <mutex>
-#include <boost/optional.hpp>
 
 // KActivities
 #include "activitiessync_p.h"

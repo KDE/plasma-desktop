@@ -3,6 +3,7 @@
 project (KActivitiesStats)
 
 find_package (Qt5 REQUIRED NO_MODULE COMPONENTS Sql)
+find_package (KF5Config ${KF5_DEP_VERSION} CONFIG REQUIRED)
 
 set (
    KActivitiesStats_LIB_SRCS
@@ -66,6 +67,7 @@ target_link_libraries (
       Qt5::Sql
       KF5::Activities
       KF5::DBusAddons
+      KF5::ConfigCore
    )
 
 target_include_directories (
