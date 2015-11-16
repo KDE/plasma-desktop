@@ -198,7 +198,7 @@ FocusScope {
 
                     if (dragEnabled && pressX != -1 && dragHelper.isDrag(pressX, pressY, mouse.x, mouse.y)) {
                         kicker.dragSource = item;
-                        dragHelper.startDrag(kicker, item.url);
+                        dragHelper.startDrag(kicker, item.url, item.icon);
                         pressX = -1;
                         pressY = -1;
                     }

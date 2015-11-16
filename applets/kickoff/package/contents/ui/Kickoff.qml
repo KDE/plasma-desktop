@@ -86,6 +86,8 @@ Item {
 
     Kicker.DragHelper {
         id: dragHelper
+
+        dragIconSize: units.iconSizes.medium
     }
 
     Kicker.ProcessRunner {

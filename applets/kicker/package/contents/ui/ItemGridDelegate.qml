@@ -39,6 +39,7 @@ MouseArea {
     property int itemIndex: model.index
     property string favoriteId: model.favoriteId
     property url url: model.url != undefined ? model.url : ""
+    property variant icon: model.decoration != undefined ? model.decoration : ""
     property bool pressed: false
     property bool hasActionList: ((model.favoriteId != null)
         || (("hasActionList" in model) && (model.hasActionList == true)))

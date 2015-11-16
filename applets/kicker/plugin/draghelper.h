@@ -21,6 +21,7 @@
 #define DRAGHELPER_H
 
 #include <QObject>
+#include <QIcon>
 #include <QUrl>
 
 class QQuickItem;
@@ -28,19 +29,25 @@ class QQuickItem;
 class DragHelper : public QObject
 {
     Q_OBJECT
+    Q_PROPERTY(int dragIconSize READ dragIconSize WRITE setDragIconSize NOTIFY dragIconSizeChanged)
 
     public:
         DragHelper(QObject *parent = 0);
         ~DragHelper();
 
+        int dragIconSize() const;
+        void setDragIconSize(int size);
+
         Q_INVOKABLE bool isDrag(int oldX, int oldY, int newX, int newY) const;
-        Q_INVOKABLE void startDrag(QQuickItem* item, const QUrl &url = QUrl());
+        Q_INVOKABLE void startDrag(QQuickItem* item, const QUrl &url = QUrl(), const QIcon &icon = QIcon());
 
     Q_SIGNALS:
+        void dragIconSizeChanged() const;
         void dropped() const;
 
     private:
-        Q_INVOKABLE void doDrag(QQuickItem* item, const QUrl &url = QUrl()) const;
+        int m_dragIconSize;
+        Q_INVOKABLE void doDrag(QQuickItem* item, const QUrl &url = QUrl(), const QIcon &icon = QIcon()) const;
 };
 
 #endif
