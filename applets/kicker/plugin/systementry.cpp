@@ -52,7 +52,7 @@ SystemEntry::SystemEntry(AbstractModel *owner, const QString &id) : AbstractEntr
     } else if (id == QStringLiteral("save-session")) {
         m_action = SaveSession;
     } else if (id == QStringLiteral("switch-user")) {
-        m_action = NewSession;
+        m_action = SwitchUser;
     } else if (id == QStringLiteral("suspend")) {
         m_action = SuspendToRam;
     } else if (id == QStringLiteral("hibernate")) {
@@ -90,10 +90,9 @@ void SystemEntry::init()
 
             break;
         }
-        case NewSession:
-            m_valid = KAuthorized::authorizeKAction("start_new_session")
-                && m_displayManager->isSwitchable()
-                && m_displayManager->numReserve() >= 0;
+        case SwitchUser:
+            m_valid = (KAuthorized::authorizeKAction("start_new_session") || KAuthorized::authorizeKAction("switch_user"))
+                && m_displayManager->isSwitchable();
             break;
         case SuspendToRam:
             m_valid = Solid::PowerManagement::supportedSleepStates().contains(Solid::PowerManagement::SuspendState);
@@ -140,7 +139,7 @@ QString SystemEntry::iconName() const
         case SaveSession:
             return "system-save-session";
             break;
-        case NewSession:
+        case SwitchUser:
             return "system-switch-user";
             break;
         case SuspendToRam:
@@ -174,7 +173,7 @@ QString SystemEntry::name() const
         case SaveSession:
             return i18n("Save Session");
             break;
-        case NewSession:
+        case SwitchUser:
             return i18n("New Session");
             break;
         case SuspendToRam:
@@ -208,7 +207,7 @@ QString SystemEntry::group() const
         case SaveSession:
             return i18n("Session");
             break;
-        case NewSession:
+        case SwitchUser:
             return i18n("Session");
             break;
         case SuspendToRam:
@@ -242,7 +241,7 @@ QString SystemEntry::description() const
         case SaveSession:
             return i18n("Save Session");
             break;
-        case NewSession:
+        case SwitchUser:
             return i18n("Start a parallel session as a different user");
             break;
         case SuspendToRam:
@@ -276,7 +275,7 @@ QString SystemEntry::id() const
         case SaveSession:
             return QStringLiteral("save-session");
             break;
-        case NewSession:
+        case SwitchUser:
             return QStringLiteral("switch-user");
             break;
         case SuspendToRam:
@@ -326,12 +325,11 @@ bool SystemEntry::run(const QString& actionId, const QVariant &argument)
 
             break;
         }
-        case NewSession:
+        case SwitchUser:
         {
             QDBusConnection bus = QDBusConnection::sessionBus();
-            QDBusInterface interface("org.freedesktop.ScreenSaver", "/ScreenSaver", "org.freedesktop.ScreenSaver", bus);
-            interface.asyncCall("Lock");
-            m_displayManager->startReserve();
+            QDBusInterface interface("org.kde.ksmserver", "/KSMServer", "org.kde.KSMServerInterface", bus);
+            interface.asyncCall("openSwitchUserDialog");
             break;
         };
         case SuspendToRam:

@@ -55,7 +55,7 @@ void SystemModel::init()
     actions << new SystemEntry(this, SystemEntry::LockSession);
     actions << new SystemEntry(this, SystemEntry::LogoutSession);
     actions << new SystemEntry(this, SystemEntry::SaveSession);
-    actions << new SystemEntry(this, SystemEntry::NewSession);
+    actions << new SystemEntry(this, SystemEntry::SwitchUser);
     actions << new SystemEntry(this, SystemEntry::SuspendToRam);
     actions << new SystemEntry(this, SystemEntry::SuspendToDisk);
     actions << new SystemEntry(this, SystemEntry::Reboot);

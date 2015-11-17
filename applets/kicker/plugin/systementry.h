@@ -33,7 +33,7 @@ class SystemEntry : public AbstractEntry
             LockSession,
             LogoutSession,
             SaveSession,
-            NewSession,
+            SwitchUser,
             SuspendToRam,
             SuspendToDisk,
             Reboot,
