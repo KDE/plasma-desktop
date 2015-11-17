@@ -340,12 +340,8 @@ bool FontAASettings::load()
     KXftConfig::Hint::Style hStyle;
 
     if (!xft.getHintStyle(hStyle) || KXftConfig::Hint::NotSet == hStyle) {
-        KConfig kglobals("kdeglobals", KConfig::NoGlobals);
-
         hStyle = KXftConfig::Hint::NotSet;
         xft.setHintStyle(hStyle);
-        KConfigGroup(&kglobals, "General").writeEntry("XftHintStyle", KXftConfig::toStr(hStyle));
-        kglobals.sync();
         runRdb(KRdbExportXftSettings | KRdbExportGtkTheme);
     }
 
@@ -373,7 +369,12 @@ bool FontAASettings::save(KXftConfig::AntiAliasing::State aaState)
     KXftConfig::SubPixel::Type spType(getSubPixelType());
 
     xft.setSubPixelType(spType);
-    grp.writeEntry("XftSubPixel", KXftConfig::toStr(spType));
+    if (KXftConfig::SubPixel::NotSet == spType) {
+        grp.revertToDefault("XftSubPixel");
+    } else {
+        grp.writeEntry("XftSubPixel", KXftConfig::toStr(spType));
+    }
+
     if (KXftConfig::AntiAliasing::NotSet == aaState) {
         grp.revertToDefault("XftAntialias");
     } else {
