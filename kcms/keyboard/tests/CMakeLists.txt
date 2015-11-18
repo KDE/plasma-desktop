@@ -44,8 +44,6 @@ keyboard_daemon_unit_tests(iso_codes)
 find_package(Boost)
 
 if(Boost_FOUND)
-  ADD_DEFINITIONS(-DNEW_GEOMETRY=1)
-
   keyboard_preview_unit_tests(geometry_parser)
    if ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang")
       # the default maximum template expansion depth (256) is not enough
@@ -77,7 +75,7 @@ configure_file(${CMAKE_CURRENT_SOURCE_DIR}/config/base.bad.xml ${CMAKE_CURRENT_B
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/config/base.xml ${CMAKE_CURRENT_BINARY_DIR}/config/base.xml COPYONLY)
 
 if( X11_XTest_FOUND )
-   add_executable(keyboard_daemon_test keyboard_daemon_test.cpp ../keyboard_daemon.cpp ../layout_memory.cpp ../layout_memory_persister.cpp ../flags.cpp ../x11_helper.cpp ../xkb_helper.cpp ../xinput_helper.cpp ../layout_tray_icon.cpp ../keyboard_config.cpp ../xkb_rules.cpp ../keyboard_hardware.cpp ../bindings.cpp ../layouts_menu.cpp)
+   add_executable(keyboard_daemon_test keyboard_daemon_test.cpp ../keyboard_daemon.cpp ../layout_memory.cpp ../layout_memory_persister.cpp ../flags.cpp ../udev_helper.cpp ../x11_helper.cpp ../xkb_helper.cpp ../xinput_helper.cpp ../layout_tray_icon.cpp ../keyboard_config.cpp ../xkb_rules.cpp ../keyboard_hardware.cpp ../bindings.cpp ../layouts_menu.cpp)
    add_test(kcm-keyboard-keyboard_daemon_test keyboard_daemon_test)
    ecm_mark_nongui_executable(keyboard_daemon_test)
    ecm_mark_as_test(keyboard_daemon_test)
@@ -98,7 +96,11 @@ if( X11_XTest_FOUND )
                          ${X11_XTest_LIB}
                          ${X11_LIBRARIES}
 )
-   if(XiGetDevicePresence_FOUND)
+   if (HAVE_XINPUT)
       target_link_libraries(keyboard_daemon_test ${X11_Xinput_LIB})
+   endif()
+
+   if (HAVE_UDEV)
+      target_link_libraries(keyboard_daemon_test ${UDEV_LIBS})
    endif()
 endif()

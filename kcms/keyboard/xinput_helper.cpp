@@ -17,6 +17,7 @@
  */
 
 #include "xinput_helper.h"
+#include <config-keyboard.h>
 
 #include <QCoreApplication>
 #include <QX11Info>
@@ -26,15 +27,13 @@
 #include <X11/Xlib.h>
 #include <X11/Xatom.h>
 
-#ifdef HAVE_XINPUT_AND_DEVICE_NOTIFY
+#ifdef HAVE_XINPUT
 #include <X11/extensions/XInput.h>
-#endif
-
-#ifdef HAVE_XCB_XINPUT
 #include <xcb/xinput.h>
 #endif
 
 #include "x11_helper.h"
+#include "udev_helper.h"
 
 #include <fixx11h.h>
 
@@ -44,7 +43,8 @@ static const int DEVICE_POINTER = 2;
 
 XInputEventNotifier::XInputEventNotifier(QWidget* parent):
 	XEventNotifier(), //TODO: destruct properly?
-	xinputEventType(-1)
+	xinputEventType(-1),
+	udevNotifier(Q_NULLPTR)
 {
   Q_UNUSED(parent)
 }
@@ -81,13 +81,9 @@ bool XInputEventNotifier::processOtherEvents(xcb_generic_event_t* event)
 }
 
 
-#ifdef HAVE_XINPUT_AND_DEVICE_NOTIFY
+#if defined(HAVE_XINPUT)
 
-//extern "C" {
-//    extern int _XiGetDevicePresenceNotifyEvent(Display *);
-//}
-
-// This is ugly but allows to skip multiple execution of setxkbmap 
+// This is ugly but allows to skip multiple execution of setxkbmap
 // for all keyboard devices that don't care about layouts
 static bool isRealKeyboard(const char* deviceName)
 {
@@ -100,7 +96,6 @@ static bool isRealKeyboard(const char* deviceName)
 int XInputEventNotifier::getNewDeviceEventType(xcb_generic_event_t* event)
 {
 	int newDeviceType = DEVICE_NONE;
-#ifdef HAVE_XCB_XINPUT
 	if( xinputEventType != -1 && event->response_type == xinputEventType ) {
 		xcb_input_device_presence_notify_event_t *xdpne = reinterpret_cast<xcb_input_device_presence_notify_event_t *>(event);
 		if( xdpne->devchange == DeviceEnabled ) {
@@ -129,7 +124,6 @@ int XInputEventNotifier::getNewDeviceEventType(xcb_generic_event_t* event)
 			}
 		}
 	}
-#endif
 	return newDeviceType;
 }
 
@@ -146,10 +140,30 @@ int XInputEventNotifier::registerForNewDeviceEvent(Display* display_)
 	return xitype;
 }
 
+#elif defined(HAVE_UDEV)
+
+int XInputEventNotifier::registerForNewDeviceEvent(Display* /*display*/)
+{
+    if (!udevNotifier) {
+        udevNotifier = new UdevDeviceNotifier(this);
+        connect(udevNotifier, &UdevDeviceNotifier::newKeyboardDevice, this, &XInputEventNotifier::newKeyboardDevice);
+        connect(udevNotifier, &UdevDeviceNotifier::newPointerDevice, this, &XInputEventNotifier::newPointerDevice);
+        // Same as with XInput notifier, also emit newKeyboardDevice when pointer device is found
+        connect(udevNotifier, &UdevDeviceNotifier::newPointerDevice, this, &XInputEventNotifier::newKeyboardDevice);
+    }
+
+    return -1;
+}
+
+int XInputEventNotifier::getNewDeviceEventType(xcb_generic_event_t* /*event*/)
+{
+    return DEVICE_NONE;
+}
+
 #else
 
 #ifdef __GNUC__
-#warning "Keyboard daemon is compiled without XInput, keyboard settings will be reset when new keyboard device is plugged in!"
+#warning "Keyboard daemon is compiled without XInput and UDev, keyboard settings will be reset when new keyboard device is plugged in!"
 #endif
 
 int XInputEventNotifier::registerForNewDeviceEvent(Display* /*display*/)

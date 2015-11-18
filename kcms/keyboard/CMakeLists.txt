@@ -1,19 +1,16 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"kcmkeyboard\")
 
-set(CMAKE_REQUIRED_LIBRARIES -lXi)
-check_function_exists(_XiGetDevicePresenceNotifyEvent XiGetDevicePresenceNotifyEvent_EXISTS)
+option(HAVE_XINPUT "X11/XCB XInput" OFF)
+option(HAVE_UDEV "UDev" OFF)
+option(NEW_GEOMETRY "Keyboard geometry preview" OFF)
 
-if( X11_Xinput_FOUND AND XiGetDevicePresenceNotifyEvent_EXISTS )
-    set(XiGetDevicePresence_FOUND 1)
-    add_definitions(-DHAVE_XINPUT_AND_DEVICE_NOTIFY=1)
+if (X11_Xinput_FOUND AND XCB_XINPUT_FOUND)
+    set(HAVE_XINPUT ON)
+elseif (UDEV_FOUND)
+    set(HAVE_UDEV ON)
 else()
-    message(STATUS "_XiGetDevicePresenceNotifyEvent is not found, libXi version 1.2.0 or later is required to keep layouts with keyboard hotplugging")
+    message(STATUS "X11/XCB XInput and UDev is not found, either is required to keep layouts with keyboard hotplugging")
 endif()
-
-if (XCB_XINPUT_FOUND)
-    add_definitions(-DHAVE_XCB_XINPUT=1)
-endif()
-
 
 
 ### kded daemon ###
@@ -22,6 +19,7 @@ set( kded_keyboard_SRCS
     keyboard_daemon.cpp
     layout_memory.cpp
     layout_memory_persister.cpp
+    udev_helper.cpp
     x11_helper.cpp
     xinput_helper.cpp
     xkb_helper.cpp
@@ -63,12 +61,12 @@ target_link_libraries(kded_keyboard
     ${X11_Xkbfile_LIB}
  )
 
-if(X11_XTest_FOUND)
-  target_link_libraries(kded_keyboard ${X11_XTest_LIB})
+if (HAVE_XINPUT)
+    target_link_libraries(kded_keyboard ${X11_Xinput_LIB})
 endif()
 
-if(XiGetDevicePresence_FOUND)
-  target_link_libraries(kded_keyboard ${X11_Xinput_LIB})
+if (HAVE_UDEV)
+    target_link_libraries(kded_keyboard ${UDEV_LIBS})
 endif()
 
 install( TARGETS kded_keyboard DESTINATION ${PLUGIN_INSTALL_DIR}/kf5/kded )
@@ -79,7 +77,7 @@ include_directories("preview")
 find_package(Boost)
 
 if(Boost_FOUND)
-  ADD_DEFINITIONS(-DNEW_GEOMETRY=1)
+  set(NEW_GEOMETRY ON)
 
   set(preview_SRCS
     preview/geometry_components.cpp
@@ -155,6 +153,7 @@ install( FILES kcm_keyboard.desktop DESTINATION ${SERVICES_INSTALL_DIR} )
 
 add_subdirectory( pics )
 
+configure_file(config-keyboard.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-keyboard.h)
 
 # Unit tests
 if(BUILD_TESTING)

@@ -25,6 +25,8 @@
 #include <QStringList>
 #include <QLoggingCategory>
 
+#include <config-keyboard.h>
+
 Q_DECLARE_LOGGING_CATEGORY(KCM_KEYBOARD)
 
 
@@ -118,24 +120,24 @@ struct Rules {
     static Rules* readRules(Rules* rules, const QString& filename, bool fromExtras);
     static QString getRulesName();
     static QString findXkbDir();
-    
+
 #ifdef NEW_GEOMETRY
     class GeometryId {
       public:
 	QString fileName;
 	QString geoName;
-	
+
 	GeometryId(const QString& fileName_, const QString& geoName_):
 	  fileName(fileName_),
 	  geoName(geoName_) {}
-	
+
 	GeometryId& operator=(const GeometryId& geoId) {
 	  fileName = geoId.fileName;
 	  geoName = geoId.geoName;
 	  return *this;
 	}
     };
-    
+
     static GeometryId getGeometryId(const QString& model);
 #endif
 

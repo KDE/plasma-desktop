@@ -25,6 +25,8 @@
 #include "keyboard_config.h"
 #include "preview/keyboardpainter.h"
 
+#include <config-keyboard.h>
+
 class Rules;
 class Flags;
 class Ui_AddLayoutDialog;

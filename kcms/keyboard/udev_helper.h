@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2010 Andriy Rysin (rysin@kde.org)
+ *  Copyright (C) 2015 David Rosca (nowrep@gmail.com)
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -16,46 +16,29 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
+#ifndef UDEV_HELPER_H_
+#define UDEV_HELPER_H_
 
-#ifndef XINPUT_HELPER_H_
-#define XINPUT_HELPER_H_
+#include <QObject>
 
-#include "x11_helper.h"
-
-#include <X11/Xlib.h>
-#include <fixx11h.h>
-
-#include <QLoggingCategory>
-
-
-Q_DECLARE_LOGGING_CATEGORY(KCM_KEYBOARD)
-
-class UdevDeviceNotifier;
-
-class XInputEventNotifier: public XEventNotifier {
-	Q_OBJECT
+class UdevDeviceNotifier : public QObject
+{
+    Q_OBJECT
 
 public:
-	XInputEventNotifier(QWidget* parent=NULL);
-
-	void start();
-	void stop();
-
-	int registerForNewDeviceEvent(Display* dpy);
+    explicit UdevDeviceNotifier(QObject *parent = Q_NULLPTR);
+    ~UdevDeviceNotifier();
 
 Q_SIGNALS:
-	void newKeyboardDevice();
-	void newPointerDevice();
-
-protected:
-	bool processOtherEvents(xcb_generic_event_t* event);
+    void newKeyboardDevice();
+    void newPointerDevice();
 
 private:
-	int getNewDeviceEventType(xcb_generic_event_t* event);
+    void init();
+    void socketActivated();
 
-	int xinputEventType;
-	Display* display;
-	UdevDeviceNotifier *udevNotifier;
+    struct udev *m_udev;
+    struct udev_monitor *m_monitor;
 };
 
-#endif /* XINPUT_HELPER_H_ */
+#endif // UDEV_HELPER_H_

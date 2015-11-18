@@ -93,6 +93,13 @@ set_package_properties(X11 PROPERTIES DESCRIPTION "X11 libraries"
                         PURPOSE "Required for building the X11 based workspace"
                       )
 
+find_package(UDev)
+set_package_properties(UDev PROPERTIES DESCRIPTION "UDev library"
+                        URL "http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev.html"
+                        TYPE OPTIONAL
+                        PURPOSE "Required for device discovery in keyboard daemon"
+                      )
+
 find_package(XCB
     REQUIRED COMPONENTS
         XCB SHM IMAGE
