@@ -38,7 +38,6 @@
 #include <QQuickItem>
 #include <QQuickWindow>
 #include <qplatformdefs.h>
-#include <QDebug>
 
 #include "internallibkonq/konq_popupmenu.h"
 #include <KIO/DropJob>
@@ -778,7 +777,23 @@ void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row)
     QDropEvent ev(pos, possibleActions, mimeData, buttons, modifiers);
     ev.setDropAction(proposedAction);
 
-    KIO::DropJob *dropJob = KIO::drop(&ev, item.isNull() ? m_dirModel->dirLister()->url() : item.url());
+    QUrl dropTargetUrl;
+
+    if (item.isNull()) {
+        dropTargetUrl = m_dirModel->dirLister()->url();
+    } else if (m_parseDesktopFiles && item.isDesktopFile()) {
+        const KDesktopFile file(item.targetUrl().path());
+
+        if (file.readType() == QLatin1String("Link")) {
+            dropTargetUrl = file.readUrl();
+        } else {
+            dropTargetUrl = item.url();
+        }
+    } else {
+        dropTargetUrl = item.url();
+    }
+
+    KIO::DropJob *dropJob = KIO::drop(&ev, dropTargetUrl);
     dropJob->ui()->setAutoErrorHandlingEnabled(true);
 }
 
