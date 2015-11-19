@@ -58,7 +58,11 @@ Item {
             id: mouseArea
             anchors.fill: parent
             hoverEnabled: true
-            onDoubleClicked: widgetExplorer.addApplet(pluginName)
+            onDoubleClicked: {
+                if (!delegate.pendingUninstall) {
+                    widgetExplorer.addApplet(pluginName)
+                }
+            }
             onEntered: list.currentIndex = index
             onExited: list.currentIndex = -1
         }
