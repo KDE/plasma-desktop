@@ -98,6 +98,7 @@ void FullScreenWindow::toggle() {
     } else {
         resize(screen()->size());
         showFullScreen();
+        KWindowSystem::forceActiveWindow(winId());
     }
 }
 
