@@ -181,12 +181,12 @@ QVariant RecentUsageModel::docData(const QString &resource, int role) const
 
     const KFileItem fileItem(url);
 
-    if (!url.isValid() || !fileItem.isFile()) {
+    if (!url.isValid() || !(fileItem.isFile() || fileItem.isDir())) {
         return QVariant();
     }
 
     if (role == Qt::DisplayRole) {
-        return url.fileName();
+        return fileItem.text();
     } else if (role == Qt::DecorationRole) {
         return QIcon::fromTheme(fileItem.iconName(), QIcon::fromTheme("unknown"));
     } else if (role == Kicker::GroupRole) {
