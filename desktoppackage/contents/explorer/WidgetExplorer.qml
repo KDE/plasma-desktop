@@ -36,7 +36,7 @@ Item {
     width: Math.max(heading.paintedWidth, units.iconSizes.enormous * 2 + units.smallSpacing * 4 + 20)
     height: 800//Screen.height
 
-    property Item containment
+    property QtObject containment
 
     //external drop events can cause a raise event causing us to lose focus and
     //therefore get deleted whilst we are still in a drag exec()
