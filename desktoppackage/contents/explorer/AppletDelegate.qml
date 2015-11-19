@@ -1,5 +1,6 @@
 /*
  *   Copyright 2011 Marco Martin <mart@kde.org>
+ *   Copyright 2015 Kai Uwe Broulik <kde@privat.broulik.de>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -30,6 +31,7 @@ Item {
     id: delegate
 
     readonly property string pluginName: model.pluginName
+    readonly property bool pendingUninstall: pendingUninstallTimer.applets.indexOf(pluginName) > -1
 
     width: list.cellWidth
     height: list.cellHeight
@@ -39,6 +41,7 @@ Item {
         supportedActions: Qt.MoveAction | Qt.LinkAction
         //onDragStarted: tooltipDialog.visible = false
         delegateImage: decoration
+        enabled: !delegate.pendingUninstall
         mimeData {
             source: parent
         }
@@ -49,6 +52,15 @@ Item {
         }
         onDrop: {
             main.preventWindowHide = false;
+        }
+
+        MouseArea {
+            id: mouseArea
+            anchors.fill: parent
+            hoverEnabled: true
+            onDoubleClicked: widgetExplorer.addApplet(pluginName)
+            onEntered: list.currentIndex = index
+            onExited: list.currentIndex = -1
         }
 
         ColumnLayout {
@@ -68,6 +80,13 @@ Item {
                 width: units.iconSizes.enormous
                 height: width
                 anchors.horizontalCenter: parent.horizontalCenter
+                opacity: delegate.pendingUninstall ? 0.6 : 1
+                Behavior on opacity {
+                    OpacityAnimator {
+                        duration: units.longDuration
+                        easing.type: Easing.InOutQuad
+                    }
+                }
 
                 Item {
                     id: iconWidget
@@ -85,7 +104,6 @@ Item {
                         source: model.screenshot
                     }
                 }
-
 
                 Item {
                     id: badgeMask
@@ -145,6 +163,45 @@ Item {
                         }
                     "
                 }
+
+                PlasmaComponents.ToolButton {
+                    id: uninstallButton
+                    anchors {
+                        top: parent.top
+                        right: parent.right
+                    }
+                    iconSource: delegate.pendingUninstall ? "edit-undo" : "list-remove"
+                    // we don't really "undo" anything but we'll pretend to the user that we do
+                    tooltip: delegate.pendingUninstall ? i18nd("plasma_shell_org.kde.plasma.desktop", "Undo uninstall")
+                                                       : i18nd("plasma_shell_org.kde.plasma.desktop", "Uninstall widget")
+                    flat: false
+                    visible: model.local
+                    onHoveredChanged: {
+                        if (hovered) {
+                            // hovering the uninstall button triggers onExited of the main mousearea
+                            list.currentIndex = index
+                        }
+                    }
+
+                    onClicked: {
+                        var pending = pendingUninstallTimer.applets
+                        if (delegate.pendingUninstall) {
+                            var index = pending.indexOf(pluginName)
+                            if (index > -1) {
+                                pending.splice(index, 1)
+                            }
+                        } else {
+                            pending.push(pluginName)
+                        }
+                        pendingUninstallTimer.applets = pending
+
+                        if (pending.length) {
+                            pendingUninstallTimer.restart()
+                        } else {
+                            pendingUninstallTimer.stop()
+                        }
+                    }
+                }
             }
             PlasmaExtras.Heading {
                 id: heading
@@ -168,15 +225,6 @@ Item {
                 maximumLineCount: heading.lineCount === 1 ? 3 : 2
                 horizontalAlignment: Text.AlignHCenter
             }
-        }
-
-        MouseArea {
-            id: mouseArea
-            anchors.fill: parent
-            hoverEnabled: true
-            onDoubleClicked: widgetExplorer.addApplet(pluginName)
-            onEntered: list.currentIndex = index
-            onExited: list.currentIndex = -1
         }
     }
 }

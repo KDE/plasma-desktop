@@ -36,7 +36,7 @@ Item {
     width: Math.max(heading.paintedWidth, units.iconSizes.enormous * 2 + units.smallSpacing * 4 + 20)
     height: 800//Screen.height
 
-    property alias containment: widgetExplorer.containment
+    property Item containment
 
     //external drop events can cause a raise event causing us to lose focus and
     //therefore get deleted whilst we are still in a drag exec()
@@ -44,10 +44,28 @@ Item {
     //See https://bugs.kde.org/show_bug.cgi?id=332733
     property bool preventWindowHide: false
 
-    property Item getWidgetsButton
     property Item categoryButton
 
     signal closed()
+
+    Component.onCompleted: {
+        if (!root.widgetExplorer) {
+            root.widgetExplorer = widgetExplorerComponent.createObject(root)
+        }
+        root.widgetExplorer.containment = main.containment
+    }
+
+    Component.onDestruction: {
+        if (pendingUninstallTimer.running) {
+            // we're not being destroyed so at least reset the filters
+            widgetExplorer.widgetsModel.filterQuery = ""
+            widgetExplorer.widgetsModel.filterType = ""
+            widgetExplorer.widgetsModel.searchTerm = ""
+        } else {
+            root.widgetExplorer.destroy()
+            root.widgetExplorer = null
+        }
+    }
 
     function addCurrentApplet() {
         var pluginName = list.currentItem ? list.currentItem.pluginName : ""
@@ -86,21 +104,24 @@ Item {
         onTriggered: addCurrentApplet()
     }
 
-    WidgetExplorer {
-        id: widgetExplorer
-        //view: desktop
-        onShouldClose: main.closed();
+    Component {
+        id: widgetExplorerComponent
+
+        WidgetExplorer {
+            //view: desktop
+            onShouldClose: main.closed();
+        }
     }
 
     PlasmaComponents.ModelContextMenu {
         id: categoriesDialog
-        visualParent: main.categoryButton
+        visualParent: categoryButton
         model: widgetExplorer.filterModel
 
         onClicked: {
             list.contentX = 0
             list.contentY = 0
-            main.categoryButton.text = model.display
+            categoryButton.text = model.display
             widgetExplorer.widgetsModel.filterQuery = model.filterData
             widgetExplorer.widgetsModel.filterType = model.filterType
         }
@@ -115,7 +136,7 @@ Item {
 
     PlasmaComponents.ModelContextMenu {
         id: getWidgetsDialog
-        visualParent: main.getWidgetsButton
+        visualParent: getWidgetsButton
         model: widgetExplorer.widgetsMenuActions
         onClicked: model.trigger()
         onStatusChanged: {
@@ -331,11 +352,6 @@ Item {
                 }
             }
         }
-    }
-
-    Component.onCompleted: {
-        main.getWidgetsButton = getWidgetsButton
-        main.categoryButton = categoryButton
     }
 }
 
