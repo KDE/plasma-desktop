@@ -132,13 +132,7 @@ void KCMFormats::addLocaleToCombo(QComboBox *combo, const QLocale &locale)
     if (split.count() > 1) {
         flagcode = split[1].toLower();
     }
-    QString flag(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("kf5/locale/countries/%1/flag.png").arg(flagcode)));
-    QIcon flagIcon;
-    if (!flag.isEmpty()) {
-        flagIcon = QIcon(flag);
-    } else {
-        flagIcon = QIcon::fromTheme("unknown");
-    }
+    QIcon flagIcon = loadFlagIcon(flagcode);
 
     const QString nativeLangName = locale.nativeLanguageName();
     if (!nativeLangName.isEmpty()) {
@@ -154,6 +148,27 @@ void setCombo(QComboBox *combo, const QString &key)
     if (ix > -1) {
         combo->setCurrentIndex(ix);
     }
+}
+
+QIcon KCMFormats::loadFlagIcon(const QString &flagCode)
+{
+    QIcon icon = m_cachedFlags.value(flagCode);
+    if (!icon.isNull()) {
+        return icon;
+    }
+
+    QString flag(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("kf5/locale/countries/%1/flag.png").arg(flagCode)));
+    if (!flag.isEmpty()) {
+        icon = QIcon(flag);
+    } else {
+        if (m_cachedUnknown.isNull()) {
+            m_cachedUnknown = QIcon::fromTheme("unknown");
+        }
+        icon = m_cachedUnknown;
+    }
+    m_cachedFlags.insert(flagCode, icon);
+
+    return icon;
 }
 
 void KCMFormats::readConfig()

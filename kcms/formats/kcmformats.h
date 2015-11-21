@@ -21,6 +21,9 @@
 #include <KCModule>
 #include <KConfigGroup>
 
+#include <QHash>
+#include <QIcon>
+
 namespace Ui
 {
 class KCMFormatsWidget;
@@ -45,6 +48,10 @@ private:
     void initCombo(QComboBox *combo, const QList<QLocale> &allLocales);
     void connectCombo(QComboBox *combo);
     QList<QComboBox *> m_combos;
+
+    QIcon loadFlagIcon(const QString &flagCode);
+    QHash<QString, QIcon> m_cachedFlags;
+    QIcon m_cachedUnknown;
 
     void readConfig();
     void writeConfig();
