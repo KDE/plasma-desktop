@@ -37,10 +37,6 @@ Column {
     property int preferredTextWidth: theme.mSize(theme.defaultFont).width * 30
     property int _s: units.largeSpacing / 2
 
-    Layout.minimumWidth: width
-    Layout.minimumHeight: height
-    Layout.maximumWidth: width
-    Layout.maximumHeight: height
     width: Math.max(windowRow.width, appLabelRow.width)  + _s
     height: childrenRect.height
     spacing: _s
