@@ -41,83 +41,97 @@ Column {
     height: childrenRect.height
     spacing: _s
 
-    Row {
-        id: windowRow
+    PlasmaExtras.ScrollArea {
+        id: scrollArea
         anchors.horizontalCenter: parent.horizontalCenter
-        width: childrenRect.width
-        height: childrenRect.height
-        spacing: units.largeSpacing
-        Repeater {
-            model: windows
+        width: Math.min(parent.width, windowRow.width)
+        height: windowRow.height
+        verticalScrollBarPolicy: Qt.ScrollBarAlwaysOff
+        horizontalScrollBarPolicy: Qt.ScrollBarAlwaysOff
 
-            PlasmaCore.WindowThumbnail {
-                y: _s
+        Component.onCompleted: {
+            flickableItem.interactive = Qt.binding(function() {
+                return contentItem.width > viewport.width;
+            });
+        }
 
-                width: units.gridUnit * 15
-                height: units.gridUnit * 10
+        Row {
+            id: windowRow
+            width: childrenRect.width
+            height: childrenRect.height
+            spacing: units.largeSpacing
+            Repeater {
+                model: windows
 
-                winId: modelData
+                PlasmaCore.WindowThumbnail {
+                    y: _s
 
-                MouseArea {
-                    anchors.fill: parent
+                    width: units.gridUnit * 15
+                    height: units.gridUnit * 10
 
-                    acceptedButtons: Qt.LeftButton
-                    hoverEnabled: true
+                    winId: modelData
 
-                    onClicked: {
-                        tasks.activateWindow(modelData);
-                        toolTip.hideToolTip();
-                    }
+                    MouseArea {
+                        anchors.fill: parent
 
-                    onContainsMouseChanged: {
-                        tasks.windowHovered(modelData, containsMouse);
-                    }
-
-                    Rectangle {
-                        id: closeButtonBackground
-
-                        anchors {
-                            top: parent.top
-                            right: parent.right
-                            topMargin: units.smallSpacing
-                            rightMargin: units.smallSpacing
-                        }
-
-                        width: units.iconSizes.smallMedium
-                        height: width
-
-                        opacity: parent.containsMouse ? 0.4 : 0
-
-                        Behavior on opacity {
-                            NumberAnimation { duration: units.shortDuration * 2; }
-                        }
-
-                        color: theme.backgroundColor
-                        radius: units.smallSpacing
-                    }
-
-                    PlasmaComponents.ToolButton {
-                        id: closeButton
-
-                        anchors {
-                            horizontalCenter: closeButtonBackground.horizontalCenter
-                            verticalCenter: closeButtonBackground.verticalCenter
-                        }
-
-                        opacity: parent.containsMouse ? 1.0 : 0
-
-                        Behavior on opacity {
-                            NumberAnimation { duration: units.shortDuration * 2; }
-                        }
-
-                        width: units.iconSizes.smallMedium
-                        height: width
-
-                        iconSource: "window-close"
+                        acceptedButtons: Qt.LeftButton
+                        hoverEnabled: true
 
                         onClicked: {
-                            tasks.closeByWinId(modelData);
+                            tasks.activateWindow(modelData);
                             toolTip.hideToolTip();
+                        }
+
+                        onContainsMouseChanged: {
+                            tasks.windowHovered(modelData, containsMouse);
+                        }
+
+                        Rectangle {
+                            id: closeButtonBackground
+
+                            anchors {
+                                top: parent.top
+                                right: parent.right
+                                topMargin: units.smallSpacing
+                                rightMargin: units.smallSpacing
+                            }
+
+                            width: units.iconSizes.smallMedium
+                            height: width
+
+                            opacity: parent.containsMouse ? 0.4 : 0
+
+                            Behavior on opacity {
+                                NumberAnimation { duration: units.shortDuration * 2; }
+                            }
+
+                            color: theme.backgroundColor
+                            radius: units.smallSpacing
+                        }
+
+                        PlasmaComponents.ToolButton {
+                            id: closeButton
+
+                            anchors {
+                                horizontalCenter: closeButtonBackground.horizontalCenter
+                                verticalCenter: closeButtonBackground.verticalCenter
+                            }
+
+                            opacity: parent.containsMouse ? 1.0 : 0
+
+                            Behavior on opacity {
+                                NumberAnimation { duration: units.shortDuration * 2; }
+                            }
+
+                            width: units.iconSizes.smallMedium
+                            height: width
+
+                            iconSource: "window-close"
+
+                            onClicked: {
+                                tasks.closeByWinId(modelData);
+                                toolTip.hideToolTip();
+                            }
                         }
                     }
                 }
