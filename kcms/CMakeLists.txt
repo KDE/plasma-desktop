@@ -14,7 +14,7 @@ if(X11_Xkb_FOUND AND XCB_XKB_FOUND)
     add_subdirectory( keyboard )
 endif()
 
-if (EVDEV_FOUND)
+if (EVDEV_FOUND AND X11_Xinput_FOUND)
     add_subdirectory( input )
 endif()
 
@@ -58,7 +58,7 @@ add_subdirectory(baloo)
 add_subdirectory(solid_actions)
 add_subdirectory(cursortheme)
 
-if (SYNAPTICS_FOUND)
+if (SYNAPTICS_FOUND AND X11_Xinput_FOUND)
     add_subdirectory(touchpad)
 endif()
 
