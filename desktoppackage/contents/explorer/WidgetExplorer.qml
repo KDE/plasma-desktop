@@ -116,7 +116,7 @@ Item {
     PlasmaComponents.ModelContextMenu {
         id: categoriesDialog
         visualParent: categoryButton
-        model: widgetExplorer.filterModel
+        // model set on first invocation
 
         onClicked: {
             list.contentX = 0
@@ -137,7 +137,7 @@ Item {
     PlasmaComponents.ModelContextMenu {
         id: getWidgetsDialog
         visualParent: getWidgetsButton
-        model: widgetExplorer.widgetsMenuActions
+        // model set on first invocation
         onClicked: model.trigger()
         onStatusChanged: {
             if (status == PlasmaComponents.DialogStatus.Opening) {
@@ -238,6 +238,7 @@ Item {
             text: i18nd("plasma_shell_org.kde.plasma.desktop", "Categories")
             onClicked: {
                 main.preventWindowHide = true;
+                categoriesDialog.model = widgetExplorer.filterModel
                 categoriesDialog.open(0, categoryButton.height)
             }
             Layout.columnSpan: 2
@@ -245,12 +246,13 @@ Item {
         }
     }
 
-    PlasmaCore.FrameSvgItem {
-        id: backgroundHint
-        imagePath: "widgets/viewitem"
-        prefix: "normal"
-        visible: false
+    Timer {
+        id: setModelTimer
+        interval: 20
+        running: true
+        onTriggered: list.model = widgetExplorer.widgetsModel
     }
+
     PlasmaExtras.ScrollArea {
         anchors {
             top: topBar.bottom
@@ -261,14 +263,24 @@ Item {
             leftMargin: units.smallSpacing
             bottomMargin: units.smallSpacing
         }
+
+        // hide the flickering by fading in nicely
+        opacity: setModelTimer.running ? 0 : 1
+        Behavior on opacity {
+            OpacityAnimator {
+                duration: units.longDuration
+                easing.type: Easing.InOutQuad
+            }
+        }
+
         GridView {
             id: list
 
-            model: widgetExplorer.widgetsModel
+            // model set delayed by Timer above
+
             activeFocusOnTab: true
-            currentIndex: -1
             keyNavigationWraps: true
-            cellWidth: width/2
+            cellWidth: width / 2
             cellHeight: cellWidth + units.gridUnit * 4 + units.smallSpacing * 2
 
             delegate: AppletDelegate {}
@@ -325,21 +337,23 @@ Item {
         spacing: units.smallSpacing
 
         PlasmaComponents.Button {
+            id: getWidgetsButton
             anchors {
                 left: parent.left
                 right: parent.right
             }
-            id: getWidgetsButton
             iconSource: "get-hot-new-stuff"
             text: i18nd("plasma_shell_org.kde.plasma.desktop", "Get new widgets")
             onClicked: {
                 main.preventWindowHide = true;
+                getWidgetsDialog.model = widgetExplorer.widgetsMenuActions
                 getWidgetsDialog.open()
             }
         }
 
         Repeater {
             model: widgetExplorer.extraActions.length
+
             PlasmaComponents.Button {
                 anchors {
                     left: parent.left
@@ -347,9 +361,7 @@ Item {
                 }
                 iconSource: widgetExplorer.extraActions[modelData].icon
                 text: widgetExplorer.extraActions[modelData].text
-                onClicked: {
-                    widgetExplorer.extraActions[modelData].trigger()
-                }
+                onClicked: widgetExplorer.extraActions[modelData].trigger()
             }
         }
     }
