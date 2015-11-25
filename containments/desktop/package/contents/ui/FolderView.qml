@@ -70,7 +70,8 @@ Item {
                 return -1;
             }
 
-            var hPos = mapToItem(item.hoverArea, pos.x, pos.y);
+            var hOffset = Math.abs(Math.min(gridView.contentX, gridView.originX));
+            var hPos = mapToItem(item.hoverArea, pos.x + hOffset, pos.y);
 
             if ((hPos.x < 0 || hPos.y < 0 || hPos.x > item.hoverArea.width || hPos.y > item.hoverArea.height)) {
                 return -1;
