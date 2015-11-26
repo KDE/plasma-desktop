@@ -34,6 +34,7 @@
 #include <QTimer>
 
 #include <KAuthorized>
+#include <KConfigGroup>
 #include <KDesktopFile>
 #include <KFileItem>
 #include <KLocalizedString>
@@ -272,6 +273,7 @@ void Backend::itemContextMenu(QQuickItem *item, QObject *configAction)
     if (agItem->itemType() == TaskManager::TaskItemType && !agItem->isStartupItem()) {
         TaskManager::TaskItem* taskItem = static_cast<TaskManager::TaskItem*>(agItem);
         m_contextMenu = new TaskManager::BasicMenu(0, taskItem, m_groupManager, actionList);
+        addJumpListActions(taskItem->launcherUrl(), m_contextMenu);
     } else if (agItem->itemType() == TaskManager::GroupItemType) {
         TaskManager::TaskGroup* taskGroup = static_cast<TaskManager::TaskGroup*>(agItem);
         const int maxWidth = 0.8 * item->window()->screen()->size().width();
@@ -280,6 +282,7 @@ void Backend::itemContextMenu(QQuickItem *item, QObject *configAction)
         TaskManager::LauncherItem *launcher = static_cast<TaskManager::LauncherItem *>(agItem);
         m_contextMenu = new TaskManager::BasicMenu(0, launcher, m_groupManager, actionList);
         addRecentDocumentActions(launcher, m_contextMenu);
+        addJumpListActions(launcher->launcherUrl(), m_contextMenu);
     }
 
     if (!m_contextMenu) {
@@ -332,6 +335,53 @@ void Backend::itemContextMenu(QQuickItem *item, QObject *configAction)
         m_contextMenu->exec(pos);
         m_contextMenu->deleteLater();
     });
+}
+
+void Backend::addJumpListActions(const QUrl &launcherUrl, TaskManager::BasicMenu *menu) const
+{
+    if (!menu || !launcherUrl.isValid() || !launcherUrl.isLocalFile()) {
+        return;
+    }
+
+    QAction *firstAction = menu->actions().at(0);
+
+    if (!firstAction) {
+        return;
+    }
+
+    KDesktopFile desktopFile(launcherUrl.toLocalFile());
+
+    const QStringList &actions = desktopFile.readActions();
+
+    int count = 0;
+
+    foreach (const QString &actionName, actions) {
+        const KConfigGroup &actionGroup = desktopFile.actionGroup(actionName);
+
+        if (!actionGroup.isValid() || !actionGroup.exists()) {
+            continue;
+        }
+
+        const QString &name = actionGroup.readEntry(QStringLiteral("Name"));
+        const QString &exec = actionGroup.readEntry(QStringLiteral("Exec"));
+        if (name.isEmpty() || exec.isEmpty()) {
+            continue;
+        }
+
+        QAction *action = new QAction(menu);
+        action->setText(name);
+        action->setIcon(QIcon::fromTheme(actionGroup.readEntry("Icon")));
+        action->setProperty("exec", exec);
+        connect(action, &QAction::triggered, this, &Backend::handleJumpListAction);
+
+        menu->insertAction(firstAction, action);
+
+        ++count;
+    }
+
+    if (count > 0) {
+        menu->insertSeparator(firstAction);
+    }
 }
 
 void Backend::addRecentDocumentActions(TaskManager::LauncherItem *launcher, TaskManager::BasicMenu* menu) const
@@ -412,6 +462,17 @@ void Backend::addRecentDocumentActions(TaskManager::LauncherItem *launcher, Task
 
         menu->insertSeparator(firstAction);
     }
+}
+
+void Backend::handleJumpListAction() const
+{
+    const QAction *action = qobject_cast<QAction* >(sender());
+
+    if (!action) {
+        return;
+    }
+
+    KRun::run(action->property("exec").toString(), {}, nullptr);
 }
 
 void Backend::handleRecentDocumentAction() const
