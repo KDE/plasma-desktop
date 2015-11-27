@@ -49,6 +49,8 @@ QVariantMap createSeparatorActionItem();
 QVariantList createActionListForFileItem(const KFileItem &fileItem);
 bool handleFileItemAction(const KFileItem &fileItem, const QString &actionId, const QVariant &argument, bool *close);
 
+QVariantList jumpListActions(KService::Ptr service);
+
 QVariantList recentDocumentActions(KService::Ptr service);
 bool handleRecentDocumentAction(KService::Ptr service, const QString &actionId, const QVariant &argument);
 

@@ -147,22 +147,35 @@ QVariantList AppEntry::actions() const
 {
     QVariantList actionList;
 
-    actionList << Kicker::recentDocumentActions(m_service);
-
-    if (actionList.count()) {
+    actionList << Kicker::jumpListActions(m_service);
+    if (!actionList.isEmpty()) {
         actionList << Kicker::createSeparatorActionItem();
     }
 
+    bool hasAddLauncher = false;
+
     if (ContainmentInterface::mayAddLauncher(m_appletInterface, ContainmentInterface::Desktop)) {
         actionList << Kicker::createActionItem(i18n("Add to Desktop"), "addToDesktop");
+        hasAddLauncher = true;
     }
 
     if (ContainmentInterface::mayAddLauncher(m_appletInterface, ContainmentInterface::Panel)) {
         actionList << Kicker::createActionItem(i18n("Add to Panel"), "addToPanel");
+        hasAddLauncher = true;
     }
 
     if (ContainmentInterface::mayAddLauncher(m_appletInterface, ContainmentInterface::TaskManager, m_service->entryPath())) {
         actionList << Kicker::createActionItem(i18n("Add as Launcher"), "addToTaskManager");
+        hasAddLauncher = true;
+    }
+
+    if (hasAddLauncher) {
+        actionList << Kicker::createSeparatorActionItem();
+    }
+
+    const QVariantList &recentDocuments = Kicker::recentDocumentActions(m_service);
+    if (!recentDocuments.isEmpty()) {
+        actionList << recentDocuments << Kicker::createSeparatorActionItem();
     }
 
     if (m_menuEntryEditor->canEdit(m_service->entryPath())) {
@@ -238,6 +251,8 @@ bool AppEntry::run(const QString& actionId, const QVariant &argument)
                 return QProcess::startDetached(removeAppCmd.first(), removeAppCmd.mid(1) << argument.toString());
             }
         }
+    } else if (actionId == "_kicker_jumpListAction") {
+        return KRun::run(argument.toString(), {}, nullptr);
     }
 
     return Kicker::handleRecentDocumentAction(m_service, actionId, argument);

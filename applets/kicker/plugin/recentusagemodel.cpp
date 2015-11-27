@@ -153,10 +153,14 @@ QVariant RecentUsageModel::appData(const QString &resource, int role) const
     } else if (role == Kicker::ActionListRole) {
         QVariantList actionList;
 
-        actionList << Kicker::recentDocumentActions(service);
+        const QVariantList &jumpList = Kicker::jumpListActions(service);
+        if (jumpList.count()) {
+            actionList << jumpList << Kicker::createSeparatorActionItem();
+        }
 
-        if (actionList.count()) {
-            actionList << Kicker::createSeparatorActionItem();
+        const QVariantList &recentDocuments = Kicker::recentDocumentActions(service);
+        if (recentDocuments.count()) {
+            actionList << recentDocuments << Kicker::createSeparatorActionItem();
         }
 
         const QVariantMap &forgetAction = Kicker::createActionItem(i18n("Forget Application"), "forget");

@@ -143,6 +143,29 @@ QString storageIdFromService(KService::Ptr service)
     return storageId;
 }
 
+QVariantList jumpListActions(KService::Ptr service)
+{
+    QVariantList list;
+
+    if (!service) {
+        return list;
+    }
+
+    const auto &actions = service->actions();
+    foreach (const KServiceAction &action, actions) {
+        if (action.text().isEmpty() || action.exec().isEmpty()) {
+            continue;
+        }
+
+        QVariantMap item = createActionItem(action.text(), "_kicker_jumpListAction", action.exec());
+        item[QStringLiteral("icon")] = action.icon();
+
+        list << item;
+    }
+
+    return list;
+}
+
 QVariantList recentDocumentActions(KService::Ptr service)
 {
     QVariantList list;
