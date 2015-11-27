@@ -113,6 +113,8 @@ class Backend : public QObject
         void addRecentDocumentActions(TaskManager::LauncherItem *launcher,
             TaskManager::BasicMenu *menu) const;
         void updateWindowHighlight();
+        void addJumpListActions(const QUrl &launcherUrl, TaskManager::BasicMenu *menu) const;
+        void handleJumpListAction() const;
 
         TaskManager::GroupManager *m_groupManager;
         TaskManager::TasksModel *m_tasksModel;
