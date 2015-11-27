@@ -99,6 +99,7 @@ class Backend : public QObject
         void urlDropped(const QUrl &url);
 
     private Q_SLOTS:
+        void handleJumpListAction() const;
         void handleRecentDocumentAction() const;
         void updateLaunchersCache();
         void toolTipWindowChanged(QQuickWindow *window);
@@ -110,11 +111,10 @@ class Backend : public QObject
         void launchersChanged();
 
     private:
+        void addJumpListActions(const QUrl &launcherUrl, TaskManager::BasicMenu *menu) const;
         void addRecentDocumentActions(TaskManager::LauncherItem *launcher,
             TaskManager::BasicMenu *menu) const;
         void updateWindowHighlight();
-        void addJumpListActions(const QUrl &launcherUrl, TaskManager::BasicMenu *menu) const;
-        void handleJumpListAction() const;
 
         TaskManager::GroupManager *m_groupManager;
         TaskManager::TasksModel *m_tasksModel;
