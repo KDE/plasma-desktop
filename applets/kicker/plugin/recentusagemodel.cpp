@@ -45,6 +45,16 @@ namespace KAStats = KActivities::Experimental::Stats;
 using namespace KAStats;
 using namespace KAStats::Terms;
 
+inline KAStats::ResultModel *activitiesModel(RecentUsageModel *model)
+{
+    if (model->usage() == RecentUsageModel::AppsAndDocs) {
+        auto proxy = static_cast<GroupSortProxy*>(model->sourceModel());
+        return static_cast<KAStats::ResultModel*>(proxy->sourceModel());
+    } else {
+        return static_cast<KAStats::ResultModel*>(model->sourceModel());
+    }
+}
+
 GroupSortProxy::GroupSortProxy(QAbstractItemModel *sourceModel) : QSortFilterProxyModel(nullptr)
 {
     sourceModel->setParent(this);
@@ -80,6 +90,11 @@ RecentUsageModel::RecentUsageModel(QObject *parent, IncludeUsage usage) : Forwar
 
 RecentUsageModel::~RecentUsageModel()
 {
+}
+
+RecentUsageModel::IncludeUsage RecentUsageModel::usage() const
+{
+    return m_usage;
 }
 
 QString RecentUsageModel::description() const
@@ -252,15 +267,13 @@ bool RecentUsageModel::trigger(int row, const QString &actionId, const QVariant 
         return true;
     } else if (actionId == "forget" && withinBounds) {
         if (sourceModel()) {
-            ResultModel *resultModel = static_cast<ResultModel *>(sourceModel());
-            resultModel->forgetResource(row);
+            activitiesModel(this)->forgetResource(row);
         }
 
         return false;
     } else if (actionId == "forgetAll") {
         if (sourceModel()) {
-            ResultModel *resultModel = static_cast<ResultModel *>(sourceModel());
-            resultModel->forgetAllResources();
+            activitiesModel(this)->forgetAllResources();
         }
 
         return false;
