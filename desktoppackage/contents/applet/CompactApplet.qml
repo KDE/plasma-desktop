@@ -55,23 +55,39 @@ PlasmaCore.ToolTipArea {
         }
         //if the fullRepresentation size was restored to a stored size, or if is dragged from the desktop, restore popup size
         if (fullRepresentation.width > 0) {
-            popupWindow.mainItem.width = fullRepresentation.width;
+            popupWindow.mainItem.width = Qt.binding(function() {
+                return fullRepresentation.width
+            })
         } else if (fullRepresentation.Layout && fullRepresentation.Layout.preferredWidth > 0) {
-            popupWindow.mainItem.width = fullRepresentation.Layout.preferredWidth
+            popupWindow.mainItem.width = Qt.binding(function() {
+                return fullRepresentation.Layout.preferredWidth
+            })
         } else if (fullRepresentation.implicitWidth > 0) {
-            popupWindow.mainItem.width = fullRepresentation.implicitWidth
+            popupWindow.mainItem.width = Qt.binding(function() {
+                return fullRepresentation.implicitWidth
+            })
         } else {
-            popupWindow.mainItem.width = theme.mSize(theme.defaultFont).width * 35
+            popupWindow.mainItem.width = Qt.binding(function() {
+                return theme.mSize(theme.defaultFont).width * 35
+            })
         }
 
         if (fullRepresentation.height > 0) {
-            popupWindow.mainItem.height = fullRepresentation.height;
+            popupWindow.mainItem.height = Qt.binding(function() {
+                return fullRepresentation.height
+            })
         } else if (fullRepresentation.Layout && fullRepresentation.Layout.preferredHeight > 0) {
-            popupWindow.mainItem.height = fullRepresentation.Layout.preferredHeight
+            popupWindow.mainItem.height = Qt.binding(function() {
+                return fullRepresentation.Layout.preferredHeight
+            })
         } else if (fullRepresentation.implicitHeight > 0) {
-            popupWindow.mainItem.height = fullRepresentation.implicitHeight
+            popupWindow.mainItem.height = Qt.binding(function() {
+                return fullRepresentation.implicitHeight
+            })
         } else {
-            popupWindow.mainItem.height = theme.mSize(theme.defaultFont).height * 25
+            popupWindow.mainItem.height = Qt.binding(function() {
+                return theme.mSize(theme.defaultFont).height * 25
+            })
         }
 
         fullRepresentation.parent = appletParent;
