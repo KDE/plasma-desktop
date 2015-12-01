@@ -53,6 +53,8 @@ class RecentUsageModel : public ForwardingModel
         bool hasActions() const;
         QVariantList actions() const;
 
+        IncludeUsage usage() const;
+
     private Q_SLOTS:
         void refresh();
 
