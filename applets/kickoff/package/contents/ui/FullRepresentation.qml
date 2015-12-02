@@ -61,6 +61,13 @@ Item {
         imagePath: "widgets/line"
     }
 
+    PlasmaCore.Svg {
+        id: arrowsSvg
+
+        imagePath: "widgets/arrows"
+        size: "16x16"
+    }
+
     Timer {
         id: clickTimer
 

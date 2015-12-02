@@ -19,6 +19,7 @@
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
 import QtQuick 2.0
+import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.draganddrop 2.0
@@ -185,7 +186,7 @@ Item {
             anchors {
                 //bottom: elementIcon.verticalCenter
                 left: elementIcon.right
-                right: parent.right
+                right: arrow.left
                 leftMargin: units.gridUnit
                 rightMargin: units.gridUnit * 2
             }
@@ -199,7 +200,7 @@ Item {
 
             anchors {
                 left: titleElement.left
-                right: parent.right
+                right: arrow.left
                 rightMargin: units.gridUnit * 2
                 top: titleElement.bottom
             }
@@ -209,6 +210,25 @@ Item {
             opacity: isCurrent ? 0.6 : 0.3
             font.pointSize: theme.smallestFont.pointSize
             elide: Text.ElideMiddle
+        }
+
+        PlasmaCore.SvgItem {
+            id: arrow
+
+            anchors {
+                right: parent.right
+                rightMargin: units.gridUnit * 2
+                verticalCenter: parent.verticalCenter
+            }
+
+            width: visible ? units.iconSizes.small : 0
+            height: width
+
+            visible: (model.hasChildren == true)
+            opacity: (listItem.ListView.view.currentIndex == index) ? 1.0 : 0.4
+
+            svg: arrowsSvg
+            elementId: (Qt.application.layoutDirection == Qt.RightToLeft) ? "left-arrow" : "right-arrow"
         }
     } // listItemDelegate
 
