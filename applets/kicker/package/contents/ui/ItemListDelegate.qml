@@ -226,7 +226,8 @@ Item {
             width: visible ? units.iconSizes.small : 0
             height: width
 
-            visible: (item.ListView.view.currentIndex == index && hasChildren)
+            visible: hasChildren
+            opacity: (item.ListView.view.currentIndex == index) ? 1.0 : 0.4
 
             svg: arrows
             elementId: (Qt.application.layoutDirection == Qt.RightToLeft) ? "left-arrow" : "right-arrow"
