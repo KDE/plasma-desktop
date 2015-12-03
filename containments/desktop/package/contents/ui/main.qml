@@ -202,8 +202,11 @@ DragDrop.DropArea {
         // (cf. QAbstractItemModel::flags() here, but DeclarativeDropArea currently
         // is currently incapable of rejecting drag events.
 
+        var arkService = event.mimeData.formats.indexOf("application/x-kde-ark-dndextract-service") != -1;
+        var arkPath = event.mimeData.formats.indexOf("application/x-kde-ark-dndextract-path") != -1;
+
         // Trigger autoscroll.
-        if (isFolder && event.mimeData.hasUrls) {
+        if (isFolder && (event.mimeData.hasUrls || (arkService && arkPath))) {
             folderViewLayer.view.scrollLeft = (event.x < (units.largeSpacing * 3));
             folderViewLayer.view.scrollRight = (event.x > width - (units.largeSpacing * 3));
             folderViewLayer.view.scrollUp = (event.y < (units.largeSpacing * 3));
@@ -234,7 +237,11 @@ DragDrop.DropArea {
     }
 
     onDrop: {
-        if (isFolder && event.mimeData.hasUrls) {
+        var arkService = event.mimeData.formats.indexOf("application/x-kde-ark-dndextract-service") != -1;
+        var arkPath = event.mimeData.formats.indexOf("application/x-kde-ark-dndextract-path") != -1;
+
+        if (isFolder && (event.mimeData.hasUrls || (arkService && arkPath))) {
+            console.log("inside");
             // Cancel autoscroll.
             folderViewLayer.view.scrollLeft = false;
             folderViewLayer.view.scrollRight = false;

@@ -751,7 +751,7 @@ void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row)
             QDBusMessage::createMethodCall(remoteDBusClient, remoteDBusPath,
                                             QStringLiteral("org.kde.ark.DndExtract"),
                                             QStringLiteral("extractSelectedFilesTo"));
-        message.setArguments(QVariantList() << m_dirModel->dirLister()->url().adjusted(QUrl::PreferLocalFile));
+        message.setArguments(QVariantList() << m_dirModel->dirLister()->url().adjusted(QUrl::PreferLocalFile).toString());
 
         QDBusConnection::sessionBus().call(message);
 
