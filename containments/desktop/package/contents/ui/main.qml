@@ -241,7 +241,6 @@ DragDrop.DropArea {
         var arkPath = event.mimeData.formats.indexOf("application/x-kde-ark-dndextract-path") != -1;
 
         if (isFolder && (event.mimeData.hasUrls || (arkService && arkPath))) {
-            console.log("inside");
             // Cancel autoscroll.
             folderViewLayer.view.scrollLeft = false;
             folderViewLayer.view.scrollRight = false;
