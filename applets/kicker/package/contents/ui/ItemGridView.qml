@@ -59,7 +59,7 @@ FocusScope {
     }
 
     onFocusChanged: {
-        if (!focus) {
+        if (!focus && !root.keyEventProxy.activeFocus) {
             currentIndex = -1;
         }
     }

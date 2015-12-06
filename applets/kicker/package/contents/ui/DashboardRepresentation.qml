@@ -35,7 +35,7 @@ import "../code/tools.js" as Tools
  * Make DND transitions cleaner by performing an item swap instead of index reinsertion.
 */
 
-Kicker.FullScreenWindow {
+Kicker.DashboardWindow {
     id: root
 
     property bool smallScreen: (Math.floor(width / units.iconSizes.huge) <= 22)
@@ -46,6 +46,8 @@ Kicker.FullScreenWindow {
                         highlightItemSvg.margins.left + highlightItemSvg.margins.right))
     property int columns: Math.floor(((smallScreen ? 85 : 80)/100) * Math.ceil(width / cellSize))
     property bool searching: (searchField.text != "")
+
+    keyEventProxy: searchField
 
     onVisibleChanged: {
         reset();
@@ -182,44 +184,12 @@ Kicker.FullScreenWindow {
 
             visible: false
 
-            property string bufferedText
-
             onTextChanged: {
-                runnerModel.query = text;
-            }
-
-            function appendText(appendText) {
-                if (text == "" || searchTimer.running) {
-                    bufferedText += appendText;
-                    searchTimer.start();
-                } else {
-                    text += appendText;
-                }
-            }
-
-            function backspace() {
-                if (searchTimer.running) {
-                    bufferedText = bufferedText.slice(0, -1);
-                } else {
-                    text = text.slice(0, -1);
-                }
+                runnerModel.query = searchField.text;
             }
 
             function clear() {
                 text = "";
-            }
-
-            Timer {
-                id: searchTimer
-
-                interval: 150
-                repeat: false
-
-                onTriggered: {
-                    searchField.focus = true;
-                    searchField.text = searchField.bufferedText;
-                    searchField.bufferedText = "";
-                }
             }
         }
 
@@ -847,24 +817,6 @@ Kicker.FullScreenWindow {
         onClicked: {
             if (mouse.button == Qt.LeftButton) {
                 root.toggle();
-            }
-        }
-
-        Keys.onPressed: {
-            if (event.key == Qt.Key_Escape) {
-                event.accepted = true;
-
-                if (searching) {
-                    searchField.clear();
-                } else {
-                    root.toggle();
-                }
-            } else if (event.key == Qt.Key_Backspace) {
-                event.accepted = true;
-                searchField.backspace();
-            } else if (event.text != "") {
-                event.accepted = true;
-                searchField.appendText(event.text);
             }
         }
     }

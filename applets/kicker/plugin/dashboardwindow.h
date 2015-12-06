@@ -17,26 +17,27 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#ifndef FULLSCREENWINDOW_H
-#define FULLSCREENWINDOW_H
+#ifndef DASHBOARDWINDOW_H
+#define DASHBOARDWINDOW_H
 
 #include <Plasma/Theme>
 
 #include <QQuickWindow>
 #include <QQuickItem>
 
-class FullScreenWindow : public QQuickWindow
+class DashboardWindow : public QQuickWindow
 {
     Q_OBJECT
 
     Q_PROPERTY(QQuickItem* mainItem READ mainItem WRITE setMainItem NOTIFY mainItemChanged)
     Q_PROPERTY(QQuickItem* visualParent READ visualParent WRITE setVisualParent NOTIFY visualParentChanged)
+    Q_PROPERTY(QQuickItem* keyEventProxy READ keyEventProxy WRITE setKeyEventProxy NOTIFY keyEventProxyChanged)
 
     Q_CLASSINFO("DefaultProperty", "mainItem")
 
     public:
-        FullScreenWindow(QQuickItem *parent = 0);
-        ~FullScreenWindow();
+        DashboardWindow(QQuickItem *parent = 0);
+        ~DashboardWindow();
 
         QQuickItem *mainItem() const;
         void setMainItem(QQuickItem *item);
@@ -44,11 +45,15 @@ class FullScreenWindow : public QQuickWindow
         QQuickItem *visualParent() const;
         void setVisualParent(QQuickItem *item);
 
+        QQuickItem *keyEventProxy() const;
+        void setKeyEventProxy(QQuickItem *item);
+
         Q_INVOKABLE void toggle();
 
     Q_SIGNALS:
         void mainItemChanged() const;
         void visualParentChanged() const;
+        void keyEventProxyChanged() const;
 
     private Q_SLOTS:
         void updateTheme();
@@ -57,11 +62,13 @@ class FullScreenWindow : public QQuickWindow
 
     protected:
         bool event(QEvent *event) Q_DECL_OVERRIDE;
+        void keyPressEvent(QKeyEvent *e) Q_DECL_OVERRIDE;
 
     private:
         QQuickItem *m_mainItem;
         QPointer<QQuickItem> m_visualParentItem;
         QPointer<QQuickWindow> m_visualParentWindow;
+        QPointer<QQuickItem> m_keyEventProxy;
         Plasma::Theme m_theme;
 };
 
