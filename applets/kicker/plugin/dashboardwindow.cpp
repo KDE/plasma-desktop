@@ -17,15 +17,16 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#include "fullscreenwindow.h"
+#include "dashboardwindow.h"
 
+#include <QCoreApplication>
 #include <QIcon>
 #include <QScreen>
 
 #include <KWindowEffects>
 #include <KWindowSystem>
 
-FullScreenWindow::FullScreenWindow(QQuickItem *parent) : QQuickWindow(parent ? parent->window() : 0)
+DashboardWindow::DashboardWindow(QQuickItem *parent) : QQuickWindow(parent ? parent->window() : 0)
 , m_mainItem(0)
 , m_visualParentItem(0)
 , m_visualParentWindow(0)
@@ -36,19 +37,19 @@ FullScreenWindow::FullScreenWindow(QQuickItem *parent) : QQuickWindow(parent ? p
 
     setIcon(QIcon::fromTheme("plasma"));
 
-    connect(&m_theme, &Plasma::Theme::themeChanged, this, &FullScreenWindow::updateTheme);
+    connect(&m_theme, &Plasma::Theme::themeChanged, this, &DashboardWindow::updateTheme);
 }
 
-FullScreenWindow::~FullScreenWindow()
+DashboardWindow::~DashboardWindow()
 {
 }
 
-QQuickItem *FullScreenWindow::mainItem() const
+QQuickItem *DashboardWindow::mainItem() const
 {
     return m_mainItem;
 }
 
-void FullScreenWindow::setMainItem(QQuickItem *item)
+void DashboardWindow::setMainItem(QQuickItem *item)
 {
     if (m_mainItem != item) {
         if (m_mainItem) {
@@ -66,16 +67,16 @@ void FullScreenWindow::setMainItem(QQuickItem *item)
     }
 }
 
-QQuickItem *FullScreenWindow::visualParent() const
+QQuickItem *DashboardWindow::visualParent() const
 {
     return m_visualParentItem;
 }
 
-void FullScreenWindow::setVisualParent(QQuickItem *item)
+void DashboardWindow::setVisualParent(QQuickItem *item)
 {
     if (m_visualParentItem != item) {
         if (m_visualParentItem) {
-            disconnect(m_visualParentItem.data(), &QQuickItem::windowChanged, this, &FullScreenWindow::visualParentWindowChanged);
+            disconnect(m_visualParentItem.data(), &QQuickItem::windowChanged, this, &DashboardWindow::visualParentWindowChanged);
         }
 
         m_visualParentItem = item;
@@ -85,14 +86,28 @@ void FullScreenWindow::setVisualParent(QQuickItem *item)
                 visualParentWindowChanged(m_visualParentItem->window());
             }
 
-            connect(m_visualParentItem.data(), &QQuickItem::windowChanged, this, &FullScreenWindow::visualParentWindowChanged);
+            connect(m_visualParentItem.data(), &QQuickItem::windowChanged, this, &DashboardWindow::visualParentWindowChanged);
         }
 
         emit visualParentChanged();
     }
 }
 
-void FullScreenWindow::toggle() {
+QQuickItem *DashboardWindow::keyEventProxy() const
+{
+    return m_keyEventProxy;
+}
+
+void DashboardWindow::setKeyEventProxy(QQuickItem *item)
+{
+    if (m_keyEventProxy != item) {
+        m_keyEventProxy = item;
+
+        emit keyEventProxyChanged();
+    }
+}
+
+void DashboardWindow::toggle() {
     if (isVisible()) {
         close();
     } else {
@@ -102,7 +117,7 @@ void FullScreenWindow::toggle() {
     }
 }
 
-bool FullScreenWindow::event(QEvent *event)
+bool DashboardWindow::event(QEvent *event)
 {
     if (event->type() == QEvent::Expose) {
         KWindowSystem::setState(winId(), NET::SkipTaskbar | NET::SkipPager);
@@ -126,15 +141,45 @@ bool FullScreenWindow::event(QEvent *event)
     return QQuickWindow::event(event);
 }
 
-void FullScreenWindow::updateTheme()
+void DashboardWindow::keyPressEvent(QKeyEvent *e)
+{
+    if (e->key() == Qt::Key_Escape) {
+        toggle();
+
+        return;
+    } else if (m_keyEventProxy && !m_keyEventProxy->hasActiveFocus()
+        && !(e->key() == Qt::Key_Home)
+        && !(e->key() == Qt::Key_End)
+        && !(e->key() == Qt::Key_Left)
+        && !(e->key() == Qt::Key_Up)
+        && !(e->key() == Qt::Key_Right)
+        && !(e->key() == Qt::Key_Down)
+        && !(e->key() == Qt::Key_PageUp)
+        && !(e->key() == Qt::Key_PageDown)
+        && !(e->key() == Qt::Key_Enter)
+        && !(e->key() == Qt::Key_Return)
+        && !(e->key() == Qt::Key_Menu)) {
+        m_keyEventProxy->forceActiveFocus();
+        QEvent* eventCopy = new QKeyEvent(e->type(), e->key(), e->modifiers(),
+            e->nativeScanCode(), e->nativeVirtualKey(), e->nativeModifiers(),
+            e->text(), e->isAutoRepeat(), e->count());
+        QCoreApplication::postEvent(this, eventCopy);
+
+        return;
+    }
+
+    QQuickWindow::keyPressEvent(e);
+}
+
+void DashboardWindow::updateTheme()
 {
     KWindowEffects::enableBlurBehind(winId(), true);
 }
 
-void FullScreenWindow::visualParentWindowChanged(QQuickWindow *window)
+void DashboardWindow::visualParentWindowChanged(QQuickWindow *window)
 {
     if (m_visualParentWindow) {
-        disconnect(m_visualParentWindow.data(), &QQuickWindow::screenChanged, this, &FullScreenWindow::visualParentScreenChanged);
+        disconnect(m_visualParentWindow.data(), &QQuickWindow::screenChanged, this, &DashboardWindow::visualParentScreenChanged);
     }
 
     m_visualParentWindow = window;
@@ -142,11 +187,11 @@ void FullScreenWindow::visualParentWindowChanged(QQuickWindow *window)
     if (m_visualParentWindow) {
         visualParentScreenChanged(m_visualParentWindow->screen());
 
-        connect(m_visualParentWindow.data(), &QQuickWindow::screenChanged, this, &FullScreenWindow::visualParentScreenChanged);
+        connect(m_visualParentWindow.data(), &QQuickWindow::screenChanged, this, &DashboardWindow::visualParentScreenChanged);
     }
 }
 
-void FullScreenWindow::visualParentScreenChanged(QScreen *screen)
+void DashboardWindow::visualParentScreenChanged(QScreen *screen)
 {
     if (screen) {
         setScreen(screen);
