@@ -54,6 +54,7 @@ class DashboardWindow : public QQuickWindow
         void mainItemChanged() const;
         void visualParentChanged() const;
         void keyEventProxyChanged() const;
+        void keyEscapePressed() const;
 
     private Q_SLOTS:
         void updateTheme();

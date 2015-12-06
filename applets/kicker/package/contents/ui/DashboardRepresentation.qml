@@ -49,6 +49,14 @@ Kicker.DashboardWindow {
 
     keyEventProxy: searchField
 
+    onKeyEscapePressed: {
+        if (searching) {
+            searchField.clear();
+        } else {
+            root.toggle();
+        }
+    }
+
     onVisibleChanged: {
         reset();
 

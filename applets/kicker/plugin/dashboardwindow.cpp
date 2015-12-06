@@ -144,7 +144,7 @@ bool DashboardWindow::event(QEvent *event)
 void DashboardWindow::keyPressEvent(QKeyEvent *e)
 {
     if (e->key() == Qt::Key_Escape) {
-        toggle();
+        emit keyEscapePressed();
 
         return;
     } else if (m_keyEventProxy && !m_keyEventProxy->hasActiveFocus()
