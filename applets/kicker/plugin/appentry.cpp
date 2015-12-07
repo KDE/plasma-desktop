@@ -47,8 +47,6 @@
 #include <KSharedConfig>
 #include <KStartupInfo>
 
-QObject *AppEntry::m_appletInterface = nullptr;
-QQmlPropertyMap *AppEntry::m_appletConfig = nullptr;
 MenuEntryEditor *AppEntry::m_menuEntryEditor = nullptr;
 
 AppEntry::AppEntry(AbstractModel *owner, KService::Ptr service, NameFormat nameFormat)
@@ -87,12 +85,6 @@ void AppEntry::init(NameFormat nameFormat)
     }
 
     m_icon = QIcon::fromTheme(m_service->icon(), QIcon::fromTheme("unknown"));
-
-    if (!m_appletInterface) {
-        AbstractModel *rootModel = m_owner->rootModel();
-        m_appletInterface = rootModel->property("appletInterface").value<QObject *>();
-        m_appletConfig = qobject_cast<QQmlPropertyMap *>(m_appletInterface->property("configuration").value<QObject *>());
-    }
 
     if (!m_menuEntryEditor) {
         m_menuEntryEditor = new MenuEntryEditor();
@@ -154,17 +146,19 @@ QVariantList AppEntry::actions() const
 
     bool hasAddLauncher = false;
 
-    if (ContainmentInterface::mayAddLauncher(m_appletInterface, ContainmentInterface::Desktop)) {
+    QObject *appletInterface = m_owner->rootModel()->property("appletInterface").value<QObject *>();
+
+    if (ContainmentInterface::mayAddLauncher(appletInterface, ContainmentInterface::Desktop)) {
         actionList << Kicker::createActionItem(i18n("Add to Desktop"), "addToDesktop");
         hasAddLauncher = true;
     }
 
-    if (ContainmentInterface::mayAddLauncher(m_appletInterface, ContainmentInterface::Panel)) {
+    if (ContainmentInterface::mayAddLauncher(appletInterface, ContainmentInterface::Panel)) {
         actionList << Kicker::createActionItem(i18n("Add to Panel"), "addToPanel");
         hasAddLauncher = true;
     }
 
-    if (ContainmentInterface::mayAddLauncher(m_appletInterface, ContainmentInterface::TaskManager, m_service->entryPath())) {
+    if (ContainmentInterface::mayAddLauncher(appletInterface, ContainmentInterface::TaskManager, m_service->entryPath())) {
         actionList << Kicker::createActionItem(i18n("Add as Launcher"), "addToTaskManager");
         hasAddLauncher = true;
     }
@@ -204,8 +198,10 @@ QVariantList AppEntry::actions() const
     }
 #endif
 
-    if (m_appletConfig && m_appletConfig->contains("hiddenApplications") && qobject_cast<AppsModel *>(m_owner)) {
-        const QStringList &hiddenApps = m_appletConfig->value("hiddenApplications").toStringList();
+    QQmlPropertyMap *appletConfig = qobject_cast<QQmlPropertyMap *>(appletInterface->property("configuration").value<QObject *>());
+
+    if (appletConfig && appletConfig->contains("hiddenApplications") && qobject_cast<AppsModel *>(m_owner)) {
+        const QStringList &hiddenApps = appletConfig->value("hiddenApplications").toStringList();
 
         if (!hiddenApps.contains(m_service->menuId())) {
             actionList << Kicker::createActionItem(i18n("Hide Application"), "hideApplication");
@@ -233,19 +229,25 @@ bool AppEntry::run(const QString& actionId, const QVariant &argument)
             "org.kde.plasma.kicker");
 
         return true;
-    } else if (actionId == "addToDesktop" && ContainmentInterface::mayAddLauncher(m_appletInterface, ContainmentInterface::Desktop)) {
-        ContainmentInterface::addLauncher(m_appletInterface, ContainmentInterface::Desktop, m_service->entryPath());
-    } else if (actionId == "addToPanel" && ContainmentInterface::mayAddLauncher(m_appletInterface, ContainmentInterface::Panel)) {
-        ContainmentInterface::addLauncher(m_appletInterface, ContainmentInterface::Panel, m_service->entryPath());
-    } else if (actionId == "addToTaskManager" && ContainmentInterface::mayAddLauncher(m_appletInterface, ContainmentInterface::TaskManager, m_service->entryPath())) {
-        ContainmentInterface::addLauncher(m_appletInterface, ContainmentInterface::TaskManager, m_service->entryPath());
+    }
+
+    QObject *appletInterface = m_owner->rootModel()->property("appletInterface").value<QObject *>();
+
+    if (actionId == "addToDesktop" && ContainmentInterface::mayAddLauncher(appletInterface, ContainmentInterface::Desktop)) {
+        ContainmentInterface::addLauncher(appletInterface, ContainmentInterface::Desktop, m_service->entryPath());
+    } else if (actionId == "addToPanel" && ContainmentInterface::mayAddLauncher(appletInterface, ContainmentInterface::Panel)) {
+        ContainmentInterface::addLauncher(appletInterface, ContainmentInterface::Panel, m_service->entryPath());
+    } else if (actionId == "addToTaskManager" && ContainmentInterface::mayAddLauncher(appletInterface, ContainmentInterface::TaskManager, m_service->entryPath())) {
+        ContainmentInterface::addLauncher(appletInterface, ContainmentInterface::TaskManager, m_service->entryPath());
     } else if (actionId == "editApplication" && m_menuEntryEditor->canEdit(m_service->entryPath())) {
         m_menuEntryEditor->edit(m_service->entryPath(), m_service->menuId());
 
         return true;
     } else if (actionId == "removeApplication") {
-        if (m_appletConfig && m_appletConfig->contains("removeApplicationCommand")) {
-            const QStringList &removeAppCmd = KShell::splitArgs(m_appletConfig->value("removeApplicationCommand").toString());
+        QQmlPropertyMap *appletConfig = qobject_cast<QQmlPropertyMap *>(appletInterface->property("configuration").value<QObject *>());
+
+        if (appletConfig && appletConfig->contains("removeApplicationCommand")) {
+            const QStringList &removeAppCmd = KShell::splitArgs(appletConfig->value("removeApplicationCommand").toString());
 
             if (!removeAppCmd.isEmpty()) {
                 return QProcess::startDetached(removeAppCmd.first(), removeAppCmd.mid(1) << argument.toString());
