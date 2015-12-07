@@ -28,8 +28,6 @@
 class AppsModel;
 class MenuEntryEditor;
 
-class QQmlPropertyMap;
-
 class AppEntry : public AbstractEntry
 {
     public:
@@ -71,8 +69,6 @@ class AppEntry : public AbstractEntry
         QString m_description;
         QIcon m_icon;
         KService::Ptr m_service;
-        static QObject *m_appletInterface;
-        static QQmlPropertyMap *m_appletConfig;
         static MenuEntryEditor *m_menuEntryEditor;
 };
 
