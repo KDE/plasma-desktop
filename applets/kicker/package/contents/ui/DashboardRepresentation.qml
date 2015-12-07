@@ -38,7 +38,8 @@ import "../code/tools.js" as Tools
 Kicker.DashboardWindow {
     id: root
 
-    property bool smallScreen: (Math.floor(width / units.iconSizes.huge) <= 22)
+    property bool smallScreen: ((Math.floor(width / units.iconSizes.huge) <= 22) || (Math.floor(height / units.iconSizes.huge) <= 14))
+
     property int iconSize: smallScreen ? units.iconSizes.large : units.iconSizes.huge
     property int cellSize: iconSize + theme.mSize(theme.defaultFont).height
         + (2 * units.smallSpacing)
