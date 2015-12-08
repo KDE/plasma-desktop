@@ -281,7 +281,15 @@ bool RecentUsageModel::trigger(int row, const QString &actionId, const QVariant 
         return true;
     } else if (actionId == "forget" && withinBounds) {
         if (m_activitiesModel) {
-            static_cast<ResultModel *>(m_activitiesModel.data())->forgetResource(row);
+            QModelIndex idx = sourceModel()->index(row, 0);
+            QSortFilterProxyModel *sourceProxy = qobject_cast<QSortFilterProxyModel *>(sourceModel());
+
+            while (sourceProxy) {
+                idx = sourceProxy->mapToSource(idx);
+                sourceProxy = qobject_cast<QSortFilterProxyModel *>(sourceProxy->sourceModel());
+            }
+
+            static_cast<ResultModel *>(m_activitiesModel.data())->forgetResource(idx.row());
         }
 
         return false;
