@@ -45,16 +45,6 @@ namespace KAStats = KActivities::Experimental::Stats;
 using namespace KAStats;
 using namespace KAStats::Terms;
 
-inline KAStats::ResultModel *activitiesModel(RecentUsageModel *model)
-{
-    if (model->usage() == RecentUsageModel::AppsAndDocs) {
-        auto proxy = static_cast<GroupSortProxy*>(model->sourceModel());
-        return static_cast<KAStats::ResultModel*>(proxy->sourceModel());
-    } else {
-        return static_cast<KAStats::ResultModel*>(model->sourceModel());
-    }
-}
-
 GroupSortProxy::GroupSortProxy(QAbstractItemModel *sourceModel) : QSortFilterProxyModel(nullptr)
 {
     sourceModel->setParent(this);
@@ -64,6 +54,30 @@ GroupSortProxy::GroupSortProxy(QAbstractItemModel *sourceModel) : QSortFilterPro
 
 GroupSortProxy::~GroupSortProxy()
 {
+}
+
+InvalidAppsFilterProxy::InvalidAppsFilterProxy(QAbstractItemModel *sourceModel) : QSortFilterProxyModel(nullptr)
+{
+    sourceModel->setParent(this);
+    setSourceModel(sourceModel);
+}
+
+InvalidAppsFilterProxy::~InvalidAppsFilterProxy()
+{
+}
+
+bool InvalidAppsFilterProxy::filterAcceptsRow(int source_row, const QModelIndex &source_parent) const
+{
+    Q_UNUSED(source_parent);
+
+    const QString resource = sourceModel()->data(sourceModel()->index(source_row, 0),
+        ResultModel::ResourceRole).toString();
+
+    if (resource.startsWith(QLatin1String("applications:"))) {
+        return KService::serviceByStorageId(resource.section(':', 1));
+    }
+
+    return true;
 }
 
 bool GroupSortProxy::lessThan(const QModelIndex &left, const QModelIndex &right) const
@@ -112,14 +126,14 @@ QString RecentUsageModel::description() const
 
 QString RecentUsageModel::resourceAt(int row) const
 {
-    if (m_usage == AppsAndDocs) {
-        GroupSortProxy* sortProxy = static_cast<GroupSortProxy *>(sourceModel());
+    QSortFilterProxyModel *sourceProxy = qobject_cast<QSortFilterProxyModel *>(sourceModel());
 
-        return sortProxy->sourceModel()->data(sortProxy->mapToSource(sortProxy->index(row, 0)),
+    if (sourceProxy) {
+        return sourceProxy->sourceModel()->data(sourceProxy->mapToSource(sourceProxy->index(row, 0)),
             ResultModel::ResourceRole).toString();
-    } else {
-        return sourceModel()->data(index(row, 0), ResultModel::ResourceRole).toString();
     }
+
+    return sourceModel()->data(index(row, 0), ResultModel::ResourceRole).toString();
 }
 
 QVariant RecentUsageModel::data(const QModelIndex &index, int role) const
@@ -270,14 +284,22 @@ bool RecentUsageModel::trigger(int row, const QString &actionId, const QVariant 
 
         return true;
     } else if (actionId == "forget" && withinBounds) {
-        if (sourceModel()) {
-            activitiesModel(this)->forgetResource(row);
+        if (m_activitiesModel) {
+            QModelIndex idx = sourceModel()->index(row, 0);
+            QSortFilterProxyModel *sourceProxy = qobject_cast<QSortFilterProxyModel *>(sourceModel());
+
+            while (sourceProxy) {
+                idx = sourceProxy->mapToSource(idx);
+                sourceProxy = qobject_cast<QSortFilterProxyModel *>(sourceProxy->sourceModel());
+            }
+
+            static_cast<ResultModel *>(m_activitiesModel.data())->forgetResource(idx.row());
         }
 
         return false;
     } else if (actionId == "forgetAll") {
-        if (sourceModel()) {
-            activitiesModel(this)->forgetAllResources();
+        if (m_activitiesModel) {
+            static_cast<ResultModel *>(m_activitiesModel.data())->forgetAllResources();
         }
 
         return false;
@@ -365,7 +387,8 @@ void RecentUsageModel::refresh()
         }
     }
 
-    ResultModel *model = new ResultModel(query);
+    m_activitiesModel = new ResultModel(query);
+    QAbstractItemModel *model = m_activitiesModel;
 
     QModelIndex index;
 
@@ -373,11 +396,15 @@ void RecentUsageModel::refresh()
         model->fetchMore(index);
     }
 
-    if (m_usage == AppsAndDocs) {
-        setSourceModel(new GroupSortProxy(model));
-    } else {
-        setSourceModel(model);
+    if (m_usage != OnlyDocs) {
+        model = new InvalidAppsFilterProxy(model);
     }
+
+    if (m_usage == AppsAndDocs) {
+        model = new GroupSortProxy(model);
+    }
+
+    setSourceModel(model);
 
     delete oldModel;
 }

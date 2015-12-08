@@ -1,7 +1,7 @@
 var kickoffConfig = ConfigFile("kickoffrc");
 
 kickoffConfig.group = "Favorites";
-var favorites = kickoffConfig.readEntry("FavoriteURLs");
+var favorites = kickoffConfig.readEntry("FavoriteURLs").split(',');
 
 kickoffConfig.group = "SystemApplications";
 var systemApplications = kickoffConfig.readEntry("DesktopFiles").split(',');
