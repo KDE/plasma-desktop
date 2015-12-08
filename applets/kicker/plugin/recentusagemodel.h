@@ -34,6 +34,16 @@ class GroupSortProxy : public QSortFilterProxyModel
         bool lessThan(const QModelIndex &left, const QModelIndex &right) const;
 };
 
+class InvalidAppsFilterProxy : public QSortFilterProxyModel
+{
+    public:
+        explicit InvalidAppsFilterProxy(QAbstractItemModel *sourceModel);
+        ~InvalidAppsFilterProxy();
+
+    protected:
+        bool filterAcceptsRow(int source_row, const QModelIndex & source_parent) const;
+};
+
 class RecentUsageModel : public ForwardingModel
 {
     Q_OBJECT
@@ -67,6 +77,7 @@ class RecentUsageModel : public ForwardingModel
         QString forgetAllActionName() const;
 
         IncludeUsage m_usage;
+        QPointer<QAbstractItemModel> m_activitiesModel;
 };
 
 #endif
