@@ -30,20 +30,29 @@ class DragHelper : public QObject
 {
     Q_OBJECT
 
+    Q_PROPERTY(int dragIconSize READ dragIconSize WRITE setDragIconSize NOTIFY dragIconSizeChanged)
+
     public:
         DragHelper(QObject *parent = 0);
         ~DragHelper();
+
+        int dragIconSize() const;
+        void setDragIconSize(int size);
 
         Q_INVOKABLE bool isDrag(int oldX, int oldY, int newX, int newY) const;
         Q_INVOKABLE void startDrag(QQuickItem* item, const QString &mimeType,
             const QVariant &mimeData, const QUrl &url, const QIcon &icon);
 
     Q_SIGNALS:
+        void dragIconSizeChanged() const;
         void dropped() const;
 
     private Q_SLOTS:
         void startDragInternal(QQuickItem* item, const QString &mimeType,
             const QVariant &mimeData, const QUrl &url, const QIcon &icon) const;
+
+    private:
+        int m_dragIconSize;
 };
 
 #endif

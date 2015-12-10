@@ -185,7 +185,11 @@ Item {
         value: !iconsOnly
     }
 
-    TaskManager.DragHelper { id: dragHelper }
+    TaskManager.DragHelper {
+        id: dragHelper
+
+        dragIconSize: units.iconSizes.medium
+    }
 
     PlasmaCore.FrameSvgItem {
         id: taskFrame
