@@ -49,11 +49,9 @@ Item {
             // of the TaskManager::GroupManager::TaskSortingStrategy enum.
             if (tasks.dragSource && backend.sortingStrategy == 1) {
                 if (tasks.dragSource != above) {
-                    if (iconsOnly || !tasks.dragSource.isLauncher && !(above && "isLauncher" in above && above.isLauncher)) {
-                        itemMove(tasks.dragSource.itemId,
-                            TaskTools.insertionIndexAt(tasks.dragSource.itemIndex,
-                                event.x, event.y));
-                    }
+                    itemMove(tasks.dragSource.itemId,
+                        TaskTools.insertionIndexAt(tasks.dragSource.itemIndex,
+                            event.x, event.y));
                 }
             } else if (!tasks.dragSource && above && hoveredItem != above) {
                 hoveredItem = above;
