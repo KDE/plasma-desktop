@@ -28,11 +28,26 @@
 #include <QPointer>
 
 DragHelper::DragHelper(QObject* parent) : QObject(parent)
+, m_dragIconSize(32)
 {
 }
 
 DragHelper::~DragHelper()
 {
+}
+
+int DragHelper::dragIconSize() const
+{
+    return m_dragIconSize;
+}
+
+void DragHelper::setDragIconSize(int size)
+{
+    if (m_dragIconSize != size) {
+        m_dragIconSize = size;
+
+        emit dragIconSizeChanged();
+    }
 }
 
 bool DragHelper::isDrag(int oldX, int oldY, int newX, int newY) const
@@ -66,8 +81,7 @@ void DragHelper::startDragInternal(QQuickItem *item, const QString &mimeType,
 
     QDrag *drag = new QDrag(static_cast<QQuickItem *>(parent()));
     drag->setMimeData(dragData);
-    drag->setPixmap(icon.pixmap(QSize(48, 48)));
-    drag->setHotSpot(QPoint(drag->pixmap().width() / 2, drag->pixmap().height() / 2));
+    drag->setPixmap(icon.pixmap(QSize(m_dragIconSize, m_dragIconSize)));
 
     grabber->grabMouse();
 
