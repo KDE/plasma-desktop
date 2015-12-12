@@ -37,11 +37,14 @@ class GroupSortProxy : public QSortFilterProxyModel
 class InvalidAppsFilterProxy : public QSortFilterProxyModel
 {
     public:
-        explicit InvalidAppsFilterProxy(QAbstractItemModel *sourceModel);
+        explicit InvalidAppsFilterProxy(AbstractModel *parentModel, QAbstractItemModel *sourceModel);
         ~InvalidAppsFilterProxy();
 
     protected:
         bool filterAcceptsRow(int source_row, const QModelIndex & source_parent) const;
+
+    private:
+        QPointer<AbstractModel> m_parentModel;
 };
 
 class RecentUsageModel : public ForwardingModel
