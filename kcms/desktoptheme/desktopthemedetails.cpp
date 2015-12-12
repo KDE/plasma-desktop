@@ -426,7 +426,7 @@ void DesktopThemeDetails::updateReplaceItemList(const int& item)
     disconnect(itemComboBox, static_cast<void (QComboBox::*)(int)>(&QComboBox::currentIndexChanged), this, &DesktopThemeDetails::replacementItemChanged);
     itemComboBox->clear();
     for (int i = 0; i < m_themes.size(); ++i) {
-       QString displayedDropListItem = i18n("%1 %2", m_themes.key(i), displayedItemText(item));
+       QString displayedDropListItem = i18nc("%1 is the name of the theme, %2 is the type of the element (background, icon, note, etc)", "%1 %2", m_themes.key(i), displayedItemText(item));
        itemComboBox->addItem(displayedDropListItem);
     }
     itemComboBox->addItem(i18n("File..."));
