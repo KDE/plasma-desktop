@@ -21,6 +21,7 @@
 #include "actionlist.h"
 #include "appsmodel.h"
 #include "appentry.h"
+#include "favoritesmodel.h"
 
 #include <config-X11.h>
 
@@ -56,8 +57,12 @@ GroupSortProxy::~GroupSortProxy()
 {
 }
 
-InvalidAppsFilterProxy::InvalidAppsFilterProxy(QAbstractItemModel *sourceModel) : QSortFilterProxyModel(nullptr)
+InvalidAppsFilterProxy::InvalidAppsFilterProxy(AbstractModel *parentModel, QAbstractItemModel *sourceModel) : QSortFilterProxyModel(nullptr)
+, m_parentModel(parentModel)
 {
+    connect(parentModel, &AbstractModel::favoritesModelChanged, this, &InvalidAppsFilterProxy::connectNewFavoritesModel);
+    connectNewFavoritesModel();
+
     sourceModel->setParent(this);
     setSourceModel(sourceModel);
 }
@@ -66,15 +71,26 @@ InvalidAppsFilterProxy::~InvalidAppsFilterProxy()
 {
 }
 
+void InvalidAppsFilterProxy::connectNewFavoritesModel()
+{
+    FavoritesModel* favoritesModel = static_cast<FavoritesModel *>(m_parentModel->favoritesModel());
+    connect(favoritesModel, &FavoritesModel::favoritesChanged, this, &QSortFilterProxyModel::invalidate);
+
+    invalidate();
+}
+
 bool InvalidAppsFilterProxy::filterAcceptsRow(int source_row, const QModelIndex &source_parent) const
 {
     Q_UNUSED(source_parent);
 
-    const QString resource = sourceModel()->data(sourceModel()->index(source_row, 0),
-        ResultModel::ResourceRole).toString();
+    const QString resource = sourceModel()->index(source_row, 0).data(ResultModel::ResourceRole).toString();
 
     if (resource.startsWith(QLatin1String("applications:"))) {
-        return KService::serviceByStorageId(resource.section(':', 1));
+        KService::Ptr service = KService::serviceByStorageId(resource.section(':', 1));
+
+        FavoritesModel* favoritesModel = m_parentModel ? static_cast<FavoritesModel *>(m_parentModel->favoritesModel()) : nullptr;
+
+        return (service && (!favoritesModel || !favoritesModel->isFavorite(service->storageId())));
     }
 
     return true;
@@ -397,7 +413,7 @@ void RecentUsageModel::refresh()
     }
 
     if (m_usage != OnlyDocs) {
-        model = new InvalidAppsFilterProxy(model);
+        model = new InvalidAppsFilterProxy(this, model);
     }
 
     if (m_usage == AppsAndDocs) {
