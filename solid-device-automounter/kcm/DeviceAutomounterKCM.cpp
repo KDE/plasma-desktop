@@ -107,17 +107,10 @@ void DeviceAutomounterKCM::forgetSelectedDevices()
 
 void DeviceAutomounterKCM::enabledChanged()
 {
-    if (automountEnabled->isChecked()) {
-        automountOnLogin->setEnabled(false);
-        automountOnPlugin->setEnabled(false);
-        automountUnknownDevices->setEnabled(false);
-        deviceView->setEnabled(false);
-    } else {
-        automountOnLogin->setEnabled(true);
-        automountOnPlugin->setEnabled(true);
-        automountUnknownDevices->setEnabled(true);
-        deviceView->setEnabled(true);
-    }
+    automountOnLogin->setEnabled(automountEnabled->isChecked());
+    automountOnPlugin->setEnabled(automountEnabled->isChecked());
+    automountUnknownDevices->setEnabled(automountEnabled->isChecked());
+    deviceView->setEnabled(automountEnabled->isChecked());
 }
 
 void DeviceAutomounterKCM::load()
