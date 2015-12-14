@@ -473,7 +473,7 @@ DragDrop.DropArea {
             function delayedSyncWithItem() {
                 placeHolder.x = placeHolder.syncItem.x;
                 placeHolder.y = placeHolder.syncItem.y;
-                placeHolder.width = placeHolder.syncItem.width + (plasmoid.immutable ? 0 : syncItem.handleWidth)
+                placeHolder.width = placeHolder.syncItem.width + (plasmoid.immutable || !syncItem.showAppletHandle ? 0 : syncItem.handleWidth)
                 placeHolder.height = placeHolder.syncItem.height;
                 // Only positionItem here, we don't want to save.
                 LayoutManager.positionItem(placeHolder);
