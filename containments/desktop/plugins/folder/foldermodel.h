@@ -191,6 +191,10 @@ class FolderModel : public QSortFilterProxyModel
         bool isDir(const QModelIndex &index, const KDirModel *dirModel) const;
         bool lessThan(const QModelIndex &left, const QModelIndex &right) const;
 
+        Q_INVOKABLE void paste();
+        Q_INVOKABLE void copy();
+        Q_INVOKABLE void cut();
+
     Q_SIGNALS:
         void urlChanged() const;
         void resolvedUrlChanged() const;
@@ -220,9 +224,6 @@ class FolderModel : public QSortFilterProxyModel
         void statResult(KJob *job);
         void evictFromIsDirCache(const KFileItemList &items);
         void selectionChanged(QItemSelection selected, QItemSelection deselected);
-        void copy();
-        void cut();
-        void paste();
         void pasteTo();
         void refresh();
         void moveSelectedToTrash();

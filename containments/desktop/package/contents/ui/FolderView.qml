@@ -671,6 +671,12 @@ Item {
                     } else if (event.key == Qt.Key_End) {
                         currentIndex = count - 1;
                         updateSelection(event.modifiers);
+                    } else if (event.matches(StandardKey.Copy)) {
+                        dir.copy();
+                    } else if (event.matches(StandardKey.Paste)) {
+                        dir.paste();
+                    } else if (event.matches(StandardKey.Cut)) {
+                        dir.cut();
                     }
                 }
 
