@@ -72,7 +72,7 @@ DragDrop.DropArea {
     property int handleDelay: 800
     property real haloOpacity: 0.5
 
-    property int iconSize: 16
+    property int iconSize: units.iconSizes.small
     property int iconWidth: iconSize
     property int iconHeight: iconWidth
 
