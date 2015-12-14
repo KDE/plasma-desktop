@@ -20,8 +20,8 @@
 var positions = []
 
 var cellSize = {
-    width: 24,
-    height: 24
+    width: units.gridUnit,
+    height: units.gridUnit
 }
 
 var defaultAppletSize = {
