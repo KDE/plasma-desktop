@@ -673,6 +673,16 @@ void FolderModel::addDragImage(QDrag *drag, int x, int y)
 
 void FolderModel::dragSelected(int x, int y)
 {
+    // Avoid starting a drag synchronously in a mouse handler or interferes with
+    // child event filtering in parent items (and thus e.g. press-and-hold hand-
+    // ling in a containment).
+    QMetaObject::invokeMethod(this, "dragSelectedInternal", Qt::QueuedConnection,
+        Q_ARG(int, x),
+        Q_ARG(int, y));
+}
+
+void FolderModel::actuallyDragSelected(int x, int y)
+{
     if (!m_viewAdapter || !m_selectionModel->hasSelection()) {
         return;
     }

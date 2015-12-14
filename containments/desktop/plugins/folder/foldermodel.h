@@ -220,6 +220,7 @@ class FolderModel : public QSortFilterProxyModel
         bool matchPattern(const KFileItem &item) const;
 
     private Q_SLOTS:
+        void dragSelectedInternal(int x, int y);
         void dirListFailed(const QString &error);
         void statResult(KJob *job);
         void evictFromIsDirCache(const KFileItemList &items);
