@@ -681,7 +681,7 @@ void FolderModel::dragSelected(int x, int y)
         Q_ARG(int, y));
 }
 
-void FolderModel::actuallyDragSelected(int x, int y)
+void FolderModel::dragSelectedInternal(int x, int y)
 {
     if (!m_viewAdapter || !m_selectionModel->hasSelection()) {
         return;
