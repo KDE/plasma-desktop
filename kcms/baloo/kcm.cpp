@@ -129,7 +129,7 @@ void ServerConfigModule::save()
     else {
         QDBusMessage message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.baloo"),
                                                               QStringLiteral("/"),
-                                                              QStringLiteral("org.kde.baloo"),
+                                                              QStringLiteral("org.kde.baloo.main"),
                                                               QStringLiteral("quit"));
 
         QDBusConnection::sessionBus().asyncCall(message);
@@ -140,12 +140,7 @@ void ServerConfigModule::save()
     QProcess::startDetached(exe);
 
     // Update the baloo_file's config cache
-    QDBusMessage message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.baloo"),
-                                                          QStringLiteral("/"),
-                                                          QStringLiteral("org.kde.baloo"),
-                                                          QStringLiteral("updateConfig"));
-
-    QDBusConnection::sessionBus().asyncCall(message);
+    config.refresh();
 
     // all values saved -> no changes
     Q_EMIT changed(false);
