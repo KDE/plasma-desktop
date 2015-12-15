@@ -157,6 +157,12 @@ PlasmaCore.ToolTipArea {
             Layout.minimumHeight: (fullRepresentation && fullRepresentation.Layout) ? fullRepresentation.Layout.minimumHeight: 0
             Layout.maximumWidth: (fullRepresentation && fullRepresentation.Layout) ? fullRepresentation.Layout.maximumWidth : Infinity
             Layout.maximumHeight: (fullRepresentation && fullRepresentation.Layout) ? fullRepresentation.Layout.maximumHeight: Infinity
+
+            onActiveFocusChanged: {
+                if (activeFocus && fullRepresentation) {
+                    fullRepresentation.forceActiveFocus()
+                }
+            }
         }
 
         onVisibleChanged: {
