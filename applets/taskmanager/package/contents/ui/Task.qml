@@ -297,7 +297,7 @@ MouseArea {
 
         anchors {
             fill: parent
-            leftMargin: taskFrame.margins.left + icon.width + (units.smallSpacing * 2)
+            leftMargin: taskFrame.margins.left + icon.width + units.smallSpacing
             topMargin: taskFrame.margins.top
             rightMargin: taskFrame.margins.right
             bottomMargin: taskFrame.margins.bottom
