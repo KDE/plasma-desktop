@@ -155,7 +155,12 @@ MouseArea {
     PlasmaCore.FrameSvgItem {
         id: frame
 
-        anchors.fill: parent
+        anchors {
+            fill: parent
+
+            topMargin: (!inPopup && taskList.rows > 1) ? units.smallSpacing / 4 : 0
+            bottomMargin: (!inPopup && taskList.rows > 1) ? units.smallSpacing / 4 : 0
+        }
 
         imagePath: "widgets/tasks"
         property string basePrefix: "normal"
