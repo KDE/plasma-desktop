@@ -265,7 +265,12 @@ void TextLabel::paint(QPainter* painter)
         m_cachedShadow = QPixmap();
     }
 
-    m_layout.setFont(QFontDatabase::systemFont(QFontDatabase::GeneralFont));
+    QFont font = QFontDatabase::systemFont(QFontDatabase::GeneralFont);
+    QFontMetrics fm(QFontDatabase::systemFont(QFontDatabase::GeneralFont));
+    if (fm.height() > boundingRect().toRect().height()) {
+        font.setPixelSize(boundingRect().toRect().height());
+    }
+    m_layout.setFont(font);
     m_layout.setTextOption(textOption());
 
     layoutText(m_layout, text(), boundingRect().toRect().size());
