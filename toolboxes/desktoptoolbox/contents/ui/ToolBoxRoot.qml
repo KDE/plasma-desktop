@@ -57,6 +57,12 @@ Item {
     LayoutMirroring.enabled: (Qt.application.layoutDirection === Qt.RightToLeft)
     LayoutMirroring.childrenInherit: true
 
+    onVisibleChanged: {
+        if (!visible && toolBoxLoader.item) {
+            toolBoxLoader.item.visible = false
+        }
+    }
+
     ToolBoxButton {
         id: toolBoxButton
         visible: false
