@@ -158,8 +158,10 @@ MouseArea {
         anchors {
             fill: parent
 
-            topMargin: (!inPopup && (tasks.vertical ? taskList.cols : taskList.rows) > 1) ? units.smallSpacing / 4 : 0
-            bottomMargin: (!inPopup && (tasks.vertical ? taskList.cols : taskList.rows) > 1) ? units.smallSpacing / 4 : 0
+            topMargin: (!tasks.vertical && taskList.rows > 1) ? units.smallSpacing / 4 : 0
+            bottomMargin: (!tasks.vertical && taskList.rows > 1) ? units.smallSpacing / 4 : 0
+            leftMargin: ((inPopup || tasks.vertical) && taskList.columns > 1) ? units.smallSpacing / 4 : 0
+            rightMargin: ((inPopup || tasks.vertical) && taskList.columns > 1) ? units.smallSpacing / 4 : 0
         }
 
         imagePath: "widgets/tasks"
