@@ -44,21 +44,73 @@ PlasmaComponents.Button {
         onPositionChanged: {
             switch (panel.location) {
             case PlasmaCore.Types.TopEdge:
-                configDialog.y = Math.min(panel.screen.geometry.y + panel.screen.geometry.height/2, mouse.screenY - mapToItem(dialogRoot, 0, startMouseY).y);
-                panel.thickness = Math.max(units.gridUnit, configDialog.y - panel.y);
+                var y = Math.min(panel.screen.geometry.y + panel.screen.geometry.height/2, mouse.screenY - mapToItem(dialogRoot, 0, startMouseY).y);
+                var thickness = Math.max(units.gridUnit, configDialog.y - panel.y);
+
+                if (thickness % 2 != 0) {
+                    if (mouse.y > startMouseY) {
+                        thickness += 1;
+                        y -= 1;
+                    } else {
+                        thickness -= 1;
+                        y += 1;
+                    }
+                }
+
+                configDialog.y = y;
+                panel.thickness = thickness;
                 break;
             case PlasmaCore.Types.LeftEdge:
-                configDialog.x = Math.min(panel.screen.geometry.x + panel.screen.geometry.width/2, mouse.screenX - mapToItem(dialogRoot, startMouseX, 0).x);
-                panel.thickness = Math.max(units.gridUnit, configDialog.x - panel.x);
+                var x = Math.min(panel.screen.geometry.x + panel.screen.geometry.width/2, mouse.screenX - mapToItem(dialogRoot, startMouseX, 0).x);
+                var thickness = Math.max(units.gridUnit, configDialog.x - panel.x);
+
+                if (thickness % 2 != 0) {
+                    if (mouse.x > startMouseX) {
+                        thickness += 1;
+                        x += 1;
+                    } else {
+                        thickness -= 1;
+                        x -= 1;
+                    }
+                }
+
+                configDialog.x = x;
+                panel.thickness = thickness;
                 break;
             case PlasmaCore.Types.RightEdge:
-                configDialog.x = Math.max(panel.screen.geometry.x + panel.screen.geometry.width/2, mouse.screenX - mapToItem(dialogRoot, startMouseX, 0).x);
-                panel.thickness = Math.max(units.gridUnit, panel.screen.geometry.x + panel.screen.geometry.width - (configDialog.x + configDialog.width));
+                var x = Math.max(panel.screen.geometry.x + panel.screen.geometry.width/2, mouse.screenX - mapToItem(dialogRoot, startMouseX, 0).x);
+                var thickness = Math.max(units.gridUnit, panel.screen.geometry.x + panel.screen.geometry.width - (configDialog.x + configDialog.width));
+
+                if (thickness % 2 != 0) {
+                    if (mouse.x > startMouseX) {
+                        thickness -= 1;
+                        x += 1;
+                    } else {
+                        thickness += 1;
+                        x -= 1;
+                    }
+                }
+
+                configDialog.x = x;
+                panel.thickness = thickness;
                 break;
             case PlasmaCore.Types.BottomEdge:
             default:
-                configDialog.y = Math.max(panel.screen.geometry.y + panel.screen.geometry.height/2, mouse.screenY - mapToItem(dialogRoot, 0, startMouseY).y);
-                panel.thickness = Math.max(units.gridUnit, panel.screen.geometry.y + panel.screen.geometry.height - (configDialog.y + configDialog.height));
+                var y = Math.max(panel.screen.geometry.y + panel.screen.geometry.height/2, mouse.screenY - mapToItem(dialogRoot, 0, startMouseY).y);
+                var thickness = Math.max(units.gridUnit, panel.screen.geometry.y + panel.screen.geometry.height - (y + configDialog.height));
+
+                if (thickness % 2 != 0) {
+                    if (mouse.y > startMouseY) {
+                        thickness -= 1;
+                        y += 1;
+                    } else {
+                        thickness += 1;
+                        y -= 1;
+                    }
+                }
+
+                configDialog.y = y;
+                panel.thickness = thickness;
             }
         }
     }
