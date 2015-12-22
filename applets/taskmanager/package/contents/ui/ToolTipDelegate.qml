@@ -48,7 +48,7 @@ Column {
         height: childrenRect.height
         spacing: units.largeSpacing
         Repeater {
-            model: windows
+            model: plasmoid.configuration.showToolTips ? windows : null
 
             PlasmaCore.WindowThumbnail {
                 y: _s
