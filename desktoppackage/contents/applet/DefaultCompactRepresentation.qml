@@ -46,7 +46,7 @@ PlasmaCore.IconItem {
     }
 
     source: plasmoid.icon ? plasmoid.icon : "plasma"
-    active: mouseArea.containsMouse
+    active: (mouseArea.containsMouse || mouseArea.pressed)
 
     MouseArea {
         id: mouseArea

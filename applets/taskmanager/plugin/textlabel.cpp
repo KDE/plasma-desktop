@@ -267,7 +267,7 @@ void TextLabel::paint(QPainter* painter)
 
     QFont font = QFontDatabase::systemFont(QFontDatabase::GeneralFont);
     QFontMetrics fm(QFontDatabase::systemFont(QFontDatabase::GeneralFont));
-    if (fm.height() > boundingRect().toRect().height()) {
+    if (fm.tightBoundingRect(QLatin1String("M")).height() > boundingRect().toRect().height()) {
         font.setPixelSize(boundingRect().toRect().height());
     }
     m_layout.setFont(font);
