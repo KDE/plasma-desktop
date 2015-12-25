@@ -436,7 +436,7 @@ void Backend::addRecentDocumentActions(TaskManager::LauncherItem *launcher, Task
         }
 
         if (actions == 0) {
-            menu->insertSection(firstAction, i18n("Recent Documents for %1", launcher->name()));
+            menu->insertSection(firstAction, i18n("Recent Documents"));
         }
 
         QAction *action = new QAction(menu);
