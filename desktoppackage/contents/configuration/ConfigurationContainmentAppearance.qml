@@ -100,6 +100,15 @@ ColumnLayout {
         }
     }
 
+    QtControls.Label {
+        Layout.fillWidth: true
+
+        visible: plasmoid.immutable
+
+        text: i18nd("plasma_shell_org.kde.plasma.desktop", "Layout cannot be changed whilst widgets are locked")
+        wrapMode: Text.Wrap
+    }
+
     Row {
         id: wallpaperRow
         spacing: units.largeSpacing / 2
