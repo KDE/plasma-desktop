@@ -130,14 +130,11 @@ PlasmaCore.FrameSvgItem {
                 return;
             }
 
-            var wantedSize;
-
             if (containment.formFactor === PlasmaCore.Types.Vertical) {
-                wantedSize = Math.max(containment.Layout.minimumHeight, Math.min(containment.Layout.preferredHeight, containment.Layout.maximumHeight));
+                panel.length = containment.Layout.preferredHeight
             } else {
-                wantedSize = Math.max(containment.Layout.minimumWidth, Math.min(containment.Layout.preferredWidth, containment.Layout.maximumWidth));
+                panel.length = containment.Layout.preferredWidth
             }
-            panel.length = Math.max(panel.minimumLength, Math.min(wantedSize, panel.maximumLength));
         }
     }
 
