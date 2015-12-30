@@ -15,32 +15,36 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
-#ifndef TOUCHPADENGINE_H
-#define TOUCHPADENGINE_H
 
-#include <Plasma/DataEngine>
+#ifndef PROPERTYINFO_H
+#define PROPERTYINFO_H
 
-class OrgKdeTouchpadInterface;
+#include <QSharedPointer>
+#include <QX11Info>
+#include <X11/Xdefs.h>
 
-class TouchpadEngine : public Plasma::DataEngine
+void XDeleter(void *p);
+
+struct PropertyInfo
 {
-    Q_OBJECT
+    Atom type;
+    int format;
+    QSharedPointer<unsigned char> data;
+    unsigned long nitems;
 
-public:
-    TouchpadEngine(QObject *parent, const QVariantList &args);
-    ~TouchpadEngine();
+    float *f;
+    int *i;
+    char *b;
 
-    Plasma::Service *serviceForSource(const QString &source);
+    Display *display;
+    int device;
+    Atom prop;
 
-private Q_SLOTS:
-    void workingTouchpadFoundChanged(bool);
-    void mousePluggedInChanged(bool);
-    void enabledChanged(bool);
+    PropertyInfo();
+    PropertyInfo(Display *display, int device, Atom prop, Atom floatType);
+    QVariant value(unsigned offset) const;
 
-private:
-    void init();
-    QString m_source;
-    OrgKdeTouchpadInterface *m_daemon;
+    void set();
 };
 
-#endif // TOUCHPADENGINE_H
+#endif // PROPERTYINFO_H

@@ -42,7 +42,7 @@ Item {
                 //Hide plasmoid from notification area after short delay
                 delayedStatusUpdate.restart()
             } else {
-                plasmoid.status = PlasmaCore.Types.ActiveStatus
+                plasmoid.status = data.workingTouchpadFound ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.PassiveStatus
             }
 
             icon.elementId = data.enabled ? "touchpad_enabled"
@@ -53,7 +53,7 @@ Item {
         }
     }
 
-    property bool hasTouchpad: typeof dataSource.data.touchpad != 'undefined'
+    property bool hasTouchpad: typeof dataSource.data.touchpad != 'undefined' && dataSource.data.touchpad.workingTouchpadFound
     property bool enabled: hasTouchpad ? dataSource.data.touchpad.enabled
                                        : false
     property bool mouse: hasTouchpad ? dataSource.data.touchpad.mousePluggedIn

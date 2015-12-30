@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 Alexander Mezin <mezin.alexander@gmail.com>
+ * Copyright (C) 2015 Weng Xuetian <wengxt@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -15,32 +15,16 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
-#ifndef TOUCHPADENGINE_H
-#define TOUCHPADENGINE_H
 
-#include <Plasma/DataEngine>
+#ifndef LIBINPUTTOUCHPAD_H
+#define LIBINPUTTOUCHPAD_H
 
-class OrgKdeTouchpadInterface;
+#include "xlibtouchpad.h"
 
-class TouchpadEngine : public Plasma::DataEngine
+class LibinputTouchpad : public XlibTouchpad
 {
-    Q_OBJECT
-
 public:
-    TouchpadEngine(QObject *parent, const QVariantList &args);
-    ~TouchpadEngine();
-
-    Plasma::Service *serviceForSource(const QString &source);
-
-private Q_SLOTS:
-    void workingTouchpadFoundChanged(bool);
-    void mousePluggedInChanged(bool);
-    void enabledChanged(bool);
-
-private:
-    void init();
-    QString m_source;
-    OrgKdeTouchpadInterface *m_daemon;
+    LibinputTouchpad(Display *display, int deviceId);
 };
 
-#endif // TOUCHPADENGINE_H
+#endif // LIBINPUTTOUCHPAD_H

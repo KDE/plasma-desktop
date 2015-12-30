@@ -37,7 +37,7 @@ public:
 
     virtual bool applyConfig(const QVariantHash &) = 0;
     virtual bool getConfig(QVariantHash &) = 0;
-    virtual const QStringList &supportedParameters() const = 0;
+    virtual QStringList supportedParameters() const = 0;
     virtual const QString &errorString() const = 0;
 
     enum TouchpadOffState {
@@ -46,6 +46,7 @@ public:
     virtual void setTouchpadOff(TouchpadOffState) = 0;
     virtual TouchpadOffState getTouchpadOff() = 0;
 
+    virtual bool isTouchpadAvailable() = 0;
     virtual bool isTouchpadEnabled() = 0;
     virtual void setTouchpadEnabled(bool) = 0;
 

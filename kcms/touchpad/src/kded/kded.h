@@ -39,6 +39,7 @@ public:
 Q_SIGNALS:
     Q_SCRIPTABLE void enabledChanged(bool);
     Q_SCRIPTABLE void mousePluggedInChanged(bool);
+    Q_SCRIPTABLE void workingTouchpadFoundChanged(bool);
 
 public Q_SLOTS:
     Q_SCRIPTABLE Q_NOREPLY void reloadSettings();
@@ -62,6 +63,7 @@ private Q_SLOTS:
 private:
     void showNotification(const QString &name, const QString &text);
     void lateInit();
+    void updateWorkingTouchpadFound();
 
     TouchpadBackend *m_backend;
     TouchpadDisablerSettings m_settings;
@@ -69,7 +71,9 @@ private:
     QDBusServiceWatcher m_dependecies;
 
     TouchpadBackend::TouchpadOffState m_keyboardDisableState;
-    bool m_enabled, m_keyboardActivity, m_mouse;
+    bool m_userRequestedState, m_touchpadEnabled;
+    bool m_workingTouchpadFound;
+    bool m_keyboardActivity, m_mouse;
 };
 
 #endif // KDED_H

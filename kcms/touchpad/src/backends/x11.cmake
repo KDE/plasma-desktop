@@ -20,10 +20,12 @@ add_definitions(${X11_XCB_DEFINITIONS} ${XCB_DEFINITIONS})
 
 SET(backend_SRCS
     ${backend_SRCS}
-    backends/x11/synclientproperties.c
-    backends/x11/libinputproperties.c
-    backends/x11/xcbatom.cpp
+    backends/x11/propertyinfo.cpp
     backends/x11/xlibbackend.cpp
+    backends/x11/synapticstouchpad.cpp
+    backends/x11/libinputtouchpad.cpp
+    backends/x11/xlibtouchpad.cpp
+    backends/x11/xcbatom.cpp
     backends/x11/xlibnotifications.cpp
     backends/x11/xrecordkeyboardmonitor.cpp
 )

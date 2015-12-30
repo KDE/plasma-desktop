@@ -28,12 +28,14 @@
 #include <QX11Info>
 
 #include "touchpadbackend.h"
-#include "synclientproperties.h"
+#include "xlibtouchpad.h"
 
 #include <xcb/xcb.h>
 
 #include "xcbatom.h"
+#include "propertyinfo.h"
 
+class XlibTouchpad;
 class XlibNotifications;
 class XRecordKeyboardMonitor;
 
@@ -45,20 +47,23 @@ public:
     static XlibBackend* initialize(QObject *parent = 0);
     ~XlibBackend();
 
-    bool applyConfig(const QVariantHash &);
-    bool getConfig(QVariantHash &);
-    const QStringList &supportedParameters() const { return m_supported; }
+    bool applyConfig(const QVariantHash &) Q_DECL_OVERRIDE;
+    bool getConfig(QVariantHash &) Q_DECL_OVERRIDE;
+    QStringList supportedParameters() const Q_DECL_OVERRIDE {
+        return m_device ? m_device->supportedParameters() : QStringList();
+    }
     const QString &errorString() const { return m_errorString; }
 
-    void setTouchpadOff(TouchpadOffState);
-    TouchpadOffState getTouchpadOff();
+    void setTouchpadOff(TouchpadOffState) Q_DECL_OVERRIDE;
+    TouchpadOffState getTouchpadOff() Q_DECL_OVERRIDE;
 
-    void setTouchpadEnabled(bool);
-    bool isTouchpadEnabled();
+    bool isTouchpadAvailable() Q_DECL_OVERRIDE;
+    bool isTouchpadEnabled() Q_DECL_OVERRIDE;
+    void setTouchpadEnabled(bool) Q_DECL_OVERRIDE;
 
-    void watchForEvents(bool keyboard);
+    void watchForEvents(bool keyboard) Q_DECL_OVERRIDE;
 
-    QStringList listMouses(const QStringList &blacklist);
+    QStringList listMouses(const QStringList &blacklist) Q_DECL_OVERRIDE;
 
 private slots:
     void propertyChanged(xcb_atom_t);
@@ -67,11 +72,6 @@ private slots:
 
 protected:
     explicit XlibBackend(QObject *parent);
-    struct PropertyInfo *getDevProperty(const QLatin1String &propName);
-    bool setParameter(const struct Parameter *, const QVariant &);
-    QVariant getParameter(const struct Parameter *);
-    void flush();
-    double getPropertyScale(const QString &name) const;
 
     struct XDisplayCleanup {
         static void cleanup(Display *);
@@ -80,24 +80,14 @@ protected:
     QScopedPointer<Display, XDisplayCleanup> m_display;
     xcb_connection_t *m_connection;
 
-    XcbAtom m_floatType, m_capsAtom, m_identifierAtom, m_enabledAtom, m_touchpadOffAtom,
-    m_mouseAtom, m_keyboardAtom;
+    XcbAtom m_enabledAtom, m_mouseAtom, m_keyboardAtom, m_touchpadAtom;
+    XcbAtom m_synapticsIdentifierAtom;
+    XcbAtom m_libinputIdentifierAtom;
 
-    int findTouchpad(XcbAtom &identifier);
-    int m_device;
+    XlibTouchpad *findTouchpad();
+    QScopedPointer<XlibTouchpad> m_device;
 
-    const struct Parameter *m_paramList;
-    const Parameter *findParameter(const QString &name);
-    bool loadSupportedProperties(const struct Parameter *props);
-
-    QMap<QLatin1String, QSharedPointer<XcbAtom> > m_atoms;
-    QMap<QLatin1String, struct PropertyInfo> m_props;
-    QSet<QLatin1String> m_changed;
-    QStringList m_supported;
     QString m_errorString;
-    int m_resX, m_resY;
-    QStringList m_scaleByResX, m_scaleByResY, m_toRadians;
-    QMap<QString, QString> m_negate;
     QScopedPointer<XlibNotifications> m_notifications;
     QScopedPointer<XRecordKeyboardMonitor> m_keyboard;
 };

@@ -43,18 +43,19 @@ void TouchpadEngine::init()
         return;
     }
 
-    QDBusPendingReply<bool> check(m_daemon->workingTouchpadFound());
-    check.waitForFinished();
-    if (!check.isValid() || !check.value()) {
-        return;
-    }
-
+    connect(m_daemon, SIGNAL(workingTouchpadFoundChanged(bool)), SLOT(workingTouchpadFoundChanged(bool)));
     connect(m_daemon, SIGNAL(enabledChanged(bool)), SLOT(enabledChanged(bool)));
     connect(m_daemon, SIGNAL(mousePluggedInChanged(bool)),
             SLOT(mousePluggedInChanged(bool)));
 
+    workingTouchpadFoundChanged(m_daemon->workingTouchpadFound());
     enabledChanged(m_daemon->isEnabled());
     mousePluggedInChanged(m_daemon->isMousePluggedIn());
+}
+
+void TouchpadEngine::workingTouchpadFoundChanged(bool value)
+{
+    setData(m_source, "workingTouchpadFound", value);
 }
 
 void TouchpadEngine::mousePluggedInChanged(bool value)

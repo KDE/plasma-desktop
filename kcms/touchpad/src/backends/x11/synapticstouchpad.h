@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 Alexander Mezin <mezin.alexander@gmail.com>
+ * Copyright (C) 2015 Weng Xuetian <wengxt@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -15,32 +15,23 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
-#ifndef TOUCHPADENGINE_H
-#define TOUCHPADENGINE_H
 
-#include <Plasma/DataEngine>
+#ifndef SYNAPTICSTOUCHPAD_H
+#define SYNAPTICSTOUCHPAD_H
 
-class OrgKdeTouchpadInterface;
+#include "xlibtouchpad.h"
+#include "xcbatom.h"
 
-class TouchpadEngine : public Plasma::DataEngine
+class SynapticsTouchpad : public XlibTouchpad
 {
-    Q_OBJECT
-
 public:
-    TouchpadEngine(QObject *parent, const QVariantList &args);
-    ~TouchpadEngine();
-
-    Plasma::Service *serviceForSource(const QString &source);
-
-private Q_SLOTS:
-    void workingTouchpadFoundChanged(bool);
-    void mousePluggedInChanged(bool);
-    void enabledChanged(bool);
+    SynapticsTouchpad(Display *display, int deviceId);
 
 private:
-    void init();
-    QString m_source;
-    OrgKdeTouchpadInterface *m_daemon;
+    XcbAtom m_capsAtom, m_touchpadOffAtom;
+    int m_resX, m_resY;
+    QMap<QString, QString> m_negate;
+    QStringList m_scaleByResX, m_scaleByResY, m_toRadians;
 };
 
-#endif // TOUCHPADENGINE_H
+#endif // SYNAPTICSTOUCHPAD_H
