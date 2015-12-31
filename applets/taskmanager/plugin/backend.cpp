@@ -372,6 +372,9 @@ void Backend::addJumpListActions(const QUrl &launcherUrl, TaskManager::BasicMenu
         action->setText(name);
         action->setIcon(QIcon::fromTheme(actionGroup.readEntry("Icon")));
         action->setProperty("exec", exec);
+        // so we can show the proper application name and icon when it launches
+        action->setProperty("applicationName", desktopFile.readName());
+        action->setProperty("applicationIcon", desktopFile.readIcon());
         connect(action, &QAction::triggered, this, &Backend::handleJumpListAction);
 
         menu->insertAction(firstAction, action);
@@ -472,7 +475,9 @@ void Backend::handleJumpListAction() const
         return;
     }
 
-    KRun::run(action->property("exec").toString(), {}, nullptr);
+    KRun::run(action->property("exec").toString(), {}, nullptr,
+              action->property("applicationName").toString(),
+              action->property("applicationIcon").toString());
 }
 
 void Backend::handleRecentDocumentAction() const
