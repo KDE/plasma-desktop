@@ -254,7 +254,7 @@ bool AppEntry::run(const QString& actionId, const QVariant &argument)
             }
         }
     } else if (actionId == "_kicker_jumpListAction") {
-        return KRun::run(argument.toString(), {}, nullptr);
+        return KRun::run(argument.toString(), {}, nullptr, m_service->name(), m_service->icon());
     }
 
     return Kicker::handleRecentDocumentAction(m_service, actionId, argument);
