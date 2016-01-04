@@ -61,6 +61,17 @@ QVariant RunnerMatchesModel::data(const QModelIndex &index, int role) const
         if (match.runner()->id() == "services") {
             return match.data().toString();
         }
+    } else if (role == Kicker::UrlRole) {
+        const QString &runnerId = match.runner()->id();
+        if (runnerId == QLatin1String("baloosearch")) {
+            return QUrl(match.data().toString());
+        } else if (runnerId == QLatin1String("recentdocuments")
+                   || runnerId == QLatin1String("services")) {
+            KService::Ptr service = KService::serviceByStorageId(match.data().toString());
+            if (service) {
+                return QUrl::fromLocalFile(service->entryPath());
+            }
+        }
     } else if (role == Kicker::HasActionListRole) {
         // Hack to expose the protected Plasma::AbstractRunner::actions() method.
         class MyRunner : public Plasma::AbstractRunner
