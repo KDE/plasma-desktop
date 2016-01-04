@@ -29,6 +29,7 @@
 
 RunnerModel::RunnerModel(QObject *parent) : QAbstractListModel(parent)
 , m_favoritesModel(0)
+, m_appletInterface(nullptr)
 , m_runnerManager(0)
 , m_mergeResults(false)
 , m_deleteWhenEmpty(false)
@@ -64,6 +65,26 @@ void RunnerModel::setFavoritesModel(AbstractModel *model)
         }
 
         emit favoritesModelChanged();
+    }
+}
+
+QObject *RunnerModel::appletInterface() const
+{
+    return m_appletInterface;
+}
+
+void RunnerModel::setAppletInterface(QObject *appletInterface)
+{
+    if (m_appletInterface != appletInterface) {
+        m_appletInterface = appletInterface;
+
+        clear();
+
+        if (!m_query.isEmpty()) {
+            m_queryTimer.start();
+        }
+
+        emit appletInterfaceChanged();
     }
 }
 

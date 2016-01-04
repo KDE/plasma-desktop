@@ -78,6 +78,8 @@ Item {
     Kicker.RunnerModel {
         id: runnerModel
 
+        appletInterface: plasmoid
+
         runners: plasmoid.configuration.runners
         mergeResults: true
 

@@ -31,6 +31,8 @@
 #include <KActivitiesExperimentalStats/ResultSet>
 #include <KActivitiesExperimentalStats/Terms>
 
+#include "containmentinterface.h"
+
 namespace KAStats = KActivities::Experimental::Stats;
 
 using namespace KAStats;
@@ -121,6 +123,54 @@ bool handleFileItemAction(const KFileItem &fileItem, const QString &actionId, co
 
         *close = true;
 
+        return true;
+    }
+
+    return false;
+}
+
+QVariantList createAddLauncherActionList(QObject *appletInterface, const KService::Ptr &service)
+{
+    QVariantList actionList;
+    if (!service) {
+        return actionList;
+    }
+
+    if (ContainmentInterface::mayAddLauncher(appletInterface, ContainmentInterface::Desktop)) {
+        actionList << Kicker::createActionItem(i18n("Add to Desktop"), "addToDesktop");
+    }
+
+    if (ContainmentInterface::mayAddLauncher(appletInterface, ContainmentInterface::Panel)) {
+        actionList << Kicker::createActionItem(i18n("Add to Panel"), "addToPanel");
+    }
+
+    if (service && ContainmentInterface::mayAddLauncher(appletInterface, ContainmentInterface::TaskManager, service->entryPath())) {
+        actionList << Kicker::createActionItem(i18n("Add as Launcher"), "addToTaskManager");
+    }
+
+    return actionList;
+}
+
+bool handleAddLauncherAction(const QString &actionId, QObject *appletInterface, const KService::Ptr &service)
+{
+    if (!service) {
+        return false;
+    }
+
+    if (actionId == QLatin1String("addToDesktop")) {
+        if (ContainmentInterface::mayAddLauncher(appletInterface, ContainmentInterface::Desktop)) {
+            ContainmentInterface::addLauncher(appletInterface, ContainmentInterface::Desktop, service->entryPath());
+        }
+        return true;
+    } else if (actionId == QLatin1String("addToPanel")) {
+        if (ContainmentInterface::mayAddLauncher(appletInterface, ContainmentInterface::Panel)) {
+            ContainmentInterface::addLauncher(appletInterface, ContainmentInterface::Panel, service->entryPath());
+        }
+        return true;
+    } else if (actionId == QLatin1String("addToTaskManager")) {
+        if (ContainmentInterface::mayAddLauncher(appletInterface, ContainmentInterface::TaskManager, service->entryPath())) {
+            ContainmentInterface::addLauncher(appletInterface, ContainmentInterface::TaskManager, service->entryPath());
+        }
         return true;
     }
 

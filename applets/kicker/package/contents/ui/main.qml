@@ -131,6 +131,8 @@ Item {
     Kicker.RunnerModel {
         id: runnerModel
 
+        appletInterface: plasmoid
+
         favoritesModel: globalFavorites
 
         runners: {

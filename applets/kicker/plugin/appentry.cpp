@@ -144,27 +144,12 @@ QVariantList AppEntry::actions() const
         actionList << Kicker::createSeparatorActionItem();
     }
 
-    bool hasAddLauncher = false;
-
     QObject *appletInterface = m_owner->rootModel()->property("appletInterface").value<QObject *>();
 
-    if (ContainmentInterface::mayAddLauncher(appletInterface, ContainmentInterface::Desktop)) {
-        actionList << Kicker::createActionItem(i18n("Add to Desktop"), "addToDesktop");
-        hasAddLauncher = true;
-    }
-
-    if (ContainmentInterface::mayAddLauncher(appletInterface, ContainmentInterface::Panel)) {
-        actionList << Kicker::createActionItem(i18n("Add to Panel"), "addToPanel");
-        hasAddLauncher = true;
-    }
-
-    if (ContainmentInterface::mayAddLauncher(appletInterface, ContainmentInterface::TaskManager, m_service->entryPath())) {
-        actionList << Kicker::createActionItem(i18n("Add as Launcher"), "addToTaskManager");
-        hasAddLauncher = true;
-    }
-
-    if (hasAddLauncher) {
-        actionList << Kicker::createSeparatorActionItem();
+    const QVariantList &addLauncherActions = Kicker::createAddLauncherActionList(appletInterface, m_service);
+    if (!addLauncherActions.isEmpty()) {
+        actionList << addLauncherActions
+                   << Kicker::createSeparatorActionItem();
     }
 
     const QVariantList &recentDocuments = Kicker::recentDocumentActions(m_service);
@@ -233,12 +218,8 @@ bool AppEntry::run(const QString& actionId, const QVariant &argument)
 
     QObject *appletInterface = m_owner->rootModel()->property("appletInterface").value<QObject *>();
 
-    if (actionId == "addToDesktop" && ContainmentInterface::mayAddLauncher(appletInterface, ContainmentInterface::Desktop)) {
-        ContainmentInterface::addLauncher(appletInterface, ContainmentInterface::Desktop, m_service->entryPath());
-    } else if (actionId == "addToPanel" && ContainmentInterface::mayAddLauncher(appletInterface, ContainmentInterface::Panel)) {
-        ContainmentInterface::addLauncher(appletInterface, ContainmentInterface::Panel, m_service->entryPath());
-    } else if (actionId == "addToTaskManager" && ContainmentInterface::mayAddLauncher(appletInterface, ContainmentInterface::TaskManager, m_service->entryPath())) {
-        ContainmentInterface::addLauncher(appletInterface, ContainmentInterface::TaskManager, m_service->entryPath());
+    if (Kicker::handleAddLauncherAction(actionId, appletInterface, m_service)) {
+        return true;
     } else if (actionId == "editApplication" && m_menuEntryEditor->canEdit(m_service->entryPath())) {
         m_menuEntryEditor->edit(m_service->entryPath(), m_service->menuId());
 

@@ -27,6 +27,7 @@
 
 #include <KLocalizedString>
 #include <KRunner/RunnerManager>
+#include <KRun>
 
 RunnerMatchesModel::RunnerMatchesModel(const QString &runnerId, const QString &name,
     Plasma::RunnerManager *manager, QObject *parent)
@@ -72,7 +73,7 @@ QVariant RunnerMatchesModel::data(const QModelIndex &index, int role) const
 
         Q_ASSERT(runner);
 
-        return !runner->actions().isEmpty();
+        return match.runner()->id() == QLatin1String("services") || !runner->actions().isEmpty();
     } else if (role == Kicker::ActionListRole) {
         QVariantList actionList;
 
@@ -82,6 +83,30 @@ QVariant RunnerMatchesModel::data(const QModelIndex &index, int role) const
             item["icon"] = action->icon();
 
             actionList << item;
+        }
+
+        if (!actionList.isEmpty()) {
+            actionList << Kicker::createSeparatorActionItem();
+        }
+
+        KService::Ptr service = KService::serviceByStorageId(match.data().toString());
+        if (service) {
+            const QVariantList &jumpListActions = Kicker::jumpListActions(service);
+            if (!jumpListActions.isEmpty()) {
+                actionList << jumpListActions << Kicker::createSeparatorActionItem();
+            }
+
+            QObject *appletInterface = static_cast<RunnerModel *>(parent())->appletInterface();
+
+            const QVariantList &addLauncherActions = Kicker::createAddLauncherActionList(appletInterface, service);
+            if (!addLauncherActions.isEmpty()) {
+                actionList << addLauncherActions << Kicker::createSeparatorActionItem();
+            }
+
+            const QVariantList &recentDocuments = Kicker::recentDocumentActions(service);
+            if (!recentDocuments.isEmpty()) {
+                actionList << recentDocuments << Kicker::createSeparatorActionItem();
+            }
         }
 
         return actionList;
@@ -105,6 +130,16 @@ bool RunnerMatchesModel::trigger(int row, const QString &actionId, const QVarian
 
     if (!match.isEnabled()) {
         return false;
+    }
+
+    QObject *appletInterface = static_cast<RunnerModel *>(parent())->appletInterface();
+
+    KService::Ptr service = KService::serviceByStorageId(match.data().toString());
+
+    if (Kicker::handleAddLauncherAction(actionId, appletInterface, service)) {
+        return true;
+    } else if (actionId == QLatin1String("_kicker_jumpListAction")) {
+        return KRun::run(argument.toString(), {}, nullptr, service ? service->name() : QString(), service ? service->icon() : QString());
     }
 
     if (!actionId.isEmpty()) {

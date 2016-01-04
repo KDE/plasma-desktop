@@ -41,6 +41,7 @@ class RunnerModel : public QAbstractListModel
 
     Q_PROPERTY(int count READ count NOTIFY countChanged)
     Q_PROPERTY(AbstractModel* favoritesModel READ favoritesModel WRITE setFavoritesModel NOTIFY favoritesModelChanged)
+    Q_PROPERTY(QObject* appletInterface READ appletInterface WRITE setAppletInterface NOTIFY appletInterfaceChanged)
     Q_PROPERTY(QStringList runners READ runners WRITE setRunners NOTIFY runnersChanged);
     Q_PROPERTY(QString query READ query WRITE setQuery NOTIFY queryChanged);
     Q_PROPERTY(bool mergeResults READ mergeResults WRITE setMergeResults NOTIFY mergeResultsChanged)
@@ -66,6 +67,9 @@ class RunnerModel : public QAbstractListModel
         AbstractModel *favoritesModel() const;
         void setFavoritesModel(AbstractModel *model);
 
+        QObject *appletInterface() const;
+        void setAppletInterface(QObject *appletInterface);
+
         bool mergeResults() const;
         void setMergeResults(bool merge);
 
@@ -75,6 +79,7 @@ class RunnerModel : public QAbstractListModel
     Q_SIGNALS:
         void countChanged() const;
         void favoritesModelChanged() const;
+        void appletInterfaceChanged() const;
         void runnersChanged() const;
         void queryChanged() const;
         void mergeResultsChanged() const;
@@ -89,6 +94,7 @@ class RunnerModel : public QAbstractListModel
         void clear();
 
         AbstractModel *m_favoritesModel;
+        QObject *m_appletInterface;
         Plasma::RunnerManager *m_runnerManager;
         QStringList m_runners;
         QList<RunnerMatchesModel *> m_models;

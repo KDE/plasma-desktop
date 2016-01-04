@@ -49,6 +49,9 @@ QVariantMap createSeparatorActionItem();
 QVariantList createActionListForFileItem(const KFileItem &fileItem);
 bool handleFileItemAction(const KFileItem &fileItem, const QString &actionId, const QVariant &argument, bool *close);
 
+QVariantList createAddLauncherActionList(QObject *appletInterface, const KService::Ptr &service);
+bool handleAddLauncherAction(const QString &actionId, QObject *appletInterface, const KService::Ptr &service);
+
 QVariantList jumpListActions(KService::Ptr service);
 
 QVariantList recentDocumentActions(KService::Ptr service);
