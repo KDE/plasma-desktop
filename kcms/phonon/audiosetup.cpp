@@ -271,6 +271,8 @@ AudioSetup::AudioSetup(QWidget *parent)
     m_icon->setPixmap(QPixmap(KUser().faceIconPath()));
     if (m_icon->pixmap()->isNull())
         m_icon->setPixmap(QIcon::fromTheme("system-users").pixmap(KIconLoader::SizeHuge, KIconLoader::SizeHuge));
+    m_icon->setMaximumSize(KIconLoader::SizeHuge, KIconLoader::SizeHuge);
+    m_icon->setScaledContents(true);
     placementGrid->addWidget(m_icon, 1, 2, Qt::AlignCenter);
 
     update();
