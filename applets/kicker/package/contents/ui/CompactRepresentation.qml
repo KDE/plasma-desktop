@@ -42,7 +42,7 @@ Item {
         visible: !(plasmoid.configuration.useCustomButtonImage && plasmoid.configuration.customButtonImage)
 
         source: plasmoid.configuration.icon
-        active: mouseArea.containsMouse
+        active: mouseArea.containsMouse && !justOpenedTimer.running
 
         onWidthChanged: {
             if (vertical && visible) {
@@ -116,7 +116,7 @@ Item {
 
         anchors.fill: parent
 
-        hoverEnabled: true
+        hoverEnabled: !dashWindow || !dashWindow.visible
 
         onPressed: {
             if (!isDash) {
@@ -127,7 +127,6 @@ Item {
         onClicked: {
             if (isDash) {
                 dashWindow.toggle();
-                buttonIcon.active = false;
                 justOpenedTimer.start();
             } else {
                 plasmoid.expanded = !wasExpanded;
