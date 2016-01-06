@@ -70,7 +70,7 @@ Item {
     Connections {
         target: plasmoid.configuration
 
-        onFavoriteAppsChanged: {
+        onFavoritesChanged: {
             globalFavorites.favorites = plasmoid.configuration.favorites;
         }
     }
