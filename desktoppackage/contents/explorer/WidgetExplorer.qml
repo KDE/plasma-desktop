@@ -351,6 +351,7 @@ Item {
             }
         }
 
+        /* TODO: WidgetExplorer.extraActions is unimplemented
         Repeater {
             model: widgetExplorer.extraActions.length
 
@@ -364,6 +365,7 @@ Item {
                 onClicked: widgetExplorer.extraActions[modelData].trigger()
             }
         }
+        */
     }
 }
 
