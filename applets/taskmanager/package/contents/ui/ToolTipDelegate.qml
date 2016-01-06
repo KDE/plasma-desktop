@@ -37,8 +37,10 @@ Column {
     property int preferredTextWidth: theme.mSize(theme.defaultFont).width * 30
     property int _s: units.largeSpacing / 2
 
-    width: Math.max(windowRow.width, appLabelRow.width)  + _s
-    height: childrenRect.height
+    Layout.minimumWidth: Math.max(windowRow.width, appLabelRow.width)  + _s
+    Layout.minimumHeight: childrenRect.height
+    Layout.maximumWidth: Layout.minimumWidth
+    Layout.maximumHeight: Layout.minimumHeight
     spacing: _s
 
     PlasmaExtras.ScrollArea {
