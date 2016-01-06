@@ -33,7 +33,7 @@ import org.kde.plasma.private.shell 2.0
 Item {
     id: main
 
-    width: Math.max(heading.paintedWidth, units.iconSizes.enormous * 2 + units.smallSpacing * 4 + 20)
+    width: Math.max(heading.paintedWidth, units.iconSizes.enormous * 2 + units.smallSpacing * 4 + units.gridUnit * 2)
     height: 800//Screen.height
 
     property QtObject containment
@@ -197,9 +197,6 @@ Item {
             top: parent.top
             left: parent.left
             right: parent.right
-            topMargin: 0
-            leftMargin: units.smallSpacing
-            rightMargin: units.smallSpacing
         }
         columns: 2
 
@@ -260,7 +257,6 @@ Item {
             right: parent.right
             bottom: bottomBar.top
             topMargin: units.smallSpacing
-            leftMargin: units.smallSpacing
             bottomMargin: units.smallSpacing
         }
 
@@ -280,7 +276,7 @@ Item {
 
             activeFocusOnTab: true
             keyNavigationWraps: true
-            cellWidth: width / 2
+            cellWidth: (width - units.smallSpacing) / 2
             cellHeight: cellWidth + units.gridUnit * 4 + units.smallSpacing * 2
 
             delegate: AppletDelegate {}
@@ -329,9 +325,6 @@ Item {
             left: parent.left
             right: parent.right
             bottom: parent.bottom
-            leftMargin: units.smallSpacing
-            rightMargin: units.smallSpacing
-            bottomMargin: units.smallSpacing
         }
 
         spacing: units.smallSpacing
