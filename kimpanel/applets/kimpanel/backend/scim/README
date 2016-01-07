@@ -1,0 +1,18 @@
+BUILD & INSTALL:
+qmake
+make
+copy scim-panel-dbus <your dir which scim-panel-gtk lives in>
+
+CONFIGURE:
+edit your scim's global config file,
+ ( it's /etc/scim/global in my box(Archlinux distro). )
+change this line:
+
+/DefaultPanelProgram = scim-panel-gtk
+
+into:
+
+/DefaultPanelProgram = scim-panel-dbus
+
+reboot your system (or manually kill all scim related process)
+
