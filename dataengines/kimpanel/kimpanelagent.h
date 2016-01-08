@@ -20,7 +20,7 @@
 #ifndef KIMPANEL_AGENT_H
 #define KIMPANEL_AGENT_H
 
-#include "kimpanel/kimpanelagenttype.h"
+#include "kimpanelagenttype.h"
 
 // Qt
 #include <QObject>

@@ -145,15 +145,12 @@ plasma_install_package(desktoppackage org.kde.plasma.desktop shells shell)
 plasma_install_package(layout-templates/org.kde.plasma.desktop.defaultPanel org.kde.plasma.desktop.defaultPanel layout-templates layout-template)
 
 add_subdirectory(doc)
-
-# Temporary inclusion of kactivities-stats library to the repository
-# until it matures enough to go to kactivities framework
-add_subdirectory(lib/kactivities-stats)
-
+add_subdirectory(libs)
 # add_subdirectory(runners)
 add_subdirectory(containments)
 add_subdirectory(toolboxes)
 add_subdirectory(applets)
+add_subdirectory(dataengines)
 add_subdirectory(kcms)
 add_subdirectory(knetattach)
 add_subdirectory(attica-kde)

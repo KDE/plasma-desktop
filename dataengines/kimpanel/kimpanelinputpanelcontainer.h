@@ -20,7 +20,7 @@
 #ifndef KIMPANEL_INPUTPANEL_CONTAINER_H
 #define KIMPANEL_INPUTPANEL_CONTAINER_H
 
-#include "kimpanel/kimpanelagenttype.h"
+#include "kimpanelagenttype.h"
 
 #include <Plasma/DataContainer>
 

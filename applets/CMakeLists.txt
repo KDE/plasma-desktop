@@ -11,3 +11,5 @@ if(KF5Activities_FOUND)
    add_subdirectory(pager)
    add_subdirectory(showActivityManager)
 endif()
+
+add_subdirectory(kimpanel)
