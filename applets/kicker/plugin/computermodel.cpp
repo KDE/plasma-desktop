@@ -140,6 +140,7 @@ ComputerModel::ComputerModel(QObject *parent) : ForwardingModel(parent)
 , m_systemAppsModel(new FavoritesModel(this))
 , m_filteredPlacesModel(new FilteredPlacesModel(this))
 , m_appNameFormat(AppEntry::NameOnly)
+, m_appletInterface(nullptr)
 {
     connect(m_systemAppsModel, &FavoritesModel::favoritesChanged, this, &ComputerModel::systemApplicationsChanged);
     m_systemAppsModel->setFavorites(QStringList() << "systemsettings.desktop");
@@ -173,6 +174,20 @@ void ComputerModel::setAppNameFormat(int format)
         m_systemAppsModel->refresh();
 
         emit appNameFormatChanged();
+    }
+}
+
+QObject *ComputerModel::appletInterface() const
+{
+    return m_appletInterface;
+}
+
+void ComputerModel::setAppletInterface(QObject *appletInterface)
+{
+    if (m_appletInterface != appletInterface) {
+        m_appletInterface = appletInterface;
+
+        emit appletInterfaceChanged();
     }
 }
 

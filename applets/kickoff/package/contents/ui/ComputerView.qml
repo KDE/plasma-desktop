@@ -28,6 +28,8 @@ BaseView {
 
         appNameFormat: rootModel.appNameFormat
 
+        appletInterface: plasmoid
+
         favoritesModel: globalFavorites
 
         Component.onCompleted: {
