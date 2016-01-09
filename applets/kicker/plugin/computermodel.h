@@ -75,6 +75,7 @@ class ComputerModel : public ForwardingModel
     Q_OBJECT
 
     Q_PROPERTY(int appNameFormat READ appNameFormat WRITE setAppNameFormat NOTIFY appNameFormatChanged)
+    Q_PROPERTY(QObject* appletInterface READ appletInterface WRITE setAppletInterface NOTIFY appletInterfaceChanged)
     Q_PROPERTY(QStringList systemApplications READ systemApplications WRITE setSystemApplications NOTIFY systemApplicationsChanged)
 
     public:
@@ -86,6 +87,9 @@ class ComputerModel : public ForwardingModel
         int appNameFormat() const;
         void setAppNameFormat(int format);
 
+        QObject *appletInterface() const;
+        void setAppletInterface(QObject *appletInterface);
+
         QStringList systemApplications() const;
         void setSystemApplications(const QStringList &apps);
 
@@ -95,6 +99,7 @@ class ComputerModel : public ForwardingModel
 
     Q_SIGNALS:
         void appNameFormatChanged() const;
+        void appletInterfaceChanged() const;
         void systemApplicationsChanged() const;
 
     private Q_SLOTS:
@@ -106,6 +111,7 @@ class ComputerModel : public ForwardingModel
         FavoritesModel *m_systemAppsModel;
         FilteredPlacesModel *m_filteredPlacesModel;
         AppEntry::NameFormat m_appNameFormat;
+        QObject *m_appletInterface;
 };
 
 #endif
