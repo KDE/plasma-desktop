@@ -83,6 +83,7 @@ class Backend : public QObject
         void setLaunchers(const QString& launchers);
 
         Q_INVOKABLE bool canPresentWindows() const;
+        Q_INVOKABLE int numberOfDesktops() const;
 
     public Q_SLOTS:
         void activateItem(int id, bool toggle);
