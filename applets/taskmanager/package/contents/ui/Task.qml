@@ -195,7 +195,7 @@ MouseArea {
             function generateSubText(task) {
                 var subTextEntries = new Array();
 
-                if (!plasmoid.configuration.showOnlyCurrentDesktop) {
+                if (!plasmoid.configuration.showOnlyCurrentDesktop && backend.numberOfDesktops() > 1) {
                     subTextEntries.push(i18n("On %1", task.DesktopName));
                 }
 

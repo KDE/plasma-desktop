@@ -603,6 +603,11 @@ bool Backend::canPresentWindows() const
     return (KWindowSystem::compositingActive() && KWindowEffects::isEffectAvailable(KWindowEffects::PresentWindowsGroup));
 }
 
+int Backend::numberOfDesktops() const
+{
+    return KWindowSystem::numberOfDesktops();
+}
+
 void Backend::presentWindows(int groupParentId)
 {
     TaskManager::AbstractGroupableItem *item = m_groupManager->rootGroup()->getMemberById(groupParentId);
