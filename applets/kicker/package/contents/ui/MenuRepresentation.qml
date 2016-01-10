@@ -27,8 +27,8 @@ FocusScope {
 
     focus: true
 
-    Layout.minimumWidth: sideBar.width + mainRow.spacing + Math.max(rootList.width, runnerColumns.width)
-    Layout.maximumWidth: sideBar.width + mainRow.spacing + Math.max(rootList.width, runnerColumns.width)
+    Layout.minimumWidth: sideBar.width + mainRow.spacing + Math.max(units.gridUnit * 14, runnerColumns.width)
+    Layout.maximumWidth: sideBar.width + mainRow.spacing + Math.max(units.gridUnit * 14, runnerColumns.width)
 
     Layout.minimumHeight: Math.max(((rootModel.count - rootModel.separatorCount) * rootList.itemHeight)
         + (rootModel.separatorCount * rootList.separatorHeight)
@@ -172,6 +172,7 @@ FocusScope {
 
             anchors.top: parent.top
 
+            width: root.width - sideBar.width - mainRow.spacing
             height: ((rootModel.count - rootModel.separatorCount) * itemHeight) + (rootModel.separatorCount * separatorHeight)
 
             visible: (searchField.text == "")

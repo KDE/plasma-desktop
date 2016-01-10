@@ -35,8 +35,11 @@ Item {
 
     property bool isDash: (plasmoid.pluginName == "org.kde.plasma.kickerdash")
 
+    Plasmoid.switchWidth: isDash ? undefined : Plasmoid.fullRepresentationItem.Layout.minimumWidth
+    Plasmoid.switchHeight: isDash ? undefined : Plasmoid.fullRepresentationItem.Layout.minimumHeight
+
     // this is a bit of a hack to prevent Plasma from spawning a dialog on its own when we're Dash
-    Plasmoid.preferredRepresentation: isDash ? Plasmoid.fullRepresentation : Plasmoid.compactRepresentation
+    Plasmoid.preferredRepresentation: isDash ? Plasmoid.fullRepresentation : null
 
     Plasmoid.compactRepresentation: isDash ? null : compactRepresentation
     Plasmoid.fullRepresentation: isDash ? compactRepresentation : menuRepresentation
