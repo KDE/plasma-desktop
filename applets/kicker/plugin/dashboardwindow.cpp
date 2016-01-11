@@ -159,11 +159,19 @@ void DashboardWindow::keyPressEvent(QKeyEvent *e)
         && !(e->key() == Qt::Key_Enter)
         && !(e->key() == Qt::Key_Return)
         && !(e->key() == Qt::Key_Menu)) {
+
+        QPointer<QQuickItem> previousFocusItem = activeFocusItem();
+
         m_keyEventProxy->forceActiveFocus();
         QEvent* eventCopy = new QKeyEvent(e->type(), e->key(), e->modifiers(),
             e->nativeScanCode(), e->nativeVirtualKey(), e->nativeModifiers(),
             e->text(), e->isAutoRepeat(), e->count());
         QCoreApplication::postEvent(this, eventCopy);
+        QCoreApplication::processEvents();
+
+        if (previousFocusItem) {
+            previousFocusItem->forceActiveFocus();
+        }
 
         return;
     }
