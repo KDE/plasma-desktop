@@ -116,14 +116,8 @@ function availableSpace(x, y, width, height)
     if (x < 0 || y < 0) {
         return availableSize;
     }
-    if (positions[row] === undefined) {
-        return {
-            width: width - Math.max(0, (x + width) - resultsFlow.width),
-            height: height
-        }
-    }
 
-    if (!positions[row][column]) {
+    if (positions[row] === undefined || !positions[row][column]) {
         for (var w = 0; w < rowsWidth; ++w) {
             if (positions[row + w] && positions[row + w][column]) {
                 break;
