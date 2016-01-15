@@ -219,6 +219,7 @@ class CFcEngine::Xft
     XftColor itsTxtColor,
              itsBgndColor;
     Pix      itsPix;
+    QImage::Format imageFormat;
 };
 
 CFcEngine::Xft::Xft()
@@ -265,6 +266,45 @@ bool CFcEngine::Xft::init(const QColor &txt, const QColor &bnd, int w, int h)
         xrenderCol.blue=txt.green()<<8;
         xrenderCol.alpha=0xFFFF;
         XftColorAllocValue(QX11Info::display(), visual, colorMap, &xrenderCol, &itsTxtColor);
+    }
+
+    XVisualInfo defaultVinfo;
+    defaultVinfo.depth = DefaultDepth(QX11Info::display(), 0);
+    // normal/failsafe
+    imageFormat = QImage::Format_RGB32; // 24bit
+    switch (defaultVinfo.depth) {
+        case 32: imageFormat = QImage::Format_ARGB32_Premultiplied; break;
+        case 30: imageFormat = QImage::Format_RGB30; break;
+        case 16: imageFormat = QImage::Format_RGB16; break;
+        case 8: imageFormat = QImage::Format_Grayscale8; break;
+        default: break;
+    }
+    if (defaultVinfo.depth == 30 || defaultVinfo.depth == 32) {
+        // detect correct format
+        int num_vinfo = 0;
+        defaultVinfo.visual = DefaultVisual(QX11Info::display(), 0);
+        defaultVinfo.screen = 0;
+        defaultVinfo.visualid = XVisualIDFromVisual(defaultVinfo.visual);
+        XVisualInfo *vinfo = XGetVisualInfo(QX11Info::display(), VisualIDMask|VisualScreenMask|VisualDepthMask, &defaultVinfo, &num_vinfo);
+        for (int i = 0; i < num_vinfo; ++i) {
+            if (vinfo[i].visual == defaultVinfo.visual) {
+                if (defaultVinfo.depth == 30) {
+                    if (vinfo[i].red_mask == 0x3ff)
+                        imageFormat = QImage::Format_BGR30;
+                    else if (vinfo[i].blue_mask == 0x3ff)
+                        imageFormat = QImage::Format_RGB30;
+                } else if (defaultVinfo.depth == 32) {
+                    if (vinfo[i].blue_mask == 0xff)
+                        imageFormat = QImage::Format_ARGB32_Premultiplied;
+                    else if (vinfo[i].red_mask == 0x3ff)
+                        imageFormat = QImage::Format_A2BGR30_Premultiplied;
+                    else if (vinfo[i].blue_mask == 0x3ff)
+                        imageFormat = QImage::Format_A2RGB30_Premultiplied;
+                }
+                break;
+            }
+        }
+        XFree(vinfo);
     }
 
     if(itsPix.allocate(w, h) && itsDraw)
@@ -537,7 +577,7 @@ QImage CFcEngine::Xft::toImage(int w, int h) const
     if (!xImage) {
         return QImage();
     }
-    return QImage(xImage->data, xImage->width, xImage->height, xImage->stride, QImage::Format_ARGB32_Premultiplied, &cleanupXImage, xImage);
+    return QImage(xImage->data, xImage->width, xImage->height, xImage->stride, imageFormat, &cleanupXImage, xImage);
 }
     
 inline int point2Pixel(int point)
