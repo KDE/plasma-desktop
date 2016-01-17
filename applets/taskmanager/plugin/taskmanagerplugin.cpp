@@ -40,6 +40,8 @@
 #include "draghelper.h"
 #include "textlabel.h"
 
+#include "smartlaunchers/smartlauncheritem.h"
+
 #include <QtQml>
 
 void TaskManagerPlugin::registerTypes(const char *uri)
@@ -48,5 +50,7 @@ void TaskManagerPlugin::registerTypes(const char *uri)
     qmlRegisterType<Backend>(uri, 0, 1, "Backend");
     qmlRegisterType<DragHelper>(uri, 0, 1, "DragHelper");
     qmlRegisterType<TextLabel>(uri, 0, 1, "TextLabel");
+
+    qmlRegisterType<SmartLauncher::Item>(uri, 0, 1, "SmartLauncherItem");
 }
 

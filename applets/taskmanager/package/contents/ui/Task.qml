@@ -53,6 +53,9 @@ MouseArea {
     property Item busyIndicator
     property int wheelDelta: 0
 
+    readonly property bool smartLauncherEnabled: plasmoid.configuration.smartLaunchersEnabled && !inPopup && !isStartup
+    property QtObject smartLauncherItem: null
+
     acceptedButtons: Qt.LeftButton | Qt.RightButton | Qt.MidButton
     hoverEnabled: true
 
@@ -152,6 +155,18 @@ MouseArea {
         }
     }
 
+    onSmartLauncherEnabledChanged: {
+        if (smartLauncherEnabled && !smartLauncherItem) {
+            var smartLauncher = Qt.createQmlObject("
+    import org.kde.plasma.private.taskmanager 0.1 as TaskManager;
+    TaskManager.SmartLauncherItem { }", task);
+
+            smartLauncher.launcherUrl = Qt.binding(function() { return model.LauncherUrl; });
+
+            smartLauncherItem = smartLauncher;
+        }
+    }
+
     PlasmaCore.FrameSvgItem {
         id: frame
 
@@ -219,6 +234,13 @@ MouseArea {
         }
     }
 
+    Loader {
+        anchors.fill: frame
+        asynchronous: true
+        source: "TaskProgressOverlay.qml"
+        active: plasmoid.configuration.smartLaunchersEnabled && task.smartLauncherItem && task.smartLauncherItem.progressVisible
+    }
+
     Item {
         id: iconBox
 
@@ -268,6 +290,14 @@ MouseArea {
             }
         }
 
+        Loader {
+            anchors.fill: icon
+            asynchronous: true
+            source: "TaskBadgeOverlay.qml"
+            active: plasmoid.configuration.smartLaunchersEnabled && height >= units.iconSizes.small
+                    && icon.visible && task.smartLauncherItem && task.smartLauncherItem.countVisible
+        }
+
         PlasmaComponents.BusyIndicator {
             id: busyIndicator
 
@@ -304,7 +334,7 @@ MouseArea {
 
         anchors {
             fill: parent
-            leftMargin: taskFrame.margins.left + icon.width + units.smallSpacing
+            leftMargin: taskFrame.margins.left + iconBox.width + units.smallSpacing
             topMargin: taskFrame.margins.top
             rightMargin: taskFrame.margins.right
             bottomMargin: taskFrame.margins.bottom
@@ -340,7 +370,7 @@ MouseArea {
         },
         State {
             name: "attention"
-            when: model.DemandsAttention
+            when: model.DemandsAttention || (task.smartLauncherItem && task.smartLauncherItem.urgent)
 
             PropertyChanges {
                 target: frame

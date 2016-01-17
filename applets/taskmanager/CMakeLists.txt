@@ -7,6 +7,9 @@ set(taskmanagerplugin_SRCS
     plugin/draghelper.cpp
     plugin/taskmanagerplugin.cpp
     plugin/textlabel.cpp
+
+    plugin/smartlaunchers/smartlauncherbackend.cpp
+    plugin/smartlaunchers/smartlauncheritem.cpp
 )
 
 install(FILES plugin/qmldir DESTINATION ${QML_INSTALL_DIR}/org/kde/plasma/private/taskmanager)
@@ -16,6 +19,7 @@ add_library(taskmanagerplugin SHARED ${taskmanagerplugin_SRCS})
 target_link_libraries(taskmanagerplugin
                       PW::LibTaskManager
                       Qt5::Core
+                      Qt5::DBus
                       Qt5::Qml
                       Qt5::Quick
                       Qt5::Widgets
@@ -24,6 +28,7 @@ target_link_libraries(taskmanagerplugin
                       KF5::I18n
                       KF5::KIOCore
                       KF5::KIOWidgets
+                      KF5::Plasma
                       KF5::Service
                       KF5::WindowSystem)
 
