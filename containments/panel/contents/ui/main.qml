@@ -62,8 +62,14 @@ function addApplet(applet, x, y) {
     applet.parent = container;
     container.applet = applet;
     applet.anchors.fill = container;
+
     applet.visible = true;
-    container.visible = true;
+
+    // don't show applet if it choses to be hidden but still make it
+    // accessible in the panelcontroller
+    container.visible = Qt.binding(function() {
+        return applet.status !== PlasmaCore.Types.HiddenStatus || (!plasmoid.immutable && plasmoid.userConfiguring)
+    })
 
     // Is there a DND placeholder? Replace it!
     if (dndSpacer.parent === currentLayout) {
