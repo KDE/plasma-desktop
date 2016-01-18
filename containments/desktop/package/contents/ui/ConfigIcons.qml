@@ -40,6 +40,7 @@ Item {
     property bool isPopup: (plasmoid.location != PlasmaCore.Types.Floating)
 
     property string cfg_icon: plasmoid.configuration.icon
+    property alias cfg_useCustomIcon: useCustomIcon.checked
     property alias cfg_arrangement: arrangement.currentIndex
     property alias cfg_alignment: alignment.currentIndex
     property alias cfg_locked: locked.checked
@@ -78,8 +79,12 @@ Item {
             RowLayout {
                 spacing: units.smallSpacing
 
-                Label {
-                    text: i18n("Icon:")
+                CheckBox {
+                    id: useCustomIcon
+
+                    checked: cfg_useCustomIcon
+
+                    text: i18n("Custom icon:")
                 }
 
                 Button {

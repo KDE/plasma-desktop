@@ -78,7 +78,7 @@ DragDrop.DropArea {
 
     preventStealing: true
 
-    Plasmoid.icon: plasmoid.configuration.icon
+    Plasmoid.icon: (!plasmoid.configuration.useCustomIcon && folderViewLayer.ready) ? folderViewLayer.view.model.iconName : plasmoid.configuration.icon
     Plasmoid.compactRepresentation: (isFolder && !isContainment) ? compactRepresentation : null
     Plasmoid.associatedApplicationUrls: folderViewLayer.ready ? folderViewLayer.model.resolvedUrl : null
 

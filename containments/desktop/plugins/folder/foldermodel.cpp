@@ -40,6 +40,7 @@
 #include <qplatformdefs.h>
 
 #include "internallibkonq/konq_popupmenu.h"
+#include <KDirWatch>
 #include <KIO/DropJob>
 #include <KAuthorized>
 #include <KBookmarkManager>
@@ -87,6 +88,7 @@ void DirLister::handleError(KIO::Job *job)
 }
 
 FolderModel::FolderModel(QObject *parent) : QSortFilterProxyModel(parent),
+    m_dirWatch(nullptr),
     m_dragInProgress(false),
     m_previewGenerator(0),
     m_viewAdapter(0),
@@ -182,6 +184,19 @@ void FolderModel::setUrl(const QString& url)
 
     m_errorString.clear();
     emit errorStringChanged();
+
+    if (m_dirWatch) {
+        delete m_dirWatch;
+    }
+
+    if (resolvedUrl.isLocalFile()) {
+        m_dirWatch = new KDirWatch(this);
+        connect(m_dirWatch, &KDirWatch::created, this, &FolderModel::iconNameChanged);
+        connect(m_dirWatch, &KDirWatch::dirty, this, &FolderModel::iconNameChanged);
+        m_dirWatch->addFile(resolvedUrl.toLocalFile() + QLatin1String("/.directory"));
+    }
+
+    emit iconNameChanged();
 }
 
 QUrl FolderModel::resolvedUrl() const
@@ -200,6 +215,17 @@ QUrl FolderModel::resolve(const QString& url)
     }
 
     return resolvedUrl;
+}
+
+QString FolderModel::iconName() const
+{
+    const KFileItem rootItem(m_dirModel->dirLister()->url());
+
+    if (!rootItem.isFinalIconKnown()) {
+        rootItem.determineMimeType();
+    }
+
+    return rootItem.iconName();
 }
 
 QString FolderModel::errorString() const

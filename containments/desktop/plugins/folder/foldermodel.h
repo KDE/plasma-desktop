@@ -43,6 +43,7 @@ class QQuickItem;
 
 class KActionCollection;
 class KDirModel;
+class KDirWatch;
 class KFileItem;
 class KFileItemActions;
 class KJob;
@@ -68,6 +69,7 @@ class FolderModel : public QSortFilterProxyModel
     Q_OBJECT
 
     Q_PROPERTY(QString url READ url WRITE setUrl NOTIFY urlChanged)
+    Q_PROPERTY(QString iconName READ iconName NOTIFY iconNameChanged)
     Q_PROPERTY(QUrl resolvedUrl READ resolvedUrl NOTIFY resolvedUrlChanged)
     Q_PROPERTY(QString errorString READ errorString NOTIFY errorStringChanged)
     Q_PROPERTY(bool usedByContainment READ usedByContainment WRITE setUsedByContainment NOTIFY usedByContainmentChanged);
@@ -110,6 +112,8 @@ class FolderModel : public QSortFilterProxyModel
 
         QString url() const;
         void setUrl(const QString &url);
+
+        QString iconName() const;
 
         QUrl resolvedUrl() const;
         Q_INVOKABLE QUrl resolve(const QString& url);
@@ -198,6 +202,7 @@ class FolderModel : public QSortFilterProxyModel
 
     Q_SIGNALS:
         void urlChanged() const;
+        void iconNameChanged() const;
         void resolvedUrlChanged() const;
         void errorStringChanged() const;
         void usedByContainmentChanged() const;
@@ -247,6 +252,7 @@ class FolderModel : public QSortFilterProxyModel
         void addDragImage(QDrag *drag, int x, int y);
         QList<QUrl> selectedUrls(bool forTrash) const;
         KDirModel *m_dirModel;
+        KDirWatch *m_dirWatch;
         QString m_url;
         QHash<QUrl, bool> m_isDirCache;
         QItemSelectionModel *m_selectionModel;
