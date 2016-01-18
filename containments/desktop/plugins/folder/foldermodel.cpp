@@ -807,6 +807,40 @@ void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row)
     dropJob->ui()->setAutoErrorHandlingEnabled(true);
 }
 
+void FolderModel::dropCwd(QObject* dropEvent)
+{
+    QMimeData *mimeData = qobject_cast<QMimeData *>(dropEvent->property("mimeData").value<QObject *>());
+
+    if (!mimeData) {
+        return;
+    }
+
+    if (mimeData->hasFormat(QStringLiteral("application/x-kde-ark-dndextract-service")) &&
+        mimeData->hasFormat(QStringLiteral("application/x-kde-ark-dndextract-path"))) {
+        const QString remoteDBusClient = mimeData->data(QStringLiteral("application/x-kde-ark-dndextract-service"));
+        const QString remoteDBusPath = mimeData->data(QStringLiteral("application/x-kde-ark-dndextract-path"));
+
+        QDBusMessage message =
+            QDBusMessage::createMethodCall(remoteDBusClient, remoteDBusPath,
+                                            QStringLiteral("org.kde.ark.DndExtract"),
+                                            QStringLiteral("extractSelectedFilesTo"));
+        message.setArguments(QVariantList() << m_dirModel->dirLister()->url().adjusted(QUrl::PreferLocalFile).toString());
+
+        QDBusConnection::sessionBus().call(message);
+    } else {
+        Qt::DropAction proposedAction((Qt::DropAction)dropEvent->property("proposedAction").toInt());
+        Qt::DropActions possibleActions(dropEvent->property("possibleActions").toInt());
+        Qt::MouseButtons buttons(dropEvent->property("buttons").toInt());
+        Qt::KeyboardModifiers modifiers(dropEvent->property("modifiers").toInt());
+
+        QDropEvent ev(QPoint(), possibleActions, mimeData, buttons, modifiers);
+        ev.setDropAction(proposedAction);
+
+        KIO::DropJob *dropJob = KIO::drop(&ev, m_dirModel->dirLister()->url().adjusted(QUrl::PreferLocalFile));
+        dropJob->ui()->setAutoErrorHandlingEnabled(true);
+    }
+}
+
 void FolderModel::selectionChanged(QItemSelection selected, QItemSelection deselected)
 {
     QModelIndexList indices = selected.indexes();

@@ -79,6 +79,7 @@ DragDrop.DropArea {
     preventStealing: true
 
     Plasmoid.icon: plasmoid.configuration.icon
+    Plasmoid.compactRepresentation: (isFolder && !isContainment) ? compactRepresentation : null
     Plasmoid.associatedApplicationUrls: folderViewLayer.ready ? folderViewLayer.model.resolvedUrl : null
 
     onIconHeightChanged: updateGridSize()
@@ -253,6 +254,11 @@ DragDrop.DropArea {
             plasmoid.processMimeData(event.mimeData, event.x - placeHolder.width / 2, event.y - placeHolder.height / 2);
             event.accept(event.proposedAction);
         }
+    }
+
+    Component {
+        id: compactRepresentation
+        CompactRepresentation { folderView: folderViewLayer.view }
     }
 
     Connections {

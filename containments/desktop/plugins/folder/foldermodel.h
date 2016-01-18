@@ -175,6 +175,7 @@ class FolderModel : public QSortFilterProxyModel
         Q_INVOKABLE QPoint dragCursorOffset(int row);
         Q_INVOKABLE void dragSelected(int x, int y);
         Q_INVOKABLE void drop(QQuickItem *target, QObject *dropEvent, int row);
+        Q_INVOKABLE void dropCwd(QObject *dropEvent);
 
         Q_INVOKABLE bool isBlank(int row) const;
 
