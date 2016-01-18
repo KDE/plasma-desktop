@@ -338,11 +338,7 @@ void Pager::updateSizes()
         ph = m_size.height();
     }
 
-    if (m_desktopCount > 1) {
-        m_preferredSize = QSize(pw, ph);
-    } else {
-        m_preferredSize = QSize(1, 1); // 0, 0 doesn't collapse completely, leaves uncanny spacing
-    }
+    m_preferredSize = QSize(pw, ph);
     emit preferredSizeChanged();
 
     QRectF itemRect(QPointF(leftMargin, topMargin) , QSizeF(itemWidth, itemHeight));

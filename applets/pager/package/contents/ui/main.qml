@@ -37,6 +37,8 @@ MouseArea {
     Layout.maximumHeight: root.vertical ? pager.preferredSize.height : Infinity
 
     Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
+    Plasmoid.status: pager.desktopCount > 1 ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.HiddenStatus
+
     Layout.fillWidth: root.vertical 
     Layout.fillHeight: !root.vertical 
 
@@ -46,7 +48,6 @@ MouseArea {
     property int dragSwitchDesktopId: -1
 
     anchors.fill: parent
-    visible: pager.desktopCount > 1
     acceptedButtons: Qt.NoButton
 
     property color windowActiveOnActiveDesktopColor: theme.textColor
