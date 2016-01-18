@@ -142,7 +142,9 @@ void ContainmentInterface::addLauncher(QObject *appletInterface, ContainmentInte
                 return;
             }
 
-            if (containment->pluginInfo().pluginName() == QLatin1String("org.kde.plasma.folder")) {
+            const QStringList &containmentProvides = containment->pluginInfo().property(QStringLiteral("X-Plasma-Provides")).value<QStringList>();
+
+            if (containmentProvides.contains(QLatin1String("org.kde.plasma.filemanagement"))) {
                 QQuickItem* gObj = qobject_cast<QQuickItem *>(containment->property("_plasma_graphicObject").value<QObject *>());
 
                 if (!gObj || !gObj->childItems().count()) {
