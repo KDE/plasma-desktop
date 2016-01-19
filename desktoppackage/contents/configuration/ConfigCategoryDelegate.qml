@@ -18,7 +18,7 @@
 
 import QtQuick 2.0
 import QtQuick.Controls 1.0 as QtControls
-import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.kquickcontrolsaddons 2.0
 
 MouseArea {
     id: delegate
@@ -103,11 +103,11 @@ MouseArea {
             left: parent.left
             right: parent.right
         }
-        PlasmaCore.IconItem {
+        QIconItem {
             anchors.horizontalCenter: parent.horizontalCenter
-            width: theme.IconSizeHuge
+            width: units.iconSizes.medium
             height: width
-            source: model.icon
+            icon: model.icon
         }
         QtControls.Label {
             anchors {
