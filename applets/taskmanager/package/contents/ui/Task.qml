@@ -204,6 +204,7 @@ MouseArea {
                     toolTipDelegate.icon = model.DecorationRole;
                     toolTipDelegate.subText = model.IsLauncher ? model.GenericName
                         : toolTip.generateSubText(model);
+                    toolTipDelegate.launcherUrl = model.LauncherUrl;
                 }
             }
 
