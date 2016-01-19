@@ -171,6 +171,7 @@ function checkLastSpacer() {
 
     onDragEnter: {
         if (plasmoid.immutable) {
+            event.ignore();
             return;
         }
         //during drag operations we disable panel auto resize
@@ -183,9 +184,6 @@ function checkLastSpacer() {
     }
 
     onDragMove: {
-        if (plasmoid.immutable) {
-            return;
-        }
         LayoutManager.insertAtCoordinates(dndSpacer, event.x, event.y)
     }
 
@@ -196,10 +194,6 @@ function checkLastSpacer() {
     }
 
     onDrop: {
-        if (plasmoid.immutable) {
-            return;
-        }
-       
         plasmoid.processMimeData(event.mimeData, event.x, event.y);
         event.accept(event.proposedAction);
         root.fixedWidth = 0;

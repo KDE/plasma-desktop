@@ -198,6 +198,12 @@ DragDrop.DropArea {
         }
     }
 
+    onDragEnter: {
+        if (isContainment && plasmoid.immutable) {
+            event.ignore();
+        }
+    }
+
     onDragMove: {
         // TODO: We should reject drag moves onto file items that don't accept drops
         // (cf. QAbstractItemModel::flags() here, but DeclarativeDropArea currently
@@ -225,7 +231,7 @@ DragDrop.DropArea {
 
     onDragLeave: {
         // Cancel autoscroll.
-        if (isFolder && event.mimeData.hasUrls) {
+        if (isFolder) {
             folderViewLayer.view.scrollLeft = false;
             folderViewLayer.view.scrollRight = false;
             folderViewLayer.view.scrollUp = false;
