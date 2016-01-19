@@ -23,7 +23,6 @@ import QtQuick.Window 2.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
-import org.kde.kquickcontrolsaddons 2.0
 
 import org.kde.plasma.private.shell 2.0
 
@@ -131,10 +130,10 @@ PlasmaCore.Dialog {
                         x: 2 * units.smallSpacing
                         width: parent.width - 2 * x
                         spacing: units.largeSpacing
-                        QIconItem {
+                        PlasmaCore.IconItem {
                             width: units.iconSizes.huge
                             height: width
-                            icon: model.decoration
+                            source: model.decoration
                         }
 
                         ColumnLayout {
