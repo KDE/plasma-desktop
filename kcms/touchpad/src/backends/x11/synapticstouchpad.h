@@ -28,7 +28,7 @@ public:
     SynapticsTouchpad(Display *display, int deviceId);
 
 private:
-    XcbAtom m_capsAtom, m_touchpadOffAtom;
+    XcbAtom m_capsAtom;
     int m_resX, m_resY;
     QMap<QString, QString> m_negate;
     QStringList m_scaleByResX, m_scaleByResY, m_toRadians;
