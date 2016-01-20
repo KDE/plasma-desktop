@@ -187,8 +187,6 @@ KQuickControlsAddons.MouseEventListener {
                     mouse.accepted = true
                     animationsEnabled = false;
                     startRotation = appletItem.rotation;
-                    root.layoutManager.setSpaceAvailable(appletItem.x, appletItem.y, appletItem.width, appletItem.height, true)
-
                     startCenterRelativeAngle = pointAngle(centerRelativePos(mouse.x, mouse.y));
                 }
                 onPositionChanged: {
