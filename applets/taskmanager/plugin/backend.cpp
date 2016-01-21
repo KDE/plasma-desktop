@@ -325,6 +325,11 @@ void Backend::itemContextMenu(QQuickItem *item, QObject *configAction)
     // Close menu when the delegate is destroyed.
     connect(item, &QQuickItem::destroyed, m_contextMenu.data(), &TaskManager::BasicMenu::deleteLater);
 
+    if (m_windowsToHighlight.count()) {
+        m_windowsToHighlight.clear();
+        updateWindowHighlight();
+    }
+
     // Interrupt the call chain from the delegate in case it's destroyed while
     // we're in QMenu::exec();
     QTimer::singleShot(0, this, [=] {
