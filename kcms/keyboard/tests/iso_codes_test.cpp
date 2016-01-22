@@ -20,9 +20,6 @@
 
 #include "../iso_codes.h"
 
-
-Q_LOGGING_CATEGORY(KCM_KEYBOARD, "kcm_keyboard")
-
 class IsoCodesTest : public QObject
 {
     Q_OBJECT

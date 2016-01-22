@@ -17,6 +17,7 @@
  */
 
 #include "keyboard_daemon.h"
+#include "debug.h"
 
 #include <QAction>
 #include <QX11Info>

@@ -18,6 +18,7 @@
 
 #include "xkb_rules.h"
 #include "config-workspace.h"
+#include "debug.h"
 
 #include <KLocalizedString>
 
@@ -233,7 +234,7 @@ Rules* Rules::readRules(Rules* rules, const QString& filename, bool fromExtras)
 {
 	QFile file(filename);
 	if( !file.open(QFile::ReadOnly | QFile::Text) ) {
-		qCritical() << "Cannot open the rules file" << file.fileName();
+		qCCritical(KCM_KEYBOARD) << "Cannot open the rules file" << file.fileName();
 		return NULL;
 	}
 
@@ -248,7 +249,7 @@ Rules* Rules::readRules(Rules* rules, const QString& filename, bool fromExtras)
 	qCDebug(KCM_KEYBOARD) << "Parsing xkb rules from" << file.fileName();
 
 	if( ! reader.parse(xmlInputSource) ) {
-		qCritical() << "Failed to parse the rules file" << file.fileName();
+		qCCritical(KCM_KEYBOARD) << "Failed to parse the rules file" << file.fileName();
 		delete rules;
 		return NULL;
 	}
@@ -416,7 +417,7 @@ Rules::GeometryId Rules::getGeometryId(const QString& model) {
     GeometryId defaultGeoId(QStringLiteral("pc"), QStringLiteral("pc104"));
 
     if ( ! ruleFile.open(QIODevice::ReadOnly | QIODevice::Text) ){
-        qCritical() << "Unable to open file" << ruleFileName;
+        qCCritical(KCM_KEYBOARD) << "Unable to open file" << ruleFileName;
         return defaultGeoId;
     }
     
@@ -451,7 +452,7 @@ Rules::GeometryId Rules::getGeometryId(const QString& model) {
     	       if( QRegExp(QStringLiteral("^!\\s*")).indexIn(line) != -1 )
     	         break;
     	        
-    		qWarning() << "could not parse geometry line" << line;
+    		qCWarning(KCM_KEYBOARD) << "could not parse geometry line" << line;
     		continue;
     	    }
         

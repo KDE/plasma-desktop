@@ -23,11 +23,6 @@
 #include <QString>
 #include <QList>
 #include <QMap>
-#include <QLoggingCategory>
-
-
-Q_DECLARE_LOGGING_CATEGORY(KCM_KEYBOARD)
-
 
 /**
  * Represents an item for iso-* standards which consists of attributes and their values

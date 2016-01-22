@@ -26,10 +26,6 @@
 #include <QWidget>
 #include <QX11Info>
 #include <QAbstractNativeEventFilter>
-#include <QLoggingCategory>
-
-Q_DECLARE_LOGGING_CATEGORY(KCM_KEYBOARD)
-
 
 #include <xcb/xcb.h>
 //#include <xcb/xkb.h>

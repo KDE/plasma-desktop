@@ -25,11 +25,6 @@
 #include <X11/Xlib.h>
 #include <fixx11h.h>
 
-#include <QLoggingCategory>
-
-
-Q_DECLARE_LOGGING_CATEGORY(KCM_KEYBOARD)
-
 class UdevDeviceNotifier;
 
 class XInputEventNotifier: public XEventNotifier {

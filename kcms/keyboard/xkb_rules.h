@@ -23,12 +23,8 @@
 #include <QXmlDefaultHandler>
 #include <QList>
 #include <QStringList>
-#include <QLoggingCategory>
 
 #include <config-keyboard.h>
-
-Q_DECLARE_LOGGING_CATEGORY(KCM_KEYBOARD)
-
 
 struct ConfigItem {
 	QString name;

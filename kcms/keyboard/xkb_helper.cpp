@@ -17,6 +17,7 @@
  */
 
 #include "xkb_helper.h"
+#include "debug.h"
 
 #include <QFile>
 #include <QDir>
@@ -53,7 +54,7 @@ QString getSetxkbmapExe()
 		setxkbmapExe = QStandardPaths::findExecutable(SETXKBMAP_EXEC);
 		if( setxkbmapExe.isEmpty() ) {
 			setxkbmapNotFound = true;
-			qCritical() << "Can't find" << SETXKBMAP_EXEC << "- keyboard layouts won't be configured";
+			qCCritical(KCM_KEYBOARD) << "Can't find" << SETXKBMAP_EXEC << "- keyboard layouts won't be configured";
 			return QLatin1String("");
 		}
 	}
@@ -71,7 +72,7 @@ void executeXmodmap(const QString& configFileName)
     		xmodmapExe = QStandardPaths::findExecutable(XMODMAP_EXEC);
         	if( xmodmapExe.isEmpty() ) {
     			xmodmapNotFound = true;
-    			qCritical() << "Can't find" << XMODMAP_EXEC << "- xmodmap files won't be run";
+    			qCCritical(KCM_KEYBOARD) << "Can't find" << XMODMAP_EXEC << "- xmodmap files won't be run";
     			return;
         	}
     	}
@@ -81,7 +82,7 @@ void executeXmodmap(const QString& configFileName)
     	xmodmapProcess << configFileName;
     	qCDebug(KCM_KEYBOARD) << "Executing" << xmodmapProcess.program().join(QStringLiteral(" "));
     	if( xmodmapProcess.execute() != 0 ) {
-    		qCritical() << "Failed to execute " << xmodmapProcess.program();
+    		qCCritical(KCM_KEYBOARD) << "Failed to execute " << xmodmapProcess.program();
     	}
     }
 }
@@ -113,7 +114,7 @@ bool XkbHelper::runConfigLayoutCommand(const QStringList& setxkbmapCommandArgume
 	    return true;
 	}
 	else {
-		qCritical() << "Failed to run" << setxkbmapProcess.program().join(QStringLiteral(" ")) << "return code:" << res;
+		qCCritical(KCM_KEYBOARD) << "Failed to run" << setxkbmapProcess.program().join(QStringLiteral(" ")) << "return code:" << res;
 	}
 	return false;
 }
@@ -197,7 +198,7 @@ bool XkbHelper::preInitialize()
     int res = ibusProcess.execute();
 
     if( res == 0 ) {
-        qWarning() << "ibus successfully stopped";
+        qCWarning(KCM_KEYBOARD) << "ibus successfully stopped";
     }
 
     return 0;

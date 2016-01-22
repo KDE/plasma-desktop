@@ -27,6 +27,7 @@
 
 #include "x11_helper.h"
 #include "kcmmisc.h"
+#include "debug.h"
 
 #include <X11/XKBlib.h>
 #include <X11/keysym.h>
@@ -38,7 +39,7 @@ static
 void set_repeatrate(int delay, double rate)
 {
 	if( !X11Helper::xkbSupported(NULL) ) {
-		qCritical() << "Failed to set keyboard repeat rate: xkb is not supported";
+		qCCritical(KCM_KEYBOARD) << "Failed to set keyboard repeat rate: xkb is not supported";
 		return;
 	}
 

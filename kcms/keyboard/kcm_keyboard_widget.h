@@ -23,12 +23,8 @@
 #include "ui_kcm_keyboard.h"
 
 #include <QTabWidget>
-#include <QLoggingCategory>
 
 #include <config-keyboard.h>
-
-Q_DECLARE_LOGGING_CATEGORY(KCM_KEYBOARD)
-
 
 class QWidget;
 class KeyboardConfig;

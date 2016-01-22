@@ -20,12 +20,8 @@
 #define LAYOUT_MEMORY_PERSISTER_H_
 
 #include <QString>
-#include <QLoggingCategory>
 
 #include "x11_helper.h"
-
-
-Q_DECLARE_LOGGING_CATEGORY(KCM_KEYBOARD)
 
 class LayoutMemory;
 class QFile;

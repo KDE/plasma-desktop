@@ -15,6 +15,7 @@ include(ECMInstallIcons)
 include(ECMMarkAsTest)
 include(ECMMarkNonGuiExecutable)
 include(ECMOptionalAddSubdirectory)
+include(ECMQtDeclareLoggingCategory)
 include(FeatureSummary)
 include(CheckIncludeFiles)
 

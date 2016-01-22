@@ -17,6 +17,7 @@
  */
 
 #include "keyboard_config.h"
+#include "debug.h"
 
 #include <ksharedconfig.h>
 #include <kconfiggroup.h>

@@ -33,6 +33,13 @@ set( kded_keyboard_SRCS
     xkb_rules.cpp
 )
 
+ecm_qt_declare_logging_category(kded_keyboard_SRCS
+    HEADER debug.h
+    IDENTIFIER KCM_KEYBOARD
+    CATEGORY_NAME org.kde.kcm_keyboard
+    DEFAULT_SEVERITY Warning)
+
+
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 add_library(kded_keyboard MODULE ${kded_keyboard_SRCS})
 set_target_properties(kded_keyboard PROPERTIES OUTPUT_NAME keyboard)
@@ -118,6 +125,12 @@ set(kcm_keyboard_PART_SRCS
   kcmmisc.cpp
   bindings.cpp
   ${preview_SRCS} )
+
+ecm_qt_declare_logging_category(kcm_keyboard_PART_SRCS
+    HEADER debug.h
+    IDENTIFIER KCM_KEYBOARD
+    CATEGORY_NAME org.kde.kcm_keyboard
+    DEFAULT_SEVERITY Warning)
 
 ki18n_wrap_ui(kcm_keyboard_PART_SRCS kcm_keyboard.ui kcm_add_layout_dialog.ui kcmmiscwidget.ui)
 

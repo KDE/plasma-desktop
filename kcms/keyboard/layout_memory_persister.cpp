@@ -17,6 +17,7 @@
  */
 
 #include "layout_memory_persister.h"
+#include "debug.h"
 
 #include <kconfiggroup.h>
 #include <ksharedconfig.h>
@@ -104,7 +105,7 @@ bool LayoutMemoryPersister::save()
     QDir baseDir(fileInfo.absoluteDir());
     if( ! baseDir.exists() ) {
         if( ! QDir().mkpath(baseDir.absolutePath()) ) {
-            qWarning() << "Failed to create directory" << baseDir.absolutePath();
+            qCWarning(KCM_KEYBOARD) << "Failed to create directory" << baseDir.absolutePath();
         }
     }
 
@@ -127,7 +128,7 @@ bool LayoutMemoryPersister::saveToFile(const QFile& file_)
 
 	QFile file(file_.fileName());	// so we don't expose the file we open/close to the caller
     if( ! file.open( QIODevice::WriteOnly | QIODevice::Truncate | QIODevice::Text) ) {
-    	qWarning() << "Failed to open layout memory xml file for writing" << file.fileName();
+    	qCWarning(KCM_KEYBOARD) << "Failed to open layout memory xml file for writing" << file.fileName();
     	return false;
     }
 
@@ -136,7 +137,7 @@ bool LayoutMemoryPersister::saveToFile(const QFile& file_)
     out.flush();
 
     if( file.error() != QFile::NoError ) {
-    	qWarning() << "Failed to store keyboard layout memory, error" << file.error();
+    	qCWarning(KCM_KEYBOARD) << "Failed to store keyboard layout memory, error" << file.error();
         file.close();
     	file.remove();
     	return false;
@@ -219,7 +220,7 @@ bool LayoutMemoryPersister::restoreFromFile(const QFile& file_)
 
 	QFile file(file_.fileName());	// so we don't expose the file we open/close to the caller
     if( ! file.open( QIODevice::ReadOnly | QIODevice::Text ) ) {
-    	qWarning() << "Failed to open layout memory xml file for reading" << file.fileName() << "error:" << file.error();
+    	qCWarning(KCM_KEYBOARD) << "Failed to open layout memory xml file for reading" << file.fileName() << "error:" << file.error();
     	return false;
     }
 
@@ -233,7 +234,7 @@ bool LayoutMemoryPersister::restoreFromFile(const QFile& file_)
 	qCDebug(KCM_KEYBOARD) << "Restoring keyboard layout map from" << file.fileName();
 
 	if( ! reader.parse(xmlInputSource) ) {
-		qWarning() << "Failed to parse the layout memory file" << file.fileName();
+		qCWarning(KCM_KEYBOARD) << "Failed to parse the layout memory file" << file.fileName();
 		return false;
 	}
 

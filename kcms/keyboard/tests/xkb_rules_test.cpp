@@ -23,10 +23,6 @@
 #include <qdom.h>
 #include <qxml.h>
 
-
-Q_LOGGING_CATEGORY(KCM_KEYBOARD, "kcm_keyboard")
-
-
 static const Rules::ExtrasFlag readExtras = Rules::NO_EXTRAS;
 
 class RulesTest : public QObject

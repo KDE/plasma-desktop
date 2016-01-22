@@ -17,6 +17,7 @@
  */
 
 #include "udev_helper.h"
+#include "debug.h"
 
 #include <QSocketNotifier>
 
@@ -99,6 +100,7 @@ void UdevDeviceNotifier::socketActivated()
 
     for (unsigned i = 0; i < sizeof(keyboardDevice) / sizeof(keyboardDevice[0]); ++i) {
         if (qstrcmp(udev_device_get_property_value(dev, keyboardDevice[i]), "1") == 0) {
+            qCDebug(KCM_KEYBOARD) << "New Udev keyboard device";
             Q_EMIT newKeyboardDevice();
             break;
         }
@@ -106,6 +108,7 @@ void UdevDeviceNotifier::socketActivated()
 
     for (unsigned i = 0; i < sizeof(pointerDevice) / sizeof(pointerDevice[0]); ++i) {
         if (qstrcmp(udev_device_get_property_value(dev, pointerDevice[i]), "1") == 0) {
+            qCDebug(KCM_KEYBOARD) << "New Udev pointer device";
             Q_EMIT newPointerDevice();
             break;
         }

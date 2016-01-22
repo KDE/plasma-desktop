@@ -17,6 +17,7 @@
  */
 
 #include "bindings.h"
+#include "debug.h"
 
 #include <klocalizedstring.h>
 #include <kglobalaccel.h>

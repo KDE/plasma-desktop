@@ -23,14 +23,9 @@
 #include <QtCore/QString>
 #include <QtCore/QMap>
 #include <QtGui/QWidgetList> //For WId
-#include <QLoggingCategory>
 
 #include "x11_helper.h"
 #include "keyboard_config.h"
-
-
-Q_DECLARE_LOGGING_CATEGORY(KCM_KEYBOARD)
-
 
 class LayoutMemoryPersister;
 

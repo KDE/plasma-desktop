@@ -27,10 +27,6 @@
 #include "keyboard_dbus.h"
 #include "bindings.h"
 
-
-Q_DECLARE_LOGGING_CATEGORY(KCM_KEYBOARD)
-
-
 class XInputEventNotifier;
 class LayoutTrayIcon;
 class KeyboardConfig;

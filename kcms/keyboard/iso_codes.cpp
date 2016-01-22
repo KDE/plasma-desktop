@@ -17,6 +17,7 @@
  */
 
 #include "iso_codes.h"
+#include "debug.h"
 
 #include <KLocalizedString>
 
@@ -116,7 +117,7 @@ void IsoCodesPrivate::buildIsoEntryList()
 
 	QFile file(QStringLiteral("%1/iso_%2.xml").arg(isoCodesXmlDir, isoCode));
 	if( !file.open(QFile::ReadOnly | QFile::Text) ) {
-		qCritical() << "Can't open the xml file" << file.fileName();
+		qCCritical(KCM_KEYBOARD) << "Can't open the xml file" << file.fileName();
 		return;
 	}
 
@@ -129,7 +130,7 @@ void IsoCodesPrivate::buildIsoEntryList()
 	QXmlInputSource xmlInputSource(&file);
 
 	if( ! reader.parse(xmlInputSource) ) {
-		qCritical() << "Failed to parse the xml file" << file.fileName();
+		qCCritical(KCM_KEYBOARD) << "Failed to parse the xml file" << file.fileName();
 		return;
 	}
 

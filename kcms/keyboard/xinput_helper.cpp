@@ -17,6 +17,7 @@
  */
 
 #include "xinput_helper.h"
+#include "debug.h"
 #include <config-keyboard.h>
 
 #include <QCoreApplication>
@@ -168,7 +169,7 @@ int XInputEventNotifier::getNewDeviceEventType(xcb_generic_event_t* /*event*/)
 
 int XInputEventNotifier::registerForNewDeviceEvent(Display* /*display*/)
 {
-	qWarning() << "Keyboard kded daemon is compiled without XInput, xkb configuration will be reset when new keyboard device is plugged in!";
+	qCWarning(KCM_KEYBOARD) << "Keyboard kded daemon is compiled without XInput, xkb configuration will be reset when new keyboard device is plugged in!";
 	return -1;
 }
 
