@@ -638,6 +638,7 @@ void KColorCm::updateColorSchemes()
     m_colorSchemes.append(KColorScheme(QPalette::Active, KColorScheme::Button, m_config));
     m_colorSchemes.append(KColorScheme(QPalette::Active, KColorScheme::Selection, m_config));
     m_colorSchemes.append(KColorScheme(QPalette::Active, KColorScheme::Tooltip, m_config));
+    m_colorSchemes.append(KColorScheme(QPalette::Active, KColorScheme::Complementary, m_config));
 
     m_wmColors.load(m_config);
 }
