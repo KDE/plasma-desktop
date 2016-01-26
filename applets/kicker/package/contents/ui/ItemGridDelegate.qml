@@ -21,7 +21,6 @@ import QtQuick 2.0
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
-import org.kde.kquickcontrolsaddons 2.0
 
 import "../code/tools.js" as Tools
 
@@ -97,7 +96,7 @@ MouseArea {
         }
     }
 
-    QIconItem {
+    PlasmaCore.IconItem {
         id: icon
 
         y: showLabel ? (2 * highlightItemSvg.margins.top) : undefined
@@ -108,7 +107,10 @@ MouseArea {
         width: iconSize
         height: width
 
-        icon: model.decoration
+        animated: false
+        usesPlasmaTheme: false
+
+        source: model.decoration
     }
 
     PlasmaComponents.Label {

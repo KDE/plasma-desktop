@@ -178,7 +178,7 @@ Item {
                     colorGroup: ((root.isContainment && main.GridView.view.isRootView) ? PlasmaCore.Theme.ComplementaryColorGroup
                         : PlasmaCore.Theme.NormalColorGroup)
 
-                    QIconItem {
+                    PlasmaCore.IconItem {
                         id: icon
 
                         anchors {
@@ -195,7 +195,10 @@ Item {
 
                         opacity: root.isPopup ? (1.3 - selectionButton.opacity) : 1.0
 
-                        icon: model.decoration
+                        animated: false
+                        usesPlasmaTheme: false
+
+                        source: model.decoration
                     }
 
                     Rectangle {

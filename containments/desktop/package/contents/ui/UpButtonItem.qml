@@ -24,7 +24,6 @@ import org.kde.plasma.plasmoid 2.0
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
-import org.kde.kquickcontrolsaddons 2.0
 
 PlasmaCore.FrameSvgItem {
     id: upButton
@@ -52,7 +51,7 @@ PlasmaCore.FrameSvgItem {
         }
     }
 
-    QIconItem {
+    PlasmaCore.IconItem {
         id: icon
 
         anchors {
@@ -64,7 +63,7 @@ PlasmaCore.FrameSvgItem {
         width: gridView.iconSize
         height: gridView.iconSize
 
-        icon: "arrow-up"
+        source: "arrow-up"
     }
 
     PlasmaComponents.Label {

@@ -21,7 +21,6 @@ import QtQuick 2.0
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
-import org.kde.kquickcontrolsaddons 2.0
 
 import "../code/tools.js" as Tools
 
@@ -186,7 +185,7 @@ Item {
 
         LayoutMirroring.enabled: (Qt.application.layoutDirection == Qt.RightToLeft)
 
-        QIconItem {
+        PlasmaCore.IconItem {
             id: icon
 
             anchors.verticalCenter: parent.verticalCenter
@@ -196,7 +195,10 @@ Item {
 
             visible: iconsEnabled
 
-            icon: model.decoration
+            animated: false
+            usesPlasmaTheme: false
+
+            source: model.decoration
         }
 
         PlasmaComponents.Label {

@@ -21,7 +21,6 @@
 import QtQuick 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
-import org.kde.kquickcontrolsaddons 2.0
 import org.kde.draganddrop 2.0
 
 import "../code/tools.js" as Tools
@@ -170,7 +169,7 @@ Item {
             }
         }
 
-        QIconItem {
+        PlasmaCore.IconItem {
             id: elementIcon
 
             anchors {
@@ -181,7 +180,10 @@ Item {
             width: units.iconSizes.medium
             height: width
 
-            icon: decoration
+            animated: false
+            usesPlasmaTheme: false
+
+            source: decoration
         }
         PlasmaComponents.Label {
             id: titleElement
