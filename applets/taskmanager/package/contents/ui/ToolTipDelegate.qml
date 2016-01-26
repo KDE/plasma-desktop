@@ -252,6 +252,12 @@ Column {
             visible: false
         }
 
+        // prevent accidental click-through when a control is disabled
+        MouseArea {
+            anchors.fill: playerControlsRow
+            enabled: playerControlsRow.visible
+        }
+
         RowLayout {
             id: playerControlsRow
             anchors {
