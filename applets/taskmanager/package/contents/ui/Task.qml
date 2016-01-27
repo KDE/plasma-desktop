@@ -46,6 +46,7 @@ MouseArea {
     property bool isLauncher: model.IsLauncher
     property bool isStartup: model.IsStartup
     property bool demandsAttention: model.DemandsAttention
+    property bool showingContextMenu: false
     property int textWidth: label.implicitWidth
     property bool pressed: false
     property int pressX: -1
@@ -99,6 +100,7 @@ MouseArea {
                 toolTip.hideToolTip();
             }
 
+            showingContextMenu = true;
             tasks.itemContextMenu(task, plasmoid.action("configure"));
         }
     }
@@ -152,6 +154,31 @@ MouseArea {
         }
     }
 
+<<<<<<< Updated upstream
+=======
+    onSmartLauncherEnabledChanged: {
+        if (smartLauncherEnabled && !smartLauncherItem) {
+            var smartLauncher = Qt.createQmlObject("
+    import org.kde.plasma.private.taskmanager 0.1 as TaskManager;
+    TaskManager.SmartLauncherItem { }", task);
+
+            smartLauncher.launcherUrl = Qt.binding(function() { return model.LauncherUrl; });
+
+            smartLauncherItem = smartLauncher;
+        }
+    }
+
+    Connections {
+        target: backend
+
+        onShowingContextMenuChanged: {
+            if (task.showingContextMenu && !backend.showingContextMenu) {
+                task.showingContextMenu = false;
+            }
+        }
+    }
+
+>>>>>>> Stashed changes
     PlasmaCore.FrameSvgItem {
         id: frame
 
@@ -256,7 +283,7 @@ MouseArea {
 
             visible: false
 
-            active: task.containsMouse
+            active: task.containsMouse || task.showingContextMenu
             enabled: true
 
             source: model.DecorationRole
@@ -331,7 +358,7 @@ MouseArea {
         },
         State {
             name: "hovered"
-            when: containsMouse
+            when: containsMouse || showingContextMenu
 
             PropertyChanges {
                 target: frame

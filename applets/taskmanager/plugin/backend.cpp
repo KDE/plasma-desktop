@@ -118,6 +118,11 @@ bool Backend::anyTaskNeedsAttention() const
     return groupManager()->rootGroup()->demandsAttention();
 }
 
+bool Backend::showingContextMenu() const
+{
+    return m_contextMenu;
+}
+
 bool Backend::highlightWindows() const
 {
     return m_highlightWindows;
@@ -286,6 +291,9 @@ void Backend::itemContextMenu(QQuickItem *item, QObject *configAction)
         return;
     }
 
+    connect(m_contextMenu.data(), &QObject::destroyed, this, &Backend::showingContextMenuChanged,
+        Qt::QueuedConnection);
+
     m_contextMenu->adjustSize();
 
     const bool isVertical = (m_taskManagerItem && m_taskManagerItem->property("vertical").toBool());
@@ -334,7 +342,13 @@ void Backend::itemContextMenu(QQuickItem *item, QObject *configAction)
             return;
         }
 
+        QHoverEvent ev(QEvent::HoverLeave, QPoint(0, 0), QPoint(0, 0));
+        QGuiApplication::sendEvent(item, &ev);
+
+        emit showingContextMenuChanged();
+
         m_contextMenu->exec(pos);
+        m_contextMenu->windowHandle()->setTransientParent(item->window());
         m_contextMenu->deleteLater();
     });
 }
