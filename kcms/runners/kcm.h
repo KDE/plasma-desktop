@@ -23,6 +23,7 @@
 #include <KConfig>
 #include <KConfigGroup>
 #include <QListWidget>
+#include <QStyledItemDelegate>
 
 class QToolButton;
 class KCModuleProxy;
@@ -31,13 +32,31 @@ namespace Plasma {
     class AbstractRunner;
 }
 
+
+class SearchConfigItemDelegate : public QStyledItemDelegate
+{
+    Q_OBJECT
+
+public:
+    SearchConfigItemDelegate(QObject *parent = nullptr);
+    virtual ~SearchConfigItemDelegate() = default;
+
+protected:
+    void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const override;
+
+private:
+    int m_margin;
+};
+
+
 class SearchConfigModule : public KCModule
 {
     Q_OBJECT
 
 public:
     enum Roles {
-        RunnersRole = Qt::UserRole + 1
+        RunnersRole = Qt::UserRole + 1,
+        DescriptionRole
     };
 
     SearchConfigModule(QWidget* parent, const QVariantList& args);

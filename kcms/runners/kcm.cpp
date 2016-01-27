@@ -30,14 +30,60 @@
 #include <KCModuleProxy>
 #include <KIconLoader>
 
+#include <QApplication>
 #include <QVBoxLayout>
 #include <QLabel>
 #include <QToolButton>
 #include <QDialog>
 #include <QDialogButtonBox>
+#include <QPainter>
 #include <QPushButton>
 
 K_PLUGIN_FACTORY(SearchConfigModuleFactory, registerPlugin<SearchConfigModule>();)
+
+
+SearchConfigItemDelegate::SearchConfigItemDelegate(QObject *parent)
+    : QStyledItemDelegate(parent)
+{
+    // From the calculation of 'size' in SearchConfigModule::load()
+    m_margin = qRound(IconSize(KIconLoader::Panel) * 0.1);
+}
+
+
+void SearchConfigItemDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const
+{
+    // from QStyledItemDelegate::paint()
+    QStyleOptionViewItem opt = option;
+    initStyleOption(&opt, index);
+    const QWidget *widget = option.widget;
+    QStyle *style = widget ? widget->style() : QApplication::style();
+
+    opt.text.clear();					// draw everything else, but not text
+    style->drawControl(QStyle::CE_ItemViewItem, &opt, painter, widget);
+
+    QRect textRect = option.rect;
+    QRect styleRect = style->subElementRect(QStyle::SE_ItemViewItemText, &opt, widget);
+    textRect.setLeft(styleRect.left());
+
+    QString mainText = index.data(Qt::DisplayRole).toString();
+    QFont font = painter->font();
+    font.setBold(true);
+    painter->setFont(font);
+    textRect.translate(2 * m_margin, m_margin);
+    painter->drawText(textRect, Qt::AlignLeft | Qt::AlignTop, mainText);
+
+    // This is already available as option.fontMetrics, but to be absolutely
+    // precise we use the metrics for the bold font.
+    QFontMetrics metrics(font);
+    textRect.translate(0, metrics.lineSpacing());
+
+    const int availableWidth = textRect.width() - style->pixelMetric(QStyle::PM_LayoutRightMargin, &option, widget);
+    QString subText = option.fontMetrics.elidedText(index.data(SearchConfigModule::DescriptionRole).toString(),
+                                                    Qt::ElideRight, availableWidth);
+    font.setBold(false);
+    painter->setFont(font);
+    painter->drawText(textRect, Qt::AlignLeft | Qt::AlignTop, subText);
+}
 
 
 SearchConfigModule::SearchConfigModule(QWidget* parent, const QVariantList& args)
@@ -72,6 +118,7 @@ SearchConfigModule::SearchConfigModule(QWidget* parent, const QVariantList& args
     m_listWidget = new QListWidget(this);
     m_listWidget->setSortingEnabled(true);
     m_listWidget->setMouseTracking(true);
+    m_listWidget->setItemDelegate(new SearchConfigItemDelegate(this));
     int size = IconSize(KIconLoader::Panel);
     m_listWidget->setIconSize(QSize(size, size));
     connect(m_listWidget, SIGNAL(itemChanged(QListWidgetItem*)),
@@ -234,9 +281,10 @@ void SearchConfigModule::load()
             item->setCheckState(enabled ? Qt::Checked : Qt::Unchecked);
 
             item->setData(RunnersRole, QVariant::fromValue(runnersWithConfig));
+            item->setData(DescriptionRole, runner->description());
 
             m_listWidget->addItem(item);
-            const int size = IconSize(KIconLoader::Panel) * 1.2;
+            const int size = qRound(IconSize(KIconLoader::Panel) * 1.2);
             item->setSizeHint(QSize(size, size));
             addedCategories.insert(category);
         }
