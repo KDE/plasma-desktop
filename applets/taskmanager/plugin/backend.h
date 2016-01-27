@@ -43,6 +43,7 @@ class Backend : public QObject
     Q_PROPERTY(QQuickItem* taskManagerItem READ taskManagerItem WRITE setTaskManagerItem NOTIFY taskManagerItemChanged)
     Q_PROPERTY(QQuickItem* toolTipItem READ toolTipItem WRITE setToolTipItem NOTIFY toolTipItemChanged)
     Q_PROPERTY(bool anyTaskNeedsAttention READ anyTaskNeedsAttention)
+    Q_PROPERTY(bool showingContextMenu READ showingContextMenu NOTIFY showingContextMenuChanged)
     Q_PROPERTY(bool highlightWindows READ highlightWindows WRITE setHighlightWindows NOTIFY highlightWindowsChanged)
     Q_PROPERTY(int groupingStrategy READ groupingStrategy WRITE setGroupingStrategy)
     Q_PROPERTY(int sortingStrategy READ sortingStrategy WRITE setSortingStrategy)
@@ -69,6 +70,7 @@ class Backend : public QObject
         void setToolTipItem(QQuickItem *item);
 
         bool anyTaskNeedsAttention() const;
+        bool showingContextMenu() const;
 
         bool highlightWindows() const;
         void setHighlightWindows(bool highlight);
@@ -108,6 +110,7 @@ class Backend : public QObject
     Q_SIGNALS:
         void taskManagerItemChanged(QQuickItem*);
         void toolTipItemChanged(QQuickItem*);
+        void showingContextMenuChanged();
         void highlightWindowsChanged(bool);
         void launchersChanged();
 
