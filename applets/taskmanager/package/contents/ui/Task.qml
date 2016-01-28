@@ -154,18 +154,6 @@ MouseArea {
         }
     }
 
-    onSmartLauncherEnabledChanged: {
-        if (smartLauncherEnabled && !smartLauncherItem) {
-            var smartLauncher = Qt.createQmlObject("
-    import org.kde.plasma.private.taskmanager 0.1 as TaskManager;
-    TaskManager.SmartLauncherItem { }", task);
-
-            smartLauncher.launcherUrl = Qt.binding(function() { return model.LauncherUrl; });
-
-            smartLauncherItem = smartLauncher;
-        }
-    }
-
     Connections {
         target: backend
 
