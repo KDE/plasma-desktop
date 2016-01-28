@@ -154,8 +154,6 @@ MouseArea {
         }
     }
 
-<<<<<<< Updated upstream
-=======
     onSmartLauncherEnabledChanged: {
         if (smartLauncherEnabled && !smartLauncherItem) {
             var smartLauncher = Qt.createQmlObject("
@@ -178,7 +176,6 @@ MouseArea {
         }
     }
 
->>>>>>> Stashed changes
     PlasmaCore.FrameSvgItem {
         id: frame
 
