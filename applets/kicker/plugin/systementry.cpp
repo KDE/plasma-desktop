@@ -174,7 +174,7 @@ QString SystemEntry::name() const
             return i18n("Save Session");
             break;
         case SwitchUser:
-            return i18n("New Session");
+            return i18n("Switch User");
             break;
         case SuspendToRam:
             return i18n("Suspend");
