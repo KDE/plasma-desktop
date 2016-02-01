@@ -47,6 +47,7 @@ Item {
         Component.onCompleted: mimeData.setData("text/x-plasmoidservicename", pluginName)
 
         onDragStarted: {
+            kwindowsystem.showingDesktop = true;
             main.preventWindowHide = true;
         }
         onDrop: {
