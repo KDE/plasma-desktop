@@ -258,6 +258,12 @@ Item {
                 elide: Text.ElideMiddle
                 text: labelGenerator.displayLabel
 
+                Binding {
+                    target: plasmoid
+                    property: "title"
+                    value: labelGenerator.displayLabel
+                }
+
                 Folder.LabelGenerator {
                     id: labelGenerator
 
