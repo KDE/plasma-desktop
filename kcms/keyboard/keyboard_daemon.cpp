@@ -242,4 +242,9 @@ QStringList KeyboardDaemon::getLayoutsList()
 	return X11Helper::getLayoutsListAsString( X11Helper::getLayoutsList() );
 }
 
+QString KeyboardDaemon::getLayoutDisplayName(const QString &layout)
+{
+	return Flags::getShortText(LayoutUnit(layout), keyboardConfig);
+}
+
 #include "keyboard_daemon.moc"

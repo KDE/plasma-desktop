@@ -63,6 +63,7 @@ public Q_SLOTS:
 	Q_SCRIPTABLE bool setLayout(const QString& layout);
 	Q_SCRIPTABLE QString getCurrentLayout();
 	Q_SCRIPTABLE QStringList getLayoutsList();
+	Q_SCRIPTABLE QString getLayoutDisplayName(const QString &layout);
 
 Q_SIGNALS:
 	Q_SCRIPTABLE void currentLayoutChanged(QString layout);
