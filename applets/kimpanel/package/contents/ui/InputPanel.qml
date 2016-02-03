@@ -27,7 +27,7 @@ import org.kde.plasma.private.kimpanel 0.1 as Kimpanel
 PlasmaCore.Dialog {
     id: inputpanel
     type: PlasmaCore.Dialog.PopupMenu
-    flags: Qt.ToolTip | Qt.WindowStaysOnTopHint | Qt.WindowDoesNotAcceptFocus
+    flags: Qt.Popup | Qt.WindowStaysOnTopHint | Qt.WindowDoesNotAcceptFocus
     location: PlasmaCore.Types.Floating
     property bool verticalLayout: false
     property int highlightCandidate: -1
