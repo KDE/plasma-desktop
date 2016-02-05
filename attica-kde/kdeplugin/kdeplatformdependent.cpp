@@ -40,7 +40,7 @@ KdePlatformDependent::KdePlatformDependent()
     : m_config(KSharedConfig::openConfig("atticarc")), m_accessManager(0), m_wallet(0)
 {
     // FIXME: Investigate how to not leak this instance witohut crashing.
-    m_accessManager = new KIO::Integration::AccessManager(0);
+    m_accessManager = new QNetworkAccessManager(0);
 }
 
 KdePlatformDependent::~KdePlatformDependent()
