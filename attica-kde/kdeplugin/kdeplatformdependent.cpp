@@ -85,8 +85,7 @@ QNetworkReply* KdePlatformDependent::get(const QNetworkRequest& request)
 
 QNetworkRequest KdePlatformDependent::removeAuthFromRequest(const QNetworkRequest& request)
 {
-    QStringList noauth;
-    noauth << "no-auth-prompt" << "true";
+    const QStringList noauth = { "no-auth-prompt", "true" };
     QNetworkRequest notConstReq = const_cast<QNetworkRequest&>(request);
     notConstReq.setAttribute(QNetworkRequest::User, noauth);
     return notConstReq;
@@ -94,7 +93,7 @@ QNetworkRequest KdePlatformDependent::removeAuthFromRequest(const QNetworkReques
 
 bool KdePlatformDependent::saveCredentials(const QUrl& baseUrl, const QString& user, const QString& password)
 {
-    m_passwords[baseUrl.toString()] = QPair<QString, QString> (user, password);
+    m_passwords[baseUrl.toString()] = qMakePair(user, password);
 
     if (!m_wallet && !openWallet(true)) {
 
@@ -118,9 +117,10 @@ bool KdePlatformDependent::saveCredentials(const QUrl& baseUrl, const QString& u
         return true;
     }
 
-    QMap<QString, QString> entries;
-    entries.insert("user", user);
-    entries.insert("password", password);
+    const QMap<QString, QString> entries = {
+        { "user", user },
+        { "password", password }
+    };
     qCDebug(ATTICA_PLUGIN_LOG) << "Saved credentials in KWallet";
 
     return !m_wallet->writeMap(baseUrl.toString(), entries);
@@ -140,15 +140,10 @@ bool KdePlatformDependent::hasCredentials(const QUrl& baseUrl) const
     }
 
     KConfigGroup group(m_config, baseUrl.toString());
-    QString user;
-    user = group.readEntry("user", QString());
-    if (!user.isEmpty()) {
-        qCDebug(ATTICA_PLUGIN_LOG) << "Found credentials in KConfig";
-        return true;
-    }
 
-    qCDebug(ATTICA_PLUGIN_LOG) << "No credentials found";
-    return false;
+    const QString user = group.readEntry("user", QString());
+    qCDebug(ATTICA_PLUGIN_LOG) << "Credentials found:" << !user.isEmpty();
+    return !user.isEmpty();
 }
 
 
@@ -163,7 +158,7 @@ bool KdePlatformDependent::loadCredentials(const QUrl& baseUrl, QString& user, Q
         password = KStringHandler::obscure(group.readEntry("password", QString()));
         if (!user.isEmpty()) {
             qCDebug(ATTICA_PLUGIN_LOG) << "Successfully loaded credentials from kconfig";
-            m_passwords[baseUrl.toString()] = QPair<QString, QString> (user, password);
+            m_passwords[baseUrl.toString()] = qMakePair(user, password);
             return true;
         }
         return false;
@@ -181,7 +176,7 @@ bool KdePlatformDependent::loadCredentials(const QUrl& baseUrl, QString& user, Q
     password = entries.value("password");
     qCDebug(ATTICA_PLUGIN_LOG) << "Successfully loaded credentials.";
 
-    m_passwords[baseUrl.toString()] = QPair<QString, QString> (user, password);
+    m_passwords[baseUrl.toString()] = qMakePair(user, password);
 
     return true;
 }
