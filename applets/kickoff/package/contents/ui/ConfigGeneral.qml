@@ -25,81 +25,78 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 
 import org.kde.kquickcontrolsaddons 2.0 as KQuickAddons
 
-Item {
-
-    width: childrenRect.width
-    height: childrenRect.height
-
+ColumnLayout {
     property string cfg_icon: plasmoid.configuration.icon
     property alias cfg_switchTabsOnHover: switchTabsOnHoverCheckbox.checked
     property alias cfg_showAppsByName: showApplicationsByNameCheckbox.checked
 
-    KQuickAddons.IconDialog {
-        id: iconDialog
-        onIconNameChanged: cfg_icon = iconName || "start-here-kde" // TODO use actual default
-    }
+    spacing: units.smallSpacing
 
-    Column {
+    RowLayout {
         spacing: units.smallSpacing
 
-        RowLayout {
-            spacing: units.smallSpacing
+        QtControls.Label {
+            text: i18n("Icon:")
+        }
 
-            QtControls.Label {
-                text: i18n("Icon:")
+        QtControls.Button {
+            id: iconButton
+            Layout.minimumWidth: units.iconSizes.large + units.smallSpacing * 2
+            Layout.maximumWidth: Layout.minimumWidth
+            Layout.minimumHeight: Layout.minimumWidth
+            Layout.maximumHeight: Layout.minimumWidth
+
+            KQuickAddons.IconDialog {
+                id: iconDialog
+                onIconNameChanged: cfg_icon = iconName || "start-here-kde" // TODO use actual default
             }
 
-            QtControls.Button {
-                id: iconButton
-                Layout.minimumWidth: units.iconSizes.large + units.smallSpacing * 2
-                Layout.maximumWidth: Layout.minimumWidth
-                Layout.minimumHeight: Layout.minimumWidth
-                Layout.maximumHeight: Layout.minimumWidth
+            // just to provide some visual feedback, cannot have checked without checkable enabled
+            checkable: true
+            onClicked: {
+                checked = Qt.binding(function() { // never actually allow it being checked
+                    return iconMenu.status === PlasmaComponents.DialogStatus.Open
+                })
 
-                // just to provide some visual feedback, cannot have checked without checkable enabled
-                checkable: true
-                onClicked: {
-                    checked = Qt.binding(function() { // never actually allow it being checked
-                        return iconMenu.status === PlasmaComponents.DialogStatus.Open
-                    })
-
-                    iconMenu.open(0, height)
-                }
-
-                PlasmaCore.IconItem {
-                    anchors.centerIn: parent
-                    width: units.iconSizes.large
-                    height: width
-                    source: cfg_icon
-                }
+                iconMenu.open(0, height)
             }
 
-            // QQC Menu can only be opened at cursor position, not a random one
-            PlasmaComponents.ContextMenu {
-                id: iconMenu
-                visualParent: iconButton
-
-                PlasmaComponents.MenuItem {
-                    text: i18nc("@item:inmenu Open icon chooser dialog", "Choose...")
-                    icon: "document-open-folder"
-                    onClicked: iconDialog.open()
-                }
-                PlasmaComponents.MenuItem {
-                    text: i18nc("@item:inmenu Reset icon to default", "Clear Icon")
-                    icon: "edit-clear"
-                    onClicked: cfg_icon = "start-here-kde" // TODO reset to actual default
-                }
+            PlasmaCore.IconItem {
+                anchors.centerIn: parent
+                width: units.iconSizes.large
+                height: width
+                source: cfg_icon
             }
         }
 
-        QtControls.CheckBox {
-            id: switchTabsOnHoverCheckbox
-            text: i18n("Switch tabs on hover")
-        }
+        // QQC Menu can only be opened at cursor position, not a random one
+        PlasmaComponents.ContextMenu {
+            id: iconMenu
+            visualParent: iconButton
 
-        QtControls.CheckBox {
-            id: showApplicationsByNameCheckbox
-            text: i18n("Show applications by name")
+            PlasmaComponents.MenuItem {
+                text: i18nc("@item:inmenu Open icon chooser dialog", "Choose...")
+                icon: "document-open-folder"
+                onClicked: iconDialog.open()
+            }
+            PlasmaComponents.MenuItem {
+                text: i18nc("@item:inmenu Reset icon to default", "Clear Icon")
+                icon: "edit-clear"
+                onClicked: cfg_icon = "start-here-kde" // TODO reset to actual default
+            }
         }
+    }
+
+    QtControls.CheckBox {
+        id: switchTabsOnHoverCheckbox
+        text: i18n("Switch tabs on hover")
+    }
+
+    QtControls.CheckBox {
+        id: showApplicationsByNameCheckbox
+        text: i18n("Show applications by name")
+    }
+    Item {
+        Layout.fillHeight: true
     }
 }
