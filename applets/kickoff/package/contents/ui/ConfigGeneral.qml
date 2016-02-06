@@ -29,6 +29,7 @@ ColumnLayout {
     property string cfg_icon: plasmoid.configuration.icon
     property alias cfg_switchTabsOnHover: switchTabsOnHoverCheckbox.checked
     property alias cfg_showAppsByName: showApplicationsByNameCheckbox.checked
+    property alias cfg_useExtraRunners: useExtraRunners.checked
 
     spacing: units.smallSpacing
 
@@ -96,7 +97,13 @@ ColumnLayout {
         id: showApplicationsByNameCheckbox
         text: i18n("Show applications by name")
     }
+
+    QtControls.CheckBox {
+        id: useExtraRunners
+        text: i18n("Expand search to bookmarks, files and emails")
+    }
     Item {
+        //spacer
         Layout.fillHeight: true
     }
 }

@@ -80,7 +80,14 @@ Item {
 
         appletInterface: plasmoid
 
-        runners: plasmoid.configuration.runners
+        runners: {
+            var runners = ["services", "places"];
+
+            if (plasmoid.configuration.useExtraRunners) {
+                runners = runners.concat(plasmoid.configuration.runners);
+            }
+            return runners;
+        }
         mergeResults: true
 
         favoritesModel: globalFavorites
