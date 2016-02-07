@@ -30,7 +30,6 @@
 #include "thememodel.h"
 
 #include <QFileDialog>
-#include "kcm_desktoptheme_debug.h"
 
 #include <KAboutData>
 #include <KNewStuff3/KNS3/DownloadDialog>
@@ -41,8 +40,9 @@
 
 #include <kpluginfactory.h>
 
-K_PLUGIN_FACTORY_WITH_JSON(KCMDesktopThemeFactory, "desktoptheme.json", registerPlugin<KCMDesktopTheme>();)
+Q_LOGGING_CATEGORY(KCM_DESKTOP_THEME_LOG, "log_kcm_desktoptheme")
 
+K_PLUGIN_FACTORY_WITH_JSON(KCMDesktopThemeFactory, "desktoptheme.json", registerPlugin<KCMDesktopTheme>();)
 
 KCMDesktopTheme::KCMDesktopTheme( QWidget* parent, const QVariantList& )
     : KCModule( parent )
@@ -56,7 +56,6 @@ KCMDesktopTheme::KCMDesktopTheme( QWidget* parent, const QVariantList& )
     setupUi(this);
 
     m_bDesktopThemeDirty = false;
-    m_bDetailsDirty = false;
 
     KAboutData *about =
         new KAboutData( QStringLiteral("KCMDesktopTheme"), i18n("KDE Desktop Theme Module"),
@@ -68,14 +67,14 @@ KCMDesktopTheme::KCMDesktopTheme( QWidget* parent, const QVariantList& )
     about->addAuthor(QStringLiteral("Ralf Nolden"), QString(), QStringLiteral("nolden@kde.org"));
     setAboutData( about );
 
+    m_messageWidget->hide();
+
     m_newThemeButton->setIcon(QIcon::fromTheme(QStringLiteral("get-hot-new-stuff")));
 
     m_themeModel = new ThemeModel(this);
     m_theme->setModel(m_themeModel);
     m_theme->setItemDelegate(new ThemeDelegate(m_theme));
     m_theme->setVerticalScrollMode(QAbstractItemView::ScrollPerItem);
-
-    connect(m_detailsWidget, &DesktopThemeDetails::changed, this, &KCMDesktopTheme::detailChanged);
 
     connect(m_theme->selectionModel(), &QItemSelectionModel::currentChanged,
             this, &KCMDesktopTheme::setDesktopThemeDirty);
@@ -93,7 +92,6 @@ void KCMDesktopTheme::load()
     loadDesktopTheme();
 
     m_bDesktopThemeDirty = false;
-    m_bDetailsDirty = false;
 
     emit changed( false );
 }
@@ -102,8 +100,9 @@ void KCMDesktopTheme::save()
 {
     qCDebug(KCM_DESKTOP_THEME_LOG) << "Save!";
     // Don't do anything if we don't need to.
-    if ( !( m_bDesktopThemeDirty) && !(m_bDetailsDirty) )
+    if (!m_bDesktopThemeDirty) {
         return;
+    }
 
     //Desktop theme
     if ( m_bDesktopThemeDirty )
@@ -115,14 +114,8 @@ void KCMDesktopTheme::save()
 
     }
 
-    if (m_bDetailsDirty)
-    {
-        m_detailsWidget->save();
-    }
-
     // Clean up
     m_bDesktopThemeDirty = false;
-    m_bDetailsDirty = false;
     emit changed( false );
     qCDebug(KCM_DESKTOP_THEME_LOG) << "saved.";
 }
@@ -130,7 +123,6 @@ void KCMDesktopTheme::save()
 void KCMDesktopTheme::defaults()
 {
     m_theme->setCurrentIndex(m_themeModel->indexOf(QStringLiteral("default")));
-    m_detailsWidget->resetToDefaultTheme();
     setDesktopThemeDirty();
 }
 
@@ -148,7 +140,6 @@ void KCMDesktopTheme::getNewThemes()
 
     if (!entries.isEmpty()) {
         loadDesktopTheme();
-        m_detailsWidget->reloadModel();
     }
 }
 
@@ -162,12 +153,6 @@ void KCMDesktopTheme::loadDesktopTheme()
 
     m_theme->setCurrentIndex(m_themeModel->indexOf(themeName));
     QApplication::restoreOverrideCursor();
-}
-
-void KCMDesktopTheme::detailChanged()
-{
-    m_bDetailsDirty = true;
-    emit changed(true);
 }
 
 void KCMDesktopTheme::showFileDialog()
@@ -219,19 +204,27 @@ void KCMDesktopTheme::installFinished(int exitCode, QProcess::ExitStatus exitSta
     if (exitCode == 0) {
         qCDebug(KCM_DESKTOP_THEME_LOG) << "Theme installed successfully :)";
         m_themeModel->reload();
-        m_detailsWidget->reloadModel();
-        m_statusLabel->setText(i18n("Theme installed successfully."));
+
+        m_messageWidget->setMessageType(KMessageWidget::Positive);
+        m_messageWidget->setText(i18n("Theme installed successfully."));
     } else {
         qCWarning(KCM_DESKTOP_THEME_LOG) << "Theme installation failed.";
-        m_statusLabel->setText(i18n("Theme installation failed. (%1)", exitCode));
+        m_messageWidget->setMessageType(KMessageWidget::Error);
+        m_messageWidget->setText(i18n("Theme installation failed. (%1)", exitCode));
     }
+
+    m_messageWidget->animatedShow();
+
     m_newThemeButton->setEnabled(true);
 }
 
 void KCMDesktopTheme::installError(QProcess::ProcessError e)
 {
     qCWarning(KCM_DESKTOP_THEME_LOG) << "Theme installation failed: " << e;
-    m_statusLabel->setText(i18n("Theme installation failed."));
+    m_messageWidget->setMessageType(KMessageWidget::Error);
+    m_messageWidget->setText(i18n("Theme installation failed."));
+    m_messageWidget->animatedShow();
+
     m_newThemeButton->setEnabled(true);
 }
 

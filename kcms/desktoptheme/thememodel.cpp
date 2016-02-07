@@ -40,8 +40,6 @@
 #include <Plasma/Theme>
 #include <qstandardpaths.h>
 
-#include "kcm_desktoptheme_debug.h"
-
 ThemeModel::ThemeModel( QObject *parent )
 : QAbstractListModel( parent )
 {

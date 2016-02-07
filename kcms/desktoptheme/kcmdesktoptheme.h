@@ -30,13 +30,16 @@
 
 #include <kcmodule.h>
 
-
 #include "ui_DesktopTheme.h"
 
+#include <QLoggingCategory>
 #include <QProcess>
+
+Q_DECLARE_LOGGING_CATEGORY(KCM_DESKTOP_THEME_LOG)
 
 class QFileDialog;
 class ThemeModel;
+
 
 namespace Plasma
 {
@@ -62,7 +65,6 @@ protected Q_SLOTS:
 
     void getNewThemes();
 
-    void detailChanged();
     void installFinished(int exitCode, QProcess::ExitStatus exitStatus);
     void installError(QProcess::ProcessError e);
 
@@ -71,7 +73,6 @@ private:
     static int toolbarButtonIndex(const QString &text);
 
     bool m_bDesktopThemeDirty;
-    bool m_bDetailsDirty;
 
     void showFileDialog();
     QFileDialog *m_dialog;
