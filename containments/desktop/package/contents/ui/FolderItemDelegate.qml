@@ -134,7 +134,13 @@ Item {
                     if (containsMouse && !model.blank) {
                         toolTip.icon = model.decoration;
                         toolTip.mainText = model.display;
-                        toolTip.subText = model.type + "\n" + model.size
+
+                        if (model.size != undefined) {
+                                toolTip.subText = model.type + "\n" + model.size;
+                        } else {
+                            toolTip.subText = model.type;
+                        }
+
                         main.GridView.view.hoveredItem = main;
                     }
                 }
