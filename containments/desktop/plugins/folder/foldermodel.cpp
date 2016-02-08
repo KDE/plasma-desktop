@@ -934,7 +934,11 @@ QVariant FolderModel::data(const QModelIndex& index, int role) const
 
         return item.url();
     } else if (role == SizeRole) {
-        return m_dirModel->data(mapToSource(QSortFilterProxyModel::index(index.row(), 1)), Qt::DisplayRole);
+        bool isDir = data(index, IsDirRole).toBool();
+
+        if (!isDir) {
+            return m_dirModel->data(mapToSource(QSortFilterProxyModel::index(index.row(), 1)), Qt::DisplayRole);
+        }
     } else if (role == TypeRole) {
         return m_dirModel->data(mapToSource(QSortFilterProxyModel::index(index.row(), 6)), Qt::DisplayRole);
     } else if (role == FileNameRole) {

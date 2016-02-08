@@ -49,7 +49,7 @@ Folder.SubDialog {
     mainItem: FolderView {
         id: folderView
 
-        width: cellWidth * 3 + 10 // FIXME HACK: Use actual scrollbar width.
+        width: cellWidth * 3 + (10 * units.devicePixelRatio) // FIXME HACK: Use actual scrollbar width.
         height: cellHeight * 2
 
         isRootView: false
