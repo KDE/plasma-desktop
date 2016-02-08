@@ -636,7 +636,7 @@ Item {
                 Behavior on contentY { id: smoothY; enabled: false; SmoothedAnimation { velocity: 700 } }
 
                 Keys.onReturnPressed: {
-                    if (currentIndex != -1) {
+                    if (currentIndex != -1 && dir.hasSelection()) {
                         var func = root.isPopup ? dir.cd : dir.run;
                         func(positioner.map(currentIndex));
                     }
@@ -646,7 +646,7 @@ Item {
                     // FIXME TODO: Correct popup position.
                     return;
 
-                    if (currentIndex != -1) {
+                    if (currentIndex != -1 && dir.hasSelection()) {
                         dir.setSelected(positioner.map(currentIndex));
                         dir.openContextMenu();
                     }
