@@ -130,10 +130,10 @@ Item {
 
         acceptedButtons: {
             if (hoveredItem == null && main.isRootView) {
-                return root.isPopup ? (Qt.LeftButton | Qt.MiddleButton) : Qt.LeftButton;
+                return root.isPopup ? (Qt.LeftButton | Qt.MiddleButton | Qt.BackButton) : Qt.LeftButton;
             }
 
-            return root.isPopup ? (Qt.LeftButton | Qt.MiddleButton | Qt.RightButton)
+            return root.isPopup ? (Qt.LeftButton | Qt.MiddleButton | Qt.RightButton | Qt.BackButton)
                 : (Qt.LeftButton | Qt.RightButton);
         }
 
@@ -154,6 +154,14 @@ Item {
             }
 
             scrollArea.focus = true;
+
+            if (mouse.buttons & Qt.BackButton) {
+                if (root.isPopup && dir.resolvedUrl != dir.resolve(plasmoid.configuration.url)) {
+                    dir.up();
+                }
+
+                return;
+            }
 
             if (childAt(mouse.x, mouse.y) != editor) {
                 editor.targetItem = null;
@@ -774,6 +782,12 @@ Item {
                         }
 
                         updateSelection(event.modifiers);
+                    }
+                }
+
+                Keys.onBackPressed: {
+                    if (root.isPopup && dir.resolvedUrl != dir.resolve(plasmoid.configuration.url)) {
+                        dir.up();
                     }
                 }
 
