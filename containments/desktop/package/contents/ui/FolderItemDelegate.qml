@@ -130,7 +130,7 @@ Item {
                 mainItem: toolTipDelegate
                 active: (plasmoid.configuration.toolTips && popupDialog == null && !model.blank)
                 interactive: false
-                location: plasmoid.location
+                location: root.isPopup ? (plasmoid.location == PlasmaCore.Types.LeftEdge ? PlasmaCore.Types.LeftEdge : PlasmaCore.Types.RightEdge) : plasmoid.location
 
                 onContainsMouseChanged:  {
                     if (containsMouse && !model.blank) {
