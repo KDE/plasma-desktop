@@ -37,6 +37,7 @@ Item {
     property Item labelArea: loader.item ? loader.item.labelArea : null
     property Item actionsOverlay: loader.item ? loader.item.actionsOverlay : null
     property Item hoverArea: loader.item ? loader.item.hoverArea : null
+    property Item toolTip: loader.item ? loader.item.toolTip : null
 
     Loader {
         id: loader
@@ -66,6 +67,7 @@ Item {
             property Item labelArea: textBackground
             property Item actionsOverlay: actions
             property Item hoverArea: toolTip
+            property Item toolTip: toolTip
             property Item popupButton: null
 
             onSelectedChanged: {
@@ -128,7 +130,7 @@ Item {
                 mainItem: toolTipDelegate
                 active: (plasmoid.configuration.toolTips && popupDialog == null && !model.blank)
                 interactive: false
-                location: plasmoid.location
+                location: root.isPopup ? (plasmoid.location == PlasmaCore.Types.LeftEdge ? PlasmaCore.Types.LeftEdge : PlasmaCore.Types.RightEdge) : plasmoid.location
 
                 onContainsMouseChanged:  {
                     if (containsMouse && !model.blank) {
