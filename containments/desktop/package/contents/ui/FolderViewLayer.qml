@@ -124,12 +124,6 @@ Item {
         wrapMode: Text.Wrap
     }
 
-    FolderItemToolTipDelegate {
-        id: toolTipDelegate
-
-        visible: false
-    }
-
     Connections {
         target: plasmoid
 

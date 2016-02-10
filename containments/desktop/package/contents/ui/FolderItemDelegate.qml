@@ -127,7 +127,6 @@ Item {
                 width: Math.max(icon.width, label.width)
                 height: (label.y + label.paintedHeight)
 
-                mainItem: toolTipDelegate
                 active: (plasmoid.configuration.toolTips && popupDialog == null && !model.blank)
                 interactive: false
                 location: root.isPopup ? (plasmoid.location == PlasmaCore.Types.LeftEdge ? PlasmaCore.Types.LeftEdge : PlasmaCore.Types.RightEdge) : plasmoid.location
