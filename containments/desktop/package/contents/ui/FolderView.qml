@@ -198,7 +198,12 @@ Item {
                     gridView.currentIndex = hoveredItem.index;
 
                     if (mouse.buttons & Qt.RightButton) {
+                        if (pressedItem.toolTip && pressedItem.toolTip.active) {
+                            pressedItem.toolTip.hideToolTip();
+                        }
+
                         clearPressState();
+
                         dir.openContextMenu();
                     }
                 }
