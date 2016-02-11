@@ -98,6 +98,7 @@ QVariant ActionModel::data( const QModelIndex &index, int role ) const
 
 void ActionModel::buildActionList()
 {
+    beginResetModel();
     qDeleteAll( d->actions );
     d->actions.clear();
     // Prepare to search for possible actions -> we only want solid types
@@ -118,7 +119,7 @@ void ActionModel::buildActionList()
     }
 
     qSort( d->actions.begin(), d->actions.end(), sortAction );
-    reset();
+    endResetModel();
 }
 
 QList<ActionItem*> ActionModel::actionList() const

@@ -36,6 +36,7 @@ class PreviewPluginsModel : public QAbstractListModel
         PreviewPluginsModel(QObject *parent = 0);
         ~PreviewPluginsModel();
 
+        QHash<int, QByteArray> roleNames() const override;
         QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
         Q_INVOKABLE void setRowChecked(int row, bool checked);
 

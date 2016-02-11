@@ -58,6 +58,8 @@ public:
     DirModel(QObject* parent=0);
     virtual ~DirModel();
 
+    QHash<int, QByteArray> roleNames() const override;
+
     void setUrl(const QString& url);
     QString url() const;
 

@@ -36,7 +36,7 @@ public:
 
     RectangleModel(QObject *parent = 0);
 
-    virtual QHash<int, QByteArray> roles() const;
+    virtual QHash<int, QByteArray> roleNames() const;
     virtual void clear();
     void append(const QRectF &rect);
     QRectF &rectAt(int index);
@@ -62,7 +62,7 @@ public:
 
     WindowModel(QObject *parent = 0);
 
-    QHash<int, QByteArray> roles() const;
+    QHash<int, QByteArray> roleNames() const;
     void clear();
     void append(WId, const QRectF &, bool active, const QPixmap &icon, const QString &name);
     WId idAt(int index) const;
@@ -89,7 +89,7 @@ public:
 
     PagerModel(QObject *parent = 0);
 
-    QHash<int, QByteArray> roles() const;
+    QHash<int, QByteArray> roleNames() const;
 
     void clearDesktopRects();
     void appendDesktopRect(const QRectF &rect, const QString &name);

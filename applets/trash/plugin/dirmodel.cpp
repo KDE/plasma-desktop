@@ -50,14 +50,6 @@ DirModel::DirModel(QObject *parent)
     //dirLister()->setMimeFilter(m_mimeTypes);
 #endif
 
-    QHash<int, QByteArray>roleNames;
-    roleNames[Qt::DisplayRole] = "display";
-    roleNames[Qt::DecorationRole] = "decoration";
-    roleNames[UrlRole] = "url";
-    roleNames[MimeTypeRole] = "mimeType";
-    roleNames[Thumbnail] = "thumbnail";
-    setRoleNames(roleNames);
-
     m_previewTimer = new QTimer(this);
     m_previewTimer->setSingleShot(true);
     connect(m_previewTimer, &QTimer::timeout,
@@ -77,6 +69,17 @@ DirModel::DirModel(QObject *parent)
 DirModel::~DirModel()
 {
     delete m_imageCache;
+}
+
+QHash<int, QByteArray> DirModel::roleNames() const
+{
+    return {
+        { Qt::DisplayRole, "display" },
+        { Qt::DecorationRole, "decoration" },
+        { UrlRole, "url" },
+        { MimeTypeRole, "mimeType" },
+        { Thumbnail, "thumbnail" }
+    };
 }
 
 QString DirModel::url() const

@@ -188,8 +188,8 @@ void SolidActions::fillActionsList()
 {
     mainUi.TvActions->clearSelection();
     actionModel->buildActionList();
-    mainUi.TvActions->header()->setResizeMode( 0, QHeaderView::Stretch );
-    mainUi.TvActions->header()->setResizeMode( 1, QHeaderView::ResizeToContents );
+    mainUi.TvActions->header()->setSectionResizeMode( 0, QHeaderView::Stretch );
+    mainUi.TvActions->header()->setSectionResizeMode( 1, QHeaderView::ResizeToContents );
     toggleEditDelete();
 }
 

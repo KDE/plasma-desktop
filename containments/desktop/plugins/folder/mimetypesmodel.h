@@ -36,6 +36,7 @@ class MimeTypesModel : public QAbstractListModel
         MimeTypesModel(QObject *parent = 0);
         ~MimeTypesModel();
 
+        QHash<int, QByteArray> roleNames() const override;
         QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
 
         Q_INVOKABLE void checkAll();

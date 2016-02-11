@@ -36,6 +36,7 @@ class PlacesModel : public QSortFilterProxyModel
 
         bool activityLinkingEnabled();
 
+        QHash<int, QByteArray> roleNames() const override;
         Q_INVOKABLE QString urlForIndex(int idx) const;
         Q_INVOKABLE int indexForUrl(const QString &url) const;
 

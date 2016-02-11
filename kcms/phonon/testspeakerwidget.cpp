@@ -74,7 +74,7 @@ void TestSpeakerWidget::onToggle(bool state)
     ca_proplist_create(&proplist);
     
     ca_proplist_sets(proplist, CA_PROP_MEDIA_ROLE, "test");
-    ca_proplist_sets(proplist, CA_PROP_MEDIA_NAME, _positionName().toAscii().constData());
+    ca_proplist_sets(proplist, CA_PROP_MEDIA_NAME, _positionName().toLatin1().constData());
     ca_proplist_sets(proplist, CA_PROP_CANBERRA_FORCE_CHANNEL, _positionAsString());
     ca_proplist_sets(proplist, CA_PROP_CANBERRA_ENABLE, "1");
 

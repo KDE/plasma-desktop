@@ -61,7 +61,7 @@ void ThemeModel::clearThemeList()
 
 void ThemeModel::reload()
 {
-    reset();
+    beginResetModel();
     clearThemeList();
 
     // get all desktop themes
@@ -115,9 +115,7 @@ void ThemeModel::reload()
         info.themeRoot = themeRoot;
         m_themes[name] = info;
     }
-
-    beginInsertRows(QModelIndex(), 0, m_themes.size());
-    endInsertRows();
+    endResetModel();
 }
 
 int ThemeModel::rowCount(const QModelIndex &) const

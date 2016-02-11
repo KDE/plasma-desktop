@@ -28,12 +28,6 @@ static bool lessThan(const QMimeType &a, const QMimeType &b)
 
 MimeTypesModel::MimeTypesModel(QObject *parent) : QAbstractListModel(parent)
 {
-    QHash<int, QByteArray> roleNames;
-    roleNames[Qt::DisplayRole] = "display";
-    roleNames[Qt::DecorationRole] = "decoration";
-    roleNames[Qt::CheckStateRole] = "checked";
-    setRoleNames(roleNames);
-
     QMimeDatabase db;
     m_mimeTypesList = db.allMimeTypes();
     qStableSort(m_mimeTypesList.begin(), m_mimeTypesList.end(), lessThan);
@@ -43,6 +37,15 @@ MimeTypesModel::MimeTypesModel(QObject *parent) : QAbstractListModel(parent)
 
 MimeTypesModel::~MimeTypesModel()
 {
+}
+
+QHash<int, QByteArray> MimeTypesModel::roleNames() const
+{
+    return {
+        { Qt::DisplayRole, "display" },
+        { Qt::DecorationRole, "decoration" },
+        { Qt::CheckStateRole, "checked" }
+    };
 }
 
 QVariant MimeTypesModel::data(const QModelIndex &index, int role) const

@@ -139,8 +139,9 @@ PredicateItem * PredicateModel::rootItem() const
 
 void PredicateModel::setRootPredicate( PredicateItem * item )
 {
+    beginResetModel();
     d->rootItem = item;
-    reset();
+    endResetModel();
 }
 
 void PredicateModel::itemUpdated( const QModelIndex& item )

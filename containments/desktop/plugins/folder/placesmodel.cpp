@@ -32,16 +32,19 @@ PlacesModel::PlacesModel(QObject *parent) : QSortFilterProxyModel(parent)
 
     setSourceModel(m_sourceModel);
 
-    QHash<int, QByteArray> roleNames = m_sourceModel->roleNames();
-    roleNames[Qt::DisplayRole] = "display";
-    roleNames[Qt::DecorationRole] = "decoration";
-    setRoleNames(roleNames);
-
     setDynamicSortFilter(true);
 }
 
 PlacesModel::~PlacesModel()
 {
+}
+
+QHash<int, QByteArray> PlacesModel::roleNames() const
+{
+    QHash<int, QByteArray> roleNames = QSortFilterProxyModel::roleNames();
+    roleNames[Qt::DisplayRole] = "display";
+    roleNames[Qt::DecorationRole] = "decoration";
+    return roleNames;
 }
 
 bool PlacesModel::activityLinkingEnabled()

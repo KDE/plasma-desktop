@@ -161,7 +161,10 @@ public:
 
     bool setData ( const QModelIndex & index, const QVariant & value, int role = Qt::EditRole );
     QVariant data(const QModelIndex& index, int role) const;
-    void reset() { QAbstractItemModel::reset(); }
+    void reset() {
+        beginResetModel();
+        endResetModel();
+    }
     void gotoGroup(const QString& group, QTreeView* view);
 
 private:

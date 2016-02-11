@@ -122,7 +122,7 @@ namespace {
 
     bool isReverseTab(const QKeySequence &prevAction) {
 
-        if (Qt::SHIFT & prevAction && Qt::Key_Tab & prevAction) {
+        if (prevAction == QKeySequence(Qt::ShiftModifier | Qt::Key_Tab)) {
             return areModKeysDepressed(Qt::SHIFT);
         } else {
             return false;

@@ -37,7 +37,7 @@ class KeyboardDaemonTest : public QObject
 private Q_SLOTS:
     void initTestCase() {
 //    	kapplication = new KApplication();
-//    	const KAboutData* kAboutData = new KAboutData(i18n("a").toAscii(), i18n("a").toAscii(), KLocalizedString(), i18n("a").toAscii());
+//    	const KAboutData* kAboutData = new KAboutData(i18n("a").toLatin1(), i18n("a").toLatin1(), KLocalizedString(), i18n("a").toLatin1());
 //    	KCmdLineArgs::init(kAboutData);
     	keyboardDaemon = new KeyboardDaemon(this, QList<QVariant>());
     }

@@ -30,11 +30,6 @@ static bool lessThan(const KService::Ptr &a, const KService::Ptr &b)
 PreviewPluginsModel::PreviewPluginsModel(QObject *parent)
     : QAbstractListModel(parent)
 {
-    QHash<int, QByteArray> roleNames;
-    roleNames[Qt::DisplayRole] = "display";
-    roleNames[Qt::CheckStateRole] = "checked";
-    setRoleNames(roleNames);
-
     m_plugins = KServiceTypeTrader::self()->query(QStringLiteral("ThumbCreator"));
     qStableSort(m_plugins.begin(), m_plugins.end(), lessThan);
 
@@ -43,6 +38,14 @@ PreviewPluginsModel::PreviewPluginsModel(QObject *parent)
 
 PreviewPluginsModel::~PreviewPluginsModel()
 {
+}
+
+QHash<int, QByteArray> PreviewPluginsModel::roleNames() const
+{
+    return {
+        { Qt::DisplayRole, "display" },
+        { Qt::CheckStateRole, "checked" }
+    };
 }
 
 QVariant PreviewPluginsModel::data(const QModelIndex &index, int role) const

@@ -34,11 +34,6 @@ RunnerModel::RunnerModel(QObject *parent) : QAbstractListModel(parent)
 , m_mergeResults(false)
 , m_deleteWhenEmpty(false)
 {
-    QHash<int, QByteArray> roles;
-    roles.insert(Qt::DisplayRole, "display");
-
-    setRoleNames(roles);
-
     m_queryTimer.setSingleShot(true);
     m_queryTimer.setInterval(10);
     connect(&m_queryTimer, SIGNAL(timeout()), this, SLOT(startQuery()));
@@ -46,6 +41,11 @@ RunnerModel::RunnerModel(QObject *parent) : QAbstractListModel(parent)
 
 RunnerModel::~RunnerModel()
 {
+}
+
+QHash<int, QByteArray> RunnerModel::roleNames() const
+{
+    return {{ Qt::DisplayRole, "display" }};
 }
 
 AbstractModel *RunnerModel::favoritesModel() const

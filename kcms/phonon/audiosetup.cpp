@@ -736,12 +736,12 @@ void AudioSetup::portChanged()
 
     pa_operation *o;
     if (index >= 0) {
-        if (!(o = pa_context_set_sink_port_by_index(s_context, (uint32_t)index, port.toAscii().constData(), NULL, NULL)))
+        if (!(o = pa_context_set_sink_port_by_index(s_context, (uint32_t)index, port.toLatin1().constData(), NULL, NULL)))
             qDebug() << "pa_context_set_sink_port_by_index() failed";
         else
             pa_operation_unref(o);
     } else {
-        if (!(o = pa_context_set_source_port_by_index(s_context, (uint32_t)((-1*index) - 1), port.toAscii().constData(), NULL, NULL)))
+        if (!(o = pa_context_set_source_port_by_index(s_context, (uint32_t)((-1*index) - 1), port.toLatin1().constData(), NULL, NULL)))
             qDebug() << "pa_context_set_source_port_by_index() failed";
         else
             pa_operation_unref(o);

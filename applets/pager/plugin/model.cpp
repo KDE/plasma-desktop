@@ -20,10 +20,9 @@
 RectangleModel::RectangleModel(QObject *parent)
     : QAbstractListModel(parent)
 {
-    setRoleNames(roles());
 }
 
-QHash<int, QByteArray> RectangleModel::roles() const
+QHash<int, QByteArray> RectangleModel::roleNames() const
 {
     QHash<int, QByteArray> rectRoles;
     rectRoles[WidthRole] = "width";
@@ -78,12 +77,11 @@ QVariant RectangleModel::data(const QModelIndex &index, int role) const
 WindowModel::WindowModel(QObject *parent)
     : RectangleModel(parent)
 {
-    setRoleNames(roles());
 }
 
-QHash<int, QByteArray> WindowModel::roles() const
+QHash<int, QByteArray> WindowModel::roleNames() const
 {
-    QHash<int, QByteArray> rectRoles = RectangleModel::roles();
+    QHash<int, QByteArray> rectRoles = RectangleModel::roleNames();
     rectRoles[IdRole] = "windowId";
     rectRoles[ActiveRole] = "active";
     rectRoles[IconRole] = "icon";
@@ -150,7 +148,6 @@ QVariant WindowModel::data(const QModelIndex &index, int role) const
 PagerModel::PagerModel(QObject *parent)
     : QAbstractListModel(parent)
 {
-    setRoleNames(roles());
 }
 
 WindowModel *PagerModel::windowsAt(int index) const
@@ -161,9 +158,9 @@ WindowModel *PagerModel::windowsAt(int index) const
     return qobject_cast<WindowModel *>(m_windows[index]);
 }
 
-QHash<int, QByteArray> PagerModel::roles() const
+QHash<int, QByteArray> PagerModel::roleNames() const
 {
-    QHash<int, QByteArray> rectRoles = m_desktops.roles();
+    QHash<int, QByteArray> rectRoles = m_desktops.roleNames();
     rectRoles[WindowsRole] = "windows";
     rectRoles[DesktopNameRole] = "desktopName";
     return rectRoles;
