@@ -308,9 +308,9 @@ Rectangle {
             onTriggered: {
                 if (main.currentItem.saveConfig !== undefined) {
                     main.currentItem.saveConfig();
-                } else {
-                    root.saveConfig();
                 }
+
+                root.saveConfig();
 
                 applyButton.enabled = false;
             }
