@@ -33,6 +33,8 @@ PlasmaCore.FrameSvgItem {
 
     visible: dir.resolvedUrl != dir.resolve(plasmoid.configuration.url)
 
+    property bool ignoreClick: false
+
     imagePath: "widgets/viewitem"
 
     MouseArea {
@@ -40,13 +42,28 @@ PlasmaCore.FrameSvgItem {
 
         anchors.fill: parent
 
+        acceptedButtons: Qt.LeftButton | Qt.BackButton
         hoverEnabled: true
 
         onContainsMouseChanged: {
             gridView.hoveredItem = null;
         }
 
+        onPressed: {
+            if (mouse.buttons & Qt.BackButton) {
+                if (root.isPopup && dir.resolvedUrl != dir.resolve(plasmoid.configuration.url)) {
+                    dir.up();
+                    ignoreClick = true;
+                }
+            }
+        }
+
         onClicked: {
+            if (ignoreClick) {
+                ignoreClick = false;
+                return;
+            }
+
             dir.up();
         }
     }
