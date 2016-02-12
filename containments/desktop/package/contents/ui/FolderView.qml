@@ -703,7 +703,9 @@ Item {
                 }
 
                 Keys.onLeftPressed: {
-                    if (positioner.enabled) {
+                    if (root.isPopup && dir.resolvedUrl != dir.resolve(plasmoid.configuration.url)) {
+                        dir.up();
+                    } else if (positioner.enabled) {
                         var newIndex = positioner.nearestItem(currentIndex,
                             FolderTools.effectiveNavDirection(gridView.flow, gridView.layoutDirection, Qt.LeftArrow));
 
@@ -725,7 +727,10 @@ Item {
                 }
 
                 Keys.onRightPressed: {
-                    if (positioner.enabled) {
+                    if (root.isPopup && currentIndex != -1 && dir.hasSelection()) {
+                        var func = root.isPopup ? dir.cd : dir.run;
+                        func(positioner.map(currentIndex));
+                    } else if (positioner.enabled) {
                         var newIndex = positioner.nearestItem(currentIndex,
                             FolderTools.effectiveNavDirection(gridView.flow, gridView.layoutDirection, Qt.RightArrow));
 
