@@ -270,7 +270,7 @@ KQuickControlsAddons.MouseEventListener {
                 placeHolderPaint.opacity = root.haloOpacity;
             }
             onPositionChanged: {
-                var pos = mapToItem(root, mouse.x, mouse.y);
+                var pos = mapToItem(root.parent, mouse.x, mouse.y);
                 var newCont = plasmoid.containmentAt(pos.x, pos.y);
 
                 if (newCont && newCont != plasmoid) {

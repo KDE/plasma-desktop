@@ -178,6 +178,14 @@ function setSpaceAvailable(x, y, width, height, available)
     }
 }
 
+function adjustItemSizeToAvailableScreenRegion(x, y, width, height)
+{
+    var pos = root.mapToItem(root.parent, x, y);
+    pos = plasmoid.adjustToAvailableScreenRegion(pos.x, pos.y, width, height);
+    pos = root.mapFromItem(root.parent, pos.x, pos.y);
+    return pos;
+}
+
 function normalizeItemPosition(item)
 {
     var x = Math.max(0, Math.round(item.x/cellSize.width)*cellSize.width)
@@ -186,7 +194,7 @@ function normalizeItemPosition(item)
     var width = Math.max(cellSize.width, Math.round(item.width/cellSize.width)*cellSize.width)
     var height = Math.max(cellSize.height, Math.round(item.height/cellSize.height)*cellSize.height)
 
-    var pos = plasmoid.adjustToAvailableScreenRegion(x, y, width, height);
+    var pos = adjustItemSizeToAvailableScreenRegion(x, y, width, height);
     item.x = pos.x;
     item.y = pos.y;
 
@@ -199,7 +207,7 @@ function positionItem(item)
     var x = Math.max(0, Math.round(item.x/cellSize.width)*cellSize.width)
     var y = Math.max(0, Math.round(item.y/cellSize.height)*cellSize.height)
 
-    var pos = plasmoid.adjustToAvailableScreenRegion(x, y, item.width, item.height);
+    var pos = adjustItemSizeToAvailableScreenRegion(x, y, item.width, item.height);
     x = pos.x;
     y = pos.y;
 
