@@ -223,6 +223,7 @@ DragDrop.DropArea {
         } else if (isContainment) {
             placeHolder.width = LayoutManager.defaultAppletSize.width;
             placeHolder.height = LayoutManager.defaultAppletSize.height;
+            placeHolder.minimumWidth = placeHolder.minimumHeight = 0;
             placeHolder.x = event.x - placeHolder.width / 2;
             placeHolder.y = event.y - placeHolder.width / 2;
             LayoutManager.positionItem(placeHolder);
