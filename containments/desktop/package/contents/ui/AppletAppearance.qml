@@ -40,7 +40,7 @@ Item {
     property real controlsOpacity: (plasmoid.immutable || !showAppletHandle) ? 0 : 1
     property string backgroundHints: "NoBackground"
     property bool hasBackground: false
-    property bool handleMerged: (height > minimumHandleHeight)
+    property bool handleMerged: (height > minimumHandleHeight && !appletHandle.forceFloating)
     property bool animationsEnabled: false
 
     property int minimumWidth: Math.max(root.layoutManager.cellSize.width,
@@ -249,8 +249,15 @@ Item {
                     }
                 }
 
-                onCanceled: endDrag()
-                onReleased: endDrag()
+                onCanceled: {
+                    endDrag();
+                    appletHandle.positionHandle();
+                }
+
+                onReleased: {
+                    endDrag();
+                    appletHandle.positionHandle();
+                }
             }
 
             Item {
@@ -337,21 +344,59 @@ Item {
             Loader {
                 id: appletHandle
                 z: appletContainer.z + 1
+                property bool forceFloating : false
                 anchors {
                     verticalCenter: parent.verticalCenter
                     right: plasmoidBackground.right
-                    rightMargin: appletItem.margins.right
                 }
                 Connections {
                     target: appletItem
                     onShowAppletHandleChanged: {
-                        if (appletItem.showAppletHandle && appletHandle.source == "") {
-                            //print("Loading applethandle ");
-                            appletHandle.source = "AppletHandle.qml";
+                        if (appletItem.showAppletHandle) {
+                            appletItem.z += dragMouseArea.zoffset;
+                            appletHandle.positionHandle();
+                            if (appletHandle.source == "") {
+                                appletHandle.source = "AppletHandle.qml";
+                            }
+                        } else {
+                            appletItem.z -= dragMouseArea.zoffset;
+                        }
+                    }
+                    onHandleMergedChanged: {
+                        if (appletItem.handleMerged) {
+                            appletHandle.anchors.verticalCenterOffset = 0;
+                        } else {
+                            appletHandle.positionHandle();
                         }
                     }
                 }
+                Connections {
+                    target: appletHandle.item
+                    onMoveFinished: {
+                        appletHandle.positionHandle();
+                    }
+                }
 
+                function positionHandle()
+                {
+                    // Don't show handle outside of desktop
+                    var available = plasmoid.availableScreenRect;
+                    var x = Math.min(Math.max(0, appletItem.x), available.width - appletItem.width);
+                    var y = Math.min(Math.max(0, appletItem.y), available.height - appletItem.height);
+                    var verticalCenter = (y + appletItem.height / 2);
+                    var topOutside = (verticalCenter - minimumHandleHeight / 2);
+                    var bottomOutside = verticalCenter + minimumHandleHeight / 2 - available.height;
+                    if (bottomOutside > 0) {
+                        anchors.verticalCenterOffset = -bottomOutside;
+                    } else if (topOutside < 0) {
+                        anchors.verticalCenterOffset = -topOutside;
+                    } else {
+                        anchors.verticalCenterOffset = 0;
+                    }
+                    var rightOutside = x + appletItem.width + handleWidth - available.width;
+                    appletHandle.anchors.rightMargin = appletItem.margins.right + Math.max(0, rightOutside);
+                    appletHandle.forceFloating = rightOutside > 0;
+                }
             }
 
 //             Rectangle { color: "orange"; opacity: 0.1; visible: debug; anchors.fill: parent; }

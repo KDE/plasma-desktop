@@ -49,6 +49,7 @@ KQuickControlsAddons.MouseEventListener {
     property int minimumHeight:  6 * (root.iconSize + buttonMargin)
 
     signal removeApplet
+    signal moveFinished
 
     transform: Translate {
         x: handleMerged ? 0 : controlsOpacity * appletHandle.width
@@ -289,6 +290,7 @@ KQuickControlsAddons.MouseEventListener {
                 animationsEnabled = true
                 root.layoutManager.positionItem(appletItem)
                 root.layoutManager.save()
+                appletHandle.moveFinished()
             }
         }
 
