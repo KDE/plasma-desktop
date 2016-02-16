@@ -918,10 +918,10 @@ Item {
             onTargetItemChanged: {
                 if (targetItem != null) {
                     var pos = main.mapFromItem(targetItem, targetItem.labelArea.x, targetItem.labelArea.y);
-                    x = pos.x + (units.smallSpacing * 2);
-                    y = pos.y + (units.smallSpacing * 2);
-                    width = targetItem.labelArea.width;
-                    height = targetItem.labelArea.height;
+                    x = pos.x + (isPopup ? 0 : units.smallSpacing);
+                    y = pos.y + (isPopup ? 0 : units.smallSpacing);
+                    width = targetItem.labelArea.width + (isPopup ? 0 : units.smallSpacing);
+                    height = targetItem.labelArea.height + (isPopup ? 0 : units.smallSpacing);
                     text = targetItem.label.text;
                     editor.selectAll();
                     visible = true;
