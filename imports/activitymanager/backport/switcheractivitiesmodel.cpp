@@ -368,7 +368,7 @@ int ActivitiesModel::rowCount(const QModelIndex &parent) const
 QVariant ActivitiesModel::data(const QModelIndex &index, int role) const
 {
     const int row = index.row();
-    const auto &item = *(d->shownActivities.cbegin() + row);
+    const auto &item = d->shownActivities.at(row);
 
     switch (role) {
         case Qt::DisplayRole:
