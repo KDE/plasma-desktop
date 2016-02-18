@@ -360,7 +360,7 @@ QVector<Info::State> ActivitiesModel::shownStates() const
 
 int ActivitiesModel::rowCount(const QModelIndex &parent) const
 {
-    Q_UNUSED(parent);
+    if (parent.isValid()) return 0;
 
     return d->shownActivities.size();
 }
