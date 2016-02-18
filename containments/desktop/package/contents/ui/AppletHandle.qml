@@ -134,7 +134,6 @@ KQuickControlsAddons.MouseEventListener {
                     animationsEnabled = true
                     root.layoutManager.positionItem(appletItem)
                     root.layoutManager.save()
-                    root.layoutManager.setSpaceAvailable(appletItem.x, appletItem.y, widthAnimation.to, heightAnimation.to, false)
                     appletContainer.clip = false
                 }
             }
@@ -261,9 +260,7 @@ KQuickControlsAddons.MouseEventListener {
                 appletItem.z = appletItem.z + zoffset;
                 animationsEnabled = false
                 mouse.accepted = true
-                var x = Math.round(appletItem.x / root.layoutManager.cellSize.width) * root.layoutManager.cellSize.width
-                var y = Math.round(appletItem.y / root.layoutManager.cellSize.height) * root.layoutManager.cellSize.height
-                root.layoutManager.setSpaceAvailable(x, y, appletItem.width, appletItem.height, true)
+                root.layoutManager.setSpaceAvailable(appletItem.x, appletItem.y, appletItem.width, appletItem.height, true)
 
                 placeHolder.syncWithItem(appletItem)
                 placeHolderPaint.opacity = root.haloOpacity;
