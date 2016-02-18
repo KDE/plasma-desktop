@@ -230,9 +230,12 @@ Item {
                 elide   : Text.ElideRight
                 opacity : .6
 
+                // text: root.current ?
+                //         i18nd("plasma_shell_org.kde.plasma.desktop", "Currently being used") :
+                //         ActivitySwitcher.Backend.lastTimeUsedString(root.activityId)
                 text: root.current ?
                         i18nd("plasma_shell_org.kde.plasma.desktop", "Currently being used") :
-                        ActivitySwitcher.Backend.lastTimeUsedString(root.activityId)
+                        model.lastTimeUsedString
 
                 anchors {
                     top   : parent.top
@@ -333,7 +336,7 @@ Item {
                 iconSource: "process-stop"
                 tooltip: i18nd("plasma_shell_org.kde.plasma.desktop", "Stop")
 
-                onClicked: activitiesModel.stopActivity(activityId, function () {});
+                onClicked: ActivitySwitcher.Backend.stopActivity(activityId);
 
                 anchors {
                     right       : parent.right

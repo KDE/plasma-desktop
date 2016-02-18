@@ -29,8 +29,11 @@
 #include <QJSValue>
 
 // KDE
-#include <kactivities/controller.h>
+#include <KActivities/Controller>
 #include <kimagecache.h>
+
+// Local
+#include "sortedactivitiesmodel.h"
 
 class QAction;
 class QQmlEngine;
@@ -63,7 +66,11 @@ public Q_SLOTS:
     QPixmap wallpaperThumbnail(const QString &path, int width, int height,
             const QJSValue &callback);
 
-    QString lastTimeUsedString(const QString &activity);
+    QAbstractItemModel *runningActivitiesModel() const;
+    QAbstractItemModel *stoppedActivitiesModel() const;
+
+    void setCurrentActivity(const QString &activity);
+    void stopActivity(const QString &activity);
 
 private:
     template <typename Handler>
@@ -85,7 +92,7 @@ private Q_SLOTS:
 
     void showActivitySwitcherIfNeeded();
 
-    void currentActivityChangedSlot(const QString &id);
+    void onCurrentActivityChanged(const QString &id);
 
 private:
     QHash<QString, QKeySequence> m_actionShortcut;
@@ -97,6 +104,9 @@ private:
 
     KImageCache *m_wallpaperCache;
     QSet<QUrl> m_previewJobs;
+
+    SortedActivitiesModel *m_runningActivitiesModel;
+    SortedActivitiesModel *m_stoppedActivitiesModel;
 
 };
 

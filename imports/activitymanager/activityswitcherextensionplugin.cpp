@@ -20,7 +20,6 @@
 #include "activityswitcherextensionplugin.h"
 
 #include <QtQml>
-#include <QDebug>
 
 #include "switcherbackend.h"
 

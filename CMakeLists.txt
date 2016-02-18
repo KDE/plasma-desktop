@@ -29,7 +29,7 @@ find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
     Concurrent
 )
 
-set(KF5_MIN_VERSION "5.12.0")
+set(KF5_MIN_VERSION "5.19.0")
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     Auth
     Plasma
@@ -64,7 +64,7 @@ set_package_properties(PackageKitQt5 PROPERTIES DESCRIPTION "Software Manager in
                        PURPOSE "Provides package management integration to the application launcher."
                       )
 
-find_package(KF5Activities ${KF5_VERSION})
+find_package(KF5Activities ${KF5_MIN_VERSION})
 set_package_properties(KF5Activities PROPERTIES DESCRIPTION "management of Plasma activities"
                        TYPE OPTIONAL
                        PURPOSE "Needed by activity related plasmoids and the pager."

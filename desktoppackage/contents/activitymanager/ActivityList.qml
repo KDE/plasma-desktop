@@ -22,19 +22,21 @@ import QtQuick 2.2
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.activities 0.1 as Activities
 
+import org.kde.plasma.activityswitcher 1.0 as ActivitySwitcher
+
 Flickable {
     id: root
 
     // contentWidth: content.width
     contentHeight: content.height
 
-    property var    model: activitiesModel
+    property var    model: ActivitySwitcher.Backend.runningActivitiesModel()
     property string filterString: ""
     property bool   showSwitcherOnly: false
 
     property int itemsWidth: 0
 
-    property int    selectedIndex: -1
+    property int selectedIndex: -1
 
     function _selectRelativeToCurrent(distance)
     {
@@ -53,7 +55,8 @@ Flickable {
 
             // Searching for the first item that is visible, or back to the one
             // that we started with
-        } while (!activitiesList.itemAt(selectedIndex).visible && startingWithSelected != selectedIndex);
+        } while (!activitiesList.itemAt(selectedIndex).visible
+                        && startingWithSelected != selectedIndex);
 
         _updateSelectedItem();
 
@@ -98,22 +101,8 @@ Flickable {
         }
 
         if (selectedItem != null) {
-            activitiesModel.setCurrentActivity(
-                selectedItem.activityId, function () {}
-            );
+            ActivitySwitcher.Backend.setCurrentActivity(selectedItem.activityId);
         }
-    }
-
-    Activities.ActivityModel {
-        id: activitiesModel
-
-        shownStates: "Running,Stopping"
-    }
-
-    Activities.ActivityModel {
-        id: stoppedActivitiesModel
-
-        shownStates: "Stopped,Starting"
     }
 
     Column {
@@ -128,7 +117,7 @@ Flickable {
         Repeater {
             id: activitiesList
 
-            model: activitiesModel
+            model: ActivitySwitcher.Backend.runningActivitiesModel()
 
             ActivityItem {
 
@@ -141,12 +130,12 @@ Flickable {
                 title        : model.name
                 icon         : model.iconSource
                 background   : model.background
-                current      : model.current
+                current      : model.isCurrent
                 innerPadding : 2 * units.smallSpacing
                 stoppable    : activitiesList.count > 1
 
-                onClicked          : {
-                    activitiesModel.setCurrentActivity(model.id, function () {})
+                onClicked    : {
+                    ActivitySwitcher.Backend.setCurrentActivity(model.id);
                 }
             }
         }
@@ -170,7 +159,7 @@ Flickable {
         Repeater {
             id: stoppedActivitiesList
 
-            model: root.showSwitcherOnly ? null : stoppedActivitiesModel
+            model: root.showSwitcherOnly ? null : ActivitySwitcher.Backend.stoppedActivitiesModel()
 
             delegate: StoppedActivityItem {
                 id: stoppedActivityItem
@@ -186,7 +175,7 @@ Flickable {
                 innerPadding : 2 * units.smallSpacing
 
                 onClicked: {
-                    stoppedActivitiesModel.setCurrentActivity(model.id, function () {})
+                    ActivitySwitcher.Backend.setCurrentActivity(model.id)
                 }
             }
         }

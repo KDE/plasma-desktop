@@ -25,7 +25,6 @@
 
 // Qt
 #include <QAction>
-// #include <QDebug>
 #include <QX11Info>
 #include <QTimer>
 #include <QDateTime>
@@ -156,6 +155,8 @@ SwitcherBackend::SwitcherBackend(QObject *parent)
     : QObject(parent)
     , m_lastInvokedAction(Q_NULLPTR)
     , m_shouldShowSwitcher(false)
+    , m_runningActivitiesModel(new SortedActivitiesModel({KActivities::Info::Running, KActivities::Info::Stopping}, this))
+    , m_stoppedActivitiesModel(new SortedActivitiesModel({KActivities::Info::Stopped, KActivities::Info::Starting}, this))
 {
     m_wallpaperCache = new KImageCache("activityswitcher_wallpaper_preview", 10485760);
 
@@ -169,10 +170,13 @@ SwitcherBackend::SwitcherBackend(QObject *parent)
                      Qt::META + Qt::SHIFT + Qt::Key_Tab,
                      &SwitcherBackend::keybdSwitchToPreviousActivity);
 
+    connect(this, &SwitcherBackend::shouldShowSwitcherChanged,
+            m_runningActivitiesModel, &SortedActivitiesModel::setInhibitUpdates);
+
     connect(&m_modKeyPollingTimer, &QTimer::timeout,
             this, &SwitcherBackend::showActivitySwitcherIfNeeded);
     connect(&m_activities, &KActivities::Controller::currentActivityChanged,
-            this, &SwitcherBackend::currentActivityChangedSlot);
+            this, &SwitcherBackend::onCurrentActivityChanged);
     m_previousActivity = m_activities.currentActivity();
 }
 
@@ -204,47 +208,16 @@ void SwitcherBackend::keybdSwitchToPreviousActivity()
 
 void SwitcherBackend::switchToActivity(Direction direction)
 {
-    auto runningActivities
-        = m_activities.activities(KActivities::Info::Running);
+    const auto activityToSet =
+        m_runningActivitiesModel->relativeActivity(direction == Next ? 1 : -1);
 
-    if (runningActivities.count() == 0) {
-        return;
-    }
+    if (activityToSet.isEmpty()) return;
 
-    // Sorting this every time is not really (or at all) efficient,
-    // but at least we do not need to connect to too many Info objects
-    std::sort(runningActivities.begin(), runningActivities.end(),
-        [] (const QString &left, const QString &right) {
-            using KActivities::Info;
-            const QString &leftName = Info(left).name().toLower();
-            const QString &rightName = Info(right).name().toLower();
-
-            return
-                (leftName < rightName) ||
-                (leftName == rightName && left < right);
-        });
-
-    auto index = std::max(
-        0, runningActivities.indexOf(m_activities.currentActivity()));
-
-    index += direction == Next ? 1 : -1;
-
-    if (index < 0) {
-        index = runningActivities.count() - 1;
-    } else if (index >= runningActivities.count()) {
-        index = 0;
-    }
-
-    // TODO: This is evil, but plasmashell goes into a dead-lock if
-    // the activity is changed while one tries to open the switcher O.o
-    // m_activities.setCurrentActivity(runningActivities[index]);
-    const auto activityToSet = runningActivities[index];
     QTimer::singleShot(150, this, [this,activityToSet] () {
-                m_activities.setCurrentActivity(activityToSet);
+                setCurrentActivity(activityToSet);
             });
 
     keybdSwitchedToAnotherActivity();
-
 }
 
 void SwitcherBackend::keybdSwitchedToAnotherActivity()
@@ -281,8 +254,17 @@ void SwitcherBackend::init()
     // nothing
 }
 
-void SwitcherBackend::currentActivityChangedSlot(const QString &id)
+void SwitcherBackend::onCurrentActivityChanged(const QString &id)
 {
+    if (m_shouldShowSwitcher) {
+        // If we are showing the switcher because the user is
+        // pressing Meta+Tab, we are not ready to commit the
+        // activity change to memory
+        return;
+    }
+
+    if (m_previousActivity == id) return;
+
     // Safe, we have a long-lived Consumer object
     KActivities::Info activity(id);
     emit showSwitchNotification(id, activity.name(), activity.icon());
@@ -299,7 +281,7 @@ void SwitcherBackend::currentActivityChangedSlot(const QString &id)
 
     if (!m_previousActivity.isEmpty()) {
         // When leaving an activity, say goodbye and fondly remember
-        // the time we saw it
+        // the last time we saw it
         times.writeEntry(m_previousActivity, now);
     }
 
@@ -324,6 +306,9 @@ void SwitcherBackend::setShouldShowSwitcher(const bool &shouldShowSwitcher)
         m_modKeyPollingTimer.start(100);
     } else {
         m_modKeyPollingTimer.stop();
+
+        // We might have an unprocessed onCurrentActivityChanged
+        onCurrentActivityChanged(m_activities.currentActivity());
     }
 
     emit shouldShowSwitcherChanged(m_shouldShowSwitcher);
@@ -341,8 +326,6 @@ QPixmap SwitcherBackend::wallpaperThumbnail(const QString &path, int width, int 
         return preview;
     }
 
-    // qDebug() << "SwitcherBackend: Requesting wallpaper: " << path << width << height;
-
     if (width == 0) {
         width = 320;
     }
@@ -356,15 +339,11 @@ QPixmap SwitcherBackend::wallpaperThumbnail(const QString &path, int width, int 
         + QString::number(width) + "x"
         + QString::number(height);
 
-    // qDebug() << "SwitcherBackend: Wallpaper cache id is: " << pixmapKey;
-
     if (m_wallpaperCache->findPixmap(pixmapKey, &preview)) {
         return preview;
     }
 
     QUrl file(path);
-
-    // qDebug() << "SwitcherBackend: Cache miss. We need to generate the thumbnail: " << file;
 
     if (!m_previewJobs.contains(file) && file.isValid()) {
         m_previewJobs.insert(file);
@@ -383,7 +362,6 @@ QPixmap SwitcherBackend::wallpaperThumbnail(const QString &path, int width, int 
                     m_wallpaperCache->insertPixmap(pixmapKey, pixmap);
                     m_previewJobs.remove(path);
 
-                    // qDebug() << "SwitcherBackend: Got the thumbnail for " << path << "saving under" << pixmapKey;
                     callback.call({true});
                 });
 
@@ -402,33 +380,24 @@ QPixmap SwitcherBackend::wallpaperThumbnail(const QString &path, int width, int 
     return preview;
 }
 
-QString SwitcherBackend::lastTimeUsedString(const QString &activity)
+QAbstractItemModel *SwitcherBackend::runningActivitiesModel() const
 {
-    KConfig config("kactivitymanagerd-switcher");
-    KConfigGroup times(&config, "LastUsed");
-
-    const auto now = QDateTime::currentDateTime().toTime_t();
-    const auto time = times.readEntry(activity, 0);
-
-    if (time == 0) return i18n("Used some time ago");
-
-    auto diff = now - time;
-
-    // We do not need to be precise
-    const auto seconds = diff % 60; diff /= 60;
-    const auto minutes = diff % 60; diff /= 60;
-    const auto hours   = diff % 24; diff /= 24;
-    const auto days    = diff % 30; diff /= 30;
-    const auto months  = diff % 12; diff /= 12;
-    const auto years   = diff;
-
-    return (years > 0)   ? i18n("Used a long time ago")
-         : (months > 0)  ? i18ncp("amount in months",  "Used a month ago",  "Used %1 months ago", months)
-         : (days > 0)    ? i18ncp("amount in days",    "Used a day ago",    "Used %1 days ago",   days)
-         : (hours > 0)   ? i18ncp("amount in hours",   "Used an hour ago",  "Used %1 hours ago",  hours)
-         : (minutes > 0) ? i18ncp("amount in minutes", "Used a minute ago", "Used %1 minutes ago",  minutes)
-         :                 i18n("Used a moment ago");
+    return m_runningActivitiesModel;
 }
 
+QAbstractItemModel *SwitcherBackend::stoppedActivitiesModel() const
+{
+    return m_stoppedActivitiesModel;
+}
+
+void SwitcherBackend::setCurrentActivity(const QString &activity)
+{
+    m_activities.setCurrentActivity(activity);
+}
+
+void SwitcherBackend::stopActivity(const QString &activity)
+{
+    m_activities.stopActivity(activity);
+}
 
 #include "switcherbackend.moc"
