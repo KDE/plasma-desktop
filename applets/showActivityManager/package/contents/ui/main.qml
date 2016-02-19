@@ -50,7 +50,7 @@ MouseArea {
         mainText: i18n("Show Activity Manager")
         subText: i18n("Click to show the activity manager")
         anchors.fill: parent
-        image: "preferences-activities"
+        icon: "preferences-activities"
     }
 
     PlasmaCore.IconItem {
