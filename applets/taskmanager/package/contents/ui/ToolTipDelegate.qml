@@ -334,6 +334,8 @@ Column {
                 x: _s
                 width: units.iconSizes.desktop
                 height: width
+                animated: false
+                usesPlasmaTheme: false
                 source: icon
             }
         }
