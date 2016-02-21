@@ -17,9 +17,7 @@ set(folderplugin_SRCS
     viewpropertiesmenu.cpp
     wheelinterceptor.cpp
     internallibkonq/konq_copytomenu.cpp
-    internallibkonq/konq_dndpopupmenuplugin.cpp
     internallibkonq/konq_popupmenu.cpp
-    internallibkonq/konq_popupmenuplugin.cpp
 )
 
 install(FILES qmldir DESTINATION ${QML_INSTALL_DIR}/org/kde/private/desktopcontainment/folder)

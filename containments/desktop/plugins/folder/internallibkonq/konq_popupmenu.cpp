@@ -20,10 +20,8 @@
 
 #include "konq_popupmenu.h"
 #include <kfileitemlistproperties.h>
-#include "konq_popupmenuplugin.h"
 #include "konq_copytomenu.h"
 #include "kfileitemactions.h"
-#include "kfileitemactionplugin.h"
 #include "kabstractfileitemactionplugin.h"
 #include "kpropertiesdialog.h"
 
@@ -39,10 +37,8 @@
 #include <kinputdialog.h>
 #include <kglobalsettings.h>
 #include <kmimetypetrader.h>
-#include <kstandarddirs.h>
 #include <kconfiggroup.h>
 #include <kdesktopfile.h>
-#include <kfileshare.h>
 #include <kauthorized.h>
 #include <kglobal.h>
 #include <kacceleratormanager.h>
@@ -110,7 +106,6 @@ public:
     void slotPopupAddToBookmark();
     void slotPopupMimeType();
     void slotPopupProperties();
-    void slotOpenShareFileDialog();
     void slotShowOriginalFile();
 
     KonqPopupMenu* q;
@@ -471,28 +466,8 @@ void KonqPopupMenuPrivate::init(KonqPopupMenu::Flags kpf, KParts::BrowserExtensi
             q->actions().last()->isSeparator() )
         delete q->actions().last();
 
-    if ( isDirectory && isLocal ) {
-        if ( KFileShare::authorization() == KFileShare::Authorized ) {
-            q->addSeparator();
-            act = new QAction(m_parentWidget);
-            m_ownActions.append(act);
-            act->setText( i18n("Share") );
-            QObject::connect(act, &QAction::triggered, [this]() {
-                slotOpenShareFileDialog();
-            });
-            q->addAction(act);
-        }
-    }
-
     // Anything else that is provided by the part
     addGroup( QStringLiteral("partactions") );
-}
-
-void KonqPopupMenuPrivate::slotOpenShareFileDialog()
-{
-    KPropertiesDialog* dlg = new KPropertiesDialog( m_popupItemProperties.items(), m_parentWidget );
-    dlg->showFileSharingPage();
-    dlg->exec();
 }
 
 KonqPopupMenu::~KonqPopupMenu()
@@ -587,20 +562,6 @@ void KonqPopupMenuPrivate::addPlugins()
     if (commonMimeType.isEmpty()) {
         commonMimeType = QStringLiteral("application/octet-stream");
     }
-    const KService::List konqPlugins = KMimeTypeTrader::self()->query(commonMimeType, QStringLiteral("KonqPopupMenu/Plugin"), QStringLiteral("exist Library"));
-
-    if (!konqPlugins.isEmpty()) {
-        KService::List::ConstIterator iterator = konqPlugins.begin();
-        const KService::List::ConstIterator end = konqPlugins.end();
-        for(; iterator != end; ++iterator) {
-            //kDebug() << (*iterator)->name() << (*iterator)->library();
-            KonqPopupMenuPlugin *plugin = (*iterator)->createInstance<KonqPopupMenuPlugin>(q);
-            if (!plugin)
-                continue;
-            plugin->setParent(q);
-            plugin->setup(&m_ownActionCollection, m_popupItemProperties, q);
-        }
-    }
 
     const KService::List fileItemPlugins = KMimeTypeTrader::self()->query(commonMimeType, QStringLiteral("KFileItemAction/Plugin"), QStringLiteral("exist Library"));
     if (!fileItemPlugins.isEmpty()) {
@@ -613,13 +574,6 @@ void KonqPopupMenuPrivate::addPlugins()
                 continue;
             }
 
-            // Old API (kdelibs-4.6.0 only)
-            KFileItemActionPlugin* plugin = service->createInstance<KFileItemActionPlugin>();
-            if (plugin) {
-                plugin->setParent(q);
-                q->addActions(plugin->actions(m_popupItemProperties, m_parentWidget));
-            }
-            // New API (kdelibs >= 4.6.1)
             KAbstractFileItemActionPlugin* abstractPlugin = service->createInstance<KAbstractFileItemActionPlugin>();
             if (abstractPlugin) {
                 abstractPlugin->setParent(q);
