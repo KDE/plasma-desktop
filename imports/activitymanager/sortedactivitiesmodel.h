@@ -22,11 +22,25 @@
 
 // Qt
 #include <QSortFilterProxyModel>
+#include <QWidgetList> //For WId
 
+// KDE
 #include <KActivities/Consumer>
 #include <KActivities/Info>
 
+// TODO: Remove after 5.6
 #include "backport/switcheractivitiesmodel.h"
+
+#include <config-X11.h>
+
+#if HAVE_X11
+#include <netwm.h>
+#else
+namespace NET {
+    typedef int Properties;
+    typedef int Properties2;
+} // namespace NET
+#endif
 
 class SortedActivitiesModel : public QSortFilterProxyModel {
     Q_OBJECT
@@ -50,7 +64,9 @@ protected:
 
     enum AdditionalRoles {
         LastTimeUsed       = KActivitiesBackport::ActivitiesModel::UserRole,
-        LastTimeUsedString = KActivitiesBackport::ActivitiesModel::UserRole + 1
+        LastTimeUsedString = KActivitiesBackport::ActivitiesModel::UserRole + 1,
+        WindowCount        = KActivitiesBackport::ActivitiesModel::UserRole + 2,
+        HasWindows         = KActivitiesBackport::ActivitiesModel::UserRole + 3
     };
 
 public Q_SLOTS:
@@ -64,9 +80,14 @@ public Q_SLOTS:
     void onCurrentActivityChanged(const QString &currentActivity);
 
     QString activityIdForRow(int row) const;
+    QString activityIdForIndex(const QModelIndex &index) const;
     int rowForActivityId(const QString &activity) const;
 
     void rowChanged(int row, const QVector<int> &roles);
+
+    void onWindowAdded(WId window);
+    void onWindowRemoved(WId window);
+    void onWindowChanged(WId window, NET::Properties properties, NET::Properties2 properties2);
 
 Q_SIGNALS:
     void sortByLastUsedTimeChanged(bool sortByLastUsedTime);
@@ -80,6 +101,12 @@ private:
 
     KActivitiesBackport::ActivitiesModel *m_activitiesModel;
     KActivities::Consumer *m_activities;
+
+    QHash<QString, QVector<WId>> m_activitiesWindows;
+
+#if HAVE_X11
+    bool m_isOnX11;
+#endif
 };
 
 #endif // SORTED_ACTIVITY_MODEL

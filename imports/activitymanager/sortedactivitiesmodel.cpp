@@ -22,6 +22,7 @@
 
 // Qt
 #include <QColor>
+#include <QObject>
 
 // KDE
 #include <KConfig>
@@ -29,6 +30,13 @@
 #include <KDirWatch>
 #include <KLocalizedString>
 #include <KActivities/Consumer>
+
+#define KWINDOWSYSTEM_NO_DEPRECATED
+
+#if HAVE_X11
+#include <KWindowSystem>
+#include <QX11Info>
+#endif
 
 namespace {
 
@@ -171,6 +179,9 @@ SortedActivitiesModel::SortedActivitiesModel(QVector<KActivities::Info::State> s
     , m_sortByLastUsedTime(true)
     , m_activitiesModel(new KActivitiesBackport::ActivitiesModel(states, this))
     , m_activities(new KActivities::Consumer(this))
+#if HAVE_X11
+    , m_isOnX11(QX11Info::isPlatformX11())
+#endif
 {
     setSourceModel(m_activitiesModel);
 
@@ -179,6 +190,32 @@ SortedActivitiesModel::SortedActivitiesModel(QVector<KActivities::Info::State> s
     sort(0, Qt::DescendingOrder);
 
     backgrounds().subscribe(this);
+
+
+#if HAVE_X11
+    if (m_isOnX11) {
+        const QList<WId> windows = KWindowSystem::stackingOrder();
+
+        for (const auto& window: windows) {
+            KWindowInfo info(window, NET::WMVisibleName, NET::WM2Activities);
+            const QStringList activities = info.activities();
+
+            if (activities.isEmpty() || activities.contains("00000000-0000-0000-0000-000000000000")) continue;
+
+            for (const auto& activity: activities) {
+                m_activitiesWindows[activity] << window;
+            }
+        }
+
+        connect(KWindowSystem::self(), &KWindowSystem::windowAdded,
+                this,                  &SortedActivitiesModel::onWindowAdded);
+        connect(KWindowSystem::self(), &KWindowSystem::windowRemoved,
+                this,                  &SortedActivitiesModel::onWindowRemoved);
+        connect(KWindowSystem::self(), SIGNAL(windowChanged(WId, NET::Properties, NET::Properties2)),
+                this,                  SLOT(onWindowChanged(WId, NET::Properties, NET::Properties2)));
+    }
+#endif
+
 }
 
 SortedActivitiesModel::~SortedActivitiesModel()
@@ -260,6 +297,8 @@ QHash<int, QByteArray> SortedActivitiesModel::roleNames() const
 
     roleNames[LastTimeUsed]       = "lastTimeUsed";
     roleNames[LastTimeUsedString] = "lastTimeUsedString";
+    roleNames[WindowCount]        = "windowCount";
+    roleNames[HasWindows]         = "hasWindows";
 
     return roleNames;
 }
@@ -267,14 +306,12 @@ QHash<int, QByteArray> SortedActivitiesModel::roleNames() const
 QVariant SortedActivitiesModel::data(const QModelIndex &index, int role) const
 {
     if (role == KActivitiesBackport::ActivitiesModel::ActivityBackground) {
-        const auto activity =
-            QSortFilterProxyModel::data(index, Qt::UserRole).toString();
+        const auto activity = activityIdForIndex(index);
 
         return backgrounds().forActivity[activity];
 
     } else if (role == LastTimeUsed || role == LastTimeUsedString) {
-        const auto activity =
-            QSortFilterProxyModel::data(index, Qt::UserRole).toString();
+        const auto activity = activityIdForIndex(index);
 
         const auto time = lastUsedTime(activity);
 
@@ -305,14 +342,29 @@ QVariant SortedActivitiesModel::data(const QModelIndex &index, int role) const
 
         }
 
+    } else if (role == HasWindows || role == WindowCount) {
+        const auto activity = activityIdForIndex(index);
+
+        if (role == HasWindows) {
+            return (m_activitiesWindows[activity].size() > 0);
+        } else {
+            return m_activitiesWindows[activity].size();
+        }
+
+
     } else {
         return QSortFilterProxyModel::data(index, role);
     }
 }
 
+QString SortedActivitiesModel::activityIdForIndex(const QModelIndex &index) const
+{
+    return data(index, KActivitiesBackport::ActivitiesModel::ActivityId).toString();
+}
+
 QString SortedActivitiesModel::activityIdForRow(int row) const
 {
-    return data(index(row, 0), KActivitiesBackport::ActivitiesModel::ActivityId).toString();
+    return activityIdForIndex(index(row, 0));
 }
 
 int SortedActivitiesModel::rowForActivityId(const QString &activity) const
@@ -366,6 +418,59 @@ void SortedActivitiesModel::onBackgroundsUpdated(const QStringList &activities)
         const int row = rowForActivityId(activity);
         emit rowChanged(row, { KActivitiesBackport::ActivitiesModel::ActivityBackground });
     }
+}
+
+void SortedActivitiesModel::onWindowAdded(WId window)
+{
+#if HAVE_X11
+    if (!m_isOnX11) return;
+
+    KWindowInfo info(window, 0, NET::WM2Activities);
+    const QStringList activities = info.activities();
+
+    if (activities.isEmpty() || activities.contains("00000000-0000-0000-0000-000000000000")) return;
+
+    for (const auto& activity: activities) {
+        if (!m_activitiesWindows[activity].contains(window)) {
+            m_activitiesWindows[activity] << window;
+
+            rowChanged(rowForActivityId(activity),
+                m_activitiesWindows.size() == 1
+                    ? QVector<int>{WindowCount, HasWindows}
+                    : QVector<int>{WindowCount});
+        }
+    }
+#endif
+}
+
+void SortedActivitiesModel::onWindowRemoved(WId window)
+{
+#if HAVE_X11
+    if (!m_isOnX11) return;
+
+    for (const auto& activity: m_activitiesWindows.keys()) {
+        if (m_activitiesWindows[activity].contains(window)) {
+            m_activitiesWindows[activity].removeAll(window);
+
+            rowChanged(rowForActivityId(activity),
+                m_activitiesWindows.size() == 0
+                    ? QVector<int>{WindowCount, HasWindows}
+                    : QVector<int>{WindowCount});
+        }
+    }
+#endif
+}
+
+void SortedActivitiesModel::onWindowChanged(WId window, NET::Properties properties, NET::Properties2 properties2)
+{
+#if HAVE_X11
+    if (!m_isOnX11) return;
+
+    if (properties2 & NET::WM2Activities) {
+        onWindowRemoved(window);
+        onWindowAdded(window);
+    }
+#endif
 }
 
 void SortedActivitiesModel::rowChanged(int row, const QVector<int> &roles)

@@ -9,6 +9,7 @@ find_package (KF5GlobalAccel  ${KF5_DEP_VERSION} CONFIG REQUIRED)
 find_package (KF5GuiAddons    ${KF5_DEP_VERSION} CONFIG REQUIRED)
 find_package (KF5KIO          ${KF5_DEP_VERSION} CONFIG REQUIRED)
 find_package (KF5Activities   ${KF5_DEP_VERSION} CONFIG REQUIRED)
+find_package (KF5WindowSystem ${KF5_DEP_VERSION} CONFIG REQUIRED)
 
 find_package (X11)
 set_package_properties (
@@ -44,6 +45,7 @@ target_link_libraries (
    KF5::GuiAddons
    KF5::KIOCore
    KF5::KIOWidgets
+   KF5::WindowSystem
    ${X11_X11_LIB}
    )
 

@@ -131,6 +131,7 @@ Flickable {
                 icon         : model.iconSource
                 background   : model.background
                 current      : model.isCurrent
+                hasWindows   : model.hasWindows
                 innerPadding : 2 * units.smallSpacing
                 stoppable    : activitiesList.count > 1
 

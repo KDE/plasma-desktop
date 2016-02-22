@@ -24,6 +24,7 @@ Item {
 
     property alias title       : title.text
     property alias icon        : icon.source
+    property alias hasWindows  : hasWindowsIndicator.visible
 
     z : current  ? 10 :
         selected ?  5 : 0
@@ -206,12 +207,10 @@ Item {
             }
         }
 
-        Item {
+        Column {
             id: statsBar
 
-            height: lastUsedDate.height +
-                 //     stats.height +
-                        units.smallSpacing
+            height: childrenRect.height + units.smallSpacing
 
             anchors {
                 bottom : controlBar.top
@@ -223,6 +222,15 @@ Item {
                 bottomMargin : units.smallSpacing
             }
 
+            PlasmaCore.IconItem {
+                id      : hasWindowsIndicator
+                source  : "window-duplicate"
+                width   : 16
+                height  : width
+                opacity : .6
+                visible : false
+            }
+
             Text {
                 id: lastUsedDate
 
@@ -230,18 +238,9 @@ Item {
                 elide   : Text.ElideRight
                 opacity : .6
 
-                // text: root.current ?
-                //         i18nd("plasma_shell_org.kde.plasma.desktop", "Currently being used") :
-                //         ActivitySwitcher.Backend.lastTimeUsedString(root.activityId)
                 text: root.current ?
                         i18nd("plasma_shell_org.kde.plasma.desktop", "Currently being used") :
                         model.lastTimeUsedString
-
-                anchors {
-                    top   : parent.top
-                    left  : parent.left
-                    right : parent.right
-                }
             }
 
             // Text {
