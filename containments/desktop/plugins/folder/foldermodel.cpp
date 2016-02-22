@@ -33,6 +33,7 @@
 #include <QImage>
 #include <QItemSelectionModel>
 #include <QMimeData>
+#include <QMimeDatabase>
 #include <QPainter>
 #include <QPixmap>
 #include <QQuickItem>
@@ -517,6 +518,33 @@ void FolderModel::rename(int row, const QString& name)
 
     QModelIndex idx = index(row, 0);
     m_dirModel->setData(mapToSource(idx), name, Qt::EditRole);
+}
+
+int FolderModel::fileExtensionBoundary(int row)
+{
+    const QModelIndex idx = index(row, 0);
+    const QString &name = data(idx, Qt::DisplayRole).toString();
+
+    int boundary = name.length();
+
+    if (data(idx, IsDirRole).toBool()) {
+        return boundary;
+    }
+
+    QMimeDatabase db;
+    const QString &ext = db.suffixForFileName(name);
+
+    if (ext.isEmpty()) {
+        boundary = name.lastIndexOf(QLatin1Char('.'));
+
+        if (boundary < 1) {
+            boundary = name.length();
+        }
+    } else {
+        boundary -= ext.length() + 1;
+    }
+
+    return boundary;
 }
 
 bool FolderModel::hasSelection()

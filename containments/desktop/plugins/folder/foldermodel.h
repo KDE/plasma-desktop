@@ -161,7 +161,8 @@ class FolderModel : public QSortFilterProxyModel
 
         Q_INVOKABLE void run(int row);
 
-        Q_INVOKABLE void rename(int row, const QString& name);
+        Q_INVOKABLE void rename(int row, const QString &name);
+        Q_INVOKABLE int fileExtensionBoundary(int row);
 
         Q_INVOKABLE bool hasSelection();
         Q_INVOKABLE bool isSelected(int row);

@@ -948,7 +948,7 @@ Item {
                     width = targetItem.labelArea.width + (isPopup ? 0 : units.smallSpacing);
                     height = targetItem.labelArea.height + (isPopup ? 0 : units.smallSpacing);
                     text = targetItem.label.text;
-                    editor.selectAll();
+                    editor.select(0, dir.fileExtensionBoundary(targetItem.index));
                     visible = true;
                 } else {
                     x: 0
