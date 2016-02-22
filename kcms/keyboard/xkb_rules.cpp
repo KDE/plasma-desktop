@@ -172,10 +172,13 @@ static QString findXkbRulesFile()
 	QString rulesFile;
 	QString rulesName = Rules::getRulesName();
 
+    const QString xkbDir = Rules::findXkbDir();
 	if ( ! rulesName.isNull() ) {
-		QString xkbDir = Rules::findXkbDir();
 		rulesFile = QStringLiteral("%1/rules/%2.xml").arg(xkbDir, rulesName);
-	}
+	} else {
+        // default to evdev
+        rulesFile = QStringLiteral("%1/rules/evdev.xml").arg(xkbDir);
+    }
 
 	return rulesFile;
 }
