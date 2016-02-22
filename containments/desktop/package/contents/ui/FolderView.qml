@@ -948,7 +948,7 @@ Item {
                     width = targetItem.labelArea.width + (isPopup ? 0 : units.smallSpacing);
                     height = targetItem.labelArea.height + (isPopup ? 0 : units.smallSpacing);
                     text = targetItem.label.text;
-                    editor.select(0, dir.fileExtensionBoundary(targetItem.index));
+                    editor.select(0, dir.fileExtensionBoundary(positioner.map(targetItem.index)));
                     visible = true;
                 } else {
                     x: 0
