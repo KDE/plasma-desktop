@@ -58,6 +58,11 @@ void SearchConfigItemDelegate::paint(QPainter *painter, const QStyleOptionViewIt
     const QWidget *widget = option.widget;
     QStyle *style = widget ? widget->style() : QApplication::style();
 
+    QPalette::ColorRole colorRole = QPalette::Text;
+    if (option.state.testFlag(QStyle::State_Selected) && option.state.testFlag(QStyle::State_HasFocus)) {
+        colorRole = QPalette::HighlightedText;
+    }
+
     opt.text.clear();					// draw everything else, but not text
     style->drawControl(QStyle::CE_ItemViewItem, &opt, painter, widget);
 
@@ -70,7 +75,7 @@ void SearchConfigItemDelegate::paint(QPainter *painter, const QStyleOptionViewIt
     font.setBold(true);
     painter->setFont(font);
     textRect.translate(2 * m_margin, m_margin);
-    painter->drawText(textRect, Qt::AlignLeft | Qt::AlignTop, mainText);
+    style->drawItemText(painter, textRect, Qt::AlignLeft | Qt::AlignTop, option.palette, true, mainText, colorRole);
 
     // This is already available as option.fontMetrics, but to be absolutely
     // precise we use the metrics for the bold font.
@@ -82,7 +87,7 @@ void SearchConfigItemDelegate::paint(QPainter *painter, const QStyleOptionViewIt
                                                     Qt::ElideRight, availableWidth);
     font.setBold(false);
     painter->setFont(font);
-    painter->drawText(textRect, Qt::AlignLeft | Qt::AlignTop, subText);
+    style->drawItemText(painter, textRect, Qt::AlignLeft | Qt::AlignTop, option.palette, true, subText, colorRole);
 }
 
 
