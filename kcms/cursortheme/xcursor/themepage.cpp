@@ -316,7 +316,7 @@ void ThemePage::save()
     if (!applyTheme(theme, size))
     {
         KMessageBox::information(this,
-                                 i18n("You have to restart KDE for these changes to take effect."),
+                                 i18n("You have to restart the Plasma session for these changes to take effect."),
                                  i18n("Cursor Settings Changed"), QStringLiteral("CursorSettingsChanged"));
     }
 

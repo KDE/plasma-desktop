@@ -88,7 +88,7 @@ bool CfgWm::saveAndConfirm()
     if( restartArgument.isEmpty())
     {
         KMessageBox::information( this,
-            i18n( "The new window manager will be used when KDE is started the next time." ),
+            i18n( "The new window manager will be used when Plasma is started the next time." ),
             i18n( "Window Manager Change" ), QStringLiteral("windowmanagerchange") );
         oldwm = currentWm();
         return true;
