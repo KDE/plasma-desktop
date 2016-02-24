@@ -141,7 +141,7 @@ Item {
             }
 
             if (plasmoid.configuration.useExtraRunners) {
-                runners.concat(plasmoid.configuration.extraRunners);
+                runners = runners.concat(plasmoid.configuration.extraRunners);
             }
 
             return runners;

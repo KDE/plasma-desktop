@@ -24,7 +24,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 
 FocusScope {
-    width: rootList.width + vertLine.width + vertLine.anchors.leftMargin
+    width: runnerMatches.width + vertLine.width + vertLine.anchors.leftMargin + runnerMatches.anchors.leftMargin
     height: parent.height
 
     signal keyNavigationAtListEnd
@@ -39,7 +39,7 @@ FocusScope {
         id: vertLine
 
         anchors.left: parent.left
-        anchors.leftMargin: (index > 0 ) ? (2 * units.smallSpacing) : 0
+        anchors.leftMargin: (index > 0 ) ? units.smallSpacing : 0
 
         width: (index > 0 ) ? lineSvg.vertLineWidth : 0
         height: parent.height
@@ -75,6 +75,7 @@ FocusScope {
         anchors.bottom: plasmoid.configuration.alignResultsToBottom ? parent.bottom : undefined
         anchors.bottomMargin: (index == 0 && anchors.bottom != undefined) ? searchField.height + (2 * units.smallSpacing) : undefined
         anchors.left: vertLine.right
+        anchors.leftMargin: (index > 0) ? units.smallSpacing : 0
 
         height: Math.min(((index == 0) ? rootList.height : runnerColumns.height)
             - header.height, model.count * itemHeight)
