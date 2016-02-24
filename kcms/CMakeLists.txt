@@ -36,6 +36,7 @@ add_subdirectory( lookandfeel )
 add_subdirectory( hardware )
 add_subdirectory( desktoppaths )
 
+add_subdirectory(activities)
 add_subdirectory(componentchooser)
 add_subdirectory(emoticons)
 add_subdirectory(icons)
