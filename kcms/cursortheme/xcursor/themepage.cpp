@@ -239,8 +239,9 @@ bool ThemePage::applyTheme(const CursorTheme *theme, const int size)
 #if HAVE_XFIXES && XFIXES_MAJOR >= 2 && XCURSOR_LIB_VERSION >= 10105
     if (!theme)
         return false;
+    const bool isX11 = QX11Info::isPlatformX11();
 
-    if (!CursorTheme::haveXfixes())
+    if (isX11 && !CursorTheme::haveXfixes())
         return false;
 
     QByteArray themeName = QFile::encodeName(theme->name());
@@ -252,10 +253,17 @@ bool ThemePage::applyTheme(const CursorTheme *theme, const int size)
     klauncher.setLaunchEnv(QStringLiteral("XCURSOR_THEME"), themeName);
 
     // Update the Xcursor X resources
-    runRdb(0);
+    if (isX11) {
+        runRdb(0);
+    }
 
     // Notify all applications that the cursor theme has changed
     KGlobalSettings::self()->emitChange(KGlobalSettings::CursorChanged);
+
+    if (!isX11) {
+        // TODO: Wayland clients don't reload the cursor, QtWayland doesn't support it at all
+        return false;
+    }
 
     // Reload the standard cursors
     QStringList names;

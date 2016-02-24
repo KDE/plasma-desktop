@@ -305,11 +305,6 @@ void CursorThemeModel::processThemeDir(const QDir &themeDir)
     if (!themeDir.exists(QStringLiteral("index.theme")) && !haveCursors)
         return;
 
-    static bool isX11 = QX11Info::isPlatformX11();
-    if (!isX11) {
-        // TODO: implement Wayland Cursor Theme support
-        return;
-    }
     // Create a cursor theme object for the theme dir
     XCursorTheme *theme = new XCursorTheme(themeDir);
 

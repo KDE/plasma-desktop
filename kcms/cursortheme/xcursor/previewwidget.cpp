@@ -92,7 +92,11 @@ PreviewCursor::PreviewCursor(const CursorTheme *theme, const QString &name, int 
     m_pixmap = QPixmap::fromImage(image);
 
     // Load the cursor
-    m_cursor = theme->loadCursor(name, size);
+    if (QX11Info::isPlatformX11()) {
+        m_cursor = theme->loadCursor(name, size);
+    } else {
+        m_cursor = XCB_CURSOR_NONE;
+    }
     // ### perhaps we should tag the cursor so it doesn't get
     //     replaced when a new theme is applied
 }
@@ -216,6 +220,7 @@ void PreviewWidget::mouseMoveEvent(QMouseEvent *e)
         {
             if (c != current)
             {
+                // TODO: implement for Wayland
                 const uint32_t cursor = *c;
                 if (QX11Info::isPlatformX11() && (cursor != XCB_CURSOR_NONE)) {
                     xcb_change_window_attributes(QX11Info::connection(), winId(), XCB_CW_CURSOR, &cursor);

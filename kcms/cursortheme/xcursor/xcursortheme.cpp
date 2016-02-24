@@ -21,6 +21,8 @@
 #include <KConfig>
 #include <KConfigGroup>
 
+#include <QGuiApplication>
+#include <QScreen>
 #include <QCursor>
 #include <QImage>
 #include <QDir>
@@ -152,6 +154,13 @@ XcursorImages *XCursorTheme::xcLoadImages(const QString &image, int size) const
 
 int XCursorTheme::autodetectCursorSize() const
 {
+    if (!QX11Info::isPlatformX11()) {
+        if (QScreen *s = QGuiApplication::primaryScreen()) {
+            return s->logicalDotsPerInchY() * 16 / 72;
+        }
+        // some default value
+        return 16;
+    }
     /* This code is basically borrowed from display.c of the XCursor library
        We can't use "int XcursorGetDefaultSize(Display *dpy)" because if
        previously the cursor size was set to a custom value, it would return
