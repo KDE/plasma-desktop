@@ -306,7 +306,7 @@ FocusScope {
         anchors.left: parent.left
         anchors.leftMargin: sideBar.width + mainRow.spacing + units.smallSpacing
 
-        width: rootList.width - (2 * units.smallSpacing)
+        width: (units.gridUnit * 14) - (2 * units.smallSpacing)
 
         focus: true
 
