@@ -866,8 +866,8 @@ Item {
                         continue;
                     }
 
-                    itemX = dropPos.x + offset.x + (listener.dragX % cellWidth);
-                    itemY = dropPos.y + offset.y + (listener.dragY % cellHeight);
+                    itemX = dropPos.x + offset.x + (listener.dragX % cellWidth) + (cellWidth / 2);
+                    itemY = dropPos.y + offset.y + (listener.dragY % cellHeight) + (cellHeight / 2);
 
                     if (gridView.layoutDirection == Qt.RightToLeft) {
                         itemX -= (rows ? gridView.contentX : gridView.originX);
