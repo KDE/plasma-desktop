@@ -102,7 +102,7 @@ Item {
         target: root
 
         onIsPopupChanged: {
-            if (upButton == null && root.isPopup) {
+            if (upButton == null && root.useListViewMode) {
                 upButton = makeUpButton();
             } else if (upButton != null) {
                 upButton.destroy();
@@ -238,7 +238,7 @@ Item {
 
             if (!(pos.x <= hoveredItem.actionsOverlay.width && pos.y <= hoveredItem.actionsOverlay.height)) {
                 if (systemSettings.singleClick() || doubleClickInProgress) {
-                    var func = root.isPopup && (mouse.button == Qt.LeftButton) && hoveredItem.isDir ? dir.cd : dir.run;
+                    var func = root.useListViewMode && (mouse.button == Qt.LeftButton) && hoveredItem.isDir ? dir.cd : dir.run;
                     func(positioner.map(gridView.currentIndex));
 
                     hoveredItem = null;
@@ -318,7 +318,7 @@ Item {
                     clearPressState();
                 } else {
                     // Disable rubberband in popup list view mode.
-                    if (root.isPopup) {
+                    if (root.useListViewMode) {
                         return;
                     }
 
@@ -405,7 +405,7 @@ Item {
                 boundsBehavior: Flickable.StopAtBounds
 
                 cellWidth: {
-                    if (root.isPopup) {
+                    if (root.useListViewMode) {
                         return gridView.width;
                     }
 
@@ -413,7 +413,7 @@ Item {
                 }
 
                 cellHeight: {
-                    if (root.isPopup) {
+                    if (root.useListViewMode) {
                         return Math.ceil((Math.max(theme.mSize(theme.defaultFont).height, iconSize)
                             + Math.max(highlightItemSvg.margins.top + highlightItemSvg.margins.bottom,
                             listItemSvg.margins.top + listItemSvg.margins.bottom)) / 2) * 2;
@@ -554,7 +554,7 @@ Item {
                 }
 
                 function makeIconSize() {
-                    if (root.isPopup) {
+                    if (root.useListViewMode) {
                         return units.iconSizes.small;
                     }
 
@@ -650,7 +650,7 @@ Item {
 
                 Keys.onReturnPressed: {
                     if (currentIndex != -1 && dir.hasSelection()) {
-                        var func = root.isPopup ? dir.cd : dir.run;
+                        var func = root.useListViewMode ? dir.cd : dir.run;
                         func(positioner.map(currentIndex));
                     }
                 }
@@ -977,7 +977,7 @@ Item {
     }
 
     Component.onCompleted: {
-        if (upButton == null && root.isPopup) {
+        if (upButton == null && root.useListViewMode) {
             upButton = makeUpButton();
         }
     }

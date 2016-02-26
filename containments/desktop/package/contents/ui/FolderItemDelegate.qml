@@ -129,7 +129,7 @@ Item {
 
                 active: (plasmoid.configuration.toolTips && popupDialog == null && !model.blank)
                 interactive: false
-                location: root.isPopup ? (plasmoid.location == PlasmaCore.Types.LeftEdge ? PlasmaCore.Types.LeftEdge : PlasmaCore.Types.RightEdge) : plasmoid.location
+                location: root.useListViewMode ? (plasmoid.location == PlasmaCore.Types.LeftEdge ? PlasmaCore.Types.LeftEdge : PlasmaCore.Types.RightEdge) : plasmoid.location
 
                 onContainsMouseChanged:  {
                     if (containsMouse && !model.blank) {
@@ -150,11 +150,11 @@ Item {
             PlasmaCore.FrameSvgItem {
                 id: frame
 
-                x: root.isPopup ? 0 : units.smallSpacing
-                y: root.isPopup ? 0 : units.smallSpacing
+                x: root.useListViewMode ? 0 : units.smallSpacing
+                y: root.useListViewMode ? 0 : units.smallSpacing
 
                 width: {
-                    if (root.isPopup) {
+                    if (root.useListViewMode) {
                         if (main.GridView.view.overflowing) {
                             return parent.width - units.smallSpacing;
                         } else {
@@ -166,7 +166,7 @@ Item {
                 }
 
                 height: {
-                    if (root.isPopup) {
+                    if (root.useListViewMode) {
                         return parent.height;
                     }
 
@@ -188,19 +188,36 @@ Item {
                     PlasmaCore.IconItem {
                         id: icon
 
+                        states: [
+                            State { // icon view
+                                when: !root.useListViewMode
+
+                                AnchorChanges {
+                                    target: icon
+                                    anchors.top: parent.top
+                                    anchors.horizontalCenter: parent.horizontalCenter
+                                }
+                            },
+                            State { // list view
+                                when: root.useListViewMode
+
+                                AnchorChanges {
+                                    target: icon
+                                    anchors.left: parent.left
+                                    anchors.verticalCenter: parent.verticalCenter
+                                }
+                            }
+                        ]
+
                         anchors {
-                            top: root.isPopup ? undefined : parent.top
                             topMargin: units.largeSpacing
-                            left: root.isPopup ? parent.left : undefined
                             leftMargin: units.smallSpacing
-                            horizontalCenter: root.isPopup ? undefined : parent.horizontalCenter
-                            verticalCenter: root.isPopup ? parent.verticalCenter : undefined
                         }
 
                         width: main.GridView.view.iconSize
                         height: main.GridView.view.iconSize
 
-                        opacity: root.isPopup ? (1.3 - selectionButton.opacity) : 1.0
+                        opacity: root.useListViewMode ? (1.3 - selectionButton.opacity) : 1.0
 
                         animated: false
                         usesPlasmaTheme: false
@@ -240,32 +257,48 @@ Item {
                     PlasmaComponents.Label {
                         id: label
 
-                        anchors {
-                            top: root.isPopup ? undefined : icon.bottom
-                            topMargin: 2 * units.smallSpacing
-                            left: root.isPopup ? icon.right : undefined
-                            leftMargin: units.smallSpacing * 2
-                            horizontalCenter: root.isPopup ? undefined : parent.horizontalCenter
-                            verticalCenter: root.isPopup ? parent.verticalCenter : undefined
-                        }
+                        states: [
+                            State { // icon view
+                                when: !root.useListViewMode
 
-                        width: {
-                            if (root.isPopup) {
-                                return parent.width - icon.width - (units.smallSpacing * 4);
+                                AnchorChanges {
+                                    target: label
+                                    anchors.top: icon.bottom
+                                    anchors.horizontalCenter: parent.horizontalCenter
+                                }
+                                PropertyChanges {
+                                    target: label
+                                    anchors.topMargin: 2 * units.smallSpacing
+                                    width: Math.min(labelMetrics.advanceWidth + units.smallSpacing, parent.width - units.smallSpacing * 8)
+                                    maximumLineCount: plasmoid.configuration.textLines
+                                    horizontalAlignment: Text.AlignHCenter
+                                }
+                            },
+                            State { // list view
+                                when: root.useListViewMode
+
+                                AnchorChanges {
+                                    target: label
+                                    anchors.left: icon.right
+                                    anchors.verticalCenter: parent.verticalCenter
+                                }
+                                PropertyChanges {
+                                    target: label
+                                    anchors.leftMargin: units.smallSpacing * 2
+                                    anchors.rightMargin: units.smallSpacing * 2
+                                    width: parent.width - icon.width - (units.smallSpacing * 4)
+                                    maximumLineCount: 1
+                                    horizontalAlignment: Text.AlignLeft
+                                }
                             }
-
-                            return Math.min(labelMetrics.advanceWidth + units.smallSpacing, parent.width - units.smallSpacing * 8);
-                        }
+                        ]
 
                         height: undefined // Unset PlasmaComponents.Label's default.
 
                         textFormat: Text.PlainText
 
-                        maximumLineCount: root.isPopup ? 1 : plasmoid.configuration.textLines
                         wrapMode: Text.Wrap
                         elide: Text.ElideRight
-
-                        horizontalAlignment: root.isPopup ? Text.AlignHLeft : Text.AlignHCenter
 
                         color: PlasmaCore.ColorScope.textColor
 
@@ -282,7 +315,7 @@ Item {
                     y: units.smallSpacing * 3
 
                     anchors {
-                        centerIn: root.isPopup ? icon : undefined
+                        centerIn: root.useListViewMode ? icon : undefined
                     }
 
                     width: implicitWidth
@@ -304,7 +337,7 @@ Item {
                     id: popupButtonComponent
 
                     FolderItemActionButton {
-                        visible: !root.isPopup
+                        visible: !root.useListViewMode
 
                         opacity: (plasmoid.configuration.popups && impl.hovered && impl.popupDialog == null) ? 1.0 : 0.0
 

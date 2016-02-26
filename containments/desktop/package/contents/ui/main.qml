@@ -20,6 +20,7 @@
  ***************************************************************************/
 
 import QtQuick 2.0
+import QtQuick.Layouts 1.1
 
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -35,35 +36,16 @@ DragDrop.DropArea {
     id: root
     objectName: isFolder ? "folder" : "desktop"
 
-    width: {
-        if (isContainment || !folderViewLayer.ready) {
-            return undefined;
-        } else if (isPopup) {
-            return units.gridUnit * 16;
-        }
+    width: isPopup ? undefined : preferredWidth() // for the initial size when placed on the desktop
+    Layout.preferredWidth: isPopup ? preferredWidth() : 0 // for the popup size to change at runtime when view mode changes
 
-        return (folderViewLayer.view.cellWidth * 3) + (units.largeSpacing * 2);
-    }
-
-    height: {
-        if (isContainment || !folderViewLayer.ready) {
-            return undefined;
-        } else if (isPopup) {
-            var height = (folderViewLayer.view.cellHeight * 15) + units.smallSpacing;
-        } else {
-            var height = (folderViewLayer.view.cellHeight * 2) + units.largeSpacing
-        }
-
-        if (plasmoid.configuration.labelMode != 0) {
-            height += folderViewLayer.item.labelHeight;
-        }
-
-        return height
-    }
+    height: isPopup ? undefined : preferredHeight()
+    Layout.preferredHeight: isPopup ? preferredHeight() : 0
 
     property bool isFolder: (plasmoid.pluginName == "org.kde.plasma.folder")
     property bool isContainment: ("containmentType" in plasmoid)
     property bool isPopup: (plasmoid.location != PlasmaCore.Types.Floating)
+    property bool useListViewMode: isPopup && plasmoid.configuration.viewMode === 0
 
     property Item toolBox
     property var layoutManager: LayoutManager
@@ -198,6 +180,32 @@ DragDrop.DropArea {
         if (container.x >= 0 && container.y >= 0) {
             LayoutManager.positionItem(container);
         }
+    }
+
+    function preferredWidth() {
+        if (isContainment || !folderViewLayer.ready) {
+            return undefined;
+        } else if (useListViewMode) {
+            return units.gridUnit * 16;
+        }
+
+        return (folderViewLayer.view.cellWidth * 3) + (units.largeSpacing * 2);
+    }
+
+    function preferredHeight() {
+        if (isContainment || !folderViewLayer.ready) {
+            return undefined;
+        } else if (useListViewMode) {
+            var height = (folderViewLayer.view.cellHeight * 15) + units.smallSpacing;
+        } else {
+            var height = (folderViewLayer.view.cellHeight * 2) + units.largeSpacing
+        }
+
+        if (plasmoid.configuration.labelMode != 0) {
+            height += folderViewLayer.item.labelHeight;
+        }
+
+        return height
     }
 
     onDragEnter: {

@@ -52,6 +52,7 @@ Item {
     property alias cfg_popups: popups.checked
     property alias cfg_previews: previews.checked
     property alias cfg_previewPlugins: previewPluginsDialog.previewPlugins
+    property alias cfg_viewMode: viewMode.currentIndex
     property alias cfg_iconSize: iconSize.value
     property alias cfg_textLines: textLines.value
 
@@ -238,14 +239,27 @@ Item {
 
             Layout.fillWidth: true
 
-            visible: !isPopup
-
             title: i18n("Appearance")
 
             flat: true
 
             ColumnLayout {
                 RowLayout {
+                    visible: isPopup
+
+                    Label {
+                        text: i18nc("whether to use icon or list view", "View Mode:")
+                    }
+
+                    ComboBox {
+                        id: viewMode
+                        model: [i18n("List"), i18n("Icons")]
+                    }
+                }
+
+                RowLayout {
+                    visible: !isPopup || viewMode.currentIndex === 1
+
                     Label {
                         text: i18n("Size:")
                     }
@@ -270,6 +284,8 @@ Item {
                 }
 
                 RowLayout {
+                    visible: !isPopup || viewMode.currentIndex === 1
+
                     Label {
                         text: i18n("Text lines:")
                     }
