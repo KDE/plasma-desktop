@@ -283,6 +283,7 @@ void Backend::itemContextMenu(QQuickItem *item, QObject *configAction)
         TaskManager::TaskGroup* taskGroup = static_cast<TaskManager::TaskGroup*>(agItem);
         const int maxWidth = 0.8 * item->window()->screen()->size().width();
         m_contextMenu = new TaskManager::BasicMenu(0, taskGroup, m_groupManager, actionList, QList <QAction*>(), maxWidth);
+        addJumpListActions(taskGroup->launcherUrl(), m_contextMenu);
     } else if (agItem->itemType() == TaskManager::LauncherItemType) {
         TaskManager::LauncherItem *launcher = static_cast<TaskManager::LauncherItem *>(agItem);
         m_contextMenu = new TaskManager::BasicMenu(0, launcher, m_groupManager, actionList);
