@@ -638,15 +638,9 @@ void FolderModel::addItemDragImage(int row, int x, int y, int width, int height,
         return;
     }
 
-    DragImage *dragImage = 0;
+    delete m_dragImages.take(row);
 
-    if (m_dragImages.contains(row)) {
-        dragImage = m_dragImages.value(row);
-        delete dragImage;
-        m_dragImages.remove(row);
-    }
-
-    dragImage = new DragImage();
+    DragImage *dragImage = new DragImage();
     dragImage->row = row;
     dragImage->rect = QRect(x, y, width, height);
     dragImage->image = image.value<QImage>();
