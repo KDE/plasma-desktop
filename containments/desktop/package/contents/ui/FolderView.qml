@@ -310,6 +310,7 @@ Item {
             // Drag initiation.
             if (pressX != -1 && systemSettings.isDrag(pressX, pressY, mouse.x, mouse.y)) {
                 if (pressedItem != null && dir.isSelected(positioner.map(pressedItem.index))) {
+                    pressedItem.toolTip.hideToolTip();
                     dragX = mouse.x;
                     dragY = mouse.y;
                     dir.dragSelected(mouse.x, mouse.y);
