@@ -27,6 +27,10 @@
     <entry name="runners" type="StringList">
       <default>shell,bookmarks,recentdocuments,locations,baloosearch</default>
     </entry>
-    </group>
 
+    <entry name="removeApplicationCommand" type="String">
+      <default>muon-discover --application</default>
+    </entry>
+
+    </group>
 </kcfg>
