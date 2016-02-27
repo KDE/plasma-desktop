@@ -1334,17 +1334,19 @@ void FolderModel::openContextMenu()
             editActions.append(m_actionCollection.action(QStringLiteral("del")));
         }
 
-        KParts::BrowserExtension::ActionGroupMap actionGroups;
-        actionGroups.insert(QStringLiteral("editactions"), editActions);
+        KonqPopupMenu::ActionGroupMap actionGroups;
+        actionGroups.insert(KonqPopupMenu::EditActions, editActions);
 
-        KParts::BrowserExtension::PopupFlags flags = KParts::BrowserExtension::ShowProperties;
-        flags |= KParts::BrowserExtension::ShowUrlOperations;
+        KonqPopupMenu::Flags flags = KonqPopupMenu::ShowProperties;
+        flags |= KonqPopupMenu::ShowUrlOperations;
+        flags |= KonqPopupMenu::ShowNewWindow;
 
-        menu = new KonqPopupMenu(items, m_dirModel->dirLister()->url(), m_actionCollection, m_newMenu,
-                                 KonqPopupMenu::ShowNewWindow, flags, 0,
-                                 KBookmarkManager::userBookmarksManager(),
-                                 actionGroups);
-        connect(menu, &QMenu::aboutToHide, [menu]() { menu->deleteLater(); });
+        KonqPopupMenu *popupMenu = new KonqPopupMenu(items, m_dirModel->dirLister()->url(), m_actionCollection, flags);
+        popupMenu->setNewFileMenu(m_newMenu);
+        popupMenu->setBookmarkManager(KBookmarkManager::userBookmarksManager());
+        popupMenu->setActionGroups(actionGroups);
+        connect(popupMenu, &QMenu::aboutToHide, [popupMenu]() { popupMenu->deleteLater(); });
+        menu = popupMenu;
     }
 
     menu->popup(QCursor::pos());

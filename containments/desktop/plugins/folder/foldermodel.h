@@ -72,7 +72,7 @@ class FolderModel : public QSortFilterProxyModel
     Q_PROPERTY(QString iconName READ iconName NOTIFY iconNameChanged)
     Q_PROPERTY(QUrl resolvedUrl READ resolvedUrl NOTIFY resolvedUrlChanged)
     Q_PROPERTY(QString errorString READ errorString NOTIFY errorStringChanged)
-    Q_PROPERTY(bool usedByContainment READ usedByContainment WRITE setUsedByContainment NOTIFY usedByContainmentChanged);
+    Q_PROPERTY(bool usedByContainment READ usedByContainment WRITE setUsedByContainment NOTIFY usedByContainmentChanged)
     Q_PROPERTY(bool locked READ locked WRITE setLocked NOTIFY lockedChanged)
     Q_PROPERTY(int sortMode READ sortMode WRITE setSortMode NOTIFY sortModeChanged)
     Q_PROPERTY(bool sortDesc READ sortDesc WRITE setSortDesc NOTIFY sortDescChanged)
