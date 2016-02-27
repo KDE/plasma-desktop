@@ -244,7 +244,7 @@ void touchpadApplySavedConfig();
 
 void TouchpadDisabler::handleReset()
 {
-    updateWorkingTouchpadFound();
+    updateCurrentState();
     if (!m_workingTouchpadFound) {
         return;
     }
