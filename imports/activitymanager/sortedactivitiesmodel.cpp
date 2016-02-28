@@ -33,10 +33,8 @@
 
 #define KWINDOWSYSTEM_NO_DEPRECATED
 
-#if HAVE_X11
 #include <KWindowSystem>
 #include <QX11Info>
-#endif
 
 namespace {
 
@@ -179,9 +177,6 @@ SortedActivitiesModel::SortedActivitiesModel(QVector<KActivities::Info::State> s
     , m_sortByLastUsedTime(true)
     , m_activitiesModel(new KActivitiesBackport::ActivitiesModel(states, this))
     , m_activities(new KActivities::Consumer(this))
-#if HAVE_X11
-    , m_isOnX11(QX11Info::isPlatformX11())
-#endif
 {
     setSourceModel(m_activitiesModel);
 
@@ -191,31 +186,25 @@ SortedActivitiesModel::SortedActivitiesModel(QVector<KActivities::Info::State> s
 
     backgrounds().subscribe(this);
 
+    const QList<WId> windows = KWindowSystem::stackingOrder();
 
-#if HAVE_X11
-    if (m_isOnX11) {
-        const QList<WId> windows = KWindowSystem::stackingOrder();
+    for (const auto& window: windows) {
+        KWindowInfo info(window, NET::WMVisibleName, NET::WM2Activities);
+        const QStringList activities = info.activities();
 
-        for (const auto& window: windows) {
-            KWindowInfo info(window, NET::WMVisibleName, NET::WM2Activities);
-            const QStringList activities = info.activities();
+        if (activities.isEmpty() || activities.contains("00000000-0000-0000-0000-000000000000")) continue;
 
-            if (activities.isEmpty() || activities.contains("00000000-0000-0000-0000-000000000000")) continue;
-
-            for (const auto& activity: activities) {
-                m_activitiesWindows[activity] << window;
-            }
+        for (const auto& activity: activities) {
+            m_activitiesWindows[activity] << window;
         }
-
-        connect(KWindowSystem::self(), &KWindowSystem::windowAdded,
-                this,                  &SortedActivitiesModel::onWindowAdded);
-        connect(KWindowSystem::self(), &KWindowSystem::windowRemoved,
-                this,                  &SortedActivitiesModel::onWindowRemoved);
-        connect(KWindowSystem::self(), SIGNAL(windowChanged(WId, NET::Properties, NET::Properties2)),
-                this,                  SLOT(onWindowChanged(WId, NET::Properties, NET::Properties2)));
     }
-#endif
 
+    connect(KWindowSystem::self(), &KWindowSystem::windowAdded,
+            this,                  &SortedActivitiesModel::onWindowAdded);
+    connect(KWindowSystem::self(), &KWindowSystem::windowRemoved,
+            this,                  &SortedActivitiesModel::onWindowRemoved);
+    connect(KWindowSystem::self(), SIGNAL(windowChanged(WId, NET::Properties, NET::Properties2)),
+            this,                  SLOT(onWindowChanged(WId, NET::Properties, NET::Properties2)));
 }
 
 SortedActivitiesModel::~SortedActivitiesModel()
@@ -422,9 +411,6 @@ void SortedActivitiesModel::onBackgroundsUpdated(const QStringList &activities)
 
 void SortedActivitiesModel::onWindowAdded(WId window)
 {
-#if HAVE_X11
-    if (!m_isOnX11) return;
-
     KWindowInfo info(window, 0, NET::WM2Activities);
     const QStringList activities = info.activities();
 
@@ -440,14 +426,10 @@ void SortedActivitiesModel::onWindowAdded(WId window)
                     : QVector<int>{WindowCount});
         }
     }
-#endif
 }
 
 void SortedActivitiesModel::onWindowRemoved(WId window)
 {
-#if HAVE_X11
-    if (!m_isOnX11) return;
-
     for (const auto& activity: m_activitiesWindows.keys()) {
         if (m_activitiesWindows[activity].contains(window)) {
             m_activitiesWindows[activity].removeAll(window);
@@ -458,19 +440,16 @@ void SortedActivitiesModel::onWindowRemoved(WId window)
                     : QVector<int>{WindowCount});
         }
     }
-#endif
 }
 
 void SortedActivitiesModel::onWindowChanged(WId window, NET::Properties properties, NET::Properties2 properties2)
 {
-#if HAVE_X11
-    if (!m_isOnX11) return;
+    Q_UNUSED(properties);
 
     if (properties2 & NET::WM2Activities) {
         onWindowRemoved(window);
         onWindowAdded(window);
     }
-#endif
 }
 
 void SortedActivitiesModel::rowChanged(int row, const QVector<int> &roles)

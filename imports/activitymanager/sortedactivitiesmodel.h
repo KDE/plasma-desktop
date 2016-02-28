@@ -33,14 +33,7 @@
 
 #include <config-X11.h>
 
-#if HAVE_X11
 #include <netwm.h>
-#else
-namespace NET {
-    typedef int Properties;
-    typedef int Properties2;
-} // namespace NET
-#endif
 
 class SortedActivitiesModel : public QSortFilterProxyModel {
     Q_OBJECT
@@ -103,10 +96,6 @@ private:
     KActivities::Consumer *m_activities;
 
     QHash<QString, QVector<WId>> m_activitiesWindows;
-
-#if HAVE_X11
-    bool m_isOnX11;
-#endif
 };
 
 #endif // SORTED_ACTIVITY_MODEL
