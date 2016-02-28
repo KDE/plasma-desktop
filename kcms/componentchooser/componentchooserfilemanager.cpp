@@ -26,6 +26,7 @@
 #include <kopenwithdialog.h>
 #include <kconfiggroup.h>
 #include <QStandardPaths>
+#include <QFileInfo>
 
 #include "../migrationlib/kdelibs4config.h"
 
@@ -75,6 +76,10 @@ void CfgFileManager::load(KConfig *) {
     emit changed(false);
 }
 
+static const char s_DefaultApplications[] = "Default Applications";
+static const char s_AddedAssociations[] = "Added Associations";
+static const char s_RemovedAssociations[] = "Removed Associations";
+
 void CfgFileManager::save(KConfig *)
 {
     QString storageId;
@@ -90,19 +95,36 @@ void CfgFileManager::save(KConfig *)
         KSharedConfig::Ptr profile = KSharedConfig::openConfig(QStringLiteral("mimeapps.list"), KConfig::NoGlobals, QStandardPaths::GenericConfigLocation);
         if (!profile->isConfigWritable(true)) // warn user if mimeapps.list is root-owned (#155126/#94504)
             return;
-        KConfigGroup addedApps(profile, "Added Associations");
-        QStringList userApps = addedApps.readXdgListEntry("inode/directory");
+        const QString mime = QStringLiteral("inode/directory");
+        KConfigGroup addedApps(profile, s_AddedAssociations);
+        QStringList userApps = addedApps.readXdgListEntry(mime);
         userApps.removeAll(storageId); // remove if present, to make it first in the list
         userApps.prepend(storageId);
-        addedApps.writeXdgListEntry("inode/directory", userApps);
+        addedApps.writeXdgListEntry(mime, userApps);
 
         // Save the default file manager as per mime-apps spec 1.0.1
-        KConfigGroup defaultApp(profile, "Default Applications");
-        defaultApp.writeXdgListEntry("inode/directory", QStringList(storageId));
+        KConfigGroup defaultApp(profile, s_DefaultApplications);
+        defaultApp.writeXdgListEntry(mime, QStringList(storageId));
 
         Kdelibs4SharedConfig::syncConfigGroup(&addedApps, QStringLiteral("mimeapps.list"));
 
         profile->sync();
+
+        // Clean out any kde-mimeapps.list which would take precedence any cancel our changes.
+        // (also taken from filetypes/mimetypedata.cpp)
+        const QString desktops = QString::fromLocal8Bit(qgetenv("XDG_CURRENT_DESKTOP"));
+        foreach (const QString &desktop, desktops.split(":", QString::SkipEmptyParts)) {
+            const QString file = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation)
+                + QLatin1Char('/') + desktop.toLower() + QLatin1String("-mimeapps.list");
+            if (QFileInfo::exists(file)) {
+                qDebug() << "Cleaning up" << file;
+                KConfig conf(file, KConfig::NoGlobals);
+                KConfigGroup(&conf, s_DefaultApplications).deleteEntry(mime);
+                KConfigGroup(&conf, s_AddedAssociations).deleteEntry(mime);
+                KConfigGroup(&conf, s_RemovedAssociations).deleteEntry(mime);
+            }
+        }
+
         KBuildSycocaProgressDialog::rebuildKSycoca(this);
     }
 
