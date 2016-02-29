@@ -34,6 +34,10 @@ namespace TaskManager {
     class LauncherItem;
 }
 
+namespace KActivities {
+    class Consumer;
+}
+
 class Backend : public QObject
 {
     Q_OBJECT
@@ -86,6 +90,7 @@ class Backend : public QObject
 
         Q_INVOKABLE bool canPresentWindows() const;
         Q_INVOKABLE int numberOfDesktops() const;
+        Q_INVOKABLE int numberOfActivities() const;
 
     public Q_SLOTS:
         void activateItem(int id, bool toggle);
@@ -129,6 +134,7 @@ class Backend : public QObject
         bool m_highlightWindows;
         QList<WId> m_windowsToHighlight;
         QString m_launchers;
+        KActivities::Consumer *m_activitiesConsumer;
 };
 
 #endif

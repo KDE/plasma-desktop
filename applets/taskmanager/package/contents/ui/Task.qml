@@ -227,7 +227,7 @@ MouseArea {
                     subTextEntries.push(i18n("On %1", task.DesktopName));
                 }
 
-                if (task.OnAllActivities) {
+                if (task.OnAllActivities && backend.numberOfActivities() > 1) {
                     subTextEntries.push(i18nc("Which virtual desktop a window is currently on",
                         "Available on all activities"));
                 } else if (plasmoid.configuration.showOnlyCurrentActivity) {

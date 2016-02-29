@@ -42,6 +42,7 @@
 #include <KService>
 #include <kwindoweffects.h>
 
+#include <KActivities/Consumer>
 #include <KActivitiesExperimentalStats/Cleaning>
 #include <KActivitiesExperimentalStats/ResultSet>
 #include <KActivitiesExperimentalStats/Terms>
@@ -58,7 +59,8 @@ Backend::Backend(QObject* parent) : QObject(parent),
     m_taskManagerItem(0),
     m_toolTipItem(0),
     m_panelWinId(0),
-    m_highlightWindows(false)
+    m_highlightWindows(false),
+    m_activitiesConsumer(new KActivities::Consumer(this))
 {
     connect(m_groupManager, SIGNAL(launcherListChanged()), this, SLOT(updateLaunchersCache()));
 }
@@ -626,6 +628,11 @@ bool Backend::canPresentWindows() const
 int Backend::numberOfDesktops() const
 {
     return KWindowSystem::numberOfDesktops();
+}
+
+int Backend::numberOfActivities() const
+{
+    return m_activitiesConsumer->activities(KActivities::Info::State::Running).count();
 }
 
 void Backend::presentWindows(int groupParentId)
