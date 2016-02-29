@@ -13,13 +13,13 @@ target_link_libraries(kcm_colors
     KF5::KCMUtils
     KF5::GuiAddons
     KF5::I18n
+    KF5::KIOCore
+    KF5::CoreAddons
     Qt5::DBus
-    KF5::NewStuff
-    KF5::KDELibs4Support
-    ${X11_LIBRARIES})
+    KF5::NewStuff)
 
 if(X11_FOUND)
-    target_link_libraries(kcm_colors Qt5::X11Extras)
+    target_link_libraries(kcm_colors ${X11_LIBRARIES} Qt5::X11Extras)
 endif()
 
 install(TARGETS kcm_colors  DESTINATION ${PLUGIN_INSTALL_DIR})

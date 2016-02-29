@@ -41,9 +41,8 @@
 #include <KColorScheme>
 #include <KMessageBox>
 #include <KPluginFactory>
-#include <kio/netaccess.h>
-#include <kio/deletejob.h>
-#include <kio/jobuidelegate.h>
+#include <KJobUiDelegate>
+#include <KIO/DeleteJob>
 #include <KNewStuff3/KNS3/DownloadDialog>
 #include <KNewStuff3/KNS3/UploadDialog>
 

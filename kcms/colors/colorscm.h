@@ -22,7 +22,6 @@
 #define __COLORSCM_H__
 
 #include <KCModule>
-#include <KColorScheme>
 
 #include "ui_colorsettings.h"
 
@@ -79,7 +78,7 @@ private Q_SLOTS:
 
     /** slot called when the get new schemes button is clicked */
     void on_schemeKnsButton_clicked();
-    
+
     /** slot called when the upload scheme button is clicked */
     void on_schemeKnsUploadButton_clicked();
 
