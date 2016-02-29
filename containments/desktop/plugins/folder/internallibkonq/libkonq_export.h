@@ -1,0 +1,2 @@
+#define LIBKONQ_EXPORT
+
