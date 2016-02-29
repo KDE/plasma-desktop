@@ -338,7 +338,8 @@ void KCMLookandFeel::setColors(const QString &scheme, const QString &colorFile)
       KConfigGroup cg(conf, grp);
       KConfigGroup cg2(&m_config, grp);
       cg.copyTo(&cg2);
-  }
+    }
+    KGlobalSettings::self()->emitChange(KGlobalSettings::PaletteChanged);
 }
 
 void KCMLookandFeel::setIcons(const QString &theme)
