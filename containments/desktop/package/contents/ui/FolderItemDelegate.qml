@@ -18,6 +18,8 @@
  ***************************************************************************/
 
 import QtQuick 2.4
+import QtGraphicalEffects 1.0
+
 import org.kde.plasma.plasmoid 2.0
 
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -64,7 +66,7 @@ Item {
             property QtObject popupDialog: null
             property Item iconArea: icon
             property Item label: label
-            property Item labelArea: textBackground
+            property Item labelArea: textShadow
             property Item actionsOverlay: actions
             property Item hoverArea: toolTip
             property Item toolTip: toolTip
@@ -225,33 +227,31 @@ Item {
                         source: model.decoration
                     }
 
-                    Rectangle {
-                        id: textBackground
-
-                        visible: root.isContainment
-
-                        anchors {
-                            left: label.left
-                            leftMargin: -units.smallSpacing
-                            top: label.top
-                            topMargin: -units.smallSpacing
-                            right: label.right
-                            rightMargin: -units.smallSpacing
-                            bottom: label.bottom
-                            bottomMargin: -units.smallSpacing
-                        }
-
-                        color: (root.isContainment && main.GridView.view.isRootView) ? PlasmaCore.ColorScope.backgroundColor : "transparent"
-                        radius: units.smallSpacing
-                        opacity: 0.4
-                    }
-
                     TextMetrics {
                         id: labelMetrics
 
                         font: label.font
                         elide: Text.ElideNone
                         text: label.text
+                    }
+
+                    DropShadow {
+                        id: textShadow
+
+                        anchors.fill: label
+
+                        visible: (root.isContainment && main.GridView.view.isRootView)
+
+                        horizontalOffset: 2
+                        verticalOffset: 2
+
+                        radius: 9.0
+                        samples: 18
+                        spread: 0.15
+
+                        color: "black"
+
+                        source: label
                     }
 
                     PlasmaComponents.Label {
@@ -300,7 +300,7 @@ Item {
                         wrapMode: Text.Wrap
                         elide: Text.ElideRight
 
-                        color: PlasmaCore.ColorScope.textColor
+                        color: textShadow.visible ? "white" : PlasmaCore.ColorScope.textColor
 
                         text: model.blank ? "" : model.display
 
