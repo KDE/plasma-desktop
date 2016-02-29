@@ -1,4 +1,5 @@
 include_directories(plasmaquick)
+include_directories(internallibkonq)
 
 set(folderplugin_SRCS
     directorypicker.cpp
