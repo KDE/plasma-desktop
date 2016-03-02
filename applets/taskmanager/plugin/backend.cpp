@@ -595,7 +595,11 @@ void Backend::updateWindowHighlight()
 
 void Backend::itemMove(int id, int newIndex)
 {
-    m_groupManager->manualSortingRequest(m_groupManager->rootGroup()->getMemberById(id), newIndex);
+    TaskManager::AbstractGroupableItem *item = m_groupManager->rootGroup()->getMemberById(id);
+
+    if (item) {
+        m_groupManager->manualSortingRequest(item, newIndex);
+    }
 }
 
 void Backend::itemGeometryChanged(QQuickItem *item, int id)
