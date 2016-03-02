@@ -18,7 +18,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-import QtQuick 2.0
+import QtQuick 2.4
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
@@ -75,8 +75,9 @@ Item {
         enabled: visible
     }
 
-    width: buttonLayout.width + (buttonLayout.width % 2)
-    height: buttonLayout.height + (buttonLayout.height % 2)
+    clip: true
+    width: backgroundFrame.width
+    height: backgroundFrame.height
 
     //x and y default to 0, so top left would be correct
     //If the position is anything else it will updated via onXChanged during intialisation
@@ -136,10 +137,12 @@ Item {
 
     PlasmaCore.FrameSvgItem {
         id: backgroundFrame
-        imagePath: isCorner ? "widgets/translucentbackground" : "widgets/background"
+        anchors {
+            left: parent.left
+            top: parent.top
+        }
+        imagePath: "widgets/translucentbackground"
         opacity: buttonMouse.containsMouse || (toolBoxLoader.item && toolBoxLoader.item.visible) ? 1.0 : 0.4
-        x: -margins.left
-        y: -margins.top
         width: (isCorner ? buttonLayout.height : buttonLayout.width) + margins.left + margins.right
         height: buttonLayout.height + margins.top + margins.bottom
         Behavior on width {
@@ -157,13 +160,8 @@ Item {
 
     Row {
         id: buttonLayout
-
-        //when in the corner centre in the middle of the remaining space
-        //the visible space is the width of the background frame + one margin, the other is offscreen
-        //we want to work out the offset which is the visible frame width - our icon width / 2
-        //X is relative to the start of button, but the frame is one marging wider to the left so this needs taking into account
-        x: isCorner ? Math.round((parent.width - width) / 2 + units.smallSpacing) : 0
-
+        anchors.centerIn: parent
+        height: Math.max(toolBoxIcon.height, fontMetrics.height)
         spacing: units.smallSpacing
 
         Behavior on x {
@@ -197,8 +195,10 @@ Item {
 
         PlasmaComponents.Label {
             id: activityName
+            anchors.verticalCenter: parent.verticalCenter
             opacity: isCorner ? 0 : 1
             text: toolBoxButton.text
+            visible: opacity
             Behavior on opacity {
                 //only have this animation when going from hidden -> shown
                 enabled: activityName.opacity == 0
@@ -216,6 +216,11 @@ Item {
                     }
                 }
             }
+        }
+
+        FontMetrics {
+            id: fontMetrics
+            font: activityName.font
         }
     }
 
