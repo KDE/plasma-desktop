@@ -244,6 +244,14 @@ MouseArea {
 
                 return subTextEntries.join("\n");
             }
+
+            Connections {
+                target: toolTip.containsMouse ? label : null
+
+                onTextChanged: {
+                    toolTipDelegate.mainText = label.text;
+                }
+            }
         }
     }
 
