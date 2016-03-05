@@ -53,16 +53,15 @@ Item {
         return p;
     }
 
-    Image {
+    PlasmaCore.IconItem {
         id: imageIcon
         anchors.centerIn: parent
         width: iconSize
         height: iconSize
         scale: mouseArea.pressed ? 0.9 : 1
-        source: iconPath(statusIcon.icon)
+        source: statusIcon.icon
         visible: statusIcon.icon.length > 0
-        sourceSize.width: iconSize
-        sourceSize.height: iconSize
+        animated: false
         // active: mouseArea.containsMouse
     }
     PlasmaComponents.Label {
