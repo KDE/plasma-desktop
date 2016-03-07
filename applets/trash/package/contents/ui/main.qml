@@ -95,7 +95,7 @@ DragDrop.DropArea {
         plasmoid.setAction("empty",i18nc("a verb", "Empty"),"trash-empty");
         plasmoid.setAction("openkcm", i18n("Trash Settings"), "configure");
         plasmoid.popupIcon = "user-trash";
-        plasmoid.action("empty").enabled = count > 0;
+        plasmoid.action("empty").enabled = dirModel.count > 0;
     }
 
     MouseArea {
