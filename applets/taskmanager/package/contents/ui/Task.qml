@@ -211,12 +211,21 @@ MouseArea {
             //FIXME TODO: highlightWindows: plasmoid.configuration.highlightWindows
             onContainsMouseChanged:  {
                 if (containsMouse) {
-                    toolTipDelegate.windows = model.WindowList;
-                    toolTipDelegate.mainText = model.DisplayRole;
-                    toolTipDelegate.icon = model.DecorationRole;
-                    toolTipDelegate.subText = model.IsLauncher ? model.GenericName
-                        : toolTip.generateSubText(model);
-                    toolTipDelegate.launcherUrl = model.LauncherUrl;
+                    toolTipDelegate.windows = Qt.binding(function() {
+                        return model.WindowList;
+                    });
+                    toolTipDelegate.mainText = Qt.binding(function() {
+                        return model.DisplayRole;
+                    });
+                    toolTipDelegate.icon = Qt.binding(function() {
+                        return model.DecorationRole;
+                    });
+                    toolTipDelegate.subText = Qt.binding(function() {
+                        return model.IsLauncher ? model.GenericName : toolTip.generateSubText(model);
+                    });
+                    toolTipDelegate.launcherUrl = Qt.binding(function() {
+                        return model.LauncherUrl;
+                    });
                 }
             }
 
@@ -243,14 +252,6 @@ MouseArea {
                 }
 
                 return subTextEntries.join("\n");
-            }
-
-            Connections {
-                target: toolTip.containsMouse ? label : null
-
-                onTextChanged: {
-                    toolTipDelegate.mainText = label.text;
-                }
             }
         }
     }
