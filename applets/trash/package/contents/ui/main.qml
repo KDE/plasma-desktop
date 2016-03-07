@@ -49,8 +49,8 @@ DragDrop.DropArea {
     readonly property bool constrained: formFactor === PlasmaCore.Types.Vertical || formFactor === PlasmaCore.Types.Horizontal
 
     Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
-
     Plasmoid.backgroundHints: PlasmaCore.Types.NoBackground
+    Plasmoid.icon: (dirModel.count > 0) ? "user-trash-full": "user-trash"
 
     preventStealing: true
 
@@ -94,7 +94,6 @@ DragDrop.DropArea {
         plasmoid.setAction("open", i18nc("a verb", "Open"),"document-open");
         plasmoid.setAction("empty",i18nc("a verb", "Empty"),"trash-empty");
         plasmoid.setAction("openkcm", i18n("Trash Settings"), "configure");
-        plasmoid.popupIcon = "user-trash";
         plasmoid.action("empty").enabled = dirModel.count > 0;
     }
 
@@ -106,7 +105,7 @@ DragDrop.DropArea {
 
     PlasmaCore.IconItem {
         id: icon
-        source: (dirModel.count > 0) ? "user-trash-full": "user-trash"
+        source: plasmoid.icon
         anchors {
             left: parent.left
             right: parent.right
