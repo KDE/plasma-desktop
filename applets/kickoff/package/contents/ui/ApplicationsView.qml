@@ -186,20 +186,6 @@ Item {
                 id: kickoffItem
 
                 appView: true
-
-                PlasmaCore.SvgItem {
-                    anchors {
-                        right: parent.right
-                        verticalCenter: parent.verticalCenter
-                        rightMargin: y
-                    }
-                    height: units.iconSizes.small
-                    width: height
-
-                    svg: arrowSvg
-                    elementId: "go-next"
-                    visible: model.hasChildren
-                }
             }
 
             function addBreadcrumb(model, title) {
@@ -210,12 +196,6 @@ Item {
             function clearBreadcrumbs() {
                 crumbModel.clear();
                 crumbModel.models = [];
-            }
-
-            PlasmaCore.Svg {
-                id: arrowSvg
-
-                imagePath: "toolbar-icons/go"
             }
         } // applicationsView
 
