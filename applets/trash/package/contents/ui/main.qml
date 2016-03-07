@@ -1,6 +1,6 @@
 /*
  * Copyright 2013  Heena Mahour <heena393@gmail.com>
- * Copyright 2015  Kai Uwe Broulik <kde@privat.broulik.de>
+ * Copyright 2015, 2016 Kai Uwe Broulik <kde@privat.broulik.de>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
@@ -17,6 +17,8 @@
  */
 import QtQuick 2.0
 import QtQuick.Layouts 1.1
+import QtGraphicalEffects 1.0
+
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as Components
@@ -48,7 +50,7 @@ DragDrop.DropArea {
 
     Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
 
-    Plasmoid.backgroundHints: PlasmaCore.Types.TranslucentBackground
+    Plasmoid.backgroundHints: PlasmaCore.Types.NoBackground
 
     preventStealing: true
 
@@ -114,6 +116,25 @@ DragDrop.DropArea {
         active: toolTip.containsMouse || root.containsAcceptableDrag
     }
 
+    DropShadow {
+        id: textShadow
+
+        anchors.fill: text
+
+        visible: !constrained
+
+        horizontalOffset: units.devicePixelRatio * 2
+        verticalOffset: horizontalOffset
+
+        radius: 9.0
+        samples: 18
+        spread: 0.15
+
+        color: "black"
+
+        source: constrained ? null : text
+    }
+
     Components.Label {
         id: text
         anchors {
@@ -121,8 +142,9 @@ DragDrop.DropArea {
             bottom: parent.bottom
         }
         text: (dirModel.count === 0) ? i18n("Trash\nEmpty") : i18np("Trash\nOne item", "Trash\n %1 items", dirModel.count)
+        color: "white"
         horizontalAlignment: Text.AlignHCenter
-        visible: !constrained
+        visible: false // rendered by DropShadow
     }
 
     PlasmaCore.ToolTipArea {
