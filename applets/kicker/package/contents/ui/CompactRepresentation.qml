@@ -103,7 +103,7 @@ Item {
             }
         }
 
-        visible: plasmoid.configuration.useCustomButtonImage && plasmoid.configuration.customButtonImage
+        visible: plasmoid.configuration.useCustomButtonImage && (plasmoid.configuration.customButtonImage != "")
         source: plasmoid.configuration.customButtonImage
         fillMode: Image.PreserveAspectFit
         smooth: true
