@@ -29,7 +29,7 @@ find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
     Concurrent
 )
 
-set(KF5_MIN_VERSION "5.19.0")
+set(KF5_MIN_VERSION "5.20.0")
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     Auth
     Plasma
@@ -48,6 +48,7 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     Declarative
     People
     DBusAddons
+    Activities
 )
 
 find_package(LibKWorkspace CONFIG REQUIRED)
@@ -62,12 +63,6 @@ find_package(PackageKitQt5 0.9)
 set_package_properties(PackageKitQt5 PROPERTIES DESCRIPTION "Software Manager integration"
                        TYPE OPTIONAL
                        PURPOSE "Provides package management integration to the application launcher."
-                      )
-
-find_package(KF5Activities ${KF5_MIN_VERSION})
-set_package_properties(KF5Activities PROPERTIES DESCRIPTION "management of Plasma activities"
-                       TYPE OPTIONAL
-                       PURPOSE "Needed by activity related plasmoids and the pager."
                       )
 
 # Baloo is currently part of the KF5 namespace, but it is not

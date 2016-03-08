@@ -175,7 +175,7 @@ namespace {
 SortedActivitiesModel::SortedActivitiesModel(QVector<KActivities::Info::State> states, QObject *parent)
     : QSortFilterProxyModel(parent)
     , m_sortByLastUsedTime(true)
-    , m_activitiesModel(new KActivitiesBackport::ActivitiesModel(states, this))
+    , m_activitiesModel(new KActivities::ActivitiesModel(states, this))
     , m_activities(new KActivities::Consumer(this))
 {
     setSourceModel(m_activitiesModel);
@@ -262,8 +262,8 @@ bool SortedActivitiesModel::lessThan(const QModelIndex &sourceLeft,
                                      const QModelIndex &sourceRight) const
 {
     if (m_sortByLastUsedTime) {
-        const auto activityLeft  = sourceModel()->data(sourceLeft, KActivitiesBackport::ActivitiesModel::ActivityId);
-        const auto activityRight = sourceModel()->data(sourceRight, KActivitiesBackport::ActivitiesModel::ActivityId);
+        const auto activityLeft  = sourceModel()->data(sourceLeft, KActivities::ActivitiesModel::ActivityId);
+        const auto activityRight = sourceModel()->data(sourceRight, KActivities::ActivitiesModel::ActivityId);
 
         const auto timeLeft  = lastUsedTime(activityLeft.toString());
         const auto timeRight = lastUsedTime(activityRight.toString());
@@ -271,8 +271,8 @@ bool SortedActivitiesModel::lessThan(const QModelIndex &sourceLeft,
         return timeLeft < timeRight;
 
     } else {
-        const auto titleLeft  = sourceModel()->data(sourceLeft, KActivitiesBackport::ActivitiesModel::ActivityName);
-        const auto titleRight = sourceModel()->data(sourceRight, KActivitiesBackport::ActivitiesModel::ActivityName);
+        const auto titleLeft  = sourceModel()->data(sourceLeft, KActivities::ActivitiesModel::ActivityName);
+        const auto titleRight = sourceModel()->data(sourceRight, KActivities::ActivitiesModel::ActivityName);
 
         return titleLeft < titleRight;
     }
@@ -294,7 +294,7 @@ QHash<int, QByteArray> SortedActivitiesModel::roleNames() const
 
 QVariant SortedActivitiesModel::data(const QModelIndex &index, int role) const
 {
-    if (role == KActivitiesBackport::ActivitiesModel::ActivityBackground) {
+    if (role == KActivities::ActivitiesModel::ActivityBackground) {
         const auto activity = activityIdForIndex(index);
 
         return backgrounds().forActivity[activity];
@@ -348,7 +348,7 @@ QVariant SortedActivitiesModel::data(const QModelIndex &index, int role) const
 
 QString SortedActivitiesModel::activityIdForIndex(const QModelIndex &index) const
 {
-    return data(index, KActivitiesBackport::ActivitiesModel::ActivityId).toString();
+    return data(index, KActivities::ActivitiesModel::ActivityId).toString();
 }
 
 QString SortedActivitiesModel::activityIdForRow(int row) const
@@ -405,7 +405,7 @@ void SortedActivitiesModel::onBackgroundsUpdated(const QStringList &activities)
 {
     for (const auto &activity: activities) {
         const int row = rowForActivityId(activity);
-        emit rowChanged(row, { KActivitiesBackport::ActivitiesModel::ActivityBackground });
+        emit rowChanged(row, { KActivities::ActivitiesModel::ActivityBackground });
     }
 }
 

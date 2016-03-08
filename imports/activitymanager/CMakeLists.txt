@@ -23,8 +23,6 @@ set (
    activityswitcherextensionplugin.cpp
    switcherbackend.cpp
    sortedactivitiesmodel.cpp
-
-   backport/switcheractivitiesmodel.cpp
    )
 
 add_library (activityswitcherextensionplugin SHARED ${activityswitcher_imports_LIB_SRCS})

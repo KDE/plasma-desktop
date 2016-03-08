@@ -27,9 +27,7 @@
 // KDE
 #include <KActivities/Consumer>
 #include <KActivities/Info>
-
-// TODO: Remove after 5.6
-#include "backport/switcheractivitiesmodel.h"
+#include <KActivities/ActivitiesModel>
 
 #include <config-X11.h>
 
@@ -56,10 +54,10 @@ protected:
     bool lessThan(const QModelIndex & source_left, const QModelIndex & source_right) const;
 
     enum AdditionalRoles {
-        LastTimeUsed       = KActivitiesBackport::ActivitiesModel::UserRole,
-        LastTimeUsedString = KActivitiesBackport::ActivitiesModel::UserRole + 1,
-        WindowCount        = KActivitiesBackport::ActivitiesModel::UserRole + 2,
-        HasWindows         = KActivitiesBackport::ActivitiesModel::UserRole + 3
+        LastTimeUsed       = KActivities::ActivitiesModel::UserRole,
+        LastTimeUsedString = KActivities::ActivitiesModel::UserRole + 1,
+        WindowCount        = KActivities::ActivitiesModel::UserRole + 2,
+        HasWindows         = KActivities::ActivitiesModel::UserRole + 3
     };
 
 public Q_SLOTS:
@@ -92,7 +90,7 @@ private:
 
     QString m_previousActivity;
 
-    KActivitiesBackport::ActivitiesModel *m_activitiesModel;
+    KActivities::ActivitiesModel *m_activitiesModel;
     KActivities::Consumer *m_activities;
 
     QHash<QString, QVector<WId>> m_activitiesWindows;
