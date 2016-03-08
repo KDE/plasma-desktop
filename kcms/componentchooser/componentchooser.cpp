@@ -21,10 +21,6 @@
 #ifdef Q_OS_UNIX
 #include "componentchooserterminal.h"
 #endif
-#include <config-X11.h>
-#if HAVE_X11
-#include "componentchooserwm.h"
-#endif
 
 #include <QCheckBox>
 
@@ -191,16 +187,6 @@ void ComponentChooser::slotServiceSelected(QListWidgetItem* it) {
 		}
 
 	}
-#if HAVE_X11
-	else if (cfgType==QLatin1String("internal_wm"))
-	{
-		if (!(configWidget && qobject_cast<CfgWm*>(configWidget)))
-		{
-			newConfigWidget = new CfgWm(configContainer);
-		}
-
-	}
-#endif
 #endif
 	else if (cfgType==QLatin1String("internal_filemanager"))
 	{

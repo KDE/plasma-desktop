@@ -2,7 +2,6 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"kcmcomponentchooser\")
 
 add_subdirectory( componentservices ) 
-add_subdirectory( windowmanagers ) 
 
 
 
@@ -14,7 +13,6 @@ set(kcm_componentchooser_SRCS
   componentchooserfilemanager.cpp
   componentchooseremail.cpp
   componentchooserterminal.cpp
-  componentchooserwm.cpp
   kcm_componentchooser.cpp
   ktimerdialog.cpp
 )
@@ -26,7 +24,6 @@ ki18n_wrap_ui(kcm_componentchooser_SRCS
   componentchooser_ui.ui
   componentconfig_ui.ui
   terminalemulatorconfig_ui.ui
-  wmconfig_ui.ui
 )
 
 add_library(kcm_componentchooser MODULE ${kcm_componentchooser_SRCS})
