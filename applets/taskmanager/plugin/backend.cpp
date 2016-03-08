@@ -43,11 +43,11 @@
 #include <kwindoweffects.h>
 
 #include <KActivities/Consumer>
-#include <KActivitiesExperimentalStats/Cleaning>
-#include <KActivitiesExperimentalStats/ResultSet>
-#include <KActivitiesExperimentalStats/Terms>
+#include <KActivities/Stats/Cleaning>
+#include <KActivities/Stats/ResultSet>
+#include <KActivities/Stats/Terms>
 
-namespace KAStats = KActivities::Experimental::Stats;
+namespace KAStats = KActivities::Stats;
 
 using namespace KAStats;
 using namespace KAStats::Terms;

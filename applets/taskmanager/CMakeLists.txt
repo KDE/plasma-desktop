@@ -24,7 +24,7 @@ target_link_libraries(taskmanagerplugin
                       Qt5::Quick
                       Qt5::Widgets
                       KF5::Activities
-                      KF5::ActivitiesExperimentalStats
+                      KF5::ActivitiesStats
                       KF5::I18n
                       KF5::KIOCore
                       KF5::KIOWidgets

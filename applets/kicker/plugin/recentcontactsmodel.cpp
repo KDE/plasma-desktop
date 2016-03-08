@@ -26,14 +26,14 @@
 
 #include <KLocalizedString>
 
-#include <KActivitiesExperimentalStats/ResultModel>
-#include <KActivitiesExperimentalStats/Terms>
+#include <KActivities/Stats/ResultModel>
+#include <KActivities/Stats/Terms>
 
 #include <kpeople/widgets/actions.h> //FIXME TODO: Pretty include in KPeople broken.
 #include <kpeople/widgets/persondetailsdialog.h>
 #include <KPeople/PersonData>
 
-namespace KAStats = KActivities::Experimental::Stats;
+namespace KAStats = KActivities::Stats;
 
 using namespace KAStats;
 using namespace KAStats::Terms;

@@ -37,11 +37,11 @@
 #include <KService>
 #include <KStartupInfo>
 
-#include <KActivitiesExperimentalStats/Cleaning>
-#include <KActivitiesExperimentalStats/ResultModel>
-#include <KActivitiesExperimentalStats/Terms>
+#include <KActivities/Stats/Cleaning>
+#include <KActivities/Stats/ResultModel>
+#include <KActivities/Stats/Terms>
 
-namespace KAStats = KActivities::Experimental::Stats;
+namespace KAStats = KActivities::Stats;
 
 using namespace KAStats;
 using namespace KAStats::Terms;
