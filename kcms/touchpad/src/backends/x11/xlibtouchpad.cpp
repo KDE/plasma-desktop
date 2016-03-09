@@ -171,16 +171,7 @@ void XlibTouchpad::flush()
 
 double XlibTouchpad::getPropertyScale(const QString& name) const
 {
-    if (m_scaleByResX.contains(name) && m_scaleByResY.contains(name)) {
-        return std::sqrt(static_cast<double>(m_resX) * m_resX
-                         + static_cast<double>(m_resY) * m_resY);
-    } else if (m_scaleByResX.contains(name)) {
-        return m_resX;
-    } else if (m_scaleByResY.contains(name)) {
-        return m_resY;
-    } else if (m_toRadians.contains(name)) {
-        return M_PI_4 / 45.0;
-    }
+    Q_UNUSED(name);
     return 1.0;
 }
 

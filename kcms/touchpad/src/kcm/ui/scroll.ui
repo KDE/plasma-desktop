@@ -147,6 +147,9 @@
         <property name="toolTip">
          <string>Move distance of the finger for a scroll event</string>
         </property>
+        <property name="maximum">
+         <double>1000.000000000000000</double>
+        </property>
         <property name="singleStep">
          <double>0.100000000000000</double>
         </property>
@@ -172,6 +175,9 @@
        <widget class="QDoubleSpinBox" name="kcfg_HorizScrollDelta">
         <property name="toolTip">
          <string>Move distance of the finger for a scroll event</string>
+        </property>
+        <property name="maximum">
+         <double>1000.000000000000000</double>
         </property>
         <property name="singleStep">
          <double>0.100000000000000</double>
@@ -322,12 +328,18 @@ will scroll down and counter clockwise motion will scroll up</string>
        </widget>
       </item>
       <item row="2" column="1">
-       <widget class="QSpinBox" name="kcfg_CircScrollDelta">
+       <widget class="QDoubleSpinBox" name="kcfg_CircScrollDelta">
         <property name="sizePolicy">
          <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
           <horstretch>0</horstretch>
           <verstretch>0</verstretch>
          </sizepolicy>
+        </property>
+        <property name="maximum">
+         <double>45.000000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.100000000000000</double>
         </property>
         <property name="toolTip">
          <string>Move angle (radians) of finger to generate a scroll event</string>

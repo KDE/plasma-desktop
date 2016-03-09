@@ -233,3 +233,18 @@ SynapticsTouchpad::SynapticsTouchpad(Display *display, int deviceId): XlibTouchp
 
     m_paramList = synapticsProperties;
 }
+
+double SynapticsTouchpad::getPropertyScale(const QString &name) const
+{
+    if (m_scaleByResX.contains(name) && m_scaleByResY.contains(name)) {
+        return std::sqrt(static_cast<double>(m_resX) * m_resX
+                         + static_cast<double>(m_resY) * m_resY);
+    } else if (m_scaleByResX.contains(name)) {
+        return m_resX;
+    } else if (m_scaleByResY.contains(name)) {
+        return m_resY;
+    } else if (m_toRadians.contains(name)) {
+        return M_PI_4 / 45.0;
+    }
+    return 1.0;
+}
