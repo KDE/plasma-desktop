@@ -32,7 +32,7 @@ Item {
     id: appletItem
 
     property int handleWidth: iconSize
-    property int minimumHandleHeight: 6 * (root.iconSize + 6) + margins.top + margins.bottom
+    property int minimumHandleHeight: 7 * (root.iconSize + 7) + margins.top + margins.bottom
     property int handleHeight: (height < minimumHandleHeight) ? minimumHandleHeight : height
     property string category
 

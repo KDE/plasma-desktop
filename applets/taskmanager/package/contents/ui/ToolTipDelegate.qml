@@ -223,6 +223,8 @@ Column {
                 PlasmaCore.IconItem {
                     anchors.fill: parent
                     source: icon
+                    animated: false
+                    usesPlasmaTheme: false
                     visible: !albumArtImage.available
                 }
             }

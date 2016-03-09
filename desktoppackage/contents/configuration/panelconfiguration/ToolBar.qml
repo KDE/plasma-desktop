@@ -127,6 +127,7 @@ Item {
         Loader {
             id: contextMenuLoader
             property bool opened: item && item.visible
+            onOpenedChanged: settingsButton.checked = opened
             source: "MoreSettingsMenu.qml"
             active: false
 

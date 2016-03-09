@@ -39,7 +39,7 @@ Item {
     property bool appView: false
     property bool modelChildren: model.hasChildren
     property bool isCurrent: listItem.ListView.view.currentIndex === index;
-    property string url: model.url
+    property string url: model.url || ""
     property bool showAppsByName: plasmoid.configuration.showAppsByName
 
     property bool hasActionList: ((model.favoriteId != null)

@@ -268,7 +268,8 @@ DragDrop.DropArea {
             folderViewLayer.view.drop(root, event, mapToItem(folderViewLayer.view, event.x, event.y));
         } else if (isContainment) {
             placeHolderPaint.opacity = 0;
-            plasmoid.processMimeData(event.mimeData, event.x - placeHolder.width / 2, event.y - placeHolder.height / 2);
+            var pos = root.parent.mapFromItem(resultsFlow, event.x - placeHolder.width / 2, event.y - placeHolder.height / 2);
+            plasmoid.processMimeData(event.mimeData, pos.x, pos.y);
             event.accept(event.proposedAction);
         }
     }

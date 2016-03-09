@@ -147,6 +147,7 @@ ListView {
                 id: textLabel
                 Layout.fillWidth: true
                 text: modelData.text.replace("&", "") // hack to get rid of keyboard accelerator hints
+                elide: Text.ElideRight
                 Accessible.ignored: true
             }
         }
