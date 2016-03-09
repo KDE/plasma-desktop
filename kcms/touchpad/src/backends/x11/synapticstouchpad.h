@@ -27,10 +27,12 @@ class SynapticsTouchpad : public XlibTouchpad
 public:
     SynapticsTouchpad(Display *display, int deviceId);
 
+protected:
+    double getPropertyScale(const QString &name) const Q_DECL_OVERRIDE;
+
 private:
     XcbAtom m_capsAtom;
     int m_resX, m_resY;
-    QMap<QString, QString> m_negate;
     QStringList m_scaleByResX, m_scaleByResY, m_toRadians;
 };
 

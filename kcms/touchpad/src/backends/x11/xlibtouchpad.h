@@ -46,6 +46,7 @@ class XlibTouchpad
 {
 public:
     XlibTouchpad(Display *display, int deviceId);
+    virtual ~XlibTouchpad() {};
 
     int deviceId() { return m_deviceId; }
     const QStringList &supportedParameters() const { return m_supported; }
@@ -64,7 +65,7 @@ protected:
     QVariant getParameter(const struct Parameter *);
     struct PropertyInfo *getDevProperty(const QLatin1String &propName);
     void flush();
-    double getPropertyScale(const QString &name) const;
+    virtual double getPropertyScale(const QString &name) const;
     const Parameter * findParameter(const QString &name);
 
     Display *m_display;
@@ -75,10 +76,7 @@ protected:
 
     QMap<QLatin1String, QSharedPointer<XcbAtom> > m_atoms;
 
-    int m_resX, m_resY;
-    QStringList m_scaleByResX, m_scaleByResY, m_toRadians;
     QMap<QString, QString> m_negate;
-
     QMap<QLatin1String, struct PropertyInfo> m_props;
     QSet<QLatin1String> m_changed;
     QStringList m_supported;
