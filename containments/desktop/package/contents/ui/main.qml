@@ -36,11 +36,13 @@ DragDrop.DropArea {
     id: root
     objectName: isFolder ? "folder" : "desktop"
 
-    width: isPopup ? undefined : preferredWidth() // for the initial size when placed on the desktop
-    Layout.preferredWidth: isPopup ? preferredWidth() : 0 // for the popup size to change at runtime when view mode changes
+    width: isPopup ? undefined : preferredWidth(false) // for the initial size when placed on the desktop
+    Layout.minimumWidth: preferredWidth(true)
+    Layout.preferredWidth: isPopup ? preferredWidth(false) : 0 // for the popup size to change at runtime when view mode changes
 
-    height: isPopup ? undefined : preferredHeight()
-    Layout.preferredHeight: isPopup ? preferredHeight() : 0
+    height: isPopup ? undefined : preferredHeight(false)
+    Layout.minimumHeight: preferredHeight(true)
+    Layout.preferredHeight: isPopup ? preferredHeight(false) : 0
 
     property bool isFolder: (plasmoid.pluginName == "org.kde.plasma.folder")
     property bool isContainment: ("containmentType" in plasmoid)
@@ -182,30 +184,30 @@ DragDrop.DropArea {
         }
     }
 
-    function preferredWidth() {
+    function preferredWidth(minimum) {
         if (isContainment || !folderViewLayer.ready) {
             return undefined;
         } else if (useListViewMode) {
             return units.gridUnit * 16;
         }
 
-        return (folderViewLayer.view.cellWidth * 3) + (units.largeSpacing * 2);
+        return (folderViewLayer.view.cellWidth * (minimum ? 1 : 3)) + (units.largeSpacing * 2);
     }
 
-    function preferredHeight() {
+    function preferredHeight(minimum) {
         if (isContainment || !folderViewLayer.ready) {
             return undefined;
         } else if (useListViewMode) {
             var height = (folderViewLayer.view.cellHeight * 15) + units.smallSpacing;
         } else {
-            var height = (folderViewLayer.view.cellHeight * 2) + units.largeSpacing
+            var height = (folderViewLayer.view.cellHeight * (minimum ? 1 : 2)) + units.largeSpacing
         }
 
         if (plasmoid.configuration.labelMode != 0) {
             height += folderViewLayer.item.labelHeight;
         }
 
-        return height
+        return height;
     }
 
     onDragEnter: {
