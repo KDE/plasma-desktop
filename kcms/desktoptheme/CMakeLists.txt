@@ -1,24 +1,26 @@
 # KI18N Translation Domain for this library
-add_definitions(-DTRANSLATION_DOMAIN=\"kcm_desktopthemedetails\")
+add_definitions(-DTRANSLATION_DOMAIN=\"kcm_desktoptheme\")
 
-set(kcmdesktoptheme_SRCS kcmdesktoptheme.cpp thememodel.cpp)
-ki18n_wrap_ui(kcmdesktoptheme_SRCS DesktopTheme.ui)
-
-add_library(kcm_desktoptheme MODULE ${kcmdesktoptheme_SRCS})
-target_link_libraries(kcm_desktoptheme ${X11_LIBRARIES}
-    KF5::Archive
-    KF5::KCMUtils
-    KF5::I18n
-    KF5::Parts
-    KF5::Plasma
-    KF5::NewStuff
+set(kcm_desktoptheme_SRCS
+  kcm.cpp
 )
 
-kcoreaddons_desktop_to_json(kcm_desktoptheme desktoptheme.desktop)
+add_library(kcm_desktoptheme MODULE ${kcm_desktoptheme_SRCS})
 
-install(TARGETS kcm_desktoptheme DESTINATION ${PLUGIN_INSTALL_DIR} )
-install( FILES plasma-themes.knsrc  DESTINATION  ${CONFIG_INSTALL_DIR} )
+target_link_libraries(kcm_desktoptheme
+  KF5::CoreAddons
+  KF5::KCMUtils
+  KF5::I18n
+  KF5::Plasma
+  KF5::Declarative
+  KF5::QuickAddons
+  KF5::NewStuff
+)
 
-########### install files ###############
-install( FILES desktoptheme.desktop  DESTINATION  ${SERVICES_INSTALL_DIR} )
+kcoreaddons_desktop_to_json(kcm_desktoptheme "kcm_desktoptheme.desktop")
 
+#this desktop file is installed only for retrocompatibility with sycoca
+install(FILES kcm_desktoptheme.desktop DESTINATION ${SERVICES_INSTALL_DIR})
+install(TARGETS kcm_desktoptheme DESTINATION ${PLUGIN_INSTALL_DIR}/kcms)
+
+kpackage_install_package(package kcm_desktoptheme kcms)
