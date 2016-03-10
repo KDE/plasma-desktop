@@ -39,10 +39,12 @@ DragDrop.DropArea {
     width: isPopup ? undefined : preferredWidth(false) // for the initial size when placed on the desktop
     Layout.minimumWidth: preferredWidth(true)
     Layout.preferredWidth: isPopup ? preferredWidth(false) : 0 // for the popup size to change at runtime when view mode changes
+    Plasmoid.switchWidth: preferredWidth(true)
 
     height: isPopup ? undefined : preferredHeight(false)
     Layout.minimumHeight: preferredHeight(true)
     Layout.preferredHeight: isPopup ? preferredHeight(false) : 0
+    Plasmoid.switchHeight: preferredHeight(true)
 
     property bool isFolder: (plasmoid.pluginName == "org.kde.plasma.folder")
     property bool isContainment: ("containmentType" in plasmoid)
@@ -188,7 +190,7 @@ DragDrop.DropArea {
         if (isContainment || !folderViewLayer.ready) {
             return undefined;
         } else if (useListViewMode) {
-            return units.gridUnit * 16;
+            return (minimum ? folderViewLayer.view.cellHeight * 4 : units.gridUnit * 16);
         }
 
         return (folderViewLayer.view.cellWidth * (minimum ? 1 : 3)) + (units.largeSpacing * 2);
@@ -198,7 +200,7 @@ DragDrop.DropArea {
         if (isContainment || !folderViewLayer.ready) {
             return undefined;
         } else if (useListViewMode) {
-            var height = (folderViewLayer.view.cellHeight * 15) + units.smallSpacing;
+            var height = (folderViewLayer.view.cellHeight * (minimum ? 1 : 15)) + units.smallSpacing;
         } else {
             var height = (folderViewLayer.view.cellHeight * (minimum ? 1 : 2)) + units.largeSpacing
         }
