@@ -81,6 +81,19 @@ ViewPropertiesMenu::ViewPropertiesMenu(QObject *parent) : QObject(parent)
     m_sortDirsFirst = menu->addAction(i18n("Folders First"), this, SIGNAL(sortDirsFirstChanged()));
     m_sortDirsFirst->setCheckable(true);
 
+    m_iconSizeMenu = m_menu->addMenu(i18n("Icon Size"));
+    m_iconSize = new QActionGroup(this);
+    connect(m_iconSize, &QActionGroup::triggered, this, &ViewPropertiesMenu::iconSizeChanged);
+    const QStringList iconSizes{
+        i18n("Tiny"), i18n("Small"), i18n("Small Medium"), i18n("Medium"), i18n("Large"), i18n("Huge")
+    };
+    for (int i = 0; i < iconSizes.count(); ++i) {
+        action = m_iconSizeMenu->addAction(iconSizes.at(i));
+        action->setCheckable(true);
+        action->setData(i);
+        m_iconSize->addAction(action);
+    };
+
     m_locked = m_menu->addAction(i18n("Locked"), this, SIGNAL(lockedChanged()));
     m_locked->setCheckable(true);
 }
@@ -121,6 +134,19 @@ void ViewPropertiesMenu::setShowLockAction(bool show)
         m_locked->setVisible(show);
 
         emit showLockActionChanged();
+    }
+}
+
+bool ViewPropertiesMenu::showIconSizeActions() const
+{
+    return m_iconSizeMenu->menuAction()->isVisible();
+}
+
+void ViewPropertiesMenu::setShowIconSizeActions(bool show)
+{
+    if (showIconSizeActions() != show) {
+        m_iconSizeMenu->menuAction()->setVisible(show);
+        emit showIconSizeActionsChanged();
     }
 }
 
@@ -211,5 +237,22 @@ void ViewPropertiesMenu::setSortDirsFirst(bool sortDirsFirst)
 {
     if (m_sortDirsFirst->isChecked() != sortDirsFirst) {
         m_sortDirsFirst->setChecked(sortDirsFirst);
+    }
+}
+
+int ViewPropertiesMenu::iconSize() const
+{
+    return m_iconSize->checkedAction()->data().toInt();
+}
+
+void ViewPropertiesMenu::setIconSize(int iconSize)
+{
+    if (!m_iconSize->checkedAction()
+        || m_iconSize->checkedAction()->data().toInt() != iconSize) {
+
+        QAction *action = m_iconSize->actions().value(iconSize);
+        if (action) {
+            action->setChecked(true);
+        }
     }
 }

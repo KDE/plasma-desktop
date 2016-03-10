@@ -79,6 +79,7 @@ Item {
 
         showLayoutActions: !isPopup
         showLockAction: isContainment
+        showIconSizeActions: !root.useListViewMode
 
         onArrangementChanged: {
             plasmoid.configuration.arrangement = arrangement;
@@ -104,6 +105,10 @@ Item {
             plasmoid.configuration.sortDirsFirst = sortDirsFirst;
         }
 
+        onIconSizeChanged: {
+            plasmoid.configuration.iconSize = iconSize;
+        }
+
         Component.onCompleted: {
             arrangement = plasmoid.configuration.arrangement;
             alignment = plasmoid.configuration.alignment;
@@ -111,6 +116,7 @@ Item {
             sortMode = plasmoid.configuration.sortMode;
             sortDesc = plasmoid.configuration.sortDesc;
             sortDirsFirst = plasmoid.configuration.sortDirsFirst;
+            iconSize = plasmoid.configuration.iconSize;
         }
     }
 
@@ -169,6 +175,10 @@ Item {
 
         onSortDirsFirstChanged: {
             viewPropertiesMenu.sortDirsFirst = plasmoid.configuration.sortDirsFirst;
+        }
+
+        onIconSizeChanged: {
+            viewPropertiesMenu.iconSize = plasmoid.configuration.iconSize;
         }
 
         onPositionsChanged: {
