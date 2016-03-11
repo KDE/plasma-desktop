@@ -176,6 +176,7 @@ Item {
 //                     print("Applet removed Applet-" + applet.id)
                     if (applet.id == appletItem.applet.id) {
 //                         print("Destroying Applet-" + applet.id)
+                        root.layoutManager.saveRotation(appletItem);
                         root.layoutManager.setSpaceAvailable(appletItem.x, appletItem.y, appletItem.width, appletItem.height, true)
                         //applet.action("remove").trigger();
                         //appletItem.destroy()
@@ -444,6 +445,5 @@ Item {
         layoutTimer.running = true
         layoutTimer.restart()
         visible = false
-        // restore rotation
     }
 }

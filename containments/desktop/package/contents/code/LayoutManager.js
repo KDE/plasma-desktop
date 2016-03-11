@@ -32,6 +32,7 @@ var defaultAppletSize = {
 var resultsFlow
 var plasmoid;
 var itemsConfig
+var rotations = {}
 
 //bookkeeping for the item groups
 var itemGroups = {}
@@ -307,5 +308,16 @@ function saveItem(item) {
         //print("-- Saving rotation : " + rect.rotation);
         itemsConfig[item.category] = rect
     }
+}
 
+function saveRotation(item) {
+    if (item.category) {
+        rotations[item.category] = item.rotation;
+    }
+}
+
+function restoreRotation(item) {
+    if (item.category && rotations[item.category]) {
+        item.rotation = rotations[item.category];
+    }
 }
