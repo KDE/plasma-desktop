@@ -18,7 +18,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-import QtQuick 2.0
+import QtQuick 2.4
 import QtQuick.Controls 1.0
 import QtQuick.Dialogs 1.1
 import QtQuick.Layouts 1.0
@@ -55,10 +55,6 @@ Item {
     property alias cfg_viewMode: viewMode.currentIndex
     property alias cfg_iconSize: iconSize.value
     property alias cfg_textLines: textLines.value
-
-    Desktop.SystemSettings {
-        id: systemSettings
-    }
 
     IconDialog {
         id: iconDialog
@@ -321,7 +317,7 @@ Item {
                 CheckBox {
                     id: selectionMarkers
 
-                    visible: systemSettings.singleClick()
+                    visible: Qt.styleHints.singleClickActivation
 
                     text: i18n("Selection markers")
                 }

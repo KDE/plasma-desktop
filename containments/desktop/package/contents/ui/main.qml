@@ -19,7 +19,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-import QtQuick 2.0
+import QtQuick 2.4
 import QtQuick.Layouts 1.1
 
 import org.kde.plasma.plasmoid 2.0
@@ -227,6 +227,11 @@ DragDrop.DropArea {
         return height;
     }
 
+    function isDrag(fromX, fromY, toX, toY) {
+        var length = Math.abs(fromX - toX) + Math.abs(fromY - toY);
+        return length >= Qt.styleHints.startDragDistance;
+    }
+
     onDragEnter: {
         if (isContainment && plasmoid.immutable && !(isFolder && FolderTools.isFileDrag(event))) {
             event.ignore();
@@ -379,10 +384,6 @@ DragDrop.DropArea {
     PlasmaCore.Svg {
         id: configIconsSvg
         imagePath: "widgets/configuration-icons"
-    }
-
-    Desktop.SystemSettings {
-        id: systemSettings
     }
 
     KQuickControlsAddons.EventGenerator {

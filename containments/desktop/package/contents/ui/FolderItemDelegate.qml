@@ -324,7 +324,7 @@ Item {
                     FolderItemActionButton {
                         id: selectionButton
 
-                        visible: plasmoid.configuration.selectionMarkers && systemSettings.singleClick()
+                        visible: plasmoid.configuration.selectionMarkers && Qt.styleHints.singleClickActivation
                         opacity: (visible && impl.hovered) ? 1.0 : 0.0
 
                         element: model.selected ? "remove" : "add"

@@ -1,7 +1,6 @@
 set(desktopplugin_SRCS
     desktopplugin.cpp
     infonotification.cpp
-    systemsettings.cpp
 )
 
 install(FILES qmldir DESTINATION ${QML_INSTALL_DIR}/org/kde/private/desktopcontainment/desktop)

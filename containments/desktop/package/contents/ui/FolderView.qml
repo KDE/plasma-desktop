@@ -17,7 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-import QtQuick 2.3
+import QtQuick 2.4
 import QtQuick.Layouts 1.1
 import org.kde.plasma.plasmoid 2.0
 
@@ -244,14 +244,14 @@ Item {
             var pos = mapToItem(hoveredItem.actionsOverlay, mouse.x, mouse.y);
 
             if (!(pos.x <= hoveredItem.actionsOverlay.width && pos.y <= hoveredItem.actionsOverlay.height)) {
-                if (systemSettings.singleClick() || doubleClickInProgress) {
+                if (Qt.styleHints.singleClickActivation || doubleClickInProgress) {
                     var func = root.useListViewMode && (mouse.button == Qt.LeftButton) && hoveredItem.isDir ? dir.cd : dir.run;
                     func(positioner.map(gridView.currentIndex));
 
                     hoveredItem = null;
                 } else {
                     doubleClickInProgress = true;
-                    doubleClickTimer.interval = systemSettings.doubleClickInterval();
+                    doubleClickTimer.interval = Qt.styleHints.mouseDoubleClickInterval;
                     doubleClickTimer.start();
                 }
             }
@@ -315,7 +315,7 @@ Item {
             }
 
             // Drag initiation.
-            if (pressX != -1 && systemSettings.isDrag(pressX, pressY, mouse.x, mouse.y)) {
+            if (pressX != -1 && root.isDrag(pressX, pressY, mouse.x, mouse.y)) {
                 if (pressedItem != null && dir.isSelected(positioner.map(pressedItem.index))) {
                     pressedItem.toolTip.hideToolTip();
                     dragX = mouse.x;
