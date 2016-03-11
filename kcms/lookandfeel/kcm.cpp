@@ -188,10 +188,10 @@ void KCMLookandFeel::load()
             KConfigGroup cg(conf, "kdeglobals");
             cg = KConfigGroup(&cg, "General");
             bool hasColors = !cg.readEntry("ColorScheme", QString()).isEmpty();
-            row->setData(hasColors, HasColorsRole);
             if (!hasColors) {
                 hasColors = !pkg.filePath("colors").isEmpty();
             }
+            row->setData(hasColors, HasColorsRole);
             cg = KConfigGroup(&cg, "KDE");
             row->setData(!cg.readEntry("widgetStyle", QString()).isEmpty(), HasWidgetStyleRole);
             cg = KConfigGroup(conf, "kdeglobals");
