@@ -37,23 +37,30 @@ public:
         auto begin      = this->begin();
         auto end        = this->end();
 
-        // We want small sets, so a binary search
-        // will be slower than a serial search
-        auto iterator = std::find_if(begin, end,
-            [&] (const T &current) {
-                return comparator(value, current);
-            });
+        if (begin == end) {
+            QVector<T>::insert(0, value);
 
-        if (iterator != end) {
-            if (comparator(*iterator, value)) {
-                // Already present
-                return { iterator, false };
+            return { QVector<T>::begin(), true };
+
+        } else {
+            // We want small sets, so a binary search
+            // will be slower than a serial search
+            auto iterator = std::find_if(begin, end,
+                [&] (const T &current) {
+                    return comparator(value, current);
+                });
+
+            if (iterator != end) {
+                if (comparator(*iterator, value)) {
+                    // Already present
+                    return { iterator, false };
+                }
             }
+
+            QVector<T>::insert(iterator, value);
+
+            return { iterator, true };
         }
-
-        QVector<T>::insert(iterator, value);
-
-        return { iterator, true };
     }
 };
 
