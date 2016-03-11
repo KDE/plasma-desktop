@@ -30,8 +30,8 @@ MouseArea {
 
     property bool vertical: (plasmoid.formFactor == PlasmaCore.Types.Vertical)
 
-    Layout.minimumWidth: Layout.maximumWidth
-    Layout.minimumHeight: Layout.maximumHeight
+    Layout.minimumWidth: !root.vertical ? pager.preferredSize.width : 1
+    Layout.minimumHeight: root.vertical ? pager.preferredSize.height : 1
 
     Layout.maximumWidth: !root.vertical ? pager.preferredSize.width : Infinity
     Layout.maximumHeight: root.vertical ? pager.preferredSize.height : Infinity
