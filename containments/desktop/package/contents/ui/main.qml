@@ -188,7 +188,7 @@ DragDrop.DropArea {
 
     function preferredWidth(minimum) {
         if (isContainment || !folderViewLayer.ready) {
-            return undefined;
+            return -1;
         } else if (useListViewMode) {
             return (minimum ? folderViewLayer.view.cellHeight * 4 : units.gridUnit * 16);
         }
@@ -198,7 +198,7 @@ DragDrop.DropArea {
 
     function preferredHeight(minimum) {
         if (isContainment || !folderViewLayer.ready) {
-            return undefined;
+            return -1;
         } else if (useListViewMode) {
             var height = (folderViewLayer.view.cellHeight * (minimum ? 1 : 15)) + units.smallSpacing;
         } else {
