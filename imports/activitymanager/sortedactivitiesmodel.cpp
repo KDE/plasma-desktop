@@ -108,13 +108,11 @@ namespace {
             return QString();
         }
 
-        void reload(bool fullReload)
+        void reload(bool)
         {
             QHash<QString, QString> newBackgrounds;
 
-            if (fullReload) {
-                forActivity.clear();
-            }
+            forActivity.clear();
 
             QStringList changedBackgrounds;
 
