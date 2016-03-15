@@ -110,43 +110,60 @@ namespace {
 
         void reload(bool fullReload)
         {
-            QHash<QString, QString> newBackgrounds;
+            auto newForActivity = forActivity;
 
-            if (fullReload) {
-                forActivity.clear();
-            }
+            // contains activities for which the wallpaper
+            // has updated
+            QStringList changedActivities;
 
-            QStringList changedBackgrounds;
+            // Contains activities not covered by any containment
+            QStringList ghostActivities = forActivity.keys();
 
-            for (const auto &cont: plasmaConfigContainments().groupList()) {
+            // Traversing through all containments in search for
+            // containments that define activities in plasma
+            for (const auto& containmentId: plasmaConfigContainments().groupList()) {
+                const auto containment = plasmaConfigContainments().group(containmentId);
+                const auto activity    = containment.readEntry("activityId", QString());
 
-                auto config = plasmaConfigContainments().group(cont);
-                auto activityId = config.readEntry("activityId", QString());
+                // Ignore the containment if the activity is not defined
+                if (activity.isEmpty()) continue;
 
-                // Ignore if it has no assigned activity
-                if (activityId.isEmpty()) continue;
+                // If we have already found the same activity from another
+                // containment, we are using the new one only if
+                // the previous one was a color and not a proper wallpaper
+                const bool processed = !ghostActivities.contains(activity) &&
+                                        newForActivity.contains(activity);
 
-                // Ignore if we have already found the background
-                if (newBackgrounds.contains(activityId) &&
-                    newBackgrounds[activityId][0] != '#') continue;
+                if (processed &&
+                    newForActivity[activity][0] != '#') continue;
 
-                auto newBackground = backgroundFromConfig(config);
+                // Marking the current activity as processed
+                ghostActivities.removeAll(activity);
 
-                if (forActivity[activityId] != newBackground) {
-                    changedBackgrounds << activityId;
-                    if (!newBackground.isEmpty()) {
-                        newBackgrounds[activityId] = newBackground;
+                const auto background = backgroundFromConfig(containment);
+
+                if (newForActivity[activity] != background) {
+                    changedActivities << activity;
+                    if (!background.isEmpty()) {
+                        newForActivity[activity] = background;
                     }
                 }
             }
 
             initialized = true;
 
-            if (!changedBackgrounds.isEmpty()) {
-                forActivity = newBackgrounds;
+            // Removing the activities from the list if we haven't found them
+            // while traversing through the containments
+            for (const auto& activity: ghostActivities) {
+                newForActivity.remove(activity);
+            }
+
+            // If we have detected the changes, lets notify everyone
+            if (!changedActivities.isEmpty()) {
+                forActivity = newForActivity;
 
                 for (auto model: models) {
-                    model->onBackgroundsUpdated(changedBackgrounds);
+                    model->onBackgroundsUpdated(changedActivities);
                 }
             }
         }
