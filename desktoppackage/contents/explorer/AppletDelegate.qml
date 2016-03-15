@@ -48,10 +48,10 @@ Item {
 
         onDragStarted: {
             kwindowsystem.showingDesktop = true;
-            main.preventWindowHide = true;
+            main.draggingWidget = true;
         }
         onDrop: {
-            main.preventWindowHide = false;
+            main.draggingWidget = false;
         }
 
         MouseArea {

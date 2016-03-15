@@ -146,6 +146,8 @@ Item {
                         sidePanelStack.item.forceActiveFocus();
                     } else if (sidePanelStack.state == "widgetExplorer"){
                         sidePanel.hideOnWindowDeactivate = Qt.binding(function() { return sidePanelStack.item && !sidePanelStack.item.preventWindowHide; })
+                        sidePanel.opacity = Qt.binding(function() { return sidePanelStack.item ? sidePanelStack.item.opacity : 1 })
+                        sidePanel.outputOnly = Qt.binding(function() { return sidePanelStack.item && sidePanelStack.item.outputOnly })
                     } else {
                         sidePanel.hideOnWindowDeactivate = true;
                     }
