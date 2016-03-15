@@ -187,6 +187,7 @@ void Dialog::init(const QString &activityId)
 
     d->tabs->setCurrentIndex(0);
 
+    setActivityId(activityId);
     setActivityName(QString());
     setActivityDescription(QString());
     setActivityIcon(QString());
@@ -195,8 +196,6 @@ void Dialog::init(const QString &activityId)
     setActivityShortcut(QKeySequence());
 
     if (!activityId.isEmpty()) {
-        setActivityId(activityId);
-
         KActivities::Info activityInfo(activityId);
 
         setActivityName(activityInfo.name());
