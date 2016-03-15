@@ -30,12 +30,11 @@ class Dialog: public QDialog {
     Q_OBJECT
 
 public:
-    Dialog(QObject *parent = Q_NULLPTR);
-    Dialog(const QString &activityId, QObject *parent = Q_NULLPTR);
-
     ~Dialog();
 
-    void initUi(const QString &activityId = QString());
+    static void showDialog(const QString &activityId = QString());
+
+    void init(const QString &activityId = QString());
 
     QString activityId() const;
     void setActivityId(const QString &activityId);
@@ -67,6 +66,8 @@ protected:
     void showEvent(QShowEvent *event) Q_DECL_OVERRIDE;
 
 private:
+    Dialog(QObject *parent = Q_NULLPTR);
+
     D_PTR;
 
 };

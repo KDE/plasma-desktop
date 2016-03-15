@@ -25,6 +25,7 @@
 #include <QKeySequence>
 #include <QPushButton>
 #include <QQmlContext>
+#include <QQmlEngine>
 #include <QQuickItem>
 #include <QQuickView>
 #include <QQuickWidget>
@@ -69,6 +70,8 @@ public:
     QQuickWidget *tabGeneral;
     QQuickWidget *tabOther;
     KMessageWidget *message;
+    QDialogButtonBox *buttons;
+    QString defaultOKText;
 
     QQuickWidget *createTab(const QString &title, const QString &file)
     {
@@ -117,55 +120,27 @@ public:
     bool activityIsPrivate;
     QString activityShortcut;
 
-    KActivities::Info *activityInfo;
     KActivities::Controller activities;
     org::kde::ActivityManager::Features *features;
 };
 
+void Dialog::showDialog(const QString &id)
+{
+    static Dialog *dialog = 0;
+
+    // If we use the regular singleton here (static value instead of static ptr),
+    // we will crash on exit because of Qt...
+    if (!dialog) {
+        dialog = new Dialog();
+    }
+
+    dialog->init(id);
+    dialog->show();
+}
+
 Dialog::Dialog(QObject *parent)
     : QDialog()
     , d(this)
-{
-    setWindowTitle(i18n("Create a new activity"));
-    initUi();
-}
-
-Dialog::Dialog(const QString &activityId, QObject *parent)
-    : QDialog()
-    , d(this)
-{
-    setWindowTitle(i18n("Activity settings"));
-    initUi(activityId);
-
-    setActivityId(activityId);
-
-    d->activityInfo = new KActivities::Info(activityId, this);
-
-    setActivityName(d->activityInfo->name());
-    setActivityDescription(d->activityInfo->description());
-    setActivityIcon(d->activityInfo->icon());
-
-    // finding the key shortcut
-    const auto shortcuts = KGlobalAccel::self()->globalShortcut(
-        QStringLiteral("ActivityManager"), "switch-to-activity-" + activityId);
-    setActivityShortcut(shortcuts.isEmpty() ? QKeySequence() : shortcuts.first());
-
-    // is private?
-    auto result = d->features->GetValue(
-        "org.kde.ActivityManager.Resources.Scoring/isOTR/" + activityId);
-
-    auto watcher = new QDBusPendingCallWatcher(result, this);
-
-    QObject::connect(watcher, &QDBusPendingCallWatcher::finished, this,
-                     [&](QDBusPendingCallWatcher *watcher) mutable {
-                         QDBusPendingReply<QDBusVariant> reply = *watcher;
-                         setActivityIsPrivate(reply.value().variant().toBool());
-                     });
-
-
-}
-
-void Dialog::initUi(const QString &activityId)
 {
     resize(600, 500);
 
@@ -184,18 +159,28 @@ void Dialog::initUi(const QString &activityId)
     d->tabOther   = d->createTab(i18n("Other"),   "OtherTab.qml");
 
     // Buttons
-    auto buttons = new QDialogButtonBox(
+    d->buttons = new QDialogButtonBox(
         QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
-    d->layout->QLayout::addWidget(buttons);
+    d->layout->QLayout::addWidget(d->buttons);
 
-    if (activityId.isEmpty()) {
-        buttons->button(QDialogButtonBox::Ok)->setText(i18n("Create"));
-    }
-
-    connect(buttons->button(QDialogButtonBox::Ok), &QAbstractButton::clicked,
+    connect(d->buttons->button(QDialogButtonBox::Ok), &QAbstractButton::clicked,
             this, &Dialog::save);
-    connect(buttons, &QDialogButtonBox::rejected,
+    connect(d->buttons, &QDialogButtonBox::rejected,
             this, &Dialog::close);
+
+    d->defaultOKText = d->buttons->button(QDialogButtonBox::Ok)->text();
+}
+
+void Dialog::init(const QString &activityId)
+{
+    setWindowTitle(activityId.isEmpty() ? i18n("Create a new activity")
+                                        : i18n("Activity settings"));
+
+    d->buttons->button(QDialogButtonBox::Ok)->setText(
+                    activityId.isEmpty() ? i18n("Create")
+                                         : d->defaultOKText);
+
+    d->tabs->setCurrentIndex(0);
 
     setActivityName(QString());
     setActivityDescription(QString());
@@ -203,6 +188,34 @@ void Dialog::initUi(const QString &activityId)
     setActivityIsPrivate(false);
 
     setActivityShortcut(QKeySequence());
+
+    if (!activityId.isEmpty()) {
+        setActivityId(activityId);
+
+        KActivities::Info activityInfo(activityId);
+
+        setActivityName(activityInfo.name());
+        setActivityDescription(activityInfo.description());
+        setActivityIcon(activityInfo.icon());
+
+        // finding the key shortcut
+        const auto shortcuts = KGlobalAccel::self()->globalShortcut(
+            QStringLiteral("ActivityManager"), "switch-to-activity-" + activityId);
+        setActivityShortcut(shortcuts.isEmpty() ? QKeySequence() : shortcuts.first());
+
+        // is private?
+        auto result = d->features->GetValue(
+            "org.kde.ActivityManager.Resources.Scoring/isOTR/" + activityId);
+
+        auto watcher = new QDBusPendingCallWatcher(result, this);
+
+        QObject::connect(watcher, &QDBusPendingCallWatcher::finished, this,
+                         [&] (QDBusPendingCallWatcher *watcher) mutable {
+                             QDBusPendingReply<QDBusVariant> reply = *watcher;
+                             setActivityIsPrivate(reply.value().variant().toBool());
+                             watcher->deleteLater();
+                         });
+    }
 }
 
 Dialog::~Dialog()
