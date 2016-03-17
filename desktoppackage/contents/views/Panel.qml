@@ -110,33 +110,16 @@ PlasmaCore.FrameSvgItem {
         containment.anchors.fill = containmentParent;
 
         containment.locationChanged.connect(adjustBorders);
-        if (containment.Layout) {
-            containment.Layout.minimumWidthChanged.connect(sizeHintsTimer.restart);
-            containment.Layout.maximumWidthChanged.connect(sizeHintsTimer.restart);
-            containment.Layout.preferredWidthChanged.connect(sizeHintsTimer.restart);
-
-            containment.Layout.minimumHeightChanged.connect(sizeHintsTimer.restart);
-            containment.Layout.maximumHeightChanged.connect(sizeHintsTimer.restart);
-            containment.Layout.preferredHeightChanged.connect(sizeHintsTimer.restart);
-        }
         adjustBorders();
     }
 
-    Timer {
-        id: sizeHintsTimer
-        interval: 250
-        onTriggered: {
-            if (containment.userConfiguring) {
-                return;
-            }
-
-            if (containment.formFactor === PlasmaCore.Types.Vertical) {
-                panel.length = containment.Layout.preferredHeight
-            } else {
-                panel.length = containment.Layout.preferredWidth
-            }
-        }
+    Binding {
+        target: panel
+        property: "length"
+        value: containment.formFactor == PlasmaCore.Types.Vertical ?
+                        panel.length = containment.Layout.preferredHeight : panel.length = containment.Layout.preferredWidth
     }
+
 
     Item {
         id: containmentParent
