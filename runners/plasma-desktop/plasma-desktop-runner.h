@@ -19,8 +19,7 @@
 #ifndef PLASMADESKTOPRUNNER_H
 #define PLASMADESKTOPRUNNER_H
 
-#include <Plasma/AbstractRunner>
-
+#include <krunner/abstractrunner.h>
 
 /**
  * This class runs programs using the literal name of the binary, much as one
@@ -45,7 +44,5 @@ class PlasmaDesktopRunner : public Plasma::AbstractRunner
         const QString m_kwinConsoleKeyword;
         bool m_enabled;
 };
-
-K_EXPORT_PLASMA_RUNNER(plasma-desktop, PlasmaDesktopRunner)
 
 #endif

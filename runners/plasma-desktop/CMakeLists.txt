@@ -3,8 +3,11 @@ set(krunner_plasma-desktop_SRCS
 )
 
 add_library(krunner_plasma-desktop MODULE ${krunner_plasma-desktop_SRCS})
-target_link_libraries(krunner_plasma-desktop KIOCore KF5::Plasma)
+target_link_libraries(krunner_plasma-desktop
+                        Qt5::DBus
+                        KF5::KIOCore
+                        KF5::I18n
+                        KF5::Runner)
 
-install(TARGETS krunner_plasma-desktop DESTINATION ${PLUGIN_INSTALL_DIR})
-install(FILES plasma-runner-plasma-desktop.desktop DESTINATION ${SERVICES_INSTALL_DIR})
-
+install(TARGETS krunner_plasma-desktop DESTINATION ${KDE_INSTALL_PLUGINDIR})
+install(FILES plasma-runner-plasma-desktop.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})

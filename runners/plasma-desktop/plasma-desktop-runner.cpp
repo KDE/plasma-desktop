@@ -24,12 +24,12 @@
 
 #include <QDebug>
 #include <QIcon>
-#include <KLocale>
-#include <KRun>
 
-#include <plasma/theme.h>
+#include <KLocalizedString>
 
-static const QString s_plasmaService = "org.kde.plasma-desktop";
+K_EXPORT_PLASMA_RUNNER(plasma-desktop, PlasmaDesktopRunner)
+
+static const QString s_plasmaService = "org.kde.plasmashell";
 
 PlasmaDesktopRunner::PlasmaDesktopRunner(QObject *parent, const QVariantList &args)
     : Plasma::AbstractRunner(parent, args),
@@ -61,7 +61,7 @@ void PlasmaDesktopRunner::match(Plasma::RunnerContext &context)
         match.setIcon(QIcon::fromTheme("plasma"));
         match.setText(i18n("Open Plasma desktop interactive console"));
         match.setRelevance(1.0);
-        context.addMatch(context.query(), match);
+        context.addMatch(match);
     }
     if (m_enabled && context.query().startsWith(m_kwinConsoleKeyword, Qt::CaseInsensitive)) {
         Plasma::QueryMatch match(this);
@@ -70,7 +70,7 @@ void PlasmaDesktopRunner::match(Plasma::RunnerContext &context)
         match.setIcon(QIcon::fromTheme("kwin"));
         match.setText(i18n("Open KWin interactive console"));
         match.setRelevance(1.0);
-        context.addMatch(context.query(), match);
+        context.addMatch(match);
     }
 }
 
@@ -83,22 +83,22 @@ void PlasmaDesktopRunner::run(const Plasma::RunnerContext &context, const Plasma
 
         QString query = context.query();
         if (query.compare(m_desktopConsoleKeyword, Qt::CaseInsensitive) == 0) {
-            message = QDBusMessage::createMethodCall(s_plasmaService, "/MainApplication",
-                                                     QString(), "showInteractiveConsole");
+            message = QDBusMessage::createMethodCall(s_plasmaService, "/PlasmaShell",
+                                                     "org.kde.PlasmaShell", "showInteractiveConsole");
         } else if (query.startsWith(m_desktopConsoleKeyword)) {
-            message = QDBusMessage::createMethodCall(s_plasmaService, "/MainApplication",
-                                                     QString(), "loadScriptInInteractiveConsole");
+            message = QDBusMessage::createMethodCall(s_plasmaService, "/PlasmaShell",
+                                                     "org.kde.PlasmaShell", "loadScriptInInteractiveConsole");
             query.replace(m_desktopConsoleKeyword, QString(), Qt::CaseInsensitive);
             QList<QVariant> args;
             args << query;
             message.setArguments(args);
         }
         if (query.compare(m_kwinConsoleKeyword, Qt::CaseInsensitive) == 0) {
-            message = QDBusMessage::createMethodCall(s_plasmaService, "/MainApplication",
-                                                     QString(), "showInteractiveKWinConsole");
+            message = QDBusMessage::createMethodCall(s_plasmaService, "/PlasmaShell",
+                                                     "org.kde.PlasmaShell", "showInteractiveKWinConsole");
         } else if (query.startsWith(m_kwinConsoleKeyword)) {
-            message = QDBusMessage::createMethodCall(s_plasmaService, "/MainApplication",
-                                                     QString(), "loadKWinScriptInInteractiveConsole");
+            message = QDBusMessage::createMethodCall(s_plasmaService, "/PlasmaShell",
+                                                     "org.kde.PlasmaShell", "loadKWinScriptInInteractiveConsole");
             query.replace(m_kwinConsoleKeyword, QString(), Qt::CaseInsensitive);
             QList<QVariant> args;
             args << query;
@@ -142,4 +142,5 @@ void PlasmaDesktopRunner::checkAvailability(const QString &name, const QString &
     }
 }
 
+#include "plasma-desktop-runner.moc"
 
