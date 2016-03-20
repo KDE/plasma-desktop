@@ -748,6 +748,7 @@ void MouseSettings::save(KConfig *config)
   group.writeEntry("SingleClick", singleClick, KConfig::Persistent);
 
   Kdelibs4SharedConfig::syncConfigGroup(&group, "kdeglobals");
+  group.sync();
   config->sync();
 
   KGlobalSettings::self()->emitChange(KGlobalSettings::SettingsChanged, KGlobalSettings::SETTINGS_MOUSE);

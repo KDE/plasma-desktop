@@ -49,6 +49,15 @@ SearchConfigItemDelegate::SearchConfigItemDelegate(QObject *parent)
     m_margin = qRound(IconSize(KIconLoader::Panel) * 0.1);
 }
 
+QSize SearchConfigItemDelegate::sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const
+{
+    QFont font = option.font;
+    font.setBold(true);
+    QFontMetrics fmTitle(font);
+
+    return QSize(0,
+                 qMax(KIconLoader::SizeMedium + m_margin * 2, fmTitle.height() + option.fontMetrics.height() + m_margin * 2));
+}
 
 void SearchConfigItemDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const
 {

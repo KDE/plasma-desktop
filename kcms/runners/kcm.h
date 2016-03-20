@@ -41,6 +41,8 @@ public:
     SearchConfigItemDelegate(QObject *parent = nullptr);
     virtual ~SearchConfigItemDelegate() = default;
 
+    QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const override;
+
 protected:
     void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const override;
 

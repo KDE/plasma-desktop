@@ -177,6 +177,8 @@ DragDrop.DropArea {
         if (config !== undefined && config.rotation !== undefined &&
             (config.rotation > 5 || config.rotation < -5)) {
             container.rotation = config.rotation;
+        } else {
+            LayoutManager.restoreRotation(container);
         }
 
         LayoutManager.itemGroups[container.category] = container;

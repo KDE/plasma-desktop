@@ -108,7 +108,7 @@ namespace {
             return QString();
         }
 
-        void reload(bool fullReload)
+        void reload(bool)
         {
             auto newForActivity = forActivity;
 

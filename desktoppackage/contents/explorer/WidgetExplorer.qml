@@ -37,15 +37,22 @@ Item {
     width: Math.max(heading.paintedWidth, units.iconSizes.enormous * 2 + units.smallSpacing * 4 + units.gridUnit * 2)
     height: 800//Screen.height
 
+    opacity: draggingWidget ? 0.3 : 1
+
     property QtObject containment
 
     //external drop events can cause a raise event causing us to lose focus and
     //therefore get deleted whilst we are still in a drag exec()
     //this is a clue to the owning dialog that hideOnWindowDeactivate should be deleted
     //See https://bugs.kde.org/show_bug.cgi?id=332733
-    property bool preventWindowHide: false
+    property bool preventWindowHide: draggingWidget || categoriesDialog.status !== PlasmaComponents.DialogStatus.Closed
+                                  || getWidgetsDialog.status !== PlasmaComponents.DialogStatus.Closed
+
+    property bool outputOnly: draggingWidget
 
     property Item categoryButton
+
+    property bool draggingWidget: false
 
     signal closed()
 
@@ -136,13 +143,6 @@ Item {
             widgetExplorer.widgetsModel.filterQuery = model.filterData
             widgetExplorer.widgetsModel.filterType = model.filterType
         }
-        onStatusChanged: {
-            if (status == PlasmaComponents.DialogStatus.Opening) {
-                main.preventWindowHide = true;
-            } else if (status == PlasmaComponents.DialogStatus.Closed) {
-                main.preventWindowHide = false;
-            }
-        }
     }
 
     PlasmaComponents.ModelContextMenu {
@@ -150,13 +150,6 @@ Item {
         visualParent: getWidgetsButton
         // model set on first invocation
         onClicked: model.trigger()
-        onStatusChanged: {
-            if (status == PlasmaComponents.DialogStatus.Opening) {
-                main.preventWindowHide = true;
-            } else if (status == PlasmaComponents.DialogStatus.Closed) {
-                main.preventWindowHide = false;
-            }
-        }
     }
     /*
     PlasmaCore.Dialog {
@@ -245,7 +238,6 @@ Item {
             id: categoryButton
             text: i18nd("plasma_shell_org.kde.plasma.desktop", "Categories")
             onClicked: {
-                main.preventWindowHide = true;
                 categoriesDialog.model = widgetExplorer.filterModel
                 categoriesDialog.open(0, categoryButton.height)
             }
@@ -349,7 +341,6 @@ Item {
             iconSource: "get-hot-new-stuff"
             text: i18nd("plasma_shell_org.kde.plasma.desktop", "Get new widgets")
             onClicked: {
-                main.preventWindowHide = true;
                 getWidgetsDialog.model = widgetExplorer.widgetsMenuActions
                 getWidgetsDialog.open()
             }
