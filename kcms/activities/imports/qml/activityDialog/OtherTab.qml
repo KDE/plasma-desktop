@@ -41,7 +41,7 @@ Item {
         QtControls.CheckBox {
             id: checkPrivate
 
-            text: "Private - do not track usage for this activity"
+            text: i18n("Private - do not track usage for this activity")
 
             width: parent.width
         }
