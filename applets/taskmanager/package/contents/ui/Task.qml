@@ -140,7 +140,8 @@ MouseArea {
     }
 
     onPositionChanged: {
-        if (pressX != -1 && dragHelper.isDrag(pressX, pressY, mouse.x, mouse.y)) {
+        // mouse.button is always 0 here, hence checking with mouse.buttons
+        if (pressX != -1 && mouse.buttons == Qt.LeftButton && dragHelper.isDrag(pressX, pressY, mouse.x, mouse.y)) {
             tasks.dragSource = task;
             dragHelper.startDrag(task, model.MimeType, model.MimeData,
                 model.LauncherUrl, model.DecorationRole);
