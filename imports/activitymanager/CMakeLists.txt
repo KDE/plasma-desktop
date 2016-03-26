@@ -28,6 +28,7 @@ set (
    )
 
 add_library (activityswitcherextensionplugin SHARED ${activityswitcher_imports_LIB_SRCS})
+add_definitions(-DTRANSLATION_DOMAIN=\"plasmaactivitymanager\")
 
 target_link_libraries (
    activityswitcherextensionplugin
