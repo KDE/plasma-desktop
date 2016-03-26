@@ -1,5 +1,6 @@
 # vim:set softtabstop=3 shiftwidth=3 tabstop=3 expandtab:
 project (KCMActivities)
+add_definitions(-DTRANSLATION_DOMAIN=\"kcm_activities\")
 
 find_package (Qt5 REQUIRED NO_MODULE COMPONENTS Core Quick Sql Qml DBus)
 find_package (KF5KCMUtils ${KF5_DEP_VERSION} CONFIG REQUIRED)
@@ -41,6 +42,12 @@ ki18n_wrap_ui (
    ui/MainConfigurationWidgetBase.ui
    ui/PrivacyTabBase.ui
    ui/SwitchingTabBase.ui
+   imports/activitysettings.cpp
+   imports/dialog.cpp
+   imports/qml/activityDialog/components/DialogButtons.qml
+   imports/qml/activityDialog/components/ShortcutChooser.qml
+   imports/qml/activityDialog/GeneralTab.qml
+   imports/qml/activityDialog/OtherTab.qml
    )
 
 qt5_add_dbus_interface (
