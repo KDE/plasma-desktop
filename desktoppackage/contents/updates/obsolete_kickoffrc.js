@@ -1,18 +1,26 @@
 var kickoffConfig = ConfigFile("kickoffrc");
 
 kickoffConfig.group = "Favorites";
-var favorites = kickoffConfig.readEntry("FavoriteURLs").split(',');
+var favorites = kickoffConfig.readEntry("FavoriteURLs");
+var haveFavorites = (favorites.length > 0);
+
+if (haveFavorites) {
+    favorites = favorites.split(',');
+}
 
 kickoffConfig.group = "SystemApplications";
-var systemApplications = kickoffConfig.readEntry("DesktopFiles").split(',');
+var systemApplications = kickoffConfig.readEntry("DesktopFiles");
+var haveSystemApplications = (systemApplications.length > 0);
 
-if (systemApplications.length) {
+if (haveSystemApplications) {
+    systemApplications = systemApplications.split(',');
+
     // This used to be hardcoded in Kickoff C++ code; it's now the KConfigXT
     // default but needs to be added in when migrating from the rc file.
     systemApplications.unshift("systemsettings.desktop");
 }
 
-if (favorites.length || systemApplications.length) {
+if (haveFavorites || haveSystemApplications) {
     for (var i in panels()) {
         var panel = panels()[i];
 
@@ -22,11 +30,11 @@ if (favorites.length || systemApplications.length) {
             if (widget.type == "org.kde.plasma.kickoff") {
                 widget.currentConfigGroup = ["General"];
 
-                if (favorites.length) {
+                if (haveFavorites) {
                     widget.writeConfig("favorites", favorites);
                 }
 
-                if (systemApplications.length) {
+                if (haveSystemApplications) {
                     widget.writeConfig("systemApplications", systemApplications);
                 }
             }
@@ -42,11 +50,11 @@ if (favorites.length || systemApplications.length) {
             if (widget.type == "org.kde.plasma.kickoff") {
                 widget.currentConfigGroup = ["General"];
 
-                if (favorites.length) {
+                if (haveFavorites) {
                     widget.writeConfig("favorites", favorites);
                 }
 
-                if (systemApplications.length) {
+                if (haveSystemApplications) {
                     widget.writeConfig("systemApplications", systemApplications);
                 }
             }
