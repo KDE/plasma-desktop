@@ -173,11 +173,11 @@ Dialog::Dialog(QObject *parent)
 
 void Dialog::init(const QString &activityId)
 {
-    setWindowTitle(activityId.isEmpty() ? i18n("Create a new activity")
-                                        : i18n("Activity settings"));
+    setWindowTitle(activityId.isEmpty() ? i18nc("@title:window", "Create a New Activity")
+                                        : i18nc("@title:window", "Activity Settings"));
 
     d->buttons->button(QDialogButtonBox::Ok)->setText(
-                    activityId.isEmpty() ? i18n("Create")
+                    activityId.isEmpty() ? i18nc("@action:button", "Create")
                                          : d->defaultOKText);
 
     d->tabs->setCurrentIndex(0);

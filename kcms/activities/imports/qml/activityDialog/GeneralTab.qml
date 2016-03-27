@@ -102,7 +102,7 @@ Item {
                 QtControls.Button {
                     id: buttonChangeWallpaper
                     width: content.labelWidth
-                    text: i18nd("kcm_activities", "Change...")
+                    text: i18ndc("kcm_activities", "@action:button", "Change...")
 
                     anchors {
                         verticalCenter: imageWallpaper.verticalCenter

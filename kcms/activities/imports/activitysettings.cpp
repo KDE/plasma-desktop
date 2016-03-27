@@ -53,7 +53,7 @@ void ActivitySettings::deleteActivity(const QString &id)
 {
     KActivities::Info info(id);
 
-    if (QMessageBox::question(Q_NULLPTR, i18n("Delete activity"),
+    if (QMessageBox::question(Q_NULLPTR, i18nc("@title:window", "Delete Activity"),
                               i18n("Are you sure you want to delete '%1'?",
                                    info.name())) == QMessageBox::Yes) {
         KActivities::Controller().removeActivity(id);

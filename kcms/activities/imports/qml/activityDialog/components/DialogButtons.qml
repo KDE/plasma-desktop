@@ -41,7 +41,7 @@ Row {
     QtControls.Button {
         id: buttonAccept
 
-        text: i18nd("kcm_activities", "Apply")
+        text: i18ndc("kcm_activities", "@action:button", "Apply")
         iconName: "list-add"
 
         onClicked: root.accepted()
@@ -50,7 +50,7 @@ Row {
     QtControls.Button {
         id: buttonCancel
 
-        text: i18nd("kcm_activities", "Cancel")
+        text: i18ndc("kcm_activities", "@action:button", "Cancel")
         iconName: "dialog-cancel"
 
         onClicked: root.canceled()
