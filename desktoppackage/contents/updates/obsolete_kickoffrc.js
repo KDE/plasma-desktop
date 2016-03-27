@@ -6,13 +6,13 @@ var favorites = kickoffConfig.readEntry("FavoriteURLs").split(',');
 kickoffConfig.group = "SystemApplications";
 var systemApplications = kickoffConfig.readEntry("DesktopFiles").split(',');
 
-if (systemApplications) {
+if (systemApplications.length) {
     // This used to be hardcoded in Kickoff C++ code; it's now the KConfigXT
     // default but needs to be added in when migrating from the rc file.
     systemApplications.unshift("systemsettings.desktop");
 }
 
-if (favorites || systemApplications) {
+if (favorites.length || systemApplications.length) {
     for (var i in panels()) {
         var panel = panels()[i];
 
@@ -20,11 +20,13 @@ if (favorites || systemApplications) {
             var widget = panel.widgetById(panel.widgetIds[j]);
 
             if (widget.type == "org.kde.plasma.kickoff") {
-                if (favorites) {
+                widget.currentConfigGroup = ["General"];
+
+                if (favorites.length) {
                     widget.writeConfig("favorites", favorites);
                 }
 
-                if (systemApplications) {
+                if (systemApplications.length) {
                     widget.writeConfig("systemApplications", systemApplications);
                 }
             }
@@ -38,11 +40,13 @@ if (favorites || systemApplications) {
             var widget = desktop.widgetById(desktop.widgetIds[j]);
 
             if (widget.type == "org.kde.plasma.kickoff") {
-                if (favorites) {
+                widget.currentConfigGroup = ["General"];
+
+                if (favorites.length) {
                     widget.writeConfig("favorites", favorites);
                 }
 
-                if (systemApplications) {
+                if (systemApplications.length) {
                     widget.writeConfig("systemApplications", systemApplications);
                 }
             }
