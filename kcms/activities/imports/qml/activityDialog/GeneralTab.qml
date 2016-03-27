@@ -63,14 +63,14 @@ Item {
 
         Local.LabeledTextField {
             id: activityName
-            label: i18nd("kcm_activities", "Name")
+            label: i18nd("kcm_activities", "Name:")
 
             labelWidth: content.labelWidth
         }
 
         Local.LabeledTextField {
             id: activityDescription
-            label: i18nd("kcm_activities", "Description")
+            label: i18nd("kcm_activities", "Description:")
 
             labelWidth: content.labelWidth
         }
