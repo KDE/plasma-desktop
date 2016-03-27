@@ -42,12 +42,6 @@ ki18n_wrap_ui (
    ui/MainConfigurationWidgetBase.ui
    ui/PrivacyTabBase.ui
    ui/SwitchingTabBase.ui
-   imports/activitysettings.cpp
-   imports/dialog.cpp
-   imports/qml/activityDialog/components/DialogButtons.qml
-   imports/qml/activityDialog/components/ShortcutChooser.qml
-   imports/qml/activityDialog/GeneralTab.qml
-   imports/qml/activityDialog/OtherTab.qml
    )
 
 qt5_add_dbus_interface (
