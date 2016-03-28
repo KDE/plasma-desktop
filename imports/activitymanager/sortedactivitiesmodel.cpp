@@ -381,7 +381,10 @@ QString SortedActivitiesModel::relativeActivity(int relative) const
         if (activityIdForRow(currentActivityRow) == currentActivity) break;
     }
 
-    currentActivityRow = (currentActivityRow + relative) % currentRowCount;
+    currentActivityRow = currentActivityRow + relative;
+
+    //wrap to within bounds for both positive and negative currentActivityRows
+    currentActivityRow = (currentRowCount + (currentActivityRow % currentRowCount)) % currentRowCount;
 
     return activityIdForRow(currentActivityRow);
 }
