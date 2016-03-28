@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 201 by Eike Hein <hein@kde.org>                         *
+ *   Copyright (C) 2015 by Eike Hein <hein@kde.org>                         *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -30,6 +30,11 @@ FileEntry::FileEntry(AbstractModel *owner, const QUrl &url) : AbstractEntry(owne
         m_fileItem = new KFileItem(url);
         m_fileItem->determineMimeType();
     }
+}
+
+FileEntry::~FileEntry()
+{
+    delete m_fileItem;
 }
 
 bool FileEntry::isValid() const
