@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 201 by Eike Hein <hein@kde.org>                         *
+ *   Copyright (C) 2015 by Eike Hein <hein@kde.org>                         *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -28,6 +28,7 @@ class FileEntry : public AbstractEntry
 {
     public:
         explicit FileEntry(AbstractModel *owner, const QUrl &url);
+        ~FileEntry();
 
         EntryType type() const { return RunnableType; }
 
