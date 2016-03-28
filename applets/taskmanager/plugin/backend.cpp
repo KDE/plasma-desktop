@@ -353,7 +353,11 @@ void Backend::itemContextMenu(QQuickItem *item, QObject *configAction)
 
         emit showingContextMenuChanged();
 
+        QPointer<TaskManager::BasicMenu> guard(m_contextMenu);
         m_contextMenu->exec(pos);
+        if (!guard) {
+            return;
+        }
         m_contextMenu->windowHandle()->setTransientParent(item->window());
         m_contextMenu->deleteLater();
     });
