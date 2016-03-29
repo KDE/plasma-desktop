@@ -185,6 +185,12 @@ Item {
         value: !iconsOnly
     }
 
+    Binding {
+        target: backend.groupManager
+        property: "forceGrouping"
+        value: iconsOnly
+    }
+
     TaskManager.DragHelper {
         id: dragHelper
 
