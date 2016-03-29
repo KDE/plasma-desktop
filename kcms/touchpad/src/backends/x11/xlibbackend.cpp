@@ -60,9 +60,11 @@ void XlibBackend::XDisplayCleanup::cleanup(Display *p)
 
 XlibBackend* XlibBackend::initialize(QObject *parent)
 {
-    XlibBackend* backend = nullptr;
-
-    backend = new XlibBackend(parent);
+    XlibBackend* backend = new XlibBackend(parent);
+    if (!backend->m_display) {
+        delete backend;
+        return nullptr;
+    }
     return backend;
 }
 

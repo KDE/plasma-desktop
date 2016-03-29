@@ -94,7 +94,13 @@ void XRecordKeyboardMonitor::processNextReply()
     }
 
     void *reply = 0;
-    while (xcb_poll_for_reply(m_connection, m_cookie.sequence, &reply, 0)) {
+    xcb_generic_error_t *error = nullptr;
+    while (m_cookie.sequence && xcb_poll_for_reply(m_connection, m_cookie.sequence, &reply, &error)) {
+        if (error) {
+            std::free(error);
+            break;
+        }
+
         if (!reply) {
             continue;
         }
