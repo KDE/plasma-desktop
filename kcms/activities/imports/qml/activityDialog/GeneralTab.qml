@@ -55,7 +55,7 @@ Item {
 
         QtControls.Label {
             font.bold: true
-            text: i18n("Activity information")
+            text: i18nd("kcm_activities", "Activity information")
         }
 
         property int labelWidth : 2 * units.largeSpacing +
@@ -63,14 +63,14 @@ Item {
 
         Local.LabeledTextField {
             id: activityName
-            label: i18n("Name")
+            label: i18nd("kcm_activities", "Name")
 
             labelWidth: content.labelWidth
         }
 
         Local.LabeledTextField {
             id: activityDescription
-            label: i18n("Description")
+            label: i18nd("kcm_activities", "Description")
 
             labelWidth: content.labelWidth
         }
@@ -96,13 +96,13 @@ Item {
                 QtControls.Label {
                     id: labelWallpaper
                     font.bold: true
-                    text: i18n("Wallpaper")
+                    text: i18nd("kcm_activities", "Wallpaper")
                 }
 
                 QtControls.Button {
                     id: buttonChangeWallpaper
                     width: content.labelWidth
-                    text: i18n("Change...")
+                    text: i18nd("kcm_activities", "Change...")
 
                     anchors {
                         verticalCenter: imageWallpaper.verticalCenter
@@ -135,7 +135,7 @@ Item {
                 QtControls.Label {
                     id: labelIcon
                     font.bold: true
-                    text: i18n("Icon")
+                    text: i18nd("kcm_activities", "Icon")
                 }
 
                 Item {
