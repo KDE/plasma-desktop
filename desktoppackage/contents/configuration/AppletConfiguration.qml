@@ -342,6 +342,7 @@ Rectangle {
                 enabled: false
                 iconName: "dialog-ok-apply"
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Apply")
+                visible: main.currentItem && (!main.currentItem.kcm || main.currentItem.kcm.buttons & 4) // 4 = Apply button
                 onClicked: applyAction.trigger()
             }
             QtControls.Button {
