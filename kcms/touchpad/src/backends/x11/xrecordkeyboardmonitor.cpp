@@ -107,8 +107,6 @@ void XRecordKeyboardMonitor::processNextReply()
             break;
         }
 
-        if (
-
         if (!reply) {
             continue;
         }
