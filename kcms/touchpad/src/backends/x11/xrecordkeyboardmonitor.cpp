@@ -96,10 +96,18 @@ void XRecordKeyboardMonitor::processNextReply()
     void *reply = 0;
     xcb_generic_error_t *error = nullptr;
     while (m_cookie.sequence && xcb_poll_for_reply(m_connection, m_cookie.sequence, &reply, &error)) {
+        // xcb_poll_for_reply may set both reply and error to null if connection has error.
+        // break if xcb_connection has error, no point to continue anyway.
+        if (xcb_connection_has_error(m_connection)) {
+            break;
+        }
+
         if (error) {
             std::free(error);
             break;
         }
+
+        if (
 
         if (!reply) {
             continue;
