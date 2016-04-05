@@ -226,7 +226,9 @@ bool Positioner::isBlank(int row) const
         return m_folderModel->isBlank(row);
     }
 
-    if (m_proxyToSource.contains(row) && !m_folderModel->isBlank(m_proxyToSource.value(row))) {
+    if (m_proxyToSource.contains(row) &&
+            m_folderModel &&
+            !m_folderModel->isBlank(m_proxyToSource.value(row))) {
         return false;
     }
 
