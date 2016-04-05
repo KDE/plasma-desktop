@@ -253,7 +253,6 @@ Rules* Rules::readRules(Rules* rules, const QString& filename, bool fromExtras)
 
 	if( ! reader.parse(xmlInputSource) ) {
 		qCCritical(KCM_KEYBOARD) << "Failed to parse the rules file" << file.fileName();
-		delete rules;
 		return NULL;
 	}
 
