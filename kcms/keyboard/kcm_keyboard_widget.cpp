@@ -370,7 +370,7 @@ void KCMKeyboardWidget::previewLayout(){
     QString variant=uiWidget->layoutsTableView->model()->data(idvariant).toString();
     QString model = keyboardConfig->keyboardModel;
 
-    KeyboardPainter* layoutPreview = new KeyboardPainter();
+    KeyboardPainter layoutPreview;
     const LayoutInfo* layoutInfo = rules->getLayoutInfo(country);
     if (!layoutInfo) {
         return;
@@ -384,11 +384,9 @@ void KCMKeyboardWidget::previewLayout(){
     }
 
     QString title = Flags::getLongText( LayoutUnit(country, variant), rules );
-    layoutPreview->generateKeyboardLayout(country,variant, model, title);
-    layoutPreview->setModal(true);
-    layoutPreview->exec();
-
-    delete layoutPreview;
+    layoutPreview.generateKeyboardLayout(country,variant, model, title);
+    layoutPreview.setModal(true);
+    layoutPreview.exec();
 }
 #endif
 
