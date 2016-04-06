@@ -71,14 +71,6 @@ Rectangle {
         }
     }
 
-    function restoreConfig() {
-        for (var key in plasmoid.configuration) {
-            if (main.currentItem["cfg_"+key] !== undefined) {
-                main.currentItem["cfg_"+key] = plasmoid.configuration[key]
-            }
-        }
-    }
-
     function settingValueChanged() {
         applyButton.enabled = true;
     }
@@ -224,17 +216,32 @@ Rectangle {
                             if (!sourceFile) {
                                 return;
                             }
-//                             print("Source file changed in flickable" + sourceFile);
-                            replace(Qt.resolvedUrl(sourceFile));
-                            root.restoreConfig()
-                            for (var prop in currentItem) {
-                                if (prop.indexOf("cfg_") === 0 && prop.indexOf("Changed") > 0 ) {
-                                    currentItem[prop].connect(root.settingValueChanged)
+
+                            var props = {}
+
+                            var plasmoidConfig = plasmoid.configuration
+                            for (var key in plasmoidConfig) {
+                                props["cfg_" + key] = plasmoid.configuration[key]
+                            }
+
+                            var newItem = push({
+                                item: Qt.resolvedUrl(sourceFile),
+                                replace: true,
+                                properties: props
+                            })
+
+                            for (var key in plasmoidConfig) {
+                                var changedSignal = newItem["cfg_" + key + "Changed"]
+                                if (changedSignal) {
+                                    changedSignal.connect(root.settingValueChanged)
                                 }
                             }
-                            if (currentItem["configurationChanged"]) {
-                                currentItem["configurationChanged"].connect(root.settingValueChanged)
+
+                            var configurationChangedSignal = newItem.configurationChanged
+                            if (configurationChangedSignal) {
+                                configurationChangedSignal.connect(root.settingValueChanged)
                             }
+
                             applyButton.enabled = false;
                             scroll.flickableItem.contentY = 0
                             /*

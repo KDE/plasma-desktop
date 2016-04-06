@@ -43,18 +43,6 @@ ColumnLayout {
         configDialog.applyWallpaper()
         configDialog.containmentPlugin = root.containmentPlugin
     }
-
-    function restoreConfig() {
-        for (var key in configDialog.wallpaperConfiguration) {
-            if (main.currentItem["cfg_"+key] !== undefined) {
-                main.currentItem["cfg_"+key] = configDialog.wallpaperConfiguration[key]
-            }
-           
-            if (main.currentItem["cfg_"+key+"Changed"]) {
-                main.currentItem["cfg_"+key+"Changed"].connect(root.configurationChanged)
-            }
-        }
-    }
 //END functions
 
     Component.onCompleted: {
@@ -130,7 +118,6 @@ ColumnLayout {
                 root.currentWallpaper = model.pluginName
                 main.sourceFile = model.source
                 configDialog.currentWallpaper = model.pluginName
-                root.restoreConfig()
                 root.configurationChanged()
             }
         }
@@ -149,10 +136,28 @@ ColumnLayout {
         }
         property string sourceFile
         onSourceFileChanged: {
-            if (sourceFile != "") {
-                replace(Qt.resolvedUrl(sourceFile))
+            if (sourceFile) {
+                var props = {}
+
+                var wallpaperConfig = configDialog.wallpaperConfiguration
+                for (var key in wallpaperConfig) {
+                    props["cfg_" + key] = wallpaperConfig[key]
+                }
+
+                var newItem = push({
+                    item: Qt.resolvedUrl(sourceFile),
+                    replace: true,
+                    properties: props
+                })
+
+                for (var key in wallpaperConfig) {
+                    var changedSignal = newItem["cfg_" + key + "Changed"]
+                    if (changedSignal) {
+                        changedSignal.connect(root.configurationChanged)
+                    }
+                }
             } else {
-                replace(emptyConfig);
+                replace(emptyConfig)
             }
         }
     }
