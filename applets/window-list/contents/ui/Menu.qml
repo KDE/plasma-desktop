@@ -47,7 +47,7 @@ PlasmaExtras.ScrollArea {
 
             PlasmaComponents.Label {
                 id: sectionDelegateLabel
-                text: section > 0 ? i18n("Desktop") + section : i18n("On all desktops")
+                text: section > 0 ? i18nc("%1 is the name of the desktop", "Desktop %1") : i18n("On all desktops")
                 anchors.centerIn: parent
             }
         }
