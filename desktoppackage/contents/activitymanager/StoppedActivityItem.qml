@@ -143,7 +143,7 @@ Item {
                 id: configButton
 
                 iconSource: "configure"
-                tooltip: i18nd("plasma_shell_org.kde.plasma.desktop", "Configure")
+                tooltip: i18nd("plasma_shell_org.kde.plasma.desktop", "Configure activity")
 
                 onClicked: ActivitySettings.configureActivity(root.activityId)
 
