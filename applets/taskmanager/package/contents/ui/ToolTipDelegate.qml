@@ -295,7 +295,7 @@ Column {
             PlasmaComponents.ToolButton {
                 enabled: mpris2Source.canGoBack
                 iconName: "media-skip-backward"
-                tooltip: i18nc("Go to previous song", "Previous")
+                tooltip: i18nc("@action:button Go to previous song", "Previous")
                 Accessible.name: tooltip
                 onClicked: mpris2Source.goPrevious()
             }
@@ -304,7 +304,7 @@ Column {
                 Layout.fillHeight: true
                 Layout.preferredWidth: height // make this button bigger
                 iconName: mpris2Source.playing ? "media-playback-pause" : "media-playback-start"
-                tooltip: mpris2Source.playing ? i18nc("Pause player", "Pause") : i18nc("Start player", "Play")
+                tooltip: mpris2Source.playing ? i18nc("@action:button Pause player", "Pause") : i18nc("Start player", "Play")
                 Accessible.name: tooltip
                 onClicked: mpris2Source.playPause()
             }
@@ -312,7 +312,7 @@ Column {
             PlasmaComponents.ToolButton {
                 enabled: mpris2Source.canGoNext
                 iconName: "media-skip-forward"
-                tooltip: i18nc("Go to next song", "Next")
+                tooltip: i18nc("@action:button Go to next song", "Next")
                 Accessible.name: tooltip
                 onClicked: mpris2Source.goNext()
             }
