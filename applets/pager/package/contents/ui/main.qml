@@ -100,7 +100,7 @@ MouseArea {
             plasmoid.setAction("removeDesktop", i18n("Remove Virtual Desktop"), "list-remove");
             actionEnablerBinding.target = plasmoid.action("removeDesktop");
 
-            plasmoid.setAction("openKCM", i18n("Configure Desktops"), "configure");
+            plasmoid.setAction("openKCM", i18n("Configure Desktops..."), "configure");
             windowActiveOnActiveDesktopColor = theme.textColor
             windowActiveOnActiveDesktopColor.a = 0.6
             windowActiveColor = theme.textColor
