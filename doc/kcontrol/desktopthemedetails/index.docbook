@@ -14,8 +14,8 @@
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date>2015-07-14</date>
-<releaseinfo>Plasma 5.3</releaseinfo>
+<date>2016-04-12</date>
+<releaseinfo>Plasma 5.6</releaseinfo>
 
 <keywordset>
 <keyword>KDE</keyword>
@@ -26,113 +26,18 @@
 </keywordset>
 </articleinfo>
 
-<variablelist>
+<para>A list of available themes is displayed in this dialog. Select a theme by clicking on an item in the list.</para>
 
-<varlistentry><term><guilabel>Theme</guilabel> tab</term>
-<listitem>
-<para>A list of available themes is displayed on this tab. Select a theme by clicking on an item in the list.</para>
 <para>Use the <guibutton>Get New Themes</guibutton> button to download additional themes from the Internet
 or load a theme from file.</para>
-</listitem>
-</varlistentry>
 
-<varlistentry><term><guilabel>Details</guilabel> tab</term>
-<listitem>
-<para>A &kde; plasma desktop theme is made up of several components or items,
-consisting mostly in svg backgrounds and colors schemes. This module allows you
-to customize your desktop Plasma theme and to replace theme items 
-with items from other themes or from files.
-</para>
+<note>
+<para>Since &plasma; 5.6 it is no longer possible to edit and customize individual components or items in a theme.</para>
 
-<para>Desktop theme items consist in panel theme item, kickoff theme item,
-analog clock, ...</para>
+<para>The recommended tools to check, blend and test themes is the &plasma;-sdk package, the Theme Explorer specifically.</para>
 
-<note><para>
-If you want to change your current theme for a full new theme (for example from
-Breeze to Air) then you can do so in the <guilabel>Theme</guilabel> tab.
-</para></note>
-
-<para>All the available themes will be displayed on top, the current one being highlighted.</para>
-
-<para>
-In the list of items, for each item you would like to replace, select 
-replacement item from the drop list for that item.  You may select the 
-corresponding item from another theme, or you may select a file. &plasma; 
-desktop theme items are svg files, except for the color scheme which is a &kde; 
-color scheme file.
-</para>
-
-<para>
-<screenshot>
-<screeninfo>Customizing your plasma theme</screeninfo>
-  <mediaobject>
-    <imageobject>
-      <imagedata fileref="customizing.png" format="PNG"/>
-    </imageobject>
-    <textobject>
-      <phrase>Customizing your plasma theme</phrase>
-    </textobject>
-  </mediaobject>
-</screenshot>
-</para>
-
-<para>
-Click <guibutton>Apply</guibutton> when all the changes have been made. This
-will create a new theme named <guilabel>(Customized)</guilabel> and will 
-apply it to your desktop.
-</para>
-
-<note><para>
-The theme items listed are the most visible components of the plasma 
-desktop theme.  Other theme components are not listed.  Your newly created 
-theme will use these unlisted components from the theme that you  selected at 
-the start of creating the customized theme.
-</para></note>
-
-<variablelist>
-<varlistentry><term>Naming a custom theme</term>
-<listitem>
-<para>
-To provide a name for your customized theme, click on the
-<guilabel>More</guilabel> checkbox and 
-enter the name of the theme.  You may also provide your name (author), a theme 
-version and a description of your theme.  Click <guibutton>Apply</guibutton>
-when done.
-</para>
-</listitem>
-</varlistentry>
-
-<varlistentry><term>Removing a theme</term>
-<listitem>
-<para>
-Select the theme you would like to remove from the box above the list of 
-theme items. Click on the <guilabel>More</guilabel> check box. Click the
-<guibutton>Remove Theme</guibutton> button to 
-remove the selected theme.
-</para>
-</listitem>
-</varlistentry>
-
-<varlistentry><term>Exporting a theme to a file</term>
-<listitem>
-<para>Exporting a theme to a file</para>
-<para>
-You can share your newly customized theme with the community by exporting the 
-theme to a file. Select your customized theme from the box above the list 
-of theme items.  Click on the <guilabel>More</guilabel> check box.  Click the
-<guibutton>Export Theme to 
-File...</guibutton>.  Enter the name of the archive file to which the theme will be
-saved.
-</para>
-</listitem>
-</varlistentry>
-
-</variablelist>
-
-</listitem>
-</varlistentry>
-
-</variablelist>
+<para>For more technical information visit <ulink url="https://techbase.kde.org/Development/Tutorials/Plasma5/ThemeDetails">this page</ulink>.</para>
+</note>
 
 </article>
 
