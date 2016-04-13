@@ -261,6 +261,7 @@ void RunnerModel::matchesChanged(const QList<Plasma::QueryMatch> &matches)
             m_models.removeAt(row);
             delete matchesModel;
             endRemoveRows();
+            emit countChanged();
         } else {
             matchesModel->setMatches(matches);
         }
