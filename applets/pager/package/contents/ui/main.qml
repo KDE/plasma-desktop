@@ -192,6 +192,7 @@ MouseArea {
             MouseArea {
                 id: desktopMouseArea
                 anchors.fill: parent
+                hoverEnabled : true
                 onClicked: pager.changeDesktop(desktopId);
             }
 
