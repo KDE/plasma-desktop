@@ -75,9 +75,9 @@ Item {
         enabled: visible
     }
 
-    clip: true
-    width: backgroundFrame.width
-    height: backgroundFrame.height
+    clip: backgroundFrameWidthAnimation.running
+    width: backgroundFrame.width + backgroundFrame.width % 2
+    height: backgroundFrame.height + backgroundFrame.height % 2
 
     //x and y default to 0, so top left would be correct
     //If the position is anything else it will updated via onXChanged during intialisation
@@ -143,10 +143,11 @@ Item {
         }
         imagePath: "widgets/translucentbackground"
         opacity: buttonMouse.containsMouse || (toolBoxLoader.item && toolBoxLoader.item.visible) ? 1.0 : 0.4
-        width: (isCorner ? buttonLayout.height : buttonLayout.width) + margins.left + margins.right
-        height: buttonLayout.height + margins.top + margins.bottom
+        width: Math.round((isCorner ? buttonLayout.height : buttonLayout.width) + margins.horizontal)
+        height: Math.round(buttonLayout.height + margins.vertical)
         Behavior on width {
             NumberAnimation {
+                id: backgroundFrameWidthAnimation
                 duration: units.longDuration;
                 easing.type: Easing.InOutQuad;
             }
