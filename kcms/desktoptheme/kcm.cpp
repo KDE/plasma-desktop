@@ -55,7 +55,7 @@ KCMDesktopTheme::KCMDesktopTheme(QObject *parent, const QVariantList &args)
                                        QStringLiteral("0.1"), QString(), KAboutLicense::LGPL);
     about->addAuthor(i18n("David Rosca"), QString(), QStringLiteral("nowrep@gmail.com"));
     setAboutData(about);
-    setButtons(Apply | Default);
+    setButtons(Apply | Default | Help);
 
     m_model = new QStandardItemModel(this);
     QHash<int, QByteArray> roles = m_model->roleNames();
