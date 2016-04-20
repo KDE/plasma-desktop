@@ -66,3 +66,10 @@ function effectiveNavDirection(flow, layoutDirection, direction) {
         }
     }
 }
+
+function isFileDrag(event) {
+    var arkService = event.mimeData.formats.indexOf("application/x-kde-ark-dndextract-service") != -1;
+    var arkPath = event.mimeData.formats.indexOf("application/x-kde-ark-dndextract-path") != -1;
+
+    return (event.mimeData.hasUrls || (arkService && arkPath));
+}
