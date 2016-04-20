@@ -31,6 +31,7 @@ import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
 import org.kde.private.desktopcontainment.desktop 0.1 as Desktop
 
 import "LayoutManager.js" as LayoutManager
+import "FolderTools.js" as FolderTools
 
 DragDrop.DropArea {
     id: root
@@ -211,7 +212,7 @@ DragDrop.DropArea {
     }
 
     onDragEnter: {
-        if (isContainment && plasmoid.immutable) {
+        if (isContainment && plasmoid.immutable && !(isFolder && isFileDrag(event))) {
             event.ignore();
         }
     }
@@ -221,11 +222,8 @@ DragDrop.DropArea {
         // (cf. QAbstractItemModel::flags() here, but DeclarativeDropArea currently
         // is currently incapable of rejecting drag events.
 
-        var arkService = event.mimeData.formats.indexOf("application/x-kde-ark-dndextract-service") != -1;
-        var arkPath = event.mimeData.formats.indexOf("application/x-kde-ark-dndextract-path") != -1;
-
         // Trigger autoscroll.
-        if (isFolder && (event.mimeData.hasUrls || (arkService && arkPath))) {
+        if (isFolder && FolderTools.isFileDrag(event)) {
             folderViewLayer.view.scrollLeft = (event.x < (units.largeSpacing * 3));
             folderViewLayer.view.scrollRight = (event.x > width - (units.largeSpacing * 3));
             folderViewLayer.view.scrollUp = (event.y < (units.largeSpacing * 3));
@@ -257,10 +255,7 @@ DragDrop.DropArea {
     }
 
     onDrop: {
-        var arkService = event.mimeData.formats.indexOf("application/x-kde-ark-dndextract-service") != -1;
-        var arkPath = event.mimeData.formats.indexOf("application/x-kde-ark-dndextract-path") != -1;
-
-        if (isFolder && (event.mimeData.hasUrls || (arkService && arkPath))) {
+        if (isFolder && FolderTools.isFileDrag(event)) {
             // Cancel autoscroll.
             folderViewLayer.view.scrollLeft = false;
             folderViewLayer.view.scrollRight = false;
