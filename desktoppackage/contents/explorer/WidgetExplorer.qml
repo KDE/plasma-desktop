@@ -105,12 +105,12 @@ Item {
 
     Action {
         shortcut: "Up"
-        onTriggered: list.decrementCurrentIndex()
+        onTriggered: list.currentIndex = (list.count + list.currentIndex - 1) % list.count 
     }
 
     Action {
         shortcut: "Down"
-        onTriggered: list.incrementCurrentIndex()
+        onTriggered: list.currentIndex = (list.currentIndex + 1) % list.count
     }
 
     Action {
