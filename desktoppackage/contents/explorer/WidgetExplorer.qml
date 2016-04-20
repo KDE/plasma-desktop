@@ -226,6 +226,7 @@ Item {
                     list.positionViewAtBeginning()
                     list.currentIndex = -1
                     widgetExplorer.widgetsModel.searchTerm = text
+                    header.showingSearch = (text != "");
                 }
 
                 Component.onCompleted: forceActiveFocus()
