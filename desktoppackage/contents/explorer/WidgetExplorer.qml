@@ -195,19 +195,66 @@ Item {
     */
 
 
-    GridLayout {
+    RowLayout {
         id: topBar
         anchors {
             top: parent.top
             left: parent.left
             right: parent.right
         }
-        columns: 2
 
-        PlasmaExtras.Title {
-            id: heading
-            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Widgets")
+        Item {
+            id: header
+            property bool showingSearch: false
             Layout.fillWidth: true
+            Layout.minimumHeight: Math.max(heading.height, searchInput.height)
+            Layout.alignment: Qt.AlignVCenter
+            PlasmaExtras.Title {
+                id: heading
+                anchors.verticalCenter: parent.verticalCenter
+                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Widgets")
+                width: parent.width
+                visible: !header.showingSearch
+            }
+            PlasmaComponents.TextField {
+                id: searchInput
+                width: parent.width
+                clearButtonShown: true
+                anchors.verticalCenter: parent.verticalCenter
+                placeholderText: i18nd("plasma_shell_org.kde.plasma.desktop", "Search...")
+                onTextChanged: {
+                    list.positionViewAtBeginning()
+                    list.currentIndex = -1
+                    widgetExplorer.widgetsModel.searchTerm = text
+                }
+
+                Component.onCompleted: forceActiveFocus()
+                visible: header.showingSearch
+            }
+        }
+
+        PlasmaComponents.ToolButton {
+            id: searchButton
+            iconSource: "edit-find"
+
+            checkable: true
+            onClicked: header.showingSearch = !header.showingSearch
+            checked: header.showingSearch
+            onCheckedChanged: {
+                if (!checked) {
+                    searchInput.text = "";
+                }
+            }
+        }
+
+        PlasmaComponents.ToolButton {
+            id: categoryButton
+            tooltip: i18nd("plasma_shell_org.kde.plasma.desktop", "Categories")
+            iconSource: "view-filter"
+            onClicked: {
+                categoriesDialog.model = widgetExplorer.filterModel
+                categoriesDialog.open(0, categoryButton.height)
+            }
         }
 
         PlasmaComponents.ToolButton {
@@ -218,31 +265,6 @@ Item {
             }
             iconSource: "window-close"
             onClicked: main.closed()
-        }
-
-        PlasmaComponents.TextField {
-            id: searchInput
-            clearButtonShown: true
-            placeholderText: i18nd("plasma_shell_org.kde.plasma.desktop", "Search...")
-            onTextChanged: {
-                list.positionViewAtBeginning()
-                list.currentIndex = -1
-                widgetExplorer.widgetsModel.searchTerm = text
-            }
-
-            Component.onCompleted: forceActiveFocus()
-            Layout.columnSpan: 2
-            Layout.fillWidth: true
-        }
-        PlasmaComponents.Button {
-            id: categoryButton
-            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Categories")
-            onClicked: {
-                categoriesDialog.model = widgetExplorer.filterModel
-                categoriesDialog.open(0, categoryButton.height)
-            }
-            Layout.columnSpan: 2
-            Layout.fillWidth: true
         }
     }
 
