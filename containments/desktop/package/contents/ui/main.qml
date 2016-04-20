@@ -212,7 +212,7 @@ DragDrop.DropArea {
     }
 
     onDragEnter: {
-        if (isContainment && plasmoid.immutable && !(isFolder && isFileDrag(event))) {
+        if (isContainment && plasmoid.immutable && !(isFolder && FolderTools.isFileDrag(event))) {
             event.ignore();
         }
     }
