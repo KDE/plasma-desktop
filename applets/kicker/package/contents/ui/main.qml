@@ -142,7 +142,7 @@ Item {
             var runners = new Array("services");
 
             if (isDash) {
-                runners.push("desktopsessions");
+                runners = runners.concat(new Array("desktopsessions", "PowerDevil"));
             }
 
             if (plasmoid.configuration.useExtraRunners) {
