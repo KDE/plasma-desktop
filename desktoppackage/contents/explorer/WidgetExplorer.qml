@@ -139,7 +139,7 @@ Item {
         onClicked: {
             list.contentX = 0
             list.contentY = 0
-            categoryButton.text = model.display
+            categoryButton.text = (model.filterData ? model.display : "")
             widgetExplorer.widgetsModel.filterQuery = model.filterData
             widgetExplorer.widgetsModel.filterType = model.filterType
         }
