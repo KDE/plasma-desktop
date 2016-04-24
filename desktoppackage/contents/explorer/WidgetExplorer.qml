@@ -214,6 +214,7 @@ Item {
                 anchors.verticalCenter: parent.verticalCenter
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Widgets")
                 width: parent.width
+                elide: Text.ElideRight
                 visible: !header.showingSearch
             }
             PlasmaComponents.TextField {
