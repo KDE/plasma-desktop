@@ -64,6 +64,7 @@ private:
     void showNotification(const QString &name, const QString &text);
     void lateInit();
     void updateWorkingTouchpadFound();
+    void showOsd();
 
     TouchpadBackend *m_backend;
     TouchpadDisablerSettings m_settings;

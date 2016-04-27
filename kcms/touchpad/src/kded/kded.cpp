@@ -19,6 +19,8 @@
 #include "kded.h"
 
 #include <QDebug>
+#include <QDBusConnection>
+#include <QDBusMessage>
 #include <KNotification>
 #include <KLocalizedString>
 
@@ -232,9 +234,18 @@ bool TouchpadDisabler::isMousePluggedIn() const
 void TouchpadDisabler::lateInit()
 {
     TouchpadGlobalActions *actions = new TouchpadGlobalActions(false, this);
-    connect(actions, SIGNAL(enableTriggered()), SLOT(enable()));
-    connect(actions, SIGNAL(disableTriggered()), SLOT(disable()));
-    connect(actions, SIGNAL(toggleTriggered()), SLOT(toggle()));
+    connect(actions, &TouchpadGlobalActions::enableTriggered, this, [this] {
+        enable();
+        showOsd();
+    });
+    connect(actions, &TouchpadGlobalActions::disableTriggered, this, [this] {
+        disable();
+        showOsd();
+    });
+    connect(actions, &TouchpadGlobalActions::toggleTriggered, this, [this] {
+        toggle();
+        showOsd();
+    });
 
     updateCurrentState();
     mousePlugged();
@@ -259,4 +270,18 @@ void TouchpadDisabler::updateWorkingTouchpadFound()
         m_workingTouchpadFound = newWorkingTouchpadFound;
         Q_EMIT workingTouchpadFoundChanged(m_workingTouchpadFound);
     }
+}
+
+void TouchpadDisabler::showOsd()
+{
+    QDBusMessage msg = QDBusMessage::createMethodCall(
+        QStringLiteral("org.kde.plasmashell"),
+        QStringLiteral("/org/kde/osdService"),
+        QStringLiteral("org.kde.osdService"),
+        QStringLiteral("touchpadEnabledChanged")
+    );
+
+    msg.setArguments({m_backend->isTouchpadEnabled()});
+
+    QDBusConnection::sessionBus().asyncCall(msg);
 }
