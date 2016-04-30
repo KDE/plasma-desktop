@@ -365,7 +365,7 @@ void Backend::itemContextMenu(QQuickItem *item, QObject *configAction)
 
 void Backend::addJumpListActions(const QUrl &launcherUrl, TaskManager::BasicMenu *menu) const
 {
-    if (!menu || !launcherUrl.isValid() || !launcherUrl.isLocalFile()) {
+    if (!menu || !launcherUrl.isValid() || !launcherUrl.isLocalFile() || !KDesktopFile::isDesktopFile(launcherUrl.toLocalFile())) {
         return;
     }
 
