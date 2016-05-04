@@ -183,10 +183,10 @@ QString SystemEntry::name() const
             return i18n("Hibernate");
             break;
         case Reboot:
-            return i18n("Restart");
+            return i18n("Reboot");
             break;
         case Shutdown:
-            return i18n("Shutdown");
+            return i18n("Shut Down");
             break;
         default:
             break;
