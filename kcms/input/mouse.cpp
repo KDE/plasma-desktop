@@ -147,7 +147,7 @@ MouseConfig::MouseConfig(QWidget *parent, const QVariantList &args)
 
     // Only allow setting reversing scroll polarity if we have scroll buttons
     unsigned char map[20];
-    if ( XGetPointerMapping(QX11Info::display(), map, 20) >= 5 )
+    if (QX11Info::isPlatformX11() && XGetPointerMapping(QX11Info::display(), map, 20) >= 5 )
     {
       generalTab->cbScrollPolarity->setEnabled( true );
       generalTab->cbScrollPolarity->show();
@@ -504,49 +504,56 @@ void MouseConfig::slotHandedChanged(int val){
 
 void MouseSettings::load(KConfig *config, Display *dpy)
 {
-  int accel_num, accel_den, threshold;
-  double accel;
+    // TODO: what's a good threshold default value
+    int threshold = 0;
+    int h = RIGHT_HANDED;
+    double accel = 1.0;
+    if (QX11Info::isPlatformX11()) {
+        int accel_num, accel_den;
 
-  XGetPointerControl( dpy,
-              &accel_num, &accel_den, &threshold );
-  accel = float(accel_num) / float(accel_den);
+        XGetPointerControl( dpy,
+                    &accel_num, &accel_den, &threshold );
+        accel = float(accel_num) / float(accel_den);
 
-  // get settings from X server
-  int h = RIGHT_HANDED;
-  unsigned char map[20];
-  num_buttons = XGetPointerMapping(dpy, map, 20);
+        // get settings from X server
+        unsigned char map[20];
+        num_buttons = XGetPointerMapping(dpy, map, 20);
 
-  handedEnabled = true;
+        handedEnabled = true;
 
-  // ## keep this in sync with KGlobalSettings::mouseSettings
-  if( num_buttons == 1 )
-  {
-      /* disable button remapping */
-      handedEnabled = false;
-  }
-  else if( num_buttons == 2 )
-  {
-      if ( (int)map[0] == 1 && (int)map[1] == 2 )
-        h = RIGHT_HANDED;
-      else if ( (int)map[0] == 2 && (int)map[1] == 1 )
-        h = LEFT_HANDED;
-      else
-        /* custom button setup: disable button remapping */
-        handedEnabled = false;
-  }
-  else
-  {
-      middle_button = (int)map[1];
-      if ( (int)map[0] == 1 && (int)map[2] == 3 )
-    h = RIGHT_HANDED;
-      else if ( (int)map[0] == 3 && (int)map[2] == 1 )
-    h = LEFT_HANDED;
-      else
-    {
-      /* custom button setup: disable button remapping */
-      handedEnabled = false;
+        // ## keep this in sync with KGlobalSettings::mouseSettings
+        if( num_buttons == 1 )
+        {
+            /* disable button remapping */
+            handedEnabled = false;
+        }
+        else if( num_buttons == 2 )
+        {
+            if ( (int)map[0] == 1 && (int)map[1] == 2 )
+                h = RIGHT_HANDED;
+            else if ( (int)map[0] == 2 && (int)map[1] == 1 )
+                h = LEFT_HANDED;
+            else
+                /* custom button setup: disable button remapping */
+                handedEnabled = false;
+        }
+        else
+        {
+            middle_button = (int)map[1];
+            if ( (int)map[0] == 1 && (int)map[2] == 3 )
+            h = RIGHT_HANDED;
+            else if ( (int)map[0] == 3 && (int)map[2] == 1 )
+            h = LEFT_HANDED;
+            else
+            {
+            /* custom button setup: disable button remapping */
+            handedEnabled = false;
+            }
+        }
+    } else {
+        // other platforms
+        handedEnabled = true;
     }
-  }
 
   KConfigGroup group = config->group("Mouse");
   double a = group.readEntry("Acceleration",-1.0);
