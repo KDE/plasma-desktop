@@ -37,7 +37,7 @@ Item {
 
     property bool dropEnabled: false
     property bool appView: false
-    property bool modelChildren: model.hasChildren
+    property bool modelChildren: model.hasChildren || false
     property bool isCurrent: listItem.ListView.view.currentIndex === index;
     property string url: model.url || ""
     property bool showAppsByName: plasmoid.configuration.showAppsByName
