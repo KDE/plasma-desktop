@@ -36,9 +36,6 @@ Item {
     property bool switchTabsOnHover: plasmoid.configuration.switchTabsOnHover
     property Item currentView: mainTabGroup.currentTab.decrementCurrentIndex ? mainTabGroup.currentTab : mainTabGroup.currentTab.item
 
-    property int pad: units.gridUnit
-    property bool debug: false
-
     state: "Normal"
     focus: true
 
