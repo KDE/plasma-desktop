@@ -75,9 +75,6 @@ MouseArea {
     onIsStartupChanged: {
         if (!isStartup) {
             tasks.itemGeometryChanged(task, itemId);
-            busyIndicator.visible = false;
-            busyIndicator.running = false;
-            icon.visible = true;
         }
     }
 
@@ -299,19 +296,21 @@ MouseArea {
 
             anchors.fill: parent
 
-            visible: false
-
             active: task.containsMouse || task.showingContextMenu
             enabled: true
             usesPlasmaTheme: false
 
             source: model.DecorationRole
+        }
 
-            onVisibleChanged: {
-                if (visible && busyIndicator) {
-                    busyIndicator.destroy();
-                }
-            }
+        PlasmaComponents.BusyIndicator {
+            id: busyIndicator
+
+            anchors.fill: parent
+
+            visible: (model.IsStartup === true)
+
+            running: visible
         }
 
         Loader {
@@ -320,16 +319,6 @@ MouseArea {
             source: "TaskBadgeOverlay.qml"
             active: plasmoid.configuration.smartLaunchersEnabled && height >= units.iconSizes.small
                     && icon.visible && task.smartLauncherItem && task.smartLauncherItem.countVisible
-        }
-
-        PlasmaComponents.BusyIndicator {
-            id: busyIndicator
-
-            anchors.fill: parent
-
-            visible: false
-
-            running: false
         }
 
         states: [
@@ -422,13 +411,6 @@ MouseArea {
     ]
 
     Component.onCompleted: {
-        if (model.IsStartup) {
-            busyIndicator.running = true;
-            busyIndicator.visible = true;
-        } else {
-            icon.visible = true;
-        }
-
         if (model.hasModelChildren) {
             var component = Qt.createComponent("GroupExpanderOverlay.qml");
             component.createObject(task);
