@@ -50,8 +50,8 @@ void CfgBrowser::defaults()
 
 void CfgBrowser::load(KConfig *) 
 {
-    KConfigGroup config(KSharedConfig::openConfig(QStringLiteral("kdeglobals")), QStringLiteral("General") );
-    QString exec = config.readPathEntry( QStringLiteral("BrowserApplication"), QLatin1String("") );
+    const KConfigGroup config(KSharedConfig::openConfig(QStringLiteral("kdeglobals")), QStringLiteral("General") );
+    const QString exec = config.readPathEntry( QStringLiteral("BrowserApplication"), QString() );
     if (exec.isEmpty())
     {
         radioKIO->setChecked(true);
