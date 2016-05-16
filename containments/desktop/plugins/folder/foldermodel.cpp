@@ -1416,6 +1416,9 @@ void FolderModel::pasteTo()
 
 void FolderModel::refresh()
 {
+    m_errorString.clear();
+    emit errorStringChanged();
+
     m_dirModel->dirLister()->updateDirectory(m_dirModel->dirLister()->url());
 }
 
