@@ -441,10 +441,10 @@ void MouseConfig::save()
   settings->reverseScrollPolarity = generalTab->cbScrollPolarity->isChecked();
 
   settings->apply();
-  KConfig config( "kcminputrc", KConfig::SimpleConfig );
+  KConfig config( "kcminputrc" );
   settings->save(&config);
 
-  KConfig ac("kaccessrc", KConfig::SimpleConfig);
+  KConfig ac("kaccessrc");
 
   KConfigGroup group = ac.group("Mouse");
 
@@ -735,26 +735,27 @@ void MouseSettings::apply(bool force)
 
 void MouseSettings::save(KConfig *config)
 {
-  KConfigGroup group = config->group("Mouse");
-  group.writeEntry("Acceleration",accelRate);
-  group.writeEntry("Threshold",thresholdMove);
+  KSharedConfig::Ptr kcminputProfile = KSharedConfig::openConfig("kcminputrc");
+  KConfigGroup kcminputGroup(kcminputProfile, "Mouse");
+  kcminputGroup.writeEntry("Acceleration",accelRate);
+  kcminputGroup.writeEntry("Threshold",thresholdMove);
   if (handed == RIGHT_HANDED)
-      group.writeEntry("MouseButtonMapping",QString("RightHanded"));
+      kcminputGroup.writeEntry("MouseButtonMapping",QString("RightHanded"));
   else
-      group.writeEntry("MouseButtonMapping",QString("LeftHanded"));
-  group.writeEntry( "ReverseScrollPolarity", reverseScrollPolarity );
+      kcminputGroup.writeEntry("MouseButtonMapping",QString("LeftHanded"));
+  kcminputGroup.writeEntry( "ReverseScrollPolarity", reverseScrollPolarity );
 
-  Kdelibs4SharedConfig::syncConfigGroup(&group, "kinputrc");
+  Kdelibs4SharedConfig::syncConfigGroup(QLatin1String("Mouse"), "kcminputrc");
 
-  KSharedConfig::Ptr profile = KSharedConfig::openConfig("kdeglobals", KConfig::SimpleConfig);
-  group = KConfigGroup(profile, "KDE");
+  KSharedConfig::Ptr profile = KSharedConfig::openConfig("kdeglobals");
+  KConfigGroup group(profile, "KDE");
   group.writeEntry("DoubleClickInterval", doubleClickInterval, KConfig::Persistent);
   group.writeEntry("StartDragTime", dragStartTime, KConfig::Persistent);
   group.writeEntry("StartDragDist", dragStartDist, KConfig::Persistent);
   group.writeEntry("WheelScrollLines", wheelScrollLines, KConfig::Persistent);
   group.writeEntry("SingleClick", singleClick, KConfig::Persistent);
 
-  Kdelibs4SharedConfig::syncConfigGroup(&group, "kdeglobals");
+  Kdelibs4SharedConfig::syncConfigGroup(QLatin1String("KDE"), "kdeglobals");
   group.sync();
   config->sync();
 

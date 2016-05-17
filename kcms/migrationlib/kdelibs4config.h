@@ -25,18 +25,15 @@
 class Kdelibs4SharedConfig
 {
 public:
-    static KSharedConfig::Ptr openConfig(const QString &fileName, KConfig::OpenFlags mode=KConfig::SimpleConfig)
+    static void syncConfigGroup(const QLatin1String &sourceGroup, const QString &fileName)
     {
         Kdelibs4Migration migration;
         QString configDirPath = migration.saveLocation("config");
-        return KSharedConfig::openConfig(configDirPath + '/' + fileName);
-    }
-
-    static void syncConfigGroup(KConfigGroup *sourceGroup, const QString &fileName)
-    {
-        KSharedConfigPtr kde4Config = openConfig(fileName);
-        KConfigGroup kde4ConfigGroup = kde4Config->group(sourceGroup->name());
-        sourceGroup->copyTo(&kde4ConfigGroup);
+        KSharedConfigPtr kde4Config = KSharedConfig::openConfig(configDirPath + '/' + fileName);
+        KSharedConfigPtr simpleConfig = KSharedConfig::openConfig("kdeglobals", KConfig::SimpleConfig);
+        KConfigGroup simpleConfigGroup(simpleConfig, sourceGroup);
+        KConfigGroup kde4ConfigGroup = kde4Config->group(sourceGroup);
+        simpleConfigGroup.copyTo(&kde4ConfigGroup);
         kde4ConfigGroup.sync();
     }
 
