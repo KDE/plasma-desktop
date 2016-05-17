@@ -106,7 +106,7 @@ void CfgFileManager::save(KConfig *)
         KConfigGroup defaultApp(profile, s_DefaultApplications);
         defaultApp.writeXdgListEntry(mime, QStringList(storageId));
 
-        Kdelibs4SharedConfig::syncConfigGroup(&addedApps, QStringLiteral("mimeapps.list"));
+        Kdelibs4SharedConfig::syncConfigGroup(QLatin1String("Added Associations"), QStringLiteral("mimeapps.list"));
 
         profile->sync();
 

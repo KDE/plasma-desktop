@@ -79,13 +79,13 @@ void CfgTerminalEmulator::load(KConfig *) {
 
 void CfgTerminalEmulator::save(KConfig *)
 {
-	KSharedConfig::Ptr profile = KSharedConfig::openConfig(QStringLiteral("kdeglobals"), KConfig::SimpleConfig);
+	KSharedConfig::Ptr profile = KSharedConfig::openConfig(QStringLiteral("kdeglobals"));
 	KConfigGroup config(profile, QStringLiteral("General"));
 	const QString terminal = terminalCB->isChecked() ? QStringLiteral("konsole") : terminalLE->text();
 	config.writePathEntry("TerminalApplication", terminal); // KConfig::Normal|KConfig::Global);
 
 	config.sync();
-        Kdelibs4SharedConfig::syncConfigGroup(&config, QStringLiteral("kdeglobals"));
+        Kdelibs4SharedConfig::syncConfigGroup(QLatin1String("General"), "kdeglobals");
 
 	KGlobalSettings::self()->emitChange(KGlobalSettings::SettingsChanged);
 
