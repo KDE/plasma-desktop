@@ -94,13 +94,16 @@ ListView {
             })
         }
 
-        model.push({
-            text: i18nd("plasma_toolbox_org.kde.desktoptoolbox", "Leave"),
-            icon: "system-log-out",
-            visible: true,
-            enabled: true,
-            operation: "requestShutDown" // cannot put function() into a model :(
-        })
+        if (dataEngine.data["Sleep States"].Logout) {
+            model.push({
+                text: i18nd("plasma_toolbox_org.kde.desktoptoolbox", "Leave"),
+                icon: "system-log-out",
+                visible: true,
+                enabled: true,
+                operation: "requestShutDown" // cannot put function() into a model :(
+            })
+        }
+
         return model
     }
 
