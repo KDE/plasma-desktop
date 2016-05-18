@@ -173,7 +173,7 @@ Column {
                         PlasmaCore.WindowThumbnail {
                             id: windowThumbnail
 
-                            y: -s
+                            y: _s
 
                             width: thumbnailWidth
                             height: thumbnailHeight

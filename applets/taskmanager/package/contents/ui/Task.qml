@@ -353,7 +353,7 @@ MouseArea {
             bottomMargin: taskFrame.margins.bottom
         }
 
-        visible: (inPopup || !iconsOnly && !model.IsLauncher && (parent.width - LayoutManager.horizontalMargins()) >= (theme.mSize(theme.defaultFont).width * 7))
+        visible: inPopup || (!iconsOnly && !model.IsLauncher && (parent.width - LayoutManager.horizontalMargins()) >= (theme.mSize(theme.defaultFont).width * 7))
 
         enabled: true
 
@@ -401,7 +401,7 @@ MouseArea {
         },
         State {
             name: "active"
-            when: model.Active || groupDialog.visible && groupDialog.target == task
+            when: model.Active || (groupDialog.visible && groupDialog.target == task)
 
             PropertyChanges {
                 target: frame
