@@ -74,6 +74,7 @@ Item {
             onClicked: {
                 KCMShell.open("user_manager")
             }
+            visible: KCMShell.authorize("user_manager.desktop").length > 0
         }
     }
 
