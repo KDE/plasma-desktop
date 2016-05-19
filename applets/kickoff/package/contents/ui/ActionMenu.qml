@@ -42,7 +42,7 @@ Item {
     }
 
     function open(x, y) {
-        if (!actionList) {
+        if (!actionList || !actionList.length) {
             return;
         }
 

@@ -112,6 +112,11 @@ Item {
         }
 
         onDragEnter: {
+            // Don't allow re-arranging favorites when system is immutable.
+            if (plasmoid.immutability === PlasmaCore.Types.SystemImmutable) {
+                return
+            }
+
             dragUrl = kickoffListView.currentItem.url;
             startRow = kickoffListView.currentIndex;
             syncTarget(event);

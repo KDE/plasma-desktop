@@ -37,6 +37,11 @@ function fillActionMenu(actionMenu, actionList, favoriteModel, favoriteId) {
 }
 
 function createFavoriteAction(favoriteModel, favoriteId) {
+    // Don't allow changes to favorites when system is immutable.
+    if (plasmoid.immutability === PlasmaCore.Types.SystemImmutable) {
+        return null;
+    }
+
     if (favoriteModel === null || !favoriteModel.enabled || favoriteId == null) {
         return null;
     }

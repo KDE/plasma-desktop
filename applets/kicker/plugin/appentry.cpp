@@ -47,6 +47,8 @@
 #include <KSharedConfig>
 #include <KStartupInfo>
 
+#include <Plasma/Plasma>
+
 MenuEntryEditor *AppEntry::m_menuEntryEditor = nullptr;
 
 AppEntry::AppEntry(AbstractModel *owner, KService::Ptr service, NameFormat nameFormat)
@@ -146,8 +148,10 @@ QVariantList AppEntry::actions() const
 
     QObject *appletInterface = m_owner->rootModel()->property("appletInterface").value<QObject *>();
 
+    const bool systemImmutable = appletInterface->property("immutability").toInt() == Plasma::Types::SystemImmutable;
+
     const QVariantList &addLauncherActions = Kicker::createAddLauncherActionList(appletInterface, m_service);
-    if (!addLauncherActions.isEmpty()) {
+    if (!systemImmutable && !addLauncherActions.isEmpty()) {
         actionList << addLauncherActions
                    << Kicker::createSeparatorActionItem();
     }
@@ -155,6 +159,12 @@ QVariantList AppEntry::actions() const
     const QVariantList &recentDocuments = Kicker::recentDocumentActions(m_service);
     if (!recentDocuments.isEmpty()) {
         actionList << recentDocuments << Kicker::createSeparatorActionItem();
+    }
+
+    // Don't allow adding launchers, editing, hiding, or uninstalling applications
+    // when system is immutable.
+    if (systemImmutable) {
+        return actionList;
     }
 
     if (m_menuEntryEditor->canEdit(m_service->entryPath())) {
