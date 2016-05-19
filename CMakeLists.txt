@@ -29,7 +29,7 @@ find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
     Concurrent
 )
 
-set(KF5_MIN_VERSION "5.20.0")
+set(KF5_MIN_VERSION "5.23.0")
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     Auth
     Plasma
