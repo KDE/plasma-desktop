@@ -33,7 +33,7 @@ Row {
 
     QtControls.Label {
         anchors.verticalCenter: parent.verticalCenter
-        text: i18nd("kcm_activities", "Shortcut for switching to this activity:")
+        text: i18nd("kcm_activities5", "Shortcut for switching to this activity:")
     }
 
     KQuickControls.KeySequenceItem {

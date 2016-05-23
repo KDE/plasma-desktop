@@ -34,7 +34,7 @@ Item {
     QtControls.Button {
         id: buttonCreateActivity
 
-        text: i18nd("kcm_activities", "Create activity...")
+        text: i18nd("kcm_activities5", "Create activity...")
         iconName: "list-add"
 
         anchors {
