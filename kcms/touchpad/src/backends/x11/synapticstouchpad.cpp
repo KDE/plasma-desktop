@@ -46,6 +46,7 @@
  *      Peter Osterlund (petero2@telia.com)
  */
 
+#include <cmath>
 #include <QDebug>
 
 #include "synapticstouchpad.h"
