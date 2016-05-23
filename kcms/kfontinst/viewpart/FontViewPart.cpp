@@ -46,7 +46,6 @@
 #include <KMessageBox>
 #include <KIntNumInput>
 #include <KInputDialog>
-#include <KDialog>
 #include <QIcon>
 #include <KMimeType>
 //#include <KFileMetaInfo>
@@ -93,9 +92,6 @@ CFontViewPart::CFontViewPart(QWidget *parentWidget, QObject *parent, const QList
 
     QBoxLayout *mainLayout=new QBoxLayout(QBoxLayout::TopToBottom, itsFrame);
 
-    mainLayout->setMargin(KDialog::marginHint());
-    mainLayout->setSpacing(KDialog::spacingHint());
-
     QBoxLayout *previewLayout=new QBoxLayout(QBoxLayout::LeftToRight, previewFrame),
                *controlsLayout=new QBoxLayout(QBoxLayout::LeftToRight, controls),
                *faceLayout=new QBoxLayout(QBoxLayout::LeftToRight, itsFaceWidget);
@@ -107,7 +103,6 @@ CFontViewPart::CFontViewPart(QWidget *parentWidget, QObject *parent, const QList
     previewLayout->setMargin(0);
     previewLayout->setSpacing(0);
     faceLayout->setMargin(0);
-    faceLayout->setSpacing(KDialog::spacingHint());
     controlsLayout->setMargin(0);
     previewLayout->setSpacing(0);
 
@@ -127,7 +122,7 @@ CFontViewPart::CFontViewPart(QWidget *parentWidget, QObject *parent, const QList
     previewLayout->addWidget(itsPreview);
     faceLayout->addWidget(itsFaceLabel);
     faceLayout->addWidget(itsFaceSelector);
-    faceLayout->addItem(new QSpacerItem(KDialog::spacingHint(), 0, QSizePolicy::Fixed, QSizePolicy::Fixed));
+    faceLayout->addItem(new QSpacerItem(faceLayout->spacing(), 0, QSizePolicy::Fixed, QSizePolicy::Fixed));
     itsFaceWidget->hide();
 
     itsPreview->engine()->readConfig(*itsConfig);

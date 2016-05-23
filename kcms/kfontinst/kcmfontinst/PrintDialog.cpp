@@ -26,23 +26,32 @@
 #include <QLabel>
 #include <QGridLayout>
 #include <KLocalizedString>
+#include <QDialogButtonBox>
+#include <QPushButton>
+#include <QVBoxLayout>
 
 namespace KFI
 {
 
 CPrintDialog::CPrintDialog(QWidget *parent)
-            : KDialog(parent)
+            : QDialog(parent)
 {
     setModal(true);
-    setCaption(i18n("Print Font Samples"));
-    setButtons(Ok|Cancel);
+    setWindowTitle(i18n("Print Font Samples"));
+
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok|QDialogButtonBox::Cancel);
+    QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
+    okButton->setDefault(true);
+    okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
+    connect(buttonBox, &QDialogButtonBox::accepted, this, &CPrintDialog::accept);
+    connect(buttonBox, &QDialogButtonBox::rejected, this, &CPrintDialog::reject);
+
+    QVBoxLayout *mainLayout = new QVBoxLayout;
+    setLayout(mainLayout);
 
     QFrame *page = new QFrame(this);
-    setMainWidget(page);
-
     QGridLayout *layout=new QGridLayout(page);
     layout->setMargin(0);
-    layout->setSpacing(KDialog::spacingHint());
 
     QLabel *lbl=new QLabel(i18n("Select size to print font:"), page);
     lbl->setSizePolicy(QSizePolicy::Maximum, QSizePolicy::Maximum);
@@ -57,12 +66,15 @@ CPrintDialog::CPrintDialog(QWidget *parent)
     itsSize->setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Maximum);
     layout->addWidget(itsSize, 0, 1);
     layout->addItem(new QSpacerItem(2, 2), 2, 0);
+
+    mainLayout->addWidget(page);
+    mainLayout->addWidget(buttonBox);
 }
 
 bool CPrintDialog::exec(int size)
 {
     itsSize->setCurrentIndex(size);
-    return KDialog::Accepted==KDialog::exec();
+    return QDialog::Accepted==QDialog::exec();
 }
 
 }

@@ -24,13 +24,13 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#include <KDialog>
+#include <QDialog>
 #include <QComboBox>
 
 namespace KFI
 {
 
-class CPrintDialog : public KDialog
+class CPrintDialog : public QDialog
 {
     public:
 

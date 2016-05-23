@@ -208,15 +208,10 @@ CKCmFontInst::CKCmFontInst(QWidget *parent, const QVariantList&)
                 *fontControlLayout=new QBoxLayout(QBoxLayout::LeftToRight, fontControlWidget);
 
     toolbarLayout->setMargin(0);
-    toolbarLayout->setSpacing(KDialog::spacingHint());
     mainLayout->setMargin(0);
-    mainLayout->setSpacing(KDialog::spacingHint());
     groupsLayout->setMargin(0);
-    groupsLayout->setSpacing(KDialog::spacingHint());
     fontsLayout->setMargin(0);
-    fontsLayout->setSpacing(KDialog::spacingHint());
     fontControlLayout->setMargin(0);
-    fontControlLayout->setSpacing(KDialog::spacingHint());
 
     // Toolbar...
     KAction     *duplicateFontsAct=new KAction(QIcon::fromTheme("system-search"), i18n("Scan for Duplicate Fonts..."), this);
@@ -258,7 +253,7 @@ CKCmFontInst::CKCmFontInst(QWidget *parent, const QVariantList&)
     groupsLayout->addWidget(itsDeleteGroupControl, 1, 1);
     groupsLayout->addWidget(itsEnableGroupControl, 1, 2);
     groupsLayout->addWidget(itsDisableGroupControl, 1, 3);
-    groupsLayout->addItem(new QSpacerItem(itsDisableGroupControl->width(), KDialog::spacingHint(),
+    groupsLayout->addItem(new QSpacerItem(itsDisableGroupControl->width(), groupsLayout->spacing(),
                           QSizePolicy::Expanding, QSizePolicy::Fixed), 1, 4);
 
     itsPreviewWidget = new QWidget(this);
@@ -311,7 +306,7 @@ CKCmFontInst::CKCmFontInst(QWidget *parent, const QVariantList&)
 
     // Layout widgets...
     toolbarLayout->addWidget(toolbar);
-    toolbarLayout->addItem(new QSpacerItem(KDialog::spacingHint(), 2, QSizePolicy::MinimumExpanding, QSizePolicy::Fixed));
+    toolbarLayout->addItem(new QSpacerItem(toolbarLayout->spacing(), 2, QSizePolicy::MinimumExpanding, QSizePolicy::Fixed));
     toolbarLayout->addWidget(itsFilter);
     mainLayout->addWidget(toolbarWidget);
     mainLayout->addWidget(itsGroupSplitter);

@@ -52,6 +52,9 @@
 
 #ifdef HAVE_LOCALE_H
 #include <locale.h>
+#include <QDialogButtonBox>
+#include <QPushButton>
+#include <QVBoxLayout>
 #endif
 #include "CreateParent.h"
 
@@ -339,15 +342,18 @@ void CPrintThread::run()
 }
 
 CPrinter::CPrinter(QWidget *parent)
-        : KDialog(parent)
+        : QDialog(parent)
 {
-    setCaption(i18n("Print"));
-    setButtons(Cancel);
+    setWindowTitle(i18n("Print"));
+
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Cancel);
+    connect(buttonBox, &QDialogButtonBox::rejected, this, &CPrinter::slotCancelClicked);
+
+    QVBoxLayout *mainLayout = new QVBoxLayout;
+    setLayout(mainLayout);
 
     QFrame *page = new QFrame(this);
     QGridLayout *layout=new QGridLayout(page);
-    layout->setMargin(KDialog::marginHint());
-    layout->setSpacing(KDialog::spacingHint());
     itsStatusLabel=new QLabel(page);
     itsProgress=new QProgressBar(page);
     layout->addWidget(itsActionLabel = new CActionLabel(this), 0, 0, 2, 1);
@@ -355,7 +361,9 @@ CPrinter::CPrinter(QWidget *parent)
     layout->addWidget(itsProgress, 1, 1);
     itsProgress->setRange(0, 100);
     layout->addItem(new QSpacerItem(0, 0, QSizePolicy::Fixed, QSizePolicy::Expanding), 2, 0);
-    setMainWidget(page);
+
+    mainLayout->addWidget(page);
+    mainLayout->addWidget(buttonBox);
     setMinimumSize(420, 80);
 }
 
@@ -403,9 +411,8 @@ void CPrinter::progress(int p, const QString &label)
     itsProgress->setValue(p);
 }
 
-void CPrinter::slotButtonClicked(int button)
+void CPrinter::slotCancelClicked()
 {
-    Q_UNUSED(button)
     itsStatusLabel->setText(i18n("Canceling..."));
     emit cancelled();
 }
@@ -414,7 +421,7 @@ void CPrinter::closeEvent(QCloseEvent *e)
 {
     Q_UNUSED(e)
     e->ignore();
-    slotButtonClicked(0);
+    slotCancelClicked();
 }
 
 static K4AboutData aboutData("kfontprint", KFI_CATALOGUE, ki18n("Font Printer"), WORKSPACE_VERSION_STRING, ki18n("Simple font printer"),

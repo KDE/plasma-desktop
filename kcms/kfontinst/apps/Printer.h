@@ -24,7 +24,7 @@
 #ifndef __PRINTER_H__
 #define __PRINTER_H__
 
-#include <KDialog>
+#include <QDialog>
 #include <QtCore/QThread>
 #include <QtCore/QList>
 #include <QtGui/QFont>
@@ -67,7 +67,7 @@ class CPrintThread : public QThread
     bool               itsCancelled;
 };
 
-class CPrinter : public KDialog
+class CPrinter : public QDialog
 {
     Q_OBJECT
 
@@ -85,7 +85,7 @@ class CPrinter : public KDialog
     public Q_SLOTS:
         
     void progress(int p, const QString &label);
-    void slotButtonClicked(int button);
+    void slotCancelClicked();
 
     private:
     

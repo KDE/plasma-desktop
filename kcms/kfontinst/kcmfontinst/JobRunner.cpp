@@ -30,6 +30,7 @@
 #include <KStandardDirs>
 #include <KTempDir>
 #include <KSharedConfig>
+#include <KConfigGroup>
 #include <kio/global.h>
 #include <QGridLayout>
 #include <QProgressBar>
@@ -48,6 +49,9 @@
 #include <sys/resource.h>
 #include <sys/types.h>
 #include <unistd.h>
+#include <QDialogButtonBox>
+#include <QPushButton>
+#include <QVBoxLayout>
 #include "config-fontinst.h"
 
 #define CFG_GROUP                  "Runner Dialog"
@@ -126,7 +130,7 @@ static void addIcon(QGridLayout *layout, QFrame *page, const char *iconName, int
 }
 
 CJobRunner::CJobRunner(QWidget *parent, int xid)
-           : KDialog(parent),
+           : QDialog(parent),
              itsIt(itsUrls.end()),
              itsEnd(itsIt),
              itsAutoSkip(false),
@@ -139,8 +143,21 @@ CJobRunner::CJobRunner(QWidget *parent, int xid)
     if(NULL==parent && 0!=xid)
         XSetTransientForHint(QX11Info::display(), winId(), xid);
 
+    itsButtonBox = new QDialogButtonBox;
+    connect(itsButtonBox, &QDialogButtonBox::clicked, this, &CJobRunner::slotButtonClicked);
+
+    itsSkipButton = new QPushButton(i18n("Skip"));
+    itsButtonBox->addButton(itsSkipButton, QDialogButtonBox::ActionRole);
+    itsSkipButton->hide();
+    itsAutoSkipButton = new QPushButton(i18n("AutoSkip"));
+    itsButtonBox->addButton(itsAutoSkipButton, QDialogButtonBox::ActionRole);
+    itsAutoSkipButton->hide();
+
     itsStack = new QStackedWidget(this);
-    setMainWidget(itsStack);
+    QVBoxLayout *mainLayout = new QVBoxLayout;
+    setLayout(mainLayout);
+    mainLayout->addWidget(itsStack);
+    mainLayout->addWidget(itsButtonBox);
 
     QStyleOption option;
     option.initFrom(this);
@@ -148,8 +165,6 @@ CJobRunner::CJobRunner(QWidget *parent, int xid)
     
     QFrame *page = new QFrame(itsStack);
     QGridLayout *layout=new QGridLayout(page);
-    layout->setMargin(KDialog::marginHint());
-    layout->setSpacing(KDialog::spacingHint());
     itsStatusLabel=new QLabel(page);
     itsProgress=new QProgressBar(page);
 //     itsStatusLabel->setWordWrap(true);
@@ -161,8 +176,6 @@ CJobRunner::CJobRunner(QWidget *parent, int xid)
 
     page=new QFrame(itsStack);
     layout=new QGridLayout(page);
-    layout->setMargin(KDialog::marginHint());
-    layout->setSpacing(KDialog::spacingHint());
     itsSkipLabel=new QLabel(page);
     itsSkipLabel->setWordWrap(true);
     addIcon(layout, page, "dialog-error", iconSize);
@@ -172,8 +185,6 @@ CJobRunner::CJobRunner(QWidget *parent, int xid)
 
     page=new QFrame(itsStack);
     layout=new QGridLayout(page);
-    layout->setMargin(KDialog::marginHint());
-    layout->setSpacing(KDialog::spacingHint());
     itsErrorLabel=new QLabel(page);
     itsErrorLabel->setWordWrap(true);
     addIcon(layout, page, "dialog-error", iconSize);
@@ -183,8 +194,6 @@ CJobRunner::CJobRunner(QWidget *parent, int xid)
 
     page=new QFrame(itsStack);
     layout=new QGridLayout(page);
-    layout->setMargin(KDialog::marginHint());
-    layout->setSpacing(KDialog::spacingHint());
     QLabel *cancelLabel=new QLabel(i18n("<h3>Cancel?</h3><p>Are you sure you wish to cancel?</p>"), page);
     cancelLabel->setWordWrap(true);
     addIcon(layout, page, "dialog-warning", iconSize);
@@ -198,8 +207,6 @@ CJobRunner::CJobRunner(QWidget *parent, int xid)
     {
         page=new QFrame(itsStack);
         layout=new QGridLayout(page);
-        layout->setMargin(KDialog::marginHint());
-        layout->setSpacing(KDialog::spacingHint());
         QLabel *finishedLabel=new QLabel(i18n("<h3>Finished</h3>"
                                             "<p>Please note that any open applications will need to be "
                                             "restarted in order for any changes to be noticed.</p>"),
@@ -210,7 +217,7 @@ CJobRunner::CJobRunner(QWidget *parent, int xid)
         layout->addItem(new QSpacerItem(0, 0, QSizePolicy::Fixed, QSizePolicy::Expanding), 1, 0);
         itsDontShowFinishedMsg = new QCheckBox(i18n("Do not show this message again"), page);
         itsDontShowFinishedMsg->setChecked(false);
-        layout->addItem(new QSpacerItem(0, KDialog::spacingHint(), QSizePolicy::Fixed, QSizePolicy::Fixed), 2, 0);
+        layout->addItem(new QSpacerItem(0, layout->spacing(), QSizePolicy::Fixed, QSizePolicy::Fixed), 2, 0);
         layout->addWidget(itsDontShowFinishedMsg, 3, 1);
         layout->addItem(new QSpacerItem(0, 0, QSizePolicy::Fixed, QSizePolicy::Expanding), 4, 0);
         itsStack->insertWidget(PAGE_COMPLETE, page);
@@ -308,27 +315,27 @@ int CJobRunner::exec(ECommand cmd, const ItemList &urls, bool destIsSystem)
     switch(cmd)
     {
         case CMD_INSTALL:
-            setCaption(i18n("Installing"));
+            setWindowTitle(i18n("Installing"));
             break;
         case CMD_DELETE:
-            setCaption(i18n("Uninstalling"));
+            setWindowTitle(i18n("Uninstalling"));
             break;
         case CMD_ENABLE:
-            setCaption(i18n("Enabling"));
+            setWindowTitle(i18n("Enabling"));
             break;
         case CMD_MOVE:
-            setCaption(i18n("Moving"));
+            setWindowTitle(i18n("Moving"));
             break;
         case CMD_UPDATE:
-            setCaption(i18n("Updating"));
+            setWindowTitle(i18n("Updating"));
             itsModified=true;
             break;
         case CMD_REMOVE_FILE:
-            setCaption(i18n("Removing"));
+            setWindowTitle(i18n("Removing"));
             break;
         default:
         case CMD_DISABLE:
-            setCaption(i18n("Disabling"));
+            setWindowTitle(i18n("Disabling"));
     }
 
     itsDestIsSystem=destIsSystem;
@@ -350,7 +357,7 @@ int CJobRunner::exec(ECommand cmd, const ItemList &urls, bool destIsSystem)
     QTimer::singleShot(0, this, SLOT(doNext()));
     QTimer::singleShot(constInterfaceCheck, this, SLOT(checkInterface()));
     itsActionLabel->startAnimation();
-    int rv=KDialog::exec();
+    int rv=QDialog::exec();
     if(itsTempDir)
     {
         delete itsTempDir;
@@ -420,13 +427,13 @@ void CJobRunner::doNext()
                 // with the filename "--"
                 if((*itsIt).fileName==QLatin1String("--"))
                 {
-                    setCaption(i18n("Enabling"));
+                    setWindowTitle(i18n("Enabling"));
                     dbus()->enable(font.family, font.styleInfo, system, getpid(), false);
                 }
                 else
                 {
                     if(itsPrev!=itsEnd && (*itsPrev).fileName==QLatin1String("--"))
-                        setCaption(i18n("Moving"));
+                        setWindowTitle(i18n("Moving"));
                     dbus()->move(font.family, font.styleInfo, itsDestIsSystem, getpid(), false);
                 }
                 break;
@@ -573,7 +580,7 @@ void CJobRunner::contineuToNext(bool cont)
     doNext();
 }
 
-void CJobRunner::slotButtonClicked(int button)
+void CJobRunner::slotButtonClicked(QAbstractButton *button)
 {
     switch(itsStack->currentIndex())
     {
@@ -583,22 +590,18 @@ void CJobRunner::slotButtonClicked(int button)
             break;
         case PAGE_SKIP:
             setPage(PAGE_PROGRESS);
-            switch(button)
-            {
-                case User1:
-                    contineuToNext(true);
-                    break;
-                case User2:
-                    itsAutoSkip=true;
-                    contineuToNext(true);
-                    break;
-                default:
-                    contineuToNext(false);
-                    break;
+            if (button == itsSkipButton) {
+                contineuToNext(true);
+            } else if (button == itsAutoSkipButton) {
+                itsAutoSkip=true;
+                contineuToNext(true);
+            } else {
+                contineuToNext(false);
             }
+
             break;
         case PAGE_CANCEL:
-            if(Yes==button)
+            if(button == itsButtonBox->button(QDialogButtonBox::Yes))
                 itsIt=itsEnd;
             itsCancelClicked=false;
             setPage(PAGE_PROGRESS);
@@ -613,7 +616,7 @@ void CJobRunner::slotButtonClicked(int button)
                 grp.writeEntry(CFG_DONT_SHOW_FINISHED_MSG, itsDontShowFinishedMsg->isChecked());
             }
         case PAGE_ERROR:
-            KDialog::accept();
+            QDialog::accept();
             break;
     }
 }
@@ -623,7 +626,9 @@ void CJobRunner::closeEvent(QCloseEvent *e)
     if(PAGE_COMPLETE!=itsStack->currentIndex())
     {
         e->ignore();
-        slotButtonClicked(Cancel);
+        slotButtonClicked(PAGE_CANCEL==itsStack->currentIndex() ?
+                          itsButtonBox->button(QDialogButtonBox::No) :
+                          itsButtonBox->button(QDialogButtonBox::Cancel));
     }
 }
 
@@ -634,26 +639,35 @@ void CJobRunner::setPage(int page, const QString &msg)
     switch(page)
     {
         case PAGE_PROGRESS:
-            setButtons(Cancel);
+            itsButtonBox->setStandardButtons(QDialogButtonBox::Cancel);
+            itsSkipButton->hide();
+            itsAutoSkipButton->hide();
             break;
         case PAGE_SKIP:
             itsSkipLabel->setText(i18n("<h3>Error</h3>")+QLatin1String("<p>")+msg+QLatin1String("</p>"));
-            setButtons(Cancel|User1|User2);
-            setButtonText(User1, i18n("Skip"));
-            setButtonText(User2, i18n("AutoSkip"));
+            itsButtonBox->setStandardButtons(QDialogButtonBox::Cancel);
+            itsSkipButton->show();
+            itsAutoSkipButton->show();
             break;
         case PAGE_ERROR:
             itsErrorLabel->setText(i18n("<h3>Error</h3>")+QLatin1String("<p>")+msg+QLatin1String("</p>"));
-            setButtons(Cancel);
+            itsButtonBox->setStandardButtons(QDialogButtonBox::Cancel);
+            itsSkipButton->hide();
+            itsAutoSkipButton->hide();
             break;
         case PAGE_CANCEL:
-            setButtons(Yes|No);
+            itsButtonBox->setStandardButtons(QDialogButtonBox::Yes|QDialogButtonBox::No);
+            itsSkipButton->hide();
+            itsAutoSkipButton->hide();
             break;
         case PAGE_COMPLETE:
-            if(!itsDontShowFinishedMsg || itsDontShowFinishedMsg->isChecked())
-                KDialog::accept();
-            else
-                setButtons(Close);
+            if(!itsDontShowFinishedMsg || itsDontShowFinishedMsg->isChecked()) {
+                QDialog::accept();
+            } else {
+                itsButtonBox->setStandardButtons(QDialogButtonBox::Close);
+                itsSkipButton->hide();
+                itsAutoSkipButton->hide();
+            }
             break;
     }
 }

@@ -26,13 +26,15 @@
 
 #include <QThread>
 #include <QTreeWidget>
-#include <KDialog>
+#include <QDialog>
 #include "Misc.h"
 #include "JobRunner.h"
 
 class QLabel;
 class QMenu;
 class QAction;
+class QDialogButtonBox;
+class QAbstractButton;
 
 namespace KFI
 {
@@ -150,7 +152,7 @@ class CFontFileListView : public QTreeWidget
             *itsUnMarkAct;
 };
 
-class CDuplicatesDialog : public KDialog
+class CDuplicatesDialog : public QDialog
 {
     Q_OBJECT
 
@@ -164,10 +166,12 @@ class CDuplicatesDialog : public KDialog
     private Q_SLOTS:
 
     void scanFinished();
-    void slotButtonClicked(int button);
+    void slotButtonClicked(QAbstractButton *button);
+    void enableButtonOk(bool);
 
     private:
 
+    QDialogButtonBox  *itsButtonBox;
     CActionLabel      *itsActionLabel;
     CFontFileList     *itsFontFileList;
     QLabel            *itsLabel;
