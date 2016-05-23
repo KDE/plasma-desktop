@@ -51,7 +51,6 @@
 //#include <KFileMetaInfo>
 #include <KZip>
 #include <KTempDir>
-#include <KStandardDirs>
 #include <KPluginFactory>
 #include <KPluginLoader>
 #include <KStandardAction>
@@ -291,7 +290,7 @@ void CFontViewPart::timeout()
                             if(entry && entry->isFile())
                             {
                                 delete itsTempDir;
-                                itsTempDir=new KTempDir(KStandardDirs::locateLocal("tmp", KFI_TMP_DIR_PREFIX));
+                                itsTempDir=new KTempDir(QDir::tempPath() + "/" KFI_TMP_DIR_PREFIX);
                                 itsTempDir->setAutoRemove(true);
 
                                 ((KArchiveFile *)entry)->copyTo(itsTempDir->name());

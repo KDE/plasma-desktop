@@ -29,7 +29,7 @@
 #include <QDomDocument>
 #include <QDomElement>
 #include <QDomNode>
-#include <KStandardDirs>
+#include <QStandardPaths>
 #include <KSaveFile>
 #include <KShell>
 #include <KDebug>
@@ -94,7 +94,7 @@ void Folder::init(bool system, bool systemBus)
             itsDisabledCfg.name=QString::fromLatin1(KFI_ROOT_CFG_DIR)+fileName;
         else
         {
-            QString path=KGlobal::dirs()->localxdgconfdir();
+            QString path=QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QLatin1Char('/');
 
             if(!Misc::dExists(path))
                 Misc::createDir(path);

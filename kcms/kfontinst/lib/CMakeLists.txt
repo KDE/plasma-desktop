@@ -1,6 +1,8 @@
 set(kfontinst_LIB_SRCS Misc.cpp Fc.cpp Family.cpp Style.cpp File.cpp WritingSystems.cpp)
 set(kfontinstui_LIB_SRCS FcEngine.cpp )
 
+configure_file(config-paths.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-paths.h)
+
 add_library(kfontinst SHARED ${kfontinst_LIB_SRCS})
 target_link_libraries(kfontinst
     Qt5::Xml

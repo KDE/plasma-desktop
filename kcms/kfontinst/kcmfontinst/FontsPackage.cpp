@@ -23,7 +23,7 @@
 
 #include <KZip>
 #include <KTempDir>
-#include <KStandardDirs>
+#include <QDir>
 #include "FontsPackage.h"
 #include "KfiConstants.h"
 #include "Misc.h"
@@ -64,7 +64,7 @@ QSet<QUrl> extract(const QString &fileName, KTempDir **tempDir)
                     {
                         if(!(*tempDir))
                         {
-                            (*tempDir)=new KTempDir(KStandardDirs::locateLocal("tmp", KFI_TMP_DIR_PREFIX));
+                            (*tempDir)=new KTempDir(QDir::tempPath() + "/" KFI_TMP_DIR_PREFIX);
                             (*tempDir)->setAutoRemove(true);
                         }
 

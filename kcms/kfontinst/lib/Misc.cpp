@@ -22,6 +22,7 @@
  */
 
 #include "Misc.h"
+#include "config-paths.h"
 #include <QtCore/QSet>
 #include <QtCore/QMap>
 #include <QtCore/QVector>
@@ -32,7 +33,7 @@
 #include <QtCore/QTextStream>
 #include <QtCore/QProcess>
 #include <QtCore/QTemporaryFile>
-#include <KStandardDirs>
+#include <QtCore/QStandardPaths>
 #include <kde_file.h>
 #include <unistd.h>
 #include <ctype.h>
@@ -114,13 +115,16 @@ QString getFile(const QString &f)
 
 bool createDir(const QString &dir)
 {
+    if (!QDir().mkpath(dir))
+        return false;
     //
-    // Clear any umask before dir is created
+    // Clear any umask before setting dir perms
     mode_t oldMask(umask(0000));
-    bool   status(KStandardDirs::makeDir(dir, DIR_PERMS));
+    const QByteArray d = QFile::encodeName(dir);
+    ::chmod(d.constData(), DIR_PERMS);
     // Reset umask
     ::umask(oldMask);
-    return status;
+    return true;
 }
 
 void setFilePerms(const QByteArray &f)
@@ -475,8 +479,12 @@ QString app(const QString &name, const char *path)
 {
     static QMap<QString, QString> apps;
     
-    if(!apps.contains(name))
-        apps[name]=KStandardDirs::findExe(name, path ? KStandardDirs::installPath(path) : QString());
+    if(!apps.contains(name)) {
+        QStringList installPaths;
+        if (qstrcmp(path, "libexec") == 0)
+            installPaths.append(KFONTINST_LIBEXEC_DIR);
+        apps[name] = QStandardPaths::findExecutable(name, installPaths);
+    }
     return apps[name];
 }
 

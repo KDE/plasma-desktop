@@ -27,7 +27,6 @@
 #include "Fc.h"
 #include "ActionLabel.h"
 #include <kio/netaccess.h>
-#include <KStandardDirs>
 #include <KTempDir>
 #include <KSharedConfig>
 #include <KConfigGroup>
@@ -687,7 +686,7 @@ QString CJobRunner::fileName(const QUrl &url)
             // Need to do actual download...
             if(!itsTempDir)
             {
-                itsTempDir=new KTempDir(KStandardDirs::locateLocal("tmp", "fontinst"));
+                itsTempDir=new KTempDir(QDir::tempPath() + "/fontinst");
                 itsTempDir->setAutoRemove(true);
             }
 

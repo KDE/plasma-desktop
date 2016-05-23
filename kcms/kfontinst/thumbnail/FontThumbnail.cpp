@@ -31,8 +31,8 @@
 #include <KZip>
 #include <KTempDir>
 #include <KMimeType>
-#include <KStandardDirs>
 #include <KDebug>
+#include <QDir>
 
 #define KFI_DBUG kDebug(7115)
 
@@ -83,7 +83,7 @@ bool CFontThumbnail::create(const QString &path, int width, int height, QImage &
                         if(entry && entry->isFile())
                         {
                             delete tempDir;
-                            tempDir=new KTempDir(KStandardDirs::locateLocal("tmp", KFI_TMP_DIR_PREFIX));
+                            tempDir=new KTempDir(QDir::tempPath() + "/" KFI_TMP_DIR_PREFIX);
                             tempDir->setAutoRemove(true);
 
                             ((KArchiveFile *)entry)->copyTo(tempDir->name());

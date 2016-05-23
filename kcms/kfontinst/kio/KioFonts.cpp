@@ -26,7 +26,6 @@
 #include <KComponentData>
 #include <KDebug>
 #include <KMimeType>
-#include <KStandardDirs>
 #include <KTemporaryFile>
 #include <KTempDir>
 #include <KZip>
@@ -232,8 +231,8 @@ void CKioFonts::put(const QUrl &url, int /*permissions*/, KIO::JobFlags /*flags*
     {
         if(!itsTempDir)
         {
-            itsTempDir=new KTempDir(KStandardDirs::locateLocal("tmp",
-                                    QString::fromLatin1("kio_fonts_")+QString::number(getpid())));
+            itsTempDir=new KTempDir(QDir::tempPath() +
+                                    QString::fromLatin1("/kio_fonts_")+QString::number(getpid()));
             itsTempDir->setAutoRemove(true);
         }
 
