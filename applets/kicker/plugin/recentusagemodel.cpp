@@ -273,7 +273,7 @@ bool RecentUsageModel::trigger(int row, const QString &actionId, const QVariant 
         const QString &resource = resourceAt(row);
 
         if (!resource.startsWith(QLatin1String("applications:"))) {
-            new KRun(QUrl(resource), 0);
+            new KRun(docData(resource, Kicker::UrlRole).toUrl(), 0);
             return true;
         }
 
