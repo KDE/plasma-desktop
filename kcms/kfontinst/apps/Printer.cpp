@@ -25,6 +25,7 @@
 #include "Printer.h"
 #include "FcEngine.h"
 #include "ActionLabel.h"
+#include <QApplication>
 #include <QTextStream>
 #include <QFile>
 #include <QPainter>
@@ -38,9 +39,9 @@
 #include <QGridLayout>
 #include <QProgressBar>
 #include <QCloseEvent>
-#include <KCmdLineArgs>
-#include <k4aboutdata.h>
-#include <KApplication>
+#include <QCommandLineParser>
+#include <QCommandLineOption>
+#include <KAboutData>
 
 #include "config-workspace.h"
 
@@ -424,29 +425,41 @@ void CPrinter::closeEvent(QCloseEvent *e)
     slotCancelClicked();
 }
 
-static K4AboutData aboutData("kfontprint", KFI_CATALOGUE, ki18n("Font Printer"), WORKSPACE_VERSION_STRING, ki18n("Simple font printer"),
-                             K4AboutData::License_GPL, ki18n("(C) Craig Drummond, 2007"));
-
 int main(int argc, char **argv)
 {
-    KCmdLineArgs::init(argc, argv, &aboutData);
+    QApplication app(argc, argv);
 
-    KCmdLineOptions options;
-    options.add("embed <winid>", ki18n("Makes the dialog transient for an X app specified by winid"));
-    options.add("size <index>", ki18n("Size index to print fonts"));
-    options.add("pfont <font>", ki18n("Font to print, specified as \"Family,Style\" where Style is a 24-bit decimal number composed as: <weight><width><slant>")); //krazy:exclude=i18ncheckarg
-    options.add("listfile <file>", ki18n("File containing list of fonts to print"));
-    options.add("deletefile", ki18n("Remove file containing list of fonts to print"));
-    KCmdLineArgs::addCmdLineOptions(options);
+    KLocalizedString::setApplicationDomain(KFI_CATALOGUE);
+    KAboutData aboutData("kfontprint", i18n("Font Printer"), WORKSPACE_VERSION_STRING, i18n("Simple font printer"),
+                         KAboutLicense::GPL, i18n("(C) Craig Drummond, 2007"));
+    KAboutData::setApplicationData(aboutData);
 
-    KApplication       app;
-    KCmdLineArgs       *args(KCmdLineArgs::parsedArgs());
+    QGuiApplication::setWindowIcon(QIcon::fromTheme("kfontprint"));
+
+    QCommandLineParser parser;
+    parser.addVersionOption();
+    parser.addHelpOption();
+    const QCommandLineOption embedOption(QLatin1String("embed"), i18n("Makes the dialog transient for an X app specified by winid"), QLatin1String("winid"));
+    parser.addOption(embedOption);
+    const QCommandLineOption sizeOption(QLatin1String("size"), i18n("Size index to print fonts"), QLatin1String("index"));
+    parser.addOption(sizeOption);
+    const QCommandLineOption pfontOption(QLatin1String("pfont"), i18n("Font to print, specified as \"Family,Style\" where Style is a 24-bit decimal number composed as: <weight><width><slant>"), QLatin1String("font"));
+    parser.addOption(pfontOption);
+    const QCommandLineOption listfileOption(QLatin1String("listfile"), i18n("File containing list of fonts to print"), QLatin1String("file"));
+    parser.addOption(listfileOption);
+    const QCommandLineOption deletefileOption(QLatin1String("deletefile"), i18n("Remove file containing list of fonts to print"));
+    parser.addOption(deletefileOption);
+
+    aboutData.setupCommandLine(&parser);
+    parser.process(app);
+    aboutData.processCommandLine(&parser);
+
     QList<Misc::TFont> fonts;
-    int                size(args->getOption("size").toInt());
+    int                size(parser.value(sizeOption).toInt());
 
     if(size>-1 && size<256)
     {
-        QString listFile(args->getOption("listfile"));
+        QString listFile(parser.value(listfileOption));
 
         if(listFile.size())
         {
@@ -469,12 +482,12 @@ int main(int argc, char **argv)
                 f.close();
             }
 
-            if(args->isSet("deletefile"))
+            if(parser.isSet(deletefileOption))
                 ::unlink(listFile.toLocal8Bit().constData());
         }
         else
         {
-            QStringList                fl(args->getOptionList("pfont"));
+            QStringList                fl(parser.values(pfontOption));
             QStringList::ConstIterator it(fl.begin()),
                                        end(fl.end());
 
@@ -491,7 +504,7 @@ int main(int argc, char **argv)
 
         if(fonts.count())
         {
-            CPrinter(createParent(args->getOption("embed").toInt(0, 16))).print(fonts, size);
+            CPrinter(createParent(parser.value(embedOption).toInt(0, 16))).print(fonts, size);
 
             return 0;
         }

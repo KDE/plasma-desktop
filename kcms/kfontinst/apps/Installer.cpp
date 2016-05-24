@@ -25,9 +25,10 @@
 #include "Misc.h"
 #include "FontsPackage.h"
 #include <QtCore/QFile>
-#include <KCmdLineArgs>
-#include <k4aboutdata.h>
-#include <KApplication>
+#include <QApplication>
+#include <QCommandLineParser>
+#include <QCommandLineOption>
+#include <KAboutData>
 #include <KMessageBox>
 #include <kio/netaccess.h>
 #include "JobRunner.h"
@@ -119,29 +120,36 @@ CInstaller::~CInstaller()
 
 }
 
-static K4AboutData aboutData("kfontinst", KFI_CATALOGUE, ki18n("Font Installer"), WORKSPACE_VERSION_STRING, ki18n("Simple font installer"),
-                            K4AboutData::License_GPL, ki18n("(C) Craig Drummond, 2007"));
-
 int main(int argc, char **argv)
 {
-    KCmdLineArgs::init(argc, argv, &aboutData);
+    QApplication app(argc, argv);
 
-    KCmdLineOptions options;
-    options.add("embed <winid>", ki18n("Makes the dialog transient for an X app specified by winid"));
-    options.add("+[URL]", ki18n("URL to install"));
-    KCmdLineArgs::addCmdLineOptions(options);
+    KLocalizedString::setApplicationDomain(KFI_CATALOGUE);
+    KAboutData aboutData("kfontinst", i18n("Font Installer"), WORKSPACE_VERSION_STRING, i18n("Simple font installer"),
+                         KAboutLicense::GPL, i18n("(C) Craig Drummond, 2007"));
+    KAboutData::setApplicationData(aboutData);
 
-    QSet<QUrl>   urls;
-    KCmdLineArgs *args(KCmdLineArgs::parsedArgs());
+    QGuiApplication::setWindowIcon(QIcon::fromTheme("preferences-desktop-font-installer"));
 
-    for(int i=0; i < args->count(); i++)
-        urls.insert(args->url(i));
+    QCommandLineParser parser;
+    parser.addVersionOption();
+    parser.addHelpOption();
+    const QCommandLineOption embedOption(QLatin1String("embed"), i18n("Makes the dialog transient for an X app specified by winid"), QLatin1String("winid"));
+    parser.addOption(embedOption);
+    parser.addPositionalArgument(QLatin1String("[URL]"), i18n("URL to install"));
 
-    if(urls.count())
+    aboutData.setupCommandLine(&parser);
+    parser.process(app);
+    aboutData.processCommandLine(&parser);
+
+    QSet<QUrl> urls;
+
+    foreach (const QString &arg, parser.positionalArguments())
+        urls.insert(QUrl::fromUserInput(arg, QDir::currentPath()));
+
+    if (urls.count())
     {
-
-        KApplication    app;
-        QString         opt(args->getOption("embed"));
+        QString opt(parser.value(embedOption));
         KFI::CInstaller inst(createParent(opt.size() ? opt.toInt(0, 16) : 0));
 
         return inst.install(urls);

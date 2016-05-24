@@ -32,7 +32,7 @@ target_link_libraries(kfontprint_bin
     kfontinstui
     kfontinst
 )
-target_link_libraries(kfontview_bin KF5::Parts KF5::XmlGui kfontinstui kfontinst )
+target_link_libraries(kfontview_bin KF5::Parts KF5::XmlGui KF5::DBusAddons kfontinstui kfontinst )
 
 install(TARGETS kfontinst_bin ${INSTALL_TARGETS_DEFAULT_ARGS} )
 install(TARGETS kfontprint_bin DESTINATION ${LIBEXEC_INSTALL_DIR} )

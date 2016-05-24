@@ -32,7 +32,7 @@
 #include "CharTip.h"
 #include "FontPreview.h"
 #include "UnicodeCategories.h"
-#include <KApplication>
+#include <QApplication>
 #include <QLabel>
 #include <QToolTip>
 #include <QTimer>
@@ -230,7 +230,7 @@ void CCharTip::showTip()
     itsTimer->setSingleShot(true);
     itsTimer->start(15000);
 
-    kapp->installEventFilter(this);
+    qApp->installEventFilter(this);
     reposition();
     show();
 }
@@ -238,7 +238,7 @@ void CCharTip::showTip()
 void CCharTip::hideTip()
 {
     itsTimer->stop();
-    kapp->removeEventFilter(this);
+    qApp->removeEventFilter(this);
     hide();
 }
 
