@@ -29,7 +29,7 @@
 #include <QPalette>
 #include <QFile>
 #include <KZip>
-#include <KTempDir>
+#include <QTemporaryDir>
 #include <KMimeType>
 #include <KDebug>
 #include <QDir>
@@ -54,7 +54,7 @@ CFontThumbnail::CFontThumbnail()
 bool CFontThumbnail::create(const QString &path, int width, int height, QImage &img)
 {
     QString  realPath(path);
-    KTempDir *tempDir = 0;
+    QTemporaryDir *tempDir = 0;
 
     KFI_DBUG << "Create font thumbnail for:" << path << endl;
 
@@ -83,21 +83,21 @@ bool CFontThumbnail::create(const QString &path, int width, int height, QImage &
                         if(entry && entry->isFile())
                         {
                             delete tempDir;
-                            tempDir=new KTempDir(QDir::tempPath() + "/" KFI_TMP_DIR_PREFIX);
+                            tempDir=new QTemporaryDir(QDir::tempPath() + "/" KFI_TMP_DIR_PREFIX);
                             tempDir->setAutoRemove(true);
 
-                            ((KArchiveFile *)entry)->copyTo(tempDir->name());
+                            ((KArchiveFile *)entry)->copyTo(tempDir->path());
 
-                            QString mime(KMimeType::findByPath(tempDir->name()+entry->name())->name());
+                            QString mime(KMimeType::findByPath(tempDir->path()+QLatin1Char('/')+entry->name())->name());
 
                             if(mime=="application/x-font-ttf" || mime=="application/x-font-otf" ||
                                mime=="application/x-font-type1")
                             {
-                                realPath=tempDir->name()+entry->name();
+                                realPath=tempDir->path()+QLatin1Char('/')+entry->name();
                                 break;
                             }
                             else
-                                ::unlink(QFile::encodeName(tempDir->name()+entry->name()).data());
+                                ::unlink(QFile::encodeName(tempDir->path()+QLatin1Char('/')+entry->name()).data());
                         }
                     }
                 }

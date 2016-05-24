@@ -24,7 +24,7 @@
  * Boston, MA 02110-1301, USA.
  */
 
-class KTempDir;
+class QTemporaryDir;
 
 #include <QtCore/QSet>
 #include <QUrl>
@@ -34,7 +34,7 @@ namespace KFI
 
 namespace FontsPackage
 {
-    QSet<QUrl> extract(const QString &fileName, KTempDir **tempDir);
+    QSet<QUrl> extract(const QString &fileName, QTemporaryDir **tempDir);
 }
 
 }

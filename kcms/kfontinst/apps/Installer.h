@@ -28,7 +28,7 @@
 #include <QUrl>
 
 class QWidget;
-class KTempDir;
+class QTemporaryDir;
 
 namespace KFI
 {
@@ -45,7 +45,7 @@ class CInstaller
     private:
 
     QWidget  *itsParent;
-    KTempDir *itsTempDir;
+    QTemporaryDir *itsTempDir;
 };
 
 }

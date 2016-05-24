@@ -27,7 +27,7 @@
 #include "Fc.h"
 #include "ActionLabel.h"
 #include <kio/netaccess.h>
-#include <KTempDir>
+#include <QTemporaryDir>
 #include <KSharedConfig>
 #include <KConfigGroup>
 #include <kio/global.h>
@@ -686,11 +686,11 @@ QString CJobRunner::fileName(const QUrl &url)
             // Need to do actual download...
             if(!itsTempDir)
             {
-                itsTempDir=new KTempDir(QDir::tempPath() + "/fontinst");
+                itsTempDir=new QTemporaryDir(QDir::tempPath() + "/fontinst");
                 itsTempDir->setAutoRemove(true);
             }
 
-            QString tempName(itsTempDir->name()+QChar('/')+Misc::getFile(url.path()));
+            QString tempName(itsTempDir->path()+QLatin1Char('/')+Misc::getFile(url.path()));
             if(KIO::NetAccess::download(url, tempName, 0L))
                 return tempName;
             else

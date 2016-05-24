@@ -27,7 +27,7 @@
 #include <KDebug>
 #include <KMimeType>
 #include <KTemporaryFile>
-#include <KTempDir>
+#include <QTemporaryDir>
 #include <KZip>
 #include <kde_file.h>
 #include <unistd.h>
@@ -231,12 +231,12 @@ void CKioFonts::put(const QUrl &url, int /*permissions*/, KIO::JobFlags /*flags*
     {
         if(!itsTempDir)
         {
-            itsTempDir=new KTempDir(QDir::tempPath() +
-                                    QString::fromLatin1("/kio_fonts_")+QString::number(getpid()));
+            itsTempDir=new QTemporaryDir(QDir::tempPath() +
+                                         QString::fromLatin1("/kio_fonts_")+QString::number(getpid()));
             itsTempDir->setAutoRemove(true);
         }
 
-        QString tempFile(itsTempDir->name()+QChar('/')+url.fileName());
+        QString tempFile(itsTempDir->path()+QLatin1Char('/')+url.fileName());
         QFile   dest(tempFile);
 
         if (dest.open(QIODevice::WriteOnly))

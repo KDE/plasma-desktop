@@ -41,7 +41,7 @@ class QProcess;
 class QAction;
 class KAction;
 class KIntNumInput;
-class KTempDir;
+class QTemporaryDir;
 
 namespace KFI
 {
@@ -98,7 +98,7 @@ class CFontViewPart : public KParts::ReadOnlyPart
     BrowserExtension   *itsExtension;
     QProcess           *itsProc;
 //    KUrl               itsMetaUrl;
-    KTempDir           *itsTempDir;
+    QTemporaryDir      *itsTempDir;
     Misc::TFont        itsFontDetails;
     FontInstInterface  *itsInterface;
     bool               itsOpening;

@@ -36,7 +36,7 @@ class QCheckBox;
 class QDialogButtonBox;
 class QAbstractButton;
 class KJob;
-class KTempDir;
+class QTemporaryDir;
 
 namespace KFI
 {
@@ -130,7 +130,7 @@ class CJobRunner : public QDialog
     bool                    itsAutoSkip,
                             itsCancelClicked,
                             itsModified;
-    KTempDir                *itsTempDir;
+    QTemporaryDir           *itsTempDir;
     QString                 itsCurrentFile;
     CActionLabel            *itsActionLabel;
     QStackedWidget          *itsStack;

@@ -22,7 +22,7 @@
  */
 
 #include <KZip>
-#include <KTempDir>
+#include <QTemporaryDir>
 #include <QDir>
 #include "FontsPackage.h"
 #include "KfiConstants.h"
@@ -34,7 +34,7 @@ namespace KFI
 namespace FontsPackage
 {
 
-QSet<QUrl> extract(const QString &fileName, KTempDir **tempDir)
+QSet<QUrl> extract(const QString &fileName, QTemporaryDir **tempDir)
 {
     QSet<QUrl> urls;
 
@@ -64,11 +64,11 @@ QSet<QUrl> extract(const QString &fileName, KTempDir **tempDir)
                     {
                         if(!(*tempDir))
                         {
-                            (*tempDir)=new KTempDir(QDir::tempPath() + "/" KFI_TMP_DIR_PREFIX);
+                            (*tempDir)=new QTemporaryDir(QDir::tempPath() + "/" KFI_TMP_DIR_PREFIX);
                             (*tempDir)->setAutoRemove(true);
                         }
 
-                        ((KArchiveFile *)entry)->copyTo((*tempDir)->name());
+                        ((KArchiveFile *)entry)->copyTo((*tempDir)->path());
 
                         QString name(entry->name());
 
@@ -77,12 +77,12 @@ QSet<QUrl> extract(const QString &fileName, KTempDir **tempDir)
                         // unhide 1st!
                         if(Misc::isHidden(name))
                         {
-                            ::rename(QFile::encodeName((*tempDir)->name()+name).data(),
-                                     QFile::encodeName((*tempDir)->name()+name.mid(1)).data());
+                            ::rename(QFile::encodeName((*tempDir)->path()+QLatin1Char('/')+name).data(),
+                                     QFile::encodeName((*tempDir)->path()+QLatin1Char('/')+name.mid(1)).data());
                             name=name.mid(1);
                         }
 
-                        urls.insert(QUrl((*tempDir)->name()+name));
+                        urls.insert(QUrl((*tempDir)->path()+QLatin1Char('/')+name));
                     }
                 }
             }

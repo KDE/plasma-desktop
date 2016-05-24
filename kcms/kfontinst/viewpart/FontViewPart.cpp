@@ -50,7 +50,7 @@
 #include <KMimeType>
 //#include <KFileMetaInfo>
 #include <KZip>
-#include <KTempDir>
+#include <QTemporaryDir>
 #include <KPluginFactory>
 #include <KPluginLoader>
 #include <KStandardAction>
@@ -290,23 +290,23 @@ void CFontViewPart::timeout()
                             if(entry && entry->isFile())
                             {
                                 delete itsTempDir;
-                                itsTempDir=new KTempDir(QDir::tempPath() + "/" KFI_TMP_DIR_PREFIX);
+                                itsTempDir=new QTemporaryDir(QDir::tempPath() + "/" KFI_TMP_DIR_PREFIX);
                                 itsTempDir->setAutoRemove(true);
 
-                                ((KArchiveFile *)entry)->copyTo(itsTempDir->name());
+                                ((KArchiveFile *)entry)->copyTo(itsTempDir->path());
 
-                                QString mime(KMimeType::findByPath(itsTempDir->name()+entry->name())->name());
+                                QString mime(KMimeType::findByPath(itsTempDir->path()+QLatin1Char('/')+entry->name())->name());
 
                                 if(mime=="application/x-font-ttf" || mime=="application/x-font-otf" ||
                                    mime=="application/x-font-type1")
                                 {
-                                    fontFile=itsTempDir->name()+entry->name();
-                                    //setLocalFilePath(itsTempDir->name()+entry->name());
+                                    fontFile=itsTempDir->path()+QLatin1Char('/')+entry->name();
+                                    //setLocalFilePath(itsTempDir->path()+QLatin1Char('/')+entry->name());
 //                                    itsMetaUrl=QUrl::fromLocalFile(localFilePath());
                                     break;
                                 }
                                 else
-                                    ::unlink(QFile::encodeName(itsTempDir->name()+entry->name()).data());
+                                    ::unlink(QFile::encodeName(itsTempDir->path()+QLatin1Char('/')+entry->name()).data());
                             }
                         }
                     }

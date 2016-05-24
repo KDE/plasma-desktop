@@ -34,7 +34,7 @@
 
 class KPushButton;
 class KProgressDialog;
-class KTempDir;
+class QTemporaryDir;
 class KToggleAction;
 class KActionMenu;
 class KAction;
@@ -128,7 +128,7 @@ class CKCmFontInst : public KCModule
     KIO::Job         *itsJob;
     KProgressDialog  *itsProgress;
     CUpdateDialog    *itsUpdateDialog;
-    KTempDir         *itsTempDir;
+    QTemporaryDir    *itsTempDir;
     QProcess         *itsPrintProc;
     QSet<QString>    itsDeletedFonts;
     QList<QUrl>       itsModifiedUrls;

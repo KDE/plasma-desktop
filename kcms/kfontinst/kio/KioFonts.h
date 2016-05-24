@@ -28,7 +28,7 @@
 #include <QtDBus/QtDBus>
 #include <sys/types.h>
 
-class KTempDir;
+class QTemporaryDir;
 class QUrl;
 
 namespace KFI
@@ -76,7 +76,7 @@ class CKioFonts : public KIO::SlaveBase
     private:
 
     FontInstInterface       *itsInterface;
-    KTempDir                *itsTempDir;
+    QTemporaryDir           *itsTempDir;
     QHash<uid_t, QString>   itsUserCache;
     QHash<gid_t, QString>   itsGroupCache;
 };
