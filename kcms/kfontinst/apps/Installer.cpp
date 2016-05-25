@@ -30,7 +30,7 @@
 #include <QCommandLineOption>
 #include <KAboutData>
 #include <KMessageBox>
-#include <kio/netaccess.h>
+#include <KIO/StatJob>
 #include "JobRunner.h"
 #include "CreateParent.h"
 #include "config-workspace.h"
@@ -70,7 +70,9 @@ int CInstaller::install(const QSet<QUrl> &urls)
 
     for(; it!=end; ++it)
     {
-        QUrl local(KIO::NetAccess::mostLocalUrl(*it, NULL));
+        auto job = KIO::mostLocalUrl(*it);
+        job->exec();
+        QUrl local = job->mostLocalUrl();
         bool package(false);
 
         if(local.isLocalFile())

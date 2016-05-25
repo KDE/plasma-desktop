@@ -49,7 +49,8 @@
 #include <KFileDialog>
 #include <KMessageBox>
 #include <KIO/Job>
-#include <kio/netaccess.h>
+#include <KIO/StatJob>
+#include <KJobWidgets>
 #include <KPushButton>
 #include <KGlobal>
 #include <KGuiItem>
@@ -496,7 +497,10 @@ void CKCmFontInst::addFonts()
         {
             if(KFI_KIO_FONTS_PROTOCOL!=(*it).scheme()) // Do not try to install from fonts:/ !!!
             {
-                QUrl url(KIO::NetAccess::mostLocalUrl(*it, this));
+                auto job = KIO::mostLocalUrl(*it);
+                KJobWidgets::setWindow(job, this);
+                job->exec();
+                QUrl url = job->mostLocalUrl();
 
                 if(url.isLocalFile())
                 {

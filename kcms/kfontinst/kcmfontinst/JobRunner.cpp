@@ -26,11 +26,13 @@
 #include "Misc.h"
 #include "Fc.h"
 #include "ActionLabel.h"
-#include <kio/netaccess.h>
 #include <QTemporaryDir>
 #include <KSharedConfig>
 #include <KConfigGroup>
 #include <kio/global.h>
+#include <KIO/StatJob>
+#include <KIO/FileCopyJob>
+#include <KJobWidgets>
 #include <QGridLayout>
 #include <QProgressBar>
 #include <QLabel>
@@ -261,10 +263,20 @@ void CJobRunner::getAssociatedUrls(const QUrl &url, QList<QUrl> &list, bool afmA
 
         for(e=0; afm[e]; ++e)
         {
-            QUrl          statUrl(url);
-            KIO::UDSEntry uds;
+            QUrl statUrl(url);
             statUrl.setPath(Misc::changeExt(url.path(), afm[e]));
-            if(localFile ? Misc::fExists(statUrl.toLocalFile()) : KIO::NetAccess::stat(statUrl, uds, widget))
+
+            bool urlExists = false;
+            if (localFile) {
+                urlExists = Misc::fExists(statUrl.toLocalFile());
+            } else {
+                auto job = KIO::stat(statUrl);
+                KJobWidgets::setWindow(job, widget);
+                job->exec();
+                urlExists = !job->error();
+            }
+
+            if (urlExists)
             {
                 list.append(statUrl);
                 gotAfm=true;
@@ -275,10 +287,20 @@ void CJobRunner::getAssociatedUrls(const QUrl &url, QList<QUrl> &list, bool afmA
         if(afmAndPfm || !gotAfm)
             for(e=0; pfm[e]; ++e)
             {
-                QUrl          statUrl(url);
-                KIO::UDSEntry uds;
+                QUrl statUrl(url);
                 statUrl.setPath(Misc::changeExt(url.path(), pfm[e]));
-                if(localFile ? Misc::fExists(statUrl.toLocalFile()) : KIO::NetAccess::stat(statUrl, uds, widget))
+
+                bool urlExists = false;
+                if (localFile) {
+                    urlExists = Misc::fExists(statUrl.toLocalFile());
+                } else {
+                    auto job = KIO::stat(statUrl);
+                    KJobWidgets::setWindow(job, widget);
+                    job->exec();
+                    urlExists = !job->error();
+                }
+
+                if (urlExists)
                 {
                     list.append(statUrl);
                     break;
@@ -677,7 +699,9 @@ QString CJobRunner::fileName(const QUrl &url)
         return url.toLocalFile();
     else
     {
-        QUrl local(KIO::NetAccess::mostLocalUrl(url, 0L));
+        auto job = KIO::mostLocalUrl(url);
+        job->exec();
+        QUrl local = job->mostLocalUrl();
 
         if(local.isLocalFile())
             return local.toLocalFile(); // Yipee! no need to download!!
@@ -691,7 +715,8 @@ QString CJobRunner::fileName(const QUrl &url)
             }
 
             QString tempName(itsTempDir->path()+QLatin1Char('/')+Misc::getFile(url.path()));
-            if(KIO::NetAccess::download(url, tempName, 0L))
+            auto job = KIO::file_copy(url, QUrl::fromLocalFile(tempName), -1, KIO::Overwrite);
+            if (job->exec())
                 return tempName;
             else
                 return QString();

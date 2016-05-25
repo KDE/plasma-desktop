@@ -28,7 +28,6 @@
 #include <QTextStream>
 #include <QX11Info>
 #include <KConfig>
-#include <kio/netaccess.h>
 #include <math.h>
 #include <X11/Xlib.h>
 #include <X11/Xft/Xft.h>

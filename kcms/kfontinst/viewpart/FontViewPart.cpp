@@ -37,9 +37,10 @@
 #include <QTimer>
 #include <QGroupBox>
 #include <QProcess>
-#include <kio/netaccess.h>
 #include <KIO/Job>
+#include <KIO/StatJob>
 #include <KIO/JobUiDelegate>
+#include <KJobWidgets>
 #include <KGlobal>
 #include <KActionCollection>
 #include <KComponentData>
@@ -170,6 +171,14 @@ CFontViewPart::~CFontViewPart()
     itsInterface=NULL;
 }
 
+static inline QUrl mostLocalUrl(const QUrl &url, QWidget *widget)
+{
+    auto job = KIO::mostLocalUrl(url);
+    KJobWidgets::setWindow(job, widget);
+    job->exec();
+    return job->mostLocalUrl();
+}
+
 bool CFontViewPart::openUrl(const QUrl &url)
 {
     if (!url.isValid() || !closeUrl())
@@ -180,7 +189,7 @@ bool CFontViewPart::openUrl(const QUrl &url)
 
     itsFontDetails=FC::decode(url);
     if(!itsFontDetails.family.isEmpty() ||
-       KFI_KIO_FONTS_PROTOCOL==url.scheme() || KIO::NetAccess::mostLocalUrl(url, itsFrame).isLocalFile())
+       KFI_KIO_FONTS_PROTOCOL==url.scheme() || mostLocalUrl(url, itsFrame).isLocalFile())
     {
         setUrl(url);
         emit started(0);
@@ -200,6 +209,16 @@ bool CFontViewPart::openFile()
     // during initial start-up. Bug report 111535 indicates that calling "konqueror <font>" crashes.
     itsInstallButton->setEnabled(false);
     QTimer::singleShot(0, this, SLOT(timeout()));
+    return true;
+}
+
+static inline bool statUrl(const QUrl &url, KIO::UDSEntry *udsEntry)
+{
+    auto job = KIO::stat(url);
+    job->exec();
+    if (job->error())
+        return false;
+    *udsEntry = job->statResult();
     return true;
 }
 
@@ -229,7 +248,7 @@ void CFontViewPart::timeout()
     else if(isFonts)
     {
         KIO::UDSEntry udsEntry;
-        bool          found=KIO::NetAccess::stat(url(), udsEntry, NULL);
+        bool found = statUrl(url(), &udsEntry);
 
         if(!found)
         {
@@ -238,9 +257,9 @@ void CFontViewPart::timeout()
 
             if(pathList.count()==1)
             {
-                found=KIO::NetAccess::stat(QUrl(QString("fonts:/"+i18n(KFI_KIO_FONTS_SYS)+'/'+pathList[0])), udsEntry, NULL);
-                if(!found)
-                    found=KIO::NetAccess::stat(QUrl(QString("fonts:/"+i18n(KFI_KIO_FONTS_USER)+'/'+pathList[0])), udsEntry, NULL);
+                found = statUrl(QUrl(QString("fonts:/"+i18n(KFI_KIO_FONTS_SYS)+'/'+pathList[0])), &udsEntry);
+                if (!found)
+                    found = statUrl(QUrl(QString("fonts:/"+i18n(KFI_KIO_FONTS_USER)+'/'+pathList[0])), &udsEntry);
             }
         }
         
