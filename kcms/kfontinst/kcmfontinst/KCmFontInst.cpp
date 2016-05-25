@@ -44,9 +44,9 @@
 #include <QCoreApplication>
 #include <QProcess>
 #include <QTextStream>
+#include <QFileDialog>
 #include <KAboutData>
 #include <KToolBar>
-#include <KFileDialog>
 #include <KMessageBox>
 #include <KIO/Job>
 #include <KIO/StatJob>
@@ -485,7 +485,12 @@ void CKCmFontInst::fontsSelected(const QModelIndexList &list)
 
 void CKCmFontInst::addFonts()
 {
-    QList<QUrl> list=KFileDialog::getOpenUrls(QUrl(), CFontList::fontMimeTypes.join(" "), this, i18n("Add Fonts"));
+    QFileDialog dlg(this, i18n("Add Fonts"));
+    dlg.setFileMode(QFileDialog::ExistingFiles);
+    dlg.setMimeTypeFilters(CFontList::fontMimeTypes);
+    QList<QUrl> list;
+    if (dlg.exec() == QDialog::Accepted)
+        list = dlg.selectedUrls();
 
     if(list.count())
     {
@@ -748,8 +753,13 @@ void CKCmFontInst::zipGroup()
 
         if(grp)
         {
-            QString fileName=KFileDialog::getSaveFileName(QUrl::fromLocalFile(grp->name()), QStringLiteral("application/zip"), this, i18n("Export Group"),
-                                                          KFileDialog::ConfirmOverwrite);
+            QFileDialog dlg(this, i18n("Export Group"));
+            dlg.setAcceptMode(QFileDialog::AcceptSave);
+            dlg.setDirectoryUrl(QUrl::fromLocalFile(grp->name()));
+            dlg.setMimeTypeFilters(QStringList() << QStringLiteral("application/zip"));
+            QString fileName;
+            if (dlg.exec() == QDialog::Accepted)
+                fileName = dlg.selectedFiles().value(0);
 
             if(!fileName.isEmpty())
             {

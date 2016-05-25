@@ -28,7 +28,6 @@
 #include <KDBusService>
 #include <KPluginLoader>
 #include <KPluginFactory>
-#include <KFileDialog>
 #include <KStandardAction>
 #include <KActionCollection>
 #include <KShortcutsDialog>
@@ -36,6 +35,7 @@
 #include <KSharedConfig>
 #include <KParts/BrowserExtension>
 #include <QApplication>
+#include <QFileDialog>
 #include <QUrl>
 #include <QAction>
 #include <QCommandLineParser>
@@ -75,11 +75,18 @@ CViewer::CViewer()
 
 void CViewer::fileOpen()
 {
-    QUrl url(KFileDialog::getOpenUrl(QUrl(), "application/x-font-ttf application/x-font-otf "
-                                             "application/x-font-type1 "
-                                             "application/x-font-bdf application/x-font-pcf ",
-                                     this, i18n("Select Font to View")));
-    showUrl(url);
+    QFileDialog dlg(this, i18n("Select Font to View"));
+    dlg.setFileMode(QFileDialog::ExistingFile);
+    dlg.setMimeTypeFilters(QStringList() << "application/x-font-ttf"
+                                         << "application/x-font-otf"
+                                         << "application/x-font-type1"
+                                         << "application/x-font-bdf"
+                                         << "application/x-font-pcf");
+    if (dlg.exec() == QDialog::Accepted) {
+        QUrl url = dlg.selectedUrls().value(0);
+        if (url.isValid())
+            showUrl(url);
+    }
 }
 
 void CViewer::showUrl(const QUrl &url)
