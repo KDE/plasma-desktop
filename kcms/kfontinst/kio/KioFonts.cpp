@@ -23,9 +23,9 @@
 
 #include <QFile>
 #include <QCoreApplication>
+#include <QMimeDatabase>
 #include <QDebug>
 #include <KComponentData>
-#include <KMimeType>
 #include <KTemporaryFile>
 #include <QTemporaryDir>
 #include <KZip>
@@ -424,7 +424,10 @@ void CKioFonts::get(const QUrl &url)
             {
                 // Determine the mimetype of the file to be retrieved, and emit it.
                 // This is mandatory in all slaves (for KRun/BrowserRun to work).
-                emit mimeType(KMimeType::findByPath(realPathC, buff.st_mode)->name());
+                // This code can be optimized by using QFileInfo instead of buff above
+                // and passing it to mimeTypeForFile() instead of realPath.
+                QMimeDatabase db;
+                emit mimeType(db.mimeTypeForFile(realPath).name());
 
                 totalSize(buff.st_size);
 
@@ -718,10 +721,11 @@ bool CKioFonts::createUDSEntry(KIO::UDSEntry &entry, EFolder folder, const Famil
                 mt="application/x-font-bdf";
             else
             {
-                // File extension check failed, use kmimetype to read contents...
-                KMimeType::Ptr mime=KMimeType::findByPath((*it).path());
-                QStringList    patterns=mime->patterns();
-                mt=mime->name();
+                // File extension check failed, use QMimeDatabase to read contents...
+                QMimeDatabase db;
+                QMimeType mime = db.mimeTypeForFile((*it).path());
+                QStringList patterns = mime.globPatterns();
+                mt = mime.name();
                 if(patterns.size()>0)
                     extension=(*patterns.begin()).remove("*");
             }

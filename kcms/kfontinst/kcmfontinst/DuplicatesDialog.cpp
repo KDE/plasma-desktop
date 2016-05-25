@@ -31,11 +31,11 @@
 #include <KIconLoader>
 #include <KMessageBox>
 #include <KFileItem>
-#include <KMimeType>
 #include <KPropertiesDialog>
 #include <KShell>
 #include <QLabel>
 #include <KFormat>
+#include <QMimeDatabase>
 #include <QGridLayout>
 #include <QDir>
 #include <QFileInfoList>
@@ -567,11 +567,12 @@ void CFontFileListView::properties()
     QList<QTreeWidgetItem *> items(selectedItems());
     QTreeWidgetItem          *item;
     KFileItemList            files;
+    QMimeDatabase db;
 
     foreach(item, items)
         if(item->parent())
             files.append(KFileItem(QUrl::fromLocalFile(item->text(0)),
-                                   KMimeType::findByPath(item->text(0))->name(),
+                                   db.mimeTypeForFile(item->text(0)).name(),
                                    item->text(COL_LINK).isEmpty() ? S_IFREG : S_IFLNK));
 
     if(files.count())

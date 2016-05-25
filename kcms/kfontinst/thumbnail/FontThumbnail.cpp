@@ -30,7 +30,7 @@
 #include <QFile>
 #include <KZip>
 #include <QTemporaryDir>
-#include <KMimeType>
+#include <QMimeDatabase>
 #include <QDebug>
 #include <QDir>
 
@@ -61,7 +61,8 @@ bool CFontThumbnail::create(const QString &path, int width, int height, QImage &
     KFI_DBUG << "Create font thumbnail for:" << path << endl;
 
     // Is this a appliaction/vnd.kde.fontspackage file? If so, extract 1 scalable font...
-    if(Misc::isPackage(path) || "application/zip"==KMimeType::findByFileContent(path)->name())
+    QMimeDatabase db;
+    if (Misc::isPackage(path) || "application/zip" == db.mimeTypeForFile(path, QMimeDatabase::MatchContent).name())
     {
         KZip zip(path);
 
@@ -90,7 +91,7 @@ bool CFontThumbnail::create(const QString &path, int width, int height, QImage &
 
                             ((KArchiveFile *)entry)->copyTo(tempDir->path());
 
-                            QString mime(KMimeType::findByPath(tempDir->path()+QLatin1Char('/')+entry->name())->name());
+                            QString mime(db.mimeTypeForFile(tempDir->path()+QLatin1Char('/')+entry->name()).name());
 
                             if(mime=="application/x-font-ttf" || mime=="application/x-font-otf" ||
                                mime=="application/x-font-type1")

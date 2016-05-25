@@ -22,7 +22,7 @@
  */
 
 #include "FontList.h"
-#include <KMimeType>
+#include <QMimeDatabase>
 #include <QIcon>
 #include <KIconLoader>
 #include <kde_file.h>
@@ -1975,20 +1975,19 @@ void CFontListView::dropEvent(QDropEvent *event)
         QList<QUrl>                urls(event->mimeData()->urls());
         QList<QUrl>::ConstIterator it(urls.begin()),
                                    end(urls.end());
-        QStringList::ConstIterator mtEnd(CFontList::fontMimeTypes.constEnd());
         QSet<QUrl>                 kurls;
+        QMimeDatabase db;
 
-        for(; it!=end; ++it)
+        for (; it!=end; ++it)
         {
-            KMimeType::Ptr             mime=KMimeType::findByUrl(*it, 0, false, true);
-            QStringList::ConstIterator mt(CFontList::fontMimeTypes.constBegin());
+            QMimeType mime = db.mimeTypeForUrl(*it);
 
-            for(; mt!=mtEnd; ++mt)
-                if(mime->is(*mt))
-                {
+            foreach (const QString &fontMime, CFontList::fontMimeTypes) {
+                if (mime.inherits(fontMime)) {
                     kurls.insert(*it);
                     break;
                 }
+            }
         }
 
         if(kurls.count())

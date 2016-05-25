@@ -28,7 +28,7 @@
 #include <KToggleAction>
 #include <KSelectAction>
 #include <QIcon>
-#include <KMimeType>
+#include <QMimeDatabase>
 #include <QLabel>
 #include <QPainter>
 #include <QStyleOption>
@@ -154,23 +154,20 @@ CFontFilter::CFontFilter(QWidget *parent)
     
     QStringList::ConstIterator it(CFontList::fontMimeTypes.constBegin()),
                                end(CFontList::fontMimeTypes.constEnd());
-                               
+    QMimeDatabase db;
     for(; it!=end; ++it)
         if((*it)!="application/vnd.kde.fontspackage")
         {
-            KMimeType::Ptr mime=KMimeType::mimeType(*it);
+            QMimeType mime = db.mimeTypeForName(*it);
             
-            KToggleAction *act=new KToggleAction(QIcon::fromTheme(mime->iconName()), mime->comment(), this);
+            KToggleAction *act=new KToggleAction(QIcon::fromTheme(mime.iconName()), mime.comment(), this);
 
             ftMenu->addAction(act);
             act->setChecked(false);
-            
-            QStringList::ConstIterator sIt(mime->patterns().constBegin()),
-                                       sEnd(mime->patterns().constEnd());
-            QStringList                mimes;
-                                       
-            for(; sIt!=sEnd; ++sIt)
-                mimes.append(QString(*sIt).replace("*.", ""));
+
+            QStringList mimes;
+            foreach (QString pattern, mime.globPatterns())
+                mimes.append(pattern.replace("*.", ""));
             act->setData(mimes);
         }
 

@@ -48,7 +48,7 @@
 #include <KIntNumInput>
 #include <KInputDialog>
 #include <QIcon>
-#include <KMimeType>
+#include <QMimeDatabase>
 //#include <KFileMetaInfo>
 #include <KZip>
 #include <QTemporaryDir>
@@ -314,7 +314,8 @@ void CFontViewPart::timeout()
 
                                 ((KArchiveFile *)entry)->copyTo(itsTempDir->path());
 
-                                QString mime(KMimeType::findByPath(itsTempDir->path()+QLatin1Char('/')+entry->name())->name());
+                                QMimeDatabase db;
+                                QString mime(db.mimeTypeForFile(itsTempDir->path()+QLatin1Char('/')+entry->name()).name());
 
                                 if(mime=="application/x-font-ttf" || mime=="application/x-font-otf" ||
                                    mime=="application/x-font-type1")
