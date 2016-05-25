@@ -1135,7 +1135,7 @@ XftFont * CFcEngine::queryFont()
     static const int constQuerySize=8;
 
 #ifdef KFI_FC_DEBUG
-    kDebug();
+    qDebug();
 #endif
 
     XftFont *f=getFont(constQuerySize);
@@ -1157,7 +1157,7 @@ XftFont * CFcEngine::queryFont()
             closeFont(f);
     }
 #ifdef KFI_FC_DEBUG
-    kDebug() << "ret" << (int)f;
+    qDebug() << "ret" << (int)f;
 #endif
     return f;
 }
@@ -1167,7 +1167,7 @@ XftFont * CFcEngine::getFont(int size)
     XftFont *f=NULL;
 
 #ifdef KFI_FC_DEBUG
-    kDebug() << itsName << ' ' << itsStyle << ' ' << size;
+    qDebug() << itsName << ' ' << itsStyle << ' ' << size;
 #endif
 
     if(itsInstalled)
@@ -1208,7 +1208,7 @@ XftFont * CFcEngine::getFont(int size)
     }
 
 #ifdef KFI_FC_DEBUG
-    kDebug() << "ret: " << (int)f;
+    qDebug() << "ret: " << (int)f;
 #endif
 
     return f;
@@ -1264,7 +1264,7 @@ bool CFcEngine::isCorrect(XftFont *f, bool checkFamily)
     }
     else
         s << "No font!!!  ";
-    kDebug() << "isCorrect? " << xxx;
+    qDebug() << "isCorrect? " << xxx;
 #endif
 
     return
@@ -1294,7 +1294,7 @@ void CFcEngine::getSizes()
         return;
 
 #ifdef KFI_FC_DEBUG
-    kDebug();
+    qDebug();
 #endif
     XftFont *f=queryFont();
     int     alphaSize(itsSizes.size()>itsAlphaSizeIndex && itsAlphaSizeIndex>=0 ? itsSizes[itsAlphaSizeIndex] : constDefaultAlphaSize);
@@ -1350,7 +1350,7 @@ void CFcEngine::getSizes()
                 {
                     int size(0);
 #ifdef KFI_FC_DEBUG
-                    kDebug() << "got fixed sizes: " << set->nfont;
+                    qDebug() << "got fixed sizes: " << set->nfont;
 #endif
                     itsSizes.reserve(set->nfont);
                     for (int i = 0; i < set->nfont; i++)
@@ -1360,7 +1360,7 @@ void CFcEngine::getSizes()
                             itsSizes.push_back((int)px);
 
 #ifdef KFI_FC_DEBUG
-                            kDebug() << "got fixed: " << px;
+                            qDebug() << "got fixed: " << px;
 #endif
                             if (px<=alphaSize)
                                 itsAlphaSizeIndex=size;
@@ -1387,7 +1387,7 @@ void CFcEngine::getSizes()
                     itsSizes.reserve(numSizes);
 
 #ifdef KFI_FC_DEBUG
-                    kDebug() << "numSizes fixed: " << numSizes;
+                    qDebug() << "numSizes fixed: " << numSizes;
 #endif
                     for (size=0; size<numSizes; size++)
                     {
@@ -1397,7 +1397,7 @@ void CFcEngine::getSizes()
                         double px=face->available_sizes[size].width;
 #endif
 #ifdef KFI_FC_DEBUG
-                        kDebug() << "px: " << px;
+                        qDebug() << "px: " << px;
 #endif
                         itsSizes.push_back((int)px);
 
@@ -1427,7 +1427,7 @@ void CFcEngine::getSizes()
     }
 
 #ifdef KFI_FC_DEBUG
-    kDebug() << "end";
+    qDebug() << "end";
 #endif
 }
 

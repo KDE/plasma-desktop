@@ -1,4 +1,8 @@
 set(kio_fonts_PART_SRCS FontInstInterface.cpp KioFonts.cpp ${libkfontinstdbusiface_SRCS})
+ecm_qt_declare_logging_category(kio_fonts_PART_SRCS
+    HEADER debug.h
+    IDENTIFIER KCM_KFONTINST_KIO
+    CATEGORY_NAME org.kde.kcm_kfontinst.kio)
 # qt5_add_dbus_interface(kio_fonts_PART_SRCS ../dbus/org.kde.fontinst.xml FontinstIface)
 add_library(kio_fonts MODULE ${kio_fonts_PART_SRCS} ${KFI_FONTINST_AUTH_SRC} )
 target_link_libraries(kio_fonts Qt5::DBus Qt5::X11Extras Qt5::Xml KF5::Archive KF5::KIOCore KF5::KIOWidgets kfontinst )

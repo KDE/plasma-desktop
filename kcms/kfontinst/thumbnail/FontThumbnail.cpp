@@ -31,10 +31,12 @@
 #include <KZip>
 #include <QTemporaryDir>
 #include <KMimeType>
-#include <KDebug>
+#include <QDebug>
 #include <QDir>
 
-#define KFI_DBUG kDebug(7115)
+#include "debug.h"
+
+#define KFI_DBUG qCDebug(KCM_KFONTINST_THUMBNAIL)
 
 extern "C"
 {

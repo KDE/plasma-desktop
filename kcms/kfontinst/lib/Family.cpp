@@ -23,12 +23,12 @@
 
 #include <QtCore/QTextStream>
 #include <QtXml/QDomElement>
-#include <KDebug>
+#include <QDebug>
 #include "Family.h"
 #include "Misc.h"
 #include "XmlStrings.h"
 
-#define KFI_DBUG kDebug() << time(0L)
+#define KFI_DBUG qDebug() << time(0L)
 
 namespace KFI
 {

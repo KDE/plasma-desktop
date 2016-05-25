@@ -31,11 +31,11 @@
 #include <QtXml/QDomElement>
 #include <QtXml/QDomNode>
 #include <QtXml/QDomText>
-#include <KDebug>
+#include <QDebug>
 #include <stdio.h>
 #include <fontconfig/fontconfig.h>
 
-#define KFI_DBUG kDebug() << time(0L)
+#define KFI_DBUG qDebug() << time(0L)
 
 namespace KFI
 {

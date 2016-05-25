@@ -23,8 +23,8 @@
 
 #include <QtDBus/QDBusConnection>
 #include <QtCore/QTimer>
+#include <QDebug>
 #include <kauth.h>
-#include <KDebug>
 #include <kio/global.h>
 #include <kde_file.h>
 #include <fontconfig/fontconfig.h>
@@ -39,7 +39,7 @@
 #include "Utils.h"
 #include "FontinstIface.h"
 
-#define KFI_DBUG kDebug() << time(0L)
+#define KFI_DBUG qDebug() << time(0L)
 
 namespace KFI
 {

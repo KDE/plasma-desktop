@@ -30,9 +30,9 @@
 #include <QDomElement>
 #include <QDomNode>
 #include <QStandardPaths>
+#include <QDebug>
 #include <KSaveFile>
 #include <KShell>
-#include <KDebug>
 #include <KGlobal>
 #include <fontconfig/fontconfig.h>
 #include "Folder.h"
@@ -45,7 +45,7 @@
 #include "config-fontinst.h"
 
 #define DISABLED_FONTS "disabledfonts"
-#define KFI_DBUG kDebug() << time(0L)
+#define KFI_DBUG qDebug() << time(0L)
 
 namespace KFI
 {

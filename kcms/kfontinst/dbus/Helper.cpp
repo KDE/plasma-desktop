@@ -26,7 +26,7 @@
 #include "FontInst.h"
 #include "Misc.h"
 #include "Utils.h"
-#include <KDebug>
+#include <QDebug>
 #include <QtXml/QDomDocument>
 #include <QtCore/QTextCodec>
 #include <kio/global.h>
@@ -36,7 +36,7 @@
 #include <signal.h>
 #include <sys/errno.h>
 
-#define KFI_DBUG kDebug() << time(0L)
+#define KFI_DBUG qDebug() << time(0L)
 
 KAUTH_HELPER_MAIN("org.kde.fontinst", KFI::Helper)
 

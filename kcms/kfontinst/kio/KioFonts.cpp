@@ -23,8 +23,8 @@
 
 #include <QFile>
 #include <QCoreApplication>
+#include <QDebug>
 #include <KComponentData>
-#include <KDebug>
 #include <KMimeType>
 #include <KTemporaryFile>
 #include <QTemporaryDir>
@@ -46,9 +46,10 @@
 #include "Family.h"
 #include "Style.h"
 #include "File.h"
+#include "debug.h"
 
 #define MAX_IPC_SIZE     (1024*32)
-#define KFI_DBUG         kDebug(7000) << '(' << time(NULL) << ')'
+#define KFI_DBUG         qCDebug(KCM_KFONTINST_KIO) << '(' << time(NULL) << ')'
 
 static const int constReconfigTimeout = 10;
 
