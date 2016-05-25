@@ -26,7 +26,7 @@
 #include <KIconLoader>
 #include <kde_file.h>
 #include <KMessageBox>
-#include <KSaveFile>
+#include <QSaveFile>
 #include <QFont>
 #include <QDropEvent>
 #include <QHeaderView>
@@ -485,9 +485,9 @@ bool CGroupList::save()
 
 bool CGroupList::save(const QString &fileName, CGroupListItem *grp)
 {
-    KSaveFile file(fileName);
+    QSaveFile file(fileName);
 
-    if(file.open())
+    if (file.open(QIODevice::WriteOnly))
     {
         QTextStream str(&file);
 
@@ -506,7 +506,7 @@ bool CGroupList::save(const QString &fileName, CGroupListItem *grp)
         }
         str << "</" GROUPS_DOC ">" << endl;
         itsModified=false;
-        return file.finalize();
+        return file.commit();
     }
 
     return false;

@@ -31,7 +31,7 @@
 #include <QDomNode>
 #include <QStandardPaths>
 #include <QDebug>
-#include <KSaveFile>
+#include <QSaveFile>
 #include <KShell>
 #include <KGlobal>
 #include <fontconfig/fontconfig.h>
@@ -202,11 +202,11 @@ void Folder::saveDisabled()
         {
             KFI_DBUG << itsDisabledCfg.name;
 
-            KSaveFile file;
+            QSaveFile file;
 
             file.setFileName(itsDisabledCfg.name);
 
-            if(!file.open())
+            if (!file.open(QIODevice::WriteOnly))
             {
                 KFI_DBUG << "Exit - cant open save file";
                 qApp->exit(0);
@@ -224,7 +224,7 @@ void Folder::saveDisabled()
             str << "</" DISABLED_FONTS ">" << endl;
             str.flush();
 
-            if(!file.finalize())
+            if(!file.commit())
             {
                 KFI_DBUG << "Exit - cant finalize save file";
                 qApp->exit(0);
