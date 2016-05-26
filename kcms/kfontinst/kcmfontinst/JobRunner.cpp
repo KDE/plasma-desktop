@@ -44,8 +44,6 @@
 #include <QCloseEvent>
 #include <QTimer>
 #include <QtDBus/QDBusServiceWatcher>
-#include <X11/Xlib.h>
-#include <fixx11h.h>
 #include <fontconfig/fontconfig.h>
 #include <sys/resource.h>
 #include <sys/types.h>
@@ -53,6 +51,7 @@
 #include <QDialogButtonBox>
 #include <QPushButton>
 #include <QVBoxLayout>
+#include <X11/Xlib.h>
 #include "config-fontinst.h"
 
 #define CFG_GROUP                  "Runner Dialog"

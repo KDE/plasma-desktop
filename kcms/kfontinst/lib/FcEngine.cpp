@@ -29,14 +29,13 @@
 #include <QX11Info>
 #include <KConfig>
 #include <math.h>
-#include <X11/Xlib.h>
-#include <X11/Xft/Xft.h>
-#include <X11/extensions/Xrender.h>
-#include "fixx11h.h"
 #include <xcb/xcb_image.h>
 #include <QFontDatabase>
 #include "File.h"
 #include <KConfigGroup>
+#include <X11/Xlib.h>
+#include <X11/Xft/Xft.h>
+#include <X11/extensions/Xrender.h>
 //#define KFI_FC_DEBUG
 
 #define KFI_PREVIEW_GROUP      "KFontInst Preview Settings"

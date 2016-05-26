@@ -13,11 +13,11 @@ add_executable(fontinst_helper ${fontinst_helper_SRCS})
 
 set_target_properties(fontinst_bin PROPERTIES OUTPUT_NAME fontinst)
 target_link_libraries(fontinst_bin 
-                      Qt5::DBus Qt5::Xml ${FONTCONFIG_LIBRARIES} kfontinst)
+                      Qt5::DBus Qt5::Xml KF5::Auth ${FONTCONFIG_LIBRARIES} kfontinst)
 
 set_target_properties(fontinst_helper PROPERTIES OUTPUT_NAME fontinst_helper)
 target_link_libraries(fontinst_helper 
-                      Qt5::DBus Qt5::Xml ${FONTCONFIG_LIBRARIES} kfontinst)
+                      Qt5::DBus Qt5::Xml KF5::Auth ${FONTCONFIG_LIBRARIES} kfontinst)
 
 install(TARGETS fontinst_bin DESTINATION ${KAUTH_HELPER_INSTALL_DIR} )
 install(TARGETS fontinst_helper DESTINATION ${KAUTH_HELPER_INSTALL_DIR} )

@@ -25,8 +25,7 @@
 #include <QCoreApplication>
 #include <QMimeDatabase>
 #include <QDebug>
-#include <KComponentData>
-#include <KTemporaryFile>
+#include <QTemporaryFile>
 #include <QTemporaryDir>
 #include <KZip>
 #include <unistd.h>
@@ -64,7 +63,7 @@ Q_DECL_EXPORT int kdemain(int argc, char **argv)
     }
 
     QCoreApplication app(argc, argv);
-    KComponentData   componentData("kio_" KFI_KIO_FONTS_PROTOCOL);
+    QCoreApplication::setApplicationName("kio_" KFI_KIO_FONTS_PROTOCOL);
     KFI::CKioFonts   slave(argv[2], argv[3]);
 
     slave.dispatchLoop();
@@ -380,7 +379,7 @@ void CKioFonts::get(const QUrl &url)
             realPath=(*files.begin());
         else   // Font is made up of multiple files - so create .zip of them all!
         {
-            KTemporaryFile tmpFile;
+            QTemporaryFile tmpFile;
 
             if(tmpFile.open())
             {

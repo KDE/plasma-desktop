@@ -27,7 +27,6 @@
 #include <QLatin1String>
 #include <QX11Info>
 #include <X11/Xlib.h>
-#include <fixx11h.h>
 
 //
 // *Very* hacky way to get some KDE dialogs to appear to be transient

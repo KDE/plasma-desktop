@@ -21,7 +21,7 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#include <KGlobal>
+#include <QGlobalStatic>
 #include <QtGui/QFontDatabase>
 #include <fontconfig/fontconfig.h>
 #include "WritingSystems.h"
@@ -29,7 +29,7 @@
 namespace KFI
 {
 
-K_GLOBAL_STATIC(WritingSystems, theInstance)
+Q_GLOBAL_STATIC(WritingSystems, theInstance)
 
 WritingSystems * WritingSystems::instance()
 {

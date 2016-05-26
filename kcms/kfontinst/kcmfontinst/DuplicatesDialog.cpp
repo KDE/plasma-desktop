@@ -50,7 +50,6 @@
 #include <QDialogButtonBox>
 #include <QPushButton>
 #include <QVBoxLayout>
-#include <KLocale>
 #if defined USE_POLICYKIT && USE_POLICYKIT==1
 #include <QtDBus/QDBusInterface>
 #endif
@@ -166,7 +165,7 @@ void CDuplicatesDialog::scanFinished()
                     details.append(*fit);
                     details.append("");
                     details.append(KFormat().formatByteSize(info.size()));
-                    details.append(KLocale::global()->formatDateTime(info.created()));
+                    details.append(QLocale().toString(info.created()));
                     if(info.isSymLink())
                         details.append(info.readLink());
                     new QTreeWidgetItem(top, details);

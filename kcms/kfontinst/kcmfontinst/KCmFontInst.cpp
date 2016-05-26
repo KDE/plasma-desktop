@@ -49,16 +49,15 @@
 #include <QPushButton>
 #include <QProgressDialog>
 #include <QInputDialog>
+#include <QTemporaryFile>
 #include <KAboutData>
 #include <KToolBar>
 #include <KMessageBox>
 #include <KIO/Job>
 #include <KIO/StatJob>
 #include <KJobWidgets>
-#include <KGlobal>
 #include <KGuiItem>
 #include <KIconLoader>
-#include <KTemporaryFile>
 #include <QIcon>
 #include <KActionMenu>
 #include <KPluginFactory>
@@ -583,7 +582,7 @@ void CKCmFontInst::print(bool all)
                 static const int constSizes[]={0, 12, 18, 24, 36, 48};
                 QSet<Misc::TFont>::ConstIterator it(fonts.begin()),
                                                  end(fonts.end());
-                KTemporaryFile                   tmpFile;
+                QTemporaryFile                   tmpFile;
                 bool                             useFile(fonts.count()>16),
                                                  startProc(true);
                 QStringList                      args;
@@ -592,6 +591,10 @@ void CKCmFontInst::print(bool all)
                     itsPrintProc=new QProcess(this);
                 else
                     itsPrintProc->kill();
+
+                QString title = QGuiApplication::applicationDisplayName();
+                if (title.isEmpty())
+                    title = QCoreApplication::applicationName();
 
                 //
                 // If we have lots of fonts to print, pass kfontinst a tempory groups file to print
@@ -607,8 +610,8 @@ void CKCmFontInst::print(bool all)
                                 << (*it).styleInfo << endl;
 
                         args << "--embed" << QString().sprintf("0x%x", (unsigned int)window()->winId())
-                             << "--caption" << KGlobal::caption().toUtf8()
-                             << "--icon" << "preferences-desktop-font-installer"
+                             << "--qwindowtitle" << title
+                             << "--qwindowicon" << "preferences-desktop-font-installer"
                              << "--size" << QString().setNum(constSizes[dlg.chosenSize() < 6 ? dlg.chosenSize() : 2])
                              << "--listfile" << tmpFile.fileName()
                              << "--deletefile";
@@ -622,8 +625,8 @@ void CKCmFontInst::print(bool all)
                 else
                 {
                     args << "--embed" << QString().sprintf("0x%x", (unsigned int)window()->winId())
-                         << "--caption" << KGlobal::caption().toUtf8()
-                         << "--icon" << "preferences-desktop-font-installer"
+                         << "--qwindowtitle" << title
+                         << "--qwindowicon" << "preferences-desktop-font-installer"
                          << "--size" << QString().setNum(constSizes[dlg.chosenSize()<6 ? dlg.chosenSize() : 2]);
 
                     for(; it!=end; ++it)

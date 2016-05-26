@@ -33,7 +33,6 @@
 #include <QDebug>
 #include <QSaveFile>
 #include <KShell>
-#include <KGlobal>
 #include <fontconfig/fontconfig.h>
 #include "Folder.h"
 #include "FcConfig.h"

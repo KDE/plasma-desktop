@@ -28,6 +28,8 @@
 #include "PreviewSelectAction.h"
 #include "FontInstInterface.h"
 #include "FontInst.h"
+#include "config-workspace.h"
+#include <QGuiApplication>
 #include <QBoxLayout>
 #include <QPushButton>
 #include <QFrame>
@@ -41,9 +43,8 @@
 #include <KIO/StatJob>
 #include <KIO/JobUiDelegate>
 #include <KJobWidgets>
-#include <KGlobal>
 #include <KActionCollection>
-#include <KComponentData>
+#include <KAboutData>
 #include <KMessageBox>
 #include <QSpinBox>
 #include <QInputDialog>
@@ -110,7 +111,8 @@ CFontViewPart::CFontViewPart(QWidget *parentWidget, QObject *parent, const QList
     itsFrame->setFocusPolicy(Qt::ClickFocus);
     previewFrame->setFrameShape(QFrame::StyledPanel);
     previewFrame->setFrameShadow(QFrame::Sunken);
-    setComponentData(KComponentData(KFI_NAME));
+    KAboutData aboutData(KFI_NAME, i18n("FontViewPart"), WORKSPACE_VERSION_STRING);
+    setComponentData(aboutData);
 
     itsPreview=new CFontPreview(previewFrame);
     itsPreview->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::MinimumExpanding);
@@ -411,9 +413,13 @@ void CFontViewPart::install()
         else
             itsProc->kill();
 
+        QString title = QGuiApplication::applicationDisplayName();
+        if (title.isEmpty())
+            title = QCoreApplication::applicationName();
+
         args << "--embed" <<  QString().sprintf("0x%x", (unsigned int)(itsFrame->window()->winId()))
-             << "--caption" << KGlobal::caption().toUtf8()
-             << "--icon" << "kfontview"
+             << "--qwindowtitle" << title
+             << "--qwindowicon" << "kfontview"
              << url().toDisplayString();
 
         connect(itsProc, SIGNAL(finished(int,QProcess::ExitStatus)), SLOT(installlStatus()));
@@ -460,19 +466,23 @@ void CFontViewPart::print()
 {
     QStringList args;
 
+    QString title = QGuiApplication::applicationDisplayName();
+    if (title.isEmpty())
+        title = QCoreApplication::applicationName();
+
     if(!itsFontDetails.family.isEmpty())
     {
         args << "--embed" << QString().sprintf("0x%x", (unsigned int)(itsFrame->window()->winId()))
-             << "--caption" << KGlobal::caption().toUtf8()
-             << "--icon" << "kfontview"
+             << "--qwindowtitle" << title
+             << "--qwindowicon" << "kfontview"
              << "--size" << "0"
              << "--pfont" << QString(itsFontDetails.family+','+QString().setNum(itsFontDetails.styleInfo));
     }
 #ifdef KFI_PRINT_APP_FONTS
     else
         args << "--embed" << QString().sprintf("0x%x", (unsigned int)(itsFrame->window()->winId()))
-             << "--caption" << KGlobal::caption().toUtf8()
-             << "--icon" << "kfontview"
+             << "--qwindowtitle" << title
+             << "--qwindowicon" << "kfontview"
              << "--size " << "0"
              << localFilePath()
              << QString().setNum(KFI_NO_STYLE_INFO);
