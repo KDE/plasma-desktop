@@ -25,7 +25,6 @@
 #include <QMimeDatabase>
 #include <QIcon>
 #include <KIconLoader>
-#include <kde_file.h>
 #include <KMessageBox>
 #include <KColorScheme>
 #include <QProcess>

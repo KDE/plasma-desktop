@@ -34,7 +34,6 @@
 #include <QtCore/QProcess>
 #include <QtCore/QTemporaryFile>
 #include <QtCore/QStandardPaths>
-#include <kde_file.h>
 #include <unistd.h>
 #include <ctype.h>
 
@@ -223,18 +222,18 @@ void getAssociatedFiles(const QString &path, QStringList &files, bool afmAndPfm)
 
 time_t getTimeStamp(const QString &item)
 {
-    KDE_struct_stat info;
+    QT_STATBUF info;
 
-    return !item.isEmpty() && 0==KDE_lstat(QFile::encodeName(item), &info) ? info.st_mtime : 0;
+    return !item.isEmpty() && 0==QT_LSTAT(QFile::encodeName(item), &info) ? info.st_mtime : 0;
 }
 
 
 bool check(const QString &path, bool file, bool checkW)
 { 
-    KDE_struct_stat info;
+    QT_STATBUF info;
     QByteArray      pathC(QFile::encodeName(path));
 
-    return 0==KDE_lstat(pathC, &info) &&
+    return 0==QT_LSTAT(pathC, &info) &&
            (file ? (S_ISREG(info.st_mode) || S_ISLNK(info.st_mode))
                  : S_ISDIR(info.st_mode)) &&
            (!checkW || 0==::access(pathC, W_OK));

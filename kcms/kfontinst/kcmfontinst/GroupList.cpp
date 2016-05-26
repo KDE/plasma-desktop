@@ -24,7 +24,6 @@
 #include "GroupList.h"
 #include "FontList.h"
 #include <KIconLoader>
-#include <kde_file.h>
 #include <KMessageBox>
 #include <QSaveFile>
 #include <QFont>

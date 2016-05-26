@@ -30,7 +30,6 @@
 #include <QtXml/QDomDocument>
 #include <QtCore/QTextCodec>
 #include <kio/global.h>
-#include <kde_file.h>
 #include <sys/types.h>
 #include <unistd.h>
 #include <signal.h>

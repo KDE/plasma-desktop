@@ -29,7 +29,6 @@
 #include <KTemporaryFile>
 #include <QTemporaryDir>
 #include <KZip>
-#include <kde_file.h>
 #include <unistd.h>
 #include <pwd.h>
 #include <grp.h>
@@ -106,10 +105,10 @@ static CKioFonts::EFolder getFolder(const QStringList &list)
 
 static int getSize(const QString &file)
 {
-    KDE_struct_stat buff;
+    QT_STATBUF buff;
     QByteArray      f(QFile::encodeName(file));
 
-    if(-1!=KDE_lstat(f.constData(), &buff))
+    if(-1!=QT_LSTAT(f.constData(), &buff))
     {
         if (S_ISLNK(buff.st_mode))
         {
@@ -118,7 +117,7 @@ static int getSize(const QString &file)
             if(n!= -1)
                 buffer2[n]='\0';
 
-            if(-1==KDE_stat(f.constData(), &buff))
+            if(-1==QT_STAT(f.constData(), &buff))
                 return -1;
         }
         return buff.st_size;
@@ -359,7 +358,7 @@ void CKioFonts::get(const QUrl &url)
 
         QSet<QString>   files;
         QString         realPath;
-        KDE_struct_stat buff;
+        QT_STATBUF buff;
         bool            multiple=false;
 
         for(; it!=end; ++it)
@@ -408,7 +407,7 @@ void CKioFonts::get(const QUrl &url)
         QByteArray realPathC(QFile::encodeName(realPath));
         KFI_DBUG << "real: " << realPathC;
 
-        if (-2==KDE_stat(realPathC.constData(), &buff))
+        if (-2==QT_STAT(realPathC.constData(), &buff))
             error(EACCES==errno ? KIO::ERR_ACCESS_DENIED : KIO::ERR_DOES_NOT_EXIST, url.toDisplayString());
         else if (S_ISDIR(buff.st_mode))
             error(KIO::ERR_IS_DIRECTORY, url.toDisplayString());
@@ -416,7 +415,7 @@ void CKioFonts::get(const QUrl &url)
             error(KIO::ERR_CANNOT_OPEN_FOR_READING, url.toDisplayString());
         else
         {
-            int fd = KDE_open(realPathC.constData(), O_RDONLY);
+            int fd = QT_OPEN(realPathC.constData(), O_RDONLY);
 
             if (fd < 0)
                 error(KIO::ERR_CANNOT_OPEN_FOR_READING, url.toDisplayString());
@@ -694,9 +693,9 @@ bool CKioFonts::createUDSEntry(KIO::UDSEntry &entry, EFolder folder, const Famil
     for(; it!=end; ++it)
     {
         QByteArray      cPath(QFile::encodeName((*it).path()));
-        KDE_struct_stat buff;
+        QT_STATBUF buff;
 
-        if(-1!=KDE_lstat(cPath, &buff))
+        if(-1!=QT_LSTAT(cPath, &buff))
         {
             QString fileName(Misc::getFile((*it).path())),
                     mt;
