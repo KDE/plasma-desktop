@@ -39,8 +39,7 @@ class QPushButton;
 class QLabel;
 class QProcess;
 class QAction;
-class KAction;
-class KIntNumInput;
+class QSpinBox;
 class QTemporaryDir;
 
 namespace KFI
@@ -91,7 +90,7 @@ class CFontViewPart : public KParts::ReadOnlyPart
     QFrame             *itsFrame;
     QLabel             *itsFaceLabel;
 //                       *itsMetaLabel;
-    KIntNumInput       *itsFaceSelector;
+    QSpinBox           *itsFaceSelector;
     QAction            *itsChangeTextAction;
     int                itsFace;
     KSharedConfigPtr   itsConfig;

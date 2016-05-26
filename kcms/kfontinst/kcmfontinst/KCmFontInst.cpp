@@ -45,18 +45,19 @@
 #include <QProcess>
 #include <QTextStream>
 #include <QFileDialog>
+#include <QAction>
+#include <QPushButton>
+#include <QProgressDialog>
+#include <QInputDialog>
 #include <KAboutData>
 #include <KToolBar>
 #include <KMessageBox>
 #include <KIO/Job>
 #include <KIO/StatJob>
 #include <KJobWidgets>
-#include <KPushButton>
 #include <KGlobal>
 #include <KGuiItem>
-#include <KInputDialog>
 #include <KIconLoader>
-#include <KProgressDialog>
 #include <KTemporaryFile>
 #include <QIcon>
 #include <KActionMenu>
@@ -65,7 +66,7 @@
 #include <KStandardAction>
 #include <KZip>
 #include <KNewStuff3/KNS3/DownloadDialog>
-#include <KAction>
+#include <KConfigGroup>
 #include <QStandardPaths>
 
 #define CFG_GROUP                  "Main Settings"
@@ -102,20 +103,21 @@ static QString partialIcon(bool load=true)
     return name;
 }
 
-class CPushButton : public KPushButton
+class CPushButton : public QPushButton
 {
     public:
 
     CPushButton(const KGuiItem &item, QWidget *parent)
-        : KPushButton(item, parent)
+        : QPushButton(parent)
     {
-        theirHeight=qMax(theirHeight, KPushButton::sizeHint().height());
+        KGuiItem::assign(this, item);
+        theirHeight=qMax(theirHeight, QPushButton::sizeHint().height());
         setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
     }
 
     QSize sizeHint() const
     {
-        QSize sh(KPushButton::sizeHint());
+        QSize sh(QPushButton::sizeHint());
 
         sh.setHeight(theirHeight);
         if(sh.width()<sh.height())
@@ -215,11 +217,11 @@ CKCmFontInst::CKCmFontInst(QWidget *parent, const QVariantList&)
     fontControlLayout->setMargin(0);
 
     // Toolbar...
-    KAction     *duplicateFontsAct=new KAction(QIcon::fromTheme("system-search"), i18n("Scan for Duplicate Fonts..."), this);
-                //*validateFontsAct=new KAction(QIcon::fromTheme("checkmark"), i18n("Validate Fonts..."), this);
+    QAction     *duplicateFontsAct=new QAction(QIcon::fromTheme("system-search"), i18n("Scan for Duplicate Fonts..."), this);
+                //*validateFontsAct=new QAction(QIcon::fromTheme("checkmark"), i18n("Validate Fonts..."), this);
 
     if(!Misc::root())
-        itsDownloadFontsAct=new KAction(QIcon::fromTheme("get-hot-new-stuff"), i18n("Get New Fonts..."), this);
+        itsDownloadFontsAct=new QAction(QIcon::fromTheme("get-hot-new-stuff"), i18n("Get New Fonts..."), this);
     itsToolsMenu=new KActionMenu(QIcon::fromTheme("system-run"), i18n("Tools"), this);
     itsToolsMenu->addAction(duplicateFontsAct);
     //itsToolsMenu->addAction(validateFontsAct);
@@ -233,7 +235,7 @@ CKCmFontInst::CKCmFontInst(QWidget *parent, const QVariantList&)
     itsGroupList=new CGroupList(groupWidget);
     itsGroupListView=new CGroupListView(groupWidget, itsGroupList);
 
-    KPushButton *createGroup=new CPushButton(KGuiItem(QString(), "list-add",
+    QPushButton *createGroup=new CPushButton(KGuiItem(QString(), "list-add",
                                                       i18n("Create a new group")),
                                              groupWidget);
 
@@ -352,7 +354,7 @@ CKCmFontInst::CKCmFontInst(QWidget *parent, const QVariantList&)
     itsPreviewMenu->addSeparator();
     CPreviewSelectAction *prevSel=new CPreviewSelectAction(itsPreviewMenu);
     itsPreviewMenu->addAction(prevSel);
-    KAction *changeTextAct=new KAction(QIcon::fromTheme("edit-rename"), i18n("Change Preview Text..."), this);
+    QAction *changeTextAct=new QAction(QIcon::fromTheme("edit-rename"), i18n("Change Preview Text..."), this);
     itsPreviewMenu->addAction(changeTextAct),
 
     itsPreviewListMenu = new QMenu(itsPreviewList);
@@ -804,9 +806,10 @@ void CKCmFontInst::disableFonts()
 void CKCmFontInst::addGroup()
 {
     bool    ok;
-    QString name(KInputDialog::getText(i18n("Create New Group"),
+    QString name(QInputDialog::getText(this, i18n("Create New Group"),
                                        i18n("Please enter the name of the new group:"),
-                                       i18n("New Group"), &ok, this));
+                                       QLineEdit::Normal,
+                                       i18n("New Group"), &ok));
 
     if(ok && !name.isEmpty())
         itsGroupList->createGroup(name);
@@ -830,12 +833,12 @@ void CKCmFontInst::disableGroup()
 
 void CKCmFontInst::changeText()
 {
-    bool             status;
-    QRegExpValidator validator(QRegExp(".*"), 0L);
-    QString          oldStr(itsPreview->engine()->getPreviewString()),
-                     newStr(KInputDialog::getText(i18n("Preview Text"),
-                                                  i18n("Please enter new text:"),
-                                                  oldStr, &status, this, &validator));
+    bool status;
+    QString oldStr(itsPreview->engine()->getPreviewString()),
+            newStr(QInputDialog::getText(this, i18n("Preview Text"),
+                                         i18n("Please enter new text:"),
+                                         QLineEdit::Normal,
+                                         oldStr, &status));
 
     if(status && oldStr!=newStr)
     {
@@ -1061,18 +1064,18 @@ void CKCmFontInst::addFonts(const QSet<QUrl> &src)
 
         if(!itsProgress)
         {
-            itsProgress=new KProgressDialog(this, i18n("Scanning Files..."),
-                                            i18n("Looking for additional files to install..."));
+            itsProgress = new QProgressDialog(this);
+            itsProgress->setWindowTitle(i18n("Scanning Files..."));
+            itsProgress->setLabelText(i18n("Looking for additional files to install..."));
             itsProgress->setModal(true);
             itsProgress->setAutoReset(true);
             itsProgress->setAutoClose(true);
         }
 
-        itsProgress->setAllowCancel(false);
+        itsProgress->setCancelButton(0);
         itsProgress->setMinimumDuration(500);
-        itsProgress->progressBar()->show();
-        itsProgress->progressBar()->setRange(0, src.size());
-        itsProgress->progressBar()->setValue(0);
+        itsProgress->setRange(0, src.size());
+        itsProgress->setValue(0);
 
         int steps=src.count()<200 ? 1 : src.count()/10;
         for(it=src.begin(); it!=end; ++it)
@@ -1080,8 +1083,8 @@ void CKCmFontInst::addFonts(const QSet<QUrl> &src)
             QList<QUrl> associatedUrls;
 
             itsProgress->setLabelText(i18n("Looking for files associated with %1", (*it).url()));
-            itsProgress->progressBar()->setValue(itsProgress->progressBar()->value()+1);
-            if(1==steps || 0==(itsProgress->progressBar()->value()%steps))
+            itsProgress->setValue(itsProgress->value()+1);
+            if(1==steps || 0==(itsProgress->value()%steps))
             {
                 bool dialogVisible(itsProgress->isVisible());
                 QCoreApplication::processEvents(QEventLoop::ExcludeUserInputEvents);

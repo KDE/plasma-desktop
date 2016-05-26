@@ -45,8 +45,8 @@
 #include <KActionCollection>
 #include <KComponentData>
 #include <KMessageBox>
-#include <KIntNumInput>
-#include <KInputDialog>
+#include <QSpinBox>
+#include <QInputDialog>
 #include <QIcon>
 #include <QMimeDatabase>
 //#include <KFileMetaInfo>
@@ -115,8 +115,8 @@ CFontViewPart::CFontViewPart(QWidget *parentWidget, QObject *parent, const QList
     itsPreview=new CFontPreview(previewFrame);
     itsPreview->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::MinimumExpanding);
     itsFaceLabel=new QLabel(i18n("Show Face:"), itsFaceWidget);
-    itsFaceSelector=new KIntNumInput(1, itsFaceWidget);
-    itsFaceSelector->setSliderEnabled(false);
+    itsFaceSelector=new QSpinBox(itsFaceWidget);
+    itsFaceSelector->setValue(1);
     itsInstallButton=new QPushButton(i18n("Install..."), controls);
     itsInstallButton->setEnabled(false);
     previewLayout->addWidget(itsPreview);
@@ -352,7 +352,8 @@ void CFontViewPart::timeout()
     if(!isFonts && itsPreview->engine()->getNumIndexes()>1)
     {
         showFs=true;
-        itsFaceSelector->setRange(1, itsPreview->engine()->getNumIndexes(), 1);
+        itsFaceSelector->setRange(1, itsPreview->engine()->getNumIndexes());
+        itsFaceSelector->setSingleStep(1);
         itsFaceSelector->blockSignals(true);
         itsFaceSelector->setValue(1);
         itsFaceSelector->blockSignals(false);
@@ -440,12 +441,12 @@ void CFontViewPart::fontStat(int pid, const KFI::Family &font)
     
 void CFontViewPart::changeText()
 {
-    bool             status;
-    QRegExpValidator validator(QRegExp(".*"), 0L);
-    QString          oldStr(itsPreview->engine()->getPreviewString()),
-                     newStr(KInputDialog::getText(i18n("Preview String"),
-                                                  i18n("Please enter new string:"),
-                                                  oldStr, &status, itsFrame, &validator));
+    bool status;
+    QString oldStr(itsPreview->engine()->getPreviewString()),
+            newStr(QInputDialog::getText(itsFrame, i18n("Preview String"),
+                                         i18n("Please enter new string:"),
+                                         QLineEdit::Normal,
+                                         oldStr, &status));
 
     if(status && newStr!=oldStr)
     {

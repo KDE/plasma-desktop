@@ -31,7 +31,6 @@
 class QLabel;
 class QMenu;
 class QActionGroup;
-class KAction;
 
 namespace KFI
 {
