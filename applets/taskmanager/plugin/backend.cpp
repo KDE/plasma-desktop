@@ -269,6 +269,8 @@ void Backend::itemContextMenu(QQuickItem *item, QObject *configAction)
         return;
     }
 
+    QPointer<QQuickWindow> window = item->window();
+
     QList <QAction*> actionList;
 
     QAction *action = static_cast<QAction *>(configAction);
@@ -283,7 +285,7 @@ void Backend::itemContextMenu(QQuickItem *item, QObject *configAction)
         addJumpListActions(taskItem->launcherUrl(), m_contextMenu);
     } else if (agItem->itemType() == TaskManager::GroupItemType) {
         TaskManager::TaskGroup* taskGroup = static_cast<TaskManager::TaskGroup*>(agItem);
-        const int maxWidth = 0.8 * item->window()->screen()->size().width();
+        const int maxWidth = 0.8 * (window ? window->screen()->size().width() : 1.0);
         m_contextMenu = new TaskManager::BasicMenu(0, taskGroup, m_groupManager, actionList, QList <QAction*>(), maxWidth);
         addJumpListActions(taskGroup->launcherUrl(), m_contextMenu);
     } else if (agItem->itemType() == TaskManager::LauncherItemType) {
@@ -297,6 +299,9 @@ void Backend::itemContextMenu(QQuickItem *item, QObject *configAction)
         return;
     }
 
+    connect(window.data(), &QObject::destroyed, this, &Backend::showingContextMenuChanged,
+        Qt::QueuedConnection);
+
     connect(m_contextMenu.data(), &QObject::destroyed, this, &Backend::showingContextMenuChanged,
         Qt::QueuedConnection);
 
@@ -308,8 +313,8 @@ void Backend::itemContextMenu(QQuickItem *item, QObject *configAction)
         m_contextMenu->setMinimumWidth(item->width());
     }
 
-    QPoint pos = item->window()->mapToGlobal(item->mapToScene(QPointF(0, 0)).toPoint());
-    QScreen *screen = item->window()->screen();
+    QScreen *screen = window ? window->screen() : nullptr;
+    QPoint pos = window ? window->mapToGlobal(item->mapToScene(QPointF(0, 0)).toPoint()) : QPoint();
 
     if (screen) {
         if (isVertical) {
@@ -329,8 +334,8 @@ void Backend::itemContextMenu(QQuickItem *item, QObject *configAction)
 
     // Ungrab before showing the menu so the Qt Quick View doesn't stumble
     // over the pointer leaving its window while handling a click.
-    if (item->window()->mouseGrabberItem()) {
-        item->window()->mouseGrabberItem()->ungrabMouse();
+    if (window && window->mouseGrabberItem()) {
+        window->mouseGrabberItem()->ungrabMouse();
     }
 
     // Close menu when the delegate is destroyed.
@@ -358,7 +363,9 @@ void Backend::itemContextMenu(QQuickItem *item, QObject *configAction)
         if (!guard) {
             return;
         }
-        m_contextMenu->windowHandle()->setTransientParent(item->window());
+        if (window) {
+            m_contextMenu->windowHandle()->setTransientParent(window);
+        }
         m_contextMenu->deleteLater();
     });
 }
