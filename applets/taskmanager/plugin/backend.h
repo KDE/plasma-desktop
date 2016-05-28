@@ -129,7 +129,7 @@ class Backend : public QObject
         TaskManager::TasksModel *m_tasksModel;
         QPointer<TaskManager::BasicMenu> m_contextMenu;
         QQuickItem* m_taskManagerItem;
-        QQuickItem* m_toolTipItem;
+        QPointer<QQuickItem> m_toolTipItem;
         WId m_panelWinId;
         bool m_highlightWindows;
         QList<WId> m_windowsToHighlight;
