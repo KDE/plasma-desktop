@@ -17,6 +17,7 @@
  */
 
 import QtQuick 2.0
+import QtQuick.Controls 1.1 as QQC
 import QtQuick.Layouts 1.0
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -31,6 +32,17 @@ Item {
     readonly property string addWidgetsButtonText: i18nd("plasma_shell_org.kde.plasma.desktop", "Add Widgets...")
     readonly property string addSpacerButtonText: i18nd("plasma_shell_org.kde.plasma.desktop", "Add Spacer")
     readonly property string settingsButtonText: i18nd("plasma_shell_org.kde.plasma.desktop", "More Settings...")
+
+    QQC.Action {
+        shortcut: "Escape"
+        onTriggered: {
+            if (contextMenuLoader.opened) {
+                contextMenuLoader.close()
+            } else {
+                configDialog.close()
+            }
+        }
+    }
 
     GridLayout {
         id: row
