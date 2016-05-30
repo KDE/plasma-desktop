@@ -44,6 +44,6 @@ if (X11_Xfixes_FOUND)
 endif ()
 
 add_test(lookandfeel-kcmTest kcmTest)
-add_dependencies(lookandfeel-kcmTest kcm_lookandfeel)
+add_dependencies(kcmTest kcm_lookandfeel)
 ecm_mark_as_test(kcmTest)
 
