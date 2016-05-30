@@ -118,12 +118,12 @@ ListView {
         onExited: menu.currentIndex = -1
 
         onClicked: {
+            toolBoxLoader.item.visible = false
             if (modelData.operation) {
                 performOperation(modelData.operation)
             } else {
                 modelData.trigger()
             }
-            toolBoxLoader.item.visible = false
         }
 
         Accessible.role: Accessible.MenuItem
