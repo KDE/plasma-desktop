@@ -68,17 +68,6 @@ Item {
             topMargin: units.gridUnit
             leftMargin: units.gridUnit
         }
-
-        //Rectangle { color: "green"; opacity: 0.3; anchors.fill: parent;  visible: root.debug;  }
-
-        MouseArea {
-            anchors.fill: parent
-            acceptedButtons: Qt.LeftButton
-            cursorShape: Qt.PointingHandCursor
-            onClicked: {
-                KCMShell.open("user_manager")
-            }
-        }
     }
 
     PlasmaCore.IconItem {
@@ -91,14 +80,14 @@ Item {
             right: faceIcon.right
             rightMargin: -units.gridUnit/2
         }
+    }
 
-        MouseArea {
-            anchors.fill: parent
-            acceptedButtons: Qt.LeftButton
-            cursorShape: Qt.PointingHandCursor
-            onClicked: {
-                KCMShell.open("kcm_useraccount")
-            }
+    MouseArea {
+        anchors.fill: faceIcon
+        acceptedButtons: Qt.LeftButton
+        cursorShape: Qt.PointingHandCursor
+        onClicked: {
+            KCMShell.open("user_manager")
         }
     }
 
