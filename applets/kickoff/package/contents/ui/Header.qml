@@ -66,16 +66,6 @@ Item {
             topMargin: units.gridUnit
             leftMargin: units.gridUnit
         }
-
-        MouseArea {
-            anchors.fill: parent
-            acceptedButtons: Qt.LeftButton
-            cursorShape: Qt.PointingHandCursor
-            onClicked: {
-                KCMShell.open("user_manager")
-            }
-            visible: KCMShell.authorize("user_manager.desktop").length > 0
-        }
     }
 
     PlasmaCore.IconItem {
@@ -88,15 +78,16 @@ Item {
             right: faceIcon.right
             rightMargin: -units.gridUnit/2
         }
+    }
 
-        MouseArea {
-            anchors.fill: parent
-            acceptedButtons: Qt.LeftButton
-            cursorShape: Qt.PointingHandCursor
-            onClicked: {
-                KCMShell.open("kcm_useraccount")
-            }
+    MouseArea {
+        anchors.fill: faceIcon
+        acceptedButtons: Qt.LeftButton
+        cursorShape: Qt.PointingHandCursor
+        onClicked: {
+            KCMShell.open("user_manager")
         }
+        visible: KCMShell.authorize("user_manager.desktop").length > 0
     }
 
     PlasmaExtras.Heading {
