@@ -36,6 +36,12 @@ Item {
     QQC.Action {
         shortcut: "Escape"
         onTriggered: {
+            // avoid leaving the panel in an inconsistent state when escaping while dragging it
+            // "checked" means "pressed" in this case, we abuse that propery to make the button look pressed
+            if (edgeHandle.checked || sizeHandle.checked) {
+                return
+            }
+
             if (contextMenuLoader.opened) {
                 contextMenuLoader.close()
             } else {
@@ -54,10 +60,12 @@ Item {
         columnSpacing: units.smallSpacing
 
         EdgeHandle {
-          Layout.alignment: Qt.AlignHCenter
+            id: edgeHandle
+            Layout.alignment: Qt.AlignHCenter
         }
         SizeHandle {
-          Layout.alignment: Qt.AlignHCenter
+            id: sizeHandle
+            Layout.alignment: Qt.AlignHCenter
         }
     }
 
