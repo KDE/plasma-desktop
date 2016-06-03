@@ -124,7 +124,7 @@ Item {
             title: i18n("Grouping and Sorting")
             flat: true
 
-            visible: (plasmoid.pluginName != "org.kde.plasma.icontasks")
+            visible: (plasmoid.pluginName != "org.kde.plasma.legacyicontasks")
 
             ColumnLayout {
                 GridLayout {
@@ -196,7 +196,7 @@ Item {
                 CheckBox {
                     id: showOnlyMinimized
 
-                    visible: (plasmoid.pluginName != "org.kde.plasma.icontasks")
+                    visible: (plasmoid.pluginName != "org.kde.plasma.legacyicontasks")
 
                     text: i18n("Show only tasks that are minimized")
                 }

@@ -18,7 +18,7 @@ target_link_libraries(pagerplugin
                       Qt5::Qml
                       Qt5::Quick
                       Qt5::DBus
-                      PW::LibTaskManager)
+                      PW::LibLegacyTaskManager)
 
 if (X11_FOUND)
     target_link_libraries(pagerplugin Qt5::X11Extras)

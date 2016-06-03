@@ -67,7 +67,7 @@ bool Backend::setupUnity()
         return false;
     }
 
-    KConfig cfg(QStringLiteral("taskmanagerrulesrc"));
+    KConfig cfg(QStringLiteral("legacytaskmanagerrulesrc"));
     KConfigGroup grp(&cfg, QStringLiteral("Unity Launcher Mapping"));
 
     foreach (const QString &key, grp.keyList()) {

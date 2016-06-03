@@ -23,7 +23,7 @@
 #include <QQmlEngine>
 #include <QQmlExtensionPlugin>
 
-class TaskManagerPlugin : public QQmlExtensionPlugin
+class LegacyTaskManagerPlugin : public QQmlExtensionPlugin
 {
     Q_OBJECT
     Q_PLUGIN_METADATA(IID "org.qt-project.Qt.QQmlExtensionInterface")

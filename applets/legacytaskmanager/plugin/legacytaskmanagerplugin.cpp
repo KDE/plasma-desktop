@@ -35,7 +35,7 @@
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
 
-#include "taskmanagerplugin.h"
+#include "legacytaskmanagerplugin.h"
 #include "backend.h"
 #include "draghelper.h"
 #include "textlabel.h"
@@ -44,9 +44,9 @@
 
 #include <QtQml>
 
-void TaskManagerPlugin::registerTypes(const char *uri)
+void LegacyTaskManagerPlugin::registerTypes(const char *uri)
 {
-    Q_ASSERT(uri == QLatin1String("org.kde.plasma.private.taskmanager"));
+    Q_ASSERT(uri == QLatin1String("org.kde.plasma.private.legacytaskmanager"));
     qmlRegisterType<Backend>(uri, 0, 1, "Backend");
     qmlRegisterType<DragHelper>(uri, 0, 1, "DragHelper");
     qmlRegisterType<TextLabel>(uri, 0, 1, "TextLabel");

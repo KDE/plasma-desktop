@@ -23,7 +23,7 @@ import org.kde.plasma.plasmoid 2.0
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 
-import org.kde.plasma.private.taskmanager 0.1 as TaskManager
+import org.kde.plasma.private.legacytaskmanager 0.1 as LegacyTaskManager
 
 import "../code/layout.js" as LayoutManager
 import "../code/tools.js" as TaskTools
@@ -34,7 +34,7 @@ Item {
     anchors.fill: parent
 
     property bool vertical: (plasmoid.formFactor == PlasmaCore.Types.Vertical)
-    property bool iconsOnly: (plasmoid.pluginName == "org.kde.plasma.icontasks")
+    property bool iconsOnly: (plasmoid.pluginName == "org.kde.plasma.legacyicontasks")
 
     Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
 
@@ -79,7 +79,7 @@ Item {
         taskList.height = LayoutManager.layoutHeight();
     }
 
-    TaskManager.Backend {
+    LegacyTaskManager.Backend {
         id: backend
 
         taskManagerItem: tasks
@@ -185,7 +185,7 @@ Item {
         value: !iconsOnly
     }
 
-    TaskManager.DragHelper {
+    LegacyTaskManager.DragHelper {
         id: dragHelper
 
         dragIconSize: units.iconSizes.medium

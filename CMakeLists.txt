@@ -53,7 +53,7 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
 )
 
 find_package(LibKWorkspace CONFIG REQUIRED)
-find_package(LibTaskManager CONFIG REQUIRED)
+find_package(LibLegacyTaskManager CONFIG REQUIRED)
 find_package(KWinDBusInterface CONFIG REQUIRED)
 find_package(ScreenSaverDBusInterface CONFIG REQUIRED)
 find_package(KRunnerAppDBusInterface CONFIG REQUIRED)

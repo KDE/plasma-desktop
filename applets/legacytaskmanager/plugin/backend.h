@@ -29,7 +29,7 @@
 class QQuickItem;
 class QQuickWindow;
 
-namespace TaskManager {
+namespace LegacyTaskManager {
     class BasicMenu;
     class LauncherItem;
 }
@@ -44,7 +44,7 @@ class Backend : public QObject
 
     Q_PROPERTY(QObject* groupManager READ groupManager CONSTANT)
     Q_PROPERTY(QObject* tasksModel READ tasksModel CONSTANT)
-    Q_PROPERTY(QQuickItem* taskManagerItem READ taskManagerItem WRITE setTaskManagerItem NOTIFY taskManagerItemChanged)
+    Q_PROPERTY(QQuickItem* taskManagerItem READ taskManagerItem WRITE setLegacyTaskManagerItem NOTIFY taskManagerItemChanged)
     Q_PROPERTY(QQuickItem* toolTipItem READ toolTipItem WRITE setToolTipItem NOTIFY toolTipItemChanged)
     Q_PROPERTY(bool anyTaskNeedsAttention READ anyTaskNeedsAttention)
     Q_PROPERTY(bool showingContextMenu READ showingContextMenu NOTIFY showingContextMenuChanged)
@@ -64,11 +64,11 @@ class Backend : public QObject
         Backend(QObject *parent = 0);
         ~Backend();
 
-        TaskManager::GroupManager *groupManager() const;
-        TaskManager::TasksModel *tasksModel() const;
+        LegacyTaskManager::GroupManager *groupManager() const;
+        LegacyTaskManager::TasksModel *tasksModel() const;
 
         QQuickItem* taskManagerItem() const;
-        void setTaskManagerItem(QQuickItem *item);
+        void setLegacyTaskManagerItem(QQuickItem *item);
 
         QQuickItem* toolTipItem() const;
         void setToolTipItem(QQuickItem *item);
@@ -120,14 +120,14 @@ class Backend : public QObject
         void launchersChanged();
 
     private:
-        void addJumpListActions(const QUrl &launcherUrl, TaskManager::BasicMenu *menu) const;
-        void addRecentDocumentActions(TaskManager::LauncherItem *launcher,
-            TaskManager::BasicMenu *menu) const;
+        void addJumpListActions(const QUrl &launcherUrl, LegacyTaskManager::BasicMenu *menu) const;
+        void addRecentDocumentActions(LegacyTaskManager::LauncherItem *launcher,
+            LegacyTaskManager::BasicMenu *menu) const;
         void updateWindowHighlight();
 
-        TaskManager::GroupManager *m_groupManager;
-        TaskManager::TasksModel *m_tasksModel;
-        QPointer<TaskManager::BasicMenu> m_contextMenu;
+        LegacyTaskManager::GroupManager *m_groupManager;
+        LegacyTaskManager::TasksModel *m_tasksModel;
+        QPointer<LegacyTaskManager::BasicMenu> m_contextMenu;
         QQuickItem* m_taskManagerItem;
         QPointer<QQuickItem> m_toolTipItem;
         WId m_panelWinId;

@@ -1,23 +1,23 @@
-add_definitions(-DTRANSLATION_DOMAIN=\"plasma_applet_org.kde.plasma.taskmanager\")
+add_definitions(-DTRANSLATION_DOMAIN=\"plasma_applet_org.kde.plasma.legacytaskmanager\")
 
-plasma_install_package(package org.kde.plasma.taskmanager)
+plasma_install_package(package org.kde.plasma.legacytaskmanager)
 
-set(taskmanagerplugin_SRCS
+set(legacytaskmanagerplugin_SRCS
     plugin/backend.cpp
     plugin/draghelper.cpp
-    plugin/taskmanagerplugin.cpp
+    plugin/legacytaskmanagerplugin.cpp
     plugin/textlabel.cpp
 
     plugin/smartlaunchers/smartlauncherbackend.cpp
     plugin/smartlaunchers/smartlauncheritem.cpp
 )
 
-install(FILES plugin/qmldir DESTINATION ${QML_INSTALL_DIR}/org/kde/plasma/private/taskmanager)
+install(FILES plugin/qmldir DESTINATION ${QML_INSTALL_DIR}/org/kde/plasma/private/legacytaskmanager)
 
-add_library(taskmanagerplugin SHARED ${taskmanagerplugin_SRCS})
+add_library(legacytaskmanagerplugin SHARED ${legacytaskmanagerplugin_SRCS})
 
-target_link_libraries(taskmanagerplugin
-                      PW::LibTaskManager
+target_link_libraries(legacytaskmanagerplugin
+                      PW::LibLegacyTaskManager
                       Qt5::Core
                       Qt5::DBus
                       Qt5::Qml
@@ -32,4 +32,4 @@ target_link_libraries(taskmanagerplugin
                       KF5::Service
                       KF5::WindowSystem)
 
-install(TARGETS taskmanagerplugin DESTINATION ${QML_INSTALL_DIR}/org/kde/plasma/private/taskmanager)
+install(TARGETS legacytaskmanagerplugin DESTINATION ${QML_INSTALL_DIR}/org/kde/plasma/private/legacytaskmanager)

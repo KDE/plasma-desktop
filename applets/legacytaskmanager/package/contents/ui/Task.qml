@@ -23,7 +23,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.draganddrop 2.0
 
-import org.kde.plasma.private.taskmanager 0.1 as TaskManager
+import org.kde.plasma.private.legacytaskmanager 0.1 as LegacyTaskManager
 
 import "../code/layout.js" as LayoutManager
 import "../code/tools.js" as TaskTools
@@ -108,9 +108,9 @@ MouseArea {
     onReleased: {
         if (pressed) {
             if (mouse.button == Qt.MidButton) {
-                if (plasmoid.configuration.middleClickAction == TaskManager.Backend.NewInstance) {
+                if (plasmoid.configuration.middleClickAction == LegacyTaskManager.Backend.NewInstance) {
                     tasks.launchNewInstance(model.Id);
-                } else if (plasmoid.configuration.middleClickAction == TaskManager.Backend.Close) {
+                } else if (plasmoid.configuration.middleClickAction == LegacyTaskManager.Backend.Close) {
                     tasks.closeByItemId(model.Id);
                 }
             } else if (mouse.button == Qt.LeftButton) {
@@ -158,8 +158,8 @@ MouseArea {
     onSmartLauncherEnabledChanged: {
         if (smartLauncherEnabled && !smartLauncherItem) {
             var smartLauncher = Qt.createQmlObject("
-    import org.kde.plasma.private.taskmanager 0.1 as TaskManager;
-    TaskManager.SmartLauncherItem { }", task);
+    import org.kde.plasma.private.legacytaskmanager 0.1 as LegacyTaskManager;
+    LegacyTaskManager.SmartLauncherItem { }", task);
 
             smartLauncher.launcherUrl = Qt.binding(function() { return model.LauncherUrl; });
 
@@ -342,7 +342,7 @@ MouseArea {
         ]
     }
 
-    TaskManager.TextLabel {
+    LegacyTaskManager.TextLabel {
         id: label
 
         anchors {

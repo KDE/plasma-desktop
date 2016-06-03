@@ -589,7 +589,7 @@ void Pager::dropMimeData(QMimeData *mimeData, int desktopId)
     }
 
     bool ok;
-    const QList<WId> &ids = TaskManager::Task::idsFromMimeData(mimeData, &ok);
+    const QList<WId> &ids = LegacyTaskManager::Task::idsFromMimeData(mimeData, &ok);
     if (ok) {
         foreach (const WId &id, ids) {
             KWindowSystem::setOnDesktop(id, desktopId + 1);

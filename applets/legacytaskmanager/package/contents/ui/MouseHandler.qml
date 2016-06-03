@@ -46,7 +46,7 @@ Item {
             var above = target.childAt(event.x, event.y);
 
             // HACK: plasmoid.configuration.sortingStrategy is an integer representation
-            // of the TaskManager::GroupManager::TaskSortingStrategy enum.
+            // of the LegacyTaskManager::GroupManager::TaskSortingStrategy enum.
             if (tasks.dragSource && backend.sortingStrategy == 1) {
                 if (tasks.dragSource != above) {
                     itemMove(tasks.dragSource.itemId,

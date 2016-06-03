@@ -53,8 +53,8 @@ using namespace KAStats;
 using namespace KAStats::Terms;
 
 Backend::Backend(QObject* parent) : QObject(parent),
-    m_groupManager(new TaskManager::GroupManager(this)),
-    m_tasksModel(new TaskManager::TasksModel(m_groupManager, this)),
+    m_groupManager(new LegacyTaskManager::GroupManager(this)),
+    m_tasksModel(new LegacyTaskManager::TasksModel(m_groupManager, this)),
     m_contextMenu(0),
     m_taskManagerItem(0),
     m_toolTipItem(0),
@@ -70,12 +70,12 @@ Backend::~Backend()
     delete m_contextMenu;
 }
 
-TaskManager::GroupManager* Backend::groupManager() const
+LegacyTaskManager::GroupManager* Backend::groupManager() const
 {
     return m_groupManager;
 }
 
-TaskManager::TasksModel* Backend::tasksModel() const
+LegacyTaskManager::TasksModel* Backend::tasksModel() const
 {
     return m_tasksModel;
 }
@@ -85,7 +85,7 @@ QQuickItem* Backend::taskManagerItem() const
     return m_taskManagerItem;
 }
 
-void Backend::setTaskManagerItem(QQuickItem* item)
+void Backend::setLegacyTaskManagerItem(QQuickItem* item)
 {
     if (item != m_taskManagerItem) {
         m_taskManagerItem = item;
@@ -150,7 +150,7 @@ int Backend::groupingStrategy() const
 void Backend::setGroupingStrategy(int groupingStrategy)
 {
     // FIXME TODO: This is fucking terrible.
-    m_groupManager->setGroupingStrategy(static_cast<TaskManager::GroupManager::TaskGroupingStrategy>(groupingStrategy));
+    m_groupManager->setGroupingStrategy(static_cast<LegacyTaskManager::GroupManager::TaskGroupingStrategy>(groupingStrategy));
 }
 
 int Backend::sortingStrategy() const
@@ -161,7 +161,7 @@ int Backend::sortingStrategy() const
 void Backend::setSortingStrategy(int sortingStrategy)
 {
     // FIXME TODO: This is fucking terrible.
-    m_groupManager->setSortingStrategy(static_cast<TaskManager::GroupManager::TaskSortingStrategy>(sortingStrategy));
+    m_groupManager->setSortingStrategy(static_cast<LegacyTaskManager::GroupManager::TaskSortingStrategy>(sortingStrategy));
 }
 
 void Backend::updateLaunchersCache()
@@ -210,22 +210,22 @@ void Backend::setLaunchers(const QString& launchers)
 
 void Backend::activateItem(int id, bool toggle)
 {
-    TaskManager::AbstractGroupableItem* item = m_groupManager->rootGroup()->getMemberById(id);
+    LegacyTaskManager::AbstractGroupableItem* item = m_groupManager->rootGroup()->getMemberById(id);
 
     if (!item) {
         return;
     }
 
-    if (item->itemType() == TaskManager::TaskItemType && !item->isStartupItem()) {
-        TaskManager::TaskItem* taskItem = static_cast<TaskManager::TaskItem*>(item);
+    if (item->itemType() == LegacyTaskManager::TaskItemType && !item->isStartupItem()) {
+        LegacyTaskManager::TaskItem* taskItem = static_cast<LegacyTaskManager::TaskItem*>(item);
 
         if (toggle) {
             taskItem->task()->activateRaiseOrIconify();
         } else {
             taskItem->task()->activate();
         }
-    } else if (item->itemType() == TaskManager::LauncherItemType) {
-        static_cast<TaskManager::LauncherItem*>(item)->launch();
+    } else if (item->itemType() == LegacyTaskManager::LauncherItemType) {
+        static_cast<LegacyTaskManager::LauncherItem*>(item)->launch();
     }
 }
 
@@ -236,7 +236,7 @@ void Backend::activateWindow(int winId)
 
 void Backend::closeByWinId(int winId)
 {
-    TaskManager::AbstractGroupableItem *item = m_groupManager->rootGroup()->getMemberByWId(winId);
+    LegacyTaskManager::AbstractGroupableItem *item = m_groupManager->rootGroup()->getMemberByWId(winId);
 
     if (item) {
         item->close();
@@ -245,7 +245,7 @@ void Backend::closeByWinId(int winId)
 
 void Backend::closeByItemId(int itemId)
 {
-    TaskManager::AbstractGroupableItem *item = m_groupManager->rootGroup()->getMemberById(itemId);
+    LegacyTaskManager::AbstractGroupableItem *item = m_groupManager->rootGroup()->getMemberById(itemId);
 
     if (item) {
         item->close();
@@ -254,7 +254,7 @@ void Backend::closeByItemId(int itemId)
 
 void Backend::launchNewInstance(int id)
 {
-    TaskManager::AbstractGroupableItem* item = m_groupManager->rootGroup()->getMemberById(id);
+    LegacyTaskManager::AbstractGroupableItem* item = m_groupManager->rootGroup()->getMemberById(id);
 
     if (item) {
         item->launchNewInstance();
@@ -263,7 +263,7 @@ void Backend::launchNewInstance(int id)
 
 void Backend::itemContextMenu(QQuickItem *item, QObject *configAction)
 {
-    TaskManager::AbstractGroupableItem* agItem = m_groupManager->rootGroup()->getMemberById(item->property("itemId").toInt());
+    LegacyTaskManager::AbstractGroupableItem* agItem = m_groupManager->rootGroup()->getMemberById(item->property("itemId").toInt());
 
     if (!KAuthorized::authorizeKAction("kwin_rmb") || !item || !item->window() || !agItem) {
         return;
@@ -279,18 +279,18 @@ void Backend::itemContextMenu(QQuickItem *item, QObject *configAction)
         actionList << action;
     }
 
-    if (agItem->itemType() == TaskManager::TaskItemType && !agItem->isStartupItem()) {
-        TaskManager::TaskItem* taskItem = static_cast<TaskManager::TaskItem*>(agItem);
-        m_contextMenu = new TaskManager::BasicMenu(0, taskItem, m_groupManager, actionList);
+    if (agItem->itemType() == LegacyTaskManager::TaskItemType && !agItem->isStartupItem()) {
+        LegacyTaskManager::TaskItem* taskItem = static_cast<LegacyTaskManager::TaskItem*>(agItem);
+        m_contextMenu = new LegacyTaskManager::BasicMenu(0, taskItem, m_groupManager, actionList);
         addJumpListActions(taskItem->launcherUrl(), m_contextMenu);
-    } else if (agItem->itemType() == TaskManager::GroupItemType) {
-        TaskManager::TaskGroup* taskGroup = static_cast<TaskManager::TaskGroup*>(agItem);
+    } else if (agItem->itemType() == LegacyTaskManager::GroupItemType) {
+        LegacyTaskManager::TaskGroup* taskGroup = static_cast<LegacyTaskManager::TaskGroup*>(agItem);
         const int maxWidth = 0.8 * (window ? window->screen()->size().width() : 1.0);
-        m_contextMenu = new TaskManager::BasicMenu(0, taskGroup, m_groupManager, actionList, QList <QAction*>(), maxWidth);
+        m_contextMenu = new LegacyTaskManager::BasicMenu(0, taskGroup, m_groupManager, actionList, QList <QAction*>(), maxWidth);
         addJumpListActions(taskGroup->launcherUrl(), m_contextMenu);
-    } else if (agItem->itemType() == TaskManager::LauncherItemType) {
-        TaskManager::LauncherItem *launcher = static_cast<TaskManager::LauncherItem *>(agItem);
-        m_contextMenu = new TaskManager::BasicMenu(0, launcher, m_groupManager, actionList);
+    } else if (agItem->itemType() == LegacyTaskManager::LauncherItemType) {
+        LegacyTaskManager::LauncherItem *launcher = static_cast<LegacyTaskManager::LauncherItem *>(agItem);
+        m_contextMenu = new LegacyTaskManager::BasicMenu(0, launcher, m_groupManager, actionList);
         addRecentDocumentActions(launcher, m_contextMenu);
         addJumpListActions(launcher->launcherUrl(), m_contextMenu);
     }
@@ -339,7 +339,7 @@ void Backend::itemContextMenu(QQuickItem *item, QObject *configAction)
     }
 
     // Close menu when the delegate is destroyed.
-    connect(item, &QQuickItem::destroyed, m_contextMenu.data(), &TaskManager::BasicMenu::deleteLater);
+    connect(item, &QQuickItem::destroyed, m_contextMenu.data(), &LegacyTaskManager::BasicMenu::deleteLater);
 
     if (m_windowsToHighlight.count()) {
         m_windowsToHighlight.clear();
@@ -358,7 +358,7 @@ void Backend::itemContextMenu(QQuickItem *item, QObject *configAction)
 
         emit showingContextMenuChanged();
 
-        QPointer<TaskManager::BasicMenu> guard(m_contextMenu);
+        QPointer<LegacyTaskManager::BasicMenu> guard(m_contextMenu);
         m_contextMenu->exec(pos);
         if (!guard) {
             return;
@@ -370,7 +370,7 @@ void Backend::itemContextMenu(QQuickItem *item, QObject *configAction)
     });
 }
 
-void Backend::addJumpListActions(const QUrl &launcherUrl, TaskManager::BasicMenu *menu) const
+void Backend::addJumpListActions(const QUrl &launcherUrl, LegacyTaskManager::BasicMenu *menu) const
 {
     if (!menu || !launcherUrl.isValid() || !launcherUrl.isLocalFile() || !KDesktopFile::isDesktopFile(launcherUrl.toLocalFile())) {
         return;
@@ -420,7 +420,7 @@ void Backend::addJumpListActions(const QUrl &launcherUrl, TaskManager::BasicMenu
     }
 }
 
-void Backend::addRecentDocumentActions(TaskManager::LauncherItem *launcher, TaskManager::BasicMenu* menu) const
+void Backend::addRecentDocumentActions(LegacyTaskManager::LauncherItem *launcher, LegacyTaskManager::BasicMenu* menu) const
 {
     if (!launcher || !menu || !launcher->launcherUrl().isLocalFile()) {
         return;
@@ -557,7 +557,7 @@ void Backend::itemHovered(int id, bool hovered)
 {
     m_windowsToHighlight.clear();
 
-    TaskManager::AbstractGroupableItem* item = m_groupManager->rootGroup()->getMemberById(id);
+    LegacyTaskManager::AbstractGroupableItem* item = m_groupManager->rootGroup()->getMemberById(id);
 
     if (item && hovered) {
         m_windowsToHighlight = QList<WId>::fromSet(item->winIds());
@@ -606,7 +606,7 @@ void Backend::updateWindowHighlight()
 
 void Backend::itemMove(int id, int newIndex)
 {
-    TaskManager::AbstractGroupableItem *item = m_groupManager->rootGroup()->getMemberById(id);
+    LegacyTaskManager::AbstractGroupableItem *item = m_groupManager->rootGroup()->getMemberById(id);
 
     if (item) {
         m_groupManager->manualSortingRequest(item, newIndex);
@@ -615,14 +615,14 @@ void Backend::itemMove(int id, int newIndex)
 
 void Backend::itemGeometryChanged(QQuickItem *item, int id)
 {
-    TaskManager:: AbstractGroupableItem *agItem = m_groupManager->rootGroup()->getMemberById(id);
+    LegacyTaskManager:: AbstractGroupableItem *agItem = m_groupManager->rootGroup()->getMemberById(id);
 
-    if (!item || !item->window() || !agItem || agItem->itemType() != TaskManager::TaskItemType)
+    if (!item || !item->window() || !agItem || agItem->itemType() != LegacyTaskManager::TaskItemType)
     {
         return;
     }
 
-    TaskManager::TaskItem *taskItem = static_cast<TaskManager::TaskItem *>(agItem);
+    LegacyTaskManager::TaskItem *taskItem = static_cast<LegacyTaskManager::TaskItem *>(agItem);
 
     if (!taskItem->task()) {
         return;
@@ -652,7 +652,7 @@ int Backend::numberOfActivities() const
 
 void Backend::presentWindows(int groupParentId)
 {
-    TaskManager::AbstractGroupableItem *item = m_groupManager->rootGroup()->getMemberById(groupParentId);
+    LegacyTaskManager::AbstractGroupableItem *item = m_groupManager->rootGroup()->getMemberById(groupParentId);
 
     if (item && m_taskManagerItem && m_taskManagerItem->window()) {
         if (m_windowsToHighlight.count()) {
