@@ -82,8 +82,6 @@ Item {
         //print("Backgroundhints changed: " + appletItem.imagePath);
     }
 
-    Rectangle { color: Qt.rgba(0,0,0,0); border.width: 3; border.color: "white"; opacity: 0.5; visible: debug; anchors.fill: parent; }
-
     KQuickControlsAddons.MouseEventListener {
         id: mouseListener
 
@@ -336,7 +334,7 @@ Item {
                     anchors.centerIn: parent
                     z: appletContainer.z + 1
                 }
-//                 Rectangle { color: "green"; opacity: 0.3; visible: debug; anchors.fill: parent; }
+
                 Component.onCompleted: PlasmaExtras.AppearAnimation {
                     targetItem: appletItem
                 }
@@ -399,8 +397,6 @@ Item {
                     appletHandle.forceFloating = rightOutside > 0;
                 }
             }
-
-//             Rectangle { color: "orange"; opacity: 0.1; visible: debug; anchors.fill: parent; }
         }
     }
 

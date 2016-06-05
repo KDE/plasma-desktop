@@ -55,7 +55,6 @@ DragDrop.DropArea {
     property Item toolBox
     property var layoutManager: LayoutManager
 
-    property bool debug: false
     property int handleDelay: 800
     property real haloOpacity: 0.5
 

@@ -144,5 +144,4 @@ PlasmaCore.ToolTipArea {
             }
         }
     }
-    Rectangle { color: "white"; opacity: 0.4; visible: debug; anchors.fill: parent; }
 }

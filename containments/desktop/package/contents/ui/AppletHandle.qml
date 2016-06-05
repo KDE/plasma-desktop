@@ -137,7 +137,6 @@ KQuickControlsAddons.MouseEventListener {
                     root.layoutManager.setSpaceAvailable(appletItem.x, appletItem.y, widthAnimation.to, heightAnimation.to, false)
                     appletContainer.clip = false
                 }
-//                 Rectangle { color: "blue"; opacity: 0.4; visible: debug; anchors.fill: parent; }
             }
         }
         ActionButton {
@@ -220,7 +219,6 @@ KQuickControlsAddons.MouseEventListener {
 //                    print("saving...");
                     root.layoutManager.saveItem(appletItem);
                 }
-//                 Rectangle { color: "red"; opacity: 0.6; visible: debug; anchors.fill: parent; }
             }
         }
         ActionButton {
