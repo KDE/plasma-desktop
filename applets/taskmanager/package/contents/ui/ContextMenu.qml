@@ -95,7 +95,8 @@ PlasmaComponents.ContextMenu {
     PlasmaComponents.MenuItem {
         id: virtualDesktopsMenuItem
 
-        visible: (visualParent && !visualParent.isLauncher
+        visible: virtualDesktopInfo.numberOfDesktops > 1
+            && (visualParent && !visualParent.isLauncher
             && !visualParent.isStartup && visualParent.isVirtualDesktopChangeable)
 
         enabled: visible
@@ -116,6 +117,10 @@ PlasmaComponents.ContextMenu {
 
             function refresh() {
                 clearMenuItems();
+
+                if (virtualDesktopInfo.numberOfDesktops <= 1) {
+                    return;
+                }
 
                 var menuItem = menu.newMenuItem(virtualDesktopsMenu);
                 menuItem.text = i18n("Move To Current Desktop");
