@@ -296,7 +296,7 @@ Item {
     }
 
     function addLauncher(url) {
-        tasksModel.requestAppendLauncher(url);
+        tasksModel.requestAddLauncher(url);
     }
 
     function resetDragSource() {
