@@ -1,0 +1,102 @@
+/***************************************************************************
+ *   Copyright (C) 2013-2016 by Eike Hein <hein@kde.org>                   *
+ *                                                                         *
+ *   This program is free software; you can redistribute it and/or modify  *
+ *   it under the terms of the GNU General Public License as published by  *
+ *   the Free Software Foundation; either version 2 of the License, or     *
+ *   (at your option) any later version.                                   *
+ *                                                                         *
+ *   This program is distributed in the hope that it will be useful,       *
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of        *
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
+ *   GNU General Public License for more details.                          *
+ *                                                                         *
+ *   You should have received a copy of the GNU General Public License     *
+ *   along with this program; if not, write to the                         *
+ *   Free Software Foundation, Inc.,                                       *
+ *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
+ ***************************************************************************/
+
+#ifndef BACKEND_H
+#define BACKEND_H
+
+#include <QObject>
+#include <QRect>
+
+#include <netwm.h>
+
+class QAction;
+class QActionGroup;
+class QQuickItem;
+class QQuickWindow;
+
+namespace KActivities {
+    class Consumer;
+}
+
+class Backend : public QObject
+{
+    Q_OBJECT
+
+    Q_PROPERTY(QQuickItem* taskManagerItem READ taskManagerItem WRITE setTaskManagerItem NOTIFY taskManagerItemChanged)
+    Q_PROPERTY(QQuickItem* toolTipItem READ toolTipItem WRITE setToolTipItem NOTIFY toolTipItemChanged)
+    Q_PROPERTY(bool highlightWindows READ highlightWindows WRITE setHighlightWindows NOTIFY highlightWindowsChanged)
+
+    public:
+        enum MiddleClickAction {
+            None = 0,
+            Close,
+            NewInstance
+        };
+
+        Q_ENUM(MiddleClickAction);
+
+        Backend(QObject *parent = 0);
+        ~Backend();
+
+        QQuickItem *taskManagerItem() const;
+        void setTaskManagerItem(QQuickItem *item);
+
+        QQuickItem *toolTipItem() const;
+        void setToolTipItem(QQuickItem *item);
+
+        bool highlightWindows() const;
+        void setHighlightWindows(bool highlight);
+
+        Q_INVOKABLE QVariantList jumpListActions(const QUrl &launcherUrl, QObject *parent);
+        Q_INVOKABLE QVariantList recentDocumentActions(const QUrl &launcherUrl, QObject *parent);
+        Q_INVOKABLE void setActionGroup(QAction *action) const;
+
+        Q_INVOKABLE QRect globalRect(QQuickItem *item) const;
+
+        Q_INVOKABLE bool canPresentWindows() const;
+
+    public Q_SLOTS:
+        void presentWindows(const QVariant &winIds);
+        void windowsHovered(const QVariant &winIds, bool hovered);
+        void urlDropped(const QUrl &url) const;
+
+    Q_SIGNALS:
+        void taskManagerItemChanged() const;
+        void toolTipItemChanged() const;
+        void highlightWindowsChanged() const;
+        void addLauncher(const QUrl &url) const;
+
+    private Q_SLOTS:
+        void toolTipWindowChanged(QQuickWindow *window);
+        void handleJumpListAction() const;
+        void handleRecentDocumentAction() const;
+
+    private:
+        void updateWindowHighlight();
+
+        QQuickItem *m_taskManagerItem;
+        QQuickItem *m_toolTipItem;
+        WId m_panelWinId;
+        bool m_highlightWindows;
+        QList<WId> m_windowsToHighlight;
+        QActionGroup *m_actionGroup;
+        KActivities::Consumer *m_activitiesConsumer;
+};
+
+#endif

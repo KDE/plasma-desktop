@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+  <kcfgfile name=""/>
+
+  <group name="General">
+    <entry name="showOnlyCurrentScreen" type="Bool">
+      <default>false</default>
+    </entry>
+    <entry name="showOnlyCurrentDesktop" type="Bool">
+      <default>false</default>
+    </entry>
+    <entry name="showOnlyCurrentActivity" type="Bool">
+      <default>true</default>
+    </entry>
+    <entry name="showOnlyMinimized" type="Int">
+      <default>false</default>
+    </entry>
+    <entry name="groupingStrategy" type="Enum">
+      <default>1</default>
+    </entry>
+    <entry name="onlyGroupWhenFull" type="Bool">
+      <default>true</default>
+    </entry>
+    <entry name="groupingAppIdBlacklist" type="StringList">
+      <default></default>
+    </entry>
+    <entry name="groupingLauncherUrlBlacklist" type="StringList">
+      <default></default>
+    </entry>
+    <entry name="sortingStrategy" type="Int">
+      <default>2</default>
+    </entry>
+    <entry name="maxStripes" type="Int">
+      <default>2</default>
+      <min>1</min>
+    </entry>
+    <entry name="forceStripes" type="Bool">
+      <default>false</default>
+    </entry>
+    <entry name="showToolTips" type="Bool">
+      <default>true</default>
+    </entry>
+    <entry name="wheelEnabled" type="Bool">
+      <default>true</default>
+    </entry>
+    <entry name="highlightWindows" type="Bool">
+      <default>false</default>
+    </entry>
+    <entry name="launchers" type="StringList">
+      <default></default>
+    </entry>
+    <entry name="middleClickAction" type="Enum">
+      <choices>
+            <choice name="None"/>
+            <choice name="Close"/>
+            <choice name="NewInstance"/>
+      </choices>
+      <default>0</default>
+    </entry>
+    <entry name="smartLaunchersEnabled" type="Bool">
+      <default>true</default>
+    </entry>
+  </group>
+
+</kcfg>
+

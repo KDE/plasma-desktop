@@ -3,6 +3,8 @@ add_subdirectory(kickoff)
 add_subdirectory(trash)
 
 # tasks and windowlist depend on libs/legacytaskmanager
+add_subdirectory(taskmanager)
+add_subdirectory(icontasks)
 add_subdirectory(legacytaskmanager)
 add_subdirectory(legacyicontasks)
 plasma_install_package(window-list org.kde.plasma.windowlist)
