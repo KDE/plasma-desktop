@@ -1,15 +1,15 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"kcmkeyboard\")
 
-option(HAVE_XINPUT "X11/XCB XInput" OFF)
+option(HAVE_XINPUT "X11 XInput" OFF)
 option(HAVE_UDEV "UDev" OFF)
 option(NEW_GEOMETRY "Keyboard geometry preview" OFF)
 
-if (X11_Xinput_FOUND AND XCB_XINPUT_FOUND)
+if (X11_Xinput_FOUND)
     set(HAVE_XINPUT ON)
 elseif (UDEV_FOUND)
     set(HAVE_UDEV ON)
 else()
-    message(STATUS "X11/XCB XInput and UDev is not found, either is required to keep layouts with keyboard hotplugging")
+    message(STATUS "X11 XInput and UDev is not found, either is required to keep layouts with keyboard hotplugging")
 endif()
 
 

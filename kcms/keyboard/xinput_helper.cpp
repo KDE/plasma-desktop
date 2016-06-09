@@ -30,7 +30,18 @@
 
 #ifdef HAVE_XINPUT
 #include <X11/extensions/XInput.h>
-#include <xcb/xinput.h>
+#include <xcb/xproto.h>
+typedef struct xcb_input_device_presence_notify_event_t {
+    uint8_t         response_type;
+    uint8_t         pad0;
+    uint16_t        sequence;
+    xcb_timestamp_t time;
+    uint8_t         devchange;
+    uint8_t         device_id;
+    uint16_t        control;
+    uint8_t         pad1[20];
+} xcb_input_device_presence_notify_event_t;
+// FIXME: #include <xcb/xinput.h> once xcb-xinput is stable
 #endif
 
 #include "x11_helper.h"
