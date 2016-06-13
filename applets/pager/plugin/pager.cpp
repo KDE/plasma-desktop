@@ -67,6 +67,7 @@ Pager::Pager(QObject *parent)
       m_showWindowIcons(false),
       m_desktopDown(false),
       m_validSizes(false),
+      m_enabled(true),
       m_desktopWidget(QApplication::desktop())
 #if HAVE_X11
       , m_isX11(QX11Info::isPlatformX11())
@@ -119,6 +120,18 @@ Pager::Pager(QObject *parent)
 
 Pager::~Pager()
 {
+}
+
+void Pager::setEnabled(bool enabled)
+{
+    if (m_enabled != enabled) {
+        m_enabled = enabled;
+        emit enabledChanged();
+
+        if (enabled) {
+            startTimerFast();
+        }
+    }
 }
 
 int Pager::desktopCount() const
@@ -355,6 +368,10 @@ void Pager::updateSizes()
 
 void Pager::recalculateWindowRects()
 {
+    if (!m_enabled) {
+        return;
+    }
+
     if (!m_isX11) {
         return;
     }

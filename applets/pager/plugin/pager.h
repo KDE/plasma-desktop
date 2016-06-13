@@ -44,6 +44,7 @@ class Pager : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(QObject* model READ model CONSTANT)
+    Q_PROPERTY(bool enabled READ enabled WRITE setEnabled NOTIFY enabledChanged)
     Q_PROPERTY(int currentDesktop READ currentDesktop NOTIFY currentDesktopChanged)
     Q_PROPERTY(int desktopCount READ desktopCount NOTIFY desktopCountChanged)
     Q_PROPERTY(bool showWindowIcons READ showWindowIcons WRITE setShowWindowIcons NOTIFY showWindowIconsChanged)
@@ -72,6 +73,9 @@ class Pager : public QObject
 
         QObject *model() const { return m_pagerModel; }
 
+        bool enabled() const { return m_enabled; }
+        void setEnabled(bool enabled);
+
         int currentDesktop() const { return m_currentDesktop; }
         void setCurrentDesktop(int desktop);
 
@@ -99,6 +103,7 @@ class Pager : public QObject
         Q_INVOKABLE void dropMimeData(QMimeData *mimeData, int desktopId);
 
     Q_SIGNALS:
+        void enabledChanged();
         void currentDesktopChanged();
         void desktopCountChanged();
         void showWindowIconsChanged();
@@ -155,6 +160,7 @@ class Pager : public QObject
         bool m_showWindowIcons : 1;
         bool m_desktopDown : 1;
         bool m_validSizes : 1;
+        bool m_enabled : 1;
 
         QDesktopWidget *m_desktopWidget;
         bool m_isX11;

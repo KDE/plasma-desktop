@@ -126,6 +126,8 @@ MouseArea {
 
     Pager {
         id: pager
+        // don't bother updating the models when we're not visible
+        enabled: root.visible
         orientation: plasmoid.formFactor == PlasmaCore.Types.Vertical ? Qt.Vertical : Qt.Horizontal
         size: Qt.size(root.width, root.height)
         showWindowIcons: plasmoid.configuration.showWindowIcons
