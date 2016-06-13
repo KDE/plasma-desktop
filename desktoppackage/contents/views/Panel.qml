@@ -21,15 +21,13 @@ import QtQuick.Layouts 1.1
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 
-
 PlasmaCore.FrameSvgItem {
     id: root
 
     imagePath: "widgets/panel-background"
-    onPrefixChanged: adjustBorders();
     onRepaintNeeded: adjustPrefix();
 
-    visible: false //adjust borders is run during setup. We want to avoid painting till completed
+    enabledBorders: panel.enabledBorders
 
     property Item containment
 
@@ -63,44 +61,6 @@ PlasmaCore.FrameSvgItem {
         }
     }
 
-    function adjustBorders() {
-        var borders = PlasmaCore.FrameSvg.AllBorders;
-        if (!containment) {
-            return;
-        }
-
-        switch (containment.location) {
-        case PlasmaCore.Types.TopEdge:
-            borders = borders & ~PlasmaCore.FrameSvg.TopBorder;
-            break;
-        case PlasmaCore.Types.LeftEdge:
-            borders = borders & ~PlasmaCore.FrameSvg.LeftBorder;
-            break;
-        case PlasmaCore.Types.RightEdge:
-            borders = borders & ~PlasmaCore.FrameSvg.RightBorder;
-            break;
-        case PlasmaCore.Types.BottomEdge:
-        default:
-            borders = borders & ~PlasmaCore.FrameSvg.BottomBorder;
-            break;
-        }
-
-        if (panel.x <= panel.screen.geometry.x) {
-            borders = borders & ~PlasmaCore.FrameSvg.LeftBorder;
-        }
-        if (panel.x + panel.width >= panel.screen.geometry.x + panel.screen.geometry.width) {
-            borders = borders & ~PlasmaCore.FrameSvg.RightBorder;
-        }
-        if (panel.y <= panel.screen.geometry.y) {
-            borders = borders & ~PlasmaCore.FrameSvg.TopBorder;
-        }
-        if (panel.y + panel.height >= panel.screen.geometry.y + panel.screen.geometry.height) {
-            borders = borders & ~PlasmaCore.FrameSvg.BottomBorder;
-        }
-
-        root.enabledBorders = borders;
-    }
-
     onContainmentChanged: {
         if (!containment) {
             return;
@@ -108,9 +68,8 @@ PlasmaCore.FrameSvgItem {
         containment.parent = containmentParent;
         containment.visible = true;
         containment.anchors.fill = containmentParent;
-
-        containment.locationChanged.connect(adjustBorders);
-        adjustBorders();
+        containment.locationChanged.connect(adjustPrefix);
+        adjustPrefix();
     }
 
     Binding {
@@ -135,29 +94,6 @@ PlasmaCore.FrameSvgItem {
     }
 
     Connections {
-        target: panel
-        onXChanged: {
-            adjustBorders();
-        }
-        onYChanged: {
-            adjustBorders();
-        }
-        onWidthChanged: {
-            adjustBorders();
-        }
-        onHeightChanged: {
-            adjustBorders();
-        }
-    }
-
-    Connections {
-        target: panel.screen
-        onGeometryChanged: {
-            adjustBorders();
-        }
-    }
-
-    Connections {
         target: containment
         onUserConfiguringChanged: {
             if (!containment.userConfiguring) {
@@ -169,10 +105,5 @@ PlasmaCore.FrameSvgItem {
                 containment.Layout.preferredHeightChanged();
             }
         }
-    }
-
-    Component.onCompleted: {
-        adjustBorders();
-        visible = true
     }
 }
