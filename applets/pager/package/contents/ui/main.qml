@@ -169,10 +169,10 @@ MouseArea {
 
             Item {
                 id: clipRect
-                x: 1
-                y: 1
-                width: desktop.width - 2
-                height: desktop.height - 2
+                x: Math.round(units.devicePixelRatio)
+                y: Math.round(units.devicePixelRatio)
+                width: desktop.width - 2 * x
+                height: desktop.height - 2 * y
                 clip: true
 
                 PlasmaComponents.Label {
@@ -215,8 +215,8 @@ MouseArea {
                         property string visibleName: model.visibleName
 
                         /* since we move clipRect with 1, move it back */
-                        x: model.x - 1
-                        y: model.y - 1
+                        x: model.x - Math.round(units.devicePixelRatio)
+                        y: model.y - Math.round(units.devicePixelRatio)
                         width: model.width
                         height: model.height
                         color: {
@@ -233,7 +233,7 @@ MouseArea {
                             }
                         }
 
-                        border.width: 1
+                        border.width: Math.round(units.devicePixelRatio)
                         border.color: model.active ? windowActiveBorderColor
                                                    : windowInactiveBorderColor
 
