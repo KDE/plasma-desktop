@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<component>
+  <id>org.kde.plasmashell</id>
+  <project_license>GPL-2.0+</project_license>
+  <name>KDE Plasma Desktop</name>
+  <summary>KDE's complete desktop experience. Simple by default, powerful when needed.</summary>
+  <url type="homepage">https://www.kde.org/workspaces/plasmadesktop/</url>
+  <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=plasmashell</url>
+  <project_group>KDE</project_group>
+  <provides>
+    <binary>plasmashell</binary>
+  </provides>
+  <screenshots>
+    <screenshot type="default">
+       <caption>Plasma Desktop in Folder View with Clock and Notes Widgets</caption>
+       <image type="source">https://www.kde.org/workspaces/plasmadesktop/screenshots/general-desktop.png</image>
+    </screenshot>
+  </screenshots>
+</component>
