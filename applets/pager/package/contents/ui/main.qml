@@ -82,13 +82,15 @@ MouseArea {
     }
 
     Component.onCompleted: {
-        plasmoid.setAction("addDesktop", i18n("Add Virtual Desktop"), "list-add");
-        plasmoid.setAction("removeDesktop", i18n("Remove Virtual Desktop"), "list-remove");
-        plasmoid.action("removeDesktop").enabled = Qt.binding(function() {
-            return repeater.count > 1;
-        });
+        if (KQuickControlsAddonsComponents.KCMShell.authorize("desktop.desktop").length > 0) {
+            plasmoid.setAction("addDesktop", i18n("Add Virtual Desktop"), "list-add");
+            plasmoid.setAction("removeDesktop", i18n("Remove Virtual Desktop"), "list-remove");
+            plasmoid.action("removeDesktop").enabled = Qt.binding(function() {
+                return repeater.count > 1;
+            });
 
-        plasmoid.setAction("openKCM", i18n("Configure Desktops..."), "configure");
+            plasmoid.setAction("openKCM", i18n("Configure Desktops..."), "configure");
+        }
     }
 
     Pager {
