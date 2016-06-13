@@ -75,8 +75,14 @@ PlasmaCore.FrameSvgItem {
     Binding {
         target: panel
         property: "length"
-        value: containment.formFactor == PlasmaCore.Types.Vertical ?
-                        panel.length = containment.Layout.preferredHeight : panel.length = containment.Layout.preferredWidth
+        when: containment
+        value: {
+            if (containment.formFactor === PlasmaCore.Types.Vertical) {
+                return containment.Layout.preferredHeight
+            } else {
+                return containment.Layout.preferredWidth
+            }
+        }
     }
 
 
