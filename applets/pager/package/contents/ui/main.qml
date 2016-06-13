@@ -50,12 +50,16 @@ MouseArea {
     anchors.fill: parent
     acceptedButtons: Qt.NoButton
 
-    property color windowActiveOnActiveDesktopColor: theme.textColor
-    property color windowInactiveOnActiveDesktopColor: theme.textColor
-    property color windowActiveColor: theme.textColor
-    property color windowActiveBorderColor: theme.textColor
-    property color windowInactiveColor: theme.textColor
-    property color windowInactiveBorderColor: theme.textColor
+    function colorWithAlpha(color, alpha) {
+        return Qt.rgba(color.r, color.g, color.b, alpha)
+    }
+
+    readonly property color windowActiveOnActiveDesktopColor: colorWithAlpha(theme.textColor, 0.6)
+    readonly property color windowInactiveOnActiveDesktopColor: colorWithAlpha(theme.textColor, 0.35)
+    readonly property color windowActiveColor: colorWithAlpha(theme.textColor, 0.5)
+    readonly property color windowActiveBorderColor: theme.textColor
+    readonly property color windowInactiveColor: colorWithAlpha(theme.textColor, 0.17)
+    readonly property color windowInactiveBorderColor: colorWithAlpha(theme.textColor, 0.5)
 
     function action_addDesktop() {
         pager.slotAddDesktop();
@@ -77,43 +81,12 @@ MouseArea {
         }
     }
 
-    Connections {
-        target: theme
-        onThemeChanged: {
-            windowActiveOnActiveDesktopColor = theme.textColor
-            windowActiveOnActiveDesktopColor.a = 0.6
-            windowActiveColor = theme.textColor
-            windowActiveColor.a = 0.5;
-            windowActiveBorderColor = theme.textColor
-            //windowActiveBorderColor = 1
-
-            windowInactiveOnActiveDesktopColor = theme.textColor
-            windowInactiveOnActiveDesktopColor.a = 0.35;
-            windowInactiveColor = theme.textColor
-            windowInactiveColor.a = 0.17;
-            windowInactiveBorderColor = theme.textColor
-            windowInactiveBorderColor.a = 0.5
-        }
-    }
     Component.onCompleted: {
-            plasmoid.setAction("addDesktop", i18n("Add Virtual Desktop"), "list-add");
-            plasmoid.setAction("removeDesktop", i18n("Remove Virtual Desktop"), "list-remove");
-            actionEnablerBinding.target = plasmoid.action("removeDesktop");
+        plasmoid.setAction("addDesktop", i18n("Add Virtual Desktop"), "list-add");
+        plasmoid.setAction("removeDesktop", i18n("Remove Virtual Desktop"), "list-remove");
+        actionEnablerBinding.target = plasmoid.action("removeDesktop");
 
-            plasmoid.setAction("openKCM", i18n("Configure Desktops..."), "configure");
-            windowActiveOnActiveDesktopColor = theme.textColor
-            windowActiveOnActiveDesktopColor.a = 0.6
-            windowActiveColor = theme.textColor
-            windowActiveColor.a = 0.5;
-            windowActiveBorderColor = theme.textColor
-            //windowActiveBorderColor = 1
-
-            windowInactiveOnActiveDesktopColor = theme.textColor
-            windowInactiveOnActiveDesktopColor.a = 0.35;
-            windowInactiveColor = theme.textColor
-            windowInactiveColor.a = 0.17;
-            windowInactiveBorderColor = theme.textColor
-            windowInactiveBorderColor.a = 0.5
+        plasmoid.setAction("openKCM", i18n("Configure Desktops..."), "configure");
     }
 
     Binding {
