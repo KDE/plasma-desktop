@@ -46,7 +46,8 @@ class Backend : public QObject
         enum MiddleClickAction {
             None = 0,
             Close,
-            NewInstance
+            NewInstance,
+            ToggleMinimized
         };
 
         Q_ENUM(MiddleClickAction);
