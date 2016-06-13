@@ -140,6 +140,11 @@ PlasmaCore.ToolTipArea {
         onTriggered: plasmoid.expanded = false
     }
 
+    Connections {
+        target: plasmoid
+        onContextualActionsAboutToShow: root.hideToolTip()
+    }
+
     PlasmaCore.Dialog {
         id: popupWindow
         objectName: "popupWindow"
