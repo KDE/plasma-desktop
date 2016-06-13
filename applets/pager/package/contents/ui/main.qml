@@ -70,7 +70,7 @@ MouseArea {
     }
 
     function action_openKCM() {
-        pager.openVirtualDesktopsKCM();
+        KQuickControlsAddonsComponents.KCMShell.open("desktop")
     }
 
     onWheel: {

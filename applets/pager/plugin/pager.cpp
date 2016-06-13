@@ -631,10 +631,4 @@ QRect Pager::fixViewportPosition( const QRect& r )
     return QRect( x - r.width() / 2, y - r.height() / 2, r.width(), r.height());
 }
 
-void Pager::openVirtualDesktopsKCM()
-{
-    QProcess::startDetached(QStringLiteral("kcmshell5"), QStringList() << QStringLiteral("desktop"));
-}
-
-
 #include "moc_pager.cpp"

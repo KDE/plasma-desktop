@@ -33,7 +33,6 @@ class QDesktopWidget;
 
 class KColorScheme;
 class KWindowInfo;
-class KCModuleProxy;
 
 namespace Plasma
 {
@@ -117,7 +116,6 @@ class Pager : public QObject
         void recalculateGridSizes(int rows);
         void updateSizes();
         void recalculateWindowRects();
-        void openVirtualDesktopsKCM();
 
     protected Q_SLOTS:
         void currentDesktopChanged(int desktop);
