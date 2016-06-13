@@ -401,7 +401,7 @@ void Pager::recalculateWindowRects()
         // apparently sane defaults on properties is beyond the wisdom of x11.
         if (type == NET::Desktop || type == NET::Dock || type == NET::TopMenu ||
             type == NET::Splash || type == NET::Menu || type == NET::Toolbar ||
-            info.hasState(NET::SkipPager) || info.isMinimized()) {
+            info.hasState(NET::SkipPager)) {
             continue;
         }
 
@@ -436,7 +436,7 @@ void Pager::recalculateWindowRects()
             int windowRectSize = qMin(windowRect.width(), windowRect.height());
             windowIconSize = qMax(windowIconSize, windowRectSize / 2);
             QPixmap icon = KWindowSystem::icon(info.win(), windowIconSize, windowIconSize, true);
-            m_pagerModel->appendWindowRect(i, window, windowRect, active, icon, info.visibleName());
+            m_pagerModel->appendWindowRect(i, window, windowRect, active, icon, info.visibleName(), info.isMinimized());
         }
     }
 #endif

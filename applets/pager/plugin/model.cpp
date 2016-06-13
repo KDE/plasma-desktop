@@ -86,6 +86,7 @@ QHash<int, QByteArray> WindowModel::roleNames() const
     rectRoles[ActiveRole] = "active";
     rectRoles[IconRole] = "icon";
     rectRoles[VisibleNameRole] = "visibleName";
+    rectRoles[MinimizedRole] = "minimized";
     return rectRoles;
 }
 
@@ -97,11 +98,12 @@ void WindowModel::clear()
     m_active.clear();
     m_icons.clear();
     m_visibleNames.clear();
+    m_minimized.clear();
     endResetModel();
 }
 
 void WindowModel::append(WId windowId, const QRectF &rect, bool active,
-                         const QPixmap &icon, const QString &name)
+                         const QPixmap &icon, const QString &name, bool minimized)
 {
     beginInsertRows(QModelIndex(), rowCount(), rowCount());
     m_ids.append(windowId);
@@ -109,6 +111,7 @@ void WindowModel::append(WId windowId, const QRectF &rect, bool active,
     m_active.append(active);
     m_icons.append(icon);
     m_visibleNames.append(name);
+    m_minimized.append(minimized);
     endInsertRows();
 }
 
@@ -139,6 +142,8 @@ QVariant WindowModel::data(const QModelIndex &index, int role) const
         return m_icons[index.row()];
     case VisibleNameRole:
         return m_visibleNames[index.row()];
+    case MinimizedRole:
+        return m_minimized.value(index.row());
     default:
         return QVariant();
     }
@@ -210,14 +215,14 @@ void PagerModel::clearWindowRects()
         m_windows.append(new WindowModel(this));
 }
 
-void PagerModel::appendWindowRect(int desktopId, WId windowId, const QRectF &rect,
-                                  bool active, const QPixmap &icon, const QString &name)
+void PagerModel::appendWindowRect(int desktopId, WId windowId, const QRectF &rect, bool active,
+                                  const QPixmap &icon, const QString &name, bool minimized)
 {
     WindowModel *windows = windowsAt(desktopId);
     if (!windows)
         return;
 
-    windows->append(windowId, rect, active, icon, name);
+    windows->append(windowId, rect, active, icon, name, minimized);
 
     QModelIndex i = index(desktopId);
     emit dataChanged(i, i);

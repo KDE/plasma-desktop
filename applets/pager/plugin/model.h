@@ -57,14 +57,15 @@ public:
         IdRole = RectangleModel::YRole + 1,
         ActiveRole,
         IconRole,
-        VisibleNameRole
+        VisibleNameRole,
+        MinimizedRole
     };
 
     WindowModel(QObject *parent = 0);
 
     QHash<int, QByteArray> roleNames() const;
     void clear();
-    void append(WId, const QRectF &, bool active, const QPixmap &icon, const QString &name);
+    void append(WId, const QRectF &, bool active, const QPixmap &icon, const QString &name, bool minimized);
     WId idAt(int index) const;
     QString visibleNameAt(int index) const;
 
@@ -75,6 +76,7 @@ private:
     QList<bool> m_active;
     QList<QPixmap> m_icons;
     QStringList m_visibleNames;
+    QVector<bool> m_minimized;
 };
 
 
@@ -97,7 +99,7 @@ public:
 
     void clearWindowRects();
     void appendWindowRect(int desktopId, WId, const QRectF &, bool active,
-                          const QPixmap &icon, const QString &name);
+                          const QPixmap &icon, const QString &name, bool minimized);
     WindowModel *windowsAt(int index) const;
 
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;

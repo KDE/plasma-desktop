@@ -1,5 +1,6 @@
 /*
  * Copyright 2012  Luís Gabriel Lima <lampih@gmail.com>
+ * Copyright 2016  Kai Uwe Broulik <kde@privat.broulik.de>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
@@ -126,6 +127,64 @@ MouseArea {
             property bool active: (desktopId === pager.currentDesktop-1)
 
             mainText: desktopName
+            // our ToolTip has maximumLineCount of 8 which doesn't fit but QML doesn't
+            // respect that in RichText so we effectively can put in as much as we like :)
+            // it also gives us more flexibility when it comes to styling the <li>
+            textFormat: Text.RichText
+
+            function updateSubText() {
+                var generateWindowList = function windowList(windows) {
+                    // if we have 5 windows, we would show "4 and another one" with the
+                    // hint that there's 1 more taking the same amount of space than just showing it
+                    var maximum = windows.length === 5 ? 5 : 4
+
+                    var text = "<ul><li>"
+                             + windows.slice(0, maximum).join("</li><li>")
+                             + "</li></ul>"
+
+                    if (windows.length > maximum) {
+                        text += i18np("...and %1 other window", "...and %1 other windows", windows.length - maximum)
+                    }
+
+                    return text
+                }
+
+                var text = ""
+                var visibleWindows = []
+                var minimizedWindows = []
+
+                for (var i = 0, length = windowRectRepeater.count; i < length; ++i) {
+                    var window = windowRectRepeater.itemAt(i)
+                    if (window) {
+                        if (window.minimized) {
+                            minimizedWindows.push(window.visibleName)
+                        } else {
+                            visibleWindows.push(window.visibleName)
+                        }
+                    }
+                }
+
+                if (visibleWindows.length) {
+                    text += i18np("%1 Window:", "%1 Windows:", visibleWindows.length)
+                          + generateWindowList(visibleWindows)
+                }
+
+                if (visibleWindows.length && minimizedWindows.length) {
+                    text += "<br>"
+                }
+
+                if (minimizedWindows.length > 0) {
+                    text += i18np("%1 Minimized Window:", "%1 Minimized Windows:", minimizedWindows.length)
+                          + generateWindowList(minimizedWindows)
+                }
+
+                if (text.length) {
+                    // Get rid of the spacing <ul> would cause
+                    text = "<style>ul { margin: 0; }</style>" + text
+                }
+
+                subText = text
+            }
 
             x: model.x
             y: model.y
@@ -184,41 +243,24 @@ MouseArea {
                 }
 
                 Repeater {
+                    id: windowRectRepeater
                     model: windows
-
-                    //update the tooltip whenever we add or remove a window
-                    onCountChanged: {
-                        var tooltipText = i18np("%1 window", "%1 windows", count)
-
-                        if (count) {
-                            var i;
-                            tooltipText += "<ul>";
-                            for (i=0; i < Math.min(count,4); i++) {
-                                if (itemAt(i)) {
-                                    tooltipText += "<li>"+ itemAt(i).visibleName +"</li>";
-                                }
-                            }
-                            tooltipText += "</ul>";
-                            if (i < count) {
-                                tooltipText += "<br/>"
-                                tooltipText += i18np("and %1 other window", "and %1 other windows", count-i)
-                            }
-                        }
-
-                        desktop.subText = tooltipText
-                    }
+                    onCountChanged: desktop.updateSubText()
 
                     Rectangle {
                         id: windowRect
 
                         property int windowId: model.windowId
                         property string visibleName: model.visibleName
+                        property bool minimized: model.minimized
+                        onMinimizedChanged: desktop.updateSubText()
 
                         /* since we move clipRect with 1, move it back */
                         x: model.x - Math.round(units.devicePixelRatio)
                         y: model.y - Math.round(units.devicePixelRatio)
                         width: model.width
                         height: model.height
+                        visible: !model.visible
                         color: {
                             if (desktop.active) {
                                 if (model.active)
