@@ -216,9 +216,7 @@ bool AppEntry::run(const QString& actionId, const QVariant &argument)
             timeStamp = QX11Info::appUserTime();
         }
 #endif
-
-        new KRun(QUrl::fromLocalFile(m_service->entryPath()), 0, true,
-            KStartupInfo::createNewStartupIdForTimestamp(timeStamp));
+        KRun::runService(*m_service, {}, 0, true /* temp URLs forces KRun to not block*/);
 
         KActivities::ResourceInstance::notifyAccessed(QUrl("applications:" + m_service->storageId()),
             "org.kde.plasma.kicker");
