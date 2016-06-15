@@ -109,7 +109,7 @@ PlasmaCore.Dialog {
 
             // TODO: Properly derive limits from work area size (screen size sans struts).
             mainItem.width = Math.min(maxWidth, (tasks.vertical ? 640 - tasks.width : Math.max(tasks.width, 640)) - 20);
-            mainItem.height = groupRepeater.count * (LayoutManager.verticalMargins() + units.iconSizes.small);
+            mainItem.height = groupRepeater.count * (LayoutManager.verticalMargins() + Math.max(theme.mSize(theme.defaultFont).height, units.iconSizes.small));
         }
     }
 }
