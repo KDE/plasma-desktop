@@ -104,7 +104,14 @@ MouseArea {
     }
 
     onItemIndexChanged: {
-        if (!inPopup && !tasks.vertical && LayoutManager.calculateStripes() > 1) {
+        if (!inPopup && !tasks.vertical
+            && (LayoutManager.calculateStripes() > 1 || !plasmoid.configuration.separateLaunchers)) {
+            tasks.requestLayout();
+        }
+    }
+
+    onIsLauncherChanged: {
+        if (!plasmoid.configuration.separateLaunchers) {
             tasks.requestLayout();
         }
     }

@@ -191,7 +191,7 @@ function layout(container) {
 
         adjustedWidth = width;
 
-        if (!tasks.vertical && !tasks.iconsOnly) {
+        if (!tasks.vertical && !tasks.iconsOnly && (plasmoid.configuration.separateLaunchers || stripes == 1)) {
             if (item.isLauncher) {
                 adjustedWidth = launcherWidth();
             } else if (stripes > 1 && i == tasksModel.launcherCount) {

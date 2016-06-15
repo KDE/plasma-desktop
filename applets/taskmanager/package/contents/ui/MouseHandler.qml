@@ -30,6 +30,30 @@ Item {
     signal urlDropped(url url)
 
     property Item target
+    property Item ignoredItem
+    property bool moved: false
+
+    Timer {
+        id: ignoreItemTimer
+
+        repeat: false
+        interval: 750
+
+        onTriggered: {
+            ignoredItem = null;
+        }
+    }
+
+    Connections {
+        target: tasks
+
+        onDragSourceChanged: {
+            if (!dragSource) {
+                ignoredItem = null;
+                ignoreItemTimer.stop();
+            }
+        }
+    }
 
     DropArea {
         id: dropHandler
@@ -47,11 +71,30 @@ Item {
 
             var above = target.childAt(event.x, event.y);
 
+            // If we're mixing launcher tasks with other tasks and are moving
+            // a (small) launcher task across a non-launcher task, don't allow
+            // the latter to be the move target twice in a row for a while, as
+            // it will naturally be moved underneath the cursor as result of the
+            // initial move, due to being far larger than the launcher delegate.
+            // TODO: This restriction (minus the timer, which improves things)
+            // has been proven out in the EITM fork, but could be improved later
+            // by tracking the cursor movement vector and allowing the drag if
+            // the movement direction has reversed, etablishing user intent to
+            // move back.
+            if (!plasmoid.configuration.separateLaunchers && tasks.dragSource.isLauncher
+                 && above != null && !above.isLauncher && above == ignoredItem) {
+                return;
+            } else {
+                ignoredItem = null;
+            }
+
             if (tasksModel.sortMode == TaskManager.TasksModel.SortManual && tasks.dragSource) {
                 var insertAt = TaskTools.insertIndexAt(above, event.x, event.y);
 
                 if (!groupDialog.visible && tasks.dragSource != above && tasks.dragSource.itemIndex != insertAt) {
                     tasksModel.move(tasks.dragSource.itemIndex, insertAt);
+                    ignoredItem = above;
+                    ignoreItemTimer.restart();
                 }
             } else if (!tasks.dragSource && above && hoveredItem != above) {
                 hoveredItem = above;
