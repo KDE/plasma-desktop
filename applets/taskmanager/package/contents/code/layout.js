@@ -117,9 +117,13 @@ function preferredMaxWidth() {
         } else {
             return tasks.height + horizontalMargins();
         }
-    } else {
-        return Math.floor(preferredMinWidth() * 1.6);
     }
+
+    if (plasmoid.configuration.groupingStrategy != 0 && !plasmoid.configuration.groupPopups) {
+        return preferredMinWidth();
+    }
+
+    return Math.floor(preferredMinWidth() * 1.6);
 }
 
 function preferredMinHeight() {
