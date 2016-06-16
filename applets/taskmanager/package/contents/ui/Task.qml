@@ -58,7 +58,7 @@ MouseArea {
     property int wheelDelta: 0
 
     // FIXME Clean up all these props.
-    property variant launcherUrl: model.LauncherUrl != undefined ? model.LauncherUrl : false
+    property variant launcherUrlWithoutIcon: model.LauncherUrlWithoutIcon
 
     property bool isClosable: model.IsClosable === true
     property bool isMovable: model.IsMovable === true
@@ -187,7 +187,7 @@ MouseArea {
         if (pressX != -1 && mouse.buttons == Qt.LeftButton && dragHelper.isDrag(pressX, pressY, mouse.x, mouse.y)) {
             tasks.dragSource = task;
             dragHelper.startDrag(task, model.MimeType, model.MimeData,
-                model.LauncherUrl, model.decoration);
+                model.LauncherUrlWithoutIcon, model.decoration);
             pressX = -1;
             pressY = -1;
 
@@ -207,7 +207,7 @@ MouseArea {
     import org.kde.plasma.private.taskmanager 0.1 as TaskManagerApplet;
     TaskManagerApplet.SmartLauncherItem { }", task);
 
-            smartLauncher.launcherUrl = Qt.binding(function() { return model.LauncherUrl; });
+            smartLauncher.launcherUrl = Qt.binding(function() { return model.LauncherUrlWithoutIcon; });
 
             smartLauncherItem = smartLauncher;
         }
@@ -216,6 +216,10 @@ MouseArea {
     function modelIndex() {
         return (inPopup ? tasksModel.makeModelIndex(groupDialog.visualParent.itemIndex, index)
             : tasksModel.makeModelIndex(index));
+    }
+
+    function launcherUrl() {
+        return model.LauncherUrl;
     }
 
     PlasmaCore.FrameSvgItem {
@@ -264,7 +268,7 @@ MouseArea {
                         return model.IsLauncher ? model.GenericName : toolTip.generateSubText(model);
                     });
                     toolTipDelegate.launcherUrl = Qt.binding(function() {
-                        return model.LauncherUrl;
+                        return model.LauncherUrlWithoutIcon;
                     });
                 }
             }
