@@ -15,6 +15,8 @@ qt5_add_dbus_interface(kcmTest_SRCS ${klauncher_xml} klauncher_iface)
 
 add_executable(kcmTest ${kcmTest_SRCS})
 
+add_dependencies(kcmTest kcm_lookandfeel)
+
 target_link_libraries(kcmTest
         Qt5::Test
         KF5::KIOWidgets
@@ -44,6 +46,5 @@ if (X11_Xfixes_FOUND)
 endif ()
 
 add_test(lookandfeel-kcmTest kcmTest)
-add_dependencies(kcmTest kcm_lookandfeel)
 ecm_mark_as_test(kcmTest)
 
