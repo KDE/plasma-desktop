@@ -237,7 +237,7 @@ MouseArea {
 
                 if (!plasmoid.configuration.showOnlyCurrentDesktop
                     && virtualDesktopInfo.numberOfDesktops > 1
-                    && !model.IsOnAllVirtualDesktops === true
+                    && model.IsOnAllVirtualDesktops !== true
                     && model.VirtualDesktop != -1
                     && model.VirtualDesktop != undefined) {
                     subTextEntries.push(i18n("On %1", virtualDesktopInfo.desktopNames[model.VirtualDesktop - 1]));
