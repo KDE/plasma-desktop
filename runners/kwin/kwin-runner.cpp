@@ -23,8 +23,6 @@
 #include <QDBusServiceWatcher>
 #include <QDBusConnectionInterface>
 
-#include <QIcon>
-
 #include <KLocalizedString>
 
 K_EXPORT_PLASMA_RUNNER(kwin, KWinRunner)
@@ -56,7 +54,7 @@ void KWinRunner::match(Plasma::RunnerContext &context)
         Plasma::QueryMatch match(this);
         match.setId("kwin");
         match.setType(Plasma::QueryMatch::ExactMatch);
-        match.setIcon(QIcon::fromTheme("kwin"));
+        match.setIconName(QStringLiteral("kwin"));
         match.setText(i18n("Open KWin debug console"));
         match.setRelevance(1.0);
         context.addMatch(match);
