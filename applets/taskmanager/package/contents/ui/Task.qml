@@ -42,14 +42,12 @@ MouseArea {
     readonly property var m: model
 
     property int itemIndex: index
-    property bool isLauncher: model.isLauncher === IsLauncher // For onIsLauncherChanged.
     property bool inPopup: false
     property bool initialGeometryExported: false
     property int textWidth: label.implicitWidth
     property bool pressed: false
     property int pressX: -1
     property int pressY: -1
-    property Item busyIndicator
     property QtObject contextMenu: null
     property int wheelDelta: 0
     readonly property bool smartLauncherEnabled: plasmoid.configuration.smartLaunchersEnabled && !inPopup && model.IsStartup !== true
@@ -66,7 +64,7 @@ MouseArea {
     }
 
     onXChanged: {
-        if (!initialGeometryExported) {
+        if (!initialGeometryExported && model.IsWindow === true) {
             tasksModel.requestPublishDelegateGeometry(modelIndex(), backend.globalRect(task), task);
             initialGeometryExported = true;
         }
@@ -79,18 +77,14 @@ MouseArea {
         }
     }
 
-    onIsLauncherChanged: {
-        if (!plasmoid.configuration.separateLaunchers) {
-            tasks.requestLayout();
-        }
-    }
-
     onContainsMouseChanged:  {
         if (!containsMouse) {
             pressed = false;
         }
 
-        tasks.windowsHovered(model.LegacyWinIdList, containsMouse);
+        if (model.IsWindow === true) {
+            tasks.windowsHovered(model.LegacyWinIdList, containsMouse);
+        }
     }
 
     onPressed: {
@@ -341,17 +335,7 @@ MouseArea {
             asynchronous: true
             source: "TaskBadgeOverlay.qml"
             active: plasmoid.configuration.smartLaunchersEnabled && height >= units.iconSizes.small
-                    && icon.visible && task.smartLauncherItem && task.smartLauncherItem.countVisible
-        }
-
-        PlasmaComponents.BusyIndicator {
-            id: busyIndicator
-
-            anchors.fill: parent
-
-            visible: model.IsStartup === true
-
-            running: model.IsStartup === true
+                    && task.smartLauncherItem && task.smartLauncherItem.countVisible
         }
 
         states: [
@@ -373,6 +357,12 @@ MouseArea {
                 }
             }
         ]
+
+        Component.onCompleted: {
+            if (model.IsStartup === true) {
+                Qt.createQmlObject("import org.kde.plasma.components 2.0 as PC; PC.BusyIndicator {}", iconBox);
+            }
+        }
     }
 
     TaskManagerApplet.TextLabel {
@@ -444,7 +434,7 @@ MouseArea {
     ]
 
     Component.onCompleted: {
-        if (!inPopup) {
+        if (!inPopup && model.IsWindow === true) {
             var component = Qt.createComponent("GroupExpanderOverlay.qml");
             component.createObject(task);
         }
