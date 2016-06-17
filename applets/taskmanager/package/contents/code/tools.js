@@ -48,8 +48,8 @@ function activateNextPrevTask(next) {
         var task = taskList.children[i];
         var modelIndex = task.modelIndex(i);
 
-        if (!task.isLauncher && !task.isStartup) {
-            if (task.isGroupParent) {
+        if (task.m.IsLauncher !== true && task.m.IsStartup !== true) {
+            if (task.m.IsGroupParent === true) {
                 for (var j = 0; j < tasksModel.rowCount(modelIndex); ++j) {
                     taskIndexList.push(tasksModel.makeModelIndex(i, j));
                 }
@@ -105,7 +105,7 @@ function publishIconGeometries(taskItems) {
     for (var i = 0; i < taskItems.length - 1; ++i) {
         var task = taskItems[i];
 
-        if (!task.isLauncher && !task.isStartup) {
+        if (task.IsLauncher !== true && task.m.IsStartup !== true) {
             tasksModel.requestPublishDelegateGeometry(tasksModel.makeModelIndex(task.itemIndex),
                 backend.globalRect(task), task);
         }
