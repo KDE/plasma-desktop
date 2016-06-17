@@ -25,10 +25,10 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 MouseArea {
     id: main
     anchors.fill: parent
-    Layout.minimumWidth: units.gridUnit * 15
-    Layout.minimumHeight: units.gridUnit * 25
-    Plasmoid.switchWidth: units.gridUnit * 15
-    Plasmoid.switchHeight: units.gridUnit * 25
+    Layout.minimumWidth: units.gridUnit * 12
+    Layout.minimumHeight: units.gridUnit * 12
+    Plasmoid.switchWidth: units.gridUnit * 11
+    Plasmoid.switchHeight: units.gridUnit * 11
     //property alias data: tasksSource.data;
     property variant desktopList: []
     property int iconSize: units.iconSizes.smallMedium 
