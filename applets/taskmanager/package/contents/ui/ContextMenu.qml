@@ -40,15 +40,15 @@ PlasmaComponents.ContextMenu {
     minimumWidth: visualParent.width
 
     onStatusChanged: {
-        if (visualParent && visualParent.launcherUrl != null && status == PlasmaComponents.DialogStatus.Open) {
-            launcherToggleAction.checked = (tasksModel.launcherPosition(visualParent.launcherUrl) != -1);
+        if (visualParent && visualParent.launcherUrlWithoutIcon != null && status == PlasmaComponents.DialogStatus.Open) {
+            launcherToggleAction.checked = (tasksModel.launcherPosition(visualParent.launcherUrlWithoutIcon) != -1);
         } else if (status == PlasmaComponents.DialogStatus.Closed) {
             menu.destroy();
         }
     }
 
     function show() {
-        loadDynamicLaunchActions(visualParent.launcherUrl);
+        loadDynamicLaunchActions(visualParent.launcherUrlWithoutIcon);
         openRelative();
     }
 
@@ -199,7 +199,7 @@ PlasmaComponents.ContextMenu {
     PlasmaComponents.MenuItem {
         visible: (visualParent && !visualParent.isLauncher && !visualParent.isStartup)
 
-        enabled: visualParent && visualParent.launcherUrl != null
+        enabled: visualParent && visualParent.launcherUrlWithoutIcon != null
 
         text: i18n("Start New Instance")
         icon: "system-run"
@@ -212,17 +212,17 @@ PlasmaComponents.ContextMenu {
 
         visible: (visualParent && !visualParent.isLauncher && !visualParent.isStartup)
 
-        enabled: visualParent && visualParent.launcherUrl != null
+        enabled: visualParent && visualParent.launcherUrlWithoutIcon != null
 
         checkable: true
 
         text: i18n("Show A Launcher When Not Running")
 
         onClicked: {
-            if (tasksModel.launcherPosition(visualParent.launcherUrl) != -1) {
-                tasksModel.requestRemoveLauncher(visualParent.launcherUrl);
+            if (tasksModel.launcherPosition(visualParent.launcherUrlWithoutIcon) != -1) {
+                tasksModel.requestRemoveLauncher(visualParent.launcherUrlWithoutIcon);
             } else {
-                tasksModel.requestAddLauncher(visualParent.launcherUrl);
+                tasksModel.requestAddLauncher(visualParent.launcherUrl());
             }
         }
     }
@@ -232,7 +232,7 @@ PlasmaComponents.ContextMenu {
 
         text: i18n("Remove Launcher")
 
-        onClicked: tasksModel.requestRemoveLauncher(visualParent.launcherUrl);
+        onClicked: tasksModel.requestRemoveLauncher(visualParent.launcherUrlWithoutIcon);
     }
 
 
