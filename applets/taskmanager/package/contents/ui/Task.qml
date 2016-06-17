@@ -360,7 +360,7 @@ MouseArea {
 
         Component.onCompleted: {
             if (model.IsStartup === true) {
-                Qt.createQmlObject("import org.kde.plasma.components 2.0 as PC; PC.BusyIndicator {}", iconBox);
+                Qt.createQmlObject("import org.kde.plasma.components 2.0 as PC; PC.BusyIndicator { anchors.fill: parent }", iconBox);
             }
         }
     }
