@@ -54,6 +54,10 @@ QVariant RunnerMatchesModel::data(const QModelIndex &index, int role) const
     if (role == Qt::DisplayRole) {
         return match.text();
     } else if (role == Qt::DecorationRole) {
+        if (!match.iconName().isEmpty()) {
+            return match.iconName();
+        }
+
         return match.icon();
     } else if (role == Kicker::DescriptionRole) {
         return match.subtext();
