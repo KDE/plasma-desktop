@@ -1,9 +1,17 @@
-<?xml version="1.0" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <component>
   <id>org.kde.plasmashell</id>
   <project_license>GPL-2.0+</project_license>
   <name>KDE Plasma Desktop</name>
+  <name xml:lang="es">Escritorio KDE Plasma</name>
+  <name xml:lang="nl">KDE Plasma Bureaublad</name>
+  <name xml:lang="pt">Área de Trabalho Plasma do KDE</name>
+  <name xml:lang="x-test">xxKDE Plasma Desktopxx</name>
   <summary>KDE's complete desktop experience. Simple by default, powerful when needed.</summary>
+  <summary xml:lang="es">Experiencia completa de escritorio de KDE. Sencillo por omisión, potente cuando es necesario.</summary>
+  <summary xml:lang="nl">De complete bureaubladvaring van KDE. Standaard eenvoudig, krachtig indien nodig.</summary>
+  <summary xml:lang="pt">A experiência completa de trabalho do KDE. Simples por omissão, poderosa quando necessário.</summary>
+  <summary xml:lang="x-test">xxKDE's complete desktop experience. Simple by default, powerful when needed.xx</summary>
   <url type="homepage">https://www.kde.org/workspaces/plasmadesktop/</url>
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=plasmashell</url>
   <project_group>KDE</project_group>
@@ -12,8 +20,12 @@
   </provides>
   <screenshots>
     <screenshot type="default">
-       <caption>Plasma Desktop in Folder View with Clock and Notes Widgets</caption>
-       <image type="source">https://www.kde.org/workspaces/plasmadesktop/screenshots/general-desktop.png</image>
+      <caption>Plasma Desktop in Folder View with Clock and Notes Widgets</caption>
+      <caption xml:lang="es">Escritorio Plasma en modo de vista de carpeta con reloj y notas</caption>
+      <caption xml:lang="nl">Plasma-bureaublad in mapweergave met klok en notitie-widgets</caption>
+      <caption xml:lang="pt">Ecrã do Plasma na Área de Pastas com o Relógio e as Notas</caption>
+      <caption xml:lang="x-test">xxPlasma Desktop in Folder View with Clock and Notes Widgetsxx</caption>
+      <image type="source">https://www.kde.org/workspaces/plasmadesktop/screenshots/general-desktop.png</image>
     </screenshot>
   </screenshots>
 </component>
