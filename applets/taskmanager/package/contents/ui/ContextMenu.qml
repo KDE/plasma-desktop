@@ -40,15 +40,15 @@ PlasmaComponents.ContextMenu {
     minimumWidth: visualParent.width
 
     onStatusChanged: {
-        if (visualParent && visualParent.launcherUrlWithoutIcon != null && status == PlasmaComponents.DialogStatus.Open) {
-            launcherToggleAction.checked = (tasksModel.launcherPosition(visualParent.launcherUrlWithoutIcon) != -1);
+        if (visualParent && visualParent.m.LauncherUrlWithoutIcon != null && status == PlasmaComponents.DialogStatus.Open) {
+            launcherToggleAction.checked = (tasksModel.launcherPosition(visualParent.m.LauncherUrlWithoutIcon) != -1);
         } else if (status == PlasmaComponents.DialogStatus.Closed) {
             menu.destroy();
         }
     }
 
     function show() {
-        loadDynamicLaunchActions(visualParent.launcherUrlWithoutIcon);
+        loadDynamicLaunchActions(visualParent.m.LauncherUrlWithoutIcon);
         openRelative();
     }
 
@@ -96,8 +96,9 @@ PlasmaComponents.ContextMenu {
         id: virtualDesktopsMenuItem
 
         visible: virtualDesktopInfo.numberOfDesktops > 1
-            && (visualParent && !visualParent.isLauncher
-            && !visualParent.isStartup && visualParent.isVirtualDesktopChangeable)
+            && (visualParent && visualParent.m.IsLauncher !== true
+            && visualParent.m.IsStartup !== true
+            && visualParent.m.IsVirtualDesktopChangeable === true)
 
         enabled: visible
 
@@ -125,7 +126,7 @@ PlasmaComponents.ContextMenu {
                 var menuItem = menu.newMenuItem(virtualDesktopsMenu);
                 menuItem.text = i18n("Move To Current Desktop");
                 menuItem.enabled = Qt.binding(function() {
-                    return menu.visualParent && menu.visualParent.virtualDesktop != virtualDesktopInfo.currentDesktop;
+                    return menu.visualParent && menu.visualParent.m.VirtualDesktop != virtualDesktopInfo.currentDesktop;
                 });
                 menuItem.clicked.connect(function() {
                     tasksModel.requestVirtualDesktop(menu.visualParent.modelIndex(), 0);
@@ -135,7 +136,7 @@ PlasmaComponents.ContextMenu {
                 menuItem.text = i18n("All Desktops");
                 menuItem.checkable = true;
                 menuItem.checked = Qt.binding(function() {
-                    return menu.visualParent && menu.visualParent.isOnAllVirtualDesktops;
+                    return menu.visualParent && menu.visualParent.m.IsOnAllVirtualDesktops === true;
                 });
                 menuItem.clicked.connect(function() {
                     tasksModel.requestVirtualDesktop(menu.visualParent.modelIndex(), 0);
@@ -149,7 +150,7 @@ PlasmaComponents.ContextMenu {
                     menuItem.text = i18nc("1 = number of desktop, 2 = desktop name", "%1 Desktop %2", i + 1, virtualDesktopInfo.desktopNames[i]);
                     menuItem.checkable = true;
                     menuItem.checked = Qt.binding((function(i) {
-                        return function() { return menu.visualParent && menu.visualParent.virtualDesktop == (i + 1) };
+                        return function() { return menu.visualParent && menu.visualParent.m.VirtualDesktop == (i + 1) };
                     })(i));
                     menuItem.clicked.connect((function(i) {
                         return function() { return tasksModel.requestVirtualDesktop(menu.visualParent.modelIndex(), i + 1); };
@@ -171,12 +172,12 @@ PlasmaComponents.ContextMenu {
     }
 
     PlasmaComponents.MenuItem {
-        visible: (visualParent && !visualParent.isLauncher && !visualParent.isStartup)
+        visible: (visualParent && visualParent.m.IsLauncher !== true && visualParent.m.IsStartup !== true)
 
-        enabled: visualParent && visualParent.isMinimizable
+        enabled: visualParent && visualParent.m.IsMinimizable === true
 
         checkable: true
-        checked: visualParent && visualParent.isMinimized
+        checked: visualParent && visualParent.m.IsMinimized === true
 
         text: i18n("Minimize")
 
@@ -184,12 +185,12 @@ PlasmaComponents.ContextMenu {
     }
 
     PlasmaComponents.MenuItem {
-        visible: (visualParent && !visualParent.isLauncher && !visualParent.isStartup)
+        visible: (visualParent && visualParent.m.IsLauncher !== true && visualParent.m.IsStartup !== true)
 
-        enabled: visualParent && visualParent.isMaximizable
+        enabled: visualParent && visualParent.m.IsMaximizable === true
 
         checkable: true
-        checked: visualParent && visualParent.isMaximized
+        checked: visualParent && visualParent.m.IsMaximized === true
 
         text: i18n("Maximize")
 
@@ -197,9 +198,9 @@ PlasmaComponents.ContextMenu {
     }
 
     PlasmaComponents.MenuItem {
-        visible: (visualParent && !visualParent.isLauncher && !visualParent.isStartup)
+        visible: (visualParent && visualParent.m.IsLauncher !== true && visualParent.m.IsStartup !== true)
 
-        enabled: visualParent && visualParent.launcherUrlWithoutIcon != null
+        enabled: visualParent && visualParent.m.LauncherUrlWithoutIcon != null
 
         text: i18n("Start New Instance")
         icon: "system-run"
@@ -210,36 +211,36 @@ PlasmaComponents.ContextMenu {
     PlasmaComponents.MenuItem {
         id: launcherToggleAction
 
-        visible: (visualParent && !visualParent.isLauncher && !visualParent.isStartup)
+        visible: (visualParent && visualParent.m.IsLauncher !== true && visualParent.m.IsStartup !== true)
 
-        enabled: visualParent && visualParent.launcherUrlWithoutIcon != null
+        enabled: visualParent && visualParent.m.LauncherUrlWithoutIcon != null
 
         checkable: true
 
         text: i18n("Show A Launcher When Not Running")
 
         onClicked: {
-            if (tasksModel.launcherPosition(visualParent.launcherUrlWithoutIcon) != -1) {
-                tasksModel.requestRemoveLauncher(visualParent.launcherUrlWithoutIcon);
+            if (tasksModel.launcherPosition(visualParent.m.LauncherUrlWithoutIcon) != -1) {
+                tasksModel.requestRemoveLauncher(visualParent.m.LauncherUrlWithoutIcon);
             } else {
-                tasksModel.requestAddLauncher(visualParent.launcherUrl());
+                tasksModel.requestAddLauncher(visualParent.m.LauncherUrl);
             }
         }
     }
 
     PlasmaComponents.MenuItem {
-        visible: (visualParent && visualParent.isLauncher)
+        visible: (visualParent && visualParent.m.IsLauncher === true)
 
         text: i18n("Remove Launcher")
 
-        onClicked: tasksModel.requestRemoveLauncher(visualParent.launcherUrlWithoutIcon);
+        onClicked: tasksModel.requestRemoveLauncher(visualParent.m.LauncherUrlWithoutIcon);
     }
 
 
     PlasmaComponents.MenuItem {
         id: moreActionsMenuItem
 
-        visible: (visualParent && !visualParent.isLauncher && !visualParent.isStartup)
+        visible: (visualParent && visualParent.m.IsLauncher !== true && visualParent.m.IsStartup !== true)
 
         enabled: visible
 
@@ -249,7 +250,7 @@ PlasmaComponents.ContextMenu {
             visualParent: moreActionsMenuItem.action
 
             PlasmaComponents.MenuItem {
-                enabled: menu.visualParent && menu.visualParent.isMovable
+                enabled: menu.visualParent && menu.visualParent.m.IsMovable === true
 
                 text: i18n("Move")
                 icon: "transform-move"
@@ -258,7 +259,7 @@ PlasmaComponents.ContextMenu {
             }
 
             PlasmaComponents.MenuItem {
-                enabled: menu.visualParent && menu.visualParent.isResizable
+                enabled: menu.visualParent && menu.visualParent.m.IsResizable === true
 
                 text: i18n("Resize")
 
@@ -267,7 +268,7 @@ PlasmaComponents.ContextMenu {
 
             PlasmaComponents.MenuItem {
                 checkable: true
-                checked: menu.visualParent && menu.visualParent.isKeepAbove
+                checked: menu.visualParent && menu.visualParent.m.IsKeepAbove === true
 
                 text: i18n("Keep Above Others")
                 icon: "go-up"
@@ -277,7 +278,7 @@ PlasmaComponents.ContextMenu {
 
             PlasmaComponents.MenuItem {
                 checkable: true
-                checked: menu.visualParent && menu.visualParent.isKeepBelow
+                checked: menu.visualParent && menu.visualParent.m.IsKeepBelow === true
 
                 text: i18n("Keep Below Others")
                 icon: "go-down"
@@ -286,10 +287,10 @@ PlasmaComponents.ContextMenu {
             }
 
             PlasmaComponents.MenuItem {
-                enabled: menu.visualParent && menu.visualParent.isFullScreenable
+                enabled: menu.visualParent && menu.visualParent.m.IsFullScreenable === true
 
                 checkable: true
-                checked: menu.visualParent && menu.visualParent.isFullScreen
+                checked: menu.visualParent && menu.visualParent.m.IsFullScreen === true
 
                 text: i18n("Fullscreen")
                 icon: "view-fullscreen"
@@ -298,10 +299,10 @@ PlasmaComponents.ContextMenu {
             }
 
             PlasmaComponents.MenuItem {
-                enabled: menu.visualParent && menu.visualParent.isShadeable
+                enabled: menu.visualParent && menu.visualParent.m.IsShadeable === true
 
                 checkable: true
-                checked: menu.visualParent && menu.visualParent.isShaded
+                checked: menu.visualParent && menu.visualParent.m.IsShaded === true
 
                 text: i18n("Shade")
 
@@ -313,10 +314,10 @@ PlasmaComponents.ContextMenu {
             }
 
             PlasmaComponents.MenuItem {
-                visible: (plasmoid.configuration.groupingStrategy != 0) && menu.visualParent.isWindow
+                visible: (plasmoid.configuration.groupingStrategy != 0) && menu.visualParent.m.IsWindow === true
 
                 checkable: true
-                checked: menu.visualParent && menu.visualParent.isGroupable
+                checked: menu.visualParent && menu.visualParent.m.IsGroupable === true
 
                 text: i18n("Allow this program to be grouped")
 
@@ -343,9 +344,9 @@ PlasmaComponents.ContextMenu {
     }
 
     PlasmaComponents.MenuItem {
-        visible: (visualParent && !visualParent.isLauncher && !visualParent.isStartup)
+        visible: (visualParent && visualParent.m.IsLauncher !== true && visualParent.m.IsStartup !== true)
 
-        enabled: visualParent && visualParent.isClosable
+        enabled: visualParent && visualParent.m.IsClosable === true
 
         text: i18n("Close")
         icon: "window-close"

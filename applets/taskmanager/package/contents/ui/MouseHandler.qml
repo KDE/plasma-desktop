@@ -81,8 +81,8 @@ Item {
             // by tracking the cursor movement vector and allowing the drag if
             // the movement direction has reversed, etablishing user intent to
             // move back.
-            if (!plasmoid.configuration.separateLaunchers && tasks.dragSource.isLauncher
-                 && above != null && !above.isLauncher && above == ignoredItem) {
+            if (!plasmoid.configuration.separateLaunchers && tasks.dragSource.m.IsLauncher === true
+                 && above != null && above.m.IsLauncher !== true && above == ignoredItem) {
                 return;
             } else {
                 ignoredItem = null;
@@ -128,10 +128,10 @@ Item {
             repeat: false
 
             onTriggered: {
-                if (parent.hoveredItem.isGroupParent) {
+                if (parent.hoveredItem.m.IsGroupParent === true) {
                     groupDialog.visualParent = parent.hoveredItem;
                     groupDialog.visible = true;
-                } else if (!parent.hoveredItem.isLauncher) {
+                } else if (parent.hoveredItem.m.IsLauncher !== true) {
                     tasksModel.requestActivate(parent.hoveredItem.modelIndex());
                 }
             }

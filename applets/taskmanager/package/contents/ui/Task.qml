@@ -39,16 +39,12 @@ MouseArea {
     LayoutMirroring.enabled: (Qt.application.layoutDirection == Qt.RightToLeft)
     LayoutMirroring.childrenInherit: (Qt.application.layoutDirection == Qt.RightToLeft)
 
+    readonly property var m: model
+
     property int itemIndex: index
+    property bool isLauncher: model.isLauncher === IsLauncher // For onIsLauncherChanged.
     property bool inPopup: false
     property bool initialGeometryExported: false
-    property bool isGroupParent: model.IsGroupParent === true
-    property bool isActive: model.IsActive === true
-    property bool isWindow: model.IsWindow === true
-    property bool isLauncher: model.IsLauncher === true
-    property bool isStartup: model.IsStartup === true
-    property bool isGroupable: model.IsGroupable === true
-    property bool demandsAttention: model.IsDemandingAttention === true
     property int textWidth: label.implicitWidth
     property bool pressed: false
     property int pressX: -1
@@ -56,41 +52,14 @@ MouseArea {
     property Item busyIndicator
     property QtObject contextMenu: null
     property int wheelDelta: 0
-
-    // FIXME Clean up all these props.
-    property variant launcherUrlWithoutIcon: model.LauncherUrlWithoutIcon
-
-    property bool isClosable: model.IsClosable === true
-    property bool isMovable: model.IsMovable === true
-    property bool isResizable: model.IsResizable === true
-
-    property bool isMaximizable: model.IsMaximizable === true
-    property bool isMaximized:  model.IsMaximized === true
-
-    property bool isMinimizable: model.IsMinimizable === true
-    property bool isMinimized: model.IsMinimized === true
-
-    property bool isKeepAbove: model.IsKeepAbove === true
-    property bool isKeepBelow: model.IsKeepBelow === true
-
-    property bool isFullScreenable: model.IsFullScreenable === true
-    property bool isFullScreen: model.IsFullScreen === true
-
-    property bool isShadeable: model.IsShadeable === true
-    property bool isShaded: model.IsShaded === true
-
-    property bool isVirtualDesktopChangeable: model.IsVirtualDesktopChangeable === true
-    property int virtualDesktop: model.VirtualDesktop != undefined ? model.VirtualDesktop : -1
-    property int isOnAllVirtualDesktops: model.IsOnAllVirtualDesktops === true
-
-    readonly property bool smartLauncherEnabled: plasmoid.configuration.smartLaunchersEnabled && !inPopup && !isStartup
+    readonly property bool smartLauncherEnabled: plasmoid.configuration.smartLaunchersEnabled && !inPopup && model.IsStartup !== true
     property QtObject smartLauncherItem: null
 
     acceptedButtons: Qt.LeftButton | Qt.RightButton | Qt.MidButton
     hoverEnabled: true
 
     onVisibleChanged: {
-        if (visible && isWindow && itemIndex == 0) {
+        if (visible && model.IsWindow === true && itemIndex == 0) {
             tasksModel.requestPublishDelegateGeometry(modelIndex(), backend.globalRect(task), task);
             initialGeometryExported = true;
         }
@@ -153,7 +122,7 @@ MouseArea {
             } else if (mouse.button == Qt.LeftButton) {
                 if (mouse.modifiers & Qt.ShiftModifier) {
                     tasksModel.requestNewInstance(index);
-                } else if (isGroupParent) {
+                } else if (model.IsGroupParent === true) {
                     if ((iconsOnly || mouse.modifiers == Qt.ControlModifier) && backend.canPresentWindows()) {
                         toolTip.hideToolTip();
                         tasks.presentWindows(model.LegacyWinIdList);
@@ -164,11 +133,11 @@ MouseArea {
                         groupDialog.visible = true;
                     }
                 } else {
-                    if (model.IsMinimized) {
+                    if (model.IsMinimized === true) {
                         var i = modelIndex();
                         tasksModel.requestToggleMinimized(i);
                         tasksModel.requestActivate(i);
-                    } else if (model.IsActive) {
+                    } else if (model.IsActive === true) {
                         tasksModel.requestToggleMinimized(modelIndex());
                     } else {
                         tasksModel.requestActivate(modelIndex());
@@ -218,10 +187,6 @@ MouseArea {
             : tasksModel.makeModelIndex(index));
     }
 
-    function launcherUrl() {
-        return model.LauncherUrl;
-    }
-
     PlasmaCore.FrameSvgItem {
         id: frame
 
@@ -265,7 +230,7 @@ MouseArea {
                         return model.decoration;
                     });
                     toolTipDelegate.subText = Qt.binding(function() {
-                        return model.IsLauncher ? model.GenericName : toolTip.generateSubText(model);
+                        return model.IsLauncher === true ? model.GenericName : toolTip.generateSubText(model);
                     });
                     toolTipDelegate.launcherUrl = Qt.binding(function() {
                         return model.LauncherUrlWithoutIcon;
@@ -278,7 +243,7 @@ MouseArea {
 
                 if (!plasmoid.configuration.showOnlyCurrentDesktop
                     && virtualDesktopInfo.numberOfDesktops > 1
-                    && !model.IsOnAllVirtualDesktops
+                    && !model.IsOnAllVirtualDesktops === true
                     && model.VirtualDesktop != -1
                     && model.VirtualDesktop != undefined) {
                     subTextEntries.push(i18n("On %1", virtualDesktopInfo.desktopNames[model.VirtualDesktop - 1]));
@@ -421,7 +386,7 @@ MouseArea {
             bottomMargin: taskFrame.margins.bottom
         }
 
-        visible: (inPopup || !iconsOnly && !model.IsLauncher && (parent.width - LayoutManager.horizontalMargins()) >= (theme.mSize(theme.defaultFont).width * 7))
+        visible: (inPopup || !iconsOnly && model.IsLauncher !== true && (parent.width - LayoutManager.horizontalMargins()) >= (theme.mSize(theme.defaultFont).width * 7))
 
         enabled: true
 
@@ -433,7 +398,7 @@ MouseArea {
     states: [
         State {
             name: "launcher"
-            when: model.IsLauncher
+            when: model.IsLauncher === true
 
             PropertyChanges {
                 target: frame
@@ -451,7 +416,7 @@ MouseArea {
         },
         State {
             name: "attention"
-            when: model.IsDemandingAttention || (task.smartLauncherItem && task.smartLauncherItem.urgent)
+            when: model.IsDemandingAttention === true || (task.smartLauncherItem && task.smartLauncherItem.urgent)
 
             PropertyChanges {
                 target: frame
@@ -460,7 +425,7 @@ MouseArea {
         },
         State {
             name: "minimized"
-            when: model.IsMinimized && !(groupDialog.visible && groupDialog.target == task)
+            when: model.IsMinimized === true && !(groupDialog.visible && groupDialog.target == task)
 
             PropertyChanges {
                 target: frame
@@ -469,7 +434,7 @@ MouseArea {
         },
         State {
             name: "active"
-            when: model.IsActive || groupDialog.visible && groupDialog.target == task
+            when: model.IsActive === true || groupDialog.visible && groupDialog.target == task
 
             PropertyChanges {
                 target: frame
