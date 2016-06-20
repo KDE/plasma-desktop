@@ -140,8 +140,8 @@ ListView {
             spacing: units.smallSpacing
 
             PlasmaCore.IconItem {
-                width: units.iconSizes.smallMedium
-                height: width
+                implicitWidth: units.iconSizes.smallMedium
+                implicitHeight: implicitWidth
                 source: modelData.icon
                 Accessible.ignored: true
             }
