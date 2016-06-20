@@ -70,6 +70,8 @@ class Backend : public QObject
 
         Q_INVOKABLE QRect globalRect(QQuickItem *item) const;
 
+        Q_INVOKABLE void ungrabMouse(QQuickItem *item) const;
+
         Q_INVOKABLE bool canPresentWindows() const;
 
     public Q_SLOTS:

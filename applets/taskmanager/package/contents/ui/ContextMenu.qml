@@ -49,6 +49,7 @@ PlasmaComponents.ContextMenu {
 
     function show() {
         loadDynamicLaunchActions(visualParent.m.LauncherUrlWithoutIcon);
+        backend.ungrabMouse(visualParent);
         openRelative();
     }
 
