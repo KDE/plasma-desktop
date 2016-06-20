@@ -301,6 +301,13 @@ QRect Backend::globalRect(QQuickItem *item) const
     return iconRect;
 }
 
+void Backend::ungrabMouse(QQuickItem *item) const
+{
+    if (item && item->window() &&  item->window()->mouseGrabberItem()) {
+        item->window()->mouseGrabberItem()->ungrabMouse();
+    }
+}
+
 bool Backend::canPresentWindows() const
 {
     return (KWindowSystem::compositingActive() && KWindowEffects::isEffectAvailable(KWindowEffects::PresentWindowsGroup));

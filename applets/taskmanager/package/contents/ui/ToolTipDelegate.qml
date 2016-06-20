@@ -369,6 +369,7 @@ Column {
             PlasmaComponents.Label {
                 id: tooltipSubtext
                 width: tooltipContentItem.preferredTextWidth
+                height: Math.min(theme.mSize(theme.defaultFont), contentHeight)
                 wrapMode: Text.WordWrap
                 text: subText
                 textFormat: Text.PlainText

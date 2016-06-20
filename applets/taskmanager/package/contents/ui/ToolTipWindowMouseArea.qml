@@ -53,9 +53,6 @@ MouseArea {
         visible: parent.containsMouse && winId != 0
         tooltip: i18nc("close this window", "Close")
 
-        onClicked: {
-            tasksModel.requestClose(modelIndex);
-            toolTip.hideToolTip();
-        }
+        onClicked: tasksModel.requestClose(modelIndex);
     }
 }
