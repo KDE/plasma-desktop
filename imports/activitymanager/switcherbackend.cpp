@@ -45,8 +45,14 @@
 #define ACTION_NAME_PREVIOUS_ACTIVITY "previous activity"
 
 namespace {
+    bool isPlatformX11()
+    {
+        static const bool isX11 = QX11Info::isPlatformX11();
+        return isX11;
+    }
+
     // Taken from kwin/tabbox/tabbox.cpp
-    Display* display()
+    Display* x11_display()
     {
         static Display *s_display = nullptr;
         if (!s_display) {
@@ -55,14 +61,14 @@ namespace {
         return s_display;
     }
 
-    bool areKeySymXsDepressed(bool bAll, const uint keySyms[], int nKeySyms) {
+    bool x11_areKeySymXsDepressed(bool bAll, const uint keySyms[], int nKeySyms) {
         char keymap[32];
 
-        XQueryKeymap(display(), keymap);
+        XQueryKeymap(x11_display(), keymap);
 
         for (int iKeySym = 0; iKeySym < nKeySyms; iKeySym++) {
             uint keySymX = keySyms[ iKeySym ];
-            uchar keyCodeX = XKeysymToKeycode(display(), keySymX);
+            uchar keyCodeX = XKeysymToKeycode(x11_display(), keySymX);
             int i = keyCodeX / 8;
             char mask = 1 << (keyCodeX - (i * 8));
 
@@ -86,7 +92,7 @@ namespace {
         return bAll;
     }
 
-    bool areModKeysDepressed(const QKeySequence& seq) {
+    bool x11_areModKeysDepressed(const QKeySequence& seq) {
         uint rgKeySyms[10];
         int nKeySyms = 0;
         if (seq.isEmpty()) {
@@ -116,13 +122,13 @@ namespace {
             rgKeySyms[nKeySyms++] = XK_Meta_R;
         }
 
-        return areKeySymXsDepressed(false, rgKeySyms, nKeySyms);
+        return x11_areKeySymXsDepressed(false, rgKeySyms, nKeySyms);
     }
 
-    bool isReverseTab(const QKeySequence &prevAction) {
+    bool x11_isReverseTab(const QKeySequence &prevAction) {
 
         if (prevAction == QKeySequence(Qt::ShiftModifier | Qt::Key_Tab)) {
-            return areModKeysDepressed(Qt::SHIFT);
+            return x11_areModKeysDepressed(Qt::SHIFT);
         } else {
             return false;
         }
@@ -194,9 +200,17 @@ QObject *SwitcherBackend::instance(QQmlEngine *engine, QJSEngine *scriptEngine)
 
 void SwitcherBackend::keybdSwitchToNextActivity()
 {
-    if (isReverseTab(m_actionShortcut[ACTION_NAME_PREVIOUS_ACTIVITY])) {
-        switchToActivity(Previous);
+    if (isPlatformX11()) {
+        // If we are on X11, we have all needed features for meta+tab
+        // to work properly
+        if (x11_isReverseTab(m_actionShortcut[ACTION_NAME_PREVIOUS_ACTIVITY])) {
+            switchToActivity(Previous);
+        } else {
+            switchToActivity(Next);
+        }
+
     } else {
+        // If we are on wayland, just switch to the next activity
         switchToActivity(Next);
     }
 }
@@ -239,13 +253,20 @@ void SwitcherBackend::showActivitySwitcherIfNeeded()
         return;
     }
 
-    if (!areModKeysDepressed(m_actionShortcut[actionName])) {
-        m_lastInvokedAction = Q_NULLPTR;
-        setShouldShowSwitcher(false);
-        return;
-    }
+    if (isPlatformX11()) {
+        if (!x11_areModKeysDepressed(m_actionShortcut[actionName])) {
+            m_lastInvokedAction = Q_NULLPTR;
+            setShouldShowSwitcher(false);
+            return;
+        }
 
-    setShouldShowSwitcher(true);
+        setShouldShowSwitcher(true);
+
+    } else {
+        // We are not showing the switcher on wayland
+        // TODO: This is a regression on wayland
+        setShouldShowSwitcher(false);
+    }
 
 }
 
