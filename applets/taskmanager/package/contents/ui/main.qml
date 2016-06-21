@@ -107,6 +107,8 @@ Item {
             plasmoid.configuration.launchers = launcherList;
         }
 
+        onLauncherCountChanged: taskList.layout();
+
         onGroupingAppIdBlacklistChanged: {
             plasmoid.configuration.groupingAppIdBlacklist = groupingAppIdBlacklist;
         }
