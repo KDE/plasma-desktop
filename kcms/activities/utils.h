@@ -43,7 +43,7 @@ inline bool setViewSource(View &view, const QString &file)
     QString sourceFile = QStringLiteral(KAMD_KCM_DATADIR) + file;
 
     if (QFile::exists(sourceFile)) {
-        view->setSource(sourceFile);
+        view->setSource(QUrl::fromLocalFile(sourceFile));
 
         return true;
 

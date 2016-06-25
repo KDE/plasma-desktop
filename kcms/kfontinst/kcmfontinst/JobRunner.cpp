@@ -415,7 +415,7 @@ void CJobRunner::doNext()
         {
             case CMD_INSTALL:
             {
-                itsCurrentFile=fileName((*itsIt).url());
+                itsCurrentFile=fileName((*itsIt));
 
                 if(itsCurrentFile.isEmpty()) // Failed to download...
                     dbusStatus(getpid(), constDownloadFailed);

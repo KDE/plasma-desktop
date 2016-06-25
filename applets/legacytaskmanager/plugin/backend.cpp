@@ -198,7 +198,7 @@ void Backend::setLaunchers(const QString& launchers)
     QList<QUrl> launcherList;
 
     foreach(const QString& launcher, launchers.split(',')) {
-        launcherList.append(launcher);
+        launcherList.append(QUrl(launcher));
     }
 
     disconnect(m_groupManager, SIGNAL(launcherListChanged()), this, SLOT(updateLaunchersCache()));

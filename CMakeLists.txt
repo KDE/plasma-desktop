@@ -141,6 +141,8 @@ plasma_install_package(desktoppackage org.kde.plasma.desktop shells shell)
 
 plasma_install_package(layout-templates/org.kde.plasma.desktop.defaultPanel org.kde.plasma.desktop.defaultPanel layout-templates layout-template)
 
+add_definitions(-DQT_NO_URL_CAST_FROM_STRING)
+
 add_subdirectory(doc)
 add_subdirectory(runners)
 add_subdirectory(containments)

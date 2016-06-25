@@ -843,7 +843,7 @@ void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row)
         const KDesktopFile file(item.targetUrl().path());
 
         if (file.readType() == QLatin1String("Link")) {
-            dropTargetUrl = file.readUrl();
+            dropTargetUrl = QUrl(file.readUrl());
         } else {
             dropTargetUrl = item.url();
         }
@@ -1368,12 +1368,7 @@ QList<QUrl> FolderModel::selectedUrls(bool forTrash) const
 
         if (forTrash) {
             // Prefer the local URL if there is one, since we can't trash remote URL's
-            const QString path = item.mostLocalUrl().toString();
-            if (!path.isEmpty()) {
-                urls.append(path);
-            } else {
-                urls.append(item.url());
-            }
+            urls.append(item.mostLocalUrl());
         } else {
             urls.append(item.url());
         }

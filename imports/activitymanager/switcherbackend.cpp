@@ -364,7 +364,7 @@ QPixmap SwitcherBackend::wallpaperThumbnail(const QString &path, int width, int 
         return preview;
     }
 
-    QUrl file(path);
+    QUrl file = QUrl::fromLocalFile(path);
 
     if (!m_previewJobs.contains(file) && file.isValid()) {
         m_previewJobs.insert(file);
@@ -381,7 +381,7 @@ QPixmap SwitcherBackend::wallpaperThumbnail(const QString &path, int width, int 
                 this, [=] (const KFileItem& item, const QPixmap& pixmap) mutable {
                     Q_UNUSED(item);
                     m_wallpaperCache->insertPixmap(pixmapKey, pixmap);
-                    m_previewJobs.remove(path);
+                    m_previewJobs.remove(file);
 
                     callback.call({true});
                 });
@@ -389,7 +389,7 @@ QPixmap SwitcherBackend::wallpaperThumbnail(const QString &path, int width, int 
         connect(job, &KIO::PreviewJob::failed,
                 this, [=] (const KFileItem& item) mutable {
                     Q_UNUSED(item);
-                    m_previewJobs.remove(path);
+                    m_previewJobs.remove(file);
 
                     qWarning() << "SwitcherBackend: FAILED to get the thumbnail for "
                                << path << job->detailedErrorStrings(&file);
