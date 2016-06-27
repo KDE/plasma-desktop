@@ -845,10 +845,10 @@ void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row)
         if (file.readType() == QLatin1String("Link")) {
             dropTargetUrl = file.readUrl();
         } else {
-            dropTargetUrl = item.url();
+            dropTargetUrl = item.mostLocalUrl();
         }
     } else {
-        dropTargetUrl = item.url();
+        dropTargetUrl = item.mostLocalUrl();
     }
 
     KIO::DropJob *dropJob = KIO::drop(&ev, dropTargetUrl);
