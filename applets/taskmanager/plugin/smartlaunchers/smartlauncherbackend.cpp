@@ -27,7 +27,7 @@
 #include <Plasma/DataEngineConsumer>
 #include <Plasma/DataEngine>
 
-#include <KConfig>
+#include <KSharedConfig>
 #include <KService>
 
 using namespace SmartLauncher;
@@ -67,8 +67,7 @@ bool Backend::setupUnity()
         return false;
     }
 
-    KConfig cfg(QStringLiteral("taskmanagerrulesrc"));
-    KConfigGroup grp(&cfg, QStringLiteral("Unity Launcher Mapping"));
+    KConfigGroup grp(KSharedConfig::openConfig(QStringLiteral("taskmanagerrulesrc")), QStringLiteral("Unity Launcher Mapping"));
 
     foreach (const QString &key, grp.keyList()) {
         const QString &value = grp.readEntry(key, QString());
