@@ -43,6 +43,8 @@ MouseArea {
     property int lastX
     property int lastY
 
+    readonly property int spacerHandleSize: units.smallSpacing
+
     onHeightChanged: tooltip.visible = false;
     onWidthChanged: tooltip.visible = false;
 
@@ -50,15 +52,15 @@ MouseArea {
         if (currentApplet && currentApplet.applet &&
             currentApplet.applet.pluginName == "org.kde.plasma.panelspacer") {
             if (plasmoid.formFactor === PlasmaCore.Types.Vertical) {
-                if ((mouse.y - handle.y) < units.largeSpacing ||
-                    (mouse.y - handle.y) > (handle.height - units.largeSpacing)) {
+                if ((mouse.y - handle.y) < spacerHandleSize ||
+                    (mouse.y - handle.y) > (handle.height - spacerHandleSize)) {
                     configurationArea.cursorShape = Qt.SizeVerCursor;
                 } else {
                     configurationArea.cursorShape = Qt.ArrowCursor;
                 }
             } else {
-                if ((mouse.x - handle.x) < units.largeSpacing ||
-                    (mouse.x - handle.x) > (handle.width - units.largeSpacing)) {
+                if ((mouse.x - handle.x) < spacerHandleSize ||
+                    (mouse.x - handle.x) > (handle.width - spacerHandleSize)) {
                     configurationArea.cursorShape = Qt.SizeHorCursor;
                 } else {
                     configurationArea.cursorShape = Qt.ArrowCursor;
@@ -173,10 +175,10 @@ MouseArea {
 
         if (currentApplet.applet.pluginName == "org.kde.plasma.panelspacer") {
             if (plasmoid.formFactor === PlasmaCore.Types.Vertical) {
-                if ((mouse.y - handle.y) < units.largeSpacing) {
+                if ((mouse.y - handle.y) < spacerHandleSize) {
                     configurationArea.isResizingLeft = true;
                     configurationArea.isResizingRight = false;
-                } else if ((mouse.y - handle.y) > (handle.height - units.largeSpacing)) {
+                } else if ((mouse.y - handle.y) > (handle.height - spacerHandleSize)) {
                     configurationArea.isResizingLeft = false;
                     configurationArea.isResizingRight = true;
                 } else {
@@ -185,10 +187,10 @@ MouseArea {
                 }
 
             } else {
-                if ((mouse.x - handle.x) < units.largeSpacing) {
+                if ((mouse.x - handle.x) < spacerHandleSize) {
                     configurationArea.isResizingLeft = true;
                     configurationArea.isResizingRight = false;
-                } else if ((mouse.x - handle.x) > (handle.width - units.largeSpacing)) {
+                } else if ((mouse.x - handle.x) > (handle.width - spacerHandleSize)) {
                     configurationArea.isResizingLeft = false;
                     configurationArea.isResizingRight = true;
                 } else {
@@ -274,8 +276,8 @@ MouseArea {
             }
             visible: currentApplet && currentApplet.applet.pluginName == "org.kde.plasma.panelspacer"
             opacity: visible && !xAnim.running && !yAnim.running ? 1.0 : 0
-            width: units.largeSpacing
-            height: units.largeSpacing
+            width: configurationArea.spacerHandleSize
+            height: configurationArea.spacerHandleSize
             color: theme.textColor
             Behavior on opacity {
                 NumberAnimation {
@@ -293,8 +295,8 @@ MouseArea {
             }
             visible: currentApplet && currentApplet.applet.pluginName == "org.kde.plasma.panelspacer"
             opacity: visible && !xAnim.running && !yAnim.running ? 1.0 : 0
-            width: units.largeSpacing
-            height: units.largeSpacing
+            width: configurationArea.spacerHandleSize
+            height: configurationArea.spacerHandleSize
             color: theme.textColor
             Behavior on opacity {
                 NumberAnimation {
