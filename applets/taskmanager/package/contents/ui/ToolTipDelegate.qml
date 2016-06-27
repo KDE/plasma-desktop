@@ -74,11 +74,20 @@ Column {
     PlasmaCore.DataSource {
         id: mpris2Source
         readonly property string current: {
-            var split = launcherUrl.toString().split('/')
-            var appName = split[split.length - 1].replace(".desktop", "")
-            return appName
+            var desktopFileName = launcherUrl.toString().split('/').pop().replace(".desktop", "")
+
+            for (var i = 0, length = sources.length; i < length; ++i) {
+                var source = sources[i];
+
+                if (data[sources[i]].DesktopEntry === desktopFileName) {
+                    return source
+                }
+            }
+
+            return ""
         }
-        readonly property bool hasPlayer: sources.indexOf(current) > -1
+
+        readonly property bool hasPlayer: !!current
 
         readonly property bool playing: hasPlayer && data[current].PlaybackStatus === "Playing"
         readonly property bool canControl: hasPlayer && data[current].CanControl
@@ -131,7 +140,7 @@ Column {
         }
 
         engine: "mpris2"
-        connectedSources: current
+        connectedSources: sources
     }
 
     Item {

@@ -104,10 +104,9 @@ Item {
             ? LayoutManager.optimumCapacity(width, height) + 1 : -1)
 
         onLauncherListChanged: {
+            layoutTimer.restart();
             plasmoid.configuration.launchers = launcherList;
         }
-
-        onLauncherCountChanged: taskList.layout();
 
         onGroupingAppIdBlacklistChanged: {
             plasmoid.configuration.groupingAppIdBlacklist = groupingAppIdBlacklist;
