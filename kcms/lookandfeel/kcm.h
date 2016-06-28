@@ -25,6 +25,8 @@
 #include <QListWidget>
 #include <QDir>
 
+#include <KNewStuff3/KNS3/DownloadDialog>
+
 #include <Plasma/Package>
 #include <KQuickAddons/ConfigModule>
 
@@ -94,6 +96,8 @@ public:
     void setApplyDesktopSwitcher(bool apply);
     bool applyDesktopSwitcher() const;
 
+    Q_INVOKABLE void getNewStuff();
+
 public Q_SLOTS:
     void load();
     void save();
@@ -116,6 +120,7 @@ private:
     Plasma::Package m_package;
     QString m_selectedPlugin;
     QStringList m_cursorSearchPaths;
+    QPointer<KNS3::DownloadDialog> m_newStuffDialog;
 
     KConfig m_config;
     KConfigGroup m_configGroup;

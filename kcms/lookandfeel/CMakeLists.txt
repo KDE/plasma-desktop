@@ -26,6 +26,7 @@ target_link_libraries(kcm_lookandfeel
   KF5::KDELibs4Support
   KF5::Declarative
   KF5::QuickAddons
+  KF5::NewStuff
 
   Qt5::DBus
   Qt5::Widgets
@@ -48,6 +49,7 @@ kcoreaddons_desktop_to_json(kcm_lookandfeel "kcm_lookandfeel.desktop")
 #this desktop file is installed only for retrocompatibility with sycoca
 install(FILES kcm_lookandfeel.desktop DESTINATION ${SERVICES_INSTALL_DIR})
 install(TARGETS kcm_lookandfeel DESTINATION ${PLUGIN_INSTALL_DIR}/kcms)
+install(FILES lookandfeel.knsrc DESTINATION ${KDE_INSTALL_CONFDIR})
 
 if(BUILD_TESTING)
    find_package(Qt5Test ${QT_MIN_VERSION} CONFIG REQUIRED)
