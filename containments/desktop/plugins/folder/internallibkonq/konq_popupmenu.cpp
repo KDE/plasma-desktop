@@ -43,6 +43,7 @@
 #include <KIO/EmptyTrashJob>
 #include <KIO/JobUiDelegate>
 #include <KIO/RestoreJob>
+#include <KIO/OpenFileManagerWindowJob>
 #include <KJobWidgets>
 #include <KJobUiDelegate>
 #include <KMimeTypeEditor>
@@ -591,7 +592,5 @@ void KonqPopupMenuPrivate::slotShowOriginalFile()
         return;
     }
 
-    // Now destUrl points to the target file, let's go up to parent dir
-    destUrl = destUrl.adjusted(QUrl::RemoveFilename);
-    KRun::runUrl(destUrl, QStringLiteral("inode/directory"), m_parentWidget);
+    KIO::highlightInFileManager({destUrl});
 }
