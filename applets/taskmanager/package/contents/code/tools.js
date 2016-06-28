@@ -42,7 +42,7 @@ function activateNextPrevTask(next) {
     // FIXME TODO: Unnecessarily convoluted and costly; optimize.
 
     var taskIndexList = [];
-    var activeTaskIndex = tasksModel.activeTask();
+    var activeTaskIndex = tasksModel.activeTask;
 
     for (var i = 0; i < taskList.children.length - 1; ++i) {
         var task = taskList.children[i];
