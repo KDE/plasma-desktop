@@ -11,30 +11,7 @@
    </rect>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="0" column="0" colspan="2">
-    <widget class="QLabel" name="label">
-     <property name="text">
-      <string>Select the cursor theme you want to use (hover preview to test cursor):</string>
-     </property>
-    </widget>
-   </item>
-   <item row="1" column="0" rowspan="3" colspan="2">
-    <widget class="PreviewWidget" name="preview" native="true">
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="minimumSize">
-      <size>
-       <width>0</width>
-       <height>48</height>
-      </size>
-     </property>
-    </widget>
-   </item>
-   <item row="4" column="0" rowspan="5" colspan="2">
+   <item row="4" column="0" rowspan="5" colspan="5">
     <widget class="QListView" name="view">
      <property name="sizePolicy">
       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
@@ -50,7 +27,14 @@
      </property>
     </widget>
    </item>
-   <item row="4" column="2">
+   <item row="0" column="0" colspan="2">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Select the cursor theme you want to use (hover preview to test cursor):</string>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="0">
     <widget class="QPushButton" name="installKnsButton">
      <property name="toolTip">
       <string>Get new color schemes from the Internet</string>
@@ -60,21 +44,30 @@
      </property>
     </widget>
    </item>
-   <item row="5" column="2">
-    <widget class="QPushButton" name="installButton">
-     <property name="text">
-      <string>Install From File...</string>
-     </property>
-    </widget>
-   </item>
-   <item row="6" column="2">
+   <item row="9" column="2">
     <widget class="QPushButton" name="removeButton">
      <property name="text">
       <string>Remove Theme</string>
      </property>
     </widget>
    </item>
-   <item row="2" column="2">
+   <item row="1" column="0" rowspan="3" colspan="5">
+    <widget class="PreviewWidget" name="preview" native="true">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>48</height>
+      </size>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="4">
     <widget class="QComboBox" name="sizeComboBox">
      <property name="sizePolicy">
       <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
@@ -93,12 +86,25 @@
      </property>
     </widget>
    </item>
-   <item row="0" column="2">
-    <widget class="QLabel" name="sizeLabel">
+   <item row="9" column="1">
+    <widget class="QPushButton" name="installButton">
      <property name="text">
-      <string comment="@label:listbox cursor size">Size:</string>
+      <string>Install From File...</string>
      </property>
     </widget>
+   </item>
+   <item row="9" column="3">
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>40</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
    </item>
   </layout>
  </widget>
