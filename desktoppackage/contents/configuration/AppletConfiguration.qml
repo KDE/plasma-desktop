@@ -31,6 +31,9 @@ Rectangle {
     Layout.minimumWidth: units.gridUnit * 30
     Layout.minimumHeight: units.gridUnit * 20
 
+    LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
+    LayoutMirroring.childrenInherit: true
+
 //BEGIN properties
     color: syspal.window
     width: units.gridUnit * 40
