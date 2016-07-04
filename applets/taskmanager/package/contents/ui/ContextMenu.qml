@@ -176,8 +176,8 @@ PlasmaComponents.ContextMenu {
         id: activitiesDesktopsMenuItem
 
         visible: activityInfo.numberOfRunningActivities > 1
-            && (visualParent && !visualParent.isLauncher
-            && !visualParent.isStartup)
+            && (visualParent && !visualParent.m.IsLauncher
+            && !visualParent.m.IsStartup)
 
         enabled: visible
 
