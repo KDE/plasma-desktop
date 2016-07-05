@@ -200,10 +200,8 @@ void ThemePage::updateSizeComboBox()
     KConfigGroup cg(&c, "Mouse");
     if (cg.isEntryImmutable("cursorSize")) {
         sizeComboBox->setEnabled(false);
-        sizeLabel->setEnabled(false);
     } else {
         sizeComboBox->setEnabled(sizeComboBox->count() > 0);
-        sizeLabel->setEnabled(sizeComboBox->count() > 0);
     };
 }
 
