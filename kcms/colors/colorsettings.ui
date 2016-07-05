@@ -11,7 +11,16 @@
    </rect>
   </property>
   <layout class="QVBoxLayout">
-   <property name="margin">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
     <number>0</number>
    </property>
    <item>
@@ -24,7 +33,7 @@
        <string>&amp;Scheme</string>
       </attribute>
       <layout class="QGridLayout" name="gridLayout">
-       <item row="0" column="0">
+       <item row="1" column="0" colspan="7">
         <widget class="QListWidget" name="schemeList">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
@@ -40,80 +49,53 @@
          </property>
         </widget>
        </item>
-       <item row="0" column="1">
-        <layout class="QVBoxLayout" name="verticalLayout_2">
-         <item>
-          <widget class="QPushButton" name="schemeKnsButton">
-           <property name="toolTip">
-            <string>Get new color schemes from the Internet</string>
-           </property>
-           <property name="text">
-            <string>Get &amp;New Schemes...</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QPushButton" name="schemeKnsUploadButton">
-           <property name="enabled">
-            <bool>false</bool>
-           </property>
-           <property name="toolTip">
-            <string>Share the selected scheme on the Internet</string>
-           </property>
-           <property name="text">
-            <string>&amp;Upload Scheme...</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QPushButton" name="schemeImportButton">
-           <property name="toolTip">
-            <string>Import a color scheme from a file</string>
-           </property>
-           <property name="text">
-            <string>Import Scheme...</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QPushButton" name="schemeSaveButton">
-           <property name="toolTip">
-            <string>Save the current color scheme</string>
-           </property>
-           <property name="text">
-            <string>Save Scheme...</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QPushButton" name="schemeRemoveButton">
-           <property name="enabled">
-            <bool>false</bool>
-           </property>
-           <property name="toolTip">
-            <string>Remove the selected scheme</string>
-           </property>
-           <property name="text">
-            <string>Remove Scheme</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <spacer>
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>20</width>
-             <height>40</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-        </layout>
+       <item row="2" column="0">
+        <widget class="QPushButton" name="schemeKnsButton">
+         <property name="toolTip">
+          <string>Get new color schemes from the Internet</string>
+         </property>
+         <property name="text">
+          <string>Get &amp;New Schemes...</string>
+         </property>
+        </widget>
        </item>
-       <item row="1" column="0" colspan="2">
+       <item row="2" column="1">
+        <widget class="QPushButton" name="schemeImportButton">
+         <property name="toolTip">
+          <string>Import a color scheme from a file</string>
+         </property>
+         <property name="text">
+          <string>Import Scheme...</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="4">
+        <widget class="QPushButton" name="schemeKnsUploadButton">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="toolTip">
+          <string>Share the selected scheme on the Internet</string>
+         </property>
+         <property name="text">
+          <string>&amp;Upload Scheme...</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="2">
+        <spacer name="horizontalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="0" column="0" colspan="7">
         <widget class="QGroupBox" name="groupBox_3">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
@@ -142,6 +124,29 @@
            </widget>
           </item>
          </layout>
+        </widget>
+       </item>
+       <item row="2" column="5">
+        <widget class="QPushButton" name="schemeSaveButton">
+         <property name="toolTip">
+          <string>Save the current color scheme</string>
+         </property>
+         <property name="text">
+          <string>Save Scheme...</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="3">
+        <widget class="QPushButton" name="schemeRemoveButton">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="toolTip">
+          <string>Remove the selected scheme</string>
+         </property>
+         <property name="text">
+          <string>Remove Scheme</string>
+         </property>
         </widget>
        </item>
       </layout>
@@ -267,7 +272,7 @@
        <string>Colors</string>
       </attribute>
       <layout class="QGridLayout" name="gridLayout_2">
-       <item row="0" column="0">
+       <item row="1" column="0">
         <widget class="QLabel" name="label_7">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -280,7 +285,7 @@
          </property>
         </widget>
        </item>
-       <item row="0" column="1">
+       <item row="1" column="1">
         <widget class="QComboBox" name="colorSet">
          <property name="sizePolicy">
           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
@@ -328,14 +333,23 @@
          </item>
         </widget>
        </item>
-       <item row="1" column="0" colspan="2">
+       <item row="2" column="0" colspan="2">
         <widget class="QStackedWidget" name="stackColors">
          <property name="currentIndex">
           <number>0</number>
          </property>
          <widget class="QWidget" name="pageCommonColors">
           <layout class="QGridLayout">
-           <property name="margin">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
             <number>0</number>
            </property>
            <item row="0" column="0">
@@ -631,7 +645,16 @@
          </widget>
          <widget class="QWidget" name="pageSetColors">
           <layout class="QGridLayout">
-           <property name="margin">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
             <number>0</number>
            </property>
            <item row="0" column="0">
@@ -659,7 +682,7 @@
          </widget>
         </widget>
        </item>
-       <item row="2" column="0" colspan="2">
+       <item row="0" column="0" colspan="2">
         <widget class="QGroupBox" name="groupBox_4">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
@@ -684,7 +707,16 @@
             </property>
             <widget class="QWidget" name="pageCommonPreview">
              <layout class="QVBoxLayout" name="verticalLayout">
-              <property name="margin">
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
                <number>0</number>
               </property>
               <item>
@@ -707,7 +739,16 @@
             </widget>
             <widget class="QWidget" name="pageSetPreview">
              <layout class="QVBoxLayout" name="verticalLayout_5">
-              <property name="margin">
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
                <number>0</number>
               </property>
               <item>
@@ -740,7 +781,7 @@
        <string comment="@title:tab color transformations on disabled elements">Disabled</string>
       </attribute>
       <layout class="QGridLayout" name="gridLayout_5">
-       <item row="0" column="0">
+       <item row="1" column="0">
         <widget class="QLabel" name="label_5">
          <property name="text">
           <string>Intensity:</string>
@@ -750,7 +791,7 @@
          </property>
         </widget>
        </item>
-       <item row="0" column="1">
+       <item row="1" column="1">
         <widget class="QComboBox" name="disabledIntensityBox">
          <property name="toolTip">
           <string>Disabled intensity effect type</string>
@@ -777,7 +818,7 @@
          </item>
         </widget>
        </item>
-       <item row="0" column="2">
+       <item row="1" column="2">
         <widget class="QSlider" name="disabledIntensitySlider">
          <property name="enabled">
           <bool>false</bool>
@@ -796,7 +837,7 @@
          </property>
         </widget>
        </item>
-       <item row="0" column="3">
+       <item row="1" column="3">
         <spacer name="spacer_3">
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
@@ -812,7 +853,7 @@
          </property>
         </spacer>
        </item>
-       <item row="1" column="0">
+       <item row="2" column="0">
         <widget class="QLabel" name="label_4">
          <property name="text">
           <string>Color:</string>
@@ -822,7 +863,7 @@
          </property>
         </widget>
        </item>
-       <item row="1" column="1">
+       <item row="2" column="1">
         <widget class="QComboBox" name="disabledColorBox">
          <property name="toolTip">
           <string>Disabled color effect type</string>
@@ -849,7 +890,7 @@
          </item>
         </widget>
        </item>
-       <item row="1" column="2">
+       <item row="2" column="2">
         <widget class="QSlider" name="disabledColorSlider">
          <property name="enabled">
           <bool>false</bool>
@@ -868,7 +909,7 @@
          </property>
         </widget>
        </item>
-       <item row="1" column="3">
+       <item row="2" column="3">
         <widget class="KColorButton" name="disabledColorButton">
          <property name="enabled">
           <bool>false</bool>
@@ -878,7 +919,7 @@
          </property>
         </widget>
        </item>
-       <item row="2" column="0">
+       <item row="3" column="0">
         <widget class="QLabel" name="label_6">
          <property name="text">
           <string>Contrast:</string>
@@ -888,7 +929,7 @@
          </property>
         </widget>
        </item>
-       <item row="2" column="1">
+       <item row="3" column="1">
         <widget class="QComboBox" name="disabledContrastBox">
          <property name="toolTip">
           <string>Disabled contrast type</string>
@@ -910,7 +951,7 @@
          </item>
         </widget>
        </item>
-       <item row="2" column="2">
+       <item row="3" column="2">
         <widget class="QSlider" name="disabledContrastSlider">
          <property name="enabled">
           <bool>false</bool>
@@ -929,7 +970,7 @@
          </property>
         </widget>
        </item>
-       <item row="2" column="3">
+       <item row="3" column="3">
         <spacer name="spacer_4">
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
@@ -945,7 +986,7 @@
          </property>
         </spacer>
        </item>
-       <item row="4" column="0" colspan="4">
+       <item row="5" column="0" colspan="4">
         <spacer name="verticalSpacer_2">
          <property name="orientation">
           <enum>Qt::Vertical</enum>
@@ -958,7 +999,7 @@
          </property>
         </spacer>
        </item>
-       <item row="3" column="0" colspan="4">
+       <item row="0" column="0" colspan="4">
         <widget class="QGroupBox" name="groupBox_2">
          <property name="title">
           <string>Preview</string>
@@ -990,7 +1031,7 @@
        <string comment="@title:tab color transformations on inactive elements">Inactive</string>
       </attribute>
       <layout class="QGridLayout" name="gridLayout_4">
-       <item row="0" column="0">
+       <item row="1" column="0">
         <widget class="QLabel" name="label">
          <property name="text">
           <string>Intensity:</string>
@@ -1000,7 +1041,7 @@
          </property>
         </widget>
        </item>
-       <item row="0" column="1">
+       <item row="1" column="1">
         <widget class="QComboBox" name="inactiveIntensityBox">
          <property name="toolTip">
           <string>Inactive intensity effect type</string>
@@ -1027,7 +1068,7 @@
          </item>
         </widget>
        </item>
-       <item row="0" column="2">
+       <item row="1" column="2">
         <widget class="QSlider" name="inactiveIntensitySlider">
          <property name="enabled">
           <bool>false</bool>
@@ -1046,7 +1087,7 @@
          </property>
         </widget>
        </item>
-       <item row="0" column="3">
+       <item row="1" column="3">
         <spacer name="spacer">
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
@@ -1062,7 +1103,7 @@
          </property>
         </spacer>
        </item>
-       <item row="1" column="0">
+       <item row="2" column="0">
         <widget class="QLabel" name="label_2">
          <property name="text">
           <string>Color:</string>
@@ -1072,7 +1113,7 @@
          </property>
         </widget>
        </item>
-       <item row="1" column="1">
+       <item row="2" column="1">
         <widget class="QComboBox" name="inactiveColorBox">
          <property name="toolTip">
           <string>Inactive color effect type</string>
@@ -1099,7 +1140,7 @@
          </item>
         </widget>
        </item>
-       <item row="1" column="2">
+       <item row="2" column="2">
         <widget class="QSlider" name="inactiveColorSlider">
          <property name="enabled">
           <bool>false</bool>
@@ -1118,7 +1159,7 @@
          </property>
         </widget>
        </item>
-       <item row="1" column="3">
+       <item row="2" column="3">
         <widget class="KColorButton" name="inactiveColorButton">
          <property name="enabled">
           <bool>false</bool>
@@ -1128,7 +1169,7 @@
          </property>
         </widget>
        </item>
-       <item row="2" column="0">
+       <item row="3" column="0">
         <widget class="QLabel" name="label_3">
          <property name="text">
           <string>Contrast:</string>
@@ -1138,7 +1179,7 @@
          </property>
         </widget>
        </item>
-       <item row="2" column="1">
+       <item row="3" column="1">
         <widget class="QComboBox" name="inactiveContrastBox">
          <property name="toolTip">
           <string>Inactive contrast effect type</string>
@@ -1160,7 +1201,7 @@
          </item>
         </widget>
        </item>
-       <item row="2" column="2">
+       <item row="3" column="2">
         <widget class="QSlider" name="inactiveContrastSlider">
          <property name="enabled">
           <bool>false</bool>
@@ -1179,7 +1220,7 @@
          </property>
         </widget>
        </item>
-       <item row="2" column="3">
+       <item row="3" column="3">
         <spacer name="spacer_2">
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
@@ -1195,7 +1236,7 @@
          </property>
         </spacer>
        </item>
-       <item row="4" column="0" colspan="4">
+       <item row="5" column="0" colspan="4">
         <spacer name="verticalSpacer_3">
          <property name="orientation">
           <enum>Qt::Vertical</enum>
@@ -1208,7 +1249,7 @@
          </property>
         </spacer>
        </item>
-       <item row="3" column="0" colspan="4">
+       <item row="0" column="0" colspan="4">
         <widget class="QGroupBox" name="groupBox">
          <property name="title">
           <string>Preview</string>
@@ -1235,7 +1276,7 @@
        </item>
       </layout>
      </widget>
-     </widget>
+    </widget>
    </item>
   </layout>
  </widget>
@@ -1261,10 +1302,6 @@
  <tabstops>
   <tabstop>tabWidget</tabstop>
   <tabstop>schemeList</tabstop>
-  <tabstop>schemeKnsButton</tabstop>
-  <tabstop>schemeImportButton</tabstop>
-  <tabstop>schemeSaveButton</tabstop>
-  <tabstop>schemeRemoveButton</tabstop>
   <tabstop>useInactiveEffects</tabstop>
   <tabstop>inactiveSelectionEffect</tabstop>
   <tabstop>shadeSortedColumn</tabstop>
