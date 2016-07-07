@@ -18,6 +18,7 @@
 #include "kglobalshortcutseditor.h"
 
 #include "ui_kglobalshortcutseditor.h"
+#include "ui_select_application.h"
 #include "export_scheme_dialog.h"
 #include "select_scheme_dialog.h"
 #include "globalshortcuts.h"
@@ -32,6 +33,8 @@
 #include <KMessageBox>
 #include <KStringHandler>
 #include <KLocalizedString>
+#include <KService>
+#include <KServiceTypeTrader>
 
 #include <QStackedWidget>
 #include <QMenu>
@@ -144,6 +147,8 @@ public:
 
     KGlobalShortcutsEditor *q;
     Ui::KGlobalShortcutsEditor ui;
+    Ui::SelectApplicationDialog selectApplicationDialogUi;
+    QDialog *selectApplicationDialog;
     QStackedWidget *stack;
     KShortcutsEditor::ActionTypes actionTypes;
     QHash<QString, ComponentData*> components;
@@ -155,6 +160,8 @@ public:
 void KGlobalShortcutsEditor::KGlobalShortcutsEditorPrivate::initGUI()
 {
     ui.setupUi(q);
+    selectApplicationDialog = new QDialog();
+    selectApplicationDialogUi.setupUi(selectApplicationDialog);
     // Create a stacked widget.
     stack = new QStackedWidget(q);
     q->layout()->addWidget(stack);
@@ -168,8 +175,38 @@ void KGlobalShortcutsEditor::KGlobalShortcutsEditorPrivate::initGUI()
     menu->addAction( QIcon::fromTheme(QStringLiteral("document-import")), i18n("Import Scheme..."), q, SLOT(importScheme()));
     menu->addAction( QIcon::fromTheme(QStringLiteral("document-export")), i18n("Export Scheme..."), q, SLOT(exportScheme()));
     menu->addAction( i18n("Set All Shortcuts to None"), q, SLOT(clearConfiguration()));
-    QAction *action = menu->addAction( QIcon::fromTheme(QStringLiteral("edit-delete")), i18n("Remove Component"));
+    QAction *action = menu->addAction( QIcon::fromTheme(QStringLiteral("start-here-kde")), i18n("Add shortcut to an application launcher..."));
     connect(action, &QAction::triggered, [this]() {
+        qWarning() << "Add shortcut to application Action triggered";
+        if (!selectApplicationDialogUi.listView->model()) {
+            QSortFilterProxyModel *filterModel = new QSortFilterProxyModel(selectApplicationDialogUi.listView);
+            QStandardItemModel *appModel = new QStandardItemModel(selectApplicationDialogUi.listView);
+            filterModel->setSourceModel(appModel);
+            selectApplicationDialogUi.kfilterproxysearchline->setProxy(filterModel);
+
+            const QString query = QString("exist Exec");
+            KService::List services = KServiceTypeTrader::self()->query("Application", query);
+            //kDebug() << "******** populating with" << services.count();
+
+            //kDebug() << service->name() << "is an exact match!" << service->storageId() << service->exec();
+            foreach (const KService::Ptr &service, services) {
+                if (!service->noDisplay() &&
+                    service->property("NotShowIn", QVariant::String) != "KDE") {
+                    QStandardItem *item = new QStandardItem(QIcon::fromTheme(service->icon()), service->name());
+                    item->setData(service->storageId());
+                    appModel->appendRow(item);
+                }
+            }
+
+            selectApplicationDialogUi.listView->setModel(filterModel);
+        }
+        selectApplicationDialog->show();
+    });
+
+    action = menu->addAction( QIcon::fromTheme(QStringLiteral("edit-delete")), i18n("Remove Component"));
+    connect(action, &QAction::triggered, [this]() {
+        //TODO: different way to remove components that are desktop files
+        //disabled desktop files need Hidden=true key
         QString name = ui.components->currentText();
         QString componentUnique = components.value(name)->uniqueName();
 
@@ -235,6 +272,7 @@ KGlobalShortcutsEditor::~KGlobalShortcutsEditor()
 {
     // Before closing the door, undo all changes
     undo();
+    delete d->selectApplicationDialog;
     qDeleteAll(d->components);
     delete d;
 }
@@ -275,6 +313,13 @@ void KGlobalShortcutsEditor::addCollection(
         // try to find one appropriate icon ( allowing NULL pixmap to be returned)
         QPixmap pixmap = KIconLoader::global()->loadIcon(id, KIconLoader::Small, 0,
                                   KIconLoader::DefaultState, QStringList(), 0, true);
+        if (pixmap.isNull()) {
+            KService::Ptr service = KService::serviceByStorageId(id);
+            if(service) {
+                pixmap = KIconLoader::global()->loadIcon(service->icon(), KIconLoader::Small, 0,
+                                  KIconLoader::DefaultState, QStringList(), 0, true);
+            }
+        }
         // if NULL pixmap is returned, use the F.D.O "system-run" icon
         if (pixmap.isNull()) {
             pixmap = KIconLoader::global()->loadIcon(QStringLiteral("system-run"), KIconLoader::Small);
