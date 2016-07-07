@@ -36,6 +36,7 @@
 #include <KService>
 #include <KRecursiveFilterProxyModel>
 #include <KServiceGroup>
+#include <KDesktopFile>
 
 #include <QStackedWidget>
 #include <QMenu>
@@ -246,7 +247,15 @@ void KGlobalShortcutsEditor::KGlobalShortcutsEditorPrivate::initGUI()
             QString desktopFile = selectApplicationDialogUi.treeView->model()->data(selectApplicationDialogUi.treeView->selectionModel()->selectedIndexes().first(), Qt::UserRole+1).toString();
 
             if (!desktopFile.isEmpty()) {
-                
+                const QString desktopPath = QStandardPaths::locate(QStandardPaths::ApplicationsLocation, desktopFile);
+
+                if (!desktopPath.isEmpty()) {
+                    KDesktopFile sourceDF(desktopPath);
+                    KDesktopFile *destinationDF = sourceDF.copyTo(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/kglobalaccel/") + desktopFile);
+                    qWarning()<<QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/kglobalaccel/") + desktopFile;
+                    destinationDF->sync();
+                    //TODO: a DBUS call to tell the daemon to refresh desktop files
+                }
             }
         }
     });
