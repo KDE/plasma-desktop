@@ -161,6 +161,8 @@ MouseArea {
     onWheel: {
         if (plasmoid.configuration.wheelEnabled) {
             wheelDelta = TaskTools.wheelActivateNextPrevTask(wheelDelta, wheel.angleDelta.y);
+        } else {
+            wheel.accepted = false;
         }
     }
 
