@@ -36,6 +36,7 @@ target_link_libraries(kcm_keys
     KF5::KIOWidgets
     KF5::XmlGui
     KF5::KDELibs4Support
+    KF5::ItemModels
 )
 
 install(TARGETS kcm_keys  DESTINATION ${PLUGIN_INSTALL_DIR} )

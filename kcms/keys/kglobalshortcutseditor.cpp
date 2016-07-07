@@ -34,7 +34,8 @@
 #include <KStringHandler>
 #include <KLocalizedString>
 #include <KService>
-#include <KServiceTypeTrader>
+#include <KRecursiveFilterProxyModel>
+#include <KServiceGroup>
 
 #include <QStackedWidget>
 #include <QMenu>
@@ -156,6 +157,55 @@ public:
     QStandardItemModel *model;
 };
 
+void loadAppsCategory(KServiceGroup::Ptr group, QStandardItemModel *model, QStandardItem *item)
+{
+    if (group && group->isValid()) {
+        KServiceGroup::List list = group->entries();
+
+        for( KServiceGroup::List::ConstIterator it = list.constBegin();
+             it != list.constEnd(); ++it) {
+            const KSycocaEntry::Ptr p = (*it);
+
+            if (p->isType(KST_KService)) {
+                const KService::Ptr service(static_cast<KService*>(p.data()));
+
+                if (!service->noDisplay()) {
+                    QString genericName = service->genericName();
+                    if (genericName.isNull()) {
+                        genericName = service->comment();
+                    }
+                    QString description;
+                    if (!service->genericName().isEmpty() && service->genericName() != service->name()) {
+                        description = service->genericName();
+                    } else if (!service->comment().isEmpty()) {
+                        description = service->comment();
+                    }
+
+                    QStandardItem *subItem = new QStandardItem(QIcon::fromTheme(service->icon()), service->name());
+                    subItem->setData(service->storageId());
+                    if (item) {
+                        item->appendRow(subItem);
+                    } else {
+                        model->appendRow(subItem);
+                    }
+                }
+
+            } else if (p->isType(KST_KServiceGroup)) {
+                KServiceGroup::Ptr subGroup(static_cast<KServiceGroup*>(p.data()));
+
+                if (!subGroup->noDisplay() && subGroup->childCount() > 0) {
+                    if (item) {
+                        loadAppsCategory(subGroup, model, item);
+                    } else {
+                        QStandardItem *subItem = new QStandardItem(QIcon::fromTheme(subGroup->icon()), subGroup->caption());
+                        model->appendRow(subItem);
+                        loadAppsCategory(subGroup, model, subItem);
+                    }
+                }
+            }
+        }
+    }
+}
 
 void KGlobalShortcutsEditor::KGlobalShortcutsEditorPrivate::initGUI()
 {
@@ -177,30 +227,28 @@ void KGlobalShortcutsEditor::KGlobalShortcutsEditorPrivate::initGUI()
     menu->addAction( i18n("Set All Shortcuts to None"), q, SLOT(clearConfiguration()));
     QAction *action = menu->addAction( QIcon::fromTheme(QStringLiteral("start-here-kde")), i18n("Add shortcut to an application launcher..."));
     connect(action, &QAction::triggered, [this]() {
-        qWarning() << "Add shortcut to application Action triggered";
-        if (!selectApplicationDialogUi.listView->model()) {
-            QSortFilterProxyModel *filterModel = new QSortFilterProxyModel(selectApplicationDialogUi.listView);
-            QStandardItemModel *appModel = new QStandardItemModel(selectApplicationDialogUi.listView);
-            filterModel->setSourceModel(appModel);
+        if (!selectApplicationDialogUi.treeView->model()) {
+            KRecursiveFilterProxyModel *filterModel = new KRecursiveFilterProxyModel(selectApplicationDialogUi.treeView);
+            QStandardItemModel *appModel = new QStandardItemModel(selectApplicationDialogUi.treeView);
             selectApplicationDialogUi.kfilterproxysearchline->setProxy(filterModel);
+            filterModel->setSourceModel(appModel);
+            appModel->setHorizontalHeaderLabels({i18n("Applications")});
 
-            const QString query = QString("exist Exec");
-            KService::List services = KServiceTypeTrader::self()->query("Application", query);
-            //kDebug() << "******** populating with" << services.count();
+            loadAppsCategory(KServiceGroup::root(), appModel, nullptr);
 
-            //kDebug() << service->name() << "is an exact match!" << service->storageId() << service->exec();
-            foreach (const KService::Ptr &service, services) {
-                if (!service->noDisplay() &&
-                    service->property("NotShowIn", QVariant::String) != "KDE") {
-                    QStandardItem *item = new QStandardItem(QIcon::fromTheme(service->icon()), service->name());
-                    item->setData(service->storageId());
-                    appModel->appendRow(item);
-                }
-            }
-
-            selectApplicationDialogUi.listView->setModel(filterModel);
+            selectApplicationDialogUi.treeView->setModel(filterModel);
         }
         selectApplicationDialog->show();
+    });
+
+    connect(selectApplicationDialog, &QDialog::accepted, [this]() {
+        if (selectApplicationDialogUi.treeView->selectionModel()->selectedIndexes().length() == 1) {
+            QString desktopFile = selectApplicationDialogUi.treeView->model()->data(selectApplicationDialogUi.treeView->selectionModel()->selectedIndexes().first(), Qt::UserRole+1).toString();
+
+            if (!desktopFile.isEmpty()) {
+                
+            }
+        }
     });
 
     action = menu->addAction( QIcon::fromTheme(QStringLiteral("edit-delete")), i18n("Remove Component"));
