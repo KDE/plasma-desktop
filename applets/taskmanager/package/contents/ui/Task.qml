@@ -435,7 +435,13 @@ MouseArea {
         }
     ]
 
+    Component.onDestruction: {
+        console.log("removing task at index", index);
+    }
+
     Component.onCompleted: {
+        console.log("created task at index", index);
+
         if (!inPopup && model.IsWindow === true) {
             var component = Qt.createComponent("GroupExpanderOverlay.qml");
             component.createObject(task);
