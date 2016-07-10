@@ -38,6 +38,7 @@ Column {
     property string subText
     property variant icon
     property url launcherUrl
+    property bool group: (windows.length > 1)
 
     readonly property int thumbnailWidth: units.gridUnit * 15
     readonly property int thumbnailHeight: units.gridUnit * 10
@@ -190,7 +191,7 @@ Column {
 
                             ToolTipWindowMouseArea {
                                 anchors.fill: parent
-                                modelIndex: tasksModel.makeModelIndex(parentIndex, index)
+                                modelIndex: tasksModel.makeModelIndex(parentIndex, group ? index : -1)
                                 winId: modelData
                                 thumbnailItem: parent
                             }
@@ -215,7 +216,7 @@ Column {
 
                 ToolTipWindowMouseArea {
                     anchors.fill: parent
-                    modelIndex: tasksModel.makeModelIndex(parentIndex)
+                    modelIndex: tasksModel.makeModelIndex(parentIndex, group ? index : -1)
                     winId: windows != undefined ? (windows[0] || 0) : 0
                 }
             }
