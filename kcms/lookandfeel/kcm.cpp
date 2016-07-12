@@ -73,6 +73,7 @@ KCMLookandFeel::KCMLookandFeel(QObject* parent, const QVariantList& args)
     //also, it seems to work only if set in the kcm, not in the systemsettings' main
     qApp->setAttribute(Qt::AA_DontCreateNativeWidgetSiblings);
     qmlRegisterType<QStandardItemModel>();
+    qmlRegisterType<KCMLookandFeel>();
     KAboutData* about = new KAboutData(QStringLiteral("kcm_lookandfeel"), i18n("Configure Look and Feel details"),
                                        QStringLiteral("0.1"), QString(), KAboutLicense::LGPL);
     about->addAuthor(i18n("Marco Martin"), QString(), QStringLiteral("mart@kde.org"));
@@ -102,6 +103,15 @@ KCMLookandFeel::~KCMLookandFeel()
 {
 }
 
+void KCMLookandFeel::getNewStuff()
+{
+    if (!m_newStuffDialog) {
+        m_newStuffDialog = new KNS3::DownloadDialog( QLatin1String("lookandfeel.knsrc") );
+        m_newStuffDialog.data()->setWindowTitle(i18n("Download New Look And Feel Packages"));
+        connect(m_newStuffDialog.data(), &KNS3::DownloadDialog::accepted, this,  &KCMLookandFeel::load);
+    }
+    m_newStuffDialog.data()->show();
+}
 
 QStandardItemModel *KCMLookandFeel::lookAndFeelModel()
 {

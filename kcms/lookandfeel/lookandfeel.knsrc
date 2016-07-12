@@ -1,0 +1,6 @@
+[KNewStuff3]
+ProvidersUrl=https://www.kde-look.org/ocs/providers.xml
+Categories=121
+StandardResource=tmp
+InstallationCommand=kpackagetool5 -t Plasma/LookAndFeel -i %f
+UninstallCommand=kpackagetool5 -t Plasma/LookAndFeel -r %f
