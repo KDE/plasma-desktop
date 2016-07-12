@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>467</width>
-    <height>100</height>
+    <height>106</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -23,7 +23,72 @@
    <enum>QFrame::Sunken</enum>
   </property>
   <layout class="QGridLayout">
-   <item row="0" column="3" rowspan="3">
+   <item row="0" column="1">
+    <widget class="QLabel" name="label">
+     <property name="toolTip">
+      <string>Window text on Window Background</string>
+     </property>
+     <property name="text">
+      <string comment="color-kcm-preview" extracomment="see kdebase/workspace/kcontrol/colors/README.i18n">Window text</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QPushButton" name="pushButton">
+     <property name="toolTip">
+      <string>Button text on Button Background</string>
+     </property>
+     <property name="text">
+      <string comment="color-kcm-preview" extracomment="see kdebase/workspace/kcontrol/colors/README.i18n">Push Button</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <spacer>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeType">
+      <enum>QSizePolicy::MinimumExpanding</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>0</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="0" column="3">
+    <spacer>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeType">
+      <enum>QSizePolicy::MinimumExpanding</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>4</width>
+       <height>51</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="0" column="0">
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>40</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="0" column="2" rowspan="3">
     <widget class="QFrame" name="frame">
      <property name="autoFillBackground">
       <bool>true</bool>
@@ -287,87 +352,6 @@
       </item>
      </layout>
     </widget>
-   </item>
-   <item row="0" column="1">
-    <widget class="QLabel" name="label">
-     <property name="toolTip">
-      <string>Window text on Window Background</string>
-     </property>
-     <property name="text">
-      <string comment="color-kcm-preview" extracomment="see kdebase/workspace/kcontrol/colors/README.i18n">Window text</string>
-     </property>
-    </widget>
-   </item>
-   <item row="1" column="1">
-    <widget class="QPushButton" name="pushButton">
-     <property name="toolTip">
-      <string>Button text on Button Background</string>
-     </property>
-     <property name="text">
-      <string comment="color-kcm-preview" extracomment="see kdebase/workspace/kcontrol/colors/README.i18n">Push Button</string>
-     </property>
-    </widget>
-   </item>
-   <item row="1" column="2">
-    <spacer>
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-     <property name="sizeType">
-      <enum>QSizePolicy::Preferred</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>40</width>
-       <height>20</height>
-      </size>
-     </property>
-    </spacer>
-   </item>
-   <item row="2" column="1">
-    <spacer>
-     <property name="orientation">
-      <enum>Qt::Vertical</enum>
-     </property>
-     <property name="sizeType">
-      <enum>QSizePolicy::MinimumExpanding</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>20</width>
-       <height>0</height>
-      </size>
-     </property>
-    </spacer>
-   </item>
-   <item row="0" column="4">
-    <spacer>
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-     <property name="sizeType">
-      <enum>QSizePolicy::MinimumExpanding</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>4</width>
-       <height>51</height>
-      </size>
-     </property>
-    </spacer>
-   </item>
-   <item row="0" column="0">
-    <spacer name="horizontalSpacer">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>40</width>
-       <height>20</height>
-      </size>
-     </property>
-    </spacer>
    </item>
   </layout>
  </widget>
