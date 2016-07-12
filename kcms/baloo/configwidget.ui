@@ -13,14 +13,7 @@
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="0,5">
-     <item>
-      <widget class="QLabel" name="m_pixmapLabel">
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-     </item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="5">
      <item>
       <widget class="QLabel" name="m_mainLabel">
        <property name="sizePolicy">
@@ -40,6 +33,13 @@
     </layout>
    </item>
    <item>
+    <widget class="QCheckBox" name="m_enableCheckbox">
+     <property name="text">
+      <string>Enable File Search</string>
+     </property>
+    </widget>
+   </item>
+   <item>
     <widget class="QGroupBox" name="m_excludeFolders_GB">
      <property name="title">
       <string>Do not search in these locations</string>
@@ -52,13 +52,6 @@
        <widget class="FolderSelectionWidget" name="m_excludeFolders_FSW" native="true"/>
       </item>
      </layout>
-    </widget>
-   </item>
-   <item>
-    <widget class="QCheckBox" name="m_enableCheckbox">
-     <property name="text">
-      <string>Enable File Search</string>
-     </property>
     </widget>
    </item>
    <item>
