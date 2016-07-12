@@ -67,10 +67,6 @@ ServerConfigModule::ServerConfigModule(QWidget* parent, const QVariantList& args
 
     setupUi(this);
 
-    int pixelSize = style()->pixelMetric(QStyle::PM_LargeIconSize);
-    const QPixmap pixmap = QIcon::fromTheme(QStringLiteral("baloo")).pixmap(QSize(pixelSize, pixelSize));
-    m_pixmapLabel->setPixmap(pixmap);
-
     connect(m_excludeFolders_FSW, SIGNAL(changed()),
             this, SLOT(changed()));
     connect(m_excludeFolders_FSW, &FolderSelectionWidget::changed,
