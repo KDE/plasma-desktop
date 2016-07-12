@@ -37,7 +37,7 @@ Item {
     ColumnLayout {
         anchors.fill: parent
         QtControls.Label {
-            text: i18nd("kcm_lookandfeel", "Select an overall look and feel theme for your workspace (including splash screen, lock screen etc.) and applications")
+            text: i18nd("kcm_lookandfeel", "Select an overall theme for your workspace (including plasma theme, color scheme, mouse cursor, indow and desktop switcher, splash screen, lock screen etc.)")
             wrapMode: Text.WordWrap
             Layout.fillWidth: true
         }
