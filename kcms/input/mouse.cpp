@@ -259,7 +259,7 @@ MouseConfig::MouseConfig(QWidget *parent, const QVariantList &args)
 {
   QWidget *mouse = new QWidget(this);
   mouse->setObjectName("Mouse Navigation");
-  tabwidget->addTab(mouse, i18n("Mouse Navigation"));
+  tabwidget->addTab(mouse, i18n("Keyboard Navigation"));
 
   QFormLayout *form = new QFormLayout(mouse);
 
