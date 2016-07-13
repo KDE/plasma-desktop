@@ -22,6 +22,7 @@
 #define __COLORSCM_H__
 
 #include <KCModule>
+#include <KColorScheme>
 
 #include "ui_colorsettings.h"
 

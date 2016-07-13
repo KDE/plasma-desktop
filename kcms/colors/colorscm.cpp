@@ -170,7 +170,7 @@ void KColorCm::updatePreviews()
 {
     schemePreview->setPalette(m_config);
     colorPreview->setPalette(m_config);
-    setPreview->setPalette(m_config, (KColorScheme::ColorSet)(colorSet->currentIndex() - 1));
+    // setPreview->setPalette(m_config, (KColorScheme::ColorSet)(colorSet->currentIndex() - 1));
     inactivePreview->setPalette(m_config, QPalette::Inactive);
     disabledPreview->setPalette(m_config, QPalette::Disabled);
 }
@@ -868,7 +868,7 @@ void KColorCm::updateColorTable()
     {
         // common colors is selected
         stackColors->setCurrentIndex(0);
-        stackPreview->setCurrentIndex(0);
+        // stackPreview->setCurrentIndex(0);
 
         KColorButton * button;
         foreach (button, m_commonColorButtons)
@@ -915,9 +915,9 @@ void KColorCm::updateColorTable()
     else
     {
         // a real color set is selected
-        setPreview->setPalette(m_config, (KColorScheme::ColorSet)currentSet);
+        // setPreview->setPalette(m_config, (KColorScheme::ColorSet)currentSet);
         stackColors->setCurrentIndex(1);
-        stackPreview->setCurrentIndex(1);
+        // stackPreview->setCurrentIndex(1);
 
         for (int i = KColorScheme::NormalBackground; i <= KColorScheme::AlternateBackground; ++i)
         {
