@@ -94,8 +94,14 @@ Item {
         sortMode: iconsOnly ? TaskManager.TasksModel.SortManual
             : sortModeEnumValue(plasmoid.configuration.sortingStrategy)
         launchInPlace: iconsOnly
-        separateLaunchers: (!iconsOnly
-            && plasmoid.configuration.sortingStrategy.currentIndex != 1 && plasmoid.configuration.separateLaunchers)
+        separateLaunchers: {
+            if (!iconsOnly && !plasmoid.configuration.seperateLaunchers
+                && plasmoid.configuration.sortingStrategy == 1) {
+                return false;
+            }
+
+            return true;
+        }
 
         groupMode: iconsOnly ? TaskManager.TasksModel.GroupApplication
             : sortModeEnumValue(plasmoid.configuration.groupingStrategy)
