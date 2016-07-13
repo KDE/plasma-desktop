@@ -83,7 +83,7 @@ Item {
         id: tasksModel
 
         virtualDesktop: virtualDesktopInfo.currentDesktop
-        screen: plasmoid.screen
+        screenGeometry: plasmoid.screenGeometry
         activity: activityInfo.currentActivity
 
         filterByVirtualDesktop: plasmoid.configuration.showOnlyCurrentDesktop
