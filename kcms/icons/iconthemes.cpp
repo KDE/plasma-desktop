@@ -120,14 +120,12 @@ IconThemesConfig::IconThemesConfig(QWidget *parent)
   m_removeButton->setWhatsThis(i18n("This will remove the selected theme from your disk."));
   connect(m_removeButton, &QPushButton::clicked, this, &IconThemesConfig::removeSelectedTheme);
 
-  topLayout->addWidget(
-	new QLabel(i18n("Select the icon theme you want to use:"), this));
   topLayout->addWidget(m_preview);
   topLayout->addWidget(m_iconThemes);
   QHBoxLayout *lg = new QHBoxLayout();
   lg->addWidget(newButton);
-  lg->addStretch(0);
   lg->addWidget(installButton);
+  lg->addStretch(0);
   lg->addWidget(m_removeButton);
   topLayout->addLayout(lg);
 

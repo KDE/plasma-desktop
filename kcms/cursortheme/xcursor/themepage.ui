@@ -11,47 +11,7 @@
    </rect>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="4" column="0" rowspan="5" colspan="5">
-    <widget class="QListView" name="view">
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-       <horstretch>0</horstretch>
-       <verstretch>1</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="alternatingRowColors">
-      <bool>true</bool>
-     </property>
-     <property name="verticalScrollMode">
-      <enum>QAbstractItemView::ScrollPerPixel</enum>
-     </property>
-    </widget>
-   </item>
-   <item row="0" column="0" colspan="2">
-    <widget class="QLabel" name="label">
-     <property name="text">
-      <string>Select the cursor theme you want to use (hover preview to test cursor):</string>
-     </property>
-    </widget>
-   </item>
-   <item row="9" column="0">
-    <widget class="QPushButton" name="installKnsButton">
-     <property name="toolTip">
-      <string>Get new color schemes from the Internet</string>
-     </property>
-     <property name="text">
-      <string>Get new Theme</string>
-     </property>
-    </widget>
-   </item>
-   <item row="9" column="2">
-    <widget class="QPushButton" name="removeButton">
-     <property name="text">
-      <string>Remove Theme</string>
-     </property>
-    </widget>
-   </item>
-   <item row="1" column="0" rowspan="3" colspan="5">
+   <item row="0" column="0" rowspan="3" colspan="5">
     <widget class="PreviewWidget" name="preview" native="true">
      <property name="sizePolicy">
       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -67,7 +27,40 @@
      </property>
     </widget>
    </item>
-   <item row="9" column="4">
+   <item row="3" column="0" rowspan="5" colspan="5">
+    <widget class="QListView" name="view">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>1</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="alternatingRowColors">
+      <bool>true</bool>
+     </property>
+     <property name="verticalScrollMode">
+      <enum>QAbstractItemView::ScrollPerPixel</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="0">
+    <widget class="QPushButton" name="installKnsButton">
+     <property name="toolTip">
+      <string>Get new color schemes from the Internet</string>
+     </property>
+     <property name="text">
+      <string>Get new Theme</string>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="2">
+    <widget class="QPushButton" name="removeButton">
+     <property name="text">
+      <string>Remove Theme</string>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="4">
     <widget class="QComboBox" name="sizeComboBox">
      <property name="sizePolicy">
       <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
@@ -86,14 +79,14 @@
      </property>
     </widget>
    </item>
-   <item row="9" column="1">
+   <item row="8" column="1">
     <widget class="QPushButton" name="installButton">
      <property name="text">
       <string>Install from File</string>
      </property>
     </widget>
    </item>
-   <item row="9" column="3">
+   <item row="8" column="3">
     <spacer name="horizontalSpacer">
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
