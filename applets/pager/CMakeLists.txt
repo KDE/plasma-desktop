@@ -17,11 +17,10 @@ target_link_libraries(pagerplugin
                       Qt5::Core
                       Qt5::Qml
                       Qt5::Quick
-                      Qt5::DBus
-                      PW::LibLegacyTaskManager)
+                      Qt5::DBus)
 
 if (X11_FOUND)
-    target_link_libraries(pagerplugin Qt5::X11Extras)
+    target_link_libraries(pagerplugin Qt5::X11Extras PW::LibTaskManager)
 endif()
 
 install(TARGETS pagerplugin DESTINATION ${QML_INSTALL_DIR}/org/kde/plasma/private/pager)

@@ -42,14 +42,13 @@
 
 #if HAVE_X11
 #include <netwm.h>
+#include <xwindowtasksmodel.h>
 #endif
 
 #include <Plasma/FrameSvg>
 #include <Plasma/Package>
 
 #include <kactivities/consumer.h>
-
-#include <task.h>
 
 const int FAST_UPDATE_DELAY = 100;
 const int UPDATE_DELAY = 500;
@@ -605,13 +604,17 @@ void Pager::dropMimeData(QMimeData *mimeData, int desktopId)
         return;
     }
 
-    bool ok;
-    const QList<WId> &ids = LegacyTaskManager::Task::idsFromMimeData(mimeData, &ok);
-    if (ok) {
-        foreach (const WId &id, ids) {
-            KWindowSystem::setOnDesktop(id, desktopId + 1);
+#if HAVE_X11
+    if (m_isX11) {
+        bool ok;
+        const QList<WId> &ids = TaskManager::XWindowTasksModel::winIdsFromMimeData(mimeData, &ok);
+        if (ok) {
+            foreach (const WId &id, ids) {
+                KWindowSystem::setOnDesktop(id, desktopId + 1);
+            }
         }
     }
+#endif
 }
 
 // KWindowSystem does not translate position when mapping viewports
