@@ -156,6 +156,7 @@ public:
     QHash<QString, ComponentData*> components;
     QDBusConnection bus;
     QStandardItemModel *model;
+    QSortFilterProxyModel *proxyModel;
 };
 
 void loadAppsCategory(KServiceGroup::Ptr group, QStandardItemModel *model, QStandardItem *item)
@@ -215,19 +216,27 @@ void KGlobalShortcutsEditor::KGlobalShortcutsEditorPrivate::initGUI()
     selectApplicationDialogUi.setupUi(selectApplicationDialog);
     // Create a stacked widget.
     stack = new QStackedWidget(q);
-    q->layout()->addWidget(stack);
+    ui.currentComponentLayout->addWidget(stack);
+    //HACK to make those two un-alignable components, aligned
+    ui.componentLabel->setMinimumHeight(ui.lineEditSpacer->sizeHint().height());
+    ui.lineEditSpacer->setVisible(false);
+    ui.addButton->setIcon(QIcon::fromTheme("list-add"));
+    ui.removeButton->setIcon(QIcon::fromTheme("list-remove"));
 
     // Connect our components
-    connect(ui.components, SIGNAL(activated(QString)),
-            q, SLOT(activateComponent(QString)));
+    connect(ui.components, &QListView::activated,
+            q, [this](const QModelIndex &index) {
+                QString name = proxyModel->data(index).toString();
+                q->activateComponent(name);
+            });
 
     // Build the menu
     QMenu *menu = new QMenu(q);
     menu->addAction( QIcon::fromTheme(QStringLiteral("document-import")), i18n("Import Scheme..."), q, SLOT(importScheme()));
     menu->addAction( QIcon::fromTheme(QStringLiteral("document-export")), i18n("Export Scheme..."), q, SLOT(exportScheme()));
     menu->addAction( i18n("Set All Shortcuts to None"), q, SLOT(clearConfiguration()));
-    QAction *action = menu->addAction( QIcon::fromTheme(QStringLiteral("start-here-kde")), i18n("Add shortcut to an application launcher..."));
-    connect(action, &QAction::triggered, [this]() {
+    
+    connect(ui.addButton, &QToolButton::clicked, [this]() {
         if (!selectApplicationDialogUi.treeView->model()) {
             KRecursiveFilterProxyModel *filterModel = new KRecursiveFilterProxyModel(selectApplicationDialogUi.treeView);
             QStandardItemModel *appModel = new QStandardItemModel(selectApplicationDialogUi.treeView);
@@ -260,11 +269,10 @@ void KGlobalShortcutsEditor::KGlobalShortcutsEditorPrivate::initGUI()
         }
     });
 
-    action = menu->addAction( QIcon::fromTheme(QStringLiteral("edit-delete")), i18n("Remove Component"));
-    connect(action, &QAction::triggered, [this]() {
+    connect(ui.removeButton, &QToolButton::clicked, [this]() {
         //TODO: different way to remove components that are desktop files
         //disabled desktop files need Hidden=true key
-        QString name = ui.components->currentText();
+        QString name = proxyModel->data(ui.components->currentIndex()).toString();
         QString componentUnique = components.value(name)->uniqueName();
 
         // The confirmation text is different when the component is active
@@ -307,7 +315,7 @@ void KGlobalShortcutsEditor::KGlobalShortcutsEditorPrivate::initGUI()
 
     ui.menu_button->setMenu(menu);
 
-    QSortFilterProxyModel *proxyModel = new QSortFilterProxyModel(q);
+    proxyModel = new QSortFilterProxyModel(q);
     model = new QStandardItemModel(0, 1, proxyModel);
     proxyModel->setSourceModel(model);
     proxyModel->setSortCaseSensitivity(Qt::CaseInsensitive);
@@ -342,11 +350,11 @@ void KGlobalShortcutsEditor::activateComponent(const QString &component)
         Q_ASSERT(iter != d->components.end());
         return;
     } else {
-        int index = d->ui.components->findText(component);
-        Q_ASSERT(index != -1);
-        if (index > -1) {
+        QModelIndexList results = d->proxyModel->match(d->proxyModel->index(0, 0), Qt::DisplayRole, component);
+        Q_ASSERT(results.isEmpty());
+        if (results.first().isValid()) {
             // Known component. Get it.
-            d->ui.components->setCurrentIndex(index);
+            d->ui.components->setCurrentIndex(results.first());
             d->stack->setCurrentWidget((*iter)->editor());
         }
     }
@@ -385,7 +393,7 @@ void KGlobalShortcutsEditor::addCollection(
         // Add to the component combobox
         //FIXME: QCombobox.addItem apparently breaks with sort() in Qt5
         d->model->appendRow(new QStandardItem(pixmap, friendlyName));
-        d->ui.components->model()->sort(0);
+        d->proxyModel->sort(0);
 
         // Add to our component registry
         ComponentData *cd = new ComponentData(id, objectPath, editor);
@@ -400,16 +408,17 @@ void KGlobalShortcutsEditor::addCollection(
     // Add the collection to the editor of the component
     editor->addCollection(collection, friendlyName);
 
-    if (d->ui.components->count() > -1) {
-        d->ui.components->setCurrentIndex(0);
-        activateComponent(d->ui.components->itemText(0));
+    if (d->proxyModel->rowCount() > -1) {
+        d->ui.components->setCurrentIndex(d->proxyModel->index(0, 0));
+        QString name = d->proxyModel->data(d->proxyModel->index(0, 0)).toString();
+        activateComponent(name);
     }
 }
 
 
 void KGlobalShortcutsEditor::clearConfiguration()
 {
-    QString name = d->ui.components->currentText();
+    QString name = d->proxyModel->data(d->ui.components->currentIndex()).toString();
     d->components[name]->editor()->clearConfiguration();
 }
 
@@ -426,7 +435,7 @@ void KGlobalShortcutsEditor::defaults(ComponentScope scope)
             break;
 
         case CurrentComponent: {
-            QString name = d->ui.components->currentText();
+            QString name = d->proxyModel->data(d->ui.components->currentIndex()).toString();
             // The editors are responsible for the reset
             d->components[name]->editor()->allDefault();
             }
@@ -443,7 +452,7 @@ void KGlobalShortcutsEditor::clear()
     // Remove all components and their associated editors
     qDeleteAll(d->components);
     d->components.clear();
-    d->ui.components->clear();
+    d->model->clear();
 }
 
 
@@ -761,9 +770,9 @@ void KGlobalShortcutsEditor::KGlobalShortcutsEditorPrivate::removeComponent(
         if (components.value(text)->uniqueName() == componentUnique)
             {
             // Remove from QComboBox
-            int index = ui.components->findText(text);
-            Q_ASSERT(index != -1);
-            ui.components->removeItem(index);
+            QModelIndexList results = proxyModel->match(proxyModel->index(0, 0), Qt::DisplayRole, text);
+            Q_ASSERT(results.isEmpty());
+            model->removeRow(proxyModel->mapToSource(results.first()).row());
 
             // Remove from QStackedWidget
             stack->removeWidget(components[text]->editor());
