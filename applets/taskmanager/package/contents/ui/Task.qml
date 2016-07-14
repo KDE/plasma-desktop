@@ -293,16 +293,14 @@ MouseArea {
     Item {
         id: iconBox
 
-        anchors {
-            left: parent.left
-            leftMargin: tasks.vertical && !label.visible ? adjustMargin(true, parent.width, taskFrame.margins.left) : taskFrame.margins.left
-            top: parent.top
-            topMargin: adjustMargin(false, parent.height, taskFrame.margins.top);
-            bottom: parent.bottom
-            bottomMargin: adjustMargin(false, parent.height, taskFrame.margins.bottom);
-            right: (tasks.vertical && !label.visible && !inPopup) ? parent.right : undefined
-            rightMargin: tasks.vertical && !label.visible ? adjustMargin(true, parent.width, taskFrame.margins.right) : undefined
-        }
+        x: adjustMargin(true, parent.width, taskFrame.margins.left)
+        y: adjustMargin(false, parent.height, taskFrame.margins.top)
+
+        width: (label.visible ? height
+            : parent.width - adjustMargin(true, parent.width, taskFrame.margins.left)
+            - adjustMargin(true, parent.width, taskFrame.margins.right))
+        height: (parent.height - adjustMargin(false, parent.height, taskFrame.margins.top)
+            - adjustMargin(false, parent.height, taskFrame.margins.bottom))
 
         function adjustMargin(vert, size, margin) {
             if (!size) {
@@ -318,7 +316,7 @@ MouseArea {
             return margin;
         }
 
-        width: inPopup ? units.iconSizes.small : Math.min(height, parent.width - LayoutManager.horizontalMargins())
+        //width: inPopup ? units.iconSizes.small : Math.min(height, parent.width - LayoutManager.horizontalMargins())
 
         PlasmaCore.IconItem {
             id: icon
@@ -378,7 +376,8 @@ MouseArea {
             bottomMargin: taskFrame.margins.bottom
         }
 
-        visible: (inPopup || !iconsOnly && model.IsLauncher !== true && (parent.width - LayoutManager.horizontalMargins()) >= (theme.mSize(theme.defaultFont).width * 7))
+        visible: (inPopup || !iconsOnly && model.IsLauncher !== true
+            && (parent.width - iconBox.height - units.smallSpacing) >= (theme.mSize(theme.defaultFont).width * 7))
 
         enabled: true
 
