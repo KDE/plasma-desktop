@@ -72,6 +72,8 @@ KCMKNotify::KCMKNotify(QWidget *parent, const QVariantList & )
     m_appCombo = new KComboBox( false, this );
     m_appCombo->setSizeAdjustPolicy( QComboBox::AdjustToContents );
     m_appCombo->setObjectName( QStringLiteral( "app combo" ) );
+    connect( m_appCombo, SIGNAL(activated(int)),
+             SLOT(slotAppActivated(int)) );
 
     QHBoxLayout *hbox = new QHBoxLayout();
     layout->addLayout( hbox );
@@ -83,10 +85,17 @@ KCMKNotify::KCMKNotify(QWidget *parent, const QVariantList & )
 
     connect( m_notifyWidget, SIGNAL(changed(bool)), this,  SIGNAL(changed(bool)));
 
-    m_appCombo->setFocus();
+    // This button isn't part of KNotifyConfigWidget so that one day we could have
+    // another button next to it, for "Disable all sounds for all event sources"
+    QHBoxLayout *buttonHLayout = new QHBoxLayout();
+    layout->addLayout(buttonHLayout);
+    QPushButton *pushButton = new QPushButton(i18n("Disable sounds for all of these events"), this);
+    pushButton->setFocusPolicy(Qt::TabFocus); // don't focus the button when clicking on it, so we can quickly select another app with the keyboard
+    buttonHLayout->addWidget(pushButton);
+    buttonHLayout->addStretch();
+    connect(pushButton, &QPushButton::clicked, this, &KCMKNotify::slotDisableAllSounds);
 
-    connect( m_appCombo, SIGNAL( activated( int ) ),
-             SLOT( slotAppActivated( int )) );
+    m_appCombo->setFocus();
 
     KAboutData* ab = new KAboutData(
         QStringLiteral("kcmknotify"), i18n("KNotify"), QStringLiteral("4.0"),
@@ -171,6 +180,11 @@ void KCMKNotify::load()
     }
 
     emit changed(false);
+}
+
+void KCMKNotify::slotDisableAllSounds()
+{
+    m_notifyWidget->disableAllSounds();
 }
 
 void KCMKNotify::save()

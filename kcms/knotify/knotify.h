@@ -46,6 +46,7 @@ public Q_SLOTS:
 
 private Q_SLOTS:
     void slotAppActivated( const int &);
+    void slotDisableAllSounds();
 
 private:
 
