@@ -37,6 +37,8 @@
 #include <KRecursiveFilterProxyModel>
 #include <KServiceGroup>
 #include <KDesktopFile>
+#include <KCategorizedSortFilterProxyModel>
+#include <KCategoryDrawer>
 
 #include <QStackedWidget>
 #include <QMenu>
@@ -156,7 +158,7 @@ public:
     QHash<QString, ComponentData*> components;
     QDBusConnection bus;
     QStandardItemModel *model;
-    QSortFilterProxyModel *proxyModel;
+    KCategorizedSortFilterProxyModel *proxyModel;
 };
 
 void loadAppsCategory(KServiceGroup::Ptr group, QStandardItemModel *model, QStandardItem *item)
@@ -222,6 +224,8 @@ void KGlobalShortcutsEditor::KGlobalShortcutsEditorPrivate::initGUI()
     ui.lineEditSpacer->setVisible(false);
     ui.addButton->setIcon(QIcon::fromTheme("list-add"));
     ui.removeButton->setIcon(QIcon::fromTheme("list-remove"));
+    ui.components->setCategoryDrawer(new KCategoryDrawer(ui.components));
+    ui.components->setModelColumn(0);
 
     // Connect our components
     connect(ui.components, &QListView::activated,
@@ -315,7 +319,8 @@ void KGlobalShortcutsEditor::KGlobalShortcutsEditorPrivate::initGUI()
 
     ui.menu_button->setMenu(menu);
 
-    proxyModel = new QSortFilterProxyModel(q);
+    proxyModel = new KCategorizedSortFilterProxyModel(q);
+    proxyModel->setCategorizedModel(true);
     model = new QStandardItemModel(0, 1, proxyModel);
     proxyModel->setSourceModel(model);
     proxyModel->setSortCaseSensitivity(Qt::CaseInsensitive);
@@ -391,8 +396,15 @@ void KGlobalShortcutsEditor::addCollection(
         }
 
         // Add to the component combobox
-        //FIXME: QCombobox.addItem apparently breaks with sort() in Qt5
-        d->model->appendRow(new QStandardItem(pixmap, friendlyName));
+        QStandardItem *item = new QStandardItem(pixmap, friendlyName);
+        if (id.endsWith(QStringLiteral(".desktop"))) {
+            item->setData(i18n("Application Launchers"), KCategorizedSortFilterProxyModel::CategoryDisplayRole);
+            item->setData(0, KCategorizedSortFilterProxyModel::CategorySortRole);
+        } else {
+            item->setData(i18n("Other Shortcuts"), KCategorizedSortFilterProxyModel::CategoryDisplayRole);
+            item->setData(1, KCategorizedSortFilterProxyModel::CategorySortRole);
+        }
+        d->model->appendRow(item);
         d->proxyModel->sort(0);
 
         // Add to our component registry

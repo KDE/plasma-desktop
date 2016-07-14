@@ -42,12 +42,15 @@
     <layout class="QVBoxLayout" name="currentComponentLayout"/>
    </item>
    <item row="1" column="0">
-    <widget class="QListView" name="components">
+    <widget class="KCategorizedView" name="components">
      <property name="sizePolicy">
       <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
        <horstretch>0</horstretch>
        <verstretch>0</verstretch>
       </sizepolicy>
+     </property>
+     <property name="verticalScrollMode">
+      <enum>QAbstractItemView::ScrollPerPixel</enum>
      </property>
     </widget>
    </item>
@@ -97,6 +100,13 @@
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>KCategorizedView</class>
+   <extends>QListView</extends>
+   <header>kcategorizedview.h</header>
+  </customwidget>
+ </customwidgets>
  <tabstops>
   <tabstop>menu_button</tabstop>
  </tabstops>
