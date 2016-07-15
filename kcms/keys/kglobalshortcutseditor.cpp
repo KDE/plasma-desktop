@@ -186,7 +186,7 @@ void loadAppsCategory(KServiceGroup::Ptr group, QStandardItemModel *model, QStan
                     }
 
                     QStandardItem *subItem = new QStandardItem(QIcon::fromTheme(service->icon()), service->name());
-                    subItem->setData(service->storageId());
+                    subItem->setData(service->entryPath());
                     if (item) {
                         item->appendRow(subItem);
                     } else {
@@ -257,10 +257,10 @@ void KGlobalShortcutsEditor::KGlobalShortcutsEditorPrivate::initGUI()
 
     connect(selectApplicationDialog, &QDialog::accepted, [this]() {
         if (selectApplicationDialogUi.treeView->selectionModel()->selectedIndexes().length() == 1) {
-            QString desktopFile = selectApplicationDialogUi.treeView->model()->data(selectApplicationDialogUi.treeView->selectionModel()->selectedIndexes().first(), Qt::UserRole+1).toString();
+            const QString desktopPath = selectApplicationDialogUi.treeView->model()->data(selectApplicationDialogUi.treeView->selectionModel()->selectedIndexes().first(), Qt::UserRole+1).toString();
 
-            if (!desktopFile.isEmpty()) {
-                const QString desktopPath = QStandardPaths::locate(QStandardPaths::ApplicationsLocation, desktopFile);
+            if (!desktopPath.isEmpty() &&QFile::exists(desktopPath) ) {
+                const QString desktopFile = desktopPath.split(QChar('/')).last();
 
                 if (!desktopPath.isEmpty()) {
                     KDesktopFile sourceDF(desktopPath);
@@ -268,6 +268,57 @@ void KGlobalShortcutsEditor::KGlobalShortcutsEditorPrivate::initGUI()
                     qWarning()<<QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/kglobalaccel/") + desktopFile;
                     destinationDF->sync();
                     //TODO: a DBUS call to tell the daemon to refresh desktop files
+
+
+                    // Create a action collection for our current component:context
+                    KActionCollection *col = new KActionCollection(q, desktopFile);
+
+                    foreach(const QString &actionId, sourceDF.readActions()) {
+
+                        const QString friendlyName = sourceDF.actionGroup(actionId).readEntry(QStringLiteral("Name"));
+                        QAction *action = col->addAction(actionId);
+                        action->setProperty("isConfigurationAction", QVariant(true)); // see KAction::~KAction
+                        action->setProperty("componentDisplayName", friendlyName);
+                        action->setText(friendlyName);
+
+                        KGlobalAccel::self()->setShortcut(action, QList<QKeySequence>());
+                        
+                        QStringList sequencesStrings = sourceDF.actionGroup(actionId).readEntry(QStringLiteral("X-KDE-Shortcuts"), QString()).split(QChar(','));
+                        QList<QKeySequence> sequences;
+                        if (sequencesStrings.length() > 0) {
+                            Q_FOREACH (const QString &seqString, sequencesStrings) {
+                                sequences.append(QKeySequence(seqString));
+                            }
+                        }
+
+                        if (sequences.count() > 0) {
+                            KGlobalAccel::self()->setDefaultShortcut(action, sequences);
+                        }
+                    }
+                    //Global launch action
+                    {
+                        const QString friendlyName = i18n("Launch %1", sourceDF.readName());
+                        QAction *action = col->addAction(QStringLiteral("_launch"));
+                        action->setProperty("isConfigurationAction", QVariant(true)); // see KAction::~KAction
+                        action->setProperty("componentDisplayName", friendlyName);
+                        action->setText(friendlyName);
+
+                        KGlobalAccel::self()->setShortcut(action, QList<QKeySequence>());
+                        
+                        QStringList sequencesStrings = sourceDF.desktopGroup().readEntry(QStringLiteral("X-KDE-Shortcuts"), QString()).split(QChar(','));
+                        QList<QKeySequence> sequences;
+                        if (sequencesStrings.length() > 0) {
+                            Q_FOREACH (const QString &seqString, sequencesStrings) {
+                                sequences.append(QKeySequence(seqString));
+                            }
+                        }
+
+                        if (sequences.count() > 0) {
+                            KGlobalAccel::self()->setDefaultShortcut(action, sequences);
+                        }
+                    }
+qWarning()<<"WWWWW"<<desktopFile<<sourceDF.readName();
+                    q->addCollection(col, QDBusObjectPath(), desktopFile, sourceDF.readName());
                 }
             }
         }
@@ -395,7 +446,7 @@ void KGlobalShortcutsEditor::addCollection(
             pixmap = KIconLoader::global()->loadIcon(QStringLiteral("system-run"), KIconLoader::Small);
         }
 
-        // Add to the component combobox
+        // Add to the component list
         QStandardItem *item = new QStandardItem(pixmap, friendlyName);
         if (id.endsWith(QStringLiteral(".desktop"))) {
             item->setData(i18n("Application Launchers"), KCategorizedSortFilterProxyModel::CategoryDisplayRole);
