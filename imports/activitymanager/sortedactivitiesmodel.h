@@ -36,7 +36,6 @@
 class SortedActivitiesModel : public QSortFilterProxyModel {
     Q_OBJECT
 
-    Q_PROPERTY(bool sortByLastUsedTime READ sortByLastUsedTime WRITE setSortByLastUsedTime NOTIFY sortByLastUsedTimeChanged)
     Q_PROPERTY(bool inhibitUpdates READ inhibitUpdates WRITE setInhibitUpdates NOTIFY inhibitUpdatesChanged)
 
 public:
@@ -61,9 +60,6 @@ protected:
     };
 
 public Q_SLOTS:
-    bool sortByLastUsedTime() const;
-    void setSortByLastUsedTime(bool sortByLastUsedTime);
-
     bool inhibitUpdates() const;
     void setInhibitUpdates(bool sortByLastUsedTime);
 
@@ -81,11 +77,9 @@ public Q_SLOTS:
     void onWindowChanged(WId window, NET::Properties properties, NET::Properties2 properties2);
 
 Q_SIGNALS:
-    void sortByLastUsedTimeChanged(bool sortByLastUsedTime);
     void inhibitUpdatesChanged(bool inhibitUpdates);
 
 private:
-    bool m_sortByLastUsedTime;
     bool m_inhibitUpdates;
 
     QString m_previousActivity;

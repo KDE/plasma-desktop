@@ -191,7 +191,6 @@ namespace {
 
 SortedActivitiesModel::SortedActivitiesModel(QVector<KActivities::Info::State> states, QObject *parent)
     : QSortFilterProxyModel(parent)
-    , m_sortByLastUsedTime(true)
     , m_activitiesModel(new KActivities::ActivitiesModel(states, this))
     , m_activities(new KActivities::Consumer(this))
 {
@@ -229,24 +228,6 @@ SortedActivitiesModel::~SortedActivitiesModel()
     backgrounds().unsubscribe(this);
 }
 
-bool SortedActivitiesModel::sortByLastUsedTime() const
-{
-    return m_sortByLastUsedTime;
-}
-
-void SortedActivitiesModel::setSortByLastUsedTime(bool sortByLastUsedTime)
-{
-    if (m_sortByLastUsedTime != sortByLastUsedTime) {
-        m_sortByLastUsedTime = sortByLastUsedTime;
-
-        if (m_sortByLastUsedTime) {
-            setSortRole(LastTimeUsed);
-        } else {
-            setSortRole(Qt::DisplayRole);
-        }
-    }
-}
-
 bool SortedActivitiesModel::inhibitUpdates() const
 {
     return m_inhibitUpdates;
@@ -278,21 +259,13 @@ uint SortedActivitiesModel::lastUsedTime(const QString &activity) const
 bool SortedActivitiesModel::lessThan(const QModelIndex &sourceLeft,
                                      const QModelIndex &sourceRight) const
 {
-    if (m_sortByLastUsedTime) {
-        const auto activityLeft  = sourceModel()->data(sourceLeft, KActivities::ActivitiesModel::ActivityId);
-        const auto activityRight = sourceModel()->data(sourceRight, KActivities::ActivitiesModel::ActivityId);
+    const auto activityLeft  = sourceModel()->data(sourceLeft, KActivities::ActivitiesModel::ActivityId);
+    const auto activityRight = sourceModel()->data(sourceRight, KActivities::ActivitiesModel::ActivityId);
 
-        const auto timeLeft  = lastUsedTime(activityLeft.toString());
-        const auto timeRight = lastUsedTime(activityRight.toString());
+    const auto timeLeft  = lastUsedTime(activityLeft.toString());
+    const auto timeRight = lastUsedTime(activityRight.toString());
 
-        return timeLeft < timeRight;
-
-    } else {
-        const auto titleLeft  = sourceModel()->data(sourceLeft, KActivities::ActivitiesModel::ActivityName);
-        const auto titleRight = sourceModel()->data(sourceRight, KActivities::ActivitiesModel::ActivityName);
-
-        return titleLeft < titleRight;
-    }
+    return timeLeft < timeRight;
 }
 
 QHash<int, QByteArray> SortedActivitiesModel::roleNames() const
