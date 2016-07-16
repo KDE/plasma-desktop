@@ -1,5 +1,5 @@
 /*
- *   Copyright (C) 2016 <ivan.cukic(at)kde.org>
+ *   Copyright (C) 2016 Ivan Cukic <ivan.cukic(at)kde.org>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU General Public License version 2,
@@ -259,13 +259,16 @@ uint SortedActivitiesModel::lastUsedTime(const QString &activity) const
 bool SortedActivitiesModel::lessThan(const QModelIndex &sourceLeft,
                                      const QModelIndex &sourceRight) const
 {
-    const auto activityLeft  = sourceModel()->data(sourceLeft, KActivities::ActivitiesModel::ActivityId);
-    const auto activityRight = sourceModel()->data(sourceRight, KActivities::ActivitiesModel::ActivityId);
+    const auto activityLeft =
+          sourceModel()->data(sourceLeft, KActivities::ActivitiesModel::ActivityId);
+    const auto activityRight =
+          sourceModel()->data(sourceRight, KActivities::ActivitiesModel::ActivityId);
 
     const auto timeLeft  = lastUsedTime(activityLeft.toString());
     const auto timeRight = lastUsedTime(activityRight.toString());
 
-    return timeLeft < timeRight;
+    return (timeLeft < timeRight) ||
+           (timeLeft == timeRight && activityLeft < activityRight);
 }
 
 QHash<int, QByteArray> SortedActivitiesModel::roleNames() const
