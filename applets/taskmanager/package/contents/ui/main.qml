@@ -95,7 +95,7 @@ Item {
             : sortModeEnumValue(plasmoid.configuration.sortingStrategy)
         launchInPlace: iconsOnly
         separateLaunchers: {
-            if (!iconsOnly && !plasmoid.configuration.seperateLaunchers
+            if (iconsOnly || !plasmoid.configuration.separateLaunchers
                 && plasmoid.configuration.sortingStrategy == 1) {
                 return false;
             }
