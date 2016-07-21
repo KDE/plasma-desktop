@@ -261,10 +261,6 @@ Item {
 
         PlasmaComponents.ToolButton {
             id: closeButton
-            anchors {
-                right: parent.right
-                verticalCenter: heading.verticalCenter
-            }
             iconSource: "window-close"
             onClicked: main.closed()
         }
