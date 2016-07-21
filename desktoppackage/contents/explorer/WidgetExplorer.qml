@@ -287,6 +287,8 @@ Item {
             bottomMargin: units.smallSpacing
         }
 
+        verticalScrollBarPolicy: Qt.ScrollBarAlwaysOn
+
         // hide the flickering by fading in nicely
         opacity: setModelTimer.running ? 0 : 1
         Behavior on opacity {
