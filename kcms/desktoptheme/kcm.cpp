@@ -95,7 +95,7 @@ void KCMDesktopTheme::getNewThemes()
     KNS3::DownloadDialog *dialog = new KNS3::DownloadDialog(QStringLiteral("plasma-themes.knsrc"));
     dialog->open();
 
-    connect(dialog, &QDialog::done, this, [this, dialog]() {
+    connect(dialog, &QDialog::accepted, this, [this, dialog]() {
         if (!dialog->changedEntries().isEmpty()) {
             load();
         }
