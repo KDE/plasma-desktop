@@ -98,6 +98,7 @@ void KCMDesktopTheme::getNewThemes()
     connect(dialog, &QDialog::accepted, this, [this, dialog]() {
         if (!dialog->changedEntries().isEmpty()) {
             load();
+            delete dialog;
         }
     });
 }
