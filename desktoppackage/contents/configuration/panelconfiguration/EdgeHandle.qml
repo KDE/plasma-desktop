@@ -76,12 +76,12 @@ PlasmaComponents.Button {
             case PlasmaCore.Types.TopEdge:
                 var y = Math.max(mouse.screenY - mapToItem(dialogRoot, 0, startMouseY).y, panel.height);
                 configDialog.y = y;
-                panel.distance = Math.max(y - panel.height - panel.screen.geometry.y, 0);
+                panel.distance = Math.max(y - panel.height - panel.screenToFollow.geometry.y, 0);
                 break
             case PlasmaCore.Types.LeftEdge:
                 var x = Math.max(mouse.screenX - mapToItem(dialogRoot, startMouseX, 0).x, panel.width);
                 configDialog.x = x;
-                panel.distance = Math.max(x - panel.width - panel.screen.geometry.x, 0);
+                panel.distance = Math.max(x - panel.width - panel.screenToFollow.geometry.x, 0);
                 break;
             case PlasmaCore.Types.RightEdge:
                 var x = Math.min(mouse.screenX - mapToItem(dialogRoot, startMouseX, 0).x, mouse.screen.geometry.x + mouse.screen.size.width - panel.width - configDialog.width);

@@ -44,7 +44,7 @@ PlasmaComponents.Button {
         onPositionChanged: {
             switch (panel.location) {
             case PlasmaCore.Types.TopEdge:
-                var y = Math.min(panel.screen.geometry.y + panel.screen.geometry.height/2, mouse.screenY - mapToItem(dialogRoot, 0, startMouseY).y);
+                var y = Math.min(panel.screenToFollow.geometry.y + panel.screenToFollow.geometry.height/2, mouse.screenY - mapToItem(dialogRoot, 0, startMouseY).y);
                 var thickness = Math.max(units.gridUnit, y - panel.y);
 
                 if (thickness % 2 != 0) {
@@ -61,7 +61,7 @@ PlasmaComponents.Button {
                 panel.thickness = thickness;
                 break;
             case PlasmaCore.Types.LeftEdge:
-                var x = Math.min(panel.screen.geometry.x + panel.screen.geometry.width/2, mouse.screenX - mapToItem(dialogRoot, startMouseX, 0).x);
+                var x = Math.min(panel.screenToFollow.geometry.x + panel.screenToFollow.geometry.width/2, mouse.screenX - mapToItem(dialogRoot, startMouseX, 0).x);
                 var thickness = Math.max(units.gridUnit, x - panel.x);
 
                 if (thickness % 2 != 0) {
@@ -78,8 +78,8 @@ PlasmaComponents.Button {
                 panel.thickness = thickness;
                 break;
             case PlasmaCore.Types.RightEdge:
-                var x = Math.max(panel.screen.geometry.x + panel.screen.geometry.width/2, mouse.screenX - mapToItem(dialogRoot, startMouseX, 0).x);
-                var thickness = Math.max(units.gridUnit, panel.screen.geometry.x + panel.screen.geometry.width - (x + configDialog.width));
+                var x = Math.max(panel.screenToFollow.geometry.x + panel.screenToFollow.geometry.width/2, mouse.screenX - mapToItem(dialogRoot, startMouseX, 0).x);
+                var thickness = Math.max(units.gridUnit, panel.screenToFollow.geometry.x + panel.screenToFollow.geometry.width - (x + configDialog.width));
 
                 if (thickness % 2 != 0) {
                     if (mouse.x > startMouseX) {
@@ -96,8 +96,8 @@ PlasmaComponents.Button {
                 break;
             case PlasmaCore.Types.BottomEdge:
             default:
-                var y = Math.max(panel.screen.geometry.y + panel.screen.geometry.height/2, mouse.screenY - mapToItem(dialogRoot, 0, startMouseY).y);
-                var thickness = Math.max(units.gridUnit, panel.screen.geometry.y + panel.screen.geometry.height - (y + configDialog.height));
+                var y = Math.max(panel.screenToFollow.geometry.y + panel.screenToFollow.geometry.height/2, mouse.screenY - mapToItem(dialogRoot, 0, startMouseY).y);
+                var thickness = Math.max(units.gridUnit, panel.screenToFollow.geometry.y + panel.screenToFollow.geometry.height - (y + configDialog.height));
 
                 if (thickness % 2 != 0) {
                     if (mouse.y > startMouseY) {
