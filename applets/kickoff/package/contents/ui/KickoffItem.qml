@@ -35,6 +35,8 @@ Item {
     signal actionTriggered(string actionId, variant actionArgument)
     signal aboutToShowActionMenu(variant actionMenu)
 
+    readonly property int itemIndex: model.index
+
     property bool dropEnabled: false
     property bool appView: false
     property bool modelChildren: model.hasChildren || false
@@ -153,6 +155,7 @@ Item {
 
             onPositionChanged: {
                 if (pressX != -1 && model.url && dragHelper.isDrag(pressX, pressY, mouse.x, mouse.y)) {
+                    kickoff.dragSource = listItem;
                     dragHelper.startDrag(root, model.url, model.decoration);
                     pressed = false;
                     pressX = -1;
@@ -183,7 +186,7 @@ Item {
             animated: false
             usesPlasmaTheme: false
 
-            source: decoration
+            source: model.decoration
         }
         PlasmaComponents.Label {
             id: titleElement

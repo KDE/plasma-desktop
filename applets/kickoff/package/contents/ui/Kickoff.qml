@@ -31,6 +31,7 @@ import org.kde.kquickcontrolsaddons 2.0
 import org.kde.plasma.private.kicker 0.1 as Kicker
 
 Item {
+    id: kickoff
 
     Plasmoid.switchWidth: units.gridUnit * 20
     Plasmoid.switchHeight: units.gridUnit * 30
@@ -40,6 +41,8 @@ Item {
     Plasmoid.icon: plasmoid.configuration.icon
 
     property QtObject globalFavorites: rootModelFavorites
+
+    property Item dragSource: null
 
     Kicker.AppsModel {
         id: rootModel
@@ -97,6 +100,7 @@ Item {
         id: dragHelper
 
         dragIconSize: units.iconSizes.medium
+        onDropped: kickoff.dragSource = null
     }
 
     Kicker.ProcessRunner {

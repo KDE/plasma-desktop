@@ -3,6 +3,7 @@
     Copyright (C) 2012 Marco Martin <mart@kde.org>
     Copyright 2014 Sebastian Kügler <sebas@kde.org>
     Copyright (C) 2015  Eike Hein <hein@kde.org>
+    Copyright (C) 2016 Kai Uwe Broulik <kde@privat.broulik.de>
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -51,91 +52,63 @@ Item {
         kickoffListView.currentItem.openActionMenu();
     }
 
+    // QQuickItem::isAncestorOf is not invokable...
+    function isChildOf(item, parent) {
+        if (!item || !parent) {
+            return false;
+        }
+
+        if (item.parent === parent) {
+            return true;
+        }
+
+        return isChildOf(item, item.parent);
+    }
+
     DropArea {
-        property string dragUrl: ""
         property int startRow: -1
 
         anchors.fill: scrollArea
+        enabled: plasmoid.immutability !== PlasmaCore.Types.SystemImmutable
 
         function syncTarget(event) {
-            var pos = mapToItem(kickoffListView.contentItem, event.x, event.y);
-
-            var hoveredIndex = kickoffListView.indexAt(pos.y, pos.y);
-
-            if (hoveredIndex != -1) {
-                kickoffListView.currentIndex = hoveredIndex;
-            } else {
-                kickoffListView.currentIndex = kickoffListView.count - 1;
-            }
-
-            if (startRow == -1) {
-                dropTarget.visible = false;
-                return;
-            }
-
-            var targetY = kickoffListView.currentItem.y;
-
-            pos = kickoffListView.contentItem.mapToItem(kickoffListView.currentItem, pos.x, pos.y);
-
-            if (pos.y > kickoffListView.currentItem.height / 2) {
-                targetY += kickoffListView.currentItem.height;
-            }
-
-            dropTarget.y = kickoffListView.mapFromItem(kickoffListView.contentItem, 0, targetY).y;
-            dropTarget.visible = true;
-        }
-
-        onDrop: {
-            if (kickoffListView.currentItem == null || !dropTarget.visible) {
+            if (kickoffListView.animating) {
                 return;
             }
 
             var pos = mapToItem(kickoffListView.contentItem, event.x, event.y);
-            pos = kickoffListView.contentItem.mapToItem(kickoffListView.currentItem, pos.x, pos.y);
+            var above = kickoffListView.itemAt(pos.y, pos.y);
 
-            var targetRow = kickoffListView.currentIndex;
+            var source = kickoff.dragSource;
 
-            if (kickoffListView.currentIndex < startRow) {
-                ++targetRow;
+            if (above && above !== source && isChildOf(source, kickoffListView)) {
+                kickoffListView.model.moveRow(source.itemIndex, above.itemIndex);
+                // itemIndex changes directly after moving,
+                // we can just set the currentIndex to it then.
+                kickoffListView.currentIndex = source.itemIndex;
             }
-
-            if (pos.y <= kickoffListView.currentItem.height / 2) {
-                    --targetRow;
-            }
-
-            targetRow = Math.min(kickoffListView.count, targetRow);
-            targetRow = Math.max(0, targetRow);
-
-            kickoffListView.model.moveRow(startRow,  targetRow);
-
-            dropTarget.visible = false;
         }
 
         onDragEnter: {
-            // Don't allow re-arranging favorites when system is immutable.
-            if (plasmoid.immutability === PlasmaCore.Types.SystemImmutable) {
-                return
-            }
-
-            dragUrl = kickoffListView.currentItem.url;
             startRow = kickoffListView.currentIndex;
             syncTarget(event);
         }
 
         onDragMove: syncTarget(event);
+    }
 
-        onDragLeave: {
-            dropTarget.visible = false;
-        }
+    Transition {
+        id: moveTransition
+        SequentialAnimation {
+            PropertyAction { target: kickoffListView; property: "animating"; value: true }
 
-        Rectangle {
-            id: dropTarget
+            NumberAnimation {
+                duration: kickoffListView.animationDuration
+                properties: "x, y"
+                easing.type: Easing.OutQuad
+            }
 
-            width: kickoffListView.width
-            height: Math.max(2, units.smallSpacing)
-
-            visible: false
-            color: theme.highlightColor
+            PropertyAction { target: kickoffListView; property: "animating"; value: false }
         }
     }
 
@@ -147,7 +120,9 @@ Item {
         ListView {
             id: kickoffListView
 
-            //anchors.fill: parent
+            property bool animating: false
+            property int animationDuration: resetAnimationDurationTimer.interval
+
             currentIndex: -1
             boundsBehavior: Flickable.StopAtBounds
             keyNavigationWraps: true
@@ -160,11 +135,19 @@ Item {
 
             model: globalFavorites
 
+            onCountChanged: {
+                animationDuration = 0;
+                resetAnimationDurationTimer.start();
+            }
+
             section {
                 property: "group"
                 criteria: ViewSection.FullString
-                //delegate: SectionDelegate {}
             }
+
+            move: moveTransition
+            moveDisplaced: moveTransition
+
             Connections {
                 target: plasmoid
                 onExpandedChanged: {
@@ -174,6 +157,14 @@ Item {
                 }
             }
         }
+    }
+
+    Timer {
+        id: resetAnimationDurationTimer
+
+        interval: 150
+
+        onTriggered: kickoffListView.animationDuration = interval - 20
     }
 
 }
