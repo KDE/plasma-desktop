@@ -44,7 +44,7 @@ PlasmaComponents.Button {
             startMouseY = mouse.y
         }
         onPositionChanged: {
-            panel.screen = mouse.screen;
+            panel.screenToFollow = mouse.screen;
 
             var newLocation = panel.location;
             //If the mouse is in an internal rectangle, do nothing
