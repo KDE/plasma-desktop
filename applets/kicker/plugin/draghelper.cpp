@@ -23,6 +23,7 @@
 #include <QDrag>
 #include <QMimeData>
 #include <QQuickItem>
+#include <QQuickWindow>
 
 DragHelper::DragHelper(QObject* parent) : QObject(parent)
 , m_dragIconSize(32)
@@ -64,6 +65,10 @@ void DragHelper::startDrag(QQuickItem *item, const QUrl &url, const QIcon &icon)
 
 void DragHelper::doDrag(QQuickItem *item, const QUrl &url, const QIcon &icon) const
 {
+    if (item && item->window() && item->window()->mouseGrabberItem()) {
+        item->window()->mouseGrabberItem()->ungrabMouse();
+    }
+
     QDrag *drag = new QDrag(item);
 
     QMimeData *mimeData = new QMimeData();
