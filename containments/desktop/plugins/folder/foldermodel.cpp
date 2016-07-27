@@ -448,6 +448,8 @@ void FolderModel::setFilterPattern(const QString &pattern)
         m_regExps.append(rx);
     }
 
+    invalidateFilter();
+
     emit filterPatternChanged();
 }
 

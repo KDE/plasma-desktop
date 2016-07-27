@@ -44,7 +44,7 @@ MouseArea {
     property int itemIndex: index
     property bool inPopup: false
     property bool initialGeometryExported: false
-    property int textWidth: label.implicitWidth
+    property alias textWidth: label.implicitTextWidth
     property bool pressed: false
     property int pressX: -1
     property int pressY: -1
@@ -365,8 +365,10 @@ MouseArea {
         }
     }
 
-    TaskManagerApplet.TextLabel {
+    Loader {
         id: label
+
+        property int implicitTextWidth: label.item ? label.item.implicitWidth : 0
 
         anchors {
             fill: parent
@@ -379,11 +381,10 @@ MouseArea {
         visible: (inPopup || !iconsOnly && model.IsLauncher !== true
             && (parent.width - iconBox.height - units.smallSpacing) >= (theme.mSize(theme.defaultFont).width * 7))
 
-        enabled: true
+        active: inPopup || !iconsOnly
+        asynchronous: true
 
-        text: (!inPopup && iconsOnly) ? "" : model.display
-        color: theme.textColor
-        elide: !inPopup
+        source: plasmoid.configuration.experimentalQmlTextLabel ? "QmlTextLabel.qml" : "CppTextLabel.qml"
     }
 
     states: [
