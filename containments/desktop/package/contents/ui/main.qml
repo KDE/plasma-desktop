@@ -539,6 +539,8 @@ DragDrop.DropArea {
             return;
         }
 
+        plasmoid.action("configure").text = i18n("Configure Desktop");
+
         // WORKAROUND: that's the only place where we can inject a sensible size.
         // if root has width defined, it will override the value we set before
         // the component completes
