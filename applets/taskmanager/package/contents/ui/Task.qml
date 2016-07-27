@@ -54,7 +54,7 @@ MouseArea {
     property QtObject smartLauncherItem: null
 
     acceptedButtons: Qt.LeftButton | Qt.RightButton | Qt.MidButton
-    hoverEnabled: true
+    hoverEnabled: initialGeometryExported
 
     onVisibleChanged: {
         if (visible && model.IsWindow === true && itemIndex == 0) {
