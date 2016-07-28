@@ -54,7 +54,7 @@ MouseArea {
     property QtObject smartLauncherItem: null
 
     acceptedButtons: Qt.LeftButton | Qt.RightButton | Qt.MidButton
-    hoverEnabled: true
+    hoverEnabled: initialGeometryExported
 
     onVisibleChanged: {
         if (visible && model.IsWindow === true && itemIndex == 0) {
@@ -358,10 +358,17 @@ MouseArea {
             }
         ]
 
-        Component.onCompleted: {
-            if (model.IsStartup === true) {
-                Qt.createQmlObject("import org.kde.plasma.components 2.0 as PC; PC.BusyIndicator { anchors.fill: parent }", iconBox);
-            }
+        Loader {
+            anchors.fill: parent
+
+            active: model.IsStartup === true
+            sourceComponent: busyIndicator
+        }
+
+        Component {
+            id: busyIndicator
+
+            PlasmaComponents.BusyIndicator { anchors.fill: parent }
         }
     }
 
