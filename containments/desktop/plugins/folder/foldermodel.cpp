@@ -1430,6 +1430,7 @@ void FolderModel::moveSelectedToTrash()
     if (uiDelegate.askDeleteConfirmation(urls, KIO::JobUiDelegate::Trash, KIO::JobUiDelegate::DefaultConfirmation)) {
         KIO::Job* job = KIO::trash(urls);
         job->ui()->setAutoErrorHandlingEnabled(true);
+        KIO::FileUndoManager::self()->recordJob(KIO::FileUndoManager::Trash, urls, QUrl(QStringLiteral("trash:/")), job);
     }
 }
 
