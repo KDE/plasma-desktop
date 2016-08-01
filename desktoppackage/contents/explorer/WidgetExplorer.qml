@@ -261,10 +261,6 @@ Item {
 
         PlasmaComponents.ToolButton {
             id: closeButton
-            anchors {
-                right: parent.right
-                verticalCenter: heading.verticalCenter
-            }
             iconSource: "window-close"
             onClicked: main.closed()
         }
@@ -286,6 +282,8 @@ Item {
             topMargin: units.smallSpacing
             bottomMargin: units.smallSpacing
         }
+
+        verticalScrollBarPolicy: Qt.ScrollBarAlwaysOn
 
         // hide the flickering by fading in nicely
         opacity: setModelTimer.running ? 0 : 1

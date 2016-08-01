@@ -61,8 +61,6 @@ Item {
             right: parent.right
         }
 
-        height: closeButton.height
-
         Item {
             PlasmaExtras.Title {
                 id: heading
