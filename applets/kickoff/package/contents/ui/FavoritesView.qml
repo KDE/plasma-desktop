@@ -3,6 +3,7 @@
     Copyright (C) 2012 Marco Martin <mart@kde.org>
     Copyright 2014 Sebastian Kügler <sebas@kde.org>
     Copyright (C) 2015  Eike Hein <hein@kde.org>
+    Copyright (C) 2016 Jonathan Liu <net147@gmail.com>
     Copyright (C) 2016 Kai Uwe Broulik <kde@privat.broulik.de>
 
     This program is free software; you can redistribute it and/or modify
@@ -77,7 +78,7 @@ Item {
             }
 
             var pos = mapToItem(kickoffListView.contentItem, event.x, event.y);
-            var above = kickoffListView.itemAt(pos.y, pos.y);
+            var above = kickoffListView.itemAt(pos.x, pos.y);
 
             var source = kickoff.dragSource;
 
