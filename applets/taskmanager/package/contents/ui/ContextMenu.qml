@@ -103,7 +103,7 @@ PlasmaComponents.ContextMenu {
 
         enabled: visible
 
-        text: i18n("Move To Desktop")
+        text: i18n("Move To &Desktop")
 
         Connections {
             target: virtualDesktopInfo
@@ -125,7 +125,7 @@ PlasmaComponents.ContextMenu {
                 }
 
                 var menuItem = menu.newMenuItem(virtualDesktopsMenu);
-                menuItem.text = i18n("Move To Current Desktop");
+                menuItem.text = i18n("Move &To Current Desktop");
                 menuItem.enabled = Qt.binding(function() {
                     return menu.visualParent && menu.visualParent.m.VirtualDesktop != virtualDesktopInfo.currentDesktop;
                 });
@@ -134,7 +134,7 @@ PlasmaComponents.ContextMenu {
                 });
 
                 menuItem = menu.newMenuItem(virtualDesktopsMenu);
-                menuItem.text = i18n("All Desktops");
+                menuItem.text = i18n("&All Desktops");
                 menuItem.checkable = true;
                 menuItem.checked = Qt.binding(function() {
                     return menu.visualParent && menu.visualParent.m.IsOnAllVirtualDesktops === true;
@@ -148,7 +148,7 @@ PlasmaComponents.ContextMenu {
 
                 for (var i = 0; i < virtualDesktopInfo.desktopNames.length; ++i) {
                     menuItem = menu.newMenuItem(virtualDesktopsMenu);
-                    menuItem.text = i18nc("1 = number of desktop, 2 = desktop name", "%1 Desktop %2", i + 1, virtualDesktopInfo.desktopNames[i]);
+                    menuItem.text = i18nc("1 = number of desktop, 2 = desktop name", "&%1 Desktop %2", i + 1, virtualDesktopInfo.desktopNames[i]);
                     menuItem.checkable = true;
                     menuItem.checked = Qt.binding((function(i) {
                         return function() { return menu.visualParent && menu.visualParent.m.VirtualDesktop == (i + 1) };
@@ -162,7 +162,7 @@ PlasmaComponents.ContextMenu {
                 menu.newSeparator(virtualDesktopsMenu);
 
                 menuItem = menu.newMenuItem(virtualDesktopsMenu);
-                menuItem.text = i18n("New Desktop");
+                menuItem.text = i18n("&New Desktop");
                 menuItem.clicked.connect(function() {
                     tasksModel.requestVirtualDesktop(menu.visualParent.modelIndex(), virtualDesktopInfo.numberOfDesktops + 1)
                 });
@@ -181,7 +181,7 @@ PlasmaComponents.ContextMenu {
 
         enabled: visible
 
-        text: i18n("Move To Activity")
+        text: i18n("Move To &Activity")
 
         Connections {
             target: activityInfo
@@ -274,7 +274,7 @@ PlasmaComponents.ContextMenu {
         checkable: true
         checked: visualParent && visualParent.m.IsMinimized === true
 
-        text: i18n("Minimize")
+        text: i18n("Mi&nimize")
 
         onClicked: tasksModel.requestToggleMinimized(visualParent.modelIndex())
     }
@@ -287,7 +287,7 @@ PlasmaComponents.ContextMenu {
         checkable: true
         checked: visualParent && visualParent.m.IsMaximized === true
 
-        text: i18n("Maximize")
+        text: i18n("Ma&ximize")
 
         onClicked: tasksModel.requestToggleMaximized(visualParent.modelIndex())
     }
@@ -312,7 +312,7 @@ PlasmaComponents.ContextMenu {
 
         checkable: true
 
-        text: i18n("Show A Launcher When Not Running")
+        text: i18n("&Show A Launcher When Not Running")
 
         onClicked: {
             if (tasksModel.launcherPosition(visualParent.m.LauncherUrlWithoutIcon) != -1) {
@@ -347,7 +347,7 @@ PlasmaComponents.ContextMenu {
             PlasmaComponents.MenuItem {
                 enabled: menu.visualParent && menu.visualParent.m.IsMovable === true
 
-                text: i18n("Move")
+                text: i18n("&Move")
                 icon: "transform-move"
 
                 onClicked: tasksModel.requestMove(menu.visualParent.modelIndex())
@@ -356,7 +356,7 @@ PlasmaComponents.ContextMenu {
             PlasmaComponents.MenuItem {
                 enabled: menu.visualParent && menu.visualParent.m.IsResizable === true
 
-                text: i18n("Resize")
+                text: i18n("Re&size")
 
                 onClicked: tasksModel.requestResize(menu.visualParent.modelIndex())
             }
@@ -365,7 +365,7 @@ PlasmaComponents.ContextMenu {
                 checkable: true
                 checked: menu.visualParent && menu.visualParent.m.IsKeepAbove === true
 
-                text: i18n("Keep Above Others")
+                text: i18n("Keep &Above Others")
                 icon: "go-up"
 
                 onClicked: tasksModel.requestToggleKeepAbove(menu.visualParent.modelIndex())
@@ -375,7 +375,7 @@ PlasmaComponents.ContextMenu {
                 checkable: true
                 checked: menu.visualParent && menu.visualParent.m.IsKeepBelow === true
 
-                text: i18n("Keep Below Others")
+                text: i18n("Keep &Below Others")
                 icon: "go-down"
 
                 onClicked: tasksModel.requestToggleKeepBelow(menu.visualParent.modelIndex())
@@ -387,7 +387,7 @@ PlasmaComponents.ContextMenu {
                 checkable: true
                 checked: menu.visualParent && menu.visualParent.m.IsFullScreen === true
 
-                text: i18n("Fullscreen")
+                text: i18n("&Fullscreen")
                 icon: "view-fullscreen"
 
                 onClicked: tasksModel.requestToggleFullScreen(menu.visualParent.modelIndex())
@@ -399,7 +399,7 @@ PlasmaComponents.ContextMenu {
                 checkable: true
                 checked: menu.visualParent && menu.visualParent.m.IsShaded === true
 
-                text: i18n("Shade")
+                text: i18n("&Shade")
 
                 onClicked: tasksModel.requestToggleShaded(menu.visualParent.modelIndex())
             }
@@ -443,7 +443,7 @@ PlasmaComponents.ContextMenu {
 
         enabled: visualParent && visualParent.m.IsClosable === true
 
-        text: i18n("Close")
+        text: i18n("&Close")
         icon: "window-close"
 
         onClicked: tasksModel.requestClose(visualParent.modelIndex())
