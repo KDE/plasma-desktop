@@ -91,8 +91,8 @@ Item {
         }
 
         onDragEnter: {
-            startRow = kickoffListView.currentIndex;
             syncTarget(event);
+            startRow = kickoffListView.currentIndex;
         }
 
         onDragMove: syncTarget(event);
