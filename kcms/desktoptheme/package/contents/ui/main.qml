@@ -156,7 +156,7 @@ Item {
             QtControls.Button {
                 text: i18n("Install from File")
                 iconName: "document-import"
-                onClicked: fileDialog.open()
+                onClicked: fileDialogLoader.active = true;
             }
 
             QtControls.Button {
@@ -201,11 +201,21 @@ Item {
         }
     }
 
-    FileDialog {
-        id: fileDialog
-        title: i18n("Open Theme")
-        folder: shortcuts.home
-        nameFilters: [ i18n("Theme Files (*.zip *.tar.gz *.tar.bz2)") ]
-        onAccepted: kcm.installThemeFromFile(fileUrls[0])
+    Loader {
+        id: fileDialogLoader
+        active: false
+        sourceComponent: FileDialog {
+            visible: true
+            title: i18n("Open Theme")
+            folder: shortcuts.home
+            nameFilters: [ i18n("Theme Files (*.zip *.tar.gz *.tar.bz2)") ]
+            onAccepted: {
+                kcm.installThemeFromFile(fileUrls[0])
+                fileDialogLoader.active = false
+            }
+            onRejected: {
+                fileDialogLoader.active = false
+            }
+        }
     }
 }
