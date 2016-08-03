@@ -43,7 +43,7 @@ MouseArea {
 
     property int itemIndex: index
     property bool inPopup: false
-    property bool initialGeometryExported: false
+    property bool isWindow: model.IsWindow
     property alias textWidth: label.implicitTextWidth
     property bool pressed: false
     property int pressX: -1
@@ -54,19 +54,10 @@ MouseArea {
     property QtObject smartLauncherItem: null
 
     acceptedButtons: Qt.LeftButton | Qt.RightButton | Qt.MidButton
-    hoverEnabled: initialGeometryExported
 
-    onVisibleChanged: {
-        if (visible && model.IsWindow === true && itemIndex == 0) {
-            tasksModel.requestPublishDelegateGeometry(modelIndex(), backend.globalRect(task), task);
-            initialGeometryExported = true;
-        }
-    }
-
-    onXChanged: {
-        if (!initialGeometryExported && model.IsWindow === true) {
-            tasksModel.requestPublishDelegateGeometry(modelIndex(), backend.globalRect(task), task);
-            initialGeometryExported = true;
+    onIsWindowChanged: {
+        if (isWindow) {
+            taskInitComponent.createObject(task);
         }
     }
 
@@ -181,6 +172,30 @@ MouseArea {
     function modelIndex() {
         return (inPopup ? tasksModel.makeModelIndex(groupDialog.visualParent.itemIndex, index)
             : tasksModel.makeModelIndex(index));
+    }
+
+    Component {
+        id: taskInitComponent
+
+        Timer {
+            id: timer
+
+            interval: units.longDuration * 2
+            repeat: false
+
+            onTriggered: {
+                parent.hoverEnabled = true;
+
+                if (parent.isWindow) {
+                    tasksModel.requestPublishDelegateGeometry(parent.modelIndex(),
+                        backend.globalRect(parent), parent);
+                }
+
+                timer.destroy();
+            }
+
+            Component.onCompleted: timer.start()
+        }
     }
 
     PlasmaCore.FrameSvgItem {
@@ -446,6 +461,10 @@ MouseArea {
         if (!inPopup && model.IsWindow === true) {
             var component = Qt.createComponent("GroupExpanderOverlay.qml");
             component.createObject(task);
+        }
+
+        if (!inPopup && model.IsWindow !== true) {
+            taskInitComponent.createObject(task);
         }
     }
 }
