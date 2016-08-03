@@ -115,7 +115,7 @@ MouseArea {
                 }
             } else if (mouse.button == Qt.LeftButton) {
                 if (mouse.modifiers & Qt.ShiftModifier) {
-                    tasksModel.requestNewInstance(index);
+                    tasksModel.requestNewInstance(modelIndex());
                 } else if (model.IsGroupParent === true) {
                     if ((iconsOnly || mouse.modifiers == Qt.ControlModifier) && backend.canPresentWindows()) {
                         toolTip.hideToolTip();
