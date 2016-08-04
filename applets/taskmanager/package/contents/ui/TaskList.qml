@@ -34,6 +34,7 @@ Flow {
             NumberAnimation {
                 properties: "x, y"
                 easing.type: Easing.OutQuad
+                duration: units.longDuration * 2
             }
 
             PropertyAction { target: taskList; property: "animating"; value: false }
