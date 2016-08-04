@@ -15,6 +15,7 @@ set(kcm_keys_PART_SRCS
 ki18n_wrap_ui( kcm_keys_PART_SRCS
     export_scheme_dialog.ui
     kglobalshortcutseditor.ui
+    select_application.ui
     select_scheme_dialog.ui )
 
 set(kglobalaccel_xml ${KGLOBALACCEL_DBUS_INTERFACES_DIR}/kf5_org.kde.KGlobalAccel.xml)
@@ -35,6 +36,7 @@ target_link_libraries(kcm_keys
     KF5::KIOWidgets
     KF5::XmlGui
     KF5::KDELibs4Support
+    KF5::ItemModels
 )
 
 install(TARGETS kcm_keys  DESTINATION ${PLUGIN_INSTALL_DIR} )

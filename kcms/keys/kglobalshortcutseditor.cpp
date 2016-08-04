@@ -18,6 +18,7 @@
 #include "kglobalshortcutseditor.h"
 
 #include "ui_kglobalshortcutseditor.h"
+#include "ui_select_application.h"
 #include "export_scheme_dialog.h"
 #include "select_scheme_dialog.h"
 #include "globalshortcuts.h"
@@ -32,6 +33,12 @@
 #include <KMessageBox>
 #include <KStringHandler>
 #include <KLocalizedString>
+#include <KService>
+#include <KRecursiveFilterProxyModel>
+#include <KServiceGroup>
+#include <KDesktopFile>
+#include <KCategorizedSortFilterProxyModel>
+#include <KCategoryDrawer>
 
 #include <QStackedWidget>
 #include <QMenu>
@@ -144,33 +151,183 @@ public:
 
     KGlobalShortcutsEditor *q;
     Ui::KGlobalShortcutsEditor ui;
+    Ui::SelectApplicationDialog selectApplicationDialogUi;
+    QDialog *selectApplicationDialog;
     QStackedWidget *stack;
     KShortcutsEditor::ActionTypes actionTypes;
     QHash<QString, ComponentData*> components;
     QDBusConnection bus;
     QStandardItemModel *model;
+    KCategorizedSortFilterProxyModel *proxyModel;
 };
 
+void loadAppsCategory(KServiceGroup::Ptr group, QStandardItemModel *model, QStandardItem *item)
+{
+    if (group && group->isValid()) {
+        KServiceGroup::List list = group->entries();
+
+        for( KServiceGroup::List::ConstIterator it = list.constBegin();
+             it != list.constEnd(); ++it) {
+            const KSycocaEntry::Ptr p = (*it);
+
+            if (p->isType(KST_KService)) {
+                const KService::Ptr service(static_cast<KService*>(p.data()));
+
+                if (!service->noDisplay()) {
+                    QString genericName = service->genericName();
+                    if (genericName.isNull()) {
+                        genericName = service->comment();
+                    }
+                    QString description;
+                    if (!service->genericName().isEmpty() && service->genericName() != service->name()) {
+                        description = service->genericName();
+                    } else if (!service->comment().isEmpty()) {
+                        description = service->comment();
+                    }
+
+                    QStandardItem *subItem = new QStandardItem(QIcon::fromTheme(service->icon()), service->name());
+                    subItem->setData(service->entryPath());
+                    if (item) {
+                        item->appendRow(subItem);
+                    } else {
+                        model->appendRow(subItem);
+                    }
+                }
+
+            } else if (p->isType(KST_KServiceGroup)) {
+                KServiceGroup::Ptr subGroup(static_cast<KServiceGroup*>(p.data()));
+
+                if (!subGroup->noDisplay() && subGroup->childCount() > 0) {
+                    if (item) {
+                        loadAppsCategory(subGroup, model, item);
+                    } else {
+                        QStandardItem *subItem = new QStandardItem(QIcon::fromTheme(subGroup->icon()), subGroup->caption());
+                        model->appendRow(subItem);
+                        loadAppsCategory(subGroup, model, subItem);
+                    }
+                }
+            }
+        }
+    }
+}
 
 void KGlobalShortcutsEditor::KGlobalShortcutsEditorPrivate::initGUI()
 {
     ui.setupUi(q);
+    selectApplicationDialog = new QDialog();
+    selectApplicationDialogUi.setupUi(selectApplicationDialog);
     // Create a stacked widget.
     stack = new QStackedWidget(q);
-    q->layout()->addWidget(stack);
+    ui.currentComponentLayout->addWidget(stack);
+    //HACK to make those two un-alignable components, aligned
+    ui.componentLabel->setMinimumHeight(ui.lineEditSpacer->sizeHint().height());
+    ui.lineEditSpacer->setVisible(false);
+    ui.addButton->setIcon(QIcon::fromTheme("list-add"));
+    ui.removeButton->setIcon(QIcon::fromTheme("list-remove"));
+    ui.components->setCategoryDrawer(new KCategoryDrawer(ui.components));
+    ui.components->setModelColumn(0);
 
     // Connect our components
-    connect(ui.components, SIGNAL(activated(QString)),
-            q, SLOT(activateComponent(QString)));
+    connect(ui.components, &QListView::activated,
+            q, [this](const QModelIndex &index) {
+                QString name = proxyModel->data(index).toString();
+                q->activateComponent(name);
+            });
 
     // Build the menu
     QMenu *menu = new QMenu(q);
     menu->addAction( QIcon::fromTheme(QStringLiteral("document-import")), i18n("Import Scheme..."), q, SLOT(importScheme()));
     menu->addAction( QIcon::fromTheme(QStringLiteral("document-export")), i18n("Export Scheme..."), q, SLOT(exportScheme()));
     menu->addAction( i18n("Set All Shortcuts to None"), q, SLOT(clearConfiguration()));
-    QAction *action = menu->addAction( QIcon::fromTheme(QStringLiteral("edit-delete")), i18n("Remove Component"));
-    connect(action, &QAction::triggered, [this]() {
-        QString name = ui.components->currentText();
+    
+    connect(ui.addButton, &QToolButton::clicked, [this]() {
+        if (!selectApplicationDialogUi.treeView->model()) {
+            KRecursiveFilterProxyModel *filterModel = new KRecursiveFilterProxyModel(selectApplicationDialogUi.treeView);
+            QStandardItemModel *appModel = new QStandardItemModel(selectApplicationDialogUi.treeView);
+            selectApplicationDialogUi.kfilterproxysearchline->setProxy(filterModel);
+            filterModel->setSourceModel(appModel);
+            appModel->setHorizontalHeaderLabels({i18n("Applications")});
+
+            loadAppsCategory(KServiceGroup::root(), appModel, nullptr);
+
+            selectApplicationDialogUi.treeView->setModel(filterModel);
+        }
+        selectApplicationDialog->show();
+    });
+
+    connect(selectApplicationDialog, &QDialog::accepted, [this]() {
+        if (selectApplicationDialogUi.treeView->selectionModel()->selectedIndexes().length() == 1) {
+            const QString desktopPath = selectApplicationDialogUi.treeView->model()->data(selectApplicationDialogUi.treeView->selectionModel()->selectedIndexes().first(), Qt::UserRole+1).toString();
+
+            if (!desktopPath.isEmpty() &&QFile::exists(desktopPath) ) {
+                const QString desktopFile = desktopPath.split(QChar('/')).last();
+
+                if (!desktopPath.isEmpty()) {
+                    KDesktopFile sourceDF(desktopPath);
+                    KDesktopFile *destinationDF = sourceDF.copyTo(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/kglobalaccel/") + desktopFile);
+                    qWarning()<<QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/kglobalaccel/") + desktopFile;
+                    destinationDF->sync();
+                    //TODO: a DBUS call to tell the daemon to refresh desktop files
+
+
+                    // Create a action collection for our current component:context
+                    KActionCollection *col = new KActionCollection(q, desktopFile);
+
+                    foreach(const QString &actionId, sourceDF.readActions()) {
+
+                        const QString friendlyName = sourceDF.actionGroup(actionId).readEntry(QStringLiteral("Name"));
+                        QAction *action = col->addAction(actionId);
+                        action->setProperty("isConfigurationAction", QVariant(true)); // see KAction::~KAction
+                        action->setProperty("componentDisplayName", friendlyName);
+                        action->setText(friendlyName);
+
+                        KGlobalAccel::self()->setShortcut(action, QList<QKeySequence>());
+                        
+                        QStringList sequencesStrings = sourceDF.actionGroup(actionId).readEntry(QStringLiteral("X-KDE-Shortcuts"), QString()).split(QChar(','));
+                        QList<QKeySequence> sequences;
+                        if (sequencesStrings.length() > 0) {
+                            Q_FOREACH (const QString &seqString, sequencesStrings) {
+                                sequences.append(QKeySequence(seqString));
+                            }
+                        }
+
+                        if (sequences.count() > 0) {
+                            KGlobalAccel::self()->setDefaultShortcut(action, sequences);
+                        }
+                    }
+                    //Global launch action
+                    {
+                        const QString friendlyName = i18n("Launch %1", sourceDF.readName());
+                        QAction *action = col->addAction(QStringLiteral("_launch"));
+                        action->setProperty("isConfigurationAction", QVariant(true)); // see KAction::~KAction
+                        action->setProperty("componentDisplayName", friendlyName);
+                        action->setText(friendlyName);
+
+                        KGlobalAccel::self()->setShortcut(action, QList<QKeySequence>());
+                        
+                        QStringList sequencesStrings = sourceDF.desktopGroup().readEntry(QStringLiteral("X-KDE-Shortcuts"), QString()).split(QChar(','));
+                        QList<QKeySequence> sequences;
+                        if (sequencesStrings.length() > 0) {
+                            Q_FOREACH (const QString &seqString, sequencesStrings) {
+                                sequences.append(QKeySequence(seqString));
+                            }
+                        }
+
+                        if (sequences.count() > 0) {
+                            KGlobalAccel::self()->setDefaultShortcut(action, sequences);
+                        }
+                    }
+qWarning()<<"WWWWW"<<desktopFile<<sourceDF.readName();
+                    q->addCollection(col, QDBusObjectPath(), desktopFile, sourceDF.readName());
+                }
+            }
+        }
+    });
+
+    connect(ui.removeButton, &QToolButton::clicked, [this]() {
+        //TODO: different way to remove components that are desktop files
+        //disabled desktop files need Hidden=true key
+        QString name = proxyModel->data(ui.components->currentIndex()).toString();
         QString componentUnique = components.value(name)->uniqueName();
 
         // The confirmation text is different when the component is active
@@ -213,7 +370,8 @@ void KGlobalShortcutsEditor::KGlobalShortcutsEditorPrivate::initGUI()
 
     ui.menu_button->setMenu(menu);
 
-    QSortFilterProxyModel *proxyModel = new QSortFilterProxyModel(q);
+    proxyModel = new KCategorizedSortFilterProxyModel(q);
+    proxyModel->setCategorizedModel(true);
     model = new QStandardItemModel(0, 1, proxyModel);
     proxyModel->setSourceModel(model);
     proxyModel->setSortCaseSensitivity(Qt::CaseInsensitive);
@@ -235,6 +393,7 @@ KGlobalShortcutsEditor::~KGlobalShortcutsEditor()
 {
     // Before closing the door, undo all changes
     undo();
+    delete d->selectApplicationDialog;
     qDeleteAll(d->components);
     delete d;
 }
@@ -247,11 +406,11 @@ void KGlobalShortcutsEditor::activateComponent(const QString &component)
         Q_ASSERT(iter != d->components.end());
         return;
     } else {
-        int index = d->ui.components->findText(component);
-        Q_ASSERT(index != -1);
-        if (index > -1) {
+        QModelIndexList results = d->proxyModel->match(d->proxyModel->index(0, 0), Qt::DisplayRole, component);
+        Q_ASSERT(results.isEmpty());
+        if (results.first().isValid()) {
             // Known component. Get it.
-            d->ui.components->setCurrentIndex(index);
+            d->ui.components->setCurrentIndex(results.first());
             d->stack->setCurrentWidget((*iter)->editor());
         }
     }
@@ -275,15 +434,29 @@ void KGlobalShortcutsEditor::addCollection(
         // try to find one appropriate icon ( allowing NULL pixmap to be returned)
         QPixmap pixmap = KIconLoader::global()->loadIcon(id, KIconLoader::Small, 0,
                                   KIconLoader::DefaultState, QStringList(), 0, true);
+        if (pixmap.isNull()) {
+            KService::Ptr service = KService::serviceByStorageId(id);
+            if(service) {
+                pixmap = KIconLoader::global()->loadIcon(service->icon(), KIconLoader::Small, 0,
+                                  KIconLoader::DefaultState, QStringList(), 0, true);
+            }
+        }
         // if NULL pixmap is returned, use the F.D.O "system-run" icon
         if (pixmap.isNull()) {
             pixmap = KIconLoader::global()->loadIcon(QStringLiteral("system-run"), KIconLoader::Small);
         }
 
-        // Add to the component combobox
-        //FIXME: QCombobox.addItem apparently breaks with sort() in Qt5
-        d->model->appendRow(new QStandardItem(pixmap, friendlyName));
-        d->ui.components->model()->sort(0);
+        // Add to the component list
+        QStandardItem *item = new QStandardItem(pixmap, friendlyName);
+        if (id.endsWith(QStringLiteral(".desktop"))) {
+            item->setData(i18n("Application Launchers"), KCategorizedSortFilterProxyModel::CategoryDisplayRole);
+            item->setData(0, KCategorizedSortFilterProxyModel::CategorySortRole);
+        } else {
+            item->setData(i18n("Other Shortcuts"), KCategorizedSortFilterProxyModel::CategoryDisplayRole);
+            item->setData(1, KCategorizedSortFilterProxyModel::CategorySortRole);
+        }
+        d->model->appendRow(item);
+        d->proxyModel->sort(0);
 
         // Add to our component registry
         ComponentData *cd = new ComponentData(id, objectPath, editor);
@@ -298,16 +471,17 @@ void KGlobalShortcutsEditor::addCollection(
     // Add the collection to the editor of the component
     editor->addCollection(collection, friendlyName);
 
-    if (d->ui.components->count() > -1) {
-        d->ui.components->setCurrentIndex(0);
-        activateComponent(d->ui.components->itemText(0));
+    if (d->proxyModel->rowCount() > -1) {
+        d->ui.components->setCurrentIndex(d->proxyModel->index(0, 0));
+        QString name = d->proxyModel->data(d->proxyModel->index(0, 0)).toString();
+        activateComponent(name);
     }
 }
 
 
 void KGlobalShortcutsEditor::clearConfiguration()
 {
-    QString name = d->ui.components->currentText();
+    QString name = d->proxyModel->data(d->ui.components->currentIndex()).toString();
     d->components[name]->editor()->clearConfiguration();
 }
 
@@ -324,7 +498,7 @@ void KGlobalShortcutsEditor::defaults(ComponentScope scope)
             break;
 
         case CurrentComponent: {
-            QString name = d->ui.components->currentText();
+            QString name = d->proxyModel->data(d->ui.components->currentIndex()).toString();
             // The editors are responsible for the reset
             d->components[name]->editor()->allDefault();
             }
@@ -341,7 +515,7 @@ void KGlobalShortcutsEditor::clear()
     // Remove all components and their associated editors
     qDeleteAll(d->components);
     d->components.clear();
-    d->ui.components->clear();
+    d->model->clear();
 }
 
 
@@ -659,9 +833,9 @@ void KGlobalShortcutsEditor::KGlobalShortcutsEditorPrivate::removeComponent(
         if (components.value(text)->uniqueName() == componentUnique)
             {
             // Remove from QComboBox
-            int index = ui.components->findText(text);
-            Q_ASSERT(index != -1);
-            ui.components->removeItem(index);
+            QModelIndexList results = proxyModel->match(proxyModel->index(0, 0), Qt::DisplayRole, text);
+            Q_ASSERT(results.isEmpty());
+            model->removeRow(proxyModel->mapToSource(results.first()).row());
 
             // Remove from QStackedWidget
             stack->removeWidget(components[text]->editor());
