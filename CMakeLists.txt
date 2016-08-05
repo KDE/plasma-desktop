@@ -50,6 +50,7 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     DBusAddons
     Activities
     ActivitiesStats
+    Config
 )
 
 find_package(LibKWorkspace CONFIG REQUIRED)

@@ -200,6 +200,7 @@ class FolderModel : public QSortFilterProxyModel
         Q_INVOKABLE void paste();
         Q_INVOKABLE void copy();
         Q_INVOKABLE void cut();
+        Q_INVOKABLE void deleteSelected();
 
     Q_SIGNALS:
         void urlChanged() const;
@@ -235,7 +236,6 @@ class FolderModel : public QSortFilterProxyModel
         void pasteTo();
         void refresh();
         void moveSelectedToTrash();
-        void deleteSelected();
         void emptyTrashBin();
         void undoTextChanged(const QString &text);
 

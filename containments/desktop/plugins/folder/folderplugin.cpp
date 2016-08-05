@@ -32,6 +32,7 @@
 #include "textfix.h"
 #include "viewpropertiesmenu.h"
 #include "wheelinterceptor.h"
+#include "shortcut.h"
 
 #include <QtQml>
 
@@ -52,5 +53,6 @@ void FolderPlugin::registerTypes(const char *uri)
     qmlRegisterType<TextFix>(uri, 0, 1, "TextFix");
     qmlRegisterType<ViewPropertiesMenu>(uri, 0, 1, "ViewPropertiesMenu");
     qmlRegisterType<WheelInterceptor>(uri, 0, 1, "WheelInterceptor");
+    qmlRegisterType<ShortCut>(uri, 0, 1, "ShortCut");
 }
 

@@ -58,6 +58,13 @@ Item {
     property alias scrollDown: gridView.scrollDown
     property Item upButton: null
 
+    function rename()
+    {
+        if (gridView.currentIndex != -1) {
+            editor.targetItem = gridView.currentItem;
+        }
+    }
+
     function linkHere(sourceUrl) {
         dir.linkHere(sourceUrl);
     }
@@ -666,6 +673,19 @@ Item {
                     }
                 }
 
+                Folder.ShortCut {
+                    Component.onCompleted: {
+                        installAsEventFilterFor(gridView);
+                    }
+
+                    onDeleteFile: {
+                        dir.deleteSelected();
+                    }
+                    onRenameFile: {
+                        rename();
+                    }
+                }
+
                 Keys.onPressed: {
                     if (event.matches(StandardKey.Delete)) {
                         if (dir.hasSelection()) {
@@ -924,13 +944,6 @@ Item {
             Component.onCompleted: {
                 gridView.movementStarted.connect(viewAdapter.viewScrolled);
                 dir.viewAdapter = viewAdapter;
-            }
-        }
-
-        function rename()
-        {
-            if (gridView.currentIndex != -1) {
-                editor.targetItem = gridView.currentItem;
             }
         }
 
