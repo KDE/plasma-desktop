@@ -1,12 +1,22 @@
 # KI18N Translation Domain for this library
 add_definitions(-DTRANSLATION_DOMAIN=\"kcmcolors\")
 
-set(kcm_colors_SRCS ../krdb/krdb.cpp colorscm.cpp previewwidget.cpp setpreviewwidget.cpp)
+set(kcm_colors_SRCS
+    ../krdb/krdb.cpp
+    colorscm.cpp
+    coloreditdialog.cpp
+    previewwidget.cpp
+    setpreviewwidget.cpp
+    )
 
 set(klauncher_xml ${KINIT_DBUS_INTERFACES_DIR}/kf5_org.kde.KLauncher.xml)
 qt5_add_dbus_interface(kcm_colors_SRCS ${klauncher_xml} klauncher_iface)
 
-ki18n_wrap_ui(kcm_colors_SRCS colorsettings.ui preview.ui setpreview.ui)
+ki18n_wrap_ui(kcm_colors_SRCS
+    colorsettings.ui
+    coloredit.ui
+    preview.ui
+    setpreview.ui)
 
 add_library(kcm_colors MODULE ${kcm_colors_SRCS})
 target_link_libraries(kcm_colors
