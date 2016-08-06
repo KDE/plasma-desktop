@@ -99,10 +99,7 @@ private:
 
     /** create a preview of a color scheme */
     static QPixmap createSchemePreviewIcon(const KSharedConfigPtr &config);
-//
-//     /** load options from global */
-//     void loadOptions();
-//
+
     /** load from global */
     void loadInternal(bool loadOptions);
 //

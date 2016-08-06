@@ -4,7 +4,10 @@ add_definitions(-DTRANSLATION_DOMAIN=\"kcmcolors\")
 set(kcm_colors_SRCS
     ../krdb/krdb.cpp
     colorscm.cpp
-    coloreditdialog.cpp
+    scmeditordialog.cpp
+    scmeditoroptions.cpp
+    scmeditorcolors.cpp
+    scmeditoreffects.cpp
     previewwidget.cpp
     setpreviewwidget.cpp
     )
@@ -14,7 +17,10 @@ qt5_add_dbus_interface(kcm_colors_SRCS ${klauncher_xml} klauncher_iface)
 
 ki18n_wrap_ui(kcm_colors_SRCS
     colorsettings.ui
-    coloredit.ui
+    scmeditordialog.ui
+    scmeditoroptions.ui
+    scmeditorcolors.ui
+    scmeditoreffects.ui
     preview.ui
     setpreview.ui)
 

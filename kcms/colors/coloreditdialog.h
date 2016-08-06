@@ -50,7 +50,6 @@ private Q_SLOTS:
     /** slot called when color on a KColorButton changes */
     void colorChanged( const QColor &newColor );
 
-
     // options slots
     void on_contrastSlider_valueChanged(int value);
     void on_shadeSortedColumn_stateChanged(int state);
@@ -78,16 +77,15 @@ private Q_SLOTS:
     void on_schemeKnsUploadButton_clicked();
 
     /** slot called when the save button is clicked */
-    void on_schemeSaveButton_clicked();
+    void on_buttonBox_accepted();
+
+    /** slot called when the save button is clicked */
+    void on_buttonBox_rejected();
+
+    void on_buttonBox_clicked(QAbstractButton *button);
 
     /** null slot to emit changed(true) */
     void emitChanged();
-
-    /** set the colortable color buttons up according to the current colorset */
-    void updateColorTable();
-
-    /** update m_colorSchemes contents from the values in m_config */
-    void updateColorSchemes();
 
     /** update the effects page from the values in m_config */
     void updateEffectsPage();
@@ -95,8 +93,6 @@ private Q_SLOTS:
     /** update all preview panes from the values in m_config */
     void updatePreviews();
 
-    /** setup the colortable with its buttons and labels */
-    void setupColorTable();
 
 private:
 
@@ -106,6 +102,8 @@ private:
     /** copy effects page entries from controls into m_config */
     void updateFromEffectsPage();
 
+    /** load options from global */
+    void loadOptions();
     void setCommonForeground(KColorScheme::ForegroundRole role,
                              int stackIndex,
                              int buttonIndex);
@@ -127,17 +125,6 @@ private:
      @param name name to save the scheme as
      */
     void saveScheme(const QString &name);
-
-    QList<KColorButton *> m_backgroundButtons;
-    QList<KColorButton *> m_foregroundButtons;
-    QList<KColorButton *> m_decorationButtons;
-    QList<KColorButton *> m_commonColorButtons;
-    QList<KColorScheme> m_colorSchemes;
-    QList<QStackedWidget *> m_stackedWidgets;
-
-    QStringList m_colorKeys;
-
-    WindecoColors m_wmColors;
 
     QString m_schemeName;
     KSharedConfigPtr m_config;

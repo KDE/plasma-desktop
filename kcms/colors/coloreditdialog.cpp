@@ -47,6 +47,7 @@ ColorEditDialog::ColorEditDialog(QWidget *parent, KSharedConfigPtr config,
     // only needs to be called once
     updatePreviews();
     setupColorTable();
+    loadOptions();
 }
 
 void ColorEditDialog::emitChanged()
@@ -400,56 +401,6 @@ QString ColorEditDialog::colorSetGroupKey(int colorSet)
     return group;
 }
 
-void ColorEditDialog::on_contrastSlider_valueChanged(int value)
-{
-    KConfigGroup group(m_config, "KDE");
-    group.writeEntry("contrast", value);
-
-    updatePreviews();
-
-    emit changed(true);
-}
-
-void ColorEditDialog::on_shadeSortedColumn_stateChanged(int state)
-{
-    KConfigGroup group(m_config, "General");
-    group.writeEntry("shadeSortColumn", bool(state != Qt::Unchecked));
-
-    emit changed(true);
-}
-
-void ColorEditDialog::on_useInactiveEffects_stateChanged(int state)
-{
-    KConfigGroup group(m_config, "ColorEffects:Inactive");
-    group.writeEntry("Enable", bool(state != Qt::Unchecked));
-
-    m_disableUpdates = true;
-    printf("re-init\n");
-    inactiveSelectionEffect->setChecked(group.readEntry("ChangeSelectionColor", bool(state != Qt::Unchecked)));
-    m_disableUpdates = false;
-
-    if ((state != Qt::Unchecked) && tabWidget->count() < 5) {
-        tabWidget->insertTab(4, pageInactive, i18n("Inactive"));
-    } else if ((state == Qt::Unchecked) && tabWidget->count() > 4) {
-        tabWidget->removeTab(4);
-    }
-
-    emit changed(true);
-}
-
-void ColorEditDialog::on_inactiveSelectionEffect_stateChanged(int state)
-{
-    if (m_disableUpdates)
-    {
-        // don't write the config as we are reading it!
-        return;
-    }
-
-    KConfigGroup group(m_config, "ColorEffects:Inactive");
-    group.writeEntry("ChangeSelectionColor", bool(state != Qt::Unchecked));
-
-    emit changed(true);
-}
 
 void ColorEditDialog::on_schemeKnsUploadButton_clicked()
 {
@@ -478,7 +429,7 @@ void ColorEditDialog::on_schemeKnsUploadButton_clicked()
     dialog.exec();
 }
 
-void ColorEditDialog::on_schemeSaveButton_clicked()
+void ColorEditDialog::on_buttonBox_accepted()
 {
     // prompt for the name to save as
     bool ok;
@@ -487,6 +438,20 @@ void ColorEditDialog::on_schemeSaveButton_clicked()
     if (ok)
     {
         saveScheme(name);
+    }
+}
+
+
+void ColorEditDialog::on_buttonBox_rejected()
+{
+    this->reject();
+}
+
+void ColorEditDialog::on_buttonBox_clicked(QAbstractButton *button)
+{
+    if (buttonBox->buttonRole(button) == QDialogButtonBox::ResetRole)
+    {
+        qDebug() <<"reset";
     }
 }
 
@@ -664,73 +629,6 @@ void ColorEditDialog::updateFromEffectsPage()
     disabledContrastSlider->setDisabled(disabledContrastBox->currentIndex() == 0);
 }
 
-void ColorEditDialog::setupColorTable()
-{
-    // first setup the common colors table
-    commonColorTable->verticalHeader()->hide();
-    commonColorTable->horizontalHeader()->hide();
-    commonColorTable->setShowGrid(false);
-    commonColorTable->horizontalHeader()->setResizeMode(0, QHeaderView::Stretch);
-    int minWidth = QPushButton(i18n("Varies")).minimumSizeHint().width();
-    commonColorTable->horizontalHeader()->setMinimumSectionSize(minWidth);
-    commonColorTable->horizontalHeader()->setResizeMode(1, QHeaderView::ResizeToContents);
-
-    for (int i = 0; i < 26; ++i)
-    {
-        KColorButton * button = new KColorButton(this);
-        commonColorTable->setRowHeight(i, button->sizeHint().height());
-        button->setObjectName(QString::number(i));
-        connect(button, &KColorButton::changed, this, &ColorEditDialog::colorChanged);
-        m_commonColorButtons << button;
-
-        if (i > 8 && i < 18)
-        {
-            // Inactive Text row through Positive Text role all need a varies button
-            QPushButton * variesButton = new QPushButton(NULL);
-            variesButton->setText(i18n("Varies"));
-            variesButton->setObjectName(QString::number(i));
-            connect(variesButton, &QPushButton::clicked, this, &ColorEditDialog::variesClicked);
-
-            QStackedWidget * widget = new QStackedWidget(this);
-            widget->addWidget(button);
-            widget->addWidget(variesButton);
-            m_stackedWidgets.append(widget);
-
-            commonColorTable->setCellWidget(i, 1, widget);
-        }
-        else
-        {
-            commonColorTable->setCellWidget(i, 1, button);
-        }
-    }
-
-    // then the colorTable that the colorSets will use
-    colorTable->verticalHeader()->hide();
-    colorTable->horizontalHeader()->hide();
-    colorTable->setShowGrid(false);
-    colorTable->setRowCount(12);
-    colorTable->horizontalHeader()->setMinimumSectionSize(minWidth);
-    colorTable->horizontalHeader()->setResizeMode(1, QHeaderView::ResizeToContents);
-
-    createColorEntry(i18n("Normal Background"),    QStringLiteral("BackgroundNormal"),    m_backgroundButtons, 0);
-    createColorEntry(i18n("Alternate Background"), QStringLiteral("BackgroundAlternate"), m_backgroundButtons, 1);
-    createColorEntry(i18n("Normal Text"),          QStringLiteral("ForegroundNormal"),    m_foregroundButtons, 2);
-    createColorEntry(i18n("Inactive Text"),        QStringLiteral("ForegroundInactive"),  m_foregroundButtons, 3);
-    createColorEntry(i18n("Active Text"),          QStringLiteral("ForegroundActive"),    m_foregroundButtons, 4);
-    createColorEntry(i18n("Link Text"),            QStringLiteral("ForegroundLink"),      m_foregroundButtons, 5);
-    createColorEntry(i18n("Visited Text"),         QStringLiteral("ForegroundVisited"),   m_foregroundButtons, 6);
-    createColorEntry(i18n("Negative Text"),        QStringLiteral("ForegroundNegative"),  m_foregroundButtons, 7);
-    createColorEntry(i18n("Neutral Text"),         QStringLiteral("ForegroundNeutral"),   m_foregroundButtons, 8);
-    createColorEntry(i18n("Positive Text"),        QStringLiteral("ForegroundPositive"),  m_foregroundButtons, 9);
-    createColorEntry(i18n("Focus Decoration"),     QStringLiteral("DecorationFocus"),     m_decorationButtons, 10);
-    createColorEntry(i18n("Hover Decoration"),     QStringLiteral("DecorationHover"),     m_decorationButtons, 11);
-
-    colorTable->horizontalHeader()->setResizeMode(0, QHeaderView::Stretch);
-    colorTable->horizontalHeader()->setResizeMode(1, QHeaderView::ResizeToContents);
-
-    updateColorSchemes();
-    updateColorTable();
-}
 
 void ColorEditDialog::setCommonForeground(KColorScheme::ForegroundRole role, int stackIndex,
                                    int buttonIndex)
@@ -771,91 +669,98 @@ void ColorEditDialog::setCommonDecoration(KColorScheme::DecorationRole role, int
     m_loadedSchemeHasUnsavedChanges = true;
 }
 
-// inactive effects slots
-void ColorEditDialog::on_inactiveIntensityBox_currentIndexChanged(int index)
+void ColorEditDialog::updateColorSchemes()
 {
-    Q_UNUSED( index );
+    m_colorSchemes.clear();
 
-    updateFromEffectsPage();
-    inactivePreview->setPalette(m_config, QPalette::Inactive);
+    m_colorSchemes.append(KColorScheme(QPalette::Active, KColorScheme::View, m_config));
+    m_colorSchemes.append(KColorScheme(QPalette::Active, KColorScheme::Window, m_config));
+    m_colorSchemes.append(KColorScheme(QPalette::Active, KColorScheme::Button, m_config));
+    m_colorSchemes.append(KColorScheme(QPalette::Active, KColorScheme::Selection, m_config));
+    m_colorSchemes.append(KColorScheme(QPalette::Active, KColorScheme::Tooltip, m_config));
+    m_colorSchemes.append(KColorScheme(QPalette::Active, KColorScheme::Complementary, m_config));
 
-    m_loadedSchemeHasUnsavedChanges = true;
+    m_wmColors.load(m_config);
+}
+
+
+
+/// Options tab
+
+void ColorEditDialog::loadOptions()
+{
+    KConfigGroup generalGroup(KSharedConfig::openConfig(), "General");
+    contrastSlider->setValue(KColorScheme::contrast());
+    shadeSortedColumn->setChecked(generalGroup.readEntry("shadeSortColumn", true));
+
+    KConfigGroup group(m_config, "ColorEffects:Inactive");
+    useInactiveEffects->setChecked(group.readEntry("Enable", false));
+
+    if (useInactiveEffects->isChecked() && tabWidget->count() < 5) {
+        tabWidget->insertTab(4, pageInactive, i18n("Inactive"));
+    } else if (!useInactiveEffects->isChecked() && tabWidget->count() > 4) {
+        tabWidget->removeTab(4);
+    }
+    // NOTE: keep this in sync with kdelibs/kdeui/colors/kcolorscheme.cpp
+    // NOTE: remove extra logic from updateFromOptions and on_useInactiveEffects_stateChanged when this changes!
+    inactiveSelectionEffect->setChecked(group.readEntry("ChangeSelectionColor", group.readEntry("Enable", true)));
+}
+
+// Option slot
+void ColorEditDialog::on_contrastSlider_valueChanged(int value)
+{
+    KConfigGroup group(m_config, "KDE");
+    group.writeEntry("contrast", value);
+
+    updatePreviews();
 
     emit changed(true);
 }
 
-void ColorEditDialog::on_inactiveIntensitySlider_valueChanged(int value)
+void ColorEditDialog::on_shadeSortedColumn_stateChanged(int state)
 {
-    Q_UNUSED( value );
-
-    updateFromEffectsPage();
-    inactivePreview->setPalette(m_config, QPalette::Inactive);
-
-    m_loadedSchemeHasUnsavedChanges = true;
+    KConfigGroup group(m_config, "General");
+    group.writeEntry("shadeSortColumn", bool(state != Qt::Unchecked));
 
     emit changed(true);
 }
 
-void ColorEditDialog::on_inactiveColorBox_currentIndexChanged(int index)
+void ColorEditDialog::on_useInactiveEffects_stateChanged(int state)
 {
-    Q_UNUSED( index );
+    KConfigGroup group(m_config, "ColorEffects:Inactive");
+    group.writeEntry("Enable", bool(state != Qt::Unchecked));
 
-    updateFromEffectsPage();
-    inactivePreview->setPalette(m_config, QPalette::Inactive);
+    m_disableUpdates = true;
+    printf("re-init\n");
+    inactiveSelectionEffect->setChecked(group.readEntry("ChangeSelectionColor", bool(state != Qt::Unchecked)));
+    m_disableUpdates = false;
 
-    m_loadedSchemeHasUnsavedChanges = true;
+    if ((state != Qt::Unchecked) && tabWidget->count() < 5) {
+        tabWidget->insertTab(4, pageInactive, i18n("Inactive"));
+    } else if ((state == Qt::Unchecked) && tabWidget->count() > 4) {
+        tabWidget->removeTab(4);
+    }
 
     emit changed(true);
 }
 
-void ColorEditDialog::on_inactiveColorSlider_valueChanged(int value)
+void ColorEditDialog::on_inactiveSelectionEffect_stateChanged(int state)
 {
-    Q_UNUSED( value );
+    if (m_disableUpdates)
+    {
+        // don't write the config as we are reading it!
+        return;
+    }
 
-    updateFromEffectsPage();
-    inactivePreview->setPalette(m_config, QPalette::Inactive);
-
-    m_loadedSchemeHasUnsavedChanges = true;
+    KConfigGroup group(m_config, "ColorEffects:Inactive");
+    group.writeEntry("ChangeSelectionColor", bool(state != Qt::Unchecked));
 
     emit changed(true);
 }
 
-void ColorEditDialog::on_inactiveColorButton_changed(const QColor& color)
-{
-    Q_UNUSED( color );
+/// Colors tab
 
-    updateFromEffectsPage();
-    inactivePreview->setPalette(m_config, QPalette::Inactive);
-
-    m_loadedSchemeHasUnsavedChanges = true;
-
-    emit changed(true);
-}
-
-void ColorEditDialog::on_inactiveContrastBox_currentIndexChanged(int index)
-{
-    Q_UNUSED( index );
-
-    updateFromEffectsPage();
-    inactivePreview->setPalette(m_config, QPalette::Inactive);
-
-    m_loadedSchemeHasUnsavedChanges = true;
-
-    emit changed(true);
-}
-
-void ColorEditDialog::on_inactiveContrastSlider_valueChanged(int value)
-{
-    Q_UNUSED( value );
-
-    updateFromEffectsPage();
-    inactivePreview->setPalette(m_config, QPalette::Inactive);
-
-    m_loadedSchemeHasUnsavedChanges = true;
-
-    emit changed(true);
-}
-
+/// Diaabled tab
 // disabled effects slots
 void ColorEditDialog::on_disabledIntensityBox_currentIndexChanged(int index)
 {
@@ -941,45 +846,90 @@ void ColorEditDialog::on_disabledContrastSlider_valueChanged(int value)
     emit changed(true);
 }
 
-void ColorEditDialog::updateColorSchemes()
+
+/// Inactive tab
+
+// inactive effects slots
+void ColorEditDialog::on_inactiveIntensityBox_currentIndexChanged(int index)
 {
-    m_colorSchemes.clear();
+    Q_UNUSED( index );
 
-    m_colorSchemes.append(KColorScheme(QPalette::Active, KColorScheme::View, m_config));
-    m_colorSchemes.append(KColorScheme(QPalette::Active, KColorScheme::Window, m_config));
-    m_colorSchemes.append(KColorScheme(QPalette::Active, KColorScheme::Button, m_config));
-    m_colorSchemes.append(KColorScheme(QPalette::Active, KColorScheme::Selection, m_config));
-    m_colorSchemes.append(KColorScheme(QPalette::Active, KColorScheme::Tooltip, m_config));
-    m_colorSchemes.append(KColorScheme(QPalette::Active, KColorScheme::Complementary, m_config));
+    updateFromEffectsPage();
+    inactivePreview->setPalette(m_config, QPalette::Inactive);
 
-    m_wmColors.load(m_config);
+    m_loadedSchemeHasUnsavedChanges = true;
+
+    emit changed(true);
 }
 
-
-void ColorEditDialog::createColorEntry(const QString &text, const QString &key, QList<KColorButton *> &list, int index)
+void ColorEditDialog::on_inactiveIntensitySlider_valueChanged(int value)
 {
-    KColorButton *button = new KColorButton(this);
-    button->setObjectName(QString::number(index));
-    connect(button, &KColorButton::changed, this, &ColorEditDialog::colorChanged);
-    list.append(button);
+    Q_UNUSED( value );
 
-    m_colorKeys.insert(index, key);
+    updateFromEffectsPage();
+    inactivePreview->setPalette(m_config, QPalette::Inactive);
 
-    QTableWidgetItem *label = new QTableWidgetItem(text);
-    colorTable->setItem(index, 0, label);
-    colorTable->setCellWidget(index, 1, button);
-    colorTable->setRowHeight(index, button->sizeHint().height());
+    m_loadedSchemeHasUnsavedChanges = true;
+
+    emit changed(true);
 }
 
-void ColorEditDialog::variesClicked()
+void ColorEditDialog::on_inactiveColorBox_currentIndexChanged(int index)
 {
-    // find which button was changed
-    const int row = sender()->objectName().toInt();
+    Q_UNUSED( index );
 
-    QColor color = QColorDialog::getColor(QColor(), this);
-    if(color.isValid())
-    {
-        changeColor(row, color);
-        m_stackedWidgets[row - 9]->setCurrentIndex(0);
-    }
+    updateFromEffectsPage();
+    inactivePreview->setPalette(m_config, QPalette::Inactive);
+
+    m_loadedSchemeHasUnsavedChanges = true;
+
+    emit changed(true);
+}
+
+void ColorEditDialog::on_inactiveColorSlider_valueChanged(int value)
+{
+    Q_UNUSED( value );
+
+    updateFromEffectsPage();
+    inactivePreview->setPalette(m_config, QPalette::Inactive);
+
+    m_loadedSchemeHasUnsavedChanges = true;
+
+    emit changed(true);
+}
+
+void ColorEditDialog::on_inactiveColorButton_changed(const QColor& color)
+{
+    Q_UNUSED( color );
+
+    updateFromEffectsPage();
+    inactivePreview->setPalette(m_config, QPalette::Inactive);
+
+    m_loadedSchemeHasUnsavedChanges = true;
+
+    emit changed(true);
+}
+
+void ColorEditDialog::on_inactiveContrastBox_currentIndexChanged(int index)
+{
+    Q_UNUSED( index );
+
+    updateFromEffectsPage();
+    inactivePreview->setPalette(m_config, QPalette::Inactive);
+
+    m_loadedSchemeHasUnsavedChanges = true;
+
+    emit changed(true);
+}
+
+void ColorEditDialog::on_inactiveContrastSlider_valueChanged(int value)
+{
+    Q_UNUSED( value );
+
+    updateFromEffectsPage();
+    inactivePreview->setPalette(m_config, QPalette::Inactive);
+
+    m_loadedSchemeHasUnsavedChanges = true;
+
+    emit changed(true);
 }

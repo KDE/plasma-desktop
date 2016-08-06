@@ -21,7 +21,7 @@
 #include "colorscm.h"
 
 #include "../krdb/krdb.h"
-#include "coloreditdialog.h"
+#include "scmeditordialog.h"
 
 #include <QFileInfo>
 #include <QFileDialog>
@@ -71,6 +71,7 @@ QColor WindecoColors::color(WindecoColors::Role role) const
 }
 //END WindecoColors
 
+
 KColorCm::KColorCm(QWidget *parent, const QVariantList &)
     : KCModule( parent ),
       m_dontLoadSelectedScheme(false),
@@ -89,6 +90,7 @@ KColorCm::KColorCm(QWidget *parent, const QVariantList &)
     m_config = KSharedConfig::openConfig(QStringLiteral("kdeglobals"));
 
     setupUi(this);
+    connect(applyToAlien, &QCheckBox::toggled, [=](){ emit changed(true); });
     connect(schemeList, SIGNAL(currentItemChanged(QListWidgetItem*,QListWidgetItem*)),
             this, SLOT(loadScheme(QListWidgetItem*,QListWidgetItem*)));
     schemeKnsButton->setIcon( QIcon::fromTheme(QStringLiteral("get-hot-new-stuff")) );
@@ -392,31 +394,6 @@ QPixmap KColorCm::createSchemePreviewIcon(const KSharedConfigPtr &config)
     return pixmap;
 }
 
-/*
-
-void KColorCm::updateFromOptions()
-{
-    KConfigGroup groupK(m_config, "KDE");
-    groupK.writeEntry("contrast", contrastSlider->value());
-
-    KConfigGroup groupG(m_config, "General");
-    groupG.writeEntry("shadeSortColumn", shadeSortedColumn->isChecked());
-
-    KConfigGroup groupI(m_config, "ColorEffects:Inactive");
-    groupI.writeEntry("Enable", useInactiveEffects->isChecked());
-    // only write this setting if it is not the default; this way we can change the default more easily in later KDE
-    // the setting will still written by explicitly checking/unchecking the box
-    if (inactiveSelectionEffect->isChecked())
-    {
-        groupI.writeEntry("ChangeSelectionColor", true);
-    }
-    else
-    {
-        groupI.deleteEntry("ChangeSelectionColor");
-    }
-}
-
-*/
 void KColorCm::load()
 {
     loadInternal(true);
@@ -432,30 +409,12 @@ void KColorCm::load()
     KConfig cfg(QStringLiteral("kcmdisplayrc"), KConfig::NoGlobals);
     group = KConfigGroup(&cfg, "X11");
 
-    /*applyToAlien->blockSignals(true); // don't emit SIGNAL(toggled(bool)) which would call SLOT(emitChanged())
+    applyToAlien->blockSignals(true); // don't emit SIGNAL(toggled(bool)) which would call SLOT(emitChanged())
     applyToAlien->setChecked(group.readEntry("exportKDEColors", true));
-    applyToAlien->blockSignals(false);*/
+    applyToAlien->blockSignals(false);
 }
 
-/*void KColorCm::loadOptions()
-{
-    KConfigGroup generalGroup(KSharedConfig::openConfig(), "General");
-    contrastSlider->setValue(KColorScheme::contrast());
-    shadeSortedColumn->setChecked(generalGroup.readEntry("shadeSortColumn", true));
 
-    KConfigGroup group(m_config, "ColorEffects:Inactive");
-    useInactiveEffects->setChecked(group.readEntry("Enable", false));
-
-    if (useInactiveEffects->isChecked() && tabWidget->count() < 5) {
-        tabWidget->insertTab(4, pageInactive, i18n("Inactive"));
-    } else if (!useInactiveEffects->isChecked() && tabWidget->count() > 4) {
-        tabWidget->removeTab(4);
-    }
-    // NOTE: keep this in sync with kdelibs/kdeui/colors/kcolorscheme.cpp
-    // NOTE: remove extra logic from updateFromOptions and on_useInactiveEffects_stateChanged when this changes!
-    inactiveSelectionEffect->setChecked(group.readEntry("ChangeSelectionColor", group.readEntry("Enable", true)));
-}
-*/
 void KColorCm::loadInternal(bool loadOptions_)
 {
     // clean the config, in case we have changed the in-memory kconfig
@@ -497,7 +456,7 @@ void KColorCm::save()
     KConfig      cfg(QStringLiteral("kcmdisplayrc"), KConfig::NoGlobals);
     KConfigGroup displayGroup(&cfg, "X11");
 
-    //displayGroup.writeEntry("exportKDEColors", applyToAlien->isChecked());
+    displayGroup.writeEntry("exportKDEColors", applyToAlien->isChecked());
     cfg.sync();
 
     //runRdb(KRdbExportQtColors | KRdbExportGtkTheme | ( applyToAlien->isChecked() ? KRdbExportColors : 0 ) );
@@ -533,19 +492,18 @@ void KColorCm::defaults()
         }
     }
 
-    // Reset options (not part of scheme)
-    //m_config->setReadDefaults(true);
-    //loadOptions();
-    //m_config->setReadDefaults(false);
-    //applyToAlien->setChecked(Qt::Checked);
-
     KCModule::defaults();
     emit changed(true);
 }
 
 void KColorCm::on_schemeEditButton_clicked()
 {
-    ColorEditDialog* dialog = new ColorEditDialog(this, m_config, m_currentColorScheme);
+    QListWidgetItem *currentItem = schemeList->currentItem();
+    const QString fileBaseName = currentItem->data(Qt::UserRole).toString();
+    const QString path = QStandardPaths::locate(QStandardPaths::GenericDataLocation,
+                "color-schemes/" + fileBaseName + ".colors");
+    SchemeEditorDialog* dialog = new SchemeEditorDialog(path, this);
+    dialog->setModal(true);
     dialog->show();
 }
 

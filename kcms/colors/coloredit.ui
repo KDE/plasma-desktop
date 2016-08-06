@@ -1090,17 +1090,14 @@
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="schemeSaveButton">
-       <property name="toolTip">
-        <string>Save the current color scheme</string>
-       </property>
-       <property name="text">
-        <string>Save Scheme</string>
+      <widget class="QDialogButtonBox" name="buttonBox">
+       <property name="standardButtons">
+        <set>QDialogButtonBox::Cancel|QDialogButtonBox::Reset|QDialogButtonBox::Save</set>
        </property>
       </widget>
      </item>
     </layout>
-    </item>
+   </item>
   </layout>
  </widget>
  <customwidgets>
