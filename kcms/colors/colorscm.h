@@ -102,13 +102,14 @@ private:
 
     /** load from global */
     void loadInternal(bool loadOptions);
-//
+
     /** load a scheme from a config file at a given path */
     void loadScheme(KSharedConfigPtr config);
 
     /** populate the schemeList with color schemes found on the system */
     void populateSchemeList();
 
+    void updateAll(KSharedConfigPtr config);
 
     /** copy options from controls into m_config */
     void updateFromOptions();

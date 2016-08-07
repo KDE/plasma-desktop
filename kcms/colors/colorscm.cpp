@@ -57,17 +57,17 @@ void WindecoColors::load(const KSharedConfigPtr &config)
 {
     // NOTE: keep this in sync with kdelibs/kdeui/kernel/kglobalsettings.cpp
     KConfigGroup group(config, "WM");
-    /*m_colors[ActiveBackground] = group.readEntry("activeBackground", QColor(48, 174, 232));
+    m_colors[ActiveBackground] = group.readEntry("activeBackground", QColor(48, 174, 232));
     m_colors[ActiveForeground] = group.readEntry("activeForeground", QColor(255, 255, 255));
     m_colors[InactiveBackground] = group.readEntry("inactiveBackground", QColor(224, 223, 222));
     m_colors[InactiveForeground] = group.readEntry("inactiveForeground", QColor(75, 71, 67));
     m_colors[ActiveBlend] = group.readEntry("activeBlend", m_colors[ActiveForeground]);
-    m_colors[InactiveBlend] = group.readEntry("inactiveBlend", m_colors[InactiveForeground]);*/
+    m_colors[InactiveBlend] = group.readEntry("inactiveBlend", m_colors[InactiveForeground]);
 }
 
 QColor WindecoColors::color(WindecoColors::Role role) const
 {
-    return QColor(); //m_colors[role];
+    return m_colors[role];
 }
 //END WindecoColors
 
@@ -163,15 +163,12 @@ void KColorCm::populateSchemeList()
 
 void KColorCm::loadScheme(KSharedConfigPtr config) // const QString &path)
 {
-    KSharedConfigPtr temp = m_config;
-    m_config = config;
-    schemePreview->setPalette(m_config);
+//    KSharedConfigPtr temp = m_config;
+    //m_config = config;
+    schemePreview->setPalette(config);
+    updateAll(config);
 
-    //updateColorSchemes();
-    //updateEffectsPage(); // intentionally before swapping back m_config
-    /*updatePreviews();
-*/
-    m_config = temp;
+    //m_config = temp;
 /*
     updateFromColorSchemes();
     updateFromEffectsPage();
@@ -235,7 +232,6 @@ void KColorCm::loadScheme(QListWidgetItem *currentItem, QListWidgetItem *previou
             const bool canWrite = (permissions & QFile::WriteUser);
             qDebug() << "checking permissions of " << path;
             schemeRemoveButton->setEnabled(canWrite);
-            //schemeKnsUploadButton->setEnabled(true);
 
             KSharedConfigPtr config = KSharedConfig::openConfig(path);
             loadScheme(config);
@@ -421,22 +417,10 @@ void KColorCm::loadInternal(bool loadOptions_)
     m_config->markAsClean();
     m_config->reparseConfiguration();
 
-    // update the color table
-   // updateColorSchemes();
-   // updateColorTable();
-
     // fill in the color scheme list
     populateSchemeList();
 
-   // if (loadOptions_)
-   //     loadOptions();
-
-    //updateEffectsPage();
-
-    //updatePreviews();
-
-    //m_loadedSchemeHasUnsavedChanges = false;
-
+    schemePreview->setPalette(m_config);
     emit changed(false);
 }
 
@@ -445,27 +429,31 @@ void KColorCm::save()
     QIcon icon = createSchemePreviewIcon(m_config);
     schemeList->item(0)->setIcon(icon);
 
-//  KConfigGroup groupI(m_config, "ColorEffects:Inactive");
-/*
+/* FIXME: Are we sure the "Inactive should be there?
+    KConfigGroup groupI(m_config, "ColorEffects:Inactive");
+
     groupI.writeEntry("Enable", useInactiveEffects->isChecked());
     groupI.writeEntry("IntensityEffect", inactiveIntensityBox->currentIndex());
     groupI.writeEntry("ColorEffect", inactiveColorBox->currentIndex());
     groupI.writeEntry("ContrastEffect", inactiveContrastBox->currentIndex());
 */
     m_config->sync();
-    KConfig      cfg(QStringLiteral("kcmdisplayrc"), KConfig::NoGlobals);
+    m_wmColors.load(m_config);
+    KConfig cfg(QStringLiteral("kcmdisplayrc"), KConfig::NoGlobals);
     KConfigGroup displayGroup(&cfg, "X11");
 
     displayGroup.writeEntry("exportKDEColors", applyToAlien->isChecked());
-    cfg.sync();
 
-    //runRdb(KRdbExportQtColors | KRdbExportGtkTheme | ( applyToAlien->isChecked() ? KRdbExportColors : 0 ) );
-    runRdb(KRdbExportQtColors | KRdbExportGtkTheme | 0);
+    cfg.sync();
+    qDebug() << KRdbExportQtColors << KRdbExportGtkTheme << KRdbExportColors ;
+    runRdb(KRdbExportQtColors | KRdbExportGtkTheme | ( applyToAlien->isChecked() ? KRdbExportColors : 0 ) );
+    qDebug() << "icic";
     QDBusMessage message = QDBusMessage::createSignal(QStringLiteral("/KGlobalSettings"), QStringLiteral("org.kde.KGlobalSettings"), QStringLiteral("notifyChange") );
     QList<QVariant> args;
     args.append(0);//previous KGlobalSettings::PaletteChanged. This is now private API in khintsettings
     args.append(0);//unused in palette changed but needed for the DBus signature
     message.setArguments(args);
+    qDebug() << KConfigGroup(m_config, "General").readEntry("Name");
     QDBusConnection::sessionBus().send(message);
     if (qApp->platformName() == QStringLiteral("xcb")) {
         // Send signal to all kwin instances
@@ -507,4 +495,82 @@ void KColorCm::on_schemeEditButton_clicked()
     dialog->show();
 }
 
+void KColorCm::updateAll(KSharedConfigPtr config)
+{
+    // store colorscheme name in global settings
+    KConfigGroup groupOut(m_config, "General");
+    groupOut.writeEntry("ColorScheme", m_currentColorScheme);
+
+    QStringList colorItemList;
+    colorItemList << "BackgroundNormal"
+                  << "BackgroundAlternate"
+                  << "ForegroundNormal"
+                  << "ForegroundInactive"
+                  << "ForegroundActive"
+                  << "ForegroundLink"
+                  << "ForegroundVisited"
+                  << "ForegroundNegative"
+                  << "ForegroundNeutral"
+                  << "ForegroundPositive"
+                  << "DecorationFocus"
+                  << "DecorationHover";
+
+    QStringList colorSetGroupList;
+    colorSetGroupList << "Colors:Window"
+                      << "Colors:Button"
+                      << "Colors:Selection"
+                      << "Colors:Tooltip"
+                      << "Colors:View";
+    for (const QString &colorSetGroup : colorSetGroupList)
+    {
+        KConfigGroup groupOut(m_config, colorSetGroup);
+        KConfigGroup groupTheme(config, colorSetGroup);
+
+        for (const QString &coloritem : colorItemList)
+        {
+            groupOut.writeEntry(coloritem, groupTheme.readEntry(coloritem));
+        }
+    }
+
+    KConfigGroup groupWMTheme(config, "WM");
+    KConfigGroup groupWMOut(m_config, "WM");
+
+    QStringList colorItemListWM;
+    colorItemListWM << "activeBackground"
+                    << "activeForeground"
+                    << "inactiveBackground"
+                    << "inactiveForeground"
+                    << "activeBlend"
+                    << "inactiveBlend";
+
+    for (const QString &coloritem : colorItemListWM)
+    {
+            groupWMOut.writeEntry(coloritem, groupWMTheme.readEntry(coloritem));
+    }
+
+
+    QStringList groupNameList;
+    groupNameList << "ColorEffects:Inactive" << "ColorEffects:Disabled";
+
+    QStringList effectList;
+    effectList << "IntensityEffect"
+               << "IntensityAmount"
+               << "ColorEffect"
+               << "ColorAmount"
+               << "Color"
+               << "ContrastEffect"
+               << "ContrastAmount";
+
+    for (const QString &groupName : groupNameList)
+    {
+
+        KConfigGroup groupEffectOut(m_config, groupName);
+        KConfigGroup groupEffectTheme(config, groupName);
+
+        for (const QString &effect : effectList) {
+            groupEffectOut.writeEntry(effect, groupEffectTheme.readEntry("effect"));
+
+        }
+    }
+}
 #include "colorscm.moc"
