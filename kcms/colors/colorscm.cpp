@@ -1,6 +1,7 @@
 /* KDE Display color scheme setup module
  * Copyright (C) 2007 Matthew Woehlke <mw_triad@users.sourceforge.net>
  * Copyright (C) 2007 Jeremy Whiting <jpwhiting@kde.org>
+ * Copyright (C) 2016 Olivier Churlaud <olivier@churlaud.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -404,6 +405,10 @@ void KColorCm::on_schemeEditButton_clicked()
     const QString fileBaseName = currentItem->data(Qt::UserRole).toString();
     const QString path = QStandardPaths::locate(QStandardPaths::GenericDataLocation,
                 "color-schemes/" + fileBaseName + ".colors");
+    if (path.isEmpty()) {
+        //FIXME:: dialog + return
+        return;
+    }
     SchemeEditorDialog* dialog = new SchemeEditorDialog(path, this);
     dialog->setModal(true);
     dialog->show();
