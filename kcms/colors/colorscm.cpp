@@ -47,31 +47,6 @@
 K_PLUGIN_FACTORY( KolorFactory, registerPlugin<KColorCm>(); )
 K_EXPORT_PLUGIN( KolorFactory("kcmcolors") )
 
-//BEGIN WindecoColors
-WindecoColors::WindecoColors(const KSharedConfigPtr &config)
-{
-    load(config);
-}
-
-void WindecoColors::load(const KSharedConfigPtr &config)
-{
-    // NOTE: keep this in sync with kdelibs/kdeui/kernel/kglobalsettings.cpp
-    KConfigGroup group(config, "WM");
-    m_colors[ActiveBackground] = group.readEntry("activeBackground", QColor(48, 174, 232));
-    m_colors[ActiveForeground] = group.readEntry("activeForeground", QColor(255, 255, 255));
-    m_colors[InactiveBackground] = group.readEntry("inactiveBackground", QColor(224, 223, 222));
-    m_colors[InactiveForeground] = group.readEntry("inactiveForeground", QColor(75, 71, 67));
-    m_colors[ActiveBlend] = group.readEntry("activeBlend", m_colors[ActiveForeground]);
-    m_colors[InactiveBlend] = group.readEntry("inactiveBlend", m_colors[InactiveForeground]);
-}
-
-QColor WindecoColors::color(WindecoColors::Role role) const
-{
-    return m_colors[role];
-}
-//END WindecoColors
-
-
 KColorCm::KColorCm(QWidget *parent, const QVariantList &)
     : KCModule( parent ),
       m_dontLoadSelectedScheme(false),
@@ -263,7 +238,7 @@ void KColorCm::on_schemeImportButton_clicked()
 
         if (config->groupList().contains(QStringLiteral("Color Scheme")))
         {
-            KMessageBox::Continue != KMessageBox::sorry(this,
+            KMessageBox::sorry(this,
                 i18n("The scheme you have selected appears to be a KDE3 scheme.\n\n"
                      "This is not supported anymore."),
                 i18n("Notice"));
@@ -292,7 +267,6 @@ void KColorCm::on_schemeKnsButton_clicked()
 
 QPixmap KColorCm::createSchemePreviewIcon(const KSharedConfigPtr &config)
 {
-    const WindecoColors wm(config);
     const uchar bits1[] = { 0xff, 0xff, 0xff, 0x2c, 0x16, 0x0b };
     const uchar bits2[] = { 0x68, 0x34, 0x1a, 0xff, 0xff, 0xff };
     const QSize bitsSize(24,2);
@@ -304,6 +278,13 @@ QPixmap KColorCm::createSchemePreviewIcon(const KSharedConfigPtr &config)
 
     QPainter p(&pixmap);
 
+    KConfigGroup group(config, "WM");
+    // NOTE: keep this in sync with kdelibs/kdeui/kernel/kglobalsettings.cpp
+    QColor activeBackground = group.readEntry("activeBackground", QColor(48, 174, 232));
+    QColor activeForeground = group.readEntry("activeForeground", QColor(255, 255, 255));
+    QColor inactiveBackground = group.readEntry("inactiveBackground", QColor(224, 223, 222));
+    QColor inactiveForeground = group.readEntry("inactiveForeground", QColor(75, 71, 67));
+
     KColorScheme windowScheme(QPalette::Active, KColorScheme::Window, config);
     p.fillRect( 1,  1, 7, 7, windowScheme.background());
     p.fillRect( 2,  2, 5, 2, QBrush(windowScheme.foreground().color(), b1));
@@ -312,8 +293,8 @@ QPixmap KColorCm::createSchemePreviewIcon(const KSharedConfigPtr &config)
     p.fillRect( 8,  1, 7, 7, buttonScheme.background());
     p.fillRect( 9,  2, 5, 2, QBrush(buttonScheme.foreground().color(), b1));
 
-    p.fillRect(15,  1, 7, 7, wm.color(WindecoColors::ActiveBackground));
-    p.fillRect(16,  2, 5, 2, QBrush(wm.color(WindecoColors::ActiveForeground), b1));
+    p.fillRect(15,  1, 7, 7, activeBackground);
+    p.fillRect(16,  2, 5, 2, QBrush(activeForeground, b1));
 
     KColorScheme viewScheme(QPalette::Active, KColorScheme::View, config);
     p.fillRect( 1,  8, 7, 7, viewScheme.background());
@@ -323,8 +304,8 @@ QPixmap KColorCm::createSchemePreviewIcon(const KSharedConfigPtr &config)
     p.fillRect( 8,  8, 7, 7, selectionScheme.background());
     p.fillRect( 9, 12, 5, 2, QBrush(selectionScheme.foreground().color(), b2));
 
-    p.fillRect(15,  8, 7, 7, wm.color(WindecoColors::InactiveBackground));
-    p.fillRect(16, 12, 5, 2, QBrush(wm.color(WindecoColors::InactiveForeground), b2));
+    p.fillRect(15,  8, 7, 7, inactiveBackground);
+    p.fillRect(16, 12, 5, 2, QBrush(inactiveForeground, b2));
 
     p.end();
 
@@ -371,7 +352,7 @@ void KColorCm::save()
     schemeList->item(0)->setIcon(icon);
 
     m_config->sync();
-    m_wmColors.load(m_config);
+
     KConfig cfg(QStringLiteral("kcmdisplayrc"), KConfig::NoGlobals);
     KConfigGroup displayGroup(&cfg, "X11");
 

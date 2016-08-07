@@ -31,29 +31,6 @@ class QListWidgetItem;
 class KColorButton;
 
 
-class WindecoColors {
-    public:
-        enum Role {
-            ActiveForeground = 0,
-            ActiveBackground = 1,
-            InactiveForeground = 2,
-            InactiveBackground = 3,
-            ActiveBlend = 4,
-            InactiveBlend = 5
-        };
-
-        WindecoColors() {}
-        WindecoColors(const KSharedConfigPtr&);
-        virtual ~WindecoColors() {}
-
-        void load(const KSharedConfigPtr&);
-        QColor color(Role) const;
-    private:
-        QColor m_colors[6];
-};
-
-
-
 /**
  * The Desktop/Colors tab in kcontrol.
  */
@@ -114,7 +91,6 @@ private:
     /** copy options from controls into m_config */
     void updateFromOptions();
 
-    WindecoColors m_wmColors;
     QString m_currentColorScheme;
 
     KSharedConfigPtr m_config;

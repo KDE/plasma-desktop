@@ -25,6 +25,31 @@
 #include <KColorButton>
 #include <KConfigGroup>
 
+//BEGIN WindecoColors
+SchemeEditorColors::WindecoColors::WindecoColors(const KSharedConfigPtr &config)
+{
+    load(config);
+}
+
+void SchemeEditorColors::WindecoColors::load(const KSharedConfigPtr &config)
+{
+    // NOTE: keep this in sync with kdelibs/kdeui/kernel/kglobalsettings.cpp
+    KConfigGroup group(config, "WM");
+    m_colors[ActiveBackground] = group.readEntry("activeBackground", QColor(48, 174, 232));
+    m_colors[ActiveForeground] = group.readEntry("activeForeground", QColor(255, 255, 255));
+    m_colors[InactiveBackground] = group.readEntry("inactiveBackground", QColor(224, 223, 222));
+    m_colors[InactiveForeground] = group.readEntry("inactiveForeground", QColor(75, 71, 67));
+    m_colors[ActiveBlend] = group.readEntry("activeBlend", m_colors[ActiveForeground]);
+    m_colors[InactiveBlend] = group.readEntry("inactiveBlend", m_colors[InactiveForeground]);
+}
+
+QColor SchemeEditorColors::WindecoColors::color(WindecoColors::Role role) const
+{
+    return m_colors[role];
+}
+//END WindecoColors
+
+
 SchemeEditorColors::SchemeEditorColors(KSharedConfigPtr config, QWidget *parent)
     : QWidget( parent )
     , m_config( config )

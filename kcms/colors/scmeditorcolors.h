@@ -63,6 +63,27 @@ private Q_SLOTS:
     void setupColorTable();
 
 private:
+    class WindecoColors {
+    public:
+        enum Role {
+            ActiveForeground = 0,
+            ActiveBackground = 1,
+            InactiveForeground = 2,
+            InactiveBackground = 3,
+            ActiveBlend = 4,
+            InactiveBlend = 5
+        };
+
+        WindecoColors() {}
+        WindecoColors(const KSharedConfigPtr&);
+        virtual ~WindecoColors() {}
+
+        void load(const KSharedConfigPtr&);
+        QColor color(Role) const;
+    private:
+        QColor m_colors[6];
+    };
+
     void changeColor(int row, const QColor &newColor);
 
     /** helper to create color entries */
