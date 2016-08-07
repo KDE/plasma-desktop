@@ -330,10 +330,7 @@ void SchemeEditorColors::changeColor(int row, const QColor &newColor)
         KConfigGroup(m_config, group).writeEntry(m_colorKeys[row], newColor);
     }
 
-//FIXME    QIcon icon = createSchemePreviewIcon(m_config);
-//FIXME    schemeList->item(0)->setIcon(icon);
     updateColorSchemes();
-
 
     QString colorScheme = i18nc("Current color scheme", "Current");
     KConfigGroup group(m_config, "General");

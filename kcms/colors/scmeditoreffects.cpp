@@ -31,7 +31,6 @@ SchemeEditorEffects::SchemeEditorEffects(KSharedConfigPtr config, QPalette::Colo
     setupUi(this);
 }
 
-
 void SchemeEditorEffects::on_intensityBox_currentIndexChanged(int index)
 {
     Q_UNUSED( index );

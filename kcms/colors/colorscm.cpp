@@ -139,7 +139,7 @@ void KColorCm::populateSchemeList()
 void KColorCm::loadScheme(KSharedConfigPtr config) // const QString &path)
 {
     schemePreview->setPalette(config);
-    updateAll(config);
+    updateConfig(config);
 }
 
 void KColorCm::selectPreviousSchemeAgain()
@@ -181,7 +181,7 @@ void KColorCm::loadScheme(QListWidgetItem *currentItem, QListWidgetItem *previou
         else if (name == i18nc("Current color scheme", "Current"))
         {
             schemeRemoveButton->setEnabled(false);
-            loadInternal(false);
+            loadInternal();
         }
         else
         {
@@ -314,7 +314,7 @@ QPixmap KColorCm::createSchemePreviewIcon(const KSharedConfigPtr &config)
 
 void KColorCm::load()
 {
-    loadInternal(true);
+    loadInternal();
 
     // get colorscheme name from global settings
     KConfigGroup group(m_config, "General");
@@ -333,7 +333,7 @@ void KColorCm::load()
 }
 
 
-void KColorCm::loadInternal(bool loadOptions_)
+void KColorCm::loadInternal()
 {
     // clean the config, in case we have changed the in-memory kconfig
     m_config->markAsClean();
@@ -409,7 +409,7 @@ void KColorCm::on_schemeEditButton_clicked()
     dialog->show();
 }
 
-void KColorCm::updateAll(KSharedConfigPtr config)
+void KColorCm::updateConfig(KSharedConfigPtr config)
 {
     // store colorscheme name in global settings
     KConfigGroup groupOut(m_config, "General");

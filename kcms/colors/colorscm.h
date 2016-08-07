@@ -44,55 +44,90 @@ public:
 
 public Q_SLOTS:
 
-    /// load the settings from the config
+    /**
+     * load the settings from the config
+     */
     virtual void load();
 
-    /// save the current settings
+    /**
+     * save the current settings
+     */
     virtual void save();
 
-    /// sets the configuration to sensible default values.
+    /**
+     * sets the configuration to sensible default values.
+     */
     virtual void defaults();
 
 private Q_SLOTS:
 
 
-    /** slot called when the schemeList selection changes */
+    /**
+     * slot called when the schemeList selection changes.
+     *
+     * It loads the scheme with loadScheme(KSharedConfigPtr), which updates the
+     * config (updateConfig())
+     */
     void loadScheme(QListWidgetItem *currentItem, QListWidgetItem *previousItem);
 
-    /** reselect the previously selected scheme in schemeList without loading it */
+    /**
+     * Reselect the previously selected scheme in schemeList without loading it
+     */
     void selectPreviousSchemeAgain();
 
-    /** slot called when the remove button is clicked*/
+    /**
+     * Slot called when the remove button is clicked
+     */
     void on_schemeRemoveButton_clicked();
 
-    /** slot called when the import button is clicked */
+    /**
+     * Slot called when the import button is clicked
+     */
     void on_schemeImportButton_clicked();
 
-    /** slot called when the get new schemes button is clicked */
+    /**
+     * slot called when the get new schemes button is clicked
+     */
     void on_schemeKnsButton_clicked();
 
+    /**
+     * Slot called when the Edit button is clicked.
+     *
+     * It opens a dialog for the edition/creation.
+     */
     void on_schemeEditButton_clicked();
 private:
 
-    /** create a preview of a color scheme */
+    /**
+     * Create a preview icon of a color scheme
+     */
     static QPixmap createSchemePreviewIcon(const KSharedConfigPtr &config);
 
-    /** load from global */
-    void loadInternal(bool loadOptions);
+    /**
+     * Load from global.
+     */
+    void loadInternal();
 
-    /** load a scheme from a config file at a given path */
+    /**
+     * load a scheme from a config file at a given path and updates the
+     * config (updateConfig())
+     */
     void loadScheme(KSharedConfigPtr config);
 
-    /** populate the schemeList with color schemes found on the system */
+    /**
+     * Populate the schemeList with color schemes found on the system
+     */
     void populateSchemeList();
 
-    void updateAll(KSharedConfigPtr config);
+    /**
+     * Update all keys of the Global config with the theme ones.
+     */
+    void updateConfig(KSharedConfigPtr config);
 
-    /** copy options from controls into m_config */
-    void updateFromOptions();
 
     QString m_currentColorScheme;
 
+    // The global config
     KSharedConfigPtr m_config;
 
     // don't (re)load the scheme, only select it in schemeList
