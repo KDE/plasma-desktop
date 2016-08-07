@@ -102,6 +102,7 @@ void SchemeEditorDialog::on_buttonBox_accepted()
     {
         saveScheme(name);
     }
+    this->accept();
 }
 
 

@@ -34,71 +34,43 @@ SchemeEditorEffects::SchemeEditorEffects(KSharedConfigPtr config, QPalette::Colo
 void SchemeEditorEffects::on_intensityBox_currentIndexChanged(int index)
 {
     Q_UNUSED( index );
-
     updateFromEffectsPage();
-    preview->setPalette(m_config, m_palette);
-
-    emit changed(true);
 }
 
 void SchemeEditorEffects::on_intensitySlider_valueChanged(int value)
 {
     Q_UNUSED( value );
-
     updateFromEffectsPage();
-    preview->setPalette(m_config, m_palette);
-
-    emit changed(true);
 }
 
 void SchemeEditorEffects::on_colorBox_currentIndexChanged(int index)
 {
     Q_UNUSED( index );
-
     updateFromEffectsPage();
-    preview->setPalette(m_config, m_palette);
-
-    emit changed(true);
 }
 
 void SchemeEditorEffects::on_colorSlider_valueChanged(int value)
 {
     Q_UNUSED( value );
-
     updateFromEffectsPage();
-    preview->setPalette(m_config, m_palette);
-
-    emit changed(true);
 }
 
 void SchemeEditorEffects::on_colorButton_changed(const QColor& color)
 {
     Q_UNUSED( color );
-
     updateFromEffectsPage();
-    preview->setPalette(m_config, m_palette);
-
-    emit changed(true);
 }
 
 void SchemeEditorEffects::on_contrastBox_currentIndexChanged(int index)
 {
     Q_UNUSED( index );
-
     updateFromEffectsPage();
-    preview->setPalette(m_config, m_palette);
-
-    emit changed(true);
 }
 
 void SchemeEditorEffects::on_contrastSlider_valueChanged(int value)
 {
     Q_UNUSED( value );
-
     updateFromEffectsPage();
-    preview->setPalette(m_config, m_palette);
-
-    emit changed(true);
 }
 
 void SchemeEditorEffects::updateValues()
@@ -110,7 +82,6 @@ void SchemeEditorEffects::updateValues()
     {
         KConfigGroup group(m_config, "ColorEffects:Inactive");
         intensityBox->setCurrentIndex(abs(group.readEntry("IntensityEffect", 0)));
-        qDebug() << int(group.readEntry("IntensityAmount", 0.0) * 20.0) + 20;
         intensitySlider->setValue(int(group.readEntry("IntensityAmount", 0.0) * 20.0) + 20);
         colorBox->setCurrentIndex(abs(group.readEntry("ColorEffect", 2)));
         if (colorBox->currentIndex() > 1)
@@ -208,4 +179,8 @@ void SchemeEditorEffects::updateFromEffectsPage()
     colorSlider->setDisabled(colorBox->currentIndex() == 0);
     colorButton->setDisabled(colorBox->currentIndex() < 2);
     contrastSlider->setDisabled(contrastBox->currentIndex() == 0);
+
+    preview->setPalette(m_config, m_palette);
+
+    emit changed(true);
 }

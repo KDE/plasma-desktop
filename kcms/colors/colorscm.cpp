@@ -412,6 +412,7 @@ void KColorCm::on_schemeEditButton_clicked()
     SchemeEditorDialog* dialog = new SchemeEditorDialog(path, this);
     dialog->setModal(true);
     dialog->show();
+    connect(dialog, &SchemeEditorDialog::accepted, [=](){ this->populateSchemeList(); });
 }
 
 void KColorCm::updateConfig(KSharedConfigPtr config)
