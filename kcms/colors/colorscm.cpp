@@ -163,21 +163,8 @@ void KColorCm::populateSchemeList()
 
 void KColorCm::loadScheme(KSharedConfigPtr config) // const QString &path)
 {
-//    KSharedConfigPtr temp = m_config;
-    //m_config = config;
     schemePreview->setPalette(config);
     updateAll(config);
-
-    //m_config = temp;
-/*
-    updateFromColorSchemes();
-    updateFromEffectsPage();
-
-    updateFromOptions();
-    updateColorTable();
-
-    m_loadedSchemeHasUnsavedChanges = false;*/
-    //m_changed = false;
 }
 
 void KColorCm::selectPreviousSchemeAgain()
@@ -208,7 +195,6 @@ void KColorCm::loadScheme(QListWidgetItem *currentItem, QListWidgetItem *previou
         if (name == i18nc("Default color scheme", "Default"))
         {
             schemeRemoveButton->setEnabled(false);
-            //schemeKnsUploadButton->setEnabled(false);
 
             KSharedConfigPtr config = m_config;
             config->setReadDefaults(true);
@@ -220,7 +206,6 @@ void KColorCm::loadScheme(QListWidgetItem *currentItem, QListWidgetItem *previou
         else if (name == i18nc("Current color scheme", "Current"))
         {
             schemeRemoveButton->setEnabled(false);
-            //schemeKnsUploadButton->setEnabled(false);
             loadInternal(false);
         }
         else
@@ -278,55 +263,11 @@ void KColorCm::on_schemeImportButton_clicked()
 
         if (config->groupList().contains(QStringLiteral("Color Scheme")))
         {
-            if (KMessageBox::Continue != KMessageBox::warningContinueCancel(this,
+            KMessageBox::Continue != KMessageBox::sorry(this,
                 i18n("The scheme you have selected appears to be a KDE3 scheme.\n\n"
-                     "KDE will attempt to import this scheme, however many color roles have been added since KDE3. "
-                     "Some manual work will likely be required.\n\n"
-                     "This scheme will not be saved automatically."),
-                i18n("Notice")))
-            {
-                return;
-            }
-
-            // convert KDE3 scheme to new scheme
-            KConfigGroup g(config, "Color Scheme");
-            KConfigGroup generalGroup(KSharedConfig::openConfig(), "General");
-
-            //colorSet->setCurrentIndex(0);
-            //contrastSlider->setValue(g.readEntry("contrast", KColorScheme::contrast()));
-            //shadeSortedColumn->setChecked(g.readEntry("shadeSortColumn", generalGroup.readEntry("shadeSortColumn", true)));
-
-          /*  m_commonColorButtons[0]->setColor(g.readEntry("windowBackground", m_colorSchemes[KColorScheme::View].background().color()));
-            m_commonColorButtons[1]->setColor(g.readEntry("windowForeground", m_colorSchemes[KColorScheme::View].foreground().color()));
-            m_commonColorButtons[2]->setColor(g.readEntry("background", m_colorSchemes[KColorScheme::Window].background().color()));
-            m_commonColorButtons[3]->setColor(g.readEntry("foreground", m_colorSchemes[KColorScheme::Window].foreground().color()));
-            m_commonColorButtons[4]->setColor(g.readEntry("buttonBackground", m_colorSchemes[KColorScheme::Button].background().color()));
-            m_commonColorButtons[5]->setColor(g.readEntry("buttonForeground", m_colorSchemes[KColorScheme::Button].foreground().color()));
-            m_commonColorButtons[6]->setColor(g.readEntry("selectBackground", m_colorSchemes[KColorScheme::Selection].background().color()));
-            m_commonColorButtons[7]->setColor(g.readEntry("selectForeground", m_colorSchemes[KColorScheme::Selection].foreground().color()));
-            m_commonColorButtons[8]->setColor(KColorUtils::mix(m_colorSchemes[KColorScheme::Selection].foreground().color(),
-                                                               m_colorSchemes[KColorScheme::Selection].background().color()));
-            m_commonColorButtons[9]->setColor(KColorUtils::mix(m_colorSchemes[KColorScheme::View].foreground().color(),
-                                                               m_colorSchemes[KColorScheme::View].background().color()));
-            // doesn't exist in KDE3: 10 ActiveText
-            m_commonColorButtons[11]->setColor(g.readEntry("linkColor", m_colorSchemes[KColorScheme::View].foreground(KColorScheme::LinkText).color()));
-            m_commonColorButtons[12]->setColor(g.readEntry("visitedLinkColor", m_colorSchemes[KColorScheme::View].foreground(KColorScheme::VisitedText).color()));
-            // doesn't exist in KDE3: 13-15 PositiveText, NeutralText, NegativeText
-            m_commonColorButtons[16]->setColor(g.readEntry("windowForeground", m_colorSchemes[KColorScheme::View].decoration(KColorScheme::FocusColor).color()));
-            m_commonColorButtons[17]->setColor(g.readEntry("selectBackground", m_colorSchemes[KColorScheme::View].decoration(KColorScheme::HoverColor).color()));
-            m_commonColorButtons[18]->setColor(g.readEntry("windowBackground", m_colorSchemes[KColorScheme::Tooltip].background().color()));
-            m_commonColorButtons[19]->setColor(g.readEntry("windowForeground", m_colorSchemes[KColorScheme::Tooltip].foreground().color()));
-            m_commonColorButtons[20]->setColor(g.readEntry("activeBackground", m_wmColors.color(WindecoColors::ActiveBackground)));
-            m_commonColorButtons[21]->setColor(g.readEntry("activeForeground", m_wmColors.color(WindecoColors::ActiveForeground)));
-            m_commonColorButtons[22]->setColor(g.readEntry("activeBlend", m_wmColors.color(WindecoColors::ActiveBlend)));
-            m_commonColorButtons[23]->setColor(g.readEntry("inactiveBackground", m_wmColors.color(WindecoColors::InactiveBackground)));
-            m_commonColorButtons[24]->setColor(g.readEntry("inactiveForeground", m_wmColors.color(WindecoColors::InactiveForeground)));
-            m_commonColorButtons[25]->setColor(g.readEntry("inactiveBlend", m_wmColors.color(WindecoColors::InactiveBlend)));
-
-            //colorSet->setCurrentIndex(1);
-            m_backgroundButtons[KColorScheme::AlternateBackground]->setColor(g.readEntry("alternateBackground",
-                                                                                         m_colorSchemes[KColorScheme::View].background(KColorScheme::AlternateBackground).color()));*/
-            //colorSet->setCurrentIndex(0);
+                     "This is not supported anymore."),
+                i18n("Notice"));
+            return;
         }
         else
         {
@@ -334,7 +275,7 @@ void KColorCm::on_schemeImportButton_clicked()
             loadScheme(config);
 
             // save it
-           //saveScheme(url.fileName());
+//FIXME            saveScheme(url.fileName());
         }
     }
 }
@@ -429,14 +370,6 @@ void KColorCm::save()
     QIcon icon = createSchemePreviewIcon(m_config);
     schemeList->item(0)->setIcon(icon);
 
-/* FIXME: Are we sure the "Inactive should be there?
-    KConfigGroup groupI(m_config, "ColorEffects:Inactive");
-
-    groupI.writeEntry("Enable", useInactiveEffects->isChecked());
-    groupI.writeEntry("IntensityEffect", inactiveIntensityBox->currentIndex());
-    groupI.writeEntry("ColorEffect", inactiveColorBox->currentIndex());
-    groupI.writeEntry("ContrastEffect", inactiveContrastBox->currentIndex());
-*/
     m_config->sync();
     m_wmColors.load(m_config);
     KConfig cfg(QStringLiteral("kcmdisplayrc"), KConfig::NoGlobals);
