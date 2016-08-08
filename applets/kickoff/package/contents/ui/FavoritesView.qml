@@ -3,6 +3,7 @@
     Copyright (C) 2012 Marco Martin <mart@kde.org>
     Copyright 2014 Sebastian Kügler <sebas@kde.org>
     Copyright (C) 2015  Eike Hein <hein@kde.org>
+    Copyright (C) 2016 Jonathan Liu <net147@gmail.com>
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -60,7 +61,7 @@ Item {
         function syncTarget(event) {
             var pos = mapToItem(kickoffListView.contentItem, event.x, event.y);
 
-            var hoveredIndex = kickoffListView.indexAt(pos.y, pos.y);
+            var hoveredIndex = kickoffListView.indexAt(pos.x, pos.y);
 
             if (hoveredIndex != -1) {
                 kickoffListView.currentIndex = hoveredIndex;
