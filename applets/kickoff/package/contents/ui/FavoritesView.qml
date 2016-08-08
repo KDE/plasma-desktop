@@ -118,9 +118,9 @@ Item {
                 return
             }
 
+            syncTarget(event);
             dragUrl = kickoffListView.currentItem.url;
             startRow = kickoffListView.currentIndex;
-            syncTarget(event);
         }
 
         onDragMove: syncTarget(event);
