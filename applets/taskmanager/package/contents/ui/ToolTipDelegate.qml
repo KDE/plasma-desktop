@@ -79,8 +79,9 @@ Column {
 
             for (var i = 0, length = sources.length; i < length; ++i) {
                 var source = sources[i];
+                var sourceData = data[source];
 
-                if (data[sources[i]].DesktopEntry === desktopFileName) {
+                if (sourceData && sourceData.DesktopEntry === desktopFileName) {
                     return source
                 }
             }
