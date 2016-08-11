@@ -38,11 +38,14 @@ SchemeEditorDialog::SchemeEditorDialog(const QString &path, QWidget *parent)
     : QDialog( parent )
     , m_disableUpdates(false)
     , m_filePath(path)
+    , m_unsavedChanges(false)
 {
-
     m_config = KSharedConfig::openConfig(path);
-    //const KSharedConfig oldconf = m_config.constData();
+    m_schemeName = KConfigGroup(m_config, "General").readEntry("Name");
+
     setupUi(this);
+    this->setWindowTitle(m_schemeName);
+
     schemeKnsUploadButton->setIcon( QIcon::fromTheme(QStringLiteral("get-hot-new-stuff")) );
 
     m_optionTab = new SchemeEditorOptions(m_config);
@@ -65,7 +68,7 @@ SchemeEditorDialog::SchemeEditorDialog(const QString &path, QWidget *parent)
 
 void SchemeEditorDialog::on_schemeKnsUploadButton_clicked()
 {
-    if (m_loadedSchemeHasUnsavedChanges)
+    if (m_unsavedChanges)
     {
         KMessageBox::ButtonCode reallyUpload = KMessageBox::questionYesNo(
             this, i18n("This colour scheme was not saved. Continue?"),
@@ -76,12 +79,11 @@ void SchemeEditorDialog::on_schemeKnsUploadButton_clicked()
     }
 
     // find path
-    QString path;
-//FIXME    const QString path = QStandardPaths::locate(QStandardPaths::GenericDataLocation,
-//        "color-schemes/" + schemeName + ".colors");
+    const QString path = QStandardPaths::locate(QStandardPaths::GenericDataLocation,
+        "color-schemes/" + m_schemeName + ".colors");
     if (path.isEmpty() ) // if the color scheme file wasn't found
     {
-//        qDebug() << "path for color scheme " << m_schemeName << " couldn't be found";
+        qDebug() << "path for color scheme " << m_schemeName << " couldn't be found";
         return;
     }
 
@@ -91,41 +93,45 @@ void SchemeEditorDialog::on_schemeKnsUploadButton_clicked()
     dialog.exec();
 }
 
-void SchemeEditorDialog::on_buttonBox_accepted()
+void SchemeEditorDialog::on_buttonBox_clicked(QAbstractButton *button)
+{
+    if (buttonBox->standardButton(button) == QDialogButtonBox::Reset)
+    {
+        m_config->markAsClean();;
+        m_config->reparseConfiguration();
+        updateTabs();
+        setUnsavedChanges(false);
+    }
+    else if (buttonBox->standardButton(button) == QDialogButtonBox::Save)
+    {
+        saveScheme();
+    }
+    else if (buttonBox->standardButton(button) == QDialogButtonBox::Close)
+    {
+        if (m_unsavedChanges) {
+            KMessageBox::ButtonCode ans = KMessageBox::questionYesNo(
+                this, i18n("You have unsaved changes. Do you really want to quit?"),
+                i18n("Unsaved changes"));
+            if (ans == KMessageBox::No)
+            {
+                return;
+            }
+        }
+        this->accept();
+    }
+}
+
+void SchemeEditorDialog::saveScheme()
 {
     // prompt for the name to save as
     bool ok;
     QString schemeName = KConfigGroup(m_config, "General").readEntry("Name");
     QString name = QInputDialog::getText(this, i18n("Save Color Scheme"),
-        i18n("&Enter a name for the color scheme:"), QLineEdit::Normal, schemeName, &ok);
-    if (ok)
-    {
-        saveScheme(name);
+        i18n("&Enter a name for the color scheme:"), QLineEdit::Normal, m_schemeName, &ok);
+    if (!ok) {
+        return;
     }
-    this->accept();
-}
 
-
-void SchemeEditorDialog::on_buttonBox_rejected()
-{
-    this->reject();
-}
-
-void SchemeEditorDialog::on_buttonBox_clicked(QAbstractButton *button)
-{
-    if (buttonBox->buttonRole(button) == QDialogButtonBox::ResetRole)
-    {
-        m_config->markAsClean();;
-        m_config->reparseConfiguration();
-        updateTabs();
-        buttonBox->button(QDialogButtonBox::Save)->setEnabled(false);
-        buttonBox->button(QDialogButtonBox::Reset)->setEnabled(false);
-        schemeKnsUploadButton->setEnabled(false);
-    }
-}
-
-void SchemeEditorDialog::saveScheme(const QString &name)
-{
     QString filename = name;
     filename.remove('\''); // So Foo's does not become FooS
     QRegExp fixer(QStringLiteral("[\\W,.-]+(.?)"));
@@ -150,13 +156,12 @@ void SchemeEditorDialog::saveScheme(const QString &name)
                 i18n("Save Color Scheme"),
                 KStandardGuiItem::overwrite(),
                 KStandardGuiItem::cancel());
-            //on don't overwrite, select the already existing name.
-            /*FIXME if(ret == KMessageBox::No){
-                QList<QListWidgetItem*> foundItems = schemeList->findItems(name, Qt::MatchExactly);
-                if (foundItems.size() == 1)
-                    schemeList->setCurrentRow(schemeList->row(foundItems[0]));
+
+            //on don't overwrite, call again the functionn
+            if(ret == KMessageBox::No){
+                this->saveScheme();
                 return;
-            }*/
+            }
         }
 
         // go ahead and save it
@@ -165,47 +170,23 @@ void SchemeEditorDialog::saveScheme(const QString &name)
         QDir dir;
         dir.mkpath(newpath);
         newpath += filename + ".colors";
-        KSharedConfigPtr temp = m_config;
-        m_config = KSharedConfig::openConfig(newpath);
-        // then copy current colors into new config
-//        updateFromColorSchemes();
-//        updateFromEffectsPage();
-        KConfigGroup group(m_config, "General");
+
+        KConfig *config = m_config->copyTo(newpath);
+        KConfigGroup group(config, "General");
         group.writeEntry("Name", name);
-        // sync it
-        m_config->sync();
 
-        m_loadedSchemeHasUnsavedChanges = false;
+        // sync it and delete pointer
+        config->sync();
+        delete config;
+        // reopen and update window
+        m_config = KSharedConfig::openConfig(newpath);
+        m_schemeName = name;
+        setWindowTitle(name);
 
-/*FIXME        QList<QListWidgetItem*> foundItems = schemeList->findItems(name, Qt::MatchExactly);
-//FIXME        QIcon icon = createSchemePreviewIcon(m_config);
-        if (foundItems.size() < 1)
-        {
-            // add it to the list since it's not in there already
-            populateSchemeList();
-
-            // then select the new item
-            schemeList->setCurrentItem(schemeList->findItems(name, Qt::MatchExactly).at(0));
-        }
-        else
-        {
-            // update the icon of the one that's in the list
-            foundItems[0]->setIcon(icon);
-            schemeList->setCurrentRow(schemeList->row(foundItems[0]));
-        }*/
-
-        // set m_config back to the system one
-        m_config = temp;
-
-        // store colorscheme name in global settings
-        group = KConfigGroup(m_config, "General");
-        group.writeEntry("ColorScheme", name);
-
-        emit changed(true);
+        setUnsavedChanges(false);
     }
     else if (!canWrite && file.exists())
     {
-        // give error message if !canWrite && file.exists()
         KMessageBox::error(this, i18n("You do not have permission to overwrite that scheme"), i18n("Error"));
     }
 }
@@ -215,9 +196,7 @@ void SchemeEditorDialog::updateTabs(bool madeByUser)
     if (madeByUser)
     {
         qDebug() <<"update";
-        buttonBox->button(QDialogButtonBox::Save)->setEnabled(true);
-        buttonBox->button(QDialogButtonBox::Reset)->setEnabled(true);
-        schemeKnsUploadButton->setEnabled(true);
+        setUnsavedChanges(true);
     }
     KConfigGroup group(m_config, "ColorEffects:Inactive");
     bool hideInactiveTab = group.readEntry("Enable", QVariant(true)).toBool();
@@ -234,4 +213,19 @@ void SchemeEditorDialog::updateTabs(bool madeByUser)
     m_colorTab->updateValues();
     m_inactiveTab->updateValues();
     m_disabledTab->updateValues();
+}
+
+void SchemeEditorDialog::setUnsavedChanges(bool changes)
+{
+    m_unsavedChanges = changes;
+    if (changes)
+    {
+        buttonBox->button(QDialogButtonBox::Save)->setEnabled(true);
+        buttonBox->button(QDialogButtonBox::Reset)->setEnabled(true);
+    }
+    else
+    {
+        buttonBox->button(QDialogButtonBox::Save)->setEnabled(false);
+        buttonBox->button(QDialogButtonBox::Reset)->setEnabled(false);
+    }
 }

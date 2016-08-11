@@ -332,10 +332,6 @@ void SchemeEditorColors::changeColor(int row, const QColor &newColor)
 
     updateColorSchemes();
 
-    QString colorScheme = i18nc("Current color scheme", "Current");
-    KConfigGroup group(m_config, "General");
-    group.writeEntry("ColorScheme", colorScheme);
-
     emit changed(true);
 }
 
@@ -496,11 +492,6 @@ void SchemeEditorColors::setCommonDecoration(KColorScheme::DecorationRole role, 
 
 void SchemeEditorColors::updateFromColorSchemes()
 {
-// FIXME: This should move in dialog?
-    // store colorscheme name in global settings
-//    KConfigGroup group(m_config, "General");
-//    group.writeEntry("ColorScheme", m_currentColorScheme);
-
     for (int i = KColorScheme::View; i <= KColorScheme::Tooltip; ++i)
     {
         KConfigGroup group(m_config, colorSetGroupKey(i));

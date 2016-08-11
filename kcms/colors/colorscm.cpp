@@ -129,11 +129,11 @@ void KColorCm::populateSchemeList()
 
     // add current scheme entry
     icon = createSchemePreviewIcon(m_config);
-    QListWidgetItem *currentitem = new QListWidgetItem(icon, i18nc("Current color scheme", "Current"));
+    /*QListWidgetItem *currentitem = new QListWidgetItem(icon, i18nc("Current color scheme", "Current"));
     schemeList->insertItem(0, currentitem);
     schemeList->blockSignals(true); // don't emit changed signals
     schemeList->setCurrentItem(currentitem);
-    schemeList->blockSignals(false);
+    schemeList->blockSignals(false);*/
 }
 
 
@@ -162,9 +162,7 @@ void KColorCm::loadScheme(QListWidgetItem *currentItem, QListWidgetItem *previou
 
     if (currentItem != NULL)
     {
-
         // load it
-
         const QString name = currentItem->text();
         m_currentColorScheme = name;
         const QString fileBaseName = currentItem->data(Qt::UserRole).toString();
@@ -178,11 +176,6 @@ void KColorCm::loadScheme(QListWidgetItem *currentItem, QListWidgetItem *previou
             config->setReadDefaults(false);
             // load the default scheme
             emit changed(true);
-        }
-        else if (name == i18nc("Current color scheme", "Current"))
-        {
-            schemeRemoveButton->setEnabled(false);
-            loadInternal();
         }
         else
         {
@@ -229,30 +222,60 @@ void KColorCm::on_schemeImportButton_clicked()
     // get the path to the scheme to import
     QUrl url = QUrl::fromLocalFile(QFileDialog::getOpenFileName(this, i18n("Import Color Scheme")));
 
-    if(url.isValid())
+    if(!url.isValid())
     {
-        // TODO: possibly untar or uncompress it
-        // open it
+        return;
+    }
+    // TODO: possibly untar or uncompress it
+    // open it
 
-        // load the scheme
-        KSharedConfigPtr config = KSharedConfig::openConfig(url.path());
+    // load the scheme
+    KSharedConfigPtr config = KSharedConfig::openConfig(url.path());
 
-        if (config->groupList().contains(QStringLiteral("Color Scheme")))
-        {
-            KMessageBox::sorry(this,
-                i18n("The scheme you have selected appears to be a KDE3 scheme.\n\n"
-                     "This is not supported anymore."),
-                i18n("Notice"));
-            return;
+    if (config->groupList().contains(QStringLiteral("Color Scheme")))
+    {
+        KMessageBox::sorry(this,
+            i18n("The scheme you have selected appears to be a KDE3 scheme.\n\n"
+                    "This is not supported anymore."),
+            i18n("Notice"));
+        return;
+    }
+
+    // Do not overwrite another scheme
+    KConfigGroup group(config, "General");
+    QString name = group.readEntry("Name");
+
+    int increment = 0;
+    QString newName = name;
+    QString testpath = "";
+    do
+    {
+        if (increment) {
+            newName = name + QString::number(increment);
         }
-        else
-        {
-            // load scheme
-            loadScheme(config);
+        testpath = QStandardPaths::locate(QStandardPaths::GenericDataLocation,
+    "color-schemes/" + newName + ".colors");
+        increment++;
+    } while (!testpath.isEmpty());
 
-            // save it
-//FIXME            saveScheme(url.fileName());
-        }
+    QString newpath = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation)
+            + "/color-schemes/";
+    QDir dir;
+    dir.mkpath(newpath);
+    newpath += newName + ".colors";
+    QFile::copy(url.toLocalFile(), newpath);
+
+    // Update name
+    KSharedConfigPtr config2 = KSharedConfig::openConfig(newpath);
+    KConfigGroup group2(config2, "General");
+    group2.writeEntry("Name", newName);
+    config2->sync();
+
+    this->populateSchemeList();
+    QList<QListWidgetItem*> itemList = schemeList->findItems(newName, Qt::MatchExactly);
+    if (!itemList.isEmpty())
+    {
+        schemeList->setCurrentItem(itemList.first());
     }
 }
 
@@ -263,6 +286,8 @@ void KColorCm::on_schemeKnsButton_clicked()
     if ( ! dialog.changedEntries().isEmpty() )
     {
         populateSchemeList();
+        for ( auto t : dialog.installedEntries())
+            qDebug() << t.name();
     }
 }
 
@@ -322,7 +347,7 @@ void KColorCm::load()
     m_currentColorScheme = group.readEntry("ColorScheme");
 
     QList<QListWidgetItem*> itemList = schemeList->findItems(m_currentColorScheme, Qt::MatchExactly);
-    if(!itemList.isEmpty()) // "Current" is already selected, so don't handle the case that itemList is empty
+    if(!itemList.isEmpty()) // "Default" is already selected, so don't handle the case that itemList is empty
         schemeList->setCurrentItem(itemList.at(0));
 
     KConfig cfg(QStringLiteral("kcmdisplayrc"), KConfig::NoGlobals);
@@ -406,13 +431,14 @@ void KColorCm::on_schemeEditButton_clicked()
     const QString path = QStandardPaths::locate(QStandardPaths::GenericDataLocation,
                 "color-schemes/" + fileBaseName + ".colors");
     if (path.isEmpty()) {
-        //FIXME:: dialog + return
+        KMessageBox::sorry(this, i18n("This scheme was not found."), i18n("File not found"));
         return;
     }
     SchemeEditorDialog* dialog = new SchemeEditorDialog(path, this);
     dialog->setModal(true);
     dialog->show();
     connect(dialog, &SchemeEditorDialog::accepted, [=](){ this->populateSchemeList(); });
+    connect(dialog, &SchemeEditorDialog::rejected, [=](){ this->populateSchemeList(); });
 }
 
 void KColorCm::updateConfig(KSharedConfigPtr config)
@@ -467,7 +493,6 @@ void KColorCm::updateConfig(KSharedConfigPtr config)
     {
             groupWMOut.writeEntry(coloritem, groupWMTheme.readEntry(coloritem));
     }
-
 
     QStringList groupNameList;
     groupNameList << "ColorEffects:Inactive" << "ColorEffects:Disabled";

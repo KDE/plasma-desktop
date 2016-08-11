@@ -50,12 +50,6 @@ private Q_SLOTS:
     /** slot called when the upload scheme button is clicked */
     void on_schemeKnsUploadButton_clicked();
 
-    /** slot called when the save button is clicked */
-    void on_buttonBox_accepted();
-
-    /** slot called when the save button is clicked */
-    void on_buttonBox_rejected();
-
     void on_buttonBox_clicked(QAbstractButton *button);
 
     void updateTabs(bool byUser=false);
@@ -68,15 +62,15 @@ private:
         DisabledTab,
         InactiveTab
     };
-    /** save the current scheme with the given name
-     @param name name to save the scheme as
-     */
-    void saveScheme(const QString &name);
+    /** save the current scheme */
+    void saveScheme();
+    void setUnsavedChanges(bool changes);
 
     const QString m_filePath;
+    QString m_schemeName;
     KSharedConfigPtr m_config;
     bool m_disableUpdates;
-    bool m_loadedSchemeHasUnsavedChanges;
+    bool m_unsavedChanges;
 
     SchemeEditorOptions *m_optionTab;
     SchemeEditorColors *m_colorTab;

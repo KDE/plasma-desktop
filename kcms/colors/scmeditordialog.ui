@@ -48,7 +48,7 @@
      <item>
       <widget class="QPushButton" name="schemeKnsUploadButton">
        <property name="enabled">
-        <bool>false</bool>
+        <bool>true</bool>
        </property>
        <property name="toolTip">
         <string>Share the selected scheme on the Internet</string>
@@ -61,7 +61,7 @@
      <item>
       <widget class="QDialogButtonBox" name="buttonBox">
        <property name="standardButtons">
-        <set>QDialogButtonBox::Cancel|QDialogButtonBox::Reset|QDialogButtonBox::Save</set>
+        <set>QDialogButtonBox::Close|QDialogButtonBox::Reset|QDialogButtonBox::Save</set>
        </property>
       </widget>
      </item>
