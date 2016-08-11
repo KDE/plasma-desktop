@@ -260,7 +260,7 @@ MouseArea {
                         y: model.y - Math.round(units.devicePixelRatio)
                         width: model.width
                         height: model.height
-                        visible: !model.visible
+                        visible: !model.visible && !minimized
                         color: {
                             if (desktop.active) {
                                 if (model.active)
