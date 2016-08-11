@@ -387,6 +387,9 @@ void AppsModel::refreshInternal()
 
     if (m_entryPath.isEmpty()) {
         KServiceGroup::Ptr group = KServiceGroup::root();
+        if (!group) {
+            return;
+        }
 
         bool sortByGenericName = (appNameFormat() == AppEntry::GenericNameOnly || appNameFormat() == AppEntry::GenericNameAndName);
 
