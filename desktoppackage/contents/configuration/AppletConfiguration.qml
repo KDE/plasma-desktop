@@ -18,8 +18,10 @@
 
 import QtQuick 2.0
 import QtQuick.Dialogs 1.1
-import QtQuick.Controls 1.0 as QtControls
+import QtQuick.Controls 1.3 as QtControls
 import QtQuick.Layouts 1.0
+import QtQuick.Window 2.2
+
 import org.kde.plasma.core 2.1 as PlasmaCore
 import org.kde.plasma.configuration 2.0
 import org.kde.kquickcontrolsaddons 2.0
@@ -140,7 +142,7 @@ Rectangle {
         id: mainColumn
         anchors {
             fill: parent
-            margins: mainColumn.spacing //margins are hardcoded in QStyle we should match that here
+            margins: mainColumn.spacing * units.devicePixelRatio //margins are hardcoded in QStyle we should match that here
         }
         property int implicitWidth: Math.max(contentRow.implicitWidth, buttonsRow.implicitWidth) + 8
         property int implicitHeight: contentRow.implicitHeight + buttonsRow.implicitHeight + 8
@@ -151,49 +153,134 @@ Rectangle {
                 left: parent.left
                 right: parent.right
             }
-            spacing: units.largeSpacing
+            spacing: 0
             Layout.fillHeight: true
             Layout.preferredHeight: parent.height - buttonsRow.height
 
             QtControls.ScrollView {
                 id: categoriesScroll
-                frameVisible: true
+                frameVisible: false
+                horizontalScrollBarPolicy: Qt.ScrollBarAlwaysOff
                 Layout.fillHeight: true
                 visible: (configDialog.configModel ? configDialog.configModel.count : 0) + globalConfigModel.count > 1
-                Layout.preferredWidth: units.gridUnit * 7
+                Layout.maximumWidth: units.gridUnit * 7
+                Layout.preferredWidth: categories.implicitWidth
                 flickableItem.interactive: false
 
-                Rectangle {
-                    width: categoriesScroll.viewport.width
-                    height: Math.max(categoriesScroll.viewport.height, categories.height)
-                    color: syspal.base
+                Keys.onUpPressed: {
+                    var buttons = categories.children
 
-                    Column {
-                        id: categories
-                        width: parent.width
-                        height: childrenRect.height
-
-                        property Item currentItem: children[1]
-
-                        Repeater {
-                            model: root.isContainment ? globalConfigModel : undefined
-                            delegate: ConfigCategoryDelegate {}
+                    var foundPrevious = false
+                    for (var i = buttons.length - 1; i >= 0; --i) {
+                        var button = buttons[i];
+                        if (!button.hasOwnProperty("current")) {
+                            // not a ConfigCategoryDelegate
+                            continue;
                         }
-                        Repeater {
-                            model: configDialogFilterModel
-                            delegate: ConfigCategoryDelegate {}
-                        }
-                        Repeater {
-                            model: !root.isContainment ? globalConfigModel : undefined
-                            delegate: ConfigCategoryDelegate {}
+
+                        if (foundPrevious) {
+                            button.openCategory()
+                            return
+                        } else if (button.current) {
+                            foundPrevious = true
                         }
                     }
                 }
+
+                Keys.onDownPressed: {
+                    var buttons = categories.children
+
+                    var foundNext = false
+                    for (var i = 0, length = buttons.length; i < length; ++i) {
+                        var button = buttons[i];
+                        console.log(button)
+                        if (!button.hasOwnProperty("current")) {
+                            continue;
+                        }
+
+                        if (foundNext) {
+                            button.openCategory()
+                            return
+                        } else if (button.current) {
+                            foundNext = true
+                        }
+                    }
+                }
+
+                ColumnLayout {
+                    id: categories
+                    spacing: 0
+                    width: categoriesScroll.viewport.width
+
+                    property Item currentItem: children[1]
+
+                    Repeater {
+                        model: root.isContainment ? globalConfigModel : undefined
+                        delegate: ConfigCategoryDelegate {}
+                    }
+                    Repeater {
+                        model: configDialogFilterModel
+                        delegate: ConfigCategoryDelegate {}
+                    }
+                    Repeater {
+                        model: !root.isContainment ? globalConfigModel : undefined
+                        delegate: ConfigCategoryDelegate {}
+                    }
+                }
             }
+
+            Rectangle {
+                Layout.fillHeight: true
+                width: Math.round(units.devicePixelRatio)
+                color: syspal.highlight
+                visible: categoriesScroll.visible
+                opacity: categoriesScroll.activeFocus && Window.active ? 1 : 0.3
+                Behavior on color {
+                    ColorAnimation {
+                        duration: units.longDuration
+                        easing.type: Easing.InOutQuad
+                    }
+                }
+            }
+
+            Item { // spacer
+                width: units.largeSpacing
+                visible: categoriesScroll.visible
+            }
+
             QtControls.ScrollView {
                 id: scroll
                 Layout.fillHeight: true
                 Layout.fillWidth: true
+                // we want to focus the controls in the settings page right away, don't focus the ScrollView
+                activeFocusOnTab: false
+
+                // this horrible code below ensures the control with active focus stays visible in the window
+                // by scrolling the view up or down as needed when tabbing through the window
+                Window.onActiveFocusItemChanged: {
+                    var flickable = scroll.flickableItem;
+
+                    var item = Window.activeFocusItem;
+                    if (!item) {
+                        return;
+                    }
+
+                    // when an item withing ScrollView has active focus the ScrollView,
+                    // as FocusScope, also has it, so we only scroll in this case
+                    if (!scroll.activeFocus) {
+                        return;
+                    }
+
+                    var padding = units.gridUnit * 2 // some padding to the top/bottom when we scroll
+
+                    var yPos = item.mapToItem(scroll.contentItem, 0, 0).y;
+                    if (yPos < flickable.contentY) {
+                        flickable.contentY = Math.max(0, yPos - padding);
+                    } else if (yPos + item.height > flickable.contentY + flickable.height) {
+                        flickable.contentY = Math.min(flickable.contentHeight, yPos - flickable.height + item.height + padding);
+                    }
+                }
+
                 Column {
                     spacing: units.largeSpacing / 2
 
