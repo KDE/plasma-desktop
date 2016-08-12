@@ -27,11 +27,13 @@ import "../code/layout.js" as LayoutManager
 import "../code/tools.js" as TaskTools
 
 Item {
-    signal urlDropped(url url)
+    signal urlsDropped(var urls)
 
     property Item target
     property Item ignoredItem
     property bool moved: false
+
+    property alias hoveredItem: dropHandler.hoveredItem
 
     Timer {
         id: ignoreItemTimer
@@ -118,7 +120,7 @@ Item {
             }
 
             if (event.mimeData.hasUrls) {
-                parent.urlDropped(event.mimeData.url);
+                parent.urlsDropped(event.mimeData.urls);
             }
         }
 

@@ -31,6 +31,7 @@
 #include <QAction>
 #include <QActionGroup>
 #include <QApplication>
+#include <QJsonArray>
 #include <QQuickItem>
 #include <QQuickWindow>
 
@@ -340,6 +341,34 @@ void Backend::presentWindows(const QVariant &_winIds)
     KWindowEffects::presentWindows(m_taskManagerItem->window()->winId(), winIds);
 }
 
+bool Backend::isApplication(const QUrl &url) const
+{
+    if (!url.isValid() || !url.isLocalFile()) {
+        return false;
+    }
+
+    const QString &localPath = url.toLocalFile();
+
+    if (!KDesktopFile::isDesktopFile(localPath)) {
+        return false;
+    }
+
+    KDesktopFile desktopFile(localPath);
+    return desktopFile.hasApplicationType();
+}
+
+QList<QUrl> Backend::jsonArrayToUrlList(const QJsonArray &array) const
+{
+    QList<QUrl> urls;
+    urls.reserve(array.count());
+
+    for (auto it = array.constBegin(), end = array.constEnd(); it != end; ++it) {
+        urls << QUrl(it->toString());
+    }
+
+    return urls;
+}
+
 void Backend::windowsHovered(const QVariant &_winIds, bool hovered)
 {
     m_windowsToHighlight.clear();
@@ -358,19 +387,6 @@ void Backend::windowsHovered(const QVariant &_winIds, bool hovered)
     }
 
     updateWindowHighlight();
-}
-
-void Backend::urlDropped(const QUrl &url) const
-{
-    if (!url.isValid() || !url.isLocalFile()) {
-        return;
-    }
-
-    KDesktopFile desktopFile(url.toLocalFile());
-
-    if (desktopFile.hasApplicationType()) {
-        emit addLauncher(url);
-    }
 }
 
 void Backend::updateWindowHighlight()

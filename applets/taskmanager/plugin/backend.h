@@ -29,6 +29,7 @@ class QAction;
 class QActionGroup;
 class QQuickItem;
 class QQuickWindow;
+class QJsonArray;
 
 namespace KActivities {
     class Consumer;
@@ -74,10 +75,13 @@ class Backend : public QObject
 
         Q_INVOKABLE bool canPresentWindows() const;
 
+        Q_INVOKABLE bool isApplication(const QUrl &url) const;
+
+        Q_INVOKABLE QList<QUrl> jsonArrayToUrlList(const QJsonArray &array) const;
+
     public Q_SLOTS:
         void presentWindows(const QVariant &winIds);
         void windowsHovered(const QVariant &winIds, bool hovered);
-        void urlDropped(const QUrl &url) const;
 
     Q_SIGNALS:
         void taskManagerItemChanged() const;
