@@ -6,7 +6,6 @@ set(taskmanagerplugin_SRCS
     plugin/backend.cpp
     plugin/draghelper.cpp
     plugin/taskmanagerplugin.cpp
-    plugin/textlabel.cpp
 
     plugin/smartlaunchers/smartlauncherbackend.cpp
     plugin/smartlaunchers/smartlauncheritem.cpp
@@ -22,7 +21,6 @@ target_link_libraries(taskmanagerplugin
                       Qt5::DBus
                       Qt5::Qml
                       Qt5::Quick
-                      Qt5::Widgets
                       KF5::Activities
                       KF5::ActivitiesStats
                       KF5::I18n

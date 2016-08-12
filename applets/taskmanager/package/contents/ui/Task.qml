@@ -44,7 +44,7 @@ MouseArea {
     property int itemIndex: index
     property bool inPopup: false
     property bool isWindow: model.IsWindow === true
-    property alias textWidth: label.implicitTextWidth
+    property alias textWidth: label.implicitWidth
     property bool pressed: false
     property int pressX: -1
     property int pressY: -1
@@ -391,10 +391,11 @@ MouseArea {
         }
     }
 
-    Loader {
+    PlasmaComponents.Label {
         id: label
 
-        property int implicitTextWidth: label.item ? label.item.implicitWidth : 0
+        visible: (inPopup || !iconsOnly && model.IsLauncher !== true
+            && (parent.width - iconBox.height - units.smallSpacing) >= (theme.mSize(theme.defaultFont).width * 7))
 
         anchors {
             fill: parent
@@ -404,13 +405,11 @@ MouseArea {
             bottomMargin: taskFrame.margins.bottom
         }
 
-        visible: (inPopup || !iconsOnly && model.IsLauncher !== true
-            && (parent.width - iconBox.height - units.smallSpacing) >= (theme.mSize(theme.defaultFont).width * 7))
-
-        active: inPopup || !iconsOnly
-        asynchronous: true
-
-        source: plasmoid.configuration.experimentalQmlTextLabel ? "QmlTextLabel.qml" : "CppTextLabel.qml"
+        text: model.display
+        wrapMode: Text.Wrap
+        elide: Text.ElideRight
+        textFormat: Text.PlainText
+        verticalAlignment: Text.AlignVCenter
     }
 
     states: [
