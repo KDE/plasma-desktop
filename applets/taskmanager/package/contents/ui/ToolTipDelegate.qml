@@ -357,6 +357,7 @@ Column {
         Column {
             id: mainColumn
             y: _s
+            spacing: units.smallSpacing
 
             //This instance is purely for metrics
             PlasmaExtras.Heading {
@@ -370,8 +371,12 @@ Column {
                 id: tooltipMaintext
                 level: 3
                 width: Math.min(tooltipMaintextPlaceholder.width, preferredTextWidth)
+                height: undefined // unset stupid PlasmaComponents.Label default height
                 //width: 400
                 elide: Text.ElideRight
+                wrapMode: Text.WordWrap
+                // if there's no subtext allow two lines of window title
+                maximumLineCount: tooltipSubtext.visible ? 1 : 2
                 text: mainText
                 textFormat: Text.PlainText
             }
