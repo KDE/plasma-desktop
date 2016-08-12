@@ -2,7 +2,7 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"kcmcolors\")
 
 set(scheme_editor_SRCS
-    schemeeditor.cpp
+    kcolorschemeeditor.cpp
     scmeditordialog.cpp
     scmeditoroptions.cpp
     scmeditorcolors.cpp
@@ -20,9 +20,9 @@ ki18n_wrap_ui(scheme_editor_SRCS
     setpreview.ui
     )
 
-add_executable(scheme_editor ${scheme_editor_SRCS})
+add_executable(kcolorschemeeditor ${scheme_editor_SRCS})
 
-target_link_libraries(scheme_editor
+target_link_libraries(kcolorschemeeditor
     KF5::KCMUtils
     KF5::GuiAddons
     KF5::I18n
@@ -30,8 +30,8 @@ target_link_libraries(scheme_editor
     KF5::CoreAddons
     KF5::NewStuff
     )
-install(TARGETS scheme_editor  DESTINATION ${INSTALL_TARGETS_DEFAULT_ARGS})
-#install( FILES scheme_editor.desktop  DESTINATION  ${SERVICES_INSTALL_DIR} )
+install(TARGETS kcolorschemeeditor  DESTINATION ${INSTALL_TARGETS_DEFAULT_ARGS})
+install(FILES kcolorschemeeditor.desktop  DESTINATION  ${XDG_APPS_INSTALL_DIR})
 
 # ----------------
 

@@ -126,14 +126,6 @@ void KColorCm::populateSchemeList()
     icon = createSchemePreviewIcon(m_config);
     schemeList->insertItem(0, new QListWidgetItem(icon, i18nc("Default color scheme", "Default")));
     m_config->setReadDefaults(false);
-
-    // add current scheme entry
-    icon = createSchemePreviewIcon(m_config);
-    /*QListWidgetItem *currentitem = new QListWidgetItem(icon, i18nc("Current color scheme", "Current"));
-    schemeList->insertItem(0, currentitem);
-    schemeList->blockSignals(true); // don't emit changed signals
-    schemeList->setCurrentItem(currentitem);
-    schemeList->blockSignals(false);*/
 }
 
 

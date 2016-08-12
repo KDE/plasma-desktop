@@ -64,7 +64,6 @@ void SchemeEditorOptions::on_contrastSlider_valueChanged(int value)
 
 void SchemeEditorOptions::on_shadeSortedColumn_stateChanged(int state)
 {
-    qDebug() << "shade";
     if (m_disableUpdates)
         return;
     KConfigGroup group(m_config, "General");

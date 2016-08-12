@@ -195,7 +195,6 @@ void SchemeEditorDialog::updateTabs(bool madeByUser)
 {
     if (madeByUser)
     {
-        qDebug() <<"update";
         setUnsavedChanges(true);
     }
     KConfigGroup group(m_config, "ColorEffects:Inactive");
