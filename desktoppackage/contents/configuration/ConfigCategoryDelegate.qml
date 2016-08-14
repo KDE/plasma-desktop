@@ -60,17 +60,19 @@ MouseArea {
 //BEGIN connections
     onClicked: {
         categoriesScroll.forceActiveFocus()
+
+        if (current) {
+            return;
+        }
+
         //print("model source: " + model.source + " " + main.sourceFile);
         if (applyButton.enabled) {
             messageDialog.delegate = delegate;
             messageDialog.open();
             return;
         }
-        if (delegate.current) {
-            return;
-        } else {
-            openCategory();
-        }
+
+        openCategory();
     }
     onCurrentChanged: {
         if (current) {
