@@ -44,14 +44,13 @@ Column {
     readonly property int thumbnailHeight: units.gridUnit * 10
 
     property int preferredTextWidth: theme.mSize(theme.defaultFont).width * 30
-    property int _s: units.largeSpacing / 2
 
-    Layout.minimumWidth: Math.max(thumbnailWidth, windowRow.width, appLabelRow.width) + _s
-    Layout.minimumHeight: childrenRect.height
+    Layout.minimumWidth: Math.max(thumbnailWidth, windowRow.width, appLabelRow.width) + units.largeSpacing / 2
+    Layout.minimumHeight: childrenRect.height + units.largeSpacing
     Layout.maximumWidth: Layout.minimumWidth
     Layout.maximumHeight: Layout.minimumHeight
 
-    spacing: _s
+    spacing: units.largeSpacing
 
     states: State {
         when: mpris2Source.hasPlayer
@@ -175,8 +174,6 @@ Column {
 
                 Row {
                     id: windowRow
-                    width: childrenRect.width
-                    height: childrenRect.height
                     spacing: units.largeSpacing
 
                     Repeater {
@@ -333,19 +330,19 @@ Column {
 
     Row {
         id: appLabelRow
-        width: childrenRect.width + _s
-        height: childrenRect.height + units.largeSpacing
         spacing: units.largeSpacing
 
         Item {
             id: imageContainer
             width: tooltipIcon.width
             height: tooltipIcon.height
-            y: _s
 
             PlasmaCore.IconItem {
                 id: tooltipIcon
-                x: _s
+                anchors {
+                    left: parent.left
+                    leftMargin: units.largeSpacing / 2
+                }
                 width: units.iconSizes.desktop
                 height: width
                 animated: false
@@ -356,7 +353,6 @@ Column {
 
         Column {
             id: mainColumn
-            y: _s
             spacing: units.smallSpacing
 
             //This instance is purely for metrics
