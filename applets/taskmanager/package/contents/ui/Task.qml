@@ -308,8 +308,12 @@ MouseArea {
     Item {
         id: iconBox
 
-        x: adjustMargin(true, parent.width, taskFrame.margins.left)
-        y: adjustMargin(false, parent.height, taskFrame.margins.top)
+        anchors {
+            left: parent.left
+            leftMargin: adjustMargin(true, parent.width, taskFrame.margins.left)
+            top: parent.top
+            topMargin: adjustMargin(false, parent.height, taskFrame.margins.top)
+        }
 
         width: (label.visible ? height
             : parent.width - adjustMargin(true, parent.width, taskFrame.margins.left)
