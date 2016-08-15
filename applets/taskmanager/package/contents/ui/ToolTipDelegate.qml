@@ -50,6 +50,9 @@ Column {
     Layout.maximumWidth: Layout.minimumWidth
     Layout.maximumHeight: Layout.minimumHeight
 
+    LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
+    LayoutMirroring.childrenInherit: true
+
     spacing: units.largeSpacing
 
     states: State {
@@ -303,7 +306,7 @@ Column {
 
             PlasmaComponents.ToolButton {
                 enabled: mpris2Source.canGoBack
-                iconName: "media-skip-backward"
+                iconName: LayoutMirroring.enabled ? "media-skip-forward" : "media-skip-backward"
                 tooltip: i18nc("Go to previous song", "Previous")
                 Accessible.name: tooltip
                 onClicked: mpris2Source.goPrevious()
@@ -320,7 +323,7 @@ Column {
 
             PlasmaComponents.ToolButton {
                 enabled: mpris2Source.canGoNext
-                iconName: "media-skip-forward"
+                iconName: LayoutMirroring.enabled ? "media-skip-backward" : "media-skip-forward"
                 tooltip: i18nc("Go to next song", "Next")
                 Accessible.name: tooltip
                 onClicked: mpris2Source.goNext()
@@ -330,6 +333,7 @@ Column {
 
     Row {
         id: appLabelRow
+        anchors.left: parent.left
         spacing: units.largeSpacing
 
         Item {
