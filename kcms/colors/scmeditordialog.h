@@ -29,8 +29,6 @@
 
 #include "ui_scmeditordialog.h"
 
-#include "colorscm.h"
-
 class SchemeEditorOptions;
 class SchemeEditorColors;
 class SchemeEditorEffects;
