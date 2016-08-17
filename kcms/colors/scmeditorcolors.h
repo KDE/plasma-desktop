@@ -27,8 +27,6 @@
 #include <QPalette>
 #include <QWidget>
 
-#include "colorscm.h"
-
 #include "ui_scmeditorcolors.h"
 
 class KColorButton;
