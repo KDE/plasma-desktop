@@ -30,7 +30,7 @@ public:
         Kdelibs4Migration migration;
         QString configDirPath = migration.saveLocation("config");
         KSharedConfigPtr kde4Config = KSharedConfig::openConfig(configDirPath + '/' + fileName);
-        KSharedConfigPtr simpleConfig = KSharedConfig::openConfig("kdeglobals", KConfig::SimpleConfig);
+        KSharedConfigPtr simpleConfig = KSharedConfig::openConfig(fileName, KConfig::SimpleConfig);
         KConfigGroup simpleConfigGroup(simpleConfig, sourceGroup);
         KConfigGroup kde4ConfigGroup = kde4Config->group(sourceGroup);
         simpleConfigGroup.copyTo(&kde4ConfigGroup);

@@ -744,8 +744,7 @@ void MouseSettings::save(KConfig *config)
   else
       kcminputGroup.writeEntry("MouseButtonMapping",QString("LeftHanded"));
   kcminputGroup.writeEntry( "ReverseScrollPolarity", reverseScrollPolarity );
-
-  Kdelibs4SharedConfig::syncConfigGroup(QLatin1String("Mouse"), "kcminputrc");
+  kcminputGroup.sync();
 
   KSharedConfig::Ptr profile = KSharedConfig::openConfig("kdeglobals");
   KConfigGroup group(profile, "KDE");
@@ -755,9 +754,11 @@ void MouseSettings::save(KConfig *config)
   group.writeEntry("WheelScrollLines", wheelScrollLines, KConfig::Persistent);
   group.writeEntry("SingleClick", singleClick, KConfig::Persistent);
 
-  Kdelibs4SharedConfig::syncConfigGroup(QLatin1String("KDE"), "kdeglobals");
   group.sync();
   config->sync();
+
+  Kdelibs4SharedConfig::syncConfigGroup(QLatin1String("Mouse"), "kcminputrc");
+  Kdelibs4SharedConfig::syncConfigGroup(QLatin1String("KDE"), "kdeglobals");
 
   KGlobalSettings::self()->emitChange(KGlobalSettings::SettingsChanged, KGlobalSettings::SETTINGS_MOUSE);
 }
