@@ -67,6 +67,7 @@ KCMLookandFeel::KCMLookandFeel(QObject* parent, const QVariantList& args)
     , m_applyCursors(true)
     , m_applyWindowSwitcher(true)
     , m_applyDesktopSwitcher(true)
+    , m_resetDefaultLayout(false)
 {
     //This flag seems to be needed in order for QQuickWidget to work
     //see https://bugreports.qt-project.org/browse/QTBUG-40765
@@ -240,6 +241,18 @@ void KCMLookandFeel::save()
     }
 
     m_configGroup.writeEntry("LookAndFeelPackage", m_selectedPlugin);
+
+    QDBusMessage message;
+    if (m_resetDefaultLayout) {
+        message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.plasmashell"), QStringLiteral("/PlasmaShell"),
+                                                   QStringLiteral("org.kde.PlasmaShell"), QStringLiteral("loadLookAndFeelDefaultLayout"));
+
+        QList<QVariant> args;
+        args << m_selectedPlugin;
+        message.setArguments(args);
+
+        QDBusConnection::sessionBus().call(message, QDBus::NoBlock);
+    }
 
     if (!package.filePath("defaults").isEmpty()) {
         KSharedConfigPtr conf = KSharedConfig::openConfig(package.filePath("defaults"));
@@ -682,5 +695,23 @@ bool KCMLookandFeel::applyDesktopSwitcher() const
 {
     return m_applyDesktopSwitcher;
 }
+
+void KCMLookandFeel::setResetDefaultLayout(bool reset)
+{
+    if (m_resetDefaultLayout == reset) {
+        return;
+    }
+    m_resetDefaultLayout = reset;
+    emit resetDefaultLayoutChanged();
+    if (reset) {
+        setNeedsSave(true);
+    }
+}
+
+bool KCMLookandFeel::resetDefaultLayout() const
+{
+    return m_resetDefaultLayout;
+}
+
 
 #include "kcm.moc"

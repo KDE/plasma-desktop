@@ -130,6 +130,7 @@ Item {
                             onClicked: {
                                 grid.currentIndex = index
                                 kcm.selectedPlugin = model.pluginName
+                                resetCheckbox.checked = false;
                             }
                             Timer {
                                 interval: 1000 // FIXME TODO: Use platform value for tooltip activation delay.
@@ -155,11 +156,36 @@ Item {
                 }
             }
         }
-        QtControls.Button {
-            anchors.right: parent.right
-            text: i18n("Get New Looks...")
-            iconName: "get-hot-new-stuff"
-            onClicked: kcm.getNewStuff();
+        QtControls.Label {
+            text: i18nd("kcm_lookandfeel", "Warning: your Plasma Desktop layout will be lost and reset to the default layout provided by the selected theme.")
+            visible: resetCheckbox.checked
+            wrapMode: Text.WordWrap
+            Layout.fillWidth: true
+        }
+        Connections {
+            target: kcm
+            onNeedsSaveChanged: {
+                if (!needsSave) {
+                    resetCheckbox.checked = false;
+                }
+            }
+        }
+        RowLayout {
+            QtControls.CheckBox {
+                id: resetCheckbox
+                checked: kcm.resetDefaultLayout
+                text: i18n("Use Desktop Layout from theme")
+                onCheckedChanged: kcm.resetDefaultLayout = checked;
+            }
+            Item {
+                Layout.fillWidth: true
+            }
+            QtControls.Button {
+                anchors.right: parent.right
+                text: i18n("Get New Looks...")
+                iconName: "get-hot-new-stuff"
+                onClicked: kcm.getNewStuff();
+            }
         }
     }
 }
