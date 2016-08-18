@@ -31,7 +31,7 @@ target_link_libraries(kcolorschemeeditor
     KF5::NewStuff
     )
 install(TARGETS kcolorschemeeditor  DESTINATION ${INSTALL_TARGETS_DEFAULT_ARGS})
-install(FILES kcolorschemeeditor.desktop  DESTINATION  ${XDG_APPS_INSTALL_DIR})
+install(FILES org.kde.kcolorschemeeditor.desktop  DESTINATION  ${XDG_APPS_INSTALL_DIR})
 
 # ----------------
 
