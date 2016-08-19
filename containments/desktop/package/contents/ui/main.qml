@@ -88,6 +88,19 @@ DragDrop.DropArea {
             ? parent.height - (plasmoid.availableScreenRect.y + plasmoid.availableScreenRect.height) : 0
     }
 
+    Behavior on anchors.topMargin {
+        NumberAnimation { duration: units.longDuration; easing.type: Easing.InOutQuad }
+    }
+    Behavior on anchors.leftMargin {
+        NumberAnimation { duration: units.longDuration; easing.type: Easing.InOutQuad }
+    }
+    Behavior on anchors.rightMargin {
+        NumberAnimation { duration: units.longDuration; easing.type: Easing.InOutQuad }
+    }
+    Behavior on anchors.bottomMargin {
+        NumberAnimation { duration: units.longDuration; easing.type: Easing.InOutQuad }
+    }
+
     function updateGridSize()
     {
         LayoutManager.cellSize.width = root.iconWidth + toolBoxSvg.elementSize("left").width + toolBoxSvg.elementSize("right").width
