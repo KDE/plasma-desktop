@@ -68,7 +68,7 @@ Item {
         svg: PlasmaCore.Svg {
             imagePath: "icons/go"
         }
-        elementId: "go-next"
+        elementId: LayoutMirroring.enabled ? "go-previous" : "go-next"
         visible: !crumbRoot.root
     }
 } // crumbRoot
