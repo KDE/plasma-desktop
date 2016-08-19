@@ -38,7 +38,7 @@ Column {
     property string subText
     property variant icon
     property url launcherUrl
-    property bool group: (windows.length > 1)
+    property bool group: (windows !== undefined && windows.length > 1)
 
     readonly property int thumbnailWidth: units.gridUnit * 15
     readonly property int thumbnailHeight: units.gridUnit * 10
