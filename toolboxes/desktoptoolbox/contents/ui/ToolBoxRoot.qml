@@ -73,9 +73,14 @@ Item {
 
         Behavior on x {
             XAnimator { duration: units.longDuration; easing.type: Easing.InOutQuad }
+            // avoid the toolbox sliding over the screen on startup
+            // placeToolBox is initially called before the toolBoxButton is visible
+            // so those Behaviors won't fire on startup
+            enabled: toolBoxButton.visible
         }
         Behavior on y {
             YAnimator { duration: units.longDuration; easing.type: Easing.InOutQuad }
+            enabled: toolBoxButton.visible
         }
     }
 
