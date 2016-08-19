@@ -44,7 +44,6 @@ DragDrop.DropArea {
     property Item toolBox
     property var layoutManager: LayoutManager
 
-
     property Item dragOverlay
 
     property bool isHorizontal: plasmoid.formFactor != PlasmaCore.Types.Vertical
@@ -55,21 +54,20 @@ DragDrop.DropArea {
 
 //BEGIN functions
 function addApplet(applet, x, y) {
-    var container = appletContainerComponent.createObject(root)
+    var container = appletContainerComponent.createObject(root, {
+        applet: applet,
 
-    var appletWidth = applet.width;
-    var appletHeight = applet.height;
+        // don't show applet if it choses to be hidden but still make it
+        // accessible in the panelcontroller
+        visible: Qt.binding(function() {
+            return applet.status !== PlasmaCore.Types.HiddenStatus || (!plasmoid.immutable && plasmoid.userConfiguring)
+        })
+    });
+
     applet.parent = container;
-    container.applet = applet;
     applet.anchors.fill = container;
 
     applet.visible = true;
-
-    // don't show applet if it choses to be hidden but still make it
-    // accessible in the panelcontroller
-    container.visible = Qt.binding(function() {
-        return applet.status !== PlasmaCore.Types.HiddenStatus || (!plasmoid.immutable && plasmoid.userConfiguring)
-    })
 
     // Is there a DND placeholder? Replace it!
     if (dndSpacer.parent === currentLayout) {
@@ -151,9 +149,7 @@ function checkLastSpacer() {
     if (!expands) {
         lastSpacer.parent = currentLayout
     }
-
 }
-
 //END functions
 
 //BEGIN connections
@@ -165,8 +161,13 @@ function checkLastSpacer() {
         LayoutManager.lastSpacer = lastSpacer;
         LayoutManager.restore();
         containmentSizeSyncTimer.restart();
-        plasmoid.action("configure").visible = !plasmoid.immutable;
-        plasmoid.action("configure").enabled = !plasmoid.immutable;
+
+        plasmoid.action("configure").visible = Qt.binding(function() {
+            return !plasmoid.immutable;
+        });
+        plasmoid.action("configure").enabled = Qt.binding(function() {
+            return !plasmoid.immutable;
+        });
     }
 
     onDragEnter: {
@@ -238,30 +239,25 @@ function checkLastSpacer() {
             for (var i = 0; i < plasmoid.applets.length; ++i) {
                 plasmoid.applets[i].expanded = false;
             }
+
             if (!dragOverlay) {
                 var component = Qt.createComponent("ConfigOverlay.qml");
-                if (component.status == Component.Ready) {
+                if (component.status === Component.Ready) {
                     dragOverlay = component.createObject(root);
                 } else {
-                    console.log("Could not create ConfigOverlay");
-                    console.log(component.errorString());
+                    console.log("Could not create ConfigOverlay:", component.errorString());
                 }
                 component.destroy();
             } else {
                 dragOverlay.visible = true;
             }
         } else {
-            dragOverlay.visible = false;
             dragOverlay.destroy();
         }
     }
 
     Plasmoid.onFormFactorChanged: containmentSizeSyncTimer.restart();
-    Plasmoid.onImmutableChanged: {
-        containmentSizeSyncTimer.restart();
-        plasmoid.action("configure").visible = !plasmoid.immutable;
-        plasmoid.action("configure").enabled = !plasmoid.immutable;
-    }
+    Plasmoid.onImmutableChanged: containmentSizeSyncTimer.restart();
 
     onToolBoxChanged: {
         containmentSizeSyncTimer.restart();
@@ -398,18 +394,20 @@ function checkLastSpacer() {
 
         Layout.preferredWidth: {
             var width = 0;
-            for (var i = 0; i < currentLayout.children.length; ++i) {
-                if (currentLayout.children[i].Layout) {
-                    width += Math.max(currentLayout.children[i].Layout.minimumWidth, currentLayout.children[i].Layout.preferredWidth);
+            for (var i = 0, length = currentLayout.children.length; i < length; ++i) {
+                var item = currentLayout.children[i];
+                if (item.Layout) {
+                    width += Math.max(item.Layout.minimumWidth, item.Layout.preferredWidth);
                 }
             }
             return width;
         }
         Layout.preferredHeight: {
             var height = 0;
-            for (var i = 0; i < currentLayout.children.length; ++i) {
-                if (currentLayout.children[i].Layout) {
-                    height += Math.max(currentLayout.children[i].Layout.minimumHeight, currentLayout.children[i].Layout.preferredHeight);
+            for (var i = 0, length = currentLayout.children.length; i < length; ++i) {
+                var item = currentLayout.children[i];
+                if (item.Layout) {
+                    height += Math.max(item.Layout.minimumHeight, item.Layout.preferredHeight);
                 }
             }
             return height;
@@ -453,8 +451,9 @@ function checkLastSpacer() {
         interval: 4000
         onTriggered: {
             for (var i = 0; i < currentLayout.children.length; ++i) {
-                if ( currentLayout.children[i].hasOwnProperty('animationsEnabled') ) {
-                    currentLayout.children[i].animationsEnabled = true;
+                var item = currentLayout.children[i];
+                if (item.hasOwnProperty("animationsEnabled")) {
+                    item.animationsEnabled = true;
                 }
             }
         }
