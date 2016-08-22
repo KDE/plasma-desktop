@@ -107,6 +107,8 @@ MouseArea {
         width: iconSize
         height: width
 
+        colorGroup: PlasmaCore.Theme.ComplementaryColorGroup
+
         animated: false
         usesPlasmaTheme: false
 
