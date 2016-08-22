@@ -43,7 +43,7 @@ MouseArea {
 
     property int itemIndex: index
     property bool inPopup: false
-    property bool isWindow: model.IsWindow
+    property bool isWindow: model.IsWindow === true
     property alias textWidth: label.implicitTextWidth
     property bool pressed: false
     property int pressX: -1
