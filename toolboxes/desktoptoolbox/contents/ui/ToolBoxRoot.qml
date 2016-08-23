@@ -104,6 +104,10 @@ Item {
             hideOnWindowDeactivate: true
             mainItem: ToolBoxItem {
                 id: dialog
+
+                LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
+                LayoutMirroring.childrenInherit: true
+
                 Timer {
                     id: visibleTimer
                     interval: 300
