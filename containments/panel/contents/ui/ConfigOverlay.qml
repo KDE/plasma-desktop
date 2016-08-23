@@ -28,11 +28,7 @@ MouseArea {
 
     z: 1000
 
-    anchors {
-        fill: parent
-        rightMargin: (plasmoid.formFactor !== PlasmaCore.Types.Vertical) ? toolBox.width : 0
-        bottomMargin: (plasmoid.formFactor === PlasmaCore.Types.Vertical) ? toolBox.height : 0
-    }
+    anchors.fill: currentLayout
 
     hoverEnabled: true
 
@@ -205,7 +201,7 @@ MouseArea {
         placeHolder.width = currentApplet.width;
         placeHolder.height = currentApplet.height;
         root.layoutManager.insertBefore(currentApplet, placeHolder);
-        currentApplet.parent = root;
+        currentApplet.parent = moveAppletLayer;
         currentApplet.z = 900;
     }
 
@@ -365,6 +361,10 @@ MouseArea {
             hoverEnabled: true
             onEntered: hideTimer.stop();
             onExited:  hideTimer.restart();
+
+            LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
+            LayoutMirroring.childrenInherit: true
+
             Row {
                 id: handleRow
                 anchors.horizontalCenter: parent.horizontalCenter

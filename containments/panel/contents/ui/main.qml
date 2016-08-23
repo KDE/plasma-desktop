@@ -386,6 +386,14 @@ function checkLastSpacer() {
         height: (plasmoid.formFactor == PlasmaCore.Types.Vertical) ?  theme.mSize(theme.defaultFont).width * 10 : currentLayout.height
     }
 
+    // while the user is moving the applet when configuring the panel, the applet is reparented
+    // here so it can be moved freely; previously it was reparented to "root" but this one does not
+    // take into account the toolbox (which is left-of) the layout in right-to-left languages
+    Item {
+        id: moveAppletLayer
+        anchors.fill: currentLayout
+    }
+
     GridLayout {
         id: currentLayout
         property bool isLayoutHorizontal
