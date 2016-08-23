@@ -44,6 +44,9 @@ PlasmaCore.Dialog {
         Layout.minimumWidth: units.gridUnit * 20
         Layout.minimumHeight: Math.min(Screen.height - units.gridUnit * 10, heading.height + buttonsRow.height + mainList.contentHeight + units.gridUnit)
 
+        LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
+        LayoutMirroring.childrenInherit: true
+
         property string currentPlugin
         // we don't want a binding here, just set it to the current plugin once
         Component.onCompleted: currentPlugin = alternativesHelper.currentPlugin
