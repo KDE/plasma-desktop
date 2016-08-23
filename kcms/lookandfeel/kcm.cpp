@@ -85,6 +85,7 @@ KCMLookandFeel::KCMLookandFeel(QObject* parent, const QVariantList& args)
     QHash<int, QByteArray> roles = m_model->roleNames();
     roles[PluginNameRole] = "pluginName";
     roles[ScreenhotRole] = "screenshot";
+    roles[FullScreenPreviewRole] = "fullScreenPreview";
     roles[HasSplashRole] = "hasSplash";
     roles[HasLockScreenRole] = "hasLockScreen";
     roles[HasRunCommandRole] = "hasRunCommand";
@@ -186,7 +187,8 @@ void KCMLookandFeel::load()
         }
         QStandardItem* row = new QStandardItem(pkg.metadata().name());
         row->setData(pkg.metadata().pluginName(), PluginNameRole);
-        row->setData(pkg.filePath("previews", QStringLiteral("preview.png")), ScreenhotRole);
+        row->setData(pkg.filePath("preview"), ScreenhotRole);
+        row->setData(pkg.filePath("fullscreenpreview"), FullScreenPreviewRole);
 
         //What the package provides
         row->setData(!pkg.filePath("splashmainscript").isEmpty(), HasSplashRole);

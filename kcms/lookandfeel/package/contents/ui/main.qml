@@ -18,6 +18,7 @@
 
 import QtQuick 2.1
 import QtQuick.Layouts 1.1
+import QtQuick.Window 2.2
 import QtQuick.Controls 1.0 as QtControls
 import org.kde.kquickcontrolsaddons 2.0
 import QtQuick.Controls.Private 1.0
@@ -141,6 +142,28 @@ Item {
                                     Tooltip.showText(parent, Qt.point(parent.mouseX, parent.mouseY), model.display);
                                 }
                             }
+                            PlasmaComponents.ToolButton {
+                                anchors {
+                                    top: parent.top
+                                    right: parent.right
+                                    margins: units.smallSpacing
+                                }
+                                visible: model.fullScreenPreview != ""
+                                iconSource: "media-playback-start"
+                                tooltip: i18n("Test Splashscreen")
+                                flat: false
+                                onClicked: {
+                                    previewWindow.url = model.fullScreenPreview;
+                                    previewWindow.showFullScreen();
+                                }
+                                opacity: parent.containsMouse ? 1 : 0
+                                Behavior on opacity {
+                                    PropertyAnimation {
+                                        duration: units.longDuration
+                                        easing.type: Easing.OutQuad
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -185,6 +208,31 @@ Item {
                 text: i18n("Get New Looks...")
                 iconName: "get-hot-new-stuff"
                 onClicked: kcm.getNewStuff();
+            }
+        }
+    }
+
+    Window {
+        id: previewWindow
+        property alias url: previewImage.source
+        color: Qt.rgba(0, 0, 0, 0.7)
+        MouseArea {
+            anchors.fill: parent
+            Image {
+                id: previewImage
+                anchors.centerIn: parent
+                fillMode: Image.PreserveAspectFit
+                width: Math.min(parent.width, sourceSize.width)
+                height: Math.min(parent.height, sourceSize.height)
+            }
+            onClicked: previewWindow.visible = false;
+            QtControls.ToolButton {
+                anchors {
+                    top: parent.top
+                    right: parent.right
+                }
+                iconName: "window-close"
+                onClicked: previewWindow.visible = false;
             }
         }
     }

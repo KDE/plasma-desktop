@@ -51,6 +51,7 @@ public:
     enum Roles {
         PluginNameRole = Qt::UserRole +1,
         ScreenhotRole,
+        FullScreenPreviewRole,
         HasSplashRole,
         HasLockScreenRole,
         HasRunCommandRole,
