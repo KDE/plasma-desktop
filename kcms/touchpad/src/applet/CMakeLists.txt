@@ -26,7 +26,7 @@ target_link_libraries(plasma_engine_touchpad
 		      Qt5::DBus
 )
 
-kcoreaddons_desktop_to_json(plasma_engine_touchpad ${CMAKE_CURRENT_BINARY_DIR}/plasma-dataengine-touchpad.desktop)
+kcoreaddons_desktop_to_json(plasma_engine_touchpad ${CMAKE_CURRENT_BINARY_DIR}/plasma-dataengine-touchpad.desktop SERVICE_TYPES kcmodule.desktop)
 
 install(TARGETS plasma_engine_touchpad
         DESTINATION ${PLUGIN_INSTALL_DIR}/plasma/dataengine

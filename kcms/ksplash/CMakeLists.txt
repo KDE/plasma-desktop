@@ -20,7 +20,7 @@ target_link_libraries(kcm_splashscreen
   Qt5::QuickWidgets
 )
 
-kcoreaddons_desktop_to_json(kcm_splashscreen "kcm_splashscreen.desktop")
+kcoreaddons_desktop_to_json(kcm_splashscreen "kcm_splashscreen.desktop" SERVICE_TYPES kcmodule.desktop)
 
 #this desktop file is installed only for retrocompatibility with sycoca
 install(FILES kcm_splashscreen.desktop DESTINATION ${SERVICES_INSTALL_DIR})

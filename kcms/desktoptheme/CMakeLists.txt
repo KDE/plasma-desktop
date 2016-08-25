@@ -17,7 +17,7 @@ target_link_libraries(kcm_desktoptheme
   KF5::NewStuff
 )
 
-kcoreaddons_desktop_to_json(kcm_desktoptheme "kcm_desktoptheme.desktop")
+kcoreaddons_desktop_to_json(kcm_desktoptheme "kcm_desktoptheme.desktop" SERVICE_TYPES kcmodule.desktop)
 
 #this desktop file is installed only for retrocompatibility with sycoca
 install(FILES kcm_desktoptheme.desktop DESTINATION ${SERVICES_INSTALL_DIR})

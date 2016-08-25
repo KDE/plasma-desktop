@@ -43,7 +43,7 @@ ecm_qt_declare_logging_category(kded_keyboard_SRCS
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 add_library(kded_keyboard MODULE ${kded_keyboard_SRCS})
 set_target_properties(kded_keyboard PROPERTIES OUTPUT_NAME keyboard)
-kcoreaddons_desktop_to_json(kded_keyboard keyboard.desktop)
+kcoreaddons_desktop_to_json(kded_keyboard keyboard.desktop SERVICE_TYPES kcmodule.desktop)
 
 target_link_libraries(kded_keyboard
     Qt5::Concurrent
