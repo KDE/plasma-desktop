@@ -73,12 +73,12 @@ void SystemEntry::init()
             m_valid = false;
             break;
         case LockSession:
-            m_valid = KAuthorized::authorizeKAction("lock_screen");
+            m_valid = KAuthorized::authorizeAction("lock_screen");
             break;
         case LogoutSession:
         case SaveSession:
         {
-            bool authorize = KAuthorized::authorizeKAction("logout") && KAuthorized::authorize("logout");
+            bool authorize = KAuthorized::authorizeAction("logout") && KAuthorized::authorize("logout");
 
             if (m_action == SaveSession) {
                 const KConfigGroup c(KSharedConfig::openConfig("ksmserverrc", KConfig::NoGlobals), "General");
@@ -91,7 +91,7 @@ void SystemEntry::init()
             break;
         }
         case SwitchUser:
-            m_valid = (KAuthorized::authorizeKAction("start_new_session") || KAuthorized::authorizeKAction("switch_user"))
+            m_valid = (KAuthorized::authorizeAction("start_new_session") || KAuthorized::authorizeAction("switch_user"))
                 && m_displayManager->isSwitchable();
             break;
         case SuspendToRam:
