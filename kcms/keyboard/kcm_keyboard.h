@@ -24,7 +24,7 @@
 
 class KCMKeyboardWidget;
 class KeyboardConfig;
-class Rules;
+struct Rules;
 
 class KCMKeyboard: public KCModule
 {

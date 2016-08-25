@@ -27,7 +27,7 @@
 
 #include <config-keyboard.h>
 
-class Rules;
+struct Rules;
 class Flags;
 class Ui_AddLayoutDialog;
 

@@ -22,8 +22,8 @@
 
 #include <kactioncollection.h>
 
-class Rules;
-class LayoutUnit;
+struct Rules;
+struct LayoutUnit;
 template <typename T> class QList;
 
 

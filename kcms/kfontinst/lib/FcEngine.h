@@ -49,7 +49,7 @@ class Q_DECL_EXPORT CFcEngine
 {
     public:
 
-    struct Xft;
+    class Xft;
     
     struct TRange
     {

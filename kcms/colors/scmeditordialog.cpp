@@ -36,8 +36,8 @@
 
 SchemeEditorDialog::SchemeEditorDialog(const QString &path, QWidget *parent)
     : QDialog( parent )
-    , m_disableUpdates(false)
     , m_filePath(path)
+    , m_disableUpdates(false)
     , m_unsavedChanges(false)
 {
     m_config = KSharedConfig::openConfig(path);

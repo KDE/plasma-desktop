@@ -26,9 +26,9 @@
 
 class QPixmap;
 class QIcon;
-class LayoutUnit;
+struct LayoutUnit;
 class KeyboardConfig;
-class Rules;
+struct Rules;
 class QPainter;
 namespace Plasma {
 	class Svg;

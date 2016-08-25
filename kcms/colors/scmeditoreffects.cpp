@@ -25,8 +25,8 @@
 
 SchemeEditorEffects::SchemeEditorEffects(KSharedConfigPtr config, QPalette::ColorGroup palette, QWidget *parent)
     : QWidget( parent )
-    , m_config(config)
     , m_palette(palette)
+    , m_config(config)
 {
     setupUi(this);
 }

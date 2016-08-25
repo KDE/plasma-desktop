@@ -31,7 +31,7 @@ class LayoutsMenu;
  *  System tray icon to show layouts
  */
 class KStatusNotifierItem;
-class Rules;
+struct Rules;
 class Flags;
 class LayoutTrayIcon : public QObject
 {

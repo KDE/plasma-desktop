@@ -28,7 +28,7 @@
 
 class QWidget;
 class KeyboardConfig;
-class Rules;
+struct Rules;
 class Flags;
 class QString;
 class QPushButton;

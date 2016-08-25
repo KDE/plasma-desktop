@@ -21,7 +21,7 @@
 #define XKB_HELPER_H_
 
 template <typename T> class QList;
-class LayoutUnit;
+struct LayoutUnit;
 class QStringList;
 class KeyboardConfig;
 
