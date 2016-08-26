@@ -370,6 +370,11 @@ QString SortedActivitiesModel::relativeActivity(int relative) const
 
     const auto currentRowCount = sourceModel()->rowCount();
 
+    //x % 0 is undefined in c++
+    if (currentRowCount == 0) {
+        return QString();
+    }
+
     int currentActivityRow = 0;
 
     for (; currentActivityRow < currentRowCount; currentActivityRow++) {
