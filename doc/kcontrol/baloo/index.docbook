@@ -5,7 +5,7 @@
   <!ENTITY % English "INCLUDE">
 ]>
 <article id="baloo" lang="&language;">
-<title>File Search Settings</title>
+<title>File Search</title>
 <articleinfo>
 <authorgroup>
 <author>
@@ -15,11 +15,11 @@
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date>2016-03-02</date>
-<releaseinfo>Plasma 5.5</releaseinfo>
+<date>2016-08-26</date>
+<releaseinfo>Plasma 5.8</releaseinfo>
 
 <keywordset>
-<keyword>KDE</keyword>
+<keyword>Plasma</keyword>
 <keyword>Systemsettings</keyword>
 <keyword>search</keyword>
 <keyword>file</keyword>
@@ -34,12 +34,20 @@ indexed for fast searching.
 It internally uses a technology called Baloo to efficiently search through the files.
 </para>
 
+<para>Add the widget <guilabel>Search</guilabel> to your panel or enable the search in &krunner;
+to use the indexing results for faster access to your documents.
+</para>
+
+<para>The file search index also used &eg; by &kmail; for fast searching in your emails and contacts.
+</para>
+
 <variablelist>
 <varlistentry><term><guilabel>Exclude Folders</guilabel></term>
 <listitem>
     <para>
-        You are presented with a list of folders which should not be searched. By default
-        your entire $HOME directory is indexed, and no other drives are indexed.
+        You are presented with a list of folders which should not be searched. By default only
+        your entire <filename class="directory"><envar>$HOME</envar></filename> folder is
+        indexed, and no other drives are indexed.
     </para>
     <para>
         Removable media is never indexed by default. It can be explicitly removed from
@@ -49,5 +57,9 @@ It internally uses a technology called Baloo to efficiently search through the f
 </varlistentry>
 
 </variablelist>
+
+<para>By default <guilabel>Enable File Search</guilabel> is activated, uncheck this setting if
+you want to use the file search at all.
+</para>
 
 </article>
