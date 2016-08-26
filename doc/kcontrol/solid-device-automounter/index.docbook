@@ -12,8 +12,8 @@
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date>2012-12-05</date>
-<releaseinfo>&kde; 4.12</releaseinfo>
+<date>2016-08-24</date>
+<releaseinfo>&plasma; 5.8</releaseinfo>
 
 <keywordset>
 <keyword>KDE</keyword>
@@ -48,12 +48,12 @@ regardless of anything selected in the <guilabel>Device Overrides</guilabel> sec
 <varlistentry><term><guilabel>Only automatically mount removable media that has been 
 manually mounted before</guilabel></term>
 <listitem><para>
-When this is checked, &kde; will only automatically mount devices it 
+When this is checked, &plasma; will only automatically mount devices it
 remembers. A device is <quote>remembered</quote> if it has ever been mounted before; &eg; 
 plugging in a USB media player to charge is not sufficient to <quote>remember</quote> it. 
-If the files are not accessed, &kde; 
+If the files are not accessed, &plasma;
 will not automatically mount the player next time it is seen. Once they have 
-been accessed, however, &kde; will remember to automatically make the contents 
+been accessed, however, &plasma; will remember to automatically make the contents
 accessible to your system.
 </para></listitem>
 </varlistentry>
@@ -61,21 +61,21 @@ accessible to your system.
 <varlistentry><term><guilabel>Mount all removable media at login</guilabel></term>
 <listitem><para>
 If any removable storage devices are connected to your system when you login 
-to your desktop, &kde; will automatically make the contents available to your 
+to your desktop, &plasma; will automatically make the contents available to your
 system for other programs to read.
 </para></listitem>
 </varlistentry>
 
 <varlistentry><term><guilabel>Automatically mount removable media when attached</guilabel></term>
 <listitem><para>
-When this is checked, &kde; will automatically make the contents of any 
+When this is checked, &plasma; will automatically make the contents of any
 storage device available to the system when it is plugged in or attached.
 </para></listitem>
 </varlistentry>
 
 <varlistentry><term><guilabel>Device Overrides</guilabel></term>
 <listitem><para>
-This list contains the storage devices known to &kde;. If <guilabel>Automount on Login
+This list contains the storage devices known to &plasma;. If <guilabel>Automount on Login
 </guilabel>is checked, the device will be automatically mounted even though <guilabel>Mount 
 all removable media at login</guilabel> is unchecked. The same applies for 
 <guilabel>Automount on Attach</guilabel>.</para>
@@ -87,10 +87,10 @@ overrides do not apply and no devices will be automatically mounted.
 
 <varlistentry><term><guibutton>Forget Device</guibutton></term>
 <listitem><para>
-Clicking this button causes &kde; to <quote>forget</quote> that the selected devices ever 
+Clicking this button causes &plasma; to <quote>forget</quote> that the selected devices ever
 existed. This is only useful if <guilabel>Only automatically mount removable media 
 that has been manually mounted before</guilabel> is checked. Once a device is 
-forgotten and &kde; is set to only automatically mount familiar devices, the 
+forgotten and &plasma; is set to only automatically mount familiar devices, the
 device will not be automatically mounted.
 </para></listitem>
 </varlistentry>
