@@ -161,6 +161,7 @@ void KColorCm::loadScheme(QListWidgetItem *currentItem, QListWidgetItem *previou
         if (name == i18nc("Default color scheme", "Default"))
         {
             schemeRemoveButton->setEnabled(false);
+            schemeEditButton->setEnabled(false);
 
             KSharedConfigPtr config = m_config;
             config->setReadDefaults(true);
@@ -178,12 +179,16 @@ void KColorCm::loadScheme(QListWidgetItem *currentItem, QListWidgetItem *previou
             const bool canWrite = (permissions & QFile::WriteUser);
             qDebug() << "checking permissions of " << path;
             schemeRemoveButton->setEnabled(canWrite);
+            schemeEditButton->setEnabled(true);
 
             KSharedConfigPtr config = KSharedConfig::openConfig(path);
             loadScheme(config);
 
             emit changed(true);
         }
+    } else {
+        schemeEditButton->setEnabled(false);
+        schemeRemoveButton->setEnabled(false);
     }
 }
 
@@ -419,6 +424,9 @@ void KColorCm::defaults()
 void KColorCm::on_schemeEditButton_clicked()
 {
     QListWidgetItem *currentItem = schemeList->currentItem();
+    if (!currentItem) {
+        return;
+    }
     const QString fileBaseName = currentItem->data(Qt::UserRole).toString();
     const QString path = QStandardPaths::locate(QStandardPaths::GenericDataLocation,
                 "color-schemes/" + fileBaseName + ".colors");
