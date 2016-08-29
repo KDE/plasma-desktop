@@ -276,8 +276,14 @@ Rectangle {
                     var yPos = item.mapToItem(scroll.contentItem, 0, 0).y;
                     if (yPos < flickable.contentY) {
                         flickable.contentY = Math.max(0, yPos - padding);
-                    } else if (yPos + item.height > flickable.contentY + flickable.height) {
-                        flickable.contentY = Math.min(flickable.contentHeight, yPos - flickable.height + item.height + padding);
+
+                    // The "Math.min(padding, item.height)" ensures that we only scroll the item into view
+                    // when it's barely visible. The logic was mostly meant for keyboard navigating through
+                    // a list of CheckBoxes, so this check keeps us from trying to scroll an inner ScrollView
+                    // into view when it implicitly gains focus (like plasma-pa config dialog has).
+                    } else if (yPos + Math.min(padding, item.height) > flickable.contentY + flickable.height) {
+                        flickable.contentY = Math.min(flickable.contentHeight - flickable.height,
+                                                      yPos - flickable.height + item.height + padding);
                     }
                 }
 
