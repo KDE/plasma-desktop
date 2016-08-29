@@ -53,7 +53,7 @@ Column {
     LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
 
-    spacing: units.largeSpacing
+    spacing: units.largeSpacing / 2
 
     states: State {
         when: mpris2Source.hasPlayer
@@ -377,6 +377,7 @@ Column {
                 wrapMode: Text.WordWrap
                 // if there's no subtext allow two lines of window title
                 maximumLineCount: tooltipSubtext.visible ? 1 : 2
+                lineHeight: 0.95
                 text: mainText
                 textFormat: Text.PlainText
             }
