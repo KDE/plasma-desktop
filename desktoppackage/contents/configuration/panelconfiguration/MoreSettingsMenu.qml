@@ -34,6 +34,10 @@ PlasmaCore.Dialog {
         Layout.minimumWidth: menuColumn.implicitWidth
         Layout.minimumHeight: menuColumn.implicitHeight
         spacing: units.smallSpacing
+
+        LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
+        LayoutMirroring.childrenInherit: true
+
         PlasmaExtras.Heading {
             level: 3
             text: i18nd("plasma_shell_org.kde.plasma.desktop", "Panel Alignment")

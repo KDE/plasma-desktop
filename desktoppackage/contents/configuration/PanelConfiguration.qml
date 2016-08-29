@@ -36,6 +36,9 @@ PlasmaCore.FrameSvgItem {
     height: 64
     imagePath: "dialogs/background"
 
+    LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
+    LayoutMirroring.childrenInherit: true
+
     state: {
         switch (panel.location) {
         case PlasmaCore.Types.TopEdge:
