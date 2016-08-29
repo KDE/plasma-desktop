@@ -52,6 +52,7 @@ DragDrop.DropArea {
     property bool isPopup: (plasmoid.location != PlasmaCore.Types.Floating)
     property bool useListViewMode: isPopup && plasmoid.configuration.viewMode === 0
 
+    property Component appletAppearanceComponent
     property Item toolBox
     property var layoutManager: LayoutManager
 
@@ -119,19 +120,25 @@ DragDrop.DropArea {
     }
 
     function addApplet(applet, x, y) {
-        var component = Qt.createComponent("AppletAppearance.qml");
-        var e = component.errorString();
-        if (e != "") {
-            print("Error loading AppletAppearance.qml: " + component.errorString());
+        if (!appletAppearanceComponent) {
+            appletAppearanceComponent = Qt.createComponent("AppletAppearance.qml");
         }
 
-        var container = component.createObject(resultsFlow)
+        if (appletAppearanceComponent.status !== Component.Ready) {
+            console.warn("Error loading AppletAppearance.qml:", appletAppearanceComponent.errorString());
+            return;
+        }
+
+        var category = "Applet-" + applet.id;
+
+        var container = appletAppearanceComponent.createObject(resultsFlow, {
+            category: category
+        });
 
         applet.parent = container
         applet.visible = true;
 
-        container.category = "Applet-" + applet.id;
-        var config = LayoutManager.itemsConfig[container.category];
+        var config = LayoutManager.itemsConfig[category];
 
         // We have it in the config.
         if (config !== undefined && config.width !== undefined &&
