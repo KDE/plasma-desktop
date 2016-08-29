@@ -612,7 +612,7 @@ Item {
                             var itemX = ((rows ? i : s) * gridView.cellWidth);
                             var itemY = ((rows ? s : i) * gridView.cellHeight);
 
-                            if (gridView.layoutDirection == Qt.RightToLeft) {
+                            if (gridView.effectiveLayoutDirection == Qt.RightToLeft) {
                                 itemX -= (rows ? gridView.contentX : gridView.originX);
                                 itemX += cWidth;
                                 itemX = (rows ? gridView.width : gridView.contentItem.width) - itemX;
@@ -728,7 +728,7 @@ Item {
                         dir.up();
                     } else if (positioner.enabled) {
                         var newIndex = positioner.nearestItem(currentIndex,
-                            FolderTools.effectiveNavDirection(gridView.flow, gridView.layoutDirection, Qt.LeftArrow));
+                            FolderTools.effectiveNavDirection(gridView.flow, gridView.effectiveLayoutDirection, Qt.LeftArrow));
 
                         if (newIndex != -1) {
                             currentIndex = newIndex;
@@ -753,7 +753,7 @@ Item {
                         func(positioner.map(currentIndex));
                     } else if (positioner.enabled) {
                         var newIndex = positioner.nearestItem(currentIndex,
-                            FolderTools.effectiveNavDirection(gridView.flow, gridView.layoutDirection, Qt.RightArrow));
+                            FolderTools.effectiveNavDirection(gridView.flow, gridView.effectiveLayoutDirection, Qt.RightArrow));
 
                         if (newIndex != -1) {
                             currentIndex = newIndex;
@@ -775,7 +775,7 @@ Item {
                 Keys.onUpPressed: {
                     if (positioner.enabled) {
                         var newIndex = positioner.nearestItem(currentIndex,
-                            FolderTools.effectiveNavDirection(gridView.flow, gridView.layoutDirection, Qt.UpArrow));
+                            FolderTools.effectiveNavDirection(gridView.flow, gridView.effectiveLayoutDirection, Qt.UpArrow));
 
                         if (newIndex != -1) {
                             currentIndex = newIndex;
@@ -797,7 +797,7 @@ Item {
                 Keys.onDownPressed: {
                     if (positioner.enabled) {
                         var newIndex = positioner.nearestItem(currentIndex,
-                            FolderTools.effectiveNavDirection(gridView.flow, gridView.layoutDirection, Qt.DownArrow));
+                            FolderTools.effectiveNavDirection(gridView.flow, gridView.effectiveLayoutDirection, Qt.DownArrow));
 
                         if (newIndex != -1) {
                             currentIndex = newIndex;
@@ -890,7 +890,7 @@ Item {
                     itemX = dropPos.x + offset.x + (listener.dragX % cellWidth) + (cellWidth / 2);
                     itemY = dropPos.y + offset.y + (listener.dragY % cellHeight) + (cellHeight / 2);
 
-                    if (gridView.layoutDirection == Qt.RightToLeft) {
+                    if (gridView.effectiveLayoutDirection == Qt.RightToLeft) {
                         itemX -= (rows ? gridView.contentX : gridView.originX);
                         itemX = (rows ? gridView.width : gridView.contentItem.width) - itemX;
                     }
