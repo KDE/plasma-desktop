@@ -87,8 +87,6 @@ void AppEntry::init(NameFormat nameFormat)
         m_description = nameFromService(m_service, GenericNameOnly);
     }
 
-    m_icon = QIcon::fromTheme(m_service->icon(), QIcon::fromTheme("unknown"));
-
     if (!m_menuEntryEditor) {
         m_menuEntryEditor = new MenuEntryEditor();
     }
@@ -101,6 +99,9 @@ bool AppEntry::isValid() const
 
 QIcon AppEntry::icon() const
 {
+    if (m_icon.isNull()) {
+        m_icon = QIcon::fromTheme(m_service->icon(), QIcon::fromTheme("unknown"));
+    }
     return m_icon;
 }
 
@@ -291,10 +292,9 @@ KService::Ptr AppEntry::defaultAppByName(const QString& name)
 }
 
 AppGroupEntry::AppGroupEntry(AppsModel *parentModel, KServiceGroup::Ptr group,
-    bool flat, bool separators, int appNameFormat) : AbstractGroupEntry(parentModel)
+    bool flat, bool separators, int appNameFormat) : AbstractGroupEntry(parentModel),
+    m_group(group)
 {
-    m_name = group->caption();
-    m_icon = QIcon::fromTheme(group->icon(), QIcon::fromTheme("unknown"));
     AppsModel* model = new AppsModel(group->entryPath(), flat, separators, parentModel);
     model->setAppNameFormat(appNameFormat);
     m_childModel = model;
@@ -312,12 +312,15 @@ AppGroupEntry::AppGroupEntry(AppsModel *parentModel, KServiceGroup::Ptr group,
 
 QIcon AppGroupEntry::icon() const
 {
+    if (m_icon.isNull()) {
+        m_icon = QIcon::fromTheme(m_group->icon(), QIcon::fromTheme("unknown"));
+    }
     return m_icon;
 }
 
 QString AppGroupEntry::name() const
 {
-    return m_name;
+    return m_group->caption();
 }
 
 bool AppGroupEntry::hasChildren() const
