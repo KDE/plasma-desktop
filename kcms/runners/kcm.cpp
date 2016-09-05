@@ -75,15 +75,21 @@ void SearchConfigItemDelegate::paint(QPainter *painter, const QStyleOptionViewIt
     opt.text.clear();					// draw everything else, but not text
     style->drawControl(QStyle::CE_ItemViewItem, &opt, painter, widget);
 
+    const bool isRtl = widget->layoutDirection() == Qt::RightToLeft;
+
     QRect textRect = option.rect;
     QRect styleRect = style->subElementRect(QStyle::SE_ItemViewItemText, &opt, widget);
-    textRect.setLeft(styleRect.left());
+    if (isRtl) {
+        textRect.setRight(styleRect.right());
+    } else {
+        textRect.setLeft(styleRect.left());
+    }
 
     QString mainText = index.data(Qt::DisplayRole).toString();
     QFont font = painter->font();
     font.setBold(true);
     painter->setFont(font);
-    textRect.translate(2 * m_margin, m_margin);
+    textRect.translate((isRtl ? -2 : 2) * m_margin, m_margin);
     style->drawItemText(painter, textRect, Qt::AlignLeft | Qt::AlignTop, option.palette, true, mainText, colorRole);
 
     // This is already available as option.fontMetrics, but to be absolutely
@@ -118,7 +124,8 @@ SearchConfigModule::SearchConfigModule(QWidget* parent, const QVariantList& args
     QLabel *label = new QLabel(i18n("Select the search plugins"));
 
     QPushButton *clearHistoryButton = new QPushButton(i18n("Clear History"));
-    clearHistoryButton->setIcon(QIcon::fromTheme(QStringLiteral("edit-clear-history")));
+    clearHistoryButton->setIcon(QIcon::fromTheme(isRightToLeft() ? QStringLiteral("edit-clear-locationbar-ltr")
+                                                                 : QStringLiteral("edit-clear-locationbar-rtl")));
     connect(clearHistoryButton, &QPushButton::clicked, this, [this] {
         KConfigGroup generalConfig(m_config.group("General"));
         generalConfig.deleteEntry("history");
