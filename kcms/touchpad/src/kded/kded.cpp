@@ -82,6 +82,14 @@ TouchpadDisabler::TouchpadDisabler(QObject *parent, const QVariantList &)
     QDBusPendingCallWatcher *callWatcher = new QDBusPendingCallWatcher(async, this);
     connect(callWatcher, SIGNAL(finished(QDBusPendingCallWatcher*)),
             this, SLOT(serviceNameFetchFinished(QDBusPendingCallWatcher*)));
+
+
+    QDBusConnection::systemBus().connect(QStringLiteral("org.freedesktop.login1"),
+                                         QStringLiteral("/org/freedesktop/login1"),
+                                         QStringLiteral("org.freedesktop.login1.Manager"),
+                                         QStringLiteral("PrepareForSleep"),
+                                         this,
+                                         SLOT(onPrepareForSleep(bool)));
 }
 
 void TouchpadDisabler::serviceNameFetchFinished(QDBusPendingCallWatcher *callWatcher)
@@ -272,8 +280,17 @@ void TouchpadDisabler::updateWorkingTouchpadFound()
     }
 }
 
+void TouchpadDisabler::onPrepareForSleep(bool sleep)
+{
+    m_preparingForSleep = sleep;
+}
+
 void TouchpadDisabler::showOsd()
 {
+    if (m_preparingForSleep) {
+        return;
+    }
+
     QDBusMessage msg = QDBusMessage::createMethodCall(
         QStringLiteral("org.kde.plasmashell"),
         QStringLiteral("/org/kde/osdService"),

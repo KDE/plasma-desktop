@@ -59,6 +59,7 @@ private Q_SLOTS:
     void serviceRegistered(const QString &);
     void handleReset();
     void serviceNameFetchFinished(QDBusPendingCallWatcher *);
+    void onPrepareForSleep(bool sleep);
 
 private:
     void showNotification(const QString &name, const QString &text);
@@ -75,6 +76,8 @@ private:
     bool m_userRequestedState, m_touchpadEnabled;
     bool m_workingTouchpadFound;
     bool m_keyboardActivity, m_mouse;
+
+    bool m_preparingForSleep = false;
 };
 
 #endif // KDED_H
