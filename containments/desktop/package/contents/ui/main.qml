@@ -544,7 +544,8 @@ DragDrop.DropArea {
             height: placeHolder.height
             z: 0
 
-            visible: false
+            opacity: 0
+            visible: opacity > 0
 
             Behavior on opacity {
                 NumberAnimation {
@@ -567,8 +568,6 @@ DragDrop.DropArea {
         // the component completes
         root.width = plasmoid.width;
 
-        placeHolderPaint.opacity = 0;
-        placeHolderPaint.visible = true;
         LayoutManager.resultsFlow = resultsFlow;
         LayoutManager.plasmoid = plasmoid;
         updateGridSize();
