@@ -31,7 +31,7 @@ PlasmaCore.FrameSvgItem {
 
     property Item containment
 
-    property bool veticalPanel: containment && containment.formFactor === PlasmaCore.Types.Vertical
+    readonly property bool verticalPanel: containment && containment.formFactor === PlasmaCore.Types.Vertical
 
     function adjustPrefix() {
         if (!containment) {
@@ -77,7 +77,7 @@ PlasmaCore.FrameSvgItem {
         property: "length"
         when: containment
         value: {
-            if (containment.formFactor === PlasmaCore.Types.Vertical) {
+            if (verticalPanel) {
                 return containment.Layout.preferredHeight
             } else {
                 return containment.Layout.preferredWidth
@@ -90,12 +90,12 @@ PlasmaCore.FrameSvgItem {
         id: containmentParent
         anchors {
             fill: parent
-            topMargin: Math.round(Math.min(root.fixedMargins.top, Math.max(1, (veticalPanel ? root.width : root.height) - units.iconSizes.smallMedium - units.smallSpacing*2)/2));
-            bottomMargin: Math.round(Math.min(root.fixedMargins.bottom, Math.max(1, (veticalPanel ? root.width : root.height) - units.iconSizes.smallMedium - units.smallSpacing*2)/2));
+            topMargin: Math.round(Math.min(root.fixedMargins.top, Math.max(1, (verticalPanel ? root.width : root.height) - units.iconSizes.smallMedium - units.smallSpacing*2)/2));
+            bottomMargin: Math.round(Math.min(root.fixedMargins.bottom, Math.max(1, (verticalPanel ? root.width : root.height) - units.iconSizes.smallMedium - units.smallSpacing*2)/2));
 
             //Base the left/right fixedMargins on height as well, to have a good radial symmetry
-            leftMargin: Math.round(Math.min(root.fixedMargins.left, Math.max(1, (veticalPanel ? root.width : root.height) - units.iconSizes.smallMedium - units.smallSpacing*2)/2));
-            rightMargin: Math.round(Math.min(root.fixedMargins.right, Math.max(1, (veticalPanel ? root.width : root.height) - units.iconSizes.smallMedium - units.smallSpacing*2)/2));
+            leftMargin: Math.round(Math.min(root.fixedMargins.left, Math.max(1, (verticalPanel ? root.width : root.height) - units.iconSizes.smallMedium - units.smallSpacing*2)/2));
+            rightMargin: Math.round(Math.min(root.fixedMargins.right, Math.max(1, (verticalPanel ? root.width : root.height) - units.iconSizes.smallMedium - units.smallSpacing*2)/2));
         }
     }
 
