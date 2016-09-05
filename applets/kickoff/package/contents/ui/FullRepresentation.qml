@@ -27,6 +27,8 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kquickcontrolsaddons 2.0
 
+import org.kde.plasma.private.kicker 0.1 as Kicker
+
 Item {
     id: root
     Layout.minimumWidth: units.gridUnit * 26
@@ -35,6 +37,8 @@ Item {
     property string previousState
     property bool switchTabsOnHover: plasmoid.configuration.switchTabsOnHover
     property Item currentView: mainTabGroup.currentTab.decrementCurrentIndex ? mainTabGroup.currentTab : mainTabGroup.currentTab.item
+
+    property QtObject globalFavorites: rootModelFavorites
 
     state: "Normal"
     focus: true
@@ -45,6 +49,43 @@ Item {
         header.query = ""
         header.state = "hint";
         root.state = "Normal";
+    }
+
+    Kicker.AppsModel {
+        id: rootModel
+
+        appletInterface: plasmoid
+
+        appNameFormat: plasmoid.configuration.showAppsByName ? 0 : 1
+        flat: false
+        showSeparators: false
+
+        favoritesModel: Kicker.FavoritesModel {
+            id: rootModelFavorites
+            favorites: plasmoid.configuration.favorites
+
+            onFavoritesChanged: {
+                plasmoid.configuration.favorites = favorites;
+            }
+        }
+    }
+
+    Kicker.RunnerModel {
+        id: runnerModel
+
+        appletInterface: plasmoid
+
+        runners: {
+            var runners = ["services", "places"];
+
+            if (plasmoid.configuration.useExtraRunners) {
+                runners = runners.concat(plasmoid.configuration.runners);
+            }
+            return runners;
+        }
+        mergeResults: true
+
+        favoritesModel: globalFavorites
     }
 
     PlasmaCore.DataSource {

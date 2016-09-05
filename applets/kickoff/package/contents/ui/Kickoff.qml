@@ -40,61 +40,30 @@ Item {
 
     Plasmoid.icon: plasmoid.configuration.icon
 
-    property QtObject globalFavorites: rootModelFavorites
+    Plasmoid.compactRepresentation: MouseArea {
+        hoverEnabled: true
+        onClicked: plasmoid.expanded = !plasmoid.expanded
+
+        DropArea {
+            id: compactDragArea
+            anchors.fill: parent
+        }
+
+        Timer {
+            id: expandOnDragTimer
+            interval: 250
+            running: compactDragArea.containsDrag
+            onTriggered: plasmoid.expanded = true
+        }
+
+        PlasmaCore.IconItem {
+            anchors.fill: parent
+            source: plasmoid.icon
+            active: parent.containsMouse || compactDragArea.containsDrag
+        }
+    }
 
     property Item dragSource: null
-
-    Kicker.AppsModel {
-        id: rootModel
-
-        appletInterface: plasmoid
-
-        appNameFormat: plasmoid.configuration.showAppsByName ? 0 : 1
-        flat: false
-        showSeparators: false
-
-        favoritesModel: Kicker.FavoritesModel {
-            id: rootModelFavorites
-
-            Component.onCompleted: {
-                favorites = plasmoid.configuration.favorites;
-            }
-        }
-    }
-
-    Connections {
-        target: globalFavorites
-
-        onFavoritesChanged: {
-            plasmoid.configuration.favorites = target.favorites;
-        }
-    }
-
-    Connections {
-        target: plasmoid.configuration
-
-        onFavoritesChanged: {
-            globalFavorites.favorites = plasmoid.configuration.favorites;
-        }
-    }
-
-    Kicker.RunnerModel {
-        id: runnerModel
-
-        appletInterface: plasmoid
-
-        runners: {
-            var runners = ["services", "places"];
-
-            if (plasmoid.configuration.useExtraRunners) {
-                runners = runners.concat(plasmoid.configuration.runners);
-            }
-            return runners;
-        }
-        mergeResults: true
-
-        favoritesModel: globalFavorites
-    }
 
     Kicker.DragHelper {
         id: dragHelper
