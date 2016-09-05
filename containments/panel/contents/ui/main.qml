@@ -316,14 +316,16 @@ function checkLastSpacer() {
             Layout.onMaximumWidthChanged: movingForResize = true;
             Layout.onMaximumHeightChanged: movingForResize = true;
 
-            PlasmaComponents.BusyIndicator {
-                z: 1000
-                visible: applet && applet.busy
-                running: visible
+            Loader {
                 anchors.centerIn: parent
-                width: Math.min(parent.width, parent.height)
-                height: width
+                active: applet && applet.busy
+                sourceComponent: PlasmaComponents.BusyIndicator {
+                    z: 1000
+                    width: Math.min(container.width, container.height)
+                    height: width
+                }
             }
+
             onXChanged: {
                 if (movingForResize) {
                     movingForResize = false;
