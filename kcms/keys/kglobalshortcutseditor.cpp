@@ -317,7 +317,6 @@ void KGlobalShortcutsEditor::KGlobalShortcutsEditorPrivate::initGUI()
                             KGlobalAccel::self()->setDefaultShortcut(action, sequences);
                         }
                     }
-qWarning()<<"WWWWW"<<desktopFile<<sourceDF.readName();
                     q->addCollection(col, QDBusObjectPath(), desktopFile, sourceDF.readName());
                 }
             }
@@ -407,7 +406,7 @@ void KGlobalShortcutsEditor::activateComponent(const QString &component)
         return;
     } else {
         QModelIndexList results = d->proxyModel->match(d->proxyModel->index(0, 0), Qt::DisplayRole, component);
-        Q_ASSERT(results.isEmpty());
+        Q_ASSERT(!results.isEmpty());
         if (results.first().isValid()) {
             // Known component. Get it.
             d->ui.components->setCurrentIndex(results.first());
