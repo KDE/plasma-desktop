@@ -104,18 +104,4 @@ PlasmaCore.FrameSvgItem {
             rightMargin: Math.round(Math.min(root.fixedMargins.right, spacingAtMinSize));
         }
     }
-
-    Connections {
-        target: containment
-        onUserConfiguringChanged: {
-            if (!containment.userConfiguring) {
-                containment.Layout.minimumWidthChanged();
-                containment.Layout.maximumWidthChanged();
-                containment.Layout.preferredWidthChanged();
-                containment.Layout.minimumHeightChanged();
-                containment.Layout.maximumHeightChanged();
-                containment.Layout.preferredHeightChanged();
-            }
-        }
-    }
 }
