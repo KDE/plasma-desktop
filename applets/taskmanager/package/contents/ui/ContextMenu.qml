@@ -306,7 +306,7 @@ PlasmaComponents.ContextMenu {
     PlasmaComponents.MenuItem {
         id: launcherToggleAction
 
-        visible: (visualParent && visualParent.m.IsLauncher !== true && visualParent.m.IsStartup !== true)
+        visible: (visualParent && visualParent.m.IsLauncher !== true && visualParent.m.IsStartup !== true) && plasmoid.immutability !== PlasmaCore.Types.SystemImmutable
 
         enabled: visualParent && visualParent.m.LauncherUrlWithoutIcon != null
 
@@ -324,7 +324,7 @@ PlasmaComponents.ContextMenu {
     }
 
     PlasmaComponents.MenuItem {
-        visible: (visualParent && visualParent.m.IsLauncher === true)
+        visible: (visualParent && visualParent.m.IsLauncher === true) && plasmoid.immutability !== PlasmaCore.Types.SystemImmutable
 
         text: i18n("Remove Launcher")
 

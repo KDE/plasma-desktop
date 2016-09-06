@@ -174,7 +174,7 @@ Item {
         highlightWindows: plasmoid.configuration.highlightWindows
 
         onAddLauncher: {
-            tasksModel.requestAddLauncher(url);
+            tasks.addLauncher(url);
         }
     }
 
@@ -331,7 +331,9 @@ Item {
     }
 
     function addLauncher(url) {
-        tasksModel.requestAddLauncher(url);
+        if (plasmoid.immutability !== PlasmaCore.Types.SystemImmutable) {
+            tasksModel.requestAddLauncher(url);
+        }
     }
 
     function resetDragSource() {
