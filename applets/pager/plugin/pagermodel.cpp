@@ -28,6 +28,9 @@ Free Software Foundation, Inc.,
 #include <xwindowtasksmodel.h>
 
 #include <QApplication>
+#include <QDBusConnection>
+#include <QDBusMessage>
+#include <QDBusPendingCall>
 #include <QDesktopWidget>
 #include <QMetaEnum>
 
@@ -48,7 +51,6 @@ public:
     PagerType pagerType = VirtualDesktops;
     bool enabled = false;
     bool showDesktop = false;
-    bool desktopDown = false;
 
     WindowTasksModel *tasksModel = nullptr;
 
@@ -96,12 +98,6 @@ PagerModel::Private::Private(PagerModel *q)
                     windowModel->setActivity(activityInfo->currentActivity());
                 }
             }
-        }
-    );
-
-    QObject::connect(virtualDesktopInfo, &VirtualDesktopInfo::currentDesktopChanged, q,
-        [this]() {
-            desktopDown = false;
         }
     );
 
@@ -435,12 +431,10 @@ void PagerModel::changePage(int itemId)
     const int targetId = (d->pagerType == VirtualDesktops) ? itemId + 1 : itemId;
 
     if (currentPage() == targetId) {
-        // Toggle the desktop.
-        if (d->showDesktop) {
-            NETRootInfo info(QX11Info::connection(), 0);
-            d->desktopDown = !d->desktopDown;
-            info.setShowingDesktop(d->desktopDown);
-        }
+        QDBusConnection::sessionBus().asyncCall(QDBusMessage::createMethodCall(QLatin1String("org.kde.plasmashell"),
+            QLatin1String("/PlasmaShell"),
+            QLatin1String("org.kde.PlasmaShell"),
+            QLatin1String("toggleDashboard")));
     } else {
         if (d->pagerType == VirtualDesktops) {
             KWindowSystem::setCurrentDesktop(targetId);
