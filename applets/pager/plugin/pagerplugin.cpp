@@ -1,5 +1,6 @@
 /*
     Copyright (C) 2011  Martin Gräßlin <mgraesslin@kde.org>
+    Copyright (C) 2016  Eike Hein <hein@kde.org>
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,12 +19,13 @@
 
 
 #include "pagerplugin.h"
-#include "pager.h"
+#include "pagermodel.h"
 
 #include <QtQml>
 
-void KickoffPlugin::registerTypes (const char *uri)
+void KickoffPlugin::registerTypes(const char *uri)
 {
     Q_ASSERT(uri == QLatin1String("org.kde.plasma.private.pager"));
-    qmlRegisterType<Pager>(uri, 2, 0, "Pager");
+
+    qmlRegisterType<PagerModel>(uri, 2, 0, "PagerModel");
 }

@@ -1,5 +1,6 @@
     /*
  *  Copyright 2013 David Edmundson <davidedmundson@kde.org>
+ *  Copyright 2016  Eike Hein <hein@kde.org>
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -31,6 +32,8 @@ Item {
 //FIXME enable when we're back to being a group box
 //     flat: true
 //     title: i18n("Appearance")
+
+    property bool isActivityPager: (plasmoid.pluginName == "org.kde.plasma.activitypager")
 
     property int cfg_displayedText
     property alias cfg_showWindowIcons: showWindowIcons.checked
@@ -85,7 +88,7 @@ Item {
         QtControls.RadioButton {
             id: desktopNumberRadio
             exclusiveGroup: displayedTextGroup
-            text: i18n("Desktop number")
+            text: isActivityPager ? i18n("Activity number") : i18n("Desktop number")
             onCheckedChanged: if (checked) cfg_displayedText = 0;
         }
         Item {
@@ -96,7 +99,7 @@ Item {
         QtControls.RadioButton {
             id: desktopNameRadio
             exclusiveGroup: displayedTextGroup
-            text: i18n("Desktop name")
+            text: isActivityPager ? i18n("Activity name") : i18n("Desktop name")
             onCheckedChanged: if (checked) cfg_displayedText = 1;
         }
         QtControls.RadioButton {
