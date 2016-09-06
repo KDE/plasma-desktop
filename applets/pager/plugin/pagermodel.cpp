@@ -431,10 +431,12 @@ void PagerModel::changePage(int itemId)
     const int targetId = (d->pagerType == VirtualDesktops) ? itemId + 1 : itemId;
 
     if (currentPage() == targetId) {
-        QDBusConnection::sessionBus().asyncCall(QDBusMessage::createMethodCall(QLatin1String("org.kde.plasmashell"),
-            QLatin1String("/PlasmaShell"),
-            QLatin1String("org.kde.PlasmaShell"),
-            QLatin1String("toggleDashboard")));
+        if (d->showDesktop) {
+            QDBusConnection::sessionBus().asyncCall(QDBusMessage::createMethodCall(QLatin1String("org.kde.plasmashell"),
+                QLatin1String("/PlasmaShell"),
+                QLatin1String("org.kde.PlasmaShell"),
+                QLatin1String("toggleDashboard")));
+        }
     } else {
         if (d->pagerType == VirtualDesktops) {
             KWindowSystem::setCurrentDesktop(targetId);
