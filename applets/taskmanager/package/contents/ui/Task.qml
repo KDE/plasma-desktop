@@ -429,7 +429,7 @@ MouseArea {
         },
         State {
             name: "minimized"
-            when: model.IsMinimized === true && !(groupDialog.visible && groupDialog.target == task)
+            when: model.IsMinimized === true && !(groupDialog.visible && groupDialog.visualParent == task)
 
             PropertyChanges {
                 target: frame
@@ -438,7 +438,7 @@ MouseArea {
         },
         State {
             name: "active"
-            when: model.IsActive === true || groupDialog.visible && groupDialog.target == task
+            when: model.IsActive === true || groupDialog.visible && groupDialog.visualParent == task
 
             PropertyChanges {
                 target: frame
