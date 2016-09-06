@@ -25,6 +25,7 @@ import org.kde.draganddrop 2.0
 import "../code/layout.js" as LayoutManager
 
 PlasmaCore.Dialog {
+    id: groupDialog
     visible: false
 
     type: PlasmaCore.Dialog.PopupMenu
@@ -49,9 +50,48 @@ PlasmaCore.Dialog {
             Repeater {
                 id: groupRepeater
 
+                function currentIndex() {
+                    for (var i = 0; i < count; ++i) {
+                        if (itemAt(i).activeFocus) {
+                            return i;
+                        }
+                    }
+
+                    return -1;
+                }
+
                 onCountChanged: updateSize()
             }
         }
+
+        Keys.onUpPressed: {
+            var currentIndex = groupRepeater.currentIndex();
+            // In doubt focus the first item
+            if (currentIndex === -1) {
+                groupRepeater.itemAt(0).forceActiveFocus();
+                return;
+            }
+
+            var previousIndex = currentIndex - 1;
+            if (previousIndex < 0) {
+                previousIndex = groupRepeater.count - 1;
+            }
+
+            groupRepeater.itemAt(previousIndex).forceActiveFocus()
+        }
+
+        Keys.onDownPressed: {
+            var currentIndex = groupRepeater.currentIndex();
+            // In doubt focus the first item, also wrap around.
+            if (currentIndex === -1 || currentIndex + 1 >= groupRepeater.count) {
+                groupRepeater.itemAt(0).forceActiveFocus();
+                return;
+            }
+
+            groupRepeater.itemAt(currentIndex + 1).forceActiveFocus();
+        }
+
+        Keys.onEscapePressed: groupDialog.visible = false;
     }
 
     data: [
@@ -76,6 +116,8 @@ PlasmaCore.Dialog {
             groupFilter.model = tasksModel;
             groupFilter.rootIndex = groupFilter.modelIndex(visualParent.itemIndex);
             groupRepeater.model = groupFilter;
+
+            mainItem.forceActiveFocus();
         } else {
             visualParent = null;
             groupRepeater.model = undefined;

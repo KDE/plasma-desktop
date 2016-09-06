@@ -53,6 +53,8 @@ MouseArea {
     readonly property bool smartLauncherEnabled: plasmoid.configuration.smartLaunchersEnabled && !inPopup && model.IsStartup !== true
     property QtObject smartLauncherItem: null
 
+    readonly property bool highlighted: (inPopup && activeFocus) || (!inPopup && containsMouse)
+
     acceptedButtons: Qt.LeftButton | Qt.RightButton | Qt.MidButton
 
     onIsWindowChanged: {
@@ -69,7 +71,11 @@ MouseArea {
     }
 
     onContainsMouseChanged:  {
-        if (!containsMouse) {
+        if (containsMouse) {
+            if (inPopup) {
+                forceActiveFocus()
+            }
+        } else {
             pressed = false;
         }
 
@@ -105,29 +111,7 @@ MouseArea {
                     tasksModel.requestToggleMinimized(modelIndex());
                 }
             } else if (mouse.button == Qt.LeftButton) {
-                if (mouse.modifiers & Qt.ShiftModifier) {
-                    tasksModel.requestNewInstance(modelIndex());
-                } else if (model.IsGroupParent === true) {
-                    if ((iconsOnly || mouse.modifiers == Qt.ControlModifier) && backend.canPresentWindows()) {
-                        toolTip.hideToolTip();
-                        tasks.presentWindows(model.LegacyWinIdList);
-                    } else if (groupDialog.visible) {
-                        groupDialog.visible = false;
-                    } else {
-                        groupDialog.visualParent = task;
-                        groupDialog.visible = true;
-                    }
-                } else {
-                    if (model.IsMinimized === true) {
-                        var i = modelIndex();
-                        tasksModel.requestToggleMinimized(i);
-                        tasksModel.requestActivate(i);
-                    } else if (model.IsActive === true) {
-                        tasksModel.requestToggleMinimized(modelIndex());
-                    } else {
-                        tasksModel.requestActivate(modelIndex());
-                    }
-                }
+                TaskTools.activateTask(modelIndex(), model, mouse.modifiers);
             }
         }
 
@@ -168,6 +152,9 @@ MouseArea {
             smartLauncherItem = smartLauncher;
         }
     }
+
+    Keys.onReturnPressed: TaskTools.activateTask(modelIndex(), model, event.modifiers)
+    Keys.onEnterPressed: Keys.onReturnPressed(event);
 
     function modelIndex() {
         return (inPopup ? tasksModel.makeModelIndex(groupDialog.visualParent.itemIndex, index)
@@ -342,7 +329,7 @@ MouseArea {
 
             anchors.fill: parent
 
-            active: task.containsMouse || (task.contextMenu && task.contextMenu.status == PlasmaComponents.DialogStatus.Open)
+            active: task.highlighted || (task.contextMenu && task.contextMenu.status == PlasmaComponents.DialogStatus.Open)
             enabled: true
             usesPlasmaTheme: false
 
@@ -424,7 +411,7 @@ MouseArea {
         },
         State {
             name: "hovered"
-            when: containsMouse || (contextMenu.status == PlasmaComponents.DialogStatus.Open && contextMenu.visualParent == task)
+            when: task.highlighted || (contextMenu.status == PlasmaComponents.DialogStatus.Open && contextMenu.visualParent == task)
 
             PropertyChanges {
                 target: frame

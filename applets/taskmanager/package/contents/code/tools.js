@@ -85,6 +85,31 @@ function activateNextPrevTask(next) {
     tasksModel.requestActivate(target);
 }
 
+function activateTask(index, model, modifiers) {
+    if (modifiers & Qt.ShiftModifier) {
+        tasksModel.requestNewInstance(index);
+    } else if (model.IsGroupParent === true) {
+        if ((iconsOnly || modifiers == Qt.ControlModifier) && backend.canPresentWindows()) {
+            toolTip.hideToolTip();
+            tasks.presentWindows(model.LegacyWinIdList);
+        } else if (groupDialog.visible) {
+            groupDialog.visible = false;
+        } else {
+            groupDialog.visualParent = task;
+            groupDialog.visible = true;
+        }
+    } else {
+        if (model.IsMinimized === true) {
+            tasksModel.requestToggleMinimized(index);
+            tasksModel.requestActivate(index);
+        } else if (model.IsActive === true) {
+            tasksModel.requestToggleMinimized(index);
+        } else {
+            tasksModel.requestActivate(index);
+        }
+    }
+}
+
 function insertIndexAt(above, x, y) {
     if (above) {
         return above.itemIndex;
