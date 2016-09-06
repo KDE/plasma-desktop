@@ -409,10 +409,6 @@ Rectangle {
         QtControls.Action {
             id: applyAction
             onTriggered: {
-                if (main.currentItem.saveConfig !== undefined) {
-                    main.currentItem.saveConfig();
-                }
-
                 root.saveConfig();
 
                 applyButton.enabled = false;
