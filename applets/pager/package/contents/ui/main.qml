@@ -375,14 +375,14 @@ MouseArea {
                                     root.dragging = drag.active;
                                     root.dragId = desktop.desktopId;
                                     desktopMouseArea.enabled = !drag.active;
-                                }
 
-                                onPressed: {
-                                    // Reparent to allow drags outside of this desktop.
-                                    var value = root.mapFromItem(clipRect, windowRect.x, windowRect.y);
-                                    windowRect.x = value.x;
-                                    windowRect.y = value.y
-                                    windowRect.parent = root;
+                                    if (drag.active) {
+                                        // Reparent to allow drags outside of this desktop.
+                                        var value = root.mapFromItem(clipRect, windowRect.x, windowRect.y);
+                                        windowRect.parent = root;
+                                        windowRect.x = value.x;
+                                        windowRect.y = value.y
+                                    }
                                 }
 
                                 onReleased: {
@@ -401,6 +401,7 @@ MouseArea {
 
                                         // Will reset the model, destroying the reparented drag delegate that
                                         // is no longer bound to model.Geometry.
+                                        root.dragging = false;
                                         pagerModel.refresh();
                                     } else {
                                         // When there is no dragging (just a click), the event is passed
