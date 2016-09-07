@@ -234,6 +234,10 @@ Item {
                 iconName: "window-close"
                 onClicked: previewWindow.visible = false;
             }
+            QtControls.Action {
+                onTriggered: previewWindow.visible = false;
+                shortcut: "Esc"
+            }
         }
     }
 }
