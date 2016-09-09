@@ -9,7 +9,7 @@ find_package (KF5GlobalAccel ${KF5_DEP_VERSION} CONFIG REQUIRED)
 # find_package (KF5DBusAddons ${KF5_DEP_VERSION} CONFIG REQUIRED)
 find_package (KF5I18n       ${KF5_DEP_VERSION} CONFIG REQUIRED)
 find_package (KF5WidgetsAddons ${KF5_DEP_VERSION} CONFIG REQUIRED)
-# find_package (KF5Config     ${KF5_DEP_VERSION} CONFIG REQUIRED)
+find_package (KF5Config     ${KF5_DEP_VERSION} CONFIG REQUIRED)
 # find_package (KF5CoreAddons ${KF5_DEP_VERSION} CONFIG REQUIRED)
 # find_package (KF5KIO        ${KF5_DEP_VERSION} CONFIG REQUIRED)
 
@@ -40,6 +40,7 @@ target_link_libraries (
    Qt5::QuickWidgets
    KF5::I18n
    KF5::Activities
+   KF5::ConfigCore
    KF5::GlobalAccel
    KF5::WidgetsAddons
    )

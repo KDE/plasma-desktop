@@ -26,15 +26,23 @@
 class ActivitySettings: public QObject {
     Q_OBJECT
 
+    Q_PROPERTY(bool newActivityAuthorized READ newActivityAuthorized CONSTANT)
+
 public:
     ActivitySettings(QObject *parent = Q_NULLPTR);
     ~ActivitySettings();
+
+    bool newActivityAuthorized() const;
 
 public Q_SLOTS:
     Q_INVOKABLE void configureActivities();
     Q_INVOKABLE void configureActivity(const QString &id);
     Q_INVOKABLE void newActivity();
     Q_INVOKABLE void deleteActivity(const QString &id);
+
+private:
+    bool m_newActivityAuthorized;
+
 };
 
 #endif // ACTIVITYSETTINGS_H

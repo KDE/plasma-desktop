@@ -161,6 +161,7 @@ Item {
                 tooltip: i18nd("plasma_shell_org.kde.plasma.desktop", "Delete")
 
                 onClicked: ActivitySettings.deleteActivity(root.activityId)
+                visible: ActivitySettings.newActivityAuthorized
 
                 anchors {
                     right       : parent.right

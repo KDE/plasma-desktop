@@ -144,6 +144,7 @@ FocusScope {
 
                 onClicked: ActivitySettings.newActivity()
 
+                visible: ActivitySettings.newActivityAuthorized
                 opacity: newActivityDialog.status == Loader.Ready ?
                               1 - newActivityDialog.item.opacity : 1
             }

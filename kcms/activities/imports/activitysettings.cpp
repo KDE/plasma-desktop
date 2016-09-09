@@ -23,6 +23,7 @@
 #include <QMessageBox>
 #include <QProcess>
 
+#include <KAuthorized>
 #include <KLocalizedString>
 
 #include "dialog.h"
@@ -32,11 +33,17 @@
 
 ActivitySettings::ActivitySettings(QObject *parent)
     : QObject(parent)
+    , m_newActivityAuthorized(KAuthorized::authorize(QStringLiteral("plasma-desktop/add_activities")))
 {
 }
 
 ActivitySettings::~ActivitySettings()
 {
+}
+
+bool ActivitySettings::newActivityAuthorized() const
+{
+    return m_newActivityAuthorized;
 }
 
 void ActivitySettings::configureActivity(const QString &id)
