@@ -47,6 +47,9 @@ DragDrop.DropArea {
     Layout.preferredHeight: isPopup ? preferredHeight(false) : 0
     Plasmoid.switchHeight: preferredHeight(true)
 
+    LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
+    LayoutMirroring.childrenInherit: true
+
     property bool isFolder: (plasmoid.pluginName == "org.kde.plasma.folder")
     property bool isContainment: ("containmentType" in plasmoid)
     property bool isPopup: (plasmoid.location != PlasmaCore.Types.Floating)

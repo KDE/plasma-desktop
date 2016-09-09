@@ -52,7 +52,7 @@ KQuickControlsAddons.MouseEventListener {
     signal moveFinished
 
     transform: Translate {
-        x: handleMerged ? 0 : controlsOpacity * appletHandle.width
+        x: (handleMerged ? 0 : controlsOpacity * appletHandle.width) * (LayoutMirroring.enabled ? -1 : 1)
     }
 
     PlasmaCore.FrameSvgItem {
@@ -124,10 +124,22 @@ KQuickControlsAddons.MouseEventListener {
                     appletContainer.clip = true
                 }
                 onPositionChanged: {
-                    appletItem.width = Math.max(appletItem.minimumWidth + appletHandle.width, appletItem.width + mouse.x-startX);
+                    var minimumWidth = appletItem.minimumWidth + appletHandle.width;
+                    var minimumHeight = appletItem.minimumHeight;
+
+                    var xDelta = startX - mouse.x;
+                    var yDelta = startY - mouse.y;
+
+                    if (LayoutMirroring.enabled) {
+                        var oldRight = appletItem.x + appletItem.width;
+                        appletItem.width = Math.max(minimumWidth, appletItem.width + xDelta);
+                        appletItem.x = oldRight - appletItem.width;
+                    } else {
+                        appletItem.width = Math.max(minimumWidth, appletItem.width - xDelta);
+                    }
 
                     var oldBottom = appletItem.y + appletItem.height;
-                    appletItem.height = Math.max(appletItem.minimumHeight, appletItem.height + startY-mouse.y)
+                    appletItem.height = Math.max(minimumHeight, appletItem.height + yDelta);
                     appletItem.y = oldBottom - appletItem.height;
                 }
                 onReleased: {
