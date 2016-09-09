@@ -42,6 +42,8 @@ class PagerModel : public QAbstractListModel
     Q_PROPERTY(PagerType pagerType READ pagerType WRITE setPagerType NOTIFY pagerTypeChanged)
     Q_PROPERTY(bool enabled READ enabled WRITE setEnabled NOTIFY enabledChanged)
     Q_PROPERTY(bool showDesktop READ showDesktop WRITE setShowDesktop NOTIFY showDesktopChanged)
+    Q_PROPERTY(bool showOnlyCurrentScreen READ showOnlyCurrentScreen WRITE setShowOnlyCurrentScreen NOTIFY showOnlyCurrentScreenChanged)
+    Q_PROPERTY(QRect screenGeometry READ screenGeometry WRITE setScreenGeometry NOTIFY screenGeometryChanged)
     Q_PROPERTY(int currentPage READ currentPage NOTIFY currentPageChanged)
     Q_PROPERTY(int layoutRows READ layoutRows NOTIFY layoutRowsChanged)
     Q_PROPERTY(QSize pagerItemSize READ pagerItemSize NOTIFY pagerItemSizeChanged)
@@ -74,6 +76,12 @@ public:
     bool showDesktop() const;
     void setShowDesktop(bool show);
 
+    bool showOnlyCurrentScreen() const;
+    void setShowOnlyCurrentScreen(bool show);
+
+    QRect screenGeometry() const;
+    void setScreenGeometry(const QRect &geometry);
+
     int currentPage() const;
 
     int layoutRows() const;
@@ -97,6 +105,8 @@ Q_SIGNALS:
     void pagerTypeChanged() const;
     void enabledChanged() const;
     void showDesktopChanged() const;
+    void showOnlyCurrentScreenChanged() const;
+    void screenGeometryChanged() const;
     void currentPageChanged() const;
     void layoutRowsChanged() const;
     void pagerItemSizeChanged() const;

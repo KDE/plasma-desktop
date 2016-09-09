@@ -38,6 +38,7 @@ Item {
     property int cfg_displayedText
     property alias cfg_showWindowIcons: showWindowIcons.checked
     property int cfg_currentDesktopSelected
+    property alias cfg_showOnlyCurrentScreen: showOnlyCurrentScreen.checked
 
     onCfg_displayedTextChanged: {
         switch (cfg_displayedText) {
@@ -117,6 +118,16 @@ Item {
         QtControls.CheckBox {
             id: showWindowIcons
             text: i18n("Icons")
+        }
+
+        Item {
+            width: 2
+            height: 2
+        } //spacer
+
+        QtControls.CheckBox {
+            id: showOnlyCurrentScreen
+            text: i18n("Only the current screen")
         }
 
         QtControls.Label {

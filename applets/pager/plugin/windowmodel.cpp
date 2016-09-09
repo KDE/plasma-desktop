@@ -74,24 +74,40 @@ QHash<int, QByteArray> WindowModel::roleNames() const
 
 QVariant WindowModel::data(const QModelIndex &index, int role) const
 {
-    if (role == AbstractTasksModel::Geometry && KWindowSystem::mapViewport()) {
-
+    if (role == AbstractTasksModel::Geometry) {
         const QRect &windowGeo = TaskFilterProxyModel::data(index, role).toRect();
-        const QRect &desktopGeo = d->desktopWidget->geometry();
 
-        int x = windowGeo.center().x() % desktopGeo.width();
-        int y = windowGeo.center().y() % desktopGeo.height();
+        if (KWindowSystem::mapViewport()) {
+            const QRect &desktopGeo = d->desktopWidget->geometry();
 
-        if (x < 0) {
-            x = x + desktopGeo.width();
+            int x = windowGeo.center().x() % desktopGeo.width();
+            int y = windowGeo.center().y() % desktopGeo.height();
+
+            if (x < 0) {
+                x = x + desktopGeo.width();
+            }
+
+            if (y < 0) {
+                y = y + desktopGeo.height();
+            }
+
+            const QRect mappedGeo(x - windowGeo.width() / 2, y - windowGeo.height() / 2,
+                windowGeo.width(), windowGeo.height());
+
+            if (filterByScreen() && screenGeometry().isValid()) {
+                const QPoint &screenOffset = screenGeometry().topLeft();
+
+                return mappedGeo.translated(0 - screenOffset.x(), 0 - screenOffset.y());
+            }
         }
 
-        if (y < 0) {
-            y = y + desktopGeo.height();
+        if (filterByScreen() && screenGeometry().isValid()) {
+            const QPoint &screenOffset = screenGeometry().topLeft();
+
+            return windowGeo.translated(0 - screenOffset.x(), 0 - screenOffset.y());
         }
 
-        return QRect(x - windowGeo.width() / 2, y - windowGeo.height() / 2,
-            windowGeo.width(), windowGeo.height());
+        return windowGeo;
     } else if (role == StackingOrder) {
 #if HAVE_X11
         const QVariantList &winIds = TaskFilterProxyModel::data(index, AbstractTasksModel::LegacyWinIdList).toList();

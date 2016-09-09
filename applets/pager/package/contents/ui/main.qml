@@ -104,6 +104,9 @@ MouseArea {
 
         showDesktop: (plasmoid.configuration.currentDesktopSelected == 1)
 
+        showOnlyCurrentScreen: plasmoid.configuration.showCurrentScreenOnly
+        screenGeometry: plasmoid.screenGeometry
+
         pagerType: isActivityPager ? PagerModel.Activities : PagerModel.VirtualDesktops
     }
 

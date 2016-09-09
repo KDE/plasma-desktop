@@ -52,6 +52,9 @@ public:
     bool enabled = false;
     bool showDesktop = false;
 
+    bool showOnlyCurrentScreen = false;
+    QRect screenGeometry;
+
     WindowTasksModel *tasksModel = nullptr;
 
     static ActivityInfo *activityInfo;
@@ -275,6 +278,46 @@ void PagerModel::setShowDesktop(bool show)
     }
 }
 
+bool PagerModel::showOnlyCurrentScreen() const
+{
+    return d->showOnlyCurrentScreen;
+}
+
+void PagerModel::setShowOnlyCurrentScreen(bool show)
+{
+    if (d->showOnlyCurrentScreen != show) {
+        d->showOnlyCurrentScreen = show;
+
+        if (d->screenGeometry.isValid()) {
+            emit pagerItemSizeChanged();
+
+            refresh();
+        }
+
+        emit showOnlyCurrentScreenChanged();
+    }
+}
+
+QRect PagerModel::screenGeometry() const
+{
+    return d->screenGeometry;
+}
+
+void PagerModel::setScreenGeometry(const QRect &geometry)
+{
+    if (d->screenGeometry != geometry) {
+        d->screenGeometry = geometry;
+
+        if (d->showOnlyCurrentScreen) {
+            emit pagerItemSizeChanged();
+
+            refresh();
+        }
+
+        emit showOnlyCurrentScreenChanged();
+    }
+}
+
 int PagerModel::currentPage() const
 {
     if (d->pagerType == VirtualDesktops) {
@@ -292,6 +335,10 @@ int PagerModel::layoutRows() const
 
 QSize PagerModel::pagerItemSize() const
 {
+    if (d->showOnlyCurrentScreen && d->screenGeometry.isValid()) {
+        return d->screenGeometry.size();
+    }
+
     QRect totalRect;
 
     for (int i = 0; i < d->desktopWidget->screenCount(); ++i) {
@@ -354,6 +401,15 @@ void PagerModel::refresh()
 
             windowModel->setActivity(runningActivities.at(activityIndex));
             ++activityIndex;
+        }
+    }
+
+    for (auto windowModel : d->windowModels) {
+        if (d->showOnlyCurrentScreen && d->screenGeometry.isValid()) {
+            windowModel->setScreenGeometry(d->screenGeometry);
+            windowModel->setFilterByScreen(true);
+        } else {
+            windowModel->setFilterByScreen(false);
         }
     }
 
