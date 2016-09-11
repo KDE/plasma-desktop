@@ -25,11 +25,11 @@
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date>2015-04-09</date>
-<releaseinfo>Plasma 5.3</releaseinfo>
+<date>2016-08-21</date>
+<releaseinfo>Plasma 5.7</releaseinfo>
 
 <keywordset>
-<keyword>KDE</keyword>
+<keyword>Plasma</keyword>
 <keyword>KControl</keyword>
 <keyword>desktop</keyword>
 <keyword>paths</keyword>
@@ -38,7 +38,7 @@
 </keywordset>
 </articleinfo>
 
-<para>This is a module to configure essential paths for the &kde; desktop.</para>
+<para>This is a module to configure essential paths for the &plasma; desktop.</para>
 
 <para>
 <screenshot>
@@ -57,13 +57,13 @@
 <variablelist>
 <varlistentry>
 <term><guilabel>Desktop path:</guilabel></term>
-<listitem><para>The Desktop folder contains all the files which you see on your desktop. The default path is usually <filename class="directory">~/Desktop</filename> but you can change here the location of this folder.
+<listitem><para>The Desktop folder contains all the files which you see in a <guilabel>Folder View</guilabel> widget on your desktop. The default path is usually <filename class="directory">~/Desktop</filename> but you can change here the location of this folder.
 </para></listitem>
 </varlistentry>
 <varlistentry>
 <term><guilabel>Autostart path:</guilabel></term>
 <listitem><para>
-The Autostart folder contains applications or links to applications or scripts you want to start whenever &kde; starts. You can change the location of this folder if you want to.
+The Autostart folder contains applications or links to applications or scripts you want to start whenever &plasma; starts. You can change the location of this folder if you want to.
 </para></listitem>
 </varlistentry>
 <varlistentry>
