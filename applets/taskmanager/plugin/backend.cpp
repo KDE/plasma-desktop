@@ -117,12 +117,22 @@ QVariantList Backend::jumpListActions(const QUrl &launcherUrl, QObject *parent)
 
     const QStringList &jumpListActions = desktopFile.readActions();
 
-    int count = 0;
+    const QLatin1String kde("KDE");
 
     foreach (const QString &actionName, jumpListActions) {
         const KConfigGroup &actionGroup = desktopFile.actionGroup(actionName);
 
         if (!actionGroup.isValid() || !actionGroup.exists()) {
+            continue;
+        }
+
+        const QStringList &notShowIn = actionGroup.readXdgListEntry(QStringLiteral("NotShowIn"));
+        if (notShowIn.contains(kde)) {
+            continue;
+        }
+
+        const QStringList &onlyShowIn = actionGroup.readXdgListEntry(QStringLiteral("OnlyShowIn"));
+        if (!onlyShowIn.isEmpty() && !onlyShowIn.contains(kde)) {
             continue;
         }
 
@@ -142,8 +152,6 @@ QVariantList Backend::jumpListActions(const QUrl &launcherUrl, QObject *parent)
         connect(action, &QAction::triggered, this, &Backend::handleJumpListAction);
 
         actions << QVariant::fromValue<QAction *>(action);
-
-        ++count;
     }
 
     return actions;
