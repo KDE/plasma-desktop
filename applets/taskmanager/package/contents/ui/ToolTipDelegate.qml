@@ -40,6 +40,37 @@ Column {
     property url launcherUrl
     property bool group: (windows !== undefined && windows.length > 1)
 
+    readonly property string mprisSourceName: mpris2Source.sourceNameForLauncherUrl(launcherUrl)
+    readonly property bool hasPlayer: !!mprisSourceName && !!playerData
+
+    readonly property var playerData: mpris2Source.data[mprisSourceName]
+    readonly property bool playing: hasPlayer && playerData.PlaybackStatus === "Playing"
+    readonly property bool canControl: hasPlayer && playerData.CanControl
+    readonly property bool canGoBack: hasPlayer && playerData.CanGoPrevious
+    readonly property bool canGoNext: hasPlayer && playerData.CanGoNext
+    readonly property bool canRaise: hasPlayer && playerData.CanRaise
+    readonly property var currentMetadata: hasPlayer ? playerData.Metadata : ({})
+
+    readonly property string track: {
+        var xesamTitle = currentMetadata["xesam:title"]
+        if (xesamTitle) {
+            return xesamTitle
+        }
+        // if no track title is given, print out the file name
+        var xesamUrl = currentMetadata["xesam:url"] ? currentMetadata["xesam:url"].toString() : ""
+        if (!xesamUrl) {
+            return ""
+        }
+        var lastSlashPos = xesamUrl.lastIndexOf('/')
+        if (lastSlashPos < 0) {
+            return ""
+        }
+        var lastUrlPart = xesamUrl.substring(lastSlashPos + 1)
+        return decodeURIComponent(lastUrlPart)
+    }
+    readonly property string artist: currentMetadata["xesam:artist"] || ""
+    readonly property string albumArt: currentMetadata["mpris:artUrl"] || ""
+
     readonly property int thumbnailWidth: units.gridUnit * 15
     readonly property int thumbnailHeight: units.gridUnit * 10
 
@@ -56,7 +87,7 @@ Column {
     spacing: units.largeSpacing / 2
 
     states: State {
-        when: mpris2Source.hasPlayer
+        when: tooltipContentItem.hasPlayer
 
         PropertyChanges {
             target: thumbnailSourceItem
@@ -70,81 +101,8 @@ Column {
         }
         PropertyChanges {
             target: playerControlsRow
-            visible: mpris2Source.hasPlayer
+            visible: true
         }
-    }
-
-    PlasmaCore.DataSource {
-        id: mpris2Source
-        readonly property string current: {
-            var desktopFileName = launcherUrl.toString().split('/').pop().replace(".desktop", "")
-
-            for (var i = 0, length = sources.length; i < length; ++i) {
-                var source = sources[i];
-                var sourceData = data[source];
-
-                if (sourceData && sourceData.DesktopEntry === desktopFileName) {
-                    return source
-                }
-            }
-
-            return ""
-        }
-
-        readonly property bool hasPlayer: !!current
-
-        readonly property bool playing: hasPlayer && data[current].PlaybackStatus === "Playing"
-        readonly property bool canControl: hasPlayer && data[current].CanControl
-        readonly property bool canGoBack: hasPlayer && data[current].CanGoPrevious
-        readonly property bool canGoNext: hasPlayer && data[current].CanGoNext
-        readonly property bool canRaise: hasPlayer && data[current].CanRaise
-
-        readonly property var currentMetadata: hasPlayer ? data[current].Metadata : ({})
-
-        readonly property string track: {
-            var xesamTitle = currentMetadata["xesam:title"]
-            if (xesamTitle) {
-                return xesamTitle
-            }
-            // if no track title is given, print out the file name
-            var xesamUrl = currentMetadata["xesam:url"] ? currentMetadata["xesam:url"].toString() : ""
-            if (!xesamUrl) {
-                return ""
-            }
-            var lastSlashPos = xesamUrl.lastIndexOf('/')
-            if (lastSlashPos < 0) {
-                return ""
-            }
-            var lastUrlPart = xesamUrl.substring(lastSlashPos + 1)
-            return decodeURIComponent(lastUrlPart)
-        }
-        readonly property string artist: currentMetadata["xesam:artist"] || ""
-        readonly property string albumArt: currentMetadata["mpris:artUrl"] || ""
-
-        function goPrevious() {
-            startOperation("Previous")
-        }
-
-        function goNext() {
-            startOperation("Next")
-        }
-
-        function playPause() {
-            startOperation("PlayPause")
-        }
-
-        function raise() {
-            startOperation("Raise")
-        }
-
-        function startOperation(op) {
-            var service = mpris2Source.serviceForSource(current)
-            var operation = service.operationDescription(op)
-            return service.startOperationCall(operation)
-        }
-
-        engine: "mpris2"
-        connectedSources: sources
     }
 
     Item {
@@ -211,7 +169,7 @@ Column {
                 height: thumbnailHeight
                 sourceSize: Qt.size(thumbnailWidth, thumbnailHeight)
                 asynchronous: true
-                source: mpris2Source.albumArt
+                source: albumArt
                 fillMode: Image.PreserveAspectCrop
                 visible: available
 
@@ -229,8 +187,8 @@ Column {
                 height: thumbnailHeight
 
                 // if there's no window associated with this task, we might still be able to raise the player
-                visible: windows == undefined || !windows[0] && mpris2Source.canRaise
-                onClicked: mpris2Source.raise()
+                visible: windows == undefined || !windows[0] && canRaise
+                onClicked: mpris2Source.raise(mprisSourceName)
 
                 PlasmaCore.IconItem {
                     anchors.fill: parent
@@ -280,7 +238,7 @@ Column {
             }
             width: thumbnailWidth
             spacing: 0
-            enabled: mpris2Source.canControl
+            enabled: canControl
             visible: false
 
             ColumnLayout {
@@ -292,7 +250,7 @@ Column {
                     level: 4
                     wrapMode: Text.NoWrap
                     elide: Text.ElideRight
-                    text: mpris2Source.track || ""
+                    text: track || ""
                 }
 
                 PlasmaExtras.Heading {
@@ -300,33 +258,33 @@ Column {
                     level: 5
                     wrapMode: Text.NoWrap
                     elide: Text.ElideRight
-                    text: mpris2Source.artist || ""
+                    text: artist || ""
                 }
             }
 
             PlasmaComponents.ToolButton {
-                enabled: mpris2Source.canGoBack
+                enabled: canGoBack
                 iconName: LayoutMirroring.enabled ? "media-skip-forward" : "media-skip-backward"
                 tooltip: i18nc("Go to previous song", "Previous")
                 Accessible.name: tooltip
-                onClicked: mpris2Source.goPrevious()
+                onClicked: mpris2Source.goPrevious(mprisSourceName)
             }
 
             PlasmaComponents.ToolButton {
                 Layout.fillHeight: true
                 Layout.preferredWidth: height // make this button bigger
-                iconName: mpris2Source.playing ? "media-playback-pause" : "media-playback-start"
-                tooltip: mpris2Source.playing ? i18nc("Pause player", "Pause") : i18nc("Start player", "Play")
+                iconName: playing ? "media-playback-pause" : "media-playback-start"
+                tooltip: playing ? i18nc("Pause player", "Pause") : i18nc("Start player", "Play")
                 Accessible.name: tooltip
-                onClicked: mpris2Source.playPause()
+                onClicked: mpris2Source.playPause(mprisSourceName)
             }
 
             PlasmaComponents.ToolButton {
-                enabled: mpris2Source.canGoNext
+                enabled: canGoNext
                 iconName: LayoutMirroring.enabled ? "media-skip-backward" : "media-skip-forward"
                 tooltip: i18nc("Go to next song", "Next")
                 Accessible.name: tooltip
-                onClicked: mpris2Source.goNext()
+                onClicked: mpris2Source.goNext(mprisSourceName)
             }
         }
     }

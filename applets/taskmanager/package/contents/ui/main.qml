@@ -178,6 +178,53 @@ Item {
         }
     }
 
+    PlasmaCore.DataSource {
+        id: mpris2Source
+        engine: "mpris2"
+        connectedSources: sources
+
+        function sourceNameForLauncherUrl(launcherUrl) {
+            // MPRIS spec explicitly mentions that "DesktopEntry" is with .desktop extension trimmed
+            var desktopFileName = launcherUrl.toString().split('/').pop().replace(".desktop", "")
+
+            for (var i = 0, length = sources.length; i < length; ++i) {
+                var source = sources[i];
+                var sourceData = data[source];
+
+                if (sourceData && sourceData.DesktopEntry === desktopFileName) {
+                    return source
+                }
+            }
+
+            return ""
+        }
+
+        function startOperation(source, op) {
+            var service = serviceForSource(source)
+            var operation = service.operationDescription(op)
+            return service.startOperationCall(operation)
+        }
+
+        function goPrevious(source) {
+            startOperation(source, "Previous");
+        }
+        function goNext(source) {
+            startOperation(source, "Next");
+        }
+        function playPause(source) {
+            startOperation(source, "PlayPause");
+        }
+        function stop(source) {
+            startOperation(source, "Stop");
+        }
+        function raise(source) {
+            startOperation(source, "Raise");
+        }
+        function quit(source) {
+            startOperation(source, "Quit");
+        }
+    }
+
     Timer {
         id: iconGeometryTimer
 
@@ -338,6 +385,13 @@ Item {
 
     function resetDragSource() {
         dragSource = null;
+    }
+
+    function createContextMenu(task) {
+        var menu = tasks.contextMenuComponent.createObject(task);
+        menu.visualParent = task;
+        menu.mpris2Source = mpris2Source;
+        return menu;
     }
 
     Component.onCompleted: {

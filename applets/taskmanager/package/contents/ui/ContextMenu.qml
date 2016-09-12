@@ -1,5 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2012-2016 by Eike Hein <hein@kde.org>                   *
+ *   Copyright (C) 2016 by Kai Uwe Broulik <kde@privat.broulik.de>         *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -26,6 +27,8 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 
 PlasmaComponents.ContextMenu {
     id: menu
+
+    property QtObject mpris2Source
 
     placement: {
         if (plasmoid.location == PlasmaCore.Types.LeftEdge) {
@@ -90,6 +93,89 @@ PlasmaComponents.ContextMenu {
 
         if (actionList.length > 0) {
             menu.addMenuItem(newSeparator(menu), virtualDesktopsMenuItem);
+        }
+
+        // Add Media Player control actions
+        var sourceName = mpris2Source.sourceNameForLauncherUrl(launcherUrl);
+
+        if (sourceName) {
+            var playerData = mpris2Source.data[sourceName]
+
+            if (playerData.CanControl) {
+                var menuItem = menu.newMenuItem(menu);
+                menuItem.text = i18nc("Play previous track", "Previous Track");
+                menuItem.icon = "media-skip-backward";
+                menuItem.enabled = Qt.binding(function() {
+                    return playerData.CanGoPrevious;
+                });
+                menuItem.clicked.connect(function() {
+                    mpris2Source.goPrevious(sourceName);
+                });
+                menu.addMenuItem(menuItem, virtualDesktopsMenuItem);
+
+                menuItem = menu.newMenuItem(menu);
+                // PlasmaCore Menu doesn't actually handle icons or labels changing at runtime...
+                menuItem.text = Qt.binding(function() {
+                    return playerData.PlaybackStatus === "Playing" ? i18nc("Pause playback", "Pause") : i18nc("Start playback", "Play");
+                });
+                menuItem.icon = Qt.binding(function() {
+                    return playerData.PlaybackStatus === "Playing" ? "media-playback-pause" : "media-playback-start";
+                });
+                menuItem.clicked.connect(function() {
+                    mpris2Source.playPause(sourceName);
+                });
+                menu.addMenuItem(menuItem, virtualDesktopsMenuItem);
+
+                menuItem = menu.newMenuItem(menu);
+                menuItem.text = i18nc("Stop playback", "Stop");
+                menuItem.icon = "media-playback-stop";
+                menuItem.clicked.connect(function() {
+                    mpris2Source.stop(sourceName);
+                });
+                menu.addMenuItem(menuItem, virtualDesktopsMenuItem);
+
+                menuItem = menu.newMenuItem(menu);
+                menuItem.text = i18nc("Play next track", "Next Track");
+                menuItem.icon = "media-skip-forward";
+                menuItem.enabled = Qt.binding(function() {
+                    return playerData.CanGoNext;
+                });
+                menuItem.clicked.connect(function() {
+                    mpris2Source.goNext(sourceName);
+                });
+                menu.addMenuItem(menuItem, virtualDesktopsMenuItem);
+
+                menu.addMenuItem(newSeparator(menu), virtualDesktopsMenuItem);
+
+                // If we don't have a window associated with the player but we can quit
+                // it through MPRIS we'll offer a "Quit" option instead of "Close"
+                if (!closeWindowItem.visible && playerData.CanQuit) {
+                    menuItem = menu.newMenuItem(menu);
+                    menuItem.text = i18nc("Quit media player app", "Quit");
+                    menuItem.icon = "application-exit";
+                    menuItem.visible = Qt.binding(function() {
+                        return !closeWindowItem.visible;
+                    });
+                    menuItem.clicked.connect(function() {
+                        mpris2Source.quit(sourceName);
+                    });
+                    menu.addMenuItem(menuItem);
+                }
+
+                // If we don't have a window associated with the player but we can raise
+                // it through MPRIS we'll offer a "Restore" option
+                if (!startNewInstanceItem.visible && playerData.CanRaise) {
+                    menuItem = menu.newMenuItem(menu);
+                    menuItem.text = i18nc("Open or bring to the front window of media player app", "Restore");
+                    menuItem.visible = Qt.binding(function() {
+                        return !startNewInstanceItem.visible;
+                    });
+                    menuItem.clicked.connect(function() {
+                        mpris2Source.raise(sourceName);
+                    });
+                    menu.addMenuItem(menuItem, startNewInstanceItem);
+                }
+            }
         }
     }
 
@@ -293,6 +379,7 @@ PlasmaComponents.ContextMenu {
     }
 
     PlasmaComponents.MenuItem {
+        id: startNewInstanceItem
         visible: (visualParent && visualParent.m.IsLauncher !== true && visualParent.m.IsStartup !== true)
 
         enabled: visualParent && visualParent.m.LauncherUrlWithoutIcon != null
@@ -439,6 +526,7 @@ PlasmaComponents.ContextMenu {
     }
 
     PlasmaComponents.MenuItem {
+        id: closeWindowItem
         visible: (visualParent && visualParent.m.IsLauncher !== true && visualParent.m.IsStartup !== true)
 
         enabled: visualParent && visualParent.m.IsClosable === true

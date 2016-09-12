@@ -94,9 +94,7 @@ MouseArea {
                 toolTip.hideToolTip();
             }
 
-            contextMenu = tasks.contextMenuComponent.createObject(task);
-            contextMenu.visualParent = task;
-            contextMenu.show();
+            tasks.createContextMenu(task).show();
         }
     }
 
