@@ -167,6 +167,7 @@ PlasmaComponents.ContextMenu {
                 if (!startNewInstanceItem.visible && playerData.CanRaise) {
                     menuItem = menu.newMenuItem(menu);
                     menuItem.text = i18nc("Open or bring to the front window of media player app", "Restore");
+                    menuItem.icon = playerData["Desktop Icon Name"];
                     menuItem.visible = Qt.binding(function() {
                         return !startNewInstanceItem.visible;
                     });
