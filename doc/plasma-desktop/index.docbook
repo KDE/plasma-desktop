@@ -29,8 +29,8 @@
 
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2015-07-22</date>
-<releaseinfo>Plasma 5.4</releaseinfo>
+<date>2016-08-21</date>
+<releaseinfo>Plasma 5.7</releaseinfo>
 
 <abstract>
 <para>
@@ -115,8 +115,8 @@ itself. Both are containments in the &plasma; sense.
   <mediaobjectco>
     <imageobjectco>
       <areaspec units="other" otherunits="imagemap">
-        <area id="im1" linkends="panel-kickoff" coords="0,519,31,551"/> <!-- #1 kickoff launcher #-->
-        <area id="im2" linkends="panel-kickoff" coords="0,735,30,598"/><!-- #1 kickoff launcher icon -->
+        <area id="im1" linkends="panel-launcher" coords="0,519,31,551"/> <!-- #1 kickoff launcher #-->
+        <area id="im2" linkends="panel-launcher" coords="0,735,30,598"/><!-- #1 kickoff launcher icon -->
         <!--area linkends="FIXME" coords="37,483,69,516"/--><!-- #2 panel icons # -->
         <!--area linkends="FIXME" coords="23,558,83,597"/--><!-- #2 panel icons red box -->
         <!--area linkends="FIXME" coords="97,666,137,707"/--><!-- #3 pager # -->
@@ -127,13 +127,13 @@ itself. Both are containments in the &plasma; sense.
         <area id="im6" linkends="panel-system-tray" coords="618,557,728,598"/><!-- #5 system tray red box -->
         <area id="im7" linkends="panel-digital-clock" coords="739,534,772,566"/><!-- #6 clock # -->
         <area id="im8" linkends="panel-digital-clock" coords="729,573,781,598"/><!-- #6 clock plasmoid -->
-        <area id="im9" linkends="toolboxes" coords="750,477,782,508"/><!-- #7 panel cashew # -->
-        <area id="im10" linkends="toolboxes" coords="783,573,800,598"/><!-- #7 panel cashew icon --> 
+        <area id="im9" linkends="panel-toolbox" coords="750,477,782,508"/><!-- #7 panel cashew # -->
+        <area id="im10" linkends="panel-toolbox" coords="783,573,800,598"/><!-- #7 panel cashew icon --> 
         <!--area linkends="FIXME" coords="733,11,765,44"/--><!-- #8 desktop cashew # -->
         <!--area linkends="FIXME" coords="772,0,800,25"/--><!-- #8 desktop cashew icon -->
         <!--area linkends="FIXME" coords="374,88,406,119"/--><!-- #9 folder view # -->
         <!--area linkends="FIXME" coords="10,18,361,204"/--><!-- #9 folder view plasmoid -->
-       <area id = "im11" linkends="panel-kickoff" coords="0,665,40,707"/> <!-- #1 kickoff launcher #-->
+       <area id = "im11" linkends="panel-launcher" coords="0,665,40,707"/> <!-- #1 kickoff launcher #-->
       </areaspec>
     <imageobject>
       <imagedata fileref="plasma-desktop-annotated.png" format="PNG"/>
@@ -143,14 +143,14 @@ itself. Both are containments in the &plasma; sense.
 </screenshot>
 </para>
 <orderedlist>
-<listitem><para>The program starter. Usually this will be <link linkend="panel-kickoff">Application Launcher</link>.</para></listitem>
+<listitem><para>The program starter. Usually this will be <link linkend="panel-launcher">Application Launcher</link>.</para></listitem>
 <listitem><para>A couple of icons giving easy access to often used applications</para></listitem>
 <!--listitem><para>The Pager widget</para></listitem-->
 <listitem><para>The <link linkend="panel-taskbar">Task Manager</link>, which shows the titles of windows belonging to the applications currently running. No application had opened a window, when the screenshot was taken</para></listitem>
 <listitem><para>The <link linkend="panel-system-tray">System Tray</link></para></listitem>
 <listitem><para>The <link linkend="panel-digital-clock">Digital Clock</link> widget</para></listitem>
-<listitem><para>The <link linkend="toolboxes">Panel Toolbox</link></para></listitem>
-<listitem><para>The Desktop Toolbox</para></listitem>
+<listitem><para>The <link linkend="panel-toolbox">Panel Toolbox</link></para></listitem>
+<listitem><para>The <link linkend="desktop">Desktop</link> Toolbox</para></listitem>
 <listitem><para>A Folder View widget, showing the content of the Desktop folder</para></listitem>
 </orderedlist>
 
@@ -160,9 +160,24 @@ itself. Both are containments in the &plasma; sense.
 <sect1 id="panel">
 <title>The Panel</title>
 
-<para id="panel-kickoff">
-The default panel holds a few &plasma; widgets: starting from the left, there is the
-application launcher. You can use it to start applications, open recently
+<para>The default panel holds a few &plasma; widgets: starting from the left, there is the
+application launcher.</para>
+
+<sect2 id="panel-launcher">
+<title>Application Launcher</title>
+
+<screenshot>
+<screeninfo>Application launcher</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="application-launcher.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase>Application launcher</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+<para>You can use it to start applications, open recently
 opened files and the usual logout/shutdown options. There is also a structure
 that allows you to browse through your applications. The layout has been
 optimized for the use case that is most common: starting an application. The
@@ -174,13 +189,54 @@ Once you have found out what your most frequently started applications are,
 <guimenuitem>Add to Favorites</guimenuitem> to add them to your
 <guilabel>Favorites</guilabel> (or directly into the panel or on the desktop.
 Note that you need to <quote>unlock</quote> &plasma; by means of <mousebutton>right</mousebutton>
-clicking on the desktop for any kind of modification). If you prefer the
+clicking on the desktop for any kind of modification).</para>
+</sect2>
+
+<sect2 id="panel-menu">
+<title>Application Menu</title>
+
+<para>If you prefer the
 traditional menu-style application launcher, change it by
 <mousebutton>right</mousebutton> clicking on the menu button and selecting
 <guimenuitem>Alternatives</guimenuitem>.
 </para>
+<screenshot>
+<screeninfo>Application menu</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="application-menu.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase>Application menu</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</sect2>
 
-<para id="panel-taskbar">
+<sect2 id="panel-launcher-settings">
+<title>Application Launcher Settings</title>
+
+<para>If you want to configure the application launcher, change it by
+<mousebutton>right</mousebutton> clicking on the menu button and selecting
+<guimenuitem>Application Launcher Settings</guimenuitem>.
+</para>
+<screenshot>
+<screeninfo>Application launcher settings</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="application-launcher-settings.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase>Application launcher settings</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</sect2>
+
+<sect2 id="panel-taskbar">
+<title>Taskbar</title>
+
+<para>
 The taskbar is another widget on the panel. It shows an area for all open windows on
 all desktops by default. You can make it show all open windows on the current
 desktop only by checking <guimenuitem>Only show tasks from the
@@ -203,8 +259,12 @@ your taskbar.
   </mediaobject>
 </screenshot>
 </para>
+</sect2>
 
-<para id="panel-system-tray">
+<sect2 id="panel-system-tray">
+<title>System Tray</title>
+
+<para>
 Another default panel item is the <application>System Tray</application>, which
 is used by traditional applications and widgets as a dock. Right clicking on the
 <application>System Tray</application> allows you to open the settings dialog,
@@ -221,7 +281,12 @@ where you can set entries to display and their visibility.
     </textobject>
   </mediaobject>
 </screenshot>
-<para id="device-notifier">
+</sect2>
+
+<sect2 id="device-notifier">
+<title>Device Notifier</title>
+
+<para>
 An icon located usually in the system tray is the <application>Device Notifier</application>.
 Plug in a <acronym>USB</acronym> disk and a dialog will open that allows you to
 open the device in &dolphin; or another associated application.
@@ -262,6 +327,10 @@ open the device in &dolphin; or another associated application.
 </para>
 <para>There is also a small icon to the right of each entry showing whether that device is currently accessible (or <emphasis>mounted</emphasis>) or not. Only when a device is not mounted is it safe to physically disconnect it from the computer. Clicking on the icon causes the device to be unmounted and/or the medium to be ejected if it is currently mounted, and will mount it if it is not. Note that unmounting/ejecting might fail if the device still has open files on it, &eg; if a large file copy hasn't finished. In most cases you can just wait a while and try again. When an unmounting has succeeded, a success icon will be shown on the <application>Device Notifier</application>'s icon.
 </para>
+</sect2>
+
+<sect2 id="panel-hidden">
+<title>Hidden Items</title>
 
 <para>The <application>System Tray</application> normally holds some more entries like
 &klipper;, &kmix; &etc;</para>
@@ -271,8 +340,12 @@ to save space in the bar. To display these entries click on the small white tria
 <inlinemediaobject><imageobject><imagedata fileref="system-tray-up-arrow.png" format="PNG"/>
 </imageobject></inlinemediaobject>, then use
 the &LMB; to launch a widget or the &RMB; to open its settings dialog.</para>
+</sect2>
 
-<para id="panel-digital-clock">
+<sect2 id="panel-digital-clock">
+<title>Digital Clock</title>
+
+<para>
 The right-most &plasma; widget in the default panel holds the <application>Digital
 Clock</application>.
 This clock can display the time in different timezones as well as have its size
@@ -285,6 +358,10 @@ yourself the amount of information displayed, and if that fits. If you want to
 display more information, make the panel larger or put the clock on the desktop
 where it can grow freely.
 </para>
+</sect2>
+
+<sect2 id="panel-pager">
+<title>Pager</title>
 
 <para>
 An optional item on your panel is the <application>Pager</application>.
@@ -298,7 +375,7 @@ don't see that in 4.7-->
 For larger pagers, selecting <guimenuitem>Display windows icons</guimenuitem>
 typically makes sense.
 </para>
-
+</sect2>
 <!-- other items in a kde compiled from sources -->
 <!-- Activity Manager -->
 <!-- Notifications -->
@@ -306,15 +383,15 @@ typically makes sense.
 
 </sect1>
 
-<sect1 id="toolboxes">
-<title>The Panel Toolboxes</title>
+<sect1 id="panel-toolbox">
+<title>The Panel Toolbox</title>
 
 <para>If your desktop is unlocked (you can do that by
 <mousebutton>right</mousebutton> clicking on the desktop, or when no
 application has the focus, with <keycombo
 action="simul">&Alt;<keycap>D</keycap></keycombo>, <keycap>L</keycap>), a small &plasma;
-logo will appear in the bottom right corner in the panel (it is commonly named the
-“cashew”). Click on this cashew, and the panel controller opens.</para>
+logo will appear in the bottom right corner in the panel.
+Click on this toolbox, and the panel controller opens.</para>
 
 <screenshot>
 <screeninfo>Panel Settings</screeninfo>
@@ -386,6 +463,9 @@ Right clicking on the desktop also offers you to configure aspects such as the
 wallpaper and the layout used, and the mouse actions. It offers to download new
 wallpapers through &knewstuff;.
 </para>
+<para>On the <guilabel>Tweaks</guilabel> page you can configure to hide the desktop Toolbox
+and adjust the widget handling.
+</para>
 
 <screenshot>
 <screeninfo>Desktop Settings</screeninfo>
@@ -412,14 +492,43 @@ you are used to from traditional desktops.
 
 </sect1>
 
+<sect1 id="folder-view">
+<title>Folder View</title>
+<para>The <guilabel>Folder View</guilabel> widget is used to display entries like folders or
+files from a folder, by default from <filename class="directory">$<envar>HOME</envar>/Desktop</filename>.
+</para>
+<para>You can choose to view either all files, or filter either by specific regular expressions
+(&eg;, all files with a certain extension) or by file type (&eg; just images).
+</para>
+<para>This widget also supports basic file management properties (moving, copying, cutting
+and pasting for example), and you can have as many as you want on your desktop.
+</para>
+
+<screenshot>
+<screeninfo>Folder View</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="folder-view.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase>Folder View</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+
+<para>If you select the layout <guilabel>Folder View</guilabel> in the <guilabel>Desktop Settings</guilabel>
+you can use one Folder View as the whole desktop, effectively replicating the "old style" desktop paradigm.
+</para>
+</sect1>
+
 <sect1 id="krunner">
 <title>&krunner;</title>
-
 <para>
 &krunner; is a versatile mini command-line. You can use it to start applications,
 open web pages, access bookmarks, search through your desktop data, calculate
 short equations, and many more. Pressing <keycombo
-action="simul">&Alt;<keysym>Space</keysym></keycombo> opens the &krunner; dialog.
+action="simul">&Alt;<keysym>Space</keysym></keycombo> or <keycombo
+action="simul">&Alt;<keysym>F2</keysym></keycombo> opens the &krunner; dialog.
 You just start typing and &krunner; will start searching matches as soon as
 you've entered more than two characters. You can open the settings dialog to
 learn about &krunner;’s functionality, provided by plugins. You can
@@ -443,16 +552,42 @@ navigate through the matches using the tab and arrow keys.
 module and configure where and what to search for in &krunner;
 </para>
 
+<para>&krunner; supports <quote>Desktop Actions</quote> which are are additional actions an application can
+offer to perform common actions or jump directly to a certain task from Task Manager.
+Common examples are <guilabel>Open New Incognito Window</guilabel> to open your browser directly in private mode,
+<guilabel>Compose Email</guilabel> without launching the full-fledged email client first or the actions
+provided by &spectacle;:
+</para>
+
+<screenshot>
+<screeninfo>&krunner; Desktop Actions</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="krunner-desktop-actions.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase>&krunner; Desktop Actions</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+
+<para>If you press the <keysym>Down</keysym> key in an empty &krunner; a history of the recent entities
+is shown. After invoking a search result, its query will move to the top, so repeatedly used
+commands never fall out of the list.
+</para>
+<para>Remove single entries from the list using the <inlinemediaobject><imageobject><imagedata fileref="remove.png" format="PNG"/>
+</imageobject></inlinemediaobject> button or clear the complete history in the
+&krunner; settings.
+</para>
+
 <para>
-<!--FIXME no longer in kf5 in krunner - use Crl+Esc to launch -->
 If you want to know what is going on on your system, pressing <keycombo
 action="simul">&Ctrl;&Esc;</keycombo> gives you quick access to a list of windows
 and processes, with options to monitor their output and kill processes.
 </para>
-
 </sect1>
 
-<sect1 id="zooming-user-interface">
+<sect1 id="activities-interface">
 <title>Activities</title>
 
 <para>
@@ -483,24 +618,6 @@ deletion.
 
 </sect1>
 
-<!-- print shortcuts settings dialog in branch 4.7)
-Shortcuts for Plasma Desktop Shell
-Action          Shortcut      Global
-Activities ...  Alt+D, Alt+A  Meta+Q
-Activities ...  Alt+D, Alt+A  Meta+Q
-Activity Settings Alt+D, Alt+S
-Add Widgets ...   Alt+D, A
-Lock Widgets      Alt+D, L
-Lock Widgets      Alt+D, L
-Next Widget       Alt+D, N
-Previous Widget   Alt+D, P
-Remove this Activity  Alt+D, Alt+R
-Remove this Widget    Alt+D, R
-Run the Associated Application  Alt+D, T
-Run the Associated Application  Alt+D, T
-Widget Settings   Alt+D, S
-Why these duplicated entries?
--->
 <sect1 id="shortcuts">
 <title>Shortcuts</title>
 
@@ -529,17 +646,16 @@ means: Press &Alt; and <keycap>D</keycap>, release and press <keycap>A</keycap>.
 <listitem><para>Lock/Unlock Widgets</para></listitem>
 </varlistentry>
 
-<!-- zoom still valid in 4.7?
 <varlistentry>
-<term><keycombo action="simul">&Alt;<keycap>D</keycap></keycombo>, <keycap>-</keycap></term>
+<term><keycombo action="simul"><keysym>Meta</keysym><keycap>=</keycap></keycombo></term>
 <listitem><para>Zoom out</para></listitem>
 </varlistentry>
 
 <varlistentry>
-<term><keycombo action="simul">&Alt;<keycap>D</keycap></keycombo>, <keycap>+</keycap></term>
+<term><keycombo action="simul"><keysym>Meta</keysym><keycap>-</keycap></keycombo></term>
 <listitem><para>Zoom in</para></listitem>
 </varlistentry>
--->
+
 <varlistentry>
 <term><keycombo action="simul">&Alt;<keycap>D</keycap></keycombo>, <keycap>N</keycap></term>
 <listitem><para>Next Widget</para></listitem>
@@ -567,7 +683,7 @@ means: Press &Alt; and <keycap>D</keycap>, release and press <keycap>A</keycap>.
 
 <varlistentry>
 <term><keycombo action="simul">&Alt;<keycap>D</keycap></keycombo>, <keycombo action="simul">&Alt;<keycap>S</keycap></keycombo></term>
-<listitem><para>Activities Settings</para></listitem>
+<listitem><para>Desktop Settings</para></listitem> <!--FIXME also Panel Settings?-->
 </varlistentry>
 
 <varlistentry>
@@ -582,7 +698,7 @@ means: Press &Alt; and <keycap>D</keycap>, release and press <keycap>A</keycap>.
 
 <varlistentry>
 <term><keycombo action="simul">&Ctrl;<keycap>F12</keycap></keycombo></term>
-<listitem><para>Show Dashboard</para></listitem>
+<listitem><para>Show Desktop</para></listitem>
 </varlistentry>
 
 <varlistentry>
@@ -590,30 +706,12 @@ means: Press &Alt; and <keycap>D</keycap>, release and press <keycap>A</keycap>.
 <listitem><para>Run the Associated Application</para></listitem>
 </varlistentry>
 
-<!-- still valid in 4.7?
 <varlistentry>
-<term><keycombo action="simul">&Ctrl;<keycap>]</keycap></keycombo></term>
-<listitem><para>Next containment</para></listitem>
+<term><keycombo action="simul"><keysym>Meta</keysym>&Tab;</keycombo></term>
+<listitem><para>Open the Activities panel</para></listitem>
 </varlistentry>
 
-<varlistentry>
-<term><keycombo action="simul">&Ctrl;<keycap>[</keycap></keycombo></term>
-<listitem><para>Previous containment</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term>
-<keycombo action="simul">
-&Shift;&Ctrl;<keycap>S</keycap>
-</keycombo>
-</term>
-<listitem><para>Containment settings</para></listitem>
-</varlistentry>
--->
 </variablelist>
-
-<para>To change shortcuts, click with the &LMB; on the desktop <guilabel>Toolbox</guilabel>
-(the cashew usually at the top right of the desktop) and select <guilabel>Shortcut Settings</guilabel>.</para>
 
 </sect1>
 
