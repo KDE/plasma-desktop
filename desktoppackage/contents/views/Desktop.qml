@@ -113,29 +113,33 @@ Item {
 
     PlasmaCore.Dialog {
         id: sidePanel
-        location: PlasmaCore.Types.LeftEdge
+        location: Qt.application.layoutDirection === Qt.RightToLeft ? PlasmaCore.Types.RightEdge : PlasmaCore.Types.LeftEdge
         type: PlasmaCore.Dialog.Dock
         flags: Qt.WindowStaysOnTopHint
 
         hideOnWindowDeactivate: true
 
-        /*
-        If there is no setGeometry call on QWindow the XCB backend will not pass our requested position to kwin
-        as our window position tends to be 0, setX,setY no-ops and means we never set a position as far as QWindow is concerned
-        by setting it to something silly and setting it back before we show the window we avoid that bug.
-        */
-        x: -10
+        x: {
+            var result = desktop.x;
+            if (!containment) {
+                return result;
+            }
+
+            var rect = containment.availableScreenRect;
+            result += rect.x;
+
+            if (Qt.application.layoutDirection === Qt.RightToLeft) {
+                result += rect.width - sidePanel.width;
+            }
+
+            return result;
+        }
+        y: desktop.y + (containment ? containment.availableScreenRect.y : 0)
 
         onVisibleChanged: {
             if (!visible) {
                 sidePanelStack.state = "closed";
                 ActivitySwitcher.Backend.shouldShowSwitcher = false;
-            } else {
-                var rect = containment.availableScreenRect;
-                // get the current available screen geometry and subtract the dialog's frame margins
-                sidePanelStack.height = containment ? rect.height - sidePanel.margins.top - sidePanel.margins.bottom : 1000;
-                sidePanel.x = desktop.x + rect.x;
-                sidePanel.y = desktop.y + rect.y;
             }
 
             lastToggleActivityManagerTimestamp = new Date().getTime() / 1000;
@@ -144,9 +148,12 @@ Item {
         mainItem: Loader {
             id: sidePanelStack
             asynchronous: true
-            height: 1000 //start with some arbitrary height, will be changed from onVisibleChanged
             width: item ? item.width: 0
+            height: containment ? containment.availableScreenRect.height - sidePanel.margins.top - sidePanel.margins.bottom : 1000
             state: "closed"
+
+            LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
+            LayoutMirroring.childrenInherit: true
 
             onLoaded: {
                 if (sidePanelStack.item) {
@@ -182,14 +189,7 @@ Item {
 
     Connections {
         target: containment
-        onAvailableScreenRectChanged: {
-            var rect = containment.availableScreenRect;
-            sidePanel.requestActivate();
-            // get the current available screen geometry and subtract the dialog's frame margins
-            sidePanelStack.height = containment ? rect.height - sidePanel.margins.top - sidePanel.margins.bottom : 1000;
-            sidePanel.x = desktop.x + rect.x;
-            sidePanel.y = desktop.y + rect.y;
-        }
+        onAvailableScreenRectChanged: sidePanel.requestActivate();
     }
 
     onContainmentChanged: {
