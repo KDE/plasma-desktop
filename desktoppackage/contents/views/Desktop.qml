@@ -32,7 +32,6 @@ Item {
     id: root
 
     property Item containment
-    property Item wallpaper
 
     property QtObject widgetExplorer
 
@@ -215,19 +214,12 @@ Item {
         }
     }
 
-    onWallpaperChanged: {
-        if (!internal.oldWallpaper) {
-            internal.oldWallpaper = wallpaper;
-        }
-    }
-
     //some properties that shouldn't be accessible from elsewhere
     QtObject {
         id: internal;
 
         property Item oldContainment: null;
         property Item newContainment: null;
-        property Item oldWallpaper: null;
     }
 
     SequentialAnimation {
@@ -277,9 +269,7 @@ Item {
                     containment.anchors.right = root.right;
                     containment.anchors.bottom = root.bottom;
                     internal.oldContainment.visible = false;
-                    internal.oldWallpaper.opacity = 1;
                     internal.oldContainment = containment;
-                    internal.oldWallpaper = wallpaper;
                 }
             }
         }
