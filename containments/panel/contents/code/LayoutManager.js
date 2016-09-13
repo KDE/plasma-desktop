@@ -119,11 +119,7 @@ function insertAfter(item1, item2) {
     for (i = layout.children.length - 1; i >= 0; --i) {
         child = layout.children[i];
         //never ever insert after lastSpacer
-        if (child === lastSpacer && item1 === lastSpacer) {
-            removed.push(child);
-            child.parent = root;
-            break;
-        } else if (child === item1) {
+        if (child === item1) {
             //Already in position, do nothing
             if (layout.children[i+1] === item2) {
                 return;

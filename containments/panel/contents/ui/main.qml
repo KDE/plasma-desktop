@@ -81,12 +81,8 @@ function addApplet(applet, x, y) {
 
     // Fall through to determining an appropriate insert position.
     } else {
-        var before = null;
+        var before = lastSpacer;
         container.animationsEnabled = false;
-
-        if (lastSpacer.parent === currentLayout) {
-            before = lastSpacer;
-        }
 
         // Insert icons to the left of whatever is at the center (usually a Task Manager),
         // if it exists.
@@ -105,50 +101,35 @@ function addApplet(applet, x, y) {
                 before = middle;
             }
 
-        // Otherwise if lastSpacer is here, enqueue before it.
-        } 
-
-        if (before) {
-            LayoutManager.insertBefore(before, container);
-
-        // Fall through to adding at the end.
-        } else {
-            container.parent = currentLayout;
+        // lastSpacer is here, enqueue before it.
         }
+
+
+        LayoutManager.insertBefore(before, container);
 
         //event compress the enable of animations
         startupTimer.restart();
-    }
-
-    if (applet.Layout.fillWidth) {
-        lastSpacer.parent = root;
     }
 }
 
 
 function checkLastSpacer() {
-    lastSpacer.parent = root
-
-    var expands = false;
-
-    if (isHorizontal) {
-        for (var container in currentLayout.children) {
-            var item = currentLayout.children[container];
-            if (item.Layout && item.Layout.fillWidth) {
-                expands = true;
-            }
+    var flexibleFound = false;
+    for (var i = 0; i < currentLayout.children.length; ++i) {
+        var applet = currentLayout.children[i].applet;
+        if (!applet) {
+            continue;
         }
-    } else {
-        for (var container in currentLayout.children) {
-            var item = currentLayout.children[container];
-            if (item.Layout && item.Layout.fillHeight) {
-                expands = true;
-            }
+        if (!applet.visible || !applet.Layout) {
+            continue;
+        }
+        if ((root.isHorizontal && applet.Layout.fillWidth) ||
+            (!root.isHorizontal && applet.Layout.fillHeight)) {
+                flexibleFound = true;
+            break
         }
     }
-    if (!expands) {
-        lastSpacer.parent = currentLayout
-    }
+    lastSpacer.visible= !flexibleFound;
 }
 //END functions
 
@@ -205,25 +186,13 @@ function checkLastSpacer() {
 
     Containment.onAppletAdded: {
         addApplet(applet, x, y);
+        checkLastSpacer();
         LayoutManager.save();
     }
 
     Containment.onAppletRemoved: {
         LayoutManager.removeApplet(applet);
-        var flexibleFound = false;
-        for (var i = 0; i < currentLayout.children.length; ++i) {
-            var applet = currentLayout.children[i].applet;
-            if (((root.isHorizontal && applet.Layout.fillWidth) ||
-                (!root.isHorizontal && applet.Layout.fillHeight)) &&
-                applet.visible) {
-                flexibleFound = true;
-                break
-            }
-        }
-        if (!flexibleFound) {
-            lastSpacer.parent = currentLayout;
-        }
-
+        checkLastSpacer();
         LayoutManager.save();
     }
 
