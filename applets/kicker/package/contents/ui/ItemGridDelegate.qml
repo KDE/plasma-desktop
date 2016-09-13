@@ -110,7 +110,7 @@ MouseArea {
         colorGroup: PlasmaCore.Theme.ComplementaryColorGroup
 
         animated: false
-        usesPlasmaTheme: false
+        usesPlasmaTheme: view.usesPlasmaTheme
 
         source: model.decoration
     }

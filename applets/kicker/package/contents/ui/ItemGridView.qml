@@ -36,6 +36,7 @@ FocusScope {
     property bool dragEnabled: true
     property bool dropEnabled: false
     property bool showLabels: true
+    property alias usesPlasmaTheme: gridView.usesPlasmaTheme
 
     property int pressX: -1
     property int pressY: -1
@@ -235,6 +236,8 @@ FocusScope {
 
                 GridView {
                     id: gridView
+
+                    property bool usesPlasmaTheme: false
 
                     property bool animating: false
                     property int animationDuration: dropEnabled ? resetAnimationDurationTimer.interval : 0

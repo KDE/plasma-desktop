@@ -327,6 +327,7 @@ Kicker.DashboardWindow {
                     model: globalFavorites
 
                     dropEnabled: true
+                    usesPlasmaTheme: true
 
                     onCurrentIndexChanged: {
                         preloadAllAppsTimer.defer();
