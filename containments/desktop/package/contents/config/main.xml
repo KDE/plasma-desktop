@@ -7,14 +7,17 @@
 
   <group name="General">
     <entry name="icon" type="String">
+      <label>The name of the custom icon to use for the compact representation (e.g. on a small panel) of the Folder View applet. Only used if useCustomIcon is true.</label>
       <default>folder</default>
     </entry>
     <entry name="useCustomIcon" type="Bool">
+      <label>Whether to use a custom icon for the compact representation (e.g. on a small panel) of the Folder View Applet.</label>
       <default>false</default>
     </entry>
 
     <entry name="ItemsGeometries" type="String">
       <label>Encoded geometries of items (resource categories).</label>
+      <hidden>true</hidden>
     </entry>
     <entry name="ToolBoxButtonState" type="String">
       <label>Position state of the toolbox button.</label>
@@ -26,94 +29,118 @@
     <entry name="ToolBoxButtonY" type="int">
       <label>Y coordinate of the toolbox.</label>
     </entry>
-    <entry name="ItemsGeometries" type="String">
-      <label>Encoded geometries of items (resource categories).</label>
-    </entry>
     <entry name="FirstStartup" type="Bool">
       <label>First time the containment starts?</label>
       <default>true</default>
+      <hidden>true</hidden>
     </entry>
 
     <entry name="positions" type="StringList">
         <default></default>
+        <hidden>true</hidden>
     </entry>
 
     <entry name="url" type="String">
+      <label>URL of the file system location being shown.</label>
       <default>desktop:/</default>
     </entry>
     <entry name="labelMode" type="Int">
+      <label>How to show the Folder View label: 0 = No label, 1 = Friendly version of path relative to closest Places entry, 2 = Full path, 3 = Custom title</label>
       <default>1</default>
     </entry>
     <entry name="labelText" type="String">
+      <label>Custom text for the Folder View label. Only used if labelMode is 3.</label>
       <default></default>
     </entry>
 
     <entry name="arrangement" type="Int">
+      <label>How Folder View icons are arranged: 0 = Rows, 1 = Columns</label>
       <default>0</default>
     </entry>
     <entry name="alignment" type="Int">
+      <label>How Folder View icons are aligned: 0 = Left, 1 = Right</label>
       <default>0</default>
     </entry>
     <entry name="locked" type="Bool">
+      <label>Whether Folder View icons are locked or not. Only used when serving as containment.</label>
       <default>false</default>
     </entry>
     <entry name="sortMode" type="Int">
+      <label>How Folder View icons are sorted: 0 = Unsorted, 1 = Name, 2 = Size, 3 = Type, 4 = Date</label>
       <default>0</default>
     </entry>
     <entry name="sortDesc" type="Bool">
+      <label>Whether to sort Folder View icons descending instead of ascending.</label>
       <default>false</default>
     </entry>
     <entry name="sortDirsFirst" type="Bool">
+      <label>Whether to sort folders before files in Folder View.</label>
       <default>true</default>
     </entry>
     <entry name="toolTips" type="Bool">
+      <label>Whether to show info tooltips when hovering Folder View icons.</label>
       <default>false</default>
     </entry>
     <entry name="selectionMarkers" type="Bool">
+      <label>Whether to show selection markers when hovering Folder View icons.</label>
       <default>true</default>
     </entry>
     <entry name="popups" type="Bool">
+      <label>Whether to show a popup preview window for Folder View icons for folders.</label>
       <default>true</default>
     </entry>
     <entry name="previews" type="Bool">
+      <label>Whether to show preview thumbnails in Folder View.</label>
       <default>true</default>
     </entry>
     <entry name="previewPlugins" type="StringList">
+      <label>List of id's of the thumbnail preview plugins to use in Folder View.</label>
       <default>imagethumbnail,jpegthumbnail</default>
     </entry>
     <entry name="viewMode" type="Int">
+      <label>The Folder View view mode (used only by the widget full represntation): 0 = Grid, 1 = List</label>
       <default>0</default>
     </entry>
     <entry name="iconSize" type="Int">
+      <label>The icon size to use for Folder View icons. One of the list of Plasma icon sizes.</label>
       <default>4</default>
     </entry>
     <entry name="textLines" type="Int">
+      <label>The (maximum) number of lines of text to use below Folder View icons.</label>
       <default>2</default>
     </entry>
     <entry name="textColor" type="String">
+      <label>The text color to use below Folder View icons. Only used when serving as containment.</label>
       <default>white</default>
     </entry>
 
     <entry name="filterPattern" type="String">
+      <label>The pattern to filter files by. Supports wildcards.</label>
       <default>*</default>
     </entry>
     <entry name="filterMode" type="Int">
+      <label>The file filter mode: 0 = Show All Files, 1 = Show Files Matching, 2 = Hide Files Matching</label>
       <default>0</default>
     </entry>
     <entry name="filterMimeTypes" type="StringList">
+      <label>List of MIME types to filter by.</label>
       <default>all/all</default>
     </entry>
 
     <entry name="showTweaks" type="Bool">
+      <label>Whether to show the "Tweaks" config page. Only used when serving as containment.</label>
       <default>true</default>
     </entry>
     <entry name="showToolbox" type="Bool">
+      <label>Whether to show the Desktop Toolbox. Only used when serving as containment.</label>
       <default>true</default>
     </entry>
     <entry name="pressToMove" type="Bool">
+      <label>Whether to activate widget handles and widget move mode by long press. Only used when serving as containment.</label>
       <default>true</default>
     </entry>
     <entry name="pressToMoveHelp" type="Bool">
+      <label>Whether to show an info notification about pressToMove mode after enabling it or when the containment becomes mutable (i.e. widgets are unlocked).</label>
       <default>true</default>
     </entry>
   </group>

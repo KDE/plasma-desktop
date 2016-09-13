@@ -7,28 +7,36 @@
 
   <group name="General">
     <entry name="switchTabsOnHover" type="Bool">
+      <label>Whether to switch between menu tabs by hovering them.</label>
       <default>true</default>
     </entry>
     <entry name="showAppsByName" type="Bool">
+      <label>Whether to display specific application names instead of their generic names (e.g. Dolphin instead of File Manager).</label>
       <default>false</default>
     </entry>
     <entry name="icon" type="String">
+      <label>The name of the icon used in the compact representation (e.g. on a small panel).</label>
       <default>start-here-kde</default>
     </entry>
     <entry name="favorites" type="StringList">
+      <label>List of general favorites. Supported values are menu id's (usually .desktop file names), special URLs that expand into default applications (e.g. preferred://browser), document URLs and KPeople contact URIs.</label>
       <default>preferred://browser,kontact.desktop,systemsettings.desktop,org.kde.dolphin.desktop,ktp-contactlist.desktop,org.kde.kate.desktop,org.kde.discover</default>
     </entry>
     <entry name="systemApplications" type="StringList">
+      <label>List of applications at the top of the "Computer" tab.</label>
       <default>systemsettings.desktop</default>
     </entry>
     <entry name="useExtraRunners" type="Bool">
+      <label>Whether to use additional KRunner plugins to produce results in the search.</label>
       <default>true</default>
     </entry>
     <entry name="runners" type="StringList">
+      <label>The plugin id's of additional KRunner plugins to use. Only used if useExtraRunners is true.</label>
       <default>shell,bookmarks,recentdocuments,locations,baloosearch</default>
     </entry>
 
     <entry name="removeApplicationCommand" type="String">
+      <label>The command run by the "Remove application" context action.</label>
       <default>plasma-discover --application</default>
     </entry>
 

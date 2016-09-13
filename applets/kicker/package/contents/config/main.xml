@@ -7,53 +7,68 @@
 
   <group name="General">
     <entry name="icon" type="String">
+      <label>The name of the icon to use for the compact representation (e.g. on a small panel).</label>
       <default>start-here-kde</default>
     </entry>
-    <entry name="useCustomButtonImage" type="Bool">
+    <entry name="useCustomButtonImage" type="Bool"
+      <label>Whether to use a custom image instead of an icon in the compact representation (e.g. on a small panel).</label>
       <default>false</default>
     </entry>
     <entry name="customButtonImage" type="Url">
+      <label>The URL of the custtom image to use instead of an icon in the compact representation (e.g. on a small panel).</label>
       <default></default>
     </entry>
 
     <entry name="appNameFormat" type="Int">
+      <label>The format used in the display of application names: 0 = NameOnly, 1 = GenericNameOnly, 2 = NameAndGenericName, 3 = GenericNameAndName</label>
       <default>0</default>
     </entry>
     <entry name="limitDepth" type="Bool">
+      <label>Whether to flatten top-level menu categories to a single level instead of displaying sub-categories.</label>
       <default>false</default>
     </entry>
 
     <entry name="favoriteApps" type="StringList">
+      <label>List of general favorites. Supported values are menu id's (usually .desktop file names), special URLs that expand into default applications (e.g. preferred://browser), document URLs and KPeople contact URIs.</label>
       <default>preferred://browser,kontact.desktop,systemsettings.desktop,org.kde.dolphin.desktop,ktp-contactlist.desktop,org.kde.kate.desktop,org.kde.discover</default>
     </entry>
+      <label>List of system action favorites.</label>
     <entry name="favoriteSystemActions" type="StringList">
       <default>logout,reboot,shutdown</default>
     </entry>
     <entry name="hiddenApplications" type="StringList">
+      <label>List of menu id's (usually .desktop file names) of apps that should not be shown in the menu.</label>
       <default></default>
     </entry>
 
     <entry name="showRecentApps" type="Bool">
+      <label>Whether to show the "Recent Applications" category.</label>
       <default>true</default>
     </entry>
     <entry name="showRecentDocs" type="Bool">
+      <label>Whether to show the "Recent Documents" category.</label>
       <default>true</default>
     </entry>
     <entry name="showRecentContacts" type="Bool">
+      <label>Whether to show the "Recent Contacts" category.</label>
       <default>false</default>
     </entry>
 
     <entry name="useExtraRunners" type="Bool">
+      <label>Whether to use additional KRunner plugins to produce results in the search.</label>
       <default>true</default>
     </entry>
     <entry name="extraRunners" type="StringList">
+      <label>The plugin id's of additional KRunner plugins to use. Only used if useExtraRunners is true.</label>
       <default>bookmarks,baloosearch</default>
     </entry>
     <entry name="alignResultsToBottom" type="Bool">
+      <label>Whether to align search results to the bottom of the menu representation (e.g. panel popup) instead of the top.</label>
       <default>true</default>
     </entry>
 
     <entry name="removeApplicationCommand" type="String">
+      <label>The command run by the "Remove application" context action.</label>
       <default>muon-discover --application</default>
     </entry>
   </group>

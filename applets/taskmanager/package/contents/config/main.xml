@@ -7,58 +7,76 @@
 
   <group name="General">
     <entry name="showOnlyCurrentScreen" type="Bool">
+      <label>Whether to show only window tasks that are on the same screen as the widget.</label>
       <default>false</default>
     </entry>
     <entry name="showOnlyCurrentDesktop" type="Bool">
+      <label>Whether to only show tasks that are on the current virtual desktop.</label>
       <default>false</default>
     </entry>
     <entry name="showOnlyCurrentActivity" type="Bool">
+      <label>Whether to show only tasks that are on the current activity.</label>
       <default>true</default>
     </entry>
     <entry name="showOnlyMinimized" type="Int">
+      <label>Whether to show only window tasks that are minmized.</label>
       <default>false</default>
     </entry>
     <entry name="groupingStrategy" type="Enum">
+      <label>How tasks are grouped: 0 = Do Not Group, 1 = By Program Name</label>
       <default>1</default>
     </entry>
     <entry name="groupPopups" type="Bool">
+      <label>Whether groups are to be reduced to a single task button and expand into a popup or task buttons are grouped on the widget itself.</label>
       <default>true</default>
     </entry>
     <entry name="onlyGroupWhenFull" type="Bool">
+      <label>Whether to group always or only when the widget runs out of space to show additional task buttons comfortably.</label>
       <default>true</default>
     </entry>
     <entry name="groupingAppIdBlacklist" type="StringList">
+      <label>The id's (usually .desktop file names) of applications that should not have their tasks grouped.</label>
       <default></default>
     </entry>
     <entry name="groupingLauncherUrlBlacklist" type="StringList">
+      <label>The launcher URLs (usually .desktop file or executable URLs) of applications that should not have their tasks grouped.</label>
       <default></default>
     </entry>
     <entry name="sortingStrategy" type="Int">
+      <label>How to sort tasks: 0 = Do Not Sort, 1 = Manually, 2 = Alphabetically, 3 = By Desktop, 4 = By Activity</label>
       <default>2</default>
     </entry>
     <entry name="separateLaunchers" type="Bool">
+      <label>Whether launcher tasks are sorted separately at the left side of the widget or can be mixed with other tasks.</label>
       <default>true</default>
     </entry>
     <entry name="maxStripes" type="Int">
+      <label>The maximum number of rows (in a horizontal-orientation containment, i.e. panel) or columns (in a vertical-orientation containment) to layout task buttons in.</label>
       <default>2</default>
       <min>1</min>
     </entry>
     <entry name="forceStripes" type="Bool">
+      <label>Whether to try and always layout task buttons in as many rows/columns as set via maxStripes.</label>
       <default>false</default>
     </entry>
     <entry name="showToolTips" type="Bool">
+      <label>Whether to show tooltips when hovering task buttons.</label>
       <default>true</default>
     </entry>
     <entry name="wheelEnabled" type="Bool">
+      <label>Whether using the mouse wheel with the mouse pointer above the widget should switch between tasks.</label>
       <default>true</default>
     </entry>
     <entry name="highlightWindows" type="Bool">
+      <label>Whether to request the window manager highlight windows when hovering corresponding task buttons.</label>
       <default>false</default>
     </entry>
     <entry name="launchers" type="StringList">
+      <label>The list of launcher tasks on the widget. Usually .desktop file or executable URLs. Special URLs such as preferred://browser that expand to default applications are supported.</label>
       <default></default>
     </entry>
     <entry name="middleClickAction" type="Enum">
+      <label>What to do on middle-mouse click on a task button.</label>
       <choices>
             <choice name="None"/>
             <choice name="Close"/>
@@ -68,6 +86,7 @@
       <default>0</default>
     </entry>
     <entry name="smartLaunchersEnabled" type="Bool">
+      <label>Whether to show progress and status information on task buttons.</label>
       <default>true</default>
     </entry>
   </group>

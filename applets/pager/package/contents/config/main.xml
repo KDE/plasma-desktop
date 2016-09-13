@@ -7,6 +7,7 @@
 
   <group name="General">
     <entry name="displayedText" type="Enum">
+        <label>The text to show inside the desktop rectangles.</label>
         <choices>
             <choice name="Number"/>
             <choice name="Name"/>
@@ -15,12 +16,15 @@
         <default>2</default>
     </entry>
     <entry name="showWindowIcons" type="Bool">
+      <label>Whether to show window icons inside the window rectangles.</label>
       <default>false</default>
     </entry>
     <entry name="showOnlyCurrentScreen" type="Bool">
+      <label>Whether to limit the Pager to the set of windows and the geometry of the screen the widget resides on.</label>
       <default>false</default>
     </entry>
     <entry name="currentDesktopSelected" type="Enum">
+        <label>What to do on left-mouse click on a desktop rectangle.</label>
         <choices>
             <choice name="DoNothing"/>
             <choice name="ShowDesktop"/>
