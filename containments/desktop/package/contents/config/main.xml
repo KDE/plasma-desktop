@@ -15,9 +15,8 @@
       <default>false</default>
     </entry>
 
-    <entry name="ItemsGeometries" type="String">
+    <entry name="ItemsGeometries" type="String" hidden="true">
       <label>Encoded geometries of items (resource categories).</label>
-      <hidden>true</hidden>
     </entry>
     <entry name="ToolBoxButtonState" type="String">
       <label>Position state of the toolbox button.</label>
@@ -29,15 +28,13 @@
     <entry name="ToolBoxButtonY" type="int">
       <label>Y coordinate of the toolbox.</label>
     </entry>
-    <entry name="FirstStartup" type="Bool">
+    <entry name="FirstStartup" type="Bool" hidden="true">
       <label>First time the containment starts?</label>
       <default>true</default>
-      <hidden>true</hidden>
     </entry>
 
-    <entry name="positions" type="StringList">
+    <entry name="positions" type="StringList" hidden="true">
         <default></default>
-        <hidden>true</hidden>
     </entry>
 
     <entry name="url" type="String">
