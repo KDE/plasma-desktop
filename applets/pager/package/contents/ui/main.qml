@@ -34,11 +34,11 @@ MouseArea {
     property bool vertical: (plasmoid.formFactor == PlasmaCore.Types.Vertical)
     property var activityDataSource: null
 
-    Layout.minimumWidth: !root.vertical ? pagerItemFlow.preferredWidth : 1
-    Layout.minimumHeight: root.vertical ? pagerItemFlow.preferredHeight : 1
+    Layout.minimumWidth: !root.vertical ? pagerItemGrid.width : 1
+    Layout.minimumHeight: root.vertical ? pagerItemGrid.height : 1
 
-    Layout.maximumWidth: !root.vertical ? pagerItemFlow.preferredWidth : Infinity
-    Layout.maximumHeight: root.vertical ? pagerItemFlow.preferredHeight : Infinity
+    Layout.maximumWidth: !root.vertical ? pagerItemGrid.width : Infinity
+    Layout.maximumHeight: root.vertical ? pagerItemGrid.height : Infinity
 
     Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
     Plasmoid.status: pagerModel.count > 1 ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.HiddenStatus
@@ -168,30 +168,40 @@ MouseArea {
         }
     }
 
-    Flow {
-        id: pagerItemFlow
-
-        anchors.fill: parent
+    Grid {
+        id: pagerItemGrid
 
         spacing: units.devicePixelRatio
+        rows: effectiveRows
+        columns: effectiveColumns
 
         property int effectiveRows: {
-            var columns = Math.floor(repeater.count / pagerModel.layoutRows);
+            if (!pagerModel.count) {
+                return 1;
+            }
 
-            if (repeater.count % pagerModel.layoutRows > 0) {
+            var columns = Math.floor(pagerModel.count / pagerModel.layoutRows);
+
+            if (pagerModel.count % pagerModel.layoutRows > 0) {
                 columns += 1;
             }
 
-            var rows = Math.floor(repeater.count / columns);
+            var rows = Math.floor(pagerModel.count / columns);
 
-            if (repeater.count % columns > 0) {
+            if (pagerModel.count % columns > 0) {
                 rows += 1;
             }
 
             return rows;
         }
 
-        readonly property int effectiveColumns: Math.ceil(repeater.count / effectiveRows)
+        readonly property int effectiveColumns: {
+            if (!pagerModel.count) {
+                return 1;
+            }
+
+            return Math.ceil(pagerModel.count / effectiveRows);
+        }
 
         readonly property real pagerItemSizeRatio: pagerModel.pagerItemSize.width / pagerModel.pagerItemSize.height
         readonly property real widthScaleFactor: columnWidth / pagerModel.pagerItemSize.width
@@ -200,9 +210,6 @@ MouseArea {
         readonly property int innerSpacing: ((vertical ? effectiveColumns : effectiveRows) - 1) * spacing
         readonly property int rowHeight: vertical ? Math.floor(columnWidth / pagerItemSizeRatio) : Math.floor((root.height - innerSpacing) / effectiveRows)
         readonly property int columnWidth: vertical ? Math.floor((root.width - innerSpacing) / effectiveColumns) : Math.floor(rowHeight * pagerItemSizeRatio)
-
-        readonly property int preferredWidth: vertical ? width : (effectiveColumns * columnWidth) + ((effectiveColumns - 1) * spacing)
-        readonly property int preferredHeight: vertical ? (effectiveRows * rowHeight) + ((effectiveRows - 1) * spacing) : height
 
         Repeater {
             id: repeater
@@ -274,8 +281,8 @@ MouseArea {
                     subText = text
                 }
 
-                width: pagerItemFlow.columnWidth
-                height: pagerItemFlow.rowHeight
+                width: pagerItemGrid.columnWidth
+                height: pagerItemGrid.rowHeight
 
                 PlasmaCore.FrameSvgItem {
                     anchors.fill: parent
@@ -340,10 +347,10 @@ MouseArea {
                             onMinimizedChanged: desktop.updateSubText()
 
                             /* since we move clipRect with 1, move it back */
-                            x: (geometry.x * pagerItemFlow.widthScaleFactor) - Math.round(units.devicePixelRatio)
-                            y: (geometry.y * pagerItemFlow.heightScaleFactor) - Math.round(units.devicePixelRatio)
-                            width: geometry.width * pagerItemFlow.widthScaleFactor
-                            height: geometry.height * pagerItemFlow.heightScaleFactor
+                            x: (geometry.x * pagerItemGrid.widthScaleFactor) - Math.round(units.devicePixelRatio)
+                            y: (geometry.y * pagerItemGrid.heightScaleFactor) - Math.round(units.devicePixelRatio)
+                            width: geometry.width * pagerItemGrid.widthScaleFactor
+                            height: geometry.height * pagerItemGrid.heightScaleFactor
                             visible: model.IsMinimized !== true
                             color: {
                                 if (desktop.active) {
@@ -392,14 +399,14 @@ MouseArea {
                                     if (root.dragging) {
                                         windowRect.visible = false;
                                         var windowCenter = Qt.point(windowRect.x + windowRect.width / 2, windowRect.y + windowRect.height / 2);
-                                        var pagerItem = pagerItemFlow.childAt(windowCenter.x, windowCenter.y);
+                                        var pagerItem = pagerItemGrid.childAt(windowCenter.x, windowCenter.y);
 
                                         if (pagerItem) {
                                             var relativeTopLeft = root.mapToItem(pagerItem, windowRect.x, windowRect.y);
 
                                             pagerModel.moveWindow(windowRect.windowId, relativeTopLeft.x, relativeTopLeft.y,
                                                 pagerItem.desktopId, root.dragId,
-                                                pagerItemFlow.widthScaleFactor, pagerItemFlow.heightScaleFactor);
+                                                pagerItemGrid.widthScaleFactor, pagerItemGrid.heightScaleFactor);
                                         }
 
                                         // Will reset the model, destroying the reparented drag delegate that
