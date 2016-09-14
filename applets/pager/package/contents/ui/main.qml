@@ -175,7 +175,7 @@ MouseArea {
         rows: effectiveRows
         columns: effectiveColumns
 
-        property int effectiveRows: {
+        readonly property int effectiveRows: {
             if (!pagerModel.count) {
                 return 1;
             }
