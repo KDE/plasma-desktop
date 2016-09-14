@@ -49,7 +49,9 @@ add_subdirectory(phonon)
 add_subdirectory(runners)
 
 add_subdirectory(workspaceoptions)
-add_subdirectory(baloo)
+if (KF5Baloo_FOUND)
+   add_subdirectory(baloo)
+endif()
 add_subdirectory(solid_actions)
 add_subdirectory(cursortheme)
 
