@@ -10,7 +10,7 @@
       <label>The name of the icon to use for the compact representation (e.g. on a small panel).</label>
       <default>start-here-kde</default>
     </entry>
-    <entry name="useCustomButtonImage" type="Bool"
+    <entry name="useCustomButtonImage" type="Bool">
       <label>Whether to use a custom image instead of an icon in the compact representation (e.g. on a small panel).</label>
       <default>false</default>
     </entry>
@@ -32,8 +32,8 @@
       <label>List of general favorites. Supported values are menu id's (usually .desktop file names), special URLs that expand into default applications (e.g. preferred://browser), document URLs and KPeople contact URIs.</label>
       <default>preferred://browser,kontact.desktop,systemsettings.desktop,org.kde.dolphin.desktop,ktp-contactlist.desktop,org.kde.kate.desktop,org.kde.discover</default>
     </entry>
-      <label>List of system action favorites.</label>
     <entry name="favoriteSystemActions" type="StringList">
+      <label>List of system action favorites.</label>
       <default>logout,reboot,shutdown</default>
     </entry>
     <entry name="hiddenApplications" type="StringList">
