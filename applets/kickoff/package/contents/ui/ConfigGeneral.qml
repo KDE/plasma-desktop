@@ -25,11 +25,14 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 
 import org.kde.kquickcontrolsaddons 2.0 as KQuickAddons
 
+import org.kde.plasma.extras 2.0 as PlasmaExtras
+
 ColumnLayout {
     property string cfg_icon: plasmoid.configuration.icon
     property alias cfg_switchTabsOnHover: switchTabsOnHoverCheckbox.checked
     property alias cfg_showAppsByName: showApplicationsByNameCheckbox.checked
     property alias cfg_useExtraRunners: useExtraRunners.checked
+    property alias cfg_menuItems: configButtons.menuItems
 
     spacing: units.smallSpacing
 
@@ -102,6 +105,45 @@ ColumnLayout {
         id: useExtraRunners
         text: i18n("Expand search to bookmarks, files and emails")
     }
+
+    Item {
+        width: height
+        height: units.gridUnit / 2
+    }
+
+    SystemPalette {
+        id: palette
+    }
+
+    PlasmaExtras.Heading {
+        level: 2
+        text: i18n("Menu Buttons")
+        color: palette.text
+    }
+
+    Row {
+        spacing: units.gridUnit
+        Column {
+            QtControls.Label {
+                text: i18n('Visible Tabs')
+                height: configButtons.cellHeight
+            }
+            QtControls.Label {
+                text: i18n('Hidden Tabs')
+                height: configButtons.cellHeight
+            }
+        }
+        Column {
+            ConfigButtons {
+                id: configButtons
+            }
+        }
+    }
+
+    QtControls.Label {
+        text: i18n('Drag tabs between the boxes to show/hide them, or reorder the visible tabs by dragging. ')
+    }
+
     Item {
         //spacer
         Layout.fillHeight: true

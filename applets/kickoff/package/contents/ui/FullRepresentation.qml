@@ -37,18 +37,22 @@ Item {
     property string previousState
     property bool switchTabsOnHover: plasmoid.configuration.switchTabsOnHover
     property Item currentView: mainTabGroup.currentTab.decrementCurrentIndex ? mainTabGroup.currentTab : mainTabGroup.currentTab.item
+    property KickoffButton firstButton: null
+    property var configMenuItems
 
     property QtObject globalFavorites: rootModelFavorites
 
     state: "Normal"
     focus: true
 
-    function switchToFavorites() {
-        mainTabGroup.currentTab = favoritesPage;
-        tabBar.currentTab = bookmarkButton;
-        header.query = ""
-        header.state = "hint";
-        root.state = "Normal";
+    function switchToInitial() {
+        if(firstButton != null) {
+            mainTabGroup.currentTab = firstButton.tab;
+            tabBar.currentTab = firstButton;
+            header.query = ""
+            header.state = "hint";
+            root.state = "Normal";
+        }
     }
 
     Kicker.AppsModel {
@@ -162,7 +166,6 @@ Item {
                 //when: mainTabGroup.currentTab == searchPage || root.state == "Search"
                 source: Qt.resolvedUrl("SearchView.qml")
             }
-
 
             state: {
                 switch (plasmoid.location) {
@@ -326,6 +329,7 @@ Item {
         } // mainTabGroup
     }
 
+
     PlasmaComponents.TabBar {
         id: tabBar
         LayoutMirroring.enabled: Qt.application.layoutDirection == Qt.RightToLeft
@@ -381,47 +385,18 @@ Item {
             }
         }
 
-        currentTab: bookmarkButton
         onCurrentTabChanged: root.forceActiveFocus();
 
         Connections {
             target: plasmoid
             onExpandedChanged: {
+                if(menuItemsChanged()) {
+                    createButtons();
+                }
                 if (!expanded) {
-                    switchToFavorites()
+                    switchToInitial()
                 }
             }
-        }
-
-        KickoffButton {
-            id: bookmarkButton
-            tab: favoritesPage
-            iconSource: "bookmarks"
-            text: i18n("Favorites")
-        }
-        KickoffButton {
-            id: applicationButton
-            tab: applicationsPage
-            iconSource: "applications-other"
-            text: i18n("Applications")
-        }
-        KickoffButton {
-            id: computerButton
-            tab: systemPage
-            iconSource: pmSource.data["PowerDevil"] && pmSource.data["PowerDevil"]["Is Lid Present"] ? "computer-laptop" : "computer"
-            text: i18n("Computer")
-        }
-        KickoffButton {
-            id: usedButton
-            tab: recentlyUsedPage
-            iconSource: "view-history"
-            text: i18n("History")
-        }
-        KickoffButton {
-            id: leaveButton
-            tab: leavePage
-            iconSource: "system-log-out"
-            text: i18n("Leave")
         }
     } // tabBar
 
@@ -452,8 +427,8 @@ Item {
                 }
                 if (!currentView.deactivateCurrentIndex()) {
                     if (root.state == "Applications") {
-                        mainTabGroup.currentTab = favoritesPage;
-                        tabBar.currentTab = bookmarkButton;
+                        mainTabGroup.currentTab = firstButton.tab;
+                        tabBar.currentTab = firstButton;
                     }
                     root.state = "Normal"
                 }
@@ -483,7 +458,7 @@ Item {
                 if (header.state != "query") {
                     plasmoid.expanded = false;
                 } else {
-                    switchToFavorites();
+                    switchToInitial();
                 }
                 event.accepted = true;
                 break;
@@ -553,4 +528,70 @@ Item {
             }
         }
     ] // states
+
+    function getButtonDefinition(name) {
+        switch(name) {
+        case "bookmark":
+            return 'KickoffButton {id: bookmarkButton;tab: favoritesPage;iconSource: "bookmarks";text: i18n("Favorites")}';
+        case "application":
+            return 'KickoffButton {id: applicationButton;tab: applicationsPage;iconSource: "applications-other";text: i18n("Applications")}';
+        case "computer":
+            return 'KickoffButton {id: computerButton;tab: systemPage;iconSource: pmSource.data["PowerDevil"] && pmSource.data["PowerDevil"]["Is Lid Present"] ? "computer-laptop" : "computer";text: i18n("Computer")}';
+        case "used":
+            return 'KickoffButton {id: usedButton;tab: recentlyUsedPage;iconSource: "view-history";text: i18n("History")}';
+        case "leave":
+            return 'KickoffButton {id: leaveButton;tab: leavePage;iconSource: "system-log-out";text: i18n("Leave")}';
+        }
+    }
+
+    Component.onCompleted: {
+        createButtons();
+    }
+
+    function getEnabled(configuration) {
+        var res = [];
+        for(var i = 0; i < configuration.length; i++) {
+            var confItemName = configuration[i].substring(0, configuration[i].indexOf(":"));
+            var confItemEnabled = configuration[i].substring(configuration[i].length-1) == "t";
+            if(confItemEnabled) {
+                res.push(confItemName);
+            }
+        }
+
+        return res;
+    }
+
+    function createButtons() {
+        configMenuItems = plasmoid.configuration.menuItems;
+        var menuItems = getEnabled(plasmoid.configuration.menuItems);
+
+        // remove old menu items
+        for(var i = tabBar.layout.children.length -1; i >= 0; i--)  {
+            if(tabBar.layout.children[i].objectName == "KickoffButton") {
+                tabBar.layout.children[i].destroy();
+            }
+        }
+
+        for (var i = 0; i < menuItems.length; i++) {
+             var button = Qt.createQmlObject(getButtonDefinition(menuItems[i]), tabBar.layout);
+             if(i == 0) {
+                 firstButton = button;
+                 switchToInitial();
+             }
+        }
+
+    }
+
+    function menuItemsChanged() {
+        if(configMenuItems.length != plasmoid.configuration.menuItems.length) {
+            return true;
+        }
+
+        for(var i = 0; i < configMenuItems.length; i++) {
+            if(configMenuItems[i] != plasmoid.configuration.menuItems[i]) {
+                return true;
+            }
+        }
+        return false;
+    }
 }

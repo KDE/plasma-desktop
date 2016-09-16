@@ -22,6 +22,7 @@ import org.kde.kquickcontrolsaddons 2.0
 
 PlasmaComponents.TabButton {
     id: button
+    objectName: "KickoffButton"
 
     property string iconSource
     property alias text: labelElement.text
