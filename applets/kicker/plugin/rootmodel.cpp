@@ -264,28 +264,34 @@ void RootModel::refresh()
         allModel->setDescription(QStringLiteral("KICKER_ALL_MODEL")); // Intentionally no i18n.
     }
 
-    if (m_showSeparators) {
-        m_entryList.prepend(new SeparatorEntry(this));
-        ++m_separatorCount;
-    }
+    int separatorPosition = 0;
 
     if (allModel) {
         m_entryList.prepend(new GroupEntry(this, i18n("All Applications"), QString(), allModel));
+        ++separatorPosition;
     }
 
     if (m_showRecentContacts) {
         m_recentContactsModel = new RecentContactsModel(this);
         m_entryList.prepend(new GroupEntry(this, i18n("Recent Contacts"), QString(), m_recentContactsModel));
+        ++separatorPosition;
     }
 
     if (m_showRecentDocs) {
         m_recentDocsModel = new RecentUsageModel(this, RecentUsageModel::OnlyDocs);
         m_entryList.prepend(new GroupEntry(this, i18n("Recent Documents"), QString(), m_recentDocsModel));
+        ++separatorPosition;
     }
 
     if (m_showRecentApps) {
         m_recentAppsModel = new RecentUsageModel(this, RecentUsageModel::OnlyApps);
         m_entryList.prepend(new GroupEntry(this, i18n("Recent Applications"), QString(), m_recentAppsModel));
+        ++separatorPosition;
+    }
+
+    if (m_showSeparators && separatorPosition > 0) {
+        m_entryList.insert(separatorPosition, new SeparatorEntry(this));
+        ++m_separatorCount;
     }
 
     m_systemModel = new SystemModel(this);
