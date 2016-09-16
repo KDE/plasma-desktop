@@ -132,12 +132,24 @@ MouseArea {
         id: desktopLabelComponent
 
         PlasmaComponents.Label {
-            anchors.centerIn: parent
+            anchors {
+                fill: parent
+                topMargin: desktopFrame.margins.top
+                bottomMargin: desktopFrame.margins.bottom
+                leftMargin: desktopFrame.margins.left
+                rightMargin: desktopFrame.margins.right
+            }
 
             property int index: 0
             property var model: null
 
             text: plasmoid.configuration.displayedText ? model.display : index + 1
+
+            wrapMode: Text.NoWrap
+            elide: Text.ElideRight
+
+            horizontalAlignment: Text.AlignHCenter
+            verticalAlignment: Text.AlignVCenter
         }
     }
 
@@ -285,6 +297,8 @@ MouseArea {
                 height: pagerItemGrid.rowHeight
 
                 PlasmaCore.FrameSvgItem {
+                    id: desktopFrame
+
                     anchors.fill: parent
                     z: 1 // to make sure that the FrameSvg will be placed on top of the windows
                     imagePath: "widgets/pager"
