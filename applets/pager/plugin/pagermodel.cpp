@@ -377,6 +377,7 @@ void PagerModel::refresh()
             windowModel->setFilterSkipPager(true);
             windowModel->setFilterByVirtualDesktop(true);
             windowModel->setFilterByActivity(true);
+            windowModel->setDemandingAttentionSkipsFilters(false);
             windowModel->setSourceModel(d->tasksModel);
             d->windowModels.append(windowModel);
             ++modelCount;
