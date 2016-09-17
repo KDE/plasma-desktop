@@ -142,6 +142,7 @@ MouseArea {
 
             property int index: 0
             property var model: null
+            property Item desktopFrame: null
 
             text: plasmoid.configuration.displayedText ? model.display : index + 1
 
@@ -446,7 +447,7 @@ MouseArea {
 
                 Component.onCompleted: {
                     if (plasmoid.configuration.displayedText < 2) {
-                        desktopLabelComponent.createObject(desktop, {"index": index, "model": model});
+                        desktopLabelComponent.createObject(desktop, {"index": index, "model": model, "desktopFrame": desktopFrame});
                     }
                 }
             }
