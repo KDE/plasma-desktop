@@ -142,11 +142,11 @@ namespace {
 
                 const auto background = backgroundFromConfig(containment);
 
+                if (background.isEmpty()) continue;
+
                 if (newForActivity[activity] != background) {
                     changedActivities << activity;
-                    if (!background.isEmpty()) {
-                        newForActivity[activity] = background;
-                    }
+                    newForActivity[activity] = background;
                 }
             }
 
