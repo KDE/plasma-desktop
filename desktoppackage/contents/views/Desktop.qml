@@ -192,25 +192,33 @@ Item {
     }
 
     onContainmentChanged: {
-        //containment.parent = root;
+        if (containment == null) {
+            return;
+        }
+
+        if (switchAnim.running) {
+            //If the animation was still running, stop it and reset
+            //everything so that a consistent state can be kept
+            switchAnim.running = false;
+            internal.newContainment.visible = false;
+            internal.oldContainment.visible = false;
+            internal.oldContainment = null;
+        }
 
         internal.newContainment = containment;
+        containment.visible = true;
 
-        if (containment != null) {
-            containment.visible = true;
-        }
-        if (containment != null) {
-            if (internal.oldContainment != null && internal.oldContainment != containment) {
-                if (internal.newContainment != null) {
-                    switchAnim.running = true;
-                }
-            } else {
-                containment.anchors.left = root.left;
-                containment.anchors.top = root.top;
-                containment.anchors.right = root.right;
-                containment.anchors.bottom = root.bottom;
-                internal.oldContainment = containment;
+        if (internal.oldContainment != null && internal.oldContainment != containment) {
+            switchAnim.running = true;
+        } else {
+            containment.anchors.left = root.left;
+            containment.anchors.top = root.top;
+            containment.anchors.right = root.right;
+            containment.anchors.bottom = root.bottom;
+            if (internal.oldContainment) {
+                internal.oldContainment.visible = false;
             }
+            internal.oldContainment = containment;
         }
     }
 
@@ -231,17 +239,16 @@ Item {
                     containment.anchors.top = undefined;
                     containment.anchors.right = undefined;
                     containment.anchors.bottom = undefined;
-                }
-                internal.oldContainment.anchors.left = undefined;
-                internal.oldContainment.anchors.top = undefined;
-                internal.oldContainment.anchors.right = undefined;
-                internal.oldContainment.anchors.bottom = undefined;
-
-                if (containment) {
-                    internal.oldContainment.z = 0;
-                    internal.oldContainment.x = 0;
                     containment.z = 1;
                     containment.x = root.width;
+                }
+                if (internal.oldContainment) {
+                    internal.oldContainment.anchors.left = undefined;
+                    internal.oldContainment.anchors.top = undefined;
+                    internal.oldContainment.anchors.right = undefined;
+                    internal.oldContainment.anchors.bottom = undefined;
+                    internal.oldContainment.z = 0;
+                    internal.oldContainment.x = 0;
                 }
             }
         }
@@ -263,12 +270,14 @@ Item {
         }
         ScriptAction {
             script: {
+                if (internal.oldContainment) {
+                    internal.oldContainment.visible = false;
+                }
                 if (containment) {
                     containment.anchors.left = root.left;
                     containment.anchors.top = root.top;
                     containment.anchors.right = root.right;
                     containment.anchors.bottom = root.bottom;
-                    internal.oldContainment.visible = false;
                     internal.oldContainment = containment;
                 }
             }
