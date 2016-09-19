@@ -61,7 +61,8 @@ public:
     QMetaObject::Connection activityInfoConn;
 
     static VirtualDesktopInfo *virtualDesktopInfo;
-    QMetaObject::Connection virtualDesktopInfoConn;
+    QMetaObject::Connection virtualDesktopNumberConn;
+    QMetaObject::Connection virtualDesktopNamesConn;
 
     QDesktopWidget *desktopWidget = QApplication::desktop();
 
@@ -140,9 +141,20 @@ PagerModel::Private::~Private()
 void PagerModel::Private::refreshDataSource()
 {
     if (pagerType == VirtualDesktops) {
-        virtualDesktopInfoConn = QObject::connect(virtualDesktopInfo,
+        QObject::disconnect(virtualDesktopNumberConn);
+        virtualDesktopNumberConn = QObject::connect(virtualDesktopInfo,
             &VirtualDesktopInfo::numberOfDesktopsChanged,
-            q, [this]() { q->refresh(); }, Qt::UniqueConnection);
+            q, [this]() { q->refresh(); });
+
+        QObject::disconnect(virtualDesktopNamesConn);
+        virtualDesktopNamesConn = QObject::connect(virtualDesktopInfo,
+            &VirtualDesktopInfo::desktopNamesChanged,
+            q, [this]() {
+                if (q->rowCount()) {
+                    emit q->dataChanged(q->index(0, 0), q->index(q->rowCount() - 1, 0), QVector<int>{Qt::DisplayRole});
+                }
+            }
+        );
 
         QObject::disconnect(activityInfoConn);
 
@@ -155,7 +167,8 @@ void PagerModel::Private::refreshDataSource()
             &ActivityInfo::numberOfRunningActivitiesChanged,
             q, [this]() { q->refresh(); }, Qt::UniqueConnection);
 
-        QObject::disconnect(virtualDesktopInfoConn);
+        QObject::disconnect(virtualDesktopNumberConn);
+        QObject::disconnect(virtualDesktopNamesConn);
 
         QObject::disconnect(virtualDesktopInfo, &VirtualDesktopInfo::currentDesktopChanged,
             q, &PagerModel::currentPageChanged);
@@ -250,7 +263,8 @@ void PagerModel::setEnabled(bool enabled)
         beginResetModel();
 
         disconnect(d->activityInfoConn);
-        disconnect(d->virtualDesktopInfoConn);
+        disconnect(d->virtualDesktopNumberConn);
+        disconnect(d->virtualDesktopNamesConn);
 
         qDeleteAll(d->windowModels);
         d->windowModels.clear();
@@ -377,6 +391,7 @@ void PagerModel::refresh()
             windowModel->setFilterSkipPager(true);
             windowModel->setFilterByVirtualDesktop(true);
             windowModel->setFilterByActivity(true);
+            windowModel->setDemandingAttentionSkipsFilters(false);
             windowModel->setSourceModel(d->tasksModel);
             d->windowModels.append(windowModel);
             ++modelCount;

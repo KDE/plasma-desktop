@@ -396,7 +396,7 @@ PlasmaComponents.ContextMenu {
 
         visible: (visualParent && visualParent.m.IsLauncher !== true && visualParent.m.IsStartup !== true) && plasmoid.immutability !== PlasmaCore.Types.SystemImmutable
 
-        enabled: visualParent && visualParent.m.LauncherUrlWithoutIcon != null
+        enabled: visualParent && visualParent.m.LauncherUrlWithoutIcon != ""
 
         checkable: true
 
