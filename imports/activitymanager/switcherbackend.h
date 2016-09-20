@@ -63,9 +63,6 @@ public Q_SLOTS:
     bool shouldShowSwitcher() const;
     void setShouldShowSwitcher(const bool &shouldShowSwitcher);
 
-    QPixmap wallpaperThumbnail(const QString &path, int width, int height,
-            const QJSValue &callback);
-
     QAbstractItemModel *runningActivitiesModel() const;
     QAbstractItemModel *stoppedActivitiesModel() const;
 
@@ -78,11 +75,11 @@ private:
                                  const QKeySequence &shortcut,
                                  Handler &&handler);
 
-
     enum Direction {
         Next,
         Previous
     };
+
     void switchToActivity(Direction i);
 
 private Q_SLOTS:
@@ -101,9 +98,6 @@ private:
     bool m_shouldShowSwitcher;
     QTimer m_modKeyPollingTimer;
     QString m_previousActivity;
-
-    KImageCache *m_wallpaperCache;
-    QSet<QUrl> m_previewJobs;
 
     SortedActivitiesModel *m_runningActivitiesModel;
     SortedActivitiesModel *m_stoppedActivitiesModel;
