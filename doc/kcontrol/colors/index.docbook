@@ -14,8 +14,8 @@
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date>2015-04-10</date>
-<releaseinfo>Plasma 5.3</releaseinfo>
+<date>2016-09-20</date>
+<releaseinfo>Plasma 5.8</releaseinfo>
 
 <keywordset>
 <keyword>KDE</keyword>
@@ -28,30 +28,30 @@
 <sect1 id="color">
 <title>Colors</title>
 
-<sect2 id="color-intro">
-  <title>Introduction</title>
+<sect2 id="color-scheme">
+  <title>Scheme Management</title>
 
-  <para>The Color Selection module is comprised of several sections:</para>
+  <para>This module lets you manage the color schemes on your machine.
+  It shows a list of color schemes shipped with &plasma; and a preview at the top.
+  Only one scheme is active at once, but you may edit schemes.
+  You can remove schemes using <guibutton>Remove Scheme</guibutton>.
+  Note that system schemes cannot be removed; trying to do so will display an
+  error.</para>
 
-  <itemizedlist>
-  <listitem><para>
-    <link linkend="color-scheme">The <guilabel>Scheme</guilabel> tab</link>,
-    used to manage schemes.
-  </para></listitem>
-  <listitem><para>
-    <link linkend="color-options">The <guilabel>Options</guilabel> tab</link>,
-    used to change the options of the current scheme.
-  </para></listitem>
-  <listitem><para>
-    <link linkend="color-colors">The <guilabel>Colors</guilabel> tab</link>,
-    used to change the colors of the current scheme.
-  </para></listitem>
-  <listitem><para>
-    <link linkend="color-effects">The state effects tabs</link>
-    (<guilabel>Inactive</guilabel>, <guilabel>Disabled</guilabel>), used to 
-    change the state effects of the current scheme.
-  </para></listitem>
-  </itemizedlist>
+  <para>If you have an Internet connection,
+  you can also browse and retrieve user-created schemes using <guibutton>Get
+  New Schemes...</guibutton>.</para>
+
+  <para>You can also install schemes from a file that you have downloaded or otherwise
+  obtained, as well as import &kde; 4 schemes named like &quot;*.colors&quot;.
+  </para>
+
+  <para>If <guilabel>Apply colors to non-Qt applications</guilabel>
+  is checked, Plasma will attempt to export its color scheme so that
+  non-Qt applications will use the same colors. Most applications will
+  honor the exported scheme to varying degrees, though some may have bugs
+  or otherwise not honor the exported scheme.
+  </para>
 
   <para>Note: This documentation will sometimes refer to the
   &quot;current&quot; scheme, or the &quot;active&quot; scheme.
@@ -62,32 +62,16 @@
   you choose <guibutton>Apply</guibutton>.</para>
 </sect2>
 
-<sect2 id="color-scheme">
-  <title>Scheme Management</title>
+<sect2>
+  <title>Edit or Create Schemes</title>
+  <para>To edit or create new schemes select a scheme from the list and press the
+  <guibutton>Edit Scheme</guibutton> button to open a dialog with three tabs 
+  <guilabel>Options</guilabel>, <guilabel>Colors</guilabel> and <guilabel>Disabled</guilabel>.
+  When you have created a scheme you like, you can upload it, reset it or save it
+  under a different name or overwrite the active scheme.
+  </para>
 
-  <para>The <guilabel>Scheme</guilabel> tab lets you manage the color schemes
-  on your machine. Only one scheme is active at once, but you may save schemes,
-  allowing you to quickly change the scheme later. When you have created a
-  scheme you like, you can save it with <guibutton>Save Scheme...</guibutton>.
-  You can remove schemes using <guibutton>Remove Scheme</guibutton>.
-  Note that system schemes cannot be removed; trying to do so will display an
-  error.</para>
-
-  <para>Plasma ships with several schemes. If you have an Internet connection,
-  you can also browse and retrieve user-created schemes using <guibutton>Get
-  New Schemes...</guibutton>.</para>
-
-  <sect3>
-    <title>Importing Schemes</title>
-
-    <para>You can also import schemes that you have downloaded or otherwise
-    obtained, as well as import &kde; 4 schemes named like &quot;*.colors&quot;.
-    </para>
-
-  </sect3>
-</sect2>
-
-<sect2 id="color-options">
+<sect3 id="color-options">
   <title>Color Scheme Options</title>
 
   <para>The <guilabel>Options</guilabel> tab allows you to change some
@@ -116,12 +100,6 @@
       color to paint the column whose information is being used to sort the
       items in the list.
     </para></listitem>
-    <listitem><para><guilabel>Apply colors to non-Qt applications</guilabel>
-      &mdash; If checked, Plasma will attempt to export its color scheme so that
-      non-Qt applications will use the same colors. Most applications will
-      honor the exported scheme to varying degrees, though some may have bugs
-      or otherwise not honor the exported scheme.
-    </para></listitem>
     <listitem><para><guilabel>Contrast</guilabel>
       &mdash; This slider controls the contrast of shaded elements, such as
       frame borders and the &quot;3D&quot; effects used by most styles. A lower
@@ -130,18 +108,17 @@
     </para></listitem>
   </itemizedlist>
 
-</sect2>
+</sect3>
 
-<sect2 id="color-colors">
+<sect3 id="color-colors">
   <title>Colors</title>
 
   <para>The <guilabel>Colors</guilabel> tab allows you to change the colors in
   the active color scheme.</para>
 
   <para>Creating or changing a scheme is a simple matter of clicking on the
-  swatch in the color list and selecting a new color. You can check your
-  changes at any time by pressing <guibutton>Apply</guibutton>. It is suggested
-  that you save your scheme (via the <guilabel>Scheme</guilabel> tab) when you
+  swatch in the color list and selecting a new color. It is suggested
+  that you save your scheme when you
   are done.</para>
 
   <para>The <guilabel>Common Colors</guilabel> set, which is displayed
@@ -162,7 +139,7 @@
   all, and can only be changed (if needed) by selecting the appropriate
   set.</para>
 
-  <sect3>
+  <sect4>
     <title>Color Sets</title>
 
     <para>Plasma breaks the color scheme into several sets based on the type
@@ -186,23 +163,18 @@
       <listitem><para><guilabel>Complementary</guilabel> &mdash;
         Areas of applications with an alternative color scheme; usually with a dark background for light color schemes. Examples of areas with this inverted color scheme are the logout interface, the lock screen and the fullscreen mode for some applications.
       </para></listitem>
-      <listitem><para>Window Manager &mdash;
-        window title bars and related elements.
-      </para></listitem>
     </itemizedlist>
 
-    <para>Each set contains a number of color roles. Except for the Window
-    Manager colors, each set has the same roles. All colors are associated with
+    <para>Each set contains a number of color roles.
+    Each set has the same roles. All colors are associated with
     one of the above sets.</para>
-  </sect3>
+  </sect4>
 
-  <sect3>
+  <sect4>
     <title>Color Roles</title>
 
     <para>Each color set is made up of a number of roles which are available in
-    all other sets. (The Window Manager set is an exception; it has its own
-    unique roles that do not exist in any other set, and does not use the same
-    roles as the other sets.) In addition to the obvious Normal Text and Normal
+    all other sets. In addition to the obvious Normal Text and Normal
     Background, these roles are as follows:</para>
 
     <itemizedlist>
@@ -266,9 +238,9 @@
 
     <para>The choice of color role is left to the developer; the above are
     guidelines intended to represent typical usage.</para>
-  </sect3>
+  </sect4>
 
-  <sect3>
+  <sect4>
     <title>Window Manager Colors</title>
 
     <para>As previously stated, the Window Manager set has its own roles,
@@ -291,11 +263,11 @@
 
     <para>The Inactive Titlebar [Text] roles are the same as the above, but for
     inactive windows, rather than active windows.</para>
-  </sect3>
+  </sect4>
 
-</sect2>
+</sect3>
 
-<sect2 id="color-effects">
+<sect3 id="color-effects">
   <title>Color State Effects</title>
 
   <para>Color state effects are applied to interface elements in the inactive
@@ -313,7 +285,7 @@
   the last (Contrast) deals with the foreground colors relative to the
   background.</para>
 
-  <sect3>
+  <sect4>
     <title>Intensity</title>
 
     <para>Intensity allows the overall color to be lightened or darkened.
@@ -341,9 +313,9 @@
         color and white.
       </para></listitem>
     </itemizedlist>
-  </sect3>
+  </sect4>
 
-  <sect3>
+  <sect4>
     <title>Color</title>
 
     <para>Color also changes the overall color, but is not limited to
@@ -367,9 +339,9 @@
         increased.
       </para></listitem>
     </itemizedlist>
-  </sect3>
+  </sect4>
 
-  <sect3>
+  <sect4>
     <title>Contrast</title>
 
     <para>The contrast effects are similar to the color effects, except they
@@ -381,7 +353,9 @@
     settings on the slider). For Contrast effects, the minimum setting on the
     slider produces no change, while maximum causes the text to completely
     disappear into the background.</para>
-  </sect3>
+  </sect4>
+
+</sect3>
 
 </sect2>
 
