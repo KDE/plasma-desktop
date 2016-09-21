@@ -249,7 +249,7 @@ uint SortedActivitiesModel::lastUsedTime(const QString &activity) const
         return ~(uint)0;
 
     } else {
-        KConfig config("kactivitymanagerd-switcher");
+        KConfig config("kactivitymanagerd-switcher", KConfig::SimpleConfig);
         KConfigGroup times(&config, "LastUsed");
 
         return times.readEntry(activity, (uint)0);
