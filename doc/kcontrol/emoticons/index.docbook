@@ -12,8 +12,8 @@
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date>2015-04-08</date>
-<releaseinfo>Plasma 5.3</releaseinfo>
+<date>2016-09-21</date>
+<releaseinfo>Plasma 5.8</releaseinfo>
 
 <keywordset>
 <keyword>KDE</keyword>
@@ -62,7 +62,7 @@ An emoticon consists in two parts: an icon (typically a <filename>.png</filename
 </para>
 
 <para>
-The emoticons themes will be saved locally in your home in <filename class="directory">$KDEHOME/share/emoticons</filename>.
+The emoticons themes will be saved locally in your home in <filename class="directory">$(qtpaths --paths GenericDataLocation)/emoticons</filename>.
 </para>
 
 </sect2>
@@ -86,24 +86,26 @@ When this option is not checked (default), each emoticon string will be replaced
 </listitem>
 </varlistentry>
 
-<varlistentry><term><guilabel>New Theme...</guilabel></term>
-<listitem>
-<para>
-You can create your own new theme from scratch. Clicking on this button brings a dialog asking for the name of the new theme. You can then use the <guibutton>Add...</guibutton> button on the right to create new emoticons and their associated text.
-</para>
-</listitem>
-</varlistentry>
-<varlistentry><term><guilabel>Get New Icon Themes...</guilabel></term>
-<listitem>
-<para>
-You need to be connected to the Internet to use this action. A dialog displays a list of emoticons themes from <ulink url="http://www.kde-look.org">http://www.kde-look.org</ulink> and you can install one by clicking the <guibutton>Install</guibutton> button on the right side of the theme description in the list.
-</para>
-</listitem>
-</varlistentry>
-<varlistentry><term><guilabel>Install Theme File...</guilabel></term>
+<varlistentry><term><guilabel>Install from File</guilabel></term>
 <listitem>
 <para>
 This action allows you to install a theme you downloaded yourself. A theme file is an archive file, usually a <filename>.tar.gz</filename> or a <filename>.zip</filename> file or any other archive files. A dialog asks you for the location of this local archive file and after you entered or dragged the URL and clicked <guibutton>OK</guibutton>, the theme is installed and will appear in the themes list.
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry><term><guilabel>Get New Theme</guilabel></term>
+<listitem>
+<para>
+You need to be connected to the Internet to use this action. A dialog displays a list of emoticons themes from <ulink url="https://store.kde.org/">https://store.kde.org/</ulink> and you can install one by clicking the <guibutton>Install</guibutton> button on the right side of the theme description in the list.
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry><term><guilabel>New Theme</guilabel></term>
+<listitem>
+<para>
+You can create your own new theme from scratch. Clicking on this button brings a dialog asking for the name of the new theme. You can then use the <guibutton>Add...</guibutton> button on the right to create new emoticons and their associated text.
 </para>
 </listitem>
 </varlistentry>
@@ -134,17 +136,18 @@ This button allows you to add an emoticon to the selected theme. The dialog asks
 </listitem>
 </varlistentry>
 
-<varlistentry><term><guilabel>Edit...</guilabel></term>
-<listitem>
-<para>
-The <guibutton>Edit...</guibutton> button allows you to change either the icon or the text of the selected emoticon. You need to click the <guibutton>OK</guibutton> button to validate this action.
-</para>
-</listitem>
-</varlistentry>
 <varlistentry><term><guilabel>Remove</guilabel></term>
 <listitem>
 <para>
 This will remove the selected emoticon from the selected theme. You need to click the <guibutton>Yes</guibutton> button to validate this action.
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry><term><guilabel>Edit...</guilabel></term>
+<listitem>
+<para>
+The <guibutton>Edit...</guibutton> button allows you to change either the icon or the text of the selected emoticon. You need to click the <guibutton>OK</guibutton> button to validate this action.
 </para>
 </listitem>
 </varlistentry>
