@@ -14,11 +14,11 @@
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date>2015-04-08</date>
-<releaseinfo>Plasma 5.3</releaseinfo>
+<date>2016-09-17</date>
+<releaseinfo>Plasma 5.8</releaseinfo>
 
 <keywordset>
-<keyword>KDE</keyword>
+<keyword>Plasma</keyword>
 <keyword>KControl</keyword>
 <keyword>key bindings</keyword>
 <keyword>bindings</keyword>
@@ -32,7 +32,7 @@
 <sect2 id="key-bindings-intro"> 
 <title>Introduction</title> 
 
-<para>While most of the functionality offered by &kde; can be accessed
+<para>While most of the functionality offered by &plasma; can be accessed
 using a simple <quote>point and click</quote> interface, many people
 prefer using the keyboard for some tasks.  Pressing something like
 <keycombo action="simul"> &Ctrl;<keycap>F</keycap></keycombo> is often
@@ -41,7 +41,7 @@ opening the <guimenu>Edit</guimenu> menu and selecting
 <guimenuitem>Find</guimenuitem>.</para>
 
 <para> As different people have different preferences about keyboard
-shortcuts, &kde; offers full customization of <quote>key
+shortcuts, &plasma; offers full customization of <quote>key
 bindings.</quote> A key binding or shortcut is a combination of an
 action with a key or a combination of keys.</para>
 
@@ -56,7 +56,7 @@ Actually, in a certain way standard or application shortcuts are
 difference is:</para>
 
 <itemizedlist>
-<listitem><para><quote>Standard keyboard shortcuts</quote> refer to actions
+<listitem><para><quote>Standard shortcuts</quote> refer to actions
 that are often available in applications, such as Save, Print, Copy
 &etc;</para></listitem> 
 <listitem><para><quote>Global shortcuts</quote> are shortcuts for
@@ -72,29 +72,35 @@ for which you have to customize key bindings using the application's
 key bindings dialog.</para>
 
 <sect3 id="key-bindings-standard">
-<title>Standard Keyboard Shortcuts page</title>
+<title>Standard Shortcuts page</title>
 <para>At the top of this dialog you see an input box, where you can
 search interactively for shortcut names (&eg; Copy) or combination of keys 
 (&eg; <quote><userinput>Ctrl+C</userinput></quote>) by typing them literally here.</para>
 <para>Below the search box you can see a list of key bindings, &ie; associations between actions 
-(&eg; Copy) shown in the <guilabel>Actions</guilabel> column and keys or combination of keys 
+(&eg; Copy) shown in the <guilabel>Action</guilabel> column and keys or combination of keys 
 (&eg; <keycombo action="simul">&Ctrl;<keycap>C</keycap> </keycombo>) shown in the 
 <guilabel>Shortcut</guilabel> or <guilabel>Alternate</guilabel> column.
 </para>
-<!-- Global column is empty what's that???-->
 </sect3>
 
 <sect3 id="key-bindings-global">
 <title>Global Shortcuts page</title>
-<para>At the top of this page is a drop down box which allows you
-to select a <guilabel>KDE component</guilabel> like KWin, Plasma Desktop &etc;
+<para>At the left of this page is a list box which allows you
+to select a <guilabel>Component</guilabel> like KWin, Plasma Desktop &etc;
 The defined shortcuts for the selected component are displayed in the 
-<guilabel>Action</guilabel> and <guilabel>Global</guilabel> column in the list view. 
-Click the <guilabel>File</guilabel> drop down box at the right to import/export a 
-Scheme, set all shortcuts to none and remove a component.</para>
-<para>This page has the same search box as the <guilabel>Standard Keyboard 
+<guilabel>Action</guilabel> and <guilabel>Global</guilabel> column in the list view.</para>
+<para>This page has the same search box as the <guilabel>Standard 
 Shortcuts</guilabel> tab.</para>
+<para>Use <guiicon><inlinemediaobject><imageobject><imagedata fileref="list-add.png" format="PNG"/></imageobject></inlinemediaobject></guiicon>
+or <guiicon><inlinemediaobject><imageobject><imagedata fileref="remove.png" format="PNG"/></imageobject></inlinemediaobject></guiicon>
+to add or remove a component.
+</para>
+<para>Click the <guilabel>File</guilabel> drop down box at the right to import/export a 
+Scheme, set all shortcuts to none.</para>
+<para>Global shortcuts can now be configured to jump to specific tasks within an application.</para>
 
+<para>By default you can open the application menu by just pressing the <keysym>Meta</keysym> key.
+</para>
 </sect3>
 
 <sect3 id="key-bindings-use-confkeys">
@@ -131,71 +137,6 @@ allows to edit the second shortcut for the action.</para></listitem>
 </itemizedlist>
 
 </sect3>
-<!-- changed in kde4
-<sect3 id="key-bindings-use-confschemes">
-<title>Configuring Schemes</title>
-
-<para>A key binding scheme is a set of key bindings that you can
-select by name. &kde; comes with several pre-defined key binding
-schemes. In addition to these bundled schemes, you will always see a scheme named
-<guilabel>Current scheme</guilabel> that represents the set of key
-bindings you are using right now (&ie; not the current settings you
-are playing with, but what you've been using up to now). </para>
-
-<para>When you are playing with the key bindings for the first time
-you don't have to be afraid of changing the default bindings: &kde;
-won't let you overwrite the defaults, so you can always switch back to
-the factory presets. By choosing <guilabel>Current scheme</guilabel>
-you can return to the set of key bindings you've been using up to
-now. However, be careful not to select a scheme when you've made
-changes to the key bindings you don't want to lose.</para>
-
-<para>When you are satisfied with a set of key bindings you've
-created, you may want to save them to a scheme of your own, so that
-you can still experiment with the bindings and always return to a
-certain scheme. You can always do this by clicking on the
-<guibutton>Add</guibutton> button.  You will be prompted for a name
-and then the new scheme will appear in the key schemes listbox. You
-can remove your own schemes again by selecting a scheme and clicking
-the <guibutton>Remove</guibutton> button. Click the <guibutton>Save
-changes</guibutton> button to save any changes you have made to the
-currently selected scheme. Note that you can not remove or save
-changes to <guilabel>KDE default</guilabel> or to <guilabel>Current
-scheme</guilabel>.</para>
-
-<important><para>If you want to save your changes while a read-only
-scheme is selected, you always have to add a new scheme first! If you
-select one of your own schemes because you want to save the changes to
-that one, the control module will switch to the key bindings of that
-scheme, discarding your changes.</para></important> 
-</sect3>
--->
-<!--not in kde 4
-</sect2>
-<sect2>
-<title>Modifier Keys</title>
-
-<para>Different keyboards offer different sets of modifier keys.  A
-&Mac; keyboard, for example, does not have a &Ctrl; key, and instead
-has an <keycap>Option</keycap> key.  Here you can see what the
-available modifier keys for the current keyboard are.</para>
-
-<para>If you enable <guilabel>Macintosh keyboard</guilabel> the list
-of modifiers will change.</para>
-
-<para>If you have enabled the &Mac; keyboard, you can further enable
-<guilabel>MacOS-style modifier usage</guilabel>, to make &kde; behave
-more like &MacOS;.</para>
-
-<para>Finally, you can change what a keypress sends to the &X-Server;
-in the <guilabel>X Modifier Mapping</guilabel> section.  A common
-example is to reconfigure the <keycap>Caps Lock</keycap> key, which is
-rarely used, to be another &Ctrl; key.  This is especially nice if you
-are a touch typist, as <keycap>Caps Lock</keycap> is much easier to
-reach than either of the &Ctrl; keys on a standard keyboard.</para>
-
-</sect2>
--->
 </sect2>
 </sect1>
 
