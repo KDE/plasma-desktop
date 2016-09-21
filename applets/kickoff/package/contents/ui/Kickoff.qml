@@ -41,6 +41,9 @@ Item {
     Plasmoid.icon: plasmoid.configuration.icon
 
     Plasmoid.compactRepresentation: MouseArea {
+        //AppletQuickItem expects a layout to exist
+        //setting even a default property forces it to be created
+        Layout.fillWidth: false
         hoverEnabled: true
         onClicked: plasmoid.expanded = !plasmoid.expanded
 
