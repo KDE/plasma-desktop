@@ -15,8 +15,8 @@
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date>2015-04-08</date>
-<releaseinfo>Plasma 5.3</releaseinfo>
+<date>2016-09-21</date>
+<releaseinfo>Plasma 5.8</releaseinfo>
 
 <keywordset>
 <keyword>KDE</keyword>
@@ -30,10 +30,10 @@
 <sect2 id="icons-intro">
 <title>Introduction</title>
 
-<para>&kde; comes with a full set of icons in several sizes. These icons
-are being used all over &kde;: the desktop, the panel, the &konqueror; file
-manager, in every toolbar of every &kde; application, etc. The icons
-control module offers you very flexible ways of customizing the way &kde;
+<para>&plasma; comes with a full set of icons in several sizes. These icons
+are being used all over &plasma;: the desktop, the panel, the &dolphin; file
+manager, in every toolbar of every &plasma; application, etc. The icons
+control module offers you very flexible ways of customizing the way &plasma;
 handles icons. </para>
 
 <para>
@@ -44,7 +44,7 @@ handles icons. </para>
       <imagedata fileref="main.png" format="PNG"/>
     </imageobject>
     <textobject>
-      <phrase>Customizing &kde; icons</phrase>
+      <phrase>Customizing &plasma; icons</phrase>
     </textobject>
   </mediaobject>
 </screenshot>
@@ -62,20 +62,19 @@ icons will be used in: for example the desktop, toolbars &etc;
 </itemizedlist>
 
 <important><para>Please note that some of these settings may depend on
-your selected icon theme. &kde; comes with several icon themes by default,
-Oxygen, Monochrome and Breeze.<!--FIXME still valid in 5.3?  There are additional color themes
-in the kdeartwork package.--></para></important>
+your selected icon theme. &plasma; comes with several icon themes by default,
+Oxygen, Monochrome and Breeze.</para></important>
 
-<para>There are two pages in this module: <guilabel>Theme</guilabel> and <guilabel>Advanced</guilabel>. <guilabel>Theme</guilabel> manages the icon themes while <guilabel>Advanced</guilabel> lets you configure how icons will be used in &kde;.</para>
+<para>There are two pages in this module: <guilabel>Theme</guilabel> and <guilabel>Advanced</guilabel>. <guilabel>Theme</guilabel> manages the icon themes while <guilabel>Advanced</guilabel> lets you configure how icons will be used in &plasma;.</para>
 </sect2>
 
 <sect2 id="icon-theme">
 <title>Theme</title>
 
 <para>At the top is a preview of the current theme icons. Most default
-installations will have only one icon theme available, the &kde; default
-Oxygen theme.  There are other themes contained separately in the
-kdeartwork package, and you can also download more from the Internet from <ulink url="http://www.kde-look.org">http://www.kde-look.org</ulink>.</para>
+installations will have only a few icon theme available, amongst them the &plasma; default
+Breeze theme. You can also download more from the Internet from 
+<ulink url="https://store.kde.org/">https://store.kde.org/</ulink>.</para>
 
 <variablelist>
 <varlistentry><term><guilabel>Get New Themes...</guilabel></term>
@@ -216,27 +215,9 @@ the icon theme you have selected in the icon themes control module. For
 example, the low color icon theme only offers the sizes 16 and 32 for
 desktop icons and 16, 22 and 32 for toolbar icons. The HiColor theme
 offers icon sizes 16, 32 and 48 as well as sizes from 64 to 128.
-However, as &kde; can not have all these icon sizes in store, icons
+However, as &plasma; can not have all these icon sizes in store, icons
 using size 64 to 128 will be automatically generated which may result in
 a loss of quality.</para>
-<!-- not in 4.5
-<para>If the icon sizes offered by your chosen icon theme are not enough
-for you, there is still the option <guilabel>Double-sized
-pixels</guilabel>. If this option is selected, all icons will have
-double sized pixels, &ie; a 2x2 block instead of normal pixels. While
-this makes it possible to achieve very large icon sizes, the quality is
-poor: icons will look <quote>blocky</quote>, an effect you may remember
-if you've grown up using a Sinclair ZX Spectrum or similar. If this is
-an option for you, using the large sizes offered by &kde;'s HiColor
-icon theme will always result in a much better quality than using the
-low color icon theme with double sized pixels.</para> 
--->
-<!-- 
-<para>You can also choose to have smoothed icons, an effect similar to
-anti-aliasing of fonts.  Enable the checkbox <guilabel>Blend alpha
-channel</guilabel> to see this in action, but note that it will slow
-down graphics on a slower computer.</para>
--->
 
 <para>You can also choose animated icons. Many of the icons have
 animations associated with them.  Enable the checkbox labelled
