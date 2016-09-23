@@ -353,6 +353,9 @@ QString SchemeEditorColors::colorSetGroupKey(int colorSet)
         case KColorScheme::Tooltip:
             group = QStringLiteral("Colors:Tooltip");
             break;
+        case KColorScheme::Complementary:
+            group = QStringLiteral("Colors:Complementary");
+            break;
         default:
             group = QStringLiteral("Colors:View");
     }
