@@ -57,7 +57,7 @@ Item {
         Tools.triggerAction(ListView.view.model, model.index, actionId, actionArgument);
 
         if (actionId.indexOf("_kicker_favorite_") === 0) {
-            switchToFavorites();
+            switchToInitial();
         }
     }
 
