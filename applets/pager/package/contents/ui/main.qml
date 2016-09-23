@@ -220,9 +220,23 @@ MouseArea {
         readonly property real widthScaleFactor: columnWidth / pagerModel.pagerItemSize.width
         readonly property real heightScaleFactor: rowHeight / pagerModel.pagerItemSize.height
 
-        readonly property int innerSpacing: ((vertical ? effectiveColumns : effectiveRows) - 1) * spacing
-        readonly property int rowHeight: vertical ? Math.floor(columnWidth / pagerItemSizeRatio) : Math.floor((root.height - innerSpacing) / effectiveRows)
-        readonly property int columnWidth: vertical ? Math.floor((root.width - innerSpacing) / effectiveColumns) : Math.floor(rowHeight * pagerItemSizeRatio)
+
+        states: [
+            State {
+                name: "vertical"
+                when: vertical
+                PropertyChanges {
+                    target: pagerItemGrid
+                    innerSpacing: effectiveColumns
+                    rowHeight: Math.floor(columnWidth / pagerItemSizeRatio)
+                    columnWidth: Math.floor((root.width - innerSpacing) / effectiveColumns)
+                }
+            }
+        ]
+
+        property int innerSpacing: (effectiveRows - 1) * spacing
+        property int rowHeight: Math.floor((root.height - innerSpacing) / effectiveRows)
+        property int columnWidth: Math.floor(rowHeight * pagerItemSizeRatio)
 
         Repeater {
             id: repeater
