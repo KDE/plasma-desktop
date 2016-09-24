@@ -172,7 +172,10 @@ QVariant RecentUsageModel::appData(const QString &resource, int role) const
     const QString storageId = resource.section(':', 1);
     KService::Ptr service = KService::serviceByStorageId(storageId);
 
-    if (!service || !service->isApplication()) {
+    QStringList allowedTypes({ QLatin1String("Service"), QLatin1String("Application") });
+
+    if (!service || !allowedTypes.contains(service->property(QLatin1String("Type")).toString())
+            || service->exec().isEmpty()) {
         return QVariant();
     }
 
