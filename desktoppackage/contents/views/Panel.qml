@@ -77,6 +77,9 @@ PlasmaCore.FrameSvgItem {
         property: "length"
         when: containment
         value: {
+            if (!containment) {
+                return;
+            }
             if (verticalPanel) {
                 return containment.Layout.preferredHeight
             } else {
