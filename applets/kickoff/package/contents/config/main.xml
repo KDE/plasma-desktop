@@ -24,7 +24,7 @@
     </entry>
     <entry name="systemApplications" type="StringList">
       <label>List of applications at the top of the "Computer" tab.</label>
-      <default>systemsettings.desktop</default>
+      <default>systemsettings.desktop,org.kde.kinfocenter.desktop</default>
     </entry>
     <entry name="useExtraRunners" type="Bool">
       <label>Whether to use additional KRunner plugins to produce results in the search.</label>
