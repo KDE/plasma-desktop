@@ -1343,7 +1343,7 @@ void FolderModel::openContextMenu()
         flags |= KonqPopupMenu::ShowUrlOperations;
         flags |= KonqPopupMenu::ShowNewWindow;
 
-        KonqPopupMenu *popupMenu = new KonqPopupMenu(items, m_dirModel->dirLister()->url(), m_actionCollection, flags);
+        KonqPopupMenu *popupMenu = new KonqPopupMenu(items, m_dirModel->dirLister()->url(), m_actionCollection, flags, QApplication::desktop());
         popupMenu->setNewFileMenu(m_newMenu);
         popupMenu->setBookmarkManager(KBookmarkManager::userBookmarksManager());
         popupMenu->setActionGroups(actionGroups);
