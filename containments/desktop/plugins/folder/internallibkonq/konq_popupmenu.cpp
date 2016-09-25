@@ -23,11 +23,11 @@
 #include <KActionCollection>
 
 #include <kfileitemlistproperties.h>
-#include "konq_copytomenu.h"
 #include "kfileitemactions.h"
 #include "kabstractfileitemactionplugin.h"
 #include "kpropertiesdialog.h"
 
+#include <KFileCopyToMenu>
 #include <klocalizedstring.h>
 #include <kbookmarkmanager.h>
 #include <kbookmarkdialog.h>
@@ -116,7 +116,7 @@ public:
     QUrl m_sViewURL;
     KFileItemListProperties m_popupItemProperties;
     KFileItemActions m_menuActions;
-    KonqCopyToMenu m_copyToMenu;
+    KFileCopyToMenu m_copyToMenu;
     KBookmarkManager *m_bookmarkManager;
     KActionCollection &m_actions;
     QList<QAction *> m_ownActions;
@@ -162,10 +162,11 @@ void KonqPopupMenuPrivate::populate()
     bool bTrashIncluded = false;
 
     const KFileItemList lstItems = m_popupItemProperties.items();
-    KFileItemList::const_iterator it = lstItems.constBegin();
-    const KFileItemList::const_iterator kend = lstItems.constEnd();
-    for (; it != kend; ++it) {
-        const QUrl url = (*it).url();
+    QList<QUrl> lstUrls;
+    lstUrls.reserve(lstItems.count());
+    for (const KFileItem &item : lstItems) {
+        const QUrl url = item.url();
+        lstUrls.append(url);
         if (!bTrashIncluded && ((url.scheme() == QLatin1String("trash") && url.path().length() <= 1))) {
             bTrashIncluded = true;
         }
@@ -430,7 +431,7 @@ void KonqPopupMenuPrivate::populate()
     if (m_popupFlags & KonqPopupMenu::ShowUrlOperations &&
             KConfigGroup(dolphin, "General").readEntry("ShowCopyMoveMenu", false)) {
 
-        m_copyToMenu.setItems(lstItems);
+        m_copyToMenu.setUrls(lstUrls);
         m_copyToMenu.setReadOnly(sMoving == false);
         m_copyToMenu.addActionsTo(q);
         q->addSeparator();

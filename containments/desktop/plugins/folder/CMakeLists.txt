@@ -17,7 +17,6 @@ set(folderplugin_SRCS
     textfix.cpp
     viewpropertiesmenu.cpp
     wheelinterceptor.cpp
-    internallibkonq/konq_copytomenu.cpp
     internallibkonq/konq_popupmenu.cpp
     shortcut.cpp
 )
