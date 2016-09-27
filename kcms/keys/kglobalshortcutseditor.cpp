@@ -227,13 +227,6 @@ void KGlobalShortcutsEditor::KGlobalShortcutsEditorPrivate::initGUI()
     ui.components->setCategoryDrawer(new KCategoryDrawer(ui.components));
     ui.components->setModelColumn(0);
 
-    // Connect our components
-    connect(ui.components, &QListView::activated,
-            q, [this](const QModelIndex &index) {
-                QString name = proxyModel->data(index).toString();
-                q->activateComponent(name);
-            });
-
     // Build the menu
     QMenu *menu = new QMenu(q);
     menu->addAction( QIcon::fromTheme(QStringLiteral("document-import")), i18n("Import Scheme..."), q, SLOT(importScheme()));
@@ -375,6 +368,13 @@ void KGlobalShortcutsEditor::KGlobalShortcutsEditorPrivate::initGUI()
     proxyModel->setSourceModel(model);
     proxyModel->setSortCaseSensitivity(Qt::CaseInsensitive);
     ui.components->setModel(proxyModel);
+
+    connect(ui.components->selectionModel(),
+        &QItemSelectionModel::currentChanged,
+        q, [this](const QModelIndex &index) {
+            QString name = proxyModel->data(index).toString();
+            q->activateComponent(name);
+        });
 }
 
 
