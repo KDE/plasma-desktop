@@ -147,6 +147,7 @@ FocusScope {
                 anchors.bottomMargin: sideBar.margins.bottom
 
                 model: systemFavorites
+                usesPlasmaTheme: true
 
                 states: [ State {
                     name: "top"

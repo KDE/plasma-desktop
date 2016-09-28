@@ -66,6 +66,8 @@ Item {
         active: listener.containsMouse
 
         source: model.decoration
+
+        usesPlasmaTheme: flow.usesPlasmaTheme
     }
 
     MouseEventListener {

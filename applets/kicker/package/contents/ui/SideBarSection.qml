@@ -33,6 +33,7 @@ DropArea {
     property int contentHeight: (model.count * units.iconSizes.medium) + ((model.count - 1) * flow.spacing)
 
     property alias model: repeater.model
+    property alias usesPlasmaTheme: flow.usesPlasmaTheme
 
     onDragMove: {
         if (flow.animating) {
@@ -52,6 +53,7 @@ DropArea {
 
         anchors.fill: parent
 
+        property bool usesPlasmaTheme: false
         property bool animating: false
         property int animationDuration: resetAnimationDurationTimer.interval
 
