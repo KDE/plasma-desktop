@@ -668,6 +668,9 @@ void MouseSettings::apply(bool force)
       Atom prop_wheel_emulation_axes = XInternAtom(dpy, EVDEV_PROP_WHEEL_AXES, True);
       int ndevices_return;
       XIDeviceInfo *info = XIQueryDevice(dpy, XIAllDevices, &ndevices_return);
+      if (!info) {
+          return;
+      }
       for (int i = 0; i < ndevices_return; ++i) {
           if ((info + i)->use == XISlavePointer) {
               int deviceid = (info + i)->deviceid;
