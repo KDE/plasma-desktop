@@ -67,7 +67,7 @@ Item {
 
         source: model.decoration
 
-        usesPlasmaTheme: flow.usesPlasmaTheme
+        usesPlasmaTheme: repeater.usesPlasmaTheme
     }
 
     MouseEventListener {
