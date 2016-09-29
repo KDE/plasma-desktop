@@ -23,9 +23,10 @@
 // Qt
 #include <QColor>
 #include <QObject>
+#include <QTimer>
 
 // KDE
-#include <KConfig>
+#include <KSharedConfig>
 #include <KConfigGroup>
 #include <KDirWatch>
 #include <KLocalizedString>
@@ -36,43 +37,49 @@
 #include <KWindowSystem>
 #include <QX11Info>
 
+#define PLASMACONFIG "plasma-org.kde.plasma.desktop-appletsrc"
+
 namespace {
 
-    class BackgroundCache {
+    class BackgroundCache: public QObject {
     public:
         BackgroundCache()
             : initialized(false)
-            , plasmaConfig("plasma-org.kde.plasma.desktop-appletsrc")
+            , plasmaConfig(KSharedConfig::openConfig(PLASMACONFIG))
         {
             using namespace std::placeholders;
 
             const auto configFile = QStandardPaths::writableLocation(
                                         QStandardPaths::GenericConfigLocation) +
-                                    QLatin1Char('/') + plasmaConfig.name();
+                                    QLatin1Char('/') + PLASMACONFIG;
 
             KDirWatch::self()->addFile(configFile);
 
             QObject::connect(KDirWatch::self(), &KDirWatch::dirty,
-                             [this] (const QString &file) { settingsFileChanged(file); });
+                             this, &BackgroundCache::settingsFileChanged,
+                             Qt::QueuedConnection);
             QObject::connect(KDirWatch::self(), &KDirWatch::created,
-                             [this] (const QString &file) { settingsFileChanged(file); });
+                             this, &BackgroundCache::settingsFileChanged,
+                             Qt::QueuedConnection);
+
         }
 
         void settingsFileChanged(const QString &file)
         {
-            if (!file.endsWith(plasmaConfig.name())) return;
-
-            plasmaConfig.reparseConfiguration();
+            if (!file.endsWith(PLASMACONFIG)) {
+                return;
+            }
 
             if (initialized) {
-                reload(false);
+                plasmaConfig->reparseConfiguration();
+                reload();
             }
         }
 
         void subscribe(SortedActivitiesModel *model)
         {
             if (!initialized) {
-                reload(true);
+                reload();
             }
 
             models << model;
@@ -108,9 +115,10 @@ namespace {
             return QString();
         }
 
-        void reload(bool)
+        void reload()
         {
             auto newForActivity = forActivity;
+            QHash<QString, int> lastScreenForActivity;
 
             // contains activities for which the wallpaper
             // has updated
@@ -123,6 +131,7 @@ namespace {
             // containments that define activities in plasma
             for (const auto& containmentId: plasmaConfigContainments().groupList()) {
                 const auto containment = plasmaConfigContainments().group(containmentId);
+                const auto lastScreen  = containment.readEntry("lastScreen", 0);
                 const auto activity    = containment.readEntry("activityId", QString());
 
                 // Ignore the containment if the activity is not defined
@@ -130,9 +139,17 @@ namespace {
 
                 // If we have already found the same activity from another
                 // containment, we are using the new one only if
-                // the previous one was a color and not a proper wallpaper
+                // the previous one was a color and not a proper wallpaper,
+                // or if the screen ID is closer to zero
                 const bool processed = !ghostActivities.contains(activity) &&
-                                        newForActivity.contains(activity);
+                                        newForActivity.contains(activity) &&
+                                        (lastScreenForActivity[activity] <= lastScreen);
+
+                // qDebug() << "GREPME Searching containment " << containmentId
+                //          << "for the wallpaper of the " << activity << " activity - "
+                //          << "currently, we think that the wallpaper is " << processed << (processed ? newForActivity[activity] : QString())
+                //          << "last screen is" << lastScreen
+                //          ;
 
                 if (processed &&
                     newForActivity[activity][0] != '#') continue;
@@ -142,11 +159,22 @@ namespace {
 
                 const auto background = backgroundFromConfig(containment);
 
+                // qDebug() << "        GREPME Found wallpaper: " << background;
+
                 if (background.isEmpty()) continue;
 
-                if (newForActivity[activity] != background) {
-                    changedActivities << activity;
+                // If we got this far and we already had a new wallpaper for
+                // this activity, it means we now have a better one
+                bool foundBetterWallpaper = changedActivities.contains(activity);
+
+                if (foundBetterWallpaper || newForActivity[activity] != background) {
+                    if (!foundBetterWallpaper) {
+                        changedActivities << activity;
+                    }
+
+                    // qDebug() << "        GREPME Setting: " << activity << " = " << background << "," << lastScreen;
                     newForActivity[activity] = background;
+                    lastScreenForActivity[activity] = lastScreen;
                 }
             }
 
@@ -169,15 +197,14 @@ namespace {
         }
 
         KConfigGroup plasmaConfigContainments() {
-            return plasmaConfig.group("Containments");
+            return plasmaConfig->group("Containments");
         }
 
         QHash<QString, QString> forActivity;
         QList<SortedActivitiesModel*> models;
 
         bool initialized;
-        KConfig plasmaConfig;
-
+        KSharedConfig::Ptr plasmaConfig;
     };
 
     static BackgroundCache &backgrounds()
@@ -187,6 +214,7 @@ namespace {
         static BackgroundCache cache;
         return cache;
     }
+
 }
 
 SortedActivitiesModel::SortedActivitiesModel(QVector<KActivities::Info::State> states, QObject *parent)
