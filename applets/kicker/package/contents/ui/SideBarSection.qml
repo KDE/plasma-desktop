@@ -33,6 +33,7 @@ DropArea {
     property int contentHeight: (model.count * units.iconSizes.medium) + ((model.count - 1) * flow.spacing)
 
     property alias model: repeater.model
+    property alias usesPlasmaTheme: repeater.usesPlasmaTheme
 
     onDragMove: {
         if (flow.animating) {
@@ -73,6 +74,8 @@ DropArea {
 
         Repeater {
             id: repeater
+
+            property bool usesPlasmaTheme: false
 
             delegate: SideBarItem {}
 
