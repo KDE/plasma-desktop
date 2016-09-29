@@ -42,9 +42,9 @@ ColumnLayout {
 
         QtControls.Button {
             id: iconButton
-            Layout.minimumWidth: units.iconSizes.large + units.smallSpacing * 2
+            Layout.minimumWidth: previewFrame.width + units.smallSpacing * 2
             Layout.maximumWidth: Layout.minimumWidth
-            Layout.minimumHeight: Layout.minimumWidth
+            Layout.minimumHeight: previewFrame.height + units.smallSpacing * 2
             Layout.maximumHeight: Layout.minimumWidth
 
             KQuickAddons.IconDialog {
@@ -62,11 +62,20 @@ ColumnLayout {
                 iconMenu.open(0, height)
             }
 
-            PlasmaCore.IconItem {
+            PlasmaCore.FrameSvgItem {
+                id: previewFrame
                 anchors.centerIn: parent
-                width: units.iconSizes.large
-                height: width
-                source: cfg_icon
+                imagePath: plasmoid.location === PlasmaCore.Types.Vertical || plasmoid.location === PlasmaCore.Types.Horizontal
+                         ? "widgets/panel-background" : "widgets/background"
+                width: units.iconSizes.large + fixedMargins.left + fixedMargins.right
+                height: units.iconSizes.large + fixedMargins.top + fixedMargins.bottom
+
+                PlasmaCore.IconItem {
+                    anchors.centerIn: parent
+                    width: units.iconSizes.large
+                    height: width
+                    source: cfg_icon
+                }
             }
         }
 
