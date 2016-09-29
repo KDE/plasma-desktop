@@ -21,9 +21,6 @@
 
 #include <KCModule>
 #include <KConfig>
-#include <KConfigGroup>
-#include <QListWidget>
-#include <QStyledItemDelegate>
 
 class QToolButton;
 class KCModuleProxy;
@@ -33,23 +30,7 @@ namespace Plasma {
 }
 
 
-class SearchConfigItemDelegate : public QStyledItemDelegate
-{
-    Q_OBJECT
-
-public:
-    SearchConfigItemDelegate(QObject *parent = nullptr);
-    virtual ~SearchConfigItemDelegate() = default;
-
-    QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const override;
-
-protected:
-    void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const override;
-
-private:
-    int m_margin;
-};
-
+class KPluginSelector;
 
 class SearchConfigModule : public KCModule
 {
@@ -67,15 +48,10 @@ public Q_SLOTS:
     void load();
     void save();
     void defaults();
-    void configureClicked();
 
 private:
-    QListWidget* m_listWidget;
-
+    KPluginSelector *m_pluginSelector;
     KConfig m_config;
-    KConfigGroup m_configGroup;
-    QToolButton *m_configButton;
-    QMultiHash <QString, Plasma::AbstractRunner *> m_runnerCategories;
 };
 
 #endif
