@@ -21,22 +21,8 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import QtQuick.Controls 1.0 as QtControls
 import org.kde.kquickcontrolsaddons 2.0
 
-Rectangle {
+PlasmaCore.FrameSvgItem {
     id: button
-    SystemPalette {
-        id:palette
-    }
-
-    color: palette.button
-
-    border {
-        width: 1
-        color: Qt.rgba(palette.text.r, palette.text.g, palette.text.b, 0.5)
-    }
-    radius: 5
-
-    visible: name != "empty"
-
     property alias icon: iconElement.source
     property alias text: textElement.text
     property string name
@@ -44,34 +30,27 @@ Rectangle {
     width: units.gridUnit * 6
     height: units.gridUnit * 5
 
+    visible: name != "empty"
 
-    Item {
-         anchors {
-             margins: units.smallSpacing
-             left: parent.left
-             right: parent.right
-             verticalCenter: parent.verticalCenter
-         }
+    imagePath: "widgets/background"
 
-        height: childrenRect.height
+    PlasmaCore.IconItem {
+        id: iconElement
 
-        PlasmaCore.IconItem {
-            id: iconElement
+        anchors.centerIn: parent
+        width: units.iconSizes.medium
+        height: width
 
-            anchors.horizontalCenter: parent.horizontalCenter
-            width: units.iconSizes.medium
-            height: width
+        source: icon
+    }
 
-            source: icon
+    QtControls.Label {
+        id: textElement
+        anchors {
+            top: iconElement.bottom
+            horizontalCenter: parent.horizontalCenter
         }
-
-        QtControls.Label {
-             id: textElement
-             anchors {
-                 top: iconElement.bottom
-                 horizontalCenter: parent.horizontalCenter
-             }
-
-        }
+        color: PlasmaCore.ColorScope.textColor
+        font.pointSize: theme.smallestFont.pointSize
     }
 }
