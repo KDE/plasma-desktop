@@ -99,7 +99,7 @@ PlasmaCore.ToolTipArea {
         id: expandedItem
         anchors.fill: parent
         imagePath: "widgets/tabbar"
-        visible: fromCurrentTheme
+        visible: fromCurrentTheme && opacity > 0
         prefix: {
             var prefix;
             switch (plasmoid.location) {
