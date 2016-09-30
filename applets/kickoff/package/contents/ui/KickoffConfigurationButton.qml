@@ -48,8 +48,11 @@ PlasmaCore.FrameSvgItem {
         id: textElement
         anchors {
             top: iconElement.bottom
-            horizontalCenter: parent.horizontalCenter
+            left: parent.left
+            right: parent.right
         }
+        horizontalAlignment: Text.AlignHCenter
+        elide: Text.ElideRight
         color: PlasmaCore.ColorScope.textColor
         font.pointSize: theme.smallestFont.pointSize
     }
