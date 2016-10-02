@@ -41,6 +41,7 @@ class QDrag;
 class QItemSelectionModel;
 class QQuickItem;
 
+class KFileCopyToMenu;
 class KActionCollection;
 class KDirModel;
 class KDirWatch;
@@ -201,6 +202,7 @@ class FolderModel : public QSortFilterProxyModel
         Q_INVOKABLE void copy();
         Q_INVOKABLE void cut();
         Q_INVOKABLE void deleteSelected();
+        Q_INVOKABLE void openSelected();
 
     Q_SIGNALS:
         void urlChanged() const;
@@ -267,6 +269,7 @@ class FolderModel : public QSortFilterProxyModel
         KActionCollection m_actionCollection;
         KNewFileMenu *m_newMenu;
         KFileItemActions *m_fileItemActions;
+        KFileCopyToMenu *m_copyToMenu;
         QString m_errorString;
         bool m_usedByContainment;
         bool m_locked;

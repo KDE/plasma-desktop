@@ -32,6 +32,7 @@
 #include <QDrag>
 #include <QImage>
 #include <QItemSelectionModel>
+#include <QMenu>
 #include <QMimeData>
 #include <QMimeDatabase>
 #include <QPainter>
@@ -40,12 +41,11 @@
 #include <QQuickWindow>
 #include <qplatformdefs.h>
 
-#include "internallibkonq/konq_popupmenu.h"
 #include <KDirWatch>
 #include <KIO/DropJob>
 #include <KAuthorized>
-#include <KBookmarkManager>
 #include <KConfigGroup>
+#include <KFileCopyToMenu>
 #include <KFileItemActions>
 #include <KFileItemListProperties>
 #include <KNewFileMenu>
@@ -56,8 +56,10 @@
 #include <KIO/Paste>
 #include <KIO/PasteJob>
 #include <KLocalizedString>
+#include <KPropertiesDialog>
 #include <KSharedConfig>
 #include <KShell>
+#include <kio_version.h>
 
 #include <KDesktopFile>
 #include <KDirModel>
@@ -1196,6 +1198,10 @@ void FolderModel::createActions()
     QAction *del = new QAction(QIcon::fromTheme(QStringLiteral("edit-delete")), i18n("&Delete"), this);
     connect(del, &QAction::triggered, this, &FolderModel::deleteSelected);
 
+    QAction *actOpen = new QAction(QIcon::fromTheme(QStringLiteral("window-new")), i18n("&Open"), this);
+    connect(actOpen, &QAction::triggered, this, &FolderModel::openSelected);
+
+    m_actionCollection.addAction(QStringLiteral("open"), actOpen);
     m_actionCollection.addAction(QStringLiteral("cut"), cut);
     m_actionCollection.addAction(QStringLiteral("undo"), undo);
     m_actionCollection.addAction(QStringLiteral("copy"), copy);
@@ -1210,6 +1216,8 @@ void FolderModel::createActions()
 
     m_newMenu = new KNewFileMenu(&m_actionCollection, QStringLiteral("newMenu"), QApplication::desktop());
     m_newMenu->setModal(false);
+
+    m_copyToMenu = new KFileCopyToMenu(Q_NULLPTR);
 }
 
 QAction* FolderModel::action(const QString &name) const
@@ -1276,10 +1284,13 @@ void FolderModel::openContextMenu()
 
     updateActions();
 
-    QMenu *menu = 0;
+    QMenu *menu = new QMenu();
+    if (!m_fileItemActions) {
+        m_fileItemActions = new KFileItemActions(this);
+        m_fileItemActions->setParentWidget(QApplication::desktop());
+    }
 
     if (indexes.isEmpty()) {
-        menu = new QMenu();
         menu->addAction(m_actionCollection.action(QStringLiteral("newMenu")));
         menu->addSeparator();
         menu->addAction(m_actionCollection.action(QStringLiteral("paste")));
@@ -1288,26 +1299,27 @@ void FolderModel::openContextMenu()
         menu->addAction(m_actionCollection.action(QStringLiteral("emptyTrash")));
         menu->addSeparator();
 
-        if (!m_fileItemActions) {
-            m_fileItemActions = new KFileItemActions(this);
-        }
-
-        KFileItemListProperties itemList(KFileItemList() << m_dirModel->dirLister()->rootItem());
-        m_fileItemActions->setItemListProperties(itemList);
+        KFileItemListProperties itemProperties(KFileItemList() << m_dirModel->dirLister()->rootItem());
+        m_fileItemActions->setItemListProperties(itemProperties);
 
         menu->addAction(m_fileItemActions->preferredOpenWithAction(QString()));
     } else {
         KFileItemList items;
+        QList<QUrl> urls;
         bool hasRemoteFiles = false;
         bool isTrashLink = false;
 
+        items.reserve(indexes.count());
+        urls.reserve(indexes.count());
         foreach (const QModelIndex &index, indexes) {
             KFileItem item = itemForIndex(index);
             if (!item.isNull()) {
                 hasRemoteFiles |= item.localPath().isEmpty();
                 items.append(item);
+                urls.append(item.url());
             }
         }
+        KFileItemListProperties itemProperties(items);
 
         // Check if we're showing the menu for the trash link
         if (items.count() == 1 && items.at(0).isDesktopFile()) {
@@ -1317,8 +1329,19 @@ void FolderModel::openContextMenu()
             }
         }
 
-        QList<QAction*> editActions;
-        editActions.append(m_actionCollection.action(QStringLiteral("rename")));
+        // Start adding the actions:
+        menu->addAction(m_actionCollection.action(QStringLiteral("open")));
+        menu->addSeparator();
+        if (itemProperties.supportsDeleting()) {
+            menu->addAction(m_actionCollection.action(QStringLiteral("cut")));
+        }
+        menu->addAction(m_actionCollection.action(QStringLiteral("copy")));
+
+        if (itemProperties.isDirectory() && itemProperties.supportsWriting()) {
+            menu->addAction(m_actionCollection.action(QStringLiteral("pasteto")));
+        }
+
+        menu->addAction(m_actionCollection.action(QStringLiteral("rename")));
 
         KSharedConfig::Ptr globalConfig = KSharedConfig::openConfig(QStringLiteral("kdeglobals"), KConfig::NoGlobals);
         KConfigGroup cg(globalConfig, "KDE");
@@ -1327,31 +1350,49 @@ void FolderModel::openContextMenu()
         // Don't add the "Move to Trash" action if we're showing the menu for the trash link
         if (!isTrashLink) {
             if (!hasRemoteFiles) {
-                editActions.append(m_actionCollection.action(QStringLiteral("trash")));
+                menu->addAction(m_actionCollection.action(QStringLiteral("trash")));
             } else {
                 showDeleteCommand = true;
             }
         }
         if (showDeleteCommand) {
-            editActions.append(m_actionCollection.action(QStringLiteral("del")));
+            menu->addAction(m_actionCollection.action(QStringLiteral("del")));
         }
 
-        KonqPopupMenu::ActionGroupMap actionGroups;
-        actionGroups.insert(KonqPopupMenu::EditActions, editActions);
+        // "Open with" actions
+        m_fileItemActions->setItemListProperties(itemProperties);
+        m_fileItemActions->addOpenWithActionsTo(menu);
+        // Service actions
+        m_fileItemActions->addServiceActionsTo(menu);
+        menu->addSeparator();
+        // Plugin actions
+#if KIO_VERSION >= QT_VERSION_CHECK(5, 27, 0)
+        m_fileItemActions->addPluginActionsTo(menu);
+#endif
 
-        KonqPopupMenu::Flags flags = KonqPopupMenu::ShowProperties;
-        flags |= KonqPopupMenu::ShowUrlOperations;
-        flags |= KonqPopupMenu::ShowNewWindow;
+        // Copy To, Move To
+        KSharedConfig::Ptr dolphin = KSharedConfig::openConfig(QStringLiteral("dolphinrc"));
+        if (KConfigGroup(dolphin, "General").readEntry("ShowCopyMoveMenu", false)) {
+            m_copyToMenu->setUrls(urls);
+            m_copyToMenu->setReadOnly(!itemProperties.supportsMoving());
+            m_copyToMenu->addActionsTo(menu);
+            menu->addSeparator();
+        }
 
-        KonqPopupMenu *popupMenu = new KonqPopupMenu(items, m_dirModel->dirLister()->url(), m_actionCollection, flags, QApplication::desktop());
-        popupMenu->setNewFileMenu(m_newMenu);
-        popupMenu->setBookmarkManager(KBookmarkManager::userBookmarksManager());
-        popupMenu->setActionGroups(actionGroups);
-        connect(popupMenu, &QMenu::aboutToHide, [popupMenu]() { popupMenu->deleteLater(); });
-        menu = popupMenu;
+        // Properties
+        if (KPropertiesDialog::canDisplay(items)) {
+            QAction *act = new QAction(menu);
+            act->setText(i18n("&Properties"));
+            QObject::connect(act, &QAction::triggered, [this, items]() {
+                    KPropertiesDialog::showDialog(items, Q_NULLPTR, false /*non modal*/);
+            });
+            menu->addAction(act);
+        }
+
     }
 
     menu->popup(QCursor::pos());
+    connect(menu, &QMenu::aboutToHide, [menu]() { menu->deleteLater(); });
 }
 
 void FolderModel::linkHere(const QUrl &sourceUrl)
@@ -1445,6 +1486,18 @@ void FolderModel::deleteSelected()
     if (uiDelegate.askDeleteConfirmation(urls, KIO::JobUiDelegate::Delete, KIO::JobUiDelegate::DefaultConfirmation)) {
         KIO::Job* job = KIO::del(urls);
         job->ui()->setAutoErrorHandlingEnabled(true);
+    }
+}
+
+void FolderModel::openSelected()
+{
+    if (!m_selectionModel->hasSelection()) {
+        return;
+    }
+
+    const QList<QUrl> urls = selectedUrls(false);
+    for (const QUrl &url : urls) {
+        (void) new KRun(url, Q_NULLPTR);
     }
 }
 

@@ -1,5 +1,4 @@
 include_directories(plasmaquick)
-include_directories(internallibkonq)
 
 set(folderplugin_SRCS
     directorypicker.cpp
@@ -17,7 +16,6 @@ set(folderplugin_SRCS
     textfix.cpp
     viewpropertiesmenu.cpp
     wheelinterceptor.cpp
-    internallibkonq/konq_popupmenu.cpp
     shortcut.cpp
 )
 
