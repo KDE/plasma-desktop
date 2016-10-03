@@ -74,7 +74,7 @@ Item {
 
             visible: !backgroundColor.visible
             source: "image://wallpaperthumbnail/" + background
-            sourceSize: size
+            sourceSize: Qt.size(width, height)
         }
 
         // Title and the icon
