@@ -48,19 +48,16 @@
  */
 
 #include <QCheckBox>
+#include <QDoubleSpinBox>
 #include <QFormLayout>
-#undef Below
-#undef Above
-#include <QSlider>
+#include <QSpinBox>
 #include <QWhatsThis>
 #include <QTabWidget>
 
 #include <ktoolinvocation.h>
-#include <klocale.h>
-#include <kdialog.h>
+#include <klocalizedstring.h>
 #include <kconfig.h>
 #include <kstandarddirs.h>
-#include <kdebug.h>
 #include <kaboutdata.h>
 #include <KPluginFactory>
 #include <KPluginLoader>
@@ -165,11 +162,18 @@ MouseConfig::MouseConfig(QWidget *parent, const QVariantList &args)
     advancedTab->setObjectName("Advanced Tab");
     tabwidget->addTab(advancedTab, i18n("Advanced"));
 
-    QFormLayout *lay = new QFormLayout(advancedTab);
+    QFormLayout *formLayout = new QFormLayout;
+    formLayout->setFieldGrowthPolicy(QFormLayout::ExpandingFieldsGrow);
 
-    accel = new KDoubleNumInput(0.1, 20, 2, advancedTab, 0.1, 1);
+    accel = new QDoubleSpinBox(advancedTab);
+    accel->setDecimals(1);
+    accel->setRange(0.1, 20);
+    accel->setSingleStep(0.1);
+    accel->setValue(2);
     accel->setSuffix(i18n(" x"));
-    lay->addRow(i18n("Pointer acceleration:"), accel);
+    accel->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::Fixed);
+
+    formLayout->addRow(i18n("Pointer acceleration:"), accel);
     connect(accel, SIGNAL(valueChanged(double)), this, SLOT(changed()));
 
     wtstr = i18n("<p>This option allows you to change the relationship"
@@ -184,10 +188,12 @@ MouseConfig::MouseConfig(QWidget *parent, const QVariantList &args)
          " flying across the screen, making it hard to control.</p>");
     accel->setWhatsThis( wtstr );
 
-    thresh = new KIntNumInput(20, advancedTab);
-    thresh->setRange(0,20,1);
-    thresh->setSteps(1,1);
-    lay->addRow(i18n("Pointer threshold:"), thresh);
+    thresh = new QSpinBox(advancedTab);
+    thresh->setRange(1, 20);
+    thresh->setSingleStep(1);
+    thresh->setValue(2);
+    thresh->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::Fixed);
+    formLayout->addRow(i18n("Pointer threshold:"), thresh);
     connect(thresh, SIGNAL(valueChanged(int)), this, SLOT(changed()));
     connect(thresh, SIGNAL(valueChanged(int)), this, SLOT(slotThreshChanged(int)));
     slotThreshChanged(thresh->value());
@@ -205,11 +211,13 @@ MouseConfig::MouseConfig(QWidget *parent, const QVariantList &args)
 
     // It would be nice if the user had a test field.
     // Selecting such values in milliseconds is not intuitive
-    doubleClickInterval = new KIntNumInput(2000, advancedTab);
-    doubleClickInterval->setRange(0, 2000, 100);
+    doubleClickInterval = new QSpinBox(advancedTab);
+    doubleClickInterval->setRange(100, 2000);
     doubleClickInterval->setSuffix(i18n(" msec"));
-    doubleClickInterval->setSteps(100, 100);
-    lay->addRow(i18n("Double click interval:"), doubleClickInterval);
+    doubleClickInterval->setSingleStep(100);
+    doubleClickInterval->setValue(2000);
+    doubleClickInterval->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::Fixed);
+    formLayout->addRow(i18n("Double click interval:"), doubleClickInterval);
     connect(doubleClickInterval, SIGNAL(valueChanged(int)), this, SLOT(changed()));
 
     wtstr = i18n("The double click interval is the maximal time"
@@ -220,11 +228,13 @@ MouseConfig::MouseConfig(QWidget *parent, const QVariantList &args)
          " separate clicks.");
     doubleClickInterval->setWhatsThis( wtstr );
 
-    dragStartTime = new KIntNumInput(2000, advancedTab);
-    dragStartTime->setRange(0, 2000, 100);
+    dragStartTime = new QSpinBox(advancedTab);
+    dragStartTime->setRange(100, 2000);
     dragStartTime->setSuffix(i18n(" msec"));
-    dragStartTime->setSteps(100, 100);
-    lay->addRow(i18n("Drag start time:"), dragStartTime);
+    dragStartTime->setSingleStep(100);
+    dragStartTime->setValue(2000);
+    dragStartTime->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::Fixed);
+    formLayout->addRow(i18n("Drag start time:"), dragStartTime);
     connect(dragStartTime, SIGNAL(valueChanged(int)), this, SLOT(changed()));
 
     wtstr = i18n("If you click with the mouse (e.g. in a multi-line"
@@ -232,10 +242,12 @@ MouseConfig::MouseConfig(QWidget *parent, const QVariantList &args)
          " drag start time, a drag operation will be initiated.");
     dragStartTime->setWhatsThis( wtstr );
 
-    dragStartDist = new KIntNumInput(20, advancedTab);
-    dragStartDist->setRange(1, 20, 1);
-    dragStartDist->setSteps(1,1);
-    lay->addRow(i18n("Drag start distance:"), dragStartDist);
+    dragStartDist = new QSpinBox(advancedTab);
+    dragStartDist->setRange(1, 20);
+    dragStartDist->setSingleStep(1);
+    dragStartDist->setValue(20);
+    dragStartDist->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::Fixed);
+    formLayout->addRow(i18n("Drag start distance:"), dragStartDist);
     connect(dragStartDist, SIGNAL(valueChanged(int)), this, SLOT(changed()));
     connect(dragStartDist, SIGNAL(valueChanged(int)), this, SLOT(slotDragStartDistChanged(int)));
     slotDragStartDistChanged(dragStartDist->value());
@@ -245,10 +257,12 @@ MouseConfig::MouseConfig(QWidget *parent, const QVariantList &args)
          " operation will be initiated.");
     dragStartDist->setWhatsThis( wtstr );
 
-    wheelScrollLines = new KIntNumInput(3, advancedTab);
-    wheelScrollLines->setRange(1, 12, 1);
-    wheelScrollLines->setSteps(1,1);
-    lay->addRow(i18n("Mouse wheel scrolls by:"), wheelScrollLines);
+    wheelScrollLines = new QSpinBox(advancedTab);
+    wheelScrollLines->setRange(1, 12);
+    wheelScrollLines->setSingleStep(1);
+    wheelScrollLines->setValue(3);
+    wheelScrollLines->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::Fixed);
+    formLayout->addRow(i18n("Mouse wheel scrolls by:"), wheelScrollLines);
     connect(wheelScrollLines, SIGNAL(valueChanged(int)), this, SLOT(changed()));
     connect(wheelScrollLines, SIGNAL(valueChanged(int)), SLOT(slotWheelScrollLinesChanged(int)));
     slotWheelScrollLinesChanged(wheelScrollLines->value());
@@ -256,39 +270,58 @@ MouseConfig::MouseConfig(QWidget *parent, const QVariantList &args)
     wtstr = i18n("If you use the wheel of a mouse, this value determines the number of lines to scroll for each wheel movement. Note that if this number exceeds the number of visible lines, it will be ignored and the wheel movement will be handled as a page up/down movement.");
     wheelScrollLines->setWhatsThis(wtstr);
 
+    QHBoxLayout *outerLayout = new QHBoxLayout(advancedTab);
+    outerLayout->addLayout(formLayout, 0);
+    outerLayout->addStretch(1);
+
 {
   QWidget *mouse = new QWidget(this);
   mouse->setObjectName("Mouse Navigation");
   tabwidget->addTab(mouse, i18n("Keyboard Navigation"));
 
-  QFormLayout *form = new QFormLayout(mouse);
+  QFormLayout *formLayout = new QFormLayout;
+  formLayout->setFieldGrowthPolicy(QFormLayout::ExpandingFieldsGrow);
 
   mouseKeys = new QCheckBox(i18n("&Move pointer with keyboard (using the num pad)"), mouse);
-  form->addRow(mouseKeys);
+  formLayout->addRow(mouseKeys);
 
-  mk_delay = new KIntNumInput(mouse);
-  mk_delay->setRange(1, 1000, 50);
+  mk_delay = new QSpinBox(mouse);
+  mk_delay->setRange(1, 1000);
+  mk_delay->setSingleStep(50);
   mk_delay->setSuffix(i18n(" msec"));
-  form->addRow(i18n("&Acceleration delay:"), mk_delay);
+  mk_delay->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::Fixed);
+  formLayout->addRow(i18n("&Acceleration delay:"), mk_delay);
 
-  mk_interval = new KIntNumInput(0, mouse);
-  mk_interval->setRange(1, 1000, 10);
+  mk_interval = new QSpinBox(mouse);
+  mk_interval->setRange(1, 1000);
+  mk_interval->setSingleStep(10);
   mk_interval->setSuffix(i18n(" msec"));
-  form->addRow(i18n("R&epeat interval:"), mk_interval);
+  mk_interval->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::Fixed);
+  formLayout->addRow(i18n("R&epeat interval:"), mk_interval);
 
-  mk_time_to_max = new KIntNumInput(0, mouse);
-  mk_time_to_max->setRange(100, 10000, 200);
+  mk_time_to_max = new QSpinBox(mouse);
+  mk_time_to_max->setRange(100, 10000);
+  mk_time_to_max->setSingleStep(200);
   mk_time_to_max->setSuffix(i18n(" msec"));
-  form->addRow(i18n("Acceleration &time:"), mk_time_to_max);
+  mk_time_to_max->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::Fixed);
+  formLayout->addRow(i18n("Acceleration &time:"), mk_time_to_max);
 
-  mk_max_speed = new KIntNumInput(0, mouse);
-  mk_max_speed->setRange(1, 2000, 20);
+  mk_max_speed = new QSpinBox(mouse);
+  mk_max_speed->setRange(1, 2000);
+  mk_max_speed->setSingleStep(20);
   mk_max_speed->setSuffix(i18n(" pixel/sec"));
-  form->addRow(i18n("Ma&ximum speed:"), mk_max_speed);
+  mk_max_speed->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::Fixed);
+  formLayout->addRow(i18n("Ma&ximum speed:"), mk_max_speed);
 
-  mk_curve = new KIntNumInput(0, mouse);
-  mk_curve->setRange(-1000, 1000, 100);
-  form->addRow(i18n("Acceleration &profile:"), mk_curve);
+  mk_curve = new QSpinBox(mouse);
+  mk_curve->setRange(-1000, 1000);
+  mk_curve->setSingleStep(100);
+  mk_curve->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::Fixed);
+  formLayout->addRow(i18n("Acceleration &profile:"), mk_curve);
+
+  outerLayout = new QHBoxLayout(mouse);
+  outerLayout->addLayout(formLayout, 0);
+  outerLayout->addStretch(1);
 
   connect(mouseKeys, SIGNAL(clicked()), this, SLOT(checkAccess()));
   connect(mouseKeys, SIGNAL(clicked()), this, SLOT(changed()));

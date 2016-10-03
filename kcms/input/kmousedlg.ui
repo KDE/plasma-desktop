@@ -104,6 +104,9 @@
      <property name="title">
       <string>Icons</string>
      </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
      <layout class="QVBoxLayout">
       <item>
        <widget class="QRadioButton" name="doubleClick">

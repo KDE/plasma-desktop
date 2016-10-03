@@ -31,15 +31,7 @@
 #ifndef __MOUSECONFIG_H__
 #define __MOUSECONFIG_H__
 
-#include <QLabel>
-#include <QLCDNumber>
-#include <QPushButton>
-#include <QRadioButton>
 #include <QX11Info>
-#include <KDoubleNumInput>
-
-#include <kapplication.h>
-
 
 #include <config-workspace.h>
 
@@ -50,7 +42,9 @@
 #define LEFT_HANDED  1
 
 class QCheckBox;
+class QDoubleSpinBox;
 class QSlider;
+class QSpinBox;
 class QTabWidget;
 
 class KMouseDlg : public QWidget, public Ui::KMouseDlg
@@ -116,32 +110,26 @@ private:
   void setThreshold(int);
   void setHandedness(int);
 
-  KDoubleNumInput *accel;
-  KIntNumInput *thresh;
-  KIntNumInput *doubleClickInterval;
-  KIntNumInput *dragStartTime;
-  KIntNumInput *dragStartDist;
-  KIntNumInput *wheelScrollLines;
+  QDoubleSpinBox *accel;
+  QSpinBox *thresh;
+  QSpinBox *doubleClickInterval;
+  QSpinBox *dragStartTime;
+  QSpinBox *dragStartDist;
+  QSpinBox *wheelScrollLines;
 
-//  QRadioButton *leftHanded, *rightHanded;
-//  QCheckBox *doubleClick;
-//  QCheckBox *cbAutoSelect;
   QLabel *lDelay;
-//  QSlider *slAutoSelect;
-//  QCheckBox *cbVisualActivate;
-//  QCheckBox *cbCursor;
-//  QCheckBox *cbLargeCursor;
 
   QTabWidget *tabwidget;
   QWidget *advancedTab;
   KMouseDlg* generalTab;
   MouseSettings *settings;
 
- QCheckBox *mouseKeys;
-  KIntNumInput *mk_delay, *mk_interval, *mk_time_to_max, *mk_max_speed,
-    *mk_curve;
-
-
+  QCheckBox *mouseKeys;
+  QSpinBox *mk_delay;
+  QSpinBox *mk_interval;
+  QSpinBox *mk_time_to_max;
+  QSpinBox *mk_max_speed;
+  QSpinBox *mk_curve;
 };
 
 #endif
