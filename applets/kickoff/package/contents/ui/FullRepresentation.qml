@@ -62,6 +62,7 @@ Item {
 
         appNameFormat: plasmoid.configuration.showAppsByName ? 0 : 1
         flat: false
+        sorted: plasmoid.configuration.alphaSort
         showSeparators: false
 
         favoritesModel: Kicker.FavoritesModel {

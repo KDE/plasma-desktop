@@ -43,5 +43,9 @@
       <label>The menu tabs to show.</label>
       <default>bookmark:t,application:t,computer:t,used:t,leave:t</default>
     </entry>
+    <entry name="alphaSort" type="Bool">
+      <label>Whether to sort menu contents alphabetically or use manual/system sort order.</label>
+      <default>true</default>
+    </entry>
     </group>
 </kcfg>

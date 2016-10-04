@@ -78,6 +78,7 @@ Item {
 
         appNameFormat: plasmoid.configuration.appNameFormat
         flat: isDash ? true : plasmoid.configuration.limitDepth
+        sorted: plasmoid.configuration.alphaSort
         showSeparators: !isDash
         appletInterface: plasmoid
 

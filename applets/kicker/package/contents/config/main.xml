@@ -27,6 +27,10 @@
       <label>Whether to flatten top-level menu categories to a single level instead of displaying sub-categories.</label>
       <default>false</default>
     </entry>
+    <entry name="alphaSort" type="Bool">
+      <label>Whether to sort menu contents alphabetically or use manual/system sort order.</label>
+      <default>true</default>
+    </entry>
 
     <entry name="favoriteApps" type="StringList">
       <label>List of general favorites. Supported values are menu id's (usually .desktop file names), special URLs that expand into default applications (e.g. preferred://browser), document URLs and KPeople contact URIs.</label>

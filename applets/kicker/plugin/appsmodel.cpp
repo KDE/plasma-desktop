@@ -29,7 +29,7 @@
 #include <KLocalizedString>
 #include <KSycoca>
 
-AppsModel::AppsModel(const QString &entryPath, bool flat, bool separators, QObject *parent)
+AppsModel::AppsModel(const QString &entryPath, bool flat, bool sorted, bool separators, QObject *parent)
 : AbstractModel(parent)
 , m_deleteEntriesOnDestruction(true)
 , m_separatorCount(0)
@@ -40,7 +40,7 @@ AppsModel::AppsModel(const QString &entryPath, bool flat, bool separators, QObje
 , m_staticEntryList(false)
 , m_changeTimer(0)
 , m_flat(flat)
-, m_sortNeeded(false)
+, m_sorted(sorted)
 , m_appNameFormat(AppEntry::NameOnly)
 {
     if (!m_entryPath.isEmpty()) {
@@ -59,7 +59,7 @@ AppsModel::AppsModel(const QList<AbstractEntry *> entryList, bool deleteEntriesO
 , m_staticEntryList(true)
 , m_changeTimer(0)
 , m_flat(true)
-, m_sortNeeded(false)
+, m_sorted(true)
 , m_appNameFormat(AppEntry::NameOnly)
 {
     foreach(AbstractEntry *suggestedEntry, entryList) {
@@ -293,6 +293,22 @@ void AppsModel::setFlat(bool flat)
     }
 }
 
+bool AppsModel::sorted() const
+{
+    return m_sorted;
+}
+
+void AppsModel::setSorted(bool sorted)
+{
+    if (m_sorted != sorted) {
+        m_sorted = sorted;
+
+        refresh();
+
+        emit sortedChanged();
+    }
+}
+
 bool AppsModel::showSeparators() const
 {
     return m_showSeparators;
@@ -383,7 +399,6 @@ void AppsModel::refreshInternal()
 
     m_hiddenEntries.clear();
     m_separatorCount = 0;
-    m_sortNeeded = false;
 
     if (m_entryPath.isEmpty()) {
         KServiceGroup::Ptr group = KServiceGroup::root();
@@ -403,7 +418,7 @@ void AppsModel::refreshInternal()
                 KServiceGroup::Ptr subGroup(static_cast<KServiceGroup*>(p.data()));
 
                 if (!subGroup->noDisplay() && subGroup->childCount() > 0) {
-                    AppGroupEntry *groupEntry = new AppGroupEntry(this, subGroup, m_flat, m_showSeparators, m_appNameFormat);
+                    AppGroupEntry *groupEntry = new AppGroupEntry(this, subGroup, m_flat, m_sorted, m_showSeparators, m_appNameFormat);
                     m_entryList << groupEntry;
                 }
             }
@@ -426,7 +441,7 @@ void AppsModel::refreshInternal()
             }
         }
 
-        if (m_sortNeeded) {
+        if (m_sorted) {
             sortEntries();
         }
     }
@@ -512,11 +527,11 @@ void AppsModel::processServiceGroup(KServiceGroup::Ptr group)
             }
 
             if (m_flat) {
-                m_sortNeeded = true;
+                m_sorted = true;
                 const KServiceGroup::Ptr serviceGroup(static_cast<KServiceGroup*>(p.data()));
                 processServiceGroup(serviceGroup);
             } else {
-                AppGroupEntry *groupEntry = new AppGroupEntry(this, subGroup, m_flat, m_showSeparators, m_appNameFormat);
+                AppGroupEntry *groupEntry = new AppGroupEntry(this, subGroup, m_flat, m_sorted, m_showSeparators, m_appNameFormat);
                 m_entryList << groupEntry;
             }
         }

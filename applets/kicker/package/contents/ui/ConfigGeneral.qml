@@ -37,6 +37,7 @@ Item {
 
     property alias cfg_appNameFormat: appNameFormat.currentIndex
     property alias cfg_limitDepth: limitDepth.checked
+    property alias cfg_alphaSort: alphaSort.checked
 
     property alias cfg_showRecentApps: showRecentApps.checked
     property alias cfg_showRecentDocs: showRecentDocs.checked
@@ -128,6 +129,12 @@ Item {
                     visible: !isDash
 
                     text: i18n("Flatten menu to a single level")
+                }
+
+                CheckBox {
+                    id: alphaSort
+
+                    text: i18n("Sort alphabetically")
                 }
             }
         }
