@@ -52,7 +52,7 @@ KQuickControlsAddons.MouseEventListener {
     signal moveFinished
 
     transform: Translate {
-        x: (handleMerged ? 0 : controlsOpacity * appletHandle.width) * (LayoutMirroring.enabled ? -1 : 1)
+        x: (handleMerged ? 0 : controlsOpacity * appletHandle.width) * (appletHandle.LayoutMirroring.enabled ? -1 : 1)
     }
 
     PlasmaCore.FrameSvgItem {
