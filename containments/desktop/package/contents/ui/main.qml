@@ -77,18 +77,18 @@ DragDrop.DropArea {
     onIconHeightChanged: updateGridSize()
 
     anchors {
-        leftMargin: plasmoid.availableScreenRect ? plasmoid.availableScreenRect.x : 0
-        topMargin: plasmoid.availableScreenRect ? plasmoid.availableScreenRect.y : 0
+        leftMargin: (isContainment && plasmoid.availableScreenRect) ? plasmoid.availableScreenRect.x : 0
+        topMargin: (isContainment && plasmoid.availableScreenRect) ? plasmoid.availableScreenRect.y : 0
 
         // Don't apply the right margin if the folderView is in column mode and not overflowing.
         // In this way, the last column remains droppable even if a small part of the icon is behind a panel.
         rightMargin: folderViewLayer.ready && (folderViewLayer.view.overflowing  || folderViewLayer.view.flow == GridView.FlowLeftToRight)
-            && plasmoid.availableScreenRect && parent
+            && (isContainment && plasmoid.availableScreenRect) && parent
             ? parent.width - (plasmoid.availableScreenRect.x + plasmoid.availableScreenRect.width) : 0
 
         // Same mechanism as the right margin but applied here to the bottom when the folderView is in row mode.
         bottomMargin: folderViewLayer.ready && (folderViewLayer.view.overflowing || folderViewLayer.view.flow == GridView.FlowTopToBottom)
-            && plasmoid.availableScreenRect && parent
+            && (isContainment && plasmoid.availableScreenRect) && parent
             ? parent.height - (plasmoid.availableScreenRect.y + plasmoid.availableScreenRect.height) : 0
     }
 
