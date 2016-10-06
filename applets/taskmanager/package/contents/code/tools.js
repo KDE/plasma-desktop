@@ -17,7 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-function wheelActivateNextPrevTask(wheelDelta, eventDelta) {
+function wheelActivateNextPrevTask(anchor, wheelDelta, eventDelta) {
     // magic number 120 for common "one click"
     // See: http://qt-project.org/doc/qt-5/qml-qtquick-wheelevent.html#angleDelta-prop
     wheelDelta += eventDelta;
@@ -31,14 +31,14 @@ function wheelActivateNextPrevTask(wheelDelta, eventDelta) {
         increment--;
     }
     while (increment != 0) {
-        activateNextPrevTask(increment < 0)
+        activateNextPrevTask(anchor, increment < 0)
         increment += (increment < 0) ? 1 : -1;
     }
 
     return wheelDelta;
 }
 
-function activateNextPrevTask(next) {
+function activateNextPrevTask(anchor, next) {
     // FIXME TODO: Unnecessarily convoluted and costly; optimize.
 
     var taskIndexList = [];
@@ -50,8 +50,16 @@ function activateNextPrevTask(next) {
 
         if (task.m.IsLauncher !== true && task.m.IsStartup !== true) {
             if (task.m.IsGroupParent === true) {
+                if (task == anchor) { // If the anchor is a group parent, collect only windows within the group.
+                    taskIndexList = [];
+                }
+
                 for (var j = 0; j < tasksModel.rowCount(modelIndex); ++j) {
                     taskIndexList.push(tasksModel.makeModelIndex(i, j));
+                }
+
+                if (task == anchor) { // See above.
+                    break;
                 }
             } else {
                 taskIndexList.push(modelIndex);
