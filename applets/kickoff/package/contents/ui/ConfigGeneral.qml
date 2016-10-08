@@ -32,6 +32,7 @@ ColumnLayout {
     property alias cfg_switchTabsOnHover: switchTabsOnHoverCheckbox.checked
     property alias cfg_showAppsByName: showApplicationsByNameCheckbox.checked
     property alias cfg_useExtraRunners: useExtraRunners.checked
+    property alias cfg_alphaSort: alphaSort.checked
     property alias cfg_menuItems: configButtons.menuItems
 
     spacing: units.smallSpacing
@@ -113,6 +114,11 @@ ColumnLayout {
     QtControls.CheckBox {
         id: useExtraRunners
         text: i18n("Expand search to bookmarks, files and emails")
+    }
+
+    QtControls.CheckBox {
+        id: alphaSort
+        text: i18n("Sort alphabetically")
     }
 
     Item {
