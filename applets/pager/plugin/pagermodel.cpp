@@ -91,9 +91,15 @@ PagerModel::Private::Private(PagerModel *q)
         activityInfo = new ActivityInfo();
     }
 
+    QObject::connect(activityInfo, &ActivityInfo::numberOfRunningActivitiesChanged,
+        q, &PagerModel::shouldShowPagerChanged);
+
     if (!virtualDesktopInfo) {
         virtualDesktopInfo = new VirtualDesktopInfo();
     }
+
+    QObject::connect(virtualDesktopInfo, &VirtualDesktopInfo::numberOfDesktopsChanged,
+        q, &PagerModel::shouldShowPagerChanged);
 
     QObject::connect(activityInfo, &ActivityInfo::currentActivityChanged, q,
         [this]() {
@@ -276,6 +282,12 @@ void PagerModel::setEnabled(bool enabled)
 
         emit countChanged();
     }
+}
+
+bool PagerModel::shouldShowPager() const
+{
+    return (d->pagerType == VirtualDesktops) ? d->virtualDesktopInfo->numberOfDesktops() > 1
+        : d->activityInfo->numberOfRunningActivities() > 1;
 }
 
 bool PagerModel::showDesktop() const
