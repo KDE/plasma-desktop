@@ -465,7 +465,7 @@ void PagerModel::moveWindow(int window, double x, double y, int targetItemId, in
     const int flags = (0x20 << 12) | (0x03 << 8) | 1; // From tool, x/y, northwest gravity.
 
     if (!KWindowSystem::mapViewport()) {
-        KWindowInfo windowInfo(windowId, NET::WMDesktop | NET::WMState);
+        KWindowInfo windowInfo(windowId, NET::WMDesktop | NET::WMState, NET::WM2Activities);
 
         if (d->pagerType == VirtualDesktops) {
             if (!windowInfo.onAllDesktops()) {
@@ -475,8 +475,14 @@ void PagerModel::moveWindow(int window, double x, double y, int targetItemId, in
             const QStringList &runningActivities = d->activityInfo->runningActivities();
 
             if (targetItemId < runningActivities.length()) {
-                KActivities::Controller activitiesController;
-                activitiesController.setCurrentActivity(runningActivities.at(targetItemId));
+                const QString &newActivity = runningActivities.at(targetItemId);
+                QStringList activities =  windowInfo.activities();
+
+                if (!activities.contains(newActivity)) {
+                    activities.removeOne(runningActivities.at(sourceItemId));
+                    activities.append(newActivity);
+                    KWindowSystem::setOnActivities(windowId, activities);
+                }
             }
         }
 
@@ -565,8 +571,16 @@ void PagerModel::drop(QMimeData *mimeData, int itemId)
                 newActivity = runningActivities.at(itemId);
             }
 
+            if (newActivity.isEmpty()) {
+                return;
+            }
+
             for (const auto &id : ids) {
-                KWindowSystem::setOnDesktop(id, itemId + 1);
+                QStringList activities = KWindowInfo(id, 0, NET::WM2Activities).activities();
+
+                if (!activities.contains(newActivity)) {
+                    KWindowSystem::setOnActivities(id, activities << newActivity);
+                }
             }
         }
     }
