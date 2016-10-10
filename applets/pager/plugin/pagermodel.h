@@ -28,12 +28,15 @@ Free Software Foundation, Inc.,
 #endif
 
 #include <QAbstractListModel>
+#include <QQmlParserStatus>
 
 class QMimeData;
 
-class PagerModel : public QAbstractListModel
+class PagerModel : public QAbstractListModel, public QQmlParserStatus
 {
     Q_OBJECT
+
+    Q_INTERFACES(QQmlParserStatus)
 
     Q_ENUMS(PagerType)
     Q_ENUMS(AdditionalRoles)
@@ -102,6 +105,9 @@ public:
     Q_INVOKABLE void drop(QMimeData *mimeData, int itemId);
     Q_INVOKABLE void addDesktop();
     Q_INVOKABLE void removeDesktop();
+
+    void classBegin();
+    void componentComplete();
 
 Q_SIGNALS:
     void countChanged() const;

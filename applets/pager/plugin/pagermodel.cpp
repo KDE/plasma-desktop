@@ -48,6 +48,8 @@ public:
 
     static int instanceCount;
 
+    bool componentComplete = false;
+
     PagerType pagerType = VirtualDesktops;
     bool enabled = false;
     bool showDesktop = false;
@@ -383,6 +385,10 @@ QList<WId> PagerModel::stackingOrder() const
 
 void PagerModel::refresh()
 {
+    if (!d->componentComplete) {
+        return;
+    }
+
     beginResetModel();
 
     d->refreshDataSource();
@@ -614,6 +620,19 @@ void PagerModel::removeDesktop()
         info.setNumberOfDesktops(info.numberOfDesktops() - 1);
     }
 #endif
+}
+
+void PagerModel::classBegin()
+{
+}
+
+void PagerModel::componentComplete()
+{
+    d->componentComplete = true;
+
+    if (d->enabled) {
+        refresh();
+    }
 }
 
 #include "moc_pagermodel.cpp"
