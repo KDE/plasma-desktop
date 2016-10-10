@@ -253,6 +253,7 @@ void PagerModel::setPagerType(PagerType type)
         refresh();
 
         emit pagerTypeChanged();
+        emit shouldShowPagerChanged();
     }
 }
 
