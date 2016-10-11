@@ -148,6 +148,6 @@ Item {
         property int wheelDelta: 0;
         enabled: plasmoid.configuration.wheelEnabled
 
-        onWheel: wheelDelta = TaskTools.wheelActivateNextPrevTask(wheelDelta, wheel.angleDelta.y);
+        onWheel: wheelDelta = TaskTools.wheelActivateNextPrevTask(null, wheelDelta, wheel.angleDelta.y);
     }
 }

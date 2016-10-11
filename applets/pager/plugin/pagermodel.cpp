@@ -48,6 +48,8 @@ public:
 
     static int instanceCount;
 
+    bool componentComplete = false;
+
     PagerType pagerType = VirtualDesktops;
     bool enabled = false;
     bool showDesktop = false;
@@ -91,9 +93,15 @@ PagerModel::Private::Private(PagerModel *q)
         activityInfo = new ActivityInfo();
     }
 
+    QObject::connect(activityInfo, &ActivityInfo::numberOfRunningActivitiesChanged,
+        q, &PagerModel::shouldShowPagerChanged);
+
     if (!virtualDesktopInfo) {
         virtualDesktopInfo = new VirtualDesktopInfo();
     }
+
+    QObject::connect(virtualDesktopInfo, &VirtualDesktopInfo::numberOfDesktopsChanged,
+        q, &PagerModel::shouldShowPagerChanged);
 
     QObject::connect(activityInfo, &ActivityInfo::currentActivityChanged, q,
         [this]() {
@@ -245,6 +253,7 @@ void PagerModel::setPagerType(PagerType type)
         refresh();
 
         emit pagerTypeChanged();
+        emit shouldShowPagerChanged();
     }
 }
 
@@ -276,6 +285,12 @@ void PagerModel::setEnabled(bool enabled)
 
         emit countChanged();
     }
+}
+
+bool PagerModel::shouldShowPager() const
+{
+    return (d->pagerType == VirtualDesktops) ? d->virtualDesktopInfo->numberOfDesktops() > 1
+        : d->activityInfo->numberOfRunningActivities() > 1;
 }
 
 bool PagerModel::showDesktop() const
@@ -371,6 +386,10 @@ QList<WId> PagerModel::stackingOrder() const
 
 void PagerModel::refresh()
 {
+    if (!d->componentComplete) {
+        return;
+    }
+
     beginResetModel();
 
     d->refreshDataSource();
@@ -453,7 +472,7 @@ void PagerModel::moveWindow(int window, double x, double y, int targetItemId, in
     const int flags = (0x20 << 12) | (0x03 << 8) | 1; // From tool, x/y, northwest gravity.
 
     if (!KWindowSystem::mapViewport()) {
-        KWindowInfo windowInfo(windowId, NET::WMDesktop | NET::WMState);
+        KWindowInfo windowInfo(windowId, NET::WMDesktop | NET::WMState, NET::WM2Activities);
 
         if (d->pagerType == VirtualDesktops) {
             if (!windowInfo.onAllDesktops()) {
@@ -463,8 +482,14 @@ void PagerModel::moveWindow(int window, double x, double y, int targetItemId, in
             const QStringList &runningActivities = d->activityInfo->runningActivities();
 
             if (targetItemId < runningActivities.length()) {
-                KActivities::Controller activitiesController;
-                activitiesController.setCurrentActivity(runningActivities.at(targetItemId));
+                const QString &newActivity = runningActivities.at(targetItemId);
+                QStringList activities =  windowInfo.activities();
+
+                if (!activities.contains(newActivity)) {
+                    activities.removeOne(runningActivities.at(sourceItemId));
+                    activities.append(newActivity);
+                    KWindowSystem::setOnActivities(windowId, activities);
+                }
             }
         }
 
@@ -553,8 +578,16 @@ void PagerModel::drop(QMimeData *mimeData, int itemId)
                 newActivity = runningActivities.at(itemId);
             }
 
+            if (newActivity.isEmpty()) {
+                return;
+            }
+
             for (const auto &id : ids) {
-                KWindowSystem::setOnDesktop(id, itemId + 1);
+                QStringList activities = KWindowInfo(id, 0, NET::WM2Activities).activities();
+
+                if (!activities.contains(newActivity)) {
+                    KWindowSystem::setOnActivities(id, activities << newActivity);
+                }
             }
         }
     }
@@ -588,6 +621,19 @@ void PagerModel::removeDesktop()
         info.setNumberOfDesktops(info.numberOfDesktops() - 1);
     }
 #endif
+}
+
+void PagerModel::classBegin()
+{
+}
+
+void PagerModel::componentComplete()
+{
+    d->componentComplete = true;
+
+    if (d->enabled) {
+        refresh();
+    }
 }
 
 #include "moc_pagermodel.cpp"
