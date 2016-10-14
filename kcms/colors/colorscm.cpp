@@ -200,7 +200,6 @@ void KColorCm::on_schemeRemoveButton_clicked()
             "color-schemes/" + schemeList->currentItem()->data(Qt::UserRole).toString() +
             ".colors");
         KIO::DeleteJob *job = KIO::del(QUrl::fromLocalFile(path));
-        qDebug() << path;
         job->uiDelegate()->setParent(this);
         if (job->exec())
         {
@@ -283,8 +282,6 @@ void KColorCm::on_schemeKnsButton_clicked()
     if ( ! dialog.changedEntries().isEmpty() )
     {
         populateSchemeList();
-        for ( auto t : dialog.installedEntries())
-            qDebug() << t.name();
     }
 }
 
@@ -371,9 +368,6 @@ void KColorCm::loadInternal()
 
 void KColorCm::save()
 {
-    QIcon icon = createSchemePreviewIcon(m_config);
-    schemeList->item(0)->setIcon(icon);
-
     m_config->sync();
 
     KConfig cfg(QStringLiteral("kcmdisplayrc"), KConfig::NoGlobals);
@@ -382,15 +376,14 @@ void KColorCm::save()
     displayGroup.writeEntry("exportKDEColors", applyToAlien->isChecked());
 
     cfg.sync();
-    qDebug() << KRdbExportQtColors << KRdbExportGtkTheme << KRdbExportColors ;
+
     runRdb(KRdbExportQtColors | KRdbExportGtkTheme | ( applyToAlien->isChecked() ? KRdbExportColors : 0 ) );
-    qDebug() << "icic";
+
     QDBusMessage message = QDBusMessage::createSignal(QStringLiteral("/KGlobalSettings"), QStringLiteral("org.kde.KGlobalSettings"), QStringLiteral("notifyChange") );
     QList<QVariant> args;
     args.append(0);//previous KGlobalSettings::PaletteChanged. This is now private API in khintsettings
     args.append(0);//unused in palette changed but needed for the DBus signature
     message.setArguments(args);
-    qDebug() << KConfigGroup(m_config, "General").readEntry("Name");
     QDBusConnection::sessionBus().send(message);
     if (qApp->platformName() == QStringLiteral("xcb")) {
         // Send signal to all kwin instances
