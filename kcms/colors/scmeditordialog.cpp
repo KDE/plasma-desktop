@@ -97,7 +97,7 @@ void SchemeEditorDialog::on_buttonBox_clicked(QAbstractButton *button)
 {
     if (buttonBox->standardButton(button) == QDialogButtonBox::Reset)
     {
-        m_config->markAsClean();;
+        m_config->markAsClean();
         m_config->reparseConfiguration();
         updateTabs();
         setUnsavedChanges(false);
@@ -117,6 +117,8 @@ void SchemeEditorDialog::on_buttonBox_clicked(QAbstractButton *button)
                 return;
             }
         }
+        m_config->markAsClean();
+        m_config->reparseConfiguration();
         this->accept();
     }
 }
@@ -172,6 +174,8 @@ void SchemeEditorDialog::saveScheme()
         newpath += filename + ".colors";
 
         KConfig *config = m_config->copyTo(newpath);
+        m_config->markAsClean();
+        m_config->reparseConfiguration();
         KConfigGroup group(config, "General");
         group.writeEntry("Name", name);
 
