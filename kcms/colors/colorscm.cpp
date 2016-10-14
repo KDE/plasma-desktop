@@ -462,20 +462,37 @@ void KColorCm::updateConfig(KSharedConfigPtr config)
                   << "DecorationHover";
 
     QStringList colorSetGroupList;
-    colorSetGroupList << "Colors:Window"
+    colorSetGroupList << "Colors:View"
+                      << "Colors:Window"
                       << "Colors:Button"
                       << "Colors:Selection"
                       << "Colors:Tooltip"
-                      << "Colors:View";
-    for (const QString &colorSetGroup : colorSetGroupList)
-    {
-        KConfigGroup groupOut(m_config, colorSetGroup);
-        KConfigGroup groupTheme(config, colorSetGroup);
+                      << "Colors:Complementary";
 
-        for (const QString &coloritem : colorItemList)
-        {
-            groupOut.writeEntry(coloritem, groupTheme.readEntry(coloritem));
-        }
+    QList <KColorScheme> colorSchemes;
+
+    colorSchemes.append(KColorScheme(QPalette::Active, KColorScheme::View, config));
+    colorSchemes.append(KColorScheme(QPalette::Active, KColorScheme::Window, config));
+    colorSchemes.append(KColorScheme(QPalette::Active, KColorScheme::Button, config));
+    colorSchemes.append(KColorScheme(QPalette::Active, KColorScheme::Selection, config));
+    colorSchemes.append(KColorScheme(QPalette::Active, KColorScheme::Tooltip, config));
+    colorSchemes.append(KColorScheme(QPalette::Active, KColorScheme::Complementary, config));
+
+    for (int i = 0; i < colorSchemes.length(); ++i)
+    {
+        KConfigGroup group(m_config, colorSetGroupList.value(i));
+        group.writeEntry("BackgroundNormal", colorSchemes[i].background(KColorScheme::NormalBackground).color());
+        group.writeEntry("BackgroundAlternate", colorSchemes[i].background(KColorScheme::AlternateBackground).color());
+        group.writeEntry("ForegroundNormal", colorSchemes[i].foreground(KColorScheme::NormalText).color());
+        group.writeEntry("ForegroundInactive", colorSchemes[i].foreground(KColorScheme::InactiveText).color());
+        group.writeEntry("ForegroundActive", colorSchemes[i].foreground(KColorScheme::ActiveText).color());
+        group.writeEntry("ForegroundLink", colorSchemes[i].foreground(KColorScheme::LinkText).color());
+        group.writeEntry("ForegroundVisited", colorSchemes[i].foreground(KColorScheme::VisitedText).color());
+        group.writeEntry("ForegroundNegative", colorSchemes[i].foreground(KColorScheme::NegativeText).color());
+        group.writeEntry("ForegroundNeutral", colorSchemes[i].foreground(KColorScheme::NeutralText).color());
+        group.writeEntry("ForegroundPositive", colorSchemes[i].foreground(KColorScheme::PositiveText).color());
+        group.writeEntry("DecorationFocus", colorSchemes[i].decoration(KColorScheme::FocusColor).color());
+        group.writeEntry("DecorationHover", colorSchemes[i].decoration(KColorScheme::HoverColor).color());
     }
 
     KConfigGroup groupWMTheme(config, "WM");
@@ -489,9 +506,19 @@ void KColorCm::updateConfig(KSharedConfigPtr config)
                     << "activeBlend"
                     << "inactiveBlend";
 
+    QVector<QColor> defaultWMColors;
+    defaultWMColors << QColor(71,80,87)
+                    << QColor(239,240,241)
+                    << QColor(239,240,241)
+                    << QColor(189,195,199)
+                    << QColor(255,255,255)
+                    << QColor(75,71,67);
+
+    int i = 0;
     for (const QString &coloritem : colorItemListWM)
     {
-            groupWMOut.writeEntry(coloritem, groupWMTheme.readEntry(coloritem));
+            groupWMOut.writeEntry(coloritem, groupWMTheme.readEntry(coloritem, defaultWMColors.value(i)));
+            ++i;
     }
 
     QStringList groupNameList;
