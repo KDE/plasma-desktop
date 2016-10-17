@@ -171,9 +171,11 @@ void PagerModel::Private::refreshDataSource()
         QObject::connect(virtualDesktopInfo, &VirtualDesktopInfo::currentDesktopChanged,
             q, &PagerModel::currentPageChanged, Qt::UniqueConnection);
     } else {
-        activityInfoConn = QObject::connect(activityInfo,
-            &ActivityInfo::numberOfRunningActivitiesChanged,
-            q, [this]() { q->refresh(); }, Qt::UniqueConnection);
+        if (!activityInfoConn) {
+            activityInfoConn = QObject::connect(activityInfo,
+                &ActivityInfo::numberOfRunningActivitiesChanged,
+                q, [this]() { q->refresh(); });
+        }
 
         QObject::disconnect(virtualDesktopNumberConn);
         QObject::disconnect(virtualDesktopNamesConn);
