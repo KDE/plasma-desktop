@@ -36,14 +36,6 @@ Item {
     ColumnLayout {
         width: parent.width
 
-        Label {
-            Layout.fillWidth: true
-
-            wrapMode: Text.WordWrap
-
-            text: i18n("Tweaks are experimental options that may become defaults depending on your feedback.")
-        }
-
         GroupBox {
             Layout.fillWidth: true
 
