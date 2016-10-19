@@ -45,6 +45,8 @@ PlasmaComponents.ContextMenu {
     onStatusChanged: {
         if (visualParent && visualParent.m.LauncherUrlWithoutIcon != null && status == PlasmaComponents.DialogStatus.Open) {
             launcherToggleAction.checked = (tasksModel.launcherPosition(visualParent.m.LauncherUrlWithoutIcon) != -1);
+            activitiesDesktopsMenu.refresh();
+
         } else if (status == PlasmaComponents.DialogStatus.Closed) {
             menu.destroy();
         }
@@ -394,7 +396,11 @@ PlasmaComponents.ContextMenu {
     PlasmaComponents.MenuItem {
         id: launcherToggleAction
 
-        visible: (visualParent && visualParent.m.IsLauncher !== true && visualParent.m.IsStartup !== true) && plasmoid.immutability !== PlasmaCore.Types.SystemImmutable
+        visible: visualParent
+                     && visualParent.m.IsLauncher !== true
+                     && visualParent.m.IsStartup !== true
+                     && plasmoid.immutability !== PlasmaCore.Types.SystemImmutable
+                     && (activityInfo.numberOfRunningActivities < 2)
 
         enabled: visualParent && visualParent.m.LauncherUrlWithoutIcon != ""
 
@@ -407,6 +413,85 @@ PlasmaComponents.ContextMenu {
                 tasksModel.requestRemoveLauncher(visualParent.m.LauncherUrlWithoutIcon);
             } else {
                 tasksModel.requestAddLauncher(visualParent.m.LauncherUrl);
+            }
+        }
+    }
+
+    PlasmaComponents.MenuItem {
+        id: showLauncherInActivitiesItem
+
+        text: i18n("&Show A Launcher When Not Running")
+
+        visible: visualParent
+                     && visualParent.m.IsLauncher !== true
+                     && visualParent.m.IsStartup !== true
+                     && plasmoid.immutability !== PlasmaCore.Types.SystemImmutable
+                     && (activityInfo.numberOfRunningActivities >= 2)
+
+        Connections {
+            target: activityInfo
+            onNumberOfRunningActivitiesChanged: activitiesDesktopsMenu.refresh()
+        }
+
+        PlasmaComponents.ContextMenu {
+            id: activitiesLaunchersMenu
+            visualParent: showLauncherInActivitiesItem.action
+
+            function refresh() {
+                clearMenuItems();
+
+                if (menu.visualParent === null) return;
+
+                var createNewItem = function(id, title, url, activities) {
+                    var result = menu.newMenuItem(activitiesLaunchersMenu);
+                    result.text = title;
+
+                    result.visible = true;
+                    result.checkable = true;
+
+                    result.checked = activities.some(function(activity) { return activity === id });
+
+                    result.clicked.connect(
+                        function() {
+                            if (result.checked) {
+                                tasksModel.requestAddLauncherToActivity(url, id);
+                            } else {
+                                tasksModel.requestRemoveLauncherFromActivity(url, id);
+                            }
+                        }
+                    );
+
+                    return result;
+                }
+
+                if (menu.visualParent === null) return;
+
+                var url = menu.visualParent.m.LauncherUrlWithoutIcon;
+
+                var activities = tasksModel.launcherActivities(url);
+
+                var NULL_UUID = "00000000-0000-0000-0000-000000000000";
+
+                createNewItem(NULL_UUID, i18n("On All Activities"), url, activities);
+
+                if (activityInfo.numberOfRunningActivities <= 1) {
+                    return;
+                }
+
+                createNewItem(activityInfo.currentActivity, i18n("On The Current Activity"), url, activities);
+
+                menu.newSeparator(activitiesLaunchersMenu);
+
+                var runningActivities = activityInfo.runningActivities();
+
+                runningActivities.forEach(function(id) {
+                    createNewItem(id, activityInfo.activityName(id), url, activities);
+                });
+            }
+
+            Component.onCompleted: {
+                menu.onVisualParentChanged.connect(refresh);
+                refresh();
             }
         }
     }
