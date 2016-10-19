@@ -84,6 +84,9 @@ Item {
     }
 
     Component.onCompleted: {
+        if (plasmoid.hasOwnProperty("activationTogglesExpanded")) {
+            plasmoid.activationTogglesExpanded = true
+        }
         if (plasmoid.immutability !== PlasmaCore.Types.SystemImmutable) {
             plasmoid.setAction("menuedit", i18n("Edit Applications..."));
         }
