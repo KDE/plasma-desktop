@@ -243,6 +243,9 @@ Item {
     }
 
     Component.onCompleted: {
+        if (plasmoid.hasOwnProperty("activationTogglesExpanded")) {
+            plasmoid.activationTogglesExpanded = !isDash
+        }
         windowSystem.focusOut.connect(enableHideOnWindowDeactivate);
         plasmoid.hideOnWindowDeactivate = true;
 
