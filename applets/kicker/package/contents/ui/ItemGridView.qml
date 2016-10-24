@@ -164,6 +164,8 @@ FocusScope {
         }
 
         MouseEventListener {
+            id: hoverArea
+
             anchors.fill: parent
 
             hoverEnabled: true
@@ -211,6 +213,16 @@ FocusScope {
                     gridView.currentIndex = -1;
                     pressX = -1;
                     pressY = -1;
+                }
+            }
+
+            Connections {
+                target: root
+
+                onVisibleChanged: {
+                    if (root.visible) {
+                        hoverArea.hoverEnabled = true;
+                    }
                 }
             }
 

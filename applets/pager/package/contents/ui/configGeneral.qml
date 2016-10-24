@@ -38,6 +38,7 @@ Item {
     property int cfg_displayedText
     property alias cfg_showWindowIcons: showWindowIcons.checked
     property int cfg_currentDesktopSelected
+    property alias cfg_pagerLayout: pagerLayout.currentIndex
     property alias cfg_showOnlyCurrentScreen: showOnlyCurrentScreen.checked
 
     onCfg_displayedTextChanged: {
@@ -128,6 +129,18 @@ Item {
         QtControls.CheckBox {
             id: showOnlyCurrentScreen
             text: i18n("Only the current screen")
+        }
+
+        QtControls.Label {
+            text: i18n("Layout:")
+            Layouts.Layout.alignment: Qt.AlignVCenter|Qt.AlignRight
+            visible: isActivityPager
+        }
+
+        QtControls.ComboBox {
+            id: pagerLayout
+            model: [i18nc("The pager layout", "Default"), i18n("Horizontal"), i18n("Vertical")]
+            visible: isActivityPager
         }
 
         QtControls.Label {

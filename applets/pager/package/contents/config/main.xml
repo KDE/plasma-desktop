@@ -31,6 +31,15 @@
         </choices>
         <default>0</default>
     </entry>
+    <entry name="pagerLayout" type="Enum">
+        <label>The layout style used for the presentation.</label>
+        <choices>
+            <choice name="Default"/>
+            <choice name="Horizontal"/>
+            <choice name="Vertical"/>
+        </choices>
+        <default>0</default>
+    </entry>
   </group>
 
 </kcfg>

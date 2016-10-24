@@ -193,16 +193,26 @@ MouseArea {
                 return 1;
             }
 
-            var columns = Math.floor(pagerModel.count / pagerModel.layoutRows);
+            var rows = 1;
 
-            if (pagerModel.count % pagerModel.layoutRows > 0) {
-                columns += 1;
-            }
+            if (isActivityPager && plasmoid.configuration.pagerLayout !== 0 /*No Default*/) {
+                if (plasmoid.configuration.pagerLayout === 1 /*Horizontal*/) {
+                    rows = 1;
+                } else if (plasmoid.configuration.pagerLayout === 2 /*Vertical*/) {
+                    rows = pagerModel.count;
+                }
+            } else {
+                var columns = Math.floor(pagerModel.count / pagerModel.layoutRows);
 
-            var rows = Math.floor(pagerModel.count / columns);
+                if (pagerModel.count % pagerModel.layoutRows > 0) {
+                    columns += 1;
+                }
 
-            if (pagerModel.count % columns > 0) {
-                rows += 1;
+                rows = Math.floor(pagerModel.count / columns);
+
+                if (pagerModel.count % columns > 0) {
+                    rows += 1;
+                }
             }
 
             return rows;
