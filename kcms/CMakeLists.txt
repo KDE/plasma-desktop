@@ -47,12 +47,6 @@ add_subdirectory(translations)
 add_subdirectory(spellchecking)
 add_subdirectory(phonon)
 add_subdirectory(runners)
-# useraccount replaced by user-manager for now
-#add_subdirectory(useraccount)
-
-#yet the icons still need installing
-add_subdirectory(useraccount/pics)
-
 
 add_subdirectory(workspaceoptions)
 add_subdirectory(baloo)
