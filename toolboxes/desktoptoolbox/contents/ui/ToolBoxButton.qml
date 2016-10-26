@@ -259,7 +259,6 @@ Item {
             }
         }
         onClicked: {
-            plasmoid.contextualActionsAboutToShow();
             toolBoxLoader.active = true
             // the dialog auto-closes on losing focus
             toolBoxLoader.item.visible = !main.dialogWasVisible
