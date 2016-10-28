@@ -80,12 +80,6 @@
             </item>
             <item>
              <widget class="QLineEdit" name="soundEdit">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
               <property name="toolTip">
                <string>If the option &quot;Use customized bell&quot; is enabled, you can choose a sound file here. Click &quot;Browse...&quot; to choose a sound file using the file dialog.</string>
               </property>
