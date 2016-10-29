@@ -66,6 +66,19 @@ Item {
 
         property Item hoveredItem
 
+        //ignore anything that is neither internal to TaskManager or a URL list
+        onDragEnter: {
+            if (event.mimeData.formats.indexOf("application/x-orgkdeplasmataskmanager_taskbuttonitem") >= 0) {
+                return;
+            }
+
+            if (event.mimeData.hasUrls) {
+                parent.urlsDropped(event.mimeData.urls);
+                return;
+            }
+            event.ignore();
+        }
+
         onDragMove: {
             if (target.animating) {
                 return;
@@ -121,7 +134,9 @@ Item {
 
             if (event.mimeData.hasUrls) {
                 parent.urlsDropped(event.mimeData.urls);
+                return;
             }
+            event.ignore();
         }
 
         Timer {
