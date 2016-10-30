@@ -20,10 +20,13 @@
 import QtQuick 2.4
 import QtGraphicalEffects 1.0
 
-import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.core 2.1 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kquickcontrolsaddons 2.0
+import org.kde.kwindowsystem 1.0
+
+import org.kde.plasma.private.shell 2.0
 
 import org.kde.plasma.private.kicker 0.1 as Kicker
 
@@ -47,8 +50,10 @@ Kicker.DashboardWindow {
                         highlightItemSvg.margins.left + highlightItemSvg.margins.right))
     property int columns: Math.floor(((smallScreen ? 85 : 80)/100) * Math.ceil(width / cellSize))
     property bool searching: (searchField.text != "")
+    property var widgetExplorer: null
 
     keyEventProxy: searchField
+    backgroundColor: Qt.rgba(0, 0, 0, 0.737)
 
     onKeyEscapePressed: {
         if (searching) {
@@ -59,6 +64,7 @@ Kicker.DashboardWindow {
     }
 
     onVisibleChanged: {
+        tabBar.activeTab = 0;
         reset();
 
         if (visible) {
@@ -71,6 +77,11 @@ Kicker.DashboardWindow {
             reset();
         } else {
             filterList.currentIndex = -1;
+
+            if (tabBar.activeTab == 1) {
+                widgetExplorer.widgetsModel.filterQuery = "";
+                widgetExplorer.widgetsModel.filterType = "";
+            }
         }
     }
 
@@ -80,8 +91,20 @@ Kicker.DashboardWindow {
         systemFavoritesGrid.currentIndex = -1;
         filterList.currentIndex = 0;
         funnelModel.sourceModel = rootModel.modelForRow(0);
+        mainGrid.model = (tabBar.activeTab == 0) ? funnelModel : root.widgetExplorer.widgetsModel;
         mainGrid.currentIndex = -1;
         filterListScrollArea.focus = true;
+        filterList.model = (tabBar.activeTab == 0) ? rootModel : widgetsFilterModel;
+    }
+
+    function updateWidgetExplorer() {
+        if (tabBar.activeTab == 1 /* Widgets */ || tabBar.hoveredTab == 1) {
+            root.widgetExplorer = widgetExplorerComponent.createObject(root);
+            root.widgetExplorer.containment = containmentInterface.screenContainment(plasmoid);
+        } else if (root.widgetExplorer) {
+            root.widgetExplorer.destroy();
+            root.widgetExplorer = null;
+        }
     }
 
     mainItem: MouseArea {
@@ -95,7 +118,10 @@ Kicker.DashboardWindow {
             onReset: {
                 if (!searching) {
                     filterList.applyFilter();
-                    funnelModel.reset();
+
+                    if (tabBar.activeTab == 0) {
+                        funnelModel.reset();
+                    }
                 }
             }
 
@@ -106,7 +132,35 @@ Kicker.DashboardWindow {
                     // Needs a more involved hunt through Qt Quick sources later since
                     // it's not happening with near-identical code in the menu repr.
                     rootModel.refresh();
+                } else if (tabBar.activeTab == 1) {
+                    root.toggle();
+                    containmentInterface.ensureMutable(containmentInterface.screenContainment(plasmoid));
+                    kwindowsystem.showingDesktop = true;
                 }
+            }
+        }
+
+        KWindowSystem {
+            id: kwindowsystem
+        }
+
+        Component {
+            id: widgetExplorerComponent
+
+            WidgetExplorer { }
+        }
+
+        PlasmaCore.SortFilterModel {
+            id: widgetsFilterModel
+
+            sourceModel: root.widgetExplorer ? root.widgetExplorer.filterModel : null
+            filterCallback: function(row, value) {
+                // Filter out "Running", "Uninstallable" and "Categories:".
+                if (row > 0 && row < 4) {
+                    return false;
+                }
+
+                return true;
             }
         }
 
@@ -185,6 +239,31 @@ Kicker.DashboardWindow {
             }
         }
 
+        Kicker.ContainmentInterface {
+            id: containmentInterface
+        }
+
+        DashboardTabBar {
+            id: tabBar
+
+            y: 0
+
+            anchors.horizontalCenter: parent.horizontalCenter
+
+            visible: (plasmoid.immutability !== PlasmaCore.Types.SystemImmutable)
+
+            onActiveTabChanged: {
+                updateWidgetExplorer();
+                reset();
+            }
+
+            onHoveredTabChanged: updateWidgetExplorer()
+
+            Keys.onDownPressed: {
+                mainColumn.tryActivate(0, 0);
+            }
+        }
+
         PlasmaComponents.TextField {
             id: searchField
 
@@ -194,7 +273,11 @@ Kicker.DashboardWindow {
             visible: false
 
             onTextChanged: {
-                runnerModel.query = searchField.text;
+                if (tabBar.activeTab == 0) {
+                    runnerModel.query = searchField.text;
+                } else {
+                    widgetExplorer.widgetsModel.searchTerm = searchField.text;
+                }
             }
 
             function clear() {
@@ -209,7 +292,7 @@ Kicker.DashboardWindow {
                 horizontalCenter: parent.horizontalCenter
             }
 
-            y: (middleRow.anchors.topMargin / 2) - (smallScreen ? (height/2) : 0)
+            y: (middleRow.anchors.topMargin / 2) - (smallScreen ? (height/10) : 0)
 
             font.pointSize: dummyHeading.font.pointSize * 1.5
 
@@ -249,7 +332,7 @@ Kicker.DashboardWindow {
 
             anchors {
                 top: parent.top
-                topMargin: units.gridUnit * (smallScreen ? 6 : 10)
+                topMargin: units.gridUnit * (smallScreen ? 8 : 10)
                 bottom: parent.bottom
                 bottomMargin: (units.gridUnit * 2)
                 horizontalCenter: parent.horizontalCenter
@@ -261,6 +344,8 @@ Kicker.DashboardWindow {
 
             Item {
                 id: favoritesColumn
+
+
 
                 anchors {
                     top: parent.top
@@ -274,6 +359,8 @@ Kicker.DashboardWindow {
                 PlasmaExtras.Heading {
                     id: favoritesColumnLabel
 
+                    enabled: (tabBar.activeTab == 0)
+
                     anchors {
                         top: parent.top
                     }
@@ -283,17 +370,22 @@ Kicker.DashboardWindow {
 
                     elide: Text.ElideRight
                     wrapMode: Text.NoWrap
-                    opacity: 1.0
 
                     color: "white"
 
                     level: 1
 
                     text: i18n("Favorites")
+
+                    opacity: (enabled ? 1.0 : 0.3)
+
+                    Behavior on opacity { SmoothedAnimation { duration: units.longDuration; velocity: 0.01 } }
                 }
 
                 PlasmaCore.SvgItem {
                     id: favoritesColumnLabelUnderline
+
+                    enabled: (tabBar.activeTab == 0)
 
                     anchors {
                         top: favoritesColumnLabel.bottom
@@ -304,10 +396,16 @@ Kicker.DashboardWindow {
 
                     svg: lineSvg
                     elementId: "horizontal-line"
+
+                    opacity: (enabled ? 1.0 : 0.3)
+
+                    Behavior on opacity { SmoothedAnimation { duration: units.longDuration; velocity: 0.01 } }
                 }
 
                 ItemGridView {
                     id: globalFavoritesGrid
+
+                    enabled: (tabBar.activeTab == 0)
 
                     anchors {
                         top: favoritesColumnLabelUnderline.bottom
@@ -323,11 +421,16 @@ Kicker.DashboardWindow {
 
                     cellWidth: cellSize
                     cellHeight: cellSize
+                    iconSize: root.iconSize
 
                     model: globalFavorites
 
                     dropEnabled: true
                     usesPlasmaTheme: false
+
+                    opacity: (enabled ? 1.0 : 0.3)
+
+                    Behavior on opacity { SmoothedAnimation { duration: units.longDuration; velocity: 0.01 } }
 
                     onCurrentIndexChanged: {
                         preloadAllAppsTimer.defer();
@@ -362,6 +465,7 @@ Kicker.DashboardWindow {
 
                     cellWidth: cellSize
                     cellHeight: cellSize
+                    iconSize: root.iconSize
 
                     model: systemFavorites
 
@@ -409,7 +513,17 @@ Kicker.DashboardWindow {
 
                     property int headerHeight: mainColumnLabel.height + mainColumnLabelUnderline.height + units.largeSpacing
 
-                    opacity: (!searching && !filterList.allApps) ? 1.0 : 0.0
+                    opacity: {
+                        if (tabBar.activeTab == 0 && searching) {
+                            return 0.0;
+                        }
+
+                        if (filterList.allApps) {
+                            return 0.0;
+                        }
+
+                        return 1.0;
+                    }
 
                     onOpacityChanged: {
                         if (opacity == 1.0) {
@@ -435,7 +549,7 @@ Kicker.DashboardWindow {
 
                         level: 1
 
-                        text: funnelModel.description
+                        text: (tabBar.activeTab == 0) ? funnelModel.description : i18n("Widgets")
                     }
 
                     PlasmaCore.SvgItem {
@@ -465,8 +579,9 @@ Kicker.DashboardWindow {
                         width: parent.width
                         height: systemFavoritesGrid.y + systemFavoritesGrid.height - mainGridContainer.headerHeight
 
-                        cellWidth: cellSize
-                        cellHeight: cellSize
+                        cellWidth: (tabBar.activeTab == 0 ? cellSize : cellSize * 2)
+                        cellHeight: cellWidth
+                        iconSize: (tabBar.activeTab == 0 ? root.iconSize : cellWidth - (units.largeSpacing * 2))
 
                         model: funnelModel
 
@@ -475,14 +590,31 @@ Kicker.DashboardWindow {
                         }
 
                         onKeyNavLeft: {
-                            var row = currentRow();
-                            var target = row + 1 > globalFavoritesGrid.rows ? systemFavoritesGrid : globalFavoritesGrid;
-                            var targetRow = row + 1 > globalFavoritesGrid.rows ? row - globalFavoritesGrid.rows : row;
-                            target.tryActivate(targetRow, favoritesColumn.columns - 1);
+                            if (tabBar.activeTab == 0) {
+                                var row = currentRow();
+                                var target = row + 1 > globalFavoritesGrid.rows ? systemFavoritesGrid : globalFavoritesGrid;
+                                var targetRow = row + 1 > globalFavoritesGrid.rows ? row - globalFavoritesGrid.rows : row;
+                                target.tryActivate(targetRow, favoritesColumn.columns - 1);
+                            }
                         }
 
                         onKeyNavRight: {
                             filterListScrollArea.focus = true;
+                        }
+
+                        onKeyNavUp: {
+                            if (tabBar.visible) {
+                                tabBar.focus = true;
+                            }
+                        }
+
+                        onItemActivated: {
+                            if (tabBar.activeTab == 1) {
+                                containmentInterface.ensureMutable(containmentInterface.screenContainment(plasmoid));
+                                root.widgetExplorer.addApplet(currentItem.m.pluginName);
+                                root.toggle();
+                                kwindowsystem.showingDesktop = true;
+                            }
                         }
                     }
                 }
@@ -499,8 +631,6 @@ Kicker.DashboardWindow {
                     height: systemFavoritesGrid.y + systemFavoritesGrid.height
 
                     enabled: (opacity == 1.0) ? 1 : 0
-
-                    model: runnerModel
 
                     opacity: filterList.allApps ? 1.0 : 0.0
 
@@ -547,7 +677,7 @@ Kicker.DashboardWindow {
 
                     grabFocus: true
 
-                    opacity: searching ? 1.0 : 0.0
+                    opacity: (tabBar.activeTab == 0 && searching) ? 1.0 : 0.0
 
                     onOpacityChanged: {
                         if (opacity == 1.0) {
@@ -637,6 +767,7 @@ Kicker.DashboardWindow {
                             signal actionTriggered(string actionId, variant actionArgument)
                             signal aboutToShowActionMenu(variant actionMenu)
 
+                            property var m: model
                             property int textWidth: label.contentWidth
                             property int mouseCol
                             property bool hasActionList: ((model.favoriteId != null)
@@ -785,6 +916,13 @@ Kicker.DashboardWindow {
 
                         function applyFilter() {
                             if (!searching && currentIndex >= 0) {
+                                if (tabBar.activeTab == 1) {
+                                    root.widgetExplorer.widgetsModel.filterQuery = currentItem.m.filterData;
+                                    root.widgetExplorer.widgetsModel.filterType = currentItem.m.filterType;
+
+                                    return;
+                                }
+
                                 if (preloadAllAppsTimer.running) {
                                     preloadAllAppsTimer.stop();
                                 }
@@ -810,7 +948,7 @@ Kicker.DashboardWindow {
                             if (event.key == Qt.Key_Left) {
                                 event.accepted = true;
 
-                                var currentRow = Math.max(0, Math.ceil(currentItem.y / cellSize) - 1);
+                                var currentRow = Math.max(0, Math.ceil(currentItem.y / mainGrid.cellHeight) - 1);
                                 mainColumn.tryActivate(currentRow, mainColumn.columns - 1);
                             }
                         }

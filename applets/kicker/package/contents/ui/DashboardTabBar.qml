@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013 by Eike Hein <hein@kde.org>                        *
+ *   Copyright (C) 2016 by Eike Hein <hein@kde.org>                        *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -17,39 +17,54 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#ifndef DRAGHELPER_H
-#define DRAGHELPER_H
+import QtQuick 2.4
 
-#include <QObject>
-#include <QIcon>
-#include <QUrl>
+Row {
+    id: tabBar
 
-class QQuickItem;
+    property int activeTab: 0
+    property int hoveredTab: -1
 
-class DragHelper : public QObject
-{
-    Q_OBJECT
-    Q_PROPERTY(int dragIconSize READ dragIconSize WRITE setDragIconSize NOTIFY dragIconSizeChanged)
+    signal containsMouseChanged(int index, bool containsMouse)
 
-    public:
-        DragHelper(QObject *parent = 0);
-        ~DragHelper();
+    onContainsMouseChanged: {
+        if (containsMouse) {
+            hoveredTab = index;
+        } else {
+            hoveredTab = -1;
+        }
+    }
 
-        int dragIconSize() const;
-        void setDragIconSize(int size);
+    DashboardTabButton {
+        id: appsdocs
 
-        Q_INVOKABLE bool isDrag(int oldX, int oldY, int newX, int newY) const;
-        Q_INVOKABLE void startDrag(QQuickItem* item, const QUrl &url = QUrl(), const QIcon &icon = QIcon(),
-            const QString &extraMimeType = QString(), const QString &extraMimeData = QString());
+        index: 0
 
-    Q_SIGNALS:
-        void dragIconSizeChanged() const;
-        void dropped() const;
+        text: i18n("Apps & Docs")
 
-    private:
-        int m_dragIconSize;
-        Q_INVOKABLE void doDrag(QQuickItem* item, const QUrl &url = QUrl(), const QIcon &icon = QIcon(),
-            const QString &extraMimeType = QString(), const QString &extraMimeData = QString()) const;
-};
+        active: (tabBar.activeTab == 0)
+    }
 
-#endif
+    DashboardTabButton {
+        id: widgets
+
+        index: 1
+
+        text: i18n("Widgets")
+
+        active: (tabBar.activeTab == 1)
+    }
+
+    Keys.onLeftPressed: {
+        if (activeTab == 1) {
+            activeTab = 0;
+        }
+    }
+
+    Keys.onRightPressed: {
+        if (activeTab == 0) {
+            activeTab = 1;
+        }
+    }
+}
+

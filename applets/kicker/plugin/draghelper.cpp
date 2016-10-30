@@ -53,17 +53,20 @@ bool DragHelper::isDrag(int oldX, int oldY, int newX, int newY) const
     return ((QPoint(oldX, oldY) - QPoint(newX, newY)).manhattanLength() >= QApplication::startDragDistance());
 }
 
-void DragHelper::startDrag(QQuickItem *item, const QUrl &url, const QIcon &icon)
+void DragHelper::startDrag(QQuickItem *item, const QUrl &url, const QIcon &icon,
+    const QString &extraMimeType, const QString &extraMimeData)
 {
     // This allows the caller to return, making sure we don't crash if
     // the caller is destroyed mid-drag (as can happen due to a sycoca
     // change).
 
     QMetaObject::invokeMethod(this, "doDrag", Qt::QueuedConnection,
-        Q_ARG(QQuickItem*, item), Q_ARG(QUrl, url), Q_ARG(QIcon, icon));
+        Q_ARG(QQuickItem*, item), Q_ARG(QUrl, url), Q_ARG(QIcon, icon),
+        Q_ARG(QString, extraMimeType), Q_ARG(QString, extraMimeData));
 }
 
-void DragHelper::doDrag(QQuickItem *item, const QUrl &url, const QIcon &icon) const
+void DragHelper::doDrag(QQuickItem *item, const QUrl &url, const QIcon &icon,
+    const QString &extraMimeType, const QString &extraMimeData) const
 {
     if (item && item->window() && item->window()->mouseGrabberItem()) {
         item->window()->mouseGrabberItem()->ungrabMouse();
@@ -75,6 +78,10 @@ void DragHelper::doDrag(QQuickItem *item, const QUrl &url, const QIcon &icon) co
 
     if (!url.isEmpty()) {
         mimeData->setUrls(QList<QUrl>() << url);
+    }
+
+    if (!extraMimeType.isEmpty() && !extraMimeData.isEmpty()) {
+        mimeData->setData(extraMimeType, extraMimeData.toLatin1());
     }
 
     drag->setMimeData(mimeData);

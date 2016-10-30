@@ -33,6 +33,8 @@ FocusScope {
     signal keyNavUp
     signal keyNavDown
 
+    signal itemActivated(int index, string actionId, string argument)
+
     property bool dragEnabled: true
     property bool dropEnabled: false
     property bool showLabels: true
@@ -49,6 +51,7 @@ FocusScope {
 
     property alias cellWidth: gridView.cellWidth
     property alias cellHeight: gridView.cellHeight
+    property alias iconSize: gridView.iconSize
 
     property alias horizontalScrollBarPolicy: scrollArea.horizontalScrollBarPolicy
     property alias verticalScrollBarPolicy: scrollArea.verticalScrollBarPolicy
@@ -200,8 +203,15 @@ FocusScope {
                     itemGrid.focus = (currentIndex != -1)
 
                     if (dragEnabled && pressX != -1 && dragHelper.isDrag(pressX, pressY, mouse.x, mouse.y)) {
+                        if ("pluginName" in item.m) {
+                            dragHelper.startDrag(kicker, item.url, item.icon,
+                            "text/x-plasmoidservicename", item.m.pluginName);
+                        } else {
+                            dragHelper.startDrag(kicker, item.url, item.icon);
+                        }
+
                         kicker.dragSource = item;
-                        dragHelper.startDrag(kicker, item.url, item.icon);
+
                         pressX = -1;
                         pressY = -1;
                     }
@@ -250,6 +260,8 @@ FocusScope {
                     id: gridView
 
                     property bool usesPlasmaTheme: false
+
+                    property int iconSize: units.iconSizes.huge
 
                     property bool animating: false
                     property int animationDuration: dropEnabled ? resetAnimationDurationTimer.interval : 0

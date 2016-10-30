@@ -21,6 +21,7 @@
 #include "abstractmodel.h"
 #include "appsmodel.h"
 #include "computermodel.h"
+#include "containmentinterface.h"
 #include "draghelper.h"
 #include "favoritesmodel.h"
 #include "dashboardwindow.h"
@@ -45,6 +46,7 @@ void KickerPlugin::registerTypes(const char *uri)
 
     qmlRegisterType<AppsModel>(uri, 0, 1, "AppsModel");
     qmlRegisterType<ComputerModel>(uri, 0, 1, "ComputerModel");
+    qmlRegisterType<ContainmentInterface>(uri, 0, 1, "ContainmentInterface");
     qmlRegisterType<DragHelper>(uri, 0, 1, "DragHelper");
     qmlRegisterType<FavoritesModel>(uri, 0, 1, "FavoritesModel");
     qmlRegisterType<DashboardWindow>(uri, 0, 1, "DashboardWindow");

@@ -36,9 +36,10 @@ MouseArea {
     property bool showLabel: true
 
     property int itemIndex: model.index
-    property string favoriteId: model.favoriteId
+    property string favoriteId: model.favoriteId != undefined ? model.favoriteId : ""
     property url url: model.url != undefined ? model.url : ""
     property variant icon: model.decoration != undefined ? model.decoration : ""
+    property var m: model
     property bool pressed: false
     property bool hasActionList: ((model.favoriteId != null)
         || (("hasActionList" in model) && (model.hasActionList == true)))
@@ -63,8 +64,13 @@ MouseArea {
     onReleased: {
         if (pressed && GridView.view.currentItem == item) {
             hoverArea.hoverEnabled = false;
-            GridView.view.model.trigger(index, "", null);
-            root.toggle();
+
+            if ("trigger" in GridView.view.model) {
+                GridView.view.model.trigger(index, "", null);
+                root.toggle();
+            }
+
+            itemGrid.itemActivated(index, "", null);
         }
 
         pressed = false;
@@ -137,7 +143,7 @@ MouseArea {
 
         color: "white" // FIXME TODO: Respect theming?
 
-        text: model.display
+        text: ("name" in model ? model.name : model.display)
     }
 
     PlasmaCore.ToolTipArea {
@@ -156,8 +162,13 @@ MouseArea {
             openActionMenu(item);
         } else if ((event.key == Qt.Key_Enter || event.key == Qt.Key_Return)) {
             event.accepted = true;
-            GridView.view.model.trigger(index, "", null);
-            root.toggle();
+
+            if ("trigger" in GridView.view.model) {
+                GridView.view.model.trigger(index, "", null);
+                root.toggle();
+            }
+
+            itemGrid.itemActivated(index, "", null);
         }
     }
 }

@@ -25,6 +25,8 @@
 
 #include <QQuickItem>
 
+#include <KActionCollection>
+
 // FIXME HACK TODO: Unfortunately we have no choice but to hard-code a list of
 // applets we know to expose the correct interface right now -- this is slated
 // for replacement with some form of generic service.
@@ -206,5 +208,45 @@ void ContainmentInterface::addLauncher(QObject *appletInterface, ContainmentInte
 
             break;
         }
+    }
+}
+
+QObject* ContainmentInterface::screenContainment(QObject *appletInterface)
+{
+    if (!appletInterface) {
+        return nullptr;
+    }
+
+    const Plasma::Applet *applet = appletInterface->property("_plasma_applet").value<Plasma::Applet *>();
+    Plasma::Containment *containment = applet->containment();
+
+    if (!containment) {
+        return nullptr;
+    }
+
+    Plasma::Corona *corona = containment->corona();
+
+    if (!corona) {
+        return nullptr;
+    }
+
+    return corona->containmentForScreen(containment->screen());
+}
+
+bool ContainmentInterface::screenContainmentMutable(QObject *appletInterface)
+{
+    const Plasma::Containment *containment = static_cast<const Plasma::Containment *>(screenContainment(appletInterface));
+
+    if (containment) {
+        return (containment->immutability() == Plasma::Types::Mutable);
+    }
+
+    return false;
+}
+
+void ContainmentInterface::ensureMutable(Plasma::Containment *containment)
+{
+    if (containment && containment->immutability() != Plasma::Types::Mutable) {
+         containment->actions()->action("lock widgets")->trigger();
     }
 }

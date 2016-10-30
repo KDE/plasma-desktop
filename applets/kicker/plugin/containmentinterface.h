@@ -25,6 +25,7 @@
 
 namespace Plasma {
     class Applet;
+    class Containment;
 }
 
 class ContainmentInterface : public QObject
@@ -38,12 +39,18 @@ class ContainmentInterface : public QObject
             TaskManager
         };
 
+        Q_ENUMS(Target)
+
         ContainmentInterface(QObject *parent = 0);
         ~ContainmentInterface();
 
-        static bool mayAddLauncher(QObject *applet, Target target, const QString &entryPath = QString());
+        static Q_INVOKABLE bool mayAddLauncher(QObject *appletInterface, Target target, const QString &entryPath = QString());
 
-        static void addLauncher(QObject *applet, Target target, const QString &entryPath);
+        static Q_INVOKABLE void addLauncher(QObject *appletInterface, Target target, const QString &entryPath);
+
+        static Q_INVOKABLE QObject* screenContainment(QObject *appletInterface);
+        static Q_INVOKABLE bool screenContainmentMutable(QObject *appletInterface);
+        static Q_INVOKABLE void ensureMutable(Plasma::Containment *containment);
 
     private:
         static QStringList m_knownTaskManagers;

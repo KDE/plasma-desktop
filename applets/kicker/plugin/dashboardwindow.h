@@ -32,6 +32,7 @@ class DashboardWindow : public QQuickWindow
     Q_PROPERTY(QQuickItem* mainItem READ mainItem WRITE setMainItem NOTIFY mainItemChanged)
     Q_PROPERTY(QQuickItem* visualParent READ visualParent WRITE setVisualParent NOTIFY visualParentChanged)
     Q_PROPERTY(QQuickItem* keyEventProxy READ keyEventProxy WRITE setKeyEventProxy NOTIFY keyEventProxyChanged)
+    Q_PROPERTY(QColor backgroundColor READ backgroundColor WRITE setBackgroundColor NOTIFY backgroundColorChanged)
 
     Q_CLASSINFO("DefaultProperty", "mainItem")
 
@@ -48,12 +49,16 @@ class DashboardWindow : public QQuickWindow
         QQuickItem *keyEventProxy() const;
         void setKeyEventProxy(QQuickItem *item);
 
+        QColor backgroundColor() const;
+        void setBackgroundColor(const QColor &color);
+
         Q_INVOKABLE void toggle();
 
     Q_SIGNALS:
         void mainItemChanged() const;
         void visualParentChanged() const;
         void keyEventProxyChanged() const;
+        void backgroundColorChanged() const;
         void keyEscapePressed() const;
 
     private Q_SLOTS:

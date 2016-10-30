@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013 by Eike Hein <hein@kde.org>                        *
+ *   Copyright (C) 2016 by Eike Hein <hein@kde.org>                        *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -17,39 +17,56 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#ifndef DRAGHELPER_H
-#define DRAGHELPER_H
+import QtQuick 2.4
 
-#include <QObject>
-#include <QIcon>
-#include <QUrl>
+import org.kde.plasma.plasmoid 2.0
+import org.kde.plasma.extras 2.0 as PlasmaExtras
 
-class QQuickItem;
+Item {
+    id: tab
 
-class DragHelper : public QObject
-{
-    Q_OBJECT
-    Q_PROPERTY(int dragIconSize READ dragIconSize WRITE setDragIconSize NOTIFY dragIconSizeChanged)
+    width: label.contentWidth + (units.largeSpacing * 2)
+    height: label.contentHeight + (units.smallSpacing * 2)
 
-    public:
-        DragHelper(QObject *parent = 0);
-        ~DragHelper();
+    property int index: 0
+    property bool active: false
+    property alias text: label.text
 
-        int dragIconSize() const;
-        void setDragIconSize(int size);
+    Rectangle {
+        anchors.fill: parent
 
-        Q_INVOKABLE bool isDrag(int oldX, int oldY, int newX, int newY) const;
-        Q_INVOKABLE void startDrag(QQuickItem* item, const QUrl &url = QUrl(), const QIcon &icon = QIcon(),
-            const QString &extraMimeType = QString(), const QString &extraMimeData = QString());
+        color: tab.parent.focus ? theme.highlightColor : "black"
 
-    Q_SIGNALS:
-        void dragIconSizeChanged() const;
-        void dropped() const;
+        opacity: active ? 0.4 : 0.15
+        Behavior on opacity { SmoothedAnimation { duration: units.shortDuration; velocity: 0.01 } }
+    }
 
-    private:
-        int m_dragIconSize;
-        Q_INVOKABLE void doDrag(QQuickItem* item, const QUrl &url = QUrl(), const QIcon &icon = QIcon(),
-            const QString &extraMimeType = QString(), const QString &extraMimeData = QString()) const;
-};
+    PlasmaExtras.Heading {
+        id: label
 
-#endif
+        x: units.largeSpacing
+
+        elide: Text.ElideNone
+        wrapMode: Text.NoWrap
+        opacity: active ? 1.0 : 0.6
+        Behavior on opacity { SmoothedAnimation { duration: units.shortDuration; velocity: 0.01 } }
+
+        color: tab.parent.focus ? theme.highlightedTextColor : "white"
+
+        level: 1
+    }
+
+    MouseArea {
+        anchors.fill: parent
+
+        hoverEnabled: true
+
+        onClicked: {
+            tab.parent.activeTab = tab.index;
+        }
+
+        onContainsMouseChanged: {
+            tab.parent.containsMouseChanged(index, containsMouse);
+        }
+    }
+}

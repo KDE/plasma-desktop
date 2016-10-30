@@ -145,6 +145,7 @@ PlasmaExtras.ScrollArea {
 
                     cellWidth: cellSize
                     cellHeight: cellSize
+                    iconSize: root.iconSize
 
                     verticalScrollBarPolicy: Qt.ScrollBarAlwaysOff
 

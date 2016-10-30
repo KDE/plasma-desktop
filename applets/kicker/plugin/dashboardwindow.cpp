@@ -32,7 +32,6 @@ DashboardWindow::DashboardWindow(QQuickItem *parent) : QQuickWindow(parent ? par
 , m_visualParentWindow(0)
 {
     setClearBeforeRendering(true);
-    setColor(QColor(0, 0, 0, 188));
     setFlags(Qt::FramelessWindowHint);
 
     setIcon(QIcon::fromTheme("plasma"));
@@ -90,6 +89,20 @@ void DashboardWindow::setVisualParent(QQuickItem *item)
         }
 
         emit visualParentChanged();
+    }
+}
+
+QColor DashboardWindow::backgroundColor() const
+{
+    return color();
+}
+
+void DashboardWindow::setBackgroundColor(const QColor &c)
+{
+    if (color() != c) {
+        setColor(c);
+
+        emit backgroundColorChanged();
     }
 }
 
