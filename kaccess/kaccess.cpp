@@ -350,6 +350,7 @@ void KAccessApp::readSettings()
 
     toggleScreenReaderAction->setText(i18n("Toggle Screen Reader On and Off"));
     toggleScreenReaderAction->setObjectName("Toggle Screen Reader On and Off");
+    toggleScreenReaderAction->setProperty("componentDisplayName", i18nc("Name for kaccess shortcuts category", "Accessibility"));
     KGlobalAccel::self()->setGlobalShortcut(toggleScreenReaderAction,
                                       QKeySequence(shortcut));
     connect(toggleScreenReaderAction, &QAction::triggered, this, &KAccessApp::toggleScreenReader);
