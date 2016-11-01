@@ -72,7 +72,7 @@ bool ContainmentInterface::mayAddLauncher(QObject *appletInterface, ContainmentI
             break;
         }
         case Panel: {
-            if (containment->pluginInfo().pluginName() == QLatin1String("org.kde.panel"))
+            if (containment->pluginMetaData().pluginId() == QLatin1String("org.kde.panel"))
             {
                 return (containment->immutability() == Plasma::Types::Mutable);
             }
@@ -80,12 +80,12 @@ bool ContainmentInterface::mayAddLauncher(QObject *appletInterface, ContainmentI
             break;
         }
         case TaskManager: {
-            if (!entryPath.isEmpty() && containment->pluginInfo().pluginName() == QLatin1String("org.kde.panel"))
+            if (!entryPath.isEmpty() && containment->pluginMetaData().pluginId() == QLatin1String("org.kde.panel"))
             {
                 const Plasma::Applet *taskManager = 0;
 
                 foreach(const Plasma::Applet *applet, containment->applets()) {
-                    if (m_knownTaskManagers.contains(applet->pluginInfo().pluginName())) {
+                    if (m_knownTaskManagers.contains(applet->pluginMetaData().pluginId())) {
                         taskManager = applet;
 
                         break;
@@ -173,7 +173,7 @@ void ContainmentInterface::addLauncher(QObject *appletInterface, ContainmentInte
             break;
         }
         case Panel: {
-            if (containment->pluginInfo().pluginName() == QLatin1String("org.kde.panel"))
+            if (containment->pluginMetaData().pluginId() == QLatin1String("org.kde.panel"))
             {
                 containment->createApplet("org.kde.plasma.icon", QVariantList() << entryPath);
             }
@@ -181,12 +181,12 @@ void ContainmentInterface::addLauncher(QObject *appletInterface, ContainmentInte
             break;
         }
         case TaskManager: {
-            if (containment->pluginInfo().pluginName() == QLatin1String("org.kde.panel"))
+            if (containment->pluginMetaData().pluginId() == QLatin1String("org.kde.panel"))
             {
                 const Plasma::Applet *taskManager = 0;
 
                 foreach(const Plasma::Applet *applet, containment->applets()) {
-                    if (m_knownTaskManagers.contains(applet->pluginInfo().pluginName())) {
+                    if (m_knownTaskManagers.contains(applet->pluginMetaData().pluginId())) {
                         taskManager = applet;
 
                         break;
