@@ -98,7 +98,7 @@ Kicker.DashboardWindow {
     }
 
     function updateWidgetExplorer() {
-        if (tabBar.activeTab == 1 /* Widgets */ || tabBar.hoveredTab == 1) {
+        if (!root.widgetExplorer && (tabBar.activeTab == 1 /* Widgets */ || tabBar.hoveredTab == 1)) {
             root.widgetExplorer = widgetExplorerComponent.createObject(root);
             root.widgetExplorer.containment = containmentInterface.screenContainment(plasmoid);
         } else if (root.widgetExplorer) {
