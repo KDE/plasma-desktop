@@ -94,13 +94,15 @@ Kicker.DashboardWindow {
         mainGrid.model = (tabBar.activeTab == 0) ? funnelModel : root.widgetExplorer.widgetsModel;
         mainGrid.currentIndex = -1;
         filterListScrollArea.focus = true;
-        filterList.model = (tabBar.activeTab == 0) ? rootModel : widgetsFilterModel;
+        filterList.model = (tabBar.activeTab == 0) ? rootModel : root.widgetExplorer.filterModel;
     }
 
     function updateWidgetExplorer() {
-        if (!root.widgetExplorer && (tabBar.activeTab == 1 /* Widgets */ || tabBar.hoveredTab == 1)) {
-            root.widgetExplorer = widgetExplorerComponent.createObject(root);
-            root.widgetExplorer.containment = containmentInterface.screenContainment(plasmoid);
+        if (tabBar.activeTab == 1 /* Widgets */ || tabBar.hoveredTab == 1) {
+            if (!root.widgetExplorer) {
+                root.widgetExplorer = widgetExplorerComponent.createObject(root);
+                root.widgetExplorer.containment = containmentInterface.screenContainment(plasmoid);
+            }
         } else if (root.widgetExplorer) {
             root.widgetExplorer.destroy();
             root.widgetExplorer = null;
@@ -147,21 +149,7 @@ Kicker.DashboardWindow {
         Component {
             id: widgetExplorerComponent
 
-            WidgetExplorer { }
-        }
-
-        PlasmaCore.SortFilterModel {
-            id: widgetsFilterModel
-
-            sourceModel: root.widgetExplorer ? root.widgetExplorer.filterModel : null
-            filterCallback: function(row, value) {
-                // Filter out "Running", "Uninstallable" and "Categories:".
-                if (row > 0 && row < 4) {
-                    return false;
-                }
-
-                return true;
-            }
+            WidgetExplorer { showSpecialFilters: false }
         }
 
         Connections {
