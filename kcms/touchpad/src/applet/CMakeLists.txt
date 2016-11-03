@@ -1,7 +1,7 @@
 remove_definitions(-DTRANSLATION_DOMAIN="kcm_touchpad")
 add_definitions(-DTRANSLATION_DOMAIN="plasma_applet_touchpad")
 
-add_subdirectory(qml)
+plasma_install_package(qml touchpad)
 
 configure_file("${CMAKE_CURRENT_SOURCE_DIR}/dataengine.desktop"
                "${CMAKE_CURRENT_BINARY_DIR}/plasma-dataengine-touchpad.desktop"
