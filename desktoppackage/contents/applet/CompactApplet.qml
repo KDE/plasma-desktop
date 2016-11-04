@@ -128,7 +128,7 @@ PlasmaCore.ToolTipArea {
             }
         }
     }
- 
+
     Timer {
         id: expandedSync
         interval: 100
@@ -159,6 +159,12 @@ PlasmaCore.ToolTipArea {
         //It's a MouseEventListener to get all the events, so the eventfilter will be able to catch them
         mainItem: MouseEventListener {
             id: appletParent
+
+            focus: true
+
+            Keys.onEscapePressed: {
+                plasmoid.expanded = false;
+            }
 
             LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
             LayoutMirroring.childrenInherit: true
