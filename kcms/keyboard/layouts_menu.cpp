@@ -132,7 +132,7 @@ QList<QAction*> LayoutsMenu::contextualActions()
 	QAction* separator = new QAction(actionGroup);
 	separator->setSeparator(true);
 	actionGroup->addAction(separator);
-	QAction* configAction = new QAction(i18n("Configure..."), actionGroup);
+	QAction* configAction = new QAction(QIcon::fromTheme(QStringLiteral("configure")), i18n("Configure Layouts..."), actionGroup);
 	actionGroup->addAction(configAction);
 	configAction->setData("config");
 	connect(actionGroup, &QActionGroup::triggered, this, &LayoutsMenu::actionTriggered);
