@@ -326,6 +326,9 @@ void TouchpadConfig::defaults()
 
 void TouchpadConfig::checkChanges()
 {
+    if (!m_backend->hasTouchpad()) {
+        return;
+    }
     unmanagedWidgetChangeState(m_manager->hasChangedFuzzy()
                                || m_configOutOfSync);
     if (m_configOutOfSync) {

@@ -53,6 +53,7 @@ public:
         return m_device ? m_device->supportedParameters() : QStringList();
     }
     const QString &errorString() const { return m_errorString; }
+    bool hasTouchpad() const { return m_device; }
 
     void setTouchpadOff(TouchpadOffState) Q_DECL_OVERRIDE;
     TouchpadOffState getTouchpadOff() Q_DECL_OVERRIDE;

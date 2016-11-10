@@ -39,6 +39,7 @@ public:
     virtual bool getConfig(QVariantHash &) = 0;
     virtual QStringList supportedParameters() const = 0;
     virtual const QString &errorString() const = 0;
+    virtual bool hasTouchpad() const = 0;
 
     enum TouchpadOffState {
         TouchpadEnabled, TouchpadTapAndScrollDisabled, TouchpadFullyDisabled
