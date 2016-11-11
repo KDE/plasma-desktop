@@ -184,7 +184,7 @@ MouseConfig::MouseConfig(QWidget *parent, const QVariantList &args)
     accel->setWhatsThis(wtstr);
 
     thresh = new QSpinBox(advancedTab);
-    thresh->setRange(1, 20);
+    thresh->setRange(0, 20);
     thresh->setSingleStep(1);
     thresh->setValue(2);
     thresh->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::Fixed);
