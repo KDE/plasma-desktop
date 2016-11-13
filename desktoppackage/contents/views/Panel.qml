@@ -24,7 +24,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 PlasmaCore.FrameSvgItem {
     id: root
 
-    imagePath: "widgets/panel-background"
+    imagePath: containment && containment.backgroundHints === PlasmaCore.Types.NoBackground ? "" : "widgets/panel-background"
     onRepaintNeeded: adjustPrefix();
 
     enabledBorders: panel.enabledBorders
@@ -88,6 +88,18 @@ PlasmaCore.FrameSvgItem {
         }
     }
 
+    Binding {
+        target: panel
+        property: "backgroundHints"
+        when: containment
+        value: {
+            if (!containment) {
+                return;
+            }
+
+            return containment.backgroundHints; 
+        }
+    }    
 
     Item {
         id: containmentParent
