@@ -81,6 +81,7 @@ Item {
     }
 
     Layouts.GridLayout {
+        anchors.left: parent.left
         columns: 2
         QtControls.Label {
             text: i18n("Display:")

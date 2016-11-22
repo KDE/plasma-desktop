@@ -47,6 +47,7 @@ Item {
     property alias cfg_showOnlyMinimized: showOnlyMinimized.checked
 
     ColumnLayout {
+        anchors.left: parent.left
         GroupBox {
             Layout.fillWidth: true
 

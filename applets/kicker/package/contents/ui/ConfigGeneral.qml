@@ -46,6 +46,7 @@ Item {
     property alias cfg_alignResultsToBottom: alignResultsToBottom.checked
 
     ColumnLayout {
+        anchors.left: parent.left
         GroupBox {
             Layout.fillWidth: true
 
