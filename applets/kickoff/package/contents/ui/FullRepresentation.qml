@@ -171,11 +171,11 @@ Item {
             state: {
                 switch (plasmoid.location) {
                 case PlasmaCore.Types.LeftEdge:
-                    return "left";
+                    return LayoutMirroring.enabled ? "right" : "left";
                 case PlasmaCore.Types.TopEdge:
                     return "top";
                 case PlasmaCore.Types.RightEdge:
-                    return "right";
+                    return LayoutMirroring.enabled ? "left" : "right";
                 case PlasmaCore.Types.BottomEdge:
                 default:
                     return "bottom";
@@ -330,11 +330,8 @@ Item {
         } // mainTabGroup
     }
 
-
     PlasmaComponents.TabBar {
         id: tabBar
-        LayoutMirroring.enabled: Qt.application.layoutDirection == Qt.RightToLeft
-        LayoutMirroring.childrenInherit: true
 
         width: {
             if (!visible) {
