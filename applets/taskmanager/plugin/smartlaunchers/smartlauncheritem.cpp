@@ -118,7 +118,7 @@ void Item::setLauncherUrl(const QUrl &launcherUrl)
         m_launcherUrl = launcherUrl;
         emit launcherUrlChanged(launcherUrl);
 
-        KService::Ptr service = KService::serviceByStorageId(launcherUrl.toString()); // can we do better?
+        KService::Ptr service = KService::serviceByDesktopPath(launcherUrl.toLocalFile());
         if (service) {
             m_storageId = service->storageId();
         }

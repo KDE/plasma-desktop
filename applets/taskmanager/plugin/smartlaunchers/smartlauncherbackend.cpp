@@ -147,7 +147,16 @@ void Backend::update(const QString &uri, const QMap<QString, QVariant> &properti
 
     auto foundStorageId = m_launcherUrlToStorageId.constFind(uri);
     if (foundStorageId == m_launcherUrlToStorageId.constEnd()) { // we don't know this one, register
-        KService::Ptr service = KService::serviceByStorageId(uri);
+        // According to Unity Launcher API documentation applications *should* send along their
+        // desktop file name with application:// prefix
+        const QString applicationSchemePrefix = QStringLiteral("application://");
+
+        QString normalizedUri = uri;
+        if (normalizedUri.startsWith(applicationSchemePrefix)) {
+            normalizedUri = uri.mid(applicationSchemePrefix.length());
+        }
+
+        KService::Ptr service = KService::serviceByStorageId(normalizedUri);
         if (!service) {
             qWarning() << "Failed to find service for Unity Launcher" << uri;
             return;

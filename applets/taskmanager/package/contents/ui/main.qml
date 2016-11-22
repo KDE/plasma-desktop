@@ -184,6 +184,10 @@ Item {
         connectedSources: sources
 
         function sourceNameForLauncherUrl(launcherUrl) {
+            if (!launcherUrl) {
+                return "";
+            }
+
             // MPRIS spec explicitly mentions that "DesktopEntry" is with .desktop extension trimmed
             // Moreover, remove URL parameters, like wmClass (part after the question mark)
             var desktopFileName = launcherUrl.toString().split('/').pop().split('?')[0].replace(".desktop", "")
