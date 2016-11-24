@@ -44,6 +44,8 @@ MouseArea {
     property int itemIndex: index
     property bool inPopup: false
     property bool isWindow: model.IsWindow === true
+    property int childCount: model.ChildCount != undefined ? model.ChildCount : 0
+    property int previousChildCount: 0
     property alias textWidth: label.implicitWidth
     property bool pressed: false
     property int pressX: -1
@@ -61,6 +63,14 @@ MouseArea {
         if (isWindow) {
             taskInitComponent.createObject(task);
         }
+    }
+
+    onChildCountChanged: {
+        if (childCount > previousChildCount) {
+            tasksModel.requestPublishDelegateGeometry(modelIndex(), backend.globalRect(task), task);
+        }
+
+        previousChildCount = childCount;
     }
 
     onItemIndexChanged: {
