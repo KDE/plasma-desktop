@@ -217,7 +217,7 @@ PlasmaComponents.ContextMenu {
                     return menu.visualParent && menu.visualParent.m.VirtualDesktop != virtualDesktopInfo.currentDesktop;
                 });
                 menuItem.clicked.connect(function() {
-                    tasksModel.requestVirtualDesktop(menu.visualParent.modelIndex(), 0);
+                    tasksModel.requestVirtualDesktop(menu.visualParent.modelIndex(), virtualDesktopInfo.currentDesktop);
                 });
 
                 menuItem = menu.newMenuItem(virtualDesktopsMenu);
