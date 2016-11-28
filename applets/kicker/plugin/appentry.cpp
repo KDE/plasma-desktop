@@ -210,6 +210,10 @@ QVariantList AppEntry::actions() const
 
 bool AppEntry::run(const QString& actionId, const QVariant &argument)
 {
+    if (!m_service->isValid()) {
+        return false;
+    }
+
     if (actionId.isEmpty()) {
         quint32 timeStamp = 0;
 
