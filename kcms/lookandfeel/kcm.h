@@ -38,6 +38,7 @@ class KCMLookandFeel : public KQuickAddons::ConfigModule
     Q_OBJECT
     Q_PROPERTY(QStandardItemModel *lookAndFeelModel READ lookAndFeelModel CONSTANT)
     Q_PROPERTY(QString selectedPlugin READ selectedPlugin WRITE setSelectedPlugin NOTIFY selectedPluginChanged)
+    Q_PROPERTY(int selectedPluginIndex READ selectedPluginIndex NOTIFY selectedPluginIndexChanged)
 
     Q_PROPERTY(bool applyColors READ applyColors WRITE setApplyColors NOTIFY applyColorsChanged)
     Q_PROPERTY(bool applyWidgetStyle READ applyWidgetStyle WRITE setApplyWidgetStyle NOTIFY applyWidgetStyleChanged)
@@ -73,6 +74,8 @@ public:
 
     QString selectedPlugin() const;
     void setSelectedPlugin(const QString &plugin);
+
+    int selectedPluginIndex() const;
 
     //Setters of the various theme pieces
     void setWidgetStyle(const QString &style);
@@ -117,6 +120,7 @@ Q_SIGNALS:
     void applyWindowSwitcherChanged();
     void applyDesktopSwitcherChanged();
     void resetDefaultLayoutChanged();
+    void selectedPluginIndexChanged();
 
 private:
     QDir cursorThemeDir(const QString &theme, const int depth);

@@ -134,10 +134,21 @@ void KCMLookandFeel::setSelectedPlugin(const QString &plugin)
     const bool firstTime = m_selectedPlugin.isNull();
     m_selectedPlugin = plugin;
     emit selectedPluginChanged();
+    emit selectedPluginIndexChanged();
 
     if (!firstTime) {
         setNeedsSave(true);
     }
+}
+
+int KCMLookandFeel::selectedPluginIndex() const
+{
+    for (int i = 0; i < m_model->rowCount(); ++i) {
+        if (m_model->data(m_model->index(i, 0), PluginNameRole).toString() == m_selectedPlugin) {
+            return i;
+        }
+    }
+    return -1;
 }
 
 QList<Plasma::Package> KCMLookandFeel::availablePackages(const QString &component)

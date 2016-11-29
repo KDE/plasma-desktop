@@ -48,6 +48,11 @@ Item {
                 cellWidth: Math.floor(grid.width / Math.max(Math.floor(grid.width / (units.gridUnit * 12)), 3))
                 cellHeight: cellWidth / 1.6
 
+                onCountChanged: {
+                    grid.currentIndex = kcm.indexOf(kcm.selectedPlugin);
+                    grid.positionViewAtIndex(grid.currentIndex, GridView.Visible)
+                }
+
                 delegate: Item {
                     property bool isLocal : model.isLocal
                     property string pluginName : model.pluginName
@@ -165,7 +170,7 @@ Item {
                 enabled: grid.currentItem && grid.currentItem.isLocal
                 onClicked: {
                     kcm.removeTheme(grid.currentItem.pluginName);
-                    updateSelectedPluginTimer.restart();
+                    kcm.selectedPlugin = grid.currentItem.pluginName
                 }
             }
 
@@ -185,12 +190,6 @@ Item {
             infoLabel.text = infoMessage;
             hideInfoMessageTimer.restart();
         }
-    }
-
-    Timer {
-        id: updateSelectedPluginTimer
-        interval: 100
-        onTriggered: kcm.selectedPlugin = grid.currentItem.pluginName
     }
 
     Timer {

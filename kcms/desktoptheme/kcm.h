@@ -58,6 +58,8 @@ public:
 
     Q_INVOKABLE void applyPlasmaTheme(QQuickItem *item, const QString &themeName);
 
+    Q_INVOKABLE int indexOf(const QString &themeName) const;
+
 Q_SIGNALS:
     void selectedPluginChanged(const QString &plugin);
     void showInfoMessage(const QString &infoMessage);

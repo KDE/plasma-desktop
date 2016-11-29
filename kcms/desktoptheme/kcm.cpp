@@ -164,6 +164,16 @@ void KCMDesktopTheme::applyPlasmaTheme(QQuickItem *item, const QString &themeNam
     }
 }
 
+Q_INVOKABLE int KCMDesktopTheme::indexOf(const QString &themeName) const
+{
+    for (int i = 0; i < m_model->rowCount(); ++i) {
+        if (m_model->data(m_model->index(i, 0), PluginNameRole).toString() == themeName) {
+            return i;
+        }
+    }
+    return -1;
+}
+
 void KCMDesktopTheme::load()
 {
     m_pendingRemoval.clear();
