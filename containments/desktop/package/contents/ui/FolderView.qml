@@ -343,6 +343,7 @@ Item {
         onContainsMouseChanged: {
             if (!containsMouse && !main.rubberBand) {
                 clearPressState();
+                gridView.hoveredItem = null;
             }
         }
 
