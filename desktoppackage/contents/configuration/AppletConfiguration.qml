@@ -24,7 +24,6 @@ import QtQuick.Window 2.2
 
 import org.kde.plasma.core 2.1 as PlasmaCore
 import org.kde.plasma.configuration 2.0
-import org.kde.kquickcontrolsaddons 2.0
 
 
 //TODO: all of this will be done with desktop components
@@ -105,22 +104,6 @@ Rectangle {
 
 //BEGIN UI components
     SystemPalette {id: syspal}
-
-    MouseEventListener {
-        anchors.fill: parent
-        property int oldX
-        property int oldY
-        onPressed: {
-            oldX = mouse.screenX
-            oldY = mouse.screenY
-        }
-        onPositionChanged: {
-            configDialog.y += mouse.screenY - oldY
-            configDialog.x += mouse.screenX - oldX
-            oldX = mouse.screenX
-            oldY = mouse.screenY
-        }
-    }
 
     MessageDialog {
         id: messageDialog
