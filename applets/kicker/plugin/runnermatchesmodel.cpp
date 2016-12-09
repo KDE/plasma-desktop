@@ -155,6 +155,9 @@ bool RunnerMatchesModel::trigger(int row, const QString &actionId, const QVarian
         return true;
     } else if (actionId == QLatin1String("_kicker_jumpListAction")) {
         return KRun::run(argument.toString(), {}, nullptr, service ? service->name() : QString(), service ? service->icon() : QString());
+    } else if (actionId == QLatin1String("_kicker_recentDocument")
+        || actionId == QLatin1String("_kicker_forgetRecentDocuments")) {
+        return Kicker::handleRecentDocumentAction(service, actionId, argument);
     }
 
     if (!actionId.isEmpty()) {
