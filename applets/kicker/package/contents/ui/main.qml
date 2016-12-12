@@ -249,7 +249,9 @@ Item {
         windowSystem.focusOut.connect(enableHideOnWindowDeactivate);
         plasmoid.hideOnWindowDeactivate = true;
 
-        plasmoid.setAction("menuedit", i18n("Edit Applications..."));
+        if (plasmoid.immutability !== PlasmaCore.Types.SystemImmutable) {
+            plasmoid.setAction("menuedit", i18n("Edit Applications..."));
+        }
 
         updateSvgMetrics();
         theme.themeChanged.connect(updateSvgMetrics);
