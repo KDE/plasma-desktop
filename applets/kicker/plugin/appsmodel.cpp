@@ -20,6 +20,7 @@
 
 #include "appsmodel.h"
 #include "actionlist.h"
+#include "rootmodel.h"
 
 #include <QCollator>
 #include <QDebug>
@@ -29,8 +30,11 @@
 #include <KLocalizedString>
 #include <KSycoca>
 
-AppsModel::AppsModel(const QString &entryPath, bool flat, bool sorted, bool separators, QObject *parent)
+AppsModel::AppsModel(const QString &entryPath, bool paginate, int pageSize, bool flat,
+    bool sorted, bool separators, QObject *parent)
 : AbstractModel(parent)
+, m_paginate(paginate)
+, m_pageSize(pageSize)
 , m_deleteEntriesOnDestruction(true)
 , m_separatorCount(0)
 , m_showSeparators(separators)
@@ -50,6 +54,8 @@ AppsModel::AppsModel(const QString &entryPath, bool flat, bool sorted, bool sepa
 
 AppsModel::AppsModel(const QList<AbstractEntry *> entryList, bool deleteEntriesOnDestruction, QObject *parent)
 : AbstractModel(parent)
+, m_paginate(false)
+, m_pageSize(24)
 , m_deleteEntriesOnDestruction(deleteEntriesOnDestruction)
 , m_separatorCount(0)
 , m_showSeparators(false)
@@ -277,6 +283,38 @@ int AppsModel::separatorCount() const
     return m_separatorCount;
 }
 
+bool AppsModel::paginate() const
+{
+    return m_paginate;
+}
+
+void AppsModel::setPaginate(bool paginate)
+{
+    if (m_paginate != paginate) {
+        m_paginate = paginate;
+
+        refresh();
+
+        emit paginateChanged();
+    }
+}
+
+int AppsModel::pageSize() const
+{
+    return m_pageSize;
+}
+
+void AppsModel::setPageSize(int size)
+{
+    if (m_pageSize != size) {
+        m_pageSize = size;
+
+        refresh();
+
+        emit pageSizeChanged();
+    }
+}
+
 bool AppsModel::flat() const
 {
     return m_flat;
@@ -418,7 +456,8 @@ void AppsModel::refreshInternal()
                 KServiceGroup::Ptr subGroup(static_cast<KServiceGroup*>(p.data()));
 
                 if (!subGroup->noDisplay() && subGroup->childCount() > 0) {
-                    AppGroupEntry *groupEntry = new AppGroupEntry(this, subGroup, m_flat, m_sorted, m_showSeparators, m_appNameFormat);
+                    AppGroupEntry *groupEntry = new AppGroupEntry(this, subGroup, m_paginate, m_pageSize, m_flat,
+                        m_sorted, m_showSeparators, m_appNameFormat);
                     m_entryList << groupEntry;
                 }
             }
@@ -443,6 +482,33 @@ void AppsModel::refreshInternal()
 
         if (m_sorted) {
             sortEntries();
+        }
+
+        if (m_paginate) {
+            QList<AbstractEntry *> groups;
+
+            int at = 0;
+            QList<AbstractEntry *> page;
+
+            foreach(AbstractEntry *app, m_entryList) {
+                page.append(app);
+
+                if (at == (m_pageSize - 1)) {
+                    at = 0;
+                    AppsModel *model = new AppsModel(page, true, this);
+                    groups.append(new GroupEntry(this, QString(), QString(), model));
+                    page.clear();
+                } else {
+                    ++at;
+                }
+            }
+
+            if (page.count()) {
+                AppsModel *model = new AppsModel(page, true, this);
+                groups.append(new GroupEntry(this, QString(), QString(), model));
+            }
+
+            m_entryList = groups;
         }
     }
 }
@@ -531,7 +597,8 @@ void AppsModel::processServiceGroup(KServiceGroup::Ptr group)
                 const KServiceGroup::Ptr serviceGroup(static_cast<KServiceGroup*>(p.data()));
                 processServiceGroup(serviceGroup);
             } else {
-                AppGroupEntry *groupEntry = new AppGroupEntry(this, subGroup, m_flat, m_sorted, m_showSeparators, m_appNameFormat);
+                AppGroupEntry *groupEntry = new AppGroupEntry(this, subGroup, m_paginate, m_pageSize, m_flat,
+                    m_sorted, m_showSeparators, m_appNameFormat);
                 m_entryList << groupEntry;
             }
         }

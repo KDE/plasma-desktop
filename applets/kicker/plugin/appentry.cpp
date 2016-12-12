@@ -296,10 +296,11 @@ KService::Ptr AppEntry::defaultAppByName(const QString& name)
 }
 
 AppGroupEntry::AppGroupEntry(AppsModel *parentModel, KServiceGroup::Ptr group,
-    bool flat, bool sorted, bool separators, int appNameFormat) : AbstractGroupEntry(parentModel),
+    bool paginate, int pageSize, bool flat, bool sorted, bool separators, int appNameFormat) : AbstractGroupEntry(parentModel),
     m_group(group)
 {
-    AppsModel* model = new AppsModel(group->entryPath(), flat, sorted, separators, parentModel);
+    AppsModel* model = new AppsModel(group->entryPath(), paginate, pageSize, flat,
+        sorted, separators, parentModel);
     model->setAppNameFormat(appNameFormat);
     m_childModel = model;
 

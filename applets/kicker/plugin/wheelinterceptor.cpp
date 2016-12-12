@@ -48,6 +48,8 @@ void WheelInterceptor::wheelEvent(QWheelEvent* event)
     if (m_destination) {
         QCoreApplication::sendEvent(m_destination, event);
     }
+
+    emit wheelMoved(event->angleDelta());
 }
 
 QQuickItem *WheelInterceptor::findWheelArea(QQuickItem *parent) const

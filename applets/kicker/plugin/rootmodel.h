@@ -22,6 +22,8 @@
 
 #include "appsmodel.h"
 
+#include <QQmlParserStatus>
+
 class FavoritesModel;
 class RecentContactsModel;
 class RecentUsageModel;
@@ -32,7 +34,7 @@ class RootModel;
 class GroupEntry : public AbstractGroupEntry
 {
     public:
-        GroupEntry(RootModel *parentModel, const QString &name,
+        GroupEntry(AppsModel *parentModel, const QString &name,
             const QString &iconName, AbstractModel *childModel);
 
         QIcon icon() const;
@@ -47,16 +49,17 @@ class GroupEntry : public AbstractGroupEntry
         QPointer<AbstractModel> m_childModel;
 };
 
-class RootModel : public AppsModel
+class RootModel : public AppsModel, public QQmlParserStatus
 {
     Q_OBJECT
+    Q_INTERFACES(QQmlParserStatus)
 
     Q_PROPERTY(QObject* systemFavoritesModel READ systemFavoritesModel NOTIFY systemFavoritesModelChanged)
-
-    Q_PROPERTY(bool showAllSubtree READ showAllSubtree WRITE setShowAllSubtree NOTIFY showAllSubtreeChanged)
+    Q_PROPERTY(bool showAllApps READ showAllApps WRITE setShowAllApps NOTIFY showAllAppsChanged)
     Q_PROPERTY(bool showRecentApps READ showRecentApps WRITE setShowRecentApps NOTIFY showRecentAppsChanged)
     Q_PROPERTY(bool showRecentDocs READ showRecentDocs WRITE setShowRecentDocs NOTIFY showRecentDocsChanged)
     Q_PROPERTY(bool showRecentContacts READ showRecentContacts WRITE setShowRecentContacts NOTIFY showRecentContactsChanged)
+    Q_PROPERTY(bool showPowerSession READ showPowerSession WRITE setShowPowerSession NOTIFY showPowerSessionChanged)
 
     public:
         explicit RootModel(QObject *parent = 0);
@@ -66,8 +69,8 @@ class RootModel : public AppsModel
 
         Q_INVOKABLE virtual bool trigger(int row, const QString &actionId, const QVariant &argument);
 
-        bool showAllSubtree() const;
-        void setShowAllSubtree(bool show);
+        bool showAllApps() const;
+        void setShowAllApps(bool show);
 
         bool showRecentApps() const;
         void setShowRecentApps(bool show);
@@ -78,31 +81,39 @@ class RootModel : public AppsModel
         bool showRecentContacts() const;
         void setShowRecentContacts(bool show);
 
+        bool showPowerSession() const;
+        void setShowPowerSession(bool show);
+
         AbstractModel* favoritesModel();
         AbstractModel* systemFavoritesModel();
+
+        void classBegin() override;
+        void componentComplete() override;
 
     Q_SIGNALS:
         void refreshed() const;
         void systemFavoritesModelChanged() const;
-        void showAllSubtreeChanged() const;
+        void showAllAppsChanged() const;
         void showRecentAppsChanged() const;
         void showRecentDocsChanged() const;
         void showRecentContactsChanged() const;
+        void showPowerSessionChanged() const;
         void recentAppsModelChanged() const;
 
     protected Q_SLOTS:
         void refresh();
 
     private:
-        void extendEntryList();
+        bool m_complete;
 
         FavoritesModel *m_favorites;
         SystemModel *m_systemModel;
 
-        bool m_showAllSubtree;
+        bool m_showAllApps;
         bool m_showRecentApps;
         bool m_showRecentDocs;
         bool m_showRecentContacts;
+        bool m_showPowerSession;
 
         RecentUsageModel *m_recentAppsModel;
         RecentUsageModel *m_recentDocsModel;

@@ -82,7 +82,7 @@ Item {
         showSeparators: !isDash
         appletInterface: plasmoid
 
-        showAllSubtree: isDash
+        showAllApps: isDash
         showRecentApps: plasmoid.configuration.showRecentApps
         showRecentDocs: plasmoid.configuration.showRecentDocs
         showRecentContacts: plasmoid.configuration.showRecentContacts

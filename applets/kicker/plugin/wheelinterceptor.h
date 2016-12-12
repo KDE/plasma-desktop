@@ -40,6 +40,7 @@ class WheelInterceptor : public QQuickItem
 
     Q_SIGNALS:
         void destinationChanged() const;
+        void wheelMoved(QPoint delta) const;
 
     protected:
         void wheelEvent(QWheelEvent *event);

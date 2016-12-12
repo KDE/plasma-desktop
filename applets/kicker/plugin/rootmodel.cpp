@@ -26,7 +26,9 @@
 
 #include <KLocalizedString>
 
-GroupEntry::GroupEntry(RootModel *parentModel, const QString &name,
+#include <QCollator>
+
+GroupEntry::GroupEntry(AppsModel *parentModel, const QString &name,
     const QString &iconName, AbstractModel *childModel)
 : AbstractGroupEntry(parentModel)
 , m_name(name)
@@ -61,12 +63,14 @@ AbstractModel *GroupEntry::childModel() const
 }
 
 RootModel::RootModel(QObject *parent) : AppsModel(QString(), parent)
+, m_complete(false)
 , m_favorites(new FavoritesModel(this))
 , m_systemModel(nullptr)
-, m_showAllSubtree(false)
+, m_showAllApps(false)
 , m_showRecentApps(true)
 , m_showRecentDocs(true)
 , m_showRecentContacts(false)
+, m_showPowerSession(true)
 , m_recentAppsModel(0)
 , m_recentDocsModel(0)
 , m_recentContactsModel(0)
@@ -139,6 +143,23 @@ bool RootModel::trigger(int row, const QString& actionId, const QVariant& argume
     return AppsModel::trigger(row, actionId, argument);
 }
 
+
+bool RootModel::showAllApps() const
+{
+    return m_showAllApps;
+}
+
+void RootModel::setShowAllApps(bool show)
+{
+    if (m_showAllApps != show) {
+        m_showAllApps = show;
+
+        refresh();
+
+        emit showAllAppsChanged();
+    }
+}
+
 bool RootModel::showRecentApps() const
 {
     return m_showRecentApps;
@@ -152,22 +173,6 @@ void RootModel::setShowRecentApps(bool show)
         refresh();
 
         emit showRecentAppsChanged();
-    }
-}
-
-bool RootModel::showAllSubtree() const
-{
-    return m_showAllSubtree;
-}
-
-void RootModel::setShowAllSubtree(bool show)
-{
-    if (m_showAllSubtree != show) {
-        m_showAllSubtree = show;
-
-        refresh();
-
-        emit showAllSubtreeChanged();
     }
 }
 
@@ -203,6 +208,22 @@ void RootModel::setShowRecentContacts(bool show)
     }
 }
 
+bool RootModel::showPowerSession() const
+{
+    return m_showPowerSession;
+}
+
+void RootModel::setShowPowerSession(bool show)
+{
+    if (show != m_showPowerSession) {
+        m_showPowerSession = show;
+
+        refresh();
+
+        emit showPowerSessionChanged();
+    }
+}
+
 AbstractModel* RootModel::favoritesModel()
 {
     return m_favorites;
@@ -217,9 +238,20 @@ AbstractModel* RootModel::systemFavoritesModel()
     return nullptr;
 }
 
+void RootModel::classBegin()
+{
+}
+
+void RootModel::componentComplete()
+{
+    m_complete = true;
+
+    refresh();
+}
+
 void RootModel::refresh()
 {
-    if (!m_appletInterface) {
+    if (!m_complete) {
         return;
     }
 
@@ -232,32 +264,96 @@ void RootModel::refresh()
     m_recentDocsModel = nullptr;
     m_recentContactsModel = nullptr;
 
-    if (m_showAllSubtree) {
-        QHash<QString, QList<AbstractEntry *>> m_categoryHash;
-
-        foreach (const AbstractEntry *groupEntry, m_entryList) {
-            AbstractModel *model = groupEntry->childModel();
-
-            for (int i = 0; i < model->count(); ++i) {
-                AbstractEntry *appEntry = static_cast<AbstractEntry *>(model->index(i, 0).internalPointer());
-
-                if (appEntry->name().isEmpty()) {
-                    continue;
-                }
-
-                const QChar &first = appEntry->name().at(0).toUpper();
-                m_categoryHash[first.isDigit() ? QStringLiteral("0-9") : first].append(appEntry);
-            }
-        }
-
+    if (m_showAllApps) {
         QList<AbstractEntry *> groups;
-        QHashIterator<QString, QList<AbstractEntry *>> i(m_categoryHash);
 
-        while (i.hasNext()) {
-            i.next();
-            AppsModel *model = new AppsModel(i.value(), false, this);
-            model->setDescription(i.key());
-            groups.append(new GroupEntry(this, i.key(), QString(), model));
+        if (m_paginate) {
+            QHash<QString, AppEntry *> appsHash;
+            QList<AppEntry *> apps;
+
+            foreach (const AbstractEntry *groupEntry, m_entryList) {
+                AbstractModel *model = groupEntry->childModel();
+
+                for (int i = 0; i < model->count(); ++i) {
+                    GroupEntry *subGroupEntry = static_cast<GroupEntry*>(model->index(i, 0).internalPointer());
+                    AbstractModel *subModel = subGroupEntry->childModel();
+
+                    for (int j = 0; j < subModel->count(); ++j) {
+                        AppEntry *appEntry = static_cast<AppEntry*>(subModel->index(i, 0).internalPointer());
+
+                        if (appEntry->name().isEmpty()) {
+                            continue;
+                        }
+
+                        appsHash.insert(appEntry->service()->menuId(), appEntry);
+                    }
+                }
+            }
+
+            apps = appsHash.values();
+
+            QCollator c;
+
+            std::sort(apps.begin(), apps.end(),
+                [&c](AbstractEntry* a, AbstractEntry* b) {
+                    if (a->type() != b->type()) {
+                        return a->type() > b->type();
+                    } else {
+                        return c.compare(a->name(), b->name()) < 0;
+                    }
+                });
+
+
+            int at = 0;
+            QList<AbstractEntry *> page;
+            page.reserve(24);
+
+            foreach(AppEntry *app, apps) {
+                page.append(app);
+
+                if (at == (m_pageSize - 1)) {
+                    at = 0;
+                    AppsModel *model = new AppsModel(page, false, this);
+                    groups.append(new GroupEntry(this, QString(), QString(), model));
+                    page.clear();
+                } else {
+                    ++at;
+                }
+            }
+
+            if (!page.isEmpty()) {
+                AppsModel *model = new AppsModel(page, false, this);
+                groups.append(new GroupEntry(this, QString(), QString(), model));
+            }
+
+            groups.prepend(new GroupEntry(this, QString(), QString(), m_favorites));
+        } else {
+            QHash<QString, QList<AbstractEntry *>> m_categoryHash;
+
+            foreach (const AbstractEntry *groupEntry, m_entryList) {
+                AbstractModel *model = groupEntry->childModel();
+
+                for (int i = 0; i < model->count(); ++i) {
+                    AbstractEntry *appEntry = static_cast<AbstractEntry *>(model->index(i, 0).internalPointer());
+
+                    if (appEntry->name().isEmpty()) {
+                        continue;
+                    }
+
+                    const QChar &first = appEntry->name().at(0).toUpper();
+                    m_categoryHash[first.isDigit() ? QStringLiteral("0-9") : first].append(appEntry);
+                }
+            }
+
+            QList<AbstractEntry *> groups;
+            QHashIterator<QString, QList<AbstractEntry *>> i(m_categoryHash);
+
+            while (i.hasNext()) {
+                i.next();
+                AppsModel *model = new AppsModel(i.value(), false, this);
+                model->setDescription(i.key());
+                groups.append(new GroupEntry(this, i.key(), QString(), model));
+            }
         }
 
         allModel = new AppsModel(groups, true, this);
@@ -295,7 +391,10 @@ void RootModel::refresh()
     }
 
     m_systemModel = new SystemModel(this);
-    m_entryList << new GroupEntry(this, i18n("Power / Session"), QString(), m_systemModel);
+
+    if (m_showPowerSession) {
+        m_entryList << new GroupEntry(this, i18n("Power / Session"), QString(), m_systemModel);
+    }
 
     endResetModel();
 
@@ -306,9 +405,4 @@ void RootModel::refresh()
     emit separatorCountChanged();
 
     emit refreshed();
-}
-
-void RootModel::extendEntryList()
-{
-
 }

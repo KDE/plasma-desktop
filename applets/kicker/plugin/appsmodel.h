@@ -34,6 +34,8 @@ class AppsModel : public AbstractModel
 {
     Q_OBJECT
 
+    Q_PROPERTY(bool paginate READ paginate WRITE setPaginate NOTIFY paginateChanged)
+    Q_PROPERTY(int pageSize READ pageSize WRITE setPageSize NOTIFY pageSizeChanged)
     Q_PROPERTY(bool flat READ flat WRITE setFlat NOTIFY flatChanged)
     Q_PROPERTY(bool sorted READ sorted WRITE setSorted NOTIFY sortedChanged)
     Q_PROPERTY(bool showSeparators READ showSeparators WRITE setShowSeparators NOTIFY showSeparatorsChanged)
@@ -41,7 +43,8 @@ class AppsModel : public AbstractModel
     Q_PROPERTY(QObject* appletInterface READ appletInterface WRITE setAppletInterface NOTIFY appletInterfaceChanged);
 
     public:
-        explicit AppsModel(const QString &entryPath = QString(), bool flat = false, bool sorted = true, bool separators = true, QObject *parent = 0);
+        explicit AppsModel(const QString &entryPath = QString(), bool paginate = false, int pageSize = 24,
+            bool flat = false, bool sorted = true, bool separators = true, QObject *parent = 0);
         explicit AppsModel(const QList<AbstractEntry *> entryList, bool deleteEntriesOnDestruction, QObject *parent = 0);
         ~AppsModel();
 
@@ -60,6 +63,12 @@ class AppsModel : public AbstractModel
         Q_INVOKABLE int rowForModel(AbstractModel *model);
 
         int separatorCount() const;
+
+        bool paginate() const;
+        void setPaginate(bool paginate);
+
+        int pageSize() const;
+        void setPageSize(int size);
 
         bool flat() const;
         void setFlat(bool flat);
@@ -82,6 +91,8 @@ class AppsModel : public AbstractModel
 
     Q_SIGNALS:
         void cleared() const;
+        void paginateChanged() const;
+        void pageSizeChanged() const;
         void flatChanged() const;
         void sortedChanged() const;
         void showSeparatorsChanged() const;
@@ -94,6 +105,9 @@ class AppsModel : public AbstractModel
 
     protected:
         void refreshInternal();
+
+        bool m_paginate;
+        int m_pageSize;
 
         QList<AbstractEntry *> m_entryList;
         bool m_deleteEntriesOnDestruction;
