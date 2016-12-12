@@ -388,6 +388,18 @@ Item {
         }
     }
 
+    // This is called by plasmashell in response to a Meta+number shortcut.
+    function activateTaskAtIndex(index) {
+        if (typeof index !== "number") {
+            return;
+        }
+
+        var task = taskRepeater.itemAt(index);
+        if (task) {
+            TaskTools.activateTask(task.modelIndex(), task.m, null, task);
+        }
+    }
+
     function resetDragSource() {
         dragSource = null;
     }

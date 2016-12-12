@@ -93,7 +93,7 @@ function activateNextPrevTask(anchor, next) {
     tasksModel.requestActivate(target);
 }
 
-function activateTask(index, model, modifiers) {
+function activateTask(index, model, modifiers, task) {
     if (modifiers & Qt.ShiftModifier) {
         tasksModel.requestNewInstance(index);
     } else if (model.IsGroupParent === true) {

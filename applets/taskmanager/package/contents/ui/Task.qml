@@ -119,7 +119,7 @@ MouseArea {
                     tasksModel.requestToggleMinimized(modelIndex());
                 }
             } else if (mouse.button == Qt.LeftButton) {
-                TaskTools.activateTask(modelIndex(), model, mouse.modifiers);
+                TaskTools.activateTask(modelIndex(), model, mouse.modifiers, task);
             }
         }
 
@@ -161,7 +161,7 @@ MouseArea {
         }
     }
 
-    Keys.onReturnPressed: TaskTools.activateTask(modelIndex(), model, event.modifiers)
+    Keys.onReturnPressed: TaskTools.activateTask(modelIndex(), model, event.modifiers, task)
     Keys.onEnterPressed: Keys.onReturnPressed(event);
 
     function modelIndex() {
