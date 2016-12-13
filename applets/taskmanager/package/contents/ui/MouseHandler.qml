@@ -73,7 +73,6 @@ Item {
             }
 
             if (event.mimeData.hasUrls) {
-                parent.urlsDropped(event.mimeData.urls);
                 return;
             }
             event.ignore();
