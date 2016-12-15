@@ -60,7 +60,7 @@ FocusScope {
         spacing: units.smallSpacing
 
         LayoutMirroring.enabled: ((plasmoid.location == PlasmaCore.Types.RightEdge)
-            || (Qt.application.layoutDirection == Qt.RightToLeft))
+            || (Qt.application.layoutDirection == Qt.RightToLeft && plasmoid.location != PlasmaCore.Types.LeftEdge))
 
         PlasmaCore.FrameSvgItem {
             id: sideBar
@@ -351,8 +351,8 @@ FocusScope {
         },
         State {
             name: "right"
-            when: (plasmoid.location == PlasmaCore.Types.RightEdge
-                || (plasmoid.location != PlasmaCore.Types.RightEdge && mainRow.LayoutMirroring.enabled))
+            when: (plasmoid.location == PlasmaCore.Types.RightEdge && Qt.application.layoutDirection == Qt.LeftToRight)
+                || (plasmoid.location == PlasmaCore.Types.LeftEdge && Qt.application.layoutDirection == Qt.RightToLeft)
 
             AnchorChanges {
                 target: searchField

@@ -88,6 +88,9 @@ Kicker.DashboardWindow {
         anchors.fill: parent
 
         acceptedButtons: Qt.LeftButton | Qt.RightButton
+        
+        LayoutMirroring.enabled: Qt.application.layoutDirection == Qt.RightToLeft
+        LayoutMirroring.childrenInherit: true
 
         Connections {
             target: kicker
