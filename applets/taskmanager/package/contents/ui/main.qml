@@ -169,7 +169,7 @@ Item {
     TaskManagerApplet.Backend {
         id: backend
 
-        taskManagerItem: tasks
+        taskManagerItem: groupDialog.visible ? null : tasks
         toolTipItem: toolTipDelegate
         highlightWindows: plasmoid.configuration.highlightWindows
 
