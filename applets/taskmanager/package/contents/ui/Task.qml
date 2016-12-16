@@ -32,7 +32,7 @@ MouseArea {
     id: task
 
     width: groupDialog.mainItem.width
-    height: Math.max(theme.mSize(theme.defaultFont).height, units.iconSizes.small) + LayoutManager.verticalMargins()
+    height: Math.max(theme.mSize(theme.defaultFont).height, units.iconSizes.medium) + LayoutManager.verticalMargins()
 
     visible: false
 

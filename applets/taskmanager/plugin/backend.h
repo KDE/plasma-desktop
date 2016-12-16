@@ -79,6 +79,8 @@ class Backend : public QObject
 
         Q_INVOKABLE QList<QUrl> jsonArrayToUrlList(const QJsonArray &array) const;
 
+        Q_INVOKABLE void cancelHighlightWindows();
+
     public Q_SLOTS:
         void presentWindows(const QVariant &winIds);
         void windowsHovered(const QVariant &winIds, bool hovered);

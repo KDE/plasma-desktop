@@ -377,6 +377,12 @@ QList<QUrl> Backend::jsonArrayToUrlList(const QJsonArray &array) const
     return urls;
 }
 
+void Backend::cancelHighlightWindows()
+{
+    m_windowsToHighlight.clear();
+    updateWindowHighlight();
+}
+
 void Backend::windowsHovered(const QVariant &_winIds, bool hovered)
 {
     m_windowsToHighlight.clear();

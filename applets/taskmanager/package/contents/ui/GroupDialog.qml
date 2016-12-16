@@ -18,6 +18,7 @@
  ***************************************************************************/
 
 import QtQuick 2.0
+import QtQuick.Window 2.2
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.draganddrop 2.0
@@ -32,6 +33,9 @@ PlasmaCore.Dialog {
     flags: Qt.WindowStaysOnTopHint
     hideOnWindowDeactivate: true
     location: plasmoid.location
+
+    property int preferredWidth: Screen.width / (3 * Screen.devicePixelRatio)
+    property int preferredHeight: Screen.height / (2 * Screen.devicePixelRatio)
 
     mainItem: Item {
         MouseHandler {
@@ -136,6 +140,9 @@ PlasmaCore.Dialog {
         } else {
             var task;
             var maxWidth = 0;
+            var maxHeight = 0;
+
+            backend.cancelHighlightWindows();
 
             for (var i = 0; i < taskList.children.length - 1; ++i) {
                 task = taskList.children[i];
@@ -147,11 +154,11 @@ PlasmaCore.Dialog {
                 task.textWidthChanged.connect(updateSize);
             }
 
-            maxWidth += LayoutManager.horizontalMargins() + units.iconSizes.small + 6;
+            maxWidth += LayoutManager.horizontalMargins() + units.iconSizes.medium + 2 * units.smallSpacing;
+            maxHeight = groupRepeater.count * (LayoutManager.verticalMargins() + Math.max(theme.mSize(theme.defaultFont).height, units.iconSizes.medium));
 
-            // TODO: Properly derive limits from work area size (screen size sans struts).
-            mainItem.width = Math.min(maxWidth, (tasks.vertical ? 640 - tasks.width : Math.max(tasks.width, 640)) - 20);
-            mainItem.height = groupRepeater.count * (LayoutManager.verticalMargins() + Math.max(theme.mSize(theme.defaultFont).height, units.iconSizes.small));
+            mainItem.height = Math.min(preferredHeight, maxHeight);
+            mainItem.width = Math.min(preferredWidth, (tasks.vertical ? Math.max(maxWidth, tasks.width) : Math.min(maxWidth, tasks.width)));
         }
     }
 }
