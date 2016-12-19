@@ -151,6 +151,8 @@ MouseArea {
 
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
+
+            z: 0 // Below windows and FrameSvg
         }
     }
 
@@ -160,8 +162,8 @@ MouseArea {
         PlasmaCore.IconItem {
             anchors.centerIn: parent
 
-            height: parent.width / 2
-            width: parent.height / 2
+            height: Math.min(units.iconSizes.small, parent.height - (units.smallSpacing * 2))
+            width: Math.min(units.iconSizes.small, parent.width - (units.smallSpacing * 2))
 
             property var model: null
 
@@ -187,6 +189,8 @@ MouseArea {
         spacing: units.devicePixelRatio
         rows: effectiveRows
         columns: effectiveColumns
+
+        z: 1
 
         readonly property int effectiveRows: {
             if (!pagerModel.count) {
@@ -325,7 +329,7 @@ MouseArea {
                     id: desktopFrame
 
                     anchors.fill: parent
-                    z: 1 // to make sure that the FrameSvg will be placed on top of the windows
+                    z: 2 // Above optional label item and windows
                     imagePath: "widgets/pager"
                     prefix: (desktopMouseArea.enabled && desktopMouseArea.containsMouse) || (root.dragging && root.dragId == desktopId) ?
                                 "hover" : (desktop.active ? "active" : "normal")
@@ -366,6 +370,7 @@ MouseArea {
                     height: desktop.height - 2 * y
                     clip: true
 
+                    z: 1 // Between optional label item and FrameSvg
 
                     Repeater {
                         id: windowRectRepeater
@@ -377,7 +382,7 @@ MouseArea {
                         Rectangle {
                             id: windowRect
 
-                            z: model.StackingOrder
+                            z: 1 + model.StackingOrder
 
                             property rect geometry: model.Geometry
                             property int windowId: model.LegacyWinIdList[0]
