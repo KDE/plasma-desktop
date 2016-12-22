@@ -164,7 +164,7 @@ Comment[zh_CN]=应用程序的启动器
 Comment[zh_TW]=應用程式啟動器
 Icon=start-here-kde
 Type=Service
-X-KDE-ServiceTypes=Plasma/Applet,Plasma/PopupApplet
+X-KDE-ServiceTypes=Plasma/Applet
 
 X-Plasma-API=declarativeappletscript
 X-Plasma-MainScript=ui/Kickoff.qml
