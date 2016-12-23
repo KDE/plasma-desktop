@@ -226,10 +226,14 @@ Item {
         Item {
             id: label
 
-            width: parent.width
-            height: visible ? labelHeight : 0
+            // If we bind height to visible, it will be invisible initially (since "visible"
+            // propagates recursively) and that confuses the Label, hence the temp property.
+            readonly property bool active: (plasmoid.configuration.labelMode != 0)
 
-            visible: (plasmoid.configuration.labelMode != 0)
+            width: parent.width
+            height: active ? labelHeight : 0
+
+            visible: active
 
             property Item windowPin: null
 
