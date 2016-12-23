@@ -239,6 +239,7 @@ class FolderModel : public QSortFilterProxyModel
         void refresh();
         void moveSelectedToTrash();
         void emptyTrashBin();
+        void restoreSelectedFromTrash();
         void undoTextChanged(const QString &text);
 
     private:

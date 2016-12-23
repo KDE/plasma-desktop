@@ -55,6 +55,7 @@
 #include <KIO/JobUiDelegate>
 #include <KIO/Paste>
 #include <KIO/PasteJob>
+#include <KIO/RestoreJob>
 #include <KLocalizedString>
 #include <KPropertiesDialog>
 #include <KSharedConfig>
@@ -1195,6 +1196,9 @@ void FolderModel::createActions()
     QAction *emptyTrash = new QAction(QIcon::fromTheme(QStringLiteral("trash-empty")), i18n("&Empty Trash Bin"), this);
     connect(emptyTrash, &QAction::triggered, this, &FolderModel::emptyTrashBin);
 
+    QAction *restoreFromTrash = new QAction(i18nc("Restore from trash", "Restore"), this);
+    connect(restoreFromTrash, &QAction::triggered, this, &FolderModel::restoreSelectedFromTrash);
+
     QAction *del = new QAction(QIcon::fromTheme(QStringLiteral("edit-delete")), i18n("&Delete"), this);
     connect(del, &QAction::triggered, this, &FolderModel::deleteSelected);
 
@@ -1212,6 +1216,7 @@ void FolderModel::createActions()
     m_actionCollection.addAction(QStringLiteral("rename"), rename);
     m_actionCollection.addAction(QStringLiteral("trash"), trash);
     m_actionCollection.addAction(QStringLiteral("del"), del);
+    m_actionCollection.addAction(QStringLiteral("restoreFromTrash"), restoreFromTrash);
     m_actionCollection.addAction(QStringLiteral("emptyTrash"), emptyTrash);
 
     m_newMenu = new KNewFileMenu(&m_actionCollection, QStringLiteral("newMenu"), QApplication::desktop());
@@ -1249,6 +1254,10 @@ void FolderModel::updateActions()
         } else {
             emptyTrash->setVisible(false);
         }
+    }
+
+    if (QAction *restoreFromTrash = m_actionCollection.action(QStringLiteral("restoreFromTrash"))) {
+        restoreFromTrash->setVisible(isTrash);
     }
 
     QAction *paste = m_actionCollection.action(QStringLiteral("paste"));
@@ -1344,6 +1353,7 @@ void FolderModel::openContextMenu()
         }
 
         menu->addAction(m_actionCollection.action(QStringLiteral("rename")));
+        menu->addAction(m_actionCollection.action(QStringLiteral("restoreFromTrash")));
 
         KSharedConfig::Ptr globalConfig = KSharedConfig::openConfig(QStringLiteral("kdeglobals"), KConfig::NoGlobals);
         KConfigGroup cg(globalConfig, "KDE");
@@ -1511,6 +1521,18 @@ void FolderModel::emptyTrashBin()
         KIO::Job* job = KIO::emptyTrash();
         job->ui()->setAutoErrorHandlingEnabled(true);
     }
+}
+
+void FolderModel::restoreSelectedFromTrash()
+{
+    if (!m_selectionModel->hasSelection()) {
+        return;
+    }
+
+    const auto &urls = selectedUrls(true);
+
+    KIO::RestoreJob *job = KIO::restoreFromTrash(urls);
+    job->ui()->setAutoErrorHandlingEnabled(true);
 }
 
 void FolderModel::undoTextChanged(const QString &text)
