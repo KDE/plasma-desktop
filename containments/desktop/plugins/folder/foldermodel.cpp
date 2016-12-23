@@ -1237,10 +1237,12 @@ void FolderModel::updateActions()
         m_newMenu->setPopupFiles(m_dirModel->dirLister()->url());
     }
 
+    const bool isTrash = (resolvedUrl().scheme() == QLatin1String("trash"));
+
     QAction *emptyTrash = m_actionCollection.action(QStringLiteral("emptyTrash"));
 
     if (emptyTrash) {
-        if (resolvedUrl() == QUrl(QStringLiteral("trash:/"))) {
+        if (isTrash) {
             emptyTrash->setVisible(true);
             KConfig trashConfig(QStringLiteral("trashrc"), KConfig::SimpleConfig);
             emptyTrash->setEnabled(!trashConfig.group("Status").readEntry("Empty", true));
