@@ -27,6 +27,7 @@ DragDrop.DropArea {
     property Item folderView: null
 
     onDrop: folderView.model.dropCwd(event)
+    preventStealing: true
 
     PlasmaCore.IconItem {
         id: icon
