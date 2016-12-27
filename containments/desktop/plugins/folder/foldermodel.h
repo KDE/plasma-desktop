@@ -92,6 +92,7 @@ class FolderModel : public QSortFilterProxyModel
             BlankRole = Qt::UserRole + 1,
             SelectedRole,
             IsDirRole,
+            IsLinkRole,
             UrlRole,
             LinkDestinationUrl,
             SizeRole,

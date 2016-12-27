@@ -153,6 +153,7 @@ QHash< int, QByteArray > FolderModel::staticRoleNames()
     roleNames[BlankRole] = "blank";
     roleNames[SelectedRole] = "selected";
     roleNames[IsDirRole] = "isDir";
+    roleNames[IsLinkRole] = "isLink";
     roleNames[UrlRole] = "url";
     roleNames[LinkDestinationUrl] = "linkDestinationUrl";
     roleNames[SizeRole] = "size";
@@ -946,6 +947,9 @@ QVariant FolderModel::data(const QModelIndex& index, int role) const
         } else {
             return isDir(mapToSource(index), m_dirModel);
         }
+    } else if (role == IsLinkRole) {
+        const KFileItem item = itemForIndex(index);
+        return item.isLink();
     } else if (role == UrlRole) {
         return itemForIndex(index).url();
     } else if (role == LinkDestinationUrl) {
