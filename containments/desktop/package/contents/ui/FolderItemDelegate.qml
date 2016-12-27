@@ -225,6 +225,7 @@ Item {
                         usesPlasmaTheme: false
 
                         source: model.decoration
+                        overlays: model.overlays
                     }
 
                     TextMetrics {

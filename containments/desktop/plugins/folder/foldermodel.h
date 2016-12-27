@@ -90,6 +90,7 @@ class FolderModel : public QSortFilterProxyModel
     public:
         enum DataRole {
             BlankRole = Qt::UserRole + 1,
+            OverlaysRole,
             SelectedRole,
             IsDirRole,
             IsLinkRole,

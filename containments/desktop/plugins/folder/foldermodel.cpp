@@ -151,6 +151,7 @@ QHash< int, QByteArray > FolderModel::staticRoleNames()
     roleNames[Qt::DisplayRole] = "display";
     roleNames[Qt::DecorationRole] = "decoration";
     roleNames[BlankRole] = "blank";
+    roleNames[OverlaysRole] = "overlays";
     roleNames[SelectedRole] = "selected";
     roleNames[IsDirRole] = "isDir";
     roleNames[IsLinkRole] = "isLink";
@@ -937,6 +938,9 @@ QVariant FolderModel::data(const QModelIndex& index, int role) const
 
     if (role == BlankRole) {
         return m_dragIndexes.contains(index);
+    } else if (role == OverlaysRole) {
+        const KFileItem item = itemForIndex(index);
+        return item.overlays();
     } else if (role == SelectedRole) {
         return m_selectionModel->isSelected(index);
     } else if (role == IsDirRole) {
