@@ -45,10 +45,6 @@ set(kickerplugin_SRCS
     plugin/windowsystem.cpp
 )
 
-if(PackageKitQt5_FOUND)
-    list(APPEND kickerplugin_SRCS plugin/findpackagenamejob.cpp)
-endif()
-
 qt5_add_dbus_interface(kickerplugin_SRCS ${KRUNNERAPP_INTERFACE} krunner_interface)
 qt5_add_dbus_interface(kickerplugin_SRCS ${KSMSERVER_DBUS_INTERFACE} ksmserver_interface)
 
@@ -78,10 +74,7 @@ target_link_libraries(kickerplugin
                       KF5::Service
                       KF5::Solid
                       KF5::WindowSystem
+                      AppStreamQt
                       PW::KWorkspace)
-
-if(PackageKitQt5_FOUND)
-    target_link_libraries(kickerplugin PK::packagekitqt5)
-endif()
 
 install(TARGETS kickerplugin DESTINATION ${QML_INSTALL_DIR}/org/kde/plasma/private/kicker)

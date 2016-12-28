@@ -63,7 +63,7 @@ find_package(KRunnerAppDBusInterface CONFIG REQUIRED)
 find_package(KSMServerDBusInterface CONFIG REQUIRED)
 find_package(KF5ItemModels CONFIG REQUIRED)
 find_package(KF5Emoticons CONFIG REQUIRED)
-find_package(PackageKitQt5 0.9)
+find_package(AppStreamQt 0.10.4 CONFIG REQUIRED)
 set_package_properties(PackageKitQt5 PROPERTIES DESCRIPTION "Software Manager integration"
                        TYPE OPTIONAL
                        PURPOSE "Provides package management integration to the application launcher."

@@ -35,10 +35,6 @@
       <default>shell,bookmarks,recentdocuments,locations,baloosearch</default>
     </entry>
 
-    <entry name="removeApplicationCommand" type="String">
-      <label>The command run by the "Remove application" context action.</label>
-      <default>plasma-discover --application</default>
-    </entry>
     <entry name="menuItems" type="StringList">
       <label>The menu tabs to show.</label>
       <default>bookmark:t,application:t,computer:t,used:t,leave:t</default>

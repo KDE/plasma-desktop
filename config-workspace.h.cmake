@@ -143,9 +143,6 @@
 /* xkb resources directory */
 #cmakedefine XKBDIR "${XKBDIR}"
 
-/* PackageKit-Qt has been found */
-#cmakedefine PackageKitQt5_FOUND 1
-
 /* KWin binary name */
 #define KWIN_BIN "${KWIN_BIN}"
 

@@ -33,6 +33,7 @@
 #include <QProcess>
 #include <QQmlPropertyMap>
 #include <QStandardPaths>
+#include <QDesktopServices>
 #if HAVE_X11
 #include <QX11Info>
 #endif
@@ -49,6 +50,7 @@
 #include <KStartupInfo>
 
 #include <Plasma/Plasma>
+#include <AppStreamQt/pool.h>
 
 MenuEntryEditor *AppEntry::m_menuEntryEditor = nullptr;
 
@@ -139,6 +141,24 @@ bool AppEntry::hasActions() const
     return true;
 }
 
+QVariantList appstreamActions(const KService::Ptr &service)
+{
+    static AppStream::Pool pool;
+    if (!pool.load())
+        return {};
+
+    QVariantList ret;
+    const auto components = pool.componentsById(service->desktopEntryName()+QStringLiteral(".desktop"));
+    for(const auto &component: components) {
+        const QString componentId = component.id();
+
+        QVariantMap appstreamAction = Kicker::createActionItem(i18nc("@action opens a software center with the application", "Manage '%1'...", component.name()), "manageApplication", QVariant(QStringLiteral("appstream://") + componentId));
+        appstreamAction["icon"] = "applications-other";
+        ret << appstreamAction;
+    }
+    return ret;
+}
+
 QVariantList AppEntry::actions() const
 {
     QVariantList actionList;
@@ -177,23 +197,8 @@ QVariantList AppEntry::actions() const
         actionList << editAction;
     }
 
-#ifdef PackageKitQt5_FOUND
-    /*QStringList files(m_service->entryPath());
-
-    if (m_service->isApplication()) {
-        files += QStandardPaths::findExecutable(KShell::splitArgs(m_service->exec()).first());
-    }
-
-    FindPackageJob* job = new FindPackageJob(files); // TODO: Would be great to make this async.
-
-    if (job->exec() && !job->packageNames().isEmpty()) {
-        QString packageName = job->packageNames().first();
-
-        QVariantMap removeAction = Kicker::createActionItem(i18n("Remove '%1'...", packageName), "removeApplication", packageName);
-        removeAction["icon"] = "applications-other";
-        actionList << removeAction;
-    }*/
-#endif
+    if (m_service->isApplication())
+        actionList << appstreamActions(m_service);
 
     QQmlPropertyMap *appletConfig = qobject_cast<QQmlPropertyMap *>(appletInterface->property("configuration").value<QObject *>());
 
@@ -240,16 +245,8 @@ bool AppEntry::run(const QString& actionId, const QVariant &argument)
         m_menuEntryEditor->edit(m_service->entryPath(), m_service->menuId());
 
         return true;
-    } else if (actionId == "removeApplication") {
-        QQmlPropertyMap *appletConfig = qobject_cast<QQmlPropertyMap *>(appletInterface->property("configuration").value<QObject *>());
-
-        if (appletConfig && appletConfig->contains("removeApplicationCommand")) {
-            const QStringList &removeAppCmd = KShell::splitArgs(appletConfig->value("removeApplicationCommand").toString());
-
-            if (!removeAppCmd.isEmpty()) {
-                return QProcess::startDetached(removeAppCmd.first(), removeAppCmd.mid(1) << argument.toString());
-            }
-        }
+    } else if (actionId == "manageApplication") {
+        return QDesktopServices::openUrl(QUrl(argument.toString()));
     } else if (actionId == "_kicker_jumpListAction") {
         return KRun::run(argument.toString(), {}, nullptr, m_service->name(), m_service->icon());
     }
