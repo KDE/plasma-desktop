@@ -144,16 +144,17 @@ bool AppEntry::hasActions() const
 QVariantList appstreamActions(const KService::Ptr &service)
 {
     static AppStream::Pool pool;
-    if (!pool.load())
+    if (!pool.load()) {
         return {};
+    }
 
     QVariantList ret;
-    const auto components = pool.componentsById(service->desktopEntryName()+QStringLiteral(".desktop"));
+    const auto components = pool.componentsById(service->desktopEntryName()+QLatin1String(".desktop"));
     for(const auto &component: components) {
         const QString componentId = component.id();
 
         QVariantMap appstreamAction = Kicker::createActionItem(i18nc("@action opens a software center with the application", "Manage '%1'...", component.name()), "manageApplication", QVariant(QStringLiteral("appstream://") + componentId));
-        appstreamAction["icon"] = "applications-other";
+        appstreamAction[QStringLiteral("icon")] = QStringLiteral("applications-other");
         ret << appstreamAction;
     }
     return ret;
@@ -197,8 +198,9 @@ QVariantList AppEntry::actions() const
         actionList << editAction;
     }
 
-    if (m_service->isApplication())
+    if (m_service->isApplication()) {
         actionList << appstreamActions(m_service);
+    }
 
     QQmlPropertyMap *appletConfig = qobject_cast<QQmlPropertyMap *>(appletInterface->property("configuration").value<QObject *>());
 
