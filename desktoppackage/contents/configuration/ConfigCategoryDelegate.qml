@@ -124,7 +124,7 @@ MouseArea {
             width: units.iconSizes.medium
             height: width
             icon: model.icon
-            state: current ? QIconItem.SelectedState : QIconItem.DefaultState
+            state: current && categoriesScroll.activeFocus ? QIconItem.SelectedState : QIconItem.DefaultState
         }
 
         QtControls.Label {
