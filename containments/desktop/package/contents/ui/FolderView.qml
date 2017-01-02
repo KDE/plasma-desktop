@@ -1042,11 +1042,9 @@ Item {
                 if(isPopup || init) {
                     _height = targetItem.labelArea.height + __style.padding.top + __style.padding.bottom;
                 } else {
-                    _height = height;
-                    if(contentHeight + __style.padding.top + __style.padding.bottom > _height) {
-                        var maxHeight = Math.max(_height, theme.mSize(theme.defaultFont).height * (plasmoid.configuration.textLines + 1) + __style.padding.top + __style.padding.bottom);
-                        _height = Math.min(maxHeight, contentHeight + __style.padding.top + __style.padding.bottom);
-                    }
+                    var realHeight = contentHeight + __style.padding.top + __style.padding.bottom;
+                    var maxHeight = theme.mSize(theme.defaultFont).height * (plasmoid.configuration.textLines + 1) + __style.padding.top + __style.padding.bottom;
+                    _height = Math.min(realHeight, maxHeight);
                 }
                 return(_height + (addWidthHoriozontalScroller ? __horizontalScrollBar.parent.horizontalScrollbarOffset : 0));
             }
