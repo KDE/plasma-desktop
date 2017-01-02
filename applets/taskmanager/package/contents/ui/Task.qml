@@ -120,6 +120,9 @@ MouseArea {
                 }
             } else if (mouse.button == Qt.LeftButton) {
                 TaskTools.activateTask(modelIndex(), model, mouse.modifiers, task);
+                if (plasmoid.configuration.showToolTips) {
+                    toolTip.hideToolTip();
+                }
             }
         }
 
