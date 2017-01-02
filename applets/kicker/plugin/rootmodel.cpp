@@ -345,7 +345,6 @@ void RootModel::refresh()
                 }
             }
 
-            QList<AbstractEntry *> groups;
             QHashIterator<QString, QList<AbstractEntry *>> i(m_categoryHash);
 
             while (i.hasNext()) {
