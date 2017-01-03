@@ -134,7 +134,10 @@ ColumnLayout {
             left: parent.left;
             right: parent.right;
         }
-        property string sourceFile
+        // Bug 360862: if wallpaper has no config, sourceFile will be ""
+        // so we wouldn't load emptyConfig and break all over the place
+        // hence set it to some random value initially
+        property string sourceFile: "tbd"
         onSourceFileChanged: {
             if (sourceFile) {
                 var props = {}
