@@ -63,8 +63,12 @@ find_package(KRunnerAppDBusInterface CONFIG REQUIRED)
 find_package(KSMServerDBusInterface CONFIG REQUIRED)
 find_package(KF5ItemModels CONFIG REQUIRED)
 find_package(KF5Emoticons CONFIG REQUIRED)
-find_package(AppStreamQt 0.10.4 CONFIG REQUIRED)
 
+find_package(AppStreamQt 0.10.4)
+set_package_properties(AppStreamQt PROPERTIES DESCRIPTION "Appstream integration"
+                       TYPE RECOMMENDED
+                       PURPOSE "Needed to allow appstream integration from application menus"
+                      )
 find_package(KF5Baloo)
 set_package_properties(KF5Baloo PROPERTIES DESCRIPTION "File Searching"
                        TYPE RECOMMENDED
@@ -139,10 +143,15 @@ else()
     set(HAVE_BREEZE_DECO FALSE)
 endif()
 
+if(${AppStreamQt_FOUND})
+    set(HAVE_APPSTREAMQT true)
+endif()
+
 include_directories("${CMAKE_CURRENT_BINARY_DIR}")
 
 configure_file(config-workspace.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-workspace.h)
 configure_file(config-unix.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-unix.h )
+configure_file(config-appstream.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-appstream.h )
 configure_file(config-X11.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-X11.h)
 configure_file(config-runtime.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-runtime.h)
 

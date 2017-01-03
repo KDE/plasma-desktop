@@ -74,7 +74,10 @@ target_link_libraries(kickerplugin
                       KF5::Service
                       KF5::Solid
                       KF5::WindowSystem
-                      AppStreamQt
                       PW::KWorkspace)
+
+if (${HAVE_APPSTREAMQT})
+target_link_libraries(kickerplugin AppStreamQt)
+endif()
 
 install(TARGETS kickerplugin DESTINATION ${QML_INSTALL_DIR}/org/kde/plasma/private/kicker)

@@ -25,6 +25,7 @@
 #include "menuentryeditor.h"
 
 #include <config-X11.h>
+#include <config-appstream.h>
 
 #include <QProcess>
 #include <QQmlPropertyMap>
@@ -46,7 +47,10 @@
 #include <KStartupInfo>
 
 #include <Plasma/Plasma>
+
+#ifdef HAVE_APPSTREAMQT
 #include <AppStreamQt/pool.h>
+#endif
 
 MenuEntryEditor *AppEntry::m_menuEntryEditor = nullptr;
 
@@ -139,6 +143,7 @@ bool AppEntry::hasActions() const
 
 QVariantList appstreamActions(const KService::Ptr &service)
 {
+#ifdef HAVE_APPSTREAMQT
     static AppStream::Pool pool;
     if (!pool.load()) {
         return {};
@@ -154,6 +159,9 @@ QVariantList appstreamActions(const KService::Ptr &service)
         ret << appstreamAction;
     }
     return ret;
+#else
+    return {};
+#endif
 }
 
 QVariantList AppEntry::actions() const
