@@ -54,20 +54,27 @@ DragDrop.DropArea {
 
 //BEGIN functions
 function addApplet(applet, x, y) {
+    // don't show applet if it choses to be hidden but still make it
+    // accessible in the panelcontroller
+    // Due to the nature of how "visible" propagates in QML, we need to
+    // explicitly set it on the container (so the Layout ignores it)
+    // as well as the applet (so it reliably knows about), otherwise it can
+    // happen that an applet erroneously thinks it's visible, or suddenly
+    // starts thinking that way on teardown (virtual desktop pager)
+    // leading to crashes
+    var visibleBinding = Qt.binding(function() {
+        return applet.status !== PlasmaCore.Types.HiddenStatus || (!plasmoid.immutable && plasmoid.userConfiguring);
+    })
+
     var container = appletContainerComponent.createObject(root, {
         applet: applet,
-
-        // don't show applet if it choses to be hidden but still make it
-        // accessible in the panelcontroller
-        visible: Qt.binding(function() {
-            return applet.status !== PlasmaCore.Types.HiddenStatus || (!plasmoid.immutable && plasmoid.userConfiguring)
-        })
+        visible: visibleBinding
     });
 
     applet.parent = container;
     applet.anchors.fill = container;
 
-    applet.visible = true;
+    applet.visible = visibleBinding;
 
     // Is there a DND placeholder? Replace it!
     if (dndSpacer.parent === currentLayout) {
