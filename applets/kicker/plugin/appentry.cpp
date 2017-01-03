@@ -24,10 +24,6 @@
 #include "containmentinterface.h"
 #include "menuentryeditor.h"
 
-#ifdef PackageKitQt5_FOUND
-#include "findpackagenamejob.h"
-#endif
-
 #include <config-X11.h>
 
 #include <QProcess>
