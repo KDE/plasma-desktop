@@ -668,8 +668,11 @@ Item {
 
                 Keys.onReturnPressed: {
                     if (currentIndex != -1 && dir.hasSelection()) {
-                        var func = root.useListViewMode ? dir.cd : dir.run;
-                        func(positioner.map(currentIndex));
+                        if (root.useListViewMode) {
+                            dir.cd(positioner.map(currentIndex));
+                        } else {
+                            dir.runSelected();
+                        }
                     }
                 }
 

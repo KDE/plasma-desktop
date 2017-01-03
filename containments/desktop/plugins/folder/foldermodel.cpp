@@ -517,6 +517,17 @@ void FolderModel::run(int row)
     new KRun(url, 0);
 }
 
+void FolderModel::runSelected()
+{
+    if (!m_selectionModel->hasSelection()) {
+        return;
+    }
+
+    foreach (const QModelIndex &index, m_selectionModel->selectedIndexes()) {
+        run(index.row());
+    }
+}
+
 void FolderModel::rename(int row, const QString& name)
 {
     if (row < 0) {
