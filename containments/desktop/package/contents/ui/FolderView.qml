@@ -668,7 +668,7 @@ Item {
 
                 Keys.onReturnPressed: {
                     if (currentIndex != -1 && dir.hasSelection()) {
-                        if (root.useListViewMode) {
+                        if (root.useListViewMode && currentItem.isDir) {
                             dir.cd(positioner.map(currentIndex));
                         } else {
                             dir.runSelected();
