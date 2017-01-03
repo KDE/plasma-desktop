@@ -483,7 +483,7 @@ Item {
                         scrollDown = false;
                     }
 
-                    // Update rubberband geomety.
+                    // Update rubberband geometry.
                     if (main.rubberBand) {
                         var rB = main.rubberBand;
 
@@ -561,8 +561,13 @@ Item {
                 }
 
                 onCachedRectangleSelectionChanged: {
-                    if (cachedRectangleSelection) {
-                        dir.updateSelection(cachedRectangleSelection, gridView.ctrlPressed);
+                    if (cachedRectangleSelection.length) {
+                        // Set current index to start of selection.
+                        // cachedRectangleSelection is pre-sorted.
+                        currentIndex = cachedRectangleSelection[0];
+
+                        dir.updateSelection(cachedRectangleSelection.map(positioner.map),
+                            gridView.ctrlPressed);
                     }
                 }
 
@@ -636,7 +641,7 @@ Item {
                                         item.iconArea.width, item.iconArea.height);
 
                                     if (main.rubberBand.intersects(iconRect)) {
-                                        indices.push(positioner.map(index));
+                                        indices.push(index);
                                         continue;
                                     }
 
@@ -644,12 +649,12 @@ Item {
                                         item.labelArea.width, item.labelArea.height);
 
                                     if (main.rubberBand.intersects(labelRect)) {
-                                        indices.push(positioner.map(index));
+                                        indices.push(index);
                                         continue;
                                     }
                                 } else {
                                     // Otherwise be content with the cell intersection.
-                                    indices.push(positioner.map(index));
+                                    indices.push(index);
                                 }
                             }
                         }
