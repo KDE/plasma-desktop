@@ -523,8 +523,13 @@ void FolderModel::runSelected()
         return;
     }
 
+    bool unarySelection = (m_selectionModel->selectedIndexes().count() == 1);
+
     foreach (const QModelIndex &index, m_selectionModel->selectedIndexes()) {
-        run(index.row());
+        // Skip over directories.
+        if (!unarySelection && !index.data(IsDirRole).toBool()) {
+            run(index.row());
+        }
     }
 }
 
