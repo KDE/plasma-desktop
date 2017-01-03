@@ -142,7 +142,7 @@ QVariantList Backend::jumpListActions(const QUrl &launcherUrl, QObject *parent)
             continue;
         }
 
-        QAction *action = new QAction(this);
+        QAction *action = new QAction(parent);
         action->setText(name);
         action->setIcon(QIcon::fromTheme(actionGroup.readEntry("Icon")));
         action->setProperty("exec", exec);
@@ -204,7 +204,7 @@ QVariantList Backend::recentDocumentActions(const QUrl &launcherUrl, QObject *pa
             continue;
         }
 
-        QAction *action = new QAction(this);
+        QAction *action = new QAction(parent);
         action->setText(url.fileName());
         action->setIcon(QIcon::fromTheme(fileItem.iconName(), QIcon::fromTheme("unknown")));
         action->setProperty("agent", storageId);
@@ -219,7 +219,7 @@ QVariantList Backend::recentDocumentActions(const QUrl &launcherUrl, QObject *pa
     }
 
     if (actionCount > 0) {
-        QAction *action = new QAction(this);
+        QAction *action = new QAction(parent);
         action->setText(i18n("Forget Recent Documents"));
         action->setProperty("agent", storageId);
         connect(action, &QAction::triggered, this, &Backend::handleRecentDocumentAction);
