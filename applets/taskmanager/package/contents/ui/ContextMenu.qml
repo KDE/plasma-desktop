@@ -406,7 +406,7 @@ PlasmaComponents.ContextMenu {
 
         checkable: true
 
-        text: i18n("&Show A Launcher When Not Running")
+        text: i18n("&Pin")
 
         onClicked: {
             if (tasksModel.launcherPosition(visualParent.m.LauncherUrlWithoutIcon) != -1) {
@@ -420,7 +420,7 @@ PlasmaComponents.ContextMenu {
     PlasmaComponents.MenuItem {
         id: showLauncherInActivitiesItem
 
-        text: i18n("&Show A Launcher When Not Running")
+        text: i18n("&Pin")
 
         visible: visualParent
                      && visualParent.m.IsLauncher !== true
