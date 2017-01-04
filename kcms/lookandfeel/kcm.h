@@ -87,6 +87,7 @@ public:
     void setLockScreen(const QString &theme);
     void setWindowSwitcher(const QString &theme);
     void setDesktopSwitcher(const QString &theme);
+    void setWindowDecoration(const QString &library, const QString &theme);
 
     void setApplyColors(bool apply);
     bool applyColors() const;
@@ -142,6 +143,7 @@ private:
     bool m_applyWindowSwitcher : 1;
     bool m_applyDesktopSwitcher : 1;
     bool m_resetDefaultLayout : 1;
+    bool m_applyWindowDecoration : 1;
 };
 
 #endif

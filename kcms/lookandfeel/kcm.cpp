@@ -21,6 +21,7 @@
 #include "../krdb/krdb.h"
 #include "../cursortheme/xcursor/xcursortheme.h"
 #include "config-kcm.h"
+#include "config-workspace.h"
 #include <klauncher_iface.h>
 
 #include <KPluginFactory>
@@ -68,6 +69,7 @@ KCMLookandFeel::KCMLookandFeel(QObject* parent, const QVariantList& args)
     , m_applyWindowSwitcher(true)
     , m_applyDesktopSwitcher(true)
     , m_resetDefaultLayout(false)
+    , m_applyWindowDecoration(true)
 {
     //This flag seems to be needed in order for QQuickWidget to work
     //see https://bugreports.qt-project.org/browse/QTBUG-40765
@@ -328,6 +330,24 @@ void KCMLookandFeel::save()
             cg = KConfigGroup(conf, "kwinrc");
             cg = KConfigGroup(&cg, "DesktopSwitcher");
             setDesktopSwitcher(cg.readEntry("LayoutName", QString()));
+        }
+
+        if (m_applyWindowDecoration) {
+            cg = KConfigGroup(conf, "kwinrc");
+            cg = KConfigGroup(&cg, "org.kde.kdecoration2");
+#if HAVE_BREEZE_DECO
+            setWindowDecoration(cg.readEntry("library", QStringLiteral(BREEZE_KDECORATION_PLUGIN_ID)), cg.readEntry("theme", QString()));
+#else
+            setWindowDecoration(cg.readEntry("library", QStringLiteral("org.kde.kwin.aurorae")), cg.readEntry("theme", QString()));
+#endif
+        }
+
+        // Reload KWin if something changed, but only once.
+        if (m_applyWindowSwitcher || m_applyDesktopSwitcher || m_applyWindowDecoration) {
+            QDBusMessage message = QDBusMessage::createSignal(QStringLiteral("/KWin"),
+                                                    QStringLiteral("org.kde.KWin"),
+                                                    QStringLiteral("reloadConfig"));
+            QDBusConnection::sessionBus().send(message);
         }
     }
 
@@ -595,11 +615,6 @@ void KCMLookandFeel::setWindowSwitcher(const QString &theme)
     KConfigGroup cg(&config, "TabBox");
     cg.writeEntry("LayoutName", theme);
     cg.sync();
-    // Reload KWin.
-    QDBusMessage message = QDBusMessage::createSignal(QStringLiteral("/KWin"),
-                                                      QStringLiteral("org.kde.KWin"),
-                                                      QStringLiteral("reloadConfig"));
-    QDBusConnection::sessionBus().send(message);
 }
 
 void KCMLookandFeel::setDesktopSwitcher(const QString &theme)
@@ -613,13 +628,26 @@ void KCMLookandFeel::setDesktopSwitcher(const QString &theme)
     cg.writeEntry("DesktopLayout", theme);
     cg.writeEntry("DesktopListLayout", theme);
     cg.sync();
+}
+
+void KCMLookandFeel::setWindowDecoration(const QString &library, const QString &theme)
+{
+    if (library.isEmpty()) {
+        return;
+    }
+
+    KConfig config(QStringLiteral("kwinrc"));
+    KConfigGroup cg(&config, "org.kde.kdecoration2");
+    cg.writeEntry("library", library);
+    cg.writeEntry("theme", theme);
+    
+    cg.sync();
     // Reload KWin.
     QDBusMessage message = QDBusMessage::createSignal(QStringLiteral("/KWin"),
                                                       QStringLiteral("org.kde.KWin"),
                                                       QStringLiteral("reloadConfig"));
     QDBusConnection::sessionBus().send(message);
 }
-
 
 void KCMLookandFeel::setApplyColors(bool apply)
 {

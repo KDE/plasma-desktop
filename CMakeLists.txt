@@ -125,6 +125,20 @@ else()
                         )
 endif()
 
+find_package(Breeze ${PROJECT_VERSION} CONFIG)
+set_package_properties(Breeze PROPERTIES
+                       TYPE OPTIONAL
+                       PURPOSE "For setting the default window decoration plugin")
+if(${Breeze_FOUND})
+    if(${BREEZE_WITH_KDECORATION})
+        set(HAVE_BREEZE_DECO true)
+    else()
+        set(HAVE_BREEZE_DECO FALSE)
+    endif()
+else()
+    set(HAVE_BREEZE_DECO FALSE)
+endif()
+
 include_directories("${CMAKE_CURRENT_BINARY_DIR}")
 
 configure_file(config-workspace.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-workspace.h)
