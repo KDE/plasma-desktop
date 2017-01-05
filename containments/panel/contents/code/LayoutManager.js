@@ -29,25 +29,30 @@ function restore() {
     //array, a cell for encoded item order
     var itemsArray = configString.split(";");
 
-    var applets = plasmoid.applets
-    applets.sort(function (a, b) {
-        var aIdx = itemsArray.indexOf(String(a.id))
-        var bIdx = itemsArray.indexOf(String(b.id))
+    //map applet id->order in panel
+    var idsOrder = new Object();
+    //map order in panel -> applet pointer
+    var appletsOrder = new Object();
 
-        // applets that aren't listed in the order are sorted last
-        if (aIdx === -1 && bIdx !== -1) {
-            return 1
-        } else if (aIdx !== -1 && bIdx === -1) {
-            return -1
+    for (var i = 0; i < itemsArray.length; i++) {
+        //property name: applet id
+        //property value: order
+        idsOrder[itemsArray[i]] = i;
+    }
+
+    for (var i = 0; i < plasmoid.applets.length; ++i) {
+        if (idsOrder[plasmoid.applets[i].id] !== undefined) {
+            appletsOrder[idsOrder[plasmoid.applets[i].id]] = plasmoid.applets[i];
+        //ones that weren't saved in AppletOrder go to the end
+        } else {
+            appletsOrder["unordered"+i] = plasmoid.applets[i];
         }
+    }
 
-        return aIdx - bIdx
-    })
-
-    applets.forEach(function (applet) {
-        root.addApplet(applet, -1, -1)
-    })
-
+    //finally, restore the applets in the correct order
+    for (var i in appletsOrder) {
+        root.addApplet(appletsOrder[i], -1, -1)
+    }
     //rewrite, so if in the orders there were now invalid ids or if some were missing creates a correct list instead
     save();
 }
