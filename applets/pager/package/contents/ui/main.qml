@@ -54,6 +54,8 @@ MouseArea {
     anchors.fill: parent
     acceptedButtons: Qt.NoButton
 
+    hoverEnabled: true
+
     function colorWithAlpha(color, alpha) {
         return Qt.rgba(color.r, color.g, color.b, alpha)
     }
@@ -87,6 +89,14 @@ MouseArea {
         var service = activityDataSource.serviceForSource("Status")
         var operation = service.operationDescription("toggleActivityManager")
         service.startOperationCall(operation)
+    }
+
+    onContainsMouseChanged: {
+        if (!containsMouse && dragging) {
+            // Somewhat heavy-handed way to clean up after a window delegate drag
+            // exits the window.
+            pagerModel.refresh();
+        }
     }
 
     onWheel: {
