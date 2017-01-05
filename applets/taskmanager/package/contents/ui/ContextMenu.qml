@@ -406,7 +406,7 @@ PlasmaComponents.ContextMenu {
 
         checkable: true
 
-        text: i18n("&Pin")
+        text: i18nc("Toggle action for showing a launcher button while the application is not running", "&Pin")
 
         onClicked: {
             if (tasksModel.launcherPosition(visualParent.m.LauncherUrlWithoutIcon) != -1) {
