@@ -31,6 +31,7 @@
 #include <math.h>
 #include <xcb/xcb_image.h>
 #include <QFontDatabase>
+#include <QApplication>
 #include "File.h"
 #include <KConfigGroup>
 #include <X11/Xlib.h>
@@ -762,6 +763,9 @@ QImage CFcEngine::draw(const QString &name, quint32 style, int faceNo, const QCo
                        int w, int h, bool thumb, const QList<TRange> &range, QList<TChar> *chars)
 {
     QImage img;
+    const qreal dpr = qApp->devicePixelRatio();
+    w = w * dpr;
+    h = h * dpr;
     bool   rv=false;
 
     if(chars)
@@ -1014,6 +1018,7 @@ QImage CFcEngine::draw(const QString &name, quint32 style, int faceNo, const QCo
         }
     }
 
+    img.setDevicePixelRatio(dpr);
     return img;
 }
 

@@ -129,7 +129,8 @@ void CFontPreview::paintEvent(QPaintEvent *)
             showFont();
         else
             paint.drawImage(QPoint(constBorder, constBorder), itsImage,
-                            QRect(0, 0, width()-(constBorder*2), height()-(constBorder*2)));
+                            QRect(0, 0, width()-(constBorder*2) * itsImage.devicePixelRatioF(),
+                                  height()-(constBorder*2) * itsImage.devicePixelRatioF()));
     }
 }
 
