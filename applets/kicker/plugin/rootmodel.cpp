@@ -66,6 +66,7 @@ RootModel::RootModel(QObject *parent) : AppsModel(QString(), parent)
 , m_complete(false)
 , m_favorites(new FavoritesModel(this))
 , m_systemModel(nullptr)
+, m_autoPopulate(true)
 , m_showAllApps(false)
 , m_showRecentApps(true)
 , m_showRecentDocs(true)
@@ -143,6 +144,19 @@ bool RootModel::trigger(int row, const QString& actionId, const QVariant& argume
     return AppsModel::trigger(row, actionId, argument);
 }
 
+bool RootModel::autoPopulate() const
+{
+    return m_autoPopulate;
+}
+
+void RootModel::setAutoPopulate(bool populate)
+{
+    if (m_autoPopulate != populate) {
+        m_autoPopulate = populate;
+
+        emit autoPopulateChanged();
+    }
+}
 
 bool RootModel::showAllApps() const
 {
@@ -246,7 +260,9 @@ void RootModel::componentComplete()
 {
     m_complete = true;
 
-    refresh();
+    if (m_autoPopulate) {
+        refresh();
+    }
 }
 
 void RootModel::refresh()

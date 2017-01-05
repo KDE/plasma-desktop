@@ -54,6 +54,8 @@ class RootModel : public AppsModel, public QQmlParserStatus
     Q_OBJECT
     Q_INTERFACES(QQmlParserStatus)
 
+    Q_PROPERTY(bool autoPopulate READ autoPopulate WRITE setAutoPopulate NOTIFY autoPopulateChanged)
+
     Q_PROPERTY(QObject* systemFavoritesModel READ systemFavoritesModel NOTIFY systemFavoritesModelChanged)
     Q_PROPERTY(bool showAllApps READ showAllApps WRITE setShowAllApps NOTIFY showAllAppsChanged)
     Q_PROPERTY(bool showRecentApps READ showRecentApps WRITE setShowRecentApps NOTIFY showRecentAppsChanged)
@@ -68,6 +70,9 @@ class RootModel : public AppsModel, public QQmlParserStatus
         QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
 
         Q_INVOKABLE virtual bool trigger(int row, const QString &actionId, const QVariant &argument);
+
+        bool autoPopulate() const;
+        void setAutoPopulate(bool populate);
 
         bool showAllApps() const;
         void setShowAllApps(bool show);
@@ -93,6 +98,7 @@ class RootModel : public AppsModel, public QQmlParserStatus
     Q_SIGNALS:
         void refreshed() const;
         void systemFavoritesModelChanged() const;
+        void autoPopulateChanged() const;
         void showAllAppsChanged() const;
         void showRecentAppsChanged() const;
         void showRecentDocsChanged() const;
@@ -108,6 +114,8 @@ class RootModel : public AppsModel, public QQmlParserStatus
 
         FavoritesModel *m_favorites;
         SystemModel *m_systemModel;
+
+        bool m_autoPopulate;
 
         bool m_showAllApps;
         bool m_showRecentApps;

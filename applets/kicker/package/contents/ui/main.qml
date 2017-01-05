@@ -76,6 +76,8 @@ Item {
     Kicker.RootModel {
         id: rootModel
 
+        autoPopulate: false
+
         appNameFormat: plasmoid.configuration.appNameFormat
         flat: isDash ? true : plasmoid.configuration.limitDepth
         sorted: plasmoid.configuration.alphaSort
@@ -101,6 +103,7 @@ Item {
 
         Component.onCompleted: {
             favoritesModel.favorites = plasmoid.configuration.favoriteApps;
+            rootModel.refresh();
         }
     }
 
