@@ -216,7 +216,7 @@ Item {
                             leftMargin: units.smallSpacing
                         }
 
-                        width: main.GridView.view.iconSize
+                        width: root.useListViewMode ? main.GridView.view.iconSize : (parent.width - 2 * units.smallSpacing)
                         height: main.GridView.view.iconSize
 
                         opacity: root.useListViewMode ? (1.3 - selectionButton.opacity) : 1.0
