@@ -155,6 +155,7 @@ private:
 
 int main(int argc, char **argv)
 {
+    QApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
     KFI::ViewerApplication app(argc, argv);
 
     KLocalizedString::setApplicationDomain(KFI_CATALOGUE);
