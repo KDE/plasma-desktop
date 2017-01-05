@@ -499,7 +499,7 @@ PlasmaComponents.ContextMenu {
     PlasmaComponents.MenuItem {
         visible: (visualParent && visualParent.m.IsLauncher === true) && plasmoid.immutability !== PlasmaCore.Types.SystemImmutable
 
-        text: i18n("Remove Launcher")
+        text: i18n("Remove launcher button for application shown while it is not running", "Unpin")
 
         onClicked: tasksModel.requestRemoveLauncher(visualParent.m.LauncherUrlWithoutIcon);
     }
