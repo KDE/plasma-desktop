@@ -57,6 +57,10 @@ MouseArea {
 
     readonly property bool highlighted: (inPopup && activeFocus) || (!inPopup && containsMouse)
 
+    function hideToolTipTemporarily() {
+        toolTipArea.hideToolTip();
+    }
+
     acceptedButtons: Qt.LeftButton | Qt.RightButton | Qt.MidButton
 
     onIsWindowChanged: {
@@ -74,6 +78,8 @@ MouseArea {
     }
 
     onItemIndexChanged: {
+        hideToolTipTemporarily();
+
         if (!inPopup && !tasks.vertical
             && (LayoutManager.calculateStripes() > 1 || !plasmoid.configuration.separateLaunchers)) {
             tasks.requestLayout();
@@ -83,7 +89,7 @@ MouseArea {
     onContainsMouseChanged:  {
         if (containsMouse) {
             if (inPopup) {
-                forceActiveFocus()
+                forceActiveFocus();
             }
         } else {
             pressed = false;
@@ -92,6 +98,7 @@ MouseArea {
         if (model.IsWindow === true) {
             tasks.windowsHovered(model.LegacyWinIdList, containsMouse);
         }
+
     }
 
     onPressed: {
@@ -100,11 +107,7 @@ MouseArea {
             pressX = mouse.x;
             pressY = mouse.y;
         } else if (mouse.button == Qt.RightButton) {
-            if (plasmoid.configuration.showToolTips) {
-                toolTip.hideToolTip();
-            }
-
-            tasks.createContextMenu(task).show();
+            tasks.createContextMenu(task, modelIndex()).show();
         }
     }
 
@@ -121,7 +124,7 @@ MouseArea {
             } else if (mouse.button == Qt.LeftButton) {
                 TaskTools.activateTask(modelIndex(), model, mouse.modifiers, task);
                 if (plasmoid.configuration.showToolTips) {
-                    toolTip.hideToolTip();
+                    hideToolTipTemporarily();
                 }
             }
         }
@@ -219,84 +222,63 @@ MouseArea {
             });
         }
 
+
         PlasmaCore.ToolTipArea {
-            id: toolTip
+            id: toolTipArea
 
             anchors.fill: parent
+            location: plasmoid.location
 
             active: !inPopup && !groupDialog.visible && plasmoid.configuration.showToolTips
             interactive: true
-            location: plasmoid.location
 
             mainItem: toolTipDelegate
 
             onContainsMouseChanged:  {
                 if (containsMouse) {
+                    toolTipDelegate.parentTask = task;
                     toolTipDelegate.parentIndex = itemIndex;
 
+                    toolTipDelegate.appName = Qt.binding(function() {
+                        return model.AppName;
+                    });
+                    toolTipDelegate.pidParent = Qt.binding(function() {
+                        return model.AppPid;
+                    });
                     toolTipDelegate.windows = Qt.binding(function() {
                         return model.LegacyWinIdList;
                     });
-                    toolTipDelegate.mainText = Qt.binding(function() {
-                        return model.display;
+                    toolTipDelegate.isGroup = Qt.binding(function() {
+                        return model.IsGroupParent == true;
                     });
                     toolTipDelegate.icon = Qt.binding(function() {
                         return model.decoration;
                     });
-                    toolTipDelegate.subText = Qt.binding(function() {
-                        return model.IsLauncher === true ? model.GenericName : toolTip.generateSubText(model);
-                    });
                     toolTipDelegate.launcherUrl = Qt.binding(function() {
                         return model.LauncherUrlWithoutIcon;
                     });
+                    toolTipDelegate.isLauncher = Qt.binding(function() {
+                        return model.IsLauncher == true;
+                    });
+                    toolTipDelegate.isMinimizedParent = Qt.binding(function() {
+                        return model.IsMinimized == true;
+                    });
+                    toolTipDelegate.displayParent = Qt.binding(function() {
+                        return model.display;
+                    });
+                    toolTipDelegate.genericName = Qt.binding(function() {
+                        return model.GenericName;
+                    });
+                    toolTipDelegate.virtualDesktopParent = Qt.binding(function() {
+                        return model.VirtualDesktop != undefined ? model.VirtualDesktop : 0;
+                    });
+                    toolTipDelegate.isOnAllVirtualDesktopsParent = Qt.binding(function() {
+                        return model.IsOnAllVirtualDesktops == true;
+                    });
+                    toolTipDelegate.activitiesParent = Qt.binding(function() {
+                        return model.Activities;
+                    });
                 }
-            }
-
-            function generateSubText(task) {
-                var subTextEntries = new Array();
-
-                if (!plasmoid.configuration.showOnlyCurrentDesktop
-                    && virtualDesktopInfo.numberOfDesktops > 1
-                    && model.IsOnAllVirtualDesktops !== true
-                    && model.VirtualDesktop != -1
-                    && model.VirtualDesktop != undefined) {
-                    subTextEntries.push(i18n("On %1", virtualDesktopInfo.desktopNames[model.VirtualDesktop - 1]));
-                }
-
-                if (model.Activities == undefined) {
-                    return subTextEntries.join("\n");
-                }
-
-                if (model.Activities.length == 0 && activityInfo.numberOfRunningActivities > 1) {
-                    subTextEntries.push(i18nc("Which virtual desktop a window is currently on",
-                        "Available on all activities"));
-                } else if (model.Activities.length > 0) {
-                   var activityNames = new Array();
-
-                    for (var i = 0; i < model.Activities.length; i++) {
-                        var activity = model.Activities[i];
-
-                        if (plasmoid.configuration.showOnlyCurrentActivity) {
-                            if (activity != activityInfo.currentActivity) {
-                                activityNames.push(activityInfo.activityName(model.Activities[i]));
-                            }
-                        } else if (activity != activityInfo.currentActivity) {
-                            activityNames.push(activityInfo.activityName(model.Activities[i]));
-                        }
-                    }
-
-                    if (plasmoid.configuration.showOnlyCurrentActivity) {
-                        if (activityNames.length > 0) {
-                            subTextEntries.push(i18nc("Activities a window is currently on (apart from the current one)",
-                                "Also available on %1", activityNames.join(", ")));
-                        }
-                    } else if (activityNames.length > 0) {
-                        subTextEntries.push(i18nc("Which activities a window is currently on",
-                            "Available on %1", activityNames.join(", ")));
-                    }
-                }
-
-                return subTextEntries.join("\n");
             }
         }
     }

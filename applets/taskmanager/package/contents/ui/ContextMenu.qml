@@ -25,10 +25,14 @@ import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 
+import org.kde.taskmanager 0.1 as TaskManager
+
 PlasmaComponents.ContextMenu {
     id: menu
 
     property QtObject mpris2Source
+    property var modelIndex
+    readonly property var atm: TaskManager.AbstractTasksModel
 
     placement: {
         if (plasmoid.location == PlasmaCore.Types.LeftEdge) {
@@ -43,8 +47,8 @@ PlasmaComponents.ContextMenu {
     minimumWidth: visualParent.width
 
     onStatusChanged: {
-        if (visualParent && visualParent.m.LauncherUrlWithoutIcon != null && status == PlasmaComponents.DialogStatus.Open) {
-            launcherToggleAction.checked = (tasksModel.launcherPosition(visualParent.m.LauncherUrlWithoutIcon) != -1);
+        if (visualParent && get(atm.LauncherUrlWithoutIcon) != null && status == PlasmaComponents.DialogStatus.Open) {
+            launcherToggleAction.checked = (tasksModel.launcherPosition(get(atm.LauncherUrlWithoutIcon)) != -1);
             activitiesDesktopsMenu.refresh();
 
         } else if (status == PlasmaComponents.DialogStatus.Closed) {
@@ -52,8 +56,12 @@ PlasmaComponents.ContextMenu {
         }
     }
 
+    function get(modelProp) {
+        return tasksModel.data(modelIndex, modelProp)
+    }
+
     function show() {
-        loadDynamicLaunchActions(visualParent.m.LauncherUrlWithoutIcon);
+        loadDynamicLaunchActions(get(atm.LauncherUrlWithoutIcon));
         backend.ungrabMouse(visualParent);
         openRelative();
     }
@@ -97,10 +105,10 @@ PlasmaComponents.ContextMenu {
             menu.addMenuItem(newSeparator(menu), virtualDesktopsMenuItem);
         }
 
-        // Add Media Player control actions
-        var sourceName = mpris2Source.sourceNameForLauncherUrl(launcherUrl);
+        // Add Media Player control actions (but not if grouped) TODO: doch, wenn auf tooltip rechts geklickt!!
+        var sourceName = mpris2Source.sourceNameForLauncherUrl(launcherUrl, get(atm.AppPid));
 
-        if (sourceName) {
+        if (sourceName && !(get(atm.LegacyWinIdList) != undefined && get(atm.LegacyWinIdList).length > 1)) {
             var playerData = mpris2Source.data[sourceName]
 
             if (playerData.CanControl) {
@@ -186,9 +194,9 @@ PlasmaComponents.ContextMenu {
         id: virtualDesktopsMenuItem
 
         visible: virtualDesktopInfo.numberOfDesktops > 1
-            && (visualParent && visualParent.m.IsLauncher !== true
-            && visualParent.m.IsStartup !== true
-            && visualParent.m.IsVirtualDesktopChangeable === true)
+            && (visualParent && get(atm.IsLauncher) !== true
+            && get(atm.IsStartup) !== true
+            && get(atm.IsVirtualDesktopChangeable) === true)
 
         enabled: visible
 
@@ -216,20 +224,20 @@ PlasmaComponents.ContextMenu {
                 var menuItem = menu.newMenuItem(virtualDesktopsMenu);
                 menuItem.text = i18n("Move &To Current Desktop");
                 menuItem.enabled = Qt.binding(function() {
-                    return menu.visualParent && menu.visualParent.m.VirtualDesktop != virtualDesktopInfo.currentDesktop;
+                    return menu.visualParent && menu.get(atm.VirtualDesktop) != virtualDesktopInfo.currentDesktop;
                 });
                 menuItem.clicked.connect(function() {
-                    tasksModel.requestVirtualDesktop(menu.visualParent.modelIndex(), virtualDesktopInfo.currentDesktop);
+                    tasksModel.requestVirtualDesktop(menu.modelIndex, virtualDesktopInfo.currentDesktop);
                 });
 
                 menuItem = menu.newMenuItem(virtualDesktopsMenu);
                 menuItem.text = i18n("&All Desktops");
                 menuItem.checkable = true;
                 menuItem.checked = Qt.binding(function() {
-                    return menu.visualParent && menu.visualParent.m.IsOnAllVirtualDesktops === true;
+                    return menu.visualParent && menu.get(atm.IsOnAllVirtualDesktops) === true;
                 });
                 menuItem.clicked.connect(function() {
-                    tasksModel.requestVirtualDesktop(menu.visualParent.modelIndex(), 0);
+                    tasksModel.requestVirtualDesktop(menu.modelIndex, 0);
                 });
                 backend.setActionGroup(menuItem.action);
 
@@ -240,10 +248,10 @@ PlasmaComponents.ContextMenu {
                     menuItem.text = i18nc("1 = number of desktop, 2 = desktop name", "&%1 Desktop %2", i + 1, virtualDesktopInfo.desktopNames[i]);
                     menuItem.checkable = true;
                     menuItem.checked = Qt.binding((function(i) {
-                        return function() { return menu.visualParent && menu.visualParent.m.VirtualDesktop == (i + 1) };
+                        return function() { return menu.visualParent && menu.get(atm.VirtualDesktop) == (i + 1) };
                     })(i));
                     menuItem.clicked.connect((function(i) {
-                        return function() { return tasksModel.requestVirtualDesktop(menu.visualParent.modelIndex(), i + 1); };
+                        return function() { return tasksModel.requestVirtualDesktop(menu.modelIndex, i + 1); };
                     })(i));
                     backend.setActionGroup(menuItem.action);
                 }
@@ -253,7 +261,7 @@ PlasmaComponents.ContextMenu {
                 menuItem = menu.newMenuItem(virtualDesktopsMenu);
                 menuItem.text = i18n("&New Desktop");
                 menuItem.clicked.connect(function() {
-                    tasksModel.requestVirtualDesktop(menu.visualParent.modelIndex(), virtualDesktopInfo.numberOfDesktops + 1)
+                    tasksModel.requestVirtualDesktop(menu.modelIndex, virtualDesktopInfo.numberOfDesktops + 1)
                 });
             }
 
@@ -265,8 +273,8 @@ PlasmaComponents.ContextMenu {
         id: activitiesDesktopsMenuItem
 
         visible: activityInfo.numberOfRunningActivities > 1
-            && (visualParent && !visualParent.m.IsLauncher
-            && !visualParent.m.IsStartup)
+            && (visualParent && !get(atm.IsLauncher)
+            && !get(atm.IsStartup))
 
         enabled: visible
 
@@ -293,18 +301,18 @@ PlasmaComponents.ContextMenu {
                 var menuItem = menu.newMenuItem(activitiesDesktopsMenu);
                 menuItem.text = i18n("Add To Current Activity");
                 menuItem.enabled = Qt.binding(function() {
-                    return menu.visualParent && menu.visualParent.m.Activities.length > 0 &&
-                           menu.visualParent.m.Activities.indexOf(activityInfo.currentActivity) < 0;
+                    return menu.visualParent && menu.get(atm.Activities).length > 0 &&
+                           menu.get(atm.Activities).indexOf(activityInfo.currentActivity) < 0;
                 });
                 menuItem.clicked.connect(function() {
-                    tasksModel.requestActivities(menu.visualParent.modelIndex(), menu.visualParent.m.Activities.concat(activityInfo.currentActivity));
+                    tasksModel.requestActivities(menu.modelIndex, menu.get(atm.Activities).concat(activityInfo.currentActivity));
                 });
 
                 menuItem = menu.newMenuItem(activitiesDesktopsMenu);
                 menuItem.text = i18n("All Activities");
                 menuItem.checkable = true;
                 menuItem.checked = Qt.binding(function() {
-                    return menu.visualParent && menu.visualParent.m.Activities.length === 0;
+                    return menu.visualParent && menu.get(atm.Activities).length === 0;
                 });
                 menuItem.clicked.connect(function() {
                     var checked = menuItem.checked;
@@ -312,7 +320,7 @@ PlasmaComponents.ContextMenu {
                     if (!checked) {
                         newActivities = new Array(activityInfo.currentActivity);
                     }
-                    tasksModel.requestActivities(menu.visualParent.modelIndex(), newActivities);
+                    tasksModel.requestActivities(menu.modelIndex, newActivities);
                 });
 
                 menu.newSeparator(activitiesDesktopsMenu);
@@ -326,13 +334,13 @@ PlasmaComponents.ContextMenu {
                     menuItem.checkable = true;
                     menuItem.checked = Qt.binding( (function(activityId) {
                         return function() {
-                            return menu.visualParent && menu.visualParent.m.Activities.indexOf(activityId) >= 0;
+                            return menu.visualParent && menu.get(atm.Activities).indexOf(activityId) >= 0;
                         };
                     })(activityId));
                     menuItem.clicked.connect((function(activityId) {
                         return function () {
                             var checked = menuItem.checked;
-                            var newActivities = menu.visualParent.m.Activities;
+                            var newActivities = menu.get(atm.Activities);
                             if (checked) {
                                 newActivities = newActivities.concat(activityId);
                             } else {
@@ -342,7 +350,7 @@ PlasmaComponents.ContextMenu {
                                 }
                                 newActivities = newActivities.splice(index, 1);
                             }
-                            return tasksModel.requestActivities(menu.visualParent.modelIndex(), newActivities);
+                            return tasksModel.requestActivities(menu.modelIndex, newActivities);
                         };
                     })(activityId));
                 }
@@ -356,63 +364,63 @@ PlasmaComponents.ContextMenu {
 
 
     PlasmaComponents.MenuItem {
-        visible: (visualParent && visualParent.m.IsLauncher !== true && visualParent.m.IsStartup !== true)
+        visible: (visualParent && get(atm.IsLauncher) !== true && get(atm.IsStartup) !== true)
 
-        enabled: visualParent && visualParent.m.IsMinimizable === true
+        enabled: visualParent && get(atm.IsMinimizable) === true
 
         checkable: true
-        checked: visualParent && visualParent.m.IsMinimized === true
+        checked: visualParent && get(atm.IsMinimized) === true
 
         text: i18n("Mi&nimize")
 
-        onClicked: tasksModel.requestToggleMinimized(visualParent.modelIndex())
+        onClicked: tasksModel.requestToggleMinimized(modelIndex)
     }
 
     PlasmaComponents.MenuItem {
-        visible: (visualParent && visualParent.m.IsLauncher !== true && visualParent.m.IsStartup !== true)
+        visible: (visualParent && get(atm.IsLauncher) !== true && get(atm.IsStartup) !== true)
 
-        enabled: visualParent && visualParent.m.IsMaximizable === true
+        enabled: visualParent && get(atm.IsMaximizable) === true
 
         checkable: true
-        checked: visualParent && visualParent.m.IsMaximized === true
+        checked: visualParent && get(atm.IsMaximized) === true
 
         text: i18n("Ma&ximize")
 
-        onClicked: tasksModel.requestToggleMaximized(visualParent.modelIndex())
+        onClicked: tasksModel.requestToggleMaximized(modelIndex)
     }
 
     PlasmaComponents.MenuItem {
         id: startNewInstanceItem
-        visible: (visualParent && visualParent.m.IsLauncher !== true && visualParent.m.IsStartup !== true)
+        visible: (visualParent && get(atm.IsLauncher) !== true && get(atm.IsStartup) !== true)
 
-        enabled: visualParent && visualParent.m.LauncherUrlWithoutIcon != null
+        enabled: visualParent && get(atm.LauncherUrlWithoutIcon) != null
 
         text: i18n("Start New Instance")
         icon: "system-run"
 
-        onClicked: tasksModel.requestNewInstance(visualParent.modelIndex())
+        onClicked: tasksModel.requestNewInstance(modelIndex)
     }
 
     PlasmaComponents.MenuItem {
         id: launcherToggleAction
 
         visible: visualParent
-                     && visualParent.m.IsLauncher !== true
-                     && visualParent.m.IsStartup !== true
+                     && get(atm.IsLauncher) !== true
+                     && get(atm.IsStartup) !== true
                      && plasmoid.immutability !== PlasmaCore.Types.SystemImmutable
                      && (activityInfo.numberOfRunningActivities < 2)
 
-        enabled: visualParent && visualParent.m.LauncherUrlWithoutIcon != ""
+        enabled: visualParent && get(atm.LauncherUrlWithoutIcon) != ""
 
         checkable: true
 
         text: i18nc("Toggle action for showing a launcher button while the application is not running", "&Pin")
 
         onClicked: {
-            if (tasksModel.launcherPosition(visualParent.m.LauncherUrlWithoutIcon) != -1) {
-                tasksModel.requestRemoveLauncher(visualParent.m.LauncherUrlWithoutIcon);
+            if (tasksModel.launcherPosition(get(atm.LauncherUrlWithoutIcon)) != -1) {
+                tasksModel.requestRemoveLauncher(get(atm.LauncherUrlWithoutIcon));
             } else {
-                tasksModel.requestAddLauncher(visualParent.m.LauncherUrl);
+                tasksModel.requestAddLauncher(get(atm.LauncherUrl));
             }
         }
     }
@@ -423,8 +431,8 @@ PlasmaComponents.ContextMenu {
         text: i18n("&Pin")
 
         visible: visualParent
-                     && visualParent.m.IsLauncher !== true
-                     && visualParent.m.IsStartup !== true
+                     && get(atm.IsLauncher) !== true
+                     && get(atm.IsStartup) !== true
                      && plasmoid.immutability !== PlasmaCore.Types.SystemImmutable
                      && (activityInfo.numberOfRunningActivities >= 2)
 
@@ -466,7 +474,7 @@ PlasmaComponents.ContextMenu {
 
                 if (menu.visualParent === null) return;
 
-                var url = menu.visualParent.m.LauncherUrlWithoutIcon;
+                var url = menu.get(atm.LauncherUrlWithoutIcon);
 
                 var activities = tasksModel.launcherActivities(url);
 
@@ -497,18 +505,18 @@ PlasmaComponents.ContextMenu {
     }
 
     PlasmaComponents.MenuItem {
-        visible: (visualParent && visualParent.m.IsLauncher === true) && plasmoid.immutability !== PlasmaCore.Types.SystemImmutable
+        visible: (visualParent && get(atm.IsLauncher) === true) && plasmoid.immutability !== PlasmaCore.Types.SystemImmutable
 
         text: i18nc("Remove launcher button for application shown while it is not running", "Unpin")
 
-        onClicked: tasksModel.requestRemoveLauncher(visualParent.m.LauncherUrlWithoutIcon);
+        onClicked: tasksModel.requestRemoveLauncher(get(atm.LauncherUrlWithoutIcon));
     }
 
 
     PlasmaComponents.MenuItem {
         id: moreActionsMenuItem
 
-        visible: (visualParent && visualParent.m.IsLauncher !== true && visualParent.m.IsStartup !== true)
+        visible: (visualParent && get(atm.IsLauncher) !== true && get(atm.IsStartup) !== true)
 
         enabled: visible
 
@@ -518,63 +526,63 @@ PlasmaComponents.ContextMenu {
             visualParent: moreActionsMenuItem.action
 
             PlasmaComponents.MenuItem {
-                enabled: menu.visualParent && menu.visualParent.m.IsMovable === true
+                enabled: menu.visualParent && menu.get(atm.IsMovable) === true
 
                 text: i18n("&Move")
                 icon: "transform-move"
 
-                onClicked: tasksModel.requestMove(menu.visualParent.modelIndex())
+                onClicked: tasksModel.requestMove(menu.modelIndex)
             }
 
             PlasmaComponents.MenuItem {
-                enabled: menu.visualParent && menu.visualParent.m.IsResizable === true
+                enabled: menu.visualParent && menu.get(atm.IsResizable) === true
 
                 text: i18n("Re&size")
 
-                onClicked: tasksModel.requestResize(menu.visualParent.modelIndex())
+                onClicked: tasksModel.requestResize(menu.modelIndex)
             }
 
             PlasmaComponents.MenuItem {
                 checkable: true
-                checked: menu.visualParent && menu.visualParent.m.IsKeepAbove === true
+                checked: menu.visualParent && menu.get(atm.IsKeepAbove) === true
 
                 text: i18n("Keep &Above Others")
                 icon: "go-up"
 
-                onClicked: tasksModel.requestToggleKeepAbove(menu.visualParent.modelIndex())
+                onClicked: tasksModel.requestToggleKeepAbove(menu.modelIndex)
             }
 
             PlasmaComponents.MenuItem {
                 checkable: true
-                checked: menu.visualParent && menu.visualParent.m.IsKeepBelow === true
+                checked: menu.visualParent && menu.get(atm.IsKeepBelow) === true
 
                 text: i18n("Keep &Below Others")
                 icon: "go-down"
 
-                onClicked: tasksModel.requestToggleKeepBelow(menu.visualParent.modelIndex())
+                onClicked: tasksModel.requestToggleKeepBelow(menu.modelIndex)
             }
 
             PlasmaComponents.MenuItem {
-                enabled: menu.visualParent && menu.visualParent.m.IsFullScreenable === true
+                enabled: menu.visualParent && menu.get(atm.IsFullScreenable) === true
 
                 checkable: true
-                checked: menu.visualParent && menu.visualParent.m.IsFullScreen === true
+                checked: menu.visualParent && menu.get(atm.IsFullScreen) === true
 
                 text: i18n("&Fullscreen")
                 icon: "view-fullscreen"
 
-                onClicked: tasksModel.requestToggleFullScreen(menu.visualParent.modelIndex())
+                onClicked: tasksModel.requestToggleFullScreen(menu.modelIndex)
             }
 
             PlasmaComponents.MenuItem {
-                enabled: menu.visualParent && menu.visualParent.m.IsShadeable === true
+                enabled: menu.visualParent && menu.get(atm.IsShadeable) === true
 
                 checkable: true
-                checked: menu.visualParent && menu.visualParent.m.IsShaded === true
+                checked: menu.visualParent && menu.get(atm.IsShaded) === true
 
                 text: i18n("&Shade")
 
-                onClicked: tasksModel.requestToggleShaded(menu.visualParent.modelIndex())
+                onClicked: tasksModel.requestToggleShaded(menu.modelIndex)
             }
 
             PlasmaComponents.MenuItem {
@@ -582,14 +590,14 @@ PlasmaComponents.ContextMenu {
             }
 
             PlasmaComponents.MenuItem {
-                visible: (plasmoid.configuration.groupingStrategy != 0) && menu.visualParent.m.IsWindow === true
+                visible: (plasmoid.configuration.groupingStrategy != 0) && menu.get(atm.IsWindow) === true
 
                 checkable: true
-                checked: menu.visualParent && menu.visualParent.m.IsGroupable === true
+                checked: menu.visualParent && menu.get(atm.IsGroupable) === true
 
                 text: i18n("Allow this program to be grouped")
 
-                onClicked: tasksModel.requestToggleGrouping(menu.visualParent.modelIndex())
+                onClicked: tasksModel.requestToggleGrouping(menu.modelIndex)
             }
         }
     }
@@ -613,13 +621,13 @@ PlasmaComponents.ContextMenu {
 
     PlasmaComponents.MenuItem {
         id: closeWindowItem
-        visible: (visualParent && visualParent.m.IsLauncher !== true && visualParent.m.IsStartup !== true)
+        visible: (visualParent && get(atm.IsLauncher) !== true && get(atm.IsStartup) !== true)
 
-        enabled: visualParent && visualParent.m.IsClosable === true
+        enabled: visualParent && get(atm.IsClosable) === true
 
         text: i18n("&Close")
         icon: "window-close"
 
-        onClicked: tasksModel.requestClose(visualParent.modelIndex())
+        onClicked: tasksModel.requestClose(modelIndex)
     }
 }

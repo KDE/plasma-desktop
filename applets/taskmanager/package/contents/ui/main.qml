@@ -182,9 +182,8 @@ Item {
         id: mpris2Source
         engine: "mpris2"
         connectedSources: sources
-
-        function sourceNameForLauncherUrl(launcherUrl) {
-            if (!launcherUrl) {
+        function sourceNameForLauncherUrl(launcherUrl, pid) {
+            if (!launcherUrl || launcherUrl == "") {
                 return "";
             }
 
@@ -192,12 +191,16 @@ Item {
             // Moreover, remove URL parameters, like wmClass (part after the question mark)
             var desktopFileName = launcherUrl.toString().split('/').pop().split('?')[0].replace(".desktop", "")
 
-            for (var i = 0, length = sources.length; i < length; ++i) {
-                var source = sources[i];
+            for (var i = 0, length = connectedSources.length; i < length; ++i) {
+                var source = connectedSources[i];
+                // we intend to connect directly, otherwise the multiplexer steals the connection away
+                if (source === "@multiplex") {
+                    continue;
+                }
                 var sourceData = data[source];
 
-                if (sourceData && sourceData.DesktopEntry === desktopFileName) {
-                    return source
+                if (sourceData && sourceData.DesktopEntry === desktopFileName && sourceData.InstancePid === pid) {
+                    return source;
                 }
             }
 
@@ -370,7 +373,6 @@ Item {
             id: taskRepeater
 
             delegate: Task {}
-
             onItemAdded: taskList.layout()
             onItemRemoved: taskList.layout()
         }
@@ -404,9 +406,10 @@ Item {
         dragSource = null;
     }
 
-    function createContextMenu(task) {
-        var menu = tasks.contextMenuComponent.createObject(task);
-        menu.visualParent = task;
+    function createContextMenu(rootTask, modelIndex) {
+        var menu = tasks.contextMenuComponent.createObject(rootTask);
+        menu.visualParent = rootTask;
+        menu.modelIndex = modelIndex;
         menu.mpris2Source = mpris2Source;
         return menu;
     }

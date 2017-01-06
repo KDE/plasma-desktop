@@ -26,36 +26,22 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 MouseArea {
     property var modelIndex
     property int winId // FIXME Legacy
-    property Item thumbnailItem
+    property Item rootTask
 
-    acceptedButtons: Qt.LeftButton
+    acceptedButtons: Qt.LeftButton | Qt.RightButton
     hoverEnabled: true
     enabled: winId != 0
 
     onClicked: {
-        tasksModel.requestActivate(modelIndex);
-        toolTip.hideToolTip();
+        if (mouse.button == Qt.LeftButton) {
+            tasksModel.requestActivate(modelIndex);
+        } else {
+            tasks.createContextMenu(rootTask, modelIndex).show();
+        }
+        rootTask.hideToolTipTemporarily();
     }
 
     onContainsMouseChanged: {
         tasks.windowsHovered([winId], containsMouse);
-    }
-
-    PlasmaComponents.ToolButton {
-        anchors {
-            top: parent.top
-            topMargin: thumbnailItem ? (thumbnailItem.height - thumbnailItem.paintedHeight) / 2 : 0
-            right: parent.right
-            rightMargin: thumbnailItem ? (thumbnailItem.width - thumbnailItem.paintedWidth) / 2 : 0
-        }
-
-        iconSource: "window-close"
-        visible: parent.containsMouse && winId != 0
-        tooltip: i18nc("close this window", "Close")
-
-        onClicked: {
-            backend.cancelHighlightWindows();
-            tasksModel.requestClose(modelIndex);
-        }
     }
 }
