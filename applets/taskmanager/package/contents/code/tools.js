@@ -98,7 +98,7 @@ function activateTask(index, model, modifiers, task) {
         tasksModel.requestNewInstance(index);
     } else if (model.IsGroupParent === true) {
         if ((iconsOnly || modifiers == Qt.ControlModifier) && backend.canPresentWindows()) {
-            toolTip.hideToolTip();
+            toolTipArea.hideToolTip();
             tasks.presentWindows(model.LegacyWinIdList);
         } else if (groupDialog.visible) {
             groupDialog.visible = false;
