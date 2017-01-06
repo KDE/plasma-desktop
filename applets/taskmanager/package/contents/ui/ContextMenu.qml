@@ -105,7 +105,7 @@ PlasmaComponents.ContextMenu {
             menu.addMenuItem(newSeparator(menu), virtualDesktopsMenuItem);
         }
 
-        // Add Media Player control actions (but not if grouped) TODO: doch, wenn auf tooltip rechts geklickt!!
+        // Add Media Player control actions
         var sourceName = mpris2Source.sourceNameForLauncherUrl(launcherUrl, get(atm.AppPid));
 
         if (sourceName && !(get(atm.LegacyWinIdList) != undefined && get(atm.LegacyWinIdList).length > 1)) {
