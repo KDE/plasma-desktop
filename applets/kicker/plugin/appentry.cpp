@@ -141,16 +141,17 @@ bool AppEntry::hasActions() const
     return true;
 }
 
+#ifdef HAVE_APPSTREAMQT
+Q_GLOBAL_STATIC(AppStream::Pool, appstreamPool)
+
 QVariantList appstreamActions(const KService::Ptr &service)
 {
-#ifdef HAVE_APPSTREAMQT
-    static AppStream::Pool pool;
-    if (!pool.load()) {
-        return {};
+    if (!appstreamPool.exists()) {
+        appstreamPool->load();
     }
 
     QVariantList ret;
-    const auto components = pool.componentsById(service->desktopEntryName()+QLatin1String(".desktop"));
+    const auto components = appstreamPool->componentsById(service->desktopEntryName()+QLatin1String(".desktop"));
     for(const auto &component: components) {
         const QString componentId = component.id();
 
@@ -159,10 +160,8 @@ QVariantList appstreamActions(const KService::Ptr &service)
         ret << appstreamAction;
     }
     return ret;
-#else
-    return {};
-#endif
 }
+#endif
 
 QVariantList AppEntry::actions() const
 {
@@ -202,9 +201,11 @@ QVariantList AppEntry::actions() const
         actionList << editAction;
     }
 
+#ifdef HAVE_APPSTREAMQT
     if (m_service->isApplication()) {
         actionList << appstreamActions(m_service);
     }
+#endif
 
     QQmlPropertyMap *appletConfig = qobject_cast<QQmlPropertyMap *>(appletInterface->property("configuration").value<QObject *>());
 
