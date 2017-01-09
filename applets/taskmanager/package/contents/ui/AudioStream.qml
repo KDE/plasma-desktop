@@ -66,7 +66,7 @@ Item {
                  }
                  NumberAnimation {
                      property: "opacity"
-                     duration: 1000
+                     duration: units.longDuration
                  }
              }
         },
@@ -76,7 +76,7 @@ Item {
              SequentialAnimation {
                  NumberAnimation {
                      property: "opacity"
-                     duration: 1000
+                     duration: units.longDuration
                  }
              }
         },
