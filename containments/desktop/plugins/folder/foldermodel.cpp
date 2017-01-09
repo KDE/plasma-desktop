@@ -174,7 +174,6 @@ void FolderModel::setUrl(const QString& url)
 
     if (url == m_url) {
         m_dirModel->dirLister()->updateDirectory(resolvedUrl);
-
         return;
     }
 
@@ -195,7 +194,7 @@ void FolderModel::setUrl(const QString& url)
         delete m_dirWatch;
     }
 
-    if (resolvedUrl.isLocalFile()) {
+    if (resolvedUrl.isValid()) {
         m_dirWatch = new KDirWatch(this);
         connect(m_dirWatch, &KDirWatch::created, this, &FolderModel::iconNameChanged);
         connect(m_dirWatch, &KDirWatch::dirty, this, &FolderModel::iconNameChanged);

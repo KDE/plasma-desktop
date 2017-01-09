@@ -56,7 +56,8 @@ Item {
     property alias scrollRight: gridView.scrollRight
     property alias scrollUp: gridView.scrollUp
     property alias scrollDown: gridView.scrollDown
-    property Item upButton: null
+    property var history: []
+    property Item backButton: null
 
     function rename()
     {
@@ -101,18 +102,34 @@ Item {
         }
     }
 
-    function makeUpButton() {
-        return Qt.createQmlObject("UpButtonItem {}", main);
+    function makeBackButton() {
+        return Qt.createQmlObject("BackButtonItem {}", main);
+    }
+
+    function doCd(row) {
+        history.push(url);
+        updateHistory();
+        dir.cd(row);
+    }
+
+    function doBack() {
+        url = history.pop();
+        updateHistory();
+    }
+
+    // QML doesn't detect change in the array(history) property, so update it explicitly.
+    function updateHistory() {
+        history = history;
     }
 
     Connections {
         target: root
 
         onIsPopupChanged: {
-            if (upButton == null && root.useListViewMode) {
-                upButton = makeUpButton();
-            } else if (upButton != null) {
-                upButton.destroy();
+            if (backButton == null && root.useListViewMode) {
+                backButton = makeBackButton();
+            } else if (backButton != null) {
+                backButton.destroy();
             }
         }
     }
@@ -121,7 +138,7 @@ Item {
         id: listener
 
         anchors {
-            topMargin: upButton != null ? upButton.height : undefined
+            topMargin: backButton != null ? backButton.height : undefined
             fill: parent
         }
 
@@ -164,7 +181,7 @@ Item {
 
             if (mouse.buttons & Qt.BackButton) {
                 if (root.isPopup && dir.resolvedUrl != dir.resolve(plasmoid.configuration.url)) {
-                    dir.up();
+                    doBack();
                 }
 
                 return;
@@ -246,7 +263,7 @@ Item {
 
             if (!(pos.x <= hoveredItem.actionsOverlay.width && pos.y <= hoveredItem.actionsOverlay.height)) {
                 if (Qt.styleHints.singleClickActivation || doubleClickInProgress) {
-                    var func = root.useListViewMode && (mouse.button == Qt.LeftButton) && hoveredItem.isDir ? dir.cd : dir.run;
+                    var func = root.useListViewMode && (mouse.button == Qt.LeftButton) && hoveredItem.isDir ? doCd : dir.run;
                     func(positioner.map(gridView.currentIndex));
 
                     hoveredItem = null;
@@ -669,7 +686,7 @@ Item {
                 Keys.onReturnPressed: {
                     if (currentIndex != -1 && dir.hasSelection()) {
                         if (root.useListViewMode && currentItem.isDir) {
-                            dir.cd(positioner.map(currentIndex));
+                            doCd(positioner.map(currentIndex));
                         } else {
                             dir.runSelected();
                         }
@@ -738,7 +755,7 @@ Item {
 
                 Keys.onLeftPressed: {
                     if (root.isPopup && dir.resolvedUrl != dir.resolve(plasmoid.configuration.url)) {
-                        dir.up();
+                        doBack();
                     } else if (positioner.enabled) {
                         var newIndex = positioner.nearestItem(currentIndex,
                             FolderTools.effectiveNavDirection(gridView.flow, gridView.effectiveLayoutDirection, Qt.LeftArrow));
@@ -762,7 +779,7 @@ Item {
 
                 Keys.onRightPressed: {
                     if (root.isPopup && currentIndex != -1 && dir.hasSelection()) {
-                        var func = root.isPopup ? dir.cd : dir.run;
+                        var func = root.isPopup ? doCd : dir.run;
                         func(positioner.map(currentIndex));
                     } else if (positioner.enabled) {
                         var newIndex = positioner.nearestItem(currentIndex,
@@ -831,7 +848,7 @@ Item {
 
                 Keys.onBackPressed: {
                     if (root.isPopup && dir.resolvedUrl != dir.resolve(plasmoid.configuration.url)) {
-                        dir.up();
+                        doBack();
                     }
                 }
 
@@ -850,6 +867,15 @@ Item {
                         gridView.iconSize = gridView.makeIconSize();
                     }
                 }
+
+                Connections {
+                   target: plasmoid.configuration
+
+                   onUrlChanged: {
+                       history = [];
+                       updateHistory();
+                   }
+                }
             }
         }
 
@@ -866,7 +892,7 @@ Item {
             usedByContainment: root.isContainment && main.isRootView
             sortDesc: plasmoid.configuration.sortDesc
             sortDirsFirst: plasmoid.configuration.sortDirsFirst
-            parseDesktopFiles: (url == "desktop:/")
+            parseDesktopFiles: (plasmoid.configuration.url == "desktop:/")
             previews: plasmoid.configuration.previews
             previewPlugins: plasmoid.configuration.previewPlugins
 
@@ -1095,8 +1121,8 @@ Item {
     }
 
     Component.onCompleted: {
-        if (upButton == null && root.useListViewMode) {
-            upButton = makeUpButton();
+        if (backButton == null && root.useListViewMode) {
+            backButton = makeBackButton();
         }
     }
 }

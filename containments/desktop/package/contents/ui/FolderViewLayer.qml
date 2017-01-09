@@ -137,6 +137,8 @@ Item {
             if (root.isPopup && !plasmoid.expanded) {
                 if (folderView.url != plasmoid.configuration.url) {
                     folderView.url = plasmoid.configuration.url;
+                    folderView.history = [];
+                    folderView.updateHistory();
                 }
 
                 folderView.currentIndex = -1;
