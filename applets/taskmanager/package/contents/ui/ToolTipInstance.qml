@@ -460,14 +460,6 @@ Column {
             }
         }
 
-        if (parentTask.playingAudio) {
-            if (parentTask.muted) {
-                subTextEntries.push(i18nc("The application this window belongs to is muted", "Currently Muted"));
-            } else {
-                subTextEntries.push(i18nc("The application this window belongs to is playing audio", "Currently Playing Audio"));
-            }
-        }
-
         return subTextEntries.join("\n");
     }
 }
