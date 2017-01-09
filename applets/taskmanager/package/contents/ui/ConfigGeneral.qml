@@ -111,7 +111,7 @@ Item {
                 CheckBox {
                     id: indicateAudioStreams
                     Layout.fillWidth: true
-                    text: i18n("Denote applications that play audio")
+                    text: i18n("Mark applications that play audio")
                 }
 
                 RowLayout {
