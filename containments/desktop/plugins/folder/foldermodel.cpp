@@ -492,10 +492,20 @@ void FolderModel::cd(int row)
         return;
     }
 
-    KFileItem item = itemForIndex(index(row, 0));
+    const QModelIndex idx = index(row, 0);
+    bool isDir = data(idx, IsDirRole).toBool();
 
-    if (item.isDir()) {
-        setUrl(item.url().toString());
+    if (isDir) {
+        const KFileItem  item = itemForIndex(idx);
+        if (m_parseDesktopFiles && item.isDesktopFile()) {
+            const KDesktopFile file(item.targetUrl().path());
+            if (file.readType() == QLatin1String("Link")) {
+                setUrl(file.readUrl());
+            }
+        }
+        else {
+            setUrl(item.url().toString());
+        }
     }
 }
 
