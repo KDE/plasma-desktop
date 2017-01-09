@@ -12,7 +12,6 @@ ecm_optional_add_subdirectory(emoticons)
 ecm_optional_add_subdirectory(baloo)
 
 ecm_optional_add_subdirectory(autostart)
-ecm_optional_add_subdirectory(bell)
 ecm_optional_add_subdirectory(cursortheme)
 ecm_optional_add_subdirectory(fonts)
 ecm_optional_add_subdirectory(fontinst)
