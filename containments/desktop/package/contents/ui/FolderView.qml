@@ -233,7 +233,7 @@ Item {
         onClicked: {
             clearPressState();
 
-            if (mouse.buttons & Qt.RightButton ||
+            if (mouse.button === Qt.RightButton ||
                 childAt(mouse.x, mouse.y) == editor) {
                 return;
             }
