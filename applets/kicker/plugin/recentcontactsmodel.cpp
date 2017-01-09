@@ -93,6 +93,8 @@ QVariant RecentContactsModel::data(const QModelIndex &index, int role) const
         actionList << Kicker::createActionItem(i18n("Show Contact Information..."), "showContactInfo");
 
         return actionList;
+    } else if (role == Kicker::DescriptionRole) {
+        return QString();
     }
 
     return QVariant();
