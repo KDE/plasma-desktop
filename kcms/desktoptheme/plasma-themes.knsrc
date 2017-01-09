@@ -22,5 +22,5 @@ Name[zh_CN]=Plasma 主题
 ProvidersUrl=http://download.kde.org/ocs/providers.xml
 Categories=Plasma Theme
 StandardResource=tmp
-InstallationCommand=plasmapkg2 -t theme -i %f
-UninstallCommand=plasmapkg2 -t theme -r %f
+InstallationCommand=kpackagetool5 -t Plasma/Theme -i %f
+UninstallCommand=kpackagetool5 -t Plasma/Theme -r %f

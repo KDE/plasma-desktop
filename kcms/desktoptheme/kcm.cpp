@@ -107,9 +107,8 @@ void KCMDesktopTheme::installThemeFromFile(const QUrl &file)
 {
     qCDebug(KCM_DESKTOP_THEME) << "Installing ... " << file;
 
-    QString program = QStringLiteral("plasmapkg2");
-    QStringList arguments;
-    arguments << QStringLiteral("-t") << QStringLiteral("theme") << QStringLiteral("-i") << file.toLocalFile();
+    const QString program = QStringLiteral("kpackagetool5");
+    const QStringList arguments = { QStringLiteral("--type"), QStringLiteral("Plasma/Theme"), QStringLiteral("--install"), file.toLocalFile()};
 
     qCDebug(KCM_DESKTOP_THEME) << program << arguments.join(QStringLiteral(" "));
     QProcess *myProcess = new QProcess(this);
