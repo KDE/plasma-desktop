@@ -233,6 +233,12 @@ Item {
         }
     }
 
+    Loader {
+        id: pulseAudio
+        source: "PulseAudio.qml"
+        active: plasmoid.configuration.indicateAudioStreams
+    }
+
     Timer {
         id: iconGeometryTimer
 

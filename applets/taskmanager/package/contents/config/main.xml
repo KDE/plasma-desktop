@@ -89,6 +89,10 @@
       <label>Whether to show progress and status information on task buttons.</label>
       <default>true</default>
     </entry>
+    <entry name="indicateAudioStreams" type="Bool">
+      <label>Whether to indicate applications that are playing audio including an option to mute them.</label>
+      <default>true</default>
+    </entry>
   </group>
 
 </kcfg>

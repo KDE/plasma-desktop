@@ -34,6 +34,7 @@ Item {
     property alias cfg_wheelEnabled: wheelEnabled.checked
     property alias cfg_highlightWindows: highlightWindows.checked
     property alias cfg_smartLaunchersEnabled: smartLaunchers.checked
+    property alias cfg_indicateAudioStreams: indicateAudioStreams.checked
     property alias cfg_maxStripes: maxStripes.value
     property alias cfg_groupingStrategy: groupingStrategy.currentIndex
     property alias cfg_middleClickAction: middleClickAction.currentIndex
@@ -105,6 +106,12 @@ Item {
                     id: smartLaunchers
                     Layout.fillWidth: true
                     text: i18n("Show progress and status information in task buttons")
+                }
+
+                CheckBox {
+                    id: indicateAudioStreams
+                    Layout.fillWidth: true
+                    text: i18n("Denote applications that play audio")
                 }
 
                 RowLayout {

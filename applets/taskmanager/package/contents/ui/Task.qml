@@ -41,6 +41,7 @@ MouseArea {
 
     readonly property var m: model
 
+    readonly property int pid: model.AppPid
     property int itemIndex: index
     property bool inPopup: false
     property bool isWindow: model.IsWindow === true
@@ -55,6 +56,16 @@ MouseArea {
     readonly property bool smartLauncherEnabled: plasmoid.configuration.smartLaunchersEnabled && !inPopup && model.IsStartup !== true
     property QtObject smartLauncherItem: null
 
+    property Item audioStreamOverlay
+    property var audioStreams: []
+    readonly property bool hasAudioStream: plasmoid.configuration.indicateAudioStreams && audioStreams.length > 0
+    readonly property bool playingAudio: hasAudioStream && audioStreams.some(function (item) {
+        return !item.corked
+    })
+    readonly property bool muted: hasAudioStream && audioStreams.every(function (item) {
+        return item.muted
+    })
+
     readonly property bool highlighted: (inPopup && activeFocus) || (!inPopup && containsMouse)
 
     function hideToolTipTemporarily() {
@@ -62,6 +73,8 @@ MouseArea {
     }
 
     acceptedButtons: Qt.LeftButton | Qt.RightButton | Qt.MidButton
+
+    onPidChanged: updateAudioStreams()
 
     onIsWindowChanged: {
         if (isWindow) {
@@ -167,12 +180,47 @@ MouseArea {
         }
     }
 
+    onHasAudioStreamChanged: {
+        if (hasAudioStream) {
+            audioStreamIconLoader.active = true
+        }
+    }
+
     Keys.onReturnPressed: TaskTools.activateTask(modelIndex(), model, event.modifiers, task)
     Keys.onEnterPressed: Keys.onReturnPressed(event);
 
     function modelIndex() {
         return (inPopup ? tasksModel.makeModelIndex(groupDialog.visualParent.itemIndex, index)
             : tasksModel.makeModelIndex(index));
+    }
+
+    function updateAudioStreams() {
+        if (!pid) {
+            task.audioStreams = [];
+            return;
+        }
+
+        var pa = pulseAudio.item;
+        if (!pa) {
+            task.audioStreams = [];
+            return;
+        }
+
+        task.audioStreams = pa.streamsForPid(pid);
+    }
+
+    function toggleMuted() {
+        if (muted) {
+            task.audioStreams.forEach(function (item) { item.unmute(); });
+        } else {
+            task.audioStreams.forEach(function (item) { item.mute(); });
+        }
+    }
+
+    Connections {
+        target: pulseAudio.item
+        ignoreUnknownSignals: true // Plasma-PA might not be available
+        onStreamsChanged: task.updateAudioStreams()
     }
 
     Component {
@@ -300,9 +348,7 @@ MouseArea {
             topMargin: adjustMargin(false, parent.height, taskFrame.margins.top)
         }
 
-        width: (label.visible ? height
-            : parent.width - adjustMargin(true, parent.width, taskFrame.margins.left)
-            - adjustMargin(true, parent.width, taskFrame.margins.right))
+        width: height
         height: (parent.height - adjustMargin(false, parent.height, taskFrame.margins.top)
             - adjustMargin(false, parent.height, taskFrame.margins.bottom))
 
@@ -351,7 +397,7 @@ MouseArea {
             // the text label margin, which derives from the icon width.
             State {
                 name: "standalone"
-                when: !label.visible
+                when: !label.visible && !audioStreamIconLoader.shown
 
                 AnchorChanges {
                     target: iconBox
@@ -362,6 +408,8 @@ MouseArea {
                 PropertyChanges {
                     target: iconBox
                     anchors.leftMargin: 0
+                    width: parent.width - adjustMargin(true, task.width, taskFrame.margins.left)
+                                        - adjustMargin(true, task.width, taskFrame.margins.right)
                 }
             }
         ]
@@ -380,6 +428,23 @@ MouseArea {
         }
     }
 
+    Loader {
+        id: audioStreamIconLoader
+
+        readonly property bool shown: item && item.visible
+
+        source: "AudioStream.qml"
+        width: Math.min(units.iconSizes.medium, iconBox.width)
+        height: Math.min(units.iconSizes.medium, iconBox.height)
+
+        anchors {
+            right: parent.right
+            rightMargin: iconBox.adjustMargin(true, parent.width, taskFrame.margins.right)
+            top: parent.top
+            topMargin: iconBox.adjustMargin(false, parent.height, taskFrame.margins.top)
+        }
+    }
+
     PlasmaComponents.Label {
         id: label
 
@@ -390,7 +455,7 @@ MouseArea {
             fill: parent
             leftMargin: taskFrame.margins.left + iconBox.width + units.smallSpacing
             topMargin: taskFrame.margins.top
-            rightMargin: taskFrame.margins.right
+            rightMargin: taskFrame.margins.right + (audioStreamIconLoader.shown ? (audioStreamIconLoader.width + units.smallSpacing) : 0)
             bottomMargin: taskFrame.margins.bottom
         }
 
@@ -458,5 +523,7 @@ MouseArea {
         if (!inPopup && model.IsWindow !== true) {
             taskInitComponent.createObject(task);
         }
+
+        updateAudioStreams()
     }
 }
