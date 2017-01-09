@@ -42,6 +42,7 @@ MouseArea {
     readonly property var m: model
 
     readonly property int pid: model.AppPid
+    readonly property string appName: model.AppName
     property int itemIndex: index
     property bool inPopup: false
     property bool isWindow: model.IsWindow === true
@@ -75,6 +76,7 @@ MouseArea {
     acceptedButtons: Qt.LeftButton | Qt.RightButton | Qt.MidButton
 
     onPidChanged: updateAudioStreams()
+    onAppNameChanged: updateAudioStreams()
 
     onIsWindowChanged: {
         if (isWindow) {
@@ -195,18 +197,18 @@ MouseArea {
     }
 
     function updateAudioStreams() {
-        if (!pid) {
-            task.audioStreams = [];
-            return;
-        }
-
         var pa = pulseAudio.item;
         if (!pa) {
             task.audioStreams = [];
             return;
         }
 
-        task.audioStreams = pa.streamsForPid(pid);
+        var streams = pa.streamsForPid(task.pid);
+        if (!streams.length) {
+            streams = pa.streamsForAppName(task.appName);
+        }
+
+        task.audioStreams = streams;
     }
 
     function toggleMuted() {

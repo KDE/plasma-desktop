@@ -26,15 +26,23 @@ QtObject {
 
     signal streamsChanged
 
-    function streamsForPid(pid) {
+    function findStreams(key, value) {
         var streams = []
         for (var i = 0, length = instantiator.count; i < length; ++i) {
-            var stream = instantiator.objectAt(i)
-            if (stream.pid == pid) {
-                streams.push(stream)
+            var stream = instantiator.objectAt(i);
+            if (stream[key] == value) {
+                streams.push(stream);
             }
         }
         return streams
+    }
+
+    function streamsForAppName(appName) {
+        return findStreams("appName", appName);
+    }
+
+    function streamsForPid(pid) {
+        return findStreams("pid", pid);
     }
 
     // QtObject has no default property, hence adding the Instantiator to one explicitly.
@@ -46,6 +54,7 @@ QtObject {
 
         delegate: QtObject {
             readonly property int pid: Client ? Client.properties["application.process.id"] : 0
+            readonly property string appName: Client ? Client.properties["application.name"] : ""
             readonly property bool muted: Muted
             // whether there is nothing actually going on on that stream
             readonly property bool corked: Corked
