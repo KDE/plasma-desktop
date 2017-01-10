@@ -151,7 +151,7 @@ Item {
                                 }
                                 visible: model.fullScreenPreview != ""
                                 iconSource: "media-playback-start"
-                                tooltip: i18n("Test Splashscreen")
+                                tooltip: i18n("Show Preview")
                                 flat: false
                                 onClicked: {
                                     previewWindow.url = model.fullScreenPreview;
