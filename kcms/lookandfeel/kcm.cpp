@@ -297,8 +297,27 @@ void KCMLookandFeel::save()
                     colorScheme.replace(offset, fixer.matchedLength(), fixer.cap(1).toUpper());
                 }
                 colorScheme.replace(0, 1, colorScheme.at(0).toUpper());
-                QString src = QStandardPaths::locate(QStandardPaths::GenericDataLocation, "color-schemes/" +  colorScheme + ".colors");
-                setColors(colorScheme, src);
+
+                //NOTE: why this loop trough all the scheme files?
+                //the scheme theme name is an heuristic, there is no plugin metadata whatsoever.
+                //is based on the file name stripped from weird characters or the
+                //eventual id- prefix store.kde.org puts, so we can just find a
+                //theme that ends as the specified name
+                bool schemeFound = false;
+                const QStringList schemeDirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("color-schemes"), QStandardPaths::LocateDirectory);
+                for (const QString &dir : schemeDirs) {
+                    const QStringList fileNames = QDir(dir).entryList(QStringList()<<QStringLiteral("*.colors"));
+                    for (const QString &file : fileNames) {
+                        if (file.endsWith(colorScheme + ".colors")) {
+                            setColors(colorScheme, dir + QChar('/') + file);
+                            schemeFound = true;
+                            break;
+                        }
+                    }
+                    if (schemeFound) {
+                        break;
+                    }
+                }
             }
         }
 
