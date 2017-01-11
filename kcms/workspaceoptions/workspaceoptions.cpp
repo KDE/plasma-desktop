@@ -29,6 +29,7 @@ using namespace KAuth;
 K_PLUGIN_FACTORY(WorkspaceOptionsModuleFactory, registerPlugin<WorkspaceOptionsModule>();)
 K_EXPORT_PLUGIN(WorkspaceOptionsModuleFactory("kcmworkspaceoptions"))
 
+static const QString s_osdKey = QStringLiteral("OSD");
 
 WorkspaceOptionsModule::WorkspaceOptionsModule(QWidget *parent, const QVariantList &args)
   : KCModule(parent, args),
@@ -52,6 +53,7 @@ WorkspaceOptionsModule::WorkspaceOptionsModule(QWidget *parent, const QVariantLi
     m_ui->setupUi(this);
 
     connect(m_ui->showToolTips, SIGNAL(toggled(bool)), this, SLOT(changed()));
+    connect(m_ui->showOsd, &QCheckBox::toggled, this, static_cast<void(WorkspaceOptionsModule::*)()>(&WorkspaceOptionsModule::changed));
 }
 
 WorkspaceOptionsModule::~WorkspaceOptionsModule()
@@ -62,26 +64,39 @@ WorkspaceOptionsModule::~WorkspaceOptionsModule()
 
 void WorkspaceOptionsModule::save()
 {
+    KSharedConfig::Ptr config = KSharedConfig::openConfig(QStringLiteral("plasmarc"));
+
     {
-        KConfig config(QStringLiteral("plasmarc"));
-        KConfigGroup cg(&config, "PlasmaToolTips");
+        KConfigGroup cg(config, "PlasmaToolTips");
         cg.writeEntry("Delay", m_ui->showToolTips->isChecked() ? 0.7 : -1);
+    }
+
+    {
+        KConfigGroup cg(config, QStringLiteral("OSD"));
+        cg.writeEntry("Enabled", m_ui->showOsd->isChecked());
     }
 
 }
 
 void WorkspaceOptionsModule::load()
 {
+    KSharedConfig::Ptr config = KSharedConfig::openConfig(QStringLiteral("plasmarc"));
+
     {
-        KConfig config(QStringLiteral("plasmarc"));
-        KConfigGroup cg(&config, "PlasmaToolTips");
+        const KConfigGroup cg(config, "PlasmaToolTips");
         m_ui->showToolTips->setChecked(cg.readEntry("Delay", 0.7) > 0);
+    }
+
+    {
+        const KConfigGroup cg(config, s_osdKey);
+        m_ui->showOsd->setChecked(cg.readEntry(QStringLiteral("Enabled"), true));
     }
 }
 
 void WorkspaceOptionsModule::defaults()
 {
     m_ui->showToolTips->setChecked(true);
+    m_ui->showOsd->setChecked(true);
 }
 
 #include "workspaceoptions.moc"

@@ -34,7 +34,7 @@
      </property>
     </widget>
    </item>
-   <item row="1" column="1">
+   <item row="2" column="1">
     <spacer name="verticalSpacer">
      <property name="orientation">
       <enum>Qt::Vertical</enum>
@@ -46,6 +46,23 @@
       </size>
      </property>
     </spacer>
+   </item>
+   <item row="1" column="1">
+    <widget class="QCheckBox" name="showOsd">
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="showOsdLabel">
+     <property name="toolTip">
+      <string>Show a popup for status changes such as brightness or volume.</string>
+     </property>
+     <property name="text">
+      <string>Visual feedback for status changes:</string>
+     </property>
+    </widget>
    </item>
   </layout>
  </widget>
