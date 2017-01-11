@@ -88,6 +88,32 @@ ColumnLayout {
         }
     }
 
+    ColumnLayout {
+        id: switchContainmentWarning
+        Layout.fillWidth: true
+        visible: configDialog.containmentPlugin != root.containmentPlugin
+        QtControls.Label {
+            Layout.fillWidth: true
+            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Layout changes must be applied before other changes can be made")
+            wrapMode: Text.Wrap
+            horizontalAlignment: Text.AlignHCenter
+        }
+        QtControls.Button {
+            Layout.alignment: Qt.AlignHCenter
+            text: i18nd("plasma_shell_org.kde.plasma.desktop", "Apply now")
+            onClicked: saveConfig()
+        }
+
+        Binding {
+            target: categoriesScroll //from parent scope AppletConfiguration
+            property: "enabled"
+            value: !switchContainmentWarning.visible
+        }
+        Item {
+            Layout.fillHeight: true
+        }
+    }
+
     QtControls.Label {
         Layout.fillWidth: true
 
@@ -98,6 +124,7 @@ ColumnLayout {
     }
 
     Row {
+        visible: !switchContainmentWarning.visible
         id: wallpaperRow
         spacing: units.largeSpacing / 2
         Item {
@@ -129,11 +156,14 @@ ColumnLayout {
 
     QtControls.StackView {
         id: main
+
         Layout.fillHeight: true;
         anchors {
             left: parent.left;
             right: parent.right;
         }
+        visible: !switchContainmentWarning.visible
+
         // Bug 360862: if wallpaper has no config, sourceFile will be ""
         // so we wouldn't load emptyConfig and break all over the place
         // hence set it to some random value initially
