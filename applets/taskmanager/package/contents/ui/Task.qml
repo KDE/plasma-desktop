@@ -451,7 +451,7 @@ MouseArea {
         id: label
 
         visible: (inPopup || !iconsOnly && model.IsLauncher !== true
-            && (parent.width - iconBox.height - units.smallSpacing) >= (theme.mSize(theme.defaultFont).width * 7))
+            && (parent.width - iconBox.height - units.smallSpacing) >= (theme.mSize(theme.defaultFont).width * 5))
 
         anchors {
             fill: parent
