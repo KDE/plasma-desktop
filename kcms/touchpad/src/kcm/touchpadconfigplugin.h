@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 Alexander Mezin <mezin.alexander@gmail.com>
+ * Copyright 2017 Roman Gilg <subdiff@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -16,17 +16,31 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-//#include "plugins.h"
+#ifndef TOUCHPADCONFIGPLUGIN_H
+#define TOUCHPADCONFIGPLUGIN_H
 
-#include <KPluginFactory>
-#include <KLocalizedString>
+#include <QWidget>
 
-#include "kcm/touchpadconfigcontainer.h"
-#include "kded/kded.h"
+class TouchpadConfigContainer;
+class TouchpadBackend;
 
+class TouchpadConfigPlugin : public QWidget
+{
+    Q_OBJECT
 
-K_PLUGIN_FACTORY(TouchpadPluginFactory,
-                 registerPlugin<TouchpadDisabler>();
-                 registerPlugin<TouchpadConfigContainer>("kcm");)
-#include <plugins.moc>
-//K_EXPORT_PLUGIN(TouchpadPluginFactory(buildAboutData()))
+public:
+    explicit TouchpadConfigPlugin(QWidget *parent);
+    virtual ~TouchpadConfigPlugin() {}
+
+    virtual void load() {}
+    virtual void save() {}
+    virtual void defaults() {}
+
+    virtual void hideEvent(QHideEvent *) {}
+
+protected:
+    TouchpadConfigContainer *m_parent;
+    TouchpadBackend *m_backend;
+};
+
+#endif // TOUCHPADCONFIGPLUGIN_H

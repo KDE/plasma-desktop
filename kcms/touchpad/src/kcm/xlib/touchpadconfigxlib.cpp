@@ -16,7 +16,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-#include "touchpadconfig.h"
+#include "touchpadconfigxlib.h"
 
 #include <QScrollArea>
 #include <QDBusInterface>
@@ -30,6 +30,7 @@
 #include <KShortcutsDialog>
 #include <KConfigGroup>
 
+#include "../touchpadconfigcontainer.h"
 #include "customslider.h"
 #include "sliderpair.h"
 #include "touchpadbackend.h"
@@ -52,13 +53,10 @@ void touchpadApplySavedConfig()
     backend->applyConfig(config.values());
 }
 
-extern "C"
+void TouchpadConfigXlib::kcmInit()
 {
-    Q_DECL_EXPORT void kcminit_touchpad()
-    {
-        TouchpadParameters::setSystemDefaults();
-        touchpadApplySavedConfig();
-    }
+    TouchpadParameters::setSystemDefaults();
+    touchpadApplySavedConfig();
 }
 
 static void copyHelpFromBuddy(QObject *root)
@@ -100,8 +98,8 @@ QWidget *addTab(QTabWidget *tabs, T &form)
     return widget;
 }
 
-TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
-    : KCModule(parent, args),
+TouchpadConfigXlib::TouchpadConfigXlib(TouchpadConfigContainer *parent, const QVariantList &args)
+    : TouchpadConfigPlugin(parent),
       m_configOutOfSync(false)
 {
     KAboutData* data = new KAboutData(QStringLiteral("kcm_touchpad"),
@@ -113,7 +111,7 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
                     i18n("This program incorporates work covered by this copyright notice:\n"
                           "Copyright © 2002-2005,2007 Peter Osterlund"),
                     QStringLiteral("https://projects.kde.org/projects/playground/utils/kcm-touchpad/"),
-		    QString());
+                    QString());
 
     data->addAuthor(i18n("Alexander Mezin"),
                    i18n("Developer"),
@@ -124,8 +122,7 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
     data->addCredit(i18n("Vadim Zaytsev"), i18nc("Credits", "Testing"));
     data->addCredit(i18n("Violetta Raspryagayeva"), i18nc("Credits", "Testing"));
 
-
-    setAboutData(data);
+    m_parent->setAboutData(data);
 
     QGridLayout *layout = new QGridLayout(this);
     QVBoxLayout *messageLayout = new QVBoxLayout();
@@ -189,7 +186,7 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
     // KDED settings
 
     m_kdedTab = addTab(m_tabs, m_kded);
-    m_daemonConfigManager = addConfig(&m_daemonSettings, m_kdedTab);
+    m_daemonConfigManager = m_parent->addConfig(&m_daemonSettings, m_kdedTab);
 
     KMessageWidget *kdedMessage = new KMessageWidget(m_kdedTab);
     kdedMessage->setMessageType(KMessageWidget::Information);
@@ -228,12 +225,11 @@ TouchpadConfig::TouchpadConfig(QWidget *parent, const QVariantList &args)
     layout->addWidget(m_testArea, 1, 1);
     connect(m_testArea, SIGNAL(enter()), SLOT(beginTesting()));
     connect(m_testArea, SIGNAL(leave()), SLOT(endTesting()));
-    connect(this, SIGNAL(changed(bool)), SLOT(onChanged()));
     connect(m_tabs, SIGNAL(currentChanged(int)), SLOT(updateTestAreaEnabled()));
     updateTestAreaEnabled();
 }
 
-void TouchpadConfig::gotReplyFromDaemon(QDBusPendingCallWatcher *watch)
+void TouchpadConfigXlib::gotReplyFromDaemon(QDBusPendingCallWatcher *watch)
 {
     QDBusPendingReply<bool> reply = *watch;
     if (reply.isValid() && reply.value()) {
@@ -242,7 +238,7 @@ void TouchpadConfig::gotReplyFromDaemon(QDBusPendingCallWatcher *watch)
     watch->deleteLater();
 }
 
-void TouchpadConfig::updateMouseList()
+void TouchpadConfigXlib::updateMouseList()
 {
     QStringList mouses(
                 m_backend->listMouses(m_daemonSettings.mouseBlacklist()));
@@ -262,7 +258,7 @@ void TouchpadConfig::updateMouseList()
     }
 }
 
-QVariantHash TouchpadConfig::getActiveConfig()
+QVariantHash TouchpadConfigXlib::getActiveConfig()
 {
     if (m_prevConfig) {
         return *m_prevConfig;
@@ -277,23 +273,23 @@ QVariantHash TouchpadConfig::getActiveConfig()
     return activeConfig;
 }
 
-void TouchpadConfig::loadActiveConfig()
+void TouchpadConfigXlib::loadActiveConfig()
 {
     m_manager->setWidgetProperties(getActiveConfig());
     m_configOutOfSync = false;
     m_configOutOfSyncMessage->animatedHide();
 }
 
-void TouchpadConfig::load()
+void TouchpadConfigXlib::load()
 {
     m_manager->updateWidgets();
 
-    KCModule::load();
+    m_parent->kcmLoad();
 
     m_configOutOfSync = !m_manager->compareWidgetProperties(getActiveConfig());
 }
 
-void TouchpadConfig::save()
+void TouchpadConfigXlib::save()
 {
     m_manager->updateSettings();
 
@@ -302,7 +298,7 @@ void TouchpadConfig::save()
 
     bool daemonSettingsChanged = m_daemonConfigManager->hasChanged();
 
-    KCModule::save();
+    m_parent->kcmSave();
 
     if (m_backend->applyConfig(m_config.values())) {
         m_errorMessage->animatedHide();
@@ -317,19 +313,19 @@ void TouchpadConfig::save()
     }
 }
 
-void TouchpadConfig::defaults()
+void TouchpadConfigXlib::defaults()
 {
     m_manager->updateWidgetsDefault();
 
-    KCModule::defaults();
+    m_parent->kcmDefaults();
 }
 
-void TouchpadConfig::checkChanges()
+void TouchpadConfigXlib::checkChanges()
 {
-    if (!m_backend->hasTouchpad()) {
+    if (!m_backend->touchpadCount()) {
         return;
     }
-    unmanagedWidgetChangeState(m_manager->hasChangedFuzzy()
+    m_parent->unmanagedWidgetChangeState(m_manager->hasChangedFuzzy()
                                || m_configOutOfSync);
     if (m_configOutOfSync) {
         m_configOutOfSyncMessage->animatedShow();
@@ -338,25 +334,25 @@ void TouchpadConfig::checkChanges()
     }
 }
 
-void TouchpadConfig::hideEvent(QHideEvent *e)
+void TouchpadConfigXlib::hideEvent(QHideEvent *e)
 {
-    endTesting();
-    KCModule::hideEvent(e);
-}
-
-TouchpadConfig::~TouchpadConfig()
-{
+    Q_UNUSED( e );
     endTesting();
 }
 
-void TouchpadConfig::onChanged()
+TouchpadConfigXlib::~TouchpadConfigXlib()
+{
+    endTesting();
+}
+
+void TouchpadConfigXlib::onChanged()
 {
     if (m_testArea->underMouse()) {
         beginTesting();
     }
 }
 
-void TouchpadConfig::beginTesting()
+void TouchpadConfigXlib::beginTesting()
 {
     if (!m_prevConfig) {
         m_prevConfig.reset(new QVariantHash());
@@ -365,7 +361,7 @@ void TouchpadConfig::beginTesting()
     m_backend->applyConfig(m_manager->currentWidgetProperties());
 }
 
-void TouchpadConfig::endTesting()
+void TouchpadConfigXlib::endTesting()
 {
     if (!m_prevConfig) {
         return;
@@ -374,7 +370,7 @@ void TouchpadConfig::endTesting()
     m_prevConfig.reset();
 }
 
-void TouchpadConfig::updateTestAreaEnabled()
+void TouchpadConfigXlib::updateTestAreaEnabled()
 {
     bool enable = true;
     for (QWidget *i = m_kdedTab; i; i = i->parentWidget()) {
@@ -391,10 +387,10 @@ void TouchpadConfig::updateTestAreaEnabled()
     }
 }
 
-void TouchpadConfig::showConfigureNotificationsDialog()
+void TouchpadConfigXlib::showConfigureNotificationsDialog()
 {
     KNotifyConfigWidget *widget =
-            KNotifyConfigWidget::configure(0, componentData().componentName());
+            KNotifyConfigWidget::configure(0, m_parent->componentData().componentName());
     QDialog *dialog = qobject_cast<QDialog*>(widget->topLevelWidget());
     connect(dialog, SIGNAL(finished()), dialog, SLOT(deleteLater()));
 }

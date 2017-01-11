@@ -1,3 +1,6 @@
+# KI18N Translation Domain for this library
+add_definitions(-DTRANSLATION_DOMAIN=\"kcmtouchpad\")
+
 configure_file("${CMAKE_CURRENT_SOURCE_DIR}/version.h.cmake"
                "${CMAKE_CURRENT_BINARY_DIR}/version.h"
 )
@@ -5,34 +8,41 @@ configure_file("${CMAKE_CURRENT_SOURCE_DIR}/version.h.cmake"
 SET(SRCS
     plugins.cpp
     touchpadbackend.cpp
+    logging.cpp
 )
 
 include(backends/x11.cmake)
+include(backends/kwin_wayland.cmake)
 
 set(SRCS
     ${SRCS}
-    kcm/customslider.cpp
-    kcm/sliderpair.cpp
-    kcm/testarea.cpp
-    kcm/testbutton.cpp
-    kcm/touchpadconfig.cpp
-    kcm/touchpadparametersbase.cpp
-    kcm/customconfigdialogmanager.cpp
+    kcm/touchpadconfigcontainer.cpp
+    kcm/touchpadconfigplugin.cpp
+    kcm/libinput/touchpadconfiglibinput.cpp
+    kcm/xlib/customslider.cpp
+    kcm/xlib/sliderpair.cpp
+    kcm/xlib/testarea.cpp
+    kcm/xlib/testbutton.cpp
+    kcm/xlib/touchpadconfigxlib.cpp
+    kcm/xlib/touchpadparametersbase.cpp
+    kcm/xlib/customconfigdialogmanager.cpp
 )
 
 qt5_add_dbus_interfaces(SRCS
                         ${CMAKE_CURRENT_BINARY_DIR}/org.kde.touchpad.xml
 )
 
-kconfig_add_kcfg_files(SRCS kcm/touchpadparameters.kcfgc)
+qt5_add_resources( SRCS kcm/resources.qrc )
+
+kconfig_add_kcfg_files(SRCS kcm/xlib/touchpadparameters.kcfgc)
 
 ki18n_wrap_ui(SRCS
-            kcm/ui/pointermotion.ui
-            kcm/ui/tap.ui
-            kcm/ui/scroll.ui
-            kcm/ui/sensitivity.ui
-            kcm/ui/kded.ui
-            kcm/ui/testarea.ui
+            kcm/xlib/ui/pointermotion.ui
+            kcm/xlib/ui/tap.ui
+            kcm/xlib/ui/scroll.ui
+            kcm/xlib/ui/sensitivity.ui
+            kcm/xlib/ui/kded.ui
+            kcm/xlib/ui/testarea.ui
 )
 
 qt5_generate_dbus_interface(kded/kded.h org.kde.touchpad.xml)
@@ -54,6 +64,7 @@ target_link_libraries(kded_touchpad
 		      KF5::KCMUtils
 		      KF5::Notifications
 		      KF5::CoreAddons
+		      KF5::WindowSystem
 		      KF5::ConfigWidgets
 		      KF5::DBusAddons
 		      KF5::Completion
@@ -64,8 +75,10 @@ target_link_libraries(kded_touchpad
 		      KF5::XmlGui
 		      KF5::GlobalAccel
 		      KF5::Plasma
+		      KF5::Declarative
                       
 		      Qt5::X11Extras
+		      Qt5::QuickWidgets
 )
 
 add_subdirectory(applet)
@@ -92,6 +105,6 @@ install(TARGETS kded_touchpad
         DESTINATION ${PLUGIN_INSTALL_DIR}
 )
 
-install(FILES kcm/touchpad.kcfg
+install(FILES kcm/xlib/touchpad.kcfg
         DESTINATION ${KCFG_INSTALL_DIR}
 )

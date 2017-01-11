@@ -1,0 +1,61 @@
+/*
+ * Copyright 2017 Roman Gilg <subdiff@gmail.com>
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
+ */
+
+#ifndef KWINWAYLANDBACKEND_H
+#define KWINWAYLANDBACKEND_H
+
+#include "touchpadbackend.h"
+
+#include <QVector>
+
+class KWinWaylandTouchpad;
+class QDBusInterface;
+
+class KWinWaylandBackend : public TouchpadBackend
+{
+    Q_OBJECT
+
+    Q_PROPERTY(int touchpadCount READ touchpadCount CONSTANT)
+
+public:
+    explicit KWinWaylandBackend(QObject *parent = 0);
+    ~KWinWaylandBackend();
+
+    bool applyConfig() Q_DECL_OVERRIDE;
+    bool getConfig() Q_DECL_OVERRIDE;
+    bool getDefaultConfig() Q_DECL_OVERRIDE;
+    bool isChangedConfig() const Q_DECL_OVERRIDE;
+    const QString &errorString() const Q_DECL_OVERRIDE { return m_errorString; }
+
+    virtual int touchpadCount() const Q_DECL_OVERRIDE { return m_devices.count(); }
+    virtual QVector<QObject*> getDevices() const Q_DECL_OVERRIDE { return m_devices; }
+
+private Q_SLOTS:
+    void onDeviceAdded(QString);
+    void onDeviceRemoved(QString);
+
+private:
+    void findTouchpads();
+
+    QDBusInterface* m_deviceManager;
+    QVector<QObject*> m_devices;
+
+    QString m_errorString = QString();
+};
+
+#endif // KWINWAYLANDBACKEND_H

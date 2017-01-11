@@ -16,10 +16,11 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-#ifndef TOUCHPADCONFIG_H
-#define TOUCHPADCONFIG_H
+#ifndef TOUCHPADCONFIGXLIB_H
+#define TOUCHPADCONFIGXLIB_H
 
-#include <KCModule>
+#include "../touchpadconfigplugin.h"
+
 #include <KConfigDialogManager>
 #include <QScopedPointer>
 
@@ -33,6 +34,7 @@
 #include "ui_sensitivity.h"
 #include "ui_kded.h"
 
+class TouchpadConfigContainer;
 class TouchpadBackend;
 class KMessageWidget;
 class OrgKdeTouchpadInterface;
@@ -42,21 +44,23 @@ class KShortcutsDialog;
 class QTabWidget;
 class KComboBox;
 class QDBusPendingCallWatcher;
+class QHideEvent;
 
-class TouchpadConfig : public KCModule
+class TouchpadConfigXlib : public TouchpadConfigPlugin
 {
     Q_OBJECT
 
 public:
-    explicit TouchpadConfig(QWidget *parent,
+    explicit TouchpadConfigXlib(TouchpadConfigContainer *parent,
                             const QVariantList &args = QVariantList());
-    virtual ~TouchpadConfig();
+    virtual ~TouchpadConfigXlib();
+
+    static void kcmInit();
 
     virtual void load();
     virtual void save();
     virtual void defaults();
 
-protected:
     virtual void hideEvent(QHideEvent *);
 
 private Q_SLOTS:
@@ -73,7 +77,6 @@ private Q_SLOTS:
 private:
     QVariantHash getActiveConfig();
 
-    TouchpadBackend *m_backend;
     TouchpadParameters m_config;
 
     QScopedPointer<QVariantHash> m_prevConfig;
@@ -97,4 +100,4 @@ private:
     Ui::KdedForm m_kded;
 };
 
-#endif // TOUCHPADCONFIG_H
+#endif // TOUCHPADCONFIGXLIB_H
