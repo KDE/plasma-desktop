@@ -26,6 +26,26 @@ QtObject {
 
     signal streamsChanged
 
+    // It's a JS object so we can do key lookup and don't need to take care of filtering duplicates.
+    property var pidMatches: ({})
+
+    // TODO Evict cache at some point, preferably if all instances of an application closed.
+    function registerPidMatch(appName) {
+        if (!hasPidMatch(appName)) {
+            pidMatches[appName] = true;
+
+            // In case this match is new, notify that streams might have changed.
+            // This way we also catch the case when the non-playing instance
+            // shows up first.
+            // Only notify if we changed to avoid infinite recursion.
+            streamsChanged();
+        }
+    }
+
+    function hasPidMatch(appName) {
+        return pidMatches[appName] === true;
+    }
+
     function findStreams(key, value) {
         var streams = []
         for (var i = 0, length = instantiator.count; i < length; ++i) {

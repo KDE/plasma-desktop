@@ -204,8 +204,16 @@ MouseArea {
         }
 
         var streams = pa.streamsForPid(task.pid);
-        if (!streams.length) {
-            streams = pa.streamsForAppName(task.appName);
+        if (streams.length) {
+            pa.registerPidMatch(task.appName);
+        } else {
+            // We only want to fall back to appName matching if we never managed to map
+            // a PID to an audio stream window. Otherwise if you have two instances of
+            // an application, one playing and the other not, it will look up appName
+            // for the non-playing instance and erroneously show an indicator on both.
+            if (!pa.hasPidMatch(task.appName)) {
+                streams = pa.streamsForAppName(task.appName);
+            }
         }
 
         task.audioStreams = streams;
