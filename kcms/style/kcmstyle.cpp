@@ -41,13 +41,11 @@
 #include <kstandarddirs.h>
 #include <kautostart.h>
 #include <KDebug>
-#include <KNotification>
 #include <KLibrary>
 #include <KColorScheme>
 #include <KStandardDirs>
 #include <KNewStuff3/KNS3/DownloadDialog>
 #include <KConfigGroup>
-
 
 #include <QFile>
 #include <QSettings>
@@ -248,9 +246,7 @@ KCMStyle::KCMStyle( QWidget* parent, const QVariantList& )
 
     addWhatsThis();
 
-    if (!QFile::exists(QLibraryInfo::location(QLibraryInfo::PluginsPath) + "/menubar/libappmenu-qt.so")) {
-        fineTuningUi.menubarBox->hide();
-    }
+    fineTuningUi.menuBarMessageWidget->hide();
 
     // Insert the pages into the tabWidget
     tabWidget->addTab(page1, i18nc("@title:tab", "&Applications"));
@@ -391,54 +387,27 @@ void KCMStyle::save()
     // menubar page
     KConfigGroup menuBarStyleGroup(&_config, "Appmenu Style");
 
-    // load kded module if needed
-    bool load = false;
-    QList<QVariant> args;
-
     QString style = menuBarStyleText(fineTuningUi.comboMenubarStyle->currentIndex());
 
     QString previous = menuBarStyleGroup.readEntry("Style", "InApplication");
     menuBarStyleGroup.writeEntry("Style", style);
     _config.sync();
 
-    QDBusMessage method = QDBusMessage::createMethodCall(QStringLiteral("org.kde.kappmenu"),
-                                                         QStringLiteral("/KAppMenu"),
-                                                         QStringLiteral("org.kde.kappmenu"),
-                                                         QStringLiteral("reconfigure"));
-    QDBusConnection::sessionBus().asyncCall(method);
+    QDBusConnection::sessionBus().asyncCall(
+        QDBusMessage::createMethodCall(QStringLiteral("org.kde.kappmenu"),
+                                       QStringLiteral("/KAppMenu"),
+                                       QStringLiteral("org.kde.kappmenu"),
+                                       QStringLiteral("reconfigure")
+        )
+    );
 
-    if (previous == QLatin1String("InApplication") && style != QLatin1String("InApplication")) {
-        load = true;
-        KNotification *notification = new KNotification(QStringLiteral("reload"), 0);
-        notification->setComponentName(QStringLiteral("kcmstyle"));
-        notification->setText(i18n("Settings changes will take effect only on application restart"));
-        notification->sendEvent();
+    const bool showMenuInApplication = (style == QLatin1String("InApplication"));
+
+    if (previous == QLatin1String("InApplication") && !showMenuInApplication) {
+        fineTuningUi.menuBarMessageWidget->setMessageType(KMessageWidget::Information);
+        fineTuningUi.menuBarMessageWidget->setText(i18n("Your changes will take effect only on application restart."));
+        fineTuningUi.menuBarMessageWidget->animatedShow();
     }
-
-    args = QList<QVariant>() << "appmenu" << (style != QLatin1String("InApplication"));
-    method = QDBusMessage::createMethodCall(QStringLiteral("org.kde.kded5"),
-                                            QStringLiteral("/kded"),
-                                            QStringLiteral("org.kde.kded5"),
-                                            QStringLiteral("setModuleAutoloading"));
-    method.setArguments(args);
-    QDBusConnection::sessionBus().asyncCall(method);
-
-    args = QList<QVariant>() << "appmenu";
-    if (load) {
-        method = QDBusMessage::createMethodCall(QStringLiteral("org.kde.kded5"),
-                                                QStringLiteral("/kded"),
-                                                QStringLiteral("org.kde.kded5"),
-                                                QStringLiteral("loadModule"));
-        QDBusMessage method = QDBusMessage::createMethodCall(QStringLiteral("org.kde.kappmenu"), QStringLiteral("/KAppMenu"), QStringLiteral("org.kde.kappmenu"), QStringLiteral("reconfigure"));
-        QDBusConnection::sessionBus().asyncCall(method);
-    } else if (style == QLatin1String("InApplication")) {
-        method = QDBusMessage::createMethodCall(QStringLiteral("org.kde.kded5"),
-                                                QStringLiteral("/kded"),
-                                                QStringLiteral("org.kde.kded5"),
-                                                QStringLiteral("unloadModule"));
-    }
-    method.setArguments(args);
-    QDBusConnection::sessionBus().asyncCall(method);
 
     // Export the changes we made to qtrc, and update all qt-only
     // applications on the fly, ensuring that we still follow the user's
@@ -752,11 +721,9 @@ QString KCMStyle::menuBarStyleText(int index)
 {
     switch (index) {
         case 1:
-            return QStringLiteral("ButtonVertical");
+            return QStringLiteral("Decoration");
         case 2:
-            return QStringLiteral("TopMenuBar");
-        case 3:
-            return QStringLiteral("Others");
+            return QStringLiteral("Widget");
     }
 
     return QStringLiteral("InApplication");
@@ -764,12 +731,10 @@ QString KCMStyle::menuBarStyleText(int index)
 
 int KCMStyle::menuBarStyleIndex(const QString &text)
 {
-    if (text == QLatin1String("ButtonVertical")) {
+    if (text == QLatin1String("Decoration")) {
         return 1;
-    } else if (text == QLatin1String("TopMenuBar")) {
+    } else if (text == QLatin1String("Widget")) {
         return 2;
-    } else if (text == QLatin1String("Others")) {
-        return 3;
     }
 
     return 0;
