@@ -753,6 +753,12 @@ void FolderModel::addDragImage(QDrag *drag, int x, int y)
 
 void FolderModel::dragSelected(int x, int y)
 {
+    if (m_dragInProgress) {
+        return;
+    }
+
+    m_dragInProgress = true;
+
     // Avoid starting a drag synchronously in a mouse handler or interferes with
     // child event filtering in parent items (and thus e.g. press-and-hold hand-
     // ling in a containment).
@@ -764,6 +770,7 @@ void FolderModel::dragSelected(int x, int y)
 void FolderModel::dragSelectedInternal(int x, int y)
 {
     if (!m_viewAdapter || !m_selectionModel->hasSelection()) {
+        m_dragInProgress = false;
         return;
     }
 
@@ -790,7 +797,6 @@ void FolderModel::dragSelectedInternal(int x, int y)
     drag->setMimeData(m_dirModel->mimeData(sourceDragIndexes));
 
     item->grabMouse();
-    m_dragInProgress = true;
     drag->exec(supportedDragActions());
     m_dragInProgress = false;
     item->ungrabMouse();
