@@ -1,6 +1,6 @@
 project(plasma-desktop)
 
-set(PROJECT_VERSION "5.8.90")
+set(PROJECT_VERSION "5.8.95")
 
 set(PROJECT_VERSION_MAJOR 5)
 
