@@ -155,7 +155,11 @@ PlasmaComponents.ContextMenu {
                 });
                 menu.addMenuItem(menuItem, virtualDesktopsMenuItem);
 
-                menu.addMenuItem(newSeparator(menu), virtualDesktopsMenuItem);
+                // Technically media controls and audio streams are separate but for the user they're
+                // semantically related, don't add a separator inbetween.
+                if (!menu.visualParent.hasAudioStream) {
+                    menu.addMenuItem(newSeparator(menu), virtualDesktopsMenuItem);
+                }
 
                 // If we don't have a window associated with the player but we can quit
                 // it through MPRIS we'll offer a "Quit" option instead of "Close"
