@@ -295,7 +295,7 @@ void RootModel::refresh()
                     AbstractModel *subModel = subGroupEntry->childModel();
 
                     for (int j = 0; j < subModel->count(); ++j) {
-                        AppEntry *appEntry = static_cast<AppEntry*>(subModel->index(i, 0).internalPointer());
+                        AppEntry *appEntry = static_cast<AppEntry*>(subModel->index(j, 0).internalPointer());
 
                         if (appEntry->name().isEmpty()) {
                             continue;
