@@ -198,8 +198,7 @@ Item {
                     continue;
                 }
                 var sourceData = data[source];
-
-                if (sourceData && sourceData.DesktopEntry === desktopFileName && sourceData.InstancePid === pid) {
+                if (sourceData && sourceData.DesktopEntry === desktopFileName && (pid === undefined || sourceData.InstancePid === pid)) {
                     return source;
                 }
             }
