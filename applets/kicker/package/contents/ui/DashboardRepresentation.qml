@@ -912,6 +912,9 @@ Kicker.DashboardWindow {
                                     root.widgetExplorer.widgetsModel.filterQuery = currentItem.m.filterData;
                                     root.widgetExplorer.widgetsModel.filterType = currentItem.m.filterType;
 
+                                    allApps = false;
+                                    funnelModel.sourceModel = model;
+
                                     return;
                                 }
 
