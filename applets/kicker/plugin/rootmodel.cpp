@@ -322,7 +322,7 @@ void RootModel::refresh()
 
             int at = 0;
             QList<AbstractEntry *> page;
-            page.reserve(24);
+            page.reserve(m_pageSize);
 
             foreach(AppEntry *app, apps) {
                 page.append(app);
