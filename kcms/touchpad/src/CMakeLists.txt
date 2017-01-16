@@ -1,5 +1,5 @@
 # KI18N Translation Domain for this library
-add_definitions(-DTRANSLATION_DOMAIN=\"kcmtouchpad\")
+add_definitions(-DTRANSLATION_DOMAIN=\"kcm_touchpad\")
 
 configure_file("${CMAKE_CURRENT_SOURCE_DIR}/version.h.cmake"
                "${CMAKE_CURRENT_BINARY_DIR}/version.h"
