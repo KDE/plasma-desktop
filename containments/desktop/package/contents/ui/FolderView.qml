@@ -561,7 +561,7 @@ Item {
                 }
 
                 onCachedRectangleSelectionChanged: {
-                    if (cachedRectangleSelection.length) {
+                    if (cachedRectangleSelection && cachedRectangleSelection.length) {
                         // Set current index to start of selection.
                         // cachedRectangleSelection is pre-sorted.
                         currentIndex = cachedRectangleSelection[0];
