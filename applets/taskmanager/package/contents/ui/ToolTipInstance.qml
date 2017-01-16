@@ -257,6 +257,7 @@ Column {
                         anchors.bottom: parent.bottom
                         width: parent.width
                         height: playerControlsRow.height
+                        color: theme.backgroundColor
                         opacity: 0.8
                     }
                 }
