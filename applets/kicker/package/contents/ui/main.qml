@@ -50,6 +50,8 @@ Item {
     property QtObject globalFavorites: rootModel.favoritesModel
     property QtObject systemFavorites: rootModel.systemFavoritesModel
 
+    Plasmoid.icon: plasmoid.configuration.useCustomButtonImage ? plasmoid.configuration.customButtonImage : plasmoid.configuration.icon
+
     onSystemFavoritesChanged: {
         systemFavorites.favorites = plasmoid.configuration.favoriteSystemActions;
     }
