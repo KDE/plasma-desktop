@@ -412,11 +412,11 @@ Item {
     }
 
     function createContextMenu(rootTask, modelIndex) {
-        var menu = tasks.contextMenuComponent.createObject(rootTask);
-        menu.visualParent = rootTask;
-        menu.modelIndex = modelIndex;
-        menu.mpris2Source = mpris2Source;
-        return menu;
+        return tasks.contextMenuComponent.createObject(rootTask,
+            { visualParent: rootTask,
+              modelIndex: modelIndex,
+              mpris2Source: mpris2Source
+            });
     }
 
     Component.onCompleted: {
