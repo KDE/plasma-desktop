@@ -354,7 +354,7 @@ MouseArea {
         anchors {
             left: parent.left
             leftMargin: adjustMargin(true, parent.width, taskFrame.margins.left)
-            verticalCenter: parent.verticalCenter
+            top: parent.top
             topMargin: adjustMargin(false, parent.height, taskFrame.margins.top)
         }
 
@@ -450,8 +450,7 @@ MouseArea {
         anchors {
             right: parent.right
             rightMargin: iconBox.adjustMargin(true, parent.width, taskFrame.margins.right)
-            top: parent.top
-            topMargin: iconBox.adjustMargin(false, parent.height, taskFrame.margins.top)
+            verticalCenter: parent.verticalCenter
         }
     }
 
