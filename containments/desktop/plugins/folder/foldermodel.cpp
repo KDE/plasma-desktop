@@ -94,6 +94,7 @@ void DirLister::handleError(KIO::Job *job)
 FolderModel::FolderModel(QObject *parent) : QSortFilterProxyModel(parent),
     m_dirWatch(nullptr),
     m_dragInProgress(false),
+    m_urlChangedWhileDragging(false),
     m_previewGenerator(0),
     m_viewAdapter(0),
     m_actionCollection(this),
@@ -182,6 +183,7 @@ void FolderModel::setUrl(const QString& url)
     m_isDirCache.clear();
     m_dirModel->dirLister()->openUrl(resolvedUrl);
     clearDragImages();
+    m_dragIndexes.clear();
     endResetModel();
 
     emit urlChanged();
@@ -199,6 +201,10 @@ void FolderModel::setUrl(const QString& url)
         connect(m_dirWatch, &KDirWatch::created, this, &FolderModel::iconNameChanged);
         connect(m_dirWatch, &KDirWatch::dirty, this, &FolderModel::iconNameChanged);
         m_dirWatch->addFile(resolvedUrl.toLocalFile() + QLatin1String("/.directory"));
+    }
+
+    if (m_dragInProgress) {
+        m_urlChangedWhileDragging = true;
     }
 
     emit iconNameChanged();
@@ -236,6 +242,11 @@ QString FolderModel::iconName() const
 QString FolderModel::errorString() const
 {
     return m_errorString;
+}
+
+bool FolderModel::dragging() const
+{
+    return m_dragInProgress;
 }
 
 bool FolderModel::usedByContainment() const
@@ -758,6 +769,8 @@ void FolderModel::dragSelected(int x, int y)
     }
 
     m_dragInProgress = true;
+    emit draggingChanged();
+    m_urlChangedWhileDragging = false;
 
     // Avoid starting a drag synchronously in a mouse handler or interferes with
     // child event filtering in parent items (and thus e.g. press-and-hold hand-
@@ -771,6 +784,7 @@ void FolderModel::dragSelectedInternal(int x, int y)
 {
     if (!m_viewAdapter || !m_selectionModel->hasSelection()) {
         m_dragInProgress = false;
+        emit draggingChanged();
         return;
     }
 
@@ -796,16 +810,28 @@ void FolderModel::dragSelectedInternal(int x, int y)
 
     drag->setMimeData(m_dirModel->mimeData(sourceDragIndexes));
 
+    // Due to spring-loading (aka auto-expand), the URL might change
+    // while the drag is in-flight - in that case we don't want to
+    // unnecessarily emit dataChanged() for (possibly invalid) indices
+    // after it ends.
+    const QUrl currentUrl(m_dirModel->dirLister()->url());
+
     item->grabMouse();
     drag->exec(supportedDragActions());
-    m_dragInProgress = false;
+
     item->ungrabMouse();
 
-    const QModelIndex first(m_dragIndexes.first());
-    const QModelIndex last(m_dragIndexes.last());
-    m_dragIndexes.clear();
-    // TODO: Optimize to emit contiguous groups.
-    emit dataChanged(first, last, QVector<int>() << BlankRole);
+    m_dragInProgress = false;
+    emit draggingChanged();
+    m_urlChangedWhileDragging = false;
+
+    if (m_dirModel->dirLister()->url() == currentUrl) {
+        const QModelIndex first(m_dragIndexes.first());
+        const QModelIndex last(m_dragIndexes.last());
+        m_dragIndexes.clear();
+        // TODO: Optimize to emit contiguous groups.
+        emit dataChanged(first, last, QVector<int>() << BlankRole);
+    }
 }
 
 void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row)
@@ -816,7 +842,7 @@ void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row)
         return;
     }
 
-    if (m_dragInProgress && row == -1) {
+    if (m_dragInProgress && row == -1 && !m_urlChangedWhileDragging) {
         if (m_locked || mimeData->urls().isEmpty()) {
             return;
         }
@@ -874,6 +900,11 @@ void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row)
     ev.setDropAction(proposedAction);
 
     QUrl dropTargetUrl;
+
+    // So we get to run mostLocalUrl() over the current URL.
+    if (item.isNull()) {
+        item = m_dirModel->dirLister()->rootItem();
+    }
 
     if (item.isNull()) {
         dropTargetUrl = m_dirModel->dirLister()->url();

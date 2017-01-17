@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2013-2014 by Eike Hein <hein@kde.org>                   *
+ *   Copyright (C) 2014-2017 by Eike Hein <hein@kde.org>                   *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -17,56 +17,56 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-import QtQuick 2.0
-import QtQuick.Layouts 1.1
+import QtQuick 2.4
 
-import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.draganddrop 2.0 as DragDrop
 
 DragDrop.DropArea {
+    id: dropArea
+
     property Item folderView: null
 
-    onContainsDragChanged: {
-        if (containsDrag) {
-            hoverActivateTimer.restart();
-        } else {
-            hoverActivateTimer.stop();
+    function handleDragMove(folderView, pos) {
+        // Trigger autoscroll.
+        folderView.scrollLeft = (pos.x < (units.largeSpacing * 3));
+        folderView.scrollRight = (pos.x > width - (units.largeSpacing * 3));
+        folderView.scrollUp = (pos.y < (units.largeSpacing * 3));
+        folderView.scrollDown = (pos.y > height - (units.largeSpacing * 3));
+
+        folderView.handleDragMove(pos.x, pos.y);
+    }
+
+    function handleDragEnd(folderView) {
+        // Cancel autoscroll.
+        folderView.scrollLeft = false;
+        folderView.scrollRight = false;
+        folderView.scrollUp = false;
+        folderView.scrollDown = false;
+
+        folderView.endDragMove();
+    }
+
+    onDragMove: {
+        // TODO: We should reject drag moves onto file items that don't accept drops
+        // (cf. QAbstractItemModel::flags() here, but DeclarativeDropArea currently
+        // is currently incapable of rejecting drag events.
+
+        if (folderView) {
+            handleDragMove(folderView, mapToItem(folderView, event.x, event.y));
         }
     }
 
-    onDrop: folderView.model.dropCwd(event)
-    preventStealing: true
-
-    function toggle() {
-        plasmoid.expanded = !plasmoid.expanded;
+    onDragLeave: {
+        if (folderView) {
+            handleDragEnd(folderView);
+        }
     }
 
-    PlasmaCore.IconItem {
-        id: icon
+    onDrop: {
+        if (folderView) {
+            handleDragEnd(folderView);
 
-        anchors.fill: parent
-
-        active: mouseArea.containsMouse
-
-        source: plasmoid.configuration.useCustomIcon ? plasmoid.configuration.icon : folderView.model.iconName
-    }
-
-    MouseArea
-    {
-        id: mouseArea
-
-        anchors.fill: parent
-
-        hoverEnabled: true
-
-        onClicked: toggle()
-    }
-
-    Timer {
-        id: hoverActivateTimer
-
-        interval: root.hoverActivateDelay
-
-        onTriggered: toggle()
+            folderView.drop(folderView, event, mapToItem(folderView, event.x, event.y));
+        }
     }
 }

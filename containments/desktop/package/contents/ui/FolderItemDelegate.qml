@@ -41,6 +41,12 @@ Item {
     property Item hoverArea: loader.item ? loader.item.hoverArea : null
     property Item toolTip: loader.item ? loader.item.toolTip : null
 
+    function openPopup() {
+        if (isDir) {
+            loader.item.openPopup();
+        }
+    }
+
     Loader {
         id: loader
 
@@ -90,13 +96,13 @@ Item {
             }
 
             onHoveredChanged: {
-                if (hovered && !main.GridView.view.isRootView && model.isDir) {
-                    openPopupTimer.start();
+                if (hovered && (!main.GridView.view.isRootView || root.containsDrag) && model.isDir) {
+                    hoverActivateTimer.restart();
                 } else if (!hovered)
-                    openPopupTimer.stop();
+                    hoverActivateTimer.stop();
 
                     if (popupDialog != null) {
-                        popupDialog.destroy();
+                        popupDialog.requestDestroy();
                         popupDialog = null;
                     }
             }
@@ -111,12 +117,30 @@ Item {
             }
 
             Timer {
-                id: openPopupTimer
+                id: hoverActivateTimer
 
-                interval: units.longDuration * 3
+                interval: root.hoverActivateDelay
 
                 onTriggered: {
-                    impl.openPopup();
+                    if (root.useListViewMode) {
+                        doCd(index);
+                    } else {
+                        impl.openPopup();
+                    }
+                }
+            }
+
+            Connections {
+                target: main.GridView.view
+
+                enabled: hovered
+
+                onContentXChanged: {
+                    hoverActivateTimer.stop();
+                }
+
+                onContentYChanged: {
+                    hoverActivateTimer.stop();
                 }
             }
 
@@ -313,6 +337,22 @@ Item {
 
                 Column {
                     id: actions
+
+                    visible: {
+                        if (main.GridView.view.isRootView && root.containsDrag) {
+                            return false;
+                        }
+
+                        if (!main.GridView.view.isRootView && dialog.containsDrag) {
+                            return false;
+                        }
+
+                        if (popupDialog) {
+                            return false;
+                        }
+
+                        return true;
+                    }
 
                     x: units.smallSpacing * 3
                     y: units.smallSpacing * 3

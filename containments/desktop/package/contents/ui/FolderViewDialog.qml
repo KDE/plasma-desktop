@@ -29,6 +29,18 @@ Folder.SubDialog {
 
     visible: false
 
+    property bool containsDrag: {
+        if (folderViewDropArea.containsDrag) {
+            return true;
+        }
+
+        if (folderView.hoveredItem && folderView.hoveredItem.popupDialog) {
+            return folderView.hoveredItem.popupDialog.containsDrag;
+        }
+
+        return false;
+    }
+
     property QtObject closeTimer: closeTimer
     property QtObject childDialog: (folderView.hoveredItem != null) ? folderView.hoveredItem.popupDialog : null
     property bool containsMouse: folderView.containsMouse || (childDialog != null && childDialog.containsMouse)
@@ -46,22 +58,36 @@ Folder.SubDialog {
         }
     }
 
-    mainItem: FolderView {
-        id: folderView
+    mainItem: FolderViewDropArea {
+        id: folderViewDropArea
 
-        width: cellWidth * 3 + (10 * units.devicePixelRatio) // FIXME HACK: Use actual scrollbar width.
-        height: cellHeight * 2
+        width: folderView.cellWidth * 3 + (10 * units.devicePixelRatio) // FIXME HACK: Use actual scrollbar width.
+        height: folderView.cellHeight * 2
 
-        isRootView: false
+        folderView: folderView
 
-        locked: true
+        FolderView {
+            id: folderView
 
-        sortMode: ((plasmoid.configuration.sortMode == 0) ? 1 : plasmoid.configuration.sortMode)
-        filterMode: 0
+            anchors.fill: parent
 
-        // TODO: Bidi.
-        flow:  GridView.FlowLeftToRight
-        layoutDirection: Qt.LeftToRight
+            isRootView: false
+
+            locked: true
+
+            sortMode: ((plasmoid.configuration.sortMode == 0) ? 1 : plasmoid.configuration.sortMode)
+            filterMode: 0
+
+            // TODO: Bidi.
+            flow:  GridView.FlowLeftToRight
+            layoutDirection: Qt.LeftToRight
+
+            onDraggingChanged: {
+                if (!dragging && !dialog.visible) {
+                    dialog.destroy();
+                }
+            }
+        }
     }
 
     data: [
@@ -81,6 +107,14 @@ Folder.SubDialog {
             }
         }
     ]
+
+    function requestDestroy() {
+        if (folderView.dragging) {
+            visible = false;
+        } else {
+            destroy();
+        }
+    }
 
     function delayedDestroy() {
         var timer = Qt.createQmlObject('import QtQuick 2.0; Timer { onTriggered: itemDialog.destroy() }', itemDialog);

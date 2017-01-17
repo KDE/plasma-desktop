@@ -33,7 +33,7 @@ import org.kde.private.desktopcontainment.desktop 0.1 as Desktop
 import "LayoutManager.js" as LayoutManager
 import "FolderTools.js" as FolderTools
 
-DragDrop.DropArea {
+FolderViewDropArea {
     id: root
     objectName: isFolder ? "folder" : "desktop"
 
@@ -65,6 +65,8 @@ DragDrop.DropArea {
     property int iconSize: units.iconSizes.small
     property int iconWidth: iconSize
     property int iconHeight: iconWidth
+
+    readonly property int hoverActivateDelay: 750 // Magic number that matches Dolphin's auto-expand folders delay.
 
     preventStealing: true
 
@@ -255,10 +257,7 @@ DragDrop.DropArea {
 
         // Trigger autoscroll.
         if (isFolder && FolderTools.isFileDrag(event)) {
-            folderViewLayer.view.scrollLeft = (event.x < (units.largeSpacing * 3));
-            folderViewLayer.view.scrollRight = (event.x > width - (units.largeSpacing * 3));
-            folderViewLayer.view.scrollUp = (event.y < (units.largeSpacing * 3));
-            folderViewLayer.view.scrollDown = (event.y > height - (units.largeSpacing * 3));
+            handleDragMove(folderViewLayer.view, mapToItem(folderViewLayer.view, event.x, event.y));
         } else if (isContainment) {
             placeHolder.width = LayoutManager.defaultAppletSize.width;
             placeHolder.height = LayoutManager.defaultAppletSize.height;
@@ -274,10 +273,7 @@ DragDrop.DropArea {
     onDragLeave: {
         // Cancel autoscroll.
         if (isFolder) {
-            folderViewLayer.view.scrollLeft = false;
-            folderViewLayer.view.scrollRight = false;
-            folderViewLayer.view.scrollUp = false;
-            folderViewLayer.view.scrollDown = false;
+            handleDragEnd(folderViewLayer.view);
         }
 
         if (isContainment) {
@@ -287,12 +283,7 @@ DragDrop.DropArea {
 
     onDrop: {
         if (isFolder && FolderTools.isFileDrag(event)) {
-            // Cancel autoscroll.
-            folderViewLayer.view.scrollLeft = false;
-            folderViewLayer.view.scrollRight = false;
-            folderViewLayer.view.scrollUp = false;
-            folderViewLayer.view.scrollDown = false;
-
+            handleDragEnd(folderViewLayer.view);
             folderViewLayer.view.drop(root, event, mapToItem(folderViewLayer.view, event.x, event.y));
         } else if (isContainment) {
             placeHolderPaint.opacity = 0;

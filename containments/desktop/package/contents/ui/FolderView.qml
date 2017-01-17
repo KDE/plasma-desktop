@@ -42,6 +42,7 @@ Item {
     property alias url: dir.url
     property alias positions: positioner.positions
     property alias errorString: dir.errorString
+    property alias dragging: dir.dragging
     property alias locked: dir.locked
     property alias sortMode: dir.sortMode
     property alias filterMode: dir.filterMode
@@ -56,6 +57,7 @@ Item {
     property alias scrollRight: gridView.scrollRight
     property alias scrollUp: gridView.scrollUp
     property alias scrollDown: gridView.scrollDown
+    property alias hoveredItem: gridView.hoveredItem
     property var history: []
     property Item backButton: null
 
@@ -68,6 +70,36 @@ Item {
 
     function linkHere(sourceUrl) {
         dir.linkHere(sourceUrl);
+    }
+
+    function handleDragMove(x, y) {
+        var child = childAt(x, y);
+
+        if (child != null && child == backButton) {
+            hoveredItem = null;
+            backButton.handleDragMove();
+        } else {
+            if (backButton && backButton.containsDrag) {
+                backButton.endDragMove();
+            }
+
+            var pos = mapToItem(gridView.contentItem, x, y);
+            var item = gridView.itemAt(pos.x, pos.y);
+
+            if (item && item.isDir) {
+                hoveredItem = item;
+            } else {
+                hoveredItem = null;
+            }
+        }
+    }
+
+    function endDragMove() {
+        if (backButton && backButton.active) {
+            backButton.endDragMove();
+        } else if (hoveredItem && !hoveredItem.popupDialog) {
+            hoveredItem = null;
+        }
     }
 
     function dropItemAt(pos) {

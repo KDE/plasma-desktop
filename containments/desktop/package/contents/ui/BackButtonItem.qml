@@ -34,8 +34,19 @@ PlasmaCore.FrameSvgItem {
     visible: history.length != 0
 
     property bool ignoreClick: false
+    property bool containsDrag: false
 
     imagePath: "widgets/viewitem"
+
+    function handleDragMove() {
+        containsDrag = true;
+        hoverActivateTimer.restart();
+    }
+
+    function endDragMove() {
+        containsDrag = false;
+        hoverActivateTimer.stop();
+    }
 
     MouseArea {
         id: mouseArea
@@ -105,10 +116,18 @@ PlasmaCore.FrameSvgItem {
         text: i18n("Back")
     }
 
+    Timer {
+        id: hoverActivateTimer
+
+        interval: root.hoverActivateDelay
+
+        onTriggered: doBack()
+    }
+
     states: [
         State {
             name: "hover"
-            when: mouseArea.containsMouse
+            when: mouseArea.containsMouse || containsDrag
 
             PropertyChanges {
                 target: upButton
