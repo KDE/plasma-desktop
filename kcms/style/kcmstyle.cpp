@@ -393,6 +393,25 @@ void KCMStyle::save()
     menuBarStyleGroup.writeEntry("Style", style);
     _config.sync();
 
+    // The old KCM used to mess with autoloading depending on whether menu was enabled or not
+    // since it was always disabled, the kded module would never autoload breaking global menu
+    // for users without an obvious reason why it won't work.
+    QDBusMessage method = QDBusMessage::createMethodCall(QStringLiteral("org.kde.kded5"),
+                                                         QStringLiteral("/kded"),
+                                                         QStringLiteral("org.kde.kded5"),
+                                                         QStringLiteral("setModuleAutoloading"));
+    method.setArguments({QStringLiteral("appmenu"), true});
+    QDBusConnection::sessionBus().asyncCall(method);
+
+    method = QDBusMessage::createMethodCall(QStringLiteral("org.kde.kded5"),
+                                            QStringLiteral("/kded"),
+                                            QStringLiteral("org.kde.kded5"),
+                                            QStringLiteral("loadModule"));
+    method.setArguments({QStringLiteral("appmenu")});
+    QDBusConnection::sessionBus().asyncCall(method);
+
+    // since we load the module async, this call will fail if the module wasn't loaded
+    // but since it will init itself when it loads, this isn't too bad
     QDBusConnection::sessionBus().asyncCall(
         QDBusMessage::createMethodCall(QStringLiteral("org.kde.kappmenu"),
                                        QStringLiteral("/KAppMenu"),
