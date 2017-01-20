@@ -34,6 +34,7 @@ Item {
     property bool moved: false
 
     property alias hoveredItem: dropHandler.hoveredItem
+    property alias handleWheelEvents: wheelHandler.active
 
     Timer {
         id: ignoreItemTimer
@@ -159,9 +160,20 @@ Item {
         id: wheelHandler
 
         anchors.fill: parent
-        property int wheelDelta: 0;
-        enabled: plasmoid.configuration.wheelEnabled
 
-        onWheel: wheelDelta = TaskTools.wheelActivateNextPrevTask(null, wheelDelta, wheel.angleDelta.y);
+        enabled: active && plasmoid.configuration.wheelEnabled
+
+        property bool active: true
+        property int wheelDelta: 0;
+
+
+        onWheel: {
+            if (!active) {
+                wheel.accepted = false;
+                return;
+            }
+
+            wheelDelta = TaskTools.wheelActivateNextPrevTask(null, wheelDelta, wheel.angleDelta.y);
+        }
     }
 }

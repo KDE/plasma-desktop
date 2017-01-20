@@ -31,7 +31,7 @@ import "../code/tools.js" as TaskTools
 MouseArea {
     id: task
 
-    width: groupDialog.mainItem.width
+    width: groupDialog.contentWidth
     height: Math.max(theme.mSize(theme.defaultFont).height, units.iconSizes.medium) + LayoutManager.verticalMargins()
 
     visible: false
@@ -48,7 +48,7 @@ MouseArea {
     property bool isWindow: model.IsWindow === true
     property int childCount: model.ChildCount != undefined ? model.ChildCount : 0
     property int previousChildCount: 0
-    property alias textWidth: label.implicitWidth
+    property alias labelText: label.text
     property bool pressed: false
     property int pressX: -1
     property int pressY: -1
@@ -85,6 +85,10 @@ MouseArea {
     }
 
     onChildCountChanged: {
+        if (containsMouse) {
+            groupDialog.activeTask = null;
+        }
+
         if (childCount > previousChildCount) {
             tasksModel.requestPublishDelegateGeometry(modelIndex(), backend.globalRect(task), task);
         }
@@ -163,7 +167,7 @@ MouseArea {
     }
 
     onWheel: {
-        if (plasmoid.configuration.wheelEnabled) {
+        if (plasmoid.configuration.wheelEnabled && (!inPopup || !groupDialog.overflowing)) {
             wheelDelta = TaskTools.wheelActivateNextPrevTask(task, wheelDelta, wheel.angleDelta.y);
         } else {
             wheel.accepted = false;

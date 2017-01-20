@@ -17,10 +17,11 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-import QtQuick 2.0
+import QtQuick 2.7
 import QtQuick.Window 2.2
 
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.draganddrop 2.0
 
 import "../code/layout.js" as LayoutManager
@@ -36,35 +37,112 @@ PlasmaCore.Dialog {
 
     property int preferredWidth: Screen.width / (3 * Screen.devicePixelRatio)
     property int preferredHeight: Screen.height / (2 * Screen.devicePixelRatio)
+    property int contentWidth: scrollArea.overflowing ? mainItem.width - (units.smallSpacing * 3) : mainItem.width
+    property TextMetrics textMetrics: TextMetrics {}
+    property alias overflowing: scrollArea.overflowing
+    property alias activeTask: focusActiveTaskTimer.targetIndex
 
-    mainItem: Item {
+    function selectTask(task) {
+        if (!task) {
+            return;
+        }
+
+        task.forceActiveFocus();
+        scrollArea.ensureItemVisible(task);
+    }
+
+    mainItem: PlasmaExtras.ScrollArea {
+        id: scrollArea
+
+        property bool overflowing: (viewport.height < contentItem.height)
+
+        horizontalScrollBarPolicy: Qt.ScrollBarAlwaysOff
+
+        function ensureItemVisible(item) {
+            var itemTop = item.y;
+            var itemBottom = (item.y + item.height);
+
+            if (itemTop < flickableItem.contentY) {
+                flickableItem.contentY = itemTop;
+            }
+
+            if ((itemBottom - flickableItem.contentY) > viewport.height) {
+                flickableItem.contentY = Math.abs(viewport.height - itemBottom);
+            }
+        }
+
         MouseHandler {
             id: mouseHandler
 
-            anchors.fill: parent
+            width: parent.width
+            height: (groupRepeater.count * (LayoutManager.verticalMargins()
+                + Math.max(theme.mSize(theme.defaultFont).height, units.iconSizes.medium)))
 
             target: taskList
-        }
+            handleWheelEvents: !scrollArea.overflowing
 
-        TaskList {
-            id: taskList
+            Timer {
+                id: focusActiveTaskTimer
 
-            anchors.fill: parent
+                property var targetIndex: null
 
-            Repeater {
-                id: groupRepeater
+                interval: 0
+                repeat: false
 
-                function currentIndex() {
-                    for (var i = 0; i < count; ++i) {
-                        if (itemAt(i).activeFocus) {
-                            return i;
+                onTriggered: {
+                    // Now we can home in on the previously active task
+                    // collected in groupDialog.onVisibleChanged.
+
+                    if (targetIndex != null) {
+                        for (var i = 0; i < groupRepeater.count; ++i) {
+                            var task = groupRepeater.itemAt(i);
+
+                            if (task.modelIndex() == targetIndex) {
+                                selectTask(task);
+                                return;
+                            }
                         }
                     }
+                }
+            }
 
-                    return -1;
+            TaskList {
+                id: taskList
+
+                anchors.fill: parent
+
+                add: Transition {
+                    // We trigger a null-interval timer in the first add
+                    // transition after setting the model so onTriggered
+                    // will run after the Flow has positioned items.
+
+                    ScriptAction {
+                        script: {
+                            if (groupRepeater.aboutToPopulate) {
+                                focusActiveTaskTimer.restart();
+                                groupRepeater.aboutToPopulate = false;
+                            }
+                        }
+                    }
                 }
 
-                onCountChanged: updateSize()
+                Repeater {
+                    id: groupRepeater
+
+                    property bool aboutToPopulate: false
+
+                    function currentIndex() {
+                        for (var i = 0; i < count; ++i) {
+                            if (itemAt(i).activeFocus) {
+                                return i;
+                            }
+                        }
+
+                        return -1;
+                    }
+
+                    onCountChanged: updateSize();
+                }
             }
         }
 
@@ -72,7 +150,7 @@ PlasmaCore.Dialog {
             var currentIndex = groupRepeater.currentIndex();
             // In doubt focus the first item
             if (currentIndex === -1) {
-                groupRepeater.itemAt(0).forceActiveFocus();
+                selectTask(groupRepeater.itemAt(0));
                 return;
             }
 
@@ -81,18 +159,18 @@ PlasmaCore.Dialog {
                 previousIndex = groupRepeater.count - 1;
             }
 
-            groupRepeater.itemAt(previousIndex).forceActiveFocus()
+            selectTask(groupRepeater.itemAt(previousIndex));
         }
 
         Keys.onDownPressed: {
             var currentIndex = groupRepeater.currentIndex();
             // In doubt focus the first item, also wrap around.
             if (currentIndex === -1 || currentIndex + 1 >= groupRepeater.count) {
-                groupRepeater.itemAt(0).forceActiveFocus();
+                selectTask(groupRepeater.itemAt(0));
                 return;
             }
 
-            groupRepeater.itemAt(currentIndex + 1).forceActiveFocus();
+            selectTask(groupRepeater.itemAt(currentIndex + 1));
         }
 
         Keys.onEscapePressed: groupDialog.visible = false;
@@ -119,6 +197,8 @@ PlasmaCore.Dialog {
         if (visible && visualParent) {
             groupFilter.model = tasksModel;
             groupFilter.rootIndex = groupFilter.modelIndex(visualParent.itemIndex);
+
+            groupRepeater.aboutToPopulate = true;
             groupRepeater.model = groupFilter;
 
             mainItem.forceActiveFocus();
@@ -147,11 +227,14 @@ PlasmaCore.Dialog {
             for (var i = 0; i < taskList.children.length - 1; ++i) {
                 task = taskList.children[i];
 
-                if (task.textWidth > maxWidth) {
-                    maxWidth = task.textWidth;
+                textMetrics.text = task.labelText;
+                var textWidth = textMetrics.boundingRect.width;
+
+                if (textWidth > maxWidth) {
+                    maxWidth = textWidth;
                 }
 
-                task.textWidthChanged.connect(updateSize);
+                task.labelTextChanged.connect(updateSize);
             }
 
             maxWidth += LayoutManager.horizontalMargins() + units.iconSizes.medium + 2 * units.smallSpacing;

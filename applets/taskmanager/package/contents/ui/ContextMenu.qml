@@ -533,7 +533,9 @@ PlasmaComponents.ContextMenu {
 
         text: i18nc("Remove launcher button for application shown while it is not running", "Unpin")
 
-        onClicked: tasksModel.requestRemoveLauncher(get(atm.LauncherUrlWithoutIcon));
+        onClicked: {
+            tasksModel.requestRemoveLauncher(get(atm.LauncherUrlWithoutIcon));
+        }
     }
 
 
