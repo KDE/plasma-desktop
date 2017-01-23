@@ -243,6 +243,7 @@ void KCMLookandFeel::load()
 
         m_model->appendRow(row);
     }
+    setNeedsSave(false);
 }
 
 
