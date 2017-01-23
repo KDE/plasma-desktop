@@ -133,6 +133,7 @@ void KCMSplashScreen::load()
         row->setData(pkg.filePath("previews", QStringLiteral("splash.png")), ScreenhotRole);
         m_model->appendRow(row);
     }
+    setNeedsSave(false);
 }
 
 
