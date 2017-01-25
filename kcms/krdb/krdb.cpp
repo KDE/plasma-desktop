@@ -256,11 +256,11 @@ static void createGtkrc( bool exportColors, const QPalette& cg, bool exportGtkTh
     t.setCodec( QTextCodec::codecForLocale () );
 
     t << i18n(
-            "# created by KDE, %1\n"
+            "# created by KDE Plasma, %1\n"
             "#\n"
-            "# If you do not want KDE to override your GTK settings, select\n"
-            "# Appearance -> Colors in the System Settings and disable the checkbox\n"
-            "# \"Apply colors to non-KDE4 applications\"\n"
+            "# If you do not want Plasma to override your GTK settings, select\n"
+            "# Colors in the System Settings and disable the checkbox\n"
+            "# \"Apply colors to non-Qt applications\"\n"
             "#\n"
             "#\n", QDateTime::currentDateTime().toString());
 
