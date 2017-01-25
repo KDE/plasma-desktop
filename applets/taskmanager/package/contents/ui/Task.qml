@@ -444,8 +444,8 @@ MouseArea {
         readonly property bool shown: item && item.visible
 
         source: "AudioStream.qml"
-        width: Math.min(units.iconSizes.medium, iconBox.width)
-        height: Math.min(units.iconSizes.medium, iconBox.height)
+        width: units.roundToIconSize(Math.min(iconBox.width, units.iconSizes.smallMedium))
+        height: units.roundToIconSize(Math.min(iconBox.height, units.iconSizes.smallMedium))
 
         anchors {
             right: parent.right

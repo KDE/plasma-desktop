@@ -41,6 +41,12 @@ Item {
 
     Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
 
+    Plasmoid.onUserConfiguringChanged: {
+        if (plasmoid.userConfiguring) {
+            groupDialog.visible = false;
+        }
+    }
+
     Layout.fillWidth: true
     Layout.fillHeight:true
     Layout.minimumWidth: tasks.vertical ? 0 : LayoutManager.preferredMinWidth()
