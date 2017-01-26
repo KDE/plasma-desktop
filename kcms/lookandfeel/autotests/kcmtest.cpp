@@ -61,6 +61,13 @@ void KcmTest::initTestCase()
 
     QVERIFY(m_configDir.mkpath("."));
 
+    //we need an existing colorscheme file, even if empty
+    QVERIFY(m_dataDir.mkpath(QStringLiteral("color-schemes")));
+    QFile f(m_dataDir.path() + QStringLiteral("/color-schemes/TestValue.colors"));
+    f.open(QIODevice::WriteOnly);
+    f.write("finocchia");        // write to stderr
+    f.close();
+
     const QString packagePath = QFINDTESTDATA("lookandfeel");
 
     Plasma::Package p = Plasma::PluginLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"));
