@@ -148,9 +148,10 @@ PlasmaCore.Dialog {
 
         Keys.onUpPressed: {
             var currentIndex = groupRepeater.currentIndex();
-            // In doubt focus the first item
+            // In doubt focus the last item, so we start at the bottom when user
+            // initially presses up.
             if (currentIndex === -1) {
-                selectTask(groupRepeater.itemAt(0));
+                selectTask(groupRepeater.itemAt(groupRepeater.count - 1));
                 return;
             }
 
