@@ -128,7 +128,7 @@ Item {
                         Column {
                             spacing: units.smallSpacing
                             Controls.Label {
-                                text: "General settings:"
+                                text: i18n("General settings:")
                             }
 
                             Column {
@@ -244,7 +244,7 @@ Item {
                         Column {
                             spacing: units.smallSpacing
                             Controls.Label {
-                                text: "Acceleration:"
+                                text: i18n("Acceleration:")
                             }
 
                             Column {
@@ -324,7 +324,7 @@ Item {
                         Column {
                             spacing: units.smallSpacing
                             Controls.Label {
-                                text: "Tapping:"
+                                text: i18n("Tapping:")
                             }
 
                             Column {
@@ -462,7 +462,7 @@ Item {
                         Column {
                             spacing: units.smallSpacing
                             Controls.Label {
-                                text: "Scrolling:"
+                                text: i18n("Scrolling:")
                             }
 
                             Column {
