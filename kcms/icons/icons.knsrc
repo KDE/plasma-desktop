@@ -95,3 +95,5 @@ ProvidersUrl=http://download.kde.org/ocs/providers.xml
 Categories=KDE Icon Theme
 TargetDir=icons
 Uncompress=true
+
+AdoptionCommand=@CMAKE_INSTALL_FULL_LIBEXECDIR@/plasma-changeicons %d

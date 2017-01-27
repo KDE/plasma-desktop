@@ -20,6 +20,7 @@
 #include "iconthemes.h"
 
 #include <config-runtime.h>
+#include "config.h"
 
 #include <stdlib.h>
 #include <unistd.h>
@@ -41,6 +42,7 @@
 #include <QUrl>
 #include <qtemporaryfile.h>
 #include <QApplication>
+#include <QProcess>
 
 #include <KBuildSycocaProgressDialog>
 #include <KLocalizedString>
@@ -319,22 +321,6 @@ void IconThemesConfig::getNewTheme()
   KNS3::DownloadDialog dialog(QStringLiteral("icons.knsrc"), this);
   dialog.exec();
   if (!dialog.changedEntries().isEmpty()) {
-    for(int i = 0; i < dialog.changedEntries().size(); i ++) {
-      if(dialog.changedEntries().at(i).status() == KNS3::Entry::Installed
-         && !dialog.changedEntries().at(i).installedFiles().isEmpty()) {
-          const QString themeTmpFile = dialog.changedEntries().at(i).installedFiles().at(0);
-          const QString name = dialog.changedEntries().at(i).installedFiles().at(0).section('/', -2, -2);
-          qCDebug(KCM_ICONS)<<"IconThemesConfig::getNewTheme() themeTmpFile="<<themeTmpFile<<"name="<<name;
-          QStringList themeNames = findThemeDirs(themeTmpFile);
-          if (themeNames.isEmpty()) {
-              //dialog.changedEntries().at(i)->setStatus(KNS3::Entry::Invalid);
-          }
-          else if (! installThemes(themeNames, themeTmpFile)) {
-              //dialog.changedEntries().at(i)->setStatus(KNS3::Entry::Invalid);
-          }
-      }
-    }
-
     // reload the display icontheme items
     KIconLoader::global()->newIconLoader();
     loadThemes();
@@ -478,21 +464,9 @@ void IconThemesConfig::save()
   if (!selected)
      return;
 
-  KConfigGroup config(KSharedConfig::openConfig(QStringLiteral("kdeglobals"), KConfig::SimpleConfig), "Icons");
-  config.writeEntry("Theme", selected->data(0, ThemeNameRole).toString());
-  config.sync();
+  QProcess::startDetached(CMAKE_INSTALL_FULL_LIBEXECDIR "/plasma-changeicons", {selected->data(0, ThemeNameRole).toString()});
 
-  KIconTheme::reconfigure();
   emit changed(false);
-
-  KSharedDataCache::deleteCache(QStringLiteral("icon-cache"));
-
-  for (int i=0; i<KIconLoader::LastGroup; i++)
-  {
-    KIconLoader::emitChange(KIconLoader::Group(i));
-  }
-
-  KBuildSycocaProgressDialog::rebuildKSycoca(this);
 
   m_bChanged = false;
   m_removeButton->setEnabled(false);
