@@ -60,6 +60,7 @@ class DirLister : public KDirLister
 
     Q_SIGNALS:
         void error(const QString &string);
+        void completed();
 
     protected:
         void handleError(KIO::Job *job);
@@ -212,6 +213,7 @@ class FolderModel : public QSortFilterProxyModel
 
     Q_SIGNALS:
         void urlChanged() const;
+        void listingCompleted() const;
         void iconNameChanged() const;
         void resolvedUrlChanged() const;
         void errorStringChanged() const;
