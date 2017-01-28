@@ -201,6 +201,8 @@ Item {
                 PlasmaCore.IconItem {
                     id: icon
 
+                    z: 2
+
                     states: [
                         State { // icon view
                             when: !root.useListViewMode
@@ -317,7 +319,7 @@ Item {
                     x: units.smallSpacing * 3
                     y: units.smallSpacing * 3
 
-                    z: 2
+                    z: 3
 
                     anchors {
                         centerIn: root.useListViewMode ? icon : undefined
@@ -331,6 +333,7 @@ Item {
                     id: frameComponent
 
                     PlasmaCore.FrameSvgItem {
+
                         prefix: frameLoader.prefix
 
                         imagePath: "widgets/viewitem"
