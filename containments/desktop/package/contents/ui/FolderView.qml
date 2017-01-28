@@ -952,8 +952,15 @@ Item {
             previews: plasmoid.configuration.previews
             previewPlugins: plasmoid.configuration.previewPlugins
 
+            onListingStarted: {
+                if (!gridView.model) {
+                    plasmoid.busy = true;
+                }
+            }
+
             onListingCompleted: {
                 if (!gridView.model) {
+                    plasmoid.busy = false;
                     gridView.model = positioner;
                 }
             }

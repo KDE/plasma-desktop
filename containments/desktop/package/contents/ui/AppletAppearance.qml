@@ -186,6 +186,7 @@ Item {
                 target: applet
                 onBusyChanged: {
                     if (applet.busy) {
+                        console.log("busy");
                         busyLoader.source = "BusyOverlay.qml"
                     } else if (busyLoader.item && typeof(busyLoader.item) != "undefined") {
                         busyLoader.item.disappear();
