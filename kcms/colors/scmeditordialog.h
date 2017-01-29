@@ -53,13 +53,6 @@ private Q_SLOTS:
     void updateTabs(bool byUser=false);
 
 private:
-
-    enum IndexTabs {
-        OptionTab = 0,
-        ColorTab,
-        DisabledTab,
-        InactiveTab
-    };
     /** save the current scheme */
     void saveScheme();
     void setUnsavedChanges(bool changes);

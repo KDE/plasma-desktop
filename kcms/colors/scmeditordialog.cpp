@@ -52,9 +52,10 @@ SchemeEditorDialog::SchemeEditorDialog(const QString &path, QWidget *parent)
     m_colorTab = new SchemeEditorColors(m_config);
     m_disabledTab = new SchemeEditorEffects(m_config, QPalette::Disabled);
     m_inactiveTab = new SchemeEditorEffects(m_config, QPalette::Inactive);
-    tabWidget->insertTab(OptionTab, m_optionTab, i18n("Options"));
-    tabWidget->insertTab(ColorTab, m_colorTab, i18n("Colors"));
-    tabWidget->insertTab(DisabledTab, m_disabledTab, i18n("Disabled"));
+    tabWidget->addTab(m_optionTab, i18n("Options"));
+    tabWidget->addTab(m_colorTab, i18n("Colors"));
+    tabWidget->addTab(m_disabledTab, i18n("Disabled"));
+    tabWidget->setCurrentWidget(m_colorTab);
 
     connect(m_optionTab, &SchemeEditorOptions::changed, this, &SchemeEditorDialog::updateTabs);
     connect(m_colorTab, &SchemeEditorColors::changed, this, &SchemeEditorDialog::updateTabs);
@@ -205,11 +206,11 @@ void SchemeEditorDialog::updateTabs(bool madeByUser)
     bool hideInactiveTab = group.readEntry("Enable", QVariant(true)).toBool();
     if ( hideInactiveTab )
     {
-        tabWidget->insertTab(InactiveTab, m_inactiveTab, i18n("Inactive"));
+        tabWidget->addTab(m_inactiveTab, i18n("Inactive"));
     }
     else
     {
-        tabWidget->removeTab(InactiveTab);
+        tabWidget->removeTab(tabWidget->indexOf(m_inactiveTab));
     }
 
     m_optionTab->updateValues();

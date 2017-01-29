@@ -63,6 +63,7 @@ void SchemeEditorColors::updateValues()
 {
     const int currentSet = colorSet->currentIndex() - 1;
     setPreview->setPalette(m_config, (KColorScheme::ColorSet)currentSet);
+    colorPreview->setPalette(m_config);
 }
 
 void SchemeEditorColors::setupColorTable()

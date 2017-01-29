@@ -428,6 +428,7 @@ void KColorCm::on_schemeEditButton_clicked()
         return;
     }
     SchemeEditorDialog* dialog = new SchemeEditorDialog(path, this);
+    dialog->setAttribute(Qt::WA_DeleteOnClose);  // avoid mem-leak
     dialog->setModal(true);
     dialog->show();
     connect(dialog, &SchemeEditorDialog::accepted, [=](){ this->populateSchemeList(); });
