@@ -284,6 +284,9 @@ void RootModel::refresh()
         QList<AbstractEntry *> groups;
 
         if (m_paginate) {
+            m_favorites = new FavoritesModel(this);
+            emit favoritesModelChanged();
+
             QHash<QString, AppEntry *> appsHash;
             QList<AppEntry *> apps;
 
