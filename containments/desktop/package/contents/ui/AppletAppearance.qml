@@ -184,13 +184,7 @@ Item {
             }
             Connections {
                 target: applet
-                onBusyChanged: {
-                    if (applet.busy) {
-                        busyLoader.source = "BusyOverlay.qml"
-                    } else if (busyLoader.item && typeof(busyLoader.item) != "undefined") {
-                        busyLoader.item.disappear();
-                    }
-                }
+
                 onBackgroundHintsChanged: {
 //                     print("plasmoid.backgroundHintsChanged");
                     updateBackgroundHints();
@@ -300,7 +294,7 @@ Item {
 
                     applet.parent = appletContainer;
                     applet.anchors.fill = appletContainer;
-                    
+
                     updateBackgroundHints();
                 }
                 Connections {
@@ -329,8 +323,15 @@ Item {
                 }
                 Loader {
                     id: busyLoader
+
                     anchors.centerIn: parent
+
                     z: appletContainer.z + 1
+
+                    active: applet.busy
+
+                    source: "BusyOverlay.qml"
+                    asynchronous: true
                 }
 
                 Component.onCompleted: PlasmaExtras.AppearAnimation {
