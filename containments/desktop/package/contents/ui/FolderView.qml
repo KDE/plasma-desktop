@@ -610,14 +610,18 @@ Item {
                 }
 
                 onCachedRectangleSelectionChanged: {
-                    if (cachedRectangleSelection && cachedRectangleSelection.length) {
+                    if (cachedRectangleSelection == null) {
+                        return;
+                    }
+
+                    if (cachedRectangleSelection.length) {
                         // Set current index to start of selection.
                         // cachedRectangleSelection is pre-sorted.
                         currentIndex = cachedRectangleSelection[0];
-
-                        dir.updateSelection(cachedRectangleSelection.map(positioner.map),
-                            gridView.ctrlPressed);
                     }
+
+                    dir.updateSelection(cachedRectangleSelection.map(positioner.map),
+                        gridView.ctrlPressed);
                 }
 
                 function makeIconSize() {
