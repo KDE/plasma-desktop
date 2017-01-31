@@ -509,7 +509,8 @@ void FolderModel::run(int row)
         url.setScheme(QStringLiteral("file"));
     }
 
-    new KRun(url, 0);
+    KRun *run = new KRun(url, 0);
+    run->setShowScriptExecutionPrompt(true);
 }
 
 void FolderModel::rename(int row, const QString& name)
