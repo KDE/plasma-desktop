@@ -533,14 +533,22 @@ void FolderModel::runSelected()
         return;
     }
 
-    bool unarySelection = (m_selectionModel->selectedIndexes().count() == 1);
+    if (m_selectionModel->selectedIndexes().count() == 1) {
+        run(m_selectionModel->selectedIndexes().constFirst().row());
+        return;
+    }
+
+    KFileItemActions fileItemActions(this);
+    KFileItemList items;
 
     foreach (const QModelIndex &index, m_selectionModel->selectedIndexes()) {
         // Skip over directories.
-        if (!unarySelection && !index.data(IsDirRole).toBool()) {
-            run(index.row());
+        if (!index.data(IsDirRole).toBool()) {
+            items << itemForIndex(index);
         }
     }
+
+    fileItemActions.runPreferredApplications(items, QString());
 }
 
 void FolderModel::rename(int row, const QString& name)
