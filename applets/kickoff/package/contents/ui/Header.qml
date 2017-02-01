@@ -78,6 +78,7 @@ Item {
             right: faceIcon.right
             rightMargin: -units.gridUnit/2
         }
+        usesPlasmaTheme: false
     }
 
     MouseArea {
