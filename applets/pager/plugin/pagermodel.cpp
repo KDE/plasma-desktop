@@ -351,7 +351,7 @@ void PagerModel::setScreenGeometry(const QRect &geometry)
 int PagerModel::currentPage() const
 {
     if (d->pagerType == VirtualDesktops) {
-        return d->virtualDesktopInfo->currentDesktop();
+        return d->virtualDesktopInfo->currentDesktop() - 1;
     } else {
         return d->activityInfo->runningActivities().indexOf(d->activityInfo->currentActivity());
     }
@@ -518,16 +518,15 @@ void PagerModel::moveWindow(int window, double x, double y, int targetItemId, in
 #endif
 }
 
-void PagerModel::changePage(int itemId)
+void PagerModel::changePage(int page)
 {
+
 #if HAVE_X11
     if (!KWindowSystem::isPlatformX11()) {
         return;
     }
 
-    const int targetId = (d->pagerType == VirtualDesktops) ? itemId + 1 : itemId;
-
-    if (currentPage() == targetId) {
+    if (currentPage() == page) {
         if (d->showDesktop) {
             QDBusConnection::sessionBus().asyncCall(QDBusMessage::createMethodCall(QLatin1String("org.kde.plasmashell"),
                 QLatin1String("/PlasmaShell"),
@@ -536,16 +535,16 @@ void PagerModel::changePage(int itemId)
         }
     } else {
         if (d->pagerType == VirtualDesktops) {
-            KWindowSystem::setCurrentDesktop(targetId);
+            KWindowSystem::setCurrentDesktop(page + 1);
         } else {
             const QStringList &runningActivities = d->activityInfo->runningActivities();
-
-            if (targetId < runningActivities.length()) {
+            if (page < runningActivities.length()) {
                 KActivities::Controller activitiesController;
-                activitiesController.setCurrentActivity(runningActivities.at(targetId));
+                activitiesController.setCurrentActivity(runningActivities.at(page));
             }
         }
     }
+
 #else
     Q_UNUSED(itemId)
 #endif

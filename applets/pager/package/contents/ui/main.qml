@@ -51,6 +51,8 @@ MouseArea {
 
     property int dragSwitchDesktopId: -1
 
+    property int wheelDelta: 0
+
     anchors.fill: parent
     acceptedButtons: Qt.NoButton
 
@@ -100,10 +102,30 @@ MouseArea {
     }
 
     onWheel: {
-        if (wheel.angleDelta.y > 0 || wheel.angleDelta.x > 0) {
-            pagerModel.changePage((repeater.count + pagerModel.currentPage - 2) % repeater.count);
-        } else {
-            pagerModel.changePage(pagerModel.currentPage % repeater.count);
+        // Magic number 120 for common "one click, see:
+        // http://qt-project.org/doc/qt-5/qml-qtquick-wheelevent.html#angleDelta-prop
+        wheelDelta += wheel.angleDelta.y || wheel.angleDelta.x;
+
+        var increment = 0;
+
+        while (wheelDelta >= 120) {
+            wheelDelta -= 120;
+            increment++;
+        }
+
+        while (wheelDelta <= -120) {
+            wheelDelta += 120;
+            increment--;
+        }
+
+        while (increment != 0) {
+            if (increment < 0) {
+                pagerModel.changePage((pagerModel.currentPage + 1) % repeater.count);
+            } else {
+                pagerModel.changePage((repeater.count + pagerModel.currentPage - 1) % repeater.count);
+            }
+
+            increment += (increment < 0) ? 1 : -1;
         }
     }
 
@@ -187,7 +209,7 @@ MouseArea {
         id: dragTimer
         interval: 1000
         onTriggered: {
-            if (dragSwitchDesktopId != -1 && dragSwitchDesktopId !== pagerModel.currentPage - 1) {
+            if (dragSwitchDesktopId != -1 && dragSwitchDesktopId !== pagerModel.currentPage) {
                 pagerModel.changePage(dragSwitchDesktopId);
             }
         }
@@ -270,7 +292,7 @@ MouseArea {
                 id: desktop
 
                 property int desktopId: index
-                property bool active: isActivityPager ? (index == pagerModel.currentPage) : (index + 1 == pagerModel.currentPage)
+                property bool active: (index == pagerModel.currentPage)
 
                 mainText: model.display
                 // our ToolTip has maximumLineCount of 8 which doesn't fit but QML doesn't
