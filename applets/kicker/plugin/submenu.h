@@ -21,7 +21,7 @@
 #ifndef SUBMENU_H
 #define SUBMENU_H
 
-#include <dialog.h>
+#include <PlasmaQuick/Dialog>
 
 class QScreen;
 
@@ -38,7 +38,7 @@ class SubMenu : public PlasmaQuick::Dialog
 
         Q_INVOKABLE QRect availableScreenRectForItem(QQuickItem *item) const;
 
-        QPoint popupPosition(QQuickItem *item, const QSize &size);
+        QPoint popupPosition(QQuickItem *item, const QSize &size) override;
 
         int offset() const;
         void setOffset(int offset);
