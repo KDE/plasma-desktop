@@ -31,7 +31,7 @@ KQuickControlsAddons.MouseEventListener {
     opacity: appletItem.controlsOpacity
     visible: opacity > 0
     width: appletItem.handleWidth
-    height: Math.max(appletItem.height - appletItem.margins.top - appletItem.margins.bottom, buttonColumn.implicitHeight)
+    height: Math.max(appletItem.innerHeight - appletItem.margins.top - appletItem.margins.bottom, buttonColumn.implicitHeight)
     hoverEnabled: true
     onContainsMouseChanged: {
         if (!containsMouse && !pressed) {
@@ -43,6 +43,7 @@ KQuickControlsAddons.MouseEventListener {
             hoverTracker.restart()
         }
     }
+
     //z: dragMouseArea.z + 1
 
     property int buttonMargin: 6
@@ -89,7 +90,7 @@ KQuickControlsAddons.MouseEventListener {
     }
     ColumnLayout {
         id: buttonColumn
-        width: handleWidth
+        width: appletItem.handleWidth
 
         anchors {
             top: parent.top
@@ -120,31 +121,30 @@ KQuickControlsAddons.MouseEventListener {
                     animationsEnabled = false;
                     startX = mouse.x;
                     startY = mouse.y;
-                    root.layoutManager.setSpaceAvailable(appletItem.x, appletItem.y, appletItem.width, appletItem.height, true)
+                    appletItem.releasePosition();
+                    appletItem.floating = true;
                     appletContainer.clip = true
                 }
                 onPositionChanged: {
-                    var minimumWidth = appletItem.minimumWidth + appletHandle.width;
-                    var minimumHeight = appletItem.minimumHeight;
-
                     var xDelta = startX - mouse.x;
                     var yDelta = startY - mouse.y;
 
                     if (LayoutMirroring.enabled) {
                         var oldRight = appletItem.x + appletItem.width;
-                        appletItem.width = Math.max(minimumWidth, appletItem.width + xDelta);
+                        appletItem.width = Math.min(Math.max(appletItem.minimumWidth, appletItem.width + xDelta), appletItem.maximumWidth);
                         appletItem.x = oldRight - appletItem.width;
                     } else {
-                        appletItem.width = Math.max(minimumWidth, appletItem.width - xDelta);
+                        appletItem.width = Math.min(Math.max(appletItem.minimumWidth, appletItem.width - xDelta), appletItem.maximumWidth);
                     }
 
                     var oldBottom = appletItem.y + appletItem.height;
-                    appletItem.height = Math.max(minimumHeight, appletItem.height + yDelta);
+                    appletItem.height = Math.min(Math.max(appletItem.minimumHeight, appletItem.height + yDelta), appletItem.maximumHeight);
                     appletItem.y = oldBottom - appletItem.height;
                 }
                 onReleased: {
                     animationsEnabled = true
-                    root.layoutManager.positionItem(appletItem)
+                    appletItem.floating = false;
+                    appletItem.positionItem();
                     root.layoutManager.save()
                     appletContainer.clip = false
                 }
@@ -272,7 +272,8 @@ KQuickControlsAddons.MouseEventListener {
                 appletItem.z = appletItem.z + zoffset;
                 animationsEnabled = false
                 mouse.accepted = true
-                root.layoutManager.setSpaceAvailable(appletItem.x, appletItem.y, appletItem.width, appletItem.height, true)
+                appletItem.releasePosition();
+                appletItem.floating = true;
 
                 placeHolder.syncWithItem(appletItem)
                 placeHolderPaint.opacity = root.haloOpacity;
@@ -295,7 +296,8 @@ KQuickControlsAddons.MouseEventListener {
                 repositionTimer.running = false
                 placeHolderPaint.opacity = 0
                 animationsEnabled = true
-                root.layoutManager.positionItem(appletItem)
+                appletItem.floating = false;
+                appletItem.positionItem();
                 root.layoutManager.save()
                 appletHandle.moveFinished()
             }

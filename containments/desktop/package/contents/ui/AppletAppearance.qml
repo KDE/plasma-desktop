@@ -42,16 +42,30 @@ Item {
     property bool hasBackground: false
     property bool handleMerged: (height > minimumHandleHeight && !appletHandle.forceFloating)
     property bool animationsEnabled: false
+    property bool floating: true // turns off layoutManagment space handling for appletItem
+
+    property alias innerEndHeight: mouseListener.endHeight
+    property alias innerEndWidth: mouseListener.endWidth
+    property alias innerHeight: mouseListener.height
+    property alias innerWidth: mouseListener.width
 
     property int minimumWidth: Math.max(root.layoutManager.cellSize.width,
                            appletContainer.minimumWidth +
-                           appletItem.contents.anchors.leftMargin +
-                           appletItem.contents.anchors.rightMargin)
+                           margins.left +
+                           margins.right);
 
     property int minimumHeight: Math.max(root.layoutManager.cellSize.height,
                             appletContainer.minimumHeight +
-                            appletItem.contents.anchors.topMargin +
-                            appletItem.contents.anchors.bottomMargin)
+                            margins.top +
+                            margins.bottom);
+
+    property int maximumWidth: appletContainer.maximumWidth +
+                               margins.left +
+                               margins.right;
+
+    property int maximumHeight: appletContainer.maximumHeight +
+                                margins.top +
+                                margins.bottom;
 
     property alias applet: appletContainer.applet
 
@@ -61,8 +75,100 @@ Item {
 
     visible: false
 
-    onMinimumWidthChanged: if (!widthAnimation.running) appletItem.width = Math.max(minimumWidth, width);
-    onMinimumHeightChanged: if (!heightAnimation.running) appletItem.height = Math.max(minimumHeight, height);
+    QtObject {
+        id: d
+
+        property real lastX: 0
+        property real lastY: 0
+    }
+
+    onMinimumWidthChanged: {
+        if (width < minimumWidth) {
+            releasePosition();
+            width = minimumWidth;
+            positionItem();
+            if (showAppletHandle && !handleMerged)
+                appletHandle.positionHandle();
+        }
+    }
+    onMinimumHeightChanged: {
+        if (height < minimumHeight) {
+            releasePosition();
+            height = minimumHeight;
+            positionItem();
+            if (showAppletHandle && !handleMerged)
+                appletHandle.positionHandle();
+        }
+    }
+    onMaximumWidthChanged: {
+        if (width > maximumWidth) {
+            releasePosition();
+            width = maximumWidth;
+            positionItem();
+            if (showAppletHandle && !handleMerged)
+                appletHandle.positionHandle();
+        }
+    }
+    onMaximumHeightChanged: {
+        if (height > maximumHeight) {
+            releasePosition();
+            height = maximumHeight;
+            positionItem();
+            if (showAppletHandle && !handleMerged)
+                appletHandle.positionHandle();
+        }
+    }
+
+    onHeightChanged: {
+        if (height > maximumHeight)
+            innerEndHeight = maximumHeight;
+        else if (height < minimumHeight)
+            innerEndHeight = minimumHeight;
+        else
+            innerEndHeight = height;
+    }
+    onWidthChanged: {
+        if (width > maximumWidth)
+            innerEndWidth = maximumWidth;
+        else if (width < minimumWidth)
+            innerEndWidth =  minimumWidth;
+        else
+            innerEndWidth = width;
+    }
+
+    onXChanged: {
+        if (animationsEnabled) {
+            animationsEnabled = false;
+            mouseListener.x += d.lastX - x;
+            animationsEnabled = true;
+        }
+        mouseListener.x = mouseListener.endX = (width - innerEndWidth)/2;
+        d.lastX = x;
+    }
+    onYChanged: {
+        if (animationsEnabled) {
+            animationsEnabled = false;
+            mouseListener.y += d.lastY - y;
+            animationsEnabled = true;
+        }
+        mouseListener.y = mouseListener.endY = (height - innerEndHeight)/2;
+        d.lastY = y;
+    }
+
+    // use this function to position appletItem instead of root.layoutManager.positionItem(appletItem)
+    function positionItem() {
+        if (floating)
+            return;
+        root.layoutManager.positionItem(appletItem);
+        root.layoutManager.saveItem(appletItem);
+    }
+
+    // use this function to free appletItem position instead of
+    // root.layoutManager.setSpaceAvailable(appletItem.x, appletItem.y, appletItem.width, appletItem.height, true)
+    function releasePosition() {
+        if (!floating)
+            root.layoutManager.setSpaceAvailable(x, y, width, height, true);
+    }
 
     function updateBackgroundHints() {
         hasBackground = (applet.backgroundHints != "NoBackground");
@@ -84,16 +190,23 @@ Item {
 
     KQuickControlsAddons.MouseEventListener {
         id: mouseListener
-
-        anchors {
-            fill: parent
-        }
-        z: 10
-
-        hoverEnabled: true
+        // used as inner applet (which would not be sized over or under size limits )
+        // centered in appletItem.onXChanged and onYChanged due to allow animations on X and Y
 
         property int pressX: -1
         property int pressY: -1
+
+        // for animations
+        property int endHeight: minimumHeight
+        property int endWidth: minimumWidth
+        property int endX: 0
+        property int endY: 0
+
+        height: endHeight
+        width: endWidth
+        z: 10
+
+        hoverEnabled: true
 
         onPressed: {
             pressX = mouse.x;
@@ -143,7 +256,6 @@ Item {
         Item {
             anchors { left: parent.left; top: parent.top; bottom: parent.bottom; }
             width: parent.width+handleWidth;
-
             z: mouseListener.z + 4
 
             PlasmaCore.FrameSvgItem {
@@ -151,10 +263,12 @@ Item {
                 visible: backgroundHints != PlasmaCore.Types.NoBackground
                 imagePath: "widgets/background"
                 anchors { left: parent.left; top: parent.top; bottom: parent.bottom; }
-                width: (showAppletHandle && handleMerged) ? parent.width : parent.width-handleWidth;
+                width: parent.width - _handleWidth
                 smooth: true
 
-                Behavior on width {
+                property real _handleWidth: (showAppletHandle && handleMerged) ? 0 : handleWidth
+
+                Behavior on _handleWidth {
                     enabled: animationsEnabled
                     NumberAnimation {
                         duration: units.longDuration
@@ -175,7 +289,7 @@ Item {
                     if (applet.id == appletItem.applet.id) {
 //                         print("Destroying Applet-" + applet.id)
                         root.layoutManager.saveRotation(appletItem);
-                        root.layoutManager.setSpaceAvailable(appletItem.x, appletItem.y, appletItem.width, appletItem.height, true)
+                        appletItem.releasePosition();
                         //applet.action("remove").trigger();
                         //appletItem.destroy()
                         appletItem.destroy();
@@ -208,7 +322,8 @@ Item {
                     repositionTimer.running = false;
                     placeHolderPaint.opacity = 0;
                     animationsEnabled = true;
-                    root.layoutManager.positionItem(appletItem);
+                    appletItem.floating = false;
+                    appletItem.positionItem();
                     root.layoutManager.save();
                     dragging = false;
                 }
@@ -219,9 +334,10 @@ Item {
 
                 onPressed: {
                     appletItem.z = appletItem.z + zoffset;
-                    animationsEnabled = plasmoid.configuration.pressToMove ? true : false;
+                    animationsEnabled = false;
                     mouse.accepted = true;
-                    root.layoutManager.setSpaceAvailable(appletItem.x, appletItem.y, appletItem.width, appletItem.height, true);
+                    appletItem.releasePosition();
+                    appletItem.floating = true;
 
                     placeHolder.syncWithItem(appletItem);
                     placeHolderPaint.opacity = root.haloOpacity;
@@ -263,6 +379,7 @@ Item {
                 z: mouseListener.z+1
 
                 property QtObject applet
+                readonly property int maxInt: 1000000 // dirty hack to convert js number to qml int
 
                 property var minimumSize: {
                     var size;
@@ -277,12 +394,63 @@ Item {
                     return size;
                 }
 
-                property int minimumWidth: minimumSize.width;
-                property int minimumHeight: minimumSize.height;
+                property var maximumSize: {
+                    var size;
+                    if (applet && applet.Layout) {
+                        var layout = applet.Layout
+                        size = { 'width': layout.maximumWidth,
+                                 'height': layout.maximumHeight };
+                    } else {
+                        size = { 'width': Number.POSITIVE_INFINITY,
+                                 'height': Number.POSITIVE_INFINITY };
+
+                    }
+
+                    if (size.width > maxInt)
+                        size.width = maxInt;
+                    if (size.height > maxInt)
+                        size.height = maxInt;
+
+                    return size;
+                }
+
+                onMinimumSizeChanged: {
+                    minimumHeight = minimumSize.height
+                    if (minimumHeight > maximumSize.height)
+                        maximumHeight = minimumHeight
+                    else if (maximumHeight !== maximumSize.height)
+                        maximumHeight = maximumSize.height
+
+                    minimumWidth = minimumSize.width
+                    if (minimumWidth > maximumSize.width)
+                        maximumWidth = minimumWidth
+                    else if (maximumWidth !== maximumSize.width)
+                        maximumWidth = maximumSize.width
+                }
+
+                onMaximumSizeChanged: {
+                    maximumHeight = maximumSize.height
+                    if (maximumHeight < minimumSize.height)
+                        minimumHeight = maximumHeight
+                    else if (minimumHeight !== minimumSize.height)
+                        minimumHeight = minimumSize.height
+
+                    maximumWidth = maximumSize.width
+                    if (maximumWidth < minimumSize.width)
+                        minimumWidth = maximumWidth
+                    else if (minimumWidth !== minimumSize.width)
+                        minimumWidth = minimumSize.width
+                }
+
+                property int minimumWidth: 0
+                property int minimumHeight: 0
+
+                property int maximumWidth: maxInt
+                property int maximumHeight: maxInt
 
                 function appletDestroyed() {
 //                     print("Applet DESTROYED.");
-                    root.layoutManager.setSpaceAvailable(appletItem.x, appletItem.y, appletItem.width, appletItem.height, true)
+                    appletItem.releasePosition();
                     applet.action("remove").trigger();
                     appletItem.destroy()
                 }
@@ -291,7 +459,6 @@ Item {
                     if (!applet) {
                         return;
                     }
-
                     applet.parent = appletContainer;
                     applet.anchors.fill = appletContainer;
 
@@ -379,9 +546,9 @@ Item {
                 {
                     // Don't show handle outside of desktop
                     var available = plasmoid.availableScreenRect;
-                    var x = Math.min(Math.max(0, appletItem.x), available.width - appletItem.width);
-                    var y = Math.min(Math.max(0, appletItem.y), available.height - appletItem.height);
-                    var verticalCenter = (y + appletItem.height / 2);
+                    var x = Math.min(Math.max(0, appletItem.x + mouseListener.endX), available.width - appletItem.width + mouseListener.endX);
+                    var y = Math.min(Math.max(0, appletItem.y + mouseListener.endY), available.height - appletItem.height + mouseListener.endY);
+                    var verticalCenter = (y + mouseListener.endHeight / 2);
                     var topOutside = (verticalCenter - minimumHandleHeight / 2);
                     var bottomOutside = verticalCenter + minimumHandleHeight / 2 - available.height;
                     if (bottomOutside > 0) {
@@ -391,10 +558,41 @@ Item {
                     } else {
                         anchors.verticalCenterOffset = 0;
                     }
-                    var rightOutside = x + appletItem.width + handleWidth - available.width;
+                    var rightOutside = x + mouseListener.endWidth + handleWidth - available.width;
                     appletHandle.anchors.rightMargin = appletItem.margins.right + Math.max(0, rightOutside);
                     appletHandle.forceFloating = rightOutside > 0;
                 }
+            }
+        }
+
+        Behavior on x {
+            enabled: animationsEnabled
+            NumberAnimation {
+                duration: units.longDuration
+                easing.type: Easing.InOutQuad
+            }
+        }
+        Behavior on y {
+            enabled: animationsEnabled
+            NumberAnimation {
+                duration: units.longDuration
+                easing.type: Easing.InOutQuad
+            }
+        }
+        Behavior on width {
+            enabled: animationsEnabled
+            NumberAnimation {
+                id: widthAnimation
+                duration: units.longDuration
+                easing.type: Easing.InOutQuad
+            }
+        }
+        Behavior on height {
+            enabled: animationsEnabled
+            NumberAnimation {
+                id: heightAnimation
+                duration: units.longDuration
+                easing.type: Easing.InOutQuad
             }
         }
     }
@@ -405,38 +603,9 @@ Item {
             easing.type: Easing.InOutQuad
         }
     }
-    Behavior on x {
-        enabled: animationsEnabled
-        NumberAnimation {
-            duration: units.longDuration
-            easing.type: Easing.InOutQuad
-        }
-    }
-    Behavior on y {
-        enabled: animationsEnabled
-        NumberAnimation {
-            duration: units.longDuration
-            easing.type: Easing.InOutQuad
-        }
-    }
-    Behavior on width {
-        enabled: animationsEnabled
-        NumberAnimation {
-            id: widthAnimation
-            duration: units.longDuration
-            easing.type: Easing.InOutQuad
-        }
-    }
-    Behavior on height {
-        enabled: animationsEnabled
-        NumberAnimation {
-            id: heightAnimation
-            duration: units.longDuration
-            easing.type: Easing.InOutQuad
-        }
-    }
 
     Component.onCompleted: {
+        floating = false;
         layoutTimer.running = true
         layoutTimer.restart()
         visible = false
