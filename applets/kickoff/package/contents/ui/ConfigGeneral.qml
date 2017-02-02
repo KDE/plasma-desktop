@@ -140,11 +140,11 @@ ColumnLayout {
         spacing: units.gridUnit
         Column {
             QtControls.Label {
-                text: i18n('Visible Tabs')
+                text: i18n("Visible Tabs")
                 height: configButtons.cellHeight
             }
             QtControls.Label {
-                text: i18n('Hidden Tabs')
+                text: i18n("Hidden Tabs")
                 height: configButtons.cellHeight
             }
         }
@@ -156,7 +156,7 @@ ColumnLayout {
     }
 
     QtControls.Label {
-        text: i18n('Drag tabs between the boxes to show/hide them, or reorder the visible tabs by dragging. ')
+        text: i18n("Drag tabs between the boxes to show/hide them, or reorder the visible tabs by dragging.")
     }
 
     Item {
