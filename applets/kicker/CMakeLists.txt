@@ -12,8 +12,6 @@ add_definitions(
 
 plasma_install_package(package org.kde.plasma.kicker)
 
-include_directories(plugin/plasmaquick)
-
 set(kickerplugin_SRCS
     plugin/abstractentry.cpp
     plugin/abstractmodel.cpp
