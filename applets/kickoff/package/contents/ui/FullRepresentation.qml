@@ -530,17 +530,23 @@ Item {
     function getButtonDefinition(name) {
         switch(name) {
         case "bookmark":
-            return 'KickoffButton {id: bookmarkButton;tab: favoritesPage;iconSource: "bookmarks";text: i18n("Favorites")}';
+            return {id: "bookmarkButton", tab: favoritesPage, iconSource: "bookmarks", text: i18n("Favorites")};
         case "application":
-            return 'KickoffButton {id: applicationButton;tab: applicationsPage;iconSource: "applications-other";text: i18n("Applications")}';
+            return {id: "applicationButton", tab: applicationsPage, iconSource: "applications-other", text: i18n("Applications")};
         case "computer":
-            return 'KickoffButton {id: computerButton;tab: systemPage;iconSource: pmSource.data["PowerDevil"] && pmSource.data["PowerDevil"]["Is Lid Present"] ? "computer-laptop" : "computer";text: i18n("Computer")}';
+            return {id: "computerButton", tab: systemPage, iconSource: pmSource.data["PowerDevil"] && pmSource.data["PowerDevil"]["Is Lid Present"] ? "computer-laptop" : "computer", text: i18n("Computer")};
         case "used":
-            return 'KickoffButton {id: usedButton;tab: recentlyUsedPage;iconSource: "view-history";text: i18n("History")}';
+            return {id: "usedButton", tab: recentlyUsedPage, iconSource: "view-history", text: i18n("History")};
         case "leave":
-            return 'KickoffButton {id: leaveButton;tab: leavePage;iconSource: "system-log-out";text: i18n("Leave")}';
+            return {id: "leaveButton", tab: leavePage, iconSource: "system-log-out", text: i18n("Leave")};
         }
     }
+
+    Component {
+        id: kickoffButton
+        KickoffButton {}
+    }
+
 
     Component.onCompleted: {
         createButtons();
@@ -571,7 +577,8 @@ Item {
         }
 
         for (var i = 0; i < menuItems.length; i++) {
-             var button = Qt.createQmlObject(getButtonDefinition(menuItems[i]), tabBar.layout);
+             var props = getButtonDefinition(menuItems[i]);
+             var button = kickoffButton.createObject(tabBar.layout, props);
              if(i == 0) {
                  firstButton = button;
                  switchToInitial();

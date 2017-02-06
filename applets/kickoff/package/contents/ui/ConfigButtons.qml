@@ -33,11 +33,11 @@ GridView {
     height: cellHeight * 2
 
     property var items: {
-        "bookmark":    { icon: "bookmarks", text: "Favorites"},
-        "application": { icon: "applications-other", text: "Applications"},
-        "computer":    { icon: "pm", text: "Computer"},
-        "used":        { icon: "view-history", text: "History"},
-        "leave":       { icon: "system-log-out", text: "Leave"}
+        "bookmark":    { icon: "bookmarks", text: i18n("Favorites")},
+        "application": { icon: "applications-other", text: i18n("Applications")},
+        "computer":    { icon: "pm", text: i18n("Computer")},
+        "used":        { icon: "view-history", text: i18n("History")},
+        "leave":       { icon: "system-log-out", text: i18n("Leave")}
     }
 
 
@@ -140,7 +140,7 @@ GridView {
                 id: button
 
                 icon: model.icon == "pm" ? (pmSource.data["PowerDevil"] && pmSource.data["PowerDevil"]["Is Lid Present"] ? "computer-laptop" : "computer") : model.icon
-                text: model.text ? i18n(model.text): ''
+                text: model.text || ""
 
                 name: model.name
 
