@@ -161,6 +161,16 @@ void KCMSplashScreen::defaults()
     setSelectedPlugin(m_package.metadata().pluginName());
 }
 
+int KCMSplashScreen::selectedPluginIndex() const
+{
+    for (int i = 0; i < m_model->rowCount(); ++i) {
+        if (m_model->data(m_model->index(i, 0), PluginNameRole).toString() == m_selectedPlugin) {
+            return i;
+        }
+    }
+    return -1;
+}
+
 void KCMSplashScreen::test(const QString &plugin)
 {
     if (plugin.isEmpty() || plugin == QLatin1String("None")) {

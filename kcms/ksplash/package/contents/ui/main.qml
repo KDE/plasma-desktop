@@ -38,6 +38,11 @@ Item {
             cellWidth: Math.floor(grid.width / Math.max(Math.floor(grid.width / (units.gridUnit*12)), 3))
             cellHeight: cellWidth / 1.6
 
+            onCountChanged: {
+                grid.currentIndex = kcm.selectedPluginIndex;
+                grid.positionViewAtIndex(grid.currentIndex, GridView.Visible)
+            }
+
             delegate: Item {
                 width: grid.cellWidth
                 height: grid.cellHeight
@@ -51,13 +56,8 @@ Item {
                         target: kcm
                         onSelectedPluginChanged: {
                             if (kcm.selectedPlugin == model.pluginName) {
-                                makeCurrentTimer.pendingIndex = index
+                                grid.currentIndex = index
                             }
-                        }
-                    }
-                    Component.onCompleted: {
-                        if (kcm.selectedPlugin == model.pluginName) {
-                            makeCurrentTimer.pendingIndex = index
                         }
                     }
                     QIconItem {
@@ -149,16 +149,6 @@ Item {
                             }
                         }
                     }
-                }
-            }
-            Timer {
-                id: makeCurrentTimer
-                interval: 100
-                repeat: false
-                property int pendingIndex
-                onPendingIndexChanged: makeCurrentTimer.restart()
-                onTriggered: {
-                    grid.currentIndex = pendingIndex
                 }
             }
         }

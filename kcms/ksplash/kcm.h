@@ -33,6 +33,7 @@ class KCMSplashScreen : public KQuickAddons::ConfigModule
     Q_OBJECT
     Q_PROPERTY(QStandardItemModel *splashModel READ splashModel CONSTANT)
     Q_PROPERTY(QString selectedPlugin READ selectedPlugin WRITE setSelectedPlugin NOTIFY selectedPluginChanged)
+    Q_PROPERTY(int selectedPluginIndex READ selectedPluginIndex NOTIFY selectedPluginIndexChanged)
 
 public:
     enum Roles {
@@ -48,6 +49,8 @@ public:
     QString selectedPlugin() const;
     void setSelectedPlugin(const QString &plugin);
 
+    int selectedPluginIndex() const;
+
 public Q_SLOTS:
     void load();
     void save();
@@ -56,6 +59,7 @@ public Q_SLOTS:
 
 Q_SIGNALS:
     void selectedPluginChanged();
+    void selectedPluginIndexChanged();
 
 private:
     QStandardItemModel *m_model;
