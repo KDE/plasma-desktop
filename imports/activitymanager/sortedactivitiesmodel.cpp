@@ -20,6 +20,9 @@
 // Self
 #include "sortedactivitiesmodel.h"
 
+// C++
+#include <functional>
+
 // Qt
 #include <QColor>
 #include <QObject>
