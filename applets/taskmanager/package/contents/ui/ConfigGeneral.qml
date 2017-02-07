@@ -29,12 +29,14 @@ Item {
 
     property bool vertical: (plasmoid.formFactor == PlasmaCore.Types.Vertical)
 
+    readonly property bool plasmaPaAvailable: Qt.createComponent("PulseAudio.qml").status === Component.Ready
+
     property alias cfg_forceStripes: forceStripes.checked
     property alias cfg_showToolTips: showToolTips.checked
     property alias cfg_wheelEnabled: wheelEnabled.checked
     property alias cfg_highlightWindows: highlightWindows.checked
     property alias cfg_smartLaunchersEnabled: smartLaunchers.checked
-    property alias cfg_indicateAudioStreams: indicateAudioStreams.checked
+    property bool cfg_indicateAudioStreams
     property alias cfg_maxStripes: maxStripes.value
     property alias cfg_groupingStrategy: groupingStrategy.currentIndex
     property alias cfg_middleClickAction: middleClickAction.currentIndex
@@ -112,6 +114,9 @@ Item {
                     id: indicateAudioStreams
                     Layout.fillWidth: true
                     text: i18n("Mark applications that play audio")
+                    checked: cfg_indicateAudioStreams && plasmaPaAvailable
+                    onCheckedChanged: cfg_indicateAudioStreams = checked
+                    enabled: plasmaPaAvailable
                 }
 
                 RowLayout {
