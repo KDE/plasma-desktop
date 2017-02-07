@@ -28,6 +28,8 @@
 #include <KConfigGroup>
 #include <KStandardGuiItem>
 
+#include <KIO/Global>
+
 #include <QComboBox>
 #include <QPushButton>
 #include <QDebug>
@@ -119,6 +121,7 @@ void SolidActions::addAction()
     // Lets get a desktop file
     QString internalName = enteredName; // copy the name the user entered -> we will be making mods
     internalName.replace(QChar(' '), QChar('-'), Qt::CaseSensitive); // replace spaces with dashes
+    internalName = KIO::encodeFileName(internalName);
 
     QString filePath = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + "/solid/actions/"; // Get the location on disk for "data"
     if (!QDir().exists(filePath)) {
