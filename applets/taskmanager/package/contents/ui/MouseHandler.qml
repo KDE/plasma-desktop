@@ -69,14 +69,9 @@ Item {
 
         //ignore anything that is neither internal to TaskManager or a URL list
         onDragEnter: {
-            if (event.mimeData.formats.indexOf("application/x-orgkdeplasmataskmanager_taskbuttonitem") >= 0) {
-                return;
+            if (event.mimeData.formats.indexOf("text/x-plasmoidservicename") >= 0) {
+                event.ignore();
             }
-
-            if (event.mimeData.hasUrls) {
-                return;
-            }
-            event.ignore();
         }
 
         onDragMove: {
@@ -127,8 +122,9 @@ Item {
         }
 
         onDrop: {
-            // Reject internal drops.
-            if (event.mimeData.formats.indexOf("application/x-orgkdeplasmataskmanager_taskbuttonitem") >= 0) {
+            // Reject plasmoid drops.
+            if (event.mimeData.formats.indexOf("text/x-plasmoidservicename") >= 0) {
+                event.ignore();
                 return;
             }
 
@@ -136,7 +132,6 @@ Item {
                 parent.urlsDropped(event.mimeData.urls);
                 return;
             }
-            event.ignore();
         }
 
         Timer {
