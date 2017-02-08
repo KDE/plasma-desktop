@@ -606,6 +606,8 @@ KFonts::KFonts(QWidget *parent, const QVariantList &args)
         fontUse->setAlignment(Qt::AlignRight | Qt::AlignVCenter);
         fontUse->setWhatsThis(*quickHelpIt++);
 
+        fontUse->setBuddy(i);
+
         fontUseLayout->addWidget(fontUse, count, 0);
         fontUseLayout->addWidget(i, count, 1);
 
