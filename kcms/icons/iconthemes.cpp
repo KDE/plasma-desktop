@@ -396,15 +396,19 @@ void IconThemesConfig::updateRemoveButton()
 
 void loadPreview(QLabel *label, KIconTheme& icontheme, const QStringList& iconnames)
 {
+    const qreal dpr = label->devicePixelRatioF();
+
     //Given the icontheme loads a preview of an icon (several names are allowed for old theme standards) into the pixmap of the given label
-    const int size = qMin(48, icontheme.defaultSize(KIconLoader::Desktop));
+    const int size = qMin(48, icontheme.defaultSize(KIconLoader::Desktop)) * dpr;
     QSvgRenderer renderer;
     foreach(const QString &iconthemename, QStringList() << icontheme.internalName() << icontheme.inherits()) {
       foreach(const QString &name, iconnames) {
         //load the icon image
         QString path = KIconTheme(iconthemename).iconPath(QStringLiteral("%1.png").arg(name), size, KIconLoader::MatchBest);
         if (path != QString()) {
-            label->setPixmap(QPixmap(path).scaled(size, size));
+            QPixmap pixmap(path);
+            pixmap.setDevicePixelRatio(dpr);
+            label->setPixmap(pixmap.scaled(size, size));
             return;
         }
         //could not find the .png, try loading the .svg or .svgz
@@ -416,8 +420,9 @@ void loadPreview(QLabel *label, KIconTheme& icontheme, const QStringList& iconna
             }
         }
         if (renderer.load(path)) {
-            QPixmap pix(size, size);
-            pix.fill(label->palette().color(QPalette::Background));
+            QPixmap pix(size * dpr, size * dpr);
+            pix.setDevicePixelRatio(dpr);
+            pix.fill(QColor(Qt::transparent));
             QPainter p(&pix);
             p.setViewport(0, 0, size, size);
             renderer.render(&p);
