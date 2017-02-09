@@ -187,8 +187,9 @@ Item {
     TaskManagerApplet.Backend {
         id: backend
 
-        taskManagerItem: groupDialog.visible ? null : tasks
+        taskManagerItem: tasks
         toolTipItem: toolTipDelegate
+        groupDialog: groupDialog
         highlightWindows: plasmoid.configuration.highlightWindows
 
         onAddLauncher: {

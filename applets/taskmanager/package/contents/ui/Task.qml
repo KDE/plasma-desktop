@@ -152,6 +152,8 @@ MouseArea {
                     hideToolTipTemporarily();
                 }
             }
+
+            backend.cancelHighlightWindows();
         }
 
         pressed = false;
