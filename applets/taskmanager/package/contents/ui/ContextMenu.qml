@@ -53,6 +53,7 @@ PlasmaComponents.ContextMenu {
 
         } else if (status == PlasmaComponents.DialogStatus.Closed) {
             menu.destroy();
+            backend.ungrabMouse(visualParent);
         }
     }
 
@@ -62,7 +63,6 @@ PlasmaComponents.ContextMenu {
 
     function show() {
         loadDynamicLaunchActions(get(atm.LauncherUrlWithoutIcon));
-        backend.ungrabMouse(visualParent);
         openRelative();
     }
 
