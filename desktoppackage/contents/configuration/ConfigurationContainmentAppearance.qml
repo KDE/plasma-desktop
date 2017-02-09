@@ -66,6 +66,7 @@ ColumnLayout {
     Row {
         spacing: units.largeSpacing / 2
         anchors.right: wallpaperRow.right
+        visible: pluginComboBox.count > 1
         Item {
             width: units.largeSpacing
             height: parent.height
