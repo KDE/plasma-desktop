@@ -88,6 +88,20 @@ void Backend::setToolTipItem(QQuickItem *item)
     }
 }
 
+QQuickWindow *Backend::groupDialog() const
+{
+    return m_groupDialog;
+}
+
+void Backend::setGroupDialog(QQuickWindow *dialog)
+{
+    if (dialog != m_groupDialog) {
+        m_groupDialog = dialog;
+
+        emit groupDialogChanged();
+    }
+}
+
 bool Backend::highlightWindows() const
 {
     return m_highlightWindows;
@@ -324,6 +338,10 @@ bool Backend::canPresentWindows() const
 
 void Backend::presentWindows(const QVariant &_winIds)
 {
+    if (!m_taskManagerItem || !m_taskManagerItem->window()) {
+        return;
+    }
+
     QList<WId> winIds;
 
     const QVariantList &_winIdsList = _winIds.toList();
@@ -425,6 +443,10 @@ void Backend::updateWindowHighlight()
 
     if (windows.count() && m_toolTipItem && m_toolTipItem->window()) {
         windows.append(m_toolTipItem->window()->winId());
+    }
+
+    if (windows.count() && m_groupDialog) {
+        windows.append(m_groupDialog->winId());
     }
 
     KWindowEffects::highlightWindows(m_panelWinId, windows);
