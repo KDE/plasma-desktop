@@ -121,6 +121,8 @@ MouseArea {
             } else if (mouse.button == Qt.LeftButton) {
                 TaskTools.activateTask(modelIndex(), model, mouse.modifiers);
             }
+
+            backend.cancelHighlightWindows();
         }
 
         pressed = false;

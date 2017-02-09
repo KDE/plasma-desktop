@@ -41,6 +41,7 @@ class Backend : public QObject
 
     Q_PROPERTY(QQuickItem* taskManagerItem READ taskManagerItem WRITE setTaskManagerItem NOTIFY taskManagerItemChanged)
     Q_PROPERTY(QQuickItem* toolTipItem READ toolTipItem WRITE setToolTipItem NOTIFY toolTipItemChanged)
+    Q_PROPERTY(QQuickWindow* groupDialog READ groupDialog WRITE setGroupDialog NOTIFY groupDialogChanged)
     Q_PROPERTY(bool highlightWindows READ highlightWindows WRITE setHighlightWindows NOTIFY highlightWindowsChanged)
 
     public:
@@ -61,6 +62,9 @@ class Backend : public QObject
 
         QQuickItem *toolTipItem() const;
         void setToolTipItem(QQuickItem *item);
+
+        QQuickWindow *groupDialog() const;
+        void setGroupDialog(QQuickWindow *dialog);
 
         bool highlightWindows() const;
         void setHighlightWindows(bool highlight);
@@ -88,6 +92,7 @@ class Backend : public QObject
     Q_SIGNALS:
         void taskManagerItemChanged() const;
         void toolTipItemChanged() const;
+        void groupDialogChanged() const;
         void highlightWindowsChanged() const;
         void addLauncher(const QUrl &url) const;
 
@@ -101,6 +106,7 @@ class Backend : public QObject
 
         QQuickItem *m_taskManagerItem;
         QQuickItem *m_toolTipItem;
+        QQuickWindow *m_groupDialog;
         WId m_panelWinId;
         bool m_highlightWindows;
         QList<WId> m_windowsToHighlight;
