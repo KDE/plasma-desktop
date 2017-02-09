@@ -89,34 +89,31 @@ Column {
         }
         // all textlabels
         Column {
-            spacing: 0.75 * units.smallSpacing
-            PlasmaComponents.Label {
+            PlasmaExtras.Heading {
+                level: 3
                 width: isWin ? textWidth : undefined
-                height: theme.mSize(theme.defaultFont).height
-                font.pointSize: -1
-                font.pixelSize: height
+                height: undefined
                 elide: Text.ElideRight
                 text: appName
                 opacity: flatIndex == 0
                 textFormat: Text.PlainText
+                visible: text !== ""
             }
             // window title
-            PlasmaComponents.Label {
+            PlasmaExtras.Heading {
+                level: 5
                 width: isWin ? textWidth : undefined
-                height: 0.75 * theme.mSize(theme.defaultFont).height
-                font.pointSize: -1
-                font.pixelSize: height
+                height: undefined
                 elide: Text.ElideRight
                 text: generateTitle()
                 textFormat: Text.PlainText
                 opacity: 0.75
             }
             // subtext
-            PlasmaComponents.Label {
+            PlasmaExtras.Heading {
+                level: 6
                 width: isWin ? textWidth : undefined
-                height: 0.6 * theme.mSize(theme.defaultFont).height
-                font.pointSize: -1
-                font.pixelSize: height
+                height: undefined
                 elide: Text.ElideRight
                 text: isWin ? generateSubText() : ""
                 textFormat: Text.PlainText
