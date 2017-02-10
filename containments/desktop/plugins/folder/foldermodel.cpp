@@ -62,6 +62,8 @@
 #include <KShell>
 #include <kio_version.h>
 
+#include <KCoreDirLister>
+#include <KDirLister>
 #include <KDesktopFile>
 #include <KDirModel>
 #include <KIO/CopyJob>
@@ -115,6 +117,9 @@ FolderModel::FolderModel(QObject *parent) : QSortFilterProxyModel(parent),
     dirLister->setAutoErrorHandlingEnabled(false, 0);
     connect(dirLister, &DirLister::error, this, &FolderModel::dirListFailed);
     connect(dirLister, &KCoreDirLister::itemsDeleted, this, &FolderModel::evictFromIsDirCache);
+    connect(dirLister, &KCoreDirLister::started, this, &FolderModel::listingStarted);
+    void (KCoreDirLister::*myCompletedSignal)() = &KCoreDirLister::completed;
+    QObject::connect(dirLister, myCompletedSignal, this, &FolderModel::listingCompleted);
 
     m_dirModel = new KDirModel(this);
     m_dirModel->setDirLister(dirLister);

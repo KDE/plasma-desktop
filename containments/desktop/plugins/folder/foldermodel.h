@@ -212,6 +212,8 @@ class FolderModel : public QSortFilterProxyModel
 
     Q_SIGNALS:
         void urlChanged() const;
+        void listingStarted() const;
+        void listingCompleted() const;
         void iconNameChanged() const;
         void resolvedUrlChanged() const;
         void errorStringChanged() const;

@@ -503,8 +503,6 @@ Item {
                         + (3 * units.smallSpacing) + (2 * units.largeSpacing));
                 }
 
-                model: positioner
-
                 delegate: FolderItemDelegate {
                     width: gridView.cellWidth
                     height: gridView.cellHeight
@@ -957,6 +955,19 @@ Item {
             parseDesktopFiles: (plasmoid.configuration.url == "desktop:/")
             previews: plasmoid.configuration.previews
             previewPlugins: plasmoid.configuration.previewPlugins
+
+            onListingStarted: {
+                if (!gridView.model) {
+                    plasmoid.busy = true;
+                }
+            }
+
+            onListingCompleted: {
+                if (!gridView.model) {
+                    plasmoid.busy = false;
+                    gridView.model = positioner;
+                }
+            }
 
             onMove: {
                 var rows = (gridView.flow == GridView.FlowLeftToRight);
