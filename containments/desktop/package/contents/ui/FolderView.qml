@@ -432,6 +432,24 @@ Item {
             }
         }
 
+        Timer {
+            id: hoverActivateTimer
+
+            interval: root.hoverActivateDelay
+
+            onTriggered: {
+                if (!hoveredItem) {
+                    return;
+                }
+
+                if (root.useListViewMode) {
+                    doCd(index);
+                } else {
+                    hoveredItem.openPopup();
+                }
+            }
+        }
+
         PlasmaExtras.ScrollArea {
             id: scrollArea
 
@@ -493,6 +511,10 @@ Item {
                 }
 
                 onContentXChanged: {
+                    if (hoveredItem) {
+                        hoverActivateTimer.stop();
+                    }
+
                     dir.setDragHotSpotScrollOffset(contentX, contentY);
 
                     if (contentX == 0) {
@@ -522,6 +544,10 @@ Item {
                 }
 
                 onContentYChanged: {
+                    if (hoveredItem) {
+                        hoverActivateTimer.stop();
+                    }
+
                     dir.setDragHotSpotScrollOffset(contentX, contentY);
 
                     if (contentY == 0) {

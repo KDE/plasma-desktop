@@ -52,9 +52,13 @@ Item {
 
         anchors.fill: parent
 
+        visible: status === Loader.Ready
+
         active: !model.blank
 
         sourceComponent: delegateImplementation
+
+        asynchronous: true
     }
 
     Component {
@@ -72,39 +76,54 @@ Item {
             property QtObject popupDialog: null
             property Item iconArea: icon
             property Item label: label
-            property Item labelArea: textShadow
+            property Item labelArea: frameLoader.textShadow || label
             property Item actionsOverlay: actions
             property Item hoverArea: toolTip
             property Item toolTip: toolTip
+            property Item selectionButton: null
             property Item popupButton: null
 
             onSelectedChanged: {
                 if (selected && !blank) {
-                    frame.grabToImage(function(result) {
-                        dir.addItemDragImage(positioner.map(index), main.x + frame.x, main.y + frame.y, frame.width, frame.height, result.image);
+                    frameLoader.grabToImage(function(result) {
+                        dir.addItemDragImage(positioner.map(index), main.x + frameLoader.x, main.y + frameLoader.y, frameLoader.width, frameLoader.height, result.image);
                     });
                 }
             }
 
-            onIsDirChanged: {
-                if (isDir && main.GridView.view.isRootView && impl.popupButton == null) {
-                    impl.popupButton = popupButtonComponent.createObject(actions);
-                } else if (impl.popupButton) {
-                    impl.popupButton.destroy();
-                    impl.popupButton = null;
-                }
-            }
-
             onHoveredChanged: {
-                if (hovered && (!main.GridView.view.isRootView || root.containsDrag) && model.isDir) {
-                    hoverActivateTimer.restart();
-                } else if (!hovered)
+                if (hovered) {
+                    if (plasmoid.configuration.selectionMarkers && Qt.styleHints.singleClickActivation) {
+                        selectionButton = selectionButtonComponent.createObject(actions);
+                    }
+
+                    if (model.isDir) {
+                        if (!main.GridView.view.isRootView || root.containsDrag) {
+                            hoverActivateTimer.restart();
+                        }
+
+                        if (plasmoid.configuration.popups && !root.useListViewMode) {
+                            popupButton = popupButtonComponent.createObject(actions);
+                        }
+                    }
+                } else if (!hovered) {
                     hoverActivateTimer.stop();
 
                     if (popupDialog != null) {
                         popupDialog.requestDestroy();
                         popupDialog = null;
                     }
+
+                    if (selectionButton) {
+                        selectionButton.destroy();
+                        selectionButton = null;
+                    }
+
+                    if (popupButton) {
+                        popupButton.destroy();
+                        popupButton = null;
+                    }
+                }
             }
 
             function openPopup() {
@@ -116,39 +135,11 @@ Item {
                 }
             }
 
-            Timer {
-                id: hoverActivateTimer
-
-                interval: root.hoverActivateDelay
-
-                onTriggered: {
-                    if (root.useListViewMode) {
-                        doCd(index);
-                    } else {
-                        impl.openPopup();
-                    }
-                }
-            }
-
-            Connections {
-                target: main.GridView.view
-
-                enabled: hovered
-
-                onContentXChanged: {
-                    hoverActivateTimer.stop();
-                }
-
-                onContentYChanged: {
-                    hoverActivateTimer.stop();
-                }
-            }
-
             PlasmaCore.ToolTipArea {
                 id: toolTip
 
-                x: frame.x + Math.min(icon.x, label.x)
-                y: frame.y + icon.y
+                x: frameLoader.x + Math.min(icon.x, label.x)
+                y: frameLoader.y + icon.y
 
                 width: Math.max(icon.width, label.width)
                 height: (label.y + label.paintedHeight)
@@ -173,11 +164,18 @@ Item {
                 }
             }
 
-            PlasmaCore.FrameSvgItem {
-                id: frame
+            Loader {
+                id: frameLoader
 
                 x: root.useListViewMode ? 0 : units.smallSpacing
                 y: root.useListViewMode ? 0 : units.smallSpacing
+
+                property Item textShadow: null
+                property string prefix: ""
+
+                sourceComponent: frameComponent
+                active: state !== ""
+                asynchronous: true
 
                 width: {
                     if (root.useListViewMode) {
@@ -200,139 +198,105 @@ Item {
                     * theme.mSize(theme.defaultFont).height) + (2 * units.largeSpacing));
                 }
 
-                visible: !model.blank
-                enabled: visible
+                PlasmaCore.IconItem {
+                    id: icon
 
-                imagePath: "widgets/viewitem"
+                    z: 2
 
-                PlasmaCore.ColorScope {
-                    anchors.fill: parent
+                    states: [
+                        State { // icon view
+                            when: !root.useListViewMode
 
-                    colorGroup: ((root.isContainment && main.GridView.view.isRootView) ? PlasmaCore.Theme.ComplementaryColorGroup
-                        : PlasmaCore.Theme.NormalColorGroup)
-
-                    PlasmaCore.IconItem {
-                        id: icon
-
-                        states: [
-                            State { // icon view
-                                when: !root.useListViewMode
-
-                                AnchorChanges {
-                                    target: icon
-                                    anchors.top: parent.top
-                                    anchors.horizontalCenter: parent.horizontalCenter
-                                }
-                            },
-                            State { // list view
-                                when: root.useListViewMode
-
-                                AnchorChanges {
-                                    target: icon
-                                    anchors.left: parent.left
-                                    anchors.verticalCenter: parent.verticalCenter
-                                }
+                            AnchorChanges {
+                                target: icon
+                                anchors.top: parent.top
+                                anchors.horizontalCenter: parent.horizontalCenter
                             }
-                        ]
+                        },
+                        State { // list view
+                            when: root.useListViewMode
 
-                        anchors {
-                            topMargin: units.largeSpacing
-                            leftMargin: units.smallSpacing
+                            AnchorChanges {
+                                target: icon
+                                anchors.left: parent.left
+                                anchors.verticalCenter: parent.verticalCenter
+                            }
                         }
+                    ]
 
-                        width: root.useListViewMode ? main.GridView.view.iconSize : (parent.width - 2 * units.smallSpacing)
-                        height: main.GridView.view.iconSize
-
-                        opacity: root.useListViewMode ? (1.3 - selectionButton.opacity) : 1.0
-
-                        animated: false
-                        usesPlasmaTheme: false
-
-                        source: model.decoration
-                        overlays: model.overlays
+                    anchors {
+                        topMargin: units.largeSpacing
+                        leftMargin: units.smallSpacing
                     }
 
-                    TextMetrics {
-                        id: labelMetrics
+                    width: root.useListViewMode ? main.GridView.view.iconSize : (parent.width - 2 * units.smallSpacing)
+                    height: main.GridView.view.iconSize
 
-                        font: label.font
-                        elide: Text.ElideNone
-                        text: label.text
-                    }
+                    opacity: root.useListViewMode && selectionButton ? 0.3 : 1.0
 
-                    DropShadow {
-                        id: textShadow
+                    animated: false
+                    usesPlasmaTheme: false
 
-                        anchors.fill: label
+                    source: model.decoration
+                    overlays: model.overlays
+                }
 
-                        visible: (root.isContainment && main.GridView.view.isRootView)
+                PlasmaComponents.Label {
+                    id: label
 
-                        horizontalOffset: 2
-                        verticalOffset: 2
+                    z: 2 // So we can position a textShadowComponent below if needed.
 
-                        radius: 9.0
-                        samples: 18
-                        spread: 0.15
+                    states: [
+                        State { // icon view
+                            when: !root.useListViewMode
 
-                        color: "black"
-
-                        source: label
-                    }
-
-                    PlasmaComponents.Label {
-                        id: label
-
-                        states: [
-                            State { // icon view
-                                when: !root.useListViewMode
-
-                                AnchorChanges {
-                                    target: label
-                                    anchors.top: icon.bottom
-                                    anchors.horizontalCenter: parent.horizontalCenter
-                                }
-                                PropertyChanges {
-                                    target: label
-                                    anchors.topMargin: 2 * units.smallSpacing
-                                    width: Math.min(labelMetrics.advanceWidth + units.smallSpacing, parent.width - units.smallSpacing * 8)
-                                    maximumLineCount: plasmoid.configuration.textLines
-                                    horizontalAlignment: Text.AlignHCenter
-                                }
-                            },
-                            State { // list view
-                                when: root.useListViewMode
-
-                                AnchorChanges {
-                                    target: label
-                                    anchors.left: icon.right
-                                    anchors.verticalCenter: parent.verticalCenter
-                                }
-                                PropertyChanges {
-                                    target: label
-                                    anchors.leftMargin: units.smallSpacing * 2
-                                    anchors.rightMargin: units.smallSpacing * 2
-                                    width: parent.width - icon.width - (units.smallSpacing * 4)
-                                    maximumLineCount: 1
-                                    horizontalAlignment: Text.AlignLeft
-                                }
+                            AnchorChanges {
+                                target: label
+                                anchors.top: icon.bottom
+                                anchors.horizontalCenter: parent.horizontalCenter
                             }
-                        ]
+                            PropertyChanges {
+                                target: label
+                                anchors.topMargin: 2 * units.smallSpacing
+                                width: Math.min(label.implicitWidth + units.smallSpacing, parent.width - units.smallSpacing * 8)
+                                maximumLineCount: plasmoid.configuration.textLines
+                                horizontalAlignment: Text.AlignHCenter
+                            }
+                        },
+                        State { // list view
+                            when: root.useListViewMode
 
-                        height: undefined // Unset PlasmaComponents.Label's default.
+                            AnchorChanges {
+                                target: label
+                                anchors.left: icon.right
+                                anchors.verticalCenter: parent.verticalCenter
+                            }
+                            PropertyChanges {
+                                target: label
+                                anchors.leftMargin: units.smallSpacing * 2
+                                anchors.rightMargin: units.smallSpacing * 2
+                                width: parent.width - icon.width - (units.smallSpacing * 4)
+                                maximumLineCount: 1
+                                horizontalAlignment: Text.AlignLeft
+                            }
+                        }
+                    ]
 
-                        textFormat: Text.PlainText
+                    height: undefined // Unset PlasmaComponents.Label's default.
 
-                        wrapMode: Text.Wrap
-                        elide: Text.ElideRight
+                    textFormat: Text.PlainText
 
-                        color: textShadow.visible ? "white" : PlasmaCore.ColorScope.textColor
+                    wrapMode: Text.Wrap
+                    elide: Text.ElideRight
 
-                        text: model.blank ? "" : model.display
+                    color: (frameLoader.textShadow && frameLoader.textShadow.visible
+                        ? "#fff" : PlasmaCore.ColorScope.textColor)
 
-                        font.italic: model.isLink
+                    text: model.blank ? "" : model.display
 
-                        Component.onCompleted: textFix.disableMouseHandling(label) // FIXME TODO: See https://codereview.qt-project.org/#/c/113758/
-                    }
+                    font.italic: model.isLink
+
+                    Component.onCompleted: textFix.disableMouseHandling(label) // FIXME TODO: See https://codereview.qt-project.org/#/c/113758/
                 }
 
                 Column {
@@ -357,19 +321,30 @@ Item {
                     x: units.smallSpacing * 3
                     y: units.smallSpacing * 3
 
+                    z: 3
+
                     anchors {
                         centerIn: root.useListViewMode ? icon : undefined
                     }
 
                     width: implicitWidth
                     height: implicitHeight
+                }
+
+                Component {
+                    id: frameComponent
+
+                    PlasmaCore.FrameSvgItem {
+                        prefix: frameLoader.prefix
+
+                        imagePath: "widgets/viewitem"
+                    }
+                }
+
+                Component {
+                    id: selectionButtonComponent
 
                     FolderItemActionButton {
-                        id: selectionButton
-
-                        visible: plasmoid.configuration.selectionMarkers && Qt.styleHints.singleClickActivation
-                        opacity: (visible && impl.hovered) ? 1.0 : 0.0
-
                         element: model.selected ? "remove" : "add"
 
                         onClicked: dir.toggleSelected(positioner.map(index))
@@ -380,13 +355,32 @@ Item {
                     id: popupButtonComponent
 
                     FolderItemActionButton {
-                        visible: !root.useListViewMode
-
-                        opacity: (plasmoid.configuration.popups && impl.hovered && impl.popupDialog == null) ? 1.0 : 0.0
+                        visible: popupDialog == null
 
                         element: "open"
 
-                        onClicked: impl.openPopup()
+                        onClicked: openPopup()
+                    }
+                }
+
+                Component {
+                    id: textShadowComponent
+
+                    DropShadow {
+                        anchors.fill: label
+
+                        z: 1
+
+                        horizontalOffset: 2
+                        verticalOffset: 2
+
+                        radius: 9.0
+                        samples: 18
+                        spread: 0.15
+
+                        color: "black"
+
+                        source: label
                     }
                 }
 
@@ -396,7 +390,7 @@ Item {
                         when: model.selected
 
                         PropertyChanges {
-                            target: frame
+                            target: frameLoader
                             prefix: "selected"
                         }
                     },
@@ -405,7 +399,7 @@ Item {
                         when: hovered && !model.selected
 
                         PropertyChanges {
-                            target: frame
+                            target: frameLoader
                             prefix: "hover"
                         }
                     },
@@ -414,11 +408,17 @@ Item {
                         when: hovered && model.selected
 
                         PropertyChanges {
-                            target: frame
+                            target: frameLoader
                             prefix: "selected+hover"
                         }
                     }
                 ]
+            }
+
+            Component.onCompleted: {
+                if (root.isContainment && main.GridView.view.isRootView) {
+                    frameLoader.textShadow = textShadowComponent.createObject(frameLoader);
+                }
             }
         }
     }
