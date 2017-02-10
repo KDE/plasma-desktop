@@ -65,11 +65,6 @@ Item {
         size: "16x16"
     }
 
-    // FIXME TODO: See https://codereview.qt-project.org/#/c/113758/
-    Folder.TextFix {
-        id: textFix
-    }
-
     Folder.MenuHelper {
         id: menuHelper
     }

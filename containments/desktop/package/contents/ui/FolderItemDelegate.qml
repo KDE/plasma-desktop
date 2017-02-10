@@ -295,8 +295,6 @@ Item {
                     text: model.blank ? "" : model.display
 
                     font.italic: model.isLink
-
-                    Component.onCompleted: textFix.disableMouseHandling(label) // FIXME TODO: See https://codereview.qt-project.org/#/c/113758/
                 }
 
                 Column {

@@ -13,7 +13,6 @@ set(folderplugin_SRCS
     previewpluginsmodel.cpp
     rubberband.cpp
     subdialog.cpp
-    textfix.cpp
     viewpropertiesmenu.cpp
     wheelinterceptor.cpp
     shortcut.cpp
