@@ -846,8 +846,23 @@ void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row)
          item = itemForIndex(idx);
     }
 
-    if (item.isNull() &&
-        mimeData->hasFormat(QStringLiteral("application/x-kde-ark-dndextract-service")) &&
+    QUrl dropTargetUrl;
+
+    if (item.isNull()) {
+        dropTargetUrl = m_dirModel->dirLister()->url();
+    } else if (m_parseDesktopFiles && item.isDesktopFile()) {
+        const KDesktopFile file(item.targetUrl().path());
+
+        if (file.readType() == QLatin1String("Link")) {
+            dropTargetUrl = QUrl(file.readUrl());
+        } else {
+            dropTargetUrl = item.mostLocalUrl();
+        }
+    } else {
+        dropTargetUrl = item.mostLocalUrl();
+    }
+
+    if (mimeData->hasFormat(QStringLiteral("application/x-kde-ark-dndextract-service")) &&
         mimeData->hasFormat(QStringLiteral("application/x-kde-ark-dndextract-path"))) {
         const QString remoteDBusClient = mimeData->data(QStringLiteral("application/x-kde-ark-dndextract-service"));
         const QString remoteDBusPath = mimeData->data(QStringLiteral("application/x-kde-ark-dndextract-path"));
@@ -856,7 +871,7 @@ void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row)
             QDBusMessage::createMethodCall(remoteDBusClient, remoteDBusPath,
                                             QStringLiteral("org.kde.ark.DndExtract"),
                                             QStringLiteral("extractSelectedFilesTo"));
-        message.setArguments(QVariantList() << m_dirModel->dirLister()->url().adjusted(QUrl::PreferLocalFile).toString());
+        message.setArguments({dropTargetUrl.toDisplayString(QUrl::PreferLocalFile)});
 
         QDBusConnection::sessionBus().call(message);
 
@@ -881,22 +896,6 @@ void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row)
 
     QDropEvent ev(pos, possibleActions, mimeData, buttons, modifiers);
     ev.setDropAction(proposedAction);
-
-    QUrl dropTargetUrl;
-
-    if (item.isNull()) {
-        dropTargetUrl = m_dirModel->dirLister()->url();
-    } else if (m_parseDesktopFiles && item.isDesktopFile()) {
-        const KDesktopFile file(item.targetUrl().path());
-
-        if (file.readType() == QLatin1String("Link")) {
-            dropTargetUrl = QUrl(file.readUrl());
-        } else {
-            dropTargetUrl = item.mostLocalUrl();
-        }
-    } else {
-        dropTargetUrl = item.mostLocalUrl();
-    }
 
     KIO::DropJob *dropJob = KIO::drop(&ev, dropTargetUrl);
     dropJob->ui()->setAutoErrorHandlingEnabled(true);
