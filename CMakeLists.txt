@@ -71,7 +71,7 @@ set_package_properties(PackageKitQt5 PROPERTIES DESCRIPTION "Software Manager in
 # a proper framework. Hence the strange versioning.
 # This will be fixed with Plasma 5.2, as Baloo should have
 # become a framework by then
-find_package(KF5Baloo "5.1.90")
+find_package(KF5Baloo "5.24")
 set_package_properties(KF5Baloo PROPERTIES DESCRIPTION "File Searching"
                        TYPE REQUIRED
                        PURPOSE "Needed to build to File Search KCM"
