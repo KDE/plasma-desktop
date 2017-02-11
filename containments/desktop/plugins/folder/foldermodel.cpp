@@ -510,7 +510,11 @@ void FolderModel::run(int row)
     }
 
     KRun *run = new KRun(url, 0);
-    run->setShowScriptExecutionPrompt(true);
+    // On desktop:/ we want to be able to run .desktop files right away,
+    // otherwise ask for security reasons. We also don't use the targetUrl()
+    // from above since we don't want the resolved /home/foo/Desktop URL.
+    run->setShowScriptExecutionPrompt(item.url().scheme() != QLatin1String("desktop")
+                                   || item.url().adjusted(QUrl::RemoveFilename).path() != QLatin1String("/"));
 }
 
 void FolderModel::rename(int row, const QString& name)
