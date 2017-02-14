@@ -26,6 +26,7 @@ target_link_libraries(taskmanagerplugin
                       KF5::I18n
                       KF5::KIOCore
                       KF5::KIOWidgets
+                      KF5::KIOFileWidgets # KFilePlacesModel
                       KF5::Plasma
                       KF5::Service
                       KF5::WindowSystem)

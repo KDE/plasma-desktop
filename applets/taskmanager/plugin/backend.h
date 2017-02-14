@@ -66,6 +66,7 @@ class Backend : public QObject
         void setHighlightWindows(bool highlight);
 
         Q_INVOKABLE QVariantList jumpListActions(const QUrl &launcherUrl, QObject *parent);
+        Q_INVOKABLE QVariantList placesActions(const QUrl &launcherUrl, bool showAllPlaces, QObject *parent);
         Q_INVOKABLE QVariantList recentDocumentActions(const QUrl &launcherUrl, QObject *parent);
         Q_INVOKABLE void setActionGroup(QAction *action) const;
 
@@ -90,6 +91,8 @@ class Backend : public QObject
         void toolTipItemChanged() const;
         void highlightWindowsChanged() const;
         void addLauncher(const QUrl &url) const;
+
+        void showAllPlaces();
 
     private Q_SLOTS:
         void toolTipWindowChanged(QQuickWindow *window);

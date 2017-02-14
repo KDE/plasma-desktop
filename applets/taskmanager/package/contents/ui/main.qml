@@ -429,12 +429,14 @@ Item {
         dragSource = null;
     }
 
-    function createContextMenu(rootTask, modelIndex) {
-        return tasks.contextMenuComponent.createObject(rootTask,
-            { visualParent: rootTask,
-              modelIndex: modelIndex,
-              mpris2Source: mpris2Source
-            });
+    function createContextMenu(rootTask, modelIndex, args) {
+        var initialArgs = args || {}
+        initialArgs.visualParent = rootTask;
+        initialArgs.modelIndex = modelIndex;
+        initialArgs.mpris2Source = mpris2Source;
+        initialArgs.backend = backend;
+
+        return tasks.contextMenuComponent.createObject(rootTask, initialArgs);
     }
 
     Component.onCompleted: {

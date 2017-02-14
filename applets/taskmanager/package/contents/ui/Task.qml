@@ -126,7 +126,13 @@ MouseArea {
             pressX = mouse.x;
             pressY = mouse.y;
         } else if (mouse.button == Qt.RightButton) {
-            tasks.createContextMenu(task, modelIndex()).show();
+            // When we're a launcher, there's no window controls, so we can show all
+            // places without the menu getting super huge.
+            if (model.IsLauncher === true) {
+                showContextMenu({showAllPlaces: true})
+            } else {
+                showContextMenu();
+            }
         }
     }
 
@@ -198,6 +204,10 @@ MouseArea {
     function modelIndex() {
         return (inPopup ? tasksModel.makeModelIndex(groupDialog.visualParent.itemIndex, index)
             : tasksModel.makeModelIndex(index));
+    }
+
+    function showContextMenu(args) {
+        tasks.createContextMenu(task, modelIndex(), args).show();
     }
 
     function updateAudioStreams() {

@@ -30,9 +30,12 @@ import org.kde.taskmanager 0.1 as TaskManager
 PlasmaComponents.ContextMenu {
     id: menu
 
+    property QtObject backend
     property QtObject mpris2Source
     property var modelIndex
     readonly property var atm: TaskManager.AbstractTasksModel
+
+    property bool showAllPlaces: false
 
     placement: {
         if (plasmoid.location == PlasmaCore.Types.LeftEdge) {
@@ -55,6 +58,13 @@ PlasmaComponents.ContextMenu {
             menu.destroy();
             backend.ungrabMouse(visualParent);
         }
+    }
+
+    Component.onCompleted: {
+        // Cannot have "Connections" as child of PlasmaCoponents.ContextMenu.
+        backend.showAllPlaces.connect(function() {
+            visualParent.showContextMenu({showAllPlaces: true});
+        });
     }
 
     function get(modelProp) {
@@ -81,29 +91,23 @@ PlasmaComponents.ContextMenu {
     }
 
     function loadDynamicLaunchActions(launcherUrl) {
-        var actionList = backend.jumpListActions(launcherUrl, menu);
+        var lists = [
+            backend.jumpListActions(launcherUrl, menu),
+            backend.placesActions(launcherUrl, showAllPlaces, menu),
+            backend.recentDocumentActions(launcherUrl, menu)
+        ]
 
-        for (var i = 0; i < actionList.length; ++i) {
-            var item = newMenuItem(menu);
-            item.action = actionList[i];
-            menu.addMenuItem(item, virtualDesktopsMenuItem);
-        }
+        lists.forEach(function (list) {
+            for (var i = 0; i < list.length; ++i) {
+                var item = newMenuItem(menu);
+                item.action = list[i];
+                menu.addMenuItem(item, virtualDesktopsMenuItem);
+            }
 
-        if (actionList.length > 0) {
-            menu.addMenuItem(newSeparator(menu), virtualDesktopsMenuItem);
-        }
-
-        var actionList = backend.recentDocumentActions(launcherUrl, menu);
-
-        for (var i = 0; i < actionList.length; ++i) {
-            var item = newMenuItem(menu);
-            item.action = actionList[i];
-            menu.addMenuItem(item, virtualDesktopsMenuItem);
-        }
-
-        if (actionList.length > 0) {
-            menu.addMenuItem(newSeparator(menu), virtualDesktopsMenuItem);
-        }
+            if (list.length > 0) {
+                menu.addMenuItem(newSeparator(menu), virtualDesktopsMenuItem);
+            }
+        });
 
         // Add Media Player control actions
         var sourceName = mpris2Source.sourceNameForLauncherUrl(launcherUrl, get(atm.AppPid));
