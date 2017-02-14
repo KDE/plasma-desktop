@@ -101,7 +101,7 @@ Item {
                     iconName: "dialog-information"
                     width: height
                     onClicked: {
-                        configDialog.currentContainmentActionsModel.showAbout(index);
+                        configDialog.currentContainmentActionsModel.showAbout(index, this);
                     }
                 }
                 QtControls.Button {
