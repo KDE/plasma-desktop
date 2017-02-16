@@ -194,6 +194,12 @@ Item {
             Item {
                 Layout.fillWidth: true
             }
+            QtControls.Button {
+                anchors.right: parent.right
+                text: i18n("Get New Looks...")
+                iconName: "get-hot-new-stuff"
+                onClicked: kcm.getNewStuff();
+            }
         }
     }
 
