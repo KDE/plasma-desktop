@@ -233,11 +233,11 @@ FocusScope {
                         }
 
                         showChildDialogs = true;
-                    } else if (event.key == Qt.Key_Right && childDialog != null) {
+                    } else if ((event.key == Qt.Key_Right || event.key == Qt.Key_Return || event.key == Qt.Key_Enter) && childDialog != null) {
                         windowSystem.forceActive(childDialog.mainItem);
                         childDialog.mainItem.focus = true;
                         childDialog.mainItem.currentIndex = 0;
-                    } else if (event.key == Qt.Key_Right && childDialog == null
+                    } else if ((event.key == Qt.Key_Right || event.key == Qt.Key_Return || event.key == Qt.Key_Enter) && childDialog == null
                         && currentItem != null && currentItem.hasChildren) {
                         dialogSpawnTimer.focusOnSpawn = true;
                         dialogSpawnTimer.restart();
@@ -245,6 +245,8 @@ FocusScope {
                         dialog.destroy();
                     } else if (event.key == Qt.Key_Escape) {
                         plasmoid.expanded = false;
+                    } else if (event.key == Qt.Key_Tab) {
+                        //do nothing, and skip appending text
                     } else if (event.text != "") {
                         appendSearchText(event.text);
                     }
