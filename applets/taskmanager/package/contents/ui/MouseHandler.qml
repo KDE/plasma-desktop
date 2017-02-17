@@ -122,6 +122,12 @@ Item {
         }
 
         onDrop: {
+            // Reject internal drops.
+            if (event.mimeData.formats.indexOf("application/x-orgkdeplasmataskmanager_taskbuttonitem") >= 0) {
+                event.ignore();
+                return;
+            }
+
             // Reject plasmoid drops.
             if (event.mimeData.formats.indexOf("text/x-plasmoidservicename") >= 0) {
                 event.ignore();
