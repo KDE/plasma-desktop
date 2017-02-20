@@ -50,6 +50,10 @@ class KFileItemActions;
 class KJob;
 class KNewFileMenu;
 
+namespace KIO {
+    class DropJob;
+}
+
 class DirLister : public KDirLister
 {
     Q_OBJECT
@@ -232,6 +236,7 @@ class FolderModel : public QSortFilterProxyModel
         void filterMimeTypesChanged() const;
         void requestRename() const;
         void move(int x, int y, QList<QUrl> urls);
+        void popupMenuAboutToShow(KIO::DropJob *dropJob, QMimeData *mimeData, int x, int y);
 
     protected:
         bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const;

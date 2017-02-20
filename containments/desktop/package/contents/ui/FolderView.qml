@@ -134,6 +134,12 @@ Item {
         }
     }
 
+    Connections {
+        target: dir
+        onPopupMenuAboutToShow: {
+            plasmoid.processMimeData(mimeData, x, y, dropJob);
+        }
+    }
     function makeBackButton() {
         return Qt.createQmlObject("BackButtonItem {}", main);
     }

@@ -112,6 +112,8 @@ FolderModel::FolderModel(QObject *parent) : QSortFilterProxyModel(parent),
     m_filterMode(NoFilter),
     m_filterPatternMatchAll(true)
 {
+    //needed to pass the job around with qml
+    qmlRegisterType<KIO::DropJob>();
     DirLister *dirLister = new DirLister(this);
     dirLister->setDelayedMimeTypes(true);
     dirLister->setAutoErrorHandlingEnabled(false, 0);
@@ -939,6 +941,12 @@ void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row)
 
     KIO::DropJob *dropJob = KIO::drop(&ev, dropTargetUrl);
     dropJob->ui()->setAutoErrorHandlingEnabled(true);
+    const int x = dropEvent->property("x").toInt();
+    const int y = dropEvent->property("y").toInt();
+
+    connect(dropJob, static_cast<void(KIO::DropJob::*)(const KFileItemListProperties &)>(&KIO::DropJob::popupMenuAboutToShow), this, [this, mimeData, x, y, dropJob](const KFileItemListProperties &) {
+        emit popupMenuAboutToShow(dropJob, mimeData, x, y);
+    });
 }
 
 void FolderModel::dropCwd(QObject* dropEvent)
