@@ -338,6 +338,7 @@ Item {
                     pressedItem.toolTip.hideToolTip();
                     dragX = mouse.x;
                     dragY = mouse.y;
+                    gridView.verticalDropHitscanOffset = pressedItem.iconArea.y + (pressedItem.iconArea.height / 2)
                     dir.dragSelected(mouse.x, mouse.y);
                     dragX = -1;
                     dragY = -1;
@@ -413,6 +414,7 @@ Item {
                 property bool isRootView: false
 
                 property int iconSize: makeIconSize()
+                property int verticalDropHitscanOffset: 0
 
                 property Item hoveredItem: null
 
@@ -931,7 +933,7 @@ Item {
                     }
 
                     itemX = dropPos.x + offset.x + (listener.dragX % cellWidth) + (cellWidth / 2);
-                    itemY = dropPos.y + offset.y + (listener.dragY % cellHeight) + (cellHeight / 2);
+                    itemY = dropPos.y + offset.y + (listener.dragY % cellHeight) + gridView.verticalDropHitscanOffset;
 
                     if (gridView.effectiveLayoutDirection == Qt.RightToLeft) {
                         itemX -= (rows ? gridView.contentX : gridView.originX);
