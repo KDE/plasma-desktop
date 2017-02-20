@@ -113,7 +113,7 @@ void TouchpadConfigLibinput::load()
 
     if (!m_backend->getConfig()) {
         m_errorMessage->setMessageType(KMessageWidget::Error);
-        m_errorMessage->setText(i18n("Error while loading values. See logs for more informations. Please restart Touchpad KCM."));
+        m_errorMessage->setText(i18n("Error while loading values. See logs for more informations. Please restart this configuration module."));
         m_errorMessage->animatedShow();
     } else {
         if (!m_backend->touchpadCount()) {
@@ -129,7 +129,7 @@ void TouchpadConfigLibinput::save()
 {
     if (!m_backend->applyConfig()) {
         m_errorMessage->setMessageType(KMessageWidget::Error);
-        m_errorMessage->setText(i18n("Not able to save all changes. See logs for more informations. Please restart Touchpad KCM and try again."));
+        m_errorMessage->setText(i18n("Not able to save all changes. See logs for more informations. Please restart this configuration module and try again."));
         m_errorMessage->animatedShow();
     } else {
         hideErrorMessage();
@@ -149,7 +149,7 @@ void TouchpadConfigLibinput::defaults()
 
     if (!m_backend->getDefaultConfig()) {
         m_errorMessage->setMessageType(KMessageWidget::Error);
-        m_errorMessage->setText(i18n("Error while loading default values. Not all or none options could be set to their default values."));
+        m_errorMessage->setText(i18n("Error while loading default values. Failed to set some options to their default values."));
         m_errorMessage->animatedShow();
     }
 }
@@ -169,7 +169,7 @@ void TouchpadConfigLibinput::onTouchpadAdded(bool success)
 
     if (!success) {
         m_errorMessage->setMessageType(KMessageWidget::Error);
-        m_errorMessage->setText(i18n("Error while adding newly connected device. Please reconnect it and restart Touchpad KCM."));
+        m_errorMessage->setText(i18n("Error while adding newly connected device. Please reconnect it and restart this configuration module."));
     }
 
     int activeIndex;
