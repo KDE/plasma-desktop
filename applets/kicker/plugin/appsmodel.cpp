@@ -568,6 +568,7 @@ void AppsModel::processServiceGroup(KServiceGroup::Ptr group)
                 if (entry->type() == AbstractEntry::RunnableType
                     && static_cast<const AppEntry *>(entry)->service()->storageId() == service->storageId()) {
                     found = true;
+                    break;
                 }
             }
 
