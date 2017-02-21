@@ -76,6 +76,7 @@ AppsModel::AppsModel(const QList<AbstractEntry *> entryList, bool deleteEntriesO
                 && static_cast<const AppEntry *>(entry)->service()->storageId()
                 == static_cast<const AppEntry *>(suggestedEntry)->service()->storageId()) {
                 found = true;
+                break;
             }
         }
 
