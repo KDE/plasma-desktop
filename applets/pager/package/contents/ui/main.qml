@@ -98,6 +98,7 @@ MouseArea {
             // Somewhat heavy-handed way to clean up after a window delegate drag
             // exits the window.
             pagerModel.refresh();
+            dragging = false;
         }
     }
 
