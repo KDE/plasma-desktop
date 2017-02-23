@@ -27,9 +27,13 @@
 
 #include <stdlib.h>
 
+#include <QApplication>
 #include <QCheckBox>
 #include <QComboBox>
+#include <QDialogButtonBox>
+#include <QDoubleSpinBox>
 #include <QLabel>
+#include <QProcess>
 #include <QPushButton>
 #include <QSpinBox>
 #include <qplatformdefs.h>
@@ -44,16 +48,12 @@
 
 #include <KFontDialog>
 #include <KAcceleratorManager>
-#include <KApplication>
 #include <KGlobalSettings>
 #include <KMessageBox>
-#include <KProcess>
 #include <KConfig>
-#include <KStandardDirs>
-#include <KDebug>
+#include <KConfigGroup>
 #include <KLocalizedString>
 #include <KPluginFactory>
-#include <KDoubleNumInput>
 
 #include "../krdb/krdb.h"
 
@@ -183,36 +183,20 @@ void FontUseItem::setDefault()
 
 void FontUseItem::readFont()
 {
-    KConfig *config;
-
-    bool deleteme = false;
-    if (_rcfile.isEmpty()) {
-        config = KSharedConfig::openConfig().data();
-    } else {
-        config = new KConfig(_rcfile);
-        deleteme = true;
-    }
-
-    KConfigGroup group(config, _rcgroup);
+    const KConfig *config = KSharedConfig::openConfig(_rcfile).data();
+    const KConfigGroup group(config, _rcgroup);
     QFont tmpFnt(_default);
     setFont(group.readEntry(_rckey, tmpFnt), isFixedOnly());
-    if (deleteme) {
-        delete config;
-    }
 }
 
 void FontUseItem::writeFont()
 {
-    KConfig *config;
-
+    KConfig *config = KSharedConfig::openConfig(_rcfile).data();
     if (_rcfile.isEmpty()) {
-        config = KSharedConfig::openConfig().data();
         KConfigGroup(config, _rcgroup).writeEntry(_rckey, font(), KConfig::Normal | KConfig::Global);
     } else {
-        config = new KConfig(KStandardDirs::locateLocal("config", _rcfile));
         KConfigGroup(config, _rcgroup).writeEntry(_rckey, font());
         config->sync();
-        delete config;
     }
 }
 
@@ -243,29 +227,40 @@ void FontUseItem::applyFontDiff(const QFont &fnt, int fontDiffFlags)
 /**** FontAASettings ****/
 #if defined(HAVE_FONTCONFIG) && defined (HAVE_X11)
 FontAASettings::FontAASettings(QWidget *parent)
-    : KDialog(parent),
+    : QDialog(parent),
       changesMade(false)
 {
     setObjectName("FontAASettings");
     setModal(true);
-    setCaption(i18n("Configure Anti-Alias Settings"));
-    setButtons(Ok | Cancel);
+    setWindowTitle(i18n("Configure Anti-Alias Settings"));
 
-    QWidget     *mw = new QWidget(this);
-    QFormLayout *layout = new QFormLayout(mw);
-    layout->setVerticalSpacing(0);
-    layout->setMargin(0);
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
 
-    excludeRange = new QCheckBox(i18n("E&xclude range:"), mw);
+    QFormLayout *layout = new QFormLayout();
+    layout->setFieldGrowthPolicy(QFormLayout::AllNonFixedFieldsGrow);
+
+    excludeRange = new QCheckBox(i18n("E&xclude range:"), this);
     QHBoxLayout *rangeLayout = new QHBoxLayout();
-    excludeFrom = new KDoubleNumInput(0, 72, 8.0, mw, 1, 1);
-    excludeFrom->setSuffix(i18n(" pt"));
+
+    excludeFrom = new QDoubleSpinBox(this);
+    excludeFrom->setRange(0.0, 72.0);
+    excludeFrom->setValue(8.0);
+    excludeFrom->setSingleStep(1.0);
+    excludeFrom->setDecimals(1);
+    excludeFrom->setSuffix(i18nc("abbreviation for unit of points", " pt"));
     rangeLayout->addWidget(excludeFrom);
-    excludeToLabel = new QLabel(i18n(" to "), mw);
+
+    excludeToLabel = new QLabel(i18n(" to "), this);
     rangeLayout->addWidget(excludeToLabel);
-    excludeTo = new KDoubleNumInput(0, 72, 15.0, mw, 1, 1);
-    excludeTo->setSuffix(i18n(" pt"));
+
+    excludeTo = new QDoubleSpinBox(this);
+    excludeTo->setRange(0.0, 72.0);
+    excludeTo->setValue(15.0);
+    excludeTo->setSingleStep(1.0);
+    excludeTo->setDecimals(1);
+    excludeTo->setSuffix(i18nc("abbreviation for unit of points", " pt"));
     rangeLayout->addWidget(excludeTo);
+
     layout->addRow(excludeRange, rangeLayout);
 
     QString subPixelWhatsThis = i18n("<p>If you have a TFT or LCD screen you"
@@ -279,10 +274,10 @@ FontAASettings::FontAASettings(QWidget *parent)
                                      " have a linear ordering of RGB sub-pixel, some have BGR.<br />"
                                      " This feature does not work with CRT monitors.</p>");
 
-    subPixelLabel = new QLabel(i18n("Sub-pixel rendering type: "), mw);
+    subPixelLabel = new QLabel(i18n("Sub-pixel rendering type:"), this);
     subPixelLabel->setWhatsThis(subPixelWhatsThis);
 
-    subPixelType = new QComboBox(mw);
+    subPixelType = new QComboBox(this);
     layout->addRow(subPixelLabel, subPixelType);
 
     subPixelType->setEditable(false);
@@ -292,8 +287,8 @@ FontAASettings::FontAASettings(QWidget *parent)
         subPixelType->addItem(QPixmap(aaPixmaps[t]), i18n(KXftConfig::description((KXftConfig::SubPixel::Type)t).toUtf8()));
     }
 
-    QLabel *hintingLabel = new QLabel(i18n("Hinting style: "), mw);
-    hintingStyle = new QComboBox(mw);
+    QLabel *hintingLabel = new QLabel(i18n("Hinting style:"), this);
+    hintingStyle = new QComboBox(this);
     hintingStyle->setEditable(false);
     layout->addRow(hintingLabel, hintingStyle);
     for (int s = KXftConfig::Hint::NotSet; s <= KXftConfig::Hint::Full; ++s) {
@@ -305,13 +300,30 @@ FontAASettings::FontAASettings(QWidget *parent)
     hintingLabel->setWhatsThis(hintingText);
     load();
     enableWidgets();
-    setMainWidget(mw);
+
+    QHBoxLayout *outerLayout = new QHBoxLayout();
+    outerLayout->addLayout(layout);
+    outerLayout->addStretch(1);
+
+    mainLayout->addLayout(outerLayout);
+    mainLayout->addStretch(1);
+    mainLayout->addSpacing(style()->pixelMetric(QStyle::PM_LayoutBottomMargin));
+
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok|QDialogButtonBox::Cancel, this);
+    buttonBox->button(QDialogButtonBox::Ok)->setShortcut(Qt::CTRL|Qt::Key_Return);
+    connect(buttonBox, &QDialogButtonBox::accepted, this, &QDialog::accept);
+    connect(buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
+    mainLayout->addWidget(buttonBox);
 
     connect(excludeRange, &QAbstractButton::toggled, this, &FontAASettings::changed);
-    connect(excludeFrom, &KDoubleNumInput::valueChanged, this, &FontAASettings::changed);
-    connect(excludeTo, &KDoubleNumInput::valueChanged, this, &FontAASettings::changed);
-    connect(subPixelType, SIGNAL(activated(QString)), SLOT(changed()));
-    connect(hintingStyle, SIGNAL(activated(QString)), SLOT(changed()));
+    connect(excludeFrom, static_cast<void(QDoubleSpinBox::*)(double)>(&QDoubleSpinBox::valueChanged),
+            this, &FontAASettings::changed);
+    connect(excludeTo, static_cast<void(QDoubleSpinBox::*)(double)>(&QDoubleSpinBox::valueChanged),
+            this, &FontAASettings::changed);
+    connect(subPixelType, static_cast<void(QComboBox::*)(int)>(&QComboBox::activated),
+            this, &FontAASettings::changed);
+    connect(hintingStyle, static_cast<void(QComboBox::*)(int)>(&QComboBox::activated),
+            this, &FontAASettings::changed);
 }
 
 bool FontAASettings::load()
@@ -499,7 +511,7 @@ void FontAASettings::changed()
 #if defined(HAVE_FONTCONFIG) && defined (HAVE_X11)
 int FontAASettings::exec()
 {
-    int i = KDialog::exec();
+    const int i = QDialog::exec();
 
     if (!i) {
         load();    // Reset settings...
@@ -622,7 +634,7 @@ KFonts::KFonts(QWidget *parent, const QVariantList &args)
     hblay->addWidget(fontAdjustButton);
     connect(fontAdjustButton, &QAbstractButton::clicked, this, &KFonts::slotApplyFontDiff);
 
-    layout->addSpacing(KDialog::spacingHint());
+    layout->addSpacing(style()->pixelMetric(QStyle::PM_LayoutVerticalSpacing));
 
     QGridLayout *lay = new QGridLayout();
     layout->addLayout(lay);
@@ -777,9 +789,9 @@ void KFonts::save()
     // if the setting is reset in the module, remove the dpi value,
     // otherwise don't explicitly remove it and leave any possible system-wide value
     if (dpi == 0 && dpi_original != 0) {
-        KProcess proc;
-        proc << "xrdb" << "-quiet" << "-remove" << "-nocpp";
-        proc.start();
+        QProcess proc;
+        proc.setProcessChannelMode(QProcess::ForwardedChannels);
+        proc.start("xrdb", QStringList() << "-quiet" << "-remove" << "-nocpp");
         if (proc.waitForStarted()) {
             proc.write(QByteArray("Xft.dpi\n"));
             proc.closeWriteChannel();
@@ -790,7 +802,7 @@ void KFonts::save()
 
     KGlobalSettings::self()->emitChange(KGlobalSettings::FontChanged);
 
-    kapp->processEvents(); // Process font change ourselves
+    QApplication::processEvents();			// Process font change ourselves
 
     // Don't overwrite global settings unless explicitly asked for - e.g. the system
     // fontconfig setup may be much more complex than this module can provide.

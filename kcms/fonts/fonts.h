@@ -24,20 +24,20 @@
 #ifndef FONTS_H
 #define FONTS_H
 
+#include <QDialog>
 #include <QLabel>
 #include <QList>
 #include <config-X11.h>
 
 #include <KCModule>
-#include <KDialog>
 #include <KFontRequester>
 
 #include "kxftconfig.h"
 
 class QCheckBox;
 class QComboBox;
+class QDoubleSpinBox;
 class QSpinBox;
-class KDoubleNumInput;
 class FontAASettings;
 
 class FontUseItem : public KFontRequester
@@ -74,7 +74,7 @@ private:
     QFont _default;
 };
 
-class FontAASettings : public KDialog
+class FontAASettings : public QDialog
 {
     Q_OBJECT
 
@@ -103,8 +103,8 @@ protected Q_SLOTS:
 private:
 
     QCheckBox *excludeRange;
-    KDoubleNumInput *excludeFrom;
-    KDoubleNumInput *excludeTo;
+    QDoubleSpinBox *excludeFrom;
+    QDoubleSpinBox *excludeTo;
     QComboBox *subPixelType;
     QComboBox *hintingStyle;
     QLabel    *subPixelLabel;
