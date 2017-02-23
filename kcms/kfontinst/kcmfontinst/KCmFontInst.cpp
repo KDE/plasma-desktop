@@ -534,13 +534,15 @@ void CKCmFontInst::groupSelected(const QModelIndex &index)
 
     if(index.isValid())
         grp=static_cast<CGroupListItem *>(index.internalPointer());
+    else
+        return;
 
     itsFontListView->setFilterGroup(grp);
     setStatusBar();
 
     //
     // Check fonts listed within group are still valid!
-    if(grp && grp->isCustom() && !grp->validated())
+    if(grp->isCustom() && !grp->validated())
     {
         QSet<QString>           remList;
         QSet<QString>::Iterator it(grp->families().begin()),
