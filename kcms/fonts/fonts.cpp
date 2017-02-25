@@ -526,7 +526,7 @@ KFonts::KFonts(QWidget *parent, const QVariantList &args)
 
     QList<QFont> defaultFontList;
 
-    // NOTE: keep in sync with kdelibs/kdeui/kernel/kglobalsettings.cpp
+    // NOTE: keep in sync with plasma-integration/src/platformtheme/kfontsettingsdata.cpp
 
 #ifdef Q_OS_MAC
     QFont f0("Lucida Grande", 13); // general/menu/desktop
@@ -538,7 +538,7 @@ KFonts::KFonts(QWidget *parent, const QVariantList &args)
     QFont f2("Sans Serif", 16); // toolbar
 #else
     QFont f0("Noto Sans", 10); // general/menu/desktop
-    QFont f1("Oxygen Mono", 9); // fixed font
+    QFont f1("Hack", 9); // fixed font
     QFont f2("Noto Sans", 9); // toolbar
 #endif
     QFont f3("Noto Sans", 10); // window title
