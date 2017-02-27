@@ -216,7 +216,7 @@ Item {
             height: paintedHeight
 
             text: model.description
-            opacity: isCurrent ? 0.6 : 0.3
+            opacity: isCurrent ? 0.8 : 0.6
             font.pointSize: theme.smallestFont.pointSize
             elide: Text.ElideMiddle
         }
