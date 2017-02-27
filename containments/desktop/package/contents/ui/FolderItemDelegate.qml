@@ -362,7 +362,7 @@ Item {
                     },
                     State {
                         name: "hover"
-                        when: hovered && !model.selected
+                        when: hovered && !model.selected && plasmoid.configuration.iconHoverEffect
 
                         PropertyChanges {
                             target: frame
@@ -371,7 +371,7 @@ Item {
                     },
                     State {
                         name: "selected+hover"
-                        when: hovered && model.selected
+                        when: hovered && model.selected && plasmoid.configuration.iconHoverEffect
 
                         PropertyChanges {
                             target: frame
