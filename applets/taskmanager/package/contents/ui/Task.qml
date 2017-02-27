@@ -489,6 +489,7 @@ MouseArea {
         elide: Text.ElideRight
         textFormat: Text.PlainText
         verticalAlignment: Text.AlignVCenter
+        maximumLineCount: plasmoid.configuration.maxTextLines || undefined
     }
 
     states: [
@@ -503,7 +504,8 @@ MouseArea {
         },
         State {
             name: "hovered"
-            when: task.highlighted || (contextMenu.status == PlasmaComponents.DialogStatus.Open && contextMenu.visualParent == task)
+            when: ((task.highlighted && frame.hasElementPrefix("hover") && plasmoid.configuration.taskHoverEffect)
+                || (contextMenu.status == PlasmaComponents.DialogStatus.Open && contextMenu.visualParent == task))
 
             PropertyChanges {
                 target: frame
