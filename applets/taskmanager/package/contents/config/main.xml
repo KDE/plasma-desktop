@@ -93,6 +93,10 @@
       <label>Whether to indicate applications that are playing audio including an option to mute them.</label>
       <default>true</default>
     </entry>
+    <entry name="taskHoverEffect" type="Bool">
+      <label>Whether task buttons should change in appearance when the mouse pointer is above them.</label>
+      <default>true</default>
+    </entry>
   </group>
 
 </kcfg>

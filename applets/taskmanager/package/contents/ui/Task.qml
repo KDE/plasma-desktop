@@ -489,7 +489,8 @@ MouseArea {
         },
         State {
             name: "hovered"
-            when: task.highlighted || (contextMenu.status == PlasmaComponents.DialogStatus.Open && contextMenu.visualParent == task)
+            when: ((task.highlighted && frame.hasElementPrefix("hover") && plasmoid.configuration.taskHoverEffect)
+                || (contextMenu.status == PlasmaComponents.DialogStatus.Open && contextMenu.visualParent == task))
 
             PropertyChanges {
                 target: frame
