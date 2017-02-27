@@ -97,6 +97,10 @@
       <label>Whether task buttons should change in appearance when the mouse pointer is above them.</label>
       <default>true</default>
     </entry>
+    <entry name="maxTextLines" type="Int">
+      <label>The maximum number of text lines to show in a task button. 0 means no limit.</label>
+      <default>0</default>
+    </entry>
   </group>
 
 </kcfg>

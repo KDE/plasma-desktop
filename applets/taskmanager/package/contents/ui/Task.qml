@@ -475,6 +475,7 @@ MouseArea {
         elide: Text.ElideRight
         textFormat: Text.PlainText
         verticalAlignment: Text.AlignVCenter
+        maximumLineCount: plasmoid.configuration.maxTextLines || undefined
     }
 
     states: [
