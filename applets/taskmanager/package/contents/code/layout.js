@@ -17,6 +17,8 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
+var iconSizes = ["small", "smallMedium", "medium", "large", "huge", "enormous"];
+
 function horizontalMargins() {
     return taskFrame.margins.left + taskFrame.margins.right;
 }
@@ -132,7 +134,33 @@ function preferredMinHeight() {
 }
 
 function preferredMaxHeight() {
-    return verticalMargins() + Math.min(units.iconSizes.small * 3, theme.mSize(theme.defaultFont).height * 3);
+    if (tasks.vertical) {
+        return verticalMargins()
+                + Math.min(
+                    // Do not allow the preferred icon size to exceed the width of the vertical task manager.
+                    tasks.width,
+                    Math.max(
+                        // This assumes that we show some text and that we need some minimal vertical space for it.
+                        // In reality, we do not always show the text. We show the text only if there
+                        // is enough horizontal space for some hard coded amount of 'm' characters
+                        // - see minimumMColumns() below.
+                        // Hence in case the user prefers icons smaller than the height of his font,
+                        // the font height will win even if the text will stay invisible.
+                        // We leave it for the future developers to improve this expresssion if the
+                        // named corner case turns out to be important.
+                        units.iconSizes[iconSizes[plasmoid.configuration.iconSize]],
+                        theme.mSize(theme.defaultFont).height
+                    )
+                );
+    } else {
+        return verticalMargins() + Math.min(units.iconSizes.small * 3, theme.mSize(theme.defaultFont).height * 3);
+    }
+}
+
+// Returns the number of 'm' characters whose joint width must be available in the task button label
+// so that the button text is rendered at all.
+function minimumMColumns() {
+    return tasks.vertical ? 4 : 5;
 }
 
 function taskWidth() {

@@ -32,6 +32,7 @@ Item {
     readonly property bool plasmaPaAvailable: Qt.createComponent("PulseAudio.qml").status === Component.Ready
 
     property alias cfg_forceStripes: forceStripes.checked
+    property alias cfg_iconSize: iconSize.value
     property alias cfg_showToolTips: showToolTips.checked
     property alias cfg_wheelEnabled: wheelEnabled.checked
     property alias cfg_highlightWindows: highlightWindows.checked
@@ -58,7 +59,7 @@ Item {
             flat: true
 
             GridLayout {
-                columns: 2
+                columns: 4
                 Layout.fillWidth: true
 
                 Label {
@@ -68,6 +69,7 @@ Item {
                 SpinBox {
                     id: maxStripes
                     minimumValue: 1
+                    Layout.columnSpan: 3
                 }
 
                 CheckBox {
@@ -76,7 +78,36 @@ Item {
                     Layout.row: 1
                     text: vertical ? i18n("Always arrange tasks in rows of as many columns") : i18n("Always arrange tasks in columns of as many rows")
                     enabled: maxStripes.value > 1
+                    Layout.columnSpan: 3
                 }
+
+                Label {
+                    visible: vertical
+                    text: i18n("Icon size:")
+                }
+
+                Label {
+                    visible: vertical
+                    text: i18n("Small")
+                }
+
+                Slider {
+                    Layout.fillWidth: true
+                    visible: vertical
+                    id: iconSize
+
+                    minimumValue: 0
+                    maximumValue: 5
+                    stepSize: 1
+
+                    tickmarksEnabled: true
+                }
+
+                Label {
+                    visible: vertical
+                    text: i18n("Large")
+                }
+
             }
         }
 

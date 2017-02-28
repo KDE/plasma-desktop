@@ -101,6 +101,18 @@
       <label>The maximum number of text lines to show in a task button. 0 means no limit.</label>
       <default>0</default>
     </entry>
+    <entry name="iconSize" type="Enum">
+      <label>The preferred size of task button icons in a vertical task manager.</label>
+      <choices>
+            <choice name="small"/>
+            <choice name="smallMedium"/>
+            <choice name="medium"/>
+            <choice name="large"/>
+            <choice name="huge"/>
+            <choice name="enormous"/>
+      </choices>
+      <default>3</default>
+    </entry>
   </group>
 
 </kcfg>
