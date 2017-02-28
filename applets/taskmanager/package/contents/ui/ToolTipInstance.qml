@@ -93,6 +93,7 @@ Column {
                 level: 3
                 width: isWin ? textWidth : undefined
                 height: undefined
+                maximumLineCount: 1
                 elide: Text.ElideRight
                 text: appName
                 opacity: flatIndex == 0
@@ -104,6 +105,7 @@ Column {
                 level: 5
                 width: isWin ? textWidth : undefined
                 height: undefined
+                maximumLineCount: 1
                 elide: Text.ElideRight
                 text: generateTitle()
                 textFormat: Text.PlainText
@@ -114,6 +116,7 @@ Column {
                 level: 6
                 width: isWin ? textWidth : undefined
                 height: undefined
+                maximumLineCount: 1
                 elide: Text.ElideRight
                 text: isWin ? generateSubText() : ""
                 textFormat: Text.PlainText

@@ -810,6 +810,12 @@ Kicker.DashboardWindow {
                                 }
                             }
 
+                            onClicked: {
+                                if (mouse.button == Qt.LeftButton) {
+                                    updateCurrentItem();
+                                }
+                            }
+
                             onAboutToShowActionMenu: {
                                 var actionList = hasActionList ? model.actionList : [];
                                 Tools.fillActionMenu(actionMenu, actionList, ListView.view.model.favoritesModel, model.favoriteId);
