@@ -195,7 +195,7 @@ Item {
                     }
 
                     return (icon.height + (2 * units.smallSpacing) + (label.lineCount
-                    * theme.mSize(theme.defaultFont).height) + (2 * units.largeSpacing));
+                    * theme.mSize(theme.defaultFont).height) + (3 * units.smallSpacing));
                 }
 
                 PlasmaCore.IconItem {
@@ -225,7 +225,7 @@ Item {
                     ]
 
                     anchors {
-                        topMargin: units.largeSpacing
+                        topMargin: (2 * units.smallSpacing)
                         leftMargin: units.smallSpacing
                     }
 
@@ -257,8 +257,8 @@ Item {
                             }
                             PropertyChanges {
                                 target: label
-                                anchors.topMargin: 2 * units.smallSpacing
-                                width: Math.min(label.implicitWidth + units.smallSpacing, parent.width - units.smallSpacing * 8)
+                                anchors.topMargin: units.smallSpacing
+                                width: Math.min(label.implicitWidth + units.smallSpacing, parent.width - units.smallSpacing * 4)
                                 maximumLineCount: plasmoid.configuration.textLines
                                 horizontalAlignment: Text.AlignHCenter
                             }
@@ -315,9 +315,6 @@ Item {
 
                         return true;
                     }
-
-                    x: units.smallSpacing * 3
-                    y: units.smallSpacing * 3
 
                     z: 3
 

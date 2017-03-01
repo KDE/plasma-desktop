@@ -497,7 +497,7 @@ Item {
                         return gridView.width;
                     }
 
-                    return iconSize + (4 * units.largeSpacing);
+                    return iconSize + (2 * units.largeSpacing) + (2 * units.smallSpacing);
                 }
 
                 cellHeight: {
@@ -508,7 +508,7 @@ Item {
                     }
 
                     return (iconSize + (theme.mSize(theme.defaultFont).height * plasmoid.configuration.textLines)
-                        + (3 * units.smallSpacing) + (2 * units.largeSpacing));
+                        + (6 * units.smallSpacing));
                 }
 
                 delegate: FolderItemDelegate {
