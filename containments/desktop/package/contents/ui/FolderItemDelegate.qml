@@ -39,6 +39,7 @@ Item {
     property Item labelArea: loader.item ? loader.item.labelArea : null
     property Item actionsOverlay: loader.item ? loader.item.actionsOverlay : null
     property Item hoverArea: loader.item ? loader.item.hoverArea : null
+    property Item frame: loader.item ? loader.item.frame : null
     property Item toolTip: loader.item ? loader.item.toolTip : null
 
     function openPopup() {
@@ -79,6 +80,7 @@ Item {
             property Item labelArea: frameLoader.textShadow || label
             property Item actionsOverlay: actions
             property Item hoverArea: toolTip
+            property Item frame: frameLoader
             property Item toolTip: toolTip
             property Item selectionButton: null
             property Item popupButton: null

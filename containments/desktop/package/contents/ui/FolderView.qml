@@ -324,11 +324,9 @@ Item {
             if (!item || item.blank) {
                 gridView.hoveredItem = null;
             } else {
-                var aPos = mapToItem(item.actionsOverlay, mouse.x, mouse.y);
-                var hPos = mapToItem(item.hoverArea, mouse.x, mouse.y);
+                var fPos = mapToItem(item.frame, mouse.x, mouse.y);
 
-                if ((hPos.x < 0 || hPos.y < 0 || hPos.x > item.hoverArea.width || hPos.y > item.hoverArea.height)
-                    && aPos.x < 0) {
+                if (fPos.x < 0 || fPos.y < 0 || fPos.x > item.frame.width || fPos.y > item.frame.height) {
                     gridView.hoveredItem = null;
                 }
             }
