@@ -349,9 +349,36 @@ Item {
 
                     z: 3
 
-                    anchors {
-                        centerIn: root.useListViewMode ? icon : undefined
-                    }
+                    states: [
+                        State { // icon view
+                            when: !root.useListViewMode
+
+                            AnchorChanges {
+                                target: actions
+                                anchors.horizontalCenter: undefined
+                                anchors.verticalCenter: undefined
+                            }
+                            PropertyChanges {
+                                target: actions
+                                x: 0
+                                y: 0
+                            }
+                        },
+                        State { // list view
+                            when: root.useListViewMode
+
+                           AnchorChanges {
+                                target: actions
+                                anchors.horizontalCenter: icon.horizontalCenter
+                                anchors.verticalCenter: icon.verticalCenter
+                            }
+                            PropertyChanges {
+                                target: actions
+                                x: undefined
+                                y: undefined
+                            }
+                        }
+                    ]
 
                     width: implicitWidth
                     height: implicitHeight
