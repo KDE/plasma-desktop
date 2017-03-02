@@ -213,6 +213,7 @@ class FolderModel : public QSortFilterProxyModel
         Q_INVOKABLE void cut();
         Q_INVOKABLE void deleteSelected();
         Q_INVOKABLE void openSelected();
+        Q_INVOKABLE void undo();
 
     Q_SIGNALS:
         void urlChanged() const;

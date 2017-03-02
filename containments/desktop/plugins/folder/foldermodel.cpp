@@ -1619,6 +1619,16 @@ void FolderModel::openSelected()
     }
 }
 
+void FolderModel::undo()
+{
+    if (QAction *action = m_actionCollection.action(QStringLiteral("undo"))) {
+        // trigger() doesn't check enabled and would crash if invoked nonetheless.
+        if (action->isEnabled()) {
+            action->trigger();
+        }
+    }
+}
+
 void FolderModel::emptyTrashBin()
 {
     KIO::JobUiDelegate uiDelegate;

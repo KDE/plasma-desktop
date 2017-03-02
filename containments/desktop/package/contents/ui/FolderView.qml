@@ -807,6 +807,8 @@ Item {
                         dir.paste();
                     } else if (event.matches(StandardKey.Cut)) {
                         dir.cut();
+                    } else if (event.matches(StandardKey.Undo)) {
+                        dir.undo();
                     }
                 }
 
