@@ -1454,8 +1454,19 @@ void FolderModel::openContextMenu()
         KConfigGroup cg(globalConfig, "KDE");
         bool showDeleteCommand = cg.readEntry("ShowDeleteCommand", false);
 
-        // Don't add the "Move to Trash" action if we're showing the menu for the trash link
-        if (!isTrashLink) {
+        // When we're showing the menu for the trash link, offer "Empty Trash" instead
+        // of the "Move to Trash" action.
+        if (isTrashLink) {
+            QAction *emptyTrashAction = m_actionCollection.action(QStringLiteral("emptyTrash"));
+            if (emptyTrashAction) {
+                // We explicitly force the action visible here, as it relies on the KFileItemList
+                // we collected above. In updateActions() we don't have it and since this is always
+                // called before we open the menu, it would correct visibility again when opening
+                // the context menu for other items later.
+                emptyTrashAction->setVisible(true);
+                menu->addAction(emptyTrashAction);
+            }
+        } else {
             if (!hasRemoteFiles) {
                 menu->addAction(m_actionCollection.action(QStringLiteral("trash")));
             } else {
