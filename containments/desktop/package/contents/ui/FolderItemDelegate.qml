@@ -326,6 +326,8 @@ Item {
                     text: model.blank ? "" : model.display
 
                     font.italic: model.isLink
+
+                    visible: editor.targetItem != main
                 }
 
                 Column {
@@ -434,6 +436,8 @@ Item {
                         color: "black"
 
                         source: label
+
+                        visible: editor.targetItem != main
                     }
                 }
 
