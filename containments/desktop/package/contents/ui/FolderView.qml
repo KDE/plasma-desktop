@@ -1076,11 +1076,11 @@ Item {
 
             visible: false
 
-            wrapMode: isPopup ? TextEdit.NoWrap : TextEdit.Wrap
+            wrapMode: root.useListViewMode ? TextEdit.NoWrap : TextEdit.Wrap
             
             textMargin: 0
             
-            horizontalAlignment: isPopup ? TextEdit.AlignHLeft : TextEdit.AlignHCenter
+            horizontalAlignment: root.useListViewMode ? TextEdit.AlignHLeft : TextEdit.AlignHCenter
 
             property Item targetItem: null
 
@@ -1144,7 +1144,7 @@ Item {
             function getXY() {
                 var pos = main.mapFromItem(targetItem, targetItem.labelArea.x, targetItem.labelArea.y);
                 var _x, _y;
-                if(isPopup) {
+                if (root.useListViewMode) {
                    _x = targetItem.labelArea.x - __style.padding.left;
                    _y = pos.y - __style.padding.top;
                 } else {
@@ -1163,7 +1163,7 @@ Item {
             }
             
             function getWidth(addWidthVerticalScroller) {
-                var _width = isPopup ? targetItem.width - units.largeSpacing * 2 : targetItem.label.paintedWidth;
+                var _width = root.useListViewMode ? targetItem.width - units.largeSpacing * 2 : targetItem.label.paintedWidth;
                 return _width + __style.padding.left + __style.padding.right +
                        (addWidthVerticalScroller ? __verticalScrollBar.parent.verticalScrollbarOffset : 0);
             }
