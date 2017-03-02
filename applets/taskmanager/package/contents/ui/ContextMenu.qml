@@ -42,6 +42,8 @@ PlasmaComponents.ContextMenu {
             return PlasmaCore.Types.RightPosedTopAlignedPopup;
         } else if (plasmoid.location == PlasmaCore.Types.TopEdge) {
             return PlasmaCore.Types.BottomPosedLeftAlignedPopup;
+        } else if (plasmoid.location == PlasmaCore.Types.RightEdge) {
+            return PlasmaCore.Types.LeftPosedTopAlignedPopup;
         } else {
             return PlasmaCore.Types.TopPosedLeftAlignedPopup;
         }
