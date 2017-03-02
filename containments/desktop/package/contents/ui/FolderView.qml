@@ -519,6 +519,8 @@ Item {
                         hoverActivateTimer.stop();
                     }
 
+                    editor.targetItem = null;
+
                     dir.setDragHotSpotScrollOffset(contentX, contentY);
 
                     if (contentX == 0) {
@@ -551,6 +553,8 @@ Item {
                     if (hoveredItem) {
                         hoverActivateTimer.stop();
                     }
+
+                    editor.targetItem = null;
 
                     dir.setDragHotSpotScrollOffset(contentX, contentY);
 
