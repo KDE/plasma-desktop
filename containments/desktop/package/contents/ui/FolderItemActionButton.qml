@@ -52,7 +52,7 @@ PlasmaCore.SvgItem {
         states: [
             State {
                 name: "hover"
-                when: actionButtonMouseArea.containsMouse && !pressed
+                when: actionButtonMouseArea.containsMouse && !actionButtonMouseArea.pressed
 
                 PropertyChanges {
                     target: actionButton
@@ -65,7 +65,7 @@ PlasmaCore.SvgItem {
 
                 PropertyChanges {
                     target: actionButton
-                    elementId: actionButton.element + "open-pressed"
+                    elementId: actionButton.element + "-pressed"
                 }
             }
         ]
