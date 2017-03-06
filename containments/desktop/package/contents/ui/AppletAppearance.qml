@@ -495,7 +495,7 @@ Item {
 
                     z: appletContainer.z + 1
 
-                    active: applet.busy
+                    active: applet && applet.busy
 
                     source: "BusyOverlay.qml"
                     asynchronous: true
