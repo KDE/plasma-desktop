@@ -981,6 +981,8 @@ Item {
                 }
             }
 
+            onListingCanceled: plasmoid.busy = false;
+
             onMove: {
                 var rows = (gridView.flow == GridView.FlowLeftToRight);
                 var axis = rows ? gridView.width : gridView.height;

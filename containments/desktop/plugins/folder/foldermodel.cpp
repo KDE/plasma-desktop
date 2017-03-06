@@ -122,6 +122,8 @@ FolderModel::FolderModel(QObject *parent) : QSortFilterProxyModel(parent),
     connect(dirLister, &KCoreDirLister::started, this, &FolderModel::listingStarted);
     void (KCoreDirLister::*myCompletedSignal)() = &KCoreDirLister::completed;
     QObject::connect(dirLister, myCompletedSignal, this, &FolderModel::listingCompleted);
+    void (KCoreDirLister::*myCanceledSignal)() = &KCoreDirLister::canceled;
+    QObject::connect(dirLister, myCanceledSignal, this, &FolderModel::listingCanceled);
 
     m_dirModel = new KDirModel(this);
     m_dirModel->setDirLister(dirLister);

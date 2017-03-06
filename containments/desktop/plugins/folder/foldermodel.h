@@ -219,6 +219,7 @@ class FolderModel : public QSortFilterProxyModel
         void urlChanged() const;
         void listingStarted() const;
         void listingCompleted() const;
+        void listingCanceled() const;
         void iconNameChanged() const;
         void resolvedUrlChanged() const;
         void errorStringChanged() const;
