@@ -775,12 +775,12 @@ Item {
                 }
 
                 Keys.onMenuPressed: {
-                    // FIXME TODO: Correct popup position.
-                    return;
-
-                    if (currentIndex != -1 && dir.hasSelection()) {
+                    if (currentIndex != -1 && dir.hasSelection() && currentItem) {
                         dir.setSelected(positioner.map(currentIndex));
-                        dir.openContextMenu();
+                        dir.openContextMenu(currentItem.frame);
+                    } else {
+                        // Otherwise let the containment handle it.
+                        event.accepted = false;
                     }
                 }
 

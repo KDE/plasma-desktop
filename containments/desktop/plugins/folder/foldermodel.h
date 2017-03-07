@@ -198,7 +198,7 @@ class FolderModel : public QSortFilterProxyModel
         Q_INVOKABLE QAction* action(const QString& name) const;
         QObject* newMenu() const;
         Q_INVOKABLE void updateActions();
-        Q_INVOKABLE void openContextMenu();
+        Q_INVOKABLE void openContextMenu(QQuickItem *visualParent = nullptr);
 
         Q_INVOKABLE void linkHere(const QUrl &sourceUrl);
 

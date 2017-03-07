@@ -1382,7 +1382,7 @@ void FolderModel::updateActions()
     }
 }
 
-void FolderModel::openContextMenu()
+void FolderModel::openContextMenu(QQuickItem *visualParent)
 {
     QModelIndexList indexes = m_selectionModel->selectedIndexes();
 
@@ -1511,7 +1511,11 @@ void FolderModel::openContextMenu()
 
     }
 
-    menu->popup(QCursor::pos());
+    if (visualParent) {
+        menu->popup(visualParent->mapToGlobal(QPointF(0, visualParent->height())).toPoint());
+    } else {
+        menu->popup(QCursor::pos());
+    }
     connect(menu, &QMenu::aboutToHide, [menu]() { menu->deleteLater(); });
 }
 
