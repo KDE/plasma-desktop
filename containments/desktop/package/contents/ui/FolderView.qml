@@ -140,6 +140,17 @@ Item {
             plasmoid.processMimeData(mimeData, x, y, dropJob);
         }
     }
+
+    // Lower the toolBox when an item is hovered, so it doesn't interfere with
+    // its interaction (e.g. the selection button in the top left, cf. Bug 337060)
+    Binding {
+        target: toolBox
+        property: "z"
+        // 999 is the default "z" for desktop ToolBoxRoot
+        value: main.hoveredItem ? -100 : 999
+        when: toolBox
+    }
+
     function makeBackButton() {
         return Qt.createQmlObject("BackButtonItem {}", main);
     }
