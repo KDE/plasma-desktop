@@ -84,7 +84,8 @@ FolderViewDropArea {
 
         // Don't apply the right margin if the folderView is in column mode and not overflowing.
         // In this way, the last column remains droppable even if a small part of the icon is behind a panel.
-        rightMargin: folderViewLayer.ready && (folderViewLayer.view.overflowing  || folderViewLayer.view.flow == GridView.FlowLeftToRight)
+        rightMargin: folderViewLayer.ready && (folderViewLayer.view.overflowing || folderViewLayer.view.flow == GridView.FlowLeftToRight
+            || folderViewLayer.view.layoutDirection == Qt.RightToLeft)
             && (isContainment && plasmoid.availableScreenRect) && parent
             ? parent.width - (plasmoid.availableScreenRect.x + plasmoid.availableScreenRect.width) : 0
 
