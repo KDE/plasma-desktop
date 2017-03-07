@@ -21,7 +21,7 @@
 #ifndef SUBDIALOG_H
 #define SUBDIALOG_H
 
-#include <dialog.h>
+#include <PlasmaQuick/Dialog>
 
 class QScreen;
 

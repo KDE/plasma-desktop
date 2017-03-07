@@ -1,5 +1,3 @@
-include_directories(plasmaquick)
-
 set(folderplugin_SRCS
     directorypicker.cpp
     foldermodel.cpp
