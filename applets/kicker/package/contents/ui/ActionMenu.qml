@@ -28,29 +28,13 @@ Item {
     property QtObject menu
     property Item visualParent
     property variant actionList
-    property bool opened: menu ? (menu.status != PlasmaComponents.DialogStatus.Closed) : false
 
-    signal actionClicked(string actionId, variant actionArgument)
-    signal closed
+    signal actionClicked(string actionId)
 
     onActionListChanged: refreshMenu();
 
-    onOpenedChanged: {
-        if (!opened) {
-            closed();
-        }
-    }
-
-    function open(x, y) {
-        if (!actionList) {
-            return;
-        }
-
-        if (x && y) {
-            menu.open(x, y);
-        } else {
-            menu.open();
-        }
+    function open() {
+        menu.open();
     }
 
     function refreshMenu() {
@@ -92,7 +76,7 @@ Item {
             icon: actionItem.icon ? actionItem.icon : null
 
             onClicked: {
-                actionClicked(actionItem.actionId, actionItem.actionArgument);
+                actionClicked(actionItem.actionId);
             }
         }
     }

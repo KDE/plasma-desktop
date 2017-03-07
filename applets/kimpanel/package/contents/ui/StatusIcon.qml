@@ -29,7 +29,7 @@ Item {
     property string label;
     property string tip;
     property string hint;
-    signal triggered;
+    signal triggered(variant button);
     property int iconSize: units.roundToIconSize(Math.min(parent.width, parent.height))
 
     opacity: 'disable' == hint ? 0.3 : 1
@@ -84,7 +84,10 @@ Item {
         id: mouseArea
         anchors.fill: parent
         hoverEnabled: true
-        onReleased: statusIcon.triggered();
+        acceptedButtons: Qt.LeftButton | Qt.RightButton
+        onClicked: {
+            statusIcon.triggered(mouse.button);
+        }
 
         PlasmaCore.ToolTipArea {
             anchors.fill: parent

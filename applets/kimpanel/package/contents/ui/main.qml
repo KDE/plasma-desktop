@@ -36,25 +36,6 @@ Item {
 
     Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
 
-    function action_reloadconfig() {
-         action("ReloadConfig");
-    }
-
-    function action_configureim() {
-         action("Configure");
-    }
-
-    function action_exit() {
-         action("Exit");
-    }
-
-    Component.onCompleted: {
-        plasmoid.setAction("configureim", i18n("Configure Input Method"), "configure");
-        plasmoid.setAction("reloadconfig", i18n("Reload Config"), "view-refresh");
-        plasmoid.setAction("exit", i18n("Exit Input Method"), "application-exit");
-    }
-
-
     InputPanel { }
 
     GridView {
@@ -77,6 +58,7 @@ Item {
             width: items.itemWidth
             height: items.itemHeight
             StatusIcon {
+                id: statusIcon
                 anchors.centerIn: parent
                 width: items.iconSize
                 height: items.iconSize
@@ -84,7 +66,13 @@ Item {
                 tip: model.tip
                 icon: model.icon
                 hint: model.hint
-                onTriggered : clickHandler(model.key)
+                onTriggered : {
+                    if (button == Qt.LeftButton) {
+                        clickHandler(model.key)
+                    } else {
+                        contextMenu.open(statusIcon, {key: model.key, label: model.label});
+                    }
+                }
             }
         }
     }
@@ -100,6 +88,29 @@ Item {
         var service = dataEngine.serviceForSource("statusbar");
         var operation = service.operationDescription(key);
         service.startOperationCall(operation);
+    }
+
+    function hideAction(key) {
+        // We must use assignment to change the configuration property,
+        // otherwise it won't get notified.
+        var hiddenList = plasmoid.configuration.hiddenList;
+        if (hiddenList.indexOf(key) === -1) {
+            hiddenList.push(key);
+            plasmoid.configuration.hiddenList = hiddenList;
+        }
+        timer.restart();
+    }
+
+    function showAction(key) {
+        // We must use assignment to change the configuration property,
+        // otherwise it won't get notified.
+        var hiddenList = plasmoid.configuration.hiddenList;
+        var index = hiddenList.indexOf(key);
+        if (index !== -1) {
+            hiddenList.splice(index, 1);
+            plasmoid.configuration.hiddenList = hiddenList;
+        }
+        timer.restart();
     }
 
     function showMenu(menu, menuData) {
@@ -128,6 +139,10 @@ Item {
         }
     }
 
+    ContextMenu {
+        id: contextMenu
+    }
+
     Timer {
         id: timer
         interval: 50
@@ -136,25 +151,41 @@ Item {
             if (!data) {
                 return;
             }
-            kimpanel.visibleButtons = data.length;
             var count = list.count;
-            if (data.length < count) {
-                list.remove(data.length, count - data.length);
-            }
-
-            var i;
+            var c = 0, i;
+            var hiddenActions = [];
             for (i = 0; i < data.length; i ++) {
+                if (plasmoid.configuration.hiddenList.indexOf(data[i].key) !== -1) {
+                    hiddenActions.push({'key': data[i].key,
+                                'icon': data[i].icon,
+                                'label': data[i].label});
+                } else {
+                    c = c + 1;
+                }
+            }
+            if (c < count) {
+                list.remove(c, count - c);
+            }
+            kimpanel.visibleButtons = c;
+
+            c = 0;
+            for (i = 0; i < data.length; i ++) {
+                if (plasmoid.configuration.hiddenList.indexOf(data[i].key) !== -1) {
+                    continue;
+                }
                 var itemData = {'key': data[i].key,
                                 'icon': data[i].icon,
                                 'label': data[i].label,
                                 'tip': data[i].tip,
                                 'hint': data[i].hint };
-                if (i < count) {
-                    list.set(i, itemData);
+                if (c < count) {
+                    list.set(c, itemData);
                 } else {
                     list.append(itemData);
                 }
+                c = c + 1;
             }
+            contextMenu.actionList = hiddenActions;
         }
     }
 
