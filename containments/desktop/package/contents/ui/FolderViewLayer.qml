@@ -271,6 +271,7 @@ Item {
                 verticalAlignment: Text.AlignTop
                 elide: Text.ElideMiddle
                 text: labelGenerator.displayLabel
+                font.underline: labelMouseArea.containsMouse
 
                 Binding {
                     target: plasmoid
@@ -289,7 +290,15 @@ Item {
             }
 
             MouseArea {
-                anchors.fill: text
+                id: labelMouseArea
+                anchors {
+                    top: text.top
+                    horizontalCenter: text.horizontalCenter
+                }
+                width: text.contentWidth
+                height: text.contentHeight
+                hoverEnabled: true
+                cursorShape: Qt.PointingHandCursor
 
                 onClicked: {
                     var action = plasmoid.action("run associated application");
