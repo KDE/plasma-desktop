@@ -57,6 +57,10 @@ Item {
         }
     }
 
+    function cancelRename() {
+        folderView.cancelRename();
+    }
+
     PlasmaCore.Svg {
         id: actionOverlays
 
@@ -138,6 +142,7 @@ Item {
 
                 folderView.currentIndex = -1;
                 folderView.model.clearSelection();
+                folderView.cancelRename();
             }
         }
 

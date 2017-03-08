@@ -68,6 +68,10 @@ Item {
         }
     }
 
+    function cancelRename() {
+        editor.targetItem = null;
+    }
+
     function linkHere(sourceUrl) {
         dir.linkHere(sourceUrl);
     }
