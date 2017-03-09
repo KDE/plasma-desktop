@@ -99,6 +99,7 @@ class FolderModel : public QSortFilterProxyModel
             SelectedRole,
             IsDirRole,
             IsLinkRole,
+            IsHiddenRole,
             UrlRole,
             LinkDestinationUrl,
             SizeRole,

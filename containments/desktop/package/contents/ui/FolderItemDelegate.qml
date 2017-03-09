@@ -263,7 +263,17 @@ Item {
                     width: root.useListViewMode ? main.GridView.view.iconSize : (parent.width - 2 * units.smallSpacing)
                     height: main.GridView.view.iconSize
 
-                    opacity: root.useListViewMode && selectionButton ? 0.3 : 1.0
+                    opacity: {
+                        if (root.useListViewMode && selectionButton) {
+                            return 0.3;
+                        }
+
+                        if (model.isHidden) {
+                            return 0.6;
+                        }
+
+                        return 1.0;
+                    }
 
                     animated: false
                     usesPlasmaTheme: false
@@ -322,6 +332,8 @@ Item {
 
                     color: (frameLoader.textShadow && frameLoader.textShadow.visible
                         ? "#fff" : PlasmaCore.ColorScope.textColor)
+
+                    opacity: model.isHidden ? 0.6 : 1
 
                     text: model.blank ? "" : model.display
 
@@ -434,6 +446,8 @@ Item {
                         spread: 0.15
 
                         color: "black"
+
+                        opacity: model.isHidden ? 0.6 : 1
 
                         source: label
 
