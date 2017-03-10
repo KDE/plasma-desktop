@@ -181,6 +181,8 @@ Item {
 
                 imagePath: "widgets/viewitem"
 
+                prefix: ""
+
                 PlasmaCore.ColorScope {
                     anchors.fill: parent
 
