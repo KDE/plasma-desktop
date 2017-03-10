@@ -371,11 +371,8 @@ Item {
                                 target: actions
                                 anchors.horizontalCenter: undefined
                                 anchors.verticalCenter: undefined
-                            }
-                            PropertyChanges {
-                                target: actions
-                                x: 0
-                                y: 0
+                                anchors.left: parent.left
+                                anchors.top: parent.top
                             }
                         },
                         State { // list view
@@ -385,11 +382,8 @@ Item {
                                 target: actions
                                 anchors.horizontalCenter: icon.horizontalCenter
                                 anchors.verticalCenter: icon.verticalCenter
-                            }
-                            PropertyChanges {
-                                target: actions
-                                x: undefined
-                                y: undefined
+                                anchors.left: undefined
+                                anchors.top: undefined
                             }
                         }
                     ]
