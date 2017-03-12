@@ -28,18 +28,13 @@ Item {
     property QtObject menu
     property Item visualParent
     property variant actionList
-    property bool opened: menu ? (menu.status != PlasmaComponents.DialogStatus.Closed) : false
 
-    signal actionClicked(string actionId, variant actionArgument)
+    signal actionClicked(string actionId)
 
     onActionListChanged: refreshMenu();
 
     function open(x, y) {
-        if (x && y) {
-            menu.open(x, y);
-        } else {
-            menu.open();
-        }
+        menu.open();
     }
 
     function refreshMenu() {
@@ -81,14 +76,12 @@ Item {
             property variant actionItem
 
             text: actionItem.text ? actionItem.text : ""
-            enabled: actionItem.type != "title" && ("enabled" in actionItem ? actionItem.enabled : true)
-            separator: actionItem.type == "separator"
             icon: actionItem.icon ? actionItem.icon : null
             checkable: actionItem.hint == "checked"
             checked: actionItem.hint == "checked"
 
             onClicked: {
-                actionClicked(actionItem.actionId, actionItem.actionArgument);
+                actionClicked(actionItem.actionId);
             }
         }
     }
