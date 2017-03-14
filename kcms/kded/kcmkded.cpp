@@ -86,7 +86,7 @@ KDEDConfig::KDEDConfig(QWidget* parent, const QVariantList &) :
 			"<ul><li>Services invoked at startup</li><li>Services called on demand</li></ul>"
 			"<p>The latter are only listed for convenience. The startup services can be started and stopped. "
 			"In Administrator mode, you can also define whether services should be loaded at startup.</p>"
-			"<p><b> Use this with care: some services are vital for KDE; do not deactivate services if you"
+			"<p><b> Use this with care: some services are vital for Plasma; do not deactivate services if you"
 			" do not know what you are doing.</b></p>"));
 
 	RUNNING = i18n("Running")+' ';
@@ -118,7 +118,7 @@ KDEDConfig::KDEDConfig(QWidget* parent, const QVariantList &) :
 
  	gb = new QGroupBox( i18n("Startup Services"), this );
 	gb->setWhatsThis( i18n("This shows all KDE services that can be loaded "
-				"on KDE startup. Checked services will be invoked on next startup. "
+				"on Plasma startup. Checked services will be invoked on next startup. "
 				"Be careful with deactivation of unknown services."));
 	lay->addWidget( gb );
 
