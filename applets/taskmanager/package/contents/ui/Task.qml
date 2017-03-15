@@ -56,6 +56,7 @@ MouseArea {
     property int wheelDelta: 0
     readonly property bool smartLauncherEnabled: plasmoid.configuration.smartLaunchersEnabled && !inPopup && model.IsStartup !== true
     property QtObject smartLauncherItem: null
+    property alias toolTipAreaItem: toolTipArea
 
     property Item audioStreamOverlay
     property var audioStreams: []
