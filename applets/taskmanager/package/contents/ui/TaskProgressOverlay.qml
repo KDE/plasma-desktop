@@ -43,16 +43,7 @@ Item {
             height: background.height
 
             imagePath: "widgets/tasks"
-            prefix: calculatePrefix()
-            onRepaintNeeded: prefix = calculatePrefix()
-
-            function calculatePrefix() {
-                var prefix = TaskTools.taskPrefix("progress")
-                if (!frame.hasElementPrefix(prefix)) {
-                    prefix = TaskTools.taskPrefix("hover")
-                }
-                return prefix
-            }
+            prefix: TaskTools.taskPrefix("progress").concat(TaskTools.taskPrefix("hover"))
         }
     }
 }

@@ -25,7 +25,6 @@ PlasmaCore.FrameSvgItem {
     id: root
 
     imagePath: containment && containment.backgroundHints === PlasmaCore.Types.NoBackground ? "" : "widgets/panel-background"
-    onRepaintNeeded: adjustPrefix();
 
     enabledBorders: panel.enabledBorders
 
@@ -53,12 +52,9 @@ PlasmaCore.FrameSvgItem {
             break;
         default:
             prefix = "";
+            return;
         }
-        if (hasElementPrefix(pre)) {
-            prefix = pre;
-        } else {
-            prefix = "";
-        }
+        prefix = [prefix, ""];
     }
 
     onContainmentChanged: {

@@ -289,14 +289,6 @@ MouseArea {
         imagePath: "widgets/tasks"
         property string basePrefix: "normal"
         prefix: TaskTools.taskPrefix(basePrefix)
-        onRepaintNeeded: updatePrefix()
-
-        function updatePrefix() {
-            prefix = Qt.binding(function() {
-                return TaskTools.taskPrefix(basePrefix);
-            });
-        }
-
 
         PlasmaCore.ToolTipArea {
             id: toolTipArea

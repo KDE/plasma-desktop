@@ -161,9 +161,5 @@ function taskPrefix(prefix) {
     default:
         effectivePrefix = "south-" + prefix;
     }
-    if (!frame.hasElementPrefix(effectivePrefix)) {
-        return prefix;
-    }
-    return effectivePrefix;
-
+    return [effectivePrefix, prefix];
 }
