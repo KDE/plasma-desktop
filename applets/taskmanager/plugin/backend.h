@@ -49,7 +49,8 @@ class Backend : public QObject
             None = 0,
             Close,
             NewInstance,
-            ToggleMinimized
+            ToggleMinimized,
+            ToggleGrouping
         };
 
         Q_ENUM(MiddleClickAction);

@@ -158,7 +158,13 @@ Item {
                     ComboBox {
                         id: middleClickAction
                         Layout.fillWidth: true
-                        model: [i18nc("The click action", "None"), i18n("Close Window or Group"), i18n("New Instance"), i18n("Minimize/Restore Window or Group")]
+                        model: [
+                            i18nc("The click action", "None"),
+                            i18n("Close Window or Group"),
+                            i18n("New Instance"),
+                            i18n("Minimize/Restore Window or Group"),
+                            i18nc("When clicking it would toggle grouping windows of a specific app", "Group/Ungroup")
+                        ]
                     }
                 }
             }

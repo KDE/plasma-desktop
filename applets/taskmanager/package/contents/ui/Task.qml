@@ -146,6 +146,8 @@ MouseArea {
                     tasksModel.requestClose(modelIndex());
                 } else if (plasmoid.configuration.middleClickAction == TaskManagerApplet.Backend.ToggleMinimized) {
                     tasksModel.requestToggleMinimized(modelIndex());
+                } else if (plasmoid.configuration.middleClickAction == TaskManagerApplet.Backend.ToggleGrouping) {
+                    tasksModel.requestToggleGrouping(modelIndex());
                 }
             } else if (mouse.button == Qt.LeftButton) {
                 TaskTools.activateTask(modelIndex(), model, mouse.modifiers, task);
