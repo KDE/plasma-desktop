@@ -63,7 +63,7 @@ Item {
     PlasmaCore.IconItem {
         anchors.fill: parent
 
-        active: listener.containsMouse
+        active: toolTip.containsMouse
 
         source: model.decoration
 
