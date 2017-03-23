@@ -25,12 +25,40 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 Item {
     id: root
 
-    property bool vertical: (plasmoid.formFactor == PlasmaCore.Types.Vertical)
+    readonly property bool vertical: (plasmoid.formFactor == PlasmaCore.Types.Vertical)
+    readonly property bool useCustomButtonImage: (plasmoid.configuration.useCustomButtonImage
+        && plasmoid.configuration.customButtonImage.length != 0)
     property QtObject dashWindow: null
+
+    onWidthChanged: updateSizeHints()
+    onHeightChanged: updateSizeHints()
 
     onDashWindowChanged: {
         if (dashWindow) {
             dashWindow.visualParent = root;
+        }
+    }
+
+    function updateSizeHints() {
+        if (useCustomButtonImage) {
+            if (vertical) {
+                var scaledHeight = Math.floor(parent.width * (buttonIcon.implicitHeight / buttonIcon.implicitWidth));
+                root.Layout.minimumHeight = scaledHeight;
+                root.Layout.maximumHeight = scaledHeight;
+                root.Layout.minimumWidth = units.iconSizes.small;
+                root.Layout.maximumWidth = undefined;
+            } else {
+                var scaledWidth = Math.floor(parent.height * (buttonIcon.implicitWidth / buttonIcon.implicitHeight));
+                root.Layout.minimumWidth = scaledWidth;
+                root.Layout.maximumWidth = scaledWidth;
+                root.Layout.minimumHeight = units.iconSizes.small;
+                root.Layout.maximumHeight = undefined;
+            }
+        } else {
+            root.Layout.minimumWidth = units.iconSizes.small;
+            root.Layout.maximumWidth = undefined;
+            root.Layout.minimumHeight = units.iconSizes.small
+            root.Layout.maximumHeight = undefined;
         }
     }
 
@@ -39,74 +67,16 @@ Item {
 
         anchors.fill: parent
 
-        visible: !(plasmoid.configuration.useCustomButtonImage && plasmoid.configuration.customButtonImage)
+        readonly property double aspectRatio: (vertical ? implicitHeight / implicitWidth
+            : implicitWidth / implicitHeight)
 
-        source: plasmoid.configuration.icon
+        source: useCustomButtonImage ? plasmoid.configuration.customButtonImage : plasmoid.configuration.icon
+
         active: mouseArea.containsMouse && !justOpenedTimer.running
 
-        onWidthChanged: {
-            if (vertical && visible) {
-                root.Layout.minimumWidth = units.iconSizes.small;
-                root.Layout.minimumHeight = parent.width;
-            }
-        }
+        roundToIconSize: !useCustomButtonImage
 
-        onHeightChanged: {
-            if (!vertical && visible) {
-                root.Layout.minimumWidth = parent.height;
-                root.Layout.minimumHeight = units.iconSizes.small;
-            }
-        }
-
-        onVisibleChanged: {
-            if (visible) {
-                if (vertical) {
-                    root.Layout.minimumWidth = units.iconSizes.small;
-                    root.Layout.minimumHeight = units.iconSizes.small;
-                } else {
-                    root.Layout.minimumWidth = parent.height;
-                    root.Layout.minimumHeight = units.iconSizes.small;
-                }
-            }
-        }
-    }
-
-    Image {
-        id: buttonImage
-
-        width: vertical ? parent.width : undefined
-        height: vertical ? undefined : parent.height
-
-        onPaintedWidthChanged: {
-            if (!vertical && visible) {
-                root.Layout.minimumWidth = paintedWidth;
-                root.Layout.minimumHeight = units.iconSizes.small;
-            }
-        }
-
-        onPaintedHeightChanged: {
-            if (vertical && visible) {
-                root.Layout.minimumWidth = units.iconSizes.small;
-                root.Layout.minimumHeight = paintedHeight;
-            }
-        }
-
-        onVisibleChanged: {
-            if (visible) {
-                if (vertical) {
-                    root.Layout.minimumWidth = units.iconSizes.small;
-                    root.Layout.minimumHeight = paintedHeight;
-                } else {
-                    root.Layout.minimumWidth = paintedWidth;
-                    root.Layout.minimumHeight = units.iconSizes.small;
-                }
-            }
-        }
-
-        visible: plasmoid.configuration.useCustomButtonImage && (plasmoid.configuration.customButtonImage != "")
-        source: plasmoid.configuration.customButtonImage
-        fillMode: Image.PreserveAspectFit
-        smooth: true
+        onSourceChanged: updateSizeHints()
     }
 
     MouseArea
