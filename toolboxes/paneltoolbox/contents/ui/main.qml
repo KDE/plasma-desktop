@@ -64,6 +64,11 @@ Item {
         height: width
     }
 
+    Connections {
+        target: plasmoid
+        onUserConfiguringChanged: plasmoid.editMode = plasmoid.userConfiguring
+    }
+
     MouseArea {
         id: mouseArea
         anchors.fill: parent

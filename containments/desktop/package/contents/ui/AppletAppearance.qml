@@ -36,7 +36,7 @@ Item {
     property int handleHeight: (height < minimumHandleHeight) ? minimumHandleHeight : height
     property string category
 
-    property bool showAppletHandle: temporaryShowAppletHandle || toolBox.open
+    property bool showAppletHandle: temporaryShowAppletHandle || plasmoid.editMode
     property bool temporaryShowAppletHandle: false
     property real controlsOpacity: (plasmoid.immutable || !showAppletHandle) ? 0 : 1
     property string backgroundHints: "NoBackground"

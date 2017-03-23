@@ -75,6 +75,7 @@ Item {
     property bool dialogWasVisible: false
     property bool open: false
     onOpenChanged: {
+        plasmoid.editMode = open
         if (open) {
             toolBoxLoader.active = true;
             toolBoxLoader.item.visible = true;
