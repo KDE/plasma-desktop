@@ -20,6 +20,7 @@
  */
 
 import QtQuick 2.2
+import QtQuick.Window 2.2
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
@@ -39,6 +40,28 @@ Item {
         onAvailableScreenRegionChanged: placeToolBoxTimer.restart();
     }
 
+    //FIXME: this timer shouldn't exist, but unfortunately when the focus passes
+    //from the desktop to the dialog or vice versa, the event is not atomic
+    //and ends up with neither of those having focus, hiding the dialog when
+    //it shouldn't
+    Timer {
+        id: hideDialogTimer
+        interval: 0
+        //NOTE: it's checking activeFocusItem instead of active as active doesn't correctly signal its change
+        property bool desktopOrDialogFocus: main.Window.activeFocusItem != null || (toolBoxLoader.item && toolBoxLoader.item.activeFocusItem != null)
+        onDesktopOrDialogFocusChanged: {
+            if (!desktopOrDialogFocus) {
+                hideDialogTimer.restart();
+            }
+                
+        }
+        onTriggered: {
+            if (!desktopOrDialogFocus) {
+                open = false;
+            }
+        }
+    }
+
     signal minimumWidthChanged
     signal minimumHeightChanged
     signal maximumWidthChanged
@@ -50,6 +73,15 @@ Item {
     property int iconWidth: units.iconSizes.smallMedium
     property int iconHeight: iconWidth
     property bool dialogWasVisible: false
+    property bool open: false
+    onOpenChanged: {
+        if (open) {
+            toolBoxLoader.active = true;
+            toolBoxLoader.item.visible = true;
+        } else {
+            toolBoxLoader.item.visible = false;
+        }
+    }
 
     onWidthChanged: placeToolBoxTimer.restart();
     onHeightChanged: placeToolBoxTimer.restart();
@@ -101,7 +133,7 @@ Item {
             flags: Qt.WindowStaysOnTopHint
             location: PlasmaCore.Types.Floating
             visualParent: toolBoxButton
-            hideOnWindowDeactivate: true
+         //   hideOnWindowDeactivate: true
             mainItem: ToolBoxItem {
                 id: dialog
 

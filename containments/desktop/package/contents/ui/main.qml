@@ -397,6 +397,9 @@ FolderViewDropArea {
         onPressed: {
             root.forceActiveFocus()
             mouse.accepted = false // Bug 351277
+            if (toolBox && toolBox.open) {
+                toolBox.open = false;
+            }
         }
     }
 

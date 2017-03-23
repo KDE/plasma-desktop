@@ -36,7 +36,8 @@ Item {
     property int handleHeight: (height < minimumHandleHeight) ? minimumHandleHeight : height
     property string category
 
-    property bool showAppletHandle: false
+    property bool showAppletHandle: temporaryShowAppletHandle || toolBox.open
+    property bool temporaryShowAppletHandle: false
     property real controlsOpacity: (plasmoid.immutable || !showAppletHandle) ? 0 : 1
     property string backgroundHints: "NoBackground"
     property bool hasBackground: false
@@ -216,7 +217,7 @@ Item {
         onPressAndHold: {
             if (!plasmoid.immutable && plasmoid.configuration.pressToMove) {
                 if (!dragMouseArea.dragging && !root.isDrag(pressX, pressY, mouse.x, mouse.y)) {
-                    showAppletHandle = true;
+                    temporaryShowAppletHandle = true;
 
                     dragMouseArea.dragging = true;
 
@@ -245,10 +246,10 @@ Item {
             onTriggered: {
                 if (mouseListener.containsMouse || (appletHandle.item && (appletHandle.item.containsMouse || appletHandle.item.pressed))) {
                     if (!plasmoid.configuration.pressToMove) {
-                        showAppletHandle = true;
+                        temporaryShowAppletHandle = true;
                     }
                 } else if (!dragMouseArea.dragging) {
-                    showAppletHandle = false;
+                    temporaryShowAppletHandle = false;
                 }
             }
         }
@@ -282,7 +283,7 @@ Item {
                 onImmutableChanged: {
 //                     print(" TB dragMouseArea.visible: " + plasmoid.immutable)
                     dragMouseArea.visible = !plasmoid.immutable;
-                    showAppletHandle = false;
+                    temporaryShowAppletHandle = false;
                 }
                 onAppletRemoved: {
 //                     print("Applet removed Applet-" + applet.id)

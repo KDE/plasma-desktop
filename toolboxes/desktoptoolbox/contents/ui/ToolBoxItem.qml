@@ -39,7 +39,7 @@ ListView {
     // because of the dialog closing right on the key *press* event
     Keys.onReleased: {
         if (event.key === Qt.Key_Escape) {
-            toolBoxLoader.item.visible = false
+            main.open = false
             event.accepted = true
         }
     }
@@ -53,7 +53,7 @@ ListView {
                     model[currentIndex].trigger()
                 }
             }
-            toolBoxLoader.item.visible = false
+            main.open = false
             event.accepted = true
         }
     }
@@ -118,7 +118,7 @@ ListView {
         onExited: menu.currentIndex = -1
 
         onClicked: {
-            toolBoxLoader.item.visible = false
+            main.open = false
             if (modelData.operation) {
                 performOperation(modelData.operation)
             } else {

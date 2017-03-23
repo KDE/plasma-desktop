@@ -259,9 +259,8 @@ Item {
             }
         }
         onClicked: {
-            toolBoxLoader.active = true
             // the dialog auto-closes on losing focus
-            toolBoxLoader.item.visible = !main.dialogWasVisible
+            main.open = !main.dialogWasVisible
             plasmoid.focus = true;
         }
         onReleased: {
