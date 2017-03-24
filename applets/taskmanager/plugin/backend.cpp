@@ -49,6 +49,7 @@ Backend::Backend(QObject* parent) : QObject(parent)
     , m_taskManagerItem(0)
     , m_toolTipItem(0)
     , m_panelWinId(0)
+    , m_groupDialog(0)
     , m_highlightWindows(false)
     , m_actionGroup(new QActionGroup(this))
 {
