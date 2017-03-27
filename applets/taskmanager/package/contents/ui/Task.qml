@@ -480,7 +480,7 @@ MouseArea {
         }
 
         text: model.display
-        wrapMode: Text.Wrap
+        wrapMode: (maximumLineCount == 1) ? Text.NoWrap : Text.Wrap
         elide: Text.ElideRight
         textFormat: Text.PlainText
         verticalAlignment: Text.AlignVCenter
