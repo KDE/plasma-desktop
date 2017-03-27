@@ -300,7 +300,7 @@ Item {
 
                         textFormat: Text.PlainText
 
-                        wrapMode: Text.Wrap
+                        wrapMode: (maximumLineCount == 1) ? Text.NoWrap : Text.Wrap
                         elide: Text.ElideRight
 
                         color: textShadow.visible ? "white" : PlasmaCore.ColorScope.textColor
