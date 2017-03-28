@@ -108,6 +108,7 @@ PlasmaCore.Dialog {
                     id: highlight
                 }
                 highlightMoveDuration : 0
+                highlightResizeDuration: 0
 
                 delegate: PlasmaComponents.ListItem {
                     enabled: true
@@ -134,8 +135,8 @@ PlasmaCore.Dialog {
                         width: parent.width - 2 * x
                         spacing: units.largeSpacing
                         PlasmaCore.IconItem {
-                            width: units.iconSizes.huge
-                            height: width
+                            Layout.preferredWidth: units.iconSizes.huge
+                            Layout.preferredHeight: units.iconSizes.huge
                             source: model.decoration
                         }
 
