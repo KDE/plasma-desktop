@@ -108,6 +108,7 @@ PlasmaCore.Dialog {
                     id: highlight
                 }
                 highlightMoveDuration : 0
+                highlightResizeDuration: 0
 
                 delegate: PlasmaComponents.ListItem {
                     enabled: true
