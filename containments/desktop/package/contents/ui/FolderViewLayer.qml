@@ -61,6 +61,14 @@ Item {
         folderView.cancelRename();
     }
 
+    function goHome() {
+        if (folderView.url != plasmoid.configuration.url) {
+            folderView.url = plasmoid.configuration.url;
+            folderView.history = [];
+            folderView.updateHistory();
+        }
+    }
+
     PlasmaCore.Svg {
         id: actionOverlays
 
@@ -134,11 +142,7 @@ Item {
 
         onExpandedChanged: {
             if (root.isPopup && !plasmoid.expanded) {
-                if (folderView.url != plasmoid.configuration.url) {
-                    folderView.url = plasmoid.configuration.url;
-                    folderView.history = [];
-                    folderView.updateHistory();
-                }
+                goHome();
 
                 folderView.currentIndex = -1;
                 folderView.model.clearSelection();
@@ -247,6 +251,7 @@ Item {
             visible: active
 
             property Item windowPin: null
+            property Item homeButton: null
 
             onVisibleChanged: {
                 if (root.isPopup && !visible) {
@@ -266,10 +271,26 @@ Item {
                 }
             }
 
+            Connections {
+                target: folderView
+
+                onUrlChanged: {
+                    if (!label.homeButton && folderView.url != plasmoid.configuration.url) {
+                        label.homeButton = homeButtonComponent.createObject(label);
+                    } else if (label.homeButton) {
+                        label.homeButton.destroy();
+                    }
+                }
+            }
+
             PlasmaComponents.Label {
                 id: text
 
-                width: parent.width - (windowPin != null ? windowPin.width - units.smallSpacing : 0)
+                anchors {
+                    left: label.homeButton ? label.homeButton.right : parent.left
+                    right: label.windowPin ? label.windowPin.left : parent.right
+                    margins: units.smallSpacing
+                }
                 height: parent.height
 
                 horizontalAlignment: Text.AlignHCenter
@@ -329,6 +350,24 @@ Item {
                     checkable: true
                     iconSource: "window-pin"
                     onCheckedChanged: plasmoid.hideOnWindowDeactivate = !checked
+                }
+            }
+
+            Component {
+                id: homeButtonComponent
+
+                PlasmaComponents.ToolButton {
+                    id: homeButton
+
+                    anchors.left: parent.left
+
+                    visible: root.isPopup && folderView.url != plasmoid.configuration.url
+
+                    width: root.isPopup ? Math.round(units.gridUnit * 1.25) : 0
+                    height: width
+                    iconSource: "go-home"
+
+                    onClicked: goHome()
                 }
             }
 
