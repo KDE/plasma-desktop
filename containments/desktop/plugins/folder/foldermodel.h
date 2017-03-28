@@ -167,6 +167,8 @@ class FolderModel : public QSortFilterProxyModel
         QStringList filterMimeTypes() const;
         void setFilterMimeTypes(const QStringList &mimeList);
 
+        KFileItem rootItem() const;
+
         Q_INVOKABLE void up();
         Q_INVOKABLE void cd(int row);
 

@@ -497,6 +497,11 @@ void FolderModel::setFilterMimeTypes(const QStringList &mimeList)
     }
 }
 
+KFileItem FolderModel::rootItem() const
+{
+    return m_dirModel->dirLister()->rootItem();
+}
+
 void FolderModel::up()
 {
     const QUrl &up = KIO::upUrl(resolvedUrl());
@@ -890,7 +895,7 @@ void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row)
 
     // So we get to run mostLocalUrl() over the current URL.
     if (item.isNull()) {
-        item = m_dirModel->dirLister()->rootItem();
+        item = rootItem();
     }
 
     if (item.isNull()) {
@@ -1367,7 +1372,7 @@ void FolderModel::updateActions()
         bool enable = false;
 
         const QString pasteText = KIO::pasteActionText(QApplication::clipboard()->mimeData(),
-            &enable, m_dirModel->dirLister()->rootItem());
+            &enable, rootItem());
 
         if (enable) {
             paste->setText(pasteText);
@@ -1411,7 +1416,7 @@ void FolderModel::openContextMenu(QQuickItem *visualParent)
         menu->addAction(m_actionCollection.action(QStringLiteral("emptyTrash")));
         menu->addSeparator();
 
-        KFileItemListProperties itemProperties(KFileItemList() << m_dirModel->dirLister()->rootItem());
+        KFileItemListProperties itemProperties(KFileItemList() << rootItem());
         m_fileItemActions->setItemListProperties(itemProperties);
 
         menu->addAction(m_fileItemActions->preferredOpenWithAction(QString()));

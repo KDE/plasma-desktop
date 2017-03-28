@@ -308,7 +308,7 @@ Item {
                 Folder.LabelGenerator {
                     id: labelGenerator
 
-                    url: folderView.model.resolvedUrl
+                    folderModel: folderView.model
                     rtl: (Qt.application.layoutDirection == Qt.RightToLeft)
                     labelMode: plasmoid.configuration.labelMode
                     labelText: plasmoid.configuration.labelText

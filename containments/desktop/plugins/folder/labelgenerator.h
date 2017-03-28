@@ -21,14 +21,16 @@
 #define LABELGENERATOR_H
 
 #include <QObject>
+#include <QPointer>
 
 class KFilePlacesModel;
+class FolderModel;
 
 class LabelGenerator : public QObject
 {
     Q_OBJECT
 
-    Q_PROPERTY(QString url READ url WRITE setUrl NOTIFY urlChanged)
+    Q_PROPERTY(FolderModel *folderModel READ folderModel WRITE setFolderModel NOTIFY folderModelChanged)
     Q_PROPERTY(bool rtl READ rtl WRITE setRtl NOTIFY rtlChanged)
     Q_PROPERTY(int labelMode READ labelMode WRITE setLabelMode NOTIFY labelModeChanged)
     Q_PROPERTY(QString labelText READ labelText WRITE setLabelText NOTIFY labelTextChanged)
@@ -38,8 +40,8 @@ class LabelGenerator : public QObject
         LabelGenerator(QObject *parent = 0);
         ~LabelGenerator();
 
-        QString url() const;
-        void setUrl(const QString &url);
+        FolderModel *folderModel() const;
+        void setFolderModel(FolderModel *folderModel);
 
         bool rtl() const;
         void setRtl(bool rtl);
@@ -53,7 +55,7 @@ class LabelGenerator : public QObject
         QString displayLabel();
 
     Q_SIGNALS:
-        void urlChanged();
+        void folderModelChanged();
         void rtlChanged();
         void labelModeChanged();
         void labelTextChanged();
@@ -61,7 +63,7 @@ class LabelGenerator : public QObject
 
     private:
         KFilePlacesModel* m_placesModel;
-        QString m_url;
+        QPointer<FolderModel> m_folderModel;
         bool m_rtl;
         int m_labelMode;
         QString m_labelText;

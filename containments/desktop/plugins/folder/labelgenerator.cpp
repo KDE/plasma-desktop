@@ -24,6 +24,8 @@
 #include <KLocalizedString>
 #include <KShell>
 
+#include "foldermodel.h"
+
 LabelGenerator::LabelGenerator(QObject* parent) : QObject(parent),
     m_placesModel(new KFilePlacesModel(this)),
     m_rtl(false)
@@ -34,16 +36,24 @@ LabelGenerator::~LabelGenerator()
 {
 }
 
-QString LabelGenerator::url() const
+FolderModel *LabelGenerator::folderModel() const
 {
-    return m_url;
+    return m_folderModel.data();
 }
 
-void LabelGenerator::setUrl(const QString &url)
+void LabelGenerator::setFolderModel(FolderModel *folderModel)
 {
-    if (url != m_url) {
-        m_url = url;
-        emit urlChanged();
+    if (m_folderModel.data() != folderModel) {
+        if (m_folderModel.data()) {
+            disconnect(m_folderModel.data(), 0, this, 0);
+        }
+
+        m_folderModel = folderModel;
+
+        connect(m_folderModel.data(), &FolderModel::listingCompleted, this, &LabelGenerator::displayLabelChanged);
+        connect(m_folderModel.data(), &FolderModel::listingCanceled, this, &LabelGenerator::displayLabelChanged);
+
+        emit folderModelChanged();
         emit displayLabelChanged();
     }
 }
@@ -92,44 +102,48 @@ void LabelGenerator::setLabelText(const QString& text)
 
 QString LabelGenerator::displayLabel()
 {
+    if (!m_folderModel) {
+        return QString();
+    }
+
+    QUrl url = m_folderModel->resolvedUrl();
+
     if (m_labelMode == 1 /* Default */) {
-        if (m_url == QLatin1String("desktop:/")) {
-            return i18n("Desktop Folder");
-        } else {
-            QUrl url(m_url);
+        if (url.path().length() <= 1) {
+            const KFileItem &rootItem = m_folderModel->rootItem();
 
-            if (m_url.startsWith('~')) {
-                url = QUrl::fromLocalFile(KShell::tildeExpand(m_url));
+            if (rootItem.text() != QLatin1String(".")) {
+                return rootItem.text();
             }
+        }
 
-            QString label(url.toDisplayString(QUrl::PreferLocalFile | QUrl::StripTrailingSlash));
+        QString label(url.toDisplayString(QUrl::PreferLocalFile | QUrl::StripTrailingSlash));
 
-            const QModelIndex index = m_placesModel->closestItem(url);
+        const QModelIndex index = m_placesModel->closestItem(url);
 
-            if (index.isValid()) {
-                QString root = m_placesModel->url(index).toDisplayString(QUrl::PreferLocalFile | QUrl::StripTrailingSlash);
+        if (index.isValid()) {
+            QString root = m_placesModel->url(index).toDisplayString(QUrl::PreferLocalFile | QUrl::StripTrailingSlash);
 
-                label = label.right(label.length() - root.length());
+            label = label.right(label.length() - root.length());
 
-                if (!label.isEmpty()) {
-                    if (label.at(0) == '/') {
-                        label.remove(0, 1);
-                    }
-
-                    if (m_rtl) {
-                        label.prepend(" < ");
-                    } else {
-                        label.prepend(" > ");
-                    }
+            if (!label.isEmpty()) {
+                if (label.at(0) == '/') {
+                    label.remove(0, 1);
                 }
 
-                label.prepend(m_placesModel->text(index));
+                if (m_rtl) {
+                    label.prepend(" < ");
+                } else {
+                    label.prepend(" > ");
+                }
             }
 
-            return label;
+            label.prepend(m_placesModel->text(index));
         }
+
+        return label;
     } else if (m_labelMode == 2 /* Full path */) {
-        return QUrl(m_url).toDisplayString(QUrl::PreferLocalFile | QUrl::StripTrailingSlash);
+        return QUrl(url).toDisplayString(QUrl::PreferLocalFile | QUrl::StripTrailingSlash);
     } else if (m_labelMode == 3 /* Custom title */) {
         return m_labelText;
     }
