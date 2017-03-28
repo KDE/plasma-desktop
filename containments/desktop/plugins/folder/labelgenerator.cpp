@@ -102,12 +102,12 @@ QString LabelGenerator::displayLabel()
                 url = QUrl::fromLocalFile(KShell::tildeExpand(m_url));
             }
 
-            QString label(url.toString(QUrl::PreferLocalFile | QUrl::StripTrailingSlash));
+            QString label(url.toDisplayString(QUrl::PreferLocalFile | QUrl::StripTrailingSlash));
 
             const QModelIndex index = m_placesModel->closestItem(url);
 
             if (index.isValid()) {
-                QString root = m_placesModel->url(index).toString(QUrl::PreferLocalFile | QUrl::StripTrailingSlash);
+                QString root = m_placesModel->url(index).toDisplayString(QUrl::PreferLocalFile | QUrl::StripTrailingSlash);
 
                 label = label.right(label.length() - root.length());
 
@@ -129,7 +129,7 @@ QString LabelGenerator::displayLabel()
             return label;
         }
     } else if (m_labelMode == 2 /* Full path */) {
-        return QUrl(m_url).toString(QUrl::PreferLocalFile | QUrl::StripTrailingSlash);
+        return QUrl(m_url).toDisplayString(QUrl::PreferLocalFile | QUrl::StripTrailingSlash);
     } else if (m_labelMode == 3 /* Custom title */) {
         return m_labelText;
     }
