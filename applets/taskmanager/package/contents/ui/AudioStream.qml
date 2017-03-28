@@ -62,7 +62,7 @@ Item {
              SequentialAnimation {
                  // Delay showing the play indicator so we don't flash it for brief sounds.
                  PauseAnimation {
-                     duration: 2000
+                     duration: inPopup ? 0 : 2000
                  }
                  NumberAnimation {
                      property: "opacity"
