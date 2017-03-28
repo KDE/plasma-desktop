@@ -63,7 +63,9 @@ Item {
 
     function goHome() {
         if (folderView.url != plasmoid.configuration.url) {
-            folderView.url = plasmoid.configuration.url;
+            folderView.url = Qt.binding(function() {
+                return plasmoid.configuration.url;
+            });
             folderView.history = [];
             folderView.updateHistory();
         }
