@@ -245,6 +245,8 @@ Item {
             // propagates recursively) and that confuses the Label, hence the temp property.
             readonly property bool active: (plasmoid.configuration.labelMode != 0)
 
+            readonly property bool showPin: root.isPopup && plasmoid.compactRepresentationItem && plasmoid.compactRepresentationItem.visible
+
             width: parent.width
             height: active ? labelHeight : 0
 
@@ -259,15 +261,11 @@ Item {
                 }
             }
 
-            Connections {
-                target: root
-
-                onIsPopupChanged: {
-                    if (windowPin == null && root.isPopup) {
-                        windowPin = windowPinComponent.createObject(label);
-                    } else if (upButton != null) {
-                        windowPin.destroy();
-                    }
+            onShowPinChanged: {
+                if (!windowPin && showPin) {
+                    windowPin = windowPinComponent.createObject(label);
+                } else if (windowPin) {
+                    windowPin.destroy();
                 }
             }
 
@@ -343,7 +341,7 @@ Item {
 
                     anchors.right: parent.right
 
-                    visible: root.isPopup
+                    visible: label.showPin
 
                     width: root.isPopup ? Math.round(units.gridUnit * 1.25) : 0
                     height: width
@@ -372,7 +370,7 @@ Item {
             }
 
             Component.onCompleted: {
-                if (root.isPopup) {
+                if (root.showPin) {
                     windowPin = windowPinComponent.createObject(label);
                 }
             }
