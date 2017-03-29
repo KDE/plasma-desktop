@@ -148,6 +148,7 @@ Item {
     PlasmaComponents.ModelContextMenu {
         id: getWidgetsDialog
         visualParent: getWidgetsButton
+        placement: PlasmaCore.Types.TopPosedLeftAlignedPopup
         // model set on first invocation
         onClicked: model.trigger()
     }
@@ -364,7 +365,7 @@ Item {
             text: i18nd("plasma_shell_org.kde.plasma.desktop", "Get new widgets")
             onClicked: {
                 getWidgetsDialog.model = widgetExplorer.widgetsMenuActions
-                getWidgetsDialog.open()
+                getWidgetsDialog.openRelative()
             }
         }
 
