@@ -948,7 +948,7 @@ void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row)
     ev.setDropAction(proposedAction);
 
     KIO::DropJob *dropJob = KIO::drop(&ev, dropTargetUrl);
-    dropJob->ui()->setAutoErrorHandlingEnabled(true);
+    dropJob->uiDelegate()->setAutoErrorHandlingEnabled(true);
     const int x = dropEvent->property("x").toInt();
     const int y = dropEvent->property("y").toInt();
 
@@ -987,7 +987,7 @@ void FolderModel::dropCwd(QObject* dropEvent)
         ev.setDropAction(proposedAction);
 
         KIO::DropJob *dropJob = KIO::drop(&ev, m_dirModel->dirLister()->url().adjusted(QUrl::PreferLocalFile));
-        dropJob->ui()->setAutoErrorHandlingEnabled(true);
+        dropJob->uiDelegate()->setAutoErrorHandlingEnabled(true);
     }
 }
 
@@ -1603,7 +1603,7 @@ void FolderModel::moveSelectedToTrash()
     KIO::JobUiDelegate uiDelegate;
     if (uiDelegate.askDeleteConfirmation(urls, KIO::JobUiDelegate::Trash, KIO::JobUiDelegate::DefaultConfirmation)) {
         KIO::Job* job = KIO::trash(urls);
-        job->ui()->setAutoErrorHandlingEnabled(true);
+        job->uiDelegate()->setAutoErrorHandlingEnabled(true);
         KIO::FileUndoManager::self()->recordJob(KIO::FileUndoManager::Trash, urls, QUrl(QStringLiteral("trash:/")), job);
     }
 }
@@ -1618,7 +1618,7 @@ void FolderModel::deleteSelected()
     KIO::JobUiDelegate uiDelegate;
     if (uiDelegate.askDeleteConfirmation(urls, KIO::JobUiDelegate::Delete, KIO::JobUiDelegate::DefaultConfirmation)) {
         KIO::Job* job = KIO::del(urls);
-        job->ui()->setAutoErrorHandlingEnabled(true);
+        job->uiDelegate()->setAutoErrorHandlingEnabled(true);
     }
 }
 
@@ -1650,7 +1650,7 @@ void FolderModel::emptyTrashBin()
     uiDelegate.setWindow(QApplication::desktop());
     if (uiDelegate.askDeleteConfirmation(QList<QUrl>(), KIO::JobUiDelegate::EmptyTrash, KIO::JobUiDelegate::DefaultConfirmation)) {
         KIO::Job* job = KIO::emptyTrash();
-        job->ui()->setAutoErrorHandlingEnabled(true);
+        job->uiDelegate()->setAutoErrorHandlingEnabled(true);
     }
 }
 
@@ -1663,7 +1663,7 @@ void FolderModel::restoreSelectedFromTrash()
     const auto &urls = selectedUrls(true);
 
     KIO::RestoreJob *job = KIO::restoreFromTrash(urls);
-    job->ui()->setAutoErrorHandlingEnabled(true);
+    job->uiDelegate()->setAutoErrorHandlingEnabled(true);
 }
 
 void FolderModel::undoTextChanged(const QString &text)
