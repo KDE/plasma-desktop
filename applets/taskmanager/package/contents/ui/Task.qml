@@ -69,6 +69,8 @@ MouseArea {
     })
 
     readonly property bool highlighted: (inPopup && activeFocus) || (!inPopup && containsMouse)
+        || (task.contextMenu && task.contextMenu.status === PlasmaComponents.DialogStatus.Open)
+        || (groupDialog.visible && groupDialog.visualParent === task)
 
     function hideToolTipTemporarily() {
         toolTipArea.hideToolTip();
@@ -123,7 +125,8 @@ MouseArea {
             pressX = mouse.x;
             pressY = mouse.y;
         } else if (mouse.button == Qt.RightButton) {
-            tasks.createContextMenu(task, modelIndex()).show();
+            contextMenu = tasks.createContextMenu(task, modelIndex());
+            contextMenu.show();
         }
     }
 
@@ -386,7 +389,7 @@ MouseArea {
 
             anchors.fill: parent
 
-            active: task.highlighted || (task.contextMenu && task.contextMenu.status == PlasmaComponents.DialogStatus.Open)
+            active: task.highlighted
             enabled: true
             usesPlasmaTheme: false
 
@@ -491,8 +494,7 @@ MouseArea {
         },
         State {
             name: "hovered"
-            when: ((task.highlighted && frame.hasElementPrefix("hover") && plasmoid.configuration.taskHoverEffect)
-                || (contextMenu.status == PlasmaComponents.DialogStatus.Open && contextMenu.visualParent == task))
+            when: task.highlighted && frame.hasElementPrefix("hover") && plasmoid.configuration.taskHoverEffect
 
             PropertyChanges {
                 target: frame
@@ -510,7 +512,7 @@ MouseArea {
         },
         State {
             name: "minimized"
-            when: model.IsMinimized === true && !(groupDialog.visible && groupDialog.visualParent == task)
+            when: model.IsMinimized === true
 
             PropertyChanges {
                 target: frame
@@ -519,7 +521,7 @@ MouseArea {
         },
         State {
             name: "active"
-            when: model.IsActive === true || groupDialog.visible && groupDialog.visualParent == task
+            when: model.IsActive === true
 
             PropertyChanges {
                 target: frame
