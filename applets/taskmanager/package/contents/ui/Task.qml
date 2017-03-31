@@ -56,6 +56,8 @@ MouseArea {
     property QtObject smartLauncherItem: null
 
     readonly property bool highlighted: (inPopup && activeFocus) || (!inPopup && containsMouse)
+        || (task.contextMenu && task.contextMenu.status === PlasmaComponents.DialogStatus.Open)
+        || (groupDialog.visible && groupDialog.visualParent === task)
 
     acceptedButtons: Qt.LeftButton | Qt.RightButton | Qt.MidButton
 
@@ -104,7 +106,8 @@ MouseArea {
                 toolTip.hideToolTip();
             }
 
-            tasks.createContextMenu(task).show();
+            contextMenu = tasks.createContextMenu(task);
+            contextMenu.show();
         }
     }
 
@@ -344,7 +347,7 @@ MouseArea {
 
             anchors.fill: parent
 
-            active: task.highlighted || (task.contextMenu && task.contextMenu.status == PlasmaComponents.DialogStatus.Open)
+            active: task.highlighted
             enabled: true
             usesPlasmaTheme: false
 
@@ -430,7 +433,7 @@ MouseArea {
         },
         State {
             name: "hovered"
-            when: task.highlighted || (contextMenu.status == PlasmaComponents.DialogStatus.Open && contextMenu.visualParent == task)
+            when: task.highlighted
 
             PropertyChanges {
                 target: frame
@@ -448,7 +451,7 @@ MouseArea {
         },
         State {
             name: "minimized"
-            when: model.IsMinimized === true && !(groupDialog.visible && groupDialog.visualParent == task)
+            when: model.IsMinimized === true
 
             PropertyChanges {
                 target: frame
@@ -457,7 +460,7 @@ MouseArea {
         },
         State {
             name: "active"
-            when: model.IsActive === true || groupDialog.visible && groupDialog.visualParent == task
+            when: model.IsActive === true
 
             PropertyChanges {
                 target: frame
