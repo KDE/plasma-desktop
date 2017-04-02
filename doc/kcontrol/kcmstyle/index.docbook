@@ -14,8 +14,8 @@
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date>2016-09-21</date>
-<releaseinfo>Plasma 5.8</releaseinfo>
+<date>2017-04-01</date>
+<releaseinfo>Plasma 5.9</releaseinfo>
 
 <keywordset>
 <keyword>KDE</keyword>
@@ -109,26 +109,21 @@ Each application can override the setting used in this panel.</para></tip>
 </listitem> 
 </varlistentry> 
 
-<!-- appmenu is so far not in kf5, status in kf5 see
-https://forum.kde.org/viewtopic.php?f=285&t=125058&p=336313&hilit=appmenu#p336313
-https://bugs.kde.org/show_bug.cgi?id=341071#c9
-
 <varlistentry> 
 <term><guilabel>Menubar style</guilabel></term>
 <listitem>
 <para><guilabel>In application</guilabel>: The classic menubar at the top of the application window.</para>
-<para><guilabel>Title bar button</guilabel>: The window has an additional menu button top left. 
+
+<para><guilabel>Title bar button</guilabel>: The window has an additional menu button in the window decoration bar top left. 
 All changes will take effect only for newly started applications.</para>
-<para><guilabel>Top screen menubar</guilabel>: This will turn on a menubar at the top of the screen that 
-is hidden by default and revealed on mouse over or a menu button on the window decoration.
-This menubar will reflect the menu options of the active application.</para>
-<para><guilabel>Only export</guilabel>: for use by plasma runners + applets. 
-To use this feature you need a KRunner plugin like <guilabel>Appmenu action launcher</guilabel>.
-Select an application, press <keycombo action="simul">&Alt;<keycap>F2</keycap></keycombo> 
-and type the menu action you want to perform.</para>
+
+<para><guilabel>Application Menu widget</guilabel>: Add a panel called <guilabel>Application Menu Bar</guilabel>
+and the menu of the active application will appear in this new panel.</para>
+
+<para>All changes will take effect only for newly started applications.</para>
+
 </listitem> 
 </varlistentry> 
--->
 </variablelist>
 
 </listitem>
