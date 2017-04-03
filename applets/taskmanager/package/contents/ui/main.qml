@@ -164,6 +164,18 @@ Item {
         }
     }
 
+    Connections {
+        enabled: plasmoid.configuration.groupPopups
+
+        target: tasksModel
+
+        onActiveTaskChanged: {
+            if (tasksModel.activeTask.parent.valid) {
+                groupDialog.activeTask = tasksModel.activeTask;
+            }
+        }
+    }
+
     TaskManager.VirtualDesktopInfo {
         id: virtualDesktopInfo
     }
