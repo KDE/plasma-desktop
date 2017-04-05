@@ -24,6 +24,8 @@
 #include <QTimer>
 #include <QDebug>
 #include <QX11Info>
+#include <QDBusServiceWatcher>
+#include <QDBusConnection>
 #include <xcb/xcb_keysyms.h>
 
 #define USED_MASK (XCB_MOD_MASK_SHIFT | XCB_MOD_MASK_CONTROL | XCB_MOD_MASK_1 | XCB_MOD_MASK_4)
@@ -184,7 +186,11 @@ App::App(int argc, char** argv): QGuiApplication(argc, argv)
     ,m_keyboardGrabbed(false)
     ,m_doGrab(false)
     ,m_syms(0)
+    ,m_watcher(new QDBusServiceWatcher(this))
 {
+    m_watcher->setConnection(QDBusConnection::sessionBus());
+    m_watcher->addWatchedService("org.kde.impanel");
+    connect(m_watcher, &QDBusServiceWatcher::serviceUnregistered, this, &App::finalize);
     m_syms = xcb_key_symbols_alloc(QX11Info::connection());
     installNativeEventFilter(m_eventFilter.data());
     ibus_init ();
@@ -329,6 +335,7 @@ void App::nameAcquired()
 
 void App::nameLost()
 {
+    setDoGrab(false);
     if (m_impanel) {
         g_object_unref(m_impanel);
     }
@@ -375,7 +382,7 @@ void App::grabKey()
         uint modifiers = key.second;
         xcb_keycode_t* keycode = xcb_key_symbols_get_keycode(m_syms, sym);
         if (!keycode) {
-            g_warning ("Can not convert keyval=%lu to keycode!", sym);
+            g_warning ("Can not convert keyval=%u to keycode!", sym);
         } else {
             xcb_grab_key(QX11Info::connection(), true, QX11Info::appRootWindow(),
                          modifiers, keycode[0], XCB_GRAB_MODE_ASYNC, XCB_GRAB_MODE_ASYNC);
@@ -395,7 +402,7 @@ void App::ungrabKey()
         uint modifiers = key.second;
         xcb_keycode_t* keycode = xcb_key_symbols_get_keycode(m_syms, sym);
         if (!keycode) {
-            g_warning ("Can not convert keyval=%lu to keycode!", sym);
+            g_warning ("Can not convert keyval=%u to keycode!", sym);
         } else {
             xcb_ungrab_key(QX11Info::connection(), keycode[0], QX11Info::appRootWindow(), modifiers);
             if ((modifiers & XCB_MOD_MASK_SHIFT) == 0) {

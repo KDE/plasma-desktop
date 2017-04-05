@@ -253,6 +253,9 @@ void PanelAgent::RegisterProperties(const QStringList &props)
     const QDBusMessage& msg = message();
     if (msg.service() != m_currentService) {
         watcher->removeWatchedService(m_currentService);
+        if (m_currentService.isEmpty()) {
+            emit PanelRegistered();
+        }
         m_currentService = msg.service();
         watcher->addWatchedService(m_currentService);
     }

@@ -79,6 +79,7 @@ Q_SIGNALS:
     void TriggerProperty(const QString &key);
     void PanelCreated();
     void PanelCreated2();
+    void PanelRegistered();
     void Exit();
     void ReloadConfig();
 

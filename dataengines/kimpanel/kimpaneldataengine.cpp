@@ -22,6 +22,10 @@
 #include "kimpanelservice.h"
 #include "kimpanelinputpanelcontainer.h"
 #include "kimpanelstatusbarcontainer.h"
+#include "config-kimpanel.h"
+
+#include <QProcess>
+#include <QFile>
 
 // Plasma
 #include <Plasma/DataContainer>
@@ -30,6 +34,14 @@ KimpanelEngine::KimpanelEngine(QObject* parent, const QVariantList& args)
     : Plasma::DataEngine(parent, args), m_panelAgent(0)
 {
     init();
+}
+
+static void ibusPanelLauncher() {
+    // lets just blindly start the launcher. no need to use ifdef
+    const QString path = QStringLiteral(KIMPANEL_LIBEXEC_DIR"/kimpanel-ibus-panel-launcher");
+    if (QFile::exists(path)) {
+        QProcess::startDetached(path);
+    }
 }
 
 void KimpanelEngine::init()
@@ -42,6 +54,8 @@ void KimpanelEngine::init()
     addSource(inputpanelSource);
     addSource(statusbarSource);
     this->m_panelAgent->created();
+
+    ibusPanelLauncher();
 }
 
 Plasma::Service* KimpanelEngine::serviceForSource(const QString& source)

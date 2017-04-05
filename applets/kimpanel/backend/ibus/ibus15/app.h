@@ -30,6 +30,7 @@
 #include <QByteArray>
 #include <QPair>
 #include "panel.h"
+class QDBusServiceWatcher;
 
 class XcbEventFilter : public QAbstractNativeEventFilter
 {
@@ -43,7 +44,6 @@ public:
     typedef QPair< uint, uint > TriggerKey;
     App(int argc, char** argv);
     virtual ~App();
-    void finalize();
     void setTriggerKeys(QList< TriggerKey > triggersList);
     void setDoGrab(bool doGrab);
     bool keyboardGrabbed() { return m_keyboardGrabbed; }
@@ -52,7 +52,8 @@ public:
     void nameAcquired();
     void nameLost();
     QByteArray normalizeIconName(const QByteArray& icon) const;
-private Q_SLOTS:
+public Q_SLOTS:
+    void finalize();
     void clean();
     void grabKey();
     void ungrabKey();
@@ -71,6 +72,7 @@ private:
     bool m_doGrab;
     xcb_key_symbols_t* m_syms;
     QMap<QByteArray, QByteArray> m_iconMap;
+    QDBusServiceWatcher *m_watcher;
 };
 
 #endif // APP_H

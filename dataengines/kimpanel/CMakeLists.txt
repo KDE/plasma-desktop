@@ -1,5 +1,7 @@
 add_definitions(-DTRANSLATION_DOMAIN="plasma_engine_kimpanel")
 
+configure_file(config-kimpanel.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-kimpanel.h)
+
 set(plasma_engine_kimpanel_SRCS
     kimpaneldataengine.cpp
     kimpanelagent.cpp
@@ -15,6 +17,7 @@ QT5_ADD_DBUS_ADAPTOR(plasma_engine_kimpanel_SRCS
 
 
 add_library(plasma_engine_kimpanel ${plasma_engine_kimpanel_SRCS})
+target_include_directories(plasma_engine_kimpanel PRIVATE ${CMAKE_CURRENT_BINARY_DIR})
 set_target_properties(plasma_engine_kimpanel PROPERTIES PREFIX "")
 target_link_libraries(plasma_engine_kimpanel
 	KF5::Plasma

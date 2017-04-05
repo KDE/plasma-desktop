@@ -34,5 +34,6 @@
                 <arg type="i" name="cursor" direction="in" />
                 <arg type="i" name="layout" direction="in" />
             </method>
+            <signal name="PanelRegistered"></signal>
         </interface>
 </node>
