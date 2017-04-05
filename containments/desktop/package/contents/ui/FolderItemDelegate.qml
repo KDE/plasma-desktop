@@ -342,56 +342,6 @@ Item {
                     visible: editor.targetItem != main
                 }
 
-                Column {
-                    id: actions
-
-                    visible: {
-                        if (main.GridView.view.isRootView && root.containsDrag) {
-                            return false;
-                        }
-
-                        if (!main.GridView.view.isRootView && dialog.containsDrag) {
-                            return false;
-                        }
-
-                        if (popupDialog) {
-                            return false;
-                        }
-
-                        return true;
-                    }
-
-                    z: 3
-
-                    states: [
-                        State { // icon view
-                            when: !root.useListViewMode
-
-                            AnchorChanges {
-                                target: actions
-                                anchors.horizontalCenter: undefined
-                                anchors.verticalCenter: undefined
-                                anchors.left: parent.left
-                                anchors.top: parent.top
-                            }
-                        },
-                        State { // list view
-                            when: root.useListViewMode
-
-                           AnchorChanges {
-                                target: actions
-                                anchors.horizontalCenter: icon.horizontalCenter
-                                anchors.verticalCenter: icon.verticalCenter
-                                anchors.left: undefined
-                                anchors.top: undefined
-                            }
-                        }
-                    ]
-
-                    width: implicitWidth
-                    height: implicitHeight
-                }
-
                 Component {
                     id: frameComponent
 
@@ -478,6 +428,36 @@ Item {
                         }
                     }
                 ]
+            }
+
+            Column {
+                id: actions
+
+                visible: {
+                    if (main.GridView.view.isRootView && root.containsDrag) {
+                        return false;
+                    }
+
+                    if (!main.GridView.view.isRootView && dialog.containsDrag) {
+                        return false;
+                    }
+
+                    if (popupDialog) {
+                        return false;
+                    }
+
+                    return true;
+                }
+
+                anchors {
+                    left: frameLoader.left
+                    top: frameLoader.top
+                    leftMargin: root.useListViewMode ? (icon.x + (icon.width / 2)) - (width / 2) : 0
+                    topMargin: root.useListViewMode ? (icon.y + (icon.height / 2)) - (height / 2)  : 0
+                }
+
+                width: implicitWidth
+                height: implicitHeight
             }
 
             Component.onCompleted: {
