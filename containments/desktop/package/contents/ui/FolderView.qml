@@ -337,7 +337,9 @@ Item {
             var leftEdge = Math.min(gridView.contentX, gridView.originX);
 
             if (!item || item.blank) {
-                gridView.hoveredItem = null;
+                if (gridView.hoveredItem && !root.containsDrag && (!dialog || !dialog.containsDrag)) {
+                    gridView.hoveredItem = null;
+                }
             } else {
                 var fPos = mapToItem(item.frame, mouse.x, mouse.y);
 
