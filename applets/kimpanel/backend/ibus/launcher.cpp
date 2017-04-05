@@ -28,7 +28,7 @@
 class IBusPanelLauncher : public QCoreApplication {
     Q_OBJECT
 public:
-    IBusPanelLauncher(int argc, char *argv[]) : QCoreApplication(argc, argv), m_watcher(new QDBusServiceWatcher(this)) {
+    IBusPanelLauncher(int &argc, char *argv[]) : QCoreApplication(argc, argv), m_watcher(new QDBusServiceWatcher(this)) {
         m_watcher->setConnection(QDBusConnection::sessionBus());
         QMetaObject::invokeMethod(this, "init", Qt::QueuedConnection);
     }

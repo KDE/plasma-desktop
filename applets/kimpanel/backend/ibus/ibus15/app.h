@@ -42,7 +42,7 @@ class App : public QGuiApplication {
     Q_OBJECT
 public:
     typedef QPair< uint, uint > TriggerKey;
-    App(int argc, char* argv[]);
+    App(int &argc, char* argv[]);
     virtual ~App();
     void setTriggerKeys(QList< TriggerKey > triggersList);
     void setDoGrab(bool doGrab);

@@ -178,7 +178,7 @@ static void initIconMap(QMap<QByteArray, QByteArray>& iconMap)
     iconMap["gtk-zoom-out"] = "zoom-out";
 }
 
-App::App(int argc, char* argv[]): QGuiApplication(argc, argv)
+App::App(int &argc, char* argv[]): QGuiApplication(argc, argv)
     ,m_eventFilter(new XcbEventFilter)
     ,m_init(false)
     ,m_bus(ibus_bus_new ())
