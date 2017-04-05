@@ -241,7 +241,7 @@ Item {
             }
 
             if (childAt(mouse.x, mouse.y) != editor) {
-                editor.targetItem = null;
+                editor.commit();
             }
 
             pressX = mouse.x;
@@ -1136,8 +1136,7 @@ Item {
                 switch(event.key) {
                 case Qt.Key_Return:
                 case Qt.Key_Enter:
-                    dir.rename(positioner.map(targetItem.index), text);
-                    targetItem = null;
+                    commit();
                     break;
                 case Qt.Key_Escape:
                     targetItem = null;
@@ -1227,7 +1226,13 @@ Item {
                 x = xy[0];
                 y = xy[1];
             }
-            
+
+            function commit() {
+                if (targetItem) {
+                    dir.rename(positioner.map(targetItem.index), text);
+                    targetItem = null;
+                }
+            }
         }
 
         Component.onCompleted: {
