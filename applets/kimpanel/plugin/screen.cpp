@@ -48,13 +48,14 @@ Screen::~Screen()
 {
 }
 
-QRect Screen::geometryForPoint(int x, int y)
-{
+QScreen *screenForPoint(int x, int y) {
     auto screens = qApp->screens();
     QScreen* closestScreen = nullptr;
     int shortestDistance = INT_MAX;
     foreach(QScreen* screen, screens) {
-        int thisDistance = pointToRect(x, y, screen->availableGeometry());
+        auto rect = screen->availableGeometry();
+        rect.setSize(rect.size() * screen->devicePixelRatio());
+        int thisDistance = pointToRect(x, y, rect);
         if (thisDistance < shortestDistance) {
             shortestDistance = thisDistance;
             closestScreen = screen;
@@ -65,5 +66,28 @@ QRect Screen::geometryForPoint(int x, int y)
         closestScreen = qApp->primaryScreen();
     }
 
-    return closestScreen ? closestScreen->availableGeometry() : QRect();
+    return closestScreen;
 }
+
+QRect Screen::geometryForPoint(int x, int y)
+{
+    auto closestScreen = screenForPoint(x, y);
+
+    if (closestScreen) {
+        auto rect = closestScreen->availableGeometry();
+        rect.setSize(rect.size() * closestScreen->devicePixelRatio());
+        return rect;
+    }
+    return QRect();
+}
+
+qreal Screen::devicePixelRatioForPoint(int x, int y)
+{
+    auto closestScreen = screenForPoint(x, y);
+
+    if (closestScreen) {
+        return closestScreen->devicePixelRatio();
+    }
+    return 1.0;
+}
+

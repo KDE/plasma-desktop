@@ -241,8 +241,11 @@ PlasmaCore.Dialog {
              }
          }
 
-         inputpanel.x = x;
-         inputpanel.y = y;
+         var newRect = screen.geometryForPoint(x, y);
+         var devicePerPixelRatio = screen.devicePixelRatioForPoint(x, y);
+
+         inputpanel.x = newRect.x + (x - newRect.x) / devicePerPixelRatio;;
+         inputpanel.y = newRect.y + (y - newRect.y) / devicePerPixelRatio;;
     }
 
     function action(key) {
