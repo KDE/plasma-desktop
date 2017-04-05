@@ -169,15 +169,18 @@ void ibus_panel_impanel_navigate(IBusPanelImpanel* impanel, gboolean start, gboo
         engine_desc = ibus_bus_get_global_engine(impanel->bus);
     } else if (static_cast<size_t>(impanel->selected) < impanel->engineManager->length()) {
         engine_desc = impanel->engineManager->engines()[impanel->selected];
+        g_object_ref(engine_desc);
     }
 
     if (!engine_desc) {
         engine_desc = impanel->engineManager->engines()[0];
+        g_object_ref(engine_desc);
     }
 
     if (engine_desc) {
         const char* name = impanel->engineManager->navigate(engine_desc, forward);
         impanel->selected = impanel->engineManager->getIndexByName(name);
+        g_object_unref(engine_desc);
     } else {
         return;
     }
@@ -532,15 +535,14 @@ impanel_update_engines_order(IBusPanelImpanel* impanel, GVariant* var_engines) {
     const gchar** engine_names = NULL;
     size_t len = 0;
     engine_names = g_variant_get_strv(var_engines, &len);
-    if (len == 0) {
-        return;
-    }
+    if (len) {
+        impanel->engineManager->setOrder(engine_names, len);
 
-    impanel->engineManager->setOrder(engine_names, len);
-
-    if (impanel->engineManager->engines()) {
-        ibus_bus_set_global_engine(impanel->bus, ibus_engine_desc_get_name(impanel->engineManager->engines()[0]));
+        if (impanel->engineManager->engines()) {
+            ibus_bus_set_global_engine(impanel->bus, ibus_engine_desc_get_name(impanel->engineManager->engines()[0]));
+        }
     }
+    g_free(engine_names);
 }
 
 static void
@@ -591,6 +593,7 @@ impanel_update_latin_layouts(IBusPanelImpanel* impanel, GVariant* variant) {
     const gchar** variants = g_variant_get_strv(variant, &length);
 
     impanel->xkbLayoutManager->setLatinLayouts(variants, length);
+    g_free(variants);
 }
 
 static void
@@ -664,6 +667,7 @@ impanel_set_engine(IBusPanelImpanel* impanel, const char* name)
             if (engine_desc) {
                 impanel->xkbLayoutManager->setLayout(engine_desc);
             }
+            g_object_unref(engine_desc);
         }
         impanel->engineManager->setCurrentEngine(name);
     } else {
@@ -1053,6 +1057,7 @@ ibus_panel_impanel_focus_in (IBusPanelService *panel,
 
     IBusEngineDesc *engine_desc = ibus_bus_get_global_engine(impanel->bus);
     impanel_update_logo_by_engine(impanel, engine_desc);
+    g_object_unref(engine_desc);
 
     impanel->engineManager->setCurrentContext(input_context_path);
     if (!impanel->engineManager->useGlobalEngine()) {
@@ -1099,13 +1104,12 @@ ibus_panel_impanel_real_register_properties(IBusPanelImpanel* impanel)
     GVariantBuilder builder;
     g_variant_builder_init (&builder, G_VARIANT_TYPE ("as"));
 
-    IBusEngineDesc* engine_desc = NULL;
     if (impanel->selected >= 0 && static_cast<size_t>(impanel->selected) < impanel->engineManager->length()) {
-        engine_desc = impanel->engineManager->engines()[impanel->selected];
+        auto engine_desc = impanel->engineManager->engines()[impanel->selected];
         QByteArray propstr = ibus_engine_desc_to_logo_propstr(engine_desc);
         g_variant_builder_add (&builder, "s", propstr.constData());
     } else {
-        engine_desc = ibus_bus_get_global_engine(impanel->bus);
+        auto engine_desc = ibus_bus_get_global_engine(impanel->bus);
         QByteArray propstr = ibus_engine_desc_to_logo_propstr(engine_desc);
         g_variant_builder_add (&builder, "s", propstr.constData());
 
@@ -1117,6 +1121,7 @@ ibus_panel_impanel_real_register_properties(IBusPanelImpanel* impanel)
                 ++i;
             }
         }
+        g_object_unref(engine_desc);
     }
 
     g_dbus_connection_emit_signal (impanel->conn,
@@ -1477,6 +1482,7 @@ ibus_panel_impanel_state_changed (IBusPanelService *panel)
         ibus_config_set_value(config, "general", "engines-order", var);
     }
     g_strfreev(engine_names);
+    g_object_unref(engine_desc);
 }
 
 static void

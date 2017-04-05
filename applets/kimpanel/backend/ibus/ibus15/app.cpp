@@ -178,30 +178,23 @@ static void initIconMap(QMap<QByteArray, QByteArray>& iconMap)
     iconMap["gtk-zoom-out"] = "zoom-out";
 }
 
-App::App(int argc, char** argv): QGuiApplication(argc, argv)
+App::App(int argc, char* argv[]): QGuiApplication(argc, argv)
     ,m_eventFilter(new XcbEventFilter)
     ,m_init(false)
-    ,m_bus(0)
+    ,m_bus(ibus_bus_new ())
     ,m_impanel(0)
     ,m_keyboardGrabbed(false)
     ,m_doGrab(false)
     ,m_syms(0)
     ,m_watcher(new QDBusServiceWatcher(this))
 {
-    m_watcher->setConnection(QDBusConnection::sessionBus());
-    m_watcher->addWatchedService("org.kde.impanel");
-    connect(m_watcher, &QDBusServiceWatcher::serviceUnregistered, this, &App::finalize);
     m_syms = xcb_key_symbols_alloc(QX11Info::connection());
     installNativeEventFilter(m_eventFilter.data());
-    ibus_init ();
-    m_bus = ibus_bus_new ();
-    g_signal_connect (m_bus, "connected", G_CALLBACK (ibus_connected_cb), this);
-    g_signal_connect (m_bus, "disconnected", G_CALLBACK (ibus_disconnected_cb), this);
-    if (ibus_bus_is_connected (m_bus)) {
-        init();
-    }
 
     initIconMap(m_iconMap);
+    m_watcher->setConnection(QDBusConnection::sessionBus());
+    m_watcher->addWatchedService("org.kde.impanel");
+    init();
 }
 
 uint App::getPrimaryModifier(uint state)
@@ -302,6 +295,12 @@ void App::init()
     if (m_init) {
         return;
     }
+    if (!ibus_bus_is_connected (m_bus)) {
+        return;
+    }
+    g_signal_connect (m_bus, "connected", G_CALLBACK (ibus_connected_cb), this);
+    g_signal_connect (m_bus, "disconnected", G_CALLBACK (ibus_disconnected_cb), this);
+    connect(m_watcher, &QDBusServiceWatcher::serviceUnregistered, this, &App::finalize);
     GDBusConnection* connection = ibus_bus_get_connection (m_bus);
     g_dbus_connection_signal_subscribe (connection,
                                         "org.freedesktop.DBus",

@@ -42,17 +42,17 @@ class App : public QGuiApplication {
     Q_OBJECT
 public:
     typedef QPair< uint, uint > TriggerKey;
-    App(int argc, char** argv);
+    App(int argc, char* argv[]);
     virtual ~App();
     void setTriggerKeys(QList< TriggerKey > triggersList);
     void setDoGrab(bool doGrab);
     bool keyboardGrabbed() { return m_keyboardGrabbed; }
     bool nativeEvent(xcb_generic_event_t* event);
-    void init();
     void nameAcquired();
     void nameLost();
     QByteArray normalizeIconName(const QByteArray& icon) const;
 public Q_SLOTS:
+    void init();
     void finalize();
     void clean();
     void grabKey();

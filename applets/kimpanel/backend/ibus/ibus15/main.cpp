@@ -19,18 +19,29 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+#include <QSessionManager>
 #include <ibus.h>
 #include <stdlib.h>
 #include <locale.h>
 #include "panel.h"
 #include "app.h"
 
-#define _UNUSED(x) ((void) x)
-
 int
-main (int argc, char **argv)
+main (int argc, char *argv[])
 {
+    ibus_init ();
+    // we don't need im in this.
+    qputenv("QT_IM_MODULE", "compose");
     App app(argc, argv);
+
+    QGuiApplication::setFallbackSessionManagementEnabled(false);
+
+    auto disableSessionManagement = [](QSessionManager &sm) {
+        sm.setRestartHint(QSessionManager::RestartNever);
+    };
+
+    QObject::connect(&app, &QGuiApplication::commitDataRequest, disableSessionManagement);
+    QObject::connect(&app, &QGuiApplication::saveStateRequest, disableSessionManagement);
 
     return app.exec();
 }
