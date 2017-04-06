@@ -35,7 +35,7 @@ class SubDialog : public PlasmaQuick::Dialog
 
         Q_INVOKABLE QRect availableScreenRectForItem(QQuickItem *item) const;
 
-        QPoint popupPosition(QQuickItem *item, const QSize &size);
+        QPoint popupPosition(QQuickItem *item, const QSize &size) override;
 };
 
 #endif
