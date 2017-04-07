@@ -20,6 +20,7 @@
 
 #include "subdialog.h"
 
+#include <QGuiApplication>
 #include <QScreen>
 
 SubDialog::SubDialog(QQuickItem *parent) : PlasmaQuick::Dialog(parent)
@@ -42,10 +43,18 @@ QPoint SubDialog::popupPosition(QQuickItem* item, const QSize& size)
     pos.setX(pos.x() + item->width() / 2);
     pos.setY(pos.y() + item->height() / 2);
 
+    if (QGuiApplication::layoutDirection() == Qt::RightToLeft) {
+        pos.setX(pos.x() - size.width());
+    }
+
     QRect avail = availableScreenRectForItem(item);
 
     if (pos.x() + size.width() > avail.right()) {
         pos.setX(pos.x() - size.width());
+    }
+
+    if (pos.x() < avail.left()) {
+        pos.setX(pos.x() + size.width());
     }
 
     if (pos.y() + size.height() > avail.bottom()) {
