@@ -69,7 +69,7 @@ set_package_properties(AppStreamQt PROPERTIES DESCRIPTION "Appstream integration
                        TYPE RECOMMENDED
                        PURPOSE "Needed to allow appstream integration from application menus"
                       )
-find_package(KF5Baloo)
+find_package(KF5Baloo 5.15)
 set_package_properties(KF5Baloo PROPERTIES DESCRIPTION "File Searching"
                        TYPE RECOMMENDED
                        PURPOSE "Needed to build the File Search KCM"

@@ -73,6 +73,8 @@ ServerConfigModule::ServerConfigModule(QWidget* parent, const QVariantList& args
             this, &ServerConfigModule::onDirectoryListChanged);
     connect(m_enableCheckbox, SIGNAL(stateChanged(int)),
             this, SLOT(changed()));
+    connect(m_enableCheckbox, SIGNAL(stateChanged(int)),
+            this, SLOT(indexingEnabledChanged()));
 }
 
 
@@ -87,6 +89,9 @@ void ServerConfigModule::load()
 
     m_previouslyEnabled = config.fileIndexingEnabled();
     m_enableCheckbox->setChecked(m_previouslyEnabled);
+
+    m_enableContentIndexing->setChecked(!config.onlyBasicIndexing());
+    m_enableContentIndexing->setEnabled(m_enableCheckbox->isChecked());
 
     QStringList includeFolders = config.includeFolders();
     QStringList excludeFolders = config.excludeFolders();
@@ -112,6 +117,7 @@ void ServerConfigModule::save()
     config.setFileIndexingEnabled(enabled);
     config.setIncludeFolders(includeFolders);
     config.setExcludeFolders(excludeFolders);
+    config.setOnlyBasicIndexing(!m_enableContentIndexing->isChecked());
 
     if (m_previouslyEnabled != enabled) {
         config.setFirstRun(true);
@@ -146,6 +152,11 @@ void ServerConfigModule::save()
 void ServerConfigModule::defaults()
 {
     m_excludeFolders_FSW->setDirectoryList(defaultFolders(), QStringList());
+}
+
+void ServerConfigModule::indexingEnabledChanged()
+{
+    m_enableContentIndexing->setEnabled(m_enableCheckbox->isChecked());
 }
 
 void ServerConfigModule::onDirectoryListChanged()

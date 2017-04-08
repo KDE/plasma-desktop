@@ -38,6 +38,7 @@ public Q_SLOTS:
     void load();
     void save();
     void defaults();
+    void indexingEnabledChanged();
 
     void onDirectoryListChanged();
 private:

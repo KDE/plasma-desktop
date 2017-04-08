@@ -40,6 +40,13 @@
     </widget>
    </item>
    <item>
+    <widget class="QCheckBox" name="m_enableContentIndexing">
+     <property name="text">
+      <string>Also index file content</string>
+     </property>
+    </widget>
+   </item>
+   <item>
     <widget class="QGroupBox" name="m_excludeFolders_GB">
      <property name="title">
       <string>Do not search in these locations</string>
