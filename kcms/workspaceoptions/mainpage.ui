@@ -14,20 +14,10 @@
    <property name="fieldGrowthPolicy">
     <enum>QFormLayout::ExpandingFieldsGrow</enum>
    </property>
-   <item row="0" column="0">
-    <widget class="QLabel" name="tooltipDelayLabel">
-     <property name="text">
-      <string>Show Informational Tips:</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-     </property>
-    </widget>
-   </item>
    <item row="0" column="1">
     <widget class="QCheckBox" name="showToolTips">
      <property name="text">
-      <string/>
+      <string>Show Informational Tips</string>
      </property>
      <property name="checked">
       <bool>true</bool>
@@ -50,17 +40,7 @@
    <item row="1" column="1">
     <widget class="QCheckBox" name="showOsd">
      <property name="text">
-      <string/>
-     </property>
-    </widget>
-   </item>
-   <item row="1" column="0">
-    <widget class="QLabel" name="showOsdLabel">
-     <property name="toolTip">
-      <string>Show a popup for status changes such as brightness or volume.</string>
-     </property>
-     <property name="text">
-      <string>Visual feedback for status changes:</string>
+      <string>Visual feedback for status changes</string>
      </property>
     </widget>
    </item>
