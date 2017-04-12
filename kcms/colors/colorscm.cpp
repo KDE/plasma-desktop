@@ -161,7 +161,6 @@ void KColorCm::loadScheme(QListWidgetItem *currentItem, QListWidgetItem *previou
         if (name == i18nc("Default color scheme", "Default"))
         {
             schemeRemoveButton->setEnabled(false);
-            schemeEditButton->setEnabled(false);
 
             KSharedConfigPtr config = m_config;
             config->setReadDefaults(true);
@@ -423,10 +422,7 @@ void KColorCm::on_schemeEditButton_clicked()
     const QString fileBaseName = currentItem->data(Qt::UserRole).toString();
     const QString path = QStandardPaths::locate(QStandardPaths::GenericDataLocation,
                 "color-schemes/" + fileBaseName + ".colors");
-    if (path.isEmpty()) {
-        KMessageBox::sorry(this, i18n("This scheme was not found."), i18n("File not found"));
-        return;
-    }
+
     SchemeEditorDialog* dialog = new SchemeEditorDialog(path, this);
     dialog->setAttribute(Qt::WA_DeleteOnClose);  // avoid mem-leak
     dialog->setModal(true);
