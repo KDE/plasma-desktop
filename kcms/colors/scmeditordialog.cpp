@@ -40,11 +40,18 @@ SchemeEditorDialog::SchemeEditorDialog(const QString &path, QWidget *parent)
     , m_disableUpdates(false)
     , m_unsavedChanges(false)
 {
-    m_config = KSharedConfig::openConfig(path);
+    if (!path.isEmpty()) {
+        m_config = KSharedConfig::openConfig(path);
+    } else {
+        m_config = KSharedConfig::openConfig(QStringLiteral("kdeglobals"));
+        m_config->setReadDefaults(true);
+    }
     m_schemeName = KConfigGroup(m_config, "General").readEntry("Name");
 
     setupUi(this);
-    this->setWindowTitle(m_schemeName);
+    if (!path.isEmpty()) {
+        this->setWindowTitle(m_schemeName);
+    }
 
     schemeKnsUploadButton->setIcon( QIcon::fromTheme(QStringLiteral("get-hot-new-stuff")) );
 
