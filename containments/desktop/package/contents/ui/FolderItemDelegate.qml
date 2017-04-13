@@ -230,14 +230,6 @@ Item {
                         overlays: model.overlays
                     }
 
-                    TextMetrics {
-                        id: labelMetrics
-
-                        font: label.font
-                        elide: Text.ElideNone
-                        text: label.text
-                    }
-
                     DropShadow {
                         id: textShadow
 
@@ -272,7 +264,7 @@ Item {
                                 PropertyChanges {
                                     target: label
                                     anchors.topMargin: 2 * units.smallSpacing
-                                    width: Math.min(labelMetrics.advanceWidth + units.smallSpacing, parent.width - units.smallSpacing * 8)
+                                    width: Math.min(labelMetrics.implicitWidth + units.smallSpacing, parent.width - units.smallSpacing * 8)
                                     maximumLineCount: plasmoid.configuration.textLines
                                     horizontalAlignment: Text.AlignHCenter
                                 }
