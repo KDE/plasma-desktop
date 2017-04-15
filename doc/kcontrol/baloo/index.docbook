@@ -15,8 +15,8 @@
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date>2016-08-26</date>
-<releaseinfo>Plasma 5.8</releaseinfo>
+<date>2017.04.14</date>
+<releaseinfo>Plasma 5.10</releaseinfo>
 
 <keywordset>
 <keyword>Plasma</keyword>
@@ -39,7 +39,7 @@ to use the indexing results for faster access to your documents.
 </para>
 
 <variablelist>
-<varlistentry><term><guilabel>Exclude Folders</guilabel></term>
+<varlistentry><term><guilabel>Do not search in these locations</guilabel></term>
 <listitem>
     <para>
         You are presented with a list of folders which should not be searched. By default only
@@ -57,6 +57,9 @@ to use the indexing results for faster access to your documents.
 
 <para>By default <guilabel>Enable File Search</guilabel> is activated, uncheck this setting if
 you do not want to use the file search at all.
+</para>
+
+<para>Use <guilabel>Also index file content</guilabel> to also index the file contents additional to the file names.
 </para>
 
 </article>
