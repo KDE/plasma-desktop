@@ -112,8 +112,10 @@ bool GroupSortProxy::lessThan(const QModelIndex &left, const QModelIndex &right)
     return (left.row() < right.row());
 }
 
-RecentUsageModel::RecentUsageModel(QObject *parent, IncludeUsage usage) : ForwardingModel(parent)
+RecentUsageModel::RecentUsageModel(QObject *parent, IncludeUsage usage, int ordering)
+: ForwardingModel(parent)
 , m_usage(usage)
+, m_ordering((Ordering)ordering)
 {
     refresh();
 }
@@ -378,12 +380,27 @@ QString RecentUsageModel::forgetAllActionName() const
     }
 }
 
+void RecentUsageModel::setOrdering(int ordering)
+{
+    if (ordering == m_ordering) return;
+
+    m_ordering = (Ordering)ordering;
+    refresh();
+
+    emit orderingChanged(ordering);
+}
+
+int RecentUsageModel::ordering() const
+{
+    return m_ordering;
+}
+
 void RecentUsageModel::refresh()
 {
     QAbstractItemModel *oldModel = sourceModel();
 
     auto query = UsedResources
-                    | RecentlyUsedFirst
+                    | (m_ordering == Recent ? RecentlyUsedFirst : HighScoredFirst)
                     | Agent::any()
                     | Type::any()
                     | Activity::current();

@@ -61,6 +61,7 @@ class RootModel : public AppsModel, public QQmlParserStatus
     Q_PROPERTY(bool showRecentApps READ showRecentApps WRITE setShowRecentApps NOTIFY showRecentAppsChanged)
     Q_PROPERTY(bool showRecentDocs READ showRecentDocs WRITE setShowRecentDocs NOTIFY showRecentDocsChanged)
     Q_PROPERTY(bool showRecentContacts READ showRecentContacts WRITE setShowRecentContacts NOTIFY showRecentContactsChanged)
+    Q_PROPERTY(int recentOrdering READ recentOrdering WRITE setRecentOrdering NOTIFY recentOrderingChanged)
     Q_PROPERTY(bool showPowerSession READ showPowerSession WRITE setShowPowerSession NOTIFY showPowerSessionChanged)
 
     public:
@@ -86,6 +87,9 @@ class RootModel : public AppsModel, public QQmlParserStatus
         bool showRecentContacts() const;
         void setShowRecentContacts(bool show);
 
+        int recentOrdering() const;
+        void setRecentOrdering(int ordering);
+
         bool showPowerSession() const;
         void setShowPowerSession(bool show);
 
@@ -104,6 +108,7 @@ class RootModel : public AppsModel, public QQmlParserStatus
         void showRecentDocsChanged() const;
         void showRecentContactsChanged() const;
         void showPowerSessionChanged() const;
+        void recentOrderingChanged() const;
         void recentAppsModelChanged() const;
 
     protected Q_SLOTS:
@@ -121,6 +126,7 @@ class RootModel : public AppsModel, public QQmlParserStatus
         bool m_showRecentApps;
         bool m_showRecentDocs;
         bool m_showRecentContacts;
+        int  m_recentOrdering;
         bool m_showPowerSession;
 
         RecentUsageModel *m_recentAppsModel;

@@ -71,6 +71,7 @@ RootModel::RootModel(QObject *parent) : AppsModel(QString(), parent)
 , m_showRecentApps(true)
 , m_showRecentDocs(true)
 , m_showRecentContacts(false)
+, m_recentOrdering(RecentUsageModel::Recent)
 , m_showPowerSession(true)
 , m_recentAppsModel(0)
 , m_recentDocsModel(0)
@@ -219,6 +220,22 @@ void RootModel::setShowRecentContacts(bool show)
         refresh();
 
         emit showRecentContactsChanged();
+    }
+}
+
+int RootModel::recentOrdering() const
+{
+    return m_recentOrdering;
+}
+
+void RootModel::setRecentOrdering(int ordering)
+{
+    if (ordering != m_recentOrdering) {
+        m_recentOrdering = ordering;
+
+        refresh();
+
+        emit recentOrderingChanged();
     }
 }
 
@@ -392,14 +409,24 @@ void RootModel::refresh()
     }
 
     if (m_showRecentDocs) {
-        m_recentDocsModel = new RecentUsageModel(this, RecentUsageModel::OnlyDocs);
-        m_entryList.prepend(new GroupEntry(this, i18n("Recent Documents"), QString(), m_recentDocsModel));
+        m_recentDocsModel = new RecentUsageModel(this, RecentUsageModel::OnlyDocs, m_recentOrdering);
+        m_entryList.prepend(new GroupEntry(this,
+                    m_recentOrdering == RecentUsageModel::Recent
+                        ? i18n("Recent Documents")
+                        : i18n("Often Used Documents"),
+                    QString(),
+                    m_recentDocsModel));
         ++separatorPosition;
     }
 
     if (m_showRecentApps) {
-        m_recentAppsModel = new RecentUsageModel(this, RecentUsageModel::OnlyApps);
-        m_entryList.prepend(new GroupEntry(this, i18n("Recent Applications"), QString(), m_recentAppsModel));
+        m_recentAppsModel = new RecentUsageModel(this, RecentUsageModel::OnlyApps, m_recentOrdering);
+        m_entryList.prepend(new GroupEntry(this,
+                    m_recentOrdering == RecentUsageModel::Recent
+                        ? i18n("Recent Applications")
+                        : i18n("Often Used Applications"),
+                    QString(),
+                    m_recentAppsModel));
         ++separatorPosition;
     }
 

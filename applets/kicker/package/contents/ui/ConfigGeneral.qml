@@ -39,6 +39,7 @@ Item {
     property alias cfg_limitDepth: limitDepth.checked
     property alias cfg_alphaSort: alphaSort.checked
 
+    property alias cfg_recentOrdering: recentOrdering.currentIndex
     property alias cfg_showRecentApps: showRecentApps.checked
     property alias cfg_showRecentDocs: showRecentDocs.checked
     property alias cfg_showRecentContacts: showRecentContacts.checked
@@ -148,22 +149,42 @@ Item {
             flat: true
 
             ColumnLayout {
+                RowLayout {
+                    Label {
+                        text: i18n("Show:")
+                    }
+
+                    ComboBox {
+                        id: recentOrdering
+
+                        Layout.fillWidth: true
+
+                        model: [i18n("Recently used"), i18n("Often used")]
+                    }
+                }
+
                 CheckBox {
                     id: showRecentApps
 
-                    text: i18n("Show recent applications")
+                    text: recentOrdering.currentIndex == 0
+                            ? i18n("Show recent applications")
+                            : i18n("Show often used applications")
                 }
 
                 CheckBox {
                     id: showRecentDocs
 
-                    text: i18n("Show recent documents")
+                    text: recentOrdering.currentIndex == 0
+                            ? i18n("Show recent documents")
+                            : i18n("Show often used documents")
                 }
 
                 CheckBox {
                     id: showRecentContacts
 
-                    text: i18n("Show recent contacts")
+                    text: recentOrdering.currentIndex == 0
+                            ? i18n("Show recent contacts")
+                            : i18n("Show often used contacts")
                 }
             }
         }

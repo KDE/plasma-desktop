@@ -56,10 +56,16 @@ class RecentUsageModel : public ForwardingModel
 {
     Q_OBJECT
 
+    Q_PROPERTY(int ordering READ ordering WRITE setOrdering NOTIFY orderingChanged)
+
     public:
         enum IncludeUsage { AppsAndDocs, OnlyApps, OnlyDocs };
+        enum Ordering { Recent, Popular };
 
-        explicit RecentUsageModel(QObject *parent = 0, IncludeUsage usage = AppsAndDocs);
+        explicit RecentUsageModel(
+                QObject *parent = 0,
+                IncludeUsage usage = AppsAndDocs,
+                int ordering = Recent);
         ~RecentUsageModel();
 
         QString description() const;
@@ -72,6 +78,12 @@ class RecentUsageModel : public ForwardingModel
         QVariantList actions() const;
 
         IncludeUsage usage() const;
+
+        void setOrdering(int ordering);
+        int ordering() const;
+
+    Q_SIGNALS:
+        void orderingChanged(int ordering);
 
     private Q_SLOTS:
         void refresh();
@@ -86,6 +98,8 @@ class RecentUsageModel : public ForwardingModel
 
         IncludeUsage m_usage;
         QPointer<QAbstractItemModel> m_activitiesModel;
+
+        Ordering m_ordering;
 };
 
 #endif

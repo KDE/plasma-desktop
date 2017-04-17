@@ -32,6 +32,10 @@
       <default>false</default>
     </entry>
 
+    <entry name="recentOrdering" type="Int">
+      <label>How should the previously used apps/docs/contacts be ordered: 0 = RecentFirst, 1 = PopularFirst</label>
+      <default>0</default>
+    </entry>
     <entry name="favoriteApps" type="StringList">
       <label>List of general favorites. Supported values are menu id's (usually .desktop file names), special URLs that expand into default applications (e.g. preferred://browser), document URLs and KPeople contact URIs.</label>
       <default>preferred://browser,kontact.desktop,systemsettings.desktop,org.kde.dolphin.desktop,ktp-contactlist.desktop,org.kde.kate.desktop,org.kde.discover</default>

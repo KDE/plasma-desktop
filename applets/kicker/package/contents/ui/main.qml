@@ -90,6 +90,7 @@ Item {
         showRecentApps: plasmoid.configuration.showRecentApps
         showRecentDocs: plasmoid.configuration.showRecentDocs
         showRecentContacts: plasmoid.configuration.showRecentContacts
+        recentOrdering: plasmoid.configuration.recentOrdering
 
         onShowRecentAppsChanged: {
             plasmoid.configuration.showRecentApps = showRecentApps;
@@ -101,6 +102,10 @@ Item {
 
         onShowRecentContactsChanged: {
             plasmoid.configuration.showRecentContacts = showRecentContacts;
+        }
+
+        onRecentOrderingChanged: {
+            plasmoid.configuration.recentOrdering = recentOrdering;
         }
 
         Component.onCompleted: {
