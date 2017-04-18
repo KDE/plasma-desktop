@@ -73,6 +73,8 @@ ServerConfigModule::ServerConfigModule(QWidget* parent, const QVariantList& args
             this, &ServerConfigModule::onDirectoryListChanged);
     connect(m_enableCheckbox, SIGNAL(stateChanged(int)),
             this, SLOT(changed()));
+    connect(m_enableContentIndexing, SIGNAL(stateChanged(int)),
+            this, SLOT(changed()));
     connect(m_enableCheckbox, SIGNAL(stateChanged(int)),
             this, SLOT(indexingEnabledChanged()));
 }
