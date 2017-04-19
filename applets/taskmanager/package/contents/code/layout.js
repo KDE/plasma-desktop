@@ -38,15 +38,15 @@ function adjustMargin(height, margin) {
 }
 
 function launcherLayoutTasks() {
-    return Math.round(tasksModel.launcherCount / Math.floor(preferredMinWidth() / launcherWidth()));
+    return Math.round(tasksModel.logicalLauncherCount / Math.floor(preferredMinWidth() / launcherWidth()));
 }
 
 function launcherLayoutWidthDiff() {
-    return (launcherLayoutTasks() * taskWidth()) - (tasksModel.launcherCount * launcherWidth());
+    return (launcherLayoutTasks() * taskWidth()) - (tasksModel.logicalLauncherCount * launcherWidth());
 }
 
 function logicalTaskCount() {
-    var count = (tasksModel.count - tasksModel.launcherCount) + launcherLayoutTasks();
+    var count = (tasksModel.count - tasksModel.logicalLauncherCount) + launcherLayoutTasks();
 
     return Math.max(tasksModel.count ? 1 : 0, count);
 }
@@ -197,15 +197,15 @@ function launcherWidth() {
 function layout(container) {
     var item;
     var stripes = calculateStripes();
-    var taskCount = tasksModel.count - tasksModel.launcherCount;
+    var taskCount = tasksModel.count - tasksModel.logicalLauncherCount;
     var width = taskWidth();
     var adjustedWidth = width;
     var height = taskHeight();
 
     if (!tasks.vertical && stripes == 1 && taskCount)
     {
-        var shrink = ((tasksModel.count - tasksModel.launcherCount) * preferredMaxWidth())
-            + (tasksModel.launcherCount * launcherWidth()) > taskList.width;
+        var shrink = ((tasksModel.count - tasksModel.logicalLauncherCount) * preferredMaxWidth())
+            + (tasksModel.logicalLauncherCount * launcherWidth()) > taskList.width;
         width = Math.min(shrink ? width + Math.floor(launcherLayoutWidthDiff() / taskCount) : width,
             preferredMaxWidth());
     }
@@ -220,9 +220,10 @@ function layout(container) {
         adjustedWidth = width;
 
         if (!tasks.vertical && !tasks.iconsOnly && (plasmoid.configuration.separateLaunchers || stripes == 1)) {
-            if (item.m.IsLauncher === true) {
+            if (item.m.IsLauncher === true
+                || (!plasmoid.configuration.separateLaunchers && item.m.IsStartup === true && item.m.HasLauncher === true)) {
                 adjustedWidth = launcherWidth();
-            } else if (stripes > 1 && i == tasksModel.launcherCount) {
+            } else if (stripes > 1 && i == tasksModel.logicalLauncherCount) {
                 adjustedWidth += launcherLayoutWidthDiff();
             }
         }

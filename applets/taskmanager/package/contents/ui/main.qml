@@ -88,6 +88,24 @@ Item {
     TaskManager.TasksModel {
         id: tasksModel
 
+        readonly property int logicalLauncherCount: {
+            if (plasmoid.configuration.separateLaunchers) {
+                return launcherCount;
+            }
+
+            var startupsWithLaunchers = 0;
+
+            for (var i = 0; i < taskRepeater.count; ++i) {
+                var item = taskRepeater.itemAt(i);
+
+                if (item && item.m.IsStartup === true && item.m.HasLauncher === true) {
+                    ++startupsWithLaunchers;
+                }
+            }
+
+            return launcherCount + startupsWithLaunchers;
+        }
+
         virtualDesktop: virtualDesktopInfo.currentDesktop
         screenGeometry: plasmoid.screenGeometry
         activity: activityInfo.currentActivity
