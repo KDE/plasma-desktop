@@ -105,49 +105,18 @@ KQuickControlsAddons.MouseEventListener {
             mainText: i18n("Resize")
             active: !resizeHandle.pressed
 
-            MouseArea {
+            ResizeHandle {
                 id: resizeHandle
                 anchors {
                     fill: parent
                     margins: -buttonMargin
                 }
-
-                property int startX
-                property int startY
-
-                onPressed: {
-                    parent.hideToolTip();
-                    mouse.accepted = true
-                    animationsEnabled = false;
-                    startX = mouse.x;
-                    startY = mouse.y;
-                    appletItem.releasePosition();
-                    appletItem.floating = true;
-                    appletContainer.clip = true
-                }
-                onPositionChanged: {
-                    var xDelta = startX - mouse.x;
-                    var yDelta = startY - mouse.y;
-
-                    if (LayoutMirroring.enabled) {
-                        var oldRight = appletItem.x + appletItem.width;
-                        appletItem.width = Math.min(Math.max(appletItem.minimumWidth, appletItem.width + xDelta), appletItem.maximumWidth);
-                        appletItem.x = oldRight - appletItem.width;
-                    } else {
-                        appletItem.width = Math.min(Math.max(appletItem.minimumWidth, appletItem.width - xDelta), appletItem.maximumWidth);
-                    }
-
-                    var oldBottom = appletItem.y + appletItem.height;
-                    appletItem.height = Math.min(Math.max(appletItem.minimumHeight, appletItem.height + yDelta), appletItem.maximumHeight);
-                    appletItem.y = oldBottom - appletItem.height;
-                }
-                onReleased: {
-                    animationsEnabled = true
-                    appletItem.floating = false;
-                    appletItem.positionItem();
-                    root.layoutManager.save()
-                    appletContainer.clip = false
-                }
+                onPressed: parent.hideToolTip();
+                cursorShape: parent.LayoutMirroring.enabled ? Qt.SizeFDiagCursor : Qt.SizeBDiagCursor
+                moveX: parent.LayoutMirroring.enabled
+                moveY: true
+                resizeWidth: true
+                resizeHeight: true
             }
         }
         ActionButton {

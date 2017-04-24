@@ -617,6 +617,115 @@ Item {
         }
     }
 
+    //sides
+    ResizeHandle {
+        anchors {
+            left: parent.left
+            top: parent.top
+            right: parent.right
+            leftMargin: units.gridUnit
+            rightMargin: units.gridUnit
+        }
+        cursorShape: Qt.SizeVerCursor
+        moveX: false
+        moveY: true
+        resizeWidth: false
+        resizeHeight: true
+    }
+    ResizeHandle {
+        anchors {
+            left: parent.left
+            bottom: parent.bottom
+            right: parent.right
+            leftMargin: units.gridUnit
+            rightMargin: units.gridUnit
+        }
+        cursorShape: Qt.SizeVerCursor
+        moveX: false
+        moveY: false
+        resizeWidth: false
+        resizeHeight: true
+    }
+    ResizeHandle {
+        anchors {
+            left: parent.left
+            top: parent.top
+            bottom: parent.bottom
+            topMargin: units.gridUnit
+            bottomMargin: units.gridUnit
+        }
+        enabled: !parent.LayoutMirroring.enabled || !showAppletHandle
+        cursorShape: Qt.SizeHorCursor
+        moveX: true
+        moveY: false
+        resizeWidth: true
+        resizeHeight: false
+    }
+    ResizeHandle {
+        anchors {
+            right: parent.right
+            top: parent.top
+            bottom: parent.bottom
+            topMargin: units.gridUnit
+            bottomMargin: units.gridUnit
+        }
+        enabled: parent.LayoutMirroring.enabled || !showAppletHandle
+        cursorShape: Qt.SizeHorCursor
+        moveX: false
+        moveY: false
+        resizeWidth: true
+        resizeHeight: false
+    }
+    //corners
+    ResizeHandle {
+        anchors {
+            left: parent.left
+            top: parent.top
+        }
+        enabled: !parent.LayoutMirroring.enabled || !showAppletHandle
+        cursorShape: Qt.SizeFDiagCursor
+        moveX: true
+        moveY: true
+        resizeWidth: true
+        resizeHeight: true
+    }
+    ResizeHandle {
+        anchors {
+            right: parent.right
+            top: parent.top
+        }
+        enabled: parent.LayoutMirroring.enabled || !showAppletHandle
+        cursorShape: Qt.SizeBDiagCursor
+        moveX: false
+        moveY: true
+        resizeWidth: true
+        resizeHeight: true
+    }
+    ResizeHandle {
+        anchors {
+            left: parent.left
+            bottom: parent.bottom
+        }
+        enabled: !parent.LayoutMirroring.enabled || !showAppletHandle
+        cursorShape: Qt.SizeBDiagCursor
+        moveX: true
+        moveY: false
+        resizeWidth: true
+        resizeHeight: true
+    }
+    ResizeHandle {
+        anchors {
+            right: parent.right
+            bottom: parent.bottom
+        }
+        enabled: parent.LayoutMirroring.enabled || !showAppletHandle
+        cursorShape: Qt.SizeFDiagCursor
+        moveX: false
+        moveY: false
+        resizeWidth: true
+        resizeHeight: true
+    }
+
     Component.onCompleted: {
         floating = false;
         layoutTimer.running = true
