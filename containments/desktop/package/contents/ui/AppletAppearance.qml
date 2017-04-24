@@ -203,6 +203,14 @@ Item {
         property int endX: 0
         property int endY: 0
 
+        function startDrag(mouse) {
+            dragMouseArea.dragging = true;
+
+            eventGenerator.sendGrabEventRecursive(appletItem, KQuickControlsAddons.EventGenerator.UngrabMouse);
+            eventGenerator.sendGrabEvent(dragMouseArea, KQuickControlsAddons.EventGenerator.GrabMouse);
+            eventGenerator.sendMouseEvent(dragMouseArea, KQuickControlsAddons.EventGenerator.MouseButtonPress, mouse.x, mouse.y, Qt.LeftButton, Qt.LeftButton, 0);
+        }
+
         height: endHeight
         width: endWidth
         z: 10
@@ -210,6 +218,14 @@ Item {
         hoverEnabled: true
 
         onPressed: {
+            if (!plasmoid.immutable && mouse.modifiers == Qt.AltModifier) {
+                if (!dragMouseArea.dragging) {
+                    startDrag(mouse)
+                }
+
+                return;
+            }
+
             pressX = mouse.x;
             pressY = mouse.y;
         }
@@ -219,11 +235,7 @@ Item {
                 if (!dragMouseArea.dragging && !root.isDrag(pressX, pressY, mouse.x, mouse.y)) {
                     temporaryShowAppletHandle = true;
 
-                    dragMouseArea.dragging = true;
-
-                    eventGenerator.sendGrabEventRecursive(appletItem, KQuickControlsAddons.EventGenerator.UngrabMouse);
-                    eventGenerator.sendGrabEvent(dragMouseArea, KQuickControlsAddons.EventGenerator.GrabMouse);
-                    eventGenerator.sendMouseEvent(dragMouseArea, KQuickControlsAddons.EventGenerator.MouseButtonPress, mouse.x, mouse.y, Qt.LeftButton, Qt.LeftButton, 0);
+                    startDrag(mouse)
                 }
             }
 
