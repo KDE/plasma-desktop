@@ -117,6 +117,7 @@ KQuickControlsAddons.MouseEventListener {
                 moveY: true
                 resizeWidth: true
                 resizeHeight: true
+                visible: true
             }
         }
         ActionButton {
