@@ -50,19 +50,19 @@ Item {
                 root.Layout.minimumHeight = scaledHeight;
                 root.Layout.maximumHeight = scaledHeight;
                 root.Layout.minimumWidth = units.iconSizes.small;
-                root.Layout.maximumWidth = inPanel ? units.iconSizeHints.panel : undefined;
+                root.Layout.maximumWidth = inPanel ? units.iconSizeHints.panel : -1;
             } else {
                 var scaledWidth = Math.floor(parent.height * (buttonIcon.implicitWidth / buttonIcon.implicitHeight));
                 root.Layout.minimumWidth = scaledWidth;
                 root.Layout.maximumWidth = scaledWidth;
                 root.Layout.minimumHeight = units.iconSizes.small;
-                root.Layout.maximumHeight = inPanel ? units.iconSizeHints.panel : undefined;
+                root.Layout.maximumHeight = inPanel ? units.iconSizeHints.panel : -1;
             }
         } else {
             root.Layout.minimumWidth = units.iconSizes.small;
-            root.Layout.maximumWidth = inPanel ? units.iconSizeHints.panel : undefined;
+            root.Layout.maximumWidth = inPanel ? units.iconSizeHints.panel : -1;
             root.Layout.minimumHeight = units.iconSizes.small
-            root.Layout.maximumHeight = inPanel ? units.iconSizeHints.panel : undefined;
+            root.Layout.maximumHeight = inPanel ? units.iconSizeHints.panel : -1;
         }
     }
 
