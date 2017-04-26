@@ -25,6 +25,10 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 Item {
     id: root
 
+    readonly property bool inPanel: (plasmoid.location == PlasmaCore.Types.TopEdge
+        || plasmoid.location == PlasmaCore.Types.RightEdge
+        || plasmoid.location == PlasmaCore.Types.BottomEdge
+        || plasmoid.location == PlasmaCore.Types.LeftEdge)
     readonly property bool vertical: (plasmoid.formFactor == PlasmaCore.Types.Vertical)
     readonly property bool useCustomButtonImage: (plasmoid.configuration.useCustomButtonImage
         && plasmoid.configuration.customButtonImage.length != 0)
@@ -46,19 +50,19 @@ Item {
                 root.Layout.minimumHeight = scaledHeight;
                 root.Layout.maximumHeight = scaledHeight;
                 root.Layout.minimumWidth = units.iconSizes.small;
-                root.Layout.maximumWidth = undefined;
+                root.Layout.maximumWidth = inPanel ? units.iconSizeHints.panel : undefined;
             } else {
                 var scaledWidth = Math.floor(parent.height * (buttonIcon.implicitWidth / buttonIcon.implicitHeight));
                 root.Layout.minimumWidth = scaledWidth;
                 root.Layout.maximumWidth = scaledWidth;
                 root.Layout.minimumHeight = units.iconSizes.small;
-                root.Layout.maximumHeight = undefined;
+                root.Layout.maximumHeight = inPanel ? units.iconSizeHints.panel : undefined;
             }
         } else {
             root.Layout.minimumWidth = units.iconSizes.small;
-            root.Layout.maximumWidth = undefined;
+            root.Layout.maximumWidth = inPanel ? units.iconSizeHints.panel : undefined;
             root.Layout.minimumHeight = units.iconSizes.small
-            root.Layout.maximumHeight = undefined;
+            root.Layout.maximumHeight = inPanel ? units.iconSizeHints.panel : undefined;
         }
     }
 
