@@ -137,6 +137,9 @@ PlasmaComponents.ContextMenu {
                 menuItem.icon = Qt.binding(function() {
                     return playerData.PlaybackStatus === "Playing" ? "media-playback-pause" : "media-playback-start";
                 });
+                menuItem.enabled = Qt.binding(function() {
+                    return playerData.PlaybackStatus === "Playing" ? playerData.CanPause : playerData.CanPlay;
+                });
                 menuItem.clicked.connect(function() {
                     mpris2Source.playPause(sourceName);
                 });
