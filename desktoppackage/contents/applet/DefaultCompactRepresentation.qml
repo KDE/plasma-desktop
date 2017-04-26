@@ -23,6 +23,11 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 PlasmaCore.IconItem {
     id: icon
 
+    readonly property bool inPanel: (plasmoid.location == PlasmaCore.Types.TopEdge
+        || plasmoid.location == PlasmaCore.Types.RightEdge
+        || plasmoid.location == PlasmaCore.Types.BottomEdge
+        || plasmoid.location == PlasmaCore.Types.LeftEdge)
+
     Layout.minimumWidth: {
         switch (plasmoid.formFactor) {
         case PlasmaCore.Types.Vertical:
@@ -44,6 +49,9 @@ PlasmaCore.IconItem {
             return units.gridUnit * 3;
         }
     }
+
+    root.Layout.maximumWidth = inPanel ? units.iconSizeHints.panel : undefined;
+    root.Layout.maximumHeight = inPanel ? units.iconSizeHints.panel : undefined;
 
     source: plasmoid.icon ? plasmoid.icon : "plasma"
     active: mouseArea.containsMouse
