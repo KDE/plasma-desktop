@@ -179,7 +179,7 @@ void KIconConfig::initDefaults()
     mDefaultEffect[1].color2 = QColor(0,0,0);
     mDefaultEffect[2].color2 = QColor(0,0,0);
 
-    const int defDefSizes[] = { 32, 22, 22, 16, 32, 32 };
+    const int defDefSizes[] = { 32, 22, 22, 16, 48, 32 };
 
     KIconLoader::Group i;
     QStringList::ConstIterator it;
