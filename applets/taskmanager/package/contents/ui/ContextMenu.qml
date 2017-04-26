@@ -143,14 +143,6 @@ PlasmaComponents.ContextMenu {
                 menu.addMenuItem(menuItem, virtualDesktopsMenuItem);
 
                 menuItem = menu.newMenuItem(menu);
-                menuItem.text = i18nc("Stop playback", "Stop");
-                menuItem.icon = "media-playback-stop";
-                menuItem.clicked.connect(function() {
-                    mpris2Source.stop(sourceName);
-                });
-                menu.addMenuItem(menuItem, virtualDesktopsMenuItem);
-
-                menuItem = menu.newMenuItem(menu);
                 menuItem.text = i18nc("Play next track", "Next Track");
                 menuItem.icon = "media-skip-forward";
                 menuItem.enabled = Qt.binding(function() {
@@ -158,6 +150,14 @@ PlasmaComponents.ContextMenu {
                 });
                 menuItem.clicked.connect(function() {
                     mpris2Source.goNext(sourceName);
+                });
+                menu.addMenuItem(menuItem, virtualDesktopsMenuItem);
+
+                menuItem = menu.newMenuItem(menu);
+                menuItem.text = i18nc("Stop playback", "Stop");
+                menuItem.icon = "media-playback-stop";
+                menuItem.clicked.connect(function() {
+                    mpris2Source.stop(sourceName);
                 });
                 menu.addMenuItem(menuItem, virtualDesktopsMenuItem);
 
