@@ -30,6 +30,11 @@ import org.kde.plasma.private.trash 1.0 as TrashPrivate
 DragDrop.DropArea {
     id: root
 
+    readonly property bool inPanel: (plasmoid.location === PlasmaCore.Types.TopEdge
+        || plasmoid.location === PlasmaCore.Types.RightEdge
+        || plasmoid.location === PlasmaCore.Types.BottomEdge
+        || plasmoid.location === PlasmaCore.Types.LeftEdge)
+
     property bool containsAcceptableDrag: false
 
     Layout.minimumWidth: {
@@ -44,6 +49,9 @@ DragDrop.DropArea {
         }
         return units.iconSizes.small + text.height
     }
+
+    Layout.maximumWidth: inPanel ? units.iconSizeHints.panel : -1
+    Layout.maximumHeight: inPanel ? units.iconSizeHints.panel : -1
 
     readonly property int formFactor: plasmoid.formFactor
     readonly property bool constrained: formFactor === PlasmaCore.Types.Vertical || formFactor === PlasmaCore.Types.Horizontal
