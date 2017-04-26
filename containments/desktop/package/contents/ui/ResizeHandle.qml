@@ -47,8 +47,7 @@ MouseArea {
     property int startWidth
     property int startHeight
 
-
-    visible: applet.backgroundHints != PlasmaCore.Types.NoBackground && enabled && !plasmoid.immutable
+    visible: applet && applet.backgroundHints != PlasmaCore.Types.NoBackground && enabled && !plasmoid.immutable
     LayoutMirroring.enabled: false
     onPressed: {
         mouse.accepted = true
