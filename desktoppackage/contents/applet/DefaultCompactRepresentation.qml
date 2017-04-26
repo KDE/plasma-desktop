@@ -50,8 +50,8 @@ PlasmaCore.IconItem {
         }
     }
 
-    root.Layout.maximumWidth = inPanel ? units.iconSizeHints.panel : -1;
-    root.Layout.maximumHeight = inPanel ? units.iconSizeHints.panel : -1;
+    Layout.maximumWidth: inPanel ? units.iconSizeHints.panel : -1;
+    Layout.maximumHeight: inPanel ? units.iconSizeHints.panel : -1;
 
     source: plasmoid.icon ? plasmoid.icon : "plasma"
     active: mouseArea.containsMouse
