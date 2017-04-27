@@ -119,7 +119,7 @@ AbstractModel* AbstractModel::favoritesModel()
     } else {
         AbstractModel *model = rootModel();
 
-        if (model) {
+        if (model && model != this) {
             return model->favoritesModel();
         }
     }
