@@ -33,6 +33,8 @@
 #include <KLocalizedString>
 #include <KStringHandler>
 #include <KMessageBox>
+#include <QNetworkDiskCache>
+#include <QStorageInfo>
 
 using namespace Attica;
 
@@ -41,6 +43,13 @@ KdePlatformDependent::KdePlatformDependent()
 {
     // FIXME: Investigate how to not leak this instance witohut crashing.
     m_accessManager = new QNetworkAccessManager(0);
+
+    const QString cacheDir = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + QStringLiteral("/attica");
+    QNetworkDiskCache *cache = new QNetworkDiskCache(m_accessManager);
+    QStorageInfo storageInfo(cacheDir);
+    cache->setCacheDirectory(cacheDir);
+    cache->setMaximumCacheSize(storageInfo.bytesTotal() / 1000);
+    m_accessManager->setCache(cache);
 }
 
 KdePlatformDependent::~KdePlatformDependent()
