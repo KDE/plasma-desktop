@@ -21,6 +21,7 @@
 #include "scmeditoroptions.h"
 #include "scmeditorcolors.h"
 #include "scmeditoreffects.h"
+#include "colorscm.h"
 
 #include <QDebug>
 #include <QDir>
@@ -34,23 +35,37 @@
 
 #include <KNS3/UploadDialog>
 
-SchemeEditorDialog::SchemeEditorDialog(const QString &path, QWidget *parent)
+SchemeEditorDialog::SchemeEditorDialog(KSharedConfigPtr config, KColorCm *parent)
+    : QDialog( parent )
+    , m_disableUpdates(false)
+    , m_unsavedChanges(false)
+    , m_kcm(parent)
+{
+    m_config = config;
+    init();
+}
+
+SchemeEditorDialog::SchemeEditorDialog(const QString &path, KColorCm *parent)
     : QDialog( parent )
     , m_filePath(path)
     , m_disableUpdates(false)
     , m_unsavedChanges(false)
+    , m_kcm(parent)
 {
-    if (!path.isEmpty()) {
-        m_config = KSharedConfig::openConfig(path);
-    } else {
-        m_config = KSharedConfig::openConfig(QStringLiteral("kdeglobals"));
-        m_config->setReadDefaults(true);
-    }
-    m_schemeName = KConfigGroup(m_config, "General").readEntry("Name");
+    m_config = KSharedConfig::openConfig(path);
 
+    m_schemeName = KConfigGroup(m_config, "General").readEntry("Name");
+    this->setWindowTitle(m_schemeName);
+    init();
+}
+
+void SchemeEditorDialog::init()
+{
     setupUi(this);
-    if (!path.isEmpty()) {
-        this->setWindowTitle(m_schemeName);
+
+    //we are in standalone appication mode? don't show the apply button
+    if (!m_kcm) {
+        buttonBox->button(QDialogButtonBox::Apply)->setVisible(false);
     }
 
     schemeKnsUploadButton->setIcon( QIcon::fromTheme(QStringLiteral("get-hot-new-stuff")) );
@@ -114,6 +129,11 @@ void SchemeEditorDialog::on_buttonBox_clicked(QAbstractButton *button)
     {
         saveScheme();
     }
+    else if (buttonBox->standardButton(button) == QDialogButtonBox::Apply)
+    {
+        applyScheme();
+        emit applied();
+    }
     else if (buttonBox->standardButton(button) == QDialogButtonBox::Close)
     {
         if (m_unsavedChanges) {
@@ -129,6 +149,16 @@ void SchemeEditorDialog::on_buttonBox_clicked(QAbstractButton *button)
         m_config->reparseConfiguration();
         this->accept();
     }
+}
+
+void SchemeEditorDialog::applyScheme()
+{
+    if (!m_kcm) {
+        return;
+    }
+
+    m_kcm->updateConfig(m_config);
+    m_kcm->save();
 }
 
 void SchemeEditorDialog::saveScheme()

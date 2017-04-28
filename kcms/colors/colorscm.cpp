@@ -126,6 +126,11 @@ void KColorCm::populateSchemeList()
     icon = createSchemePreviewIcon(m_config);
     schemeList->insertItem(0, new QListWidgetItem(icon, i18nc("Default color scheme", "Default")));
     m_config->setReadDefaults(false);
+
+    // add current scheme entry
+    icon = createSchemePreviewIcon(m_config);
+    QListWidgetItem *currentitem = new QListWidgetItem(icon, i18nc("Current color scheme", "Current"));
+    schemeList->insertItem(0, currentitem);
 }
 
 
@@ -166,8 +171,15 @@ void KColorCm::loadScheme(QListWidgetItem *currentItem, QListWidgetItem *previou
             config->setReadDefaults(true);
             loadScheme(config);
             config->setReadDefaults(false);
+            schemeEditButton->setEnabled(true);
             // load the default scheme
             emit changed(true);
+        }
+        else if (name == i18nc("Current color scheme", "Current"))
+        {
+            loadInternal();
+            schemeRemoveButton->setEnabled(false);
+            schemeEditButton->setEnabled(true);
         }
         else
         {
@@ -423,12 +435,26 @@ void KColorCm::on_schemeEditButton_clicked()
     const QString path = QStandardPaths::locate(QStandardPaths::GenericDataLocation,
                 "color-schemes/" + fileBaseName + ".colors");
 
-    SchemeEditorDialog* dialog = new SchemeEditorDialog(path, this);
+    SchemeEditorDialog* dialog;
+
+    //Current scheme
+    if (schemeList->currentItem()->text() == i18nc("Default color scheme", "Default")) {
+        dialog = new SchemeEditorDialog(m_config, this);
+    //Default scheme
+    } else if (schemeList->currentItem()->text() == i18nc("Current color scheme", "Current")) {
+        KSharedConfigPtr config = m_config;
+        config->setReadDefaults(true);
+        dialog = new SchemeEditorDialog(config, this);
+    } else {
+        dialog = new SchemeEditorDialog(path, this);
+    }
+
     dialog->setAttribute(Qt::WA_DeleteOnClose);  // avoid mem-leak
     dialog->setModal(true);
     dialog->show();
     connect(dialog, &SchemeEditorDialog::accepted, [=](){ this->populateSchemeList(); });
     connect(dialog, &SchemeEditorDialog::rejected, [=](){ this->populateSchemeList(); });
+    connect(dialog, &SchemeEditorDialog::applied, [=](){ this->populateSchemeList(); });
 }
 
 void KColorCm::updateConfig(KSharedConfigPtr config)

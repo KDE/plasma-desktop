@@ -60,6 +60,11 @@ public Q_SLOTS:
      */
     virtual void defaults();
 
+    /**
+     * Update all keys of the Global config with the theme ones.
+     */
+    void updateConfig(KSharedConfigPtr config);
+
 private Q_SLOTS:
 
 
@@ -119,11 +124,6 @@ private:
      * Populate the schemeList with color schemes found on the system
      */
     void populateSchemeList();
-
-    /**
-     * Update all keys of the Global config with the theme ones.
-     */
-    void updateConfig(KSharedConfigPtr config);
 
 
     QString m_currentColorScheme;

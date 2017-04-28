@@ -32,16 +32,19 @@
 class SchemeEditorOptions;
 class SchemeEditorColors;
 class SchemeEditorEffects;
+class KColorCm;
 
 class SchemeEditorDialog : public QDialog, public Ui::ScmEditorDialog
 {
     Q_OBJECT
 
 public:
-    SchemeEditorDialog(const QString &path, QWidget *parent=Q_NULLPTR);
+    SchemeEditorDialog(const QString &path, KColorCm *parent = Q_NULLPTR);
+    SchemeEditorDialog(KSharedConfigPtr config, KColorCm *parent = Q_NULLPTR);
 
 Q_SIGNALS:
     void changed(bool);
+    void applied();
 
 private Q_SLOTS:
 
@@ -53,6 +56,8 @@ private Q_SLOTS:
     void updateTabs(bool byUser=false);
 
 private:
+    void init();
+    void applyScheme();
     /** save the current scheme */
     void saveScheme();
     void setUnsavedChanges(bool changes);
@@ -67,6 +72,7 @@ private:
     SchemeEditorColors *m_colorTab;
     SchemeEditorEffects *m_disabledTab;
     SchemeEditorEffects *m_inactiveTab;
+    KColorCm *m_kcm;
 };
 
 #endif
