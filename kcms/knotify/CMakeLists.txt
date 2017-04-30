@@ -1,5 +1,5 @@
 # KI18N Translation Domain for this library
-add_definitions(-DTRANSLATION_DOMAIN=\"kcmnotify\")
+add_definitions(-DTRANSLATION_DOMAIN=\"kcm5_notify\")
 
 ########### next target ###############
 

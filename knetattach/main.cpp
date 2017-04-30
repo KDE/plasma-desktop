@@ -26,7 +26,7 @@
 #include "knetattach.h"
 
 int main(int argc, char **argv) {
-    KLocalizedString::setApplicationDomain("knetattach");
+    KLocalizedString::setApplicationDomain("knetattach5");
 
 	KAboutData aboutData(QLatin1String("knetattach"), i18n("KDE Network Wizard"), PROJECT_VERSION, i18n("KDE Network Wizard"),KAboutLicense::GPL, i18n("(c) 2004 George Staikos"), QLatin1String("http://www.kde.org/"));
 

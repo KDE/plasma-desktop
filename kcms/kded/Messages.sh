@@ -1,2 +1,2 @@
 #! /usr/bin/env bash
-$XGETTEXT *.cpp -o $podir/kcmkded.pot
+$XGETTEXT *.cpp -o $podir/kcm5_kded.pot

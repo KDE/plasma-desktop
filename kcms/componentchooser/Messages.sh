@@ -1,3 +1,3 @@
 #! /usr/bin/env bash
 $EXTRACTRC *.ui >> rc.cpp
-$XGETTEXT *.cpp -o $podir/kcmcomponentchooser.pot
+$XGETTEXT *.cpp -o $podir/kcm5_componentchooser.pot

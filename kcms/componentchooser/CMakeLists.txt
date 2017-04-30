@@ -1,5 +1,5 @@
 # KI18N Translation Domain for this library
-add_definitions(-DTRANSLATION_DOMAIN=\"kcmcomponentchooser\")
+add_definitions(-DTRANSLATION_DOMAIN=\"kcm5_componentchooser\")
 
 add_subdirectory( componentservices ) 
 

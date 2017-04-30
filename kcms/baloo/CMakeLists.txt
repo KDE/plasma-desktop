@@ -1,4 +1,4 @@
-add_definitions(-DTRANSLATION_DOMAIN=\"kcm_baloofile\")
+add_definitions(-DTRANSLATION_DOMAIN=\"kcm5_baloofile\")
 
 set(kcm_file_SRCS
   kcm.cpp

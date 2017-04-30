@@ -1,4 +1,4 @@
-add_definitions(-DTRANSLATION_DOMAIN=\"attica_kde\")
+add_definitions(-DTRANSLATION_DOMAIN=\"attica_kde_plugin\")
 
 ecm_qt_declare_logging_category(SRCS
     HEADER "attica_plugin_debug.h"

@@ -2,7 +2,7 @@ find_package(Phonon4Qt5 4.6.60 NO_MODULE)
 include_directories(BEFORE ${PHONON_INCLUDES})
 add_definitions(-DPHONON_LIB_SONAME=\"${PHONON_LIB_SONAME}\")
 # KI18N Translation Domain for this library
-add_definitions(-DTRANSLATION_DOMAIN=\"kcm_phonon\")
+add_definitions(-DTRANSLATION_DOMAIN=\"kcm5_phonon\")
 
 
 find_package(PulseAudio 0.9.16)
