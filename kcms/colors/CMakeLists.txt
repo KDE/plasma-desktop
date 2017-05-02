@@ -16,6 +16,7 @@ set(scheme_editor_SRCS
 set(klauncher_xml ${KINIT_DBUS_INTERFACES_DIR}/kf5_org.kde.KLauncher.xml)
 
 ki18n_wrap_ui(scheme_editor_SRCS
+    colorsettings.ui
     scmeditordialog.ui
     scmeditoroptions.ui
     scmeditorcolors.ui
