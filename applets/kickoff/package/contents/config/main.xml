@@ -37,7 +37,7 @@
 
     <entry name="menuItems" type="StringList">
       <label>The menu tabs to show.</label>
-      <default>bookmark:t,application:t,computer:t,used:t,leave:t</default>
+      <default>bookmark:t,application:t,computer:t,used:t,oftenUsed:f,leave:t</default>
     </entry>
     <entry name="alphaSort" type="Bool">
       <label>Whether to sort menu contents alphabetically or use manual/system sort order.</label>

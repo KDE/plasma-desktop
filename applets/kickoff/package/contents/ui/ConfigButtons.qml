@@ -37,6 +37,7 @@ GridView {
         "application": { icon: "applications-other", text: i18n("Applications")},
         "computer":    { icon: "pm", text: i18n("Computer")},
         "used":        { icon: "view-history", text: i18n("History")},
+        "oftenUsed":   { icon: "office-chart-pie", text: i18n("Often Used")},
         "leave":       { icon: "system-log-out", text: i18n("Leave")}
     }
 

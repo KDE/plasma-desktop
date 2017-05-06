@@ -157,6 +157,11 @@ Item {
                 source: Qt.resolvedUrl("RecentlyUsedView.qml")
             }
             PlasmaExtras.ConditionalLoader {
+                id: oftenUsedPage
+                when: mainTabGroup.currentTab == oftenUsedPage
+                source: Qt.resolvedUrl("OftenUsedView.qml")
+            }
+            PlasmaExtras.ConditionalLoader {
                 id: leavePage
                 when: mainTabGroup.currentTab == leavePage
                 source: Qt.resolvedUrl("LeaveView.qml")
@@ -537,6 +542,8 @@ Item {
             return {id: "computerButton", tab: systemPage, iconSource: pmSource.data["PowerDevil"] && pmSource.data["PowerDevil"]["Is Lid Present"] ? "computer-laptop" : "computer", text: i18n("Computer")};
         case "used":
             return {id: "usedButton", tab: recentlyUsedPage, iconSource: "view-history", text: i18n("History")};
+        case "oftenUsed":
+            return {id: "usedButton", tab: oftenUsedPage, iconSource: "office-chart-pie", text: i18n("Often Used")};
         case "leave":
             return {id: "leaveButton", tab: leavePage, iconSource: "system-log-out", text: i18n("Leave")};
         }

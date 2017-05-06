@@ -46,7 +46,7 @@ namespace KAStats = KActivities::Stats;
 using namespace KAStats;
 using namespace KAStats::Terms;
 
-GroupSortProxy::GroupSortProxy(QAbstractItemModel *sourceModel) : QSortFilterProxyModel(nullptr)
+GroupSortProxy::GroupSortProxy(QAbstractItemModel *sourceModel) : QSortFilterProxyModel(sourceModel)
 {
     sourceModel->setParent(this);
     setSourceModel(sourceModel);
@@ -57,7 +57,7 @@ GroupSortProxy::~GroupSortProxy()
 {
 }
 
-InvalidAppsFilterProxy::InvalidAppsFilterProxy(AbstractModel *parentModel, QAbstractItemModel *sourceModel) : QSortFilterProxyModel(nullptr)
+InvalidAppsFilterProxy::InvalidAppsFilterProxy(AbstractModel *parentModel, QAbstractItemModel *sourceModel) : QSortFilterProxyModel(sourceModel)
 , m_parentModel(parentModel)
 {
     connect(parentModel, &AbstractModel::favoritesModelChanged, this, &InvalidAppsFilterProxy::connectNewFavoritesModel);
@@ -116,8 +116,8 @@ RecentUsageModel::RecentUsageModel(QObject *parent, IncludeUsage usage, int orde
 : ForwardingModel(parent)
 , m_usage(usage)
 , m_ordering((Ordering)ordering)
+, m_complete(false)
 {
-    refresh();
 }
 
 RecentUsageModel::~RecentUsageModel()
@@ -395,9 +395,25 @@ int RecentUsageModel::ordering() const
     return m_ordering;
 }
 
+void RecentUsageModel::classBegin()
+{
+}
+
+void RecentUsageModel::componentComplete()
+{
+    m_complete = true;
+
+    refresh();
+}
+
 void RecentUsageModel::refresh()
 {
-    QAbstractItemModel *oldModel = sourceModel();
+    if (!m_complete) {
+        return;
+    }
+
+    setSourceModel(nullptr);
+    delete m_activitiesModel;
 
     auto query = UsedResources
                     | (m_ordering == Recent ? RecentlyUsedFirst : HighScoredFirst)
@@ -441,6 +457,4 @@ void RecentUsageModel::refresh()
     }
 
     setSourceModel(model);
-
-    delete oldModel;
 }

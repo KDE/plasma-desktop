@@ -22,6 +22,7 @@
 
 #include "forwardingmodel.h"
 
+#include <QQmlParserStatus>
 #include <QSortFilterProxyModel>
 
 class GroupSortProxy : public QSortFilterProxyModel
@@ -52,9 +53,10 @@ class InvalidAppsFilterProxy : public QSortFilterProxyModel
         QPointer<AbstractModel> m_parentModel;
 };
 
-class RecentUsageModel : public ForwardingModel
+class RecentUsageModel : public ForwardingModel, public QQmlParserStatus
 {
     Q_OBJECT
+    Q_INTERFACES(QQmlParserStatus)
 
     Q_PROPERTY(int ordering READ ordering WRITE setOrdering NOTIFY orderingChanged)
 
@@ -82,6 +84,9 @@ class RecentUsageModel : public ForwardingModel
         void setOrdering(int ordering);
         int ordering() const;
 
+        void classBegin() override;
+        void componentComplete() override;
+
     Q_SIGNALS:
         void orderingChanged(int ordering);
 
@@ -100,6 +105,8 @@ class RecentUsageModel : public ForwardingModel
         QPointer<QAbstractItemModel> m_activitiesModel;
 
         Ordering m_ordering;
+
+        bool m_complete;
 };
 
 #endif
