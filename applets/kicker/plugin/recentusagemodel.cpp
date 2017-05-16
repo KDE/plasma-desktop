@@ -26,6 +26,7 @@
 #include <config-X11.h>
 
 #include <QIcon>
+#include <QtQml>
 #if HAVE_X11
 #include <QX11Info>
 #endif
@@ -118,6 +119,7 @@ RecentUsageModel::RecentUsageModel(QObject *parent, IncludeUsage usage, int orde
 , m_ordering((Ordering)ordering)
 , m_complete(false)
 {
+    refresh();
 }
 
 RecentUsageModel::~RecentUsageModel()
@@ -408,7 +410,7 @@ void RecentUsageModel::componentComplete()
 
 void RecentUsageModel::refresh()
 {
-    if (!m_complete) {
+    if (qmlEngine(this) && !m_complete) {
         return;
     }
 
