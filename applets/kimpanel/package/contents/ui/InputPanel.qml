@@ -192,15 +192,19 @@ PlasmaCore.Dialog {
 
                  if (data["LookupTable"]) {
                      var table = data["LookupTable"];
-                     if (table.length < tableList.count) {
-                         tableList.remove(table.length, tableList.count - table.length);
-                     }
-                     for (var i = 0; i < table.length; i ++) {
-                         if (i >= tableList.count) {
-                              tableList.append({'label' : table[i].label, 'text': table[i].text, 'index': i});
-                         } else {
-                              tableList.set(i, {'label' : table[i].label, 'text': table[i].text, 'index': i});
+                     if (LookupTableVisible) {
+                         if (table.length < tableList.count) {
+                             tableList.remove(table.length, tableList.count - table.length);
                          }
+                         for (var i = 0; i < table.length; i ++) {
+                             if (i >= tableList.count) {
+                                 tableList.append({'label' : table[i].label, 'text': table[i].text, 'index': i});
+                             } else {
+                                 tableList.set(i, {'label' : table[i].label, 'text': table[i].text, 'index': i});
+                             }
+                         }
+                     } else {
+                         tableList.clear();
                      }
                  }
 
