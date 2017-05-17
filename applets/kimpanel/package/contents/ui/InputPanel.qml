@@ -192,7 +192,7 @@ PlasmaCore.Dialog {
 
                  if (data["LookupTable"]) {
                      var table = data["LookupTable"];
-                     if (LookupTableVisible) {
+                     if (lookupTableVisible) {
                          if (table.length < tableList.count) {
                              tableList.remove(table.length, tableList.count - table.length);
                          }
