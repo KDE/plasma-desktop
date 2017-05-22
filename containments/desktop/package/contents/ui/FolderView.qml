@@ -424,6 +424,10 @@ Item {
 
         onHoveredItemChanged: {
             doubleClickInProgress = false;
+
+            if (!hoveredItem) {
+                hoverActivateTimer.stop();
+            }
         }
 
         function pressCanceled() {

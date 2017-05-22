@@ -109,8 +109,6 @@ Item {
                         }
                     }
                 } else if (!hovered) {
-                    hoverActivateTimer.stop();
-
                     if (popupDialog != null) {
                         popupDialog.requestDestroy();
                         popupDialog = null;
