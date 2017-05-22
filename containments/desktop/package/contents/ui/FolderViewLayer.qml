@@ -406,5 +406,6 @@ Item {
         plasmoid.setActionSeparator("separator2");
 
         plasmoid.contextualActionsAboutToShow.connect(updateContextualActions);
+        plasmoid.contextualActionsAboutToShow.connect(folderView.model.clearSelection);
     }
 }

@@ -109,8 +109,6 @@ Item {
                         }
                     }
                 } else if (!hovered) {
-                    hoverActivateTimer.stop();
-
                     if (popupDialog != null) {
                         popupDialog.requestDestroy();
                         popupDialog = null;
@@ -438,7 +436,7 @@ Item {
                         return false;
                     }
 
-                    if (!main.GridView.view.isRootView && dialog.containsDrag) {
+                    if (!main.GridView.view.isRootView && main.GridView.view.dialog.containsDrag) {
                         return false;
                     }
 
