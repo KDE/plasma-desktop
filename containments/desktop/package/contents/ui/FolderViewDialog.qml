@@ -72,6 +72,7 @@ Folder.SubDialog {
             anchors.fill: parent
 
             isRootView: false
+            dialog: dialog
 
             locked: true
 

@@ -60,6 +60,7 @@ Item {
     property alias hoveredItem: gridView.hoveredItem
     property var history: []
     property Item backButton: null
+    property var dialog: null
 
     function rename()
     {
@@ -337,7 +338,7 @@ Item {
             var leftEdge = Math.min(gridView.contentX, gridView.originX);
 
             if (!item || item.blank) {
-                if (gridView.hoveredItem && !root.containsDrag && (!dialog || !dialog.containsDrag)) {
+                if (gridView.hoveredItem && !root.containsDrag && (!dialog || !dialog.containsDrag) && !gridView.hoveredItem.popupDialog) {
                     gridView.hoveredItem = null;
                 }
             } else {

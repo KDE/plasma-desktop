@@ -438,7 +438,7 @@ Item {
                         return false;
                     }
 
-                    if (!main.GridView.view.isRootView && dialog.containsDrag) {
+                    if (!main.GridView.view.isRootView && main.GridView.view.dialog.containsDrag) {
                         return false;
                     }
 
