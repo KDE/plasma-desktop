@@ -33,6 +33,11 @@ import org.kde.plasma.private.kicker 0.1 as Kicker
 Item {
     id: kickoff
 
+    readonly property bool inPanel: (plasmoid.location == PlasmaCore.Types.TopEdge
+        || plasmoid.location == PlasmaCore.Types.RightEdge
+        || plasmoid.location == PlasmaCore.Types.BottomEdge
+        || plasmoid.location == PlasmaCore.Types.LeftEdge)
+
     Plasmoid.switchWidth: units.gridUnit * 20
     Plasmoid.switchHeight: units.gridUnit * 30
 
@@ -44,6 +49,8 @@ Item {
         //AppletQuickItem expects a layout to exist
         //setting even a default property forces it to be created
         Layout.fillWidth: false
+        Layout.maximumWidth: inPanel ? units.iconSizeHints.panel : -1
+        Layout.maximumHeight: inPanel ? units.iconSizeHints.panel : -1
         hoverEnabled: true
         onClicked: plasmoid.expanded = !plasmoid.expanded
 
