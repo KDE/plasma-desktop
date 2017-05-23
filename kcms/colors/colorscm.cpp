@@ -178,6 +178,9 @@ void KColorCm::loadScheme(QListWidgetItem *currentItem, QListWidgetItem *previou
         else if (name == i18nc("Current color scheme", "Current"))
         {
             loadInternal();
+            m_dontLoadSelectedScheme = true;
+            schemeList->setCurrentItem(schemeList->item(0));
+            m_dontLoadSelectedScheme = false;
             schemeRemoveButton->setEnabled(false);
             schemeEditButton->setEnabled(true);
         }
