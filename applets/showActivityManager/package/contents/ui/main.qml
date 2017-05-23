@@ -28,8 +28,13 @@ MouseArea {
     height: units.iconSizes.large
     width: units.iconSizes.large
 
-    Layout.minimumWidth: units.iconSizes.small
-    Layout.minimumHeight: units.iconSizes.small
+    readonly property bool inPanel: (plasmoid.location == PlasmaCore.Types.TopEdge
+        || plasmoid.location == PlasmaCore.Types.RightEdge
+        || plasmoid.location == PlasmaCore.Types.BottomEdge
+        || plasmoid.location == PlasmaCore.Types.LeftEdge)
+
+    Layout.maximumWidth: inPanel ? units.iconSizeHints.panel : -1
+    Layout.maximumHeight: inPanel ? units.iconSizeHints.panel : -1
 
     Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
 
