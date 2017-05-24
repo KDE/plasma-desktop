@@ -27,50 +27,53 @@ Item {
     id: kimpanel
     property int visibleButtons: 0
 
-    Layout.minimumWidth: vertical ? 0 : height * visibleButtons
-    Layout.minimumHeight: vertical ? width * visibleButtons : 0
-    Layout.preferredWidth: Layout.minimumWidth
-    Layout.preferredHeight: Layout.minimumHeight
-
     property bool vertical: plasmoid.formFactor == PlasmaCore.Types.Vertical
 
+    LayoutMirroring.enabled: !vertical && Qt.application.layoutDirection === Qt.RightToLeft
+    LayoutMirroring.childrenInherit: true
+
+    Layout.minimumWidth: vertical ? units.iconSizes.small : items.implicitWidth
+    Layout.minimumHeight: !vertical ? units.iconSizes.small : items.implicitHeight
+    Layout.preferredHeight: Layout.minimumHeight
     Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
 
     InputPanel { }
 
-    GridView {
+    Flow {
         id: items
-        property int itemWidth: !kimpanel.vertical ? Math.floor(parent.width/visibleButtons) : parent.width
-        property int itemHeight: kimpanel.vertical ? Math.floor(parent.height/visibleButtons) : parent.height
-        property int iconSize: Math.min(itemWidth, itemHeight)
-        anchors.fill: parent
-        cellWidth: itemWidth
-        cellHeight: itemHeight
-        interactive: false
+        width: parent.width
+        height: parent.height
+        x: (parent.width - childrenRect.width) / 2
+        y: (parent.height - childrenRect.height) / 2
+        flow: kimpanel.vertical ? Flow.LeftToRight : Flow.TopToBottom
 
-        model: ListModel {
-            id: list
-            dynamicRoles: true
-        }
+        property int iconSize: Math.min(units.iconSizeHints.panel, units.roundToIconSize(Math.min(width, height)))
 
-        delegate: Item {
-            id: iconDelegate
-            width: items.itemWidth
-            height: items.itemHeight
-            StatusIcon {
-                id: statusIcon
-                anchors.centerIn: parent
+        Repeater {
+            model: ListModel {
+                id: list
+                dynamicRoles: true
+            }
+
+            delegate: Item {
+                id: iconDelegate
                 width: items.iconSize
                 height: items.iconSize
-                label: model.label
-                tip: model.tip
-                icon: model.icon
-                hint: model.hint
-                onTriggered : {
-                    if (button == Qt.LeftButton) {
-                        clickHandler(model.key)
-                    } else {
-                        contextMenu.open(statusIcon, {key: model.key, label: model.label});
+                StatusIcon {
+                    id: statusIcon
+                    anchors.centerIn: parent
+                    width: items.iconSize
+                    height: items.iconSize
+                    label: model.label
+                    tip: model.tip
+                    icon: model.icon
+                    hint: model.hint
+                    onTriggered : {
+                        if (button == Qt.LeftButton) {
+                            clickHandler(model.key)
+                        } else {
+                            contextMenu.open(statusIcon, {key: model.key, label: model.label});
+                        }
                     }
                 }
             }
