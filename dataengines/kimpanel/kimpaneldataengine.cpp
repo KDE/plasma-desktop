@@ -40,7 +40,7 @@ static void ibusPanelLauncher() {
     // lets just blindly start the launcher. no need to use ifdef
     const QString path = QStringLiteral(KIMPANEL_LIBEXEC_DIR"/kimpanel-ibus-panel-launcher");
     if (QFile::exists(path)) {
-        QProcess::startDetached(path);
+        QProcess::startDetached(path, QStringList());
     }
 }
 

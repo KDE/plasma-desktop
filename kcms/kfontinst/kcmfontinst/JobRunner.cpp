@@ -83,7 +83,7 @@ void CJobRunner::startDbusService()
     if (!QDBusConnection::sessionBus().interface()->isServiceRegistered(OrgKdeFontinstInterface::staticInterfaceName())) {
         const QString fontinst = QStringLiteral(KFONTINST_LIB_EXEC_DIR"/fontinst");
         qDebug() << "Service " << OrgKdeFontinstInterface::staticInterfaceName() << " not registered, starting" << fontinst;
-        QProcess::startDetached(fontinst);
+        QProcess::startDetached(fontinst, QStringList());
     }
 }
 

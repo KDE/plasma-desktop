@@ -72,7 +72,7 @@ public Q_SLOTS:
 private:
     void launchIBusPanel() {
         const QString panelPath = QStringLiteral(KIMPANEL_LIBEXEC_DIR"/kimpanel-ibus-panel");
-        QProcess::startDetached(panelPath);
+        QProcess::startDetached(panelPath, QStringList());
         quit();
     }
 

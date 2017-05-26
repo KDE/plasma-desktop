@@ -508,7 +508,7 @@ void CFontViewPart::checkInstallable()
     if(itsFontDetails.family.isEmpty())
     {
         if (!QDBusConnection::sessionBus().interface()->isServiceRegistered(OrgKdeFontinstInterface::staticInterfaceName()))
-            QProcess::startDetached(QLatin1String(KFONTINST_LIB_EXEC_DIR"/fontinst"));
+            QProcess::startDetached(QLatin1String(KFONTINST_LIB_EXEC_DIR"/fontinst"), QStringList());
         itsInstallButton->setEnabled(false);
         itsInterface->statFont(itsPreview->engine()->descriptiveName(), FontInst::SYS_MASK|FontInst::USR_MASK, getpid());
     }

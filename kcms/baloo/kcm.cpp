@@ -128,7 +128,7 @@ void ServerConfigModule::save()
     // Start Baloo
     if (enabled) {
         const QString exe = QStandardPaths::findExecutable(QStringLiteral("baloo_file"));
-        QProcess::startDetached(exe);
+        QProcess::startDetached(exe, QStringList());
     }
     else {
         QDBusMessage message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.baloo"),
@@ -141,7 +141,7 @@ void ServerConfigModule::save()
 
     // Start cleaner
     const QString exe = QStandardPaths::findExecutable(QStringLiteral("baloo_file_cleaner"));
-    QProcess::startDetached(exe);
+    QProcess::startDetached(exe, QStringList());
 
     // Update the baloo_file's config cache
     config.refresh();

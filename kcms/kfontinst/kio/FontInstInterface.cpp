@@ -54,7 +54,7 @@ FontInstInterface::FontInstInterface()
     connect(itsInterface, SIGNAL(fontStat(int,KFI::Family)), SLOT(fontStat(int,KFI::Family)));
     
     if (!QDBusConnection::sessionBus().interface()->isServiceRegistered(OrgKdeFontinstInterface::staticInterfaceName()))
-        QProcess::startDetached(QLatin1String(KFONTINST_LIB_EXEC_DIR"/fontinst"));
+        QProcess::startDetached(QLatin1String(KFONTINST_LIB_EXEC_DIR"/fontinst"), QStringList());
 }
 
 FontInstInterface::~FontInstInterface()
