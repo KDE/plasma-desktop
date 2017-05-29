@@ -165,11 +165,12 @@ Item {
     }
 
     Connections {
-        enabled: plasmoid.configuration.groupPopups
-
         target: tasksModel
 
         onActiveTaskChanged: {
+            if (!plasmoid.configuration.groupPopups) {
+                return;
+            }
             if (tasksModel.activeTask.parent.valid) {
                 groupDialog.activeTask = tasksModel.activeTask;
             }
