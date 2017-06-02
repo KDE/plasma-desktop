@@ -60,12 +60,12 @@ private:
 
 
 protected:
-    bool event(QEvent *event);
+    bool event(QEvent *event) Q_DECL_OVERRIDE;
 
 public:
     explicit KbPreviewFrame(QWidget *parent = 0);
     virtual ~KbPreviewFrame();
-    void paintEvent(QPaintEvent *event);
+    void paintEvent(QPaintEvent *event) Q_DECL_OVERRIDE;
     void generateKeyboardLayout(const QString &layout, const QString &layoutVariant, const QString &model);
     int getWidth() const;
     int getHeight() const;

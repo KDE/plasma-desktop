@@ -34,7 +34,7 @@ public slots:
     void enableKimpanelOperations();
 
 protected:
-    virtual Plasma::ServiceJob* createJob(const QString &operation, QMap<QString, QVariant> &parameters);
+    Plasma::ServiceJob* createJob(const QString &operation, QMap<QString, QVariant> &parameters) Q_DECL_OVERRIDE;
 
 private:
     PanelAgent* m_panelAgent;

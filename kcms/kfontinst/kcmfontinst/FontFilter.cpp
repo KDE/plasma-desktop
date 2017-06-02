@@ -65,7 +65,7 @@ class CFontFilterStyle : public CFontFilterProxyStyle
 
     CFontFilterStyle(CFontFilter *parent, int ol) : CFontFilterProxyStyle(parent), overlap(ol) {}
 
-    QRect subElementRect(SubElement element, const QStyleOption *option, const QWidget *widget) const;
+    QRect subElementRect(SubElement element, const QStyleOption *option, const QWidget *widget) const Q_DECL_OVERRIDE;
 
     int overlap;
 };

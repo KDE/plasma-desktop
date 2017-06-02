@@ -37,12 +37,12 @@ class MimeTypesModel : public QAbstractListModel
         ~MimeTypesModel();
 
         QHash<int, QByteArray> roleNames() const override;
-        QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
+        QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const Q_DECL_OVERRIDE;
 
         Q_INVOKABLE void checkAll();
         Q_INVOKABLE void setRowChecked(int row, bool checked);
 
-        int rowCount(const QModelIndex &parent = QModelIndex()) const { Q_UNUSED(parent) return m_mimeTypesList.size(); }
+        int rowCount(const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE { Q_UNUSED(parent) return m_mimeTypesList.size(); }
 
         QStringList checkedTypes() const;
         void setCheckedTypes(const QStringList &list);

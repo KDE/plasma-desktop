@@ -38,8 +38,8 @@ class CFontThumbnail : public ThumbCreator
     CFontThumbnail();
     ~CFontThumbnail() {}
 
-    bool  create(const QString &path, int width, int height, QImage &img);
-    Flags flags() const;
+    bool  create(const QString &path, int width, int height, QImage &img) Q_DECL_OVERRIDE;
+    Flags flags() const Q_DECL_OVERRIDE;
 
     private:
 

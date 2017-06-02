@@ -31,9 +31,9 @@ public:
     StandardActionsModule(QWidget *parent, const QVariantList &args);
     ~StandardActionsModule();
 
-    /*reimp*/ void save();
-    /*reimp*/ void load();
-    /*reimp*/ void defaults();
+    /*reimp*/ void save() Q_DECL_OVERRIDE;
+    /*reimp*/ void load() Q_DECL_OVERRIDE;
+    /*reimp*/ void defaults() Q_DECL_OVERRIDE;
 
 private Q_SLOTS:
     void keyChanged();

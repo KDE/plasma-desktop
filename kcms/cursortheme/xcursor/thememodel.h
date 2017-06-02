@@ -62,11 +62,11 @@ class CursorThemeModel : public QAbstractTableModel
     public:
         CursorThemeModel(QObject *parent = 0);
         ~CursorThemeModel();
-       inline int columnCount(const QModelIndex &parent = QModelIndex()) const;
-        inline int rowCount(const QModelIndex &parent = QModelIndex()) const;
-        QVariant headerData(int section, Qt::Orientation orientation, int role) const;
-        QVariant data(const QModelIndex &index, int role) const;
-        void sort(int column, Qt::SortOrder order = Qt::AscendingOrder);
+       inline int columnCount(const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE;
+        inline int rowCount(const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE;
+        QVariant headerData(int section, Qt::Orientation orientation, int role) const Q_DECL_OVERRIDE;
+        QVariant data(const QModelIndex &index, int role) const Q_DECL_OVERRIDE;
+        void sort(int column, Qt::SortOrder order = Qt::AscendingOrder) Q_DECL_OVERRIDE;
 
         /// Returns the CursorTheme at @p index.
         const CursorTheme *theme(const QModelIndex &index);

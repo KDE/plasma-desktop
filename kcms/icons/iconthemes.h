@@ -45,9 +45,9 @@ public:
 
   void updateRemoveButton();
 
-  void load();
-  void save();
-  void defaults();
+  void load() Q_DECL_OVERRIDE;
+  void save() Q_DECL_OVERRIDE;
+  void defaults() Q_DECL_OVERRIDE;
 
   int buttons();
 

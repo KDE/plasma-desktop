@@ -37,10 +37,10 @@ class PreviewPluginsModel : public QAbstractListModel
         ~PreviewPluginsModel();
 
         QHash<int, QByteArray> roleNames() const override;
-        QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
+        QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const Q_DECL_OVERRIDE;
         Q_INVOKABLE void setRowChecked(int row, bool checked);
 
-        int rowCount(const QModelIndex &parent = QModelIndex()) const { Q_UNUSED(parent) return m_plugins.size(); }
+        int rowCount(const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE { Q_UNUSED(parent) return m_plugins.size(); }
 
         QStringList checkedPlugins() const;
         void setCheckedPlugins(const QStringList &list);

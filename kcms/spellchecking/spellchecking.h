@@ -40,8 +40,8 @@ class SonnetSpellCheckingModule : public KCModule
   SonnetSpellCheckingModule(QWidget* parent, const QVariantList&);
   ~SonnetSpellCheckingModule();
 
-  void save();
-  void defaults();
+  void save() Q_DECL_OVERRIDE;
+  void defaults() Q_DECL_OVERRIDE;
 
  private:
   Sonnet::ConfigWidget *m_configWidget;

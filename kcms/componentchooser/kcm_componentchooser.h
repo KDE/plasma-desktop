@@ -27,9 +27,9 @@ class KCMComponentChooser : public KCModule
 public:
     KCMComponentChooser(QWidget *parent, const QVariantList &args);
 
-    void load();
-    void save();
-    void defaults();
+    void load() Q_DECL_OVERRIDE;
+    void save() Q_DECL_OVERRIDE;
+    void defaults() Q_DECL_OVERRIDE;
 
 private:
     ComponentChooser  *m_chooser;

@@ -30,9 +30,9 @@ class CfgFileManager: public QWidget, public Ui::FileManagerConfig_UI, public Cf
 public:
     CfgFileManager(QWidget *parent);
     virtual ~CfgFileManager();
-    virtual void load(KConfig *cfg);
-    virtual void save(KConfig *cfg);
-    virtual void defaults();
+    void load(KConfig *cfg) Q_DECL_OVERRIDE;
+    void save(KConfig *cfg) Q_DECL_OVERRIDE;
+    void defaults() Q_DECL_OVERRIDE;
 
 protected Q_SLOTS:
     void slotAddFileManager();

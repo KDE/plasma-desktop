@@ -35,17 +35,17 @@ class RecentContactsModel : public ForwardingModel
         explicit RecentContactsModel(QObject *parent = 0);
         ~RecentContactsModel();
 
-        QString description() const;
+        QString description() const Q_DECL_OVERRIDE;
 
-        QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
+        QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const Q_DECL_OVERRIDE;
 
-        Q_INVOKABLE bool trigger(int row, const QString &actionId, const QVariant &argument);
+        Q_INVOKABLE bool trigger(int row, const QString &actionId, const QVariant &argument) Q_DECL_OVERRIDE;
 
-        bool hasActions() const;
-        QVariantList actions() const;
+        bool hasActions() const Q_DECL_OVERRIDE;
+        QVariantList actions() const Q_DECL_OVERRIDE;
 
     private Q_SLOTS:
-        void refresh();
+        void refresh() Q_DECL_OVERRIDE;
         void buildCache();
         void personDataChanged();
 

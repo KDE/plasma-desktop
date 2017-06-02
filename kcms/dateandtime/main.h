@@ -36,8 +36,8 @@ class KclockModule : public KCModule
 public:
   KclockModule(QWidget *parent, const QVariantList &);
 
-  void	save();
-  void	load();
+  void	save() Q_DECL_OVERRIDE;
+  void	load() Q_DECL_OVERRIDE;
 
 private:
   bool kauthSave();

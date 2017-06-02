@@ -52,9 +52,9 @@ public:
     int selectedPluginIndex() const;
 
 public Q_SLOTS:
-    void load();
-    void save();
-    void defaults();
+    void load() Q_DECL_OVERRIDE;
+    void save() Q_DECL_OVERRIDE;
+    void defaults() Q_DECL_OVERRIDE;
     void test(const QString &plugin);
 
 Q_SIGNALS:

@@ -99,9 +99,9 @@ public:
   void setTime(const QTime&);
 
 protected:
-  virtual void	paintEvent( QPaintEvent *event );
-  virtual void	showEvent( QShowEvent *event );
-  virtual void	resizeEvent( QResizeEvent *event );
+  void	paintEvent( QPaintEvent *event ) Q_DECL_OVERRIDE;
+  void	showEvent( QShowEvent *event ) Q_DECL_OVERRIDE;
+  void	resizeEvent( QResizeEvent *event ) Q_DECL_OVERRIDE;
 
 private:
   void setClockSize(const QSize &size);

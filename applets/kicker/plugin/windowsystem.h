@@ -33,7 +33,7 @@ class WindowSystem : public QObject
         WindowSystem(QObject *parent = 0);
         ~WindowSystem();
 
-        bool eventFilter(QObject *watched, QEvent *event);
+        bool eventFilter(QObject *watched, QEvent *event) Q_DECL_OVERRIDE;
 
         Q_INVOKABLE void forceActive(QQuickItem *item);
 

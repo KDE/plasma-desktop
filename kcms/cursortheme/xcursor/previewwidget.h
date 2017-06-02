@@ -32,12 +32,12 @@ class PreviewWidget : public QWidget
 
         void setTheme(const CursorTheme *theme, const int size);
         void setUseLables(bool);
-        QSize sizeHint() const;
+        QSize sizeHint() const Q_DECL_OVERRIDE;
 
     protected:
-        void paintEvent(QPaintEvent *);
-        void mouseMoveEvent(QMouseEvent *);
-        void resizeEvent(QResizeEvent *);
+        void paintEvent(QPaintEvent *) Q_DECL_OVERRIDE;
+        void mouseMoveEvent(QMouseEvent *) Q_DECL_OVERRIDE;
+        void resizeEvent(QResizeEvent *) Q_DECL_OVERRIDE;
 
     private:
         void layoutItems();

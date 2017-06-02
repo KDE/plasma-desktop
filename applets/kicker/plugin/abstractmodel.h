@@ -39,14 +39,14 @@ class AbstractModel : public QAbstractListModel
         explicit AbstractModel(QObject *parent = 0);
         ~AbstractModel();
 
-        virtual QHash<int, QByteArray> roleNames() const;
+        QHash<int, QByteArray> roleNames() const Q_DECL_OVERRIDE;
 
         virtual QString description() const = 0;
 
         int count() const;
         virtual int separatorCount() const;
 
-        int columnCount(const QModelIndex &parent = QModelIndex()) const;
+        int columnCount(const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE;
 
         int iconSize() const;
         void setIconSize(int size);

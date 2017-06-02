@@ -35,9 +35,9 @@ public:
     ~ServerConfigModule();
 
 public Q_SLOTS:
-    void load();
-    void save();
-    void defaults();
+    void load() Q_DECL_OVERRIDE;
+    void save() Q_DECL_OVERRIDE;
+    void defaults() Q_DECL_OVERRIDE;
     void indexingEnabledChanged();
 
     void onDirectoryListChanged();

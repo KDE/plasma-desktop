@@ -29,7 +29,7 @@ public:
     explicit TestButton(QWidget *);
 
 protected:
-    void mousePressEvent(QMouseEvent *);
+    void mousePressEvent(QMouseEvent *) Q_DECL_OVERRIDE;
 
 private Q_SLOTS:
     void resetText();

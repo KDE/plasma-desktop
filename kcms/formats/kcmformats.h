@@ -39,9 +39,9 @@ public:
     explicit KCMFormats(QWidget *parent = 0, const QVariantList &list = QVariantList());
     ~KCMFormats();
 
-    void load();
-    void save();
-    void defaults();
+    void load() Q_DECL_OVERRIDE;
+    void save() Q_DECL_OVERRIDE;
+    void defaults() Q_DECL_OVERRIDE;
 
 private:
     void addLocaleToCombo(QComboBox *combo, const QLocale &locale);

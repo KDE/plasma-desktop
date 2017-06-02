@@ -37,10 +37,10 @@ class IconModule : public KCModule
 public:
   IconModule(QWidget *parent, const QVariantList &);
 
-  void load();
-  void save();
-  void defaults();
-  QString quickHelp() const;
+  void load() Q_DECL_OVERRIDE;
+  void save() Q_DECL_OVERRIDE;
+  void defaults() Q_DECL_OVERRIDE;
+  QString quickHelp() const Q_DECL_OVERRIDE;
 
 protected Q_SLOTS:
   void moduleChanged(bool state);

@@ -57,9 +57,9 @@ public:
     KIconConfig(QWidget *parent);
     ~KIconConfig();
 
-    virtual void load();
-    virtual void save();
-    virtual void defaults();
+    void load() Q_DECL_OVERRIDE;
+    void save() Q_DECL_OVERRIDE;
+    void defaults() Q_DECL_OVERRIDE;
     void preview();
 
 private Q_SLOTS:

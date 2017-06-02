@@ -47,10 +47,10 @@ public:
     KCMTranslations(QWidget *parent, const QVariantList &);
     virtual ~KCMTranslations();
 
-    virtual void load();
-    virtual void save();
-    virtual void defaults();
-    virtual QString quickHelp() const;
+    void load() Q_DECL_OVERRIDE;
+    void save() Q_DECL_OVERRIDE;
+    void defaults() Q_DECL_OVERRIDE;
+    QString quickHelp() const Q_DECL_OVERRIDE;
 
 private Q_SLOTS:
 

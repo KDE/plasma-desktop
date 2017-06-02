@@ -46,7 +46,7 @@ class SortProxyModel : public QSortFilterProxyModel
         int compare(const QModelIndex &left, const QModelIndex &right, int role) const;
 
     protected:
-        bool lessThan(const QModelIndex &left, const QModelIndex &right) const;
+        bool lessThan(const QModelIndex &left, const QModelIndex &right) const Q_DECL_OVERRIDE;
 };
 
 

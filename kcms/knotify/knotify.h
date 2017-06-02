@@ -38,11 +38,11 @@ public:
     KCMKNotify(QWidget *parent, const QVariantList &);
     virtual ~KCMKNotify();
 
-    virtual void defaults();
-    virtual void save();
+    void defaults() Q_DECL_OVERRIDE;
+    void save() Q_DECL_OVERRIDE;
 
 public Q_SLOTS:
-    virtual void load();
+    void load() Q_DECL_OVERRIDE;
 
 private Q_SLOTS:
     void slotAppActivated( const int &);

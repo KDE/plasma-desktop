@@ -61,9 +61,9 @@ public:
     KCMStyle( QWidget* parent, const QVariantList& );
     ~KCMStyle();
 
-    virtual void load();
-    virtual void save();
-    virtual void defaults();
+    void load() Q_DECL_OVERRIDE;
+    void save() Q_DECL_OVERRIDE;
+    void defaults() Q_DECL_OVERRIDE;
 
     static QString defaultStyle();
 
@@ -76,7 +76,7 @@ protected:
     void loadEffects( KConfig& config );
     void addWhatsThis();
 
-    virtual void changeEvent( QEvent *event );
+    void changeEvent( QEvent *event ) Q_DECL_OVERRIDE;
 
 protected Q_SLOTS:
     void styleSpecificConfig();

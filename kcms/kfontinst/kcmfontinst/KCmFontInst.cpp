@@ -114,7 +114,7 @@ class CPushButton : public QPushButton
         setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
     }
 
-    QSize sizeHint() const
+    QSize sizeHint() const Q_DECL_OVERRIDE
     {
         QSize sh(QPushButton::sizeHint());
 
@@ -142,7 +142,7 @@ class CToolBar : public KToolBar
         setFont(QApplication::font());
     }
 
-    void paintEvent(QPaintEvent *)
+    void paintEvent(QPaintEvent *) Q_DECL_OVERRIDE
     {
         QColor col(palette().color(backgroundRole()));
 
@@ -161,7 +161,7 @@ class CProgressBar : public QProgressBar
     virtual ~CProgressBar() { }
 
     int height() const     { return itsHeight; }
-    QSize sizeHint() const { return QSize(100, itsHeight); }
+    QSize sizeHint() const Q_DECL_OVERRIDE { return QSize(100, itsHeight); }
 
     private:
 

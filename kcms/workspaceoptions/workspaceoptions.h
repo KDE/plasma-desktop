@@ -34,9 +34,9 @@ class WorkspaceOptionsModule : public KCModule
 public:
     WorkspaceOptionsModule(QWidget *parent, const QVariantList &);
     ~WorkspaceOptionsModule();
-    void save();
-    void load();
-    void defaults();
+    void save() Q_DECL_OVERRIDE;
+    void load() Q_DECL_OVERRIDE;
+    void defaults() Q_DECL_OVERRIDE;
 
 private:
     KSharedConfigPtr m_kwinConfig;

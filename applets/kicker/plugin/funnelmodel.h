@@ -30,7 +30,7 @@ class FunnelModel : public ForwardingModel
         explicit FunnelModel(QObject *parent = 0);
         ~FunnelModel();
 
-        void setSourceModel(QAbstractItemModel *model);
+        void setSourceModel(QAbstractItemModel *model) Q_DECL_OVERRIDE;
 };
 
 #endif

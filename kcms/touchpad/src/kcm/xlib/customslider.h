@@ -55,8 +55,8 @@ public:
     {
     public:
         SqrtInterpolator() { }
-        double absolute(double relative, double minimum, double maximum) const;
-        double relative(double absolute, double minimum, double maximum) const;
+        double absolute(double relative, double minimum, double maximum) const Q_DECL_OVERRIDE;
+        double relative(double absolute, double minimum, double maximum) const Q_DECL_OVERRIDE;
     };
 
     const Interpolator *interpolator() const;
@@ -72,7 +72,7 @@ Q_SIGNALS:
     void valueChanged(double);
 
 protected:
-    virtual void resizeEvent(QResizeEvent *);
+    void resizeEvent(QResizeEvent *) Q_DECL_OVERRIDE;
 
 private Q_SLOTS:
     void updateValue();

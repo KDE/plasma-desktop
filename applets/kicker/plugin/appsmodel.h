@@ -48,21 +48,21 @@ class AppsModel : public AbstractModel
         explicit AppsModel(const QList<AbstractEntry *> entryList, bool deleteEntriesOnDestruction, QObject *parent = 0);
         ~AppsModel();
 
-        QString description() const;
+        QString description() const Q_DECL_OVERRIDE;
         void setDescription(const QString &text);
 
-        virtual QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
+        QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const Q_DECL_OVERRIDE;
 
-        QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const;
+        QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE;
 
-        int rowCount(const QModelIndex &parent = QModelIndex()) const;
+        int rowCount(const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE;
 
-        Q_INVOKABLE virtual bool trigger(int row, const QString &actionId, const QVariant &argument);
+        Q_INVOKABLE virtual bool trigger(int row, const QString &actionId, const QVariant &argument) Q_DECL_OVERRIDE;
 
-        Q_INVOKABLE AbstractModel *modelForRow(int row);
-        Q_INVOKABLE int rowForModel(AbstractModel *model);
+        Q_INVOKABLE AbstractModel *modelForRow(int row) Q_DECL_OVERRIDE;
+        Q_INVOKABLE int rowForModel(AbstractModel *model) Q_DECL_OVERRIDE;
 
-        int separatorCount() const;
+        int separatorCount() const Q_DECL_OVERRIDE;
 
         bool paginate() const;
         void setPaginate(bool paginate);
@@ -87,7 +87,7 @@ class AppsModel : public AbstractModel
 
         QStringList hiddenEntries() const;
 
-        void entryChanged(AbstractEntry *entry);
+        void entryChanged(AbstractEntry *entry) Q_DECL_OVERRIDE;
 
     Q_SIGNALS:
         void cleared() const;
@@ -101,7 +101,7 @@ class AppsModel : public AbstractModel
         void hiddenEntriesChanged() const;
 
     protected Q_SLOTS:
-        virtual void refresh();
+        void refresh() Q_DECL_OVERRIDE;
 
     protected:
         void refreshInternal();

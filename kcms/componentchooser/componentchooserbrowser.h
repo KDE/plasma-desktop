@@ -25,9 +25,9 @@ Q_OBJECT
 public:
 	CfgBrowser(QWidget *parent);
 	virtual ~CfgBrowser();
-	virtual void load(KConfig *cfg);
-	virtual void save(KConfig *cfg);
-	virtual void defaults();
+	void load(KConfig *cfg) Q_DECL_OVERRIDE;
+	void save(KConfig *cfg) Q_DECL_OVERRIDE;
+	void defaults() Q_DECL_OVERRIDE;
 
 protected Q_SLOTS:
 	void selectBrowser();

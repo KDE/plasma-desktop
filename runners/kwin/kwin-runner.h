@@ -30,8 +30,8 @@ class KWinRunner : public Plasma::AbstractRunner
         explicit KWinRunner(QObject *parent, const QVariantList &args);
         ~KWinRunner();
 
-        void match(Plasma::RunnerContext &context);
-        void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &action);
+        void match(Plasma::RunnerContext &context) Q_DECL_OVERRIDE;
+        void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &action) Q_DECL_OVERRIDE;
 
     private:
       void checkAvailability(const QString &name, const QString &oldOwner, const QString &newOwner);

@@ -32,8 +32,8 @@ Q_SIGNALS:
     void leave();
 
 protected:
-    void enterEvent(QEvent *);
-    void leaveEvent(QEvent *);
+    void enterEvent(QEvent *) Q_DECL_OVERRIDE;
+    void leaveEvent(QEvent *) Q_DECL_OVERRIDE;
 
 private:
     Ui::TestArea m_ui;

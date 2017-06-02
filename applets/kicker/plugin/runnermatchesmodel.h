@@ -39,20 +39,20 @@ class RunnerMatchesModel : public AbstractModel
         explicit RunnerMatchesModel(const QString &runnerId, const QString &name,
             Plasma::RunnerManager *manager, QObject *parent = 0);
 
-        QString description() const;
+        QString description() const Q_DECL_OVERRIDE;
 
-        QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
+        QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const Q_DECL_OVERRIDE;
 
-        int rowCount(const QModelIndex &parent = QModelIndex()) const;
+        int rowCount(const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE;
 
-        Q_INVOKABLE bool trigger(int row, const QString &actionId, const QVariant &argument);
+        Q_INVOKABLE bool trigger(int row, const QString &actionId, const QVariant &argument) Q_DECL_OVERRIDE;
 
         QString runnerId() const { return m_runnerId; }
         QString name() const { return m_name; }
 
         void setMatches(const QList<Plasma::QueryMatch> &matches);
 
-        AbstractModel* favoritesModel();
+        AbstractModel* favoritesModel() Q_DECL_OVERRIDE;
 
     private:
         QString m_runnerId;

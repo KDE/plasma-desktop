@@ -31,20 +31,20 @@ class ContactEntry : public AbstractEntry
     public:
         explicit ContactEntry(AbstractModel *owner, const QString &id);
 
-        EntryType type() const { return RunnableType; }
+        EntryType type() const Q_DECL_OVERRIDE { return RunnableType; }
 
-        bool isValid() const;
+        bool isValid() const Q_DECL_OVERRIDE;
 
-        QIcon icon() const;
-        QString name() const;
+        QIcon icon() const Q_DECL_OVERRIDE;
+        QString name() const Q_DECL_OVERRIDE;
 
-        QString id() const;
-        QUrl url() const;
+        QString id() const Q_DECL_OVERRIDE;
+        QUrl url() const Q_DECL_OVERRIDE;
 
-        bool hasActions() const;
-        QVariantList actions() const;
+        bool hasActions() const Q_DECL_OVERRIDE;
+        QVariantList actions() const Q_DECL_OVERRIDE;
 
-        bool run(const QString& actionId = QString(), const QVariant &argument = QVariant());
+        bool run(const QString& actionId = QString(), const QVariant &argument = QVariant()) Q_DECL_OVERRIDE;
 
         static void showPersonDetailsDialog(const QString &id);
 

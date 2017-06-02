@@ -110,7 +110,7 @@ class CJobRunner : public QDialog
     private:
 
     void    contineuToNext(bool cont);
-    void    closeEvent(QCloseEvent *e);
+    void    closeEvent(QCloseEvent *e) Q_DECL_OVERRIDE;
     void    setPage(int page, const QString &msg=QString());
     QString fileName(const QUrl &url);
     QString errorString(int value) const;

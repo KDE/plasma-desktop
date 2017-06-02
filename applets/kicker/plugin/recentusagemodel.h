@@ -32,7 +32,7 @@ class GroupSortProxy : public QSortFilterProxyModel
         ~GroupSortProxy();
 
     protected:
-        bool lessThan(const QModelIndex &left, const QModelIndex &right) const;
+        bool lessThan(const QModelIndex &left, const QModelIndex &right) const Q_DECL_OVERRIDE;
 };
 
 class InvalidAppsFilterProxy : public QSortFilterProxyModel
@@ -44,7 +44,7 @@ class InvalidAppsFilterProxy : public QSortFilterProxyModel
         ~InvalidAppsFilterProxy();
 
     protected:
-        bool filterAcceptsRow(int source_row, const QModelIndex & source_parent) const;
+        bool filterAcceptsRow(int source_row, const QModelIndex & source_parent) const Q_DECL_OVERRIDE;
 
     private Q_SLOTS:
         void connectNewFavoritesModel();
@@ -70,14 +70,14 @@ class RecentUsageModel : public ForwardingModel, public QQmlParserStatus
                 int ordering = Recent);
         ~RecentUsageModel();
 
-        QString description() const;
+        QString description() const Q_DECL_OVERRIDE;
 
-        QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
+        QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const Q_DECL_OVERRIDE;
 
-        Q_INVOKABLE bool trigger(int row, const QString &actionId, const QVariant &argument);
+        Q_INVOKABLE bool trigger(int row, const QString &actionId, const QVariant &argument) Q_DECL_OVERRIDE;
 
-        bool hasActions() const;
-        QVariantList actions() const;
+        bool hasActions() const Q_DECL_OVERRIDE;
+        QVariantList actions() const Q_DECL_OVERRIDE;
 
         IncludeUsage usage() const;
 
@@ -91,7 +91,7 @@ class RecentUsageModel : public ForwardingModel, public QQmlParserStatus
         void orderingChanged(int ordering);
 
     private Q_SLOTS:
-        void refresh();
+        void refresh() Q_DECL_OVERRIDE;
 
     private:
         QVariant appData(const QString &resource, int role) const;

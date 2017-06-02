@@ -32,7 +32,7 @@ public:
 
 protected:
     Plasma::ServiceJob *createJob(const QString &operation,
-                                  QMap<QString, QVariant> &parameters);
+                                  QMap<QString, QVariant> &parameters) Q_DECL_OVERRIDE;
 
 private:
     OrgKdeTouchpadInterface *m_daemon;

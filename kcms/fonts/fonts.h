@@ -92,7 +92,7 @@ public:
     KXftConfig::Hint::Style getHintStyle();
     void setAntiAliasingState(KXftConfig::AntiAliasing::State aaState);
     void enableWidgets();
-    int exec();
+    int exec() Q_DECL_OVERRIDE;
 #endif
 
 protected Q_SLOTS:
@@ -124,9 +124,9 @@ public:
     KFonts(QWidget *parent, const QVariantList &);
     ~KFonts();
 
-    virtual void load();
-    virtual void save();
-    virtual void defaults();
+    void load() Q_DECL_OVERRIDE;
+    void save() Q_DECL_OVERRIDE;
+    void defaults() Q_DECL_OVERRIDE;
 
 protected Q_SLOTS:
     void fontSelected();

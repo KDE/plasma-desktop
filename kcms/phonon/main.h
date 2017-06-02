@@ -38,9 +38,9 @@ class PhononKcm : public KCModule
 public:
     PhononKcm(QWidget *parent, const QVariantList &);
 
-    void load();
-    void save();
-    void defaults();
+    void load() Q_DECL_OVERRIDE;
+    void save() Q_DECL_OVERRIDE;
+    void defaults() Q_DECL_OVERRIDE;
 
 #ifdef HAVE_PULSEAUDIO
 private Q_SLOTS:

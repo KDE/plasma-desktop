@@ -66,7 +66,7 @@ class DirLister : public KDirLister
         void error(const QString &string);
 
     protected:
-        void handleError(KIO::Job *job);
+        void handleError(KIO::Job *job) Q_DECL_OVERRIDE;
 };
 
 class FolderModel : public QSortFilterProxyModel
@@ -116,7 +116,7 @@ class FolderModel : public QSortFilterProxyModel
         FolderModel(QObject *parent = 0);
         ~FolderModel();
 
-        QHash<int, QByteArray> roleNames() const;
+        QHash<int, QByteArray> roleNames() const Q_DECL_OVERRIDE;
         static QHash<int, QByteArray> staticRoleNames();
 
         QString url() const;
@@ -205,11 +205,11 @@ class FolderModel : public QSortFilterProxyModel
 
         Q_INVOKABLE void linkHere(const QUrl &sourceUrl);
 
-        QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
+        QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const Q_DECL_OVERRIDE;
         int indexForUrl(const QUrl &url) const;
         KFileItem itemForIndex(const QModelIndex &index) const;
         bool isDir(const QModelIndex &index, const KDirModel *dirModel) const;
-        bool lessThan(const QModelIndex &left, const QModelIndex &right) const;
+        bool lessThan(const QModelIndex &left, const QModelIndex &right) const Q_DECL_OVERRIDE;
 
         Q_INVOKABLE void paste();
         Q_INVOKABLE void copy();
@@ -244,7 +244,7 @@ class FolderModel : public QSortFilterProxyModel
         void popupMenuAboutToShow(KIO::DropJob *dropJob, QMimeData *mimeData, int x, int y);
 
     protected:
-        bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const;
+        bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const Q_DECL_OVERRIDE;
         bool matchMimeType(const KFileItem &item) const;
         bool matchPattern(const KFileItem &item) const;
 

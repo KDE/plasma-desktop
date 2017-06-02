@@ -51,9 +51,9 @@ class KAccessApp : public KUniqueApplication, QAbstractNativeEventFilter
 public:
 
     explicit KAccessApp(bool allowStyles = true, bool GUIenabled = true);
-    int newInstance();
+    int newInstance() Q_DECL_OVERRIDE;
     void setXkbOpcode(int opcode);
-    virtual bool nativeEventFilter(const QByteArray& eventType, void* message, long int* result);
+    bool nativeEventFilter(const QByteArray& eventType, void* message, long int* result) Q_DECL_OVERRIDE;
 
     bool isFailed() const {
         return m_error;
@@ -126,7 +126,7 @@ public:
 
 protected:
 
-    void paintEvent(QPaintEvent *);
+    void paintEvent(QPaintEvent *) Q_DECL_OVERRIDE;
 
 
 private:

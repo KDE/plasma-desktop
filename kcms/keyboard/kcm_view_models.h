@@ -37,14 +37,14 @@ class LayoutsTableModel : public QAbstractTableModel
  public:
      LayoutsTableModel(Rules* rules, Flags *flags, KeyboardConfig* keyboardConfig, QObject *parent = 0);
 
-     int columnCount(const QModelIndex&) const;
-     Qt::ItemFlags flags(const QModelIndex &index) const;
+     int columnCount(const QModelIndex&) const Q_DECL_OVERRIDE;
+     Qt::ItemFlags flags(const QModelIndex &index) const Q_DECL_OVERRIDE;
      QVariant headerData(int section, Qt::Orientation orientation,
-                         int role = Qt::DisplayRole) const;
+                         int role = Qt::DisplayRole) const Q_DECL_OVERRIDE;
 
-     int rowCount(const QModelIndex &parent = QModelIndex()) const;
-     QVariant data(const QModelIndex &index, int role) const;
-     bool setData(const QModelIndex &index, const QVariant &value, int role);
+     int rowCount(const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE;
+     QVariant data(const QModelIndex &index, int role) const Q_DECL_OVERRIDE;
+     bool setData(const QModelIndex &index, const QVariant &value, int role) Q_DECL_OVERRIDE;
 #ifdef DRAG_ENABLED
      Qt::DropActions supportedDropActions() const {
          return Qt::MoveAction;
@@ -74,10 +74,10 @@ public:
 	explicit LabelEditDelegate(const KeyboardConfig* keyboardConfig, QObject *parent = 0);
 
 	QWidget *createEditor(QWidget *parent, const QStyleOptionViewItem &option,
-			const QModelIndex &index) const;
+			const QModelIndex &index) const Q_DECL_OVERRIDE;
 
 	void updateEditorGeometry(QWidget *editor,
-			const QStyleOptionViewItem &option, const QModelIndex &index) const;
+			const QStyleOptionViewItem &option, const QModelIndex &index) const Q_DECL_OVERRIDE;
 
 //    void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const;
 
@@ -93,14 +93,14 @@ public:
 	VariantComboDelegate(const KeyboardConfig* keyboardConfig, const Rules* rules, QObject *parent = 0);
 
 	QWidget *createEditor(QWidget *parent, const QStyleOptionViewItem &option,
-			const QModelIndex &index) const;
+			const QModelIndex &index) const Q_DECL_OVERRIDE;
 
-	void setEditorData(QWidget *editor, const QModelIndex &index) const;
+	void setEditorData(QWidget *editor, const QModelIndex &index) const Q_DECL_OVERRIDE;
 	void setModelData(QWidget *editor, QAbstractItemModel *model,
-			const QModelIndex &index) const;
+			const QModelIndex &index) const Q_DECL_OVERRIDE;
 
 	void updateEditorGeometry(QWidget *editor,
-			const QStyleOptionViewItem &option, const QModelIndex &index) const;
+			const QStyleOptionViewItem &option, const QModelIndex &index) const Q_DECL_OVERRIDE;
 
 private:
 	const KeyboardConfig* keyboardConfig;
@@ -115,12 +115,12 @@ public:
 	KKeySequenceWidgetDelegate(const KeyboardConfig* keyboardConfig_, QObject *parent = 0);
 
 	QWidget *createEditor(QWidget *parent, const QStyleOptionViewItem &option,
-			const QModelIndex &index) const;
+			const QModelIndex &index) const Q_DECL_OVERRIDE;
 //	void setEditorData(QWidget *editor, const QModelIndex &index) const;
 	void setModelData(QWidget *editor, QAbstractItemModel *model,
-			const QModelIndex &index) const;
+			const QModelIndex &index) const Q_DECL_OVERRIDE;
 	void paint(QPainter* painter, const QStyleOptionViewItem& option,
-	                                    const QModelIndex& index) const;
+	                                    const QModelIndex& index) const Q_DECL_OVERRIDE;
 
 private:
     const KeyboardConfig* keyboardConfig;
@@ -136,20 +136,20 @@ public:
 		  keyboardConfig(keyboardConfig_),
 		  rules(rules_) { }
 
-    int columnCount(const QModelIndex& /*parent*/) const { return 1; }
-    int rowCount(const QModelIndex& parent) const;
-    QModelIndex parent(const QModelIndex& index) const {
+    int columnCount(const QModelIndex& /*parent*/) const Q_DECL_OVERRIDE { return 1; }
+    int rowCount(const QModelIndex& parent) const Q_DECL_OVERRIDE;
+    QModelIndex parent(const QModelIndex& index) const Q_DECL_OVERRIDE {
         if (!index.isValid() )
             return QModelIndex();
         if( index.internalId() < 100 )
             return QModelIndex();
         return createIndex(((index.internalId() - index.row())/100) - 1, index.column());
     }
-    QModelIndex index(int row, int column, const QModelIndex& parent) const {
+    QModelIndex index(int row, int column, const QModelIndex& parent) const Q_DECL_OVERRIDE {
         if(!parent.isValid()) return createIndex(row, column);
         return createIndex(row, column, (100 * (parent.row()+1)) + row);
     }
-    Qt::ItemFlags flags ( const QModelIndex & index ) const {
+    Qt::ItemFlags flags ( const QModelIndex & index ) const Q_DECL_OVERRIDE {
         if( ! index.isValid() )
             return 0;
 
@@ -159,8 +159,8 @@ public:
         return Qt::ItemIsEnabled | Qt::ItemIsUserCheckable | Qt::ItemIsSelectable;
     }
 
-    bool setData ( const QModelIndex & index, const QVariant & value, int role = Qt::EditRole );
-    QVariant data(const QModelIndex& index, int role) const;
+    bool setData ( const QModelIndex & index, const QVariant & value, int role = Qt::EditRole ) Q_DECL_OVERRIDE;
+    QVariant data(const QModelIndex& index, int role) const Q_DECL_OVERRIDE;
     void reset() {
         beginResetModel();
         endResetModel();

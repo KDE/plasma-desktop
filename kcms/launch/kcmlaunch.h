@@ -36,9 +36,9 @@ class LaunchConfig : public KCModule
 
     virtual ~LaunchConfig();
 
-    void load();
-    void save();
-    void defaults();
+    void load() Q_DECL_OVERRIDE;
+    void save() Q_DECL_OVERRIDE;
+    void defaults() Q_DECL_OVERRIDE;
 
   protected Q_SLOTS:
 

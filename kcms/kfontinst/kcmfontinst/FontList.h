@@ -101,18 +101,18 @@ class CFontList : public QAbstractItemModel
     CFontList(QWidget *parent=0);
     ~CFontList();
 
-    QVariant        data(const QModelIndex &index, int role) const;
-    Qt::ItemFlags   flags(const QModelIndex &index) const;
-    Qt::DropActions supportedDropActions() const;
-    QMimeData *     mimeData(const QModelIndexList &indexes) const;
-    QStringList     mimeTypes() const;
+    QVariant        data(const QModelIndex &index, int role) const Q_DECL_OVERRIDE;
+    Qt::ItemFlags   flags(const QModelIndex &index) const Q_DECL_OVERRIDE;
+    Qt::DropActions supportedDropActions() const Q_DECL_OVERRIDE;
+    QMimeData *     mimeData(const QModelIndexList &indexes) const Q_DECL_OVERRIDE;
+    QStringList     mimeTypes() const Q_DECL_OVERRIDE;
     QVariant        headerData(int section, Qt::Orientation orientation,
-                               int role = Qt::DisplayRole) const;
+                               int role = Qt::DisplayRole) const Q_DECL_OVERRIDE;
     QModelIndex     index(int row, int column,
-                          const QModelIndex &parent = QModelIndex()) const;
-    QModelIndex     parent(const QModelIndex &index) const;
-    int             rowCount(const QModelIndex &parent = QModelIndex()) const;
-    int             columnCount(const QModelIndex &parent = QModelIndex()) const;
+                          const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE;
+    QModelIndex     parent(const QModelIndex &index) const Q_DECL_OVERRIDE;
+    int             rowCount(const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE;
+    int             columnCount(const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE;
     int             row(const CFamilyItem *fam) const { return itsFamilies.indexOf((CFamilyItem *)fam); }
     void            forceNewPreviews();
     const CFamilyItemCont & families() const { return itsFamilies; }
@@ -209,7 +209,7 @@ class CFamilyItem : public CFontModelItem
     bool                 updateStatus();
     bool                 updateRegularFont(CFontItem *font);
     CFontItem *          findFont(quint32 style, bool sys);
-    int                  rowNumber() const                { return itsParent.row(this); }
+    int                  rowNumber() const                Q_DECL_OVERRIDE { return itsParent.row(this); }
     int                  row(const CFontItem *font) const { return itsFonts.indexOf((CFontItem *)font); }
     EStatus              status() const                   { return itsStatus; }
     EStatus              realStatus() const               { return itsRealStatus; }
@@ -250,7 +250,7 @@ class CFontItem : public CFontModelItem
     quint32                           styleInfo() const        { return itsStyle.value(); }
     int                               index() const            { return (*itsStyle.files().begin()).index(); }
     const QString &                   family() const           { return (static_cast<CFamilyItem *>(parent()))->name(); }
-    int                               rowNumber() const        { return (static_cast<CFamilyItem *>(parent()))->row(this); }
+    int                               rowNumber() const        Q_DECL_OVERRIDE { return (static_cast<CFamilyItem *>(parent()))->row(this); }
     const FileCont &                  files() const            { return itsStyle.files(); }
     qulonglong                        writingSystems() const   { return itsStyle.writingSystems(); }
     QUrl                              url() const              { return CJobRunner::encode(family(), styleInfo(), isSystem()); }
@@ -275,11 +275,11 @@ class CFontListSortFilterProxy : public QSortFilterProxyModel
     CFontListSortFilterProxy(QObject *parent, QAbstractItemModel *model);
     virtual ~CFontListSortFilterProxy() { }
 
-    QVariant         data(const QModelIndex &idx, int role) const;
+    QVariant         data(const QModelIndex &idx, int role) const Q_DECL_OVERRIDE;
     bool             acceptFont(CFontItem *fnt, bool checkFontText) const;
     bool             acceptFamily(CFamilyItem *fam) const;
-    bool             filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const;
-    bool             lessThan(const QModelIndex &left, const QModelIndex &right) const;
+    bool             filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const Q_DECL_OVERRIDE;
+    bool             lessThan(const QModelIndex &left, const QModelIndex &right) const Q_DECL_OVERRIDE;
     void             setFilterGroup(CGroupListItem *grp);
     CGroupListItem * filterGroup()   { return itsGroup; }
 
@@ -351,18 +351,18 @@ class CFontListView : public QTreeView
     private Q_SLOTS:
 
     void            setSortColumn(int col);
-    void            selectionChanged(const QItemSelection &selected, const QItemSelection &deselected);
+    void            selectionChanged(const QItemSelection &selected, const QItemSelection &deselected) Q_DECL_OVERRIDE;
     void            itemCollapsed(const QModelIndex &index);
     void            view();
 
     private:
 
     QModelIndexList allIndexes();
-    void            startDrag(Qt::DropActions supportedActions);
-    void            dragEnterEvent(QDragEnterEvent *event);
-    void            dropEvent(QDropEvent *event);
-    void            contextMenuEvent(QContextMenuEvent *ev);
-    virtual bool    viewportEvent(QEvent *event);
+    void            startDrag(Qt::DropActions supportedActions) Q_DECL_OVERRIDE;
+    void            dragEnterEvent(QDragEnterEvent *event) Q_DECL_OVERRIDE;
+    void            dropEvent(QDropEvent *event) Q_DECL_OVERRIDE;
+    void            contextMenuEvent(QContextMenuEvent *ev) Q_DECL_OVERRIDE;
+    bool    viewportEvent(QEvent *event) Q_DECL_OVERRIDE;
 
     private:
 

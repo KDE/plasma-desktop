@@ -48,11 +48,11 @@ class CFontPreview : public QWidget
     CFontPreview(QWidget *parent);
     virtual ~CFontPreview();
 
-    void        paintEvent(QPaintEvent *);
-    void        mouseMoveEvent(QMouseEvent *event);
-    void        wheelEvent(QWheelEvent *e);
-    QSize       sizeHint() const;
-    QSize       minimumSizeHint() const;
+    void        paintEvent(QPaintEvent *) Q_DECL_OVERRIDE;
+    void        mouseMoveEvent(QMouseEvent *event) Q_DECL_OVERRIDE;
+    void        wheelEvent(QWheelEvent *e) Q_DECL_OVERRIDE;
+    QSize       sizeHint() const Q_DECL_OVERRIDE;
+    QSize       minimumSizeHint() const Q_DECL_OVERRIDE;
 
     void        showFont(const QString &name, // Thsi is either family name, or filename
                          unsigned long styleInfo=KFI_NO_STYLE_INFO, int face=0);

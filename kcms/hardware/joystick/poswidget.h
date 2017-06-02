@@ -43,7 +43,7 @@ class PosWidget : public QWidget
     void showTrace(bool t);
 
   protected:
-    virtual void paintEvent(QPaintEvent *);
+    void paintEvent(QPaintEvent *) Q_DECL_OVERRIDE;
 
   private:
     int x, y;

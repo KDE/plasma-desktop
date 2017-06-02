@@ -53,14 +53,14 @@ class CKioFonts : public KIO::SlaveBase
     CKioFonts(const QByteArray &pool, const QByteArray &app);
     virtual ~CKioFonts();
 
-    void listDir(const QUrl &url);
-    void put(const QUrl &url, int permissions, KIO::JobFlags flags);
-    void get(const QUrl &url);
-    void del(const QUrl &url, bool isFile);
-    void copy(const QUrl &src, const QUrl &dest, int mode, KIO::JobFlags flags);
-    void rename(const QUrl &src, const QUrl &dest, KIO::JobFlags flags);
+    void listDir(const QUrl &url) Q_DECL_OVERRIDE;
+    void put(const QUrl &url, int permissions, KIO::JobFlags flags) Q_DECL_OVERRIDE;
+    void get(const QUrl &url) Q_DECL_OVERRIDE;
+    void del(const QUrl &url, bool isFile) Q_DECL_OVERRIDE;
+    void copy(const QUrl &src, const QUrl &dest, int mode, KIO::JobFlags flags) Q_DECL_OVERRIDE;
+    void rename(const QUrl &src, const QUrl &dest, KIO::JobFlags flags) Q_DECL_OVERRIDE;
     void statFont(const QUrl &url);
-    void special(const QByteArray &a);
+    void special(const QByteArray &a) Q_DECL_OVERRIDE;
 
     private:
 

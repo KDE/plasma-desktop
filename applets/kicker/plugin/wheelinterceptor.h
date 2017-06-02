@@ -43,7 +43,7 @@ class WheelInterceptor : public QQuickItem
         void wheelMoved(QPoint delta) const;
 
     protected:
-        void wheelEvent(QWheelEvent *event);
+        void wheelEvent(QWheelEvent *event) Q_DECL_OVERRIDE;
 
     private:
         QPointer<QQuickItem> m_destination;

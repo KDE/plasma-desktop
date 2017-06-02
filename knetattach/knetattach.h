@@ -41,7 +41,7 @@ private:
 
 private slots:
     void updateParametersPageStatus();
-    bool validateCurrentPage();
+    bool validateCurrentPage() Q_DECL_OVERRIDE;
     void updatePort( bool encryption );
     void updateFinishButtonText( bool save );
     void slotHelpClicked();

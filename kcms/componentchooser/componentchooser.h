@@ -47,9 +47,9 @@ Q_OBJECT
 public:
 	CfgComponent(QWidget *parent);
 	virtual ~CfgComponent();
-	virtual void load(KConfig *cfg);
-	virtual void save(KConfig *cfg);
-	virtual void defaults();
+	void load(KConfig *cfg) Q_DECL_OVERRIDE;
+	void save(KConfig *cfg) Q_DECL_OVERRIDE;
+	void defaults() Q_DECL_OVERRIDE;
 
 protected:
 	QHash<QString, QString>  m_lookupDict,m_revLookupDict;

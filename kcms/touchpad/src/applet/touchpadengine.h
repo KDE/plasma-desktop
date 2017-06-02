@@ -30,7 +30,7 @@ public:
     TouchpadEngine(QObject *parent, const QVariantList &args);
     ~TouchpadEngine();
 
-    Plasma::Service *serviceForSource(const QString &source);
+    Plasma::Service *serviceForSource(const QString &source) Q_DECL_OVERRIDE;
 
 private Q_SLOTS:
     void workingTouchpadFoundChanged(bool);

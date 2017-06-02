@@ -57,11 +57,11 @@ public:
 
     static void kcmInit();
 
-    virtual void load();
-    virtual void save();
-    virtual void defaults();
+    void load() Q_DECL_OVERRIDE;
+    void save() Q_DECL_OVERRIDE;
+    void defaults() Q_DECL_OVERRIDE;
 
-    virtual void hideEvent(QHideEvent *);
+    void hideEvent(QHideEvent *) Q_DECL_OVERRIDE;
 
 private Q_SLOTS:
     void beginTesting();

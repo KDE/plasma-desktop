@@ -29,8 +29,8 @@ class ItemDelegate : public QAbstractItemDelegate
     public:
         ItemDelegate(QObject *parent = 0);
         ~ItemDelegate();
-        QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const;
-        void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const;
+        QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const Q_DECL_OVERRIDE;
+        void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const Q_DECL_OVERRIDE;
 
     private:
         QString firstLine(const QModelIndex &index) const;

@@ -65,7 +65,7 @@ class AbstractGroupEntry : public AbstractEntry
     public:
         explicit AbstractGroupEntry(AbstractModel *owner);
 
-        EntryType type() const { return GroupType; }
+        EntryType type() const Q_DECL_OVERRIDE { return GroupType; }
 };
 
 class SeparatorEntry : public AbstractEntry
@@ -73,7 +73,7 @@ class SeparatorEntry : public AbstractEntry
     public:
         explicit SeparatorEntry(AbstractModel *owner);
 
-        EntryType type() const { return SeparatorType; }
+        EntryType type() const Q_DECL_OVERRIDE { return SeparatorType; }
 };
 
 #endif

@@ -38,9 +38,9 @@ public:
 	explicit KDEDConfig(QWidget* parent, const QVariantList& foo = QVariantList());
 	~KDEDConfig() {}
 
-	void       load();
-	void       save();
-	void       defaults();
+	void       load() Q_DECL_OVERRIDE;
+	void       save() Q_DECL_OVERRIDE;
+	void       defaults() Q_DECL_OVERRIDE;
 
 protected Q_SLOTS:
 	void slotReload();

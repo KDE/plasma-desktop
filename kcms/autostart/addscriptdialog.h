@@ -42,7 +42,7 @@ public:
 
 public Q_SLOTS:
     // reimplemented
-    virtual void accept();
+    void accept() Q_DECL_OVERRIDE;
 
 protected:
     virtual bool doBasicSanityCheck();

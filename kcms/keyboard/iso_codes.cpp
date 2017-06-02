@@ -48,7 +48,7 @@ public:
 		isoEntryList(isoEntryList_) {}
 
     bool startElement(const QString &namespaceURI, const QString &localName,
-                      const QString &qName, const QXmlAttributes &attributes);
+                      const QString &qName, const QXmlAttributes &attributes) Q_DECL_OVERRIDE;
 //    bool fatalError(const QXmlParseException &exception);
 //    QString errorString() const;
 

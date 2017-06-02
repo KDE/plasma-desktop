@@ -142,7 +142,7 @@ namespace {
     public:
         ThumbnailImageResponse(const QString &id, const QSize &requestedSize);
 
-        QQuickTextureFactory *textureFactory() const;
+        QQuickTextureFactory *textureFactory() const Q_DECL_OVERRIDE;
 
         void run();
 
@@ -212,7 +212,7 @@ namespace {
     class ThumbnailImageProvider: public QQuickAsyncImageProvider {
     public:
         QQuickImageResponse *requestImageResponse(const QString &id,
-                                                  const QSize &requestedSize)
+                                                  const QSize &requestedSize) Q_DECL_OVERRIDE
         {
             return new ThumbnailImageResponse(id, requestedSize);
         }

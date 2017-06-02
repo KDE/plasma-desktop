@@ -42,15 +42,15 @@ public:
     SortedActivitiesModel(QVector<KActivities::Info::State> states, QObject *parent = 0);
     virtual ~SortedActivitiesModel();
 
-    QVariant data(const QModelIndex & index, int role = Qt::DisplayRole) const;
+    QVariant data(const QModelIndex & index, int role = Qt::DisplayRole) const Q_DECL_OVERRIDE;
 
-    QHash<int, QByteArray> roleNames() const;
+    QHash<int, QByteArray> roleNames() const Q_DECL_OVERRIDE;
 
     QString relativeActivity(int relative) const;
 
 protected:
     uint lastUsedTime(const QString &activity) const;
-    bool lessThan(const QModelIndex & source_left, const QModelIndex & source_right) const;
+    bool lessThan(const QModelIndex & source_left, const QModelIndex & source_right) const Q_DECL_OVERRIDE;
 
     enum AdditionalRoles {
         LastTimeUsed       = KActivities::ActivitiesModel::UserRole,

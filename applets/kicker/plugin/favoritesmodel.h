@@ -39,13 +39,13 @@ class FavoritesModel : public AbstractModel
         explicit FavoritesModel(QObject *parent = 0);
         ~FavoritesModel();
 
-        QString description() const;
+        QString description() const Q_DECL_OVERRIDE;
 
-        QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
+        QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const Q_DECL_OVERRIDE;
 
-        int rowCount(const QModelIndex &parent = QModelIndex()) const;
+        int rowCount(const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE;
 
-        Q_INVOKABLE bool trigger(int row, const QString &actionId, const QVariant &argument);
+        Q_INVOKABLE bool trigger(int row, const QString &actionId, const QVariant &argument) Q_DECL_OVERRIDE;
 
         bool enabled() const;
         void setEnabled(bool enable);
@@ -65,10 +65,10 @@ class FavoritesModel : public AbstractModel
         int dropPlaceholderIndex() const;
         void setDropPlaceholderIndex(int index);
 
-        AbstractModel* favoritesModel();
+        AbstractModel* favoritesModel() Q_DECL_OVERRIDE;
 
     public Q_SLOTS:
-        virtual void refresh();
+        void refresh() Q_DECL_OVERRIDE;
 
     Q_SIGNALS:
         void enabledChanged() const;

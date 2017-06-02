@@ -86,7 +86,7 @@ class CFontFileList : public QThread
 
     private:
 
-    void run();
+    void run() Q_DECL_OVERRIDE;
     void fileDuplicates(const QString &folder, const QSet<TFile> &files);
 
     private:
@@ -139,7 +139,7 @@ class CFontFileListView : public QTreeWidget
     void unmark();
     void selectionChanged();
     void clicked(QTreeWidgetItem *item, int col);
-    void contextMenuEvent(QContextMenuEvent *ev);
+    void contextMenuEvent(QContextMenuEvent *ev) Q_DECL_OVERRIDE;
 
     private:
 
@@ -160,7 +160,7 @@ class CDuplicatesDialog : public QDialog
 
     CDuplicatesDialog(QWidget *parent, CFontList *fl);
 
-    int               exec();
+    int               exec() Q_DECL_OVERRIDE;
     const CFontList * fontList() const    { return itsFontList; }
 
     private Q_SLOTS:

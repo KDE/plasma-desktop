@@ -40,9 +40,9 @@ public:
     Autostart( QWidget* parent, const QVariantList&  );
     ~Autostart();
     enum COL_TYPE { COL_NAME = 0, COL_COMMAND=1, COL_STATUS=2,COL_RUN=3 };
-    void load();
-    void save();
-    void defaults();
+    void load() Q_DECL_OVERRIDE;
+    void save() Q_DECL_OVERRIDE;
+    void defaults() Q_DECL_OVERRIDE;
 
     QStringList listPathName() const { return m_pathName;}
 

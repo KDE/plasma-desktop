@@ -52,10 +52,10 @@ public:
 		fromExtras(fromExtras_){}
 
     bool startElement(const QString &namespaceURI, const QString &localName,
-                      const QString &qName, const QXmlAttributes &attributes);
+                      const QString &qName, const QXmlAttributes &attributes) Q_DECL_OVERRIDE;
     bool endElement(const QString &namespaceURI, const QString &localName,
-                    const QString &qName);
-    bool characters(const QString &str);
+                    const QString &qName) Q_DECL_OVERRIDE;
+    bool characters(const QString &str) Q_DECL_OVERRIDE;
 //    bool fatalError(const QXmlParseException &exception);
 //    QString errorString() const;
 

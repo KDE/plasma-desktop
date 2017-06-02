@@ -44,7 +44,7 @@ public:
     {
     }
 
-    void start()
+    void start() Q_DECL_OVERRIDE
     {
         if (m_daemon) {
             QMetaObject::invokeMethod(m_daemon, operationName().toLatin1());
