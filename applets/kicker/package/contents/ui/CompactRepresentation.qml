@@ -66,6 +66,12 @@ Item {
         }
     }
 
+    Connections {
+        target: units.iconSizeHints
+
+        onPanelChanged: updateSizeHints()
+    }
+
     PlasmaCore.IconItem {
         id: buttonIcon
 
