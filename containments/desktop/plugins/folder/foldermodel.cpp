@@ -952,8 +952,16 @@ void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row)
     const int x = dropEvent->property("x").toInt();
     const int y = dropEvent->property("y").toInt();
 
-    connect(dropJob, static_cast<void(KIO::DropJob::*)(const KFileItemListProperties &)>(&KIO::DropJob::popupMenuAboutToShow), this, [this, mimeData, x, y, dropJob](const KFileItemListProperties &) {
-        emit popupMenuAboutToShow(dropJob, mimeData, x, y);
+    // The QMimeData we extract from the DropArea's drop event is deleted as soon as this method
+    // ends but we need to keep a copy for when popupMenuAboutToShow fires.
+    QMimeData *mimeCopy = new QMimeData();
+    for (const QString &format : mimeData->formats()) {
+        mimeCopy->setData(format, mimeData->data(format));
+    }
+
+    connect(dropJob, static_cast<void(KIO::DropJob::*)(const KFileItemListProperties &)>(&KIO::DropJob::popupMenuAboutToShow), this, [this, mimeCopy, x, y, dropJob](const KFileItemListProperties &) {
+        emit popupMenuAboutToShow(dropJob, mimeCopy, x, y);
+        mimeCopy->deleteLater();
     });
 }
 
