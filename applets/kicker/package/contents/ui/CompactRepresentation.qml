@@ -61,7 +61,7 @@ Item {
         } else {
             root.Layout.minimumWidth = units.iconSizes.small;
             root.Layout.maximumWidth = inPanel ? units.iconSizeHints.panel : -1;
-            root.Layout.minimumHeight = units.iconSizes.small
+            root.Layout.minimumHeight = units.iconSizes.small;
             root.Layout.maximumHeight = inPanel ? units.iconSizeHints.panel : -1;
         }
     }
