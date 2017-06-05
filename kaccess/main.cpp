@@ -26,12 +26,15 @@
 #include <KLocalizedString>
 #include <QX11Info>
 #include <Kdelibs4ConfigMigrator>
+#include <QSessionManager>
 
 extern "C" Q_DECL_EXPORT int kdemain(int argc, char * argv[])
 {
     Kdelibs4ConfigMigrator migrate(QStringLiteral("kaccess"));
     migrate.setConfigFiles(QStringList() << QStringLiteral("kaccessrc"));
     migrate.migrate();
+
+    QGuiApplication::setFallbackSessionManagementEnabled(false);
 
     K4AboutData about(I18N_NOOP("kaccess"), 0, ki18n("KDE Accessibility Tool"),
                       0, KLocalizedString(), K4AboutData::License_GPL,
@@ -62,6 +65,14 @@ extern "C" Q_DECL_EXPORT int kdemain(int argc, char * argv[])
     if (app.isFailed()) {
         return 1;
     }
+
+    auto disableSessionManagement = [](QSessionManager &sm) {
+        sm.setRestartHint(QSessionManager::RestartNever);
+    };
+
+    QObject::connect(&app, &QGuiApplication::commitDataRequest, disableSessionManagement);
+    QObject::connect(&app, &QGuiApplication::saveStateRequest, disableSessionManagement);
+
 
     // verify the X server has matching XKB extension
     // if yes, the XKB extension is initialized
