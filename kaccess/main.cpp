@@ -41,6 +41,10 @@ extern "C" Q_DECL_EXPORT int kdemain(int argc, char * argv[])
 
     KCmdLineArgs::init(argc, argv, &about);
 
+    //this application is currently only relevant on X, force to run under X
+    //note if someone does port this we still need to run kaccess under X for xwayland apps
+    setenv("QT_QPA_PLATFORM", "xcb", true);
+
     if (!KAccessApp::start())
         return 0;
 
