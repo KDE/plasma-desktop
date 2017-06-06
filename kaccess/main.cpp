@@ -26,12 +26,15 @@
 #include <KLocalizedString>
 #include <QX11Info>
 #include <Kdelibs4ConfigMigrator>
+#include <QSessionManager>
 
 extern "C" Q_DECL_EXPORT int kdemain(int argc, char * argv[])
 {
     Kdelibs4ConfigMigrator migrate(QStringLiteral("kaccess"));
     migrate.setConfigFiles(QStringList() << QStringLiteral("kaccessrc"));
     migrate.migrate();
+
+    QGuiApplication::setFallbackSessionManagementEnabled(false);
 
     K4AboutData about(I18N_NOOP("kaccess"), 0, ki18n("KDE Accessibility Tool"),
                       0, KLocalizedString(), K4AboutData::License_GPL,
@@ -40,6 +43,10 @@ extern "C" Q_DECL_EXPORT int kdemain(int argc, char * argv[])
     about.addAuthor(ki18n("Matthias Hoelzer-Kluepfel"), ki18n("Author") , "hoelzer@kde.org");
 
     KCmdLineArgs::init(argc, argv, &about);
+
+    //this application is currently only relevant on X, force to run under X
+    //note if someone does port this we still need to run kaccess under X for xwayland apps
+    setenv("QT_QPA_PLATFORM", "xcb", true);
 
     if (!KAccessApp::start())
         return 0;
@@ -58,6 +65,14 @@ extern "C" Q_DECL_EXPORT int kdemain(int argc, char * argv[])
     if (app.isFailed()) {
         return 1;
     }
+
+    auto disableSessionManagement = [](QSessionManager &sm) {
+        sm.setRestartHint(QSessionManager::RestartNever);
+    };
+
+    QObject::connect(&app, &QGuiApplication::commitDataRequest, disableSessionManagement);
+    QObject::connect(&app, &QGuiApplication::saveStateRequest, disableSessionManagement);
+
 
     // verify the X server has matching XKB extension
     // if yes, the XKB extension is initialized
