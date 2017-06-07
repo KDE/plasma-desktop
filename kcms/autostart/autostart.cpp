@@ -155,7 +155,7 @@ void Autostart::load()
 
     m_pathName << i18n("Startup")
              << i18n("Logout")
-             << i18n("Pre-KDE startup")
+             << i18n("Before session startup")
         ;
     widget->listCMD->clear();
 
