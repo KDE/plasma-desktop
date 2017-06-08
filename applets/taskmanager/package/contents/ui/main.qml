@@ -127,7 +127,7 @@ Item {
             return true;
         }
 
-        groupMode: iconsOnly ? TaskManager.TasksModel.GroupApplication
+        groupMode: iconsOnly ? TaskManager.TasksModel.GroupApplications
             : groupModeEnumValue(plasmoid.configuration.groupingStrategy)
         groupInline: !plasmoid.configuration.groupPopups
         groupingWindowTasksThreshold: (plasmoid.configuration.onlyGroupWhenFull && !iconsOnly
