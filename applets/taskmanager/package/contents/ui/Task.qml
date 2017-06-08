@@ -41,7 +41,7 @@ MouseArea {
 
     readonly property var m: model
 
-    readonly property int pid: model.AppPid
+    readonly property int pid: model.AppPid != undefined ? model.AppPid : 0
     readonly property string appName: model.AppName
     property int itemIndex: index
     property bool inPopup: false
