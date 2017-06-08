@@ -168,7 +168,6 @@ Item {
 
                         PropertyChanges {
                             target: toolTip
-                            x: undefined
                             y: frameLoader.y + icon.y
                             width: Math.max(icon.paintedWidth, label.paintedWidth)
                             height: (label.y + label.paintedHeight) - y
