@@ -484,6 +484,9 @@ Item {
 
             focus: true
 
+            readonly property int viewportWidth: viewport ? Math.ceil(viewport.width) : 0
+            readonly property int viewportHeight: viewport ? Math.ceil(viewport.height) : 0
+
             GridView {
                 id: gridView
 
@@ -512,23 +515,41 @@ Item {
                 keyNavigationWraps: false
                 boundsBehavior: Flickable.StopAtBounds
 
+                function calcExtraSpacing(cellSize, containerSize) {
+                    var availableColumns = Math.floor(containerSize / cellSize);
+                    var extraSpacing = 0;
+                    if (availableColumns > 0) {
+                        var allColumnSize = availableColumns * cellSize;
+                        var extraSpace = Math.max(containerSize - allColumnSize);
+                        extraSpacing = extraSpace / availableColumns;
+                    }
+                    return extraSpacing;
+                }
+
+                readonly property int iconWidth: iconSize + (2 * units.largeSpacing) + (2 * units.smallSpacing)
+                readonly property real extraWidth: calcExtraSpacing(iconWidth, scrollArea.viewportWidth)
                 cellWidth: {
                     if (root.useListViewMode) {
                         return gridView.width;
+                    } else if (root.isContainment) {
+                        return iconWidth + extraWidth;
+                    } else {
+                        return iconWidth;
                     }
-
-                    return iconSize + (2 * units.largeSpacing) + (2 * units.smallSpacing);
                 }
 
+                readonly property int iconHeight: (iconSize + (theme.mSize(theme.defaultFont).height * plasmoid.configuration.textLines) + (6 * units.smallSpacing))
+                readonly property real extraHeight: calcExtraSpacing(iconHeight, scrollArea.viewportHeight)
                 cellHeight: {
                     if (root.useListViewMode) {
                         return Math.ceil((Math.max(theme.mSize(theme.defaultFont).height, iconSize)
                             + Math.max(highlightItemSvg.margins.top + highlightItemSvg.margins.bottom,
                             listItemSvg.margins.top + listItemSvg.margins.bottom)) / 2) * 2;
+                    } else if (root.isContainment) {
+                        return iconHeight + extraHeight;
+                    } else {
+                        return iconHeight;
                     }
-
-                    return (iconSize + (theme.mSize(theme.defaultFont).height * plasmoid.configuration.textLines)
-                        + (6 * units.smallSpacing));
                 }
 
                 delegate: FolderItemDelegate {
