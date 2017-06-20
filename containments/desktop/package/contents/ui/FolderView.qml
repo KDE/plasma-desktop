@@ -531,7 +531,7 @@ Item {
                 cellWidth: {
                     if (root.useListViewMode) {
                         return gridView.width;
-                    } else if (root.isContainment) {
+                    } else if (root.isContainment && isRootView) {
                         return iconWidth + extraWidth;
                     } else {
                         return iconWidth;
@@ -545,7 +545,7 @@ Item {
                         return Math.ceil((Math.max(theme.mSize(theme.defaultFont).height, iconSize)
                             + Math.max(highlightItemSvg.margins.top + highlightItemSvg.margins.bottom,
                             listItemSvg.margins.top + listItemSvg.margins.bottom)) / 2) * 2;
-                    } else if (root.isContainment) {
+                    } else if (root.isContainment && isRootView) {
                         return iconHeight + extraHeight;
                     } else {
                         return iconHeight;
