@@ -484,8 +484,13 @@ Item {
 
             focus: true
 
-            readonly property int viewportWidth: viewport ? Math.ceil(viewport.width) : 0
-            readonly property int viewportHeight: viewport ? Math.ceil(viewport.height) : 0
+            property bool ready: false
+            readonly property int viewportWidth: scrollArea.ready && viewport ? Math.ceil(viewport.width) : 0
+            readonly property int viewportHeight: scrollArea.ready && viewport ? Math.ceil(viewport.height) : 0
+
+            Component.onCompleted: {
+                scrollArea.ready = true;
+            }
 
             GridView {
                 id: gridView
@@ -520,35 +525,39 @@ Item {
                     var extraSpacing = 0;
                     if (availableColumns > 0) {
                         var allColumnSize = availableColumns * cellSize;
-                        var extraSpace = Math.max(containerSize - allColumnSize);
+                        var extraSpace = Math.max(containerSize - allColumnSize, 0);
                         extraSpacing = extraSpace / availableColumns;
                     }
                     return extraSpacing;
                 }
 
-                readonly property int iconWidth: iconSize + (2 * units.largeSpacing) + (2 * units.smallSpacing)
-                readonly property real extraWidth: calcExtraSpacing(iconWidth, scrollArea.viewportWidth)
                 cellWidth: {
                     if (root.useListViewMode) {
                         return gridView.width;
-                    } else if (root.isContainment && isRootView) {
-                        return iconWidth + extraWidth;
                     } else {
-                        return iconWidth;
+                        var iconWidth = iconSize + (2 * units.largeSpacing) + (2 * units.smallSpacing);
+                        if (root.isContainment && isRootView && scrollArea.viewportWidth > 0) {
+                            var extraWidth = calcExtraSpacing(iconWidth, scrollArea.viewportWidth);
+                            return iconWidth + extraWidth;
+                        } else {
+                            return iconWidth;
+                        }
                     }
                 }
 
-                readonly property int iconHeight: (iconSize + (theme.mSize(theme.defaultFont).height * plasmoid.configuration.textLines) + (6 * units.smallSpacing))
-                readonly property real extraHeight: calcExtraSpacing(iconHeight, scrollArea.viewportHeight)
                 cellHeight: {
                     if (root.useListViewMode) {
                         return Math.ceil((Math.max(theme.mSize(theme.defaultFont).height, iconSize)
                             + Math.max(highlightItemSvg.margins.top + highlightItemSvg.margins.bottom,
                             listItemSvg.margins.top + listItemSvg.margins.bottom)) / 2) * 2;
-                    } else if (root.isContainment && isRootView) {
-                        return iconHeight + extraHeight;
                     } else {
-                        return iconHeight;
+                        var iconHeight = iconSize + (theme.mSize(theme.defaultFont).height * plasmoid.configuration.textLines) + (6 * units.smallSpacing);
+                        if (root.isContainment && isRootView && scrollArea.viewportHeight > 0) {
+                            var extraHeight = calcExtraSpacing(iconHeight, scrollArea.viewportHeight);
+                            return iconHeight + extraHeight;
+                        } else {
+                            return iconHeight;
+                        }
                     }
                 }
 
