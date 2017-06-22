@@ -43,7 +43,7 @@ public:
     virtual bool isChangedConfig() const {return false;}
 
     virtual QStringList supportedParameters() const {return QStringList();}
-    virtual const QString &errorString() const {return QString();}
+    virtual QString errorString() const {return QString();}
 
     virtual QVector<QObject*> getDevices() const { return QVector<QObject*>(); }
     virtual int touchpadCount() const {return 0;}

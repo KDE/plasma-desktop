@@ -40,7 +40,7 @@ public:
     bool getConfig() Q_DECL_OVERRIDE;
     bool getDefaultConfig() Q_DECL_OVERRIDE;
     bool isChangedConfig() const Q_DECL_OVERRIDE;
-    const QString &errorString() const Q_DECL_OVERRIDE { return m_errorString; }
+    QString errorString() const Q_DECL_OVERRIDE { return m_errorString; }
 
     virtual int touchpadCount() const Q_DECL_OVERRIDE { return m_devices.count(); }
     virtual QVector<QObject*> getDevices() const Q_DECL_OVERRIDE { return m_devices; }
