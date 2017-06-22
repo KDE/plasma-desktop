@@ -20,8 +20,6 @@
 
 #include <QKeyEvent>
 #include <QMouseEvent>
-#include <QScopedPointer>
-#include <QStandardItemModel>
 
 #include <KLocalizedString>
 #include <Plasma/Theme>
@@ -30,12 +28,8 @@ TestArea::TestArea(QWidget *parent) : QWidget(parent)
 {
     m_ui.setupUi(this);
 
-    QStandardItemModel *model = new QStandardItemModel(m_ui.listView);
-    m_ui.listView->setModel(model);
-    QScopedPointer<QStandardItem> item(
-                new QStandardItem(QIcon::fromTheme("folder"), i18n("Drag me")));
-    model->appendRow(item.data());
-    item.take();
+    m_ui.listWidget->addItem(new QListWidgetItem(QIcon::fromTheme("folder"),
+                                                 i18n("Drag me"), m_ui.listWidget));
 
     Plasma::Theme defaultTheme;
     QString wallpaper = defaultTheme.wallpaperPath();
