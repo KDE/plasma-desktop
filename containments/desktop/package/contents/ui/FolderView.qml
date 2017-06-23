@@ -313,7 +313,27 @@ Item {
                 return;
             }
 
-            var pos = mapToItem(hoveredItem.actionsOverlay, mouse.x, mouse.y);
+            var pos = mapToItem(hoveredItem, mouse.x, mouse.y);
+
+            // Moving from an item to its preview popup dialog doesn't unset hoveredItem
+            // even though the cursor has left it, so we need to check whether the click
+            // actually occured inside the item we expect it in before going ahead. If it
+            // didn't, clean up (e.g. dismissing the dialog as a side-effect of unsetting
+            // hoveredItem) and abort.
+            if (pos.x < 0 || pos.x > hoveredItem.width || pos.y < 0 || pos.y > hoveredItem.height) {
+                hoveredItem = null;
+                dir.clearSelection();
+
+                return;
+            // If the hoveredItem is clicked while having a preview popup dialog open,
+            // only dismiss the dialog and abort.
+            } else if (hoveredItem.popupDialog) {
+                hoveredItem.closePopup();
+
+                return;
+            }
+
+            pos = mapToItem(hoveredItem.actionsOverlay, mouse.x, mouse.y);
 
             if (!(pos.x <= hoveredItem.actionsOverlay.width && pos.y <= hoveredItem.actionsOverlay.height)) {
                 if (Qt.styleHints.singleClickActivation || doubleClickInProgress) {
