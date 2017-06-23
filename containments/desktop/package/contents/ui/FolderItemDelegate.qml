@@ -48,6 +48,13 @@ Item {
         }
     }
 
+    function closePopup() {
+        if (popupDialog) {
+            popupDialog.requestDestroy();
+            loader.item.popupDialog = null;
+        }
+    }
+
     Loader {
         id: loader
 
@@ -110,8 +117,7 @@ Item {
                     }
                 } else if (!hovered) {
                     if (popupDialog != null) {
-                        popupDialog.requestDestroy();
-                        popupDialog = null;
+                        closePopup();
                     }
 
                     if (selectionButton) {
@@ -363,11 +369,14 @@ Item {
                     id: popupButtonComponent
 
                     FolderItemActionButton {
-                        visible: popupDialog == null
+                        visible: main.GridView.view.isRootView && (popupDialog == null)
 
                         element: "open"
 
-                        onClicked: openPopup()
+                        onClicked: {
+                            dir.setSelected(positioner.map(index))
+                            openPopup();
+                        }
                     }
                 }
 
