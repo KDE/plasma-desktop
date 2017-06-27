@@ -1,6 +1,6 @@
 project(plasma-desktop)
 
-set(PROJECT_VERSION "5.10.2")
+set(PROJECT_VERSION "5.10.3")
 set(PROJECT_VERSION_MAJOR 5)
 
 cmake_minimum_required(VERSION 2.8.12 FATAL_ERROR)
