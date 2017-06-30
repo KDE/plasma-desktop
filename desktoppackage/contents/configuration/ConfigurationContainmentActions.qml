@@ -115,6 +115,7 @@ Item {
             }
         }
         MouseEventInputButton {
+            anchors.left: parent.left
             defaultText: i18nd("plasma_shell_org.kde.plasma.desktop", "Add Action");
             onEventStringChanged: {
                 configDialog.currentContainmentActionsModel.append(eventString, "org.kde.contextmenu");
