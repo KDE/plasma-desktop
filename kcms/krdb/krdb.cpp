@@ -177,8 +177,19 @@ static void applyQtColors( KSharedConfigPtr kglobalcfg, QSettings& settings, QPa
 
 static void applyQtSettings( KSharedConfigPtr kglobalcfg, QSettings& settings )
 {
-  /* export font settings */
-  settings.setValue(QStringLiteral("/qt/font"), QFontDatabase::systemFont(QFontDatabase::GeneralFont).toString());
+    /* export font settings */
+
+    // NOTE keep this in sync with kfontsettingsdata in plasma-integration (cf. also Bug 378262)
+    QFont defaultFont(QStringLiteral("Noto Sans"), 10, -1);
+    defaultFont.setStyleHint(QFont::SansSerif);
+
+    const KConfigGroup configGroup(KSharedConfig::openConfig(), QStringLiteral("General"));
+    const QString fontInfo = configGroup.readEntry(QStringLiteral("font"), QString());
+    if (!fontInfo.isEmpty()) {
+        defaultFont.fromString(fontInfo);
+    }
+
+    settings.setValue(QStringLiteral("/qt/font"), defaultFont.toString());
 
   /* export effects settings */
   KConfigGroup kdeCfgGroup(kglobalcfg, "General");
