@@ -885,6 +885,8 @@ Item {
                         dir.cut();
                     } else if (event.matches(StandardKey.Undo)) {
                         dir.undo();
+                    } else if (event.matches(StandardKey.Refresh)) {
+                        dir.refresh();
                     }
                 }
 

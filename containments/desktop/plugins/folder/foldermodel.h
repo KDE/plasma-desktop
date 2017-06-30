@@ -217,6 +217,7 @@ class FolderModel : public QSortFilterProxyModel
         Q_INVOKABLE void deleteSelected();
         Q_INVOKABLE void openSelected();
         Q_INVOKABLE void undo();
+        Q_INVOKABLE void refresh();
 
     Q_SIGNALS:
         void urlChanged() const;
@@ -255,7 +256,6 @@ class FolderModel : public QSortFilterProxyModel
         void evictFromIsDirCache(const KFileItemList &items);
         void selectionChanged(QItemSelection selected, QItemSelection deselected);
         void pasteTo();
-        void refresh();
         void moveSelectedToTrash();
         void emptyTrashBin();
         void restoreSelectedFromTrash();
