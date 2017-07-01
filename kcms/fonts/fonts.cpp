@@ -540,7 +540,7 @@ KFonts::KFonts(QWidget *parent, const QVariantList &args)
 
     // NOTE: keep in sync with plasma-integration/src/platformtheme/kfontsettingsdata.cpp
 
-#ifdef Q_OS_MAC
+#ifdef Q_OS_MACOS
     QFont f0("Lucida Grande", 13); // general/menu/desktop
     QFont f1("Monaco", 10);
     QFont f2("Lucida Grande", 11); // toolbar
@@ -553,8 +553,13 @@ KFonts::KFonts(QWidget *parent, const QVariantList &args)
     QFont f1("Hack", 9); // fixed font
     QFont f2("Noto Sans", 9); // toolbar
 #endif
+#ifdef Q_OS_MACOS
+    QFont f3("Lucida Grande", 14); // window title
+    QFont f5("Lucida Grande", 9); // smallestReadableFont
+#else
     QFont f3("Noto Sans", 10); // window title
     QFont f5("Noto Sans", 8); // smallestReadableFont
+#endif
 
     defaultFontList << f0 << f1 << f5 << f2 << f0 << f3;
 
