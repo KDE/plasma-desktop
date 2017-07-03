@@ -523,7 +523,7 @@ Item {
 
                                         onCheckedChanged: {
                                             if (enabled && !root.loading) {
-                                                touchpad.tapDragLock = checked
+                                                touchpad.naturalScroll = checked
                                                 root.changeSignal()
                                             }
                                         }
