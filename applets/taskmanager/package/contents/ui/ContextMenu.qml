@@ -304,8 +304,7 @@ PlasmaComponents.ContextMenu {
                 menuItem.checked = Qt.binding(function() {
                     return menu.visualParent && menu.visualParent.m.Activities.length === 0;
                 });
-                menuItem.clicked.connect(function() {
-                    var checked = menuItem.checked;
+                menuItem.toggled.connect(function(checked) {
                     var newActivities = undefined; // will cast to an empty QStringList i.e all activities
                     if (!checked) {
                         newActivities = new Array(activityInfo.currentActivity);
@@ -327,9 +326,8 @@ PlasmaComponents.ContextMenu {
                             return menu.visualParent && menu.visualParent.m.Activities.indexOf(activityId) >= 0;
                         };
                     })(activityId));
-                    menuItem.clicked.connect((function(activityId) {
-                        return function () {
-                            var checked = menuItem.checked;
+                    menuItem.toggled.connect((function(activityId) {
+                        return function (checked) {
                             var newActivities = menu.visualParent.m.Activities;
                             if (checked) {
                                 newActivities = newActivities.concat(activityId);
@@ -338,7 +336,8 @@ PlasmaComponents.ContextMenu {
                                 if (index < 0) {
                                     return;
                                 }
-                                newActivities = newActivities.splice(index, 1);
+
+                                newActivities.splice(index, 1);
                             }
                             return tasksModel.requestActivities(menu.visualParent.modelIndex(), newActivities);
                         };
