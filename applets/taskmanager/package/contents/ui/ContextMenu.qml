@@ -640,6 +640,7 @@ PlasmaComponents.ContextMenu {
         property QtObject configureAction: null
 
         enabled: configureAction && configureAction.enabled
+        visible: configureAction && configureAction.visible
 
         text: configureAction ? configureAction.text : ""
         icon: configureAction ? configureAction.icon : ""
