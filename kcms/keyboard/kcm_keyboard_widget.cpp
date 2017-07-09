@@ -23,6 +23,7 @@
 #include <kaboutdata.h>
 #include <KLocalizedString>
 #include <KGlobalAccel>
+#include <KWindowSystem>
 
 #include <QMessageBox>
 #include <QWidget>
@@ -693,6 +694,10 @@ void KCMKeyboardWidget::populateWithCurrentLayouts()
 
 void KCMKeyboardWidget::populateWithCurrentXkbOptions()
 {
+    if (!KWindowSystem::isPlatformX11()) {
+        // TODO: implement for Wayland - query dbus maybe?
+        return;
+    }
 	XkbConfig xkbConfig;
 	if( X11Helper::getGroupNames(QX11Info::display(), &xkbConfig, X11Helper::ALL) ) {
 		foreach(QString xkbOption, xkbConfig.options) {
