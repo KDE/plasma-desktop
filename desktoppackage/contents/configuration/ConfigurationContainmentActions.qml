@@ -94,7 +94,7 @@ Item {
                     width: height
                     enabled: model.hasConfigurationInterface
                     onClicked: {
-                        configDialog.currentContainmentActionsModel.showConfiguration(index);
+                        configDialog.currentContainmentActionsModel.showConfiguration(index, this);
                     }
                 }
                 QtControls.Button {
