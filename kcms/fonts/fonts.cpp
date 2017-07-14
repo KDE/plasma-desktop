@@ -551,7 +551,7 @@ KFonts::KFonts(QWidget *parent, const QVariantList &args)
 #else
     QFont f0("Noto Sans", 10); // general/menu/desktop
     QFont f1("Hack", 9); // fixed font
-    QFont f2("Noto Sans", 9); // toolbar
+    QFont f2("Noto Sans", 10); // toolbar
 #endif
 #ifdef Q_OS_MACOS
     QFont f3("Lucida Grande", 14); // window title
