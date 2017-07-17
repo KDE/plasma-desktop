@@ -82,6 +82,8 @@ Column {
 
         // launcher icon
         PlasmaCore.IconItem {
+            Layout.preferredWidth: units.iconSizes.medium
+            Layout.preferredHeight: units.iconSizes.medium
             source: icon
             animated: false
             usesPlasmaTheme: false
