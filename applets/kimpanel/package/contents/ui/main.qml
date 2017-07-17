@@ -70,7 +70,10 @@ Item {
                     hint: model.hint
                     onTriggered : {
                         if (button == Qt.LeftButton) {
-                            clickHandler(model.key)
+                            clickHandler(model.key);
+                            // clickHandler will trigger the menu, but we have to wait for
+                            // the menu data. So we have to set the visual parent ahead.
+                            actionMenu.visualParent = statusIcon;
                         } else {
                             contextMenu.open(statusIcon, {key: model.key, label: model.label});
                         }

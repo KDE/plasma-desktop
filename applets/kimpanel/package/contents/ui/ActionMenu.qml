@@ -20,7 +20,9 @@
 
 import QtQuick 2.0
 
+import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.plasmoid 2.0
 
 Item {
     id: root
@@ -33,8 +35,8 @@ Item {
 
     onActionListChanged: refreshMenu();
 
-    function open(x, y) {
-        menu.open();
+    function open() {
+        menu.openRelative();
     }
 
     function refreshMenu() {
@@ -66,6 +68,18 @@ Item {
 
         PlasmaComponents.ContextMenu {
             visualParent: root.visualParent
+
+            placement: {
+                if (plasmoid.location == PlasmaCore.Types.LeftEdge) {
+                    return PlasmaCore.Types.RightPosedTopAlignedPopup;
+                } else if (plasmoid.location == PlasmaCore.Types.TopEdge) {
+                    return PlasmaCore.Types.BottomPosedLeftAlignedPopup;
+                } else if (plasmoid.location == PlasmaCore.Types.RightEdge) {
+                    return PlasmaCore.Types.LeftPosedTopAlignedPopup;
+                } else {
+                    return PlasmaCore.Types.TopPosedLeftAlignedPopup;
+                }
+            }
         }
     }
 
