@@ -1233,7 +1233,7 @@ ibus_panel_impanel_update_lookup_table (IBusPanelService *panel,
 
     gint orientation = ibus_lookup_table_get_orientation(lookup_table);
     if (orientation == IBUS_ORIENTATION_HORIZONTAL) {
-        orientation = 2; 
+        orientation = 2;
     } else if (orientation == IBUS_ORIENTATION_VERTICAL) {
         orientation = 1;
     } else {
