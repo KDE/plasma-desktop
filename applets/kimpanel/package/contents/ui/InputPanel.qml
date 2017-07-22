@@ -165,91 +165,109 @@ PlasmaCore.Dialog {
             id: inputPanelEngine
             engine: "kimpanel"
             connectedSources: ["inputpanel"]
-            onDataChanged: {
-                 var data = inputPanelEngine.data["inputpanel"];
-                 if (!data) {
-                     return;
-                 }
-                 var auxVisible = data["AuxVisible"] ? true : false;
-                 var preeditVisible = data["PreeditVisible"] ? true : false;
-                 var lookupTableVisible = data["LookupTableVisible"] ? true : false;
-                 var pos = data["Position"] ? { 'x': data["Position"].x, 
-                                                'y': data["Position"].y,
-                                                'w': data["Position"].width,
-                                                'h': data["Position"].height } : {'x' : 0, 'y': 0, 'w': 0, 'h': 0 };
-                 inputpanel.position = Qt.rect(pos.x, pos.y, pos.w, pos.h);
-
-                 auxLabel.text = (auxVisible && data["AuxText"]) ? data["AuxText"] : ""
-                 var preeditText = (preeditVisible && data["PreeditText"]) ? data["PreeditText"] : ""
-                 var caret = data["CaretPos"] ? data["CaretPos"] : 0;
-                 preeditLabel1.text = preeditText.substring(0, caret);
-                 preeditLabel2.text = preeditText.substring(caret);
-                 preedit.visible = preeditVisible;
-                 var layout = data["LookupTableLayout"] !== undefined ? data["LookupTableLayout"] : 0;
-                 inputpanel.highlightCandidate = data["LookupTableCursor"] !== undefined ? data["LookupTableCursor"] : -1;
-                 inputpanel.verticalLayout = (layout === 1) || (layout == 0 && plasmoid.configuration.vertical_lookup_table);
-                 button.visible = lookupTableVisible
-
-                 if (data["LookupTable"]) {
-                     var table = data["LookupTable"];
-                     if (lookupTableVisible) {
-                         if (table.length < tableList.count) {
-                             tableList.remove(table.length, tableList.count - table.length);
-                         }
-                         for (var i = 0; i < table.length; i ++) {
-                             if (i >= tableList.count) {
-                                 tableList.append({'label' : table[i].label, 'text': table[i].text, 'index': i});
-                             } else {
-                                 tableList.set(i, {'label' : table[i].label, 'text': table[i].text, 'index': i});
-                             }
-                         }
-                     } else {
-                         tableList.clear();
-                     }
-                 }
-
-                 textLabel.visible = auxVisible || preeditVisible;
-                 inputpanel.visible = auxVisible || preeditVisible || lookupTableVisible;
-                 inputpanel.mainItem.update();
-            }
+            onDataChanged: timer.restart()
         }
 
         Kimpanel.Screen {
             id: screen
         }
+
+        // Kimpanel's update may come in with in several DBus message. Use
+        // timer to delegate the update so we get less flicker.
+        Timer {
+            id: timer
+            interval: 1
+            onTriggered: updateUI()
+        }
+    }
+
+    function updateUI() {
+        var data = inputPanelEngine.data["inputpanel"];
+        if (!data) {
+            return;
+        }
+        var auxVisible = data["AuxVisible"] ? true : false;
+        var preeditVisible = data["PreeditVisible"] ? true : false;
+        var lookupTableVisible = data["LookupTableVisible"] ? true : false;
+        var pos = data["Position"] ? { 'x': data["Position"].x,
+                                    'y': data["Position"].y,
+                                    'w': data["Position"].width,
+                                    'h': data["Position"].height } : {'x' : 0, 'y': 0, 'w': 0, 'h': 0 };
+        inputpanel.position = Qt.rect(pos.x, pos.y, pos.w, pos.h);
+
+        var newVisibility = auxVisible || preeditVisible || lookupTableVisible;
+        if (!newVisibility) {
+        // If we gonna hide anyway, don't do the update.
+        inputpanel.hide();
+        return;
+        }
+        textLabel.visible = auxVisible || preeditVisible;
+        auxLabel.text = (auxVisible && data["AuxText"]) ? data["AuxText"] : ""
+        var preeditText = (preeditVisible && data["PreeditText"]) ? data["PreeditText"] : ""
+        var caret = data["CaretPos"] ? data["CaretPos"] : 0;
+        preeditLabel1.text = preeditText.substring(0, caret);
+        preeditLabel2.text = preeditText.substring(caret);
+        preedit.visible = preeditVisible;
+        var layout = data["LookupTableLayout"] !== undefined ? data["LookupTableLayout"] : 0;
+        inputpanel.highlightCandidate = data["LookupTableCursor"] !== undefined ? data["LookupTableCursor"] : -1;
+        inputpanel.verticalLayout = (layout === 1) || (layout == 0 && plasmoid.configuration.vertical_lookup_table);
+        button.visible = lookupTableVisible
+
+        if (data["LookupTable"]) {
+            var table = data["LookupTable"];
+            if (lookupTableVisible) {
+                if (table.length < tableList.count) {
+                    tableList.remove(table.length, tableList.count - table.length);
+                }
+                for (var i = 0; i < table.length; i ++) {
+                    if (i >= tableList.count) {
+                        tableList.append({'label' : table[i].label, 'text': table[i].text, 'index': i});
+                    } else {
+                        tableList.set(i, {'label' : table[i].label, 'text': table[i].text, 'index': i});
+                    }
+                }
+            } else {
+                tableList.clear();
+            }
+        }
+        inputpanel.mainItem.update();
+        // If we gonna show, do that after everything is ready.
+        if (newVisibility) {
+        inputpanel.show();
+        }
     }
 
     function updatePosition() {
-         var rect = screen.geometryForPoint(position.x, position.y);
-         var x, y;
-         if (position.x < rect.x) {
-             x = rect.x;
-         } else {
-             x = position.x;
-         }
-         if (position.y < rect.y) {
-             y = rect.y;
-         } else {
-             y = position.y + position.height;
-         }
+        var rect = screen.geometryForPoint(position.x, position.y);
+        var x, y;
+        if (position.x < rect.x) {
+            x = rect.x;
+        } else {
+            x = position.x;
+        }
+        if (position.y < rect.y) {
+            y = rect.y;
+        } else {
+            y = position.y + position.height;
+        }
 
-         if (x + inputpanel.width > rect.x + rect.width) {
-             x = rect.x + rect.width - inputpanel.width;
-         }
+        if (x + inputpanel.width > rect.x + rect.width) {
+            x = rect.x + rect.width - inputpanel.width;
+        }
 
-         if (y + inputpanel.height > rect.y + rect.height) {
-             if (y > rect.y + rect.height) {
-                 y = rect.y + rect.height - inputpanel.height - 40;
-             } else {
-                 y = y - inputpanel.height - (position.height == 0 ? 40 : position.height);
-             }
-         }
+        if (y + inputpanel.height > rect.y + rect.height) {
+            if (y > rect.y + rect.height) {
+                y = rect.y + rect.height - inputpanel.height - 40;
+            } else {
+                y = y - inputpanel.height - (position.height == 0 ? 40 : position.height);
+            }
+        }
 
-         var newRect = screen.geometryForPoint(x, y);
-         var devicePerPixelRatio = screen.devicePixelRatioForPoint(x, y);
+        var newRect = screen.geometryForPoint(x, y);
+        var devicePerPixelRatio = screen.devicePixelRatioForPoint(x, y);
 
-         inputpanel.x = newRect.x + (x - newRect.x) / devicePerPixelRatio;;
-         inputpanel.y = newRect.y + (y - newRect.y) / devicePerPixelRatio;;
+        inputpanel.x = newRect.x + (x - newRect.x) / devicePerPixelRatio;;
+        inputpanel.y = newRect.y + (y - newRect.y) / devicePerPixelRatio;;
     }
 
     function action(key) {
