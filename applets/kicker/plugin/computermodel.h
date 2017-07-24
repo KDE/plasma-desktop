@@ -57,6 +57,8 @@ class FilteredPlacesModel : public QSortFilterProxyModel
 
 class RunCommandModel : public AbstractModel
 {
+    Q_OBJECT
+
     public:
         RunCommandModel(QObject *parent = 0);
         ~RunCommandModel();

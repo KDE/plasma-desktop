@@ -199,8 +199,9 @@ int ForwardingModel::separatorCount() const
 
 void ForwardingModel::reset()
 {
-    emit beginResetModel();
-    emit endResetModel();
+    beginResetModel();
+    endResetModel();
+
     emit countChanged();
     emit separatorCountChanged();
 }

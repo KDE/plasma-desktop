@@ -207,7 +207,7 @@ void RecentContactsModel::refresh()
 
 void RecentContactsModel::buildCache()
 {
-    qDeleteAll(m_idToData.values());
+    qDeleteAll(m_idToData);
     m_idToData.clear();
     m_dataToRow.clear();
 

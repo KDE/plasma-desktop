@@ -27,6 +27,8 @@
 
 class GroupSortProxy : public QSortFilterProxyModel
 {
+    Q_OBJECT
+
     public:
         explicit GroupSortProxy(QAbstractItemModel *sourceModel);
         ~GroupSortProxy();

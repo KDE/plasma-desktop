@@ -42,13 +42,13 @@ void FunnelModel::setSourceModel(QAbstractItemModel *model)
     connect(model, SIGNAL(destroyed(QObject*)), this, SLOT(reset()));
 
     if (!m_sourceModel) {
-        emit beginResetModel();
+        beginResetModel();
 
         m_sourceModel = model;
 
         connectSignals();
 
-        emit endResetModel();
+        endResetModel();
 
         emit countChanged();
 

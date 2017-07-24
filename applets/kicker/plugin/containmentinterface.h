@@ -39,7 +39,7 @@ class ContainmentInterface : public QObject
             TaskManager
         };
 
-        Q_ENUMS(Target)
+        Q_ENUM(Target)
 
         ContainmentInterface(QObject *parent = 0);
         ~ContainmentInterface();
