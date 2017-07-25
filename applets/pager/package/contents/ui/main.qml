@@ -25,7 +25,6 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddonsComponents
 import org.kde.draganddrop 2.0
 import org.kde.plasma.private.pager 2.0
-import "utils.js" as Utils
 
 MouseArea {
     id: root
