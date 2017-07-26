@@ -13,8 +13,8 @@
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date>2015-04-09</date>
-<releaseinfo>Plasma 5.3</releaseinfo>
+<date>2017-07-24</date>
+<releaseinfo>Plasma 5.10</releaseinfo>
 
 <keywordset>
 <keyword>KDE</keyword>
@@ -258,6 +258,33 @@ feature is turned on or off</guilabel></member>
 which allows you to edit the notifications for status changes of all keys.</para>
 
 </sect3>
+
+<sect3 id="access-screenreader">
+<title><guilabel>Screen Reader</guilabel></title>
+
+<para>Install a screen reader application like
+<ulink url="https://en.wikipedia.org/wiki/Orca_(assistive_technology)">Orca.</ulink>
+together with <application>speech-dispatcher</application>.
+</para>
+
+<para>Test that sound from speech dispatcher works using the command
+<command>spd-say hello</command> in a terminal.
+</para>
+
+<para>In addition you need a text to speech synthesizer like &eg; <application>espeak</application>.
+</para>
+
+<para>Enable the screen reader in the checkbox, logout and restart your desktop session.
+</para>
+
+<para>For &plasma; itself, make sure to use the traditional <guilabel>Application Menu</guilabel>,
+and check that this menu has a keyboard shortcut associated
+(<keycombo action="simul">&Alt;<keycap>F1</keycap></keycombo>).
+When pressing this shortcut, the menu should open and be read when navigating
+the menu with the arrow keys.
+</para>
+</sect3>
+
 </sect2>
 
 </sect1>
