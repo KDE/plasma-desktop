@@ -2,8 +2,25 @@
 <ui version="4.0">
  <class>BrowserConfig_UI</class>
  <widget class="QWidget" name="BrowserConfig_UI">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>432</width>
+    <height>218</height>
+   </rect>
+  </property>
   <layout class="QVBoxLayout" name="verticalLayout">
-   <property name="margin">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
     <number>0</number>
    </property>
    <item>
@@ -24,9 +41,43 @@
     </widget>
    </item>
    <item>
+    <widget class="QRadioButton" name="radioService">
+     <property name="text">
+      <string>in the following application:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Fixed</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>0</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QComboBox" name="browserCombo">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
     <widget class="QRadioButton" name="radioExec">
      <property name="text">
-      <string>in the following browser:</string>
+      <string>with the following command:</string>
      </property>
     </widget>
    </item>
@@ -56,7 +107,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QToolButton" name="btnSelectBrowser">
+      <widget class="QToolButton" name="btnSelectApplication">
        <property name="enabled">
         <bool>false</bool>
        </property>
@@ -95,6 +146,22 @@
  <resources/>
  <connections>
   <connection>
+   <sender>radioService</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>browserCombo</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
    <sender>radioExec</sender>
    <signal>toggled(bool)</signal>
    <receiver>lineExec</receiver>
@@ -113,7 +180,7 @@
   <connection>
    <sender>radioExec</sender>
    <signal>toggled(bool)</signal>
-   <receiver>btnSelectBrowser</receiver>
+   <receiver>btnSelectApplication</receiver>
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">

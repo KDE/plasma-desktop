@@ -19,6 +19,7 @@
 #include <kconfiggroup.h>
 
 #include <KLocalizedString>
+#include <KServiceTypeTrader>
 
 #include "../migrationlib/kdelibs4config.h"
 
@@ -30,8 +31,15 @@ CfgBrowser::CfgBrowser(QWidget *parent)
     setupUi(this);
     connect(lineExec, &KLineEdit::textChanged, this, &CfgBrowser::configChanged);
     connect(radioKIO, &QRadioButton::toggled, this, &CfgBrowser::configChanged);
+    connect(radioService, &QRadioButton::toggled, this, &CfgBrowser::configChanged);
+    connect(browserCombo, static_cast<void(QComboBox::*)(int)>(&QComboBox::activated), this, [this](int index) {
+        const QString &storageId = browserCombo->itemData(index).toString();
+        m_browserService = KService::serviceByStorageId(storageId);
+        m_browserExec.clear();
+        emit configChanged();
+    });
     connect(radioExec, &QRadioButton::toggled, this, &CfgBrowser::configChanged);
-    connect(btnSelectBrowser, &QToolButton::clicked, this, &CfgBrowser::selectBrowser);
+    connect(btnSelectApplication, &QToolButton::clicked, this, &CfgBrowser::selectBrowser);
 }
 
 CfgBrowser::~CfgBrowser() {
@@ -47,36 +55,43 @@ void CfgBrowser::defaults()
     load(0);
 }
 
-
 void CfgBrowser::load(KConfig *) 
 {
     const KConfigGroup config(KSharedConfig::openConfig(QStringLiteral("kdeglobals")), QStringLiteral("General") );
     const QString exec = config.readPathEntry( QStringLiteral("BrowserApplication"), QString() );
-    if (exec.isEmpty())
-    {
+    if (exec.isEmpty()) {
         radioKIO->setChecked(true);
         m_browserExec = exec;
         m_browserService = 0;
-    }
-    else
-    {
+    } else {
         radioExec->setChecked(true);
-        if (exec.startsWith('!'))
-        {
+        if (exec.startsWith('!')) {
             m_browserExec = exec.mid(1);
             m_browserService = 0;
-        }
-        else
-        {
+        } else {
             m_browserService = KService::serviceByStorageId( exec );
-            if (m_browserService)
+            if (m_browserService) {
                 m_browserExec = m_browserService->desktopEntryName();
-            else
+            } else {
                 m_browserExec.clear();
+            }
         }
     }
 
     lineExec->setText(m_browserExec);
+
+    browserCombo->clear();
+
+    const auto &browsers = KServiceTypeTrader::self()->query(QStringLiteral("Application"),
+                                                             QStringLiteral("'WebBrowser' in Categories"));
+    for (const auto &service : browsers) {
+        browserCombo->addItem(QIcon::fromTheme(service->icon()), service->name(), service->storageId());
+
+        if ((m_browserService && m_browserService->storageId() == service->storageId()) || service->exec() == m_browserExec) {
+            browserCombo->setCurrentIndex(browserCombo->count() - 1);
+            radioService->setChecked(true);
+        }
+    }
 
     emit changed(false);
 }
@@ -86,13 +101,17 @@ void CfgBrowser::save(KConfig *)
     KSharedConfig::Ptr profile = KSharedConfig::openConfig(QStringLiteral("kdeglobals"));
     KConfigGroup config(profile, QStringLiteral("General"));
     QString exec;
-    if (radioExec->isChecked())
-    {
+    if (radioService->isChecked()) {
+        if (m_browserService) {
+            exec = m_browserService->storageId();
+        }
+    } else if (radioExec->isChecked()) {
         exec = lineExec->text();
-        if (m_browserService && (exec == m_browserExec))
+        if (m_browserService && (exec == m_browserExec)) {
             exec = m_browserService->storageId(); // Use service
-        else if (!exec.isEmpty())
+        } else if (!exec.isEmpty()) {
             exec = '!' + exec; // Literal command
+        }
     }
     config.writePathEntry( QStringLiteral("BrowserApplication"), exec); // KConfig::Normal|KConfig::Global
     config.sync();
@@ -112,9 +131,17 @@ void CfgBrowser::selectBrowser()
         return;
     m_browserService = dlg.service();
     if (m_browserService) {
-        m_browserExec = m_browserService->desktopEntryName();
-        if (m_browserExec.isEmpty())
-            m_browserExec = m_browserService->exec();
+        // check if we have listed it in the browser combo, if so, put it there instead
+        const int index = browserCombo->findData(m_browserService->storageId());
+        if (index > -1) {
+            browserCombo->setCurrentIndex(index);
+            radioService->setChecked(true);
+        } else {
+            m_browserExec = m_browserService->desktopEntryName();
+            if (m_browserExec.isEmpty()) {
+                m_browserExec = m_browserService->exec();
+            }
+        }
     } else {
         m_browserExec = dlg.text();
     }
