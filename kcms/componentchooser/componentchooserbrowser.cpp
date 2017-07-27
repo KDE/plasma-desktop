@@ -18,6 +18,7 @@
 #include <kglobalsettings.h>
 #include <kconfiggroup.h>
 
+#include <KBuildSycocaProgressDialog>
 #include <KLocalizedString>
 #include <KServiceTypeTrader>
 
@@ -115,6 +116,23 @@ void CfgBrowser::save(KConfig *)
     }
     config.writePathEntry( QStringLiteral("BrowserApplication"), exec); // KConfig::Normal|KConfig::Global
     config.sync();
+
+    // Save the default browser as scheme handler for http(s) in mimeapps.list
+    KSharedConfig::Ptr mimeAppList = KSharedConfig::openConfig(QStringLiteral("mimeapps.list"), KConfig::NoGlobals, QStandardPaths::GenericConfigLocation);
+    if (mimeAppList->isConfigWritable(true /*warn user if not writable*/)) {
+        KConfigGroup defaultApp(mimeAppList, "Default Applications");
+
+        if (m_browserService) {
+            defaultApp.writeXdgListEntry(QStringLiteral("x-scheme-handler/http"), QStringList(m_browserService->storageId()));
+            defaultApp.writeXdgListEntry(QStringLiteral("x-scheme-handler/https"), QStringList(m_browserService->storageId()));
+        } else {
+            defaultApp.deleteEntry(QStringLiteral("x-scheme-handler/http"));
+            defaultApp.deleteEntry(QStringLiteral("x-scheme-handler/https"));
+        }
+        mimeAppList->sync();
+
+        KBuildSycocaProgressDialog::rebuildKSycoca(this);
+    }
 
     Kdelibs4SharedConfig::syncConfigGroup(QLatin1String("General"), "kdeglobals");
 
