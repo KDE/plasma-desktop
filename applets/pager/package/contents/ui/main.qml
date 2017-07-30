@@ -420,6 +420,7 @@ MouseArea {
                             property string visibleName: model.display
                             property bool minimized: (model.IsMinimized === true)
                             onMinimizedChanged: desktop.updateSubText()
+                            onVisibleNameChanged: desktop.updateSubText()
 
                             /* since we move clipRect with 1, move it back */
                             x: (geometry.x * pagerItemGrid.widthScaleFactor) - Math.round(units.devicePixelRatio)
