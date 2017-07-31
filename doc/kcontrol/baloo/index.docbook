@@ -15,7 +15,7 @@
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date>2017.04.14</date>
+<date>2017-07-28</date>
 <releaseinfo>Plasma 5.10</releaseinfo>
 
 <keywordset>
@@ -44,7 +44,7 @@ to use the indexing results for faster access to your documents.
     <para>
         You are presented with a list of folders which should not be searched. By default only
         your entire <filename class="directory"><envar>$HOME</envar></filename> folder is
-        indexed, and no other drives are indexed.
+        indexed, and no other folders or drives are indexed.
     </para>
     <para>
         Removable media is never indexed by default. It can be explicitly removed from
@@ -61,5 +61,9 @@ you do not want to use the file search at all.
 
 <para>Use <guilabel>Also index file content</guilabel> to also index the file contents additional to the file names.
 </para>
+
+<para>For more info about additional configuration options &eg; how to add a drive mounted outside your 
+<filename class="directory"><envar>$HOME</envar></filename> folder please read
+<ulink url="https://community.kde.org/Baloo/Configuration">Baloo/Configuration</ulink>.</para>
 
 </article>
