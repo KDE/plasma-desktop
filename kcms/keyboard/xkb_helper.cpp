@@ -182,24 +182,3 @@ bool XkbHelper::initializeKeyboardLayouts(KeyboardConfig& config)
 	}
 	return false;
 }
-
-bool XkbHelper::preInitialize()
-{
-    // stop ibus so it does not mess with our layouts, we can remove this when we integrate IM into keyboard module
-
-    QString ibusExe = QStandardPaths::findExecutable(QStringLiteral("ibus"));
-    if( ibusExe.isEmpty() ) {
-        return 0;
-    }
-
-    KProcess ibusProcess;
-    ibusProcess << ibusExe << QStringLiteral("exit");
-    ibusProcess.setOutputChannelMode(KProcess::SeparateChannels);
-    int res = ibusProcess.execute();
-
-    if( res == 0 ) {
-        qCWarning(KCM_KEYBOARD) << "ibus successfully stopped";
-    }
-
-    return 0;
-}

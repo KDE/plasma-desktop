@@ -93,9 +93,6 @@ void KeyboardDaemon::configureKeyboard()
 	init_keyboard_hardware();
 
 	keyboardConfig.load();
-	if( keyboardConfig.configureLayouts ) {
-        XkbHelper::preInitialize();
-	}
 	XkbHelper::initializeKeyboardLayouts(keyboardConfig);
 	layoutMemory.configChanged();
 
