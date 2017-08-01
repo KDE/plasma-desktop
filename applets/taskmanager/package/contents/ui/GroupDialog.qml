@@ -125,6 +125,12 @@ PlasmaCore.Dialog {
                     }
                 }
 
+                onAnimatingChanged: {
+                    if (!animating) {
+                        updateSize();
+                    }
+                }
+
                 Repeater {
                     id: groupRepeater
 
@@ -140,7 +146,13 @@ PlasmaCore.Dialog {
                         return -1;
                     }
 
-                    onCountChanged: updateSize();
+                    onItemAdded: updateSize()
+
+                    onItemRemoved: {
+                        if (groupDialog.visible && index > 0 && index == count) {
+                            updateSize();
+                        }
+                    }
                 }
             }
         }
@@ -246,7 +258,7 @@ PlasmaCore.Dialog {
         // Setting VisualDataModel.rootIndex drops groupRepeater.count to 0
         // before the actual row count. updateSize is therefore invoked twice;
         // only update size once the repeater count matches the model role.
-        } else if (visualParent.childCount == groupRepeater.count) {
+        } else if (!groupRepeater.aboutToPopulate || visualParent.childCount == groupRepeater.count) {
             var task;
             var maxWidth = 0;
             var maxHeight = 0;

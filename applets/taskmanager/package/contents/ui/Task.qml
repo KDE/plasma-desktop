@@ -68,6 +68,12 @@ MouseArea {
     }
 
     onChildCountChanged: {
+        if (!childCount && groupDialog.visualParent == task) {
+            groupDialog.visible = false;
+
+            return;
+        }
+
         if (containsMouse) {
             groupDialog.activeTask = null;
         }
