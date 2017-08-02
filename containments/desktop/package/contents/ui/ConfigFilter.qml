@@ -35,10 +35,17 @@ Item {
     property alias cfg_filterPattern: filterPattern.text
     property alias cfg_filterMimeTypes: mimeTypesModel.checkedTypes
 
-    Folder.FilterableMimeTypesModel {
-        id: mimeTypesModel
+    PlasmaCore.SortFilterModel {
+        id: filderedMimeTypesModel
 
-        filter: mimeFilter.text
+        sourceModel: Folder.MimeTypesModel {
+            id: mimeTypesModel
+        }
+
+        // SortFilterModel doesn't have a case-sensitivity option
+        // but filterRegExp always causes case-insensitive sorting.
+        filterRegExp: mimeFilter.text
+        filterRole: "display"
     }
 
     ColumnLayout {
@@ -96,7 +103,7 @@ Item {
                 enabled: (filterMode.currentIndex > 0)
 
                 ListView {
-                    model: mimeTypesModel
+                    model: filderedMimeTypesModel
 
                     delegate: RowLayout {
                         CheckBox {

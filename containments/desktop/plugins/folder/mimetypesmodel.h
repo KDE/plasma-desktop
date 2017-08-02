@@ -57,32 +57,4 @@ class MimeTypesModel : public QAbstractListModel
         QVector<bool> checkedRows;
 };
 
-class FilterableMimeTypesModel : public QSortFilterProxyModel
-{
-    Q_OBJECT
-
-    Q_PROPERTY(QStringList checkedTypes READ checkedTypes WRITE setCheckedTypes NOTIFY checkedTypesChanged)
-    Q_PROPERTY(QString filter READ filter WRITE setFilter NOTIFY filterChanged)
-
-    public:
-        FilterableMimeTypesModel(QObject *parent = 0);
-        ~FilterableMimeTypesModel();
-
-        Q_INVOKABLE void checkAll();
-
-        QStringList checkedTypes() const;
-        void setCheckedTypes(const QStringList &list);
-
-        QString filter() const;
-        void setFilter(const QString &filter);
-
-    Q_SIGNALS:
-        void checkedTypesChanged() const;
-        void filterChanged() const;
-
-    private:
-        MimeTypesModel *m_sourceModel;
-        QString m_filter;
-};
-
 #endif
