@@ -62,12 +62,7 @@ ApplicationWindow {
                     text: model.display
 
                     checked: model.checked
-
-                    onCheckedChanged: {
-                        if (checked != model.checked) {
-                            previewPluginsModel.setRowChecked(model.index, checked);
-                        }
-                    }
+                    onCheckedChanged: model.checked = checked
                 }
             }
         }

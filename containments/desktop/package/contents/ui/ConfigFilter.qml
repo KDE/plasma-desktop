@@ -103,12 +103,7 @@ Item {
                             Layout.maximumWidth: 18 // FIXME HACK: Use actual radio button width.
 
                             checked: model.checked
-
-                            onCheckedChanged: {
-                                if (checked != model.checked) {
-                                    mimeTypesModel.setRowChecked(model.index, checked);
-                                }
-                            }
+                            onCheckedChanged: model.checked = checked
                         }
 
                         PlasmaCore.IconItem {

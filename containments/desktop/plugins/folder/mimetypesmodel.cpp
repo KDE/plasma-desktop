@@ -76,15 +76,23 @@ QVariant MimeTypesModel::data(const QModelIndex &index, int role) const
     return QVariant();
 }
 
-void MimeTypesModel::setRowChecked(int row, bool checked)
+bool MimeTypesModel::setData(const QModelIndex &index, const QVariant &value, int role)
 {
-    checkedRows[row] = checked;
+    if (index.row() < 0 || index.row() >= m_mimeTypesList.size()) {
+        return false;
+    }
 
-    QModelIndex idx = index(row, 0);
+    if (role == Qt::CheckStateRole) {
+        const bool newChecked = value.toBool();
+        if (checkedRows.at(index.row()) != newChecked) {
+            checkedRows[index.row()] = newChecked;
+            emit dataChanged(index, index, {role});
+            emit checkedTypesChanged();
+            return true;
+        }
+    }
 
-    emit dataChanged(idx, idx);
-
-    emit checkedTypesChanged();
+    return false;
 }
 
 void MimeTypesModel::checkAll()
@@ -151,13 +159,6 @@ FilterableMimeTypesModel::FilterableMimeTypesModel(QObject *parent) : QSortFilte
 
 FilterableMimeTypesModel::~FilterableMimeTypesModel()
 {
-}
-
-void FilterableMimeTypesModel::setRowChecked(int row, bool checked)
-{
-    QModelIndex idx = index(row, 0);
-
-    m_sourceModel->setRowChecked(mapToSource(idx).row(), checked);
 }
 
 void FilterableMimeTypesModel::checkAll()

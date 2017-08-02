@@ -65,13 +65,19 @@ QVariant PreviewPluginsModel::data(const QModelIndex &index, int role) const
     return QVariant();
 }
 
-void PreviewPluginsModel::setRowChecked(int row, bool checked)
+bool PreviewPluginsModel::setData(const QModelIndex &index, const QVariant &value, int role)
 {
-    m_checkedRows[row] = checked;
+    if (index.row() < 0 || index.row() >= m_plugins.size()) {
+        return false;
+    }
 
-    QModelIndex idx = index(row, 0);
+    if (role == Qt::CheckStateRole) {
+        m_checkedRows[index.row()] = value.toBool();
+        emit dataChanged(index, index, {role});
+        return true;
+    }
 
-    emit dataChanged(idx, idx);
+    return false;
 }
 
 int PreviewPluginsModel::indexOfPlugin(const QString &name) const

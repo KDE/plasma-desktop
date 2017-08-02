@@ -38,9 +38,9 @@ class MimeTypesModel : public QAbstractListModel
 
         QHash<int, QByteArray> roleNames() const override;
         QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const Q_DECL_OVERRIDE;
+        bool setData(const QModelIndex &index, const QVariant &value, int role) Q_DECL_OVERRIDE;
 
         Q_INVOKABLE void checkAll();
-        Q_INVOKABLE void setRowChecked(int row, bool checked);
 
         int rowCount(const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE { Q_UNUSED(parent) return m_mimeTypesList.size(); }
 
@@ -68,7 +68,6 @@ class FilterableMimeTypesModel : public QSortFilterProxyModel
         FilterableMimeTypesModel(QObject *parent = 0);
         ~FilterableMimeTypesModel();
 
-        Q_INVOKABLE void setRowChecked(int row, bool checked);
         Q_INVOKABLE void checkAll();
 
         QStringList checkedTypes() const;
