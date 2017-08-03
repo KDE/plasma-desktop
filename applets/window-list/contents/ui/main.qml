@@ -35,8 +35,6 @@ Item {
     Plasmoid.switchWidth: units.gridUnit * 11
     Plasmoid.switchHeight: units.gridUnit * 11
 
-    Plasmoid.icon: "preferences-system-windows"
-    Plasmoid.toolTipMainText: i18n("Window List")
     Plasmoid.toolTipSubText: i18n("Show list of opened windows")
 
     property int itemHeight: Math.ceil((Math.max(theme.mSize(theme.defaultFont).height, units.iconSizes.small)
