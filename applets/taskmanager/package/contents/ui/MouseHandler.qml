@@ -23,7 +23,6 @@ import org.kde.draganddrop 2.0
 
 import org.kde.taskmanager 0.1 as TaskManager
 
-import "../code/layout.js" as LayoutManager
 import "../code/tools.js" as TaskTools
 
 Item {
