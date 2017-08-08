@@ -53,7 +53,7 @@ Autostart::Autostart( QWidget* parent, const QVariantList& )
     lstHeader << i18n( "Name" )
               << i18n( "Command" )
               << i18n( "Status" )
-              << i18nc("@title:column The name of the column that decides if the program is run on kde startup, on kde shutdown, etc", "Run On" );
+              << i18nc("@title:column The name of the column that decides if the program is run on session startup, on session shutdown, etc", "Run On" );
     widget->listCMD->setHeaderLabels(lstHeader);
     widget->listCMD->setFocus();
 
@@ -72,9 +72,9 @@ Autostart::Autostart( QWidget* parent, const QVariantList& )
 
 
     KAboutData* about = new KAboutData(QStringLiteral("Autostart"),
-                                       i18n("KDE Autostart Manager"),
+                                       i18n("Session Autostart Manager"),
                                        QStringLiteral("1.0"),
-                                       i18n("KDE Autostart Manager Control Panel Module"),
+                                       i18n("Session Autostart Manager Control Panel Module"),
                                        KAboutLicense::GPL,
                                        i18n("Copyright © 2006–2010 Autostart Manager team"));
     about->addAuthor(i18n("Stephen Leaf"), QString(), QStringLiteral("smileaf@gmail.com"));
@@ -136,7 +136,7 @@ void Autostart::load()
     // FDO user autostart directories are
     // .config/autostart which has .desktop files executed by klaunch
 
-    //Then we have KDE specific locations which run scripts
+    //Then we have Plasma-specific locations which run scripts
     // .config/autostart-scripts which has scripts executed by ksmserver
     // .config/plasma-workspace/shutdown which has scripts executed by startkde
     // .config/plasma-workspace/env which has scripts executed by startkde

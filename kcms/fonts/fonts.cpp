@@ -653,7 +653,7 @@ KFonts::KFonts(QWidget *parent, const QVariantList &args)
     cbAA->insertItem(AAEnabled, i18nc("Use anti-aliasing", "Enabled"));    // change AASetting type if order changes
     cbAA->insertItem(AASystem, i18nc("Use anti-aliasing", "System Settings"));
     cbAA->insertItem(AADisabled, i18nc("Use anti-aliasing", "Disabled"));
-    cbAA->setWhatsThis(i18n("If this option is selected, KDE will smooth the edges of curves in fonts."));
+    cbAA->setWhatsThis(i18n("Select this option to smooth the edges of curves in fonts."));
     aaSettingsButton = new QPushButton(i18n("Configure..."), this);
     connect(aaSettingsButton, &QAbstractButton::clicked, this, &KFonts::slotCfgAa);
     label->setBuddy(cbAA);
@@ -677,8 +677,7 @@ KFonts::KFonts(QWidget *parent, const QVariantList &args)
                             " look well with DPI values other than 96 or 120 DPI.</p>"
                             "<p>The use of this option is generally discouraged. For selecting proper DPI"
                             " value a better option is explicitly configuring it for the whole X server if"
-                            " possible (e.g. DisplaySize in xorg.conf or adding <i>-dpi value</i> to"
-                            " ServerLocalArgs= in $KDEDIR/share/config/kdm/kdmrc). When fonts do not render"
+                            " possible (e.g. DisplaySize in xorg.conf). When fonts do not render"
                             " properly with real DPI value better fonts should be used or configuration"
                             " of font hinting should be checked.</p>");
     spinboxDpi->setWhatsThis(whatsthis);

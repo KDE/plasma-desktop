@@ -183,7 +183,7 @@ QString KCMiscKeyboardWidget::quickHelp() const
   /* "<h1>Keyboard</h1> This module allows you to choose options"
      " for the way in which your keyboard works. The actual effect of"
      " setting these options depends upon the features provided by your"
-     " keyboard hardware and the X server on which KDE is running.<p>"
+     " keyboard hardware and the X server on which Plasma is running.<p>"
      " For example, you may find that changing the key click volume"
      " has no effect because this feature is not available on your system." */
 }

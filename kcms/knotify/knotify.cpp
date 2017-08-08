@@ -55,7 +55,7 @@ KCMKNotify::KCMKNotify(QWidget *parent, const QVariantList & )
     setButtons( Help | Default | Apply );
 
     setQuickHelp( i18n("<h1>System Notifications</h1>"
-                "KDE allows for a great deal of control over how you "
+                "Plasma allows for a great deal of control over how you "
                 "will be notified when certain events occur. There are "
                 "several choices as to how you are notified:"
                 "<ul><li>As the application was originally designed.</li>"
