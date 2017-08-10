@@ -664,7 +664,6 @@ KFonts::KFonts(QWidget *parent, const QVariantList &args)
 
     connect(cbAA, SIGNAL(currentIndexChanged(int)), SLOT(slotUseAntiAliasing()));
 #endif
-#if HAVE_X11
     checkboxForceDpi = new QCheckBox(i18n("Force fonts DPI:"), this);
     lay->addWidget(checkboxForceDpi, 1, 0);
     spinboxDpi = new QSpinBox(this);
@@ -687,7 +686,6 @@ KFonts::KFonts(QWidget *parent, const QVariantList &args)
     connect(checkboxForceDpi, SIGNAL(toggled(bool)), SLOT(changed()));
     connect(checkboxForceDpi, &QAbstractButton::toggled, spinboxDpi, &QWidget::setEnabled);
     lay->addWidget(spinboxDpi, 1, 1);
-#endif
     layout->addStretch(1);
 
 #if defined(HAVE_FONTCONFIG) && defined (HAVE_X11)
@@ -723,10 +721,8 @@ void KFonts::defaults()
     cbAA->setCurrentIndex(useAA);
     aaSettings->defaults();
 #endif
-#if HAVE_X11
     checkboxForceDpi->setChecked(false);
     spinboxDpi->setValue(96);
-#endif
     emit changed(true);
 }
 
@@ -746,7 +742,6 @@ void KFonts::load()
 
     KConfig _cfgfonts("kcmfonts");
     KConfigGroup cfgfonts(&_cfgfonts, "General");
-#if HAVE_X11
     int dpicfg = cfgfonts.readEntry("forceFontDPI", 0);
     if (dpicfg <= 0) {
         checkboxForceDpi->setChecked(false);
@@ -757,7 +752,6 @@ void KFonts::load()
         spinboxDpi->setValue(dpicfg);
         dpi_original = dpicfg;
     };
-#endif
 #if defined(HAVE_FONTCONFIG) && defined (HAVE_X11)
     if (cfgfonts.readEntry("dontChangeAASettings", true)) {
         useAA_original = useAA = AASystem;
@@ -781,10 +775,8 @@ void KFonts::save()
 
     KConfig _cfgfonts("kcmfonts");
     KConfigGroup cfgfonts(&_cfgfonts, "General");
-#if HAVE_X11
     int dpi = (checkboxForceDpi->isChecked() ? spinboxDpi->value() : 0);
     cfgfonts.writeEntry("forceFontDPI", dpi);
-#endif
 #if defined(HAVE_FONTCONFIG) && defined (HAVE_X11)
     cfgfonts.writeEntry("dontChangeAASettings", cbAA->currentIndex() == AASystem);
 #endif
