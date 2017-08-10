@@ -40,6 +40,7 @@
 #include <KJob>
 #include <KLocalizedString>
 #include <KMimeTypeTrader>
+#include <KProtocolInfo>
 #include <KRun>
 #include <KSycoca>
 #include <KShell>
@@ -146,11 +147,22 @@ Q_GLOBAL_STATIC(AppStream::Pool, appstreamPool)
 
 QVariantList appstreamActions(const KService::Ptr &service)
 {
+    QVariantList ret;
+
+    const KService::Ptr appStreamHandler = KMimeTypeTrader::self()->preferredService(QStringLiteral("x-scheme-handler/appstream"));
+
+    // Don't show action if we can't find any app to handle appstream:// URLs.
+    if (!appStreamHandler) {
+        if (!KProtocolInfo::isHelperProtocol(QStringLiteral("appstream"))
+            || KProtocolInfo::exec(QStringLiteral("appstream")).isEmpty()) {
+            return ret;
+        }
+    }
+
     if (!appstreamPool.exists()) {
         appstreamPool->load();
     }
 
-    QVariantList ret;
     const auto components = appstreamPool->componentsById(service->desktopEntryName()+QLatin1String(".desktop"));
     for(const auto &component: components) {
         const QString componentId = component.id();
