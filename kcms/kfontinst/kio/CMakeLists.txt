@@ -17,3 +17,5 @@ ecm_install_icons( ICONS
                    48-mimetypes-fonts-package.png
                    64-mimetypes-fonts-package.png
                    DESTINATION ${ICON_INSTALL_DIR} THEME hicolor )
+
+add_subdirectory(autotests)
