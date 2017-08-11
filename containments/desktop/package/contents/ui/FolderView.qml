@@ -142,7 +142,9 @@ Item {
     Connections {
         target: dir
         onPopupMenuAboutToShow: {
-            plasmoid.processMimeData(mimeData, x, y, dropJob);
+            if (!plasmoid.immutable) {
+                plasmoid.processMimeData(mimeData, x, y, dropJob);
+            }
         }
     }
 
