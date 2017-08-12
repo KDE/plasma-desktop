@@ -99,10 +99,21 @@ Item {
             }
 
             if (tasksModel.sortMode == TaskManager.TasksModel.SortManual && tasks.dragSource) {
+                // Reject drags between different TaskList instances.
+                if (tasks.dragSource.parent != above.parent) {
+                    return;
+                }
+
                 var insertAt = TaskTools.insertIndexAt(above, event.x, event.y);
 
-                if (!groupDialog.visible && tasks.dragSource != above && tasks.dragSource.itemIndex != insertAt) {
-                    tasksModel.move(tasks.dragSource.itemIndex, insertAt);
+                if (tasks.dragSource != above && tasks.dragSource.itemIndex != insertAt) {
+                    if (groupDialog.visible && groupDialog.visualParent) {
+                        tasksModel.move(tasks.dragSource.itemIndex, insertAt,
+                            tasksModel.makeModelIndex(groupDialog.visualParent.itemIndex));
+                    } else {
+                        tasksModel.move(tasks.dragSource.itemIndex, insertAt);
+                    }
+
                     ignoredItem = above;
                     ignoreItemTimer.restart();
                 }
