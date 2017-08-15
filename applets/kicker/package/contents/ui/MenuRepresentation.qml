@@ -27,19 +27,16 @@ FocusScope {
 
     focus: true
 
-    Layout.minimumWidth: sideBar.width + mainRow.spacing + Math.max(units.gridUnit * 14, runnerColumns.width)
-    Layout.maximumWidth: sideBar.width + mainRow.spacing + Math.max(units.gridUnit * 14, runnerColumns.width)
+    Layout.minimumWidth: (sideBar.width + (sideBar.width ? mainRow.spacing : 0)
+        + Math.max(units.gridUnit * 14, runnerColumns.width))
+    Layout.maximumWidth: Layout.minimumWidth
 
     Layout.minimumHeight: Math.max(((rootModel.count - rootModel.separatorCount) * rootList.itemHeight)
         + (rootModel.separatorCount * rootList.separatorHeight)
         + searchField.height + (2 * units.smallSpacing), sideBar.margins.top + sideBar.margins.bottom
         + favoriteApps.contentHeight + favoriteSystemActions.contentHeight + sidebarSeparator.height
         + (4 * units.smallSpacing))
-    Layout.maximumHeight: Math.max(((rootModel.count - rootModel.separatorCount) * rootList.itemHeight)
-        + (rootModel.separatorCount * rootList.separatorHeight)
-        + searchField.height + (2 * units.smallSpacing), sideBar.margins.top + sideBar.margins.bottom
-        + favoriteApps.contentHeight + favoriteSystemActions.contentHeight + sidebarSeparator.height
-        + (4 * units.smallSpacing))
+    Layout.maximumHeight: Layout.minimumHeight
 
     signal appendSearchText(string text)
 
@@ -65,7 +62,11 @@ FocusScope {
         PlasmaCore.FrameSvgItem {
             id: sideBar
 
-            width: units.iconSizes.medium + margins.left + margins.right
+            visible: width > 0
+
+            width: (globalFavorites && systemFavorites
+                && (globalFavorites.count + systemFavorites.count)
+                ? units.iconSizes.medium + margins.left + margins.right : 0)
             height: parent.height
 
             imagePath: "widgets/frame"
@@ -116,7 +117,8 @@ FocusScope {
                 width: units.iconSizes.medium
                 height: lineSvg.horLineHeight
 
-                visible: favoriteApps.model.count && favoriteSystemActions.model.count
+                visible: (favoriteApps.model && favoriteApps.model.count
+                    && favoriteSystemActions.model && favoriteSystemActions.model.count)
 
                 svg: lineSvg
                 elementId: "horizontal-line"
@@ -305,7 +307,7 @@ FocusScope {
 
         anchors.bottom: mainRow.bottom
         anchors.left: parent.left
-        anchors.leftMargin: sideBar.width + mainRow.spacing + units.smallSpacing
+        anchors.leftMargin: sideBar.width + (sideBar.width ? mainRow.spacing : 0) + units.smallSpacing
 
         width: (units.gridUnit * 14) - (2 * units.smallSpacing)
 
