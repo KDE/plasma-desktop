@@ -35,12 +35,13 @@ PlasmaCore.Dialog {
     hideOnWindowDeactivate: true
     location: plasmoid.location
 
-    property int preferredWidth: Screen.width / (3 * Screen.devicePixelRatio)
-    property int preferredHeight: Screen.height / (2 * Screen.devicePixelRatio)
-    property int contentWidth: scrollArea.overflowing ? mainItem.width - (units.smallSpacing * 3) : mainItem.width
-    property TextMetrics textMetrics: TextMetrics {}
+    readonly property int preferredWidth: Screen.width / (3 * Screen.devicePixelRatio)
+    readonly property int preferredHeight: Screen.height / (2 * Screen.devicePixelRatio)
+    readonly property int contentWidth: scrollArea.overflowing ? mainItem.width - (units.smallSpacing * 3) : mainItem.width
+    readonly property TextMetrics textMetrics: TextMetrics {}
     property alias overflowing: scrollArea.overflowing
     property alias activeTask: focusActiveTaskTimer.targetIndex
+    property var _oldAppletStatus: PlasmaCore.Types.UnknownStatus
 
     function selectTask(task) {
         if (!task) {
@@ -51,65 +52,65 @@ PlasmaCore.Dialog {
         scrollArea.ensureItemVisible(task);
     }
 
-    mainItem: PlasmaExtras.ScrollArea {
-        id: scrollArea
+    mainItem: MouseHandler {
+        id: mouseHandler
 
-        property bool overflowing: (viewport.height < contentItem.height)
+        target: taskList
+        handleWheelEvents: !scrollArea.overflowing
 
-        horizontalScrollBarPolicy: Qt.ScrollBarAlwaysOff
+        Timer {
+            id: focusActiveTaskTimer
 
-        function ensureItemVisible(item) {
-            var itemTop = item.y;
-            var itemBottom = (item.y + item.height);
+            property var targetIndex: null
 
-            if (itemTop < flickableItem.contentY) {
-                flickableItem.contentY = itemTop;
-            }
+            interval: 0
+            repeat: false
 
-            if ((itemBottom - flickableItem.contentY) > viewport.height) {
-                flickableItem.contentY = Math.abs(viewport.height - itemBottom);
+            onTriggered: {
+                // Now we can home in on the previously active task
+                // collected in groupDialog.onVisibleChanged.
+
+                if (targetIndex != null) {
+                    for (var i = 0; i < groupRepeater.count; ++i) {
+                        var task = groupRepeater.itemAt(i);
+
+                        if (task.modelIndex() == targetIndex) {
+                            selectTask(task);
+                            return;
+                        }
+                    }
+                }
             }
         }
 
-        MouseHandler {
-            id: mouseHandler
+        PlasmaExtras.ScrollArea {
+            id: scrollArea
 
-            width: parent.width
-            height: (groupRepeater.count * (LayoutManager.verticalMargins()
-                + Math.max(theme.mSize(theme.defaultFont).height, units.iconSizes.medium)))
+            anchors.fill: parent
 
-            target: taskList
-            handleWheelEvents: !scrollArea.overflowing
+            readonly property bool overflowing: (viewport.height < contentItem.height)
 
-            Timer {
-                id: focusActiveTaskTimer
+            boundsBehavior: Flickable.StopAtBounds
+            snapMode: ListView.SnapToItem
+            horizontalScrollBarPolicy: Qt.ScrollBarAlwaysOff
 
-                property var targetIndex: null
+            function ensureItemVisible(item) {
+                var itemTop = item.y;
+                var itemBottom = (item.y + item.height);
 
-                interval: 0
-                repeat: false
+                if (itemTop < flickableItem.contentY) {
+                    flickableItem.contentY = itemTop;
+                }
 
-                onTriggered: {
-                    // Now we can home in on the previously active task
-                    // collected in groupDialog.onVisibleChanged.
-
-                    if (targetIndex != null) {
-                        for (var i = 0; i < groupRepeater.count; ++i) {
-                            var task = groupRepeater.itemAt(i);
-
-                            if (task.modelIndex() == targetIndex) {
-                                selectTask(task);
-                                return;
-                            }
-                        }
-                    }
+                if ((itemBottom - flickableItem.contentY) > viewport.height) {
+                    flickableItem.contentY = Math.abs(viewport.height - itemBottom);
                 }
             }
 
             TaskList {
                 id: taskList
 
-                anchors.fill: parent
+                width: parent.width
 
                 add: Transition {
                     // We trigger a null-interval timer in the first add
@@ -123,6 +124,12 @@ PlasmaCore.Dialog {
                                 groupRepeater.aboutToPopulate = false;
                             }
                         }
+                    }
+                }
+
+                onAnimatingChanged: {
+                    if (!animating) {
+                        updateSize();
                     }
                 }
 
@@ -141,7 +148,13 @@ PlasmaCore.Dialog {
                         return -1;
                     }
 
-                    onCountChanged: updateSize();
+                    onItemAdded: updateSize()
+
+                    onItemRemoved: {
+                        if (groupDialog.visible && index > 0 && index == count) {
+                            updateSize();
+                        }
+                    }
                 }
             }
         }
@@ -189,21 +202,24 @@ PlasmaCore.Dialog {
     ]
 
     onVisualParentChanged: {
-        if (!visualParent) {
+        if (visible && visualParent) {
+            attachModel();
+        } else {
             visible = false;
         }
     }
 
     onVisibleChanged: {
         if (visible && visualParent) {
-            groupFilter.model = tasksModel;
-            groupFilter.rootIndex = groupFilter.modelIndex(visualParent.itemIndex);
+            _oldAppletStatus = plasmoid.status;
+            plasmoid.status = PlasmaCore.Types.RequiresAttentionStatus;
 
-            groupRepeater.aboutToPopulate = true;
-            groupRepeater.model = groupFilter;
+            attachModel();
 
-            mainItem.forceActiveFocus();
+            groupDialog.requestActivate();
+            mouseHandler.forceActiveFocus();
         } else {
+            plasmoid.status = _oldAppletStatus;
             visualParent = null;
             groupRepeater.model = undefined;
             groupFilter.model = undefined;
@@ -211,14 +227,40 @@ PlasmaCore.Dialog {
         }
     }
 
-    function updateSize() {
-        if (!visible || !visualParent) {
+    function attachModel() {
+        if (!visualParent) {
             return;
         }
 
-        if (!groupRepeater.count) {
+        if (!groupFilter.model) {
+            groupFilter.model = tasksModel;
+        }
+
+        groupRepeater.aboutToPopulate = true;
+
+        groupFilter.rootIndex = tasksModel.makeModelIndex(visualParent.itemIndex);
+
+        if (!groupRepeater.model) {
+            groupRepeater.model = groupFilter;
+        }
+    }
+
+    function updateSize() {
+        if (!visible) {
+            return;
+        }
+
+        if (!visualParent) {
             visible = false;
-        } else {
+            return;
+        }
+
+        if (!visualParent.childCount) {
+            visible = false;
+        // Setting VisualDataModel.rootIndex drops groupRepeater.count to 0
+        // before the actual row count. updateSize is therefore invoked twice;
+        // only update size once the repeater count matches the model role.
+        } else if (!groupRepeater.aboutToPopulate || visualParent.childCount == groupRepeater.count) {
             var task;
             var maxWidth = 0;
             var maxHeight = 0;
@@ -238,8 +280,15 @@ PlasmaCore.Dialog {
                 task.labelTextChanged.connect(updateSize);
             }
 
-            maxWidth += LayoutManager.horizontalMargins() + units.iconSizes.medium + 2 * units.smallSpacing;
             maxHeight = groupRepeater.count * (LayoutManager.verticalMargins() + Math.max(theme.mSize(theme.defaultFont).height, units.iconSizes.medium));
+
+            maxWidth += LayoutManager.horizontalMargins() + units.iconSizes.medium + 2 * units.smallSpacing;
+
+            // Add horizontal space for scrollbar if needed.
+            // FIXME TODO HACK: Use actuall scrollbar width instead of a good guess.
+            if (maxHeight > preferredHeight) {
+                maxWidth += (units.smallSpacing * 3);
+            }
 
             mainItem.height = Math.min(preferredHeight, maxHeight);
             mainItem.width = Math.min(preferredWidth, (tasks.vertical ? Math.max(maxWidth, tasks.width) : Math.min(maxWidth, tasks.width)));

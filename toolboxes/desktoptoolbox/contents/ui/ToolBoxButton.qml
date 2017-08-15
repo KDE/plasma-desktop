@@ -133,6 +133,8 @@ Item {
         if (!buttonMouse.pressed) {
             main.placeToolBox(toolBoxButton.state);
         }
+
+        stateTimer.running = false;
     }
 
     PlasmaCore.FrameSvgItem {
