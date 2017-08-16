@@ -362,13 +362,6 @@ void KCMStyle::save()
     if ( !(m_bStyleDirty | m_bEffectsDirty ) )
         return;
 
-    const bool showMenuIcons = !QApplication::testAttribute(Qt::AA_DontShowIconsInMenus);
-    if (fineTuningUi.cbIconsInMenus->isChecked() != showMenuIcons) {
-        KMessageBox::information(this,
-          i18n("<p>Changes to the visibility of menu icons will only affect newly started applications.</p>"),
-          i18nc("@title:window", "Menu Icons Changed"), QStringLiteral("MenuIconsChanged"));
-    }
-
     // Save effects.
         KConfig      _config(QStringLiteral("kdeglobals"), KConfig::NoGlobals);
         KConfigGroup config(&_config, "KDE");
