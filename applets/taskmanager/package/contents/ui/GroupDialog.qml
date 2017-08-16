@@ -90,8 +90,6 @@ PlasmaCore.Dialog {
 
             readonly property bool overflowing: (viewport.height < contentItem.height)
 
-            boundsBehavior: Flickable.StopAtBounds
-            snapMode: ListView.SnapToItem
             horizontalScrollBarPolicy: Qt.ScrollBarAlwaysOff
 
             function ensureItemVisible(item) {
@@ -156,6 +154,10 @@ PlasmaCore.Dialog {
                         }
                     }
                 }
+            }
+
+            Component.onCompleted: {
+                flickableItem.boundsBehavior = Flickable.StopAtBounds;
             }
         }
 
