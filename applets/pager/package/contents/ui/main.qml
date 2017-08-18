@@ -33,11 +33,16 @@ MouseArea {
     property bool vertical: (plasmoid.formFactor == PlasmaCore.Types.Vertical)
     property var activityDataSource: null
 
-    Layout.minimumWidth: !root.vertical ? pagerItemGrid.width : 1
-    Layout.minimumHeight: root.vertical ? pagerItemGrid.height : 1
+    readonly property real aspectRatio: (((pagerModel.pagerItemSize.width * pagerItemGrid.effectiveColumns)
+        + ((pagerItemGrid.effectiveColumns * pagerItemGrid.spacing) - pagerItemGrid.spacing))
+        / ((pagerModel.pagerItemSize.height * pagerItemGrid.effectiveRows)
+        + ((pagerItemGrid.effectiveRows * pagerItemGrid.spacing) - pagerItemGrid.spacing)))
 
-    Layout.maximumWidth: !root.vertical ? pagerItemGrid.width : Infinity
-    Layout.maximumHeight: root.vertical ? pagerItemGrid.height : Infinity
+    Layout.minimumWidth: !root.vertical ? Math.floor(height * aspectRatio) : 1
+    Layout.minimumHeight: root.vertical ? Math.floor(width / aspectRatio) : 1
+
+    Layout.maximumWidth: !root.vertical ? Math.floor(height * aspectRatio) : Infinity
+    Layout.maximumHeight: root.vertical ? Math.floor(width / aspectRatio) : Infinity
 
     Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
     Plasmoid.status: pagerModel.shouldShowPager ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.HiddenStatus
