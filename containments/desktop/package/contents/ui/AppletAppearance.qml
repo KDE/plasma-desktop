@@ -83,40 +83,43 @@ Item {
         property real lastY: 0
     }
 
-    onMinimumWidthChanged: {
-        if (width < minimumWidth) {
+    Timer {
+        id: positionTimer
+
+        repeat: false
+        running: false
+        interval: 100
+
+        onTriggered: {
             releasePosition();
-            width = minimumWidth;
             positionItem();
             if (showAppletHandle && !handleMerged)
                 appletHandle.positionHandle();
+        }
+    }
+
+    onMinimumWidthChanged: {
+        if (width < minimumWidth) {
+            width = minimumWidth;
+            positionTimer.restart();
         }
     }
     onMinimumHeightChanged: {
         if (height < minimumHeight) {
-            releasePosition();
             height = minimumHeight;
-            positionItem();
-            if (showAppletHandle && !handleMerged)
-                appletHandle.positionHandle();
+            positionTimer.restart();
         }
     }
     onMaximumWidthChanged: {
         if (width > maximumWidth) {
-            releasePosition();
             width = maximumWidth;
-            positionItem();
-            if (showAppletHandle && !handleMerged)
-                appletHandle.positionHandle();
+            positionTimer.restart();
         }
     }
     onMaximumHeightChanged: {
         if (height > maximumHeight) {
-            releasePosition();
             height = maximumHeight;
-            positionItem();
-            if (showAppletHandle && !handleMerged)
-                appletHandle.positionHandle();
+            positionTimer.restart();
         }
     }
 
@@ -161,7 +164,6 @@ Item {
         if (floating)
             return;
         root.layoutManager.positionItem(appletItem);
-        root.layoutManager.saveItem(appletItem);
     }
 
     // use this function to free appletItem position instead of
