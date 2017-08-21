@@ -80,6 +80,8 @@ FocusScope {
         height: Math.min(((index == 0) ? rootList.height : runnerColumns.height)
             - header.height, model.count * itemHeight)
 
+        focus: true
+
         iconsEnabled: true
         keyNavigationWraps: (index != 0)
 
