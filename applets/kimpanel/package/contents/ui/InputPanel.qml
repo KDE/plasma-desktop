@@ -1,5 +1,5 @@
 /*
- *  Copyright 2014 Weng Xuetian <wengxt@gmail.com>
+ *  Copyright 2014-2017 Weng Xuetian <wengxt@gmail.com>
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -16,7 +16,7 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  2.010-1301, USA.
  */
 
-import QtQuick 2.0
+import QtQuick 2.6
 import QtQuick.Layouts 1.1
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -31,6 +31,7 @@ PlasmaCore.Dialog {
     location: PlasmaCore.Types.Floating
     property bool verticalLayout: false
     property int highlightCandidate: -1
+    property int hoveredCandidate: -1
     property font preferredFont: plasmoid.configuration.use_default_font ? theme.defaultFont : plasmoid.configuration.font
     property int baseSize: theme.mSize(preferredFont).height
     property rect position
@@ -44,6 +45,7 @@ PlasmaCore.Dialog {
         Layout.minimumHeight: childrenRect.height
         Layout.maximumWidth: childrenRect.width
         Layout.maximumHeight: childrenRect.height
+
         Row {
             id: textLabel
             width: auxLabel.width + preedit.width
@@ -85,34 +87,39 @@ PlasmaCore.Dialog {
             flow: inputpanel.verticalLayout ? GridLayout.TopToBottom : GridLayout.LeftToRight
             columns: inputpanel.verticalLayout ? 1 : tableList.count + 1
             rows: inputpanel.verticalLayout ? tableList.count + 1 : 1
+            columnSpacing: units.smallSpacing / 2
+            rowSpacing: units.smallSpacing / 2
             Repeater {
                 model: ListModel {
                     id: tableList
                     dynamicRoles: true
                 }
                 delegate: Item {
-                    width: candidate.width
-                    height: candidate.height
-                    Layout.minimumWidth: candidate.width
-                    Layout.minimumHeight: candidate.height
-                    Layout.maximumWidth: candidate.width
-                    Layout.maximumHeight: candidate.height
+                    width: candidate.width + highlight.marginHints.left + highlight.marginHints.right
+                    height: candidate.height + highlight.marginHints.top + highlight.marginHints.bottom
+                    Layout.minimumWidth: width
+                    Layout.minimumHeight: height
+                    Layout.maximumWidth: width
+                    Layout.maximumHeight: height
+
                     Row {
                         id: candidate
                         width: childrenRect.width
                         height: childrenRect.height
-                        property bool highlight: (inputpanel.highlightCandidate == model.index) != candidateMouseArea.containsMouse
+                        x: highlight.marginHints.left
+                        y: highlight.marginHints.top
                         PlasmaComponents.Label {
                             id: tableLabel
                             text: model.label
-                            color: candidate.highlight ? theme.textColor : theme.highlightColor
                             font: preferredFont
+                            color: active ? theme.highlightedTextColor : theme.textColor
+                            opacity: highlight.visible ? 0.8 : 0.6
                         }
                         PlasmaComponents.Label {
                             id: textLabel
                             text: model.text
-                            color: candidate.highlight ? theme.highlightColor : theme.textColor
                             font: preferredFont
+                            color: active ? theme.highlightedTextColor : theme.textColor
                         }
                     }
                     MouseArea {
@@ -120,6 +127,19 @@ PlasmaCore.Dialog {
                         anchors.fill: parent
                         hoverEnabled: true
                         onReleased: selectCandidate(model.index)
+                        onContainsMouseChanged: {
+                            inputpanel.hoveredCandidate = containsMouse ? model.index : -1;
+                        }
+                    }
+                    CandidateHighlight {
+                        id: highlight
+                        z: -1
+                        visible: inputpanel.highlightCandidate == model.index || inputpanel.hoveredCandidate == model.index
+                        hover: candidateMouseArea.containsMouse
+                        selected: inputpanel.highlightCandidate == model.index || candidateMouseArea.pressed
+                        anchors {
+                            fill: parent
+                        }
                     }
                 }
             }
@@ -197,9 +217,9 @@ PlasmaCore.Dialog {
 
         var newVisibility = auxVisible || preeditVisible || lookupTableVisible;
         if (!newVisibility) {
-        // If we gonna hide anyway, don't do the update.
-        inputpanel.hide();
-        return;
+            // If we gonna hide anyway, don't do the update.
+            inputpanel.hide();
+            return;
         }
         textLabel.visible = auxVisible || preeditVisible;
         auxLabel.text = (auxVisible && data["AuxText"]) ? data["AuxText"] : ""
@@ -210,6 +230,7 @@ PlasmaCore.Dialog {
         preedit.visible = preeditVisible;
         var layout = data["LookupTableLayout"] !== undefined ? data["LookupTableLayout"] : 0;
         inputpanel.highlightCandidate = data["LookupTableCursor"] !== undefined ? data["LookupTableCursor"] : -1;
+        inputpanel.hoveredCandidate = -1;
         inputpanel.verticalLayout = (layout === 1) || (layout == 0 && plasmoid.configuration.vertical_lookup_table);
         button.visible = lookupTableVisible
 
@@ -233,7 +254,7 @@ PlasmaCore.Dialog {
         inputpanel.mainItem.update();
         // If we gonna show, do that after everything is ready.
         if (newVisibility) {
-        inputpanel.show();
+            inputpanel.show();
         }
     }
 
