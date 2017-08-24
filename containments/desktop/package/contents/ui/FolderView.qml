@@ -849,6 +849,12 @@ Item {
                     }
                 }
 
+                Keys.onEscapePressed: {
+                    if (!editor.targetItem) {
+                        dir.clearSelection();
+                    }
+                }
+
                 Folder.ShortCut {
                     Component.onCompleted: {
                         installAsEventFilterFor(gridView);
