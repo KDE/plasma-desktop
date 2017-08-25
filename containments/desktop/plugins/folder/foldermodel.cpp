@@ -1113,13 +1113,7 @@ bool FolderModel::isDir(const QModelIndex &index, const KDirModel *dirModel) con
         if (file.readType() == QLatin1String("Link")) {
             const QUrl url(file.readUrl());
 
-            if (url.isLocalFile()) {
-                QT_STATBUF buf;
-                const QString path = url.adjusted(QUrl::StripTrailingSlash).toLocalFile();
-                if (QT_STAT(QFile::encodeName(path).constData(), &buf) == 0) {
-                    return S_ISDIR(buf.st_mode);
-                }
-            } else if (!m_isDirCache.contains(item.url()) && KProtocolInfo::protocolClass(url.scheme()) == QStringLiteral(":local")) {
+            if (!m_isDirCache.contains(item.url()) && KProtocolInfo::protocolClass(url.scheme()) == QStringLiteral(":local")) {
                 KIO::StatJob *job = KIO::stat(url, KIO::HideProgressInfo);
                 job->setProperty("org.kde.plasma.folder_url", item.url());
                 job->setSide(KIO::StatJob::SourceSide);
