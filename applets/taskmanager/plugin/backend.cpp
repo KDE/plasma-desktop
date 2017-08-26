@@ -123,16 +123,34 @@ void Backend::setHighlightWindows(bool highlight)
     }
 }
 
-QVariantList Backend::jumpListActions(const QUrl &launcherUrl, QObject *parent)
+QUrl tryDecodeApplicationsUrl(const QUrl &launcherUrl)
 {
-    QVariantList actions;
+    if (launcherUrl.isValid() && launcherUrl.scheme() == QStringLiteral("applications")) {
+        const KService::Ptr service = KService::serviceByMenuId(launcherUrl.path());
 
-    if (!parent || !launcherUrl.isValid() || !launcherUrl.isLocalFile()
-        || !KDesktopFile::isDesktopFile(launcherUrl.toLocalFile())) {
-        return actions;
+        if (service) {
+            return QUrl::fromLocalFile(service->entryPath());
+        }
     }
 
-    KDesktopFile desktopFile(launcherUrl.toLocalFile());
+    return launcherUrl;
+}
+
+QVariantList Backend::jumpListActions(const QUrl &launcherUrl, QObject *parent)
+{
+    if (!parent) {
+        return QVariantList();
+    }
+
+    QUrl desktopEntryUrl = tryDecodeApplicationsUrl(launcherUrl);
+
+    if (!desktopEntryUrl.isValid() || !desktopEntryUrl.isLocalFile()
+        || !KDesktopFile::isDesktopFile(desktopEntryUrl.toLocalFile())) {
+        return QVariantList();
+    }
+
+    QVariantList actions;
+    KDesktopFile desktopFile(desktopEntryUrl.toLocalFile());
 
     const QStringList &jumpListActions = desktopFile.readActions();
 
@@ -178,14 +196,19 @@ QVariantList Backend::jumpListActions(const QUrl &launcherUrl, QObject *parent)
 
 QVariantList Backend::placesActions(const QUrl &launcherUrl, bool showAllPlaces, QObject *parent)
 {
-    QVariantList actions;
-
-    if (!parent || !launcherUrl.isValid() || !launcherUrl.isLocalFile()
-        || !KDesktopFile::isDesktopFile(launcherUrl.toLocalFile())) {
-        return actions;
+    if (!parent) {
+        return QVariantList();
     }
 
-    KDesktopFile desktopFile(launcherUrl.toLocalFile());
+    QUrl desktopEntryUrl = tryDecodeApplicationsUrl(launcherUrl);
+
+    if (!desktopEntryUrl.isValid() || !desktopEntryUrl.isLocalFile()
+        || !KDesktopFile::isDesktopFile(desktopEntryUrl.toLocalFile())) {
+        return QVariantList();
+    }
+
+    QVariantList actions;
+    KDesktopFile desktopFile(desktopEntryUrl.toLocalFile());
 
     // Since we can't have dynamic jump list actions, at least add the user's "Places" for file managers.
     const QStringList &categories = desktopFile.desktopGroup().readXdgListEntry(QStringLiteral("Categories"));
@@ -207,8 +230,8 @@ QVariantList Backend::placesActions(const QUrl &launcherUrl, bool showAllPlaces,
 
         QAction *action = new QAction(icon, title, parent);
 
-        connect(action, &QAction::triggered, this, [this, action, url, launcherUrl] {
-            KService::Ptr service = KService::serviceByDesktopPath(launcherUrl.toLocalFile());
+        connect(action, &QAction::triggered, this, [this, action, url, desktopEntryUrl] {
+            KService::Ptr service = KService::serviceByDesktopPath(desktopEntryUrl.toLocalFile());
             if (!service) {
                 return;
             }
@@ -239,14 +262,19 @@ QVariantList Backend::placesActions(const QUrl &launcherUrl, bool showAllPlaces,
 
 QVariantList Backend::recentDocumentActions(const QUrl &launcherUrl, QObject *parent)
 {
-    QVariantList actions;
-
-    if (!parent || !launcherUrl.isValid() || !launcherUrl.isLocalFile()
-        || !KDesktopFile::isDesktopFile(launcherUrl.toLocalFile())) {
-        return actions;
+    if (!parent) {
+        return QVariantList();
     }
 
-    QString desktopName = launcherUrl.fileName();
+    QUrl desktopEntryUrl = tryDecodeApplicationsUrl(launcherUrl);
+
+    if (!desktopEntryUrl.isValid() || !desktopEntryUrl.isLocalFile()
+        || !KDesktopFile::isDesktopFile(desktopEntryUrl.toLocalFile())) {
+        return QVariantList();
+    }
+
+    QVariantList actions;
+    QString desktopName = desktopEntryUrl.fileName();
     QString storageId = desktopName;
 
     if (storageId.startsWith(QLatin1String("org.kde."))) {
@@ -288,7 +316,7 @@ QVariantList Backend::recentDocumentActions(const QUrl &launcherUrl, QObject *pa
         action->setText(url.fileName());
         action->setIcon(QIcon::fromTheme(fileItem.iconName(), QIcon::fromTheme("unknown")));
         action->setProperty("agent", storageId);
-        action->setProperty("entryPath", launcherUrl);
+        action->setProperty("entryPath", desktopEntryUrl);
         action->setData(resource);
         connect(action, &QAction::triggered, this, &Backend::handleRecentDocumentAction);
 
