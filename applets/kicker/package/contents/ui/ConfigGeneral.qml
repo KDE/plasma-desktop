@@ -22,6 +22,11 @@ import QtQuick.Controls 1.0
 import QtQuick.Dialogs 1.2
 import QtQuick.Layouts 1.0
 
+import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.components 2.0 as PlasmaComponents
+
+import org.kde.kquickcontrolsaddons 2.0 as KQuickAddons
+
 import org.kde.plasma.private.kicker 0.1 as Kicker
 
 Item {
@@ -32,8 +37,9 @@ Item {
 
     property bool isDash: (plasmoid.pluginName == "org.kde.plasma.kickerdash")
 
-    property alias cfg_useCustomButtonImage: useCustomButtonImage.checked
-    property alias cfg_customButtonImage: customButtonImage.text
+    property string cfg_icon: plasmoid.configuration.icon
+    property bool cfg_useCustomButtonImage: plasmoid.configuration.useCustomButtonImage
+    property string cfg_customButtonImage: plasmoid.configuration.customButtonImage
 
     property alias cfg_appNameFormat: appNameFormat.currentIndex
     property alias cfg_limitDepth: limitDepth.checked
@@ -49,56 +55,72 @@ Item {
 
     ColumnLayout {
         anchors.left: parent.left
-        GroupBox {
-            Layout.fillWidth: true
 
-            title: i18n("Icon")
+        RowLayout {
+            spacing: units.smallSpacing
 
-            flat: true
+            Label {
+                text: i18n("Icon:")
+            }
 
-            RowLayout {
-                CheckBox {
-                    id: useCustomButtonImage
+            Button {
+                id: iconButton
+                Layout.minimumWidth: previewFrame.width + units.smallSpacing * 2
+                Layout.maximumWidth: Layout.minimumWidth
+                Layout.minimumHeight: previewFrame.height + units.smallSpacing * 2
+                Layout.maximumHeight: Layout.minimumWidth
 
-                    text: i18n("Use custom image:")
+                KQuickAddons.IconDialog {
+                    id: iconDialog
+                    onIconNameChanged: {
+                        cfg_customButtonImage = iconName || cfg_icon || "start-here-kde"
+                        cfg_useCustomButtonImage = true;
+                    }
                 }
 
-                TextField {
-                    id: customButtonImage
+                // just to provide some visual feedback, cannot have checked without checkable enabled
+                checkable: true
+                onClicked: {
+                    checked = Qt.binding(function() { // never actually allow it being checked
+                        return iconMenu.status === PlasmaComponents.DialogStatus.Open
+                    })
 
-                    enabled: useCustomButtonImage.checked
-
-                    Layout.fillWidth: true
+                    iconMenu.open(0, height)
                 }
 
-                Button {
-                    iconName: "document-open"
+                PlasmaCore.FrameSvgItem {
+                    id: previewFrame
+                    anchors.centerIn: parent
+                    imagePath: plasmoid.location === PlasmaCore.Types.Vertical || plasmoid.location === PlasmaCore.Types.Horizontal
+                            ? "widgets/panel-background" : "widgets/background"
+                    width: units.iconSizes.large + fixedMargins.left + fixedMargins.right
+                    height: units.iconSizes.large + fixedMargins.top + fixedMargins.bottom
 
-                    enabled: useCustomButtonImage.checked
+                    PlasmaCore.IconItem {
+                        anchors.centerIn: parent
+                        width: units.iconSizes.large
+                        height: width
+                        source: cfg_useCustomButtonImage ? cfg_customButtonImage : cfg_icon
+                    }
+                }
+            }
 
+            // QQC Menu can only be opened at cursor position, not a random one
+            PlasmaComponents.ContextMenu {
+                id: iconMenu
+                visualParent: iconButton
+
+                PlasmaComponents.MenuItem {
+                    text: i18nc("@item:inmenu Open icon chooser dialog", "Choose...")
+                    icon: "document-open-folder"
+                    onClicked: iconDialog.open()
+                }
+                PlasmaComponents.MenuItem {
+                    text: i18nc("@item:inmenu Reset icon to default", "Clear Icon")
+                    icon: "edit-clear"
                     onClicked: {
-                        imagePicker.folder = systemSettings.picturesLocation();
-                        imagePicker.open();
+                        cfg_useCustomButtonImage = false;
                     }
-                }
-
-                FileDialog {
-                    id: imagePicker
-
-                    title: i18n("Choose an image")
-
-                    selectFolder: false
-                    selectMultiple: false
-
-                    nameFilters: [ i18n("Image Files (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)") ]
-
-                    onFileUrlChanged: {
-                        customButtonImage.text = fileUrl;
-                    }
-                }
-
-                Kicker.SystemSettings {
-                    id: systemSettings
                 }
             }
         }
