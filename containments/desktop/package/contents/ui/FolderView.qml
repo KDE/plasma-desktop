@@ -897,6 +897,8 @@ Item {
                         dir.undo();
                     } else if (event.matches(StandardKey.Refresh)) {
                         dir.refresh();
+                    } else if (event.matches(StandardKey.SelectAll)) {
+                        positioner.setRangeSelected(0, count - 1);
                     }
                 }
 
