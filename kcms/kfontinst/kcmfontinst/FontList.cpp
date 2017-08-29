@@ -1412,7 +1412,7 @@ CFontListView::CFontListView(QWidget *parent, CFontList *model)
                                        this, SIGNAL(enable()));
     itsDisableAct=itsMenu->addAction(QIcon::fromTheme("disablefont"), i18n("Disable"),
                                         this, SIGNAL(disable()));
-    if(!Misc::app(KFI_VIEWER).isEmpty() || !Misc::app(KFI_VIEWER).isEmpty())
+    if(!Misc::app(KFI_VIEWER).isEmpty())
         itsMenu->addSeparator();
     itsPrintAct=Misc::app(KFI_VIEWER).isEmpty() ? 0L : itsMenu->addAction(QIcon::fromTheme("document-print"), i18n("Print..."),
                                                                           this, SIGNAL(print()));
