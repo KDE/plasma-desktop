@@ -119,11 +119,20 @@ FolderModel::FolderModel(QObject *parent) : QSortFilterProxyModel(parent),
     dirLister->setAutoErrorHandlingEnabled(false, 0);
     connect(dirLister, &DirLister::error, this, &FolderModel::dirListFailed);
     connect(dirLister, &KCoreDirLister::itemsDeleted, this, &FolderModel::evictFromIsDirCache);
-    connect(dirLister, &KCoreDirLister::started, this, &FolderModel::listingStarted);
+
+    connect(dirLister, &KCoreDirLister::started, this, std::bind(&FolderModel::setStatus, this, Status::Listing));
+
     void (KCoreDirLister::*myCompletedSignal)() = &KCoreDirLister::completed;
-    QObject::connect(dirLister, myCompletedSignal, this, &FolderModel::listingCompleted);
+    QObject::connect(dirLister, myCompletedSignal, this, [this] {
+        setStatus(Status::Ready);
+        emit listingCompleted();
+    });
+
     void (KCoreDirLister::*myCanceledSignal)() = &KCoreDirLister::canceled;
-    QObject::connect(dirLister, myCanceledSignal, this, &FolderModel::listingCanceled);
+    QObject::connect(dirLister, myCanceledSignal, this, [this] {
+        setStatus(Status::Canceled);
+        emit listingCanceled();
+    });
 
     m_dirModel = new KDirModel(this);
     m_dirModel->setDirLister(dirLister);
@@ -247,6 +256,19 @@ QString FolderModel::iconName() const
     }
 
     return rootItem.iconName();
+}
+
+FolderModel::Status FolderModel::status() const
+{
+    return m_status;
+}
+
+void FolderModel::setStatus(Status status)
+{
+    if (m_status != status) {
+        m_status = status;
+        emit statusChanged();
+    }
 }
 
 QString FolderModel::errorString() const

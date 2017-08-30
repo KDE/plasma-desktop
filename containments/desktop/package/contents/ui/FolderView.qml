@@ -158,6 +158,12 @@ Item {
         when: toolBox
     }
 
+    Binding {
+        target: plasmoid
+        property: "busy"
+        value: !gridView.model && dir.status === Folder.FolderModel.Listing
+    }
+
     function makeBackButton() {
         return Qt.createQmlObject("BackButtonItem {}", main);
     }
@@ -1054,20 +1060,11 @@ Item {
             previews: plasmoid.configuration.previews
             previewPlugins: plasmoid.configuration.previewPlugins
 
-            onListingStarted: {
-                if (!gridView.model) {
-                    plasmoid.busy = true;
-                }
-            }
-
             onListingCompleted: {
                 if (!gridView.model) {
-                    plasmoid.busy = false;
                     gridView.model = positioner;
                 }
             }
-
-            onListingCanceled: plasmoid.busy = false;
 
             onMove: {
                 var rows = (gridView.flow == GridView.FlowLeftToRight);

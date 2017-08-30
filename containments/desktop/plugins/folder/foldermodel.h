@@ -76,6 +76,7 @@ class FolderModel : public QSortFilterProxyModel
     Q_PROPERTY(QString url READ url WRITE setUrl NOTIFY urlChanged)
     Q_PROPERTY(QString iconName READ iconName NOTIFY iconNameChanged)
     Q_PROPERTY(QUrl resolvedUrl READ resolvedUrl NOTIFY resolvedUrlChanged)
+    Q_PROPERTY(Status status READ status NOTIFY statusChanged)
     Q_PROPERTY(QString errorString READ errorString NOTIFY errorStringChanged)
     Q_PROPERTY(bool dragging READ dragging NOTIFY draggingChanged)
     Q_PROPERTY(bool usedByContainment READ usedByContainment WRITE setUsedByContainment NOTIFY usedByContainmentChanged)
@@ -113,6 +114,14 @@ class FolderModel : public QSortFilterProxyModel
             FilterHideMatches
         };
 
+        enum Status {
+            None,
+            Ready,
+            Listing,
+            Canceled
+        };
+        Q_ENUM(Status)
+
         FolderModel(QObject *parent = 0);
         ~FolderModel();
 
@@ -126,6 +135,8 @@ class FolderModel : public QSortFilterProxyModel
 
         QUrl resolvedUrl() const;
         Q_INVOKABLE QUrl resolve(const QString& url);
+
+        Status status() const;
 
         QString errorString() const;
 
@@ -221,11 +232,11 @@ class FolderModel : public QSortFilterProxyModel
 
     Q_SIGNALS:
         void urlChanged() const;
-        void listingStarted() const;
         void listingCompleted() const;
         void listingCanceled() const;
         void iconNameChanged() const;
         void resolvedUrlChanged() const;
+        void statusChanged() const;
         void errorStringChanged() const;
         void draggingChanged() const;
         void usedByContainmentChanged() const;
@@ -273,6 +284,7 @@ class FolderModel : public QSortFilterProxyModel
         void createActions();
         void updatePasteAction();
         void addDragImage(QDrag *drag, int x, int y);
+        void setStatus(Status status);
         QList<QUrl> selectedUrls(bool forTrash) const;
         KDirModel *m_dirModel;
         KDirWatch *m_dirWatch;
@@ -291,6 +303,7 @@ class FolderModel : public QSortFilterProxyModel
         KNewFileMenu *m_newMenu;
         KFileItemActions *m_fileItemActions;
         KFileCopyToMenu *m_copyToMenu;
+        Status m_status = Status::None;
         QString m_errorString;
         bool m_usedByContainment;
         bool m_locked;
