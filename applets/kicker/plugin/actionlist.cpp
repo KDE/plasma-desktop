@@ -19,12 +19,17 @@
  ***************************************************************************/
 
 #include "actionlist.h"
+#include "menuentryeditor.h"
+
+#include <config-appstream.h>
 
 #include <QApplication>
+#include <QDesktopServices>
 
 #include <KLocalizedString>
 #include <KMimeTypeTrader>
 #include <KPropertiesDialog>
+#include <KProtocolInfo>
 #include <KRun>
 
 #include <KActivities/Stats/Cleaning>
@@ -32,6 +37,10 @@
 #include <KActivities/Stats/Terms>
 
 #include "containmentinterface.h"
+
+#ifdef HAVE_APPSTREAMQT
+#include <AppStreamQt/pool.h>
+#endif
 
 namespace KAStats = KActivities::Stats;
 
@@ -307,5 +316,90 @@ bool handleRecentDocumentAction(KService::Ptr service, const QString &actionId, 
 
     return (KRun::runService(*service, QList<QUrl>() << QUrl(argument), QApplication::activeWindow()) != 0);
 }
+
+Q_GLOBAL_STATIC(MenuEntryEditor, menuEntryEditor)
+
+bool canEditApplication(const QString &entryPath)
+{
+    return menuEntryEditor->canEdit(entryPath);
+}
+
+void editApplication(const QString &entryPath, const QString &menuId)
+{
+    menuEntryEditor->edit(entryPath, menuId);
+}
+
+QVariantList editApplicationAction(const KService::Ptr &service)
+{
+    QVariantList actionList;
+
+    if (canEditApplication(service->entryPath())) {
+        QVariantMap editAction = Kicker::createActionItem(i18n("Edit Application..."), "editApplication");
+        editAction["icon"] = "kmenuedit"; // TODO: Using the KMenuEdit icon might be misleading.
+        actionList << editAction;
+    }
+
+    return actionList;
+}
+
+bool handleEditApplicationAction(const QString &actionId, const KService::Ptr &service)
+{
+
+    if (service && actionId == "editApplication" && canEditApplication(service->entryPath())) {
+        Kicker::editApplication(service->entryPath(), service->menuId());
+
+        return true;
+    }
+
+    return false;
+}
+
+#ifdef HAVE_APPSTREAMQT
+Q_GLOBAL_STATIC(AppStream::Pool, appstreamPool)
+#endif
+
+QVariantList appstreamActions(const KService::Ptr &service)
+{
+    QVariantList ret;
+
+#ifdef HAVE_APPSTREAMQT
+    const KService::Ptr appStreamHandler = KMimeTypeTrader::self()->preferredService(QStringLiteral("x-scheme-handler/appstream"));
+
+    // Don't show action if we can't find any app to handle appstream:// URLs.
+    if (!appStreamHandler) {
+        if (!KProtocolInfo::isHelperProtocol(QStringLiteral("appstream"))
+            || KProtocolInfo::exec(QStringLiteral("appstream")).isEmpty()) {
+            return ret;
+        }
+    }
+
+    if (!appstreamPool.exists()) {
+        appstreamPool->load();
+    }
+
+    const auto components = appstreamPool->componentsById(service->desktopEntryName()+QLatin1String(".desktop"));
+    for(const auto &component: components) {
+        const QString componentId = component.id();
+
+        QVariantMap appstreamAction = Kicker::createActionItem(i18nc("@action opens a software center with the application", "Manage '%1'...", component.name()), "manageApplication", QVariant(QStringLiteral("appstream://") + componentId));
+        appstreamAction[QStringLiteral("icon")] = QStringLiteral("applications-other");
+        ret << appstreamAction;
+    }
+#else
+    Q_UNUSED(service)
+#endif
+
+    return ret;
+}
+
+bool handleAppstreamActions(const QString &actionId, const QVariant &argument)
+{
+    if (actionId == "manageApplication") {
+        return QDesktopServices::openUrl(QUrl(argument.toString()));
+    }
+
+    return false;
+}
+
 
 }

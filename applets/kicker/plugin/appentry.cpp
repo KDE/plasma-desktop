@@ -22,15 +22,12 @@
 #include "actionlist.h"
 #include "appsmodel.h"
 #include "containmentinterface.h"
-#include "menuentryeditor.h"
 
 #include <config-X11.h>
-#include <config-appstream.h>
 
 #include <QProcess>
 #include <QQmlPropertyMap>
 #include <QStandardPaths>
-#include <QDesktopServices>
 #if HAVE_X11
 #include <QX11Info>
 #endif
@@ -40,7 +37,6 @@
 #include <KJob>
 #include <KLocalizedString>
 #include <KMimeTypeTrader>
-#include <KProtocolInfo>
 #include <KRun>
 #include <KSycoca>
 #include <KShell>
@@ -48,12 +44,6 @@
 #include <KStartupInfo>
 
 #include <Plasma/Plasma>
-
-#ifdef HAVE_APPSTREAMQT
-#include <AppStreamQt/pool.h>
-#endif
-
-MenuEntryEditor *AppEntry::m_menuEntryEditor = nullptr;
 
 AppEntry::AppEntry(AbstractModel *owner, KService::Ptr service, NameFormat nameFormat)
 : AbstractEntry(owner)
@@ -88,10 +78,6 @@ void AppEntry::init(NameFormat nameFormat)
         m_description = nameFromService(m_service, NameOnly);
     } else {
         m_description = nameFromService(m_service, GenericNameOnly);
-    }
-
-    if (!m_menuEntryEditor) {
-        m_menuEntryEditor = new MenuEntryEditor();
     }
 }
 
@@ -142,39 +128,6 @@ bool AppEntry::hasActions() const
     return true;
 }
 
-#ifdef HAVE_APPSTREAMQT
-Q_GLOBAL_STATIC(AppStream::Pool, appstreamPool)
-
-QVariantList appstreamActions(const KService::Ptr &service)
-{
-    QVariantList ret;
-
-    const KService::Ptr appStreamHandler = KMimeTypeTrader::self()->preferredService(QStringLiteral("x-scheme-handler/appstream"));
-
-    // Don't show action if we can't find any app to handle appstream:// URLs.
-    if (!appStreamHandler) {
-        if (!KProtocolInfo::isHelperProtocol(QStringLiteral("appstream"))
-            || KProtocolInfo::exec(QStringLiteral("appstream")).isEmpty()) {
-            return ret;
-        }
-    }
-
-    if (!appstreamPool.exists()) {
-        appstreamPool->load();
-    }
-
-    const auto components = appstreamPool->componentsById(service->desktopEntryName()+QLatin1String(".desktop"));
-    for(const auto &component: components) {
-        const QString componentId = component.id();
-
-        QVariantMap appstreamAction = Kicker::createActionItem(i18nc("@action opens a software center with the application", "Manage '%1'...", component.name()), "manageApplication", QVariant(QStringLiteral("appstream://") + componentId));
-        appstreamAction[QStringLiteral("icon")] = QStringLiteral("applications-other");
-        ret << appstreamAction;
-    }
-    return ret;
-}
-#endif
-
 QVariantList AppEntry::actions() const
 {
     QVariantList actionList;
@@ -205,19 +158,11 @@ QVariantList AppEntry::actions() const
         return actionList;
     }
 
-    if (m_menuEntryEditor->canEdit(m_service->entryPath())) {
-        actionList << Kicker::createSeparatorActionItem();
-
-        QVariantMap editAction = Kicker::createActionItem(i18n("Edit Application..."), "editApplication");
-        editAction["icon"] = "kmenuedit"; // TODO: Using the KMenuEdit icon might be misleading.
-        actionList << editAction;
-    }
-
-#ifdef HAVE_APPSTREAMQT
     if (m_service->isApplication()) {
-        actionList << appstreamActions(m_service);
+        actionList << Kicker::createSeparatorActionItem();
+        actionList << Kicker::editApplicationAction(m_service);
+        actionList << Kicker::appstreamActions(m_service);
     }
-#endif
 
     QQmlPropertyMap *appletConfig = qobject_cast<QQmlPropertyMap *>(appletInterface->property("configuration").value<QObject *>());
 
@@ -260,12 +205,10 @@ bool AppEntry::run(const QString& actionId, const QVariant &argument)
 
     if (Kicker::handleAddLauncherAction(actionId, appletInterface, m_service)) {
         return true;
-    } else if (actionId == "editApplication" && m_menuEntryEditor->canEdit(m_service->entryPath())) {
-        m_menuEntryEditor->edit(m_service->entryPath(), m_service->menuId());
-
+    } else if (Kicker::handleEditApplicationAction(actionId, m_service)) {
         return true;
-    } else if (actionId == "manageApplication") {
-        return QDesktopServices::openUrl(QUrl(argument.toString()));
+    } else if (Kicker::handleAppstreamActions(actionId, argument)) {
+        return true;
     } else if (actionId == "_kicker_jumpListAction") {
         return KRun::run(argument.toString(), {}, nullptr, m_service->name(), m_service->icon());
     }

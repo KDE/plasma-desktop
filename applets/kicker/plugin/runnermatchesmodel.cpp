@@ -29,6 +29,8 @@
 #include <KRunner/RunnerManager>
 #include <KRun>
 
+#include <Plasma/Plasma>
+
 RunnerMatchesModel::RunnerMatchesModel(const QString &runnerId, const QString &name,
     Plasma::RunnerManager *manager, QObject *parent)
 : AbstractModel(parent)
@@ -104,7 +106,8 @@ QVariant RunnerMatchesModel::data(const QModelIndex &index, int role) const
             actionList << Kicker::createSeparatorActionItem();
         }
 
-        KService::Ptr service = KService::serviceByStorageId(match.data().toString());
+        const KService::Ptr service = KService::serviceByStorageId(match.data().toString());
+
         if (service) {
             const QVariantList &jumpListActions = Kicker::jumpListActions(service);
             if (!jumpListActions.isEmpty()) {
@@ -113,14 +116,27 @@ QVariant RunnerMatchesModel::data(const QModelIndex &index, int role) const
 
             QObject *appletInterface = static_cast<RunnerModel *>(parent())->appletInterface();
 
+            const bool systemImmutable = appletInterface->property("immutability").toInt() == Plasma::Types::SystemImmutable;
+
             const QVariantList &addLauncherActions = Kicker::createAddLauncherActionList(appletInterface, service);
-            if (!addLauncherActions.isEmpty()) {
+            if (!systemImmutable && !addLauncherActions.isEmpty()) {
                 actionList << addLauncherActions << Kicker::createSeparatorActionItem();
             }
 
             const QVariantList &recentDocuments = Kicker::recentDocumentActions(service);
             if (!recentDocuments.isEmpty()) {
                 actionList << recentDocuments << Kicker::createSeparatorActionItem();
+            }
+
+            // Don't allow adding launchers, editing, hiding, or uninstalling applications
+            // when system is immutable.
+            if (systemImmutable) {
+                return actionList;
+            }
+
+            if (service->isApplication()) {
+                actionList << Kicker::editApplicationAction(service);
+                actionList << Kicker::appstreamActions(service);
             }
         }
 
@@ -149,9 +165,13 @@ bool RunnerMatchesModel::trigger(int row, const QString &actionId, const QVarian
 
     QObject *appletInterface = static_cast<RunnerModel *>(parent())->appletInterface();
 
-    KService::Ptr service = KService::serviceByStorageId(match.data().toString());
+    const KService::Ptr service = KService::serviceByStorageId(match.data().toString());
 
     if (Kicker::handleAddLauncherAction(actionId, appletInterface, service)) {
+        return true;
+    } else if (Kicker::handleEditApplicationAction(actionId, service)) {
+        return true;
+    } else if (Kicker::handleAppstreamActions(actionId, argument)) {
         return true;
     } else if (actionId == QLatin1String("_kicker_jumpListAction")) {
         return KRun::run(argument.toString(), {}, nullptr, service ? service->name() : QString(), service ? service->icon() : QString());
