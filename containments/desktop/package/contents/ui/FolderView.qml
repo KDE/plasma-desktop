@@ -148,6 +148,15 @@ Item {
         }
     }
 
+    Connections {
+        target: plasmoid
+        onExpandedChanged: {
+            if (plasmoid.expanded && dir.status === Folder.FolderModel.Ready && !gridView.model) {
+                gridView.model = positioner;
+            }
+        }
+    }
+
     // Lower the toolBox when an item is hovered, so it doesn't interfere with
     // its interaction (e.g. the selection button in the top left, cf. Bug 337060)
     Binding {
@@ -1061,7 +1070,7 @@ Item {
             previewPlugins: plasmoid.configuration.previewPlugins
 
             onListingCompleted: {
-                if (!gridView.model) {
+                if (!gridView.model && plasmoid.expanded) {
                     gridView.model = positioner;
                 }
             }
