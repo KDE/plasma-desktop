@@ -841,10 +841,7 @@ Item {
                     gridView.cachedRectangleSelection = indices;
                 }
 
-                Behavior on contentX { id: smoothX; enabled: false; SmoothedAnimation { velocity: 700 } }
-                Behavior on contentY { id: smoothY; enabled: false; SmoothedAnimation { velocity: 700 } }
-
-                Keys.onReturnPressed: {
+                function runOrCdSelected() {
                     if (currentIndex != -1 && dir.hasSelection()) {
                         if (root.useListViewMode && currentItem.isDir) {
                             doCd(positioner.map(currentIndex));
@@ -853,6 +850,12 @@ Item {
                         }
                     }
                 }
+
+                Behavior on contentX { id: smoothX; enabled: false; SmoothedAnimation { velocity: 700 } }
+                Behavior on contentY { id: smoothY; enabled: false; SmoothedAnimation { velocity: 700 } }
+
+                Keys.onReturnPressed: runOrCdSelected()
+                Keys.onEnterPressed: runOrCdSelected()
 
                 Keys.onMenuPressed: {
                     if (currentIndex != -1 && dir.hasSelection() && currentItem) {
