@@ -870,6 +870,7 @@ Item {
                 Keys.onEscapePressed: {
                     if (!editor.targetItem) {
                         dir.clearSelection();
+                        event.accepted = false;
                     }
                 }
 
@@ -1219,7 +1220,10 @@ Item {
                     commit();
                     break;
                 case Qt.Key_Escape:
-                    targetItem = null;
+                    if (targetItem) {
+                        targetItem = null;
+                        event.accepted = true;
+                    }
                     break;
                 case Qt.Key_Home:
                     editor.select(0, 0);
