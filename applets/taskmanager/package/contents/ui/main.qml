@@ -235,9 +235,22 @@ Item {
                 if (source === "@multiplex") {
                     continue;
                 }
+
                 var sourceData = data[source];
-                if (sourceData && sourceData.DesktopEntry === desktopFileName && (pid === undefined || sourceData.InstancePid === pid)) {
+                if (!sourceData || sourceData.DesktopEntry !== desktopFileName) {
+                    continue;
+                }
+
+                if (pid === undefined || sourceData.InstancePid === pid) {
                     return source;
+                }
+
+                var metadata = sourceData.Metadata;
+                if (metadata) {
+                    var kdePid = metadata["kde:pid"];
+                    if (kdePid && pid === kdePid) {
+                        return source;
+                    }
                 }
             }
 
