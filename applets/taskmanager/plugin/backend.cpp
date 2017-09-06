@@ -123,7 +123,7 @@ void Backend::setHighlightWindows(bool highlight)
     }
 }
 
-QUrl tryDecodeApplicationsUrl(const QUrl &launcherUrl)
+QUrl Backend::tryDecodeApplicationsUrl(const QUrl &launcherUrl)
 {
     if (launcherUrl.isValid() && launcherUrl.scheme() == QStringLiteral("applications")) {
         const KService::Ptr service = KService::serviceByMenuId(launcherUrl.path());

@@ -27,6 +27,8 @@
 #include <QPixmap>
 #include <QPointer>
 
+#include "backend.h"
+
 DragHelper::DragHelper(QObject* parent) : QObject(parent)
 , m_dragIconSize(32)
 {
@@ -72,7 +74,7 @@ void DragHelper::startDragInternal(QQuickItem *item, const QString &mimeType,
     QPointer<QQuickItem> grabber = item;
 
     QList<QUrl> urlList;
-    urlList.append(url);
+    urlList.append(Backend::tryDecodeApplicationsUrl(url));
 
     QMimeData *dragData = new QMimeData();
     dragData->setData(mimeType, mimeData.toByteArray());

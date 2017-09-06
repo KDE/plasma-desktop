@@ -87,6 +87,8 @@ class Backend : public QObject
 
         Q_INVOKABLE void cancelHighlightWindows();
 
+        static QUrl tryDecodeApplicationsUrl(const QUrl &launcherUrl);
+
     public Q_SLOTS:
         void presentWindows(const QVariant &winIds);
         void windowsHovered(const QVariant &winIds, bool hovered);
