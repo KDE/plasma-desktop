@@ -29,10 +29,6 @@ QtControls.Button {
     checkable: true
     property string eventString
 
-    implicitWidth: theme.mSize(theme.defaultFont).width * 15
-    Layout.minimumWidth: implicitWidth
-    Layout.maximumWidth: implicitWidth
-
     onCheckedChanged: {
         if (checked) {
             text = i18nd("plasma_shell_org.kde.plasma.desktop", "Input Here");
