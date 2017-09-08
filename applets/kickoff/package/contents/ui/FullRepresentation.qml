@@ -65,13 +65,24 @@ Item {
         sorted: plasmoid.configuration.alphaSort
         showSeparators: false
 
-        favoritesModel: Kicker.FavoritesModel {
+        favoritesModel: Kicker.KAStatsFavoritesModel {
             id: rootModelFavorites
             favorites: plasmoid.configuration.favorites
 
             onFavoritesChanged: {
                 plasmoid.configuration.favorites = favorites;
             }
+        }
+
+        Component.onCompleted: {
+            favoritesModel.initForClient("org.kde.plasma.kickoff.favorites.instance-" + plasmoid.id)
+
+            if (!plasmoid.configuration.favoritesPortedToKAstats) {
+                favoritesModel.portOldFavorites(plasmoid.configuration.favorites);
+                plasmoid.configuration.favoritesPortedToKAstats = true;
+            }
+
+            rootModel.refresh();
         }
     }
 

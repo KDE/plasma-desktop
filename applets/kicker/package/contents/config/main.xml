@@ -44,6 +44,10 @@
       <label>List of system action favorites.</label>
       <default>logout,reboot,shutdown</default>
     </entry>
+    <entry name="favoritesPortedToKAstats" type="Bool">
+      <label>Are the favorites ported to use KActivitiesStats to allow per-activity favorites</label>
+      <default>false</default>
+    </entry>
     <entry name="hiddenApplications" type="StringList">
       <label>List of menu id's (usually .desktop file names) of apps that should not be shown in the menu.</label>
       <default></default>

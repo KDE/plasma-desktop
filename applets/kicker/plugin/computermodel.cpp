@@ -20,7 +20,7 @@
 
 #include "computermodel.h"
 #include "actionlist.h"
-#include "favoritesmodel.h"
+#include "simplefavoritesmodel.h"
 
 #include <QIcon>
 
@@ -137,12 +137,13 @@ Q_INVOKABLE bool RunCommandModel::trigger(int row, const QString &actionId, cons
 ComputerModel::ComputerModel(QObject *parent) : ForwardingModel(parent)
 , m_concatProxy(new KConcatenateRowsProxyModel(this))
 , m_runCommandModel(new RunCommandModel(this))
-, m_systemAppsModel(new FavoritesModel(this))
+, m_systemAppsModel(new SimpleFavoritesModel(this))
 , m_filteredPlacesModel(new FilteredPlacesModel(this))
 , m_appNameFormat(AppEntry::NameOnly)
 , m_appletInterface(nullptr)
 {
-    connect(m_systemAppsModel, &FavoritesModel::favoritesChanged, this, &ComputerModel::systemApplicationsChanged);
+    connect(m_systemAppsModel, &SimpleFavoritesModel::favoritesChanged, this, &ComputerModel::systemApplicationsChanged);
+    m_systemAppsModel->setFavorites(QStringList() << "systemsettings.desktop");
 
     m_concatProxy->addSourceModel(m_runCommandModel);
     m_concatProxy->addSourceModel(m_systemAppsModel);

@@ -17,7 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#include "favoritesmodel.h"
+#include "simplefavoritesmodel.h"
 #include "appentry.h"
 #include "contactentry.h"
 #include "fileentry.h"
@@ -26,24 +26,24 @@
 
 #include <KLocalizedString>
 
-FavoritesModel::FavoritesModel(QObject *parent) : AbstractModel(parent)
+SimpleFavoritesModel::SimpleFavoritesModel(QObject *parent) : AbstractModel(parent)
 , m_enabled(true)
 , m_maxFavorites(-1)
 , m_dropPlaceholderIndex(-1)
 {
 }
 
-FavoritesModel::~FavoritesModel()
+SimpleFavoritesModel::~SimpleFavoritesModel()
 {
     qDeleteAll(m_entryList);
 }
 
-QString FavoritesModel::description() const
+QString SimpleFavoritesModel::description() const
 {
     return i18n("Favorites");
 }
 
-QVariant FavoritesModel::data(const QModelIndex& index, int role) const
+QVariant SimpleFavoritesModel::data(const QModelIndex& index, int role) const
 {
     if (!index.isValid() || index.row() >= rowCount()) {
         return QVariant();
@@ -84,12 +84,12 @@ QVariant FavoritesModel::data(const QModelIndex& index, int role) const
     return QVariant();
 }
 
-int FavoritesModel::rowCount(const QModelIndex& parent) const
+int SimpleFavoritesModel::rowCount(const QModelIndex& parent) const
 {
     return parent.isValid() ? 0 : m_entryList.count() + (m_dropPlaceholderIndex != -1 ? 1 : 0);
 }
 
-bool FavoritesModel::trigger(int row, const QString &actionId, const QVariant &argument)
+bool SimpleFavoritesModel::trigger(int row, const QString &actionId, const QVariant &argument)
 {
     if (row < 0 || row >= m_entryList.count()) {
         return false;
@@ -98,12 +98,12 @@ bool FavoritesModel::trigger(int row, const QString &actionId, const QVariant &a
     return m_entryList.at(row)->run(actionId, argument);
 }
 
-bool FavoritesModel::enabled() const
+bool SimpleFavoritesModel::enabled() const
 {
     return m_enabled;
 }
 
-void FavoritesModel::setEnabled(bool enable)
+void SimpleFavoritesModel::setEnabled(bool enable)
 {
     if (m_enabled != enable) {
         m_enabled = enable;
@@ -112,12 +112,12 @@ void FavoritesModel::setEnabled(bool enable)
     }
 }
 
-QStringList FavoritesModel::favorites() const
+QStringList SimpleFavoritesModel::favorites() const
 {
     return m_favorites;
 }
 
-void FavoritesModel::setFavorites(const QStringList& favorites)
+void SimpleFavoritesModel::setFavorites(const QStringList& favorites)
 {
     QStringList _favorites(favorites);
     _favorites.removeDuplicates();
@@ -128,12 +128,12 @@ void FavoritesModel::setFavorites(const QStringList& favorites)
     }
 }
 
-int FavoritesModel::maxFavorites() const
+int SimpleFavoritesModel::maxFavorites() const
 {
     return m_maxFavorites;
 }
 
-void FavoritesModel::setMaxFavorites(int max)
+void SimpleFavoritesModel::setMaxFavorites(int max)
 {
     if (m_maxFavorites != max)
     {
@@ -147,12 +147,12 @@ void FavoritesModel::setMaxFavorites(int max)
     }
 }
 
-bool FavoritesModel::isFavorite(const QString &id) const
+bool SimpleFavoritesModel::isFavorite(const QString &id) const
 {
     return m_favorites.contains(id);
 }
 
-void FavoritesModel::addFavorite(const QString &id, int index)
+void SimpleFavoritesModel::addFavorite(const QString &id, int index)
 {
     if (!m_enabled || id.isEmpty()) {
         return;
@@ -184,7 +184,7 @@ void FavoritesModel::addFavorite(const QString &id, int index)
     emit favoritesChanged();
 }
 
-void FavoritesModel::removeFavorite(const QString &id)
+void SimpleFavoritesModel::removeFavorite(const QString &id)
 {
     if (!m_enabled || id.isEmpty()) {
         return;
@@ -208,7 +208,7 @@ void FavoritesModel::removeFavorite(const QString &id)
     }
 }
 
-void FavoritesModel::moveRow(int from, int to)
+void SimpleFavoritesModel::moveRow(int from, int to)
 {
     if (from >= m_favorites.count() || to >= m_favorites.count()) {
         return;
@@ -234,12 +234,12 @@ void FavoritesModel::moveRow(int from, int to)
     }
 }
 
-int FavoritesModel::dropPlaceholderIndex() const
+int SimpleFavoritesModel::dropPlaceholderIndex() const
 {
     return m_dropPlaceholderIndex;
 }
 
-void FavoritesModel::setDropPlaceholderIndex(int index)
+void SimpleFavoritesModel::setDropPlaceholderIndex(int index)
 {
     if (index == -1 && m_dropPlaceholderIndex != -1) {
         beginRemoveRows(QModelIndex(), m_dropPlaceholderIndex, m_dropPlaceholderIndex);
@@ -270,12 +270,12 @@ void FavoritesModel::setDropPlaceholderIndex(int index)
     }
 }
 
-AbstractModel *FavoritesModel::favoritesModel()
+AbstractModel *SimpleFavoritesModel::favoritesModel()
 {
     return this;
 }
 
-void FavoritesModel::refresh()
+void SimpleFavoritesModel::refresh()
 {
     beginResetModel();
 
@@ -314,7 +314,7 @@ void FavoritesModel::refresh()
     emit favoritesChanged();
 }
 
-AbstractEntry *FavoritesModel::favoriteFromId(const QString &id)
+AbstractEntry *SimpleFavoritesModel::favoriteFromId(const QString &id)
 {
     const QUrl url(id);
     const QString &s = url.scheme();

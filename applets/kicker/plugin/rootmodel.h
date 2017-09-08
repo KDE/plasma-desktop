@@ -24,7 +24,7 @@
 
 #include <QQmlParserStatus>
 
-class FavoritesModel;
+class KAStatsFavoritesModel;
 class RecentContactsModel;
 class RecentUsageModel;
 class SystemModel;
@@ -117,7 +117,7 @@ class RootModel : public AppsModel, public QQmlParserStatus
     private:
         bool m_complete;
 
-        FavoritesModel *m_favorites;
+        KAStatsFavoritesModel *m_favorites;
         SystemModel *m_systemModel;
 
         bool m_autoPopulate;

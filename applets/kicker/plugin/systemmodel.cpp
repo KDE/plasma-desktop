@@ -19,7 +19,7 @@
 
 #include "systemmodel.h"
 #include "actionlist.h"
-#include "favoritesmodel.h"
+#include "simplefavoritesmodel.h"
 #include "systementry.h"
 
 #include <QStandardPaths>
@@ -31,7 +31,7 @@ SystemModel::SystemModel(QObject *parent) : AbstractModel(parent)
 {
     init();
 
-    m_favoritesModel = new FavoritesModel(this);
+    m_favoritesModel = new SimpleFavoritesModel(this);
 
     const QString configFile = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + "/ksmserverrc";
 

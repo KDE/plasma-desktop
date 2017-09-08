@@ -19,7 +19,7 @@
 
 #include "rootmodel.h"
 #include "actionlist.h"
-#include "favoritesmodel.h"
+#include "kastatsfavoritesmodel.h"
 #include "recentcontactsmodel.h"
 #include "recentusagemodel.h"
 #include "systemmodel.h"
@@ -64,7 +64,7 @@ AbstractModel *GroupEntry::childModel() const
 
 RootModel::RootModel(QObject *parent) : AppsModel(QString(), parent)
 , m_complete(false)
-, m_favorites(new FavoritesModel(this))
+, m_favorites(new KAStatsFavoritesModel(this))
 , m_systemModel(nullptr)
 , m_autoPopulate(true)
 , m_showAllApps(false)
@@ -301,7 +301,7 @@ void RootModel::refresh()
         QList<AbstractEntry *> groups;
 
         if (m_paginate) {
-            m_favorites = new FavoritesModel(this);
+            m_favorites = new KAStatsFavoritesModel(this);
             emit favoritesModelChanged();
 
             QHash<QString, AppEntry *> appsHash;

@@ -26,7 +26,7 @@
 #include <QSortFilterProxyModel>
 #include <Solid/StorageAccess>
 
-class FavoritesModel;
+class SimpleFavoritesModel;
 
 class KConcatenateRowsProxyModel;
 class KFilePlacesModel;
@@ -110,7 +110,7 @@ class ComputerModel : public ForwardingModel
     private:
         KConcatenateRowsProxyModel *m_concatProxy;
         RunCommandModel *m_runCommandModel;
-        FavoritesModel *m_systemAppsModel;
+        SimpleFavoritesModel *m_systemAppsModel;
         FilteredPlacesModel *m_filteredPlacesModel;
         AppEntry::NameFormat m_appNameFormat;
         QObject *m_appletInterface;

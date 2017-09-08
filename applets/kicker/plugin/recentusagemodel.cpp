@@ -21,7 +21,7 @@
 #include "actionlist.h"
 #include "appsmodel.h"
 #include "appentry.h"
-#include "favoritesmodel.h"
+#include "kastatsfavoritesmodel.h"
 
 #include <config-X11.h>
 
@@ -74,8 +74,8 @@ InvalidAppsFilterProxy::~InvalidAppsFilterProxy()
 
 void InvalidAppsFilterProxy::connectNewFavoritesModel()
 {
-    FavoritesModel* favoritesModel = static_cast<FavoritesModel *>(m_parentModel->favoritesModel());
-    connect(favoritesModel, &FavoritesModel::favoritesChanged, this, &QSortFilterProxyModel::invalidate);
+    KAStatsFavoritesModel* favoritesModel = static_cast<KAStatsFavoritesModel *>(m_parentModel->favoritesModel());
+    connect(favoritesModel, &KAStatsFavoritesModel::favoritesChanged, this, &QSortFilterProxyModel::invalidate);
 
     invalidate();
 }
@@ -89,7 +89,7 @@ bool InvalidAppsFilterProxy::filterAcceptsRow(int source_row, const QModelIndex 
     if (resource.startsWith(QLatin1String("applications:"))) {
         KService::Ptr service = KService::serviceByStorageId(resource.section(':', 1));
 
-        FavoritesModel* favoritesModel = m_parentModel ? static_cast<FavoritesModel *>(m_parentModel->favoritesModel()) : nullptr;
+        KAStatsFavoritesModel* favoritesModel = m_parentModel ? static_cast<KAStatsFavoritesModel *>(m_parentModel->favoritesModel()) : nullptr;
 
         return (service && (!favoritesModel || !favoritesModel->isFavorite(service->storageId())));
     }

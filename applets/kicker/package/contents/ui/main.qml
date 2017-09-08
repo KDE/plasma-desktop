@@ -109,7 +109,13 @@ Item {
         }
 
         Component.onCompleted: {
-            favoritesModel.favorites = plasmoid.configuration.favoriteApps;
+            favoritesModel.initForClient("org.kde.plasma.kicker.favorites.instance-" + plasmoid.id)
+
+            if (!plasmoid.configuration.favoritesPortedToKAstats) {
+                favoritesModel.portOldFavorites(plasmoid.configuration.favoriteApps);
+                plasmoid.configuration.favoritesPortedToKAstats = true;
+            }
+
             rootModel.refresh();
         }
     }

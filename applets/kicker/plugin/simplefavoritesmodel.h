@@ -17,8 +17,8 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#ifndef FAVORITESMODEL_H
-#define FAVORITESMODEL_H
+#ifndef SIMPLEFAVORITESMODEL_H
+#define SIMPLEFAVORITESMODEL_H
 
 #include "abstractmodel.h"
 
@@ -26,7 +26,7 @@
 
 #include <KService>
 
-class FavoritesModel : public AbstractModel
+class SimpleFavoritesModel : public AbstractModel
 {
     Q_OBJECT
 
@@ -36,8 +36,8 @@ class FavoritesModel : public AbstractModel
     Q_PROPERTY(int dropPlaceholderIndex READ dropPlaceholderIndex WRITE setDropPlaceholderIndex NOTIFY dropPlaceholderIndexChanged)
 
     public:
-        explicit FavoritesModel(QObject *parent = 0);
-        ~FavoritesModel();
+        explicit SimpleFavoritesModel(QObject *parent = 0);
+        ~SimpleFavoritesModel();
 
         QString description() const Q_DECL_OVERRIDE;
 

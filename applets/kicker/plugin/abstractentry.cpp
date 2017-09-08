@@ -19,6 +19,8 @@
 
 #include "abstractentry.h"
 
+#include <QDebug>
+
 AbstractEntry::AbstractEntry(AbstractModel *owner)
 : m_owner(owner)
 {

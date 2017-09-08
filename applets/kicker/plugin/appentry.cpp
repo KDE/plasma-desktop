@@ -118,6 +118,11 @@ QString AppEntry::id() const
     return m_service->storageId();
 }
 
+QString AppEntry::menuId() const
+{
+    return m_service->menuId();
+}
+
 QUrl AppEntry::url() const
 {
     return QUrl::fromLocalFile(m_service->entryPath());

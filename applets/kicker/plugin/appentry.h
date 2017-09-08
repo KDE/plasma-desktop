@@ -58,6 +58,8 @@ class AppEntry : public AbstractEntry
 
         bool run(const QString& actionId = QString(), const QVariant &argument = QVariant()) Q_DECL_OVERRIDE;
 
+        QString menuId() const;
+
         static QString nameFromService(const KService::Ptr service, NameFormat nameFormat);
         static KService::Ptr defaultAppByName(const QString &name);
 
