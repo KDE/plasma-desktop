@@ -48,6 +48,7 @@ protected Q_SLOTS:
     void selectSound();
     void changeFlashScreenColor();
     void configureKNotify();
+    void launchOrcaConfiguration();
 
 private:
     Ui::access ui;

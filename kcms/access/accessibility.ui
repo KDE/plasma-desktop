@@ -753,6 +753,33 @@ Ensure you know what you are doing if you uncheck it, as the keyboard accessibil
         </widget>
        </item>
        <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_10">
+         <item>
+          <widget class="QPushButton" name="launchOrcaConfiguration">
+           <property name="text">
+            <string>&amp;Launch Orca Configuration</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="orcaLaunchFeedbackLabel">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
         <widget class="QLabel" name="label_2">
          <property name="text">
           <string>Please note that you may have to log out once to allow the screen reader to work properly.</string>

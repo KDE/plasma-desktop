@@ -239,6 +239,7 @@ KAccessConfig::KAccessConfig(QWidget *parent, const QVariantList& args)
 
     // screen reader
     connect(ui.screenReaderEnabled, &QCheckBox::clicked, this, &KAccessConfig::configChanged);
+    connect(ui.launchOrcaConfiguration, &QPushButton::clicked, this, &KAccessConfig::launchOrcaConfiguration);
 }
 
 
@@ -249,6 +250,22 @@ KAccessConfig::~KAccessConfig()
 void KAccessConfig::configureKNotify()
 {
     KNotifyConfigWidget::configure(this, QStringLiteral("kaccess"));
+}
+
+void KAccessConfig::launchOrcaConfiguration()
+{
+    QStringList gsettingArgs = { "set", "org.gnome.desktop.a11y.applications", "screen-reader-enabled", "true" };
+    int ret = QProcess::execute("gsettings", gsettingArgs);
+    if (ret) {
+        ui.orcaLaunchFeedbackLabel->setText(i18n("Could not set gesttings for Orca: \"%1\" failed").arg(QLatin1String("gsettings ") + gsettingArgs.join(' ')));
+        return;
+    }
+
+    qint64 pid = 0;
+    bool started = QProcess::startDetached("orca", {"--setup"}, QString(), &pid);
+    if (!started) {
+        ui.orcaLaunchFeedbackLabel->setText(i18n("Error: Could not launch \"orca --setup\""));
+    }
 }
 
 void KAccessConfig::changeFlashScreenColor()
