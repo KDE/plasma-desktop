@@ -57,6 +57,10 @@
 #include <QX11Info>
 #include <kvbox.h>
 
+#include <QLoggingCategory>
+
+Q_LOGGING_CATEGORY(logKAccess, "kcm_kaccess")
+
 struct ModifierKey {
     const unsigned int mask;
     const KeySym keysym;
@@ -372,7 +376,10 @@ void KAccessApp::setScreenReaderEnabled(bool enabled)
         args << "set" << "org.gnome.desktop.a11y.applications" << "screen-reader-enabled" << "true";
         int ret = QProcess::execute("gsettings", args);
         if (ret == 0) {
-            KToolInvocation::startServiceByDesktopName("orca");
+            QStringList args = {"--replace"};
+            qint64 pid = 0;
+            QProcess::startDetached("orca", args, QString(), &pid);
+            qCDebug(logKAccess) << "Launching Orca, pid:" << pid;
         }
     } else {
         QStringList args;
