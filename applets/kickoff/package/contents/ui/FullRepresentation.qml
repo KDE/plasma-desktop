@@ -29,16 +29,16 @@ import org.kde.kquickcontrolsaddons 2.0
 
 import org.kde.plasma.private.kicker 0.1 as Kicker
 
-Item {
+FocusScope {
     id: root
     Layout.minimumWidth: units.gridUnit * 26
     Layout.minimumHeight: units.gridUnit * 34
 
     property string previousState
     property bool switchTabsOnHover: plasmoid.configuration.switchTabsOnHover
-    property Item currentView: mainTabGroup.currentTab.decrementCurrentIndex ? mainTabGroup.currentTab : mainTabGroup.currentTab.item
     property KickoffButton firstButton: null
     property var configMenuItems
+    property Item currentView: mainTabGroup.currentTab.decrementCurrentIndex ? mainTabGroup.currentTab : mainTabGroup.currentTab.item
 
     property QtObject globalFavorites: rootModelFavorites
 
@@ -133,6 +133,7 @@ Item {
         PlasmaComponents.TabGroup {
             id: mainTabGroup
             currentTab: favoritesPage
+            focus: true
 
             anchors {
                 fill: parent
@@ -389,7 +390,9 @@ Item {
             }
         }
 
-        onCurrentTabChanged: root.forceActiveFocus();
+        onCurrentTabChanged: {
+            mainTabGroup.currentTab.forceActiveFocus();
+        }
 
         Connections {
             target: plasmoid
@@ -404,60 +407,11 @@ Item {
         }
     } // tabBar
 
-    Keys.forwardTo: [tabBar.layout]
+    Keys.forwardTo: [tabBar.layout, root.currentView]
 
     Keys.onPressed: {
-
-        if (mainTabGroup.currentTab == applicationsPage) {
-            if (event.key != Qt.Key_Tab) {
-                root.state = "Applications";
-            }
-        }
-
+        console.log("root received ", event.key, root.currentView, root.currentView);
         switch(event.key) {
-            case Qt.Key_Up: {
-                currentView.decrementCurrentIndex();
-                event.accepted = true;
-                break;
-            }
-            case Qt.Key_Down: {
-                currentView.incrementCurrentIndex();
-                event.accepted = true;
-                break;
-            }
-            case Qt.Key_Left: {
-                if (header.input.focus) {
-                    break;
-                }
-                if (!currentView.deactivateCurrentIndex()) {
-                    if (root.state == "Applications") {
-                        mainTabGroup.currentTab = firstButton.tab;
-                        tabBar.currentTab = firstButton;
-                    }
-                    root.state = "Normal"
-                }
-                event.accepted = true;
-                break;
-            }
-            case Qt.Key_Right: {
-                if (header.input.focus) {
-                    break;
-                }
-                currentView.activateCurrentIndex();
-                event.accepted = true;
-                break;
-            }
-            case Qt.Key_Tab: {
-                root.state == "Applications" ? root.state = "Normal" : root.state = "Applications";
-                event.accepted = true;
-                break;
-            }
-            case Qt.Key_Enter:
-            case Qt.Key_Return: {
-                currentView.activateCurrentIndex(1);
-                event.accepted = true;
-                break;
-            }
             case Qt.Key_Escape: {
                 if (header.state != "query") {
                     plasmoid.expanded = false;
@@ -467,12 +421,6 @@ Item {
                 event.accepted = true;
                 break;
             }
-            case Qt.Key_Menu: {
-                currentView.openContextMenu();
-                event.accepted = true;
-                break;
-            }
-
             default: { // forward key to searchView
                 //header.query += event.text will break if the key is backspace,
                 //since if the user continues to type, it will produce an invalid query,
@@ -480,18 +428,19 @@ Item {
                 if (event.key == Qt.Key_Backspace && header.query == "") {
                     return;
                 }
-                if (event.text != "" && !header.input.focus) {
-                    root.currentView.listView.currentIndex = -1;
-
+                if (event.text != "" && !header.focus) {
                     if (event.matches(StandardKey.Paste) ) {
-                        header.input.paste();
+                        header.paste();
+                        event.accepted = true;
+                        return;
                     } else if (! (event.key & Qt.Key_Escape)) {
                         //if special key, do nothing. Qt.Escape is 0x10000000 which happens to be a mask used for all special keys in Qt.
-                        header.query = "";
                         header.query += event.text;
+                        header.forceActiveFocus();
+                        event.accepted = true;
+                        return;
                     }
-                    header.input.forceActiveFocus();
-                    event.accepted = true;
+                    event.accepted = false;
                 }
             }
         }

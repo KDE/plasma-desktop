@@ -24,6 +24,9 @@ import org.kde.plasma.private.kicker 0.1 as Kicker
 BaseView {
     objectName: "LeaveView"
 
+    Accessible.role: Accessible.Grouping
+    Accessible.name: i18n("Leave")
+
     model: Kicker.SystemModel {
         favoritesModel: globalFavorites
     }

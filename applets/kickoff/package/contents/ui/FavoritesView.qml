@@ -30,28 +30,13 @@ import org.kde.draganddrop 2.0
 
 import org.kde.plasma.private.kicker 0.1 as Kicker
 
-Item {
+FocusScope {
     anchors.fill: parent
 
     objectName: "FavoritesView"
 
-    property ListView listView: kickoffListView
-
-    function decrementCurrentIndex() {
-        kickoffListView.decrementCurrentIndex();
-    }
-
-    function incrementCurrentIndex() {
-        kickoffListView.incrementCurrentIndex();
-    }
-
-    function activateCurrentIndex() {
-        kickoffListView.currentItem.activate();
-    }
-
-    function openContextMenu() {
-        kickoffListView.currentItem.openActionMenu();
-    }
+    Accessible.role: Accessible.Grouping
+    Accessible.name: i18n("Favorites")
 
     // QQuickItem::isAncestorOf is not invokable...
     function isChildOf(item, parent) {
@@ -115,11 +100,12 @@ Item {
 
     PlasmaExtras.ScrollArea {
         id: scrollArea
-
+        focus: true
         anchors.fill: parent
 
         ListView {
             id: kickoffListView
+            Accessible.role: Accessible.List
 
             property bool animating: false
             property int animationDuration: resetAnimationDurationTimer.interval
@@ -135,6 +121,10 @@ Item {
             highlightResizeDuration: 0
 
             model: globalFavorites
+
+            Keys.onEnterPressed: currentItem.activate();
+            Keys.onReturnPressed: currentItem.activate();
+            Keys.onMenuPressed: currentItem.openActionMenu();
 
             onCountChanged: {
                 animationDuration = 0;

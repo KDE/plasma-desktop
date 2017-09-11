@@ -25,6 +25,9 @@ import org.kde.plasma.private.kicker 0.1 as Kicker
 BaseView {
     objectName: "RecentlyUsedView"
 
+    Accessible.role: Accessible.Grouping
+    Accessible.name: i18n("History")
+
     model: Kicker.RecentUsageModel {
         favoritesModel: globalFavorites
     }

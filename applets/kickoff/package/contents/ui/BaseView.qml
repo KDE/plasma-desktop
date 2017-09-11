@@ -28,30 +28,13 @@ Item {
     property alias model: kickoffListView.model
     property alias delegate: kickoffListView.delegate
 
-    property ListView listView: kickoffListView
-
-    function decrementCurrentIndex() {
-        kickoffListView.decrementCurrentIndex();
-    }
-
-    function incrementCurrentIndex() {
-        kickoffListView.incrementCurrentIndex();
-    }
-
-    function activateCurrentIndex() {
-        kickoffListView.currentItem.activate();
-    }
-
-    function openContextMenu() {
-        kickoffListView.currentItem.openActionMenu();
-    }
-
     PlasmaExtras.ScrollArea {
         anchors.fill: parent
+        focus: true
 
         ListView {
             id: kickoffListView
-
+            Accessible.role: Accessible.List
             interactive: contentHeight > height
             boundsBehavior: Flickable.StopAtBounds
             currentIndex: -1
@@ -59,6 +42,10 @@ Item {
             highlight: KickoffHighlight {}
             highlightMoveDuration : 0
             highlightResizeDuration: 0
+
+            Keys.onEnterPressed: currentItem.activate();
+            Keys.onReturnPressed: currentItem.activate();
+            Keys.onMenuPressed: currentItem.openActionMenu();
 
             delegate: KickoffItem {}
 

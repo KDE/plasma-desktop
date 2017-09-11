@@ -26,6 +26,9 @@ import org.kde.plasma.private.kicker 0.1 as Kicker
 BaseView {
     objectName: "OftenUsedView"
 
+    Accessible.role: Accessible.Grouping
+    Accessible.name: i18n("Often Used")
+
     model: Kicker.RecentUsageModel {
         favoritesModel: globalFavorites
         ordering: 1 // Popular / Often Used

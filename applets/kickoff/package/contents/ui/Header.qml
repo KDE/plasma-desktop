@@ -16,23 +16,26 @@
  *    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
 
-import QtQuick 2.0
+import QtQuick 2.2
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kcoreaddons 1.0 as KCoreAddons
 import org.kde.kquickcontrolsaddons 2.0
 
-Item {
+FocusScope {
     id: header
 
     implicitHeight: units.gridUnit * 5
 
     property alias query: queryField.text
-    property Item input: queryField
 
     KCoreAddons.KUser {
         id: kuser
+    }
+
+    function paste() {
+        queryField.paste();
     }
 
     state: (query !== "") ? "query" : "hint"
@@ -164,7 +167,10 @@ Item {
 
             PlasmaComponents.TextField {
                 id: queryField
+                focus: true
                 anchors.fill: parent
+                Accessible.role: Accessible.EditableText
+                Accessible.name: i18n("Search")
                 clearButtonShown: true
                 visible: opacity > 0
                 placeholderText: i18nc("Type is a verb here, not a noun", "Type to search...")

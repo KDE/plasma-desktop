@@ -18,7 +18,7 @@
     with this program; if not, write to the Free Software Foundation, Inc.,
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
-import QtQuick 2.0
+import QtQuick 2.6
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.components 2.0 as PlasmaComponents
@@ -30,27 +30,15 @@ Item {
 
     objectName: "ApplicationsView"
 
-    property ListView listView: applicationsView
+    Accessible.role: Accessible.Grouping
+    Accessible.name: i18n("Applications")
 
-    function decrementCurrentIndex() {
-        applicationsView.decrementCurrentIndex();
-    }
-
-    function incrementCurrentIndex() {
-        applicationsView.incrementCurrentIndex();
-    }
-
-    function activateCurrentIndex(start) {
-        if (!applicationsView.currentItem.modelChildren) {
-            if (!start) {
-                return;
-            }
+    function activateCurrentIndex() {
+        if (applicationsView.currentItem && applicationsView.currentItem.modelChildren) {
+            appViewScrollArea.state = "OutgoingLeft";
+            return true;
         }
-        appViewScrollArea.state = "OutgoingLeft";
-    }
-
-    function openContextMenu() {
-        applicationsView.currentItem.openActionMenu();
+        return false;
     }
 
     function deactivateCurrentIndex() {
@@ -140,6 +128,7 @@ Item {
 
     PlasmaExtras.ScrollArea {
         id: appViewScrollArea
+        focus: true
 
         property Item activatedItem: null
 
@@ -150,6 +139,7 @@ Item {
             leftMargin: -units.largeSpacing
         }
 
+        Accessible.role: Accessible.List
         Behavior on opacity { NumberAnimation { duration: units.longDuration } }
 
         width: parent.width
@@ -181,11 +171,29 @@ Item {
             highlightResizeDuration: 0
 
             model: rootModel
+            currentIndex: -1
 
             delegate: KickoffItem {
                 id: kickoffItem
 
                 appView: true
+            }
+
+            Keys.onEnterPressed: currentItem.activate();
+            Keys.onReturnPressed: currentItem.activate();
+            Keys.onMenuPressed: currentItem.openActionMenu();
+            Keys.onRightPressed: if (!appViewContainer.activateCurrentIndex()) {
+                event.accepted = false;
+            }
+            Keys.onLeftPressed: if (!appViewContainer.deactivateCurrentIndex()) {
+                event.accepted = false;
+            }
+            Keys.onEscapePressed: {
+                if (currentIndex == -1 ) {
+                    event.accepted = false;
+                    return;
+                }
+                currentIndex = -1;
             }
 
             function addBreadcrumb(model, title) {

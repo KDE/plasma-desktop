@@ -61,6 +61,11 @@ Item {
         }
     }
 
+    Accessible.role: Accessible.ListItem
+    Accessible.name: model.display
+    //if name and description match don't read it twice
+    Accessible.description: model.name == model.description ? "" : model.description
+
     function activate() {
         var view = listItem.ListView.view;
 

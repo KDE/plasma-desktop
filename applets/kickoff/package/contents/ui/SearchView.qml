@@ -27,29 +27,19 @@ Item {
 
     anchors.fill: parent
 
+    Keys.forwardTo: searchView
+
     objectName: "SearchView"
-
-    function decrementCurrentIndex() {
-        searchView.decrementCurrentIndex();
-    }
-
-    function incrementCurrentIndex() {
-        searchView.incrementCurrentIndex();
-    }
-
-    function activateCurrentIndex() {
-        searchView.currentItem.activate();
-    }
-
-    function openContextMenu() {
-        searchView.currentItem.openActionMenu();
-    }
+    Accessible.role: Accessible.Grouping
+    Accessible.name: i18n("Search Results")
 
     PlasmaExtras.ScrollArea {
         anchors.fill: parent
+        focus: true
 
         ListView {
             id: searchView
+            Accessible.role: Accessible.List
 
             anchors.fill: parent
             keyNavigationWraps: true
@@ -60,6 +50,10 @@ Item {
             highlight: KickoffHighlight {}
             highlightMoveDuration : 0
             highlightResizeDuration: 0
+
+            Keys.onEnterPressed: currentItem.activate();
+            Keys.onReturnPressed: currentItem.activate();
+            Keys.onMenuPressed: currentItem.openActionMenu();
 
             Connections {
                 target: header
@@ -75,7 +69,6 @@ Item {
 
             Connections {
                 target: runnerModel
-
                 onCountChanged: {
                     if (runnerModel.count && !searchView.model) {
                         searchView.model = runnerModel.modelForRow(0);
