@@ -244,16 +244,29 @@ function checkLastSpacer() {
 //END connections
 
 //BEGIN components
+
     Component {
         id: appletContainerComponent
-        Item {
+        FocusScope {
             id: container
             visible: false
+            activeFocusOnTab: true
+            Accessible.role: Accessible.Grouping
+            Accessible.name: applet && applet.title
+
             property bool animationsEnabled: true
 
             //when the applet moves caused by its resize, don't animate.
             //this is completely heuristic, but looks way less "jumpy"
             property bool movingForResize: false
+
+            Keys.onSpacePressed: {
+                if (applet.expanded == false && applet.activationTogglesExpanded) {
+                    applet.expanded = true;
+                } else {
+                    applet.focus = true;
+                }
+            }
 
             Layout.fillWidth: applet && applet.Layout.fillWidth
             Layout.onFillWidthChanged: {
