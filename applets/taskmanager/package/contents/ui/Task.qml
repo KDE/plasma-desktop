@@ -17,7 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-import QtQuick 2.0
+import QtQuick 2.2
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
@@ -30,6 +30,7 @@ import "../code/tools.js" as TaskTools
 
 MouseArea {
     id: task
+    activeFocusOnTab: true
 
     width: groupDialog.contentWidth
     height: Math.max(theme.mSize(theme.defaultFont).height, units.iconSizes.medium) + LayoutManager.verticalMargins()
@@ -75,6 +76,9 @@ MouseArea {
     function hideToolTipTemporarily() {
         toolTipArea.hideToolTip();
     }
+
+    Accessible.role: button
+    Accessible.name: label.text
 
     acceptedButtons: Qt.LeftButton | Qt.RightButton | Qt.MidButton
 
@@ -170,6 +174,10 @@ MouseArea {
         pressed = false;
         pressX = -1;
         pressY = -1;
+    }
+
+    Keys.onSpacePressed: {
+        TaskTools.activateTask(modelIndex(), model, 0 /*mouse modifiers*/, task);
     }
 
     onPositionChanged: {
