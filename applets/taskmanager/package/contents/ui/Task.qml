@@ -77,7 +77,7 @@ MouseArea {
         toolTipArea.hideToolTip();
     }
 
-    Accessible.role: button
+    Accessible.role: Accessible.Button
     Accessible.name: label.text
 
     acceptedButtons: Qt.LeftButton | Qt.RightButton | Qt.MidButton
