@@ -202,13 +202,8 @@ Item {
 
                         model: [i18n("Unsorted"), i18n("Name"), i18n("Size"), i18n("Type"), i18n("Date")]
 
-                        onModeChanged: {
-                            currentIndex = modeToIndex[mode];
-                        }
-
-                        onCurrentIndexChanged: {
-                            mode = indexToMode[currentIndex];
-                        }
+                        Component.onCompleted: currentIndex = modeToIndex[mode]
+                        onActivated: mode = indexToMode[index]
                     }
                 }
 
