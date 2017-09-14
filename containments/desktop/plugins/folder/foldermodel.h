@@ -221,6 +221,7 @@ class FolderModel : public QSortFilterProxyModel
         KFileItem itemForIndex(const QModelIndex &index) const;
         bool isDir(const QModelIndex &index, const KDirModel *dirModel) const;
         bool lessThan(const QModelIndex &left, const QModelIndex &right) const Q_DECL_OVERRIDE;
+        Qt::DropActions supportedDragActions() const override;
 
         Q_INVOKABLE void paste();
         Q_INVOKABLE void copy();

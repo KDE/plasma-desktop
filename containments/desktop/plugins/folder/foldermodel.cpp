@@ -150,8 +150,6 @@ FolderModel::FolderModel(QObject *parent) : QSortFilterProxyModel(parent),
 
     sort(m_sortMode, m_sortDesc ? Qt::DescendingOrder : Qt::AscendingOrder);
 
-    setSupportedDragActions(Qt::CopyAction | Qt::MoveAction | Qt::LinkAction);
-
     createActions();
 }
 
@@ -1246,6 +1244,11 @@ bool FolderModel::lessThan(const QModelIndex &left, const QModelIndex &right) co
         return result < 0;
 
     return QString::compare(leftItem.url().url(), rightItem.url().url(), Qt::CaseSensitive);
+}
+
+Qt::DropActions FolderModel::supportedDragActions() const
+{
+    return Qt::CopyAction | Qt::MoveAction | Qt::LinkAction;
 }
 
 inline bool FolderModel::matchMimeType(const KFileItem &item) const
