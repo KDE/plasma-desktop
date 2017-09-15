@@ -44,6 +44,7 @@
 #include <kprocess.h>
 #include <KLocalizedString>
 #include <kdelibs4migration.h>
+#include <KWindowSystem>
 
 #include "krdb.h"
 #if HAVE_X11
@@ -534,8 +535,17 @@ void runRdb( uint flags )
     KConfig _cfgfonts( QStringLiteral("kcmfonts") );
     KConfigGroup cfgfonts(&_cfgfonts, "General");
 
-    if( cfgfonts.readEntry( "forceFontDPI", 0 ) != 0 )
-      contents += "Xft.dpi: " + cfgfonts.readEntry( "forceFontDPI" ) + '\n';
+    int dpi;
+
+    //even though this sets up the X rdb, we want to use the value the
+    //user has set to use when under wayland - as X apps will be scaled by the compositor
+    if (KWindowSystem::isPlatformWayland()) {
+        dpi = cfgfonts.readEntry( "forceFontDPIWayland", 0);
+    } else {
+        dpi = cfgfonts.readEntry( "forceFontDPI", 0);
+    }
+    if( dpi != 0 )
+      contents += "Xft.dpi: " + QString::number(dpi) + '\n';
     else
     {
       KProcess proc;
