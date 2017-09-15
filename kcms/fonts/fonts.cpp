@@ -54,6 +54,7 @@
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KPluginFactory>
+#include <KWindowSystem>
 
 #include "../krdb/krdb.h"
 
@@ -742,7 +743,13 @@ void KFonts::load()
 
     KConfig _cfgfonts("kcmfonts");
     KConfigGroup cfgfonts(&_cfgfonts, "General");
-    int dpicfg = cfgfonts.readEntry("forceFontDPI", 0);
+    int dpicfg;
+    if (KWindowSystem::isPlatformWayland()) {
+        dpicfg = cfgfonts.readEntry("forceFontDPIWayland", 0);
+    } else {
+        dpicfg = cfgfonts.readEntry("forceFontDPI", 0);
+    }
+
     if (dpicfg <= 0) {
         checkboxForceDpi->setChecked(false);
         spinboxDpi->setValue(96);
@@ -776,7 +783,11 @@ void KFonts::save()
     KConfig _cfgfonts("kcmfonts");
     KConfigGroup cfgfonts(&_cfgfonts, "General");
     int dpi = (checkboxForceDpi->isChecked() ? spinboxDpi->value() : 0);
-    cfgfonts.writeEntry("forceFontDPI", dpi);
+    if (KWindowSystem::isPlatformWayland()) {
+        cfgfonts.writeEntry("forceFontDPIWayland", dpi);
+    } else {
+        cfgfonts.writeEntry("forceFontDPI", dpi);
+    }
 #if defined(HAVE_FONTCONFIG) && defined (HAVE_X11)
     cfgfonts.writeEntry("dontChangeAASettings", cbAA->currentIndex() == AASystem);
 #endif
