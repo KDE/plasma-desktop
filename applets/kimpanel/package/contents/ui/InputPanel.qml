@@ -41,6 +41,8 @@ PlasmaCore.Dialog {
     onHeightChanged : updatePosition();
 
     mainItem: Column {
+        width: childrenRect.width
+        height: childrenRect.height
         Layout.minimumWidth: childrenRect.width
         Layout.minimumHeight: childrenRect.height
         Layout.maximumWidth: childrenRect.width
@@ -199,6 +201,14 @@ PlasmaCore.Dialog {
             interval: 1
             onTriggered: updateUI()
         }
+        // HACK: a workaround that window content not get updated.
+        // This issue only seems to happen in kimpanel because its content and
+        // size change frequently.
+        Timer {
+            id: windowUpdateTimer
+            interval: 1
+            onTriggered: inputpanel.update()
+        }
     }
 
     function updateUI() {
@@ -251,10 +261,10 @@ PlasmaCore.Dialog {
                 tableList.clear();
             }
         }
-        inputpanel.mainItem.update();
         // If we gonna show, do that after everything is ready.
         if (newVisibility) {
             inputpanel.show();
+            windowUpdateTimer.restart();
         }
     }
 
