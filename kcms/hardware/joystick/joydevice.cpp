@@ -184,6 +184,10 @@ JoyDevice::ErrorCode JoyDevice::open()
     return JoyDevice::ERR_GET_CORR;
   }
 
+  if (bt < 0) {
+      return JoyDevice::ERR_GET_BUTTONS;
+  }
+
   descr = name;
   joyFd = fd;
   axes = ax;
