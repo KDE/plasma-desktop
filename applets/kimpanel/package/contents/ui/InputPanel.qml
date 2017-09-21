@@ -40,149 +40,150 @@ PlasmaCore.Dialog {
     onWidthChanged : updatePosition();
     onHeightChanged : updatePosition();
 
-    mainItem: Column {
-        width: childrenRect.width
-        height: childrenRect.height
+    mainItem: Item {
         Layout.minimumWidth: childrenRect.width
         Layout.minimumHeight: childrenRect.height
         Layout.maximumWidth: childrenRect.width
         Layout.maximumHeight: childrenRect.height
-
-        Row {
-            id: textLabel
-            width: auxLabel.width + preedit.width
-            height: Math.max(preedit.height, auxLabel.height)
-            PlasmaComponents.Label {
-                id: auxLabel
-                font: preferredFont
-            }
-            Item {
-                id: preedit
-                width: preeditLabel1.width + preeditLabel2.width + 2
-                height: Math.max(preeditLabel1.height, preeditLabel2.height)
-                clip: true
+        Column {
+            Row {
+                id: textLabel
+                width: auxLabel.width + preedit.width
+                height: Math.max(preedit.height, auxLabel.height)
                 PlasmaComponents.Label {
-                    id: preeditLabel1
-                    anchors.top: parent.top
-                    anchors.left: parent.left
+                    id: auxLabel
                     font: preferredFont
                 }
-                Rectangle {
-                    color: theme.textColor
-                    height: baseSize
-                    width: 2
-                    opacity: 0.8
-                    z: 1
-                    anchors.verticalCenter: parent.verticalCenter
-                    anchors.left: preeditLabel1.right
-                }
-                PlasmaComponents.Label {
-                    id: preeditLabel2
-                    anchors.top: parent.top
-                    anchors.left: preeditLabel1.right
-                    font: preferredFont
+                Item {
+                    id: preedit
+                    width: preeditLabel1.width + preeditLabel2.width + 2
+                    height: Math.max(preeditLabel1.height, preeditLabel2.height)
+                    clip: true
+                    PlasmaComponents.Label {
+                        id: preeditLabel1
+                        anchors.top: parent.top
+                        anchors.left: parent.left
+                        font: preferredFont
+                    }
+                    Rectangle {
+                        color: theme.textColor
+                        height: baseSize
+                        width: 2
+                        opacity: 0.8
+                        z: 1
+                        anchors.verticalCenter: parent.verticalCenter
+                        anchors.left: preeditLabel1.right
+                    }
+                    PlasmaComponents.Label {
+                        id: preeditLabel2
+                        anchors.top: parent.top
+                        anchors.left: preeditLabel1.right
+                        font: preferredFont
+                    }
                 }
             }
-        }
 
-        GridLayout {
-            flow: inputpanel.verticalLayout ? GridLayout.TopToBottom : GridLayout.LeftToRight
-            columns: inputpanel.verticalLayout ? 1 : tableList.count + 1
-            rows: inputpanel.verticalLayout ? tableList.count + 1 : 1
-            columnSpacing: units.smallSpacing / 2
-            rowSpacing: units.smallSpacing / 2
-            Repeater {
-                model: ListModel {
-                    id: tableList
-                    dynamicRoles: true
+            GridLayout {
+                flow: inputpanel.verticalLayout ? GridLayout.TopToBottom : GridLayout.LeftToRight
+                columns: inputpanel.verticalLayout ? 1 : tableList.count + 1
+                rows: inputpanel.verticalLayout ? tableList.count + 1 : 1
+                columnSpacing: units.smallSpacing / 2
+                rowSpacing: units.smallSpacing / 2
+
+                Repeater {
+                    model: ListModel {
+                        id: tableList
+                        dynamicRoles: true
+                    }
+                    delegate: Item {
+                        width: candidate.width + highlight.marginHints.left + highlight.marginHints.right
+                        height: candidate.height + highlight.marginHints.top + highlight.marginHints.bottom
+                        Layout.minimumWidth: width
+                        Layout.minimumHeight: height
+                        Layout.maximumWidth: width
+                        Layout.maximumHeight: height
+
+                        Row {
+                            id: candidate
+                            width: childrenRect.width
+                            height: childrenRect.height
+                            x: highlight.marginHints.left
+                            y: highlight.marginHints.top
+                            PlasmaComponents.Label {
+                                id: tableLabel
+                                text: model.label
+                                font: preferredFont
+                                color: active ? theme.highlightedTextColor : theme.textColor
+                                opacity: highlight.visible ? 0.8 : 0.6
+                            }
+                            PlasmaComponents.Label {
+                                id: textLabel
+                                text: model.text
+                                font: preferredFont
+                                color: active ? theme.highlightedTextColor : theme.textColor
+                            }
+                        }
+                        MouseArea {
+                            id: candidateMouseArea
+                            anchors.fill: parent
+                            hoverEnabled: true
+                            onReleased: selectCandidate(model.index)
+                            onContainsMouseChanged: {
+                                inputpanel.hoveredCandidate = containsMouse ? model.index : -1;
+                            }
+                        }
+                        CandidateHighlight {
+                            id: highlight
+                            z: -1
+                            visible: inputpanel.highlightCandidate == model.index || inputpanel.hoveredCandidate == model.index
+                            hover: candidateMouseArea.containsMouse
+                            selected: inputpanel.highlightCandidate == model.index || candidateMouseArea.pressed
+                            anchors {
+                                fill: parent
+                            }
+                        }
+                    }
                 }
-                delegate: Item {
-                    width: candidate.width + highlight.marginHints.left + highlight.marginHints.right
-                    height: candidate.height + highlight.marginHints.top + highlight.marginHints.bottom
+                Row {
+                    id: button
+                    width: inputpanel.baseSize * 2
+                    height: inputpanel.baseSize
                     Layout.minimumWidth: width
                     Layout.minimumHeight: height
                     Layout.maximumWidth: width
                     Layout.maximumHeight: height
-
-                    Row {
-                        id: candidate
-                        width: childrenRect.width
-                        height: childrenRect.height
-                        x: highlight.marginHints.left
-                        y: highlight.marginHints.top
-                        PlasmaComponents.Label {
-                            id: tableLabel
-                            text: model.label
-                            font: preferredFont
-                            color: active ? theme.highlightedTextColor : theme.textColor
-                            opacity: highlight.visible ? 0.8 : 0.6
-                        }
-                        PlasmaComponents.Label {
-                            id: textLabel
-                            text: model.text
-                            font: preferredFont
-                            color: active ? theme.highlightedTextColor : theme.textColor
+                    PlasmaCore.IconItem {
+                        id: prevButton
+                        source: "arrow-left"
+                        width: inputpanel.baseSize
+                        height: width
+                        scale: prevButtonMouseArea.pressed ? 0.9 : 1
+                        active: prevButtonMouseArea.containsMouse
+                        MouseArea {
+                            id: prevButtonMouseArea
+                            anchors.fill: parent
+                            hoverEnabled: true
+                            onReleased: action("LookupTablePageUp")
                         }
                     }
-                    MouseArea {
-                        id: candidateMouseArea
-                        anchors.fill: parent
-                        hoverEnabled: true
-                        onReleased: selectCandidate(model.index)
-                        onContainsMouseChanged: {
-                            inputpanel.hoveredCandidate = containsMouse ? model.index : -1;
+                    PlasmaCore.IconItem {
+                        id: nextButton
+                        source: "arrow-right"
+                        width: inputpanel.baseSize
+                        height: width
+                        scale: nextButtonMouseArea.pressed ? 0.9 : 1
+                        active: nextButtonMouseArea.containsMouse
+                        MouseArea {
+                            id: nextButtonMouseArea
+                            anchors.fill: parent
+                            hoverEnabled: true
+                            onReleased: action("LookupTablePageDown")
                         }
-                    }
-                    CandidateHighlight {
-                        id: highlight
-                        z: -1
-                        visible: inputpanel.highlightCandidate == model.index || inputpanel.hoveredCandidate == model.index
-                        hover: candidateMouseArea.containsMouse
-                        selected: inputpanel.highlightCandidate == model.index || candidateMouseArea.pressed
-                        anchors {
-                            fill: parent
-                        }
-                    }
-                }
-            }
-            Row {
-                id: button
-                width: inputpanel.baseSize * 2
-                height: inputpanel.baseSize
-                Layout.minimumWidth: width
-                Layout.minimumHeight: height
-                Layout.maximumWidth: width
-                Layout.maximumHeight: height
-                PlasmaCore.IconItem {
-                    id: prevButton
-                    source: "arrow-left"
-                    width: inputpanel.baseSize
-                    height: width
-                    scale: prevButtonMouseArea.pressed ? 0.9 : 1
-                    active: prevButtonMouseArea.containsMouse
-                    MouseArea {
-                        id: prevButtonMouseArea
-                        anchors.fill: parent
-                        hoverEnabled: true
-                        onReleased: action("LookupTablePageUp")
-                    }
-                }
-                PlasmaCore.IconItem {
-                    id: nextButton
-                    source: "arrow-right"
-                    width: inputpanel.baseSize
-                    height: width
-                    scale: nextButtonMouseArea.pressed ? 0.9 : 1
-                    active: nextButtonMouseArea.containsMouse
-                    MouseArea {
-                        id: nextButtonMouseArea
-                        anchors.fill: parent
-                        hoverEnabled: true
-                        onReleased: action("LookupTablePageDown")
                     }
                 }
             }
         }
+
         PlasmaCore.DataSource {
             id: inputPanelEngine
             engine: "kimpanel"
@@ -200,14 +201,6 @@ PlasmaCore.Dialog {
             id: timer
             interval: 1
             onTriggered: updateUI()
-        }
-        // HACK: a workaround that window content not get updated.
-        // This issue only seems to happen in kimpanel because its content and
-        // size change frequently.
-        Timer {
-            id: windowUpdateTimer
-            interval: 1
-            onTriggered: inputpanel.update()
         }
     }
 
@@ -264,7 +257,6 @@ PlasmaCore.Dialog {
         // If we gonna show, do that after everything is ready.
         if (newVisibility) {
             inputpanel.show();
-            windowUpdateTimer.restart();
         }
     }
 
