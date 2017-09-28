@@ -35,6 +35,13 @@
 
 #include <QtQml>
 
+static QObject *menuHelperSingletonProvider(QQmlEngine *engine, QJSEngine *jsEngine)
+{
+    Q_UNUSED(engine);
+    Q_UNUSED(jsEngine);
+    return new MenuHelper();
+}
+
 void FolderPlugin::registerTypes(const char *uri)
 {
     Q_ASSERT(uri == QLatin1String("org.kde.private.desktopcontainment.folder"));
@@ -42,7 +49,7 @@ void FolderPlugin::registerTypes(const char *uri)
     qmlRegisterType<FolderModel>(uri, 0, 1, "FolderModel");
     qmlRegisterType<ItemViewAdapter>(uri, 0, 1, "ItemViewAdapter");
     qmlRegisterType<LabelGenerator>(uri, 0, 1, "LabelGenerator");
-    qmlRegisterType<MenuHelper>(uri, 0, 1, "MenuHelper");
+    qmlRegisterSingletonType<MenuHelper>(uri, 0, 1, "MenuHelper", menuHelperSingletonProvider);
     qmlRegisterType<MimeTypesModel>(uri, 0, 1, "MimeTypesModel");
     qmlRegisterType<PlacesModel>(uri, 0, 1, "PlacesModel");
     qmlRegisterType<Positioner>(uri, 0, 1, "Positioner");

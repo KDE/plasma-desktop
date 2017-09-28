@@ -79,10 +79,6 @@ Item {
         size: "16x16"
     }
 
-    Folder.MenuHelper {
-        id: menuHelper
-    }
-
     Folder.ViewPropertiesMenu {
         id: viewPropertiesMenu
 
@@ -390,14 +386,14 @@ Item {
         for (var i = 0; i < sharedActions.length; i++) {
             actionName = sharedActions[i];
             modelAction = folderView.model.action(actionName);
-            plasmoid.setAction(actionName, modelAction.text, menuHelper.iconName(modelAction));
+            plasmoid.setAction(actionName, modelAction.text, Folder.MenuHelper.iconName(modelAction));
 
             if (actionName == "newMenu") {
-                menuHelper.setMenu(plasmoid.action(actionName), folderView.model.newMenu);
+                Folder.MenuHelper.setMenu(plasmoid.action(actionName), folderView.model.newMenu);
                 plasmoid.setActionSeparator("separator1");
 
                 plasmoid.setAction("viewProperties", i18n("Icons"), "preferences-desktop-icons");
-                menuHelper.setMenu(plasmoid.action("viewProperties"), viewPropertiesMenu.menu);
+                Folder.MenuHelper.setMenu(plasmoid.action("viewProperties"), viewPropertiesMenu.menu);
             } else {
                 plasmoid.action(actionName).triggered.connect(modelAction.trigger);
             }
