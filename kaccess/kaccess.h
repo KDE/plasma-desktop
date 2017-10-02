@@ -29,9 +29,6 @@
 #include <QLabel>
 #include <QPaintEvent>
 
-
-#include <KUniqueApplication>
-
 #include <phonon/MediaObject>
 
 #include <X11/Xlib.h>
@@ -45,15 +42,15 @@ class QLabel;
 class KDialog;
 class KComboBox;
 
-class KAccessApp : public KUniqueApplication, QAbstractNativeEventFilter
+class KAccessApp : public QObject, public QAbstractNativeEventFilter
 {
     Q_OBJECT
 public:
 
-    explicit KAccessApp(bool allowStyles = true, bool GUIenabled = true);
-    int newInstance() Q_DECL_OVERRIDE;
+    explicit KAccessApp();
+    void newInstance();
     void setXkbOpcode(int opcode);
-    bool nativeEventFilter(const QByteArray& eventType, void* message, long int* result) Q_DECL_OVERRIDE;
+    bool nativeEventFilter(const QByteArray& eventType, void* message, long int* result) override;
 
     bool isFailed() const {
         return m_error;
@@ -101,7 +98,7 @@ private:
 
     WId _activeWindow;
 
-    KDialog *dialog;
+    QDialog *dialog;
     QLabel *featuresLabel;
     KComboBox *showModeCombobox;
 

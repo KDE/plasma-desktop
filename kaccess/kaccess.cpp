@@ -32,22 +32,23 @@
 #include <QLabel>
 #include <QHBoxLayout>
 #include <QVBoxLayout>
-#include <qaction.h>
+#include <QApplication>
+#include <QAction>
 
-#include <KStandardGuiItem>
-#include <KDialog>
 #include <KComboBox>
-#include <KIconLoader>
-#include <KDebug>
 #include <KNotification>
 #include <KConfig>
-#include <KGlobal>
+#include <KConfigGroup>
+#include <KSharedConfig>
+#include <QDialog>
+#include <QDialogButtonBox>
 #include <kglobalaccel.h>
 #include <KLocalizedString>
-#include <KShortcut>
 #include <ktoolinvocation.h>
 #include <kwindowsystem.h>
 #include <kkeyserver.h>
+#include <KDBusService>
+#include <KUserTimestamp>
 
 #include <netwm.h>
 #define XK_MISCELLANY
@@ -55,7 +56,6 @@
 #include <X11/keysymdef.h>
 
 #include <QX11Info>
-#include <kvbox.h>
 
 #include <QLoggingCategory>
 
@@ -144,9 +144,8 @@ static const ModifierKey modifierKeys[] = {
 /********************************************************************/
 
 
-KAccessApp::KAccessApp(bool allowStyles, bool GUIenabled)
-    : KUniqueApplication(allowStyles, GUIenabled),
-    overlay(0), _player(0), toggleScreenReaderAction(new QAction(this))
+KAccessApp::KAccessApp()
+    : overlay(0), _player(0), toggleScreenReaderAction(new QAction(this))
 {
     m_error = false;
     _activeWindow = KWindowSystem::activeWindow();
@@ -168,14 +167,16 @@ KAccessApp::KAccessApp(bool allowStyles, bool GUIenabled)
     unsigned char locked  = XkbModLocks(&state_return);
     state = ((int)locked) << 8 | latched;
 
-    qApp->installNativeEventFilter(this);
+    auto service = new KDBusService(KDBusService::Unique, this);
+    connect(service, &KDBusService::activateRequested, this, &KAccessApp::newInstance);
+
+    QTimer::singleShot(0, this, &KAccessApp::readSettings);
 }
 
-int KAccessApp::newInstance()
+void KAccessApp::newInstance()
 {
     KSharedConfig::openConfig()->reparseConfiguration();
     readSettings();
-    return 0;
 }
 
 void KAccessApp::readSettings()
@@ -372,19 +373,15 @@ void KAccessApp::toggleScreenReader()
 void KAccessApp::setScreenReaderEnabled(bool enabled)
 {
     if (enabled) {
-        QStringList args;
-        args << "set" << "org.gnome.desktop.a11y.applications" << "screen-reader-enabled" << "true";
+        QStringList args = { "set", "org.gnome.desktop.a11y.applications", "screen-reader-enabled", "true"};
         int ret = QProcess::execute("gsettings", args);
         if (ret == 0) {
-            QStringList args = {"--replace"};
             qint64 pid = 0;
-            QProcess::startDetached("orca", args, QString(), &pid);
+            QProcess::startDetached("orca", {"--replace"}, QString(), &pid);
             qCDebug(logKAccess) << "Launching Orca, pid:" << pid;
         }
     } else {
-        QStringList args;
-        args << "set" << "org.gnome.desktop.a11y.applications" << "screen-reader-enabled" << "false";
-        QProcess::execute("gsettings", args);
+        QProcess::startDetached("gsettings", { "set", "org.gnome.desktop.a11y.applications", "screen-reader-enabled", "false"});
     }
 }
 
@@ -521,7 +518,7 @@ void KAccessApp::xkbBellNotify(xcb_xkb_bell_notify_event_t *event)
         WId id = _activeWindow;
 
         NETRect frame, window;
-        NETWinInfo net(QX11Info::connection(), id, desktop()->winId(), 0);
+        NETWinInfo net(QX11Info::connection(), id, qApp->desktop()->winId(), 0);
 
         net.kdeGeometry(frame, window);
 
@@ -553,7 +550,7 @@ void KAccessApp::xkbBellNotify(xcb_xkb_bell_notify_event_t *event)
         // flash the overlay widget
         overlay->raise();
         overlay->show();
-        flush();
+        qApp->flush();
     }
 
     // ask Phonon to ring a nice bell
@@ -662,35 +659,24 @@ QString mouseKeysShortcut(Display *display)
 void KAccessApp::createDialogContents()
 {
     if (dialog == 0) {
-        dialog = new KDialog(0);
-        dialog->setCaption(i18n("Warning"));
-        dialog->setButtons(KDialog::Yes | KDialog::No);
-        dialog->setButtonGuiItem(KDialog::Yes, KStandardGuiItem::yes());
-        dialog->setButtonGuiItem(KDialog::No, KStandardGuiItem::no());
-        dialog->setDefaultButton(KDialog::No);
-        dialog->setEscapeButton(KDialog::Close);
+        dialog = new QDialog(nullptr);
+        dialog->setWindowTitle(i18n("Warning"));
         dialog->setObjectName("AccessXWarning");
         dialog->setModal(true);
 
-        KVBox *topcontents = new KVBox(dialog);
-        topcontents->setSpacing(KDialog::spacingHint() * 2);
-#ifdef __GNUC__
-#warning "kde4 fixme"
-#endif
-        //topcontents->setMargin(KDialog::marginHint());
+        QWidget *topcontents = new QWidget(dialog);
+        topcontents->setLayout(new QVBoxLayout(topcontents));
 
         QWidget *contents = new QWidget(topcontents);
         QHBoxLayout * lay = new QHBoxLayout(contents);
-        lay->setSpacing(KDialog::spacingHint());
 
         QLabel *label1 = new QLabel(contents);
-        QPixmap pixmap = KIconLoader::global()->loadIcon("dialog-warning", KIconLoader::NoGroup, KIconLoader::SizeMedium, KIconLoader::DefaultState, QStringList(), 0, true);
-        if (pixmap.isNull())
-            pixmap = QMessageBox::standardIcon(QMessageBox::Warning);
-        label1->setPixmap(pixmap);
+        QIcon icon = QIcon::fromTheme("dialog-warning");
+        if (icon.isNull())
+            icon = QMessageBox::standardIcon(QMessageBox::Warning);
+        label1->setPixmap(icon.pixmap(64, 64));
 
         lay->addWidget(label1, 0, Qt::AlignCenter);
-        lay->addSpacing(KDialog::spacingHint());
 
         QVBoxLayout * vlay = new QVBoxLayout();
         lay->addItem(vlay);
@@ -715,11 +701,13 @@ void KAccessApp::createDialogContents()
         showModeCombobox->insertItem(2, i18n("Deactivate All AccessX Features & Gestures"));
         showModeCombobox->setCurrentIndex(1);
 
-        dialog->setMainWidget(topcontents);
+        auto buttons = new QDialogButtonBox(QDialogButtonBox::Yes | QDialogButtonBox::No, dialog);
+        lay->addWidget(buttons);
 
-        connect(dialog, &KDialog::yesClicked, this, &KAccessApp::yesClicked);
-        connect(dialog, &KDialog::noClicked, this, &KAccessApp::noClicked);
-        connect(dialog, &KDialog::closeClicked, this, &KAccessApp::dialogClosed);
+        connect(buttons, &QDialogButtonBox::accepted, dialog, &QDialog::accept);
+        connect(buttons, &QDialogButtonBox::rejected, dialog, &QDialog::reject);
+        connect(dialog, &QDialog::accepted, this, &KAccessApp::yesClicked);
+        connect(dialog, &QDialog::rejected, this, &KAccessApp::noClicked);
     }
 }
 
@@ -865,7 +853,7 @@ void KAccessApp::xkbControlsNotify(xcb_xkb_controls_notify_event_t *event)
                                    + " " + i18n("These AccessX settings are needed for some users with motion impairments and can be configured in the KDE System Settings. You can also turn them on and off with standardized keyboard gestures.\n\nIf you do not need them, you can select \"Deactivate all AccessX features and gestures\"."));
 
             KWindowSystem::setState(dialog->winId(), NET::KeepAbove);
-            kapp->updateUserTimestamp();
+            KUserTimestamp::updateUserTimestamp(0);
             dialog->show();
         }
     }
@@ -935,9 +923,9 @@ void KAccessApp::applyChanges()
 
 void KAccessApp::yesClicked()
 {
-    if (dialog != 0)
+    if (dialog)
         dialog->deleteLater();
-    dialog = 0;
+    dialog = nullptr;
 
     KConfigGroup config(KSharedConfig::openConfig(), "Keyboard");
     switch (showModeCombobox->currentIndex()) {
@@ -965,9 +953,9 @@ void KAccessApp::yesClicked()
 
 void KAccessApp::noClicked()
 {
-    if (dialog != 0)
+    if (dialog)
         dialog->deleteLater();
-    dialog = 0;
+    dialog = nullptr;
     requestedFeatures = features;
 
     KConfigGroup config(KSharedConfig::openConfig(), "Keyboard");

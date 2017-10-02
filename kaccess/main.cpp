@@ -20,49 +20,47 @@
 */
 
 #include "kaccess.h"
-#include <kdebug.h>
-#include <k4aboutdata.h>
-#include <kcmdlineargs.h>
-#include <KLocalizedString>
-#include <QX11Info>
-#include <Kdelibs4ConfigMigrator>
+#include <QDebug>
+#include <QApplication>
 #include <QSessionManager>
+#include <QX11Info>
+#include <KAboutData>
+#include <KLocalizedString>
+#include <KDBusService>
+#include <Kdelibs4ConfigMigrator>
 
 extern "C" Q_DECL_EXPORT int kdemain(int argc, char * argv[])
 {
+    // we need an application object for QX11Info
+    QApplication app(argc, argv);
+    KAccessApp acc;
+
     Kdelibs4ConfigMigrator migrate(QStringLiteral("kaccess"));
     migrate.setConfigFiles(QStringList() << QStringLiteral("kaccessrc"));
     migrate.migrate();
 
     QGuiApplication::setFallbackSessionManagementEnabled(false);
 
-    K4AboutData about(I18N_NOOP("kaccess"), 0, ki18n("KDE Accessibility Tool"),
-                      0, KLocalizedString(), K4AboutData::License_GPL,
-                      ki18n("(c) 2000, Matthias Hoelzer-Kluepfel"));
+    KAboutData about("kaccess", QString(), i18n("KDE Accessibility Tool"),
+                      {}, KAboutLicense::GPL_V2,
+                      i18n("(c) 2000, Matthias Hoelzer-Kluepfel"));
 
-    about.addAuthor(ki18n("Matthias Hoelzer-Kluepfel"), ki18n("Author") , "hoelzer@kde.org");
-
-    KCmdLineArgs::init(argc, argv, &about);
+    about.addAuthor(i18n("Matthias Hoelzer-Kluepfel"), i18n("Author") , QStringLiteral("hoelzer@kde.org"));
 
     //this application is currently only relevant on X, force to run under X
     //note if someone does port this we still need to run kaccess under X for xwayland apps
-    setenv("QT_QPA_PLATFORM", "xcb", true);
-
-    if (!KAccessApp::start())
-        return 0;
+    qputenv("QT_QPA_PLATFORM", "xcb");
 
     // verify the Xlib has matching XKB extension
     int major = XkbMajorVersion;
     int minor = XkbMinorVersion;
     if (!XkbLibraryVersion(&major, &minor)) {
-        kError() << "Xlib XKB extension does not match" << endl;
+        qWarning() << "Xlib XKB extension does not match";
         return 1;
     }
-    kDebug() << "Xlib XKB extension major=" << major << " minor=" << minor;
+    qDebug() << "Xlib XKB extension major=" << major << " minor=" << minor;
 
-    // we need an application object for QX11Info
-    KAccessApp app;
-    if (app.isFailed()) {
+    if (acc.isFailed()) {
         return 1;
     }
 
@@ -73,7 +71,6 @@ extern "C" Q_DECL_EXPORT int kdemain(int argc, char * argv[])
     QObject::connect(&app, &QGuiApplication::commitDataRequest, disableSessionManagement);
     QObject::connect(&app, &QGuiApplication::saveStateRequest, disableSessionManagement);
 
-
     // verify the X server has matching XKB extension
     // if yes, the XKB extension is initialized
     int opcode_rtrn;
@@ -81,15 +78,16 @@ extern "C" Q_DECL_EXPORT int kdemain(int argc, char * argv[])
     int xkb_opcode;
     if (!XkbQueryExtension(QX11Info::display(), &opcode_rtrn, &xkb_opcode, &error_rtrn,
                            &major, &minor)) {
-        kError() << "X server has not matching XKB extension" << endl;
+        qWarning() << "X server has not matching XKB extension" << endl;
         return 1;
     }
-    kDebug() << "X server XKB extension major=" << major << " minor=" << minor;
+    qDebug() << "X server XKB extension major=" << major << " minor=" << minor;
+
+    app.installNativeEventFilter(&acc);
 
     //Without that, the application dies when the dialog is closed only once.
     app.setQuitOnLastWindowClosed(false);
 
-    app.setXkbOpcode(xkb_opcode);
-    app.disableSessionManagement();
+    acc.setXkbOpcode(xkb_opcode);
     return app.exec();
 }
