@@ -29,6 +29,7 @@ function fillActionMenu(actionMenu, actionList, favoriteModel, favoriteId) {
         if (actionList && actionList.length > 0) {
             var separator = { "type": "separator" };
             actionList.unshift(separator);
+            // actionList = actions.concat(actionList); // this crashes Qt O.o
             actionList.unshift.apply(actionList, actions);
         } else {
             actionList = actions;
@@ -39,18 +40,13 @@ function fillActionMenu(actionMenu, actionList, favoriteModel, favoriteId) {
 }
 
 function createFavoriteActions(favoriteModel, favoriteId) {
-    // Don't allow changes to favorites when system is immutable.
-    if (plasmoid.immutability === PlasmaCore.Types.SystemImmutable) {
-        return null;
-    }
-
     if (favoriteModel === null || !favoriteModel.enabled || favoriteId == null) {
         return null;
     }
 
-    var activities = favoriteModel.activities.runningActivities;
 
-    if (activities.length <= 1) {
+    if (favoriteModel.activities === undefined ||
+        favoriteModel.activities.runningActivities.length <= 1) {
         var action = {};
 
         if (favoriteModel.isFavorite(favoriteId)) {
@@ -73,6 +69,8 @@ function createFavoriteActions(favoriteModel, favoriteId) {
         var actions = [];
 
         var linkedActivities = favoriteModel.linkedActivitiesFor(favoriteId);
+
+        var activities = favoriteModel.activities.runningActivities;
 
         // Adding the item to link/unlink to all activities
 
@@ -165,12 +163,18 @@ function triggerAction(model, index, actionId, actionArgument) {
 
     if (closeRequested) {
         plasmoid.expanded = false;
+
+        return true;
     }
+
+    return false;
 }
 
 function handleFavoriteAction(actionId, actionArgument) {
     var favoriteId = actionArgument.favoriteId;
     var favoriteModel = actionArgument.favoriteModel;
+
+    console.log(actionId);
 
     if (favoriteModel === null || favoriteId == null) {
         return null;
@@ -178,12 +182,10 @@ function handleFavoriteAction(actionId, actionArgument) {
 
     if (actionId == "_kicker_favorite_remove") {
         console.log("Removing from all activities");
-        favoriteModel.removeFavoriteFrom(favoriteId, ":any");
-
+        favoriteModel.removeFavorite(favoriteId);
     } else if (actionId == "_kicker_favorite_add") {
         console.log("Adding to global activity");
-        favoriteModel.addFavoriteTo(favoriteId, ":global");
-
+        favoriteModel.addFavorite(favoriteId);
     } else if (actionId == "_kicker_favorite_remove_from_activity") {
         console.log("Removing from a specific activity");
         favoriteModel.removeFavoriteFrom(favoriteId, actionArgument.favoriteActivity);
