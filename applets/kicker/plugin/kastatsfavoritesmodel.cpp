@@ -570,13 +570,13 @@ void KAStatsFavoritesModel::portOldFavorites(const QStringList &ids)
 void KAStatsFavoritesModel::addFavorite(const QString &id, int index)
 {
     DEBUG << "addFavorite" << id << index << " -->";
-    addFavoriteTo(id, Activity::current(), index);
+    addFavoriteTo(id, QStringLiteral(":global"));
 }
 
 void KAStatsFavoritesModel::removeFavorite(const QString &id)
 {
     DEBUG << "removeFavorite" << id << " -->";
-    removeFavoriteFrom(id, Activity::current());
+    removeFavoriteFrom(id, QStringLiteral(":any"));
 }
 
 void KAStatsFavoritesModel::addFavoriteTo(const QString &id, const QString &activityId, int index)

@@ -22,6 +22,7 @@
 #include <KLocalizedString>
 #include <KConfigGroup>
 #include <KSharedConfig>
+#include <KService>
 #include <QUrl>
 
 // for chmod:
@@ -120,7 +121,11 @@ void CfgEmailClient::save(KConfig *)
     if (profile->isConfigWritable(true)) {
         KConfigGroup defaultApp(profile, "Default Applications");
         if (kmailCB->isChecked()) {
-            defaultApp.writeXdgListEntry("x-scheme-handler/mailto", QStringList(QStringLiteral("org.kde.kmail.desktop")));
+            QString kmailDesktop = QStringLiteral("org.kde.kmail.desktop");
+            if (KService::serviceByDesktopName(QStringLiteral("org.kde.kmail2"))) {
+                kmailDesktop = QStringLiteral("org.kde.kmail2.desktop");
+            }
+            defaultApp.writeXdgListEntry("x-scheme-handler/mailto", QStringList(kmailDesktop));
         } else if (m_emailClientService) {
             defaultApp.writeXdgListEntry("x-scheme-handler/mailto", QStringList(m_emailClientService->storageId()));
         }

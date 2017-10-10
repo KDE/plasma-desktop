@@ -44,9 +44,9 @@ function createFavoriteActions(favoriteModel, favoriteId) {
         return null;
     }
 
-    var activities = favoriteModel.activities.runningActivities;
 
-    if (activities.length <= 1) {
+    if (favoriteModel.activities === undefined ||
+        favoriteModel.activities.runningActivities.length <= 1) {
         var action = {};
 
         if (favoriteModel.isFavorite(favoriteId)) {
@@ -69,6 +69,8 @@ function createFavoriteActions(favoriteModel, favoriteId) {
         var actions = [];
 
         var linkedActivities = favoriteModel.linkedActivitiesFor(favoriteId);
+
+        var activities = favoriteModel.activities.runningActivities;
 
         // Adding the item to link/unlink to all activities
 
@@ -180,12 +182,10 @@ function handleFavoriteAction(actionId, actionArgument) {
 
     if (actionId == "_kicker_favorite_remove") {
         console.log("Removing from all activities");
-        favoriteModel.removeFavoriteFrom(favoriteId, ":any");
-
+        favoriteModel.removeFavorite(favoriteId);
     } else if (actionId == "_kicker_favorite_add") {
         console.log("Adding to global activity");
-        favoriteModel.addFavoriteTo(favoriteId, ":global");
-
+        favoriteModel.addFavorite(favoriteId);
     } else if (actionId == "_kicker_favorite_remove_from_activity") {
         console.log("Removing from a specific activity");
         favoriteModel.removeFavoriteFrom(favoriteId, actionArgument.favoriteActivity);
