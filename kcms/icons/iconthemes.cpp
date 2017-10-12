@@ -110,7 +110,7 @@ IconThemesConfig::IconThemesConfig(QWidget *parent)
   installButton->setWhatsThis(i18n("If you already have a theme archive locally, this button will unpack it and make it available for KDE applications"));
   connect(installButton, &QPushButton::clicked, this, &IconThemesConfig::installNewTheme);
 
-  QPushButton *newButton=new QPushButton( QIcon::fromTheme(QStringLiteral("get-hot-new-stuff")), i18n("Get new Theme"), this);
+  QPushButton *newButton=new QPushButton( QIcon::fromTheme(QStringLiteral("get-hot-new-stuff")), i18n("Get New Themes..."), this);
   newButton->setObjectName( QStringLiteral("GetNewTheme" ));
   newButton->setToolTip(i18n("Get new themes from the Internet"));
   newButton->setWhatsThis(i18n("You need to be connected to the Internet to use this action. A dialog will display a list of themes from the http://www.kde.org website. Clicking the Install button associated with a theme will install this theme locally."));
