@@ -632,21 +632,23 @@ void runRdb( uint flags )
   if (colorSchemeName.isEmpty()) {
       return;
   }
-  //fix filename, copied from ColorsCM::saveScheme()
-  QString colorSchemeFilename = colorSchemeName;
-  colorSchemeFilename.remove('\''); // So Foo's does not become FooS
-  QRegExp fixer(QStringLiteral("[\\W,.-]+(.?)"));
-  int offset;
-  while ((offset = fixer.indexIn(colorSchemeFilename)) >= 0)
-      colorSchemeFilename.replace(offset, fixer.matchedLength(), fixer.cap(1).toUpper());
-  colorSchemeFilename.replace(0, 1, colorSchemeFilename.at(0).toUpper());
+  QString colorSchemeSrcFile;
+  if (colorSchemeName != QLatin1String("Default")) {
+      //fix filename, copied from ColorsCM::saveScheme()
+      QString colorSchemeFilename = colorSchemeName;
+      colorSchemeFilename.remove('\''); // So Foo's does not become FooS
+      QRegExp fixer(QStringLiteral("[\\W,.-]+(.?)"));
+      int offset;
+      while ((offset = fixer.indexIn(colorSchemeFilename)) >= 0)
+          colorSchemeFilename.replace(offset, fixer.matchedLength(), fixer.cap(1).toUpper());
+      colorSchemeFilename.replace(0, 1, colorSchemeFilename.at(0).toUpper());
 
-  //clone the color scheme
-  QString src = QStandardPaths::locate(QStandardPaths::GenericDataLocation, "color-schemes/" +  colorSchemeFilename + ".colors");
-  QString dest = migration.saveLocation("data", QStringLiteral("color-schemes")) + colorSchemeName + ".colors";
-
-  QFile::remove(dest);
-  QFile::copy(src, dest);
+      //clone the color scheme
+      colorSchemeSrcFile = QStandardPaths::locate(QStandardPaths::GenericDataLocation, "color-schemes/" +  colorSchemeFilename + ".colors");
+      const QString dest = migration.saveLocation("data", QStringLiteral("color-schemes")) + colorSchemeName + ".colors";
+      QFile::remove(dest);
+      QFile::copy(colorSchemeSrcFile, dest);
+  }
 
   //Apply the color scheme
   QString configFilePath = migration.saveLocation("config") + "kdeglobals";
@@ -697,13 +699,15 @@ void runRdb( uint flags )
   }
   kde4IconGroup.sync();
 
-  //copy all the groups in the color scheme in kdeglobals
-  KSharedConfigPtr kde4ColorConfig = KSharedConfig::openConfig(src, KConfig::SimpleConfig);
+  if (!colorSchemeSrcFile.isEmpty()) {
+      //copy all the groups in the color scheme in kdeglobals
+      KSharedConfigPtr kde4ColorConfig = KSharedConfig::openConfig(colorSchemeSrcFile, KConfig::SimpleConfig);
 
-  foreach (const QString &grp, kde4ColorConfig->groupList()) {
-      KConfigGroup cg(kde4ColorConfig, grp);
-      KConfigGroup cg2(&kde4config, grp);
-      cg.copyTo(&cg2);
+      foreach (const QString &grp, kde4ColorConfig->groupList()) {
+          KConfigGroup cg(kde4ColorConfig, grp);
+          KConfigGroup cg2(&kde4config, grp);
+          cg.copyTo(&cg2);
+      }
   }
 
   //widgets settings
