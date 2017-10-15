@@ -153,13 +153,13 @@ Item {
         }
         RowLayout {
             QtControls.Button {
-                text: i18n("Get new Theme")
+                text: i18n("Get New Themes...")
                 iconName: "get-hot-new-stuff"
                 onClicked: kcm.getNewThemes()
             }
 
             QtControls.Button {
-                text: i18n("Install from File")
+                text: i18n("Install from File...")
                 iconName: "document-import"
                 onClicked: fileDialogLoader.active = true;
             }
