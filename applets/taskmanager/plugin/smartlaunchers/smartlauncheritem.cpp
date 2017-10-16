@@ -19,6 +19,7 @@
 
 #include "smartlauncheritem.h"
 
+#include <KDesktopFile>
 #include <KService>
 
 using namespace SmartLauncher;
@@ -118,9 +119,27 @@ void Item::setLauncherUrl(const QUrl &launcherUrl)
         m_launcherUrl = launcherUrl;
         emit launcherUrlChanged(launcherUrl);
 
-        KService::Ptr service = KService::serviceByDesktopPath(launcherUrl.toLocalFile());
-        if (service) {
-            m_storageId = service->storageId();
+        m_storageId.clear();
+
+        if (launcherUrl.scheme() == QStringLiteral("applications")) {
+            const KService::Ptr service = KService::serviceByMenuId(launcherUrl.path());
+
+            if (service && launcherUrl.path() == service->menuId()) {
+                m_storageId = service->menuId();
+            }
+        }
+
+        if (launcherUrl.isLocalFile() && KDesktopFile::isDesktopFile(launcherUrl.toLocalFile())) {
+            KDesktopFile f(launcherUrl.toLocalFile());
+
+            const KService::Ptr service = KService::serviceByStorageId(f.fileName());
+            if (service) {
+                m_storageId = service->storageId();
+            }
+        }
+
+        if (m_storageId.isEmpty()) {
+            return;
         }
 
         if (m_backendPtr) {
