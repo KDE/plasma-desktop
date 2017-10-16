@@ -46,7 +46,7 @@ SearchConfigModule::SearchConfigModule(QWidget* parent, const QVariantList& args
     : KCModule(parent, args)
     , m_config("krunnerrc")
 {
-    KAboutData* about = new KAboutData(QStringLiteral("kcm_search"), i18n("Configure Search"),
+    KAboutData* about = new KAboutData(QStringLiteral("kcm_search"), i18nc("kcm name for About dialog", "Configure Search Bar"),
                                        QStringLiteral("0.1"), QString(), KAboutLicense::LGPL);
     about->addAuthor(i18n("Vishesh Handa"), QString(), QStringLiteral("vhanda@kde.org"));
     setAboutData(about);
