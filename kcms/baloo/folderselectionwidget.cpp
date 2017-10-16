@@ -203,7 +203,8 @@ void FolderSelectionWidget::slotAddButtonClicked()
 
     // We don't care about the root dir
     if (url == QLatin1String("/")) {
-        showMessage(i18n("The root directory is always hidden"));
+        showMessage(i18n("Not allowed to exclude root folder, please disable File Search if you do not want it"));
+        return;
     }
 
     // Remove any existing folder with that name
