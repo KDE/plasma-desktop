@@ -113,14 +113,12 @@ PlasmaCore.Dialog {
                                 id: tableLabel
                                 text: model.label
                                 font: preferredFont
-                                color: active ? theme.highlightedTextColor : theme.textColor
                                 opacity: highlight.visible ? 0.8 : 0.6
                             }
                             PlasmaComponents.Label {
                                 id: textLabel
                                 text: model.text
                                 font: preferredFont
-                                color: active ? theme.highlightedTextColor : theme.textColor
                             }
                         }
                         MouseArea {
