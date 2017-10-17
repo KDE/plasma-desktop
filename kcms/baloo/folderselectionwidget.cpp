@@ -237,7 +237,7 @@ void FolderSelectionWidget::slotAddButtonClicked()
                 url = existingUrl;
                 deleteList << item;
 
-                QString name = QUrl::fromLocalFile(url).fileName();
+                QString name = QUrl::fromLocalFile(url).adjusted(QUrl::StripTrailingSlash).fileName();
                 showMessage(i18n("Folder's parent %1 is already excluded").arg(name));
             }
         }
