@@ -21,13 +21,12 @@ import QtQuick.Layouts 1.1
 import QtQuick.Controls 1.0 as QtControls
 import org.kde.kquickcontrolsaddons 2.0
 import QtQuick.Controls.Private 1.0
-//We need units from it
-import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.kirigami 2.0 // for Units
 import org.kde.plasma.components 2.0 as PlasmaComponents
 
 Item {
-    implicitWidth: units.gridUnit * 20
-    implicitHeight: units.gridUnit * 20
+    implicitWidth: Units.gridUnit * 20
+    implicitHeight: Units.gridUnit * 20
 
     SystemPalette {id: syspal}
     QtControls.ScrollView {
@@ -35,7 +34,7 @@ Item {
         GridView {
             id: grid
             model: kcm.splashModel
-            cellWidth: Math.floor(grid.width / Math.max(Math.floor(grid.width / (units.gridUnit*12)), 3))
+            cellWidth: Math.floor(grid.width / Math.max(Math.floor(grid.width / (Units.gridUnit*12)), 3))
             cellHeight: cellWidth / 1.6
 
             onCountChanged: {
@@ -49,7 +48,7 @@ Item {
                 Rectangle {
                     anchors {
                         fill: parent
-                        margins: units.smallSpacing
+                        margins: Units.smallSpacing
                     }
 
                     Connections {
@@ -63,7 +62,7 @@ Item {
                     QIconItem {
                         id: icon
                         anchors.centerIn: parent
-                        width: units.iconSizes.large
+                        width: Units.iconSizes.large
                         height: width
                         icon: "view-preview"
                     }
@@ -71,7 +70,7 @@ Item {
                         id: image
                         anchors {
                             fill: parent
-                            margins: units.smallSpacing * 2
+                            margins: Units.smallSpacing * 2
                         }
                         source: model.screenshot || ""
                         Rectangle {
@@ -103,12 +102,12 @@ Item {
                     Rectangle {
                         opacity: grid.currentIndex == index ? 1.0 : 0
                         anchors.fill: parent
-                        border.width: units.smallSpacing * 2
+                        border.width: Units.smallSpacing * 2
                         border.color: syspal.highlight
                         color: "transparent"
                         Behavior on opacity {
                             PropertyAnimation {
-                                duration: units.longDuration
+                                duration: Units.longDuration
                                 easing.type: Easing.OutQuad
                             }
                         }
@@ -133,7 +132,7 @@ Item {
                             anchors {
                                 top: parent.top
                                 right: parent.right
-                                margins: units.smallSpacing
+                                margins: Units.smallSpacing
                             }
                             visible: model.pluginName != "None"
                             iconSource: "media-playback-start"
@@ -143,7 +142,7 @@ Item {
                             opacity: parent.containsMouse ? 1 : 0
                             Behavior on opacity {
                                 PropertyAnimation {
-                                    duration: units.longDuration
+                                    duration: Units.longDuration
                                     easing.type: Easing.OutQuad
                                 }
                             }
