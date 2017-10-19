@@ -681,6 +681,11 @@ KFonts::KFonts(QWidget *parent, const QVariantList &args)
                             " properly with real DPI value better fonts should be used or configuration"
                             " of font hinting should be checked.</p>");
     spinboxDpi->setWhatsThis(whatsthis);
+#if !defined(HAVE_X11) || !HAVE_X11
+    QString nothere = i18n("This property has no effect on this platform");
+    spinboxDpi->setToolTip(nothere);
+    checkboxForceDpi->setToolTip(nothere);
+#endif
     checkboxForceDpi->setChecked(false);
     spinboxDpi->setEnabled(false);
     connect(spinboxDpi, SIGNAL(valueChanged(int)), SLOT(changed()));
