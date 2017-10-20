@@ -34,7 +34,7 @@ class ItemViewAdapter : public KAbstractViewAdapter
     Q_PROPERTY(QRect adapterVisibleArea READ adapterVisibleArea WRITE setAdapterVisibleArea NOTIFY adapterVisibleAreaChanged)
 
     public:
-        ItemViewAdapter(QObject* parent = 0);
+        explicit ItemViewAdapter(QObject* parent = nullptr);
 
         QAbstractItemModel *model() const Q_DECL_OVERRIDE;
         QSize iconSize() const Q_DECL_OVERRIDE;

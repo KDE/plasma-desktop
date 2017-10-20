@@ -31,7 +31,7 @@ class PlacesModel : public QSortFilterProxyModel
     Q_PROPERTY(bool activityLinkingEnabled READ activityLinkingEnabled CONSTANT)
 
     public:
-        PlacesModel(QObject *parent = 0);
+        explicit PlacesModel(QObject *parent = nullptr);
         ~PlacesModel();
 
         bool activityLinkingEnabled();

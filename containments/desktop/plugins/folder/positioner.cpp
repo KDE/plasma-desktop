@@ -27,7 +27,7 @@
 
 Positioner::Positioner(QObject *parent): QAbstractItemModel(parent)
 , m_enabled(false)
-, m_folderModel(0)
+, m_folderModel(nullptr)
 , m_perStripe(0)
 , m_lastRow(-1)
 , m_ignoreNextTransaction(false)

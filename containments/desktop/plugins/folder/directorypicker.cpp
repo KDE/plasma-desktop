@@ -25,7 +25,7 @@
 #include <KLocalizedString>
 
 DirectoryPicker::DirectoryPicker(QObject *parent) : QObject(parent),
-    m_dialog(0)
+    m_dialog(nullptr)
 {
 }
 

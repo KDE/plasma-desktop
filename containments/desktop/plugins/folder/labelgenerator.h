@@ -37,7 +37,7 @@ class LabelGenerator : public QObject
     Q_PROPERTY(QString displayLabel READ displayLabel NOTIFY displayLabelChanged)
 
     public:
-        LabelGenerator(QObject *parent = 0);
+        explicit LabelGenerator(QObject *parent = nullptr);
         ~LabelGenerator();
 
         FolderModel *folderModel() const;
@@ -52,7 +52,7 @@ class LabelGenerator : public QObject
         QString labelText() const;
         void setLabelText(const QString &text);
 
-        QString displayLabel();
+        QString displayLabel() const;
 
     Q_SIGNALS:
         void folderModelChanged();

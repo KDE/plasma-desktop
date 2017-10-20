@@ -36,7 +36,7 @@ class Positioner : public QAbstractItemModel
     Q_PROPERTY(QStringList positions READ positions WRITE setPositions NOTIFY positionsChanged)
 
     public:
-        Positioner(QObject *parent = 0);
+        explicit Positioner(QObject *parent = nullptr);
         ~Positioner();
 
         bool enabled() const;

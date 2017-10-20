@@ -100,7 +100,7 @@ void LabelGenerator::setLabelText(const QString& text)
     }
 }
 
-QString LabelGenerator::displayLabel()
+QString LabelGenerator::displayLabel() const
 {
     if (!m_folderModel) {
         return QString();

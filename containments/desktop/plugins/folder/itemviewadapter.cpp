@@ -24,8 +24,8 @@
 #include <QSize>
 
 ItemViewAdapter::ItemViewAdapter(QObject *parent) : KAbstractViewAdapter(parent),
-    m_adapterView(0),
-    m_adapterModel(0),
+    m_adapterView(nullptr),
+    m_adapterModel(nullptr),
     m_adapterIconSize(-1)
 {
 }

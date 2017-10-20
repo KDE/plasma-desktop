@@ -59,7 +59,7 @@ class DirLister : public KDirLister
     Q_OBJECT
 
     public:
-        DirLister(QObject *parent = 0);
+        explicit DirLister(QObject *parent = nullptr);
         ~DirLister();
 
     Q_SIGNALS:
@@ -122,7 +122,7 @@ class FolderModel : public QSortFilterProxyModel
         };
         Q_ENUM(Status)
 
-        FolderModel(QObject *parent = 0);
+        explicit FolderModel(QObject *parent = nullptr);
         ~FolderModel();
 
         QHash<int, QByteArray> roleNames() const Q_DECL_OVERRIDE;

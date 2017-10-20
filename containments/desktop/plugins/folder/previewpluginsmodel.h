@@ -33,7 +33,7 @@ class PreviewPluginsModel : public QAbstractListModel
     Q_PROPERTY(QStringList checkedPlugins READ checkedPlugins WRITE setCheckedPlugins NOTIFY checkedPluginsChanged)
 
     public:
-        PreviewPluginsModel(QObject *parent = 0);
+        explicit PreviewPluginsModel(QObject *parent = nullptr);
         ~PreviewPluginsModel();
 
         QHash<int, QByteArray> roleNames() const override;

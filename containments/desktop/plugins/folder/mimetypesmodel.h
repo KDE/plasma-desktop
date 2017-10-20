@@ -33,7 +33,7 @@ class MimeTypesModel : public QAbstractListModel
     Q_PROPERTY(QStringList checkedTypes READ checkedTypes WRITE setCheckedTypes NOTIFY checkedTypesChanged)
 
     public:
-        MimeTypesModel(QObject *parent = 0);
+        explicit MimeTypesModel(QObject *parent = nullptr);
         ~MimeTypesModel();
 
         QHash<int, QByteArray> roleNames() const override;

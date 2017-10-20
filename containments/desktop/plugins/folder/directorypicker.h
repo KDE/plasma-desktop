@@ -32,7 +32,7 @@ class DirectoryPicker : public QObject
     Q_PROPERTY(QUrl url READ url NOTIFY urlChanged)
 
     public:
-        DirectoryPicker(QObject *parent = 0);
+        explicit DirectoryPicker(QObject *parent = nullptr);
         ~DirectoryPicker();
 
         QUrl url() const;

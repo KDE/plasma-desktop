@@ -27,7 +27,7 @@ class RubberBand : public QQuickPaintedItem
     Q_OBJECT
 
     public:
-        RubberBand(QQuickItem *parent = 0);
+        explicit RubberBand(QQuickItem *parent = nullptr);
         ~RubberBand();
 
         void paint(QPainter* painter) Q_DECL_OVERRIDE;

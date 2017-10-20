@@ -39,9 +39,9 @@ class ShortCut : public QObject
     Q_OBJECT
 
 public:
-    explicit ShortCut(QObject *parent = Q_NULLPTR);
+    explicit ShortCut(QObject *parent = nullptr);
 
-    Q_INVOKABLE void installAsEventFilterFor(QObject *target = Q_NULLPTR);
+    Q_INVOKABLE void installAsEventFilterFor(QObject *target = nullptr);
 
 Q_SIGNALS:
     void deleteFile();
