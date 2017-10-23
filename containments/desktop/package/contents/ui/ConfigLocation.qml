@@ -34,6 +34,7 @@ Item {
     property string cfg_url
     property alias cfg_labelMode: labelMode.currentIndex
     property alias cfg_labelText: labelText.text
+    property bool titleVisible: !("containmentType" in plasmoid)
 
     onCfg_urlChanged: applyConfig()
 
@@ -70,184 +71,190 @@ Item {
         onPlacesChanged: applyConfig(true)
     }
 
-    ColumnLayout {
-        GroupBox {
-            id: locationGroupBox
+    ExclusiveGroup {
+        id: locationGroup
 
+        onCurrentChanged: {
+            if (current == locationDesktop) {
+                cfg_url = "desktop:/";
+            } else if (current == locationCurrentActivity) {
+                cfg_url = "activities:/current/";
+            }
+        }
+    }
+
+    GridLayout {
+
+        // Row 0: "Show the Desktop folder"
+        Label {
+            id: locationLabel
+            Layout.column: 0
+            Layout.row: 0
+            text: i18n("Location:")
+        }
+
+        RadioButton {
+            id: locationDesktop
+            Layout.row: 0
+            Layout.column: 1
+            Layout.columnSpan: 3
+            text: i18n("Show the Desktop folder")
+            exclusiveGroup: locationGroup
+        }
+
+        // Row 1: "Show files linked to the current activity"
+        RadioButton {
+            id: locationCurrentActivity
+            Layout.row: 1
+            Layout.column: 1
+            Layout.columnSpan: 3
+
+            visible: placesModel.activityLinkingEnabled
+            text: i18n("Show files linked to the current activity")
+            exclusiveGroup: locationGroup
+        }
+
+        // Rows 2+3: "Show a place"
+        RadioButton {
+            id: locationPlace
+            Layout.row: 2
+            Layout.column: 1
+            Layout.columnSpan: 3
+            text: i18n("Show a place:")
+
+            exclusiveGroup: locationGroup
+
+            onCheckedChanged: {
+                locationPlaceValue.enabled = checked;
+            }
+        }
+
+        Item {
+            id: indentSpacer
+            Layout.row: 3
+            Layout.column: 1
+            Layout.minimumWidth: units.largeSpacing
+        }
+
+        ComboBox {
+            id: locationPlaceValue
+            Layout.row: 3
+            Layout.column: 2
+            Layout.columnSpan: 2
             Layout.fillWidth: true
 
-            title: i18n("Location")
-            flat: true
+            model: placesModel
+            textRole: "display"
 
-            ColumnLayout {
-                ExclusiveGroup {
-                    id: locationGroup
+            enabled: true
 
-                    onCurrentChanged: {
-                        if (current == locationDesktop) {
-                            cfg_url = "desktop:/";
-                        } else if (current == locationCurrentActivity) {
-                            cfg_url = "activities:/current/";
-                        }
-                    }
+            onEnabledChanged: {
+                if (enabled && currentIndex != -1) {
+                    cfg_url = placesModel.urlForIndex(currentIndex);
                 }
+            }
 
-                RadioButton {
-                    id: locationDesktop
-                    text: i18n("Show the Desktop folder")
-                    exclusiveGroup: locationGroup
+            onActivated: {
+                cfg_url = placesModel.urlForIndex(index);
+            }
+        }
+
+        // Rows 4+5: "Specify a folder"
+
+        RadioButton {
+            id: locationCustom
+            Layout.row: 4
+            Layout.column: 1
+            Layout.columnSpan: 3
+
+            exclusiveGroup: locationGroup
+            text: i18n("Specify a folder:")
+        }
+
+        TextField {
+            id: locationCustomValue
+            Layout.row: 5
+            Layout.column: 2
+            Layout.fillWidth: true
+
+            enabled: locationCustom.checked
+
+            placeholderText: i18n("Type a path or a URL here")
+
+            onEnabledChanged: {
+                if (enabled && text != "") {
+                    cfg_url = text;
                 }
+            }
 
-                RadioButton {
-                    id: locationCurrentActivity
-                    visible: placesModel.activityLinkingEnabled
-                    text: i18n("Show files linked to the current activity")
-                    exclusiveGroup: locationGroup
-                }
-
-                GridLayout {
-                    RadioButton {
-                        id: locationPlace
-
-                        Layout.column: 0
-                        Layout.rowSpan: 2
-                        Layout.alignment: Qt.AlignTop
-
-                        exclusiveGroup: locationGroup
-
-                        onCheckedChanged: {
-                            locationPlaceValue.enabled = checked;
-                        }
-                    }
-
-                    Label {
-                        Layout.row: 0
-                        Layout.column: 1
-                        Layout.alignment: Qt.AlignLeft
-                        Layout.fillWidth: true
-
-                        text: i18n("Show a place:")
-                    }
-
-                    ComboBox {
-                        id: locationPlaceValue
-
-                        Layout.row: 1
-                        Layout.column: 1
-                        Layout.fillWidth: false
-
-                        model: placesModel
-                        textRole: "display"
-
-                        enabled: true
-
-                        onEnabledChanged: {
-                            if (enabled && currentIndex != -1) {
-                                cfg_url = placesModel.urlForIndex(currentIndex);
-                            }
-                        }
-
-                        onActivated: {
-                            cfg_url = placesModel.urlForIndex(index);
-                        }
-                    }
-                }
-
-                GridLayout {
-                    RadioButton {
-                        id: locationCustom
-
-                        Layout.column: 0
-                        Layout.rowSpan: 2
-                        Layout.alignment: Qt.AlignTop
-
-                        exclusiveGroup: locationGroup
-                    }
-
-                    Label {
-                        Layout.row: 0
-                        Layout.column: 1
-                        Layout.alignment: Qt.AlignLeft
-                        Layout.fillWidth: true
-
-                        text: i18n("Specify a folder:")
-                    }
-
-                    TextField {
-                        id: locationCustomValue
-
-                        Layout.row: 1
-                        Layout.column: 1
-                        Layout.fillWidth: true
-
-                        enabled: locationCustom.checked
-
-                        placeholderText: i18n("Type a path or a URL here")
-
-                        onEnabledChanged: {
-                            if (enabled && text != "") {
-                                cfg_url = text;
-                            }
-                        }
-
-                        onTextChanged: {
-                            if (enabled) {
-                                cfg_url = text;
-                            }
-                        }
-                    }
-
-                    Button {
-                        iconName: "document-open"
-
-                        enabled: locationCustom.checked
-
-                        onClicked: {
-                            directoryPicker.open();
-                        }
-                    }
-
-                    Folder.DirectoryPicker {
-                        id: directoryPicker
-
-                        onUrlChanged: {
-                            locationCustomValue.text = url;
-                        }
-                    }
+            onTextChanged: {
+                if (enabled) {
+                    cfg_url = text;
                 }
             }
         }
 
-        GroupBox {
-            id: titleGroupBox
+        Button {
+            Layout.row: 5
+            Layout.column: 3
+            Layout.alignment: Qt.AlignLeft
+            iconName: "document-open"
 
-            Layout.fillWidth: true
+            enabled: locationCustom.checked
 
-            visible: !("containmentType" in plasmoid)
-
-            title: i18n("Title")
-
-            flat: true
-
-            ColumnLayout {
-                ComboBox {
-                    id: labelMode
-
-                    Layout.fillWidth: false
-
-                    model: [i18n("None"), i18n("Default"), i18n("Full path"), i18n("Custom title")]
-                }
-
-                TextField {
-                    id: labelText
-
-                    Layout.fillWidth: true
-
-                    enabled: (labelMode.currentIndex == 3)
-
-                    placeholderText: i18n("Enter custom title here")
-                }
+            onClicked: {
+                directoryPicker.open();
             }
+        }
+
+        Folder.DirectoryPicker {
+            id: directoryPicker
+
+            onUrlChanged: {
+                locationCustomValue.text = url;
+            }
+        }
+
+        // Row 6: Spacing
+        Item {
+            id: titleSpacer
+            Layout.column: 0
+            Layout.row: 6
+            Layout.minimumHeight: units.largeSpacing
+            visible: titleVisible
+        }
+
+        // Rows 7+8: "Title"
+        Label {
+            id: titleLabel
+            Layout.column: 0
+            Layout.row: 7
+            text: i18n("Title:")
+            visible: titleVisible
+        }
+
+        ComboBox {
+            id: labelMode
+            Layout.row: 7
+            Layout.column: 1
+            Layout.columnSpan: 3
+            Layout.fillWidth: true
+            visible: titleVisible
+
+            model: [i18n("None"), i18n("Default"), i18n("Full path"), i18n("Custom title")]
+        }
+
+        TextField {
+            id: labelText
+            Layout.row: 8
+            Layout.column: 2
+            Layout.columnSpan: 2
+            Layout.fillWidth: true
+            visible: titleVisible
+
+            enabled: (labelMode.currentIndex == 3)
+
+            placeholderText: i18n("Enter custom title here")
         }
     }
 }
