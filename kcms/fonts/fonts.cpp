@@ -795,7 +795,7 @@ void KFonts::save()
 #if HAVE_X11
     // if the setting is reset in the module, remove the dpi value,
     // otherwise don't explicitly remove it and leave any possible system-wide value
-    if (dpi == 0 && dpi_original != 0) {
+    if (dpi == 0 && dpi_original != 0 && !KWindowSystem::isPlatformWayland()) {
         QProcess proc;
         proc.setProcessChannelMode(QProcess::ForwardedChannels);
         proc.start("xrdb", QStringList() << "-quiet" << "-remove" << "-nocpp");
