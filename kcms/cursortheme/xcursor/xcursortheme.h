@@ -46,8 +46,12 @@ class XCursorTheme : public CursorTheme
         virtual ~XCursorTheme() {}
 
         const QStringList inherits() const { return m_inherits; }
-        QImage loadImage(const QString &name, int size = 0) const Q_DECL_OVERRIDE;
-        qulonglong loadCursor(const QString &name, int size = 0) const Q_DECL_OVERRIDE;
+        QImage loadImage(const QString &name, int size = 0) const;
+        qulonglong loadCursor(const QString &name, int size = 0) const;
+
+        /** Returns the size that the XCursor library would use if no
+            cursor size is given. This depends mainly on Xft.dpi. */
+        int defaultCursorSize() const;
 
     protected:
         XCursorTheme(const QString &title, const QString &desc)
@@ -59,9 +63,7 @@ class XCursorTheme : public CursorTheme
         XcursorImages *xcLoadImages(const QString &name, int size) const;
         void parseIndexFile();
         QString findAlternative(const QString &name) const;
-        /** Returns the size that the XCursor library would use if no
-            cursor size is given. This depends mainly on Xft.dpi. */
-        int autodetectCursorSize() const;
+        
 
         QStringList m_inherits;
         static QHash<QString, QString> alternatives;

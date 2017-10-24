@@ -88,6 +88,8 @@ class CursorTheme
         /// the default cursor from the active theme instead.
         virtual qulonglong loadCursor(const QString &name, int size = 0) const = 0;
 
+        virtual int defaultCursorSize() const = 0;
+
         /** Creates the icon returned by @ref icon(). Don't use this function
             directly but use @ref icon() instead, because @ref icon() caches
             the icon.
