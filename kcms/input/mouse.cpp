@@ -87,238 +87,49 @@ K_EXPORT_PLUGIN(MouseConfigFactory("kcminput"))
 MouseConfig::MouseConfig(QWidget *parent, const QVariantList &args)
   : KCModule(parent, args)
 {
-    setQuickHelp(i18n("<h1>Mouse</h1> This module allows you to choose various"
-                      " options for the way in which your pointing device works. Your"
-                      " pointing device may be a mouse, trackball, or some other hardware"
-                      " that performs a similar function."));
+    setupUi(this);
 
-    QBoxLayout *topLayout = new QVBoxLayout(this);
-    topLayout->setMargin(0);
+    handedGroup->setId(rightHanded, 0);
+    handedGroup->setId(leftHanded, 1);
 
-    tabwidget = new QTabWidget(this);
-    topLayout->addWidget(tabwidget);
-
-    generalTab = new KMouseDlg(this);
-    QButtonGroup *group = new QButtonGroup(generalTab);
-    group->setExclusive(true);
-    group->addButton(generalTab->singleClick);
-    group->addButton(generalTab->doubleClick);
-
-    tabwidget->addTab(generalTab, i18n("&General"));
-
-    group = new QButtonGroup(generalTab);
-    group->setExclusive(true);
-    group->addButton(generalTab->rightHanded,RIGHT_HANDED);
-    group->addButton(generalTab->leftHanded,LEFT_HANDED);
-
-    connect(group, SIGNAL(buttonClicked(int)), this, SLOT(changed()));
-    connect(group, SIGNAL(buttonClicked(int)), this, SLOT(slotHandedChanged(int)));
-
-    QString wtstr = i18n("If you are left-handed, you may prefer to swap the"
-                         " functions of the left and right buttons on your pointing device"
-                         " by choosing the 'left-handed' option. If your pointing device"
-                         " has more than two buttons, only those that function as the"
-                         " left and right buttons are affected. For example, if you have"
-                         " a three-button mouse, the middle button is unaffected.");
-    generalTab->handedBox->setWhatsThis(wtstr);
-
-    connect(generalTab->doubleClick, SIGNAL(clicked()), SLOT(changed()));
-
-    wtstr = i18n("The default behavior in KDE is to select and activate"
-                 " icons with a single click of the left button on your pointing"
-                 " device. This behavior is consistent with what you would expect"
-                 " when you click links in most web browsers. If you would prefer"
-                 " to select with a single click, and activate with a double click,"
-                 " check this option.");
-    generalTab->doubleClick->setWhatsThis(wtstr);
-
-    wtstr = i18n("Activates and opens a file or folder with a single click.");
-    generalTab->singleClick->setWhatsThis(wtstr);
-
-    connect(generalTab->singleClick, SIGNAL(clicked()), this, SLOT(changed()));
+    connect(handedGroup, SIGNAL(buttonClicked(int)), this, SLOT(changed()));
+    connect(handedGroup, SIGNAL(buttonClicked(int)), this, SLOT(slotHandedChanged(int)));
+    connect(doubleClick, SIGNAL(clicked()), SLOT(changed()));
+    connect(singleClick, SIGNAL(clicked()), this, SLOT(changed()));
 
     // Only allow setting reversing scroll polarity if we have scroll buttons
     unsigned char map[20];
     if (QX11Info::isPlatformX11() && XGetPointerMapping(QX11Info::display(), map, 20) >= 5)
     {
-      generalTab->cbScrollPolarity->setEnabled(true);
-      generalTab->cbScrollPolarity->show();
+      cbScrollPolarity->setEnabled(true);
+      cbScrollPolarity->show();
     }
     else
     {
-      generalTab->cbScrollPolarity->setEnabled(false);
-      generalTab->cbScrollPolarity->hide();
+      cbScrollPolarity->setEnabled(false);
+      cbScrollPolarity->hide();
     }
-    connect(generalTab->cbScrollPolarity, SIGNAL(clicked()), this, SLOT(changed()));
-    connect(generalTab->cbScrollPolarity, SIGNAL(clicked()), this, SLOT(slotScrollPolarityChanged()));
+    connect(cbScrollPolarity, SIGNAL(clicked()), this, SLOT(changed()));
+    connect(cbScrollPolarity, SIGNAL(clicked()), this, SLOT(slotScrollPolarityChanged()));
 
-    // Advanced tab
-    advancedTab = new QWidget(0);
-    advancedTab->setObjectName("Advanced Tab");
-    tabwidget->addTab(advancedTab, i18n("Advanced"));
-
-    QFormLayout *formLayout = new QFormLayout;
-    formLayout->setFieldGrowthPolicy(QFormLayout::ExpandingFieldsGrow);
-
-    accel = new QDoubleSpinBox(advancedTab);
-    accel->setDecimals(1);
-    accel->setRange(0.1, 20);
-    accel->setSingleStep(0.1);
-    accel->setValue(2);
-    accel->setSuffix(i18n(" x"));
-    accel->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::Fixed);
-
-    formLayout->addRow(i18n("Pointer acceleration:"), accel);
     connect(accel, SIGNAL(valueChanged(double)), this, SLOT(changed()));
-
-    wtstr = i18n("<p>This option allows you to change the relationship"
-                 " between the distance that the mouse pointer moves on the"
-                 " screen and the relative movement of the physical device"
-                 " itself (which may be a mouse, trackball, or some other"
-                 " pointing device.)</p><p>"
-                 " A high value for the acceleration will lead to large"
-                 " movements of the mouse pointer on the screen even when"
-                 " you only make a small movement with the physical device."
-                 " Selecting very high values may result in the mouse pointer"
-                 " flying across the screen, making it hard to control.</p>");
-    accel->setWhatsThis(wtstr);
-
-    thresh = new QSpinBox(advancedTab);
-    thresh->setRange(0, 20);
-    thresh->setSingleStep(1);
-    thresh->setValue(2);
-    thresh->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::Fixed);
-    formLayout->addRow(i18n("Pointer threshold:"), thresh);
     connect(thresh, SIGNAL(valueChanged(int)), this, SLOT(changed()));
     connect(thresh, SIGNAL(valueChanged(int)), this, SLOT(slotThreshChanged(int)));
     slotThreshChanged(thresh->value());
 
-    wtstr = i18n("<p>The threshold is the smallest distance that the"
-                 " mouse pointer must move on the screen before acceleration"
-                 " has any effect. If the movement is smaller than the threshold,"
-                 " the mouse pointer moves as if the acceleration was set to 1X;</p><p>"
-                 " thus, when you make small movements with the physical device,"
-                 " there is no acceleration at all, giving you a greater degree"
-                 " of control over the mouse pointer. With larger movements of"
-                 " the physical device, you can move the mouse pointer"
-                 " rapidly to different areas on the screen.</p>");
-    thresh->setWhatsThis(wtstr);
-
     // It would be nice if the user had a test field.
     // Selecting such values in milliseconds is not intuitive
-    doubleClickInterval = new QSpinBox(advancedTab);
-    doubleClickInterval->setRange(100, 2000);
-    doubleClickInterval->setSuffix(i18n(" msec"));
-    doubleClickInterval->setSingleStep(100);
-    doubleClickInterval->setValue(2000);
-    doubleClickInterval->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::Fixed);
-    formLayout->addRow(i18n("Double click interval:"), doubleClickInterval);
     connect(doubleClickInterval, SIGNAL(valueChanged(int)), this, SLOT(changed()));
 
-    wtstr = i18n("The double click interval is the maximal time"
-                 " (in milliseconds) between two mouse clicks which"
-                 " turns them into a double click. If the second"
-                 " click happens later than this time interval after"
-                 " the first click, they are recognized as two"
-                 " separate clicks.");
-    doubleClickInterval->setWhatsThis(wtstr);
-
-    dragStartTime = new QSpinBox(advancedTab);
-    dragStartTime->setRange(100, 2000);
-    dragStartTime->setSuffix(i18n(" msec"));
-    dragStartTime->setSingleStep(100);
-    dragStartTime->setValue(2000);
-    dragStartTime->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::Fixed);
-    formLayout->addRow(i18n("Drag start time:"), dragStartTime);
     connect(dragStartTime, SIGNAL(valueChanged(int)), this, SLOT(changed()));
 
-    wtstr = i18n("If you click with the mouse (e.g. in a multi-line"
-                 " editor) and begin to move the mouse within the"
-                 " drag start time, a drag operation will be initiated.");
-    dragStartTime->setWhatsThis(wtstr);
-
-    dragStartDist = new QSpinBox(advancedTab);
-    dragStartDist->setRange(1, 20);
-    dragStartDist->setSingleStep(1);
-    dragStartDist->setValue(20);
-    dragStartDist->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::Fixed);
-    formLayout->addRow(i18n("Drag start distance:"), dragStartDist);
     connect(dragStartDist, SIGNAL(valueChanged(int)), this, SLOT(changed()));
     connect(dragStartDist, SIGNAL(valueChanged(int)), this, SLOT(slotDragStartDistChanged(int)));
     slotDragStartDistChanged(dragStartDist->value());
 
-    wtstr = i18n("If you click with the mouse and begin to move the"
-                 " mouse at least the drag start distance, a drag"
-                 " operation will be initiated.");
-    dragStartDist->setWhatsThis(wtstr);
-
-    wheelScrollLines = new QSpinBox(advancedTab);
-    wheelScrollLines->setRange(1, 12);
-    wheelScrollLines->setSingleStep(1);
-    wheelScrollLines->setValue(3);
-    wheelScrollLines->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::Fixed);
-    formLayout->addRow(i18n("Mouse wheel scrolls by:"), wheelScrollLines);
     connect(wheelScrollLines, SIGNAL(valueChanged(int)), this, SLOT(changed()));
     connect(wheelScrollLines, SIGNAL(valueChanged(int)), SLOT(slotWheelScrollLinesChanged(int)));
     slotWheelScrollLinesChanged(wheelScrollLines->value());
-
-    wtstr = i18n("If you use the wheel of a mouse, this value determines the number"
-                 " of lines to scroll for each wheel movement. Note that if this"
-                 " number exceeds the number of visible lines, it will be ignored"
-                 " and the wheel movement will be handled as a page up/down movement.");
-    wheelScrollLines->setWhatsThis(wtstr);
-
-    QHBoxLayout *outerLayout = new QHBoxLayout(advancedTab);
-    outerLayout->addLayout(formLayout, 0);
-    outerLayout->addStretch(1);
-
-    QWidget *keysTab = new QWidget(this);
-    keysTab->setObjectName("Mouse Navigation");
-    tabwidget->addTab(keysTab, i18n("Keyboard Navigation"));
-
-    formLayout = new QFormLayout;
-    formLayout->setFieldGrowthPolicy(QFormLayout::ExpandingFieldsGrow);
-
-    mouseKeys = new QCheckBox(i18n("&Move pointer with keyboard (using the num pad)"), keysTab);
-    formLayout->addRow(mouseKeys);
-
-    mk_delay = new QSpinBox(keysTab);
-    mk_delay->setRange(1, 1000);
-    mk_delay->setSingleStep(50);
-    mk_delay->setSuffix(i18n(" msec"));
-    mk_delay->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::Fixed);
-    formLayout->addRow(i18n("&Acceleration delay:"), mk_delay);
-
-    mk_interval = new QSpinBox(keysTab);
-    mk_interval->setRange(1, 1000);
-    mk_interval->setSingleStep(10);
-    mk_interval->setSuffix(i18n(" msec"));
-    mk_interval->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::Fixed);
-    formLayout->addRow(i18n("R&epeat interval:"), mk_interval);
-
-    mk_time_to_max = new QSpinBox(keysTab);
-    mk_time_to_max->setRange(100, 10000);
-    mk_time_to_max->setSingleStep(200);
-    mk_time_to_max->setSuffix(i18n(" msec"));
-    mk_time_to_max->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::Fixed);
-    formLayout->addRow(i18n("Acceleration &time:"), mk_time_to_max);
-
-    mk_max_speed = new QSpinBox(keysTab);
-    mk_max_speed->setRange(1, 2000);
-    mk_max_speed->setSingleStep(20);
-    mk_max_speed->setSuffix(i18n(" pixel/sec"));
-    mk_max_speed->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::Fixed);
-    formLayout->addRow(i18n("Ma&ximum speed:"), mk_max_speed);
-
-    mk_curve = new QSpinBox(keysTab);
-    mk_curve->setRange(-1000, 1000);
-    mk_curve->setSingleStep(100);
-    mk_curve->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::Fixed);
-    formLayout->addRow(i18n("Acceleration &profile:"), mk_curve);
-
-    outerLayout = new QHBoxLayout(keysTab);
-    outerLayout->addLayout(formLayout, 0);
-    outerLayout->addStretch(1);
 
     connect(mouseKeys, SIGNAL(clicked()), this, SLOT(checkAccess()));
     connect(mouseKeys, SIGNAL(clicked()), this, SLOT(changed()));
@@ -383,7 +194,7 @@ void MouseConfig::setThreshold(int val)
 
 int MouseConfig::getHandedness()
 {
-    if (generalTab->rightHanded->isChecked())
+    if (rightHanded->isChecked())
         return RIGHT_HANDED;
     else
         return LEFT_HANDED;
@@ -391,15 +202,15 @@ int MouseConfig::getHandedness()
 
 void MouseConfig::setHandedness(int val)
 {
-    generalTab->rightHanded->setChecked(false);
-    generalTab->leftHanded->setChecked(false);
+    rightHanded->setChecked(false);
+    leftHanded->setChecked(false);
     if (val == RIGHT_HANDED) {
-        generalTab->rightHanded->setChecked(true);
-        generalTab->mousePix->setPixmap(KStandardDirs::locate("data", "kcminput/pics/mouse_rh.png"));
+        rightHanded->setChecked(true);
+        mousePix->setPixmap(KStandardDirs::locate("data", "kcminput/pics/mouse_rh.png"));
     }
     else {
-        generalTab->leftHanded->setChecked(true);
-        generalTab->mousePix->setPixmap(KStandardDirs::locate("data", "kcminput/pics/mouse_lh.png"));
+        leftHanded->setChecked(true);
+        mousePix->setPixmap(KStandardDirs::locate("data", "kcminput/pics/mouse_lh.png"));
     }
     settings->m_handedNeedsApply = true;
 }
@@ -409,11 +220,11 @@ void MouseConfig::load()
     KConfig config("kcminputrc");
     settings->load(&config);
 
-    generalTab->rightHanded->setEnabled(settings->handedEnabled);
-    generalTab->leftHanded->setEnabled(settings->handedEnabled);
-    if (generalTab->cbScrollPolarity->isEnabled())
-        generalTab->cbScrollPolarity->setEnabled(settings->handedEnabled);
-    generalTab->cbScrollPolarity->setChecked(settings->reverseScrollPolarity);
+    rightHanded->setEnabled(settings->handedEnabled);
+    leftHanded->setEnabled(settings->handedEnabled);
+    if (cbScrollPolarity->isEnabled())
+        cbScrollPolarity->setEnabled(settings->handedEnabled);
+    cbScrollPolarity->setChecked(settings->reverseScrollPolarity);
 
     setAccel(settings->accelRate);
     setThreshold(settings->thresholdMove);
@@ -424,8 +235,8 @@ void MouseConfig::load()
     dragStartDist->setValue(settings->dragStartDist);
     wheelScrollLines->setValue(settings->wheelScrollLines);
 
-    generalTab->singleClick->setChecked(settings->singleClick);
-    generalTab->doubleClick->setChecked(!settings->singleClick);
+    singleClick->setChecked(settings->singleClick);
+    doubleClick->setChecked(!settings->singleClick);
 
     KConfig ac("kaccessrc");
 
@@ -467,8 +278,8 @@ void MouseConfig::save()
     settings->dragStartTime = dragStartTime->value();
     settings->dragStartDist = dragStartDist->value();
     settings->wheelScrollLines = wheelScrollLines->value();
-    settings->singleClick = !generalTab->doubleClick->isChecked();
-    settings->reverseScrollPolarity = generalTab->cbScrollPolarity->isChecked();
+    settings->singleClick = !doubleClick->isChecked();
+    settings->reverseScrollPolarity = cbScrollPolarity->isChecked();
 
     settings->apply();
     KConfig config("kcminputrc");
@@ -500,13 +311,13 @@ void MouseConfig::defaults()
     setThreshold(2);
     setAccel(2);
     setHandedness(RIGHT_HANDED);
-    generalTab->cbScrollPolarity->setChecked(false);
+    cbScrollPolarity->setChecked(false);
     doubleClickInterval->setValue(400);
     dragStartTime->setValue(500);
     dragStartDist->setValue(4);
     wheelScrollLines->setValue(3);
-    generalTab->doubleClick->setChecked(!KDE_DEFAULT_SINGLECLICK);
-    generalTab->singleClick->setChecked(KDE_DEFAULT_SINGLECLICK);
+    doubleClick->setChecked(!KDE_DEFAULT_SINGLECLICK);
+    singleClick->setChecked(KDE_DEFAULT_SINGLECLICK);
 
     mouseKeys->setChecked(false);
     mk_delay->setValue(160);
@@ -523,9 +334,9 @@ void MouseConfig::defaults()
 void MouseConfig::slotHandedChanged(int val)
 {
     if (val==RIGHT_HANDED)
-        generalTab->mousePix->setPixmap(KStandardDirs::locate("data", "kcminput/pics/mouse_rh.png"));
+        mousePix->setPixmap(KStandardDirs::locate("data", "kcminput/pics/mouse_rh.png"));
     else
-        generalTab->mousePix->setPixmap(KStandardDirs::locate("data", "kcminput/pics/mouse_lh.png"));
+        mousePix->setPixmap(KStandardDirs::locate("data", "kcminput/pics/mouse_lh.png"));
     settings->m_handedNeedsApply = true;
 }
 

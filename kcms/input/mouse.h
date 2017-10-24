@@ -36,7 +36,8 @@
 #include <config-workspace.h>
 
 #include <kcmodule.h>
-#include "ui_kmousedlg.h"
+#include <KConfigGroup>
+#include "ui_kcmmouse.h"
 
 #define RIGHT_HANDED 0
 #define LEFT_HANDED  1
@@ -46,14 +47,6 @@ class QDoubleSpinBox;
 class QSlider;
 class QSpinBox;
 class QTabWidget;
-
-class KMouseDlg : public QWidget, public Ui::KMouseDlg
-{
-public:
-    KMouseDlg( QWidget *parent ) : QWidget( parent ) {
-        setupUi( this );
-    }
-};
 
 class MouseSettings
 {
@@ -78,7 +71,7 @@ public:
     bool reverseScrollPolarity;
 };
 
-class MouseConfig : public KCModule
+class MouseConfig : public KCModule, public Ui::KCMMouse
 {
     Q_OBJECT
 public:
@@ -106,24 +99,7 @@ private:
     void setThreshold(int);
     void setHandedness(int);
 
-    QDoubleSpinBox *accel;
-    QSpinBox *thresh;
-    QSpinBox *doubleClickInterval;
-    QSpinBox *dragStartTime;
-    QSpinBox *dragStartDist;
-    QSpinBox *wheelScrollLines;
-
-    QTabWidget *tabwidget;
-    QWidget *advancedTab;
-    KMouseDlg* generalTab;
     MouseSettings *settings;
-
-    QCheckBox *mouseKeys;
-    QSpinBox *mk_delay;
-    QSpinBox *mk_interval;
-    QSpinBox *mk_time_to_max;
-    QSpinBox *mk_max_speed;
-    QSpinBox *mk_curve;
 };
 
 #endif

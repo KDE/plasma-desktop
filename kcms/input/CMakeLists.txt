@@ -30,7 +30,7 @@ set(kcm_input_PART_SRCS mouse.cpp main.cpp)
 
 set(klauncher_xml ${KINIT_DBUS_INTERFACES_DIR}/kf5_org.kde.KLauncher.xml)
 
-ki18n_wrap_ui(kcm_input_PART_SRCS kmousedlg.ui)
+ki18n_wrap_ui(kcm_input_PART_SRCS kcmmouse.ui)
 qt5_add_dbus_interface(kcm_input_PART_SRCS ${klauncher_xml} klauncher_iface)
 
 add_library(kcm_input MODULE ${kcm_input_PART_SRCS})
