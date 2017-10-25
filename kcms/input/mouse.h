@@ -31,16 +31,11 @@
 #ifndef __MOUSECONFIG_H__
 #define __MOUSECONFIG_H__
 
-#include <QX11Info>
-
 #include <config-workspace.h>
 
 #include <kcmodule.h>
-#include <KConfigGroup>
 #include "ui_kcmmouse.h"
-
-#define RIGHT_HANDED 0
-#define LEFT_HANDED  1
+#include "mousesettings.h"
 
 class QCheckBox;
 class QDoubleSpinBox;
@@ -48,28 +43,8 @@ class QSlider;
 class QSpinBox;
 class QTabWidget;
 
-class MouseSettings
-{
-public:
-    void save(KConfig *);
-    void load(KConfig *, Display *dpy = QX11Info::display());
-    void apply(bool force=false);
-
-public:
-    int num_buttons;
-    int middle_button;
-    bool handedEnabled;
-    bool m_handedNeedsApply;
-    int handed;
-    double accelRate;
-    int thresholdMove;
-    int doubleClickInterval;
-    int dragStartTime;
-    int dragStartDist;
-    bool singleClick;
-    int wheelScrollLines;
-    bool reverseScrollPolarity;
-};
+class MouseSettings;
+class MouseBackend;
 
 class MouseConfig : public KCModule, public Ui::KCMMouse
 {
@@ -93,14 +68,15 @@ private Q_SLOTS:
 private:
     double getAccel();
     int getThreshold();
-    int getHandedness();
+    MouseHanded getHandedness();
 
     void setAccel(double);
     void setThreshold(int);
-    void setHandedness(int);
+    void setHandedness(MouseHanded);
 
     MouseSettings *settings;
+
+    MouseBackend *backend;
 };
 
 #endif
-
