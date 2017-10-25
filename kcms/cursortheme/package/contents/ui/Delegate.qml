@@ -51,7 +51,7 @@ GridDelegate {
                 source: "edit-delete"
             }
             onClicked: kcm.removeTheme(index);
-            enabled: kcm.canRemove
+            enabled: model.isWritable
             Controls.ToolTip.delay: 1000
             Controls.ToolTip.timeout: 5000
             Controls.ToolTip.visible: hovered

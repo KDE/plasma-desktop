@@ -31,7 +31,6 @@ class CursorThemeConfig : public KQuickAddons::ConfigModule
 {
     Q_OBJECT
     Q_PROPERTY(bool canInstall READ canInstall WRITE setCanInstall NOTIFY canInstallChanged)
-    Q_PROPERTY(bool canRemove READ canRemove WRITE setCanRemove NOTIFY canRemoveChanged)
     Q_PROPERTY(bool canResize READ canResize WRITE setCanResize NOTIFY canResizeChanged)
     Q_PROPERTY(bool canConfigure READ canConfigure WRITE setCanConfigure NOTIFY canConfigureChanged)
     Q_PROPERTY(QAbstractItemModel *cursorsModel READ cursorsModel CONSTANT)
@@ -52,9 +51,6 @@ public:
     bool canInstall() const;
     void setCanInstall(bool can);
 
-    bool canRemove() const;
-    void setCanRemove(bool can);
-
     bool canResize() const;
     void setCanResize(bool can);
 
@@ -74,7 +70,6 @@ public:
 
 Q_SIGNALS:
     void canInstallChanged();
-    void canRemoveChanged();
     void canResizeChanged();
     void canConfigureChanged();
     void selectedThemeRowChanged();
@@ -128,7 +123,6 @@ private:
 
     int m_selectedThemeRow;
     bool m_canInstall;
-    bool m_canRemove;
     bool m_canResize;
     bool m_canConfigure;
 };

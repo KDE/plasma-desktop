@@ -217,7 +217,7 @@ void PreviewWidget::layoutItems()
 {
     if (!list.isEmpty())
     {
-        const int spacing = 8;
+        const int spacing = 12;
         int nextX = spacing;
         int nextY = spacing;
 

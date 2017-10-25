@@ -61,7 +61,6 @@ CursorThemeConfig::CursorThemeConfig(QObject *parent, const QVariantList &args)
       m_preferredSize(0),
       m_selectedThemeRow(-1),
       m_canInstall(true),
-      m_canRemove(true),
       m_canResize(true),
       m_canConfigure(true)
 {
@@ -110,21 +109,6 @@ bool CursorThemeConfig::canInstall() const
     return m_canInstall;
 }
 
-void CursorThemeConfig::setCanRemove(bool can)
-{
-    if (m_canRemove == can) {
-        return;
-    }
-
-    m_canRemove = can;
-    emit canRemoveChanged();
-}
-
-bool CursorThemeConfig::canRemove() const
-{
-    return m_canRemove;
-}
-
 void CursorThemeConfig::setCanResize(bool can)
 {
     if (m_canResize == can) {
@@ -170,10 +154,7 @@ void CursorThemeConfig::setSelectedThemeRow(int row)
 
     if (selected.isValid()) {
         const CursorTheme *theme = m_proxyModel->theme(selected);
-        setCanRemove(theme->isWritable());
-    } else {
-        setCanRemove(false);
-    };
+    }
 }
 
 int CursorThemeConfig::selectedThemeRow() const
@@ -414,7 +395,6 @@ void CursorThemeConfig::load()
     {
           setCanConfigure(false);
           setCanInstall(false);
-          setCanRemove(false);
     }
 
     // Load cursor size
@@ -430,10 +410,6 @@ void CursorThemeConfig::load()
     const CursorTheme *theme = m_proxyModel->theme(m_appliedIndex);
 
     setSelectedThemeRow(m_appliedIndex.row());
-
-    if (!theme || !theme->isWritable()) {
-        setCanRemove(false);
-    }
 
     setNeedsSave(false);
 }

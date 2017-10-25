@@ -54,6 +54,7 @@ QHash<int, QByteArray> CursorThemeModel::roleNames() const
 {
     QHash<int, QByteArray> roleNames = QAbstractTableModel::roleNames();
     roleNames[CursorTheme::DisplayDetailRole] = "description";
+    roleNames[CursorTheme::IsWritableRole] = "isWritable";
 
     return roleNames;
 }
@@ -122,6 +123,10 @@ QVariant CursorThemeModel::data(const QModelIndex &index, int role) const
     // Icon for the name column
     if (role == Qt::DecorationRole && index.column() == NameColumn)
         return theme->icon();
+
+    if (role == CursorTheme::IsWritableRole) {
+        return theme->isWritable();
+    }
 
     return QVariant();
 }
