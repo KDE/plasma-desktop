@@ -16,7 +16,7 @@
    Boston, MA 02110-1301, USA.
 */
 
-import QtQuick 2.1
+import QtQuick 2.7
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.2 as QtControls
 import org.kde.kirigami 2.2 as Kirigami
@@ -47,13 +47,12 @@ ColumnLayout {
         QtControls.ScrollView {
             Layout.fillWidth: true
             Layout.fillHeight: true
-            activeFocusOnTab: true
             GridView {
                 id: view
                 cellWidth: Math.floor(width / Math.max(Math.floor(width / (Kirigami.Units.gridUnit*12)), 2)) - Kirigami.Units.gridUnit
                 cellHeight: cellWidth / 1.6 + Kirigami.Units.gridUnit*2
-                focus: true
-                activeFocusOnTab: true
+                keyNavigationEnabled: true
+                keyNavigationWraps: true
                 model: kcm.cursorsModel
                 highlightMoveDuration: 0
                 onCurrentIndexChanged: {
@@ -61,13 +60,6 @@ ColumnLayout {
                     positionViewAtIndex(currentIndex, ListView.Beginning);
                 }
                 delegate: Delegate {}
-                Keys.onPressed: {
-                    if (event.key == Qt.Key_Up) {
-                        view.decrementCurrentIndex();
-                    } else if (event.key == Qt.Key_Down) {
-                        view.incrementCurrentIndex();
-                    }
-                }
             }
         }
         Kirigami.Separator {
