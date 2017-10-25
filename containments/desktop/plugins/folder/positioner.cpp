@@ -254,11 +254,7 @@ int Positioner::indexForUrl(const QUrl &url) const
         }
     }
 
-    if (m_sourceToProxy.contains(sourceIndex)) {
-        return m_sourceToProxy.value(sourceIndex);
-    }
-
-    return -1;
+    return m_sourceToProxy.value(sourceIndex, -1);
 }
 
 void Positioner::setRangeSelected(int anchor, int to)
