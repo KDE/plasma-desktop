@@ -32,8 +32,8 @@ GridViewPage {
     view.model: kcm.cursorsModel
     view.delegate: Delegate {}
     view.onCurrentIndexChanged: {
-        kcm.selectedThemeRow = currentIndex;
-        positionViewAtIndex(view.currentIndex, view.GridView.Beginning);
+        kcm.selectedThemeRow = view.currentIndex;
+        view.positionViewAtIndex(view.currentIndex, view.GridView.Beginning);
     }
 
     Connections {
@@ -48,6 +48,19 @@ GridViewPage {
             Layout.fillHeight: true
         }
 
+        QtControls.Label {
+            text: i18n("Size:")
+        }
+        QtControls.ComboBox {
+            id: sizeCombo
+            currentIndex: 0
+            onCountChanged: currentIndex = 0
+            model: kcm.sizesModel
+            textRole: "display"
+            onCurrentTextChanged: {
+                kcm.preferredSize = parseInt(sizeCombo.currentText) !== NaN ? parseInt(sizeCombo.currentText) : 0
+            }
+        }
         QtControls.Button {
            // iconName: "document-import"
             text: i18n("&Install From File...")

@@ -22,44 +22,40 @@ import QtQuick.Controls 2.2 as QtControls
 import org.kde.kirigami 2.2 as Kirigami
 
 
-Kirigami.Page {
+Kirigami.ScrollablePage {
     implicitWidth: Kirigami.Units.gridUnit * 20
     implicitHeight: Kirigami.Units.gridUnit * 20
 
     property alias view: view
-    leftPadding: 0
-    topPadding: 0
-    rightPadding: 0
-    bottomPadding: 0
+        
+    GridView {
+        id: view
+        activeFocusOnTab: true
+        cellWidth: Math.floor(width / Math.max(Math.floor(width / (Kirigami.Units.gridUnit*12)), 2)) - Kirigami.Units.gridUnit
+        cellHeight: cellWidth / 1.6 + Kirigami.Units.gridUnit*2
+        keyNavigationEnabled: true
+        keyNavigationWraps: true
+        highlightMoveDuration: 0
+    }
 
-    ColumnLayout {
-        anchors.fill:parent
-        spacing: 0
+    children: [
         Kirigami.Separator {
-            Layout.fillWidth: true
-            Layout.maximumHeight: 1
-            visible: !view.atYBeginning
-        }
-        QtControls.ScrollView {
-            Layout.fillWidth: true
-            Layout.fillHeight: true
-            GridView {
-                id: view
-                cellWidth: Math.floor(width / Math.max(Math.floor(width / (Kirigami.Units.gridUnit*12)), 2)) - Kirigami.Units.gridUnit
-                cellHeight: cellWidth / 1.6 + Kirigami.Units.gridUnit*2
-                keyNavigationEnabled: true
-                keyNavigationWraps: true
-                highlightMoveDuration: 0
-                onCurrentIndexChanged: {
-                    kcm.selectedThemeRow = currentIndex;
-                    positionViewAtIndex(currentIndex, ListView.Beginning);
-                }
+            parent: view.parent
+            anchors {
+                top: parent.top
+                left: parent.left
+                right: parent.right
             }
-        }
+            visible: !view.atYBeginning
+        },
         Kirigami.Separator {
-            Layout.fillWidth: true
-            Layout.maximumHeight: 1
+            parent: view.parent
+            anchors {
+                bottom: parent.bottom
+                left: parent.left
+                right: parent.right
+            }
             visible: !view.atYEnd
         }
-    }
+    ]
 }

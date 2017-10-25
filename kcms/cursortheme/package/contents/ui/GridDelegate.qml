@@ -77,7 +77,7 @@ T2.ItemDelegate {
         Rectangle {
             anchors.fill: parent
             visible: actionsRow.children.length > 0
-            opacity: delegate.hovered || sizeMenu.visible ? 1 : 0
+            opacity: delegate.hovered ? 1 : 0
             radius: Kirigami.Units.smallSpacing
             color: Qt.rgba(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b, 0.4)
 

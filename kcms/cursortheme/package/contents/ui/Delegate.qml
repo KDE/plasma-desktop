@@ -44,39 +44,6 @@ GridDelegate {
 
     actionButtons: [
         Controls.ToolButton {
-            //TODO: use native controls' icons
-            Kirigami.Icon {
-                anchors.centerIn: parent
-                width: Kirigami.Units.iconSizes.smallMedium
-                height: width
-                source: "image-resize-symbolic"
-            }
-            enabled: kcm.canResize
-            Controls.ToolTip.delay: 1000
-            Controls.ToolTip.timeout: 5000
-            Controls.ToolTip.visible: hovered
-            Controls.ToolTip.text: i18n("Cursors Size")
-            onClicked: sizeMenu.open()
-
-            Controls.Menu {
-                id: sizeMenu
-                y: parent.height
-                modal: true
-
-                Repeater {
-                    model: kcm.sizesModel
-                    Controls.MenuItem {
-                        text: display
-                        onTriggered: {
-                            onCurrentTextChanged: {
-                                kcm.preferredSize = parseInt(display) !== NaN ? parseInt(display) : 0
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        Controls.ToolButton {
             Kirigami.Icon {
                 anchors.centerIn: parent
                 width: Kirigami.Units.iconSizes.smallMedium
