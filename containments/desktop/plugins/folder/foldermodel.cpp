@@ -60,7 +60,6 @@
 #include <KPropertiesDialog>
 #include <KSharedConfig>
 #include <KShell>
-#include <kio_version.h>
 
 #include <KCoreDirLister>
 #include <KDirLister>
@@ -1523,9 +1522,7 @@ void FolderModel::openContextMenu(QQuickItem *visualParent)
         m_fileItemActions->addServiceActionsTo(menu);
         menu->addSeparator();
         // Plugin actions
-#if KIO_VERSION >= QT_VERSION_CHECK(5, 27, 0)
         m_fileItemActions->addPluginActionsTo(menu);
-#endif
 
         // Copy To, Move To
         KSharedConfig::Ptr dolphin = KSharedConfig::openConfig(QStringLiteral("dolphinrc"));
