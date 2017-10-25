@@ -485,6 +485,7 @@ void FolderModel::setFilterPattern(const QString &pattern)
 
     const QStringList patterns = pattern.split(' ');
     m_regExps.clear();
+    m_regExps.reserve(patterns.count());
 
     foreach (const QString &pattern, patterns) {
         QRegExp rx(pattern);
@@ -851,7 +852,7 @@ void FolderModel::dragSelectedInternal(int x, int y)
     emit dataChanged(m_dragIndexes.first(), m_dragIndexes.last(), QVector<int>() << BlankRole);
 
     QModelIndexList sourceDragIndexes;
-
+    sourceDragIndexes.reserve(m_dragIndexes.count());
     foreach (const QModelIndex &index, m_dragIndexes) {
         sourceDragIndexes.append(mapToSource(index));
     }
