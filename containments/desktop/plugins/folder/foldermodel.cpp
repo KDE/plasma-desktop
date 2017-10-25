@@ -545,7 +545,7 @@ void FolderModel::cd(int row)
         const KFileItem  item = itemForIndex(idx);
         if (m_parseDesktopFiles && item.isDesktopFile()) {
             const KDesktopFile file(item.targetUrl().path());
-            if (file.readType() == QLatin1String("Link")) {
+            if (file.hasLinkType()) {
                 setUrl(file.readUrl());
             }
         }
@@ -924,7 +924,7 @@ void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row)
     } else if (m_parseDesktopFiles && item.isDesktopFile()) {
         const KDesktopFile file(item.targetUrl().path());
 
-        if (file.readType() == QLatin1String("Link")) {
+        if (file.hasLinkType()) {
             dropTargetUrl = QUrl(file.readUrl());
         } else {
             dropTargetUrl = item.mostLocalUrl();
@@ -1089,7 +1089,7 @@ QVariant FolderModel::data(const QModelIndex& index, int role) const
         if (m_parseDesktopFiles && item.isDesktopFile()) {
             const KDesktopFile file(item.targetUrl().path());
 
-            if (file.readType() == QLatin1String("Link")) {
+            if (file.hasLinkType()) {
                 return file.readUrl();
             }
         }
@@ -1131,7 +1131,7 @@ bool FolderModel::isDir(const QModelIndex &index, const KDirModel *dirModel) con
         // Check if the desktop file is a link to a directory
         KDesktopFile file(item.targetUrl().path());
 
-        if (file.readType() == QLatin1String("Link")) {
+        if (file.hasLinkType()) {
             const QUrl url(file.readUrl());
 
             if (!m_isDirCache.contains(item.url()) && KProtocolInfo::protocolClass(url.scheme()) == QStringLiteral(":local")) {
@@ -1469,7 +1469,7 @@ void FolderModel::openContextMenu(QQuickItem *visualParent)
         // Check if we're showing the menu for the trash link
         if (items.count() == 1 && items.at(0).isDesktopFile()) {
             KDesktopFile file(items.at(0).localPath());
-            if (file.readType() == QLatin1String("Link") && file.readUrl() == QLatin1String("trash:/")) {
+            if (file.hasLinkType() && file.readUrl() == QLatin1String("trash:/")) {
                 isTrashLink = true;
             }
         }
