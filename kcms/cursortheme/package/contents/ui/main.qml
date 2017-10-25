@@ -24,52 +24,24 @@ import org.kde.kcm 1.0
 
 import org.kde.private.kcm_cursortheme 1.0
 
-ColumnLayout {
-    implicitWidth: Kirigami.Units.gridUnit * 20
-    implicitHeight: Kirigami.Units.gridUnit * 20
+GridViewPage {
 
+    
     ConfigModule.quickHelp: i18n("This module lets you configure the mouse cursor theme used.")
 
-    spacing: Kirigami.Units.smallSpacing
+    view.model: kcm.cursorsModel
+    view.delegate: Delegate {}
+    view.onCurrentIndexChanged: {
+        kcm.selectedThemeRow = currentIndex;
+        positionViewAtIndex(view.currentIndex, view.GridView.Beginning);
+    }
 
     Connections {
         target: kcm
         onSelectedThemeRowChanged: view.currentIndex = kcm.selectedThemeRow;
     }
 
-    ColumnLayout {
-        spacing: 0
-        Kirigami.Separator {
-            Layout.fillWidth: true
-            Layout.maximumHeight: 1
-            visible: !view.atYBeginning
-        }
-        QtControls.ScrollView {
-            Layout.fillWidth: true
-            Layout.fillHeight: true
-            GridView {
-                id: view
-                cellWidth: Math.floor(width / Math.max(Math.floor(width / (Kirigami.Units.gridUnit*12)), 2)) - Kirigami.Units.gridUnit
-                cellHeight: cellWidth / 1.6 + Kirigami.Units.gridUnit*2
-                keyNavigationEnabled: true
-                keyNavigationWraps: true
-                model: kcm.cursorsModel
-                highlightMoveDuration: 0
-                onCurrentIndexChanged: {
-                    kcm.selectedThemeRow = currentIndex;
-                    positionViewAtIndex(currentIndex, ListView.Beginning);
-                }
-                delegate: Delegate {}
-            }
-        }
-        Kirigami.Separator {
-            Layout.fillWidth: true
-            Layout.maximumHeight: 1
-            visible: !view.atYEnd
-        }
-    }
-
-    RowLayout {
+    footer: RowLayout {
         Layout.maximumHeight: Layout.minimumHeight
         Item {
             Layout.fillWidth: true
