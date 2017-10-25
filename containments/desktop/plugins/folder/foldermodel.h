@@ -266,7 +266,7 @@ class FolderModel : public QSortFilterProxyModel
         void dirListFailed(const QString &error);
         void statResult(KJob *job);
         void evictFromIsDirCache(const KFileItemList &items);
-        void selectionChanged(QItemSelection selected, QItemSelection deselected);
+        void selectionChanged(const QItemSelection &selected, const QItemSelection &deselected);
         void pasteTo();
         void moveSelectedToTrash();
         void emptyTrashBin();

@@ -138,8 +138,8 @@ FolderModel::FolderModel(QObject *parent) : QSortFilterProxyModel(parent),
     m_dirModel->setDropsAllowed(KDirModel::DropOnDirectory | KDirModel::DropOnLocalExecutable);
 
     m_selectionModel = new QItemSelectionModel(this, this);
-    connect(m_selectionModel, SIGNAL(selectionChanged(QItemSelection,QItemSelection)),
-            this, SLOT(selectionChanged(QItemSelection,QItemSelection)));
+    connect(m_selectionModel, &QItemSelectionModel::selectionChanged,
+            this, &FolderModel::selectionChanged);
 
     setSourceModel(m_dirModel);
 
@@ -1020,7 +1020,7 @@ void FolderModel::dropCwd(QObject* dropEvent)
     }
 }
 
-void FolderModel::selectionChanged(QItemSelection selected, QItemSelection deselected)
+void FolderModel::selectionChanged(const QItemSelection &selected, const QItemSelection &deselected)
 {
     QModelIndexList indices = selected.indexes();
     indices.append(deselected.indexes());
@@ -1303,17 +1303,17 @@ void FolderModel::createActions()
 {
     KIO::FileUndoManager *manager = KIO::FileUndoManager::self();
 
-    QAction *cut = KStandardAction::cut(this, SLOT(cut()), this);
-    QAction *copy = KStandardAction::copy(this, SLOT(copy()), this);
+    QAction *cut = KStandardAction::cut(this, &FolderModel::cut, this);
+    QAction *copy = KStandardAction::copy(this, &FolderModel::copy, this);
 
-    QAction *undo = KStandardAction::undo(manager, SLOT(undo()), this);
+    QAction *undo = KStandardAction::undo(manager, &KIO::FileUndoManager::undo, this);
     undo->setEnabled(manager->undoAvailable());
     undo->setShortcutContext(Qt::WidgetShortcut);
     connect(manager, SIGNAL(undoAvailable(bool)), undo, SLOT(setEnabled(bool)));
     connect(manager, &KIO::FileUndoManager::undoTextChanged, this, &FolderModel::undoTextChanged);
 
-    QAction *paste = KStandardAction::paste(this, SLOT(paste()), this);
-    QAction *pasteTo = KStandardAction::paste(this, SLOT(pasteTo()), this);
+    QAction *paste = KStandardAction::paste(this, &FolderModel::paste, this);
+    QAction *pasteTo = KStandardAction::paste(this, &FolderModel::pasteTo, this);
 
     QAction *reload = new QAction(i18n("&Reload"), this);
     connect(reload, &QAction::triggered, this, &FolderModel::refresh);
