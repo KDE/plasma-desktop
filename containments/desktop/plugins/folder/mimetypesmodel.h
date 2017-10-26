@@ -22,7 +22,6 @@
 
 #include <QAbstractListModel>
 #include <QMimeType>
-#include <QSortFilterProxyModel>
 
 class QStringList;
 

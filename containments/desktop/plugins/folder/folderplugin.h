@@ -20,7 +20,6 @@
 #ifndef FOLDERPLUGIN_H
 #define FOLDERPLUGIN_H
 
-#include <QQmlEngine>
 #include <QQmlExtensionPlugin>
 
 class FolderPlugin : public QQmlExtensionPlugin

@@ -21,7 +21,6 @@
 #include "labelgenerator.h"
 
 #include <KFilePlacesModel>
-#include <KLocalizedString>
 #include <KShell>
 
 #include "foldermodel.h"
