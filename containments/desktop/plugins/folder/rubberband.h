@@ -32,7 +32,7 @@ class RubberBand : public QQuickPaintedItem
 
         void paint(QPainter* painter) override;
 
-        Q_INVOKABLE bool intersects(const QRectF &rect);
+        Q_INVOKABLE bool intersects(const QRectF &rect) const;
 
     protected:
         void geometryChanged(const QRectF &newGeometry, const QRectF &oldGeometry) override;

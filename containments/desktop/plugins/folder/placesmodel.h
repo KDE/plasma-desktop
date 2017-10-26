@@ -34,7 +34,7 @@ class PlacesModel : public QSortFilterProxyModel
         explicit PlacesModel(QObject *parent = nullptr);
         ~PlacesModel();
 
-        bool activityLinkingEnabled();
+        bool activityLinkingEnabled() const;
 
         QHash<int, QByteArray> roleNames() const override;
         Q_INVOKABLE QString urlForIndex(int idx) const;

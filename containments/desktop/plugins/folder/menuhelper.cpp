@@ -30,7 +30,7 @@ MenuHelper::~MenuHelper()
 {
 }
 
-QString MenuHelper::iconName(QAction *action)
+QString MenuHelper::iconName(QAction *action) const
 {
     if (!action) {
         return QString();
