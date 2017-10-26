@@ -27,7 +27,19 @@ Kirigami.ScrollablePage {
     implicitHeight: Kirigami.Units.gridUnit * 20
 
     property alias view: view
-        
+
+    topPadding: 0
+    leftPadding: 0
+    rightPadding: 0
+    bottomPadding: 0
+
+    Kirigami.Theme.inherit: false
+    Kirigami.Theme.colorSet: Kirigami.Theme.View
+
+    background: Rectangle {
+        color: Kirigami.Theme.backgroundColor
+    }
+
     GridView {
         id: view
         activeFocusOnTab: true

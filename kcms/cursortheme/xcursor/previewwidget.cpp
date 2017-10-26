@@ -274,7 +274,9 @@ void PreviewWidget::hoverMoveEvent(QHoverEvent *e)
 {
     if (needLayout)
         layoutItems();
-
+    //FIXME: we can't find an handle to the actual window
+    //in the case we are in a QQuickWidget, so we can't do the live preview
+/*
     foreach (const PreviewCursor *c, list)
     {
         if (c->rect().contains(e->pos()))
@@ -293,6 +295,7 @@ void PreviewWidget::hoverMoveEvent(QHoverEvent *e)
 
     setCursor(Qt::ArrowCursor);
     current = NULL;
+    */
 }
 
 void PreviewWidget::hoverLeaveEvent(QHoverEvent *e)

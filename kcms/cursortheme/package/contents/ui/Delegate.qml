@@ -38,7 +38,6 @@ GridDelegate {
         anchors.fill: parent
         themeModel: kcm.cursorsModel
         currentIndex: index
-        //The ComboBox component is a disaster
         currentSize: parseInt(sizeCombo.currentText) !== NaN ? parseInt(sizeCombo.currentText) : 0
     }
 

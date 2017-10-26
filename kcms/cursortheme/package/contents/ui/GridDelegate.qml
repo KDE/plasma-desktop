@@ -42,7 +42,7 @@ T2.ItemDelegate {
             left: parent.left
             right: parent.right
             top: parent.top
-            margins: Kirigami.Units.smallSpacing*2
+            margins: Kirigami.Units.smallSpacing
         }
         height: width/1.6
         radius: Kirigami.Units.smallSpacing
@@ -68,7 +68,7 @@ T2.ItemDelegate {
             id: thumbnailArea
             anchors {
                 fill: parent
-                margins: Kirigami.Units.smallSpacing * 2
+                margins: Kirigami.Units.smallSpacing
             }
 
             color: Kirigami.Theme.backgroundColor
@@ -96,7 +96,7 @@ T2.ItemDelegate {
                 anchors {
                     right: parent.right
                     bottom: parent.bottom
-                    margins: Kirigami.Units.smallSpacing * 2
+                    margins: Kirigami.Units.smallSpacing
                 }
             }
         }
