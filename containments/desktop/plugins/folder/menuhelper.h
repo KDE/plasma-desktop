@@ -23,7 +23,6 @@
 #include <QObject>
 
 class QAction;
-class QMenu;
 
 class MenuHelper : public QObject
 {
