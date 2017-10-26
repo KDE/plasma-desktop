@@ -53,7 +53,7 @@ class MimeTypesModel : public QAbstractListModel
         int indexOfType(const QString &name) const;
 
         QList<QMimeType> m_mimeTypesList;
-        QVector<bool> checkedRows;
+        QVector<bool> m_checkedRows;
 };
 
 #endif
