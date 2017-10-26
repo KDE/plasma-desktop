@@ -22,7 +22,7 @@ import QtQuick.Controls 2.2 as QtControls
 import org.kde.kirigami 2.2 as Kirigami
 
 
-Kirigami.ScrollablePage {
+Kirigami.Page {
     implicitWidth: Kirigami.Units.gridUnit * 20
     implicitHeight: Kirigami.Units.gridUnit * 20
 
@@ -31,43 +31,31 @@ Kirigami.ScrollablePage {
     topPadding: 0
     leftPadding: 0
     rightPadding: 0
-    bottomPadding: 0
+    bottomPadding: 10
 
-    Kirigami.Theme.inherit: false
-    Kirigami.Theme.colorSet: Kirigami.Theme.View
+    QtControls.ScrollView {
+        id: scroll
+        anchors.fill: parent
 
-    background: Rectangle {
-        color: Kirigami.Theme.backgroundColor
-    }
-
-    GridView {
-        id: view
-        activeFocusOnTab: true
-        cellWidth: Math.floor(width / Math.max(Math.floor(width / (Kirigami.Units.gridUnit*12)), 2)) - Kirigami.Units.gridUnit
-        cellHeight: cellWidth / 1.6 + Kirigami.Units.gridUnit*2
-        keyNavigationEnabled: true
-        keyNavigationWraps: true
-        highlightMoveDuration: 0
-    }
-
-    children: [
-        Kirigami.Separator {
-            parent: view.parent
+        GridView {
+            id: view
             anchors {
-                top: parent.top
-                left: parent.left
-                right: parent.right
+                fill: parent
+                margins: scroll.background ? 2 : 0
+                rightMargin: contentHeight > height ? Kirigami.Units.gridUnit : 2
             }
-            visible: !view.atYBeginning
-        },
-        Kirigami.Separator {
-            parent: view.parent
-            anchors {
-                bottom: parent.bottom
-                left: parent.left
-                right: parent.right
-            }
-            visible: !view.atYEnd
+            contentItem.x: Math.round((width - Math.floor(width / cellWidth) * cellWidth) / 2)
+            clip: true
+            activeFocusOnTab: true
+            cellWidth: Kirigami.Units.gridUnit * 10
+            cellHeight: cellWidth / 1.6 + Kirigami.Units.gridUnit*2
+            keyNavigationEnabled: true
+            keyNavigationWraps: true
+            highlightMoveDuration: 0
         }
-    ]
+        //not all styles have background defined
+        Component.onCompleted: {
+            background.visible = true;
+        }
+    }
 }

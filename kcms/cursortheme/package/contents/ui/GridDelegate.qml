@@ -42,7 +42,7 @@ T2.ItemDelegate {
             left: parent.left
             right: parent.right
             top: parent.top
-            margins: Kirigami.Units.smallSpacing
+            margins: Kirigami.Units.smallSpacing * 2
         }
         height: width/1.6
         radius: Kirigami.Units.smallSpacing
@@ -66,6 +66,7 @@ T2.ItemDelegate {
         }
         Rectangle {
             id: thumbnailArea
+            radius: Kirigami.Units.smallSpacing/2
             anchors {
                 fill: parent
                 margins: Kirigami.Units.smallSpacing

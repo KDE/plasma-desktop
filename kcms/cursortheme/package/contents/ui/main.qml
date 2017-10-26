@@ -41,39 +41,37 @@ GridViewPage {
         onSelectedThemeRowChanged: view.currentIndex = kcm.selectedThemeRow;
     }
 
-    footer: QtControls.ToolBar {
-        contentItem: RowLayout {
-            Layout.maximumHeight: Layout.minimumHeight
-            Item {
-                Layout.fillWidth: true
-                Layout.fillHeight: true
-            }
+    footer: RowLayout {
+        //spacer
+        Item {
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+        }
 
-            QtControls.Label {
-                text: i18n("Size:")
+        QtControls.Label {
+            text: i18n("Size:")
+        }
+        QtControls.ComboBox {
+            id: sizeCombo
+            currentIndex: 0
+            onCountChanged: currentIndex = 0
+            model: kcm.sizesModel
+            textRole: "display"
+            onCurrentTextChanged: {
+                kcm.preferredSize = parseInt(sizeCombo.currentText) !== NaN ? parseInt(sizeCombo.currentText) : 0
             }
-            QtControls.ComboBox {
-                id: sizeCombo
-                currentIndex: 0
-                onCountChanged: currentIndex = 0
-                model: kcm.sizesModel
-                textRole: "display"
-                onCurrentTextChanged: {
-                    kcm.preferredSize = parseInt(sizeCombo.currentText) !== NaN ? parseInt(sizeCombo.currentText) : 0
-                }
-            }
-            QtControls.Button {
-            // iconName: "document-import"
-                text: i18n("&Install From File...")
-                onClicked: kcm.installClicked();
-                enabled: kcm.canInstall
-            }
-            QtControls.Button {
-            // iconName: "get-hot-new-stuff"
-                text: i18n("&Get New Theme...")
-                onClicked: kcm.getNewClicked();
-                enabled: kcm.canInstall
-            }
+        }
+        QtControls.Button {
+        // iconName: "document-import"
+            text: i18n("&Install From File...")
+            onClicked: kcm.installClicked();
+            enabled: kcm.canInstall
+        }
+        QtControls.Button {
+        // iconName: "get-hot-new-stuff"
+            text: i18n("&Get New Theme...")
+            onClicked: kcm.getNewClicked();
+            enabled: kcm.canInstall
         }
     }
 }
