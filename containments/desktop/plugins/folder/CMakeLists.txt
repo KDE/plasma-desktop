@@ -1,3 +1,9 @@
+include(GenerateExportHeader)
+
+if(BUILD_TESTING)
+   add_definitions(-DBUILD_TESTING)
+endif(BUILD_TESTING)
+
 set(folderplugin_SRCS
     directorypicker.cpp
     foldermodel.cpp
@@ -32,3 +38,9 @@ target_link_libraries(folderplugin
                       KF5::ConfigGui)
 
 install(TARGETS folderplugin DESTINATION ${QML_INSTALL_DIR}/org/kde/private/desktopcontainment/folder)
+
+generate_export_header(folderplugin BASE_NAME folderplugin)
+
+if(BUILD_TESTING)
+    add_subdirectory(tests)
+endif(BUILD_TESTING)

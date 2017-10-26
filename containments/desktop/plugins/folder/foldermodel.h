@@ -37,6 +37,8 @@
 
 #include <KNewFileMenu>
 
+#include "folderplugin_private_export.h"
+
 class QDrag;
 class QItemSelectionModel;
 class QQuickItem;
@@ -69,7 +71,7 @@ class DirLister : public KDirLister
         void handleError(KIO::Job *job) Q_DECL_OVERRIDE;
 };
 
-class FolderModel : public QSortFilterProxyModel
+class FOLDERPLUGIN_TESTS_EXPORT FolderModel : public QSortFilterProxyModel
 {
     Q_OBJECT
 

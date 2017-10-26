@@ -22,11 +22,13 @@
 
 #include <QAbstractItemModel>
 
+#include "folderplugin_private_export.h"
+
 class FolderModel;
 
 class QTimer;
 
-class Positioner : public QAbstractItemModel
+class FOLDERPLUGIN_TESTS_EXPORT Positioner : public QAbstractItemModel
 {
     Q_OBJECT
 
