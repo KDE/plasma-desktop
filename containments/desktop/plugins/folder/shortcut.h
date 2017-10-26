@@ -49,7 +49,7 @@ Q_SIGNALS:
     void moveToTrash();
 
 protected:
-    bool eventFilter(QObject *obj, QEvent *e) Q_DECL_OVERRIDE;
+    bool eventFilter(QObject *obj, QEvent *e) override;
 };
 
 #endif // SHORTCUT_H

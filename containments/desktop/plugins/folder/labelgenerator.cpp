@@ -126,14 +126,14 @@ QString LabelGenerator::displayLabel() const
             label = label.right(label.length() - root.length());
 
             if (!label.isEmpty()) {
-                if (label.at(0) == '/') {
+                if (label.at(0) == QLatin1Char('/')) {
                     label.remove(0, 1);
                 }
 
                 if (m_rtl) {
-                    label.prepend(" < ");
+                    label.prepend(QStringLiteral(" < "));
                 } else {
-                    label.prepend(" > ");
+                    label.prepend(QStringLiteral(" > "));
                 }
             }
 

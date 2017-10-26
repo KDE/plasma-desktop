@@ -92,7 +92,7 @@ ViewPropertiesMenu::ViewPropertiesMenu(QObject *parent) : QObject(parent)
         action->setCheckable(true);
         action->setData(i);
         m_iconSize->addAction(action);
-    };
+    }
 
     m_locked = m_menu->addAction(i18n("Locked"), this, SIGNAL(lockedChanged()));
     m_locked->setCheckable(true);

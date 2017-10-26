@@ -96,11 +96,11 @@ FolderModel::FolderModel(QObject *parent) : QSortFilterProxyModel(parent),
     m_dirWatch(nullptr),
     m_dragInProgress(false),
     m_urlChangedWhileDragging(false),
-    m_previewGenerator(0),
-    m_viewAdapter(0),
+    m_previewGenerator(nullptr),
+    m_viewAdapter(nullptr),
     m_actionCollection(this),
-    m_newMenu(0),
-    m_fileItemActions(0),
+    m_newMenu(nullptr),
+    m_fileItemActions(nullptr),
     m_usedByContainment(false),
     m_locked(true),
     m_sortMode(0),
@@ -115,7 +115,7 @@ FolderModel::FolderModel(QObject *parent) : QSortFilterProxyModel(parent),
     qmlRegisterType<KIO::DropJob>();
     DirLister *dirLister = new DirLister(this);
     dirLister->setDelayedMimeTypes(true);
-    dirLister->setAutoErrorHandlingEnabled(false, 0);
+    dirLister->setAutoErrorHandlingEnabled(false, nullptr);
     connect(dirLister, &DirLister::error, this, &FolderModel::dirListFailed);
     connect(dirLister, &KCoreDirLister::itemsDeleted, this, &FolderModel::evictFromIsDirCache);
 
@@ -210,6 +210,7 @@ void FolderModel::setUrl(const QString& url)
 
     if (m_dirWatch) {
         delete m_dirWatch;
+        m_dirWatch = nullptr;
     }
 
     if (resolvedUrl.isValid()) {
@@ -235,7 +236,7 @@ QUrl FolderModel::resolve(const QString& url)
 {
     QUrl resolvedUrl;
 
-    if (url.startsWith('~')) {
+    if (url.startsWith(QLatin1Char('~'))) {
         resolvedUrl = QUrl::fromLocalFile(KShell::tildeExpand(url));
     } else {
         resolvedUrl = QUrl::fromUserInput(url);
@@ -482,7 +483,7 @@ void FolderModel::setFilterPattern(const QString &pattern)
     m_filterPattern = pattern;
     m_filterPatternMatchAll = (pattern == QLatin1String("*"));
 
-    const QStringList patterns = pattern.split(' ');
+    const QStringList patterns = pattern.split(QLatin1Char(' '));
     m_regExps.clear();
     m_regExps.reserve(patterns.count());
 
@@ -569,7 +570,7 @@ void FolderModel::run(int row)
         url.setScheme(QStringLiteral("file"));
     }
 
-    KRun *run = new KRun(url, 0);
+    KRun *run = new KRun(url, nullptr);
     // On desktop:/ we want to be able to run .desktop files right away,
     // otherwise ask for security reasons. We also don't use the targetUrl()
     // from above since we don't want the resolved /home/foo/Desktop URL.
@@ -1027,7 +1028,7 @@ void FolderModel::selectionChanged(QItemSelection selected, QItemSelection desel
     QVector<int> roles;
     roles.append(SelectedRole);
 
-    foreach(const QModelIndex index, indices) {
+    foreach(const QModelIndex &index, indices) {
         emit dataChanged(index, index, roles);
     }
 
@@ -1355,7 +1356,7 @@ void FolderModel::createActions()
     m_newMenu = new KNewFileMenu(&m_actionCollection, QStringLiteral("newMenu"), QApplication::desktop());
     m_newMenu->setModal(false);
 
-    m_copyToMenu = new KFileCopyToMenu(Q_NULLPTR);
+    m_copyToMenu = new KFileCopyToMenu(nullptr);
 }
 
 QAction* FolderModel::action(const QString &name) const
@@ -1538,7 +1539,7 @@ void FolderModel::openContextMenu(QQuickItem *visualParent)
             QAction *act = new QAction(menu);
             act->setText(i18n("&Properties"));
             QObject::connect(act, &QAction::triggered, [this, items]() {
-                    KPropertiesDialog::showDialog(items, Q_NULLPTR, false /*non modal*/);
+                    KPropertiesDialog::showDialog(items, nullptr, false /*non modal*/);
             });
             menu->addAction(act);
         }
@@ -1655,7 +1656,7 @@ void FolderModel::openSelected()
 
     const QList<QUrl> urls = selectedUrls(false);
     for (const QUrl &url : urls) {
-        (void) new KRun(url, Q_NULLPTR);
+        (void) new KRun(url, nullptr);
     }
 }
 

@@ -30,12 +30,12 @@ class RubberBand : public QQuickPaintedItem
         explicit RubberBand(QQuickItem *parent = nullptr);
         ~RubberBand();
 
-        void paint(QPainter* painter) Q_DECL_OVERRIDE;
+        void paint(QPainter* painter) override;
 
         Q_INVOKABLE bool intersects(const QRectF &rect);
 
     protected:
-        void geometryChanged(const QRectF &newGeometry, const QRectF &oldGeometry) Q_DECL_OVERRIDE;
+        void geometryChanged(const QRectF &newGeometry, const QRectF &oldGeometry) override;
 
     private:
         QRectF m_geometry;

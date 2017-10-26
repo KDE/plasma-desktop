@@ -44,7 +44,7 @@ class PlacesModel : public QSortFilterProxyModel
         void placesChanged() const;
 
     protected:
-        bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const Q_DECL_OVERRIDE;
+        bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const override;
 
     private:
         KFilePlacesModel *m_sourceModel;

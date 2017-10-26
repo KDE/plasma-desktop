@@ -121,7 +121,7 @@ QStringList Positioner::positions() const
     return m_positions;
 }
 
-void Positioner::setPositions(QStringList positions)
+void Positioner::setPositions(const QStringList &positions)
 {
     if (m_positions != positions) {
         m_positions = positions;
