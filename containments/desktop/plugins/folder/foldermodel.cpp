@@ -760,11 +760,12 @@ void FolderModel::setDragHotSpotScrollOffset(int x, int y)
 
 QPoint FolderModel::dragCursorOffset(int row)
 {
-    if (!m_dragImages.contains(row)) {
+    DragImage *image = m_dragImages.value(row);
+    if (!image) {
         return QPoint(-1, -1);
     }
 
-    return m_dragImages.value(row)->cursorOffset;
+    return image->cursorOffset;
 }
 
 void FolderModel::addDragImage(QDrag *drag, int x, int y)

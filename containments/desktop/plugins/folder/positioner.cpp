@@ -141,11 +141,7 @@ void Positioner::setPositions(const QStringList &positions)
 int Positioner::map(int row) const
 {
     if (m_enabled && m_folderModel) {
-        if (m_proxyToSource.contains(row)) {
-            return m_proxyToSource.value(row);
-        } else {
-            return -1;
-        }
+        return m_proxyToSource.value(row, -1);
     }
 
     return row;
