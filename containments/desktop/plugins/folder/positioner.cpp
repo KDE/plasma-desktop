@@ -110,6 +110,8 @@ void Positioner::setPerStripe(int perStripe)
     if (m_perStripe != perStripe) {
         m_perStripe = perStripe;
 
+        emit perStripeChanged();
+
         if (m_enabled && perStripe > 0 && !m_proxyToSource.isEmpty()) {
             applyPositions();
         }
