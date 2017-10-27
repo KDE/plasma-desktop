@@ -78,7 +78,7 @@ T2.ItemDelegate {
         Rectangle {
             anchors.fill: parent
             visible: actionsRow.children.length > 0
-            opacity: delegate.hovered ? 1 : 0
+            opacity: delegate.hovered || (actionsScope.focus) ? 1 : 0
             radius: Kirigami.Units.smallSpacing
             color: Qt.rgba(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b, 0.4)
 
@@ -92,28 +92,35 @@ T2.ItemDelegate {
                 }
             }
 
-            RowLayout {
-                id: actionsRow
+            FocusScope {
+                id: actionsScope
                 anchors {
                     right: parent.right
                     bottom: parent.bottom
                     margins: Kirigami.Units.smallSpacing
                 }
-                Repeater {
-                    model: delegate.actions
-                    delegate: Controls.ToolButton {
-                        Kirigami.Icon {
-                            anchors.centerIn: parent
-                            width: Kirigami.Units.iconSizes.smallMedium
-                            height: width
-                            source: modelData.iconName
+                width: actionsRow.width
+                height: actionsRow.height
+                RowLayout {
+                    id: actionsRow
+                    
+                    Repeater {
+                        model: delegate.actions
+                        delegate: Controls.ToolButton {
+                            Kirigami.Icon {
+                                anchors.centerIn: parent
+                                width: Kirigami.Units.iconSizes.smallMedium
+                                height: width
+                                source: modelData.iconName
+                            }
+                            activeFocusOnTab: focus || delegate.focus
+                            onClicked: modelData.trigger()
+                            enabled: modelData.enabled
+                            Controls.ToolTip.delay: 1000
+                            Controls.ToolTip.timeout: 5000
+                            Controls.ToolTip.visible: hovered
+                            Controls.ToolTip.text: modelData.tooltip
                         }
-                        onClicked: modelData.trigger()
-                        enabled: modelData.enabled
-                        Controls.ToolTip.delay: 1000
-                        Controls.ToolTip.timeout: 5000
-                        Controls.ToolTip.visible: hovered
-                        Controls.ToolTip.text: modelData.tooltip
                     }
                 }
             }
