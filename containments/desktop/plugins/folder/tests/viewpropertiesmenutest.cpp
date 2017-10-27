@@ -1,7 +1,7 @@
 /***************************************************************************
  *   Copyright (C) 2017 Klarälvdalens Datakonsult AB, a KDAB Group company *
  *                      <info@kdab.com>                                    *
- *   Author: Andras Mantia <andras.mantia@kdab.com>                        *
+ *   Author: Laurent Montel <laurent.montel@kdab.com>                      *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -19,46 +19,20 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
+#include "viewpropertiesmenutest.h"
+#include "viewpropertiesmenu.h"
+#include <QTest>
+QTEST_MAIN(ViewPropertiesMenuTest)
 
-#ifndef POSITIONERTEST_H
-#define POSITIONERTEST_H
-
-#include <QObject>
-
-class QTemporaryDir;
-class FolderModel;
-class Positioner;
-
-class PositionerTest : public QObject
+void ViewPropertiesMenuTest::shouldHaveDefaultValues()
 {
-    Q_OBJECT
+    ViewPropertiesMenu m;
+    QVERIFY(m.menu());
 
-private Q_SLOTS:
-    void initTestCase();
-    void cleanupTestCase();
-
-    void init();
-    void cleanup();
-
-    void tst_positions_data();
-    void tst_positions();
-    void tst_map();
-    void tst_move_data();
-    void tst_move();
-    void tst_nearestitem_data();
-    void tst_nearestitem();
-    void tst_isBlank();
-    void tst_reset();
-    void tst_defaultValues();
-    void tst_changeEnabledStatus();
-    void tst_changePerStripe();
-
-private:
-    void checkPositions(int perStripe);
-
-    Positioner *m_positioner;
-    FolderModel *m_folderModel;
-    QTemporaryDir *m_folderDir;
-};
-
-#endif // POSITIONERTEST_H
+    QVERIFY(m.showLayoutActions());
+    QVERIFY(m.showLockAction());
+    QVERIFY(m.showIconSizeActions());
+    QVERIFY(!m.locked());
+    QVERIFY(!m.sortDesc());
+    QVERIFY(!m.sortDirsFirst());
+}

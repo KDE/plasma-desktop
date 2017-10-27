@@ -226,6 +226,9 @@ void FolderModelTest::tst_defaultValues()
     QCOMPARE(folderModel.sortMode(), 0);
     QCOMPARE(folderModel.filterMode(), (int)FolderModel::NoFilter);
     QVERIFY(folderModel.newMenu());
+    QCOMPARE(folderModel.filterCaseSensitivity(), Qt::CaseInsensitive);
+    QVERIFY(folderModel.dynamicSortFilter());
+    QVERIFY(folderModel.isSortLocaleAware());
 }
 
 void FolderModelTest::tst_actionMenu()

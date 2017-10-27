@@ -160,7 +160,7 @@ void PositionerTest::tst_reset()
     m_positioner->reset();
     QSignalSpy s(m_positioner, &Positioner::positionsChanged);
     s.wait(500);
-
+    QCOMPARE(s.count(), 1);
     checkPositions(3);
 
     for (int i = 0; i < m_positioner->rowCount(); i++) {
@@ -175,6 +175,38 @@ void PositionerTest::tst_defaultValues()
     QVERIFY(!positioner.folderModel());
     QCOMPARE(positioner.perStripe(), 0);
     QVERIFY(positioner.positions().isEmpty());
+}
+
+void PositionerTest::tst_changeEnabledStatus()
+{
+    Positioner positioner;
+    QVERIFY(!positioner.enabled());
+    QSignalSpy s(&positioner, &Positioner::enabledChanged);
+    positioner.setEnabled(true);
+    QCOMPARE(s.count(), 1);
+
+    positioner.setEnabled(false);
+    QCOMPARE(s.count(), 2);
+
+    //No change
+    positioner.setEnabled(false);
+    QCOMPARE(s.count(), 2);
+}
+
+void PositionerTest::tst_changePerStripe()
+{
+    Positioner positioner;
+    QCOMPARE(positioner.perStripe(), 0);
+    QSignalSpy s(&positioner, &Positioner::perStripeChanged);
+    positioner.setPerStripe(1);
+    QCOMPARE(s.count(), 1);
+
+    //No change
+    positioner.setPerStripe(1);
+    QCOMPARE(s.count(), 1);
+
+    positioner.setPerStripe(4);
+    QCOMPARE(s.count(), 2);
 }
 
 void PositionerTest::checkPositions(int perStripe)

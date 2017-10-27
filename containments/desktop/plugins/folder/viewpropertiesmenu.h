@@ -21,12 +21,12 @@
 #define VIEWPROPERTIESMENU_H
 
 #include <QObject>
-
+#include "folderplugin_private_export.h"
 class QAction;
 class QActionGroup;
 class QMenu;
 
-class ViewPropertiesMenu : public QObject
+class FOLDERPLUGIN_TESTS_EXPORT ViewPropertiesMenu : public QObject
 {
     Q_OBJECT
 
