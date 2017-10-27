@@ -639,7 +639,7 @@ int FolderModel::fileExtensionBoundary(int row)
     return boundary;
 }
 
-bool FolderModel::hasSelection()
+bool FolderModel::hasSelection() const
 {
     return m_selectionModel->hasSelection();
 }

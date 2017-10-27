@@ -191,7 +191,7 @@ class FOLDERPLUGIN_TESTS_EXPORT FolderModel : public QSortFilterProxyModel
         Q_INVOKABLE void rename(int row, const QString &name);
         Q_INVOKABLE int fileExtensionBoundary(int row);
 
-        Q_INVOKABLE bool hasSelection();
+        Q_INVOKABLE bool hasSelection() const;
         Q_INVOKABLE bool isSelected(int row);
         Q_INVOKABLE void setSelected(int row);
         Q_INVOKABLE void toggleSelected(int row);
