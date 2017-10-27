@@ -31,11 +31,12 @@ Kirigami.Page {
     topPadding: 0
     leftPadding: 0
     rightPadding: 0
-    bottomPadding: 10
+    bottomPadding: footer ? Kirigami.Units.smallSpacing : 0
 
     QtControls.ScrollView {
         id: scroll
         anchors.fill: parent
+        activeFocusOnTab: false
 
         GridView {
             id: view

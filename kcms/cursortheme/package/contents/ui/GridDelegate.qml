@@ -30,7 +30,7 @@ T2.ItemDelegate {
 
     property string toolTip
     property alias thumbnail: thumbnailArea.data
-    property alias actionButtons: actionsRow.data
+    property list<QtObject> actions
 
     width: view.cellWidth
     height: view.cellHeight
@@ -98,6 +98,23 @@ T2.ItemDelegate {
                     right: parent.right
                     bottom: parent.bottom
                     margins: Kirigami.Units.smallSpacing
+                }
+                Repeater {
+                    model: delegate.actions
+                    delegate: Controls.ToolButton {
+                        Kirigami.Icon {
+                            anchors.centerIn: parent
+                            width: Kirigami.Units.iconSizes.smallMedium
+                            height: width
+                            source: modelData.iconName
+                        }
+                        onClicked: modelData.trigger()
+                        enabled: modelData.enabled
+                        Controls.ToolTip.delay: 1000
+                        Controls.ToolTip.timeout: 5000
+                        Controls.ToolTip.visible: hovered
+                        Controls.ToolTip.text: modelData.tooltip
+                    }
                 }
             }
         }

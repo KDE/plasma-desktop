@@ -41,20 +41,12 @@ GridDelegate {
         currentSize: parseInt(sizeCombo.currentText) !== NaN ? parseInt(sizeCombo.currentText) : 0
     }
 
-    actionButtons: [
-        Controls.ToolButton {
-            Kirigami.Icon {
-                anchors.centerIn: parent
-                width: Kirigami.Units.iconSizes.smallMedium
-                height: width
-                source: "edit-delete"
-            }
-            onClicked: kcm.removeTheme(index);
+    actions: [
+        Kirigami.Action {
+            iconName: "edit-delete"
+            tooltip: i18n("Remove Theme")
             enabled: model.isWritable
-            Controls.ToolTip.delay: 1000
-            Controls.ToolTip.timeout: 5000
-            Controls.ToolTip.visible: hovered
-            Controls.ToolTip.text: i18n("Remove Theme")
+            onTriggered: kcm.removeTheme(index);
         }
     ]
 
