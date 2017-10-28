@@ -30,6 +30,7 @@
 #define FOLDERPLUGIN_TESTS_EXPORT FOLDERPLUGIN_EXPORT
 #endif
 #else /* not compiling tests */
+#define FOLDERPLUGIN_TESTS_EXPORT
 #endif
 
 #endif // FOLDERPLUGIN_PRIVATE_EXPORT_H
