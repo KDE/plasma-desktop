@@ -36,12 +36,12 @@ class ItemViewAdapter : public KAbstractViewAdapter
     public:
         explicit ItemViewAdapter(QObject* parent = nullptr);
 
-        QAbstractItemModel *model() const Q_DECL_OVERRIDE;
-        QSize iconSize() const Q_DECL_OVERRIDE;
-        QPalette palette() const Q_DECL_OVERRIDE;
-        QRect visibleArea() const Q_DECL_OVERRIDE;
-        QRect visualRect(const QModelIndex &index) const Q_DECL_OVERRIDE;
-        void connect(Signal signal, QObject *receiver, const char *slot) Q_DECL_OVERRIDE;
+        QAbstractItemModel *model() const override;
+        QSize iconSize() const override;
+        QPalette palette() const override;
+        QRect visibleArea() const override;
+        QRect visualRect(const QModelIndex &index) const override;
+        void connect(Signal signal, QObject *receiver, const char *slot) override;
 
         QObject *adapterView() const;
         void setAdapterView(QObject *view);

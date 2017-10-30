@@ -68,7 +68,7 @@ class DirLister : public KDirLister
         void error(const QString &string);
 
     protected:
-        void handleError(KIO::Job *job) Q_DECL_OVERRIDE;
+        void handleError(KIO::Job *job) override;
 };
 
 class FOLDERPLUGIN_TESTS_EXPORT FolderModel : public QSortFilterProxyModel

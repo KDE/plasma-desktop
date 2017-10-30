@@ -66,10 +66,10 @@ class FOLDERPLUGIN_TESTS_EXPORT Positioner : public QAbstractItemModel
 
         Q_INVOKABLE void move(const QVariantList &moves);
 
-        QHash<int, QByteArray> roleNames() const Q_DECL_OVERRIDE;
+        QHash<int, QByteArray> roleNames() const override;
 
         QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const override;
-        QModelIndex parent(const QModelIndex &index) const Q_DECL_OVERRIDE;
+        QModelIndex parent(const QModelIndex &index) const override;
 
         QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
 
