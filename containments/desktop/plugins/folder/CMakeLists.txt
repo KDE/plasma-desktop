@@ -42,5 +42,5 @@ install(TARGETS folderplugin DESTINATION ${QML_INSTALL_DIR}/org/kde/private/desk
 generate_export_header(folderplugin BASE_NAME folderplugin)
 
 if(BUILD_TESTING)
-    add_subdirectory(tests)
+    add_subdirectory(autotests)
 endif(BUILD_TESTING)
