@@ -23,6 +23,8 @@ import org.kde.kirigami 2.2 as Kirigami
 
 
 Kirigami.Page {
+    id: root
+
     implicitWidth: Kirigami.Units.gridUnit * 20
     implicitHeight: Kirigami.Units.gridUnit * 20
 
@@ -35,7 +37,12 @@ Kirigami.Page {
 
     QtControls.ScrollView {
         id: scroll
-        anchors.fill: parent
+        anchors {
+            top: parent.top
+            bottom: parent.bottom
+            horizontalCenter: parent.horizontalCenter
+        }
+        width: Math.floor((root.width - Kirigami.Units.gridUnit*2) / view.cellWidth) * view.cellWidth + Kirigami.Units.gridUnit*2
         activeFocusOnTab: false
 
         GridView {
