@@ -53,15 +53,15 @@ using namespace KAStats::Terms;
 
 QString agentForUrl(const QString &url)
 {
-    return url.startsWith("ktp:")
+    return url.startsWith(QLatin1String("ktp:"))
                 ? AGENT_CONTACTS
-         : url.startsWith("preferred:")
+         : url.startsWith(QLatin1String("preferred:"))
                 ? AGENT_APPLICATIONS
-         : url.startsWith("applications:")
+         : url.startsWith(QLatin1String("applications:"))
                 ? AGENT_APPLICATIONS
-         : (url.startsWith("/") && !url.endsWith(".desktop"))
+         : (url.startsWith(QLatin1Char('/')) && !url.endsWith(QLatin1String(".desktop")))
                 ? AGENT_DOCUMENTS
-         : (url.startsWith("file:/") && !url.endsWith(".desktop"))
+         : (url.startsWith(QLatin1String("file:/")) && !url.endsWith(QLatin1String(".desktop")))
                 ? AGENT_DOCUMENTS
          // use applications as the default
                 : AGENT_APPLICATIONS;
