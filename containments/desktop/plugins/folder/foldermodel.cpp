@@ -892,6 +892,9 @@ void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row)
         return;
     }
 
+    const int x = dropEvent->property("x").toInt();
+    const int y = dropEvent->property("y").toInt();
+
     if (m_dragInProgress && row == -1 && !m_urlChangedWhileDragging) {
         if (m_locked || mimeData->urls().isEmpty()) {
             return;
@@ -899,8 +902,7 @@ void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row)
 
         setSortMode(-1);
 
-        emit move(dropEvent->property("x").toInt(), dropEvent->property("y").toInt(),
-            mimeData->urls());
+        emit move(x, y, mimeData->urls());
 
         return;
     }
@@ -954,10 +956,7 @@ void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row)
         return;
     }
 
-    QPoint pos;
-    pos.setX(dropEvent->property("x").toInt());
-    pos.setY(dropEvent->property("y").toInt());
-
+    QPoint pos = {x, y};
     pos = target->mapToScene(pos).toPoint();
     pos = target->window()->mapToGlobal(pos);
 
@@ -971,8 +970,6 @@ void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row)
 
     KIO::DropJob *dropJob = KIO::drop(&ev, dropTargetUrl);
     dropJob->uiDelegate()->setAutoErrorHandlingEnabled(true);
-    const int x = dropEvent->property("x").toInt();
-    const int y = dropEvent->property("y").toInt();
 
     // The QMimeData we extract from the DropArea's drop event is deleted as soon as this method
     // ends but we need to keep a copy for when popupMenuAboutToShow fires.
