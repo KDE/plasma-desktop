@@ -945,7 +945,7 @@ void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row)
                                             QStringLiteral("extractSelectedFilesTo"));
         message.setArguments({dropTargetUrl.toDisplayString(QUrl::PreferLocalFile)});
 
-        QDBusConnection::sessionBus().call(message);
+        QDBusConnection::sessionBus().call(message, QDBus::NoBlock);
 
         return;
     }
@@ -1006,7 +1006,7 @@ void FolderModel::dropCwd(QObject* dropEvent)
                                             QStringLiteral("extractSelectedFilesTo"));
         message.setArguments(QVariantList() << m_dirModel->dirLister()->url().adjusted(QUrl::PreferLocalFile).toString());
 
-        QDBusConnection::sessionBus().call(message);
+        QDBusConnection::sessionBus().call(message, QDBus::NoBlock);
     } else {
         Qt::DropAction proposedAction((Qt::DropAction)dropEvent->property("proposedAction").toInt());
         Qt::DropActions possibleActions(dropEvent->property("possibleActions").toInt());
