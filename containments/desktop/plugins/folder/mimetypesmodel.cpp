@@ -99,7 +99,7 @@ void MimeTypesModel::checkAll()
 {
     m_checkedRows = QVector<bool>(m_mimeTypesList.size(), true);
 
-    emit dataChanged(index(0, 0), index(m_mimeTypesList.size() - 1, 0));
+    emit dataChanged(index(0, 0), index(m_mimeTypesList.size() - 1, 0), {Qt::CheckStateRole});
 
     emit checkedTypesChanged();
 }
@@ -143,7 +143,7 @@ void MimeTypesModel::setCheckedTypes(const QStringList &list)
         }
     }
 
-    emit dataChanged(index(0, 0), index(m_mimeTypesList.size() - 1, 0));
+    emit dataChanged(index(0, 0), index(m_mimeTypesList.size() - 1, 0), {Qt::CheckStateRole});
 
     emit checkedTypesChanged();
 }

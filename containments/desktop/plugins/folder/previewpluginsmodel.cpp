@@ -101,7 +101,7 @@ void PreviewPluginsModel::setCheckedPlugins(const QStringList &list)
         }
     }
 
-    emit dataChanged(index(0, 0), index(m_plugins.size() - 1, 0));
+    emit dataChanged(index(0, 0), index(m_plugins.size() - 1, 0), {Qt::CheckStateRole});
 
     emit checkedPluginsChanged();
 }
