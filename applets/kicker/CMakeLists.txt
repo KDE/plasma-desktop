@@ -46,6 +46,11 @@ set(kickerplugin_SRCS
     plugin/funnelmodel.cpp
 )
 
+ecm_qt_declare_logging_category(kickerplugin_SRCS
+    HEADER debug.h
+    IDENTIFIER KICKER_DEBUG
+    CATEGORY_NAME org.kde.plasma.kicker)
+
 qt5_add_dbus_interface(kickerplugin_SRCS ${KRUNNERAPP_INTERFACE} krunner_interface)
 qt5_add_dbus_interface(kickerplugin_SRCS ${KSMSERVER_DBUS_INTERFACE} ksmserver_interface)
 
