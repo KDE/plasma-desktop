@@ -17,7 +17,7 @@
    <item row="0" column="1">
     <widget class="QCheckBox" name="showToolTips">
      <property name="text">
-      <string>Show Informational Tips</string>
+      <string>Display informational tooltips on mouse hover</string>
      </property>
      <property name="checked">
       <bool>true</bool>
@@ -40,7 +40,7 @@
    <item row="1" column="1">
     <widget class="QCheckBox" name="showOsd">
      <property name="text">
-      <string>Visual feedback for status changes</string>
+      <string>Display visual feedback for status changes</string>
      </property>
     </widget>
    </item>
