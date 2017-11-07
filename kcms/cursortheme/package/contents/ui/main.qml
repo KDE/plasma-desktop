@@ -21,10 +21,11 @@ import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.2 as QtControls
 import org.kde.kirigami 2.2 as Kirigami
 import org.kde.kcm 1.0
+import org.kde.kcmcontrols 1.0 as KCMControls
 
 import org.kde.private.kcm_cursortheme 1.0
 
-GridViewPage {
+KCMControls.GridViewPage {
 
     
     ConfigModule.quickHelp: i18n("This module lets you configure the mouse cursor theme used.")

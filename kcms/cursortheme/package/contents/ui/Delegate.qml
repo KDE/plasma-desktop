@@ -26,9 +26,10 @@ import QtGraphicalEffects 1.0
 import org.kde.kirigami 2.2 as Kirigami
 
 import org.kde.kcm 1.0
+import org.kde.kcmcontrols 1.0 as KCMControls
 import org.kde.private.kcm_cursortheme 1.0
 
-GridDelegate {
+KCMControls.GridDelegate {
     id: delegate
 
     text: model.display
