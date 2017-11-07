@@ -43,9 +43,9 @@ public:
     ~CursorThemeConfig();
 
 public:
-    void load();
-    void save();
-    void defaults();
+    void load() Q_DECL_OVERRIDE;
+    void save() Q_DECL_OVERRIDE;
+    void defaults() Q_DECL_OVERRIDE;
 
     //for QML properties
     bool canInstall() const;
