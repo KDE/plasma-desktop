@@ -17,6 +17,7 @@
 */
 
 import QtQuick 2.1
+import QtQuick.Window 2.2
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.2 as Controls
 import QtQuick.Templates 2.2 as T2
@@ -35,7 +36,15 @@ GridDelegate {
 
     thumbnail: PreviewWidget {
         id: previewWidget
-        anchors.fill: parent
+        //for cursor themes we must ignore the native scaling,
+        //as they will be rendered by X11/KWin, ignoring whatever Qt
+        //scaling
+        width: parent.width * Screen.devicePixelRatio
+        height: parent.height * Screen.devicePixelRatio
+        x: Screen.devicePixelRatio % 1
+        y: Screen.devicePixelRatio % 1
+        transformOrigin: Item.TopLeft
+        scale: 1 / Screen.devicePixelRatio
         themeModel: kcm.cursorsModel
         currentIndex: index
         currentSize: parseInt(sizeCombo.currentText) !== NaN ? parseInt(sizeCombo.currentText) : 0
