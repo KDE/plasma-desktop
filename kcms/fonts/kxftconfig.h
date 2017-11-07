@@ -64,7 +64,7 @@ public:
         SubPixel(Type t, QDomNode &n) : Item(n), type(t) {}
         SubPixel(Type t = NotSet)       : type(t)          {}
 
-        void reset() Q_DECL_OVERRIDE
+        void reset()
         {
             Item::reset();
             type = NotSet;
@@ -77,7 +77,7 @@ public:
         Exclude(double f, double t, QDomNode &n) : Item(n), from(f), to(t) {}
         Exclude(double f = 0, double t = 0)          : from(f), to(t)          {}
 
-        void reset() Q_DECL_OVERRIDE
+        void reset()
         {
             Item::reset();
             from = to = 0;
@@ -99,7 +99,7 @@ public:
         Hint(Style s, QDomNode &n) : Item(n), style(s) {}
         Hint(Style s = NotSet)       : style(s)          {}
 
-        void reset() Q_DECL_OVERRIDE
+        void reset()
         {
             Item::reset();
             style = NotSet;
@@ -112,7 +112,7 @@ public:
         Hinting(bool s, QDomNode &n) : Item(n), set(s) {}
         Hinting(bool s = true)         : set(s)          {}
 
-        void reset() Q_DECL_OVERRIDE
+        void reset()
         {
             Item::reset();
             set = true;
@@ -131,7 +131,7 @@ public:
         AntiAliasing(State s, QDomNode &n) : Item(n), state(s) {}
         AntiAliasing(State s = NotSet)         : state(s) {}
 
-        void reset() Q_DECL_OVERRIDE
+        void reset()
         {
             Item::reset();
             state = NotSet;

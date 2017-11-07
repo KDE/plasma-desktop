@@ -24,128 +24,136 @@
 #ifndef FONTS_H
 #define FONTS_H
 
-#include <QDialog>
-#include <QLabel>
-#include <QList>
 #include <config-X11.h>
+#include <QAbstractItemModel>
+#include <QStandardItemModel>
 
-#include <KCModule>
-#include <KFontRequester>
+#include <KQuickAddons/ConfigModule>
 
 #include "kxftconfig.h"
 
-class QCheckBox;
-class QComboBox;
-class QDoubleSpinBox;
-class QSpinBox;
-class FontAASettings;
-
-class FontUseItem : public KFontRequester
+class FontAASettings : public QObject
 {
     Q_OBJECT
 
-public:
-    FontUseItem(QWidget *parent, const QString &name, const QString &grp,
-                const QString &key, const QString &rc, const QFont &default_fnt,
-                bool fixed = false);
-
-    void readFont();
-    void writeFont();
-    void setDefault();
-    void applyFontDiff(const QFont &fnt, int fontDiffFlags);
-
-    const QString &rcFile()
-    {
-        return _rcfile;
-    }
-    const QString &rcGroup()
-    {
-        return _rcgroup;
-    }
-    const QString &rcKey()
-    {
-        return _rckey;
-    }
-
-private:
-    QString _rcfile;
-    QString _rcgroup;
-    QString _rckey;
-    QFont _default;
-};
-
-class FontAASettings : public QDialog
-{
-    Q_OBJECT
+    Q_PROPERTY(QAbstractItemModel *subPixelOptionsModel READ subPixelOptionsModel CONSTANT)
+    Q_PROPERTY(QAbstractItemModel *hintingOptionsModel READ hintingOptionsModel CONSTANT)
+    Q_PROPERTY(QString subPixel READ subPixel WRITE setSubPixel NOTIFY subPixelChanged)
+    Q_PROPERTY(QString hinting READ hinting WRITE setHinting NOTIFY hintingChanged)
+    Q_PROPERTY(int excludeTo READ excludeTo WRITE setExcludeTo NOTIFY excludeToChanged)
+    Q_PROPERTY(int excludeFrom READ excludeFrom WRITE setExcludeFrom NOTIFY excludeFromChanged)
+    Q_PROPERTY(int antiAliasing READ antiAliasing WRITE setAntiAliasing NOTIFY aliasingChanged)
+    Q_PROPERTY(int dpi READ dpi WRITE setDpi NOTIFY dpiChanged)
 
 public:
 
 #if defined(HAVE_FONTCONFIG) && defined (HAVE_X11)
-    FontAASettings(QWidget *parent);
+    FontAASettings(QObject *parent);
 
     bool save(KXftConfig::AntiAliasing::State aaState);
-    bool load();
+    void load();
     void defaults();
-    int getIndex(KXftConfig::SubPixel::Type spType);
+    int getIndexSubPixel(KXftConfig::SubPixel::Type spType) const;
     KXftConfig::SubPixel::Type getSubPixelType();
-    int getIndex(KXftConfig::Hint::Style hStyle);
+    int getIndexHint(KXftConfig::Hint::Style hStyle) const;
     KXftConfig::Hint::Style getHintStyle();
     void setAntiAliasingState(KXftConfig::AntiAliasing::State aaState);
-    void enableWidgets();
-    int exec() Q_DECL_OVERRIDE;
+    QAbstractItemModel* subPixelOptionsModel() { return m_subPixelOptionsModel; }
+    QAbstractItemModel* hintingOptionsModel() { return m_hintingOptionsModel; }
+
+    void setSubPixel(const QString &subPixel);
+    QString subPixel() const;
+
+    void setHinting(const QString &hinting);
+    QString hinting() const;
+
+    void setExcludeTo(const int &excludeTo);
+    int excludeTo() const;
+
+    void setExcludeFrom(const int &excludeTo);
+    int excludeFrom() const;
+
+    void setAntiAliasing(const int& antiAliasing);
+    int antiAliasing() const;
+
+    void setDpi(const int &dpi);
+    int dpi() const;
+
+    Q_INVOKABLE int subPixelCurrentIndex();
+    Q_INVOKABLE int hintingCurrentIndex();
+
 #endif
 
-protected Q_SLOTS:
-
-    void changed();
+Q_SIGNALS:
+    void subPixelChanged();
+    void hintingChanged();
+    void excludeToChanged();
+    void excludeFromChanged();
+    void antiAliasingChanged();
+    void aliasingChanged();
+    void dpiChanged();
 
 #if defined(HAVE_FONTCONFIG) && defined (HAVE_X11)
 private:
-
-    QCheckBox *excludeRange;
-    QDoubleSpinBox *excludeFrom;
-    QDoubleSpinBox *excludeTo;
-    QComboBox *subPixelType;
-    QComboBox *hintingStyle;
-    QLabel    *subPixelLabel;
-    QLabel    *excludeToLabel;
-    bool      changesMade;
+    QString m_subPixel;
+    QString m_hinting;
+    int m_excludeTo;
+    int m_excludeFrom;
+    int m_antiAliasing;
+    int m_dpi;
+    QStandardItemModel *m_subPixelOptionsModel;
+    QStandardItemModel *m_hintingOptionsModel;
 #endif
 };
 
 /**
  * The Desktop/fonts tab in kcontrol.
  */
-class KFonts : public KCModule
+
+
+struct FontsType {
+    QString name;
+    QString category;
+    QString status;
+    QFont font;
+    QString fontName;
+};
+
+class KFonts : public KQuickAddons::ConfigModule
 {
     Q_OBJECT
+    Q_PROPERTY(QAbstractItemModel *fontsModel READ fontsModel CONSTANT)
+    Q_PROPERTY(QObject *fontAASettings READ fontAASettings CONSTANT)
 
 public:
-    KFonts(QWidget *parent, const QVariantList &);
+
+    enum Roles {
+        CategoryRole = Qt::UserRole + 1,
+        StatusRole,
+        FontRole
+    };
+
+    KFonts(QObject *parent, const QVariantList &);
     ~KFonts();
 
-    void load() Q_DECL_OVERRIDE;
-    void save() Q_DECL_OVERRIDE;
-    void defaults() Q_DECL_OVERRIDE;
 
-protected Q_SLOTS:
-    void fontSelected();
-    void slotApplyFontDiff();
-    void slotUseAntiAliasing();
-    void slotCfgAa();
+    QStandardItemModel* fontsModel() { return m_fontsModel; }
+    QObject* fontAASettings() { return m_fontAASettings; }
+
+public Q_SLOTS:
+    void load();
+    void save();
+    void defaults();
+    Q_INVOKABLE void updateFont(int currentIndex, QFont font);
+    Q_INVOKABLE void adjustAllFonts(QFont);
+
+Q_SIGNALS:
+    void fontsHaveChanged();
 
 private:
-#if defined(HAVE_FONTCONFIG) && defined (HAVE_X11)
     enum AASetting { AAEnabled, AASystem, AADisabled };
-    AASetting useAA, useAA_original;
-    QComboBox *cbAA;
-    QPushButton *aaSettingsButton;
-    FontAASettings *aaSettings;
-#endif
-    int dpi_original;
-    QCheckBox *checkboxForceDpi;
-    QSpinBox *spinboxDpi;
-    QList<FontUseItem *> fontUseList;
+    QStandardItemModel *m_fontsModel;
+    FontAASettings *m_fontAASettings;
 };
 
 #endif

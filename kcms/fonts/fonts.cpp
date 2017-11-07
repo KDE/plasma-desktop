@@ -21,348 +21,91 @@
     Boston, MA 02110-1301, USA.
 */
 
-#include <config-workspace.h>
 
 #include "fonts.h"
 
-#include <stdlib.h>
+#include <QQuickItem>
+#include <QWindow>
+#include <QQmlEngine>
+#include <QQuickView>
 
-#include <QApplication>
-#include <QCheckBox>
-#include <QComboBox>
-#include <QDialogButtonBox>
-#include <QDoubleSpinBox>
-#include <QLabel>
-#include <QProcess>
-#include <QPushButton>
-#include <QSpinBox>
-#include <qplatformdefs.h>
-
-//Added by qt3to4:
-#include <QPixmap>
-#include <QByteArray>
-#include <QGridLayout>
-#include <QHBoxLayout>
-#include <QVBoxLayout>
-#include <QFormLayout>
-
-#include <KFontDialog>
 #include <KAcceleratorManager>
+#include <KApplication>
 #include <KGlobalSettings>
-#include <KMessageBox>
-#include <KConfig>
 #include <KConfigGroup>
+#include <KConfig>
 #include <KLocalizedString>
 #include <KPluginFactory>
-#include <KWindowSystem>
+#include <QDebug>
 
 #include "../krdb/krdb.h"
 
-#ifdef HAVE_FREETYPE
-#include <ft2build.h>
-#ifdef FT_LCD_FILTER_H
-#include FT_FREETYPE_H
-#include FT_LCD_FILTER_H
-#endif
-#endif
-
-#if HAVE_X11
-#include <X11/Xlib.h>
-#endif
-
-#if HAVE_X11
-// X11 headers
-#undef Bool
-#undef Unsorted
-#undef None
-#endif
-
-static const char *const aa_rgb_xpm[] = {
-    "12 12 3 1",
-    "a c #0000ff",
-    "# c #00ff00",
-    ". c #ff0000",
-    "....####aaaa",
-    "....####aaaa",
-    "....####aaaa",
-    "....####aaaa",
-    "....####aaaa",
-    "....####aaaa",
-    "....####aaaa",
-    "....####aaaa",
-    "....####aaaa",
-    "....####aaaa",
-    "....####aaaa",
-    "....####aaaa"
-};
-static const char *const aa_bgr_xpm[] = {
-    "12 12 3 1",
-    ". c #0000ff",
-    "# c #00ff00",
-    "a c #ff0000",
-    "....####aaaa",
-    "....####aaaa",
-    "....####aaaa",
-    "....####aaaa",
-    "....####aaaa",
-    "....####aaaa",
-    "....####aaaa",
-    "....####aaaa",
-    "....####aaaa",
-    "....####aaaa",
-    "....####aaaa",
-    "....####aaaa"
-};
-static const char *const aa_vrgb_xpm[] = {
-    "12 12 3 1",
-    "a c #0000ff",
-    "# c #00ff00",
-    ". c #ff0000",
-    "............",
-    "............",
-    "............",
-    "............",
-    "############",
-    "############",
-    "############",
-    "############",
-    "aaaaaaaaaaaa",
-    "aaaaaaaaaaaa",
-    "aaaaaaaaaaaa",
-    "aaaaaaaaaaaa"
-};
-static const char *const aa_vbgr_xpm[] = {
-    "12 12 3 1",
-    ". c #0000ff",
-    "# c #00ff00",
-    "a c #ff0000",
-    "............",
-    "............",
-    "............",
-    "............",
-    "############",
-    "############",
-    "############",
-    "############",
-    "aaaaaaaaaaaa",
-    "aaaaaaaaaaaa",
-    "aaaaaaaaaaaa",
-    "aaaaaaaaaaaa"
-};
-
-static const char *const *const aaPixmaps[] = { 0, 0, aa_rgb_xpm, aa_bgr_xpm, aa_vrgb_xpm, aa_vbgr_xpm };
-
 /**** DLL Interface ****/
-K_PLUGIN_FACTORY(FontFactory, registerPlugin<KFonts>();)
-
-/**** FontUseItem ****/
-
-FontUseItem::FontUseItem(
-    QWidget *parent,
-    const QString &name,
-    const QString &grp,
-    const QString &key,
-    const QString &rc,
-    const QFont &default_fnt,
-    bool f
-)
-    : KFontRequester(parent, f),
-      _rcfile(rc),
-      _rcgroup(grp),
-      _rckey(key),
-      _default(default_fnt)
-{
-    KAcceleratorManager::setNoAccel(this);
-    setTitle(name);
-    readFont();
-}
-
-void FontUseItem::setDefault()
-{
-    setFont(_default, isFixedOnly());
-}
-
-void FontUseItem::readFont()
-{
-    const KConfig *config = KSharedConfig::openConfig(_rcfile).data();
-    const KConfigGroup group(config, _rcgroup);
-    QFont tmpFnt(_default);
-    setFont(group.readEntry(_rckey, tmpFnt), isFixedOnly());
-}
-
-void FontUseItem::writeFont()
-{
-    KConfig *config = KSharedConfig::openConfig(_rcfile).data();
-    if (_rcfile.isEmpty()) {
-        KConfigGroup(config, _rcgroup).writeEntry(_rckey, font(), KConfig::Normal | KConfig::Global);
-    } else {
-        KConfigGroup(config, _rcgroup).writeEntry(_rckey, font());
-        config->sync();
-    }
-}
-
-void FontUseItem::applyFontDiff(const QFont &fnt, int fontDiffFlags)
-{
-    QFont _font(font());
-
-    if (fontDiffFlags & KFontChooser::FontDiffSize) {
-        _font.setPointSizeF(fnt.pointSizeF());
-    }
-    if (fontDiffFlags & KFontChooser::FontDiffFamily) {
-        if (!isFixedOnly() || QFontInfo(fnt).fixedPitch()) {
-            _font.setFamily(fnt.family());
-        }
-    }
-    if (fontDiffFlags & KFontChooser::FontDiffStyle) {
-        _font.setWeight(fnt.weight());
-        _font.setStyle(fnt.style());
-        _font.setUnderline(fnt.underline());
-#if QT_VERSION >= 0x040800
-        _font.setStyleName(fnt.styleName());
-#endif
-    }
-
-    setFont(_font, isFixedOnly());
-}
+K_PLUGIN_FACTORY_WITH_JSON(KFontsFactory, "kcm_fonts.json", registerPlugin<KFonts>();)
 
 /**** FontAASettings ****/
 #if defined(HAVE_FONTCONFIG) && defined (HAVE_X11)
-FontAASettings::FontAASettings(QWidget *parent)
-    : QDialog(parent),
-      changesMade(false)
+FontAASettings::FontAASettings(QObject *parent)
+    : QObject(parent)
+    , m_subPixelOptionsModel(new QStandardItemModel(this))
+    , m_hintingOptionsModel(new QStandardItemModel(this))
+    , m_subPixel(QString("System default"))
+    , m_hinting(QString("System default"))
 {
-    setObjectName("FontAASettings");
-    setModal(true);
-    setWindowTitle(i18n("Configure Anti-Alias Settings"));
-
-    QVBoxLayout *mainLayout = new QVBoxLayout(this);
-
-    QFormLayout *layout = new QFormLayout();
-    layout->setFieldGrowthPolicy(QFormLayout::AllNonFixedFieldsGrow);
-
-    excludeRange = new QCheckBox(i18n("E&xclude range:"), this);
-    QHBoxLayout *rangeLayout = new QHBoxLayout();
-
-    excludeFrom = new QDoubleSpinBox(this);
-    excludeFrom->setRange(0.0, 72.0);
-    excludeFrom->setValue(8.0);
-    excludeFrom->setSingleStep(1.0);
-    excludeFrom->setDecimals(1);
-    excludeFrom->setSuffix(i18nc("abbreviation for unit of points", " pt"));
-    rangeLayout->addWidget(excludeFrom);
-
-    excludeToLabel = new QLabel(i18n(" to "), this);
-    rangeLayout->addWidget(excludeToLabel);
-
-    excludeTo = new QDoubleSpinBox(this);
-    excludeTo->setRange(0.0, 72.0);
-    excludeTo->setValue(15.0);
-    excludeTo->setSingleStep(1.0);
-    excludeTo->setDecimals(1);
-    excludeTo->setSuffix(i18nc("abbreviation for unit of points", " pt"));
-    rangeLayout->addWidget(excludeTo);
-
-    layout->addRow(excludeRange, rangeLayout);
-
-    QString subPixelWhatsThis = i18n("<p>If you have a TFT or LCD screen you"
-                                     " can further improve the quality of displayed fonts by selecting"
-                                     " this option.<br />Sub-pixel rendering is also known as ClearType(tm).<br />"
-                                     " In order for sub-pixel rendering to"
-                                     " work correctly you need to know how the sub-pixels of your display"
-                                     " are aligned.</p>"
-                                     " <p>On TFT or LCD displays a single pixel is actually composed of"
-                                     " three sub-pixels, red, green and blue. Most displays"
-                                     " have a linear ordering of RGB sub-pixel, some have BGR.<br />"
-                                     " This feature does not work with CRT monitors.</p>");
-
-    subPixelLabel = new QLabel(i18n("Sub-pixel rendering type:"), this);
-    subPixelLabel->setWhatsThis(subPixelWhatsThis);
-
-    subPixelType = new QComboBox(this);
-    layout->addRow(subPixelLabel, subPixelType);
-
-    subPixelType->setEditable(false);
-    subPixelType->setWhatsThis(subPixelWhatsThis);
-
     for (int t = KXftConfig::SubPixel::NotSet; t <= KXftConfig::SubPixel::Vbgr; ++t) {
-        subPixelType->addItem(QPixmap(aaPixmaps[t]), i18n(KXftConfig::description((KXftConfig::SubPixel::Type)t).toUtf8()));
+        QStandardItem *item = new QStandardItem(i18n(KXftConfig::description((KXftConfig::SubPixel::Type)t).toUtf8()));
+        m_subPixelOptionsModel->appendRow(item);
     }
 
-    QLabel *hintingLabel = new QLabel(i18n("Hinting style:"), this);
-    hintingStyle = new QComboBox(this);
-    hintingStyle->setEditable(false);
-    layout->addRow(hintingLabel, hintingStyle);
     for (int s = KXftConfig::Hint::NotSet; s <= KXftConfig::Hint::Full; ++s) {
-        hintingStyle->addItem(i18n(KXftConfig::description((KXftConfig::Hint::Style)s).toUtf8()));
+        QStandardItem * item = new QStandardItem(i18n(KXftConfig::description((KXftConfig::Hint::Style)s).toUtf8()));
+        m_hintingOptionsModel->appendRow(item);
     }
-
-    QString hintingText(i18n("Hinting is a process used to enhance the quality of fonts at small sizes."));
-    hintingStyle->setWhatsThis(hintingText);
-    hintingLabel->setWhatsThis(hintingText);
-    load();
-    enableWidgets();
-
-    QHBoxLayout *outerLayout = new QHBoxLayout();
-    outerLayout->addLayout(layout);
-    outerLayout->addStretch(1);
-
-    mainLayout->addLayout(outerLayout);
-    mainLayout->addStretch(1);
-    mainLayout->addSpacing(style()->pixelMetric(QStyle::PM_LayoutBottomMargin));
-
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok|QDialogButtonBox::Cancel, this);
-    buttonBox->button(QDialogButtonBox::Ok)->setShortcut(Qt::CTRL|Qt::Key_Return);
-    connect(buttonBox, &QDialogButtonBox::accepted, this, &QDialog::accept);
-    connect(buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
-    mainLayout->addWidget(buttonBox);
-
-    connect(excludeRange, &QAbstractButton::toggled, this, &FontAASettings::changed);
-    connect(excludeFrom, static_cast<void(QDoubleSpinBox::*)(double)>(&QDoubleSpinBox::valueChanged),
-            this, &FontAASettings::changed);
-    connect(excludeTo, static_cast<void(QDoubleSpinBox::*)(double)>(&QDoubleSpinBox::valueChanged),
-            this, &FontAASettings::changed);
-    connect(subPixelType, static_cast<void(QComboBox::*)(int)>(&QComboBox::activated),
-            this, &FontAASettings::changed);
-    connect(hintingStyle, static_cast<void(QComboBox::*)(int)>(&QComboBox::activated),
-            this, &FontAASettings::changed);
 }
 
-bool FontAASettings::load()
+void FontAASettings::load()
 {
     double     from, to;
     KXftConfig xft;
 
     if (xft.getExcludeRange(from, to)) {
-        excludeRange->setChecked(true);
+        m_excludeFrom = from;
+        m_excludeTo = to;
     } else {
-        excludeRange->setChecked(false);
-        from = 8.0;
-        to = 15.0;
+        m_excludeFrom = 8;
+        m_excludeTo = 15;
     }
-
-    excludeFrom->setValue(from);
-    excludeTo->setValue(to);
 
     KXftConfig::SubPixel::Type spType;
 
     xft.getSubPixelType(spType);
-    int idx = getIndex(spType);
-
-    subPixelType->setCurrentIndex(idx);
+    m_subPixel = KXftConfig::description(spType);
 
     KXftConfig::Hint::Style hStyle;
 
     if (!xft.getHintStyle(hStyle) || KXftConfig::Hint::NotSet == hStyle) {
+        KConfig kglobals("kdeglobals", KConfig::NoGlobals);
+
         hStyle = KXftConfig::Hint::NotSet;
         xft.setHintStyle(hStyle);
+        KConfigGroup(&kglobals, "General").writeEntry("XftHintStyle", KXftConfig::toStr(hStyle));
+        kglobals.sync();
         runRdb(KRdbExportXftSettings | KRdbExportGtkTheme);
+    } else {
+        m_hinting = KXftConfig::description(hStyle);
     }
 
-    hintingStyle->setCurrentIndex(getIndex(hStyle));
+    KConfig _cfgfonts("kcmfonts");
+    KConfigGroup cfgfonts(&_cfgfonts, "General");
+    setDpi(cfgfonts.readEntry("forceFontDPI", 0));
 
-    enableWidgets();
-
-    return xft.aliasingEnabled();
+    if (cfgfonts.readEntry("dontChangeAASettings", true)) {
+        setAntiAliasing(1); //AASystem
+    } else if (xft.aliasingEnabled()) {
+        setAntiAliasing(0); //AAEnabled
+    } else {
+        setAntiAliasing(2); //AADisabled
+    }
 }
 
 bool FontAASettings::save(KXftConfig::AntiAliasing::State aaState)
@@ -372,22 +115,12 @@ bool FontAASettings::save(KXftConfig::AntiAliasing::State aaState)
     KConfigGroup grp(&kglobals, "General");
 
     xft.setAntiAliasing(aaState);
-
-    if (excludeRange->isChecked()) {
-        xft.setExcludeRange(excludeFrom->value(), excludeTo->value());
-    } else {
-        xft.setExcludeRange(0, 0);
-    }
+    xft.setExcludeRange(m_excludeFrom, m_excludeTo);
 
     KXftConfig::SubPixel::Type spType(getSubPixelType());
 
     xft.setSubPixelType(spType);
-    if (KXftConfig::SubPixel::NotSet == spType) {
-        grp.revertToDefault("XftSubPixel");
-    } else {
-        grp.writeEntry("XftSubPixel", KXftConfig::toStr(spType));
-    }
-
+    grp.writeEntry("XftSubPixel", KXftConfig::toStr(spType));
     if (KXftConfig::AntiAliasing::NotSet == aaState) {
         grp.revertToDefault("XftAntialias");
     } else {
@@ -400,6 +133,7 @@ bool FontAASettings::save(KXftConfig::AntiAliasing::State aaState)
     xft.setHintStyle(hStyle);
 
     QString hs(KXftConfig::toStr(hStyle));
+
     if (hs != grp.readEntry("XftHintStyle")) {
         if (KXftConfig::Hint::NotSet == hStyle) {
             grp.revertToDefault("XftHintStyle");
@@ -416,29 +150,36 @@ bool FontAASettings::save(KXftConfig::AntiAliasing::State aaState)
 
     xft.apply();
 
+    KConfig _cfgfonts("kcmfonts");
+    KConfigGroup cfgfonts(&_cfgfonts, "General");
+    cfgfonts.writeEntry("forceFontDPI", m_dpi);
+    cfgfonts.sync();
+
     return mod;
 }
 
 void FontAASettings::defaults()
 {
-    excludeRange->setChecked(false);
-    excludeFrom->setValue(8.0);
-    excludeTo->setValue(15.0);
-    subPixelType->setCurrentIndex(getIndex(KXftConfig::SubPixel::NotSet));
-    hintingStyle->setCurrentIndex(getIndex(KXftConfig::Hint::NotSet));
-    enableWidgets();
+    setExcludeTo(15);
+    setExcludeFrom(8);
+    setAntiAliasing(1);
+    setDpi(96);
+    setSubPixel(KXftConfig::description(KXftConfig::SubPixel::NotSet));
+    setHinting(KXftConfig::description(KXftConfig::Hint::NotSet));
 }
 
-int FontAASettings::getIndex(KXftConfig::SubPixel::Type spType)
+int FontAASettings::getIndexSubPixel(KXftConfig::SubPixel::Type spType) const
 {
     int pos = -1;
     int index;
 
-    for (index = 0; index < subPixelType->count(); ++index)
-        if (subPixelType->itemText(index) == i18n(KXftConfig::description(spType).toUtf8())) {
+    for (index = 0; index < m_subPixelOptionsModel->rowCount(); ++index) {
+        QStandardItem *item = m_subPixelOptionsModel->item(index);
+        if (item->text() == i18n(KXftConfig::description(spType).toUtf8())) {
             pos = index;
             break;
         }
+    }
 
     return pos;
 }
@@ -447,24 +188,26 @@ KXftConfig::SubPixel::Type FontAASettings::getSubPixelType()
 {
     int t;
 
-    for (t = KXftConfig::SubPixel::NotSet; t <= KXftConfig::SubPixel::Vbgr; ++t)
-        if (subPixelType->currentText() == i18n(KXftConfig::description((KXftConfig::SubPixel::Type)t).toUtf8())) {
+    for (t = KXftConfig::SubPixel::NotSet; t <= KXftConfig::SubPixel::Vbgr; ++t){
+        if (m_subPixel == i18n(KXftConfig::description((KXftConfig::SubPixel::Type)t).toUtf8())) {
             return (KXftConfig::SubPixel::Type)t;
         }
-
+    }
     return KXftConfig::SubPixel::NotSet;
 }
 
-int FontAASettings::getIndex(KXftConfig::Hint::Style hStyle)
+int FontAASettings::getIndexHint(KXftConfig::Hint::Style hStyle) const
 {
     int pos = -1;
     int index;
 
-    for (index = 0; index < hintingStyle->count(); ++index)
-        if (hintingStyle->itemText(index) == i18n(KXftConfig::description(hStyle).toUtf8())) {
+    for (index = 0; index < m_hintingOptionsModel->rowCount(); ++index) {
+        QStandardItem *item = m_hintingOptionsModel->item(index);
+        if (item->text() == i18n(KXftConfig::description(hStyle).toUtf8())) {
             pos = index;
             break;
         }
+    }
 
     return pos;
 }
@@ -473,419 +216,247 @@ KXftConfig::Hint::Style FontAASettings::getHintStyle()
 {
     int s;
 
-    for (s = KXftConfig::Hint::NotSet; s <= KXftConfig::Hint::Full; ++s)
-        if (hintingStyle->currentText() == i18n(KXftConfig::description((KXftConfig::Hint::Style)s).toUtf8())) {
+    for (s = KXftConfig::Hint::NotSet; s <= KXftConfig::Hint::Full; ++s){
+        if (m_hinting == i18n(KXftConfig::description((KXftConfig::Hint::Style)s).toUtf8())) {
             return (KXftConfig::Hint::Style)s;
         }
+    }
 
     return KXftConfig::Hint::Medium;
 }
 
-void FontAASettings::enableWidgets()
-{
-    excludeFrom->setEnabled(excludeRange->isChecked());
-    excludeTo->setEnabled(excludeRange->isChecked());
-    excludeToLabel->setEnabled(excludeRange->isChecked());
-#ifdef FT_LCD_FILTER_H
-    static int ft_has_subpixel = -1;
-    if (ft_has_subpixel == -1) {
-        FT_Library            ftLibrary;
-        if (FT_Init_FreeType(&ftLibrary) == 0) {
-            ft_has_subpixel = (FT_Library_SetLcdFilter(ftLibrary, FT_LCD_FILTER_DEFAULT)
-                               == FT_Err_Unimplemented_Feature) ? 0 : 1;
-            FT_Done_FreeType(ftLibrary);
-        }
-    }
-    subPixelType->setEnabled(ft_has_subpixel);
-#endif
-}
 #endif
 
-void FontAASettings::changed()
+void FontAASettings::setSubPixel(const QString &subPixel)
 {
-#if defined(HAVE_FONTCONFIG) && defined (HAVE_X11)
-    changesMade = true;
-    enableWidgets();
-#endif
-}
 
-#if defined(HAVE_FONTCONFIG) && defined (HAVE_X11)
-int FontAASettings::exec()
-{
-    const int i = QDialog::exec();
-
-    if (!i) {
-        load();    // Reset settings...
+    if (m_subPixel == subPixel) {
+        return;
     }
 
-    return i && changesMade;
+    m_subPixel = subPixel;
+    emit subPixelChanged();
 }
-#endif
+
+QString FontAASettings::subPixel() const
+{
+    return m_subPixel;
+}
+
+void FontAASettings::setHinting(const QString &hinting)
+{
+    if (m_hinting == hinting) {
+        return;
+    }
+
+    m_hinting = hinting;
+    emit hintingChanged();
+}
+
+QString FontAASettings::hinting() const
+{
+    return m_hinting;
+}
+
+void FontAASettings::setExcludeTo(const int &excludeTo)
+{
+    if (m_excludeTo == excludeTo) {
+        return;
+    }
+
+    m_excludeTo = excludeTo;
+    emit excludeToChanged();
+}
+
+int FontAASettings::excludeTo() const
+{
+    return m_excludeTo;
+}
+
+void FontAASettings::setExcludeFrom(const int &excludeTo)
+{
+    if (m_excludeFrom == excludeTo) {
+        return;
+    }
+
+    m_excludeFrom = excludeTo;
+    emit excludeToChanged();
+}
+
+int FontAASettings::excludeFrom() const
+{
+    return m_excludeFrom;
+}
+
+void FontAASettings::setAntiAliasing(const int &antiAliasing)
+{
+    if (m_antiAliasing == antiAliasing) {
+        return;
+    }
+
+    m_antiAliasing = antiAliasing;
+    emit aliasingChanged();
+}
+
+int FontAASettings::antiAliasing() const
+{
+    return m_antiAliasing;
+}
+
+void FontAASettings::setDpi(const int &dpi)
+{
+    if (m_dpi == dpi) {
+        return;
+    }
+
+    m_dpi = dpi;
+    emit dpiChanged();
+}
+
+int FontAASettings::dpi() const
+{
+    return m_dpi;
+}
+
+int FontAASettings::subPixelCurrentIndex()
+{
+    return getSubPixelType();
+}
+
+int FontAASettings::hintingCurrentIndex()
+{
+    return getHintStyle();
+}
+
 
 /**** KFonts ****/
 
-KFonts::KFonts(QWidget *parent, const QVariantList &args)
-    :   KCModule(parent, args)
+KFonts::KFonts(QObject *parent, const QVariantList &args)
+    : KQuickAddons::ConfigModule(parent, args)
+    , m_fontsModel(new QStandardItemModel(this))
+    , m_fontAASettings(new FontAASettings(this))
 {
-    QStringList nameGroupKeyRc;
+    qApp->setAttribute(Qt::AA_DontCreateNativeWidgetSiblings);
+    KAboutData* about = new KAboutData("kcm_fonts", i18n("Configure Fonts"),
+                                       "0.1", QString(), KAboutLicense::LGPL);
+    about->addAuthor(i18n("Antonis Tsiapaliokas"), QString(), "antonis.tsiapaliokas@kde.org");
+    setAboutData(about);
+    qmlRegisterType<QStandardItemModel>();
+    setButtons(Apply | Default);
 
-    nameGroupKeyRc
-            << i18nc("font usage", "General")       << "General"    << "font"         << ""
-            << i18nc("font usage", "Fixed width")   << "General"    << "fixed"        << ""
-            << i18nc("font usage", "Small")         << "General"    << "smallestReadableFont" << ""
-            << i18nc("font usage", "Toolbar")       << "General"    << "toolBarFont"  << ""
-            << i18nc("font usage", "Menu")          << "General"    << "menuFont"     << ""
-            << i18nc("font usage", "Window title")  << "WM"         << "activeFont"   << "";
-
-    QList<QFont> defaultFontList;
-
-    // NOTE: keep in sync with plasma-integration/src/platformtheme/kfontsettingsdata.cpp
-
-#ifdef Q_OS_MACOS
-    QFont f0("Lucida Grande", 13); // general/menu/desktop
-    QFont f1("Monaco", 10);
-    QFont f2("Lucida Grande", 11); // toolbar
-#elif defined(Q_WS_MAEMO_5) || defined(MEEGO_EDITION_HARMATTAN)
-    QFont f0("Sans Serif", 16); // general/menu/desktop
-    QFont f1("Monospace", 16;
-    QFont f2("Sans Serif", 16); // toolbar
-#else
-    QFont f0("Noto Sans", 10); // general/menu/desktop
-    QFont f1("Hack", 9); // fixed font
-    QFont f2("Noto Sans", 10); // toolbar
-#endif
-#ifdef Q_OS_MACOS
-    QFont f3("Lucida Grande", 14); // window title
-    QFont f5("Lucida Grande", 9); // smallestReadableFont
-#else
-    QFont f3("Noto Sans", 10); // window title
-    QFont f5("Noto Sans", 8); // smallestReadableFont
-#endif
-
-    defaultFontList << f0 << f1 << f5 << f2 << f0 << f3;
-
-    QList<bool> fixedList;
-
-    fixedList
-            <<  false
-            <<  true
-            <<  false
-            <<  false
-            <<  false
-            <<  false;
-
-    QStringList quickHelpList;
-
-    quickHelpList
-            << i18n("Used for normal text (e.g. button labels, list items).")
-            << i18n("A non-proportional font (i.e. typewriter font).")
-            << i18n("Smallest font that is still readable well.")
-            << i18n("Used to display text beside toolbar icons.")
-            << i18n("Used by menu bars and popup menus.")
-            << i18n("Used by the window titlebar.");
-
-    QVBoxLayout *layout = new QVBoxLayout(this);
-    layout->setMargin(0);
-
-    QGridLayout *fontUseLayout = new QGridLayout();
-    layout->addLayout(fontUseLayout);
-    fontUseLayout->setColumnStretch(0, 0);
-    fontUseLayout->setColumnStretch(1, 1);
-    fontUseLayout->setColumnStretch(2, 0);
-
-    QList<QFont>::ConstIterator defaultFontIt(defaultFontList.begin());
-    QList<bool>::ConstIterator fixedListIt(fixedList.begin());
-    QStringList::ConstIterator quickHelpIt(quickHelpList.begin());
-    QStringList::ConstIterator it(nameGroupKeyRc.begin());
-
-    unsigned int count = 0;
-
-    while (it != nameGroupKeyRc.constEnd()) {
-        QString name = *it; it++;
-        QString group = *it; it++;
-        QString key = *it; it++;
-        QString file = *it; it++;
-
-        FontUseItem *i =
-            new FontUseItem(
-            this,
-            name,
-            group,
-            key,
-            file,
-            *defaultFontIt++,
-            *fixedListIt++
-        );
-
-        fontUseList.append(i);
-        connect(i, &KFontRequester::fontSelected, this, &KFonts::fontSelected);
-
-        QLabel *fontUse = new QLabel(i18nc("Font role", "%1: ", name), this);
-        fontUse->setAlignment(Qt::AlignRight | Qt::AlignVCenter);
-        fontUse->setWhatsThis(*quickHelpIt++);
-
-        fontUse->setBuddy(i);
-
-        fontUseLayout->addWidget(fontUse, count, 0);
-        fontUseLayout->addWidget(i, count, 1);
-
-        ++count;
-    }
-
-    QHBoxLayout *hblay = new QHBoxLayout();
-    layout->addLayout(hblay);
-    hblay->addStretch();
-    QPushButton *fontAdjustButton = new QPushButton(i18n("Ad&just All Fonts..."), this);
-    fontAdjustButton->setWhatsThis(i18n("Click to change all fonts"));
-    hblay->addWidget(fontAdjustButton);
-    connect(fontAdjustButton, &QAbstractButton::clicked, this, &KFonts::slotApplyFontDiff);
-
-    layout->addSpacing(style()->pixelMetric(QStyle::PM_LayoutVerticalSpacing));
-
-    QGridLayout *lay = new QGridLayout();
-    layout->addLayout(lay);
-    lay->setColumnStretch(3, 10);
-#if defined(HAVE_FONTCONFIG) && defined (HAVE_X11)
-    QLabel *label = 0L;
-    label = new QLabel(i18n("Use a&nti-aliasing:"), this);
-    label->setAlignment(Qt::AlignRight | Qt::AlignVCenter);
-    lay->addWidget(label, 0, 0);
-    cbAA = new QComboBox(this);
-    cbAA->insertItem(AAEnabled, i18nc("Use anti-aliasing", "Enabled"));    // change AASetting type if order changes
-    cbAA->insertItem(AASystem, i18nc("Use anti-aliasing", "System Settings"));
-    cbAA->insertItem(AADisabled, i18nc("Use anti-aliasing", "Disabled"));
-    cbAA->setWhatsThis(i18n("Select this option to smooth the edges of curves in fonts."));
-    aaSettingsButton = new QPushButton(i18n("Configure..."), this);
-    connect(aaSettingsButton, &QAbstractButton::clicked, this, &KFonts::slotCfgAa);
-    label->setBuddy(cbAA);
-    lay->addWidget(cbAA, 0, 1);
-    lay->addWidget(aaSettingsButton, 0, 2);
-    // Initialize aaSettingsButton state based on the current cbAA->currentIndex value, will be eventually updated at load()
-    slotUseAntiAliasing();
-
-    connect(cbAA, SIGNAL(currentIndexChanged(int)), SLOT(slotUseAntiAliasing()));
-#endif
-    checkboxForceDpi = new QCheckBox(i18n("Force fonts DPI:"), this);
-    lay->addWidget(checkboxForceDpi, 1, 0);
-    spinboxDpi = new QSpinBox(this);
-    spinboxDpi->setRange(1, 1000);
-    spinboxDpi->setSingleStep(24); // The common DPI values 72, 96 and 120 are multiples of 24
-    QString whatsthis = i18n(
-                            "<p>This option forces a specific DPI value for fonts. It may be useful"
-                            " when the real DPI of the hardware is not detected properly and it"
-                            " is also often misused when poor quality fonts are used that do not"
-                            " look well with DPI values other than 96 or 120 DPI.</p>"
-                            "<p>The use of this option is generally discouraged. For selecting proper DPI"
-                            " value a better option is explicitly configuring it for the whole X server if"
-                            " possible (e.g. DisplaySize in xorg.conf). When fonts do not render"
-                            " properly with real DPI value better fonts should be used or configuration"
-                            " of font hinting should be checked.</p>");
-    spinboxDpi->setWhatsThis(whatsthis);
-#if !defined(HAVE_X11) || !HAVE_X11
-    QString nothere = i18n("This property has no effect on this platform");
-    spinboxDpi->setToolTip(nothere);
-    checkboxForceDpi->setToolTip(nothere);
-#endif
-    checkboxForceDpi->setChecked(false);
-    spinboxDpi->setEnabled(false);
-    connect(spinboxDpi, SIGNAL(valueChanged(int)), SLOT(changed()));
-    connect(checkboxForceDpi, SIGNAL(toggled(bool)), SLOT(changed()));
-    connect(checkboxForceDpi, &QAbstractButton::toggled, spinboxDpi, &QWidget::setEnabled);
-    lay->addWidget(spinboxDpi, 1, 1);
-    layout->addStretch(1);
-
-#if defined(HAVE_FONTCONFIG) && defined (HAVE_X11)
-    aaSettings = new FontAASettings(this);
-#endif
-
+    QHash<int, QByteArray> roles = m_fontsModel->roleNames();
+    roles[CategoryRole] = "categoryName";
+    roles[StatusRole] = "statusName";
+    roles[FontRole] = "font";
+    m_fontsModel->setItemRoleNames(roles);
 }
 
 KFonts::~KFonts()
 {
-    QList<FontUseItem *>::Iterator it(fontUseList.begin()),
-          end(fontUseList.end());
-
-    for (; it != end; ++it) {
-        delete(*it);
-    }
-    fontUseList.clear();
-}
-
-void KFonts::fontSelected()
-{
-    emit changed(true);
 }
 
 void KFonts::defaults()
 {
-    for (int i = 0; i < (int) fontUseList.count(); i++) {
-        fontUseList.at(i)->setDefault();
+    QList<QFont> defaultFonts;
+#ifdef Q_OS_MAC
+    defaultFonts << QFont("Lucida Grande", 13) // general/menu/desktop
+        << QFont("Monaco", 10)
+        << QFont("Lucida Grande", 11); // toolbar
+#elif defined(Q_WS_MAEMO_5) || defined(MEEGO_EDITION_HARMATTAN)
+    defaultFonts << QFont("Sans Serif", 16) // general/menu/desktop
+        << QFont("Monospace", 16)
+        << QFont("Sans Serif", 16); // toolbar
+#else
+    defaultFonts << QFont("Oxygen-Sans", 10) // general/menu/desktop
+        <<QFont("Oxygen Mono", 9) // fixed font
+        << QFont("Oxygen-Sans", 8) //small
+        << QFont("Oxygen-Sans", 9); // toolbar
+#endif
+        defaultFonts
+            << QFont("Oxygen-Sans", 10) // smallestReadableFont
+            << QFont("Oxygen-Sans", 10); // window title
+
+    int count = 0;
+    for (const auto font : defaultFonts) {
+        updateFont(count, font);
+        count++;
     }
 
-#if defined(HAVE_FONTCONFIG) && defined (HAVE_X11)
-    useAA = AASystem;
-    cbAA->setCurrentIndex(useAA);
-    aaSettings->defaults();
-#endif
-    checkboxForceDpi->setChecked(false);
-    spinboxDpi->setValue(96);
-    emit changed(true);
+    m_fontAASettings->defaults();
 }
 
 void KFonts::load()
 {
-    QList<FontUseItem *>::Iterator it(fontUseList.begin()),
-          end(fontUseList.end());
+    QList<FontsType> fonts;
+    fonts << FontsType { "General:", "General", "font" }
+        << FontsType { "Fixed width:", "General", "fixed" }
+        << FontsType { "Small:", "General", "smallestReadableFont" }
+        << FontsType { "Toolbar:", "General", "toolBarFont" }
+        << FontsType { "Menu:", "General", "menuFont" }
+        << FontsType { "Window Title:", "WM", "activeFont" };
 
-    for (; it != end; ++it) {
-        (*it)->readFont();
+    KSharedConfig::Ptr config = KSharedConfig::openConfig("kdeglobals");
+    for (auto it : fonts) {
+
+        KConfigGroup cg(config, it.category);
+        QStandardItem *item = new QStandardItem(it.name);
+        item->setData(it.category, CategoryRole);
+        item->setData(it.status, StatusRole);
+
+        QFont font;
+        font.fromString(cg.readEntry(it.status));
+        item->setData(font, FontRole);
+
+        m_fontsModel->appendRow(item);
     }
 
-#if defined(HAVE_FONTCONFIG) && defined (HAVE_X11)
-    useAA_original = useAA = aaSettings->load() ? AAEnabled : AADisabled;
-    cbAA->setCurrentIndex(useAA);
-#endif
-
-    KConfig _cfgfonts("kcmfonts");
-    KConfigGroup cfgfonts(&_cfgfonts, "General");
-    int dpicfg;
-    if (KWindowSystem::isPlatformWayland()) {
-        dpicfg = cfgfonts.readEntry("forceFontDPIWayland", 0);
-    } else {
-        dpicfg = cfgfonts.readEntry("forceFontDPI", 0);
-    }
-
-    if (dpicfg <= 0) {
-        checkboxForceDpi->setChecked(false);
-        spinboxDpi->setValue(96);
-        dpi_original = 0;
-    } else {
-        checkboxForceDpi->setChecked(true);
-        spinboxDpi->setValue(dpicfg);
-        dpi_original = dpicfg;
-    };
-#if defined(HAVE_FONTCONFIG) && defined (HAVE_X11)
-    if (cfgfonts.readEntry("dontChangeAASettings", true)) {
-        useAA_original = useAA = AASystem;
-        cbAA->setCurrentIndex(useAA);
-    }
-#endif
-
-    emit changed(false);
+    m_fontAASettings->load();
 }
 
 void KFonts::save()
 {
-    QList<FontUseItem *>::Iterator it(fontUseList.begin()),
-          end(fontUseList.end());
+    KSharedConfig::Ptr config = KSharedConfig::openConfig("kdeglobals");
+    for (int i = 0; i < m_fontsModel->rowCount(); i++) {
+        QStandardItem *item = m_fontsModel->item(i);
 
-    for (; it != end; ++it) {
-        (*it)->writeFont();
+        KConfigGroup cg(config, item->data(CategoryRole).toString());
+        cg.writeEntry(item->data(StatusRole).toString(), item->data(FontRole).toString());
+        cg.sync();
     }
-
-    KSharedConfig::openConfig()->sync();
 
     KConfig _cfgfonts("kcmfonts");
     KConfigGroup cfgfonts(&_cfgfonts, "General");
-    int dpi = (checkboxForceDpi->isChecked() ? spinboxDpi->value() : 0);
-    if (KWindowSystem::isPlatformWayland()) {
-        cfgfonts.writeEntry("forceFontDPIWayland", dpi);
+
+    AASetting aaSetting = (AASetting)m_fontAASettings->antiAliasing();
+    cfgfonts.writeEntry("dontChangeAASettings", aaSetting == AASystem);
+    if (aaSetting == AAEnabled) {
+        m_fontAASettings->save(KXftConfig::AntiAliasing::Enabled);
+    } else if (aaSetting == AADisabled) {
+        m_fontAASettings->save(KXftConfig::AntiAliasing::Disabled);
     } else {
-        cfgfonts.writeEntry("forceFontDPI", dpi);
-    }
-#if defined(HAVE_FONTCONFIG) && defined (HAVE_X11)
-    cfgfonts.writeEntry("dontChangeAASettings", cbAA->currentIndex() == AASystem);
-#endif
-    cfgfonts.sync();
-#if HAVE_X11
-    // if the setting is reset in the module, remove the dpi value,
-    // otherwise don't explicitly remove it and leave any possible system-wide value
-    if (dpi == 0 && dpi_original != 0 && !KWindowSystem::isPlatformWayland()) {
-        QProcess proc;
-        proc.setProcessChannelMode(QProcess::ForwardedChannels);
-        proc.start("xrdb", QStringList() << "-quiet" << "-remove" << "-nocpp");
-        if (proc.waitForStarted()) {
-            proc.write(QByteArray("Xft.dpi\n"));
-            proc.closeWriteChannel();
-            proc.waitForFinished();
-        }
-    }
-#endif
-
-    KGlobalSettings::self()->emitChange(KGlobalSettings::FontChanged);
-
-    QApplication::processEvents();			// Process font change ourselves
-
-    // Don't overwrite global settings unless explicitly asked for - e.g. the system
-    // fontconfig setup may be much more complex than this module can provide.
-    // TODO: With AASystem the changes already made by this module should be reverted somehow.
-#if defined(HAVE_FONTCONFIG) && defined (HAVE_X11)
-    bool aaSave = false;
-    if (cbAA->currentIndex() == AAEnabled ) {
-        aaSave = aaSettings->save(KXftConfig::AntiAliasing::Enabled);
-    } else if (cbAA->currentIndex() == AADisabled) {
-        aaSave = aaSettings->save(KXftConfig::AntiAliasing::Disabled);
-    } else {
-        // If AASystem is selected, this removes all fontconfig settings made by
-        // this module.
-        aaSettings->defaults();
-        aaSave = aaSettings->save(KXftConfig::AntiAliasing::NotSet);
+        m_fontAASettings->save(KXftConfig::AntiAliasing::NotSet);
     }
 
-    if (aaSave || (useAA != useAA_original) || dpi != dpi_original) {
-        KMessageBox::information(this,
-                                 i18n(
-                                     "<p>Some changes such as anti-aliasing or DPI will only affect newly started applications.</p>"
-                                 ), i18n("Font Settings Changed"), "FontSettingsChanged");
-        useAA_original = useAA;
-        dpi_original = dpi;
-    }
-#else
-#if HAVE_X11
-    if (dpi != dpi_original) {
-        KMessageBox::information(this,
-                                 i18n(
-                                     "<p>Some changes such as DPI will only affect newly started applications.</p>"
-                                 ), i18n("Font Settings Changed"), "FontSettingsChanged");
-        dpi_original = dpi;
-    }
-#endif
-#endif
     runRdb(KRdbExportXftSettings | KRdbExportGtkTheme);
-
-    emit changed(false);
+    KGlobalSettings::self()->emitChange(KGlobalSettings::FontChanged);
+    emit fontsHaveChanged();
+    setNeedsSave(false);
 }
 
-void KFonts::slotApplyFontDiff()
+void KFonts::updateFont(int currentIndex, QFont font)
 {
-    QFont font = QFont(fontUseList.first()->font());
-    KFontChooser::FontDiffFlags fontDiffFlags = 0;
-    int ret = KFontDialog::getFontDiff(font, fontDiffFlags, KFontChooser::NoDisplayFlags, this);
+    QStandardItem *item = m_fontsModel->item(currentIndex);
+    item->setData(font, FontRole);
 
-    if (ret == KDialog::Accepted && fontDiffFlags) {
-        for (int i = 0; i < (int) fontUseList.count(); i++) {
-            fontUseList.at(i)->applyFontDiff(font, fontDiffFlags);
-        }
-        emit changed(true);
+    setNeedsSave(true);
+}
+
+
+void KFonts::adjustAllFonts(QFont font)
+{
+    for (int i = 0; i < m_fontsModel->rowCount(); i++) {
+        updateFont(i, font);
     }
-}
-
-void KFonts::slotUseAntiAliasing()
-{
-#if defined(HAVE_FONTCONFIG) && defined (HAVE_X11)
-    useAA = static_cast< AASetting >(cbAA->currentIndex());
-    aaSettingsButton->setEnabled(useAA == AAEnabled);
-    emit changed(true);
-#endif
-}
-
-void KFonts::slotCfgAa()
-{
-#if defined(HAVE_FONTCONFIG) && defined (HAVE_X11)
-    if (aaSettings->exec()) {
-        emit changed(true);
-    }
-#endif
 }
 
 #include "fonts.moc"
