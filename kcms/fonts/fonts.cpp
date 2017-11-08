@@ -397,6 +397,7 @@ void KFonts::load()
     setFixedWidthFont(font);
 
     m_fontAASettings->load();
+    setNeedsSave(false);
 }
 
 void KFonts::save()
