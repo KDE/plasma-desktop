@@ -344,6 +344,17 @@ KFonts::KFonts(QObject *parent, const QVariantList &args)
     setAboutData(about);
     qmlRegisterType<QStandardItemModel>();
     setButtons(Apply | Default);
+
+    auto updateState = [this]() {
+        setNeedsSave(true);
+    };
+
+    connect(m_fontAASettings, &FontAASettings::subPixelChanged, this, updateState);
+    connect(m_fontAASettings, &FontAASettings::hintingChanged, this, updateState);
+    connect(m_fontAASettings, &FontAASettings::excludeToChanged, this, updateState);
+    connect(m_fontAASettings, &FontAASettings::antiAliasingChanged, this, updateState);
+    connect(m_fontAASettings, &FontAASettings::aliasingChanged, this, updateState);
+    connect(m_fontAASettings, &FontAASettings::dpiChanged, this, updateState);
 }
 
 KFonts::~KFonts()

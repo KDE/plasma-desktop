@@ -209,17 +209,6 @@ Kirigami.ScrollablePage {
         }
     }
 
-    Connections {
-        target: kcm.fontAASettings
-        onSubPixelChanged: kcm.needsSave = true
-        onHintingChanged: kcm.needsSave = true
-        onExcludeToChanged: kcm.needsSave = true
-        onExcludeFromChanged: kcm.needsSave = true
-        //FIXME Those two signals are being emitted but the kcm.needsSave doesn't change.
-        //onDpiChanged: kcm.needsSave = true
-        //onAliasingChanged: kcm.needsSave = true;
-    }
-
     QtDialogs.FontDialog {
         id: fontDialog
         title: "Choose a font"
