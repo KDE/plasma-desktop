@@ -30,6 +30,7 @@
 #include <QWindow>
 #include <QQmlEngine>
 #include <QQuickView>
+#include <QDebug>
 
 #include <KAcceleratorManager>
 #include <KApplication>
@@ -38,7 +39,7 @@
 #include <KConfig>
 #include <KLocalizedString>
 #include <KPluginFactory>
-#include <QDebug>
+#include <KFontDialog>
 
 #include "../krdb/krdb.h"
 
@@ -541,14 +542,45 @@ QFont KFonts::windowTitleFont() const
     return m_windowTitleFont;
 }
 
-void KFonts::adjustAllFonts(QFont font)
+void KFonts::adjustAllFonts()
 {
-    setGeneralFont(font);
-    setMenuFont(font);
-    setFixedWidthFont(font);
-    setToolbarFont(font);
-    setSmallFont(font);
-    setWindowTitleFont(font);
+    QFont font = m_generalFont;
+    KFontChooser::FontDiffFlags fontDiffFlags = 0;
+    int ret = KFontDialog::getFontDiff(font, fontDiffFlags, KFontChooser::NoDisplayFlags);
+
+    if (ret == KDialog::Accepted && fontDiffFlags) {
+        setGeneralFont(applyFontDiff(m_generalFont, font, fontDiffFlags));
+        setMenuFont(applyFontDiff(m_menuFont, font, fontDiffFlags));
+        {
+            const QFont adjustedFont = applyFontDiff(m_fixedWidthFont, font, fontDiffFlags);
+            if (QFontInfo(adjustedFont).fixedPitch()) {
+                setFixedWidthFont(adjustedFont);
+            }
+        }
+        setToolbarFont(applyFontDiff(m_toolbarFont, font, fontDiffFlags));
+        setSmallFont(applyFontDiff(m_smallFont, font, fontDiffFlags));
+        setWindowTitleFont(applyFontDiff(m_windowTitleFont, font, fontDiffFlags));
+    }
+}
+
+QFont KFonts::applyFontDiff(const QFont &fnt, const QFont &newFont, int fontDiffFlags)
+{
+    QFont font(fnt);
+
+    if (fontDiffFlags & KFontChooser::FontDiffSize) {
+        font.setPointSizeF(newFont.pointSizeF());
+    }
+    if ((fontDiffFlags & KFontChooser::FontDiffFamily)) {
+        font.setFamily(newFont.family());
+    }
+    if (fontDiffFlags & KFontChooser::FontDiffStyle) {
+        font.setWeight(newFont.weight());
+        font.setStyle(newFont.style());
+        font.setUnderline(newFont.underline());
+        font.setStyleName(newFont.styleName());
+    }
+
+    return font;
 }
 
 #include "fonts.moc"

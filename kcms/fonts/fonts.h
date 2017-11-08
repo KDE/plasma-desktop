@@ -83,7 +83,7 @@ public:
 
     Q_INVOKABLE int subPixelCurrentIndex();
     Q_INVOKABLE int hintingCurrentIndex();
-
+    
 #endif
 
 Q_SIGNALS:
@@ -150,7 +150,7 @@ public Q_SLOTS:
     void load();
     void save();
     void defaults();
-    Q_INVOKABLE void adjustAllFonts(QFont);
+    Q_INVOKABLE void adjustAllFonts();
 
 Q_SIGNALS:
     void fontsHaveChanged();
@@ -163,6 +163,8 @@ Q_SIGNALS:
     void windowTitleFontChanged();
 
 private:
+    QFont applyFontDiff(const QFont &fnt, const QFont &newFont, int fontDiffFlags);
+
     enum AASetting { AAEnabled, AASystem, AADisabled };
 
     QFont m_generalFont;

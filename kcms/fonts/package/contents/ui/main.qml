@@ -38,8 +38,9 @@ Kirigami.ScrollablePage {
             text: i18n("Adjust All Fonts...")
 
             onClicked: {
+                kcm.adjustAllFonts();/*
                 fontDialog.adjustAllFonts = true;
-                fontDialog.open()
+                fontDialog.open()*/
             }
         }
 

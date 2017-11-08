@@ -46,6 +46,7 @@ RowLayout {
             fontDialog.adjustAllFonts = false;
             fontDialog.currentCategory = root.category
             fontDialog.font = root.font;
+            fontDialog.currentFont = root.font;
             fontDialog.open()
         }
     }
