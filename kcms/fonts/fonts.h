@@ -42,6 +42,7 @@ class FontAASettings : public QObject
     Q_PROPERTY(QAbstractItemModel *hintingOptionsModel READ hintingOptionsModel CONSTANT)
     Q_PROPERTY(QString subPixel READ subPixel WRITE setSubPixel NOTIFY subPixelChanged)
     Q_PROPERTY(QString hinting READ hinting WRITE setHinting NOTIFY hintingChanged)
+    Q_PROPERTY(bool exclude READ exclude WRITE setExclude NOTIFY excludeChanged)
     Q_PROPERTY(int excludeTo READ excludeTo WRITE setExcludeTo NOTIFY excludeToChanged)
     Q_PROPERTY(int excludeFrom READ excludeFrom WRITE setExcludeFrom NOTIFY excludeFromChanged)
     Q_PROPERTY(int antiAliasing READ antiAliasing WRITE setAntiAliasing NOTIFY aliasingChanged)
@@ -69,6 +70,9 @@ public:
     void setHinting(const QString &hinting);
     QString hinting() const;
 
+    void setExclude(bool exclude);
+    bool exclude() const;
+
     void setExcludeTo(const int &excludeTo);
     int excludeTo() const;
 
@@ -89,6 +93,7 @@ public:
 Q_SIGNALS:
     void subPixelChanged();
     void hintingChanged();
+    void excludeChanged();
     void excludeToChanged();
     void excludeFromChanged();
     void antiAliasingChanged();
@@ -105,6 +110,7 @@ private:
     int m_dpi;
     QStandardItemModel *m_subPixelOptionsModel;
     QStandardItemModel *m_hintingOptionsModel;
+    bool m_exclude = false;
 #endif
 };
 

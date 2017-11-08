@@ -74,10 +74,14 @@ void FontAASettings::load()
     if (xft.getExcludeRange(from, to)) {
         m_excludeFrom = from;
         m_excludeTo = to;
+        m_exclude = true;
     } else {
         m_excludeFrom = 8;
         m_excludeTo = 15;
+        m_exclude = false;
     }
+    excludeToChanged();
+    excludeFromChanged();
 
     KXftConfig::SubPixel::Type spType;
 
@@ -118,7 +122,11 @@ bool FontAASettings::save(KXftConfig::AntiAliasing::State aaState)
     KConfigGroup grp(&kglobals, "General");
 
     xft.setAntiAliasing(aaState);
-    xft.setExcludeRange(m_excludeFrom, m_excludeTo);
+    if (m_exclude) {
+        xft.setExcludeRange(m_excludeFrom, m_excludeTo);
+    } else {
+        xft.setExcludeRange(0, 0);
+    }
 
     KXftConfig::SubPixel::Type spType(getSubPixelType());
 
@@ -259,6 +267,21 @@ void FontAASettings::setHinting(const QString &hinting)
 QString FontAASettings::hinting() const
 {
     return m_hinting;
+}
+
+void FontAASettings::setExclude(bool exclude)
+{
+    if (exclude == m_exclude) {
+        return;
+    }
+
+    m_exclude = exclude;
+    emit excludeChanged();
+}
+
+bool FontAASettings::exclude() const
+{
+    return m_exclude;
 }
 
 void FontAASettings::setExcludeTo(const int &excludeTo)

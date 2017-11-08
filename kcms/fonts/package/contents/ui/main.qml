@@ -37,11 +37,7 @@ Kirigami.ScrollablePage {
             id: adjustAllFontsButton
             text: i18n("Adjust All Fonts...")
 
-            onClicked: {
-                kcm.adjustAllFonts();/*
-                fontDialog.adjustAllFonts = true;
-                fontDialog.open()*/
-            }
+            onClicked: kcm.adjustAllFonts();
         }
 
         FontWidget {
@@ -91,7 +87,8 @@ Kirigami.ScrollablePage {
 
         QtControls.CheckBox {
             id: excludeCheckBox
-            checked: excludeToSpinBox.value != 0 && excludeFromSpinBox.value != 0
+            checked: kcm.fontAASettings.exclude
+            onCheckedChanged: kcm.fontAASettings.exclude = checked;
             text: i18n("Exclude range from anti-aliasing")
             Layout.fillWidth: true
             visible: antiAliasingComboBox.currentIndex == 0
@@ -102,7 +99,6 @@ Kirigami.ScrollablePage {
             QtControls.SpinBox {
                 id: excludeFromSpinBox
                 stepSize: 1
-                value: kcm.fontAASettings.excludeFrom
                 onValueChanged: kcm.fontAASettings.excludeFrom = value
                 textFromValue: function(value, locale) { return i18n("%1 pt", value)}
                 enabled: excludeCheckBox.checked
@@ -115,10 +111,14 @@ Kirigami.ScrollablePage {
             QtControls.SpinBox {
                 id: excludeToSpinBox
                 stepSize: 1
-                value: kcm.fontAASettings.excludeTo
                 onValueChanged: kcm.fontAASettings.excludeTo = value
                 textFromValue: function(value, locale) { return i18n("%1 pt", value)}
                 enabled: excludeCheckBox.checked
+            }
+            Connections {
+                target: kcm.fontAASettings
+                onExcludeFromChanged: excludeFromSpinBox.value = kcm.fontAASettings.excludeFrom;
+                onExcludeToChanged: excludeToSpinBox.value = kcm.fontAASettings.excludeTo;
             }
         }
 
