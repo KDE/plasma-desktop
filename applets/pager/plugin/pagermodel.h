@@ -27,6 +27,7 @@ Free Software Foundation, Inc.,
 #include <QX11Info>
 #endif
 
+#include <qwindowdefs.h>
 #include <QAbstractListModel>
 #include <QQmlParserStatus>
 
