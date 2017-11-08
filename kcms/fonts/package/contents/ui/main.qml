@@ -78,27 +78,65 @@ Kirigami.ScrollablePage {
             Kirigami.FormData.isSection: true
         }
 
-        RowLayout {
+        QtControls.ComboBox {
+            id: antiAliasingComboBox
             Kirigami.FormData.label: i18n("Use anti-aliasing:")
 
-            QtControls.ComboBox {
-                id: antiAliasingComboBox
+            model: [i18n("Enabled"), i18n("System Settings"), i18n("Disabled")]
 
-                model: [i18n("Enabled"), i18n("System Settings"), i18n("Disabled")]
+            currentIndex: kcm.fontAASettings.antiAliasing
+            onCurrentIndexChanged: kcm.fontAASettings.antiAliasing = antiAliasingComboBox.currentIndex
+        }
 
-                currentIndex: kcm.fontAASettings.antiAliasing
-                onCurrentIndexChanged: kcm.fontAASettings.antiAliasing = antiAliasingComboBox.currentIndex
+        QtControls.CheckBox {
+            id: excludeCheckBox
+            checked: excludeToSpinBox.value != 0 && excludeFromSpinBox.value != 0
+            text: i18n("Exclude range from anti-aliasing")
+            Layout.fillWidth: true
+            visible: antiAliasingComboBox.currentIndex == 0
+        }
+
+        RowLayout {
+            visible: antiAliasingComboBox.currentIndex == 0
+            QtControls.SpinBox {
+                id: excludeFromSpinBox
+                stepSize: 1
+                value: kcm.fontAASettings.excludeFrom
+                onValueChanged: kcm.fontAASettings.excludeFrom = value
+                textFromValue: function(value, locale) { return i18n("%1 pt", value)}
+                enabled: excludeCheckBox.checked
             }
 
-            QtControls.Button {
-                text: i18n("Configure...")
-                enabled: antiAliasingComboBox.currentIndex == 0
+            QtControls.Label {
+                text: i18n("to")
+            }
 
-                onClicked: {
-                    advancedDialog.open()
-                }
+            QtControls.SpinBox {
+                id: excludeToSpinBox
+                stepSize: 1
+                value: kcm.fontAASettings.excludeTo
+                onValueChanged: kcm.fontAASettings.excludeTo = value
+                textFromValue: function(value, locale) { return i18n("%1 pt", value)}
+                enabled: excludeCheckBox.checked
             }
         }
+
+        QtControls.ComboBox {
+            Kirigami.FormData.label: i18n("Sub-pixel rendering type:")
+            currentIndex: kcm.fontAASettings.subPixelCurrentIndex()
+            model: kcm.fontAASettings.subPixelOptionsModel
+            textRole: "display"
+            visible: antiAliasingComboBox.currentIndex == 0
+        }
+
+        QtControls.ComboBox {
+            Kirigami.FormData.label: i18n("Hinting style:")
+            currentIndex: kcm.fontAASettings.hintingCurrentIndex()
+            model: kcm.fontAASettings.hintingOptionsModel
+            textRole: "display"
+            visible: antiAliasingComboBox.currentIndex == 0
+        }
+
         RowLayout {
             QtControls.CheckBox {
                 id: dpiCheckBox
@@ -122,89 +160,6 @@ Kirigami.ScrollablePage {
                 onValueChanged: kcm.fontAASettings.dpi = dpiSpinBox.value
                 to: 1000
                 from: 96
-            }
-        }
-    }
-
-
-    QtDialogs.Dialog {
-        id: advancedDialog
-        title: i18n("Configure Anti-Alias Settings")
-        standardButtons: QtDialogs.StandardButton.Ok | QtDialogs.StandardButton.Cancel
-
-        onAccepted: {
-           kcm.fontAASettings.subPixel = subPixelComboBox.currentText;
-           kcm.fontAASettings.hinting = hintingComboBox.currentText;
-           kcm.fontAASettings.excludeTo = excludeCheckBox.checked ? excludeToSpinBox.value : 0;
-           kcm.fontAASettings.excludeFrom = excludeCheckBox.checked ? excludeFromSpinBox.value : 0;
-        }
-
-        onVisibleChanged: {
-            //our dialog has open
-            if (advancedDialog.visible) {
-                subPixelComboBox.currentIndex = kcm.fontAASettings.subPixelCurrentIndex();
-                hintingComboBox.currentIndex = kcm.fontAASettings.hintingCurrentIndex();
-                excludeToSpinBox.value = kcm.fontAASettings.excludeTo;
-                excludeFromSpinBox.value = kcm.fontAASettings.excludeFrom;
-            }
-        }
-
-        ColumnLayout {
-            RowLayout {
-                QtControls.CheckBox {
-                    id: excludeCheckBox
-                    checked: excludeToSpinBox.value != 0 && excludeFromSpinBox.value != 0
-                    text: i18n("Exclude Range")
-                    Layout.fillWidth: true
-                }
-
-                QtControls.SpinBox {
-                    id: excludeFromSpinBox
-                    stepSize: 1
-                    textFromValue: function(value, locale) { return i18n("%1 pt", value)}
-                    enabled: excludeCheckBox.checked
-                }
-
-                QtControls.Label {
-                    text: i18n("to")
-                }
-
-                QtControls.SpinBox {
-                    id: excludeToSpinBox
-                    stepSize: 1
-                    textFromValue: function(value, locale) { return i18n("%1 pt", value)}
-                    enabled: excludeCheckBox.checked
-                }
-            }
-
-            RowLayout {
-                QtControls.Label{
-                    text: i18n("Sub-pixel rendering type:")
-                    Layout.fillWidth: true
-                    horizontalAlignment: Text.AlignRight
-                }
-
-                QtControls.ComboBox {
-                    id: subPixelComboBox
-                    currentIndex: kcm.fontAASettings.subPixelCurrentIndex()
-                    model: kcm.fontAASettings.subPixelOptionsModel
-                    textRole: "display"
-                }
-            }
-
-            RowLayout {
-                QtControls.Label {
-                    text: i18n("Hinting style:")
-                    Layout.fillWidth: true
-                    horizontalAlignment: Text.AlignRight
-                }
-
-                QtControls.ComboBox {
-                    id: hintingComboBox
-                    currentIndex: kcm.fontAASettings.hintingCurrentIndex()
-                    model: kcm.fontAASettings.hintingOptionsModel
-                    textRole: "display"
-                }
             }
         }
     }
