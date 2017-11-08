@@ -2,6 +2,8 @@
     Copyright 1997 Mark Donohoe
     Copyright 1999 Lars Knoll
     Copyright 2000 Rik Hemsley
+    Copyright 2015 Antonis Tsiapaliokas <antonis.tsiapaliokas@kde.org>
+    Copyright 2017 Marco Martin <mart@kde.org>
 
     Ported to kcontrol2 by Geert Jansen.
 
@@ -109,50 +111,67 @@ private:
 /**
  * The Desktop/fonts tab in kcontrol.
  */
-
-
-struct FontsType {
-    QString name;
-    QString category;
-    QString status;
-    QFont font;
-    QString fontName;
-};
-
 class KFonts : public KQuickAddons::ConfigModule
 {
     Q_OBJECT
-    Q_PROPERTY(QAbstractItemModel *fontsModel READ fontsModel CONSTANT)
+    Q_PROPERTY(QFont generalFont READ generalFont WRITE setGeneralFont NOTIFY generalFontChanged)
+    Q_PROPERTY(QFont fixedWidthFont READ fixedWidthFont WRITE setFixedWidthFont NOTIFY fixedWidthFontChanged)
+    Q_PROPERTY(QFont smallFont READ smallFont WRITE setSmallFont NOTIFY smallFontChanged)
+    Q_PROPERTY(QFont toolbarFont READ toolbarFont WRITE setToolbarFont NOTIFY toolbarFontChanged)
+    Q_PROPERTY(QFont menuFont READ menuFont WRITE setMenuFont NOTIFY menuFontChanged)
+    Q_PROPERTY(QFont windowTitleFont READ windowTitleFont WRITE setWindowTitleFont NOTIFY windowTitleFontChanged)
     Q_PROPERTY(QObject *fontAASettings READ fontAASettings CONSTANT)
 
 public:
-
-    enum Roles {
-        CategoryRole = Qt::UserRole + 1,
-        StatusRole,
-        FontRole
-    };
-
     KFonts(QObject *parent, const QVariantList &);
     ~KFonts();
 
+    void setGeneralFont(const QFont &font);
+    QFont generalFont() const;
 
-    QStandardItemModel* fontsModel() { return m_fontsModel; }
+    void setFixedWidthFont(const QFont &font);
+    QFont fixedWidthFont() const;
+
+    void setSmallFont(const QFont &font);
+    QFont smallFont() const;
+
+    void setToolbarFont(const QFont &font);
+    QFont toolbarFont() const;
+
+    void setMenuFont(const QFont &font);
+    QFont menuFont() const;
+
+    void setWindowTitleFont(const QFont &font);
+    QFont windowTitleFont() const;
+
     QObject* fontAASettings() { return m_fontAASettings; }
 
 public Q_SLOTS:
     void load();
     void save();
     void defaults();
-    Q_INVOKABLE void updateFont(int currentIndex, QFont font);
     Q_INVOKABLE void adjustAllFonts(QFont);
 
 Q_SIGNALS:
     void fontsHaveChanged();
 
+    void generalFontChanged();
+    void fixedWidthFontChanged();
+    void smallFontChanged();
+    void toolbarFontChanged();
+    void menuFontChanged();
+    void windowTitleFontChanged();
+
 private:
     enum AASetting { AAEnabled, AASystem, AADisabled };
-    QStandardItemModel *m_fontsModel;
+
+    QFont m_generalFont;
+    QFont m_fixedWidthFont;
+    QFont m_smallFont;
+    QFont m_toolbarFont;
+    QFont m_menuFont;
+    QFont m_windowTitleFont;
+
     FontAASettings *m_fontAASettings;
 };
 

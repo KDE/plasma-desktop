@@ -1,5 +1,6 @@
 /*
    Copyright (c) 2015 Antonis Tsiapaliokas <antonis.tsiapaliokas@kde.org>
+   Copyright (c) 2017 Marco Martin <mart@kde.org>
 
    This library is free software; you can redistribute it and/or
    modify it under the terms of the GNU Library General Public
@@ -20,7 +21,6 @@ import QtQuick 2.1
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.0 as QtControls
 import QtQuick.Dialogs 1.2 as QtDialogs
-//import QtQuick.Controls.Private 1.0
 import org.kde.kirigami 2.3 as Kirigami
 import org.kde.kcm 1.0
 
@@ -43,35 +43,37 @@ Kirigami.ScrollablePage {
             }
         }
 
-        Repeater {
-            model: kcm.fontsModel
-
-            delegate: RowLayout {
-                id: row
-                parent: formLayout
-
-                Kirigami.FormData.label: model.display
-
-                QtControls.TextField {
-                    enabled: false
-                    text: model.font.family + " " + model.font.pointSize
-                    font: model.font
-                    Layout.preferredHeight: fontButton.height
-                }
-
-                QtControls.Button {
-                    id: fontButton
-                    text: i18n("Choose...")
-                    onClicked: {
-                        fontDialog.adjustAllFonts = false;
-                        fontDialog.currentIndex = index;
-                        fontDialog.font = model.font;
-                        fontDialog.open()
-                    }
-                }
-            }
+        FontWidget {
+            label: i18n("General:")
+            category: "generalFont"
+            font: kcm.generalFont
         }
-
+        FontWidget {
+            label: i18n("Fixed width:")
+            category: "fixedWidthFont"
+            font: kcm.fixedWidthFont
+        }
+        FontWidget {
+            label: i18n("Small:")
+            category: "smallFont"
+            font: kcm.smallFont
+        }
+        FontWidget {
+            label: i18n("Toolbar:")
+            category: "toolbarFont"
+            font: kcm.toolbarFont
+        }
+        FontWidget {
+            label: i18n("Menu:")
+            category: "menuFont"
+            font: kcm.menuFont
+        }
+        FontWidget {
+            label: i18n("Window title:")
+            category: "windowTitleFont"
+            font: kcm.windowTitleFont
+        }
+        
         Kirigami.Separator {
             Kirigami.FormData.isSection: true
         }
@@ -221,13 +223,13 @@ Kirigami.ScrollablePage {
     QtDialogs.FontDialog {
         id: fontDialog
         title: "Choose a font"
-        property int currentIndex
+        property string currentCategory
         property bool adjustAllFonts: false
         onAccepted: {
             if (adjustAllFonts) {
-                kcm.adjustAllFonts(font)
+                kcm.adjustAllFonts(font);
             } else {
-                kcm.updateFont(currentIndex, font)
+                kcm[currentCategory] = font;
             }
         }
     }

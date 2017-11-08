@@ -2,6 +2,8 @@
     Copyright 1997 Mark Donohoe
     Copyright 1999 Lars Knoll
     Copyright 2000 Rik Hemsley
+    Copyright 2015 Antonis Tsiapaliokas <antonis.tsiapaliokas@kde.org>
+    Copyright 2017 Marco Martin <mart@kde.org>
 
     Ported to kcontrol2 by Geert Jansen.
 
@@ -333,7 +335,6 @@ int FontAASettings::hintingCurrentIndex()
 
 KFonts::KFonts(QObject *parent, const QVariantList &args)
     : KQuickAddons::ConfigModule(parent, args)
-    , m_fontsModel(new QStandardItemModel(this))
     , m_fontAASettings(new FontAASettings(this))
 {
     qApp->setAttribute(Qt::AA_DontCreateNativeWidgetSiblings);
@@ -343,12 +344,6 @@ KFonts::KFonts(QObject *parent, const QVariantList &args)
     setAboutData(about);
     qmlRegisterType<QStandardItemModel>();
     setButtons(Apply | Default);
-
-    QHash<int, QByteArray> roles = m_fontsModel->roleNames();
-    roles[CategoryRole] = "categoryName";
-    roles[StatusRole] = "statusName";
-    roles[FontRole] = "font";
-    m_fontsModel->setItemRoleNames(roles);
 }
 
 KFonts::~KFonts()
@@ -357,58 +352,49 @@ KFonts::~KFonts()
 
 void KFonts::defaults()
 {
-    QList<QFont> defaultFonts;
 #ifdef Q_OS_MAC
-    defaultFonts << QFont("Lucida Grande", 13) // general/menu/desktop
-        << QFont("Monaco", 10)
-        << QFont("Lucida Grande", 11); // toolbar
-#elif defined(Q_WS_MAEMO_5) || defined(MEEGO_EDITION_HARMATTAN)
-    defaultFonts << QFont("Sans Serif", 16) // general/menu/desktop
-        << QFont("Monospace", 16)
-        << QFont("Sans Serif", 16); // toolbar
+    setGeneralFont(QFont("Lucida Grande", 13));
+    setMenuFont(QFont("Lucida Grande", 13));
+    setFixedWidthFont(QFont("Monaco", 10));
+    setToolbarFont(QFont("Lucida Grande", 11));
+    setSmallFont(QFont("Lucida Grande", 9));
+    setWindowTitleFont(QFont("Lucida Grande", 14));
 #else
-    defaultFonts << QFont("Oxygen-Sans", 10) // general/menu/desktop
-        <<QFont("Oxygen Mono", 9) // fixed font
-        << QFont("Oxygen-Sans", 8) //small
-        << QFont("Oxygen-Sans", 9); // toolbar
+    setGeneralFont(QFont("Noto Sans", 10));
+    setMenuFont(QFont("Noto Sans", 10));
+    setFixedWidthFont(QFont("Hack", 9));
+    setToolbarFont(QFont("Noto Sans", 10));
+    setSmallFont(QFont("Noto Sans", 8));
+    setWindowTitleFont(QFont("Noto Sans", 10));
 #endif
-        defaultFonts
-            << QFont("Oxygen-Sans", 10) // smallestReadableFont
-            << QFont("Oxygen-Sans", 10); // window title
-
-    int count = 0;
-    for (const auto font : defaultFonts) {
-        updateFont(count, font);
-        count++;
-    }
 
     m_fontAASettings->defaults();
 }
 
 void KFonts::load()
 {
-    QList<FontsType> fonts;
-    fonts << FontsType { "General:", "General", "font" }
-        << FontsType { "Fixed width:", "General", "fixed" }
-        << FontsType { "Small:", "General", "smallestReadableFont" }
-        << FontsType { "Toolbar:", "General", "toolBarFont" }
-        << FontsType { "Menu:", "General", "menuFont" }
-        << FontsType { "Window Title:", "WM", "activeFont" };
-
     KSharedConfig::Ptr config = KSharedConfig::openConfig("kdeglobals");
-    for (auto it : fonts) {
 
-        KConfigGroup cg(config, it.category);
-        QStandardItem *item = new QStandardItem(it.name);
-        item->setData(it.category, CategoryRole);
-        item->setData(it.status, StatusRole);
+    KConfigGroup cg(config, "General");
+    QFont font;
+    font.fromString(cg.readEntry("font"));
+    setGeneralFont(font);
 
-        QFont font;
-        font.fromString(cg.readEntry(it.status));
-        item->setData(font, FontRole);
+    font.fromString(cg.readEntry("fixed"));
+    setFixedWidthFont(font);
 
-        m_fontsModel->appendRow(item);
-    }
+    font.fromString(cg.readEntry("smallestReadableFont"));
+    setFixedWidthFont(font);
+
+    font.fromString(cg.readEntry("toolBarFont"));
+    setFixedWidthFont(font);
+
+    font.fromString(cg.readEntry("menuFont"));
+    setFixedWidthFont(font);
+
+    cg = KConfigGroup(config, "WM");
+    font.fromString(cg.readEntry("activeFont"));
+    setFixedWidthFont(font);
 
     m_fontAASettings->load();
 }
@@ -416,13 +402,17 @@ void KFonts::load()
 void KFonts::save()
 {
     KSharedConfig::Ptr config = KSharedConfig::openConfig("kdeglobals");
-    for (int i = 0; i < m_fontsModel->rowCount(); i++) {
-        QStandardItem *item = m_fontsModel->item(i);
 
-        KConfigGroup cg(config, item->data(CategoryRole).toString());
-        cg.writeEntry(item->data(StatusRole).toString(), item->data(FontRole).toString());
-        cg.sync();
-    }
+    KConfigGroup cg(config, "General");
+    cg.writeEntry("font", m_generalFont.toString());
+    cg.writeEntry("fixed", m_generalFont.toString());
+    cg.writeEntry("smallestReadableFont", m_generalFont.toString());
+    cg.writeEntry("toolBarFont", m_generalFont.toString());
+    cg.writeEntry("menuFont", m_generalFont.toString());
+    cg.sync();
+    cg = KConfigGroup(config, "WM");
+    cg.writeEntry("activeFont", m_generalFont.toString());
+    cg.sync();
 
     KConfig _cfgfonts("kcmfonts");
     KConfigGroup cfgfonts(&_cfgfonts, "General");
@@ -443,20 +433,110 @@ void KFonts::save()
     setNeedsSave(false);
 }
 
-void KFonts::updateFont(int currentIndex, QFont font)
+void KFonts::setGeneralFont(const QFont &font)
 {
-    QStandardItem *item = m_fontsModel->item(currentIndex);
-    item->setData(font, FontRole);
+    if (m_generalFont == font) {
+        return;
+    }
 
+    m_generalFont = font;
+    emit generalFontChanged();
     setNeedsSave(true);
 }
 
+QFont KFonts::generalFont() const
+{
+    return m_generalFont;
+}
+
+void KFonts::setFixedWidthFont(const QFont &font)
+{
+    if (m_fixedWidthFont == font) {
+        return;
+    }
+
+    m_fixedWidthFont = font;
+    emit fixedWidthFontChanged();
+    setNeedsSave(true);
+}
+
+QFont KFonts::fixedWidthFont() const
+{
+    return m_fixedWidthFont;
+}
+
+void KFonts::setSmallFont(const QFont &font)
+{
+    if (m_smallFont == font) {
+        return;
+    }
+
+    m_smallFont = font;
+    emit smallFontChanged();
+    setNeedsSave(true);
+}
+
+QFont KFonts::smallFont() const
+{
+    return m_smallFont;
+}
+
+void KFonts::setToolbarFont(const QFont &font)
+{
+    if (m_toolbarFont == font) {
+        return;
+    }
+
+    m_toolbarFont = font;
+    emit toolbarFontChanged();
+    setNeedsSave(true);
+}
+
+QFont KFonts::toolbarFont() const
+{
+    return m_toolbarFont;
+}
+
+void KFonts::setMenuFont(const QFont &font)
+{
+    if (m_menuFont == font) {
+        return;
+    }
+
+    m_menuFont = font;
+    emit menuFontChanged();
+    setNeedsSave(true);
+}
+
+QFont KFonts::menuFont() const
+{
+    return m_menuFont;
+}
+
+void KFonts::setWindowTitleFont(const QFont &font)
+{
+    if (m_windowTitleFont == font) {
+        return;
+    }
+
+    m_windowTitleFont = font;
+    emit windowTitleFontChanged();
+    setNeedsSave(true);
+}
+
+QFont KFonts::windowTitleFont() const
+{
+    return m_windowTitleFont;
+}
 
 void KFonts::adjustAllFonts(QFont font)
 {
-    for (int i = 0; i < m_fontsModel->rowCount(); i++) {
-        updateFont(i, font);
-    }
+    setGeneralFont(font);
+    setMenuFont(font);
+    setFixedWidthFont(font);
+    setToolbarFont(font);
+    setSmallFont(font);
+    setWindowTitleFont(font);
 }
 
 #include "fonts.moc"
