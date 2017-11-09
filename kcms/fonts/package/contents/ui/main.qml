@@ -134,7 +134,8 @@ Kirigami.ScrollablePage {
             id: subPixelCombo
             Layout.preferredWidth: formLayout.maxImplicitWidth
             Kirigami.FormData.label: i18n("Sub-pixel rendering type:")
-            currentIndex: kcm.fontAASettings.subPixelCurrentIndex()
+            currentIndex: kcm.fontAASettings.subPixelCurrentIndex
+            onCurrentIndexChanged: kcm.fontAASettings.subPixelCurrentIndex = currentIndex;
             model: kcm.fontAASettings.subPixelOptionsModel
             textRole: "display"
             enabled: antiAliasingComboBox.currentIndex == 0
@@ -144,7 +145,8 @@ Kirigami.ScrollablePage {
             id: hintingCombo
             Layout.preferredWidth: formLayout.maxImplicitWidth
             Kirigami.FormData.label: i18n("Hinting style:")
-            currentIndex: kcm.fontAASettings.hintingCurrentIndex()
+            currentIndex: kcm.fontAASettings.hintingCurrentIndex
+            onCurrentTextChanged: kcm.fontAASettings.hintingCurrentIndex = currentIndex;
             model: kcm.fontAASettings.hintingOptionsModel
             textRole: "display"
             enabled: antiAliasingComboBox.currentIndex == 0

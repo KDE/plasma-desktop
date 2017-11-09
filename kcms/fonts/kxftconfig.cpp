@@ -469,6 +469,8 @@ const char *KXftConfig::toStr(SubPixel::Type t)
 {
     switch (t) {
     default:
+    case SubPixel::NotSet:
+        return "";
     case SubPixel::None:
         return "none";
     case SubPixel::Rgb:

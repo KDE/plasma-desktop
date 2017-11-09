@@ -110,8 +110,6 @@ FontAASettings::FontAASettings(QObject *parent)
     : QObject(parent)
     , m_subPixelOptionsModel(new QStandardItemModel(this))
     , m_hintingOptionsModel(new QStandardItemModel(this))
-    , m_subPixel(QString("System default"))
-    , m_hinting(QString("System default"))
 {
     for (int t = KXftConfig::SubPixel::NotSet; t <= KXftConfig::SubPixel::Vbgr; ++t) {
         QStandardItem *item = new QStandardItem(i18n(KXftConfig::description((KXftConfig::SubPixel::Type)t).toUtf8()));
@@ -132,19 +130,19 @@ void FontAASettings::load()
     if (xft.getExcludeRange(from, to)) {
         m_excludeFrom = from;
         m_excludeTo = to;
-        m_exclude = true;
+        setExclude(true);
     } else {
         m_excludeFrom = 8;
         m_excludeTo = 15;
-        m_exclude = false;
+        setExclude(false);
     }
     excludeToChanged();
     excludeFromChanged();
 
     KXftConfig::SubPixel::Type spType;
-
     xft.getSubPixelType(spType);
-    m_subPixel = KXftConfig::description(spType);
+
+    setSubPixelCurrentIndex(spType);
 
     KXftConfig::Hint::Style hStyle;
 
@@ -156,9 +154,9 @@ void FontAASettings::load()
         KConfigGroup(&kglobals, "General").writeEntry("XftHintStyle", KXftConfig::toStr(hStyle));
         kglobals.sync();
         runRdb(KRdbExportXftSettings | KRdbExportGtkTheme);
-    } else {
-        m_hinting = KXftConfig::description(hStyle);
     }
+
+    setHintingCurrentIndex(hStyle);
 
     KConfig _cfgfonts("kcmfonts");
     KConfigGroup cfgfonts(&_cfgfonts, "General");
@@ -178,9 +176,12 @@ void FontAASettings::load()
 
     setDpi(dpicfg);
 
+    KSharedConfig::Ptr config = KSharedConfig::openConfig("kdeglobals");
+    KConfigGroup cg(config, "General");
+
     if (cfgfonts.readEntry("dontChangeAASettings", true)) {
         setAntiAliasing(1); //AASystem
-    } else if (xft.aliasingEnabled()) {
+    } else if (cg.readEntry("XftAntialias", true)) {
         setAntiAliasing(0); //AAEnabled
     } else {
         setAntiAliasing(2); //AADisabled
@@ -201,18 +202,18 @@ bool FontAASettings::save(KXftConfig::AntiAliasing::State aaState)
         xft.setExcludeRange(0, 0);
     }
 
-    KXftConfig::SubPixel::Type spType(getSubPixelType());
+    KXftConfig::SubPixel::Type spType = (KXftConfig::SubPixel::Type)m_subPixelCurrentIndex;
 
     xft.setSubPixelType(spType);
     grp.writeEntry("XftSubPixel", KXftConfig::toStr(spType));
-    if (KXftConfig::AntiAliasing::NotSet == aaState) {
+    if (aaState == KXftConfig::AntiAliasing::NotSet) {
         grp.revertToDefault("XftAntialias");
     } else {
         grp.writeEntry("XftAntialias", aaState == KXftConfig::AntiAliasing::Enabled);
     }
 
     bool mod = false;
-    KXftConfig::Hint::Style hStyle(getHintStyle());
+    KXftConfig::Hint::Style hStyle = (KXftConfig::Hint::Style)m_hintingCurrentIndex;
 
     xft.setHintStyle(hStyle);
 
@@ -296,99 +297,11 @@ void FontAASettings::defaults()
     setAntiAliasing(1);
     m_antiAliasingOriginal = m_antiAliasing;
     setDpi(96);
-    setSubPixel(KXftConfig::description(KXftConfig::SubPixel::NotSet));
-    setHinting(KXftConfig::description(KXftConfig::Hint::NotSet));
-}
-
-int FontAASettings::getIndexSubPixel(KXftConfig::SubPixel::Type spType) const
-{
-    int pos = -1;
-    int index;
-
-    for (index = 0; index < m_subPixelOptionsModel->rowCount(); ++index) {
-        QStandardItem *item = m_subPixelOptionsModel->item(index);
-        if (item->text() == i18n(KXftConfig::description(spType).toUtf8())) {
-            pos = index;
-            break;
-        }
-    }
-
-    return pos;
-}
-
-KXftConfig::SubPixel::Type FontAASettings::getSubPixelType()
-{
-    int t;
-
-    for (t = KXftConfig::SubPixel::NotSet; t <= KXftConfig::SubPixel::Vbgr; ++t){
-        if (m_subPixel == i18n(KXftConfig::description((KXftConfig::SubPixel::Type)t).toUtf8())) {
-            return (KXftConfig::SubPixel::Type)t;
-        }
-    }
-    return KXftConfig::SubPixel::NotSet;
-}
-
-int FontAASettings::getIndexHint(KXftConfig::Hint::Style hStyle) const
-{
-    int pos = -1;
-    int index;
-
-    for (index = 0; index < m_hintingOptionsModel->rowCount(); ++index) {
-        QStandardItem *item = m_hintingOptionsModel->item(index);
-        if (item->text() == i18n(KXftConfig::description(hStyle).toUtf8())) {
-            pos = index;
-            break;
-        }
-    }
-
-    return pos;
-}
-
-KXftConfig::Hint::Style FontAASettings::getHintStyle()
-{
-    int s;
-
-    for (s = KXftConfig::Hint::NotSet; s <= KXftConfig::Hint::Full; ++s){
-        if (m_hinting == i18n(KXftConfig::description((KXftConfig::Hint::Style)s).toUtf8())) {
-            return (KXftConfig::Hint::Style)s;
-        }
-    }
-
-    return KXftConfig::Hint::Medium;
+    setSubPixelCurrentIndex(KXftConfig::SubPixel::NotSet);
+    setHintingCurrentIndex(KXftConfig::Hint::NotSet);
 }
 
 #endif
-
-void FontAASettings::setSubPixel(const QString &subPixel)
-{
-
-    if (m_subPixel == subPixel) {
-        return;
-    }
-
-    m_subPixel = subPixel;
-    emit subPixelChanged();
-}
-
-QString FontAASettings::subPixel() const
-{
-    return m_subPixel;
-}
-
-void FontAASettings::setHinting(const QString &hinting)
-{
-    if (m_hinting == hinting) {
-        return;
-    }
-
-    m_hinting = hinting;
-    emit hintingChanged();
-}
-
-QString FontAASettings::hinting() const
-{
-    return m_hinting;
-}
 
 void FontAASettings::setExclude(bool exclude)
 {
@@ -465,14 +378,34 @@ int FontAASettings::dpi() const
     return m_dpi;
 }
 
+void FontAASettings::setSubPixelCurrentIndex(int idx)
+{
+    if (m_subPixelCurrentIndex == idx) {
+        return;
+    }
+
+    m_subPixelCurrentIndex = idx;
+    emit subPixelCurrentIndexChanged();
+}
+
 int FontAASettings::subPixelCurrentIndex()
 {
-    return getSubPixelType();
+    return m_subPixelCurrentIndex;
+}
+
+void FontAASettings::setHintingCurrentIndex(int idx)
+{
+    if (m_hintingCurrentIndex == idx) {
+        return;
+    }
+
+    m_hintingCurrentIndex = idx;
+    emit hintingCurrentIndexChanged();
 }
 
 int FontAASettings::hintingCurrentIndex()
 {
-    return getHintStyle();
+    return m_hintingCurrentIndex;
 }
 
 
@@ -494,8 +427,8 @@ KFonts::KFonts(QObject *parent, const QVariantList &args)
         setNeedsSave(true);
     };
 
-    connect(m_fontAASettings, &FontAASettings::subPixelChanged, this, updateState);
-    connect(m_fontAASettings, &FontAASettings::hintingChanged, this, updateState);
+    connect(m_fontAASettings, &FontAASettings::subPixelCurrentIndexChanged, this, updateState);
+    connect(m_fontAASettings, &FontAASettings::hintingCurrentIndexChanged, this, updateState);
     connect(m_fontAASettings, &FontAASettings::excludeToChanged, this, updateState);
     connect(m_fontAASettings, &FontAASettings::antiAliasingChanged, this, updateState);
     connect(m_fontAASettings, &FontAASettings::aliasingChanged, this, updateState);

@@ -39,9 +39,10 @@ class FontAASettings : public QObject
     Q_OBJECT
 
     Q_PROPERTY(QAbstractItemModel *subPixelOptionsModel READ subPixelOptionsModel CONSTANT)
+    Q_PROPERTY(int subPixelCurrentIndex READ subPixelCurrentIndex WRITE setSubPixelCurrentIndex NOTIFY subPixelCurrentIndexChanged);
     Q_PROPERTY(QAbstractItemModel *hintingOptionsModel READ hintingOptionsModel CONSTANT)
-    Q_PROPERTY(QString subPixel READ subPixel WRITE setSubPixel NOTIFY subPixelChanged)
-    Q_PROPERTY(QString hinting READ hinting WRITE setHinting NOTIFY hintingChanged)
+    Q_PROPERTY(int hintingCurrentIndex READ hintingCurrentIndex WRITE setHintingCurrentIndex NOTIFY hintingCurrentIndexChanged);
+
     Q_PROPERTY(bool exclude READ exclude WRITE setExclude NOTIFY excludeChanged)
     Q_PROPERTY(int excludeTo READ excludeTo WRITE setExcludeTo NOTIFY excludeToChanged)
     Q_PROPERTY(int excludeFrom READ excludeFrom WRITE setExcludeFrom NOTIFY excludeFromChanged)
@@ -56,19 +57,9 @@ public:
     bool save(KXftConfig::AntiAliasing::State aaState);
     void load();
     void defaults();
-    int getIndexSubPixel(KXftConfig::SubPixel::Type spType) const;
-    KXftConfig::SubPixel::Type getSubPixelType();
-    int getIndexHint(KXftConfig::Hint::Style hStyle) const;
-    KXftConfig::Hint::Style getHintStyle();
     void setAntiAliasingState(KXftConfig::AntiAliasing::State aaState);
     QAbstractItemModel* subPixelOptionsModel() { return m_subPixelOptionsModel; }
     QAbstractItemModel* hintingOptionsModel() { return m_hintingOptionsModel; }
-
-    void setSubPixel(const QString &subPixel);
-    QString subPixel() const;
-
-    void setHinting(const QString &hinting);
-    QString hinting() const;
 
     void setExclude(bool exclude);
     bool exclude() const;
@@ -85,31 +76,33 @@ public:
     void setDpi(const int &dpi);
     int dpi() const;
 
-    Q_INVOKABLE int subPixelCurrentIndex();
-    Q_INVOKABLE int hintingCurrentIndex();
+    int subPixelCurrentIndex();
+    void setSubPixelCurrentIndex(int idx);
+    int hintingCurrentIndex();
+    void setHintingCurrentIndex(int idx);
     
 #endif
 
 Q_SIGNALS:
-    void subPixelChanged();
-    void hintingChanged();
     void excludeChanged();
     void excludeToChanged();
     void excludeFromChanged();
     void antiAliasingChanged();
     void aliasingChanged();
     void dpiChanged();
+    void subPixelCurrentIndexChanged();
+    void hintingCurrentIndexChanged();
 
 #if defined(HAVE_FONTCONFIG) && defined (HAVE_X11)
 private:
-    QString m_subPixel;
-    QString m_hinting;
     int m_excludeTo;
     int m_excludeFrom;
     int m_antiAliasing;
     int m_antiAliasingOriginal;
     int m_dpi;
     int m_dpiOriginal;
+    int m_subPixelCurrentIndex = 0;
+    int m_hintingCurrentIndex = 0;
     QStandardItemModel *m_subPixelOptionsModel;
     QStandardItemModel *m_hintingOptionsModel;
     bool m_exclude = false;
