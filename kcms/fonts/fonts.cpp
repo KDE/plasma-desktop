@@ -33,6 +33,7 @@
 #include <QDebug>
 #include <QFontDialog>
 #include <QApplication>
+#include <QFontDatabase>
 
 #include <KAcceleratorManager>
 #include <KGlobalSettings>
@@ -49,6 +50,59 @@
 
 /**** DLL Interface ****/
 K_PLUGIN_FACTORY_WITH_JSON(KFontsFactory, "kcm_fonts.json", registerPlugin<KFonts>();)
+
+//from KFontRequester
+// Determine if the font with given properties is available on the system,
+// otherwise find and return the best fitting combination.
+static QFont nearestExistingFont(const QFont &font)
+{
+    QFontDatabase dbase;
+
+    // Initialize font data accoring to given font object.
+    QString family = font.family();
+    QString style = dbase.styleString(font);
+    qreal size = font.pointSizeF();
+
+    // Check if the family exists.
+    const QStringList families = dbase.families();
+    if (!families.contains(family)) {
+        // Chose another family.
+        family = QFontInfo(font).family(); // the nearest match
+        if (!families.contains(family)) {
+            family = families.count() ? families.at(0) : QStringLiteral("fixed");
+        }
+    }
+
+    // Check if the family has the requested style.
+    // Easiest by piping it through font selection in the database.
+    QString retStyle = dbase.styleString(dbase.font(family, style, 10));
+    style = retStyle;
+
+    // Check if the family has the requested size.
+    // Only for bitmap fonts.
+    if (!dbase.isSmoothlyScalable(family, style)) {
+        QList<int> sizes = dbase.smoothSizes(family, style);
+        if (!sizes.contains(size)) {
+            // Find nearest available size.
+            int mindiff = 1000;
+            int refsize = size;
+            Q_FOREACH (int lsize, sizes) {
+                int diff = qAbs(refsize - lsize);
+                if (mindiff > diff) {
+                    mindiff = diff;
+                    size = lsize;
+                }
+            }
+        }
+    }
+
+    // Select the font with confirmed properties.
+    QFont result = dbase.font(family, style, int(size));
+    if (dbase.isSmoothlyScalable(family, style) && result.pointSize() == floor(size)) {
+        result.setPointSizeF(size);
+    }
+    return result;
+}
 
 /**** FontAASettings ****/
 #if defined(HAVE_FONTCONFIG) && defined (HAVE_X11)
@@ -479,23 +533,24 @@ void KFonts::load()
 
     KConfigGroup cg(config, "General");
     QFont font;
-    font.fromString(cg.readEntry("font"));
+    font = nearestExistingFont(cg.readEntry("font", m_defaultFont));
     setGeneralFont(font);
 
-    font.fromString(cg.readEntry("fixed"));
+
+    font = nearestExistingFont(cg.readEntry("fixed", m_defaultFont));
     setFixedWidthFont(font);
 
-    font.fromString(cg.readEntry("smallestReadableFont"));
+    font = nearestExistingFont(cg.readEntry("smallestReadableFont", m_defaultFont));
     setSmallFont(font);
 
-    font.fromString(cg.readEntry("toolBarFont"));
+    font = nearestExistingFont(cg.readEntry("toolBarFont", m_defaultFont));
     setToolbarFont(font);
 
-    font.fromString(cg.readEntry("menuFont"));
+    font = nearestExistingFont(cg.readEntry("menuFont", m_defaultFont));
     setMenuFont(font);
 
     cg = KConfigGroup(config, "WM");
-    font.fromString(cg.readEntry("activeFont"));
+    font = nearestExistingFont(cg.readEntry("activeFont", m_defaultFont));
     setWindowTitleFont(font);
 
     m_fontAASettings->load();
@@ -653,19 +708,6 @@ void KFonts::adjustAllFonts()
         setToolbarFont(applyFontDiff(m_toolbarFont, font, fontDiffFlags));
         setSmallFont(applyFontDiff(m_smallFont, font, fontDiffFlags));
         setWindowTitleFont(applyFontDiff(m_windowTitleFont, font, fontDiffFlags));
-    }
-}
-
-QFont KFonts::chooseFont(const QFont &font)
-{
-    QFontDialog d(font);
-    bool ok = false;
-    QFont ret = QFontDialog::getFont(&ok, font, 0, QString());
-
-    if (ok) {
-        return ret;
-    } else {
-        return font;
     }
 }
 

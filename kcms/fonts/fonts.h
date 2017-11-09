@@ -159,8 +159,6 @@ public Q_SLOTS:
     void save();
     void defaults();
     Q_INVOKABLE void adjustAllFonts();
-    //TODO: replace this with the new labs platform dialogs?
-    Q_INVOKABLE QFont chooseFont(const QFont &font);
 
 Q_SIGNALS:
     void fontsHaveChanged();
@@ -175,6 +173,7 @@ Q_SIGNALS:
 private:
     QFont applyFontDiff(const QFont &fnt, const QFont &newFont, int fontDiffFlags);
 
+    QFont m_defaultFont;
     QFont m_generalFont;
     QFont m_fixedWidthFont;
     QFont m_smallFont;
