@@ -33,8 +33,11 @@ Kirigami.ScrollablePage {
     Kirigami.FormLayout {
         id: formLayout
 
+        readonly property int maxImplicitWidth: Math.max(adjustAllFontsButton.implicitWidth, Math.max(antiAliasingComboBox.implicitWidth, Math.max(excludeField.implicitWidth, Math.max(subPixelCombo.implicitWidth, hintingCombo.implicitWidth))))
+
         QtControls.Button {
             id: adjustAllFontsButton
+            Layout.preferredWidth: formLayout.maxImplicitWidth
             text: i18n("Adjust All Fonts...")
 
             onClicked: kcm.adjustAllFonts();
@@ -77,6 +80,7 @@ Kirigami.ScrollablePage {
 
         QtControls.ComboBox {
             id: antiAliasingComboBox
+            Layout.preferredWidth: formLayout.maxImplicitWidth
             Kirigami.FormData.label: i18n("Use anti-aliasing:")
 
             model: [i18n("Enabled"), i18n("System Settings"), i18n("Disabled")]
@@ -91,11 +95,13 @@ Kirigami.ScrollablePage {
             onCheckedChanged: kcm.fontAASettings.exclude = checked;
             text: i18n("Exclude range from anti-aliasing")
             Layout.fillWidth: true
-            visible: antiAliasingComboBox.currentIndex == 0
+            enabled: antiAliasingComboBox.currentIndex == 0
         }
 
         RowLayout {
-            visible: antiAliasingComboBox.currentIndex == 0
+            id: excludeField
+            Layout.preferredWidth: formLayout.maxImplicitWidth
+            enabled: antiAliasingComboBox.currentIndex == 0
             QtControls.SpinBox {
                 id: excludeFromSpinBox
                 stepSize: 1
@@ -105,6 +111,8 @@ Kirigami.ScrollablePage {
             }
 
             QtControls.Label {
+                Layout.fillWidth: true
+                horizontalAlignment: Text.AlignHCenter
                 text: i18n("to")
             }
 
@@ -123,19 +131,23 @@ Kirigami.ScrollablePage {
         }
 
         QtControls.ComboBox {
+            id: subPixelCombo
+            Layout.preferredWidth: formLayout.maxImplicitWidth
             Kirigami.FormData.label: i18n("Sub-pixel rendering type:")
             currentIndex: kcm.fontAASettings.subPixelCurrentIndex()
             model: kcm.fontAASettings.subPixelOptionsModel
             textRole: "display"
-            visible: antiAliasingComboBox.currentIndex == 0
+            enabled: antiAliasingComboBox.currentIndex == 0
         }
 
         QtControls.ComboBox {
+            id: hintingCombo
+            Layout.preferredWidth: formLayout.maxImplicitWidth
             Kirigami.FormData.label: i18n("Hinting style:")
             currentIndex: kcm.fontAASettings.hintingCurrentIndex()
             model: kcm.fontAASettings.hintingOptionsModel
             textRole: "display"
-            visible: antiAliasingComboBox.currentIndex == 0
+            enabled: antiAliasingComboBox.currentIndex == 0
         }
 
         RowLayout {
