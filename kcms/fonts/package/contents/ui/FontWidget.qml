@@ -43,6 +43,8 @@ RowLayout {
         text: i18n("Choose...")
         Layout.fillHeight: true
         onClicked: {
+            kcm.chooseFont(root.font)
+            return;
             fontDialog.adjustAllFonts = false;
             fontDialog.currentCategory = root.category
             fontDialog.font = root.font;

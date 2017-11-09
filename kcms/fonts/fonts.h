@@ -49,7 +49,7 @@ class FontAASettings : public QObject
     Q_PROPERTY(int dpi READ dpi WRITE setDpi NOTIFY dpiChanged)
 
 public:
-
+    enum AASetting { AAEnabled, AASystem, AADisabled };
 #if defined(HAVE_FONTCONFIG) && defined (HAVE_X11)
     FontAASettings(QObject *parent);
 
@@ -107,7 +107,9 @@ private:
     int m_excludeTo;
     int m_excludeFrom;
     int m_antiAliasing;
+    int m_antiAliasingOriginal;
     int m_dpi;
+    int m_dpiOriginal;
     QStandardItemModel *m_subPixelOptionsModel;
     QStandardItemModel *m_hintingOptionsModel;
     bool m_exclude = false;
@@ -157,6 +159,8 @@ public Q_SLOTS:
     void save();
     void defaults();
     Q_INVOKABLE void adjustAllFonts();
+    //TODO: replace this with the new labs platform dialogs?
+    Q_INVOKABLE QFont chooseFont(const QFont &font);
 
 Q_SIGNALS:
     void fontsHaveChanged();
@@ -170,8 +174,6 @@ Q_SIGNALS:
 
 private:
     QFont applyFontDiff(const QFont &fnt, const QFont &newFont, int fontDiffFlags);
-
-    enum AASetting { AAEnabled, AASystem, AADisabled };
 
     QFont m_generalFont;
     QFont m_fixedWidthFont;

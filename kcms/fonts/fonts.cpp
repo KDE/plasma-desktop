@@ -31,15 +31,19 @@
 #include <QQmlEngine>
 #include <QQuickView>
 #include <QDebug>
+#include <QFontDialog>
+#include <QApplication>
 
 #include <KAcceleratorManager>
-#include <KApplication>
 #include <KGlobalSettings>
 #include <KConfigGroup>
 #include <KConfig>
+#include <KAboutData>
 #include <KLocalizedString>
 #include <KPluginFactory>
 #include <KFontDialog>
+#include <KWindowSystem>
+#include <KMessageBox>
 
 #include "../krdb/krdb.h"
 
@@ -104,7 +108,21 @@ void FontAASettings::load()
 
     KConfig _cfgfonts("kcmfonts");
     KConfigGroup cfgfonts(&_cfgfonts, "General");
-    setDpi(cfgfonts.readEntry("forceFontDPI", 0));
+
+    int dpicfg;
+    if (KWindowSystem::isPlatformWayland()) {
+        dpicfg = cfgfonts.readEntry("forceFontDPIWayland", 0);
+    } else {
+        dpicfg = cfgfonts.readEntry("forceFontDPI", 0);
+    }
+
+    if (dpicfg <= 0) {
+        m_dpiOriginal = 0;
+    } else {
+        m_dpiOriginal = dpicfg;
+    };
+
+    setDpi(dpicfg);
 
     if (cfgfonts.readEntry("dontChangeAASettings", true)) {
         setAntiAliasing(1); //AASystem
@@ -113,6 +131,7 @@ void FontAASettings::load()
     } else {
         setAntiAliasing(2); //AADisabled
     }
+    m_antiAliasingOriginal = m_antiAliasing;
 }
 
 bool FontAASettings::save(KXftConfig::AntiAliasing::State aaState)
@@ -163,8 +182,55 @@ bool FontAASettings::save(KXftConfig::AntiAliasing::State aaState)
 
     KConfig _cfgfonts("kcmfonts");
     KConfigGroup cfgfonts(&_cfgfonts, "General");
-    cfgfonts.writeEntry("forceFontDPI", m_dpi);
+
+    if (KWindowSystem::isPlatformWayland()) {
+        cfgfonts.writeEntry("forceFontDPIWayland", m_dpi);
+    } else {
+        cfgfonts.writeEntry("forceFontDPI", m_dpi);
+    }
+
     cfgfonts.sync();
+
+#if HAVE_X11
+    // if the setting is reset in the module, remove the dpi value,
+    // otherwise don't explicitly remove it and leave any possible system-wide value
+    if (m_dpi == 0 && m_dpiOriginal != 0 && !KWindowSystem::isPlatformWayland()) {
+        QProcess proc;
+        proc.setProcessChannelMode(QProcess::ForwardedChannels);
+        proc.start("xrdb", QStringList() << "-quiet" << "-remove" << "-nocpp");
+        if (proc.waitForStarted()) {
+            proc.write(QByteArray("Xft.dpi\n"));
+            proc.closeWriteChannel();
+            proc.waitForFinished();
+        }
+    }
+#endif
+
+    QApplication::processEvents();			// Process font change ourselves
+
+    // Don't overwrite global settings unless explicitly asked for - e.g. the system
+    // fontconfig setup may be much more complex than this module can provide.
+    // TODO: With AASystem the changes already made by this module should be reverted somehow.
+#if defined(HAVE_FONTCONFIG) && defined (HAVE_X11)
+    if (mod || (m_antiAliasing != m_antiAliasingOriginal) || m_dpi != m_dpiOriginal) {
+        KMessageBox::information(0,
+                                 i18n(
+                                     "<p>Some changes such as anti-aliasing or DPI will only affect newly started applications.</p>"
+                                 ), i18n("Font Settings Changed"), "FontSettingsChanged");
+        m_antiAliasingOriginal = m_antiAliasing;
+        m_dpiOriginal = m_dpi;
+    }
+#else
+#if HAVE_X11
+    if (m_dpi != m_dpiOriginal) {
+        KMessageBox::information(0,
+                                 i18n(
+                                     "<p>Some changes such as DPI will only affect newly started applications.</p>"
+                                 ), i18n("Font Settings Changed"), "FontSettingsChanged");
+        m_dpiOriginal = m_dpi;
+    }
+#endif
+#endif
 
     return mod;
 }
@@ -174,6 +240,7 @@ void FontAASettings::defaults()
     setExcludeTo(15);
     setExcludeFrom(8);
     setAntiAliasing(1);
+    m_antiAliasingOriginal = m_antiAliasing;
     setDpi(96);
     setSubPixel(KXftConfig::description(KXftConfig::SubPixel::NotSet));
     setHinting(KXftConfig::description(KXftConfig::Hint::NotSet));
@@ -419,17 +486,17 @@ void KFonts::load()
     setFixedWidthFont(font);
 
     font.fromString(cg.readEntry("smallestReadableFont"));
-    setFixedWidthFont(font);
+    setSmallFont(font);
 
     font.fromString(cg.readEntry("toolBarFont"));
-    setFixedWidthFont(font);
+    setToolbarFont(font);
 
     font.fromString(cg.readEntry("menuFont"));
-    setFixedWidthFont(font);
+    setMenuFont(font);
 
     cg = KConfigGroup(config, "WM");
     font.fromString(cg.readEntry("activeFont"));
-    setFixedWidthFont(font);
+    setWindowTitleFont(font);
 
     m_fontAASettings->load();
     setNeedsSave(false);
@@ -441,30 +508,33 @@ void KFonts::save()
 
     KConfigGroup cg(config, "General");
     cg.writeEntry("font", m_generalFont.toString());
-    cg.writeEntry("fixed", m_generalFont.toString());
-    cg.writeEntry("smallestReadableFont", m_generalFont.toString());
-    cg.writeEntry("toolBarFont", m_generalFont.toString());
-    cg.writeEntry("menuFont", m_generalFont.toString());
+    cg.writeEntry("fixed", m_fixedWidthFont.toString());
+    cg.writeEntry("smallestReadableFont", m_smallFont.toString());
+    cg.writeEntry("toolBarFont", m_toolbarFont.toString());
+    cg.writeEntry("menuFont", m_menuFont.toString());
     cg.sync();
     cg = KConfigGroup(config, "WM");
-    cg.writeEntry("activeFont", m_generalFont.toString());
+    cg.writeEntry("activeFont", m_windowTitleFont.toString());
     cg.sync();
 
     KConfig _cfgfonts("kcmfonts");
     KConfigGroup cfgfonts(&_cfgfonts, "General");
 
-    AASetting aaSetting = (AASetting)m_fontAASettings->antiAliasing();
-    cfgfonts.writeEntry("dontChangeAASettings", aaSetting == AASystem);
-    if (aaSetting == AAEnabled) {
+    FontAASettings::AASetting aaSetting = (FontAASettings::AASetting)m_fontAASettings->antiAliasing();
+    cfgfonts.writeEntry("dontChangeAASettings", aaSetting == FontAASettings::AASystem);
+
+    if (aaSetting == FontAASettings::AAEnabled) {
         m_fontAASettings->save(KXftConfig::AntiAliasing::Enabled);
-    } else if (aaSetting == AADisabled) {
+    } else if (aaSetting == FontAASettings::AADisabled) {
         m_fontAASettings->save(KXftConfig::AntiAliasing::Disabled);
     } else {
         m_fontAASettings->save(KXftConfig::AntiAliasing::NotSet);
     }
 
-    runRdb(KRdbExportXftSettings | KRdbExportGtkTheme);
     KGlobalSettings::self()->emitChange(KGlobalSettings::FontChanged);
+
+    runRdb(KRdbExportXftSettings | KRdbExportGtkTheme);
+
     emit fontsHaveChanged();
     setNeedsSave(false);
 }
@@ -583,6 +653,19 @@ void KFonts::adjustAllFonts()
         setToolbarFont(applyFontDiff(m_toolbarFont, font, fontDiffFlags));
         setSmallFont(applyFontDiff(m_smallFont, font, fontDiffFlags));
         setWindowTitleFont(applyFontDiff(m_windowTitleFont, font, fontDiffFlags));
+    }
+}
+
+QFont KFonts::chooseFont(const QFont &font)
+{
+    QFontDialog d(font);
+    bool ok = false;
+    QFont ret = QFontDialog::getFont(&ok, font, 0, QString());
+
+    if (ok) {
+        return ret;
+    } else {
+        return font;
     }
 }
 

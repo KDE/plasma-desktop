@@ -38,7 +38,7 @@ Kirigami.ScrollablePage {
         QtControls.Button {
             id: adjustAllFontsButton
             Layout.preferredWidth: formLayout.maxImplicitWidth
-            text: i18n("Adjust All Fonts...")
+            text: i18n("&Adjust All Fonts...")
 
             onClicked: kcm.adjustAllFonts();
         }
@@ -189,17 +189,6 @@ Kirigami.ScrollablePage {
                 kcm[currentCategory] = font;
             }
         }
-    }
-
-    QtDialogs.MessageDialog {
-        id: messageDialog
-        title: i18n("Settings Have Changed")
-        text: i18n("Some changes such as anti-aliasing or DPI will only affect newly started applications.")
-    }
-
-    Connections {
-        target: kcm
-        onFontsHaveChanged: messageDialog.open()
     }
 }
 
