@@ -112,12 +112,12 @@ FontAASettings::FontAASettings(QObject *parent)
     , m_hintingOptionsModel(new QStandardItemModel(this))
 {
     for (int t = KXftConfig::SubPixel::NotSet; t <= KXftConfig::SubPixel::Vbgr; ++t) {
-        QStandardItem *item = new QStandardItem(i18n(KXftConfig::description((KXftConfig::SubPixel::Type)t).toUtf8()));
+        QStandardItem *item = new QStandardItem(KXftConfig::description((KXftConfig::SubPixel::Type)t));
         m_subPixelOptionsModel->appendRow(item);
     }
 
     for (int s = KXftConfig::Hint::NotSet; s <= KXftConfig::Hint::Full; ++s) {
-        QStandardItem * item = new QStandardItem(i18n(KXftConfig::description((KXftConfig::Hint::Style)s).toUtf8()));
+        QStandardItem * item = new QStandardItem(KXftConfig::description((KXftConfig::Hint::Style)s));
         m_hintingOptionsModel->appendRow(item);
     }
 }

@@ -85,7 +85,7 @@ Kirigami.ScrollablePage {
             Layout.preferredWidth: formLayout.maxImplicitWidth
             Kirigami.FormData.label: i18n("Use anti-aliasing:")
 
-            model: [i18n("Enabled"), i18n("System Settings"), i18n("Disabled")]
+            model: [i18n("Enabled"), i18n("Vendor Default"), i18n("Disabled")]
 
             currentIndex: kcm.fontAASettings.antiAliasing
             onCurrentIndexChanged: kcm.fontAASettings.antiAliasing = antiAliasingComboBox.currentIndex
