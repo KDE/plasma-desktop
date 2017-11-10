@@ -38,12 +38,15 @@ Kirigami.Page {
 
     QtControls.ScrollView {
         id: scroll
+        property int cellWidth: Kirigami.Units.gridUnit * 10
+        property int scrollBarSpace: Kirigami.Units.gridUnit*2
         anchors {
             top: parent.top
             bottom: parent.bottom
             horizontalCenter: parent.horizontalCenter
         }
-        width: Math.floor((root.width - Kirigami.Units.gridUnit*2) / view.cellWidth) * view.cellWidth + Kirigami.Units.gridUnit*2
+        width: Math.max( Math.min(root.width, cellWidth * 2 + scroll.scrollBarSpace)
+                    , Math.floor((root.width - scroll.scrollBarSpace) / cellWidth) * cellWidth + scroll.scrollBarSpace)
         activeFocusOnTab: false
 
         GridView {
@@ -56,8 +59,8 @@ Kirigami.Page {
             contentItem.x: Math.round((width - Math.floor(width / cellWidth) * cellWidth) / 2)
             clip: true
             activeFocusOnTab: true
-            cellWidth: Kirigami.Units.gridUnit * 10
-            cellHeight: cellWidth / 1.6 + Kirigami.Units.gridUnit*2
+            cellWidth: Math.min(Math.floor(width / 2), scroll.cellWidth)
+            cellHeight: cellWidth / 1.6 + scroll.scrollBarSpace
             keyNavigationEnabled: true
             keyNavigationWraps: true
             highlightMoveDuration: 0
