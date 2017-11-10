@@ -33,6 +33,7 @@ Kirigami.ScrollablePage {
     Kirigami.FormLayout {
         id: formLayout
 
+        wideMode: root.width > generalFontWidget.width*1.5
         readonly property int maxImplicitWidth: Math.max(adjustAllFontsButton.implicitWidth, Math.max(antiAliasingComboBox.implicitWidth, Math.max(excludeField.implicitWidth, Math.max(subPixelCombo.implicitWidth, hintingCombo.implicitWidth))))
 
         QtControls.Button {
@@ -44,6 +45,7 @@ Kirigami.ScrollablePage {
         }
 
         FontWidget {
+            id: generalFontWidget
             label: i18n("General:")
             category: "generalFont"
             font: kcm.generalFont
