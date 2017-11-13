@@ -112,6 +112,11 @@ add_feature_info("Evdev" EVDEV_FOUND "Evdev driver headers needed for input KCM"
 find_package(Synaptics)
 set_package_properties(Synaptics PROPERTIES TYPE OPTIONAL)
 add_feature_info("Synaptics" SYNAPTICS_FOUND "Synaptics libraries needed for touchpad KCM")
+
+find_package(XorgLibinput)
+set_package_properties(XorgLibinput PROPERTIES TYPE OPTIONAL)
+add_feature_info("XorgLibinput" XORGLIBINPUT_FOUND "Libinput driver headers needed for input KCM")
+
 include(ConfigureChecks.cmake)
 
 if(${Qt5Gui_OPENGL_IMPLEMENTATION} STREQUAL "GL")

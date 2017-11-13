@@ -35,6 +35,8 @@ public:
 
     void load() override;
     bool supportScrollPolarity() override;
+    QStringList supportedAccelerationProfiles() override;
+    QString accelerationProfile() override;
     double accelRate() override;
     MouseHanded handed() override;
     int threshold() override;
@@ -46,9 +48,18 @@ public:
 private:
     void initAtom();
     bool evdevApplyReverseScroll(int deviceid, bool reverse);
+    bool libinputApplyReverseScroll(int deviceid, bool reverse);
+    void libinputApplyAccelerationProfile(int deviceid, QString profile);
+
+    Atom m_libinputAccelProfileAvailableAtom;
+    Atom m_libinputAccelProfileEnabledAtom;
+    Atom m_libinputNaturalScrollAtom;
+
     Atom m_evdevWheelEmulationAtom;
     Atom m_evdevScrollDistanceAtom;
     Atom m_evdevWheelEmulationAxesAtom;
+
+    Atom m_touchpadAtom;
     // We may still need to do something on non-X11 platform due to Xwayland.
     Display* m_dpy;
     bool m_platformX11;
@@ -57,6 +68,8 @@ private:
     double m_accelRate = 1.0;
     int m_threshold = 0;
     int m_middleButton = -1;
+    QStringList m_supportedAccelerationProfiles;
+    QString m_accelerationProfile;
 };
 
 #endif // XLIBMOUSEBACKEND_H

@@ -52,6 +52,7 @@ void MouseSettings::load(KConfig *config, MouseBackend *backend)
         }
         accel = backend->accelRate();
         threshold = backend->threshold();
+        profile = backend->accelerationProfile();
     }
 
     KConfigGroup group = config->group("Mouse");
@@ -73,6 +74,10 @@ void MouseSettings::load(KConfig *config, MouseBackend *backend)
     else if (key == "LeftHanded")
         handed = MouseHanded::Left;
     reverseScrollPolarity = group.readEntry("ReverseScrollPolarity", false);
+    currentAccelProfile = group.readEntry("AccelerationProfile");
+    if (currentAccelProfile.isEmpty()) {
+        currentAccelProfile = profile;
+    }
     handedNeedsApply = false;
 
     // SC/DC/AutoSelect/ChangeCursor
@@ -119,6 +124,7 @@ void MouseSettings::save(KConfig *config)
         kcminputGroup.writeEntry("MouseButtonMapping",QString("LeftHanded"));
     }
     kcminputGroup.writeEntry("ReverseScrollPolarity", reverseScrollPolarity);
+    kcminputGroup.writeEntry("AccelerationProfile", currentAccelProfile);
     kcminputGroup.sync();
 
     KSharedConfig::Ptr profile = KSharedConfig::openConfig("kdeglobals");

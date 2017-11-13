@@ -40,6 +40,8 @@ public:
 
     // Return the value from display server or compositor if applicable.
     virtual bool supportScrollPolarity() = 0;
+    virtual QStringList supportedAccelerationProfiles() = 0;
+    virtual QString accelerationProfile() = 0;
     virtual double accelRate() = 0;
     virtual int threshold() = 0;
     virtual MouseHanded handed() = 0;

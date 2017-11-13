@@ -22,7 +22,9 @@
 
 #include <QFile>
 #include <QX11Info>
+#include <KLocalizedString>
 #include <evdev-properties.h>
+#include <libinput-properties.h>
 
 #include <X11/X.h>
 #include <X11/Xlib.h>
@@ -34,6 +36,10 @@
 #  include <X11/Xcursor/Xcursor.h>
 #include <X11/extensions/XInput.h>
 #endif
+
+static const char PROFILE_NONE[] = I18N_NOOP("None");
+static const char PROFILE_ADAPTIVE[] = I18N_NOOP("Adaptive");
+static const char PROFILE_FLAT[] = I18N_NOOP("Flat");
 
 struct ScopedXDeleter {
     static inline void cleanup(void* pointer)
@@ -94,9 +100,15 @@ void X11MouseBackend::initAtom()
         return;
     }
 
+    m_libinputAccelProfileAvailableAtom = XInternAtom(m_dpy, LIBINPUT_PROP_ACCEL_PROFILES_AVAILABLE, True);
+    m_libinputAccelProfileEnabledAtom = XInternAtom(m_dpy, LIBINPUT_PROP_ACCEL_PROFILE_ENABLED, True);
+    m_libinputNaturalScrollAtom = XInternAtom(m_dpy, LIBINPUT_PROP_NATURAL_SCROLL, True);
+
     m_evdevScrollDistanceAtom = XInternAtom(m_dpy, EVDEV_PROP_SCROLL_DISTANCE, True);
     m_evdevWheelEmulationAtom = XInternAtom(m_dpy, EVDEV_PROP_WHEEL, True);
     m_evdevWheelEmulationAxesAtom = XInternAtom(m_dpy, EVDEV_PROP_WHEEL_AXES, True);
+
+    m_touchpadAtom = XInternAtom(m_dpy, XI_TOUCHPAD, True);
 }
 
 
@@ -110,6 +122,16 @@ X11MouseBackend::~X11MouseBackend()
 bool X11MouseBackend::supportScrollPolarity()
 {
     return m_numButtons >= 5;
+}
+
+QStringList X11MouseBackend::supportedAccelerationProfiles()
+{
+    return m_supportedAccelerationProfiles;
+}
+
+QString X11MouseBackend::accelerationProfile()
+{
+    return m_accelerationProfile;
 }
 
 double X11MouseBackend::accelRate()
@@ -159,6 +181,62 @@ void X11MouseBackend::load()
             m_handed = MouseHanded::Left;
         }
     }
+
+    m_supportedAccelerationProfiles.clear();
+    bool adaptiveAvailable = false;
+    bool flatAvailable = false;
+    bool adaptiveEnabled = false;
+    bool flatEnabled = false;
+    XI2ForallPointerDevices(m_dpy, [&] (XIDeviceInfo *info) {
+        int deviceid = info->deviceid;
+        Status status;
+        Atom type_return;
+        int format_return;
+        unsigned long num_items_return;
+        unsigned long bytes_after_return;
+
+        unsigned char *_data = nullptr;
+        //data returned is an 2 byte boolean
+        status = XIGetProperty(m_dpy, deviceid, m_libinputAccelProfileAvailableAtom, 0, 2,
+                                False, XA_INTEGER, &type_return, &format_return,
+                                &num_items_return, &bytes_after_return, &_data);
+        QScopedArrayPointer<unsigned char, ScopedXDeleter> data(_data);
+        _data = nullptr;
+        if (status != Success || type_return != XA_INTEGER || !data || format_return != 8 || num_items_return != 2) {
+            return;
+        }
+        adaptiveAvailable = adaptiveAvailable || data[0];
+        flatAvailable = flatAvailable || data[1];
+
+        //data returned is an 2 byte boolean
+        status = XIGetProperty(m_dpy, deviceid, m_libinputAccelProfileEnabledAtom, 0, 2,
+                                False, XA_INTEGER, &type_return, &format_return,
+                                &num_items_return, &bytes_after_return, &_data);
+        data.reset(_data);
+        _data = nullptr;
+        if (status != Success || type_return != XA_INTEGER || !data || format_return != 8 || num_items_return != 2) {
+            return;
+        }
+        adaptiveEnabled = adaptiveEnabled || data[0];
+        flatEnabled = flatEnabled || data[1];
+    });
+
+    if (adaptiveAvailable) {
+        m_supportedAccelerationProfiles << PROFILE_ADAPTIVE;
+    }
+    if (flatAvailable) {
+        m_supportedAccelerationProfiles << PROFILE_FLAT;
+    }
+    if (adaptiveAvailable || flatAvailable) {
+        m_supportedAccelerationProfiles << PROFILE_NONE;
+    }
+
+    m_accelerationProfile = PROFILE_NONE;
+    if (adaptiveEnabled) {
+        m_accelerationProfile = PROFILE_ADAPTIVE;
+    } else if (flatEnabled) {
+        m_accelerationProfile = PROFILE_FLAT;
+    }
 }
 
 void X11MouseBackend::apply(const MouseSettings& settings, bool force)
@@ -204,10 +282,20 @@ void X11MouseBackend::apply(const MouseSettings& settings, bool force)
         // are belong to kcm touchpad.
         XIForallPointerDevices(m_dpy, [this, &settings](XDeviceInfo * info) {
             int deviceid = info->id;
+            if (info->type == m_touchpadAtom) {
+                return;
+            }
+            if (libinputApplyReverseScroll(deviceid, settings.reverseScrollPolarity)) {
+                return;
+            }
             evdevApplyReverseScroll(deviceid, settings.reverseScrollPolarity);
         });
 
     }
+
+    XI2ForallPointerDevices(m_dpy, [&] (XIDeviceInfo *info) {
+        libinputApplyAccelerationProfile(info->deviceid, settings.currentAccelProfile);
+    });
 
     XChangePointerControl(m_dpy,
                           true, true, int(qRound(settings.accelRate * 10)), 10, settings.thresholdMove);
@@ -323,4 +411,72 @@ bool X11MouseBackend::evdevApplyReverseScroll(int deviceid, bool reverse)
     return true;
 }
 
+bool X11MouseBackend::libinputApplyReverseScroll(int deviceid, bool reverse)
+{
+    // Check atom availability first.
+    if (m_libinputNaturalScrollAtom == None) {
+        return false;
+    }
+    Status status;
+    Atom type_return;
+    int format_return;
+    unsigned long num_items_return;
+    unsigned long bytes_after_return;
 
+    unsigned char *_data = nullptr;
+    //data returned is an 1 byte boolean
+    status = XIGetProperty(m_dpy, deviceid, m_libinputNaturalScrollAtom, 0, 1,
+                            False, XA_INTEGER, &type_return, &format_return,
+                            &num_items_return, &bytes_after_return, &_data);
+    if (status != Success) {
+        return false;
+    }
+    QScopedArrayPointer<unsigned char, ScopedXDeleter> data(_data);
+    _data = nullptr;
+    if (type_return != XA_INTEGER || !data || format_return != 8 || num_items_return != 1) {
+        return false;
+    }
+    unsigned char natural = reverse ? 1 : 0;
+    XIChangeProperty(m_dpy, deviceid, m_libinputNaturalScrollAtom, XA_INTEGER,
+                        8, XIPropModeReplace, &natural, 1);
+    return true;
+}
+
+void X11MouseBackend::libinputApplyAccelerationProfile(int deviceid, QString profile)
+{
+    unsigned char profileData[2];
+    if (profile == PROFILE_NONE) {
+        profileData[0] = profileData[1] = 0;
+    } else if (profile == PROFILE_ADAPTIVE) {
+        profileData[0] = 1;
+        profileData[1] = 0;
+    } else if (profile == PROFILE_FLAT) {
+        profileData[0] = 0;
+        profileData[1] = 1;
+    }
+    Status status;
+    Atom type_return;
+    int format_return;
+    unsigned long num_items_return;
+    unsigned long bytes_after_return;
+
+    unsigned char *_data = nullptr;
+    //data returned is an 1 byte boolean
+    status = XIGetProperty(m_dpy, deviceid, m_libinputAccelProfileAvailableAtom, 0, 2,
+                            False, XA_INTEGER, &type_return, &format_return,
+                            &num_items_return, &bytes_after_return, &_data);
+    if (status != Success) {
+        return;
+    }
+    QScopedArrayPointer<unsigned char, ScopedXDeleter> data(_data);
+    _data = nullptr;
+    if (type_return != XA_INTEGER || !data || format_return != 8 || num_items_return != 2) {
+        return;
+    }
+    // Check availability for profile.
+    if (profileData[0] > data[0] || profileData[1] > data[1]) {
+        return;
+    }
+    XIChangeProperty(m_dpy, deviceid, m_libinputAccelProfileEnabledAtom, XA_INTEGER,
+                        8, XIPropModeReplace, profileData, 2);
+}

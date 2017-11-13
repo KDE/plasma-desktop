@@ -46,6 +46,7 @@ struct MouseSettings
     bool singleClick;
     int wheelScrollLines;
     bool reverseScrollPolarity;
+    QString currentAccelProfile;
 };
 
 #endif // MOUSESETTINGS_H

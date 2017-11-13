@@ -98,6 +98,7 @@ MouseConfig::MouseConfig(QWidget *parent, const QVariantList &args)
     connect(accel, SIGNAL(valueChanged(double)), this, SLOT(changed()));
     connect(thresh, SIGNAL(valueChanged(int)), this, SLOT(changed()));
     connect(thresh, SIGNAL(valueChanged(int)), this, SLOT(slotThreshChanged(int)));
+    connect(accelProfileComboBox, SIGNAL(currentIndexChanged(int)), this, SLOT(changed()));
     slotThreshChanged(thresh->value());
 
     // It would be nice if the user had a test field.
@@ -219,6 +220,22 @@ void MouseConfig::load()
         }
     }
 
+    auto accelerationProfiles = backend->supportedAccelerationProfiles();
+    accelProfileComboBox->setEnabled(!accelerationProfiles.isEmpty());
+    accelProfileComboBox->setVisible(!accelerationProfiles.isEmpty());
+    accelerationProfileLabel->setEnabled(!accelerationProfiles.isEmpty());
+    accelerationProfileLabel->setVisible(!accelerationProfiles.isEmpty());
+    accelProfileComboBox->clear();
+    int idx = 0;
+    for (const auto &profile : accelerationProfiles) {
+        accelProfileComboBox->addItem(i18n(profile.toUtf8().constData()), profile);
+        if (profile == settings->currentAccelProfile) {
+            accelProfileComboBox->setCurrentIndex(idx);
+        }
+        idx++;
+    }
+
+
     rightHanded->setEnabled(settings->handedEnabled);
     leftHanded->setEnabled(settings->handedEnabled);
     if (cbScrollPolarity->isEnabled())
@@ -279,6 +296,7 @@ void MouseConfig::save()
     settings->wheelScrollLines = wheelScrollLines->value();
     settings->singleClick = !doubleClick->isChecked();
     settings->reverseScrollPolarity = cbScrollPolarity->isChecked();
+    settings->currentAccelProfile = accelProfileComboBox->itemData(accelProfileComboBox->currentIndex()).toString();
 
     settings->apply(backend);
     KConfig config("kcminputrc");
