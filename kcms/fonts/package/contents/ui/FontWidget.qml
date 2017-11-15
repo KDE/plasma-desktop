@@ -25,29 +25,43 @@ import org.kde.kirigami 2.3 as Kirigami
 import org.kde.kcm 1.0
 
 
-RowLayout {
+FocusScope {
     id: root
     property string label
     property string category
     property font font
     Kirigami.FormData.label: root.label
+    activeFocusOnTab: true
 
-    QtControls.TextField {
-        enabled: false
-        text: root.font.family + " " + root.font.pointSize
-        font: root.font
-        Layout.fillHeight: true
-    }
+    Layout.minimumWidth: layout.Layout.minimumWidth
+    Layout.preferredWidth: layout.Layout.preferredWidth
+    Layout.minimumHeight: layout.Layout.minimumHeight
+    Layout.preferredHeight: layout.Layout.preferredHeight
+    implicitWidth: layout.implicitWidth
+    implicitHeight: layout.implicitHeight
 
-    QtControls.Button {
-        text: i18n("Choose...")
-        Layout.fillHeight: true
-        onClicked: {
-            fontDialog.adjustAllFonts = false;
-            fontDialog.currentCategory = root.category
-            fontDialog.font = root.font;
-            fontDialog.currentFont = root.font;
-            fontDialog.open()
+    RowLayout {
+        id: layout
+
+        QtControls.TextField {
+            enabled: false
+            text: root.font.family + " " + root.font.pointSize
+            font: root.font
+            Layout.fillHeight: true
+        }
+
+        QtControls.Button {
+            text: i18n("Choose...")
+            Layout.fillHeight: true
+            Kirigami.MnemonicData.enabled: false
+            focus: true
+            onClicked: {
+                fontDialog.adjustAllFonts = false;
+                fontDialog.currentCategory = root.category
+                fontDialog.font = root.font;
+                fontDialog.currentFont = root.font;
+                fontDialog.open()
+            }
         }
     }
 }
