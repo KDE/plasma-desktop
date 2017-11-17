@@ -20,6 +20,7 @@ import QtQuick 2.7
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.2 as QtControls
 import org.kde.kirigami 2.2 as Kirigami
+import org.kde.kcmcontrols 1.0 as KCMControls
 import org.kde.kcm 1.0
 
 Kirigami.Page {
@@ -29,45 +30,19 @@ Kirigami.Page {
     implicitWidth: Kirigami.Units.gridUnit * 20
     implicitHeight: Kirigami.Units.gridUnit * 20
 
-    property alias view: view
+    property alias view: scroll.view
 
     topPadding: 0
     leftPadding: 0
     rightPadding: 0
     bottomPadding: footer ? Kirigami.Units.smallSpacing : 0
 
-    QtControls.ScrollView {
+    KCMControls.GridView {
         id: scroll
-        property int cellWidth: Kirigami.Units.gridUnit * 10
-        property int scrollBarSpace: Kirigami.Units.gridUnit*2
         anchors {
             top: parent.top
             bottom: parent.bottom
             horizontalCenter: parent.horizontalCenter
-        }
-        width: Math.max( Math.min(root.width, cellWidth * 2 + scroll.scrollBarSpace)
-                    , Math.floor((root.width - scroll.scrollBarSpace) / cellWidth) * cellWidth + scroll.scrollBarSpace)
-        activeFocusOnTab: false
-
-        GridView {
-            id: view
-            anchors {
-                fill: parent
-                margins: scroll.background ? 2 : 0
-                rightMargin: contentHeight > height ? Kirigami.Units.gridUnit : 2
-            }
-            contentItem.x: Math.round((width - Math.floor(width / cellWidth) * cellWidth) / 2)
-            clip: true
-            activeFocusOnTab: true
-            cellWidth: Math.min(Math.floor(width / 2), scroll.cellWidth)
-            cellHeight: cellWidth / 1.6 + scroll.scrollBarSpace
-            keyNavigationEnabled: true
-            keyNavigationWraps: true
-            highlightMoveDuration: 0
-        }
-        //not all styles have background defined
-        Component.onCompleted: {
-            background.visible = true;
         }
     }
 }
