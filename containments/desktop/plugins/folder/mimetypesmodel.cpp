@@ -42,7 +42,8 @@ MimeTypesModel::~MimeTypesModel()
 QHash<int, QByteArray> MimeTypesModel::roleNames() const
 {
     return {
-        { Qt::DisplayRole, "display" },
+        { Qt::DisplayRole, "comment" },
+        { Qt::UserRole, "name" },
         { Qt::DecorationRole, "decoration" },
         { Qt::CheckStateRole, "checked" }
     };
@@ -56,6 +57,8 @@ QVariant MimeTypesModel::data(const QModelIndex &index, int role) const
 
     switch (role) {
         case Qt::DisplayRole:
+            return m_mimeTypesList.at(index.row()).comment();
+        case Qt::UserRole:
             return m_mimeTypesList.at(index.row()).name();
 
         case Qt::DecorationRole:
