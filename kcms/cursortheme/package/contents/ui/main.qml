@@ -42,37 +42,56 @@ KCMControls.GridViewPage {
         onSelectedThemeRowChanged: view.currentIndex = kcm.selectedThemeRow;
     }
 
-    footer: RowLayout {
-        //spacer
-        Item {
-            Layout.fillWidth: true
-            Layout.fillHeight: true
-        }
+    footer: ColumnLayout {
+        id: footerLayout
+        RowLayout {
+            id: row1
+                //spacer
+                Item {
+                    Layout.fillWidth: true
+                    Layout.fillHeight: true
+                }
 
-        QtControls.Label {
-            text: i18n("Size:")
-        }
-        QtControls.ComboBox {
-            id: sizeCombo
-            currentIndex: 0
-            onCountChanged: currentIndex = 0
-            model: kcm.sizesModel
-            textRole: "display"
-            onCurrentTextChanged: {
-                kcm.preferredSize = parseInt(sizeCombo.currentText) !== NaN ? parseInt(sizeCombo.currentText) : 0
+            RowLayout {
+                id: comboLayout
+                QtControls.Label {
+                    text: i18n("Size:")
+                }
+                QtControls.ComboBox {
+                    id: sizeCombo
+                    currentIndex: 0
+                    onCountChanged: currentIndex = 0
+                    model: kcm.sizesModel
+                    textRole: "display"
+                    onCurrentTextChanged: {
+                        kcm.preferredSize = parseInt(sizeCombo.currentText) !== NaN ? parseInt(sizeCombo.currentText) : 0
+                    }
+                }
+            }
+            RowLayout {
+                parent: footerLayout.x + footerLayout.width - comboLayout.width > width ? row1 : row2
+                QtControls.Button {
+                // iconName: "document-import"
+                    text: i18n("&Install From File...")
+                    onClicked: kcm.installClicked();
+                    enabled: kcm.canInstall
+                }
+                QtControls.Button {
+                // iconName: "get-hot-new-stuff"
+                    text: i18n("&Get New Theme...")
+                    onClicked: kcm.getNewClicked();
+                    enabled: kcm.canInstall
+                }
             }
         }
-        QtControls.Button {
-        // iconName: "document-import"
-            text: i18n("&Install From File...")
-            onClicked: kcm.installClicked();
-            enabled: kcm.canInstall
-        }
-        QtControls.Button {
-        // iconName: "get-hot-new-stuff"
-            text: i18n("&Get New Theme...")
-            onClicked: kcm.getNewClicked();
-            enabled: kcm.canInstall
+        RowLayout {
+            id: row2
+            visible: children.length > 1
+            //spacer
+            Item {
+                Layout.fillWidth: true
+                Layout.fillHeight: true
+            }
         }
     }
 }
