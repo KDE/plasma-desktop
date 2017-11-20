@@ -20,7 +20,6 @@ import QtQuick 2.7
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.2 as QtControls
 import org.kde.kirigami 2.3 as Kirigami
-import org.kde.qqc2desktopstyle.private 1.0 as StylePrivate
 
 QtControls.ScrollView {
     id: scroll
@@ -53,14 +52,4 @@ QtControls.ScrollView {
         keyNavigationWraps: true
         highlightMoveDuration: 0
     }
-
-    background: StylePrivate.StyleItem {
-       id: style
-       control: scroll
-       elementType: "frame"
-
-       sunken: true
-       hasFocus: scroll.activeFocus
-       hover: scroll.hovered
-   }
 }
