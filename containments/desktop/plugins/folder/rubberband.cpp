@@ -48,7 +48,7 @@ void RubberBand::paint(QPainter *painter)
     qApp->style()->drawControl(QStyle::CE_RubberBand, &opt, painter);
 }
 
-bool RubberBand::intersects(const QRectF &rect)
+bool RubberBand::intersects(const QRectF &rect) const
 {
     return m_geometry.intersects(rect);
 }

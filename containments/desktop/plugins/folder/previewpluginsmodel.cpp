@@ -101,7 +101,7 @@ void PreviewPluginsModel::setCheckedPlugins(const QStringList &list)
         }
     }
 
-    emit dataChanged(index(0, 0), index(m_plugins.size() - 1, 0));
+    emit dataChanged(index(0, 0), index(m_plugins.size() - 1, 0), {Qt::CheckStateRole});
 
     emit checkedPluginsChanged();
 }
@@ -109,7 +109,7 @@ void PreviewPluginsModel::setCheckedPlugins(const QStringList &list)
 QStringList PreviewPluginsModel::checkedPlugins() const
 {
     QStringList list;
-    for (int i =0; i < m_checkedRows.size(); ++i) {
+    for (int i = 0; i < m_checkedRows.size(); ++i) {
         if (m_checkedRows.at(i)) {
             list.append(m_plugins.at(i)->desktopEntryName());
         }

@@ -21,16 +21,16 @@
 #define VIEWPROPERTIESMENU_H
 
 #include <QObject>
-
+#include "folderplugin_private_export.h"
 class QAction;
 class QActionGroup;
 class QMenu;
 
-class ViewPropertiesMenu : public QObject
+class FOLDERPLUGIN_TESTS_EXPORT ViewPropertiesMenu : public QObject
 {
     Q_OBJECT
 
-    Q_PROPERTY(QObject* menu READ menu CONSTANT);
+    Q_PROPERTY(QObject* menu READ menu CONSTANT)
 
     Q_PROPERTY(bool showLayoutActions READ showLayoutActions WRITE setShowLayoutActions NOTIFY showLayoutActionsChanged)
     Q_PROPERTY(bool showLockAction READ showLockAction WRITE setShowLockAction NOTIFY showLockActionChanged)
@@ -45,7 +45,7 @@ class ViewPropertiesMenu : public QObject
     Q_PROPERTY(int iconSize READ iconSize WRITE setIconSize NOTIFY iconSizeChanged)
 
     public:
-        ViewPropertiesMenu(QObject *parent = 0);
+        explicit ViewPropertiesMenu(QObject *parent = nullptr);
         ~ViewPropertiesMenu();
 
         QObject* menu() const;

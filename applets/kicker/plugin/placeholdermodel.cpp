@@ -20,8 +20,8 @@
 
 #include "placeholdermodel.h"
 #include "actionlist.h"
+#include "debug.h"
 
-#include <QDebug>
 #include <QTimer>
 
 PlaceholderModel::PlaceholderModel(QObject *parent)
@@ -31,7 +31,7 @@ PlaceholderModel::PlaceholderModel(QObject *parent)
 {
     connect(&m_triggerInhibitor, &QTimer::timeout,
             this, [&] {
-                qDebug() << "%%% Inhibit stopped";
+                qCDebug(KICKER_DEBUG) << "%%% Inhibit stopped";
                 m_isTriggerInhibited = false;
             });
 
@@ -41,7 +41,7 @@ PlaceholderModel::PlaceholderModel(QObject *parent)
 
 void PlaceholderModel::inhibitTriggering()
 {
-    qDebug() << "%%% Inhibit started";
+    qCDebug(KICKER_DEBUG) << "%%% Inhibit started";
     m_isTriggerInhibited = true;
     m_triggerInhibitor.start();
 }

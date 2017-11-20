@@ -47,7 +47,7 @@ QHash<int, QByteArray> PlacesModel::roleNames() const
     return roleNames;
 }
 
-bool PlacesModel::activityLinkingEnabled()
+bool PlacesModel::activityLinkingEnabled() const
 {
     const KService::List services = KServiceTypeTrader::self()->query(QStringLiteral("KFileItemAction/Plugin"),
         QStringLiteral("Library == 'kactivitymanagerd_fileitem_linking_plugin'"));

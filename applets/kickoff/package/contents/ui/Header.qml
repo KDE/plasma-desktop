@@ -177,7 +177,6 @@ Item {
                     }
                     if (text == "") {
                         root.state = root.previousState;
-                        root.forceActiveFocus();
                         header.state = "info";
                     } else {
                         header.state = "query";

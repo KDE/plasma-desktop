@@ -21,89 +21,60 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#include <config-X11.h>
-
-#include <kconfig.h>
+#include <KConfig>
+#include <KConfigGroup>
 #include <QFile>
 
-#include "mouse.h"
-#include <QX11Info>
+#include "mousesettings.h"
+#include "mousebackend.h"
 
 #include <klauncher_iface.h>
 
-#include <X11/Xlib.h>
-#ifdef HAVE_XCURSOR
-#  include <X11/Xcursor/Xcursor.h>
-#endif
-
 extern "C"
 {
-  Q_DECL_EXPORT void kcminit_mouse()
-  {
-      KConfig *config = new KConfig("kcminputrc", KConfig::NoGlobals );
-
-    Display *dpy = nullptr;
-    const bool platformX11 = QX11Info::isPlatformX11();
-    if (platformX11) {
-        dpy = QX11Info::display();
-    } else {
-        // let's hope we have a compatibility system like Xwayland ready
-        dpy = XOpenDisplay(nullptr);
-    }
-
-    MouseSettings settings;
-    settings.load(config, dpy);
-    settings.apply(true); // force
-
-#ifdef HAVE_XCURSOR
-    KConfigGroup group = config->group("Mouse");
-    QString theme = group.readEntry("cursorTheme", QString());
-    QString size = group.readEntry("cursorSize", QString());
-
-    // Note: If you update this code, update kapplymousetheme as well.
-
-    // use a default value for theme only if it's not configured at all, not even in X resources
-    if( theme.isEmpty()
-        && (!dpy ||
-                (QByteArray( XGetDefault( dpy, "Xcursor", "theme" )).isEmpty()
-                 && QByteArray( XcursorGetTheme( dpy)).isEmpty())))
+    Q_DECL_EXPORT void kcminit_mouse()
     {
-        theme = "breeze_cursors";
+        KConfig* config = new KConfig("kcminputrc", KConfig::NoGlobals);
+
+        auto backend = MouseBackend::implementation();
+
+        MouseSettings settings;
+        settings.load(config, backend);
+        settings.apply(backend, true);    // force
+
+        KConfigGroup group = config->group("Mouse");
+        QString theme = group.readEntry("cursorTheme", QString());
+        QString size = group.readEntry("cursorSize", QString());
+        if (backend) {
+            int intSize = -1;
+            if (size.isEmpty()) {
+                bool ok;
+                uint value = size.toUInt(&ok);
+                if (ok) {
+                    intSize = value;
+                }
+            }
+            // Note: If you update this code, update kapplymousetheme as well.
+
+            // use a default value for theme only if it's not configured at all, not even in X resources
+            if (theme.isEmpty() && backend->currentCursorTheme().isEmpty()) {
+                theme = "breeze_cursors";
+            }
+            backend->applyCursorTheme(theme, intSize);
+        }
+
+        // Tell klauncher to set the XCURSOR_THEME and XCURSOR_SIZE environment
+        // variables when launching applications.
+        OrgKdeKLauncherInterface klauncher(QStringLiteral("org.kde.klauncher5"),
+                                           QStringLiteral("/KLauncher"),
+                                           QDBusConnection::sessionBus());
+        if (!theme.isEmpty()) {
+            klauncher.setLaunchEnv(QStringLiteral("XCURSOR_THEME"), theme);
+        }
+        if (!size.isEmpty()) {
+            klauncher.setLaunchEnv(QStringLiteral("XCURSOR_SIZE"), size);
+        }
+
+        delete config;
     }
-
-     // Apply the KDE cursor theme to ourselves
-    if (dpy) {
-        if( !theme.isEmpty())
-            XcursorSetTheme(dpy, QFile::encodeName(theme));
-
-        if (!size.isEmpty())
-            XcursorSetDefaultSize(dpy, size.toUInt());
-
-        // Load the default cursor from the theme and apply it to the root window.
-        Cursor handle = XcursorLibraryLoadCursor(dpy, "left_ptr");
-        XDefineCursor(dpy, QX11Info::appRootWindow(), handle);
-        XFreeCursor(dpy, handle); // Don't leak the cursor
-    }
-
-    // Tell klauncher to set the XCURSOR_THEME and XCURSOR_SIZE environment
-    // variables when launching applications.
-    OrgKdeKLauncherInterface klauncher(QStringLiteral("org.kde.klauncher5"),
-                                       QStringLiteral("/KLauncher"),
-                                       QDBusConnection::sessionBus());
-    if(!theme.isEmpty())
-        klauncher.setLaunchEnv(QStringLiteral("XCURSOR_THEME"), theme);
-    if( !size.isEmpty())
-        klauncher.setLaunchEnv(QStringLiteral("XCURSOR_SIZE"), size);
-
-#endif
-
-    if (!platformX11) {
-        XFlush(dpy);
-        XCloseDisplay(dpy);
-    }
-
-    delete config;
-  }
 }
-
-

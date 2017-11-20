@@ -23,7 +23,6 @@
 #include <QObject>
 
 class QAction;
-class QMenu;
 
 class MenuHelper : public QObject
 {
@@ -33,7 +32,7 @@ class MenuHelper : public QObject
         explicit MenuHelper(QObject *parent = nullptr);
         ~MenuHelper();
 
-        Q_INVOKABLE QString iconName(QAction *action);
+        Q_INVOKABLE QString iconName(QAction *action) const;
 
         Q_INVOKABLE void setMenu(QAction *action, QObject *menu);
 };

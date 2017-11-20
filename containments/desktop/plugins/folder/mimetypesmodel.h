@@ -22,7 +22,6 @@
 
 #include <QAbstractListModel>
 #include <QMimeType>
-#include <QSortFilterProxyModel>
 
 class QStringList;
 
@@ -37,12 +36,12 @@ class MimeTypesModel : public QAbstractListModel
         ~MimeTypesModel();
 
         QHash<int, QByteArray> roleNames() const override;
-        QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const Q_DECL_OVERRIDE;
-        bool setData(const QModelIndex &index, const QVariant &value, int role) Q_DECL_OVERRIDE;
+        QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
+        bool setData(const QModelIndex &index, const QVariant &value, int role) override;
 
         Q_INVOKABLE void checkAll();
 
-        int rowCount(const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE { Q_UNUSED(parent) return m_mimeTypesList.size(); }
+        int rowCount(const QModelIndex &parent = QModelIndex()) const override { Q_UNUSED(parent) return m_mimeTypesList.size(); }
 
         QStringList checkedTypes() const;
         void setCheckedTypes(const QStringList &list);
@@ -54,7 +53,7 @@ class MimeTypesModel : public QAbstractListModel
         int indexOfType(const QString &name) const;
 
         QList<QMimeType> m_mimeTypesList;
-        QVector<bool> checkedRows;
+        QVector<bool> m_checkedRows;
 };
 
 #endif

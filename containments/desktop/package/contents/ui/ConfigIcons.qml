@@ -61,292 +61,385 @@ Item {
         onIconNameChanged: cfg_icon = iconName || "folder"
     }
 
-    ColumnLayout {
-        GroupBox {
-            id: panelButtonGroupBox
+    GridLayout {
 
+        // Row 0: "Panel button"
+        Label {
+            Layout.row: 0
+            Layout.column: 0
+
+            visible: isPopup
+            text: i18n("Panel button:")
+        }
+
+        CheckBox {
+            id: useCustomIcon
+            Layout.row: 0
+            Layout.column: 1
+            Layout.columnSpan: 2
+
+            visible: isPopup
+            checked: cfg_useCustomIcon
+            text: i18n("Use a custom icon")
+        }
+
+        RowLayout {
+            Layout.row: 0
+            Layout.column: 3
+            Layout.alignment: Qt.AlignRight
+            spacing: units.smallSpacing
+
+            visible: isPopup
+
+            Button {
+                id: iconButton
+                Layout.minimumWidth: units.iconSizes.large + units.smallSpacing * 2
+                Layout.maximumWidth: Layout.minimumWidth
+                Layout.minimumHeight: Layout.minimumWidth
+                Layout.maximumHeight: Layout.minimumWidth
+
+                checkable: true
+                enabled: useCustomIcon.checked
+
+                onClicked: {
+                    checked = Qt.binding(function() {
+                        return iconMenu.status === PlasmaComponents.DialogStatus.Open;
+                    })
+
+                    iconMenu.open(0, height);
+                }
+
+                PlasmaCore.IconItem {
+                    anchors.centerIn: parent
+                    width: units.iconSizes.large
+                    height: width
+                    source: cfg_icon
+                }
+            }
+
+            PlasmaComponents.ContextMenu {
+                id: iconMenu
+                visualParent: iconButton
+
+                PlasmaComponents.MenuItem {
+                    text: i18nc("@item:inmenu Open icon chooser dialog", "Choose...")
+                    icon: "document-open-folder"
+                    onClicked: iconDialog.open()
+                }
+
+                PlasmaComponents.MenuItem {
+                    text: i18nc("@item:inmenu Reset icon to default", "Clear Icon")
+                    icon: "edit-clear"
+                    onClicked: cfg_icon = "folder"
+                }
+            }
+        }
+
+        // Row 1: Spacing
+        Item {
+            Layout.row: 1
+            Layout.column: 0
+            Layout.minimumHeight: units.largeSpacing
+            visible: isPopup
+        }
+
+        // Row 2: "Arrangment" - "Arrange in"
+        Label {
+            Layout.row: 2
+            Layout.column: 0
+
+            text: i18n("Arrangement:")
+        }
+
+        Label {
+            Layout.row: 2
+            Layout.column: 1
+
+            text: i18n("Arrange in")
+        }
+
+        ComboBox {
+            id: arrangement
+            Layout.row: 2
+            Layout.column: 2
+            Layout.columnSpan: 2
+            Layout.fillWidth: true
+
+            model: [i18n("Rows"), i18n("Columns")]
+        }
+
+        // Row 3: "Arrangment" - "Align"
+        Label {
+            Layout.row: 3
+            Layout.column: 1
+
+            text: i18n("Align")
+        }
+
+        ComboBox {
+            id: alignment
+            Layout.row: 3
+            Layout.column: 2
+            Layout.columnSpan: 2
+            Layout.fillWidth: true
+
+            model: [i18n("Left"), i18n("Right")]
+        }
+
+        // Row 4: "Arrangment" - "Lock"
+        CheckBox {
+            id: locked
+            Layout.row: 4
+            Layout.column: 1
+            Layout.columnSpan: 3
+
+            visible: ("containmentType" in plasmoid)
+
+            text: i18n("Lock in place")
+        }
+
+        // Row 5: Spacing
+        Item {
+            Layout.row: 5
+            Layout.column: 0
+            Layout.minimumHeight: units.largeSpacing
+        }
+
+        // Row 6: "Sorting" - "Sort by"
+        Label {
+            Layout.row: 6
+            Layout.column: 0
+
+            text: i18n("Sorting:")
+        }
+
+        Label {
+            Layout.row: 6
+            Layout.column: 1
+
+            text: i18n("Sort by")
+        }
+
+        ComboBox {
+            id: sortMode
+            Layout.row: 6
+            Layout.column: 2
+            Layout.columnSpan: 2
+            Layout.fillWidth: true
+
+            property int mode
+            // FIXME TODO HACK: This maps the combo box list model to the KDirModel::ModelColumns
+            // enum, which should be done in C++.
+            property variant indexToMode: [-1, 0, 1, 6, 2]
+            property variant modeToIndex: {'-1' : '0', '0' : '1', '1' : '2', '6' : '3', '2' : '4'}
+
+            model: [i18n("Unsorted"), i18n("Name"), i18n("Size"), i18n("Type"), i18n("Date")]
+
+            Component.onCompleted: currentIndex = modeToIndex[mode]
+            onActivated: mode = indexToMode[index]
+        }
+
+        // Row 7: "Sorting" - "Descending"
+        CheckBox {
+            id: sortDesc
+            Layout.row: 7
+            Layout.column: 1
+            Layout.columnSpan: 3
+
+            enabled: (sortMode.currentIndex != 0)
+
+            text: i18n("Descending")
+        }
+
+        // Row 8: "Sorting" - "Directories first"
+        CheckBox {
+            id: sortDirsFirst
+            Layout.row: 8
+            Layout.column: 1
+            Layout.columnSpan: 3
+
+            enabled: (sortMode.currentIndex != 0)
+
+            text: i18n("Folders first")
+        }
+
+        // Row 9: Spacing
+        Item {
+            Layout.row: 9
+            Layout.column: 0
+            Layout.minimumHeight: units.largeSpacing
+        }
+
+        // Row 10: "Appearance" - "View mode"
+        Label {
+            Layout.row: (isPopup ? 10 : 11)
+            Layout.column: 0
+
+            text: i18n("Appearance:")
+        }
+
+        Label {
+            Layout.row: 10
+            Layout.column: 1
+
+            visible: isPopup
+
+            text: i18nc("whether to use icon or list view", "View mode")
+        }
+
+        ComboBox {
+            id: viewMode
+            Layout.row: 10
+            Layout.column: 2
+            Layout.columnSpan: 2
             Layout.fillWidth: true
 
             visible: isPopup
 
-            title: i18n("Panel Button")
-
-            flat: true
-
-            RowLayout {
-                spacing: units.smallSpacing
-
-                CheckBox {
-                    id: useCustomIcon
-
-                    checked: cfg_useCustomIcon
-
-                    text: i18n("Custom icon:")
-                }
-
-                Button {
-                    id: iconButton
-                    Layout.minimumWidth: units.iconSizes.large + units.smallSpacing * 2
-                    Layout.maximumWidth: Layout.minimumWidth
-                    Layout.minimumHeight: Layout.minimumWidth
-                    Layout.maximumHeight: Layout.minimumWidth
-
-                    checkable: true
-
-                    onClicked: {
-                        checked = Qt.binding(function() {
-                            return iconMenu.status === PlasmaComponents.DialogStatus.Open;
-                        })
-
-                        iconMenu.open(0, height);
-                    }
-
-                    PlasmaCore.IconItem {
-                        anchors.centerIn: parent
-                        width: units.iconSizes.large
-                        height: width
-                        source: cfg_icon
-                    }
-                }
-
-                PlasmaComponents.ContextMenu {
-                    id: iconMenu
-                    visualParent: iconButton
-
-                    PlasmaComponents.MenuItem {
-                        text: i18nc("@item:inmenu Open icon chooser dialog", "Choose...")
-                        icon: "document-open-folder"
-                        onClicked: iconDialog.open()
-                    }
-
-                    PlasmaComponents.MenuItem {
-                        text: i18nc("@item:inmenu Reset icon to default", "Clear Icon")
-                        icon: "edit-clear"
-                        onClicked: cfg_icon = "folder"
-                    }
-                }
-            }
+            model: [i18n("List"), i18n("Icons")]
         }
 
-        GroupBox {
-            id: arrangementGroupBox
+        // Rows 11+12: "Appearance" - "Size"
+        Label {
+            Layout.row: 11
+            Layout.column: 1
 
+            visible: !isPopup || viewMode.currentIndex === 1
+
+            text: i18n("Size")
+        }
+
+        Slider {
+            id: iconSize
+            Layout.row: 11
+            Layout.column: 2
+            Layout.columnSpan: 2
             Layout.fillWidth: true
+
+            visible: !isPopup || viewMode.currentIndex === 1
+
+            minimumValue: 0
+            maximumValue: 5
+            stepSize: 1
+            tickmarksEnabled: true
+        }
+
+        Label {
+            Layout.row: 12
+            Layout.column: 2
+            Layout.alignment: Qt.AlignLeft
+
+            visible: !isPopup || viewMode.currentIndex === 1
+
+            text: i18n("Small")
+        }
+
+        Label {
+            Layout.row: 12
+            Layout.column: 3
+            Layout.alignment: Qt.AlignRight
+
+            visible: !isPopup || viewMode.currentIndex === 1
+
+            text: i18n("Large")
+        }
+
+        // Row 13: "Appearance" - "Text lines"
+        Label {
+            Layout.row: 13
+            Layout.column: 1
+
+            visible: !isPopup || viewMode.currentIndex === 1
+
+            text: i18n("Text lines")
+        }
+
+        SpinBox {
+            id: textLines
+            Layout.row: 13
+            Layout.column: 2
+            Layout.columnSpan: 2
+
+            visible: !isPopup || viewMode.currentIndex === 1
+
+            minimumValue: 1
+            maximumValue: 10
+            stepSize: 1
+        }
+
+        // Row 14: Spacing
+        Item {
+            Layout.row: 14
+            Layout.column: 0
+            Layout.minimumHeight: units.largeSpacing
+        }
+
+        // Row 15: "Features" - "Tool tips"
+        Label {
+            Layout.row: 15
+            Layout.column: 0
+
+            text: i18n("Features:")
+        }
+
+        CheckBox {
+            id: toolTips
+            Layout.row: 15
+            Layout.column: 1
+            Layout.columnSpan: 3
+
+            text: i18n("Tool tips")
+        }
+
+        // Row 16: "Features" - "Selection markers"
+        CheckBox {
+            id: selectionMarkers
+            Layout.row: 16
+            Layout.column: 1
+            Layout.columnSpan: 3
+
+            visible: Qt.styleHints.singleClickActivation
+
+            text: i18n("Selection markers")
+        }
+
+        // Row 17: "Features" - "Folder preview popups"
+        CheckBox {
+            id: popups
+            Layout.row: 17
+            Layout.column: 1
+            Layout.columnSpan: 3
 
             visible: !isPopup
 
-            title: i18n("Arrangement")
+            text: i18n("Folder preview popups")
+        }
 
-            flat: true
+        // Rows 18+19: "Features" - "Preview thumbnails"
+        CheckBox {
+            id: previews
+            Layout.row: 18
+            Layout.column: 1
+            Layout.columnSpan: 3
 
-            ColumnLayout {
-                Layout.fillWidth: true
+            text: i18n("Preview thumbnails")
+        }
 
-                RowLayout {
-                    Label {
-                        text: i18n("Arrange in:")
-                    }
+        Button {
+            id: previewSettings
+            Layout.row: 19
+            Layout.column: 3
+            Layout.alignment: Qt.AlignRight
 
-                    ComboBox {
-                        id: arrangement
+            text: i18n("More Preview Options...")
 
-                        model: [i18n("Rows"), i18n("Columns")]
-                    }
-                }
-
-                RowLayout {
-                    Label {
-                        text: i18n("Align:")
-                    }
-
-                    ComboBox {
-                        id: alignment
-
-                        model: [i18n("Left"), i18n("Right")]
-                    }
-                }
-
-                CheckBox {
-                    id: locked
-
-                    visible: ("containmentType" in plasmoid)
-
-                    text: i18n("Lock in place")
-                }
+            onClicked: {
+                previewPluginsDialog.visible = true;
             }
         }
+    }
 
-        GroupBox {
-            id: sortingGroupBox
-
-            Layout.fillWidth: true
-
-            title: i18n("Sorting")
-
-            flat: true
-
-            ColumnLayout {
-                RowLayout {
-                    Label {
-                        text: i18n("Sorting:")
-                    }
-
-                    ComboBox {
-                        id: sortMode
-
-                        property int mode
-                        // FIXME TODO HACK: This maps the combo box's list model to the KDirModel::ModelColumns
-                        // enum, which should be done in C++.
-                        property variant indexToMode: [-1, 0, 1, 6, 2]
-                        property variant modeToIndex: {'-1' : '0', '0' : '1', '1' : '2', '6' : '3', '2' : '4'}
-
-                        model: [i18n("Unsorted"), i18n("Name"), i18n("Size"), i18n("Type"), i18n("Date")]
-
-                        Component.onCompleted: currentIndex = modeToIndex[mode]
-                        onActivated: mode = indexToMode[index]
-                    }
-                }
-
-                CheckBox {
-                    id: sortDesc
-
-                    enabled: (sortMode.currentIndex != 0)
-
-                    text: i18n("Descending")
-                }
-
-                CheckBox {
-                    id: sortDirsFirst
-
-                    enabled: (sortMode.currentIndex != 0)
-
-                    text: i18n("Folders first")
-                }
-            }
-        }
-
-        GroupBox {
-            id: appearanceGroupBox
-
-            Layout.fillWidth: true
-
-            title: i18n("Appearance")
-
-            flat: true
-
-            ColumnLayout {
-                RowLayout {
-                    visible: isPopup
-
-                    Label {
-                        text: i18nc("whether to use icon or list view", "View Mode:")
-                    }
-
-                    ComboBox {
-                        id: viewMode
-                        model: [i18n("List"), i18n("Icons")]
-                    }
-                }
-
-                RowLayout {
-                    visible: !isPopup || viewMode.currentIndex === 1
-
-                    Label {
-                        text: i18n("Size:")
-                    }
-
-                    Label {
-                        text: i18n("Small")
-                    }
-
-                    Slider {
-                        id: iconSize
-
-                        minimumValue: 0
-                        maximumValue: 5
-                        stepSize: 1
-
-                        tickmarksEnabled: true
-                    }
-
-                    Label {
-                        text: i18n("Large")
-                    }
-                }
-
-                RowLayout {
-                    visible: !isPopup || viewMode.currentIndex === 1
-
-                    Label {
-                        text: i18n("Text lines:")
-                    }
-
-                    SpinBox {
-                        id: textLines
-
-                        minimumValue: 1
-                        maximumValue: 10
-                        stepSize: 1
-                    }
-                }
-
-            }
-        }
-
-        GroupBox {
-            id: behaviorGroupBox
-
-            Layout.fillWidth: true
-
-            title: i18n("Features")
-
-            flat: true
-
-            ColumnLayout {
-                CheckBox {
-                    id: toolTips
-
-                    text: i18n("Tooltips")
-                }
-
-                CheckBox {
-                    id: selectionMarkers
-
-                    visible: Qt.styleHints.singleClickActivation
-
-                    text: i18n("Selection markers")
-                }
-
-                CheckBox {
-                    id: popups
-
-                    visible: !isPopup
-
-                    text: i18n("Folder preview popups")
-                }
-
-                RowLayout {
-                    CheckBox {
-                        id: previews
-
-                        text: i18n("Preview thumbnails")
-                    }
-
-                    Button {
-                        id: previewSettings
-
-                        text: i18n("More Preview Options...")
-
-                        onClicked: {
-                            previewPluginsDialog.visible = true;
-                        }
-                    }
-                }
-            }
-        }
-
-        FolderItemPreviewPluginsDialog {
-            id: previewPluginsDialog
-        }
+    FolderItemPreviewPluginsDialog {
+        id: previewPluginsDialog
     }
 }

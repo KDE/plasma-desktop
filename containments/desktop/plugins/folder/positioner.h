@@ -22,11 +22,13 @@
 
 #include <QAbstractItemModel>
 
+#include "folderplugin_private_export.h"
+
 class FolderModel;
 
 class QTimer;
 
-class Positioner : public QAbstractItemModel
+class FOLDERPLUGIN_TESTS_EXPORT Positioner : public QAbstractItemModel
 {
     Q_OBJECT
 
@@ -49,7 +51,7 @@ class Positioner : public QAbstractItemModel
         void setPerStripe(int perStripe);
 
         QStringList positions() const;
-        void setPositions(QStringList positions);
+        void setPositions(const QStringList &positions);
 
         Q_INVOKABLE int map(int row) const;
 
@@ -64,15 +66,15 @@ class Positioner : public QAbstractItemModel
 
         Q_INVOKABLE void move(const QVariantList &moves);
 
-        QHash<int, QByteArray> roleNames() const Q_DECL_OVERRIDE;
+        QHash<int, QByteArray> roleNames() const override;
 
-        QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE;
-        QModelIndex parent(const QModelIndex &index) const Q_DECL_OVERRIDE;
+        QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const override;
+        QModelIndex parent(const QModelIndex &index) const override;
 
-        QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const Q_DECL_OVERRIDE;
+        QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
 
-        int rowCount(const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE;
-        int columnCount(const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE;
+        int rowCount(const QModelIndex &parent = QModelIndex()) const override;
+        int columnCount(const QModelIndex &parent = QModelIndex()) const override;
 
     Q_SIGNALS:
         void enabledChanged() const;

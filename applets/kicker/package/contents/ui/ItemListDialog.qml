@@ -75,9 +75,9 @@ Kicker.SubMenu {
     }
 
     function delayedDestroy() {
-        var timer = Qt.createQmlObject('import QtQuick 2.0; Timer { onTriggered: itemDialog.destroy() }', itemDialog);
-        timer.interval = 0;
-        timer.start();
+        Qt.callLater(function() {
+            itemDialog.destroy();
+        });
     }
 
 

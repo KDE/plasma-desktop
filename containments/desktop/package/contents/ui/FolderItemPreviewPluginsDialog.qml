@@ -46,28 +46,43 @@ ApplicationWindow {
         id: previewPluginsModel
     }
 
+    SystemPalette {
+        id: systemPalette;
+        colorGroup: SystemPalette.Active
+    }
+
     ColumnLayout {
         anchors.fill: parent
+        anchors.margins: 2*units.smallSpacing
 
-        ScrollView {
+        Rectangle {
             Layout.fillWidth: true
             Layout.fillHeight: true
+            color: systemPalette.base
 
-            frameVisible: true
+            ScrollView {
+                anchors.fill: parent
 
-            ListView {
-                model: previewPluginsModel
+                frameVisible: true
 
-                delegate: CheckBox {
-                    text: model.display
+                ListView {
+                    model: previewPluginsModel
 
-                    checked: model.checked
-                    onCheckedChanged: model.checked = checked
+                    delegate: CheckBox {
+                        Layout.leftMargin: units.smallSpacing
+                        Layout.rightMargin: units.smallSpacing
+
+                        text: model.display
+
+                        checked: model.checked
+                        onCheckedChanged: model.checked = checked
+                    }
                 }
             }
         }
 
         RowLayout {
+            Layout.margins: units.smallSpacing
             Layout.alignment: (Qt.application.layoutDirection == Qt.LeftToRight) ? Qt.AlignRight : Qt.AlignLeft
 
             layoutDirection: Qt.application.layoutDirection

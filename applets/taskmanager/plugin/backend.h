@@ -24,6 +24,7 @@
 #include <QRect>
 
 #include <netwm.h>
+#include <qwindowdefs.h>
 
 class QAction;
 class QActionGroup;

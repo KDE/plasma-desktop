@@ -23,8 +23,8 @@
 #include "contactentry.h"
 #include "fileentry.h"
 #include "actionlist.h"
+#include "debug.h"
 
-#include <QDebug>
 #include <QFileInfo>
 #include <QTimer>
 #include <QSortFilterProxyModel>
@@ -48,20 +48,17 @@ using namespace KAStats::Terms;
 #define AGENT_CONTACTS     "org.kde.plasma.favorites.contacts"
 #define AGENT_DOCUMENTS    "org.kde.plasma.favorites.documents"
 
-#define DEBUG_PREFIX "\033[0;31m[KASTATSFAVS]\033[0;34m "
-#define DEBUG qDebug() << DEBUG_PREFIX << (void*)q << ((void*)this) << m_clientId << "\033[0;0m "
-
 QString agentForUrl(const QString &url)
 {
-    return url.startsWith("ktp:")
+    return url.startsWith(QLatin1String("ktp:"))
                 ? AGENT_CONTACTS
-         : url.startsWith("preferred:")
+         : url.startsWith(QLatin1String("preferred:"))
                 ? AGENT_APPLICATIONS
-         : url.startsWith("applications:")
+         : url.startsWith(QLatin1String("applications:"))
                 ? AGENT_APPLICATIONS
-         : (url.startsWith("/") && !url.endsWith(".desktop"))
+         : (url.startsWith(QLatin1Char('/')) && !url.endsWith(QLatin1String(".desktop")))
                 ? AGENT_DOCUMENTS
-         : (url.startsWith("file:/") && !url.endsWith(".desktop"))
+         : (url.startsWith(QLatin1String("file:/")) && !url.endsWith(QLatin1String(".desktop")))
                 ? AGENT_DOCUMENTS
          // use applications as the default
                 : AGENT_APPLICATIONS;
@@ -99,7 +96,7 @@ public:
 
             const auto url = entry->url();
 
-            qDebug() << "Original id is: " << id << ", and the url is" << url;
+            qCDebug(KICKER_DEBUG) << "Original id is: " << id << ", and the url is" << url;
 
             // Preferred applications need special handling
             if (entry->id().startsWith("preferred:")) {
@@ -225,14 +222,14 @@ public:
             thisCfgGroup.readEntry("ordering", QStringList()) +
             globalCfgGroup.readEntry("ordering", QStringList());
 
-        DEBUG << "Loading the ordering " << ordering;
+        qCDebug(KICKER_DEBUG) << "Loading the ordering " << ordering;
 
         // Loading the results without emitting any model signals
-        DEBUG << "Query is" << m_query;
+        qCDebug(KICKER_DEBUG) << "Query is" << m_query;
         ResultSet results(m_query);
 
         for (const auto& result: results) {
-            DEBUG << "Got " << result.resource() << " -->";
+            qCDebug(KICKER_DEBUG) << "Got " << result.resource() << " -->";
             addResult(result.resource(), -1, false);
         }
 
@@ -267,7 +264,7 @@ public:
                 [] (const NormalizedId &item) {
                     return item.value();
                 });
-        DEBUG << "After ordering: " << itemStrings;
+        qCDebug(KICKER_DEBUG) << "After ordering: " << itemStrings;
     }
 
     void addResult(const QString &_resource, int index, bool notifyModel = true)
@@ -276,14 +273,14 @@ public:
         const auto resource =
             _resource.startsWith("/") ? QUrl::fromLocalFile(_resource).toString() : _resource;
 
-        DEBUG << "Adding result" << resource << "already present?" << m_itemEntries.contains(resource);
+        qCDebug(KICKER_DEBUG) << "Adding result" << resource << "already present?" << m_itemEntries.contains(resource);
 
         if (m_itemEntries.contains(resource)) return;
 
         auto entry = entryForResource(resource);
 
         if (!entry || !entry->isValid()) {
-            DEBUG << "Entry is not valid!";
+            qCDebug(KICKER_DEBUG) << "Entry is not valid!";
             return;
         }
 
@@ -325,7 +322,7 @@ public:
             return;
         }
 
-        DEBUG << "Removing result" << resource;
+        qCDebug(KICKER_DEBUG) << "Removing result" << resource;
 
         auto index = m_items.indexOf(normalizedId(resource));
 
@@ -405,7 +402,7 @@ public:
             m_items.move(from, to);
             q->endMoveRows();
 
-            DEBUG << "Save ordering (from Private::move) -->";
+            qCDebug(KICKER_DEBUG) << "Save ordering (from Private::move) -->";
             saveOrdering();
         }
     }
@@ -418,7 +415,7 @@ public:
             ids << item.value();
         }
 
-        DEBUG << "Save ordering (from Private::saveOrdering) -->";
+        qCDebug(KICKER_DEBUG) << "Save ordering (from Private::saveOrdering) -->";
         saveOrdering(ids, m_clientId, m_activities.currentActivity());
     }
 
@@ -431,7 +428,7 @@ public:
             "global"
         };
 
-        qDebug() << "Saving ordering for" << currentActivity << "and global" << ids;
+        qCDebug(KICKER_DEBUG) << "Saving ordering for" << currentActivity << "and global" << ids;
 
         for (const auto& activity: activities) {
             const QString groupName =
@@ -456,9 +453,6 @@ public:
     QStringList m_ignoredItems;
 };
 
-#undef DEBUG
-#define DEBUG qDebug() << DEBUG_PREFIX << ((void*)this) << ((void*)d) << (d ? d->m_clientId : QString("no client ID yet")) << "\033[0;0m "
-
 KAStatsFavoritesModel::KAStatsFavoritesModel(QObject *parent)
 : PlaceholderModel(parent)
 , d(nullptr) // we have no client id yet
@@ -468,10 +462,12 @@ KAStatsFavoritesModel::KAStatsFavoritesModel(QObject *parent)
 {
     connect(m_activities, &KActivities::Consumer::currentActivityChanged,
             this, [&] (const QString &currentActivity) {
-                DEBUG << "Activity just got changed to" << currentActivity;
+                qCDebug(KICKER_DEBUG) << "Activity just got changed to" << currentActivity;
                 Q_UNUSED(currentActivity);
-                auto clientId = d->m_clientId;
-                initForClient(clientId);
+                if (d) {
+                    auto clientId = d->m_clientId;
+                    initForClient(clientId);
+                }
             });
 }
 
@@ -482,7 +478,7 @@ KAStatsFavoritesModel::~KAStatsFavoritesModel()
 
 void KAStatsFavoritesModel::initForClient(const QString &clientId)
 {
-    DEBUG << "initForClient" << clientId;
+    qCDebug(KICKER_DEBUG) << "initForClient" << clientId;
 
     setSourceModel(nullptr);
     delete d;
@@ -501,7 +497,7 @@ QString KAStatsFavoritesModel::description() const
 
 bool KAStatsFavoritesModel::trigger(int row, const QString &actionId, const QVariant &argument)
 {
-    return d->trigger(row, actionId, argument);
+    return d && d->trigger(row, actionId, argument);
 }
 
 bool KAStatsFavoritesModel::enabled() const
@@ -547,7 +543,8 @@ bool KAStatsFavoritesModel::isFavorite(const QString &id) const
 
 void KAStatsFavoritesModel::portOldFavorites(const QStringList &ids)
 {
-    DEBUG << "portOldFavorites" << ids;
+    if (!d) return;
+    qCDebug(KICKER_DEBUG) << "portOldFavorites" << ids;
 
     const auto activityId = ":global";
     std::for_each(ids.begin(), ids.end(), [&] (const QString &id) {
@@ -560,7 +557,7 @@ void KAStatsFavoritesModel::portOldFavorites(const QStringList &ids)
     delete d;
     d = nullptr;
 
-    DEBUG << "Save ordering (from portOldFavorites) -->";
+    qCDebug(KICKER_DEBUG) << "Save ordering (from portOldFavorites) -->";
     Private::saveOrdering(ids, clientId, m_activities->currentActivity());
 
     QTimer::singleShot(500,
@@ -569,25 +566,25 @@ void KAStatsFavoritesModel::portOldFavorites(const QStringList &ids)
 
 void KAStatsFavoritesModel::addFavorite(const QString &id, int index)
 {
-    DEBUG << "addFavorite" << id << index << " -->";
+    qCDebug(KICKER_DEBUG) << "addFavorite" << id << index << " -->";
     addFavoriteTo(id, QStringLiteral(":global"));
 }
 
 void KAStatsFavoritesModel::removeFavorite(const QString &id)
 {
-    DEBUG << "removeFavorite" << id << " -->";
+    qCDebug(KICKER_DEBUG) << "removeFavorite" << id << " -->";
     removeFavoriteFrom(id, QStringLiteral(":any"));
 }
 
 void KAStatsFavoritesModel::addFavoriteTo(const QString &id, const QString &activityId, int index)
 {
-    DEBUG << "addFavoriteTo" << id << activityId << index << " -->";
+    qCDebug(KICKER_DEBUG) << "addFavoriteTo" << id << activityId << index << " -->";
     addFavoriteTo(id, Activity(activityId), index);
 }
 
 void KAStatsFavoritesModel::removeFavoriteFrom(const QString &id, const QString &activityId)
 {
-    DEBUG << "removeFavoriteFrom" << id << activityId << " -->";
+    qCDebug(KICKER_DEBUG) << "removeFavoriteFrom" << id << activityId << " -->";
     removeFavoriteFrom(id, Activity(activityId));
 }
 
@@ -607,7 +604,7 @@ void KAStatsFavoritesModel::addFavoriteTo(const QString &id, const Activity &act
 
     const auto url = d->normalizedId(id).value();
 
-    DEBUG << "addFavoriteTo" << id << activity << index << url << " (actual)";
+    qCDebug(KICKER_DEBUG) << "addFavoriteTo" << id << activity << index << url << " (actual)";
 
     if (url.isEmpty()) return;
 
@@ -617,11 +614,13 @@ void KAStatsFavoritesModel::addFavoriteTo(const QString &id, const Activity &act
 
 void KAStatsFavoritesModel::removeFavoriteFrom(const QString &id, const Activity &activity)
 {
+    if (!d || id.isEmpty()) return;
+
     const auto url = d->normalizedId(id).value();
 
     Q_ASSERT(!activity.values.isEmpty());
 
-    DEBUG << "addFavoriteTo" << id << activity << url << " (actual)";
+    qCDebug(KICKER_DEBUG) << "addFavoriteTo" << id << activity << url << " (actual)";
 
     if (url.isEmpty()) return;
 
@@ -631,11 +630,13 @@ void KAStatsFavoritesModel::removeFavoriteFrom(const QString &id, const Activity
 
 void KAStatsFavoritesModel::setFavoriteOn(const QString &id, const QString &activityId)
 {
+    if (!d || id.isEmpty()) return;
+
     const auto url = d->normalizedId(id).value();
 
-    DEBUG << "setFavoriteOn" << id << activityId << url << " (actual)";
+    qCDebug(KICKER_DEBUG) << "setFavoriteOn" << id << activityId << url << " (actual)";
 
-    DEBUG << "%%%%%%%%%%% Activity is" << activityId;
+    qCDebug(KICKER_DEBUG) << "%%%%%%%%%%% Activity is" << activityId;
     if (activityId.isEmpty() || activityId == ":any" ||
             activityId == ":global" ||
             activityId == m_activities->currentActivity()) {
@@ -650,6 +651,8 @@ void KAStatsFavoritesModel::setFavoriteOn(const QString &id, const QString &acti
 
 void KAStatsFavoritesModel::moveRow(int from, int to)
 {
+    if (!d) return;
+
     d->move(from, to);
 }
 
@@ -678,7 +681,7 @@ QString KAStatsFavoritesModel::activityNameForId(const QString &activityId) cons
 QStringList KAStatsFavoritesModel::linkedActivitiesFor(const QString &id) const
 {
     if (!d) {
-        DEBUG << "Linked for" << id << "is empty, no Private instance";
+        qCDebug(KICKER_DEBUG) << "Linked for" << id << "is empty, no Private instance";
         return {};
     }
 
@@ -689,7 +692,7 @@ QStringList KAStatsFavoritesModel::linkedActivitiesFor(const QString &id) const
     }
 
     if (url.isEmpty()) {
-        DEBUG << "The url for" << id << "is empty";
+        qCDebug(KICKER_DEBUG) << "The url for" << id << "is empty";
         return {};
     }
 
@@ -707,11 +710,11 @@ QStringList KAStatsFavoritesModel::linkedActivitiesFor(const QString &id) const
     ResultSet results(query);
 
     for (const auto &result: results) {
-        DEBUG << "Returning" << result.linkedActivities() << "for" << id << url;
+        qCDebug(KICKER_DEBUG) << "Returning" << result.linkedActivities() << "for" << id << url;
         return result.linkedActivities();
     }
 
-    DEBUG << "Returning empty list of activities for" << id << url;
+    qCDebug(KICKER_DEBUG) << "Returning empty list of activities for" << id << url;
     return {};
 }
 

@@ -42,7 +42,7 @@ QUrl DirectoryPicker::url() const
 void DirectoryPicker::open()
 {
     if (!m_dialog) {
-        m_dialog = new QFileDialog(0, i18n("Select Folder"),
+        m_dialog = new QFileDialog(nullptr, i18n("Select Folder"),
             QStandardPaths::standardLocations(QStandardPaths::HomeLocation).at(0));
         m_dialog->setFileMode(QFileDialog::Directory);
         m_dialog->setOption(QFileDialog::ShowDirsOnly, true);

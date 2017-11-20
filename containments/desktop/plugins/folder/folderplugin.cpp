@@ -33,7 +33,6 @@
 #include "wheelinterceptor.h"
 #include "shortcut.h"
 
-#include <QtQml>
 
 static QObject *menuHelperSingletonProvider(QQmlEngine *engine, QJSEngine *jsEngine)
 {

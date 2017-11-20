@@ -37,6 +37,8 @@
 
 #include <KNewFileMenu>
 
+#include "folderplugin_private_export.h"
+
 class QDrag;
 class QItemSelectionModel;
 class QQuickItem;
@@ -66,10 +68,10 @@ class DirLister : public KDirLister
         void error(const QString &string);
 
     protected:
-        void handleError(KIO::Job *job) Q_DECL_OVERRIDE;
+        void handleError(KIO::Job *job) override;
 };
 
-class FolderModel : public QSortFilterProxyModel
+class FOLDERPLUGIN_TESTS_EXPORT FolderModel : public QSortFilterProxyModel
 {
     Q_OBJECT
 
@@ -125,7 +127,7 @@ class FolderModel : public QSortFilterProxyModel
         explicit FolderModel(QObject *parent = nullptr);
         ~FolderModel();
 
-        QHash<int, QByteArray> roleNames() const Q_DECL_OVERRIDE;
+        QHash<int, QByteArray> roleNames() const override;
         static QHash<int, QByteArray> staticRoleNames();
 
         QString url() const;
@@ -189,7 +191,7 @@ class FolderModel : public QSortFilterProxyModel
         Q_INVOKABLE void rename(int row, const QString &name);
         Q_INVOKABLE int fileExtensionBoundary(int row);
 
-        Q_INVOKABLE bool hasSelection();
+        Q_INVOKABLE bool hasSelection() const;
         Q_INVOKABLE bool isSelected(int row);
         Q_INVOKABLE void setSelected(int row);
         Q_INVOKABLE void toggleSelected(int row);
@@ -216,11 +218,11 @@ class FolderModel : public QSortFilterProxyModel
 
         Q_INVOKABLE void linkHere(const QUrl &sourceUrl);
 
-        QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const Q_DECL_OVERRIDE;
+        QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
         int indexForUrl(const QUrl &url) const;
         KFileItem itemForIndex(const QModelIndex &index) const;
         bool isDir(const QModelIndex &index, const KDirModel *dirModel) const;
-        bool lessThan(const QModelIndex &left, const QModelIndex &right) const Q_DECL_OVERRIDE;
+        bool lessThan(const QModelIndex &left, const QModelIndex &right) const override;
         Qt::DropActions supportedDragActions() const override;
 
         Q_INVOKABLE void paste();
@@ -257,7 +259,7 @@ class FolderModel : public QSortFilterProxyModel
         void popupMenuAboutToShow(KIO::DropJob *dropJob, QMimeData *mimeData, int x, int y);
 
     protected:
-        bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const Q_DECL_OVERRIDE;
+        bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const override;
         bool matchMimeType(const KFileItem &item) const;
         bool matchPattern(const KFileItem &item) const;
 
@@ -266,7 +268,7 @@ class FolderModel : public QSortFilterProxyModel
         void dirListFailed(const QString &error);
         void statResult(KJob *job);
         void evictFromIsDirCache(const KFileItemList &items);
-        void selectionChanged(QItemSelection selected, QItemSelection deselected);
+        void selectionChanged(const QItemSelection &selected, const QItemSelection &deselected);
         void pasteTo();
         void moveSelectedToTrash();
         void emptyTrashBin();

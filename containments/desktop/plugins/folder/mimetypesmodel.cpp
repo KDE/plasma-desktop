@@ -32,7 +32,7 @@ MimeTypesModel::MimeTypesModel(QObject *parent) : QAbstractListModel(parent)
     m_mimeTypesList = db.allMimeTypes();
     qStableSort(m_mimeTypesList.begin(), m_mimeTypesList.end(), lessThan);
 
-    checkedRows = QVector<bool>(m_mimeTypesList.size(), false);
+    m_checkedRows = QVector<bool>(m_mimeTypesList.size(), false);
 }
 
 MimeTypesModel::~MimeTypesModel()
@@ -42,7 +42,8 @@ MimeTypesModel::~MimeTypesModel()
 QHash<int, QByteArray> MimeTypesModel::roleNames() const
 {
     return {
-        { Qt::DisplayRole, "display" },
+        { Qt::DisplayRole, "comment" },
+        { Qt::UserRole, "name" },
         { Qt::DecorationRole, "decoration" },
         { Qt::CheckStateRole, "checked" }
     };
@@ -56,6 +57,8 @@ QVariant MimeTypesModel::data(const QModelIndex &index, int role) const
 
     switch (role) {
         case Qt::DisplayRole:
+            return m_mimeTypesList.at(index.row()).comment();
+        case Qt::UserRole:
             return m_mimeTypesList.at(index.row()).name();
 
         case Qt::DecorationRole:
@@ -70,7 +73,7 @@ QVariant MimeTypesModel::data(const QModelIndex &index, int role) const
         }
 
         case Qt::CheckStateRole:
-            return checkedRows.at(index.row()) ? Qt::Checked : Qt::Unchecked;
+            return m_checkedRows.at(index.row()) ? Qt::Checked : Qt::Unchecked;
     }
 
     return QVariant();
@@ -84,8 +87,8 @@ bool MimeTypesModel::setData(const QModelIndex &index, const QVariant &value, in
 
     if (role == Qt::CheckStateRole) {
         const bool newChecked = value.toBool();
-        if (checkedRows.at(index.row()) != newChecked) {
-            checkedRows[index.row()] = newChecked;
+        if (m_checkedRows.at(index.row()) != newChecked) {
+            m_checkedRows[index.row()] = newChecked;
             emit dataChanged(index, index, {role});
             emit checkedTypesChanged();
             return true;
@@ -97,9 +100,9 @@ bool MimeTypesModel::setData(const QModelIndex &index, const QVariant &value, in
 
 void MimeTypesModel::checkAll()
 {
-    checkedRows = QVector<bool>(m_mimeTypesList.size(), true);
+    m_checkedRows = QVector<bool>(m_mimeTypesList.size(), true);
 
-    emit dataChanged(index(0, 0), index(m_mimeTypesList.size() - 1, 0));
+    emit dataChanged(index(0, 0), index(m_mimeTypesList.size() - 1, 0), {Qt::CheckStateRole});
 
     emit checkedTypesChanged();
 }
@@ -118,8 +121,8 @@ QStringList MimeTypesModel::checkedTypes() const
 {
     QStringList list;
 
-    for (int i =0; i < checkedRows.size(); ++i) {
-        if (checkedRows.at(i)) {
+    for (int i =0; i < m_checkedRows.size(); ++i) {
+        if (m_checkedRows.at(i)) {
             list.append(m_mimeTypesList.at(i).name());
         }
     }
@@ -133,17 +136,17 @@ QStringList MimeTypesModel::checkedTypes() const
 
 void MimeTypesModel::setCheckedTypes(const QStringList &list)
 {
-    checkedRows = QVector<bool>(m_mimeTypesList.size(), false);
+    m_checkedRows = QVector<bool>(m_mimeTypesList.size(), false);
 
     foreach (const QString &name, list) {
         const int row = indexOfType(name);
 
         if (row != -1) {
-            checkedRows[row] = true;
+            m_checkedRows[row] = true;
         }
     }
 
-    emit dataChanged(index(0, 0), index(m_mimeTypesList.size() - 1, 0));
+    emit dataChanged(index(0, 0), index(m_mimeTypesList.size() - 1, 0), {Qt::CheckStateRole});
 
     emit checkedTypesChanged();
 }

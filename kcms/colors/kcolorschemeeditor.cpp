@@ -46,8 +46,6 @@ int main(int argc, char* argv[])
     KAboutData::setApplicationData(aboutData);
 
     QCommandLineParser parser;
-    parser.addHelpOption();
-    parser.addVersionOption();
     parser.addPositionalArgument("theme", i18n("Scheme to edit or to use as a base."),
         QStringLiteral("kcolorschemeeditor ThemeName"));
     aboutData.setupCommandLine(&parser);

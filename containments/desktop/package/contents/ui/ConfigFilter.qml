@@ -45,7 +45,10 @@ Item {
         // SortFilterModel doesn't have a case-sensitivity option
         // but filterRegExp always causes case-insensitive sorting.
         filterRegExp: mimeFilter.text
-        filterRole: "display"
+        filterRole: "name"
+
+        sortRole: mimeTypesView.getColumn(mimeTypesView.sortIndicatorColumn).role
+        sortOrder: mimeTypesView.sortIndicatorOrder
     }
 
     ColumnLayout {
@@ -94,50 +97,118 @@ Item {
             Layout.fillWidth: true
             Layout.fillHeight: true
 
-            ScrollView {
+            CheckBox { // Purely for metrics.
+                id: metricsCheckBox
+                visible: false
+            }
+
+            TableView {
+                id: mimeTypesView
+
+                // Signal the delegates listen to when user presses space to toggle current row.
+                signal toggleCurrent
+
                 Layout.fillWidth: true
                 Layout.fillHeight: true
 
-                frameVisible: true
-
                 enabled: (filterMode.currentIndex > 0)
 
-                ListView {
-                    model: filderedMimeTypesModel
+                model: filderedMimeTypesModel
 
-                    delegate: RowLayout {
-                        CheckBox {
-                            Layout.maximumWidth: 18 // FIXME HACK: Use actual radio button width.
+                sortIndicatorVisible: true
+                sortIndicatorColumn: 2 // Default to sort by "File type".
 
-                            checked: model.checked
-                            onCheckedChanged: model.checked = checked
+                onSortIndicatorColumnChanged: { // Disallow sorting by icon.
+                    if (sortIndicatorColumn === 1) {
+                        sortIndicatorColumn = 2;
+                    }
+                }
+
+                Keys.onSpacePressed: toggleCurrent()
+
+                function adjustColumns() {
+                    // Resize description column to take whatever space is left.
+                    var width = viewport.width;
+                    for (var i = 0; i < columnCount - 1; ++i) {
+                        width -= getColumn(i).width;
+                    }
+                    descriptionColumn.width = width;
+                }
+
+                onWidthChanged: adjustColumns()
+                // Component.onCompleted is too early to do this...
+                onRowCountChanged: adjustColumns()
+
+                TableViewColumn {
+                    role: "checked"
+                    width: metricsCheckBox.width
+                    resizable: false
+                    movable: false
+
+                    delegate: CheckBox {
+                        id: checkBox
+
+                        checked: styleData.value
+                        activeFocusOnTab: false // only let the TableView as a whole get focus
+                        onClicked: {
+                            model.checked = checked
+                            // Clicking it breaks the binding to the model value which becomes
+                            // an issue during sorting as TableView re-uses delegates.
+                            checked = Qt.binding(function() {
+                                return styleData.value;
+                            });
                         }
 
-                        PlasmaCore.IconItem {
-                            anchors.verticalCenter: parent.verticalCenter
-
-                            width: units.iconSizes.small
-                            height: units.iconSizes.small
-
-                            Layout.maximumWidth: width
-                            Layout.maximumHeight: height
-
-                            source: model.decoration
-                        }
-
-                        Label {
-                            Layout.fillWidth: true
-
-                            text: model.display
+                        Connections {
+                            target: mimeTypesView
+                            onToggleCurrent: {
+                                if (styleData.row === mimeTypesView.currentRow) {
+                                    model.checked = !checkBox.checked
+                                }
+                            }
                         }
                     }
+                }
+
+                TableViewColumn {
+                    role: "decoration"
+                    width: units.iconSizes.small
+                    resizable: false
+                    movable: false
+
+                    delegate: PlasmaCore.IconItem {
+                        width: units.iconSizes.small
+                        height: units.iconSizes.small
+                        animated: false // TableView re-uses delegates, avoid animation when sorting/filtering.
+                        source: styleData.value
+                    }
+                }
+
+                TableViewColumn {
+                    id: nameColumn
+                    role: "name"
+                    title: i18n("File type")
+                    width: units.gridUnit * 10 // Assume somewhat reasonable default for mime type name.
+                    onWidthChanged: mimeTypesView.adjustColumns()
+                    movable: false
+                }
+                TableViewColumn {
+                    id: descriptionColumn
+                    role: "comment"
+                    title: i18n("Description")
+                    movable: false
+                    resizable: false
                 }
             }
 
             ColumnLayout {
                 Layout.alignment: Qt.AlignTop
+                // Need to explicitly base the size off the button's implicitWidth
+                // to avoid the column from growing way too wide due to fillWidth...
+                Layout.maximumWidth: Math.max(selectAllButton.implicitWidth, deselectAllButton.implicitWidth)
 
                 Button {
+                    id: selectAllButton
                     Layout.fillWidth: true
 
                     enabled: (filterMode.currentIndex > 0)
@@ -150,6 +221,7 @@ Item {
                 }
 
                 Button {
+                    id: deselectAllButton
                     Layout.fillWidth: true
 
                     enabled: (filterMode.currentIndex > 0)

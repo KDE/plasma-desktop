@@ -34,7 +34,7 @@ class PlacesModel : public QSortFilterProxyModel
         explicit PlacesModel(QObject *parent = nullptr);
         ~PlacesModel();
 
-        bool activityLinkingEnabled();
+        bool activityLinkingEnabled() const;
 
         QHash<int, QByteArray> roleNames() const override;
         Q_INVOKABLE QString urlForIndex(int idx) const;
@@ -44,7 +44,7 @@ class PlacesModel : public QSortFilterProxyModel
         void placesChanged() const;
 
     protected:
-        bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const Q_DECL_OVERRIDE;
+        bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const override;
 
     private:
         KFilePlacesModel *m_sourceModel;

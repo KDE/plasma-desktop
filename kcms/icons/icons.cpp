@@ -99,7 +99,7 @@ KIconConfig::KIconConfig(QWidget *parent)
     lbl->setBuddy(mpSizeBox);
     grid->addWidget(mpSizeBox, 0, 1, Qt::AlignLeft);
 
-    mpAnimatedCheck = new QCheckBox(i18n("Animate icons"), m_pTab1);
+    mpAnimatedCheck = new QCheckBox(i18n("Enable icon animations"), m_pTab1);
     connect(mpAnimatedCheck, &QCheckBox::toggled, this, &KIconConfig::slotAnimatedCheck);
     grid->addWidget(mpAnimatedCheck, 2, 0, 1, 2, Qt::AlignLeft);
     grid->setRowStretch(3, 10);

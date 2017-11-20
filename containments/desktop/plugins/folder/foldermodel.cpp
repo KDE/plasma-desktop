@@ -60,7 +60,6 @@
 #include <KPropertiesDialog>
 #include <KSharedConfig>
 #include <KShell>
-#include <kio_version.h>
 
 #include <KCoreDirLister>
 #include <KDirLister>
@@ -97,11 +96,11 @@ FolderModel::FolderModel(QObject *parent) : QSortFilterProxyModel(parent),
     m_dirWatch(nullptr),
     m_dragInProgress(false),
     m_urlChangedWhileDragging(false),
-    m_previewGenerator(0),
-    m_viewAdapter(0),
+    m_previewGenerator(nullptr),
+    m_viewAdapter(nullptr),
     m_actionCollection(this),
-    m_newMenu(0),
-    m_fileItemActions(0),
+    m_newMenu(nullptr),
+    m_fileItemActions(nullptr),
     m_usedByContainment(false),
     m_locked(true),
     m_sortMode(0),
@@ -116,7 +115,7 @@ FolderModel::FolderModel(QObject *parent) : QSortFilterProxyModel(parent),
     qmlRegisterType<KIO::DropJob>();
     DirLister *dirLister = new DirLister(this);
     dirLister->setDelayedMimeTypes(true);
-    dirLister->setAutoErrorHandlingEnabled(false, 0);
+    dirLister->setAutoErrorHandlingEnabled(false, nullptr);
     connect(dirLister, &DirLister::error, this, &FolderModel::dirListFailed);
     connect(dirLister, &KCoreDirLister::itemsDeleted, this, &FolderModel::evictFromIsDirCache);
 
@@ -139,8 +138,8 @@ FolderModel::FolderModel(QObject *parent) : QSortFilterProxyModel(parent),
     m_dirModel->setDropsAllowed(KDirModel::DropOnDirectory | KDirModel::DropOnLocalExecutable);
 
     m_selectionModel = new QItemSelectionModel(this, this);
-    connect(m_selectionModel, SIGNAL(selectionChanged(QItemSelection,QItemSelection)),
-            this, SLOT(selectionChanged(QItemSelection,QItemSelection)));
+    connect(m_selectionModel, &QItemSelectionModel::selectionChanged,
+            this, &FolderModel::selectionChanged);
 
     setSourceModel(m_dirModel);
 
@@ -211,6 +210,7 @@ void FolderModel::setUrl(const QString& url)
 
     if (m_dirWatch) {
         delete m_dirWatch;
+        m_dirWatch = nullptr;
     }
 
     if (resolvedUrl.isValid()) {
@@ -236,7 +236,7 @@ QUrl FolderModel::resolve(const QString& url)
 {
     QUrl resolvedUrl;
 
-    if (url.startsWith('~')) {
+    if (url.startsWith(QLatin1Char('~'))) {
         resolvedUrl = QUrl::fromLocalFile(KShell::tildeExpand(url));
     } else {
         resolvedUrl = QUrl::fromUserInput(url);
@@ -483,8 +483,9 @@ void FolderModel::setFilterPattern(const QString &pattern)
     m_filterPattern = pattern;
     m_filterPatternMatchAll = (pattern == QLatin1String("*"));
 
-    const QStringList patterns = pattern.split(' ');
+    const QStringList patterns = pattern.split(QLatin1Char(' '));
     m_regExps.clear();
+    m_regExps.reserve(patterns.count());
 
     foreach (const QString &pattern, patterns) {
         QRegExp rx(pattern);
@@ -544,7 +545,7 @@ void FolderModel::cd(int row)
         const KFileItem  item = itemForIndex(idx);
         if (m_parseDesktopFiles && item.isDesktopFile()) {
             const KDesktopFile file(item.targetUrl().path());
-            if (file.readType() == QLatin1String("Link")) {
+            if (file.hasLinkType()) {
                 setUrl(file.readUrl());
             }
         }
@@ -569,7 +570,7 @@ void FolderModel::run(int row)
         url.setScheme(QStringLiteral("file"));
     }
 
-    KRun *run = new KRun(url, 0);
+    KRun *run = new KRun(url, nullptr);
     // On desktop:/ we want to be able to run .desktop files right away,
     // otherwise ask for security reasons. We also don't use the targetUrl()
     // from above since we don't want the resolved /home/foo/Desktop URL.
@@ -638,7 +639,7 @@ int FolderModel::fileExtensionBoundary(int row)
     return boundary;
 }
 
-bool FolderModel::hasSelection()
+bool FolderModel::hasSelection() const
 {
     return m_selectionModel->hasSelection();
 }
@@ -759,11 +760,12 @@ void FolderModel::setDragHotSpotScrollOffset(int x, int y)
 
 QPoint FolderModel::dragCursorOffset(int row)
 {
-    if (!m_dragImages.contains(row)) {
+    DragImage *image = m_dragImages.value(row);
+    if (!image) {
         return QPoint(-1, -1);
     }
 
-    return m_dragImages.value(row)->cursorOffset;
+    return image->cursorOffset;
 }
 
 void FolderModel::addDragImage(QDrag *drag, int x, int y)
@@ -851,7 +853,7 @@ void FolderModel::dragSelectedInternal(int x, int y)
     emit dataChanged(m_dragIndexes.first(), m_dragIndexes.last(), QVector<int>() << BlankRole);
 
     QModelIndexList sourceDragIndexes;
-
+    sourceDragIndexes.reserve(m_dragIndexes.count());
     foreach (const QModelIndex &index, m_dragIndexes) {
         sourceDragIndexes.append(mapToSource(index));
     }
@@ -890,6 +892,9 @@ void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row)
         return;
     }
 
+    const int x = dropEvent->property("x").toInt();
+    const int y = dropEvent->property("y").toInt();
+
     if (m_dragInProgress && row == -1 && !m_urlChangedWhileDragging) {
         if (m_locked || mimeData->urls().isEmpty()) {
             return;
@@ -897,8 +902,7 @@ void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row)
 
         setSortMode(-1);
 
-        emit move(dropEvent->property("x").toInt(), dropEvent->property("y").toInt(),
-            mimeData->urls());
+        emit move(x, y, mimeData->urls());
 
         return;
     }
@@ -923,7 +927,7 @@ void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row)
     } else if (m_parseDesktopFiles && item.isDesktopFile()) {
         const KDesktopFile file(item.targetUrl().path());
 
-        if (file.readType() == QLatin1String("Link")) {
+        if (file.hasLinkType()) {
             dropTargetUrl = QUrl(file.readUrl());
         } else {
             dropTargetUrl = item.mostLocalUrl();
@@ -943,7 +947,7 @@ void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row)
                                             QStringLiteral("extractSelectedFilesTo"));
         message.setArguments({dropTargetUrl.toDisplayString(QUrl::PreferLocalFile)});
 
-        QDBusConnection::sessionBus().call(message);
+        QDBusConnection::sessionBus().call(message, QDBus::NoBlock);
 
         return;
     }
@@ -952,10 +956,7 @@ void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row)
         return;
     }
 
-    QPoint pos;
-    pos.setX(dropEvent->property("x").toInt());
-    pos.setY(dropEvent->property("y").toInt());
-
+    QPoint pos = {x, y};
     pos = target->mapToScene(pos).toPoint();
     pos = target->window()->mapToGlobal(pos);
 
@@ -969,8 +970,6 @@ void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row)
 
     KIO::DropJob *dropJob = KIO::drop(&ev, dropTargetUrl);
     dropJob->uiDelegate()->setAutoErrorHandlingEnabled(true);
-    const int x = dropEvent->property("x").toInt();
-    const int y = dropEvent->property("y").toInt();
 
     // The QMimeData we extract from the DropArea's drop event is deleted as soon as this method
     // ends but we need to keep a copy for when popupMenuAboutToShow fires.
@@ -1004,7 +1003,7 @@ void FolderModel::dropCwd(QObject* dropEvent)
                                             QStringLiteral("extractSelectedFilesTo"));
         message.setArguments(QVariantList() << m_dirModel->dirLister()->url().adjusted(QUrl::PreferLocalFile).toString());
 
-        QDBusConnection::sessionBus().call(message);
+        QDBusConnection::sessionBus().call(message, QDBus::NoBlock);
     } else {
         Qt::DropAction proposedAction((Qt::DropAction)dropEvent->property("proposedAction").toInt());
         Qt::DropActions possibleActions(dropEvent->property("possibleActions").toInt());
@@ -1019,7 +1018,7 @@ void FolderModel::dropCwd(QObject* dropEvent)
     }
 }
 
-void FolderModel::selectionChanged(QItemSelection selected, QItemSelection deselected)
+void FolderModel::selectionChanged(const QItemSelection &selected, const QItemSelection &deselected)
 {
     QModelIndexList indices = selected.indexes();
     indices.append(deselected.indexes());
@@ -1027,7 +1026,7 @@ void FolderModel::selectionChanged(QItemSelection selected, QItemSelection desel
     QVector<int> roles;
     roles.append(SelectedRole);
 
-    foreach(const QModelIndex index, indices) {
+    foreach(const QModelIndex &index, indices) {
         emit dataChanged(index, index, roles);
     }
 
@@ -1088,7 +1087,7 @@ QVariant FolderModel::data(const QModelIndex& index, int role) const
         if (m_parseDesktopFiles && item.isDesktopFile()) {
             const KDesktopFile file(item.targetUrl().path());
 
-            if (file.readType() == QLatin1String("Link")) {
+            if (file.hasLinkType()) {
                 return file.readUrl();
             }
         }
@@ -1130,7 +1129,7 @@ bool FolderModel::isDir(const QModelIndex &index, const KDirModel *dirModel) con
         // Check if the desktop file is a link to a directory
         KDesktopFile file(item.targetUrl().path());
 
-        if (file.readType() == QLatin1String("Link")) {
+        if (file.hasLinkType()) {
             const QUrl url(file.readUrl());
 
             if (!m_isDirCache.contains(item.url()) && KProtocolInfo::protocolClass(url.scheme()) == QStringLiteral(":local")) {
@@ -1302,17 +1301,17 @@ void FolderModel::createActions()
 {
     KIO::FileUndoManager *manager = KIO::FileUndoManager::self();
 
-    QAction *cut = KStandardAction::cut(this, SLOT(cut()), this);
-    QAction *copy = KStandardAction::copy(this, SLOT(copy()), this);
+    QAction *cut = KStandardAction::cut(this, &FolderModel::cut, this);
+    QAction *copy = KStandardAction::copy(this, &FolderModel::copy, this);
 
-    QAction *undo = KStandardAction::undo(manager, SLOT(undo()), this);
+    QAction *undo = KStandardAction::undo(manager, &KIO::FileUndoManager::undo, this);
     undo->setEnabled(manager->undoAvailable());
     undo->setShortcutContext(Qt::WidgetShortcut);
     connect(manager, SIGNAL(undoAvailable(bool)), undo, SLOT(setEnabled(bool)));
     connect(manager, &KIO::FileUndoManager::undoTextChanged, this, &FolderModel::undoTextChanged);
 
-    QAction *paste = KStandardAction::paste(this, SLOT(paste()), this);
-    QAction *pasteTo = KStandardAction::paste(this, SLOT(pasteTo()), this);
+    QAction *paste = KStandardAction::paste(this, &FolderModel::paste, this);
+    QAction *pasteTo = KStandardAction::paste(this, &FolderModel::pasteTo, this);
 
     QAction *reload = new QAction(i18n("&Reload"), this);
     connect(reload, &QAction::triggered, this, &FolderModel::refresh);
@@ -1355,7 +1354,7 @@ void FolderModel::createActions()
     m_newMenu = new KNewFileMenu(&m_actionCollection, QStringLiteral("newMenu"), QApplication::desktop());
     m_newMenu->setModal(false);
 
-    m_copyToMenu = new KFileCopyToMenu(Q_NULLPTR);
+    m_copyToMenu = new KFileCopyToMenu(nullptr);
 }
 
 QAction* FolderModel::action(const QString &name) const
@@ -1468,7 +1467,7 @@ void FolderModel::openContextMenu(QQuickItem *visualParent)
         // Check if we're showing the menu for the trash link
         if (items.count() == 1 && items.at(0).isDesktopFile()) {
             KDesktopFile file(items.at(0).localPath());
-            if (file.readType() == QLatin1String("Link") && file.readUrl() == QLatin1String("trash:/")) {
+            if (file.hasLinkType() && file.readUrl() == QLatin1String("trash:/")) {
                 isTrashLink = true;
             }
         }
@@ -1522,9 +1521,7 @@ void FolderModel::openContextMenu(QQuickItem *visualParent)
         m_fileItemActions->addServiceActionsTo(menu);
         menu->addSeparator();
         // Plugin actions
-#if KIO_VERSION >= QT_VERSION_CHECK(5, 27, 0)
         m_fileItemActions->addPluginActionsTo(menu);
-#endif
 
         // Copy To, Move To
         KSharedConfig::Ptr dolphin = KSharedConfig::openConfig(QStringLiteral("dolphinrc"));
@@ -1540,7 +1537,7 @@ void FolderModel::openContextMenu(QQuickItem *visualParent)
             QAction *act = new QAction(menu);
             act->setText(i18n("&Properties"));
             QObject::connect(act, &QAction::triggered, [this, items]() {
-                    KPropertiesDialog::showDialog(items, Q_NULLPTR, false /*non modal*/);
+                    KPropertiesDialog::showDialog(items, nullptr, false /*non modal*/);
             });
             menu->addAction(act);
         }
@@ -1657,7 +1654,7 @@ void FolderModel::openSelected()
 
     const QList<QUrl> urls = selectedUrls(false);
     for (const QUrl &url : urls) {
-        (void) new KRun(url, Q_NULLPTR);
+        (void) new KRun(url, nullptr);
     }
 }
 

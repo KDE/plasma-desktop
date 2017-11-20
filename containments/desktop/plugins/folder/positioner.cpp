@@ -110,6 +110,8 @@ void Positioner::setPerStripe(int perStripe)
     if (m_perStripe != perStripe) {
         m_perStripe = perStripe;
 
+        emit perStripeChanged();
+
         if (m_enabled && perStripe > 0 && !m_proxyToSource.isEmpty()) {
             applyPositions();
         }
@@ -121,7 +123,7 @@ QStringList Positioner::positions() const
     return m_positions;
 }
 
-void Positioner::setPositions(QStringList positions)
+void Positioner::setPositions(const QStringList &positions)
 {
     if (m_positions != positions) {
         m_positions = positions;
@@ -139,11 +141,7 @@ void Positioner::setPositions(QStringList positions)
 int Positioner::map(int row) const
 {
     if (m_enabled && m_folderModel) {
-        if (m_proxyToSource.contains(row)) {
-            return m_proxyToSource.value(row);
-        } else {
-            return -1;
-        }
+        return m_proxyToSource.value(row, -1);
     }
 
     return row;
@@ -254,11 +252,7 @@ int Positioner::indexForUrl(const QUrl &url) const
         }
     }
 
-    if (m_sourceToProxy.contains(sourceIndex)) {
-        return m_sourceToProxy.value(sourceIndex);
-    }
-
-    return -1;
+    return m_sourceToProxy.value(sourceIndex, -1);
 }
 
 void Positioner::setRangeSelected(int anchor, int to)
