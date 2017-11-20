@@ -2,10 +2,10 @@
 Icon=preferences-desktop-launch-feedback
 Type=Service
 X-KDE-ServiceTypes=KCModule
-X-DocPath=kcontrol/kcmlaunch/index.html
-Exec=kcmshell5 kcmlaunch
+X-DocPath=kcontrol/kcmlaunchfeedback/index.html
+Exec=kcmshell5 launchfeedback
 
-X-KDE-Library=kcm_launch
+X-KDE-Library=kcm_launchfeedback
 X-KDE-ParentApp=kcontrol
 
 X-KDE-System-Settings-Parent-Category=applications

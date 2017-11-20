@@ -1,2 +1,2 @@
 #! /usr/bin/env bash
-$XGETTEXT *.cpp -o $podir/kcmlaunch.pot
+$XGETTEXT `find . -name \*.cpp -o -name \*.qml` -o $podir/kcmlaunchfeedback.pot
