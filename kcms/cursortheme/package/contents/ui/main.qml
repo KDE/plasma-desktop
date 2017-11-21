@@ -18,6 +18,7 @@
 
 import QtQuick 2.7
 import QtQuick.Layouts 1.1
+import QtQuick.Controls 1.2 as QQC1
 import QtQuick.Controls 2.2 as QtControls
 import org.kde.kirigami 2.2 as Kirigami
 import org.kde.kcm 1.0
@@ -70,14 +71,15 @@ KCMControls.GridViewPage {
             }
             RowLayout {
                 parent: footerLayout.x + footerLayout.width - comboLayout.width > width ? row1 : row2
-                QtControls.Button {
-                // iconName: "document-import"
+                //TODO: port to QQC2 buttons as soon they have icons
+                QQC1.Button {
+                    iconName: "document-import"
                     text: i18n("&Install From File...")
                     onClicked: kcm.installClicked();
                     enabled: kcm.canInstall
                 }
-                QtControls.Button {
-                // iconName: "get-hot-new-stuff"
+                QQC1.Button {
+                    iconName: "get-hot-new-stuff"
                     text: i18n("&Get New Theme...")
                     onClicked: kcm.getNewClicked();
                     enabled: kcm.canInstall
