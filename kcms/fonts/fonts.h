@@ -80,7 +80,9 @@ public:
     void setSubPixelCurrentIndex(int idx);
     int hintingCurrentIndex();
     void setHintingCurrentIndex(int idx);
-    
+
+    bool needsSave() const;
+
 #endif
 
 Q_SIGNALS:
@@ -96,7 +98,9 @@ Q_SIGNALS:
 #if defined(HAVE_FONTCONFIG) && defined (HAVE_X11)
 private:
     int m_excludeTo;
+    int m_excludeToOriginal;
     int m_excludeFrom;
+    int m_excludeFromOriginal;
     int m_antiAliasing;
     int m_antiAliasingOriginal;
     int m_dpi;
@@ -164,6 +168,7 @@ Q_SIGNALS:
     void windowTitleFontChanged();
 
 private:
+    void updateNeedsSave();
     QFont applyFontDiff(const QFont &fnt, const QFont &newFont, int fontDiffFlags);
 
     QFont m_defaultFont;
@@ -173,6 +178,14 @@ private:
     QFont m_toolbarFont;
     QFont m_menuFont;
     QFont m_windowTitleFont;
+
+    QFont m_defaultFontOriginal;
+    QFont m_generalFontOriginal;
+    QFont m_fixedWidthFontOriginal;
+    QFont m_smallFontOriginal;
+    QFont m_toolbarFontOriginal;
+    QFont m_menuFontOriginal;
+    QFont m_windowTitleFontOriginal;
 
     FontAASettings *m_fontAASettings;
 };
