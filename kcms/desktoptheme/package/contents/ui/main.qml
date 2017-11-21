@@ -25,6 +25,7 @@ import QtQuick.Controls 1.0 as QtControls
 
 import org.kde.kcm 1.0
 import org.kde.kirigami 2.0 // for units
+import org.kde.plasma.components 2.0 as PlasmaComponents //the round toolbutton
 
 Item {
     implicitWidth: Units.gridUnit * 20
@@ -77,11 +78,25 @@ Item {
                             }
                         }
 
-                        Item {
+                        MouseArea {
                             anchors {
                                 fill: parent
                                 margins: Units.smallSpacing * 2
                             }
+                            hoverEnabled: true
+                            onClicked: {
+                                grid.currentIndex = index
+                                kcm.selectedPlugin = model.pluginName
+                            }
+
+                            Timer {
+                                interval: 1000
+                                running: parent.containsMouse && !parent.pressedButtons
+                                onTriggered: {
+                                    Tooltip.showText(parent, Qt.point(parent.mouseX, parent.mouseY), model.themeName);
+                                }
+                            }
+
                             ThemePreview {
                                 id: preview
                                 anchors {
@@ -92,6 +107,27 @@ Item {
                                 }
                                 themeName: model.pluginName
                             }
+
+                            PlasmaComponents.ToolButton {
+                                anchors {
+                                    bottom: preview.bottom
+                                    right: preview.right
+                                    margins: units.smallSpacing
+                                }
+                                iconSource: "document-edit"
+                                tooltip: i18("Edit theme")
+                                flat: false
+                                onClicked: kcm.editTheme(model.pluginName)
+                                visible: kcm.canEditThemes
+                                opacity: parent.containsMouse ? 1 : 0
+                                Behavior on opacity {
+                                    PropertyAnimation {
+                                        duration: units.longDuration
+                                        easing.type: Easing.OutQuad
+                                    }
+                                }
+                            }
+
                             QtControls.Label {
                                 id: label
                                 anchors {
@@ -119,21 +155,6 @@ Item {
                                 PropertyAnimation {
                                     duration: Units.longDuration
                                     easing.type: Easing.OutQuad
-                                }
-                            }
-                        }
-                        MouseArea {
-                            anchors.fill: parent
-                            hoverEnabled: true
-                            onClicked: {
-                                grid.currentIndex = index
-                                kcm.selectedPlugin = model.pluginName
-                            }
-                            Timer {
-                                interval: 1000
-                                running: parent.containsMouse && !parent.pressedButtons
-                                onTriggered: {
-                                    Tooltip.showText(parent, Qt.point(parent.mouseX, parent.mouseY), model.themeName);
                                 }
                             }
                         }

@@ -44,6 +44,7 @@ K_PLUGIN_FACTORY_WITH_JSON(KCMDesktopThemeFactory, "kcm_desktoptheme.json", regi
 KCMDesktopTheme::KCMDesktopTheme(QObject *parent, const QVariantList &args)
     : KQuickAddons::ConfigModule(parent, args)
     , m_defaultTheme(new Plasma::Theme(this))
+    , m_haveThemeExplorerInstalled(false)
 {
     //This flag seems to be needed in order for QQuickWidget to work
     //see https://bugreports.qt-project.org/browse/QTBUG-40765
@@ -63,6 +64,8 @@ KCMDesktopTheme::KCMDesktopTheme(QObject *parent, const QVariantList &args)
     roles[ThemeNameRole] = QByteArrayLiteral("themeName");
     roles[IsLocalRole] = QByteArrayLiteral("isLocal");
     m_model->setItemRoleNames(roles);
+
+    m_haveThemeExplorerInstalled = !QStandardPaths::findExecutable(QStringLiteral("plasmathemeexplorer")).isEmpty();
 }
 
 KCMDesktopTheme::~KCMDesktopTheme()
@@ -241,6 +244,16 @@ void KCMDesktopTheme::save()
 void KCMDesktopTheme::defaults()
 {
     setSelectedPlugin(QStringLiteral("default"));
+}
+
+bool KCMDesktopTheme::canEditThemes() const
+{
+    return m_haveThemeExplorerInstalled;
+}
+
+void KCMDesktopTheme::editTheme(const QString &theme)
+{
+    QProcess::startDetached(QStringLiteral("plasmathemeexplorer -t ") % theme);
 }
 
 void KCMDesktopTheme::updateNeedsSave()

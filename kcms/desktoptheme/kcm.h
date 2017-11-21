@@ -35,6 +35,7 @@ class KCMDesktopTheme : public KQuickAddons::ConfigModule
     Q_OBJECT
     Q_PROPERTY(QStandardItemModel *desktopThemeModel READ desktopThemeModel CONSTANT)
     Q_PROPERTY(QString selectedPlugin READ selectedPlugin WRITE setSelectedPlugin NOTIFY selectedPluginChanged)
+    Q_PROPERTY(bool canEditThemes READ canEditThemes CONSTANT)
 
 public:
     enum Roles {
@@ -51,6 +52,7 @@ public:
 
     QString selectedPlugin() const;
     void setSelectedPlugin(const QString &plugin);
+    bool canEditThemes() const;
 
     Q_INVOKABLE void getNewThemes();
     Q_INVOKABLE void installThemeFromFile(const QUrl &file);
@@ -59,6 +61,8 @@ public:
     Q_INVOKABLE void applyPlasmaTheme(QQuickItem *item, const QString &themeName);
 
     Q_INVOKABLE int indexOf(const QString &themeName) const;
+
+    Q_INVOKABLE void editTheme(const QString &themeName);
 
 Q_SIGNALS:
     void selectedPluginChanged(const QString &plugin);
@@ -78,6 +82,7 @@ private:
     QStringList m_pendingRemoval;
     Plasma::Theme *m_defaultTheme;
     QHash<QString, Plasma::Theme*> m_themes;
+    bool m_haveThemeExplorerInstalled;
 };
 
 Q_DECLARE_LOGGING_CATEGORY(KCM_DESKTOP_THEME)
