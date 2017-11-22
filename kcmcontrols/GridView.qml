@@ -35,6 +35,8 @@ QtControls.ScrollView {
     Kirigami.Theme.colorSet: Kirigami.Theme.View
     Kirigami.Theme.inherit: false
 
+    Component.onCompleted: scroll.background.visible = true;
+
     GridView {
         id: view
         property int availableWidth: scroll.parent.width - scroll.scrollBarSpace - 4
