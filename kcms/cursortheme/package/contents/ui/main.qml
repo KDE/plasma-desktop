@@ -26,7 +26,7 @@ import org.kde.kcmcontrols 1.0 as KCMControls
 
 import org.kde.private.kcm_cursortheme 1.0
 
-KCMControls.GridViewPage {
+KCMControls.GridViewKCM {
 
     
     ConfigModule.quickHelp: i18n("This module lets you configure the mouse cursor theme used.")
