@@ -65,7 +65,7 @@ KCMControls.GridViewKCM {
                     model: kcm.sizesModel
                     textRole: "display"
                     onCurrentTextChanged: {
-                        kcm.preferredSize = parseInt(sizeCombo.currentText) !== NaN ? parseInt(sizeCombo.currentText) : 0
+                        kcm.preferredSize = isNaN(parseInt(sizeCombo.currentText)) ? 0 : parseInt(sizeCombo.currentText);
                     }
                 }
             }

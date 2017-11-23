@@ -60,6 +60,7 @@ CursorThemeConfig::CursorThemeConfig(QObject *parent, const QVariantList &args)
       m_appliedSize(0),
       m_preferredSize(0),
       m_selectedThemeRow(-1),
+      m_originalSelectedThemeRow(-1),
       m_canInstall(true),
       m_canResize(true),
       m_canConfigure(true)
@@ -147,7 +148,6 @@ void CursorThemeConfig::setSelectedThemeRow(int row)
 
     m_selectedThemeRow = row;
     emit selectedThemeRowChanged();
-    setNeedsSave(true);
     updateSizeComboBox();
 
     QModelIndex selected = selectedIndex();
@@ -155,6 +155,7 @@ void CursorThemeConfig::setSelectedThemeRow(int row)
     if (selected.isValid()) {
         const CursorTheme *theme = m_proxyModel->theme(selected);
     }
+    setNeedsSave(m_originalSelectedThemeRow != m_selectedThemeRow || m_originalPreferredSize != m_preferredSize);
 }
 
 int CursorThemeConfig::selectedThemeRow() const
@@ -170,7 +171,7 @@ void CursorThemeConfig::setPreferredSize(int size)
 
     m_preferredSize = size;
     emit preferredSizeChanged();
-    setNeedsSave(true);
+    setNeedsSave(m_originalSelectedThemeRow != m_selectedThemeRow || m_originalPreferredSize != m_preferredSize);
 }
 
 int CursorThemeConfig::preferredSize() const
@@ -210,35 +211,37 @@ void CursorThemeConfig::updateSizeComboBox()
     QModelIndex selected = selectedIndex();
     int maxIconWidth = 0;
     int maxIconHeight = 0;
-    if (selected.isValid())
-    {
+    if (selected.isValid()) {
         const CursorTheme *theme = m_proxyModel->theme(selected);
         const QList<int> sizes = theme->availableSizes();
         QIcon m_icon;
-        if (sizes.size() > 1)  // only refill the combobox if there is more that 1 size
-        {
+        // only refill the combobox if there is more that 1 size
+        if (sizes.size() > 1) {
             int i;
             QList<int> comboBoxList;
             QPixmap m_pixmap;
 
             // insert the items
             m_pixmap = theme->createIcon(0);
-            if (m_pixmap.width() > maxIconWidth)
+            if (m_pixmap.width() > maxIconWidth) {
                 maxIconWidth = m_pixmap.width();
-            if (m_pixmap.height() > maxIconHeight)
+            }
+            if (m_pixmap.height() > maxIconHeight) {
                 maxIconHeight = m_pixmap.height();
+            }
             QStandardItem *item = new QStandardItem(QIcon(m_pixmap),
                 i18nc("@item:inlistbox size", "Resolution dependent"));
             item->setData(0);
             m_sizesModel->appendRow(item);
             comboBoxList << 0;
-            foreach (i, sizes)
-            {
+            foreach (i, sizes) {
                 m_pixmap = theme->createIcon(i);
-                if (m_pixmap.width() > maxIconWidth)
+                if (m_pixmap.width() > maxIconWidth) {
                     maxIconWidth = m_pixmap.width();
-                if (m_pixmap.height() > maxIconHeight)
+                }
+                if (m_pixmap.height() > maxIconHeight) {
                     maxIconHeight = m_pixmap.height();
+                }
                 QStandardItem *item = new QStandardItem(QIcon(m_pixmap), QString::number(i));
                 item->setData(i);
                 m_sizesModel->appendRow(item);
@@ -247,8 +250,8 @@ void CursorThemeConfig::updateSizeComboBox()
 
             // select an item
             int selectItem = comboBoxList.indexOf(m_preferredSize);
-            if (selectItem < 0)  // m_preferredSize not available for this theme
-            {
+            // m_preferredSize not available for this theme
+            if (selectItem < 0) {
                 /* Search the value next to m_preferredSize. The first entry (0)
                    is ignored. (If m_preferredSize would have been 0, then we
                    would had found it yet. As m_preferredSize is not 0, we won't
@@ -259,12 +262,10 @@ void CursorThemeConfig::updateSizeComboBox()
                 selectItem = 1;
                 j = comboBoxList.value(selectItem);
                 smallestDistance = j < m_preferredSize ? m_preferredSize - j : j - m_preferredSize;
-                for (int i = 2; i < comboBoxList.size(); ++i)
-                {
+                for (int i = 2; i < comboBoxList.size(); ++i) {
                     j = comboBoxList.value(i);
                     distance = j < m_preferredSize ? m_preferredSize - j : j - m_preferredSize;
-                    if (distance < smallestDistance || (distance == smallestDistance && j > m_preferredSize))
-                    {
+                    if (distance < smallestDistance || (distance == smallestDistance && j > m_preferredSize)) {
                         smallestDistance = distance;
                         selectItem = i;
                     };
@@ -291,11 +292,13 @@ bool CursorThemeConfig::applyTheme(const CursorTheme *theme, const int size)
     // in previous versions the Xfixes code wasn't enabled due to a bug in the
     // build system (freedesktop bug #975).
 #if HAVE_XFIXES && XFIXES_MAJOR >= 2 && XCURSOR_LIB_VERSION >= 10105
-    if (!theme)
+    if (!theme) {
         return false;
+    }
 
-    if (!CursorTheme::haveXfixes())
+    if (!CursorTheme::haveXfixes()) {
         return false;
+    }
 
     QByteArray themeName = QFile::encodeName(theme->name());
 
@@ -331,8 +334,7 @@ bool CursorThemeConfig::applyTheme(const CursorTheme *theme, const int size)
           << "bottom_left_corner"  << "left_side"           << "question_arrow"
           << "pirate";
 
-    foreach (const QString &name, names)
-    {
+    foreach (const QString &name, names) {
         XFixesChangeCursorByName(QX11Info::display(), theme->loadCursor(name, size), QFile::encodeName(name));
     }
 
@@ -350,15 +352,13 @@ void CursorThemeConfig::save()
 
     KConfig config("kcminputrc");
     KConfigGroup c(&config, "Mouse");
-    if (theme)
-    {
+    if (theme) {
         c.writeEntry("cursorTheme", theme->name());
     };
     c.writeEntry("cursorSize", m_preferredSize);
     c.sync();
 
-    if (!applyTheme(theme, m_preferredSize))
-    {
+    if (!applyTheme(theme, m_preferredSize)) {
         KMessageBox::information(0,
                                  i18n("You have to restart KDE for these changes to take effect."),
                                  i18n("Cursor Settings Changed"), "CursorSettingsChanged");
@@ -366,6 +366,8 @@ void CursorThemeConfig::save()
 
     m_appliedIndex = selectedIndex();
     m_appliedSize = m_preferredSize;
+    m_originalSelectedThemeRow = m_selectedThemeRow;
+    m_originalPreferredSize = m_preferredSize;
     setNeedsSave(false);
 }
 
@@ -385,24 +387,25 @@ void CursorThemeConfig::load()
     currentTheme = cg.readEntry("cursorTheme", currentTheme);
 
     // Find the theme in the listview
-    if (!currentTheme.isEmpty())
+    if (!currentTheme.isEmpty()) {
         m_appliedIndex = m_proxyModel->findIndex(currentTheme);
-    else
+    } else {
         m_appliedIndex = m_proxyModel->defaultIndex();
+    }
 
     // Disable the listview and the buttons if we're in kiosk mode
-    if (cg.isEntryImmutable("cursorTheme"))
-    {
+    if (cg.isEntryImmutable("cursorTheme")) {
           setCanConfigure(false);
           setCanInstall(false);
     }
 
     // Load cursor size
     int size = cg.readEntry("cursorSize", 0);
-    if (size <= 0)
+    if (size <= 0) {
         m_preferredSize = 0;
-    else
+    } else {
         m_preferredSize = size;
+    }
     updateSizeComboBox(); // This handles also the kiosk mode
 
     m_appliedSize = size;
@@ -410,6 +413,8 @@ void CursorThemeConfig::load()
     const CursorTheme *theme = m_proxyModel->theme(m_appliedIndex);
 
     setSelectedThemeRow(m_appliedIndex.row());
+    m_originalSelectedThemeRow = m_selectedThemeRow;
+    m_originalPreferredSize = m_preferredSize;
 
     setNeedsSave(false);
 }
@@ -421,7 +426,7 @@ void CursorThemeConfig::defaults()
     setSelectedThemeRow(defaultIndex.row());
     m_preferredSize = 0;
     updateSizeComboBox();
-    setNeedsSave(true);
+    setNeedsSave(m_originalSelectedThemeRow != m_selectedThemeRow || m_originalPreferredSize != m_preferredSize);
 }
 
 
@@ -429,7 +434,8 @@ void CursorThemeConfig::selectionChanged()
 {
     updateSizeComboBox();
 
-    setNeedsSave(m_appliedIndex != selectedIndex());
+    setNeedsSave(m_originalSelectedThemeRow != m_selectedThemeRow || m_originalPreferredSize != m_preferredSize);
+    //setNeedsSave(m_appliedIndex != selectedIndex());
 }
 
 QModelIndex CursorThemeConfig::selectedIndex() const
@@ -442,8 +448,9 @@ void CursorThemeConfig::getNewClicked()
     KNS3::DownloadDialog dialog("xcursor.knsrc", 0);
     if (dialog.exec()) {
         KNS3::Entry::List list = dialog.changedEntries();
-        if (list.count() > 0)
+        if (list.count() > 0) {
             m_model->refreshList();
+        }
     }
 }
 
@@ -456,25 +463,26 @@ void CursorThemeConfig::installClicked()
         return;
 
     QString tempFile;
-    if (!KIO::NetAccess::download(url, tempFile, 0))
-    {
+    if (!KIO::NetAccess::download(url, tempFile, 0)) {
         QString text;
 
-        if (url.isLocalFile())
+        if (url.isLocalFile()) {
             text = i18n("Unable to find the cursor theme archive %1.",
                         url.toDisplayString());
-        else
+        } else {
             text = i18n("Unable to download the cursor theme archive; "
                         "please check that the address %1 is correct.",
                         url.toDisplayString());
+        }
 
         KMessageBox::sorry(0, text);
         return;
     }
 
-    if (!installThemes(tempFile))
+    if (!installThemes(tempFile)) {
         KMessageBox::error(0, i18n("The file %1 does not appear to be a valid "
                                       "cursor theme archive.", url.fileName()));
+    }
 
     KIO::NetAccess::removeTempFile(tempFile);
 }
@@ -505,8 +513,9 @@ void CursorThemeConfig::removeTheme(int row)
     int answer = KMessageBox::warningContinueCancel(0, question,
             i18n("Confirmation"), KStandardGuiItem::del());
 
-    if (answer != KMessageBox::Continue)
+    if (answer != KMessageBox::Continue) {
         return;
+    }
 
     // Delete the theme from the harddrive
     KIO::del(QUrl::fromLocalFile(theme->path())); // async
@@ -528,38 +537,37 @@ bool CursorThemeConfig::installThemes(const QString &file)
 {
     KTar archive(file);
 
-    if (!archive.open(QIODevice::ReadOnly))
+    if (!archive.open(QIODevice::ReadOnly)) {
         return false;
+    }
 
     const KArchiveDirectory *archiveDir = archive.directory();
     QStringList themeDirs;
 
     // Extract the dir names of the cursor themes in the archive, and
     // append them to themeDirs
-    foreach(const QString &name, archiveDir->entries())
-    {
+    foreach(const QString &name, archiveDir->entries()) {
         const KArchiveEntry *entry = archiveDir->entry(name);
-        if (entry->isDirectory() && entry->name().toLower() != "default")
-        {
+        if (entry->isDirectory() && entry->name().toLower() != "default") {
             const KArchiveDirectory *dir = static_cast<const KArchiveDirectory *>(entry);
-            if (dir->entry("index.theme") && dir->entry("cursors"))
+            if (dir->entry("index.theme") && dir->entry("cursors")) {
                 themeDirs << dir->name();
+            }
         }
     }
 
-    if (themeDirs.isEmpty())
+    if (themeDirs.isEmpty()) {
         return false;
+    }
 
     // The directory we'll install the themes to
     QString destDir = QDir::homePath() + "/.icons/";
     QDir().mkpath(destDir); // Make sure the directory exists
 
     // Process each cursor theme in the archive
-    foreach (const QString &dirName, themeDirs)
-    {
+    foreach (const QString &dirName, themeDirs) {
         QDir dest(destDir + dirName);
-        if (dest.exists())
-        {
+        if (dest.exists()) {
             QString question = i18n("A theme named %1 already exists in your icon "
                     "theme folder. Do you want replace it with this one?", dirName);
 
@@ -567,8 +575,9 @@ bool CursorThemeConfig::installThemes(const QString &file)
                                 i18n("Overwrite Theme?"),
                                 KStandardGuiItem::overwrite());
 
-            if (answer != KMessageBox::Continue)
+            if (answer != KMessageBox::Continue) {
                 continue;
+            }
 
             // ### If the theme that's being replaced is the current theme, it
             //     will cause cursor inconsistencies in newly started apps.

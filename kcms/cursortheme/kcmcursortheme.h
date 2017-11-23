@@ -120,8 +120,10 @@ private:
     still 36, so the UI defaults to 34. Now the user changes manually to 44. This
     will also change preferredSize. */
     int m_preferredSize;
+    int m_originalPreferredSize;
 
     int m_selectedThemeRow;
+    int m_originalSelectedThemeRow;
     bool m_canInstall;
     bool m_canResize;
     bool m_canConfigure;
