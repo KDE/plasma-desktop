@@ -22,12 +22,12 @@ import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.0 as QtControls
 import QtQuick.Dialogs 1.2 as QtDialogs
 import org.kde.kirigami 2.3 as Kirigami
-import org.kde.kcm 1.0
+import org.kde.kcm 1.1 as KCM
 
-Kirigami.ScrollablePage {
+KCM.SimpleKCM {
     id: root
 
-    ConfigModule.quickHelp: i18n("Fonts")
+    KCM.ConfigModule.quickHelp: i18n("Fonts")
 
 
     Kirigami.FormLayout {
