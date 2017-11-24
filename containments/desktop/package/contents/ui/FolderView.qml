@@ -253,6 +253,7 @@ Item {
             if (mouse.buttons & Qt.BackButton) {
                 if (root.isPopup && dir.resolvedUrl != dir.resolve(plasmoid.configuration.url)) {
                     doBack();
+                    mouse.accepted = true;
                 }
 
                 return;
@@ -273,6 +274,7 @@ Item {
                 if (mouse.buttons & Qt.RightButton) {
                     clearPressState();
                     dir.openContextMenu();
+                    mouse.accepted = true;
                 }
             } else {
                 pressedItem = hoveredItem;
@@ -308,6 +310,7 @@ Item {
                         clearPressState();
 
                         dir.openContextMenu();
+                        mouse.accepted = true;
                     }
                 }
             }
