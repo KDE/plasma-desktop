@@ -152,11 +152,11 @@ FolderModel::FolderModel(QObject *parent) : QSortFilterProxyModel(parent),
      * delay this via queued connection, such that the row is available and can be mapped
      * when we emit the move request
      */
-    connect(m_dirModel, &QAbstractItemModel::rowsInserted,
+    connect(this, &QAbstractItemModel::rowsInserted,
             this, [this](const QModelIndex &parent, int first, int last) {
         for (int i = first; i <= last; ++i) {
-            const auto index = m_dirModel->index(i, 0, parent);
-            const auto url = m_dirModel->itemForIndex(index).url();
+            const auto idx = index(i, 0, parent);
+            const auto url = itemForIndex(idx).url();
             auto it = m_dropTargetPositions.find(url.fileName());
             if (it != m_dropTargetPositions.end()) {
                 const auto pos = it.value();
@@ -165,7 +165,7 @@ FolderModel::FolderModel(QObject *parent) : QSortFilterProxyModel(parent),
                 emit move(pos.x(), pos.y(), {url});
             }
         }
-    }, Qt::QueuedConnection);
+    });
     /*
      * Dropped files may not actually show up as new files, e.g. when we overwrite
      * an existing file. Or files that fail to be listed by the dirLister, or...
@@ -957,6 +957,16 @@ void FolderModel::dragSelectedInternal(int x, int y)
     }
 }
 
+static bool isDropBetweenSharedViews(const QList<QUrl> &urls, const QUrl &folderUrl)
+{
+    for (const auto &url : urls) {
+        if (folderUrl != url.adjusted(QUrl::RemoveFilename)) {
+            return false;
+        }
+    }
+    return true;
+}
+
 void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row)
 {
     QMimeData *mimeData = qobject_cast<QMimeData *>(dropEvent->property("mimeData").value<QObject *>());
@@ -1031,6 +1041,42 @@ void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row)
     }
 
 
+    if (m_usedByContainment) {
+        auto dropTargetFolderUrl = dropTargetUrl;
+        if (dropTargetFolderUrl.fileName() == QLatin1String(".")) {
+            // the target URL for desktop:/ is e.g. 'file://home/user/Desktop/.'
+            dropTargetFolderUrl = dropTargetFolderUrl.adjusted(QUrl::RemoveFilename);
+        }
+
+        // use dropTargetUrl to resolve desktop:/ to the actual file location which is also used by the mime data
+        if (isDropBetweenSharedViews(mimeData->urls(), dropTargetFolderUrl)) {
+            /* QMimeData operates on local URLs, but the dir lister and thus screen mapper and positioner may
+         * use a fancy scheme like desktop:/ instead. Ensure we always use the latter to properly map URLs,
+         * i.e. go from file:///home/user/Desktop/file to desktop:/file
+         */
+            auto mappableUrl = [this, dropTargetFolderUrl](const QUrl &url) -> QString {
+                QString mappedUrl = url.toString();
+                if (dropTargetFolderUrl != m_dirModel->dirLister()->url()) {
+                    const auto local = dropTargetFolderUrl.toString();
+                    const auto internal = m_dirModel->dirLister()->url().toString();
+                    if (mappedUrl.startsWith(local)) {
+                        mappedUrl.replace(0, local.size(), internal);
+                    }
+                }
+                return mappedUrl;
+            };
+            setSortMode(-1);
+            if (m_screenMapper) {
+                for (const auto &url : mimeData->urls()) {
+                    m_dropTargetPositions.insert(url.fileName(), dropPos);
+                    m_screenMapper->addMapping(mappableUrl(url), m_screen, ScreenMapper::DelayedSignal);
+                }
+            }
+            m_dropTargetPositionsCleanup->start();
+            return;
+        }
+    }
+
     Qt::DropAction proposedAction((Qt::DropAction)dropEvent->property("proposedAction").toInt());
     Qt::DropActions possibleActions(dropEvent->property("possibleActions").toInt());
     Qt::MouseButtons buttons(dropEvent->property("buttons").toInt());
@@ -1063,10 +1109,29 @@ void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row)
      * hash and eventually trigger a move request when we get notified about
      * the new file event from the source model.
      */
-    connect(dropJob, &KIO::DropJob::copyJobStarted, this, [this, dropPos](KIO::CopyJob* copyJob) {
-        auto map = [this, dropPos](const QUrl &targetUrl) {
+    connect(dropJob, &KIO::DropJob::copyJobStarted, this, [this, dropPos, dropTargetUrl](KIO::CopyJob* copyJob) {
+        auto map = [this, dropPos, dropTargetUrl](const QUrl &targetUrl) {
             m_dropTargetPositions.insert(targetUrl.fileName(), dropPos);
             m_dropTargetPositionsCleanup->start();
+
+            if (m_usedByContainment && m_screenMapper) {
+                // assign a screen for the item before the copy is actually done, so
+                // filterAcceptsRow doesn't assign the default screen to it
+                QUrl url = QUrl::fromUserInput(m_url, {}, QUrl::AssumeLocalFile);
+                // if the folderview's folder is a standard path, just use the targetUrl for mapping
+                if (targetUrl.toString().startsWith(url.toString())) {
+                    m_screenMapper->addMapping(targetUrl.toString(), m_screen, ScreenMapper::DelayedSignal);
+                } else if (targetUrl.toString().startsWith(dropTargetUrl.toString())) {
+                    // if the folderview's folder is a special path, like desktop:// , we need to convert
+                    // the targetUrl file:// path to a desktop:/ path for mapping
+                    auto destPath = dropTargetUrl.path();
+                    auto filePath = targetUrl.path();
+                    if (filePath.startsWith(destPath)) {
+                        url.setPath(filePath.remove(0, destPath.length()));
+                        m_screenMapper->addMapping(url.toString(), m_screen, ScreenMapper::DelayedSignal);
+                    }
+                }
+            }
         };
         // remember drop target position for target URL and forget about the source URL
         connect(copyJob, &KIO::CopyJob::copyingDone,
@@ -1784,7 +1849,7 @@ void FolderModel::setAppletInterface(QObject *appletInterface)
                 if (containment) {
                     Plasma::Corona *corona = containment->corona();
 
-                    if (corona) {
+                    if (corona && m_screenMapper) {
                         m_screenMapper->setCorona(corona);
                     }
                     setScreen(containment->screen());

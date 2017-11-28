@@ -399,7 +399,10 @@ void Positioner::move(const QVariantList &moves) {
         }
 
         if (!fromIndices.contains(to) && !isBlank(to)) {
-            continue;
+            // find the next blank space
+            while (!isBlank(to) &&  from != to) {
+                to++;
+            }
         }
 
         toIndices[i] = to;
