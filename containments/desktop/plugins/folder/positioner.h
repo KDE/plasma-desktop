@@ -76,6 +76,15 @@ class FOLDERPLUGIN_TESTS_EXPORT Positioner : public QAbstractItemModel
         int rowCount(const QModelIndex &parent = QModelIndex()) const override;
         int columnCount(const QModelIndex &parent = QModelIndex()) const override;
 
+#ifdef BUILD_TESTING
+        QHash<int, int> proxyToSourceMapping() const {
+            return m_proxyToSource;
+        }
+        QHash<int, int> sourceToProxyMapping() const {
+            return m_sourceToProxy;
+        }
+#endif
+
     Q_SIGNALS:
         void enabledChanged() const;
         void folderModelChanged() const;
@@ -128,6 +137,7 @@ class FOLDERPLUGIN_TESTS_EXPORT Positioner : public QAbstractItemModel
 
         QHash<int, int> m_proxyToSource;
         QHash<int, int> m_sourceToProxy;
+        bool m_beginInsertRowsCalled = false; // used to sync the amount of begin/endInsertRows calls
 };
 
 #endif

@@ -425,6 +425,10 @@ void Positioner::move(const QVariantList &moves) {
     const int newCount = rowCount();
 
     if (newCount > oldCount) {
+        if (m_beginInsertRowsCalled) {
+            endInsertRows();
+            m_beginInsertRowsCalled = false;
+        }
         beginInsertRows(QModelIndex(), oldCount, newCount - 1);
         endInsertRows();
     }
@@ -510,12 +514,26 @@ void Positioner::sourceRowsAboutToBeInserted(const QModelIndex &parent, int star
     if (m_enabled) {
         if (m_proxyToSource.isEmpty()) {
             if (!m_pendingPositions) {
-                emit beginInsertRows(parent, start, end);
+                beginInsertRows(parent, start, end);
+                m_beginInsertRowsCalled = true;
 
                 initMaps(end + 1);
             }
 
             return;
+        }
+
+        // When new rows are inserted, they might go in the beginning or in the middle.
+        // In this case we must update first the existing proxy->source and source->proxy
+        // mapping, otherwise the proxy items will point to the wrong source item.
+        int count = end - start + 1;
+        m_sourceToProxy.clear();
+        for (auto it = m_proxyToSource.begin(); it != m_proxyToSource.end(); ++it) {
+            int sourceIdx = *it;
+            if (sourceIdx >= start) {
+                *it += count;
+            }
+            m_sourceToProxy[*it] = it.key();
         }
 
         int free = -1;
@@ -538,6 +556,7 @@ void Positioner::sourceRowsAboutToBeInserted(const QModelIndex &parent, int star
             int remainder = (end - rest);
 
             beginInsertRows(parent, firstNew, firstNew + remainder);
+            m_beginInsertRowsCalled = true;
 
             for (int i = 0; i <= remainder; ++i) {
                 updateMaps(firstNew + i, rest + i);
@@ -547,6 +566,8 @@ void Positioner::sourceRowsAboutToBeInserted(const QModelIndex &parent, int star
         }
     } else {
         emit beginInsertRows(parent, start, end);
+        beginInsertRows(parent, start, end);
+        m_beginInsertRowsCalled = true;
     }
 }
 
@@ -617,7 +638,10 @@ void Positioner::sourceRowsInserted(const QModelIndex &parent, int first, int la
 
     if (!m_ignoreNextTransaction) {
         if (!m_pendingPositions) {
-            emit endInsertRows();
+            if (m_beginInsertRowsCalled) {
+                endInsertRows();
+                m_beginInsertRowsCalled = false;
+            }
         } else {
             applyPositions();
         }

@@ -52,6 +52,7 @@ private Q_SLOTS:
     void tst_defaultValues();
     void tst_changeEnabledStatus();
     void tst_changePerStripe();
+    void tst_proxyMapping();
 
 private:
     void checkPositions(int perStripe);

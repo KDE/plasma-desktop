@@ -29,6 +29,7 @@
 
 #include "foldermodel.h"
 #include "positioner.h"
+#include "screenmapper.h"
 
 QTEST_MAIN(PositionerTest)
 
@@ -58,6 +59,9 @@ void PositionerTest::cleanupTestCase()
 void PositionerTest::init()
 {
     m_folderModel = new FolderModel(this);
+    m_folderModel->setScreen(0);
+    m_folderModel->setScreenMapper(ScreenMapper::instance());
+    m_folderModel->setUsedByContainment(true);
     m_positioner = new Positioner(this);
     m_positioner->setEnabled(true);
     m_positioner->setFolderModel(m_folderModel);
@@ -207,6 +211,98 @@ void PositionerTest::tst_changePerStripe()
 
     positioner.setPerStripe(4);
     QCOMPARE(s.count(), 2);
+}
+
+void PositionerTest::tst_proxyMapping()
+{
+    auto *screenMapper = ScreenMapper::instance();
+    FolderModel secondFolderModel;
+    secondFolderModel.setUrl(m_folderDir->path()  + QDir::separator() + desktop );
+    secondFolderModel.setUsedByContainment(true);
+    secondFolderModel.setScreenMapper(screenMapper);
+    secondFolderModel.setScreen(1);
+    Positioner secondPositioner;
+    secondPositioner.setEnabled(true);
+    secondPositioner.setFolderModel(&secondFolderModel);
+    secondPositioner.setPerStripe(3);
+
+    QSignalSpy s2(&secondFolderModel, &FolderModel::listingCompleted);
+    QVERIFY(s2.wait(1000));
+
+    QHash<int, int> expectedSource2ProxyScreen0;
+    QHash<int, int> expectedProxy2SourceScreen0;
+    QHash<int, int> expectedProxy2SourceScreen1;
+    QHash<int, int> expectedSource2ProxyScreen1;
+
+    for (int i = 0; i < m_folderModel->rowCount(); i++) {
+        expectedSource2ProxyScreen0[i] = i;
+        expectedProxy2SourceScreen0[i] = i;
+    }
+
+    // swap items 1 and 2 in the positioner
+    m_positioner->move({1, 2, 2, 1});
+    expectedSource2ProxyScreen0[1] = 2;
+    expectedSource2ProxyScreen0[2] = 1;
+    expectedProxy2SourceScreen0[1] = 2;
+    expectedProxy2SourceScreen0[2] = 1;
+
+    auto savedSource2ProxyScreen0 = expectedSource2ProxyScreen0;
+    auto savedProxy2SourceScreen0 = expectedProxy2SourceScreen0;
+
+    auto verifyMapping = [](const QHash<int, int> &actual, const QHash<int, int> &expected) {
+
+        auto ensureUnique = [](const QHash<int, int> mapping) {
+            auto values = mapping.values();
+            qSort(values);
+            auto uniqueValues = values.toSet().toList();
+            qSort(uniqueValues);
+            QVERIFY(uniqueValues == values);
+        };
+
+        ensureUnique(actual);
+        QCOMPARE(actual, expected);
+    };
+
+    verifyMapping(m_positioner->proxyToSourceMapping(), expectedProxy2SourceScreen0);
+    verifyMapping(m_positioner->sourceToProxyMapping(), expectedSource2ProxyScreen0);
+    verifyMapping(secondPositioner.proxyToSourceMapping(), expectedProxy2SourceScreen1);
+    verifyMapping(secondPositioner.sourceToProxyMapping(), expectedSource2ProxyScreen1);
+
+    const auto movedItem = m_folderModel->index(1, 0).data(FolderModel::UrlRole).toString();
+
+    // move the item 1 from source (now in position 2) to the second screen
+    screenMapper->addMapping(movedItem, 1);
+
+    expectedProxy2SourceScreen1[0] = 0;
+    expectedSource2ProxyScreen1[0] = 0;
+    expectedSource2ProxyScreen0.clear();
+    expectedProxy2SourceScreen0.clear();
+    for (int i = 0; i < m_folderModel->rowCount(); i++) {
+        // as item 1 disappeared, the mapping of all items after that are shifted
+        auto proxyIndex = (i <= 1) ? i : i + 1;
+        expectedProxy2SourceScreen0[proxyIndex] = i;
+        expectedSource2ProxyScreen0[i] = proxyIndex;
+    }
+
+    verifyMapping(m_positioner->proxyToSourceMapping(), expectedProxy2SourceScreen0);
+    verifyMapping(m_positioner->sourceToProxyMapping(), expectedSource2ProxyScreen0);
+    verifyMapping(secondPositioner.proxyToSourceMapping(), expectedProxy2SourceScreen1);
+    verifyMapping(secondPositioner.sourceToProxyMapping(), expectedSource2ProxyScreen1);
+
+    // move back the same item to the first screen
+    screenMapper->addMapping(movedItem, 0);
+
+    // nothing on the second screen
+    expectedSource2ProxyScreen1.clear();
+    expectedProxy2SourceScreen1.clear();
+    // first screen should look like in the beginning
+    expectedSource2ProxyScreen0 = savedSource2ProxyScreen0;
+    expectedProxy2SourceScreen0 = savedProxy2SourceScreen0;
+
+    verifyMapping(m_positioner->proxyToSourceMapping(), expectedProxy2SourceScreen0);
+    verifyMapping(m_positioner->sourceToProxyMapping(), expectedSource2ProxyScreen0);
+    verifyMapping(secondPositioner.proxyToSourceMapping(), expectedProxy2SourceScreen1);
+    verifyMapping(secondPositioner.sourceToProxyMapping(), expectedSource2ProxyScreen1);
 }
 
 void PositionerTest::checkPositions(int perStripe)
