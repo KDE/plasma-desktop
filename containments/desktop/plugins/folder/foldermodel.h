@@ -315,6 +315,10 @@ class FOLDERPLUGIN_TESTS_EXPORT FolderModel : public QSortFilterProxyModel
         QPoint m_dragHotSpotScrollOffset;
         bool m_dragInProgress;
         bool m_urlChangedWhileDragging;
+        // target filename to target position of a drop event, note that this deliberately
+        // is not using the URL to easily support desktop:/ URL schemes
+        QHash<QString, QPoint> m_dropTargetPositions;
+        QTimer *m_dropTargetPositionsCleanup;
         QPointer<KFilePreviewGenerator> m_previewGenerator;
         QPointer<KAbstractViewAdapter> m_viewAdapter;
         KActionCollection m_actionCollection;

@@ -40,6 +40,8 @@
 #include <QPixmap>
 #include <QQuickItem>
 #include <QQuickWindow>
+#include <QTimer>
+#include <QLoggingCategory>
 #include <qplatformdefs.h>
 
 #include <KDirWatch>
@@ -79,6 +81,8 @@
 #include <sys/stat.h>
 #include <unistd.h>
 
+Q_LOGGING_CATEGORY(FOLDERMODEL, "plasma.containments.desktop.folder.foldermodel")
+
 DirLister::DirLister(QObject *parent) : KDirLister(parent)
 {
 }
@@ -101,6 +105,7 @@ FolderModel::FolderModel(QObject *parent) : QSortFilterProxyModel(parent),
     m_dirWatch(nullptr),
     m_dragInProgress(false),
     m_urlChangedWhileDragging(false),
+    m_dropTargetPositionsCleanup(new QTimer(this)),
     m_previewGenerator(nullptr),
     m_viewAdapter(nullptr),
     m_actionCollection(this),
@@ -141,6 +146,44 @@ FolderModel::FolderModel(QObject *parent) : QSortFilterProxyModel(parent),
     m_dirModel = new KDirModel(this);
     m_dirModel->setDirLister(dirLister);
     m_dirModel->setDropsAllowed(KDirModel::DropOnDirectory | KDirModel::DropOnLocalExecutable);
+
+    /*
+     * position dropped items at the desired target position
+     * delay this via queued connection, such that the row is available and can be mapped
+     * when we emit the move request
+     */
+    connect(m_dirModel, &QAbstractItemModel::rowsInserted,
+            this, [this](const QModelIndex &parent, int first, int last) {
+        for (int i = first; i <= last; ++i) {
+            const auto index = m_dirModel->index(i, 0, parent);
+            const auto url = m_dirModel->itemForIndex(index).url();
+            auto it = m_dropTargetPositions.find(url.fileName());
+            if (it != m_dropTargetPositions.end()) {
+                const auto pos = it.value();
+                m_dropTargetPositions.erase(it);
+                setSortMode(-1);
+                emit move(pos.x(), pos.y(), {url});
+            }
+        }
+    }, Qt::QueuedConnection);
+    /*
+     * Dropped files may not actually show up as new files, e.g. when we overwrite
+     * an existing file. Or files that fail to be listed by the dirLister, or...
+     * To ensure we don't grow the map indefinitely, clean it up periodically.
+     * The cleanup timer is (re)started whenever we modify the map. We use a quite
+     * high interval of 10s. This should ensure, that we don't accidentally wipe
+     * the mapping when we actually still want to use it. Since the time between
+     * adding an entry in the map and it showing up in the model should be
+     * small, this should rarely, if ever happen.
+     */
+    m_dropTargetPositionsCleanup->setInterval(10000);
+    m_dropTargetPositionsCleanup->setSingleShot(true);
+    connect(m_dropTargetPositionsCleanup, &QTimer::timeout, this, [this]() {
+        if (!m_dropTargetPositions.isEmpty()) {
+            qCDebug(FOLDERMODEL) << "clearing drop target positions after timeout:" << m_dropTargetPositions;
+            m_dropTargetPositions.clear();
+        }
+    });
 
     m_selectionModel = new QItemSelectionModel(this, this);
     connect(m_selectionModel, &QItemSelectionModel::selectionChanged,
@@ -792,7 +835,7 @@ QPoint FolderModel::dragCursorOffset(int row)
 {
     DragImage *image = m_dragImages.value(row);
     if (!image) {
-        return QPoint(-1, -1);
+        return QPoint(0, 0);
     }
 
     return image->cursorOffset;
@@ -924,6 +967,7 @@ void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row)
 
     const int x = dropEvent->property("x").toInt();
     const int y = dropEvent->property("y").toInt();
+    const QPoint dropPos = {x, y};
 
     if (m_dragInProgress && row == -1 && !m_urlChangedWhileDragging) {
         if (m_locked || mimeData->urls().isEmpty()) {
@@ -986,15 +1030,14 @@ void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row)
         return;
     }
 
-    QPoint pos = {x, y};
-    pos = target->mapToScene(pos).toPoint();
-    pos = target->window()->mapToGlobal(pos);
 
     Qt::DropAction proposedAction((Qt::DropAction)dropEvent->property("proposedAction").toInt());
     Qt::DropActions possibleActions(dropEvent->property("possibleActions").toInt());
     Qt::MouseButtons buttons(dropEvent->property("buttons").toInt());
     Qt::KeyboardModifiers modifiers(dropEvent->property("modifiers").toInt());
 
+    auto pos = target->mapToScene(dropPos).toPoint();
+    pos = target->window()->mapToGlobal(pos);
     QDropEvent ev(pos, possibleActions, mimeData, buttons, modifiers);
     ev.setDropAction(proposedAction);
 
@@ -1008,9 +1051,32 @@ void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row)
         mimeCopy->setData(format, mimeData->data(format));
     }
 
-    connect(dropJob, static_cast<void(KIO::DropJob::*)(const KFileItemListProperties &)>(&KIO::DropJob::popupMenuAboutToShow), this, [this, mimeCopy, x, y, dropJob](const KFileItemListProperties &) {
+    connect(dropJob, &KIO::DropJob::popupMenuAboutToShow, this, [this, mimeCopy, x, y, dropJob](const KFileItemListProperties &) {
         emit popupMenuAboutToShow(dropJob, mimeCopy, x, y);
         mimeCopy->deleteLater();
+    });
+
+    /*
+     * Position files that come from a drag'n'drop event at the drop event
+     * target position. To do so, we first listen to copy job to figure out
+     * the target URL. Then we store the position of this drop event in the
+     * hash and eventually trigger a move request when we get notified about
+     * the new file event from the source model.
+     */
+    connect(dropJob, &KIO::DropJob::copyJobStarted, this, [this, dropPos](KIO::CopyJob* copyJob) {
+        auto map = [this, dropPos](const QUrl &targetUrl) {
+            m_dropTargetPositions.insert(targetUrl.fileName(), dropPos);
+            m_dropTargetPositionsCleanup->start();
+        };
+        // remember drop target position for target URL and forget about the source URL
+        connect(copyJob, &KIO::CopyJob::copyingDone,
+                this, [this, map](KIO::Job *, const QUrl &, const QUrl &targetUrl, const QDateTime &, bool, bool) {
+            map(targetUrl);
+        });
+        connect(copyJob, &KIO::CopyJob::copyingLinkDone,
+                this, [this, map](KIO::Job *, const QUrl &, const QString &, const QUrl &targetUrl) {
+            map(targetUrl);
+        });
     });
 }
 
