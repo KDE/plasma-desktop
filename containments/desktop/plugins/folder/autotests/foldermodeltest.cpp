@@ -21,6 +21,7 @@
 
 #include "foldermodeltest.h"
 #include "foldermodel.h"
+#include "screenmapper.h"
 
 #include <QTest>
 #include <QTemporaryDir>
@@ -30,13 +31,11 @@ QTEST_MAIN(FolderModelTest)
 
 static const QLatin1String desktop(QLatin1String("Desktop"));
 
-void FolderModelTest::initTestCase()
+void FolderModelTest::createTestFolder(const QString &path)
 {
-    m_folderDir = new QTemporaryDir();
-        
     QDir dir(m_folderDir->path());
-    dir.mkdir(desktop);
-    dir.cd(desktop);
+    dir.mkdir(path);
+    dir.cd(path);
     dir.mkdir("firstDir");
     QFile f;
     for (int i = 1; i < 10; i++) {
@@ -44,16 +43,12 @@ void FolderModelTest::initTestCase()
         f.open(QFile::WriteOnly);
         f.close();
     }
-    
-}
-
-void FolderModelTest::cleanupTestCase()
-{
-    delete m_folderDir;
 }
 
 void FolderModelTest::init()
 {
+    m_folderDir = new QTemporaryDir();
+    createTestFolder(desktop);
     m_folderModel = new FolderModel(this);
     m_folderModel->setUrl(m_folderDir->path()  + QDir::separator() + desktop );
     QSignalSpy s(m_folderModel, &FolderModel::listingCompleted);
@@ -62,6 +57,8 @@ void FolderModelTest::init()
 
 void FolderModelTest::cleanup()
 {
+    delete m_folderDir;
+    m_folderDir = 0;
     delete m_folderModel;
     m_folderModel = nullptr;
 }
@@ -265,3 +262,110 @@ void FolderModelTest::tst_lockedChanged()
     m_folderModel->setLocked(true);
     QCOMPARE(s.count(), 2);
 }
+
+void FolderModelTest::tst_multiScreen()
+{
+    auto *screenMapper = ScreenMapper::instance();
+    m_folderModel->setUsedByContainment(true);
+    m_folderModel->setScreenMapper(screenMapper);
+    m_folderModel->setScreen(0);
+    QSignalSpy s(m_folderModel, &FolderModel::listingCompleted);
+    s.wait(1000);
+    const auto count = m_folderModel->rowCount();
+    for (int i = 0; i < count; i++) {
+        const auto index = m_folderModel->index(i, 0);
+        const auto name = index.data(FolderModel::UrlRole).toString();
+        // all items are on the first screen by default
+        QCOMPARE(screenMapper->screenForItem(name), 0);
+    }
+
+    // move one file to a new screen
+    const auto movedItem = m_folderModel->index(0, 0).data(FolderModel::UrlRole).toString();
+    FolderModel secondFolderModel;
+    secondFolderModel.setUrl(m_folderDir->path()  + QDir::separator() + desktop );
+    secondFolderModel.setUsedByContainment(true);
+    secondFolderModel.setScreenMapper(screenMapper);
+    secondFolderModel.setScreen(1);
+    QSignalSpy s2(&secondFolderModel, &FolderModel::listingCompleted);
+    s2.wait(1000);
+    const auto count2 = secondFolderModel.rowCount();
+    QCOMPARE(count2, 0);
+
+    screenMapper->addMapping(movedItem, 1);
+    m_folderModel->invalidate();
+    secondFolderModel.invalidate();
+    s.wait(1000);
+    s2.wait(1000);
+    // we have one less item
+    QCOMPARE(m_folderModel->rowCount(), count - 1);
+    QCOMPARE(secondFolderModel.rowCount(), 1);
+    QCOMPARE(secondFolderModel.index(0,0).data(FolderModel::UrlRole).toString(), movedItem);
+    QCOMPARE(screenMapper->screenForItem(movedItem), 1);
+
+    // remove extra screen, we have all items back
+    screenMapper->removeScreen(1, m_folderModel->url());
+    s.wait(500);
+    QCOMPARE(m_folderModel->rowCount(), count);
+    QCOMPARE(secondFolderModel.rowCount(), 0);
+    QCOMPARE(screenMapper->screenForItem(movedItem), 0);
+
+    // add back extra screen, the item is moved there
+    screenMapper->addScreen(1, m_folderModel->url());
+    s.wait(500);
+    s2.wait(500);
+    QCOMPARE(m_folderModel->rowCount(), count - 1);
+    QCOMPARE(secondFolderModel.rowCount(), 1);
+    QCOMPARE(secondFolderModel.index(0,0).data(FolderModel::UrlRole).toString(), movedItem);
+    QCOMPARE(screenMapper->screenForItem(movedItem), 1);
+
+    // create a new item, it appears on the first screen
+    QDir dir(m_folderDir->path());
+    dir.cd(desktop);
+    dir.mkdir("secondDir");
+    dir.cd("secondDir");
+    s.wait(1000);
+    QCOMPARE(m_folderModel->rowCount(), count);
+    QCOMPARE(secondFolderModel.rowCount(), 1);
+    QCOMPARE(screenMapper->screenForItem("file://" + dir.path()), 0);
+}
+
+void FolderModelTest::tst_multiScreenDifferenPath()
+{
+    auto *screenMapper = ScreenMapper::instance();
+    m_folderModel->setUsedByContainment(true);
+    m_folderModel->setScreenMapper(screenMapper);
+    m_folderModel->setScreen(0);
+    QSignalSpy s(m_folderModel, &FolderModel::listingCompleted);
+    s.wait(1000);
+    const auto count = m_folderModel->rowCount();
+    QCOMPARE(count, 10);
+
+    const QLatin1String desktop2(QLatin1String("Desktop2"));
+    createTestFolder(desktop2);
+    FolderModel secondFolderModel;
+    secondFolderModel.setUsedByContainment(true);
+    secondFolderModel.setScreenMapper(screenMapper);
+    secondFolderModel.setUrl(m_folderDir->path()  + QDir::separator() + desktop2 );
+    secondFolderModel.setScreen(1);
+    QSignalSpy s2(&secondFolderModel, &FolderModel::listingCompleted);
+    s2.wait(1000);
+    const auto count2 = secondFolderModel.rowCount();
+    QCOMPARE(count2, 10);
+
+    // create a new item, it appears on the first screen
+    QDir dir(m_folderDir->path());
+    dir.cd(desktop);
+    dir.mkdir("secondDir");
+    s.wait(1000);
+    QCOMPARE(m_folderModel->rowCount(), count + 1);
+    QCOMPARE(secondFolderModel.rowCount(), count2);
+
+
+    // create a new item, it appears on the second screen
+    dir.cd(m_folderDir->path() + QDir::separator() + desktop2);
+    dir.mkdir("secondDir2");
+    s.wait(1000);
+    QCOMPARE(m_folderModel->rowCount(), count + 1);
+    QCOMPARE(secondFolderModel.rowCount(), count2 + 1);
+}
+

@@ -2,6 +2,7 @@
  *   Copyright (C) 2017 Klarälvdalens Datakonsult AB, a KDAB Group company *
  *                      <info@kdab.com>                                    *
  *   Author: Andras Mantia <andras.mantia@kdab.com>                        *
+ *           Work sponsored by the LiMux project of the city of Munich.    *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -19,41 +20,31 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#ifndef FOLDERMODELTEST_H
-#define FOLDERMODELTEST_H
+#ifndef SCREENMAPPERTEST_H
+#define SCREENMAPPERTEST_H
 
 #include <QObject>
 
-class QTemporaryDir;
-class FolderModel;
+class ScreenMapper;
 
-class FolderModelTest : public QObject
+class ScreenMapperTest : public QObject
 {
     Q_OBJECT
 
 private Q_SLOTS:
+    void initTestCase();
     void init();
-    void cleanup();
-    void tst_listing();
-    void tst_listingDescending();
-    void tst_listingFolderNotFirst();
-    void tst_filterListing();
-    void tst_cd();
-    void tst_rename_data();
-    void tst_rename();
-    void tst_selection();
-    void tst_defaultValues();
-    void tst_actionMenu();
-    void tst_lockedChanged();
-    void tst_multiScreen();
-    void tst_multiScreenDifferenPath();
 
+    void tst_addScreens();
+    void tst_removeScreens();
+    void tst_addMapping();
+    void tst_addRemoveScreenWithItems();
+    void tst_addRemoveScreenDifferentPaths();
 
-private:    
-    void createTestFolder(const QString &path);
+private:
+    void addScreens(const QString &path);
 
-    FolderModel *m_folderModel;
-    QTemporaryDir *m_folderDir;
+    ScreenMapper *m_screenMapper;
 };
 
-#endif // FOLDERMODELTEST_H
+#endif // SCREENMAPPERTEST_H

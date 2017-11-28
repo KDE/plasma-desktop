@@ -37,6 +37,10 @@
         <default></default>
     </entry>
 
+    <entry name="screenMapping" type="StringList" hidden="true">
+        <default></default>
+    </entry>
+
     <entry name="url" type="String">
       <label>URL of the file system location being shown.</label>
       <default>desktop:/</default>

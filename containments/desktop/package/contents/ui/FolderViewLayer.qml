@@ -188,6 +188,18 @@ Item {
         onPositionsChanged: {
             folderView.positions = plasmoid.configuration.positions;
         }
+
+        onScreenMappingChanged: {
+            Folder.ScreenMapper.screenMapping = plasmoid.configuration.screenMapping;
+        }
+    }
+
+    Connections {
+        target: Folder.ScreenMapper
+
+        onScreenMappingChanged: {
+            plasmoid.configuration.screenMapping = Folder.ScreenMapper.screenMapping;
+        }
     }
 
     PlasmaCore.ColorScope {
@@ -227,6 +239,7 @@ Item {
             }
 
             Component.onCompleted: {
+                Folder.ScreenMapper.screenMapping = plasmoid.configuration.screenMapping;
                 folderView.sortMode = plasmoid.configuration.sortMode;
                 folderView.positions = plasmoid.configuration.positions;
             }

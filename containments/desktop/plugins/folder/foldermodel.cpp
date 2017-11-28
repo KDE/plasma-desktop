@@ -24,6 +24,7 @@
 #include "foldermodel.h"
 #include "itemviewadapter.h"
 #include "positioner.h"
+#include "screenmapper.h"
 
 #include <QApplication>
 #include <QClipboard>
@@ -69,6 +70,10 @@
 #include <KIO/Job>
 #include <KProtocolInfo>
 #include <KRun>
+
+#include <Plasma/Applet>
+#include <Plasma/Containment>
+#include <Plasma/Corona>
 
 #include <sys/types.h>
 #include <sys/stat.h>
@@ -154,6 +159,12 @@ FolderModel::FolderModel(QObject *parent) : QSortFilterProxyModel(parent),
 
 FolderModel::~FolderModel()
 {
+    if (m_screenMapper) {
+        // disconnect so we don't handle signals from the screen mapper when
+        // removeScreen is called
+        m_screenMapper->disconnect(this);
+        m_screenMapper->removeScreen(m_screen, url());
+    }
 }
 
 QHash< int, QByteArray > FolderModel::roleNames() const
@@ -194,6 +205,8 @@ void FolderModel::setUrl(const QString& url)
         return;
     }
 
+    const auto oldUrl = m_url;
+
     beginResetModel();
     m_url = url;
     m_isDirCache.clear();
@@ -225,6 +238,11 @@ void FolderModel::setUrl(const QString& url)
     }
 
     emit iconNameChanged();
+
+    if (m_screenMapper) {
+        m_screenMapper->removeScreen(m_screen, oldUrl);
+        m_screenMapper->addScreen(m_screen, url);
+    }
 }
 
 QUrl FolderModel::resolvedUrl() const
@@ -516,6 +534,18 @@ void FolderModel::setFilterMimeTypes(const QStringList &mimeList)
 
         emit filterMimeTypesChanged();
     }
+}
+
+void FolderModel::setScreen(int screen)
+{
+    if (m_screen == screen)
+        return;
+
+    m_screen = screen;
+    if (m_usedByContainment && m_screenMapper) {
+        m_screenMapper->addScreen(screen, url());
+    }
+    emit screenChanged();
 }
 
 KFileItem FolderModel::rootItem() const
@@ -1162,6 +1192,9 @@ void FolderModel::statResult(KJob *job)
 void FolderModel::evictFromIsDirCache(const KFileItemList& items)
 {
     foreach (const KFileItem &item, items) {
+        if (m_screenMapper) {
+            m_screenMapper->removeFromMap(item.url().toString());
+        }
         m_isDirCache.remove(item.url());
     }
 }
@@ -1283,12 +1316,33 @@ inline bool FolderModel::matchPattern(const KFileItem &item) const
 
 bool FolderModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const
 {
+    const KDirModel *dirModel = static_cast<KDirModel*>(sourceModel());
+    const KFileItem item = dirModel->itemForIndex(dirModel->index(sourceRow, KDirModel::Name, sourceParent));
+
+    if (m_usedByContainment && m_screenMapper) {
+        const QString name = item.url().toString();
+        const int screen = m_screenMapper->screenForItem(name);
+        // don't do anything if the folderview is not associated with a screen
+        if (m_screen != -1) {
+            if (screen == -1) {
+                // The item is not associated with a screen, probably because this is the first
+                // time we see it or the folderview was previously used as a regular applet.
+                // Associated with this folderview if the view is on the first available screen
+                if (m_screen == m_screenMapper->firstAvailableScreen(url())) {
+                    m_screenMapper->addMapping(name, m_screen, ScreenMapper::DelayedSignal);
+                } else {
+                    return false;
+                }
+            } else if (m_screen != screen) {
+                // the item belongs to a different screen, filter it out
+                return false;
+            }
+        }
+    }
+
     if (m_filterMode == NoFilter) {
         return true;
     }
-
-    const KDirModel *dirModel = static_cast<KDirModel*>(sourceModel());
-    const KFileItem item = dirModel->itemForIndex(dirModel->index(sourceRow, KDirModel::Name, sourceParent));
 
     if (m_filterMode == FilterShowMatches) {
         return (matchPattern(item) && matchMimeType(item));
@@ -1615,6 +1669,66 @@ void FolderModel::refresh()
     emit errorStringChanged();
 
     m_dirModel->dirLister()->updateDirectory(m_dirModel->dirLister()->url());
+}
+
+ScreenMapper *FolderModel::screenMapper() const
+{
+    return m_screenMapper;
+}
+
+void FolderModel::setScreenMapper(ScreenMapper *screenMapper)
+{
+    if (m_screenMapper == screenMapper)
+        return;
+
+    Q_ASSERT(!m_screenMapper);
+
+    if (m_screenMapper) {
+        m_screenMapper->disconnect(this);
+    }
+
+    m_screenMapper = screenMapper;
+    if (m_screenMapper) {
+        connect(m_screenMapper, &ScreenMapper::screensChanged, this, &FolderModel::invalidateFilter);
+        connect(m_screenMapper, &ScreenMapper::screenMappingChanged, this, &FolderModel::invalidateFilter);
+    }
+
+    invalidateFilter();
+    emit screenMapperChanged();
+}
+
+QObject *FolderModel::appletInterface() const
+{
+    return m_appletInterface;
+}
+
+void FolderModel::setAppletInterface(QObject *appletInterface)
+{
+    if (m_appletInterface != appletInterface) {
+        Q_ASSERT(!m_appletInterface);
+
+        m_appletInterface = appletInterface;
+
+        if (appletInterface) {
+            Plasma::Applet *applet = appletInterface->property("_plasma_applet").value<Plasma::Applet *>();
+
+            if (applet) {
+                Plasma::Containment *containment = applet->containment();
+
+                if (containment) {
+                    Plasma::Corona *corona = containment->corona();
+
+                    if (corona) {
+                        m_screenMapper->setCorona(corona);
+                    }
+                    setScreen(containment->screen());
+                    connect(containment, &Plasma::Containment::screenChanged, this, &FolderModel::setScreen);
+                }
+            }
+        }
+
+        emit appletInterfaceChanged();
+    }
 }
 
 void FolderModel::moveSelectedToTrash()
