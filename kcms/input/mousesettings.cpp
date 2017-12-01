@@ -19,9 +19,10 @@
 #include "mousesettings.h"
 
 #include "mousebackend.h"
+#include <QDBusMessage>
+#include <QDBusConnection>
 #include <KSharedConfig>
 #include <KConfigGroup>
-#include <KGlobalSettings>
 
 #include "../migrationlib/kdelibs4config.h"
 
@@ -81,7 +82,29 @@ void MouseSettings::load(KConfig *config, MouseBackend *backend)
     dragStartDist = group.readEntry("StartDragDist", 4);
     wheelScrollLines = group.readEntry("WheelScrollLines", 3);
 
-    singleClick = group.readEntry("SingleClick", KDE_DEFAULT_SINGLECLICK);
+    singleClick = group.readEntry("SingleClick", true);
+}
+
+// see KGlobalSettings::emitChange
+enum ChangeType { PaletteChanged = 0, FontChanged, StyleChanged,
+                  SettingsChanged, IconChanged, CursorChanged,
+                  ToolbarStyleChanged, ClipboardConfigChanged,
+                  BlockShortcuts, NaturalSortingChanged
+                };
+enum SettingsCategory { SETTINGS_MOUSE, SETTINGS_COMPLETION, SETTINGS_PATHS,
+                        SETTINGS_POPUPMENU, SETTINGS_QT, SETTINGS_SHORTCUTS,
+                        SETTINGS_LOCALE, SETTINGS_STYLE
+                      };
+
+static void emitChange(ChangeType changeType, int arg)
+{
+    // see KGlobalSettings::emitChange
+    QDBusMessage message = QDBusMessage::createSignal("/KGlobalSettings", "org.kde.KGlobalSettings", "notifyChange");
+    QList<QVariant> args;
+    args.append(static_cast<int>(changeType));
+    args.append(arg);
+    message.setArguments(args);
+    QDBusConnection::sessionBus().send(message);
 }
 
 void MouseSettings::save(KConfig *config)
@@ -112,5 +135,5 @@ void MouseSettings::save(KConfig *config)
     Kdelibs4SharedConfig::syncConfigGroup(QLatin1String("Mouse"), "kcminputrc");
     Kdelibs4SharedConfig::syncConfigGroup(QLatin1String("KDE"), "kdeglobals");
 
-    KGlobalSettings::self()->emitChange(KGlobalSettings::SettingsChanged, KGlobalSettings::SETTINGS_MOUSE);
+    emitChange(SettingsChanged, SETTINGS_MOUSE);
 }
