@@ -33,6 +33,7 @@
 #include <QActionGroup>
 #include <QApplication>
 #include <QJsonArray>
+#include <QMenu>
 #include <QScopedPointer>
 #include <QQuickItem>
 #include <QQuickWindow>
@@ -216,21 +217,24 @@ QVariantList Backend::placesActions(const QUrl &launcherUrl, bool showAllPlaces,
         return actions;
     }
 
+    QString previousGroup;
+    QMenu *subMenu = nullptr;
+
     QScopedPointer<KFilePlacesModel> placesModel(new KFilePlacesModel());
     for (int i = 0; i < placesModel->rowCount(); ++i) {
         QModelIndex idx = placesModel->index(i, 0);
 
-        if (placesModel->data(idx, KFilePlacesModel::HiddenRole).toBool()) {
+        if (idx.data(KFilePlacesModel::HiddenRole).toBool()) {
             continue;
         }
 
-        const QString &title = placesModel->data(idx, Qt::DisplayRole).toString();
-        const QIcon &icon = placesModel->data(idx, Qt::DecorationRole).value<QIcon>();
-        const QUrl &url = placesModel->data(idx, KFilePlacesModel::UrlRole).toUrl();
+        const QString &title = idx.data(Qt::DisplayRole).toString();
+        const QIcon &icon = idx.data(Qt::DecorationRole).value<QIcon>();
+        const QUrl &url = idx.data(KFilePlacesModel::UrlRole).toUrl();
 
-        QAction *action = new QAction(icon, title, parent);
+        QAction *placeAction = new QAction(icon, title, parent);
 
-        connect(action, &QAction::triggered, this, [this, action, url, desktopEntryUrl] {
+        connect(placeAction, &QAction::triggered, this, [this, url, desktopEntryUrl] {
             KService::Ptr service = KService::serviceByDesktopPath(desktopEntryUrl.toLocalFile());
             if (!service) {
                 return;
@@ -239,7 +243,29 @@ QVariantList Backend::placesActions(const QUrl &launcherUrl, bool showAllPlaces,
             KRun::runService(*service, {url}, QApplication::activeWindow());
         });
 
-        actions << QVariant::fromValue(action);
+        const QString &groupName = idx.data(KFilePlacesModel::GroupRole).toString();
+        if (previousGroup.isEmpty()) { // Skip first group heading.
+            previousGroup = groupName;
+        }
+
+        // Put all subsequent categories into a submenu.
+        if (previousGroup != groupName) {
+            QAction *subMenuAction = new QAction(groupName, parent);
+            subMenu = new QMenu();
+            // Cannot parent a QMenu to a QAction, need to delete it manually.
+            connect(parent, &QObject::destroyed, subMenu, &QObject::deleteLater);
+            subMenuAction->setMenu(subMenu);
+
+            actions << QVariant::fromValue(subMenuAction);
+
+            previousGroup = groupName;
+        }
+
+        if (subMenu) {
+            subMenu->addAction(placeAction);
+        } else {
+            actions << QVariant::fromValue(placeAction);
+        }
     }
 
     // There is nothing more frustrating than having a "More" entry that ends up showing just one or two
