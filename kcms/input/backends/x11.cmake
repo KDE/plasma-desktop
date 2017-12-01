@@ -33,7 +33,6 @@ add_executable(kapplymousetheme ${kapplymousetheme_SRCS} ${kcminput_backend_SRCS
 
 target_link_libraries(kapplymousetheme
     Qt5::Gui
-    KF5::I18n
     KF5::ConfigCore
     KF5::KDELibs4Support
     ${kcminput_backend_LIBS}

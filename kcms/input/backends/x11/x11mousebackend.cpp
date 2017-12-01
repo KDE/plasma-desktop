@@ -23,7 +23,6 @@
 #include <QFile>
 #include <QX11Info>
 #include <evdev-properties.h>
-#include <KLocalizedString>
 
 #include <X11/X.h>
 #include <X11/Xlib.h>
