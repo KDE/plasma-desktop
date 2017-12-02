@@ -19,7 +19,7 @@
  */
 
 import QtQuick 2
-import org.kde.solid 1.0 as Solid
+//import org.kde.solid 1.0 as Solid
 
 Item {
     id: main
