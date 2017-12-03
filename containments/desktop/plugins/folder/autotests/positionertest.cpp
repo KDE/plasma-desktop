@@ -59,9 +59,11 @@ void PositionerTest::cleanupTestCase()
 void PositionerTest::init()
 {
     m_folderModel = new FolderModel(this);
+    m_folderModel->classBegin();
     m_folderModel->setScreen(0);
     m_folderModel->setScreenMapper(ScreenMapper::instance());
     m_folderModel->setUsedByContainment(true);
+    m_folderModel->componentComplete();
     m_positioner = new Positioner(this);
     m_positioner->setEnabled(true);
     m_positioner->setFolderModel(m_folderModel);
@@ -217,10 +219,12 @@ void PositionerTest::tst_proxyMapping()
 {
     auto *screenMapper = ScreenMapper::instance();
     FolderModel secondFolderModel;
+    secondFolderModel.classBegin();
     secondFolderModel.setUrl(m_folderDir->path()  + QDir::separator() + desktop );
     secondFolderModel.setUsedByContainment(true);
     secondFolderModel.setScreenMapper(screenMapper);
     secondFolderModel.setScreen(1);
+    secondFolderModel.componentComplete();
     Positioner secondPositioner;
     secondPositioner.setEnabled(true);
     secondPositioner.setFolderModel(&secondFolderModel);

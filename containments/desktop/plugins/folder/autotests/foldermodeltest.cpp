@@ -50,7 +50,9 @@ void FolderModelTest::init()
     m_folderDir = new QTemporaryDir();
     createTestFolder(desktop);
     m_folderModel = new FolderModel(this);
+    m_folderModel->classBegin();
     m_folderModel->setUrl(m_folderDir->path()  + QDir::separator() + desktop );
+    m_folderModel->componentComplete();
     QSignalSpy s(m_folderModel, &FolderModel::listingCompleted);
     s.wait(1000);
 }
@@ -265,10 +267,18 @@ void FolderModelTest::tst_lockedChanged()
 
 void FolderModelTest::tst_multiScreen()
 {
+    delete m_folderModel;
+    // Custom instance for this test to set screen mapper before marking component
+    // as complete.
+    m_folderModel = new FolderModel(this);
+    m_folderModel->classBegin();
+    m_folderModel->setUrl(m_folderDir->path()  + QDir::separator() + desktop );
     auto *screenMapper = ScreenMapper::instance();
     m_folderModel->setUsedByContainment(true);
     m_folderModel->setScreenMapper(screenMapper);
     m_folderModel->setScreen(0);
+    m_folderModel->componentComplete();
+
     QSignalSpy s(m_folderModel, &FolderModel::listingCompleted);
     s.wait(1000);
     const auto count = m_folderModel->rowCount();
@@ -282,10 +292,12 @@ void FolderModelTest::tst_multiScreen()
     // move one file to a new screen
     const auto movedItem = m_folderModel->index(0, 0).data(FolderModel::UrlRole).toString();
     FolderModel secondFolderModel;
+    secondFolderModel.classBegin();
     secondFolderModel.setUrl(m_folderDir->path()  + QDir::separator() + desktop );
     secondFolderModel.setUsedByContainment(true);
     secondFolderModel.setScreenMapper(screenMapper);
     secondFolderModel.setScreen(1);
+    secondFolderModel.componentComplete();
     QSignalSpy s2(&secondFolderModel, &FolderModel::listingCompleted);
     s2.wait(1000);
     const auto count2 = secondFolderModel.rowCount();

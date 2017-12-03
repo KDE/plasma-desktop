@@ -24,6 +24,7 @@
 
 #include <QImage>
 #include <QItemSelection>
+#include <QQmlParserStatus>
 #include <QPointer>
 #include <QSortFilterProxyModel>
 #include <QStringList>
@@ -73,9 +74,10 @@ class DirLister : public KDirLister
         void handleError(KIO::Job *job) override;
 };
 
-class FOLDERPLUGIN_TESTS_EXPORT FolderModel : public QSortFilterProxyModel
+class FOLDERPLUGIN_TESTS_EXPORT FolderModel : public QSortFilterProxyModel, public QQmlParserStatus
 {
     Q_OBJECT
+    Q_INTERFACES(QQmlParserStatus)
 
     Q_PROPERTY(QString url READ url WRITE setUrl NOTIFY urlChanged)
     Q_PROPERTY(QString iconName READ iconName NOTIFY iconNameChanged)
@@ -133,6 +135,9 @@ class FOLDERPLUGIN_TESTS_EXPORT FolderModel : public QSortFilterProxyModel
 
         QHash<int, QByteArray> roleNames() const override;
         static QHash<int, QByteArray> staticRoleNames();
+
+        void classBegin() override;
+        void componentComplete() override;
 
         QString url() const;
         void setUrl(const QString &url);
@@ -289,6 +294,8 @@ class FOLDERPLUGIN_TESTS_EXPORT FolderModel : public QSortFilterProxyModel
         void emptyTrashBin();
         void restoreSelectedFromTrash();
         void undoTextChanged(const QString &text);
+        void invalidateIfComplete();
+        void invalidateFilterIfComplete();
 
     private:
         struct DragImage {
@@ -343,6 +350,7 @@ class FOLDERPLUGIN_TESTS_EXPORT FolderModel : public QSortFilterProxyModel
         int m_screen = -1;
         ScreenMapper *m_screenMapper = nullptr;
         QObject *m_appletInterface = nullptr;
+        bool m_complete;
 };
 
 #endif

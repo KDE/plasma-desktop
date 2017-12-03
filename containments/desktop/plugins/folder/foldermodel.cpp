@@ -119,7 +119,8 @@ FolderModel::FolderModel(QObject *parent) : QSortFilterProxyModel(parent),
     m_parseDesktopFiles(false),
     m_previews(false),
     m_filterMode(NoFilter),
-    m_filterPatternMatchAll(true)
+    m_filterPatternMatchAll(true),
+    m_complete(false)
 {
     //needed to pass the job around with qml
     qmlRegisterType<KIO::DropJob>();
@@ -232,6 +233,34 @@ QHash< int, QByteArray > FolderModel::staticRoleNames()
     roleNames[TypeRole] = "type";
 
     return roleNames;
+}
+
+void FolderModel::classBegin()
+{
+}
+
+void FolderModel::componentComplete()
+{
+    m_complete = true;
+    invalidate();
+}
+
+void FolderModel::invalidateIfComplete()
+{
+    if (!m_complete) {
+        return;
+    }
+
+    invalidate();
+}
+
+void FolderModel::invalidateFilterIfComplete()
+{
+    if (!m_complete) {
+        return;
+    }
+
+    invalidateFilter();
 }
 
 QString FolderModel::url() const
@@ -394,7 +423,7 @@ void FolderModel::setSortMode(int mode)
         if (mode == -1 /* Unsorted */) {
             setDynamicSortFilter(false);
         } else {
-            invalidate();
+            invalidateIfComplete();
             sort(m_sortMode, m_sortDesc ? Qt::DescendingOrder : Qt::AscendingOrder);
             setDynamicSortFilter(true);
         }
@@ -414,7 +443,7 @@ void FolderModel::setSortDesc(bool desc)
         m_sortDesc = desc;
 
         if (m_sortMode != -1 /* Unsorted */) {
-            invalidate();
+            invalidateIfComplete();
             sort(m_sortMode, m_sortDesc ? Qt::DescendingOrder : Qt::AscendingOrder);
         }
 
@@ -433,7 +462,7 @@ void FolderModel::setSortDirsFirst(bool enable)
         m_sortDirsFirst = enable;
 
         if (m_sortMode != -1 /* Unsorted */) {
-            invalidate();
+            invalidateIfComplete();
             sort(m_sortMode, m_sortDesc ? Qt::DescendingOrder : Qt::AscendingOrder);
         }
 
@@ -524,7 +553,7 @@ void FolderModel::setFilterMode(int filterMode)
     if (m_filterMode != (FilterMode)filterMode) {
         m_filterMode = (FilterMode)filterMode;
 
-        invalidateFilter();
+        invalidateFilterIfComplete();
 
         emit filterModeChanged();
     }
@@ -555,7 +584,7 @@ void FolderModel::setFilterPattern(const QString &pattern)
         m_regExps.append(rx);
     }
 
-    invalidateFilter();
+    invalidateFilterIfComplete();
 
     emit filterPatternChanged();
 }
@@ -573,7 +602,7 @@ void FolderModel::setFilterMimeTypes(const QStringList &mimeList)
 
         m_mimeSet = set;
 
-        invalidateFilter();
+        invalidateFilterIfComplete();
 
         emit filterMimeTypesChanged();
     }
@@ -1820,11 +1849,11 @@ void FolderModel::setScreenMapper(ScreenMapper *screenMapper)
 
     m_screenMapper = screenMapper;
     if (m_screenMapper) {
-        connect(m_screenMapper, &ScreenMapper::screensChanged, this, &FolderModel::invalidateFilter);
-        connect(m_screenMapper, &ScreenMapper::screenMappingChanged, this, &FolderModel::invalidateFilter);
+        connect(m_screenMapper, &ScreenMapper::screensChanged, this, &FolderModel::invalidateFilterIfComplete);
+        connect(m_screenMapper, &ScreenMapper::screenMappingChanged, this, &FolderModel::invalidateFilterIfComplete);
     }
 
-    invalidateFilter();
+    invalidateFilterIfComplete();
     emit screenMapperChanged();
 }
 
