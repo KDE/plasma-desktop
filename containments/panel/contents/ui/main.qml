@@ -279,8 +279,8 @@ function checkLastSpacer() {
             Layout.maximumWidth: (currentLayout.isLayoutHorizontal ? (applet && applet.Layout.maximumWidth > 0 ? applet.Layout.maximumWidth : (Layout.fillWidth ? root.width : root.height)) : root.height)
             Layout.maximumHeight: (!currentLayout.isLayoutHorizontal ? (applet && applet.Layout.maximumHeight > 0 ? applet.Layout.maximumHeight : (Layout.fillHeight ? root.height : root.width)) : root.width)
 
-            readonly property int oldX: x
-            readonly property int oldY: y
+            property int oldX: x
+            property int oldY: y
 
             property Item applet
 
