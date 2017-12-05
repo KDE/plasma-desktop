@@ -36,6 +36,7 @@ target_link_libraries(kapplymousetheme
     Qt5::DBus
     KF5::CoreAddons
     KF5::ConfigCore
+    KF5::I18n
     ${kcminput_backend_LIBS}
 )
 
