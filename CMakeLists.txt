@@ -119,20 +119,6 @@ add_feature_info("XorgLibinput" XORGLIBINPUT_FOUND "Libinput driver headers need
 
 include(ConfigureChecks.cmake)
 
-if(${Qt5Gui_OPENGL_IMPLEMENTATION} STREQUAL "GL")
-    find_package(OpenGL)
-    set_package_properties(OpenGL PROPERTIES DESCRIPTION "The OpenGL libraries"
-                        URL "http://www.opengl.org"
-                        TYPE REQUIRED
-                        )
-else()
-    find_package(OpenGLES)
-    set_package_properties(OpenGLES PROPERTIES DESCRIPTION "The OpenGLES libraries"
-                        URL "http://www.khronos.org/opengles"
-                        TYPE REQUIRED
-                        )
-endif()
-
 find_package(Breeze ${PROJECT_VERSION} CONFIG)
 set_package_properties(Breeze PROPERTIES
                        TYPE OPTIONAL
