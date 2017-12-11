@@ -1,0 +1,23 @@
+[Desktop Entry]
+Icon=preferences-desktop-display-nightcolor
+Exec=kcmshell5 kcm_nightcolor
+
+Type=Service
+X-KDE-ServiceTypes=KCModule
+
+X-DocPath=https://userbase.kde.org/TODOX
+
+X-KDE-Library=kcm_nightcolor
+X-KDE-ParentApp=kcontrol
+
+X-KDE-System-Settings-Parent-Category=display
+X-KDE-Weight=120
+
+Name=Night Color
+Name[de]=Nachtfarbe
+Comment=Adjust color temperatur at night to reduce eye strain
+Comment[de]=Passe Farbtemperatur nachts an um Augen zu entlasten
+
+X-KDE-Keywords=kwin,window,manager,night,colors,redshift,eyes
+X-KDE-Keywords[de]=KWin,Fenster,Verwaltung,Nacht,Farben,Redshift,Augen
+Categories=Qt;KDE;X-KDE-settings-nightcolor
