@@ -189,9 +189,11 @@ Item {
                     }
                 }
                 Loader {
-                    sourceComponent: LocationsAutoView {}
+                    sourceComponent: LocationsAutoView {
+                        latitude: locator.latitude
+                        longitude: locator.longitude
+                    }
                 }
-
             }
         }
 

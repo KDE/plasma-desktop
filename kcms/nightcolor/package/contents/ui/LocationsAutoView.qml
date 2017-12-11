@@ -24,6 +24,12 @@ GridLayout {
     columnSpacing: units.smallSpacing
     enabled: activator.checked
 
+    property double latitude
+    property double longitude
+
+    onLatitudeChanged: latitudeField.backend = latitude;
+    onLongitudeChanged: longitudeField.backend = longitude;
+
     Controls.Label {
         text: i18n("Latitude")
         Layout.alignment: Qt.AlignRight
