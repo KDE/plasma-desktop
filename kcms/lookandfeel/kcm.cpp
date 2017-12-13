@@ -35,6 +35,8 @@
 #include <QQuickView>
 #include <KGlobalSettings>
 #include <KIconLoader>
+#include <KAutostart>
+#include <KRun>
 
 #include <QVBoxLayout>
 #include <QPushButton>
@@ -368,6 +370,37 @@ void KCMLookandFeel::save()
                                                     QStringLiteral("org.kde.KWin"),
                                                     QStringLiteral("reloadConfig"));
             QDBusConnection::sessionBus().send(message);
+        }
+
+        //autostart
+        if (m_resetDefaultLayout) {
+            //remove all the old package to autostart
+            {
+                KSharedConfigPtr oldConf = KSharedConfig::openConfig(m_package.filePath("defaults"));
+                cg = KConfigGroup(oldConf, QStringLiteral("Autostart"));
+                const QStringList autostartServices = cg.readEntry("Services", QStringList());
+
+                for (const QString &serviceFile : autostartServices) {
+                    KService service(serviceFile + QStringLiteral(".desktop"));
+                    KAutostart as(serviceFile);
+                    as.setAutostarts(false);
+                    //FIXME: quite ugly way to stop things, and what about non KDE things?
+                    QProcess::startDetached(QStringLiteral("kquitapp5"), {QStringLiteral("--service"), service.property(QStringLiteral("X-DBUS-ServiceName")).toString()});
+                }
+            }
+            //Set all the stuff in the new lnf to autostart
+            {
+                cg = KConfigGroup(conf, QStringLiteral("Autostart"));
+                const QStringList autostartServices = cg.readEntry("Services", QStringList());
+
+                for (const QString &serviceFile : autostartServices) {
+                    KService service(serviceFile + QStringLiteral(".desktop"));
+                    KAutostart as(serviceFile);
+                    as.setCommand(service.exec());
+                    as.setAutostarts(true);
+                    KRun::runApplication(service, {}, nullptr);
+                }
+            }
         }
     }
 
