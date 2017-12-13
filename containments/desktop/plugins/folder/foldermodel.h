@@ -352,6 +352,7 @@ class FOLDERPLUGIN_TESTS_EXPORT FolderModel : public QSortFilterProxyModel, publ
         ScreenMapper *m_screenMapper = nullptr;
         QObject *m_appletInterface = nullptr;
         bool m_complete;
+        QPoint m_menuPosition;
 };
 
 #endif

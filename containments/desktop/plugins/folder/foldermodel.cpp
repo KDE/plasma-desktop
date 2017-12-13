@@ -267,6 +267,9 @@ void FolderModel::newFileMenuItemCreated(const QUrl &url)
 {
     if (m_screenMapper) {
         m_screenMapper->addMapping(url.toString(), m_screen, ScreenMapper::DelayedSignal);
+        m_dropTargetPositions.insert(url.fileName(), m_menuPosition);
+        m_menuPosition = {};
+        m_dropTargetPositionsCleanup->start();
     }
 }
 
@@ -1595,6 +1598,8 @@ void FolderModel::updateActions()
     if (m_newMenu) {
         m_newMenu->checkUpToDate();
         m_newMenu->setPopupFiles(m_dirModel->dirLister()->url());
+        // we need to set here as well, when the menu is shown via AppletInterface::eventFilter
+        m_menuPosition = QCursor::pos();
     }
 
     const bool isTrash = (resolvedUrl().scheme() == QLatin1String("trash"));
@@ -1768,10 +1773,11 @@ void FolderModel::openContextMenu(QQuickItem *visualParent)
     }
 
     if (visualParent) {
-        menu->popup(visualParent->mapToGlobal(QPointF(0, visualParent->height())).toPoint());
+        m_menuPosition = visualParent->mapToGlobal(QPointF(0, visualParent->height())).toPoint();
     } else {
-        menu->popup(QCursor::pos());
+        m_menuPosition = QCursor::pos();
     }
+    menu->popup(m_menuPosition);
     connect(menu, &QMenu::aboutToHide, [menu]() { menu->deleteLater(); });
 }
 
