@@ -58,6 +58,13 @@ Item {
         }
     }
 
+    Kicker.DragHelper {
+        id: dragHelper
+
+        dragIconSize: units.iconSizes.medium
+        onDropped: kickoff.dragSource = null
+    }
+
     Kicker.AppsModel {
         id: rootModel
 
