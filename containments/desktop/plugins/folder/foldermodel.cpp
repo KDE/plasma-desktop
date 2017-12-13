@@ -1014,22 +1014,6 @@ void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row)
         return;
     }
 
-    const int x = dropEvent->property("x").toInt();
-    const int y = dropEvent->property("y").toInt();
-    const QPoint dropPos = {x, y};
-
-    if (m_dragInProgress && row == -1 && !m_urlChangedWhileDragging) {
-        if (m_locked || mimeData->urls().isEmpty()) {
-            return;
-        }
-
-        setSortMode(-1);
-
-        emit move(x, y, mimeData->urls());
-
-        return;
-    }
-
     QModelIndex idx;
     KFileItem item;
 
@@ -1059,6 +1043,50 @@ void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row)
         dropTargetUrl = item.mostLocalUrl();
     }
 
+    auto dropTargetFolderUrl = dropTargetUrl;
+    if (dropTargetFolderUrl.fileName() == QLatin1String(".")) {
+        // the target URL for desktop:/ is e.g. 'file://home/user/Desktop/.'
+        dropTargetFolderUrl = dropTargetFolderUrl.adjusted(QUrl::RemoveFilename);
+    }
+
+    // use dropTargetUrl to resolve desktop:/ to the actual file location which is also used by the mime data
+    /* QMimeData operates on local URLs, but the dir lister and thus screen mapper and positioner may
+     * use a fancy scheme like desktop:/ instead. Ensure we always use the latter to properly map URLs,
+     * i.e. go from file:///home/user/Desktop/file to desktop:/file
+     */
+    auto mappableUrl = [this, dropTargetFolderUrl](const QUrl &url) -> QString {
+        QString mappedUrl = url.toString();
+        if (dropTargetFolderUrl != m_dirModel->dirLister()->url()) {
+            const auto local = dropTargetFolderUrl.toString();
+            const auto internal = m_dirModel->dirLister()->url().toString();
+            if (mappedUrl.startsWith(local)) {
+                mappedUrl.replace(0, local.size(), internal);
+            }
+        }
+        return mappedUrl;
+    };
+
+    const int x = dropEvent->property("x").toInt();
+    const int y = dropEvent->property("y").toInt();
+    const QPoint dropPos = {x, y};
+
+    if (m_dragInProgress && row == -1 && !m_urlChangedWhileDragging) {
+        if (m_locked || mimeData->urls().isEmpty()) {
+            return;
+        }
+
+        setSortMode(-1);
+
+        for (const auto &url : mimeData->urls()) {
+            m_dropTargetPositions.insert(url.fileName(), dropPos);
+            m_screenMapper->addMapping(mappableUrl(url), m_screen, ScreenMapper::DelayedSignal);
+            m_screenMapper->removeItemFromDisabledScreen(mappableUrl(url));
+        }
+        emit move(x, y, mimeData->urls());
+
+        return;
+    }
+
     if (mimeData->hasFormat(QStringLiteral("application/x-kde-ark-dndextract-service")) &&
         mimeData->hasFormat(QStringLiteral("application/x-kde-ark-dndextract-path"))) {
         const QString remoteDBusClient = mimeData->data(QStringLiteral("application/x-kde-ark-dndextract-service"));
@@ -1081,34 +1109,13 @@ void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row)
 
 
     if (m_usedByContainment) {
-        auto dropTargetFolderUrl = dropTargetUrl;
-        if (dropTargetFolderUrl.fileName() == QLatin1String(".")) {
-            // the target URL for desktop:/ is e.g. 'file://home/user/Desktop/.'
-            dropTargetFolderUrl = dropTargetFolderUrl.adjusted(QUrl::RemoveFilename);
-        }
-
-        // use dropTargetUrl to resolve desktop:/ to the actual file location which is also used by the mime data
         if (isDropBetweenSharedViews(mimeData->urls(), dropTargetFolderUrl)) {
-            /* QMimeData operates on local URLs, but the dir lister and thus screen mapper and positioner may
-         * use a fancy scheme like desktop:/ instead. Ensure we always use the latter to properly map URLs,
-         * i.e. go from file:///home/user/Desktop/file to desktop:/file
-         */
-            auto mappableUrl = [this, dropTargetFolderUrl](const QUrl &url) -> QString {
-                QString mappedUrl = url.toString();
-                if (dropTargetFolderUrl != m_dirModel->dirLister()->url()) {
-                    const auto local = dropTargetFolderUrl.toString();
-                    const auto internal = m_dirModel->dirLister()->url().toString();
-                    if (mappedUrl.startsWith(local)) {
-                        mappedUrl.replace(0, local.size(), internal);
-                    }
-                }
-                return mappedUrl;
-            };
             setSortMode(-1);
             if (m_screenMapper) {
                 for (const auto &url : mimeData->urls()) {
                     m_dropTargetPositions.insert(url.fileName(), dropPos);
                     m_screenMapper->addMapping(mappableUrl(url), m_screen, ScreenMapper::DelayedSignal);
+                    m_screenMapper->removeItemFromDisabledScreen(mappableUrl(url));
                 }
             }
             m_dropTargetPositionsCleanup->start();

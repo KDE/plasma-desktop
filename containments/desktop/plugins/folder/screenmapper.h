@@ -59,6 +59,7 @@ public:
     void addScreen(int screenId, const QString &path);
     void removeScreen(int screenId, const QString &path);
     int firstAvailableScreen(const QString &path) const;
+    void removeItemFromDisabledScreen(const QString &name);
 
 #ifdef BUILD_TESTING
     void cleanup();

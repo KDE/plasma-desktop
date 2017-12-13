@@ -160,6 +160,15 @@ int ScreenMapper::firstAvailableScreen(const QString &path) const
     return m_firstScreenForPath.value(path, -1);
 }
 
+void ScreenMapper::removeItemFromDisabledScreen(const QString &name)
+{
+    for (auto it = m_itemsOnDisabledScreensMap.begin();
+         it != m_itemsOnDisabledScreensMap.end(); ++it) {
+        auto names = &(*it);
+        names->removeAll(name);
+    }
+}
+
 #ifdef BUILD_TESTING
 void ScreenMapper::cleanup()
 {
