@@ -423,6 +423,11 @@ Item {
                     rB.height = Math.min(ceil - rB.y, Math.abs(rB.y - cPos.y));
                 }
 
+                // Ensure rubberband is at least 1px in size or else it will become
+                // invisible and not match any items.
+                rB.width = Math.max(1, rB.width);
+                rB.height = Math.max(1, rB.height);
+
                 gridView.rectangleSelect(rB.x, rB.y, rB.width, rB.height);
 
                 return;
