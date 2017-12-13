@@ -296,6 +296,7 @@ class FOLDERPLUGIN_TESTS_EXPORT FolderModel : public QSortFilterProxyModel, publ
         void undoTextChanged(const QString &text);
         void invalidateIfComplete();
         void invalidateFilterIfComplete();
+        void newFileMenuItemCreated(const QUrl &url);
 
     private:
         struct DragImage {

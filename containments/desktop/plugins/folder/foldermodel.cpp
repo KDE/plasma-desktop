@@ -263,6 +263,13 @@ void FolderModel::invalidateFilterIfComplete()
     invalidateFilter();
 }
 
+void FolderModel::newFileMenuItemCreated(const QUrl &url)
+{
+    if (m_screenMapper) {
+        m_screenMapper->addMapping(url.toString(), m_screen, ScreenMapper::DelayedSignal);
+    }
+}
+
 QString FolderModel::url() const
 {
     return m_url;
@@ -1567,6 +1574,8 @@ void FolderModel::createActions()
 
     m_newMenu = new KNewFileMenu(&m_actionCollection, QStringLiteral("newMenu"), QApplication::desktop());
     m_newMenu->setModal(false);
+    connect(m_newMenu, &KNewFileMenu::directoryCreated, this, &FolderModel::newFileMenuItemCreated);
+    connect(m_newMenu, &KNewFileMenu::fileCreated, this, &FolderModel::newFileMenuItemCreated);
 
     m_copyToMenu = new KFileCopyToMenu(nullptr);
 }
