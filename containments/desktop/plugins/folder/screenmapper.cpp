@@ -24,6 +24,8 @@
 #include <QTimer>
 
 #include <Plasma/Corona>
+#include <KConfig>
+#include <KConfigGroup>
 
 ScreenMapper *ScreenMapper::instance()
 {
@@ -38,6 +40,16 @@ ScreenMapper::ScreenMapper(QObject *parent)
 {
     connect(m_screenMappingChangedTimer, &QTimer::timeout,
             this, &ScreenMapper::screenMappingChanged);
+
+    connect(this, &ScreenMapper::screenMappingChanged, this, [this] {
+       if (!m_corona)
+           return;
+
+       auto config = m_corona->config();
+       KConfigGroup group(config, QLatin1String("ScreenMapping"));
+       group.writeEntry(QLatin1String("screenMapping"), screenMapping());
+       config->sync();
+    });
 
     // used to compress screenMappingChanged signals when addMapping is called multiple times,
     // eg. from FolderModel::filterAcceptRows. The timer interval is an arbitrary number,
@@ -193,6 +205,11 @@ void ScreenMapper::setCorona(Plasma::Corona *corona)
             connect(m_corona, &Plasma::Corona::screenAdded, this, [this] (int screenId) {
                 addScreen(screenId, {});
             });
+
+            auto config = m_corona->config();
+            KConfigGroup group(config, QLatin1String("ScreenMapping"));
+            const QStringList mapping = group.readEntry(QLatin1String("screenMapping"), QStringList{});
+            setScreenMapping(mapping);
         }
     }
 }
