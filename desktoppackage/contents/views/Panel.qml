@@ -54,7 +54,7 @@ PlasmaCore.FrameSvgItem {
             prefix = "";
             return;
         }
-        prefix = [prefix, ""];
+        prefix = [pre, ""];
     }
 
     onContainmentChanged: {
