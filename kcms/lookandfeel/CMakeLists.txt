@@ -57,3 +57,49 @@ if(BUILD_TESTING)
 endif()
 
 kpackage_install_package(package kcm_lookandfeel kcms)
+
+###### Command line tool
+
+set(lookandfeeltool_SRCS
+    lnftool.cpp
+    kcm.cpp
+    ../krdb/krdb.cpp
+    ../cursortheme/xcursor/cursortheme.cpp
+    ../cursortheme/xcursor/xcursortheme.cpp
+)
+
+qt5_add_dbus_interface(lookandfeeltool_SRCS ${klauncher_xml} klauncher_iface)
+
+add_executable(lookandfeeltool ${lookandfeeltool_SRCS})
+
+target_link_libraries(lookandfeeltool
+  KF5::KIOWidgets
+  KF5::CoreAddons
+  KF5::KCMUtils
+  KF5::I18n
+  #TODO:kpackage
+  KF5::Plasma
+  KF5::PlasmaQuick
+  KF5::KDELibs4Support
+  KF5::Declarative
+  KF5::QuickAddons
+  KF5::NewStuff
+
+  Qt5::DBus
+  Qt5::Widgets
+  Qt5::QuickWidgets
+  ${X11_LIBRARIES}
+)
+
+if(X11_FOUND)
+    target_link_libraries(lookandfeeltool Qt5::X11Extras)
+endif()
+if (X11_Xcursor_FOUND)
+   target_link_libraries(lookandfeeltool ${X11_Xcursor_LIB})
+endif ()
+if (X11_Xfixes_FOUND)
+   target_link_libraries(lookandfeeltool ${X11_Xfixes_LIB})
+endif ()
+
+install( TARGETS lookandfeeltool ${INSTALL_TARGETS_DEFAULT_ARGS} )
+

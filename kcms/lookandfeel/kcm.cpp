@@ -380,12 +380,14 @@ void KCMLookandFeel::save()
                 cg = KConfigGroup(oldConf, QStringLiteral("Autostart"));
                 const QStringList autostartServices = cg.readEntry("Services", QStringList());
 
-                for (const QString &serviceFile : autostartServices) {
-                    KService service(serviceFile + QStringLiteral(".desktop"));
-                    KAutostart as(serviceFile);
-                    as.setAutostarts(false);
-                    //FIXME: quite ugly way to stop things, and what about non KDE things?
-                    QProcess::startDetached(QStringLiteral("kquitapp5"), {QStringLiteral("--service"), service.property(QStringLiteral("X-DBUS-ServiceName")).toString()});
+                if (qEnvironmentVariableIsSet("KDE_FULL_SESSION")) {
+                    for (const QString &serviceFile : autostartServices) {
+                        KService service(serviceFile + QStringLiteral(".desktop"));
+                        KAutostart as(serviceFile);
+                        as.setAutostarts(false);
+                        //FIXME: quite ugly way to stop things, and what about non KDE things?
+                        QProcess::startDetached(QStringLiteral("kquitapp5"), {QStringLiteral("--service"), service.property(QStringLiteral("X-DBUS-ServiceName")).toString()});
+                    }
                 }
             }
             //Set all the stuff in the new lnf to autostart
@@ -398,7 +400,9 @@ void KCMLookandFeel::save()
                     KAutostart as(serviceFile);
                     as.setCommand(service.exec());
                     as.setAutostarts(true);
-                    KRun::runApplication(service, {}, nullptr);
+                    if (qEnvironmentVariableIsSet("KDE_FULL_SESSION")) {
+                        KRun::runApplication(service, {}, nullptr);
+                    }
                 }
             }
         }
