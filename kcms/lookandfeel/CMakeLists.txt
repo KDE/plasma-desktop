@@ -73,18 +73,13 @@ qt5_add_dbus_interface(lookandfeeltool_SRCS ${klauncher_xml} klauncher_iface)
 add_executable(lookandfeeltool ${lookandfeeltool_SRCS})
 
 target_link_libraries(lookandfeeltool
-#     Qt5::Gui
-#     Qt5::Widgets
-#     KF5::Package
-#     KF5::I18n
-    
-    KF5::KIOWidgets
+  KF5::KIOWidgets
   KF5::CoreAddons
   KF5::KCMUtils
   KF5::I18n
   #TODO:kpackage
-KF5::Plasma
-KF5::PlasmaQuick
+  KF5::Plasma
+  KF5::PlasmaQuick
   KF5::KDELibs4Support
   KF5::Declarative
   KF5::QuickAddons

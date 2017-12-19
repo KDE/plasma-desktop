@@ -60,7 +60,8 @@ public:
     WindowTasksModel *tasksModel = nullptr;
 
     static ActivityInfo *activityInfo;
-    QMetaObject::Connection activityInfoConn;
+    QMetaObject::Connection activityNumberConn;
+    QMetaObject::Connection activityNamesConn;
 
     static VirtualDesktopInfo *virtualDesktopInfo;
     QMetaObject::Connection virtualDesktopNumberConn;
@@ -164,16 +165,22 @@ void PagerModel::Private::refreshDataSource()
             }
         );
 
-        QObject::disconnect(activityInfoConn);
+        QObject::disconnect(activityNumberConn);
+        QObject::disconnect(activityNamesConn);
 
         QObject::disconnect(activityInfo, &ActivityInfo::currentActivityChanged,
             q, &PagerModel::currentPageChanged);
         QObject::connect(virtualDesktopInfo, &VirtualDesktopInfo::currentDesktopChanged,
             q, &PagerModel::currentPageChanged, Qt::UniqueConnection);
     } else {
-        QObject::disconnect(activityInfoConn);
-        activityInfoConn = QObject::connect(activityInfo,
+        QObject::disconnect(activityNumberConn);
+        activityNumberConn = QObject::connect(activityInfo,
             &ActivityInfo::numberOfRunningActivitiesChanged,
+            q, [this]() { q->refresh(); });
+
+        QObject::disconnect(activityNamesConn);
+        activityNamesConn = QObject::connect(activityInfo,
+            &ActivityInfo::namesOfRunningActivitiesChanged,
             q, [this]() { q->refresh(); });
 
         QObject::disconnect(virtualDesktopNumberConn);
@@ -272,7 +279,8 @@ void PagerModel::setEnabled(bool enabled)
     } else if (!enabled && d->enabled) {
         beginResetModel();
 
-        disconnect(d->activityInfoConn);
+        disconnect(d->activityNumberConn);
+        disconnect(d->activityNamesConn);
         disconnect(d->virtualDesktopNumberConn);
         disconnect(d->virtualDesktopNamesConn);
 

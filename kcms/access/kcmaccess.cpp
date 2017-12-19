@@ -508,7 +508,6 @@ extern "C"
      */
     Q_DECL_EXPORT void kcminit_access()
     {
-        KConfig config(QStringLiteral("kaccessrc"), KConfig::NoGlobals);
         KToolInvocation::startServiceByDesktopName(QStringLiteral("kaccess"));
     }
 }

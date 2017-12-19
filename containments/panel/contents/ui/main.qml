@@ -246,7 +246,9 @@ function checkLastSpacer() {
 //BEGIN components
     Component {
         id: appletContainerComponent
-        Item {
+        // This loader conditionally manages the BusyIndicator, it's not
+        // loading the applet. The applet becomes a regular child item.
+        Loader {
             id: container
             visible: false
             property bool animationsEnabled: true
@@ -281,26 +283,20 @@ function checkLastSpacer() {
             property int oldY: y
 
             property Item applet
+
             onAppletChanged: {
                 if (!applet) {
                     destroy();
                 }
             }
 
+            active: applet && applet.busy
+            sourceComponent: PlasmaComponents.BusyIndicator {}
+
             Layout.onMinimumWidthChanged: movingForResize = true;
             Layout.onMinimumHeightChanged: movingForResize = true;
             Layout.onMaximumWidthChanged: movingForResize = true;
             Layout.onMaximumHeightChanged: movingForResize = true;
-
-            Loader {
-                z: 1000
-                anchors.centerIn: parent
-                active: applet && applet.busy
-                sourceComponent: PlasmaComponents.BusyIndicator {
-                    width: Math.min(container.width, container.height)
-                    height: width
-                }
-            }
 
             onXChanged: {
                 if (movingForResize) {

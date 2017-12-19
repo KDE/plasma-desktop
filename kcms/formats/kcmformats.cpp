@@ -330,7 +330,7 @@ void KCMFormats::updateExample()
     const QString numberExample = nloc.toString(1000.01);
     const QString timeExample = i18n("%1 (long format)", tloc.toString(QDateTime::currentDateTime())) + QStringLiteral("\n") +
             i18n("%1 (short format)", tloc.toString(QDateTime::currentDateTime(), QLocale::ShortFormat));
-    const QString currencyExample = cloc.toCurrencyString(24);
+    const QString currencyExample = cloc.toCurrencyString(24.00);
 
     QString measurementSetting;
     if (mloc.measurementSystem() == QLocale::ImperialUKSystem) {

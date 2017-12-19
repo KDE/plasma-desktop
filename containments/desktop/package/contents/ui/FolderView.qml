@@ -253,6 +253,7 @@ Item {
             if (mouse.buttons & Qt.BackButton) {
                 if (root.isPopup && dir.resolvedUrl != dir.resolve(plasmoid.configuration.url)) {
                     doBack();
+                    mouse.accepted = true;
                 }
 
                 return;
@@ -273,6 +274,7 @@ Item {
                 if (mouse.buttons & Qt.RightButton) {
                     clearPressState();
                     dir.openContextMenu();
+                    mouse.accepted = true;
                 }
             } else {
                 pressedItem = hoveredItem;
@@ -308,6 +310,7 @@ Item {
                         clearPressState();
 
                         dir.openContextMenu();
+                        mouse.accepted = true;
                     }
                 }
             }
@@ -419,6 +422,11 @@ Item {
                     var ceil = Math.max(gridView.height, gridView.contentItem.height);
                     rB.height = Math.min(ceil - rB.y, Math.abs(rB.y - cPos.y));
                 }
+
+                // Ensure rubberband is at least 1px in size or else it will become
+                // invisible and not match any items.
+                rB.width = Math.max(1, rB.width);
+                rB.height = Math.max(1, rB.height);
 
                 gridView.rectangleSelect(rB.x, rB.y, rB.width, rB.height);
 
@@ -1072,6 +1080,8 @@ Item {
             parseDesktopFiles: (plasmoid.configuration.url == "desktop:/")
             previews: plasmoid.configuration.previews
             previewPlugins: plasmoid.configuration.previewPlugins
+            screenMapper: Folder.ScreenMapper
+            appletInterface: plasmoid
 
             onListingCompleted: {
                 if (!gridView.model && plasmoid.expanded) {
@@ -1094,6 +1104,11 @@ Item {
                 var row = -1;
                 var from = -1;
                 var to = -1;
+
+                // round the drop pos to half of an item's size to have a more exact
+                // placement in the grid and avoid jumping items
+                dropPos.x = Math.floor((2 * dropPos.x) / cellWidth) * (cellWidth / 2);
+                dropPos.y = Math.floor((2 * dropPos.y) / cellHeight) * (cellHeight / 2);
 
                 for (var i = 0; i < urls.length; i++) {
                     from = positioner.indexForUrl(urls[i]);

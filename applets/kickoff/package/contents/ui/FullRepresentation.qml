@@ -43,16 +43,26 @@ Item {
     property QtObject globalFavorites: rootModelFavorites
 
     state: "Normal"
-    focus: true
+
+    onFocusChanged: {
+        header.input.forceActiveFocus();
+    }
 
     function switchToInitial() {
-        if(firstButton != null) {
+        if (firstButton != null) {
             mainTabGroup.currentTab = firstButton.tab;
             tabBar.currentTab = firstButton;
             header.query = ""
             header.state = "hint";
             root.state = "Normal";
         }
+    }
+
+    Kicker.DragHelper {
+        id: dragHelper
+
+        dragIconSize: units.iconSizes.medium
+        onDropped: kickoff.dragSource = null
     }
 
     Kicker.AppsModel {
@@ -400,7 +410,7 @@ Item {
             }
         }
 
-        onCurrentTabChanged: root.forceActiveFocus();
+        onCurrentTabChanged: header.input.forceActiveFocus();
 
         Connections {
             target: plasmoid
@@ -409,7 +419,7 @@ Item {
                     createButtons();
                 }
                 if (!expanded) {
-                    switchToInitial()
+                    switchToInitial();
                 }
             }
         }
@@ -437,7 +447,7 @@ Item {
                 break;
             }
             case Qt.Key_Left: {
-                if (header.input.focus) {
+                if (header.input.focus && header.state == "query") {
                     break;
                 }
                 if (!currentView.deactivateCurrentIndex()) {
@@ -451,7 +461,7 @@ Item {
                 break;
             }
             case Qt.Key_Right: {
-                if (header.input.focus) {
+                if (header.input.focus && header.state == "query") {
                     break;
                 }
                 currentView.activateCurrentIndex();
@@ -473,7 +483,7 @@ Item {
                 if (header.state != "query") {
                     plasmoid.expanded = false;
                 } else {
-                    switchToInitial();
+                    header.query = "";
                 }
                 event.accepted = true;
                 break;
@@ -483,28 +493,10 @@ Item {
                 event.accepted = true;
                 break;
             }
-
-            default: { // forward key to searchView
-                //header.query += event.text will break if the key is backspace,
-                //since if the user continues to type, it will produce an invalid query,
-                //having backspace as the first character
-                if (event.key == Qt.Key_Backspace && header.query == "") {
-                    return;
-                }
-                if (event.text != "" && !header.input.focus) {
-                    root.currentView.listView.currentIndex = -1;
-
-                    if (event.matches(StandardKey.Paste) ) {
-                        header.input.paste();
-                    } else if (! (event.key & Qt.Key_Escape)) {
-                        //if special key, do nothing. Qt.Escape is 0x10000000 which happens to be a mask used for all special keys in Qt.
-                        header.query = "";
-                        header.query += event.text;
-                    }
+            default:
+                if (!header.input.focus) {
                     header.input.forceActiveFocus();
-                    event.accepted = true;
                 }
-            }
         }
     }
 
@@ -540,6 +532,10 @@ Item {
             PropertyChanges {
                 target: mainTabGroup
                 currentTab: searchPage
+            }
+            PropertyChanges {
+                target: root
+                Keys.forwardTo: [root]
             }
         }
     ] // states

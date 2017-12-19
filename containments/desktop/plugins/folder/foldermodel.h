@@ -24,6 +24,7 @@
 
 #include <QImage>
 #include <QItemSelection>
+#include <QQmlParserStatus>
 #include <QPointer>
 #include <QSortFilterProxyModel>
 #include <QStringList>
@@ -56,6 +57,8 @@ namespace KIO {
     class DropJob;
 }
 
+class ScreenMapper;
+
 class DirLister : public KDirLister
 {
     Q_OBJECT
@@ -71,9 +74,10 @@ class DirLister : public KDirLister
         void handleError(KIO::Job *job) override;
 };
 
-class FOLDERPLUGIN_TESTS_EXPORT FolderModel : public QSortFilterProxyModel
+class FOLDERPLUGIN_TESTS_EXPORT FolderModel : public QSortFilterProxyModel, public QQmlParserStatus
 {
     Q_OBJECT
+    Q_INTERFACES(QQmlParserStatus)
 
     Q_PROPERTY(QString url READ url WRITE setUrl NOTIFY urlChanged)
     Q_PROPERTY(QString iconName READ iconName NOTIFY iconNameChanged)
@@ -94,6 +98,8 @@ class FOLDERPLUGIN_TESTS_EXPORT FolderModel : public QSortFilterProxyModel
     Q_PROPERTY(QString filterPattern READ filterPattern WRITE setFilterPattern NOTIFY filterPatternChanged)
     Q_PROPERTY(QStringList filterMimeTypes READ filterMimeTypes WRITE setFilterMimeTypes NOTIFY filterMimeTypesChanged)
     Q_PROPERTY(QObject* newMenu READ newMenu CONSTANT)
+    Q_PROPERTY(ScreenMapper* screenMapper READ screenMapper WRITE setScreenMapper NOTIFY screenMapperChanged)
+    Q_PROPERTY(QObject* appletInterface READ appletInterface WRITE setAppletInterface NOTIFY appletInterfaceChanged);
 
     public:
         enum DataRole {
@@ -129,6 +135,9 @@ class FOLDERPLUGIN_TESTS_EXPORT FolderModel : public QSortFilterProxyModel
 
         QHash<int, QByteArray> roleNames() const override;
         static QHash<int, QByteArray> staticRoleNames();
+
+        void classBegin() override;
+        void componentComplete() override;
 
         QString url() const;
         void setUrl(const QString &url);
@@ -179,6 +188,12 @@ class FOLDERPLUGIN_TESTS_EXPORT FolderModel : public QSortFilterProxyModel
 
         QStringList filterMimeTypes() const;
         void setFilterMimeTypes(const QStringList &mimeList);
+
+        ScreenMapper* screenMapper() const;
+        void setScreenMapper(ScreenMapper* screenMapper);
+
+        QObject *appletInterface() const;
+        void setAppletInterface(QObject *appletInterface);
 
         KFileItem rootItem() const;
 
@@ -233,6 +248,8 @@ class FOLDERPLUGIN_TESTS_EXPORT FolderModel : public QSortFilterProxyModel
         Q_INVOKABLE void undo();
         Q_INVOKABLE void refresh();
 
+        void setScreen(int screen);
+
     Q_SIGNALS:
         void urlChanged() const;
         void listingCompleted() const;
@@ -254,6 +271,9 @@ class FOLDERPLUGIN_TESTS_EXPORT FolderModel : public QSortFilterProxyModel
         void filterModeChanged() const;
         void filterPatternChanged() const;
         void filterMimeTypesChanged() const;
+        void screenChanged() const;
+        void screenMapperChanged() const;
+        void appletInterfaceChanged() const;
         void requestRename() const;
         void move(int x, int y, QList<QUrl> urls);
         void popupMenuAboutToShow(KIO::DropJob *dropJob, QMimeData *mimeData, int x, int y);
@@ -274,6 +294,9 @@ class FOLDERPLUGIN_TESTS_EXPORT FolderModel : public QSortFilterProxyModel
         void emptyTrashBin();
         void restoreSelectedFromTrash();
         void undoTextChanged(const QString &text);
+        void invalidateIfComplete();
+        void invalidateFilterIfComplete();
+        void newFileMenuItemCreated(const QUrl &url);
 
     private:
         struct DragImage {
@@ -300,6 +323,10 @@ class FOLDERPLUGIN_TESTS_EXPORT FolderModel : public QSortFilterProxyModel
         QPoint m_dragHotSpotScrollOffset;
         bool m_dragInProgress;
         bool m_urlChangedWhileDragging;
+        // target filename to target position of a drop event, note that this deliberately
+        // is not using the URL to easily support desktop:/ URL schemes
+        QHash<QString, QPoint> m_dropTargetPositions;
+        QTimer *m_dropTargetPositionsCleanup;
         QPointer<KFilePreviewGenerator> m_previewGenerator;
         QPointer<KAbstractViewAdapter> m_viewAdapter;
         KActionCollection m_actionCollection;
@@ -321,6 +348,11 @@ class FOLDERPLUGIN_TESTS_EXPORT FolderModel : public QSortFilterProxyModel
         bool m_filterPatternMatchAll;
         QSet<QString> m_mimeSet;
         QList<QRegExp> m_regExps;
+        int m_screen = -1;
+        ScreenMapper *m_screenMapper = nullptr;
+        QObject *m_appletInterface = nullptr;
+        bool m_complete;
+        QPoint m_menuPosition;
 };
 
 #endif

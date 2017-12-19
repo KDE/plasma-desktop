@@ -464,8 +464,10 @@ KAStatsFavoritesModel::KAStatsFavoritesModel(QObject *parent)
             this, [&] (const QString &currentActivity) {
                 qCDebug(KICKER_DEBUG) << "Activity just got changed to" << currentActivity;
                 Q_UNUSED(currentActivity);
-                auto clientId = d->m_clientId;
-                initForClient(clientId);
+                if (d) {
+                    auto clientId = d->m_clientId;
+                    initForClient(clientId);
+                }
             });
 }
 
@@ -495,7 +497,7 @@ QString KAStatsFavoritesModel::description() const
 
 bool KAStatsFavoritesModel::trigger(int row, const QString &actionId, const QVariant &argument)
 {
-    return d->trigger(row, actionId, argument);
+    return d && d->trigger(row, actionId, argument);
 }
 
 bool KAStatsFavoritesModel::enabled() const
@@ -541,6 +543,7 @@ bool KAStatsFavoritesModel::isFavorite(const QString &id) const
 
 void KAStatsFavoritesModel::portOldFavorites(const QStringList &ids)
 {
+    if (!d) return;
     qCDebug(KICKER_DEBUG) << "portOldFavorites" << ids;
 
     const auto activityId = ":global";
@@ -611,6 +614,8 @@ void KAStatsFavoritesModel::addFavoriteTo(const QString &id, const Activity &act
 
 void KAStatsFavoritesModel::removeFavoriteFrom(const QString &id, const Activity &activity)
 {
+    if (!d || id.isEmpty()) return;
+
     const auto url = d->normalizedId(id).value();
 
     Q_ASSERT(!activity.values.isEmpty());
@@ -625,6 +630,8 @@ void KAStatsFavoritesModel::removeFavoriteFrom(const QString &id, const Activity
 
 void KAStatsFavoritesModel::setFavoriteOn(const QString &id, const QString &activityId)
 {
+    if (!d || id.isEmpty()) return;
+
     const auto url = d->normalizedId(id).value();
 
     qCDebug(KICKER_DEBUG) << "setFavoriteOn" << id << activityId << url << " (actual)";
@@ -644,6 +651,8 @@ void KAStatsFavoritesModel::setFavoriteOn(const QString &id, const QString &acti
 
 void KAStatsFavoritesModel::moveRow(int from, int to)
 {
+    if (!d) return;
+
     d->move(from, to);
 }
 

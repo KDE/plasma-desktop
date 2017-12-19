@@ -32,9 +32,6 @@ class FolderModelTest : public QObject
     Q_OBJECT
 
 private Q_SLOTS:
-    void initTestCase();
-    void cleanupTestCase();
-
     void init();
     void cleanup();
     void tst_listing();
@@ -48,8 +45,13 @@ private Q_SLOTS:
     void tst_defaultValues();
     void tst_actionMenu();
     void tst_lockedChanged();
+    void tst_multiScreen();
+    void tst_multiScreenDifferenPath();
+
 
 private:    
+    void createTestFolder(const QString &path);
+
     FolderModel *m_folderModel;
     QTemporaryDir *m_folderDir;
 };

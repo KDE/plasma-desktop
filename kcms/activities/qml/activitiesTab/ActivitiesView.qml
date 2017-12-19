@@ -45,6 +45,7 @@ Item {
         onClicked: ActivitySettings.newActivity();
 
         enabled: !dialogCreateActivityLoader.itemVisible
+        visible: ActivitySettings.newActivityAuthorized
     }
 
     Loader {
@@ -159,6 +160,8 @@ Item {
                             iconName: "edit-delete"
 
                             onClicked: ActivitySettings.deleteActivity(model.id);
+
+                            visible: ActivitySettings.newActivityAuthorized
                         }
 
                         visible: !dialogDeleteLoader.itemVisible

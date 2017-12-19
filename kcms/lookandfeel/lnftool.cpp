@@ -91,6 +91,7 @@ int main(int argc, char **argv)
         kcm->setResetDefaultLayout(parser.isSet(_resetLayout));
         kcm->setSelectedPlugin(parser.value(_apply));
         kcm->save();
+        delete kcm;
     }
 
     return 0;

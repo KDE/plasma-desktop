@@ -311,7 +311,7 @@ FolderViewDropArea {
         }
 
         onImmutableChanged: {
-            if (!plasmoid.immutable) {
+            if (root.isContainment && !plasmoid.immutable) {
                 pressToMoveHelp.show();
             }
         }

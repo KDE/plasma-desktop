@@ -20,6 +20,7 @@ set(folderplugin_SRCS
     viewpropertiesmenu.cpp
     wheelinterceptor.cpp
     shortcut.cpp
+    screenmapper.cpp
 )
 
 install(FILES qmldir DESTINATION ${QML_INSTALL_DIR}/org/kde/private/desktopcontainment/folder)

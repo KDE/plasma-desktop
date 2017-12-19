@@ -14,8 +14,8 @@
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date>2016-09-20</date>
-<releaseinfo>Plasma 5.8</releaseinfo>
+<date>2017-11-07</date>
+<releaseinfo>Plasma 5.11</releaseinfo>
 
 <keywordset>
 <keyword>KDE</keyword>
@@ -80,7 +80,7 @@
   assigning colors.</para>
 
   <itemizedlist>
-    <listitem><para><guilabel>Apply inactive window color effects</guilabel>
+    <listitem><para><guilabel>Apply effects to inactive windows</guilabel>
       &mdash; If checked, state effects (see below) will be applied to inactive
       windows. This can help visually identify active versus inactive windows,
       and may have aesthetic value, depending on your taste. However, some
@@ -89,7 +89,7 @@
       effects, color state effects do not require compositing support and will
       work on all systems, however they will only work on &kde; applications.
     </para></listitem>
-    <listitem><para><guilabel>Inactive selection changes color</guilabel>
+    <listitem><para><guilabel>Use different colors for inactive selections</guilabel>
       &mdash; If checked, the current selection in elements which do not have
       input focus will be drawn using a different color. This can assist visual
       identification of the element with input focus in some applications,

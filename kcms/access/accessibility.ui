@@ -103,16 +103,16 @@
        <item>
         <widget class="QGroupBox" name="groupBox_2">
          <property name="title">
-          <string>Visible Bell</string>
+          <string>Visual Bell</string>
          </property>
          <layout class="QGridLayout" name="gridLayout">
           <item row="0" column="0" colspan="4">
            <widget class="QCheckBox" name="visibleBell">
             <property name="toolTip">
-             <string>This option will turn on the &quot;visible bell&quot;, i.e. a visible notification shown every time that normally just a bell would occur. This is especially useful for deaf people.</string>
+             <string>This option will turn on the &quot;visual bell&quot;, i.e. a visual notification shown every time that normally just a bell would occur. This is especially useful for deaf people.</string>
             </property>
             <property name="text">
-             <string>&amp;Use visible bell</string>
+             <string>&amp;Use visual bell</string>
             </property>
            </widget>
           </item>

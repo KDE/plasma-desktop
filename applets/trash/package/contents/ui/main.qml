@@ -59,6 +59,7 @@ DragDrop.DropArea {
     Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
     Plasmoid.backgroundHints: PlasmaCore.Types.NoBackground
     Plasmoid.icon: (dirModel.count > 0) ? "user-trash-full": "user-trash"
+    Plasmoid.onActivated: action_open()
 
     preventStealing: true
 

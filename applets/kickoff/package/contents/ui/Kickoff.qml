@@ -75,13 +75,6 @@ Item {
 
     property Item dragSource: null
 
-    Kicker.DragHelper {
-        id: dragHelper
-
-        dragIconSize: units.iconSizes.medium
-        onDropped: kickoff.dragSource = null
-    }
-
     Kicker.ProcessRunner {
         id: processRunner;
     }

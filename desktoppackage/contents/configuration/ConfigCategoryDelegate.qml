@@ -58,7 +58,7 @@ MouseArea {
 //END functions
 
 //BEGIN connections
-    onClicked: {
+    onPressed: {
         categoriesScroll.forceActiveFocus()
 
         if (current) {

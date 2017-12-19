@@ -242,11 +242,8 @@ KCMStyle::KCMStyle( QWidget* parent, const QVariantList& )
     connect(fineTuningUi.cbIconsInMenus,     &QAbstractButton::toggled,   this, &KCMStyle::setEffectsDirty);
     connect(fineTuningUi.comboToolbarIcons,    SIGNAL(activated(int)), this, SLOT(setEffectsDirty()));
     connect(fineTuningUi.comboSecondaryToolbarIcons,    SIGNAL(activated(int)), this, SLOT(setEffectsDirty()));
-    connect(fineTuningUi.comboMenubarStyle,    SIGNAL(activated(int)), this, SLOT(setEffectsDirty()));
 
     addWhatsThis();
-
-    fineTuningUi.menuBarMessageWidget->hide();
 
     // Insert the pages into the tabWidget
     tabWidget->addTab(page1, i18nc("@title:tab", "&Applications"));
@@ -377,50 +374,6 @@ void KCMStyle::save()
     toolbarStyleGroup.writeEntry("ToolButtonStyleOtherToolbars",
                             toolbarButtonText(fineTuningUi.comboSecondaryToolbarIcons->currentIndex()));
 
-    // menubar page
-    KConfigGroup menuBarStyleGroup(&_config, "Appmenu Style");
-
-    QString style = menuBarStyleText(fineTuningUi.comboMenubarStyle->currentIndex());
-
-    QString previous = menuBarStyleGroup.readEntry("Style", "InApplication");
-    menuBarStyleGroup.writeEntry("Style", style);
-    _config.sync();
-
-    // The old KCM used to mess with autoloading depending on whether menu was enabled or not
-    // since it was always disabled, the kded module would never autoload breaking global menu
-    // for users without an obvious reason why it won't work.
-    QDBusMessage method = QDBusMessage::createMethodCall(QStringLiteral("org.kde.kded5"),
-                                                         QStringLiteral("/kded"),
-                                                         QStringLiteral("org.kde.kded5"),
-                                                         QStringLiteral("setModuleAutoloading"));
-    method.setArguments({QStringLiteral("appmenu"), true});
-    QDBusConnection::sessionBus().asyncCall(method);
-
-    method = QDBusMessage::createMethodCall(QStringLiteral("org.kde.kded5"),
-                                            QStringLiteral("/kded"),
-                                            QStringLiteral("org.kde.kded5"),
-                                            QStringLiteral("loadModule"));
-    method.setArguments({QStringLiteral("appmenu")});
-    QDBusConnection::sessionBus().asyncCall(method);
-
-    // since we load the module async, this call will fail if the module wasn't loaded
-    // but since it will init itself when it loads, this isn't too bad
-    QDBusConnection::sessionBus().asyncCall(
-        QDBusMessage::createMethodCall(QStringLiteral("org.kde.kappmenu"),
-                                       QStringLiteral("/KAppMenu"),
-                                       QStringLiteral("org.kde.kappmenu"),
-                                       QStringLiteral("reconfigure")
-        )
-    );
-
-    const bool showMenuInApplication = (style == QLatin1String("InApplication"));
-
-    if (previous == QLatin1String("InApplication") && !showMenuInApplication) {
-        fineTuningUi.menuBarMessageWidget->setMessageType(KMessageWidget::Information);
-        fineTuningUi.menuBarMessageWidget->setText(i18n("Your changes will take effect only on application restart."));
-        fineTuningUi.menuBarMessageWidget->animatedShow();
-    }
-
     // Export the changes we made to qtrc, and update all qt-only
     // applications on the fly, ensuring that we still follow the user's
     // export fonts/colors settings.
@@ -508,7 +461,6 @@ void KCMStyle::defaults()
     // Effects
     fineTuningUi.comboToolbarIcons->setCurrentIndex(toolbarButtonIndex(QStringLiteral("TextBesideIcon")));
     fineTuningUi.comboSecondaryToolbarIcons->setCurrentIndex(toolbarButtonIndex(QStringLiteral("TextBesideIcon")));
-    fineTuningUi.comboMenubarStyle->setCurrentIndex(menuBarStyleIndex(QStringLiteral("InApplication")));
     fineTuningUi.cbIconsOnButtons->setChecked(true);
     fineTuningUi.cbIconsInMenus->setChecked(true);
     emit changed(true);
@@ -761,10 +713,6 @@ void KCMStyle::loadEffects( KConfig& config )
     fineTuningUi.comboToolbarIcons->setCurrentIndex(toolbarButtonIndex(tbIcon));
     tbIcon = configGroup.readEntry("ToolButtonStyleOtherToolbars", "TextBesideIcon");
     fineTuningUi.comboSecondaryToolbarIcons->setCurrentIndex(toolbarButtonIndex(tbIcon));
-
-    configGroup = config.group("Appmenu Style");
-    QString menuBarStyle = configGroup.readEntry("Style", "InApplication");
-    fineTuningUi.comboMenubarStyle->setCurrentIndex(menuBarStyleIndex(menuBarStyle));
 
     configGroup = config.group("KDE");
     fineTuningUi.cbIconsOnButtons->setChecked(configGroup.readEntry("ShowIconsOnPushButtons", true));

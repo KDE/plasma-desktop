@@ -56,6 +56,7 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
 
 find_package(LibKWorkspace CONFIG REQUIRED)
 find_package(LibTaskManager CONFIG REQUIRED)
+find_package(LibColorCorrect CONFIG REQUIRED)
 find_package(KWinDBusInterface CONFIG REQUIRED)
 find_package(ScreenSaverDBusInterface CONFIG REQUIRED)
 find_package(KRunnerAppDBusInterface CONFIG REQUIRED)
@@ -112,21 +113,12 @@ add_feature_info("Evdev" EVDEV_FOUND "Evdev driver headers needed for input KCM"
 find_package(Synaptics)
 set_package_properties(Synaptics PROPERTIES TYPE OPTIONAL)
 add_feature_info("Synaptics" SYNAPTICS_FOUND "Synaptics libraries needed for touchpad KCM")
-include(ConfigureChecks.cmake)
 
-if(${Qt5Gui_OPENGL_IMPLEMENTATION} STREQUAL "GL")
-    find_package(OpenGL)
-    set_package_properties(OpenGL PROPERTIES DESCRIPTION "The OpenGL libraries"
-                        URL "http://www.opengl.org"
-                        TYPE REQUIRED
-                        )
-else()
-    find_package(OpenGLES)
-    set_package_properties(OpenGLES PROPERTIES DESCRIPTION "The OpenGLES libraries"
-                        URL "http://www.khronos.org/opengles"
-                        TYPE REQUIRED
-                        )
-endif()
+find_package(XorgLibinput)
+set_package_properties(XorgLibinput PROPERTIES TYPE OPTIONAL)
+add_feature_info("XorgLibinput" XORGLIBINPUT_FOUND "Libinput driver headers needed for input KCM")
+
+include(ConfigureChecks.cmake)
 
 find_package(Breeze ${PROJECT_VERSION} CONFIG)
 set_package_properties(Breeze PROPERTIES
