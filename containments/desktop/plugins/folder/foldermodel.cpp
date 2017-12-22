@@ -120,7 +120,8 @@ FolderModel::FolderModel(QObject *parent) : QSortFilterProxyModel(parent),
     m_previews(false),
     m_filterMode(NoFilter),
     m_filterPatternMatchAll(true),
-    m_complete(false)
+    m_complete(false),
+    m_screenMapper(ScreenMapper::instance())
 {
     //needed to pass the job around with qml
     qmlRegisterType<KIO::DropJob>();
@@ -203,7 +204,7 @@ FolderModel::FolderModel(QObject *parent) : QSortFilterProxyModel(parent),
 
 FolderModel::~FolderModel()
 {
-    if (m_screenMapper) {
+    if (m_usedByContainment) {
         // disconnect so we don't handle signals from the screen mapper when
         // removeScreen is called
         m_screenMapper->disconnect(this);
@@ -265,7 +266,7 @@ void FolderModel::invalidateFilterIfComplete()
 
 void FolderModel::newFileMenuItemCreated(const QUrl &url)
 {
-    if (m_screenMapper) {
+    if (m_usedByContainment) {
         m_screenMapper->addMapping(url.toString(), m_screen, ScreenMapper::DelayedSignal);
         m_dropTargetPositions.insert(url.fileName(), m_menuPosition);
         m_menuPosition = {};
@@ -321,7 +322,7 @@ void FolderModel::setUrl(const QString& url)
 
     emit iconNameChanged();
 
-    if (m_screenMapper) {
+    if (m_usedByContainment) {
         m_screenMapper->removeScreen(m_screen, oldUrl);
         m_screenMapper->addScreen(m_screen, url);
     }
@@ -395,6 +396,10 @@ void FolderModel::setUsedByContainment(bool used)
             action->setText(m_usedByContainment ? i18n("&Refresh Desktop") : i18n("&Refresh View"));
             action->setIcon(m_usedByContainment ? QIcon::fromTheme(QStringLiteral("user-desktop")) : QIcon::fromTheme(QStringLiteral("view-refresh")));
         }
+
+        m_screenMapper->disconnect(this);
+        connect(m_screenMapper, &ScreenMapper::screensChanged, this, &FolderModel::invalidateFilterIfComplete);
+        connect(m_screenMapper, &ScreenMapper::screenMappingChanged, this, &FolderModel::invalidateFilterIfComplete);
 
         emit usedByContainmentChanged();
     }
@@ -624,7 +629,7 @@ void FolderModel::setScreen(int screen)
         return;
 
     m_screen = screen;
-    if (m_usedByContainment && m_screenMapper) {
+    if (m_usedByContainment) {
         m_screenMapper->addScreen(screen, url());
     }
     emit screenChanged();
@@ -1111,12 +1116,10 @@ void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row)
     if (m_usedByContainment) {
         if (isDropBetweenSharedViews(mimeData->urls(), dropTargetFolderUrl)) {
             setSortMode(-1);
-            if (m_screenMapper) {
-                for (const auto &url : mimeData->urls()) {
-                    m_dropTargetPositions.insert(url.fileName(), dropPos);
-                    m_screenMapper->addMapping(mappableUrl(url), m_screen, ScreenMapper::DelayedSignal);
-                    m_screenMapper->removeItemFromDisabledScreen(mappableUrl(url));
-                }
+            for (const auto &url : mimeData->urls()) {
+                m_dropTargetPositions.insert(url.fileName(), dropPos);
+                m_screenMapper->addMapping(mappableUrl(url), m_screen, ScreenMapper::DelayedSignal);
+                m_screenMapper->removeItemFromDisabledScreen(mappableUrl(url));
             }
             m_dropTargetPositionsCleanup->start();
             return;
@@ -1160,7 +1163,7 @@ void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row)
             m_dropTargetPositions.insert(targetUrl.fileName(), dropPos);
             m_dropTargetPositionsCleanup->start();
 
-            if (m_usedByContainment && m_screenMapper) {
+            if (m_usedByContainment) {
                 // assign a screen for the item before the copy is actually done, so
                 // filterAcceptsRow doesn't assign the default screen to it
                 QUrl url = QUrl::fromUserInput(m_url, {}, QUrl::AssumeLocalFile);
@@ -1369,9 +1372,7 @@ void FolderModel::statResult(KJob *job)
 void FolderModel::evictFromIsDirCache(const KFileItemList& items)
 {
     foreach (const KFileItem &item, items) {
-        if (m_screenMapper) {
-            m_screenMapper->removeFromMap(item.url().toString());
-        }
+        m_screenMapper->removeFromMap(item.url().toString());
         m_isDirCache.remove(item.url());
     }
 }
@@ -1496,7 +1497,7 @@ bool FolderModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParen
     const KDirModel *dirModel = static_cast<KDirModel*>(sourceModel());
     const KFileItem item = dirModel->itemForIndex(dirModel->index(sourceRow, KDirModel::Name, sourceParent));
 
-    if (m_usedByContainment && m_screenMapper) {
+    if (m_usedByContainment) {
         const QString name = item.url().toString();
         const int screen = m_screenMapper->screenForItem(name);
         // don't do anything if the folderview is not associated with a screen
@@ -1853,32 +1854,6 @@ void FolderModel::refresh()
     m_dirModel->dirLister()->updateDirectory(m_dirModel->dirLister()->url());
 }
 
-ScreenMapper *FolderModel::screenMapper() const
-{
-    return m_screenMapper;
-}
-
-void FolderModel::setScreenMapper(ScreenMapper *screenMapper)
-{
-    if (m_screenMapper == screenMapper)
-        return;
-
-    Q_ASSERT(!m_screenMapper);
-
-    if (m_screenMapper) {
-        m_screenMapper->disconnect(this);
-    }
-
-    m_screenMapper = screenMapper;
-    if (m_screenMapper) {
-        connect(m_screenMapper, &ScreenMapper::screensChanged, this, &FolderModel::invalidateFilterIfComplete);
-        connect(m_screenMapper, &ScreenMapper::screenMappingChanged, this, &FolderModel::invalidateFilterIfComplete);
-    }
-
-    invalidateFilterIfComplete();
-    emit screenMapperChanged();
-}
-
 QObject *FolderModel::appletInterface() const
 {
     return m_appletInterface;
@@ -1900,7 +1875,7 @@ void FolderModel::setAppletInterface(QObject *appletInterface)
                 if (containment) {
                     Plasma::Corona *corona = containment->corona();
 
-                    if (corona && m_screenMapper) {
+                    if (corona) {
                         m_screenMapper->setCorona(corona);
                     }
                     setScreen(containment->screen());

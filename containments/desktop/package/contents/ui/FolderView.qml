@@ -1080,7 +1080,6 @@ Item {
             parseDesktopFiles: (plasmoid.configuration.url == "desktop:/")
             previews: plasmoid.configuration.previews
             previewPlugins: plasmoid.configuration.previewPlugins
-            screenMapper: Folder.ScreenMapper
             appletInterface: plasmoid
 
             onListingCompleted: {

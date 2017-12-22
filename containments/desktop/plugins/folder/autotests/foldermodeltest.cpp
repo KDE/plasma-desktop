@@ -275,7 +275,6 @@ void FolderModelTest::tst_multiScreen()
     m_folderModel->setUrl(m_folderDir->path()  + QDir::separator() + desktop );
     auto *screenMapper = ScreenMapper::instance();
     m_folderModel->setUsedByContainment(true);
-    m_folderModel->setScreenMapper(screenMapper);
     m_folderModel->setScreen(0);
     m_folderModel->componentComplete();
 
@@ -295,7 +294,6 @@ void FolderModelTest::tst_multiScreen()
     secondFolderModel.classBegin();
     secondFolderModel.setUrl(m_folderDir->path()  + QDir::separator() + desktop );
     secondFolderModel.setUsedByContainment(true);
-    secondFolderModel.setScreenMapper(screenMapper);
     secondFolderModel.setScreen(1);
     secondFolderModel.componentComplete();
     QSignalSpy s2(&secondFolderModel, &FolderModel::listingCompleted);
@@ -345,7 +343,6 @@ void FolderModelTest::tst_multiScreenDifferenPath()
 {
     auto *screenMapper = ScreenMapper::instance();
     m_folderModel->setUsedByContainment(true);
-    m_folderModel->setScreenMapper(screenMapper);
     m_folderModel->setScreen(0);
     QSignalSpy s(m_folderModel, &FolderModel::listingCompleted);
     s.wait(1000);
@@ -356,7 +353,6 @@ void FolderModelTest::tst_multiScreenDifferenPath()
     createTestFolder(desktop2);
     FolderModel secondFolderModel;
     secondFolderModel.setUsedByContainment(true);
-    secondFolderModel.setScreenMapper(screenMapper);
     secondFolderModel.setUrl(m_folderDir->path()  + QDir::separator() + desktop2 );
     secondFolderModel.setScreen(1);
     QSignalSpy s2(&secondFolderModel, &FolderModel::listingCompleted);

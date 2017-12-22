@@ -98,7 +98,6 @@ class FOLDERPLUGIN_TESTS_EXPORT FolderModel : public QSortFilterProxyModel, publ
     Q_PROPERTY(QString filterPattern READ filterPattern WRITE setFilterPattern NOTIFY filterPatternChanged)
     Q_PROPERTY(QStringList filterMimeTypes READ filterMimeTypes WRITE setFilterMimeTypes NOTIFY filterMimeTypesChanged)
     Q_PROPERTY(QObject* newMenu READ newMenu CONSTANT)
-    Q_PROPERTY(ScreenMapper* screenMapper READ screenMapper WRITE setScreenMapper NOTIFY screenMapperChanged)
     Q_PROPERTY(QObject* appletInterface READ appletInterface WRITE setAppletInterface NOTIFY appletInterfaceChanged);
 
     public:
@@ -189,9 +188,6 @@ class FOLDERPLUGIN_TESTS_EXPORT FolderModel : public QSortFilterProxyModel, publ
         QStringList filterMimeTypes() const;
         void setFilterMimeTypes(const QStringList &mimeList);
 
-        ScreenMapper* screenMapper() const;
-        void setScreenMapper(ScreenMapper* screenMapper);
-
         QObject *appletInterface() const;
         void setAppletInterface(QObject *appletInterface);
 
@@ -272,7 +268,6 @@ class FOLDERPLUGIN_TESTS_EXPORT FolderModel : public QSortFilterProxyModel, publ
         void filterPatternChanged() const;
         void filterMimeTypesChanged() const;
         void screenChanged() const;
-        void screenMapperChanged() const;
         void appletInterfaceChanged() const;
         void requestRename() const;
         void move(int x, int y, QList<QUrl> urls);

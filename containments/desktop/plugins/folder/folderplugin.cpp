@@ -32,7 +32,6 @@
 #include "viewpropertiesmenu.h"
 #include "wheelinterceptor.h"
 #include "shortcut.h"
-#include "screenmapper.h"
 
 #include <QQmlContext>
 #include <QQmlEngine>
@@ -43,16 +42,6 @@ static QObject *menuHelperSingletonProvider(QQmlEngine *engine, QJSEngine *jsEng
     Q_UNUSED(jsEngine);
     return new MenuHelper();
 }
-
-static QObject *screenMapperProvider(QQmlEngine *engine, QJSEngine *scriptEngine)
-{
-    Q_UNUSED(scriptEngine);
-
-    QObject *mapper = ScreenMapper::instance();
-    engine->setObjectOwnership(mapper, QQmlEngine::CppOwnership);
-    return mapper;
-}
-
 
 void FolderPlugin::registerTypes(const char *uri)
 {
@@ -71,6 +60,5 @@ void FolderPlugin::registerTypes(const char *uri)
     qmlRegisterType<ViewPropertiesMenu>(uri, 0, 1, "ViewPropertiesMenu");
     qmlRegisterType<WheelInterceptor>(uri, 0, 1, "WheelInterceptor");
     qmlRegisterType<ShortCut>(uri, 0, 1, "ShortCut");
-    qmlRegisterSingletonType<ScreenMapper>(uri, 0, 1, "ScreenMapper", screenMapperProvider);
 }
 

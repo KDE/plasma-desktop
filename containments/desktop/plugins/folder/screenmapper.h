@@ -37,7 +37,6 @@ namespace Plasma {
 class FOLDERPLUGIN_TESTS_EXPORT ScreenMapper : public QObject
 {
     Q_OBJECT
-    Q_PROPERTY(QStringList screenMapping READ screenMapping WRITE setScreenMapping NOTIFY screenMappingChanged)
 
 public:
     enum MappingSignalBehavior {
