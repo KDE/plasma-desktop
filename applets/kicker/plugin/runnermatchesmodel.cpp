@@ -102,13 +102,21 @@ QVariant RunnerMatchesModel::data(const QModelIndex &index, int role) const
             actionList << item;
         }
 
-        if (!actionList.isEmpty()) {
-            actionList << Kicker::createSeparatorActionItem();
+        // Only try to get a KService for matches from the services runner. Assuming
+        // that any other runner returns something we want to turn into a KService is
+        // unsafe, e.g. files from the Baloo runner might match a storageId just by
+        // accident, creating a dangerous false positive.
+        if (match.runner()->id() != QLatin1String("services")) {
+            return actionList;
         }
 
         const KService::Ptr service = KService::serviceByStorageId(match.data().toString());
 
         if (service) {
+            if (!actionList.isEmpty()) {
+                actionList << Kicker::createSeparatorActionItem();
+            }
+
             const QVariantList &jumpListActions = Kicker::jumpListActions(service);
             if (!jumpListActions.isEmpty()) {
                 actionList << jumpListActions << Kicker::createSeparatorActionItem();
