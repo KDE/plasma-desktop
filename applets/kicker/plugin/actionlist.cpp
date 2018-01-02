@@ -319,9 +319,9 @@ bool handleRecentDocumentAction(KService::Ptr service, const QString &actionId, 
 
 Q_GLOBAL_STATIC(MenuEntryEditor, menuEntryEditor)
 
-bool canEditApplication(const QString &entryPath)
+bool canEditApplication(const KService::Ptr &service)
 {
-    return menuEntryEditor->canEdit(entryPath);
+    return (service->isApplication() && menuEntryEditor->canEdit(service->entryPath()));
 }
 
 void editApplication(const QString &entryPath, const QString &menuId)
@@ -333,7 +333,7 @@ QVariantList editApplicationAction(const KService::Ptr &service)
 {
     QVariantList actionList;
 
-    if (canEditApplication(service->entryPath())) {
+    if (canEditApplication(service)) {
         QVariantMap editAction = Kicker::createActionItem(i18n("Edit Application..."), "editApplication");
         editAction["icon"] = "kmenuedit"; // TODO: Using the KMenuEdit icon might be misleading.
         actionList << editAction;
@@ -345,7 +345,7 @@ QVariantList editApplicationAction(const KService::Ptr &service)
 bool handleEditApplicationAction(const QString &actionId, const KService::Ptr &service)
 {
 
-    if (service && actionId == "editApplication" && canEditApplication(service->entryPath())) {
+    if (service && actionId == "editApplication" && canEditApplication(service)) {
         Kicker::editApplication(service->entryPath(), service->menuId());
 
         return true;
