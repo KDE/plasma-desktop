@@ -139,12 +139,17 @@ Item {
         target: plasmoid
 
         onExpandedChanged: {
-            if (root.isPopup && !plasmoid.expanded) {
-                goHome();
+            if (root.isPopup) {
+                if (plasmoid.expanded) {
+                    folderView.currentIndex = -1;
+                    folderView.forceActiveFocus();
+                } else {
+                    goHome();
 
-                folderView.currentIndex = -1;
-                folderView.model.clearSelection();
-                folderView.cancelRename();
+                    folderView.currentIndex = -1;
+                    folderView.model.clearSelection();
+                    folderView.cancelRename();
+                }
             }
         }
 
@@ -207,6 +212,7 @@ Item {
 
             anchors.fill: parent
 
+            focus: true
             isRootView: true
 
             url: plasmoid.configuration.url

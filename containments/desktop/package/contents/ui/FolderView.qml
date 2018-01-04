@@ -29,7 +29,7 @@ import org.kde.kquickcontrolsaddons 2.0
 import org.kde.private.desktopcontainment.folder 0.1 as Folder
 import "FolderTools.js" as FolderTools
 
-Item {
+FocusScope {
     id: main
 
     signal pressed
