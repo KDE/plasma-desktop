@@ -360,6 +360,8 @@ Item {
     PlasmaComponents.TabBar {
         id: tabBar
 
+        property int count: 5 // updated in createButtons()
+
         width: {
             if (!visible) {
                 return 0;
@@ -509,7 +511,7 @@ Item {
             }
             PropertyChanges {
                 target: tabBar
-                visible: true
+                visible: tabBar.count > 1
             }
         },
         State {
@@ -520,7 +522,7 @@ Item {
             }
             PropertyChanges {
                 target: tabBar
-                visible: true
+                visible: tabBar.count > 1
             }
         },
         State {
@@ -583,6 +585,7 @@ Item {
     function createButtons() {
         configMenuItems = plasmoid.configuration.menuItems;
         var menuItems = getEnabled(plasmoid.configuration.menuItems);
+        tabBar.count = menuItems.length
 
         // remove old menu items
         for(var i = tabBar.layout.children.length -1; i >= 0; i--)  {
