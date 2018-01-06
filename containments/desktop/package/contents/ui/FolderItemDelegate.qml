@@ -228,8 +228,12 @@ Item {
                         return parent.height;
                     }
 
-                    return (icon.height + (2 * units.smallSpacing) + (label.lineCount
-                    * theme.mSize(theme.defaultFont).height) + (3 * units.smallSpacing));
+                    // Note: frameLoader.y = units.smallSpacing (acts as top margin)
+                    return (units.smallSpacing // icon.anchors.topMargin (acts as top padding)
+                        + icon.height
+                        + units.smallSpacing // label.anchors.topMargin (acts as spacing between icon and label)
+                        + (label.lineCount * theme.mSize(theme.defaultFont).height)
+                        + units.smallSpacing); // leftover (acts as bottom padding)
                 }
 
                 PlasmaCore.IconItem {
@@ -259,7 +263,7 @@ Item {
                     ]
 
                     anchors {
-                        topMargin: (2 * units.smallSpacing)
+                        topMargin: units.smallSpacing
                         leftMargin: units.smallSpacing
                     }
 
