@@ -55,5 +55,5 @@ int main(int argc, char** argv)
     }
 
     KBuildSycocaProgressDialog::rebuildKSycoca(nullptr);
-    app.exec();
+    return 0;
 }
