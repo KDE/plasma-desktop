@@ -1104,11 +1104,6 @@ FocusScope {
                 var from = -1;
                 var to = -1;
 
-                // round the drop pos to half of an item's size to have a more exact
-                // placement in the grid and avoid jumping items
-                dropPos.x = Math.floor((2 * dropPos.x) / cellWidth) * (cellWidth / 2);
-                dropPos.y = Math.floor((2 * dropPos.y) / cellHeight) * (cellHeight / 2);
-
                 for (var i = 0; i < urls.length; i++) {
                     from = positioner.indexForUrl(urls[i]);
                     to = -1;
