@@ -93,8 +93,8 @@ bool CFontThumbnail::create(const QString &path, int width, int height, QImage &
 
                             QString mime(db.mimeTypeForFile(tempDir->path()+QLatin1Char('/')+entry->name()).name());
 
-                            if(mime=="application/x-font-ttf" || mime=="application/x-font-otf" ||
-                               mime=="application/x-font-type1")
+                            if(mime=="font/ttf" || mime=="font/otf" || mime=="application/x-font-ttf" ||
+                               mime=="application/x-font-otf" || mime=="application/x-font-type1")
                             {
                                 realPath=tempDir->path()+QLatin1Char('/')+entry->name();
                                 break;

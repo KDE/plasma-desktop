@@ -290,7 +290,8 @@ int getIntQueryVal(const QUrl &url, const char *key, int defVal)
 
 bool printable(const QString &mime)
 {
-    return "application/x-font-type1"==mime || "application/x-font-ttf"==mime ||
+    return "font/otf"==mime || "font/ttf"==mime ||
+           "application/x-font-type1"==mime || "application/x-font-ttf"==mime ||
            "application/x-font-otf"==mime || "application/x-font-type1"==mime;
 }
 

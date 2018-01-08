@@ -319,8 +319,8 @@ void CFontViewPart::timeout()
                                 QMimeDatabase db;
                                 QString mime(db.mimeTypeForFile(itsTempDir->path()+QLatin1Char('/')+entry->name()).name());
 
-                                if(mime=="application/x-font-ttf" || mime=="application/x-font-otf" ||
-                                   mime=="application/x-font-type1")
+                                if(mime=="font/ttf" || mime=="font/otf" || mime=="application/x-font-ttf" ||
+                                   mime=="application/x-font-otf" || mime=="application/x-font-type1")
                                 {
                                     fontFile=itsTempDir->path()+QLatin1Char('/')+entry->name();
                                     //setLocalFilePath(itsTempDir->path()+QLatin1Char('/')+entry->name());
