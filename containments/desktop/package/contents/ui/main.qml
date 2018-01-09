@@ -243,6 +243,12 @@ FolderViewDropArea {
         if (isContainment && plasmoid.immutable && !(isFolder && FolderTools.isFileDrag(event))) {
             event.ignore();
         }
+
+        // Firefox tabs are regular drags. Since all of our drop handling is asynchronous
+        // we would accept this drop and have Firefox not spawn a new window. (Bug 337711)
+        if (event.mimeData.formats.indexOf("application/x-moz-tabbrowser-tab") > -1) {
+            event.ignore();
+        }
     }
 
     onDragMove: {
