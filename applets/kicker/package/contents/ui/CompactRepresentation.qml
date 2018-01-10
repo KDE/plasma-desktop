@@ -84,6 +84,8 @@ Item {
 
         active: mouseArea.containsMouse && !justOpenedTimer.running
 
+        smooth: true
+
         roundToIconSize: !useCustomButtonImage
 
         onSourceChanged: updateSizeHints()
