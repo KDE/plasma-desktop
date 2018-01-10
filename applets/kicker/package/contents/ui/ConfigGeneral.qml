@@ -26,6 +26,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 
 import org.kde.kquickcontrolsaddons 2.0 as KQuickAddons
+import org.kde.draganddrop 2.0 as DragDrop
 
 import org.kde.plasma.private.kicker 0.1 as Kicker
 
@@ -70,19 +71,55 @@ Item {
                 Layout.minimumHeight: previewFrame.height + units.smallSpacing * 2
                 Layout.maximumHeight: Layout.minimumWidth
 
+                DragDrop.DropArea {
+                    id: dropArea
+
+                    property bool containsAcceptableDrag: false
+
+                    anchors.fill: parent
+
+                    onDragEnter: {
+                        // Cannot use string operations (e.g. indexOf()) on "url" basic type.
+                        var urlString = event.mimeData.url.toString();
+
+                        // This list is also hardcoded in KIconDialog.
+                        var extensions = [".png", ".xpm", ".svg", ".svgz"];
+                        containsAcceptableDrag = urlString.indexOf("file:///") === 0 && extensions.some(function (extension) {
+                            return urlString.indexOf(extension) === urlString.length - extension.length; // "endsWith"
+                        });
+
+                        if (!containsAcceptableDrag) {
+                            event.ignore();
+                        }
+                    }
+                    onDragLeave: containsAcceptableDrag = false
+
+                    onDrop: {
+                        if (containsAcceptableDrag) {
+                            // Strip file:// prefix, we already verified in onDragEnter that we have only local URLs.
+                            iconDialog.setCustomButtonImage(event.mimeData.url.toString().substr("file://".length));
+                        }
+                        containsAcceptableDrag = false;
+                    }
+                }
+
                 KQuickAddons.IconDialog {
                     id: iconDialog
-                    onIconNameChanged: {
-                        cfg_customButtonImage = iconName || cfg_icon || "start-here-kde"
+
+                    function setCustomButtonImage(image) {
+                        cfg_customButtonImage = image || cfg_icon || "start-here-kde"
                         cfg_useCustomButtonImage = true;
                     }
+
+                    onIconNameChanged: setCustomButtonImage(iconName);
                 }
 
                 // just to provide some visual feedback, cannot have checked without checkable enabled
                 checkable: true
+                checked: dropArea.containsAcceptableDrag
                 onClicked: {
                     checked = Qt.binding(function() { // never actually allow it being checked
-                        return iconMenu.status === PlasmaComponents.DialogStatus.Open
+                        return iconMenu.status === PlasmaComponents.DialogStatus.Open || dropArea.containsAcceptableDrag;
                     })
 
                     iconMenu.open(0, height)
