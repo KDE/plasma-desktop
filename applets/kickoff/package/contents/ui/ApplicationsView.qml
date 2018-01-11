@@ -108,6 +108,9 @@ Item {
             pixelAligned: true
             //contentX: contentWidth - width
 
+            // HACK: Align the content to right for RTL locales
+            leftMargin: LayoutMirroring.enabled ? Math.max(0, width - contentWidth) : 0
+
             PlasmaComponents.ButtonRow {
                 id: breadcrumbsElement
 
@@ -132,7 +135,11 @@ Item {
                     }
                 }
                 onWidthChanged: {
-                    breadcrumbFlickable.contentX = Math.max(0, breadcrumbsElement.width - breadcrumbFlickable.width)
+                    if (LayoutMirroring.enabled) {
+                        breadcrumbFlickable.contentX = -Math.max(0, breadcrumbsElement.width - breadcrumbFlickable.width)
+                    } else {
+                        breadcrumbFlickable.contentX = Math.max(0, breadcrumbsElement.width - breadcrumbFlickable.width)
+                    }
                 }
             }
         } // Flickable

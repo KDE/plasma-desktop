@@ -97,6 +97,7 @@ Item {
         level: 2
         text: kuser.fullName
         elide: Text.ElideRight
+        horizontalAlignment: Text.AlignLeft
         verticalAlignment: Text.AlignTop
         height: paintedHeight
 
@@ -129,6 +130,7 @@ Item {
                 left: parent.left
                 right: parent.right
             }
+            horizontalAlignment: Text.AlignLeft
             verticalAlignment: Text.AlignBottom
             text: kuser.os != "" ? i18n("%2@%3 (%1)", kuser.os, kuser.loginName, kuser.host) : i18n("%1@%2", kuser.loginName, kuser.host)
             elide: Text.ElideRight

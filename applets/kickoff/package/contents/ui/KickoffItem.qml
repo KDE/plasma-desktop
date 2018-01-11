@@ -203,6 +203,7 @@ Item {
             // TODO: games should always show the by name!
             text: model.display
             elide: Text.ElideRight
+            horizontalAlignment: Text.AlignLeft
         }
         PlasmaComponents.Label {
             id: subTitleElement
@@ -219,6 +220,7 @@ Item {
             opacity: isCurrent ? 0.8 : 0.6
             font.pointSize: theme.smallestFont.pointSize
             elide: Text.ElideMiddle
+            horizontalAlignment: Text.AlignLeft
         }
 
         PlasmaCore.SvgItem {
