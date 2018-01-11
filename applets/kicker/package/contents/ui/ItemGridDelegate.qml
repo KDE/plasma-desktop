@@ -24,14 +24,11 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 
 import "../code/tools.js" as Tools
 
-MouseArea {
+Item {
     id: item
 
     width: GridView.view.cellWidth
     height: width
-
-    signal actionTriggered(string actionId, variant actionArgument)
-    signal aboutToShowActionMenu(variant actionMenu)
 
     property bool showLabel: true
 
@@ -40,66 +37,24 @@ MouseArea {
     property url url: model.url != undefined ? model.url : ""
     property variant icon: model.decoration != undefined ? model.decoration : ""
     property var m: model
-    property bool pressed: false
     property bool hasActionList: ((model.favoriteId != null)
         || (("hasActionList" in model) && (model.hasActionList == true)))
-    property Item view: GridView.view
-    property Item menu: actionMenu
 
     Accessible.role: Accessible.MenuItem
     Accessible.name: model.display
 
-    acceptedButtons: root.visible ? (Qt.LeftButton | Qt.RightButton) : Qt.NoButton
-
-    onPressed: {
-        if (mouse.buttons & Qt.RightButton) {
-            if (hasActionList) {
-                openActionMenu(item, mouse.x, mouse.y);
-            }
-        } else {
-            pressed = true;
-        }
-    }
-
-    onReleased: {
-        if (pressed && GridView.view.currentItem == item) {
-            hoverArea.hoverEnabled = false;
-
-            if ("trigger" in GridView.view.model) {
-                GridView.view.model.trigger(index, "", null);
-                root.toggle();
-            }
-
-            itemGrid.itemActivated(index, "", null);
-        }
-
-        pressed = false;
-    }
-
-    onAboutToShowActionMenu: {
+    function openActionMenu(x, y) {
         var actionList = hasActionList ? model.actionList : [];
         Tools.fillActionMenu(actionMenu, actionList, GridView.view.model.favoritesModel, model.favoriteId);
+        actionMenu.visualParent = item;
+        actionMenu.open(x, y);
     }
 
-    onActionTriggered: {
+    function actionTriggered() {
         var close = Tools.triggerAction(GridView.view.model, model.index, actionId, actionArgument);
 
         if (close) {
             root.toggle();
-        }
-    }
-
-    function openActionMenu(visualParent, x, y) {
-        aboutToShowActionMenu(actionMenu);
-        actionMenu.visualParent = visualParent;
-        actionMenu.open(x, y);
-    }
-
-    ActionMenu {
-        id: actionMenu
-
-        onActionClicked: {
-            actionTriggered(actionId, actionArgument);
         }
     }
 
@@ -117,7 +72,7 @@ MouseArea {
         colorGroup: PlasmaCore.Theme.ComplementaryColorGroup
 
         animated: false
-        usesPlasmaTheme: view.usesPlasmaTheme
+        usesPlasmaTheme: GridView.view.usesPlasmaTheme
 
         source: model.decoration
     }

@@ -111,6 +111,8 @@ Kicker.DashboardWindow {
     }
 
     mainItem: MouseArea {
+        id: rootItem
+
         anchors.fill: parent
 
         acceptedButtons: Qt.LeftButton | Qt.RightButton
