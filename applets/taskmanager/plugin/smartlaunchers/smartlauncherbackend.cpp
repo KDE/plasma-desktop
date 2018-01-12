@@ -51,8 +51,9 @@ bool Backend::setupUnity()
 {
     auto sessionBus = QDBusConnection::sessionBus();
 
-    if (!sessionBus.registerService(QStringLiteral("com.canonical.Unity"))) {
-        qWarning() << "Failed to register unity service";
+    if (!sessionBus.connect({}, {}, QStringLiteral("com.canonical.Unity.LauncherEntry"),
+                            QStringLiteral("Update"), this, SLOT(update(QString,QMap<QString,QVariant>)))) {
+        qWarning() << "failed to register Update signal";
         return false;
     }
 
@@ -61,9 +62,8 @@ bool Backend::setupUnity()
         return false;
     }
 
-    if (!sessionBus.connect({}, {}, QStringLiteral("com.canonical.Unity.LauncherEntry"),
-                            QStringLiteral("Update"), this, SLOT(update(QString,QMap<QString,QVariant>)))) {
-        qWarning() << "failed to register Update signal";
+    if (!sessionBus.registerService(QStringLiteral("com.canonical.Unity"))) {
+        qWarning() << "Failed to register unity service";
         return false;
     }
 
