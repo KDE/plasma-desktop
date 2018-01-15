@@ -34,24 +34,35 @@ Item {
             y: -offset
             width: badgeRect.width + offset * 2
             height: badgeRect.height + offset * 2
-            radius: width
+            radius: badgeRect.radius + offset * 2
+
+            // Badge changes width based on number.
+            onWidthChanged: maskShaderSource.scheduleUpdate()
         }
     }
 
-    ShaderEffect {
-        anchors.fill: parent
-        property var source: ShaderEffectSource {
-            sourceItem: icon
-            hideSource: true
-        }
-        property var mask: ShaderEffectSource {
-            sourceItem: badgeMask
-            hideSource: true
-            live: false
-        }
+    ShaderEffectSource {
+        id: iconShaderSource
+        sourceItem: icon
+        hideSource: true
+    }
 
-        onWidthChanged: mask.scheduleUpdate()
-        onHeightChanged: mask.scheduleUpdate()
+    ShaderEffectSource {
+        id: maskShaderSource
+        sourceItem: badgeMask
+        hideSource: true
+        live: false
+    }
+
+    ShaderEffect {
+        id: shader
+
+        anchors.fill: parent
+        property var source: iconShaderSource
+        property var mask: maskShaderSource
+
+        onWidthChanged: maskShaderSource.scheduleUpdate()
+        onHeightChanged: maskShaderSource.scheduleUpdate()
 
         supportsAtlasTextures: true
 
@@ -66,25 +77,11 @@ Item {
         "
     }
 
-    Rectangle {
+    Badge {
         id: badgeRect
         x: Qt.application.layoutDirection === Qt.RightToLeft ? iconWidthDelta : parent.width - width - iconWidthDelta
-        width: height
         height: Math.round(parent.height * 0.4)
-        color: theme.highlightColor
-        radius: width
 
-        PlasmaComponents.Label {
-            anchors.centerIn: parent
-            width: height
-            height: Math.round(parent.height)
-            horizontalAlignment: Text.AlignHCenter
-            verticalAlignment: Text.AlignVCenter
-            fontSizeMode: Text.Fit
-            font.pointSize: 1024
-            minimumPointSize: 5
-            color: theme.backgroundColor
-            text: task.smartLauncherItem.count
-        }
+        number: task.smartLauncherItem.count
     }
 }
