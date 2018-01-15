@@ -356,6 +356,13 @@ MouseArea {
                     toolTipDelegate.activitiesParent = Qt.binding(function() {
                         return model.Activities;
                     });
+
+                    toolTipDelegate.smartLauncherCountVisible = Qt.binding(function() {
+                        return plasmoid.configuration.smartLaunchersEnabled && task.smartLauncherItem && task.smartLauncherItem.countVisible;
+                    });
+                    toolTipDelegate.smartLauncherCount = Qt.binding(function() {
+                        return toolTipDelegate.smartLauncherCountVisible ? task.smartLauncherItem.count : 0;
+                    });
                 }
             }
         }

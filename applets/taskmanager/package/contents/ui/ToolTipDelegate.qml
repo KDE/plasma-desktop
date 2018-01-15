@@ -55,6 +55,9 @@ PlasmaExtras.ScrollArea {
     property bool isOnAllVirtualDesktopsParent
     property var activitiesParent
     //
+    property bool smartLauncherCountVisible
+    property int smartLauncherCount
+
     readonly property bool isVerticalPanel: plasmoid.formFactor == PlasmaCore.Types.Vertical
 
     Layout.minimumWidth: contentItem.width

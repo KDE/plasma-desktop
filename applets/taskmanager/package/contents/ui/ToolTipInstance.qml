@@ -126,6 +126,15 @@ Column {
                 visible: text !== ""
             }
         }
+
+        // Count badge.
+        Badge {
+            Layout.alignment: Qt.AlignRight | Qt.AlignTop
+            height: units.iconSizes.smallMedium
+            visible: flatIndex === 0 && smartLauncherCountVisible
+            number: smartLauncherCount
+        }
+
         // close button
         MouseArea {
             Layout.alignment: Qt.AlignRight | Qt.AlignTop
