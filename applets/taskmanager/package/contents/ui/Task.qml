@@ -76,7 +76,7 @@ MouseArea {
         toolTipArea.hideToolTip();
     }
 
-    acceptedButtons: Qt.LeftButton | Qt.RightButton | Qt.MidButton
+    acceptedButtons: Qt.LeftButton | Qt.RightButton | Qt.MidButton | Qt.BackButton | Qt.ForwardButton
 
     onPidChanged: updateAudioStreams()
     onAppNameChanged: updateAudioStreams()
@@ -130,7 +130,7 @@ MouseArea {
     }
 
     onPressed: {
-        if (mouse.button == Qt.LeftButton || mouse.button == Qt.MidButton) {
+        if (mouse.button == Qt.LeftButton || mouse.button == Qt.MidButton || mouse.button === Qt.BackButton || mouse.button === Qt.ForwardButton) {
             pressed = true;
             pressX = mouse.x;
             pressY = mouse.y;
@@ -161,6 +161,17 @@ MouseArea {
                 TaskTools.activateTask(modelIndex(), model, mouse.modifiers, task);
                 if (plasmoid.configuration.showToolTips) {
                     hideToolTipTemporarily();
+                }
+            } else if (mouse.button === Qt.BackButton || mouse.button === Qt.ForwardButton) {
+                var sourceName = mpris2Source.sourceNameForLauncherUrl(model.LauncherUrlWithoutIcon, model.AppPid);
+                if (sourceName) {
+                    if (mouse.button === Qt.BackButton) {
+                        mpris2Source.goPrevious(sourceName);
+                    } else {
+                        mpris2Source.goNext(sourceName);
+                    }
+                } else {
+                    mouse.accepted = false;
                 }
             }
 
