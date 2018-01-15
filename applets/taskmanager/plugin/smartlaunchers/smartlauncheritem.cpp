@@ -120,6 +120,7 @@ void Item::setLauncherUrl(const QUrl &launcherUrl)
         emit launcherUrlChanged(launcherUrl);
 
         m_storageId.clear();
+        clear();
 
         if (launcherUrl.scheme() == QStringLiteral("applications")) {
             const KService::Ptr service = KService::serviceByMenuId(launcherUrl.path());
