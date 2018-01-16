@@ -1740,13 +1740,13 @@ void FolderModel::openContextMenu(QQuickItem *visualParent)
                 menu->addAction(emptyTrashAction);
             }
         } else {
-            if (!hasRemoteFiles) {
+            if (!hasRemoteFiles && itemProperties.supportsMoving()) {
                 menu->addAction(m_actionCollection.action(QStringLiteral("trash")));
             } else {
                 showDeleteCommand = true;
             }
         }
-        if (showDeleteCommand) {
+        if (showDeleteCommand && itemProperties.supportsDeleting()) {
             menu->addAction(m_actionCollection.action(QStringLiteral("del")));
         }
 
@@ -1795,21 +1795,17 @@ void FolderModel::linkHere(const QUrl &sourceUrl)
     KIO::FileUndoManager::self()->recordCopyJob(job);
 }
 
-QList<QUrl> FolderModel::selectedUrls(bool forTrash) const
+QList<QUrl> FolderModel::selectedUrls() const
 {
+    const auto indexes = m_selectionModel->selectedIndexes();
+
     QList<QUrl> urls;
+    urls.reserve(indexes.count());
 
-    foreach (const QModelIndex &index, m_selectionModel->selectedIndexes())
-    {
-        KFileItem item = itemForIndex(index);
-
-        if (forTrash) {
-            // Prefer the local URL if there is one, since we can't trash remote URL's
-            urls.append(item.mostLocalUrl());
-        } else {
-            urls.append(item.url());
-        }
+    for (const QModelIndex &index : indexes) {
+        urls.append(itemForIndex(index).url());
     }
+
     return urls;
 }
 
@@ -1841,7 +1837,7 @@ void FolderModel::paste()
 
 void FolderModel::pasteTo()
 {
-    const QList<QUrl> urls = selectedUrls(false);
+    const QList<QUrl> urls = selectedUrls();
     Q_ASSERT(urls.count() == 1);
     KIO::paste(QApplication::clipboard()->mimeData(), urls.first());
 }
@@ -1894,7 +1890,7 @@ void FolderModel::moveSelectedToTrash()
         return;
     }
 
-    const QList<QUrl> urls = selectedUrls(true);
+    const QList<QUrl> urls = selectedUrls();
     KIO::JobUiDelegate uiDelegate;
     if (uiDelegate.askDeleteConfirmation(urls, KIO::JobUiDelegate::Trash, KIO::JobUiDelegate::DefaultConfirmation)) {
         KIO::Job* job = KIO::trash(urls);
@@ -1909,7 +1905,7 @@ void FolderModel::deleteSelected()
         return;
     }
 
-    const QList<QUrl> urls = selectedUrls(false);
+    const QList<QUrl> urls = selectedUrls();
     KIO::JobUiDelegate uiDelegate;
     if (uiDelegate.askDeleteConfirmation(urls, KIO::JobUiDelegate::Delete, KIO::JobUiDelegate::DefaultConfirmation)) {
         KIO::Job* job = KIO::del(urls);
@@ -1923,7 +1919,7 @@ void FolderModel::openSelected()
         return;
     }
 
-    const QList<QUrl> urls = selectedUrls(false);
+    const QList<QUrl> urls = selectedUrls();
     for (const QUrl &url : urls) {
         (void) new KRun(url, nullptr);
     }
@@ -1955,7 +1951,7 @@ void FolderModel::restoreSelectedFromTrash()
         return;
     }
 
-    const auto &urls = selectedUrls(true);
+    const auto &urls = selectedUrls();
 
     KIO::RestoreJob *job = KIO::restoreFromTrash(urls);
     job->uiDelegate()->setAutoErrorHandlingEnabled(true);
