@@ -374,6 +374,8 @@ void KCMStyle::save()
     toolbarStyleGroup.writeEntry("ToolButtonStyleOtherToolbars",
                             toolbarButtonText(fineTuningUi.comboSecondaryToolbarIcons->currentIndex()));
 
+    _config.sync();
+
     // Export the changes we made to qtrc, and update all qt-only
     // applications on the fly, ensuring that we still follow the user's
     // export fonts/colors settings.
