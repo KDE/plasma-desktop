@@ -38,6 +38,7 @@ AppsModel::AppsModel(const QString &entryPath, bool paginate, int pageSize, bool
 , m_deleteEntriesOnDestruction(true)
 , m_separatorCount(0)
 , m_showSeparators(separators)
+, m_showTopLevelItems(false)
 , m_appletInterface(nullptr)
 , m_description(i18n("Applications"))
 , m_entryPath(entryPath)
@@ -59,6 +60,7 @@ AppsModel::AppsModel(const QList<AbstractEntry *> entryList, bool deleteEntriesO
 , m_deleteEntriesOnDestruction(deleteEntriesOnDestruction)
 , m_separatorCount(0)
 , m_showSeparators(false)
+, m_showTopLevelItems(false)
 , m_appletInterface(nullptr)
 , m_description(i18n("Applications"))
 , m_entryPath(QString())
@@ -363,6 +365,21 @@ void AppsModel::setShowSeparators(bool showSeparators) {
     }
 }
 
+bool AppsModel::showTopLevelItems() const
+{
+    return m_showTopLevelItems;
+}
+
+void AppsModel::setShowTopLevelItems(bool showTopLevelItems) {
+    if (m_showTopLevelItems != showTopLevelItems) {
+        m_showTopLevelItems = showTopLevelItems;
+
+        refresh();
+
+        emit showTopLevelItemsChanged();
+    }
+}
+
 int AppsModel::appNameFormat() const
 {
     return m_appNameFormat;
@@ -461,6 +478,43 @@ void AppsModel::refreshInternal()
                         m_sorted, m_showSeparators, m_appNameFormat);
                     m_entryList << groupEntry;
                 }
+            } else if (p->isType(KST_KService) && m_showTopLevelItems) {
+                const KService::Ptr service(static_cast<KService*>(p.data()));
+
+                if (service->noDisplay()) {
+                    continue;
+                }
+
+                bool found = false;
+
+                foreach (const AbstractEntry *entry, m_entryList) {
+                    if (entry->type() == AbstractEntry::RunnableType
+                        && static_cast<const AppEntry *>(entry)->service()->storageId() == service->storageId()) {
+                        found = true;
+                    }
+                }
+
+                if (!found) {
+                    m_entryList << new AppEntry(this, service, m_appNameFormat);
+                }
+             } else if (p->isType(KST_KServiceSeparator) && m_showSeparators && m_showTopLevelItems) {
+                if (!m_entryList.count()) {
+                    continue;
+                }
+
+                if (m_entryList.last()->type() == AbstractEntry::SeparatorType) {
+                    continue;
+                }
+
+                m_entryList << new SeparatorEntry(this);
+                ++m_separatorCount;
+            }
+        }
+
+        if (m_entryList.count()) {
+            while (m_entryList.last()->type() == AbstractEntry::SeparatorType) {
+                m_entryList.removeLast();
+                --m_separatorCount;
             }
         }
 

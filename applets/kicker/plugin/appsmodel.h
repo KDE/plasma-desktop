@@ -39,6 +39,7 @@ class AppsModel : public AbstractModel
     Q_PROPERTY(bool flat READ flat WRITE setFlat NOTIFY flatChanged)
     Q_PROPERTY(bool sorted READ sorted WRITE setSorted NOTIFY sortedChanged)
     Q_PROPERTY(bool showSeparators READ showSeparators WRITE setShowSeparators NOTIFY showSeparatorsChanged)
+    Q_PROPERTY(bool showTopLevelItems READ showTopLevelItems WRITE setShowTopLevelItems NOTIFY showTopLevelItemsChanged)
     Q_PROPERTY(int appNameFormat READ appNameFormat WRITE setAppNameFormat NOTIFY appNameFormatChanged)
     Q_PROPERTY(QObject* appletInterface READ appletInterface WRITE setAppletInterface NOTIFY appletInterfaceChanged);
 
@@ -79,6 +80,9 @@ class AppsModel : public AbstractModel
         bool showSeparators() const;
         void setShowSeparators(bool showSeparators);
 
+        bool showTopLevelItems() const;
+        void setShowTopLevelItems(bool showTopLevelItems);
+
         int appNameFormat() const;
         void setAppNameFormat(int format);
 
@@ -96,6 +100,7 @@ class AppsModel : public AbstractModel
         void flatChanged() const;
         void sortedChanged() const;
         void showSeparatorsChanged() const;
+        void showTopLevelItemsChanged() const;
         void appNameFormatChanged() const;
         void appletInterfaceChanged() const;
         void hiddenEntriesChanged() const;
@@ -113,6 +118,7 @@ class AppsModel : public AbstractModel
         bool m_deleteEntriesOnDestruction;
         int m_separatorCount;
         bool m_showSeparators;
+        bool m_showTopLevelItems;
 
         QObject *m_appletInterface;
 

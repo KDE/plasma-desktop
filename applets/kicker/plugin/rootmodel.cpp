@@ -310,6 +310,8 @@ void RootModel::refresh()
             foreach (const AbstractEntry *groupEntry, m_entryList) {
                 AbstractModel *model = groupEntry->childModel();
 
+                if (!model) continue;
+
                 for (int i = 0; i < model->count(); ++i) {
                     GroupEntry *subGroupEntry = static_cast<GroupEntry*>(model->index(i, 0).internalPointer());
                     AbstractModel *subModel = subGroupEntry->childModel();
@@ -368,6 +370,8 @@ void RootModel::refresh()
 
             foreach (const AbstractEntry *groupEntry, m_entryList) {
                 AbstractModel *model = groupEntry->childModel();
+
+                if (!model) continue;
 
                 for (int i = 0; i < model->count(); ++i) {
                     AbstractEntry *appEntry = static_cast<AbstractEntry *>(model->index(i, 0).internalPointer());
