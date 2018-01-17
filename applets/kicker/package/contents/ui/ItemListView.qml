@@ -69,15 +69,10 @@ FocusScope {
             }
 
             if (childDialog != null) {
-                childDialog.visible = false;
                 childDialog.delayedDestroy();
             }
 
-            windowSystem.monitorWindowFocus(itemList);
-
-            // Gets reenabled after the dialog spawn causes a focus out on this window.
-            // This avoids Kicker closing due to unreliable timing making Dialog::focusOutEvent()
-            // unable to tell focus moved to a child window.
+            // Gets reenabled after the dialog spawn causes a focus-in on the dialog window.
             plasmoid.hideOnWindowDeactivate = false;
 
             childDialog = itemListDialogComponent.createObject(itemList);
@@ -168,7 +163,6 @@ FocusScope {
                                 childDialog.model = model.modelForRow(currentIndex);
                                 childDialog.visualParent = listView.currentItem;
                             } else {
-                                childDialog.visible = false;
                                 childDialog.delayedDestroy();
                             }
 
@@ -186,7 +180,6 @@ FocusScope {
                             dialogSpawnTimer.restart();
                         }
                     } else if (childDialog != null) {
-                        childDialog.visible = false;
                         childDialog.delayedDestroy();
                         childDialog = null;
                     }
@@ -256,6 +249,8 @@ FocusScope {
     }
 
     Component.onCompleted: {
+        windowSystem.monitorWindowFocus(itemList);
+
         if (dialog == null) {
             appendSearchText.connect(root.appendSearchText);
         }

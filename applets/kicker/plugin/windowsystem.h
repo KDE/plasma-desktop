@@ -44,7 +44,7 @@ class WindowSystem : public QObject
         Q_INVOKABLE void monitorWindowVisibility(QQuickItem *item);
 
     Q_SIGNALS:
-        void focusOut(QQuickWindow *window) const;
+        void focusIn(QQuickWindow *window) const;
         void hidden(QQuickWindow *window) const;
 
     private Q_SLOTS:
