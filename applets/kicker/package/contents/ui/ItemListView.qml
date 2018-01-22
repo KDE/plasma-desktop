@@ -48,6 +48,7 @@ FocusScope {
     property alias keyNavigationWraps: listView.keyNavigationWraps
     property alias showChildDialogs: listView.showChildDialogs
     property alias model: listView.model
+    property alias count: listView.count
     property alias containsMouse: listener.containsMouse
     property alias resetOnExitDelay: resetIndexTimer.interval
 
@@ -69,15 +70,10 @@ FocusScope {
             }
 
             if (childDialog != null) {
-                childDialog.visible = false;
                 childDialog.delayedDestroy();
             }
 
-            windowSystem.monitorWindowFocus(itemList);
-
-            // Gets reenabled after the dialog spawn causes a focus out on this window.
-            // This avoids Kicker closing due to unreliable timing making Dialog::focusOutEvent()
-            // unable to tell focus moved to a child window.
+            // Gets reenabled after the dialog spawn causes a focus-in on the dialog window.
             plasmoid.hideOnWindowDeactivate = false;
 
             childDialog = itemListDialogComponent.createObject(itemList);
@@ -123,6 +119,7 @@ FocusScope {
 
             if (containsMouse) {
                 resetIndexTimer.stop();
+                itemList.forceActiveFocus();
             } else if ((!childDialog || !dialog)
                 && (!currentItem || !currentItem.menu.opened)) {
                 resetIndexTimer.start();
@@ -161,14 +158,11 @@ FocusScope {
 
                 onCurrentIndexChanged: {
                     if (currentIndex != -1) {
-                        itemList.forceActiveFocus();
-
                         if (childDialog) {
                             if (currentItem && currentItem.hasChildren) {
                                 childDialog.model = model.modelForRow(currentIndex);
                                 childDialog.visualParent = listView.currentItem;
                             } else {
-                                childDialog.visible = false;
                                 childDialog.delayedDestroy();
                             }
 
@@ -186,7 +180,6 @@ FocusScope {
                             dialogSpawnTimer.restart();
                         }
                     } else if (childDialog != null) {
-                        childDialog.visible = false;
                         childDialog.delayedDestroy();
                         childDialog = null;
                     }
@@ -256,6 +249,8 @@ FocusScope {
     }
 
     Component.onCompleted: {
+        windowSystem.monitorWindowFocus(itemList);
+
         if (dialog == null) {
             appendSearchText.connect(root.appendSearchText);
         }

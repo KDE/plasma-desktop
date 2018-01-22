@@ -34,8 +34,9 @@ WindowSystem::~WindowSystem()
 
 bool WindowSystem::eventFilter(QObject* watched, QEvent* event)
 {
-    if (event->type() == QEvent::FocusOut) {
-        emit focusOut(qobject_cast<QQuickWindow *>(watched));
+    if (event->type() == QEvent::FocusIn) {
+        removeEventFilter(watched);
+        emit focusIn(qobject_cast<QQuickWindow *>(watched));
     }
 
     return false;

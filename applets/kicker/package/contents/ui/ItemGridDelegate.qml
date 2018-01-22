@@ -50,7 +50,7 @@ Item {
         actionMenu.open(x, y);
     }
 
-    function actionTriggered() {
+    function actionTriggered(actionId, actionArgument) {
         var close = Tools.triggerAction(GridView.view.model, model.index, actionId, actionArgument);
 
         if (close) {

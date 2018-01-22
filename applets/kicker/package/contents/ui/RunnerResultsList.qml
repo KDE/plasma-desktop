@@ -95,6 +95,12 @@ FocusScope {
                 visible: false;
             }
         }
+
+        onCountChanged: {
+            if (index == 0 && searchField.focus) {
+                currentIndex = 0;
+            }
+        }
     }
 
     Component.onCompleted: {
