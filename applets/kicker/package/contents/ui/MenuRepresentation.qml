@@ -376,13 +376,16 @@ FocusScope {
                 if (rootList.visible) {
                     rootList.showChildDialogs = false;
                     rootList.currentIndex = rootList.model.count - 1;
+                    rootList.forceActiveFocus();
                     rootList.showChildDialogs = true;
                 }
 
                 if (runnerColumns.visible) {
                     for (var i = 0; i < runnerModel.count; ++i) {
                         if (runnerModel.modelForRow(i).count) {
-                            runnerColumnsRepeater.itemAt(i).currentIndex = runnerModel.modelForRow(i).count - 1;
+                            var targetList = runnerColumnsRepeater.itemAt(i);
+                            targetList.currentIndex = runnerModel.modelForRow(i).count - 1;
+                            targetList.forceActiveFocus();
                             break;
                         }
                     }
@@ -391,13 +394,16 @@ FocusScope {
                 if (rootList.visible) {
                     rootList.showChildDialogs = false;
                     rootList.currentIndex = 0;
+                    rootList.forceActiveFocus();
                     rootList.showChildDialogs = true;
                 }
 
                 if (runnerColumns.visible) {
                     for (var i = 0; i < runnerModel.count; ++i) {
                         if (runnerModel.modelForRow(i).count) {
-                            runnerColumnsRepeater.itemAt(i).currentIndex = 0;
+                            var targetList = runnerColumnsRepeater.itemAt(i);
+                            targetList.currentIndex = 0;
+                            targetList.forceActiveFocus();
                             break;
                         }
                     }

@@ -48,6 +48,7 @@ FocusScope {
     property alias keyNavigationWraps: listView.keyNavigationWraps
     property alias showChildDialogs: listView.showChildDialogs
     property alias model: listView.model
+    property alias count: listView.count
     property alias containsMouse: listener.containsMouse
     property alias resetOnExitDelay: resetIndexTimer.interval
 
@@ -118,6 +119,7 @@ FocusScope {
 
             if (containsMouse) {
                 resetIndexTimer.stop();
+                itemList.forceActiveFocus();
             } else if ((!childDialog || !dialog)
                 && (!currentItem || !currentItem.menu.opened)) {
                 resetIndexTimer.start();
@@ -156,8 +158,6 @@ FocusScope {
 
                 onCurrentIndexChanged: {
                     if (currentIndex != -1) {
-                        itemList.forceActiveFocus();
-
                         if (childDialog) {
                             if (currentItem && currentItem.hasChildren) {
                                 childDialog.model = model.modelForRow(currentIndex);
