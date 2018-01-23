@@ -1,6 +1,5 @@
 /*
  * Copyright © 2005-2007 Fredrik Höglund <fredrik@kde.org>
- * Copyright © 2016 Jason A. Donenfeld <jason@zx2c4.com>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public
@@ -21,7 +20,6 @@
 #include <KLocalizedString>
 #include <KConfig>
 #include <KConfigGroup>
-#include <KShell>
 #include <QStringList>
 #include <QDir>
 #include <QX11Info>
@@ -29,7 +27,16 @@
 #include "thememodel.h"
 #include "xcursortheme.h"
 
+#include <X11/Xlib.h>
 #include <X11/Xcursor/Xcursor.h>
+
+// Check for older version
+#if !defined(XCURSOR_LIB_MAJOR) && defined(XCURSOR_MAJOR)
+#  define XCURSOR_LIB_MAJOR XCURSOR_MAJOR
+#  define XCURSOR_LIB_MINOR XCURSOR_MINOR
+#endif
+
+
 
 CursorThemeModel::CursorThemeModel(QObject *parent)
     : QAbstractTableModel(parent)
@@ -41,6 +48,15 @@ CursorThemeModel::~CursorThemeModel()
 {
    qDeleteAll(list);
    list.clear();
+}
+
+QHash<int, QByteArray> CursorThemeModel::roleNames() const
+{
+    QHash<int, QByteArray> roleNames = QAbstractTableModel::roleNames();
+    roleNames[CursorTheme::DisplayDetailRole] = "description";
+    roleNames[CursorTheme::IsWritableRole] = "isWritable";
+
+    return roleNames;
 }
 
 void CursorThemeModel::refreshList()
@@ -108,6 +124,10 @@ QVariant CursorThemeModel::data(const QModelIndex &index, int role) const
     if (role == Qt::DecorationRole && index.column() == NameColumn)
         return theme->icon();
 
+    if (role == CursorTheme::IsWritableRole) {
+        return theme->isWritable();
+    }
+
     return QVariant();
 }
 
@@ -160,10 +180,35 @@ const QStringList CursorThemeModel::searchPaths()
     if (!baseDirs.isEmpty())
         return baseDirs;
 
-    baseDirs = QString(XcursorLibraryPath()).split(':', QString::SkipEmptyParts);
-    std::transform(baseDirs.begin(), baseDirs.end(), baseDirs.begin(), KShell::tildeExpand);
-    baseDirs.removeDuplicates();
+#if XCURSOR_LIB_MAJOR == 1 && XCURSOR_LIB_MINOR < 1
+    // These are the default paths Xcursor will scan for cursor themes
+    QString path("~/.icons:/usr/share/icons:/usr/share/pixmaps:/usr/X11R6/lib/X11/icons");
 
+    // If XCURSOR_PATH is set, use that instead of the default path
+    char *xcursorPath = std::getenv("XCURSOR_PATH");
+    if (xcursorPath)
+        path = xcursorPath;
+#else
+    // Get the search path from Xcursor
+    QString path = XcursorLibraryPath();
+#endif
+
+    // Separate the paths
+    baseDirs = path.split(':', QString::SkipEmptyParts);
+
+    // Remove duplicates
+    QMutableStringListIterator i(baseDirs);
+    while (i.hasNext())
+    {
+        const QString path = i.next();
+        QMutableStringListIterator j(i);
+        while (j.hasNext())
+            if (j.next() == path)
+                j.remove();
+    }
+
+    // Expand all occurrences of ~/ to the home dir
+    baseDirs.replaceInStrings(QRegExp("^~\\/"), QDir::home().path() + '/');
     return baseDirs;
 }
 

@@ -1,4 +1,4 @@
 #! /usr/bin/env bash
 $EXTRACTRC `find -name \*.ui` >> rc.cpp || exit 11
-$XGETTEXT *.cpp */*.cpp -o $podir/kcmmousetheme.pot
+$XGETTEXT `find . -name \*.cpp -o -name \*.qml` -o $podir/kcm_cursortheme.pot
 rm -f rc.cpp

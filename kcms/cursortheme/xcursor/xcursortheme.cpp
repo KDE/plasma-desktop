@@ -21,8 +21,6 @@
 #include <KConfig>
 #include <KConfigGroup>
 
-#include <QGuiApplication>
-#include <QScreen>
 #include <QCursor>
 #include <QImage>
 #include <QDir>
@@ -31,7 +29,6 @@
 #include <X11/Xlib.h>
 #include <X11/Xcursor/Xcursor.h>
 
-#include <KWindowSystem/fixx11h.h>
 #include "xcursortheme.h"
 
 
@@ -152,15 +149,8 @@ XcursorImages *XCursorTheme::xcLoadImages(const QString &image, int size) const
 }
 
 
-int XCursorTheme::autodetectCursorSize() const
+int XCursorTheme::defaultCursorSize() const
 {
-    if (!QX11Info::isPlatformX11()) {
-        if (QScreen *s = QGuiApplication::primaryScreen()) {
-            return s->logicalDotsPerInchY() * 16 / 72;
-        }
-        // some default value
-        return 16;
-    }
     /* This code is basically borrowed from display.c of the XCursor library
        We can't use "int XcursorGetDefaultSize(Display *dpy)" because if
        previously the cursor size was set to a custom value, it would return
@@ -192,7 +182,7 @@ int XCursorTheme::autodetectCursorSize() const
 qulonglong XCursorTheme::loadCursor(const QString &name, int size) const
 {
     if (size <= 0)
-        size = autodetectCursorSize();
+        size = defaultCursorSize();
 
     // Load the cursor images
     XcursorImages *images = xcLoadImages(name, size);
@@ -215,7 +205,7 @@ qulonglong XCursorTheme::loadCursor(const QString &name, int size) const
 QImage XCursorTheme::loadImage(const QString &name, int size) const
 {
     if (size <= 0)
-        size = autodetectCursorSize();
+        size = defaultCursorSize();
 
     // Load the image
     XcursorImage *xcimage = xcLoadImage(name, size);

@@ -50,7 +50,8 @@ class CursorTheme
         enum ItemDataRole {
             // Note: use   printf "0x%08X\n" $(($RANDOM*$RANDOM))
             // to define additional roles.
-            DisplayDetailRole = 0x24A3DAF8
+            DisplayDetailRole = 0x24A3DAF8,
+            IsWritableRole
         };
 
         CursorTheme() {}
@@ -87,6 +88,8 @@ class CursorTheme
         /// If the theme doesn't have the cursor @p name, it should return
         /// the default cursor from the active theme instead.
         virtual qulonglong loadCursor(const QString &name, int size = 0) const = 0;
+
+        virtual int defaultCursorSize() const = 0;
 
         /** Creates the icon returned by @ref icon(). Don't use this function
             directly but use @ref icon() instead, because @ref icon() caches
