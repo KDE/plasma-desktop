@@ -2,6 +2,8 @@
     Copyright 1997 Mark Donohoe
     Copyright 1999 Lars Knoll
     Copyright 2000 Rik Hemsley
+    Copyright 2015 Antonis Tsiapaliokas <antonis.tsiapaliokas@kde.org>
+    Copyright 2017 Marco Martin <mart@kde.org>
 
     Ported to kcontrol2 by Geert Jansen.
 
@@ -24,128 +26,168 @@
 #ifndef FONTS_H
 #define FONTS_H
 
-#include <QDialog>
-#include <QLabel>
-#include <QList>
 #include <config-X11.h>
+#include <QAbstractItemModel>
+#include <QStandardItemModel>
 
-#include <KCModule>
-#include <KFontRequester>
+#include <KQuickAddons/ConfigModule>
 
 #include "kxftconfig.h"
 
-class QCheckBox;
-class QComboBox;
-class QDoubleSpinBox;
-class QSpinBox;
-class FontAASettings;
-
-class FontUseItem : public KFontRequester
+class FontAASettings : public QObject
 {
     Q_OBJECT
 
-public:
-    FontUseItem(QWidget *parent, const QString &name, const QString &grp,
-                const QString &key, const QString &rc, const QFont &default_fnt,
-                bool fixed = false);
+    Q_PROPERTY(QAbstractItemModel *subPixelOptionsModel READ subPixelOptionsModel CONSTANT)
+    Q_PROPERTY(int subPixelCurrentIndex READ subPixelCurrentIndex WRITE setSubPixelCurrentIndex NOTIFY subPixelCurrentIndexChanged);
+    Q_PROPERTY(QAbstractItemModel *hintingOptionsModel READ hintingOptionsModel CONSTANT)
+    Q_PROPERTY(int hintingCurrentIndex READ hintingCurrentIndex WRITE setHintingCurrentIndex NOTIFY hintingCurrentIndexChanged);
 
-    void readFont();
-    void writeFont();
-    void setDefault();
-    void applyFontDiff(const QFont &fnt, int fontDiffFlags);
-
-    const QString &rcFile()
-    {
-        return _rcfile;
-    }
-    const QString &rcGroup()
-    {
-        return _rcgroup;
-    }
-    const QString &rcKey()
-    {
-        return _rckey;
-    }
-
-private:
-    QString _rcfile;
-    QString _rcgroup;
-    QString _rckey;
-    QFont _default;
-};
-
-class FontAASettings : public QDialog
-{
-    Q_OBJECT
+    Q_PROPERTY(bool exclude READ exclude WRITE setExclude NOTIFY excludeChanged)
+    Q_PROPERTY(int excludeTo READ excludeTo WRITE setExcludeTo NOTIFY excludeToChanged)
+    Q_PROPERTY(int excludeFrom READ excludeFrom WRITE setExcludeFrom NOTIFY excludeFromChanged)
+    Q_PROPERTY(int antiAliasing READ antiAliasing WRITE setAntiAliasing NOTIFY aliasingChanged)
+    Q_PROPERTY(int dpi READ dpi WRITE setDpi NOTIFY dpiChanged)
 
 public:
-
+    enum AASetting { AAEnabled, AASystem, AADisabled };
 #if defined(HAVE_FONTCONFIG) && defined (HAVE_X11)
-    FontAASettings(QWidget *parent);
+    FontAASettings(QObject *parent);
 
     bool save(KXftConfig::AntiAliasing::State aaState);
-    bool load();
+    void load();
     void defaults();
-    int getIndex(KXftConfig::SubPixel::Type spType);
-    KXftConfig::SubPixel::Type getSubPixelType();
-    int getIndex(KXftConfig::Hint::Style hStyle);
-    KXftConfig::Hint::Style getHintStyle();
     void setAntiAliasingState(KXftConfig::AntiAliasing::State aaState);
-    void enableWidgets();
-    int exec() Q_DECL_OVERRIDE;
+    QAbstractItemModel* subPixelOptionsModel() { return m_subPixelOptionsModel; }
+    QAbstractItemModel* hintingOptionsModel() { return m_hintingOptionsModel; }
+
+    void setExclude(bool exclude);
+    bool exclude() const;
+
+    void setExcludeTo(const int &excludeTo);
+    int excludeTo() const;
+
+    void setExcludeFrom(const int &excludeTo);
+    int excludeFrom() const;
+
+    void setAntiAliasing(const int& antiAliasing);
+    int antiAliasing() const;
+
+    void setDpi(const int &dpi);
+    int dpi() const;
+
+    int subPixelCurrentIndex();
+    void setSubPixelCurrentIndex(int idx);
+    int hintingCurrentIndex();
+    void setHintingCurrentIndex(int idx);
+
+    bool needsSave() const;
+
 #endif
 
-protected Q_SLOTS:
-
-    void changed();
+Q_SIGNALS:
+    void excludeChanged();
+    void excludeToChanged();
+    void excludeFromChanged();
+    void antiAliasingChanged();
+    void aliasingChanged();
+    void dpiChanged();
+    void subPixelCurrentIndexChanged();
+    void hintingCurrentIndexChanged();
 
 #if defined(HAVE_FONTCONFIG) && defined (HAVE_X11)
 private:
-
-    QCheckBox *excludeRange;
-    QDoubleSpinBox *excludeFrom;
-    QDoubleSpinBox *excludeTo;
-    QComboBox *subPixelType;
-    QComboBox *hintingStyle;
-    QLabel    *subPixelLabel;
-    QLabel    *excludeToLabel;
-    bool      changesMade;
+    int m_excludeTo;
+    int m_excludeToOriginal;
+    int m_excludeFrom;
+    int m_excludeFromOriginal;
+    int m_antiAliasing;
+    int m_antiAliasingOriginal;
+    int m_dpi;
+    int m_dpiOriginal;
+    int m_subPixelCurrentIndex = 0;
+    int m_hintingCurrentIndex = 0;
+    QStandardItemModel *m_subPixelOptionsModel;
+    QStandardItemModel *m_hintingOptionsModel;
+    bool m_exclude = false;
 #endif
 };
 
 /**
  * The Desktop/fonts tab in kcontrol.
  */
-class KFonts : public KCModule
+class KFonts : public KQuickAddons::ConfigModule
 {
     Q_OBJECT
+    Q_PROPERTY(QFont generalFont READ generalFont WRITE setGeneralFont NOTIFY generalFontChanged)
+    Q_PROPERTY(QFont fixedWidthFont READ fixedWidthFont WRITE setFixedWidthFont NOTIFY fixedWidthFontChanged)
+    Q_PROPERTY(QFont smallFont READ smallFont WRITE setSmallFont NOTIFY smallFontChanged)
+    Q_PROPERTY(QFont toolbarFont READ toolbarFont WRITE setToolbarFont NOTIFY toolbarFontChanged)
+    Q_PROPERTY(QFont menuFont READ menuFont WRITE setMenuFont NOTIFY menuFontChanged)
+    Q_PROPERTY(QFont windowTitleFont READ windowTitleFont WRITE setWindowTitleFont NOTIFY windowTitleFontChanged)
+    Q_PROPERTY(QObject *fontAASettings READ fontAASettings CONSTANT)
 
 public:
-    KFonts(QWidget *parent, const QVariantList &);
+    KFonts(QObject *parent, const QVariantList &);
     ~KFonts();
 
-    void load() Q_DECL_OVERRIDE;
-    void save() Q_DECL_OVERRIDE;
-    void defaults() Q_DECL_OVERRIDE;
+    void setGeneralFont(const QFont &font);
+    QFont generalFont() const;
 
-protected Q_SLOTS:
-    void fontSelected();
-    void slotApplyFontDiff();
-    void slotUseAntiAliasing();
-    void slotCfgAa();
+    void setFixedWidthFont(const QFont &font);
+    QFont fixedWidthFont() const;
+
+    void setSmallFont(const QFont &font);
+    QFont smallFont() const;
+
+    void setToolbarFont(const QFont &font);
+    QFont toolbarFont() const;
+
+    void setMenuFont(const QFont &font);
+    QFont menuFont() const;
+
+    void setWindowTitleFont(const QFont &font);
+    QFont windowTitleFont() const;
+
+    QObject* fontAASettings() { return m_fontAASettings; }
+
+public Q_SLOTS:
+    void load();
+    void save();
+    void defaults();
+    Q_INVOKABLE void adjustAllFonts();
+
+Q_SIGNALS:
+    void fontsHaveChanged();
+
+    void generalFontChanged();
+    void fixedWidthFontChanged();
+    void smallFontChanged();
+    void toolbarFontChanged();
+    void menuFontChanged();
+    void windowTitleFontChanged();
 
 private:
-#if defined(HAVE_FONTCONFIG) && defined (HAVE_X11)
-    enum AASetting { AAEnabled, AASystem, AADisabled };
-    AASetting useAA, useAA_original;
-    QComboBox *cbAA;
-    QPushButton *aaSettingsButton;
-    FontAASettings *aaSettings;
-#endif
-    int dpi_original;
-    QCheckBox *checkboxForceDpi;
-    QSpinBox *spinboxDpi;
-    QList<FontUseItem *> fontUseList;
+    void updateNeedsSave();
+    QFont applyFontDiff(const QFont &fnt, const QFont &newFont, int fontDiffFlags);
+
+    QFont m_defaultFont;
+    QFont m_generalFont;
+    QFont m_fixedWidthFont;
+    QFont m_smallFont;
+    QFont m_toolbarFont;
+    QFont m_menuFont;
+    QFont m_windowTitleFont;
+
+    QFont m_defaultFontOriginal;
+    QFont m_generalFontOriginal;
+    QFont m_fixedWidthFontOriginal;
+    QFont m_smallFontOriginal;
+    QFont m_toolbarFontOriginal;
+    QFont m_menuFontOriginal;
+    QFont m_windowTitleFontOriginal;
+
+    FontAASettings *m_fontAASettings;
 };
 
 #endif

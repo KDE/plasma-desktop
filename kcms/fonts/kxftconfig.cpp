@@ -451,7 +451,7 @@ QString KXftConfig::description(SubPixel::Type t)
     switch (t) {
     default:
     case SubPixel::NotSet:
-        return i18nc("use system subpixel setting", "System default");
+        return i18nc("use system subpixel setting", "Vendor Default");
     case SubPixel::None:
         return i18nc("no subpixel rendering", "None");
     case SubPixel::Rgb:
@@ -469,6 +469,8 @@ const char *KXftConfig::toStr(SubPixel::Type t)
 {
     switch (t) {
     default:
+    case SubPixel::NotSet:
+        return "";
     case SubPixel::None:
         return "none";
     case SubPixel::Rgb:
@@ -487,7 +489,7 @@ QString KXftConfig::description(Hint::Style s)
     switch (s) {
     default:
     case Hint::NotSet:
-        return i18nc("use system hinting settings", "System default");
+        return i18nc("use system hinting settings", "Vendor Default");
     case Hint::Medium:
         return i18nc("medium hinting", "Medium");
     case Hint::None:
