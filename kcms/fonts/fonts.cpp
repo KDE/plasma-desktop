@@ -217,9 +217,7 @@ void FontUseItem::applyFontDiff(const QFont &fnt, int fontDiffFlags)
         _font.setWeight(fnt.weight());
         _font.setStyle(fnt.style());
         _font.setUnderline(fnt.underline());
-#if QT_VERSION >= 0x040800
         _font.setStyleName(fnt.styleName());
-#endif
     }
 
     setFont(_font, isFixedOnly());
