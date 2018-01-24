@@ -152,7 +152,7 @@ XcursorImages *XCursorTheme::xcLoadImages(const QString &image, int size) const
 int XCursorTheme::defaultCursorSize() const
 {
     //TODO: manage Wayland
-    if (!QX11Info::connection()) {
+    if (!QX11Info::isPlatformX11()) {
         return 32;
     }
     /* This code is basically borrowed from display.c of the XCursor library
@@ -186,7 +186,7 @@ int XCursorTheme::defaultCursorSize() const
 qulonglong XCursorTheme::loadCursor(const QString &name, int size) const
 {
     //TODO: manage Wayland
-    if (!QX11Info::connection()) {
+    if (!QX11Info::isPlatformX11()) {
         return None;
     }
     if (size <= 0)
