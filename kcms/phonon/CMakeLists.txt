@@ -46,6 +46,8 @@ if(GLIB2_FOUND AND PULSEAUDIO_FOUND AND CANBERRA_FOUND)
   set(kcmphonon_LIBS ${kcmphonon_LIBS} ${GLIB2_LIBRARIES} ${PulseAudio_LIBRARIES} ${PulseAudio_MAINLOOP_LIBRARY} ${CANBERRA_LIBRARIES})
 endif()
 
+ecm_qt_declare_logging_category(kcmphonon_SRCS HEADER phonon_debug.h IDENTIFIER KCM_PHONON_LOG CATEGORY_NAME org.kde.kcm.phonon)
+
 add_library(kcm_phonon MODULE ${kcmphonon_SRCS})
 target_link_libraries(kcm_phonon ${kcmphonon_LIBS} KF5::ConfigWidgets)
 

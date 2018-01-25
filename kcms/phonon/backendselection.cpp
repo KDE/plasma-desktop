@@ -25,7 +25,7 @@
 #include <KRun>
 #include <KLocalizedString>
 
-#include <QDebug>
+#include "phonon_debug.h"
 #include <QDir>
 #include <QFileInfo>
 #include <QListWidget>
@@ -94,7 +94,7 @@ void BackendSelection::load()
     QList<QString> iidPreference;
     QSettings settings("kde.org", "libphonon");
     const int size = settings.beginReadArray("Backends");
-    qDebug() << settings.fileName();
+    qCDebug(KCM_PHONON_LOG) << settings.fileName();
     for (int i = 0; i < size; ++i) {
         settings.setArrayIndex(i);
         iidPreference.append(settings.value("iid").toString());
@@ -103,7 +103,7 @@ void BackendSelection::load()
 
     const QLatin1Literal suffix("/" PHONON_LIB_SONAME "_backend/");
     const QStringList paths = QCoreApplication::libraryPaths();
-    qDebug() << "libpaths" << paths;
+    qCDebug(KCM_PHONON_LOG) << "libpaths" << paths;
 
     QList<struct BackendDescriptor> backendList;
 
@@ -111,7 +111,7 @@ void BackendSelection::load()
         const QString libPath = path + suffix;
         const QDir dir(libPath);
         if (!dir.exists()) {
-            qDebug() << Q_FUNC_INFO << dir.absolutePath() << "does not exist";
+            qCDebug(KCM_PHONON_LOG) << Q_FUNC_INFO << dir.absolutePath() << "does not exist";
             continue;
         }
 
@@ -143,8 +143,8 @@ void BackendSelection::load()
 
 void BackendSelection::save()
 {
-    qDebug() << Q_FUNC_INFO;
-    qDebug() << "~~~~~~~~~~~~~~";
+    qCDebug(KCM_PHONON_LOG) << Q_FUNC_INFO;
+    qCDebug(KCM_PHONON_LOG) << "~~~~~~~~~~~~~~";
     QSettings settings("kde.org", "libphonon");
     settings.beginWriteArray("Backends", m_select->count());
     for (int i = 0; i < m_select->count(); ++i) {
@@ -156,7 +156,7 @@ void BackendSelection::save()
     settings.endArray();
     settings.sync();
 
-    qDebug() << settings.fileName();
+    qCDebug(KCM_PHONON_LOG) << settings.fileName();
 }
 
 void BackendSelection::defaults()
@@ -166,7 +166,7 @@ void BackendSelection::defaults()
 
 void BackendSelection::selectionChanged()
 {
-    qDebug() << "qooooooooo";
+    qCDebug(KCM_PHONON_LOG) << "qooooooooo";
     if (m_select->selectedItems().isEmpty()) {
         m_up->setEnabled(false);
         m_down->setEnabled(false);

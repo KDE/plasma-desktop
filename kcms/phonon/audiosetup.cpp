@@ -20,7 +20,7 @@
 #include "audiosetup.h"
 
 #include <QAbstractEventDispatcher>
-#include <QDebug>
+#include "phonon_debug.h"
 #include <QTimer>
 #include <QLabel>
 
@@ -51,7 +51,7 @@ static void card_cb(pa_context *c, const pa_card_info *i, int eol, void *userdat
         if (pa_context_errno(c) == PA_ERR_NOENTITY)
             return;
 
-        qDebug() << "Card callback failure";
+        qCDebug(KCM_PHONON_LOG) << "Card callback failure";
         return;
     }
 
@@ -71,7 +71,7 @@ static void sink_cb(pa_context *c, const pa_sink_info *i, int eol, void *userdat
     if (eol < 0) {
         if (pa_context_errno(c) == PA_ERR_NOENTITY)
             return;
-        qDebug() << "Sink callback failure";
+        qCDebug(KCM_PHONON_LOG) << "Sink callback failure";
         return;
     }
 
@@ -93,7 +93,7 @@ static void source_cb(pa_context *c, const pa_source_info *i, int eol, void *use
         if (pa_context_errno(c) == PA_ERR_NOENTITY)
             return;
 
-        qDebug() << "Source callback failure";
+        qCDebug(KCM_PHONON_LOG) << "Source callback failure";
         return;
     }
 
@@ -119,7 +119,7 @@ static void subscribe_cb(pa_context *c, pa_subscription_event_type_t t, uint32_t
             pa_operation *operation =
                     pa_context_get_card_info_by_index(c, index, card_cb, ss);
             if (!operation) {
-                qDebug() << "pa_context_get_card_info_by_index() failed";
+                qCDebug(KCM_PHONON_LOG) << "pa_context_get_card_info_by_index() failed";
                 return;
             }
             pa_operation_unref(operation);
@@ -133,7 +133,7 @@ static void subscribe_cb(pa_context *c, pa_subscription_event_type_t t, uint32_t
             pa_operation *operation =
                     pa_context_get_sink_info_by_index(c, index, sink_cb, ss);
             if (!operation) {
-                qDebug() << "pa_context_get_sink_info_by_index() failed";
+                qCDebug(KCM_PHONON_LOG) << "pa_context_get_sink_info_by_index() failed";
                 return;
             }
             pa_operation_unref(operation);
@@ -146,7 +146,7 @@ static void subscribe_cb(pa_context *c, pa_subscription_event_type_t t, uint32_t
         } else {
             pa_operation *o;
             if (!(o = pa_context_get_source_info_by_index(c, index, source_cb, ss))) {
-                qDebug() << "pa_context_get_source_info_by_index() failed";
+                qCDebug(KCM_PHONON_LOG) << "pa_context_get_source_info_by_index() failed";
                 return;
             }
             pa_operation_unref(o);
@@ -160,7 +160,7 @@ static void context_state_callback(pa_context *c, void *userdata)
     Q_ASSERT(c);
     THAT(userdata);
 
-    qDebug() << "context_state_callback" << pa_context_get_state(c);
+    qCDebug(KCM_PHONON_LOG) << "context_state_callback" << pa_context_get_state(c);
     pa_context_state_t state = pa_context_get_state(c);
     if (state == PA_CONTEXT_READY) {
         // Attempt to load things up
@@ -172,25 +172,25 @@ static void context_state_callback(pa_context *c, void *userdata)
                                        (PA_SUBSCRIPTION_MASK_CARD|
                                         PA_SUBSCRIPTION_MASK_SINK|
                                         PA_SUBSCRIPTION_MASK_SOURCE), NULL, NULL))) {
-            qDebug() << "pa_context_subscribe() failed";
+            qCDebug(KCM_PHONON_LOG) << "pa_context_subscribe() failed";
             return;
         }
         pa_operation_unref(o);
 
         if (!(o = pa_context_get_card_info_list(c, card_cb, ss))) {
-            qDebug() << "pa_context_get_card_info_list() failed";
+            qCDebug(KCM_PHONON_LOG) << "pa_context_get_card_info_list() failed";
             return;
         }
         pa_operation_unref(o);
 
         if (!(o = pa_context_get_sink_info_list(c, sink_cb, ss))) {
-            qDebug() << "pa_context_get_sink_info_list() failed";
+            qCDebug(KCM_PHONON_LOG) << "pa_context_get_sink_info_list() failed";
             return;
         }
         pa_operation_unref(o);
 
         if (!(o = pa_context_get_source_info_list(c, source_cb, ss))) {
-            qDebug() << "pa_context_get_source_info_list() failed";
+            qCDebug(KCM_PHONON_LOG) << "pa_context_get_source_info_list() failed";
             return;
         }
         pa_operation_unref(o);
@@ -202,7 +202,7 @@ static void context_state_callback(pa_context *c, void *userdata)
         if (s_context != c)
             pa_context_disconnect(c);
         else {
-            qWarning() << "PulseAudio context lost. Scheduling reconnect in eventloop.";
+            qCWarning(KCM_PHONON_LOG) << "PulseAudio context lost. Scheduling reconnect in eventloop.";
             pa_context_unref(s_context);
             s_context = 0;
             QMetaObject::invokeMethod(ss, "connectToDaemon", Qt::QueuedConnection);
@@ -223,7 +223,7 @@ static void read_callback(pa_stream *s, size_t length, void *userdata) {
     const void *data;
     int v;
     if (pa_stream_peek(s, &data, &length) < 0) {
-        qDebug() << "Failed to read data from stream";
+        qCDebug(KCM_PHONON_LOG) << "Failed to read data from stream";
         return;
     }
 
@@ -289,19 +289,19 @@ AudioSetup::AudioSetup(QWidget *parent)
     const QByteArray eventDispatcher(
                 QAbstractEventDispatcher::instance()->metaObject()->className());
     if (!eventDispatcher.contains("EventDispatcherGlib")) {
-        qDebug() << "Disabling PulseAudio integration for lack of GLib event loop.";
+        qCDebug(KCM_PHONON_LOG) << "Disabling PulseAudio integration for lack of GLib event loop.";
         return;
     }
 
     int ret = ca_context_create(&m_Canberra);
     if (ret < 0) {
-        qDebug() << "Disabling PulseAudio integration. Canberra context failed.";
+        qCDebug(KCM_PHONON_LOG) << "Disabling PulseAudio integration. Canberra context failed.";
         return;
     }
 
     s_mainloop = pa_glib_mainloop_new(NULL);
     if (!s_mainloop) {
-        qDebug() << "Disabling PulseAudio integration for lack of working GLib event loop.";
+        qCDebug(KCM_PHONON_LOG) << "Disabling PulseAudio integration for lack of working GLib event loop.";
         ca_context_destroy(m_Canberra);
         m_Canberra = 0;
         return;
@@ -382,7 +382,7 @@ void AudioSetup::updateCard(const pa_card_info *pInfo)
     s_Cards[pInfo->index] = info;
 
     cardChanged();
-    qDebug() << "Got info about card" << info.name;
+    qCDebug(KCM_PHONON_LOG) << "Got info about card" << info.name;
 }
 
 void AudioSetup::removeCard(uint32_t index)
@@ -426,7 +426,7 @@ void AudioSetup::updateSink(const pa_sink_info* i)
         }
     }
 
-    qDebug() << "Got info about sink" << info.name;
+    qCDebug(KCM_PHONON_LOG) << "Got info about sink" << info.name;
 }
 
 void AudioSetup::removeSink(uint32_t index)
@@ -474,7 +474,7 @@ void AudioSetup::updateSource(const pa_source_info* i)
         }
     }
 
-    qDebug() << "Got info about source" << info.name;
+    qCDebug(KCM_PHONON_LOG) << "Got info about source" << info.name;
 }
 
 void AudioSetup::removeSource(uint32_t index)
@@ -570,7 +570,7 @@ void AudioSetup::cardChanged()
 
     deviceChanged();
 
-    qDebug() << "Doing update" << cardBox->currentIndex();
+    qCDebug(KCM_PHONON_LOG) << "Doing update" << cardBox->currentIndex();
 
     emit changed();
 }
@@ -581,7 +581,7 @@ void AudioSetup::profileChanged()
     Q_ASSERT(PA_INVALID_INDEX != card_index);
 
     QString profile = profileBox->itemData(profileBox->currentIndex()).toString();
-    qDebug() << "Changing profile to" << profile;
+    qCDebug(KCM_PHONON_LOG) << "Changing profile to" << profile;
 
     Q_ASSERT(s_Cards[card_index].profiles.size());
 
@@ -592,7 +592,7 @@ void AudioSetup::profileChanged()
                                                  NULL,
                                                  NULL);
     if (!operation)
-        qDebug() << "pa_context_set_card_profile_by_name() failed";
+        qCDebug(KCM_PHONON_LOG) << "pa_context_set_card_profile_by_name() failed";
     else
         pa_operation_unref(operation);
 
@@ -614,7 +614,7 @@ void AudioSetup::updateIndependantDevices()
 
     bool haveID = (PA_INVALID_INDEX == cardBox->itemData(0).toUInt());
 
-    qDebug() << QString("Want ID: %1; Have ID: %2").arg(showID?"Yes":"No").arg(haveID?"Yes":"No");
+    qCDebug(KCM_PHONON_LOG) << QString("Want ID: %1; Have ID: %2").arg(showID?"Yes":"No").arg(haveID?"Yes":"No");
 
     cardBox->blockSignals(true);
     if (haveID && !showID)
@@ -651,7 +651,7 @@ bool AudioSetup::connectToDaemon()
 
     s_context = pa_context_new(api, i18n("KDE Audio Hardware Setup").toUtf8().constData());
     if (pa_context_connect(s_context, NULL, PA_CONTEXT_NOFAIL, 0) < 0) {
-        qDebug() << "Disabling PulseAudio integration. Context connection failed: " << pa_strerror(pa_context_errno(s_context));
+        qCDebug(KCM_PHONON_LOG) << "Disabling PulseAudio integration. Context connection failed: " << pa_strerror(pa_context_errno(s_context));
         pa_context_unref(s_context);
         s_context = 0;
         pa_glib_mainloop_free(s_mainloop);
@@ -691,7 +691,7 @@ void AudioSetup::deviceChanged()
     qint64 index = deviceBox->itemData(idx).toInt();
     deviceInfo &device_info = getDeviceInfo(index);
 
-    qDebug() << QString("Updating ports for device '%1' (%2 ports available)")
+    qCDebug(KCM_PHONON_LOG) << QString("Updating ports for device '%1' (%2 ports available)")
                 .arg(device_info.name)
                 .arg(device_info.ports.size());
 
@@ -727,7 +727,7 @@ void AudioSetup::portChanged()
     qint64 index = deviceBox->itemData(deviceBox->currentIndex()).toInt();
 
     QString port = portBox->itemData(portBox->currentIndex()).toString();
-    qDebug() << "Changing port to" << port;
+    qCDebug(KCM_PHONON_LOG) << "Changing port to" << port;
 
 #ifndef QT_NO_DEBUG
     deviceInfo &device_info = getDeviceInfo(index);
@@ -737,12 +737,12 @@ void AudioSetup::portChanged()
     pa_operation *o;
     if (index >= 0) {
         if (!(o = pa_context_set_sink_port_by_index(s_context, (uint32_t)index, port.toLatin1().constData(), NULL, NULL)))
-            qDebug() << "pa_context_set_sink_port_by_index() failed";
+            qCDebug(KCM_PHONON_LOG) << "pa_context_set_sink_port_by_index() failed";
         else
             pa_operation_unref(o);
     } else {
         if (!(o = pa_context_set_source_port_by_index(s_context, (uint32_t)((-1*index) - 1), port.toLatin1().constData(), NULL, NULL)))
-            qDebug() << "pa_context_set_source_port_by_index() failed";
+            qCDebug(KCM_PHONON_LOG) << "pa_context_set_source_port_by_index() failed";
         else
             pa_operation_unref(o);
     }
@@ -835,7 +835,7 @@ void AudioSetup::_createMonitorStreamForSource(uint32_t source_idx)
 
     m_VUStream = pa_stream_new(s_context, "Peak detect", &ss, NULL);
     if (!m_VUStream) {
-        qDebug() << "Failed to create monitoring stream";
+        qCDebug(KCM_PHONON_LOG) << "Failed to create monitoring stream";
         return;
     }
 
@@ -843,7 +843,7 @@ void AudioSetup::_createMonitorStreamForSource(uint32_t source_idx)
     pa_stream_set_suspended_callback(m_VUStream, suspended_callback, this);
 
     if (pa_stream_connect_record(m_VUStream, t, &attr, (pa_stream_flags_t) (PA_STREAM_DONT_MOVE|PA_STREAM_PEAK_DETECT|PA_STREAM_ADJUST_LATENCY)) < 0) {
-        qDebug() << "Failed to connect monitoring stream";
+        qCDebug(KCM_PHONON_LOG) << "Failed to connect monitoring stream";
         pa_stream_unref(m_VUStream);
         m_VUStream = NULL;
     }
