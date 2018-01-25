@@ -866,17 +866,17 @@ QDebug operator<<(QDebug dbg, const pa_context_state_t &state)
 {
     QString name;
     switch (state) {
-    case PA_CONTEXT_UNCONNECTED:  name = QLatin1Literal("Unconnected");
-    case PA_CONTEXT_CONNECTING:   name = QLatin1Literal("Connecting");
-    case PA_CONTEXT_AUTHORIZING:  name = QLatin1Literal("Authorizing");
-    case PA_CONTEXT_SETTING_NAME: name = QLatin1Literal("Setting Name");
-    case PA_CONTEXT_READY:        name = QLatin1Literal("Ready");
-    case PA_CONTEXT_FAILED:       name = QLatin1Literal("Failed");
-    case PA_CONTEXT_TERMINATED:   name = QLatin1Literal("Terminated");
+    case PA_CONTEXT_UNCONNECTED:  name = QLatin1Literal("Unconnected"); break;
+    case PA_CONTEXT_CONNECTING:   name = QLatin1Literal("Connecting"); break;
+    case PA_CONTEXT_AUTHORIZING:  name = QLatin1Literal("Authorizing"); break;
+    case PA_CONTEXT_SETTING_NAME: name = QLatin1Literal("Setting Name"); break;
+    case PA_CONTEXT_READY:        name = QLatin1Literal("Ready"); break;
+    case PA_CONTEXT_FAILED:       name = QLatin1Literal("Failed"); break;
+    case PA_CONTEXT_TERMINATED:   name = QLatin1Literal("Terminated"); break;
     }
 
     if (name.isEmpty())
-        name = QString("Unknown state(%0)").arg(state);
+        name = QString("Unknown state(%1)").arg(state);
 
     dbg.nospace() << name;
     return dbg;
