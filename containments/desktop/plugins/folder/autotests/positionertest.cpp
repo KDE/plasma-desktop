@@ -270,7 +270,7 @@ void PositionerTest::tst_proxyMapping()
     verifyMapping(secondPositioner.proxyToSourceMapping(), expectedProxy2SourceScreen1);
     verifyMapping(secondPositioner.sourceToProxyMapping(), expectedSource2ProxyScreen1);
 
-    const auto movedItem = m_folderModel->index(1, 0).data(FolderModel::UrlRole).toString();
+    const auto movedItem = m_folderModel->index(1, 0).data(FolderModel::UrlRole).toUrl();
 
     // move the item 1 from source (now in position 2) to the second screen
     screenMapper->addMapping(movedItem, 1);

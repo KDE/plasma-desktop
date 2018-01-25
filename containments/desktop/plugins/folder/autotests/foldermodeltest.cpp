@@ -31,6 +31,11 @@ QTEST_MAIN(FolderModelTest)
 
 static const QLatin1String desktop(QLatin1String("Desktop"));
 
+static QUrl stringToUrl(const QString &path)
+{
+    return QUrl::fromUserInput(path, {}, QUrl::AssumeLocalFile);
+}
+
 void FolderModelTest::createTestFolder(const QString &path)
 {
     QDir dir(m_folderDir->path());
@@ -268,28 +273,29 @@ void FolderModelTest::tst_lockedChanged()
 void FolderModelTest::tst_multiScreen()
 {
     delete m_folderModel;
-    // Custom instance for this test to set screen mapper before marking component
+    // Custom instance for this test to set used by containment before marking component
     // as complete.
     m_folderModel = new FolderModel(this);
     m_folderModel->classBegin();
     m_folderModel->setUrl(m_folderDir->path()  + QDir::separator() + desktop );
-    auto *screenMapper = ScreenMapper::instance();
     m_folderModel->setUsedByContainment(true);
     m_folderModel->setScreen(0);
     m_folderModel->componentComplete();
 
+    auto *screenMapper = ScreenMapper::instance();
+
     QSignalSpy s(m_folderModel, &FolderModel::listingCompleted);
-    s.wait(1000);
+    QVERIFY(s.wait(1000));
     const auto count = m_folderModel->rowCount();
     for (int i = 0; i < count; i++) {
         const auto index = m_folderModel->index(i, 0);
-        const auto name = index.data(FolderModel::UrlRole).toString();
+        const auto name = index.data(FolderModel::UrlRole).toUrl();
         // all items are on the first screen by default
         QCOMPARE(screenMapper->screenForItem(name), 0);
     }
 
     // move one file to a new screen
-    const auto movedItem = m_folderModel->index(0, 0).data(FolderModel::UrlRole).toString();
+    const auto movedItem = m_folderModel->index(0, 0).data(FolderModel::UrlRole).toUrl();
     FolderModel secondFolderModel;
     secondFolderModel.classBegin();
     secondFolderModel.setUrl(m_folderDir->path()  + QDir::separator() + desktop );
@@ -297,7 +303,7 @@ void FolderModelTest::tst_multiScreen()
     secondFolderModel.setScreen(1);
     secondFolderModel.componentComplete();
     QSignalSpy s2(&secondFolderModel, &FolderModel::listingCompleted);
-    s2.wait(1000);
+    QVERIFY(s2.wait(1000));
     const auto count2 = secondFolderModel.rowCount();
     QCOMPARE(count2, 0);
 
@@ -309,23 +315,23 @@ void FolderModelTest::tst_multiScreen()
     // we have one less item
     QCOMPARE(m_folderModel->rowCount(), count - 1);
     QCOMPARE(secondFolderModel.rowCount(), 1);
-    QCOMPARE(secondFolderModel.index(0,0).data(FolderModel::UrlRole).toString(), movedItem);
+    QCOMPARE(secondFolderModel.index(0,0).data(FolderModel::UrlRole).toUrl(), movedItem);
     QCOMPARE(screenMapper->screenForItem(movedItem), 1);
 
     // remove extra screen, we have all items back
-    screenMapper->removeScreen(1, m_folderModel->url());
+    screenMapper->removeScreen(1, stringToUrl(m_folderModel->url()));
     s.wait(500);
     QCOMPARE(m_folderModel->rowCount(), count);
     QCOMPARE(secondFolderModel.rowCount(), 0);
     QCOMPARE(screenMapper->screenForItem(movedItem), 0);
 
     // add back extra screen, the item is moved there
-    screenMapper->addScreen(1, m_folderModel->url());
+    screenMapper->addScreen(1, stringToUrl(m_folderModel->url()));
     s.wait(500);
     s2.wait(500);
     QCOMPARE(m_folderModel->rowCount(), count - 1);
     QCOMPARE(secondFolderModel.rowCount(), 1);
-    QCOMPARE(secondFolderModel.index(0,0).data(FolderModel::UrlRole).toString(), movedItem);
+    QCOMPARE(secondFolderModel.index(0,0).data(FolderModel::UrlRole).toUrl(), movedItem);
     QCOMPARE(screenMapper->screenForItem(movedItem), 1);
 
     // create a new item, it appears on the first screen
@@ -336,7 +342,7 @@ void FolderModelTest::tst_multiScreen()
     s.wait(1000);
     QCOMPARE(m_folderModel->rowCount(), count);
     QCOMPARE(secondFolderModel.rowCount(), 1);
-    QCOMPARE(screenMapper->screenForItem("file://" + dir.path()), 0);
+    QCOMPARE(screenMapper->screenForItem(stringToUrl("file://" + dir.path())), 0);
 }
 
 void FolderModelTest::tst_multiScreenDifferenPath()

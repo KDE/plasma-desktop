@@ -208,7 +208,7 @@ FolderModel::~FolderModel()
         // disconnect so we don't handle signals from the screen mapper when
         // removeScreen is called
         m_screenMapper->disconnect(this);
-        m_screenMapper->removeScreen(m_screen, url());
+        m_screenMapper->removeScreen(m_screen, resolvedUrl());
     }
 }
 
@@ -267,7 +267,7 @@ void FolderModel::invalidateFilterIfComplete()
 void FolderModel::newFileMenuItemCreated(const QUrl &url)
 {
     if (m_usedByContainment) {
-        m_screenMapper->addMapping(url.toString(), m_screen, ScreenMapper::DelayedSignal);
+        m_screenMapper->addMapping(url, m_screen, ScreenMapper::DelayedSignal);
         m_dropTargetPositions.insert(url.fileName(), m_menuPosition);
         m_menuPosition = {};
         m_dropTargetPositionsCleanup->start();
@@ -281,19 +281,19 @@ QString FolderModel::url() const
 
 void FolderModel::setUrl(const QString& url)
 {
-    const QUrl &resolvedUrl = resolve(url);
+    const QUrl &resolvedNewUrl = resolve(url);
 
     if (url == m_url) {
-        m_dirModel->dirLister()->updateDirectory(resolvedUrl);
+        m_dirModel->dirLister()->updateDirectory(resolvedNewUrl);
         return;
     }
 
-    const auto oldUrl = m_url;
+    const auto oldUrl = resolvedUrl();
 
     beginResetModel();
     m_url = url;
     m_isDirCache.clear();
-    m_dirModel->dirLister()->openUrl(resolvedUrl);
+    m_dirModel->dirLister()->openUrl(resolvedNewUrl);
     clearDragImages();
     m_dragIndexes.clear();
     endResetModel();
@@ -309,11 +309,11 @@ void FolderModel::setUrl(const QString& url)
         m_dirWatch = nullptr;
     }
 
-    if (resolvedUrl.isValid()) {
+    if (resolvedNewUrl.isValid()) {
         m_dirWatch = new KDirWatch(this);
         connect(m_dirWatch, &KDirWatch::created, this, &FolderModel::iconNameChanged);
         connect(m_dirWatch, &KDirWatch::dirty, this, &FolderModel::iconNameChanged);
-        m_dirWatch->addFile(resolvedUrl.toLocalFile() + QLatin1String("/.directory"));
+        m_dirWatch->addFile(resolvedNewUrl.toLocalFile() + QLatin1String("/.directory"));
     }
 
     if (m_dragInProgress) {
@@ -324,7 +324,7 @@ void FolderModel::setUrl(const QString& url)
 
     if (m_usedByContainment) {
         m_screenMapper->removeScreen(m_screen, oldUrl);
-        m_screenMapper->addScreen(m_screen, url);
+        m_screenMapper->addScreen(m_screen, resolvedUrl());
     }
 }
 
@@ -630,7 +630,7 @@ void FolderModel::setScreen(int screen)
 
     m_screen = screen;
     if (m_usedByContainment) {
-        m_screenMapper->addScreen(screen, url());
+        m_screenMapper->addScreen(screen, resolvedUrl());
     }
     emit screenChanged();
 }
@@ -1059,16 +1059,17 @@ void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row)
      * use a fancy scheme like desktop:/ instead. Ensure we always use the latter to properly map URLs,
      * i.e. go from file:///home/user/Desktop/file to desktop:/file
      */
-    auto mappableUrl = [this, dropTargetFolderUrl](const QUrl &url) -> QString {
-        QString mappedUrl = url.toString();
+    auto mappableUrl = [this, dropTargetFolderUrl](const QUrl &url) -> QUrl {
         if (dropTargetFolderUrl != m_dirModel->dirLister()->url()) {
+            QString mappedUrl = url.toString();
             const auto local = dropTargetFolderUrl.toString();
             const auto internal = m_dirModel->dirLister()->url().toString();
             if (mappedUrl.startsWith(local)) {
                 mappedUrl.replace(0, local.size(), internal);
             }
+            return ScreenMapper::stringToUrl(mappedUrl);
         }
-        return mappedUrl;
+        return url;
     };
 
     const int x = dropEvent->property("x").toInt();
@@ -1166,10 +1167,10 @@ void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row)
             if (m_usedByContainment) {
                 // assign a screen for the item before the copy is actually done, so
                 // filterAcceptsRow doesn't assign the default screen to it
-                QUrl url = QUrl::fromUserInput(m_url, {}, QUrl::AssumeLocalFile);
+                QUrl url = resolvedUrl();
                 // if the folderview's folder is a standard path, just use the targetUrl for mapping
                 if (targetUrl.toString().startsWith(url.toString())) {
-                    m_screenMapper->addMapping(targetUrl.toString(), m_screen, ScreenMapper::DelayedSignal);
+                    m_screenMapper->addMapping(targetUrl, m_screen, ScreenMapper::DelayedSignal);
                 } else if (targetUrl.toString().startsWith(dropTargetUrl.toString())) {
                     // if the folderview's folder is a special path, like desktop:// , we need to convert
                     // the targetUrl file:// path to a desktop:/ path for mapping
@@ -1177,7 +1178,7 @@ void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row)
                     auto filePath = targetUrl.path();
                     if (filePath.startsWith(destPath)) {
                         url.setPath(filePath.remove(0, destPath.length()));
-                        m_screenMapper->addMapping(url.toString(), m_screen, ScreenMapper::DelayedSignal);
+                        m_screenMapper->addMapping(url, m_screen, ScreenMapper::DelayedSignal);
                     }
                 }
             }
@@ -1372,7 +1373,7 @@ void FolderModel::statResult(KJob *job)
 void FolderModel::evictFromIsDirCache(const KFileItemList& items)
 {
     foreach (const KFileItem &item, items) {
-        m_screenMapper->removeFromMap(item.url().toString());
+        m_screenMapper->removeFromMap(item.url());
         m_isDirCache.remove(item.url());
     }
 }
@@ -1498,16 +1499,16 @@ bool FolderModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParen
     const KFileItem item = dirModel->itemForIndex(dirModel->index(sourceRow, KDirModel::Name, sourceParent));
 
     if (m_usedByContainment) {
-        const QString name = item.url().toString();
-        const int screen = m_screenMapper->screenForItem(name);
+        const QUrl url = item.url();
+        const int screen = m_screenMapper->screenForItem(url);
         // don't do anything if the folderview is not associated with a screen
         if (m_screen != -1) {
             if (screen == -1) {
                 // The item is not associated with a screen, probably because this is the first
                 // time we see it or the folderview was previously used as a regular applet.
                 // Associated with this folderview if the view is on the first available screen
-                if (m_screen == m_screenMapper->firstAvailableScreen(url())) {
-                    m_screenMapper->addMapping(name, m_screen, ScreenMapper::DelayedSignal);
+                if (m_screen == m_screenMapper->firstAvailableScreen(resolvedUrl())) {
+                    m_screenMapper->addMapping(url, m_screen, ScreenMapper::DelayedSignal);
                 } else {
                     return false;
                 }
@@ -1963,3 +1964,4 @@ void FolderModel::undoTextChanged(const QString &text)
         action->setText(text);
     }
 }
+

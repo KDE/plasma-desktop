@@ -42,7 +42,7 @@ private Q_SLOTS:
     void tst_addRemoveScreenDifferentPaths();
 
 private:
-    void addScreens(const QString &path);
+    void addScreens(const QUrl &path);
 
     ScreenMapper *m_screenMapper;
 };
