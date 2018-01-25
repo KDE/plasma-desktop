@@ -50,19 +50,21 @@ public:
     QStringList screenMapping() const;
     void setScreenMapping(const QStringList &mapping);
 
-    int screenForItem(const QString &name) const;
-    void addMapping(const QString &name, int screen, MappingSignalBehavior behavior = ImmediateSignal);
-    void removeFromMap(const QString &name);
+    int screenForItem(const QUrl &url) const;
+    void addMapping(const QUrl &url, int screen, MappingSignalBehavior behavior = ImmediateSignal);
+    void removeFromMap(const QUrl &url);
     void setCorona(Plasma::Corona *corona);
 
-    void addScreen(int screenId, const QString &path);
-    void removeScreen(int screenId, const QString &path);
-    int firstAvailableScreen(const QString &path) const;
-    void removeItemFromDisabledScreen(const QString &name);
+    void addScreen(int screenId, const QUrl &screenUrl);
+    void removeScreen(int screenId, const QUrl &screenUrl);
+    int firstAvailableScreen(const QUrl &screenUrl) const;
+    void removeItemFromDisabledScreen(const QUrl &url);
 
 #ifdef BUILD_TESTING
     void cleanup();
 #endif
+
+    static QUrl stringToUrl(const QString &path);
 
 Q_SIGNALS:
     void screenMappingChanged() const;
@@ -71,10 +73,10 @@ Q_SIGNALS:
 private:
     ScreenMapper(QObject *parent = nullptr);
 
-    QHash<QString, int> m_screenItemMap;
-    QHash<int, QStringList> m_itemsOnDisabledScreensMap;
-    QHash<QString, int> m_firstScreenForPath; // first available screen for a path
-    QHash<QString, int> m_screensPerPath; // screen per registered path
+    QHash<QUrl, int> m_screenItemMap;
+    QHash<int, QVector<QUrl> > m_itemsOnDisabledScreensMap;
+    QHash<QUrl, int> m_firstScreenForPath; // first available screen for a path
+    QHash<QUrl, int> m_screensPerPath; // screen per registered path
     QVector<int> m_availableScreens;
     Plasma::Corona *m_corona = nullptr;
     QTimer *m_screenMappingChangedTimer = nullptr;

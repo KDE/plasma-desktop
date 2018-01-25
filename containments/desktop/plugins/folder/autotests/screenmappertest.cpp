@@ -40,7 +40,7 @@ void ScreenMapperTest::init()
 
 void ScreenMapperTest::tst_addScreens()
 {
-    const auto path = QStringLiteral("desktop:/");
+    const auto path = ScreenMapper::stringToUrl(QStringLiteral("desktop:/"));
     QSignalSpy s(m_screenMapper, &ScreenMapper::screensChanged);
     m_screenMapper->addScreen(-1, path);
     QCOMPARE(s.count(), 0);
@@ -55,7 +55,7 @@ void ScreenMapperTest::tst_addScreens()
 
 void ScreenMapperTest::tst_removeScreens()
 {
-    const auto path = QStringLiteral("desktop:/");
+    const auto path = ScreenMapper::stringToUrl(QStringLiteral("desktop:/"));
     addScreens(path);
     QSignalSpy s(m_screenMapper, &ScreenMapper::screensChanged);
     m_screenMapper->removeScreen(-1, path);
@@ -74,41 +74,41 @@ void ScreenMapperTest::tst_removeScreens()
 
 void ScreenMapperTest::tst_addMapping()
 {
-    const auto path = QStringLiteral("desktop:/");
+    const auto path = ScreenMapper::stringToUrl(QStringLiteral("desktop:/"));
     addScreens(path);
     QSignalSpy s(m_screenMapper, &ScreenMapper::screenMappingChanged);
     QString file("desktop:/foo%1.txt");
 
     for (int i = 0 ; i < 3; i++) {
-        const QString name = file.arg(i);
-        m_screenMapper->addMapping(name, i);
+        const QUrl url = ScreenMapper::stringToUrl(file.arg(i));
+        m_screenMapper->addMapping(url, i);
         QCOMPARE(s.count(), i + 1);
-        QCOMPARE(m_screenMapper->screenForItem(name), i);
+        QCOMPARE(m_screenMapper->screenForItem(url), i);
     }
 }
 
 void ScreenMapperTest::tst_addRemoveScreenWithItems()
 {
-    const auto path = QStringLiteral("desktop:/");
+    const auto path = ScreenMapper::stringToUrl(QStringLiteral("desktop:/"));
     addScreens(path);
     QString file("desktop:/foo%1.txt");
 
     for (int i = 0 ; i < 3; i++) {
-        const QString name = file.arg(i);
-        m_screenMapper->addMapping(name, i);
+        const QUrl url = ScreenMapper::stringToUrl(file.arg(i));
+        m_screenMapper->addMapping(url, i);
     }
 
     // remove one screen
     m_screenMapper->removeScreen(1, path);
-    QCOMPARE(m_screenMapper->screenForItem(file.arg(0)), 0);
-    QCOMPARE(m_screenMapper->screenForItem(file.arg(1)), -1);
-    QCOMPARE(m_screenMapper->screenForItem(file.arg(2)), 2);
+    QCOMPARE(m_screenMapper->screenForItem(ScreenMapper::stringToUrl(file.arg(0))), 0);
+    QCOMPARE(m_screenMapper->screenForItem(ScreenMapper::stringToUrl(file.arg(1))), -1);
+    QCOMPARE(m_screenMapper->screenForItem(ScreenMapper::stringToUrl(file.arg(2))), 2);
 
     // add removed screen back, items screen is restored
     m_screenMapper->addScreen(1, path);
-    QCOMPARE(m_screenMapper->screenForItem(file.arg(0)), 0);
-    QCOMPARE(m_screenMapper->screenForItem(file.arg(1)), 1);
-    QCOMPARE(m_screenMapper->screenForItem(file.arg(2)), 2);
+    QCOMPARE(m_screenMapper->screenForItem(ScreenMapper::stringToUrl(file.arg(0))), 0);
+    QCOMPARE(m_screenMapper->screenForItem(ScreenMapper::stringToUrl(file.arg(1))), 1);
+    QCOMPARE(m_screenMapper->screenForItem(ScreenMapper::stringToUrl(file.arg(2))), 2);
 
     // remove all screens, firstAvailableScreen changes
     m_screenMapper->removeScreen(0, path);
@@ -119,18 +119,18 @@ void ScreenMapperTest::tst_addRemoveScreenWithItems()
     QCOMPARE(m_screenMapper->firstAvailableScreen(path), -1);
 
 
-    QCOMPARE(m_screenMapper->screenForItem(file.arg(0)), -1);
-    QCOMPARE(m_screenMapper->screenForItem(file.arg(1)), -1);
-    QCOMPARE(m_screenMapper->screenForItem(file.arg(2)), -1);
+    QCOMPARE(m_screenMapper->screenForItem(ScreenMapper::stringToUrl(file.arg(0))), -1);
+    QCOMPARE(m_screenMapper->screenForItem(ScreenMapper::stringToUrl(file.arg(1))), -1);
+    QCOMPARE(m_screenMapper->screenForItem(ScreenMapper::stringToUrl(file.arg(2))), -1);
 
     // add all screens back, all item's screen is restored
     addScreens(path);
-    QCOMPARE(m_screenMapper->screenForItem(file.arg(0)), 0);
-    QCOMPARE(m_screenMapper->screenForItem(file.arg(1)), 1);
-    QCOMPARE(m_screenMapper->screenForItem(file.arg(2)), 2);
+    QCOMPARE(m_screenMapper->screenForItem(ScreenMapper::stringToUrl(file.arg(0))), 0);
+    QCOMPARE(m_screenMapper->screenForItem(ScreenMapper::stringToUrl(file.arg(1))), 1);
+    QCOMPARE(m_screenMapper->screenForItem(ScreenMapper::stringToUrl(file.arg(2))), 2);
 
     // remove one screen and move its item
-    const QString movedItem = file.arg(1);
+    const QUrl movedItem = ScreenMapper::stringToUrl(file.arg(1));
     m_screenMapper->removeScreen(1, path);
     QCOMPARE(m_screenMapper->screenForItem(movedItem), -1);
     m_screenMapper->addMapping(movedItem, 0);
@@ -143,15 +143,15 @@ void ScreenMapperTest::tst_addRemoveScreenWithItems()
 
 void ScreenMapperTest::tst_addRemoveScreenDifferentPaths()
 {
-    const auto path = QStringLiteral("desktop:/Foo");
-    const auto path2 = QStringLiteral("desktop:/Foo2");
+    const auto path = ScreenMapper::stringToUrl(QStringLiteral("desktop:/Foo"));
+    const auto path2 = ScreenMapper::stringToUrl(QStringLiteral("desktop:/Foo2"));
     m_screenMapper->addScreen(0, path);
     QCOMPARE(m_screenMapper->firstAvailableScreen(path), 0);
     QCOMPARE(m_screenMapper->firstAvailableScreen(path2), -1);
 
 }
 
-void ScreenMapperTest::addScreens(const QString &path)
+void ScreenMapperTest::addScreens(const QUrl &path)
 {
     m_screenMapper->addScreen(0, path);
     m_screenMapper->addScreen(1, path);
