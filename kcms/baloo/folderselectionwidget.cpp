@@ -124,6 +124,8 @@ void FolderSelectionWidget::setDirectoryList(QStringList includeDirs, QStringLis
         excludeList << mountPath;
     }
 
+    excludeList.removeDuplicates();
+
     Q_FOREACH (QString url, excludeList) {
         QListWidgetItem* item = new QListWidgetItem(m_listWidget);
         QString display = folderDisplayName(url);
