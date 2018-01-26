@@ -59,7 +59,7 @@ void TestSpeakerWidget::onToggle(bool state)
     if (s_CurrentWidget) {
         if (this != s_CurrentWidget && state)
             s_CurrentWidget->setChecked(false);
-        s_CurrentWidget = NULL;
+        s_CurrentWidget = nullptr;
     }
     if (!state)
         return;
@@ -95,7 +95,7 @@ void TestSpeakerWidget::onToggle(bool state)
         }
     }
 
-    ca_context_change_device(m_Canberra, NULL);
+    ca_context_change_device(m_Canberra, nullptr);
     ca_proplist_destroy(proplist);
 }
 
@@ -104,7 +104,7 @@ void TestSpeakerWidget::onFinish()
     if (s_CurrentWidget && s_CurrentWidget->isChecked()) {
         s_CurrentIndex = PA_INVALID_INDEX;
         s_CurrentWidget->setChecked(false);
-        s_CurrentWidget = NULL;
+        s_CurrentWidget = nullptr;
     }
 }
 
@@ -198,6 +198,6 @@ const char* TestSpeakerWidget::_positionSoundName()
     default:
         break;
     }
-    return NULL;
+    return nullptr;
 }
 

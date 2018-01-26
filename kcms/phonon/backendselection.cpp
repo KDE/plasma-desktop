@@ -74,8 +74,8 @@ BackendSelection::BackendSelection(QWidget *parent)
                                    "To apply the backend change you will have "
                                    "to log out and back in again."));
 
-    m_down->setIcon(QIcon::fromTheme("go-down"));
-    m_up->setIcon(QIcon::fromTheme("go-up"));
+    m_down->setIcon(QIcon::fromTheme(QStringLiteral("go-down")));
+    m_up->setIcon(QIcon::fromTheme(QStringLiteral("go-up")));
     m_comment->setWordWrap(true);
 
     m_emptyPage = stackedWidget->addWidget(new QWidget());
@@ -97,7 +97,7 @@ void BackendSelection::load()
     qCDebug(KCM_PHONON_LOG) << settings.fileName();
     for (int i = 0; i < size; ++i) {
         settings.setArrayIndex(i);
-        iidPreference.append(settings.value("iid").toString());
+        iidPreference.append(settings.value(QLatin1String("iid")).toString());
     }
     settings.endArray();
 
@@ -115,9 +115,9 @@ void BackendSelection::load()
             continue;
         }
 
-        QStringList plugins(dir.entryList(QDir::Files));
+        const QStringList plugins(dir.entryList(QDir::Files));
 
-        foreach (const QString &plugin, plugins) {
+        for (const QString &plugin : plugins) {
             BackendDescriptor bd = BackendDescriptor(libPath + plugin);
             if (bd.isValid) {
                 int preference = iidPreference.indexOf(bd.iid);

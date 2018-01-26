@@ -142,20 +142,20 @@ void DevicePreference::changeEvent(QEvent *e)
 DevicePreference::DevicePreference(QWidget *parent)
     : QWidget(parent),
       m_headerModel(0, 1, 0),
-      m_media(NULL), m_audioOutput(NULL), m_videoWidget(NULL)
+      m_media(nullptr), m_audioOutput(nullptr), m_videoWidget(nullptr)
 {
     setupUi(this);
 
     // Setup the buttons
-    testPlaybackButton->setIcon(QIcon::fromTheme("media-playback-start"));
+    testPlaybackButton->setIcon(QIcon::fromTheme(QStringLiteral("media-playback-start")));
     testPlaybackButton->setEnabled(false);
     testPlaybackButton->setToolTip(i18n("Test the selected device"));
-    deferButton->setIcon(QIcon::fromTheme("go-down"));
-    preferButton->setIcon(QIcon::fromTheme("go-up"));
+    deferButton->setIcon(QIcon::fromTheme(QStringLiteral("go-down")));
+    preferButton->setIcon(QIcon::fromTheme(QStringLiteral("go-up")));
 
     // Configure the device list
     deviceList->setDragDropMode(QAbstractItemView::InternalMove);
-    deviceList->setStyleSheet(QString("QTreeView {"
+    deviceList->setStyleSheet(QStringLiteral("QTreeView {"
                                       "background-color: palette(base);"
                                       "background-image: url(%1);"
                                       "background-position: bottom left;"
@@ -333,7 +333,7 @@ void DevicePreference::updateDeviceList()
     } else {
         // No valid category selected
         m_headerModel.setHeaderData(0, Qt::Horizontal, QString(), Qt::DisplayRole);
-        deviceList->setModel(0);
+        deviceList->setModel(nullptr);
     }
 
     // Update the header, the buttons enabled state
@@ -759,7 +759,7 @@ void DevicePreference::on_applyPreferencesButton_clicked()
         Category cat = cap ? NoCategory : categoryList[catIndex];
         CaptureCategory capcat = cap ? capCategoryList[catIndex] : NoCaptureCategory;
 
-        QListWidgetItem *item = NULL;
+        QListWidgetItem *item = nullptr;
         if (cap) {
             if (capcat == NoCaptureCategory) {
                 item = new QListWidgetItem(i18n("Default/Unspecified Category"), list, capcat);
@@ -781,7 +781,7 @@ void DevicePreference::on_applyPreferencesButton_clicked()
     }
 
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok
-                                                       | QDialogButtonBox::Cancel);
+                                                       | QDialogButtonBox::Cancel, dialog);
     connect(buttonBox, &QDialogButtonBox::accepted, dialog.data(), &QDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, dialog.data(), &QDialog::reject);
 
@@ -849,11 +849,11 @@ void DevicePreference::on_testPlaybackButton_toggled(bool down)
         // Shouldn't happen, but better to be on the safe side
         if (m_testingType != dtInvalidDevice) {
             delete m_media;
-            m_media = NULL;
+            m_media = nullptr;
             delete m_audioOutput;
-            m_audioOutput = NULL;
+            m_audioOutput = nullptr;
             delete m_videoWidget;
-            m_videoWidget = NULL;
+            m_videoWidget = nullptr;
         }
 
         // Setup the Phonon objects according to the testing type
