@@ -33,7 +33,16 @@ Item {
 
     ConfigModule.quickHelp: i18n("This module lets you configure the look of the whole workspace with some ready to go presets.")
 
-    SystemPalette {id: syspal}
+    // HACK QtQuick Controls 1 Button does not update its styleOption palette when it changes, since QQC1 is basically
+    // unmaintained and we're eventually moving to QQC2 and this is the first impression the user gets when playing with
+    // look and feel feature, we destroy and re-create the GHNS button when its color would change to avoid this.
+    SystemPalette {
+        id: syspal
+        onButtonChanged: {
+            ghnsButtonLoader.active = false;
+            ghnsButtonLoader.active = true;
+        }
+    }
 
     ColumnLayout {
         anchors.fill: parent
@@ -193,11 +202,15 @@ Item {
             Item {
                 Layout.fillWidth: true
             }
-            QtControls.Button {
+            Loader {
+                id: ghnsButtonLoader
                 anchors.right: parent.right
-                text: i18n("Get New Looks...")
-                iconName: "get-hot-new-stuff"
-                onClicked: kcm.getNewStuff();
+
+                sourceComponent: QtControls.Button {
+                    text: i18n("Get New Looks...")
+                    iconName: "get-hot-new-stuff"
+                    onClicked: kcm.getNewStuff();
+                }
             }
         }
     }
