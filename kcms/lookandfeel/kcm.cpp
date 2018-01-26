@@ -161,8 +161,9 @@ QList<Plasma::Package> KCMLookandFeel::availablePackages(const QString &componen
     QStringList paths;
     const QStringList dataPaths = QStandardPaths::standardLocations(QStandardPaths::GenericDataLocation);
 
+    paths.reserve(dataPaths.count());
     for (const QString &path : dataPaths) {
-        QDir dir(path + "/plasma/look-and-feel");
+        QDir dir(path + QStringLiteral("/plasma/look-and-feel"));
         paths << dir.entryList(QDir::AllDirs | QDir::NoDotAndDotDot);
     }
 
@@ -260,9 +261,8 @@ void KCMLookandFeel::save()
 
     m_configGroup.writeEntry("LookAndFeelPackage", m_selectedPlugin);
 
-    QDBusMessage message;
     if (m_resetDefaultLayout) {
-        message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.plasmashell"), QStringLiteral("/PlasmaShell"),
+        QDBusMessage message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.plasmashell"), QStringLiteral("/PlasmaShell"),
                                                    QStringLiteral("org.kde.PlasmaShell"), QStringLiteral("loadLookAndFeelDefaultLayout"));
 
         QList<QVariant> args;
@@ -311,8 +311,8 @@ void KCMLookandFeel::save()
                 for (const QString &dir : schemeDirs) {
                     const QStringList fileNames = QDir(dir).entryList(QStringList()<<QStringLiteral("*.colors"));
                     for (const QString &file : fileNames) {
-                        if (file.endsWith(colorScheme + ".colors")) {
-                            setColors(colorScheme, dir + QChar('/') + file);
+                        if (file.endsWith(colorScheme + QStringLiteral(".colors"))) {
+                            setColors(colorScheme, dir + QLatin1Char('/') + file);
                             schemeFound = true;
                             break;
                         }
@@ -448,9 +448,9 @@ void KCMLookandFeel::setColors(const QString &scheme, const QString &colorFile)
 
     KSharedConfigPtr conf = KSharedConfig::openConfig(colorFile);
     foreach (const QString &grp, conf->groupList()) {
-      KConfigGroup cg(conf, grp);
-      KConfigGroup cg2(&m_config, grp);
-      cg.copyTo(&cg2);
+        KConfigGroup cg(conf, grp);
+        KConfigGroup cg2(&m_config, grp);
+        cg.copyTo(&cg2);
     }
     KGlobalSettings::self()->emitChange(KGlobalSettings::PaletteChanged);
 }
@@ -618,7 +618,7 @@ const QStringList KCMLookandFeel::cursorSearchPaths()
 #endif
 
     // Separate the paths
-    m_cursorSearchPaths = path.split(':', QString::SkipEmptyParts);
+    m_cursorSearchPaths = path.split(QLatin1Char(':'), QString::SkipEmptyParts);
 
     // Remove duplicates
     QMutableStringListIterator i(m_cursorSearchPaths);
@@ -632,7 +632,7 @@ const QStringList KCMLookandFeel::cursorSearchPaths()
     }
 
     // Expand all occurrences of ~/ to the home dir
-    m_cursorSearchPaths.replaceInStrings(QRegExp(QStringLiteral("^~\\/")), QDir::home().path() + '/');
+    m_cursorSearchPaths.replaceInStrings(QRegExp(QStringLiteral("^~\\/")), QDir::home().path() + QLatin1Char('/'));
     return m_cursorSearchPaths;
 }
 

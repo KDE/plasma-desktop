@@ -397,7 +397,7 @@ QWidget *KKeySequenceWidgetDelegate::createEditor(QWidget *parent, const QStyleO
 //	QString shortcut = index.model()->data(index, Qt::EditRole).toString();
 //	kkeysequencewidget->setKeySequence(QKeySequence(shortcut));
 //	kkeysequencewidget->captureKeySequence();
-////	kDebug() << "set editor data";
+//	qDebug() << "set editor data";
 //}
 
 void KKeySequenceWidgetDelegate::setModelData(QWidget *editor, QAbstractItemModel *model,
@@ -515,7 +515,7 @@ void XkbOptionsTreeModel::gotoGroup(const QString& groupName, QTreeView* view) {
         view->setFocus(Qt::OtherFocusReason);
     }
 //    else {
-//        kDebug() << "can't scroll to group" << group;
+//        qDebug() << "can't scroll to group" << group;
 //    }
 }
 

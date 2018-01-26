@@ -272,7 +272,7 @@ bool X11Helper::getGroupNames(Display* display, XkbConfig* xkbConfig, FetchType 
 	QStringList names;
 	for(char* p=prop_data; p-prop_data < (long)nitems && p != NULL; p += strlen(p)+1) {
 		names.append( p );
-//		kDebug() << " " << p;
+//		qDebug() << " " << p;
 	}
 
 	if( names.count() < 4 ) { //{ rules, model, layouts, variants, options }
@@ -343,7 +343,7 @@ void XEventNotifier::stop()
 
 bool XEventNotifier::isXkbEvent(xcb_generic_event_t* event)
 {
-//	kDebug() << "event response type:" << (event->response_type & ~0x80) << xkbOpcode << ((event->response_type & ~0x80) == xkbOpcode + XkbEventCode);
+//	qDebug() << "event response type:" << (event->response_type & ~0x80) << xkbOpcode << ((event->response_type & ~0x80) == xkbOpcode + XkbEventCode);
     return (event->response_type & ~0x80) == xkbOpcode + XkbEventCode;
 }
 
@@ -356,11 +356,11 @@ bool XEventNotifier::processXkbEvents(xcb_generic_event_t* event)
 {
 	_xkb_event *xkbevt = reinterpret_cast<_xkb_event *>(event);
 	if( XEventNotifier::isGroupSwitchEvent(xkbevt) ) {
-//		kDebug() << "group switch event";
+//		qDebug() << "group switch event";
 		emit(layoutChanged());
 	}
 	else if( XEventNotifier::isLayoutSwitchEvent(xkbevt) ) {
-//		kDebug() << "layout switch event";
+//		qDebug() << "layout switch event";
 		emit(layoutMapChanged());
 	}
 	return true;
@@ -368,7 +368,7 @@ bool XEventNotifier::processXkbEvents(xcb_generic_event_t* event)
 
 bool XEventNotifier::nativeEventFilter(const QByteArray &eventType, void *message, long *)
 {
-//	kDebug() << "event type:" << eventType;
+//	qDebug() << "event type:" << eventType;
     if (eventType == "xcb_generic_event_t") {
         xcb_generic_event_t* ev = static_cast<xcb_generic_event_t *>(message);
         if( isXkbEvent(ev) ) {

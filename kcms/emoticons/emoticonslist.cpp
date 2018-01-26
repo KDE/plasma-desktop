@@ -28,7 +28,6 @@
 
 #include <KGlobal>
 #include <KMessageBox>
-#include <KDebug>
 #include <QIcon>
 #include <KAboutData>
 #include <KStandardDirs>
@@ -206,7 +205,7 @@ void EmoticonList::updateButton()
 
 void EmoticonList::selectTheme()
 {
-    kDebug() << "current_item: " << themeList->currentItem();
+    qDebug() << "current_item: " << themeList->currentItem();
 
     updateButton();
     if (!themeList->currentItem()) {
@@ -228,7 +227,7 @@ void EmoticonList::selectTheme()
         if (it.value().size()) {
             text = it.value().at(0);
             for (int i = 1; i < it.value().size(); i++) {
-                text += ' ' + it.value().at(i);
+                text += QLatin1Char(' ') + it.value().at(i);
             }
         }
 
@@ -275,7 +274,7 @@ void EmoticonList::btRemoveEmoticonClicked()
 
     QListWidgetItem *itm = emoList->currentItem();
     KEmoticonsTheme theme = emoMap.value(themeList->currentItem()->text());
-    const QString fPath = theme.emoticonsMap().key(itm->text().split(' '));
+    const QString fPath = theme.emoticonsMap().key(itm->text().split(QLatin1Char(' ')));
     if (theme.removeEmoticon(itm->text())) {
         int ret = KMessageBox::questionYesNo(this, i18n("Do you want to remove %1 too?", fPath), i18n("Delete emoticon"));
         if (ret == KMessageBox::Yes) {
@@ -334,15 +333,15 @@ void EmoticonList::editEmoticon()
         emo = dir->findResource("emoticons", themeList->currentItem()->text() + QDir::separator() + f);
 
         if (emo.isNull())
-            emo = dir->findResource("emoticons", themeList->currentItem()->text() + QDir::separator()  + f + ".mng");
+            emo = dir->findResource("emoticons", themeList->currentItem()->text() + QDir::separator()  + f + QStringLiteral(".mng"));
         if (emo.isNull())
-            emo = dir->findResource("emoticons", themeList->currentItem()->text() + QDir::separator()  + f + ".png");
+            emo = dir->findResource("emoticons", themeList->currentItem()->text() + QDir::separator()  + f + QStringLiteral(".png"));
         if (emo.isNull())
-            emo = dir->findResource("emoticons", themeList->currentItem()->text() + QDir::separator()  + f + ".gif");
+            emo = dir->findResource("emoticons", themeList->currentItem()->text() + QDir::separator()  + f + QStringLiteral(".gif"));
         if (emo.isNull())
-            emo = dir->findResource("emoticons", themeList->currentItem()->text() + QDir::separator()  + f + ".jpg");
+            emo = dir->findResource("emoticons", themeList->currentItem()->text() + QDir::separator()  + f + QStringLiteral(".jpg"));
         if (emo.isNull())
-            emo = dir->findResource("emoticons", themeList->currentItem()->text() + QDir::separator()  + f + ".jpeg");
+            emo = dir->findResource("emoticons", themeList->currentItem()->text() + QDir::separator()  + f + QStringLiteral(".jpeg"));
         if (emo.isNull()) {
             delete dlg;
             return;
@@ -433,10 +432,10 @@ void EmoticonList::getNewStuff()
         for (int i = 0; i < entries.size(); i ++) {
             if (entries.at(i).status() == KNS3::Entry::Installed
                 && !entries.at(i).installedFiles().isEmpty()) {
-                QString name = entries.at(i).installedFiles().at(0).section('/', -2, -2);
+                QString name = entries.at(i).installedFiles().at(0).section(QLatin1Char('/'), -2, -2);
                 loadTheme(name);
             } else if (entries.at(i).status() == KNS3::Entry::Deleted) {
-                QString name = entries.at(i).uninstalledFiles().at(0).section('/', -2, -2);
+                QString name = entries.at(i).uninstalledFiles().at(0).section(QLatin1Char('/'), -2, -2);
                 QList<QListWidgetItem*> ls = themeList->findItems(name, Qt::MatchExactly);
                 if (ls.size()) {
                     delete ls.at(0);
@@ -480,7 +479,7 @@ bool EmoticonList::canEditTheme()
     }
 
     KEmoticonsTheme theme = emoMap.value(themeList->currentItem()->text());
-    QFileInfo inf(theme.themePath() + '/' + theme.fileName());
+    QFileInfo inf(theme.themePath() + QLatin1Char('/') + theme.fileName());
 
     return inf.isWritable();
 }

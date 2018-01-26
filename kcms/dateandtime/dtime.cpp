@@ -41,7 +41,7 @@
 #include <QGridLayout>
 #include <QHBoxLayout>
 #include <QVBoxLayout>
-#include <kdebug.h>
+#include <QDebug>
 #include <klocale.h>
 #include <kprocess.h>
 #include <kstandarddirs.h>
@@ -164,12 +164,12 @@ void Dtime::findNTPutility(){
 
   foreach(const QString &possible_ntputility, QStringList() << "ntpdate" << "rdate" ) {
     if( !((ntpUtility = KStandardDirs::findExe(possible_ntputility, path)).isEmpty()) ) {
-      kDebug() << "ntpUtility = " << ntpUtility;
+      qDebug() << "ntpUtility = " << ntpUtility;
       return;
     }
   }
 
-  kDebug() << "ntpUtility not found!";
+  qDebug() << "ntpUtility not found!";
 }
 
 void Dtime::set_time()

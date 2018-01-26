@@ -33,12 +33,12 @@
 #include <QDir>
 #include <QX11Info>
 #include <QByteArray>
+#include <QDebug>
 
 #include <KLocalizedString>
 #include <kde_file.h>
 #include <KGlobal>
 #include <KStandardDirs>
-#include <KDebug>
 
 #include <fontconfig/fontconfig.h>
 
@@ -230,7 +230,7 @@ KXftConfig::KXftConfig()
     : m_doc("fontconfig")
     , m_file(getConfigFile())
 {
-    kDebug(1208) << "Using fontconfig file:" << m_file;
+    qDebug() << "Using fontconfig file:" << m_file;
     reset();
 }
 

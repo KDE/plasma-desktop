@@ -252,8 +252,8 @@ void DesktopPathConfig::save()
         // !!!
         qCDebug(KCM_DESKTOPPATH) << "desktopURL=" << desktopURL;
         QString urlDesktop = urDesktop->url().toLocalFile();
-        if ( !urlDesktop.endsWith('/'))
-            urlDesktop+='/';
+        if ( !urlDesktop.endsWith(QLatin1Char('/')))
+            urlDesktop+=QLatin1Char('/');
 
         if ( desktopURL.isParentOf( autostartURL ) )
         {

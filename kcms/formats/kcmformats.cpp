@@ -63,8 +63,8 @@ KCMFormats::~KCMFormats()
 bool countryLessThan(const QLocale & c1, const QLocale & c2)
 {
     // Ensure that the "Default (C)" locale always appears at the top
-    if (c1.name()=="C" && c2.name()!="C") return true;
-    if (c2.name()=="C") return false;
+    if (c1.name()==QLatin1String("C") && c2.name()!=QLatin1String("C")) return true;
+    if (c2.name()==QLatin1String("C")) return false;
 
     const QString ncn1 = !c1.nativeCountryName().isEmpty() ? c1.nativeCountryName() : QLocale::countryToString(c1.country());
     const QString ncn2 = !c2.nativeCountryName().isEmpty() ? c2.nativeCountryName() : QLocale::countryToString(c2.country());
@@ -121,14 +121,14 @@ void KCMFormats::addLocaleToCombo(QComboBox *combo, const QLocale &locale)
     // "it_IT")
     // TODO: Properly handle scripts (@foo)
     QString cvalue = locale.name();
-    if (!cvalue.contains('.') && cvalue != QStringLiteral("C")) {
+    if (!cvalue.contains(QLatin1Char('.')) && cvalue != QStringLiteral("C")) {
         // explicitly add the encoding,
         // otherwise Qt doesn't accept dead keys and garbles the output as well
         cvalue.append(QLatin1Char('.') + QTextCodec::codecForLocale()->name());
     }
 
     QString flagcode;
-    const QStringList split = locale.name().split('_');
+    const QStringList split = locale.name().split(QLatin1Char('_'));
     if (split.count() > 1) {
         flagcode = split[1].toLower();
     }

@@ -166,7 +166,7 @@ void KCMDesktopTheme::applyPlasmaTheme(QQuickItem *item, const QString &themeNam
     }
 }
 
-Q_INVOKABLE int KCMDesktopTheme::indexOf(const QString &themeName) const
+int KCMDesktopTheme::indexOf(const QString &themeName) const
 {
     for (int i = 0; i < m_model->rowCount(); ++i) {
         if (m_model->data(m_model->index(i, 0), PluginNameRole).toString() == themeName) {
@@ -197,9 +197,9 @@ void KCMDesktopTheme::load()
     m_model->clear();
 
     Q_FOREACH (const QString &theme, themes) {
-        int themeSepIndex = theme.lastIndexOf('/', -1);
+        int themeSepIndex = theme.lastIndexOf(QLatin1Char('/'), -1);
         const QString themeRoot = theme.left(themeSepIndex);
-        int themeNameSepIndex = themeRoot.lastIndexOf('/', -1);
+        int themeNameSepIndex = themeRoot.lastIndexOf(QLatin1Char('/'), -1);
         const QString packageName = themeRoot.right(themeRoot.length() - themeNameSepIndex - 1);
 
         KDesktopFile df(theme);

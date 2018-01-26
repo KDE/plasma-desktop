@@ -20,7 +20,7 @@
 
 #include "componentchooserfilemanager.h"
 #include <kbuildsycocaprogressdialog.h>
-#include <kdebug.h>
+#include <QDebug>
 #include <kprocess.h>
 #include <kmimetypetrader.h>
 #include <kopenwithdialog.h>
@@ -89,7 +89,7 @@ void CfgFileManager::save(KConfig *)
         }
     }
 
-    kDebug() << storageId;
+    qDebug() << storageId;
     if (!storageId.isEmpty()) {
         // This is taken from filetypes/mimetypedata.cpp
         KSharedConfig::Ptr profile = KSharedConfig::openConfig(QStringLiteral("mimeapps.list"), KConfig::NoGlobals, QStandardPaths::GenericConfigLocation);

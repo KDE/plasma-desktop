@@ -36,12 +36,11 @@ int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
 
-    const QString description = i18n("Look and feel tool");
     const char version[] = "1.0";
 
     // About data
     KAboutData aboutData("lookandfeeltool", i18n("Look and feel tool"), version, i18n("Command line tool to apply look and feel packages."), KAboutLicense::GPL, i18n("Copyright 2017, Marco Martin"));
-    aboutData.addAuthor(i18n("Marco Martin"), i18n("Maintainer"), "mart@kde.org");
+    aboutData.addAuthor(i18n("Marco Martin"), i18n("Maintainer"), QStringLiteral("mart@kde.org"));
     aboutData.setDesktopFileName("org.kde.lookandfeeltool");
     KAboutData::setApplicationData(aboutData);
 

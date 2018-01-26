@@ -141,8 +141,8 @@ void KCMKNotify::load()
 
     foreach (const QString &fullPath, fullpaths )
     {
-        int slash = fullPath.lastIndexOf( '/' );
-        int dot = fullPath.lastIndexOf( '.' ) - 1;
+        int slash = fullPath.lastIndexOf( QLatin1Char('/') );
+        int dot = fullPath.lastIndexOf( QLatin1Char('.') ) - 1;
         QString appname = slash < 0 ? QString() :  fullPath.mid( slash + 1, dot - slash);
         if ( !appname.isEmpty() )
         {

@@ -33,29 +33,29 @@
 #include <KPluginFactory>
 
 K_PLUGIN_FACTORY(LaunchFactory,
-        registerPlugin<LaunchConfig>();
-        )
+                 registerPlugin<LaunchConfig>();
+)
 static const int s_startupDefaultTimeout = 5;
 
 
 LaunchConfig::LaunchConfig(QWidget * parent, const QVariantList &)
-  : KCModule(parent)
+    : KCModule(parent)
 {
     QVBoxLayout* Form1Layout = new QVBoxLayout( this );
     Form1Layout->setMargin( 0 );
 
     setQuickHelp( i18n ( "<h1>Launch Feedback</h1>"
-     " You can configure the application-launch feedback here." ) );
+                         " You can configure the application-launch feedback here." ) );
 
     QGroupBox* GroupBox1 = new QGroupBox(i18n( "Bus&y Cursor" ));
     GroupBox1->setWhatsThis( i18n(
-     "<h1>Busy Cursor</h1>\n"
-     "KDE offers a busy cursor for application startup notification.\n"
-     "To enable the busy cursor, select one kind of visual feedback\n"
-     "from the combobox.\n"
-     "It may occur, that some applications are not aware of this startup\n"
-     "notification. In this case, the cursor stops blinking after the time\n"
-     "given in the section 'Startup indication timeout'"));
+                                 "<h1>Busy Cursor</h1>\n"
+                                 "KDE offers a busy cursor for application startup notification.\n"
+                                 "To enable the busy cursor, select one kind of visual feedback\n"
+                                 "from the combobox.\n"
+                                 "It may occur, that some applications are not aware of this startup\n"
+                                 "notification. In this case, the cursor stops blinking after the time\n"
+                                 "given in the section 'Startup indication timeout'"));
 
     QGridLayout* GroupBox1Layout = new QGridLayout();
     GroupBox1->setLayout( GroupBox1Layout );
@@ -86,12 +86,12 @@ LaunchConfig::LaunchConfig(QWidget * parent, const QVariantList &)
 
     QGroupBox* GroupBox2 = new QGroupBox( i18n( "Taskbar &Notification" ) );
     GroupBox2->setWhatsThis( i18n("<H1>Taskbar Notification</H1>\n"
-    "You can enable a second method of startup notification which is\n"
-    "used by the taskbar where a button with a rotating hourglass appears,\n"
-    "symbolizing that your started application is loading.\n"
-    "It may occur, that some applications are not aware of this startup\n"
-     "notification. In this case, the button disappears after the time\n"
-     "given in the section 'Startup indication timeout'"));
+                                  "You can enable a second method of startup notification which is\n"
+                                  "used by the taskbar where a button with a rotating hourglass appears,\n"
+                                  "symbolizing that your started application is loading.\n"
+                                  "It may occur, that some applications are not aware of this startup\n"
+                                  "notification. In this case, the button disappears after the time\n"
+                                  "given in the section 'Startup indication timeout'"));
 
     QGridLayout* GroupBox2Layout = new QGridLayout();
     GroupBox2->setLayout( GroupBox2Layout );
@@ -123,140 +123,140 @@ LaunchConfig::~LaunchConfig()
 {
 }
 
-  void
+void
 LaunchConfig::slotBusyCursor(int i)
 {
     lbl_cursorTimeout->setEnabled( i != 0 );
     sb_cursorTimeout->setEnabled( i != 0 );
 }
 
-  void
+void
 LaunchConfig::slotTaskbarButton(bool b)
 {
     lbl_taskbarTimeout->setEnabled( b );
     sb_taskbarTimeout->setEnabled( b );
 }
 
-  void
+void
 LaunchConfig::load()
 {
-  KConfig conf(QStringLiteral("klaunchrc"), KConfig::NoGlobals);
-  KConfigGroup c = conf.group("FeedbackStyle");
+    KConfig conf(QStringLiteral("klaunchrc"), KConfig::NoGlobals);
+    KConfigGroup c = conf.group("FeedbackStyle");
 
-  bool busyCursor =
-    c.readEntry("BusyCursor", (bool)(Default & BusyCursor));
+    bool busyCursor =
+            c.readEntry("BusyCursor", (bool)(Default & BusyCursor));
 
-  bool taskbarButton =
-    c.readEntry("TaskbarButton", (bool)(Default & TaskbarButton));
+    bool taskbarButton =
+            c.readEntry("TaskbarButton", (bool)(Default & TaskbarButton));
 
-  cb_taskbarButton->setChecked(taskbarButton);
+    cb_taskbarButton->setChecked(taskbarButton);
 
-  c= conf.group( "BusyCursorSettings" );
-  sb_cursorTimeout->setValue( c.readEntry( "Timeout", s_startupDefaultTimeout ));
-  bool busyBlinking =c.readEntry("Blinking", false);
-  bool busyBouncing =c.readEntry("Bouncing", true);
-  if ( !busyCursor )
-     cb_busyCursor->setCurrentIndex(0);
-  else if ( busyBlinking )
-     cb_busyCursor->setCurrentIndex(2);
-  else if ( busyBouncing )
-     cb_busyCursor->setCurrentIndex(3);
-  else
-     cb_busyCursor->setCurrentIndex(1);
+    c= conf.group( "BusyCursorSettings" );
+    sb_cursorTimeout->setValue( c.readEntry( "Timeout", s_startupDefaultTimeout ));
+    bool busyBlinking =c.readEntry("Blinking", false);
+    bool busyBouncing =c.readEntry("Bouncing", true);
+    if ( !busyCursor )
+        cb_busyCursor->setCurrentIndex(0);
+    else if ( busyBlinking )
+        cb_busyCursor->setCurrentIndex(2);
+    else if ( busyBouncing )
+        cb_busyCursor->setCurrentIndex(3);
+    else
+        cb_busyCursor->setCurrentIndex(1);
 
-  c= conf.group( "TaskbarButtonSettings" );
-  sb_taskbarTimeout->setValue( c.readEntry( "Timeout", s_startupDefaultTimeout ));
+    c= conf.group( "TaskbarButtonSettings" );
+    sb_taskbarTimeout->setValue( c.readEntry( "Timeout", s_startupDefaultTimeout ));
 
-  slotBusyCursor( cb_busyCursor->currentIndex() );
-  slotTaskbarButton( taskbarButton );
+    slotBusyCursor( cb_busyCursor->currentIndex() );
+    slotTaskbarButton( taskbarButton );
 
-  emit changed( false );
+    emit changed( false );
 }
 
-  void
+void
 LaunchConfig::save()
 {
-  KConfig conf(QStringLiteral("klaunchrc"), KConfig::NoGlobals);
-  KConfigGroup  c = conf.group("FeedbackStyle");
+    KConfig conf(QStringLiteral("klaunchrc"), KConfig::NoGlobals);
+    KConfigGroup  c = conf.group("FeedbackStyle");
 
-  c.writeEntry("BusyCursor",   cb_busyCursor->currentIndex() != 0);
-  c.writeEntry("TaskbarButton", cb_taskbarButton->isChecked());
+    c.writeEntry("BusyCursor",   cb_busyCursor->currentIndex() != 0);
+    c.writeEntry("TaskbarButton", cb_taskbarButton->isChecked());
 
-  c = conf.group("BusyCursorSettings");
-  c.writeEntry( "Timeout", sb_cursorTimeout->value());
-  c.writeEntry("Blinking", cb_busyCursor->currentIndex() == 2);
-  c.writeEntry("Bouncing", cb_busyCursor->currentIndex() == 3);
+    c = conf.group("BusyCursorSettings");
+    c.writeEntry( "Timeout", sb_cursorTimeout->value());
+    c.writeEntry("Blinking", cb_busyCursor->currentIndex() == 2);
+    c.writeEntry("Bouncing", cb_busyCursor->currentIndex() == 3);
 
-  c = conf.group("TaskbarButtonSettings");
-  c.writeEntry( "Timeout", sb_taskbarTimeout->value());
+    c = conf.group("TaskbarButtonSettings");
+    c.writeEntry( "Timeout", sb_taskbarTimeout->value());
 
-  c.sync();
+    c.sync();
 
-  emit changed( false );
+    emit changed( false );
 
-  org::kde::kwin::Effects kwin(QStringLiteral("org.kde.KWin"), QStringLiteral("/Effects"), QDBusConnection::sessionBus());
-  kwin.reconfigureEffect(QStringLiteral("startupfeedback"));
+    org::kde::kwin::Effects kwin(QStringLiteral("org.kde.KWin"), QStringLiteral("/Effects"), QDBusConnection::sessionBus());
+    kwin.reconfigureEffect(QStringLiteral("startupfeedback"));
 }
 
-  void
+void
 LaunchConfig::defaults()
 {
-  cb_busyCursor->setCurrentIndex(3); // bouncing cursor
-  cb_taskbarButton->setChecked( (bool)(Default & TaskbarButton) );
+    cb_busyCursor->setCurrentIndex(3); // bouncing cursor
+    cb_taskbarButton->setChecked( (bool)(Default & TaskbarButton) );
 
-  sb_cursorTimeout->setValue( s_startupDefaultTimeout );
-  sb_taskbarTimeout->setValue( s_startupDefaultTimeout );
+    sb_cursorTimeout->setValue( s_startupDefaultTimeout );
+    sb_taskbarTimeout->setValue( s_startupDefaultTimeout );
 
-  slotBusyCursor(3);
-  slotTaskbarButton( (bool)(Default & TaskbarButton) );
+    slotBusyCursor(3);
+    slotTaskbarButton( (bool)(Default & TaskbarButton) );
 
-  checkChanged();
+    checkChanged();
 }
 
-  void
+void
 LaunchConfig::checkChanged()
 {
-  KConfig conf(QStringLiteral("klaunchrc"), KConfig::NoGlobals);
-  KConfigGroup  c = conf.group("FeedbackStyle");
+    KConfig conf(QStringLiteral("klaunchrc"), KConfig::NoGlobals);
+    KConfigGroup  c = conf.group("FeedbackStyle");
 
-  bool savedBusyCursor =
-    c.readEntry("BusyCursor", (bool)(Default & BusyCursor));
+    bool savedBusyCursor =
+            c.readEntry("BusyCursor", (bool)(Default & BusyCursor));
 
-  bool savedTaskbarButton =
-    c.readEntry("TaskbarButton", (bool)(Default & TaskbarButton));
+    bool savedTaskbarButton =
+            c.readEntry("TaskbarButton", (bool)(Default & TaskbarButton));
 
-  c = conf.group("BusyCursorSettings");
-  unsigned int savedCursorTimeout = c.readEntry( "Timeout", s_startupDefaultTimeout );
-  bool savedBusyBlinking =c.readEntry("Blinking", false);
-  bool savedBusyBouncing =c.readEntry("Bouncing", true);
+    c = conf.group("BusyCursorSettings");
+    unsigned int savedCursorTimeout = c.readEntry( "Timeout", s_startupDefaultTimeout );
+    bool savedBusyBlinking =c.readEntry("Blinking", false);
+    bool savedBusyBouncing =c.readEntry("Bouncing", true);
 
-  c = conf.group("TaskbarButtonSettings");
-  unsigned int savedTaskbarTimeout = c.readEntry( "Timeout", s_startupDefaultTimeout );
+    c = conf.group("TaskbarButtonSettings");
+    unsigned int savedTaskbarTimeout = c.readEntry( "Timeout", s_startupDefaultTimeout );
 
-  bool newBusyCursor =cb_busyCursor->currentIndex()!=0;
+    bool newBusyCursor =cb_busyCursor->currentIndex()!=0;
 
-  bool newTaskbarButton =cb_taskbarButton->isChecked();
+    bool newTaskbarButton =cb_taskbarButton->isChecked();
 
-  bool newBusyBlinking= cb_busyCursor->currentIndex()==2;
-  bool newBusyBouncing= cb_busyCursor->currentIndex()==3;
+    bool newBusyBlinking= cb_busyCursor->currentIndex()==2;
+    bool newBusyBouncing= cb_busyCursor->currentIndex()==3;
 
-  unsigned int newCursorTimeout = sb_cursorTimeout->value();
+    unsigned int newCursorTimeout = sb_cursorTimeout->value();
 
-  unsigned int newTaskbarTimeout = sb_taskbarTimeout->value();
+    unsigned int newTaskbarTimeout = sb_taskbarTimeout->value();
 
-  emit changed(
-      savedBusyCursor     != newBusyCursor
-      ||
-      savedTaskbarButton  != newTaskbarButton
-      ||
-      savedCursorTimeout  != newCursorTimeout
-      ||
-      savedTaskbarTimeout != newTaskbarTimeout
-      ||
-      savedBusyBlinking != newBusyBlinking
-      ||
-      savedBusyBouncing != newBusyBouncing
-    );
+    emit changed(
+                savedBusyCursor     != newBusyCursor
+            ||
+            savedTaskbarButton  != newTaskbarButton
+            ||
+            savedCursorTimeout  != newCursorTimeout
+            ||
+            savedTaskbarTimeout != newTaskbarTimeout
+            ||
+            savedBusyBlinking != newBusyBlinking
+            ||
+            savedBusyBouncing != newBusyBouncing
+            );
 }
 
 #include "kcmlaunch.moc"

@@ -63,10 +63,10 @@ QList<Plasma::Package> KCMSplashScreen::availablePackages(const QString &compone
 {
     QList<Plasma::Package> packages;
     QStringList paths;
-    QStringList dataPaths = QStandardPaths::standardLocations(QStandardPaths::GenericDataLocation);
+    const QStringList dataPaths = QStandardPaths::standardLocations(QStandardPaths::GenericDataLocation);
 
     for (const QString &path : dataPaths) {
-        QDir dir(path + "/plasma/look-and-feel");
+        QDir dir(path + QStringLiteral("/plasma/look-and-feel"));
         paths << dir.entryList(QDir::AllDirs | QDir::NoDotAndDotDot);
     }
 

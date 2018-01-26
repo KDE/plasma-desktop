@@ -98,7 +98,7 @@ void LayoutTrayIcon::layoutChanged()
 		return;
 
 //	QString shortText = Flags::getShortText(layoutUnit, *keyboardConfig);
-//	kDebug() << "systray: LayoutChanged" << layoutUnit.toString() << shortText;
+//	qDebug() << "systray: LayoutChanged" << layoutUnit.toString() << shortText;
 	QString longText = Flags::getLongText(layoutUnit, rules);
 
 	m_notifierItem->setToolTipSubTitle(longText);
