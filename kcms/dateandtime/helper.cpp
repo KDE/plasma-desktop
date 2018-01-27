@@ -77,8 +77,8 @@ int ClockHelper::ntp( const QStringList& ntpServers, bool ntpEnabled )
         // NTP Time setting
         QString timeServer = ntpServers.first();
         if( timeServer.indexOf( QRegExp(QStringLiteral(".*\\(.*\\)$")) ) != -1 ) {
-            timeServer.replace( QRegExp(QStringLiteral(".*\\(")), QLatin1String("") );
-            timeServer.replace( QRegExp(QStringLiteral("\\).*")), QLatin1String("") );
+            timeServer.remove( QRegExp(QStringLiteral(".*\\(")));
+            timeServer.remove( QRegExp(QStringLiteral("\\).*")));
             // Would this be better?: s/^.*\(([^)]*)\).*$/\1/
         }
 
