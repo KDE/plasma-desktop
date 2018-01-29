@@ -257,7 +257,8 @@ void KAccessConfig::launchOrcaConfiguration()
     QStringList gsettingArgs = { "set", "org.gnome.desktop.a11y.applications", "screen-reader-enabled", "true" };
     int ret = QProcess::execute("gsettings", gsettingArgs);
     if (ret) {
-        ui.orcaLaunchFeedbackLabel->setText(i18n("Could not set gsettings for Orca: \"%1\" failed").arg(QLatin1String("gsettings ") + gsettingArgs.join(' ')));
+        const QString errorStr = QLatin1String("gsettings ") + gsettingArgs.join(QLatin1Char(' '));
+        ui.orcaLaunchFeedbackLabel->setText(i18n("Could not set gsettings for Orca: \"%1\" failed", errorStr));
         return;
     }
 
