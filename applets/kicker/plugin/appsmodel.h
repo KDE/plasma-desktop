@@ -58,7 +58,7 @@ class AppsModel : public AbstractModel
 
         int rowCount(const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE;
 
-        Q_INVOKABLE virtual bool trigger(int row, const QString &actionId, const QVariant &argument) Q_DECL_OVERRIDE;
+        Q_INVOKABLE bool trigger(int row, const QString &actionId, const QVariant &argument) Q_DECL_OVERRIDE;
 
         Q_INVOKABLE AbstractModel *modelForRow(int row) Q_DECL_OVERRIDE;
         Q_INVOKABLE int rowForModel(AbstractModel *model) Q_DECL_OVERRIDE;

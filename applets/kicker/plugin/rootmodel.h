@@ -70,7 +70,7 @@ class RootModel : public AppsModel, public QQmlParserStatus
 
         QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const Q_DECL_OVERRIDE;
 
-        Q_INVOKABLE virtual bool trigger(int row, const QString &actionId, const QVariant &argument) Q_DECL_OVERRIDE;
+        Q_INVOKABLE bool trigger(int row, const QString &actionId, const QVariant &argument) Q_DECL_OVERRIDE;
 
         bool autoPopulate() const;
         void setAutoPopulate(bool populate);

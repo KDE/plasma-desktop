@@ -32,13 +32,13 @@ class ActionEditor : public QDialog
 {
     Q_OBJECT
 public:
-     ActionEditor(QWidget *parent = 0);
+     explicit ActionEditor(QWidget *parent = nullptr);
     ~ActionEditor();
 
     void setActionToEdit( ActionItem * item );
 
 public slots:
-    virtual void accept() Q_DECL_OVERRIDE;
+    void accept() Q_DECL_OVERRIDE;
 
 private:
     SolidActionData * actionData();

@@ -121,7 +121,7 @@ protected:
 //    bool x11Event(XEvent * e);
     virtual bool processOtherEvents(xcb_generic_event_t* e);
     virtual bool processXkbEvents(xcb_generic_event_t* e);
-    virtual bool nativeEventFilter(const QByteArray &eventType, void *message, long *) Q_DECL_OVERRIDE;
+    bool nativeEventFilter(const QByteArray &eventType, void *message, long *) Q_DECL_OVERRIDE;
 
 private:
 	int registerForXkbEvents(Display* display);

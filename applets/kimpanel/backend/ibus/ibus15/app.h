@@ -35,7 +35,7 @@ class QDBusServiceWatcher;
 class XcbEventFilter : public QAbstractNativeEventFilter
 {
     public:
-        virtual bool nativeEventFilter(const QByteArray &eventType, void* message, long int* result) override;
+        bool nativeEventFilter(const QByteArray &eventType, void* message, long int* result) override;
 };
 
 class App : public QGuiApplication {
