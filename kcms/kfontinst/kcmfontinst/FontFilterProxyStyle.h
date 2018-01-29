@@ -31,34 +31,34 @@ public:
     CFontFilterProxyStyle(QWidget *parent);
     QStyle *style() const;
     void drawComplexControl(ComplexControl control, const QStyleOptionComplex *option, QPainter *painter,
-                            const QWidget *widget) const Q_DECL_OVERRIDE;
-    void drawControl(ControlElement element, const QStyleOption *option, QPainter *painter, const QWidget *widget) const Q_DECL_OVERRIDE;
-    void drawItemPixmap(QPainter *painter, const QRect &rectangle, int alignment, const QPixmap &pixmap) const Q_DECL_OVERRIDE;
+                            const QWidget *widget) const override;
+    void drawControl(ControlElement element, const QStyleOption *option, QPainter *painter, const QWidget *widget) const override;
+    void drawItemPixmap(QPainter *painter, const QRect &rectangle, int alignment, const QPixmap &pixmap) const override;
     void drawItemText(QPainter *painter, const QRect &rectangle, int alignment, const QPalette &palette, bool enabled,
-                      const QString &text, QPalette::ColorRole textRole) const Q_DECL_OVERRIDE;
+                      const QString &text, QPalette::ColorRole textRole) const override;
     void drawPrimitive(PrimitiveElement element, const QStyleOption *option, QPainter *painter,
-                       const QWidget *widget) const Q_DECL_OVERRIDE;
-    QPixmap generatedIconPixmap(QIcon::Mode iconMode, const QPixmap &pixmap, const QStyleOption *option) const Q_DECL_OVERRIDE;
+                       const QWidget *widget) const override;
+    QPixmap generatedIconPixmap(QIcon::Mode iconMode, const QPixmap &pixmap, const QStyleOption *option) const override;
     SubControl hitTestComplexControl(ComplexControl control, const QStyleOptionComplex *option, const QPoint &position,
-                                     const QWidget *widget) const Q_DECL_OVERRIDE;
-    QRect itemPixmapRect(const QRect &rectangle, int alignment, const QPixmap &pixmap) const Q_DECL_OVERRIDE;
+                                     const QWidget *widget) const override;
+    QRect itemPixmapRect(const QRect &rectangle, int alignment, const QPixmap &pixmap) const override;
     QRect itemTextRect(const QFontMetrics &metrics, const QRect &rectangle, int alignment,
-                       bool enabled, const QString &text) const Q_DECL_OVERRIDE;
-    int pixelMetric(PixelMetric metric, const QStyleOption *option, const QWidget *widget) const Q_DECL_OVERRIDE;
-    void polish(QWidget *widget) Q_DECL_OVERRIDE;
-    void polish(QApplication *application) Q_DECL_OVERRIDE;
-    void polish(QPalette &palette) Q_DECL_OVERRIDE;
+                       bool enabled, const QString &text) const override;
+    int pixelMetric(PixelMetric metric, const QStyleOption *option, const QWidget *widget) const override;
+    void polish(QWidget *widget) override;
+    void polish(QApplication *application) override;
+    void polish(QPalette &palette) override;
     QSize sizeFromContents(ContentsType type, const QStyleOption *option, const QSize &contentsSize,
-                           const QWidget *widget) const Q_DECL_OVERRIDE;
-    QIcon standardIcon(StandardPixmap standardIcon, const QStyleOption *option, const QWidget *widget) const Q_DECL_OVERRIDE;
-    QPixmap standardPixmap(StandardPixmap standardPixmap, const QStyleOption *option, const QWidget *widget) const Q_DECL_OVERRIDE;
-    QPalette standardPalette() const Q_DECL_OVERRIDE;
-    int styleHint(StyleHint hint, const QStyleOption *option, const QWidget *widget, QStyleHintReturn *returnData) const Q_DECL_OVERRIDE;
+                           const QWidget *widget) const override;
+    QIcon standardIcon(StandardPixmap standardIcon, const QStyleOption *option, const QWidget *widget) const override;
+    QPixmap standardPixmap(StandardPixmap standardPixmap, const QStyleOption *option, const QWidget *widget) const override;
+    QPalette standardPalette() const override;
+    int styleHint(StyleHint hint, const QStyleOption *option, const QWidget *widget, QStyleHintReturn *returnData) const override;
     QRect subControlRect(ComplexControl control, const QStyleOptionComplex *option, SubControl subControl,
-                         const QWidget *widget) const Q_DECL_OVERRIDE;
-    QRect subElementRect(SubElement element, const QStyleOption *option, const QWidget *widget) const Q_DECL_OVERRIDE;
-    void unpolish(QWidget *widget) Q_DECL_OVERRIDE;
-    void unpolish(QApplication *application) Q_DECL_OVERRIDE;
+                         const QWidget *widget) const override;
+    QRect subElementRect(SubElement element, const QStyleOption *option, const QWidget *widget) const override;
+    void unpolish(QWidget *widget) override;
+    void unpolish(QApplication *application) override;
     virtual int layoutSpacing(QSizePolicy::ControlType control1, QSizePolicy::ControlType control2,
                               Qt::Orientation orientation, const QStyleOption* option = 0, const QWidget* widget = 0) const override;
 

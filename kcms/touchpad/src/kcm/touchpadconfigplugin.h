@@ -36,7 +36,7 @@ public:
     virtual void save() {}
     virtual void defaults() {}
 
-    void hideEvent(QHideEvent *) Q_DECL_OVERRIDE {}
+    void hideEvent(QHideEvent *) override {}
 
 protected:
     TouchpadConfigContainer *m_parent;

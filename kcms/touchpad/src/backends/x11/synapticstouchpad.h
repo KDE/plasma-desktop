@@ -28,7 +28,7 @@ public:
     SynapticsTouchpad(Display *display, int deviceId);
 
 protected:
-    double getPropertyScale(const QString &name) const Q_DECL_OVERRIDE;
+    double getPropertyScale(const QString &name) const override;
 
 private:
     XcbAtom m_capsAtom;

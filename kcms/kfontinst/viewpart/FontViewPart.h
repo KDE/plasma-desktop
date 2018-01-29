@@ -57,11 +57,11 @@ class CFontViewPart : public KParts::ReadOnlyPart
     CFontViewPart(QWidget *parentWidget, QObject *parent, const QList<QVariant> &args);
     virtual ~CFontViewPart();
 
-    bool openUrl(const QUrl &url) Q_DECL_OVERRIDE;
+    bool openUrl(const QUrl &url) override;
 
     protected:
 
-    bool openFile() Q_DECL_OVERRIDE;
+    bool openFile() override;
 
     public Q_SLOTS:
 

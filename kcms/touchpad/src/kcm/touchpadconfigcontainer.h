@@ -36,20 +36,20 @@ public:
     explicit TouchpadConfigContainer(QWidget *parent,
                             const QVariantList &args = QVariantList());
 
-    QSize minimumSizeHint() const Q_DECL_OVERRIDE;
-    QSize sizeHint() const Q_DECL_OVERRIDE;
-    void resizeEvent(QResizeEvent *event) Q_DECL_OVERRIDE;
+    QSize minimumSizeHint() const override;
+    QSize sizeHint() const override;
+    void resizeEvent(QResizeEvent *event) override;
 
-    void load() Q_DECL_OVERRIDE;
-    void save() Q_DECL_OVERRIDE;
-    void defaults() Q_DECL_OVERRIDE;
+    void load() override;
+    void save() override;
+    void defaults() override;
 
     void kcmLoad() {KCModule::load();};
     void kcmSave() {KCModule::save();};
     void kcmDefaults() {KCModule::defaults();};
 
 protected:
-    void hideEvent(QHideEvent *) Q_DECL_OVERRIDE;
+    void hideEvent(QHideEvent *) override;
 
 private:
     TouchpadConfigPlugin* m_plugin;

@@ -29,7 +29,7 @@ class ActivitiesSettingsPlugin : public QQmlExtensionPlugin {
 
 public:
     ActivitiesSettingsPlugin(QObject *parent = Q_NULLPTR);
-    void registerTypes(const char *uri) Q_DECL_OVERRIDE;
+    void registerTypes(const char *uri) override;
 };
 
 #endif // KACTIVITIES_IMPORTS_PLUGIN_H

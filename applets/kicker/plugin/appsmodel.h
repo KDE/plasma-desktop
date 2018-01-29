@@ -49,21 +49,21 @@ class AppsModel : public AbstractModel
         explicit AppsModel(const QList<AbstractEntry *> entryList, bool deleteEntriesOnDestruction, QObject *parent = 0);
         ~AppsModel();
 
-        QString description() const Q_DECL_OVERRIDE;
+        QString description() const override;
         void setDescription(const QString &text);
 
-        QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const Q_DECL_OVERRIDE;
+        QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
 
-        QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE;
+        QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const override;
 
-        int rowCount(const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE;
+        int rowCount(const QModelIndex &parent = QModelIndex()) const override;
 
-        Q_INVOKABLE bool trigger(int row, const QString &actionId, const QVariant &argument) Q_DECL_OVERRIDE;
+        Q_INVOKABLE bool trigger(int row, const QString &actionId, const QVariant &argument) override;
 
-        Q_INVOKABLE AbstractModel *modelForRow(int row) Q_DECL_OVERRIDE;
-        Q_INVOKABLE int rowForModel(AbstractModel *model) Q_DECL_OVERRIDE;
+        Q_INVOKABLE AbstractModel *modelForRow(int row) override;
+        Q_INVOKABLE int rowForModel(AbstractModel *model) override;
 
-        int separatorCount() const Q_DECL_OVERRIDE;
+        int separatorCount() const override;
 
         bool paginate() const;
         void setPaginate(bool paginate);
@@ -91,7 +91,7 @@ class AppsModel : public AbstractModel
 
         QStringList hiddenEntries() const;
 
-        void entryChanged(AbstractEntry *entry) Q_DECL_OVERRIDE;
+        void entryChanged(AbstractEntry *entry) override;
 
     Q_SIGNALS:
         void cleared() const;
@@ -106,7 +106,7 @@ class AppsModel : public AbstractModel
         void hiddenEntriesChanged() const;
 
     protected Q_SLOTS:
-        void refresh() Q_DECL_OVERRIDE;
+        void refresh() override;
 
     protected:
         void refreshInternal();

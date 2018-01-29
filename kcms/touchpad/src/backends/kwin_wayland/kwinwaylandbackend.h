@@ -36,14 +36,14 @@ public:
     explicit KWinWaylandBackend(QObject *parent = 0);
     ~KWinWaylandBackend();
 
-    bool applyConfig() Q_DECL_OVERRIDE;
-    bool getConfig() Q_DECL_OVERRIDE;
-    bool getDefaultConfig() Q_DECL_OVERRIDE;
-    bool isChangedConfig() const Q_DECL_OVERRIDE;
-    QString errorString() const Q_DECL_OVERRIDE { return m_errorString; }
+    bool applyConfig() override;
+    bool getConfig() override;
+    bool getDefaultConfig() override;
+    bool isChangedConfig() const override;
+    QString errorString() const override { return m_errorString; }
 
-    virtual int touchpadCount() const Q_DECL_OVERRIDE { return m_devices.count(); }
-    virtual QVector<QObject*> getDevices() const Q_DECL_OVERRIDE { return m_devices; }
+    virtual int touchpadCount() const override { return m_devices.count(); }
+    virtual QVector<QObject*> getDevices() const override { return m_devices; }
 
 private Q_SLOTS:
     void onDeviceAdded(QString);

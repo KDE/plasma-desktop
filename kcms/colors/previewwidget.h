@@ -43,7 +43,7 @@ public:
 
 protected:
     void setPaletteRecursive(QWidget*, const QPalette&);
-    bool eventFilter(QObject *, QEvent *) Q_DECL_OVERRIDE;
+    bool eventFilter(QObject *, QEvent *) override;
 };
 
 #endif

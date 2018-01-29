@@ -38,7 +38,7 @@ public:
     void setActionToEdit( ActionItem * item );
 
 public slots:
-    void accept() Q_DECL_OVERRIDE;
+    void accept() override;
 
 private:
     SolidActionData * actionData();

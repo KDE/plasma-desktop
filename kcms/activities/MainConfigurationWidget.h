@@ -38,9 +38,9 @@ public:
     ~MainConfigurationWidget();
 
 public Q_SLOTS:
-    void defaults() Q_DECL_OVERRIDE;
-    void load() Q_DECL_OVERRIDE;
-    void save() Q_DECL_OVERRIDE;
+    void defaults() override;
+    void load() override;
+    void save() override;
 
 private:
     D_PTR;

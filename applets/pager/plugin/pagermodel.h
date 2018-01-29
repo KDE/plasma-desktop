@@ -107,8 +107,8 @@ public:
     Q_INVOKABLE void addDesktop();
     Q_INVOKABLE void removeDesktop();
 
-    void classBegin() Q_DECL_OVERRIDE;
-    void componentComplete() Q_DECL_OVERRIDE;
+    void classBegin() override;
+    void componentComplete() override;
 
 Q_SIGNALS:
     void countChanged() const;

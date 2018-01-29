@@ -30,21 +30,21 @@ class FileEntry : public AbstractEntry
         explicit FileEntry(AbstractModel *owner, const QUrl &url);
         ~FileEntry();
 
-        EntryType type() const Q_DECL_OVERRIDE { return RunnableType; }
+        EntryType type() const override { return RunnableType; }
 
-        bool isValid() const Q_DECL_OVERRIDE;
+        bool isValid() const override;
 
-        QIcon icon() const Q_DECL_OVERRIDE;
-        QString name() const Q_DECL_OVERRIDE;
-        QString description() const Q_DECL_OVERRIDE;
+        QIcon icon() const override;
+        QString name() const override;
+        QString description() const override;
 
-        QString id() const Q_DECL_OVERRIDE;
-        QUrl url() const Q_DECL_OVERRIDE;
+        QString id() const override;
+        QUrl url() const override;
 
-        bool hasActions() const Q_DECL_OVERRIDE;
-        QVariantList actions() const Q_DECL_OVERRIDE;
+        bool hasActions() const override;
+        QVariantList actions() const override;
 
-        bool run(const QString& actionId = QString(), const QVariant &argument = QVariant()) Q_DECL_OVERRIDE;
+        bool run(const QString& actionId = QString(), const QVariant &argument = QVariant()) override;
 
     private:
         KFileItem *m_fileItem;

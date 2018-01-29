@@ -40,7 +40,7 @@ public:
 
 	LayoutUnit getSelectedLayoutUnit() { return selectedLayoutUnit; }
 	QString getvariant(QString variant);
-	void accept() Q_DECL_OVERRIDE;
+	void accept() override;
 
 public Q_SLOTS:
 	void languageChanged(int langIdx);

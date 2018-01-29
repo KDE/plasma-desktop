@@ -51,9 +51,9 @@ class DesktopPathConfig : public KCModule
     Q_OBJECT
 public:
     DesktopPathConfig( QWidget *parent, const QVariantList &args );
-    void load() Q_DECL_OVERRIDE;
-    void save() Q_DECL_OVERRIDE;
-    void defaults() Q_DECL_OVERRIDE;
+    void load() override;
+    void save() override;
+    void defaults() override;
 
 private Q_SLOTS:
     void slotEntries( KIO::Job * job, const KIO::UDSEntryList& list);

@@ -34,30 +34,30 @@ class ForwardingModel : public AbstractModel
         explicit ForwardingModel(QObject *parent = 0);
         ~ForwardingModel();
 
-        QString description() const Q_DECL_OVERRIDE;
+        QString description() const override;
 
         QAbstractItemModel *sourceModel() const;
         virtual void setSourceModel(QAbstractItemModel *sourceModel);
 
-        bool canFetchMore(const QModelIndex &parent) const Q_DECL_OVERRIDE;
-        void fetchMore(const QModelIndex &parent) Q_DECL_OVERRIDE;
+        bool canFetchMore(const QModelIndex &parent) const override;
+        void fetchMore(const QModelIndex &parent) override;
 
-        QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE;
-        QModelIndex parent(const QModelIndex &index) const Q_DECL_OVERRIDE;
+        QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const override;
+        QModelIndex parent(const QModelIndex &index) const override;
 
-        QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const Q_DECL_OVERRIDE;
+        QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
 
-        int rowCount(const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE;
+        int rowCount(const QModelIndex &parent = QModelIndex()) const override;
 
-        Q_INVOKABLE bool trigger(int row, const QString &actionId, const QVariant &argument) Q_DECL_OVERRIDE;
+        Q_INVOKABLE bool trigger(int row, const QString &actionId, const QVariant &argument) override;
 
-        Q_INVOKABLE QString labelForRow(int row) Q_DECL_OVERRIDE;
+        Q_INVOKABLE QString labelForRow(int row) override;
 
-        Q_INVOKABLE AbstractModel *modelForRow(int row) Q_DECL_OVERRIDE;
+        Q_INVOKABLE AbstractModel *modelForRow(int row) override;
 
-        AbstractModel* favoritesModel() Q_DECL_OVERRIDE;
+        AbstractModel* favoritesModel() override;
 
-        int separatorCount() const Q_DECL_OVERRIDE;
+        int separatorCount() const override;
 
     public Q_SLOTS:
         void reset();

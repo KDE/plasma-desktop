@@ -56,8 +56,8 @@ class CCharTip : public QFrame
     private:
 
     void reposition();
-    void resizeEvent(QResizeEvent *event) Q_DECL_OVERRIDE;
-    bool eventFilter(QObject *, QEvent *e) Q_DECL_OVERRIDE;
+    void resizeEvent(QResizeEvent *event) override;
+    bool eventFilter(QObject *, QEvent *e) override;
 
     private:
 

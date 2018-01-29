@@ -33,8 +33,8 @@ class XInputEventNotifier: public XEventNotifier {
 public:
 	XInputEventNotifier(QWidget* parent=NULL);
 
-	void start() Q_DECL_OVERRIDE;
-	void stop() Q_DECL_OVERRIDE;
+	void start() override;
+	void stop() override;
 
 	int registerForNewDeviceEvent(Display* dpy);
 
@@ -43,7 +43,7 @@ Q_SIGNALS:
 	void newPointerDevice();
 
 protected:
-	bool processOtherEvents(xcb_generic_event_t* event) Q_DECL_OVERRIDE;
+	bool processOtherEvents(xcb_generic_event_t* event) override;
 
 private:
 	int getNewDeviceEventType(xcb_generic_event_t* event);

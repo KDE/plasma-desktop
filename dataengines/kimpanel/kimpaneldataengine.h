@@ -37,7 +37,7 @@ class KimpanelEngine : public Plasma::DataEngine
 
 public:
     KimpanelEngine(QObject* parent, const QVariantList& args);
-    Plasma::Service* serviceForSource(const QString& source) Q_DECL_OVERRIDE;
+    Plasma::Service* serviceForSource(const QString& source) override;
     virtual void init();
 
 private:

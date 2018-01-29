@@ -752,7 +752,7 @@ class CGroupListViewDelegate : public QStyledItemDelegate
     CGroupListViewDelegate(QObject *p) : QStyledItemDelegate(p) { }
     virtual ~CGroupListViewDelegate() { }
 
-    void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &idx) const Q_DECL_OVERRIDE
+    void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &idx) const override
     {
         CGroupListItem       *grp=static_cast<CGroupListItem *>(idx.internalPointer());
         QStyleOptionViewItem opt(option);
@@ -770,7 +770,7 @@ class CGroupListViewDelegate : public QStyledItemDelegate
         }
     }
 
-    QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &idx) const Q_DECL_OVERRIDE
+    QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &idx) const override
     {
         QSize sz(QStyledItemDelegate::sizeHint(option, idx));
 
@@ -787,7 +787,7 @@ class CGroupListViewDelegate : public QStyledItemDelegate
                Qt::Key_Enter==event->key() || Qt::Key_Return==event->key();
     }
     
-    bool eventFilter(QObject *editor, QEvent *event) Q_DECL_OVERRIDE
+    bool eventFilter(QObject *editor, QEvent *event) override
     {
         if(editor && event && QEvent::KeyPress==event->type() && isCloseEvent(static_cast<QKeyEvent *>(event)) &&
            qobject_cast<QLineEdit *>(editor))

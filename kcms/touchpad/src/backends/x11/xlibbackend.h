@@ -47,24 +47,24 @@ public:
     static XlibBackend* initialize(QObject *parent = 0);
     ~XlibBackend();
 
-    bool applyConfig(const QVariantHash &) Q_DECL_OVERRIDE;
-    bool getConfig(QVariantHash &) Q_DECL_OVERRIDE;
-    QStringList supportedParameters() const Q_DECL_OVERRIDE {
+    bool applyConfig(const QVariantHash &) override;
+    bool getConfig(QVariantHash &) override;
+    QStringList supportedParameters() const override {
         return m_device ? m_device->supportedParameters() : QStringList();
     }
-    QString errorString() const Q_DECL_OVERRIDE { return m_errorString; }
-    int touchpadCount() const Q_DECL_OVERRIDE { return m_device ? 1 : 0; }
+    QString errorString() const override { return m_errorString; }
+    int touchpadCount() const override { return m_device ? 1 : 0; }
 
-    void setTouchpadOff(TouchpadOffState) Q_DECL_OVERRIDE;
-    TouchpadOffState getTouchpadOff() Q_DECL_OVERRIDE;
+    void setTouchpadOff(TouchpadOffState) override;
+    TouchpadOffState getTouchpadOff() override;
 
-    bool isTouchpadAvailable() Q_DECL_OVERRIDE;
-    bool isTouchpadEnabled() Q_DECL_OVERRIDE;
-    void setTouchpadEnabled(bool) Q_DECL_OVERRIDE;
+    bool isTouchpadAvailable() override;
+    bool isTouchpadEnabled() override;
+    void setTouchpadEnabled(bool) override;
 
-    void watchForEvents(bool keyboard) Q_DECL_OVERRIDE;
+    void watchForEvents(bool keyboard) override;
 
-    QStringList listMouses(const QStringList &blacklist) Q_DECL_OVERRIDE;
+    QStringList listMouses(const QStringList &blacklist) override;
 
 private slots:
     void propertyChanged(xcb_atom_t);

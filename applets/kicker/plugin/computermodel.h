@@ -48,8 +48,8 @@ class FilteredPlacesModel : public QSortFilterProxyModel
         Solid::Device deviceForIndex(const QModelIndex &index) const;
 
     protected:
-        bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const Q_DECL_OVERRIDE;
-        bool lessThan(const QModelIndex &left, const QModelIndex &right) const Q_DECL_OVERRIDE;
+        bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const override;
+        bool lessThan(const QModelIndex &left, const QModelIndex &right) const override;
 
     private:
         KFilePlacesModel *m_placesModel;
@@ -63,13 +63,13 @@ class RunCommandModel : public AbstractModel
         RunCommandModel(QObject *parent = 0);
         ~RunCommandModel();
 
-        QString description() const Q_DECL_OVERRIDE;
+        QString description() const override;
 
-        QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const Q_DECL_OVERRIDE;
+        QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
 
-        int rowCount(const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE;
+        int rowCount(const QModelIndex &parent = QModelIndex()) const override;
 
-        Q_INVOKABLE bool trigger(int row, const QString &actionId, const QVariant &argument) Q_DECL_OVERRIDE;
+        Q_INVOKABLE bool trigger(int row, const QString &actionId, const QVariant &argument) override;
 };
 
 class ComputerModel : public ForwardingModel
@@ -84,7 +84,7 @@ class ComputerModel : public ForwardingModel
         explicit ComputerModel(QObject *parent = 0);
         ~ComputerModel();
 
-        QString description() const Q_DECL_OVERRIDE;
+        QString description() const override;
 
         int appNameFormat() const;
         void setAppNameFormat(int format);
@@ -95,9 +95,9 @@ class ComputerModel : public ForwardingModel
         QStringList systemApplications() const;
         void setSystemApplications(const QStringList &apps);
 
-        QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const Q_DECL_OVERRIDE;
+        QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
 
-        Q_INVOKABLE bool trigger(int row, const QString &actionId, const QVariant &argument) Q_DECL_OVERRIDE;
+        Q_INVOKABLE bool trigger(int row, const QString &actionId, const QVariant &argument) override;
 
     Q_SIGNALS:
         void appNameFormatChanged() const;

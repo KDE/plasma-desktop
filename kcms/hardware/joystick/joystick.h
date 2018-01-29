@@ -36,8 +36,8 @@ class Joystick: public KCModule
   public:
     explicit Joystick(QWidget *parent = 0, const QVariantList &list = QVariantList());
 
-    void load() Q_DECL_OVERRIDE;
-    void defaults() Q_DECL_OVERRIDE;
+    void load() override;
+    void defaults() override;
 
   private:
     JoyWidget *joyWidget;

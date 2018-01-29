@@ -48,17 +48,17 @@ public Q_SLOTS:
     /**
      * load the settings from the config
      */
-    void load() Q_DECL_OVERRIDE;
+    void load() override;
 
     /**
      * save the current settings
      */
-    void save() Q_DECL_OVERRIDE;
+    void save() override;
 
     /**
      * sets the configuration to sensible default values.
      */
-    void defaults() Q_DECL_OVERRIDE;
+    void defaults() override;
 
     /**
      * Update all keys of the Global config with the theme ones.

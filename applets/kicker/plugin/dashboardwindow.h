@@ -67,8 +67,8 @@ class DashboardWindow : public QQuickWindow
         void visualParentScreenChanged(QScreen *screen);
 
     protected:
-        bool event(QEvent *event) Q_DECL_OVERRIDE;
-        void keyPressEvent(QKeyEvent *e) Q_DECL_OVERRIDE;
+        bool event(QEvent *event) override;
+        void keyPressEvent(QKeyEvent *e) override;
 
     private:
         QQuickItem *m_mainItem;

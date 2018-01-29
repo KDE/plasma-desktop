@@ -35,9 +35,9 @@ public:
     KAccessConfig(QWidget *parent, const QVariantList&);
     virtual ~KAccessConfig();
 
-    void load() Q_DECL_OVERRIDE;
-    void save() Q_DECL_OVERRIDE;
-    void defaults() Q_DECL_OVERRIDE;
+    void load() override;
+    void save() override;
+    void defaults() override;
 
 protected Q_SLOTS:
 

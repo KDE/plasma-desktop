@@ -51,7 +51,7 @@ Q_SIGNALS:
     void changed();
 
 protected:
-    void changeEvent(QEvent *) Q_DECL_OVERRIDE;
+    void changeEvent(QEvent *) override;
 
 private Q_SLOTS:
     void on_preferButton_clicked();

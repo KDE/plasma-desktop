@@ -28,7 +28,7 @@ class ActivitySwitcherExtensionPlugin : public QQmlExtensionPlugin {
 
 public:
     ActivitySwitcherExtensionPlugin(QObject *parent = Q_NULLPTR);
-    void registerTypes(const char *uri) Q_DECL_OVERRIDE;
+    void registerTypes(const char *uri) override;
 };
 
 #endif // ACTIVITY_SWITCHER_EXTENSION_PLUGIN_H

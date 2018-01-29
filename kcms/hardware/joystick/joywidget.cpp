@@ -54,7 +54,7 @@ class TableWidget : public QTableWidget
   public:
     TableWidget(int row, int col) : QTableWidget(row, col) {}
 
-    QSize sizeHint() const Q_DECL_OVERRIDE
+    QSize sizeHint() const override
     {
       return QSize(150, 100);  // return a smaller size than the Qt default(256, 192)
     }

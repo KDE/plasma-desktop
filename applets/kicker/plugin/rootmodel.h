@@ -37,11 +37,11 @@ class GroupEntry : public AbstractGroupEntry
         GroupEntry(AppsModel *parentModel, const QString &name,
             const QString &iconName, AbstractModel *childModel);
 
-        QIcon icon() const Q_DECL_OVERRIDE;
-        QString name() const Q_DECL_OVERRIDE;
+        QIcon icon() const override;
+        QString name() const override;
 
-        bool hasChildren() const Q_DECL_OVERRIDE;
-        AbstractModel *childModel() const Q_DECL_OVERRIDE;
+        bool hasChildren() const override;
+        AbstractModel *childModel() const override;
 
     private:
         QString m_name;
@@ -68,9 +68,9 @@ class RootModel : public AppsModel, public QQmlParserStatus
         explicit RootModel(QObject *parent = 0);
         ~RootModel();
 
-        QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const Q_DECL_OVERRIDE;
+        QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
 
-        Q_INVOKABLE bool trigger(int row, const QString &actionId, const QVariant &argument) Q_DECL_OVERRIDE;
+        Q_INVOKABLE bool trigger(int row, const QString &actionId, const QVariant &argument) override;
 
         bool autoPopulate() const;
         void setAutoPopulate(bool populate);
@@ -93,7 +93,7 @@ class RootModel : public AppsModel, public QQmlParserStatus
         bool showPowerSession() const;
         void setShowPowerSession(bool show);
 
-        AbstractModel* favoritesModel() Q_DECL_OVERRIDE;
+        AbstractModel* favoritesModel() override;
         AbstractModel* systemFavoritesModel();
 
         void classBegin() override;
@@ -112,7 +112,7 @@ class RootModel : public AppsModel, public QQmlParserStatus
         void recentAppsModelChanged() const;
 
     protected Q_SLOTS:
-        void refresh() Q_DECL_OVERRIDE;
+        void refresh() override;
 
     private:
         bool m_complete;

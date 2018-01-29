@@ -116,7 +116,7 @@ public:
         }
     }
 
-    int type() const Q_DECL_OVERRIDE { return 1001; }
+    int type() const override { return 1001; }
     Category category() const { return m_cat; }
     CaptureCategory captureCategory() const { return m_capcat; }
     ObjectDescriptionType odtype() const { return m_odtype; }

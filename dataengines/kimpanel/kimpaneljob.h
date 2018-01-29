@@ -34,7 +34,7 @@ class KimpanelJob : public Plasma::ServiceJob
 public:
     KimpanelJob(PanelAgent* panelAgent, const QString& destination,
                 const QString& operation, const QMap< QString, QVariant >& parameters, QObject* parent = 0);
-    void start() Q_DECL_OVERRIDE;
+    void start() override;
 
 private:
     PanelAgent* m_panelAgent;

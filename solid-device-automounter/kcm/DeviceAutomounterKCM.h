@@ -38,8 +38,8 @@ public:
     virtual ~DeviceAutomounterKCM();
 
 public slots:
-    void load() Q_DECL_OVERRIDE;
-    void save() Q_DECL_OVERRIDE;
+    void load() override;
+    void save() override;
 
 private slots:
     void enabledChanged();

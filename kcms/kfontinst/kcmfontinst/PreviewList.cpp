@@ -120,7 +120,7 @@ class CPreviewListViewDelegate : public QStyledItemDelegate
     CPreviewListViewDelegate(QObject *p, int previewSize) : QStyledItemDelegate(p), itsPreviewSize(previewSize) { }
     virtual ~CPreviewListViewDelegate() { }
 
-    void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &idx) const Q_DECL_OVERRIDE
+    void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &idx) const override
     {
         CPreviewListItem     *item=static_cast<CPreviewListItem *>(idx.internalPointer());
         QStyleOptionViewItem opt(option);
@@ -139,7 +139,7 @@ class CPreviewListViewDelegate : public QStyledItemDelegate
         painter->restore();
     }
 
-    QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &idx) const Q_DECL_OVERRIDE
+    QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &idx) const override
     {
         QSize sz(QStyledItemDelegate::sizeHint(option, idx));
         //int   pWidth(getPixmap(static_cast<CPreviewListItem *>(idx.internalPointer())).width());

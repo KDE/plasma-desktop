@@ -60,7 +60,7 @@ class PreviewWidget : public QQuickPaintedItem
         void paint(QPainter *);
         void hoverMoveEvent(QHoverEvent *event);
         void hoverLeaveEvent(QHoverEvent *e);
-        void geometryChanged(const QRectF &newGeometry, const QRectF &oldGeometry) Q_DECL_OVERRIDE;
+        void geometryChanged(const QRectF &newGeometry, const QRectF &oldGeometry) override;
 
     private:
         void layoutItems();

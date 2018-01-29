@@ -60,7 +60,7 @@ class CFontFilter : public KLineEdit
 
     void setFoundries(const QSet<QString> &currentFoundries);
 
-    QSize sizeHint() const Q_DECL_OVERRIDE;
+    QSize sizeHint() const override;
 
     Q_SIGNALS:
 
@@ -76,8 +76,8 @@ class CFontFilter : public KLineEdit
     private:
 
     void addAction(ECriteria crit, const QString &text, bool on);
-    void resizeEvent(QResizeEvent *ev) Q_DECL_OVERRIDE;
-    void mousePressEvent(QMouseEvent *ev) Q_DECL_OVERRIDE;
+    void resizeEvent(QResizeEvent *ev) override;
+    void mousePressEvent(QMouseEvent *ev) override;
     void setCriteria(ECriteria crit);
 
     private:

@@ -122,7 +122,7 @@ public:
         }
     }
 
-    bool eventFilter( QObject* /* obj */, QEvent* ev ) Q_DECL_OVERRIDE
+    bool eventFilter( QObject* /* obj */, QEvent* ev ) override
     {
         switch( ev->type() )
         {

@@ -63,13 +63,13 @@ class CPreviewList : public QAbstractItemModel
     CPreviewList(QObject *parent = 0);
     virtual ~CPreviewList() { clear(); }
 
-    QVariant        data(const QModelIndex &index, int role) const Q_DECL_OVERRIDE;
-    Qt::ItemFlags   flags(const QModelIndex &index) const Q_DECL_OVERRIDE;
+    QVariant        data(const QModelIndex &index, int role) const override;
+    Qt::ItemFlags   flags(const QModelIndex &index) const override;
     QModelIndex     index(int row, int column,
-                          const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE;
-    QModelIndex     parent(const QModelIndex &index) const Q_DECL_OVERRIDE;
-    int             rowCount(const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE { Q_UNUSED(parent) return itsItems.count(); }
-    int             columnCount(const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE { Q_UNUSED(parent) return 1; }
+                          const QModelIndex &parent = QModelIndex()) const override;
+    QModelIndex     parent(const QModelIndex &index) const override;
+    int             rowCount(const QModelIndex &parent = QModelIndex()) const override { Q_UNUSED(parent) return itsItems.count(); }
+    int             columnCount(const QModelIndex &parent = QModelIndex()) const override { Q_UNUSED(parent) return 1; }
     void            clear();
     void            showFonts(const QModelIndexList &font);
 
@@ -89,7 +89,7 @@ class CPreviewListView : public QTreeView
 
     void refreshPreviews();
     void showFonts(const QModelIndexList &fonts);
-    void contextMenuEvent(QContextMenuEvent *ev) Q_DECL_OVERRIDE;
+    void contextMenuEvent(QContextMenuEvent *ev) override;
 
     Q_SIGNALS:
 

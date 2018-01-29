@@ -33,8 +33,8 @@ class PlasmaDesktopRunner : public Plasma::AbstractRunner
         PlasmaDesktopRunner(QObject *parent, const QVariantList &args);
         ~PlasmaDesktopRunner();
 
-        void match(Plasma::RunnerContext &context) Q_DECL_OVERRIDE;
-        void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &action) Q_DECL_OVERRIDE;
+        void match(Plasma::RunnerContext &context) override;
+        void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &action) override;
 
     private Q_SLOTS:
       void checkAvailability(const QString &name, const QString &oldOwner, const QString &newOwner);

@@ -66,7 +66,7 @@ class CKCmFontInst : public KCModule
 
     public Q_SLOTS:
 
-    QString quickHelp() const Q_DECL_OVERRIDE;
+    QString quickHelp() const override;
     void    previewMenu(const QPoint &pos);
     void    splitterMoved();
     void    fontsSelected(const QModelIndexList &list);

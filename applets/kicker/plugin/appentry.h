@@ -41,22 +41,22 @@ class AppEntry : public AbstractEntry
         explicit AppEntry(AbstractModel *owner, KService::Ptr service, NameFormat nameFormat);
         explicit AppEntry(AbstractModel *owner, const QString &id);
 
-        EntryType type() const Q_DECL_OVERRIDE { return RunnableType; }
+        EntryType type() const override { return RunnableType; }
 
-        bool isValid() const Q_DECL_OVERRIDE;
+        bool isValid() const override;
 
-        QIcon icon() const Q_DECL_OVERRIDE;
-        QString name() const Q_DECL_OVERRIDE;
-        QString description() const Q_DECL_OVERRIDE;
+        QIcon icon() const override;
+        QString name() const override;
+        QString description() const override;
         KService::Ptr service() const;
 
-        QString id() const Q_DECL_OVERRIDE;
-        QUrl url() const Q_DECL_OVERRIDE;
+        QString id() const override;
+        QUrl url() const override;
 
-        bool hasActions() const Q_DECL_OVERRIDE;
-        QVariantList actions() const Q_DECL_OVERRIDE;
+        bool hasActions() const override;
+        QVariantList actions() const override;
 
-        bool run(const QString& actionId = QString(), const QVariant &argument = QVariant()) Q_DECL_OVERRIDE;
+        bool run(const QString& actionId = QString(), const QVariant &argument = QVariant()) override;
 
         QString menuId() const;
 
@@ -80,11 +80,11 @@ class AppGroupEntry : public AbstractGroupEntry
         AppGroupEntry(AppsModel *parentModel, KServiceGroup::Ptr group,
             bool paginate, int pageSize, bool flat, bool sorted, bool separators, int appNameFormat);
 
-        QIcon icon() const Q_DECL_OVERRIDE;
-        QString name() const Q_DECL_OVERRIDE;
+        QIcon icon() const override;
+        QString name() const override;
 
-        bool hasChildren() const Q_DECL_OVERRIDE;
-        AbstractModel *childModel() const Q_DECL_OVERRIDE;
+        bool hasChildren() const override;
+        AbstractModel *childModel() const override;
 
     private:
         KServiceGroup::Ptr m_group;

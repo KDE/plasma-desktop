@@ -35,14 +35,14 @@ public:
                             const QVariantList &args = QVariantList());
     virtual ~TouchpadConfigLibinput() {}
 
-    void load() Q_DECL_OVERRIDE;
-    void save() Q_DECL_OVERRIDE;
-    void defaults() Q_DECL_OVERRIDE;
+    void load() override;
+    void save() override;
+    void defaults() override;
 
-    QSize sizeHint() const Q_DECL_OVERRIDE;
-    QSize minimumSizeHint() const Q_DECL_OVERRIDE;
+    QSize sizeHint() const override;
+    QSize minimumSizeHint() const override;
 
-    void hideEvent(QHideEvent *) Q_DECL_OVERRIDE {}
+    void hideEvent(QHideEvent *) override {}
 
 private Q_SLOTS:
     void onChange();

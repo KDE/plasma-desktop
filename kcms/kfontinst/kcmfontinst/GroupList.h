@@ -109,16 +109,16 @@ class CGroupList : public QAbstractItemModel
     CGroupList(QWidget *parent = 0);
     ~CGroupList();
 
-    QVariant        data(const QModelIndex &index, int role) const Q_DECL_OVERRIDE;
-    bool            setData(const QModelIndex &index, const QVariant &value, int role) Q_DECL_OVERRIDE;
-    Qt::ItemFlags   flags(const QModelIndex &index) const Q_DECL_OVERRIDE;
+    QVariant        data(const QModelIndex &index, int role) const override;
+    bool            setData(const QModelIndex &index, const QVariant &value, int role) override;
+    Qt::ItemFlags   flags(const QModelIndex &index) const override;
     QVariant        headerData(int section, Qt::Orientation orientation,
-                               int role = Qt::DisplayRole) const Q_DECL_OVERRIDE;
+                               int role = Qt::DisplayRole) const override;
     QModelIndex     index(int row, int column,
-                          const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE;
-    QModelIndex     parent(const QModelIndex &index) const Q_DECL_OVERRIDE;
-    int             rowCount(const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE;
-    int             columnCount(const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE;
+                          const QModelIndex &parent = QModelIndex()) const override;
+    QModelIndex     parent(const QModelIndex &index) const override;
+    int             rowCount(const QModelIndex &parent = QModelIndex()) const override;
+    int             columnCount(const QModelIndex &parent = QModelIndex()) const override;
     void            update(const QModelIndex &unHighlight, const QModelIndex &highlight);
     void            updateStatus(QSet<QString> &enabled, QSet<QString> &disabled,
                                  QSet<QString> &partial);
@@ -153,9 +153,9 @@ class CGroupList : public QAbstractItemModel
     private:
 
     void            readGroupsFile();
-    void            sort(int column, Qt::SortOrder order = Qt::AscendingOrder) Q_DECL_OVERRIDE;
-    Qt::DropActions supportedDropActions() const Q_DECL_OVERRIDE;
-    QStringList     mimeTypes() const Q_DECL_OVERRIDE;
+    void            sort(int column, Qt::SortOrder order = Qt::AscendingOrder) override;
+    Qt::DropActions supportedDropActions() const override;
+    QStringList     mimeTypes() const override;
     CGroupListItem * find(const QString &name);
     QModelIndex     createIdx(int r, int c, void *p) { return createIndex(r, c, p); }
 
@@ -182,7 +182,7 @@ class CGroupListView : public QTreeView
     CGroupListView(QWidget *parent, CGroupList *model);
     virtual ~CGroupListView()              { }
 
-    QSize                 sizeHint() const Q_DECL_OVERRIDE { return QSize(32, 32); }
+    QSize                 sizeHint() const override { return QSize(32, 32); }
 
     bool                  isCustom()       { return CGroupListItem::CUSTOM==getType(); }
     bool                  isUnclassified() { return CGroupListItem::UNCLASSIFIED==getType(); }
@@ -208,19 +208,19 @@ class CGroupListView : public QTreeView
     private Q_SLOTS:
 
     void                  selectionChanged(const QItemSelection &selected,
-                                           const QItemSelection &deselected) Q_DECL_OVERRIDE;
+                                           const QItemSelection &deselected) override;
     void                  rename();
     void                  emitMoveFonts();
 
     private:
 
-    void                  contextMenuEvent(QContextMenuEvent *ev) Q_DECL_OVERRIDE;
-    void                  dragEnterEvent(QDragEnterEvent *event) Q_DECL_OVERRIDE;
-    void                  dragMoveEvent(QDragMoveEvent *event) Q_DECL_OVERRIDE;
-    void                  dragLeaveEvent(QDragLeaveEvent *event) Q_DECL_OVERRIDE;
-    void                  dropEvent(QDropEvent *event) Q_DECL_OVERRIDE;
+    void                  contextMenuEvent(QContextMenuEvent *ev) override;
+    void                  dragEnterEvent(QDragEnterEvent *event) override;
+    void                  dragMoveEvent(QDragMoveEvent *event) override;
+    void                  dragLeaveEvent(QDragLeaveEvent *event) override;
+    void                  dropEvent(QDropEvent *event) override;
     void                  drawHighlighter(const QModelIndex &idx);
-    bool          viewportEvent(QEvent *event) Q_DECL_OVERRIDE;
+    bool          viewportEvent(QEvent *event) override;
 
     private:
 

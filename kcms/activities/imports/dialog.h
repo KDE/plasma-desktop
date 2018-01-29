@@ -63,7 +63,7 @@ public Q_SLOTS:
     void saveChanges(const QString &activityId);
 
 protected:
-    void showEvent(QShowEvent *event) Q_DECL_OVERRIDE;
+    void showEvent(QShowEvent *event) override;
 
 private:
     Dialog(QObject *parent = Q_NULLPTR);

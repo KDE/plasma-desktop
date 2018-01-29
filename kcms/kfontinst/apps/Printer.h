@@ -49,7 +49,7 @@ class CPrintThread : public QThread
     CPrintThread(QPrinter *printer, const QList<Misc::TFont> &items, int size, QObject *parent);
     ~CPrintThread();
    
-    void run() Q_DECL_OVERRIDE;
+    void run() override;
 
     Q_SIGNALS:
         
@@ -89,7 +89,7 @@ class CPrinter : public QDialog
 
     private:
     
-    void closeEvent(QCloseEvent *e) Q_DECL_OVERRIDE;
+    void closeEvent(QCloseEvent *e) override;
 
     private:
 

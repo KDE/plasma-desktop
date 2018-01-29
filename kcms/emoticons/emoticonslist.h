@@ -56,9 +56,9 @@ class EmoticonList : public KCModule, Ui::EmoticonsManager
 public:
     EmoticonList(QWidget *parent, const QVariantList &args);
     ~EmoticonList();
-    void load() Q_DECL_OVERRIDE;
-    void save() Q_DECL_OVERRIDE;
-    void defaults() Q_DECL_OVERRIDE;
+    void load() override;
+    void save() override;
+    void defaults() override;
 private slots:
     void installEmoticonTheme();
     void btRemoveThemeClicked();
