@@ -335,10 +335,10 @@ public:
         // Removing the entry from the cache
         QMutableHashIterator<QString, AbstractEntry*> i(m_itemEntries);
         while (i.hasNext()) {
+            i.next();
             if (i.value() == entry) {
                 i.remove();
             }
-            i.next();
         }
         delete entry;
 
