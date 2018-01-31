@@ -360,7 +360,7 @@ void CursorThemeConfig::save()
 
     if (!applyTheme(theme, m_preferredSize)) {
         KMessageBox::information(0,
-                                 i18n("You have to restart KDE for these changes to take effect."),
+                                 i18n("You have to restart the Plasma session for these changes to take effect."),
                                  i18n("Cursor Settings Changed"), "CursorSettingsChanged");
     }
 
