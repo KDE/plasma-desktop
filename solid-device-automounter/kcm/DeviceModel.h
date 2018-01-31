@@ -21,18 +21,18 @@
 #ifndef DEVICEMODEL_H
 #define DEVICEMODEL_H
 
-#include <QtCore/QAbstractItemModel>
-#include <QtCore/QModelIndex>
-#include <QtCore/QVariant>
-#include <QtCore/QList>
-#include <QtCore/QHash>
+#include <QAbstractItemModel>
+#include <QModelIndex>
+#include <QVariant>
+#include <QList>
+#include <QHash>
 
 class DeviceModel : public QAbstractItemModel
 {
     Q_OBJECT
 
 public:
-    DeviceModel(QObject *parent = nullptr);
+    explicit DeviceModel(QObject *parent = nullptr);
     virtual ~DeviceModel() = default;
 
     enum DeviceType {

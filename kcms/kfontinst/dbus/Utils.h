@@ -24,7 +24,7 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#include <QtCore/QString>
+#include <QString>
 #include "Family.h"
 
 namespace KFI

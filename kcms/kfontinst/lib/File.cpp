@@ -22,8 +22,8 @@
  */
 
 #include <QtXml/QDomElement>
-#include <QtCore/QTextStream>
-#include <QtCore/QDir>
+#include <QTextStream>
+#include <QDir>
 #include "File.h"
 #include "Misc.h"
 #include "XmlStrings.h"

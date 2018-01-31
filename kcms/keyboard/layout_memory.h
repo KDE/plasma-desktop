@@ -20,8 +20,8 @@
 #ifndef LAYOUT_MEMORY_H_
 #define LAYOUT_MEMORY_H_
 
-#include <QtCore/QString>
-#include <QtCore/QMap>
+#include <QString>
+#include <QMap>
 #include <QtGui/QWidgetList> //For WId
 
 #include "x11_helper.h"

@@ -19,7 +19,7 @@
 #ifndef LAYOUTS_MENU_H_
 #define LAYOUTS_MENU_H_
 
-#include <QtCore/QList>
+#include <QList>
 #include <QtGui/QIcon>
 
 class QAction;

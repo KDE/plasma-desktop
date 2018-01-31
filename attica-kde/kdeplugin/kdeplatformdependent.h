@@ -27,7 +27,7 @@
 
 #include <attica/platformdependent.h>
 
-#include <QtCore/QHash>
+#include <QHash>
 
 #include <KSharedConfig>
 #include <KIO/AccessManager>

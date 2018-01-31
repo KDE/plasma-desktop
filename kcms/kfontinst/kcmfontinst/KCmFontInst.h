@@ -26,7 +26,7 @@
 
 #include "GroupList.h"
 #include "JobRunner.h"
-#include <QtCore/QSet>
+#include <QSet>
 #include <KCModule>
 #include <QUrl>
 #include <KConfig>

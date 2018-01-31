@@ -28,7 +28,7 @@
 
 K_EXPORT_PLASMA_RUNNER(plasma-desktop, PlasmaDesktopRunner)
 
-static const QString s_plasmaService = "org.kde.plasmashell";
+static const QString s_plasmaService = QLatin1String("org.kde.plasmashell");
 
 PlasmaDesktopRunner::PlasmaDesktopRunner(QObject *parent, const QVariantList &args)
     : Plasma::AbstractRunner(parent, args),
@@ -55,7 +55,7 @@ void PlasmaDesktopRunner::match(Plasma::RunnerContext &context)
 {
     if (m_enabled && context.query().startsWith(m_desktopConsoleKeyword, Qt::CaseInsensitive)) {
         Plasma::QueryMatch match(this);
-        match.setId("plasma-desktop-console");
+        match.setId(QStringLiteral("plasma-desktop-console"));
         match.setType(Plasma::QueryMatch::ExactMatch);
         match.setIconName(QStringLiteral("plasma"));
         match.setText(i18n("Open Plasma desktop interactive console"));
@@ -64,7 +64,7 @@ void PlasmaDesktopRunner::match(Plasma::RunnerContext &context)
     }
     if (m_enabled && context.query().startsWith(m_kwinConsoleKeyword, Qt::CaseInsensitive)) {
         Plasma::QueryMatch match(this);
-        match.setId("plasma-desktop-console");
+        match.setId(QStringLiteral("plasma-desktop-console"));
         match.setType(Plasma::QueryMatch::ExactMatch);
         match.setIconName(QStringLiteral("kwin"));
         match.setText(i18n("Open KWin interactive console"));

@@ -28,7 +28,7 @@
 #include <QKeySequence>
 
 #ifdef DRAG_ENABLED
-#include <QtCore/QMimeData>
+#include <QMimeData>
 #endif
 
 #include "keyboard_config.h"

@@ -27,8 +27,8 @@
 #include <QBuffer>
 #include <QDir>
 #include <QFontDatabase>
-#include <QtCore/QSettings>
-#include <QtCore/QTextCodec>
+#include <QSettings>
+#include <QTextCodec>
 #include <QToolTip>
 
 #include <QPixmap>

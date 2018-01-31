@@ -21,7 +21,7 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#include <QtCore/QTextStream>
+#include <QTextStream>
 #include <QtXml/QDomElement>
 #include <QDebug>
 #include "Family.h"

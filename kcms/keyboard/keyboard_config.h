@@ -22,11 +22,11 @@
 
 #include "x11_helper.h"
 
-#include <QtCore/QString>
-#include <QtCore/QStringList>
-#include <QtCore/QList>
-#include <QtCore/QMap>
-#include <QtCore/QPair>
+#include <QString>
+#include <QStringList>
+#include <QList>
+#include <QMap>
+#include <QPair>
 
 /**
  * This class provides configuration options for keyboard module

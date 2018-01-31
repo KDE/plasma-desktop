@@ -21,7 +21,7 @@
 #define SHORTCUTS_MODULE_H
 
 #include <kcmodule.h>
-#include <QtCore/QHash>
+#include <QHash>
 
 class KGlobalShortcutsEditor;
 

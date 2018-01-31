@@ -24,8 +24,8 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#include <QtCore/QObject>
-#include <QtCore/QEventLoop>
+#include <QObject>
+#include <QEventLoop>
 #include "Family.h"
 
 class QTimer;

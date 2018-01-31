@@ -24,8 +24,8 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#include <QtCore/QObject>
-#include <QtCore/QSet>
+#include <QObject>
+#include <QSet>
 #include <kauth.h>
 
 using namespace KAuth;

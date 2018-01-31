@@ -24,9 +24,9 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#include <QtCore/QObject>
-#include <QtCore/QStringList>
-#include <QtCore/QSet>
+#include <QObject>
+#include <QStringList>
+#include <QSet>
 #include <QtDBus/QtDBus>
 #include <KJob>
 #include "Family.h"

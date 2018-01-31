@@ -23,7 +23,7 @@
 
 #include "kaccess.h"
 
-#include <QtCore/qprocess.h>
+#include <qprocess.h>
 #include <QTimer>
 #include <QPainter>
 #include <QMessageBox>

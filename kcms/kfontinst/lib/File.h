@@ -24,8 +24,8 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#include <QtCore/QSet>
-#include <QtCore/QMetaType>
+#include <QSet>
+#include <QMetaType>
 #include <QtDBus/QtDBus>
 #include "kfontinst_export.h"
 

@@ -23,10 +23,10 @@
 
 #include "FcConfig.h"
 #include "Misc.h"
-#include <QtCore/QRegExp>
-#include <QtCore/QFile>
-#include <QtCore/QDir>
-#include <QtCore/QByteArray>
+#include <QRegExp>
+#include <QFile>
+#include <QDir>
+#include <QByteArray>
 #include <QtXml/QDomDocument>
 #include <QtXml/QDomElement>
 #include <QtXml/QDomNode>

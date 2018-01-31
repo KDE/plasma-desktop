@@ -21,9 +21,9 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#include <QtCore/QFile>
-#include <QtCore/QByteArray>
-#include <QtCore/QTextStream>
+#include <QFile>
+#include <QByteArray>
+#include <QTextStream>
 #include <KShell>
 #include <fontconfig/fontconfig.h>
 #include "Utils.h"

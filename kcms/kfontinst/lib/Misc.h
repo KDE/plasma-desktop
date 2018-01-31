@@ -29,8 +29,8 @@
 #include <sys/stat.h>
 #include <time.h>
 
-#include <QtCore/QDataStream>
-#include <QtCore/QFile>
+#include <QDataStream>
+#include <QFile>
 #include <QUrl>
 #include "KfiConstants.h"
 

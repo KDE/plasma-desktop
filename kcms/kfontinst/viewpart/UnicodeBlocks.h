@@ -6,7 +6,7 @@
 #ifndef __UNICODE_BLOCKS_H__
 #define __UNICODE_BLOCKS_H__
 
-#include <QtCore/qglobal.h>
+#include <qglobal.h>
 #include <KLocalizedString>
 
 struct TUnicodeBlock

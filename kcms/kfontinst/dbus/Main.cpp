@@ -23,7 +23,7 @@
 
 #include "FontInst.h"
 #include "Misc.h"
-#include <QtCore/QCoreApplication>
+#include <QCoreApplication>
 
 int main(int argc, char *argv[])
 {

@@ -24,7 +24,7 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#include <QtCore/QLatin1String>
+#include <QLatin1String>
 #include <KLocalizedString>
 #include <kio/udsentry.h>
 

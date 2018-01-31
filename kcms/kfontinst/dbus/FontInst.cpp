@@ -22,7 +22,7 @@
  */
 
 #include <QtDBus/QDBusConnection>
-#include <QtCore/QTimer>
+#include <QTimer>
 #include <QDebug>
 #include <kauth.h>
 #include <kio/global.h>

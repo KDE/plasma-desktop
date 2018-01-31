@@ -28,7 +28,7 @@ class KNetAttach : public QWizard, private Ui_KNetAttach
     Q_OBJECT
 
 public:
-    explicit KNetAttach( QWidget* parent = 0 );
+    explicit KNetAttach( QWidget* parent = nullptr );
 
 public slots:
     virtual void setInformationText( const QString & type );

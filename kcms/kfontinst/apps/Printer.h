@@ -25,8 +25,8 @@
 #define __PRINTER_H__
 
 #include <QDialog>
-#include <QtCore/QThread>
-#include <QtCore/QList>
+#include <QThread>
+#include <QList>
 #include <QtGui/QFont>
 #include "Misc.h"
 

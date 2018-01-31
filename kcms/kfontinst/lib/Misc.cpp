@@ -23,17 +23,17 @@
 
 #include "Misc.h"
 #include "config-paths.h"
-#include <QtCore/QSet>
-#include <QtCore/QMap>
-#include <QtCore/QVector>
-#include <QtCore/QDir>
-#include <QtCore/QFile>
-#include <QtCore/QByteArray>
-#include <QtCore/QTextCodec>
-#include <QtCore/QTextStream>
-#include <QtCore/QProcess>
-#include <QtCore/QTemporaryFile>
-#include <QtCore/QStandardPaths>
+#include <QSet>
+#include <QMap>
+#include <QVector>
+#include <QDir>
+#include <QFile>
+#include <QByteArray>
+#include <QTextCodec>
+#include <QTextStream>
+#include <QProcess>
+#include <QTemporaryFile>
+#include <QStandardPaths>
 #include <unistd.h>
 #include <ctype.h>
 

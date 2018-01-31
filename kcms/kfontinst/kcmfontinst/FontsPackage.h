@@ -26,7 +26,7 @@
 
 class QTemporaryDir;
 
-#include <QtCore/QSet>
+#include <QSet>
 #include <QUrl>
 
 namespace KFI

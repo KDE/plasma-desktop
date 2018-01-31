@@ -23,7 +23,7 @@
 #define __K_ACCESS_H__
 
 
-#include <QtCore/QAbstractNativeEventFilter>
+#include <QAbstractNativeEventFilter>
 #include <QWidget>
 #include <QColor>
 #include <QLabel>

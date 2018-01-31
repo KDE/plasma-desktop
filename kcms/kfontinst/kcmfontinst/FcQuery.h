@@ -24,8 +24,8 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#include <QtCore/QObject>
-#include <QtCore/QByteArray>
+#include <QObject>
+#include <QByteArray>
 #include "Misc.h"
 
 class QProcess;

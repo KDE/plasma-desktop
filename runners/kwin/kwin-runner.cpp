@@ -52,7 +52,7 @@ void KWinRunner::match(Plasma::RunnerContext &context)
 {
     if (m_enabled && context.query().compare(s_keyword, Qt::CaseInsensitive) == 0) {
         Plasma::QueryMatch match(this);
-        match.setId("kwin");
+        match.setId(QStringLiteral("kwin"));
         match.setType(Plasma::QueryMatch::ExactMatch);
         match.setIconName(QStringLiteral("kwin"));
         match.setText(i18n("Open KWin debug console"));

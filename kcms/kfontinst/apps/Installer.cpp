@@ -24,7 +24,7 @@
 #include "Installer.h"
 #include "Misc.h"
 #include "FontsPackage.h"
-#include <QtCore/QFile>
+#include <QFile>
 #include <QApplication>
 #include <QCommandLineParser>
 #include <QCommandLineOption>

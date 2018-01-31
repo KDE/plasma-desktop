@@ -20,9 +20,9 @@
 #ifndef FLAGS_H_
 #define FLAGS_H_
 
-#include <QtCore/QObject>
-#include <QtCore/QString>
-#include <QtCore/QMap>
+#include <QObject>
+#include <QString>
+#include <QMap>
 
 class QPixmap;
 class QIcon;

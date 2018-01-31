@@ -19,7 +19,7 @@
 #ifndef _FILE_EXCLUDE_FILTERS_H_
 #define _FILE_EXCLUDE_FILTERS_H_
 
-#include <QtCore/QStringList>
+#include <QStringList>
 
 namespace Baloo
 {
