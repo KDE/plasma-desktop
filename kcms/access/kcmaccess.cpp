@@ -118,19 +118,19 @@ QString mouseKeysShortcut(Display *display)
     HyperMask &= ~(mods | AltGrMask | MetaMask | SuperMask);
 
     if ((modifiers & AltGrMask) != 0)
-        keyname = i18n("AltGraph") + '+' + keyname;
+        keyname = i18n("AltGraph") + QLatin1Char('+') + keyname;
     if ((modifiers & HyperMask) != 0)
-        keyname = i18n("Hyper") + '+' + keyname;
+        keyname = i18n("Hyper") + QLatin1Char('+') + keyname;
     if ((modifiers & SuperMask) != 0)
-        keyname = i18n("Super") + '+' + keyname;
+        keyname = i18n("Super") + QLatin1Char('+') + keyname;
     if ((modifiers & WinMask) != 0)
-        keyname = QKeySequence(Qt::META).toString() + '+' + keyname;
+        keyname = QKeySequence(Qt::META).toString() + QLatin1Char('+') + keyname;
     if ((modifiers & AltMask) != 0)
-        keyname = QKeySequence(Qt::ALT).toString() + '+' + keyname;
+        keyname = QKeySequence(Qt::ALT).toString() + QLatin1Char('+') + keyname;
     if ((modifiers & ControlMask) != 0)
-        keyname = QKeySequence(Qt::CTRL).toString() + '+' + keyname;
+        keyname = QKeySequence(Qt::CTRL).toString() + QLatin1Char('+') + keyname;
     if ((modifiers & ShiftMask) != 0)
-        keyname = QKeySequence(Qt::SHIFT).toString() + '+' + keyname;
+        keyname = QKeySequence(Qt::SHIFT).toString() + QLatin1Char('+') + keyname;
 
     QString result;
     if ((modifiers & ScrollMask) != 0)
@@ -254,8 +254,8 @@ void KAccessConfig::configureKNotify()
 
 void KAccessConfig::launchOrcaConfiguration()
 {
-    QStringList gsettingArgs = { "set", "org.gnome.desktop.a11y.applications", "screen-reader-enabled", "true" };
-    int ret = QProcess::execute("gsettings", gsettingArgs);
+    const QStringList gsettingArgs = { QStringLiteral("set"), QStringLiteral("org.gnome.desktop.a11y.applications"), QStringLiteral("screen-reader-enabled"), QStringLiteral("true") };
+    int ret = QProcess::execute(QStringLiteral("gsettings"), gsettingArgs);
     if (ret) {
         const QString errorStr = QLatin1String("gsettings ") + gsettingArgs.join(QLatin1Char(' '));
         ui.orcaLaunchFeedbackLabel->setText(i18n("Could not set gsettings for Orca: \"%1\" failed", errorStr));
@@ -263,7 +263,7 @@ void KAccessConfig::launchOrcaConfiguration()
     }
 
     qint64 pid = 0;
-    bool started = QProcess::startDetached("orca", {"--setup"}, QString(), &pid);
+    bool started = QProcess::startDetached(QStringLiteral("orca"), {QStringLiteral("--setup")}, QString(), &pid);
     if (!started) {
         ui.orcaLaunchFeedbackLabel->setText(i18n("Error: Could not launch \"orca --setup\""));
     }
@@ -278,11 +278,11 @@ void KAccessConfig::changeFlashScreenColor()
 
 void KAccessConfig::selectSound()
 {
-    QStringList list = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("sound/"));
+    const QStringList list = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("sound/"));
     QString start;
-    if (list.count() > 0)
+    if (!list.isEmpty())
         start = list[0];
-    QString fname = QFileDialog::getOpenFileName(this, QString(), start);
+    const QString fname = QFileDialog::getOpenFileName(this, QString(), start);
     if (!fname.isEmpty())
         ui.soundEdit->setText(fname);
 }
