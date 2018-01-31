@@ -159,7 +159,7 @@ QString Rules::getRulesName()
 		return name;
 	}
 
-	return QString::null;
+    return {};
 }
 
 QString Rules::findXkbDir()
