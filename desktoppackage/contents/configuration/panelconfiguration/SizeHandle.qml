@@ -24,10 +24,21 @@ import org.kde.plasma.configuration 2.0
 import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
 
 PlasmaComponents.Button {
-    text: panel.location == PlasmaCore.Types.LeftEdge || panel.location == PlasmaCore.Types.RightEdge ? i18nd("plasma_shell_org.kde.plasma.desktop", "Width") : i18nd("plasma_shell_org.kde.plasma.desktop", "Height")
+    readonly property string textLabel: panel.location == PlasmaCore.Types.LeftEdge || panel.location == PlasmaCore.Types.RightEdge ? i18nd("plasma_shell_org.kde.plasma.desktop", "Width") : i18nd("plasma_shell_org.kde.plasma.desktop", "Height")
+    text: panelResizeHintTimer.running ? panel.thickness : textLabel
 
     checkable: true
     checked: mel.pressed
+
+    Timer {
+        id: panelResizeHintTimer
+        interval: 1000
+    }
+
+    Connections {
+        target: panel
+        onThicknessChanged: panelResizeHintTimer.restart()
+    }
 
     KQuickControlsAddons.MouseEventListener {
         id: mel
@@ -112,6 +123,34 @@ PlasmaComponents.Button {
                 configDialog.y = y;
                 panel.thickness = thickness;
             }
+        }
+
+        property int wheelDelta: 0
+        onWheelMoved: {
+            wheelDelta += wheel.delta;
+            var deltaThickness = 0;
+            // Magic number 120 for common "one click"
+            // See: http://qt-project.org/doc/qt-5/qml-qtquick-wheelevent.html#angleDelta-prop
+            while (wheelDelta >= 120) {
+                wheelDelta -= 120;
+                deltaThickness += 1;
+            }
+            while (wheelDelta <= -120) {
+                wheelDelta += 120;
+                deltaThickness -= 1;
+            }
+            deltaThickness = deltaThickness * 2;
+            var newThickness = Math.max(units.gridUnit, panel.thickness + deltaThickness);
+            if (panel.location == PlasmaCore.Types.LeftEdge || panel.location == PlasmaCore.Types.RightEdge) {
+                newThickness = Math.min(newThickness, panel.screenToFollow.geometry.width/2);
+            } else {
+                newThickness = Math.min(newThickness, panel.screenToFollow.geometry.height/2);
+            }
+            if (newThickness % 2 != 0) {
+                newThickness -= 1;
+            }
+            panel.thickness = newThickness;
+            panelResetAnimation.running = true;
         }
     }
 }
