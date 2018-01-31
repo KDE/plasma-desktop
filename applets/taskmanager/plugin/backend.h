@@ -111,14 +111,14 @@ class Backend : public QObject
     private:
         void updateWindowHighlight();
 
-        QQuickItem *m_taskManagerItem;
-        QQuickItem *m_toolTipItem;
-        QQuickWindow *m_groupDialog;
+        QQuickItem *m_taskManagerItem = nullptr;
+        QQuickItem *m_toolTipItem = nullptr;
+        QQuickWindow *m_groupDialog = nullptr;
         WId m_panelWinId;
         bool m_highlightWindows;
         QList<WId> m_windowsToHighlight;
-        QActionGroup *m_actionGroup;
-        KActivities::Consumer *m_activitiesConsumer;
+        QActionGroup *m_actionGroup = nullptr;
+        KActivities::Consumer *m_activitiesConsumer = nullptr;
 };
 
 #endif

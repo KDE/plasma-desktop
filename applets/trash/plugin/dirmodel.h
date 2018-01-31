@@ -55,7 +55,7 @@ public:
         Thumbnail  = Qt::UserRole + 3
     };
 
-    DirModel(QObject* parent=0);
+    explicit DirModel(QObject* parent=nullptr);
     virtual ~DirModel();
 
     QHash<int, QByteArray> roleNames() const override;
@@ -88,7 +88,7 @@ private:
     QStringList m_mimeTypes;
 
     //previews
-    QTimer *m_previewTimer;
+    QTimer *m_previewTimer = nullptr;
     QHash<QUrl, QPersistentModelIndex> m_filesToPreview;
     QSize m_screenshotSize;
     QHash<QUrl, QPersistentModelIndex> m_previewJobs;

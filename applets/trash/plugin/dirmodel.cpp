@@ -179,7 +179,7 @@ void DirModel::delayedPreview()
         ++i;
     }
 
-    if (list.size() > 0) {
+    if (!list.isEmpty()) {
         KIO::PreviewJob* job = KIO::filePreview(list, m_screenshotSize);
         job->setIgnoreMaximumSize(true);
         // qDebug() << "Created job" << job;
