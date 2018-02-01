@@ -1892,6 +1892,7 @@ void FolderModel::moveSelectedToTrash()
 
     const QList<QUrl> urls = selectedUrls();
     KIO::JobUiDelegate uiDelegate;
+
     if (uiDelegate.askDeleteConfirmation(urls, KIO::JobUiDelegate::Trash, KIO::JobUiDelegate::DefaultConfirmation)) {
         KIO::Job* job = KIO::trash(urls);
         job->uiDelegate()->setAutoErrorHandlingEnabled(true);
@@ -1907,6 +1908,7 @@ void FolderModel::deleteSelected()
 
     const QList<QUrl> urls = selectedUrls();
     KIO::JobUiDelegate uiDelegate;
+
     if (uiDelegate.askDeleteConfirmation(urls, KIO::JobUiDelegate::Delete, KIO::JobUiDelegate::DefaultConfirmation)) {
         KIO::Job* job = KIO::del(urls);
         job->uiDelegate()->setAutoErrorHandlingEnabled(true);
@@ -1939,6 +1941,7 @@ void FolderModel::emptyTrashBin()
 {
     KIO::JobUiDelegate uiDelegate;
     uiDelegate.setWindow(QApplication::desktop());
+
     if (uiDelegate.askDeleteConfirmation(QList<QUrl>(), KIO::JobUiDelegate::EmptyTrash, KIO::JobUiDelegate::DefaultConfirmation)) {
         KIO::Job* job = KIO::emptyTrash();
         job->uiDelegate()->setAutoErrorHandlingEnabled(true);
