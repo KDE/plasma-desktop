@@ -544,7 +544,9 @@ void KColorCm::updateConfig(KSharedConfigPtr config)
     groupNameList << "ColorEffects:Inactive" << "ColorEffects:Disabled";
 
     QStringList effectList;
-    effectList << "IntensityEffect"
+    effectList << "Enable"
+               << "ChangeSelectionColor"
+               << "IntensityEffect"
                << "IntensityAmount"
                << "ColorEffect"
                << "ColorAmount"
@@ -559,8 +561,7 @@ void KColorCm::updateConfig(KSharedConfigPtr config)
         KConfigGroup groupEffectTheme(config, groupName);
 
         for (const QString &effect : effectList) {
-            groupEffectOut.writeEntry(effect, groupEffectTheme.readEntry("effect"));
-
+            groupEffectOut.writeEntry(effect, groupEffectTheme.readEntry(effect));
         }
     }
 }
