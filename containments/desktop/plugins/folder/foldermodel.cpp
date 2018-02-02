@@ -120,8 +120,8 @@ FolderModel::FolderModel(QObject *parent) : QSortFilterProxyModel(parent),
     m_previews(false),
     m_filterMode(NoFilter),
     m_filterPatternMatchAll(true),
-    m_complete(false),
-    m_screenMapper(ScreenMapper::instance())
+    m_screenMapper(ScreenMapper::instance()),
+    m_complete(false)
 {
     //needed to pass the job around with qml
     qmlRegisterType<KIO::DropJob>();
