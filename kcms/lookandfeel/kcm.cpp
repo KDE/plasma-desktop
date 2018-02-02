@@ -357,7 +357,7 @@ void KCMLookandFeel::save()
         if (m_applyWindowDecoration) {
             cg = KConfigGroup(conf, "kwinrc");
             cg = KConfigGroup(&cg, "org.kde.kdecoration2");
-#if HAVE_BREEZE_DECO
+#ifdef HAVE_BREEZE_DECO
             setWindowDecoration(cg.readEntry("library", QStringLiteral(BREEZE_KDECORATION_PLUGIN_ID)), cg.readEntry("theme", QString()));
 #else
             setWindowDecoration(cg.readEntry("library", QStringLiteral("org.kde.kwin.aurorae")), cg.readEntry("theme", QString()));

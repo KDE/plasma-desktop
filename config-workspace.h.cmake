@@ -152,7 +152,7 @@
 /* Define 1 if the Breeze window decoration was found */
 #cmakedefine HAVE_BREEZE_DECO 1
 
-#if HAVE_BREEZE_DECO
+#ifdef HAVE_BREEZE_DECO
 #define BREEZE_KDECORATION_PLUGIN_ID "${BREEZE_KDECORATION_PLUGIN_ID}"
 #endif
 
