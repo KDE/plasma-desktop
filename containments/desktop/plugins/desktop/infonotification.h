@@ -36,7 +36,7 @@ class InfoNotification : public QObject
     Q_PROPERTY(QString acknowledgeActionText READ acknowledgeActionText WRITE setAcknowledgeActionText NOTIFY acknowledgeActionTextChanged)
 
     public:
-        InfoNotification(QObject *parent = 0);
+        explicit InfoNotification(QObject *parent = nullptr);
         ~InfoNotification();
 
         bool enabled() const;

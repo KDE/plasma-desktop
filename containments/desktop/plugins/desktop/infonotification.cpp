@@ -48,9 +48,7 @@ void InfoNotification::setEnabled(bool enabled)
 void InfoNotification::show()
 {
     if (m_enabled) {
-        if (m_notification) {
-            delete m_notification;
-        }
+        delete m_notification;
 
         m_notification = new KNotification(QStringLiteral("notification"));
         m_notification->setFlags(KNotification::DefaultEvent);
