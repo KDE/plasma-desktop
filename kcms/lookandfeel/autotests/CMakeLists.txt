@@ -46,6 +46,6 @@ if (X11_Xfixes_FOUND)
    target_link_libraries(kcmTest ${X11_Xfixes_LIB})
 endif ()
 
-add_test(lookandfeel-kcmTest kcmTest)
+add_test(NAME lookandfeel-kcmTest COMMAND kcmTest)
 ecm_mark_as_test(kcmTest)
 

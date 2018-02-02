@@ -2,7 +2,7 @@ macro(KEYBOARD_DAEMON_UNIT_TESTS _testname)
                add_executable(${_testname}_test ${_testname}_test.cpp ../${_testname}.cpp ../debug.cpp)
                ecm_mark_nongui_executable(${_testname}_test)
                ecm_mark_as_test(${_testname}_test)
-               add_test(kcm-keyboard-${_testname} ${_testname}_test)
+               add_test(NAME kcm-keyboard-${_testname} COMMAND ${_testname}_test)
                target_link_libraries(${_testname}_test
                                      Qt5::Concurrent
                                      Qt5::Widgets
@@ -22,7 +22,7 @@ macro(KEYBOARD_PREVIEW_UNIT_TESTS _testname)
                add_executable(${_testname}_test ${_testname}_test.cpp ${test_SRCS})
                ecm_mark_nongui_executable(${_testname}_test)
                ecm_mark_as_test(${_testname}_test)
-               add_test(kcm-keyboard-${_testname} ${_testname}_test)
+               add_test(NAME kcm-keyboard-${_testname} COMMAND ${_testname}_test)
                target_link_libraries(${_testname}_test
                                      Qt5::Concurrent
                                      Qt5::Widgets
@@ -55,7 +55,7 @@ endif(Boost_FOUND)
 add_executable(flags_test flags_test.cpp ../flags.cpp ../x11_helper.cpp ../keyboard_config.cpp ../xkb_rules.cpp ../debug.cpp)
 ecm_mark_nongui_executable(flags_test)
 ecm_mark_as_test(flags_test)
-add_test(kcm-keyboard-flags_test flags_test)
+add_test(NAME kcm-keyboard-flags_test COMMAND flags_test)
 target_link_libraries(flags_test
                       Qt5::Concurrent
                       Qt5::X11Extras
@@ -76,7 +76,7 @@ configure_file(${CMAKE_CURRENT_SOURCE_DIR}/config/base.xml ${CMAKE_CURRENT_BINAR
 
 if( X11_XTest_FOUND )
    add_executable(keyboard_daemon_test keyboard_daemon_test.cpp ../keyboard_daemon.cpp ../layout_memory.cpp ../layout_memory_persister.cpp ../flags.cpp ../udev_helper.cpp ../x11_helper.cpp ../xkb_helper.cpp ../xinput_helper.cpp ../layout_tray_icon.cpp ../keyboard_config.cpp ../xkb_rules.cpp ../keyboard_hardware.cpp ../bindings.cpp ../layouts_menu.cpp ../debug.cpp)
-   add_test(kcm-keyboard-keyboard_daemon_test keyboard_daemon_test)
+   add_test(NAME kcm-keyboard-keyboard_daemon_test COMMAND keyboard_daemon_test)
    add_dependencies(keyboard_daemon_test kded_keyboard)
    ecm_mark_nongui_executable(keyboard_daemon_test)
    ecm_mark_as_test(keyboard_daemon_test)
