@@ -127,5 +127,3 @@ void SwitchingTab::save()
 
     pluginListConfig.sync();
 }
-
-#include "SwitchingTab.moc"

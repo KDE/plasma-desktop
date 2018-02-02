@@ -436,5 +436,3 @@ void SwitcherBackend::stopActivity(const QString &activity)
 {
     m_activities.stopActivity(activity);
 }
-
-#include "switcherbackend.moc"

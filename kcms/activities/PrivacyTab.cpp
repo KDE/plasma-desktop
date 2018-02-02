@@ -223,5 +223,3 @@ void PrivacyTab::spinKeepHistoryValueChanged(int value)
         d->spinKeepHistory->setSuffix(months.subs(value).toString());
     }
 }
-
-#include "PrivacyTab.moc"

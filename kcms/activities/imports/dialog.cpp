@@ -305,7 +305,3 @@ void Dialog::saveChanges(const QString &activityId)
 
     close();
 }
-
-#include "dialog.moc"
-
-

@@ -71,8 +71,3 @@ void ActivitySettings::configureActivities()
 {
     QProcess::startDetached("kcmshell5", { "activities" });
 }
-
-
-#include "activitysettings.moc"
-
-

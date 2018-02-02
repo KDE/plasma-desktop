@@ -72,5 +72,3 @@ void ActivitiesTab::load()
 void ActivitiesTab::save()
 {
 }
-
-#include "ActivitiesTab.moc"
