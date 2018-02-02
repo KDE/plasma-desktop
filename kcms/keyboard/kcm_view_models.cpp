@@ -128,7 +128,7 @@ QVariant LayoutsTableModel::data(const QModelIndex &index, int role) const
      if (index.row() >= keyboardConfig->layouts.size())
          return QVariant();
 
-	 const LayoutUnit& layoutUnit = keyboardConfig->layouts.at(index.row());
+     const LayoutUnit& layoutUnit = keyboardConfig->layouts.at(index.row());
 
      if (role == Qt::DecorationRole) {
     	 switch( index.column() ) {
