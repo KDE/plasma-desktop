@@ -39,7 +39,7 @@ class SortedActivitiesModel : public QSortFilterProxyModel {
     Q_PROPERTY(bool inhibitUpdates READ inhibitUpdates WRITE setInhibitUpdates NOTIFY inhibitUpdatesChanged)
 
 public:
-    SortedActivitiesModel(QVector<KActivities::Info::State> states, QObject *parent = 0);
+    SortedActivitiesModel(const QVector<KActivities::Info::State> &states, QObject *parent = nullptr);
     virtual ~SortedActivitiesModel();
 
     QVariant data(const QModelIndex & index, int role = Qt::DisplayRole) const override;
@@ -84,8 +84,8 @@ private:
 
     QString m_previousActivity;
 
-    KActivities::ActivitiesModel *m_activitiesModel;
-    KActivities::Consumer *m_activities;
+    KActivities::ActivitiesModel *m_activitiesModel = nullptr;
+    KActivities::Consumer *m_activities = nullptr;
 
     QHash<QString, QVector<WId>> m_activitiesWindows;
 };

@@ -48,7 +48,7 @@ class SwitcherBackend : public QObject {
 
 
 public:
-    SwitcherBackend(QObject *parent = Q_NULLPTR);
+    explicit SwitcherBackend(QObject *parent = nullptr);
     ~SwitcherBackend();
 
     static QObject *instance(QQmlEngine *engine, QJSEngine *scriptEngine);
@@ -61,7 +61,7 @@ public Q_SLOTS:
     void init();
 
     bool shouldShowSwitcher() const;
-    void setShouldShowSwitcher(const bool &shouldShowSwitcher);
+    void setShouldShowSwitcher(bool shouldShowSwitcher);
 
     QAbstractItemModel *runningActivitiesModel() const;
     QAbstractItemModel *stoppedActivitiesModel() const;
@@ -93,14 +93,14 @@ private Q_SLOTS:
 
 private:
     QHash<QString, QKeySequence> m_actionShortcut;
-    QAction *m_lastInvokedAction;
+    QAction *m_lastInvokedAction = nullptr;
     KActivities::Controller m_activities;
     bool m_shouldShowSwitcher;
     QTimer m_modKeyPollingTimer;
     QString m_previousActivity;
 
-    SortedActivitiesModel *m_runningActivitiesModel;
-    SortedActivitiesModel *m_stoppedActivitiesModel;
+    SortedActivitiesModel *m_runningActivitiesModel = nullptr;
+    SortedActivitiesModel *m_stoppedActivitiesModel = nullptr;
 
 };
 

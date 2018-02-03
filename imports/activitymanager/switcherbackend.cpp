@@ -149,14 +149,14 @@ namespace {
     private:
         QString m_id;
         QSize m_requestedSize;
-        QQuickTextureFactory *m_texture;
+        QQuickTextureFactory *m_texture = nullptr;
     };
 
     ThumbnailImageResponse::ThumbnailImageResponse(const QString &id,
                                                    const QSize &requestedSize)
         : m_id(id)
         , m_requestedSize(requestedSize)
-        , m_texture(Q_NULLPTR)
+        , m_texture(nullptr)
     {
         int width = m_requestedSize.width();
         int height = m_requestedSize.height();
@@ -244,7 +244,6 @@ inline void SwitcherBackend::registerShortcut(const QString &actionName,
 
 SwitcherBackend::SwitcherBackend(QObject *parent)
     : QObject(parent)
-    , m_lastInvokedAction(Q_NULLPTR)
     , m_shouldShowSwitcher(false)
     , m_runningActivitiesModel(new SortedActivitiesModel({KActivities::Info::Running, KActivities::Info::Stopping}, this))
     , m_stoppedActivitiesModel(new SortedActivitiesModel({KActivities::Info::Stopped, KActivities::Info::Starting}, this))
@@ -398,7 +397,7 @@ bool SwitcherBackend::shouldShowSwitcher() const
     return m_shouldShowSwitcher;
 }
 
-void SwitcherBackend::setShouldShowSwitcher(const bool &shouldShowSwitcher)
+void SwitcherBackend::setShouldShowSwitcher(bool shouldShowSwitcher)
 {
     if (m_shouldShowSwitcher == shouldShowSwitcher) return;
 

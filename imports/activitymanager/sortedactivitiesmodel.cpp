@@ -220,7 +220,7 @@ namespace {
 
 }
 
-SortedActivitiesModel::SortedActivitiesModel(QVector<KActivities::Info::State> states, QObject *parent)
+SortedActivitiesModel::SortedActivitiesModel(const QVector<KActivities::Info::State> &states, QObject *parent)
     : QSortFilterProxyModel(parent)
     , m_activitiesModel(new KActivities::ActivitiesModel(states, this))
     , m_activities(new KActivities::Consumer(this))

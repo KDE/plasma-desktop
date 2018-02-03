@@ -27,7 +27,7 @@ class ActivitySwitcherExtensionPlugin : public QQmlExtensionPlugin {
     Q_PLUGIN_METADATA(IID "org.kde.plasma.activityswitcher")
 
 public:
-    ActivitySwitcherExtensionPlugin(QObject *parent = Q_NULLPTR);
+    explicit ActivitySwitcherExtensionPlugin(QObject *parent = nullptr);
     void registerTypes(const char *uri) override;
 };
 
