@@ -1,13 +1,14 @@
 ecm_install_icons(ICONS
-	 		hi24-devices-input-touchpad.png
-			hi64-devices-input-touchpad.png
-			hi128-devices-input-touchpad.png
-			hi256-devices-input-touchpad.png
-			hi96-devices-input-touchpad.png
-			hi16-devices-input-touchpad.png
-			hi32-devices-input-touchpad.png
-			hisc-devices-input-touchpad.svgz
-			hi22-devices-input-touchpad.png
-			hi48-devices-input-touchpad.png
-		  DESTINATION ${ICON_INSTALL_DIR})
+        16-devices-input-touchpad.png
+        22-devices-input-touchpad.png
+        24-devices-input-touchpad.png
+        32-devices-input-touchpad.png
+        48-devices-input-touchpad.png
+        64-devices-input-touchpad.png
+        96-devices-input-touchpad.png
+        128-devices-input-touchpad.png
+        256-devices-input-touchpad.png
+        sc-devices-input-touchpad.svgz
+    DESTINATION ${KDE_INSTALL_ICONDIR}
+)
 _ecm_update_iconcache(${ICON_INSTALL_DIR} hicolor)
