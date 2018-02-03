@@ -38,7 +38,7 @@ void Trash::trashUrls(const QList<QUrl> &urls)
     KIO::JobUiDelegate uiDelegate;
     if (uiDelegate.askDeleteConfirmation(urls, KIO::JobUiDelegate::Trash, KIO::JobUiDelegate::DefaultConfirmation)) {
         KIO::Job *job = KIO::trash(urls);
-        job->ui()->setAutoErrorHandlingEnabled(true);
+        job->uiDelegate()->setAutoErrorHandlingEnabled(true);
     }
 }
 
@@ -48,7 +48,7 @@ void Trash::emptyTrash()
     uiDelegate.setWindow(QApplication::desktop());
     if (uiDelegate.askDeleteConfirmation(QList<QUrl>(), KIO::JobUiDelegate::EmptyTrash, KIO::JobUiDelegate::DefaultConfirmation)) {
         KIO::Job *job = KIO::emptyTrash();
-        job->ui()->setAutoErrorHandlingEnabled(true);
+        job->uiDelegate()->setAutoErrorHandlingEnabled(true);
     }
 }
 

@@ -399,7 +399,7 @@ bool DesktopPathConfig::moveDir( const QUrl & src, const QUrl & dest, const QStr
             KIO::ListJob* job = KIO::listDir( src );
             job->setAutoDelete(false); // see <noautodelete> below
             KJobWidgets::setWindow(job, this);
-            job->ui()->setAutoErrorHandlingEnabled(true);
+            job->uiDelegate()->setAutoErrorHandlingEnabled(true);
             connect(job, &KIO::ListJob::entries, this, &DesktopPathConfig::slotEntries);
             // slotEntries will move every file/subdir individually into the dest
             job->exec();
@@ -447,7 +447,7 @@ void DesktopPathConfig::slotResult( KJob * job )
         // If the source doesn't exist, no wonder we couldn't move the dir.
         // In that case, trust the user and set the new setting in any case.
 
-        static_cast<KIO::Job*>(job)->ui()->showErrorMessage();
+        static_cast<KIO::Job*>(job)->uiDelegate()->showErrorMessage();
     }
 }
 
