@@ -375,6 +375,7 @@ void EmoticonList::newTheme()
         KService::List srv = KServiceTypeTrader::self()->query(QStringLiteral("KEmoticons"), constraint);
 
         QStringList ls;
+        ls.reserve(srv.size());
         int current = 0;
 
         for (int i = 0; i < srv.size(); ++i) {
