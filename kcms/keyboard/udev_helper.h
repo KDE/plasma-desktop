@@ -26,7 +26,7 @@ class UdevDeviceNotifier : public QObject
     Q_OBJECT
 
 public:
-    explicit UdevDeviceNotifier(QObject *parent = Q_NULLPTR);
+    explicit UdevDeviceNotifier(QObject *parent = nullptr);
     ~UdevDeviceNotifier();
 
 Q_SIGNALS:

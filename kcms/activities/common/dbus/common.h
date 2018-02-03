@@ -46,7 +46,7 @@
                    KAMD_DBUS_OBJECT_PATH(OBJECT_PATH),                         \
                    KAMD_DBUS_OBJECT(OBJECT),                                   \
                    QDBusConnection::sessionBus(),                              \
-                   Q_NULLPTR)
+                   nullptr)
 
 #define KAMD_DBUS_CLASS_INTERFACE(OBJECT_PATH, OBJECT, PARENT)                 \
     org::kde::ActivityManager::OBJECT(                                         \

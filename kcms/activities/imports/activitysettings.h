@@ -29,7 +29,7 @@ class ActivitySettings: public QObject {
     Q_PROPERTY(bool newActivityAuthorized READ newActivityAuthorized CONSTANT)
 
 public:
-    ActivitySettings(QObject *parent = Q_NULLPTR);
+    explicit ActivitySettings(QObject *parent = nullptr);
     ~ActivitySettings();
 
     bool newActivityAuthorized() const;

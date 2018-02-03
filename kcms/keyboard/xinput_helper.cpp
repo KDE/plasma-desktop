@@ -56,7 +56,7 @@ static const int DEVICE_POINTER = 2;
 XInputEventNotifier::XInputEventNotifier(QWidget* parent):
 	XEventNotifier(), //TODO: destruct properly?
 	xinputEventType(-1),
-	udevNotifier(Q_NULLPTR)
+	udevNotifier(nullptr)
 {
   Q_UNUSED(parent)
 }

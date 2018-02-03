@@ -39,8 +39,8 @@ class SchemeEditorDialog : public QDialog, public Ui::ScmEditorDialog
     Q_OBJECT
 
 public:
-    SchemeEditorDialog(const QString &path, KColorCm *parent = Q_NULLPTR);
-    SchemeEditorDialog(KSharedConfigPtr config, KColorCm *parent = Q_NULLPTR);
+    SchemeEditorDialog(const QString &path, KColorCm *parent = nullptr);
+    SchemeEditorDialog(KSharedConfigPtr config, KColorCm *parent = nullptr);
 
 Q_SIGNALS:
     void changed(bool);

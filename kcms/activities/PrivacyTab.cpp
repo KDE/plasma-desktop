@@ -53,8 +53,8 @@ public:
     std::unique_ptr<QQuickView> viewBlacklistedApplications;
 
     Private()
-        : viewBlacklistedApplicationsRoot(Q_NULLPTR)
-        , viewBlacklistedApplications(Q_NULLPTR)
+        : viewBlacklistedApplicationsRoot(nullptr)
+        , viewBlacklistedApplications(nullptr)
     {
     }
 };

@@ -66,7 +66,7 @@ protected:
     void showEvent(QShowEvent *event) override;
 
 private:
-    Dialog(QObject *parent = Q_NULLPTR);
+    Dialog(QObject *parent = nullptr);
 
     D_PTR;
 

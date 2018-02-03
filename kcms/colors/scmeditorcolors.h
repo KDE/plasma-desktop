@@ -36,7 +36,7 @@ class SchemeEditorColors : public QWidget, public Ui::ScmEditorColors
     Q_OBJECT
 
 public:
-    SchemeEditorColors(KSharedConfigPtr config, QWidget *parent = Q_NULLPTR);
+    SchemeEditorColors(KSharedConfigPtr config, QWidget *parent = nullptr);
     void updateValues();
     void updateFromColorSchemes();
 

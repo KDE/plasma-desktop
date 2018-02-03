@@ -42,13 +42,13 @@ public:
     }
 
     optional_view(const none_t &)
-        : m_value(Q_NULLPTR)
+        : m_value(nullptr)
     {
     }
 
     bool is_initialized() const
     {
-        return m_value != Q_NULLPTR;
+        return m_value != nullptr;
     }
 
     const T &get() const

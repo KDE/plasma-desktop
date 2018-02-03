@@ -336,7 +336,7 @@ void SwitcherBackend::showActivitySwitcherIfNeeded()
 
     if (isPlatformX11()) {
         if (!x11_areModKeysDepressed(m_actionShortcut[actionName])) {
-            m_lastInvokedAction = Q_NULLPTR;
+            m_lastInvokedAction = nullptr;
             setShouldShowSwitcher(false);
             return;
         }

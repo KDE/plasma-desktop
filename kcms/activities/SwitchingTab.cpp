@@ -47,7 +47,7 @@ public:
     }
 
     Private()
-        : mainActionCollection(Q_NULLPTR)
+        : mainActionCollection(nullptr)
     {
     }
 };

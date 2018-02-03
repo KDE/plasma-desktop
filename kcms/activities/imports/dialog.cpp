@@ -291,7 +291,7 @@ void Dialog::saveChanges(const QString &activityId)
     d->activities.setActivityIcon(activityId, activityIcon());
 
     // setting the key shortcut
-    QAction action(Q_NULLPTR);
+    QAction action(nullptr);
     action.setProperty("isConfigurationAction", true);
     action.setProperty("componentName", "ActivityManager");
     action.setObjectName("switch-to-activity-" + activityId);

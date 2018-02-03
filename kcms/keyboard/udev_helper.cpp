@@ -31,8 +31,8 @@
 
 UdevDeviceNotifier::UdevDeviceNotifier(QObject *parent)
     : QObject(parent)
-    , m_udev(Q_NULLPTR)
-    , m_monitor(Q_NULLPTR)
+    , m_udev(nullptr)
+    , m_monitor(nullptr)
 {
     init();
 }

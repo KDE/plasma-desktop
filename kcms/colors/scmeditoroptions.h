@@ -34,7 +34,7 @@ class SchemeEditorOptions : public QWidget, public Ui::ScmEditorOptions
     Q_OBJECT
 
 public:
-    SchemeEditorOptions(KSharedConfigPtr config, QWidget *parent = Q_NULLPTR);
+    SchemeEditorOptions(KSharedConfigPtr config, QWidget *parent = nullptr);
     void updateValues();
 
 Q_SIGNALS:
