@@ -1,3 +1,5 @@
+add_definitions(-DTRANSLATION_DOMAIN="plasma_runner_kwin")
+
 set(krunner_kwin_SRCS
     kwin-runner.cpp
 )
