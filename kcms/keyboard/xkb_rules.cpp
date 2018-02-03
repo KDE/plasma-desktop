@@ -69,6 +69,9 @@ private:
 
 static QString translate_xml_item(const QString& itemText)
 {
+    if (itemText.isEmpty()) { // i18n warns on empty input strings
+        return itemText;
+    }
     //messages are already extracted from the source XML files by xkb
     //the characters '<' and '>' (but not '"') are HTML-escaped in the xkeyboard-config translation files, so we need to convert them before/after looking up the translation
     //note that we cannot use QString::toHtmlEscaped() here because that would convert '"' as well
