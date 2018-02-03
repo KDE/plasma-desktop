@@ -1,3 +1,5 @@
+add_definitions(-DTRANSLATION_DOMAIN="plasma_runner_plasma-desktop")
+
 set(krunner_plasma-desktop_SRCS
     plasma-desktop-runner.cpp
 )
