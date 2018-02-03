@@ -91,6 +91,7 @@ KCMKeyboardWidget::KCMKeyboardWidget(Rules* rules_, KeyboardConfig* keyboardConf
 
 KCMKeyboardWidget::~KCMKeyboardWidget()
 {
+    delete uiWidget;
 	delete flags;
 }
 

@@ -44,15 +44,15 @@ public:
     void save() override;
     void defaults() override;
 
-    void kcmLoad() {KCModule::load();};
-    void kcmSave() {KCModule::save();};
-    void kcmDefaults() {KCModule::defaults();};
+    void kcmLoad() {KCModule::load();}
+    void kcmSave() {KCModule::save();}
+    void kcmDefaults() {KCModule::defaults();}
 
 protected:
     void hideEvent(QHideEvent *) override;
 
 private:
-    TouchpadConfigPlugin* m_plugin;
+    TouchpadConfigPlugin* m_plugin = nullptr;
 };
 
 #endif // TOUCHPADCONFIGCONTAINER_H

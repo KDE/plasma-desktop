@@ -105,7 +105,7 @@ ComponentData::ComponentData(
 
 ComponentData::~ComponentData()
     {
-    delete _editor; _editor = 0;
+    delete _editor; _editor = nullptr;
     }
 
 
@@ -133,7 +133,6 @@ public:
 
     KGlobalShortcutsEditorPrivate(KGlobalShortcutsEditor *q)
         :   q(q),
-            stack(0),
             bus(QDBusConnection::sessionBus())
     {}
 
@@ -152,13 +151,13 @@ public:
     KGlobalShortcutsEditor *q;
     Ui::KGlobalShortcutsEditor ui;
     Ui::SelectApplicationDialog selectApplicationDialogUi;
-    QDialog *selectApplicationDialog;
-    QStackedWidget *stack;
+    QDialog *selectApplicationDialog = nullptr;
+    QStackedWidget *stack = nullptr;
     KShortcutsEditor::ActionTypes actionTypes;
     QHash<QString, ComponentData*> components;
     QDBusConnection bus;
-    QStandardItemModel *model;
-    KCategorizedSortFilterProxyModel *proxyModel;
+    QStandardItemModel *model = nullptr;
+    KCategorizedSortFilterProxyModel *proxyModel = nullptr;
 };
 
 void loadAppsCategory(KServiceGroup::Ptr group, QStandardItemModel *model, QStandardItem *item)
@@ -278,13 +277,13 @@ void KGlobalShortcutsEditor::KGlobalShortcutsEditorPrivate::initGUI()
                         
                         QStringList sequencesStrings = sourceDF.actionGroup(actionId).readEntry(QStringLiteral("X-KDE-Shortcuts"), QString()).split(QChar(','));
                         QList<QKeySequence> sequences;
-                        if (sequencesStrings.length() > 0) {
+                        if (!sequencesStrings.isEmpty()) {
                             Q_FOREACH (const QString &seqString, sequencesStrings) {
                                 sequences.append(QKeySequence(seqString));
                             }
                         }
 
-                        if (sequences.count() > 0) {
+                        if (!sequences.isEmpty()) {
                             KGlobalAccel::self()->setDefaultShortcut(action, sequences);
                         }
                     }
@@ -300,13 +299,13 @@ void KGlobalShortcutsEditor::KGlobalShortcutsEditorPrivate::initGUI()
                         
                         QStringList sequencesStrings = sourceDF.desktopGroup().readEntry(QStringLiteral("X-KDE-Shortcuts"), QString()).split(QChar(','));
                         QList<QKeySequence> sequences;
-                        if (sequencesStrings.length() > 0) {
+                        if (!sequencesStrings.isEmpty()) {
                             Q_FOREACH (const QString &seqString, sequencesStrings) {
                                 sequences.append(QKeySequence(seqString));
                             }
                         }
 
-                        if (sequences.count() > 0) {
+                        if (!sequences.isEmpty()) {
                             KGlobalAccel::self()->setDefaultShortcut(action, sequences);
                         }
                     }
@@ -534,7 +533,7 @@ void KGlobalShortcutsEditor::exportScheme()
         return;
     }
 
-    QUrl url = QFileDialog::getSaveFileUrl(this, QString(), QUrl(), QStringLiteral("*.kksrc"));
+    const QUrl url = QFileDialog::getSaveFileUrl(this, QString(), QUrl(), QStringLiteral("*.kksrc"));
     if (!url.isEmpty()) {
         KConfig config(url.path(), KConfig::SimpleConfig);
         // TODO: Bug ossi to provide a method for this
