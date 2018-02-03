@@ -65,7 +65,6 @@ void KcmTest::initTestCase()
     QVERIFY(m_dataDir.mkpath(QStringLiteral("color-schemes")));
     QFile f(m_dataDir.path() + QStringLiteral("/color-schemes/TestValue.colors"));
     f.open(QIODevice::WriteOnly);
-    f.write("finocchia");        // write to stderr
     f.close();
 
     const QString packagePath = QFINDTESTDATA("lookandfeel");
