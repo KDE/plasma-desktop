@@ -11,4 +11,3 @@ ecm_install_icons(ICONS
         sc-devices-input-touchpad.svgz
     DESTINATION ${KDE_INSTALL_ICONDIR}
 )
-_ecm_update_iconcache(${ICON_INSTALL_DIR} hicolor)
