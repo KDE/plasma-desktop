@@ -1277,7 +1277,7 @@ QVariant FolderModel::data(const QModelIndex& index, int role) const
     } else if (role == SelectedRole) {
         return m_selectionModel->isSelected(index);
     } else if (role == IsDirRole) {
-        const QUrl &url = data(index, UrlRole).value<QUrl>();
+        const QUrl &url = data(index, UrlRole).toUrl();
 
         if (m_isDirCache.contains(url)) {
             return m_isDirCache[url];
@@ -1360,7 +1360,7 @@ void FolderModel::statResult(KJob *job)
 {
     KIO::StatJob *statJob = static_cast<KIO::StatJob*>(job);
 
-    const QUrl &url = statJob->property("org.kde.plasma.folder_url").value<QUrl>();
+    const QUrl &url = statJob->property("org.kde.plasma.folder_url").toUrl();
     const QModelIndex &idx = index(indexForUrl(url), 0);
 
     if (idx.isValid()) {
