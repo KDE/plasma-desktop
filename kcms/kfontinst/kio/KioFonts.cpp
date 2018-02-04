@@ -191,9 +191,9 @@ void CKioFonts::listDir(const QUrl &url)
             size=2;
             totalSize(2);
             createUDSEntry(entry, FOLDER_SYS);
-            listEntry(entry, false);
+            listEntry(entry);
             createUDSEntry(entry, FOLDER_USER);
-            listEntry(entry, false);
+            listEntry(entry);
             break;
         case FOLDER_SYS:
         case FOLDER_USER:
@@ -205,7 +205,6 @@ void CKioFonts::listDir(const QUrl &url)
 
     if(FOLDER_UNKNOWN!=folder)
     {
-        listEntry(size ? entry : KIO::UDSEntry(), true);
         finished();
     }
     else
@@ -575,7 +574,7 @@ int CKioFonts::listFolder(KIO::UDSEntry &entry, EFolder folder)
         for(; styleIt!=styleEnd; ++styleIt)
         {
             createUDSEntry(entry, folder, *family, *styleIt);
-            listEntry(entry, false);
+            listEntry(entry);
         }
     }
 
