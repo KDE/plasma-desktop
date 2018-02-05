@@ -862,8 +862,14 @@ FocusScope {
                 Behavior on contentX { id: smoothX; enabled: false; SmoothedAnimation { velocity: 700 } }
                 Behavior on contentY { id: smoothY; enabled: false; SmoothedAnimation { velocity: 700 } }
 
-                Keys.onReturnPressed: runOrCdSelected()
-                Keys.onEnterPressed: runOrCdSelected()
+                Keys.onReturnPressed: {
+                    if (event.modifiers === Qt.AltModifier) {
+                        dir.openPropertiesDialog();
+                    } else {
+                        runOrCdSelected();
+                    }
+                }
+                Keys.onEnterPressed: Keys.returnPressed(event)
 
                 Keys.onMenuPressed: {
                     if (currentIndex != -1 && dir.hasSelection() && currentItem) {

@@ -1773,9 +1773,7 @@ void FolderModel::openContextMenu(QQuickItem *visualParent)
         if (KPropertiesDialog::canDisplay(items)) {
             QAction *act = new QAction(menu);
             act->setText(i18n("&Properties"));
-            QObject::connect(act, &QAction::triggered, [this, items]() {
-                    KPropertiesDialog::showDialog(items, nullptr, false /*non modal*/);
-            });
+            QObject::connect(act, &QAction::triggered, this, &FolderModel::openPropertiesDialog);
             menu->addAction(act);
         }
 
@@ -1788,6 +1786,29 @@ void FolderModel::openContextMenu(QQuickItem *visualParent)
     }
     menu->popup(m_menuPosition);
     connect(menu, &QMenu::aboutToHide, [menu]() { menu->deleteLater(); });
+}
+
+void FolderModel::openPropertiesDialog()
+{
+    const QModelIndexList indexes = m_selectionModel->selectedIndexes();
+    if (indexes.isEmpty()) {
+        return;
+    }
+
+    KFileItemList items;
+    items.reserve(indexes.count());
+    for (const QModelIndex &index : indexes) {
+        KFileItem item = itemForIndex(index);
+        if (!item.isNull()) {
+            items.append(item);
+        }
+    }
+
+    if (!KPropertiesDialog::canDisplay(items)) {
+        return;
+    }
+
+    KPropertiesDialog::showDialog(items, nullptr, false /*non modal*/);
 }
 
 void FolderModel::linkHere(const QUrl &sourceUrl)

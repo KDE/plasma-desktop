@@ -229,6 +229,8 @@ class FOLDERPLUGIN_TESTS_EXPORT FolderModel : public QSortFilterProxyModel, publ
 
         Q_INVOKABLE void linkHere(const QUrl &sourceUrl);
 
+        Q_INVOKABLE void openPropertiesDialog();
+
         QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
         int indexForUrl(const QUrl &url) const;
         KFileItem itemForIndex(const QModelIndex &index) const;
