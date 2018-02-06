@@ -41,9 +41,9 @@ void writeExports()
     const QString configPath = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + "/" + exportFile;
 
     QString script(QStringLiteral("# Generated script, do not edit\n"));
-    script.append(QStringLiteral("# Exports language-format specific env vars from startkde.\n"));
-    script.append(QStringLiteral("# This script has been generated from kcmshell5 formats.\n"));
-    script.append(QStringLiteral("# It will automatically be overwritten from there.\n"));
+    script.append(QLatin1String("# Exports language-format specific env vars from startkde.\n"));
+    script.append(QLatin1String("# This script has been generated from kcmshell5 formats.\n"));
+    script.append(QLatin1String("# It will automatically be overwritten from there.\n"));
     KConfigGroup formatsConfig = KConfigGroup(KSharedConfig::openConfig(configFile), "Formats");
     KConfigGroup languageConfig = KConfigGroup(KSharedConfig::openConfig(configFile), "Translations");
 

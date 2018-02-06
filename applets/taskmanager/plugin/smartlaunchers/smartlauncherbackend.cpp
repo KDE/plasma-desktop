@@ -278,7 +278,7 @@ void Backend::dataUpdated(const QString &sourceName, const Plasma::DataEngine::D
 
         KService::Ptr service = KService::serviceByStorageId(appName);
         if (!service) {
-            appName.prepend(QStringLiteral("org.kde."));
+            appName.prepend(QLatin1String("org.kde."));
             // HACK try to find a service with org.kde. notation
             service = KService::serviceByStorageId(appName);
             if (!service) {

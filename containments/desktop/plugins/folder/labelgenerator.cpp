@@ -131,9 +131,9 @@ QString LabelGenerator::displayLabel() const
                 }
 
                 if (m_rtl) {
-                    label.prepend(QStringLiteral(" < "));
+                    label.prepend(QLatin1String(" < "));
                 } else {
-                    label.prepend(QStringLiteral(" > "));
+                    label.prepend(QLatin1String(" > "));
                 }
             }
 

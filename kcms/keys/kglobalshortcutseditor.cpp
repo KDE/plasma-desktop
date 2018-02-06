@@ -446,7 +446,7 @@ void KGlobalShortcutsEditor::addCollection(
 
         // Add to the component list
         QStandardItem *item = new QStandardItem(pixmap, friendlyName);
-        if (id.endsWith(QStringLiteral(".desktop"))) {
+        if (id.endsWith(QLatin1String(".desktop"))) {
             item->setData(i18n("Application Launchers"), KCategorizedSortFilterProxyModel::CategoryDisplayRole);
             item->setData(0, KCategorizedSortFilterProxyModel::CategorySortRole);
         } else {

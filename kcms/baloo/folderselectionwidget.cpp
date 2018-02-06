@@ -326,7 +326,7 @@ bool FolderSelectionWidget::shouldShowMountPoint(const QString& mountPoint)
 
     // The user's home directory is forcibly added so we can ignore /home
     // if /home actually contains the home direcory
-    if (mountPoint.startsWith(QStringLiteral("/home")) && QDir::homePath().startsWith(QStringLiteral("/home")))
+    if (mountPoint.startsWith(QLatin1String("/home")) && QDir::homePath().startsWith(QLatin1String("/home")))
         return false;
 
     return true;
