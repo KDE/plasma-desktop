@@ -376,7 +376,8 @@ void Autostart::slotEditCMD(QTreeWidgetItem* ent)
     DesktopStartItem *desktopEntry = dynamic_cast<DesktopStartItem*>( ent );
     if ( desktopEntry )
     {
-        const KFileItem kfi = KFileItem( KFileItem::Unknown, KFileItem::Unknown, QUrl( desktopEntry->fileName() ), true );
+        KFileItem kfi = KFileItem(QUrl(desktopEntry->fileName()));
+        kfi.setDelayedMimeTypes(true);
         if (! slotEditCMD( kfi ))
             return;
         if (desktopEntry) {
