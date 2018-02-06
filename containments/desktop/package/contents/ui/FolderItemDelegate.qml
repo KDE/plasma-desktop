@@ -285,6 +285,8 @@ Item {
                     animated: false
                     usesPlasmaTheme: false
 
+                    smooth: true
+
                     source: model.decoration
                     overlays: model.overlays
                 }
