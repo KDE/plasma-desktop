@@ -518,7 +518,7 @@ void KAccessApp::xkbBellNotify(xcb_xkb_bell_notify_event_t *event)
         WId id = _activeWindow;
 
         NETRect frame, window;
-        NETWinInfo net(QX11Info::connection(), id, qApp->desktop()->winId(), 0);
+        NETWinInfo net(QX11Info::connection(), id, qApp->desktop()->winId(), NET::Properties(), NET::Properties2());
 
         net.kdeGeometry(frame, window);
 
