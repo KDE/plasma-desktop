@@ -224,7 +224,7 @@ QVariantList Backend::placesActions(const QUrl &launcherUrl, bool showAllPlaces,
     for (int i = 0; i < placesModel->rowCount(); ++i) {
         QModelIndex idx = placesModel->index(i, 0);
 
-        if (idx.data(KFilePlacesModel::HiddenRole).toBool()) {
+        if (placesModel->isHidden(idx)) {
             continue;
         }
 
