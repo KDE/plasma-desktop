@@ -187,39 +187,41 @@ void X11MouseBackend::load()
     bool flatAvailable = false;
     bool adaptiveEnabled = false;
     bool flatEnabled = false;
-    XI2ForallPointerDevices(m_dpy, [&] (XIDeviceInfo *info) {
-        int deviceid = info->deviceid;
-        Status status;
-        Atom type_return;
-        int format_return;
-        unsigned long num_items_return;
-        unsigned long bytes_after_return;
+    if (m_libinputAccelProfileAvailableAtom != None && m_libinputAccelProfileEnabledAtom != None) {
+        XI2ForallPointerDevices(m_dpy, [&] (XIDeviceInfo *info) {
+            int deviceid = info->deviceid;
+            Status status;
+            Atom type_return;
+            int format_return;
+            unsigned long num_items_return;
+            unsigned long bytes_after_return;
 
-        unsigned char *_data = nullptr;
-        //data returned is an 2 byte boolean
-        status = XIGetProperty(m_dpy, deviceid, m_libinputAccelProfileAvailableAtom, 0, 2,
-                                False, XA_INTEGER, &type_return, &format_return,
-                                &num_items_return, &bytes_after_return, &_data);
-        QScopedArrayPointer<unsigned char, ScopedXDeleter> data(_data);
-        _data = nullptr;
-        if (status != Success || type_return != XA_INTEGER || !data || format_return != 8 || num_items_return != 2) {
-            return;
-        }
-        adaptiveAvailable = adaptiveAvailable || data[0];
-        flatAvailable = flatAvailable || data[1];
+            unsigned char *_data = nullptr;
+            //data returned is an 2 byte boolean
+            status = XIGetProperty(m_dpy, deviceid, m_libinputAccelProfileAvailableAtom, 0, 2,
+                                    False, XA_INTEGER, &type_return, &format_return,
+                                    &num_items_return, &bytes_after_return, &_data);
+            QScopedArrayPointer<unsigned char, ScopedXDeleter> data(_data);
+            _data = nullptr;
+            if (status != Success || type_return != XA_INTEGER || !data || format_return != 8 || num_items_return != 2) {
+                return;
+            }
+            adaptiveAvailable = adaptiveAvailable || data[0];
+            flatAvailable = flatAvailable || data[1];
 
-        //data returned is an 2 byte boolean
-        status = XIGetProperty(m_dpy, deviceid, m_libinputAccelProfileEnabledAtom, 0, 2,
-                                False, XA_INTEGER, &type_return, &format_return,
-                                &num_items_return, &bytes_after_return, &_data);
-        data.reset(_data);
-        _data = nullptr;
-        if (status != Success || type_return != XA_INTEGER || !data || format_return != 8 || num_items_return != 2) {
-            return;
-        }
-        adaptiveEnabled = adaptiveEnabled || data[0];
-        flatEnabled = flatEnabled || data[1];
-    });
+            //data returned is an 2 byte boolean
+            status = XIGetProperty(m_dpy, deviceid, m_libinputAccelProfileEnabledAtom, 0, 2,
+                                    False, XA_INTEGER, &type_return, &format_return,
+                                    &num_items_return, &bytes_after_return, &_data);
+            data.reset(_data);
+            _data = nullptr;
+            if (status != Success || type_return != XA_INTEGER || !data || format_return != 8 || num_items_return != 2) {
+                return;
+            }
+            adaptiveEnabled = adaptiveEnabled || data[0];
+            flatEnabled = flatEnabled || data[1];
+        });
+    }
 
     if (adaptiveAvailable) {
         m_supportedAccelerationProfiles << PROFILE_ADAPTIVE;
@@ -444,6 +446,11 @@ bool X11MouseBackend::libinputApplyReverseScroll(int deviceid, bool reverse)
 
 void X11MouseBackend::libinputApplyAccelerationProfile(int deviceid, QString profile)
 {
+    // Check atom availability first.
+    if (m_libinputAccelProfileAvailableAtom == None || m_libinputAccelProfileEnabledAtom == None) {
+        return;
+    }
+
     unsigned char profileData[2];
     if (profile == PROFILE_NONE) {
         profileData[0] = profileData[1] = 0;
