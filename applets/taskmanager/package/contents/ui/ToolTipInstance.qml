@@ -84,7 +84,7 @@ Column {
         PlasmaCore.IconItem {
             Layout.preferredWidth: units.iconSizes.medium
             Layout.preferredHeight: units.iconSizes.medium
-            source: icon
+            source: !isWin ? icon : ""
             animated: false
             usesPlasmaTheme: false
             visible: !isWin
@@ -217,10 +217,10 @@ Column {
             // when minimized, we don't have a preview, so show the icon
             PlasmaCore.IconItem {
                 anchors.fill: parent
-                source: icon
+                source: thumbnailSourceItem.isMinimized && !albumArtImage.visible ? icon : ""
                 animated: false
                 usesPlasmaTheme: false
-                visible: thumbnailSourceItem.isMinimized && !albumArtImage.visible
+                visible: valid
 
                 ToolTipWindowMouseArea {
                     anchors.fill: parent
