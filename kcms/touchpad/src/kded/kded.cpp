@@ -47,8 +47,6 @@ TouchpadDisabler::TouchpadDisabler(QObject *parent, const QVariantList &)
     : KDEDModule(parent), m_backend(TouchpadBackend::implementation()),
       m_userRequestedState(true), m_touchpadEnabled(true), m_workingTouchpadFound(false), m_keyboardActivity(false), m_mouse(false)
 {
-    KLocalizedString::setApplicationDomain("kcm_touchpad");
-
     if (!m_backend) {
         return;
     }
