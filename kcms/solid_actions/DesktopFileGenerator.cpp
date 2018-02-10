@@ -31,8 +31,8 @@
 
 int main( int argc, char *argv[] )
 {
-    KLocalizedString::setApplicationDomain("kcm_solid_actions");
     QCoreApplication application(argc, argv);
+    KLocalizedString::setApplicationDomain("kcm_solid_actions");
 
     // About data
     KAboutData aboutData(QStringLiteral("solid-action-desktop-gen"), i18n("Solid Action Desktop File Generator"), QStringLiteral("0.4"),
