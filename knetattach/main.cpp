@@ -26,13 +26,13 @@
 #include "knetattach.h"
 
 int main(int argc, char **argv) {
+    QApplication app(argc, argv);
     KLocalizedString::setApplicationDomain("knetattach5");
 
 	KAboutData aboutData(QLatin1String("knetattach"), i18n("KDE Network Wizard"), PROJECT_VERSION, i18n("KDE Network Wizard"),KAboutLicense::GPL, i18n("(c) 2004 George Staikos"), QLatin1String("http://www.kde.org/"));
 
 	aboutData.addAuthor(i18n("George Staikos"), i18n("Primary author and maintainer"), "staikos@kde.org");
 
-    QApplication app(argc, argv);
     QCommandLineParser parser;
     KAboutData::setApplicationData(aboutData);
     parser.addVersionOption();
