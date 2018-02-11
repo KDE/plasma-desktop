@@ -35,7 +35,7 @@ class DeviceAutomounterKCM : public KCModule, public Ui::DeviceAutomounterKCM
 
 public:
     explicit DeviceAutomounterKCM(QWidget *parent = nullptr, const QVariantList &args = QVariantList());
-    virtual ~DeviceAutomounterKCM();
+    ~DeviceAutomounterKCM() override;
 
 public slots:
     void load() override;

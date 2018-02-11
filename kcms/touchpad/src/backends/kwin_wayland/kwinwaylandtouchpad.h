@@ -104,7 +104,7 @@ class KWinWaylandTouchpad : public QObject
 
 public:
     KWinWaylandTouchpad(QString dbusName);
-    virtual ~KWinWaylandTouchpad();
+    ~KWinWaylandTouchpad() override;
 
     bool init();
 

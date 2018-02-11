@@ -30,7 +30,7 @@ template <typename T> class QList;
 class KeyboardLayoutActionCollection : public KActionCollection {
 public:
 	KeyboardLayoutActionCollection(QObject* parent, bool configAction);
-	virtual ~KeyboardLayoutActionCollection();
+	~KeyboardLayoutActionCollection() override;
 
 	QAction* getToggleAction();
 //	KAction* getAction(const LayoutUnit& layoutUnit);

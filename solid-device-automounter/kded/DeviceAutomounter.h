@@ -28,7 +28,7 @@ class DeviceAutomounter : public KDEDModule
     Q_OBJECT
 public:
     explicit DeviceAutomounter(QObject *parent = nullptr, const QVariantList &args = QVariantList());
-    virtual ~DeviceAutomounter();
+    ~DeviceAutomounter() override;
 
 private slots:
     void init();

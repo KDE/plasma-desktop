@@ -56,7 +56,7 @@ public:
     };
 
     explicit DirModel(QObject* parent=nullptr);
-    virtual ~DirModel();
+    ~DirModel() override;
 
     QHash<int, QByteArray> roleNames() const override;
 

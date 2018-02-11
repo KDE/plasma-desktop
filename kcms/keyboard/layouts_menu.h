@@ -35,7 +35,7 @@ class LayoutsMenu : public QObject
 
 public:
 	LayoutsMenu(const KeyboardConfig& keyboardConfig, const Rules& rules, Flags& flags);
-	virtual ~LayoutsMenu();
+	~LayoutsMenu() override;
 
 	QList<QAction*> contextualActions();
 	static int switchToLayout(const LayoutUnit& layoutUnit, const KeyboardConfig& keyboardConfig);

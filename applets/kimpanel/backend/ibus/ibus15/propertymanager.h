@@ -25,7 +25,7 @@
 class PropertyManager {
 public:
     PropertyManager();
-    virtual ~PropertyManager();
+    ~PropertyManager() override;
 
     void setProperties(IBusPropList* props);
     void updateProperty(IBusProperty* prop);

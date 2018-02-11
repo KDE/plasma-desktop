@@ -46,7 +46,7 @@ class CfgComponent: public QWidget, public Ui::ComponentConfig_UI, public CfgPlu
 Q_OBJECT
 public:
 	CfgComponent(QWidget *parent);
-	virtual ~CfgComponent();
+	~CfgComponent() override;
 	void load(KConfig *cfg) override;
 	void save(KConfig *cfg) override;
 	void defaults() override;
@@ -67,7 +67,7 @@ Q_OBJECT
 
 public:
 	ComponentChooser(QWidget *parent=0);
-	virtual ~ComponentChooser();
+	~ComponentChooser() override;
 	void load();
 	void save();
 	void restoreDefault();

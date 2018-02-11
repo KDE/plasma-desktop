@@ -46,7 +46,7 @@ class CFontPreview : public QWidget
     public:
 
     CFontPreview(QWidget *parent);
-    virtual ~CFontPreview();
+    ~CFontPreview() override;
 
     void        paintEvent(QPaintEvent *) override;
     void        mouseMoveEvent(QMouseEvent *event) override;

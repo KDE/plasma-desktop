@@ -29,7 +29,7 @@ class CfgFileManager: public QWidget, public Ui::FileManagerConfig_UI, public Cf
     Q_OBJECT
 public:
     CfgFileManager(QWidget *parent);
-    virtual ~CfgFileManager();
+    ~CfgFileManager() override;
     void load(KConfig *cfg) override;
     void save(KConfig *cfg) override;
     void defaults() override;

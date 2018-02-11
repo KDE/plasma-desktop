@@ -26,7 +26,7 @@ class CfgEmailClient: public QWidget, public Ui::EmailClientConfig_UI, public Cf
     Q_OBJECT
 public:
     CfgEmailClient(QWidget *parent);
-    virtual ~CfgEmailClient();
+    ~CfgEmailClient() override;
     void load(KConfig *cfg) override;
     void save(KConfig *cfg) override;
     void defaults() override;

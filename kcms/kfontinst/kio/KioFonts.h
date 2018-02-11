@@ -51,7 +51,7 @@ class CKioFonts : public KIO::SlaveBase
     };
 
     CKioFonts(const QByteArray &pool, const QByteArray &app);
-    virtual ~CKioFonts();
+    ~CKioFonts() override;
 
     void listDir(const QUrl &url) override;
     void put(const QUrl &url, int permissions, KIO::JobFlags flags) override;

@@ -35,7 +35,7 @@ public:
 
     ExportSchemeDialog (QStringList components, QWidget *parent=NULL);
 
-    virtual ~ExportSchemeDialog();
+    ~ExportSchemeDialog() override;
 
     // Get the list of currently selected components
     QStringList selectedComponents() const;

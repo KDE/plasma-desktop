@@ -196,7 +196,7 @@ class CFamilyItem : public CFontModelItem
     };
 
     CFamilyItem(CFontList &p, const Family &f, bool sys);
-    virtual ~CFamilyItem();
+    ~CFamilyItem() override;
 
     bool operator==(const CFamilyItem &other) const       { return itsName==other.itsName; }
 

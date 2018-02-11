@@ -64,7 +64,7 @@ protected:
 
 public:
     explicit KbPreviewFrame(QWidget *parent = 0);
-    virtual ~KbPreviewFrame();
+    ~KbPreviewFrame() override;
     void paintEvent(QPaintEvent *event) override;
     void generateKeyboardLayout(const QString &layout, const QString &layoutVariant, const QString &model);
     int getWidth() const;

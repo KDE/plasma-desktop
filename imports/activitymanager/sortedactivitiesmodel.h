@@ -40,7 +40,7 @@ class SortedActivitiesModel : public QSortFilterProxyModel {
 
 public:
     SortedActivitiesModel(const QVector<KActivities::Info::State> &states, QObject *parent = nullptr);
-    virtual ~SortedActivitiesModel();
+    ~SortedActivitiesModel() override;
 
     QVariant data(const QModelIndex & index, int role = Qt::DisplayRole) const override;
 

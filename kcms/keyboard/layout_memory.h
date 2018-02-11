@@ -52,7 +52,7 @@ public Q_SLOTS:
 
 public:
 	LayoutMemory(const KeyboardConfig& keyboardConfig);
-	virtual ~LayoutMemory();
+	~LayoutMemory() override;
 
 	void configChanged();
 

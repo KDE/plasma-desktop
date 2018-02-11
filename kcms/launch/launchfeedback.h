@@ -33,7 +33,7 @@ class LaunchFeedback : public KQuickAddons::ConfigModule
 
     public:
         explicit LaunchFeedback(QObject* parent = 0, const QVariantList &list = QVariantList());
-        virtual ~LaunchFeedback();
+        ~LaunchFeedback() override;
 
         int busyCursorCurrentIndex() const;
         void setBusyCursorCurrentIndex(int index);

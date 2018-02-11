@@ -37,7 +37,7 @@ class IconThemesConfig : public KCModule
 
 public:
   IconThemesConfig(QWidget *parent);
-  virtual ~IconThemesConfig();
+  ~IconThemesConfig() override;
 
   void loadThemes();
   bool installThemes(const QStringList &themes, const QString &archiveName);

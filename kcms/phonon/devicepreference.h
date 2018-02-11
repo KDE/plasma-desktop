@@ -40,7 +40,7 @@ class DevicePreference : public QWidget, private Ui::DevicePreference
     Q_OBJECT
 public:
     explicit DevicePreference(QWidget *parent = 0);
-    virtual ~DevicePreference();
+    ~DevicePreference() override;
 
     void load();
     void save();

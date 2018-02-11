@@ -64,7 +64,7 @@ public:
      };
 
     explicit PagerModel(QObject *parent = nullptr);
-    virtual ~PagerModel();
+    ~PagerModel() override;
 
     QHash<int, QByteArray> roleNames() const override;
 

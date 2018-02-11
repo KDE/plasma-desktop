@@ -36,7 +36,7 @@ class PreviewWidget : public QFrame, Ui::preview
 
 public:
     PreviewWidget(QWidget *parent);
-    virtual ~PreviewWidget();
+    ~PreviewWidget() override;
 
     void setPalette(const KSharedConfigPtr &config,
                     QPalette::ColorGroup state = QPalette::Active);

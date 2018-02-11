@@ -45,7 +45,7 @@ class KCMTranslations : public KCModule
 
 public:
     KCMTranslations(QWidget *parent, const QVariantList &);
-    virtual ~KCMTranslations();
+    ~KCMTranslations() override;
 
     void load() override;
     void save() override;

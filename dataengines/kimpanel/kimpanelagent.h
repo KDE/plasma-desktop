@@ -37,7 +37,7 @@ class PanelAgent: public QObject, protected QDBusContext
 
 public:
     PanelAgent(QObject *parent);
-    virtual ~PanelAgent();
+    ~PanelAgent() override;
 
     void configure();
     void created();

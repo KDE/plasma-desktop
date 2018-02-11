@@ -30,7 +30,7 @@
 class EngineManager {
 public:
     EngineManager();
-    virtual ~EngineManager();
+    ~EngineManager() override;
 
     void setEngines(IBusEngineDesc** engines);
     IBusEngineDesc** engines() { return m_engines; }

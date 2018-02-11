@@ -71,7 +71,7 @@ Q_SIGNALS:
 
 public:
     KeyboardDaemon(QObject *parent, const QList<QVariant>&);
-    virtual ~KeyboardDaemon();
+    ~KeyboardDaemon() override;
 };
 
 #endif /* KEYBOARD_DAEMON_H_ */

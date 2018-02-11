@@ -26,7 +26,7 @@ class CfgTerminalEmulator: public QWidget, public Ui::TerminalEmulatorConfig_UI,
     Q_OBJECT
 public:
 	CfgTerminalEmulator(QWidget *parent);
-	virtual ~CfgTerminalEmulator();
+	~CfgTerminalEmulator() override;
 	void load(KConfig *cfg) override;
 	void save(KConfig *cfg) override;
 	void defaults() override;

@@ -36,7 +36,7 @@ public:
     };
 
     explicit WindowModel(PagerModel *parent);
-    virtual ~WindowModel();
+    ~WindowModel() override;
 
     QHash<int, QByteArray> roleNames() const override;
 

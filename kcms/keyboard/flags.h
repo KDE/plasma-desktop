@@ -40,7 +40,7 @@ class Flags : public QObject
 
 public:
 	Flags();
-	virtual ~Flags();
+	~Flags() override;
 
 	const QIcon getIcon(const QString& layout);
 	const QIcon getIconWithText(const LayoutUnit& layoutUnit, const KeyboardConfig& keyboardConfig);

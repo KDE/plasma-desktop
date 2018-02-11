@@ -41,7 +41,7 @@ class FontInstInterface : public QObject
     public:
 
     FontInstInterface();
-    virtual ~FontInstInterface();
+    ~FontInstInterface() override;
 
     int      install(const QString &file, bool toSystem);
     int      uninstall(const QString &name, bool fromSystem);

@@ -51,7 +51,7 @@ class Backend : public QObject, protected QDBusContext
 
 public:
     explicit Backend(QObject *parent = nullptr);
-    virtual ~Backend();
+    ~Backend() override;
 
     bool available() const;
     bool hasLauncher(const QString &storageId) const;

@@ -47,7 +47,7 @@ class KdePlatformDependent : public QObject, public Attica::PlatformDependent
 
 public:
     KdePlatformDependent();
-    virtual ~KdePlatformDependent();
+    ~KdePlatformDependent() override;
     QList<QUrl> getDefaultProviderFiles() const override;
     void addDefaultProviderFile(const QUrl& url) override;
     void removeDefaultProviderFile(const QUrl& url) override;

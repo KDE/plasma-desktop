@@ -62,7 +62,7 @@ class CKCmFontInst : public KCModule
     public:
 
     explicit CKCmFontInst(QWidget *parent=NULL, const QVariantList &list=QVariantList());
-    virtual ~CKCmFontInst();
+    ~CKCmFontInst() override;
 
     public Q_SLOTS:
 

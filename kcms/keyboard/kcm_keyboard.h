@@ -32,7 +32,7 @@ Q_OBJECT
 
 public:
 	KCMKeyboard(QWidget *parent, const QVariantList &);
-	virtual ~KCMKeyboard();
+	~KCMKeyboard() override;
 
 	void save() override;
 	void load() override;

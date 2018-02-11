@@ -36,7 +36,7 @@ class KCMKNotify : public KCModule
 
 public:
     KCMKNotify(QWidget *parent, const QVariantList &);
-    virtual ~KCMKNotify();
+    ~KCMKNotify() override;
 
     void defaults() override;
     void save() override;

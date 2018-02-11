@@ -33,7 +33,7 @@ class KAccessConfig : public KCModule
 public:
 
     KAccessConfig(QWidget *parent, const QVariantList&);
-    virtual ~KAccessConfig();
+    ~KAccessConfig() override;
 
     void load() override;
     void save() override;

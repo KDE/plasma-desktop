@@ -24,7 +24,7 @@ class CfgBrowser: public QWidget, public Ui::BrowserConfig_UI, public CfgPlugin
 Q_OBJECT
 public:
 	CfgBrowser(QWidget *parent);
-	virtual ~CfgBrowser();
+	~CfgBrowser() override;
 	void load(KConfig *cfg) override;
 	void save(KConfig *cfg) override;
 	void defaults() override;
