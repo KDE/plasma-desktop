@@ -319,6 +319,28 @@ Kicker.DashboardWindow {
             flat: false
 
             onClicked: searchField.clear();
+
+            Keys.onPressed: {
+                if (event.key == Qt.Key_Tab) {
+                    event.accepted = true;
+
+                    if (runnerModel.count) {
+                        mainColumn.tryActivate(0, 0);
+                    } else {
+                        systemFavoritesGrid.tryActivate(0, 0);
+                    }
+                } else if (event.key == Qt.Key_Backtab) {
+                    event.accepted = true;
+
+                    if (tabBar.visible) {
+                        tabBar.focus = true;
+                    } else if (globalFavoritesGrid.enabled) {
+                        globalFavoritesGrid.tryActivate(0, 0);
+                    } else {
+                        systemFavoritesGrid.tryActivate(0, 0);
+                    }
+                }
+            }
         }
 
         Row {
@@ -338,8 +360,6 @@ Kicker.DashboardWindow {
 
             Item {
                 id: favoritesColumn
-
-
 
                 anchors {
                     top: parent.top
@@ -438,6 +458,23 @@ Kicker.DashboardWindow {
                         systemFavoritesGrid.tryActivate(0, currentCol());
                     }
 
+                    Keys.onPressed: {
+                        if (event.key == Qt.Key_Tab) {
+                            event.accepted = true;
+
+                            if (tabBar.visible) {
+                                tabBar.focus = true;
+                            } else if (searching) {
+                                cancelSearchButton.focus = true;
+                            } else {
+                                mainColumn.tryActivate(0, 0);
+                            }
+                        } else if (event.key == Qt.Key_Backtab) {
+                            event.accepted = true;
+                            systemFavoritesGrid.tryActivate(0, 0);
+                        }
+                    }
+
                     Binding {
                         target: globalFavorites
                         property: "iconSize"
@@ -476,6 +513,32 @@ Kicker.DashboardWindow {
 
                     onKeyNavUp: {
                         globalFavoritesGrid.tryActivate(globalFavoritesGrid.rows - 1, currentCol());
+                    }
+
+                    Keys.onPressed: {
+                        if (event.key == Qt.Key_Tab) {
+                            event.accepted = true;
+
+                            if (globalFavoritesGrid.enabled) {
+                                globalFavoritesGrid.tryActivate(0, 0);
+                            } else if (tabBar.visible) {
+                                tabBar.focus = true;
+                            } else if (searching && !runnerModel.count) {
+                                cancelSearchButton.focus = true;
+                            } else {
+                                mainColumn.tryActivate(0, 0);
+                            }
+                        } else if (event.key == Qt.Key_Backtab) {
+                            event.accepted = true;
+
+                            if (filterList.enabled) {
+                                filterList.forceActiveFocus();
+                            } else if (searching && !runnerModel.count) {
+                                cancelSearchButton.focus = true;
+                            } else {
+                                mainColumn.tryActivate(0, 0);
+                            }
+                        }
                     }
                 }
             }
@@ -691,6 +754,30 @@ Kicker.DashboardWindow {
                         var target = row + 1 > globalFavoritesGrid.rows ? systemFavoritesGrid : globalFavoritesGrid;
                         var targetRow = row + 1 > globalFavoritesGrid.rows ? row - globalFavoritesGrid.rows : row;
                         target.tryActivate(targetRow, favoritesColumn.columns - 1);
+                    }
+                }
+
+                Keys.onPressed: {
+                    if (event.key == Qt.Key_Tab) {
+                        event.accepted = true;
+
+                        if (filterList.enabled) {
+                            filterList.forceActiveFocus();
+                        } else {
+                            systemFavoritesGrid.tryActivate(0, 0);
+                        }
+                    } else if (event.key == Qt.Key_Backtab) {
+                        event.accepted = true;
+
+                        if (searching) {
+                            cancelSearchButton.focus = true;
+                        } else if (tabBar.visible) {
+                            tabBar.focus = true;
+                        } else if (globalFavoritesGrid.enabled) {
+                            globalFavoritesGrid.tryActivate(0, 0);
+                        } else {
+                            systemFavoritesGrid.tryActivate(0, 0);
+                        }
                     }
                 }
             }
@@ -953,6 +1040,12 @@ Kicker.DashboardWindow {
 
                                 var currentRow = Math.max(0, Math.ceil(currentItem.y / mainGrid.cellHeight) - 1);
                                 mainColumn.tryActivate(currentRow, mainColumn.columns - 1);
+                            } else if (event.key == Qt.Key_Tab) {
+                                event.accepted = true;
+                                systemFavoritesGrid.tryActivate(0, 0);
+                            } else if (event.key == Qt.Key_Backtab) {
+                                event.accepted = true;
+                                mainColumn.tryActivate(0, 0);
                             }
                         }
                     }

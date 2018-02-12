@@ -179,7 +179,9 @@ void DashboardWindow::keyPressEvent(QKeyEvent *e)
         && !(e->key() == Qt::Key_PageDown)
         && !(e->key() == Qt::Key_Enter)
         && !(e->key() == Qt::Key_Return)
-        && !(e->key() == Qt::Key_Menu)) {
+        && !(e->key() == Qt::Key_Menu)
+        && !(e->key() == Qt::Key_Tab)
+        && !(e->key() == Qt::Key_Backtab)) {
 
         QPointer<QQuickItem> previousFocusItem = activeFocusItem();
 
