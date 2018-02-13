@@ -83,7 +83,7 @@ QVariant RunnerMatchesModel::data(const QModelIndex &index, int role) const
         class MyRunner : public Plasma::AbstractRunner
         {
             public:
-                using Plasma::AbstractRunner::actions;;
+                using Plasma::AbstractRunner::actions;
         };
 
         MyRunner *runner = static_cast<MyRunner *>(match.runner());
