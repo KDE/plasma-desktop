@@ -270,6 +270,7 @@ Item {
                     windowPin = windowPinComponent.createObject(label);
                 } else if (windowPin) {
                     windowPin.destroy();
+                    windowPin = null;
                 }
             }
 

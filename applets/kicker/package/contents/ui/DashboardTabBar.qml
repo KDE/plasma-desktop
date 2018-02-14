@@ -66,5 +66,25 @@ Row {
             activeTab = 1;
         }
     }
+
+    Keys.onPressed: {
+        if (event.key == Qt.Key_Tab) {
+            event.accepted = true;
+
+            if (searching) {
+                cancelSearchButton.focus = true;
+            } else {
+                mainColumn.tryActivate(0, 0);
+            }
+        } else if (event.key == Qt.Key_Backtab) {
+            event.accepted = true;
+
+            if (globalFavoritesGrid.enabled) {
+                globalFavoritesGrid.tryActivate(0, 0);
+            } else {
+                systemFavoritesGrid.tryActivate(0, 0);
+            }
+        }
+    }
 }
 
