@@ -317,18 +317,18 @@ void CFontViewPart::timeout()
                                 ((KArchiveFile *)entry)->copyTo(itsTempDir->path());
 
                                 QMimeDatabase db;
-                                QString mime(db.mimeTypeForFile(itsTempDir->path()+QLatin1Char('/')+entry->name()).name());
+                                QString mime(db.mimeTypeForFile(itsTempDir->filePath(entry->name())).name());
 
                                 if(mime=="font/ttf" || mime=="font/otf" || mime=="application/x-font-ttf" ||
                                    mime=="application/x-font-otf" || mime=="application/x-font-type1")
                                 {
-                                    fontFile=itsTempDir->path()+QLatin1Char('/')+entry->name();
+                                    fontFile=itsTempDir->filePath(entry->name());
                                     //setLocalFilePath(itsTempDir->path()+QLatin1Char('/')+entry->name());
 //                                    itsMetaUrl=QUrl::fromLocalFile(localFilePath());
                                     break;
                                 }
                                 else
-                                    ::unlink(QFile::encodeName(itsTempDir->path()+QLatin1Char('/')+entry->name()).data());
+                                    ::unlink(QFile::encodeName(itsTempDir->filePath(entry->name())).data());
                             }
                         }
                     }

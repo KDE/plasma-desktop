@@ -77,12 +77,12 @@ QSet<QUrl> extract(const QString &fileName, QTemporaryDir **tempDir)
                         // unhide 1st!
                         if(Misc::isHidden(name))
                         {
-                            ::rename(QFile::encodeName((*tempDir)->path()+QLatin1Char('/')+name).data(),
-                                     QFile::encodeName((*tempDir)->path()+QLatin1Char('/')+name.mid(1)).data());
+                            ::rename(QFile::encodeName((*tempDir)->filePath(name)).data(),
+                                     QFile::encodeName((*tempDir)->filePath(name.mid(1))).data());
                             name=name.mid(1);
                         }
 
-                        urls.insert(QUrl((*tempDir)->path()+QLatin1Char('/')+name));
+                        urls.insert(QUrl((*tempDir)->filePath(name)));
                     }
                 }
             }

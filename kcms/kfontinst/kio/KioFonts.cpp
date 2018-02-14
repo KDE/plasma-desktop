@@ -234,7 +234,7 @@ void CKioFonts::put(const QUrl &url, int /*permissions*/, KIO::JobFlags /*flags*
             itsTempDir->setAutoRemove(true);
         }
 
-        QString tempFile(itsTempDir->path()+QLatin1Char('/')+url.fileName());
+        QString tempFile(itsTempDir->filePath(url.fileName()));
         QFile   dest(tempFile);
 
         if (dest.open(QIODevice::WriteOnly))

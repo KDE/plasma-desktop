@@ -713,7 +713,7 @@ QString CJobRunner::fileName(const QUrl &url)
                 itsTempDir->setAutoRemove(true);
             }
 
-            QString tempName(itsTempDir->path()+QLatin1Char('/')+Misc::getFile(url.path()));
+            QString tempName(itsTempDir->filePath(Misc::getFile(url.path())));
             auto job = KIO::file_copy(url, QUrl::fromLocalFile(tempName), -1, KIO::Overwrite);
             if (job->exec())
                 return tempName;

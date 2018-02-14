@@ -91,16 +91,16 @@ bool CFontThumbnail::create(const QString &path, int width, int height, QImage &
 
                             ((KArchiveFile *)entry)->copyTo(tempDir->path());
 
-                            QString mime(db.mimeTypeForFile(tempDir->path()+QLatin1Char('/')+entry->name()).name());
+                            QString mime(db.mimeTypeForFile(tempDir->filePath(entry->name())).name());
 
                             if(mime=="font/ttf" || mime=="font/otf" || mime=="application/x-font-ttf" ||
                                mime=="application/x-font-otf" || mime=="application/x-font-type1")
                             {
-                                realPath=tempDir->path()+QLatin1Char('/')+entry->name();
+                                realPath=tempDir->filePath(entry->name());
                                 break;
                             }
                             else
-                                ::unlink(QFile::encodeName(tempDir->path()+QLatin1Char('/')+entry->name()).data());
+                                ::unlink(QFile::encodeName(tempDir->filePath(entry->name())).data());
                         }
                     }
                 }
