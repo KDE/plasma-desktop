@@ -164,6 +164,13 @@ void XlibBackend::setTouchpadEnabled(bool enable)
     }
 
     m_device->setEnabled(enable);
+
+    // FIXME? This should not be needed, m_notifications should trigger
+    // a propertyChanged signal when we enable/disable the touchpad,
+    // that will emit touchpadStateChanged, but for some reason
+    // XlibNotifications is not getting the property change events
+    // so we just emit touchpadStateChanged from here as a workaround
+    Q_EMIT touchpadStateChanged();
 }
 
 void XlibBackend::setTouchpadOff(TouchpadBackend::TouchpadOffState state)
