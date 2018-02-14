@@ -24,15 +24,20 @@
 #include "abstractmodel.h"
 #include "appentry.h"
 
+#include <QQmlParserStatus>
+
 #include <KServiceGroup>
 
 class AppGroupEntry;
 
 class QTimer;
 
-class AppsModel : public AbstractModel
+class AppsModel : public AbstractModel, public QQmlParserStatus
 {
     Q_OBJECT
+    Q_INTERFACES(QQmlParserStatus)
+
+    Q_PROPERTY(bool autoPopulate READ autoPopulate WRITE setAutoPopulate NOTIFY autoPopulateChanged)
 
     Q_PROPERTY(bool paginate READ paginate WRITE setPaginate NOTIFY paginateChanged)
     Q_PROPERTY(int pageSize READ pageSize WRITE setPageSize NOTIFY pageSizeChanged)
@@ -59,6 +64,9 @@ class AppsModel : public AbstractModel
         int rowCount(const QModelIndex &parent = QModelIndex()) const override;
 
         Q_INVOKABLE bool trigger(int row, const QString &actionId, const QVariant &argument) override;
+
+        bool autoPopulate() const;
+        void setAutoPopulate(bool populate);
 
         Q_INVOKABLE AbstractModel *modelForRow(int row) override;
         Q_INVOKABLE int rowForModel(AbstractModel *model) override;
@@ -93,8 +101,12 @@ class AppsModel : public AbstractModel
 
         void entryChanged(AbstractEntry *entry) override;
 
+        void classBegin() override;
+        void componentComplete() override;
+
     Q_SIGNALS:
         void cleared() const;
+        void autoPopulateChanged() const;
         void paginateChanged() const;
         void pageSizeChanged() const;
         void flatChanged() const;
@@ -110,6 +122,8 @@ class AppsModel : public AbstractModel
 
     protected:
         void refreshInternal();
+
+        bool m_complete;
 
         bool m_paginate;
         int m_pageSize;
@@ -128,6 +142,8 @@ class AppsModel : public AbstractModel
     private:
         void processServiceGroup(KServiceGroup::Ptr group);
         void sortEntries();
+
+        bool m_autoPopulate;
 
         QString m_description;
         QString m_entryPath;

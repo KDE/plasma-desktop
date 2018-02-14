@@ -63,10 +63,8 @@ AbstractModel *GroupEntry::childModel() const
 }
 
 RootModel::RootModel(QObject *parent) : AppsModel(QString(), parent)
-, m_complete(false)
 , m_favorites(new KAStatsFavoritesModel(this))
 , m_systemModel(nullptr)
-, m_autoPopulate(true)
 , m_showAllApps(false)
 , m_showRecentApps(true)
 , m_showRecentDocs(true)
@@ -143,20 +141,6 @@ bool RootModel::trigger(int row, const QString& actionId, const QVariant& argume
     }
 
     return AppsModel::trigger(row, actionId, argument);
-}
-
-bool RootModel::autoPopulate() const
-{
-    return m_autoPopulate;
-}
-
-void RootModel::setAutoPopulate(bool populate)
-{
-    if (m_autoPopulate != populate) {
-        m_autoPopulate = populate;
-
-        emit autoPopulateChanged();
-    }
 }
 
 bool RootModel::showAllApps() const
@@ -267,19 +251,6 @@ AbstractModel* RootModel::systemFavoritesModel()
     }
 
     return nullptr;
-}
-
-void RootModel::classBegin()
-{
-}
-
-void RootModel::componentComplete()
-{
-    m_complete = true;
-
-    if (m_autoPopulate) {
-        refresh();
-    }
 }
 
 void RootModel::refresh()

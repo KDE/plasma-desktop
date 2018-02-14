@@ -68,6 +68,8 @@ Item {
     Kicker.AppsModel {
         id: rootModel
 
+        autoPopulate: false
+
         appletInterface: plasmoid
 
         appNameFormat: plasmoid.configuration.showAppsByName ? 0 : 1

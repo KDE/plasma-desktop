@@ -33,6 +33,7 @@
 AppsModel::AppsModel(const QString &entryPath, bool paginate, int pageSize, bool flat,
     bool sorted, bool separators, QObject *parent)
 : AbstractModel(parent)
+, m_complete(false)
 , m_paginate(paginate)
 , m_pageSize(pageSize)
 , m_deleteEntriesOnDestruction(true)
@@ -40,6 +41,7 @@ AppsModel::AppsModel(const QString &entryPath, bool paginate, int pageSize, bool
 , m_showSeparators(separators)
 , m_showTopLevelItems(false)
 , m_appletInterface(nullptr)
+, m_autoPopulate(true)
 , m_description(i18n("Applications"))
 , m_entryPath(entryPath)
 , m_staticEntryList(false)
@@ -55,6 +57,7 @@ AppsModel::AppsModel(const QString &entryPath, bool paginate, int pageSize, bool
 
 AppsModel::AppsModel(const QList<AbstractEntry *> entryList, bool deleteEntriesOnDestruction, QObject *parent)
 : AbstractModel(parent)
+, m_complete(false)
 , m_paginate(false)
 , m_pageSize(24)
 , m_deleteEntriesOnDestruction(deleteEntriesOnDestruction)
@@ -62,6 +65,7 @@ AppsModel::AppsModel(const QList<AbstractEntry *> entryList, bool deleteEntriesO
 , m_showSeparators(false)
 , m_showTopLevelItems(false)
 , m_appletInterface(nullptr)
+, m_autoPopulate(true)
 , m_description(i18n("Applications"))
 , m_entryPath(QString())
 , m_staticEntryList(true)
@@ -94,6 +98,20 @@ AppsModel::~AppsModel()
 {
     if (m_deleteEntriesOnDestruction) {
         qDeleteAll(m_entryList);
+    }
+}
+
+bool AppsModel::autoPopulate() const
+{
+    return m_autoPopulate;
+}
+
+void AppsModel::setAutoPopulate(bool populate)
+{
+    if (m_autoPopulate != populate) {
+        m_autoPopulate = populate;
+
+        emit autoPopulateChanged();
     }
 }
 
@@ -419,6 +437,10 @@ QStringList AppsModel::hiddenEntries() const
 
 void AppsModel::refresh()
 {
+    if (m_complete) {
+        return;
+    }
+
     if (m_staticEntryList) {
         return;
     }
@@ -689,5 +711,19 @@ void AppsModel::entryChanged(AbstractEntry *entry)
     if (i != -1) {
         QModelIndex idx = index(i, 0);
         emit dataChanged(idx, idx);
+    }
+}
+
+void AppsModel::classBegin()
+{
+
+}
+
+void AppsModel::componentComplete()
+{
+    m_complete = true;
+
+    if (m_autoPopulate) {
+        refresh();
     }
 }
