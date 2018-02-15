@@ -39,12 +39,12 @@ target_link_libraries(kcm_keys
     KF5::ItemModels
 )
 
-install(TARGETS kcm_keys  DESTINATION ${PLUGIN_INSTALL_DIR} )
+install(TARGETS kcm_keys  DESTINATION ${KDE_INSTALL_PLUGINDIR} )
 
 
 ########### install files ###############
 
-install( FILES keys.desktop  DESTINATION  ${SERVICES_INSTALL_DIR} )
+install( FILES keys.desktop  DESTINATION  ${KDE_INSTALL_KSERVICES5DIR} )
 install( FILES
     schemes/kde3.kksrc
     schemes/kde4.kksrc
@@ -53,6 +53,6 @@ install( FILES
     schemes/win3.kksrc
     schemes/win4.kksrc
     schemes/wm3.kksrc
-    DESTINATION  ${DATA_INSTALL_DIR}/kcmkeys )
+    DESTINATION  ${KDE_INSTALL_DATADIR}/kcmkeys )
 
 

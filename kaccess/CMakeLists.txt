@@ -25,10 +25,10 @@ target_link_libraries(kdeinit_kaccess
     ${X11_LIBRARIES}
 )
 
-install(TARGETS kdeinit_kaccess ${INSTALL_TARGETS_DEFAULT_ARGS} )
-install(TARGETS kaccess         ${INSTALL_TARGETS_DEFAULT_ARGS} )
+install(TARGETS kdeinit_kaccess ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
+install(TARGETS kaccess         ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
 
 ########### install files ###############
 
-install( FILES kaccess.desktop  DESTINATION  ${SERVICES_INSTALL_DIR} )
-install( FILES kaccess.notifyrc  DESTINATION  ${KNOTIFYRC_INSTALL_DIR} )
+install( FILES kaccess.desktop  DESTINATION  ${KDE_INSTALL_KSERVICES5DIR} )
+install( FILES kaccess.notifyrc  DESTINATION  ${KDE_INSTALL_KNOTIFY5RCDIR} )

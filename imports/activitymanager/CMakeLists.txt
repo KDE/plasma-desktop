@@ -52,7 +52,7 @@ target_link_libraries (
 ## install
 
 install (TARGETS activityswitcherextensionplugin
-         DESTINATION ${QML_INSTALL_DIR}/org/kde/plasma/activityswitcher)
+         DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/activityswitcher)
 install (FILES qmldir
-         DESTINATION ${QML_INSTALL_DIR}/org/kde/plasma/activityswitcher)
+         DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/activityswitcher)
 

@@ -1,1 +1,1 @@
-install( FILES epo.png  DESTINATION  ${DATA_INSTALL_DIR}/kcmkeyboard/pics )
+install( FILES epo.png  DESTINATION  ${KDE_INSTALL_DATADIR}/kcmkeyboard/pics )

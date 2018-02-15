@@ -14,11 +14,11 @@ target_link_libraries(kcm_knotify
                         KF5::KDELibs4Support
                         )
 
-install(TARGETS kcm_knotify  DESTINATION ${PLUGIN_INSTALL_DIR} )
+install(TARGETS kcm_knotify  DESTINATION ${KDE_INSTALL_PLUGINDIR} )
 
 
 ########### install files ###############
 
-install( FILES kcmnotify.desktop  DESTINATION  ${SERVICES_INSTALL_DIR} )
+install( FILES kcmnotify.desktop  DESTINATION  ${KDE_INSTALL_KSERVICES5DIR} )
 
 

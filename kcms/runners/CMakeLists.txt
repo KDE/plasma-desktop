@@ -20,5 +20,5 @@ target_link_libraries(kcm_plasmasearch
 )
 
 
-install(FILES kcm_plasmasearch.desktop DESTINATION ${SERVICES_INSTALL_DIR})
-install(TARGETS kcm_plasmasearch DESTINATION ${PLUGIN_INSTALL_DIR})
+install(FILES kcm_plasmasearch.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
+install(TARGETS kcm_plasmasearch DESTINATION ${KDE_INSTALL_PLUGINDIR})

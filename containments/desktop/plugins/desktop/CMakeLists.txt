@@ -3,7 +3,7 @@ set(desktopplugin_SRCS
     infonotification.cpp
 )
 
-install(FILES qmldir DESTINATION ${QML_INSTALL_DIR}/org/kde/private/desktopcontainment/desktop)
+install(FILES qmldir DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/private/desktopcontainment/desktop)
 
 add_library(desktopplugin SHARED ${desktopplugin_SRCS})
 
@@ -14,4 +14,4 @@ target_link_libraries(desktopplugin
                       Qt5::Widgets
                       KF5::Notifications)
 
-install(TARGETS desktopplugin DESTINATION ${QML_INSTALL_DIR}/org/kde/private/desktopcontainment/desktop)
+install(TARGETS desktopplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/private/desktopcontainment/desktop)

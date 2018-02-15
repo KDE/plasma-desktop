@@ -126,13 +126,13 @@
 #cmakedefine KDE_DEFAULT_HOME "${KDE_DEFAULT_HOME}"
 
 /* KDE's binaries directory */
-#define KDE_BINDIR "${BIN_INSTALL_DIR}"
+#define KDE_BINDIR "${KDE_INSTALL_BINDIR}"
 
 /* KDE's configuration directory */
-#define KDE_CONFDIR "${CONFIG_INSTALL_DIR}"
+#define KDE_CONFDIR "${KDE_INSTALL_CONFDIR}"
 
 /* KDE's static data directory */
-#define KDE_DATADIR "${DATA_INSTALL_DIR}"
+#define KDE_DATADIR "${KDE_INSTALL_DATADIR}"
 
 /* Define where your java executable is */
 #undef PATH_JAVA

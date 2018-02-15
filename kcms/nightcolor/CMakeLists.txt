@@ -17,8 +17,8 @@ target_link_libraries(kcm_nightcolor
 kcoreaddons_desktop_to_json(kcm_nightcolor "kcm_nightcolor.desktop" SERVICE_TYPES kcmodule.desktop)
 
 #this desktop file is installed only for retrocompatibility with sycoca
-install(FILES kcm_nightcolor.desktop DESTINATION ${SERVICES_INSTALL_DIR})
+install(FILES kcm_nightcolor.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
 
-install(TARGETS kcm_nightcolor DESTINATION ${PLUGIN_INSTALL_DIR}/kcms)
+install(TARGETS kcm_nightcolor DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms)
 
 kpackage_install_package(package kcm_nightcolor kcms)

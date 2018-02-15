@@ -54,7 +54,7 @@ ecm_qt_declare_logging_category(kickerplugin_SRCS
 qt5_add_dbus_interface(kickerplugin_SRCS ${KRUNNERAPP_INTERFACE} krunner_interface)
 qt5_add_dbus_interface(kickerplugin_SRCS ${KSMSERVER_DBUS_INTERFACE} ksmserver_interface)
 
-install(FILES plugin/qmldir DESTINATION ${QML_INSTALL_DIR}/org/kde/plasma/private/kicker)
+install(FILES plugin/qmldir DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/private/kicker)
 
 add_library(kickerplugin SHARED ${kickerplugin_SRCS})
 
@@ -86,4 +86,4 @@ if (${HAVE_APPSTREAMQT})
 target_link_libraries(kickerplugin AppStreamQt)
 endif()
 
-install(TARGETS kickerplugin DESTINATION ${QML_INSTALL_DIR}/org/kde/plasma/private/kicker)
+install(TARGETS kickerplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/private/kicker)

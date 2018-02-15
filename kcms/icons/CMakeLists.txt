@@ -31,11 +31,11 @@ file(GENERATE OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/config.h CONTENT "#define CMAKE
 add_executable(plasma-changeicons changeicons.cpp)
 target_link_libraries(plasma-changeicons PRIVATE Qt5::Core KF5::KIOWidgets KF5::IconThemes)
 
-install(TARGETS kcm_icons  DESTINATION ${PLUGIN_INSTALL_DIR} )
+install(TARGETS kcm_icons  DESTINATION ${KDE_INSTALL_PLUGINDIR} )
 
-install( FILES icons.desktop  DESTINATION  ${SERVICES_INSTALL_DIR} )
+install( FILES icons.desktop  DESTINATION  ${KDE_INSTALL_KSERVICES5DIR} )
 
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/icons.knsrc ${CMAKE_BINARY_DIR}/icons.knsrc)
-install( FILES ${CMAKE_BINARY_DIR}/icons.knsrc  DESTINATION  ${CONFIG_INSTALL_DIR} )
+install( FILES ${CMAKE_BINARY_DIR}/icons.knsrc  DESTINATION  ${KDE_INSTALL_CONFDIR} )
 
-install(TARGETS plasma-changeicons DESTINATION ${LIBEXEC_INSTALL_DIR} )
+install(TARGETS plasma-changeicons DESTINATION ${KDE_INSTALL_LIBEXECDIR} )

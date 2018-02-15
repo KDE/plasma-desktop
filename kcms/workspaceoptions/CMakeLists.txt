@@ -9,8 +9,8 @@ add_library(kcm_workspaceoptions MODULE ${kcm_workspaceoptions_PART_SRCS})
 
 target_link_libraries(kcm_workspaceoptions  KF5::KIOCore KF5::ConfigWidgets KF5::I18n)
 
-install(TARGETS kcm_workspaceoptions  DESTINATION ${PLUGIN_INSTALL_DIR} )
+install(TARGETS kcm_workspaceoptions  DESTINATION ${KDE_INSTALL_PLUGINDIR} )
 
 ########### install files ###############
 
-install( FILES workspaceoptions.desktop  DESTINATION  ${SERVICES_INSTALL_DIR} )
+install( FILES workspaceoptions.desktop  DESTINATION  ${KDE_INSTALL_KSERVICES5DIR} )

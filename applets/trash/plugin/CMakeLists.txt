@@ -14,6 +14,6 @@ target_link_libraries(trashplugin
         KF5::GuiAddons
         )
 
-install(TARGETS trashplugin DESTINATION ${QML_INSTALL_DIR}/org/kde/plasma/private/trash)
-install(FILES qmldir DESTINATION ${QML_INSTALL_DIR}/org/kde/plasma/private/trash)
+install(TARGETS trashplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/private/trash)
+install(FILES qmldir DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/private/trash)
 

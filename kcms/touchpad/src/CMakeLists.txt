@@ -84,27 +84,27 @@ target_link_libraries(kded_touchpad
 add_subdirectory(applet)
 
 install(FILES kcm/kcm_touchpad.desktop
-        DESTINATION ${SERVICES_INSTALL_DIR}
+        DESTINATION ${KDE_INSTALL_KSERVICES5DIR}
 )
 
 install(FILES kded/touchpaddaemon.kcfg
-        DESTINATION ${KCFG_INSTALL_DIR}
+        DESTINATION ${KDE_INSTALL_KCFGDIR}
 )
 install(FILES kded/kded_touchpad.desktop
-        DESTINATION ${SERVICES_INSTALL_DIR}/kded
+        DESTINATION ${KDE_INSTALL_KSERVICES5DIR}/kded
         RENAME touchpad.desktop
 )
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/org.kde.touchpad.xml
-        DESTINATION ${DBUS_INTERFACES_INSTALL_DIR}
+        DESTINATION ${KDE_INSTALL_DBUSINTERFACEDIR}
 )
 install(FILES kded/kcm_touchpad.notifyrc
-        DESTINATION ${KNOTIFYRC_INSTALL_DIR}
+        DESTINATION ${KDE_INSTALL_KNOTIFY5RCDIR}
 )
 
 install(TARGETS kded_touchpad
-        DESTINATION ${PLUGIN_INSTALL_DIR}
+        DESTINATION ${KDE_INSTALL_PLUGINDIR}
 )
 
 install(FILES kcm/xlib/touchpad.kcfg
-        DESTINATION ${KCFG_INSTALL_DIR}
+        DESTINATION ${KDE_INSTALL_KCFGDIR}
 )

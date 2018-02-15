@@ -10,8 +10,8 @@ target_link_libraries(kcm_emoticons
                       KF5::KDELibs4Support
                       KF5::Emoticons)
 
-install(TARGETS kcm_emoticons  DESTINATION ${PLUGIN_INSTALL_DIR} )
+install(TARGETS kcm_emoticons  DESTINATION ${KDE_INSTALL_PLUGINDIR} )
 
 ########### install files ###############
-install( FILES emoticons.desktop  DESTINATION  ${SERVICES_INSTALL_DIR} )
-install( FILES emoticons.knsrc  DESTINATION  ${CONFIG_INSTALL_DIR} )
+install( FILES emoticons.desktop  DESTINATION  ${KDE_INSTALL_KSERVICES5DIR} )
+install( FILES emoticons.knsrc  DESTINATION  ${KDE_INSTALL_CONFDIR} )

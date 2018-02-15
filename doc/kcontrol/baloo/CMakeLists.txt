@@ -1,3 +1,3 @@
 kdoctools_create_handbook(index.docbook
-                          INSTALL_DESTINATION ${HTML_INSTALL_DIR}/en
+                          INSTALL_DESTINATION ${KDE_INSTALL_DOCBUNDLEDIR}/en
                           SUBDIR kcontrol/baloo)

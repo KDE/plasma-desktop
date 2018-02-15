@@ -18,6 +18,6 @@ target_link_libraries(kcm_device_automounter
                       KF5::I18n
                       KF5::Solid)
 
-install(TARGETS kcm_device_automounter DESTINATION ${PLUGIN_INSTALL_DIR})
+install(TARGETS kcm_device_automounter DESTINATION ${KDE_INSTALL_PLUGINDIR})
 
-install(FILES device_automounter_kcm.desktop DESTINATION ${SERVICES_INSTALL_DIR})
+install(FILES device_automounter_kcm.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})

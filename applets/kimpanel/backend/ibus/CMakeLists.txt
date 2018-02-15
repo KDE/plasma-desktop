@@ -46,7 +46,7 @@ if(IBUS_FOUND AND GLIB2_FOUND AND GIO_FOUND AND GOBJECT_FOUND)
         set_target_properties(kimpanel-ibus-panel-launcher PROPERTIES AUTOMOC TRUE)
         target_link_libraries(kimpanel-ibus-panel-launcher Qt5::Core Qt5::DBus)
         target_include_directories(kimpanel-ibus-panel-launcher PRIVATE ${CMAKE_CURRENT_BINARY_DIR})
-        install(TARGETS kimpanel-ibus-panel kimpanel-ibus-panel-launcher DESTINATION ${LIBEXEC_INSTALL_DIR})
+        install(TARGETS kimpanel-ibus-panel kimpanel-ibus-panel-launcher DESTINATION ${KDE_INSTALL_LIBEXECDIR})
     endif()
 endif()
 

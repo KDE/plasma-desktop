@@ -16,5 +16,5 @@ target_link_libraries(kcm_autostart KF5::KCMUtils KF5::I18n KF5::KIOCore KF5::KI
 
 ########### install files ###############
 
-install(TARGETS kcm_autostart  DESTINATION ${PLUGIN_INSTALL_DIR} )
-install( FILES autostart.desktop   DESTINATION  ${SERVICES_INSTALL_DIR} )
+install(TARGETS kcm_autostart  DESTINATION ${KDE_INSTALL_PLUGINDIR} )
+install( FILES autostart.desktop   DESTINATION  ${KDE_INSTALL_KSERVICES5DIR} )

@@ -40,4 +40,4 @@ target_link_libraries(kapplymousetheme
     ${kcminput_backend_LIBS}
 )
 
-install(TARGETS kapplymousetheme ${INSTALL_TARGETS_DEFAULT_ARGS})
+install(TARGETS kapplymousetheme ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})

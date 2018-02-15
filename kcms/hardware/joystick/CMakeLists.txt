@@ -23,11 +23,11 @@ target_link_libraries(kcm_joystick
     KF5::KDELibs4Support
 )
 
-install(TARGETS kcm_joystick  DESTINATION ${PLUGIN_INSTALL_DIR} )
+install(TARGETS kcm_joystick  DESTINATION ${KDE_INSTALL_PLUGINDIR} )
 
 
 ########### install files ###############
 
-install( FILES joystick.desktop  DESTINATION  ${SERVICES_INSTALL_DIR} )
+install( FILES joystick.desktop  DESTINATION  ${KDE_INSTALL_KSERVICES5DIR} )
 
 #

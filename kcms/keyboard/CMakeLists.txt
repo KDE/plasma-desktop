@@ -76,7 +76,7 @@ if (HAVE_UDEV)
     target_link_libraries(kded_keyboard ${UDEV_LIBS})
 endif()
 
-install( TARGETS kded_keyboard DESTINATION ${PLUGIN_INSTALL_DIR}/kf5/kded )
+install( TARGETS kded_keyboard DESTINATION ${KDE_INSTALL_PLUGINDIR}/kf5/kded )
 
 ### kcm keyboard ###
 include_directories("preview")
@@ -158,9 +158,9 @@ target_link_libraries(kcm_keyboard
     ${text_paint_LIB}
 )
 
-install(TARGETS kcm_keyboard DESTINATION ${PLUGIN_INSTALL_DIR} )
+install(TARGETS kcm_keyboard DESTINATION ${KDE_INSTALL_PLUGINDIR} )
 
-install( FILES kcm_keyboard.desktop DESTINATION ${SERVICES_INSTALL_DIR} )
+install( FILES kcm_keyboard.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR} )
 
 # Images
 

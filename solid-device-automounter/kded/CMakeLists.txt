@@ -7,4 +7,4 @@ set_target_properties(kded_device_automounter PROPERTIES OUTPUT_NAME device_auto
 kcoreaddons_desktop_to_json(kded_device_automounter device_automounter.desktop)
 target_link_libraries(kded_device_automounter KF5::CoreAddons KF5::Service KF5::ConfigCore KF5::ConfigGui KF5::DBusAddons KF5::Solid)
 
-install(TARGETS kded_device_automounter DESTINATION ${PLUGIN_INSTALL_DIR}/kf5/kded)
+install(TARGETS kded_device_automounter DESTINATION ${KDE_INSTALL_PLUGINDIR}/kf5/kded)

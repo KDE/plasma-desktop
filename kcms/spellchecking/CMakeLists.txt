@@ -9,5 +9,5 @@ target_link_libraries(kcmspellchecking
                       KF5::KDELibs4Support
                      )
 
-install(TARGETS kcmspellchecking   DESTINATION ${PLUGIN_INSTALL_DIR} )
-install( FILES spellchecking.desktop   DESTINATION  ${SERVICES_INSTALL_DIR} )
+install(TARGETS kcmspellchecking   DESTINATION ${KDE_INSTALL_PLUGINDIR} )
+install( FILES spellchecking.desktop   DESTINATION  ${KDE_INSTALL_KSERVICES5DIR} )

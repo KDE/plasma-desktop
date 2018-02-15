@@ -21,7 +21,7 @@ kcoreaddons_desktop_to_json(kcm_launchfeedback "kcm_launchfeedback.desktop")
 
 ########### install files ###############
 
-install(TARGETS kcm_launchfeedback DESTINATION ${PLUGIN_INSTALL_DIR}/kcms)
-install(FILES kcm_launchfeedback.desktop  DESTINATION  ${SERVICES_INSTALL_DIR})
+install(TARGETS kcm_launchfeedback DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms)
+install(FILES kcm_launchfeedback.desktop  DESTINATION  ${KDE_INSTALL_KSERVICES5DIR})
 kpackage_install_package(package kcm_launchfeedback kcms)
 

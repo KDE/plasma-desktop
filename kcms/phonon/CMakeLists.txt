@@ -51,8 +51,8 @@ ecm_qt_declare_logging_category(kcmphonon_SRCS HEADER phonon_debug.h IDENTIFIER 
 add_library(kcm_phonon MODULE ${kcmphonon_SRCS})
 target_link_libraries(kcm_phonon ${kcmphonon_LIBS} KF5::ConfigWidgets)
 
-install(TARGETS kcm_phonon  DESTINATION ${PLUGIN_INSTALL_DIR} )
+install(TARGETS kcm_phonon  DESTINATION ${KDE_INSTALL_PLUGINDIR} )
 
 ########### install files ###############
-install( FILES kcm_phonon.desktop  DESTINATION  ${SERVICES_INSTALL_DIR} )
-install(FILES listview-background.png DESTINATION ${DATA_INSTALL_DIR}/kcm_phonon)
+install( FILES kcm_phonon.desktop  DESTINATION  ${KDE_INSTALL_KSERVICES5DIR} )
+install(FILES listview-background.png DESTINATION ${KDE_INSTALL_DATADIR}/kcm_phonon)

@@ -11,10 +11,10 @@ target_compile_definitions(knetattach PRIVATE -DPROJECT_VERSION="${PROJECT_VERSI
 
 target_link_libraries(knetattach KF5::KIOWidgets KF5::KDELibs4Support)
 
-install(TARGETS knetattach DESTINATION ${INSTALL_TARGETS_DEFAULT_ARGS})
+install(TARGETS knetattach DESTINATION ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
 
 ########### install files ###############
 
-install( PROGRAMS org.kde.knetattach.desktop  DESTINATION  ${XDG_APPS_INSTALL_DIR} )
+install( PROGRAMS org.kde.knetattach.desktop  DESTINATION  ${KDE_INSTALL_APPDIR} )
 

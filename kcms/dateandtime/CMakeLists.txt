@@ -22,7 +22,7 @@ target_link_libraries(kcm_clock
     KF5::KDELibs4Support
 )
 
-install(TARGETS kcm_clock  DESTINATION ${PLUGIN_INSTALL_DIR} )
+install(TARGETS kcm_clock  DESTINATION ${KDE_INSTALL_PLUGINDIR} )
 
 ########### next target ###############
 #This is only needed when not using timedated and can be removed in future
@@ -37,4 +37,4 @@ kauth_install_actions(org.kde.kcontrol.kcmclock kcmclock_actions.actions)
 
 ########### install files ###############
 
-install( FILES clock.desktop  DESTINATION  ${SERVICES_INSTALL_DIR} )
+install( FILES clock.desktop  DESTINATION  ${KDE_INSTALL_KSERVICES5DIR} )

@@ -40,6 +40,6 @@ endif()
 kcoreaddons_desktop_to_json(kcm_fonts "kcm_fonts.desktop")
 
 ########### install files ###############
-install(TARGETS kcm_fonts DESTINATION ${PLUGIN_INSTALL_DIR}/kcms)
-install(FILES kcm_fonts.desktop DESTINATION ${SERVICES_INSTALL_DIR})
+install(TARGETS kcm_fonts DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms)
+install(FILES kcm_fonts.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
 kpackage_install_package(package kcm_fonts kcms)

@@ -6,9 +6,9 @@ ecm_qt_declare_logging_category(kio_fonts_PART_SRCS
 # qt5_add_dbus_interface(kio_fonts_PART_SRCS ../dbus/org.kde.fontinst.xml FontinstIface)
 add_library(kio_fonts MODULE ${kio_fonts_PART_SRCS} ${KFI_FONTINST_AUTH_SRC} )
 target_link_libraries(kio_fonts Qt5::DBus Qt5::X11Extras Qt5::Xml KF5::Archive KF5::KIOCore KF5::KIOWidgets kfontinst )
-install(TARGETS kio_fonts  DESTINATION ${PLUGIN_INSTALL_DIR} )
-install( FILES fonts.desktop  DESTINATION  ${DATA_INSTALL_DIR}/konqsidebartng/virtual_folders/services )
-install( FILES fonts.protocol  DESTINATION  ${SERVICES_INSTALL_DIR} )
+install(TARGETS kio_fonts  DESTINATION ${KDE_INSTALL_PLUGINDIR} )
+install( FILES fonts.desktop  DESTINATION  ${KDE_INSTALL_DATADIR}/konqsidebartng/virtual_folders/services )
+install( FILES fonts.protocol  DESTINATION  ${KDE_INSTALL_KSERVICES5DIR} )
 ecm_install_icons( ICONS
                    128-mimetypes-fonts-package.png
                    16-mimetypes-fonts-package.png
@@ -16,6 +16,6 @@ ecm_install_icons( ICONS
                    32-mimetypes-fonts-package.png
                    48-mimetypes-fonts-package.png
                    64-mimetypes-fonts-package.png
-                   DESTINATION ${ICON_INSTALL_DIR} THEME hicolor )
+                   DESTINATION ${KDE_INSTALL_ICONDIR} THEME hicolor )
 
 add_subdirectory(autotests)

@@ -41,8 +41,8 @@ target_link_libraries(kcolorschemeeditor
 if(X11_FOUND)
     target_link_libraries(kcolorschemeeditor ${X11_LIBRARIES} Qt5::X11Extras)
 endif()
-install(TARGETS kcolorschemeeditor  DESTINATION ${INSTALL_TARGETS_DEFAULT_ARGS})
-install(FILES org.kde.kcolorschemeeditor.desktop  DESTINATION  ${XDG_APPS_INSTALL_DIR})
+install(TARGETS kcolorschemeeditor  DESTINATION ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
+install(FILES org.kde.kcolorschemeeditor.desktop  DESTINATION  ${KDE_INSTALL_APPDIR})
 
 # ----------------
 
@@ -84,10 +84,10 @@ if(X11_FOUND)
     target_link_libraries(kcm_colors ${X11_LIBRARIES} Qt5::X11Extras)
 endif()
 
-install(TARGETS kcm_colors  DESTINATION ${PLUGIN_INSTALL_DIR})
-install( FILES colors.desktop  DESTINATION  ${SERVICES_INSTALL_DIR} )
-install( FILES colorschemes.knsrc DESTINATION  ${CONFIG_INSTALL_DIR} )
+install(TARGETS kcm_colors  DESTINATION ${KDE_INSTALL_PLUGINDIR})
+install( FILES colors.desktop  DESTINATION  ${KDE_INSTALL_KSERVICES5DIR} )
+install( FILES colorschemes.knsrc DESTINATION  ${KDE_INSTALL_CONFDIR} )
 
 # built-in color schemes
 file(GLOB schemefiles schemes/*.colors)
-install( FILES ${schemefiles} DESTINATION ${DATA_INSTALL_DIR}/color-schemes )
+install( FILES ${schemefiles} DESTINATION ${KDE_INSTALL_DATADIR}/color-schemes )

@@ -23,7 +23,7 @@ set(folderplugin_SRCS
     screenmapper.cpp
 )
 
-install(FILES qmldir DESTINATION ${QML_INSTALL_DIR}/org/kde/private/desktopcontainment/folder)
+install(FILES qmldir DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/private/desktopcontainment/folder)
 
 add_library(folderplugin SHARED ${folderplugin_SRCS})
 
@@ -38,7 +38,7 @@ target_link_libraries(folderplugin
                       KF5::PlasmaQuick
                       KF5::ConfigGui)
 
-install(TARGETS folderplugin DESTINATION ${QML_INSTALL_DIR}/org/kde/private/desktopcontainment/folder)
+install(TARGETS folderplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/private/desktopcontainment/folder)
 
 generate_export_header(folderplugin BASE_NAME folderplugin)
 

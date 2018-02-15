@@ -47,8 +47,8 @@ endif ()
 kcoreaddons_desktop_to_json(kcm_lookandfeel "kcm_lookandfeel.desktop" SERVICE_TYPES kcmodule.desktop)
 
 #this desktop file is installed only for retrocompatibility with sycoca
-install(FILES kcm_lookandfeel.desktop DESTINATION ${SERVICES_INSTALL_DIR})
-install(TARGETS kcm_lookandfeel DESTINATION ${PLUGIN_INSTALL_DIR}/kcms)
+install(FILES kcm_lookandfeel.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
+install(TARGETS kcm_lookandfeel DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms)
 install(FILES lookandfeel.knsrc DESTINATION ${KDE_INSTALL_CONFDIR})
 
 if(BUILD_TESTING)
@@ -103,5 +103,5 @@ if (X11_Xfixes_FOUND)
    target_link_libraries(lookandfeeltool ${X11_Xfixes_LIB})
 endif ()
 
-install( TARGETS lookandfeeltool ${INSTALL_TARGETS_DEFAULT_ARGS} )
+install( TARGETS lookandfeeltool ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
 

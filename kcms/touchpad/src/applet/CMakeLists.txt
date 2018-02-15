@@ -29,14 +29,14 @@ target_link_libraries(plasma_engine_touchpad
 kcoreaddons_desktop_to_json(plasma_engine_touchpad ${CMAKE_CURRENT_BINARY_DIR}/plasma-dataengine-touchpad.desktop SERVICE_TYPES kcmodule.desktop)
 
 install(TARGETS plasma_engine_touchpad
-        DESTINATION ${PLUGIN_INSTALL_DIR}/plasma/dataengine
+        DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/dataengine
 )
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/plasma-dataengine-touchpad.desktop
-        DESTINATION ${SERVICES_INSTALL_DIR}
+        DESTINATION ${KDE_INSTALL_KSERVICES5DIR}
 )
 install(FILES touchpad.operations
         DESTINATION ${PLASMA_DATA_INSTALL_DIR}/services
 )
 install(FILES touchpad.svg
-        DESTINATION ${DATA_INSTALL_DIR}/plasma/desktoptheme/default/icons
+        DESTINATION ${KDE_INSTALL_DATADIR}/plasma/desktoptheme/default/icons
 )

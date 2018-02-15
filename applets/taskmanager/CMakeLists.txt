@@ -11,7 +11,7 @@ set(taskmanagerplugin_SRCS
     plugin/smartlaunchers/smartlauncheritem.cpp
 )
 
-install(FILES plugin/qmldir DESTINATION ${QML_INSTALL_DIR}/org/kde/plasma/private/taskmanager)
+install(FILES plugin/qmldir DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/private/taskmanager)
 
 add_library(taskmanagerplugin SHARED ${taskmanagerplugin_SRCS})
 
@@ -31,4 +31,4 @@ target_link_libraries(taskmanagerplugin
                       KF5::Service
                       KF5::WindowSystem)
 
-install(TARGETS taskmanagerplugin DESTINATION ${QML_INSTALL_DIR}/org/kde/plasma/private/taskmanager)
+install(TARGETS taskmanagerplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/private/taskmanager)

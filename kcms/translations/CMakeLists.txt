@@ -15,5 +15,5 @@ target_link_libraries(kcm_translations
 
 ########### install files ###############
 
-install(TARGETS kcm_translations  DESTINATION ${PLUGIN_INSTALL_DIR})
-install(FILES translations.desktop  DESTINATION  ${SERVICES_INSTALL_DIR})
+install(TARGETS kcm_translations  DESTINATION ${KDE_INSTALL_PLUGINDIR})
+install(FILES translations.desktop  DESTINATION  ${KDE_INSTALL_KSERVICES5DIR})

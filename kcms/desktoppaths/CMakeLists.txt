@@ -15,6 +15,6 @@ target_link_libraries(kcm_desktoppaths
     KF5::KDELibs4Support
 )
 
-install(TARGETS kcm_desktoppaths DESTINATION ${PLUGIN_INSTALL_DIR})
-install(FILES desktoppath.desktop DESTINATION ${SERVICES_INSTALL_DIR})
+install(TARGETS kcm_desktoppaths DESTINATION ${KDE_INSTALL_PLUGINDIR})
+install(FILES desktoppath.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
 

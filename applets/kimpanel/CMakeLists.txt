@@ -9,8 +9,8 @@ set(kimpanelplugin_SRCS
     plugin/kimpanelplugin.cpp
 )
 
-install(FILES plugin/qmldir DESTINATION ${QML_INSTALL_DIR}/org/kde/plasma/private/kimpanel)
+install(FILES plugin/qmldir DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/private/kimpanel)
 add_library(kimpanelplugin SHARED ${kimpanelplugin_SRCS})
 
 target_link_libraries(kimpanelplugin Qt5::Gui Qt5::Qml)
-install(TARGETS kimpanelplugin DESTINATION ${QML_INSTALL_DIR}/org/kde/plasma/private/kimpanel)
+install(TARGETS kimpanelplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/private/kimpanel)

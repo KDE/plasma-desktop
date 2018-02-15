@@ -35,10 +35,10 @@ target_link_libraries(kcm_componentchooser
                       Qt5::X11Extras
                       )
 
-install(TARGETS kcm_componentchooser  DESTINATION ${PLUGIN_INSTALL_DIR} )
+install(TARGETS kcm_componentchooser  DESTINATION ${KDE_INSTALL_PLUGINDIR} )
 
 
 ########### install files ###############
 
-install( FILES componentchooser.desktop  DESTINATION  ${SERVICES_INSTALL_DIR} )
+install( FILES componentchooser.desktop  DESTINATION  ${KDE_INSTALL_KSERVICES5DIR} )
 

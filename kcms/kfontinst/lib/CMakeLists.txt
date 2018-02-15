@@ -20,4 +20,4 @@ set_target_properties(kfontinst PROPERTIES VERSION ${PROJECT_VERSION} SOVERSION 
 add_library(kfontinstui SHARED ${kfontinstui_LIB_SRCS})
 target_link_libraries(kfontinstui Qt5::X11Extras KF5::KIOCore KF5::KIOWidgets ${FREETYPE_LIBRARIES} ${FONTCONFIG_LIBRARIES} ${X11_X11_LIB} ${X11_Xft_LIB} kfontinst )
 set_target_properties(kfontinstui PROPERTIES VERSION ${PROJECT_VERSION} SOVERSION ${PROJECT_VERSION_MAJOR} )
-install(TARGETS kfontinst kfontinstui ${INSTALL_TARGETS_DEFAULT_ARGS} )
+install(TARGETS kfontinst kfontinstui ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )

@@ -50,14 +50,14 @@ if (X11_Xfixes_FOUND)
    target_link_libraries(kcm_cursortheme ${X11_Xfixes_LIB})
 endif ()
 
-install(TARGETS kcm_cursortheme  DESTINATION ${PLUGIN_INSTALL_DIR}/kcms )
+install(TARGETS kcm_cursortheme  DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms )
 
 kcoreaddons_desktop_to_json(kcm_cursortheme "kcm_cursortheme.desktop")
 
 ########### install files ###############
 
-install( FILES kcm_cursortheme.desktop  DESTINATION  ${SERVICES_INSTALL_DIR} )
-install( FILES xcursor/xcursor.knsrc DESTINATION  ${CONFIG_INSTALL_DIR} )
+install( FILES kcm_cursortheme.desktop  DESTINATION  ${KDE_INSTALL_KSERVICES5DIR} )
+install( FILES xcursor/xcursor.knsrc DESTINATION  ${KDE_INSTALL_CONFDIR} )
 
 kpackage_install_package(package kcm_cursortheme kcms)
 

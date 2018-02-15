@@ -23,7 +23,7 @@ target_link_libraries(kcm_splashscreen
 kcoreaddons_desktop_to_json(kcm_splashscreen "kcm_splashscreen.desktop" SERVICE_TYPES kcmodule.desktop)
 
 #this desktop file is installed only for retrocompatibility with sycoca
-install(FILES kcm_splashscreen.desktop DESTINATION ${SERVICES_INSTALL_DIR})
-install(TARGETS kcm_splashscreen DESTINATION ${PLUGIN_INSTALL_DIR}/kcms)
+install(FILES kcm_splashscreen.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
+install(TARGETS kcm_splashscreen DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms)
 
 kpackage_install_package(package kcm_splashscreen kcms)

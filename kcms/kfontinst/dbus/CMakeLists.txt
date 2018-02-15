@@ -24,7 +24,7 @@ install(TARGETS fontinst_helper DESTINATION ${KAUTH_HELPER_INSTALL_DIR} )
 install(PROGRAMS fontinst_x11 DESTINATION ${KAUTH_HELPER_INSTALL_DIR})
 
 configure_file(org.kde.fontinst.service.cmake ${CMAKE_CURRENT_BINARY_DIR}/session/org.kde.fontinst.service)
-install(FILES ${CMAKE_CURRENT_BINARY_DIR}/session/org.kde.fontinst.service DESTINATION ${DBUS_SERVICES_INSTALL_DIR} )
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/session/org.kde.fontinst.service DESTINATION ${KDE_INSTALL_DBUSSERVICEDIR} )
 
 kauth_install_helper_files(fontinst_helper org.kde.fontinst root)
 kauth_install_actions(org.kde.fontinst fontinst.actions)

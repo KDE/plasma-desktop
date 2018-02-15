@@ -13,9 +13,9 @@ kcoreaddons_desktop_to_json(kcm_formats formats.desktop SERVICE_TYPES kcmodule.d
 
 target_link_libraries(kcm_formats Qt5::Core Qt5::DBus Qt5::Widgets KF5::I18n KF5::ConfigCore KF5::KCMUtils)
 
-install(TARGETS kcm_formats  DESTINATION ${PLUGIN_INSTALL_DIR} )
+install(TARGETS kcm_formats  DESTINATION ${KDE_INSTALL_PLUGINDIR} )
 
 
 ########### install files ###############
 
-install( FILES formats.desktop  DESTINATION  ${SERVICES_INSTALL_DIR} )
+install( FILES formats.desktop  DESTINATION  ${KDE_INSTALL_KSERVICES5DIR} )

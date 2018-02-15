@@ -11,6 +11,6 @@ target_link_libraries(kcm_standard_actions
     KF5::XmlGui
 )
 
-install(TARGETS kcm_standard_actions DESTINATION ${PLUGIN_INSTALL_DIR})
-install(FILES standard_actions.desktop  DESTINATION  ${SERVICES_INSTALL_DIR} )
+install(TARGETS kcm_standard_actions DESTINATION ${KDE_INSTALL_PLUGINDIR})
+install(FILES standard_actions.desktop  DESTINATION  ${KDE_INSTALL_KSERVICES5DIR} )
 

@@ -41,11 +41,11 @@ target_link_libraries(kcm_input
     ${kcminput_backend_LIBS}
 )
 
-install(TARGETS kcm_input  DESTINATION ${PLUGIN_INSTALL_DIR} )
+install(TARGETS kcm_input  DESTINATION ${KDE_INSTALL_PLUGINDIR} )
 
 
 ########### install files ###############
 
-install( FILES mouse.desktop  DESTINATION  ${SERVICES_INSTALL_DIR} )
-install( FILES cursor_large_black.pcf.gz cursor_large_white.pcf.gz cursor_small_white.pcf.gz  DESTINATION  ${DATA_INSTALL_DIR}/kcminput )
+install( FILES mouse.desktop  DESTINATION  ${KDE_INSTALL_KSERVICES5DIR} )
+install( FILES cursor_large_black.pcf.gz cursor_large_white.pcf.gz cursor_small_white.pcf.gz  DESTINATION  ${KDE_INSTALL_DATADIR}/kcminput )
 

@@ -18,9 +18,9 @@ target_link_libraries(kcm_fontinst
     ${X11_LIBRARIES}
 )
 
-install(TARGETS kcm_fontinst  DESTINATION ${PLUGIN_INSTALL_DIR} )
-install( FILES fontinst.desktop  DESTINATION  ${SERVICES_INSTALL_DIR} )
-install( FILES kfontinst.knsrc DESTINATION  ${CONFIG_INSTALL_DIR} )
+install(TARGETS kcm_fontinst  DESTINATION ${KDE_INSTALL_PLUGINDIR} )
+install( FILES fontinst.desktop  DESTINATION  ${KDE_INSTALL_KSERVICES5DIR} )
+install( FILES kfontinst.knsrc DESTINATION  ${KDE_INSTALL_CONFDIR} )
 
 ecm_install_icons( ICONS
                    16-actions-addfont.png
@@ -33,4 +33,4 @@ ecm_install_icons( ICONS
                    22-actions-fontstatus.png
                    16-actions-addfont.png
                    DESTINATION
-                   ${DATA_INSTALL_DIR}/kfontinst/icons THEME hicolor)
+                   ${KDE_INSTALL_DATADIR}/kfontinst/icons THEME hicolor)

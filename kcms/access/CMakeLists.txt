@@ -22,8 +22,8 @@ target_link_libraries(kcm_access
     ${X11_LIBRARIES}
 )
 
-install(TARGETS kcm_access DESTINATION ${PLUGIN_INSTALL_DIR})
+install(TARGETS kcm_access DESTINATION ${KDE_INSTALL_PLUGINDIR})
 
 ########### install files ###############
 
-install( FILES kcmaccess.desktop  DESTINATION  ${SERVICES_INSTALL_DIR} )
+install( FILES kcmaccess.desktop  DESTINATION  ${KDE_INSTALL_KSERVICES5DIR} )

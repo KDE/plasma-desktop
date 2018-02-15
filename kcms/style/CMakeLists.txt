@@ -25,9 +25,9 @@ target_link_libraries(kcm_style
     KF5::NewStuff
 )
 
-install(TARGETS kcm_style  DESTINATION ${PLUGIN_INSTALL_DIR})
+install(TARGETS kcm_style  DESTINATION ${KDE_INSTALL_PLUGINDIR})
 
 
 ########### install files ###############
 
-install( FILES style.desktop  DESTINATION  ${SERVICES_INSTALL_DIR} )
+install( FILES style.desktop  DESTINATION  ${KDE_INSTALL_KSERVICES5DIR} )
