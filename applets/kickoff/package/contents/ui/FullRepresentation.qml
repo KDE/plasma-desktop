@@ -98,25 +98,6 @@ Item {
         }
     }
 
-    Kicker.RunnerModel {
-        id: runnerModel
-
-        appletInterface: plasmoid
-
-        runners: {
-            var runners = ["services", "places", "desktopsessions",
-                           "PowerDevil"];
-
-            if (plasmoid.configuration.useExtraRunners) {
-                runners = runners.concat(plasmoid.configuration.runners);
-            }
-            return runners;
-        }
-        mergeResults: true
-
-        favoritesModel: globalFavorites
-    }
-
     PlasmaCore.DataSource {
         id: pmSource
         engine: "powermanagement"
