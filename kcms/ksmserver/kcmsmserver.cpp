@@ -33,7 +33,7 @@
 #include <kprocess.h>
 #include <kmessagebox.h>
 #include <QApplication>
-#include <QtDBus>
+#include <QDBusInterface>
 #include <QLineEdit>
 
 #include "kcmsmserver.h"

@@ -41,7 +41,6 @@
 #include <QVBoxLayout>
 #include <QPushButton>
 #include <QMessageBox>
-#include <QtQml>
 #include <QQmlEngine>
 #include <QQmlContext>
 #include <QStandardItemModel>

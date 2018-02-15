@@ -21,7 +21,7 @@
 #include "dirmodel.h"
 #include "trash.h"
 
-#include <QtQml>
+#include <QQmlEngine>
 
 static QObject *trash_singletonProvider(QQmlEngine *engine, QJSEngine *scriptEngine)
 {

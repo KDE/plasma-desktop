@@ -19,7 +19,7 @@
 
 #include "activityswitcherextensionplugin.h"
 
-#include <QtQml>
+#include <QQmlEngine>
 
 #include "switcherbackend.h"
 

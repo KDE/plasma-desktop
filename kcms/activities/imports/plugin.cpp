@@ -20,7 +20,7 @@
 
 #include "plugin.h"
 
-#include <QtQml>
+#include <QQmlEngine>
 
 #include "activitysettings.h"
 

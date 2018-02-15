@@ -21,7 +21,8 @@
 
 #include <QVariantList>
 #include <QTimer>
-#include <QtDBus>
+#include <QDBusServiceWatcher>
+#include <QDBusPendingCallWatcher>
 
 #include <KDEDModule>
 

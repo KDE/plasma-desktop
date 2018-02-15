@@ -26,7 +26,7 @@
 #include <config-X11.h>
 
 #include <QIcon>
-#include <QtQml>
+#include <QQmlEngine>
 #if HAVE_X11
 #include <QX11Info>
 #endif

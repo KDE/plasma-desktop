@@ -31,7 +31,6 @@
 #include <QPushButton>
 #include <QMessageBox>
 #include <QStandardItemModel>
-#include <QtQml>
 #include <QQmlContext>
 #include <QDir>
 

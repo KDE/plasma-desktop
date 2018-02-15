@@ -20,7 +20,7 @@
 
 #include "kimpanelplugin.h"
 #include "screen.h"
-#include <QtQml>
+#include <QQmlEngine>
 
 void KimpanelPlugin::registerTypes(const char* uri)
 {

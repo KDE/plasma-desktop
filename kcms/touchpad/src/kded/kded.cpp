@@ -21,6 +21,7 @@
 #include <QDebug>
 #include <QDBusConnection>
 #include <QDBusMessage>
+#include <QDBusConnectionInterface>
 #include <KNotification>
 #include <KLocalizedString>
 

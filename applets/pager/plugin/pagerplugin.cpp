@@ -21,7 +21,7 @@
 #include "pagerplugin.h"
 #include "pagermodel.h"
 
-#include <QtQml>
+#include <QQmlEngine>
 
 void KickoffPlugin::registerTypes(const char *uri)
 {
