@@ -29,7 +29,6 @@ Item {
     id: listItem
 
     width: ListView.view.width
-//     height: listItemDelegate.height // + listItemDelegate.anchors.margins*2
     height: (units.smallSpacing * 2) + Math.max(elementIcon.height, titleElement.height + subTitleElement.height)
 
     signal actionTriggered(string actionId, variant actionArgument)
@@ -93,82 +92,73 @@ Item {
         }
     }
 
-    Item {
-        id: listItemDelegate
-
+    MouseArea {
+        id: mouseArea
         anchors {
             left: parent.left
             right: parent.right
             top: parent.top
             bottom: parent.bottom
-            //margins: units.smallSpacing
         }
 
-        MouseArea {
-            id: mouseArea
+        property bool pressed: false
+        property int pressX: -1
+        property int pressY: -1
 
-            anchors.fill: parent
-            //anchors.margins: -8
+        hoverEnabled: true
+        acceptedButtons: Qt.LeftButton | Qt.RightButton
 
-            property bool pressed: false
-            property int pressX: -1
-            property int pressY: -1
+        onEntered: {
+            listItem.ListView.view.currentIndex = index;
+        }
 
-            hoverEnabled: true
-            acceptedButtons: Qt.LeftButton | Qt.RightButton
+        onExited: {
+            listItem.ListView.view.currentIndex = -1;
+        }
 
-            onEntered: {
-                listItem.ListView.view.currentIndex = index;
+        onPressed: {
+            if (mouse.buttons & Qt.RightButton) {
+                if (hasActionList) {
+                    openActionMenu(mouseArea, mouse.x, mouse.y);
+                }
+            } else {
+                pressed = true;
+                pressX = mouse.x;
+                pressY = mouse.y;
             }
+        }
 
-            onExited: {
+        onReleased: {
+            if (pressed) {
+                if (appView) {
+                    appViewScrollArea.state = "OutgoingLeft";
+                } else {
+                    listItem.activate();
+                }
+
                 listItem.ListView.view.currentIndex = -1;
             }
 
-            onPressed: {
-                if (mouse.buttons & Qt.RightButton) {
-                    if (hasActionList) {
-                        openActionMenu(mouseArea, mouse.x, mouse.y);
-                    }
-                } else {
-                    pressed = true;
-                    pressX = mouse.x;
-                    pressY = mouse.y;
-                }
-            }
+            pressed = false;
+            pressX = -1;
+            pressY = -1;
+        }
 
-            onReleased: {
-                if (pressed) {
-                    if (appView) {
-                        appViewScrollArea.state = "OutgoingLeft";
-                    } else {
-                        listItem.activate();
-                    }
-
-                    listItem.ListView.view.currentIndex = -1;
-                }
-
+        onPositionChanged: {
+            if (pressX != -1 && model.url && dragHelper.isDrag(pressX, pressY, mouse.x, mouse.y)) {
+                kickoff.dragSource = listItem;
+                dragHelper.startDrag(root, model.url, model.decoration);
                 pressed = false;
                 pressX = -1;
                 pressY = -1;
             }
+        }
 
-            onPositionChanged: {
-                if (pressX != -1 && model.url && dragHelper.isDrag(pressX, pressY, mouse.x, mouse.y)) {
-                    kickoff.dragSource = listItem;
-                    dragHelper.startDrag(root, model.url, model.decoration);
-                    pressed = false;
-                    pressX = -1;
-                    pressY = -1;
-                }
-            }
-
-            onContainsMouseChanged: {
-                if (!containsMouse) {
-                    pressed = false;
-                    pressX = -1;
-                    pressY = -1;
-                }
+        onContainsMouseChanged: {
+            if (!containsMouse) {
+                pressed = false;
+                pressX = -1;
+                pressY = -1;
             }
         }
 
