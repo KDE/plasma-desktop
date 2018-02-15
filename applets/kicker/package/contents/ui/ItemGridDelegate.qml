@@ -72,7 +72,7 @@ Item {
         colorGroup: PlasmaCore.Theme.ComplementaryColorGroup
 
         animated: false
-        usesPlasmaTheme: GridView.view.usesPlasmaTheme
+        usesPlasmaTheme: item.GridView.view.usesPlasmaTheme
 
         source: model.decoration
     }
