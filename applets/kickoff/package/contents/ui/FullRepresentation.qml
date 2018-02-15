@@ -124,11 +124,6 @@ Item {
     }
 
     PlasmaCore.Svg {
-        id: lineSvg
-        imagePath: "widgets/line"
-    }
-
-    PlasmaCore.Svg {
         id: arrowsSvg
 
         imagePath: "widgets/arrows"
