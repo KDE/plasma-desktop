@@ -16,8 +16,8 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#include <QtTest/QtTest>
-#include <QtGui/QIcon>
+#include <QtTest>
+#include <QIcon>
 
 #include "../flags.h"
 #include "../xkb_rules.h"

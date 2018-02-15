@@ -35,7 +35,7 @@
 #include <QByteArray>
 #include <QTextStream>
 #include <QDateTime>
-#include <QtDBus/QtDBus>
+#include <QDBusConnection>
 #include <klauncher_iface.h>
 
 #include <kcolorscheme.h>

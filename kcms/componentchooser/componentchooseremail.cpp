@@ -14,16 +14,19 @@
  ***************************************************************************/
 
 #include "componentchooseremail.h"
-#include <QtDBus/QtDBus>
+
 #include <kemailsettings.h>
-#include <QCheckBox>
 #include <kopenwithdialog.h>
 
 #include <KLocalizedString>
 #include <KConfigGroup>
 #include <KSharedConfig>
 #include <KService>
+#include <QDBusConnection>
+#include <QDBusMessage>
 #include <QUrl>
+#include <QFile>
+#include <QCheckBox>
 
 // for chmod:
 #include <sys/types.h>

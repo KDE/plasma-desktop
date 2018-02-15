@@ -21,7 +21,7 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#include <QtDBus/QDBusConnection>
+#include <QDBusConnection>
 #include <QTimer>
 #include <QDebug>
 #include <kauth.h>

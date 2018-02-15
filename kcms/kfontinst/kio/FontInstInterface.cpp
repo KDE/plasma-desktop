@@ -26,7 +26,8 @@
 #include "FontInst.h"
 #include <kio/global.h>
 #include <QDebug>
-#include <QtDBus/QDBusServiceWatcher>
+#include <QProcess>
+#include <QDBusServiceWatcher>
 #include "config-fontinst.h"
 #include "debug.h"
 

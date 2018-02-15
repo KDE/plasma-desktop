@@ -21,7 +21,9 @@
 
 #include <QAction>
 #include <QX11Info>
-#include <QtDBus/QtDBus>
+#include <QDBusConnection>
+#include <QDBusMessage>
+#include <QDBusPendingCall>
 #include <QProcess>
 
 #include <kpluginfactory.h>

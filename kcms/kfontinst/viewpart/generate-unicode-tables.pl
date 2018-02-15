@@ -227,7 +227,7 @@ sub process_unicode_data_txt ($)
 
     print $out "#ifndef UNICODE_CATEGORIES_H\n";
     print $out "#define UNICODE_CATEGORIES_H\n\n";
-    print $out "#include <QtCore/qglobal.h>\n\n";
+    print $out "#include <QtGlobal>\n\n";
     print $out "enum EUnicodeCategory\n";
     print $out "{\n";
     print $out "    UNICODE_UPPERCASE_LETTER,\n";
@@ -733,7 +733,7 @@ sub process_blocks_txt ($)
     print $out "#ifndef __UNICODE_BLOCKS_H__\n";
     print $out "#define __UNICODE_BLOCKS_H__\n\n";
 
-    print $out "#include <QtCore/qglobal.h>\n";
+    print $out "#include <qglobal.h>\n";
     print $out "#include <klocalizedstring.h>\n\n";
 
     print $out "struct TUnicodeBlock\n";
@@ -816,7 +816,7 @@ sub process_scripts_txt ($)
     print $out "#ifndef __UNICODE_SCRIPTS_H__\n";
     print $out "#define __UNICODE_SCRIPTS_H__\n\n";
 
-    print $out "#include <QtCore/qglobal.h>\n";
+    print $out "#include <QtGlobal>\n";
     print $out "#include <klocalizedstring.h>\n\n";
 
     print $out "static const char * const constUnicodeScriptList[] =\n";

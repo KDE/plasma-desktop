@@ -20,7 +20,8 @@
 
 #include "kcmkded.h"
 
-#include <QtDBus/QtDBus>
+#include <QDBusInterface>
+#include <QDBusReply>
 #include <QGroupBox>
 #include <QPushButton>
 #include <QTimer>

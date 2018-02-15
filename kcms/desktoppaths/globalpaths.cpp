@@ -46,7 +46,7 @@
 #include <QFormLayout>
 #include <QDesktopWidget>
 #include <QApplication>
-#include <QtDBus/QtDBus>
+#include <QLoggingCategory>
 
 // KDE
 #include <kconfiggroup.h>

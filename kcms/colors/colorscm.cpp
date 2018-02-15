@@ -32,7 +32,8 @@
 #include <QStandardPaths>
 #include <QPainter>
 #include <QBitmap>
-#include <QtDBus/QtDBus>
+#include <QDBusConnection>
+#include <QDBusMessage>
 
 #include <KAboutData>
 #include <KColorButton>

@@ -33,8 +33,8 @@
 #include <QFontDatabase>
 #include <QFontMetrics>
 #include <QWidget>
-#include <QtPrintSupport/QPrinter>
-#include <QtPrintSupport/QPrintDialog>
+#include <QPrinter>
+#include <QPrintDialog>
 #include <QFrame>
 #include <QGridLayout>
 #include <QProgressBar>

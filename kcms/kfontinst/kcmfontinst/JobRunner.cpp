@@ -43,7 +43,9 @@
 #include <QStyle>
 #include <QCloseEvent>
 #include <QTimer>
-#include <QtDBus/QDBusServiceWatcher>
+#include <QDebug>
+#include <QProcess>
+#include <QDBusServiceWatcher>
 #include <fontconfig/fontconfig.h>
 #include <sys/resource.h>
 #include <sys/types.h>

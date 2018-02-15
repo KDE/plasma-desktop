@@ -19,7 +19,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************/
 #include "../kcm.h"
 // Qt
-#include <QtTest/QtTest>
+#include <QtTest>
 #include <Plasma/Package>
 #include <Plasma/PluginLoader>
 #include <ksycoca.h>

@@ -22,7 +22,7 @@
 
 #include <QString>
 #include <QMap>
-#include <QtGui/QWidgetList> //For WId
+#include <QWidgetList> //For WId
 
 #include "x11_helper.h"
 #include "keyboard_config.h"

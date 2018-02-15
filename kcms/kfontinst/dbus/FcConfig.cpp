@@ -27,10 +27,10 @@
 #include <QFile>
 #include <QDir>
 #include <QByteArray>
-#include <QtXml/QDomDocument>
-#include <QtXml/QDomElement>
-#include <QtXml/QDomNode>
-#include <QtXml/QDomText>
+#include <QDomDocument>
+#include <QDomElement>
+#include <QDomNode>
+#include <QDomText>
 #include <QDebug>
 #include <stdio.h>
 #include <fontconfig/fontconfig.h>

@@ -24,9 +24,9 @@
 #include <stdlib.h>
 #include <math.h>
 
-#include <QtWidgets/qfiledialog.h>
+#include <QFileDialog>
 #include <QStandardPaths>
-#include <QtDBus/QtDBus>
+#include <QProcess>
 #include <QX11Info>
 
 #include <kaboutdata.h>

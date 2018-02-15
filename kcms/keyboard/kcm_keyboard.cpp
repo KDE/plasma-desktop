@@ -26,7 +26,6 @@
 
 #include <QDBusMessage>
 #include <QDBusConnection>
-//#include <QtDBus/QDBusInterface>
 
 #include "kcm_keyboard_widget.h"
 #include "x11_helper.h"

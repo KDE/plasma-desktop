@@ -50,6 +50,7 @@
 #include <QProgressDialog>
 #include <QInputDialog>
 #include <QTemporaryFile>
+#include <QTemporaryDir>
 #include <KAboutData>
 #include <KToolBar>
 #include <KMessageBox>

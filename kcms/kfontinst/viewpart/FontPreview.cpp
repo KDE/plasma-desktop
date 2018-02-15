@@ -24,10 +24,10 @@
 #include "FontPreview.h"
 #include "FcEngine.h"
 #include "CharTip.h"
-#include <QtGui/QPainter>
-#include <QtGui/QPaintEvent>
-#include <QtGui/QMouseEvent>
-#include <QtGui/QWheelEvent>
+#include <QPainter>
+#include <QPaintEvent>
+#include <QMouseEvent>
+#include <QWheelEvent>
 #include <stdlib.h>
 
 namespace KFI

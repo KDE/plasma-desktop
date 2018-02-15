@@ -27,7 +27,7 @@
 //Added by qt3to4:
 #include <QVBoxLayout>
 
-#include <QtDBus/QtDBus>
+#include <QDBusConnection>
 #include <kaboutdata.h>
 #include <kdialog.h>
 #include <kpluginfactory.h>

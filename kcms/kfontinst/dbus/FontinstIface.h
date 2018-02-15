@@ -18,7 +18,11 @@
 #include <QString>
 #include <QStringList>
 #include <QVariant>
-#include <QtDBus/QtDBus>
+#include <QDBusAbstractInterface>
+#include <QDBusConnectionInterface>
+#include <QDBusPendingReply>
+#include <QDBusReply>
+#include <QDBusMetaType>
 #include "Family.h"
 
 /*

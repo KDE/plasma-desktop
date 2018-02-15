@@ -36,7 +36,8 @@
 #include <QHeaderView>
 #include <QMenu>
 #include <QTimer>
-#include <QtDBus/QDBusServiceWatcher>
+#include <QDBusServiceWatcher>
+#include <QMimeData>
 #include <QDrag>
 #include <stdlib.h>
 #include <unistd.h>

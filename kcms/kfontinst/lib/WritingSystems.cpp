@@ -22,7 +22,7 @@
  */
 
 #include <QGlobalStatic>
-#include <QtGui/QFontDatabase>
+#include <QFontDatabase>
 #include <fontconfig/fontconfig.h>
 #include "WritingSystems.h"
 

@@ -56,8 +56,9 @@
 #include <QStyleFactory>
 #include <QFormLayout>
 #include <QStandardItemModel>
+#include <QDBusConnection>
+#include <QDBusMessage>
 #include <QStyle>
-#include <QtDBus/QtDBus>
 
 #include <KGlobal>
 #include <KGlobalSettings>
@@ -73,6 +74,7 @@
 #endif
 
 // X11 namespace cleanup
+#undef Bool
 #undef Below
 #undef KeyPress
 #undef KeyRelease

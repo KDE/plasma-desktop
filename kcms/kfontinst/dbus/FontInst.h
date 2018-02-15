@@ -27,7 +27,7 @@
 #include <QObject>
 #include <QStringList>
 #include <QSet>
-#include <QtDBus/QtDBus>
+#include <QDBusConnection>
 #include <KJob>
 #include "Family.h"
 #include "Folder.h"

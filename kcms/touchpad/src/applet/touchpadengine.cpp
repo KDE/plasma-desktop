@@ -17,8 +17,8 @@
  */
 #include "touchpadengine.h"
 
-#include <QtDBus/QDBusConnection>
-#include <QtDBus/QDBusInterface>
+#include <QDBusConnection>
+#include <QDBusInterface>
 
 #include "touchpadinterface.h"
 #include "touchpadservice.h"

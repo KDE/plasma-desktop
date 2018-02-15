@@ -37,15 +37,15 @@
 #include <stdlib.h>
 #include <list>
 
-#include <QtCore/QObject>
-#include <QtCore/QProcess>
-#include <QtCore/QString>
-#include <QtCore/QStringList>
-#include <QtCore/QThread>
-#include <QtCore/QMutex>
-#include <QtCore/QCoreApplication>
-#include <QtDBus/QDBusMessage>
-#include <QtDBus/QDBusConnection>
+#include <QObject>
+#include <QProcess>
+#include <QString>
+#include <QStringList>
+#include <QThread>
+#include <QMutex>
+#include <QCoreApplication>
+#include <QDBusMessage>
+#include <QDBusConnection>
 
 #define Uses_C_STDIO
 #define Uses_C_STDLIB

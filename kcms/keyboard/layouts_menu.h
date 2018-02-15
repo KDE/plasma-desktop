@@ -20,7 +20,7 @@
 #define LAYOUTS_MENU_H_
 
 #include <QList>
-#include <QtGui/QIcon>
+#include <QIcon>
 
 class QAction;
 class KeyboardConfig;

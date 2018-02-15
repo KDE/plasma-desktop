@@ -26,7 +26,7 @@
 
 #include <time.h>
 
-#include <QtXml/QtXml>
+#include <QDomDocument>
 
 class KXftConfig
 {

@@ -16,7 +16,8 @@
 #include "componentchooserterminal.h"
 
 #include <ktoolinvocation.h>
-#include <QtDBus/QtDBus>
+#include <QDBusConnection>
+#include <QDBusMessage>
 #include <QCheckBox>
 
 #include <kapplication.h>

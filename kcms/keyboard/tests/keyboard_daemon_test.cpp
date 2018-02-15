@@ -18,8 +18,8 @@
 
 //#include <kapplication.h>
 
-#include <QtGui/QIcon>
-#include <QtTest/QtTest>
+#include <QIcon>
+#include <QtTest>
 
 #include "../flags.h"
 #include "../xkb_rules.h"

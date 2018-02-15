@@ -27,7 +27,7 @@
 #include <QDialog>
 #include <QThread>
 #include <QList>
-#include <QtGui/QFont>
+#include <QFont>
 #include "Misc.h"
 
 class QLabel;

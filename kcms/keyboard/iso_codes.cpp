@@ -21,7 +21,7 @@
 
 #include <KLocalizedString>
 
-#include <QtXml/QXmlAttributes>
+#include <QXmlAttributes>
 
 
 class IsoCodesPrivate {

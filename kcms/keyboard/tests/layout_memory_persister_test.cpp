@@ -16,8 +16,8 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#include <QtGui/QApplication>
-#include <QtTest/QtTest>
+#include <QApplication>
+#include <QtTest>
 
 #include "../layout_memory_persister.h"
 #include "../layout_memory.h"

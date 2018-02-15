@@ -22,7 +22,7 @@
  */
 
 #include <QTextStream>
-#include <QtXml/QDomElement>
+#include <QDomElement>
 #include <QDebug>
 #include "Family.h"
 #include "Misc.h"

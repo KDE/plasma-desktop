@@ -26,8 +26,8 @@
 
 #include <QVector>
 #include <QRect>
-#include <QtGui/QFont>
-#include <QtGui/QColor>
+#include <QFont>
+#include <QColor>
 #include <fontconfig/fontconfig.h>
 #include "KfiConstants.h"
 //#include "Misc.h"

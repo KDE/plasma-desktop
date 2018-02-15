@@ -25,6 +25,7 @@
 #include "Misc.h"
 #include "FontsPackage.h"
 #include <QFile>
+#include <QTemporaryDir>
 #include <QApplication>
 #include <QCommandLineParser>
 #include <QCommandLineOption>

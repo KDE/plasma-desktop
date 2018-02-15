@@ -36,6 +36,7 @@
 #include <QDomElement>
 #include <QTextStream>
 #include <QEvent>
+#include <QMimeData>
 #include <QTimer>
 #include <stdlib.h>
 #include <unistd.h>

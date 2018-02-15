@@ -25,7 +25,6 @@
  */
 
 #include <KIO/SlaveBase>
-#include <QtDBus/QtDBus>
 #include <sys/types.h>
 
 class QTemporaryDir;

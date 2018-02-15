@@ -25,6 +25,7 @@
 #include "FontList.h"
 #include "Fc.h"
 #include "FcEngine.h"
+#include <QTextStream>
 #include <QPainter>
 #include <QStyledItemDelegate>
 #include <QApplication>
