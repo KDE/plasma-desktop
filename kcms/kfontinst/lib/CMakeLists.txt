@@ -7,6 +7,7 @@ add_library(kfontinst SHARED ${kfontinst_LIB_SRCS})
 target_link_libraries(kfontinst
     Qt5::Xml
     Qt5::DBus
+    Qt5::Gui
     KF5::I18n
     KF5::KIOCore
     ${FREETYPE_LIBRARIES}
