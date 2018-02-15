@@ -70,6 +70,7 @@ Item {
             anchors.fill: parent
             source: plasmoid.icon
             active: parent.containsMouse || compactDragArea.containsDrag
+            smooth: true
         }
     }
 
