@@ -259,7 +259,7 @@ void CFontFilter::setFoundries(const QSet<QString> &currentFoundries)
 
 QSize CFontFilter::sizeHint() const
 {
-    return QSize(fontMetrics().width(clickMessage())+56, KLineEdit::sizeHint().height());
+    return QSize(fontMetrics().width(placeholderText())+56, KLineEdit::sizeHint().height());
 }
 
 void CFontFilter::filterChanged()
@@ -280,7 +280,7 @@ void CFontFilter::filterChanged()
             itsCurrentFileTypes.clear();
 
             setCriteria(crit);
-            setClickMessage(i18n("Type here to filter on %1", act->text().toLower()));
+            setPlaceholderText(i18n("Type here to filter on %1", act->text().toLower()));
             setReadOnly(false);
         }
     }
@@ -300,7 +300,7 @@ void CFontFilter::ftChanged(const QString &ft)
     setReadOnly(true);
     setCriteria(itsCurrentCriteria);
     setText(ft);
-    setClickMessage(text());
+    setPlaceholderText(text());
 }
 
 void CFontFilter::wsChanged(const QString &writingSystemName)
@@ -317,7 +317,7 @@ void CFontFilter::wsChanged(const QString &writingSystemName)
     setReadOnly(true);
     setCriteria(itsCurrentCriteria);
     setText(writingSystemName);
-    setClickMessage(text());
+    setPlaceholderText(text());
 }
 
 void CFontFilter::foundryChanged(const QString &foundry)
@@ -329,7 +329,7 @@ void CFontFilter::foundryChanged(const QString &foundry)
     itsCurrentCriteria=CRIT_FOUNDRY;
     setReadOnly(true);
     setText(foundry);
-    setClickMessage(text());
+    setPlaceholderText(text());
     setCriteria(itsCurrentCriteria);
 }
 
@@ -342,7 +342,7 @@ void CFontFilter::addAction(ECriteria crit, const QString &text, bool on)
     itsActions[crit]->setData((int)crit);
     itsActions[crit]->setChecked(on);
     if(on)
-        setClickMessage(i18n("Type here to filter on %1", text.toLower()));
+        setPlaceholderText(i18n("Type here to filter on %1", text.toLower()));
     connect(itsActions[crit], SIGNAL(toggled(bool)), SLOT(filterChanged()));
 }
 
