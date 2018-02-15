@@ -39,7 +39,7 @@ Item {
 
     onAboutToShowActionMenu: {
         var actionList = (model.hasActionList != null) ? model.actionList : [];
-        Tools.fillActionMenu(actionMenu, actionList, repeater.model, model.favoriteId);
+        Tools.fillActionMenu(i18n, actionMenu, actionList, repeater.model, model.favoriteId);
     }
 
     onActionTriggered: {

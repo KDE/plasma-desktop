@@ -53,7 +53,7 @@ Item {
 
     onAboutToShowActionMenu: {
         var actionList = hasActionList ? model.actionList : [];
-        Tools.fillActionMenu(actionMenu, actionList, ListView.view.model.favoritesModel, model.favoriteId);
+        Tools.fillActionMenu(i18n, actionMenu, actionList, ListView.view.model.favoritesModel, model.favoriteId);
     }
 
     onActionTriggered: {

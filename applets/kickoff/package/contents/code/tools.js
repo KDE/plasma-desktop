@@ -19,11 +19,13 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-function fillActionMenu(actionMenu, actionList, favoriteModel, favoriteId) {
+.pragma library
+
+function fillActionMenu(i18n, actionMenu, actionList, favoriteModel, favoriteId) {
     // Accessing actionList can be a costly operation, so we don't
     // access it until we need the menu.
 
-    var actions = createFavoriteActions(favoriteModel, favoriteId);
+    var actions = createFavoriteActions(i18n, favoriteModel, favoriteId);
 
     if (actions) {
         if (actionList && actionList.length > 0) {
@@ -39,7 +41,7 @@ function fillActionMenu(actionMenu, actionList, favoriteModel, favoriteId) {
     actionMenu.actionList = actionList;
 }
 
-function createFavoriteActions(favoriteModel, favoriteId) {
+function createFavoriteActions(i18n, favoriteModel, favoriteId) {
     if (favoriteModel === null || !favoriteModel.enabled || favoriteId == null) {
         return null;
     }
