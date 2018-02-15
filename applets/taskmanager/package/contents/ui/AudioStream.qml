@@ -60,7 +60,7 @@ Item {
              SequentialAnimation {
                  // Delay showing the play indicator so we don't flash it for brief sounds.
                  PauseAnimation {
-                     duration: inPopup ? 0 : 2000
+                     duration: !task.delayAudioStreamIndicator || inPopup ? 0 : 2000
                  }
                  NumberAnimation {
                      property: "opacity"

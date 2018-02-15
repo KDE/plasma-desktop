@@ -60,6 +60,7 @@ MouseArea {
 
     property Item audioStreamOverlay
     property var audioStreams: []
+    property bool delayAudioStreamIndicator: false
     readonly property bool hasAudioStream: plasmoid.configuration.indicateAudioStreams && audioStreams.length > 0
     readonly property bool playingAudio: hasAudioStream && audioStreams.some(function (item) {
         return !item.corked
@@ -78,8 +79,8 @@ MouseArea {
 
     acceptedButtons: Qt.LeftButton | Qt.RightButton | Qt.MidButton | Qt.BackButton | Qt.ForwardButton
 
-    onPidChanged: updateAudioStreams()
-    onAppNameChanged: updateAudioStreams()
+    onPidChanged: updateAudioStreams({delay: false})
+    onAppNameChanged: updateAudioStreams({delay: false})
 
     onIsWindowChanged: {
         if (isWindow) {
@@ -235,7 +236,14 @@ MouseArea {
         contextMenu.show();
     }
 
-    function updateAudioStreams() {
+    function updateAudioStreams(args) {
+        if (args) {
+            // When the task just appeared (e.g. virtual desktop switch), show the audio indicator
+            // right away. Only when audio streams change during the lifetime of this task, delay
+            // showing that to avoid distraction.
+            delayAudioStreamIndicator = !!args.delay;
+        }
+
         var pa = pulseAudio.item;
         if (!pa) {
             task.audioStreams = [];
@@ -269,7 +277,7 @@ MouseArea {
     Connections {
         target: pulseAudio.item
         ignoreUnknownSignals: true // Plasma-PA might not be available
-        onStreamsChanged: task.updateAudioStreams()
+        onStreamsChanged: task.updateAudioStreams({delay: true})
     }
 
     Component {
@@ -572,6 +580,6 @@ MouseArea {
             taskInitComponent.createObject(task);
         }
 
-        updateAudioStreams()
+        updateAudioStreams({delay: false})
     }
 }
