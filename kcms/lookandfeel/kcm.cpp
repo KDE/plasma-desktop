@@ -446,7 +446,7 @@ void KCMLookandFeel::setColors(const QString &scheme, const QString &colorFile)
     KConfigGroup configGroup(&m_config, "General");
     configGroup.writeEntry("ColorScheme", scheme);
 
-    KSharedConfigPtr conf = KSharedConfig::openConfig(colorFile);
+    KSharedConfigPtr conf = KSharedConfig::openConfig(colorFile, KSharedConfig::CascadeConfig);
     foreach (const QString &grp, conf->groupList()) {
         KConfigGroup cg(conf, grp);
         KConfigGroup cg2(&m_config, grp);

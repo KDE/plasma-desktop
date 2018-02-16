@@ -381,6 +381,8 @@ FocusScope {
                     gridView.currentIndex = item.itemIndex;
                     itemGrid.focus = (currentIndex != -1)
                 }
+
+                return item;
             }
 
             onPressed: {
@@ -426,7 +428,7 @@ FocusScope {
             }
 
             onPositionChanged: {
-                updatePositionProperties(mouse.x, mouse.y);
+                var item = updatePositionProperties(mouse.x, mouse.y);
 
                 if (gridView.currentIndex != -1) {
                     if (dragEnabled && pressX != -1 && dragHelper.isDrag(pressX, pressY, mouse.x, mouse.y)) {
