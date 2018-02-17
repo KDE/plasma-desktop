@@ -5,6 +5,7 @@ configure_file (config-kcm.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-kcm.h )
 
 
 set(kcm_lookandfeel_SRCS
+  kcmmain.cpp
   kcm.cpp
   ../krdb/krdb.cpp
   ../cursortheme/xcursor/cursortheme.cpp
@@ -62,6 +63,7 @@ kpackage_install_package(package kcm_lookandfeel kcms)
 
 set(lookandfeeltool_SRCS
     lnftool.cpp
+    # TODO: load kcm plugin instead of using code copy
     kcm.cpp
     ../krdb/krdb.cpp
     ../cursortheme/xcursor/cursortheme.cpp
