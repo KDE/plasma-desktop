@@ -71,8 +71,6 @@ set(lookandfeeltool_SRCS
 qt5_add_dbus_interface(lookandfeeltool_SRCS ${klauncher_xml} klauncher_iface)
 
 add_executable(lookandfeeltool ${lookandfeeltool_SRCS})
-# TODO: load kcm plugin instead of using code copy
-target_compile_definitions(lookandfeeltool PRIVATE -DDEFINE_NO_PLUGIN)
 
 target_link_libraries(lookandfeeltool
   KF5::KIOWidgets

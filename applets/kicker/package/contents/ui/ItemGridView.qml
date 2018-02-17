@@ -449,9 +449,14 @@ FocusScope {
 
             onContainsMouseChanged: {
                 if (!containsMouse) {
-                    gridView.currentIndex = -1;
+                    if (!actionMenu.opened) {
+                        gridView.currentIndex = -1;
+                    }
+
                     pressX = -1;
                     pressY = -1;
+                    lastX = -1;
+                    lastY = -1;
                     pressedItem = null;
                 }
             }
