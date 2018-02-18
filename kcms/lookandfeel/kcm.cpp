@@ -24,8 +24,6 @@
 #include "config-workspace.h"
 #include <klauncher_iface.h>
 
-#include <KPluginFactory>
-#include <KPluginLoader>
 #include <KAboutData>
 #include <KSharedConfig>
 #include <QDebug>
@@ -55,8 +53,6 @@
 #ifdef HAVE_XFIXES
 #  include <X11/extensions/Xfixes.h>
 #endif
-
-K_PLUGIN_FACTORY_WITH_JSON(KCMLookandFeelFactory, "kcm_lookandfeel.json", registerPlugin<KCMLookandFeel>();)
 
 KCMLookandFeel::KCMLookandFeel(QObject* parent, const QVariantList& args)
     : KQuickAddons::ConfigModule(parent, args)
@@ -812,6 +808,3 @@ bool KCMLookandFeel::resetDefaultLayout() const
 {
     return m_resetDefaultLayout;
 }
-
-
-#include "kcm.moc"
