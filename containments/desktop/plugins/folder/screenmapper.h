@@ -60,6 +60,9 @@ public:
     int firstAvailableScreen(const QUrl &screenUrl) const;
     void removeItemFromDisabledScreen(const QUrl &url);
 
+    bool sharedDesktops() const { return m_sharedDesktops; }
+    void setSharedDesktop(bool sharedDesktops);
+
 #ifdef BUILD_TESTING
     void cleanup();
 #endif
@@ -80,6 +83,7 @@ private:
     QVector<int> m_availableScreens;
     Plasma::Corona *m_corona = nullptr;
     QTimer *m_screenMappingChangedTimer = nullptr;
+    bool m_sharedDesktops = false; // all screens share the same desktops, disabling the screen mapping
 };
 
 #endif // SCREENMAPPER_H

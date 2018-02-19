@@ -266,7 +266,7 @@ void FolderModel::invalidateFilterIfComplete()
 
 void FolderModel::newFileMenuItemCreated(const QUrl &url)
 {
-    if (m_usedByContainment) {
+    if (m_usedByContainment && !m_screenMapper->sharedDesktops()) {
         m_screenMapper->addMapping(url, m_screen, ScreenMapper::DelayedSignal);
         m_dropTargetPositions.insert(url.fileName(), m_menuPosition);
         m_menuPosition = {};
@@ -322,7 +322,7 @@ void FolderModel::setUrl(const QString& url)
 
     emit iconNameChanged();
 
-    if (m_usedByContainment) {
+    if (m_usedByContainment && !m_screenMapper->sharedDesktops()) {
         m_screenMapper->removeScreen(m_screen, oldUrl);
         m_screenMapper->addScreen(m_screen, resolvedUrl());
     }
@@ -629,7 +629,7 @@ void FolderModel::setScreen(int screen)
         return;
 
     m_screen = screen;
-    if (m_usedByContainment) {
+    if (m_usedByContainment && !m_screenMapper->sharedDesktops()) {
         m_screenMapper->addScreen(screen, resolvedUrl());
     }
     emit screenChanged();
@@ -1114,7 +1114,7 @@ void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row)
     }
 
 
-    if (m_usedByContainment) {
+    if (m_usedByContainment && !m_screenMapper->sharedDesktops()) {
         if (isDropBetweenSharedViews(mimeData->urls(), dropTargetFolderUrl)) {
             setSortMode(-1);
             for (const auto &url : mimeData->urls()) {
@@ -1164,7 +1164,7 @@ void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row)
             m_dropTargetPositions.insert(targetUrl.fileName(), dropPos);
             m_dropTargetPositionsCleanup->start();
 
-            if (m_usedByContainment) {
+            if (m_usedByContainment && !m_screenMapper->sharedDesktops()) {
                 // assign a screen for the item before the copy is actually done, so
                 // filterAcceptsRow doesn't assign the default screen to it
                 QUrl url = resolvedUrl();
@@ -1498,7 +1498,7 @@ bool FolderModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParen
     const KDirModel *dirModel = static_cast<KDirModel*>(sourceModel());
     const KFileItem item = dirModel->itemForIndex(dirModel->index(sourceRow, KDirModel::Name, sourceParent));
 
-    if (m_usedByContainment) {
+    if (m_usedByContainment && !m_screenMapper->sharedDesktops()) {
         const QUrl url = item.url();
         const int screen = m_screenMapper->screenForItem(url);
         // don't do anything if the folderview is not associated with a screen

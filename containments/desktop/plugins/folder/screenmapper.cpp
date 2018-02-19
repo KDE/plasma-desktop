@@ -179,6 +179,19 @@ void ScreenMapper::removeItemFromDisabledScreen(const QUrl &url)
     }
 }
 
+void ScreenMapper::setSharedDesktop(bool sharedDesktops)
+{
+    if (m_sharedDesktops != sharedDesktops) {
+        m_sharedDesktops = true;
+        if (!m_corona)
+            return;
+
+        auto config = m_corona->config();
+        KConfigGroup group(config, QLatin1String("ScreenMapping"));
+        group.writeEntry(QLatin1String("sharedDesktops"), m_sharedDesktops);
+    }
+}
+
 #ifdef BUILD_TESTING
 void ScreenMapper::cleanup()
 {
@@ -208,6 +221,7 @@ void ScreenMapper::setCorona(Plasma::Corona *corona)
             KConfigGroup group(config, QLatin1String("ScreenMapping"));
             const QStringList mapping = group.readEntry(QLatin1String("screenMapping"), QStringList{});
             setScreenMapping(mapping);
+            m_sharedDesktops = group.readEntry(QLatin1String("sharedDesktops"), false);
         }
     }
 }
