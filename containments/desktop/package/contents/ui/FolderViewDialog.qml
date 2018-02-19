@@ -76,7 +76,7 @@ Folder.SubDialog {
 
             locked: true
 
-            sortMode: ((plasmoid.configuration.sortMode == 0) ? 1 : plasmoid.configuration.sortMode)
+            sortMode: ((plasmoid.configuration.sortMode === 0) ? 1 : plasmoid.configuration.sortMode)
             filterMode: 0
 
             // TODO: Bidi.
