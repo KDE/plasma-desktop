@@ -42,7 +42,7 @@ Rectangle {
         fontSizeMode: Text.VerticalFit
         font.pointSize: 1024
         minimumPointSize: 5
-        color: theme.backgroundColor
+        color: theme.highlightedTextColor
         text: {
             if (badgeRect.number < 0) {
                 return i18nc("Invalid number of new messages, overlay, keep short", "—");
