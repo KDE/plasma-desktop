@@ -36,7 +36,7 @@ Rectangle {
         id: label
         anchors.centerIn: parent
         width: height
-        height: Math.round(parent.height)
+        height: Math.min(units.gridUnit * 2, Math.round(parent.height))
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
         fontSizeMode: Text.VerticalFit
