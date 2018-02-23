@@ -140,6 +140,16 @@ Item {
     }
 
     function placeToolBox(ts) {
+        // if nothing has been setup yet, determin default position based on layout direction
+        if (!ts) {
+            if (Qt.application.layoutDirection === Qt.RightToLeft) {
+                placeToolBox("topleft");
+            } else {
+                placeToolBox("topright");
+            }
+            return;
+        }
+
         var tx = Plasmoid.configuration.ToolBoxButtonX
         var ty = Plasmoid.configuration.ToolBoxButtonY
         var pos;
