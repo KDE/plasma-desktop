@@ -1,2 +1,2 @@
 #! /usr/bin/env bash
-$XGETTEXT *.cpp -o $podir/joystick.pot
+$XGETTEXT *.cpp -o $podir/kcm5_joystick.pot
