@@ -26,7 +26,9 @@
 #include <config-X11.h>
 
 #include <QIcon>
+#include <QMimeDatabase>
 #include <QQmlEngine>
+#include <QTimer>
 #if HAVE_X11
 #include <QX11Info>
 #endif
@@ -34,6 +36,7 @@
 #include <KActivities/ResourceInstance>
 #include <KFileItem>
 #include <KLocalizedString>
+#include <KMimeTypeTrader>
 #include <KRun>
 #include <KService>
 #include <KStartupInfo>
@@ -280,7 +283,20 @@ bool RecentUsageModel::trigger(int row, const QString &actionId, const QVariant 
         const QString &resource = resourceAt(row);
 
         if (!resource.startsWith(QLatin1String("applications:"))) {
-            new KRun(docData(resource, Kicker::UrlRole).toUrl(), 0);
+            const QUrl resourceUrl = docData(resource, Kicker::UrlRole).toUrl();
+            const QList<QUrl> urlsList{resourceUrl};
+
+            QMimeDatabase db;
+            QMimeType mime = db.mimeTypeForUrl(resourceUrl);
+            KService::Ptr service = KMimeTypeTrader::self()->preferredService(mime.name());
+            if (service) {
+                KRun::runApplication(*service, urlsList, nullptr);
+            } else {
+                QTimer::singleShot(0, [urlsList] {
+                    KRun::displayOpenWithDialog(urlsList, nullptr);
+                });
+            }
+
             return true;
         }
 
