@@ -1004,7 +1004,7 @@ void FolderModel::dragSelectedInternal(int x, int y)
 static bool isDropBetweenSharedViews(const QList<QUrl> &urls, const QUrl &folderUrl)
 {
     for (const auto &url : urls) {
-        if (folderUrl != url.adjusted(QUrl::RemoveFilename)) {
+        if (folderUrl != url.adjusted(QUrl::RemoveFilename | QUrl::StripTrailingSlash)) {
             return false;
         }
     }
