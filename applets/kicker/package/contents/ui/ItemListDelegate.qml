@@ -57,7 +57,9 @@ Item {
     }
 
     onActionTriggered: {
-        Tools.triggerAction(ListView.view.model, model.index, actionId, actionArgument);
+        if (Tools.triggerAction(ListView.view.model, model.index, actionId, actionArgument) === true) {
+            plasmoid.expanded = false;
+        }
     }
 
     function openActionMenu(visualParent, x, y) {

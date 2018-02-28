@@ -43,7 +43,9 @@ Item {
     }
 
     onActionTriggered: {
-        Tools.triggerAction(repeater.model, model.index, actionId, actionArgument);
+        if (Tools.triggerAction(repeater.model, model.index, actionId, actionArgument) === true) {
+            plasmoid.expanded = false;
+        }
     }
 
     function openActionMenu(visualParent, x, y) {

@@ -164,8 +164,6 @@ function triggerAction(model, index, actionId, actionArgument) {
     var closeRequested = model.trigger(index, actionId, actionArgument);
 
     if (closeRequested) {
-        plasmoid.expanded = false;
-
         return true;
     }
 
