@@ -26,26 +26,15 @@
 #include <QX11Info>
 #include <KAboutData>
 #include <KLocalizedString>
-#include <KDBusService>
 #include <Kdelibs4ConfigMigrator>
 
 extern "C" Q_DECL_EXPORT int kdemain(int argc, char * argv[])
 {
-    // we need an application object for QX11Info
-    QApplication app(argc, argv);
-    KAccessApp acc;
-
     Kdelibs4ConfigMigrator migrate(QStringLiteral("kaccess"));
     migrate.setConfigFiles(QStringList() << QStringLiteral("kaccessrc"));
     migrate.migrate();
 
     QGuiApplication::setFallbackSessionManagementEnabled(false);
-
-    KAboutData about("kaccess", QString(), i18n("KDE Accessibility Tool"),
-                      {}, KAboutLicense::GPL_V2,
-                      i18n("(c) 2000, Matthias Hoelzer-Kluepfel"));
-
-    about.addAuthor(i18n("Matthias Hoelzer-Kluepfel"), i18n("Author") , QStringLiteral("hoelzer@kde.org"));
 
     //this application is currently only relevant on X, force to run under X
     //note if someone does port this we still need to run kaccess under X for xwayland apps
@@ -60,6 +49,18 @@ extern "C" Q_DECL_EXPORT int kdemain(int argc, char * argv[])
     }
     qDebug() << "Xlib XKB extension major=" << major << " minor=" << minor;
 
+    // we need an application object for QX11Info
+    QApplication app(argc, argv);
+
+    KAboutData about("kaccess", QString(), i18n("KDE Accessibility Tool"),
+                      {}, KAboutLicense::GPL_V2,
+                      i18n("(c) 2000, Matthias Hoelzer-Kluepfel"));
+
+    about.addAuthor(i18n("Matthias Hoelzer-Kluepfel"), i18n("Author") , QStringLiteral("hoelzer@kde.org"));
+    // set data as used for D-Bus by KAccessApp
+    KAboutData::setApplicationData(about);
+
+    KAccessApp acc;
     if (acc.isFailed()) {
         return 1;
     }
