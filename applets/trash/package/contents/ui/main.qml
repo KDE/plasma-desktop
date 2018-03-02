@@ -45,7 +45,7 @@ DragDrop.DropArea {
     }
     Layout.minimumHeight: {
         if (constrained) {
-            formFactor === PlasmaCore.Types.Vertical ? width : 1
+            return formFactor === PlasmaCore.Types.Vertical ? width : 1
         }
         return units.iconSizes.small + text.height
     }
