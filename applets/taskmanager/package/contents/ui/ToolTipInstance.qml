@@ -43,6 +43,8 @@ Column {
     property bool hasPlayer: !!mprisSourceName && !!playerData
     property bool playing: hasPlayer && playerData.PlaybackStatus === "Playing"
     property bool canControl: hasPlayer && playerData.CanControl
+    property bool canPlay: hasPlayer && playerData.CanPlay
+    property bool canPause: hasPlayer && playerData.CanPause
     property bool canGoBack: hasPlayer && playerData.CanGoPrevious
     property bool canGoNext: hasPlayer && playerData.CanGoNext
     property bool canRaise: hasPlayer && playerData.CanRaise
@@ -338,13 +340,21 @@ Column {
                     MouseArea {
                         height: units.iconSizes.medium
                         width: height
+                        enabled: playing ? canPause : canPlay
 
                         acceptedButtons: Qt.LeftButton
                         hoverEnabled: true
-                        onClicked: mpris2Source.playPause(mprisSourceName)
+                        onClicked: {
+                            if (!playing) {
+                                mpris2Source.play(mprisSourceName);
+                            } else {
+                                mpris2Source.pause(mprisSourceName);
+                            }
+                        }
 
                         PlasmaCore.IconItem {
                             anchors.fill: parent
+                            enabled: playing ? canPause : canPlay
                             active: parent.containsMouse
 
                             source: playing ? "media-playback-pause" : "media-playback-start"
