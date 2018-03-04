@@ -118,6 +118,7 @@ PlasmaComponents.ContextMenu {
             var playerData = mpris2Source.data[sourceName]
 
             if (playerData.CanControl) {
+                var playing = (playerData.PlaybackStatus === "Playing");
                 var menuItem = menu.newMenuItem(menu);
                 menuItem.text = i18nc("Play previous track", "Previous Track");
                 menuItem.icon = "media-skip-backward";
@@ -132,16 +133,21 @@ PlasmaComponents.ContextMenu {
                 menuItem = menu.newMenuItem(menu);
                 // PlasmaCore Menu doesn't actually handle icons or labels changing at runtime...
                 menuItem.text = Qt.binding(function() {
-                    return playerData.PlaybackStatus === "Playing" ? i18nc("Pause playback", "Pause") : i18nc("Start playback", "Play");
+                    // if CanPause, toggle the menu entry between Play & Pause, otherwise always use Play
+                    return playing && playerData.CanPause ? i18nc("Pause playback", "Pause") : i18nc("Start playback", "Play");
                 });
                 menuItem.icon = Qt.binding(function() {
-                    return playerData.PlaybackStatus === "Playing" ? "media-playback-pause" : "media-playback-start";
+                    return playing && playerData.CanPause ? "media-playback-pause" : "media-playback-start";
                 });
                 menuItem.enabled = Qt.binding(function() {
-                    return playerData.PlaybackStatus === "Playing" ? playerData.CanPause : playerData.CanPlay;
+                    return playing ? playerData.CanPause : playerData.CanPlay;
                 });
                 menuItem.clicked.connect(function() {
-                    mpris2Source.playPause(sourceName);
+                    if (playing) {
+                        mpris2Source.pause(sourceName);
+                    } else {
+                        mpris2Source.play(sourceName);
+                    }
                 });
                 menu.addMenuItem(menuItem, virtualDesktopsMenuItem);
 
