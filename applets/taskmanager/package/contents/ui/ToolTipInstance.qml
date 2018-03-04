@@ -33,20 +33,20 @@ import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
 import org.kde.taskmanager 0.1 as TaskManager
 
 Column {
-    property var submodelIndex: tasksModel.makeModelIndex(parentIndex, isGroup ? index : -1)
-    property int flatIndex: isGroup && index != undefined ? index : 0
+    readonly property var submodelIndex: tasksModel.makeModelIndex(parentIndex, isGroup ? index : -1)
+    readonly property int flatIndex: isGroup && index != undefined ? index : 0
 
     spacing: units.smallSpacing
 
-    property string mprisSourceName: mpris2Source.sourceNameForLauncherUrl(toolTipDelegate.launcherUrl, isGroup ? AppPid : pidParent)
-    property var playerData: mprisSourceName != "" ? mpris2Source.data[mprisSourceName] : 0
-    property bool hasPlayer: !!mprisSourceName && !!playerData
-    property bool playing: hasPlayer && playerData.PlaybackStatus === "Playing"
-    property bool canControl: hasPlayer && playerData.CanControl
-    property bool canGoBack: hasPlayer && playerData.CanGoPrevious
-    property bool canGoNext: hasPlayer && playerData.CanGoNext
-    property bool canRaise: hasPlayer && playerData.CanRaise
-    property var currentMetadata: hasPlayer ? playerData.Metadata : ({})
+    readonly property string mprisSourceName: mpris2Source.sourceNameForLauncherUrl(toolTipDelegate.launcherUrl, isGroup ? AppPid : pidParent)
+    readonly property var playerData: mprisSourceName != "" ? mpris2Source.data[mprisSourceName] : 0
+    readonly property bool hasPlayer: !!mprisSourceName && !!playerData
+    readonly property bool playing: hasPlayer && playerData.PlaybackStatus === "Playing"
+    readonly property bool canControl: hasPlayer && playerData.CanControl
+    readonly property bool canGoBack: hasPlayer && playerData.CanGoPrevious
+    readonly property bool canGoNext: hasPlayer && playerData.CanGoNext
+    readonly property bool canRaise: hasPlayer && playerData.CanRaise
+    readonly property var currentMetadata: hasPlayer ? playerData.Metadata : ({})
 
     readonly property string track: {
         var xesamTitle = currentMetadata["xesam:title"]
