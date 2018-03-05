@@ -303,10 +303,6 @@ QVariantList Backend::recentDocumentActions(const QUrl &launcherUrl, QObject *pa
     QString desktopName = desktopEntryUrl.fileName();
     QString storageId = desktopName;
 
-    if (storageId.startsWith(QLatin1String("org.kde."))) {
-        storageId = storageId.right(storageId.length() - 8);
-    }
-
     if (storageId.endsWith(QLatin1String(".desktop"))) {
         storageId = storageId.left(storageId.length() - 8);
     }
@@ -317,6 +313,13 @@ QVariantList Backend::recentDocumentActions(const QUrl &launcherUrl, QObject *pa
         | Type::any()
         | Activity::current()
         | Url::file();
+
+    // Due to KRecentDocument::add() bug, application name "<app>" could
+    // be stored instead of its desktop entry name "org.kde.<app>". Let's
+    // check for both in order to get all results for the application.
+    if (storageId.startsWith(QLatin1String("org.kde."))) {
+        query = query | Agent(storageId.mid(8));
+    }
 
     ResultSet results(query);
 
@@ -407,6 +410,13 @@ void Backend::handleRecentDocumentAction() const
             | Type::any()
             | Activity::current()
             | Url::file();
+
+        // Due to KRecentDocument::add() bug, application name "<app>" could
+        // be stored instead of its desktop entry name "org.kde.<app>". Let's
+        // check for both in order to get all results for the application.
+        if (agent.startsWith(QLatin1String("org.kde."))) {
+            query = query | Agent(agent.mid(8));
+        }
 
         KAStats::forgetResources(query);
 
