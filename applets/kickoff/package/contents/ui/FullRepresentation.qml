@@ -76,6 +76,7 @@ Item {
         flat: false
         sorted: plasmoid.configuration.alphaSort
         showSeparators: false
+        showTopLevelItems: true
 
         favoritesModel: Kicker.KAStatsFavoritesModel {
             id: rootModelFavorites

@@ -87,6 +87,7 @@ Item {
         appletInterface: plasmoid
 
         showAllApps: isDash
+        showTopLevelItems: !isDash
         showRecentApps: plasmoid.configuration.showRecentApps
         showRecentDocs: plasmoid.configuration.showRecentDocs
         showRecentContacts: plasmoid.configuration.showRecentContacts
