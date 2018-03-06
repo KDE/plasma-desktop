@@ -363,7 +363,7 @@ Item {
         property int count: 5 // updated in createButtons()
 
         width: {
-            if (!visible) {
+            if (opacity == 0) {
                 return 0;
             }
 
@@ -377,7 +377,7 @@ Item {
         }
 
         height: {
-            if (!visible) {
+            if (opacity == 0) {
                 return 0;
             }
 
@@ -511,7 +511,12 @@ Item {
             }
             PropertyChanges {
                 target: tabBar
-                visible: tabBar.count > 1
+                //Set the opacity and NOT the visibility, as visibility is recursive
+                //and this binding would be executed also on popup show/hide
+                //as recomended by the docs: http://doc.qt.io/qt-5/qml-qtquick-item.html#visible-prop
+                //plus, it triggers https://bugreports.qt.io/browse/QTBUG-66907
+                //in which a mousearea may think it's under the mouse while it isn't
+                opacity: tabBar.count > 1 ? 1 : 0
             }
         },
         State {
@@ -522,14 +527,14 @@ Item {
             }
             PropertyChanges {
                 target: tabBar
-                visible: tabBar.count > 1
+                opacity: tabBar.count > 1 ? 1 : 0
             }
         },
         State {
             name: "Search"
             PropertyChanges {
                 target: tabBar
-                visible: false
+                opacity: 0
             }
             PropertyChanges {
                 target: mainTabGroup
