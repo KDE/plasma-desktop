@@ -165,6 +165,9 @@ PlasmaComponents.ContextMenu {
                 menuItem = menu.newMenuItem(menu);
                 menuItem.text = i18nc("Stop playback", "Stop");
                 menuItem.icon = "media-playback-stop";
+                menuItem.enabled = Qt.binding(function() {
+                    return playerData.PlaybackStatus !== "Stopped";
+                });
                 menuItem.clicked.connect(function() {
                     mpris2Source.stop(sourceName);
                 });
