@@ -39,6 +39,10 @@
 #define DBUS_ERROR_FAILED "org.freedesktop.DBus.Error.Failed"
 #endif /* DBUS_ERROR_FAILED */
 
+#define IBUS_SCHEMA_GENERAL "org.freedesktop.ibus.general"
+#define IBUS_SCHEMA_HOTKEY  "org.freedesktop.ibus.general.hotkey"
+#define IBUS_SCHEMA_PANEL   "org.freedesktop.ibus.panel"
+
 typedef struct _IBusPanelImpanelClass IBusPanelImpanelClass;
 
 struct _IBusPanelImpanel {
@@ -51,6 +55,8 @@ struct _IBusPanelImpanel {
     App* app;
     gboolean useSystemKeyboardLayout;
     int selected;
+    GSettings *settings_general;
+    GSettings *settings_hotkey;
 };
 
 struct _IBusPanelImpanelClass {
@@ -513,9 +519,8 @@ impanel_update_engines(IBusPanelImpanel* impanel, GVariant* var_engines) {
 
     if (!engine_names) {
         impanel_get_default_engine(impanel, &engine_names, &len);
-        IBusConfig* config = ibus_bus_get_config(impanel->bus);
         GVariant* var = g_variant_new_strv(engine_names, len);
-        ibus_config_set_value(config, "general", "preload_engines", var);
+        g_settings_set_value(impanel->settings_general, "preload-engines", var);
     }
 
     IBusEngineDesc** engines = ibus_bus_get_engines_by_names(impanel->bus, engine_names);
@@ -597,21 +602,25 @@ impanel_update_latin_layouts(IBusPanelImpanel* impanel, GVariant* variant) {
 }
 
 static void
-impanel_config_value_changed_callback (IBusConfig* config, const gchar* section, const gchar* name, GVariant* value, gpointer user_data)
+impanel_settings_changed_callback (GSettings* settings, const gchar* key, gpointer user_data)
 {
-    Q_UNUSED(config);
     IBusPanelImpanel* impanel = ((IBusPanelImpanel *)user_data);
+    gchar *schema = NULL;
+    GVariant *value = g_settings_get_value (settings, key);
 
-    if (g_strcmp0(section, "general") == 0 && g_strcmp0(name, "preload_engines") == 0) {
+    g_object_get(G_OBJECT(settings), "schema", &schema, NULL);
+
+    if (g_strcmp0(schema, IBUS_SCHEMA_GENERAL) == 0 && g_strcmp0(key, "preload-engines") == 0) {
         impanel_update_engines(impanel, value);
     }
-    else if (g_strcmp0(section, "general/hotkey") == 0 && g_strcmp0(name, "triggers") == 0) {
+    else if (g_strcmp0(schema, IBUS_SCHEMA_HOTKEY) == 0 && g_strcmp0(key, "triggers") == 0) {
         impanel_update_triggers(impanel, value);
-    } else if (g_strcmp0(section, "general") == 0 && g_strcmp0(name, "use-system-keyboard-layout") == 0) {
+    } else if (g_strcmp0(schema, IBUS_SCHEMA_GENERAL) == 0 && g_strcmp0(key, "use-system-keyboard-layout") == 0) {
         impanel_update_use_system_keyboard_layout(impanel, value);
-    } else if (g_strcmp0(section, "general") == 0 && g_strcmp0(name, "use-global-engine") == 0) {
+    } else if (g_strcmp0(schema, IBUS_SCHEMA_GENERAL) == 0 && g_strcmp0(key, "use-global-engine") == 0) {
         impanel_update_use_global_engine(impanel, value);
     }
+    g_free (schema);
 }
 
 static void
@@ -908,47 +917,40 @@ on_bus_acquired (GDBusConnection *connection,
                                         user_data,
                                         NULL);
 
-    IBusConfig* config = ibus_bus_get_config(impanel->bus);
-    if (config) {
-        g_signal_connect_object(config, "value-changed", (GCallback) impanel_config_value_changed_callback, impanel, (GConnectFlags) 0);
-        ibus_config_watch(config, "general", "preload_engines");
-        ibus_config_watch(config, "general", "use-system-keyboard-layout");
-        ibus_config_watch(config, "general/hotkey", "triggers");
+    GVariant* var_engines = g_settings_get_value(impanel->settings_general, "preload-engines");
+    impanel_update_engines(impanel, var_engines);
+    if (var_engines) {
+        g_variant_unref(var_engines);
+    }
 
-        GVariant* var_engines = ibus_config_get_value(config, "general", "preload_engines");
-        impanel_update_engines(impanel, var_engines);
-        if (var_engines)
-            g_variant_unref(var_engines);
+    var_engines = g_settings_get_value(impanel->settings_general, "engines-order");
+    if (var_engines) {
+        impanel_update_engines_order(impanel, var_engines);
+        g_variant_unref(var_engines);
+    }
 
-        var_engines = ibus_config_get_value(config, "general", "engines-order");
-        if (var_engines) {
-            impanel_update_engines_order(impanel, var_engines);
-            g_variant_unref(var_engines);
-        }
+    GVariant* var_triggers = g_settings_get_value(impanel->settings_hotkey, "triggers");
+    impanel_update_triggers(impanel, var_triggers);
+    if (var_triggers) {
+        g_variant_unref(var_triggers);
+    }
 
-        GVariant* var_triggers = ibus_config_get_value(config, "general/hotkey", "triggers");
-        impanel_update_triggers(impanel, var_triggers);
-        if (var_triggers)
-            g_variant_unref(var_triggers);
+    GVariant* var_layouts = g_settings_get_value(impanel->settings_general, "xkb-latin-layouts");
+    if (var_layouts) {
+        impanel_update_latin_layouts(impanel, var_layouts);
+        g_variant_unref(var_layouts);
+    }
 
-        IBusConfig* config = ibus_bus_get_config(impanel->bus);
-        GVariant* var_layouts = ibus_config_get_value(config, "general", "xkb-latin-layouts");
-        if (var_layouts) {
-            impanel_update_latin_layouts(impanel, var_layouts);
-            g_variant_unref(var_layouts);
-        }
+    GVariant* var = g_settings_get_value(impanel->settings_general, "use-system-keyboard-layout");
+    if (var) {
+        impanel_update_use_system_keyboard_layout(impanel, var);
+        g_variant_unref(var);
+    }
 
-        GVariant* var = ibus_config_get_value(config, "general", "use-system-keyboard-layout");
-        if (var) {
-            impanel_update_use_system_keyboard_layout(impanel, var);
-            g_variant_unref(var);
-        }
-
-        var = ibus_config_get_value(config, "general", "use-global-engine");
-        if (var) {
-            impanel_update_use_global_engine(impanel, var);
-            g_variant_unref(var);
-        }
+    var = g_settings_get_value(impanel->settings_general, "use-global-engine");
+    if (var) {
+        impanel_update_use_global_engine(impanel, var);
+        g_variant_unref(var);
     }
 
     ibus_panel_impanel_real_register_properties(impanel);
@@ -1028,6 +1030,10 @@ ibus_panel_impanel_init (IBusPanelImpanel *impanel)
     impanel->propManager = new PropertyManager;
     impanel->engineManager = new EngineManager;
     impanel->xkbLayoutManager = new XkbLayoutManager;
+    impanel->settings_general = g_settings_new (IBUS_SCHEMA_GENERAL);
+    impanel->settings_hotkey = g_settings_new (IBUS_SCHEMA_HOTKEY);
+    g_signal_connect(impanel->settings_general, "changed", G_CALLBACK (impanel_settings_changed_callback), impanel);
+    g_signal_connect(impanel->settings_hotkey, "changed", G_CALLBACK (impanel_settings_changed_callback), impanel);
 }
 
 static void
@@ -1039,6 +1045,11 @@ ibus_panel_impanel_destroy (IBusPanelImpanel *impanel)
     impanel->engineManager = NULL;
     delete impanel->xkbLayoutManager;
     impanel->xkbLayoutManager = NULL;
+
+    g_signal_handlers_disconnect_by_func (impanel->settings_general, (gpointer)impanel_settings_changed_callback, impanel);
+    g_signal_handlers_disconnect_by_func (impanel->settings_hotkey, (gpointer)impanel_settings_changed_callback, impanel);
+    g_clear_object (&impanel->settings_general);
+    g_clear_object (&impanel->settings_hotkey);
 
     g_bus_unown_name (owner_id);
     g_dbus_node_info_unref (introspection_data);
@@ -1476,11 +1487,8 @@ ibus_panel_impanel_state_changed (IBusPanelService *panel)
         i ++;
     }
 
-    IBusConfig* config = ibus_bus_get_config(impanel->bus);
-    if (config) {
-        GVariant* var = g_variant_new_strv(engine_names, engineList.size());
-        ibus_config_set_value(config, "general", "engines-order", var);
-    }
+    GVariant* var = g_variant_new_strv(engine_names, engineList.size());
+    g_settings_set_value(impanel->settings_general, "engines-order", var);
     g_strfreev(engine_names);
     g_object_unref(engine_desc);
 }
