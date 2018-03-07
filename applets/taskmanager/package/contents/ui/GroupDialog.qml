@@ -24,7 +24,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.draganddrop 2.0
 
-import "../code/layout.js" as LayoutManager
+import "code/layout.js" as LayoutManager
 
 PlasmaCore.Dialog {
     id: groupDialog

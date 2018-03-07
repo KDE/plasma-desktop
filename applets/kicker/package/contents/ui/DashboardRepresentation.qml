@@ -30,7 +30,7 @@ import org.kde.plasma.private.shell 2.0
 
 import org.kde.plasma.private.kicker 0.1 as Kicker
 
-import "../code/tools.js" as Tools
+import "code/tools.js" as Tools
 
 /* TODO
  * Reverse middleRow layout + keyboard nav + filter list text alignment in rtl locales.

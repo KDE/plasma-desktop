@@ -23,7 +23,7 @@ import org.kde.draganddrop 2.0
 
 import org.kde.taskmanager 0.1 as TaskManager
 
-import "../code/tools.js" as TaskTools
+import "code/tools.js" as TaskTools
 
 Item {
     signal urlsDropped(var urls)

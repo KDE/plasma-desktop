@@ -22,7 +22,7 @@ import QtQuick 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kquickcontrolsaddons 2.0
 
-import "../code/tools.js" as Tools
+import "code/tools.js" as Tools
 
 Item {
     id: item

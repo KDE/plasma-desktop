@@ -25,8 +25,8 @@ import org.kde.draganddrop 2.0
 
 import org.kde.plasma.private.taskmanager 0.1 as TaskManagerApplet
 
-import "../code/layout.js" as LayoutManager
-import "../code/tools.js" as TaskTools
+import "code/layout.js" as LayoutManager
+import "code/tools.js" as TaskTools
 
 MouseArea {
     id: task
