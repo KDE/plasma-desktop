@@ -186,14 +186,9 @@ bool handleAddLauncherAction(const QString &actionId, QObject *appletInterface, 
     return false;
 }
 
-// HACK TEMP FIXME TODO IVAN
 QString storageIdFromService(KService::Ptr service)
 {
     QString storageId = service->storageId();
-
-    if (storageId.startsWith("org.kde.")) {
-        storageId = storageId.right(storageId.length() - 8);
-    }
 
     if (storageId.endsWith(".desktop")) {
         storageId = storageId.left(storageId.length() - 8);
@@ -245,6 +240,13 @@ QVariantList recentDocumentActions(KService::Ptr service)
         | Type::any()
         | Activity::current()
         | Url::file();
+
+    // Due to KRecentDocument::add() bug, application name "<app>" could
+    // be stored instead of its desktop entry name "org.kde.<app>". Let's
+    // check for both in order to get all results for the application.
+    if (storageId.startsWith("org.kde.")) {
+        query = query | Agent(storageId.mid(8));
+    }
 
     ResultSet results(query);
 
@@ -302,6 +304,13 @@ bool handleRecentDocumentAction(KService::Ptr service, const QString &actionId, 
             | Type::any()
             | Activity::current()
             | Url::file();
+
+        // Due to KRecentDocument::add() bug, application name "<app>" could
+        // be stored instead of its desktop entry name "org.kde.<app>". Let's
+        // check for both in order to get all results for the application.
+        if (storageId.startsWith("org.kde.")) {
+            query = query | Agent(storageId.mid(8));
+        }
 
         KAStats::forgetResources(query);
 
