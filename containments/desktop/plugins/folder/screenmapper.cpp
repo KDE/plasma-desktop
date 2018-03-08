@@ -66,38 +66,38 @@ void ScreenMapper::removeScreen(int screenId, const QUrl &screenUrl)
     const auto screenPathWithScheme = screenUrl.url();
     // store the original location for the items
     auto it = m_screenItemMap.constBegin();
+    QVector<QUrl> urlsToRemoveFromMapping;
     while (it != m_screenItemMap.constEnd()) {
         const auto name = it.key();
         if (it.value() == screenId && name.url().startsWith(screenPathWithScheme)) {
-            m_itemsOnDisabledScreensMap[screenId].append(name);
+            bool found = false;
+            for (const auto &disabledUrls: qAsConst(m_itemsOnDisabledScreensMap)) {
+                found = disabledUrls.contains(name);
+                if (found)
+                    break;
+            }
+            if (!found)
+                m_itemsOnDisabledScreensMap[screenId].append(name);
+            urlsToRemoveFromMapping.append(name);
         }
         ++it;
     }
 
+    saveDisabledScreensMap();
+
+    for (const auto &url: urlsToRemoveFromMapping)
+        removeFromMap(url);
+
     m_availableScreens.removeAll(screenId);
 
-    const auto newFirstScreen = std::min_element(m_availableScreens.constBegin(), m_availableScreens.constEnd());
     auto pathIt = m_screensPerPath.find(screenUrl);
-    if (pathIt != m_screensPerPath.end() && pathIt.value() > 0) {
-        int firstScreen = m_firstScreenForPath.value(screenUrl, -1);
-        if (firstScreen == screenId) {
-            m_firstScreenForPath[screenUrl] = (newFirstScreen == m_availableScreens.constEnd()) ? -1 : *newFirstScreen;
-        }
-        *pathIt = pathIt.value() - 1;
+    if (pathIt != m_screensPerPath.end() && pathIt.value().size() > 0) {
+        // remove the screen for a certain url, used when switching the URL for a screen
+        pathIt->removeAll(screenId);
     } else if (screenUrl.isEmpty()) {
-        // The screen got completely removed, not only its path changed.
-        // If the removed screen was the first screen for a desktop path, the first screen for that path
-        // needs to be updated.
-        for (auto it = m_firstScreenForPath.begin(); it != m_firstScreenForPath.end(); ++it) {
-            if (*it == screenId) {
-                *it = *newFirstScreen;
-
-                // we have now the path for the screen that was removed, so adjust it
-                pathIt = m_screensPerPath.find(it.key());
-                if (pathIt != m_screensPerPath.end()) {
-                    *pathIt = pathIt.value() - 1;
-                }
-            }
+        // the screen was indeed removed so all references to it needs to be cleaned up
+        for (auto & pathIt: m_screensPerPath) {
+            pathIt.removeAll(screenId);
         }
     }
 
@@ -110,7 +110,6 @@ void ScreenMapper::addScreen(int screenId, const QUrl &screenUrl)
         return;
 
     const auto screenPathWithScheme = screenUrl.url();
-    const bool isEmpty = (screenUrl.isEmpty() || screenUrl.path() == QLatin1String("/"));
     // restore the stored locations
     auto it = m_itemsOnDisabledScreensMap.find(screenId);
     if (it != m_itemsOnDisabledScreensMap.end()) {
@@ -118,7 +117,7 @@ void ScreenMapper::addScreen(int screenId, const QUrl &screenUrl)
         for (const auto &name: it.value()) {
             // add the items to the new screen, if they are on a disabled screen and their
             // location is below the new screen's path
-            if (isEmpty || name.url().startsWith(screenPathWithScheme)) {
+            if (name.url().startsWith(screenPathWithScheme)) {
                 addMapping(name, screenId, DelayedSignal);
                 items.removeAll(name);
             }
@@ -129,20 +128,17 @@ void ScreenMapper::addScreen(int screenId, const QUrl &screenUrl)
             *it = items;
         }
     }
+    saveDisabledScreensMap();
 
     m_availableScreens.append(screenId);
 
     // path is empty when a new screen appears that has no folderview base path associated with
     if (!screenUrl.isEmpty()) {
         auto it = m_screensPerPath.find(screenUrl);
-        int firstScreen = m_firstScreenForPath.value(screenUrl, -1);
-        if (firstScreen == -1 || screenId < firstScreen) {
-            m_firstScreenForPath[screenUrl] = screenId;
-        }
         if (it == m_screensPerPath.end()) {
-            m_screensPerPath[screenUrl] = 1;
+            m_screensPerPath[screenUrl] = {screenId};
         } else {
-            *it = it.value() + 1;
+            it->append(screenId);
         }
     }
 
@@ -167,7 +163,9 @@ void ScreenMapper::removeFromMap(const QUrl &url)
 
 int ScreenMapper::firstAvailableScreen(const QUrl &screenUrl) const
 {
-    return m_firstScreenForPath.value(screenUrl, -1);
+    auto screens = m_screensPerPath[screenUrl];
+    const auto newFirstScreen = std::min_element(screens.constBegin(), screens.constEnd());
+    return newFirstScreen == screens.constEnd() ? -1 : *newFirstScreen;
 }
 
 void ScreenMapper::removeItemFromDisabledScreen(const QUrl &url)
@@ -197,7 +195,6 @@ void ScreenMapper::cleanup()
 {
     m_screenItemMap.clear();
     m_itemsOnDisabledScreensMap.clear();
-    m_firstScreenForPath.clear();
     m_screensPerPath.clear();
     m_availableScreens.clear();
 }
@@ -222,6 +219,7 @@ void ScreenMapper::setCorona(Plasma::Corona *corona)
             const QStringList mapping = group.readEntry(QLatin1String("screenMapping"), QStringList{});
             setScreenMapping(mapping);
             m_sharedDesktops = group.readEntry(QLatin1String("sharedDesktops"), false);
+            readDisabledScreensMap();
         }
     }
 }
@@ -270,4 +268,60 @@ int ScreenMapper::screenForItem(const QUrl &url) const
 QUrl ScreenMapper::stringToUrl(const QString &path)
 {
     return QUrl::fromUserInput(path, {}, QUrl::AssumeLocalFile);
+}
+
+void ScreenMapper::readDisabledScreensMap()
+{
+    if (!m_corona)
+        return;
+
+    auto config = m_corona->config();
+    KConfigGroup group(config, QLatin1String("ScreenMapping"));
+    const QStringList serializedMap  = group.readEntry(QLatin1String("itemsOnDisabledScreens"), QStringList{});
+    m_itemsOnDisabledScreensMap.clear();
+    bool readingScreenId = true;
+    int vectorSize = -1;
+    int screenId = -1;
+    int vectorCounter = 0;
+    for (const auto &entry : serializedMap) {
+        if (readingScreenId) {
+            screenId = entry.toInt();
+            readingScreenId = false;
+        } else if (vectorSize == -1) {
+            vectorSize = entry.toInt();
+        } else {
+            const auto url = stringToUrl(entry);
+            m_itemsOnDisabledScreensMap[screenId].append(url);
+            vectorCounter++;
+            if (vectorCounter == vectorSize) {
+                readingScreenId = true;
+                screenId = -1;
+                vectorCounter = 0;
+                vectorSize = -1;
+            }
+        }
+    }
+
+}
+
+void ScreenMapper::saveDisabledScreensMap() const
+{
+    if (!m_corona)
+        return;
+
+    auto config = m_corona->config();
+    KConfigGroup group(config, QLatin1String("ScreenMapping"));
+    QStringList serializedMap;
+    auto it = m_itemsOnDisabledScreensMap.constBegin();
+    for (; it != m_itemsOnDisabledScreensMap.constEnd(); ++it) {
+        serializedMap.append(QString::number(it.key()));
+        const auto urls= it.value();
+        serializedMap.append(QString::number(urls.size()));
+        for (const auto &url : urls) {
+            serializedMap.append(url.toString());
+        }
+    }
+
+    group.writeEntry(QLatin1String("itemsOnDisabledScreens"), serializedMap);
+
 }
