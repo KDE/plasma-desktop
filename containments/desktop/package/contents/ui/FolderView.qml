@@ -27,7 +27,7 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kquickcontrolsaddons 2.0
 
 import org.kde.private.desktopcontainment.folder 0.1 as Folder
-import "FolderTools.js" as FolderTools
+import "code/FolderTools.js" as FolderTools
 
 FocusScope {
     id: main

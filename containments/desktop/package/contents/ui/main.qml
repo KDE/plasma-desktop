@@ -30,8 +30,8 @@ import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
 
 import org.kde.private.desktopcontainment.desktop 0.1 as Desktop
 
-import "LayoutManager.js" as LayoutManager
-import "FolderTools.js" as FolderTools
+import "code/LayoutManager.js" as LayoutManager
+import "code/FolderTools.js" as FolderTools
 
 FolderViewDropArea {
     id: root
