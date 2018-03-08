@@ -71,12 +71,14 @@ Q_SIGNALS:
     void screensChanged() const;
 
 private:
+    void saveDisabledScreensMap() const;
+    void readDisabledScreensMap();
+
     ScreenMapper(QObject *parent = nullptr);
 
     QHash<QUrl, int> m_screenItemMap;
     QHash<int, QVector<QUrl> > m_itemsOnDisabledScreensMap;
-    QHash<QUrl, int> m_firstScreenForPath; // first available screen for a path
-    QHash<QUrl, int> m_screensPerPath; // screen per registered path
+    QHash<QUrl, QVector<int> > m_screensPerPath; // screens per registered path
     QVector<int> m_availableScreens;
     Plasma::Corona *m_corona = nullptr;
     QTimer *m_screenMappingChangedTimer = nullptr;
