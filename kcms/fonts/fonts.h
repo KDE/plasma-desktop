@@ -106,7 +106,9 @@ private:
     int m_dpi;
     int m_dpiOriginal;
     int m_subPixelCurrentIndex = 0;
+    int m_subPixelCurrentIndexOriginal;
     int m_hintingCurrentIndex = 0;
+    int m_hintingCurrentIndexOriginal;
     QStandardItemModel *m_subPixelOptionsModel;
     QStandardItemModel *m_hintingOptionsModel;
     bool m_exclude = false;

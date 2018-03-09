@@ -145,6 +145,7 @@ void FontAASettings::load()
     xft.getSubPixelType(spType);
 
     setSubPixelCurrentIndex(spType);
+    m_subPixelCurrentIndexOriginal = spType;
 
     KXftConfig::Hint::Style hStyle;
 
@@ -159,6 +160,7 @@ void FontAASettings::load()
     }
 
     setHintingCurrentIndex(hStyle);
+    m_hintingCurrentIndexOriginal = hStyle;
 
     KConfig _cfgfonts("kcmfonts");
     KConfigGroup cfgfonts(&_cfgfonts, "General");
@@ -291,6 +293,9 @@ bool FontAASettings::save(KXftConfig::AntiAliasing::State aaState)
 
     m_excludeToOriginal = m_excludeTo;
     m_excludeFromOriginal = m_excludeFrom;
+    
+    m_subPixelCurrentIndexOriginal = m_subPixelCurrentIndex;
+    m_hintingCurrentIndexOriginal = m_hintingCurrentIndex;
 
     return mod;
 }
@@ -415,7 +420,12 @@ int FontAASettings::hintingCurrentIndex()
 
 bool FontAASettings::needsSave() const
 {
-    return m_excludeTo != m_excludeToOriginal || m_excludeFrom != m_excludeFromOriginal || m_antiAliasing != m_antiAliasingOriginal || m_dpi != m_dpiOriginal;
+    return m_excludeTo != m_excludeToOriginal
+        || m_excludeFrom != m_excludeFromOriginal
+        || m_antiAliasing != m_antiAliasingOriginal
+        || m_dpi != m_dpiOriginal
+        || m_subPixelCurrentIndex != m_subPixelCurrentIndexOriginal
+        || m_hintingCurrentIndex != m_hintingCurrentIndexOriginal;
 }
 
 
