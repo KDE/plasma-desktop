@@ -12,6 +12,7 @@ target_link_libraries(trashplugin
         KF5::KIOCore
         KF5::KIOWidgets
         KF5::GuiAddons
+        Qt5::DBus
         )
 
 install(TARGETS trashplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/private/trash)
