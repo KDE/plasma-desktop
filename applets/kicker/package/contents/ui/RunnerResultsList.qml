@@ -77,8 +77,16 @@ FocusScope {
         anchors.left: vertLine.right
         anchors.leftMargin: (index > 0) ? units.smallSpacing : 0
 
-        height: Math.min(((index == 0) ? rootList.height : runnerColumns.height)
-            - header.height, model.count * itemHeight)
+        height: {
+            var listHeight = (((index == 0)
+                ? rootList.height : runnerColumns.height) - header.height);
+
+            if (model && model.count) {
+                return Math.min(listHeight, model.count * itemHeight);
+            }
+
+            return listHeight;
+        }
 
         focus: true
 
