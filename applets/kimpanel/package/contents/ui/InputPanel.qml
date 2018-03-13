@@ -260,7 +260,10 @@ PlasmaCore.Dialog {
 
     function updatePosition() {
         var rect = screen.geometryForPoint(position.x, position.y);
+        var devicePerPixelRatio = screen.devicePixelRatioForPoint(position.x, position.y);
         var x, y;
+        var width = inputpanel.width * devicePerPixelRatio;
+        var height = inputpanel.height * devicePerPixelRatio;
         if (position.x < rect.x) {
             x = rect.x;
         } else {
@@ -272,23 +275,23 @@ PlasmaCore.Dialog {
             y = position.y + position.height;
         }
 
-        if (x + inputpanel.width > rect.x + rect.width) {
-            x = rect.x + rect.width - inputpanel.width;
+        if (x + width > rect.x + rect.width) {
+            x = rect.x + rect.width - width;
         }
 
-        if (y + inputpanel.height > rect.y + rect.height) {
+        if (y + height > rect.y + rect.height) {
             if (y > rect.y + rect.height) {
-                y = rect.y + rect.height - inputpanel.height - 40;
+                y = rect.y + rect.height - height - 40;
             } else {
-                y = y - inputpanel.height - (position.height == 0 ? 40 : position.height);
+                y = y - height - (position.height == 0 ? 40 : position.height);
             }
         }
 
         var newRect = screen.geometryForPoint(x, y);
-        var devicePerPixelRatio = screen.devicePixelRatioForPoint(x, y);
+        devicePerPixelRatio = screen.devicePixelRatioForPoint(x, y);
 
-        inputpanel.x = newRect.x + (x - newRect.x) / devicePerPixelRatio;;
-        inputpanel.y = newRect.y + (y - newRect.y) / devicePerPixelRatio;;
+        inputpanel.x = newRect.x + (x - newRect.x) / devicePerPixelRatio;
+        inputpanel.y = newRect.y + (y - newRect.y) / devicePerPixelRatio;
     }
 
     function action(key) {
@@ -304,4 +307,3 @@ PlasmaCore.Dialog {
         service.startOperationCall(operation);
     }
 }
-
