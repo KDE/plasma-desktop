@@ -308,7 +308,7 @@ Item {
                             PropertyChanges {
                                 target: label
                                 anchors.topMargin: units.smallSpacing
-                                width: Math.min(label.implicitWidth + units.smallSpacing, parent.width - units.smallSpacing * 4)
+                                width: Math.min(label.implicitWidth + units.smallSpacing, parent.width - units.smallSpacing)
                                 maximumLineCount: plasmoid.configuration.textLines
                                 horizontalAlignment: Text.AlignHCenter
                             }
