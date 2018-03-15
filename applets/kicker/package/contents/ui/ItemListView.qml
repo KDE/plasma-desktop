@@ -147,10 +147,10 @@ FocusScope {
                 delegate: ItemListDelegate {}
 
                 highlight: PlasmaComponents.Highlight {
-                    anchors.fill: listView.currentItem;
-
                     visible: listView.currentItem && !listView.currentItem.isSeparator
                 }
+
+                highlightMoveDuration: 0
 
                 onCountChanged: {
                     currentIndex = -1;

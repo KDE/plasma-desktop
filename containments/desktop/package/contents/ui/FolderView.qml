@@ -1264,23 +1264,21 @@ FocusScope {
                    _y = pos.y - __style.padding.top;
                 } else {
                     _x = targetItem.x + Math.abs(Math.min(gridView.contentX, gridView.originX));
-                    _x += (targetItem.width/2 - targetItem.label.paintedWidth/2 - __style.padding.left);
+                    _x += __style.padding.left;
                     _x += scrollArea.viewport.x;
-
                     if (verticalScrollBarPolicy == Qt.ScrollBarAlwaysOn
                         && gridView.effectiveLayoutDirection == Qt.RightToLeft) {
                         _x -= __verticalScrollBar.parent.verticalScrollbarOffset;
                     }
-
-                   _y = pos.y + units.smallSpacing - __style.padding.top;
+                    _y = pos.y + units.smallSpacing - __style.padding.top;
                 }
                 return([ _x, _y ]);
             }
             
             function getWidth(addWidthVerticalScroller) {
-                var _width = root.useListViewMode ? targetItem.width - units.largeSpacing * 2 : targetItem.label.paintedWidth;
-                return _width + __style.padding.left + __style.padding.right +
-                       (addWidthVerticalScroller ? __verticalScrollBar.parent.verticalScrollbarOffset : 0);
+                 return(targetItem.label.parent.width - units.smallSpacing +
+                        (root.useListViewMode ? -(__style.padding.left + __style.padding.right + units.smallSpacing) : 0) +
+                        (addWidthVerticalScroller ? __verticalScrollBar.parent.verticalScrollbarOffset : 0));
             }
             
             function getHeight(addWidthHoriozontalScroller, init) {

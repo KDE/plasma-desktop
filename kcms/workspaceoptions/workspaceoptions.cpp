@@ -76,6 +76,7 @@ void WorkspaceOptionsModule::save()
         cg.writeEntry("Enabled", m_ui->showOsd->isChecked());
     }
 
+    config->sync();
 }
 
 void WorkspaceOptionsModule::load()
