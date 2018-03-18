@@ -152,6 +152,8 @@ void TouchpadConfigLibinput::defaults()
         m_errorMessage->setText(i18n("Error while loading default values. Failed to set some options to their default values."));
         m_errorMessage->animatedShow();
     }
+    QMetaObject::invokeMethod(m_view->rootObject(), "syncValuesFromBackend");
+    emit m_parent->changed(m_backend->isChangedConfig());
 }
 
 void TouchpadConfigLibinput::onChange()
