@@ -1,5 +1,5 @@
 /*
- * Copyright 2017 Xuetian Weng <wengxt@gmail.com>
+ * Copyright 2018 Roman Gilg <subdiff@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -15,7 +15,12 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
+#include "kcm/configcontainer.h"
 
-#include "logging.h"
+#include <KPluginFactory>
 
-Q_LOGGING_CATEGORY(KCM_INPUT, "kcm_input")
+K_PLUGIN_FACTORY(MousePluginFactory,
+                 registerPlugin<ConfigContainer>();
+)
+
+#include <plugin.moc>

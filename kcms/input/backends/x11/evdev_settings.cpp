@@ -1,5 +1,6 @@
 /*
  * Copyright 2017 Xuetian Weng <wengxt@gmail.com>
+ * Copyright 2018 Roman Gilg <subdiff@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -15,10 +16,8 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
-
-#include "mousesettings.h"
-
-#include "mousebackend.h"
+#include "evdev_settings.h"
+#include "x11_backend.h"
 #include <QDBusMessage>
 #include <QDBusConnection>
 #include <KSharedConfig>
@@ -26,27 +25,28 @@
 
 #include "../migrationlib/kdelibs4config.h"
 
-void MouseSettings::apply(MouseBackend* backend, bool force)
+void EvdevSettings::apply(X11Backend *backend, bool force)
 {
     if (!backend) {
         return;
     }
 
-    backend->apply(*this, force);
+    backend->apply(force);
     handedNeedsApply = false;
 }
 
-void MouseSettings::load(KConfig *config, MouseBackend *backend)
+void EvdevSettings::load(X11Backend *backend)
 {
+    KConfig config("kcminputrc");
+
     // TODO: what's a good threshold default value
     int threshold = 0;
-    handed = MouseHanded::Right;
+    handed = Handed::Right;
     double accel = 1.0;
     QString profile;
     if (backend) {
-        backend->load();
         auto handedOnServer = backend->handed();
-        handedEnabled = handedOnServer != MouseHanded::NotSupported;
+        handedEnabled = handedOnServer != Handed::NotSupported;
         if (handedEnabled) {
             handed = handedOnServer;
         }
@@ -55,7 +55,7 @@ void MouseSettings::load(KConfig *config, MouseBackend *backend)
         profile = backend->accelerationProfile();
     }
 
-    KConfigGroup group = config->group("Mouse");
+    KConfigGroup group = config.group("Mouse");
     double a = group.readEntry("Acceleration", -1.0);
     if (a == -1)
         accelRate = accel;
@@ -70,9 +70,9 @@ void MouseSettings::load(KConfig *config, MouseBackend *backend)
 
     QString key = group.readEntry("MouseButtonMapping");
     if (key == "RightHanded")
-        handed = MouseHanded::Right;
+        handed = Handed::Right;
     else if (key == "LeftHanded")
-        handed = MouseHanded::Left;
+        handed = Handed::Left;
     reverseScrollPolarity = group.readEntry("ReverseScrollPolarity", false);
     currentAccelProfile = group.readEntry("AccelerationProfile");
     if (currentAccelProfile.isEmpty()) {
@@ -81,7 +81,7 @@ void MouseSettings::load(KConfig *config, MouseBackend *backend)
     handedNeedsApply = false;
 
     // SC/DC/AutoSelect/ChangeCursor
-    group = config->group("KDE");
+    group = config.group("KDE");
     doubleClickInterval = group.readEntry("DoubleClickInterval", 400);
     dragStartTime = group.readEntry("StartDragTime", 500);
     dragStartDist = group.readEntry("StartDragDist", 4);
@@ -112,13 +112,13 @@ static void emitChange(ChangeType changeType, int arg)
     QDBusConnection::sessionBus().send(message);
 }
 
-void MouseSettings::save(KConfig *config)
+void EvdevSettings::save()
 {
     KSharedConfig::Ptr kcminputProfile = KSharedConfig::openConfig("kcminputrc");
     KConfigGroup kcminputGroup(kcminputProfile, "Mouse");
     kcminputGroup.writeEntry("Acceleration",accelRate);
     kcminputGroup.writeEntry("Threshold",thresholdMove);
-    if (handed == MouseHanded::Right) {
+    if (handed == Handed::Right) {
         kcminputGroup.writeEntry("MouseButtonMapping",QString("RightHanded"));
     } else {
         kcminputGroup.writeEntry("MouseButtonMapping",QString("LeftHanded"));
@@ -136,7 +136,7 @@ void MouseSettings::save(KConfig *config)
     group.writeEntry("SingleClick", singleClick, KConfig::Persistent);
 
     group.sync();
-    config->sync();
+    kcminputProfile->sync();
 
     Kdelibs4SharedConfig::syncConfigGroup(QLatin1String("Mouse"), "kcminputrc");
     Kdelibs4SharedConfig::syncConfigGroup(QLatin1String("KDE"), "kdeglobals");

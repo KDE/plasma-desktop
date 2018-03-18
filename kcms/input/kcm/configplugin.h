@@ -1,5 +1,5 @@
 /*
- * Copyright 2017 Xuetian Weng <wengxt@gmail.com>
+ * Copyright 2018 Roman Gilg <subdiff@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -16,28 +16,33 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-#include "mousebackend.h"
+#ifndef CONFIGPLUGIN_H
+#define CONFIGPLUGIN_H
 
-#include "backends/x11/x11mousebackend.h"
-#include "logging.h"
+#include <QWidget>
 
-#include <QThreadStorage>
-#include <QSharedPointer>
+class ConfigContainer;
+class InputBackend;
 
-#include <QGuiApplication>
-
-MouseBackend *MouseBackend::implementation()
+class ConfigPlugin : public QWidget
 {
-    //There are multiple possible backends, always use X11 backend for now.
-    static QThreadStorage<QSharedPointer<X11MouseBackend>> backend;
-    if (!backend.hasLocalData()) {
-        qCDebug(KCM_INPUT) << "Using X11 backend";
-        backend.setLocalData(QSharedPointer<X11MouseBackend>(new X11MouseBackend));
-    }
-    return backend.localData().data();
+    Q_OBJECT
 
-#if 0
-    qCCritical(KCM_INPUT) << "Not able to select appropriate backend.";
-    return nullptr;
-#endif
-}
+public:
+    static ConfigPlugin *implementation(ConfigContainer *parent);
+
+    explicit ConfigPlugin(ConfigContainer *parent);
+    virtual ~ConfigPlugin() {}
+
+    virtual void load() {}
+    virtual void save() {}
+    virtual void defaults() {}
+
+    void hideEvent(QHideEvent *) override {}
+
+protected:
+    ConfigContainer *m_parent;
+    InputBackend *m_backend;
+};
+
+#endif // CONFIGPLUGIN_H

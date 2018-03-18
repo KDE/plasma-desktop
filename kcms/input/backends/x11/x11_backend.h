@@ -1,5 +1,6 @@
 /*
  * Copyright 2017 Xuetian Weng <wengxt@gmail.com>
+ * Copyright 2018 Roman Gilg <subdiff@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -16,34 +17,48 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-#ifndef XLIBMOUSEBACKEND_H
-#define XLIBMOUSEBACKEND_H
+#ifndef X11BACKEND_H
+#define X11BACKEND_H
 
-#include "mousebackend.h"
+#include "inputbackend.h"
+#include "evdev_settings.h"
 
 #include <QX11Info>
 #include <X11/Xdefs.h>
 
-class X11MouseBackend : public MouseBackend
+class ConfigPlugin;
+
+class X11Backend : public InputBackend
 {
     Q_OBJECT
 public:
-    X11MouseBackend(QObject *parent = nullptr);
-    ~X11MouseBackend();
+    X11Backend(QObject *parent = nullptr);
+    ~X11Backend();
 
     bool isValid() const override { return m_dpy != nullptr; }
 
     void load() override;
-    bool supportScrollPolarity() override;
-    QStringList supportedAccelerationProfiles() override;
-    QString accelerationProfile() override;
-    double accelRate() override;
-    MouseHanded handed() override;
-    int threshold() override;
-    void apply(const MouseSettings & settings, bool force) override;
 
-    QString currentCursorTheme() override;
-    void applyCursorTheme(const QString &name, int size) override;
+    void apply(bool force = false);
+
+    EvdevSettings* settings() {
+        return m_settings;
+    }
+
+    bool supportScrollPolarity();
+    QStringList supportedAccelerationProfiles();
+    QString accelerationProfile();
+    double accelRate();
+    Handed handed();
+    int threshold();
+
+    QString currentCursorTheme();
+    void applyCursorTheme(const QString &name, int size);
+
+Q_SIGNALS:
+    void mouseStateChanged();
+    void mousesChanged();
+    void mouseReset();
 
 private:
     void initAtom();
@@ -63,8 +78,9 @@ private:
     // We may still need to do something on non-X11 platform due to Xwayland.
     Display* m_dpy;
     bool m_platformX11;
+    EvdevSettings *m_settings = nullptr;
     int m_numButtons = 1;
-    MouseHanded m_handed = MouseHanded::NotSupported;
+    Handed m_handed = Handed::NotSupported;
     double m_accelRate = 1.0;
     int m_threshold = 0;
     int m_middleButton = -1;
@@ -72,4 +88,4 @@ private:
     QString m_accelerationProfile;
 };
 
-#endif // XLIBMOUSEBACKEND_H
+#endif // X11BACKEND_H

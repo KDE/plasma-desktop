@@ -1,5 +1,6 @@
 /*
  * Copyright 2017 Xuetian Weng <wengxt@gmail.com>
+ * Copyright 2018 Roman Gilg <subdiff@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -16,10 +17,37 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-#ifndef KCM_INPUT_LOGGING_H
-#define KCM_INPUT_LOGGING_H
+#ifndef EVDEVSETTINGS_H
+#define EVDEVSETTINGS_H
 
-#include <QLoggingCategory>
+#include <KConfig>
 
-Q_DECLARE_LOGGING_CATEGORY(KCM_INPUT)
-#endif
+class X11Backend;
+
+enum class Handed {
+    Right = 0,
+    Left = 1,
+    NotSupported = -1
+};
+
+struct EvdevSettings
+{
+    void save();
+    void load(X11Backend *);
+    void apply(X11Backend *, bool force = false);
+
+    bool handedEnabled;
+    bool handedNeedsApply;
+    Handed handed;
+    double accelRate;
+    int thresholdMove;
+    int doubleClickInterval;
+    int dragStartTime;
+    int dragStartDist;
+    bool singleClick;
+    int wheelScrollLines;
+    bool reverseScrollPolarity;
+    QString currentAccelProfile;
+};
+
+#endif // EVDEVSETTINGS_H

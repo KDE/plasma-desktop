@@ -1,5 +1,6 @@
 /*
  * Copyright 2017 Xuetian Weng <wengxt@gmail.com>
+ * Copyright 2018 Roman Gilg <subdiff@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -16,8 +17,8 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-#include "x11mousebackend.h"
-#include "mousesettings.h"
+#include "x11_backend.h"
+
 #include <config-X11.h>
 
 #include <QFile>
@@ -33,7 +34,7 @@
 #include <X11/extensions/XI.h>
 #include <X11/Xutil.h>
 #ifdef HAVE_XCURSOR
-#  include <X11/Xcursor/Xcursor.h>
+#include <X11/Xcursor/Xcursor.h>
 #include <X11/extensions/XInput.h>
 #endif
 
@@ -82,19 +83,24 @@ static void XIForallPointerDevices(Display* dpy, const Callback& callback)
     XFreeDeviceList(info);
 }
 
-X11MouseBackend::X11MouseBackend(QObject* parent) : MouseBackend(parent), m_dpy(nullptr)
+X11Backend::X11Backend(QObject* parent)
+    : InputBackend(parent)
 {
+    m_mode = InputBackendMode::XEvdev;
+
     m_platformX11 = QX11Info::isPlatformX11();
     if (m_platformX11) {
         m_dpy = QX11Info::display();
     } else {
+        // TODO: remove this - not needed anymore with Wayland backend!
         // let's hope we have a compatibility system like Xwayland ready
         m_dpy = XOpenDisplay(nullptr);
     }
+    m_settings = new EvdevSettings();
     initAtom();
 }
 
-void X11MouseBackend::initAtom()
+void X11Backend::initAtom()
 {
     if (!m_dpy) {
         return;
@@ -112,44 +118,45 @@ void X11MouseBackend::initAtom()
 }
 
 
-X11MouseBackend::~X11MouseBackend()
+X11Backend::~X11Backend()
 {
     if (!m_platformX11 && m_dpy) {
         XCloseDisplay(m_dpy);
     }
+    delete m_settings;
 }
 
-bool X11MouseBackend::supportScrollPolarity()
+bool X11Backend::supportScrollPolarity()
 {
     return m_numButtons >= 5;
 }
 
-QStringList X11MouseBackend::supportedAccelerationProfiles()
+QStringList X11Backend::supportedAccelerationProfiles()
 {
     return m_supportedAccelerationProfiles;
 }
 
-QString X11MouseBackend::accelerationProfile()
+QString X11Backend::accelerationProfile()
 {
     return m_accelerationProfile;
 }
 
-double X11MouseBackend::accelRate()
+double X11Backend::accelRate()
 {
     return m_accelRate;
 }
 
-MouseHanded X11MouseBackend::handed()
+Handed X11Backend::handed()
 {
     return m_handed;
 }
 
-int X11MouseBackend::threshold()
+int X11Backend::threshold()
 {
     return m_threshold;
 }
 
-void X11MouseBackend::load()
+void X11Backend::load()
 {
     if (!m_dpy) {
         return;
@@ -165,20 +172,20 @@ void X11MouseBackend::load()
     m_numButtons = XGetPointerMapping(m_dpy, map, 256);
     m_middleButton = -1;
 
-    m_handed = MouseHanded::NotSupported;
+    m_handed = Handed::NotSupported;
     // ## keep this in sync with KGlobalSettings::mouseSettings
     if (m_numButtons == 2) {
         if (map[0] == 1 && map[1] == 2) {
-            m_handed = MouseHanded::Right;
+            m_handed = Handed::Right;
         } else if (map[0] == 2 && map[1] == 1) {
-            m_handed = MouseHanded::Left;
+            m_handed = Handed::Left;
         }
     } else if (m_numButtons >= 3) {
         m_middleButton = map[1];
         if (map[0] == 1 && map[2] == 3) {
-            m_handed = MouseHanded::Right;
+            m_handed = Handed::Right;
         } else if (map[0] == 3 && map[2] == 1) {
-            m_handed = MouseHanded::Left;
+            m_handed = Handed::Left;
         }
     }
 
@@ -239,9 +246,11 @@ void X11MouseBackend::load()
     } else if (flatEnabled) {
         m_accelerationProfile = PROFILE_FLAT;
     }
+
+    m_settings->load(this);
 }
 
-void X11MouseBackend::apply(const MouseSettings& settings, bool force)
+void X11Backend::apply(bool force)
 {
     // 256 might seems extreme, but X has already been known to return 32,
     // and we don't want to truncate things. Xlib limits the table to 256 bytes,
@@ -249,11 +258,11 @@ void X11MouseBackend::apply(const MouseSettings& settings, bool force)
     unsigned char map[256];
     XGetPointerMapping(m_dpy, map, 256);
 
-    if (settings.handedEnabled && (settings.handedNeedsApply || force)) {
+    if (m_settings->handedEnabled && (m_settings->handedNeedsApply || force)) {
         if (m_numButtons == 1) {
             map[0] = (unsigned char) 1;
         } else if (m_numButtons == 2) {
-            if (settings.handed == MouseHanded::Right) {
+            if (m_settings->handed == Handed::Right) {
                 map[0] = (unsigned char) 1;
                 map[1] = (unsigned char) 3;
             } else {
@@ -261,7 +270,7 @@ void X11MouseBackend::apply(const MouseSettings& settings, bool force)
                 map[1] = (unsigned char) 1;
             }
         } else { // 3 buttons and more
-            if (settings.handed == MouseHanded::Right) {
+            if (m_settings->handed == Handed::Right) {
                 map[0] = (unsigned char) 1;
                 map[1] = (unsigned char) m_middleButton;
                 map[2] = (unsigned char) 3;
@@ -282,30 +291,30 @@ void X11MouseBackend::apply(const MouseSettings& settings, bool force)
 
         // apply reverseScrollPolarity for all non-touchpad pointer, touchpad
         // are belong to kcm touchpad.
-        XIForallPointerDevices(m_dpy, [this, &settings](XDeviceInfo * info) {
+        XIForallPointerDevices(m_dpy, [this](XDeviceInfo * info) {
             int deviceid = info->id;
             if (info->type == m_touchpadAtom) {
                 return;
             }
-            if (libinputApplyReverseScroll(deviceid, settings.reverseScrollPolarity)) {
+            if (libinputApplyReverseScroll(deviceid, m_settings->reverseScrollPolarity)) {
                 return;
             }
-            evdevApplyReverseScroll(deviceid, settings.reverseScrollPolarity);
+            evdevApplyReverseScroll(deviceid, m_settings->reverseScrollPolarity);
         });
 
     }
 
     XI2ForallPointerDevices(m_dpy, [&] (XIDeviceInfo *info) {
-        libinputApplyAccelerationProfile(info->deviceid, settings.currentAccelProfile);
+        libinputApplyAccelerationProfile(info->deviceid, m_settings->currentAccelProfile);
     });
 
     XChangePointerControl(m_dpy,
-                          true, true, int(qRound(settings.accelRate * 10)), 10, settings.thresholdMove);
+                          true, true, int(qRound(m_settings->accelRate * 10)), 10, m_settings->thresholdMove);
 
     XFlush(m_dpy);
 }
 
-QString X11MouseBackend::currentCursorTheme()
+QString X11Backend::currentCursorTheme()
 {
     if (!m_dpy) {
         return QString();
@@ -320,7 +329,7 @@ QString X11MouseBackend::currentCursorTheme()
     return QFile::decodeName(name);
 }
 
-void X11MouseBackend::applyCursorTheme(const QString& theme, int size)
+void X11Backend::applyCursorTheme(const QString& theme, int size)
 {
 #ifdef HAVE_XCURSOR
 
@@ -344,7 +353,7 @@ void X11MouseBackend::applyCursorTheme(const QString& theme, int size)
 #endif
 }
 
-bool X11MouseBackend::evdevApplyReverseScroll(int deviceid, bool reverse)
+bool X11Backend::evdevApplyReverseScroll(int deviceid, bool reverse)
 {
     // Check atom availability first.
     if (m_evdevWheelEmulationAtom == None || m_evdevScrollDistanceAtom == None ||
@@ -413,7 +422,7 @@ bool X11MouseBackend::evdevApplyReverseScroll(int deviceid, bool reverse)
     return true;
 }
 
-bool X11MouseBackend::libinputApplyReverseScroll(int deviceid, bool reverse)
+bool X11Backend::libinputApplyReverseScroll(int deviceid, bool reverse)
 {
     // Check atom availability first.
     if (m_libinputNaturalScrollAtom == None) {
@@ -444,7 +453,7 @@ bool X11MouseBackend::libinputApplyReverseScroll(int deviceid, bool reverse)
     return true;
 }
 
-void X11MouseBackend::libinputApplyAccelerationProfile(int deviceid, QString profile)
+void X11Backend::libinputApplyAccelerationProfile(int deviceid, QString profile)
 {
     // Check atom availability first.
     if (m_libinputAccelProfileAvailableAtom == None || m_libinputAccelProfileEnabledAtom == None) {

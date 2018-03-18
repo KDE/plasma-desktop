@@ -1,51 +1,46 @@
 /*
- * mouse.cpp
+ * Copyright 1997 Patrick Dowler dowler@morgul.fsh.uvic.ca
+ * Copyright 1999 Dirk A. Mueller <dmuell@gmx.net>
+ * Copyright 1999 Matthias Hoelzer-Kluepfel <hoelzer@kde.org>
+ * Copyright 2000 David Faure <faure@kde.org>
+ * Copyright 2000 Bernd Gehrmann
+ * Copyright 2000 Rik Hemsley <rik@kde.org>
+ * Copyright 2000 Brad Hughes <bhughes@trolltech.com>
+ * Copyright 2001 Ralf Nolden <nolden@kde.org>
+ * Copyright 2004 Brad Hards <bradh@frogmouth.net>
+ * Copyright 2018 Roman Gilg <subdiff@gmail.com>
  *
- * Copyright (c) 1997 Patrick Dowler dowler@morgul.fsh.uvic.ca
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
  *
- * Layout management, enhancements:
- * Copyright (c) 1999 Dirk A. Mueller <dmuell@gmx.net>
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
  *
- * SC/DC/AutoSelect/ChangeCursor:
- * Copyright (c) 2000 David Faure <faure@kde.org>
- *
- * Double click interval, drag time & dist
- * Copyright (c) 2000 Bernd Gehrmann
- *
- * Large cursor support
- * Visual activation TODO: speed
- * Copyright (c) 2000 Rik Hemsley <rik@kde.org>
- *
- * White cursor support
- * TODO: give user the option to choose a certain cursor font
- * -> Theming
- *
- * General/Advanced tabs
- * Copyright (c) 2000 Brad Hughes <bhughes@trolltech.com>
- *
- * redesign for KDE 2.2
- * Copyright (c) 2001 Ralf Nolden <nolden@kde.org>
- *
- * Logitech mouse support
- * Copyright (C) 2004 Brad Hards <bradh@frogmouth.net>
- *
- * Requires the Qt widget libraries, available at no cost at
- * http://www.troll.no/
- *
- *  This program is free software; you can redistribute it and/or modify
- *  it under the terms of the GNU General Public License as published by
- *  the Free Software Foundation; either version 2 of the License, or
- *  (at your option) any later version.
- *
- *  This program is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU General Public License for more details.
- *
- *  You should have received a copy of the GNU General Public License
- *  along with this program; if not, write to the Free Software
- *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
+#include "xlib_config.h"
+
+#include "backends/x11/x11_backend.h"
+#include "../configcontainer.h"
+
+#include "../../../migrationlib/kdelibs4config.h"
+
+#include <kglobalsettings.h>
+#include <config-workspace.h>
+
+#include <ktoolinvocation.h>
+#include <klocalizedstring.h>
+//#include <kconfig.h>
+#include <kstandarddirs.h>
+#include <kaboutdata.h>
+#include <KPluginFactory>
+#include <KPluginLoader>
 
 #include <QCheckBox>
 #include <QDoubleSpinBox>
@@ -54,81 +49,104 @@
 #include <QWhatsThis>
 #include <QTabWidget>
 
-#include <ktoolinvocation.h>
-#include <klocalizedstring.h>
-#include <kconfig.h>
-#include <kstandarddirs.h>
-#include <kaboutdata.h>
-#include <KPluginFactory>
-#include <KPluginLoader>
+#include <klauncher_iface.h>
 
-#include <config-workspace.h>
+#include <KConfig>
+#include <KConfigGroup>
 
-#include "mouse.h"
-#include "mousebackend.h"
-#include "mousesettings.h"
+void XlibConfig::kcmInit()
+{
+    X11Backend *backend = dynamic_cast<X11Backend*>(InputBackend::implementation());
+    if (!backend) {
+        return;
+    }
 
-#include <kglobalsettings.h>
+    backend->settings()->load(backend);
+    backend->settings()->apply(backend, true);    // force
 
-#undef Below
+    KConfigGroup group = KConfig("kcminputrc", KConfig::NoGlobals).group("Mouse");
+    QString theme = group.readEntry("cursorTheme", QString());
+    QString size = group.readEntry("cursorSize", QString());
+    if (backend) {
+        int intSize = -1;
+        if (size.isEmpty()) {
+            bool ok;
+            uint value = size.toUInt(&ok);
+            if (ok) {
+                intSize = value;
+            }
+        }
+        // Note: If you update this code, update kapplymousetheme as well.
 
-#include "../migrationlib/kdelibs4config.h"
+        // use a default value for theme only if it's not configured at all, not even in X resources
+        if (theme.isEmpty() && backend->currentCursorTheme().isEmpty()) {
+            theme = "breeze_cursors";
+        }
+        backend->applyCursorTheme(theme, intSize);
+    }
 
-K_PLUGIN_FACTORY(MouseConfigFactory,
-        registerPlugin<MouseConfig>(); // mouse
-        )
+    // Tell klauncher to set the XCURSOR_THEME and XCURSOR_SIZE environment
+    // variables when launching applications.
+    OrgKdeKLauncherInterface klauncher(QStringLiteral("org.kde.klauncher5"),
+                                       QStringLiteral("/KLauncher"),
+                                       QDBusConnection::sessionBus());
+    if (!theme.isEmpty()) {
+        klauncher.setLaunchEnv(QStringLiteral("XCURSOR_THEME"), theme);
+    }
+    if (!size.isEmpty()) {
+        klauncher.setLaunchEnv(QStringLiteral("XCURSOR_SIZE"), size);
+    }
+}
 
-MouseConfig::MouseConfig(QWidget *parent, const QVariantList &args)
-  : KCModule(parent, args),
-    backend(MouseBackend::implementation())
+XlibConfig::XlibConfig(ConfigContainer *parent, InputBackend *backend)
+  : ConfigPlugin(parent),
+    m_backend(dynamic_cast<X11Backend*>(backend))
 {
     setupUi(this);
 
-    handedGroup->setId(rightHanded, static_cast<int>(MouseHanded::Right));
-    handedGroup->setId(leftHanded, static_cast<int>(MouseHanded::Left));
+    handedGroup->setId(rightHanded, static_cast<int>(Handed::Right));
+    handedGroup->setId(leftHanded, static_cast<int>(Handed::Left));
 
-    connect(handedGroup, SIGNAL(buttonClicked(int)), this, SLOT(changed()));
+    connect(handedGroup, SIGNAL(buttonClicked(int)), m_parent, SLOT(changed()));
     connect(handedGroup, SIGNAL(buttonClicked(int)), this, SLOT(slotHandedChanged(int)));
-    connect(doubleClick, SIGNAL(clicked()), SLOT(changed()));
+    connect(doubleClick, SIGNAL(clicked()), m_parent, SLOT(changed()));
 
-    connect(singleClick, SIGNAL(clicked()), this, SLOT(changed()));
-    connect(cbScrollPolarity, SIGNAL(clicked()), this, SLOT(changed()));
+    connect(singleClick, SIGNAL(clicked()), m_parent, SLOT(changed()));
+    connect(cbScrollPolarity, SIGNAL(clicked()), m_parent, SLOT(changed()));
     connect(cbScrollPolarity, SIGNAL(clicked()), this, SLOT(slotScrollPolarityChanged()));
 
-    connect(accel, SIGNAL(valueChanged(double)), this, SLOT(changed()));
-    connect(thresh, SIGNAL(valueChanged(int)), this, SLOT(changed()));
+    connect(accel, SIGNAL(valueChanged(double)), m_parent, SLOT(changed()));
+    connect(thresh, SIGNAL(valueChanged(int)), m_parent, SLOT(changed()));
     connect(thresh, SIGNAL(valueChanged(int)), this, SLOT(slotThreshChanged(int)));
-    connect(accelProfileComboBox, SIGNAL(currentIndexChanged(int)), this, SLOT(changed()));
+    connect(accelProfileComboBox, SIGNAL(currentIndexChanged(int)), m_parent, SLOT(changed()));
     slotThreshChanged(thresh->value());
 
     // It would be nice if the user had a test field.
     // Selecting such values in milliseconds is not intuitive
-    connect(doubleClickInterval, SIGNAL(valueChanged(int)), this, SLOT(changed()));
+    connect(doubleClickInterval, SIGNAL(valueChanged(int)), m_parent, SLOT(changed()));
 
-    connect(dragStartTime, SIGNAL(valueChanged(int)), this, SLOT(changed()));
+    connect(dragStartTime, SIGNAL(valueChanged(int)), m_parent, SLOT(changed()));
 
-    connect(dragStartDist, SIGNAL(valueChanged(int)), this, SLOT(changed()));
+    connect(dragStartDist, SIGNAL(valueChanged(int)), m_parent, SLOT(changed()));
     connect(dragStartDist, SIGNAL(valueChanged(int)), this, SLOT(slotDragStartDistChanged(int)));
     slotDragStartDistChanged(dragStartDist->value());
 
-    connect(wheelScrollLines, SIGNAL(valueChanged(int)), this, SLOT(changed()));
+    connect(wheelScrollLines, SIGNAL(valueChanged(int)), m_parent, SLOT(changed()));
     connect(wheelScrollLines, SIGNAL(valueChanged(int)), SLOT(slotWheelScrollLinesChanged(int)));
     slotWheelScrollLinesChanged(wheelScrollLines->value());
 
     connect(mouseKeys, SIGNAL(clicked()), this, SLOT(checkAccess()));
-    connect(mouseKeys, SIGNAL(clicked()), this, SLOT(changed()));
-    connect(mk_delay, SIGNAL(valueChanged(int)), this, SLOT(changed()));
-    connect(mk_interval, SIGNAL(valueChanged(int)), this, SLOT(changed()));
-    connect(mk_time_to_max, SIGNAL(valueChanged(int)), this, SLOT(changed()));
-    connect(mk_max_speed, SIGNAL(valueChanged(int)), this, SLOT(changed()));
-    connect(mk_curve, SIGNAL(valueChanged(int)), this, SLOT(changed()));
-
-    settings = new MouseSettings;
+    connect(mouseKeys, SIGNAL(clicked()), m_parent, SLOT(changed()));
+    connect(mk_delay, SIGNAL(valueChanged(int)), m_parent, SLOT(changed()));
+    connect(mk_interval, SIGNAL(valueChanged(int)), m_parent, SLOT(changed()));
+    connect(mk_time_to_max, SIGNAL(valueChanged(int)), m_parent, SLOT(changed()));
+    connect(mk_max_speed, SIGNAL(valueChanged(int)), m_parent, SLOT(changed()));
+    connect(mk_curve, SIGNAL(valueChanged(int)), m_parent, SLOT(changed()));
 
     KAboutData* about = new KAboutData(QStringLiteral("kcmmouse"), i18n("Mouse"),
                                        QStringLiteral("1.0"), QString(),
                                        KAboutLicense::GPL,
-                                       i18n("(c) 1997 - 2005 Mouse developers"));
+                                       i18n("(c) 1997 - 2018 Mouse developers"));
     about->addAuthor(i18n("Patrick Dowler"));
     about->addAuthor(i18n("Dirk A. Mueller"));
     about->addAuthor(i18n("David Faure"));
@@ -137,10 +155,11 @@ MouseConfig::MouseConfig(QWidget *parent, const QVariantList &args)
     about->addAuthor(i18n("Brad Hughes"));
     about->addAuthor(i18n("Ralf Nolden"));
     about->addAuthor(i18n("Brad Hards"));
-    setAboutData(about);
+    about->addAuthor(i18n("Roman Gilg"));
+    m_parent->setAboutData(about);
 }
 
-void MouseConfig::checkAccess()
+void XlibConfig::checkAccess()
 {
     mk_delay->setEnabled(mouseKeys->isChecked());
     mk_interval->setEnabled(mouseKeys->isChecked());
@@ -149,46 +168,39 @@ void MouseConfig::checkAccess()
     mk_curve->setEnabled(mouseKeys->isChecked());
 }
 
-
-MouseConfig::~MouseConfig()
-{
-    delete settings;
-}
-
-double MouseConfig::getAccel()
+double XlibConfig::getAccel()
 {
     return accel->value();
 }
 
-void MouseConfig::setAccel(double val)
+void XlibConfig::setAccel(double val)
 {
     accel->setValue(val);
 }
 
-int MouseConfig::getThreshold()
+int XlibConfig::getThreshold()
 {
     return thresh->value();
 }
 
-void MouseConfig::setThreshold(int val)
+void XlibConfig::setThreshold(int val)
 {
     thresh->setValue(val);
 }
 
-
-MouseHanded MouseConfig::getHandedness()
+Handed XlibConfig::getHandedness()
 {
     if (rightHanded->isChecked())
-        return MouseHanded::Right;
+        return Handed::Right;
     else
-        return MouseHanded::Left;
+        return Handed::Left;
 }
 
-void MouseConfig::setHandedness(MouseHanded val)
+void XlibConfig::setHandedness(Handed val)
 {
     rightHanded->setChecked(false);
     leftHanded->setChecked(false);
-    if (val == MouseHanded::Right) {
+    if (val == Handed::Right) {
         rightHanded->setChecked(true);
         mousePix->setPixmap(KStandardDirs::locate("data", "kcminput/pics/mouse_rh.png"));
     }
@@ -196,19 +208,22 @@ void MouseConfig::setHandedness(MouseHanded val)
         leftHanded->setChecked(true);
         mousePix->setPixmap(KStandardDirs::locate("data", "kcminput/pics/mouse_lh.png"));
     }
-    settings->handedNeedsApply = true;
+    m_backend->settings()->handedNeedsApply = true;
 }
 
-void MouseConfig::load()
-{
-    KConfig config("kcminputrc");
-    settings->load(&config, backend);
 
-    // settings->load will trigger backend->load so information will be avaialbe
-    // here.
+
+
+void XlibConfig::load()
+{
+    EvdevSettings *settings = m_backend->settings();
+
+    m_parent->kcmLoad();
+    m_backend->load();
+
     // Only allow setting reversing scroll polarity if we have scroll buttons
-    if (backend) {
-        if (backend->supportScrollPolarity())
+    if (m_backend) {
+        if (m_backend->supportScrollPolarity())
         {
             cbScrollPolarity->setEnabled(true);
             cbScrollPolarity->show();
@@ -220,7 +235,7 @@ void MouseConfig::load()
         }
     }
 
-    auto accelerationProfiles = backend->supportedAccelerationProfiles();
+    auto accelerationProfiles = m_backend->supportedAccelerationProfiles();
     accelProfileComboBox->setEnabled(!accelerationProfiles.isEmpty());
     accelProfileComboBox->setVisible(!accelerationProfiles.isEmpty());
     accelerationProfileLabel->setEnabled(!accelerationProfiles.isEmpty());
@@ -234,7 +249,6 @@ void MouseConfig::load()
         }
         idx++;
     }
-
 
     rightHanded->setEnabled(settings->handedEnabled);
     leftHanded->setEnabled(settings->handedEnabled);
@@ -281,11 +295,13 @@ void MouseConfig::load()
     mk_curve->setValue(group.readEntry("MKCurve", 0));
 
     checkAccess();
-    emit changed(false);
+    emit m_parent->changed(false);
 }
 
-void MouseConfig::save()
+void XlibConfig::save()
 {
+    EvdevSettings *settings = m_backend->settings();
+
     settings->accelRate = getAccel();
     settings->thresholdMove = getThreshold();
     settings->handed = getHandedness();
@@ -298,9 +314,8 @@ void MouseConfig::save()
     settings->reverseScrollPolarity = cbScrollPolarity->isChecked();
     settings->currentAccelProfile = accelProfileComboBox->itemData(accelProfileComboBox->currentIndex()).toString();
 
-    settings->apply(backend);
-    KConfig config("kcminputrc");
-    settings->save(&config);
+    m_backend->apply();
+    settings->save();
 
     KConfig ac("kaccessrc");
 
@@ -320,14 +335,14 @@ void MouseConfig::save()
     // restart kaccess
     KToolInvocation::startServiceByDesktopName("kaccess");
 
-    emit changed(false);
+    emit m_parent->changed(false);
 }
 
-void MouseConfig::defaults()
+void XlibConfig::defaults()
 {
     setThreshold(2);
     setAccel(2);
-    setHandedness(MouseHanded::Right);
+    setHandedness(Handed::Right);
     cbScrollPolarity->setChecked(false);
     doubleClickInterval->setValue(400);
     dragStartTime->setValue(500);
@@ -344,37 +359,39 @@ void MouseConfig::defaults()
     mk_curve->setValue(0);
 
     checkAccess();
-    changed();
+    m_parent->kcmDefaults();
+
+    m_parent->changed(true);
 }
 
 /** No descriptions */
-void MouseConfig::slotHandedChanged(int val)
+void XlibConfig::slotHandedChanged(int val)
 {
-    if (val == static_cast<int>(MouseHanded::Right))
+    if (val == static_cast<int>(Handed::Right))
         mousePix->setPixmap(KStandardDirs::locate("data", "kcminput/pics/mouse_rh.png"));
     else
         mousePix->setPixmap(KStandardDirs::locate("data", "kcminput/pics/mouse_lh.png"));
-    settings->handedNeedsApply = true;
+    m_backend->settings()->handedNeedsApply = true;
 }
 
-void MouseConfig::slotThreshChanged(int value)
+void XlibConfig::slotThreshChanged(int value)
 {
     thresh->setSuffix(i18np(" pixel", " pixels", value));
 }
 
-void MouseConfig::slotDragStartDistChanged(int value)
+void XlibConfig::slotDragStartDistChanged(int value)
 {
     dragStartDist->setSuffix(i18np(" pixel", " pixels", value));
 }
 
-void MouseConfig::slotWheelScrollLinesChanged(int value)
+void XlibConfig::slotWheelScrollLinesChanged(int value)
 {
     wheelScrollLines->setSuffix(i18np(" line", " lines", value));
 }
 
-void MouseConfig::slotScrollPolarityChanged()
+void XlibConfig::slotScrollPolarityChanged()
 {
-    settings->handedNeedsApply = true;
+    m_backend->settings()->handedNeedsApply = true;
 }
 
-#include "mouse.moc"
+#include "xlib_config.moc"

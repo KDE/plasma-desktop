@@ -1,5 +1,6 @@
 /*
  * Copyright 2017 Xuetian Weng <wengxt@gmail.com>
+ * Copyright 2018 Roman Gilg <subdiff@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -15,38 +16,27 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
+#include "inputbackend.h"
 
-#ifndef MOUSESETTINGS_H
-#define MOUSESETTINGS_H
+#include "backends/x11/x11_backend.h"
+#include "backends/kwin_wl/kwin_wl_backend.h"
+#include "logging.h"
 
-#include <KConfig>
+#include <KWindowSystem/kwindowsystem.h>
 
-class MouseBackend;
-
-enum class MouseHanded {
-    Right = 0,
-    Left = 1,
-    NotSupported = -1
-};
-
-struct MouseSettings
+InputBackend *InputBackend::implementation(QObject *parent)
 {
-    void save(KConfig *);
-    void load(KConfig *, MouseBackend*);
-    void apply(MouseBackend*, bool force = false);
-
-    bool handedEnabled;
-    bool handedNeedsApply;
-    MouseHanded handed;
-    double accelRate;
-    int thresholdMove;
-    int doubleClickInterval;
-    int dragStartTime;
-    int dragStartDist;
-    bool singleClick;
-    int wheelScrollLines;
-    bool reverseScrollPolarity;
-    QString currentAccelProfile;
-};
-
-#endif // MOUSESETTINGS_H
+    //There are multiple possible backends
+    if (KWindowSystem::isPlatformX11()) {
+        qCDebug(KCM_INPUT) << "Using X11 backend";
+        return new X11Backend(parent);
+    }
+    else if (KWindowSystem::isPlatformWayland()) {
+        qCDebug(KCM_INPUT) << "Using KWin+Wayland backend";
+        return new KWinWaylandBackend(parent);
+    }
+    else {
+        qCCritical(KCM_INPUT) << "Not able to select appropriate backend.";
+        return nullptr;
+    }
+}
