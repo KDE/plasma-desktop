@@ -523,8 +523,7 @@ void CGroupList::merge(const QString &file)
 
 void CGroupList::clear()
 {
-    beginRemoveRows(QModelIndex(), 0, itsGroups.count());
-    endRemoveRows();
+    beginResetModel();
     itsGroups.removeFirst(); // Remove all
     if(itsSpecialGroups[CGroupListItem::SYSTEM])
     {
@@ -542,6 +541,7 @@ void CGroupList::clear()
         itsGroups.append(itsSpecialGroups[CGroupListItem::SYSTEM]);
     }
     // Dont add 'Unclassif' until we have some user groups
+    endResetModel();
 }
 
 QModelIndex CGroupList::index(CGroupListItem::EType t)
