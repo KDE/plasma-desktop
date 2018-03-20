@@ -14,8 +14,8 @@
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date>2017-11-07</date>
-<releaseinfo>Plasma 5.11</releaseinfo>
+<date>2018-03-18</date>
+<releaseinfo>Plasma 5.12</releaseinfo>
 
 <keywordset>
 <keyword>KDE</keyword>
@@ -109,28 +109,15 @@ Each application can override the setting used in this panel.</para></tip>
 </listitem> 
 </varlistentry> 
 
-<varlistentry> 
-<term><guilabel>Menubar style</guilabel></term>
-<listitem>
-<para><guilabel>In application</guilabel>: The classic menubar at the top of the application window.</para>
-
-<para><guilabel>Title bar button</guilabel>: The window has an additional menu button in the window decoration bar top left. 
-All changes will take effect only for newly started applications.</para>
-
-<para><guilabel>Application Menu widget</guilabel>: Add a panel called <guilabel>Application Menu Bar</guilabel>
-and the menu of the active application will appear in this new panel.</para>
-
-<para>All changes will take effect only for newly started applications.</para>
-
-</listitem> 
-</varlistentry> 
 </variablelist>
 
 </listitem>
 </varlistentry>
 
-
 </variablelist>
 
+<para>The global menu is now automatically enabled when you place a global menu applet in a panel or add the menu button 
+to the window decoration in <guilabel>Buttons</guilabel> tab of the <guilabel>Window Decorations</guilabel> module.
+</para>
 
 </article>
