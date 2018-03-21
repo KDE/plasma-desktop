@@ -60,7 +60,8 @@ SimpleKCM {
 
                 text: i18n("No Feedback")
 
-                onCheckedChanged: Qt.later(function() { kcm.busyCursorCurrentIndex = 0; })
+                onCheckedChanged: Qt.callLater(function() { kcm.busyCursorCurrentIndex = 0; })
+
             }
 
             QtControls.RadioButton {
@@ -68,7 +69,7 @@ SimpleKCM {
 
                 text: i18n("Static")
 
-                onCheckedChanged: Qt.later(function() { kcm.busyCursorCurrentIndex = 1; })
+                onCheckedChanged: Qt.callLater(function() { kcm.busyCursorCurrentIndex = 1; })
             }
 
             QtControls.RadioButton {
@@ -76,7 +77,7 @@ SimpleKCM {
 
                 text: i18n("Blinking")
 
-                onCheckedChanged: Qt.later(function() { kcm.busyCursorCurrentIndex = 2; })
+                onCheckedChanged: Qt.callLater(function() { kcm.busyCursorCurrentIndex = 2; })
             }
 
             QtControls.RadioButton {
@@ -84,7 +85,7 @@ SimpleKCM {
 
                 text: i18n("Bouncing")
 
-                onCheckedChanged: Qt.later(function() { kcm.busyCursorCurrentIndex = 3; })
+                onCheckedChanged: Qt.callLater(function() { kcm.busyCursorCurrentIndex = 3; })
             }
         }
 
