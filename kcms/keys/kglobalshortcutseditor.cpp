@@ -832,7 +832,7 @@ void KGlobalShortcutsEditor::KGlobalShortcutsEditorPrivate::removeComponent(
             {
             // Remove from QComboBox
             QModelIndexList results = proxyModel->match(proxyModel->index(0, 0), Qt::DisplayRole, text);
-            Q_ASSERT(results.isEmpty());
+            Q_ASSERT(!results.isEmpty());
             model->removeRow(proxyModel->mapToSource(results.first()).row());
 
             // Remove from QStackedWidget
