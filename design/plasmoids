@@ -52,8 +52,8 @@ The metadata.desktop file contains information about the widget that is critical
 Name=JavaScript Animations
 Comment=An example showing how animations can be used from JavaScript
 Icon=plasma
-ServiceTypes=Plasma/Applet
 Type=Service
+X-KDE-ServiceTypes=Plasma/Applet
 X-KDE-PluginInfo-Author=Aaron Seigo
 X-KDE-PluginInfo-Category=Examples
 X-KDE-PluginInfo-Depends=
