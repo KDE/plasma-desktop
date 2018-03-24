@@ -36,7 +36,7 @@ Item {
     property alias cfg_filterMimeTypes: mimeTypesModel.checkedTypes
 
     PlasmaCore.SortFilterModel {
-        id: filderedMimeTypesModel
+        id: filteredMimeTypesModel
 
         sourceModel: Folder.MimeTypesModel {
             id: mimeTypesModel
@@ -49,6 +49,27 @@ Item {
 
         sortRole: mimeTypesView.getColumn(mimeTypesView.sortIndicatorColumn).role
         sortOrder: mimeTypesView.sortIndicatorOrder
+
+        function checkFiltered() {
+            var types = [];
+
+            for (var i = 0; i < count; ++i) {
+                types.push(get(i).name);
+            }
+
+            mimeTypesModel.checkedTypes = types;
+        }
+
+        function uncheckFiltered() {
+            var types = [];
+
+            for (var i = 0; i < count; ++i) {
+                types.push(get(i).name);
+            }
+
+            mimeTypesModel.checkedTypes = mimeTypesModel.checkedTypes.filter(function(x) {
+                return types.indexOf(x) < 0; });
+        }
     }
 
     ColumnLayout {
@@ -113,7 +134,7 @@ Item {
 
                 enabled: (filterMode.currentIndex > 0)
 
-                model: filderedMimeTypesModel
+                model: filteredMimeTypesModel
 
                 sortIndicatorVisible: true
                 sortIndicatorColumn: 2 // Default to sort by "File type".
@@ -215,9 +236,7 @@ Item {
 
                     text: i18n("Select All")
 
-                    onClicked: {
-                        mimeTypesModel.checkAll();
-                    }
+                    onClicked: filteredMimeTypesModel.checkFiltered()
                 }
 
                 Button {
@@ -228,9 +247,7 @@ Item {
 
                     text: i18n("Deselect All")
 
-                    onClicked: {
-                        mimeTypesModel.checkedTypes = "";
-                    }
+                    onClicked: filteredMimeTypesModel.uncheckFiltered()
                 }
             }
         }

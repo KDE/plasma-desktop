@@ -39,8 +39,6 @@ class MimeTypesModel : public QAbstractListModel
         QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
         bool setData(const QModelIndex &index, const QVariant &value, int role) override;
 
-        Q_INVOKABLE void checkAll();
-
         int rowCount(const QModelIndex &parent = QModelIndex()) const override { Q_UNUSED(parent) return m_mimeTypesList.size(); }
 
         QStringList checkedTypes() const;
