@@ -40,12 +40,12 @@ FolderViewDropArea {
     width: isPopup ? undefined : preferredWidth(false) // for the initial size when placed on the desktop
     Layout.minimumWidth: preferredWidth(true)
     Layout.preferredWidth: isPopup ? preferredWidth(false) : 0 // for the popup size to change at runtime when view mode changes
-    Plasmoid.switchWidth: preferredWidth(true)
+    Plasmoid.switchWidth: isPopup ? units.iconSizeHints.panel : preferredWidth(true)
 
     height: isPopup ? undefined : preferredHeight(false)
     Layout.minimumHeight: preferredHeight(true)
     Layout.preferredHeight: isPopup ? preferredHeight(false) : 0
-    Plasmoid.switchHeight: preferredHeight(true)
+    Plasmoid.switchHeight: isPopup ? units.iconSizeHints.panel : preferredHeight(true)
 
     LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
