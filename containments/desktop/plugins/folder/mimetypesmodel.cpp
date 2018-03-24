@@ -98,15 +98,6 @@ bool MimeTypesModel::setData(const QModelIndex &index, const QVariant &value, in
     return false;
 }
 
-void MimeTypesModel::checkAll()
-{
-    m_checkedRows = QVector<bool>(m_mimeTypesList.size(), true);
-
-    emit dataChanged(index(0, 0), index(m_mimeTypesList.size() - 1, 0), {Qt::CheckStateRole});
-
-    emit checkedTypesChanged();
-}
-
 int MimeTypesModel::indexOfType(const QString &name) const
 {
     for (int i = 0; i < m_mimeTypesList.size(); i++) {
