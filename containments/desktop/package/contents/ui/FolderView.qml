@@ -1241,10 +1241,20 @@ FocusScope {
                     }
                     break;
                 case Qt.Key_Home:
-                    editor.select(0, 0);
+                    if (event.modifiers & Qt.ShiftModifier) {
+                        editor.select(0, cursorPosition);
+                    } else {
+                        editor.select(0, 0);
+                    }
+                    event.accepted = true;
                     break;
                 case Qt.Key_End:
-                    editor.select(text.length, text.length);
+                    if (event.modifiers & Qt.ShiftModifier) {
+                        editor.select(cursorPosition, text.length);
+                    } else {
+                        editor.select(text.length, text.length);
+                    }
+                    event.accepted = true;
                     break;
                 default:
                     adjustSize();
