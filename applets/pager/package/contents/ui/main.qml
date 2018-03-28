@@ -430,8 +430,8 @@ MouseArea {
                             /* since we move clipRect with 1, move it back */
                             x: (geometry.x * pagerItemGrid.widthScaleFactor) - Math.round(units.devicePixelRatio)
                             y: (geometry.y * pagerItemGrid.heightScaleFactor) - Math.round(units.devicePixelRatio)
-                            width: Math.min(parent.width - x, geometry.width * pagerItemGrid.widthScaleFactor)
-                            height: Math.min(parent.height - y, geometry.height * pagerItemGrid.heightScaleFactor)
+                            width: geometry.width * pagerItemGrid.widthScaleFactor
+                            height: geometry.height * pagerItemGrid.heightScaleFactor
                             visible: model.IsMinimized !== true
                             color: {
                                 if (desktop.active) {
