@@ -28,6 +28,8 @@ Free Software Foundation, Inc.,
 
 #include <KWindowSystem>
 
+#include <algorithm>
+
 using namespace TaskManager;
 
 class WindowModel::Private
@@ -75,11 +77,10 @@ QHash<int, QByteArray> WindowModel::roleNames() const
 QVariant WindowModel::data(const QModelIndex &index, int role) const
 {
     if (role == AbstractTasksModel::Geometry) {
-        const QRect &windowGeo = TaskFilterProxyModel::data(index, role).toRect();
+        QRect windowGeo = TaskFilterProxyModel::data(index, role).toRect();
+        const QRect &desktopGeo = d->desktopWidget->geometry();
 
         if (KWindowSystem::mapViewport()) {
-            const QRect &desktopGeo = d->desktopWidget->geometry();
-
             int x = windowGeo.center().x() % desktopGeo.width();
             int y = windowGeo.center().y() % desktopGeo.height();
 
@@ -97,14 +98,25 @@ QVariant WindowModel::data(const QModelIndex &index, int role) const
             if (filterByScreen() && screenGeometry().isValid()) {
                 const QPoint &screenOffset = screenGeometry().topLeft();
 
-                return mappedGeo.translated(0 - screenOffset.x(), 0 - screenOffset.y());
+                windowGeo = mappedGeo.translated(0 - screenOffset.x(), 0 - screenOffset.y());
             }
-        }
-
-        if (filterByScreen() && screenGeometry().isValid()) {
+        } else if (filterByScreen() && screenGeometry().isValid()) {
             const QPoint &screenOffset = screenGeometry().topLeft();
 
-            return windowGeo.translated(0 - screenOffset.x(), 0 - screenOffset.y());
+            windowGeo.translate(0 - screenOffset.x(), 0 - screenOffset.y());
+        }
+
+        // Clamp to desktop rect.
+        // TODO: Switch from qBound to std::clamp once we use C++17.
+        windowGeo.setX(qBound(0, windowGeo.x(), desktopGeo.width()));
+        windowGeo.setY(qBound(0, windowGeo.y(), desktopGeo.height()));
+
+        if ((windowGeo.x() + windowGeo.width()) > desktopGeo.width()) {
+            windowGeo.setWidth(desktopGeo.width() - windowGeo.x());
+        }
+
+        if ((windowGeo.y() + windowGeo.height()) > desktopGeo.height()) {
+            windowGeo.setHeight(desktopGeo.height() - windowGeo.y());
         }
 
         return windowGeo;
