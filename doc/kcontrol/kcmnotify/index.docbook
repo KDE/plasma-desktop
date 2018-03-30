@@ -14,8 +14,8 @@
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date>2015-04-09</date>
-<releaseinfo>Plasma 5.3</releaseinfo>
+<date>2018-03-25</date>
+<releaseinfo>Plasma 5.12</releaseinfo>
 
 <keywordset>
 <keyword>KDE</keyword>
@@ -28,12 +28,12 @@
 <sect1 id="sys-notify">
 <title>System Notification Settings</title>
 
-<para>&kde;, like all applications, needs to inform the user when a
-problem occurs, a task is completed, or something has happened.  &kde;
+<para>&plasma;, like all applications, needs to inform the user when a
+problem occurs, a task is completed, or something has happened.  &plasma;
 uses a set of <quote>System Notifications</quote> to keep the user
 informed on what is happening.</para>
 
-<para>Using this module, you can determine what &kde; does to communicate
+<para>Using this module, you can determine what &plasma; does to communicate
 each event.</para>
 
 <para>To configure a notification, simply select the application from the drop down box at the top
@@ -44,28 +44,22 @@ the left of the notification name.  These columns (from left to right) are:</par
 <variablelist>
 <varlistentry>
 <term><guiicon>Play a sound</guiicon></term>
-<listitem><para>This does exactly what you think it does.  If an icon is present in this column, &kde; will play a specific sound over the speakers.  This is commonly used by games in &kde; for starting a new game, or other action within the game.</para></listitem>
+<listitem><para>This does exactly what you think it does.  If an icon is present in this column, &plasma; will play a specific sound over the speakers.  This is commonly used by games in &plasma; for starting a new game, or other action within the game.</para></listitem>
 </varlistentry>
 
 <varlistentry>
 <term><guiicon>Show a message in a pop up</guiicon></term>
-<listitem><para>If an icon is present in this column, &kde; will open a message box and inform the user of the notification.  This is probably the most commonly selected option for alerting users to an error.</para></listitem>
+<listitem><para>If an icon is present in this column, &plasma; will open a message box and inform the user of the notification.  This is probably the most commonly selected option for alerting users to an error.</para></listitem>
 </varlistentry>
 
 <varlistentry>
 <term><guiicon>Log to a file</guiicon></term>
-<listitem><para>If an icon is present in this column, &kde; will write certain information to a file on disk for later retrieval.  This is useful for tracking problems or important system changes.</para></listitem>
+<listitem><para>If an icon is present in this column, &plasma; will write certain information to a file on disk for later retrieval.  This is useful for tracking problems or important system changes.</para></listitem>
 </varlistentry>
 
 <varlistentry>
 <term><guiicon>Mark taskbar entry</guiicon></term>
-<listitem><para>If an icon is present in this column, &kde; will cause the taskbar to flash until the user has clicked the taskbar entry.  This is most useful when you want the user to look at the program (such as a new email message was received, or the users name was said on an IRC channel).</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term><guilabel>Speech</guilabel></term>
-<listitem><para>If a mark is in this checkbox, &kde; will cause the taskbar of the program sending the notification to flash until the user has clicked the taskbar entry.
-</para></listitem>
+<listitem><para>If an icon is present in this column, &plasma; will cause the taskbar to flash until the user has clicked the taskbar entry.  This is most useful when you want the user to look at the program (such as a new email message was received, or the users name was said on an IRC channel).</para></listitem>
 </varlistentry>
 
 <varlistentry>
@@ -74,6 +68,9 @@ the left of the notification name.  These columns (from left to right) are:</par
 </varlistentry>
 
 </variablelist>
+
+<para>If you want to remove sound notifications from all applications with a single click use <guibutton>Disable all sounds for all event sources</guibutton>
+</para>
 
 <sect2><title>Change a notification</title>
 <para>To make a change to a notification, click on the name of the notification once with the &LMB;.  The notification will be highlighted 
@@ -87,44 +84,29 @@ a message box appear in response to a system notification.  One notification doe
 <variablelist>
 <varlistentry>
 <term><guilabel>Play a sound</guilabel></term>
-<listitem><para>If a mark is in this checkbox, &kde; will play a sound everytime this notification is initiated. To specify the sound, use the text box to the right of the checkbox to enter the folder location of the sound file you want &kde; to play.  You can use the folder button (located to the far right of the dialog box) to browse your directory tree.  To hear a test of your sound, simply click on the play button (small button directly to the right of <guilabel>Play a sound</guilabel>.)</para></listitem>
+<listitem><para>If a mark is in this checkbox, &plasma; will play a sound everytime this notification is initiated. To specify the sound, use the text box to the right of the checkbox to enter the folder location of the sound file you want &plasma; to play.  You can use the folder button (located to the far right of the dialog box) to browse your directory tree.  To hear a test of your sound, simply click on the play button (small button directly to the right of <guilabel>Play a sound</guilabel>.)</para></listitem>
 </varlistentry>
 
 <varlistentry>
 <term><guilabel>Show a message in a pop up</guilabel></term>
-<listitem><para>If a mark is in this checkbox, &kde; will open a message box and inform the user of the notification.  The text of the box can not be changed from this dialog.</para></listitem>
+<listitem><para>If a mark is in this checkbox, &plasma; will open a message box and inform the user of the notification.  The text of the box can not be changed from this dialog.</para></listitem>
 </varlistentry>
 
 <varlistentry>
 <term><guilabel>Log to a file</guilabel></term>
-<listitem><para>If a mark is in this checkbox, &kde; will write certain information to a file on disk for later retrieval.  To specify the log file to use, enter the pathname in the text box to the right of the checkbox.  You can use the folder button (located to the far right of the dialog box) to browse your directory tree.  </para></listitem>
+<listitem><para>If a mark is in this checkbox, &plasma; will write certain information to a file on disk for later retrieval.  To specify the log file to use, enter the pathname in the text box to the right of the checkbox.  You can use the folder button (located to the far right of the dialog box) to browse your directory tree.  </para></listitem>
 </varlistentry>
 
 <varlistentry>
 <term><guilabel>Mark taskbar entry</guilabel></term>
-<listitem><para>If a mark is in this checkbox, &kde; will cause the taskbar of the program sending the notification to flash until the user has clicked the taskbar entry.</para></listitem>
+<listitem><para>If a mark is in this checkbox, &plasma; will cause the taskbar of the program sending the notification to flash until the user has clicked the taskbar entry.</para></listitem>
 </varlistentry>
 
 <varlistentry>
 <term><guilabel>Run command</guilabel></term>
 <listitem><para>If a mark is in this checkbox, a separate program will be executed when this notification is performed.  To specify the program to execute, enter the pathname in the text box to the right of the checkbox.  You can use the folder button (located to the far right of the dialog box) to browse your directory tree.</para></listitem>
 </varlistentry>
-<!--not in 5.3
-<varlistentry>
-<term><guilabel>Speech</guilabel></term>
-<listitem><para>If a mark is in this checkbox, &kde; will use Jovie to speak the event 
-message, event name or custom text.</para>
-<para>If you select <guilabel>Speak Custom Text</guilabel>, enter the text in the box.  
-You may use the following 
-substitution strings in the text:
-<simplelist>
-<member> <userinput>%e</userinput> Name of the event </member>
-<member> <userinput>%a</userinput> Application that sent the event </member>
-<member> <userinput>%m</userinput> Message sent by the application </member>
-</simplelist>
-</para></listitem>
-</varlistentry>
--->
+
 </variablelist>
 
 <tip><para>You can use the icon columns (located to the left of the notifications) to quickly select or deselect the options. Clicking in the column with the &LMB; will toggle the notification on and off.</para></tip>
