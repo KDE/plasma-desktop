@@ -14,8 +14,8 @@
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date>2016-06-01</date>
-<releaseinfo>Plasma 5.6</releaseinfo>
+<date>2018-03-25</date>
+<releaseinfo>Plasma 5.12</releaseinfo>
 
 <abstract>
 <para>This is the documentation for the &systemsettings; module that configures mice and other pointing devices.
@@ -39,7 +39,7 @@ of hardware that performs a similar function.</para>
 <para>This module is divided into several tabs:
 <link linkend="mouse-general">General</link>,
 <link linkend="mouse-advanced">Advanced</link> and
-<link linkend="mouse-navigation">Mouse Navigation</link>.
+<link linkend="keyboard-navigation">Keyboard Navigation</link>.
 </para>
 
 <sect2 id="mouse-general">
@@ -67,6 +67,11 @@ With this check box selected, the scroll wheel (if any) will work in the opposit
 </para>
 </listitem>
 </varlistentry>
+<!--FIXME http://kdeblog.mageprojects.com/2016/06/24/plasma-5-6-clean-installation-impression/
+Just tick the “reverse scroll direction” in your mouse settings (in the system settings under “Input Devices”). That did the trick, but not completely. It only seems to be applied for the Qt applications! Yay, we have a good old setting per UI Toolkit again… But that’s wrong., we have libinput now and we can set “natural sorting” there. Why isn’t the settings page doing that under the hood if libinput is being used? Anyway, the fix here (comes from this link) was to do:
+
+xinput set-prop 11 282 1
+-->
 <varlistentry>
 <term><guilabel>Double-click to open files and folders (select icons on first click)</guilabel></term>
 <listitem>
@@ -187,8 +192,8 @@ scroll.</para>
 
 </sect2>
 
-<sect2 id="mouse-navigation">
-<title>Mouse Navigation</title>
+<sect2 id="keyboard-navigation">
+<title>Keyboard Navigation</title>
 
 <para>
 This tab allows you to configure the keyboard number pad keys as a mouse-type device. This may be useful when you are working on a device without another pointing device, or where you have no other use for the number pad.
