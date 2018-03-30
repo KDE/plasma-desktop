@@ -14,8 +14,8 @@
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date>2016-09-17</date>
-<releaseinfo>Plasma 5.8</releaseinfo>
+<date>2018-03-25</date>
+<releaseinfo>Plasma 5.12</releaseinfo>
 
 <keywordset>
 <keyword>Plasma</keyword>
@@ -95,6 +95,12 @@ Shortcuts</guilabel> tab.</para>
 or <guiicon><inlinemediaobject><imageobject><imagedata fileref="remove.png" format="PNG"/></imageobject></inlinemediaobject></guiicon>
 to add or remove a component.
 </para>
+
+<para>Adding a component opens a dialog to pick applications from the start menu structure to
+add launchers to be usable as shortcuts.
+If an application has jumplist options they will be available as actions.
+</para>
+
 <para>Click the <guilabel>File</guilabel> drop down box at the right to import/export a 
 Scheme, set all shortcuts to none.</para>
 <para>Global shortcuts can now be configured to jump to specific tasks within an application.</para>
