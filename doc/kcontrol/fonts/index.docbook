@@ -14,8 +14,8 @@
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date>2015-04-08</date>
-<releaseinfo>Plasma 5.3</releaseinfo>
+<date>2018-03-24</date>
+<releaseinfo>Plasma 5.12</releaseinfo>
 
 <keywordset>
 <keyword>KDE</keyword>
@@ -119,42 +119,26 @@ faces and styles.</para>
 <sect2 id="fonts-aa">
 <title>Anti-aliasing text</title>
 
-<para>Default anti-aliasing settings are those used system wide by your distribution and labelled <guilabel>System Settings</guilabel>. You can disable all anti-aliasing by choosing <guilabel>Disabled</guilabel> in the drop down box.</para>
+<para>Default anti-aliasing settings are those used system wide by your distribution and labelled <guilabel>Vendor Default</guilabel>. You can disable all anti-aliasing by choosing <guilabel>Disabled</guilabel> in the drop down box.</para>
 
-<para>To use and set up anti-aliasing, simply choose <guilabel>Enabled</guilabel> from the box on the right of <guilabel>Use anti-aliasing:</guilabel>. The <guibutton>Configure...</guibutton> button will then get enabled and clicking on it will bring you a dialog to configure anti-aliasing.</para>
+<para>To use different anti-aliasing setting, simply choose <guilabel>Enabled</guilabel> from the box on the right of <guilabel>Use anti-aliasing:</guilabel>
+and enable the custom settings.</para>
 
-<para>
-<screenshot>
-<screeninfo>Anti-aliasing properties</screeninfo>
-  <mediaobject>
-    <imageobject>
-      <imagedata fileref="anti-aliasing.png" format="PNG"/>
-    </imageobject>
-    <textobject>
-      <phrase>The anti-aliasing properties dialog</phrase>
-    </textobject>
-  </mediaobject>
-</screenshot>
-</para>
+<para>Placing a mark in the <guilabel>Exclude range:</guilabel> checkbox will allow you to specify which range of fonts will <emphasis>not</emphasis> be anti-aliased.  This range is specified with the two combo boxes below.</para>
 
-<para>Placing a mark in the <guilabel>Exclude range:</guilabel> checkbox will allow you to specify which range of fonts will <emphasis>not</emphasis> be anti-aliased.  This range is specified 
-with the two combo boxes on the same line.</para>
-
-<para>You can also choose the method that &kde; uses to create an anti-alias
-look to your fonts, and how strongly it should be applied. If you are not
-familiar with the individual methods, you should leave this option
-alone.</para>
-
-<!-- FIXME: Cop-out, I need to write a 'hinting and AA for beginners'
-paragraph in here -->
+<para>You can also choose the method used to create an anti-alias
+look to your fonts, and how strongly it should be applied changing
+the <ulink url="https://en.wikipedia.org/wiki/Subpixel_rendering">
+Sub-pixel rendering</ulink> and <ulink url="https://en.wikipedia.org/wiki/Font_hinting">
+font hintig</ulink>. If you are not familiar with the individual methods,
+you should leave this option alone.</para>
 
 <note><para>
 The ability to use anti-aliased fonts and icons requires that you have
-support in both X and the &Qt; toolkit, that you have suitable fonts
+support in both the display server and the &Qt; toolkit, that you have suitable fonts
 installed, and that you are using the built-in font serving capabilities
-of the X server.  If you still are having problems, please contact the
-appropriate &kde; mailing list, or check the
-<acronym>FAQ</acronym>.</para></note>
+of the display server.  If you still are having problems, please contact the
+appropriate &kde; mailing list.</para></note>
 
 </sect2>
 
