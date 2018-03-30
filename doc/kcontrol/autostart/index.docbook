@@ -12,8 +12,8 @@
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date>2015-07-22</date>
-<releaseinfo>&plasma; 5.4</releaseinfo>
+<date>2018-03-25</date>
+<releaseinfo>&plasma; 5.12</releaseinfo>
 
 <keywordset>
 <keyword>KDE</keyword>
@@ -97,7 +97,7 @@ Unchecking the status <guilabel>Enabled</guilabel> sets the Desktop file Hidden 
 <varlistentry><term><guilabel>Run On</guilabel></term>
 <listitem>
 <para>
-Programs (Desktop files) can only be run on startup. Scripts can be run on <guilabel>Startup</guilabel>, <guilabel>Shutdown</guilabel> or <guilabel>Pre-KDE Startup</guilabel>. This column allows you to change when your script is run. Startup is when &plasma; starts, shutdown is when you log out of &plasma; and pre-KDE startup is before &plasma; starts. 
+Programs (Desktop files) can only be run on startup. Scripts can be run on <guilabel>Startup</guilabel>, <guilabel>Shutdown</guilabel> or <guilabel>Before session startup</guilabel>. This column allows you to change when your script is run. Startup is when &plasma; starts, shutdown is when you log out of &plasma; and before session startup is before &plasma; starts. 
 </para>
 <para>
 Scripts and desktop files set to run on <guilabel>Startup</guilabel> are copied or symlinked in <filename class="directory">$HOME/.config/autostart</filename> and will be run during &plasma; startup.
@@ -109,7 +109,7 @@ Scripts set on to be ran on <guilabel>Shutdown</guilabel> are copied or symlinke
 Scripts set to run at <guilabel>Pre-&kde; Startup</guilabel> are copied or symlinked in <filename class="directory">$HOME/.config/plasma-workspace/env</filename> and are sourced during &plasma; startup (the <filename>startkde</filename> script will look for scripts here).
 </para>
 <note><para>
-Only scripts with the <filename class="extension">.sh</filename> extension can be read by &plasma; for <guilabel>Pre-&kde; startup</guilabel> and <guilabel>Shutdown</guilabel> modes.
+Only scripts with the <filename class="extension">.sh</filename> extension can be read by &plasma; for <guilabel>Before session startup</guilabel> and <guilabel>Shutdown</guilabel> modes.
 </para></note>
 </listitem>
 </varlistentry>
@@ -158,10 +158,10 @@ This button (only enabled for programs &ie; Desktop files) allows you to change 
 <varlistentry><term><guibutton>Advanced</guibutton></term>
 <listitem>
 <para>
-This button only applies to programs (&ie; Desktop files). A dialog asks you if you only want the program to autostart only in &plasma; (and not in other desktop environments you might run). By default, the program will autostart in all desktop environments you might run. Checking <guilabel>Autostart only in KDE</guilabel> will autostart the program only if you start the &plasma; desktop environment.
+This button only applies to programs (&ie; Desktop files). A dialog asks you if you only want the program to autostart only in &plasma; (and not in other desktop environments you might run). By default, the program will autostart in all desktop environments you might run. Checking <guilabel>Autostart only in Plasma</guilabel> will autostart the program only if you start the &plasma; desktop environment.
 </para>
 <para>
-This sets the value KDE to the OnlyShowIn key of the program Desktop file.
+This sets the value Plasma to the OnlyShowIn key of the program Desktop file.
 </para>
 </listitem>
 </varlistentry>
