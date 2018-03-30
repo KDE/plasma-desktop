@@ -14,8 +14,8 @@
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date>2016-04-12</date>
-<releaseinfo>Plasma 5.6</releaseinfo>
+<date>2018-03-25</date>
+<releaseinfo>Plasma 5.12</releaseinfo>
 
 <keywordset>
 <keyword>KDE</keyword>
@@ -26,15 +26,22 @@
 </keywordset>
 </articleinfo>
 
-<para>A list of available themes is displayed in this dialog. Select a theme by clicking on an item in the list.</para>
+<para>A preview of available themes is displayed in this dialog. Select a theme by clicking on it.</para>
 
 <para>Use the <guibutton>Get New Themes</guibutton> button to download additional themes from the Internet
 or load a theme from file.</para>
 
+<para>The <guibutton>Remove</guibutton> button is enabled only for custom themes.</para>
+
 <note>
 <para>Since &plasma; 5.6 it is no longer possible to edit and customize individual components or items in a theme.</para>
 
-<para>The recommended tools to check, blend and test themes is the plasma-sdk package, the Theme Explorer specifically.</para>
+<para>The recommended tools to check, blend and test themes is the plasma-sdk package, the <application>
+Plasma Theme Explorer</application> specifically.</para>
+
+<para>If the plasma-sdk package is installed on your system, a button appears hovering a theme preview and
+lets you start the <application>Plasma Theme Explorer</application>.
+</para>
 
 <para>For more technical information visit <ulink url="https://techbase.kde.org/Development/Tutorials/Plasma5/ThemeDetails">this page</ulink>.</para>
 </note>
