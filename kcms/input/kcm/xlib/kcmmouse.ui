@@ -202,7 +202,7 @@
       <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,1">
        <item>
         <layout class="QFormLayout" name="formLayout">
-         <item row="1" column="0">
+         <item row="0" column="0">
           <widget class="QLabel" name="label">
            <property name="text">
             <string>Pointer acceleration:</string>
@@ -212,7 +212,7 @@
            </property>
           </widget>
          </item>
-         <item row="2" column="0">
+         <item row="1" column="0">
           <widget class="QLabel" name="label_2">
            <property name="text">
             <string>Pointer threshold:</string>
@@ -222,7 +222,7 @@
            </property>
           </widget>
          </item>
-         <item row="3" column="0">
+         <item row="2" column="0">
           <widget class="QLabel" name="label_3">
            <property name="text">
             <string>Double click interval:</string>
@@ -232,7 +232,7 @@
            </property>
           </widget>
          </item>
-         <item row="4" column="0">
+         <item row="3" column="0">
           <widget class="QLabel" name="label_4">
            <property name="text">
             <string>Drag start time:</string>
@@ -242,7 +242,7 @@
            </property>
           </widget>
          </item>
-         <item row="5" column="0">
+         <item row="4" column="0">
           <widget class="QLabel" name="label_5">
            <property name="text">
             <string>Drag start distance:</string>
@@ -252,7 +252,7 @@
            </property>
           </widget>
          </item>
-         <item row="6" column="0">
+         <item row="5" column="0">
           <widget class="QLabel" name="label_6">
            <property name="text">
             <string>Mouse wheel scrolls by:</string>
@@ -262,7 +262,7 @@
            </property>
           </widget>
          </item>
-         <item row="1" column="1">
+         <item row="0" column="1">
           <widget class="QDoubleSpinBox" name="accel">
            <property name="sizePolicy">
             <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
@@ -293,7 +293,7 @@
            </property>
           </widget>
          </item>
-         <item row="2" column="1">
+         <item row="1" column="1">
           <widget class="QSpinBox" name="thresh">
            <property name="sizePolicy">
             <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
@@ -312,7 +312,7 @@
            </property>
           </widget>
          </item>
-         <item row="3" column="1">
+         <item row="2" column="1">
           <widget class="QSpinBox" name="doubleClickInterval">
            <property name="sizePolicy">
             <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
@@ -340,7 +340,7 @@
            </property>
           </widget>
          </item>
-         <item row="4" column="1">
+         <item row="3" column="1">
           <widget class="QSpinBox" name="dragStartTime">
            <property name="sizePolicy">
             <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
@@ -365,7 +365,7 @@
            </property>
           </widget>
          </item>
-         <item row="5" column="1">
+         <item row="4" column="1">
           <widget class="QSpinBox" name="dragStartDist">
            <property name="sizePolicy">
             <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
@@ -387,7 +387,7 @@
            </property>
           </widget>
          </item>
-         <item row="6" column="1">
+         <item row="5" column="1">
           <widget class="QSpinBox" name="wheelScrollLines">
            <property name="sizePolicy">
             <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
@@ -406,26 +406,6 @@
            </property>
            <property name="value">
             <number>3</number>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="0">
-          <widget class="QLabel" name="accelerationProfileLabel">
-           <property name="text">
-            <string>Acceleration Profile:</string>
-           </property>
-           <property name="buddy">
-            <cstring>accelProfileComboBox</cstring>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="1">
-          <widget class="QComboBox" name="accelProfileComboBox">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
            </property>
           </widget>
          </item>

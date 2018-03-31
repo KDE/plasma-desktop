@@ -17,7 +17,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 #include "evdev_settings.h"
-#include "x11_backend.h"
+#include "x11_evdev_backend.h"
 #include <QDBusMessage>
 #include <QDBusConnection>
 #include <KSharedConfig>
@@ -25,7 +25,7 @@
 
 #include "../migrationlib/kdelibs4config.h"
 
-void EvdevSettings::apply(X11Backend *backend, bool force)
+void EvdevSettings::apply(X11EvdevBackend *backend, bool force)
 {
     if (!backend) {
         return;
@@ -35,7 +35,7 @@ void EvdevSettings::apply(X11Backend *backend, bool force)
     handedNeedsApply = false;
 }
 
-void EvdevSettings::load(X11Backend *backend)
+void EvdevSettings::load(X11EvdevBackend *backend)
 {
     KConfig config("kcminputrc");
 
@@ -43,7 +43,6 @@ void EvdevSettings::load(X11Backend *backend)
     int threshold = 0;
     handed = Handed::Right;
     double accel = 1.0;
-    QString profile;
     if (backend) {
         auto handedOnServer = backend->handed();
         handedEnabled = handedOnServer != Handed::NotSupported;
@@ -52,7 +51,6 @@ void EvdevSettings::load(X11Backend *backend)
         }
         accel = backend->accelRate();
         threshold = backend->threshold();
-        profile = backend->accelerationProfile();
     }
 
     KConfigGroup group = config.group("Mouse");
@@ -74,10 +72,7 @@ void EvdevSettings::load(X11Backend *backend)
     else if (key == "LeftHanded")
         handed = Handed::Left;
     reverseScrollPolarity = group.readEntry("ReverseScrollPolarity", false);
-    currentAccelProfile = group.readEntry("AccelerationProfile");
-    if (currentAccelProfile.isEmpty()) {
-        currentAccelProfile = profile;
-    }
+
     handedNeedsApply = false;
 
     // SC/DC/AutoSelect/ChangeCursor
@@ -124,7 +119,6 @@ void EvdevSettings::save()
         kcminputGroup.writeEntry("MouseButtonMapping",QString("LeftHanded"));
     }
     kcminputGroup.writeEntry("ReverseScrollPolarity", reverseScrollPolarity);
-    kcminputGroup.writeEntry("AccelerationProfile", currentAccelProfile);
     kcminputGroup.sync();
 
     KSharedConfig::Ptr profile = KSharedConfig::openConfig("kdeglobals");

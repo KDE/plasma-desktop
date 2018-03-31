@@ -28,7 +28,7 @@ class ConfigPlugin;
 
 enum class InputBackendMode {
     KWinWayland = 0,
-    XLibinput = 1,  // TODO
+    XLibinput = 1,
     XEvdev = 2
 };
 
@@ -46,6 +46,8 @@ public:
     InputBackendMode mode() {
         return m_mode;
     }
+
+    virtual void kcmInit() {}
 
     virtual bool isValid() const { return false; }
 

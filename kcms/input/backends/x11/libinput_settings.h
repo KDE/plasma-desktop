@@ -1,5 +1,4 @@
 /*
- * Copyright 2017 Xuetian Weng <wengxt@gmail.com>
  * Copyright 2018 Roman Gilg <subdiff@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
@@ -16,27 +15,19 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
-#include "inputbackend.h"
 
-#include "backends/x11/x11_backend.h"
-#include "backends/kwin_wl/kwin_wl_backend.h"
-#include "logging.h"
+#ifndef LIBINPUTSETTINGS_H
+#define LIBINPUTSETTINGS_H
 
-#include <KWindowSystem/kwindowsystem.h>
+#include <QString>
 
-InputBackend *InputBackend::implementation(QObject *parent)
+struct LibinputSettings
 {
-    //There are multiple possible backends
-    if (KWindowSystem::isPlatformX11()) {
-        qCDebug(KCM_INPUT) << "Using X11 backend";
-        return X11Backend::implementation(parent);
-    }
-    else if (KWindowSystem::isPlatformWayland()) {
-        qCDebug(KCM_INPUT) << "Using KWin+Wayland backend";
-        return new KWinWaylandBackend(parent);
-    }
-    else {
-        qCCritical(KCM_INPUT) << "Not able to select appropriate backend.";
-        return nullptr;
-    }
-}
+    template<class T>
+    T load(QString key, T defVal);
+
+    template<class T>
+    void save(QString key, T val);
+};
+
+#endif // LIBINPUTSETTINGS_H

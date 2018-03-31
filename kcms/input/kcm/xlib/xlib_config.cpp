@@ -26,7 +26,7 @@
  */
 #include "xlib_config.h"
 
-#include "backends/x11/x11_backend.h"
+#include "backends/x11/x11_evdev_backend.h"
 #include "../configcontainer.h"
 
 #include "../../../migrationlib/kdelibs4config.h"
@@ -49,58 +49,12 @@
 #include <QWhatsThis>
 #include <QTabWidget>
 
-#include <klauncher_iface.h>
-
 #include <KConfig>
 #include <KConfigGroup>
 
-void XlibConfig::kcmInit()
-{
-    X11Backend *backend = dynamic_cast<X11Backend*>(InputBackend::implementation());
-    if (!backend) {
-        return;
-    }
-
-    backend->settings()->load(backend);
-    backend->settings()->apply(backend, true);    // force
-
-    KConfigGroup group = KConfig("kcminputrc", KConfig::NoGlobals).group("Mouse");
-    QString theme = group.readEntry("cursorTheme", QString());
-    QString size = group.readEntry("cursorSize", QString());
-    if (backend) {
-        int intSize = -1;
-        if (size.isEmpty()) {
-            bool ok;
-            uint value = size.toUInt(&ok);
-            if (ok) {
-                intSize = value;
-            }
-        }
-        // Note: If you update this code, update kapplymousetheme as well.
-
-        // use a default value for theme only if it's not configured at all, not even in X resources
-        if (theme.isEmpty() && backend->currentCursorTheme().isEmpty()) {
-            theme = "breeze_cursors";
-        }
-        backend->applyCursorTheme(theme, intSize);
-    }
-
-    // Tell klauncher to set the XCURSOR_THEME and XCURSOR_SIZE environment
-    // variables when launching applications.
-    OrgKdeKLauncherInterface klauncher(QStringLiteral("org.kde.klauncher5"),
-                                       QStringLiteral("/KLauncher"),
-                                       QDBusConnection::sessionBus());
-    if (!theme.isEmpty()) {
-        klauncher.setLaunchEnv(QStringLiteral("XCURSOR_THEME"), theme);
-    }
-    if (!size.isEmpty()) {
-        klauncher.setLaunchEnv(QStringLiteral("XCURSOR_SIZE"), size);
-    }
-}
-
 XlibConfig::XlibConfig(ConfigContainer *parent, InputBackend *backend)
   : ConfigPlugin(parent),
-    m_backend(dynamic_cast<X11Backend*>(backend))
+    m_backend(dynamic_cast<X11EvdevBackend*>(backend))
 {
     setupUi(this);
 
@@ -118,7 +72,6 @@ XlibConfig::XlibConfig(ConfigContainer *parent, InputBackend *backend)
     connect(accel, SIGNAL(valueChanged(double)), m_parent, SLOT(changed()));
     connect(thresh, SIGNAL(valueChanged(int)), m_parent, SLOT(changed()));
     connect(thresh, SIGNAL(valueChanged(int)), this, SLOT(slotThreshChanged(int)));
-    connect(accelProfileComboBox, SIGNAL(currentIndexChanged(int)), m_parent, SLOT(changed()));
     slotThreshChanged(thresh->value());
 
     // It would be nice if the user had a test field.
@@ -211,9 +164,6 @@ void XlibConfig::setHandedness(Handed val)
     m_backend->settings()->handedNeedsApply = true;
 }
 
-
-
-
 void XlibConfig::load()
 {
     EvdevSettings *settings = m_backend->settings();
@@ -233,21 +183,6 @@ void XlibConfig::load()
             cbScrollPolarity->setEnabled(false);
             cbScrollPolarity->hide();
         }
-    }
-
-    auto accelerationProfiles = m_backend->supportedAccelerationProfiles();
-    accelProfileComboBox->setEnabled(!accelerationProfiles.isEmpty());
-    accelProfileComboBox->setVisible(!accelerationProfiles.isEmpty());
-    accelerationProfileLabel->setEnabled(!accelerationProfiles.isEmpty());
-    accelerationProfileLabel->setVisible(!accelerationProfiles.isEmpty());
-    accelProfileComboBox->clear();
-    int idx = 0;
-    for (const auto &profile : accelerationProfiles) {
-        accelProfileComboBox->addItem(i18n(profile.toUtf8().constData()), profile);
-        if (profile == settings->currentAccelProfile) {
-            accelProfileComboBox->setCurrentIndex(idx);
-        }
-        idx++;
     }
 
     rightHanded->setEnabled(settings->handedEnabled);
@@ -312,7 +247,6 @@ void XlibConfig::save()
     settings->wheelScrollLines = wheelScrollLines->value();
     settings->singleClick = !doubleClick->isChecked();
     settings->reverseScrollPolarity = cbScrollPolarity->isChecked();
-    settings->currentAccelProfile = accelProfileComboBox->itemData(accelProfileComboBox->currentIndex()).toString();
 
     m_backend->apply();
     settings->save();

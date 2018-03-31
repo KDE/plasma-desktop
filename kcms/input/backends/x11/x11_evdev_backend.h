@@ -17,35 +17,63 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-#ifndef X11BACKEND_H
-#define X11BACKEND_H
+#ifndef X11EVDEVBACKEND_H
+#define X11EVDEVBACKEND_H
 
-#include "inputbackend.h"
+#include "x11_backend.h"
+#include "evdev_settings.h"
 
 #include <QX11Info>
 #include <X11/Xdefs.h>
 
-class X11Backend : public InputBackend
+class X11EvdevBackend : public X11Backend
 {
     Q_OBJECT
 
 public:
-    static X11Backend *implementation(QObject *parent = nullptr);
-    ~X11Backend();
+    X11EvdevBackend(QObject *parent = nullptr);
+    ~X11EvdevBackend();
 
     void kcmInit() override;
 
     bool isValid() const override { return m_dpy != nullptr; }
 
-    QString currentCursorTheme();
-    void applyCursorTheme(const QString &name, int size);
+    void load() override;
 
-protected:
-    X11Backend(QObject *parent = nullptr);
+    void apply(bool force = false);
 
-    // We may still need to do something on non-X11 platform due to Xwayland.
-    Display* m_dpy = nullptr;
-    bool m_platformX11;
+    EvdevSettings* settings() {
+        return m_settings;
+    }
+
+    bool supportScrollPolarity();
+
+    double accelRate();
+    Handed handed();
+    int threshold();
+
+Q_SIGNALS:
+    void mouseStateChanged();
+    void mousesChanged();
+    void mouseReset();
+
+private:
+    void initAtom();
+    bool evdevApplyReverseScroll(int deviceid, bool reverse);
+
+
+    Atom m_evdevWheelEmulationAtom;
+    Atom m_evdevScrollDistanceAtom;
+    Atom m_evdevWheelEmulationAxesAtom;
+
+    Atom m_touchpadAtom;
+
+    EvdevSettings *m_settings = nullptr;
+    int m_numButtons = 1;
+    Handed m_handed = Handed::NotSupported;
+    double m_accelRate = 1.0;
+    int m_threshold = 0;
+    int m_middleButton = -1;
 };
 
-#endif // X11BACKEND_H
+#endif // X11EVDEVBACKEND_H

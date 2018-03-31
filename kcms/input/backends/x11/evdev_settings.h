@@ -20,9 +20,7 @@
 #ifndef EVDEVSETTINGS_H
 #define EVDEVSETTINGS_H
 
-#include <KConfig>
-
-class X11Backend;
+class X11EvdevBackend;
 
 enum class Handed {
     Right = 0,
@@ -33,8 +31,8 @@ enum class Handed {
 struct EvdevSettings
 {
     void save();
-    void load(X11Backend *);
-    void apply(X11Backend *, bool force = false);
+    void load(X11EvdevBackend *);
+    void apply(X11EvdevBackend *, bool force = false);
 
     bool handedEnabled;
     bool handedNeedsApply;
@@ -47,7 +45,6 @@ struct EvdevSettings
     bool singleClick;
     int wheelScrollLines;
     bool reverseScrollPolarity;
-    QString currentAccelProfile;
 };
 
 #endif // EVDEVSETTINGS_H

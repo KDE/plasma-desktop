@@ -18,8 +18,8 @@
 
 #include "configcontainer.h"
 #include "configplugin.h"
-#include "kcm/libinput/libinput_config.h"
-#include "kcm/xlib/xlib_config.h"
+
+#include "inputbackend.h"
 
 #include <KWindowSystem/kwindowsystem.h>
 
@@ -27,9 +27,9 @@ extern "C"
 {
     Q_DECL_EXPORT void kcminit_mouse()
     {
-        if (KWindowSystem::isPlatformX11()) {
-            XlibConfig::kcmInit();
-        }
+        InputBackend *backend = InputBackend::implementation();
+        backend->kcmInit();
+        delete backend;
     }
 }
 

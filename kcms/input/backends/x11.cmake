@@ -9,8 +9,12 @@ include_directories(
 
 set(backend_SRCS
     ${backend_SRCS}
-    backends/x11/evdev_settings.cpp
     backends/x11/x11_backend.cpp
+    backends/x11/x11_evdev_backend.cpp
+    backends/x11/evdev_settings.cpp
+    backends/x11/x11_libinput_backend.cpp
+    backends/x11/x11_libinput_dummydevice.cpp
+    backends/x11/libinput_settings.cpp
 )
 
 set(backend_LIBS

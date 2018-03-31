@@ -24,6 +24,9 @@ ecm_qt_declare_logging_category(common_SRCS
         Critical
 )
 
+set(klauncher_xml ${KINIT_DBUS_INTERFACES_DIR}/kf5_org.kde.KLauncher.xml)
+qt5_add_dbus_interface(common_SRCS ${klauncher_xml} klauncher_iface)
+
 include(backends/x11.cmake)
 include(backends/kwin_wl.cmake)
 
@@ -57,10 +60,7 @@ set(common_SRCS
     kcm/xlib/xlib_config.cpp
 )
 
-set(klauncher_xml ${KINIT_DBUS_INTERFACES_DIR}/kf5_org.kde.KLauncher.xml)
-
 ki18n_wrap_ui(common_SRCS kcm/xlib/kcmmouse.ui)
-qt5_add_dbus_interface(common_SRCS ${klauncher_xml} klauncher_iface)
 
 qt5_add_resources( common_SRCS kcm/resources.qrc )
 

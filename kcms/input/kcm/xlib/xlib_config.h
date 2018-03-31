@@ -36,7 +36,7 @@ class QSlider;
 class QSpinBox;
 class QTabWidget;
 
-class X11Backend;
+class X11EvdevBackend;
 
 class XlibConfig : public ConfigPlugin, public Ui::KCMMouse
 {
@@ -68,7 +68,7 @@ private:
     void setThreshold(int);
     void setHandedness(Handed);
 
-    X11Backend *m_backend;
+    X11EvdevBackend *m_backend;
 };
 
 #endif // XLIBCONFIG_H

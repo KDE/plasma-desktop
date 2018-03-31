@@ -82,7 +82,12 @@ LibinputConfig::LibinputConfig(ConfigContainer *parent, InputBackend *backend)
     KDeclarative::KDeclarative kdeclarative;
     kdeclarative.setDeclarativeEngine(m_view->engine());
     kdeclarative.setupBindings();
-    m_view->setSource(QUrl("qrc:/libinput/main.qml"));
+
+    if (m_backend->mode() == InputBackendMode::XLibinput) {
+        m_view->setSource(QUrl("qrc:/libinput/main_deviceless.qml"));
+    } else {
+        m_view->setSource(QUrl("qrc:/libinput/main.qml"));
+    }
 
     if (m_initError) {
         m_errorMessage->setMessageType(KMessageWidget::Error);
