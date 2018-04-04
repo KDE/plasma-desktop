@@ -1,9 +1,6 @@
 <?xml version="1.0" ?>
 <!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
 
-  <!ENTITY kfontview "<application>KFontview</application>">
-  <!ENTITY kappname "&kfontview;">
-  <!ENTITY package "kdebase">
   <!ENTITY % addindex "IGNORE">
   <!ENTITY % English "INCLUDE">
 ]>
@@ -18,8 +15,8 @@
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date>2015-04-10</date>
-<releaseinfo>Plasma 5.3</releaseinfo>
+<date>2018-03-31</date>
+<releaseinfo>Plasma 5.12</releaseinfo>
 
 <keywordset>
 <keyword>KDE</keyword>
@@ -45,8 +42,13 @@ has all characters you need.
 <para>
 Additionally &kfontview; can be launched from 
 the &systemsettings; module <ulink url="help:/kcontrol/fontinst/index.html">
-<guilabel>Font Installer</guilabel></ulink> to use the extended preview capabilities
+<guilabel>Font Management</guilabel></ulink> to use the extended preview capabilities
 of &kfontview;.</para>
+
+<para>
+Alternatively you can use the <guilabel>Font Management</guilabel> module
+to install, remove, preview and manage all fonts on your system.</para>
+
 <!--FIXME still valid?
 <para>To use &kfontview; in &konqueror; select <guilabel>Services</guilabel> in
 the sidebar and go to the folders <filename class="directory">Fonts/Personal
