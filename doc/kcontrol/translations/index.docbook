@@ -14,8 +14,8 @@
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
  </authorgroup>
 
-	  <date>2015-05-18</date>
-	  <releaseinfo>Plasma 5.3</releaseinfo>
+	  <date>2018-03-26</date>
+	  <releaseinfo>Plasma 5.12</releaseinfo>
 
 	  <keywordset>
 		<keyword>KDE</keyword>
@@ -29,12 +29,12 @@
 </articleinfo>
 
 <para>
-On this page you can set your preferred languages for the &kde; Workspace and
+On this page you can set your preferred languages for the &plasma; Workspace and
 Applications to be displayed in.
 </para>
 
 <para>
-The &kde; Workspace and Applications are written in American English and are
+The &plasma; Workspace and &kde; Applications are written in American English and are
 translated into many different languages by teams of volunteers. These
 translations need to be installed first before you can choose to use them. The
 list of <guilabel>Available Languages</guilabel> shows the localized language names of &systemsettings; translations
@@ -42,19 +42,16 @@ installed and available on your system. If the language you want to use is
 not shown in this list then you will need to install it using the usual method 
 for your system.
 </para>
-<note><para>Ensure that you have installed the &kde; language packages or translations for the 
+<note><para>Ensure that you have installed the &plasma; language packages or translations for the
 languages you want to use.</para>
-<para>As &kde; is build upon the &Qt; libraries, you need the &Qt; translations for the selected
+<para>As &plasma; is build upon the &Qt; libraries, you need the &Qt; translations for the selected
 languages as well to have a fully localized &GUI;.</para></note>
-<!--FIXME 
-Toooltip in GUI about available languages is wrong as well
--->
 
 <para>
 The <guilabel>Preferred Languages</guilabel> list shows the localized language names that will
-be used when displaying the &kde; Workspace and Applications. Because not all
+be used when displaying the &plasma; Workspace and Applications. Because not all
 of the KDE Workspace and Applications may be translated into every language
-&kde; will try to find suitable translations for you by working down the
+&plasma; will try to find suitable translations for you by working down the
 <guilabel>Preferred Languages</guilabel> list until it finds a translation. If
 none of your preferred languages have a required translation then the original
 American English will be used.
@@ -79,7 +76,6 @@ clicking on the Up or Down arrow button.
 for <guilabel>Primary language</guilabel> and <guilabel>Fallback language</guilabel> 
 in the <guilabel>Switch Application Language</guilabel> dialog of the 
 <guimenu>Help</guimenu> menu.
-<!--FIXME apparently wrong - only previously installed languages ?-->
 </para>
 
 <note>
