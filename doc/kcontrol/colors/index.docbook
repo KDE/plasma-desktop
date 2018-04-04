@@ -14,8 +14,8 @@
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date>2017-11-07</date>
-<releaseinfo>Plasma 5.11</releaseinfo>
+<date>2018-03-30</date>
+<releaseinfo>Plasma 5.12</releaseinfo>
 
 <keywordset>
 <keyword>KDE</keyword>
@@ -35,8 +35,8 @@
   It shows a list of color schemes shipped with &plasma; and a preview at the top.
   Only one scheme is active at once, but you may edit schemes.
   You can remove schemes using <guibutton>Remove Scheme</guibutton>.
-  Note that system schemes cannot be removed; trying to do so will display an
-  error.</para>
+  Note that system schemes cannot be removed; the button for this action is
+  disabled.</para>
 
   <para>If you have an Internet connection,
   you can also browse and retrieve user-created schemes using <guibutton>Get
@@ -66,7 +66,8 @@
   <title>Edit or Create Schemes</title>
   <para>To edit or create new schemes select a scheme from the list and press the
   <guibutton>Edit Scheme</guibutton> button to open a dialog with three tabs 
-  <guilabel>Options</guilabel>, <guilabel>Colors</guilabel> and <guilabel>Disabled</guilabel>.
+  <guilabel>Options</guilabel>, <guilabel>Colors</guilabel>, <guilabel>Disabled</guilabel>
+  and <guilabel>Inactive</guilabel>.
   When you have created a scheme you like, you can upload it, reset it or save it
   under a different name or overwrite the active scheme.
   </para>
