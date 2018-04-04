@@ -14,8 +14,8 @@
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date>2015-04-08</date>
-<releaseinfo>Plasma 5.3</releaseinfo>
+<date>2018-03-31</date>
+<releaseinfo>Plasma 5.12</releaseinfo>
 
 <keywordset>
 <keyword>KDE</keyword>
@@ -89,7 +89,7 @@ The main display is a list of the installed fonts, grouped via the fonts' family
 
 <sect3 id="get-new-fonts">
 <title>Get New Fonts</title>
-<para>New fonts may be installed from local files, or downloaded from <quote>kde-look.org</quote>. The <guilabel>Get New Fonts</guilabel> entry in the tool button (located above the group list), allows you to install fonts from <quote>kde-look.org</quote>. The fonts downloaded in this manner will be installed into your <quote>Personal Fonts</quote> group. To install system-wide, you will need to move them to the <quote>System Fonts</quote> group - this may be achieved by dragging the fonts over the <quote>System Fonts</quote> group entry and will require administrator privileges.</para>
+<para>New fonts may be installed from local files, or downloaded using <guilabel>Get Hot New Stuff</guilabel>. The <guilabel>Get New Fonts</guilabel> entry in the tool button (located above the group list), allows you to install fonts from the Internet. The fonts downloaded in this manner will be installed into your <quote>Personal Fonts</quote> group. To install system-wide, you will need to move them to the <quote>System Fonts</quote> group - this may be achieved by dragging the fonts over the <quote>System Fonts</quote> group entry and will require administrator privileges.</para>
 </sect3>
 
 </sect2>
@@ -104,6 +104,9 @@ The main display is a list of the installed fonts, grouped via the fonts' family
 <title>Preview</title>
 <para>This displays a preview text in different font sizes.</para>
 <para>Using the context menu enables you to zoom in and out, select a preview type (<guilabel>Standard Preview</guilabel> or <guilabel>All Characters</guilabel>) and change the preview text.</para>
+
+<para>Launch the application &kfontview; if you need additional preview types for Unicode Blocks.
+</para>
 </sect2>
 </sect1>
 </article>
