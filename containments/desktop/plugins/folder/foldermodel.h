@@ -306,6 +306,7 @@ class FOLDERPLUGIN_TESTS_EXPORT FolderModel : public QSortFilterProxyModel, publ
         void updatePasteAction();
         void addDragImage(QDrag *drag, int x, int y);
         void setStatus(Status status);
+        static bool isTrashEmpty();
         QList<QUrl> selectedUrls() const;
         KDirModel *m_dirModel;
         KDirWatch *m_dirWatch;

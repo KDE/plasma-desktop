@@ -1618,8 +1618,7 @@ void FolderModel::updateActions()
     if (emptyTrash) {
         if (isTrash) {
             emptyTrash->setVisible(true);
-            KConfig trashConfig(QStringLiteral("trashrc"), KConfig::SimpleConfig);
-            emptyTrash->setEnabled(!trashConfig.group("Status").readEntry("Empty", true));
+            emptyTrash->setEnabled(!isTrashEmpty());
         } else {
             emptyTrash->setVisible(false);
         }
@@ -1738,6 +1737,7 @@ void FolderModel::openContextMenu(QQuickItem *visualParent)
                 // called before we open the menu, it would correct visibility again when opening
                 // the context menu for other items later.
                 emptyTrashAction->setVisible(true);
+                emptyTrashAction->setEnabled(!isTrashEmpty());
                 menu->addAction(emptyTrashAction);
             }
         } else {
@@ -1959,6 +1959,12 @@ void FolderModel::restoreSelectedFromTrash()
 
     KIO::RestoreJob *job = KIO::restoreFromTrash(urls);
     job->uiDelegate()->setAutoErrorHandlingEnabled(true);
+}
+
+bool FolderModel::isTrashEmpty()
+{
+    KConfig trashConfig(QStringLiteral("trashrc"), KConfig::SimpleConfig);
+    return trashConfig.group("Status").readEntry("Empty", true);
 }
 
 void FolderModel::undoTextChanged(const QString &text)
