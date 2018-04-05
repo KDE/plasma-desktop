@@ -93,6 +93,10 @@ QVariant SystemModel::data(const QModelIndex &index, int role) const
         return entry->group();
     } else if (role == Kicker::FavoriteIdRole) {
         return entry->id();
+    } else if (role == Kicker::HasActionListRole) {
+        return entry->hasActions();
+    } else if (role == Kicker::ActionListRole) {
+        return entry->actions();
     }
 
     return QVariant();
@@ -105,11 +109,8 @@ int SystemModel::rowCount(const QModelIndex &parent) const
 
 bool SystemModel::trigger(int row, const QString &actionId, const QVariant &argument)
 {
-    Q_UNUSED(actionId)
-    Q_UNUSED(argument)
-
     if (row >= 0 && row < m_entryList.count()) {
-        m_entryList.at(row)->run();
+        m_entryList.at(row)->run(actionId, argument);
 
         return true;
     }
