@@ -395,14 +395,18 @@ Item {
             modelAction = folderView.model.action(actionName);
             plasmoid.setAction(actionName, modelAction.text, Folder.MenuHelper.iconName(modelAction));
 
+            var plasmoidAction = plasmoid.action(actionName);
+            plasmoidAction.shortcut = modelAction.shortcut;
+            plasmoidAction.shortcutContext = Qt.WidgetShortcut;
+
             if (actionName == "newMenu") {
-                Folder.MenuHelper.setMenu(plasmoid.action(actionName), folderView.model.newMenu);
+                Folder.MenuHelper.setMenu(plasmoidAction, folderView.model.newMenu);
                 plasmoid.setActionSeparator("separator1");
 
                 plasmoid.setAction("viewProperties", i18n("Icons"), "preferences-desktop-icons");
                 Folder.MenuHelper.setMenu(plasmoid.action("viewProperties"), viewPropertiesMenu.menu);
             } else {
-                plasmoid.action(actionName).triggered.connect(modelAction.trigger);
+                plasmoidAction.triggered.connect(modelAction.trigger);
             }
         }
 

@@ -896,6 +896,8 @@ FocusScope {
                 }
 
                 Keys.onPressed: {
+                    event.accepted = true;
+
                     if (event.matches(StandardKey.Delete)) {
                         if (dir.hasSelection()) {
                             dir.action("trash").trigger();
@@ -926,6 +928,8 @@ FocusScope {
                         dir.refresh();
                     } else if (event.matches(StandardKey.SelectAll)) {
                         positioner.setRangeSelected(0, count - 1);
+                    } else {
+                        event.accepted = false;
                     }
                 }
 
