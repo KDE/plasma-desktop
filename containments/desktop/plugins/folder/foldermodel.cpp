@@ -860,13 +860,8 @@ void FolderModel::addItemDragImage(int row, int x, int y, int width, int height,
 
 void FolderModel::clearDragImages()
 {
-    if (!m_dragImages.isEmpty()) {
-        foreach (DragImage *image, m_dragImages) {
-            delete image;
-        }
-
-        m_dragImages.clear();
-    }
+    qDeleteAll(m_dragImages);
+    m_dragImages.clear();
 }
 
 void FolderModel::setDragHotSpotScrollOffset(int x, int y)
@@ -1245,11 +1240,7 @@ void FolderModel::selectionChanged(const QItemSelection &selected, const QItemSe
         clearDragImages();
     } else {
         foreach (const QModelIndex &idx, deselected.indexes()) {
-            if (m_dragImages.contains(idx.row())) {
-                DragImage *image = m_dragImages.value(idx.row());
-                delete image;
-                m_dragImages.remove(idx.row());
-            }
+            delete m_dragImages.take(idx.row());
         }
     }
 }
@@ -1552,11 +1543,8 @@ void FolderModel::createActions()
     QAction *refresh = new QAction(QIcon::fromTheme(QStringLiteral("view-refresh")), i18n("&Refresh View"), this);
     connect(refresh, &QAction::triggered, this, &FolderModel::refresh);
 
-    QAction *rename = new QAction(QIcon::fromTheme(QStringLiteral("edit-rename")), i18n("&Rename"), this);
-    connect(rename, &QAction::triggered, this, &FolderModel::requestRename);
-
-    QAction *trash = new QAction(QIcon::fromTheme(QStringLiteral("user-trash")), i18n("&Move to Trash"), this);
-    connect(trash, &QAction::triggered, this, &FolderModel::moveSelectedToTrash);
+    QAction *rename = KStandardAction::renameFile(this, &FolderModel::requestRename, this);
+    QAction *trash = KStandardAction::moveToTrash(this, &FolderModel::moveSelectedToTrash, this);
 
     QAction *emptyTrash = new QAction(QIcon::fromTheme(QStringLiteral("trash-empty")), i18n("&Empty Trash Bin"), this);
     connect(emptyTrash, &QAction::triggered, this, &FolderModel::emptyTrashBin);
@@ -1564,8 +1552,7 @@ void FolderModel::createActions()
     QAction *restoreFromTrash = new QAction(i18nc("Restore from trash", "Restore"), this);
     connect(restoreFromTrash, &QAction::triggered, this, &FolderModel::restoreSelectedFromTrash);
 
-    QAction *del = new QAction(QIcon::fromTheme(QStringLiteral("edit-delete")), i18n("&Delete"), this);
-    connect(del, &QAction::triggered, this, &FolderModel::deleteSelected);
+    QAction *del = KStandardAction::deleteFile(this, &FolderModel::deleteSelected, this);
 
     QAction *actOpen = new QAction(QIcon::fromTheme(QStringLiteral("window-new")), i18n("&Open"), this);
     connect(actOpen, &QAction::triggered, this, &FolderModel::openSelected);
@@ -1618,8 +1605,7 @@ void FolderModel::updateActions()
     if (emptyTrash) {
         if (isTrash) {
             emptyTrash->setVisible(true);
-            KConfig trashConfig(QStringLiteral("trashrc"), KConfig::SimpleConfig);
-            emptyTrash->setEnabled(!trashConfig.group("Status").readEntry("Empty", true));
+            emptyTrash->setEnabled(!isTrashEmpty());
         } else {
             emptyTrash->setVisible(false);
         }
@@ -1738,6 +1724,7 @@ void FolderModel::openContextMenu(QQuickItem *visualParent)
                 // called before we open the menu, it would correct visibility again when opening
                 // the context menu for other items later.
                 emptyTrashAction->setVisible(true);
+                emptyTrashAction->setEnabled(!isTrashEmpty());
                 menu->addAction(emptyTrashAction);
             }
         } else {
@@ -1980,6 +1967,12 @@ void FolderModel::restoreSelectedFromTrash()
 
     KIO::RestoreJob *job = KIO::restoreFromTrash(urls);
     job->uiDelegate()->setAutoErrorHandlingEnabled(true);
+}
+
+bool FolderModel::isTrashEmpty()
+{
+    KConfig trashConfig(QStringLiteral("trashrc"), KConfig::SimpleConfig);
+    return trashConfig.group("Status").readEntry("Empty", true);
 }
 
 void FolderModel::undoTextChanged(const QString &text)
