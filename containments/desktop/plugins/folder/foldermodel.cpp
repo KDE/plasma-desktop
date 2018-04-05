@@ -1543,11 +1543,8 @@ void FolderModel::createActions()
     QAction *refresh = new QAction(QIcon::fromTheme(QStringLiteral("view-refresh")), i18n("&Refresh View"), this);
     connect(refresh, &QAction::triggered, this, &FolderModel::refresh);
 
-    QAction *rename = new QAction(QIcon::fromTheme(QStringLiteral("edit-rename")), i18n("&Rename"), this);
-    connect(rename, &QAction::triggered, this, &FolderModel::requestRename);
-
-    QAction *trash = new QAction(QIcon::fromTheme(QStringLiteral("user-trash")), i18n("&Move to Trash"), this);
-    connect(trash, &QAction::triggered, this, &FolderModel::moveSelectedToTrash);
+    QAction *rename = KStandardAction::renameFile(this, &FolderModel::requestRename, this);
+    QAction *trash = KStandardAction::moveToTrash(this, &FolderModel::moveSelectedToTrash, this);
 
     QAction *emptyTrash = new QAction(QIcon::fromTheme(QStringLiteral("trash-empty")), i18n("&Empty Trash Bin"), this);
     connect(emptyTrash, &QAction::triggered, this, &FolderModel::emptyTrashBin);
@@ -1555,8 +1552,7 @@ void FolderModel::createActions()
     QAction *restoreFromTrash = new QAction(i18nc("Restore from trash", "Restore"), this);
     connect(restoreFromTrash, &QAction::triggered, this, &FolderModel::restoreSelectedFromTrash);
 
-    QAction *del = new QAction(QIcon::fromTheme(QStringLiteral("edit-delete")), i18n("&Delete"), this);
-    connect(del, &QAction::triggered, this, &FolderModel::deleteSelected);
+    QAction *del = KStandardAction::deleteFile(this, &FolderModel::deleteSelected, this);
 
     QAction *actOpen = new QAction(QIcon::fromTheme(QStringLiteral("window-new")), i18n("&Open"), this);
     connect(actOpen, &QAction::triggered, this, &FolderModel::openSelected);
