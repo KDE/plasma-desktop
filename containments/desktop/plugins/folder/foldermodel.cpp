@@ -860,13 +860,8 @@ void FolderModel::addItemDragImage(int row, int x, int y, int width, int height,
 
 void FolderModel::clearDragImages()
 {
-    if (!m_dragImages.isEmpty()) {
-        foreach (DragImage *image, m_dragImages) {
-            delete image;
-        }
-
-        m_dragImages.clear();
-    }
+    qDeleteAll(m_dragImages);
+    m_dragImages.clear();
 }
 
 void FolderModel::setDragHotSpotScrollOffset(int x, int y)
@@ -1245,11 +1240,7 @@ void FolderModel::selectionChanged(const QItemSelection &selected, const QItemSe
         clearDragImages();
     } else {
         foreach (const QModelIndex &idx, deselected.indexes()) {
-            if (m_dragImages.contains(idx.row())) {
-                DragImage *image = m_dragImages.value(idx.row());
-                delete image;
-                m_dragImages.remove(idx.row());
-            }
+            delete m_dragImages.take(idx.row());
         }
     }
 }
