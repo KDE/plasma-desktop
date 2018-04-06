@@ -14,6 +14,7 @@ target_link_libraries(kcm_splashscreen
   KF5::I18n
   KF5::Plasma
   KF5::PlasmaQuick
+  KF5::NewStuff
 
   Qt5::DBus
   Qt5::Widgets
@@ -25,5 +26,6 @@ kcoreaddons_desktop_to_json(kcm_splashscreen "kcm_splashscreen.desktop" SERVICE_
 #this desktop file is installed only for retrocompatibility with sycoca
 install(FILES kcm_splashscreen.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
 install(TARGETS kcm_splashscreen DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms)
+install( FILES ksplash.knsrc DESTINATION  ${KDE_INSTALL_CONFDIR} )
 
 kpackage_install_package(package kcm_splashscreen kcms)

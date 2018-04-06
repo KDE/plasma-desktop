@@ -150,7 +150,7 @@ int KCMLookandFeel::selectedPluginIndex() const
     return -1;
 }
 
-QList<Plasma::Package> KCMLookandFeel::availablePackages(const QString &component)
+QList<Plasma::Package> KCMLookandFeel::availablePackages(const QStringList &components)
 {
     QList<Plasma::Package> packages;
     QStringList paths;
@@ -166,8 +166,15 @@ QList<Plasma::Package> KCMLookandFeel::availablePackages(const QString &componen
         Plasma::Package pkg = Plasma::PluginLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"));
         pkg.setPath(path);
         pkg.setFallbackPackage(Plasma::Package());
-        if (component.isEmpty() || !pkg.filePath(component.toUtf8()).isEmpty()) {
+        if (components.isEmpty()) {
             packages << pkg;
+        } else {
+            for (const auto &component : components) {
+                if (!pkg.filePath(component.toUtf8()).isEmpty()) {
+                    packages << pkg;
+                    break;
+                }
+            }
         }
     }
 
@@ -191,7 +198,7 @@ void KCMLookandFeel::load()
 
     m_model->clear();
 
-    const QList<Plasma::Package> pkgs = availablePackages();
+    const QList<Plasma::Package> pkgs = availablePackages({"defaults", "layouts"});
     for (const Plasma::Package &pkg : pkgs) {
         if (!pkg.metadata().isValid()) {
             continue;

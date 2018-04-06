@@ -52,6 +52,7 @@ public:
     int selectedPluginIndex() const;
 
 public Q_SLOTS:
+    void getNewClicked();
     void load() override;
     void save() override;
     void defaults() override;

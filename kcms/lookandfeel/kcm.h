@@ -68,7 +68,8 @@ public:
     KCMLookandFeel(QObject* parent, const QVariantList& args);
     ~KCMLookandFeel();
 
-    QList<Plasma::Package> availablePackages(const QString &component = QString());
+    //List only packages which provide at least one of the components
+    QList<Plasma::Package> availablePackages(const QStringList &components);
 
     QStandardItemModel *lookAndFeelModel();
 

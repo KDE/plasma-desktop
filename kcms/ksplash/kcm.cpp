@@ -37,6 +37,8 @@
 #include <KLocalizedString>
 #include <Plasma/PluginLoader>
 
+#include <KNewStuff3/KNS3/DownloadDialog>
+
 K_PLUGIN_FACTORY_WITH_JSON(KCMSplashScreenFactory, "kcm_splashscreen.json", registerPlugin<KCMSplashScreen>();)
 
 KCMSplashScreen::KCMSplashScreen(QObject* parent, const QVariantList& args)
@@ -102,6 +104,17 @@ void KCMSplashScreen::setSelectedPlugin(const QString &plugin)
     }
     m_selectedPlugin = plugin;
     emit selectedPluginChanged();
+}
+
+void KCMSplashScreen::getNewClicked()
+{
+    KNS3::DownloadDialog dialog("ksplash.knsrc", 0);
+    if (dialog.exec()) {
+        KNS3::Entry::List list = dialog.changedEntries();
+        if (list.count() > 0) {
+            load();
+        }
+    }
 }
 
 void KCMSplashScreen::load()
