@@ -115,7 +115,7 @@ Item {
                                     margins: units.smallSpacing
                                 }
                                 iconSource: "document-edit"
-                                tooltip: i18("Edit theme")
+                                tooltip: i18n("Edit theme")
                                 flat: false
                                 onClicked: kcm.editTheme(model.pluginName)
                                 visible: kcm.canEditThemes
