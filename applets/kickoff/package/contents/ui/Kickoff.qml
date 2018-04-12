@@ -37,6 +37,7 @@ Item {
         || plasmoid.location == PlasmaCore.Types.RightEdge
         || plasmoid.location == PlasmaCore.Types.BottomEdge
         || plasmoid.location == PlasmaCore.Types.LeftEdge)
+    readonly property bool vertical: (plasmoid.formFactor == PlasmaCore.Types.Vertical)
 
     Plasmoid.switchWidth: units.gridUnit * 20
     Plasmoid.switchHeight: units.gridUnit * 30
@@ -46,13 +47,37 @@ Item {
     Plasmoid.icon: plasmoid.configuration.icon
 
     Plasmoid.compactRepresentation: MouseArea {
-        //AppletQuickItem expects a layout to exist
-        //setting even a default property forces it to be created
-        Layout.fillWidth: false
+        id: compactRoot
+
         Layout.maximumWidth: inPanel ? units.iconSizeHints.panel : -1
         Layout.maximumHeight: inPanel ? units.iconSizeHints.panel : -1
         hoverEnabled: true
         onClicked: plasmoid.expanded = !plasmoid.expanded
+
+        onWidthChanged: updateSizeHints()
+        onHeightChanged: updateSizeHints()
+
+        function updateSizeHints() {
+            if (kickoff.vertical) {
+                var scaledHeight = Math.floor(parent.width * (buttonIcon.implicitHeight / buttonIcon.implicitWidth));
+                compactRoot.Layout.minimumHeight = scaledHeight;
+                compactRoot.Layout.maximumHeight = scaledHeight;
+                compactRoot.Layout.minimumWidth = units.iconSizes.small;
+                compactRoot.Layout.maximumWidth = inPanel ? units.iconSizeHints.panel : -1;
+            } else {
+                var scaledWidth = Math.floor(parent.height * (buttonIcon.implicitWidth / buttonIcon.implicitHeight));
+                compactRoot.Layout.minimumWidth = scaledWidth;
+                compactRoot.Layout.maximumWidth = scaledWidth;
+                compactRoot.Layout.minimumHeight = units.iconSizes.small;
+                compactRoot.Layout.maximumHeight = inPanel ? units.iconSizeHints.panel : -1;
+            }
+        }
+
+        Connections {
+            target: units.iconSizeHints
+
+            onPanelChanged: compactRoot.updateSizeHints()
+        }
 
         DropArea {
             id: compactDragArea
@@ -67,10 +92,18 @@ Item {
         }
 
         PlasmaCore.IconItem {
+            id: buttonIcon
+
+            readonly property double aspectRatio: (vertical ? implicitHeight / implicitWidth
+                : implicitWidth / implicitHeight)
+
             anchors.fill: parent
             source: plasmoid.icon
             active: parent.containsMouse || compactDragArea.containsDrag
             smooth: true
+            roundToIconSize: aspectRatio === 1
+
+            onSourceChanged: updateSizeHints()
         }
     }
 
