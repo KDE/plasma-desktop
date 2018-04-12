@@ -57,7 +57,9 @@ KCMSplashScreen::KCMSplashScreen(QObject* parent, const QVariantList& args)
     QHash<int, QByteArray> roles = m_model->roleNames();
     roles[PluginNameRole] = "pluginName";
     roles[ScreenhotRole] = "screenshot";
+    roles[DescriptionRole] = "description";
     m_model->setItemRoleNames(roles);
+    loadModel();
 }
 
 QList<Plasma::Package> KCMSplashScreen::availablePackages(const QString &component)
@@ -104,6 +106,7 @@ void KCMSplashScreen::setSelectedPlugin(const QString &plugin)
     }
     m_selectedPlugin = plugin;
     emit selectedPluginChanged();
+    emit selectedPluginIndexChanged();
 }
 
 void KCMSplashScreen::getNewClicked()
@@ -112,9 +115,29 @@ void KCMSplashScreen::getNewClicked()
     if (dialog.exec()) {
         KNS3::Entry::List list = dialog.changedEntries();
         if (list.count() > 0) {
-            load();
+            loadModel();
         }
     }
+}
+
+void KCMSplashScreen::loadModel()
+{
+    m_model->clear();
+
+    QStandardItem* row = new QStandardItem(i18n("None"));
+    row->setData("None", PluginNameRole);
+    row->setData(i18n("No splash screen will be shown"), DescriptionRole);
+    m_model->appendRow(row);
+
+    const QList<Plasma::Package> pkgs = availablePackages(QStringLiteral("splashmainscript"));
+    for (const Plasma::Package &pkg : pkgs) {
+        QStandardItem* row = new QStandardItem(pkg.metadata().name());
+        row->setData(pkg.metadata().pluginName(), PluginNameRole);
+        row->setData(pkg.filePath("previews", QStringLiteral("splash.png")), ScreenhotRole);
+        row->setData(pkg.metadata().comment(), DescriptionRole);
+        m_model->appendRow(row);
+    }
+    emit selectedPluginIndexChanged();
 }
 
 void KCMSplashScreen::load()
@@ -131,20 +154,7 @@ void KCMSplashScreen::load()
         currentPlugin = m_package.metadata().pluginName();
     }
     setSelectedPlugin(currentPlugin);
-
-    m_model->clear();
-
-    QStandardItem* row = new QStandardItem(i18n("None"));
-    row->setData("None", PluginNameRole);
-    m_model->appendRow(row);
-
-    const QList<Plasma::Package> pkgs = availablePackages(QStringLiteral("splashmainscript"));
-    for (const Plasma::Package &pkg : pkgs) {
-        QStandardItem* row = new QStandardItem(pkg.metadata().name());
-        row->setData(pkg.metadata().pluginName(), PluginNameRole);
-        row->setData(pkg.filePath("previews", QStringLiteral("splash.png")), ScreenhotRole);
-        m_model->appendRow(row);
-    }
+    
     setNeedsSave(false);
 }
 

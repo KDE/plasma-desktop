@@ -38,7 +38,8 @@ class KCMSplashScreen : public KQuickAddons::ConfigModule
 public:
     enum Roles {
         PluginNameRole = Qt::UserRole +1,
-        ScreenhotRole
+        ScreenhotRole,
+        DescriptionRole
     };
     KCMSplashScreen(QObject* parent, const QVariantList& args);
 
@@ -50,6 +51,8 @@ public:
     void setSelectedPlugin(const QString &plugin);
 
     int selectedPluginIndex() const;
+
+    void loadModel();
 
 public Q_SLOTS:
     void getNewClicked();
