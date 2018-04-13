@@ -35,6 +35,7 @@ Item {
     signal actionTriggered(string actionId, variant actionArgument)
     signal aboutToShowActionMenu(variant actionMenu)
 
+    readonly property real fullTextWidth: Math.ceil(icon.width + label.implicitWidth + arrow.width + row.anchors.leftMargin + row.anchors.rightMargin + row.actualSpacing)
     property bool isSeparator: (model.isSeparator == true)
     property bool hasChildren: (model.hasChildren == true)
     property bool hasActionList: ((model.favoriteId != null)
@@ -177,6 +178,8 @@ Item {
     }
 
     Row {
+        id: row
+
         anchors.left: parent.left
         anchors.leftMargin: highlightItemSvg.margins.left
         anchors.right: parent.right
@@ -185,6 +188,7 @@ Item {
         height: parent.height
 
         spacing: units.smallSpacing * 2
+        readonly property real actualSpacing: ((icon.visible ? 1 : 0) * spacing) + ((arrow.visible ? 1 : 0) * spacing)
 
         LayoutMirroring.enabled: (Qt.application.layoutDirection == Qt.RightToLeft)
 
@@ -211,8 +215,7 @@ Item {
 
             anchors.verticalCenter: parent.verticalCenter
 
-            width: (parent.width - icon.width - arrow.width
-                - ((icon.visible ? 1 : 0) * parent.spacing) - ((arrow.visible ? 1 : 0) * parent.spacing))
+            width: parent.width - icon.width - arrow.width - parent.actualSpacing
 
             verticalAlignment: Text.AlignVCenter
 

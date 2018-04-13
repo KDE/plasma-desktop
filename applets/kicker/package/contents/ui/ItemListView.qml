@@ -27,7 +27,10 @@ import org.kde.kquickcontrolsaddons 2.0
 FocusScope {
     id: itemList
 
-    width: units.gridUnit * 14
+    property real minimumWidth: units.gridUnit * 14
+    property real maximumWidth: minimumWidth * 2
+
+    width: minimumWidth
     height: listView.contentHeight
 
     signal exited
@@ -144,7 +147,11 @@ FocusScope {
                 spacing: 0
                 keyNavigationWraps: (dialog != null)
 
-                delegate: ItemListDelegate {}
+                delegate: ItemListDelegate {
+                    onFullTextWidthChanged: {
+                        if (fullTextWidth > itemList.width) itemList.width = Math.min(fullTextWidth, itemList.maximumWidth);
+                    }
+                }
 
                 highlight: PlasmaComponents.Highlight {
                     visible: listView.currentItem && !listView.currentItem.isSeparator
