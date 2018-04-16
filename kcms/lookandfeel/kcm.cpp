@@ -83,6 +83,7 @@ KCMLookandFeel::KCMLookandFeel(QObject* parent, const QVariantList& args)
     m_model = new QStandardItemModel(this);
     QHash<int, QByteArray> roles = m_model->roleNames();
     roles[PluginNameRole] = "pluginName";
+    roles[DescriptionRole] = "description";
     roles[ScreenhotRole] = "screenshot";
     roles[FullScreenPreviewRole] = "fullScreenPreview";
     roles[HasSplashRole] = "hasSplash";
@@ -98,6 +99,7 @@ KCMLookandFeel::KCMLookandFeel(QObject* parent, const QVariantList& args)
     roles[HasWindowSwitcherRole] = "hasWindowSwitcher";
     roles[HasDesktopSwitcherRole] = "hasDesktopSwitcher";
     m_model->setItemRoleNames(roles);
+    loadModel();
 }
 
 KCMLookandFeel::~KCMLookandFeel()
@@ -109,7 +111,7 @@ void KCMLookandFeel::getNewStuff()
     if (!m_newStuffDialog) {
         m_newStuffDialog = new KNS3::DownloadDialog( QLatin1String("lookandfeel.knsrc") );
         m_newStuffDialog.data()->setWindowTitle(i18n("Download New Look And Feel Packages"));
-        connect(m_newStuffDialog.data(), &KNS3::DownloadDialog::accepted, this,  &KCMLookandFeel::load);
+        connect(m_newStuffDialog.data(), &KNS3::DownloadDialog::accepted, this,  &KCMLookandFeel::loadModel);
     }
     m_newStuffDialog.data()->show();
 }
@@ -181,21 +183,8 @@ QList<Plasma::Package> KCMLookandFeel::availablePackages(const QStringList &comp
     return packages;
 }
 
-void KCMLookandFeel::load()
+void KCMLookandFeel::loadModel()
 {
-    m_package = Plasma::PluginLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"));
-    KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral("kdeglobals")), "KDE");
-    const QString packageName = cg.readEntry("LookAndFeelPackage", QString());
-    if (!packageName.isEmpty()) {
-        m_package.setPath(packageName);
-    }
-
-    if (!m_package.metadata().isValid()) {
-        return;
-    }
-
-    setSelectedPlugin(m_package.metadata().pluginName());
-
     m_model->clear();
 
     const QList<Plasma::Package> pkgs = availablePackages({"defaults", "layouts"});
@@ -205,6 +194,7 @@ void KCMLookandFeel::load()
         }
         QStandardItem* row = new QStandardItem(pkg.metadata().name());
         row->setData(pkg.metadata().pluginName(), PluginNameRole);
+        row->setData(pkg.metadata().comment(), DescriptionRole);
         row->setData(pkg.filePath("preview"), ScreenhotRole);
         row->setData(pkg.filePath("fullscreenpreview"), FullScreenPreviewRole);
 
@@ -248,6 +238,24 @@ void KCMLookandFeel::load()
 
         m_model->appendRow(row);
     }
+    emit selectedPluginIndexChanged();
+}
+
+void KCMLookandFeel::load()
+{
+    m_package = Plasma::PluginLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"));
+    KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral("kdeglobals")), "KDE");
+    const QString packageName = cg.readEntry("LookAndFeelPackage", QString());
+    if (!packageName.isEmpty()) {
+        m_package.setPath(packageName);
+    }
+
+    if (!m_package.metadata().isValid()) {
+        return;
+    }
+
+    setSelectedPlugin(m_package.metadata().pluginName());
+
     setNeedsSave(false);
 }
 

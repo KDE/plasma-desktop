@@ -53,6 +53,7 @@ public:
         PluginNameRole = Qt::UserRole +1,
         ScreenhotRole,
         FullScreenPreviewRole,
+        DescriptionRole,
         HasSplashRole,
         HasLockScreenRole,
         HasRunCommandRole,
@@ -104,6 +105,8 @@ public:
     bool applyDesktopSwitcher() const;
     bool resetDefaultLayout() const;
     void setResetDefaultLayout(bool reset);
+
+    void loadModel();
 
     Q_INVOKABLE void getNewStuff();
 
