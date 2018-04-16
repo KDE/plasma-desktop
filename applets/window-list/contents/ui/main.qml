@@ -241,6 +241,8 @@ Item {
 
         iconSource: "window-pin"
 
+        visible: plasmoid.compactRepresentationItem && plasmoid.compactRepresentationItem.visible
+
         checkable: true
         onCheckedChanged: plasmoid.hideOnWindowDeactivate = !checked
 
