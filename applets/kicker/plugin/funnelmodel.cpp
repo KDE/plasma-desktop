@@ -61,24 +61,24 @@ void FunnelModel::setSourceModel(QAbstractItemModel *model)
     int oldCount = m_sourceModel->rowCount();
     int newCount = model->rowCount();
 
-    disconnectSignals();
-
-    m_sourceModel = model;
-
-    connectSignals();
+    auto setNewModel = [this, model]() {
+        disconnectSignals();
+        m_sourceModel = model;
+        connectSignals();
+    };
 
     if (newCount > oldCount) {
         beginInsertRows(QModelIndex(), oldCount, newCount - 1);
-
+        setNewModel();
         endInsertRows();
     } else if (newCount < oldCount) {
         if (newCount == 0) {
             beginResetModel();
-
+            setNewModel();
             endResetModel();
         } else {
             beginRemoveRows(QModelIndex(), newCount, oldCount - 1);
-
+            setNewModel();
             endRemoveRows();
         }
     }
