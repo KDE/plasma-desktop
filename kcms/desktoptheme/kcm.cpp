@@ -62,6 +62,7 @@ KCMDesktopTheme::KCMDesktopTheme(QObject *parent, const QVariantList &args)
     QHash<int, QByteArray> roles = m_model->roleNames();
     roles[PluginNameRole] = QByteArrayLiteral("pluginName");
     roles[ThemeNameRole] = QByteArrayLiteral("themeName");
+    roles[DescriptionRole] = QByteArrayLiteral("description");
     roles[IsLocalRole] = QByteArrayLiteral("isLocal");
     m_model->setItemRoleNames(roles);
 
@@ -121,17 +122,17 @@ void KCMDesktopTheme::installThemeFromFile(const QUrl &file)
                 if (exitCode == 0) {
                     qCDebug(KCM_DESKTOP_THEME) << "Theme installed successfully :)";
                     load();
-                    Q_EMIT showInfoMessage(i18n("Theme installed successfully."));
+                    Q_EMIT showSuccessMessage(i18n("Theme installed successfully."));
                 } else {
                     qCWarning(KCM_DESKTOP_THEME) << "Theme installation failed." << exitCode;
-                    Q_EMIT showInfoMessage(i18n("Theme installation failed."));
+                    Q_EMIT showErrorMessage(i18n("Theme installation failed."));
                 }
             });
 
     connect(myProcess, static_cast<void (QProcess::*)(QProcess::ProcessError)>(&QProcess::error),
             this, [this](QProcess::ProcessError e) {
                 qCWarning(KCM_DESKTOP_THEME) << "Theme installation failed: " << e;
-                Q_EMIT showInfoMessage(i18n("Theme installation failed."));
+                Q_EMIT showErrorMessage(i18n("Theme installation failed."));
             });
 
     myProcess->start(program, arguments);
@@ -219,6 +220,7 @@ void KCMDesktopTheme::load()
             item->setText(packageName);
             item->setData(packageName, PluginNameRole);
             item->setData(name, ThemeNameRole);
+            item->setData(df.readComment(), DescriptionRole);
             item->setData(isLocal, IsLocalRole);
             m_model->appendRow(item);
         }
@@ -277,7 +279,7 @@ void KCMDesktopTheme::removeThemes()
                         load();
                     } else {
                         qCWarning(KCM_DESKTOP_THEME) << "Theme removal failed." << exitCode;
-                        Q_EMIT showInfoMessage(i18n("Theme removal failed."));
+                        Q_EMIT showErrorMessage(i18n("Theme removal failed."));
                     }
                     process->deleteLater();
                 });
@@ -285,7 +287,7 @@ void KCMDesktopTheme::removeThemes()
         connect(process, static_cast<void (QProcess::*)(QProcess::ProcessError)>(&QProcess::error),
                 this, [this, process](QProcess::ProcessError e) {
                     qCWarning(KCM_DESKTOP_THEME) << "Theme removal failed: " << e;
-                    Q_EMIT showInfoMessage(i18n("Theme removal failed."));
+                    Q_EMIT showErrorMessage(i18n("Theme removal failed."));
                     process->deleteLater();
                 });
 

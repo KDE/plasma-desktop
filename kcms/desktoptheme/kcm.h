@@ -41,6 +41,7 @@ public:
     enum Roles {
         PluginNameRole = Qt::UserRole + 1,
         ThemeNameRole,
+        DescriptionRole,
         IsLocalRole
     };
     Q_ENUM(Roles)
@@ -66,7 +67,8 @@ public:
 
 Q_SIGNALS:
     void selectedPluginChanged(const QString &plugin);
-    void showInfoMessage(const QString &infoMessage);
+    void showSuccessMessage(const QString &message);
+    void showErrorMessage(const QString &message);
 
 public Q_SLOTS:
     void load() override;

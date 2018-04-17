@@ -1,6 +1,7 @@
 /*
    Copyright (c) 2014 Marco Martin <mart@kde.org>
    Copyright (c) 2016 David Rosca <nowrep@gmail.com>
+   Copyright (c) 2018 Kai Uwe Broulik <kde@privat.broulik.de>
 
    This library is free software; you can redistribute it and/or
    modify it under the terms of the GNU Library General Public
@@ -20,204 +21,101 @@
 import QtQuick 2.1
 import QtQuick.Layouts 1.1
 import QtQuick.Dialogs 1.0
-import QtQuick.Controls.Private 1.0
-import QtQuick.Controls 1.0 as QtControls
+import QtQuick.Controls 2.3 as QtControls
+import org.kde.kirigami 2.4 as Kirigami
+import org.kde.kcm 1.1 as KCM
 
-import org.kde.kcm 1.0
-import org.kde.kirigami 2.0 // for units
-import org.kde.plasma.components 2.0 as PlasmaComponents //the round toolbutton
+KCM.GridViewKCM {
+    KCM.ConfigModule.quickHelp: i18n("This module lets you configure the desktop theme.")
 
-Item {
-    implicitWidth: Units.gridUnit * 20
-    implicitHeight: Units.gridUnit * 20
+    view.model: kcm.desktopThemeModel
+    view.currentIndex: kcm.indexOf(kcm.selectedPlugin)
 
-    ConfigModule.quickHelp: i18n("This module lets you configure the desktop theme.")
-
-    SystemPalette {
-        id: syspal
+    view.remove: Transition {
+        ParallelAnimation {
+            NumberAnimation { property: "scale"; to: 0.5; duration: Kirigami.Units.longDuration }
+            NumberAnimation { property: "opacity"; to: 0.0; duration: Kirigami.Units.longDuration }
+        }
     }
 
-    ColumnLayout {
-        anchors.fill: parent
-        QtControls.ScrollView {
+    view.removeDisplaced: Transition {
+        SequentialAnimation {
+            // wait for the "remove" animation to finish
+            PauseAnimation { duration: Kirigami.Units.longDuration }
+            NumberAnimation { properties: "x,y"; duration: Kirigami.Units.longDuration }
+        }
+    }
+
+    view.delegate: KCM.GridDelegate {
+        id: delegate
+
+        text: model.themeName
+        toolTip: model.description || model.themeName
+
+        thumbnailAvailable: true
+        thumbnail: ThemePreview {
+            id: preview
+            anchors.fill: parent
+            themeName: model.pluginName
+        }
+
+        actions: [
+            Kirigami.Action {
+                iconName: "document-edit"
+                tooltip: i18n("Edit Theme")
+                visible: kcm.canEditThemes
+                onTriggered: kcm.editTheme(model.pluginName)
+            },
+            Kirigami.Action {
+                iconName: "edit-delete"
+                tooltip: i18n("Remove Theme")
+                enabled: model.isLocal
+                onTriggered: kcm.removeTheme(model.pluginName)
+            }
+        ]
+
+        onClicked: {
+            kcm.selectedPlugin = model.pluginName;
+            view.forceActiveFocus();
+        }
+    }
+
+    footer: ColumnLayout {
+        Kirigami.InlineMessage {
+            id: infoLabel
             Layout.fillWidth: true
-            Layout.fillHeight: true
-            verticalScrollBarPolicy: Qt.ScrollBarAlwaysOn
-            GridView {
-                id: grid
-                model: kcm.desktopThemeModel
-                cellWidth: Math.floor(grid.width / Math.max(Math.floor(grid.width / (Units.gridUnit * 12)), 3))
-                cellHeight: cellWidth / 1.6
 
-                onCountChanged: {
-                    grid.currentIndex = kcm.indexOf(kcm.selectedPlugin);
-                    grid.positionViewAtIndex(grid.currentIndex, GridView.Visible)
+            showCloseButton: true
+
+            Connections {
+                target: kcm
+                onShowSuccessMessage: {
+                    infoLabel.type = Kirigami.MessageType.Positive;
+                    infoLabel.text = message;
+                    infoLabel.visible = true;
                 }
-
-                delegate: Item {
-                    property bool isLocal : model.isLocal
-                    property string pluginName : model.pluginName
-                    width: grid.cellWidth
-                    height: grid.cellHeight
-                    Rectangle {
-                        anchors {
-                            fill: parent
-                            margins: Units.smallSpacing
-                        }
-                        Connections {
-                            target: kcm
-                            onSelectedPluginChanged: {
-                                if (kcm.selectedPlugin == model.pluginName) {
-                                    makeCurrentTimer.pendingIndex = index
-                                }
-                            }
-                        }
-                        Component.onCompleted: {
-                            if (kcm.selectedPlugin == model.pluginName) {
-                                makeCurrentTimer.pendingIndex = index
-                            }
-                        }
-
-                        MouseArea {
-                            anchors {
-                                fill: parent
-                                margins: Units.smallSpacing * 2
-                            }
-                            hoverEnabled: true
-                            onClicked: {
-                                grid.currentIndex = index
-                                kcm.selectedPlugin = model.pluginName
-                            }
-
-                            Timer {
-                                interval: 1000
-                                running: parent.containsMouse && !parent.pressedButtons
-                                onTriggered: {
-                                    Tooltip.showText(parent, Qt.point(parent.mouseX, parent.mouseY), model.themeName);
-                                }
-                            }
-
-                            ThemePreview {
-                                id: preview
-                                anchors {
-                                    top: parent.top
-                                    left: parent.left
-                                    right: parent.right
-                                    bottom: label.top
-                                }
-                                themeName: model.pluginName
-                            }
-
-                            PlasmaComponents.ToolButton {
-                                anchors {
-                                    bottom: preview.bottom
-                                    right: preview.right
-                                    margins: units.smallSpacing
-                                }
-                                iconSource: "document-edit"
-                                tooltip: i18n("Edit theme")
-                                flat: false
-                                onClicked: kcm.editTheme(model.pluginName)
-                                visible: kcm.canEditThemes
-                                opacity: parent.containsMouse ? 1 : 0
-                                Behavior on opacity {
-                                    PropertyAnimation {
-                                        duration: units.longDuration
-                                        easing.type: Easing.OutQuad
-                                    }
-                                }
-                            }
-
-                            QtControls.Label {
-                                id: label
-                                anchors {
-                                    bottom: parent.bottom
-                                    horizontalCenter: parent.horizontalCenter
-                                    leftMargin: Units.smallSpacing * 2
-                                    rightMargin: Units.smallSpacing * 2
-                                }
-                                height: paintedHeight
-                                width: parent.width
-                                color: "black"
-                                text: model.themeName
-                                elide: Text.ElideRight
-                                horizontalAlignment: Text.AlignHCenter
-                            }
-                        }
-
-                        Rectangle {
-                            opacity: grid.currentIndex == index ? 1.0 : 0
-                            anchors.fill: parent
-                            border.width: Units.smallSpacing * 2
-                            border.color: syspal.highlight
-                            color: "transparent"
-                            Behavior on opacity {
-                                PropertyAnimation {
-                                    duration: Units.longDuration
-                                    easing.type: Easing.OutQuad
-                                }
-                            }
-                        }
-                    }
-                }
-                Timer {
-                    id: makeCurrentTimer
-                    interval: 100
-                    repeat: false
-                    property int pendingIndex
-                    onPendingIndexChanged: makeCurrentTimer.restart()
-                    onTriggered: {
-                        grid.currentIndex = pendingIndex
-                    }
+                onShowErrorMessage: {
+                    infoLabel.type = Kirigami.MessageType.Error;
+                    infoLabel.text = message;
+                    infoLabel.visible = true;
                 }
             }
         }
+
         RowLayout {
-            QtControls.Button {
-                text: i18n("Get New Themes...")
-                iconName: "get-hot-new-stuff"
-                onClicked: kcm.getNewThemes()
-            }
+            Layout.alignment: Qt.AlignRight
 
             QtControls.Button {
                 text: i18n("Install from File...")
-                iconName: "document-import"
+                icon.name: "document-import"
                 onClicked: fileDialogLoader.active = true;
             }
 
             QtControls.Button {
-                text: i18n("Remove Theme")
-                iconName: "edit-delete"
-                enabled: grid.currentItem && grid.currentItem.isLocal
-                onClicked: {
-                    kcm.removeTheme(grid.currentItem.pluginName);
-                    kcm.selectedPlugin = grid.currentItem.pluginName
-                }
+                text: i18n("Get New Themes...")
+                icon.name: "get-hot-new-stuff"
+                onClicked: kcm.getNewThemes()
             }
-
-            Item {
-                Layout.fillWidth: true
-            }
-
-            QtControls.Label {
-                id: infoLabel
-            }
-        }
-    }
-
-    Connections {
-        target: kcm
-        onShowInfoMessage: {
-            infoLabel.text = infoMessage;
-            hideInfoMessageTimer.restart();
-        }
-    }
-
-    Timer {
-        id: hideInfoMessageTimer
-        interval: 20 * 1000
-        onTriggered: {
-            infoLabel.text = ""
         }
     }
 
