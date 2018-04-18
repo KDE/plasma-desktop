@@ -540,6 +540,10 @@ void AppsModel::refreshInternal()
             }
         }
 
+        if (m_sorted) {
+            sortEntries();
+        }
+
         m_changeTimer = new QTimer(this);
         m_changeTimer->setSingleShot(true);
         m_changeTimer->setInterval(100);
