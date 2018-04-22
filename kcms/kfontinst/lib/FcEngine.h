@@ -71,13 +71,14 @@ class Q_DECL_EXPORT CFcEngine
     static CFcEngine * instance();
 
     CFcEngine(bool init=true);
-    ~CFcEngine();
+    virtual ~CFcEngine();
 
     void                  readConfig(KConfig &cfg);
     void                  writeConfig(KConfig &cfg);
     static void           setDirty() { theirFcDirty=true; }
     QImage                drawPreview(const QString &name, quint32 style, int faceNo, const QColor &txt, const QColor &bgnd,
                                       int h);
+    QImage                draw(const QString &name, quint32 style, int faceNo, const QColor &txt, const QColor &bgnd, int fSize, const QString &text);
     QImage                draw(const QString &name, quint32 style, int faceNo, const QColor &txt, const QColor &bgnd,
                                int w, int h, bool thumb, const QList<TRange> &range=QList<TRange>(), QList<TChar> *chars=NULL);
     int                   getNumIndexes() { return itsIndexCount; } // Only valid after draw has been called!

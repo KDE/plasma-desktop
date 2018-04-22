@@ -389,7 +389,7 @@ bool CFcEngine::Xft::drawString(XftFont *xftFont, const QString &text, int x, in
     const FcChar16 *str=(FcChar16 *)(text.utf16());
 
     XftTextExtents16(QX11Info::display(), xftFont, str, text.length(), &extents);
-    if(y+extents.height<h)
+    if(y+extents.height<=h)
         XftDrawString16(itsDraw, &itsTxtColor, xftFont, x, y+extents.y, str, text.length());
     if(extents.height>0)
     {
@@ -752,6 +752,95 @@ QImage CFcEngine::drawPreview(const QString &name, quint32 style, int faceNo, co
                     }
                     closeFont(xftFont);
                 }
+            }
+        }
+    }
+
+    return img;
+}
+
+QImage CFcEngine::draw(const QString &name, quint32 style, int faceNo, const QColor &txt, const QColor &bgnd, int fSize, const QString &text_)
+{
+    QImage img;
+    QString text = text_;
+
+    if(!name.isEmpty() &&
+         ((name==itsName && style==itsStyle) ||
+          parse(name, style, faceNo)) )
+    {
+
+        getSizes();
+        
+        if(itsSizes.size())
+        {
+            if(!itsScalable) // Then need to get nearest size...
+            {
+                int bSize=0;
+
+                for(int s=0; s<itsSizes.size(); ++s)
+                    if (itsSizes[s]<=fSize || 0==bSize)
+                        bSize=itsSizes[s];
+                fSize=bSize;
+            }
+
+            int h = fSize;
+            int w = 0;
+            
+            XftFont *xftFont=getFont(fSize);
+
+            if(xftFont)
+            {
+                XGlyphInfo     extents;
+                const FcChar16 *str=(FcChar16 *)(text.utf16());
+
+                XftTextExtents16(QX11Info::display(), xftFont, str, text.length(),
+                                    &extents);
+
+                h = extents.height;
+                w = extents.width;
+        
+                bool needAlpha(bgnd.alpha()<255);
+                
+                if(xft()->init(needAlpha ? Qt::black : txt, needAlpha ? Qt::white : bgnd, w, h))
+                {
+                    bool rv=false;
+
+                    if(hasStr(xftFont, text) || hasStr(xftFont, text=text.toUpper()) ||
+                    hasStr(xftFont, text=text.toLower()))
+                    {
+                        XGlyphInfo     extents;
+                        const FcChar16 *str=(FcChar16 *)(text.utf16());
+
+                        XftTextExtents16(QX11Info::display(), xftFont, str, text.length(),
+                                        &extents);
+
+                        int   x=0,
+                              y=0;
+                              
+                        rv=xft()->drawString(xftFont, text, x, y, h);
+                    }
+                    else
+                    {
+                        int   x=0,
+                              y=0;
+                        QRect used;
+
+                        rv=xft()->drawAllGlyphs(xftFont, h, x, y, w, h, true, text.length(), &used);
+                    }
+
+                    if(rv)
+                    {
+                        img=xft()->toImage(w, h);
+                        if(!img.isNull())
+                        {
+                            img=img.copy(0, 0, w, h);
+
+                            if(needAlpha)
+                                setTransparentBackground(img, txt);
+                        }
+                    }
+                }
+                closeFont(xftFont);
             }
         }
     }

@@ -8,7 +8,9 @@ include_directories(${FREETYPE_INCLUDE_DIRS})
 
 ########### next target ###############
 
-set(kcm_fonts_PART_SRCS ../krdb/krdb.cpp fonts.cpp)
+include_directories(../kfontinst/lib)
+
+set(kcm_fonts_PART_SRCS ../krdb/krdb.cpp previewrenderengine.cpp previewimageprovider.cpp fonts.cpp ../kfontinst/lib/FcEngine.cpp)
 
 if(X11_FOUND)
     set(kcm_fonts_PART_SRCS ${kcm_fonts_PART_SRCS} ${libkxftconfig_SRCS})
@@ -19,8 +21,7 @@ qt5_add_dbus_interface(kcm_fonts_PART_SRCS ${klauncher_xml} klauncher_iface)
 
 add_library(kcm_fonts MODULE ${kcm_fonts_PART_SRCS})
 
-
-target_link_libraries(kcm_fonts Qt5::DBus Qt5::Xml KF5::KCMUtils KF5::I18n KF5::KDELibs4Support ${FREETYPE_LIBRARIES})
+target_link_libraries(kcm_fonts Qt5::DBus Qt5::Xml KF5::KCMUtils KF5::I18n KF5::KDELibs4Support ${FREETYPE_LIBRARIES} kfontinst)
 
 if(X11_FOUND)
     target_link_libraries(kcm_fonts
@@ -34,7 +35,7 @@ if(X11_FOUND)
         target_link_libraries(kcm_fonts ${FONTCONFIG_LIBRARIES})
     endif()
 
-    target_link_libraries(kcm_fonts ${X11_LIBRARIES})
+    target_link_libraries(kcm_fonts ${X11_LIBRARIES} ${X11_Xft_LIB})
 endif()
 
 kcoreaddons_desktop_to_json(kcm_fonts "kcm_fonts.desktop")

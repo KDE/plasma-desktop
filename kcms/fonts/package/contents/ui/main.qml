@@ -138,6 +138,32 @@ KCM.SimpleKCM {
             model: kcm.fontAASettings.subPixelOptionsModel
             textRole: "display"
             enabled: antiAliasingComboBox.currentIndex == 0
+            popup.height: popup.implicitHeight
+            delegate: QtControls.ItemDelegate {
+                id: subPixelDelegate
+                onWidthChanged: {
+                    subPixelCombo.popup.width = Math.max(subPixelCombo.popup.width, width)
+                }
+                contentItem: ColumnLayout {
+                    id: subPixelLayout
+                    Kirigami.Heading {
+                        id: subPixelComboText
+                        text: model.display
+                        level: 5
+                    }
+                    Image {
+                        id: subPixelComboImage
+                        source: "image://preview/" + model.index + "_" + kcm.fontAASettings.hintingCurrentIndex + ".png"
+                        // Setting sourceSize here is necessary as a workaround for QTBUG-38127
+                        //
+                        // With this bug, images requested from a QQuickImageProvider have an incorrect scale with devicePixelRatio != 1 when sourceSize is not set.
+                        //
+                        // TODO: Check if QTBUG-38127 is fixed and remove the next two lines.
+                        sourceSize.width: 1
+                        sourceSize.height: 1
+                    }
+                }
+            }
         }
 
         QtControls.ComboBox {
@@ -149,6 +175,32 @@ KCM.SimpleKCM {
             model: kcm.fontAASettings.hintingOptionsModel
             textRole: "display"
             enabled: antiAliasingComboBox.currentIndex == 0
+            popup.height: popup.implicitHeight
+            delegate: QtControls.ItemDelegate {
+                id: hintingDelegate
+                onWidthChanged: {
+                    hintingCombo.popup.width = Math.max(hintingCombo.popup.width, width)
+                }
+                contentItem: ColumnLayout {
+                    id: hintingLayout
+                    Kirigami.Heading {
+                        id: hintingComboText
+                        text: model.display
+                        level: 5
+                    }
+                    Image {
+                        id: hintingComboImage
+                        source: "image://preview/" + kcm.fontAASettings.subPixelCurrentIndex + "_" + model.index + ".png"
+                        // Setting sourceSize here is necessary as a workaround for QTBUG-38127
+                        //
+                        // With this bug, images requested from a QQuickImageProvider have an incorrect scale with devicePixelRatio != 1 when sourceSize is not set.
+                        //
+                        // TODO: Check if QTBUG-38127 is fixed and remove the next two lines.
+                        sourceSize.width: 1
+                        sourceSize.height: 1
+                    }
+                }
+            }
         }
 
         RowLayout {

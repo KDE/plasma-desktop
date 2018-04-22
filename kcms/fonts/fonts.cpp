@@ -47,6 +47,7 @@
 #include <KMessageBox>
 
 #include "../krdb/krdb.h"
+#include "previewimageprovider.h"
 
 /**** DLL Interface ****/
 K_PLUGIN_FACTORY_WITH_JSON(KFontsFactory, "kcm_fonts.json", registerPlugin<KFonts>();)
@@ -499,6 +500,8 @@ void KFonts::load()
     cg = KConfigGroup(config, "WM");
     m_windowTitleFont = m_windowTitleFontOriginal = nearestExistingFont(cg.readEntry("activeFont", m_defaultFont));
 
+    engine()->addImageProvider("preview", new PreviewImageProvider(generalFont()));
+    
     emit generalFontChanged();
     emit fixedWidthFontChanged();
     emit smallFontChanged();
