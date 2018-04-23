@@ -43,7 +43,7 @@ KCM.GridViewKCM {
             Kirigami.Action {
                 visible: model.fullScreenPreview != ""
                 iconName: "media-playback-start"
-                tooltip: i18n("Test Splashscreen")
+                tooltip: i18n("Preview Theme")
                 onTriggered: {
                     previewWindow.url = model.fullScreenPreview;
                     previewWindow.showFullScreen();
