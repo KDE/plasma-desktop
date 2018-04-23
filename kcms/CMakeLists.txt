@@ -48,6 +48,7 @@ add_subdirectory(translations)
 add_subdirectory(spellchecking)
 add_subdirectory(phonon)
 add_subdirectory(runners)
+add_subdirectory(qtquicksettings)
 
 add_subdirectory(workspaceoptions)
 if (KF5Baloo_FOUND)
