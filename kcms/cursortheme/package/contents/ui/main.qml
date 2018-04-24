@@ -115,7 +115,6 @@ KCM.GridViewKCM {
 
                         contentItem: RowLayout {
                             Kirigami.Icon {
-                                id: aiken
                                 source: model.decoration
                                 smooth: true
                                 width: sizeComboDelegate.size / Screen.devicePixelRatio
