@@ -112,18 +112,19 @@ Item {
 
         TapHandler {
             acceptedButtons: Qt.LeftButton
-            onTapped: if (appView) {
+            onTapped: {
+                if (appView) {
                     appViewScrollArea.state = "OutgoingLeft";
                 } else {
-//                     listItem.activate();
+                    listItem.activate();
                 }
-
-//             listItem.ListView.view.currentIndex = -1;
+                listItem.ListView.view.currentIndex = -1;
+            }
         }
 
         DragHandler {
             target: null
-            onActiveChanged: if (active) {
+            onGrabChanged: if (active) {
                 console.log("DRAG");
                 dragHelper.startDrag(root, model.url, model.decoration);
             }
