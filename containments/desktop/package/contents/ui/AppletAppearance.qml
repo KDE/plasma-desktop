@@ -74,14 +74,10 @@ Item {
     property alias margins: plasmoidBackground.margins
     property alias imagePath: plasmoidBackground.imagePath
 
+    property int lastX: 0
+    property int lastY: 0
+
     visible: false
-
-    QtObject {
-        id: d
-
-        property real lastX: 0
-        property real lastY: 0
-    }
 
     Timer {
         id: positionTimer
@@ -143,20 +139,20 @@ Item {
     onXChanged: {
         if (animationsEnabled) {
             animationsEnabled = false;
-            mouseListener.x += d.lastX - x;
+            mouseListener.x += lastX - x;
             animationsEnabled = true;
         }
         mouseListener.x = mouseListener.endX = (width - innerEndWidth)/2;
-        d.lastX = x;
+        lastX = x;
     }
     onYChanged: {
         if (animationsEnabled) {
             animationsEnabled = false;
-            mouseListener.y += d.lastY - y;
+            mouseListener.y += lastY - y;
             animationsEnabled = true;
         }
         mouseListener.y = mouseListener.endY = (height - innerEndHeight)/2;
-        d.lastY = y;
+        lastY = y;
     }
 
     // use this function to position appletItem instead of root.layoutManager.positionItem(appletItem)
