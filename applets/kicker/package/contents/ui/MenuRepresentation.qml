@@ -180,7 +180,7 @@ FocusScope {
 
             visible: (searchField.text == "")
 
-            iconsEnabled: false
+            iconsEnabled: plasmoid.configuration.showIconsRootLevel
 
             model: rootModel
 

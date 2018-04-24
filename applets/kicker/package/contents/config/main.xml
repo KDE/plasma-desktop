@@ -78,6 +78,10 @@
       <label>Whether to align search results to the bottom of the menu representation (e.g. panel popup) instead of the top.</label>
       <default>true</default>
     </entry>
+    <entry name="showIconsRootLevel" type="Bool">
+      <label>Whether to show icons on the root level of the menu.</label>
+      <default>false</default>
+    </entry>
 
   </group>
 </kcfg>
