@@ -194,6 +194,10 @@ function launcherWidth() {
         - (adjustMargin(baseWidth, taskFrame.margins.top) + adjustMargin(baseWidth, taskFrame.margins.bottom));
 }
 
+function maximumContextMenuTextWidth() {
+    return (theme.mSize(theme.defaultFont).width * 28);
+}
+
 function layout(container) {
     var item;
     var stripes = calculateStripes();

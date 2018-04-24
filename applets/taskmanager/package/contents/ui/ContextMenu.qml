@@ -27,6 +27,8 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 
 import org.kde.taskmanager 0.1 as TaskManager
 
+import "code/layout.js" as LayoutManager
+
 PlasmaComponents.ContextMenu {
     id: menu
 
@@ -99,10 +101,31 @@ PlasmaComponents.ContextMenu {
             backend.recentDocumentActions(launcherUrl, menu)
         ]
 
+        // QMenu does not limit its width automatically. Even if we set a maximumWidth
+        // it would just cut off text rather than eliding. So we do this manually.
+        var textMetrics = Qt.createQmlObject("import QtQuick 2.4; TextMetrics {}", menu);
+        var maximumWidth = LayoutManager.maximumContextMenuTextWidth();
+
         lists.forEach(function (list) {
             for (var i = 0; i < list.length; ++i) {
                 var item = newMenuItem(menu);
                 item.action = list[i];
+
+                // Crude way of manually eliding...
+                var elided = false;
+                textMetrics.text = Qt.binding(function() {
+                    return item.action.text;
+                });
+
+                while (textMetrics.width > maximumWidth) {
+                    item.action.text = item.action.text.slice(0, -1);
+                    elided = true;
+                }
+
+                if (elided) {
+                    item.action.text += "...";
+                }
+
                 menu.addMenuItem(item, virtualDesktopsMenuItem);
             }
 
