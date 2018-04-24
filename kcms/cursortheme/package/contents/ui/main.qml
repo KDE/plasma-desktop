@@ -17,6 +17,7 @@
 */
 
 import QtQuick 2.7
+import QtQuick.Window 2.2 // for Screen
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.2 as QtControls
 import QtQuick.Dialogs 1.1 as QtDialogs
@@ -101,6 +102,33 @@ KCM.GridViewKCM {
                     textRole: "display"
                     onCurrentTextChanged: {
                         kcm.preferredSize = isNaN(parseInt(sizeCombo.currentText)) ? 0 : parseInt(sizeCombo.currentText);
+                    }
+
+                    delegate: QtControls.ItemDelegate {
+                        id: sizeComboDelegate
+
+                        readonly property int size: parseInt(model.display)
+
+                        width: parent.width
+                        highlighted: ListView.isCurrentItem
+                        text: model.display
+
+                        contentItem: RowLayout {
+                            Kirigami.Icon {
+                                id: aiken
+                                source: model.decoration
+                                smooth: true
+                                width: sizeComboDelegate.size / Screen.devicePixelRatio
+                                height: sizeComboDelegate.size / Screen.devicePixelRatio
+                                visible: valid && sizeComboDelegate.size > 0
+                            }
+
+                            QtControls.Label {
+                                Layout.fillWidth: true
+                                color: sizeComboDelegate.highlighted ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
+                                text: model[sizeCombo.textRole]
+                            }
+                        }
                     }
                 }
             }
