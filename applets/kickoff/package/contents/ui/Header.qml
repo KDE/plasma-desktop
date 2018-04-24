@@ -22,6 +22,8 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kcoreaddons 1.0 as KCoreAddons
 import org.kde.kquickcontrolsaddons 2.0
+import Qt.labs.handlers 1.0
+
 
 Item {
     id: header
@@ -66,6 +68,13 @@ Item {
             topMargin: units.gridUnit
             leftMargin: units.gridUnit
         }
+        TapHandler {
+            acceptedButtons: Qt.LeftButton
+//             cursorShape: Qt.PointingHandCursor
+            onTapped: {
+                KCMShell.open("user_manager")
+            }
+        }
     }
 
     PlasmaCore.IconItem {
@@ -79,16 +88,6 @@ Item {
             rightMargin: -units.gridUnit/2
         }
         usesPlasmaTheme: false
-    }
-
-    MouseArea {
-        anchors.fill: faceIcon
-        acceptedButtons: Qt.LeftButton
-        cursorShape: Qt.PointingHandCursor
-        onClicked: {
-            KCMShell.open("user_manager")
-        }
-        visible: KCMShell.authorize("user_manager.desktop").length > 0
     }
 
     PlasmaExtras.Heading {
@@ -151,38 +150,35 @@ Item {
             Behavior on y { NumberAnimation { duration: searchWidget.animationDuration; easing.type: Easing.InOutQuad; } }
         }
 
-
-        MouseArea {
+        PlasmaComponents.TextField {
+            id: queryField
             anchors.fill: parent
-            cursorShape: header.state === "hint" ? Qt.PointingHandCursor : Qt.ArrowCursor
-            acceptedButtons: Qt.LeftButton
-            enabled: header.state === "hint"
-            onClicked: {
-                root.previousState = "Normal"
-                root.state = "Search"
-                header.state = "query"
-                queryField.forceActiveFocus()
+            clearButtonShown: true
+            visible: opacity > 0
+            placeholderText: i18nc("Type is a verb here, not a noun", "Type to search...")
+            Behavior on opacity { NumberAnimation { duration: searchWidget.animationDuration / 4 } }
+
+            TapHandler {
+                acceptedButtons: Qt.LeftButton
+                enabled: header.state === "hint"
+                onTapped: {
+                    root.previousState = "Normal"
+                    root.state = "Search"
+                    header.state = "query"
+                    queryField.forceActiveFocus()
+                }
             }
 
-            PlasmaComponents.TextField {
-                id: queryField
-                anchors.fill: parent
-                clearButtonShown: true
-                visible: opacity > 0
-                placeholderText: i18nc("Type is a verb here, not a noun", "Type to search...")
-                Behavior on opacity { NumberAnimation { duration: searchWidget.animationDuration / 4 } }
-
-                onTextChanged: {
-                    if (root.state != "Search") {
-                        root.previousState = root.state;
-                        root.state = "Search";
-                    }
-                    if (text == "") {
-                        root.state = root.previousState;
-                        header.state = "info";
-                    } else {
-                        header.state = "query";
-                    }
+            onTextChanged: {
+                if (root.state != "Search") {
+                    root.previousState = root.state;
+                    root.state = "Search";
+                }
+                if (text == "") {
+                    root.state = root.previousState;
+                    header.state = "info";
+                } else {
+                    header.state = "query";
                 }
             }
         }

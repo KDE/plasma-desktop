@@ -22,6 +22,7 @@ import QtQuick 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.draganddrop 2.0
+import Qt.labs.handlers 1.0
 
 import "code/tools.js" as Tools
 
@@ -94,7 +95,7 @@ Item {
         }
     }
 
-    MouseArea {
+    Item {
         id: mouseArea
         anchors {
             left: parent.left
@@ -103,66 +104,42 @@ Item {
             bottom: parent.bottom
         }
 
-        property bool pressed: false
-        property int pressX: -1
-        property int pressY: -1
-
-        hoverEnabled: true
-        acceptedButtons: Qt.LeftButton | Qt.RightButton
-
-        onEntered: {
-            listItem.ListView.view.currentIndex = index;
+        TapHandler {
+            acceptedButtons: Qt.RightButton
+            enabled: hasActionList
+            onTapped: openActionMenu(mouseArea, mouse.x, mouse.y)
         }
 
-        onExited: {
-            listItem.ListView.view.currentIndex = -1;
-        }
-
-        onPressed: {
-            if (mouse.buttons & Qt.RightButton) {
-                if (hasActionList) {
-                    openActionMenu(mouseArea, mouse.x, mouse.y);
-                }
-            } else {
-                pressed = true;
-                pressX = mouse.x;
-                pressY = mouse.y;
-            }
-        }
-
-        onReleased: {
-            if (pressed) {
-                if (appView) {
+        TapHandler {
+            acceptedButtons: Qt.LeftButton
+            onTapped: if (appView) {
                     appViewScrollArea.state = "OutgoingLeft";
                 } else {
-                    listItem.activate();
+//                     listItem.activate();
                 }
 
-                listItem.ListView.view.currentIndex = -1;
-            }
-
-            pressed = false;
-            pressX = -1;
-            pressY = -1;
+//             listItem.ListView.view.currentIndex = -1;
         }
 
-        onPositionChanged: {
-            if (pressX != -1 && model.url && dragHelper.isDrag(pressX, pressY, mouse.x, mouse.y)) {
-                kickoff.dragSource = listItem;
+        DragHandler {
+            target: null
+            onActiveChanged: if (active) {
+                console.log("DRAG");
                 dragHelper.startDrag(root, model.url, model.decoration);
-                pressed = false;
-                pressX = -1;
-                pressY = -1;
             }
+            xAxis.minimum: 10
+            yAxis.minimum: 10
         }
 
-        onContainsMouseChanged: {
-            if (!containsMouse) {
-                pressed = false;
-                pressX = -1;
-                pressY = -1;
-            }
-        }
+
+//         onPositionChanged: {
+//             if (pressX != -1 && model.url && dragHelper.isDrag(pressX, pressY, mouse.x, mouse.y)) {
+//                 kickoff.dragSource = listItem;
+//                 pressed = false;
+//                 pressX = -1;
+//                 pressY = -1;
+//             }
+//         }
 
         PlasmaCore.IconItem {
             id: elementIcon

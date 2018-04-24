@@ -22,6 +22,7 @@ import QtQuick 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.components 2.0 as PlasmaComponents
+import Qt.labs.handlers 1.0
 
 Item {
     id: appViewContainer
@@ -204,6 +205,12 @@ Item {
                 crumbModel.clear();
                 crumbModel.models = [];
             }
+            TapHandler {
+                acceptedButtons: Qt.BackButton
+                onTapped: {
+                    deactivateCurrentIndex()
+                }
+            }
         } // applicationsView
 
         states: [
@@ -247,13 +254,6 @@ Item {
         ]
     } // appViewScrollArea
 
-    MouseArea {
-        anchors.fill: appViewScrollArea
-        acceptedButtons: Qt.BackButton
-        onClicked: {
-            deactivateCurrentIndex()
-        }
-    }
 
     Timer {
         id: updatedLabelTimer
