@@ -135,10 +135,10 @@ KCM.GridViewKCM {
         id: fileDialogLoader
         active: false
         sourceComponent: QtDialogs.FileDialog {
-            visible: true
             title: i18n("Open Theme")
             folder: shortcuts.home
             nameFilters: [ i18n("Cursor Theme Files (*.tar.gz *.tar.bz2)") ]
+            Component.onCompleted: open()
             onAccepted: {
                 kcm.installThemeFromFile(fileUrls[0])
                 fileDialogLoader.active = false
