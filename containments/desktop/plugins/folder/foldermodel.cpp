@@ -1537,10 +1537,8 @@ void FolderModel::createActions()
     QAction *paste = KStandardAction::paste(this, &FolderModel::paste, this);
     QAction *pasteTo = KStandardAction::paste(this, &FolderModel::pasteTo, this);
 
-    QAction *reload = new QAction(i18n("&Reload"), this);
-    connect(reload, &QAction::triggered, this, &FolderModel::refresh);
-
     QAction *refresh = new QAction(QIcon::fromTheme(QStringLiteral("view-refresh")), i18n("&Refresh View"), this);
+    refresh->setShortcut(QKeySequence(QKeySequence::Refresh));
     connect(refresh, &QAction::triggered, this, &FolderModel::refresh);
 
     QAction *rename = KStandardAction::renameFile(this, &FolderModel::requestRename, this);
@@ -1563,7 +1561,6 @@ void FolderModel::createActions()
     m_actionCollection.addAction(QStringLiteral("copy"), copy);
     m_actionCollection.addAction(QStringLiteral("paste"), paste);
     m_actionCollection.addAction(QStringLiteral("pasteto"), pasteTo);
-    m_actionCollection.addAction(QStringLiteral("reload"), reload);
     m_actionCollection.addAction(QStringLiteral("refresh"), refresh);
     m_actionCollection.addAction(QStringLiteral("rename"), rename);
     m_actionCollection.addAction(QStringLiteral("trash"), trash);

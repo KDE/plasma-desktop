@@ -246,7 +246,6 @@ void FolderModelTest::tst_actionMenu()
                 QStringLiteral("copy"),
                 QStringLiteral("paste"),
                 QStringLiteral("pasteto"),
-                QStringLiteral("reload"),
                 QStringLiteral("refresh"),
                 QStringLiteral("rename"),
                 QStringLiteral("trash"),
