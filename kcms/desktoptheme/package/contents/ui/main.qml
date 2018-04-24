@@ -29,7 +29,17 @@ KCM.GridViewKCM {
     KCM.ConfigModule.quickHelp: i18n("This module lets you configure the desktop theme.")
 
     view.model: kcm.desktopThemeModel
-    view.currentIndex: kcm.indexOf(kcm.selectedPlugin)
+    view.currentIndex: kcm.selectedPluginIndex
+
+    DropArea {
+        anchors.fill: parent
+        onEntered: {
+            if (!drag.hasUrls) {
+                drag.accepted = false;
+            }
+        }
+        onDropped: kcm.installThemeFromFile(drop.urls[0])
+    }
 
     view.remove: Transition {
         ParallelAnimation {
@@ -52,6 +62,11 @@ KCM.GridViewKCM {
         text: model.themeName
         toolTip: model.description || model.themeName
 
+        opacity: model.pendingDeletion ? 0.3 : 1
+        Behavior on opacity {
+            NumberAnimation { duration: Kirigami.Units.longDuration }
+        }
+
         thumbnailAvailable: true
         thumbnail: ThemePreview {
             id: preview
@@ -63,6 +78,7 @@ KCM.GridViewKCM {
             Kirigami.Action {
                 iconName: "document-edit"
                 tooltip: i18n("Edit Theme")
+                enabled: !model.pendingDeletion
                 visible: kcm.canEditThemes
                 onTriggered: kcm.editTheme(model.pluginName)
             },
@@ -70,7 +86,14 @@ KCM.GridViewKCM {
                 iconName: "edit-delete"
                 tooltip: i18n("Remove Theme")
                 enabled: model.isLocal
-                onTriggered: kcm.removeTheme(model.pluginName)
+                visible: !model.pendingDeletion
+                onTriggered: kcm.setPendingDeletion(model.index, true);
+            },
+            Kirigami.Action {
+                iconName: "edit-undo"
+                tooltip: i18n("Restore Theme")
+                visible: model.pendingDeletion
+                onTriggered: kcm.setPendingDeletion(model.index, false);
             }
         ]
 
@@ -114,7 +137,7 @@ KCM.GridViewKCM {
             QtControls.Button {
                 text: i18n("Get New Themes...")
                 icon.name: "get-hot-new-stuff"
-                onClicked: kcm.getNewThemes()
+                onClicked: kcm.getNewStuff(this)
             }
         }
     }

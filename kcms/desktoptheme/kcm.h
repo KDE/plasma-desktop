@@ -2,6 +2,7 @@
    Copyright (c) 2014 Marco Martin <mart@kde.org>
    Copyright (c) 2014 Vishesh Handa <me@vhanda.in>
    Copyright (c) 2016 David Rosca <nowrep@gmail.com>
+   Copyright (c) 2018 Kai Uwe Broulik <kde@privat.broulik.de>
 
    This library is free software; you can redistribute it and/or
    modify it under the terms of the GNU Library General Public
@@ -23,11 +24,14 @@
 
 #include <KQuickAddons/ConfigModule>
 
+#include <KNewStuff3/KNS3/DownloadDialog>
+
 namespace Plasma {
     class Svg;
     class Theme;
 }
 
+class QQuickItem;
 class QStandardItemModel;
 
 class KCMDesktopTheme : public KQuickAddons::ConfigModule
@@ -35,6 +39,7 @@ class KCMDesktopTheme : public KQuickAddons::ConfigModule
     Q_OBJECT
     Q_PROPERTY(QStandardItemModel *desktopThemeModel READ desktopThemeModel CONSTANT)
     Q_PROPERTY(QString selectedPlugin READ selectedPlugin WRITE setSelectedPlugin NOTIFY selectedPluginChanged)
+    Q_PROPERTY(int selectedPluginIndex READ selectedPluginIndex NOTIFY selectedPluginIndexChanged)
     Q_PROPERTY(bool canEditThemes READ canEditThemes CONSTANT)
 
 public:
@@ -42,7 +47,8 @@ public:
         PluginNameRole = Qt::UserRole + 1,
         ThemeNameRole,
         DescriptionRole,
-        IsLocalRole
+        IsLocalRole,
+        PendingDeletionRole
     };
     Q_ENUM(Roles)
 
@@ -53,20 +59,22 @@ public:
 
     QString selectedPlugin() const;
     void setSelectedPlugin(const QString &plugin);
+    int selectedPluginIndex() const;
+
     bool canEditThemes() const;
 
-    Q_INVOKABLE void getNewThemes();
+    Q_INVOKABLE void getNewStuff(QQuickItem *ctx);
     Q_INVOKABLE void installThemeFromFile(const QUrl &file);
-    Q_INVOKABLE void removeTheme(const QString &name);
+
+    Q_INVOKABLE void setPendingDeletion(int index, bool pending);
 
     Q_INVOKABLE void applyPlasmaTheme(QQuickItem *item, const QString &themeName);
-
-    Q_INVOKABLE int indexOf(const QString &themeName) const;
 
     Q_INVOKABLE void editTheme(const QString &themeName);
 
 Q_SIGNALS:
     void selectedPluginChanged(const QString &plugin);
+    void selectedPluginIndexChanged();
     void showSuccessMessage(const QString &message);
     void showErrorMessage(const QString &message);
 
@@ -76,8 +84,9 @@ public Q_SLOTS:
     void defaults() override;
 
 private:
-    void removeThemes();
     void updateNeedsSave();
+
+    void processPendingDeletions();
 
     QStandardItemModel *m_model;
     QString m_selectedPlugin;
@@ -85,6 +94,8 @@ private:
     Plasma::Theme *m_defaultTheme;
     QHash<QString, Plasma::Theme*> m_themes;
     bool m_haveThemeExplorerInstalled;
+
+    QPointer<KNS3::DownloadDialog> m_newStuffDialog;
 };
 
 Q_DECLARE_LOGGING_CATEGORY(KCM_DESKTOP_THEME)

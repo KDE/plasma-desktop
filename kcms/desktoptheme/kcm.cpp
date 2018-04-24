@@ -2,6 +2,7 @@
    Copyright (c) 2014 Marco Martin <mart@kde.org>
    Copyright (c) 2014 Vishesh Handa <me@vhanda.in>
    Copyright (c) 2016 David Rosca <nowrep@gmail.com>
+   Copyright (c) 2018 Kai Uwe Broulik <kde@privat.broulik.de>
 
    This library is free software; you can redistribute it and/or
    modify it under the terms of the GNU Library General Public
@@ -32,6 +33,7 @@
 #include <QDebug>
 #include <QProcess>
 #include <QQuickItem>
+#include <QQuickWindow>
 #include <QStandardPaths>
 #include <QStandardItemModel>
 
@@ -64,6 +66,7 @@ KCMDesktopTheme::KCMDesktopTheme(QObject *parent, const QVariantList &args)
     roles[ThemeNameRole] = QByteArrayLiteral("themeName");
     roles[DescriptionRole] = QByteArrayLiteral("description");
     roles[IsLocalRole] = QByteArrayLiteral("isLocal");
+    roles[PendingDeletionRole] = QByteArrayLiteral("pendingDeletion");
     m_model->setItemRoleNames(roles);
 
     m_haveThemeExplorerInstalled = !QStandardPaths::findExecutable(QStringLiteral("plasmathemeexplorer")).isEmpty();
@@ -90,21 +93,51 @@ void KCMDesktopTheme::setSelectedPlugin(const QString &plugin)
         return;
     }
     m_selectedPlugin = plugin;
-    Q_EMIT selectedPluginChanged(m_selectedPlugin);
+    emit selectedPluginChanged(m_selectedPlugin);
+    emit selectedPluginIndexChanged();
     updateNeedsSave();
 }
 
-void KCMDesktopTheme::getNewThemes()
+int KCMDesktopTheme::selectedPluginIndex() const
 {
-    KNS3::DownloadDialog *dialog = new KNS3::DownloadDialog(QStringLiteral("plasma-themes.knsrc"));
-    dialog->open();
+    const auto results = m_model->match(m_model->index(0, 0), PluginNameRole, m_selectedPlugin);
+    if (results.count() == 1) {
+        return results.first().row();
+    }
 
-    connect(dialog, &QDialog::accepted, this, [this, dialog]() {
-        if (!dialog->changedEntries().isEmpty()) {
-            load();
-            delete dialog;
-        }
-    });
+    return -1;
+}
+
+void KCMDesktopTheme::setPendingDeletion(int index, bool pending)
+{
+    QModelIndex idx = m_model->index(index, 0);
+
+    m_model->setData(idx, pending, PendingDeletionRole);
+
+    if (pending && selectedPluginIndex() == index) {
+        // move to the next non-pending theme
+        const auto nonPending = m_model->match(idx, PendingDeletionRole, false);
+        setSelectedPlugin(nonPending.first().data(PluginNameRole).toString());
+    }
+
+    updateNeedsSave();
+}
+
+void KCMDesktopTheme::getNewStuff(QQuickItem *ctx)
+{
+    if (!m_newStuffDialog) {
+        m_newStuffDialog = new KNS3::DownloadDialog(QStringLiteral("plasma-themes.knsrc"));
+        m_newStuffDialog.data()->setWindowTitle(i18n("Download New Desktop Themes"));
+        m_newStuffDialog->setWindowModality(Qt::WindowModal);
+        m_newStuffDialog->winId(); // so it creates the windowHandle();
+        connect(m_newStuffDialog.data(), &KNS3::DownloadDialog::accepted, this, &KCMDesktopTheme::load);
+    }
+
+    if (ctx && ctx->window()) {
+        m_newStuffDialog->windowHandle()->setTransientParent(ctx->window());
+    }
+
+    m_newStuffDialog.data()->show();
 }
 
 void KCMDesktopTheme::installThemeFromFile(const QUrl &file)
@@ -117,15 +150,13 @@ void KCMDesktopTheme::installThemeFromFile(const QUrl &file)
     qCDebug(KCM_DESKTOP_THEME) << program << arguments.join(QStringLiteral(" "));
     QProcess *myProcess = new QProcess(this);
     connect(myProcess, static_cast<void (QProcess::*)(int, QProcess::ExitStatus)>(&QProcess::finished),
-            this, [this](int exitCode, QProcess::ExitStatus exitStatus) {
+            this, [this, myProcess](int exitCode, QProcess::ExitStatus exitStatus) {
                 Q_UNUSED(exitStatus);
                 if (exitCode == 0) {
-                    qCDebug(KCM_DESKTOP_THEME) << "Theme installed successfully :)";
                     load();
-                    Q_EMIT showSuccessMessage(i18n("Theme installed successfully."));
                 } else {
-                    qCWarning(KCM_DESKTOP_THEME) << "Theme installation failed." << exitCode;
                     Q_EMIT showErrorMessage(i18n("Theme installation failed."));
+
                 }
             });
 
@@ -136,17 +167,6 @@ void KCMDesktopTheme::installThemeFromFile(const QUrl &file)
             });
 
     myProcess->start(program, arguments);
-}
-
-void KCMDesktopTheme::removeTheme(const QString &name)
-{
-    Q_ASSERT(!m_pendingRemoval.contains(name));
-    Q_ASSERT(!m_model->findItems(name).isEmpty());
-
-    m_pendingRemoval.append(name);
-    m_model->removeRow(m_model->findItems(name).at(0)->row());
-
-    updateNeedsSave();
 }
 
 void KCMDesktopTheme::applyPlasmaTheme(QQuickItem *item, const QString &themeName)
@@ -165,16 +185,6 @@ void KCMDesktopTheme::applyPlasmaTheme(QQuickItem *item, const QString &themeNam
         svg->setTheme(theme);
         svg->setUsingRenderingCache(false);
     }
-}
-
-int KCMDesktopTheme::indexOf(const QString &themeName) const
-{
-    for (int i = 0; i < m_model->rowCount(); ++i) {
-        if (m_model->data(m_model->index(i, 0), PluginNameRole).toString() == themeName) {
-            return i;
-        }
-    }
-    return -1;
 }
 
 void KCMDesktopTheme::load()
@@ -222,6 +232,7 @@ void KCMDesktopTheme::load()
             item->setData(name, ThemeNameRole);
             item->setData(df.readComment(), DescriptionRole);
             item->setData(isLocal, IsLocalRole);
+            item->setData(false, PendingDeletionRole);
             m_model->appendRow(item);
         }
     }
@@ -234,18 +245,23 @@ void KCMDesktopTheme::load()
 
 void KCMDesktopTheme::save()
 {
-    if (m_defaultTheme->themeName() == m_selectedPlugin) {
-        return;
+    if (m_defaultTheme->themeName() != m_selectedPlugin) {
+        m_defaultTheme->setThemeName(m_selectedPlugin);
     }
 
-    m_defaultTheme->setThemeName(m_selectedPlugin);
-    removeThemes();
+    processPendingDeletions();
     updateNeedsSave();
 }
 
 void KCMDesktopTheme::defaults()
 {
     setSelectedPlugin(QStringLiteral("default"));
+
+    // can this be done more elegantly?
+    const auto pendingDeletions = m_model->match(m_model->index(0, 0), PendingDeletionRole, true);
+    for (const QModelIndex &idx : pendingDeletions) {
+        m_model->setData(idx, false, PendingDeletionRole);
+    }
 }
 
 bool KCMDesktopTheme::canEditThemes() const
@@ -260,38 +276,46 @@ void KCMDesktopTheme::editTheme(const QString &theme)
 
 void KCMDesktopTheme::updateNeedsSave()
 {
-    setNeedsSave(!m_pendingRemoval.isEmpty() || m_selectedPlugin != m_defaultTheme->themeName());
+    setNeedsSave(!m_model->match(m_model->index(0, 0), PendingDeletionRole, true).isEmpty()
+                    || m_selectedPlugin != m_defaultTheme->themeName());
 }
 
-void KCMDesktopTheme::removeThemes()
+void KCMDesktopTheme::processPendingDeletions()
 {
     const QString program = QStringLiteral("plasmapkg2");
 
-    Q_FOREACH (const QString &name, m_pendingRemoval) {
-        const QStringList arguments = {QStringLiteral("-t"), QStringLiteral("theme"), QStringLiteral("-r"), name};
-        qCDebug(KCM_DESKTOP_THEME) << program << arguments.join(QStringLiteral(" "));
-        QProcess *process = new QProcess(this);
-        connect(process, static_cast<void (QProcess::*)(int, QProcess::ExitStatus)>(&QProcess::finished),
-                this, [this, process](int exitCode, QProcess::ExitStatus exitStatus) {
-                    Q_UNUSED(exitStatus);
-                    if (exitCode == 0) {
-                        qCDebug(KCM_DESKTOP_THEME) << "Theme removed successfully :)";
-                        load();
-                    } else {
-                        qCWarning(KCM_DESKTOP_THEME) << "Theme removal failed." << exitCode;
-                        Q_EMIT showErrorMessage(i18n("Theme removal failed."));
-                    }
-                    process->deleteLater();
-                });
+    const auto pendingDeletions = m_model->match(m_model->index(0, 0), PendingDeletionRole, true, -1 /*all*/);
+    QVector<QPersistentModelIndex> persistentPendingDeletions;
+    // turn into persistent model index so we can delete as we go
+    std::transform(pendingDeletions.begin(), pendingDeletions.end(),
+                   std::back_inserter(persistentPendingDeletions), [](const QModelIndex &idx) {
+        return QPersistentModelIndex(idx);
+    });
 
-        connect(process, static_cast<void (QProcess::*)(QProcess::ProcessError)>(&QProcess::error),
-                this, [this, process](QProcess::ProcessError e) {
-                    qCWarning(KCM_DESKTOP_THEME) << "Theme removal failed: " << e;
-                    Q_EMIT showErrorMessage(i18n("Theme removal failed."));
-                    process->deleteLater();
-                });
+    for (const QPersistentModelIndex &idx : persistentPendingDeletions) {
+        const QString pluginName = idx.data(PluginNameRole).toString();
+        const QString displayName = idx.data(Qt::DisplayRole).toString();
+
+        Q_ASSERT(pluginName != m_selectedPlugin);
+
+        const QStringList arguments = {QStringLiteral("-t"), QStringLiteral("theme"), QStringLiteral("-r"), pluginName};
+
+        QProcess *process = new QProcess(this);
+        connect(process, static_cast<void (QProcess::*)(int, QProcess::ExitStatus)>(&QProcess::finished), this,
+            [this, process, idx, pluginName, displayName](int exitCode, QProcess::ExitStatus exitStatus) {
+                Q_UNUSED(exitStatus);
+                if (exitCode == 0) {
+                    m_model->removeRow(idx.row());
+                } else {
+                    emit showErrorMessage(i18n("Removing theme failed: %1",
+                                               QString::fromLocal8Bit(process->readAllStandardOutput().trimmed())));
+                    m_model->setData(idx, false, PendingDeletionRole);
+                }
+                process->deleteLater();
+            });
 
         process->start(program, arguments);
+        process->waitForFinished(); // needed so it deletes fine when "OK" is clicked and the dialog destroyed
     }
 }
 
