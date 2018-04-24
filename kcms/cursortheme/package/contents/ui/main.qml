@@ -89,6 +89,7 @@ KCM.GridViewKCM {
 
             RowLayout {
                 id: comboLayout
+                enabled: kcm.canResize
                 QtControls.Label {
                     text: i18n("Size:")
                 }
