@@ -33,8 +33,10 @@
 #include <KConfigGroup>
 #include <KMessageBox>
 #include <KUrlRequesterDialog>
-#include <KIO/Job>
+#include <KIO/CopyJob>
 #include <KIO/DeleteJob>
+#include <KIO/Job>
+#include <KIO/JobUiDelegate>
 #include <kio/netaccess.h>
 #include <KTar>
 #include <KGlobalSettings>
@@ -359,9 +361,7 @@ void CursorThemeConfig::save()
     c.sync();
 
     if (!applyTheme(theme, m_preferredSize)) {
-        KMessageBox::information(0,
-                                 i18n("You have to restart the Plasma session for these changes to take effect."),
-                                 i18n("Cursor Settings Changed"), "CursorSettingsChanged");
+        emit showInfoMessage(i18n("You have to restart the Plasma session for these changes to take effect."));
     }
 
     m_appliedIndex = selectedIndex();
@@ -454,39 +454,105 @@ void CursorThemeConfig::getNewClicked()
     }
 }
 
-void CursorThemeConfig::installClicked()
+void CursorThemeConfig::installThemeFromFile(const QUrl &url)
 {
-    // Get the URL for the theme we're going to install
-    QUrl url = KUrlRequesterDialog::getUrl(QUrl(), 0, i18n("Drag or Type Theme URL"));
-
-    if (url.isEmpty())
+    if (url.isLocalFile()) {
+        installThemeFile(url.toLocalFile());
         return;
+    }
 
-    QString tempFile;
-    if (!KIO::NetAccess::download(url, tempFile, 0)) {
-        QString text;
+    m_tempInstallFile.reset(new QTemporaryFile());
+    if (!m_tempInstallFile->open()) {
+        emit showErrorMessage(i18n("Unable to create a temporary file."));
+        m_tempInstallFile.reset();
+        return;
+    }
 
-        if (url.isLocalFile()) {
-            text = i18n("Unable to find the cursor theme archive %1.",
-                        url.toDisplayString());
-        } else {
-            text = i18n("Unable to download the cursor theme archive; "
-                        "please check that the address %1 is correct.",
-                        url.toDisplayString());
+    KIO::FileCopyJob *job = KIO::file_copy(url,QUrl::fromLocalFile(m_tempInstallFile->fileName()),
+                                           -1, KIO::Overwrite);
+    job->uiDelegate()->setAutoErrorHandlingEnabled(true);
+
+    connect(job, &KIO::FileCopyJob::result, this, [this, url](KJob *job) {
+        if (job->error() != KJob::NoError) {
+            emit showErrorMessage(i18n("Unable to download the icon theme archive: %1", job->errorText()));
+            return;
         }
 
-        KMessageBox::sorry(0, text);
+        installThemeFile(m_tempInstallFile->fileName());
+        m_tempInstallFile.reset();
+    });
+}
+
+void CursorThemeConfig::installThemeFile(const QString &path)
+{
+    KTar archive(path);
+    archive.open(QIODevice::ReadOnly);
+
+    const KArchiveDirectory *archiveDir = archive.directory();
+    QStringList themeDirs;
+
+    // Extract the dir names of the cursor themes in the archive, and
+    // append them to themeDirs
+    foreach(const QString &name, archiveDir->entries()) {
+        const KArchiveEntry *entry = archiveDir->entry(name);
+        if (entry->isDirectory() && entry->name().toLower() != "default") {
+            const KArchiveDirectory *dir = static_cast<const KArchiveDirectory *>(entry);
+            if (dir->entry("index.theme") && dir->entry("cursors")) {
+                themeDirs << dir->name();
+            }
+        }
+    }
+
+    if (themeDirs.isEmpty()) {
+        emit showErrorMessage(i18n("The file is not a valid icon theme archive."));
         return;
     }
 
-    if (!installThemes(tempFile)) {
-        KMessageBox::error(0, i18n("The file %1 does not appear to be a valid "
-                                      "cursor theme archive.", url.fileName()));
+    // The directory we'll install the themes to
+    QString destDir = QDir::homePath() + "/.icons/";
+    if (!QDir().mkpath(destDir)) {
+        emit showErrorMessage(i18n("Failed to create 'icons' folder."));
+        return;
+    };
+
+    // Process each cursor theme in the archive
+    foreach (const QString &dirName, themeDirs) {
+        QDir dest(destDir + dirName);
+        if (dest.exists()) {
+            QString question = i18n("A theme named %1 already exists in your icon "
+                    "theme folder. Do you want replace it with this one?", dirName);
+
+            int answer = KMessageBox::warningContinueCancel(0, question,
+                                i18n("Overwrite Theme?"),
+                                KStandardGuiItem::overwrite());
+
+            if (answer != KMessageBox::Continue) {
+                continue;
+            }
+
+            // ### If the theme that's being replaced is the current theme, it
+            //     will cause cursor inconsistencies in newly started apps.
+        }
+
+        // ### Should we check if a theme with the same name exists in a global theme dir?
+        //     If that's the case it will effectively replace it, even though the global theme
+        //     won't be deleted. Checking for this situation is easy, since the global theme
+        //     will be in the listview. Maybe this should never be allowed since it might
+        //     result in strange side effects (from the average users point of view). OTOH
+        //     a user might want to do this 'upgrade' a global theme.
+
+        const KArchiveDirectory *dir = static_cast<const KArchiveDirectory*>
+                        (archiveDir->entry(dirName));
+        dir->copyTo(dest.path());
+        m_model->addTheme(dest);
     }
 
-    KIO::NetAccess::removeTempFile(tempFile);
-}
+    archive.close();
 
+    emit showSuccessMessage(i18n("Theme installed successfully."));
+
+    m_model->refreshList();
+}
 
 void CursorThemeConfig::removeTheme(int row)
 {
@@ -530,74 +596,6 @@ void CursorThemeConfig::removeTheme(int row)
     //  bool CursorThemeModel::tryAddTheme(const QString &name), and call that, but
     //  since KIO::del() is an asynchronos operation, the theme we're deleting will be
     //  readded to the list again before KIO has removed it.
-}
-
-
-bool CursorThemeConfig::installThemes(const QString &file)
-{
-    KTar archive(file);
-
-    if (!archive.open(QIODevice::ReadOnly)) {
-        return false;
-    }
-
-    const KArchiveDirectory *archiveDir = archive.directory();
-    QStringList themeDirs;
-
-    // Extract the dir names of the cursor themes in the archive, and
-    // append them to themeDirs
-    foreach(const QString &name, archiveDir->entries()) {
-        const KArchiveEntry *entry = archiveDir->entry(name);
-        if (entry->isDirectory() && entry->name().toLower() != "default") {
-            const KArchiveDirectory *dir = static_cast<const KArchiveDirectory *>(entry);
-            if (dir->entry("index.theme") && dir->entry("cursors")) {
-                themeDirs << dir->name();
-            }
-        }
-    }
-
-    if (themeDirs.isEmpty()) {
-        return false;
-    }
-
-    // The directory we'll install the themes to
-    QString destDir = QDir::homePath() + "/.icons/";
-    QDir().mkpath(destDir); // Make sure the directory exists
-
-    // Process each cursor theme in the archive
-    foreach (const QString &dirName, themeDirs) {
-        QDir dest(destDir + dirName);
-        if (dest.exists()) {
-            QString question = i18n("A theme named %1 already exists in your icon "
-                    "theme folder. Do you want replace it with this one?", dirName);
-
-            int answer = KMessageBox::warningContinueCancel(0, question,
-                                i18n("Overwrite Theme?"),
-                                KStandardGuiItem::overwrite());
-
-            if (answer != KMessageBox::Continue) {
-                continue;
-            }
-
-            // ### If the theme that's being replaced is the current theme, it
-            //     will cause cursor inconsistencies in newly started apps.
-        }
-
-        // ### Should we check if a theme with the same name exists in a global theme dir?
-        //     If that's the case it will effectively replace it, even though the global theme
-        //     won't be deleted. Checking for this situation is easy, since the global theme
-        //     will be in the listview. Maybe this should never be allowed since it might
-        //     result in strange side effects (from the average users point of view). OTOH
-        //     a user might want to do this 'upgrade' a global theme.
-
-        const KArchiveDirectory *dir = static_cast<const KArchiveDirectory*>
-                        (archiveDir->entry(dirName));
-        dir->copyTo(dest.path());
-        m_model->addTheme(dest);
-    }
-
-    archive.close();
-    return true;
 }
 
 #include "kcmcursortheme.moc"

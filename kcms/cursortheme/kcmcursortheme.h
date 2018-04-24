@@ -20,8 +20,10 @@
 #define KCMCURSORTHEME_H
 
 #include <KQuickAddons/ConfigModule>
+#include <QScopedPointer>
 
 class QStandardItemModel;
+class QTemporaryFile;
 
 class CursorThemeModel;
 class SortProxyModel;
@@ -75,9 +77,13 @@ Q_SIGNALS:
     void selectedThemeRowChanged();
     void preferredSizeChanged();
 
+    void showSuccessMessage(const QString &message);
+    void showInfoMessage(const QString &message);
+    void showErrorMessage(const QString &message);
+
 public Q_SLOTS:
     void getNewClicked();
-    void installClicked();
+    void installThemeFromFile(const QUrl &url);
     void removeTheme(int row);
 
 private Q_SLOTS:
@@ -92,7 +98,7 @@ private Q_SLOTS:
 
 private:
     QModelIndex selectedIndex() const;
-    bool installThemes(const QString &file);
+    void installThemeFile(const QString &path);
     /** Applies a given theme, using XFixes, XCursor and KGlobalSettings.
         @param theme The cursor theme to be applied. It is save to pass 0 here
             (will result in \e false as return value).
@@ -127,6 +133,8 @@ private:
     bool m_canInstall;
     bool m_canResize;
     bool m_canConfigure;
+
+    QScopedPointer<QTemporaryFile> m_tempInstallFile;
 };
 
 #endif

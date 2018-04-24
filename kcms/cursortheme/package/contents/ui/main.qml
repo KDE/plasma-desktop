@@ -18,16 +18,14 @@
 
 import QtQuick 2.7
 import QtQuick.Layouts 1.1
-import QtQuick.Controls 1.2 as QQC1
 import QtQuick.Controls 2.2 as QtControls
-import org.kde.kirigami 2.2 as Kirigami
+import QtQuick.Dialogs 1.1 as QtDialogs
+import org.kde.kirigami 2.4 as Kirigami
 import org.kde.kcm 1.1 as KCM
 
 import org.kde.private.kcm_cursortheme 1.0
 
 KCM.GridViewKCM {
-
-    
     KCM.ConfigModule.quickHelp: i18n("This module lets you configure the mouse cursor theme used.")
 
     view.model: kcm.cursorsModel
@@ -37,6 +35,16 @@ KCM.GridViewKCM {
         view.positionViewAtIndex(view.currentIndex, view.GridView.Beginning);
     }
 
+    DropArea {
+        anchors.fill: parent
+        onEntered: {
+            if (!drag.hasUrls) {
+                drag.accepted = false;
+            }
+        }
+        onDropped: kcm.installThemeFromFile(drop.urls[0])
+    }
+
     Connections {
         target: kcm
         onSelectedThemeRowChanged: view.currentIndex = kcm.selectedThemeRow;
@@ -44,6 +52,33 @@ KCM.GridViewKCM {
 
     footer: ColumnLayout {
         id: footerLayout
+
+        Kirigami.InlineMessage {
+            id: infoLabel
+            Layout.fillWidth: true
+
+            showCloseButton: true
+
+            Connections {
+                target: kcm
+                onShowSuccessMessage: {
+                    infoLabel.type = Kirigami.MessageType.Positive;
+                    infoLabel.text = message;
+                    infoLabel.visible = true;
+                }
+                onShowInfoMessage: {
+                    infoLabel.type = Kirigami.MessageType.Information;
+                    infoLabel.text = message;
+                    infoLabel.visible = true;
+                }
+                onShowErrorMessage: {
+                    infoLabel.type = Kirigami.MessageType.Error;
+                    infoLabel.text = message;
+                    infoLabel.visible = true;
+                }
+            }
+        }
+
         RowLayout {
             id: row1
                 //spacer
@@ -70,15 +105,14 @@ KCM.GridViewKCM {
             }
             RowLayout {
                 parent: footerLayout.x + footerLayout.width - comboLayout.width > width ? row1 : row2
-                //TODO: port to QQC2 buttons as soon they have icons
-                QQC1.Button {
-                    iconName: "document-import"
+                QtControls.Button {
+                    icon.name: "document-import"
                     text: i18n("&Install From File...")
-                    onClicked: kcm.installClicked();
+                    onClicked: fileDialogLoader.active = true;
                     enabled: kcm.canInstall
                 }
-                QQC1.Button {
-                    iconName: "get-hot-new-stuff"
+                QtControls.Button {
+                    icon.name: "get-hot-new-stuff"
                     text: i18n("&Get New Theme...")
                     onClicked: kcm.getNewClicked();
                     enabled: kcm.canInstall
@@ -92,6 +126,24 @@ KCM.GridViewKCM {
             Item {
                 Layout.fillWidth: true
                 Layout.fillHeight: true
+            }
+        }
+    }
+
+    Loader {
+        id: fileDialogLoader
+        active: false
+        sourceComponent: QtDialogs.FileDialog {
+            visible: true
+            title: i18n("Open Theme")
+            folder: shortcuts.home
+            nameFilters: [ i18n("Cursor Theme Files (*.tar.gz *.tar.bz2)") ]
+            onAccepted: {
+                kcm.installThemeFromFile(fileUrls[0])
+                fileDialogLoader.active = false
+            }
+            onRejected: {
+                fileDialogLoader.active = false
             }
         }
     }
