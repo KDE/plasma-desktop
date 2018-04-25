@@ -5,7 +5,7 @@ project(plasma-desktop)
 set(PROJECT_VERSION "5.12.80")
 set(PROJECT_VERSION_MAJOR 5)
 
-set(QT_MIN_VERSION "5.9.0")
+set(QT_MIN_VERSION "5.10.0")
 set(KF5_MIN_VERSION "5.45.0")
 
 find_package(ECM ${KF5_MIN_VERSION} REQUIRED NO_MODULE)
