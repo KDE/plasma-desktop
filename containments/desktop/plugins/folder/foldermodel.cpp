@@ -665,9 +665,8 @@ void FolderModel::cd(int row)
             if (file.hasLinkType()) {
                 setUrl(file.readUrl());
             }
-        }
-        else {
-            setUrl(item.url().toString());
+        } else {
+            setUrl(item.targetUrl().toString());
         }
     }
 }
@@ -1294,7 +1293,7 @@ QVariant FolderModel::data(const QModelIndex& index, int role) const
             }
         }
 
-        return item.url();
+        return item.targetUrl();
     } else if (role == SizeRole) {
         bool isDir = data(index, IsDirRole).toBool();
 
