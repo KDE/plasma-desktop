@@ -153,6 +153,7 @@ void KCMDesktopTheme::installThemeFromFile(const QUrl &file)
             this, [this, myProcess](int exitCode, QProcess::ExitStatus exitStatus) {
                 Q_UNUSED(exitStatus);
                 if (exitCode == 0) {
+                    emit showSuccessMessage(i18n("Theme installed successfully."));
                     load();
                 } else {
                     Q_EMIT showErrorMessage(i18n("Theme installation failed."));
