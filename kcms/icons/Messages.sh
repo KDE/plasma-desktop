@@ -1,2 +1,2 @@
 #! /usr/bin/env bash
-$XGETTEXT *.cpp -o $podir/kcm5_icons.pot
+$XGETTEXT `find . -name "*.cpp" -o -name "*.qml"` -o $podir/kcm_icons.pot

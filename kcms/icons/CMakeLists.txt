@@ -1,11 +1,8 @@
-# KI18N Translation Domain for this library
-add_definitions(-DTRANSLATION_DOMAIN=\"kcm5_icons\")
-
-add_subdirectory(tests)
+add_definitions(-DTRANSLATION_DOMAIN=\"kcm_icons\")
 
 ########### next target ###############
 
-set(kcm_icons_PART_SRCS iconthemes.cpp icons.cpp main.cpp )
+set(kcm_icons_PART_SRCS main.cpp iconsmodel.cpp)
 
 add_library(kcm_icons MODULE ${kcm_icons_PART_SRCS})
 
@@ -18,24 +15,21 @@ target_link_libraries(kcm_icons
     KF5::Archive
     KF5::NewStuff
     KF5::KIOWidgets
-    KF5::KDELibs4Support
-    ${X11_LIBRARIES}
+    KF5::QuickAddons
 )
-
-if(X11_FOUND)
-    target_link_libraries(kcm_icons Qt5::X11Extras)
-endif()
 
 file(GENERATE OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/config.h CONTENT "#define CMAKE_INSTALL_FULL_LIBEXECDIR \"${CMAKE_INSTALL_FULL_LIBEXECDIR}\"")
 
 add_executable(plasma-changeicons changeicons.cpp)
 target_link_libraries(plasma-changeicons PRIVATE Qt5::Core KF5::KIOWidgets KF5::IconThemes)
 
-install(TARGETS kcm_icons  DESTINATION ${KDE_INSTALL_PLUGINDIR} )
-
-install( FILES icons.desktop  DESTINATION  ${KDE_INSTALL_KSERVICES5DIR} )
+kcoreaddons_desktop_to_json(kcm_icons "kcm_icons.desktop")
+install(FILES kcm_icons.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
+install(TARGETS kcm_icons DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms)
 
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/icons.knsrc ${CMAKE_BINARY_DIR}/icons.knsrc)
 install( FILES ${CMAKE_BINARY_DIR}/icons.knsrc  DESTINATION  ${KDE_INSTALL_CONFDIR} )
 
 install(TARGETS plasma-changeicons DESTINATION ${KDE_INSTALL_LIBEXECDIR} )
+
+kpackage_install_package(package kcm_icons kcms)
