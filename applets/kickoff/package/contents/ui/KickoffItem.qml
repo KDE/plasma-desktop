@@ -126,21 +126,12 @@ Item {
             target: null
             onGrabChanged: if (active) {
                 console.log("DRAG");
+                kickoff.dragSource = listItem
                 dragHelper.startDrag(root, model.url, model.decoration);
             }
             xAxis.minimum: 10
             yAxis.minimum: 10
         }
-
-
-//         onPositionChanged: {
-//             if (pressX != -1 && model.url && dragHelper.isDrag(pressX, pressY, mouse.x, mouse.y)) {
-//                 kickoff.dragSource = listItem;
-//                 pressed = false;
-//                 pressX = -1;
-//                 pressY = -1;
-//             }
-//         }
 
         PlasmaCore.IconItem {
             id: elementIcon

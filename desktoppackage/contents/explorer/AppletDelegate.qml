@@ -24,7 +24,9 @@ import QtQuick.Layouts 1.1
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.draganddrop 2.0
+// import org.kde.draganddrop 2.0
+
+import Qt.labs.handlers 1.0
 
 Item {
     id: delegate
@@ -35,37 +37,48 @@ Item {
     width: list.cellWidth
     height: list.cellHeight
 
-    DragArea {
+    Item {
         anchors.fill: parent
-        supportedActions: Qt.MoveAction | Qt.LinkAction
+//         supportedActions: Qt.MoveAction | Qt.LinkAction
         //onDragStarted: tooltipDialog.visible = false
-        delegateImage: decoration
-        enabled: !delegate.pendingUninstall
-        mimeData {
-            source: parent
-        }
-        Component.onCompleted: mimeData.setData("text/x-plasmoidservicename", pluginName)
+//         delegateImage: decoration
+//         enabled: !delegate.pendingUninstall
+//         mimeData {
+//             source: parent
+//         }
+//         Component.onCompleted: mimeData.setData("text/x-plasmoidservicename", pluginName)
+//
+//         onDragStarted: {
+//             kwindowsystem.showingDesktop = true;
+//             main.draggingWidget = true;
+//         }
+//         onDrop: {
+//             main.draggingWidget = false;
+//         }
 
-        onDragStarted: {
-            kwindowsystem.showingDesktop = true;
-            main.draggingWidget = true;
-        }
-        onDrop: {
-            main.draggingWidget = false;
-        }
 
-        MouseArea {
-            id: mouseArea
-            anchors.fill: parent
-            hoverEnabled: true
-            onDoubleClicked: {
-                if (!delegate.pendingUninstall) {
-                    widgetExplorer.addApplet(pluginName)
-                }
+        DragHandler {
+            longPressThreshold: 3000
+            onActiveChanged: {
+                console.log("DAVE DAVE DAVE DAVE", active);
             }
-            onEntered: list.currentIndex = index
-            onExited: list.currentIndex = -1
+//             acceptedDevices: PointerDevice.Mouse | PointerDevice.Stylus
+//             acceptedDevices: PointerDevice.TouchScreen
         }
+
+        TapHandler {
+            onDoubleTapped: if (!delegate.pendingUninstall) {
+                widgetExplorer.addApplet(pluginName)
+            }
+        }
+
+//         MouseArea {
+//             id: mouseArea
+//             anchors.fill: parent
+//             hoverEnabled: true
+//             onEntered: list.currentIndex = index
+//             onExited: list.currentIndex = -1
+//         }
 
         ColumnLayout {
             id: mainLayout
@@ -83,7 +96,6 @@ Item {
                 id: iconContainer
                 width: units.iconSizes.enormous
                 height: width
-                anchors.horizontalCenter: parent.horizontalCenter
                 opacity: delegate.pendingUninstall ? 0.6 : 1
                 Behavior on opacity {
                     OpacityAnimator {
