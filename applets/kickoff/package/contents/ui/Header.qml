@@ -60,6 +60,11 @@ Item {
         width: units.gridUnit * 3
         height: width
 
+        sourceSize.width: width
+        sourceSize.height: height
+
+        fillMode: Image.PreserveAspectFit
+
         anchors {
             top: parent.top
             left: parent.left
