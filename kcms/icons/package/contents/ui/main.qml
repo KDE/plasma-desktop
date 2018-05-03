@@ -125,6 +125,7 @@ KCM.GridViewKCM {
                         height: thumbFlow.iconHeight
                         // load on demand and avoid leaking a tiny corner of the icon
                         source: thumbFlow.y < 0 || index < (thumbFlow.columns * thumbFlow.rows) ? modelData : ""
+                        smooth: true
                     }
                 }
 
