@@ -525,7 +525,7 @@ QVariantList IconModule::previewIcons(const QString &themeName, int size, qreal 
         return QPixmap();
     };
 
-    const QVariantList pixmaps{
+    QVariantList pixmaps{
         getBestIcon({QStringLiteral("system-run"), QStringLiteral("exec")}),
         getBestIcon({QStringLiteral("folder")}),
         getBestIcon({QStringLiteral("document"), QStringLiteral("text-x-generic")}),
@@ -547,6 +547,11 @@ QVariantList IconModule::previewIcons(const QString &themeName, int size, qreal 
         getBestIcon({QStringLiteral("folder-download"), QStringLiteral("folder-downloads")}),
         getBestIcon({QStringLiteral("folder-video"), QStringLiteral("folder-videos")})
     };
+
+    // remove missing icons
+    pixmaps.erase(std::remove_if(pixmaps.begin(), pixmaps.end(), [](const QVariant &pixmapVariant) {
+        return pixmapVariant.value<QPixmap>().isNull();
+    }), pixmaps.end());
 
     return pixmaps;
 }

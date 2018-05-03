@@ -65,7 +65,7 @@ KCM.GridViewKCM {
         text: model.display
         toolTip: model.description
 
-        thumbnailAvailable: true
+        thumbnailAvailable: typeof thumbFlow.previews === "undefined" || thumbFlow.previews.length > 0
         thumbnail: MouseArea {
             id: thumbArea
 
@@ -98,7 +98,9 @@ KCM.GridViewKCM {
             Flow {
                 id: thumbFlow
 
-                property var previews: []
+                // undefined is "didn't load preview yet"
+                // empty array is "no preview available"
+                property var previews
 
                 property int currentPage
                 readonly property int pageCount: Math.ceil(thumbRepeater.count / (thumbFlow.columns * thumbFlow.rows))
