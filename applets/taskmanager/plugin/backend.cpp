@@ -311,13 +311,6 @@ QVariantList Backend::recentDocumentActions(const QUrl &launcherUrl, QObject *pa
         | Activity::current()
         | Url::file();
 
-    // Due to KRecentDocument::add() bug, application name "<app>" could
-    // be stored instead of its desktop entry name "org.kde.<app>". Let's
-    // check for both in order to get all results for the application.
-    if (storageId.startsWith(QLatin1String("org.kde."))) {
-        query = query | Agent(storageId.mid(8));
-    }
-
     ResultSet results(query);
 
     ResultSet::const_iterator resultIt = results.begin();
@@ -407,13 +400,6 @@ void Backend::handleRecentDocumentAction() const
             | Type::any()
             | Activity::current()
             | Url::file();
-
-        // Due to KRecentDocument::add() bug, application name "<app>" could
-        // be stored instead of its desktop entry name "org.kde.<app>". Let's
-        // check for both in order to get all results for the application.
-        if (agent.startsWith(QLatin1String("org.kde."))) {
-            query = query | Agent(agent.mid(8));
-        }
 
         KAStats::forgetResources(query);
 
