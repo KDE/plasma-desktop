@@ -1,4 +1,4 @@
-add_definitions(-DTRANSLATION_DOMAIN=\"kcm_icons\")
+add_definitions(-DTRANSLATION_DOMAIN=\"kcm5_icons\")
 
 ########### next target ###############
 
