@@ -24,6 +24,7 @@ import QtQuick.Window 2.2
 import QtQuick.Dialogs 1.0 as QtDialogs
 import QtQuick.Controls 2.3 as QtControls
 import org.kde.kirigami 2.4 as Kirigami
+import org.kde.kquickcontrolsaddons 2.0 as KQCAddons
 import org.kde.kcm 1.1 as KCM
 
 import org.kde.private.kcms.icons 1.0 as Private
@@ -122,21 +123,26 @@ KCM.GridViewKCM {
                     id: thumbRepeater
                     model: thumbFlow.previews
 
-                    Kirigami.Icon {
+                    Item {
                         width: thumbFlow.iconWidth
                         height: thumbFlow.iconHeight
-                        // load on demand and avoid leaking a tiny corner of the icon
-                        source: thumbFlow.y < 0 || index < (thumbFlow.columns * thumbFlow.rows) ? modelData : ""
-                        smooth: true
+
+                        KQCAddons.QPixmapItem {
+                            anchors.centerIn: parent
+                            width: Math.min(parent.width, nativeWidth)
+                            height: Math.min(parent.height, nativeHeight)
+                            // load on demand and avoid leaking a tiny corner of the icon
+                            pixmap: thumbFlow.y < 0 || index < (thumbFlow.columns * thumbFlow.rows) ? modelData : undefined
+                            smooth: true
+                            fillMode: KQCAddons.QPixmapItem.PreserveAspectFit
+                        }
                     }
                 }
 
                 Component.onCompleted: {
                     // avoid reloading it when icon sizes or dpr changes on startup
                     Qt.callLater(function() {
-                        previews = kcm.previewIcons(model.themeName,
-                                                    Math.min(thumbArea.width / columns, thumbArea.height / rows),
-                                                    Screen.devicePixelRatio)
+                        previews = kcm.previewIcons(model.themeName, Math.min(thumbFlow.iconWidth, thumbFlow.iconHeight), Screen.devicePixelRatio)
                     });
                 }
             }
