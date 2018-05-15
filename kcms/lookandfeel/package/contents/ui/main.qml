@@ -57,20 +57,31 @@ KCM.GridViewKCM {
         }
     }
 
-    footer: RowLayout {
-        QtControls.CheckBox {
-            id: resetCheckbox
-            checked: kcm.resetDefaultLayout
-            text: i18n("Use Desktop Layout from theme")
-            onCheckedChanged: kcm.resetDefaultLayout = checked;
-        }
-        Item {
+    footer: ColumnLayout {
+        Kirigami.InlineMessage {
             Layout.fillWidth: true
+            type: Kirigami.MessageType.Warning
+            text: i18n("Your desktop layout will be lost and reset to the default layout provided by the selected theme.")
+            visible: resetCheckbox.checked
         }
-        QtControls.Button {
-            text: i18n("Get New Looks...")
-            icon.name: "get-hot-new-stuff"
-            onClicked: kcm.getNewStuff();
+
+        RowLayout {
+            Layout.fillWidth: true
+
+            QtControls.CheckBox {
+                id: resetCheckbox
+                checked: kcm.resetDefaultLayout
+                text: i18n("Use Desktop Layout from theme")
+                onCheckedChanged: kcm.resetDefaultLayout = checked;
+            }
+            Item {
+                Layout.fillWidth: true
+            }
+            QtControls.Button {
+                text: i18n("Get New Looks...")
+                icon.name: "get-hot-new-stuff"
+                onClicked: kcm.getNewStuff();
+            }
         }
     }
     Window {
