@@ -10,6 +10,10 @@ set_package_properties(Freetype PROPERTIES DESCRIPTION "A font rendering engine"
 
 set(libkxftconfig_SRCS ${CMAKE_CURRENT_SOURCE_DIR}/fonts/kxftconfig.cpp )
 
+if(X11_Xkb_FOUND AND XCB_XKB_FOUND)
+    add_subdirectory( keyboard )
+endif()
+
 if (EVDEV_FOUND AND XORGLIBINPUT_FOUND AND X11_Xinput_FOUND)
     add_subdirectory( input )
 endif()
