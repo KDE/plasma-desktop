@@ -39,7 +39,6 @@ Item {
                 leftPadding: units.smallSpacing
 
                 Controls.Label {
-                    id: generalSettings
                     text: i18n("General Settings")
                 }
 
@@ -61,6 +60,39 @@ Item {
                     target: kcm
                     onToolTipChanged: showToolTips.checked = kcm.toolTip
                     onVisualFeedbackChanged: showVisualFeedback.checked = kcm.visualFeedback
+                }
+            }
+
+            // ClickBehaviour Settings
+            Column {
+                spacing: units.smallSpacing
+                leftPadding: units.smallSpacing
+                Controls.ExclusiveGroup { id: clickBehaviourGroup }
+
+                Controls.Label {
+                    text: i18n("Click Behaviour")
+                }
+
+                Controls.RadioButton {
+                    id: singleClick
+                    text: i18n("Single-click to open files and folders")
+                    checked: kcm.singleClick
+                    exclusiveGroup: clickBehaviourGroup
+                    onCheckedChanged: kcm.singleClick = checked
+                }
+
+                Controls.RadioButton {
+                    id: doubleClick
+                    text: i18n("Double-click to open files and folders (select icons on first click)")
+                    exclusiveGroup: clickBehaviourGroup
+                }
+
+                Connections {
+                    target: kcm
+                    onSingleClickChanged: {
+                        singleClick.checked = kcm.singleClick
+                        doubleClick.checked = !singleClick.checked
+                    }
                 }
             }
         } // END Layouts.ColumnLayout

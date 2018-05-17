@@ -21,15 +21,20 @@
 #include <KAboutData>
 #include <KLocalizedString>
 #include <KConfigGroup>
-
 #include <ksharedconfig.h>
+#include <KDELibs4Support/KDE/KGlobalSettings>
+#include <../migrationlib/kdelibs4config.h>
+
+#include <QtDBus/QDBusMessage>
+#include <QtDBus/QDBusConnection>
 
 K_PLUGIN_FACTORY_WITH_JSON(KCMWorkspaceOptionsFactory, "kcm_workspace.json", registerPlugin<KCMWorkspaceOptions>();)
 
 KCMWorkspaceOptions::KCMWorkspaceOptions(QObject *parent, const QVariantList& args)
     : KQuickAddons::ConfigModule(parent, args),
       m_stateToolTip(true),
-      m_stateVisualFeedback(true)
+      m_stateVisualFeedback(true),
+      m_stateSingleClick(true)
 {
     KAboutData* about = new KAboutData(QStringLiteral("kcm_workspace"),
                     i18n("Plasma Workspace global options"),
@@ -65,6 +70,15 @@ void KCMWorkspaceOptions::load()
         m_ostateVisualFeedback = getVisualFeedback();
     }
 
+    // Load singleClick
+    {
+        KSharedConfig::Ptr configKdeGlobals = KSharedConfig::openConfig(QStringLiteral("kdeglobals"));
+        const KConfigGroup cg(configKdeGlobals, QStringLiteral("KDE"));
+        state = cg.readEntry(QStringLiteral("SingleClick"), true);
+        setSingleClick(state);
+        m_ostateSingleClick = getSingleClick();
+    }
+
     setNeedsSave(false);
 }
 
@@ -86,7 +100,23 @@ void KCMWorkspaceOptions::save()
         m_ostateVisualFeedback = getVisualFeedback();
     }
 
+    // Save singleClick
+    KSharedConfig::Ptr configKdeGlobals = KSharedConfig::openConfig(QStringLiteral("kdeglobals"));
+    KConfigGroup cg(configKdeGlobals, QStringLiteral("KDE"));
+    cg.writeEntry("SingleClick", getSingleClick());
+    m_ostateSingleClick = getSingleClick();
     config->sync();
+    configKdeGlobals->sync();
+
+    Kdelibs4SharedConfig::syncConfigGroup(QLatin1String("KDE"), "kdeglobals");
+
+    QDBusMessage message = QDBusMessage::createSignal("/KGlobalSettings", "org.kde.KGlobalSettings", "notifyChange");
+    QList<QVariant> args;
+    args.append(KGlobalSettings::SettingsChanged);
+    args.append(KGlobalSettings::SETTINGS_MOUSE);
+    message.setArguments(args);
+    QDBusConnection::sessionBus().send(message);
+
     setNeedsSave(false);
 }
 
@@ -94,6 +124,7 @@ void KCMWorkspaceOptions::defaults()
 {
     setToolTip(true);
     setVisualFeedback(true);
+    setSingleClick(true);
 
     handleNeedsSave();
 }
@@ -136,13 +167,33 @@ void KCMWorkspaceOptions::setVisualFeedback(bool state)
     handleNeedsSave();
 }
 
+/*SingleClick functions*/
+bool KCMWorkspaceOptions::getSingleClick() const
+{
+    return m_stateSingleClick;
+}
+
+void KCMWorkspaceOptions::setSingleClick(bool state)
+{
+    // Prevent from binding loop
+    if( m_stateSingleClick == state ) {
+        return;
+    }
+
+    m_stateSingleClick = state;
+
+    emit singleClickChanged();
+    handleNeedsSave();
+}
+
 /*Other functions*/
 // Checks if the current states are different than the first states.
 // If yes, setNeedsSave(true).
 void KCMWorkspaceOptions::handleNeedsSave()
 {
     setNeedsSave(m_ostateToolTip != getToolTip() ||
-            m_ostateVisualFeedback != getVisualFeedback());
+            m_ostateVisualFeedback != getVisualFeedback() ||
+            m_ostateSingleClick != getSingleClick());
 }
 
 #include "workspaceoptions.moc"

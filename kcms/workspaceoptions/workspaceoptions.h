@@ -25,6 +25,7 @@ class KCMWorkspaceOptions : public KQuickAddons::ConfigModule
     Q_OBJECT
     Q_PROPERTY(bool toolTip READ getToolTip WRITE setToolTip NOTIFY toolTipChanged)
     Q_PROPERTY(bool visualFeedback READ getVisualFeedback WRITE setVisualFeedback NOTIFY visualFeedbackChanged)
+    Q_PROPERTY(bool singleClick READ getSingleClick WRITE setSingleClick NOTIFY singleClickChanged)
 
 public:
     KCMWorkspaceOptions(QObject* parent, const QVariantList& args);
@@ -37,6 +38,9 @@ public:
     bool getVisualFeedback() const;
     void setVisualFeedback(bool state);
 
+    bool getSingleClick() const;
+    void setSingleClick(bool state);
+
 public Q_SLOTS:
     void load();
     void save();
@@ -45,6 +49,7 @@ public Q_SLOTS:
 Q_SIGNALS:
     void toolTipChanged();
     void visualFeedbackChanged();
+    void singleClickChanged();
 
 private:
     void handleNeedsSave();
@@ -55,6 +60,9 @@ private:
 
     bool m_ostateVisualFeedback;
     bool m_stateVisualFeedback;
+
+    bool m_ostateSingleClick;
+    bool m_stateSingleClick;
 };
 
 #endif  // _KCM_WORKSPACEOPTIONS_H
