@@ -2,9 +2,7 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"kcmkclock\")
 ########### next target ###############
 
-set(kcm_clock_PART_SRCS dtime.cpp main.cpp )
-
-ki18n_wrap_ui(kcm_clock_PART_SRCS dateandtime.ui)
+set(kcm_clock_PART_SRCS main.cpp backend.cpp )
 
 qt5_add_dbus_interface(kcm_clock_PART_SRCS ${CMAKE_CURRENT_SOURCE_DIR}/timedated1.xml timedated_interface)
 
@@ -20,9 +18,15 @@ target_link_libraries(kcm_clock
     KF5::KIOWidgets
     KF5::Plasma
     KF5::KDELibs4Support
+    KF5::KCMUtils
+    KF5::QuickAddons
 )
 
-install(TARGETS kcm_clock  DESTINATION ${KDE_INSTALL_PLUGINDIR} )
+kcoreaddons_desktop_to_json(kcm_clock "clock.desktop")
+install(TARGETS kcm_clock  DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms)
+install(FILES clock.desktop  DESTINATION  ${KDE_INSTALL_KSERVICES5DIR})
+
+kpackage_install_package(package kcm_clock kcms)
 
 ########### next target ###############
 #This is only needed when not using timedated and can be removed in future
@@ -35,6 +39,3 @@ kauth_install_helper_files(kcmdatetimehelper org.kde.kcontrol.kcmclock root)
 
 kauth_install_actions(org.kde.kcontrol.kcmclock kcmclock_actions.actions)
 
-########### install files ###############
-
-install( FILES clock.desktop  DESTINATION  ${KDE_INSTALL_KSERVICES5DIR} )

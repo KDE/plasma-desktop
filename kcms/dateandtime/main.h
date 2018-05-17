@@ -2,6 +2,7 @@
  *  main.h
  *
  *  Copyright (C) 1998 Luca Montecchiani <m.luca@usa.net>
+ *  Copyright (C) 2018 David Edmundson <davidedmundson@kde.org>
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -18,35 +19,40 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  *
  */
-#ifndef main_included
-#define main_included
+#pragma once
 
-#include <kcmodule.h>
+#include <KQuickAddons/ConfigModule>
 
-class Dtime;
-class QTabWidget;
-class KProcess;
+class Backend;
+class QTimer;
 
-class OrgFreedesktopTimedate1Interface;
-
-class KclockModule : public KCModule
+class KclockModule : public KQuickAddons::ConfigModule
 {
   Q_OBJECT
 
+  Q_PROPERTY(QDateTime dateTime READ dateTime WRITE setDateTime NOTIFY timeChanged)
+  Q_PROPERTY(bool canNtp READ canNtp CONSTANT);
+  Q_PROPERTY(bool ntpEnabled MEMBER ntpEnabled NOTIFY ntpEnabledChanged)
+  Q_PROPERTY(QString timeZone MEMBER m_timezone NOTIFY timezoneChanged)
+
 public:
-  KclockModule(QWidget *parent, const QVariantList &);
+    explicit KclockModule(QObject *parent, const QVariantList &);
+    void	save() override;
+    void	load() override;
 
-  void	save() override;
-  void	load() override;
+    bool    canNtp() const;
+    QDateTime dateTime() const;
+    void setDate(const QDate &date) const;
+    void setTime(const QTimer &time) const;
 
+signals:
+    void timeChanged();
+    void ntpEnabledChanged();
+    void timezoneChanged();
 private:
-  bool kauthSave();
-  bool timedatedSave();
-
-  QTabWidget   *tab;
-  Dtime	*dtime;
-
-  bool m_haveTimedated = false;
+    QScopedPointer<Backend> m_backend;
+    QTimer *m_clockTimer;
+    bool m_ntpEnabled;
+    QString m_timeZone;
+    QDateTime m_dateTime;
 };
-
-#endif // main_included
