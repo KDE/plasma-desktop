@@ -81,8 +81,6 @@ void EvdevSettings::load(X11EvdevBackend *backend)
     dragStartTime = group.readEntry("StartDragTime", 500);
     dragStartDist = group.readEntry("StartDragDist", 4);
     wheelScrollLines = group.readEntry("WheelScrollLines", 3);
-
-    singleClick = group.readEntry("SingleClick", true);
 }
 
 // see KGlobalSettings::emitChange
@@ -127,7 +125,6 @@ void EvdevSettings::save()
     group.writeEntry("StartDragTime", dragStartTime, KConfig::Persistent);
     group.writeEntry("StartDragDist", dragStartDist, KConfig::Persistent);
     group.writeEntry("WheelScrollLines", wheelScrollLines, KConfig::Persistent);
-    group.writeEntry("SingleClick", singleClick, KConfig::Persistent);
 
     group.sync();
     kcminputProfile->sync();

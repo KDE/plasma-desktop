@@ -63,9 +63,7 @@ XlibConfig::XlibConfig(ConfigContainer *parent, InputBackend *backend)
 
     connect(handedGroup, SIGNAL(buttonClicked(int)), m_parent, SLOT(changed()));
     connect(handedGroup, SIGNAL(buttonClicked(int)), this, SLOT(slotHandedChanged(int)));
-    connect(doubleClick, SIGNAL(clicked()), m_parent, SLOT(changed()));
 
-    connect(singleClick, SIGNAL(clicked()), m_parent, SLOT(changed()));
     connect(cbScrollPolarity, SIGNAL(clicked()), m_parent, SLOT(changed()));
     connect(cbScrollPolarity, SIGNAL(clicked()), this, SLOT(slotScrollPolarityChanged()));
 
@@ -200,9 +198,6 @@ void XlibConfig::load()
     dragStartDist->setValue(settings->dragStartDist);
     wheelScrollLines->setValue(settings->wheelScrollLines);
 
-    singleClick->setChecked(settings->singleClick);
-    doubleClick->setChecked(!settings->singleClick);
-
     KConfig ac("kaccessrc");
 
     KConfigGroup group = ac.group("Mouse");
@@ -245,7 +240,6 @@ void XlibConfig::save()
     settings->dragStartTime = dragStartTime->value();
     settings->dragStartDist = dragStartDist->value();
     settings->wheelScrollLines = wheelScrollLines->value();
-    settings->singleClick = !doubleClick->isChecked();
     settings->reverseScrollPolarity = cbScrollPolarity->isChecked();
 
     m_backend->apply();
@@ -282,8 +276,6 @@ void XlibConfig::defaults()
     dragStartTime->setValue(500);
     dragStartDist->setValue(4);
     wheelScrollLines->setValue(3);
-    doubleClick->setChecked(!KDE_DEFAULT_SINGLECLICK);
-    singleClick->setChecked(KDE_DEFAULT_SINGLECLICK);
 
     mouseKeys->setChecked(false);
     mk_delay->setValue(160);
