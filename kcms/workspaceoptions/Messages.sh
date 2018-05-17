@@ -1,3 +1,2 @@
 #! /usr/bin/env bash
-$EXTRACTRC *.ui >> rc.cpp
-$XGETTEXT *.cpp -o $podir/kcmworkspaceoptions.pot
+$XGETTEXT `find . -name "*.cpp" -o -name "*.qml"` -o $podir/kcm_workspaceoptions.pot

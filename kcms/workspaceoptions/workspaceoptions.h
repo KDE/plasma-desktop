@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2009 Marco Martin <notmart@gmail.com>
+ *  Copyright (C) 2018 <furkantokac34@gmail.com>
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -14,39 +14,47 @@
  *  You should have received a copy of the GNU General Public License
  *  along with this program; if not, write to the Free Software
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
- *
  */
-#ifndef WORKSPACEOPTIONS_H
-#define WORKSPACEOPTIONS_H
+#ifndef _KCM_WORKSPACEOPTIONS_H
+#define _KCM_WORKSPACEOPTIONS_H
 
-#include <kcmodule.h>
-#include <ksharedconfig.h>
-#include <kautostart.h>
+#include <KQuickAddons/ConfigModule>
 
-namespace Ui {
-  class MainPage;
-}
-
-class WorkspaceOptionsModule : public KCModule
+class KCMWorkspaceOptions : public KQuickAddons::ConfigModule
 {
     Q_OBJECT
+    Q_PROPERTY(bool toolTip READ getToolTip WRITE setToolTip NOTIFY toolTipChanged)
+    Q_PROPERTY(bool visualFeedback READ getVisualFeedback WRITE setVisualFeedback NOTIFY visualFeedbackChanged)
 
 public:
-    WorkspaceOptionsModule(QWidget *parent, const QVariantList &);
-    ~WorkspaceOptionsModule();
-    void save() override;
-    void load() override;
-    void defaults() override;
+    KCMWorkspaceOptions(QObject* parent, const QVariantList& args);
+    ~KCMWorkspaceOptions() {}
+
+    // QML Properties
+    bool getToolTip() const;
+    void setToolTip(bool state);
+
+    bool getVisualFeedback() const;
+    void setVisualFeedback(bool state);
+
+public Q_SLOTS:
+    void load();
+    void save();
+    void defaults();
+
+Q_SIGNALS:
+    void toolTipChanged();
+    void visualFeedbackChanged();
 
 private:
-    KSharedConfigPtr m_kwinConfig;
-    KSharedConfigPtr m_ownConfig;
-    KAutostart m_plasmaShellAutostart;
-    KAutostart m_krunnerAutostart;
-    bool m_currentlyIsDesktop;
-    bool m_currentlyFixedDashboard;
+    void handleNeedsSave();
 
-    Ui::MainPage *m_ui;
+    // QML variables
+    bool m_ostateToolTip;   // Original state
+    bool m_stateToolTip;    // Current state
+
+    bool m_ostateVisualFeedback;
+    bool m_stateVisualFeedback;
 };
 
-#endif // WORKSPACEOPTIONS_H
+#endif  // _KCM_WORKSPACEOPTIONS_H

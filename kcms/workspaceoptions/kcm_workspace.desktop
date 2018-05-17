@@ -1,0 +1,13 @@
+[Desktop Entry]
+Icon=plasma
+Exec=kcmshell5 kcm_workspace
+Type=Service
+X-KDE-ServiceTypes=KCModule
+X-KDE-Library=kcm_workspace
+X-KDE-ParentApp=kcontrol
+X-KDE-System-Settings-Parent-Category=desktopbehavior
+X-KDE-Weight=40
+Name=Workspace
+Comment=Workspace Behavior
+X-KDE-Keywords=plasma,workspace,shell,formfactor,dashboard,tooltips,informational tips,tooltips
+Categories=Qt;KDE;X-KDE-settings-system; 

@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2009 Marco Martin <notmart@gmail.com>
+ *  Copyright (C) 2018 <furkantokac34@gmail.com>
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -14,90 +14,135 @@
  *  You should have received a copy of the GNU General Public License
  *  along with this program; if not, write to the Free Software
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
- *
  */
 #include "workspaceoptions.h"
 
-#include "ui_mainpage.h"
-
-#include <KAboutData>
 #include <KPluginFactory>
+#include <KAboutData>
+#include <KLocalizedString>
 #include <KConfigGroup>
 
-using namespace KAuth;
+#include <ksharedconfig.h>
 
-K_PLUGIN_FACTORY(WorkspaceOptionsModuleFactory, registerPlugin<WorkspaceOptionsModule>();)
-K_EXPORT_PLUGIN(WorkspaceOptionsModuleFactory("kcmworkspaceoptions"))
+K_PLUGIN_FACTORY_WITH_JSON(KCMWorkspaceOptionsFactory, "kcm_workspace.json", registerPlugin<KCMWorkspaceOptions>();)
 
-static const QString s_osdKey = QStringLiteral("OSD");
-
-WorkspaceOptionsModule::WorkspaceOptionsModule(QWidget *parent, const QVariantList &args)
-  : KCModule(parent, args),
-    m_kwinConfig( KSharedConfig::openConfig(QStringLiteral("kwinrc"))),
-    m_ownConfig( KSharedConfig::openConfig(QStringLiteral("workspaceoptionsrc"))),
-    m_plasmaShellAutostart(QStringLiteral("plasmashell")),
-    m_krunnerAutostart(QStringLiteral("krunner")),
-    m_ui(new Ui::MainPage)
+KCMWorkspaceOptions::KCMWorkspaceOptions(QObject *parent, const QVariantList& args)
+    : KQuickAddons::ConfigModule(parent, args),
+      m_stateToolTip(true),
+      m_stateVisualFeedback(true)
 {
-    KAboutData *about =
-    new KAboutData(QStringLiteral("kcmworkspaceoptions"), i18n("Global options for the Plasma Workspace"),
-                   QStringLiteral("1.0"), QString(), KAboutLicense::GPL,
-                   i18n("(c) 2009 Marco Martin"));
+    KAboutData* about = new KAboutData(QStringLiteral("kcm_workspace"),
+                    i18n("Plasma Workspace global options"),
+                    QStringLiteral("1.1"),
+                    i18n("System Settings module for managing global options for the Plasma Workspace."),
+                    KAboutLicense::GPL);
 
-    about->addAuthor(i18n("Marco Martin"), i18n("Maintainer"), QStringLiteral("notmart@gmail.com"));
-
+    about->addAuthor(i18n("Furkan Tokac"), QString(), QStringLiteral("furkantokac34@gmail.com"));
     setAboutData(about);
 
-    setButtons(Apply);
-
-    m_ui->setupUi(this);
-
-    connect(m_ui->showToolTips, SIGNAL(toggled(bool)), this, SLOT(changed()));
-    connect(m_ui->showOsd, &QCheckBox::toggled, this, static_cast<void(WorkspaceOptionsModule::*)()>(&WorkspaceOptionsModule::changed));
+    setButtons( Default | Apply );
 }
 
-WorkspaceOptionsModule::~WorkspaceOptionsModule()
+/*ConfigModule functions*/
+void KCMWorkspaceOptions::load()
 {
-    delete m_ui;
+    bool state = false;
+    KSharedConfig::Ptr config = KSharedConfig::openConfig(QStringLiteral("plasmarc"));
+
+    // Load toolTip
+    {
+        const KConfigGroup cg(config, QStringLiteral("PlasmaToolTips"));
+        state = cg.readEntry("Delay", 0.7) > 0;
+        setToolTip(state);
+        m_ostateToolTip = getToolTip();
+    }
+
+    // Load visualFeedback
+    {
+        const KConfigGroup cg(config, QStringLiteral("OSD"));
+        state = cg.readEntry(QStringLiteral("Enabled"), true);
+        setVisualFeedback(state);
+        m_ostateVisualFeedback = getVisualFeedback();
+    }
+
+    setNeedsSave(false);
 }
 
-
-void WorkspaceOptionsModule::save()
+void KCMWorkspaceOptions::save()
 {
     KSharedConfig::Ptr config = KSharedConfig::openConfig(QStringLiteral("plasmarc"));
 
+    // Save toolTip
     {
-        KConfigGroup cg(config, "PlasmaToolTips");
-        cg.writeEntry("Delay", m_ui->showToolTips->isChecked() ? 0.7 : -1);
+        KConfigGroup cg(config, QStringLiteral("PlasmaToolTips"));
+        cg.writeEntry("Delay", getToolTip() ? 0.7 : -1);
+        m_ostateToolTip = getToolTip();
     }
 
+    // Save visualFeedback
     {
         KConfigGroup cg(config, QStringLiteral("OSD"));
-        cg.writeEntry("Enabled", m_ui->showOsd->isChecked());
+        cg.writeEntry("Enabled", getVisualFeedback());
+        m_ostateVisualFeedback = getVisualFeedback();
     }
 
     config->sync();
+    setNeedsSave(false);
 }
 
-void WorkspaceOptionsModule::load()
+void KCMWorkspaceOptions::defaults()
 {
-    KSharedConfig::Ptr config = KSharedConfig::openConfig(QStringLiteral("plasmarc"));
+    setToolTip(true);
+    setVisualFeedback(true);
 
-    {
-        const KConfigGroup cg(config, "PlasmaToolTips");
-        m_ui->showToolTips->setChecked(cg.readEntry("Delay", 0.7) > 0);
-    }
-
-    {
-        const KConfigGroup cg(config, s_osdKey);
-        m_ui->showOsd->setChecked(cg.readEntry(QStringLiteral("Enabled"), true));
-    }
+    handleNeedsSave();
 }
 
-void WorkspaceOptionsModule::defaults()
+/*ToolTip functions*/
+bool KCMWorkspaceOptions::getToolTip() const
 {
-    m_ui->showToolTips->setChecked(true);
-    m_ui->showOsd->setChecked(true);
+    return m_stateToolTip;
+}
+
+void KCMWorkspaceOptions::setToolTip(bool state)
+{
+    // Prevent from binding loop
+    if( m_stateToolTip == state ) {
+        return;
+    }
+
+    m_stateToolTip = state;
+
+    emit toolTipChanged();
+    handleNeedsSave();
+}
+
+/*VisualFeedback functions*/
+bool KCMWorkspaceOptions::getVisualFeedback() const
+{
+    return m_stateVisualFeedback;
+}
+
+void KCMWorkspaceOptions::setVisualFeedback(bool state)
+{
+    // Prevent from binding loop
+    if( m_stateVisualFeedback == state ) {
+        return;
+    }
+
+    m_stateVisualFeedback = state;
+
+    emit visualFeedbackChanged();
+    handleNeedsSave();
+}
+
+/*Other functions*/
+// Checks if the current states are different than the first states.
+// If yes, setNeedsSave(true).
+void KCMWorkspaceOptions::handleNeedsSave()
+{
+    setNeedsSave(m_ostateToolTip != getToolTip() ||
+            m_ostateVisualFeedback != getVisualFeedback());
 }
 
 #include "workspaceoptions.moc"

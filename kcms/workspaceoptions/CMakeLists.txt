@@ -1,16 +1,24 @@
 # KI18N Translation Domain for this library
-add_definitions(-DTRANSLATION_DOMAIN=\"kcmworkspaceoptions\")
+add_definitions(-DTRANSLATION_DOMAIN=\"kcm_workspace\")
+
 ########### next target ###############
+set(kcm_workspace_SRCS
+  workspaceoptions.cpp
+)
 
-set(kcm_workspaceoptions_PART_SRCS workspaceoptions.cpp )
-ki18n_wrap_ui(kcm_workspaceoptions_PART_SRCS mainpage.ui)
+add_library(kcm_workspace MODULE ${kcm_workspace_SRCS})
 
-add_library(kcm_workspaceoptions MODULE ${kcm_workspaceoptions_PART_SRCS})
+target_link_libraries(kcm_workspace
+    KF5::QuickAddons
+    KF5::I18n
+    KF5::ConfigWidgets
+    KF5::Declarative
+)
 
-target_link_libraries(kcm_workspaceoptions  KF5::KIOCore KF5::ConfigWidgets KF5::I18n)
-
-install(TARGETS kcm_workspaceoptions  DESTINATION ${KDE_INSTALL_PLUGINDIR} )
+kcoreaddons_desktop_to_json(kcm_workspace "kcm_workspace.desktop" SERVICE_TYPES kcmodule.desktop)
 
 ########### install files ###############
+install( FILES kcm_workspace.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
+install(TARGETS kcm_workspace DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms)
 
-install( FILES workspaceoptions.desktop  DESTINATION  ${KDE_INSTALL_KSERVICES5DIR} )
+kpackage_install_package(package kcm_workspace kcms)
