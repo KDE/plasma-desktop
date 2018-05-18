@@ -51,7 +51,7 @@ AppsModel::AppsModel(const QString &entryPath, bool paginate, int pageSize, bool
 , m_appNameFormat(AppEntry::NameOnly)
 {
     if (!m_entryPath.isEmpty()) {
-        refresh();
+        componentComplete();
     }
 }
 
