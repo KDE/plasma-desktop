@@ -437,7 +437,7 @@ QStringList AppsModel::hiddenEntries() const
 
 void AppsModel::refresh()
 {
-    if (m_complete) {
+    if (!m_complete) {
         return;
     }
 
