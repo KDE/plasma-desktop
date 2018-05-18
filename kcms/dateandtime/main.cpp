@@ -25,22 +25,17 @@
 #include <unistd.h>
 #include <time.h>
 
-
-#include <QDBusConnection>
 #include <kaboutdata.h>
 #include <kdialog.h>
 #include <kpluginfactory.h>
 #include <kpluginloader.h>
 #include <KLocalizedString>
-#include <kmessagebox.h>
 
 #include "helper.h"
 #include "backend.h"
 
-#include <kauthaction.h>
-#include <kauthexecutejob.h>
-
-#include "timedated_interface.h"
+#include <QDBusConnection>
+#include <QDBusMessage>
 
 K_PLUGIN_FACTORY(KlockModuleFactory, registerPlugin<KclockModule>();)
 K_EXPORT_PLUGIN(KlockModuleFactory("kcmkclock"))
@@ -49,23 +44,27 @@ K_EXPORT_PLUGIN(KlockModuleFactory("kcmkclock"))
 KclockModule::KclockModule(QObject *parent, const QVariantList &)
   : KQuickAddons::ConfigModule(parent)
 {
-
-
   KAboutData *about =
   new KAboutData(QStringLiteral("kcm_clock"), i18n("KDE Clock Control Module"), QStringLiteral("1.0"),
                   QString(), KAboutLicense::GPL,
                   i18n("(c) 1996 - 2001 Luca Montecchiani"));
 
   about->addAuthor(i18n("Luca Montecchiani"), i18n("Original author"), QStringLiteral("m.luca@usa.net"));
-  about->addAuthor(i18n("Paul Campbell"), i18n("Current Maintainer"), QStringLiteral("paul@taniwha.com"));
+  about->addAuthor(i18n("Paul Campbell"), i18n("Former maintainer"), QStringLiteral("paul@taniwha.com"));
   about->addAuthor(i18n("Benjamin Meyer"), i18n("Added NTP support"), QStringLiteral("ben+kcmclock@meyerhome.net"));
+  about->addAuthor(i18n("David Edmundson"), i18n("Current maintainer"), QStringLiteral("davidedmundson@kde.org"));
+
   setAboutData( about );
 
   setButtons(Help|Apply);
 
-  m_backend = Backend::create();
   m_ntpEnabled = m_backend->ntpEnabled();
-  m_timezone = m_backend->timezone();
+  m_timeZone = m_backend->timeZone();
+
+  auto timer = new QTimer(this);
+  timer->setInterval(1000);
+  timer->setSingleShot(false);
+  connect(timer, &QTimer::timeout, this, &KclockModule::timeChanged);
 
 /*
     if (m_haveTimedated) {
@@ -85,10 +84,12 @@ void KclockModule::save()
 
   bool success = m_backend->save(m_ntpEnabled, m_dateTime, m_timeZone);
 
+  //used by the Plasma timeengine for non-linux systems
   if (success) {
       QDBusMessage msg = QDBusMessage::createSignal(QStringLiteral("/org/kde/kcmshell_clock"), QStringLiteral("org.kde.kcmshell_clock"), QStringLiteral("clockUpdated"));
       QDBusConnection::sessionBus().send(msg);
   }
+
 
   // NOTE: super nasty hack #1
   // Try to work around time mismatch between KSystemTimeZones' update of local
@@ -97,7 +98,7 @@ void KclockModule::save()
   // local timezone was found.
 
   // setDisabled(false) happens in load(), since QTimer::singleShot is non-blocking
-    if (!m_haveTimedated) {
+    if (false) { // was !mTimeDate
     QTimer::singleShot(5000, this, SLOT(load()));
   } else {
     load();
@@ -107,6 +108,26 @@ void KclockModule::save()
 
 void KclockModule::load()
 {
+    m_backend.reset(Backend::create());
+    KQuickAddons::ConfigModule::load();
+}
+
+bool KclockModule::canNtp() const
+{
+    return m_backend->canNtp();
+}
+
+QDateTime KclockModule::dateTime() const
+{
+    if (m_dateTime.isNull()) {
+        return QDateTime::currentDateTime();
+    }
+    return m_dateTime;
+}
+
+void KclockModule::setDateTime(const QDateTime &dateTime)
+{
+    m_dateTime = dateTime;
 }
 
 #include "main.moc"

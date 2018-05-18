@@ -1,5 +1,18 @@
 #include "backend.h"
 
+#include <QDBusConnection>
+#include <QDBusMessage>
+#include <QDBusReply>
+
+#include <KMessageBox>
+#include <KLocalizedString>
+
+#include "timedated_interface.h"
+
+//#include <kauthaction.h>
+//#include <kauthexecutejob.h>
+
+
 Backend* Backend::create()
 {
     auto reply = QDBusConnection::systemBus().call(QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.DBus"),
@@ -10,16 +23,20 @@ Backend* Backend::create()
     if (!reply.arguments().isEmpty() &&  reply.arguments().first().value<QStringList>().contains(QStringLiteral("org.freedesktop.timedate1"))) {
         return new TimedatedBackend();
     } else {
-        return new LegacyBackend();
+        return nullptr; //new LegacyBackend();
     }
 }
+
+Backend::Backend() {}
+
+Backend::~Backend() {}
 
 TimedatedBackend::TimedatedBackend() :
     m_iface(new OrgFreedesktopTimedate1Interface(QStringLiteral("org.freedesktop.timedate1"), QStringLiteral("/org/freedesktop/timedate1"), QDBusConnection::systemBus()))
 {
-    m_canNtp = m_iface.canNTP();
-    m_ntpEnabled = m_iface.nTp();
-    m_timezone = timeDatedIface.timezone();
+    m_canNtp = m_iface->canNTP();
+    m_ntpEnabled = m_iface->nTP();
+    m_timeZone = m_iface->timezone();
 }
 
 bool TimedatedBackend::canNtp() const
@@ -34,38 +51,38 @@ bool TimedatedBackend::ntpEnabled() const
 
 QString TimedatedBackend::timeZone() const
 {
-    return m_timezone;
+    return m_timeZone;
 }
 
 bool TimedatedBackend::save(bool newUseNtp, const QDateTime &newTime, const QString &newTimezone)
 {
     bool rc;
     if (newUseNtp != m_ntpEnabled) {
-        auto reply = timedateIface.SetNTP(newUseNtp, true);
+        auto reply = m_iface->SetNTP(newUseNtp, true);
         reply.waitForFinished();
         if (reply.isError()) {
-            KMessageBox::error(this, i18n("Unable to change NTP settings"));
+            KMessageBox::error(nullptr, i18n("Unable to change NTP settings"));
             qWarning() << "Failed to enable NTP" << reply.error().name() << reply.error().message();
             rc = false;
         }
     }
 
-    if (!newUseNtp) {
+    if (!newUseNtp && !newTime.isNull()) {
         qint64 timeDiff = newTime.toMSecsSinceEpoch() - QDateTime::currentMSecsSinceEpoch();
         //*1000 for milliseconds -> microseconds
-        auto reply = timedateIface.SetTime(timeDiff * 1000, true, true);
+        auto reply = m_iface->SetTime(timeDiff * 1000, true, true);
         reply.waitForFinished();
         if (reply.isError()) {
-            KMessageBox::error(this, i18n("Unable to set current time"));
+            KMessageBox::error(nullptr, i18n("Unable to set current time"));
             qWarning() << "Failed to set current time" << reply.error().name() << reply.error().message();
             rc = false;
         }
     }
-    if (newTimezone != m_timezone && !newTimezone.isEmpty()) {
-        auto reply = timedateIface.SetTimezone(newTimezone, true);
+    if (newTimezone != m_timeZone && !newTimezone.isEmpty()) {
+        auto reply = m_iface->SetTimezone(newTimezone, true);
         reply.waitForFinished();
         if (reply.isError()) {
-            KMessageBox::error(this, i18n("Unable to set timezone"));
+            KMessageBox::error(nullptr, i18n("Unable to set timezone"));
             qWarning() << "Failed to set timezone" << reply.error().name() << reply.error().message();
             rc = false;
         }

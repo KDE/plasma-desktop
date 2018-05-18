@@ -22,28 +22,28 @@
 #pragma once
 
 #include <KQuickAddons/ConfigModule>
+#include "backend.h"
 
-class Backend;
 class QTimer;
 
 class KclockModule : public KQuickAddons::ConfigModule
 {
   Q_OBJECT
 
+    //properties reflect what user has set in the KCM, not current saved state
   Q_PROPERTY(QDateTime dateTime READ dateTime WRITE setDateTime NOTIFY timeChanged)
   Q_PROPERTY(bool canNtp READ canNtp CONSTANT);
-  Q_PROPERTY(bool ntpEnabled MEMBER ntpEnabled NOTIFY ntpEnabledChanged)
-  Q_PROPERTY(QString timeZone MEMBER m_timezone NOTIFY timezoneChanged)
+  Q_PROPERTY(bool ntpEnabled MEMBER m_ntpEnabled NOTIFY ntpEnabledChanged)
+  Q_PROPERTY(QString timeZone MEMBER m_timeZone NOTIFY timezoneChanged)
 
 public:
     explicit KclockModule(QObject *parent, const QVariantList &);
-    void	save() override;
-    void	load() override;
+    void save() override;
+    void load() override;
 
-    bool    canNtp() const;
+    bool canNtp() const;
     QDateTime dateTime() const;
-    void setDate(const QDate &date) const;
-    void setTime(const QTimer &time) const;
+    void setDateTime(const QDateTime &dateTime);
 
 signals:
     void timeChanged();

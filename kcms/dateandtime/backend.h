@@ -1,28 +1,35 @@
 #pragma once
 
+#include <QDateTime>
+#include <QString>
+#include <QScopedPointer>
+
+class OrgFreedesktopTimedate1Interface;
+
 class Backend {
 public:
     static Backend *create();
-    virtual bool save(bool newUseNtp, const QDateTime &newTime, const QString &newTimezone) = nullptr;
-    virtual bool canNtp() const = nullptr;
-    virtual bool ntpEnabled() const = nullptr;
-    virtual QString timeZone() const = nullptr;
+    virtual ~Backend();
+    virtual bool save(bool newUseNtp, const QDateTime &newTime, const QString &newTimezone) = 0;
+    virtual bool canNtp() const = 0;
+    virtual bool ntpEnabled() const = 0;
+    virtual QString timeZone() const = 0;
 protected:
     Backend();
 };
 
-class TimedatedBackend : Backend {
+class TimedatedBackend : public Backend {
 public:
     TimedatedBackend();
     bool canNtp() const override;
     bool ntpEnabled() const override;
-    bool QString timeZone() const override;
-    void save(bool newUseNtp, const QDateTime &newTime, const QString &newTimezone);
+    QString timeZone() const override;
+    bool save(bool newUseNtp, const QDateTime &newTime, const QString &newTimezone);
 
 private:
-    bool canNtp;
-    bool ntpEnabled;
-    QString timeZone;
+    bool m_canNtp;
+    bool m_ntpEnabled;
+    QString m_timeZone;
     QScopedPointer<OrgFreedesktopTimedate1Interface> m_iface;
 };
 
