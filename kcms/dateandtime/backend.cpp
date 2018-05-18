@@ -21,8 +21,10 @@ Backend* Backend::create()
                                                                                 QStringLiteral("ListActivatableNames")));
 
     if (!reply.arguments().isEmpty() &&  reply.arguments().first().value<QStringList>().contains(QStringLiteral("org.freedesktop.timedate1"))) {
+        qDebug() << "DAVE";
         return new TimedatedBackend();
     } else {
+        qWarning() << "non timedated backend not implemented";
         return nullptr; //new LegacyBackend();
     }
 }

@@ -58,9 +58,6 @@ KclockModule::KclockModule(QObject *parent, const QVariantList &)
 
   setButtons(Help|Apply);
 
-  m_ntpEnabled = m_backend->ntpEnabled();
-  m_timeZone = m_backend->timeZone();
-
   auto timer = new QTimer(this);
   timer->setInterval(1000);
   timer->setSingleShot(false);
@@ -98,7 +95,7 @@ void KclockModule::save()
   // local timezone was found.
 
   // setDisabled(false) happens in load(), since QTimer::singleShot is non-blocking
-    if (false) { // was !mTimeDate
+    if (false) { // Dave - only needed for the non timedated backend. Another reason for killing it
     QTimer::singleShot(5000, this, SLOT(load()));
   } else {
     load();
@@ -109,6 +106,8 @@ void KclockModule::save()
 void KclockModule::load()
 {
     m_backend.reset(Backend::create());
+    m_ntpEnabled = m_backend->ntpEnabled();
+    m_timeZone = m_backend->timeZone();
     KQuickAddons::ConfigModule::load();
 }
 
