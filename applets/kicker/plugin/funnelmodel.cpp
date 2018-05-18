@@ -81,6 +81,8 @@ void FunnelModel::setSourceModel(QAbstractItemModel *model)
             setNewModel();
             endRemoveRows();
         }
+    } else {
+        setNewModel();
     }
 
     if (newCount > 0) {

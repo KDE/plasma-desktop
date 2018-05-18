@@ -79,6 +79,21 @@ Item {
         size: "16x16"
     }
 
+    Binding {
+        target: plasmoid
+        property: "title"
+        value: labelGenerator.displayLabel
+    }
+
+    Folder.LabelGenerator {
+        id: labelGenerator
+
+        folderModel: folderView.model
+        rtl: (Qt.application.layoutDirection == Qt.RightToLeft)
+        labelMode: plasmoid.configuration.labelMode || (isContainment ? 0 : 1)
+        labelText: plasmoid.configuration.labelText
+    }
+
     Folder.ViewPropertiesMenu {
         id: viewPropertiesMenu
 
@@ -301,21 +316,6 @@ Item {
                 elide: Text.ElideMiddle
                 text: labelGenerator.displayLabel
                 font.underline: labelMouseArea.containsMouse
-
-                Binding {
-                    target: plasmoid
-                    property: "title"
-                    value: labelGenerator.displayLabel
-                }
-
-                Folder.LabelGenerator {
-                    id: labelGenerator
-
-                    folderModel: folderView.model
-                    rtl: (Qt.application.layoutDirection == Qt.RightToLeft)
-                    labelMode: plasmoid.configuration.labelMode
-                    labelText: plasmoid.configuration.labelText
-                }
             }
 
             MouseArea {
