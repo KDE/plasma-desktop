@@ -18,83 +18,68 @@
 import QtQuick 2.7
 import QtQuick.Controls 1.4 as Controls
 import QtQuick.Layouts 1.3 as Layouts
-import QtQuick.Controls.Styles 1.4 as Styles
+import org.kde.kirigami 2.4 as Kirigami
 import org.kde.kcm 1.1 as KCM
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 
-Item {
+KCM.SimpleKCM {
     id: root
 
-    Controls.ScrollView {
-        anchors.fill: parent
+    Kirigami.FormLayout {
+        id: formLayout
 
-        Layouts.ColumnLayout {
-            id: maincol
-            spacing: units.largeSpacing
+        // Visaul behavior settings
+        Controls.CheckBox {
+            id: showToolTips
+            Kirigami.FormData.label: i18n("Visual behavior:")
+            text: i18n("Display informational tooltips on mouse hover")
+            checked: kcm.toolTip
+            onCheckedChanged: kcm.toolTip = checked
+        }
 
-            // General Settings
-            Column {
-                spacing: units.smallSpacing
-                leftPadding: units.smallSpacing
+        Controls.CheckBox {
+            id: showVisualFeedback
+            text: i18n("Display visual feedback for status changes")
+            checked: kcm.visualFeedback
+            onCheckedChanged: kcm.visualFeedback = checked
+        }
 
-                Controls.Label {
-                    text: i18n("General Settings")
-                }
+        Connections {
+            target: kcm
+            onToolTipChanged: showToolTips.checked = kcm.toolTip
+            onVisualFeedbackChanged: showVisualFeedback.checked = kcm.visualFeedback
+        }
 
-                Controls.CheckBox {
-                    id: showToolTips
-                    text: i18n("Display informational tooltips on mouse hover")
-                    checked: kcm.toolTip
-                    onCheckedChanged: kcm.toolTip = checked
-                }
+        Kirigami.Separator {
+        }
 
-                Controls.CheckBox {
-                    id: showVisualFeedback
-                    text: i18n("Display visual feedback for status changes")
-                    checked: kcm.visualFeedback
-                    onCheckedChanged: kcm.visualFeedback = checked
-                }
+        // Click behavior settings
+        Controls.ExclusiveGroup {
+            id: clickBehaviorGroup
+        }
 
-                Connections {
-                    target: kcm
-                    onToolTipChanged: showToolTips.checked = kcm.toolTip
-                    onVisualFeedbackChanged: showVisualFeedback.checked = kcm.visualFeedback
-                }
+        Controls.RadioButton {
+            id: singleClick
+            Kirigami.FormData.label: i18n("Click behavior:")
+            text: i18n("Single-click to open files and folders")
+            checked: kcm.singleClick
+            exclusiveGroup: clickBehaviorGroup
+            onCheckedChanged: kcm.singleClick = checked
+        }
+
+        Controls.RadioButton {
+            id: doubleClick
+            text: i18n("Double-click to open files and folders (single click to select)")
+            exclusiveGroup: clickBehaviorGroup
+        }
+
+        Connections {
+            target: kcm
+            onSingleClickChanged: {
+                singleClick.checked = kcm.singleClick
+                doubleClick.checked = !singleClick.checked
             }
-
-            // ClickBehaviour Settings
-            Column {
-                spacing: units.smallSpacing
-                leftPadding: units.smallSpacing
-                Controls.ExclusiveGroup { id: clickBehaviourGroup }
-
-                Controls.Label {
-                    text: i18n("Click Behaviour")
-                }
-
-                Controls.RadioButton {
-                    id: singleClick
-                    text: i18n("Single-click to open files and folders")
-                    checked: kcm.singleClick
-                    exclusiveGroup: clickBehaviourGroup
-                    onCheckedChanged: kcm.singleClick = checked
-                }
-
-                Controls.RadioButton {
-                    id: doubleClick
-                    text: i18n("Double-click to open files and folders (select icons on first click)")
-                    exclusiveGroup: clickBehaviourGroup
-                }
-
-                Connections {
-                    target: kcm
-                    onSingleClickChanged: {
-                        singleClick.checked = kcm.singleClick
-                        doubleClick.checked = !singleClick.checked
-                    }
-                }
-            }
-        } // END Layouts.ColumnLayout
-    } // END Controls.ScrollView
-} // END Item
+        }
+    }
+}
