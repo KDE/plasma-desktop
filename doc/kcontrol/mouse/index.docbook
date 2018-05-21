@@ -14,8 +14,8 @@
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date>2018-03-25</date>
-<releaseinfo>Plasma 5.12</releaseinfo>
+<date>2018-05-18</date>
+<releaseinfo>Plasma 5.13</releaseinfo>
 
 <abstract>
 <para>This is the documentation for the &systemsettings; module that configures mice and other pointing devices.
@@ -52,7 +52,7 @@ of hardware that performs a similar function.</para>
 If you are left-handed, you may
 prefer to swap the functions of the <mousebutton>left</mousebutton> and
 <mousebutton>right</mousebutton> buttons on your pointing device by choosing the
-<quote>Left handed</quote> option. If your pointing device has more than two
+<guilabel>Left handed</guilabel> option. If your pointing device has more than two
 buttons, only those that function as the <mousebutton>left</mousebutton> and
 <mousebutton>right</mousebutton> buttons are affected. For example, if you have
 a three-button mouse, the <mousebutton>middle</mousebutton> button is
@@ -72,29 +72,11 @@ Just tick the “reverse scroll direction” in your mouse settings (in the syst
 
 xinput set-prop 11 282 1
 -->
-<varlistentry>
-<term><guilabel>Double-click to open files and folders (select icons on first click)</guilabel></term>
-<listitem>
-<para> If this option is not checked, icons/files will be opened with a
-single click of the <mousebutton>left</mousebutton> mouse-button. This
-default behavior is consistent with what you would expect when you click
-links in most web browsers. If checked however, icons/files will be
-opened with a double click, while a single click will only select the
-icon or file. This is the behavior you may know from other desktops or
-operating systems.</para>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term><guilabel>Single-click to open files and folders</guilabel></term>
-<listitem>
-<para>This is the default setting. Clicking once on an icon
-will open it.  To select you can drag around the icon(s) or <keycombo
-action="simul">&Ctrl;<mousebutton>Right</mousebutton></keycombo> click,
-or simply click and hold to drag it.</para>
-</listitem>
-</varlistentry>
 </variablelist>
+
+<note><para>In &plasma; 5.13 you find the setting to use single or double mouse clicks
+to open files and folders in the module <ulink url="help:/kcontrol/workspaceoptions/index.html">Workspace</ulink>.
+</para></note>
 </sect2>
 
 <sect2 id="mouse-advanced">
