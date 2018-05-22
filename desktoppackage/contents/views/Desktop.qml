@@ -73,17 +73,16 @@ Item {
     property int lastToggleActivityManagerTimestamp: 0
 
     function toggleActivityManager() {
-        var currentTimestamp = new Date().getTime() / 1000;
+        if (sidePanelStack.state == "activityManager") {
+            sidePanelStack.state = "closed";
+        } else {
+            var currentTimestamp = new Date().getTime() / 1000;
 
-        if (currentTimestamp - lastToggleActivityManagerTimestamp > 1) {
-            if (sidePanelStack.state == "activityManager") {
-                sidePanelStack.state = "closed";
-            } else {
+            if (currentTimestamp - lastToggleActivityManagerTimestamp > 1) {
                 sidePanelStack.state = "activityManager";
                 sidePanelStack.setSource(Qt.resolvedUrl("../activitymanager/ActivityManager.qml"))
+                lastToggleActivityManagerTimestamp = currentTimestamp;
             }
-
-            lastToggleActivityManagerTimestamp = currentTimestamp;
         }
     }
 
