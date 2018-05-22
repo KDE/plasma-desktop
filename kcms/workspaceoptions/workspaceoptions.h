@@ -52,17 +52,23 @@ Q_SIGNALS:
     void singleClickChanged();
 
 private:
+    void loadPlasmarc();
+    void loadKdeglobals();
+
+    void savePlasmarc();
+    void saveKdeglobals();
+
     void handleNeedsSave();
 
     // QML variables
-    bool m_ostateToolTip;   // Original state
-    bool m_stateToolTip;    // Current state
+    bool m_toolTipOriginalState;
+    bool m_toolTipCurrentState;
 
-    bool m_ostateVisualFeedback;
-    bool m_stateVisualFeedback;
+    bool m_visualFeedbackOriginalState;
+    bool m_visualFeedbackCurrentState;
 
-    bool m_ostateSingleClick;
-    bool m_stateSingleClick;
+    bool m_singleClickOriginalState;
+    bool m_singleClickCurrentState;
 };
 
 #endif  // _KCM_WORKSPACEOPTIONS_H
