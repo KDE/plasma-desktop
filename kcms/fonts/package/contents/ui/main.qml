@@ -221,6 +221,7 @@ KCM.SimpleKCM {
             QtControls.SpinBox {
                 id: dpiSpinBox
                 stepSize: 24
+                editable: true
                 enabled: dpiCheckBox.checked
                 value: kcm.fontAASettings.dpi
                 onValueChanged: kcm.fontAASettings.dpi = dpiSpinBox.value
