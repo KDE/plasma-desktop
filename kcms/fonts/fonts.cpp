@@ -307,7 +307,7 @@ void FontAASettings::defaults()
     setExcludeFrom(8);
     setAntiAliasing(1);
     m_antiAliasingOriginal = m_antiAliasing;
-    setDpi(96);
+    setDpi(0);
     setSubPixelCurrentIndex(KXftConfig::SubPixel::NotSet);
     setHintingCurrentIndex(KXftConfig::Hint::NotSet);
 }

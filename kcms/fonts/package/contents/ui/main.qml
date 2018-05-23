@@ -206,24 +206,22 @@ KCM.SimpleKCM {
         RowLayout {
             QtControls.CheckBox {
                 id: dpiCheckBox
-                checked: dpiSpinBox.value != 96
+                checked: kcm.fontAASettings.dpi != 0
                 text: i18n("Force Fonts DPI:")
-                onCheckedChanged: {
-                    if (!dpiCheckBox.checked) {
-                        dpiSpinBox.enabled = false;
-                        kcm.fontAASettings.dpi = 0;
-                    } else {
-                        dpiSpinBox.enabled = true;
-                    }
-                }
             }
 
             QtControls.SpinBox {
                 id: dpiSpinBox
                 stepSize: 24
+                editable: true
                 enabled: dpiCheckBox.checked
                 value: kcm.fontAASettings.dpi
-                onValueChanged: kcm.fontAASettings.dpi = dpiSpinBox.value
+
+                Binding {
+                    target: kcm
+                    property: "fontAASettings.dpi"
+                    value: dpiSpinBox.enabled ? dpiSpinBox.value : 0
+                }
                 to: 1000
                 from: 96
             }
