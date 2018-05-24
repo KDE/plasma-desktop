@@ -103,12 +103,12 @@ ScrollViewKCM {
                 enabled: false
 
                 onClicked: {
-                    var langs = [];
+                    var langs = kcm.translationsModel.selectedLanguages.slice();
                     addLanguagesSheet.selectedLanguages.sort().forEach(function(index) {
                         langs.push(availableLanguagesModel.get(index).LanguageCode);
                     });
 
-                    kcm.translationsModel.selectedLanguages = kcm.translationsModel.selectedLanguages.concat(langs);
+                    kcm.translationsModel.selectedLanguages = langs;
 
                     addLanguagesSheet.sheetOpen = false;
                 }
