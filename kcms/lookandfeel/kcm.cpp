@@ -36,11 +36,10 @@
 #include <KAutostart>
 #include <KRun>
 
-#include <QVBoxLayout>
-#include <QPushButton>
-#include <QMessageBox>
 #include <QQmlEngine>
 #include <QQmlContext>
+#include <QQuickItem>
+#include <QQuickWindow>
 #include <QStandardItemModel>
 #include <QX11Info>
 
@@ -106,13 +105,20 @@ KCMLookandFeel::~KCMLookandFeel()
 {
 }
 
-void KCMLookandFeel::getNewStuff()
+void KCMLookandFeel::getNewStuff(QQuickItem *ctx)
 {
     if (!m_newStuffDialog) {
         m_newStuffDialog = new KNS3::DownloadDialog( QLatin1String("lookandfeel.knsrc") );
         m_newStuffDialog.data()->setWindowTitle(i18n("Download New Look And Feel Packages"));
+        m_newStuffDialog->setWindowModality(Qt::WindowModal);
+        m_newStuffDialog->winId(); // so it creates the windowHandle();
         connect(m_newStuffDialog.data(), &KNS3::DownloadDialog::accepted, this,  &KCMLookandFeel::loadModel);
     }
+
+    if (ctx && ctx->window()) {
+        m_newStuffDialog->windowHandle()->setTransientParent(ctx->window());
+    }
+
     m_newStuffDialog.data()->show();
 }
 
