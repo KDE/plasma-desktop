@@ -80,7 +80,7 @@ KCM.GridViewKCM {
             QtControls.Button {
                 text: i18n("Get New Looks...")
                 icon.name: "get-hot-new-stuff"
-                onClicked: kcm.getNewStuff();
+                onClicked: kcm.getNewStuff(this);
             }
         }
     }

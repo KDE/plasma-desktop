@@ -30,7 +30,7 @@
 #include <Plasma/Package>
 #include <KQuickAddons/ConfigModule>
 
-class QQuickView;
+class QQuickItem;
 class QStandardItemModel;
 
 class KCMLookandFeel : public KQuickAddons::ConfigModule
@@ -108,7 +108,7 @@ public:
 
     void loadModel();
 
-    Q_INVOKABLE void getNewStuff();
+    Q_INVOKABLE void getNewStuff(QQuickItem *ctx);
 
 public Q_SLOTS:
     void load() override;
