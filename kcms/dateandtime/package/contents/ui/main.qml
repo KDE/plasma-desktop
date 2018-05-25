@@ -39,27 +39,7 @@ Kirigami.Page {
         header: Kirigami.Heading { text: i18nc("@title:window", "Select time")}
 
         RowLayout {
-
-            QtControls.SpinBox {
-                value: 2
-            }
-            QtControls.Label {text:"/"}
-
-            QtControls.SpinBox {
-                value: 0
-                textFromValue: function() {return "March"}
-            }
-            QtControls.Label {text:"/"}
-            QtControls.SpinBox {
-                value: 2017
-            }
-
-            QtControls.Label {text: "   "}
-
-            QtControls.SpinBox {}
-            QtControls.Label {text:":"}
-            QtControls.SpinBox {}
-
+            DateInput {}
         }
     }
 
