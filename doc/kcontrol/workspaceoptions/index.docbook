@@ -1,0 +1,74 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % English "INCLUDE" > <!-- change language only here -->
+]>
+
+<article id="workspaceoptions" lang="&language;">
+<articleinfo>
+<title>Workspace Behaviour</title>
+<authorgroup>
+<author>&Burkhard.Lueck; &Burkhard.Lueck.mail;</author>
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
+</authorgroup>
+
+<date>2018-05-21</date>
+
+<releaseinfo>&plasma; 5.13</releaseinfo>
+
+<keywordset>
+<keyword>System Settings</keyword>
+<keyword>desktop</keyword>
+<keyword>workspace</keyword>
+</keywordset>
+
+</articleinfo>
+
+<para>This is a module to configure global options for the &plasma; workspace.
+</para>
+
+<variablelist>
+
+<varlistentry>
+<term><guilabel>Display informational tooltips on mouse hover</guilabel></term>
+<listitem>
+<para>If this option is checked, tooltips are displayed hovering items in the
+&plasma; panel or on the desktop.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Display visual feedback for status changes</guilabel></term>
+<listitem>
+<para>If you change &eg; brightness and volume using the keyboard these status
+changes are displayed in an OSD.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Single-click to open files and folders</guilabel></term>
+<listitem>
+<para>This is the default setting. Clicking once on an icon
+will open it.  To select you can drag around the icon(s) or <keycombo
+action="simul">&Ctrl;<mousebutton>Right</mousebutton></keycombo> click,
+or simply click and hold to drag it.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Double-click to open files and folders (select icons on first click)</guilabel></term>
+<listitem>
+<para>If this option is not checked, icons/files will be opened with a
+single click of the <mousebutton>left</mousebutton> mouse-button. This
+default behavior is consistent with what you would expect when you click
+links in most web browsers. If checked however, icons/files will be
+opened with a double click, while a single click will only select the
+icon or file. This is the behavior you may know from other desktops or
+operating systems.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</article>
