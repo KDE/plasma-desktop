@@ -29,4 +29,5 @@ ecm_optional_add_subdirectory(componentchooser)
 ecm_optional_add_subdirectory(kded)
 ecm_optional_add_subdirectory(solid-device-automounter)
 ecm_optional_add_subdirectory(phonon)
+ecm_optional_add_subdirectory(workspaceoptions)
 
