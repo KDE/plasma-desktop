@@ -308,7 +308,7 @@ void SwitcherBackend::switchToActivity(Direction direction)
 
     if (activityToSet.isEmpty()) return;
 
-    QTimer::singleShot(150, this, [this,activityToSet] () {
+    QTimer::singleShot(0, this, [this,activityToSet] () {
                 setCurrentActivity(activityToSet);
             });
 
@@ -319,7 +319,7 @@ void SwitcherBackend::keybdSwitchedToAnotherActivity()
 {
     m_lastInvokedAction = dynamic_cast<QAction*>(sender());
 
-    QTimer::singleShot(0, this, &SwitcherBackend::showActivitySwitcherIfNeeded);
+    QTimer::singleShot(90, this, &SwitcherBackend::showActivitySwitcherIfNeeded);
 }
 
 void SwitcherBackend::showActivitySwitcherIfNeeded()
