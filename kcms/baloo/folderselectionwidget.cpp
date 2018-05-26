@@ -121,7 +121,7 @@ void FolderSelectionWidget::setDirectoryList(QStringList includeDirs, QStringLis
         if (exclude.contains(mountPath))
             continue;
 
-        if (!excludeList.contains(mountPath))
+        if (!excludeList.contains(mountPath)) {
             excludeList << mountPath;
         }
     }
