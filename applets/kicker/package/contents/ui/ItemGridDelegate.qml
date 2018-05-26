@@ -93,8 +93,9 @@ Item {
 
         horizontalAlignment: Text.AlignHCenter
 
+        maximumLineCount: 2
         elide: Text.ElideRight
-        wrapMode: Text.NoWrap
+        wrapMode: Text.Wrap
 
         color: "white" // FIXME TODO: Respect theming?
 
