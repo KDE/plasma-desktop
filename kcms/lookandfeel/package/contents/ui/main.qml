@@ -84,6 +84,7 @@ KCM.GridViewKCM {
             }
         }
     }
+
     Window {
         id: previewWindow
         property alias url: previewImage.source
