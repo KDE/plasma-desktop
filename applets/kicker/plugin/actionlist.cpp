@@ -149,12 +149,12 @@ QVariantList createAddLauncherActionList(QObject *appletInterface, const KServic
         actionList << Kicker::createActionItem(i18n("Add to Desktop"), "addToDesktop");
     }
 
-    // to avoid confusing users, only show "Pin to Task Manager" if there's a Task Manager (see Bug 390817)
-    // If there's no Task Manager and the panel is unlocked, show "Add to Panel (Widget)" instead
+    if (ContainmentInterface::mayAddLauncher(appletInterface, ContainmentInterface::Panel)) {
+        actionList << Kicker::createActionItem(i18n("Add to Panel (Widget)"), "addToPanel");
+    }
+
     if (service && ContainmentInterface::mayAddLauncher(appletInterface, ContainmentInterface::TaskManager, service->entryPath())) {
         actionList << Kicker::createActionItem(i18n("Pin to Task Manager"), "addToTaskManager");
-    } else if (ContainmentInterface::mayAddLauncher(appletInterface, ContainmentInterface::Panel)) {
-        actionList << Kicker::createActionItem(i18n("Add to Panel (Widget)"), "addToPanel");
     }
 
     return actionList;
