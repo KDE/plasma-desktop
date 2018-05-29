@@ -112,16 +112,6 @@ Item {
         size: "16x16"
     }
 
-    Timer {
-        id: clickTimer
-
-        property Item pendingButton
-
-        interval: 250
-
-        onTriggered: pendingButton.clicked()
-    }
-
     Header {
         id: header
     }
@@ -405,6 +395,137 @@ Item {
             }
         }
     } // tabBar
+
+    MouseArea {
+        anchors.fill: tabBar
+
+        property var oldPos: null
+
+        hoverEnabled: root.switchTabsOnHover
+
+        onExited: {
+            // Reset so we switch immediately when MouseArea is entered
+            // freshly, e.g. from the panel.
+            oldPos = null;
+
+            clickTimer.stop();
+        }
+
+        onPositionChanged: {
+            var button = tabBar.layout.childAt(mouse.x, mouse.y);
+
+            if (!button || button.objectName != "KickoffButton") {
+                clickTimer.stop();
+
+                return;
+            }
+
+            // Switch immediately when MouseArea was freshly entered, e.g.
+            // from the panel.
+            if (oldPos === null) {
+                oldPos = Qt.point(mouse.x, mouse.y);
+
+                clickTimer.stop();
+                button.clicked();
+
+                return;
+            }
+
+            var dx  = (mouse.x - oldPos.x);
+            var dy  = (mouse.y - oldPos.y);
+
+            // Check Manhattan length against drag distance to get a decent
+            // pointer motion vector.
+            if ((Math.abs(dx) + Math.abs(dy)) > Qt.styleHints.startDragDistance) {
+                if (tabBar.currentTab != button) {
+                    var tabBarPos = mapToItem(tabBar, oldPos.x, oldPos.y);
+                    oldPos = Qt.point(mouse.x, mouse.y);
+
+                    var angleMouseMove = Math.atan2(dy, dx) * 180 / Math.PI;
+                    var angleToCornerA = 0;
+                    var angleToCornerB = 0;
+
+                    switch (plasmoid.location) {
+                        case PlasmaCore.Types.TopEdge: {
+                            angleToCornerA = Math.atan2(tabBar.height - tabBarPos.y, 0 - tabBarPos.x);
+                            angleToCornerB = Math.atan2(tabBar.height - tabBarPos.y, tabBar.width - tabBarPos.x);
+
+                            break;
+                        }
+                        case PlasmaCore.Types.LeftEdge: {
+                            angleToCornerA = Math.atan2(0 - tabBarPos.y, tabBar.width - tabBarPos.x);
+                            angleToCornerB = Math.atan2(tabBar.height - tabBarPos.y, tabBar.width - tabBarPos.x);
+
+                            break;
+                        }
+                        case PlasmaCore.Types.RightEdge: {
+                            angleToCornerA = Math.atan2(0 - tabBarPos.y, 0 - tabBarPos.x);
+                            angleToCornerB = Math.atan2(tabBar.height - tabBarPos.y, 0 - tabBarPos.x);
+
+                            break;
+                        }
+                        // PlasmaCore.Types.BottomEdge
+                        default: {
+                            angleToCornerA = Math.atan2(0 - tabBarPos.y, 0 - tabBarPos.x);
+                            angleToCornerB = Math.atan2(0 - tabBarPos.y, tabBar.width - tabBarPos.x);
+                        }
+                    }
+
+                    // Degrees are nicer to debug than radians.
+                    angleToCornerA = angleToCornerA * 180 / Math.PI;
+                    angleToCornerB = angleToCornerB * 180 / Math.PI;
+
+                    var lower = Math.min(angleToCornerA, angleToCornerB);
+                    var upper = Math.max(angleToCornerA, angleToCornerB);
+
+                    // If the motion vector is outside the angle range from oldPos to the
+                    // relevant tab bar corners, switch immediately. Otherwise start the
+                    // timer, which gets aborted should the pointer exit the the tab bar
+                    // early.
+                    var inRange = (lower < angleMouseMove == angleMouseMove < upper);
+
+                    // Mirror-flip.
+                    if (plasmoid.location == PlasmaCore.Types.RightEdge ? inRange : !inRange) {
+                        clickTimer.stop();
+                        button.clicked();
+
+                        return;
+                    } else {
+                        clickTimer.pendingButton = button;
+                        clickTimer.start();
+                    }
+                } else {
+                    oldPos = Qt.point(mouse.x, mouse.y);
+                }
+            }
+        }
+
+        onClicked: {
+            clickTimer.stop();
+
+            var button = tabBar.layout.childAt(mouse.x, mouse.y);
+
+            if (!button || button.objectName != "KickoffButton") {
+                return;
+            }
+
+            button.clicked();
+        }
+
+        Timer {
+            id: clickTimer
+
+            property Item pendingButton: null
+
+            interval: 250
+
+            onTriggered: {
+                if (pendingButton) {
+                    pendingButton.clicked();
+                }
+            }
+        }
+    }
 
     Keys.forwardTo: [tabBar.layout]
 

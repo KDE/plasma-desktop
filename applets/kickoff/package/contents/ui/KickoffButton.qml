@@ -29,18 +29,6 @@ PlasmaComponents.TabButton {
 
     implicitHeight: iconElement.height + labelElement.implicitHeight + iconElement.anchors.topMargin + labelElement.anchors.topMargin + labelElement.anchors.bottomMargin
 
-    MouseArea {
-        enabled: root.switchTabsOnHover
-        anchors.fill: parent
-        hoverEnabled: root.switchTabsOnHover
-        onEntered: {
-            clickTimer.pendingButton = button
-            clickTimer.restart()
-        }
-        onExited: clickTimer.running = false
-        onClicked: button.clicked()
-    }
-
     Item {
         anchors {
             margins: units.smallSpacing
