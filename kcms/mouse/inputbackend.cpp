@@ -28,15 +28,15 @@ InputBackend *InputBackend::implementation(QObject *parent)
 {
     //There are multiple possible backends
     if (KWindowSystem::isPlatformX11()) {
-        qCDebug(KCM_INPUT) << "Using X11 backend";
+        qCDebug(KCM_MOUSE) << "Using X11 backend";
         return X11Backend::implementation(parent);
     }
     else if (KWindowSystem::isPlatformWayland()) {
-        qCDebug(KCM_INPUT) << "Using KWin+Wayland backend";
+        qCDebug(KCM_MOUSE) << "Using KWin+Wayland backend";
         return new KWinWaylandBackend(parent);
     }
     else {
-        qCCritical(KCM_INPUT) << "Not able to select appropriate backend.";
+        qCCritical(KCM_MOUSE) << "Not able to select appropriate backend.";
         return nullptr;
     }
 }

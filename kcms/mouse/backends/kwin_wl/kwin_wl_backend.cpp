@@ -68,11 +68,11 @@ void KWinWaylandBackend::findDevices()
     QStringList devicesSysNames;
     const QVariant reply = m_deviceManager->property("devicesSysNames");
     if (reply.isValid()) {
-        qCDebug(KCM_INPUT) << "Devices list received successfully from KWin.";
+        qCDebug(KCM_MOUSE) << "Devices list received successfully from KWin.";
         devicesSysNames = reply.toStringList();
     }
     else {
-        qCCritical(KCM_INPUT) << "Error on receiving device list from KWin.";
+        qCCritical(KCM_MOUSE) << "Error on receiving device list from KWin.";
         m_errorString = i18n("Querying input devices failed. Please reopen this settings module.");
         return;
     }
@@ -92,12 +92,12 @@ void KWinWaylandBackend::findDevices()
 
             KWinWaylandDevice* dev = new KWinWaylandDevice(sn);
             if (!dev->init()) {
-                qCCritical(KCM_INPUT) << "Error on creating device object" << sn;
+                qCCritical(KCM_MOUSE) << "Error on creating device object" << sn;
                 m_errorString = i18n("Critical error on reading fundamental device infos of %1.", sn);
                 return;
             }
             m_devices.append(dev);
-            qCDebug(KCM_INPUT).nospace() <<  "Device found: " <<  dev->name() << " (" << dev->sysName() << ")";
+            qCDebug(KCM_MOUSE).nospace() <<  "Device found: " <<  dev->name() << " (" << dev->sysName() << ")";
         }
     }
 }
@@ -153,7 +153,7 @@ void KWinWaylandBackend::onDeviceAdded(QString sysName)
         }
 
         m_devices.append(dev);
-        qCDebug(KCM_INPUT).nospace() <<  "Device connected: " <<  dev->name() << " (" << dev->sysName() << ")";
+        qCDebug(KCM_MOUSE).nospace() <<  "Device connected: " <<  dev->name() << " (" << dev->sysName() << ")";
         emit deviceAdded(true);
     }
 }
@@ -167,7 +167,7 @@ void KWinWaylandBackend::onDeviceRemoved(QString sysName)
     }
 
     KWinWaylandDevice *dev = static_cast<KWinWaylandDevice*>(*it);
-    qCDebug(KCM_INPUT).nospace() <<  "Device disconnected: " <<  dev->name() << " (" << dev->sysName() << ")";
+    qCDebug(KCM_MOUSE).nospace() <<  "Device disconnected: " <<  dev->name() << " (" << dev->sysName() << ")";
 
     int index = it - m_devices.cbegin();
     m_devices.removeAt(index);
