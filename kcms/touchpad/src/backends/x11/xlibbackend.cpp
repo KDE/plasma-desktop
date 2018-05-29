@@ -95,7 +95,7 @@ XlibBackend::XlibBackend(QObject *parent) :
 
     m_device.reset(findTouchpad());
     if (!m_device) {
-        m_errorString = ("No touchpad found");
+        m_errorString = i18n("No touchpad found");
     }
 }
 
