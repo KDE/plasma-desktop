@@ -7,7 +7,7 @@ import org.kde.kirigami 2.4 as Kirigami
 /**
  * This Item provides an entry box for inputting a date.
  * It is represented in a form suitable for entering a known date (i.e date of birth, current date)
- * rather than date selection where a user might want a grid view.
+ * rather than choosing dates where a gridview might work better
  */
 RowLayout {
     id: layout
@@ -72,7 +72,7 @@ RowLayout {
             to: 31
             editable: true
             value: layout.value.getDay();
-            onValueModified: layout.value.setDay(value);
+            onValueModified: layout.value.setDate(value); //setDate only sets the day. It makes no sense
         }
     }
     Component {
@@ -106,10 +106,11 @@ RowLayout {
             to: 2100 //I assume we'll have a new LTS release by then
             editable: true
             textFromValue: function(value) {return value} //default implementation does toLocaleString which looks super weird
-            value: layout.value.getYear();
-            onValueModified: layout.value.setYear(value);
+            value: layout.value.getFullYear();
+            onValueModified: layout.value.setFullYear(value);
         }
     }
+
     Component {
         id: yearSelectTouchComponent
         Tumbler {
