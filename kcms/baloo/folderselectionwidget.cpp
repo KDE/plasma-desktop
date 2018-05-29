@@ -121,10 +121,10 @@ void FolderSelectionWidget::setDirectoryList(QStringList includeDirs, QStringLis
         if (exclude.contains(mountPath))
             continue;
 
-        excludeList << mountPath;
+        if (!excludeList.contains(mountPath)) {
+            excludeList << mountPath;
+        }
     }
-
-    excludeList.removeDuplicates();
 
     Q_FOREACH (QString url, excludeList) {
         QListWidgetItem* item = new QListWidgetItem(m_listWidget);
@@ -159,7 +159,7 @@ QStringList FolderSelectionWidget::includeFolders() const
             }
         }
 
-        if (!inExclude) {
+        if (!inExclude && !folders.contains(mountPath)) {
             folders << mountPath;
         }
     }
@@ -174,7 +174,9 @@ QStringList FolderSelectionWidget::excludeFolders() const
         QListWidgetItem* item = m_listWidget->item(i);
         QString url = item->data(UrlRole).toString();
 
-        folders << url;
+        if (!folders.contains(url)) {
+            folders << url;
+        }
     }
 
     return folders;
