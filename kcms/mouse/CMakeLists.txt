@@ -3,7 +3,7 @@ if(NOT X11_Xinput_FOUND)
 endif()
 
 # KI18N Translation Domain for this library
-add_definitions(-DTRANSLATION_DOMAIN=\"kcminput\")
+add_definitions(-DTRANSLATION_DOMAIN=\"kcmmouse\")
 
 add_subdirectory( misc )
 
@@ -17,9 +17,9 @@ ecm_qt_declare_logging_category(common_SRCS
     HEADER
         logging.h
     IDENTIFIER
-        KCM_INPUT
+        KCM_MOUSE
     CATEGORY_NAME
-        kcm_input
+        kcm_mouse
     DEFAULT_SEVERITY
         Critical
 )
@@ -64,12 +64,12 @@ ki18n_wrap_ui(common_SRCS kcm/xlib/kcmmouse.ui)
 
 qt5_add_resources( common_SRCS kcm/resources.qrc )
 
-add_library(kcm_input MODULE
+add_library(kcm_mouse MODULE
     ${common_SRCS}
     ${backend_SRCS}
 )
 
-target_link_libraries(kcm_input
+target_link_libraries(kcm_mouse
     ${backend_LIBS}
     KF5::KCMUtils
     KF5::I18n
@@ -82,7 +82,7 @@ target_link_libraries(kcm_input
     Qt5::QuickWidgets
 )
 
-install(TARGETS kcm_input  DESTINATION ${KDE_INSTALL_PLUGINDIR} )
+install(TARGETS kcm_mouse  DESTINATION ${KDE_INSTALL_PLUGINDIR} )
 
 ########### install files ###############
 

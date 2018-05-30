@@ -53,11 +53,11 @@ X11Backend *X11Backend::implementation(QObject *parent)
 
     //There are multiple possible drivers
     if (testAtom) {
-        qCDebug(KCM_INPUT) << "Using libinput driver on X11.";
+        qCDebug(KCM_MOUSE) << "Using libinput driver on X11.";
         return new X11LibinputBackend(parent);
     }
     else {
-        qCDebug(KCM_INPUT) << "Using evdev driver on X11.";
+        qCDebug(KCM_MOUSE) << "Using evdev driver on X11.";
         return new X11EvdevBackend(parent);
     }
 }

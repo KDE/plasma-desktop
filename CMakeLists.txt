@@ -109,7 +109,7 @@ add_feature_info("libxft" X11_Xft_FOUND "X FreeType interface library required f
 
 find_package(Evdev)
 set_package_properties(Evdev PROPERTIES TYPE OPTIONAL)
-add_feature_info("Evdev" EVDEV_FOUND "Evdev driver headers needed for input KCM")
+add_feature_info("Evdev" EVDEV_FOUND "Evdev driver headers needed for mouse KCM")
 
 find_package(Synaptics)
 set_package_properties(Synaptics PROPERTIES TYPE OPTIONAL)
@@ -117,7 +117,7 @@ add_feature_info("Synaptics" SYNAPTICS_FOUND "Synaptics libraries needed for tou
 
 find_package(XorgLibinput)
 set_package_properties(XorgLibinput PROPERTIES TYPE OPTIONAL)
-add_feature_info("XorgLibinput" XORGLIBINPUT_FOUND "Libinput driver headers needed for input KCM")
+add_feature_info("XorgLibinput" XORGLIBINPUT_FOUND "Libinput driver headers needed for mouse KCM")
 
 include(ConfigureChecks.cmake)
 

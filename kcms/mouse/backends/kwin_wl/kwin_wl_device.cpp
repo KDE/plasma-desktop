@@ -132,7 +132,7 @@ bool KWinWaylandDevice::applyConfig()
 
     for (QString m : msgs) {
         if (!m.isNull()) {
-            qCCritical(KCM_INPUT) << "in error:" << m;
+            qCCritical(KCM_MOUSE) << "in error:" << m;
             if (!success) {
                 error_msg.append("\n");
             }
@@ -142,7 +142,7 @@ bool KWinWaylandDevice::applyConfig()
     }
 
     if (!success) {
-        qCCritical(KCM_INPUT) <<  error_msg;
+        qCCritical(KCM_MOUSE) <<  error_msg;
     }
     return success;
 }
@@ -167,7 +167,7 @@ QString KWinWaylandDevice::valueWriter(const Prop<T> &prop)
     m_iface->setProperty(prop.dbus, prop.val);
     QDBusError error = m_iface->lastError();
     if (error.isValid()) {
-        qCCritical(KCM_INPUT) << error.message();
+        qCCritical(KCM_MOUSE) << error.message();
         return error.message();
     }
     return QString();
@@ -178,7 +178,7 @@ bool KWinWaylandDevice::valueLoader(Prop<T> &prop)
 {
     QVariant reply = m_iface->property(prop.dbus);
     if (!reply.isValid()) {
-        qCCritical(KCM_INPUT) << "Error on d-bus read of" << prop.dbus;
+        qCCritical(KCM_MOUSE) << "Error on d-bus read of" << prop.dbus;
         prop.avail = false;
         return false;
     }

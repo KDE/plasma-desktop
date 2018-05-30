@@ -31,13 +31,13 @@ ConfigPlugin* ConfigPlugin::implementation(ConfigContainer *parent)
     InputBackendMode mode = backend->mode();
 
     if (mode == InputBackendMode::KWinWayland || mode == InputBackendMode::XLibinput) {
-        qCDebug(KCM_INPUT) << "With libinput user interface.";
+        qCDebug(KCM_MOUSE) << "With libinput user interface.";
         return new LibinputConfig(parent, backend);
     } else if (mode == InputBackendMode::XEvdev) {
-        qCDebug(KCM_INPUT) << "With X11 evdev user interface.";
+        qCDebug(KCM_MOUSE) << "With X11 evdev user interface.";
         return new XlibConfig(parent, backend);
     } else {
-        qCCritical(KCM_INPUT) << "Not able to select appropriate backend.";
+        qCCritical(KCM_MOUSE) << "Not able to select appropriate backend.";
         return nullptr;
     }
 }
