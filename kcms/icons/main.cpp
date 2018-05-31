@@ -81,7 +81,7 @@ IconModule::IconModule(QObject *parent, const QVariantList &args)
     // to be able to access its enums
     qmlRegisterUncreatableType<KIconLoader>("org.kde.private.kcms.icons", 1, 0, "KIconLoader", QString());
 
-    KAboutData* about = new KAboutData(QStringLiteral("kcm_icons"), i18n("Icons"), QStringLiteral("1.0"),
+    KAboutData* about = new KAboutData(QStringLiteral("kcm5_icons"), i18n("Icons"), QStringLiteral("1.0"),
                                        i18n("Icons Control Panel Module"), KAboutLicense::GPL,
                                        i18n("(c) 2000-2003 Geert Jansen"));
     about->addAuthor(i18n("Geert Jansen"), QString(), QStringLiteral("jansen@kde.org"));

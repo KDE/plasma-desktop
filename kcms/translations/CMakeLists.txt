@@ -2,7 +2,7 @@ include(ECMQMLModules)
 ecm_find_qmlmodule(org.kde.plasma.core 2.0)
 
 # KI18N Translation Domain for this library.
-add_definitions(-DTRANSLATION_DOMAIN=\"kcmtranslations\")
+add_definitions(-DTRANSLATION_DOMAIN=\"kcm_translations\")
 
 ########### next target ###############
 
