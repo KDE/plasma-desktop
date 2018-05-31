@@ -1,2 +1,2 @@
 #! /usr/bin/env bash
-$XGETTEXT `find . -name \*.cpp -o -name \*.qml` -o $podir/kcmtranslations.pot
+$XGETTEXT `find . -name \*.cpp -o -name \*.qml` -o $podir/kcm_translations.pot

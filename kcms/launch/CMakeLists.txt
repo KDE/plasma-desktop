@@ -1,5 +1,5 @@
 # KI18N Translation Domain for this library.
-add_definitions(-DTRANSLATION_DOMAIN=\"kcmlaunchfeedback\")
+add_definitions(-DTRANSLATION_DOMAIN=\"kcm_launchfeedback\")
 
 ########### next target ###############
 
