@@ -68,8 +68,9 @@ function effectiveNavDirection(flow, layoutDirection, direction) {
 }
 
 function isFileDrag(event) {
+    var taskUrl = event.mimeData.formats.indexOf("text/x-orgkdeplasmataskmanager_taskurl") != -1;
     var arkService = event.mimeData.formats.indexOf("application/x-kde-ark-dndextract-service") != -1;
     var arkPath = event.mimeData.formats.indexOf("application/x-kde-ark-dndextract-path") != -1;
 
-    return (event.mimeData.hasUrls || (arkService && arkPath));
+    return (event.mimeData.hasUrls || taskUrl || (arkService && arkPath));
 }

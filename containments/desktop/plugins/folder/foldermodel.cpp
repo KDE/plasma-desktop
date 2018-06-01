@@ -1107,6 +1107,11 @@ void FolderModel::drop(QQuickItem *target, QObject* dropEvent, int row)
         return;
     }
 
+    // Catch drops from a Task Manager and convert to usable URL.
+    if (!mimeData->hasUrls() && mimeData->hasFormat(QStringLiteral("text/x-orgkdeplasmataskmanager_taskurl"))) {
+        QList<QUrl> urls = {QUrl(QString::fromUtf8(mimeData->data(QStringLiteral("text/x-orgkdeplasmataskmanager_taskurl"))))};
+        mimeData->setUrls(urls);
+    }
 
     if (m_usedByContainment && !m_screenMapper->sharedDesktops()) {
         if (isDropBetweenSharedViews(mimeData->urls(), dropTargetFolderUrl)) {
