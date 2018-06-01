@@ -324,7 +324,7 @@ void KbPreviewFrame::paintEvent(QPaintEvent *)
         }
     } else {
         QMessageBox errorBox;
-        errorBox.setText(QStringLiteral("Unable to open Preview !"));
+        errorBox.setText(i18n("Unable to open Preview !"));
         errorBox.exec();
     }
 
