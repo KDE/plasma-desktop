@@ -122,8 +122,8 @@ bool KWinWaylandDevice::applyConfig()
     msgs << valueWriter(m_enabled)
         << valueWriter(m_leftHanded)
         << valueWriter(m_pointerAcceleration)
-        << valueWriter(m_defaultPointerAccelerationProfileFlat)
-        << valueWriter(m_defaultPointerAccelerationProfileAdaptive)
+        << valueWriter(m_pointerAccelerationProfileFlat)
+        << valueWriter(m_pointerAccelerationProfileAdaptive)
         << valueWriter(m_middleEmulation)
         << valueWriter(m_naturalScroll);
 
