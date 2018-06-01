@@ -100,6 +100,11 @@ bool InvalidAppsFilterProxy::filterAcceptsRow(int source_row, const QModelIndex 
     return true;
 }
 
+bool InvalidAppsFilterProxy::lessThan(const QModelIndex &left, const QModelIndex &right) const
+{
+    return (left.row() < right.row());
+}
+
 bool GroupSortProxy::lessThan(const QModelIndex &left, const QModelIndex &right) const
 {
     const QString &lResource = sourceModel()->data(left, ResultModel::ResourceRole).toString();
