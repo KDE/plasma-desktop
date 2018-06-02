@@ -32,4 +32,4 @@ install( FILES ${CMAKE_BINARY_DIR}/icons.knsrc  DESTINATION  ${KDE_INSTALL_CONFD
 
 install(TARGETS plasma-changeicons DESTINATION ${KDE_INSTALL_LIBEXECDIR} )
 
-kpackage_install_package(package kcm_icons kcms)
+kpackage_install_package(package kcm5_icons kcms)
