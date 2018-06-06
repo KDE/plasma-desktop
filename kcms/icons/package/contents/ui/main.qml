@@ -106,7 +106,7 @@ KCM.GridViewKCM {
                 property int currentPage
                 readonly property int pageCount: Math.ceil(thumbRepeater.count / (thumbFlow.columns * thumbFlow.rows))
 
-                readonly property int iconWidth: Math.round(thumbArea.width / thumbFlow.columns)
+                readonly property int iconWidth: Math.floor(thumbArea.width / thumbFlow.columns)
                 readonly property int iconHeight: Math.round(thumbArea.height / thumbFlow.rows)
 
                 readonly property int columns: 3
