@@ -44,7 +44,8 @@ FocusScope {
         id: layout
 
         QtControls.TextField {
-            enabled: false
+            readOnly: true
+            Kirigami.Theme.inherit: true
             text: root.font.family + " " + root.font.pointSize
             font: root.font
             Layout.fillHeight: true
