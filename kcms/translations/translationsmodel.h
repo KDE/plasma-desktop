@@ -31,14 +31,9 @@ class TranslationsModel : public QAbstractListModel
 {
     Q_OBJECT
 
-    Q_PROPERTY(QStringList selectedLanguages READ selectedLanguages WRITE setSelectedLanguages NOTIFY selectedLanguagesChanged)
-    Q_PROPERTY(QStringList missingLanguages READ missingLanguages NOTIFY missingLanguagesChanged)
-
     public:
         enum AdditionalRoles {
             LanguageCode = Qt::UserRole + 1,
-            IsSelected,
-            SelectedPriority,
             IsMissing
         };
         Q_ENUM(AdditionalRoles)
@@ -51,30 +46,63 @@ class TranslationsModel : public QAbstractListModel
         QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
         int rowCount(const QModelIndex &parent = QModelIndex()) const override;
 
+    protected:
+        QString languageCodeToName(const QString& languageCode) const;
+
+        static QStringList m_languages;
+
+        static QSet<QString> m_installedLanguages;
+};
+
+class SelectedTranslationsModel : public TranslationsModel
+{
+    Q_OBJECT
+
+    Q_PROPERTY(QStringList selectedLanguages READ selectedLanguages WRITE setSelectedLanguages NOTIFY selectedLanguagesChanged)
+    Q_PROPERTY(QStringList missingLanguages READ missingLanguages NOTIFY missingLanguagesChanged)
+
+    public:
+        explicit SelectedTranslationsModel(QObject *parent = nullptr);
+        ~SelectedTranslationsModel() override;
+
+        QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
+        int rowCount(const QModelIndex &parent = QModelIndex()) const override;
+
         QStringList selectedLanguages() const;
         void setSelectedLanguages(const QStringList &languages);
 
         QStringList missingLanguages() const;
 
-    public Q_SLOTS:
-        void moveSelectedLanguage(int from, int to);
-        void removeSelectedLanguage(const QString &languageCode);
+        Q_INVOKABLE void move(int from, int to);
+        Q_INVOKABLE void remove(const QString &languageCode);
 
     Q_SIGNALS:
-        void selectedLanguagesChanged() const;
+        void selectedLanguagesChanged(const QStringList &languages) const;
         void missingLanguagesChanged() const;
 
     private:
-        QString languageCodeToName(const QString& languageCode) const;
-
-        KConfigGroup m_config;
-
-        QStringList m_languages;
-
-        QSet<QString> m_installedLanguages;
-
         QStringList m_selectedLanguages;
         QStringList m_missingLanguages;
+};
+
+class AvailableTranslationsModel : public TranslationsModel
+{
+    Q_OBJECT
+
+    public:
+        explicit AvailableTranslationsModel(QObject *parent = nullptr);
+        ~AvailableTranslationsModel() override;
+
+        QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
+        int rowCount(const QModelIndex &parent = QModelIndex()) const override;
+
+        Q_INVOKABLE QString langCodeAt(int row);
+
+    public Q_SLOTS:
+        void setSelectedLanguages(const QStringList &languages);
+
+    private:
+        QStringList m_availableLanguages;
 };
 
 #endif

@@ -33,6 +33,8 @@ K_PLUGIN_FACTORY_WITH_JSON(TranslationsFactory, "kcm_translations.json", registe
 Translations::Translations(QObject *parent, const QVariantList &args)
     : KQuickAddons::ConfigModule(parent, args)
     , m_translationsModel(new TranslationsModel(this))
+    , m_selectedTranslationsModel(new SelectedTranslationsModel(this))
+    , m_availableTranslationsModel(new AvailableTranslationsModel(this))
     , m_everSaved(false)
 {
     KAboutData *about = new KAboutData("kcm_translations",
@@ -44,10 +46,13 @@ Translations::Translations(QObject *parent, const QVariantList &args)
 
     m_config = KConfigGroup(KSharedConfig::openConfig(configFile), "Translations");
 
-    connect(m_translationsModel, &TranslationsModel::selectedLanguagesChanged,
+    connect(m_selectedTranslationsModel, &SelectedTranslationsModel::selectedLanguagesChanged,
         this, &Translations::selectedLanguagesChanged);
-    connect(m_translationsModel, &TranslationsModel::missingLanguagesChanged,
+    connect(m_selectedTranslationsModel, &SelectedTranslationsModel::missingLanguagesChanged,
         this, &Translations::missingLanguagesChanged);
+
+    connect(m_selectedTranslationsModel, &SelectedTranslationsModel::selectedLanguagesChanged,
+        m_availableTranslationsModel, &AvailableTranslationsModel::setSelectedLanguages);
 }
 
 Translations::~Translations()
@@ -57,6 +62,16 @@ Translations::~Translations()
 QAbstractItemModel* Translations::translationsModel() const
 {
     return m_translationsModel;
+}
+
+QAbstractItemModel* Translations::selectedTranslationsModel() const
+{
+    return m_selectedTranslationsModel;
+}
+
+QAbstractItemModel* Translations::availableTranslationsModel() const
+{
+    return m_availableTranslationsModel;
 }
 
 bool Translations::everSaved() const
@@ -69,7 +84,7 @@ void Translations::load()
     m_configuredLanguages = m_config.readEntry(lcLanguage,
         QString()).split(':', QString::SkipEmptyParts);
 
-    m_translationsModel->setSelectedLanguages(m_configuredLanguages);
+    m_selectedTranslationsModel->setSelectedLanguages(m_configuredLanguages);
 }
 
 void Translations::save()
@@ -77,9 +92,10 @@ void Translations::save()
     m_everSaved = true;
     emit everSavedChanged();
 
-    m_configuredLanguages = m_translationsModel->selectedLanguages();
+    m_configuredLanguages = m_selectedTranslationsModel->selectedLanguages();
 
-    for (const QString& lang : m_translationsModel->missingLanguages()) {
+    const auto missingLanguages = m_selectedTranslationsModel->missingLanguages();
+    for (const QString& lang : missingLanguages) {
         m_configuredLanguages.removeOne(lang);
     }
 
@@ -88,7 +104,7 @@ void Translations::save()
 
     writeExports();
 
-    m_translationsModel->setSelectedLanguages(m_configuredLanguages);
+    m_selectedTranslationsModel->setSelectedLanguages(m_configuredLanguages);
 }
 
 void Translations::defaults()
@@ -109,17 +125,17 @@ void Translations::defaults()
     QStringList languages;
     languages << lang;
 
-    m_translationsModel->setSelectedLanguages(languages);
+    m_selectedTranslationsModel->setSelectedLanguages(languages);
 }
 
 void Translations::selectedLanguagesChanged()
 {
-    setNeedsSave(m_configuredLanguages != m_translationsModel->selectedLanguages());
+    setNeedsSave(m_configuredLanguages != m_selectedTranslationsModel->selectedLanguages());
 }
 
 void Translations::missingLanguagesChanged()
 {
-    if (m_translationsModel->missingLanguages().count()) {
+    if (m_selectedTranslationsModel->missingLanguages().count()) {
         setNeedsSave(true);
     }
 }

@@ -21,7 +21,7 @@
 import QtQuick 2.1
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.3 as QtControls
-import org.kde.kirigami 2.4 as Kirigami
+import org.kde.kirigami 2.5 as Kirigami
 import org.kde.plasma.core 2.1 as PlasmaCore
 import org.kde.kcm 1.2
 
@@ -30,15 +30,45 @@ ScrollViewKCM {
 
     ConfigModule.quickHelp: i18n("Language")
 
-    PlasmaCore.SortFilterModel {
-        id: availableLanguagesModel
+    Component {
+        id: addLanguageItemComponent
 
-        sourceModel: kcm.translationsModel
+        Kirigami.BasicListItem {
+            id: languageItem
 
-        filterRole: "IsSelected"
-        filterCallback: function(source_row, value) { return !value; }
+            property string languageCode: model.LanguageCode
 
-        sortRole: "display"
+            reserveSpaceForIcon: false
+
+            label: model.display
+
+            checkable: true
+            onCheckedChanged: {
+                if (checked) {
+                    addLanguagesSheet.selectedLanguages.push(index);
+
+                    // There's no property change notification for pushing to an array
+                    // in a var prop, so we can't bind selectedLanguages.length to
+                    // addLanguagesButton.enabled.
+                    addLanguagesButton.enabled = true;
+                } else {
+                    addLanguagesSheet.selectedLanguages = addLanguagesSheet.selectedLanguages.filter(function(item) { return item !== index });
+
+                    // There's no property change notification for pushing to an array
+                    // in a var prop, so we can't bind selectedLanguages.length to
+                    // addLanguagesButton.enabled.
+                    if (!addLanguagesSheet.selectedLanguages.length) {
+                        addLanguagesButton.enabled = false;
+                    }
+                }
+            }
+
+            data: [Connections {
+                target: addLanguagesSheet
+
+                onSheetOpenChanged: languageItem.checked = false
+            }]
+        }
     }
 
     Kirigami.OverlaySheet {
@@ -58,37 +88,16 @@ ScrollViewKCM {
         onSheetOpenChanged: selectedLanguages = []
 
         ListView {
+            id: availableLanguagesList
+
             implicitWidth: 18 * Kirigami.Units.gridUnit
 
-            model: availableLanguagesModel
+            model: kcm.availableTranslationsModel
 
-            delegate: Kirigami.BasicListItem {
-                property string languageCode: model.LanguageCode
+            delegate: Kirigami.DelegateRecycler {
+                width: parent.width
 
-                reserveSpaceForIcon: false
-
-                label: model.display
-
-                checkable: true
-                onCheckedChanged: {
-                    if (checked) {
-                        addLanguagesSheet.selectedLanguages.push(index);
-
-                        // There's no property change notification for pushing to an array
-                        // in a var prop, so we can't bind selectedLanguages.length to
-                        // addLanguagesButton.enabled.
-                        addLanguagesButton.enabled = true;
-                    } else {
-                        addLanguagesSheet.selectedLanguages = addLanguagesSheet.selectedLanguages.filter(function(item) { return item !== index });
-
-                        // There's no property change notification for pushing to an array
-                        // in a var prop, so we can't bind selectedLanguages.length to
-                        // addLanguagesButton.enabled.
-                        if (!addLanguagesSheet.selectedLanguages.length) {
-                            addLanguagesButton.enabled = false;
-                        }
-                    }
-                }
+                sourceComponent: addLanguageItemComponent
             }
         }
 
@@ -103,12 +112,12 @@ ScrollViewKCM {
                 enabled: false
 
                 onClicked: {
-                    var langs = kcm.translationsModel.selectedLanguages.slice();
+                    var langs = kcm.selectedTranslationsModel.selectedLanguages.slice();
                     addLanguagesSheet.selectedLanguages.sort().forEach(function(index) {
-                        langs.push(availableLanguagesModel.get(index).LanguageCode);
+                        langs.push(kcm.availableTranslationsModel.langCodeAt(index));
                     });
 
-                    kcm.translationsModel.selectedLanguages = langs;
+                    kcm.selectedTranslationsModel.selectedLanguages = langs;
 
                     addLanguagesSheet.sheetOpen = false;
                 }
@@ -128,7 +137,7 @@ ScrollViewKCM {
 
             text: i18nc("@info", "There are no languages available on this system.")
 
-            visible: !availableLanguagesModel.count
+            visible: !availableLanguagesList.count
         }
 
         Kirigami.InlineMessage {
@@ -150,10 +159,10 @@ ScrollViewKCM {
             text: i18ncp("@info %2 is the language code",
                 "The translation files for the language with the code '%2' could not be found. The language will be removed from your configuration. If you want to add it back, please install the localization files for it and add the language again.",
                 "The translation files for the languages with the codes '%2' could not be found. These languages will be removed from your configuration. If you want to add them back, please install the localization files for it and the languages again.",
-                kcm.translationsModel.missingLanguages.length,
-                kcm.translationsModel.missingLanguages.join("', '"))
+                kcm.selectedTranslationsModel.missingLanguages.length,
+                kcm.selectedTranslationsModel.missingLanguages.join("', '"))
 
-            visible: kcm.translationsModel.missingLanguages.length
+            visible: kcm.selectedTranslationsModel.missingLanguages.length
         }
 
         QtControls.Label {
@@ -165,28 +174,18 @@ ScrollViewKCM {
         }
     }
 
-    view: ListView {
-        id: languagesList
+    Component {
+        id: languagesListItemComponent
 
-        model: PlasmaCore.SortFilterModel {
-            sourceModel: kcm.translationsModel
-
-            filterRole: "IsSelected"
-            filterCallback: function(source_row, value) { return value; }
-
-            sortRole: "SelectedPriority"
-        }
-
-        delegate: Kirigami.SwipeListItem {
+        Kirigami.SwipeListItem {
             id: listItem
 
-            width: ListView.view.width
-
             contentItem: RowLayout {
-                width: implicitWidth
-                height: Math.max(implicitHeight, Kirigami.Units.iconSizes.smallMedium)
-
-                anchors.verticalCenter: parent.verticalCenter
+                Kirigami.ListItemDragHandle {
+                    listItem: listItem
+                    listView: languagesList
+                    onMoveRequested: kcm.selectedTranslationsModel.move(oldIndex, newIndex)
+                }
 
                 Kirigami.Icon {
                     visible: model.IsMissing
@@ -218,26 +217,26 @@ ScrollViewKCM {
                 enabled: !model.IsMissing && index > 0
                 iconName: "go-top"
                 tooltip: i18nc("@info:tooltip", "Promote to default")
-                onTriggered: kcm.translationsModel.moveSelectedLanguage(index, 0)
-            },
-            Kirigami.Action {
-                enabled: !model.IsMissing && index > 0
-                iconName: "go-up"
-                tooltip: i18nc("@info:tooltip", "Move up")
-                onTriggered: kcm.translationsModel.moveSelectedLanguage(index, index - 1)
-            },
-            Kirigami.Action {
-                enabled: !model.IsMissing && index < (languagesList.count - 1)
-                iconName: "go-down"
-                tooltip: i18nc("@info:tooltip", "Move down")
-                onTriggered: kcm.translationsModel.moveSelectedLanguage(index, index + 1)
+                onTriggered: kcm.selectedTranslationsModel.move(index, 0)
             },
             Kirigami.Action {
                 enabled: !model.IsMissing
                 iconName: "list-remove"
                 tooltip: i18nc("@info:tooltip", "Remove")
-                onTriggered: kcm.translationsModel.removeSelectedLanguage(model.LanguageCode)
+                onTriggered: kcm.selectedTranslationsModel.remove(model.LanguageCode)
             }]
+        }
+    }
+
+    view: ListView {
+        id: languagesList
+
+        model: kcm.selectedTranslationsModel
+
+        delegate: Kirigami.DelegateRecycler {
+            width: languagesList.width
+
+            sourceComponent: languagesListItemComponent
         }
     }
 
@@ -247,7 +246,7 @@ ScrollViewKCM {
         QtControls.Button {
             Layout.alignment: Qt.AlignRight
 
-            enabled: availableLanguagesModel.count
+            enabled: availableLanguagesList.count
 
             text: i18nc("@action:button", "Add languages...")
 

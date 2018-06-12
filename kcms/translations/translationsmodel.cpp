@@ -22,15 +22,21 @@
 
 #include <KLocalizedString>
 
+#include <QCollator>
 #include <QDebug>
 #include <QLocale>
 #include <QMetaEnum>
 
+QStringList TranslationsModel::m_languages = QStringList();
+QSet<QString> TranslationsModel::m_installedLanguages = QSet<QString>();
+
 TranslationsModel::TranslationsModel(QObject *parent)
     : QAbstractListModel(parent)
 {
-    m_installedLanguages = KLocalizedString::availableDomainTranslations("systemsettings");
-    m_languages = m_installedLanguages.toList();
+    if (m_installedLanguages.isEmpty()) {
+        m_installedLanguages = KLocalizedString::availableDomainTranslations("systemsettings");
+        m_languages = m_installedLanguages.toList();
+    }
 }
 
 TranslationsModel::~TranslationsModel()
@@ -60,12 +66,8 @@ QVariant TranslationsModel::data(const QModelIndex &index, int role) const
         return languageCodeToName(m_languages.at(index.row()));
     } else if (role == LanguageCode) {
         return m_languages.at(index.row());
-    } else if (role == IsSelected) {
-        return m_selectedLanguages.contains(m_languages.at(index.row()));
-    } else if (role == SelectedPriority) {
-        return m_selectedLanguages.indexOf(m_languages.at(index.row()));
     } else if (role == IsMissing) {
-        return m_missingLanguages.contains(m_languages.at(index.row()));
+        return false;
     }
 
     return QVariant();
@@ -78,86 +80,6 @@ int TranslationsModel::rowCount(const QModelIndex &parent) const
     }
 
     return m_languages.count();
-}
-
-QStringList TranslationsModel::selectedLanguages() const
-{
-    return m_selectedLanguages;
-}
-
-
-void TranslationsModel::setSelectedLanguages(const QStringList &languages)
-{
-    if (m_selectedLanguages != languages) {
-        QStringList missingLanguages;
-
-        for (const QString& lang : languages) {
-            if (!m_installedLanguages.contains(lang)) {
-                missingLanguages << lang;
-            }
-        }
-
-        missingLanguages.sort();
-
-        if (missingLanguages != m_missingLanguages) {
-            m_missingLanguages = missingLanguages;
-            emit missingLanguagesChanged();
-        }
-
-        beginResetModel();
-
-        m_selectedLanguages = languages;
-        m_languages = (m_installedLanguages | QSet<QString>::fromList(m_selectedLanguages)).toList();
-
-        endResetModel();
-
-        emit selectedLanguagesChanged();
-    }
-}
-
-QStringList TranslationsModel::missingLanguages() const
-{
-    return m_missingLanguages;
-}
-
-void TranslationsModel::moveSelectedLanguage(int from, int to)
-{
-    if (from >= m_selectedLanguages.count() || to >= m_selectedLanguages.count()) {
-        return;
-    }
-
-    if (from == to) {
-        return;
-    }
-
-    m_selectedLanguages.move(from, to);
-
-    emit selectedLanguagesChanged();
-
-    auto idx = index(m_languages.indexOf(m_selectedLanguages.at(from)), 0);
-
-    if (idx.isValid()) {
-        emit dataChanged(idx, idx, QVector<int>{SelectedPriority});
-    }
-
-    idx = index(m_languages.indexOf(m_selectedLanguages.at(to)), 0);
-
-    if (idx.isValid()) {
-        emit dataChanged(idx, idx, QVector<int>{SelectedPriority});
-    }
-}
-
-void TranslationsModel::removeSelectedLanguage(const QString &languageCode)
-{
-    m_selectedLanguages.removeOne(languageCode);
-
-    emit selectedLanguagesChanged();
-
-    auto idx = index(m_languages.indexOf(languageCode), 0);
-
-    if (idx.isValid()) {
-        emit dataChanged(idx, idx, QVector<int>{IsSelected, SelectedPriority});
-    }
 }
 
 QString TranslationsModel::languageCodeToName(const QString& languageCode) const
@@ -178,11 +100,189 @@ QString TranslationsModel::languageCodeToName(const QString& languageCode) const
         // the list. Currently this only happens with pt that gets translated to pt_BR.
         if (languageCode == QLatin1String("pt")) {
             return QLocale(QStringLiteral("pt_PT")).nativeLanguageName();
-        } else {
-            qWarning() << "Language code morphed into another existing language code, please report!" << languageCode << locale.name();
-            return i18nc("%1 is language name, %2 is language code name", "%1 (%2)", languageName, languageCode);
         }
+
+        qWarning() << "Language code morphed into another existing language code, please report!" << languageCode << locale.name();
+        return i18nc("%1 is language name, %2 is language code name", "%1 (%2)", languageName, languageCode);
     }
 
     return languageName;
+}
+
+SelectedTranslationsModel::SelectedTranslationsModel(QObject *parent)
+    : TranslationsModel(parent)
+{
+}
+
+SelectedTranslationsModel::~SelectedTranslationsModel()
+{
+}
+
+QVariant SelectedTranslationsModel::data(const QModelIndex &index, int role) const
+{
+    if (!index.isValid() || index.row() < 0 || index.row() >= m_selectedLanguages.count()) {
+        return QVariant();
+    }
+
+    if (role == Qt::DisplayRole) {
+        return languageCodeToName(m_selectedLanguages.at(index.row()));
+    } else if (role == LanguageCode) {
+        return m_selectedLanguages.at(index.row());
+    } else if (role == IsMissing) {
+        return m_missingLanguages.contains(m_selectedLanguages.at(index.row()));
+    }
+
+    return QVariant();
+}
+
+int SelectedTranslationsModel::rowCount(const QModelIndex &parent) const
+{
+    if (parent.isValid()) {
+        return 0;
+    }
+
+    return m_selectedLanguages.count();
+}
+
+QStringList SelectedTranslationsModel::selectedLanguages() const
+{
+    return m_selectedLanguages;
+}
+
+void SelectedTranslationsModel::setSelectedLanguages(const QStringList &languages)
+{
+    if (m_selectedLanguages != languages) {
+        QStringList missingLanguages;
+
+        for (const QString& lang : languages) {
+            if (!m_installedLanguages.contains(lang)) {
+                missingLanguages << lang;
+            }
+        }
+
+        missingLanguages.sort();
+
+        if (missingLanguages != m_missingLanguages) {
+            m_missingLanguages = missingLanguages;
+            emit missingLanguagesChanged();
+        }
+
+        beginResetModel();
+
+        m_selectedLanguages = languages;
+
+        endResetModel();
+
+        emit selectedLanguagesChanged(m_selectedLanguages);
+    }
+}
+
+QStringList SelectedTranslationsModel::missingLanguages() const
+{
+    return m_missingLanguages;
+}
+
+void SelectedTranslationsModel::move(int from, int to)
+{
+    if (from >= m_selectedLanguages.count() || to >= m_selectedLanguages.count()) {
+        return;
+    }
+
+    if (from == to) {
+        return;
+    }
+
+    const int modelTo = to + (to > from ? 1 : 0);
+
+    const bool ok = beginMoveRows(QModelIndex(), from, from, QModelIndex(), modelTo);
+
+    if (ok) {
+        m_selectedLanguages.move(from, to);
+
+        endMoveRows();
+
+        emit selectedLanguagesChanged(m_selectedLanguages);
+    }
+}
+
+void SelectedTranslationsModel::remove(const QString &languageCode)
+{
+    if (languageCode.isEmpty()) {
+        return;
+    }
+
+    int index = m_selectedLanguages.indexOf(languageCode);
+
+    if (index < 1) {
+        return;
+    }
+
+    beginRemoveRows(QModelIndex(), index, index);
+
+    m_selectedLanguages.removeAt(index);
+
+    endRemoveRows();
+
+    emit selectedLanguagesChanged(m_selectedLanguages);
+}
+
+AvailableTranslationsModel::AvailableTranslationsModel(QObject *parent)
+    : TranslationsModel(parent)
+{
+}
+
+AvailableTranslationsModel::~AvailableTranslationsModel()
+{
+}
+
+QVariant AvailableTranslationsModel::data(const QModelIndex &index, int role) const
+{
+    if (!index.isValid() || index.row() < 0 || index.row() >= m_availableLanguages.count()) {
+        return QVariant();
+    }
+
+    if (role == Qt::DisplayRole) {
+        return languageCodeToName(m_availableLanguages.at(index.row()));
+    } else if (role == LanguageCode) {
+        return m_availableLanguages.at(index.row());
+    } else if (role == IsMissing) {
+        return false;
+    }
+
+    return QVariant();
+}
+
+int AvailableTranslationsModel::rowCount(const QModelIndex &parent) const
+{
+    if (parent.isValid()) {
+        return 0;
+    }
+
+    return m_availableLanguages.count();
+}
+
+QString AvailableTranslationsModel::langCodeAt(int row)
+{
+    if (row < 0 || row >= m_availableLanguages.count()) {
+        return QString();
+    }
+
+    return m_availableLanguages.at(row);
+}
+
+void AvailableTranslationsModel::setSelectedLanguages(const QStringList &languages)
+{
+    beginResetModel();
+
+    m_availableLanguages = (m_installedLanguages - QSet<QString>::fromList(languages)).toList();
+
+    QCollator c;
+    c.setCaseSensitivity(Qt::CaseInsensitive);
+
+    std::sort(m_availableLanguages.begin(), m_availableLanguages.end(),
+        [this, &c](const QString &a, const QString &b) {
+            return c.compare(languageCodeToName(a), languageCodeToName(b)) < 0;
+        });
+
+    endResetModel();
 }
