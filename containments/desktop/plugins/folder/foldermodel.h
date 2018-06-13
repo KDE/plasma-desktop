@@ -225,7 +225,8 @@ class FOLDERPLUGIN_TESTS_EXPORT FolderModel : public QSortFilterProxyModel, publ
         Q_INVOKABLE QAction* action(const QString& name) const;
         QObject* newMenu() const;
         Q_INVOKABLE void updateActions();
-        Q_INVOKABLE void openContextMenu(QQuickItem *visualParent = nullptr);
+        Q_INVOKABLE void openContextMenu(QQuickItem *visualParent = nullptr,
+            Qt::KeyboardModifiers modifiers = Qt::NoModifier);
 
         Q_INVOKABLE void linkHere(const QUrl &sourceUrl);
 
