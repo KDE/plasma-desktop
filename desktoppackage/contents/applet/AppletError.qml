@@ -32,7 +32,7 @@ RowLayout {
 
     PlasmaCore.IconItem {
         id: icon
-        anchors.verticalCenter: parent.verticalCenter
+        Layout.alignment: Qt.AlignVCenter
         Layout.minimumWidth: units.iconSizes.huge
         Layout.minimumHeight: units.iconSizes.huge
         source: "dialog-error"
