@@ -1640,7 +1640,7 @@ void FolderModel::updateActions()
     }
 }
 
-void FolderModel::openContextMenu(QQuickItem *visualParent)
+void FolderModel::openContextMenu(QQuickItem *visualParent, Qt::KeyboardModifiers modifiers)
 {
     QModelIndexList indexes = m_selectionModel->selectedIndexes();
 
@@ -1728,12 +1728,13 @@ void FolderModel::openContextMenu(QQuickItem *visualParent)
                 menu->addAction(emptyTrashAction);
             }
         } else {
-            if (!hasRemoteFiles && itemProperties.supportsMoving()) {
+            if (!modifiers.testFlag(Qt::ShiftModifier) && !hasRemoteFiles && itemProperties.supportsMoving()) {
                 menu->addAction(m_actionCollection.action(QStringLiteral("trash")));
             } else {
                 showDeleteCommand = true;
             }
         }
+
         if (showDeleteCommand && itemProperties.supportsDeleting()) {
             menu->addAction(m_actionCollection.action(QStringLiteral("del")));
         }

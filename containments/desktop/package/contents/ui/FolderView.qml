@@ -273,12 +273,12 @@ FocusScope {
 
                 if (mouse.buttons & Qt.RightButton) {
                     clearPressState();
-                    dir.openContextMenu();
+                    dir.openContextMenu(null, mouse.modifiers);
                     mouse.accepted = true;
                 }
             } else {
                 pressedItem = hoveredItem;
-
+https://bugs.kde.org/show_bug.cgi?id=120008
                 var pos = mapToItem(hoveredItem.actionsOverlay, mouse.x, mouse.y);
 
                 if (!(pos.x <= hoveredItem.actionsOverlay.width && pos.y <= hoveredItem.actionsOverlay.height)) {
@@ -309,7 +309,7 @@ FocusScope {
 
                         clearPressState();
 
-                        dir.openContextMenu();
+                        dir.openContextMenu(null, mouse.modifiers);
                         mouse.accepted = true;
                     }
                 }
@@ -868,7 +868,7 @@ FocusScope {
                 Keys.onMenuPressed: {
                     if (currentIndex != -1 && dir.hasSelection() && currentItem) {
                         dir.setSelected(positioner.map(currentIndex));
-                        dir.openContextMenu(currentItem.frame);
+                        dir.openContextMenu(currentItem.frame, event.modifiers);
                     } else {
                         // Otherwise let the containment handle it.
                         event.accepted = false;
