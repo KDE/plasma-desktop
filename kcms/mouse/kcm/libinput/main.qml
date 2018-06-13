@@ -1,5 +1,6 @@
 /*
  * Copyright 2018 Roman Gilg <subdiff@gmail.com>
+ * Copyright 2018 Furkan Tokac <furkantokac34@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -17,19 +18,24 @@
  */
 
 import QtQuick 2.7
-import QtQuick.Controls 1.4 as Controls
+import QtQuick.Controls 2.0 as Controls
 import QtQuick.Layouts 1.3 as Layouts
-import QtQuick.Controls.Styles 1.4 as Styles
 
-import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.kcm 1.1 as KCM
+import org.kde.kirigami 2.4 as Kirigami
 
 import "components"
 
-Item {
+// TODO: Change ScrollablePage as KCM.SimpleKCM
+// after rewrite the KCM in KConfigModule.
+Kirigami.ScrollablePage {
     id: root
+    
+    spacing: Kirigami.Units.smallSpacing
+    
+    property size sizeHint: Qt.size(formLayout.width, formLayout.height)
+    property size minimumSizeHint: Qt.size(formLayout.width/2, deviceSelector.height)
 
-    property size sizeHint: Qt.size(maincol.width, maincol.height)
-    property size minimumSizeHint: Qt.size(maincol.width/2, deviceSelector.height)
     property alias deviceIndex: deviceSelector.currentIndex
     signal changeSignal()
 
@@ -40,7 +46,7 @@ Item {
 
     function resetModel(index) {
         deviceCount = backend.deviceCount
-        maincol.enabled = deviceCount
+        formLayout.enabled = deviceCount
         deviceSelector.enabled = deviceCount > 1
 
         loading = true
@@ -64,259 +70,224 @@ Item {
         leftHanded.load()
         accelSpeed.load()
         accelProfile.load()
-
         naturalScroll.load()
 
         loading = false
     }
 
-    Controls.ScrollView {
-        anchors.fill: parent
+    Kirigami.FormLayout {
+        id: formLayout
+        enabled: deviceCount
 
-        Layouts.ColumnLayout {
-            id: maincol
-            enabled: deviceCount
-            spacing: units.largeSpacing
+        // Device
+        Controls.ComboBox {
+            Kirigami.FormData.label: i18n("Device:")
+            id: deviceSelector
+            enabled: deviceCount > 1
+            Layouts.Layout.fillWidth: true
+            model: deviceModel
+            textRole: "name"
 
-            Layouts.RowLayout {
-                spacing: units.largeSpacing
-
-                Controls.Label {
-                    text: i18n("Device:")
-                }
-
-                Controls.ComboBox {
-                    id: deviceSelector
-                    enabled: deviceCount > 1
-                    Layouts.Layout.fillWidth: true
-                    model: deviceModel
-                    textRole: "name"
-
-                    onCurrentIndexChanged: {
-                        if (deviceCount) {
-                            device = deviceModel[currentIndex]
-                            if (!loading) {
-                                changeSignal()
-                            }
-                            console.log("Configuration of device '" +
-                                        (currentIndex+1) + " : " + device.name + "' opened")
-                        }
-                        root.syncValuesFromBackend()
+            onCurrentIndexChanged: {
+                if (deviceCount) {
+                    device = deviceModel[currentIndex]
+                    if (!loading) {
+                        changeSignal()
                     }
+                    console.log("Configuration of device '" +
+                                (currentIndex+1) + " : " + device.name + "' opened")
+                }
+                root.syncValuesFromBackend()
+            }
+        }
+
+        Kirigami.Separator {
+        }
+
+        // General
+        Controls.CheckBox {
+            Kirigami.FormData.label: i18n("General:")
+            id: deviceEnabled
+            text: i18n("Device enabled")
+
+            function load() {
+                if (!formLayout.enabled) {
+                    checked = false
+                    return
+                }
+                enabled = device.supportsDisableEvents
+                checked = enabled && device.enabled
+            }
+
+            onCheckedChanged: {
+                if (enabled && !root.loading) {
+                    device.enabled = checked
+                    root.changeSignal()
                 }
             }
 
-            Column {
-                spacing: units.smallSpacing * 2
+            ToolTip {
+                text: i18n("Accept input through this device.")
+            }
+        }
 
-                Column {
-                    leftPadding: units.smallSpacing
-                    Column {
-                        spacing: units.smallSpacing
-                        Controls.Label {
-                            text: i18n("General settings:")
-                        }
+        Controls.CheckBox {
+            id: leftHanded
+            text: i18n("Left handed mode")
 
-                        Column {
-                            leftPadding: units.smallSpacing
-                            Column {
-                                spacing: units.smallSpacing
-                                Controls.CheckBox {
-                                    id: deviceEnabled
-                                    text: i18n("Device enabled")
+            function load() {
+                if (!formLayout.enabled) {
+                    checked = false
+                    return
+                }
+                enabled = device.supportsLeftHanded
+                checked = enabled && device.leftHanded
+            }
 
-                                    function load() {
-                                        if (!maincol.enabled) {
-                                            checked = false
-                                            return
-                                        }
-                                        enabled = device.supportsDisableEvents
-                                        checked = enabled && device.enabled
-                                    }
+            onCheckedChanged: {
+                if (enabled && !root.loading) {
+                    device.leftHanded = checked
+                    root.changeSignal()
+                }
+            }
 
-                                    onCheckedChanged: {
-                                        if (enabled && !root.loading) {
-                                            device.enabled = checked
-                                            root.changeSignal()
-                                        }
-                                    }
+            ToolTip {
+                text: i18n("Swap left and right buttons.")
+            }
+        }
 
-                                    ToolTip {
-                                        text: i18n("Accept input through this device.")
-                                    }
-                                }
+        Controls.CheckBox {
+            id: middleEmulation
+            text: i18n("Press left and right buttons for middle-click")
 
-                                Controls.CheckBox {
-                                    id: leftHanded
-                                    text: i18n("Left handed mode")
+            function load() {
+                if (!formLayout.enabled) {
+                    checked = false
+                    return
+                }
+                enabled = device.supportsMiddleEmulation
+                checked = enabled && device.middleEmulation
+            }
 
-                                    function load() {
-                                        if (!maincol.enabled) {
-                                            checked = false
-                                            return
-                                        }
-                                        enabled = device.supportsLeftHanded
-                                        checked = enabled && device.leftHanded
-                                    }
+            onCheckedChanged: {
+                if (enabled && !root.loading) {
+                    device.middleEmulation = checked
+                    root.changeSignal()
+                }
+            }
 
-                                    onCheckedChanged: {
-                                        if (enabled && !root.loading) {
-                                            device.leftHanded = checked
-                                            root.changeSignal()
-                                        }
-                                    }
+            ToolTip {
+                text: i18n("Clicking left and right button simultaneously sends middle button click.")
+            }
+        }
 
-                                    ToolTip {
-                                        text: i18n("Swap left and right buttons.")
-                                    }
-                                }
+        Kirigami.Separator {
+        }
 
-                                Controls.CheckBox {
-                                    id: middleEmulation
-                                    text: i18n("Emulate middle button")
+        // Acceleration
+        Controls.Slider {
+            Kirigami.FormData.label: i18n("Pointer speed:")
+            id: accelSpeed
+            
+            from: 1
+            to: 10
+            stepSize: 1
 
-                                    function load() {
-                                        if (!maincol.enabled) {
-                                            checked = false
-                                            return
-                                        }
-                                        enabled = device.supportsMiddleEmulation
-                                        checked = enabled && device.middleEmulation
-                                    }
+            function load() {
+                enabled = device.supportsPointerAcceleration
+                if (!enabled) {
+                    value = 0.1
+                    return
+                }
+                // transform libinput's pointer acceleration range [-1, 1] to slider range [1, 10]
+                value = 4.5 * device.pointerAcceleration + 5.5
+            }
 
-                                    onCheckedChanged: {
-                                        if (enabled && !root.loading) {
-                                            device.middleEmulation = checked
-                                            root.changeSignal()
-                                        }
-                                    }
+            onValueChanged: {
+                if (device != undefined && enabled && !root.loading) {
+                    // transform slider range [1, 10] to libinput's pointer acceleration range [-1, 1]
+                    device.pointerAcceleration = Math.round( (value - 5.5) / 4.5 * 100 ) / 100
+                    root.changeSignal()
+                }
+            }
+        }
 
-                                    ToolTip {
-                                        text: i18n("Clicking left and right button simultaneously sends middle button click.")
-                                    }
-                                }
-                            }
-                        }
-                    }
+        Layouts.ColumnLayout {
+            id: accelProfile
+            spacing: Kirigami.Units.smallSpacing
+            Kirigami.FormData.label: i18n("Acceleration profile:")
+            Kirigami.FormData.buddyFor: accelProfileFlat
+
+            function load() {
+                enabled = device.supportsPointerAccelerationProfileAdaptive
+
+                if (!enabled) {
+                    accelProfileAdaptive.checked = false
+                    accelProfileFlat.checked = false
+                    return
                 }
 
-                Column {
-                    leftPadding: units.smallSpacing
-                    Column {
-                        spacing: units.smallSpacing
-                        Controls.Label {
-                            text: i18n("Acceleration:")
-                        }
-
-                        Column {
-                            leftPadding: units.smallSpacing
-                            Column {
-                                spacing: units.smallSpacing * 2
-
-                                Row {
-                                    Controls.Slider {
-                                        id: accelSpeed
-                                        anchors.verticalCenter: parent.verticalCenter
-
-                                        tickmarksEnabled: true
-
-                                        minimumValue: 1
-                                        maximumValue: 10
-                                        stepSize: 1
-
-                                        implicitWidth: units.gridUnit * 9
-
-                                        function load() {
-                                            enabled = device.supportsPointerAcceleration
-                                            if (!enabled) {
-                                                value = 0.1
-                                                return
-                                            }
-                                            // transform libinput's pointer acceleration range [-1, 1] to slider range [1, 10]
-                                            value = 4.5 * device.pointerAcceleration + 5.5
-                                        }
-
-                                        onValueChanged: {
-                                            if (device != undefined && enabled && !root.loading) {
-                                                // transform slider range [1, 10] to libinput's pointer acceleration range [-1, 1]
-                                                device.pointerAcceleration = Math.round( (value - 5.5) / 4.5 * 100 ) / 100
-                                                root.changeSignal()
-                                            }
-                                        }
-                                    }
-                                }
-
-                                ExclGroupBox {
-                                    id: accelProfile
-                                    label: i18n("Acceleration Profile:")
-                                    model: [i18n("Flat"), i18n("Adaptive")]
-
-                                    function load() {
-                                        enabled = device.supportsPointerAccelerationProfileAdaptive
-
-                                        if (!enabled) {
-                                            itemAt(0).checked = false
-                                            itemAt(1).checked = false
-                                            return
-                                        }
-
-                                        itemAt(0).tooltiptext = i18n("Cursor moves the same distance as finger.")
-                                        itemAt(1).tooltiptext = i18n("Cursor travel distance depends on movement speed of finger.")
-
-                                        var toCheck = device.pointerAccelerationProfileAdaptive ? 1 : 0
-                                        itemAt(toCheck).checked = true
-                                    }
-
-                                    onCurrentChanged: {
-                                        if (enabled && !root.loading) {
-                                            device.pointerAccelerationProfileFlat = itemAt(0).checked
-                                            device.pointerAccelerationProfileAdaptive = itemAt(1).checked
-                                            root.changeSignal()
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
+                if(device.pointerAccelerationProfileAdaptive) {
+                    accelProfileAdaptive.checked = true
+                    accelProfileFlat.checked = false
+                } else {
+                    accelProfileAdaptive.checked = false
+                    accelProfileFlat.checked = true
                 }
+            }
 
-                Column {
-                    leftPadding: units.smallSpacing
-                    Column {
-                        spacing: units.smallSpacing
-                        Controls.Label {
-                            text: i18n("Scrolling:")
-                        }
-
-                        Column {
-                            leftPadding: units.smallSpacing
-                            Column {
-                                spacing: units.smallSpacing
-
-                                Controls.CheckBox {
-                                    id: naturalScroll
-                                    text: i18n("Invert scroll direction")
-
-                                    function load() {
-                                        enabled = device.supportsNaturalScroll
-                                        checked = enabled && device.naturalScroll
-                                    }
-
-                                    onCheckedChanged: {
-                                        if (enabled && !root.loading) {
-                                            device.naturalScroll = checked
-                                            root.changeSignal()
-                                        }
-                                    }
-
-                                    ToolTip {
-                                        text: i18n("Touchscreen like scrolling.")
-                                    }
-                                }
-                            }
-                        }
-                    }
+            function syncCurrent() {
+                if (enabled && !root.loading) {
+                    device.pointerAccelerationProfileFlat = accelProfileFlat.checked
+                    device.pointerAccelerationProfileAdaptive = accelProfileAdaptive.checked
+                    root.changeSignal()
                 }
+            }
+
+            Controls.RadioButton {
+                id: accelProfileFlat
+                text: i18n("Flat")
+
+                ToolTip {
+                    text: i18n("Cursor moves the same distance as the mouse movement.")
+                }
+                onCheckedChanged: accelProfile.syncCurrent()
+            }
+
+            Controls.RadioButton {
+                id: accelProfileAdaptive
+                text: i18n("Adaptive")
+
+                ToolTip {
+                    text: i18n("Cursor travel distance depends on the mouse movement speed.")
+                }
+                onCheckedChanged: accelProfile.syncCurrent()
+            }
+        }
+
+        Kirigami.Separator {
+        }
+
+        // Scrolling
+        Controls.CheckBox {
+            Kirigami.FormData.label: i18n("Scrolling:")
+            id: naturalScroll
+            text: i18n("Invert scroll direction")
+
+            function load() {
+                enabled = device.supportsNaturalScroll
+                checked = enabled && device.naturalScroll
+            }
+
+            onCheckedChanged: {
+                if (enabled && !root.loading) {
+                    device.naturalScroll = checked
+                    root.changeSignal()
+                }
+            }
+
+            ToolTip {
+                text: i18n("Touchscreen like scrolling.")
             }
         }
     }
