@@ -79,12 +79,12 @@ QString JoyDevice::errText(ErrorCode code) const
       }
 
       KLocalizedString loc = ki18n("The current running kernel driver version (%1.%2.%3) is not the one this module was compiled for (%4.%5.%6).");
-      loc.subs(version    >> 16);
-      loc.subs((version    >> 8) & 0xFF);
-      loc.subs(version    & 0xFF);
-      loc.subs(JS_VERSION >> 16);
-      loc.subs((JS_VERSION >> 8) & 0xFF);
-      loc.subs(JS_VERSION & 0xFF);
+      loc = loc.subs(version    >> 16);
+      loc = loc.subs((version    >> 8) & 0xFF);
+      loc = loc.subs(version    & 0xFF);
+      loc = loc.subs(JS_VERSION >> 16);
+      loc = loc.subs((JS_VERSION >> 8) & 0xFF);
+      loc = loc.subs(JS_VERSION & 0xFF);
       return loc.toString();
     }
 
