@@ -34,7 +34,6 @@
 #include "customslider.h"
 #include "sliderpair.h"
 #include "touchpadbackend.h"
-#include "plugins.h"
 #include "testarea.h"
 #include "touchpadinterface.h"
 #include "customconfigdialogmanager.h"

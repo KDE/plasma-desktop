@@ -23,8 +23,6 @@
 #include <KLocalizedString>
 #include <KGlobalAccel>
 
-#include "plugins.h"
-
 TouchpadGlobalActions::TouchpadGlobalActions(bool isConfiguration, QObject *parent)
     : KActionCollection(parent)
 {
