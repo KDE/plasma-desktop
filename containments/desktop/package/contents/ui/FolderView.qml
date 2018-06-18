@@ -278,7 +278,7 @@ FocusScope {
                 }
             } else {
                 pressedItem = hoveredItem;
-https://bugs.kde.org/show_bug.cgi?id=120008
+
                 var pos = mapToItem(hoveredItem.actionsOverlay, mouse.x, mouse.y);
 
                 if (!(pos.x <= hoveredItem.actionsOverlay.width && pos.y <= hoveredItem.actionsOverlay.height)) {
