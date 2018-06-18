@@ -24,9 +24,13 @@
 #include <QDBusConnectionInterface>
 #include <KNotification>
 #include <KLocalizedString>
+#include <KPluginFactory>
 
-#include "plugins.h"
 #include "kdedactions.h"
+
+K_PLUGIN_FACTORY_WITH_JSON(TouchpadDisablerFactory,
+                           "kded_touchpad.json",
+                           registerPlugin<TouchpadDisabler>();)
 
 bool TouchpadDisabler::workingTouchpadFound() const
 {
@@ -70,6 +74,7 @@ TouchpadDisabler::TouchpadDisabler(QObject *parent, const QVariantList &)
     m_keyboardActivityTimeout.setSingleShot(true);
     connect(&m_keyboardActivityTimeout, SIGNAL(timeout()),
             SLOT(timerElapsed()));
+
 
     updateCurrentState();
     m_userRequestedState = m_touchpadEnabled;
@@ -301,3 +306,5 @@ void TouchpadDisabler::showOsd()
 
     QDBusConnection::sessionBus().asyncCall(msg);
 }
+
+#include "kded.moc"
