@@ -221,7 +221,9 @@ void KDEDConfig::load()
 
 		// autoload defaults to false if it is not found
 		const bool autoload = mod.rawData().value(QStringLiteral("X-KDE-Kded-autoload")).toVariant().toBool();
-		const QString dbusModuleName = mod.value(QStringLiteral("X-KDE-DBus-ModuleName"));
+		// keep estimating dbusModuleName in sync with KDEDModule (kdbusaddons) and kded (kded)
+		// currently (KF5) the module name in the D-Bus object path is set by the pluginId
+		const QString dbusModuleName = mod.pluginId();
 		qCDebug(KCM_KDED) << "reading kded info from" << servicePath << "autoload =" << autoload << "dbus module name =" << dbusModuleName;
 
 		// The logic has to be identical to Kded::initModules.
@@ -233,12 +235,7 @@ void KDEDConfig::load()
 			treeitem->setText(StartupService, mod.name());
 			treeitem->setText(StartupDescription, mod.description());
 			treeitem->setText(StartupStatus, NOT_RUNNING);
-			if (!dbusModuleName.isEmpty()) {
-				treeitem->setData(StartupService, LibraryRole, dbusModuleName);
-			} else {
-				qCWarning(KCM_KDED) << "X-KDE-DBUS-ModuleName not set for module " << mod.name() << "from file" << mod.metaDataFileName();
-				treeitem->setData(StartupService, LibraryRole, mod.fileName());
-			}
+			treeitem->setData(StartupService, LibraryRole, dbusModuleName);
 			_lvStartup->addTopLevelItem(treeitem);
 		}
 		else if (isModuleLoadedOnDemand(mod)) {
@@ -246,12 +243,7 @@ void KDEDConfig::load()
 			treeitem->setText(OnDemandService, mod.name() );
 			treeitem->setText(OnDemandDescription, mod.description());
 			treeitem->setText(OnDemandStatus, NOT_RUNNING);
-			if (!dbusModuleName.isEmpty()) {
-				treeitem->setData(OnDemandService, LibraryRole, dbusModuleName);
-			} else {
-				qCWarning(KCM_KDED) << "X-KDE-DBUS-ModuleName not set for module " << mod.name() << "from file" << mod.metaDataFileName();
-				treeitem->setData(OnDemandService, LibraryRole, mod.fileName());
-			}
+			treeitem->setData(OnDemandService, LibraryRole, dbusModuleName);
 			_lvLoD->addTopLevelItem(treeitem);
 		}
 		else {
