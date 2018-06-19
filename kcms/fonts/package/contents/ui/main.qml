@@ -113,6 +113,7 @@ KCM.SimpleKCM {
                 Layout.fillWidth: true
                 horizontalAlignment: Text.AlignHCenter
                 text: i18n("to")
+                enabled: excludeCheckBox.checked
             }
 
             QtControls.SpinBox {
