@@ -135,8 +135,6 @@ int main(int argc, char **argv)
     QGuiApplication::setWindowIcon(QIcon::fromTheme("preferences-desktop-font-installer"));
 
     QCommandLineParser parser;
-    parser.addVersionOption();
-    parser.addHelpOption();
     const QCommandLineOption embedOption(QLatin1String("embed"), i18n("Makes the dialog transient for an X app specified by winid"), QLatin1String("winid"));
     parser.addOption(embedOption);
     parser.addPositionalArgument(QLatin1String("[URL]"), i18n("URL to install"));

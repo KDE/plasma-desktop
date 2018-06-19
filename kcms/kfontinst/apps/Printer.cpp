@@ -437,8 +437,6 @@ int main(int argc, char **argv)
     QGuiApplication::setWindowIcon(QIcon::fromTheme("kfontprint"));
 
     QCommandLineParser parser;
-    parser.addVersionOption();
-    parser.addHelpOption();
     const QCommandLineOption embedOption(QLatin1String("embed"), i18n("Makes the dialog transient for an X app specified by winid"), QLatin1String("winid"));
     parser.addOption(embedOption);
     const QCommandLineOption sizeOption(QLatin1String("size"), i18n("Size index to print fonts"), QLatin1String("index"));
