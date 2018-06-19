@@ -6,6 +6,7 @@ configure_file("${CMAKE_CURRENT_SOURCE_DIR}/version.h.cmake"
 )
 
 SET(SRCS
+    plugins.cpp
     touchpadbackend.cpp
     logging.cpp
 )
@@ -58,9 +59,6 @@ add_library(kded_touchpad MODULE
             ${SRCS}
             ${backend_SRCS}
 )
-kcoreaddons_desktop_to_json(kded_touchpad kded/kded_touchpad.desktop)
-set_target_properties(kded_touchpad PROPERTIES OUTPUT_NAME touchpad)
-
 target_link_libraries(kded_touchpad
                       ${backend_LIBS}
 		      KF5::KCMUtils
@@ -92,14 +90,19 @@ install(FILES kcm/kcm_touchpad.desktop
 install(FILES kded/touchpaddaemon.kcfg
         DESTINATION ${KDE_INSTALL_KCFGDIR}
 )
-install(TARGETS kded_touchpad
-        DESTINATION ${KDE_INSTALL_PLUGINDIR}/kf5/kded
+install(FILES kded/kded_touchpad.desktop
+        DESTINATION ${KDE_INSTALL_KSERVICES5DIR}/kded
+        RENAME touchpad.desktop
 )
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/org.kde.touchpad.xml
         DESTINATION ${KDE_INSTALL_DBUSINTERFACEDIR}
 )
 install(FILES kded/kcm_touchpad.notifyrc
         DESTINATION ${KDE_INSTALL_KNOTIFY5RCDIR}
+)
+
+install(TARGETS kded_touchpad
+        DESTINATION ${KDE_INSTALL_PLUGINDIR}
 )
 
 install(FILES kcm/xlib/touchpad.kcfg
