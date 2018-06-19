@@ -31,6 +31,7 @@
 #include <QX11Info>
 #include <KLocalizedString>
 #include <KConfig>
+#include <KSharedConfig>
 #include <KConfigGroup>
 
 #include <klauncher_iface.h>
@@ -123,7 +124,8 @@ void X11Backend::applyCursorTheme(const QString& theme, int size)
 
 void X11Backend::kcmInit()
 {
-    KConfigGroup group = KConfig("kcminputrc", KConfig::NoGlobals).group("Mouse");
+    auto config = KSharedConfig::openConfig("kcminputrc", KConfig::NoGlobals);
+    KConfigGroup group = config->group("Mouse");
     QString theme = group.readEntry("cursorTheme", QString());
     QString size = group.readEntry("cursorSize", QString());
 
