@@ -33,10 +33,8 @@ import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
 import org.kde.taskmanager 0.1 as TaskManager
 
 PlasmaExtras.ScrollArea {
-    id: toolTipDelegate
-
     property Item parentTask
-    property var rootIndex
+    property int parentIndex
 
     property string appName
     property int pidParent
@@ -82,16 +80,14 @@ PlasmaExtras.ScrollArea {
         });
     }
 
-    Component {
-        id: singleTooltip
+    Item {
+        id: contentItem
+        width: childrenRect.width
+        height: childrenRect.height
 
         ToolTipInstance {
-            submodelIndex: toolTipDelegate.rootIndex
+            visible: !isGroup
         }
-    }
-
-    Component {
-        id: groupToolTip
 
         Grid {
             rows: !isVerticalPanel
@@ -99,28 +95,16 @@ PlasmaExtras.ScrollArea {
             flow: isVerticalPanel ? Grid.TopToBottom : Grid.LeftToRight
             spacing: units.largeSpacing
 
+            visible: isGroup
+
             Repeater {
                 id: groupRepeater
                 model: DelegateModel {
-                    model: toolTipDelegate.rootIndex ? tasksModel : null
-
-                    rootIndex: toolTipDelegate.rootIndex
-
-                    delegate: ToolTipInstance {
-                        submodelIndex: tasksModel.makeModelIndex(toolTipDelegate.rootIndex.row, index)
-                    }
+                    model: tasksModel
+                    rootIndex: tasksModel.makeModelIndex(parentIndex, -1)
+                    delegate: ToolTipInstance {}
                 }
             }
         }
-    }
-
-
-    Loader {
-        id: contentItem
-
-        active: toolTipDelegate.rootIndex != undefined
-        asynchronous: true
-
-        sourceComponent: isGroup ? groupToolTip : singleTooltip
     }
 }
