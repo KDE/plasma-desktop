@@ -334,7 +334,7 @@ MouseArea {
             onContainsMouseChanged:  {
                 if (containsMouse) {
                     toolTipDelegate.parentTask = task;
-                    toolTipDelegate.rootIndex = tasksModel.makeModelIndex(itemIndex, -1);
+                    toolTipDelegate.parentIndex = itemIndex;
 
                     toolTipDelegate.appName = Qt.binding(function() {
                         return model.AppName;
