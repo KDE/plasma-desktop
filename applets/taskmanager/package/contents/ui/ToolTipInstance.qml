@@ -34,7 +34,7 @@ import org.kde.taskmanager 0.1 as TaskManager
 
 Column {
     property var submodelIndex
-    readonly property int flatIndex: isGroup && index != undefined ? index : 0
+    property int flatIndex: isGroup && index != undefined ? index : 0
 
     spacing: units.smallSpacing
 

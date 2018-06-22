@@ -82,39 +82,6 @@ PlasmaExtras.ScrollArea {
         });
     }
 
-    Component {
-        id: singleTooltip
-
-        ToolTipInstance {
-            submodelIndex: toolTipDelegate.rootIndex
-        }
-    }
-
-    Component {
-        id: groupToolTip
-
-        Grid {
-            rows: !isVerticalPanel
-            columns: isVerticalPanel
-            flow: isVerticalPanel ? Grid.TopToBottom : Grid.LeftToRight
-            spacing: units.largeSpacing
-
-            Repeater {
-                id: groupRepeater
-                model: DelegateModel {
-                    model: toolTipDelegate.rootIndex ? tasksModel : null
-
-                    rootIndex: toolTipDelegate.rootIndex
-
-                    delegate: ToolTipInstance {
-                        submodelIndex: tasksModel.makeModelIndex(toolTipDelegate.rootIndex.row, index)
-                    }
-                }
-            }
-        }
-    }
-
-
     Loader {
         id: contentItem
 
@@ -122,5 +89,37 @@ PlasmaExtras.ScrollArea {
         asynchronous: true
 
         sourceComponent: isGroup ? groupToolTip : singleTooltip
+
+        Component {
+            id: singleTooltip
+
+            ToolTipInstance {
+                submodelIndex: toolTipDelegate.rootIndex
+            }
+        }
+
+        Component {
+            id: groupToolTip
+
+            Grid {
+                rows: !isVerticalPanel
+                columns: isVerticalPanel
+                flow: isVerticalPanel ? Grid.TopToBottom : Grid.LeftToRight
+                spacing: units.largeSpacing
+
+                Repeater {
+                    id: groupRepeater
+                    model: DelegateModel {
+                        model: toolTipDelegate.rootIndex ? tasksModel : null
+
+                        rootIndex: toolTipDelegate.rootIndex
+
+                        delegate: ToolTipInstance {
+                            submodelIndex: tasksModel.makeModelIndex(toolTipDelegate.rootIndex.row, index)
+                        }
+                    }
+                }
+            }
+        }
     }
 }
