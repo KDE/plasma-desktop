@@ -33,8 +33,10 @@ import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
 import org.kde.taskmanager 0.1 as TaskManager
 
 PlasmaExtras.ScrollArea {
+    id: toolTipDelegate
+
     property Item parentTask
-    property int parentIndex
+    property var rootIndex
 
     property string appName
     property int pidParent
@@ -80,29 +82,42 @@ PlasmaExtras.ScrollArea {
         });
     }
 
-    Item {
+    Loader {
         id: contentItem
-        width: childrenRect.width
-        height: childrenRect.height
 
-        ToolTipInstance {
-            visible: !isGroup
+        active: toolTipDelegate.rootIndex != undefined
+        asynchronous: true
+
+        sourceComponent: isGroup ? groupToolTip : singleTooltip
+
+        Component {
+            id: singleTooltip
+
+            ToolTipInstance {
+                submodelIndex: toolTipDelegate.rootIndex
+            }
         }
 
-        Grid {
-            rows: !isVerticalPanel
-            columns: isVerticalPanel
-            flow: isVerticalPanel ? Grid.TopToBottom : Grid.LeftToRight
-            spacing: units.largeSpacing
+        Component {
+            id: groupToolTip
 
-            visible: isGroup
+            Grid {
+                rows: !isVerticalPanel
+                columns: isVerticalPanel
+                flow: isVerticalPanel ? Grid.TopToBottom : Grid.LeftToRight
+                spacing: units.largeSpacing
 
-            Repeater {
-                id: groupRepeater
-                model: DelegateModel {
-                    model: tasksModel
-                    rootIndex: tasksModel.makeModelIndex(parentIndex, -1)
-                    delegate: ToolTipInstance {}
+                Repeater {
+                    id: groupRepeater
+                    model: DelegateModel {
+                        model: toolTipDelegate.rootIndex ? tasksModel : null
+
+                        rootIndex: toolTipDelegate.rootIndex
+
+                        delegate: ToolTipInstance {
+                            submodelIndex: tasksModel.makeModelIndex(toolTipDelegate.rootIndex.row, index)
+                        }
+                    }
                 }
             }
         }
