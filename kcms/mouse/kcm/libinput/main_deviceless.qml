@@ -121,23 +121,26 @@ Kirigami.ScrollablePage {
             id: accelSpeed
 
             from: 1
-            to: 10
+            to: 11
             stepSize: 1
-            
+
             function load() {
                 enabled = device.supportsPointerAcceleration
                 if (!enabled) {
-                    value = 0.1
+                    value = 0.2
                     return
                 }
-                // transform libinput's pointer acceleration range [-1, 1] to slider range [1, 10]
-                value = 4.5 * device.pointerAcceleration + 5.5
+                // transform libinput's pointer acceleration range [-1, 1] to slider range [1, 11]
+                //value = 4.5 * device.pointerAcceleration + 5.5
+                value = 6 + device.pointerAcceleration / 0.2
             }
 
             onValueChanged: {
                 if (device != undefined && enabled && !root.loading) {
                     // transform slider range [1, 10] to libinput's pointer acceleration range [-1, 1]
-                    device.pointerAcceleration = Math.round( (value - 5.5) / 4.5 * 100 ) / 100
+                    // by *10 and /10, we ignore the floating points after 1 digit. This prevents from
+                    // having a libinput value like 0.60000001
+                    device.pointerAcceleration = Math.round(((value-6) * 0.2) * 10) / 10
                     root.changeSignal()
                 }
             }
