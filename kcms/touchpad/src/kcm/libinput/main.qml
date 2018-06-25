@@ -18,18 +18,20 @@
  */
 
 import QtQuick 2.7
-import QtQuick.Controls 1.4 as Controls
+import QtQuick.Controls 2.0 as Controls
 import QtQuick.Layouts 1.3 as Layouts
-import QtQuick.Controls.Styles 1.4 as Styles
 
 import org.kde.kcm 1.1 as KCM
 import org.kde.kirigami 2.4 as Kirigami
-import org.kde.plasma.core 2.0 as PlasmaCore
 
-import "components"
-
-Kirigami.Page {
+// TODO: Change ScrollablePage as KCM.SimpleKCM
+// after rewrite the KCM in KConfigModule.
+Kirigami.ScrollablePage {
     id: root
+
+    spacing: Kirigami.Units.smallSpacing
+
+    property size minimumSizeHint: Qt.size(formLayout.width/2, deviceSelector.height)
 
     property alias deviceIndex: deviceSelector.currentIndex
     signal changeSignal()
@@ -66,16 +68,12 @@ Kirigami.Page {
         leftHanded.load()
         accelSpeed.load()
         accelProfile.load()
-
         tapToClick.load()
         tapAndDrag.load()
         tapAndDragLock.load()
         multiTap.load()
-
-        scrollmethod.load()
+        scrollMethod.load()
         naturalScroll.load()
-//        TODO:
-//        scrollbutton.load()
 
         loading = false
     }
@@ -83,22 +81,12 @@ Kirigami.Page {
     Kirigami.FormLayout {
         id: formLayout
 
-        topPadding: root.topPadding
-        leftPadding: root.leftPadding
-        rightPadding: root.rightPadding
-        bottomPadding: root.bottomPadding
-        anchors {
-            fill: parent
-            topMargin: root.header ? root.header.height : 0
-            bottomMargin: root.footer ? root.footer.height : 0
-        }
-
         // Device
         Controls.ComboBox {
             Kirigami.FormData.label: i18n("Device:")
             id: deviceSelector
+
             enabled: touchpadCount > 1
-            implicitWidth: units.gridUnit * 16
             Layouts.Layout.fillWidth: true
             model: deviceModel
             textRole: "name"
@@ -125,6 +113,13 @@ Kirigami.Page {
             id: deviceEnabled
             text: i18n("Device enabled")
 
+            hoverEnabled: true
+            Controls.ToolTip {
+                text: i18n("Accept input through this device.")
+                visible: parent.hovered
+                delay: 1000
+            }
+
             function load() {
                 if (!formLayout.enabled) {
                     checked = false
@@ -140,15 +135,18 @@ Kirigami.Page {
                     root.changeSignal()
                 }
             }
-
-            ToolTip {
-                text: i18n("Accept input through this device.")
-            }
         }
 
         Controls.CheckBox {
             id: dwt
             text: i18n("Disable while typing")
+
+            hoverEnabled: true
+            Controls.ToolTip {
+                text: i18n("Disable touchpad while typing to prevent accidental inputs.")
+                visible: parent.hovered
+                delay: 1000
+            }
 
             function load() {
                 if (!formLayout.enabled) {
@@ -165,15 +163,18 @@ Kirigami.Page {
                     root.changeSignal()
                 }
             }
-
-            ToolTip {
-                text: i18n("Disable touchpad while typing to prevent accidental inputs.")
-            }
         }
 
         Controls.CheckBox {
             id: leftHanded
             text: i18n("Left handed mode")
+
+            hoverEnabled: true
+            Controls.ToolTip {
+                text: i18n("Swap left and right buttons.")
+                visible: parent.hovered
+                delay: 1000
+            }
 
             function load() {
                 if (!formLayout.enabled) {
@@ -190,15 +191,18 @@ Kirigami.Page {
                     root.changeSignal()
                 }
             }
-
-            ToolTip {
-                text: i18n("Swap left and right buttons.")
-            }
         }
 
         Controls.CheckBox {
             id: middleEmulation
             text: i18n("Press left and right buttons for middle click")
+
+            hoverEnabled: true
+            Controls.ToolTip {
+                text: i18n("Clicking left and right button simultaneously sends middle button click.")
+                visible: parent.hovered
+                delay: 1000
+            }
 
             function load() {
                 if (!formLayout.enabled) {
@@ -215,10 +219,6 @@ Kirigami.Page {
                     root.changeSignal()
                 }
             }
-
-            ToolTip {
-                text: i18n("Clicking left and right button simultaneously sends middle button click.")
-            }
         }
 
         Kirigami.Separator {
@@ -229,13 +229,9 @@ Kirigami.Page {
             Kirigami.FormData.label: i18n("Pointer speed:")
             id: accelSpeed
 
-            tickmarksEnabled: true
-
-            minimumValue: 1
-            maximumValue: 10
+            from: 1
+            to: 10
             stepSize: 1
-
-            implicitWidth: units.gridUnit * 9
 
             function load() {
                 enabled = touchpad.supportsPointerAcceleration
@@ -256,33 +252,60 @@ Kirigami.Page {
             }
         }
 
-        ExclGroupBox {
+        Layouts.ColumnLayout {
             Kirigami.FormData.label: i18n("Acceleration profile:")
+            Kirigami.FormData.buddyFor: accelProfileFlat
             id: accelProfile
-            model: [i18n("Flat"), i18n("Adaptive")]
+            spacing: Kirigami.Units.smallSpacing
 
             function load() {
                 enabled = touchpad.supportsPointerAccelerationProfileAdaptive
 
                 if (!enabled) {
-                    itemAt(0).checked = false
-                    itemAt(1).checked = false
+                    accelProfileFlat.checked = false
+                    accelProfileAdaptive.checked = false
                     return
                 }
 
-                itemAt(0).tooltiptext = i18n("Cursor moves the same distance as finger.")
-                itemAt(1).tooltiptext = i18n("Cursor travel distance depends on movement speed of finger.")
-
-                var toCheck = touchpad.pointerAccelerationProfileAdaptive ? 1 : 0
-                itemAt(toCheck).checked = true
+                if(touchpad.pointerAccelerationProfileAdaptive) {
+                    accelProfileAdaptive.checked = true
+                } else {
+                    accelProfileFlat.checked = true
+                }
             }
 
-            onCurrentChanged: {
+            function syncCurrent() {
                 if (enabled && !root.loading) {
-                    touchpad.pointerAccelerationProfileFlat = itemAt(0).checked
-                    touchpad.pointerAccelerationProfileAdaptive = itemAt(1).checked
+                    touchpad.pointerAccelerationProfileFlat = accelProfileFlat.checked
+                    touchpad.pointerAccelerationProfileAdaptive = accelProfileAdaptive.checked
                     root.changeSignal()
                 }
+            }
+
+            Controls.RadioButton {
+                id: accelProfileFlat
+                text: i18n("Flat")
+
+                hoverEnabled: true
+                Controls.ToolTip {
+                    text: i18n("Cursor moves the same distance as finger.")
+                    visible: parent.hovered
+                    delay: 1000
+                }
+                onCheckedChanged: accelProfile.syncCurrent()
+            }
+
+            Controls.RadioButton {
+                id: accelProfileAdaptive
+                text: i18n("Adaptive")
+
+                hoverEnabled: true
+                Controls.ToolTip {
+                    text: i18n("Cursor travel distance depends on movement speed of finger.")
+                    visible: parent.hovered
+                    delay: 1000
+                }
+                onCheckedChanged: accelProfile.syncCurrent()
             }
         }
 
@@ -294,6 +317,13 @@ Kirigami.Page {
             Kirigami.FormData.label: i18n("Tapping:")
             id: tapToClick
             text: i18n("Tap-to-click")
+
+            hoverEnabled: true
+            Controls.ToolTip {
+                text: i18n("Single tap is left button click.")
+                visible: parent.hovered
+                delay: 1000
+            }
 
             function load() {
                 enabled = touchpad.tapFingerCount > 0
@@ -315,15 +345,18 @@ Kirigami.Page {
                     root.changeSignal()
                 }
             }
-
-            ToolTip {
-                text: i18n("Single tap is left button click.")
-            }
         }
 
         Controls.CheckBox {
             id: tapAndDrag
             text: i18n("Tap-and-drag")
+
+            hoverEnabled: true
+            Controls.ToolTip {
+                text: i18n("Sliding over touchpad directly after tap drags.")
+                visible: parent.hovered
+                delay: 1000
+            }
 
             function load() {
                 enabled = touchpad.tapFingerCount > 0 && tapToClick.checked
@@ -343,15 +376,18 @@ Kirigami.Page {
                     root.changeSignal()
                 }
             }
-
-            ToolTip {
-                text: i18n("Sliding over touchpad directly after tap drags.")
-            }
         }
 
         Controls.CheckBox {
             id: tapAndDragLock
             text: i18n("Tap-and-drag lock")
+
+            hoverEnabled: true
+            Controls.ToolTip {
+                text: i18n("Dragging continues after a short finger lift.")
+                visible: parent.hovered
+                delay: 1000
+            }
 
             function load() {
                 enabled = touchpad.tapFingerCount > 0 && tapAndDrag.checked
@@ -364,80 +400,136 @@ Kirigami.Page {
                     root.changeSignal()
                 }
             }
-
-            ToolTip {
-                text: i18n("Dragging continues after a short finger lift.")
-            }
         }
 
-        ExclGroupBox {
+        Layouts.ColumnLayout {
             Kirigami.FormData.label: i18n("Two-finger tap:")
+            Kirigami.FormData.buddyFor: multiTapRightClick
             id: multiTap
+
+            spacing: Kirigami.Units.smallSpacing
 
             function load() {
                 enabled = touchpad.supportsLmrTapButtonMap && tapToClick.checked
                 if (touchpad.tapFingerCount > 2) {
-                    model = [i18n("Right-click (three-finger tap to middle-click)"),
-                             i18n("Middle-click (three-finger tap right-click)")]
-                    itemAt(0).tooltiptext = i18n("Tap with two fingers to right-click, tap with three fingers to middle-click.")
-                    itemAt(1).tooltiptext = i18n("Tap with two fingers to middle-click, tap with three fingers to right-click.")
+                    multiTapRightClick.text = i18n("Right-click (three-finger tap to middle-click)")
+                    multiTapRightClickToolTip.text = i18n("Tap with two fingers to right-click, tap with three fingers to middle-click.")
+
+                    multiTapMiddleClick.text = i18n("Middle-click (three-finger tap right-click)")
+                    multiTapMiddleClickToolTip.text = i18n("Tap with two fingers to middle-click, tap with three fingers to right-click.")
                 } else {
-                    model = [i18n("Righ-click"), i18n("Middle-click")]
-                    itemAt(0).tooltiptext = i18n("Tap with two fingers to right-click.")
-                    itemAt(1).tooltiptext = i18n("Tap with two fingers to middle-click.")
+                    multiTapRightClick.text = i18n("Righ-click")
+                    multiTapRightClickToolTip.text = i18n("Tap with two fingers to right-click.")
+
+                    multiTapMiddleClick.text = i18n("Middle-click")
+                    multiTapMiddleClickToolTip.text = i18n("Tap with two fingers to middle-click.")
                 }
 
                 if (!enabled) {
-                    itemAt(0).checked = false
-                    itemAt(1).checked = false
+                    multiTapRightClick.checked = false
+                    multiTapMiddleClick.checked = false
                     return
                 }
-                var toCheck = touchpad.lmrTapButtonMap ? 1 : 0
-                itemAt(toCheck).checked = true
+
+                if(touchpad.lmrTapButtonMap) {
+                    multiTapMiddleClick.checked = true
+                } else {
+                    multiTapRightClick.checked = true
+                }
             }
 
-            onCurrentChanged: {
+            function syncCurrent() {
                 if (enabled && !root.loading) {
-                    touchpad.lmrTapButtonMap = itemAt(1).checked
+                    touchpad.lmrTapButtonMap = multiTapMiddleClick.checked
                     root.changeSignal()
                 }
+            }
+
+            Controls.RadioButton {
+                id: multiTapRightClick
+                // text: is handled dynamically on load.
+
+                hoverEnabled: true
+                Controls.ToolTip {
+                    id: multiTapRightClickToolTip
+                    visible: parent.hovered
+                    delay: 1000
+                    // text: is handled dynamically on load.
+                }
+                onCheckedChanged: multiTap.syncCurrent()
+            }
+
+            Controls.RadioButton {
+                id: multiTapMiddleClick
+                // text: is handled dynamically on load.
+
+                hoverEnabled: true
+                Controls.ToolTip {
+                    id: multiTapMiddleClickToolTip
+                    visible: parent.hovered
+                    delay: 1000
+                    // text: is handled dynamically on load.
+                }
+                onCheckedChanged: multiTap.syncCurrent()
             }
         }
 
         Kirigami.Separator {
         }
-
+    
         // Scrolling
-        ExclGroupBox {
+        Layouts.ColumnLayout {
             Kirigami.FormData.label: i18n("Scrolling:")
-            id: scrollmethod
-            model: [i18n("Two fingers"), i18n("Touchpad edges")]
+            Kirigami.FormData.buddyFor: scrollMethodTwoFingers
+            id: scrollMethod
+
+            spacing: Kirigami.Units.smallSpacing
 
             function load() {
-                itemAt(0).enabled = touchpad.supportsScrollTwoFinger
-                itemAt(1).enabled = touchpad.supportsScrollEdge
+                scrollMethodTwoFingers.enabled = touchpad.supportsScrollTwoFinger
+                scrollMethodTouchpadEdges.enabled = touchpad.supportsScrollEdge
 
-                var toCheck = 0
-                if (itemAt(0).enabled && touchpad.scrollTwoFinger) {
-                    toCheck = 0
-                } else if (itemAt(1).enabled && touchpad.scrollEdge) {
-                    toCheck = 1
+                if(scrollMethodTouchpadEdges.enabled && touchpad.scrollEdge) {
+                    scrollMethodTouchpadEdges.checked = formLayout.enabled
+                } else {
+                    scrollMethodTwoFingers.checked = formLayout.enabled
                 }
-                itemAt(0).tooltiptext = i18n("Slide with two fingers scrolls.")
-                itemAt(1).tooltiptext = i18n("Slide on the touchpad edges scrolls.")
-
-                itemAt(toCheck).checked = formLayout.enabled
             }
 
-            onCurrentChanged: {
+            function syncCurrent() {
                 if (enabled && !root.loading) {
-                    touchpad.scrollTwoFinger = itemAt(0).checked
-                    touchpad.scrollEdge = itemAt(1).checked
+                    touchpad.scrollTwoFinger = scrollMethodTwoFingers.checked
+                    touchpad.scrollEdge = scrollMethodTouchpadEdges.checked
                     root.changeSignal()
                 }
                 loading = true
                 naturalScroll.load()
                 loading = false
+            }
+
+            Controls.RadioButton {
+                id: scrollMethodTwoFingers
+                text: i18n("Two fingers")
+
+                hoverEnabled: true
+                Controls.ToolTip {
+                    text: i18n("Slide with two fingers scrolls.")
+                    visible: parent.hovered
+                    delay: 1000
+                }
+            }
+
+            Controls.RadioButton {
+                id: scrollMethodTouchpadEdges
+                text: i18n("Touchpad edges")
+
+                hoverEnabled: true
+                Controls.ToolTip {
+                    text: i18n("Slide on the touchpad edges scrolls.")
+                    visible: parent.hovered
+                    delay: 1000
+                }
+                onCheckedChanged: scrollMethod.syncCurrent()
             }
         }
 
@@ -457,8 +549,11 @@ Kirigami.Page {
                 }
             }
 
-            ToolTip {
+            hoverEnabled: true
+            Controls.ToolTip {
                 text: i18n("Touchscreen like scrolling.")
+                visible: parent.hovered
+                delay: 1000
             }
         }
     } // END Kirigami.FormLayout
