@@ -143,6 +143,7 @@ QtControls.Popup {
 
         ColumnLayout {
             Layout.fillHeight: true
+            Layout.minimumWidth: Math.round(parent.width / 2)
             Layout.maximumWidth: Math.round(parent.width / 2)
 
             Item {
