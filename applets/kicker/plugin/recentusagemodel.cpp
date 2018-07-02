@@ -47,7 +47,7 @@ namespace KAStats = KActivities::Stats;
 using namespace KAStats;
 using namespace KAStats::Terms;
 
-GroupSortProxy::GroupSortProxy(QAbstractItemModel *sourceModel) : QSortFilterProxyModel(sourceModel)
+GroupSortProxy::GroupSortProxy(AbstractModel *parentModel, QAbstractItemModel *sourceModel) : QSortFilterProxyModel(parentModel)
 {
     sourceModel->setParent(this);
     setSourceModel(sourceModel);
@@ -58,7 +58,7 @@ GroupSortProxy::~GroupSortProxy()
 {
 }
 
-InvalidAppsFilterProxy::InvalidAppsFilterProxy(AbstractModel *parentModel, QAbstractItemModel *sourceModel) : QSortFilterProxyModel(sourceModel)
+InvalidAppsFilterProxy::InvalidAppsFilterProxy(AbstractModel *parentModel, QAbstractItemModel *sourceModel) : QSortFilterProxyModel(parentModel)
 , m_parentModel(parentModel)
 {
     connect(parentModel, &AbstractModel::favoritesModelChanged, this, &InvalidAppsFilterProxy::connectNewFavoritesModel);
@@ -419,8 +419,10 @@ void RecentUsageModel::refresh()
         return;
     }
 
+    QAbstractItemModel *oldModel = sourceModel();
+    disconnectSignals();
     setSourceModel(nullptr);
-    delete m_activitiesModel;
+    delete oldModel;
 
     auto query = UsedResources
                     | (m_ordering == Recent ? RecentlyUsedFirst : HighScoredFirst)
@@ -460,7 +462,7 @@ void RecentUsageModel::refresh()
     }
 
     if (m_usage == AppsAndDocs) {
-        model = new GroupSortProxy(model);
+        model = new GroupSortProxy(this, model);
     }
 
     setSourceModel(model);
