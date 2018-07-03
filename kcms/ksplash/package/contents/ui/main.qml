@@ -34,7 +34,7 @@ KCM.GridViewKCM {
         text: model.display
         toolTip: model.description
 
-        thumbnailAvailable: model.screenshot != ""
+        thumbnailAvailable: !!model.screenshot
         thumbnail: Image {
             anchors.fill: parent
             source: model.screenshot || ""
