@@ -26,6 +26,9 @@
 #include <Solid/StorageAccess>
 #include <Solid/StorageVolume>
 
+#include <QDBusConnection>
+#include <QDBusMessage>
+
 #include <QTimer>
 
 K_PLUGIN_FACTORY_WITH_JSON(DeviceAutomounterFactory,
@@ -45,6 +48,26 @@ DeviceAutomounter::~DeviceAutomounter()
 
 void DeviceAutomounter::init()
 {
+    if (!AutomounterSettings::automountEnabled()) {
+        // Automounting is disabled, no point in hanging around.
+        QDBusConnection dbus = QDBusConnection::sessionBus();
+        QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.kded5"),
+                                                          QStringLiteral("/kded"),
+                                                          QStringLiteral("org.kde.kded5"),
+                                                          QStringLiteral("setModuleAutoloading"));
+        msg.setArguments({QVariant(QStringLiteral("device_automounter")), QVariant(false)});
+        dbus.call(msg, QDBus::NoBlock);
+
+        // Unload right away
+        msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.kded5"),
+                                             QStringLiteral("/kded"),
+                                             QStringLiteral("org.kde.kded5"),
+                                             QStringLiteral("unloadModule"));
+        msg.setArguments({QVariant(QStringLiteral("device_automounter"))});
+        dbus.call(msg, QDBus::NoBlock);
+        return;
+    }
+
     connect(Solid::DeviceNotifier::instance(), &Solid::DeviceNotifier::deviceAdded, this, &DeviceAutomounter::deviceAdded);
     QList<Solid::Device> volumes = Solid::Device::listFromType(Solid::DeviceInterface::StorageVolume);
     foreach(Solid::Device volume, volumes) {

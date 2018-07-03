@@ -1,6 +1,8 @@
 [Desktop Entry]
 Type=Service
 X-KDE-ServiceTypes=KDEDModule
+# Needs to stay this way for compatibility
+# It will disable autoload on initialization when automounting is disabled
 X-KDE-Kded-autoload=true
 X-KDE-Kded-load-on-demand=false
 X-KDE-Kded-phase=1

@@ -20,6 +20,8 @@
 
 #include "DeviceAutomounterKCM.h"
 
+#include <QDBusConnection>
+#include <QDBusMessage>
 #include <QStandardItem>
 #include <QStandardItemModel>
 #include <QItemSelectionModel>
@@ -129,7 +131,8 @@ void DeviceAutomounterKCM::save()
 {
     saveLayout();
 
-    AutomounterSettings::setAutomountEnabled(automountEnabled->isChecked());
+    const bool enabled = automountEnabled->isChecked();
+    AutomounterSettings::setAutomountEnabled(enabled);
     AutomounterSettings::setAutomountUnknownDevices(automountUnknownDevices->isChecked());
     AutomounterSettings::setAutomountOnLogin(automountOnLogin->isChecked());
     AutomounterSettings::setAutomountOnPlugin(automountOnPlugin->isChecked());
@@ -166,6 +169,23 @@ void DeviceAutomounterKCM::save()
     }
 
     AutomounterSettings::self()->save();
+
+    // Now tell kded to automatically load the module if loaded
+    QDBusConnection dbus = QDBusConnection::sessionBus();
+    QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.kded5"),
+                                                      QStringLiteral("/kded"),
+                                                      QStringLiteral("org.kde.kded5"),
+                                                      QStringLiteral("setModuleAutoloading"));
+    msg.setArguments({QVariant(QStringLiteral("device_automounter")), QVariant(enabled)});
+    dbus.call(msg, QDBus::NoBlock);
+
+    // Load or unload right away
+    msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.kded5"),
+                                         QStringLiteral("/kded"),
+                                         QStringLiteral("org.kde.kded5"),
+                                         enabled ? QStringLiteral("loadModule") : QStringLiteral("unloadModule"));
+    msg.setArguments({QVariant(QStringLiteral("device_automounter"))});
+    dbus.call(msg, QDBus::NoBlock);
 }
 
 void DeviceAutomounterKCM::saveLayout()
