@@ -24,6 +24,17 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.draganddrop 2.0 as DragDrop
 
 DragDrop.DropArea {
+    readonly property bool inPanel: (plasmoid.location == PlasmaCore.Types.TopEdge
+        || plasmoid.location == PlasmaCore.Types.RightEdge
+        || plasmoid.location == PlasmaCore.Types.BottomEdge
+        || plasmoid.location == PlasmaCore.Types.LeftEdge)
+
+    Layout.minimumWidth: plasmoid.formFactor === PlasmaCore.Types.Horizontal ? height : units.iconSizes.small
+    Layout.minimumHeight: plasmoid.formFactor === PlasmaCore.Types.Vertical ? width : (units.iconSizes.small + 2 * theme.mSize(theme.defaultFont).height)
+
+    Layout.maximumWidth: inPanel && plasmoid.formFactor != PlasmaCore.Types.Vertical ? units.iconSizeHints.panel : -1
+    Layout.maximumHeight: inPanel && plasmoid.formFactor != PlasmaCore.Types.Vertical ? units.iconSizeHints.panel : -1
+
     property Item folderView: null
 
     onContainsDragChanged: {
