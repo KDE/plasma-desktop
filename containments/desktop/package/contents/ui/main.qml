@@ -37,15 +37,35 @@ FolderViewDropArea {
     id: root
     objectName: isFolder ? "folder" : "desktop"
 
-    width: isPopup ? undefined : preferredWidth(false) // for the initial size when placed on the desktop
-    Layout.minimumWidth: preferredWidth(true)
-    Layout.preferredWidth: isPopup ? preferredWidth(false) : 0 // for the popup size to change at runtime when view mode changes
-    Plasmoid.switchWidth: isPopup ? units.iconSizeHints.panel : preferredWidth(true)
+    width: isPopup ? undefined : preferredWidth(false) // Initial size when adding to e.g. desktop.
+    height: isPopup ? undefined : preferredHeight(false) // Initial size when adding to e.g. desktop.
 
-    height: isPopup ? undefined : preferredHeight(false)
-    Layout.minimumHeight: preferredHeight(true)
-    Layout.preferredHeight: isPopup ? preferredHeight(false) : 0
-    Plasmoid.switchHeight: isPopup ? units.iconSizeHints.panel : preferredHeight(true)
+    Layout.minimumWidth: preferredWidth(!isPopup)
+    Layout.minimumHeight: preferredHeight(!isPopup)
+
+    Layout.preferredWidth: preferredWidth(false)
+    Layout.preferredHeight: preferredHeight(false)
+
+    Layout.maximumWidth: isPopup ? preferredWidth(false) : -1
+    Layout.maximumHeight: isPopup ? preferredHeight(false) : -1
+
+    Plasmoid.switchWidth: {
+        // Support expanding into the full representation only on vertical panels.
+        if (isPopup && plasmoid.formFactor == PlasmaCore.Types.Vertical) {
+            return units.iconSizeHints.panel;
+        }
+
+        return undefined;
+    }
+
+    Plasmoid.switchHeight: {
+        // Support expanding into the full representation only on vertical panels.
+        if (isPopup && plasmoid.formFactor == PlasmaCore.Types.Vertical) {
+            return units.iconSizeHints.panel;
+        }
+
+        return undefined;
+    }
 
     LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
