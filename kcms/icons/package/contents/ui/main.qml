@@ -73,6 +73,7 @@ KCM.GridViewKCM {
             anchors.fill: parent
             acceptedButtons: Qt.NoButton
             hoverEnabled: true
+            clip: thumbFlow.y < 0
 
             opacity: model.pendingDeletion ? 0.3 : 1
             Behavior on opacity {
