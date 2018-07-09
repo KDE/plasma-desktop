@@ -21,6 +21,8 @@
 #include <QPainter>
 #include <QPalette>
 
+#include <KWindowSystem>
+
 #include "kxftconfig.h"
 #include "previewimageprovider.h"
 #include "previewrenderengine.h"
@@ -68,6 +70,10 @@ PreviewImageProvider::PreviewImageProvider(const QFont& font)
 
 QImage PreviewImageProvider::requestImage(const QString &id, QSize *size, const QSize &requestedSize)
 {
+    if (!KWindowSystem::isPlatformX11()) {
+        return QImage();
+    }
+
     int subPixelIndex = 0;
     int hintingIndex = 0;
     
