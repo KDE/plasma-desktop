@@ -31,6 +31,7 @@
 #include <QDBusMessage>
 #include <QGuiApplication>
 #include <QPainter>
+#include <QPixmapCache>
 #include <QProcess>
 #include <QQuickItem>
 #include <QQuickWindow>
@@ -100,6 +101,9 @@ IconModule::IconModule(QObject *parent, const QVariantList &args)
     connect(m_model, &IconsModel::pendingDeletionsChanged, this, [this] {
         setNeedsSave(true);
     });
+
+    // When user has a lot of themes installed, preview pixmaps might get evicted prematurely
+    QPixmapCache::setCacheLimit(50 * 1024); // 50 MiB
 }
 
 IconModule::~IconModule()
@@ -284,6 +288,7 @@ void IconModule::getNewStuff(QQuickItem *ctx)
             // reload the display icontheme items
             KIconLoader::global()->newIconLoader();
             m_model->load();
+            QPixmapCache::clear();
         });
     }
 
@@ -477,83 +482,110 @@ bool IconModule::installThemes(const QStringList &themes, const QString &archive
     return everythingOk;
 }
 
-QVariantList IconModule::previewIcons(const QString &themeName, int size, qreal dpr) const
+QVariantList IconModule::previewIcons(const QString &themeName, int size, qreal dpr, int limit)
 {
-    KIconTheme theme(themeName);
-    QSvgRenderer renderer;
+    static QVector<QStringList> s_previewIcons{
+        {QStringLiteral("system-run"), QStringLiteral("exec")},
+        {QStringLiteral("folder")},
+        {QStringLiteral("document"), QStringLiteral("text-x-generic")},
+        {QStringLiteral("user-trash"), QStringLiteral("user-trash-empty")},
+        {QStringLiteral("system-help"), QStringLiteral("help-about"), QStringLiteral("help-contents")},
+        {QStringLiteral("preferences-system"), QStringLiteral("systemsettings"), QStringLiteral("configure")},
 
-    auto getBestIcon = [&](const QStringList &iconNames) {
-        const int iconSize = size * dpr;
+        {QStringLiteral("text-html")},
+        {QStringLiteral("image-x-generic"), QStringLiteral("image-png"), QStringLiteral("image-jpeg")},
+        {QStringLiteral("video-x-generic"), QStringLiteral("video-x-theora+ogg"), QStringLiteral("video-mp4")},
+        {QStringLiteral("x-office-document")},
+        {QStringLiteral("x-office-spreadsheet")},
+        {QStringLiteral("x-office-presentation"), QStringLiteral("application-presentation")},
 
-        // not using initializer list as we want to unwrap inherits()
-        const QStringList themes = QStringList() << theme.internalName() << theme.inherits();
-        for (const QString &themeName : themes) {
-            KIconTheme theme(themeName);
+        {QStringLiteral("user-home")},
+        {QStringLiteral("user-desktop"), QStringLiteral("desktop")},
+        {QStringLiteral("folder-image"), QStringLiteral("folder-images"), QStringLiteral("folder-pictures"), QStringLiteral("folder-picture")},
+        {QStringLiteral("folder-documents")},
+        {QStringLiteral("folder-download"), QStringLiteral("folder-downloads")},
+        {QStringLiteral("folder-video"), QStringLiteral("folder-videos")}
+    };
 
-            for (const QString &iconName : iconNames) {
-                QString path = theme.iconPath(QStringLiteral("%1.png").arg(iconName), iconSize, KIconLoader::MatchBest);
-                if (!path.isEmpty()) {
-                    QPixmap pixmap(path);
-                    pixmap.setDevicePixelRatio(dpr);
-                    return pixmap;
-                }
+    // created on-demand as it is quite expensive to do and we don't want to do it every loop iteration either
+    QScopedPointer<KIconTheme> theme;
 
-                //could not find the .png, try loading the .svg or .svgz
-                path = theme.iconPath(QStringLiteral("%1.svg").arg(iconName), iconSize, KIconLoader::MatchBest);
-                if (path.isEmpty()) {
-                    path = theme.iconPath(QStringLiteral("%1.svgz").arg(iconName), iconSize, KIconLoader::MatchBest);
-                }
+    QVariantList pixmaps;
 
-                if (path.isEmpty()) {
-                    continue;
-                }
+    for (const QStringList &iconNames : s_previewIcons) {
+        const QString cacheKey = themeName + QLatin1Char('@') + QString::number(size) + QLatin1Char('@')
+            + QString::number(dpr,'f',1) + QLatin1Char('@') + iconNames.join(QLatin1Char(','));
 
-                if (!renderer.load(path)) {
-                    continue;
-                }
-
-                QPixmap pixmap(iconSize, iconSize);
-                pixmap.setDevicePixelRatio(dpr);
-                pixmap.fill(QColor(Qt::transparent));
-                QPainter p(&pixmap);
-                p.setViewport(0, 0, size, size);
-                renderer.render(&p);
-                return pixmap;
+        QPixmap pix;
+        if (!QPixmapCache::find(cacheKey, pix)) {
+            if (!theme) {
+                theme.reset(new KIconTheme(themeName));
             }
+
+            pix = getBestIcon(*theme.data(), iconNames, size, dpr);
+
+            // Inserting a pixmap even if null so we know whether we searched for it already
+            QPixmapCache::insert(cacheKey, pix);
         }
 
-        return QPixmap();
-    };
+        if (pix.isNull()) {
+            continue;
+        }
 
-    QVariantList pixmaps{
-        getBestIcon({QStringLiteral("system-run"), QStringLiteral("exec")}),
-        getBestIcon({QStringLiteral("folder")}),
-        getBestIcon({QStringLiteral("document"), QStringLiteral("text-x-generic")}),
-        getBestIcon({QStringLiteral("user-trash"), QStringLiteral("user-trash-empty")}),
-        getBestIcon({QStringLiteral("system-help"), QStringLiteral("help-about"), QStringLiteral("help-contents")}),
-        getBestIcon({QStringLiteral("preferences-system"), QStringLiteral("systemsettings"), QStringLiteral("configure")}),
+        pixmaps.append(pix);
 
-        getBestIcon({QStringLiteral("text-html")}),
-        getBestIcon({QStringLiteral("image-x-generic"), QStringLiteral("image-png"), QStringLiteral("image-jpeg")}),
-        getBestIcon({QStringLiteral("video-x-generic"), QStringLiteral("video-x-theora+ogg"), QStringLiteral("video-mp4")}),
-        getBestIcon({QStringLiteral("x-office-document")}),
-        getBestIcon({QStringLiteral("x-office-spreadsheet")}),
-        getBestIcon({QStringLiteral("x-office-presentation"), QStringLiteral("application-presentation")}),
-
-        getBestIcon({QStringLiteral("user-home")}),
-        getBestIcon({QStringLiteral("user-desktop"), QStringLiteral("desktop")}),
-        getBestIcon({QStringLiteral("folder-image"), QStringLiteral("folder-images"), QStringLiteral("folder-pictures"), QStringLiteral("folder-picture")}),
-        getBestIcon({QStringLiteral("folder-documents")}),
-        getBestIcon({QStringLiteral("folder-download"), QStringLiteral("folder-downloads")}),
-        getBestIcon({QStringLiteral("folder-video"), QStringLiteral("folder-videos")})
-    };
-
-    // remove missing icons
-    pixmaps.erase(std::remove_if(pixmaps.begin(), pixmaps.end(), [](const QVariant &pixmapVariant) {
-        return pixmapVariant.value<QPixmap>().isNull();
-    }), pixmaps.end());
+        if (limit > -1 && pixmaps.count() >= limit) {
+            break;
+        }
+    }
 
     return pixmaps;
+}
+
+QPixmap IconModule::getBestIcon(KIconTheme &theme, const QStringList &iconNames, int size, qreal dpr)
+{
+    QSvgRenderer renderer;
+
+    const int iconSize = size * dpr;
+
+    // not using initializer list as we want to unwrap inherits()
+    const QStringList themes = QStringList() << theme.internalName() << theme.inherits();
+    for (const QString &themeName : themes) {
+        KIconTheme theme(themeName);
+
+        for (const QString &iconName : iconNames) {
+            QString path = theme.iconPath(QStringLiteral("%1.png").arg(iconName), iconSize, KIconLoader::MatchBest);
+            if (!path.isEmpty()) {
+                QPixmap pixmap(path);
+                pixmap.setDevicePixelRatio(dpr);
+                return pixmap;
+            }
+
+            //could not find the .png, try loading the .svg or .svgz
+            path = theme.iconPath(QStringLiteral("%1.svg").arg(iconName), iconSize, KIconLoader::MatchBest);
+            if (path.isEmpty()) {
+                path = theme.iconPath(QStringLiteral("%1.svgz").arg(iconName), iconSize, KIconLoader::MatchBest);
+            }
+
+            if (path.isEmpty()) {
+                continue;
+            }
+
+            if (!renderer.load(path)) {
+                continue;
+            }
+
+            QPixmap pixmap(iconSize, iconSize);
+            pixmap.setDevicePixelRatio(dpr);
+            pixmap.fill(QColor(Qt::transparent));
+            QPainter p(&pixmap);
+            p.setViewport(0, 0, size, size);
+            renderer.render(&p);
+            return pixmap;
+        }
+    }
+
+    return QPixmap();
 }
 
 #include "main.moc"

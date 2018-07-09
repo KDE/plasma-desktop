@@ -72,7 +72,8 @@ public:
     Q_INVOKABLE void setIconSize(int group, int size);
     Q_INVOKABLE QList<int> availableIconSizes(int group) const;
 
-    Q_INVOKABLE QVariantList/*QList<QPixmap>*/ previewIcons(const QString &themeName, int size, qreal dpr) const;
+    // QML doesn't understand QList<QPixmap>, hence wrapped in a QVariantList
+    Q_INVOKABLE QVariantList previewIcons(const QString &themeName, int size, qreal dpr, int limit = -1);
 
 signals:
     void iconSizesChanged();
@@ -93,6 +94,8 @@ private:
     void installThemeFile(const QString &path);
 
     void exportToKDE4();
+
+    static QPixmap getBestIcon(KIconTheme &theme, const QStringList &iconNames, int size, qreal dpr);
 
     IconsModel *m_model;
     // so we avoid launching changeicon process when theme didn't change (but only e.g. pending deletions)
