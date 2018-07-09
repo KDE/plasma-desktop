@@ -89,6 +89,11 @@ KCM.GridViewKCM {
                     }
                 }
                 onTriggered: {
+                    if (!thumbFlow.allPreviesLoaded) {
+                        thumbFlow.loadPreviews(-1 /*no limit*/);
+                        thumbFlow.allPreviesLoaded = true;
+                    }
+
                     ++thumbFlow.currentPage;
                     if (thumbFlow.currentPage >= thumbFlow.pageCount) {
                         stop();
@@ -102,6 +107,8 @@ KCM.GridViewKCM {
                 // undefined is "didn't load preview yet"
                 // empty array is "no preview available"
                 property var previews
+                // initially we only load 6 and when the animation starts we'll load the rest
+                property bool allPreviesLoaded: false
 
                 property int currentPage
                 readonly property int pageCount: Math.ceil(thumbRepeater.count / (thumbFlow.columns * thumbFlow.rows))
@@ -111,6 +118,10 @@ KCM.GridViewKCM {
 
                 readonly property int columns: 3
                 readonly property int rows: 2
+
+                function loadPreviews(limit) {
+                    previews = kcm.previewIcons(model.themeName, Math.min(thumbFlow.iconWidth, thumbFlow.iconHeight), Screen.devicePixelRatio, limit);
+                }
 
                 width: parent.width
                 y: -currentPage * iconHeight * rows
@@ -142,7 +153,8 @@ KCM.GridViewKCM {
                 Component.onCompleted: {
                     // avoid reloading it when icon sizes or dpr changes on startup
                     Qt.callLater(function() {
-                        previews = kcm.previewIcons(model.themeName, Math.min(thumbFlow.iconWidth, thumbFlow.iconHeight), Screen.devicePixelRatio)
+                        // We show 6 icons initially (3x2 grid), only load those
+                        thumbFlow.loadPreviews(6 /*limit*/);
                     });
                 }
             }
