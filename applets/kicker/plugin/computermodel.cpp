@@ -46,7 +46,7 @@ FilteredPlacesModel::~FilteredPlacesModel()
 
 QUrl FilteredPlacesModel::url(const QModelIndex &index) const
 {
-    return m_placesModel->url(mapToSource(index));
+    return KFilePlacesModel::convertedUrl(m_placesModel->url(mapToSource(index)));
 }
 
 bool FilteredPlacesModel::isDevice(const QModelIndex &index) const
