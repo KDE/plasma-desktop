@@ -20,6 +20,7 @@ import QtQuick 2.1
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 1.0 as QtControls
 import org.kde.kirigami 2.4 as Kirigami
+import org.kde.kconfig 1.0 // for KAuthorized
 import org.kde.kcm 1.1 as KCM
 
 KCM.GridViewKCM {
@@ -61,6 +62,7 @@ KCM.GridViewKCM {
             iconName: "get-hot-new-stuff"
             text: i18n("&Get New Theme...")
             onClicked: kcm.getNewClicked();
+            visible: KAuthorized.authorize("ghns")
         }
     }
 }

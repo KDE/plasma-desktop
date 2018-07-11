@@ -25,6 +25,7 @@ import QtQuick.Dialogs 1.0 as QtDialogs
 import QtQuick.Controls 2.3 as QtControls
 import org.kde.kirigami 2.4 as Kirigami
 import org.kde.kquickcontrolsaddons 2.0 as KQCAddons
+import org.kde.kconfig 1.0 // for KAuthorized
 import org.kde.kcm 1.1 as KCM
 
 import org.kde.private.kcms.icons 1.0 as Private
@@ -265,6 +266,7 @@ KCM.GridViewKCM {
                 text: i18n("Get New Themes...")
                 icon.name: "get-hot-new-stuff"
                 onClicked: kcm.getNewStuff(this)
+                visible: KAuthorized.authorize("ghns")
             }
         }
     }

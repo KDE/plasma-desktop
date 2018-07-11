@@ -22,6 +22,7 @@ import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.2 as QtControls
 import QtQuick.Dialogs 1.1 as QtDialogs
 import org.kde.kirigami 2.4 as Kirigami
+import org.kde.kconfig 1.0 // for KAuthorized
 import org.kde.kcm 1.1 as KCM
 
 import org.kde.private.kcm_cursortheme 1.0
@@ -144,6 +145,7 @@ KCM.GridViewKCM {
                     text: i18n("&Get New Theme...")
                     onClicked: kcm.getNewClicked();
                     enabled: kcm.canInstall
+                    visible: KAuthorized.authorize("ghns")
                 }
             }
         }
