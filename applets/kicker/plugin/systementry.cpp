@@ -32,8 +32,6 @@
 #include "ksmserver_interface.h"
 #include <kworkspace5/kdisplaymanager.h>
 
-KDisplayManager *SystemEntry::m_displayManager = new KDisplayManager();
-
 SystemEntry::SystemEntry(AbstractModel *owner, Action action) : AbstractEntry(owner)
 , m_action(action)
 , m_valid(false)
@@ -92,7 +90,7 @@ void SystemEntry::init()
         }
         case SwitchUser:
             m_valid = (KAuthorized::authorizeAction("start_new_session") || KAuthorized::authorizeAction("switch_user"))
-                && m_displayManager->isSwitchable();
+                && KDisplayManager().isSwitchable();
             break;
         case SuspendToRam:
             m_valid = Solid::PowerManagement::supportedSleepStates().contains(Solid::PowerManagement::SuspendState);

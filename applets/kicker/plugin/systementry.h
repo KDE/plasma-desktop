@@ -22,8 +22,6 @@
 
 #include "abstractentry.h"
 
-class KDisplayManager;
-
 class SystemEntry : public AbstractEntry
 {
     public:
@@ -63,7 +61,6 @@ class SystemEntry : public AbstractEntry
         Action m_action;
         bool m_valid;
 
-        static KDisplayManager *m_displayManager;
 };
 
 #endif
