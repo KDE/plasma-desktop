@@ -234,11 +234,7 @@ QVariant ComputerModel::data(const QModelIndex &index, int role) const
         } else if (role == Kicker::UrlRole) {
             return m_filteredPlacesModel->url(sourceIndex);
         } else if (role == Kicker::GroupRole) {
-            if (m_filteredPlacesModel->isDevice(sourceIndex)) {
-                return i18n("Removable Storage");
-            } else {
-                return i18n("Places");
-            }
+            return sourceIndex.data(KFilePlacesModel::GroupRole).toString();
         } else if (role == Qt::DisplayRole || role == Qt::DecorationRole) {
             return sourceIndex.data(role);
         }
