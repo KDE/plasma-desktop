@@ -1272,13 +1272,7 @@ QVariant FolderModel::data(const QModelIndex& index, int role) const
     } else if (role == SelectedRole) {
         return m_selectionModel->isSelected(index);
     } else if (role == IsDirRole) {
-        const QUrl &url = data(index, UrlRole).toUrl();
-
-        if (m_isDirCache.contains(url)) {
-            return m_isDirCache[url];
-        } else {
-            return isDir(mapToSource(index), m_dirModel);
-        }
+        return isDir(mapToSource(index), m_dirModel);
     } else if (role == IsLinkRole) {
         const KFileItem item = itemForIndex(index);
         return item.isLink();
@@ -1331,21 +1325,36 @@ bool FolderModel::isDir(const QModelIndex &index, const KDirModel *dirModel) con
         return true;
     }
 
+    auto it = m_isDirCache.constFind(item.url());
+    if (it != m_isDirCache.constEnd()) {
+        return *it;
+    }
+
     if (m_parseDesktopFiles && item.isDesktopFile()) {
         // Check if the desktop file is a link to a directory
         KDesktopFile file(item.targetUrl().path());
 
-        if (file.hasLinkType()) {
-            const QUrl url(file.readUrl());
-
-            if (!m_isDirCache.contains(item.url()) && KProtocolInfo::protocolClass(url.scheme()) == QStringLiteral(":local")) {
-                KIO::StatJob *job = KIO::stat(url, KIO::HideProgressInfo);
-                job->setProperty("org.kde.plasma.folder_url", item.url());
-                job->setSide(KIO::StatJob::SourceSide);
-                job->setDetails(0);
-                connect(job, &KJob::result, this, &FolderModel::statResult);
-            }
+        if (!file.hasLinkType()) {
+            return false;
         }
+
+        const QUrl url(file.readUrl());
+
+        // Check if we already have a running StatJob for this URL.
+        if (m_isDirJobs.contains(item.url())) {
+            return false;
+        }
+
+        if (KProtocolInfo::protocolClass(url.scheme()) != QStringLiteral(":local")) {
+            return false;
+        }
+
+        KIO::StatJob *job = KIO::stat(url, KIO::HideProgressInfo);
+        job->setProperty("org.kde.plasma.folder_url", item.url());
+        job->setSide(KIO::StatJob::SourceSide);
+        job->setDetails(0);
+        connect(job, &KJob::result, this, &FolderModel::statResult);
+        m_isDirJobs.insert(item.url(), job);
     }
 
     return false;
@@ -1358,11 +1367,13 @@ void FolderModel::statResult(KJob *job)
     const QUrl &url = statJob->property("org.kde.plasma.folder_url").toUrl();
     const QModelIndex &idx = index(indexForUrl(url), 0);
 
-    if (idx.isValid()) {
+    if (idx.isValid() && statJob->error() == KJob::NoError) {
         m_isDirCache[url] = statJob->statResult().isDir();
 
         emit dataChanged(idx, idx, QVector<int>() << IsDirRole);
     }
+
+    m_isDirJobs.remove(url);
 }
 
 void FolderModel::evictFromIsDirCache(const KFileItemList& items)
