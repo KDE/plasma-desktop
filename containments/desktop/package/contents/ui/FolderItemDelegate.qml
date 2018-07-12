@@ -348,7 +348,7 @@ Item {
 
                     font.italic: model.isLink
 
-                    visible: editor.targetItem != main
+                    visible: !editor || editor.targetItem != main
                 }
 
                 Component {
@@ -407,7 +407,7 @@ Item {
 
                         source: label
 
-                        visible: editor.targetItem != main
+                        visible: !editor || editor.targetItem != main
                     }
                 }
 

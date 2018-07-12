@@ -61,16 +61,23 @@ FocusScope {
     property var history: []
     property Item backButton: null
     property var dialog: null
+    property Item editor: null
 
     function rename()
     {
         if (gridView.currentIndex != -1) {
+            if (!editor) {
+                editor = editorComponent.createObject(listener);
+            }
+
             editor.targetItem = gridView.currentItem;
         }
     }
 
     function cancelRename() {
-        editor.targetItem = null;
+        if (editor) {
+            editor.targetItem = null;
+        }
     }
 
     function linkHere(sourceUrl) {
@@ -259,7 +266,7 @@ FocusScope {
                 return;
             }
 
-            if (childAt(mouse.x, mouse.y) != editor) {
+            if (editor && childAt(mouse.x, mouse.y) != editor) {
                 editor.commit();
             }
 
@@ -325,7 +332,7 @@ FocusScope {
             clearPressState();
 
             if (mouse.button === Qt.RightButton ||
-                childAt(mouse.x, mouse.y) == editor) {
+                (editor && childAt(mouse.x, mouse.y) === editor)) {
                 return;
             }
 
@@ -618,7 +625,7 @@ FocusScope {
                         hoverActivateTimer.stop();
                     }
 
-                    editor.targetItem = null;
+                    cancelRename();
 
                     dir.setDragHotSpotScrollOffset(contentX, contentY);
 
@@ -653,7 +660,7 @@ FocusScope {
                         hoverActivateTimer.stop();
                     }
 
-                    editor.targetItem = null;
+                    cancelRename();
 
                     dir.setDragHotSpotScrollOffset(contentX, contentY);
 
@@ -882,7 +889,7 @@ FocusScope {
                 }
 
                 Keys.onEscapePressed: {
-                    if (!editor.targetItem) {
+                    if (!editor || !editor.targetItem) {
                         dir.clearSelection();
                         event.accepted = false;
                     }
@@ -1188,160 +1195,164 @@ FocusScope {
             }
         }
 
-        PlasmaComponents.TextArea {
-            id: editor
+        Component {
+            id: editorComponent
 
-            visible: false
+            PlasmaComponents.TextArea {
+                id: editor
 
-            wrapMode: root.useListViewMode ? TextEdit.NoWrap : TextEdit.Wrap
-            
-            textMargin: 0
-            
-            horizontalAlignment: root.useListViewMode ? TextEdit.AlignHLeft : TextEdit.AlignHCenter
+                visible: false
 
-            property Item targetItem: null
+                wrapMode: root.useListViewMode ? TextEdit.NoWrap : TextEdit.Wrap
 
-            onTargetItemChanged: {
-                if (targetItem != null) {
+                textMargin: 0
+
+                horizontalAlignment: root.useListViewMode ? TextEdit.AlignHLeft : TextEdit.AlignHCenter
+
+                property Item targetItem: null
+
+                onTargetItemChanged: {
+                    if (targetItem != null) {
+                        var xy = getXY();
+                        x = xy[0];
+                        y = xy[1];
+                        width = getWidth();
+                        height = getInitHeight();
+                        text = targetItem.label.text;
+                        adjustSize();
+                        editor.select(0, dir.fileExtensionBoundary(positioner.map(targetItem.index)));
+                        if(isPopup) {
+                            flickableItem.contentX = Math.max(flickableItem.contentWidth - contentItem.width, 0);
+                        } else {
+                            flickableItem.contentY = Math.max(flickableItem.contentHeight - contentItem.height, 0);
+                        }
+                        visible = true;
+                    } else {
+                        x: 0
+                        y: 0
+                        visible = false;
+                    }
+                }
+
+                onVisibleChanged: {
+                    if (visible) {
+                        focus = true;
+                    } else {
+                        scrollArea.focus = true;
+                    }
+                }
+
+                Keys.onPressed: {
+                    switch(event.key) {
+                    case Qt.Key_Return:
+                    case Qt.Key_Enter:
+                        commit();
+                        break;
+                    case Qt.Key_Escape:
+                        if (targetItem) {
+                            targetItem = null;
+                            event.accepted = true;
+                        }
+                        break;
+                    case Qt.Key_Home:
+                        if (event.modifiers & Qt.ShiftModifier) {
+                            editor.select(0, cursorPosition);
+                        } else {
+                            editor.select(0, 0);
+                        }
+                        event.accepted = true;
+                        break;
+                    case Qt.Key_End:
+                        if (event.modifiers & Qt.ShiftModifier) {
+                            editor.select(cursorPosition, text.length);
+                        } else {
+                            editor.select(text.length, text.length);
+                        }
+                        event.accepted = true;
+                        break;
+                    default:
+                        adjustSize();
+                        break;
+                    }
+                }
+
+                Keys.onReleased: {
+                    adjustSize();
+                }
+
+                function getXY() {
+                    var pos = main.mapFromItem(targetItem, targetItem.labelArea.x, targetItem.labelArea.y);
+                    var _x, _y;
+                    if (root.useListViewMode) {
+                       _x = targetItem.labelArea.x - __style.padding.left;
+                       _y = pos.y - __style.padding.top;
+                    } else {
+                        _x = targetItem.x + Math.abs(Math.min(gridView.contentX, gridView.originX));
+                        _x += __style.padding.left;
+                        _x += scrollArea.viewport.x;
+                        if (verticalScrollBarPolicy == Qt.ScrollBarAlwaysOn
+                            && gridView.effectiveLayoutDirection == Qt.RightToLeft) {
+                            _x -= __verticalScrollBar.parent.verticalScrollbarOffset;
+                        }
+                        _y = pos.y + units.smallSpacing - __style.padding.top;
+                    }
+                    return([ _x, _y ]);
+                }
+
+                function getWidth(addWidthVerticalScroller) {
+                     return(targetItem.label.parent.width - units.smallSpacing +
+                            (root.useListViewMode ? -(__style.padding.left + __style.padding.right + units.smallSpacing) : 0) +
+                            (addWidthVerticalScroller ? __verticalScrollBar.parent.verticalScrollbarOffset : 0));
+                }
+
+                function getHeight(addWidthHoriozontalScroller, init) {
+                    var _height;
+                    if(isPopup || init) {
+                        _height = targetItem.labelArea.height + __style.padding.top + __style.padding.bottom;
+                    } else {
+                        var realHeight = contentHeight + __style.padding.top + __style.padding.bottom;
+                        var maxHeight = theme.mSize(theme.defaultFont).height * (plasmoid.configuration.textLines + 1) + __style.padding.top + __style.padding.bottom;
+                        _height = Math.min(realHeight, maxHeight);
+                    }
+                    return(_height + (addWidthHoriozontalScroller ? __horizontalScrollBar.parent.horizontalScrollbarOffset : 0));
+                }
+
+                function getInitHeight() {
+                    return(getHeight(false, true));
+                }
+
+                function adjustSize() {
+                    if(isPopup) {
+                        if(contentWidth + __style.padding.left + __style.padding.right > width) {
+                            visible = true;
+                            horizontalScrollBarPolicy = Qt.ScrollBarAlwaysOn;
+                            height = getHeight(true);
+                        } else {
+                            horizontalScrollBarPolicy = Qt.ScrollBarAlwaysOff;
+                            height = getHeight();
+                        }
+                    } else {
+                        height = getHeight();
+                        if(contentHeight + __style.padding.top + __style.padding.bottom > height) {
+                            visible = true;
+                            verticalScrollBarPolicy = Qt.ScrollBarAlwaysOn;
+                            width = getWidth(true);
+                        } else {
+                            verticalScrollBarPolicy = Qt.ScrollBarAlwaysOff;
+                            width = getWidth();
+                        }
+                    }
+
                     var xy = getXY();
                     x = xy[0];
                     y = xy[1];
-                    width = getWidth();
-                    height = getInitHeight();
-                    text = targetItem.label.text;
-                    adjustSize();
-                    editor.select(0, dir.fileExtensionBoundary(positioner.map(targetItem.index)));
-                    if(isPopup) {
-                        flickableItem.contentX = Math.max(flickableItem.contentWidth - contentItem.width, 0);
-                    } else {
-                        flickableItem.contentY = Math.max(flickableItem.contentHeight - contentItem.height, 0);
-                    }
-                    visible = true;
-                } else {
-                    x: 0
-                    y: 0
-                    visible = false;
                 }
-            }
-            
-            onVisibleChanged: {
-                if (visible) {
-                    focus = true;
-                } else {
-                    scrollArea.focus = true;
-                }
-            }
 
-            Keys.onPressed: {
-                switch(event.key) {
-                case Qt.Key_Return:
-                case Qt.Key_Enter:
-                    commit();
-                    break;
-                case Qt.Key_Escape:
+                function commit() {
                     if (targetItem) {
+                        dir.rename(positioner.map(targetItem.index), text);
                         targetItem = null;
-                        event.accepted = true;
                     }
-                    break;
-                case Qt.Key_Home:
-                    if (event.modifiers & Qt.ShiftModifier) {
-                        editor.select(0, cursorPosition);
-                    } else {
-                        editor.select(0, 0);
-                    }
-                    event.accepted = true;
-                    break;
-                case Qt.Key_End:
-                    if (event.modifiers & Qt.ShiftModifier) {
-                        editor.select(cursorPosition, text.length);
-                    } else {
-                        editor.select(text.length, text.length);
-                    }
-                    event.accepted = true;
-                    break;
-                default:
-                    adjustSize();
-                    break;
-                }
-            }
-
-            Keys.onReleased: {
-                adjustSize();
-            }
-            
-            function getXY() {
-                var pos = main.mapFromItem(targetItem, targetItem.labelArea.x, targetItem.labelArea.y);
-                var _x, _y;
-                if (root.useListViewMode) {
-                   _x = targetItem.labelArea.x - __style.padding.left;
-                   _y = pos.y - __style.padding.top;
-                } else {
-                    _x = targetItem.x + Math.abs(Math.min(gridView.contentX, gridView.originX));
-                    _x += __style.padding.left;
-                    _x += scrollArea.viewport.x;
-                    if (verticalScrollBarPolicy == Qt.ScrollBarAlwaysOn
-                        && gridView.effectiveLayoutDirection == Qt.RightToLeft) {
-                        _x -= __verticalScrollBar.parent.verticalScrollbarOffset;
-                    }
-                    _y = pos.y + units.smallSpacing - __style.padding.top;
-                }
-                return([ _x, _y ]);
-            }
-            
-            function getWidth(addWidthVerticalScroller) {
-                 return(targetItem.label.parent.width - units.smallSpacing +
-                        (root.useListViewMode ? -(__style.padding.left + __style.padding.right + units.smallSpacing) : 0) +
-                        (addWidthVerticalScroller ? __verticalScrollBar.parent.verticalScrollbarOffset : 0));
-            }
-            
-            function getHeight(addWidthHoriozontalScroller, init) {
-                var _height;
-                if(isPopup || init) {
-                    _height = targetItem.labelArea.height + __style.padding.top + __style.padding.bottom;
-                } else {
-                    var realHeight = contentHeight + __style.padding.top + __style.padding.bottom;
-                    var maxHeight = theme.mSize(theme.defaultFont).height * (plasmoid.configuration.textLines + 1) + __style.padding.top + __style.padding.bottom;
-                    _height = Math.min(realHeight, maxHeight);
-                }
-                return(_height + (addWidthHoriozontalScroller ? __horizontalScrollBar.parent.horizontalScrollbarOffset : 0));
-            }
-            
-            function getInitHeight() {
-                return(getHeight(false, true));
-            }
-            
-            function adjustSize() {
-                if(isPopup) {
-                    if(contentWidth + __style.padding.left + __style.padding.right > width) {
-                        visible = true;
-                        horizontalScrollBarPolicy = Qt.ScrollBarAlwaysOn;
-                        height = getHeight(true);
-                    } else {
-                        horizontalScrollBarPolicy = Qt.ScrollBarAlwaysOff;
-                        height = getHeight();
-                    }
-                } else {
-                    height = getHeight();
-                    if(contentHeight + __style.padding.top + __style.padding.bottom > height) {
-                        visible = true;
-                        verticalScrollBarPolicy = Qt.ScrollBarAlwaysOn;
-                        width = getWidth(true);
-                    } else {
-                        verticalScrollBarPolicy = Qt.ScrollBarAlwaysOff;
-                        width = getWidth();
-                    }
-                }
-
-                var xy = getXY();
-                x = xy[0];
-                y = xy[1];
-            }
-
-            function commit() {
-                if (targetItem) {
-                    dir.rename(positioner.map(targetItem.index), text);
-                    targetItem = null;
                 }
             }
         }
