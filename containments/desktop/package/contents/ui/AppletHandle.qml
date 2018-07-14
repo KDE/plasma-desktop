@@ -280,7 +280,7 @@ KQuickControlsAddons.MouseEventListener {
             ActionButton {
                 id: closeButton
                 svg: configIconsSvg
-                elementId: "close"
+                elementId: "delete"
                 mainText: i18n("Remove")
                 iconSize: root.iconSize
                 visible: {
