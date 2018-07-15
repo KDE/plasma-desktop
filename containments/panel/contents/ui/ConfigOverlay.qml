@@ -21,6 +21,7 @@ import QtQuick.Layouts 1.0
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kquickcontrolsaddons 2.0
 
 MouseArea {
@@ -356,38 +357,38 @@ MouseArea {
 
         mainItem: MouseArea {
             enabled: currentApplet
-            width: handleRow.childrenRect.width + (2 * handleRow.spacing)
-            height: Math.max(configureButton.height, label.contentHeight, closeButton.height)
+            width: handleButtons.width
+            height: handleButtons.height
             hoverEnabled: true
             onEntered: hideTimer.stop();
             onExited:  hideTimer.restart();
 
-            LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
-            LayoutMirroring.childrenInherit: true
-
-            Row {
-                id: handleRow
-                anchors.horizontalCenter: parent.horizontalCenter
+            ColumnLayout {
+                id: handleButtons
                 spacing: units.smallSpacing
+
+                PlasmaExtras.Heading {
+                    id: label
+                    level: 3
+                    Layout.fillWidth: true
+                    Layout.leftMargin: units.smallSpacing * 2
+                    Layout.rightMargin: units.smallSpacing * 2
+                }
                 PlasmaComponents.ToolButton {
                     id: configureButton
-                    anchors.verticalCenter: parent.verticalCenter
+                    Layout.fillWidth: true
                     iconSource: "configure"
+                    text: i18n("Configure...")
                     onClicked: {
                         tooltip.visible = false;
                         currentApplet.applet.action("configure").trigger()
                     }
                 }
-                PlasmaComponents.Label {
-                    id: label
-                    anchors.verticalCenter: parent.verticalCenter
-                    textFormat: Text.PlainText
-                    maximumLineCount: 1
-                }
                 PlasmaComponents.ToolButton {
                     id: closeButton
-                    anchors.verticalCenter: parent.verticalCenter
+                    Layout.fillWidth: true
                     iconSource: "delete"
+                    text: i18n("Remove")
                     onClicked: {
                         tooltip.visible = false;
                         currentApplet.applet.action("remove").trigger();
