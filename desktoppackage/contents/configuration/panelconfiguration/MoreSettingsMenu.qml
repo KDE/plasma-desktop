@@ -139,7 +139,7 @@ PlasmaCore.Dialog {
         PlasmaComponents.ToolButton {
             Layout.fillWidth: true
             text: i18nd("plasma_shell_org.kde.plasma.desktop", "Remove Panel")
-            iconSource: "window-close"
+            iconSource: "delete"
             onClicked: {
                 contextMenu.visible = false;
                 plasmoid.action("remove").trigger();
