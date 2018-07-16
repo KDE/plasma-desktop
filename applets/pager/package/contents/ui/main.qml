@@ -337,7 +337,9 @@ MouseArea {
                         }
                     }
 
-                    if (visibleWindows.length) {
+                    if (visibleWindows.length === 1) {
+                        text += visibleWindows[0]
+                    } else if (visibleWindows.length > 1) {
                         text += i18np("%1 Window:", "%1 Windows:", visibleWindows.length)
                             + generateWindowList(visibleWindows)
                     }
