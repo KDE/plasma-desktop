@@ -1784,6 +1784,7 @@ void FolderModel::openContextMenu(QQuickItem *visualParent, Qt::KeyboardModifier
     } else {
         m_menuPosition = QCursor::pos();
     }
+    menu->winId(); //force surface creation before ensurePolish call in menu::Popup which happens before show
     menu->popup(m_menuPosition);
     connect(menu, &QMenu::aboutToHide, [menu]() { menu->deleteLater(); });
 }
