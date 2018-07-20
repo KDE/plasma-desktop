@@ -17,7 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-import QtQuick 2.4
+import QtQuick 2.8
 import QtGraphicalEffects 1.0
 
 import org.kde.plasma.plasmoid 2.0
@@ -58,7 +58,13 @@ Item {
     Loader {
         id: loader
 
-        anchors.fill: parent
+        // On the desktop we pad our cellSize to avoid a gap at the right/bottom of the screen.
+        // The padding per item is quite small and causes the delegate to be positioned on fractional pixels
+        // leading to blurry rendering. The Loader is offset to account for this.
+        x: -main.x % 1
+        y: -main.y % 1
+        width: parent.width
+        height: parent.height
 
         visible: status === Loader.Ready
 
@@ -348,7 +354,18 @@ Item {
 
                     font.italic: model.isLink
 
-                    visible: editor.targetItem != main
+                    visible: {
+                        if (editor.targetItem === main) {
+                            return false;
+                        }
+
+                        // DropShadow renders the Label already.
+                        if (frameLoader.textShadow && frameLoader.textShadow.visible) {
+                            return false;
+                        }
+
+                        return true;
+                    }
                 }
 
                 Component {
@@ -473,7 +490,7 @@ Item {
             }
 
             Component.onCompleted: {
-                if (root.isContainment && main.GridView.view.isRootView) {
+                if (root.isContainment && main.GridView.view.isRootView && root.GraphicsInfo.api === GraphicsInfo.OpenGL) {
                     frameLoader.textShadow = textShadowComponent.createObject(frameLoader);
                 }
             }
