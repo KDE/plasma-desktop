@@ -57,7 +57,7 @@ BlacklistedApplicationsModel::BlacklistedApplicationsModel(QObject *parent)
     : QAbstractListModel(parent)
 {
     d->enabled = false;
-    d->pluginConfig = KSharedConfig::openConfig("kactivitymanagerd-pluginsrc");
+    d->pluginConfig = KSharedConfig::openConfig(QStringLiteral("kactivitymanagerd-pluginsrc"));
 }
 
 BlacklistedApplicationsModel::~BlacklistedApplicationsModel()
@@ -90,7 +90,7 @@ void BlacklistedApplicationsModel::load()
         = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation)
           + QStringLiteral("/kactivitymanagerd/resources/database");
 
-    d->database = QSqlDatabase::addDatabase("QSQLITE", "plugins_sqlite_db_resources");
+    d->database = QSqlDatabase::addDatabase(QStringLiteral("QSQLITE"), QStringLiteral("plugins_sqlite_db_resources"));
     d->database.setDatabaseName(path);
 
     if (!d->database.open()) {
@@ -98,7 +98,7 @@ void BlacklistedApplicationsModel::load()
         return;
     }
 
-    auto query = d->database.exec("SELECT DISTINCT(initiatingAgent) FROM ResourceScoreCache ORDER BY initiatingAgent");
+    auto query = d->database.exec(QStringLiteral("SELECT DISTINCT(initiatingAgent) FROM ResourceScoreCache ORDER BY initiatingAgent"));
 
     if (d->applications.length() > 0) {
         beginRemoveRows(QModelIndex(), 0, d->applications.length() - 1);
@@ -123,7 +123,7 @@ void BlacklistedApplicationsModel::load()
     auto applications = (blockedApplications + allowedApplications).toList();
 
     if (applications.length() > 0) {
-        qSort(applications);
+        std::sort(applications.begin(), applications.end());
 
         beginInsertRows(QModelIndex(), 0, applications.length() - 1);
 
@@ -215,7 +215,7 @@ QVariant BlacklistedApplicationsModel::data(const QModelIndex &modelIndex, int r
         return application.title;
 
     case Qt::DecorationRole:
-        return application.icon.isEmpty() ? "application-x-executable" : application.icon;
+        return application.icon.isEmpty() ? QStringLiteral("application-x-executable") : application.icon;
 
     case BlockedApplicationRole:
         return application.blocked;

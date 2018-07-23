@@ -52,7 +52,7 @@ K_EXPORT_PLUGIN( KolorFactory("kcmcolors") )
 KColorCm::KColorCm(QWidget *parent, const QVariantList &)
     : KCModule( parent ),
       m_dontLoadSelectedScheme(false),
-      m_previousSchemeItem(0)
+      m_previousSchemeItem(nullptr)
 {
     KAboutData* about = new KAboutData(
         QStringLiteral("kcmcolors"), i18n("Colors"), QStringLiteral("1.0"), QString(),
@@ -158,7 +158,7 @@ void KColorCm::loadScheme(QListWidgetItem *currentItem, QListWidgetItem *previou
         return;
     }
 
-    if (currentItem != NULL)
+    if (currentItem != nullptr)
     {
         // load it
         const QString name = currentItem->text();
@@ -209,7 +209,7 @@ void KColorCm::loadScheme(QListWidgetItem *currentItem, QListWidgetItem *previou
 
 void KColorCm::on_schemeRemoveButton_clicked()
 {
-    if (schemeList->currentItem() != NULL)
+    if (schemeList->currentItem() != nullptr)
     {
         const QString path = QStandardPaths::locate(QStandardPaths::GenericDataLocation,
             "color-schemes/" + schemeList->currentItem()->data(Qt::UserRole).toString() +
@@ -258,22 +258,22 @@ void KColorCm::on_schemeImportButton_clicked()
 
     int increment = 0;
     QString newName = name;
-    QString testpath = "";
+    QString testpath;
     do
     {
         if (increment) {
             newName = name + QString::number(increment);
         }
         testpath = QStandardPaths::locate(QStandardPaths::GenericDataLocation,
-    "color-schemes/" + newName + ".colors");
+    QStringLiteral("color-schemes/") + newName + QStringLiteral(".colors"));
         increment++;
     } while (!testpath.isEmpty());
 
     QString newpath = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation)
-            + "/color-schemes/";
+            + QStringLiteral("/color-schemes/");
     QDir dir;
     dir.mkpath(newpath);
-    newpath += newName + ".colors";
+    newpath += newName + QStringLiteral(".colors");
     QFile::copy(url.toLocalFile(), newpath);
 
     // Update name
@@ -468,26 +468,26 @@ void KColorCm::updateConfig(KSharedConfigPtr config)
     groupOut.writeEntry("ColorScheme", m_currentColorScheme);
 
     QStringList colorItemList;
-    colorItemList << "BackgroundNormal"
-                  << "BackgroundAlternate"
-                  << "ForegroundNormal"
-                  << "ForegroundInactive"
-                  << "ForegroundActive"
-                  << "ForegroundLink"
-                  << "ForegroundVisited"
-                  << "ForegroundNegative"
-                  << "ForegroundNeutral"
-                  << "ForegroundPositive"
-                  << "DecorationFocus"
-                  << "DecorationHover";
+    colorItemList << QStringLiteral("BackgroundNormal")
+                  << QStringLiteral("BackgroundAlternate")
+                  << QStringLiteral("ForegroundNormal")
+                  << QStringLiteral("ForegroundInactive")
+                  << QStringLiteral("ForegroundActive")
+                  << QStringLiteral("ForegroundLink")
+                  << QStringLiteral("ForegroundVisited")
+                  << QStringLiteral("ForegroundNegative")
+                  << QStringLiteral("ForegroundNeutral")
+                  << QStringLiteral("ForegroundPositive")
+                  << QStringLiteral("DecorationFocus")
+                  << QStringLiteral("DecorationHover");
 
     QStringList colorSetGroupList;
-    colorSetGroupList << "Colors:View"
-                      << "Colors:Window"
-                      << "Colors:Button"
-                      << "Colors:Selection"
-                      << "Colors:Tooltip"
-                      << "Colors:Complementary";
+    colorSetGroupList << QStringLiteral("Colors:View")
+                      << QStringLiteral("Colors:Window")
+                      << QStringLiteral("Colors:Button")
+                      << QStringLiteral("Colors:Selection")
+                      << QStringLiteral("Colors:Tooltip")
+                      << QStringLiteral("Colors:Complementary");
 
     QList <KColorScheme> colorSchemes;
 
@@ -519,12 +519,12 @@ void KColorCm::updateConfig(KSharedConfigPtr config)
     KConfigGroup groupWMOut(m_config, "WM");
 
     QStringList colorItemListWM;
-    colorItemListWM << "activeBackground"
-                    << "activeForeground"
-                    << "inactiveBackground"
-                    << "inactiveForeground"
-                    << "activeBlend"
-                    << "inactiveBlend";
+    colorItemListWM << QStringLiteral("activeBackground")
+                    << QStringLiteral("activeForeground")
+                    << QStringLiteral("inactiveBackground")
+                    << QStringLiteral("inactiveForeground")
+                    << QStringLiteral("activeBlend")
+                    << QStringLiteral("inactiveBlend");
 
     QVector<QColor> defaultWMColors;
     defaultWMColors << QColor(71,80,87)
@@ -542,18 +542,18 @@ void KColorCm::updateConfig(KSharedConfigPtr config)
     }
 
     QStringList groupNameList;
-    groupNameList << "ColorEffects:Inactive" << "ColorEffects:Disabled";
+    groupNameList << QStringLiteral("ColorEffects:Inactive") << QStringLiteral("ColorEffects:Disabled");
 
     QStringList effectList;
-    effectList << "Enable"
-               << "ChangeSelectionColor"
-               << "IntensityEffect"
-               << "IntensityAmount"
-               << "ColorEffect"
-               << "ColorAmount"
-               << "Color"
-               << "ContrastEffect"
-               << "ContrastAmount";
+    effectList << QStringLiteral("Enable")
+               << QStringLiteral("ChangeSelectionColor")
+               << QStringLiteral("IntensityEffect")
+               << QStringLiteral("IntensityAmount")
+               << QStringLiteral("ColorEffect")
+               << QStringLiteral("ColorAmount")
+               << QStringLiteral("Color")
+               << QStringLiteral("ContrastEffect")
+               << QStringLiteral("ContrastAmount");
 
     for (const QString &groupName : groupNameList)
     {

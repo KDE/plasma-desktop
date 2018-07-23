@@ -1,17 +1,11 @@
 # vim:set softtabstop=3 shiftwidth=3 tabstop=3 expandtab:
 
 project (kactivities-settings)
-find_package (ECM 0.0.8 REQUIRED NO_MODULE)
-set (CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${ECM_MODULE_PATH})
-
 find_package (Qt5 REQUIRED NO_MODULE COMPONENTS Sql Gui Widgets Qml Quick Sql QuickWidgets)
 find_package (KF5GlobalAccel ${KF5_DEP_VERSION} CONFIG REQUIRED)
-# find_package (KF5DBusAddons ${KF5_DEP_VERSION} CONFIG REQUIRED)
 find_package (KF5I18n       ${KF5_DEP_VERSION} CONFIG REQUIRED)
 find_package (KF5WidgetsAddons ${KF5_DEP_VERSION} CONFIG REQUIRED)
 find_package (KF5Config     ${KF5_DEP_VERSION} CONFIG REQUIRED)
-# find_package (KF5CoreAddons ${KF5_DEP_VERSION} CONFIG REQUIRED)
-# find_package (KF5KIO        ${KF5_DEP_VERSION} CONFIG REQUIRED)
 
 set (
    kactivities_KCM_imports_LIB_SRCS

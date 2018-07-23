@@ -36,7 +36,7 @@ class SetPreviewWidget : public QFrame, Ui::setpreview
     Q_OBJECT
 
 public:
-    SetPreviewWidget(QWidget *parent);
+    explicit SetPreviewWidget(QWidget *parent);
     ~SetPreviewWidget() override;
 
     void setPalette(const KSharedConfigPtr &config, KColorScheme::ColorSet);

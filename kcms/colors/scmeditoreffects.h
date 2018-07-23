@@ -35,7 +35,7 @@ class SchemeEditorEffects : public QWidget, public Ui::ScmEditorEffects
     Q_OBJECT
 
 public:
-    SchemeEditorEffects(KSharedConfigPtr config, QPalette::ColorGroup palette, QWidget *parent = nullptr);
+    SchemeEditorEffects(const KSharedConfigPtr &config, QPalette::ColorGroup palette, QWidget *parent = nullptr);
     void updateValues();
     void updateFromEffectsPage();
 

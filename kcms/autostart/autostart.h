@@ -37,8 +37,8 @@ class Autostart: public KCModule
     Q_OBJECT
 
 public:
-    Autostart( QWidget* parent, const QVariantList&  );
-    ~Autostart();
+    explicit Autostart( QWidget* parent, const QVariantList&  );
+    ~Autostart() override;
     enum COL_TYPE { COL_NAME = 0, COL_COMMAND=1, COL_STATUS=2,COL_RUN=3 };
     void load() override;
     void save() override;

@@ -32,7 +32,7 @@ class ExtraActivitiesInterface : public QObject {
     Q_OBJECT
 
 public:
-    ExtraActivitiesInterface(QObject *parent = nullptr);
+    explicit ExtraActivitiesInterface(QObject *parent = nullptr);
     ~ExtraActivitiesInterface();
 
 public Q_SLOTS:

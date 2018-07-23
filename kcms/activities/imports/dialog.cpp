@@ -53,12 +53,12 @@ class Dialog::Private {
 public:
     Private(Dialog *parent)
         : q(parent)
-        , activityName("activityName")
-        , activityDescription("activityDescription")
-        , activityIcon("activityIcon")
-        , activityWallpaper("activityWallpaper")
+        , activityName(QStringLiteral("activityName"))
+        , activityDescription(QStringLiteral("activityDescription"))
+        , activityIcon(QStringLiteral("activityIcon"))
+        , activityWallpaper(QStringLiteral("activityWallpaper"))
         , activityIsPrivate(true)
-        , activityShortcut("activityShortcut")
+        , activityShortcut(QStringLiteral("activityShortcut"))
         , features(new KAMD_DBUS_CLASS_INTERFACE(Features, Features, q))
     {
     }
@@ -81,9 +81,9 @@ public:
 
         view->setClearColor(QGuiApplication::palette().window().color());
 
-        view->rootContext()->setContextProperty("dialog", q);
+        view->rootContext()->setContextProperty(QStringLiteral("dialog"), q);
 
-        if (setViewSource(view, "/qml/activityDialog/" + file)) {
+        if (setViewSource(view, QStringLiteral("/qml/activityDialog/") + file)) {
             tabs->addTab(view, title);
 
             auto root = view->rootObject();
@@ -92,7 +92,7 @@ public:
 
         } else {
             message->setText(i18n("Error loading the QML files. Check your installation.\nMissing %1",
-                                  QStringLiteral(KAMD_KCM_DATADIR) + "/qml/activityDialog/" + file));
+                                  QStringLiteral(KAMD_KCM_DATADIR) + QStringLiteral("/qml/activityDialog/") + file));
             message->setVisible(true);
         }
 
@@ -126,7 +126,7 @@ public:
 
 void Dialog::showDialog(const QString &id)
 {
-    static Dialog *dialog = 0;
+    static Dialog *dialog = nullptr;
 
     // If we use the regular singleton here (static value instead of static ptr),
     // we will crash on exit because of Qt...
@@ -155,8 +155,8 @@ Dialog::Dialog(QObject *parent)
     // Tabs
     d->tabs = new QTabWidget(this);
     d->layout->addWidget(d->tabs);
-    d->tabGeneral = d->createTab(i18n("General"), "GeneralTab.qml");
-    d->tabOther   = d->createTab(i18n("Other"),   "OtherTab.qml");
+    d->tabGeneral = d->createTab(i18n("General"), QStringLiteral("GeneralTab.qml"));
+    d->tabOther   = d->createTab(i18n("Other"),   QStringLiteral("OtherTab.qml"));
 
     // Buttons
     d->buttons = new QDialogButtonBox(
@@ -199,12 +199,12 @@ void Dialog::init(const QString &activityId)
 
         // finding the key shortcut
         const auto shortcuts = KGlobalAccel::self()->globalShortcut(
-            QStringLiteral("ActivityManager"), "switch-to-activity-" + activityId);
+            QStringLiteral("ActivityManager"), QStringLiteral("switch-to-activity-") + activityId);
         setActivityShortcut(shortcuts.isEmpty() ? QKeySequence() : shortcuts.first());
 
         // is private?
         auto result = d->features->GetValue(
-            "org.kde.ActivityManager.Resources.Scoring/isOTR/" + activityId);
+            QStringLiteral("org.kde.ActivityManager.Resources.Scoring/isOTR/") + activityId);
 
         auto watcher = new QDBusPendingCallWatcher(result, this);
 
@@ -293,13 +293,13 @@ void Dialog::saveChanges(const QString &activityId)
     // setting the key shortcut
     QAction action(nullptr);
     action.setProperty("isConfigurationAction", true);
-    action.setProperty("componentName", "ActivityManager");
-    action.setObjectName("switch-to-activity-" + activityId);
+    action.setProperty("componentName", QStringLiteral("ActivityManager"));
+    action.setObjectName(QStringLiteral("switch-to-activity-") + activityId);
     KGlobalAccel::self()->removeAllShortcuts(&action);
     KGlobalAccel::self()->setGlobalShortcut(&action, activityShortcut());
 
     // is private?
-    d->features->SetValue("org.kde.ActivityManager.Resources.Scoring/isOTR/"
+    d->features->SetValue(QStringLiteral("org.kde.ActivityManager.Resources.Scoring/isOTR/")
                               + activityId,
                           QDBusVariant(activityIsPrivate()));
 

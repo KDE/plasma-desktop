@@ -69,5 +69,5 @@ void ActivitySettings::deleteActivity(const QString &id)
 
 void ActivitySettings::configureActivities()
 {
-    QProcess::startDetached("kcmshell5", { "activities" });
+    QProcess::startDetached(QStringLiteral("kcmshell5"), { QStringLiteral("activities") });
 }

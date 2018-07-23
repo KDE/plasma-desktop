@@ -30,7 +30,7 @@ class Dialog: public QDialog {
     Q_OBJECT
 
 public:
-    ~Dialog();
+    ~Dialog() override;
 
     static void showDialog(const QString &activityId = QString());
 

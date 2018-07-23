@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <KConfigGroup>
 
-SchemeEditorEffects::SchemeEditorEffects(KSharedConfigPtr config, QPalette::ColorGroup palette, QWidget *parent)
+SchemeEditorEffects::SchemeEditorEffects(const KSharedConfigPtr &config, QPalette::ColorGroup palette, QWidget *parent)
     : QWidget( parent )
     , m_palette(palette)
     , m_config(config)
@@ -138,14 +138,14 @@ void SchemeEditorEffects::updateFromEffectsPage()
         return;
     }
 
-    QString groupName = "";
+    QString groupName;
     if (m_palette == QPalette::Inactive)
     {
-        groupName = "ColorEffects:Inactive";
+        groupName = QStringLiteral("ColorEffects:Inactive");
     }
     else if (m_palette == QPalette::Disabled)
     {
-        groupName = "ColorEffects:Disabled";
+        groupName = QStringLiteral("ColorEffects:Disabled");
     }
     else
     {

@@ -103,7 +103,7 @@ void SchemeEditorDialog::on_schemeKnsUploadButton_clicked()
 
     // find path
     const QString path = QStandardPaths::locate(QStandardPaths::GenericDataLocation,
-        "color-schemes/" + m_schemeName + ".colors");
+        QStringLiteral("color-schemes/") + m_schemeName + QStringLiteral(".colors"));
     if (path.isEmpty() ) // if the color scheme file wasn't found
     {
         qDebug() << "path for color scheme " << m_schemeName << " couldn't be found";
@@ -173,7 +173,7 @@ void SchemeEditorDialog::saveScheme()
     }
 
     QString filename = name;
-    filename.remove('\''); // So Foo's does not become FooS
+    filename.remove(QLatin1Char('\'')); // So Foo's does not become FooS
     QRegExp fixer(QStringLiteral("[\\W,.-]+(.?)"));
     int offset;
     while ((offset = fixer.indexIn(filename)) >= 0)
@@ -182,7 +182,7 @@ void SchemeEditorDialog::saveScheme()
 
     // check if that name is already in the list
     const QString path = QStandardPaths::locate(QStandardPaths::GenericDataLocation,
-        "color-schemes/" + filename + ".colors");
+        QStringLiteral("color-schemes/") + filename + QStringLiteral(".colors"));
 
     QFile file(path);
     const int permissions = file.permissions();

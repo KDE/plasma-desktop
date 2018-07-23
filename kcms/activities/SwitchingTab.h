@@ -33,7 +33,7 @@ class QKeySequence;
 class SwitchingTab : public QWidget {
     Q_OBJECT
 public:
-    SwitchingTab(QWidget *parent);
+    explicit SwitchingTab(QWidget *parent);
     ~SwitchingTab();
 
 public Q_SLOTS:

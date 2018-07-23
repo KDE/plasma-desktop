@@ -1,7 +1,6 @@
 # KI18N Translation Domain for this library
 add_definitions(-DTRANSLATION_DOMAIN=\"kcm_autostart\")
 
-
 set(kcm_autostart_PART_SRCS
    autostartitem.cpp
    addscriptdialog.cpp

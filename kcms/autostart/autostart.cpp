@@ -293,7 +293,7 @@ void Autostart::slotAddProgram()
     if ( service->desktopEntryName().isEmpty() || service->entryPath().isEmpty()) {
         // Build custom desktop file (e.g. when the user entered an executable
         // name in the OpenWithDialog).
-        desktopPath = m_desktopPath + service->name() + ".desktop";
+        desktopPath = m_desktopPath + service->name() + QStringLiteral(".desktop");
         desktopTemplate = QUrl::fromLocalFile( desktopPath );
         KConfig kc(desktopTemplate.path(), KConfig::SimpleConfig);
         KConfigGroup kcg = kc.group("Desktop Entry");
@@ -313,10 +313,10 @@ void Autostart::slotAddProgram()
     else
     {
         // Use existing desktop file and use same file name to enable overrides.
-        desktopPath = m_desktopPath + service->desktopEntryName() + ".desktop";
+        desktopPath = m_desktopPath + service->desktopEntryName() + QStringLiteral(".desktop");
         desktopTemplate = QUrl::fromLocalFile( QStandardPaths::locate(QStandardPaths::ApplicationsLocation, service->entryPath()) );
 
-        KPropertiesDialog dlg( QUrl::fromLocalFile(service->entryPath()), QUrl::fromLocalFile(m_desktopPath), service->desktopEntryName() + ".desktop", this );
+        KPropertiesDialog dlg( QUrl::fromLocalFile(service->entryPath()), QUrl::fromLocalFile(m_desktopPath), service->desktopEntryName() + QStringLiteral(".desktop"), this );
         if ( dlg.exec() != QDialog::Accepted )
             return;
     }
@@ -396,14 +396,14 @@ bool Autostart::slotEditCMD( const KFileItem &item)
 
 void Autostart::slotEditCMD()
 {
-    if ( widget->listCMD->currentItem() == 0 )
+    if ( widget->listCMD->currentItem() == nullptr )
         return;
     slotEditCMD( (AutoStartItem*)widget->listCMD->currentItem() );
 }
 
 void Autostart::slotAdvanced()
 {
-    if ( widget->listCMD->currentItem() == 0 )
+    if ( widget->listCMD->currentItem() == nullptr )
         return;
 
     DesktopStartItem *entry = static_cast<DesktopStartItem *>( widget->listCMD->currentItem() );

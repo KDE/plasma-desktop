@@ -76,16 +76,16 @@ bool AddScriptDialog::doBasicSanityCheck()
     QFileInfo file(path);
 
     if ( ! file.isAbsolute() ) {
-        KMessageBox::sorry( 0, i18n("\"%1\" is not an absolute path.", path) );
+        KMessageBox::sorry( nullptr, i18n("\"%1\" is not an absolute path.", path) );
         return false;
     } else if ( ! file.exists() ) {
-        KMessageBox::sorry( 0, i18n("\"%1\" does not exist.", path) );
+        KMessageBox::sorry( nullptr, i18n("\"%1\" does not exist.", path) );
         return false;
     } else if ( !file.isFile() ) {
-        KMessageBox::sorry( 0, i18n("\"%1\" is not a file.", path) );
+        KMessageBox::sorry( nullptr, i18n("\"%1\" is not a file.", path) );
         return false;
     } else if ( ! file.isReadable() ) {
-        KMessageBox::sorry( 0, i18n("\"%1\" is not readable.", path) );
+        KMessageBox::sorry( nullptr, i18n("\"%1\" is not readable.", path) );
         return false;
     }
 

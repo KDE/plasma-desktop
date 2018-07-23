@@ -55,7 +55,7 @@ public:
     {
         if (!activityActions.contains(activity)) {
             auto action = activitiesActionCollection->addAction(
-                "switch-to-activity-" + activity);
+                QStringLiteral("switch-to-activity-") + activity);
 
             activityActions[activity] = action;
             action->setProperty("isConfigurationAction", true);
@@ -86,7 +86,7 @@ void ExtraActivitiesInterface::setIsPrivate(const QString &activity,
                                             bool isPrivate, QJSValue callback)
 {
     auto result = d->features->SetValue(
-        "org.kde.ActivityManager.Resources.Scoring/isOTR/" + activity,
+        QStringLiteral("org.kde.ActivityManager.Resources.Scoring/isOTR/") + activity,
         QDBusVariant(isPrivate));
 
     auto *watcher = new QDBusPendingCallWatcher(result, this);
@@ -104,7 +104,7 @@ void ExtraActivitiesInterface::getIsPrivate(const QString &activity,
                                             QJSValue callback)
 {
     auto result = d->features->GetValue(
-        "org.kde.ActivityManager.Resources.Scoring/isOTR/" + activity);
+        QStringLiteral("org.kde.ActivityManager.Resources.Scoring/isOTR/") + activity);
 
     auto *watcher = new QDBusPendingCallWatcher(result, this);
 

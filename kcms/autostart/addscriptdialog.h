@@ -34,8 +34,8 @@ class AddScriptDialog : public QDialog
     Q_OBJECT
 
 public:
-    explicit AddScriptDialog(QWidget* parent=0);
-    ~AddScriptDialog();
+    explicit AddScriptDialog(QWidget* parent=nullptr);
+    ~AddScriptDialog() override;
     // Returns the Url of the script to be imported
     QUrl importUrl() const;
     bool symLink() const;

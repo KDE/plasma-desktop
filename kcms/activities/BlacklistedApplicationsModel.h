@@ -34,8 +34,8 @@ class BlacklistedApplicationsModel : public QAbstractListModel {
     Q_PROPERTY(bool enabled READ enabled WRITE setEnabled NOTIFY enabledChanged)
 
 public:
-    BlacklistedApplicationsModel(QObject *parent = nullptr);
-    ~BlacklistedApplicationsModel();
+    explicit BlacklistedApplicationsModel(QObject *parent = nullptr);
+    ~BlacklistedApplicationsModel() override;
 
     enum Roles {
         ApplicationIdRole = Qt::UserRole + 1,

@@ -1,7 +1,6 @@
 # KI18N Translation Domain for this library
 add_definitions(-DTRANSLATION_DOMAIN=\"kcmaccess\")
 
-
 set(kcm_access_PART_SRCS kcmaccess.cpp )
 
 ki18n_wrap_ui(kcm_access_PART_SRCS

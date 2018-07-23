@@ -31,7 +31,7 @@
 class ActivitiesTab : public QWidget {
     Q_OBJECT
 public:
-    ActivitiesTab(QWidget *parent);
+    explicit ActivitiesTab(QWidget *parent);
     ~ActivitiesTab();
 
 public Q_SLOTS:

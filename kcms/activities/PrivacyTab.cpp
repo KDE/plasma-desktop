@@ -65,8 +65,8 @@ PrivacyTab::PrivacyTab(QWidget *parent)
 {
     d->setupUi(this);
 
-    d->mainConfig = KSharedConfig::openConfig("kactivitymanagerdrc");
-    d->pluginConfig = KSharedConfig::openConfig("kactivitymanagerd-pluginsrc");
+    d->mainConfig = KSharedConfig::openConfig(QStringLiteral("kactivitymanagerdrc"));
+    d->pluginConfig = KSharedConfig::openConfig(QStringLiteral("kactivitymanagerd-pluginsrc"));
 
     // Keep history initialization
 
@@ -101,9 +101,9 @@ PrivacyTab::PrivacyTab(QWidget *parent)
     d->viewBlacklistedApplications
         = createView(d->viewBlacklistedApplicationsContainer);
     d->viewBlacklistedApplications->rootContext()->setContextProperty(
-        "applicationModel", d->blacklistedApplicationsModel);
+        QStringLiteral("applicationModel"), d->blacklistedApplicationsModel);
     setViewSource(d->viewBlacklistedApplications,
-        "/qml/privacyTab/BlacklistApplicationView.qml");
+        QStringLiteral("/qml/privacyTab/BlacklistApplicationView.qml"));
 
     // React to changes
 
@@ -146,8 +146,8 @@ void PrivacyTab::load()
     const auto statisticsConfig
         = d->pluginConfig->group(SQLITE_PLUGIN_CONFIG_KEY);
 
-    const auto whatToRemember = (WhatToRemember)statisticsConfig.readEntry(
-        "what-to-remember", (int)AllApplications);
+    const auto whatToRemember = static_cast<WhatToRemember>(statisticsConfig.readEntry(
+        "what-to-remember", static_cast<int>(AllApplications)));
 
     d->radioRememberAllApplications->setChecked(whatToRemember == AllApplications);
     d->radioRememberSpecificApplications->setChecked(whatToRemember == SpecificApplications);
@@ -170,7 +170,7 @@ void PrivacyTab::save()
         d->radioDontRememberApplications->isChecked()     ? NoApplications :
         /* otherwise */                                     AllApplications;
 
-    statisticsConfig.writeEntry("what-to-remember", (int)whatToRemember);
+    statisticsConfig.writeEntry("what-to-remember", static_cast<int>(whatToRemember));
     statisticsConfig.writeEntry("keep-history-for", d->spinKeepHistory->value());
     statisticsConfig.writeEntry("blocked-by-default", d->checkBlacklistAllNotOnList->isChecked());
 
@@ -189,27 +189,27 @@ void PrivacyTab::forget(int count, const QString &what)
     KAMD_DBUS_DECL_INTERFACE(rankingsservice, Resources/Scoring,
                              ResourcesScoring);
 
-    rankingsservice.asyncCall("DeleteRecentStats", QString(), count, what);
+    rankingsservice.asyncCall(QStringLiteral("DeleteRecentStats"), QString(), count, what);
 }
 
 void PrivacyTab::forgetLastHour()
 {
-    forget(1, "h");
+    forget(1, QStringLiteral("h"));
 }
 
 void PrivacyTab::forgetTwoHours()
 {
-    forget(2, "h");
+    forget(2, QStringLiteral("h"));
 }
 
 void PrivacyTab::forgetDay()
 {
-    forget(1, "d");
+    forget(1, QStringLiteral("d"));
 }
 
 void PrivacyTab::forgetAll()
 {
-    forget(0, "everything");
+    forget(0, QStringLiteral("everything"));
 }
 
 void PrivacyTab::spinKeepHistoryValueChanged(int value)

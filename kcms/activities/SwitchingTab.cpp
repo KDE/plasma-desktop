@@ -58,17 +58,17 @@ SwitchingTab::SwitchingTab(QWidget *parent)
 {
     d->setupUi(this);
 
-    d->mainConfig = KSharedConfig::openConfig("kactivitymanagerdrc");
+    d->mainConfig = KSharedConfig::openConfig(QStringLiteral("kactivitymanagerdrc"));
 
     // Shortcut config. The shortcut belongs to the component "plasmashell"!
     d->mainActionCollection = new KActionCollection(this, QStringLiteral("plasmashell"));
     d->mainActionCollection->setComponentDisplayName(i18n("Activity switching"));
     d->mainActionCollection->setConfigGlobal(true);
 
-    d->createAction("next activity",
+    d->createAction(QStringLiteral("next activity"),
                     i18nc("@action", "Walk through activities"),
                     { Qt::META + Qt::Key_Tab });
-    d->createAction("previous activity",
+    d->createAction(QStringLiteral("previous activity"),
                     i18nc("@action", "Walk through activities (Reverse)"),
                     { Qt::META + Qt::SHIFT + Qt::Key_Tab } );
 

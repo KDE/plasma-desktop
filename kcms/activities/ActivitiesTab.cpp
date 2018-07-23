@@ -53,8 +53,8 @@ ActivitiesTab::ActivitiesTab(QWidget *parent)
 
     d->viewActivities = createView(this);
     d->viewActivities->rootContext()->setContextProperty(
-        "kactivitiesExtras", d->extraActivitiesInterface);
-    setViewSource(d->viewActivities, "/qml/activitiesTab/main.qml");
+        QStringLiteral("kactivitiesExtras"), d->extraActivitiesInterface);
+    setViewSource(d->viewActivities, QStringLiteral("/qml/activitiesTab/main.qml"));
 }
 
 ActivitiesTab::~ActivitiesTab()
