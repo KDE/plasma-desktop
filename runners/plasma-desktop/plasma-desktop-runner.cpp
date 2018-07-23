@@ -82,22 +82,22 @@ void PlasmaDesktopRunner::run(const Plasma::RunnerContext &context, const Plasma
 
         QString query = context.query();
         if (query.compare(m_desktopConsoleKeyword, Qt::CaseInsensitive) == 0) {
-            message = QDBusMessage::createMethodCall(s_plasmaService, "/PlasmaShell",
-                                                     "org.kde.PlasmaShell", "showInteractiveConsole");
+            message = QDBusMessage::createMethodCall(s_plasmaService, QStringLiteral("/PlasmaShell"),
+                                                     QStringLiteral("org.kde.PlasmaShell"), QStringLiteral("showInteractiveConsole"));
         } else if (query.startsWith(m_desktopConsoleKeyword)) {
-            message = QDBusMessage::createMethodCall(s_plasmaService, "/PlasmaShell",
-                                                     "org.kde.PlasmaShell", "loadScriptInInteractiveConsole");
+            message = QDBusMessage::createMethodCall(s_plasmaService, QStringLiteral("/PlasmaShell"),
+                                                     QStringLiteral("org.kde.PlasmaShell"), QStringLiteral("loadScriptInInteractiveConsole"));
             query.replace(m_desktopConsoleKeyword, QString(), Qt::CaseInsensitive);
             QList<QVariant> args;
             args << query;
             message.setArguments(args);
         }
         if (query.compare(m_kwinConsoleKeyword, Qt::CaseInsensitive) == 0) {
-            message = QDBusMessage::createMethodCall(s_plasmaService, "/PlasmaShell",
-                                                     "org.kde.PlasmaShell", "showInteractiveKWinConsole");
+            message = QDBusMessage::createMethodCall(s_plasmaService, QStringLiteral("/PlasmaShell"),
+                                                     QStringLiteral("org.kde.PlasmaShell"), QStringLiteral("showInteractiveKWinConsole"));
         } else if (query.startsWith(m_kwinConsoleKeyword)) {
-            message = QDBusMessage::createMethodCall(s_plasmaService, "/PlasmaShell",
-                                                     "org.kde.PlasmaShell", "loadKWinScriptInInteractiveConsole");
+            message = QDBusMessage::createMethodCall(s_plasmaService, QStringLiteral("/PlasmaShell"),
+                                                     QStringLiteral("org.kde.PlasmaShell"), QStringLiteral("loadKWinScriptInInteractiveConsole"));
             query.replace(m_kwinConsoleKeyword, QString(), Qt::CaseInsensitive);
             QList<QVariant> args;
             args << query;

@@ -55,11 +55,11 @@ KNetAttach::KNetAttach( QWidget* parent )
     connect(_createIcon, &QAbstractButton::toggled, this, &KNetAttach::updateFinishButtonText);
     connect( this, &QWizard::helpRequested, this, &KNetAttach::slotHelpClicked );
     connect( this, &QWizard::currentIdChanged, this, &KNetAttach::slotPageChanged );
-    setWindowIcon(QIcon::fromTheme("knetattach"));
+    setWindowIcon(QIcon::fromTheme(QStringLiteral("knetattach")));
     setOption(HaveHelpButton, true);
     //setResizeMode(Fixed); FIXME: make the wizard fixed-geometry
     button(FinishButton)->setEnabled(false);
-    KConfig crecent( "krecentconnections", KConfig::NoGlobals  );
+    KConfig crecent( QStringLiteral("krecentconnections"), KConfig::NoGlobals  );
     KConfigGroup recent(&crecent, "General");
     QStringList idx = recent.readEntry("Index",QStringList());
     if (idx.isEmpty()) {
@@ -73,7 +73,7 @@ KNetAttach::KNetAttach( QWidget* parent )
     }
     _encoding->clear();
     _encoding->addItems(KCharsets::charsets()->descriptiveEncodingNames());
-    const int codecForLocaleIdx = _encoding->findText(QTextCodec::codecForLocale()->name(), Qt::MatchContains);
+    const int codecForLocaleIdx = _encoding->findText(QString::fromLatin1(QTextCodec::codecForLocale()->name()), Qt::MatchContains);
     _encoding->setCurrentIndex(codecForLocaleIdx != -1 ? codecForLocaleIdx : 0);
 }
 
@@ -84,7 +84,7 @@ void KNetAttach::slotPageChanged( int )
 
 void KNetAttach::slotHelpClicked()
 {
-    QDesktopServices::openUrl(QUrl("help:/knetattach"));
+    QDesktopServices::openUrl(QUrl(QStringLiteral("help:/knetattach")));
 }
 
 void KNetAttach::setInformationText( const QString &type )
@@ -119,25 +119,25 @@ bool KNetAttach::validateCurrentPage()
         _connectionName->setFocus();
 
         if (_webfolder->isChecked()) {
-            setInformationText("WebFolder");
-            updateForProtocol("WebFolder");
+            setInformationText(QStringLiteral("WebFolder"));
+            updateForProtocol(QStringLiteral("WebFolder"));
             _port->setValue(80);
         } else if (_fish->isChecked()) {
-            setInformationText("Fish");
-            updateForProtocol("Fish");
+            setInformationText(QStringLiteral("Fish"));
+            updateForProtocol(QStringLiteral("Fish"));
             _port->setValue(22);
         } else if (_ftp->isChecked()) {
-            setInformationText("FTP");
-            updateForProtocol("FTP");
+            setInformationText(QStringLiteral("FTP"));
+            updateForProtocol(QStringLiteral("FTP"));
             _port->setValue(21);
             if (_path->text().isEmpty()) {
-                _path->setText("/");
+                _path->setText(QStringLiteral("/"));
             }
         } else if (_smb->isChecked()) {
-            setInformationText("SMB");
-            updateForProtocol("SMB");
+            setInformationText(QStringLiteral("SMB"));
+            updateForProtocol(QStringLiteral("SMB"));
         } else { //if (_recent->isChecked()) {
-            KConfig recent( "krecentconnections", KConfig::NoGlobals );
+            KConfig recent( QStringLiteral("krecentconnections"), KConfig::NoGlobals );
             if (!recent.hasGroup(_recentConnectionName->currentText())) {
                 KConfigGroup group = recent.group("General");
                 QStringList idx = group.readEntry("Index",QStringList());
@@ -176,28 +176,28 @@ bool KNetAttach::validateCurrentPage()
         button(BackButton)->setEnabled(false);
         button(FinishButton)->setEnabled(false);
         KUrl url;
-        if (_type == "WebFolder") {
+        if (_type == QLatin1String("WebFolder")) {
             if (_useEncryption->isChecked()) {
-                url.setProtocol("webdavs");
+                url.setProtocol(QStringLiteral("webdavs"));
             } else {
-                url.setProtocol("webdav");
+                url.setProtocol(QStringLiteral("webdav"));
             }
             url.setPort(_port->value());
-        } else if (_type == "Fish") {
-            KConfig config("kio_fishrc");
+        } else if (_type == QLatin1String("Fish")) {
+            KConfig config(QStringLiteral("kio_fishrc"));
             KConfigGroup cg(&config, _host->text().trimmed());
             cg.writeEntry("Charset", KCharsets::charsets()->encodingForName(_encoding->currentText()));
             url.setProtocol(_protocolText->currentText());
             url.setPort(_port->value());
-        } else if (_type == "FTP") {
-            url.setProtocol("ftp");
+        } else if (_type == QLatin1String("FTP")) {
+            url.setProtocol(QStringLiteral("ftp"));
             url.setPort(_port->value());
-            KConfig config("kio_ftprc");
+            KConfig config(QStringLiteral("kio_ftprc"));
             KConfigGroup cg(&config, _host->text().trimmed());
             cg.writeEntry("Charset", KCharsets::charsets()->encodingForName(_encoding->currentText()));
             config.sync();
-        } else if (_type == "SMB") {
-            url.setProtocol("smb");
+        } else if (_type == QLatin1String("SMB")) {
+            url.setProtocol(QStringLiteral("smb"));
         } else { // recent
         }
 
@@ -206,8 +206,8 @@ bool KNetAttach::validateCurrentPage()
         QString path = _path->text().trimmed();
 #ifndef Q_WS_WIN
         // could a relative path really be made absolute by simply prepending a '/' ?
-        if (!path.startsWith('/')) {
-            path = QString("/") + path;
+        if (!path.startsWith(QLatin1Char('/'))) {
+            path = QLatin1Char('/') + path;
         }
 #endif
         url.setPath(path);
@@ -220,7 +220,7 @@ bool KNetAttach::validateCurrentPage()
             return false;
         }
 
-        KRun::runUrl(url, "inode/directory", this);
+        KRun::runUrl(url, QStringLiteral("inode/directory"), this);
 
         QString name = _connectionName->text().trimmed();
 
@@ -228,7 +228,7 @@ bool KNetAttach::validateCurrentPage()
             KGlobal::dirs()->addResourceType("remote_entries", "data", "remoteview");
 
             QString path = KGlobal::dirs()->saveLocation("remote_entries");
-            path += name + ".desktop";
+            path += name + QStringLiteral(".desktop");
             KConfig _desktopFile( path, KConfig::SimpleConfig );
             KConfigGroup desktopFile(&_desktopFile, "Desktop Entry");
             desktopFile.writeEntry("Icon", "folder-remote");
@@ -237,11 +237,11 @@ bool KNetAttach::validateCurrentPage()
             desktopFile.writeEntry("URL", url.prettyUrl());
             desktopFile.writeEntry("Charset", url.fileEncoding());
             desktopFile.sync();
-            org::kde::KDirNotify::emitFilesAdded( QUrl("remote:/") );
+            org::kde::KDirNotify::emitFilesAdded( QUrl(QStringLiteral("remote:/")) );
         }
 
         if (!name.isEmpty()) {
-            KConfig _recent("krecentconnections", KConfig::NoGlobals);
+            KConfig _recent(QStringLiteral("krecentconnections"), KConfig::NoGlobals);
             KConfigGroup recent(&_recent, "General");
             QStringList idx = recent.readEntry("Index",QStringList());
             _recent.deleteGroup(name); // erase anything stale
@@ -261,7 +261,7 @@ bool KNetAttach::validateCurrentPage()
             }
             recent = KConfigGroup(&_recent,name);
             recent.writeEntry("URL", url.prettyUrl());
-            if (_type == "WebFolder" || _type == "Fish" || _type == "FTP") {
+            if (_type == QLatin1String("WebFolder") || _type == QLatin1String("Fish") || _type == QLatin1String("FTP")) {
                 recent.writeEntry("Port", _port->value());
             }
             recent.writeEntry("Type", _type);
@@ -298,7 +298,7 @@ bool KNetAttach::doConnectionTest(const KUrl& url)
 bool KNetAttach::updateForProtocol(const QString& protocol)
 {
     _type = protocol;
-    if (protocol == "WebFolder") {
+    if (protocol == QLatin1String("WebFolder")) {
         _useEncryption->show();
         _portText->show();
         _port->show();
@@ -308,7 +308,7 @@ bool KNetAttach::updateForProtocol(const QString& protocol)
         _user->show();
         _encodingText->hide();
         _encoding->hide();
-    } else if (protocol == "Fish") {
+    } else if (protocol == QLatin1String("Fish")) {
         _useEncryption->hide();
         _portText->show();
         _port->show();
@@ -318,7 +318,7 @@ bool KNetAttach::updateForProtocol(const QString& protocol)
         _user->show();
         _encodingText->show();
         _encoding->show();
-    } else if (protocol == "FTP") {
+    } else if (protocol == QLatin1String("FTP")) {
         _useEncryption->hide();
         _portText->show();
         _port->show();
@@ -328,7 +328,7 @@ bool KNetAttach::updateForProtocol(const QString& protocol)
         _user->show();
         _encodingText->show();
         _encoding->show();
-    } else if (protocol == "SMB") {
+    } else if (protocol == QLatin1String("SMB")) {
         _useEncryption->hide();
         _portText->hide();
         _port->hide();
@@ -339,7 +339,7 @@ bool KNetAttach::updateForProtocol(const QString& protocol)
         _encodingText->hide();
         _encoding->hide();
     } else {
-        _type = "";
+        _type = QString();
         return false;
     }
     return true;

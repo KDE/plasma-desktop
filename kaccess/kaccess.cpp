@@ -145,7 +145,7 @@ static const ModifierKey modifierKeys[] = {
 
 
 KAccessApp::KAccessApp()
-    : overlay(0), _player(0), toggleScreenReaderAction(new QAction(this))
+    : overlay(nullptr), _player(nullptr), toggleScreenReaderAction(new QAction(this))
 {
     m_error = false;
     _activeWindow = KWindowSystem::activeWindow();
@@ -153,7 +153,7 @@ KAccessApp::KAccessApp()
 
     features = 0;
     requestedFeatures = 0;
-    dialog = 0;
+    dialog = nullptr;
 
     if (!QX11Info::isPlatformX11()) {
         m_error = true;
@@ -324,7 +324,7 @@ void KAccessApp::readSettings()
         xkb->ctrls->enabled_ctrls &= ~XkbMouseKeysMask;
 
     features = xkb->ctrls->enabled_ctrls & (XkbSlowKeysMask | XkbBounceKeysMask | XkbStickyKeysMask | XkbMouseKeysMask);
-    if (dialog == 0)
+    if (dialog == nullptr)
         requestedFeatures = features;
     // set state
     XkbSetControls(QX11Info::display(), XkbControlsEnabledMask | XkbMouseKeysAccelMask | XkbStickyKeysMask | XkbSlowKeysMask | XkbBounceKeysMask | XkbAccessXKeysMask | XkbAccessXTimeoutMask, xkb);
@@ -346,7 +346,7 @@ void KAccessApp::readSettings()
     }
 
     delete overlay;
-    overlay = 0;
+    overlay = nullptr;
 
     KConfigGroup screenReaderGroup(_config, "ScreenReader");
     setScreenReaderEnabled(screenReaderGroup.readEntry("Enabled", false));
@@ -354,7 +354,7 @@ void KAccessApp::readSettings()
     QString shortcut = screenReaderGroup.readEntry("Shortcut", QStringLiteral("Meta+Alt+S"));
 
     toggleScreenReaderAction->setText(i18n("Toggle Screen Reader On and Off"));
-    toggleScreenReaderAction->setObjectName("Toggle Screen Reader On and Off");
+    toggleScreenReaderAction->setObjectName(QStringLiteral("Toggle Screen Reader On and Off"));
     toggleScreenReaderAction->setProperty("componentDisplayName", i18nc("Name for kaccess shortcuts category", "Accessibility"));
     KGlobalAccel::self()->setGlobalShortcut(toggleScreenReaderAction,
                                       QKeySequence(shortcut));
@@ -373,15 +373,15 @@ void KAccessApp::toggleScreenReader()
 void KAccessApp::setScreenReaderEnabled(bool enabled)
 {
     if (enabled) {
-        QStringList args = { "set", "org.gnome.desktop.a11y.applications", "screen-reader-enabled", "true"};
-        int ret = QProcess::execute("gsettings", args);
+        QStringList args = { QStringLiteral("set"), QStringLiteral("org.gnome.desktop.a11y.applications"), QStringLiteral("screen-reader-enabled"), QStringLiteral("true")};
+        int ret = QProcess::execute(QStringLiteral("gsettings"), args);
         if (ret == 0) {
             qint64 pid = 0;
-            QProcess::startDetached("orca", {"--replace"}, QString(), &pid);
+            QProcess::startDetached(QStringLiteral("orca"), {QStringLiteral("--replace")}, QString(), &pid);
             qCDebug(logKAccess) << "Launching Orca, pid:" << pid;
         }
     } else {
-        QProcess::startDetached("gsettings", { "set", "org.gnome.desktop.a11y.applications", "screen-reader-enabled", "false"});
+        QProcess::startDetached(QStringLiteral("gsettings"), { QStringLiteral("set"), QStringLiteral("org.gnome.desktop.a11y.applications"), QStringLiteral("screen-reader-enabled"), QStringLiteral("false")});
     }
 }
 
@@ -483,18 +483,18 @@ void KAccessApp::xkbStateNotify()
                     if (!strcmp(modifierKeys[keys[i]].latchedText, "")
                         && ((((mods >> i) & 0x101) != 0) != (((state >> i) & 0x101) != 0))) {
                         if ((mods >> i) & 1) {
-                            KNotification::event("lockkey-locked", i18n(modifierKeys[keys[i]].lockedText));
+                            KNotification::event(QStringLiteral("lockkey-locked"), i18n(modifierKeys[keys[i]].lockedText));
                         } else {
-                            KNotification::event("lockkey-unlocked", i18n(modifierKeys[keys[i]].unlatchedText));
+                            KNotification::event(QStringLiteral("lockkey-unlocked"), i18n(modifierKeys[keys[i]].unlatchedText));
                         }
                     } else if (strcmp(modifierKeys[keys[i]].latchedText, "")
                                && (((mods >> i) & 0x101) != ((state >> i) & 0x101))) {
                         if ((mods >> i) & 0x100) {
-                            KNotification::event("modifierkey-locked", i18n(modifierKeys[keys[i]].lockedText));
+                            KNotification::event(QStringLiteral("modifierkey-locked"), i18n(modifierKeys[keys[i]].lockedText));
                         } else if ((mods >> i) & 1) {
-                            KNotification::event("modifierkey-latched", i18n(modifierKeys[keys[i]].latchedText));
+                            KNotification::event(QStringLiteral("modifierkey-latched"), i18n(modifierKeys[keys[i]].latchedText));
                         } else {
-                            KNotification::event("modifierkey-unlatched", i18n(modifierKeys[keys[i]].unlatchedText));
+                            KNotification::event(QStringLiteral("modifierkey-unlatched"), i18n(modifierKeys[keys[i]].unlatchedText));
                         }
                     }
                 }
@@ -637,31 +637,31 @@ QString mouseKeysShortcut(Display *display)
     HyperMask &= ~(mods | AltGrMask | MetaMask | SuperMask);
 
     if ((modifiers & AltGrMask) != 0)
-        keyname = i18n("AltGraph") + '+' + keyname;
+        keyname = i18n("AltGraph") + QLatin1Char('+') + keyname;
     if ((modifiers & HyperMask) != 0)
-        keyname = i18n("Hyper") + '+' + keyname;
+        keyname = i18n("Hyper") + QLatin1Char('+') + keyname;
     if ((modifiers & SuperMask) != 0)
-        keyname = i18n("Super") + '+' + keyname;
+        keyname = i18n("Super") + QLatin1Char('+') + keyname;
     if ((modifiers & WinMask) != 0)
-        keyname = i18n("Meta") + '+' + keyname;
+        keyname = i18n("Meta") + QLatin1Char('+') + keyname;
     if ((modifiers & WinMask) != 0)
-        keyname = QKeySequence(Qt::META).toString() + '+' + keyname;
+        keyname = QKeySequence(Qt::META).toString() + QLatin1Char('+') + keyname;
     if ((modifiers & AltMask) != 0)
-        keyname = QKeySequence(Qt::ALT).toString() + '+' + keyname;
+        keyname = QKeySequence(Qt::ALT).toString() + QLatin1Char('+') + keyname;
     if ((modifiers & ControlMask) != 0)
-        keyname = QKeySequence(Qt::CTRL).toString() + '+' + keyname;
+        keyname = QKeySequence(Qt::CTRL).toString() + QLatin1Char('+') + keyname;
     if ((modifiers & ShiftMask) != 0)
-        keyname = QKeySequence(Qt::SHIFT).toString() + '+' + keyname;
+        keyname = QKeySequence(Qt::SHIFT).toString() + QLatin1Char('+') + keyname;
 
     return keyname;
 }
 
 void KAccessApp::createDialogContents()
 {
-    if (dialog == 0) {
+    if (dialog == nullptr) {
         dialog = new QDialog(nullptr);
         dialog->setWindowTitle(i18n("Warning"));
-        dialog->setObjectName("AccessXWarning");
+        dialog->setObjectName(QStringLiteral("AccessXWarning"));
         dialog->setModal(true);
 
         QWidget *topcontents = new QWidget(dialog);
@@ -671,7 +671,7 @@ void KAccessApp::createDialogContents()
         QHBoxLayout * lay = new QHBoxLayout(contents);
 
         QLabel *label1 = new QLabel(contents);
-        QIcon icon = QIcon::fromTheme("dialog-warning");
+        QIcon icon = QIcon::fromTheme(QStringLiteral("dialog-warning"));
         if (icon.isNull())
             icon = QMessageBox::standardIcon(QMessageBox::Warning);
         label1->setPixmap(icon.pixmap(64, 64));
@@ -849,8 +849,8 @@ void KAccessApp::xkbControlsNotify(xcb_xkb_controls_notify_event_t *event)
             }
 
             createDialogContents();
-            featuresLabel->setText(question + "\n\n" + explanation
-                                   + " " + i18n("These AccessX settings are needed for some users with motion impairments and can be configured in the KDE System Settings. You can also turn them on and off with standardized keyboard gestures.\n\nIf you do not need them, you can select \"Deactivate all AccessX features and gestures\"."));
+            featuresLabel->setText(question + QStringLiteral("\n\n") + explanation
+                                   + QStringLiteral(" ") + i18n("These AccessX settings are needed for some users with motion impairments and can be configured in the KDE System Settings. You can also turn them on and off with standardized keyboard gestures.\n\nIf you do not need them, you can select \"Deactivate all AccessX features and gestures\"."));
 
             KWindowSystem::setState(dialog->winId(), NET::KeepAbove);
             KUserTimestamp::updateUserTimestamp(0);
@@ -868,24 +868,24 @@ void KAccessApp::notifyChanges()
     unsigned int disabled = features & ~requestedFeatures;
 
     if (enabled & XCB_XKB_BOOL_CTRL_SLOW_KEYS)
-        KNotification::event("slowkeys", i18n("Slow keys has been enabled. From now on, you need to press each key for a certain length of time before it gets accepted."));
+        KNotification::event(QStringLiteral("slowkeys"), i18n("Slow keys has been enabled. From now on, you need to press each key for a certain length of time before it gets accepted."));
     else if (disabled & XCB_XKB_BOOL_CTRL_SLOW_KEYS)
-        KNotification::event("slowkeys", i18n("Slow keys has been disabled."));
+        KNotification::event(QStringLiteral("slowkeys"), i18n("Slow keys has been disabled."));
 
     if (enabled & XCB_XKB_BOOL_CTRL_BOUNCE_KEYS)
-        KNotification::event("bouncekeys", i18n("Bounce keys has been enabled. From now on, each key will be blocked for a certain length of time after it was used."));
+        KNotification::event(QStringLiteral("bouncekeys"), i18n("Bounce keys has been enabled. From now on, each key will be blocked for a certain length of time after it was used."));
     else if (disabled & XCB_XKB_BOOL_CTRL_BOUNCE_KEYS)
-        KNotification::event("bouncekeys", i18n("Bounce keys has been disabled."));
+        KNotification::event(QStringLiteral("bouncekeys"), i18n("Bounce keys has been disabled."));
 
     if (enabled & XCB_XKB_BOOL_CTRL_STICKY_KEYS)
-        KNotification::event("stickykeys", i18n("Sticky keys has been enabled. From now on, modifier keys will stay latched after you have released them."));
+        KNotification::event(QStringLiteral("stickykeys"), i18n("Sticky keys has been enabled. From now on, modifier keys will stay latched after you have released them."));
     else if (disabled & XCB_XKB_BOOL_CTRL_STICKY_KEYS)
-        KNotification::event("stickykeys", i18n("Sticky keys has been disabled."));
+        KNotification::event(QStringLiteral("stickykeys"), i18n("Sticky keys has been disabled."));
 
     if (enabled & XCB_XKB_BOOL_CTRL_MOUSE_KEYS)
-        KNotification::event("mousekeys", i18n("Mouse keys has been enabled. From now on, you can use the number pad of your keyboard in order to control the mouse."));
+        KNotification::event(QStringLiteral("mousekeys"), i18n("Mouse keys has been enabled. From now on, you can use the number pad of your keyboard in order to control the mouse."));
     else if (disabled & XCB_XKB_BOOL_CTRL_MOUSE_KEYS)
-        KNotification::event("mousekeys", i18n("Mouse keys has been disabled."));
+        KNotification::event(QStringLiteral("mousekeys"), i18n("Mouse keys has been disabled."));
 }
 
 void KAccessApp::applyChanges()
