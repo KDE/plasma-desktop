@@ -49,35 +49,57 @@ Item {
     Plasmoid.compactRepresentation: MouseArea {
         id: compactRoot
 
-        Layout.maximumWidth: inPanel ? units.iconSizeHints.panel : -1
-        Layout.maximumHeight: inPanel ? units.iconSizeHints.panel : -1
-        hoverEnabled: true
-        onClicked: plasmoid.expanded = !plasmoid.expanded
+        Layout.minimumWidth: {
+            if (!inPanel) {
+                return units.iconSizeHints.panel;
+            }
 
-        onWidthChanged: updateSizeHints()
-        onHeightChanged: updateSizeHints()
-
-        function updateSizeHints() {
-            if (kickoff.vertical) {
-                var scaledHeight = Math.floor(parent.width * (buttonIcon.implicitHeight / buttonIcon.implicitWidth));
-                compactRoot.Layout.minimumHeight = scaledHeight;
-                compactRoot.Layout.maximumHeight = scaledHeight;
-                compactRoot.Layout.minimumWidth = units.iconSizes.small;
-                compactRoot.Layout.maximumWidth = inPanel ? units.iconSizeHints.panel : -1;
+            if (vertical) {
+                return -1;
             } else {
-                var scaledWidth = Math.floor(parent.height * (buttonIcon.implicitWidth / buttonIcon.implicitHeight));
-                compactRoot.Layout.minimumWidth = scaledWidth;
-                compactRoot.Layout.maximumWidth = scaledWidth;
-                compactRoot.Layout.minimumHeight = units.iconSizes.small;
-                compactRoot.Layout.maximumHeight = inPanel ? units.iconSizeHints.panel : -1;
+                return Math.min(units.iconSizeHints.panel, parent.height) * buttonIcon.aspectRatio;
             }
         }
 
-        Connections {
-            target: units.iconSizeHints
+        Layout.minimumHeight: {
+            if (!inPanel) {
+                return units.iconSizeHints.panel;
+            }
 
-            onPanelChanged: compactRoot.updateSizeHints()
+            if (vertical) {
+                return Math.min(units.iconSizeHints.panel, parent.width) * buttonIcon.aspectRatio;
+            } else {
+                return -1;
+            }
         }
+
+        Layout.maximumWidth: {
+            if (!inPanel) {
+                return -1;
+            }
+
+            if (vertical) {
+                return units.iconSizeHints.panel;
+            } else {
+                return Math.min(units.iconSizeHints.panel, parent.height) * buttonIcon.aspectRatio;
+            }
+        }
+
+        Layout.maximumHeight: {
+            if (!inPanel) {
+                return -1;
+            }
+
+            if (vertical) {
+                return Math.min(units.iconSizeHints.panel, parent.width) * buttonIcon.aspectRatio;
+            } else {
+                return units.iconSizeHints.panel;
+            }
+        }
+
+
+        hoverEnabled: true
+        onClicked: plasmoid.expanded = !plasmoid.expanded
 
         DropArea {
             id: compactDragArea
@@ -102,8 +124,6 @@ Item {
             active: parent.containsMouse || compactDragArea.containsDrag
             smooth: true
             roundToIconSize: aspectRatio === 1
-
-            onSourceChanged: updateSizeHints()
         }
     }
 
