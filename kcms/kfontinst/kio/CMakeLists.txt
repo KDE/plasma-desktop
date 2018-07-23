@@ -17,5 +17,6 @@ ecm_install_icons( ICONS
                    48-mimetypes-fonts-package.png
                    64-mimetypes-fonts-package.png
                    DESTINATION ${KDE_INSTALL_ICONDIR} THEME hicolor )
-
-add_subdirectory(autotests)
+if(BUILD_TESTING)
+    add_subdirectory(autotests)
+endif()
