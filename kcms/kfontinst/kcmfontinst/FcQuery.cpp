@@ -70,7 +70,7 @@ void CFcQuery::procExited()
 {
     QString     family;
     int         weight(KFI_NULL_SETTING), slant(KFI_NULL_SETTING), width(KFI_NULL_SETTING);
-    QStringList results(QString::fromUtf8(itsBuffer, itsBuffer.length()).split('\n'));
+    QStringList results(QString::fromUtf8(itsBuffer, itsBuffer.length()).split(QLatin1Char('\n')));
 
     if(results.size())
     {

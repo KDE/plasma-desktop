@@ -94,7 +94,7 @@ static void applyGtkStyles(bool active, int version)
 {
    QString gtkkde = writableGtkrc(version);
    QByteArray gtkrc = getenv(gtkEnvVar(version));
-   QStringList list = QFile::decodeName(gtkrc).split( ':');
+   QStringList list = QFile::decodeName(gtkrc).split( QLatin1Char(':'));
    QString userHomeGtkrc = QDir::homePath()+userGtkrc(version);
    if (!list.contains(userHomeGtkrc))
       list.prepend(userHomeGtkrc);
@@ -292,7 +292,7 @@ static void createGtkrc( bool exportColors, const QPalette& cg, bool exportGtkTh
 
         bool exist_gtkrc = false;
         QByteArray gtkrc = getenv(gtkEnvVar(version));
-        QStringList listGtkrc = QFile::decodeName(gtkrc).split(QStringLiteral(":"));
+        QStringList listGtkrc = QFile::decodeName(gtkrc).split(QLatin1Char(':'));
         if (listGtkrc.contains(saveFile.fileName()))
             listGtkrc.removeAll(saveFile.fileName());
         listGtkrc.append(QDir::homePath() + userGtkrc(version));
@@ -315,7 +315,7 @@ static void createGtkrc( bool exportColors, const QPalette& cg, bool exportGtkTh
                 gtk2ThemeFilename.clear();
                 QByteArray xdgDataDirs = getenv("XDG_DATA_DIRS");
                 gtk2ThemePath.append(QDir::homePath() + "/.local");
-                gtk2ThemePath.append(QFile::decodeName(xdgDataDirs).split(QStringLiteral(":")));
+                gtk2ThemePath.append(QFile::decodeName(xdgDataDirs).split(QLatin1Char(':')));
                 gtk2ThemePath.removeDuplicates();
                 for (int i = 0; i < gtk2ThemePath.size(); ++i)
                 {

@@ -163,7 +163,7 @@ static QString removeKnownExtension(const QUrl &url)
 CKioFonts::CKioFonts(const QByteArray &pool, const QByteArray &app)
          : KIO::SlaveBase(KFI_KIO_FONTS_PROTOCOL, pool, app)
          , itsInterface(new FontInstInterface())
-         , itsTempDir(0L)
+         , itsTempDir(nullptr)
 {
     KFI_DBUG;
 }
@@ -179,7 +179,7 @@ void CKioFonts::listDir(const QUrl &url)
 {
     KFI_DBUG << url;
 
-    QStringList pathList(url.adjusted(QUrl::StripTrailingSlash).path().split('/', QString::SkipEmptyParts));
+    QStringList pathList(url.adjusted(QUrl::StripTrailingSlash).path().split(QLatin1Char('/'), QString::SkipEmptyParts));
     EFolder       folder=Misc::root() ? FOLDER_SYS : getFolder(pathList);
     KIO::UDSEntry entry;
     int           size=0;
@@ -214,7 +214,7 @@ void CKioFonts::listDir(const QUrl &url)
 void CKioFonts::put(const QUrl &url, int /*permissions*/, KIO::JobFlags /*flags*/)
 {
     KFI_DBUG << url;
-    QStringList pathList(url.adjusted(QUrl::StripTrailingSlash).path().split('/', QString::SkipEmptyParts));
+    QStringList pathList(url.adjusted(QUrl::StripTrailingSlash).path().split(QLatin1Char('/'), QString::SkipEmptyParts));
     EFolder     folder(getFolder(pathList));
 
     if(!Misc::root() && FOLDER_ROOT==folder)
@@ -281,7 +281,7 @@ void CKioFonts::put(const QUrl &url, int /*permissions*/, KIO::JobFlags /*flags*
 void CKioFonts::get(const QUrl &url)
 {
     KFI_DBUG << url;
-    QStringList pathList(url.adjusted(QUrl::StripTrailingSlash).path().split('/', QString::SkipEmptyParts));
+    QStringList pathList(url.adjusted(QUrl::StripTrailingSlash).path().split(QLatin1Char('/'), QString::SkipEmptyParts));
     EFolder     folder(getFolder(pathList));
     Family      family(getFont(url, folder));
 
@@ -484,7 +484,7 @@ void CKioFonts::rename(const QUrl &, const QUrl &, KIO::JobFlags)
 void CKioFonts::del(const QUrl &url, bool isFile)
 {
     KFI_DBUG << url;
-    QStringList pathList(url.adjusted(QUrl::StripTrailingSlash).path().split('/', QString::SkipEmptyParts));
+    QStringList pathList(url.adjusted(QUrl::StripTrailingSlash).path().split(QLatin1Char('/'), QString::SkipEmptyParts));
     EFolder     folder(getFolder(pathList));
     QString     name(removeKnownExtension(url));
 
@@ -504,7 +504,7 @@ void CKioFonts::statFont(const QUrl &url)
 {
     KFI_DBUG << url;
 
-    QStringList pathList(url.adjusted(QUrl::StripTrailingSlash).path().split('/', QString::SkipEmptyParts));
+    QStringList pathList(url.adjusted(QUrl::StripTrailingSlash).path().split(QLatin1Char('/'), QString::SkipEmptyParts));
     EFolder       folder=getFolder(pathList);
     KIO::UDSEntry entry;
     bool          ok=true;

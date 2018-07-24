@@ -252,7 +252,7 @@ void KGlobalShortcutsEditor::KGlobalShortcutsEditorPrivate::initGUI()
             const QString desktopPath = selectApplicationDialogUi.treeView->model()->data(selectApplicationDialogUi.treeView->selectionModel()->selectedIndexes().first(), Qt::UserRole+1).toString();
 
             if (!desktopPath.isEmpty() &&QFile::exists(desktopPath) ) {
-                const QString desktopFile = desktopPath.split(QChar('/')).last();
+                const QString desktopFile = desktopPath.split(QLatin1Char('/')).last();
 
                 if (!desktopPath.isEmpty()) {
                     KDesktopFile sourceDF(desktopPath);
@@ -275,7 +275,7 @@ void KGlobalShortcutsEditor::KGlobalShortcutsEditorPrivate::initGUI()
 
                         KGlobalAccel::self()->setShortcut(action, QList<QKeySequence>());
                         
-                        QStringList sequencesStrings = sourceDF.actionGroup(actionId).readEntry(QStringLiteral("X-KDE-Shortcuts"), QString()).split(QChar(','));
+                        QStringList sequencesStrings = sourceDF.actionGroup(actionId).readEntry(QStringLiteral("X-KDE-Shortcuts"), QString()).split(QLatin1Char('/'));
                         QList<QKeySequence> sequences;
                         if (!sequencesStrings.isEmpty()) {
                             Q_FOREACH (const QString &seqString, sequencesStrings) {
@@ -297,7 +297,7 @@ void KGlobalShortcutsEditor::KGlobalShortcutsEditorPrivate::initGUI()
 
                         KGlobalAccel::self()->setShortcut(action, QList<QKeySequence>());
                         
-                        QStringList sequencesStrings = sourceDF.desktopGroup().readEntry(QStringLiteral("X-KDE-Shortcuts"), QString()).split(QChar(','));
+                        QStringList sequencesStrings = sourceDF.desktopGroup().readEntry(QStringLiteral("X-KDE-Shortcuts"), QString()).split(QLatin1Char('/'));
                         QList<QKeySequence> sequences;
                         if (!sequencesStrings.isEmpty()) {
                             Q_FOREACH (const QString &seqString, sequencesStrings) {
