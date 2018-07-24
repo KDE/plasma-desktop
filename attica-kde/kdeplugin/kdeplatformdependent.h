@@ -68,8 +68,8 @@ private:
     QNetworkRequest removeAuthFromRequest(const QNetworkRequest& request);
 
     KSharedConfigPtr m_config;
-    QNetworkAccessManager* m_accessManager;
-    KWallet::Wallet* m_wallet;
+    QNetworkAccessManager* m_accessManager = nullptr;
+    KWallet::Wallet* m_wallet = nullptr;
     QHash<QString, QPair <QString, QString> > m_passwords;
 };
 

@@ -38,19 +38,18 @@
 #include "DeviceModel.h"
 
 K_PLUGIN_FACTORY(DeviceAutomounterKCMFactory, registerPlugin<DeviceAutomounterKCM>();)
-K_EXPORT_PLUGIN(DeviceAutomounterKCMFactory("kcm_device_automounter"))
 
 DeviceAutomounterKCM::DeviceAutomounterKCM(QWidget *parent, const QVariantList &args)
     : KCModule(parent, args)//DeviceAutomounterKCMFactory::componentData(), parent)
 {
-    KAboutData *about = new KAboutData("kcm_device_automounter",
+    KAboutData *about = new KAboutData(QStringLiteral("kcm_device_automounter"),
                                        i18n("Device Automounter"),
-                                       "2.0",
+                                       QStringLiteral("2.0"),
                                        QString(),
                                        KAboutLicense::GPL_V2,
                                        i18n("(c) 2009 Trever Fischer, (c) 2015 Kai Uwe Broulik"));
     about->addAuthor(i18n("Trever Fischer"), i18n("Original Author"));
-    about->addAuthor(i18n("Kai Uwe Broulik"), i18n("Plasma 5 Port"), "kde@privat.broulik.de");
+    about->addAuthor(i18n("Kai Uwe Broulik"), i18n("Plasma 5 Port"), QStringLiteral("kde@privat.broulik.de"));
 
     setAboutData(about);
     setupUi(this);

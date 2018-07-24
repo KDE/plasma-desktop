@@ -135,9 +135,9 @@ static QList<TextAttribute> String2AttrList(const QString &str)
     if (str.isEmpty()) {
         return result;
     }
-    foreach(const QString & s, str.split(';')) {
+    foreach(const QString & s, str.split(QLatin1Char(';'))) {
         TextAttribute attr;
-        QStringList list = s.split(':');
+        QStringList list = s.split(QLatin1Char(':'));
         if (list.size() < 4)
             continue;
         switch (list.at(0).toInt()) {
@@ -168,7 +168,7 @@ static KimpanelProperty String2Property(const QString &str)
 {
     KimpanelProperty result;
 
-    QStringList list = str.split(':');
+    QStringList list = str.split(QLatin1Char(':'));
 
     if (list.size() < 4)
         return result;
@@ -177,7 +177,7 @@ static KimpanelProperty String2Property(const QString &str)
     result.label = list.at(1);
     result.icon = list.at(2);
     result.tip = list.at(3);
-    result.hint = list.size() > 4 ? list.at(4) : "";
+    result.hint = list.size() > 4 ? list.at(4) : QString();
 
     return result;
 }

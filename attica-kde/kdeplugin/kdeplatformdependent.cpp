@@ -39,10 +39,10 @@
 using namespace Attica;
 
 KdePlatformDependent::KdePlatformDependent()
-    : m_config(KSharedConfig::openConfig("atticarc")), m_accessManager(0), m_wallet(0)
+    : m_config(KSharedConfig::openConfig(QStringLiteral("atticarc"))), m_accessManager(nullptr), m_wallet(nullptr)
 {
     // FIXME: Investigate how to not leak this instance witohut crashing.
-    m_accessManager = new QNetworkAccessManager(0);
+    m_accessManager = new QNetworkAccessManager(nullptr);
 
     const QString cacheDir = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + QStringLiteral("/attica");
     QNetworkDiskCache *cache = new QNetworkDiskCache(m_accessManager);
@@ -65,13 +65,13 @@ bool KdePlatformDependent::openWallet(bool force)
 
     QString networkWallet = KWallet::Wallet::NetworkWallet();
     // if not forced, or the folder doesn't exist, don't try to open the wallet
-    if (force || (!KWallet::Wallet::folderDoesNotExist(networkWallet, "Attica"))) {
+    if (force || (!KWallet::Wallet::folderDoesNotExist(networkWallet, QStringLiteral("Attica")))) {
         m_wallet = KWallet::Wallet::openWallet(networkWallet, 0);
     }
 
     if (m_wallet) {
-        m_wallet->createFolder("Attica");
-        m_wallet->setFolder("Attica");
+        m_wallet->createFolder(QStringLiteral("Attica"));
+        m_wallet->setFolder(QStringLiteral("Attica"));
         return true;
     }
     return false;
@@ -94,7 +94,7 @@ QNetworkReply* KdePlatformDependent::get(const QNetworkRequest& request)
 
 QNetworkRequest KdePlatformDependent::removeAuthFromRequest(const QNetworkRequest& request)
 {
-    const QStringList noauth = { "no-auth-prompt", "true" };
+    const QStringList noauth = { QStringLiteral("no-auth-prompt"), QStringLiteral("true") };
     QNetworkRequest notConstReq = const_cast<QNetworkRequest&>(request);
     notConstReq.setAttribute(QNetworkRequest::User, noauth);
     return notConstReq;
@@ -106,7 +106,7 @@ bool KdePlatformDependent::saveCredentials(const QUrl& baseUrl, const QString& u
 
     if (!m_wallet && !openWallet(true)) {
 
-        if (KMessageBox::warningContinueCancel(0, i18n("Should the password be stored in the configuration file? This is unsafe.")
+        if (KMessageBox::warningContinueCancel(nullptr, i18n("Should the password be stored in the configuration file? This is unsafe.")
                 , i18n("Social Desktop Configuration"))
                 == KMessageBox::Cancel) {
             return false;
@@ -127,8 +127,8 @@ bool KdePlatformDependent::saveCredentials(const QUrl& baseUrl, const QString& u
     }
 
     const QMap<QString, QString> entries = {
-        { "user", user },
-        { "password", password }
+        { QStringLiteral("user"), user },
+        { QStringLiteral("password"), password }
     };
     qCDebug(ATTICA_PLUGIN_LOG) << "Saved credentials in KWallet";
 
@@ -142,8 +142,8 @@ bool KdePlatformDependent::hasCredentials(const QUrl& baseUrl) const
     }
 
     QString networkWallet = KWallet::Wallet::NetworkWallet();
-    if (!KWallet::Wallet::folderDoesNotExist(networkWallet, "Attica") &&
-        !KWallet::Wallet::keyDoesNotExist(networkWallet, "Attica", baseUrl.toString())) {
+    if (!KWallet::Wallet::folderDoesNotExist(networkWallet, QStringLiteral("Attica")) &&
+        !KWallet::Wallet::keyDoesNotExist(networkWallet, QStringLiteral("Attica"), baseUrl.toString())) {
         qCDebug(ATTICA_PLUGIN_LOG) << "Found credentials in KWallet";
         return true;
     }
@@ -159,8 +159,8 @@ bool KdePlatformDependent::hasCredentials(const QUrl& baseUrl) const
 bool KdePlatformDependent::loadCredentials(const QUrl& baseUrl, QString& user, QString& password)
 {
     QString networkWallet = KWallet::Wallet::NetworkWallet();
-    if (KWallet::Wallet::folderDoesNotExist(networkWallet, "Attica") &&
-        KWallet::Wallet::keyDoesNotExist(networkWallet, "Attica", baseUrl.toString())) {
+    if (KWallet::Wallet::folderDoesNotExist(networkWallet, QStringLiteral("Attica")) &&
+        KWallet::Wallet::keyDoesNotExist(networkWallet, QStringLiteral("Attica"), baseUrl.toString())) {
         // use KConfig
         KConfigGroup group(m_config, baseUrl.toString());
         user = group.readEntry("user", QString());
@@ -181,8 +181,8 @@ bool KdePlatformDependent::loadCredentials(const QUrl& baseUrl, QString& user, Q
     if (m_wallet->readMap(baseUrl.toString(), entries) != 0) {
         return false;
     }
-    user = entries.value("user");
-    password = entries.value("password");
+    user = entries.value(QStringLiteral("user"));
+    password = entries.value(QStringLiteral("password"));
     qCDebug(ATTICA_PLUGIN_LOG) << "Successfully loaded credentials.";
 
     m_passwords[baseUrl.toString()] = qMakePair(user, password);
@@ -203,7 +203,7 @@ bool Attica::KdePlatformDependent::askForCredentials(const QUrl& baseUrl, QStrin
 QList<QUrl> KdePlatformDependent::getDefaultProviderFiles() const
 {
     KConfigGroup group(m_config, "General");
-    QStringList pathStrings = group.readPathEntry("providerFiles", QStringList("http://download.kde.org/ocs/providers.xml"));
+    QStringList pathStrings = group.readPathEntry("providerFiles", QStringList(QStringLiteral("http://download.kde.org/ocs/providers.xml")));
     QList<QUrl> paths;
     foreach (const QString& pathString, pathStrings) {
         paths.append(QUrl(pathString));
@@ -215,7 +215,7 @@ QList<QUrl> KdePlatformDependent::getDefaultProviderFiles() const
 void KdePlatformDependent::addDefaultProviderFile(const QUrl& url)
 {
     KConfigGroup group(m_config, "General");
-    QStringList pathStrings = group.readPathEntry("providerFiles", QStringList("http://download.kde.org/ocs/providers.xml"));
+    QStringList pathStrings = group.readPathEntry("providerFiles", QStringList(QStringLiteral("http://download.kde.org/ocs/providers.xml")));
     QString urlString = url.toString();
     if(!pathStrings.contains(urlString)) {
         pathStrings.append(urlString);
@@ -228,7 +228,7 @@ void KdePlatformDependent::addDefaultProviderFile(const QUrl& url)
 void KdePlatformDependent::removeDefaultProviderFile(const QUrl& url)
 {
     KConfigGroup group(m_config, "General");
-    QStringList pathStrings = group.readPathEntry("providerFiles", QStringList("http://download.kde.org/ocs/providers.xml"));
+    QStringList pathStrings = group.readPathEntry("providerFiles", QStringList(QStringLiteral("http://download.kde.org/ocs/providers.xml")));
     pathStrings.removeAll(url.toString());
     group.writeEntry("providerFiles", pathStrings);
 }
