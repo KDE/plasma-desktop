@@ -24,7 +24,7 @@
 KimpanelService::KimpanelService(QObject* parent, const QString& name, PanelAgent* panelAgent):
     Service(parent), m_panelAgent(panelAgent)
 {
-    setName("kimpanel");
+    setName(QStringLiteral("kimpanel"));
     setObjectName(name);
     setDestination(name);
     enableKimpanelOperations();
@@ -32,16 +32,16 @@ KimpanelService::KimpanelService(QObject* parent, const QString& name, PanelAgen
 
 void KimpanelService::enableKimpanelOperations()
 {
-    if (destination() == INPUTPANEL_SOURCE_NAME) {
-        setOperationEnabled("LookupTablePageUp", true);
-        setOperationEnabled("LookupTablePageDown", true);
-        setOperationEnabled("MovePreeditCaret", true);
-        setOperationEnabled("SelectCandidate", true);
-    } else if (destination() == STATUSBAR_SOURCE_NAME) {
-        setOperationEnabled("TriggerProperty", true);
-        setOperationEnabled("Exit", true);
-        setOperationEnabled("ReloadConfig", true);
-        setOperationEnabled("Configure", true);
+    if (destination() == QLatin1String(INPUTPANEL_SOURCE_NAME)) {
+        setOperationEnabled(QStringLiteral("LookupTablePageUp"), true);
+        setOperationEnabled(QStringLiteral("LookupTablePageDown"), true);
+        setOperationEnabled(QStringLiteral("MovePreeditCaret"), true);
+        setOperationEnabled(QStringLiteral("SelectCandidate"), true);
+    } else if (destination() == QLatin1String(STATUSBAR_SOURCE_NAME)) {
+        setOperationEnabled(QStringLiteral("TriggerProperty"), true);
+        setOperationEnabled(QStringLiteral("Exit"), true);
+        setOperationEnabled(QStringLiteral("ReloadConfig"), true);
+        setOperationEnabled(QStringLiteral("Configure"), true);
     }
 }
 

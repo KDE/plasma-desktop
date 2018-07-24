@@ -41,7 +41,7 @@ KimpanelInputPanelContainer::KimpanelInputPanelContainer(QObject* parent, PanelA
 
 Plasma::Service* KimpanelInputPanelContainer::service(QObject* parent)
 {
-    KimpanelService *controller = new KimpanelService(parent, INPUTPANEL_SOURCE_NAME, m_panelAgent);
+    KimpanelService *controller = new KimpanelService(parent, QLatin1String(INPUTPANEL_SOURCE_NAME), m_panelAgent);
     connect(this, SIGNAL(updateRequested(DataContainer*)),
             controller, SLOT(enableKimpanelOperations()));
     return controller;
@@ -50,20 +50,20 @@ Plasma::Service* KimpanelInputPanelContainer::service(QObject* parent)
 void KimpanelInputPanelContainer::updateAux(const QString& text, const QList< TextAttribute >& attrList)
 {
     Q_UNUSED(attrList);
-    setData("AuxText", text);
+    setData(QStringLiteral("AuxText"), text);
     checkForUpdate();
 }
 
 void KimpanelInputPanelContainer::updatePreeditText(const QString& text, const QList<TextAttribute>& attrList)
 {
     Q_UNUSED(attrList);
-    setData("PreeditText", text);
+    setData(QStringLiteral("PreeditText"), text);
     checkForUpdate();
 }
 
 void KimpanelInputPanelContainer::updatePreeditCaret(int pos)
 {
-    setData("CaretPos", pos);
+    setData(QStringLiteral("CaretPos"), pos);
     checkForUpdate();
 }
 
@@ -72,13 +72,13 @@ void KimpanelInputPanelContainer::updateLookupTable(const KimpanelLookupTable& l
     QVariantList candidateList;
     Q_FOREACH(const KimpanelLookupTable::Entry & entry, lookupTable.entries) {
         QVariantMap map;
-        map["label"] = entry.label;
-        map["text"] = entry.text;
+        map[QStringLiteral("label")] = entry.label;
+        map[QStringLiteral("text")] = entry.text;
         candidateList += map;
     }
-    setData("LookupTable", candidateList);
-    setData("HasPrev", lookupTable.has_prev);
-    setData("HasNext", lookupTable.has_next);
+    setData(QStringLiteral("LookupTable"), candidateList);
+    setData(QStringLiteral("HasPrev"), lookupTable.has_prev);
+    setData(QStringLiteral("HasNext"), lookupTable.has_next);
     checkForUpdate();
 }
 
@@ -89,31 +89,31 @@ void KimpanelInputPanelContainer::updateSpotLocation(int x, int y)
 
 void KimpanelInputPanelContainer::updateSpotRect(int x, int y, int w, int h)
 {
-    setData("Position", QRect(x, y, w, h));
+    setData(QStringLiteral("Position"), QRect(x, y, w, h));
     checkForUpdate();
 }
 
 void KimpanelInputPanelContainer::showAux(bool visible)
 {
-    setData("AuxVisible", visible);
+    setData(QStringLiteral("AuxVisible"), visible);
     checkForUpdate();
 }
 
 void KimpanelInputPanelContainer::showPreedit(bool visible)
 {
-    setData("PreeditVisible", visible);
+    setData(QStringLiteral("PreeditVisible"), visible);
     checkForUpdate();
 }
 
 void KimpanelInputPanelContainer::showLookupTable(bool visible)
 {
-    setData("LookupTableVisible", visible);
+    setData(QStringLiteral("LookupTableVisible"), visible);
     checkForUpdate();
 }
 
 void KimpanelInputPanelContainer::updateLookupTableCursor(int cursor)
 {
-    setData("LookupTableCursor", cursor);
+    setData(QStringLiteral("LookupTableCursor"), cursor);
     checkForUpdate();
 }
 
@@ -122,15 +122,15 @@ void KimpanelInputPanelContainer::updateLookupTableFull(const KimpanelLookupTabl
     QVariantList candidateList;
     Q_FOREACH(const KimpanelLookupTable::Entry & entry, lookupTable.entries) {
         QVariantMap map;
-        map["label"] = entry.label;
-        map["text"] = entry.text;
+        map[QStringLiteral("label")] = entry.label;
+        map[QStringLiteral("text")] = entry.text;
         candidateList += map;
     }
-    setData("LookupTable", candidateList);
-    setData("HasPrev", lookupTable.has_prev);
-    setData("HasNext", lookupTable.has_next);
-    setData("LookupTableCursor", cursor);
-    setData("LookupTableLayout", layout);
+    setData(QStringLiteral("LookupTable"), candidateList);
+    setData(QStringLiteral("HasPrev"), lookupTable.has_prev);
+    setData(QStringLiteral("HasNext"), lookupTable.has_next);
+    setData(QStringLiteral("LookupTableCursor"), cursor);
+    setData(QStringLiteral("LookupTableLayout"), layout);
     checkForUpdate();
 
 }

@@ -31,7 +31,7 @@ class KimpanelInputPanelContainer : public Plasma::DataContainer
     Q_OBJECT
 public:
     KimpanelInputPanelContainer(QObject* parent, PanelAgent* panelAgent);
-    Plasma::Service* service(QObject* parent = 0);
+    Plasma::Service* service(QObject* parent = nullptr);
 
 protected Q_SLOTS:
     void updatePreeditText(const QString& text, const QList<TextAttribute>& attrList);

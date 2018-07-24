@@ -58,11 +58,11 @@ struct KimpanelProperty {
 
     QVariantMap toMap() const {
         QVariantMap map;
-        map["key"] = key;
-        map["label"] = label;
-        map["icon"] = icon;
-        map["tip"] = tip;
-        map["hint"] = hint;
+        map[QStringLiteral("key")] = key;
+        map[QStringLiteral("label")] = label;
+        map[QStringLiteral("icon")] = icon;
+        map[QStringLiteral("tip")] = tip;
+        map[QStringLiteral("hint")] = hint;
         return map;
     }
 };

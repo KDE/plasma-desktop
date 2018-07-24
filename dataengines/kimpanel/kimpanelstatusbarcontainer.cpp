@@ -34,7 +34,7 @@ KimpanelStatusBarContainer::KimpanelStatusBarContainer(QObject* parent, PanelAge
 
 Plasma::Service* KimpanelStatusBarContainer::service(QObject* parent)
 {
-    KimpanelService *controller = new KimpanelService(parent, STATUSBAR_SOURCE_NAME, m_panelAgent);
+    KimpanelService *controller = new KimpanelService(parent, QLatin1String(STATUSBAR_SOURCE_NAME), m_panelAgent);
     connect(this, SIGNAL(updateRequested(DataContainer*)),
             controller, SLOT(enableKimpanelOperations()));
     return controller;
@@ -50,7 +50,7 @@ void KimpanelStatusBarContainer::updateProperty(const KimpanelProperty& property
             Q_FOREACH(const KimpanelProperty & prop, m_props) {
                 varList << prop.toMap();
             }
-            setData("Properties", varList);
+            setData(QStringLiteral("Properties"), varList);
             checkForUpdate();
             break;
         }
@@ -64,7 +64,7 @@ void KimpanelStatusBarContainer::registerProperties(const QList< KimpanelPropert
     Q_FOREACH(const KimpanelProperty & prop, m_props) {
         varList << prop.toMap();
     }
-    setData("Properties", varList);
+    setData(QStringLiteral("Properties"), varList);
     checkForUpdate();
 }
 
@@ -75,9 +75,9 @@ void KimpanelStatusBarContainer::execMenu(const QList< KimpanelProperty >& props
         varList << prop.toMap();
     }
     QVariantMap map;
-    map["props"] = varList;
-    map["timestamp"] = QDateTime::currentMSecsSinceEpoch();
-    setData("Menu", map);
+    map[QStringLiteral("props")] = varList;
+    map[QStringLiteral("timestamp")] = QDateTime::currentMSecsSinceEpoch();
+    setData(QStringLiteral("Menu"), map);
     checkForUpdate();
 }
 

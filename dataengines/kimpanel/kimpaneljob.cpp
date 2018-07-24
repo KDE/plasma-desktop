@@ -33,30 +33,30 @@ KimpanelJob::KimpanelJob(PanelAgent* panelAgent,
 void KimpanelJob::start()
 {
     const QString operation(operationName());
-    if (operation == "LookupTablePageUp") {
+    if (operation == QLatin1String("LookupTablePageUp")) {
         m_panelAgent->lookupTablePageUp();
-    } else if (operation == "LookupTablePageDown") {
+    } else if (operation == QLatin1String("LookupTablePageDown")) {
         m_panelAgent->lookupTablePageDown();
-    } else if (operation == "MovePreeditCaret") {
-        if (parameters().contains("position")) {
-            int position = parameters()["position"].toInt();
+    } else if (operation == QLatin1String("MovePreeditCaret")) {
+        if (parameters().contains(QStringLiteral("position"))) {
+            int position = parameters()[QStringLiteral("position")].toInt();
             m_panelAgent->movePreeditCaret(position);
         }
-    } else if (operation == "SelectCandidate") {
-        if (parameters().contains("candidate")) {
-            int candidate = parameters()["candidate"].toInt();
+    } else if (operation == QLatin1String("SelectCandidate")) {
+        if (parameters().contains(QStringLiteral("candidate"))) {
+            int candidate = parameters()[QStringLiteral("candidate")].toInt();
             m_panelAgent->selectCandidate(candidate);
         }
-    } else if (operation == "TriggerProperty") {
-        if (parameters().contains("key")) {
-            QString key = parameters()["key"].toString();
+    } else if (operation == QLatin1String("TriggerProperty")) {
+        if (parameters().contains(QStringLiteral("key"))) {
+            QString key = parameters()[QStringLiteral("key")].toString();
             m_panelAgent->triggerProperty(key);
         }
-    } else if (operation == "ReloadConfig") {
+    } else if (operation == QLatin1String("ReloadConfig")) {
         m_panelAgent->reloadConfig();
-    } else if (operation == "Configure") {
+    } else if (operation == QLatin1String("Configure")) {
         m_panelAgent->configure();
-    } else if (operation == "Exit") {
+    } else if (operation == QLatin1String("Exit")) {
         m_panelAgent->exit();
     }
 }

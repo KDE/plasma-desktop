@@ -31,7 +31,7 @@ class KimpanelStatusBarContainer : public Plasma::DataContainer
     Q_OBJECT
 public:
     KimpanelStatusBarContainer(QObject* parent, PanelAgent* panelAgent);
-    Plasma::Service* service(QObject* parent = 0);
+    Plasma::Service* service(QObject* parent = nullptr);
 
 protected Q_SLOTS:
     void updateProperty(const KimpanelProperty& property);

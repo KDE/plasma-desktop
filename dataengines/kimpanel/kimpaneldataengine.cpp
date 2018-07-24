@@ -31,7 +31,7 @@
 #include <Plasma/DataContainer>
 
 KimpanelEngine::KimpanelEngine(QObject* parent, const QVariantList& args)
-    : Plasma::DataEngine(parent, args), m_panelAgent(0)
+    : Plasma::DataEngine(parent, args), m_panelAgent(nullptr)
 {
     init();
 }
@@ -48,9 +48,9 @@ void KimpanelEngine::init()
 {
     m_panelAgent = new PanelAgent(this);
     KimpanelInputPanelContainer* inputpanelSource = new KimpanelInputPanelContainer(this, m_panelAgent);
-    inputpanelSource->setObjectName(INPUTPANEL_SOURCE_NAME);
+    inputpanelSource->setObjectName(QLatin1String(INPUTPANEL_SOURCE_NAME));
     KimpanelStatusBarContainer* statusbarSource = new KimpanelStatusBarContainer(this, m_panelAgent);
-    statusbarSource->setObjectName(STATUSBAR_SOURCE_NAME);
+    statusbarSource->setObjectName(QLatin1String(STATUSBAR_SOURCE_NAME));
     addSource(inputpanelSource);
     addSource(statusbarSource);
     this->m_panelAgent->created();
@@ -60,11 +60,11 @@ void KimpanelEngine::init()
 
 Plasma::Service* KimpanelEngine::serviceForSource(const QString& source)
 {
-    if (source == INPUTPANEL_SOURCE_NAME) {
+    if (source == QLatin1String(INPUTPANEL_SOURCE_NAME)) {
         KimpanelInputPanelContainer* container = qobject_cast< KimpanelInputPanelContainer* >(containerForSource(source));
         if (container)
             return container->service(this);
-    } else if (source == STATUSBAR_SOURCE_NAME) {
+    } else if (source == QLatin1String(STATUSBAR_SOURCE_NAME)) {
         KimpanelStatusBarContainer* container = qobject_cast< KimpanelStatusBarContainer* >(containerForSource(source));
         if (container)
             return container->service(this);
